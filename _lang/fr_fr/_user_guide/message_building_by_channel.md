@@ -10,6 +10,9 @@ description: "Cette page d’accueil couvre les canaux de communication Braze. L
 
 guide_featured_title: "Canaux disponibles"
 guide_featured_list:
+- name: Bannières
+  link: /docs/user_guide/message_building_by_channel/banners/
+  image: /assets/img/braze_icons/table.svg
 - name: Cartes de contenu
   link: /docs/user_guide/message_building_by_channel/content_cards/
   image: /assets/img/braze_icons/table.svg
@@ -22,8 +25,8 @@ guide_featured_list:
 - name: Messagerie de notification push
   link: /docs/user_guide/message_building_by_channel/push/
   image: /assets/img/braze_icons/marker-pin-01.svg
-- name: SMS &amp; MMS
-  link: /docs/user_guide/message_building_by_channel/sms/
+- name: "SMS, MMS et RCS"
+  link: /docs/user_guide/message_building_by_channel/sms_mms_rcs/
   image: /assets/img/braze_icons/message-text-circle-01.svg
 - name: Webhooks
   link: /docs/user_guide/message_building_by_channel/webhooks/
@@ -32,6 +35,15 @@ guide_featured_list:
   link: /docs/user_guide/message_building_by_channel/whatsapp/
   image: /assets/img/braze_icons/whatsapp.svg
 ---
+
+## Ressources en matière d'accessibilité
+
+Vous pouvez utiliser Braze pour créer des campagnes de communication accessibles sur chaque canal. Vérifiez avec vos ingénieurs que vous répondez aux normes d’accessibilité lors de la mise en place. Si vous souhaitez obtenir des conseils supplémentaires, nous vous recommandons :
+
+- [Fondements de l'envoi de messages accessibles](https://learning.braze.com/accessible-messaging-foundations): Apprenez les principes fondamentaux de l'accessibilité qui s'appliquent aux communications de marque dans ce cours d'apprentissage de Braze.
+- [Créer des messages accessibles]({{site.baseurl}}/help/accessibility/): Apprenez à ajouter du texte alt et à structurer votre contenu pour les technologies d'assistance directement dans Braze.
+
+{% multi_lang_include accessibility/feedback.md %}
 
 ## Choisir un canal de communication
 

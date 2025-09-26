@@ -13,7 +13,7 @@ tool:
 
 > 채널 실적 대시보드에는 캠페인과 캔버스 모두에서 전체 채널에 대한 종합적인 실적 지표가 표시됩니다. 이 대시보드는 현재 이메일 및 SMS에 사용할 수 있습니다.
 
-![이메일 성능/성과 대시보드가 지난 30일 동안의 이메일 채널 인게이지먼트를 표시합니다.][1]
+![Email performance dashboard displaying email channel engagement from the last thirty days.]({% image_buster /assets/img_archive/email_performance_dashboard_1.png %})
 
 다음 대시보드를 볼 수 있습니다:
 - [이메일 성능/성과 대시보드](#email-performance-dashboard)
@@ -26,7 +26,7 @@ tool:
 
 ### 메트릭 계산 방법
 
-![][2]{: style="max-width:40%;float:right;margin-left:15px;border:none;"}
+![]({% image_buster /assets/img_archive/email_performance_dashboard_2.png %}){: style="max-width:40%;float:right;margin-left:15px;border:none;"}
 
 이메일 성능 대시보드에서 다양한 측정기준에 대한 계산은 개별 메시지 수준(예: 캠페인 분석)과 동일합니다. 선택한 날짜 범위에 대해 모든 캠페인 및 캔버스의 측정기준이 집계된 대시보드입니다. 이 정의에 대해 자세히 알아보려면 [이메일 측정기준]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting#email-metrics)을 참조하십시오.
 
@@ -73,19 +73,19 @@ To better understand what is in this "Other" category, you can extract the user 
 
 **받은편지함 제공업체의 인게이지먼트** 보고서는 클릭 또는 열기에 기여하는 주요 받은편지함 제공업체를 표시합니다. 특정 주요 받은편지함 제공업체를 클릭하여 특정 수신 도메인으로 세부 분석할 수 있습니다. 예를 들어, Microsoft가 이 보고서에서 상위 받은편지함 제공업체 측정기준 중 하나로 나열된 경우, "outlook.com", "hotmail.com", "live.com" 등과 같은 수신 도메인에 대한 세부 정보를 추가로 확인할 수 있습니다.
 
-![][5]{: style="max-width:70%;"}
+![]({% image_buster /assets/img_archive/mailbox_provider_time_engagement.png %}){: style="max-width:70%;"}
 
 ### 참여 시간
 
 **인게이지먼트 시간** 보고서는 사용자가 이메일에 인게이지먼트하는 시기에 대한 데이터를 표시합니다. 이것은 고객의 인게이지먼트가 가장 높은 요일이나 시간을 파악하는 데 도움이 될 수 있습니다. 이러한 통찰력을 통해 메시지를 보내는 최적의 날이나 시간을 실험하여 더 높은 참여를 유도할 수 있습니다. 이 시간은 회사의 표준 시간대를 기준으로 합니다.
 
-**요일** 참여 보고서는 요일별로 열림 또는 클릭을 분석합니다. 
+The **Day of the week** engagement report breaks down opens or clicks by day of the week. 
 
-![][6]
+![]({% image_buster /assets/img_archive/time_engagement.png %})
 
-**하루 중 시간** 참여 보고서는 24시간 창 내에서 시간별로 열림 또는 클릭을 분류합니다.
+The **Time of the day** engagement report breaks down opens or clicks by each hour in a 24-hour time window.
 
-![][7]
+![]({% image_buster /assets/img_archive/time_engagement_day.png %})
 
 이메일에 대한 분석에 대한 자세한 내용은 [이메일 보고서]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/)를 확인하세요.
 
@@ -95,9 +95,9 @@ SMS 성능 대시보드를 사용하려면 **분석** > **SMS 성능**으로 이
 
 ### 메트릭 계산 방법
 
-![][2]{: style="max-width:40%;float:right;margin-left:15px;border:none;"}
+![]({% image_buster /assets/img_archive/email_performance_dashboard_2.png %}){: style="max-width:40%;float:right;margin-left:15px;border:none;"}
 
-SMS 성능/성과 대시보드에서 다양한 측정기준에 대한 계산은 개별 메시지 수준(예: 캠페인 분석)과 동일합니다. 선택한 날짜 범위에 대해 모든 캠페인 및 캔버스의 측정기준이 집계된 대시보드입니다. 이 정의에 대해 더 알아보려면 [SMS 측정기준]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_campaign_analytics/)을 참조하십시오.
+SMS 성능/성과 대시보드에서 다양한 측정기준에 대한 계산은 개별 메시지 수준(예: 캠페인 분석)과 동일합니다. 선택한 날짜 범위에 대해 모든 캠페인 및 캔버스의 측정기준이 집계된 대시보드입니다. To learn more about these definitions, refer to [SMS metrics]({{site.baseurl}}/sms_mms_rcs_reporting/).
 
 각 타일은 먼저 비율 메트릭을 표시하고, 그 다음에 개수 메트릭을 표시합니다 (_Sends_의 경우는 예외로, 개수 메트릭을 먼저 표시하고 하루 평균을 표시합니다). 각 타일은 또한 [지난 기간과의 비교](#comparison-to-last-period-change-in-totals-or-rates)를 보여줍니다.
 
@@ -120,7 +120,7 @@ SMS 성능/성과 대시보드에서 다양한 측정기준에 대한 계산은 
 - **캔버스:** 최대 10개의 캔버스를 선택하세요. 적용되면, 대시보드는 선택한 캔버스에 대한 측정기준만 표시됩니다. 먼저 태그 필터를 선택하면 캔버스 필터 옵션에는 선택한 태그가 포함된 캔버스만 포함됩니다.
 - **캠페인:** 최대 10개의 캠페인을 선택하세요. 적용되면, 대시보드는 선택한 캠페인에 대한 측정기준만 표시됩니다. 태그 필터를 먼저 선택하면 캠페인 필터 옵션에는 선택한 태그가 포함된 캠페인만 포함됩니다.
 
-![채널 성능/성과 대시보드에서 필터 옵션을 사용하여 태그와 필터링할 캔버스 목록을 선택할 수 있습니다.][3]
+![Filter options on the Channel Performance Dashboard where you can select a tag and list of Canvases to filter by.]({% image_buster /assets/img_archive/dashboard_filters.png %})
 
 ## 기간 비교
 
@@ -132,7 +132,7 @@ SMS 성능/성과 대시보드에서 다양한 측정기준에 대한 계산은 
 
 **합계의 변화 표시**—두 기간 동안의 총 수(예: 전달된 이메일 수)를 비교하는 것—와 **비율의 변화 표시**—비율(예: 전달 비율)을 비교하는 것— 사이를 전환할 수 있습니다.
 
-![채널 성능 대시보드의 총계 변화 또는 비율 변화를 표시하기 위해 전환하는 라디오 버튼입니다.][4]
+![Radio buttons to switch between showing change in totals or change in rates for the Channel Performance Dashboard.]({% image_buster /assets/img_archive/email_performance_dashboard_3.png %}){: style="max-width:60%"}
 
 ## 자주 묻는 질문
 
@@ -168,10 +168,3 @@ This means Braze hasn't recorded any data for that metric during the time you se
 
 --->
 
-[1]: {% image_buster /assets/img_archive/email_performance_dashboard_1.png %}
-[2]: {% image_buster /assets/img_archive/email_performance_dashboard_2.png %}
-[3]: {% image_buster /assets/img_archive/dashboard_filters.png %}
-[4]: {% image_buster /assets/img_archive/email_performance_dashboard_3.png %}
-[5]: {% image_buster /assets/img_archive/mailbox_provider_time_engagement.png %}
-[6]: {% image_buster /assets/img_archive/time_engagement.png %}
-[7]: {% image_buster /assets/img_archive/time_engagement_day.png %}

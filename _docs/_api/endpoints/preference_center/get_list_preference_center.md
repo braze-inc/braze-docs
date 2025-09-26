@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: List Preference Centers"
+nav_title: "GET: List preference centers"
 article_title: "GET: List Preference Centers"
 search_tag: Endpoint
 page_order: 2

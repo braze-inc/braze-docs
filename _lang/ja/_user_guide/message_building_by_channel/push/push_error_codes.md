@@ -12,7 +12,7 @@ platform:
 
 # 一般的なプッシュエラーメッセージ
 
-> このページでは、プッシュ・メッセージングの一般的なエラーメッセージについて説明する。
+> このページでは、プッシュメッセージングの一般的なエラーメッセージについて説明します。
 
 {% tabs %}
 {% tab Android %} 
@@ -34,11 +34,11 @@ platform:
 {% endtab %}
 {% tab iOS %}
 
-### プッシュバウンス: バッドトークン
+### プッシュバウンス: BadToken
 
-`BadToken` エラーはいくつかの理由で発生する可能性がある：
+`BadToken` エラーはいくつかの理由で発生する可能性があります。
 - 現在、`[[Appboy sharedInstance] registerPushToken:]` でプッシュトークンが正しく送られてこない
-	- [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/)のトークンを確認してください。一般的には、文字と数字の長い文字列のように見えるはずだ（たとえば、`6e407a9be8d07f0cdeb9e714733a89445f57a89ec890d63867c482a483506fa6` ）。そうでない場合は、Brazeのプッシュトークンエラー送信に関わるコードをチェックする。<br><br>
+	- [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/)のトークンを確認してください。通常は、文字と数字の長い文字列のように見えます (例: `6e407a9be8d07f0cdeb9e714733a89445f57a89ec890d63867c482a483506fa6`)。そうでない場合は、Brazeのプッシュトークンエラー送信に関わるコードをチェックする。<br><br>
 - プロビジョニング環境の不一致：
 	- 開発用の証明書で登録し、本番用の証明書で送信しようとすると、このようなエラーが表示される。  
 	- Braze は、本番環境のユニバーサル証明書のみをサポートしています。ユニバーサル証明書を使用した開発環境でのプッシュテストは機能しない。 

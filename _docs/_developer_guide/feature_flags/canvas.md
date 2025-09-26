@@ -1,5 +1,5 @@
 ---
-nav_title: Feature Flags in Canvas
+nav_title: Feature flags in Canvas
 page_order: 30
 noindex: true
 tool: Feature Flags

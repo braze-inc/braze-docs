@@ -15,7 +15,7 @@ channel:
 
 | Exemple Android (étendu) | Exemple iOS (étendu) |
 | :-----: | :----------: |
-| ![][1] | ![][2] |
+| ![]({% image_buster /assets/img_archive/pushstories_android_preview.png %}) | ![]({% image_buster /assets/img_archive/pushstories_ios_preview.png %}) |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
@@ -31,7 +31,7 @@ Les versions SDK suivantes sont requises pour recevoir les Push Stories :
 
 ## Comment utiliser les Push Stories
 
-![][6]{: style="float:right;max-width:50%;margin-left:15px;margin-bottom:15px;"}
+![]({% image_buster /assets/img_archive/pushstories_composer_dropdown2.png %}){: style="float:right;max-width:50%;margin-left:15px;margin-bottom:15px;"}
 
 Pour utiliser les contenus push, procédez comme suit :
 
@@ -44,13 +44,13 @@ Pour utiliser les contenus push, procédez comme suit :
 Pour créer une page, procédez comme suit :
 
 1. Cliquez sur **Gérer les pages** dans le compositeur principal.
-    <br><br>![][4]{: style="max-width:70%"}<br><br>
+    <br><br>![]({% image_buster /assets/img_archive/pushstories_add_pages.png %}){: style="max-width:70%"}<br><br>
 2. Insérez une image pour chaque page, ainsi que le comportement lors du clic pour cette image.
 3. Si vous le souhaitez, ajoutez un **titre** et une **description** pour chaque page. Si vous utilisez un titre et une description pour une page, ils doivent être insérés pour toutes les pages.
 
 Les aperçus seront reflétés et interactifs.
 
-![][3]{: style="max-width:60%"}
+![]({% image_buster /assets/img_archive/pushstories_composer.png %}){: style="max-width:60%"}
 
 {% alert important %}
 Si vous importez des images avec un [contenu connecté]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/#about-connected-content), assurez-vous que l'URL de votre image commence par `https://`. Utiliser `http://` fera planter votre application.
@@ -89,7 +89,7 @@ Lorsque vous créez une campagne ou un Canvas, vous pouvez filtrer les utilisate
 
 L’analytique sera très similaire à la section analytique actuelle pour les notifications push. Pour Push Stories analytics, vous pouvez ouvrir l'indicateur **Direct Opens** pour afficher les clics par page.
 
-![Tableau des performances de notification push iOS avec un exemple d’analytique et des détails étendus pour la métrique Direct Opens (Ouvertures directes).][5]
+![Tableau iOS Push Performance avec des exemples d'analyses/analytiques et des détails étendus pour l'indicateur Direct Opens.]({% image_buster /assets/img_archive/pushstories_analytics.png %})
 
 ## Résolution des problèmes
 
@@ -111,9 +111,3 @@ Dans certaines situations où toutes les pages ne sont pas chargées, par exempl
 
 Sur Android, les Push Stories ne sont pas enlevées par défaut après qu’un utilisateur ait cliqué sur l’image. Si vous souhaitez fermer la notification, appelez [`cancelNotification`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.push/-braze-notification-utils/index.html#-1466259649%2FFunctions%2F-1725759721).  
 
-[1]: {% image_buster /assets/img_archive/pushstories_android_preview.png %}
-[2]: {% image_buster /assets/img_archive/pushstories_ios_preview.png %}
-[3]: {% image_buster /assets/img_archive/pushstories_composer.png %}
-[4]: {% image_buster /assets/img_archive/pushstories_add_pages.png %}
-[5]: {% image_buster /assets/img_archive/pushstories_analytics.png %}
-[6]: {% image_buster /assets/img_archive/pushstories_composer_dropdown2.png %}

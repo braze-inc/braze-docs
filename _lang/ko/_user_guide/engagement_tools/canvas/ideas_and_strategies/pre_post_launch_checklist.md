@@ -27,7 +27,7 @@ tool: Canvas
 버퍼를 충분히 예약하지 않은 경우 경고가 표시됩니다. 빠른 해결책은 사용자가 전체 24시간 동안 대상 세그먼트에 남아 있을 수 있도록 전송 시간을 조정하는 것입니다.
 {% endalert %}
 
-![][1]
+![A Canvas scheduled to enter users at one time starting at 10 am on April 30, 2025, in their local time.]({% image_buster /assets/img_archive/canvas_checklist1.png %}){: style="max-width:75%;"}
 
 ### 정규 표현식을 사용하여 오디언스 필터를 고려하십시오
 
@@ -109,4 +109,3 @@ Check out the [best practices]({{site.baseurl}}/user_guide/engagement_tools/test
 
 두 개 이상의 경로(오디언스 경로 또는 작업 경로) 간의 전송량이 예상과 다를 때, 이는 세그먼트, 필터 또는 트리거 동작을 확인할 수 있는 기회가 될 수 있습니다. 또한, 겹치는 필터를 식별하고 제거해야 합니다.
 
-[1]: {% image_buster /assets/img_archive/canvas_checklist1.png %}

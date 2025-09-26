@@ -11,7 +11,7 @@ tool: Media
 
 # Detalles creativos de las tarjetas de contenidos
 
-> La personalización de las tarjetas de contenido y del feed en el que se encuentran no puede realizarse durante el proceso de creación de la campaña: debe trabajar con sus ingenieros y desarrolladores para crear y personalizar sus tarjetas. Para más detalles técnicos, visite nuestra [documentación para desarrolladores][7].
+> La personalización de las tarjetas de contenido y del feed en el que se encuentran no puede realizarse durante el proceso de creación de la campaña: debe trabajar con sus ingenieros y desarrolladores para crear y personalizar sus tarjetas. Para más detalles técnicos, visita nuestra [documentación para desarrolladores]({{site.baseurl}}/developer_guide/getting_started/customization_overview).
 
 ## Tipos de tarjetas de contenido
 
@@ -46,11 +46,11 @@ La tarjeta de imagen con pie de foto es una forma estupenda de mostrar y llamar 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
-{% tab Banner %}
+{% tab Sólo imagen %}
 
-Si quieres algo más sofisticado, la tarjeta banner es para ti. Esto se personaliza completamente según lo que tú quieras que sea. Sólo tienes que crear tu contenido en otro sitio y subirlo para crear una bonita tarjeta totalmente tuya.
+Si quieres más control creativo, la tarjeta de sólo imagen es para ti. Crea tu imagen utilizando cualquier herramienta que te guste y cárgala en este tipo de tarjeta.
 
-![Imagen de un banner con detalles recomendados y un ejemplo de banner]({% image_buster /assets/img/content_card_banner.png %}){: style="max-width:45%;border:0;"}
+![Imagen de una tarjeta de contenido de sólo imagen con detalles recomendados y un ejemplo de sólo imagen]({% image_buster /assets/img/content_card_banner.png %}){: style="max-width:45%;border:0;"}
 
 | Capacidad de la tarjeta | Detalles |
 | --- | ---|
@@ -63,17 +63,17 @@ Si quieres algo más sofisticado, la tarjeta banner es para ti. Esto se personal
 
 ## Detalles creativos globales {#general}
 
-Las tarjetas de contenido vienen con una gran funcionalidad desde el principio. En este momento, el estilo de la tarjeta no se puede hacer de forma nativa en su cuenta Braze, pero puede estilizar su tarjeta de contenido por tipo y el feed de la tarjeta de contenido durante la integración. Consulte [Personalización de las tarjetas de contenido][4] para obtener más información.
+Las tarjetas de contenido vienen con una gran funcionalidad desde el principio. En este momento, el estilo de la tarjeta no se puede hacer de forma nativa en su cuenta Braze, pero puede estilizar su tarjeta de contenido por tipo y el feed de la tarjeta de contenido durante la integración. Consulta [Personalizar tarjetas de contenido]({{site.baseurl}}/developer_guide/content_cards/) para obtener más información.
 
 ### Comportamiento de descarte
 
 Para que un usuario descarte una tarjeta, puede retirarla en el móvil o utilizar la función `close X`, como se muestra en la siguiente captura de pantalla. El `x` aparecerá al pasar el ratón solo para el SDK Web.
 
-![Imagen que muestra los comportamientos de deslizamiento o cierre de una tarjeta][5]
+![Imagen que muestra los comportamientos de deslizar o cerrar el descarte de tarjeta]({% image_buster /assets/img/dismissal-cc.png %})
 
 Si un usuario ha descartado todas sus tarjetas o usted no ha enviado ninguna actualización, el feed del usuario tendrá normalmente este aspecto:
 
-![Imagen de una fuente de tarjeta de contenido vacía][6]{: style="max-width:45%"}
+![Imagen de una fuente de tarjeta de contenido vacía]({% image_buster /assets/img/empty-cc.png %}){: style="max-width:45%"}
 
 {% alert tip %}
 Mantenga la relevancia de las tarjetas de contenido configurándolas para que se descarten cuando un usuario realice acciones relevantes. Por ejemplo, configure las tarjetas de contenido promocional para que se descarten en cuanto los usuarios realicen una compra, de modo que no sigan viendo una oferta por algo que ya han comprado.
@@ -88,10 +88,3 @@ Mantenga la relevancia de las tarjetas de contenido configurándolas para que se
 
 <br><br>
 
-[1]: {% image_buster /assets/img/content_card_classic.png %}
-[2]: {% image_buster /assets/img/content_card_captioned.png %}
-[3]: {% image_buster /assets/img/content_card_banner.png %}
-[4]: {{site.baseurl}}/developer_guide/customization_guides/content_cards
-[5]: {% image_buster /assets/img/dismissal-cc.png %}
-[6]: {% image_buster /assets/img/empty-cc.png %}
-[7]: {{site.baseurl}}/developer_guide/getting_started/customization_overview

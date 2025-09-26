@@ -1,6 +1,6 @@
 ---
 nav_title: Adjust
-article: Adjust
+article_title: Adjust
 layout: redirect
 redirect_to: /docs/partners/adjust/
 ---

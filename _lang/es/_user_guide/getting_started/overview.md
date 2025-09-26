@@ -31,13 +31,13 @@ Asegúrate de [añadir a tus colegas a Braze]({{site.baseurl}}/user_guide/admini
 
 Los usuarios son tus clientes, las personas que reciben los mensajes que envías con Braze. Todos los datos que se recopilan sobre un usuario y se ingieren en Braze se almacenan en su perfil de usuario, como sus datos demográficos, información personal, preferencias y comportamientos. Esta información potencia su mensajería y es la forma en que puede adaptar sus mensajes al usuario adecuado.
 
-![][1]
+![]({% image_buster /assets/img/getting_started/user_profile.png %})
 
 Los segmentos dividen su base de clientes en grupos más pequeños a los que puede dirigirse con mensajes específicos. Puede utilizar diferentes variables para crear segmentos, desde características como el sexo, la ubicación y la edad hasta comportamientos como patrones de interacción con campañas anteriores o en qué punto del recorrido del cliente se encuentran.
 
 Los segmentos son dinámicos: los usuarios pueden entrar y salir de ellos en tiempo real en función de su comportamiento y de su relación con la marca. Esto garantiza que sus clientes reciban los mensajes más relevantes para ellos en cada momento. Puede crear tantos segmentos como necesite para sus objetivos y mensajes.
 
-![][2]
+![]({% image_buster /assets/img/getting_started/segment.png %})
 
 Más información: [Cómo empezar: Usuarios y segmentos]({{site.baseurl}}/user_guide/getting_started/users_segments/).
 
@@ -68,7 +68,7 @@ Más información: [Cómo empezar: Espacios de trabajo]({{site.baseurl}}/user_gu
 
 Braze está diseñado para ponerse en marcha rápida y fácilmente. Nuestro tiempo medio de creación de valor es de seis semanas en nuestra base de clientes de cientos de marcas.
 
-![][3]
+![]({% image_buster /assets/img/getting_started/timetovalue.png %})
 
 Este es el marco de Braze para estimar la duración de su integración basándose en cuatro componentes en los que puede trabajar en paralelo. El intervalo típico es de 30 a 180 días, y la mayoría de las cuentas completan su integración en un plazo de 45 a 60 días.
 
@@ -84,6 +84,3 @@ Este es el marco de Braze para estimar la duración de su integración basándos
 
 Más información: [Cómo empezar: Visión general de la integración]({{site.baseurl}}/user_guide/getting_started/integration/).
 
-[1]: {% image_buster /assets/img/getting_started/user_profile.png %}
-[2]: {% image_buster /assets/img/getting_started/segment.png %}
-[3]: {% image_buster /assets/img/getting_started/timetovalue.png %}

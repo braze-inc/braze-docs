@@ -1,5 +1,5 @@
 ---
-nav_title: Managing Templates
+nav_title: Managing templates
 article_title: Managing Templates
 page_order: 3
 

@@ -1,5 +1,5 @@
 ---
-nav_title: "PUT: Update Translation in a Canvas"
+nav_title: "PUT: Update translation in a Canvas"
 article_title: "PUT: Update Translation in a Canvas"
 search_tag: Endpoint
 page_order: 1

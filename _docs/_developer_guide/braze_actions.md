@@ -1,5 +1,5 @@
 ---
-nav_title: Braze Actions Deeplinks
+nav_title: Braze actions deeplinks
 article_title: Braze Actions Deeplinks
 page_order: 100
 description: "This reference article covers how to use Braze action deeplinks to perform SDK actions within messaging channel buttons."

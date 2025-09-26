@@ -1,5 +1,5 @@
 ---
-nav_title: References & Sample Apps
+nav_title: References & sample apps
 article_title: Braze SDK references, repositories, and sample apps
 page_order: 5.5
 description: "This is a list of reference documentation, GitHub repositories, and sample apps belonging to each Braze SDK."

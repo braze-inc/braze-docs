@@ -1,5 +1,5 @@
 ---
-nav_title: "Kindle and FireOS Push Object"
+nav_title: "Kindle and FireOS push object"
 article_title: Kindle and FireOS Push Messaging Object
 page_order: 7
 page_type: reference

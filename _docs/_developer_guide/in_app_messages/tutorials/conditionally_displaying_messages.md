@@ -1,5 +1,5 @@
 ---
-nav_title: Conditionally Displaying Messages
+nav_title: Conditionally displaying messages
 article_title: "Tutorial: Conditionally displaying in-app messages"
 description: ""
 page_order: 1
@@ -16,7 +16,7 @@ layout: scrolly
 
 ## Conditionally displaying in-app messages for Android
 
-{% multi_lang_include developer_guide/_shared/tutorial_feedback.md %}
+{% multi_lang_include developer_guide/_shared/tutorial_feedback.md tutorial="Conditionally Displaying Messages Android" %}
 
 {% scrolly %}
 
@@ -111,7 +111,7 @@ Return an `InAppMessageOperation` with `DISPLAY_NOW` to display the message, or 
 
 ## Conditionally displaying in-app messages for Swift
 
-{% multi_lang_include developer_guide/_shared/tutorial_feedback.md %}
+{% multi_lang_include developer_guide/_shared/tutorial_feedback.md tutorial="Conditionally Displaying Messages Swift" %}
 
 {% scrolly %}
 
@@ -202,7 +202,7 @@ Override [`inAppMessage(_:displayChoiceForMessage:)`](https://braze-inc.github.i
 
 ## Conditionally displaying in-app messages for Web
 
-{% multi_lang_include developer_guide/_shared/tutorial_feedback.md %}
+{% multi_lang_include developer_guide/_shared/tutorial_feedback.md tutorial="Conditionally Displaying Messages Web" %}
 
 {% scrolly %}
 

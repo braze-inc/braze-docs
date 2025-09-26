@@ -18,13 +18,13 @@ Cet article vous guidera à travers un cas d'utilisation du modèle **Feedback p
 Pour utiliser ce modèle avec succès, vous aurez besoin des éléments suivants :
 
 - Un [attribut personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#managing-custom-attributes) à référencer pour les résultats de l'enquête de satisfaction.
-- Un Braze [Audience Sync]({{site.baseurl}}/partners/canvas_steps) configuré avec les partenaires et les audiences que vous utilisez.
+- Un Braze [Audience Sync]({{site.baseurl}}/partners/canvas_audience_sync/) configuré avec les partenaires et les audiences que vous utilisez.
 
 ## Adapter le modèle à vos besoins
 
 Supposons que nous travaillions pour Decorumsoft, un développeur de jeux vidéo mobiles. Nous utiliserons le modèle de retour d'information après achat pour évaluer les réactions à notre dernier jeu vidéo, Proxy War 3 : La guerre de la soif. Ces commentaires nous permettront d'élaborer nos plans de développement pour le pack d'extension Liquid Mirage.
 
-Avant de créer le Canvas, nous avons configuré l'intégration Braze [Audience Sync to Google]({{site.baseurl}}/partners/canvas_steps/google_audience_sync/) afin de pouvoir ajouter les données comportementales des utilisateurs de Braze à Google Audiences pour envoyer des publicités basées sur des déclencheurs comportementaux, la segmentation, et plus encore.
+Avant de créer le Canvas, nous avons configuré l'intégration Braze [Audience Sync to Google]({{site.baseurl}}/partners/canvas_audience_sync/google_audience_sync/) afin de pouvoir ajouter les données comportementales des utilisateurs de Braze à Google Audiences pour envoyer des publicités basées sur des déclencheurs comportementaux, la segmentation, et plus encore.
 
 Pour accéder au modèle de retour d'information après achat, lorsque vous créez un nouveau canvas, sélectionnez **Utiliser un modèle de canvas** > **Modèles de Braze**. Ensuite, en regard de **Feedback post-achat**, sélectionnez **Appliquer le modèle.** Nous pouvons maintenant parcourir le modèle pour l'adapter à nos besoins.
 

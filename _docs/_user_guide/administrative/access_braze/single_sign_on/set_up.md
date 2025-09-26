@@ -1,5 +1,5 @@
 ---
-nav_title: SAML SSO Setup
+nav_title: SAML SSO setup
 article_title: SAML SSO Setup
 page_order: 0
 page_type: tutorial

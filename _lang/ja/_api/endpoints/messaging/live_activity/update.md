@@ -28,6 +28,8 @@ description: "この記事では、ライブ・アクティビティを更新す
 - `messages.live_activity.update` の権限を持つ API キーを生成します。
 - Braze Swift SDK を使用して、[リモート]({{site.baseurl}}/developer_guide/push_notifications/live_notifications/?tab=remote&sdktab=swift)または[ローカル]({{site.baseurl}}/developer_guide/push_notifications/live_notifications/?tab=local&sdktab=swift)でライブアクティビティを登録する。
 
+{% multi_lang_include api/payload_size_alert.md %}
+
 ## レート制限
 
 {% multi_lang_include rate_limits.md endpoint='default' %}

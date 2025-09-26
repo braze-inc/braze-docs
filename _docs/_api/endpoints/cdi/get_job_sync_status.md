@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: List Job Sync Status"
+nav_title: "GET: List job sync status"
 article_title: "GET: List Job Sync Status"
 search_tag: Endpoint
 page_order: 1

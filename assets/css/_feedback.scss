@@ -15,6 +15,9 @@
     #feedback_answer {
         display: inline-block;
     }
+    #feedback_answer li.inline-star {
+        cursor: pointer;
+    }
     #feedback_comment {
         height: 6rem;
         width: 100%;

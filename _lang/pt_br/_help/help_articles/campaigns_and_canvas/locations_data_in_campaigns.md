@@ -22,20 +22,16 @@ Confirme se o seu app está coletando dados locais:
 
 Para ver se os dados de usuários estão sendo enviados ao Braze, use o filtro **Localização disponível**. Esse filtro permite ver a porcentagem de usuários com um "local mais recente".
 
-![][25]
+![]({% image_buster /assets/img_archive/trouble7.png %})
 
 ## Transferência de dados
 
 Confirme se seus desenvolvedores estão passando dados de local para o Braze. Normalmente, a passagem de dados de localização é tratada automaticamente pelo SDK depois que o usuário dá permissões, mas seus desenvolvedores podem ter desativado o monitoramento de localização na Braze. Mais informações sobre o monitoramento de localização podem ser encontradas em:
-- [Android][26]
-- [iOS][27]
-- [Web][28]
+- [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/location_tracking/)
+- [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/location_tracking/)
+- [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/location_tracking/)
 
 Ainda precisa de ajuda? Abra um [tíquete de suporte]({{site.baseurl}}/braze_support/).
 
 _Última atualização em 16 de novembro de 2022_
 
-[25]: {% image_buster /assets/img_archive/trouble7.png %}
-[26]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/location_tracking/
-[27]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/location_tracking/
-[28]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/location_tracking/

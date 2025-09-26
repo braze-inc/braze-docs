@@ -1,5 +1,5 @@
 ---
-nav_title: Creating and Managing Workspaces
+nav_title: Creating and managing workspaces
 article_title: Creating and Managing Workspaces
 page_order: 0
 page_type: reference

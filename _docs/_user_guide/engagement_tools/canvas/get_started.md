@@ -1,5 +1,5 @@
 ---
-nav_title: Getting Started
+nav_title: Getting started
 article_title: Getting Started with Canvas
 page_order: 0
 layout: dev_guide

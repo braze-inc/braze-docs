@@ -91,7 +91,7 @@ A tabela a seguir lista os possíveis erros retornados e as etapas de solução 
 | --- | --- |
 | `Content cannot be blank` |
 | `Content must be a string` | Certifique-se de que seu conteúdo esteja encapsulado entre aspas (`""`). |
-| `Content must be smaller than 50kb` | O conteúdo no seu bloco de conteúdo deve ser menor que 50 KB no total. |
+| `Content must be smaller than 50kb` | O conteúdo no seu bloco de conteúdo deve ser inferior a 50 KB no total. |
 | `Content contains malformed liquid` | O Liquid fornecido não é válido ou não pode ser analisado. Tente novamente com um Liquid válido ou entre em contato com o suporte. |
 | `Content Block cannot be referenced within itself` |
 | `Content Block description cannot be blank` |

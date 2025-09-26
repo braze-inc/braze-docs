@@ -18,7 +18,7 @@ description: "Esta página explica cómo utilizar el editor de arrastrar y solta
 
 Cuando crees un mensaje dentro de la aplicación arrastrando y soltando, selecciona **Registro por correo electrónico con página de confirmación** para tu plantilla y, a continuación, selecciona **Crear mensaje**. Esta plantilla es compatible tanto con aplicaciones móviles como con navegadores web.
 
-![El editor de mensajes dentro de la aplicación con la plantilla de un formulario de registro por correo electrónico con página de confirmación.][img1]
+![El editor de mensajes dentro de la aplicación con la plantilla para un formulario de registro por correo electrónico con página de confirmación.]({% image_buster /assets/img/drag_and_drop/templates/email_capture_confirmation.png %})
 
 ### Paso 2: Configura tus estilos de mensaje
 
@@ -30,7 +30,7 @@ Para empezar a crear su formulario de suscripción por correo electrónico, sele
 
 Puede personalizar el texto del marcador de posición y el texto de la etiqueta del elemento de captura de correo electrónico.
 
-![El editor de mensajes dentro de la aplicación con un menú lateral para personalizar el elemento de captura de correo electrónico.][img2]
+![El editor de mensajes dentro de la aplicación con un menú lateral para personalizar el elemento de captura de correo electrónico.]({% image_buster /assets/img/drag_and_drop/templates/email_capture_field_confirmation.png %})
 
 #### Validación del correo electrónico
 
@@ -42,7 +42,7 @@ Puede personalizar el texto del marcador de posición y el texto de la etiqueta 
 
 ### Paso 5: Estiliza tu mensaje
 
-Personaliza el aspecto de tu formulario de registro por correo electrónico y de la página de confirmación utilizando [los componentes de mensajes dentro de la aplicación][3] que puedes arrastrar y soltar.
+Personaliza el aspecto de tu formulario de registro por correo electrónico y de la página de confirmación utilizando [los componentes de mensajes dentro de la aplicación]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#message-components) que puedes arrastrar y soltar.
 
 ## Analizar los resultados
 
@@ -52,7 +52,4 @@ Personaliza el aspecto de tu formulario de registro por correo electrónico y de
 
 {% multi_lang_include drag_and_drop/templates.md section='correo electrónico doble adhesión voluntaria' %}
 
-[img1]: {% image_buster /assets/img/drag_and_drop/templates/email_capture_confirmation.png %}
-[img2]: {% image_buster /assets/img/drag_and_drop/templates/email_capture_field_confirmation.png %} 
 
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#message-components

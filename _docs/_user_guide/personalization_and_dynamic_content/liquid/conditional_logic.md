@@ -1,5 +1,5 @@
 ---
-nav_title: Conditional Messaging Logic
+nav_title: Conditional messaging logic
 article_title: Conditional Liquid Messaging Logic
 page_order: 6
 description: "This reference article covers how tags can and should be used in your campaigns."

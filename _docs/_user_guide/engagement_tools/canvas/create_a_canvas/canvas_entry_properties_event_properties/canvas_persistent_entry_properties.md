@@ -1,5 +1,5 @@
 ---
-nav_title: Persistent Entry Properties
+nav_title: Persistent entry properties
 article_title: Persistent Entry Properties
 alias: "/persistent_entry/"
 page_type: reference

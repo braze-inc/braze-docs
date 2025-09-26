@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: [Endpoint Name]"
+nav_title: "POST: [Endpoint name]"
 article_title: "Example layout: POST: User Track"
 search_tag: Endpoint
 page_order: 4

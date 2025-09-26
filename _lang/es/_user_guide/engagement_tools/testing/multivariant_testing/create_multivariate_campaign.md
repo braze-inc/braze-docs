@@ -13,7 +13,7 @@ local_redirect: #optimizations
 
 > Puede crear una [prueba multivariante o A/B]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) para cualquier campaña dirigida a un único canal.
 
-![El menú desplegable al seleccionar el botón "Crear campaña" para elegir entre multicanal o canal único.][2]{: style="max-width:25%;float:right;margin-left:15px;" }
+![El desplegable que aparece al seleccionar el botón "Crear campaña" para elegir entre multicanal o canal único.]({% image_buster /assets/img/ab_create_1.png %}){: style="max-width:25%;float:right;margin-left:15px;" }
 
 ## Paso 1: Crea tu campaña
 
@@ -26,11 +26,11 @@ Puedes crear hasta ocho variantes de tu mensaje, diferenciando entre títulos, c
 
 Para algunas ideas sobre cómo empezar a diferenciar tus variantes, consulta [Consejos para diferentes canales](#tips-different-channels).
 
-![Seleccionando "Añadir variante" para una campaña.][3]
+![Seleccionando "Añadir variante" para una campaña.]({% image_buster /assets/img/ab_create_2.png %})
 
 ## Paso 3: Programa tu campaña
 
-La programación de su campaña multivariante funciona igual que la programación de cualquier otra campaña Braze. Todos los [tipos de entrega][4] estándar están disponibles.
+La programación de su campaña multivariante funciona igual que la programación de cualquier otra campaña Braze. Disponemos de todos los [tipos de entrega]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/) estándar.
 
 Una vez que comienza una prueba multivariante, no puede realizar cambios en la campaña. Si cambia los parámetros, como la línea de asunto o el cuerpo HTML, Braze considerará que el experimento está comprometido y lo desactivará inmediatamente.
 
@@ -50,7 +50,7 @@ Puede reservar un porcentaje de su público objetivo para un grupo de control al
 
 Al visualizar sus resultados, puede comparar las tasas de conversión de sus variantes con una tasa de conversión de referencia proporcionada por su grupo de control. Esto le permite comparar tanto los efectos de sus variantes como los efectos de sus variantes frente a la tasa de conversión que resultaría si no enviara ningún mensaje.
 
-![Panel de pruebas A/B que muestra el desglose porcentual del grupo de control, la variante 1, la variante 2 y la variante 3, con un 25 % para cada grupo.][5]
+![Panel de pruebas A/B que muestra el desglose porcentual del grupo de control, la variante 1, la variante 2 y la variante 3 con un 25% para cada grupo.]({% image_buster /assets/img/ab_create_4.png %})
 
 {% alert important %}
 No se recomienda utilizar un grupo de control al determinar un ganador por _Aperturas_ o _Clics_. Como el grupo de control no recibirá el mensaje, esos usuarios no podrán realizar aperturas ni clics. Por tanto, el índice de conversión de ese grupo es del 0% por definición y no constituye una comparación significativa con las variantes.
@@ -62,7 +62,7 @@ Cuando se utiliza la limitación de la tasa con una prueba A/B, el límite de la
 
 #### Grupos de control con selección inteligente
 
-El tamaño del grupo de control para una campaña con [Selección Inteligente][1] se basa en el número de variantes. Si cada variante se envía a más del 20% de los usuarios, entonces el grupo de control es el 20%, y las variantes se reparten por igual entre el 80% restante. Sin embargo, si tiene suficientes variantes como para que cada una de ellas se envíe a menos del 20% de los usuarios, entonces el grupo de control debe ser más pequeño. Cuando Intelligent Selection empieza a analizar el rendimiento de su prueba, el grupo de control aumenta o disminuye en función de los resultados.
+El tamaño del grupo de control para una campaña con [Selección Inteligente]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/) se basa en el número de variantes. Si cada variante se envía a más del 20% de los usuarios, entonces el grupo de control es el 20%, y las variantes se reparten por igual entre el 80% restante. Sin embargo, si tiene suficientes variantes como para que cada una de ellas se envíe a menos del 20% de los usuarios, entonces el grupo de control debe ser más pequeño. Cuando Intelligent Selection empieza a analizar el rendimiento de su prueba, el grupo de control aumenta o disminuye en función de los resultados.
 
 ## Paso 5: Designar un evento de conversión (opcional)
 
@@ -89,7 +89,7 @@ Según el canal que selecciones, puedes probar distintos componentes de tu mensa
 | ---------------------| --------------- | ------------- |
 | Push | Copiar <br> Uso de imágenes y emoji <br> Vínculos profundos  <br> Presentación de las cifras (por ejemplo, "triplicar" frente a "aumentar un 200%").  <br> Presentación del tiempo (por ejemplo, "termina a medianoche" frente a "termina dentro de 6 horas") | Aperturas  <br> Tasa de conversión |
 | Correo electrónico | Asunto <br> Nombre para mostrar <br> Saludo <br> Copia del cuerpo <br> Uso de imágenes y emoji <br> Presentación de las cifras (por ejemplo, "triplicar" frente a "aumentar un 200%"). <br> Presentación del tiempo (por ejemplo, "termina a medianoche" frente a "termina dentro de 6 horas") | Aperturas  <br> Tasa de conversión |
-| Mensaje dentro de la aplicación | Aspectos listados para "push" <br> [Formato del mensaje][7] | Clic <br> Tasa de conversión |
+| Mensaje dentro de la aplicación | Aspectos listados para "push" <br> [Formato del mensaje]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/message_format/) | Clic <br> Tasa de conversión |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert tip %}
@@ -100,7 +100,7 @@ Además, la duración ideal de su prueba también puede variar en función del c
 
 Por ejemplo, si estás probando un push, puedes conseguir resultados significativos más rápidamente que al probar el correo electrónico, ya que los usuarios ven los push inmediatamente, pero pueden pasar días antes de que vean o abran un correo electrónico. Si estás probando mensajes dentro de la aplicación, ten en cuenta que los usuarios deben abrir la aplicación para ver la campaña, por lo que debes esperar más tiempo para recopilar resultados tanto de los que abren más activamente la aplicación como de los usuarios más típicos.
 
-Si no está seguro de cuánto tiempo debe durar su prueba, la función [Selección inteligente][6] puede ser útil para encontrar una Variante Ganadora de forma eficiente.
+Si no estás seguro de cuánto tiempo debe durar tu prueba, la característica [Intelligent Selection]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/) puede ser útil para encontrar una variante ganadora de forma eficaz.
 
 ### Elegir un segmento {#choosing-a-segment}
 
@@ -130,10 +130,3 @@ Por ejemplo, si envía un mensaje push a un público amplio con un control, el g
 Si utilizas manualmente números de contenedor aleatorios para los grupos de control, echa un vistazo a [las cosas que debes tener]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/#things-to-watch-for) en [cuenta]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/#things-to-watch-for) en tus grupos de control.
 {% endalert %}
 
-[1]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/
-[2]: {% image_buster /assets/img/ab_create_1.png %}
-[3]: {% image_buster /assets/img/ab_create_2.png %}
-[4]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/
-[5]: {% image_buster /assets/img/ab_create_4.png %}
-[6]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/
-[7]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/message_format/

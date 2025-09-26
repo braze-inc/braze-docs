@@ -87,7 +87,7 @@ Debe solicitar el consentimiento explícito de los usuarios a través del cuadro
 
 Hay dos formas de comprobar el estado de la suscripción push de un usuario con Braze:
 
-- **Perfil del usuario**: Puedes acceder a perfiles de usuario individuales a través del panel de Braze en la página de [Búsqueda de usuarios]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/). Después de encontrar el perfil de un usuario (a través de la dirección de correo electrónico, el número de teléfono o el ID de usuario externo), puede seleccionar la pestaña **Compromiso** para ver y ajustar manualmente el estado de suscripción de un usuario.
+- **Perfil del usuario**: Puedes acceder a perfiles de usuario individuales a través del panel de Braze en la página de [Búsqueda de usuarios]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/). Después de encontrar el perfil de un usuario (a través de la dirección de correo electrónico, el número de teléfono o el ID de usuario externo), puede seleccionar la pestaña **Compromiso** para ver y ajustar manualmente el estado de suscripción de un usuario.
 - **Exportación de API REST**: Puedes exportar perfiles de usuario individuales en formato JSON utilizando los puntos finales de exportación [Usuarios por segmento]({{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/) o [Usuarios por identificador]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/). Braze devolverá un objeto de tokens push que contiene información de habilitación push por dispositivo.
 
 ### Comprobar el estado del registro push

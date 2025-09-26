@@ -1,5 +1,5 @@
 ---
-nav_title: Creating a WhatsApp Message
+nav_title: Creating a WhatsApp message
 article_title: Creating a WhatsApp Message
 page_order: 0
 description: "This reference article covers the steps involved in building out and creating a WhatsApp message."
@@ -73,14 +73,15 @@ Select if you’d like to create a WhatsApp [template message](#template-message
 
 ![The Message Variants section lets you select a subscription group and one of two message types: WhatsApp Template Message and Response Message.]({% image_buster /assets/img/whatsapp/whatsapp_message_variants.png %}){: style="max-width:80%;"}
 
-#### Template messages
+{% tabs %}
+{% tab Template messages %}
 
 You can use [approved WhatsApp template messages]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/#step-3-create-whatsapp-templates
 ) to initiate conversations with your users on WhatsApp. These messages are submitted in advance to WhatsApp for content approval, which can take up to 24 hours to approve. Any edits you make to copy needs to be edited and resubmitted to WhatsApp.
 
 Disabled text fields (highlighted gray) cannot be edited as they are part of the approved WhatsApp template. To make updates to the disabled text, you must edit your template and get it reapproved.
 
-##### Languages
+#### Languages
 
 Each template has an assigned language, so you need to create a campaign or Canvas step for each language to correctly set up user matching. For example, if you're building a Canvas that uses templates assigned with Indonesian and English, you need to create a Canvas step for the Indonesian template and a Canvas step for the English template.
 
@@ -88,7 +89,7 @@ Each template has an assigned language, so you need to create a campaign or Canv
 
 If you're adding copy in a language that is written right-to-left, note that the final appearance of right-to-left messages depends largely on how service providers render them. For best practices on crafting right-to-left messages that display as accurately as possible, refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/).
 
-##### Variables
+#### Variables
 
 If you added variables while creating the WhatsApp template in the Meta Business Manager, those variables will show up as blank spaces in the message composer. Replace these blank spaces with Liquid or plain text. To use plain text, use the format "text here" encased by double braces. If you opted to include images when building your template, you can upload or add images from the media library or by referencing an image URL.
 
@@ -102,11 +103,12 @@ If you plan to use Liquid, be sure to include a default value for your chosen pe
 
 ![The Add Personalization tool with the attribute "first_name" and the default value "you".]({% image_buster /assets/img/whatsapp/whatsapp7.png %}){: style="max-width:80%;"}
 
-#### Dynamic links 
+### Dynamic links 
 
 Call-to-action URLs may contain variables, though Meta requires them to be at the end of the URL, such as `{% raw %}https://example.com/{{variable}}{% endraw %}`, where the variable can then be replaced in Braze with Liquid. Links can also be included as the body text as part of the template. At this time, neither of these links can be shortened. 
 
-#### Response messages
+{% endtab %}
+{% tab Response messages %}
 
 You can use response messages to reply to inbound messages from your users. These messages are built in-app on Braze during your composition experience and can be edited at any time. You can use Liquid to match the response message language to the appropriate users.
 
@@ -118,6 +120,9 @@ There are five response message layouts you can use:
 - List Message
 
 ![The response message composer for a Reply Message that welcomes new users with a discount code.]({% image_buster /assets/img/whatsapp/whatsapp_response_messages.png %}){: style="max-width:80%;"}
+
+{% endtab %}
+{% endtabs %}
 
 ### Step 3: Preview and test your message
 
@@ -149,6 +154,8 @@ This step is also where you can specify delivery controls, such as allowing user
 #### Choose users to target
 
 Next, you need to [target users]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) by choosing segments or filters to narrow down your audience. You should have already chosen the subscription group, which narrows users by the level or category of communication they wish to have with you. In this step, you will select the larger audience from your segments and narrow that segment further with our filters. You'll automatically be given a snapshot of what that approximate segment population looks like right now. Remember that exact segment membership is always calculated just before the message is sent.
+
+{% multi_lang_include target_audiences.md %}
 
 #### Choose conversion events
 

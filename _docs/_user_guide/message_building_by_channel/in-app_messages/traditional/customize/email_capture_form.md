@@ -1,5 +1,5 @@
 ---
-nav_title: Email Capture Form
+nav_title: Email capture form
 article_title: Email Capture Form
 page_order: 3
 page_type: reference

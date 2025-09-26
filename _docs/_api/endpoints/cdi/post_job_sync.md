@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Trigger Sync"
+nav_title: "POST: Trigger sync"
 article_title: "POST: Trigger Sync"
 search_tag: Endpoint
 page_order: 2

@@ -10,7 +10,7 @@ channel:
 
 # Gmail 프로모션 설정
 
-> [Gmail 모바일 프로모션 탭][1]은 마케터가 제목란이나 프리헤더 정보만이 아니라 "카드"에 주석을 통해 더 많은 정보를 보낼 수 있도록 합니다. Braze에는 이메일 캠페인에서 카드를 빌드하는 데 도움이 되는 내장 도구가 있습니다.
+> The [Gmail mobile Promotions tab](https://developers.google.com/gmail/promotab/) allows marketers to send more information via annotations in a "card" rather than just the subject line or preheader information. Braze에는 이메일 캠페인에서 카드를 빌드하는 데 도움이 되는 내장 도구가 있습니다.
 
 ## 필수 조건
 
@@ -20,10 +20,10 @@ channel:
 
 이 단계를 따라 이메일 캠페인을 위한 Gmail 프로모션 카드를 구축하세요. 편집기에서 **콘텐츠** 섹션을 벗어나면 **Gmail 프로모션** 탭의 필드와 정보가 초기화됩니다. 프로모션 카드의 설정을 완료하고 생성된 HTML을 복사하여 HTML 코드를 잃지 않도록 하세요.
 
-1. [이메일 캠페인][7]을 만들고 편집 환경으로 **HTML 편집기**를 선택하세요.
+1. [Create your email campaign]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/), and select the **HTML Editor** as your editing experience.
 2. HTML 편집기에서 **콘텐츠** 섹션으로 이동하여 **Gmail 프로모션** 탭을 선택합니다.
-3. **기본 정보** 아래 필드를 작성한 다음 **HTML 코드 생성<2>를 클릭하십시오. 이것은 **HTML 코드 `<Head>`** 섹션에 복사하여 붙여넣기하여 Gmail 프로모 탭 카드의 스크립트를 생성하는 데 도움이 됩니다. <br> ![카드를 빌드하는 방법의 예.][2]
-4. 할인 혜택만, 프로모션 카드만 또는 둘 다 포함할지 선택하세요. <br> ![할인 혜택 및 프로모션 카드를 포함하는 옵션.][10]{: style="max-width:50%;"}
+3. **기본 정보** 아래 필드를 작성한 다음 **HTML 코드 생성<2>를 클릭하십시오. 이것은 **HTML 코드 `<Head>`** 섹션에 복사하여 붙여넣기하여 Gmail 프로모 탭 카드의 스크립트를 생성하는 데 도움이 됩니다. <br> ![An example of how to build a card.]({% image_buster /assets/img/create-gmail-promo.png %})
+4. 할인 혜택만, 프로모션 카드만 또는 둘 다 포함할지 선택하세요. <br> ![Options to include a discount offer and promotion cards.]({% image_buster /assets/img_archive/gmail_promo_discount.png %}){: style="max-width:70%;"}
 5. 스크립트를 이메일 HTML의 `<head>` 요소에 복사하여 붙여넣으세요.
 
 {% alert warning %}
@@ -34,13 +34,13 @@ channel:
 
 할인 혜택을 설정하면 할인의 유효 날짜를 지정할 수 있습니다. 할인 혜택을 결정한 후 시작 날짜와 시간을 선택하십시오. 할인 혜택을 특정 시간에 종료하거나, 종료하지 않도록 선택할 수 있습니다.
 
-![할인 혜택의 제공 가치, 코드 및 시작 날짜와 시간을 지정하는 옵션입니다.][11]{: style="max-width:50%;"}
+![Options to specify the offer value, code, and start date and time for a discount offer.]({% image_buster /assets/img/gmail_promo_discount_details.png %}){: style="max-width:70%;"}
 
 ### 제품 캐러셀 사용자 정의
 
 제품 캐러셀의 프로모션 카드는 귀하의 제안에 이미지를 제공하는 데 유용합니다. 제품 캐러셀에서 변수를 커스텀하고 최대 10개의 이미지 미리보기를 포함할 수 있으며, 각 이미지는 고유합니다.
 
-![Motto라는 회사의 제품 캐러셀 예시로, 이메일 제목은 "우리의 베스트셀러 양말이 세일 중입니다"이며, 세 장의 양말 이미지와 할인된 가격이 포함되어 있습니다.][9]{: style="max-width:40%;"}
+![An example of a product carousel from a company named Motto with the email heading "Our best selling socks are on sale", with three images of socks and their discounted prices.]({% image_buster /assets/img_archive/product_carousel.png %}){: style="max-width:40%;"}
 
 | 사용자 정의 변수 | 설명 |
 |---|---|
@@ -58,7 +58,7 @@ channel:
 
 ### 모범 사례
 
-일반적으로 Gmail][8]에서 권장하는 이러한 모범 사례를 따르세요. 
+In general, adhere to these [best practices recommended by Gmail](https://developers.google.com/gmail/promotab/best-practices). 
 
 {% alert tip %}
 이 스크립트 내에서 Liquid을 사용할 수 있지만 오류를 피하기 위해 가능한 한 메시징을 많이 테스트하는 것이 좋습니다.
@@ -92,14 +92,3 @@ Braze 또는 다른 ESP는 헤더 섹션의 링크에 링크 추적을 삽입할
 
 Gmail은 카드를 표시할 시기와 대상을 결정하므로 모든 수신자가 제품 캐러셀을 볼 수 있다는 보장은 없습니다.
 
-[1]: https://developers.google.com/gmail/promotab/
-[2]: {% image_buster /assets/img/create-gmail-promo.png %}
-[3]: {% image_buster /assets/img/copy-gmail-promo-script.png %}
-[4]: {% image_buster /assets/img/promocardmap.png %}
-[5]:https://developers.google.com/gmail/promotab/overview#preview_your_annotations
-[6]: {% image_buster /assets/img/gmail_preview.png %}
-[7]: {{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/
-[8]:https://developers.google.com/gmail/promotab/best-practices
-[9]: {% image_buster /assets/img_archive/product_carousel.png %}
-[10]: {% image_buster /assets/img_archive/gmail_promo_discount.png %}
-[11]: {% image_buster /assets/img/gmail_promo_discount_details.png %}

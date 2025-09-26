@@ -1,5 +1,5 @@
 ---
-nav_title: Disabling iOS SDK Tracking
+nav_title: Disabling iOS SDK tracking
 article_title: Disabling SDK Tracking for iOS
 platform: iOS
 page_order: 8

@@ -16,10 +16,10 @@ channel:
 {% endsdktab %}
 
 {% sdktab swift %}
-guide/swift/push_notifications/customization.md developer_ %}
+{% multi_lang_include developer_guide/swift/push_notifications/customization.md %}
 {% endsdktab %}
 
 {% sdktab fireos %}
-guide/fireos/push_notifications/customization.md developer_ %}
+{% multi_lang_include developer_guide/fireos/push_notifications/customization.md %}
 {% endsdktab %}
 {% endsdktabs %}

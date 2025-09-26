@@ -29,7 +29,7 @@ Braze는 특정 기간 동안의 "활성 사용자"를 해당 기간에 세션�
 
 다양한 필터를 사용하여 가장 충성도가 높고 일관된 사용자층을 아우를 수 있는 사용자 세그먼트를 생성하세요. 다음 샘플 세그먼트는 상위 사용자를 정의합니다.
 
-![][1]
+![]({% image_buster /assets/img_archive/define_top_users.png %} "Define your top users")
 
 또한 캠페인의 제한을 통과하거나 벗어나는 사용자는 그에 따라 타겟팅되거나 해제되므로 이 세그먼트를 계속 업데이트할 필요가 없습니다.
 
@@ -45,11 +45,9 @@ Braze는 특정 기간 동안의 "활성 사용자"를 해당 기간에 세션�
 
 예상치 못한 보상은 처음부터 약속한 것보다 사용자의 지속적인 행동을 유도하는 데 더 효과적일 수 있습니다!
 
-![작성 단계의 캠페인에 iOS 리치 알림이 포함된 캠페인이 표시됩니다. "저희와 함께 쇼핑해 주셔서 다시 한 번 감사드립니다! 감사의 마음을 전하기 위해 다음 구매 시 무료 배송 서비스를 제공합니다."][2]
+![작성 단계의 캠페인에 iOS 리치 알림이 포함된 캠페인이 표시됩니다. "저희와 함께 쇼핑해 주셔서 다시 한 번 감사드립니다! To show our appreciation, we're giving you free shipping on your next purchase".]({% image_buster /assets/img/congratulations_push.jpg %})
 
 ### 결과 추적
 
 열림을 추적하여 최적의 메시지 유형으로 적절한 사용자 모음을 타겟팅하고 있는지 확인하세요. 또한 푸시 옵트아웃을 추적하여 중요한 사용자를 잃지 않도록 주의하세요.
 
-[1]: {% image_buster /assets/img_archive/define_top_users.png %} "상위 사용자 정의하기"
-[2]: {% image_buster /assets/img/congratulations_push.jpg %}

@@ -37,7 +37,7 @@ Para adicionar um bloco de conteúdo no editor, faça o seguinte:
 
 1. Acesse a guia **Rows (Linhas)** no editor e selecione **Content Blocks (Blocos de conteúdo**). 
 2. Arraste e solte seu bloco de conteúdo no editor de e-mail. 
-3. (Opcional) Ajuste a largura de seu bloco de conteúdo selecionando o botão no menu de navegação. A largura padrão é 100%. <br><br>![Uma seta de dois lados com uma opção para editar a largura.][1]{: style="max-width:30%;" }<br><br>
+3. (Opcional) Ajuste a largura de seu bloco de conteúdo selecionando o botão no menu de navegação. A largura padrão é 100%. <br><br>![Uma seta de dois lados com uma opção para editar a largura.]({% image_buster /assets/img_archive/content_block_width.png %}){: style="max-width:30%;" }<br><br>
 
 Depois de adicionar o bloco de conteúdo ao editor de e-mail, é possível fazer edições no bloco de conteúdo que não afetarão o bloco de conteúdo original criado em **Modelos e mídias**. Isso ocorre porque os blocos de conteúdo adicionados por arrastar e soltar não estão vinculados ao bloco de conteúdo original. Para visualizar as alterações feitas no bloco de conteúdo original, arraste-o para o editor de e-mail novamente. 
 
@@ -51,7 +51,7 @@ Para adicionar um bloco de conteúdo usando o Liquid, faça o seguinte:
 2. Clique em <i class="fas fa-plus"></i> **Personalization**.
 3. Localize a guia **Add Personalization (Adicionar personalização** ) e selecione **Content Blocks (Blocos de conteúdo** ) no menu suspenso **Personalization Type (Tipo de personalização** ).
 4. Selecione o nome de seu bloco de conteúdo no campo **Atribuição**. O campo Snippet Liquid será preenchido com a Liquid tag do bloco de conteúdo. 
-5. Copie e cole o snippet Liquid em um bloco do editor de texto. <br>![A guia Add Personalization com opções.][2]{: style="max-width:30%;"}
+5. Copie e cole o snippet Liquid em um bloco do editor de texto. <br>![A guia Adicionar personalização com opções.]({% image_buster /assets/img_archive/dnd_content_block_personalization.png %}){: style="max-width:30%;"}
 
 Ao fazer a prévia do envio de mensagens por e-mail, o snippet do Liquid será exibido como o bloco de conteúdo do editor de arrastar e soltar. 
 
@@ -65,5 +65,3 @@ Para atualizar um Content Block existente, você pode editar o Content Block ori
 
 Para arquivar um bloco de conteúdo, acesse **Modelos** > **Blocos de conteúdo**, selecione o ícone de reticências verticais <i class="fas fa-ellipsis-vertical"></i> para o bloco de conteúdo e clique em **Arquivar**. Quando você arquivar um bloco de conteúdo, suas mensagens ainda incluirão o conteúdo do bloco arquivado. No entanto, os blocos de conteúdo arquivados são somente leitura, portanto, desarquive o bloco de conteúdo antes de editá-lo. 
 
-[1]: {% image_buster /assets/img_archive/content_block_width.png %}
-[2]: {% image_buster /assets/img_archive/dnd_content_block_personalization.png %}

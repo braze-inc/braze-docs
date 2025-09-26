@@ -11,23 +11,24 @@ channel:
 
 # Boutons d'action push
 
-![Une notification push iOS avec deux boutons d’action push : Accepter et refuser.][1]{: style="float:right;max-width:40%;margin-left:15px;border:none;"}
+![Une notification push iOS avec deux boutons d’action push : Accepter et refuser.]({% image_buster /assets/img_archive/push_action_example.png %}){: style="float:right;max-width:40%;margin-left:15px;border:none;"}
 
 > Les boutons d'action push vous permettent de définir le contenu et les actions des boutons lorsque vous utilisez les notifications push de Braze iOS et Android. Grâce aux boutons d'action, vos utilisateurs peuvent interagir directement avec votre application depuis une notification sans avoir besoin de cliquer dans une expérience sur l'application.
 
 ## Création de boutons d'action
 
-Chaque bouton interactif peut renvoyer à une page Web ou à un lien profond ou ouvrir l'appli. Vous pouvez spécifier vos boutons d'action push dans la section **Comportement au clic** du compositeur de messages push dans le tableau de bord.
+Chaque bouton interactif peut renvoyer à une page Web ou à un lien profond ou ouvrir l'appli. 
 
-{% alert important %}
-Si vous souhaitez cibler à la fois iOS et Android dans une même campagne, créez une campagne multicanale. Les boutons d'action push ne sont pas pris en charge lors du ciblage à la fois sur iOS et Android à l'aide de [campagnes quick push.]({{site.baseurl}}/quick_push)
-{% endalert %}
+- Pour les campagnes push standard, vous pouvez spécifier vos boutons d'action push dans la section **Comportement au clic** du compositeur de messages push dans le tableau de bord.
+- Pour les [campagnes "quick push"]({{site.baseurl}}/quick_push), les boutons d'action peuvent être configurés séparément pour chaque plateforme sous l'onglet **Paramètres**.
 
+{% tabs %}
+{% tab iOS %}
 ### iOS {#ios}
 
 Pour utiliser des boutons d'action dans vos notifications push iOS, procédez comme suit :
 
-1. Créez une [campagne push]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/) iOS et activez les boutons d'action dans l'onglet **Compose.** 
+1. Activez les boutons d'action dans l'onglet **Compose** pour une campagne standard ou dans l'onglet **Settings** pour un quick push.
 2. Sélectionnez votre **catégorie de notification iOS** parmi les combinaisons de boutons disponibles suivantes :
  - Accepter/Refuser
  - Oui/Non
@@ -40,12 +41,13 @@ Pour utiliser des boutons d'action dans vos notifications push iOS, procédez co
 {% alert note %}
 En raison de la gestion des boutons par iOS, vous devez effectuer des étapes d'intégration supplémentaires lors de la configuration des boutons d'action push, qui sont décrites dans notre [documentation destinée aux développeurs]({{site.baseurl}}/developer_guide/push_notifications/customization/?sdktab=swift#swift_customizing-push-categories). En particulier, vous devez soit configurer les catégories iOS, soit choisir parmi certaines options de boutons par défaut. Pour les intégrations Android, ces boutons fonctionnent automatiquement.
 {% endalert %}
-
+{% endtab %}
+{% tab Android %}
 ### Android {#android}
 
 Pour utiliser des boutons d'action dans vos envois push Android, procédez comme suit :
 
-1. Créez une [campagne push]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/) Android et activez les boutons de notification dans l'onglet **Compose.** 
+1. Activez les boutons d'action dans l'onglet **Compose** pour une campagne standard ou dans l'onglet **Settings** pour un quick push.
 2. Sélectionnez <i class="fas fa-plus-circle"></i> **Ajouter un bouton** et indiquez le texte de votre bouton et son **comportement au clic.** Vous pouvez choisir parmi les actions disponibles suivantes :
   - Ouvrir l’application
   - Rediriger vers une URL Web
@@ -69,6 +71,6 @@ Le tableau suivant donne le nombre de caractères que vous pouvez ajouter avant 
 | 2 | 20 caractères |
 | 3 | 11 caractères |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{% endtab %}
+{% endtabs %}
 
-
-[1]: {% image_buster /assets/img_archive/push_action_example.png %}

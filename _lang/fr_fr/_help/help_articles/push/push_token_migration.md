@@ -14,7 +14,7 @@ channel: push
 
 ## Migration automatique via SDK
 
-Après avoir [intégré le SDK de Braze]({{site.baseurl}}/developer_guide/sdk_integration/), les jetons de push de vos utilisateurs abonnés seront automatiquement migrés la prochaine fois qu'ils ouvriront votre appli. En attendant, vous ne pourrez pas envoyer à ces utilisateurs des notifications push via Braze.
+Après avoir [intégré le SDK de Braze]({{site.baseurl}}/developer_guide/sdk_integration/), les jetons de push de vos utilisateurs abonnés seront automatiquement migrés la prochaine fois qu'ils ouvriront votre application. En attendant, vous ne pourrez pas envoyer à ces utilisateurs des notifications push via Braze.
 
 Vous pouvez également [migrer vos jetons push manuellement](#manual-migration-via-api), ce qui vous permettra de réengager vos utilisateurs plus rapidement.
 

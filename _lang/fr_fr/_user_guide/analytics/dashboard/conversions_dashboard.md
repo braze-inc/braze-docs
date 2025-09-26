@@ -22,8 +22,8 @@ Pour configurer votre tableau de bord des conversions :
 3. Sélectionnez les campagnes ou les toiles (ou les deux) à analyser. 
    - (facultatif) Filtrez les campagnes et les toiles en sélectionnant une étiquette.  
 4. Sélectionnez le **(s) canal(aux)** à analyser pour vos messages.
-5. (facultatif) Sélectionnez une couche de **ventilation** pour afficher différentes dimensions de données, par exemple par variante, étape du canvas, pays ou langue.
-6. (facultatif) Si vous souhaitez calculer les conversions d'un événement qui n'a pas été configuré en tant qu'événement de conversion sur la campagne ou le Canvas, activez l'option [Utiliser des événements personnalisés.](#using-custom-events)
+5. Sélectionnez une **Ventilation par** couche pour afficher différentes dimensions de données, par exemple par variante, étape du canvas, pays ou langue.
+6. (Facultatif) Si vous souhaitez calculer les conversions d'un événement qui n'a pas été configuré en tant qu'événement de conversion sur la campagne ou le Canvas, activez l'option [Utiliser des événements personnalisés.](#using-custom-events)
 7. Choisissez une [méthode d'attribution](#attribution-methods) pour analyser les messages sélectionnés.
 
 {% alert note %}
@@ -59,7 +59,11 @@ Votre rapport est divisé en trois sections :
 
 ### Détails de la conversion
 
-Le tableau des détails de la conversion présente toujours une colonne pour les *destinataires* et une autre pour les *conversions* (taux et total). Les deux autres colonnes du tableau qui apparaissent dépendent des options que vous avez sélectionnées lors de la configuration de votre rapport. Le tableau suivant décrit les indicateurs possibles.
+Le tableau des détails de la conversion présente toujours une colonne pour les *destinataires* et une autre pour les *conversions* (taux et total). Les deux autres colonnes du tableau qui apparaissent dépendent des options que vous avez sélectionnées lors de la configuration de votre rapport. 
+
+![Tableau des détails de la conversion indiquant Touches comme méthode d'attribution pour les colonnes trois et quatre.]({% image_buster /assets/img_archive/conversions2_details.png %}){: style="border:none"}
+
+Le tableau suivant décrit les indicateurs possibles.
 
 | Indicateurs métriques | Description |
 | --- | --- |
@@ -68,8 +72,6 @@ Le tableau des détails de la conversion présente toujours une colonne pour les
 | Méthode d'attribution | Défini par la [méthode d'attribution](#attribution-methods) que vous avez sélectionnée lors de la création du rapport. Pour l'attribution de la dernière touche ou si plusieurs canaux sont sélectionnés, elle apparaît sous forme de [touches.](#terms-to-know) |
 | Taux de conversion (méthode d'attribution) | Défini par la [méthode d'attribution](#attribution-methods) que vous avez sélectionnée lors de la création du rapport. Si plusieurs canaux sont sélectionnés, l'attributut par défaut est celui de la dernière touche. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-![]({% image_buster /assets/img_archive/conversions2_details.png %})
 
 Si vous avez sélectionné des détails de ventilation pour les campagnes ou les toiles lors de l'implémentation [de votre rapport](#setting-up-your-report) (étape 5), vous pouvez cliquer sur <i class="fas fa-angle-down"></i> pour développer le tableau.
 
@@ -85,7 +87,7 @@ Pour télécharger les données de la série temporelle, sélectionnez une optio
 Ce graphique n'affiche les données que pour un seul canal à la fois. Utilisez le menu déroulant **Canal** sur le graphique pour sélectionner un seul canal.
 {% endalert %}
 
-![]({% image_buster /assets/img_archive/conversions2_funnel.png %}){: style="max-width:70%"}
+![Graphique de l'entonnoir des conversions pour deux campagnes d'e-mail montrant des résultats similaires pour les e-mails délivrés, les e-mails ouverts, les e-mails cliqués et les conversions.]({% image_buster /assets/img_archive/conversions2_funnel.png %})
 
 ### Évolution des conversions
 
@@ -93,7 +95,7 @@ Ce graphique chronologique comprend une représentation des conversions par camp
 
 Pour télécharger les données de la série chronologique, sélectionnez <i class="fas fa-bars"></i>, puis choisissez votre option de téléchargement. Les options disponibles sont PNG, JPEG, PDF, SVG ou CSV.
 
-![]({% image_buster /assets/img_archive/conversions2_over_time.png %}){: style="max-width:70%"}
+![Graphique des conversions dans le temps pour deux campagnes d'e-mail, montrant les conversions par jour.]({% image_buster /assets/img_archive/conversions2_over_time.png %})
 
 ### Méthodes d'attribution
 

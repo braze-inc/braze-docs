@@ -1,5 +1,5 @@
 ---
-nav_title: Saving Drafts for Canvas
+nav_title: Saving drafts for Canvas
 article_title: Saving Drafts for Canvas
 alias: "/save_as_draft/"
 page_order: 1

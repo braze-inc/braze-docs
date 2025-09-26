@@ -1,5 +1,5 @@
 ---
-nav_title: Liquid Use Case Library
+nav_title: Liquid use case library
 article_title: Liquid Use Case Library
 page_order: 10
 search_rank: 2

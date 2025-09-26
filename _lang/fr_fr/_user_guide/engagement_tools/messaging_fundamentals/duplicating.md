@@ -17,6 +17,10 @@ tool:
 
 Après avoir dupliqué une campagne ou un canvas, le nouveau message sera automatiquement intitulé `"Copy of [Original Name]"` et vous accéderez à sa page d'édition. Ces doublons resteront des brouillons jusqu'à ce que vous les modifiiez et les lanciez.
 
+{% alert tip %}
+Vous pouvez également [copier votre campagne]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/copying_across_workspaces/) dans plusieurs espaces de travail. La copie restera à l'état de brouillon jusqu'à ce que vous la modifiiez et la lanciez.
+{% endalert %}
+
 {% tabs %}
 {% tab campagne %}
 Pour dupliquer une campagne :
@@ -32,8 +36,6 @@ Pour dupliquer une toile :
 1. Allez dans **Messagerie** > **Canvas.**
 2. Passez la souris sur la ligne Canvas et sélectionnez <i class="fas fa-ellipsis-vertical"></i> **More actions.**
 3. Sélectionnez **Dupliquer**.
-
-![Page de liste des canvas avec l'option de dupliquer un canvas nommé "api_triggered_canvas 3".]({% image_buster /assets/img_archive/duplicate_canvas.png %})
 
 {% details Editeur de canevas original %}
 

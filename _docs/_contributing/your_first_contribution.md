@@ -1,6 +1,6 @@
 ---
-nav_title: Your First Contribution
-article: Your first contribution
+nav_title: Your first contribution
+article_title: Your first contribution
 description: "If you're new to docs-as-code or Braze Docs, start with this step-by-step tutorial."
 page_order: 1
 noindex: true

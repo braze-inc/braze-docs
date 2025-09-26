@@ -1,5 +1,5 @@
 ---
-nav_title: Scheduling Your Campaign
+nav_title: Scheduling your campaign
 article_title: Scheduling Your Campaign
 layout: dev_guide
 page_order: 3

@@ -25,7 +25,7 @@ En el panel de Braze, ve a **Mensajería** > **Canvas** y selecciona un Canvas e
 
 En el editor de Canvas, selecciona **Editar Canvas** o **Editar borrador**, dependiendo de si tu Canvas está activo o en borrador. Despliega el desplegable **Guardar como borrador** en el pie de página y selecciona **Guardar como plantilla**.
 
-![][2]
+![]({% image_buster /assets/img/save_canvas_as_template.png %})
 
 ### Paso 3: Guarda tu plantilla
 
@@ -45,7 +45,7 @@ Si utilizas la navegación antigua, puedes encontrar esta página en **Interacci
 
 Selecciona **Crear plantilla** y comienza a configurar los detalles de tu Canvas. Puedes empezar dando un nombre a tu plantilla Canvas.
 
-![Una plantilla Canvas de ejemplo llamada "Plantilla Canvas de venta anual" con la descripción "Utilizar para la promoción anual de primavera".][1]
+![Una plantilla Canvas de ejemplo llamada "Plantilla Canvas de venta anual" con la descripción "Utilizar para la promoción anual de primavera".]({% image_buster /assets/img/canvas_template_example.png %})
 
 ### Paso 3: Personaliza tu plantilla
 
@@ -66,7 +66,7 @@ Hay dos formas de utilizar tu plantilla al componer un Canvas:
 
 Braze dispone de una selección de plantillas de Canvas que puedes consultar y utilizar como mejores prácticas para casos de uso comunes. Aunque estas plantillas no se pueden editar, puedes verlas en **Plantillas** > **Plantillas Braze** o utilizarlas en tus Lienzos.
 
-![Plantillas Braze en la sección de plantillas Canvas con seis plantillas disponibles.][3]
+![Plantillas Braze en la sección de plantillas Canvas con seis plantillas disponibles.]({% image_buster /assets/img/braze_canvas_templates.png %})
 
 Selecciona una de las siguientes plantillas disponibles para utilizarla como referencia o como Canvas.
 
@@ -162,6 +162,3 @@ Sí, puedes guardar pasos incompletos como plantilla de Canvas. Sin embargo, cua
 
 Sí, puedes guardar configuraciones en el constructor de Canvas dentro de una plantilla de Canvas. Por ejemplo, si piensas utilizar a menudo una combinación de segmentos y filtros, puedes guardar esta configuración de **audiencia objetivo** como parte de tu plantilla de Canvas.
 
-[1]: {% image_buster /assets/img/canvas_template_example.png %}
-[2]: {% image_buster /assets/img/save_canvas_as_template.png %}
-[3]: {% image_buster /assets/img/braze_canvas_templates.png %}

@@ -21,7 +21,7 @@ Esta seção fornece as chaves da API REST do seu espaço de trabalho, os identi
 
 Para maior segurança, você pode especificar uma lista de endereços IP e sub-redes autorizados a fazer solicitações de API REST para uma determinada chave de API REST. Isso é chamado de lista de permissões ou lista de brancos. Para permitir endereços IP ou sub-redes específicos, adicione-os à seção **Lista de permissões de IPs** ao criar uma nova chave da API REST: 
 
-![Seção de lista de permissões de IP da API na criação de uma nova chave de API][26]
+![Seção de lista de permissões de IP da API para criar uma nova chave de API]({% image_buster /assets/img_archive/api-key-ip-whitelisting.png %})
 
 Se você não especificar nenhum, as solicitações poderão ser enviadas de qualquer endereço IP.
 
@@ -35,13 +35,7 @@ Esta seção inclui uma lista de identificadores usados para fazer referência a
 
 ### Outros identificadores
 
-Para integrar-se à nossa API, você pode pesquisar os identificadores relacionados a quaisquer segmentos, campanhas, cartões de conteúdo e outros que deseja acessar na API externa do Braze. Todas as mensagens devem seguir a codificação [UTF-8][12]. Depois de selecionar qualquer um deles, o identificador será exibido abaixo do menu suspenso.
+Para integrar-se à nossa API, você pode pesquisar os identificadores relacionados a quaisquer segmentos, campanhas, cartões de conteúdo e outros que deseja acessar na API externa do Braze. Todas as mensagens devem seguir a codificação [UTF-8](https://en.wikipedia.org/wiki/UTF-8). Depois de selecionar qualquer um deles, o identificador será exibido abaixo do menu suspenso.
 
 Para saber mais, consulte [Tipos de identificadores da API]({{site.baseurl}}/api/identifier_types/).
 
-[3]: {{site.baseurl}}/api/endpoints/user_data/
-[4]: {{site.baseurl}}/api/endpoints/messaging/
-[5]: {{site.baseurl}}/api/endpoints/email/
-[6]: {{site.baseurl}}/api/endpoints/export/
-[12]: https://en.wikipedia.org/wiki/UTF-8 "Wikipédia: UTF-8"
-[26]: {% image_buster /assets/img_archive/api-key-ip-whitelisting.png %}

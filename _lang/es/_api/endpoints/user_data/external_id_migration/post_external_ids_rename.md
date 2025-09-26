@@ -34,7 +34,7 @@ Para utilizar este punto final, necesitarás una [clave de API]({{site.baseurl}}
 
 ## Límite de velocidad
 
-{% multi_lang_include rate_limits.md endpoint='migracion id externa' %}
+{% multi_lang_include rate_limits.md endpoint='external id migration' %}
 
 ## Cuerpo de la solicitud
 

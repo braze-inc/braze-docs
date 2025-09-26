@@ -1,5 +1,5 @@
 ---
-nav_title: In-App Messaging
+nav_title: In-App messaging
 page_order: 2
 config_only: true
 noindex: true

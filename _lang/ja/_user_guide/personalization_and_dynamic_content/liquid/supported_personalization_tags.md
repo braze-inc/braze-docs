@@ -20,9 +20,9 @@ search_rank: 1
 | -------------  | ---- |
 | 標準（デフォルト）属性 | `{{${city}}}`<br> `{{${country}}}`<br> `{{${date_of_birth}}}`<br> `{{${email_address}}}`<br> `{{${first_name}}}`<br> `{{${gender}}}`<br> `{{${language}}}`<br> `{{${last_name}}}`<br> `{{${last_used_app_date}}}`<br> `{{${most_recent_app_version}}}`<br> `{{${most_recent_locale}}}`<br> `{{${most_recent_location}}}`<br> `{{${phone_number}}}`<br> `{{${time_zone}}}`<br> `{{${user_id}}}`<br> `{{${braze_id}}}`<br> `{{${random_bucket_number}}}`<br> `{{subscribed_state.${email_global}}}`<br> `{{subscribed_state.${subscription_group_id}}}` |
 | デバイス属性 | `{{most_recently_used_device.${carrier}}}`<br> `{{most_recently_used_device.${id}}}`<br> `{{most_recently_used_device.${idfa}}}`<br> `{{most_recently_used_device.${model}}}`<br> `{{most_recently_used_device.${os}}}`<br> `{{most_recently_used_device.${platform}}}`<br> `{{most_recently_used_device.${google_ad_id}}}`<br> `{{most_recently_used_device.${roku_ad_id}}}`<br> `{{most_recently_used_device.${foreground_push_enabled}}}`|
-| [メールリストの属性][43] | `{{${set_user_to_unsubscribed_url}}}`<br>このタグは、以前の `{{${unsubscribe_url}}}` タグを置き換えるものです。古いタグは以前に作成されたEメールでも機能するが、代わりに新しいタグを使用することをお勧めする。<br><br> `{{${set_user_to_subscribed_url}}}`<br> `{{${set_user_to_opted_in_url}}}`|
-| [SMS の属性][48] | `{{sms.${inbound_message_body}}}`<br> `{{sms.${inbound_media_urls}}}` |
-| [WhatsApp の属性][46] | `{{whats_app.${inbound_message_body}}}`<br> `{{whats_app.${inbound_media_urls}}}` |
+| [メールリストの属性]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions) | `{{${set_user_to_unsubscribed_url}}}`<br>このタグは、以前の `{{${unsubscribe_url}}}` タグを置き換えるものです。古いタグは以前に作成されたEメールでも機能するが、代わりに新しいタグを使用することをお勧めする。<br><br> `{{${set_user_to_subscribed_url}}}`<br> `{{${set_user_to_opted_in_url}}}`|
+| [SMS属性]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#trigger-messages-by-keyword) | `{{sms.${inbound_message_body}}}`<br> `{{sms.${inbound_media_urls}}}` |
+| [WhatsApp 属性]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/user_messages/) | `{{whats_app.${inbound_message_body}}}`<br> `{{whats_app.${inbound_media_urls}}}` |
 | キャンペーン属性 | `{{campaign.${api_id}}}`<br> `{{campaign.${dispatch_id}}}`<br> `{{campaign.${name}}}`<br> `{{campaign.${message_name}}}`<br> `{{campaign.${message_api_id}}}` |
 | キャンバスの属性 | `{{canvas.${name}}}`<br> `{{canvas.${api_id}}}`<br> `{{canvas.${variant_name}}}`<br> `{{canvas.${variant_api_id}}}` |
 | キャンバス・ステップの属性 | `{{campaign.${api_id}}}`<br> `{{campaign.${dispatch_id}}}`<br> `{{campaign.${name}}}`<br> `{{campaign.${message_name}}}`<br> `{{campaign.${message_api_id}}}` |
@@ -31,7 +31,8 @@ search_rank: 1
 | イベントプロパティ <br> (ワークスペースによって異なる)| `{{event_properties.${your_custom_event_property}}}` |
 | キャンバスのコンテキスト変数 | `{{context}}` |
 | カスタム属性 <br> (ワークスペースによって異なる) | `{{custom_attribute.${your_custom_attribute}}}` |
-| [API トリガープロパティ][75] |`{{api_trigger_properties}}` |
+| [API トリガーのプロパティ]({{site.baseurl}}/api/objects_filters/trigger_properties_object/) |`{{api_trigger_properties}}` |
+| キャンバスエントリのプロパティ | `{{canvas_entry_properties.${property_name}}}` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endraw %}
@@ -46,7 +47,7 @@ search_rank: 1
 
 以下のタグはキャンバスとキャンペーンで動作が異なる：
 {% raw %}
-- `dispatch_id` キャンバスステップが"scheduled"の場合でも、キャンバスステップをトリガーされたイベントとして処理するため、ブレーズの動作は異なります(スケジュール設定可能なエントリステップを除く)。詳細については、[ディスパッチ ID の動作][50]を参照してください。
+- `dispatch_id` の動作は、キャンバスとキャンペーンで異なります。これは、Braze がキャンバスのステップ (スケジュール可能なエントリステップを除く) を、スケジュール済みの場合でもトリガーイベントとして扱うためです。詳細については、[ディスパッチIDの動作]({{site.baseurl}}/help/help_articles/data/dispatch_id/)を参照してください。
 - キャンバスで `{{campaign.${name}}}` タグを使用すると、キャンバスコンポーネント名が表示されます。このタグをキャンペーンで使用すると、キャンペーン名が表示される。
 {% endraw %}
 
@@ -62,7 +63,7 @@ search_rank: 1
 |`{{most_recently_used_device.${id}}}` | Braze デバイス識別子。iOS の場合、これは Apple のベンダー用識別子 (IDFV) または UUID になります。Android などのプラットフォームでは、ランダムに生成されたUUID です。 |
 | `{{most_recently_used_device.${carrier}}}` | 利用可能であれば、直近で使用したデバイスの電話サービスキャリア。例えば、「Verizon」や「Orange」などです。 |
 | `{{most_recently_used_device.${ad_tracking_enabled}}}` | デバイスが広告トラッキングを有効にしているかどうか。これはブーリアン値（`true` または`false` ）である。 |
-| `{{most_recently_used_device.${idfa}}}` | iOSデバイスの場合、アプリケーションが[オプションのIDFAコレクション][40]]で構成されている場合、この値は広告用識別子（IDFA）になる。iOS以外のデバイスの場合、この値はNULLになる。 |
+| `{{most_recently_used_device.${idfa}}}` | iOS デバイスの場合、アプリケーションが[ オプションのIDFA コレクション]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/other_sdk_customizations/) で設定されている場合、この値はAdvertising (IDFA) の識別子になります。iOS以外のデバイスの場合、この値はNULLになる。 |
 | `{{most_recently_used_device.${google_ad_id}}}` | Android デバイスの場合、当社オプションの Google Play 広告 ID コレクションでお客様のアプリケーションが設定されていれば、この値は Google Play の広告識別子になります。Android以外のデバイスの場合、この値はNULLになる。 |
 | `{{most_recently_used_device.${roku_ad_id}}}` | Rokuデバイスの場合、この値は、アプリケーションがBrazeで設定される際に収集されるRoku Advertising Identifierとなる。Roku以外のデバイスの場合、この値はNULLになる。 |
 | `{{most_recently_used_device.${model}}}` | もしあれば、デバイスのモデル名。例えば、「iPhone 6S」や「Nexus 6P」、「Firefox」などだ。 |
@@ -99,9 +100,9 @@ User is in list of apps
 
 |タグ | 説明 |
 |------------------|---|
-| `{{targeted_device.${id}}}` | これはBrazeのデバイス識別子である。iOS の場合、これは Apple のベンダー用識別子 (IDFV) または UUID になります。Android などのプラットフォームでは、ランダムに生成されたUUID です。 |
+| `{{targeted_device.${id}}}` | これはBrazeのデバイス識別子である。iOS の場合、これは Apple のベンダー用識別子 (IDFV) または UUID になります。Android などのプラットフォームでは、ランダムに生成されたUUID です。たとえば、ユーザに5 つのデバイスがある場合、5 つのデバイスすべてに対して送信試行が行われ、それぞれに対応するデバイス識別子が使用されます。ユーザーが最後に使用したデバイスにメッセージを送信するようするように設定されている場合、Braze で識別された最後に使用されたデバイスに対して送信操作が1 回だけ試行されます。 |
 | `{{targeted_device.${carrier}}}` | 利用可能であれば、直近で使用したデバイスの電話サービスキャリア。例えば、「Verizon」や「Orange」などです。 |
-| `{{targeted_device.${idfa}}}` | iOSデバイスの場合、アプリケーションが[オプションのIDFAコレクション][40]]で構成されている場合、この値は広告用識別子（IDFA）になる。iOS以外のデバイスの場合、この値はNULLになる。 |
+| `{{targeted_device.${idfa}}}` | iOS デバイスの場合、アプリケーションが[ オプションのIDFA コレクション]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/other_sdk_customizations/) で設定されている場合、この値はAdvertising (IDFA) の識別子になります。iOS以外のデバイスの場合、この値はNULLになる。 |
 | `{{targeted_device.${google_ad_id}}}` | Android デバイスの場合、当社オプションの Google Play 広告 ID コレクションでお客様のアプリケーションが設定されていれば、この値は Google Play の広告識別子になります。Android以外のデバイスの場合、この値はNULLになる。 |
 | `{{targeted_device.${roku_ad_id}}}` | Rokuデバイスの場合、この値は、アプリケーションがBrazeで設定される際に収集されるRoku Advertising Identifierとなる。Roku以外のデバイスの場合、この値はNULLになる。 |
 | `{{targeted_device.${model}}}` | もしあれば、デバイスのモデル名。例えば、「iPhone 6S」や「Nexus 6P」、「Firefox」などだ。 |
@@ -116,11 +117,11 @@ User is in list of apps
 
 さらに、プッシュ通知では、プッシュトークンが API を介してインポートされた場合など、特定の状況下で Braze がプッシュ通知に添付されたデバイスを判別できないことがあります。その結果、これらのメッセージの値は `null` になります。
 
-![プッシュ・メッセージでファーストネーム変数を使うときにデフォルト値「there」を使う例。][4]
+![プッシュメッセージで first_name 変数が使用されている場合にデフォルト値「there」を使う例。]({% image_buster /assets/img_archive/personalized_firstname_.png %})
 
 ### デフォルト値の代わりに条件付きロジックを使う
 
-状況によっては、デフォルト値を設定する代わりに[条件付きロジック][17]]を使用することもできます。条件付きロジックでは、カスタム属性の値によって異なるメッセージを送信することができる。さらに、条件付きロジックを使用して、NULL または空白の属性値を持つ顧客への[メッセージを中止][18]できます。 
+状況によっては、デフォルト値を設定する代わりに[条件付きロジック]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/)を使用することもできます。条件付きロジックでは、カスタム属性の値によって異なるメッセージを送信することができる。さらに、条件付きロジックを使用して、NULL または空白の属性値を持つ顧客への[メッセージを中止]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/)できます。 
 
 #### ユースケース
 
@@ -154,7 +155,7 @@ User is in list of apps
    {% endif %}
    ```
 
-このユースケースでは、名が空白または NULL のユーザーは「Thanks for downloading」というメッセージを受け取ります。顧客の名には[デフォルト値][47]を含めて、間違いがあった場合に Liquid が表示されないようにする必要があります。
+このユースケースでは、名が空白または NULL のユーザーは「Thanks for downloading」というメッセージを受け取ります。顧客の名には[デフォルト値]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/setting_default_values/)を含めて、間違いがあった場合に Liquid が表示されないようにする必要があります。
 
 {% endraw %}
 
@@ -162,7 +163,7 @@ User is in list of apps
 
 メッセージ作成画面で、`assign` タグを使用して変数を作成できます。変数には一意の名前を使用することをお勧めします。サポートされているパーソナライゼーションタグ(`language` など) と同じ名前の変数を作成すると、メッセージングロジックに影響する可能性があります。
 
-変数を作成したら、メッセージング・ロジックやメッセージの中でその変数を参照できる。このタグは、[Connected Content][4] ]機能から返されたコンテンツを再フォーマットしたいときに便利だ。詳しくは、Shopifyの[変数タグに関する][31]ドキュメントを参照されたい。
+変数を作成したら、メッセージング・ロジックやメッセージの中でその変数を参照できる。このタグは、[Connected Content]({% image_buster /assets/img_archive/personalized_firstname_.png %}) 機能から返されたコンテンツを再フォーマットしたいときに便利です。詳しくは、Shopifyの[変数タグに関する](https://docs.shopify.com/themes/liquid/tags/variable-tags)ドキュメントを参照されたい。
 
 {% alert tip %}
 すべてのメッセージに同じ変数を割り当てていることに気づいているか？`assign` タグを何度も書き出す代わりに、そのタグをコンテンツブロックとして保存し、メッセージの先頭に置くことができます。
@@ -216,17 +217,17 @@ Sale on Converse!
 
 そして、`converse_viewer` が true のときにセールメッセージを送信します。それ以外の場合は、メッセージを中止します。
 
-これは、Brazeメッセージコンポーザーでの反復タグの使い方の簡単な例である。詳細については、Shopify の[反復タグ][32]のドキュメントを参照してください。
+これは、Brazeメッセージコンポーザーでの反復タグの使い方の簡単な例である。詳細については、Shopify の[反復タグ](https://docs.shopify.com/themes/liquid/tags/iteration-tags)のドキュメントを参照してください。
 
 ## 構文タグ
 
-構文タグを使用して、Liquid のレンダリング方法を制御できます。`echo` タグを使用して式を返すことができます。これは、中括弧を使って式をラップするのと同じだが、リキッドタグの中でこのタグを使うことができる。また、`liquid` タグを使用して、各タグに区切り文字を使用せずにLiquid のブロックを設定することもできます。`liquid` タグを使用する場合、各タグは個別の行に配置する必要があります。より詳細な情報と例については、Shopifyの[構文タグに関する][33]ドキュメントをチェックしよう。
+構文タグを使用して、Liquid のレンダリング方法を制御できます。`echo` タグを使用して式を返すことができます。これは、中括弧を使って式をラップするのと同じだが、リキッドタグの中でこのタグを使うことができる。また、`liquid` タグを使用して、各タグに区切り文字を使用せずにLiquid のブロックを設定することもできます。`liquid` タグを使用する場合、各タグは個別の行に配置する必要があります。より詳細な情報と例については、Shopifyの[構文タグに関する](https://shopify.dev/api/liquid/tags#syntax-tags)ドキュメントをチェックしよう。
 
-[空白コントロール][49]を使用すると、タグの周りの空白を削除でき、Liquid 出力の外観をさらにコントロールするために役立ちます。
+[ホワイトスペースコントロール](https://shopify.github.io/liquid/basics/whitespace/)を使用すると、タグの周りのホワイトスペースを削除できます。これにより、液体出力の外観をさらに制御することができます。
 
 ## HTTPステータスコード {#http-personalization}
 
-[コネクテッドコンテンツ][38]の呼び出しから HTTP ステータスを使用するには、まず HTTP ステータスをローカル変数として保存してから、`__http_status_code__` キーを使用します。以下に例を示します。
+[コネクテッドコンテンツ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/)の呼び出しから HTTP ステータスを使用するには、まず HTTP ステータスをローカル変数として保存してから、`__http_status_code__` キーを使用します。以下に例を示します。
 
 ```html
 {% connected_content https://example.com/api/endpoint :save connected %}
@@ -293,20 +294,5 @@ It is between 2:00:00 pm and 2:59:59 pm PT!
 
 {% endraw %}
 
-[30]: https://shopify.dev/api/liquid/tags#syntax-tags
 [31]:https://docs.shopify.com/themes/liquid/tags/variable-tags
 [32]:https://docs.shopify.com/themes/liquid/tags/iteration-tags
-[33]: https://shopify.dev/api/liquid/tags#syntax-tags
-[38]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/
-[4]: {% image_buster /assets/img_archive/personalized_firstname_.png %}
-[17]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/
-[18]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/
-[34]:{% image_buster /assets/img_archive/personalized_iflogic_.png %}
-[40]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/
-[43]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions
-[46]: {{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/user_messages/
-[47]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/setting_default_values/
-[48]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#trigger-messages-by-keyword
-[49]: https://shopify.github.io/liquid/basics/whitespace/
-[50]: {{site.baseurl}}/help/help_articles/data/dispatch_id/
-[75]: {{site.baseurl}}/api/objects_filters/trigger_properties_object/

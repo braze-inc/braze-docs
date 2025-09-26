@@ -15,17 +15,17 @@ description: "Este artículo de referencia explica cómo crear listas de código
 
 Los códigos promocionales -también llamados códigos de promoción- son una excelente forma de mantener el interés de los usuarios impulsando las interacciones con un fuerte énfasis en las compras. Puedes crear mensajes que tiren de tu lista de códigos promocionales. 
 
-Cada código promocional tiene una fecha de caducidad de hasta seis meses. Puedes almacenar y gestionar hasta 20 millones de códigos por lista. Al gestionar y analizar el rendimiento de tus códigos promocionales, puedes tomar decisiones específicas para tus estrategias promocionales y de mensajería.
+Cada código promocional tiene una fecha de caducidad de hasta seis meses, y puede eliminarse antes de su caducidad poniéndote en contacto con [el Soporte]({{site.baseurl}}/user_guide/administrative/access_braze/support/). Puedes almacenar y gestionar hasta 20 millones de códigos por lista. Al gestionar y analizar el rendimiento de tus códigos promocionales, puedes tomar decisiones específicas para tus estrategias promocionales y de mensajería.
 
 {% alert important %}
-Los códigos promocionales no pueden enviarse en mensajes in-app.
+Los códigos promocionales no pueden enviarse en mensajes dentro de la aplicación en Canvas. Si participas en el [acceso anticipado](#promotion-codes-iam-campaigns), los códigos promocionales pueden enviarse en campañas de mensajería dentro de la aplicación.
 {% endalert %}
 
 ## Crear una lista de códigos promocionales
 
 ### Paso 1: Ir a la sección Código promocional
 
-![Botón para crear un código promocional.][1]{: style="float:right;max-width:30%;margin-left:15px;"}
+![Botón para crear un código promocional.]({% image_buster /assets/img/promocodes/promocode1.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
 
 1. Desde el panel, ve a **Configuración de datos** > Códigos promocionales.
 2. Selecciona **Crear lista de códigos promocionales**.
@@ -42,7 +42,7 @@ Aquí tienes algunos detalles que debes tener en cuenta al crear un fragmento de
 - Utiliza el nombre del fragmento en Liquid para hacer referencia a este conjunto de códigos promocionales.
 - Asegúrate de que el fragmento de código no se esté utilizando ya en otra lista.
 
-![Una lista de códigos promocionales llamada "SpringSale2025" con el fragmento de código "spring25".][3]{: style="max-width:80%"}
+![Una lista de códigos promocionales llamada "SpringSale2025" con el fragmento de código "spring25".]({% image_buster /assets/img/promocodes/promocode3.png %}){: style="max-width:80%"}
 
 ### Paso 3: Elige opciones de código promocional
 
@@ -50,11 +50,11 @@ Cada lista de códigos promocionales tiene una fecha y hora de caducidad corresp
 
 Dentro de ese plazo, puedes cambiar y actualizar la fecha de caducidad repetidamente. Esta fecha de caducidad se aplicará a todos los códigos añadidos a esta lista. Una vez caducados, los códigos se eliminarán del sistema Braze y no se enviará ningún mensaje que invoque el fragmento de código de esa lista.
 
-![Enumera la configuración de caducidad para que todos los códigos restantes caduquen el 30 de abril de 2025 a las 12 de la mañana.][4]{: style="max-width:80%"}
+![Configuración de caducidad de la lista para que todos los códigos restantes caduquen el 30 de abril de 2025 a las 12 de la mañana.]({% image_buster /assets/img/promocodes/promocode4.png %}){: style="max-width:80%"}
 
 También tienes la opción de configurar alertas de umbral opcionales y personalizadas. Si se configuran, estas alertas enviarán un correo electrónico al destinatario designado cuando la lista se esté quedando sin códigos promocionales disponibles en esta lista o cuando su lista de códigos promocionales esté a punto de caducar. El destinatario recibirá una notificación al día.
 
-![Un ejemplo de alerta de umbral para notificar a "marketing@abc.com" cuando la lista de códigos promocionales caduque en 5 días.][5]{: style="max-width:80%"}
+![Un ejemplo de alerta de umbral para notificar a "marketing@abc.com" cuando la lista de códigos promocionales caduque en 5 días.]({% image_buster /assets/img/promocodes/promocode5.png %}){: style="max-width:80%"}
 
 ### Paso 4: Subir códigos promocionales
 
@@ -65,7 +65,7 @@ Asegúrate de que tu archivo CSV sigue estas directrices:
 - Incluye una columna para códigos promocionales.
 - Tiene un código promocional por fila.
 
-Puede utilizar nuestra integración con [Voucherify]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/voucherify/) o [Talon.One]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/talonone/) para crear y exportar códigos promocionales.
+Puede utilizar nuestra integración con [Voucherify]({{site.baseurl}}/partners/ecommerce/loyalty/voucherify/) o [Talon.One]({{site.baseurl}}/partners/ecommerce/loyalty/talonone/) para crear y exportar códigos promocionales.
 
 {% alert important %}
 El tamaño máximo del archivo es de 100 MB y el tamaño máximo de la lista es de 20MM de códigos no utilizados. Si descubre que se ha cargado un archivo incorrecto, cargue uno nuevo y el anterior será sustituido.
@@ -73,13 +73,13 @@ El tamaño máximo del archivo es de 100 MB y el tamaño máximo de la lista es 
 
 1. Una vez finalizada la carga, seleccione **Guardar lista** para guardar todos los datos y códigos que acaba de introducir.
 
-![Archivo CSV llamado "springsale" que se ha cargado correctamente.][7]
+![Archivo CSV llamado "springsale" que se ha cargado correctamente.]({% image_buster /assets/img/promocodes/promocode7.png %})
 
 {:start="2"}
 2\. Tras seleccionar Guardar, aparecerá una nueva fila en el **Historial de importaciones**.
 3\. Para actualizar la tabla y comprobar si la importación ha finalizado, seleccione <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-sync" ></span> **Sync** en la parte superior de la tabla.
 
-![Códigos promocionales en proceso de carga.][8]
+![Códigos promocionales en proceso de carga.]({% image_buster /assets/img/promocodes/promocode8.png %})
 
 {% alert note %}
 Los archivos más grandes tardarán unos minutos en importarse. Mientras esperas, puedes salir de la página y trabajar en algo mientras se realiza la importación. Cuando finalice la importación, el estado cambiará a **Completado** en la tabla.
@@ -97,12 +97,12 @@ Para enviar códigos promocionales en mensajes:
 
 1. Selecciona **Copiar fragmento** para copiar el fragmento de código que estableciste al crear tu lista de códigos promocionales.
 
-![Una opción para copiar el fragmento de código y pegarlo en tu mensaje.][9]{: style="max-width:70%"}
+![Una opción para copiar el fragmento de código y pegarlo en tu mensaje.]({% image_buster /assets/img/promocodes/promocode9.png %}){: style="max-width:70%"}
 
 {:start="2"}
 2\. A partir de ahí, puedes pegar este código en un mensaje dentro del panel de control.
 
-![Un mensaje de ejemplo "Date un capricho esta primavera con nuestra oferta exclusiva" seguido del fragmento de código.][10]{: style="max-width:70%"}
+![Un mensaje de ejemplo "Date un capricho esta primavera con nuestra oferta exclusiva" seguido del fragmento de código.]({% image_buster /assets/img/promocodes/promocode10.png %}){: style="max-width:70%"}
 
 Con [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/), puedes insertar en un mensaje uno de los códigos promocionales únicos del archivo CSV cargado. Ese código se marcará como enviado en el backend Braze para garantizar que ningún otro mensaje envíe ese mismo código.
 
@@ -124,11 +124,21 @@ Los envíos de prueba y los envíos de correo electrónico de grupos de siembra 
 
 Puedes encontrar el recuento de códigos restantes en la columna **Restantes** de la lista de códigos promocionales en la página **Códigos promocionales**.
 
-![Un ejemplo de código promocional con códigos no utilizados.][12]
+![Un ejemplo de código promocional con códigos no utilizados.]({% image_buster /assets/img/promocodes/promocode11.png %})
 
 Este recuento de códigos también se puede encontrar al volver a visitar una página de lista de códigos de promoción preexistente. También puedes exportar los códigos no utilizados como un archivo CSV. 
 
-![Un código promocional llamado "Rebajas del Viernes Negro" con 992 códigos restantes.][13]{: style="max-width:70%"}
+![Un código promocional llamado "Rebajas del Viernes Negro" con 992 códigos restantes.]({% image_buster /assets/img/promocodes/promocode12.png %}){: style="max-width:70%"}
+
+### Utilizar códigos promocionales en campañas de mensajes dentro de la aplicación {#promotion-codes-iam-campaigns}
+
+{% alert important %}
+El uso de códigos promocionales en campañas de mensajería dentro de la aplicación está actualmente en acceso temprano. Ponte en contacto con tu director de cuentas de Braze si estás interesado en participar en este acceso anticipado.
+{% endalert %}
+
+Después de crear una [campaña de mensajería dentro]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages) de la aplicación, puedes insertar un [fragmento de lista de códigos promocionales]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes#creating-a-promotion-code-list) en el cuerpo de tu mensaje dentro de la aplicación. 
+
+Los códigos promocionales de los mensajes dentro de la aplicación sólo se deducirán y utilizarán cuando un usuario desencadene la visualización del mensaje dentro de la aplicación.
 
 ## Envíos multicanal y monocanal
 
@@ -181,7 +191,7 @@ El mismo código promocional será la plantilla para todas las instancias del fr
 
 ### ¿Qué ocurre cuando una lista de códigos promocionales caduca o está vacía?
 
-Los códigos caducados se eliminan a los seis meses.
+Los códigos caducados se borran a los seis meses.
 
 Si el mensaje debería haber contenido un código promocional de una lista vacía o caducada, el mensaje se cancelará. 
 
@@ -191,13 +201,3 @@ Si el mensaje contiene Lógica líquida que inserta condicionalmente un código 
 
 Para hacer referencia al mismo código promocional en mensajes posteriores, el código debe guardarse en el perfil de usuario como un atributo personalizado. Esto puede hacerse adjuntando un [Webhook Braze to Braze]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/braze_to_braze_webhooks/) a la misma campaña o paso en Canvas de mensajería.
 
-[1]:{% image_buster /assets/img/promocodes/promocode1.png %}
-[3]:{% image_buster /assets/img/promocodes/promocode3.png %}
-[4]:{% image_buster /assets/img/promocodes/promocode4.png %}
-[5]:{% image_buster /assets/img/promocodes/promocode5.png %}
-[7]:{% image_buster /assets/img/promocodes/promocode7.png %}
-[8]:{% image_buster /assets/img/promocodes/promocode8.png %}
-[9]:{% image_buster /assets/img/promocodes/promocode9.png %}
-[10]:{% image_buster /assets/img/promocodes/promocode10.png %}
-[12]: {% image_buster /assets/img/promocodes/promocode11.png %}
-[13]: {% image_buster /assets/img/promocodes/promocode12.png %}

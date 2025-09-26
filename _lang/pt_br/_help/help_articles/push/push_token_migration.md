@@ -14,7 +14,7 @@ channel: push
 
 ## Migração automática via SDK
 
-Após você [integrar o SDK do Braze]({{site.baseurl}}/developer_guide/sdk_integration/), os tokens por push dos seus usuários que optaram por receber serão migrados automaticamente na próxima vez que abrirem seu app. Até lá, você não poderá enviar notificações por push para esses usuários através do Braze.
+Após você [integrar o SDK do Braze]({{site.baseurl}}/developer_guide/sdk_integration/), os tokens por push dos seus usuários que optaram por receber serão automaticamente migrados na próxima vez que abrirem seu app. Até lá, você não poderá enviar notificações por push para esses usuários através do Braze.
 
 Alternativamente, você pode [migrar seus tokens por push manualmente](#manual-migration-via-api), permitindo que você reengaje seus usuários mais rapidamente.
 

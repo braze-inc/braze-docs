@@ -1,5 +1,5 @@
 ---
-nav_title: eCommerce Use Cases
+nav_title: eCommerce use cases
 article_title: eCommerce Use Cases
 alias: /ecommerce_use_cases/
 page_order: 4
@@ -176,7 +176,7 @@ If you use Shopify, create your cart URL by using this Liquid template:
 
 {% raw %}
 ```liquid
-{{context.source}}/checkouts/cn/{{context.cart_id}}
+{{context.${source}}}/checkouts/cn/{{context.${cart_id}}} 
 ```
 {% endraw %}
 

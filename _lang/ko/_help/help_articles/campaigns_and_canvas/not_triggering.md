@@ -22,7 +22,7 @@ tool:
 
 예를 들어 세그먼트에 `SessionStart` "앱을 한 번 이상 사용함" 이벤트가 포함되어 있고 캠페인이 트리거되는 이벤트가 `SessionStart`인 경우 사용자는 메시지를 받게 되지만 반드시 첫 번째 세션에 대한 메시지가 아닐 수도 있습니다. 이는 사용자가 캠페인을 수신해야 하는지 확인하는 첫 번째 단계에서 캠페인이 세그먼트 타겟 오디언스를 검토하기 때문입니다. 
 
-즉, 오디언스 필터와 동일한 트리거(예: 속성 변경 또는 사용자 지정 이벤트 수행)를 사용하여 액션 기반 캠페인 또는 캔버스를 구성하지 마세요. 사용자가 트리거 이벤트를 수행할 때 오디언스에 없는 [경합 조건][2]이 발생할 수 있으며, 이는 사용자가 캠페인을 수신하지 못하거나 캔버스에 입장하지 못한다는 의미입니다.
+즉, 오디언스 필터와 동일한 트리거(예: 속성 변경 또는 사용자 지정 이벤트 수행)를 사용하여 액션 기반 캠페인 또는 캔버스를 구성하지 마세요. 사용자가 트리거 이벤트를 수행할 때 오디언스에 없는 [경합 조건]({{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions/#race-conditions/)이 발생할 수 있으며, 이는 사용자가 캠페인을 수신하지 못하거나 캔버스에 입장하지 못한다는 의미입니다.
 
 {% alert tip %}
 캠페인 문제 해결에 대한 추가 지원이 필요한 경우, 최근 30일간의 진단 로그만 보유하고 있으므로 문제 발생 후 30일 이내에 Braze 지원팀에 문의하시기 바랍니다.
@@ -30,5 +30,3 @@ tool:
 
 _마지막 업데이트 2024년 6월 25일_
 
-[1]: {{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events/#session-start-event/
-[2]: {{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions/#race-conditions/

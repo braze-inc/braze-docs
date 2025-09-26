@@ -1,5 +1,5 @@
 ---
-nav_title: Open Source Software Disclosure
+nav_title: Open source software disclosure
 article_title: Open Source Software Disclosure
 page_order: 1
 page_type: reference

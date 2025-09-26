@@ -3,37 +3,37 @@ nav_title: Teams
 article_title: Teams
 page_order: 4
 page_type: reference
-description: "이 참고 문서에서는 대시보드에서 Braze 팀을 사용하는 방법에 대해 설명합니다. 여기에서 팀을 만들고, 역할을 할당하고, 태그와 필터를 할당하는 방법을 배울 수 있습니다."
+description: "This reference article covers how to use Braze Teams in the dashboard. Here, you can learn how to create Teams, assign roles, and assign tags and filters."
 
 ---
 
 # Teams
 
-> Braze 관리자는 대시보드 사용자를 다양한 사용자 역할과 권한을 가진 팀으로 그룹화할 수 있습니다. 이렇게 하면 편집할 수 있는 콘텐츠 유형을 분리하여 서로 관련이 없는 여러 대시보드 사용자 그룹이 하나의 작업 공간에서 함께 작업할 수 있습니다.
+> As a Braze admin, you can group your dashboard users into Teams with varying user roles and permissions. 이렇게 하면 편집할 수 있는 콘텐츠 유형을 분리하여 서로 관련이 없는 여러 대시보드 사용자 그룹이 하나의 작업 공간에서 함께 작업할 수 있습니다.
 
-워크스페이스 고객 기반 위치, 언어 및 커스텀 속성에 따라 팀을 설정하여 팀원과 비팀원이 메시징 기능 및 고객 데이터에 서로 다르게 액세스할 수 있도록 할 수 있습니다. 다양한 참여 도구에서 팀 필터와 태그를 할당할 수 있습니다.
+Teams can be set up across customer base location, language, and custom attributes so that Team members and non-Team members have different access to messaging features and customer data. 다양한 참여 도구에서 팀 필터와 태그를 할당할 수 있습니다.
 
 모든 Braze 계약에서 팀을 사용할 수 있는 것은 아닙니다. 이 기능을 이용하고 싶으시면 Braze 계정 매니저에게 [문의하거나](mailto:success@braze.com) 상담을 요청하세요.
 
-## 팀은 권한 집합 및 역할과 어떻게 다른가요?
+## How do Teams differ from permission sets and roles?
 
 {% multi_lang_include permissions.md content="Differences" %}
 
-## 팀 만들기
+## Creating Teams
 
 **설정** > **내부 팀**으로 이동하여 <i class="fas fa-plus"></i> **팀 추가**를 선택합니다.
 
-![새 팀 추가하기][68]
+![Adding a new Team]({% image_buster /assets/img_archive/adding_a_team.png %})
 
-**팀 이름**을 입력합니다. 원하는 경우 **팀 정의** 필드를 사용하여 사용자 지정 속성, 위치 또는 언어를 선택하여 팀이 액세스할 수 있는 사용자 데이터를 추가로 정의할 수 있습니다. 예를 들어, 사용자 지정 속성으로 식별된 테스트 사용자만 액세스할 수 있는 개발 팀을 만들어 [팀과 함께 테스트를](#testing-with-teams) 수행하는 것이 가능한 사용 사례입니다. 또 다른 사용 사례는 제품에 따라 사용자와의 커뮤니케이션을 제한하는 것입니다.
+**팀 이름**을 입력합니다. If desired, use the **Define Team** field to select a custom attribute, location, or language to further define what user data the Team has access to. For example, a possible use case is to perform [testing with Teams](#testing-with-Teams) by creating a development Team that only has access to test users, identified by a custom attribute. 또 다른 사용 사례는 제품에 따라 사용자와의 커뮤니케이션을 제한하는 것입니다.
 
-팀이 커스텀 속성, 언어 또는 국가별로 정의된 경우 팀을 사용하여 캠페인, 캔버스, 콘텐츠 카드, 세그먼트 등과 같은 기능에 대해 최종 사용자를 필터링할 수 있습니다. 자세한 내용은 [팀 태그 할당](#tags-and-filters)을 참조하세요.
+If a Team is defined by a custom attribute, language, or country, you can then use the Team to filter end-users for features like campaigns, Canvases, Content Cards, segments, and more. For more, see [Assigning Team tags](#tags-and-filters).
 
-## 팀에 사용자 할당하기
+## Assigning users to Teams
 
-"회사 설정을 관리할 수 있음" 회사 수준의 권한을 가진 Braze 매니저와 제한된 사용자는 제한된 액세스 권한을 가진 대시보드 사용자에게 팀 수준의 권한을 할당할 수 있습니다. 팀에 배정된 대시보드 사용자는 팀을 만들 때 정의된 대로 사용자 언어, 위치 또는 사용자 지정 속성 등 특정 팀에서 사용할 수 있는 데이터만 읽거나 쓸 수 있도록 제한됩니다.
+Braze administrators and limited users with the company-level permission "Can Manage Company Settings" can assign Team-level permissions to a dashboard user with limited access. When assigned to a Team, dashboard users are limited to only read or write data available to their particular Teams, such as user language, location, or custom attribute, as defined when the Team was created.
 
-팀에 사용자를 할당하려면 **설정** > **회사 사용자로** 이동하여 팀에 추가하려는 사용자를 선택합니다.
+To assign a user to a Team, navigate to **Settings** > **Company Users** and select a user you'd like to add to your Team.
 
 그런 다음 다음 단계를 수행합니다:
 
@@ -42,11 +42,11 @@ description: "이 참고 문서에서는 대시보드에서 Braze 팀을 사용�
 3. 적절한 작업 공간에 추가합니다. 
 4. 이 사용자를 추가하려는 **팀**을 선택하고 **팀** 권한 열에서 특정 권한을 할당합니다.
 
-![][2]
+![]({% image_buster /assets/img/teams.png %})
 
-### 사용 가능한 팀 수준 권한
+### Available Team-level permissions
 
-다음은 팀 수준에서 할당할 수 있는 모든 권한입니다. 여기에 나열되지 않은 모든 권한은 작업 영역 수준에서만 부여되며 이러한 권한은 **Teams** 권한 열에 "--"으로 표시됩니다.
+The following are all available permissions you can assign at the Team level. 여기에 나열되지 않은 모든 권한은 작업 영역 수준에서만 부여되며 이러한 권한은 **Teams** 권한 열에 "--"으로 표시됩니다.
 
 - 캠페인, 캔버스, 카드, 콘텐츠 블록, 기능 플래그, 세그먼트, 미디어 라이브러리 및 환경설정 센터에 액세스합니다.
 - 캠페인, 캔버스 발송
@@ -59,75 +59,71 @@ description: "이 참고 문서에서는 대시보드에서 Braze 팀을 사용�
 
 각 사용자 권한에 포함된 항목과 사용 방법에 대한 설명을 보려면 [사용자 권한]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#editing-user-permissions) 섹션을 참조하세요.
 
-## 팀 태그 할당 {#tags-and-filters}
+## Assigning Team tags {#tags-and-filters}
 
-**팀 추가** 필터를 사용하여 캔버스, 캠페인, 카드, 세그먼트, 이메일 템플릿 및 미디어 라이브러리 자산에 팀을 할당할 수 있습니다.
+You can assign a Team to Canvases, campaigns, cards, segments, email templates, and media library assets with the **Add Team** filter.
  
-![캠페인에 팀 태그 추가하기][3]{: style="max-width:70%;"}
+![Adding a Team tag to a campaign]({% image_buster /assets/img/teams1.png %}){: style="max-width:70%;"}
 
-- 팀을 만들 때 적용된 *정의에* 따라 팀 필터가 할당되면 해당 참여 도구의 대상은 정의와 일치하는 사용자 프로필로 제한됩니다.
-- 할당된 *권한에* 따라 팀원은 팀 필터가 설정된 대시보드 참여 도구에만 액세스할 수 있습니다. 워크스페이스 권한이 제한적이거나 없는 경우 특정 개체를 저장하거나 실행하려면 먼저 팀 필터를 추가해야 합니다. 또한 팀원들은 팀별로 캔버스, 캠페인, 카드 및 세그먼트를 필터링하여 자신과 관련된 콘텐츠를 식별할 수 있습니다.
+- Based on the *definitions* applied when the Team was created, when a Team filter is assigned, that engagement tool's audience is restricted to user profiles that match the definition.
+- Based on assigned *permissions*, Team members will only be allowed to access dashboard engagement tools that have their Team filter set. If they have limited or no workspace permissions, they must add a Team filter to certain objects before they can save or launch them. Team members are also able to filter Canvases, campaigns, cards, and segments by Team to identify content relevant to them.
 
 ### 사용 사례
 
-다음 두 가지 시나리오는 Braze의 마케터 미셸의 경우를 가정한 것입니다. Michelle은 '개발'이라는 팀의 일원입니다. 미셸은 개발팀에 대한 모든 팀 수준의 권한에 액세스할 수 있습니다.
+다음 두 가지 시나리오는 Braze의 마케터 미셸의 경우를 가정한 것입니다. Michelle is a member of a Team called "Development". She has access to all of the Team-level permissions for the Development Team.
 
 {% tabs %}
-{% tab 시나리오 1 - 팀 권한만 %}
+{% tab Scenario 1 - Only Team permissions %}
 
 이 시나리오에서 Michelle은 워크스페이스 수준 권한이 없는 제한된 사용자입니다. 그녀의 권한은 다음과 같습니다:
 
 ![]({% image_buster /assets/img_archive/scenario1.png %})
 
-Michelle에게 할당된 권한에 따라 캠페인을 만들 때마다 해당 캠페인에 '개발' 팀만 할당할 수 있습니다. 팀이 할당되지 않으면 캠페인을 시작할 수 없으며, 다른 팀 태그를 보거나 액세스할 수 없습니다.
+Based on Michelle's assigned permissions, whenever she creates a campaign, she can only assign the "Development" Team to that campaign. She can't launch the campaign unless the Team is assigned, and she can't view or access any other Team tags.
 
 ![]({% image_buster /assets/img_archive/team_permissions_scenario1.gif %})
 
 {% endtab %}
 {% tab 시나리오 2 - 팀 권한 및 워크스페이스 권한 %}
 
-이 시나리오에서 Michelle은 여전히 개발 팀의 멤버이지만 추가 워크스페이스 수준 권한도 가지고 있습니다.
+In this scenario, Michelle is still a member of the Development Team, but she also has an additional workspace-level permission.
 
 ![]({% image_buster /assets/img_archive/scenario2.png %})
 
-Michelle은 "캠페인, 캔버스, 카드, 콘텐츠 블록, 기능 플래그, 세그먼트, 미디어 라이브러리 및 환경 설정 센터에 액세스"라는 작업 영역 수준의 권한을 가지고 있으므로 자신이 만든 캠페인에 다른 팀 필터를 보고 할당할 수 있습니다.
+Because Michelle has the workspace-level permission of "Access Campaigns, Canvases, Cards, Content Blocks, Feature Flags, Segments, Media Library, and Preference Centers", she can view and assign other Team filters to the campaign she creates.
 
 ![]({% image_buster /assets/img_archive/team_permissions_scenario2.gif %})
 
-첫 번째 시나리오와 마찬가지로 Michelle은 캠페인을 시작하기 전에 캠페인에 개발 팀 태그를 추가해야 합니다.
+Similar to the first scenario, Michelle must add the Development Team tag to the campaign before she can launch it.
 
 {% endtab %}
 {% endtabs %}
 
-## 팀과 함께 테스트하기
+## Testing with Teams
 
-팀에 대한 한 가지 가능한 사용 사례는 프로덕션 환경에서 콘텐츠를 테스트하고 출시하기 위한 팀 기반 승인 시스템을 만드는 것입니다.
+One possible use case for Teams is to create a Teams-based approval system for testing and launching content in a production environment.
 
-이렇게 하려면 테스트 사용자에 대한 액세스 권한만 있는 "개발" 팀을 만드세요. 커스텀 속성으로 테스트 사용자를 식별할 수 있는 경우 팀이 테스트 사용자만 액세스하도록 제한할 수 있습니다. 그런 다음 팀을 만들거나 편집할 때 사용자 지정 속성을 정의로 추가합니다(앞의 [팀 만들기](#creating-teams) 섹션 참조). 승인자는 모든 사용자에 대한 액세스 권한이 있어야 합니다.
+To do so, create a "Development" Team that only has access to test users. You can limit a Team to only access test users if your test users are identifiable by a custom attribute. Then, add the custom attribute as a definition when creating or editing the Team (see the preceding section [Creating Teams](#creating-Teams)). 승인자는 모든 사용자에 대한 액세스 권한이 있어야 합니다.
 
 일반적인 프로세스는 다음과 같습니다:
 
-1. 개발팀이 캠페인을 생성하고 '개발' 팀 태그를 추가합니다.
-2. 개발팀에서 사용자 테스트를 위한 캠페인을 시작합니다.
-3. 승인자 팀은 현지 캠페인 디자인을 검증하고, 홍보 및 론칭을 진행합니다. 시작하려면 승인자 팀이 팀 태그를 "개발"에서 "[모든 팀]으로 변경하고 캠페인을 다시 시작합니다.
+1. The Development Team creates a campaign and adds the "Development" Team tag.
+2. The Development Team launches the campaign to test users.
+3. The Approver Team validates the local campaign design, promotes, and launches. To launch, the Approver Team changes the Team tag from "Development" to "[All Teams]" and relaunches the campaign.
 
 활성 캠페인에 대한 변경 사항:
 
-1. 개발팀은 실행 중인 캠페인을 복제하고 "개발" 팀 태그를 추가한 후 저장합니다.
-2. 개발팀은 수정본을 만들어 승인자 팀과 공유합니다.
-3. 승인자 팀은 "개발" 팀 태그를 제거하고 이전 캠페인을 일시 중지한 후 새 캠페인을 시작합니다.
+1. The Development Team clones the running campaign, adds the "Development" Team tag, and saves.
+2. The Development Team makes edits and shares with the Approver Team.
+3. The Approver Team removes the "Development" Team tag, pauses the previous campaign, and launches the new campaign.
 
-## 기존 팀 아카이브
+## Archiving an existing Team
 
-**내부 팀** 페이지에서 팀을 보관할 수 있습니다.
+You can archive Teams from the **Internal Teams** page.
 
-보관할 팀을 하나 또는 여러 개 선택합니다. 팀이 Braze 내의 어떤 개체와도 연결되어 있지 않으면 팀은 즉시 아카이브됩니다. 팀이 개체에 연결되어 있는 경우 아카이브 프로세스 후에 팀을 제거하거나 팀을 교체할 수 있는 옵션이 표시됩니다.
+Select one or many Teams to archive. If the Team is not associated with any object within Braze, the Team will be archived immediately. If the Team is associated with an object, you will be presented with an option to remove the Team after the archive process or replace the Team.
 
-![Braze에서 개체에 연결된 팀 보관하기][86]{: style="max-width:70%;"}
+![Archiving a Team that is associated with an object in Braze]({% image_buster /assets/img_archive/archive_a_team.png %}){: style="max-width:70%;"}
 
-Braze 매니저는 보관된 팀을 선택하고 **아카이브 해제**를 선택하여 팀을 아카이브 해제할 수 있습니다.
+Braze admins can unarchive a Team by selecting the archived Team and selecting **Unarchive**.
 
-[2]: {% image_buster /assets/img/teams.png %}
-[3]: {% image_buster /assets/img/teams1.png %}
-[68]: {% image_buster /assets/img_archive/adding_a_team.png %}
-[86]: {% image_buster /assets/img_archive/archive_a_team.png %}

@@ -1,5 +1,5 @@
 ---
-nav_title: "Data & Analytics"
+nav_title: "Data & analytics"
 article_title: Data & Analytics Partners
 page_order: 5
 
@@ -53,8 +53,6 @@ valid_partner_list:
   url: /docs/partners/mozart_data/
 - name: SalesWings
   url: /docs/partners/saleswings/
-- name: Scuba
-  url: /docs/partners/scuba/
 - name: Inbox Monster
   url: /docs/partners/inbox_monster/
 - name: Amazon S3

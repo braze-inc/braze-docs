@@ -26,7 +26,7 @@ Para SDKs de wrapper não listados, use o método nativo relevante do Android ou
 {% endsdktab %}
 
 {% sdktab swift %}
-guide/swift/gifs.md developer_ %}
+{% multi_lang_include developer_guide/swift/gifs.md %}
 {% endsdktab %}
 
 {% sdktab web %}

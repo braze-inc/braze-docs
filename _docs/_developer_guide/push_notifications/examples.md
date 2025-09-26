@@ -1,6 +1,6 @@
 ---
 page_order: 10.1
-nav_title: Advanced Examples
+nav_title: Advanced examples
 article_title: Advanced push notification examples for the Braze SDK
 channel:
   - push notifications

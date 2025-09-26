@@ -1,6 +1,6 @@
 ---
 nav_title: VizBee
-article: VizBee
+article_title: VizBee
 layout: redirect
 redirect_to: /docs/partners/vizbee/
 ---

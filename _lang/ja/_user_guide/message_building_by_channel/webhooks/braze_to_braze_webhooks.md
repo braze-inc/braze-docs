@@ -10,17 +10,17 @@ description: "この記事では、主なユースケースのために Braze-to
 
 # Braze-to-Braze Webhook の作成
 
-> Webhook を使用して、Braze [REST API][2] と通信することができます。基本的には、API で行えるすべての操作を実行できます。弊社では、このように Braze から Braze へ通信する Webhook のことを Braze-to-Braze Webhook と呼んでいます。このページのユースケースは、[Webhook の仕組み][4]と [Braze で Webhook を作成する方法][5]をすでに理解していることを前提としています。
+> Webhook を使用して、Braze [REST API]({{site.baseurl}}/api/basics/) と通信できます。基本的には、Braze の API でできるすべての操作を実行できます。弊社では、このように Braze から Braze へ通信する Webhook のことを Braze-to-Braze Webhook と呼んでいます。このページのユースケースは、[Webhook の仕組み]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/)と [Braze で Webhook を作成する方法]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/)をすでに理解していることを前提としています。
 
 ## 前提条件
 
-Braze-to-Braze Webhook を作成するには、目的のエンドポイントの権限を持つ [APIキー][3] が必要です。
+Braze-to-Braze Webhook を作成するには、目的のエンドポイントの権限を持つ [APIキー]({{site.baseurl}}/api/api_key/) が必要です。
 
 ## Braze-to-Braze Webhook の設定
 
 Webhook リクエストの詳細はユースケースによって異なりますが、Braze-to-Braze Webhook を作成するための一般的なワークフローは変わりません。
 
-1. キャンペーンまたはキャンバスのコンポーネントとして [ウェブフックを作成][5] します。 
+1. キャンペーンまたはキャンバスのコンポーネントとして [ウェブフックを作成]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/)します。 
 2. [**空白のテンプレート**] を選択します。
 3. [**Compose**] タブで、[**Webhook URL**] と [**リクエスト本文**] をユースケースに応じて指定します。
 4. [**設定**] タブで、[**HTTP メソッド**] と [**リクエストヘッダー**] を指定します。
@@ -45,7 +45,7 @@ Braze-to-Braze Webhook を使用すると多くのことができますが、使
 
 Braze-to-BrazeのWebhookを作成するための一般的な手順に従い、Webhookを設定する際には以下を参照すること：
 
-- **Webhook URL:**[REST エンドポイント URL][7] の後に `/users/track` を続けます。例えば `US-06` インスタンスの場合、URL は`https://rest.iad-06.braze.com/users/track` になります。
+- **Webhook URL:**[REST エンドポイント URL]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/) の後に `/users/track` を続けます。例えば `US-06` インスタンスの場合、URL は`https://rest.iad-06.braze.com/users/track` になります。
 - **要求本文:**Raw Text
 
 #### リクエストヘッダと方法
@@ -59,11 +59,11 @@ Braze には、API キーを含む認証用の HTTP ヘッダーと、`content-t
 
 `YOUR_API_KEY` を、`users.track` 権限を持つ Braze API キーに置き換えます。APIキーは、Brazeダッシュボードの**「設定」**>「**APIキー**」で作成できる。
 
-![Webhook のリクエストヘッダーが表示されている [設定] タブ。][1]
+![Webhook のリクエストヘッダー。]({% image_buster /assets/img_archive/webhook_settings.png %}){: style="max-width:70%;"}
 
 #### Request body
 
-リクエスト本文にユーザー追跡リクエストと、カウンター変数を代入する Liquid を追加します。詳細については、[`/users/track`エンドポイント][8]を参照してください。
+リクエスト本文にユーザー追跡リクエストと、カウンター変数を代入する Liquid を追加します。詳細については、[`/users/track` エンドポイント]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)を参照してください。
 
 以下は、このエンドポイントに必要なLiquid とリクエストボディの両方の例です。ここで、`your_attribute_count` は、ユーザーがメッセージを表示した回数を数えるために使用する属性です。
 
@@ -97,7 +97,7 @@ Braze には、API キーを含む認証用の HTTP ヘッダーと、`content-t
 
 ウェブフックを設定する際は、以下を参照のこと：
 
-- **Webhook URL:**[REST エンドポイント URL][7] の後に `canvas/trigger/send` を続けます。例えば、US-06 のインスタンスの場合、URL は `https://rest.iad-06.braze.com/canvas/trigger/send` となります。
+- **Webhook URL:**[REST エンドポイント URL]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/) の後に `canvas/trigger/send` を続けます。例えば、US-06 のインスタンスの場合、URL は `https://rest.iad-06.braze.com/canvas/trigger/send` となります。
 - **要求本文:**Raw Text
 
 #### リクエストヘッダと方法
@@ -111,11 +111,11 @@ Braze には、API キーを含む認証用の HTTP ヘッダーと、`content-t
 
 `YOUR_API_KEY` を、`canvas.trigger.send` 権限を持つ Braze API キーに置き換えます。APIキーは、Brazeダッシュボードの**「設定」**>「**APIキー**」で作成できる。
 
-![Webhook のリクエストヘッダーが表示されている [設定] タブ。][1]
+![Webhook のリクエストヘッダー。]({% image_buster /assets/img_archive/webhook_settings.png %}){: style="max-width:70%;"}
 
 #### Request body
 
-テキストフィールドに`canvas/trigger/send` リクエストを追加する。詳細については、[API トリガー配信によるキャンバスメッセージの送信][9] を参照してください。以下はこのエンドポイントのリクエスト本文の例です。ここで `your_canvas_id` は、2 つ目のキャンバスのキャンバス ID です: 
+テキストフィールドに`canvas/trigger/send` リクエストを追加する。詳細については、[API トリガー配信によるキャンバスメッセージの送信]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/)を参照してください。以下はこのエンドポイントのリクエスト本文の例です。ここで `your_canvas_id` は、2 つ目のキャンバスのキャンバス ID です: 
 
 {% raw %}
 ```json
@@ -139,12 +139,3 @@ Braze には、API キーを含む認証用の HTTP ヘッダーと、`content-t
 - [メッセージアクティビティログを]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/)チェックして、Webhook の失敗を確認し、トラブルシューティングすることができる。
 
 
-[1]: {% image_buster /assets/img_archive/webhook_settings.png %}
-[2]: {{site.baseurl}}/api/basics/
-[3]: {{site.baseurl}}/api/api_key/
-[4]: {{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/
-[5]: {{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/
-[6]: {{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/
-[7]: {{site.baseurl}}/user_guide/administrative/access_braze/braze_instances
-[8]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/
-[9]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/

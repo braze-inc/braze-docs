@@ -12,20 +12,17 @@ description: "このページでは、エクスポート・ログについて説
 
 エクスポートログは、[**設定**] > [**エクスポートログ**] に移動して確認できます。ここでは、前のエクスポート、エクスポートされたセグメントの名前、各エクスポートのステータス、各エクスポートのソース、および各エクスポートが開始および終了した日時を表示できます。 
 
-![エクスポートログと、完成したエクスポートのリスト。][1]
+![完了したエクスポートのリストを含むエクスポートログ。]({% image_buster /assets/img/export_logs.png %})
 
 ## 保留中のエクスポートのキャンセル
 
 **Exports Log**ページから直接保留中のエクスポートをキャンセルするには、<i class="fas fa-ellipsis-vertical"></i>メニューを選択し、次に**Cancel Export**を選択するか、**Export ID**を選択して、エクスポートのページで**Cancel Export**を選択します。
 
-![エクスポートログには、保留中のエクスポートと、"Cancel Export" オプションが表示されます。][2]
+![保留中のエクスポートと [エクスポートのキャンセル] オプションを示すエクスポートログ。]({% image_buster /assets/img/export_logs_cancel.png %})
 
 ## 特定のエクスポートログの共有
 
 **Export ID**を選択し、**Share Log**を選択して、エクスポートログを共有します。
 
-![ページを共有するためのリンクを含むドロップダウンウィンドウ。][3]{: style="max-width:45%;"}
+![ページを共有するリンクを含むドロップダウンウィンドウ。]({% image_buster /assets/img/export_logs_share.png %}){: style="max-width:45%;"}
 
-[1]: {% image_buster /assets/img/export_logs.png %}
-[2]: {% image_buster /assets/img/export_logs_cancel.png %}
-[3]: {% image_buster /assets/img/export_logs_share.png %}

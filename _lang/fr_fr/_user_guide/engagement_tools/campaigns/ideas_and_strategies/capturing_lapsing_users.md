@@ -23,33 +23,27 @@ Tout d'abord, nous allons créer un segment pour cibler les utilisateurs qui n'o
 - **Dernière utilisation de l’application** il y a plus de 2 semaines
 - **Dernière utilisation de l’application** il y a moins de 3 semaines
 
-![][1]{: style="max-width:70%;"}
+![]({% image_buster /assets/img_archive/2weeklapse1.png %}){: style="max-width:70%;"}
 
 Nommez le segment de manière à ce qu'il soit facile à mémoriser, par exemple "Utilisateurs abandonnés - 2 semaines". Étant donné que nous créons la campagne pour qu’elle se répète chaque semaine, nous voulons nous assurer qu’au moins une semaine d’utilisateurs sera capturée dans le segment. C’est pourquoi nous avons sélectionné des utilisateurs qui ont utilisé l’application il y a deux à trois semaines.
 
 ## Étape 2 : Créer une campagne
 
-Ensuite, cliquez sur **Créer une campagne** et choisissez le type de campagne que nous allons envoyer à ce segment. Dans cet exemple, nous allons créer une nouvelle [campagne push][6]].
+Ensuite, cliquez sur **Créer une campagne** et choisissez le type de campagne que nous allons envoyer à ce segment. Dans cet exemple, nous allons créer une nouvelle [campagne push.]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message)
 
-![][5]{: style="max-width:70%;"}
+![]({% image_buster /assets/img_archive/2weeklapse2.png %}){: style="max-width:70%;"}
 
 Nous nommerons la campagne « Message aux utilisateurs inactifs - 2 semaines », puis nous créerons le contenu de notre message. Dans cet exemple, nous ciblerons uniquement les utilisateurs iOS, mais vous pouvez utiliser Braze pour les notifications push Android et iOS. 
 
 Plus la dernière fois où l’utilisateur était dans l’application est proche, plus il est important d’être thématique et pertinent. Lorsque vous envoyez un message à un utilisateur après deux semaines sans utilisation de l’application, il est important de mettre en évidence le contenu pertinent et les avantages à utiliser l’application.
 
-![][2]{: style="max-width:70%;"}
+![]({% image_buster /assets/img_archive/2weeklapse3.png %}){: style="max-width:70%;"}
 
-Ensuite, nous allons créer une planification récurrente pour envoyer notre message hebdomadaire le jeudi à 17 h 45 en utilisant la [distribution selon le fuseau horaire local][4] dans les **Options de planification basée sur le temps**. Nous vous recommandons de consulter le graphique de vos sessions pour cibler les utilisateurs juste avant les périodes d’utilisation élevée. Cela garantit que vous essayez de ré-engager les personnes lorsqu’elles sont les plus susceptibles d’utiliser l’application. Vous pouvez le modifier plus tard et tester votre hypothèse initiale.
+Ensuite, nous allons créer une planification récurrente pour envoyer notre message hebdomadaire le jeudi à 17 h 45 en utilisant la [réception/distribution selon l'heure locale]({{site.baseurl}}/help/faqs/#what-does-local-time-zone-delivery-offer) dans les **options de planification basée sur l'heure**. Nous vous recommandons de consulter le graphique de vos sessions pour cibler les utilisateurs juste avant les périodes d’utilisation élevée. Cela garantit que vous essayez de ré-engager les personnes lorsqu’elles sont les plus susceptibles d’utiliser l’application. Vous pouvez le modifier plus tard et tester votre hypothèse initiale.
 
-![][3]{: style="max-width:70%;"}
+![]({% image_buster /assets/img_archive/2weeklapse4.png %}){: style="max-width:70%;"}
 
 ## Étape 3 : Lancer la campagne
 
 Maintenant, vous êtes prêt à envoyer la campagne. Vérifiez les paramètres sur la dernière page de l’outil de création et cliquez sur **Lancer la campagne** !
 
-[1]: {% image_buster /assets/img_archive/2weeklapse1.png %}
-[2]: {% image_buster /assets/img_archive/2weeklapse3.png %}
-[3]: {% image_buster /assets/img_archive/2weeklapse4.png %}
-[4]: {{site.baseurl}}/help/faqs/#what-does-local-time-zone-delivery-offer
-[5]: {% image_buster /assets/img_archive/2weeklapse2.png %}
-[6]: {{site.baseurl}}/user_guide/message_building_by_ (en anglais)channel/push/creating_a_push_message

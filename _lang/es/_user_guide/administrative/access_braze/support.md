@@ -15,7 +15,7 @@ Para ponerte en contacto con el equipo de soporte de Braze, navega hasta el pane
 
 ![El desplegable "Soporte" con la opción de obtener ayuda.]({% image_buster /assets/img_archive/get_help.png %}){: style="max-width:60%;"}
 
-Dependiendo de tus permisos Braze, y si eres un contacto de soporte designado (premium), se te redirigirá al portal de soporte Braze, donde puedes enviar y seguir casos, o a nuestro formulario de soporte estándar. Si no estás seguro de ser un contacto de soporte de Braze, ponte en contacto con el administrador de Braze de tu empresa, el director de éxito de Braze o el propietario de la cuenta.
+Dependiendo de tus permisos Braze y de si eres un contacto de soporte designado (premium), se te redirigirá al portal de soporte Braze, donde puedes enviar y seguir casos, o a nuestro formulario de soporte estándar. Si no estás seguro de ser un contacto de soporte de Braze, ponte en contacto con el administrador de Braze de tu empresa, el director de éxito de Braze o el propietario de la cuenta.
 
 ## Añadir contactos de asistencia designados
 
@@ -28,7 +28,7 @@ Los contactos de soporte designados pueden acceder a todos los casos de soporte 
 
 ![La casilla de verificación para configurar a un usuario como contacto de soporte designado.]({% image_buster /assets/img_archive/designated_support_contact.png %}){: style="max-width:70%;"}
 
-El número de contactos de soporte designados que puedes establecer depende de tu límite de contactos. Para más información, ponte en contacto con tu administrador del éxito del cliente.
+El número de contactos de soporte designados que puedes establecer depende de tu límite de contactos. Ponte en contacto con tu administrador del éxito del cliente para obtener más información.
 
 ### Obtener acceso
 
@@ -60,17 +60,17 @@ Cuanta más información puedas ofrecer, mejor. Incluye datos específicos como 
 
 ### Proporcionar una muestra de usuarios
 
-Comparte una muestra de usuarios en lugar de todo el segmento afectado. Proporcionar una cantidad menor de usuarios nos ayuda a reducir nuestro alcance y a acelerar nuestras investigaciones.
+Comparte una muestra de usuarios en lugar de todo el segmento afectado. Proporcionar un número menor de usuarios nos ayuda a reducir nuestro alcance y a acelerar nuestras investigaciones.
 
 ### Adjuntar registros de red (registros HAR)
 
-Si te pones en contacto con el servicio de asistencia, será útil que el usuario afectado recopile los registros de red (registros HAR) de su navegador mientras se produce el problema. Esto mostrará las peticiones de red entre el navegador y el servidor, para los componentes individuales de una página web, y el panel de Braze que el usuario está intentando abrir.
+Si te pones en contacto con el servicio de asistencia, será útil que el usuario afectado recopile los registros de red (registros HAR) de su navegador mientras se produce el problema. Esto mostrará las peticiones de red entre el navegador y el servidor para los componentes individuales de una página web, así como el panel de Braze que el usuario está intentando abrir.
 
 Haz que el usuario afectado haga lo siguiente:
 
 1. Abre sus herramientas de desarrollador. Si utilizas Chrome, puedes hacerlo utilizando el atajo de teclado `option` + `⌘` + `J` (en macOS). Si utilizas Windows o Linux, puedes hacerlo con el atajo `shift` + `CTRL` + `J`.
 2. Selecciona **Red** > **Obtener/XHR** o **XHR**.
-3. Haz una grabación o captura de pantalla que muestre el **Nombre**, **Estado**, **Tamaño** y **Hora** de los elementos.<br><br>![La pestaña "Fetch/XHR" en un navegador Chrome.][1]{: style="max-width:60%;"}
+3. Haz una grabación o captura de pantalla que muestre el **Nombre**, **Estado**, **Tamaño** y **Hora** de los elementos.<br><br>![La pestaña "Fetch/XHR" en un navegador Chrome.]({% image_buster /assets/img/network_xhr.png %}){: style="max-width:60%;"}
 
 A continuación, adjunta la grabación o captura de pantalla del usuario al ticket de soporte. Esta información puede ayudar a la investigación de Apoyo.
 
@@ -90,4 +90,3 @@ Selecciona el nivel de gravedad adecuado para ayudarnos a asignar los recursos a
 Marcar un problema como "Crítico" significa que tu instancia de producción no funciona y que todo el trabajo en Braze se ha detenido.
 {% endalert %}
 
-[1]: {% image_buster /assets/img/network_xhr.png %}

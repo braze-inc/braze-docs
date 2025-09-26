@@ -1,5 +1,5 @@
 ---
-nav_title: Initial SDK Setup
+nav_title: Initial SDK setup
 article_title: Initial SDK Setup for tvOS
 platform: tvOS
 page_order: 0

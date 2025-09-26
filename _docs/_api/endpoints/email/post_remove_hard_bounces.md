@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Remove Hard Bounced Emails"
+nav_title: "POST: Remove hard bounced emails"
 article_title: "POST: Remove Hard Bounced Emails"
 search_tag: Endpoint
 page_order: 6

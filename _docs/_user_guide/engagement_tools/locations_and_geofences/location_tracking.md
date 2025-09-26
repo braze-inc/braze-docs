@@ -1,5 +1,5 @@
 ---
-nav_title: Location Tracking
+nav_title: Location tracking
 article_title: Location Tracking
 page_order: 0
 page_type: reference

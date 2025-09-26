@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [Lokaliseは](https://lokalise.com)アジャイルチームのための翻訳管理サービスである。
 
-_この統合はLokalise によって維持されます。_
+_この統合は Lokalise によって管理されます。_
 
 ## 統合について
 
@@ -51,11 +51,11 @@ Lokalise で、Braze で定義したコネクテッドコンテンツ変数ご�
 3. [**Platforms**] のドロップダウンに「Web」を追加します。 
 4. 準備ができたら、[**Save**] をクリックします。
 
-![][1]{: style="max-width:60%"}
+![]({% image_buster /assets/img/lokalise/1_add_key.png %}){: style="max-width:60%"}
 
 プロジェクトエディターに翻訳キーが表示されるはずだ：
 
-![][2]{: style="max-width:90%"}
+![]({% image_buster /assets/img/lokalise/2_translation_key_added.png %}){: style="max-width:90%"}
 
 #### 既知の問題
 
@@ -66,7 +66,7 @@ Lokalise で、Braze で定義したコネクテッドコンテンツ変数ご�
 
 Lokalise プロジェクトを開いて [**Apps**] をクリックします。ここで、Brazeアプリを検索してインストールする。以下の画面が表示される：
 
-![Lokalise上のBraze設定には、プロジェクトIDと翻訳ファイルのURLが記載されている。][3]
+![Lokalise 上の Braze設定。プロジェクト ID と翻訳ファイルの URL がリスト表示されています。]({% image_buster /assets/img/lokalise/3_lokalise_braze_app.png %})
 
 **翻訳ファイルURLでは**、Lokaliseは、プロジェクト内のキーのすべての翻訳を含むJSONファイルを公開する。プロジェクトにあるターゲット言語の数だけ、翻訳ファイルのURLが得られる。そのため、翻訳ファイルのURLは2つに分かれている：
 
@@ -79,7 +79,7 @@ Lokalise プロジェクトを開いて [**Apps**] をクリックします。�
 
 このURLをテストするには、このURLをコピーし、{% raw %}`{{${language}}}`{% endraw %} を言語コード（たとえば、`en` ）に置き換えて、ブラウザでこのURLを開く。キーと翻訳を含むJSONファイルが表示される：
 
-![][4]
+![]({% image_buster /assets/img/lokalise/4_testing_json_lokalise.png %})
 
 ### ステップ4:Braze キャンペーンで翻訳を使用する
 
@@ -108,7 +108,7 @@ Lokalise プロジェクトを開いて [**Apps**] をクリックします。�
 たとえば、`description` キーを表示するには `{{ translations.description }}` を使用します。
 
 {% endraw %}
-![][6]
+![]({% image_buster /assets/img/lokalise/6_integration_usage_sample.png %})
 
 最後に、メールテンプレートを保存し、プレビューする。翻訳が表示されるはずです。
 
@@ -127,9 +127,3 @@ Brazeの対応する文字列はもう翻訳を持たない。
 Braze では翻訳コンテンツがキャッシュされ、その更新には数分かかることがあります。キャンペーンをテストしていて、翻訳の結果をすぐに確認する必要がある場合は、このリファレンス記事で説明されているように、`:cache_max_age` パラメーターを使用できます。
 
 
-[1]: {% image_buster /assets/img/lokalise/1_add_key.png %}
-[2]: {% image_buster /assets/img/lokalise/2_translation_key_added.png %}
-[3]: {% image_buster /assets/img/lokalise/3_lokalise_braze_app.png %}
-[4]: {% image_buster /assets/img/lokalise/4_testing_json_lokalise.png %}
-[5]: {% image_buster /assets/img/lokalise/5_edit_email.png %}
-[6]: {% image_buster /assets/img/lokalise/6_integration_usage_sample.png %}

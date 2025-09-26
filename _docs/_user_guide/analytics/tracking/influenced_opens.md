@@ -1,5 +1,5 @@
 ---
-nav_title: Influenced Opens
+nav_title: Influenced opens
 article_title: Influenced Opens
 page_order: 7
 page_type: reference

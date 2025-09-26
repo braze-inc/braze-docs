@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Duplicate Campaigns"
+nav_title: "POST: Duplicate campaigns"
 article_title: "POST: Duplicate Campaigns"
 search_tag: Endpoint
 page_order: 4

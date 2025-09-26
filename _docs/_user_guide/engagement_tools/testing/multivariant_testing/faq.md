@@ -27,6 +27,10 @@ Braze tests all the variants against each other with Pearson's chi-squared tests
 
 This is a separate test from the confidence score, which only describes the performance of a variant compared to the control with a numeric value between 0 and 100%. Specifically, it represents our confidence that the standardized difference in conversion rate between the variant and control is significantly greater than chance.
 
+### Why isn't the variant distribution even?
+
+{% multi_lang_include multivariant_testing.md section='Variant distribution' %}
+
 ## Running and concluding tests
 
 ### When is the initial test over?

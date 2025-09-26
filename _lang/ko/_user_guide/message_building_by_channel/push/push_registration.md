@@ -87,7 +87,7 @@ iOS는 앱이 설치될 때 앱에 대한 푸시 토큰을 자동으로 생성�
 
 Braze에서 사용자의 푸시 구독 상태를 확인할 수 있는 방법은 두 가지가 있습니다:
 
-- **사용자 프로필**: [사용자 검색]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/) 페이지의 Braze 대시보드를 통해 개별 사용자 프로필에 액세스할 수 있습니다. 이메일 주소, 전화번호 또는 외부 사용자 ID를 통해 사용자의 프로필을 찾은 후 **참여** 탭을 선택하여 사용자의 가입 상태를 확인하고 수동으로 조정할 수 있습니다.
+- **사용자 프로필**: [사용자 검색]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/) 페이지의 Braze 대시보드를 통해 개별 사용자 프로필에 액세스할 수 있습니다. 이메일 주소, 전화번호 또는 외부 사용자 ID를 통해 사용자의 프로필을 찾은 후 **참여** 탭을 선택하여 사용자의 가입 상태를 확인하고 수동으로 조정할 수 있습니다.
 - **나머지 API 내보내기**: [세그먼트별 사용자]({{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/) 내보내기 또는 [식별자별 사용자]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) 내보내기 엔드포인트를 사용하여 개별 사용자 프로필을 JSON 형식으로 내보낼 수 있습니다. Braze는 디바이스별 푸시 활성화 정보가 포함된 푸시 토큰 객체를 반환합니다.
 
 ### 푸시 등록 상태 확인

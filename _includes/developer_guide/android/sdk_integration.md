@@ -67,7 +67,147 @@ Next, add the following permissions to your `AndroidManifest.xml`:
 With the release of Android M, Android switched from an install-time to a runtime permissions model. However, both of these permissions are normal permissions and are granted automatically if listed in the app manifest. For more information, visit Android's [permission documentation](https://developer.android.com/training/permissions/index.html).
 {% endalert %}
 
-### Step 4: Enable user session tracking
+### Step 4: Enable delayed initialization (optional)
+
+To use delayed initialization, the minimum Braze SDK version is required:
+
+{% sdk_min_versions android:38.0.0 %}
+
+{% alert note %}
+While delayed initialization is enabled, all network connections are canceled, preventing the SDK from sending data to the Braze servers.
+{% endalert %}
+
+#### Step 4.1: Update your `braze.xml`
+
+Delayed initialization is disabled by default. To enable, use one of the following options:
+
+{% tabs %}
+{% tab Braze XML file %}
+In your project's `braze.xml` file, set `com_braze_enable_delayed_initialization` to `true`.
+
+```xml
+<bool name="com_braze_enable_delayed_initialization">true</bool>
+```
+{% endtab %}
+
+{% tab At runtime %}
+To enable delayed initialization at runtime, use the following method.
+
+{% subtabs %}
+{% subtab JAVA %}
+
+```java
+Braze.enableDelayedInitialization(context);
+```
+
+{% endsubtab %}
+{% subtab KOTLIN %}
+
+```kotlin
+Braze.enableDelayedInitialization(context)
+```
+
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+{% endtabs %}
+
+#### Step 4.2: Configure push analytics (optional)
+
+When delayed initialization is enabled, push analytics are queued by default. However, you can choose to [explicitly queue](#explicitly-queue-push-analytics) or [drop](#drop-push-analytics) push analytics instead.
+
+##### Explicitly queue {#explicitly-queue-push-analytics}
+
+To explicitly queue push analytics, choose one of the following options:
+
+{% tabs %}
+{% tab Braze XML file %}
+In your `braze.xml` file, set `com_braze_delayed_initialization_analytics_behavior` to `QUEUE`:
+
+```xml
+<string name="com_braze_delayed_initialization_analytics_behavior">QUEUE</string>
+```
+{% endtab %}
+
+{% tab At runtime %}
+Add `QUEUE` to your [`Braze.enableDelayedInitialization()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/enable-delayed-initialization.html) method:
+
+{% subtabs %}
+{% subtab JAVA %}
+
+```java
+Braze.enableDelayedInitialization(context, DelayedInitializationAnalyticsBehavior.QUEUE);
+```
+
+{% endsubtab %}
+{% subtab KOTLIN %}
+
+```kotlin
+Braze.enableDelayedInitialization(context, DelayedInitializationAnalyticsBehavior.QUEUE)
+```
+
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+{% endtabs %}
+
+##### Drop {#drop-push-analytics}
+
+To drop push analytics, choose one of the following options:
+
+{% tabs %}
+{% tab Braze XML file %}
+In your `braze.xml` file, set `com_braze_delayed_initialization_analytics_behavior` to `DROP`: 
+
+```xml
+<string name="com_braze_delayed_initialization_analytics_behavior">DROP</string>
+```
+{% endtab %}
+
+{% tab At runtime %}
+Add `DROP` to the [`Braze.enableDelayedInitialization()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/enable-delayed-initialization.html) method:
+
+{% subtabs %}
+{% subtab JAVA %}
+
+```java
+Braze.enableDelayedInitialization(context, DelayedInitializationAnalyticsBehavior.DROP);
+```
+
+{% endsubtab %}
+{% subtab KOTLIN %}
+
+```kotlin
+Braze.enableDelayedInitialization(context, DelayedInitializationAnalyticsBehavior.DROP)
+```
+
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+{% endtabs %}
+
+#### Step 4.3: Manually initialize the SDK
+
+After your chosen delay period, use the [`Braze.disableDelayedInitialization()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/disable-delayed-initialization.html) method to manually initialize the SDK.
+
+{% tabs local %}
+{% tab JAVA %}
+
+```java
+Braze.disableDelayedInitialization(context);
+```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+Braze.disableDelayedInitialization(context)
+```
+
+{% endtab %}
+{% endtabs %}
+
+### Step 5: Enable user session tracking
 
 When you enable user session tracking, calls to `openSession()`, `closeSession()`,[`ensureSubscribedToInAppMessageEvents()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/ensure-subscribed-to-in-app-message-events.html), and `InAppMessageManager` registration can be handled automatically.
 

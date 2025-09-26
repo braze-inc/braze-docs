@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: List Catalogs"
+nav_title: "GET: List catalogs"
 article_title: "GET: List Catalogs"
 search_tag: Endpoint
 page_order: 2

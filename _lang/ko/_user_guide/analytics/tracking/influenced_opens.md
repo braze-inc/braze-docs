@@ -24,9 +24,7 @@ channel: push
 
 영향받은 오픈은 캠페인의 직접 오픈에 추가되어 총 오픈 수를 제공합니다. 푸시 캠페인의 **캠페인 애널리틱스** 페이지에 표시됩니다. 총 열람 수와 직접 열람 수는 메시지 실적 및 **기록 실적** 섹션에 표시됩니다. 영향받은 열람은 두 측정값 간의 차이입니다.
 
-![영향을 받은 캠페인의 캠페인 세부 정보 페이지에서 통계를 엽니다.][1]
+![Influenced opens statistics on the Campaign Details page for a campaign]({% image_buster /assets/img_archive/Influenced_Opens2.png %})
 
-열람 추적에 대한 자세한 내용은 [푸시 모범 사례][bp]의 전환 추적 섹션을 참조하세요.
+For more information on tracking opens, check out the conversion tracking section of our [best practices for push]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/).
 
-[bp]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/
-[1]: {% image_buster /assets/img_archive/Influenced_Opens2.png %}

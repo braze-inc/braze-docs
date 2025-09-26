@@ -80,7 +80,7 @@ Para personalizar o estilo do seu cartão de conteúdo, substitua este estilo pa
 
 Por padrão, os Cartões de Conteúdo do SDK do Android e do FireOS correspondem às diretrizes padrão da interface do usuário do Android para proporcionar uma experiência perfeita.
 
-Você pode aplicar estilo de duas maneiras. O primeiro é passar um `ContentCardListStyling` e `ContentCardStyling` para `ContentCardsList()`, como no exemplo a seguir:
+Você pode aplicar estilo de duas maneiras. A primeira é passar um [`ContentCardListStyling`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-list-styling/index.html) e [`ContentCardStyling`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-styling/index.html) para [`ContentCardsList`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards/-content-cards-list.html)como no exemplo a seguir:
 
 ```kotlin
 ContentCardsList(
@@ -98,7 +98,7 @@ ContentCardsList(
 )
 ```
 
-O segundo é usar BrazeStyle para criar um estilo global para os componentes Braze, como no exemplo a seguir:
+A segunda é usar [`BrazeStyle`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose/-braze-style.html) para criar um estilo global para os componentes do Braze, como no exemplo a seguir:
 
 ```kotlin
 BrazeStyle(
@@ -118,7 +118,7 @@ BrazeStyle(
 ```
 
 {% endtab %}
-{% tab iOS %}
+{% tab swift %}
 
 O controlador de visualização de Cartões de Conteúdo permite que você personalize a aparência e o comportamento de todas as células através da [`BrazeContentCardUI.ViewController.Attributes`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller/attributes-swift.struct) estrutura. Configurar cartões de conteúdo usando `Attributes` é uma opção fácil, permitindo que você lance sua interface de cartões de conteúdo com configuração mínima. 
 
@@ -198,7 +198,7 @@ Personalizar cartões de conteúdo por meio de `Attributes` não é compatível 
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Web %}
+{% tab web %}
 
 Os estilos padrão do Braze são definidos em CSS dentro do SDK do Braze. Substituindo estilos selecionados em seu aplicativo, é possível personalizar nosso feed padrão com suas próprias imagens de fundo, famílias de fontes, estilos, tamanhos, animações e muito mais. O seguinte é um exemplo de substituição que fará com que os cartões de conteúdo apareçam com 800 px de largura:
 
@@ -238,9 +238,9 @@ Aqui está um exemplo truncado com uma família de fontes personalizadas, `my_cu
 Para saber mais sobre a personalização de fontes no SDK do Android, consulte o [guia de famílias de fontes]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/font_customization/#font-customization).
 {% endtab %}
 {% tab Jetpack Compose %}
-Para alterar a fonte padrão dd forma programática, você pode definir o `titleTextStyle` do `ContentCardStyling`.
+Para alterar a fonte padrão de forma programática, você pode definir o [`titleTextStyle`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-styling/index.html#715371549%2FProperties%2F-1725759721) de `ContentCardStyling`.
 
-Você também pode definir `titleTextStyle` para um tipo específico de cartão configurando-o em `BrazeShortNewsContentCardStyling` e passando-o para o `shortNewsContentCardStyle` de `ContentCardStyling`.
+Você também pode definir `titleTextStyle` para um tipo de cartão específico, definindo-o em [`BrazeShortNewsContentCardStyling`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-braze-short-news-content-card-styling/index.html) e passando-o para a função [`shortNewsContentCardStyle`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-styling/index.html#8580250%2FProperties%2F-1725759721) de `ContentCardStyling`.
 
 ```kotlin
 val fontFamily = FontFamily(
@@ -254,7 +254,7 @@ ContentCardStyling(
 )
 ```
 {% endtab %}
-{% tab iOS %}
+{% tab swift %}
 {% subtabs %}
 {% subtab Swift %}
 
@@ -279,7 +279,7 @@ Confira o [app de exemplo de Exemplos](https://github.com/braze-inc/braze-swift-
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Web %}
+{% tab web %}
 
 Assim como qualquer outro elemento da web, você pode personalizar facilmente a aparência dos cartões de conteúdo através do CSS. No seu arquivo CSS ou estilos embutidos, use a propriedade `font-family` e especifique o nome da fonte desejada ou a pilha de fontes.
 
@@ -320,7 +320,7 @@ Para definir um ícone fixado personalizado, substitua o estilo `Braze.ContentCa
 {% endtab %}
 {% tab Jetpack Compose %}
 
-Para alterar o ícone fixado padrão, você pode definir o `pinnedResourceId` do `ContentCardStyling`.  Por exemplo:
+Para alterar o ícone fixo padrão, você pode definir o ícone [`pinnedResourceId`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-styling/index.html#794044424%2FProperties%2F-1725759721) de `ContentCardStyling`.  Por exemplo:
 
 ```kotlin
 ContentCardStyling(
@@ -329,7 +329,7 @@ ContentCardStyling(
 )
 ```
 
-Você também pode especificar um Composable em `pinnedComposable` de `ContentCardStyling`. Se `pinnedComposable` for especificado, ele substituirá o valor `pinnedResourceId`.
+Você também pode especificar um criador em [`pinnedComposable`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-styling/index.html#1460938052%2FProperties%2F-1725759721) de `ContentCardStyling`. Se `pinnedComposable` for especificado, ele substituirá o valor `pinnedResourceId`.
 
 ```kotlin
 ContentCardStyling(
@@ -346,7 +346,7 @@ ContentCardStyling(
 )
 ```
 {% endtab %}
-{% tab iOS %}
+{% tab swift %}
 {% subtabs %}
 {% subtab Swift %}
 
@@ -377,7 +377,7 @@ A personalização do indicador de pin via `Attributes` não é compatível com 
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Web %}
+{% tab web %}
 
 A estrutura do ícone fixado do cartão de conteúdo é:
 
@@ -430,7 +430,7 @@ Altere a cor da barra indicadora de não lida alterando o valor em `com_braze_co
 {% endtab %}
 {% tab Jetpack Compose %}
 
-Para alterar a cor da barra indicadora de não lida, modifique o valor de `unreadIndicatorColor` em `ContentCardStyling`:
+Para alterar a cor da barra indicadora de não lidos, modifique o valor de [`unreadIndicatorColor`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-styling/index.html#-1669590042%2FProperties%2F-1725759721) em `ContentCardStyling`:
 
 ```kotlin
 ContentCardStyling(
@@ -439,7 +439,7 @@ ContentCardStyling(
 ```
 
 {% endtab %}
-{% tab iOS %}
+{% tab swift %}
 
 {% subtabs %}
 {% subtab Swift %}
@@ -479,7 +479,7 @@ A personalização apenas do indicador não visualizado via `Attributes` não é
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Web %}
+{% tab web %}
 
 Para alterar a cor do indicador de não lido de um cartão, adicione CSS personalizado à sua página da web. Por exemplo, para definir a cor do indicador não visualizado para verde:
 
@@ -503,7 +503,7 @@ Oculte a barra de indicador não lido configurando [`setUnreadBarVisible`](https
 Desativar o indicador de não lido não é suportado no Jetpack Compose.
 {% endtab %}
 
-{% tab iOS %}
+{% tab swift %}
 {% subtabs %}
 {% subtab Swift %}
 
@@ -517,7 +517,7 @@ A personalização apenas do indicador não visualizado via `Attributes` não é
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Web %}
+{% tab web %}
 
 Oculte a barra indicadora de não lida adicionando o seguinte estilo ao seu `css`:
 

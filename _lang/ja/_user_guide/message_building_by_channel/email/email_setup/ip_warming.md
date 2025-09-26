@@ -61,7 +61,7 @@ ISP は、スパムの疑いが生じた場合、ユーザーを保護できる�
 
 組み込みのユーザー制限機能は、IP アドレスのウォームアップに役立つ便利なツールです。キャンペーンの作成中に必要なメッセージング Segments を選択した後、[Target ユーザーs]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/#step-4-build-the-remainder-of-your-campaign-or-canvas) ステップで、**詳細オプション** ドロップダウンを選択してユーザーs を制限します。ウォームアップスケジュールの進行に合わせてこの制限を徐々に引き上げ、送信するメールの量を増やすことができます。
 
-![][18]
+![]({% image_buster /assets/img_archive/email_ip_warming_sends_limit_new.png %})
 
 ## サブドメインセグメンテーション
 
@@ -93,12 +93,12 @@ IP ウォームアップが完了したら、送信ケイデンスを作成し�
 
 ### メールリストをクリーンアップする
 
-メールリストがクリーンで、古いメールや未検証のメールがないことを確認します。[CASL 準拠と CAN-SPAM 準拠][40] の両方について確認するのが理想的です。
+メールリストがクリーンで、古いメールや未検証のメールがないことを確認します。[CASL 準拠と CAN-SPAM 準拠]({{site.baseurl}}/user_guide/administrative/privacy/spam_regulations/)の両方について確認するのが理想的です。
 
 ### 送信者のレピュテーションを監視する
 
 IP ウォームアップを行う場合、ウォームアッププロセスの実行中に送信者のレピュテーションを注意深く監視してください。これらの特定のメトリクスは、以下を監視するために重要です。
-- **バウンス率: **キャンペーンのバウンス率が 3 ～ 5% を超える場合は、リストのクリーン度を評価する必要があります。詳しくは [クリーンに保つ: メールリストクリーニングの重要性][43] の記事を参照してください。さらに、エンゲージのないメールアドレスや休止メールアドレスへの送信を停止するために、[サンセットポリシー][46] の実装を検討する必要があります。
+- **バウンス率: **キャンペーンのバウンス率が3 ～ 5% を超える場合は、リストのクリーン度を評価する必要があります。詳しくは[クリーンに保つ: メールリストクリーニングの重要性](https://www.braze.com/blog/email-list-hygiene/) の記事を参照してください。さらに、[Sunset（配信停止）ポリシーを]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/sunset_policies/)導入して、未登録や休止状態のメールアドレスへのメールを停止することも検討すべきである。
 - **スパムレポート: **いずれかのキャンペーンが0.08%を超える割合でスパムとしてレポートされている場合は、送信している内容を再評価し、関心のあるオーディエンスを対象としていることを確認し、メールsがアプリ適切な言葉で関心をそそるようにしてください。
 - **開封率: **開封率は、受信トレイの配置に役立ちます。一意の開封率が25% を超える場合は、受信トレイが高くなる可能性があります。これは、送信者の評価が高いことを示しています。
 
@@ -110,9 +110,3 @@ Braze は、[インテリジェントタイミング]({{site.baseurl}}/user_guid
 ドメインとIP がまだ肯定的な評価を確立していないため、IP ウォームアップ中にメールがスパム フォルダーに送信されるのは通常です。メールがスパムフォルダーに保存されている場合、メール管理者はBraze送信ドメインとIP を会社の許可リストに追加する必要があります。
 {% endalert %}
 
-[18]: {% image_buster /assets/img_archive/email_ip_warming_sends_limit_new.png %}
-[40]: {{site.baseurl}}/user_guide/onboarding_with_braze/spam_regulations/
-[43]: https://www.braze.com/blog/email-list-hygiene/
-[44]: https://senderscore.org/
-[45]: http://www.senderbase.org/
-[46]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/sunset_policies/

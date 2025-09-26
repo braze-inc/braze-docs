@@ -1,5 +1,5 @@
 ---
-nav_title: Managing Segments
+nav_title: Managing segments
 article_title: Managing Segments
 page_order: 1
 page_type: tutorial

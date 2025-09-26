@@ -26,7 +26,7 @@ Pour les SDK wrapper non répertoriés, utilisez plutôt la méthode native Andr
 {% endsdktab %}
 
 {% sdktab swift %}
-guide/swift/gifs.md developer_ %}
+{% multi_lang_include developer_guide/swift/gifs.md %}
 {% endsdktab %}
 
 {% sdktab web %}

@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: Export Segment Analytics"
+nav_title: "GET: Export segment analytics"
 article_title: "GET: Export Segment Analytics"
 search_tag: Endpoint
 page_order: 4

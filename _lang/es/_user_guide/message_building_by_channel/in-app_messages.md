@@ -42,6 +42,9 @@ guide_menu_list:
 - name: "Cuestionario simple"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/traditional/templates/simple_survey/
   image: /assets/img/braze_icons/bar-chart-07.svg
+- name: "Uso de la localización"
+  link: /docs/iam_locales/
+  image: /assets/img/braze_icons/translate-01.svg
 - name: "Buenas prácticas"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/best_practices
   image: /assets/img/braze_icons/check-square-broken.svg

@@ -34,7 +34,7 @@ También es importante conocer a tus [usuarios activos]({{site.baseurl}}/user_gu
 
 ### Conocimiento de las características
 
-Si su objetivo es atraer a los usuarios hacia una nueva función o versión de la aplicación, utilice una estrategia multicanal centrada en los canales dentro de la aplicación. Los [mensajes dentro de la aplicación][5] y las [tarjetas de contenido][7] ] suelen ser menos molestos si el usuario no desea actualizar inmediatamente. 
+Si tu objetivo es atraer a tus usuarios hacia una nueva característica o versión de la aplicación, utiliza una estrategia multicanal centrada en los canales dentro de la aplicación. [Los mensajes dentro de la aplicación]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/) y las [tarjetas de contenido]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/) suelen ser menos molestos si el usuario no desea actualizar inmediatamente. 
 
 Asegúrate de incluir [vínculos en profundidad]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/) a la tienda de aplicaciones adecuada.
 
@@ -44,7 +44,7 @@ Convencer a los usuarios para que actualicen su aplicación o cambien la forma e
 
 El momento oportuno es la clave. Cuando su objetivo sea convencer a los usuarios para que actualicen su aplicación, espere a que tengan una experiencia positiva dentro de la aplicación para preguntar a los usuarios. Para mantener el interés de su público, evite los mensajes repetitivos que puedan parecer intrusivos.
 
-Con el tiempo, es posible que sus usuarios olviden ciertas funciones o no se fijen en las nuevas. Cuando se añadan nuevas funciones, asegúrate de informar a tus usuarios con [mensajes dentro de la aplicación]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/). Si los usuarios no están interactuando con las principales funciones de la aplicación, puede ser mejor recordarles cuándo están interactuando con su aplicación y cuándo sería útil esta nueva función. Nuestro artículo sobre [opt-in de datos][7] tiene más información sobre cómo garantizar que su solicitud coincide con las expectativas de flujo de trabajo de los usuarios. 
+Con el tiempo, es posible que sus usuarios olviden ciertas funciones o no se fijen en las nuevas. Cuando se añadan nuevas funciones, asegúrate de informar a tus usuarios con [mensajes dentro de la aplicación]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/). Si los usuarios no están interactuando con las principales funciones de la aplicación, puede ser mejor recordarles cuándo están interactuando con su aplicación y cuándo sería útil esta nueva función. Nuestro artículo sobre [la adhesión voluntaria de datos]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/) tiene más información sobre cómo garantizar que tu solicitud coincide con las expectativas de flujo de trabajo de los usuarios. 
 
 ## Valoraciones altas
 
@@ -62,7 +62,7 @@ Para conseguir mejores valoraciones, pida a sus usuarios avanzados que revisen s
 - Ha utilizado estas aplicaciones más de 10 veces en los últimos 14 días
 - Ha gastado más de 50 dólares
 
-![Un ejemplo de segmento dirigido a los usuarios avanzados de una aplicación.][6]
+![Un ejemplo de segmento dirigido a usuarios avanzados de una aplicación.]({% image_buster /assets/img_archive/ratings_power_users.png %})
 
 Visitar la tienda de aplicaciones lleva tiempo a tus usuarios. Para maximizar la probabilidad de que hagan un esfuerzo adicional, pídales una valoración o reseña después de que hayan tenido una experiencia positiva con su aplicación. Por ejemplo, pregúnteles después de superar un nivel del juego o de realizar una compra utilizando un código de descuento. Nuestro artículo sobre [la inclusión voluntaria de datos]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-states) contiene más información sobre las formas de garantizar que su solicitud coincide con las expectativas del flujo de trabajo de los usuarios.
 
@@ -79,6 +79,3 @@ Cuando edites programas de campaña o audiencias, toma nota de las siguientes bu
 Editar una campaña en vivo y cambiar la entrega a **Hora de envío local** hará que se ponga en cola un nuevo lote de mensajes, lo que significa que tus usuarios recibirán el mensaje dos veces debido a que el mensaje se pondrá en cola dos veces. Para evitarlo, primero detén la campaña original y luego lanza un duplicado tras actualizar la programación.
 {% endalert %}
 
-[6]: {% image_buster /assets/img_archive/ratings_power_users.png %}
-[5]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/
-[7]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/

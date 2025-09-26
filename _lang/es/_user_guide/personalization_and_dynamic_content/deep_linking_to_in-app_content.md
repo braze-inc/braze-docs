@@ -30,7 +30,7 @@ Braze no admite el uso de un envoltorio como Flutter para enviar vínculos profu
 
 ### ¿Qué es una etiqueta UTM?
 
-[Las etiquetas UTM (Urchin Traffic Manager)][4] le permiten incluir detalles de atribución de campañas directamente en los enlaces. Las etiquetas UTM son utilizadas por Google Analytics para recopilar datos de atribución de campañas y pueden utilizarse para realizar un seguimiento de las siguientes propiedades:
+[Las etiquetas UTM (Urchin Traffic Manager)](https://support.google.com/analytics/answer/10917952?sjid=14344007686729081565-NC#zippy=%2Cin-this-article) le permiten incluir detalles de atribución de campañas directamente en los enlaces. Las etiquetas UTM son utilizadas por Google Analytics para recopilar datos de atribución de campañas y pueden utilizarse para realizar un seguimiento de las siguientes propiedades:
 
 - `utm_source`: El identificador de la fuente del tráfico (por ejemplo,`my_app`)
 - `utm_medium`: El medio de la campaña (por ejemplo,`newsfeed`)
@@ -42,9 +42,9 @@ Las etiquetas UTM pueden incrustarse tanto en enlaces HTTP (web) normales como e
 
 ### Usar etiquetas UTM con Braze
 
-Si quieres utilizar etiquetas UTM con enlaces HTTP (Web) normales (por ejemplo, para hacer la atribución de campañas para tus campañas de correo electrónico) y tu organización ya utiliza Google Analytics, puedes utilizar [el creador de URL de Google][6] para generar enlaces UTM. Estos enlaces pueden incrustarse fácilmente en el texto de la campaña Braze como cualquier otro enlace.
+Si quieres utilizar etiquetas UTM con enlaces HTTP (Web) normales (por ejemplo, para hacer la atribución de campañas para tus campañas de correo electrónico) y tu organización ya utiliza Google Analytics, puedes utilizar [el creador de URL de Google](https://ga-dev-tools.google/ga4/campaign-url-builder/) para generar enlaces UTM. Estos enlaces pueden incrustarse fácilmente en el texto de la campaña Braze como cualquier otro enlace.
 
-Para utilizar etiquetas UTM en los vínculos profundos de tu aplicación, ésta debe tener el [SDK de Google Analytics][5] correspondiente integrado y correctamente configurado para gestionar los vínculos profundos. Consulta a tus desarrolladores si tienes dudas al respecto.
+Para utilizar etiquetas UTM en los vínculos profundos de tu aplicación, ésta debe tener el [SDK de Google Analytics](https://developers.google.com/analytics/devguides/collection/) correspondiente integrado y correctamente configurado para gestionar los vínculos profundos. Consulta a tus desarrolladores si tienes dudas al respecto.
 
 Una vez integrado y configurado el SDK de análisis, las etiquetas UTM pueden utilizarse con vínculos profundos en las campañas Braze. Para configurar etiquetas UTM para tu campaña, incluye las etiquetas UTM necesarias en la URL de destino o en los vínculos profundos. Los siguientes ejemplos muestran cómo utilizar etiquetas UTM en notificaciones push y mensajes in-app.
 
@@ -56,7 +56,7 @@ Para incluir etiquetas UTM en tus enlaces profundos para notificaciones push, co
 myapp://products/20-gift-card?utm_source=my_app&utm_medium=push&utm_campaign=spring2016giftcards&utm_content=ios_deeplink
 ```
 
-![][8]
+![]({% image_buster /assets/img_archive/push_utm_tags.png %})
 
 #### Atribución de los clics de mensajes dentro de la aplicación con etiquetas UTM
 
@@ -66,15 +66,5 @@ Para incluir etiquetas UTM en los vínculos profundos de tus mensajes dentro de 
 myapp://products/20-gift-card?utm_source=my_app&utm_medium=iam&utm_campaign=spring2021giftcards&utm_content=web_link
 ```
 
-![][10]
+![]({% image_buster /assets/img_archive/iam_utm_tags.png %})
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/linking/
-[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/deep_linking/#Android_Deep_Advance
-[4]: https://support.google.com/analytics/answer/10917952?sjid=14344007686729081565-NC#zippy=%2Cin-this-article
-[5]: https://developers.google.com/analytics/devguides/collection/
-[6]: https://ga-dev-tools.google/ga4/campaign-url-builder/
-[8]: {% image_buster /assets/img_archive/push_utm_tags.png %}
-[9]: {% image_buster /assets/img_archive/news_feed_utm_tags.png %}
-[10]: {% image_buster /assets/img_archive/iam_utm_tags.png %}
-[11]: {{site.baseurl}}/user_guide/engagement_tools/news_feed/creating_a_news_feed_item/

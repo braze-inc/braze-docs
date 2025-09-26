@@ -1,5 +1,5 @@
 ---
-nav_title: Checking Location Data
+nav_title: Checking location data
 article_title: Checking Location Data
 page_order: 1
 page_type: solution

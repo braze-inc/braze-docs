@@ -18,12 +18,18 @@ Disposer de plusieurs comptes WhatsApp Business est utile si vous souhaitez envo
 
 Les comptes commerciaux imbriqués dans le même gestionnaire Meta Business Manager partageront également la gestion des autorisations d'accès des utilisateurs et les catalogues (pas encore pris en charge sur Braze).
 
+![Diagramme de l'écosystème Braze et WhatsApp, montrant comment les espaces de travail et les comptes WhatsApp Business se connectent les uns aux autres : vous pouvez connecter un groupe d'abonnement à un numéro de téléphone, plusieurs comptes WhatsApp Business à un espace de travail, et un espace de travail à plusieurs portefeuilles Meta Business.]({% image_buster /assets/img/whatsapp/whatsapp_braze_ecosystem.png %}). 
+
 ### Ajouter un compte WhatsApp Business
 
-Vous pouvez ajouter jusqu'à 10 comptes WhatsApp Business par espace de travail. Pour ajouter un compte :
+Vous pouvez ajouter jusqu'à 10 comptes WhatsApp Business par espace de travail. Les comptes commerciaux peuvent être imbriqués dans différents gestionnaires de méta-domaines d'activité. Pour ajouter un compte :
 
-1. Allez dans **Partenaires technologiques** > **WhatsApp** et sélectionnez **Ajouter un compte WhatsApp Business.** ![Section d'intégration de l'envoi de messages WhatsApp avec des options pour ajouter un compte professionnel ou ajouter un groupe d'abonnement et un numéro.][1]<br>
-2. Suivez le processus d'inscription. Pour une description détaillée des étapes, reportez-vous à l'[inscription intégrée à WhatsApp.]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/embedded_signup/)
+1. Allez dans **Partenaires technologiques** > **WhatsApp** et sélectionnez **Ajouter un compte professionnel WhatsApp.** 
+
+![Section sur l'intégration de l'envoi de messages WhatsApp avec des options permettant d'ajouter un compte professionnel ou d'ajouter un groupe d'abonnement et un numéro.]({% image_buster /assets/img/whatsapp/multiple_wabas.png %})
+
+{: start="2"}
+2\. Suivez le processus d'inscription. Pour une description détaillée des étapes, reportez-vous à l'[inscription intégrée à WhatsApp.]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/embedded_signup/)
 
 {% alert important %}
 Votre numéro de téléphone doit répondre à toutes les exigences d'un numéro de téléphone WhatsApp, notamment ne pas être associé à d'autres comptes WhatsApp.
@@ -43,12 +49,14 @@ Chaque numéro de téléphone WhatsApp apparaîtra comme une discussion WhatsApp
 
 Vous pouvez ajouter jusqu'à 20 groupes d'abonnement (et numéros de téléphone d'envoi) par compte WhatsApp Business. Pour ajouter un groupe d'abonnement et un numéro de téléphone :
 
-1. Allez dans **Partenaires technologiques** > **WhatsApp** et sélectionnez **Ajouter un groupe d'abonnement et un numéro**.![Section d'intégration de l'envoi messages WhatsApp avec des options pour ajouter un compte d'entreprise ou ajouter un groupe d'abonnement et un numéro.][1]<br>
-2. Suivez le processus d'inscription. <br><br> À l'étape **Sélectionner votre compte WhatsApp Business**, sélectionnez votre compte WhatsApp Business existant et ajoutez un nouveau numéro de téléphone. Ce numéro doit répondre à toutes les exigences d'un numéro de téléphone WhatsApp, notamment ne pas être associé à d'autres comptes WhatsApp.
+1. Allez dans **Partenaires technologiques** > **WhatsApp** et sélectionnez **Ajouter un groupe d'abonnement et un numéro.**
+
+![Section sur l'intégration de l'envoi de messages WhatsApp avec des options permettant d'ajouter un compte professionnel ou d'ajouter un groupe d'abonnement et un numéro.]({% image_buster /assets/img/whatsapp/multiple_wabas.png %})
+
+{: start="2"}
+2\. Suivez le processus d'inscription. <br><br> À l'étape **Sélectionner votre compte WhatsApp Business**, sélectionnez votre compte WhatsApp Business existant et ajoutez un nouveau numéro de téléphone. Ce numéro doit répondre à toutes les exigences d'un numéro de téléphone WhatsApp, notamment ne pas être associé à d'autres comptes WhatsApp.
 
 ### Suppression d'un groupe d'abonnement et d'un numéro de téléphone 
 
 1. Allez dans **Audience** > **Abonnements** et archivez le groupe d'abonnement.
 2. Allez dans votre gestionnaire Meta Business et supprimez le numéro de téléphone.
-
-[1]: {% image_buster /assets/img/whatsapp/multiple_wabas.png %} 

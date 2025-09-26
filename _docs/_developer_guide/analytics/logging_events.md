@@ -1,5 +1,5 @@
 ---
-nav_title: Logging Custom Events
+nav_title: Logging custom events
 article_title: Logging custom events through the Braze SDK
 page_order: 3.1
 description: "Learn how to log custom events through the Braze SDK."

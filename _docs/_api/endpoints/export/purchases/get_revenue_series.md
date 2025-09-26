@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: Export Revenue Data"
+nav_title: "GET: Export revenue data"
 article_title: "GET: Export Revenue Data"
 search_tag: Endpoint
 page_order: 2

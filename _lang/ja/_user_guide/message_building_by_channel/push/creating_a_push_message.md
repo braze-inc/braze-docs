@@ -12,7 +12,7 @@ tool:
 
 # プッシュ・メッセージを作成する
 
-> プッシュ通知は、一刻を争う行動喚起や、しばらくアプリにアクセスしていないユーザーの再エンゲージメントに最適です。成功するプッシュキャンペーンは、ユーザーをコンテンツに直接誘導し、アプリの価値を実証する。プッシュ通知の例については、[ケーススタディ][8]をご覧ください。
+> プッシュ通知は、一刻を争う行動喚起や、しばらくアプリにアクセスしていないユーザーの再エンゲージメントに最適です。成功するプッシュキャンペーンは、ユーザーをコンテンツに直接誘導し、アプリの価値を実証する。プッシュ通知の例については、[ケーススタディを](https://www.braze.com/customers)ご覧いただきたい。
 
 ## ステップ1:メッセージを発信する場所を選ぶ {#create-new-campaign-push}
 
@@ -22,11 +22,17 @@ tool:
 
 {% tabs %}
 {% tab キャンペーン %}
-1. **Messaging**> **Campaigns**に進み、**Create Campaign**を選択します。
-2. 複数のチャネルをターゲットとするキャンペーンの場合は、**Multichannel** を選択します。それ以外の場合は、**プッシュ通知**を選択します。それでもわからない場合は、以下の**正規またはマルチチャネルのプッシュキャンペーン**の決定を参照してください。
+1. [**メッセージング**] > [**キャンペーン**] に進み、[**キャンペーンを作成**] を選択します。
+2. 複数のチャネルをターゲットとするキャンペーンの場合は、**Multichannel** を選択します。それ以外の場合は、[**プッシュ通知**] を選択します。それでもわからない場合は、以下の**正規またはマルチチャネルのプッシュキャンペーン**の決定を参照してください。
 3. キャンペーンに、明確で意味のある名前を付けます。
-4. 必要に応じて、[[チーム]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/)] と [[タグ]({{site.baseurl}}/user_guide/administrative/app_settings/tags/)] を追加します。**ヒント:**タグを使用すると、キャンペーンを検索してレポートを作成しやすくなります。例えば、[[レポートビルダー]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/)] を使用する場合、特定のタグでフィルターできます。
-5. キャンペーンに必要な数だけバリアントを追加して名前を付けます。追加したバリアントごとに、さまざまなプラットフォーム、メッセージタイプ、レイアウトを選択できます。このトピックの詳細については、「[多変量テストと AB テスト]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/)」を参照してください。
+4. 必要に応じて、[[チーム]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/)] と [[タグ]({{site.baseurl}}/user_guide/administrative/app_settings/tags/)] を追加します。 
+
+{% alert tip %}
+タグを使用すると、キャンペーンを検索してレポートを作成しやすくなります。例えば、[[レポートビルダー]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/)] を使用する場合、特定のタグでフィルターできます。
+{% endalert %}
+
+{: start="5"}
+5\.キャンペーンに必要な数だけバリアントを追加して名前を付けます。追加したバリアントごとに、さまざまなプラットフォーム、メッセージタイプ、レイアウトを選択できます。このトピックの詳細については、「[多変量テストと AB テスト]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/)」を参照してください。
 
 {% details 通常キャンペーンかマルチチャネルプッシュキャンペーンかを決める %}
 
@@ -44,7 +50,7 @@ tool:
 - 表示優先度
 - サウンド
 
-[クイック・プッシュ・キャンペーンを]({{site.baseurl}}/quick_push)参照して、この編集体験で何が違うのかを理解してから次に進もう。
+続行する前に、「[クイックプッシュキャンペーン]({{site.baseurl}}/quick_push)」を参照して、この編集エクスぺリエンスで異なる点を確認してください。
 
 {% enddetails %}
 
@@ -64,9 +70,9 @@ tool:
 {% endtab %}
 {% endtabs %}
 
-## ステップ 2:配信プラットフォームを指定する
+## ステップ 2:プッシュプラットフォームを選択する
 
-まず、どのデバイスとプラットフォームの組み合わせでプッシュを受け取るかを選択する。この選択を使用して、プッシュ通知の配信をアプリの特定のグループに制限します。
+次に、どのプラットフォームとモバイルデバイスの組み合わせでプッシュを受け取るかを選択します。この選択を使用して、プッシュ通知の配信をアプリの特定のグループに制限します。
 
 これまでの選択によって、いくつかの方法がある：
 
@@ -79,15 +85,15 @@ tool:
 
 ## ステップ 3: 通知タイプを選択する（iOSとAndroid）
 
-クイックプッシュキャンペーンを作成している場合、通知タイプは自動的に標準プッシュに設定され、変更することはできない。
+クイックプッシュキャンペーンを作成している場合、通知タイプは自動的に [**標準プッシュ**] に設定され、変更することはできません。
 
-![標準プッシュが選択されている通知タイプの例。][3]{: style="float:right;max-width:40%;margin-left:15px;"}
+![[標準プッシュ] が選択されている通知タイプの例。]({% image_buster /assets/img_archive/push_2.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
 それ以外の場合、iOS と Android では通知タイプを選択します: 
 
-- スタンダード・プッシュ
+- 標準プッシュ通知
 - [プッシュ通知ストーリー]({{site.baseurl}}/user_guide/message_building_by_channel/push/advanced_push_options/push_stories/)
-- インライン画像（Androidのみ）
+- インライン画像(Androidのみ)
 
 プッシュ・キャンペーンに画像を含めたい場合は、[iOS]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/)または[Android]({{site.baseurl}}/user_guide/message_building_by_channel/push/android/rich_notifications/)向けのリッチ通知の作成について、以下のガイドを参照のこと。
 
@@ -105,7 +111,7 @@ tool:
 
 #### 言語
 
-**Add Languages**ボタンを使って複数の言語でコピーを追加する。コンテンツを記述する前に言語を選択することをお勧めします。これにより、Liquid 内の適切な場所にテキストを入力することができます。使用可能な言語の完全なリストについては、[サポートされている言語][18]を参照してください。
+**Add Languages**ボタンを使って複数の言語でコピーを追加する。コンテンツを記述する前に言語を選択することをお勧めします。これにより、Liquid 内の適切な場所にテキストを入力することができます。使用可能な言語の完全なリストについては、[サポートされている言語]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported)を参照してください。
 
 右から左に書かれた言語でコピーを追加する場合、右から左に書かれたメッセージの最終的な見た目は、サービスプロバイダーがどのようにそれらをレンダリングするかに大きく左右されることに注意してください。右から左へのメッセージを可能な限り正確に表示するためのベストプラクティスについては、[右から左へのメッセージを作成する]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/)を参照してください。
 
@@ -130,7 +136,7 @@ Android プッシュメッセージはタイトルなしでは送信**できま�
 {% endtabs %}
 
 {% alert tip %}
-魅力的な文章を作成するためのサポートが必要な場合は、[AI コピーライティングアシスタント]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/)を使用してみてください。商品名や説明を入力すると、AIが人間のようなマーケティングコピーを生成し、メッセージングに使用する。
+魅力的な文章を作成するためのサポートが必要な場合は、[AI コピーライティングアシスタント]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/)を使用してみてください。商品名や説明を入力すると、AIが人間のようなマーケティングコピーを生成し、メッセージングに使用する。
 
 ![プッシュ作成画面の本文フィールドにある「AI コピーライターを起動」ボタン。]({% image_buster /assets/img/ai_copywriter/ai_copywriter_push.png %}){: style="max-width:60%"}
 {% endalert %}
@@ -155,11 +161,11 @@ Android プッシュメッセージはタイトルなしでは送信**できま�
 - 確認/キャンセル
 - もっと見る 
 
-#### デバイスオプション
+#### 送信オプション
 
-ユーザーが複数のデバイスにアプリをインストールしている場合、デフォルトでは、有効なプッシュトークンが割り当てられたすべてのデバイスにプッシュメッセージが送信される。必要であれば、**このプッシュをユーザーの最近使用したデバイスにのみ送信する**ように選択することもできる。
+ユーザーが複数のデバイスにアプリをインストールしている場合、デフォルトでは、有効なプッシュトークンが割り当てられたすべてのデバイスにプッシュメッセージが送信される。必要に応じて [**最近使用したデバイス**]を選択することもできます。
 
-![このプッシュをユーザーが最後に使用したデバイスにのみ送信するデバイスオプションのチェックボックス。][9]{: style="max-width:70%;" }
+![]({% image_buster /assets/img_archive/push_recent_device.png %}) このプッシュをユーザーの最近使用したデバイスにのみ送信するためのデバイスオプションチェックボックス。{: style="max-width:70%;" }
 
 この設定には若干のニュアンスがある。このオプションが選択されている場合、Brazeは、iOSとAndroidの両方など、複数のプラットフォームを対象とするキャンペーンを除き、複数送信が発生しないように制限する。ユーザーがiOSとAndroidの両方のデバイスにアプリを入れている場合、両方のプラットフォーム用のプッシュを受け取ることになる。ユーザーが最近使用したデバイスが[プッシュ対応]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/#push-enabled)でない場合、メッセージは送信されない。
 
@@ -167,9 +173,7 @@ iOS の場合、iPad デバイスにのみプッシュ通知を送信したり�
 
 ## ステップ 5: メッセージのプレビューとテスト(オプション)
 
-![テスト・プッシュ・メッセージ][7]{: style="float:right;max-width:30%;margin-left:15px;"}
-
-テストは、おそらく最も重要なステップの 1 つです。完璧なプッシュ・メッセージを作り終えたら、送信する前にテストしてみよう。[**テスト**] タブを選択し、[**ユーザーとしてメッセージをプレビュー**] を使用して、メッセージがモバイルでどのように表示されるかを確認します。**Send Testを使って**テストプッシュを送信し、メッセージが正しく表示されることを確認する。
+テストは、おそらく最も重要なステップの 1 つです。完璧なプッシュ・メッセージを作り終えたら、送信する前にテストしてみよう。[**テスト**] タブを選択し、プッシュメッセージのテスト方法のオプションから選択します。[**テスト受信者**] では、コンテンツテストグループまたは個々のユーザーを選択できます。また、**ユーザーとしてメッセージをプレビューを**使用すると、ランダムユーザー、既存ユーザー、カスタムユーザー、多言語ユーザーに対して、あなたのメッセージがモバイルでどのように表示されるかを知ることができる。
 
 ## ステップ 6:キャンペーンまたはキャンバスの残りの部分を作成する
 
@@ -188,7 +192,7 @@ iOS の場合、iPad デバイスにのみプッシュ通知を送信したり�
 
 #### ターゲットとするユーザーを選択する
 
-次に、セグメントまたはフィルターを選択し、オーディエンスを絞り込んで、[ターゲットのユーザーを設定]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/)する必要があります。セグメントのおおよその人数について現在の状態を示すスナップショットが自動的に表示されます。キャンペーンがターゲットとするチャンネルの詳細なオーディエンス統計は、フッターに表示されます。ユーザー群の何パーセントがターゲットになっているか、およびそのセグメントの生涯価値を確認するには、[**統計をさらに表示する**] を選択します。
+次に、セグメントまたはフィルターを選択し、オーディエンスを絞り込んで、[ターゲットのユーザーを設定]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/)する必要があります。セグメントのおおよその人数について現在の状態を示すスナップショットが自動的に表示されます。キャンペーンがターゲットとするチャンネルの詳細なオーディエンス統計は、フッターに表示されます。ユーザー群の何パーセントがターゲットになっているか、およびそのセグメントの生涯価値を確認するには、[**統計をさらに表示する**] を選択します。
 
 {% details リーチ可能なユーザーの合計数の指標がすべてのチャネルの合計と一致しないのはなぜですか? %}
 
@@ -215,7 +219,7 @@ iOS の場合、iPad デバイスにのみプッシュ通知を送信したり�
 そのためには、[**オーディエンスの概要**] で、このキャンペーンを「オプトインしたユーザーのみ」に送信するように選択します。このオプションを選択すると、オプトインしたユーザーのみがメールを受信し、Braze は、デフォルトでプッシュ通知が有効になっているユーザーにのみプッシュ通知を送ります。
 
 {% alert important %}
-この構成では、**Target Users**ステップに、オーディエンスを単一のチャネルに限定するフィルタ（例えば、`Push Enabled = True` や`Email Subscription = Opted-In` ）を含めない。
+この設定では、**ターゲットオーディエンス**ステップに、オーディエンスを1つのチャネルに制限するフィルターを含めないでください (`Push Enabled = True` や `Email Subscription = Opted-In` など)。
 {% endalert %}
 
 #### コンバージョンイベントを選択する
@@ -237,16 +241,3 @@ Braze では、キャンペーンを受信した後、ユーザーが指定の�
 
 次に、[[プッシュレポート]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_reporting/)] をチェックして、プッシュキャンペーンの結果にアクセスする方法を学んでください。プッシュ通知については、メッセージの送信数、配信数、バウンス数、開封数、直接開封数の統計を見ることができる。
 
-[1]: {% image_buster /assets/img_archive/new_campaign_push.png %}
-[2]: {% image_buster /assets/img_archive/push_1.png %}
-[3]: {% image_buster /assets/img_archive/push_2.png %}
-[4]: {% image_buster /assets/img_archive/schedule.png %}
-[5]: {% image_buster /assets/img_archive/confirmation_page.png %}
-[6]: {% image_buster /assets/img_archive/push-results-statistics.png %}
-[7]: {% image_buster /assets/img_archive/push_3.png %}
-[8]: https://www.braze.com/customers
-[9]: {% image_buster /assets/img_archive/push_recent_device.png %}
-[15]: {% image_buster /assets/img_archive/conversion_event_selection.png %}
-[18]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported
-[24]: {% image_buster /assets/img_archive/multi_channel_footer.png %}
-[25]: {% image_buster /assets/img_archive/target_segmenter.png %} 

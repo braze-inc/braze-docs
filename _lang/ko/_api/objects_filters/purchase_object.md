@@ -43,8 +43,8 @@ description: "이 참고 문서에서는 구매 개체의 다양한 구성 요�
 
 - [외부 사용자 ID]({{site.baseurl}}/api/basics/#user-ids)
 - [앱 식별자]({{site.baseurl}}/api/identifier_types/)
-- [ISO 4217 통화 코드 위키][20]
-- [ISO 8601 타임 코드 위키][22]
+- [ISO 4217 통화 코드 위키](http://en.wikipedia.org/wiki/ISO_4217)
+- [ISO 8601 타임 코드 위키](https://en.wikipedia.org/wiki/ISO_8601)
 
 ## 제품 ID 구매
 
@@ -177,5 +177,3 @@ Authorization: Bearer YOUR-REST-API-KEY
 세그먼트할 속성을 저장, 저장 및 추적하려면 해당 속성을 사용자 지정 속성으로 설정해야 합니다. [세그먼트 확장을]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/) 사용하면 해당 사용자 프로필의 수명 기간 동안 저장된 사용자 지정 이벤트 또는 구매 행동을 기반으로 사용자를 타겟팅할 수 있습니다.
 
 
-[20]: http://en.wikipedia.org/wiki/ISO_4217 "ISO 4217 통화 코드"
-[22]: https://en.wikipedia.org/wiki/ISO_8601 "ISO 8601 시간 코드"

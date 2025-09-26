@@ -1,7 +1,7 @@
 ---
 nav_title: 第三者責任
 article_title: 第三者責任
-page_order: 8
+page_order: 12
 page_type: reference
 description: "このリファレンス記事では、関連する第三者に関して Braze が有する賠償責任に関するポリシーを詳しく説明します。"
 

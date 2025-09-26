@@ -33,17 +33,17 @@ Cuando se activa el seguimiento de desinstalación para una aplicación, se envi
 
 ### Configuración
 
-Para configurar el seguimiento de desinstalación de tu aplicación iOS, utiliza un [método de utilidad][iOS docs]. Para tu aplicación Android, utiliza [`isUninstallTrackingPush()`][8]. Cuando Braze detecta una desinstalación, ya sea a partir del seguimiento de desinstalaciones o de la entrega normal de campañas push, registraremos la mejor hora estimada de la desinstalación en el usuario. Este tiempo se almacena en el perfil del usuario como un atributo estándar y puede utilizarse para definir un segmento de usuarios para las campañas de recuperación.
+Para configurar el seguimiento de desinstalación de tu aplicación iOS, utiliza un [método de utilidad]({{site.baseurl}}/developer_guide/analytics/tracking_uninstalls/?sdktab=swift). Para tu aplicación Android, utiliza [`isUninstallTrackingPush()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.push/-braze-notification-payload/is-uninstall-tracking-push.html). Cuando Braze detecta una desinstalación, ya sea a partir del seguimiento de desinstalaciones o de la entrega normal de campañas push, registraremos la mejor hora estimada de la desinstalación en el usuario. Este tiempo se almacena en el perfil del usuario como un atributo estándar y puede utilizarse para definir un segmento de usuarios para las campañas de recuperación.
 
 ## Filtrado de segmentos por desinstalaciones
 
-El filtro **Desinstalado** de la página **Segmentos** selecciona a los usuarios que han desinstalado tu aplicación dentro de un intervalo de tiempo. Como es difícil determinar la hora exacta de una desinstalación, recomendamos que los filtros de desinstalación tengan rangos de tiempo más amplios para asegurarnos de que todos los que se desinstalan entran en el segmento en algún momento.
+El filtro **Desinstalado** selecciona a los usuarios que han desinstalado tu aplicación dentro de un intervalo de tiempo. Como es difícil determinar la hora exacta de una desinstalación, recomendamos que los filtros de desinstalación tengan rangos de tiempo más amplios para asegurarnos de que todos los que se desinstalan entran en el segmento en algún momento.
 
-![Desinstala el segmento.][5]
+Las estadísticas diarias de desinstalaciones se encuentran en la página de **inicio**. 
 
-### Análisis a nivel de aplicación
+![Segmento de desinstalación.]({% image_buster /assets/img_archive/Uninstall_Segment.png %} "Segmento de desinstalación")
 
-Las estadísticas diarias de desinstalaciones se encuentran en la página de **inicio**. El gráfico puede desglosarse por aplicación y segmento, de forma similar a otras estadísticas que ofrece Braze. En la sección **Resumen del rendimiento**, seleccione el intervalo de fechas y, si lo desea, una aplicación. A continuación, desplázate hasta el gráfico **Rendimiento en el tiempo** y haz lo siguiente:
+El gráfico puede desglosarse por aplicación y segmento, de forma similar a otras estadísticas que ofrece Braze. En la sección **Resumen del rendimiento**, seleccione el intervalo de fechas y, si lo desea, una aplicación. A continuación, desplázate hasta el gráfico **Rendimiento en el tiempo** y haz lo siguiente:
 
 1. En el menú desplegable **Estadísticas para**, seleccione **Desinstalaciones**.
 2. En el desplegable **Desglose**, seleccione **Por segmento**.
@@ -53,15 +53,13 @@ Las estadísticas diarias de desinstalaciones se encuentran en la página de **i
 Las aplicaciones sin seguimiento de desinstalaciones activado informarán de las desinstalaciones de sólo un subconjunto de sus usuarios (aquellos a los que se dirigieron las notificaciones push), por lo que los totales diarios de desinstalaciones pueden ser superiores a los que se muestran.
 {% endalert %}
 
-![Desinstala la selección de gráficos.][2]
-
 ## Desinstalar el seguimiento de campañas
 
 El seguimiento de desinstalación de campañas muestra el número de usuarios que recibieron una campaña específica y posteriormente desinstalaron su aplicación en el periodo de tiempo seleccionado. Esta herramienta permite comprender cómo las campañas pueden estar fomentando comportamientos negativos no deseados de los usuarios y ayuda a medir la eficacia general de las campañas.
 
 Las estadísticas de desinstalación de campañas se encuentran en la página de **análisis de campañas** de una campaña específica. Para las campañas multicanal y multivariante, las desinstalaciones pueden desglosarse por canal y variante, respectivamente.
 
-![Desinstala a nivel de campaña.][6]
+![Desinstala a nivel de campaña.]({% image_buster /assets/img_archive/campaign_level_uninstall_tracking.png %})
 
 ### Cómo funciona
 
@@ -73,7 +71,7 @@ Braze rastrea las desinstalaciones observando cuándo los mensajes push enviados
 
 El seguimiento de las desinstalaciones está sujeto a las restricciones impuestas a esta información por FCM y APN. Braze sólo incrementa el recuento de desinstalaciones cuando FCM o APN nos indican que un usuario ha desinstalado, pero estos sistemas de terceros se reservan el derecho a notificarnos desinstalaciones en cualquier momento. En consecuencia, el seguimiento de las desinstalaciones debe utilizarse para detectar tendencias direccionales en lugar de estadísticas precisas.
 
-Para obtener más información sobre el uso del seguimiento de desinstalaciones, consulte la entrada de nuestro blog [Seguimiento de desinstalaciones: Una mirada de la industria a sus puntos fuertes y sus limitaciones][7].
+Para más información sobre el uso de Uninstall Tracking, consulta la entrada de nuestro blog [Uninstall Tracking: Una mirada de la industria a sus puntos fuertes y sus limitaciones](https://www.braze.com/blog/uninstall-tracking-an-industry-look-at-its-strengths-and-limitations/).
 
 ## Solución de problemas
 
@@ -81,15 +79,9 @@ Para obtener más información sobre el uso del seguimiento de desinstalaciones,
 
 Si observas un pico de desinstalaciones de aplicaciones, puede deberse a que Firebase Cloud Messaging (FCM) y el servicio de notificaciones push de Apple (APNS) revocan tokens antiguos con una frecuencia diferente.
 
-### ¿Por qué el número de desinstalaciones de aplicaciones es diferente del que figura en los APN?
+### ¿Por qué el número de desinstalaciones de aplicaciones es diferente del que aparece en los APN?
 
-La diferencia es esperable. Los APN empezarán a devolver un estado 410 para estos tokens en un calendario difuso.
+La diferencia es esperable. 
 
-[1]: {% image_buster /assets/img_archive/Uninstall_Tracking2.png %} "Casilla para desinstalar el seguimiento"
-[2]: {% image_buster /assets/img_archive/Uninstall_Tracking_App2.png %} "Desinstalar selección de gráficos"
-[4]: {% image_buster /assets/img_archive/User_Profile.png %} "Desinstalar atributo"
-[5]: {% image_buster /assets/img_archive/Uninstall_Segment.png %} "Desinstalar segmento"
-[6]: {% image_buster /assets/img_archive/campaign_level_uninstall_tracking.png %}
-[7]: https://www.braze.com/blog/uninstall-tracking-an-industry-look-at-its-strengths-and-limitations/
-[iOS docs]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/uninstall_tracking/
-[8]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.push/-braze-notification-payload/is-uninstall-tracking-push.html
+Apple utiliza una programación aleatoria para retrasar la notificación cuando un token de notificaciones push deja de ser válido, lo que significa que, incluso después de que un usuario desinstale una aplicación, los APN pueden seguir devolviendo respuestas satisfactorias a las notificaciones push durante un periodo de tiempo. Este retraso es intencionado y está diseñado para proteger la privacidad del usuario. No se informará de ningún rebote o fallo hasta que APNs devuelva un estado `410` para un token no válido.
+

@@ -1,5 +1,5 @@
 ---
-nav_title: Message Building by Channel
+nav_title: Message building by channel
 article_title: Message Building by Channel
 page_order: 5
 layout: dev_guide

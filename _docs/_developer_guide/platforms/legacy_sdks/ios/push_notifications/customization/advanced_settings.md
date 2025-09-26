@@ -1,5 +1,5 @@
 ---
-nav_title: Advanced Settings
+nav_title: Advanced settings
 article_title: Advanced Push Settings
 platform: iOS
 page_order: 5

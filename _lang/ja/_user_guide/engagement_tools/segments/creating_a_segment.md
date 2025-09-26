@@ -1,7 +1,7 @@
 ---
 nav_title: セグメントの作成
 article_title: セグメントの作成
-page_order: 1
+page_order: 0
 page_type: tutorial
 description: "この記事では、Braze を使用してセグメントを設定・作成する手順について説明します。"
 tool: Segments
@@ -25,7 +25,7 @@ search_rank: 3
 - セグメントに[チーム]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/)を追加する。
 - さらに整理するために、セグメントに[タグを]({{site.baseurl}}/user_guide/administrative/app_settings/tags/)追加する。
 
-![セグメントに「離脱ユーザー」という名前を付け、セグメントの説明に「過去 14 日以内に非アクティブだったユーザーをターゲットとする主な離脱ユーザーセグメント」と書き込んだセグメントの作成モーダル。次の 2 つのボタンがあります: キャンセルしてセグメントを作成する。][2]{: style="max-width:70%;"}
+![セグメントに「離脱ユーザー」という名前を付け、セグメントの説明に「過去 14 日以内に非アクティブだったユーザーをターゲットとする主な離脱ユーザーセグメント」と書き込んだセグメントの作成モーダル。次の 2 つのボタンがあります: キャンセルしてセグメントを作成する。]({% image_buster /assets/img_archive/segment_app_selection.png %}){: style="max-width:80%;"}
 
 ## ステップ 3: アプリまたはプラットフォームを選択する
 
@@ -33,7 +33,7 @@ search_rank: 3
 
 例えば、アプリ内メッセージを iOS デバイスのみに送信したい場合は、iOS アプリを選択します。これにより、iOS デバイスと Android デバイスの両方を使用するユーザーは、iOS デバイスのみでメッセージを受信します。特定のアプリのリストで、[**どのアプリも使用していないユーザー**] オプションを選択すると、セッションもアプリデータもないユーザーを含められます (通常はユーザーインポートまたは REST API で作成)。
 
-![[使用したアプリ] セクションで [すべてのアプリのユーザー] オプションが選択されている [セグメント詳細] パネル][5]{: style="max-width:70%;"}
+![[使用したアプリ] セクションで [すべてのアプリのユーザー] オプションが選択されている [セグメント詳細] パネル]({% image_buster /assets/img_archive/Segment2.png %}){: style="max-width:80%;"}
 
 ## ステップ 4: セグメントにフィルターを追加する
 
@@ -47,11 +47,9 @@ Braze は、アプリを初めて使用するまでユーザーのプロファ�
 
 フィルターはフィルター・グループにまとめられている。すべてのフィルターは、最低1つのフィルターを持つフィルターグループの一部でなければならない。セグメントは複数のフィルターグループを持つことができる。1 つ追加するには、[**フィルターグループを追加**] を選択します。フィルターグループ名の横にカーソルを置くと表示されるアイコンを選択して、フィルターグループ名を編集する。
 
-![名前の横に編集アイコンがあるフィルターグループ][14]{: style="max-width:70%;"}
+![名前の横に編集アイコンがあるフィルターグループ]({% image_buster /assets/img_archive/edit_filter_group_name.png %})
 
-各フィルターの横にあるアイコンを選択して、フィルターエディターを折りたたんだり、フィルターを複製したり削除したりします。フィルターを複製した後、各ドロップダウン内でその値を調整することができます。
-
-各フィルターグループ内のアイコンを使って、そのフィルターグループとその中のフィルターを複製したり、セグメントからそのフィルターグループを削除することもできる。
+各フィルターの横にあるアイコンを選択して、フィルターエディターを折りたたんだり、個々のフィルターを複製したりします。フィルターを複製した後、各ドロップダウン内でその値を調整することができます。
 
 #### ANDとORを使ったセグメンテーション・ロジック
 
@@ -73,7 +71,7 @@ Braze は、アプリを初めて使用するまでユーザーのプロファ�
 Braze は、アプリを初めて使用するまでユーザーのプロファイルを生成しないため、アプリをまだ開いていないユーザーをターゲットにすることはできません。
 {% endalert %}
 
-![AND 演算子のあるセグメント化フィルターグループ][9]{: style="max-width:70%;"}
+![AND 演算子のあるセグメント化フィルターグループ]({% image_buster /assets/img_archive/segmenter_filter_groups.png %})
 
 {% alert important %}
 すでに**セグメントメンバーシップ**フィルターを使用しているセグメントは、さらに他のセグメントに含めたり、ネストしたりすることはできません。これにより、セグメント A にセグメント B が含まれ、セグメント B が再びセグメント A を含めるというサイクルを防ぐことができます。もしそうなれば、セグメントは自分自身を参照し続けることになり、誰が実際にそのセグメントに属しているのかを計算することができなくなります。
@@ -91,13 +89,13 @@ Braze は、アプリを初めて使用するまでユーザーのプロファ�
 
 除外されたユーザーは、セグメントの_合計到達可能ユーザー_統計の一部としてカウントされない。
 
-![2つのフィルターを持つ除外グループ。][12]{: style="max-width:70%;"}
+![2 つのフィルターを持つ除外グループ。]({% image_buster /assets/img_archive/segmenter_exclusion_groups.png %})
 
 #### セグメントのテスト
 
 セグメントにアプリとフィルターを追加したら、ユーザーを検索してセグメント条件と一致するかどうかを確認することで、セグメントが期待どおりに設定されているかどうかをテストできます。そのためには、**User Lookup**セクションでユーザーの`external_id` または`braze_id` を検索する。
 
-![検索フィールドを備えたユーザー検索セクション。][6]{: style="max-width:80%;"}
+![検索フィールドを備えたユーザー検索セクション。]({% image_buster /assets/img_archive/user_lookup.png %})
 
 ユーザールックアップ検索は次の場合に利用できます。
 - セグメントを作成する
@@ -106,11 +104,11 @@ Braze は、アプリを初めて使用するまでユーザーのプロファ�
 
 ユーザーがセグメント、フィルター、アプリの条件にマッチすると、アラートにその旨が表示される。
 
-![「user007」のユーザー検索により、「user007 はすべてのセグメント、フィルター、およびアプリケーションに一致しました」というアラートがトリガーされます。][7]{: style=" max-width:80%;"}
+![「testuser」のユーザー検索により、「testuser matches all of the segments, filters, and apps」というアラートがトリガーされる。]({% image_buster /assets/img_archive/user_lookup_match.png %})
 
 ユーザーがセグメント、フィルター、またはアプリの条件の一部またはすべてに一致しない場合、トラブルシューティングのために欠落している条件がリストされます。
 
-![「user1234」のユーザー検索により、「user1234 は次のターゲット基準に一致しません」というアラートが表示され、一致しない 2 つの条件が表示されます。1 つは在職期間が 1 年を超えていること、もう 1 つは今日が記念日であることです。][8]{: style=" max-width:80%;"}
+![「test1 does not match the following targeting criteria:」というアラートと欠落している条件が表示されているユーザー検索。]({% image_buster /assets/img_archive/user_lookup_nomatch.png %})
 
 #### シングルユーザーセグメント
 
@@ -150,7 +148,7 @@ Braze には、ユーザー ID またはメールアドレスで特定のユー�
 
 各ユーザーに1回だけプッシュ通知を送るように指定できる。[メッセージを作成する]({{ssite.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message#step-4-compose-your-push-message)際、「**追加設定**」で「**ユーザーの最後に使用したデバイスにのみ送信する**」を選択する。
 
-![][13]{: style="max-width:60%;"}
+![[ユーザーが最後に使用したデバイスにのみ送信する] チェックボックスが表示されている [追加設定]。]({% image_buster /assets/img_archive/send_to_last_device.png %}){: style="max-width:60%;"}
 
 ### 考慮事項
 
@@ -160,15 +158,3 @@ Braze には、ユーザー ID またはメールアドレスで特定のユー�
     - あるユーザーは、送信時にはターゲット・セグメントに入っていたかもしれないが、その後、そのユーザーのデバイスに関連する行動によって、ターゲット・セグメントに含まれなくなる可能性がある。その結果、現在フィルター条件にマッチしていないにもかかわらず、ユーザーがキャンペーンやキャンバスを受け取ってしまう可能性がある。<br><br>たとえば、現在 OS 13.0 を使っているユーザーが、最新アプリのバージョンが OS 10.0 のユーザー向けのメッセージを受け取る可能性があります。この場合、ユーザーはメッセージの送信時に OS 10.0 を使用しており、その後 OS 13.0 にアップグレードしたためです。<br><br> 同様に、ユーザーが後に異なるアプリバージョンのデバイスを使用した場合、そのユーザーのプロファイルは新しい最新アプリバージョンで更新されます。すると、メッセージの送信時には適格であったにも関わらず、そのメッセージを受け取る適格性がなかったように見えるかもしれません。
 
 
-[1]: {% image_buster /assets/img_archive/Segment1.png %}
-[2]: {% image_buster /assets/img_archive/Segment2.png %}
-[3]: {% image_buster /assets/img_archive/segment_step4.png %}
-[5]: {% image_buster /assets/img_archive/segment_app_selection.png %}
-[6]: {% image_buster /assets/img_archive/user_lookup.png %}
-[7]: {% image_buster /assets/img_archive/user_lookup_match.png %}
-[8]: {% image_buster /assets/img_archive/user_lookup_nomatch.png %}
-[9]: {% image_buster /assets/img_archive/segmenter_filter_groups.png %}
-[11]: {% image_buster /assets/img_archive/segmenter_and_or.png %}
-[12]: {% image_buster /assets/img_archive/segmenter_exclusion_groups.png %}
-[13]: {% image_buster /assets/img_archive/send_to_last_device.png %}
-[14]: {% image_buster /assets/img_archive/edit_filter_group_name.png %}

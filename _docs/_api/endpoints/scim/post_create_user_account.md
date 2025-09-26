@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Create New Dashboard User Account"
+nav_title: "POST: Create new dashboard user account"
 article_title: "POST: Create New Dashboard User Account"
 alias: /post_create_user_account/
 search_tag: Endpoint

@@ -11,9 +11,9 @@ description: "Esta página incluye a todos los socios de Braze. Utilízala para 
 
 valid_partner_list:
 - name: Jampp
-  url: /docs/partners/message_orchestration/additional_channels/retargeting/jampp/
+  url: /docs/partners/jampp/
 - name: Remerge
-  url: /docs/partners/message_orchestration/additional_channels/retargeting/remerge/
+  url: /docs/partners/remerge/
 - name: Facebook
   url: /docs/partners/message_orchestration/additional_channels/retargeting/facebook/
 - name: PassKit
@@ -24,8 +24,6 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/additional_channels/direct_mail/lob/
 - name: Messenger
   url: /docs/partners/message_orchestration/additional_channels/instant_chat/messenger/
-- name: Rokt Calendar
-  url: /docs/partners/message_orchestration/additional_channels/calendar/rokt_calendar/
 - name: Adjust
   url: /docs/partners/message_orchestration/attribution/adjust/
 - name: AppsFlyer
@@ -93,7 +91,7 @@ valid_partner_list:
 - name: Segment
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/segment/
 - name: mParticle
-  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/mParticle/mparticle_for_currents/
+  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/mparticle/
 - name: Tealium
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/tealium/
 - name: RudderStack
@@ -105,11 +103,11 @@ valid_partner_list:
 - name: AWS Personalize
   url: /docs/partners/message_personalization/dynamic_content/amazon_personalize/
 - name: Certona
-  url: /docs/partners/message_personalization/dynamic_content/certona/
+  url: /docs/partners/certona/
 - name: Playable
   url: /docs/partners/message_personalization/dynamic_content/playable/
 - name: Movable Ink
-  url: /docs/partners/message_personalization/dynamic_content/movable_ink/
+  url: /docs/partners/message_personalization/dynamic_content/visual_and_interactive_content/movable_ink
 - name: Liftigniter
   url: /docs/partners/message_personalization/dynamic_content/liftigniter/
 - name: Transifex
@@ -120,8 +118,8 @@ valid_partner_list:
   url: /docs/partners/message_personalization/location/accuweather/
 - name: Foursquare
   url: /docs/partners/message_personalization/location/foursquare/
-- name: Gimbal
-  url: /docs/partners/message_personalization/location/gimbal/
+- name: Infillion
+  url: /docs/partners/message_personalization/location/infillion/
 - name: Radar
   url: /docs/partners/message_personalization/location/radar/
 - name: Bluedot
@@ -153,13 +151,13 @@ valid_partner_list:
 - name: LINE
   url: /docs/partners/message_orchestration/additional_channels/messaging/line/  
 - name: Judo
-  url: /docs/partners/message_personalization/dynamic_content/judo/
+  url: /docs/partners/message_personalization/dynamic_content/visual_and_interactive_content/judo/
 - name: Shopify
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/
 - name: Adobe
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/adobe/
 - name: Worthy
-  url: /docs/partners/message_personalization/dynamic_content/worthy/
+  url: /docs/partners/message_personalization/dynamic_content/visual_and_interactive_content/worthy/
 - name: Yotpo
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/yotpo/
 - name: Zeotap
@@ -175,13 +173,11 @@ valid_partner_list:
 - name: Survicate
   url: /docs/partners/message_orchestration/channel_extensions/surveys/survicate/
 - name: Wyng
-  url: /docs/partners/message_personalization/dynamic_content/wyng/
-- name: OfferFit
-  url: /docs/partners/message_personalization/dynamic_content/offerfit/
+  url: /docs/partners/message_personalization/dynamic_content/visual_and_interactive_content/wyng/
 - name: Peak
   url: /docs/partners/message_personalization/dynamic_content/peak/
 - name: Personalize.AI
-  url: /docs/partners/message_personalization/dynamic_content/personalize/
+  url: /docs/partners/message_personalization/dynamic_content/personalized_recommendations/personalize
 - name: Knak
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/knak/
 - name: WSC Sports
@@ -195,7 +191,7 @@ valid_partner_list:
 - name: Heap
   url: /docs/partners/data_and_infrastructure_agility/cohort_import/heap/  
 - name: Quikly
-  url: /docs/partners/message_orchestration/additional_channels/retargeting/quikly/
+  url: /docs/partners/message_orchestration/retargeting/quikly/
 - name: actionable.me
   url: /docs/partners/data_and_infrastructure_agility/analytics/actionableme/
 - name: IAM Studio (NNT)
@@ -207,11 +203,9 @@ valid_partner_list:
 - name: DataGrail
   url: /docs/partners/data_and_infrastructure_agility/data_privacy/datagrail/
 - name: Dynamic Yield
-  url: /docs/partners/message_personalization/dynamic_content/dynamic_yield/
+  url: /docs/partners/message_personalization/dynamic_content/personalization_engines/dynamic_yield/
 - name: Octolis
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/octolis/
-- name: Ada
-  url: /docs/partners/message_orchestration/channel_extensions/surveys/ada/
 - name: ThoughtSpot
   url: /docs/partners/data_and_infrastructure_agility/analytics/thoughtspot/
 - name: Wunderkind
@@ -221,7 +215,7 @@ valid_partner_list:
 - name: Tellius
   url: /docs/partners/data_and_infrastructure_agility/analytics/tellius/
 - name: Sheetlabs
-  url: /docs/partners/message_personalization/dynamic_content/sheetlabs/
+  url: /docs/partners/message_personalization/dynamic_content/personalization_engines/sheetlabs/
 - name: Contentsquare
   url: /docs/partners/data_and_infrastructure_agility/analytics/contentsquare/
 - name: Sisu
@@ -248,8 +242,6 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/analytics/merkury/
 - name: WhatsApp
   url: /docs/user_guide/message_building_by_channel/whatsapp/
-- name: Fresh Relevance
-  url: /docs/partners/message_personalization/dynamic_content/fresh_relevance/
 - name: Sendbird
   url: /docs/partners/message_orchestration/additional_channels/messaging/sendbird/
 - name: Smartling
@@ -265,7 +257,7 @@ valid_partner_list:
 - name: Tangerine
   url: /docs/partners/message_personalization/location/tangerine/
 - name: Stylitics
-  url: /docs/partners/message_personalization/dynamic_content/stylitics/
+  url: /docs/partners/message_personalization/dynamic_content/visual_and_interactive_content/stylitics
 - name: Redpoint
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/redpoint/  
 - name: Simon Data
@@ -293,17 +285,17 @@ valid_partner_list:
 - name: Alpaco
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/alpaco/
 - name: NiftyImages
-  url: /docs/partners/message_personalization/dynamic_content/niftyimages
+  url: /docs/partners/message_personalization/dynamic_content/visual_and_interactive_content/niftyimages
 - name: MetaRouter
   url: /docs/partners/data_and_infrastructure_agility/workflow_automation/metarouter/
 - name: Treasure Data
-  url: /docs/partners/data_and_infrastructure_agility/cohort_import/treasuredata/
+  url: /docs/partners/treasure_data/
 - name: Himno del futuro
-  url: /docs/partners/message_personalization/dynamic_content/future_anthem
+  url: /docs/partners/future_anthem
 - name: LiveRamp
-  url: /docs/partners/data_and_infrastructure_agility/advertising/liveramp/
+  url: /docs/partners/liveramp/
 - name: Monstruo del buzón de entrada
-  url: /docs/partners/data_and_infrastructure_agility/analytics/inbox_monster/
+  url: /docs/partners/inbox_monster/
 - name: mypostcard
   url: /docs/partners/message_orchestration/additional_channels/direct_mail/mypostcard/
 - name: VISTO
@@ -316,4 +308,48 @@ valid_partner_list:
   url: /docs/partners/message_personalization/dynamic_content/contentful/
 - name: Supera a
   url: /docs/partners/data_and_infrastructure_agility/leads_capture/outgrow/
+- name: Justuno
+  url: /docs/partners/data_and_infrastructure_agility/leads_capture/justuno/
+- name: Constructor
+  url: /docs/partners/message_personalization/dynamic_content/constructor/
+- name: Amor por correo electrónico
+  url: /docs/partners/message_orchestration/channel_extensions/email_templates/email_love/
+- name: Adikteev
+  url: /docs/partners/data_and_infrastructure_agility/analytics/adikteev/
+- name: Criteo
+  url: /docs/partners/canvas_steps/criteo_audience_sync/
+- name: Databricks
+  url: /docs/user_guide/data/cloud_ingestion/integrations/
+- name: Datadog
+  url: /docs/partners/data_and_infrastructure_agility/analytics/datadog/
+- name: Front
+  url: /docs/partners/message_orchestration/additional_channels/instant_chat/front/
+- name: Avisa a
+  url: /docs/partners/message_personalization/dynamic_content/notify/
+- name: Odicci
+  url: /docs/partners/message_personalization/dynamic_content/odicc/
+- name: Pinterest
+  url: /docs/partners/canvas_steps/pinterest_audience_sync/
+- name: Snapchat
+  url: /docs/partners/canvas_steps/snapchat_audience_sync/
+- name: TikTok
+  url: /docs/partners/canvas_steps/tiktok_audience_sync/
+- name: Trustpilot
+  url: /docs/partners/trustpilot/
+- name: VWO
+  url: /docs/partners/data_and_infrastructure_agility/ab_testing/vwo/
+- name: SesiónM
+  url: /docs/partners/message_orchestration/channel_extensions/loyalty/sessionm/
+- name: Tapcart
+  url: /docs/partners/message_orchestration/channel_extensions/ecommerce/tapcart/
+- name: Mencióname
+  url: /docs/partners/mention_me/
+- name: Sólo palabras
+  url: /docs/partners/just_words/
+- name: Ojo de Águila
+  url: /docs/partners/eagle_eye/
+- name: Eppo
+  url: /docs/partners/eppo/
+- name: Raya
+  url: /docs/partners/stripe/
 ---

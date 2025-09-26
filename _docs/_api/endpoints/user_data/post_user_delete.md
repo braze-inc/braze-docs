@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Delete Users"
+nav_title: "POST: Delete users"
 article_title: "POST: Delete Users"
 search_tag: Endpoint
 page_order: 5

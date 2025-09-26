@@ -88,7 +88,7 @@ Selecciona **\+ Añadir nuevo encabezado** para cada uno de los siguientes encab
 {: start="4" }
 4\. Selecciona **Guardar plantilla**.
 
-![Una plantilla webhook rellenada para crear un cliente potencial.][6]{: style="max-width:70%;"}
+![Una plantilla webhook rellenada para crear un cliente potencial.]({% image_buster /assets/img/b2b/create_lead_webhook.png %}){: style="max-width:70%;"}
  
 ## Actualizar un cliente potencial en Salesforce Sales Cloud {#updating-lead}
 
@@ -141,7 +141,7 @@ Selecciona **\+ Añadir nuevo encabezado** para cada uno de los siguientes encab
 {: start="4"}
 4\. Selecciona **Guardar plantilla**.
 
-![Una plantilla webhook rellenada para actualizar un cliente potencial.][7]{: style="max-width:70%;"}
+![Una plantilla webhook rellenada para actualizar un cliente potencial.]({% image_buster /assets/img/b2b/update_lead_webhook.png %}){: style="max-width:70%;"}
 
 ## Utilizar estos webhooks en un flujo de trabajo operativo
 
@@ -154,7 +154,7 @@ Puedes añadir rápidamente tus plantillas a tus flujos de trabajo operativos en
 
 Para crear un cliente potencial en Salesforce cuando un usuario proporcione su dirección de correo electrónico, puedes crear una campaña que utilice la plantilla de webhook "Actualizar cliente potencial" y se desencadene cuando un usuario añada su dirección de correo electrónico (por ejemplo, cuando rellene un formulario Web).
 
-![Paso 2 de la creación de una campaña basada en acciones y con la acción desencadenante "Añadir una dirección de correo electrónico".][1]{: style="max-width:70%;"}
+![Paso 2 para crear una campaña basada en una acción y cuya acción desencadenante sea "Añadir una dirección de correo electrónico".]({% image_buster /assets/img/b2b/salesforce_create_campaign.png %}){: style="max-width:70%;"}
 
 ### Lead scoring Canvas para superar el umbral de Lead Cualificado en Marketing (MQL) {#lead-scoring}
 
@@ -167,21 +167,21 @@ Añade un paso posterior a tu actualización de usuarios para comprobar si un us
 1. Añade un paso de **Ruta de audiencia** con dos grupos: "Umbral MQL" y "Todos los demás".
 2. En el grupo "Umbral de MQL", busca a los usuarios que actualmente no tengan un estado de "MQL" (por ejemplo, `lead_stage` es igual a "Lead"), pero que tengan una puntuación de lead superior al umbral que hayas definido (por ejemplo, `lead_score` superior a 50). Si es así, avanzan al siguiente paso, si no, salen.
 
-![El grupo de la ruta de audiencia "Umbral MQL" con filtros para un `lead_stage` igual a "Lead" y un `lead_score` superior a "50".][2]{: style="max-width:70%;"}
+![El grupo de la ruta de audiencia "Umbral MQL" con filtros para un `lead_stage` igual a "Lead" y un `lead_score` superior a "50".]({% image_buster /assets/img/b2b/salesforce_check_mql.png %}){: style="max-width:70%;"}
 
 {: start="3" }
 3\. Añade un paso de **Actualización de Usuario** que actualice el valor del atributo `lead_stage` del usuario a "MQL".
 
-![El paso de actualización de usuario "Actualizar a MQL" que actualiza el atributo `lead_stage` para que tenga el valor "MQL".][3]{: style="max-width:70%;"}
+![El paso de actualización de usuario "Actualizar a MQL" que actualiza el atributo `lead_stage` para que tenga el valor "MQL".]({% image_buster /assets/img/b2b/salesforce_update_mql.png %}){: style="max-width:70%;"}
 
 {: start="4" }
 4\. Añade un paso webhook que actualice Salesforce con la nueva etapa MQL.
 
-![El paso webhook "Actualizar Salesforce" con los detalles completados.][4]{: style="max-width:70%;"}
+![El paso webhook "Actualizar Salesforce" con los detalles completados.]({% image_buster /assets/img/b2b/salesforce_webhook.png %}){: style="max-width:70%;"}
 
 ¡Ahora tu flujo Canvas actualizará a los usuarios que hayan cruzado tu umbral de MQL!
 
-![Un paso en Canvas de actualización de usuarios que comprueba si un usuario supera el umbral MQL y, si lo supera, actualiza Salesforce.][5]{: style="max-width:50%;"}
+![Un paso de actualización de usuarios en Canvas que comprueba si un usuario supera el umbral MQL y, si lo supera, actualiza Salesforce.]({% image_buster /assets/img/b2b/salesforce_canvas.png %}){: style="max-width:50%;"}
 
 ## Solución de problemas
 
@@ -189,13 +189,5 @@ Estos flujos de trabajo tienen una capacidad de depuración limitada dentro de S
 
 Por ejemplo, un error causado por una URL no válida utilizada para la recuperación del token oAuth se mostraría como `https://[insert_instance_name].my.salesforce.com/services/oauth2/token is not a valid URL`.
 
-![Un cuerpo de respuesta de error que indica que la URL no es una URL válida.][8]
+![Un cuerpo de respuesta de error que indica que la URL no es una URL válida.]({% image_buster /assets/img/b2b/error_message_invalid_url.png %})
 
-[1]: {% image_buster /assets/img/b2b/salesforce_create_campaign.png %}
-[2]: {% image_buster /assets/img/b2b/salesforce_check_mql.png %}
-[3]: {% image_buster /assets/img/b2b/salesforce_update_mql.png %}
-[4]: {% image_buster /assets/img/b2b/salesforce_webhook.png %}
-[5]: {% image_buster /assets/img/b2b/salesforce_canvas.png %}
-[6]: {% image_buster /assets/img/b2b/create_lead_webhook.png %}
-[7]: {% image_buster /assets/img/b2b/update_lead_webhook.png %}
-[8]: {% image_buster /assets/img/b2b/error_message_invalid_url.png %}

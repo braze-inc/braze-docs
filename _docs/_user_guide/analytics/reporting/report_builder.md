@@ -25,12 +25,14 @@ page_order: 6.2
 
 1. Go to **Analytics** > **Report Builder (New)**.
 2. Select **Create New Report**.
-3. In the **Rows** dropdown, select one of the following to create a report:
+3. In the **Rows** dropdown, select what you'd like to report on:
     - Campaigns
     - Canvases
     - Campaigns and Canvases
     - Channels
     - Tags
+
+    Note that your **Rows** selection will impact [the metrics that you can view](#metrics-availability). For example, you can view multivariate metrics only if you report on **Canvases**, or **Campaigns** with a **Variant** drilldown. You cannot view those metrics when reporting on **Campaigns and Canvases**, even if those campaigns and Canvases have multivariate tests. 
 
 ![The "Rows and columns" section with fields to select the rows and groupings for your report.]({% image_buster /assets/img/report_builder_2/rows_and_columns.png %}){: style="width:90%;"}
 
@@ -82,7 +84,7 @@ If you want to report on Canvas variants or steps, select **Canvases** for rows 
 | --- | --- |
 | Conversion metrics | Available for Campaigns, Canvases, Campaigns and Canvases. |
 | Entries | Available for Campaigns, Canvases, Campaigns and Canvases, Tags. |
-| Last Sent Date | Available for Campaigns, Canvases, Campaigns and Canvases. |
+| Last Sent Date | Available for Campaigns, Canvases, Campaigns and Canvases. Only displays for scheduled campaigns—does not populate for action-based or API-triggered campaigns. |
 | Sends | Available for each relevant channel. |
 | Messages Sent | Available for Campaigns, Canvases, Campaigns and Canvases, Tags. |
 | Subject line | Available for email Campaigns with **Variant** drilldown, Canvases, and Canvases with **Variant** drilldown. |
@@ -111,7 +113,20 @@ To create a line chart, select **Date** as a drilldown option when configuring t
 
 To download an image of the report chart, select the dotted icon then choose a download option.
 
-![A menu with download options for different file formats.]({% image_buster /assets/img/report_builder_2/download_options.png %}){: style="max-width:30%;"}
+![A menu with download options for different file formats.]({% image_buster /assets/img/report_builder_2/download_options.png %}){: style="max-width:70%;"}
+
+## Sharing a report
+
+You can share a dashboard link to the report by selecting **Share** and one of these options:
+- **Share a link:** Copy and share the link.
+
+!["Share a link" dropdown with a link to the report.]({% image_buster /assets/img/report_builder_2/share_this_report.png %}){: style="max-width:70%;"}
+
+- **Send or schedule an email:** Send an email immediately or at a designated time that contains a download link that expires after one hour. You can select recipients from the dashboard users listed in the **Email Recipients** dropdown or enter any other email address.
+
+!["Schedule an email" window with fields to choose how the report is formatted, who should receive it, and when it should send.]({% image_buster /assets/img/report_builder_2/schedule_an_email.png %}){: style="max-width:70%;"}
+
+- **Download CSV:** Download a CSV of the report.
 
 ## Adding a report to a dashboard
 

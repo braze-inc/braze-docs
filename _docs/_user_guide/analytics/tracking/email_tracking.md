@@ -1,5 +1,5 @@
 ---
-nav_title: Email Open Pixel and Click Tracking
+nav_title: Email open pixel and click tracking
 article_title: Email Open Pixel and Click Tracking
 page_order: 1
 page_type: reference

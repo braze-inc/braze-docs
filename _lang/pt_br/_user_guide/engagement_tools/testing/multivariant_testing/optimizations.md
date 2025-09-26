@@ -8,7 +8,7 @@ description: "Aprenda a usar Variante Vencedora ou Variante Personalizada ao cri
 
 # Otimização de testes A/B com Variante Vencedora ou Variantes Personalizadas
 
-Ao [criar um teste A/B][1] para campanhas de e-mail, push, webhook, SMS e WhatsApp programadas para enviar uma vez, você pode selecionar uma otimização. Existem duas opções de otimização: **Variante Vencedora** e **Variante Personalizada**.
+Ao [criar um teste A/B]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/) para campanhas de e-mail, push, webhook, SMS e WhatsApp programadas para enviar uma vez, você pode selecionar uma otimização. Existem duas opções de otimização: **Variante Vencedora** e **Variante Personalizada**.
 
 ![Opções de otimização listadas na seção de Testes A/B ao escolher seu público-alvo. Três opções estão listadas: Sem otimização, Variante vencedora e Variante personalizada. A variante personalizada está selecionada.]({% image_buster /assets/img_archive/ab_personalized_variant.png %})
 
@@ -50,7 +50,5 @@ Para determinar a melhor variante para cada usuário, a Braze enviará um teste 
 
 ## Análise de dados
 
-Para saber mais sobre os resultados do seu teste A/B com uma otimização, consulte [análise de dados de teste multivariante e A/B][2].
+Para saber mais sobre os resultados do seu teste A/B com uma otimização, consulte [análise de dados de teste multivariante e A/B]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/multivariate_analytics/).
 
-[1]: {{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/
-[2]: {{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/multivariate_analytics/

@@ -1,5 +1,5 @@
 ---
-nav_title: Editing Your Campaign After Launch
+nav_title: Editing your campaign after launch
 article_title: Editing Your Campaign After Launch
 page_order: 1
 tool: Campaigns

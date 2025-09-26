@@ -70,7 +70,7 @@ Le code Liquid du [centre de préférences](#email-preference-center) peut être
 
 ### Vérification de l’état de l’abonnement aux e-mails
 
-![Profil utilisateur de John Doe avec son état d'abonnement aux e-mails défini sur Abonné.][1]{: style="float:right;max-width:35%;margin-left:15px;"}
+![Profil utilisateur de John Doe dont l'état de l'abonnement à l'e-mail est réglé sur Abonné.]({% image_buster /assets/img/push_example.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
 Il existe deux façons de vérifier l'état de l'abonnement aux e-mails d'un utilisateur avec Braze :
 
@@ -96,13 +96,13 @@ Utilisez les [endpoints Groupe d'abonnement]({{site.baseurl}}/api/endpoints/subs
 
 Tous les groupes d’abonnement sont automatiquement ajoutés à votre centre de préférences.
 
-![Champs pour créer un groupe d'abonnement.][2]{: style="max-width:75%"}
+![Champs permettant de créer un groupe d'abonnement.]({% image_buster /assets/img/sub_group_create.png %}){: style="max-width:75%"}
 
 ### Segmentation à l'aide d'un groupe d'abonnement
 
 Lors de la création de vos segments, définissez le nom du groupe d’abonnement comme filtre. Cela confirmera que les utilisateurs qui ont opté pour votre groupe recevront vos e-mails. C’est très pratique pour les bulletins d’information mensuels, les bons de réduction, les niveaux d’adhésion et bien plus encore.
 
-![Exemple de ciblage des utilisateurs du segment "Utilisateurs déchus" avec le filtre pour les utilisateurs du groupe d'abonnement "Alertes stables".][3]{: style="max-width:90%"}
+![Exemple de ciblage des utilisateurs du segment "Utilisateurs déchus" à l'aide du filtre pour les utilisateurs du groupe d'abonnement "Alertes stables".]({% image_buster /assets/img/segment_sub_group.png %}){: style="max-width:90%"}
 
 ### Archivage des groupes d'abonnement
 
@@ -119,7 +119,7 @@ Braze ne traitera aucun changement d’état pour les utilisateurs des groupes a
 
 Vous pouvez faire référence au graphique de **la série chronologique du groupe d'** abonnement dans la page **Groupes d'abonnement** pour visualiser la taille du groupe d'abonnement en fonction du nombre d'utilisateurs sur une période donnée. Ces tailles de groupes d'abonnement sont également cohérentes avec d'autres aspects de Braze, tels que le calcul de la taille des segments.
 
-![Un exemple de graphique de "groupe d'abonnement" daté du 2 au 11 décembre. Le graphique montre une augmentation d'environ 10 millions du nombre d'utilisateurs entre le 6e et le 7e jour.][4]
+![Un exemple de graphique de "groupe d'abonnement" daté du 2 au 11 décembre. Le graphique montre une augmentation d'environ 10 millions d'utilisateurs entre le 6e et le 7e jour.]({% image_buster /assets/img_archive/subscription_group_graph.png %})
 
 #### Visualisation des groupes d'abonnement dans l'analyse/analytique des campagnes
 
@@ -128,7 +128,7 @@ Vous pouvez voir le nombre d’utilisateurs qui ont modifié leur état d’abon
 1. Sur la page **Analyse/analytique de** votre campagne, faites défiler la page jusqu'à la section **Performances des messages e-mail.** 
 2. Sélectionnez la flèche située sous les **groupes d'abonnement** pour afficher le nombre total de changements d'état, tels qu'ils ont été soumis par vos clients.
 
-![La page "Performance des messages e-mail" affiche le nombre total de changements d'état soumis par les clients.][5]
+![La page "Performance des messages e-mail" affiche le nombre total de changements d'état soumis par les clients.]({% image_buster /assets/img/campaign_analytics_sub_groups.png %})
 
 ## Centre de préférence des e-mails
 
@@ -163,7 +163,7 @@ Pour créer une page d'atterrissage personnalisée vers laquelle les utilisateur
 
 Nous vous recommandons d'inclure un lien de réinscription (tel que {% raw %}`{{${set_user_to_subscribed_url}}}`{% endraw %}) sur la page de renvoi afin que les utilisateurs aient la possibilité de se réinscrire au cas où ils se seraient désinscrits par accident.
 
-![E-mail de désabonnement personnalisé dans le panneau Page de désabonnement personnalisée.][6]
+![E-mail de désabonnement personnalisé dans le panneau Page de désabonnement personnalisée.]({% image_buster /assets/img/custom_unsubscribe.png %})
 
 ### Créer une page d'abonnement personnalisée
 
@@ -197,13 +197,5 @@ Les filtres "Statut de l'abonnement par e-mail" et "Statut de l'abonnement par P
 
 Cela peut être utile si vous souhaitez cibler des utilisateurs qui n'ont ni opté pour l'inclusion ni pour l'exclusion et les encourager à s'abonner explicitement à l'e-mail ou au push. Dans ce cas, vous créerez un segment avec un filtre "L'état de l'abonnement à l'e-mail/push est abonné" et les campagnes destinées à ce segment iront aux utilisateurs qui sont abonnés, mais qui n'ont pas opté pour l'abonnement.
 
-![Statut d’abonnement aux e-mails utilisé comme filtre de segment.][8]
+![Statut de l'abonnement à l'e-mail utilisé comme filtre de segmentation.]({% image_buster /assets/img_archive/not_optin.png %})
 
-[1]: {% image_buster /assets/img/push_example.png %}
-[2]: {% image_buster /assets/img/sub_group_create.png %}
-[3]: {% image_buster /assets/img/segment_sub_group.png %}
-[4]: {% image_buster /assets/img_archive/subscription_group_graph.png %}
-[5]: {% image_buster /assets/img/campaign_analytics_sub_groups.png %}
-[6]: {% image_buster /assets/img/custom_unsubscribe.png %}
-[7]: {% image_buster /assets/img_archive/campaign-targeting-subscription-ui.png %}
-[8]: {% image_buster /assets/img_archive/not_optin.png %}

@@ -33,6 +33,7 @@ Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/
 | Paramètre | Requis | Type de données | Description |
 | --------- | -------- | --------- | ----------- |
 | `campaign_id` | Requis | Chaîne de caractères | Voir l'[identifiant API de la campagne.]({{site.baseurl}}/api/identifier_types/)<br><br> Vous trouverez l'adresse `campaign_id` pour les campagnes API sur la page [Clés API]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) et sur la page **Détails de la campagne** dans votre tableau de bord ; vous pouvez également utiliser l'[endpoint Exporter la liste des campagnes.](#campaign-list-endpoint) |
+| `post_launch_draft_version` | Facultatif | Valeur booléenne | Pour les messages qui ont un brouillon après le lancement, la valeur `true` permet d'afficher toutes les modifications disponibles dans le brouillon. La valeur par défaut est `false` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Exemple de demande
@@ -54,6 +55,8 @@ Authorization: Bearer YOUR-REST-API-KEY
     "updated_at" : (string) the date last updated as ISO 8601 date,
     "archived": (boolean) whether this campaign is archived,
     "draft": (boolean) whether this campaign is a draft,
+    "enabled": (boolean) whether this campaign is active or not,
+    "has_post_launch_draft": (boolean) whether this campaign has a post-launch draft,
     "name" : (string) the campaign name,
     "description" : (string) the campaign description,
     "schedule_type" : (string) the type of scheduling action,
@@ -81,7 +84,8 @@ La réponse `messages` contiendra des informations sur chaque message. Voici des
 
 ```json
 {
-    "channel": (string) the description of the channel, such as "ios_push" or "android_push"
+    "channel": (string) the description of the channel, such as "ios_push" or "android_push",
+    "name": (string) the name of the variant,
     "alert": (string) the alert body text,
     "extras": (hash) any key-value pairs provided,
     "title": (string) the alert title text,

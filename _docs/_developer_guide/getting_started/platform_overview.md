@@ -1,5 +1,5 @@
 ---
-nav_title: Platform Overview
+nav_title: Platform overview
 article_title: Platform Overview
 page_order: 1
 description: "This article covers the basic parts and capabilities of the Braze platform. Links from this article connect to essential Braze topics."

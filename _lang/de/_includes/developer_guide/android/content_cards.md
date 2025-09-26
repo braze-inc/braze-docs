@@ -6,7 +6,7 @@ Bevor Sie Braze Content-Cards verwenden können, müssen Sie das [Braze Android 
 
 In Android ist der Content-Card-Feed als [Fragment](https://developer.android.com/guide/components/fragments.html) implementiert, das im Braze Android UI-Projekt verfügbar ist. Die Klasse [`ContentCardsFragment`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html) wird automatisch aktualisiert, zeigt den Inhalt der Content-Cards an und protokolliert die Nutzungs-Analytics. Die Karten, die im `ContentCards` eines Nutzers erscheinen können, werden auf dem Braze-Dashboard erstellt.
 
-Wie Sie ein Fragment zu einer Aktivität hinzufügen können, erfahren Sie in der [Dokumentation zu Fragmenten von GoogleAndroid](https://developer.android.com/guide/fragments#Adding "Documentation: Fragmente").
+Wie Sie ein Fragment zu einer Aktivität hinzufügen können, erfahren Sie in [der Dokumentation zu Fragmenten von Google](https://developer.android.com/guide/fragments#Adding).
 
 ## Kartentypen und Eigenschaften
 
@@ -22,11 +22,14 @@ Das [Basiskartenmodell](https://braze-inc.github.io/braze-android-sdk/kdoc/braze
 |`getViewed()` | Gibt einen booleschen Wert zurück, der angibt, ob die Karte vom Nutzer:in gelesen oder ungelesen ist.|
 |`getExtras()` | Gibt eine Karte mit Schlüssel-Wert-Extras für diese Karte zurück.|
 |`getCreated()`  | Gibt den Unix-Zeitstempel der Erstellungszeit der Karte aus Braze zurück.|
-|`getIsPinned` | Gibt einen booleschen Wert zurück, der angibt, ob die Karte gepinnt ist.|
+|`isPinned` | Gibt einen booleschen Wert zurück, der angibt, ob die Karte gepinnt ist.|
 |`getOpenUriInWebView()`  | Gibt einen booleschen Wert zurück, der angibt, ob die URI für diese Karte geöffnet werden soll. <br> in Braze WebView oder nicht.|
 |`getExpiredAt()` | Ruft das Verfallsdatum der Karte ab.|
-|`getIsRemoved()` | Gibt einen booleschen Wert zurück, der angibt, ob der Endnutzer:in diese Karte gekündigt hat.|
-|`getIsDismissible()`  | Gibt einen booleschen Wert zurück, der angibt, ob die Karte gepinnt ist.|
+|`isRemoved()` | Gibt einen booleschen Wert zurück, der angibt, ob der Endnutzer:in diese Karte gekündigt hat.|
+|`isDismissibleByUser()`  | Gibt einen booleschen Wert zurück, der angibt, ob die Karte vom Nutzer:in entlassen werden kann.|
+|`isClicked()` | Gibt einen booleschen Wert zurück, der den angeklickten Zustand dieser Karte wiedergibt.|
+|`isDismissed()` | Gibt einen booleschen Wert zurück, wenn diese Karte abgewiesen wurde.|
+|`isControl()` | Gibt einen booleschen Wert zurück, wenn diese Karte eine Kontrollkarte ist und nicht gerendert werden soll.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Nur Bild {#banner-image-card-for-android}

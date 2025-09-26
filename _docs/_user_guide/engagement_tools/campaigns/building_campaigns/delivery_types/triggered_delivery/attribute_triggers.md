@@ -1,5 +1,5 @@
 ---
-nav_title: Attribute Triggers
+nav_title: Attribute triggers
 article_title: Attribute Triggers
 page_order: 1
 alias: /attribute_triggers/

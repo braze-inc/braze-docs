@@ -63,7 +63,7 @@ Un domaine d'envoi est utilisé dans l'adresse "from" lors de l'envoi d'un e-mai
 
 Ensuite, ajoutez les enregistrements TXT et CNAME du bas de la page à votre fournisseur DNS. Retournez ensuite dans le tableau de bord de Braze et cliquez sur **Vérifier.**
 
-![][1]
+![]({% image_buster /assets/img_archive/email_setup_rdns_records.png %})
 
 {% alert important %}
 Le domaine d'envoi doit être subordonné à un domaine que vous possédez. Par exemple, si vous possédez « example.com », un sous-domaine pourrait être « mail.example.com », ce qui vous permettrait d'utiliser l'adresse d'envoi « @mail.example.com ».
@@ -85,4 +85,3 @@ Notez que les domaines supplémentaires ajoutés n'apparaîtront pas dans la sec
 
 Une fois la vérification de l'expéditeur terminée, nous recommandons le réchauffement d'adresses IP afin que vos messages atteignent leur boîte de réception à un taux élevé et constant. Après avoir terminé cette configuration, veillez également à consulter l'équipe Braze Onboarding pour confirmer que vos domaines et votre [adresse IP]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ip_warming/) fonctionnent.
 
-[1]: {% image_buster /assets/img_archive/email_setup_rdns_records.png %}

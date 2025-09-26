@@ -1,5 +1,5 @@
 ---
-nav_title: Previous Generations
+nav_title: Previous generations
 article_title: Previous In-App Message Generations
 page_order: 20
 page_type: reference

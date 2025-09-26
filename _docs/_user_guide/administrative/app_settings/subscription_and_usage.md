@@ -39,7 +39,7 @@ Contract details list the start and end date of your current contract with Braze
 
 ## Most used events and attributes by app
 
-Under **Most Used Events and Attributes By App**,  you can check the drivers of your attribute and custom event data point consumption. 
+Under **Most Used Events and Attributes By App**,  you can check the drivers of your attribute and custom event data point usage. 
 
 ![Most Used Events and Attributes By App]({% image_buster /assets/img/most_used_events_attributes_time.png %})
 
@@ -51,7 +51,7 @@ Data breakdowns like these can help you understand what specific data points are
 
 ## Total data points dashboard
 
-The **Total Data Points Usage** tab provides an in-depth look at your data point consumption. You can view all data in this section aggregated by either weeks or months.
+The **Total Data Points Usage** tab provides an in-depth look at your data point usage. You can view all data in this section aggregated by either weeks or months.
 
 ![Filtering Data Point Usage by weeks]({% image_buster /assets/img/subscription_and_billing2.png %})
 
@@ -64,7 +64,7 @@ The fields in this section are defined as follows:
 - **Contract Type:** Billing term structure, either Annual or Multi-Year.
 - **Contract Start and End Date:** Start and end date of the entire contract.
 - **Allotted Data Points:** The amount of data points allotted in the contract per billing term.
-- **Contract Data Point Usage:** A cumulative total of all data points consumed over the contract's lifetime, and does not reset in the next billing term.
+- **Contract Data Point Usage:** A cumulative total of all data points logged over the contract's lifetime, and does not reset in the next billing term.
 
 ![Contract Details section of Total Data Point Usage tab]({% image_buster /assets/img/contract_details.png %})
 

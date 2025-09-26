@@ -1,5 +1,5 @@
 ---
-nav_title: Changing Custom Attribute or Event Data Type
+nav_title: Changing custom attribute or event data type
 article_title: Changing Custom Attribute or Event Data Type
 page_order: 1
 

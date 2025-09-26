@@ -25,7 +25,7 @@ Pour vous aider à démarrer, nous avons créé des modèles SQL de base pour un
 
 Supposons que vous souhaitiez segmenter les utilisateurs qui sont des employés d'un compte d'entreprise cible. 
 
-1. Allez dans **Audience** > **Extensions de segments** > **Créer une nouvelle extension** > **Commencer avec un modèle** et sélectionnez le modèle **Segmentation de catalogue pour les événements**. <br><br> ![Modale "Select a Template" avec options de segmentation du catalogue pour les événements ou les achats.][1]<br><br>L'éditeur SQL s'enrichit automatiquement d'un modèle qui associe les données d'événement utilisateur aux données du catalogue afin de segmenter les utilisateurs qui s'intéressent à certains articles du catalogue. <br><br>![Un éditeur SQL pour une nouvelle extension avec un onglet "Variables" ouvert.][2]<br><br>
+1. Allez dans **Audience** > **Extensions de segments** > **Créer une nouvelle extension** > **Commencer avec un modèle** et sélectionnez le modèle **Segmentation de catalogue pour les événements**. <br><br> ![Modale "Select a Template" avec options de segmentation du catalogue pour les événements ou les achats.]({% image_buster /assets/img/b2b/select_a_template.png %})<br><br>L'éditeur SQL s'enrichit automatiquement d'un modèle qui associe les données d'événement utilisateur aux données du catalogue afin de segmenter les utilisateurs qui s'intéressent à certains articles du catalogue. <br><br>![Un éditeur SQL pour une nouvelle extension avec un onglet "Variables" ouvert.]({% image_buster /assets/img/b2b/enter_new_name.png %})<br><br>
 2. Utilisez l'onglet **Variables** pour fournir les champs nécessaires à votre modèle avant de générer votre segment.<br><br>Pour que Braze identifie les utilisateurs en fonction de leur engagement avec les articles du catalogue, vous devez faire ce qui suit :
 - Sélectionnez un catalogue qui contient un champ de catalogue
 - Sélectionnez un événement personnalisé qui contient une propriété d'événement
@@ -114,5 +114,3 @@ Pour savoir comment utiliser les sources connectées dans la segmentation, repor
 
 Après avoir créé votre segmentation au niveau du compte dans les étapes ci-dessus, vous pouvez directement intégrer ces extensions de segments dans vos critères de ciblage. Il est également facile d'ajouter des critères démographiques supplémentaires pour les utilisateurs, tels que le rôle, l'engagement dans des campagnes précédentes, etc. Pour plus d'informations, reportez-vous à la section [Utilisation de votre extension dans une segmentation]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/#step-6-use-your-extension-in-a-segment).
 
-[1]: {% image_buster /assets/img/b2b/select_a_template.png %}
-[2]: {% image_buster /assets/img/b2b/enter_new_name.png %}

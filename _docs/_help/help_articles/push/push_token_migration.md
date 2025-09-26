@@ -1,5 +1,5 @@
 ---
-nav_title: Migrating Push Tokens
+nav_title: Migrating push tokens
 article_title: Migrating Push Tokens
 page_order: 0
 

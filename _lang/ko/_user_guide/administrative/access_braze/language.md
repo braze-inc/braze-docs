@@ -18,7 +18,7 @@ Braze 대시보드는 [여러 언어로](#supported-languages) 제공됩니다. 
 1. 글로벌 헤더에서 <i class="fa-solid fa-globe" aria-label="언어 선택"></i>을 클릭합니다.
 2. 목록에서 언어를 선택하세요.
 
-![][1]{: style="max-width:60%"}
+![]({% image_buster /assets/img_archive/language_dashboard.png %}){: style="max-width:60%"}
 
 대시보드가 다시 로드되는 데 잠시 시간이 걸릴 수 있습니다.
 
@@ -58,4 +58,3 @@ If you have limited permissions, your notification language is set to the defaul
 
 -->
 
-[1]: {% image_buster /assets/img_archive/language_dashboard.png %}

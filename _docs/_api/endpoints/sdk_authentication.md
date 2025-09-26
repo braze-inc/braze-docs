@@ -1,5 +1,5 @@
 ---
-nav_title: "SDK Authentication"
+nav_title: "SDK authentication"
 article_title: SDK Authentication Endpoints
 search_tag: Endpoint
 page_order: 5.5

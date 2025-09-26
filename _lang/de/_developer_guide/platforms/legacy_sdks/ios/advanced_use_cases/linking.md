@@ -3,7 +3,7 @@ nav_title: Deeplinking
 article_title: Deeplinking für iOS
 platform: iOS
 page_order: 0
-description: "In diesem Artikel erfahren Sie, wie Sie den universellen Deeplink-Delegaten für Ihre iOS App implementieren und wie Sie Deeplinks zu App-Einstellungen oder einem Newsfeed setzen."
+description: "In diesem Artikel erfahren Sie, wie Sie den universellen Deeplink-Delegaten für Ihre iOS-App implementieren und wie Sie Deeplinks zu App-Einstellungen setzen."
 
 noindex: true
 ---
@@ -13,10 +13,6 @@ noindex: true
 # Deeplinks setzen für iOS
 
 Einführende Informationen zu Deeplinks setzen finden Sie in unserem [Artikel im Benutzerhandbuch]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking). Wenn Sie zum ersten Mal Deeplinks in Ihre Braze-App setzen möchten, können Sie mit den folgenden Schritten beginnen.
-
-{% alert note %}
-Dieser Artikel enthält Informationen zum News Feed, der nicht mehr verwendet wird. Braze empfiehlt Kunden, die unser News Feed-Tool verwenden, auf unseren Nachrichtenkanal Content Cards umzusteigen - er ist flexibler, anpassbarer und zuverlässiger. Weitere Informationen finden Sie im [Migrationsleitfaden]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/).
-{% endalert %}
 
 ## Schritt 1: Ein Schema registrieren
 
@@ -139,11 +135,11 @@ func application(_ application: UIApplication, continue userActivity: NSUserActi
 Weitere Informationen finden Sie bei [Apple](https://developer.apple.com/library/content/documentation/General/Conceptual/AppSearch/UniversalLinks.html).
 
 {% alert note %}
-Die Standard Universal Link Integration ist nicht mit Push-Benachrichtigungen, In-App-Nachrichten oder Newsfeed von Braze kompatibel. Sehen Sie in der Beschreibung der [Link-Anpassung](#linking-handling-customization) nach, wie Sie universelle Links innerhalb Ihrer Anwendung handhaben. Alternativ empfehlen wir Ihnen, [schema-basierte Deeplinks](#step-1-registering-a-scheme) mit Push-Benachrichtigungen, In-App-Nachrichten und dem Newsfeed zu setzen.
+Die Standard Universal Link Integration ist nicht mit Push-Benachrichtigungen oder In-App-Nachrichten von Braze kompatibel. Sehen Sie in der Beschreibung der [Link-Anpassung](#linking-handling-customization) nach, wie Sie universelle Links innerhalb Ihrer Anwendung handhaben. Alternativ empfehlen wir, [Deeplinks](#step-1-registering-a-scheme) mit Push-Benachrichtigungen und In-App-Nachrichten zu setzen, die auf einem Schema basieren.
 {% endalert%}
 
 ## App Transport Security (ATS)
-Mit iOS 9 wurde eine wichtige Änderung eingeführt, die sich auf Web-URLs auswirkt, die in In-App-Nachrichten, Newsfeed-Karten und Push-Benachrichtigungen eingebettet sind.
+Mit iOS 9 wurde eine Änderung eingeführt, die in In-App-Nachrichten und Push-Benachrichtigungen eingebettete Internet-URLs betrifft.
 
 ### ATS-Anforderungen
 Aus der [Dokumentation von Apple:](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html#//apple_ref/doc/uid/TP40016198-SW14) "App Transport Security" ist ein Feature, das die Sicherheit der Verbindungen zwischen einer App und Internet Serviceleistungen; Diensten verbessert. Das Feature besteht aus Standard-Verbindungsanforderungen, die den Best Practices für sichere Verbindungen entsprechen. Apps können dieses Standardverhalten außer Kraft setzen und die Transportsicherheit deaktivieren."
@@ -168,7 +164,7 @@ Die ATS-Konformität wird für Links durchgesetzt, die innerhalb der mobilen App
 Sie können ATS auf eine der folgenden drei Arten handhaben:
 
 #### Bestätigen Sie, dass alle Links ATS-konform sind (empfohlen)
-Ihre Integration in Braze kann die ATS-Anforderungen erfüllen, indem Sie sicherstellen, dass alle bestehenden Links, zu denen Sie Nutzer:innen führen (durch In-App-Nachrichten und Push-Kampagnen oder Newsfeed-Karten), die ATS-Anforderungen erfüllen. Es gibt zwar Möglichkeiten, die ATS-Beschränkungen zu umgehen, aber wir empfehlen zu überprüfen, ob alle verlinkten URLs ATS-konform sind. Da Apple immer mehr Wert auf die Sicherheit von Anwendungen legt, werden die folgenden Ansätze zur Zulassung von ATS-Ausnahmen von Apple nicht garantiert unterstützt.
+Ihre Integration in Braze kann die ATS-Anforderungen erfüllen, indem Sie sicherstellen, dass alle bestehenden Links, zu denen Sie Nutzer:innen führen (durch In-App-Nachricht und Push-Kampagnen), die ATS-Anforderungen erfüllen. Es gibt zwar Möglichkeiten, die ATS-Beschränkungen zu umgehen, aber wir empfehlen zu überprüfen, ob alle verlinkten URLs ATS-konform sind. Da Apple immer mehr Wert auf die Sicherheit von Anwendungen legt, werden die folgenden Ansätze zur Zulassung von ATS-Ausnahmen von Apple nicht garantiert unterstützt.
 
 Ein SSL-Tool kann Ihnen dabei helfen, Sicherheitsprobleme des Internetservers zu erkennen. Dieser [SSL-Server-Test](https://www.ssllabs.com/ssltest/index.html) von Qualys, Inc. bietet einen Punkt speziell für die Einhaltung von Apple ATS 9 und iOS 9.
 
@@ -293,7 +289,7 @@ Für weitere Informationen siehe [`ABKURLDelegate.h`](https://github.com/Appboy/
 
 ### Deeplinks zu den App-Einstellungen setzen
 
-iOS kann Nutzer:innen von Ihrer App auf deren Seite in der iOS-Einstellungsanwendung führen. Sie können `UIApplicationOpenSettingsURLString` nutzen, um Nutzer über Deeplinks mit Einstellungen aus Push-Benachrichtigungen, In-App-Nachrichten und dem Newsfeed zu verknüpfen.
+iOS kann Nutzer:innen von Ihrer App auf deren Seite in der iOS-Einstellungsanwendung führen. Sie können die Vorteile von `UIApplicationOpenSettingsURLString` nutzen, um Nutzer:innen über Push-Benachrichtigungen und In-App-Nachrichten Deeplinks zu den Einstellungen zu setzen.
 
 1. Vergewissern Sie sich zunächst, dass Ihre Anwendung entweder für [schema-basierte Deeplinks](#deep-links) oder für [universelle Links](#universal-links) eingerichtet ist.
 2. Legen Sie eine URI für Deeplinks auf die Seite **Einstellungen** fest (z.B. `myapp://settings` oder `https://www.braze.com/settings`).

@@ -1,5 +1,5 @@
 ---
-nav_title: "Push Enablement and Subscription"
+nav_title: "Push enablement and subscription"
 article_title: Push Enablement and Subscription
 page_order: 3
 page_type: reference
@@ -79,9 +79,8 @@ You can update a user's subscription state with the Braze REST API using the [`/
 
 There are two ways you can check a user's push subscription state with Braze:
 
-1. **User Profile**: You can access individual user profiles through the Braze dashboard on the **[User Search]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/)** page. After finding a user's profile (via email address, phone number, or external user ID), you can select the **Engagement** tab to view and manually adjust a user's subscription state. 
-<br><br>
-2. **Rest API Export**: You can export individual user profiles in JSON format using the export [Users by segment]({{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/) or [Users by identifier]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) endpoints. Braze will return a push tokens object that contains push enablement information per device.
+1. **User Profile** You can access individual user profiles through the Braze dashboard on the **[User Search]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/)** page. After finding a user's profile (via email address, phone number, or external user ID), you can select the **Engagement** tab to view and manually adjust a user's subscription state.
+2. **REST API Export:** You can export individual user profiles in JSON format using the export [Users by segment]({{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/) or [Users by identifier]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) endpoints. Braze will return a push tokens object that contains push enablement information per device.
 
 ## Push permission
 
@@ -191,6 +190,10 @@ For Android, Braze will consider a user push disabled if:
 - Push registration fails to Firebase Cloud Messaging (sometimes caused by poor network connections or a failure to connect to or on FCM to return a valid token).
 - The user blocks push notifications for the app within their device settings and subsequently logs a session.
 
+{% alert note %}
+You can only intercept an Android push notification when the app is in the foreground or background (but still running). You can't intercept notifications when the app is terminated or completely killed.
+{% endalert %}
+
 {% endtab %}
 {% tab iOS %}
 
@@ -205,6 +208,10 @@ In the scenario that a user, who initially opted-in on the OS level disables pus
 - The `Foreground Push Enabled for App (iOS)` filter and the `Foreground Push Enabled` segmentation filter (assuming no other apps on the user profile have a valid foreground push token) will return `false`.
 
 In this scenario, since a background push token will still exist, you can continue to send background (silent) push notifications with the segmenting filter `Background or Foreground Push Enabled = true`.
+
+{% alert note %}
+iOS doesn't allow apps to intercept a push notification prior to the push notification displaying. This means that apps (and Braze) have no control over whether you can display or hide the notification. A user can opt out of push notifications for an app under the device settings, but that is controlled by the operating system.
+{% endalert %}
 
 {% endtab %}
 {% tab Web %}

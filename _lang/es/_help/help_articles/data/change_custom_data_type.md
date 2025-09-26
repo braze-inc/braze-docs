@@ -11,7 +11,7 @@ description: "Este artículo de ayuda te explica cómo cambiar el tipo de datos 
 
 Para cambiar el tipo de datos de un atributo o evento personalizado, desde el panel de Braze, ve a **Configuración de datos** y selecciona **Atributos personalizados** o **Eventos personalizados**.
 
-![Pestaña Atributos personalizados para editar atributos o tipos de datos][1]
+![Pestaña Atributos personalizados para editar atributos o tipos de datos]({% image_buster /assets/img/change_custom_attribute.png %})
 
 Si debes cambiar el tipo de datos de un atributo personalizado o de un evento (por ejemplo, cambiar `time` por `string`), ten en cuenta lo siguiente:
 
@@ -25,4 +25,3 @@ La posibilidad de impedir que la detección automática actualice el tipo de dat
 
 _Última actualización: 8 de febrero de 2024_
 
-[1]: {% image_buster /assets/img/change_custom_attribute.png %}

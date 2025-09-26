@@ -35,7 +35,7 @@ The Canvas builder will guide you step-by-step through setting up your Canvas—
     Learn more about the [Basics step](#step-2a-set-up-your-canvas-basics).
   {% endtab %}
   {% tab Entry Schedule %}
-    Here, you will decide how your users will enter your Canvas:
+    Here, you will decide how and when your users will enter your Canvas:
     - Scheduled: This is a time-based Canvas entry
     - Action-Based: Your user will enter your Canvas after they perform a defined action
     - API-Triggered: Use an API request to enter users into your Canvas
@@ -132,12 +132,12 @@ If a user re-enters the Canvas, reaches the same component as their previous ent
 
 #### Step 1.3: Set your target entry audience
 
-You can set the target audience for your Canvas on the **Target Audience** step. Only the users who match your defined criteria can enter the journey, meaning Braze evaluates the target audience for eligibility first before users enter the Canvas journey. For example, if you want to target new users, you can select a segment of users who first used your app less than a week ago.
+Only the users who match your defined criteria can enter the journey in the **Target Audience** step, meaning Braze evaluates the target audience for eligibility first **before** users enter the Canvas journey. For example, if you want to target new users, you can select a segment of users who first used your app less than a week ago.
 
-Under **Entry Controls**, you can limit the number of users every time the Canvas is scheduled to run. For API trigger-based and action-based Canvases, this limit occurs at every UTC hour. 
+In **Entry Controls**, you can limit the number of users every time the Canvas is scheduled to run. For API trigger-based and action-based Canvases, this limit occurs at every UTC hour. 
 
-{% alert warning %}
-Avoid configuring an action-based campaign or Canvas with the same trigger as the audience filter (such as a changed attribute or performed a custom event). A race condition may occur in which the user is not in the audience at the time they perform the trigger event, which means they won't receive the campaign or enter the Canvas.  
+{% alert important %}
+Avoid configuring an action-based campaign or Canvas with the same trigger as the audience filter (such as a changed attribute or performed a custom event). A [race condition]({{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions) may occur in which the user is not in the audience at the time they perform the trigger event, which means they won't receive the campaign or enter the Canvas.
 {% endalert %}
 
 ##### Testing your audience

@@ -16,9 +16,9 @@ search_rank: 2
 
 アプリで位置情報収集を有効にするには、使用しているプラットフォームの開発者ガイドを参照してください。
 
-- [iOS][2]
-- [Android][3]
-- [Web][4]
+- [iOS]({{site.baseurl}}/developer_guide/analytics/tracking_location/?sdktab=swift)
+- [Android]({{site.baseurl}}/developer_guide/analytics/tracking_location/?sdktab=android)
+- [Web]({{site.baseurl}}/developer_guide/analytics/tracking_location/?sdktab=web)
 
 一般に、モバイルアプリはデバイスの GPS チップやその他のシステム (Wi-Fi スキャンなど) を使用してユーザーの位置を追跡します。ウェブアプリは WPS (Wi-Fi ポジショニングシステム) を使用してユーザーの位置を追跡します。これらすべてのプラットフォームでは、ユーザーが位置情報の追跡にオプトインする必要があります。位置情報の追跡データの精度は、ユーザーのデバイスでWi-Fiが有効になっているかどうかによって影響を受ける可能性がある。Android ユーザーはさまざまな位置情報モードを選択することもできます。「バッテリー節約」モードまたは「デバイスのみ」モードのユーザーは、データが不正確になる可能性があります。
 
@@ -34,11 +34,11 @@ search_rank: 2
 
 ロケーショントラッキングデータとセグメントを使用して、ロケーションベースのキャンペーンと戦略を設定できます。例えば、特定の地域に住むユーザーを対象にプロモーションキャンペーンを実施したり、規制が厳しい地域のユーザーを除外したりできます。
 
-ロケーションセグメントの作成について詳しくは、「[ロケーションターゲティング][1]」を参照してください。
+ロケーションセグメントの作成について詳しくは、「[ロケーションターゲティング]({{site.baseurl}}/user_guide/engagement_tools/segments/location_targeting/)」を参照してください。
 
 ## デフォルトロケーション属性のハード設定
 
-また、API の[`users/track`エンドポイント][8]を使用して[`current_location`][9]標準属性を更新することもできます。例は次のとおりです。
+また、API の[`users/track`エンドポイント]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)を使用して[`current_location`]({{site.baseurl}}/api/objects_filters/user_attributes_object/)標準属性を更新することもできます。例は次のとおりです。
 
 ```
 https://[your_braze_rest_endpoint]/users/track
@@ -58,21 +58,28 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 既存のビーコンやジオフェンスのサポートを Braze のターゲティング機能やメッセージング機能と組み合わせることで、ユーザーの物理的な行動に関する詳細な情報が判明し、それに応じてユーザーにメッセージを送ることができます。一部のパートナーとのロケーショントラッキングを活用できます。 
 
-- [Radar][6]
-- [インフィリオン][10]
-- [Foursquare][7]
+- [Radar]({{site.baseurl}}/partners/message_personalization/location/radar/)
+- [インフィリオン]({{site.baseurl}}/partners/message_personalization/location/infillion/)
+- [Foursquare]({{site.baseurl}}/partners/message_personalization/location/foursquare/)
 
 ## よくある質問
 
-ロケーションに関するよくある質問への回答については、[ロケーションに関するよくある質問][11]をご覧ください。
+### Braze はいつ位置データを収集しますか?
 
-[1]: {{site.baseurl}}/user_guide/engagement_tools/segments/location_targeting/
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/location_tracking/
-[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/location_tracking/
-[4]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/location_tracking/
-[6]: {{site.baseurl}}/partners/data_augmentation/contextual_location/radar/
-[7]: {{site.baseurl}}/partners/data_augmentation/contextual_location/foursquare/
-[8]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/
-[9]: {{site.baseurl}}/api/objects_filters/user_attributes_object/
-[10]: {{site.baseurl}}/partners/message_personalization/location/infillion/
-[11]: {{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/faqs/#locations
+Braze は、アプリケーションがフォアグラウンドで開いている場合にのみ位置情報を収集します。その結果、フィルター `Most Recent Location` は、ユーザーが最後にアプリケーションを開いた位置情報 (セッション開始とも呼ばれます) に基づいてユーザーをターゲットにします。
+
+また、次のニュアンスにも留意する必要があります。
+
+- 位置情報が無効になっている場合、`Most Recent Location` フィルターは最後に記録された位置情報を表示します。
+- ユーザーがプロフィールに位置情報を保存したことがある場合は、それ以降に位置情報の追跡をオプトアウトした場合でも、`Location Available` フィルターの対象となります。
+
+### 「最新のデバイスロケール」フィルターと「最新の位置情報」フィルターの違いは？
+
+`Most Recent Device Locale` はユーザーのデバイス設定から取得されます。例えば、iPhone の場合は、デバイスの [**設定**] > [**一般**] > [**言語と地域**] に表示されます。このフィルターは、日付や住所などの言語や地域の書式をキャプチャするために使用され、`Most Recent Location` フィルターとは無関係です。
+
+`Most Recent Location` は、デバイスの最新の既知の GPS 位置です。これはセッション開始時に更新され、ユーザーのプロファイルに保存されます。
+
+### ユーザーが位置情報の追跡をオプトアウトした場合、古い位置データは Braze から削除されますか? 
+
+ユーザープロファイルに位置情報の追跡が保存されたことがある場合、そのデータは自動的に削除されることはない。
+

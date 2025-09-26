@@ -1,5 +1,5 @@
 ---
-nav_title: Preference Center
+nav_title: Preference center
 article_title: Preference Center Endpoints
 search_tag: Endpoint
 page_order: 4

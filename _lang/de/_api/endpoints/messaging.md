@@ -75,8 +75,17 @@ guide_menu_list:
     link: /docs/api/endpoints/messaging/send_messages/post_send_triggered_canvases/
     image: /assets/img/braze_icons/inbox-01.svg
 
-guide_menu_title2: "Live Activity endpoints"
+guide_menu_title2: "Duplicate message endpoints"
 guide_menu_list2:
+  - name: "POST: Duplizierte Kampagnen"
+    link: /docs/api/endpoints/messaging/duplicate_messages/post_duplicate_campaigns/
+    image: /assets/img/braze_icons/copy-04.svg
+  - name: "POST: Canvase duplizieren"
+    link: /docs/api/endpoints/messaging/duplicate_messages/post_duplicate_canvases/
+    image: /assets/img/braze_icons/copy-04.svg
+
+guide_menu_title3: "Live Activity endpoints"
+guide_menu_list3:
   - name: "POST: Live-Aktivität aktualisieren"
     link: /docs/api/endpoints/messaging/live_activity/update/
     image: /assets/img/braze_icons/tablet-01.svg

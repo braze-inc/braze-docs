@@ -9,10 +9,7 @@ description: "この記事では、シングルサインオンに Okta を使用
 
 # Okta 
 
-![Okta SSO を有効にした Braze ダッシュボードログイン。][4]{: style="float:right;max-width:30%;margin-left:15px;margin-bottom:15px;"}
-
 > Okta は、あらゆるデバイス上のあらゆるアプリケーションとあらゆるユーザーを接続します。Okta はクラウド向けに構築されたエンタープライズクラスの ID 管理サービスですが、多くのオンプレミスアプリケーションと互換性があります。Okta を使用すると、IT チームはあらゆる従業員によるあらゆるアプリケーションやデバイスへのアクセスを管理できます。
-<br>
 
 ## 要件
 
@@ -30,13 +27,13 @@ description: "この記事では、シングルサインオンに Okta を使用
 
 アカウントマネージャーがアカウントの SAML SSO を有効にした後、[**設定**] > [**管理者設定**] > [**セキュリティ設定**] に移動し、SAML SSO セクションを [**オン**] に切り替えます。
 
-![[セキュリティ設定] ページで、Okta SAML SSO が有効になっています。][1]
+![セキュリティ設定ページでOkta SAML SSO が有効になっています。]({% image_buster/assets/img/Okta/okta1.png %})
 
 ### ステップ 1b: SAML SSO 設定の編集
 
 Okta Admin ダッシュボードから、ターゲットURL (ログインURL) と`x.509` 証明書が提供されます。これをBraze アカウントの**セキュリティ設定** ページに入力する必要があります。
 
-![][7]{: style="max-width:75%"}
+![]({% image_buster /assets/img/Okta/okta5.png %}){: style="max-width:75%"}
 
 | 要件 | 詳細 |
 |---|---|
@@ -53,7 +50,7 @@ Okta で、Braze SAML アプリの [**サインオン**] タブを選択し、[*
 
 次に、[**デフォルトのリレーステート**] フィールドに、`sso.saml.login` 権限を持つ RelayState API キーを入力します。 
 
-![[サインオン] タブの Okta のデフォルト RelayState。][2]{: style="max-width:75%"}
+![[サインオン] タブの Okta のデフォルト RelayState。]({% image_buster /assets/img/Okta/okta2.png %}){: style="max-width:75%"}
 
 これらの新しい設定を必ず保存してください。
 
@@ -65,9 +62,5 @@ Braze アカウントユーザーを SAML SSO でのみサインイン可能に�
 
 これで、Okta を使用して Braze にログインできます。
 
-[1]: {% image_buster/assets/img/Okta/okta1.png %}
-[2]: {% image_buster /assets/img/Okta/okta2.png %}
-[4]: {% image_buster /assets/img/Okta/okta4.png %}
-[7]: {% image_buster /assets/img/Okta/okta5.png %}
-[5]: {% image_buster /assets/img/sso2.png %}
-[6]: {% image_buster /assets/img/samlsso.gif %}
+![Okta SSO を有効にした Braze ダッシュボードログイン。]({% image_buster /assets/img/Okta/okta4.png %}){: style="max-width:60%"}
+

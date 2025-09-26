@@ -18,7 +18,7 @@ WhatsApp은 귀하의 메시지를 받은 사용자가 귀하의 비즈니스를
 
 WhatsApp에서 사용자에게 처음 메시지를 보내면 이러한 옵션이 메시지 스레드 내에 표시됩니다.
 
-![비즈니스를 차단하거나 신고할 수 있는 옵션이 있는 WhatsApp 메시지 스레드][1]{: style="max-width:30%;"}
+![WhatsApp message thread with options to block or report a business]({% image_buster /assets/img/whatsapp/whatsapp_block_report.png %}){: style="max-width:30%;"}
 
 {% alert note %}
 차단 및 보고서에 대한 지표를 보려면 WhatsApp 관리자에서 [인사이트 탭이](https://www.facebook.com/business/help/683499390267496) 켜져 있는지 확인하세요.
@@ -46,7 +46,5 @@ WhatsApp에서 사용자에게 처음 메시지를 보내면 이러한 옵션이
 
 권장되는 모범 사례는 사용자에게 보내는 첫 번째 메시지의 바닥글에 아웃아웃 방법에 대한 지침을 제공하는 것입니다. 예를 들어, 사용자가 수신 거부 트리거 단어로 응답하여 WhatsApp 채널의 수신을 거부할 수 있다고 명시할 수 있습니다. 향후 캠페인에 정기적으로 옵트아웃 푸터를 포함할 수도 있습니다. 설정 방법을 알아보려면 [옵트인 및 옵트아웃]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/opt-ins_and_opt-outs/)을 참조하세요.
  
-![채널 구독을 취소하려면 STOP에 응답하라는 내용의 바닥글이 포함된 WhatsApp 메시지][2]{: style="max-width:35%;"}
+![WhatsApp message with a footer stating to respond STOP to unsubscribe from the channel]({% image_buster /assets/img/whatsapp/whatsapp_unsubscribe.png %}){: style="max-width:35%;"}
 
-[1]: {% image_buster /assets/img/whatsapp/whatsapp_block_report.png %}
-[2]: {% image_buster /assets/img/whatsapp/whatsapp_unsubscribe.png %}

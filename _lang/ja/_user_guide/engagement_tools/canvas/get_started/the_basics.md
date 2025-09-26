@@ -107,7 +107,7 @@ tool: Canvas
 * [プッシュ]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/)
 * [アプリ内メッセージ]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/)
 * [コンテンツカードによって促進された]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/)
-* [SMS または MMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/about_sms/)
+* [SMS または MMS]({{site.baseurl}}/about_sms/)
 * [Webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/)
 
 ### 「どのように」: 完全なエクスペリエンスを構築する

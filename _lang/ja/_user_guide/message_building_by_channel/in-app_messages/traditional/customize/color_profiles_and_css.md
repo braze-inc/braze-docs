@@ -24,7 +24,7 @@ channel:
 
 ### カラープロファイルの管理
 
-テンプレートを[複製][6]および[アーカイブ][7]することもできます！テンプレートおよびクリエイティブコンテンツの作成と管理の詳細については、[「テンプレートとメディア」][8]を参照してください。
+テンプレートを[複製]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/)および[アーカイブ]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/)することもできます！テンプレートおよびクリエイティブコンテンツの作成と管理の詳細については、[「テンプレートとメディア」]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/)を参照してください。
 
 ## CSS テンプレート{#in-app-message-templates}
 
@@ -84,7 +84,7 @@ CSSテンプレートに名前を付けてタグを付け、デフォルトの�
 
 ### CSSテンプレートの管理
 
-テンプレートを[複製][6]および[アーカイブ][7]することもできます！テンプレートおよびクリエイティブコンテンツの作成と管理の詳細については、[「テンプレートとメディア」][8]を参照してください。
+テンプレートを[複製]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/)および[アーカイブ]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/)することもできます！テンプレートおよびクリエイティブコンテンツの作成と管理の詳細については、[「テンプレートとメディア」]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/)を参照してください。
 
 ## モーダル with CSS (Web only) {#web-modal-css}
 
@@ -93,6 +93,3 @@ Web専用のWebモーダルをCSSメッセージで使用する場合は、独�
 ご自身のテンプレートを適用する場合は、**テンプレートを適用**をクリックし、アプリ内メッセージテンプレートギャラリーから選択してください。オプションがない場合は、CSSテンプレートビルダーを使用して[CSSテンプレート]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/color_profiles_and_css/#in-app-message-templates)をアップロードできます。
 
 
-[6]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/
-[7]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/
-[8]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/

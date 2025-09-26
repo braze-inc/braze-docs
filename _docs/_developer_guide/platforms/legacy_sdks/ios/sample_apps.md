@@ -1,5 +1,5 @@
 ---
-nav_title: Sample Apps
+nav_title: Sample apps
 article_title: Sample Apps for iOS
 platform: iOS
 page_order: 9

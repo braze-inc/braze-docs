@@ -8,7 +8,7 @@ description: "Este artículo de referencia explica cómo pueden y deben utilizar
 
 # Lógica de mensajería condicional
 
-> [Etiquetas][7] te permiten incluir lógica de programación en tus campañas de mensajería. Las etiquetas pueden utilizarse para ejecutar sentencias condicionales, así como para casos de uso avanzados, como la asignación de variables o la iteración a través de un bloque de código. <br><br>En esta página se explica cómo pueden y deben utilizarse las etiquetas, por ejemplo, cómo tener en cuenta los valores de atributo nulo, nulo y vacío, y cómo hacer referencia a atributos personalizados.
+> [Las etiquetas](https://docs.shopify.com/themes/liquid-documentation/tags) te permiten incluir lógica de programación en tus campañas de mensajería. Las etiquetas pueden utilizarse para ejecutar sentencias condicionales, así como para casos de uso avanzados, como la asignación de variables o la iteración a través de un bloque de código. <br><br>En esta página se explica cómo pueden y deben utilizarse las etiquetas, por ejemplo, cómo tener en cuenta los valores de atributo nulo, nulo y vacío, y cómo hacer referencia a atributos personalizados.
 
 ## Etiquetas de formato
 
@@ -42,7 +42,7 @@ Buy now! Would 5% off convince you?
 
 ## Lógica condicional
 
-Puedes incluir muchos tipos de [lógica inteligente dentro de los mensajes][1], como una declaración condicional. El siguiente ejemplo utiliza [condicionales][8] para internacionalizar una campaña:
+Puedes incluir muchos tipos de [lógica inteligente dentro de los mensajes](http://docs.shopify.com/themes/liquid-documentation/basics), como una declaración condicional. El siguiente ejemplo utiliza [condicionales](http://docs.shopify.com/themes/liquid-documentation/tags/control-flow-tags) para internacionalizar una campaña:
 {% raw %}
 
 ```liquid
@@ -165,7 +165,7 @@ La siguiente etiqueta permite especificar un mensaje para los usuarios con un at
 ```
 {% endraw %} 
 
-![Un mensaje de ejemplo en el panel de Braze, utilizando un atributo "nombre" nulo.][36]{: style="max-width:60%;"}
+![Un mensaje de ejemplo en el panel de Braze, utilizando un atributo "nombre" nulo.]({% image_buster /assets/img/value_null.png %}){: style="max-width:60%;"}
 
 {% raw %}
 ```liquid
@@ -196,11 +196,11 @@ La siguiente etiqueta permite especificar un mensaje para los usuarios que tiene
 
 ## Referencia a atributos personalizados
 
-Una vez [creados los atributos personalizados][2], puede hacer referencia a estos atributos personalizados en su mensajería Liquid.
+Después de haber [creado atributos personalizados]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#managing-custom-attributes), puedes hacer referencia a estos atributos personalizados en tu mensajería Liquid.
 
 Cuando utilice lógica condicional, necesitará conocer el tipo de datos del atributo personalizado para asegurarse de que está utilizando la sintaxis correcta. En la página **Atributos personalizados** del cuadro de mandos, busque el tipo de datos asociado a su atributo personalizado y, a continuación, consulte los siguientes ejemplos enumerados para cada tipo de datos.
 
-![Selección de un tipo de datos para un atributo personalizado. El ejemplo muestra un atributo Favorite_Category con un tipo de datos de cadena.][20]{: style="max-width:80%;"}
+![Selección de un tipo de datos para un atributo personalizado. El ejemplo proporcionado muestra un atributo de Categoría_Favorita con un tipo de datos de cadena.]({% image_buster /assets/img_archive/custom_attribute_data_type.png %}){: style="max-width:80%;"}
 
 {% alert tip %}
 Las cadenas y las matrices deben ir rodeadas de apóstrofos rectos, mientras que los booleanos y los enteros nunca llevan apóstrofos.
@@ -208,7 +208,7 @@ Las cadenas y las matrices deben ir rodeadas de apóstrofos rectos, mientras que
 
 #### Booleano
 
-[Los booleanos][9] son valores binarios, y pueden ajustarse a `true` o `false`, como `registration_complete: true`. Los valores booleanos no llevan apóstrofes.
+[Los booleanos]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#booleans) son valores binarios, y pueden establecerse en `true` o `false`, como `registration_complete: true`. Los valores booleanos no llevan apóstrofes.
 
 {% raw %}
 
@@ -220,7 +220,7 @@ Las cadenas y las matrices deben ir rodeadas de apóstrofos rectos, mientras que
 
 #### Número
 
-[Números][10] son valores numéricos, que pueden ser enteros o flotantes. Por ejemplo, un usuario puede tener `shoe_size: 10` o `levels_completed: 287`. Los valores numéricos no llevan apóstrofes.
+[Los números]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#numbers) son valores numéricos, que pueden ser enteros o flotantes. Por ejemplo, un usuario puede tener `shoe_size: 10` o `levels_completed: 287`. Los valores numéricos no llevan apóstrofes.
 
 {% raw %}
 
@@ -242,7 +242,7 @@ También puede utilizar otros [operadores básicos](https://shopify.dev/docs/the
 
 #### Cadena
 
-Una [cadena][11] está formada por caracteres alfanuméricos y almacena un dato sobre su usuario. Por ejemplo, puede tener `favorite_color: red` o `phone_number: 3025981329`. Los valores de cadena deben ir rodeados de apóstrofes.
+Una [cadena]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#strings) está formada por caracteres alfanuméricos y almacena un dato sobre tu usuario. Por ejemplo, puede tener `favorite_color: red` o `phone_number: 3025981329`. Los valores de cadena deben ir rodeados de apóstrofes.
 
 {% raw %}
 
@@ -256,7 +256,7 @@ Para las cadenas, puede utilizar tanto "==" como "contains" en su Liquid.
 
 #### Matriz
 
-Un [array][12] es una lista de información sobre su usuario. Por ejemplo, un usuario puede tener `last_viewed_shows: stranger things, planet earth, westworld`. Los valores de las matrices deben ir rodeados de apóstrofes.
+Una [matriz]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#arrays) es una lista de información sobre tu usuario. Por ejemplo, un usuario puede tener `last_viewed_shows: stranger things, planet earth, westworld`. Los valores de las matrices deben ir rodeados de apóstrofes.
 
 {% raw %}
 
@@ -270,7 +270,7 @@ Para las matrices, debe utilizar "contains" y no puede utilizar "==".
 
 #### Tiempo
 
-Una marca de tiempo de cuando un evento tuvo lugar. [Hora][13] valores deben tener un [filtro matemático][5] en ellos para ser utilizado en la lógica condicional.
+Una marca de tiempo de cuándo tuvo lugar un evento. Los valores [temporales]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#time) deben tener un [filtro matemático]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/#math-filters) para poder utilizarse en lógica condicional.
 
 {% raw %}
 
@@ -281,15 +281,3 @@ Una marca de tiempo de cuando un evento tuvo lugar. [Hora][13] valores deben ten
 {% endraw %}
 
 
-[36]:{% image_buster /assets/img/value_null.png %}
-[1]: http://docs.shopify.com/themes/liquid-documentation/basics
-[2]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#managing-custom-attributes
-[5]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/#math-filters
-[7]: https://docs.shopify.com/themes/liquid-documentation/tags
-[8]: http://docs.shopify.com/themes/liquid-documentation/tags/control-flow-tags "Etiquetas de flujo de control"
-[9]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#booleans
-[10]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#numbers
-[11]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#strings
-[12]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#arrays
-[13]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#time
-[20]: {% image_buster /assets/img_archive/custom_attribute_data_type.png %}

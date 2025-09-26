@@ -83,7 +83,7 @@ In Blueprint können Sie den Knoten **Android Set Log Level** verwenden:
 {% endsubtab %}
 {% endsubtabs %}
 
-Um sicherzustellen, dass die Protokollierung gesetzt wird, wenn das Braze SDK Initialize aufgerufen wird, wird empfohlen, dies vor `InitializeBraze` aufzurufen.
+Um sicherzustellen, dass die Protokollierung gesetzt ist, wenn das Braze SDK Initialize aufgerufen wird, wird empfohlen, dies vor `InitializeBraze` aufzurufen.
 {% endtab %}
 
 {% tab iOS %}

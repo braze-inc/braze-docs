@@ -1,5 +1,5 @@
 ---
-nav_title: Reducing Push Notification Payload Size
+nav_title: Reducing push notification payload size
 article_title: Reducing Push Notification Payload Size
 page_type: solution
 description: "This help article provides some tips to reduce the payload size of your push notifications if you're unable to launch a campaign or Canvas step due to push payload size limits."

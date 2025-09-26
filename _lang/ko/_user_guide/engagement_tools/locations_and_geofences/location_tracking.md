@@ -16,9 +16,9 @@ search_rank: 2
 
 앱에서 위치 수집을 사용 설정하려면 사용 중인 플랫폼의 개발자 가이드를 참조하세요.
 
-- [iOS][2]
-- [Android][3]
-- [웹][4]
+- [iOS]({{site.baseurl}}/developer_guide/analytics/tracking_location/?sdktab=swift)
+- [Android]({{site.baseurl}}/developer_guide/analytics/tracking_location/?sdktab=android)
+- [Web]({{site.baseurl}}/developer_guide/analytics/tracking_location/?sdktab=web)
 
 일반적으로 모바일 앱은 디바이스의 GPS 칩 및 기타 시스템(예: Wi-Fi 스캔)을 사용하여 사용자의 위치를 추적합니다. 웹 앱은 사용자의 위치를 추적하기 위해 WPS(와이파이 위치 시스템)를 사용할 것입니다. 이 모든 플랫폼은 사용자가 위치 추적에 옵트인해야 합니다. 사용자의 장치에서 Wi-Fi가 활성화되어 있는지 여부에 따라 위치 추적 데이터의 정확성이 영향을 받을 수 있습니다. Android 사용자는 다른 위치 모드를 선택할 수도 있습니다. '배터리 절약' 또는 '기기 전용' 모드를 사용하는 사용자는 부정확한 데이터를 가질 수 있습니다.
 
@@ -34,11 +34,11 @@ search_rank: 2
 
 위치 추적 데이터와 세그먼트를 사용하여 위치 기반 캠페인과 전략을 설정할 수 있습니다. 예를 들어, 특정 지역에 거주하는 사용자들을 위한 프로모션 캠페인을 진행하거나 더 엄격한 규제가 있는 지역의 사용자를 제외할 수 있습니다.
 
-위치 세그먼트 생성에 대한 자세한 내용은 위치 [타겟팅][1]을 참조하세요.
+Refer to [Location targeting]({{site.baseurl}}/user_guide/engagement_tools/segments/location_targeting/) for more information on creating a location segment.
 
 ## 기본 위치 속성 하드 설정
 
-API의 [`users/track` 엔드포인트][8]를 사용하여 표준 속성을 업데이트할 수도 있습니다. [`current_location`][9] 표준 어트리뷰트를 업데이트할 수도 있습니다. 예를 들면 다음과 같습니다:
+You can also use the [`users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) in our API to update the [`current_location`]({{site.baseurl}}/api/objects_filters/user_attributes_object/) standard attribute. 예를 들면 다음과 같습니다:
 
 ```
 https://[your_braze_rest_endpoint]/users/track
@@ -58,21 +58,28 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 기존의 비콘 또는 지오펜스 지원을 타겟팅 및 메시징 기능과 결합하면 사용자의 물리적 행동에 대한 더 많은 정보를 얻을 수 있어 그에 따라 메시지를 보낼 수 있습니다. 당신은 일부 파트너와 함께 위치 추적을 활용할 수 있습니다: 
 
-- [Radar][6]
-- [Infillion][10]
-- [Foursquare][7]
+- [Radar]({{site.baseurl}}/partners/message_personalization/location/radar/)
+- [Infillion]({{site.baseurl}}/partners/message_personalization/location/infillion/)
+- [Foursquare]({{site.baseurl}}/partners/message_personalization/location/foursquare/)
 
 ## 자주 묻는 질문
 
-위치 관련 자주 묻는 질문에 대한 답변은 위치 [FAQ에서][11] 확인하세요.
+### When does Braze collect location data?
 
-[1]: {{site.baseurl}}/user_guide/engagement_tools/segments/location_targeting/
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/location_tracking/
-[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/location_tracking/
-[4]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/location_tracking/
-[6]: {{site.baseurl}}/partners/data_augmentation/contextual_location/radar/
-[7]: {{site.baseurl}}/partners/data_augmentation/contextual_location/foursquare/
-[8]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/
-[9]: {{site.baseurl}}/api/objects_filters/user_attributes_object/
-[10]: {{site.baseurl}}/partners/message_personalization/location/infillion/
-[11]: {{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/faqs/#locations
+Braze only collects location when the application is open in the foreground. As a result, our `Most Recent Location` filter targets users based upon where they last opened the application (also referred to as session start).
+
+You should also keep the following nuances in mind:
+
+- If location is disabled, the `Most Recent Location` filter will show the last location recorded.
+- If a user has ever had a location stored on their profile, they will qualify for the `Location Available` filter, even if they've opted out of location tracking since then.
+
+### What's the difference between the Most Recent Device Locale and Most Recent Location filters?
+
+The `Most Recent Device Locale` comes from the user's device settings. For example, this appears for iPhone users in their device at **Settings** > **General** > **Language & Region**. This filter is used to capture language and regional formatting, such as dates and addresses, and is independent of the `Most Recent Location` filter.
+
+The `Most Recent Location` is the last known GPS location of the device. This is updated on session start and is stored on the user's profile.
+
+### If a user opts out of location tracking, will their old location data be removed from Braze?
+
+No. If a user has ever had a location stored on their profile, that data will not be automatically removed if they later opt out of location tracking.
+

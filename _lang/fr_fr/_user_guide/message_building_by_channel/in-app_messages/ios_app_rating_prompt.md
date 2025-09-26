@@ -24,7 +24,7 @@ Même si Apple exige que vous utilisiez l’invite native, vous pouvez cependant
 
 Avec cette approche, vous voulez encourager les utilisateurs à se rendre sur l’App Store pour ajouter un commentaire. Pour ce faire, créez une campagne de messages in-app qui inclut un [lien profond]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/) vers l'App Store.
 
-![Deux écrans de mobile côte à côte. Le premier est un message in-app demandant à l’utilisateur d’évaluer l’application sur l’App Store. Le second est la page iOS de l’App Store pour cette application.][1]
+![Deux écrans de mobile côte à côte. Le premier est un message in-app demandant à l’utilisateur d’évaluer l’application sur l’App Store. La seconde est la page de l'App Store iOS pour cette application.]({% image_buster /assets/img_archive/app_store_app_review.png %})
 
 ### Deuxième approche : Sensibilisation douce
 
@@ -32,7 +32,7 @@ Si vous ne voulez pas que vos utilisateurs quittent votre application, vous deve
 
 Pour connaître les étapes détaillées, consultez la section [Invite personnalisée d’évaluation dans l’App Store]({{site.baseurl}}/developer_guide/in_app_messages/customization/#swift_customizing-the-app-store-review-prompt).
 
-![Deux messages in-app côte à côte. Le premier sensibilise l’utilisateur à l’évaluation de l’application en leur demandant s’ils ont le temps d’évaluer l’application. Le deuxième est le message natif iOS d’évaluation dans l’App Store, affichant une échelle de cinq étoiles que l’utilisateur peut sélectionner pour évaluer l’application.][2]
+![Deux messages in-app côte à côte. Le premier sensibilise l’utilisateur à l’évaluation de l’application en leur demandant s’ils ont le temps d’évaluer l’application. Le second est le message d'évaluation natif de l'App Store d'iOS, affichant une échelle de cinq étoiles que l'utilisateur peut sélectionner pour évaluer l'application.]({% image_buster /assets/img_archive/prime_app_review.png %}).
 
 Les utilisateurs soumettront l’évaluation à l’aide de l’invite à l’évaluation dans l’App Store native et peuvent écrire et soumettre une évaluation sans quitter l’application.
 
@@ -44,5 +44,3 @@ Une alternative à la sensibilisation douce peut être d’afficher l’invite �
 Ne créez pas de messages in-app HTML personnalisés qui imitent l’invitation à l’évaluation de l’application iOS native, étant donné que le faire violerait les directives d’Apple.
 {% endalert %}
 
-[1]: {% image_buster /assets/img_archive/app_store_app_review.png %}
-[2]: {% image_buster /assets/img_archive/prime_app_review.png %}

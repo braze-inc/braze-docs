@@ -112,10 +112,9 @@ Le nom de domaine doit suivre ces paramètres :
 
 ### Validation supplémentaire requise
 
-L’étiquette finale du domaine doit être un domaine de niveau supérieur (TLD) valide déterminé par quelque chose après le point final (.). Ce TLD devrait figurer dans la [liste des TLD de l'ICANN][2]. Le validateur d'e-mails Braze vérifie uniquement que la syntaxe de l'e-mail est correcte selon l'expression régulière répertoriée dans cette section. Il ne détecte pas les fautes ou les adresses qui n’existent pas.
+L’étiquette finale du domaine doit être un domaine de niveau supérieur (TLD) valide déterminé par quelque chose après le point final (.). Ce TLD devrait figurer dans la [liste des TLD de l'ICANN](https://data.iana.org/TLD/tlds-alpha-by-domain.txt). Le validateur d'e-mails Braze vérifie uniquement que la syntaxe de l'e-mail est correcte selon l'expression régulière répertoriée dans cette section. Il ne détecte pas les fautes ou les adresses qui n’existent pas.
 
 {% alert important %}
 L’unicode est accepté uniquement pour la partie locale de l’adresse e-mail. L’unicode n’est pas accepté pour la partie domaine, mais il peut être encodé en Punycode.
 {% endalert %}
 
-[2]: https://data.iana.org/TLD/tlds-alpha-by-domain.txt

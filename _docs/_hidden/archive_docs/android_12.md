@@ -1,5 +1,5 @@
 ---
-nav_title: Android 12 Upgrade Guide
+nav_title: Android 12 upgrade guide
 article_title: Android 12 Upgrade Guide
 page_order: 9
 permalink: "/android_12/"

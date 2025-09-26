@@ -88,7 +88,7 @@ Braze 대시보드에는 애플리케이션에서 계측하는 커스텀 이벤�
 | [이메일]({{site.baseurl}}/user_guide/message_building_by_channel/email/about/) | 서식 있는 텍스트 편집기, 드래그 앤 드롭 편집기를 사용하거나 기존 HTML 템플릿 중 하나를 업로드하여 이메일을 작성하여 서식 있는 HTML 메시지를 전송하세요. |
 | [인앱 메시지]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/) | Braze의 맞춤형 기본 사용자 인터페이스를 사용하여 눈에 거슬리지 않는 인앱 알림을 전송하세요. |
 | [푸시]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/) | iOS용 애플 푸시 알림 서비스(APN)나 Android용 Firebase 클라우드 메시징(FCM)을 사용하여 메시징 캠페인이나 뉴스 항목에서 푸시 알림을 자동으로 트리거합니다. |
-| [SMS/MMS*]({{site.baseurl}}/user_guide/message_building_by_channel/sms/about_sms/) | SMS/MMS를 사용하여 거래 알림을 보내고, 프로모션을 공유하고, 미리 알림을 보내는 등의 작업을 수행할 수 있습니다. |
+| [SMS, MMS, and RCS]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs)* | SMS, MMS 또는 RCS를 사용하여 거래 알림을 보내고, 프로모션을 공유하고, 알림을 보내고, 그 이상을 수행하세요. |
 | [웹 푸시]({{site.baseurl}}/user_guide/message_building_by_channel/push/web) | 사용자가 현재 사이트에서 활성 상태가 아니더라도 웹 브라우저 알림을 전송합니다. |
 | [웹훅]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/) | 웹훅을 사용하여 앱 이외의 작업을 트리거해 다른 시스템 및 애플리케이션에 실시간 데이터를 제공합니다. |
 | [WhatsApp*]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/) | 인기 있는 P2P 메시징 플랫폼을 활용하여 사용자 및 고객과 직접 소통하세요: WhatsApp. |
@@ -117,7 +117,7 @@ Braze는 빠르고 쉽게 시작하고 실행할 수 있도록 설계되었습�
 
 | 리소스 | 학습 내용|
 |---|---|
-| [SDK 디버깅]({{site.baseurl}}/developer_guide/sdk_integration/debugging) | 통합 문제 해결 시, SDK 디버깅 툴이 유용한 도구가 될 것입니다. 항상 준비해 두세요! |
+| [SDK 디버깅]({{site.baseurl}}/developer_guide/sdk_integration/debugging) | 통합 문제를 해결할 때, SDK 디버깅 툴이 유용한 도구가 될 것입니다. 항상 준비해 두세요! |
 | [Braze 공용 GitHub](https://github.com/braze-inc/) | 자세한 통합 정보와 샘플 코드는 GitHub 리포지토리에서 확인할 수 있습니다. |
 | [Android SDK GitHub 리포지토리](https://github.com/braze-inc/braze-android-sdk/) | Android SDK GitHub 리포지토리. |
 | [Android SDK 참조](https://appboy.github.io/appboy-android-sdk/kdoc/index.html) | Android SDK용 클래스 문서입니다. |

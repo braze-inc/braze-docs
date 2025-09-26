@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Create Email Template"
+nav_title: "POST: Create email template"
 article_title: "POST: Create Email Templates"
 search_tag: Endpoint
 page_order: 4

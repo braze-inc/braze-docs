@@ -50,7 +50,7 @@ Appboy.sharedInstance()?.logPurchase("your product ID", inCurrency: "USD", atPri
 
 Sie können Metadaten über Käufe hinzufügen, indem Sie entweder ein [Array mit Event-Eigenschaften]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events#nested-objects) oder ein `NSDictionary` mit `NSNumber`, `NSString` oder `NSDate`-Werten übergeben.
 
-Weitere Einzelheiten finden Sie in der [Dokumentation der iOS-Klasse logpurchase](http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#aaca4b885a8f61ac9fad3936b091448cc "w/ properties").
+Weitere Einzelheiten finden Sie in der [Dokumentation zur iOS-Klasse](http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#aaca4b885a8f61ac9fad3936b091448cc).
 
 ### Menge hinzufügen
 Sie können eine Menge zu Ihren Einkäufen hinzufügen, wenn Kunden denselben Einkauf mehrmals in einer einzigen Kasse tätigen. Sie können dies erreichen, indem Sie eine `NSUInteger` für die Menge eingeben.
@@ -59,7 +59,7 @@ Sie können eine Menge zu Ihren Einkäufen hinzufügen, wenn Kunden denselben Ei
 * Methoden ohne Mengeneingabe haben standardmäßig den Mengenwert 1.
 * Methoden mit einer Mengeneingabe haben keinen Standardwert und **müssen** eine Mengeneingabe erhalten, damit das SDK einen Kauf protokollieren kann.
 
-Weitere Einzelheiten finden Sie in der [Dokumentation zur iOS-Klasse logpurchase](http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ab50403068be47c0acba9943583e259fa "w/ quantity class").
+Weitere Einzelheiten finden Sie in der [Dokumentation zur iOS-Klasse](http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ab50403068be47c0acba9943583e259fa).
 
 {% tabs %}
 {% tab OBJECTIVE-C %}

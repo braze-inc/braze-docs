@@ -14,11 +14,11 @@ Lorsque le chemin gagnant est activé dans une étape des chemins d'expérience,
 
 ## Utilisation du chemin gagnant
 
-### Étape 1 : Ajouter un chemin d'expérience
+### Étape 1 : Ajouter une étape des chemins chemins d'expérience
 
 Ajoutez un [chemin d'expérience]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/) à votre canvas, puis activez l'option **Chemin gagnant**.
 
-![Paramètres des chemins d’expérience intitulés "Distribute Subsequent Users to Winning Path" (Envoyez les utilisateurs suivants dans le chemin gagnant). La section comprend une bascule pour le chemin gagnant et des options pour configurer l’événement de conversion et la fenêtre d’expérience.][1]
+![Paramètres des chemins d’expérience intitulés "Distribute Subsequent Users to Winning Path" (Envoyez les utilisateurs suivants dans le chemin gagnant). La section comprend un basculeur pour le chemin gagnant et des options pour configurer l'événement de conversion et la fenêtre d'expérience.]({% image_buster /assets/img/experiment_step/experiment_winning_path_recurring.png %})
 
 ### Étape 2 : Configurer les paramètres du chemin gagnant
 
@@ -26,19 +26,15 @@ Pour définir un chemin gagnant, spécifiez l’événement de conversion devant
 
 Ensuite, définissez la **fenêtre d'expérience**. La **fenêtre d'expérience** spécifie la durée de l'expérience avant que le chemin gagnant ne soit déterminé et que tous les utilisateurs qui suivent ne soient envoyés sur ce chemin. Cette fenêtre débute au moment où le premier utilisateur accède à l’étape.
 
-![][2]
+![Paramètres du chemin d'expérience gagnante avec l'événement de conversion "Clics" sélectionné pour une fenêtre d'expérience de 12 heures.]({% image_buster /assets/img/experiment_step/experiment_winning_settings.png %})
 
 ### Étape 3 : Déterminer la solution de secours {#statistical-significance}
 
 Par défaut, si les résultats du test ne sont pas suffisants pour déterminer un vainqueur statistiquement significatif, tous les utilisateurs futurs seront envoyés sur le chemin le plus performant.
 
-Vous pouvez également sélectionner **Continuer à envoyer le mélange de chemins à tous les futurs utilisateurs**.
+Vous pouvez également sélectionner **Continuer à envoyer le mélange de chemins à tous les futurs utilisateurs**. Cette option enverra les futurs utilisateurs dans la combinaison de chemins selon les pourcentages spécifiés dans la distribution des chemins d'expérience.
 
-![][6]
-
-Cette option enverra les futurs utilisateurs dans la combinaison de chemins selon les pourcentages spécifiés dans la distribution des chemins d'expérience.
-
-![Pourcentages spécifiés dans la distribution de l'expérience][3]
+!["Continuer à envoyer à tous les futurs utilisateurs la combinaison de chemins" sélectionné comme ce qui arrivera aux utilisateurs si le résultat du test n'est pas statistiquement significatif.]({% image_buster /assets/img/experiment_step/experiment_winning_statistical.png %})
 
 {% alert note %}
 Un groupe retardé apparaîtra dans votre distribution de chemins uniquement si votre canvas est configuré pour une entrée unique et que votre étape d'expérience comporte trois chemins ou moins. Les toiles récurrentes et déclenchées n'auront pas de groupe de retard lorsque le chemin gagnant est activé.
@@ -65,11 +61,11 @@ Si l'option Chemin gagnant est activée, la vue analytique est séparée en deux
 
 Lorsque vous utilisez des parcours gagnants dans un canvas où les utilisateurs ne sont autorisés à entrer qu'une seule fois, un groupe de retard est automatiquement inclus. Pendant la durée de l'expérience, un pourcentage d'utilisateurs sera maintenu dans le groupe de retard pendant que les autres utilisateurs entreront dans vos chemins d'expérience.
 
-![Étape d'expérience avec un groupe retardé pour le chemin gagnant][4]{: style="max-width:75%"}
+![Étape des chemins d'expérience avec un groupe interne pour le chemin gagnant]({% image_buster /assets/img/experiment_step/experiment_one_time.png %}){: style="max-width:75%"}
 
 Lorsque le test est terminé et qu'un chemin gagnant est déterminé, les utilisateurs affectés au groupe de retardement seront dirigés vers le chemin choisi et continueront à travers le Canvas.
 
-![Étape d'expérience d'un groupe retardé envoyé sur le chemin gagnant][5]{: style="max-width:75%"}
+![Étape des chemins d'expérience d'un groupe interne envoyé sur le chemin gagnant]({% image_buster /assets/img/experiment_step/experiment_one_time_results.png %}){: style="max-width:75%"}
 
 ### Diffusion selon l'heure locale
 
@@ -77,9 +73,3 @@ Nous vous déconseillons d’utiliser la livraison à l'heure locale dans les Ca
 
 Sinon, si vous souhaitez utiliser la diffusion selon l’heure locale, utilisez une fenêtre d’expérience de 24 à 48 heures ou plus. De cette manière, les utilisateurs des premiers fuseaux horaires entrent dans le Canvas et déclenchent le démarrage de l'expérience, mais il reste encore beaucoup de temps dans la fenêtre d'expérience. Les utilisateurs situés dans des fuseaux horaires plus tardifs auront encore suffisamment de temps pour entrer dans le Canvas et l'étape des chemins d'expérience avec des voies gagnantes et éventuellement se convertir avant l'expiration de la fenêtre d'expérience.
 
-[1]: {% image_buster /assets/img/experiment_step/experiment_winning_path_recurring.png %}
-[2]: {% image_buster /assets/img/experiment_step/experiment_winning_settings.png %}
-[3]: {% image_buster /assets/img/experiment_step/experiment_path_distribution.png %}
-[4]: {% image_buster /assets/img/experiment_step/experiment_one_time.png %}
-[5]: {% image_buster /assets/img/experiment_step/experiment_one_time_results.png %}
-[6]: {% image_buster /assets/img/experiment_step/experiment_winning_statistical.png %}

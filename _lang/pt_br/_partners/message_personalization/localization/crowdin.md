@@ -12,6 +12,10 @@ search_tag: Partner
 
 > O Crowdin é um software baseado em nuvem para gerenciamento de localização. Usando o Crowdin, você pode traduzir seus apps para Android e iOS, site, capturas de tela de lojas e outros tipos de conteúdo. A tradução pode ser feita por sua equipe interna, por uma agência de tradução ou usando máquinas de tradução automática.
 
+
+
+## Sobre a integração
+
 A integração entre a Braze e o Crowdin permite traduzir modelos de e-mail e blocos de conteúdo. Você também pode sincronizar o conteúdo da sua conta da Braze com um projeto do Crowdin e redirecionar as traduções para a Braze.
 
 ## Pré-requisitos
@@ -56,14 +60,12 @@ Depois de fornecer suas credenciais da Braze, você verá dois painéis. Selecio
 
 No modo Editor do Crowdin, o conteúdo sincronizado de sua conta Braze pode ser exibido para seus tradutores como uma lista de strings ou como uma prévia do arquivo.
 
-![Uma imagem da aparência do criador de e-mail do Crowdin Editor com algumas traduções básicas adicionadas.][2]
+
 
 ### Etapa 3: Adicionar traduções ao Braze
 
 Assim que as traduções forem concluídas, abra o app Braze no Crowdin, selecione os arquivos traduzidos (para cada arquivo, você pode escolher todos os idiomas de direcionamento ou apenas alguns específicos) no painel esquerdo e clique em **Sync to Braze**.
 
-![Uma imagem de um usuário selecionando seus arquivos de tradução e sincronizando-os com o Braze.][3]
 
-[1]: {% image_buster /assets/img/crowdin/copy_api_key_identifier.png %}
-[2]: {% image_buster /assets/img/crowdin/crowdin_editor_email_preview.png %}
-[3]: {% image_buster /assets/img/crowdin/sync_translations.png %}
+
+

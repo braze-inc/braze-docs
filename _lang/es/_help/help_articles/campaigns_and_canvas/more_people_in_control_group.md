@@ -12,7 +12,7 @@ tool: Canvas
 
 Al crear tu Canvas, puede que esperases que tu audiencia se dividiera a partes iguales entre tu grupo de control y tu grupo de variantes, como en el siguiente [ejemplo](#example). Podemos explicarte por qué y cómo solucionarlo.
 
-El grupo al que se une un usuario depende de su configuración. Puede ser el grupo de control o el grupo variante. Un usuario entrará en un Canvas cuando cumpla todos tus criterios definidos en el [Paso en Canvas][1]. Al configurar tu Canvas, define qué porcentaje de usuarios entrará en cada variante y el grupo de control.
+El grupo al que se une un usuario depende de su configuración. Puede ser el grupo de control o el grupo variante. Un usuario entrará en un Canvas cuando cumpla todos tus criterios definidos en el [Paso de entrada]({{site.baseurl }}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2-use-the-entry-wizard-to-set-up-your-canvas). Cuando configures tu Canvas, define qué porcentaje de usuarios entrará en cada variante y el grupo de control.
 
 Si tu grupo de control es grande en comparación con tu grupo de variantes (y ésta no es tu intención), te recomendamos lo siguiente:
 1. Configura tu filtro de audiencia de entrada como "Está habilitado el push".
@@ -27,13 +27,13 @@ Imaginemos el siguiente escenario:
 - El primer paso de la variante es una notificación push.
 - El 90 % de los usuarios fueron seleccionados para entrar en la variante, y el 10 %, para entrar en el grupo de control.
 
-![Ejemplo de Canvas][41]
+![Ejemplo de Canvas]({% image_buster /assets/img_archive/trouble15.png %})
 
 En este caso, el 90% de los usuarios que entren en el Canvas entrarán en la variante. 
 
 Si repasamos los usuarios activos, podemos ver que, aunque contiene 39 800 usuarios, solo el 73 % de ellos tienen habilitación push:
 
-![Audiencia de entrada][42]
+![Audiencia de entrada]({% image_buster /assets/img_archive/trouble16.png %})
 
 Esto significa que, aunque hayamos especificado que el 90% de los usuarios introduzcan la variante, no todos esos usuarios pueden recibir realmente una notificación push. Estos usuarios que no pueden recibir una notificación push seguirán entrando en la variante a pesar de todo.
 
@@ -41,6 +41,3 @@ Esto significa que, aunque hayamos especificado que el 90% de los usuarios intro
 
 _Última actualización el 3 de diciembre de 2020_
 
-[1]: {{site.baseurl }}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2-use-the-entry-wizard-to-set-up-your-canvas
-[41]: {% image_buster /assets/img_archive/trouble15.png %}
-[42]: {% image_buster /assets/img_archive/trouble16.png %}

@@ -12,7 +12,7 @@ tool: Canvas
 
 > Os comentários no Canvases podem ser um ótimo espaço de colaboração para a sua equipe de marketing identificar, discutir e revisar os detalhes mais finos do Canvas. Ao criar um Canva, você pode fazer e gerenciar comentários para identificar essas áreas que podem exigir feedback adicional de seus colegas.
 
-![][1]{: style="float:right;max-width:70%;margin-left:15px;"}
+![]({% image_buster /assets/img_archive/canvas_comments.png %}){: style="float:right;max-width:70%;margin-left:15px;"}
 
 ## Benefícios
 
@@ -48,7 +48,7 @@ Você não poderá excluir os comentários ou tópicos de outro usuário. No ent
 
 ## Gerenciamento de notificações
 
-![][2]{: style="float:right;max-width:70%;margin-left:15px;"}
+![]({% image_buster /assets/img_archive/canvas_notifications.png %}){: style="float:right;max-width:70%;margin-left:15px;"}
 
 Para gerenciar as notificações por e-mail de um Canva, abra a barra lateral e clique em <i class="fa-solid fa-bell"></i> **Notificações**. Aqui, você pode selecionar suas preferências de notificação.
 
@@ -59,5 +59,3 @@ Para desativar as notificações de comentários de um Canva, selecione **Nenhum
 Note que a opção **Comments within Canvases** nessas preferências de notificação controla a aceitação ou não de notificações em todos os Canvases. Portanto, se você desativar essa configuração, não receberá notificações por e-mail sobre nenhuma ação de comentário.
 
 
-[1]: {% image_buster /assets/img_archive/canvas_comments.png %}
-[2]: {% image_buster /assets/img_archive/canvas_notifications.png %}

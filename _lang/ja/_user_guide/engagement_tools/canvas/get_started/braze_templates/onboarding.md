@@ -46,7 +46,7 @@ tool: Canvas
 
 次に、コンバージョンイベントを割り当てよう。コンバージョンイベントは、キャンバスの成功を測定するための指標の一種である。**カスタムイベント名**]で、[**メールクリック]**をカスタムイベントとして選択する。
 
-![1次コンバージョンイベント - コンバージョンタイプが「カスタムイベントを実行」で、カスタムイベント名が「メールクリック」のイベント。コンバージョンの期限は4日間である。][1]
+![1次コンバージョンイベント - コンバージョンタイプが「カスタムイベントを実行」で、カスタムイベント名が「メールクリック」のイベント。4 日間の変換期限があります。]({% image_buster /assets/img/canvas_templates/onboarding1.png %})
 
 つまり、新規ユーザーがウェルカムメールをクリックできるのは4日以内ということになる。この場合、新規ユーザーにはPantsLabyrinthにエンゲージメントを感じてもらい、季節の衣料品の定期配送をサブスクライバーになってもらいたい。
 
@@ -56,7 +56,7 @@ PantsLabyrinthの新規ユーザーをターゲットにしているため、キ
 
 次に**エントリ期間**を調整して、ユーザーがいつキャンバスにエントリできるかを決定します。例えば10月下旬に PantsLabyrinth のサブスクリプションが公開されるとします。ここで開始時刻を **2024/10/28 8:00 am** に設定します。オプションで、ユーザーのローカルタイムゾーンでユーザーがこのキャンバスにエントリできるようにすることもできます。
 
-![2024年10月28日午前8時開始のエントリーウィンドウ。ユーザーはこのメッセージをローカルタイムゾーンで入力する。][4]
+![2024年10月28日午前8時開始のエントリーウィンドウ。ユーザは、このメッセージをローカルタイムゾーンに入力します。]({% image_buster /assets/img/canvas_templates/onboarding4.png %})
 
 ### ステップ 4:オーディエンスをターゲットに設定する
 
@@ -82,7 +82,7 @@ PantsLabyrinthの新規ユーザーをターゲットにしているため、キ
 
 **Audience Split** という名前のオーディエンスパスステップで、エンゲージメントのあるユーザーに合わせてフィルターをカスタマイズできます。このテンプレートのフィルターは「**実行内容: メールをクリックした ステップ ウェルカムメール**」であり、ユーザーが、ウェルカムメールをクリックしたユーザーとクリックしていないユーザーに分類されます。
 
-![Engaged Users のパスと Everyone Else のパスがある「Audience Split」ステップ。][2]{: style="max-width:70%;"}
+![Engaged Users のパスと Everyone Else のパスがある「Audience Split」ステップ。]({% image_buster /assets/img/canvas_templates/onboarding2.png %}){: style="max-width:70%;"}
 
 オンライン衣料小売店として、PantsLabyrinthはモバイルユーザーのアクティブグループも持っている。別のオンボーディングキャンバスで、モバイルユーザーを特定して次のセグメントに分類する以下のフィルターを選択することもできます。
 
@@ -101,7 +101,3 @@ PantsLabyrinthの新規ユーザーをターゲットにしているため、キ
 キャンバスの起動前後に考慮すべき点については、[起動前と起動後のチェックリスト]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/pre_post_launch_checklist/#things-to-consider-before-launch)をご確認ください。
 {% endalert %}
 
-[1]: {% image_buster /assets/img/canvas_templates/onboarding1.png %}
-[2]: {% image_buster /assets/img/canvas_templates/onboarding2.png %}
-[3]: {% image_buster /assets/img/canvas_templates/onboarding3.png %}
-[4]: {% image_buster /assets/img/canvas_templates/onboarding4.png %}

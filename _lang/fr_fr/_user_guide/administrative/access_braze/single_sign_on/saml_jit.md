@@ -11,10 +11,6 @@ description: "Cet article vous expliquera comment configurer le provisionnement 
 
 > L'approvisionnement juste-à-temps fonctionne avec [SAML SSO]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up/) pour permettre aux nouveaux utilisateurs du tableau de bord de créer un compte Braze lors de leur première connexion. Cela élimine le besoin pour les administrateurs de créer manuellement un compte pour un nouvel utilisateur de tableau de bord, de choisir leurs autorisations, de les affecter à un espace de travail et d'attendre qu'ils activent leur compte.
 
-{% alert note %}
-La fourniture SAML juste-à-temps est actuellement en accès anticipé. Contactez votre CSM Braze si vous souhaitez participer à l’accès anticipé.
-{% endalert %}
-
 ## Conditions préalables
 
 Cette fonctionnalité nécessite que l’authentification unique (SSO) SAML soit configurée et intégrée, et n'est pas compatible avec l’authentification unique de Google.

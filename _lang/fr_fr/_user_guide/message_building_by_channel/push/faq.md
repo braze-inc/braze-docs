@@ -16,9 +16,9 @@ channel:
 
 Lorsqu'un utilisateur se déconnecte d'un appareil ou d'un site web, il reste joignable par push jusqu'à ce qu'un autre utilisateur se connecte. À ce moment-là, le jeton push est réattribué au nouvel utilisateur. En effet, chaque appareil ne peut avoir qu'un seul abonnement push actif par appli ou site web.
 
-Lorsqu'un jeton de poussée est réattribué, la modification est reflétée dans le **journal des modifications de** la **poussée** du profil utilisateur. Vous pouvez le trouver en allant dans l'onglet **Engagement** dans le profil utilisateur.
+Lorsqu'un jeton de poussée est réattribué, la modification est reflétée dans le **journal des modifications de la poussée** du profil utilisateur. Vous pouvez le trouver en allant dans l'onglet **Engagement** dans le profil utilisateur.
 
-![Le "Push Changelog" dans la section "Contact Settings".][1]{: style="max-width:50%;"}
+![Le "Push Changelog" dans la section "Contact Settings".]({% image_buster /assets/img/push_changelog_faq.png %}){: style="max-width:50%;"}
 
 ### Pourquoi un utilisateur bénéficiant d'un abonnement n'a-t-il pas de jeton de poussée ?
 
@@ -32,6 +32,5 @@ Cela peut se produire si le jeton push de l'utilisateur a été réattribué à 
 Si vous souhaitez que le jeton de poussée soit réattribué à l'utilisateur d'origine :
 
 1. Demandez à l'utilisateur d'origine de se connecter au profil avec le jeton de poussée manquant.
-2. Déclencher un nouvel envoi push. Le jeton sera alors redirigé vers le compte si l'option "push" est toujours activée au niveau de l'appareil.
+2. Déclencher un nouvel envoi push. Le jeton sera alors transféré au compte si le mode push est toujours activé au niveau de l'appareil.
 
-[1]: {% image_buster /assets/img/push_changelog_faq.png %}

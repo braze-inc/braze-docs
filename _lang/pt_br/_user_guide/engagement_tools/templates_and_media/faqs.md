@@ -32,15 +32,15 @@ Não, a biblioteca de mídia não é compatível com o corte de imagens GIF.
 
 É possível cortar uma imagem existente selecionando-a na biblioteca de mídia e clicando em **Crop & Save New Image (Cortar e salvar nova imagem**). 
 
-![][2]{: height="75%" width="75%"}
+![Prévia da imagem da biblioteca de mídia.]({% image_buster /assets/img_archive/media_library_crop1.png %}){: height="75%" width="75%"}
 
 Em seguida, você será redirecionado para um criador de cortes, onde poderá selecionar o tipo de proporção e editar o nome da nova imagem. Quando você clicar em **Salvar**, sua nova imagem poderá ser usada.
 
-![][3]{: height="75%" width="75%"}
+![Janela para cortar e salvar a imagem da biblioteca de mídia.]({% image_buster /assets/img_archive/media_library_crop2.png %}){: height="75%" width="75%"}
 
 ### Minha imagem continua expirando quando tento fazer upload. O que posso fazer sobre isso?
 
-Isso pode acontecer por vários motivos, mas uma solução comum é certificar-se de que sua imagem esteja otimizada antes de tentar fazer upload. Isso significa passar sua imagem por um otimizador de imagens, como o [ImageOptim][5].
+Isso pode acontecer por vários motivos, mas uma solução comum é certificar-se de que sua imagem esteja otimizada antes de tentar fazer upload. Isso significa passar sua imagem por um otimizador de imagens, como o [ImageOptim](https://imageoptim.com/mac).
 
 Além disso, se sua imagem foi criada no Photoshop (ou em um software semelhante) e tem muitas camadas, mesclar e reduzir o número de camadas também pode ajudar.
 
@@ -48,6 +48,3 @@ Além disso, se sua imagem foi criada no Photoshop (ou em um software semelhante
 
 Isso ocorre porque a maioria dos criadores tem restrições quanto ao tamanho da proporção da imagem permitida.
 
-[2]: {% image_buster /assets/img_archive/media_library_crop1.png %}
-[3]: {% image_buster /assets/img_archive/media_library_crop2.png %}
-Daqui a [5]: https://imageoptim.com/mac

@@ -42,11 +42,11 @@ glossary_tags:
   - name: Eメールリスト
   - name: メールテンプレート
   - name: KPI
-  - name: ニュースフィード
   - name: 購入
   - name: 環境設定センター
   - name: メッセージをスケジュール
   - name: SCIM
+  - name: SDK認証
   - name: セグメント
   - name: メッセージを送る
   - name: SMS
@@ -312,18 +312,6 @@ glossaries:
     description: 各日付のアンインストールの総数を日次で取得します。
     tags:
       - KPI
-  - name: "<a href='/docs/api/endpoints/export/news_feed/get_news_feed_card_analytics/'>/feed/data_series</a>"
-    description: カードのエンゲージメント統計情報を日次で取得する。
-    tags:
-      - News Feed
-  - name: "<a href='/docs/api/endpoints/export/news_feed/get_news_feed_card_details/'>/feed/details</a>"
-    description: カードの関連情報を取得する。
-    tags:
-      - News Feed
-  - name: "<a href='/docs/api/endpoints/export/news_feed/get_news_feed_cards/'>/feed/list</a>"
-    description: ニュースフィードカードのリストをエクスポートする。各カードには名前とカードAPI識別子が含まれる。
-    tags:
-      - News Feed
   - name: "<a href='/docs/api/endpoints/sms/post_remove_invalid_numbers/'>/sms/invalid_phone_numbers/remove</a>"
     description: Brazeの無効リストから「無効」な電話番号を削除する。これを使用して、電話番号が無効とマークされた後、それらの電話番号を再検証できます。
     tags:
@@ -409,11 +397,11 @@ glossaries:
     tags:
       - Catalogs
   - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/put_update_catalog_item/'>/catalogs/{catalog_name}/items/{item_id}</a>"
-    description: カタログの項目を置き換える。
+    description: カタログの項目を置換します。
     tags:
       - Catalogs
   - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/asynchronous/put_update_catalog_items/'>/catalogs/{catalog_name}/items/</a>"
-    description: カタログの複数の項目を置き換える。
+    description: カタログの複数の項目を置換します。
     tags:
       - Catalogs
   - name: "<a href='/docs/api/endpoints/catalogs/catalog_fields/asynchronous/post_create_catalog_fields/'>/catalogs/{catalog_name}/fields/</a>"
@@ -437,7 +425,7 @@ glossaries:
     tags:
       - SCIM
   - name: "<a href='/docs/get_see_user_account_information/'>/scim/v2/Users/{id}</a>"
-    description: リソースIDを指定して、既存のダッシュボードユーザーアカウントを検索する。
+    description: リソース ID を指定して、既存のダッシュボードユーザーアカウントを検索する。
     tags:
       - SCIM
   - name: "<a href='/docs/post_update_existing_user_account/'>/scim/v2/Users/{id}</a>"
@@ -464,4 +452,20 @@ glossaries:
     description: 同期ステータスのリストを返す。
     tags:
       - Cloud Data Ingestion
+  - name: "<a href='/docs/api/endpoints/sdk_authentication/post_create_sdk_authentication_key/'>/app_group/sdk_authentication/create</a>"
+    description: アプリ用に新しい SDK 認証キーを作成する。
+    tags:
+      - SDK Authentication
+  - name: "<a href='/docs/api/endpoints/sdk_authentication/get_sdk_authentication_keys/'>/app_group/sdk_authentication/keys</a>"
+    description: アプリの SDK 認証キーをリストアップする。
+    tags:
+      - SDK Authentication
+  - name: "<a href='/docs/api/endpoints/sdk_authentication/put_primary_sdk_authentication_key/'>/app_group/sdk_authentication/primary</a>"
+    description: SDK 認証キーをアプリのプライマリキーとして設定します。
+    tags:
+      - SDK Authentication
+  - name: "<a href='/docs/api/endpoints/sdk_authentication/delete_sdk_authentication_key/'>/app_group/sdk_authentication/delete</a>"
+    description: アプリの SDK 認証キーを削除する。
+    tags:
+      - SDK Authentication  
 ---

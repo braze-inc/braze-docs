@@ -30,6 +30,9 @@ Braze는 iOS, Android 및 웹 플랫폼에서 기능 플래그를 지원하며, 
 
 필요한 대부분의 노력은 엔지니어링 팀이 출시하려는 새로운 기능을 빌드하는 작업과 관련됩니다. 하지만 기능 플래그를 추가하는 경우 앱 또는 웹사이트의 코드에서 `IF`/`ELSE` 문만큼이나 간단합니다.
 
+{% tabs %}
+{% tab 자바스크립트 %}
+
 ```javascript
 import { getFeatureFlag } from "@braze/web-sdk";
 
@@ -40,6 +43,31 @@ else {
     // Show the old homepage
 }
 ```
+
+{% endtab %}
+{% tab Java %}
+
+```java
+if (braze.getFeatureFlag("new_shopping_cart").getEnabled()) {
+  // Show the new homepage your team has built
+} else {
+  // Show the old homepage
+}
+```
+
+{% endtab %}
+{% tab 코틀린 %}
+
+```kotlin
+if (braze.getFeatureFlag("new_shopping_cart")?.enabled == true) {
+  // Show the new homepage your team has built
+} else {
+  // Show the old homepage
+}
+```
+
+{% endtab %}
+{% endtabs %}
 
 ### 기능 플래그가 마케팅 팀에 어떻게 도움이 될 수 있습니까? {#marketing-teams}
 

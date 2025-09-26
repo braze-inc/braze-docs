@@ -1,5 +1,5 @@
 ---
-nav_title: Baidu Integration
+nav_title: Baidu integration
 article_title: Baidu Push Notification Integration for Android
 platform: Android
 permalink: /baidu_integration/

@@ -1,5 +1,5 @@
 ---
-nav_title: Messaging Users
+nav_title: Messaging users
 article_title: Targeting Users for Predictive Churn
 description: "This reference article covers potential next steps after you have created a churn prediction such as implementing filter and strategic considerations."
 page_order: 1.2

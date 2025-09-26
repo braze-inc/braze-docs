@@ -34,18 +34,18 @@ Você pode selecionar um gatilho para que suas mensagens no app sejam disparadas
 
 Depois que as postergações passam e as opções de público são verificadas, as mensagens no app são definidas para serem transmitidas quando um usuário chega à etapa Mensagem. Se um usuário iniciar uma sessão e executar o evento de gatilho para a mensagem no app, o usuário verá a mensagem no app. 
 
-Para etapas do Canva que têm entrada acionada por ação, os usuários podem entrar no Canvas no meio da sessão. As mensagens no app não são definidas para serem ativadas até que uma sessão seja iniciada, portanto, se um usuário estiver no meio da sessão quando chegar à etapa Mensagem, ele não receberá a mensagem no app até que inicie outra sessão e dispare o comando relevante.
+Para etapas do Canva que têm entrada acionada por ação, os usuários podem entrar no Canvas no meio da sessão. As mensagens no app não são definidas para serem ativadas até que uma sessão seja iniciada, portanto, se um usuário estiver no meio da sessão quando chegar à etapa Mensagem, ele não receberá a mensagem no app até que inicie outra sessão e dispare o gatilho relevante.
 
 ## Expiração de mensagens no app
 
-No criador de mensagens no app, você pode escolher quando a mensagem no app expirará. Durante esse tempo, a mensagem no app ficará aguardando para ser visualizada até atingir a data de vencimento. Depois que a mensagem no app é enviada, ela pode ser visualizada uma única vez.
+Você pode escolher quando a mensagem no app expirará. Durante esse tempo, a mensagem no app ficará aguardando para ser visualizada até atingir a data de vencimento. Depois que a mensagem no app é enviada, ela pode ser visualizada uma única vez.
 
-![]({% image_buster /assets/img_archive/canvas_expiration2.png %}){: style="max-width:85%"}
+![A seção Controles de Mensagens de uma etapa de Mensagem para uma mensagem no app. A mensagem no app expirará três dias após a etapa estar disponível.]({% image_buster /assets/img_archive/canvas_expiration2.png %}){: style="max-width:90%"}
 
 | Opção | Descrição | Exemplo |
 |---|---|---|
 | **Uma duração após a etapa está disponível** | Define a mensagem no app para expirar em relação a quando a etapa se torna disponível para o usuário. | Uma mensagem no app com expiração de dois dias ficaria disponível após o término da postergação da etapa e a verificação das opções do público. Em seguida, ficaria disponível por dois dias (48 horas) e, durante esses dois dias, os usuários poderão ver a mensagem no app se abrirem o aplicativo. |
-| **Em uma data e horário específicas** | Selecione uma data e hora específicas em que a mensagem no app não estará mais disponível. | Se você tiver uma venda que termine em 30 de novembro de 2024, selecione essa opção para que os usuários não vejam mais a mensagem no app associada quando a venda terminar. |
+| **Em uma data e horário específicas** | Selecione uma data e hora específicas em que a mensagem no app não estará mais disponível. | Se tiver uma venda que termina em 30 de novembro de 2024, selecione essa opção para que os usuários não vejam mais a mensagem no app associada quando a venda terminar. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## Casos de uso
@@ -167,7 +167,7 @@ Um usuário pode disparar duas mensagens no app dentro do seu Canva ao mesmo tem
 
 Selecione **Definir prioridade exata** e arraste diferentes etapas do Canva para reordenar sua prioridade para o Canvas. Por padrão, as primeira etapas de uma variante do canva serão exibidas antes das últimas. Depois que as etapas estiverem em sua ordem preferida de priorização, selecione **Aplicar classificação**.
 
-![O classificador de prioridades com duas etapas: "Primeiro IAM" e "Outro IAM".]({% image_buster /assets/img_archive/canvas_priority2.png %}){: style="max-width:85%"}
+![O classificador de prioridades com duas etapas: "Welcome IAM" e "Followup IAM".]({% image_buster /assets/img_archive/canvas_priority2.png %}){: style="max-width:85%"}
 
 ### Fazer alterações em rascunhos de telas ativas
 
@@ -175,7 +175,7 @@ Se você fizer alterações na prioridade de mensagens no app em **Configuraçõ
 
 ## Comportamento de avanço
 
-As etapas de mensagens avançam automaticamente todos os usuários que entram na etapa. Observe que ele não espera que a mensagem no app seja disparada ou exibida. Não há necessidade de especificar o comportamento de avanço de mensagens, o que simplifica a configuração da etapa geral.
+As etapas de mensagens avançam automaticamente todos os usuários que entram na etapa. Note que ele não espera que a mensagem no app seja disparada ou exibida. Não há necessidade de especificar o comportamento de avanço de mensagens, o que simplifica a configuração da etapa geral.
 
 Quando um usuário entra em uma etapa de mensagem no app, ele sai dela imediatamente, em vez de ficar retido na janela de expiração. Nesse caso, ter uma etapa de postergação na jornada do usuário pode ser útil.
 
@@ -213,15 +213,15 @@ Quando a opção **Todo o público** for selecionada, a mensagem no app ficará 
 
 ## Ações de gatilho
 
-Você pode escolher entre as seguintes ações-gatilho para direcionar seus usuários:
+É possível escolher entre as seguintes ações-gatilho para direcionar seus usuários:
 
-- **Faça a compra:** Direcionamento a usuários que fazem qualquer compra ou uma compra específica
+- **Faça a compra:** Direcionamento para usuários que fazem qualquer compra ou uma compra específica
 - **Iniciar sessão:** Direcionamento para usuários que iniciam uma sessão em qualquer aplicativo ou em um aplicativo específico
-- **Executar evento personalizado:** Direcionamento para usuários que realizam o evento personalizado selecionado
+- **Realizar evento personalizado:** Direcionamento para usuários que realizam o evento personalizado selecionado
 
 Um usuário precisa entrar na etapa do Canva, iniciar uma sessão e, em seguida, disparar para receber uma mensagem no app. Isso significa que não há suporte para atualizações no meio da sessão. Por exemplo, se o disparo for para iniciar uma sessão, o usuário só precisará entrar na etapa do Canva e iniciar uma sessão para receber a mensagem no app. Se o disparador não for para iniciar uma sessão, o usuário deverá entrar na etapa do Canva, iniciar uma sessão e, em seguida, executar o disparador para receber a mensagem no app.
 
-!["Fazer uma compra específica" selecionada como ação-gatilho.]({% image_buster /assets/img_archive/canvas_trigger_actions.png %}){: style="max-width:85%"}
+!["Fazer uma compra específica" selecionada como ação-gatilho.]({% image_buster /assets/img_archive/canvas_trigger_actions.png %}){: style="max-width:90%"}
 
 Os seguintes recursos do Canva não estão disponíveis com mensagens no app, portanto, não serão aplicados às mensagens no app, mesmo que estejam ativados.
 

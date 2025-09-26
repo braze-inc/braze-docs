@@ -23,7 +23,7 @@ Avec les blocs de contenu, vous pouvez :
 
 ## Créer un bloc de contenu
 
-Il existe deux types d'éditeurs utilisés pour créer un bloc de contenu : classique et glisser-déposer. Ces deux types d'éditeurs correspondent au type de bloc de contenu : HTML et glisser-déposer. Vous pouvez également créer et gérer vos blocs de contenu [à l'aide de l'API][5].
+Il existe deux types d'éditeurs utilisés pour créer un bloc de contenu : classique et glisser-déposer. Ces deux types d'éditeurs correspondent au type de bloc de contenu : HTML et glisser-déposer. Vous pouvez également créer et gérer vos blocs de contenu [à l'aide de l'API]({{site.baseurl}}/api/endpoints/templates/).
 
 {% tabs %}
 {% tab Glisser-déposer %}
@@ -80,7 +80,7 @@ Si vous souhaitez mettre à jour un bloc de contenu pour un seul message ou en f
 
 Après avoir modifié un bloc de contenu, vous pouvez enregistrer et lancer le bloc de contenu mis à jour en sélectionnant **Lancer le bloc de contenu**. Ou, vous pouvez sélectionner **Plus** > **Dupliquer** pour créer un duplicata de votre bloc de contenu.
 
-![Un bloc de contenu qui dit "Bienvenue à notre bulletin d'information".][2]
+![Un bloc de contenu qui dit "Bienvenue à notre bulletin d'information".]({% image_buster /assets/img/copy-content-block.png %})
 
 Vous pouvez également [dupliquer]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) un bloc de contenu. Cela crée une copie brouillon du bloc de contenu.
 
@@ -90,7 +90,7 @@ Après avoir ajouté un bloc de contenu dans une campagne active ou un Canvas, v
 
 Cet aperçu inclut des informations sur le bloc de contenu, telles que son créateur, les étiquettes, la date de création, la date de dernière modification, la description, le type d'éditeur, le nombre d'inclusions avec des détails et un aperçu réel du bloc de contenu.
 
-![Aperçu d'un bloc de contenu "Workout_Promo" pour le cyclisme et la danse qui a six inclusions.][7]{: style="max-width:60%;"} 
+![Aperçu d'un bloc de contenu "Workout_Promo" pour le cyclisme et la danse qui a six inclusions.]({% image_buster /assets/img/preview_tab_content_block.png %}){: style="max-width:60%;"} 
 
 ### Blocs de contenu imbriqués
 
@@ -104,7 +104,7 @@ De plus, les blocs de contenu ne peuvent pas être utilisés dans le pied de pag
 
 ### Archivage des blocs de contenu
 
-![Menu déroulant des paramètres étendus qui affiche trois options : Archiver, Dupliquer et Copier dans l'espace de travail.][3]{: style="max-width:20%;float:right;margin-left:15px;" }
+![Menu déroulant des paramètres étendus qui affiche trois options : Archiver, dupliquer et copier dans l'espace de travail.]({% image_buster /assets/img/template_archive_cog.png %}){: style="max-width:20%;float:right;margin-left:15px;" }
 
 Une fois que vous avez terminé d'utiliser un bloc de contenu, vous pouvez l'archiver depuis la page [Modèles et médias]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/). Les blocs de contenu archivés sont en lecture seule. Par conséquent, sortez le bloc de contenu des archives avant de le modifier. Les blocs de contenu ne peuvent pas être archivés s'ils sont utilisés dans des messages.
 
@@ -115,11 +115,5 @@ Une fois que vous avez terminé d'utiliser un bloc de contenu, vous pouvez l'arc
 - Lorsque votre bloc est utilisé dans plus de messages que vous ne pouvez raisonnablement gérer avec la première suggestion de cette liste, nous vous recommandons de supprimer tout le contenu du bloc et de l'archiver. Cela garantira qu'aucune information obsolète n'est incluse dans les nouveaux e-mails envoyés.
 - Si vous archivez accidentellement un bloc de contenu, vous pouvez le sortir des archives.
 
-![Panneau Blocs de contenu enregistrés dans lequel le menu déroulant des paramètres pour « Test_32 » est développé et affiche trois options : Désarchiver, Dupliquer et Copier dans l'espace de travail][4]
+![Panneau Blocs de contenu enregistrés dans lequel le menu déroulant des paramètres pour « Test_32 » est développé et affiche trois options : Désarchiver, dupliquer et copier vers l'espace de travail]({% image_buster /assets/img/unarchive-content-block.png %})
 
-[2]: {% image_buster /assets/img/copy-content-block.png %}
-[3]: {% image_buster /assets/img/template_archive_cog.png %}
-[4]: {% image_buster /assets/img/unarchive-content-block.png %}
-[5]: {{site.baseurl}}/api/endpoints/templates/
-[6]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/
-[7]: {% image_buster /assets/img/preview_tab_content_block.png %}

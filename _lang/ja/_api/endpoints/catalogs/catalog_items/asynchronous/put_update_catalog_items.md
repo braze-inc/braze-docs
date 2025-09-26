@@ -1,21 +1,21 @@
 ---
-nav_title: "PUT:複数のカタログアイテムの置換"
-article_title: "PUT:複数のカタログアイテムの置換"
+nav_title: "PUT:複数のカタログ項目の置換"
+article_title: "PUT:複数のカタログ項目の置換"
 search_tag: Endpoint
 page_order: 4
 
 layout: api_page
 page_type: reference
-description: "この記事では、Replace multiple catalog items Braze endpointの詳細について説明します。"
+description: "この記事では、「複数のカタログ項目を置換」Braze エンドポイントの詳細について説明します。"
 
 ---
 {% api %}
-# カタログアイテムの置換
+# カタログ項目の置換
 {% apimethod put %}
 /catalogs/{catalog_name}/items
 {% endapimethod %}
 
-> このエンドポイントを使用して、カタログ内の複数のアイテムを置き換えます。
+> このエンドポイントを使用して、カタログ内の複数の項目を置換します。
 
 カタログアイテムが存在しない場合、このエンドポイントはカタログ内にアイテムを作成します。1つのリクエストにつき、最大50個のカタログアイテムに対応できます。このエンドポイントは非同期である。
 

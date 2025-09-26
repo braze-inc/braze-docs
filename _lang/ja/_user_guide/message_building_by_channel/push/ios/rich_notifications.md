@@ -21,9 +21,9 @@ tool:
 
 iOS のリッチプッシュ通知を作成する前に、次の詳細に注意してください。
 
-- アプリからリッチプッシュ通知を送信できるようにするには、御社の開発者がアプリにサービス拡張機能を追加する必要があるため、「[iOS プッシュ連携][1]」の手順に従います。
+- アプリからリッチプッシュ通知を送信できるようにするには、御社の開発者がアプリにサービス拡張機能を追加する必要があるため、「[iOS プッシュ連携]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#ios-10-rich-notifications)」の手順に従います。
 - 現在、Braze ダッシュボードで直接アップロードがサポートされているファイル形式には、JPEG、PNG、GIFがあります。これらのファイルは、これらの追加ファイルタイプとともに、テンプレート可能なURLフィールドに入力することもできる：AIF、M4A、MP3、MP4、またはWAV。
-- メディアの制限と仕様については、[Apple のドキュメント][2] を参照してください。
+- メディアの制限と仕様については、[Apple のドキュメント](https://developer.apple.com/reference/usernotifications/unnotificationattachment) を参照してください。
 - iOSのリッチ通知は、クイックプッシュキャンペーン作成時には利用できない。
 - iOS では画面に収まるように画像を拡大縮小し、リッチ画像の場合はアクティブなビューまたはロックされたビューに合わせて拡大縮小します。
 
@@ -121,30 +121,23 @@ iOS15では、Time Sensitive とCritical の表記は、タイトルをタイム
 
 ### ステップ 1: プッシュキャンペーンを作成する
 
-[キャンペーンの][3]手順に従って、iOS用のプッシュ通知を作成する。リッチコンテンツを含まないプッシュ通知の設定に使うのと同じコンポーザーを使うことになる。
+[キャンペーンの]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message)手順に従って、iOS用のプッシュ通知を作成する。リッチコンテンツを含まないプッシュ通知の設定に使うのと同じコンポーザーを使うことになる。
 
 ### ステップ2:メディアを追加する
 
 メッセージのコンポーザーにある**Rich Notification Media**フィールドに画像、GIF、オーディオ、ビデオファイルを追加する。コンテンツファイルを追加する方法については、「[要件](#requirements)」を参照してください。
 
-![プッシュ通知のサマリーテキストの例。][4]{: style="max-width:70%;" }
+![プッシュ通知のサマリーテキストの例。]({% image_buster /assets/img_archive/rich_notification_add_image.png %}){: style="max-width:70%;" }
 
 このメッセージは、iOS 10を搭載したデバイスを持っているユーザーだけに送信するよう制限することもできる。iOS10にアップグレードしていないユーザーの場合、「**リッチ通知をサポートするデバイスにのみ送信**」のチェックを外しておくと、リッチコンテンツを含まないテキストのみの通知として表示される。
 
-![画像を追加したり、画像のURLを入力したりすることができる、拡張された通知画像セクションです。][5]{: style="max-width:70%;" }
+![画像を追加したり、画像URLを入力したりできる拡張通知画像セクション。]({% image_buster /assets/img_archive/rich_notification_ios10_select.png %}){: style="max-width:70%;" }
 
 ### ステップ 3:キャンペーンの作成を続ける
 
-リッチプッシュ通知がダッシュボードにアップロードされたら、[キャンペーンのスケジューリング][6]を続行できます。
+リッチ通知コンテンツがダッシュボードにアップロードされたら、[キャンペーンのスケジュールを続行できます]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#schedule-push-campaign)。
 
 プッシュ通知を受信したユーザーは、プッシュメッセージを長押しして画像を拡大できます。
 
-![プッシュ通知を受信したユーザーがメッセージを長押しすると、「Hello!」という拡大画像が表示されます。][8]{: style="max-width:50%;" }
+![プッシュ通知を受信したユーザーがメッセージを長押しすると、「Hello!」という拡大画像が表示されます。]({% image_buster /assets/img_archive/rich_notification_ios.gif %}){: style="max-width:50%;" }
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#ios-10-rich-notifications
-[2]: https://developer.apple.com/reference/usernotifications/unnotificationattachment
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message
-[4]: {% image_buster /assets/img_archive/rich_notification_add_image.png %}
-[5]: {% image_buster /assets/img_archive/rich_notification_ios10_select.png %}
-[6]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#schedule-push-campaign
-[8]: {% image_buster /assets/img_archive/rich_notification_ios.gif %}

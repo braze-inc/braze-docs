@@ -21,7 +21,7 @@ tool: Canvas
 
 [항목 설정]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2-set-up-your-canvas)은 캔버스가 전송되는 방식을 이해하는 데 중요합니다. 캔버스에 입장할 수 있는 사람의 수를 제한했는지 확인합니다.
 
-사용자는 더 이상 메시지를 받을 자격이 없는 경우 캔버스를 종료할 수도 있습니다. 예를 들어 캔버스에 푸시 알림만 포함되어 있고 사용자가 첫 번째 단계를 수신한 후 푸시 수신을 거부하면 해당 사용자는 캔버스에서 탈퇴하게 됩니다. [다른 캔버스 단계를]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components) 사용하여 대체 사용자 여정을 추가하는 것을 고려하세요.
+사용자는 더 이상 메시지를 받을 자격이 없는 경우 캔버스를 종료할 수도 있습니다. 예를 들어 캔버스에 푸시 알림만 포함되어 있고 사용자가 첫 번째 단계를 수신한 후 푸시 수신을 거부하면 해당 사용자는 캔버스에서 탈퇴하게 됩니다. [다른 캔버스 단계를]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/) 사용하여 대체 사용자 여정을 추가하는 것을 고려하세요.
 
 ## 오디언스 세분화
 

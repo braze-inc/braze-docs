@@ -1,5 +1,5 @@
 ---
-nav_title: Custom Display Handling
+nav_title: Custom display handling
 article_title: Customizing In-App Message Display Handling for iOS
 platform: iOS
 page_order: 4

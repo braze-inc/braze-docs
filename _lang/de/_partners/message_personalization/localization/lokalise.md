@@ -51,11 +51,11 @@ Lassen Sie uns zum Beispiel einen einfachen Übersetzungsschlüssel erstellen: `
 3. Fügen Sie "Internet" in der Dropdown-Liste " **Plattformen** " hinzu. 
 4. Wenn Sie fertig sind, klicken Sie auf **Speichern**.
 
-![][1]{: style="max-width:60%"}
+![]({% image_buster /assets/img/lokalise/1_add_key.png %}){: style="max-width:60%"}
 
 Ihr Übersetzungsschlüssel sollte im Projekteditor erscheinen:
 
-![][2]{: style="max-width:90%"}
+![]({% image_buster /assets/img/lokalise/2_translation_key_added.png %}){: style="max-width:90%"}
 
 #### Bekannte Probleme
 
@@ -66,7 +66,7 @@ Ihr Übersetzungsschlüssel sollte im Projekteditor erscheinen:
 
 Öffnen Sie Ihr Lokalise Projekt, und klicken Sie auf **Apps**. Suchen und installieren Sie hier die App Braze. Sie sehen dann den folgenden Bildschirm:
 
-![Braze-Konfiguration auf Lokalise mit Angabe der Projekt ID und der URL der Übersetzungsdateien.][3]
+![Braze-Konfiguration auf Lokalise mit Angabe der Projekt ID und der URL der Übersetzungsdateien.]({% image_buster /assets/img/lokalise/3_lokalise_braze_app.png %})
 
 In der **URL der Übersetzungsdatei** veröffentlicht Lokalise eine JSON-Datei mit allen Übersetzungen für Ihre Schlüssel im Projekt. Sie erhalten so viele URLs von Übersetzungsdateien, wie Sie Zielsprachen in Ihrem Projekt haben. Aus diesem Grund bestehen die URLs der Übersetzungsdateien aus zwei Teilen:
 
@@ -79,7 +79,7 @@ Die URL der Übersetzungsdatei ist die URL, die Sie benötigen, wenn Sie eine Ka
 
 Um diese URL zu testen, kopieren Sie sie und ersetzen Sie {% raw %}`{{${language}}}`{% endraw %} durch einen Sprachcode (z.B. `en`) und öffnen Sie diese URL in Ihrem Browser. Sie sehen dann eine JSON-Datei mit Ihren Schlüsseln und Übersetzungen:
 
-![][4]
+![]({% image_buster /assets/img/lokalise/4_testing_json_lokalise.png %})
 
 ### Schritt 4: Übersetzungen in der Braze Kampagne verwenden
 
@@ -108,7 +108,7 @@ Verwenden Sie nun die Variable Übersetzungen, um die gewünschten Übersetzunge
 Um zum Beispiel die Taste `description` anzuzeigen, verwenden Sie`{{ translations.description }}`.
 
 {% endraw %}
-![][6]
+![]({% image_buster /assets/img/lokalise/6_integration_usage_sample.png %})
 
 Zum Schluss speichern Sie das Template für die E-Mail und zeigen es in der Vorschau an. Sie sollten sehen, dass Ihre Übersetzung angezeigt wird.
 
@@ -127,9 +127,3 @@ Ja, sicher. Sie können in den Braze-Dokumenten nachlesen, wie Sie dieses Flag h
 Braze speichert übersetzte Inhalte im Cache. Die Aktualisierung kann einige Minuten dauern. Wenn Sie Ihre Kampagnen testen und die Ergebnisse der Übersetzungen sofort sehen müssen, können Sie den Parameter `:cache_max_age` verwenden, wie in diesem Artikel referenzieren.
 
 
-[1]: {% image_buster /assets/img/lokalise/1_add_key.png %}
-[2]: {% image_buster /assets/img/lokalise/2_translation_key_added.png %}
-[3]: {% image_buster /assets/img/lokalise/3_lokalise_braze_app.png %}
-[4]: {% image_buster /assets/img/lokalise/4_testing_json_lokalise.png %}
-[5]: {% image_buster /assets/img/lokalise/5_edit_email.png %}
-[6]: {% image_buster /assets/img/lokalise/6_integration_usage_sample.png %}

@@ -78,7 +78,7 @@ Appboy.sharedInstance()?.logCustomEvent(
 {% endtab %}
 {% endtabs %}
 
-Weitere Informationen finden Sie in unserer [Dokumentation zur Klasse ](http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#a4f0051d73d85cb37f63c232248124c79 "logcustomevent:withproperties").
+Weitere Informationen finden Sie in unserer [Dokumentation zu den Klassen](http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#a4f0051d73d85cb37f63c232248124c79).
 
 ### Reservierte Schlüssel {#event-reserved-keys}
 
@@ -90,5 +90,5 @@ Die folgenden Schlüssel sind reserviert und können nicht als benutzerdefiniert
 ## Zusätzliche Ressourcen
 
 - Siehe die Methodendeklaration in der [Datei](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h) `Appboy.h`. 
-- Siehe dazu die [`logCustomEvent`](http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ad80c39e8c96482a77562a5b1a1d387aa "logcustomevent Dokumentation") für weitere Informationen.
+- Weitere Informationen finden Sie in der Dokumentation zu [`logCustomEvent`](http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ad80c39e8c96482a77562a5b1a1d387aa).
 

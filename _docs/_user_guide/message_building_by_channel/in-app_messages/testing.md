@@ -42,6 +42,10 @@ You can also preview messages from the **Test** tab, as though you were a user. 
 
 ![Test tab when building an in-app message. "Preview message as user" is set to "Custom User" with available profile fields appearing as configurable options.]({% image_buster /assets/img/iam-user-preview.png %})
 
+{% alert important %}
+Test sends may result in more than one in-app message being sent to each recipient. 
+{% endalert %}
+
 ### Test checklist
 
 - Do the images and media show up and act as expected?

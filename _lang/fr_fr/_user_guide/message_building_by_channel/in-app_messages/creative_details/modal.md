@@ -14,7 +14,7 @@ description: "Le présent article de référence aborde les exigences de concept
 
 > Les modaux apparaissent au centre de l’écran de l’appareil avec une incrustation le démarquant de votre application en arrière-plan. Ils sont parfaits pour suggérer plus ou moins subtilement à votre utilisateur de profiter d’une vente ou d’un concours.
 
-![Deux messages in-app modaux, côte à côte, indiquant les recommandations en matière d’image et de texte. Voir les sections suivantes pour plus de détails.][1a]{: style="max-width: 801px; border: none;"}
+![Deux messages in-app modaux, côte à côte, indiquant les recommandations en matière d’image et de texte. Voir les sections suivantes pour plus de détails.]({% image_buster /assets/img/modal-spec.png %}){: style="max-width: 801px; border: none;"}
 
 ## Spécifications des images
 
@@ -24,9 +24,7 @@ description: "Le présent article de référence aborde les exigences de concept
 
 Sur une tablette ou un navigateur de bureau, un message in-app modal s’affiche toujours au centre de l’écran de l’application, comme illustré dans la capture d’écran suivante.
 
-![Message in-app modal tel qu’il apparaîtrait sur un grand écran. Comme sur les téléphones, le message s’affiche au centre de l'écran.][1b]{: style="max-width: 800px; border: none;"}
+![Message in-app modal tel qu’il apparaîtrait sur un grand écran. Comme pour les écrans de téléphone, le message est placé au centre de l'écran.]({% image_buster /assets/img/modal-large-viewport.png %}){: style="max-width: 800px; border: none;"}
 
-[1a]: {% image_buster /assets/img/modal-spec.png %}
-[1b]: {% image_buster /assets/img/modal-large-viewport.png %}
 
 

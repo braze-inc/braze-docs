@@ -9,6 +9,7 @@
 import os
 import re
 import subprocess
+import pathlib
 
 # Global variables
 PROJECT_ROOT = os.environ.get('PROJECT_ROOT')
@@ -19,15 +20,44 @@ LOG_PATH = os.path.join(PROJECT_ROOT, "scripts", "temp", "mredirect_logs")
 #   files:       rename _docs/_contributing/{bdocs.md => test.md} (100%)
 #   directories: rename _docs/_contributing/{yaml => jekyll}/metadata.md (100%)
 def get_renamed_files():
-    cmd = f"git diff -M --summary develop HEAD -- {os.path.join(PROJECT_ROOT, '_docs')}"
-    result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
-    changed_files = [line.strip() for line in result.stdout.splitlines() if line.startswith("rename") or line.startswith(" rename")]
+    # resolve upstream of current branch and fetch just that ref
+    res = subprocess.run(
+        ["git", "rev-parse", "--abbrev-ref", "--symbolic-full-name", "@{upstream}"],
+        capture_output=True, text=True
+    )
+    if res.returncode != 0 or not res.stdout.strip():
+        raise RuntimeError("No upstream set for current branch. Run `git push -u origin <branch>`.")
 
-    if not changed_files:
-        print("Error: Git can't find any renamed files committed in this branch.\nNote that redirects are only created for renamed files if they're 'committed', not just 'added' to the branch.")
+    upstream_ref = res.stdout.strip()
+    remote, remote_branch = upstream_ref.split("/", 1)
+    subprocess.run(["git", "fetch", "--quiet", remote, remote_branch, "develop"], check=False)
+
+    # repo-relative pathspec
+    repo_root = subprocess.run(
+        ["git", "rev-parse", "--show-toplevel"], capture_output=True, text=True, check=True
+    ).stdout.strip()
+    docs_rel = str(pathlib.Path(repo_root, "_docs").relative_to(repo_root))
+
+    def run_diff(base, head):
+        cmd = ["git","diff","-M","--summary","--diff-filter=R",f"{base}...{head}","--",docs_rel]
+        out = subprocess.run(cmd, capture_output=True, text=True)
+        return [l.strip() for l in out.stdout.splitlines() if l.lstrip().startswith("rename")]
+
+    # collect from both upstream and local HEAD
+    changed = []
+    changed += run_diff("origin/develop", upstream_ref)
+    changed += run_diff("origin/develop", "HEAD")
+
+    # deduplicate
+    changed = list(dict.fromkeys(changed))
+
+    if not changed:
+        print("No committed renames detected under '_docs' for either range:")
+        print(f"  - origin/develop...{upstream_ref}")
+        print(f"  - origin/develop...HEAD")
         return []
-    
-    return changed_files
+
+    return changed
 
 
 # Adds unmatched lines to ./scripts/temp/mredirect_logs.
@@ -41,46 +71,73 @@ def log_unmatched(line):
 def create_redirect(line):
     original_line = line.strip()
 
-    # Remove 'rename ' and trailing percentage like '(98%)'
+    # strip leading 'rename' and trailing percentage like '(98%)'
     line = line.split(" ", 1)[1]
     line = re.sub(r"\s\(\d+%\)$", "", line)
 
-    # Extract {old => new}
-    regex_group = re.search(r"{([^}]+) => ([^}]*)}", line)
-    if not regex_group:
+    # allow empty old/new inside braces
+    m = re.search(r"{([^}]*)\s=>\s([^}]*)}", line)
+    if not m:
         log_unmatched(original_line)
         return None
-    
-    subgroup_old = regex_group.group(1)
-    subgroup_new = regex_group.group(2)
-    
-    # Path before { }
-    path = line.split("{")[0].strip()
 
+    old_part, new_part = m.group(1), m.group(2)
+
+    # Path before { }
+    prefix = line.split("{", 1)[0].strip()
     # Portion after }
-    renamed_dir_file = line.split("}")[1].strip()
-    
-    # Build URLs
-    url_old = f"/{path}{subgroup_old}{renamed_dir_file}".replace("/_", "/").replace(".md", "")
-    url_new = f"/{path}{subgroup_new}{renamed_dir_file}".replace("/_", "/").replace(".md", "")
+    suffix = line.split("}", 1)[1].strip()
+
+    def norm(p):
+        # strip extension
+        p = p.replace(".md", "")
+        # collapse multiple slashes and enforce leading slash
+        p = re.sub(r"//+", "/", "/"+p.lstrip("/"))
+        # drop underscore only at the beginning of a segment
+        p = re.sub(r"/_+", "/", p)
+        return p.rstrip("/")  # normalized form, no trailing slash
+
+    url_old = norm(f"{prefix}{old_part}{suffix}")
+    url_new = norm(f"{prefix}{new_part}{suffix}")
 
     return f"validurls['{url_old}'] = '{url_new}';"
+
+
+# Regex for parsing redirect lines
+RX_LINE = re.compile(r"""^validurls\['([^']+)'\]\s*=\s*'([^']+)';\s*$""")
+
+# Normalize for duplicate comparison (ignore trailing slash)
+def norm_for_compare(path: str) -> str:
+    return path.rstrip("/")
+
+def parse_redirect(line: str):
+    m = RX_LINE.match(line.strip())
+    return (m.group(1), m.group(2)) if m else None
 
 
 # Remove duplicate lines while preserving single blank lines
 def remove_duplicates(lines):
     unique_lines = []
     double_blank = False
+    seen = set()
 
     for line in lines:
-        if line.strip() == "":          
-            if not double_blank:         
+        if line.strip() == "":
+            if not double_blank:
                 unique_lines.append(line)
                 double_blank = True
-        else:                           
-            double_blank = False
-            if line not in unique_lines:
-                unique_lines.append(line)
+            continue
+
+        double_blank = False
+        parsed = parse_redirect(line)
+        if parsed:
+            comp = (norm_for_compare(parsed[0]), norm_for_compare(parsed[1]))
+            if comp in seen:
+                continue
+            seen.add(comp)
+
+        if line not in unique_lines:
+            unique_lines.append(line)
 
     return unique_lines
 
@@ -96,25 +153,35 @@ def main():
         return
 
     placeholder_comment = "// validurls['OLD'] = 'NEW';"
-    redirects_created = False
+    redirects_added = 0
+    total_candidates = len(changed_files)
 
     with open(REDIRECT_FILE, "r+") as f:
         original_lines = f.readlines()
         lines = [l for l in original_lines if l.strip() != placeholder_comment]
 
-        # Build redirects, skip duplicates
+        # Build set of existing redirects ignoring trailing slashes
+        existing_norm = set()
+        for l in lines:
+            parsed = parse_redirect(l)
+            if parsed:
+                existing_norm.add((norm_for_compare(parsed[0]), norm_for_compare(parsed[1])))
+
+        # Build redirects, skip duplicates (ignoring trailing slashes)
         for line in changed_files:
             redirect_line = create_redirect(line)
-            if redirect_line and (redirect_line + "\n") not in lines:
+            if not redirect_line:
+                continue
+            parsed = parse_redirect(redirect_line)
+            comp = (norm_for_compare(parsed[0]), norm_for_compare(parsed[1])) if parsed else None
+            if comp and comp not in existing_norm:
                 lines.append(redirect_line + "\n")
-                redirects_created = True
+                existing_norm.add(comp)
+                redirects_added += 1
 
-        if not redirects_created:
-            print(
-                "Error: Git can't find any renamed files committed in this branch.\n"
-                "Note that redirects are only created for renamed files if they're "
-                "'committed', not just 'added' to the branch."
-            )
+        if redirects_added == 0:
+            # Renamed files exist, but all redirects already present
+            print("All renamed files in this branch already have redirects. No additional redirects are needed.")
             return
 
         # Add placeholder and tidy file
@@ -126,10 +193,23 @@ def main():
             f.seek(0)
             f.truncate()
             f.writelines(unique_lines)
-            print("Redirects created successfully!")
+
+            if redirects_added == total_candidates:
+                # All new
+                if total_candidates == 1:
+                    print("1 redirect created successfully.")
+                else:
+                    print(f"All {total_candidates} redirects created successfully.")
+            else:
+                # Partial new
+                if redirects_added == 1:
+                    print("1 redirect created successfully. Some renamed files already had redirects set up.")
+                else:
+                    print(f"{redirects_added} redirects created successfully. Some renamed files already had redirects set up.")
+
             if os.path.getsize(LOG_PATH) > 0:
                 with open(LOG_PATH) as log_file:
-                    print("\nHowever, some redirects will need to be created manually:\n")
+                    print("\nNote: the following redirects need to be created manually:\n")
                     print(log_file.read().rstrip())
 
 

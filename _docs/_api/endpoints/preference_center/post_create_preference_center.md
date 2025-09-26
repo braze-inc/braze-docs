@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Create Preference Center"
+nav_title: "POST: Create preference center"
 article_title: "POST: Create Preference Center"
 search_tag: Endpoint
 page_order: 4

@@ -61,7 +61,7 @@ Braze는 전달 가능성을 지원하기 위해 이 IP 워밍 스케줄을 엄�
 
 Braze 빌트인 사용자 제한 기능은 IP 주소를 워밍업하는 데 도움이 되는 유용한 도구입니다. 캠페인 생성 중 원하는 메시징 세그먼트를 선택한 후, [대상 사용자]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/#step-4-build-the-remainder-of-your-campaign-or-canvas) 단계에서 사용자를 제한하려면 **고급 옵션** 드롭다운을 선택하십시오. 워밍업 스케줄이 계속됨에 따라 발송하는 이메일의 양을 늘리기 위해 이 한도를 점진적으로 높일 수 있습니다.
 
-![][18]
+![]({% image_buster /assets/img_archive/email_ip_warming_sends_limit_new.png %})
 
 ## 하위 도메인 세분화
 
@@ -93,12 +93,12 @@ IP 워밍이 완료되면 발송 주기를 생성하고 이메일을 하루 또�
 
 ### 이메일 목록을 정리하세요
 
-이메일 목록이 깨끗하고 오래되거나 확인되지 않은 이메일이 없는지 확인하세요. CASL 및 CAN-SPAM][40]을 준수하는 것이 이상적입니다.
+이메일 목록이 깨끗하고 오래되거나 확인되지 않은 이메일이 없는지 확인하세요. Ensuring that you're both [CASL- and CAN-SPAM-compliant]({{site.baseurl}}/user_guide/administrative/privacy/spam_regulations/) is ideal.
 
 ### 발송자 평판을 모니터링하세요
 
 IP 워밍 프로세스를 수행할 때, IP 워밍 프로세스를 수행하는 동안 발송자 평판을 주의 깊게 모니터링해야 합니다. 이 특정 측정기준은 주의 깊게 살펴봐야 합니다:
-- **이탈률:** 캠페인의 반송률이 3-5% 이상인 경우, [깨끗하게 유지하기: 이메일 목록 위생의 중요성][43]에 대한 기사를 보며 목록의 청결도를 평가해야 합니다. 또한 참여하지 않거나 휴면 이메일 주소에 이메일을 보내지 않기 위해 ][46]일몰 정책을 구현하는 것을 고려해야 합니다.
+- **이탈률:** If any campaign bounces at more than 3-5%, you should evaluate the cleanliness of your list by following the guidelines in our [Keep It Clean: The Importance of Email List Hygiene](https://www.braze.com/blog/email-list-hygiene/) article. Additionally, you should consider implementing a [sunset policy]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/sunset_policies/) to stop emailing unengaged or dormant email addresses.
 - **스팸 보고서:** 어떤 캠페인이 스팸으로 신고되는 비율이 0.08%를 초과하면, 발송하는 콘텐츠를 재평가하고, 관심 있는 오디언스를 대상으로 하고 있는지 확인하며, 이메일이 그들의 관심을 끌 수 있도록 적절하게 작성되었는지 확인해야 합니다.
 - **오픈율:** 오픈율은 받은편지함 배치를 위한 유용한 대리 지표입니다. 고유 열람율이 25%를 넘으면 받은편지함 전달률이 높아지고 이는 발송자 평판이 긍정적임을 나타냅니다.
 
@@ -110,9 +110,3 @@ Braze는 IP를 웜업하는 데 [Intelligent Timing]({{site.baseurl}}/user_guide
 IP 워밍 동안 도메인과 IP가 아직 긍정적인 평판을 얻지 못했기 때문에 메일이 스팸 폴더로 전송되는 것은 정상입니다. 메일이 스팸 폴더에 도착하면 메일 관리자가 Braze 발신 도메인 및 IP를 회사의 허용 목록에 추가해야 할 수 있습니다.
 {% endalert %}
 
-[18]: {% image_buster /assets/img_archive/email_ip_warming_sends_limit_new.png %}
-[40]: {{site.baseurl}}/user_guide/onboarding_with_braze/spam_regulations/
-[43]:https://www.braze.com/blog/email-list-hygiene/
-[44]:https://senderscore.org/
-[45]:http://www.senderbase.org/
-[46]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/sunset_policies/

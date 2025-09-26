@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: Export Monthly Active Users for Last 30 Days"
+nav_title: "GET: Export monthly active users for last 30 days"
 article_title: "GET: Export Monthly Active Users for Last 30 Days"
 search_tag: Endpoint
 page_order: 4

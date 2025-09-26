@@ -1,7 +1,7 @@
 ---
 nav_title: Responsabilidade Civil de Terceiros
 article_title: Responsabilidade Civil de Terceiros
-page_order: 8
+page_order: 12
 page_type: reference
 description: "Este artigo de referência detalha as políticas em torno da responsabilidade que a Braze possui em relação aos seus terceiros associados."
 

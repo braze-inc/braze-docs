@@ -156,14 +156,6 @@ BrazeDeeplinkHandler.setBrazeDeeplinkHandler(object : IBrazeDeeplinkHandler {
 {% endtab %}
 {% endtabs %}
 
-## Deep Linking zum Newsfeed {#Android_Deep_Advance}
-
-{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
-
-Um von einer Push-Benachrichtigung aus einen Deep Link zum Braze Newsfeed zu erstellen, [erstellen Sie einen benutzerdefinierten Deep Link]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#step-4-add-deep-links) für Ihre Newsfeed-Aktivität.
-
-Wenn Sie dann Ihre Kampagne für Push-Benachrichtigungen einrichten (entweder über das [Dashboard]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message) oder die [API]({{site.baseurl}}/api/endpoints/messaging/)), konfigurieren Sie die Benachrichtigung so, dass sie zu Ihrem Deeplink im Newsfeed navigiert.
-
 ## Anpassen der WebView-Aktivität {#Custom_Webview_Activity}
 
 Standardmäßig werden Deeplinks auf Websites, die innerhalb der App von Braze geöffnet werden, von [`BrazeWebViewActivity`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui/-braze-web-view-activity/index.html) verarbeitet. Um dies zu ändern:

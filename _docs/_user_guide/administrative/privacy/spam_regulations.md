@@ -1,5 +1,5 @@
 ---
-nav_title: Spam Regulations
+nav_title: Spam regulations
 article_title: Spam Regulations
 page_order: 4.2
 page_type: reference

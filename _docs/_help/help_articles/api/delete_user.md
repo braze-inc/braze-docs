@@ -1,5 +1,5 @@
 ---
-nav_title: Removing Users via API
+nav_title: Removing users via API
 article_title: Removing Users via API
 page_order: 0
 

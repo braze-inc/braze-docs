@@ -15,7 +15,7 @@ Pour contacter l'équipe d'assistance de Braze, accédez au tableau de bord de B
 
 ![Le menu déroulant "Support" avec la possibilité d'obtenir de l'aide.]({% image_buster /assets/img_archive/get_help.png %}){: style="max-width:60%;"}
 
-En fonction de vos autorisations Braze, et si vous êtes un contact d'assistance désigné (premium), vous serez dirigé soit vers le portail d'assistance Braze où vous pouvez soumettre et suivre des cas, soit vers notre formulaire d'assistance standard. Si vous n'êtes pas sûr d'être un contact d'assistance Braze, contactez l'administrateur Braze, le gestionnaire de succès Braze ou le propriétaire du compte de votre entreprise.
+En fonction de vos autorisations Braze et si vous êtes un contact d'assistance désigné (premium), vous serez dirigé soit vers le portail d'assistance Braze, où vous pouvez soumettre et suivre des cas, soit vers notre formulaire d'assistance standard. Si vous n'êtes pas sûr d'être un contact d'assistance Braze, contactez l'administrateur Braze, le gestionnaire de succès Braze ou le propriétaire du compte de votre entreprise.
 
 ## Ajouter des contacts d'assistance désignés
 
@@ -64,15 +64,15 @@ Partagez un échantillon d'utilisateurs plutôt que l'ensemble du segment concer
 
 ### Joindre les journaux du réseau (journaux HAR)
 
-Si vous contactez le service d'assistance, il sera utile de demander à l'utilisateur concerné de collecter des journaux de réseau (journaux HAR) à partir de son navigateur pendant que le problème se produit. Vous y verrez les demandes de réseau entre le navigateur et le serveur, pour les différents composants d'une page web, ainsi que le tableau de bord de Braze que l'utilisateur tente d'ouvrir.
+Si vous contactez le service d'assistance, il sera utile de demander à l'utilisateur concerné de collecter des journaux de réseau (journaux HAR) à partir de son navigateur pendant que le problème se produit. Il affiche les requêtes réseau entre le navigateur et le serveur pour les différents composants d'une page web, ainsi que le tableau de bord de Braze que l'utilisateur tente d'ouvrir.
 
 Demandez à l'utilisateur concerné de faire ce qui suit :
 
 1. Ouvrez leurs outils de développement. Si vous utilisez Chrome, vous pouvez le faire en utilisant le raccourci clavier `option` + `⌘` + `J` (sur macOS). Si vous utilisez Windows ou Linux, vous pouvez le faire en utilisant le raccourci `shift` + `CTRL` + `J`.
 2. Sélectionnez **Réseau** > **Fetch/XHR** ou **XHR**.
-3. Effectuez un enregistrement ou une capture d'écran montrant le **nom**, l'**état**, la **taille** et l'**heure des** éléments.<br><br>![L'onglet "Fetch/XHR" dans un navigateur Chrome.][1]{: style="max-width:60%;"}
+3. Effectuez un enregistrement ou une capture d'écran montrant le **nom**, l'**état**, la **taille** et l'**heure des** éléments.<br><br>![L'onglet "Fetch/XHR" dans un navigateur Chrome.]({% image_buster /assets/img/network_xhr.png %}){: style="max-width:60%;"}
 
-Joignez ensuite l'enregistrement ou la capture d'écran de l'utilisateur au ticket d'assistance. Ces informations peuvent aider l'enquête de Support.
+Ensuite, joignez l'enregistrement ou la capture d'écran de l'utilisateur au ticket d'assistance. Ces informations peuvent aider l'enquête de Support.
 
 ### Clarifier le comportement attendu par rapport au comportement réel
 
@@ -87,7 +87,6 @@ Pensez à joindre une capture d'écran pour illustrer le problème. La fournitur
 Sélectionnez le niveau de gravité approprié pour nous aider à affecter les ressources adéquates à la résolution du problème. 
 
 {% alert important %}
-Marquer une instance comme "critique" signifie que votre instance de production est hors service et que tout le travail au sein de Braze est arrêté.
+Marquer un problème comme "critique" signifie que votre instance de production est hors service et que tout le travail au sein de Braze est arrêté.
 {% endalert %}
 
-[1]: {% image_buster /assets/img/network_xhr.png %}

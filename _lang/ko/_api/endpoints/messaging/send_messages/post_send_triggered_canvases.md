@@ -40,8 +40,9 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```json
 {
   "canvas_id": (required, string) see Canvas identifier,
-  "context": (optional, object) personalization key-value pairs that will apply to all users in this request,
+  "canvas_entry_properties": (optional, object) personalization key-value pairs that will apply to all users in this request,
   "broadcast": (optional, boolean) see Broadcast -- defaults to false on 8/31/17, must be set to true if `recipients` is omitted,
+  "segment_id": (optional, string) see segment identifier,
   "audience": (optional, connected audience object) see connected audience,
   // Including 'audience' will only send to users in the audience
   "recipients": (optional, array; if not provided and broadcast is not set to 'false', message will send to the entire segment targeted by the Canvas)
@@ -64,8 +65,9 @@ Authorization: Bearer YOUR-REST-API-KEY
 | 매개변수 | 필수 | 데이터 유형 | 설명 |
 | --------- | ---------| --------- | ----------- |
 |`canvas_id`| 필수 | 문자열 | [캔버스 식별자를]({{site.baseurl}}/api/identifier_types/) 참조하세요. |
-|`canvas_entry_properties`| 선택 사항 | 객체 | [캔버스 항목 속성을]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/) 참조하세요. 개인화 키-값 쌍은 이 요청의 모든 사용자에게 적용됩니다. 캔버스 항목 속성 객체의 최대 크기 제한은 50KB입니다. |
+|`canvas_entry_properties`| 선택 사항 | 객체 | 여기에는 [캔버스 항목 속성이]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/) 포함됩니다. 개인화 키-값 쌍은 이 요청의 모든 사용자에게 적용됩니다. 캔버스 항목 속성 객체의 최대 크기 제한은 50KB입니다. <br><br>**참고:** [캔버스 컨텍스트 얼리 액세스에]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context/) 참여하는 경우 이 매개 변수는 `context` 이며 캔버스 항목 속성을 포함합니다. |
 |`broadcast`| 선택 사항 | 부울 | 전체 세그먼트에 캠페인 또는 캔버스가 타겟팅하는 메시지를 보낼 때 `broadcast`을(를) true로 설정해야 합니다. 이 매개변수는 기본적으로 false로 설정됩니다 (2017년 8월 31일 기준). <br><br> `broadcast`가 true로 설정하면 `recipients` 목록을 포함할 수 없습니다. 그러나 이 플래그를 실수로 설정하면 예상보다 많은 대상에게 메시지를 보낼 수 있으므로 `broadcast: true` 을 설정할 때는 주의하세요. |
+|`segment_id `| 선택 사항 | 문자열 | [세그먼트 식별자를]({{site.baseurl}}/api/identifier_types/) 참조하세요. |
 |`audience`| 선택 사항| 연결된 대상 개체 | [연결된 오디언스를]({{site.baseurl}}/api/objects_filters/connected_audience/) 참조하세요. |
 |`recipients`| 선택 사항 | 배열 | [받는 사람 개체를]({{site.baseurl}}/api/objects_filters/recipient_object/) 참조하세요. <br><br>제공하지 않고 `broadcast` 이 true로 설정되어 있으면 캔버스가 타겟팅하는 전체 세그먼트에 메시지가 전송됩니다.<br><br> `recipients` 배열에는 최대 50개의 객체가 포함될 수 있으며, 각 객체에는 하나의 `external_user_id` 문자열과 `canvas_entry_properties` 객체가 포함됩니다. 이 통화에는 `external_user_id`, `user_alias` 또는 `email` 이 필요합니다. 요청은 하나만 지정해야 합니다. <br><br>`email` 이 식별자인 경우 수신자 객체에 다음을 포함해야 합니다. [`prioritization`]({{site.baseurl}}/api/endpoints/user_data/post_user_identify#identifying-users-by-email) 를 수신자 객체에 포함해야 합니다. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }

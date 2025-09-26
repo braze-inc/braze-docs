@@ -22,7 +22,7 @@ tool:
 
 캠페인 또는 캔버스의 상태를 변경하려면 <i class="fas fa-ellipsis-vertical"></i> 메뉴를 선택한 다음 상태를 선택합니다.
 
-![Braze 대시보드의 캔버스 목록과 캔버스 중 하나에 대한 메뉴가 열려 있는 모습.]({% image_buster /assets/img/messaging_fundamentals/change-status.png %})
+![Braze 대시보드의 캔버스 목록과 캔버스 중 하나에 대한 메뉴가 열려 있습니다.]({% image_buster /assets/img/messaging_fundamentals/change-status.png %})
 
 ## 사용 가능한 상태
 

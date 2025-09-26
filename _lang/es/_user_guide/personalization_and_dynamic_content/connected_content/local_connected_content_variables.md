@@ -12,7 +12,7 @@ search_rank: 1
 
 Braze realiza una solicitud GET estándar en el momento del envío al punto final especificado en la etiqueta `connected_content`. Si el endpoint devuelve JSON, se analiza automáticamente y se almacena en una variable llamada `connected`. Si el endpoint devuelve texto, éste se insertará directamente en el mensaje en lugar de la etiqueta `connected_content`.
 
-Si quieres guardar tu respuesta en una variable, se recomienda devolver objetos JSON. Y si quieres que la respuesta de Contenido conectado sustituya la etiqueta por el texto, asegúrate de que la respuesta no sea JSON válido (como se define en [json.org][46])
+Si quieres guardar tu respuesta en una variable, se recomienda devolver objetos JSON. Y si quieres que la respuesta de Contenido conectado sustituya la etiqueta por el texto, asegúrate de que la respuesta no sea JSON válido (según la definición de [json.org](http://www.json.org))
 
 También puedes especificar `:save your_variable_name` después de la URL para guardar los datos como otra cosa. Por ejemplo, la siguiente etiqueta `connected_content` almacenará la respuesta en una variable local denominada `localweather` (puede guardar varias variables JSON `connected_content` ):
 
@@ -84,7 +84,7 @@ Enjoy the weather!
 
 Si la API respondiera con {%raw%}`{{localweather.consolidated_weather[0].weather_state_name}}`{%endraw%} devolviendo `Rain`, el usuario recibiría entonces este push.
 
-![Notificación push con el mensaje "¡Está lloviendo! Toma un paraguas".][17]{:style="max-width:50%" }
+![Notificación push con el mensaje "¡Está lloviendo! Coge un paraguas!"]({% image_buster /assets/img_archive/connected_weather_push2.png %} "Ejemplo de uso de push de contenido conectado"){:style="max-width:50%" }
 
 De manera predeterminada, el contenido conectado establecerá un encabezado `Content-Type` en una solicitud GET HTTP que haga a `application/json` con `Accept: */*`. Si necesita otro tipo de contenido, especifíquelo explícitamente añadiendo `:content_type your/content-type` a la etiqueta. A continuación, Braze establecerá tanto el encabezado Content-Type como Accept en el tipo que especifique.
 
@@ -184,5 +184,3 @@ Esta clave sólo se añadirá automáticamente al objeto Contenido conectado si 
 
 
 [16]: [success@braze.com](mailto:success@braze.com)
-[17]: {% image_buster /assets/img_archive/connected_weather_push2.png %} "Ejemplo de uso de push de contenido conectado"
-[46]: http://www.json.org

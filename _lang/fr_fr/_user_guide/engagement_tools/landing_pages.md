@@ -9,15 +9,21 @@ alias: /landing_pages/
 
 # À propos des pages d'atterrissage
 
-> Les pages de destination Braze sont des pages web autonomes qui peuvent stimuler votre stratégie d'acquisition et d'engagement des utilisateurs.
+> Les pages d'atterrissage de Braze sont des pages web autonomes qui peuvent piloter votre stratégie d'acquisition et d'engagement des utilisateurs.
+
+![Page d'atterrissage pour le lancement d'un produit de soins de la peau présentant des fonctionnalités, des images et une présentation de témoignages de clients.]({% image_buster /assets/img/landing_pages/example_landing_page.png %}){: style="float:right;max-width:45%;margin-left:15px;"}
+
+Utilisez les pages d'atterrissage pour développer votre audience, capturer les données des utilisateurs, promouvoir des offres spéciales et soutenir des campagnes multicanal.
 
 ## Conditions préalables
 
-Avant de pouvoir accéder aux pages d'atterrissage, les créer et les publier, vous devez disposer d'autorisations d'administrateur ou de toutes les autorisations suivantes :
+Avant de pouvoir accéder aux pages d'atterrissage, les créer et les publier, vous devez disposer [d'autorisations d']({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#list-of-permissions) administrateur ou de toutes les autorisations suivantes :
 
 - Accéder aux pages d’accueil
 - Créer des ébauches de page d’accueil
 - Publier les pages d’accueil
+
+{% multi_lang_include drag_and_drop_access.md variable_name='dnd editors' %}
 
 ## Paliers de régime
 
@@ -41,7 +47,7 @@ Non, il n'y a pas d'exigences techniques.
 
 ### Existe-t-il un éditeur HTML pour les pages d'atterrissage ?
 
-Vous pouvez modifier le code HTML d'une page de destination à l'aide du bloc Code personnalisé.
+Oui. Utilisez le bloc **Code personnalisé** dans l'éditeur par glisser-déposer pour ajouter ou modifier du code HTML.
 
 ### Puis-je créer un webhook à l'intérieur d'une page d'atterrissage ?
 

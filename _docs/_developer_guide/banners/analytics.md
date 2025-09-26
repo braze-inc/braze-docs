@@ -1,6 +1,6 @@
 ---
-nav_title: Analytics
-article_title: Banner Analytics
+nav_title: Banner analytics
+article_title: Banner analytics
 page_order: 3
 description: "Learn how to review analytics for your Banners, which includes campaign details, message performance, and historical performance."
 channel:
@@ -10,8 +10,8 @@ tool:
 noindex: true
 ---
 
-# Banner Analytics
+# Banner analytics
 
 > Learn how to review analytics for your Banners, which includes campaign details, message performance, and historical performance. For more general information, see [About Banners]({{site.baseurl}}/developer_guide/banners).
 
-{% multi_lang_include campaign_analytics.md channel="banner" %}
+{% multi_lang_include analytics/campaign_analytics.md channel="banner" %}

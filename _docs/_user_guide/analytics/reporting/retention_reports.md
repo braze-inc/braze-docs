@@ -1,5 +1,5 @@
 ---
-nav_title: Retention Reports
+nav_title: Retention reports
 article_title: Retention Reports for Campaigns and Canvases
 page_order: 5
 tool: Reports
@@ -138,7 +138,7 @@ Some use cases for showing performance by variant:
 - **Date Range**: Set on the Campaign or Canvas **Details** page, the date range includes all users who received the campaign or Canvas during this window, and of those users, the data of those that performed their retention event during the date range will appear in the report. Each day the retention rate, percentage change from the control group, and confidence are measured.
 - **Retention Rate**: Shows the retention rate by variant. The retention rate is equivalent to the number of users that performed the retention event divided by the total users that have received the campaign or Canvas.
 - **Percentage Change from Control**: Quantifies the percentage change per variant from the control group.
-- **Confidence**: {% multi_lang_include metrics.md metric='Confidence' %} Braze compares each variant's conversion rate against the control's conversion rate with a statistical procedure called a Z Test to calculate a [confidence]({{site.baseurl}}/user_guide/intelligence/multivariate_testing/#understanding-confidence) percentage.
+- **Confidence**: {% multi_lang_include analytics/metrics.md metric='Confidence' %} Braze compares each variant's conversion rate against the control's conversion rate with a statistical procedure called a Z Test to calculate a [confidence]({{site.baseurl}}/user_guide/intelligence/multivariate_testing/#understanding-confidence) percentage.
 - **Units**: You can adjust the units between the percentage of users and the number of users in the upper right-hand corner of the chart, specific units may prove to be more significant when judging the impact of a campaign or Canvas.
 - **Variant Graph**: This graph summarizes the results by variant for the selected date range.
 

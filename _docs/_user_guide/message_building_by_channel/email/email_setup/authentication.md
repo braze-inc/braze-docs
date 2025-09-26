@@ -1,5 +1,5 @@
 ---
-nav_title: Email Authentication
+nav_title: Email authentication
 article_title: Email Authentication
 page_order: 2
 page_type: reference

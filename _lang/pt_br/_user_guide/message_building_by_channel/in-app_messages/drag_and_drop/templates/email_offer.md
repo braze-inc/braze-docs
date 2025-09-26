@@ -18,7 +18,7 @@ description: "Esta página aborda como usar o editor de arrastar e soltar mensag
 
 Ao criar uma mensagem no app do tipo arrastar e soltar, selecione **Envio de e-mail com oferta especial** para o modelo e, em seguida, selecione **Montar mensagem**. Esse modelo é compatível tanto com apps móveis quanto com navegadores da Web.
 
-![O editor de mensagens no app com o modelo de um formulário de envio de e-mail com uma oferta especial.][img1]
+![O editor de mensagens no app com o modelo para um formulário de envio de e-mail com uma oferta especial.]({% image_buster /assets/img/drag_and_drop/templates/email_capture_offer.png %})
 
 ### Etapa 2: Configure seus estilos de mensagens
 
@@ -30,7 +30,7 @@ Para começar a criar seu formulário de envio de e-mail, selecione a página **
 
 Você pode personalizar o texto do espaço reservado e o texto do rótulo do elemento de captura de e-mail.
 
-![O editor de mensagens no app com um menu lateral para personalizar o elemento de captura de e-mail.][img2]
+![O editor de mensagens no app com um menu lateral para personalizar o elemento de captura de e-mail.]({% image_buster /assets/img/drag_and_drop/templates/email_capture_field_offer.png %})
 
 #### Validação de e-mail
 
@@ -42,7 +42,7 @@ Você pode personalizar o texto do espaço reservado e o texto do rótulo do ele
 
 ### Etapa 5: Estilize sua mensagem
 
-Personalize a aparência de sua oferta especial usando os [componentes de mensagem no app][3] do tipo arrastar e soltar.
+Personalize a aparência de sua oferta especial usando os [componentes de mensagem no app]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#message-components) do tipo arrastar e soltar.
 
 ## Análise dos resultados
 
@@ -53,7 +53,4 @@ Personalize a aparência de sua oferta especial usando os [componentes de mensag
 {% multi_lang_include drag_and_drop/templates.md section='email double opt-in' %}
 
 
-[img1]: {% image_buster /assets/img/drag_and_drop/templates/email_capture_offer.png %}
-[img2]: {% image_buster /assets/img/drag_and_drop/templates/email_capture_field_offer.png %} 
 
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#message-components

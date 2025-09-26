@@ -1,5 +1,5 @@
 ---
-nav_title: Brand Guidelines
+nav_title: Brand guidelines
 article_title: Brand Guidelines
 page_order: 1
 page_type: reference

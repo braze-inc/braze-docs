@@ -1,6 +1,6 @@
 ---
 nav_title: Perguntas frequentes
-article_title: Perguntas Frequentes sobre Push
+article_title: FAQs sobre Push
 page_order: 80
 description: "Este artigo aborda algumas das perguntas mais frequentes que surgem ao configurar campanhas de push."
 page_type: FAQ
@@ -18,9 +18,9 @@ Quando um usuário sai de um dispositivo ou site, ele continuará acessível por
 
 Quando um token por push é reatribuído, a mudança é refletida no **Changelog de Push** do perfil do usuário. Você pode encontrar isso acessando a guia **Engajamento** no perfil do usuário.
 
-![O "Changelog de Push" na seção "Configurações de Contato".][1]{: style="max-width:50%;"}
+![O "Changelog de Push" na seção "Configurações de Contato".]({% image_buster /assets/img/push_changelog_faq.png %}){: style="max-width:50%;"}
 
-### Por que um usuário que optou por participar não tem um token por push?
+### Por que um usuário que optou por receber não tem um token por push?
 
 Isso pode acontecer se o token por push do usuário foi reatribuído a outra pessoa que usou o mesmo dispositivo.
 
@@ -31,7 +31,6 @@ Isso pode acontecer se o token por push do usuário foi reatribuído a outra pes
 
 Se você quiser que o token por push seja reatribuído ao usuário original:
 
-1. Faça o usuário original fazer login no perfil com o token por push ausente.
+1. Faça com que o usuário original faça login no perfil com o token por push ausente.
 2. Dispare um novo envio de push. Isso moverá o token de volta para a conta se eles ainda tiverem push habilitado no nível do dispositivo.
 
-[1]: {% image_buster /assets/img/push_changelog_faq.png %}

@@ -43,4 +43,3 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 메시지 예약 엔드포인트 응답에는 메시지 발송을 다시 참조할 수 있도록 메시지의 `dispatch_id` 링크가 포함됩니다. `dispatch_id` 은 메시지 발송의 ID(Braze에서 보낸 각 '전송'에 대한 고유 ID)입니다.
 
-[33]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/

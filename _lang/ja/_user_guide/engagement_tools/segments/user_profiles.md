@@ -1,7 +1,7 @@
 ---
 nav_title: ユーザープロフィール
 article_title: ユーザープロフィール
-page_order: 5
+page_order: 9
 page_type: reference
 tool: 
   - Dashboard
@@ -26,13 +26,13 @@ description: "この参考記事では、ダッシュボードでユーザーの
 
 一致するものが見つかった場合は、Braze SDK を使用してこのユーザーについて記録した情報を表示できます。それ以外の場合、検索で複数のユーザープロファイルが返される場合は、各プロファイルを個別にマージするか、ユーザーの一括マージを実行できます。詳細な手順については、「[重複ユーザー]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users/)」を参照してください。
 
-![検索結果には、「複数のユーザーが検索条件に一致しました」というバナーと、「前へ」と「次へ」というラベルの付いた 2 つのボタンが表示されます。][1]
+![検索結果には、「複数のユーザーが検索条件に一致しました」というバナーと、「前へ」と「次へ」というラベルの付いた 2 つのボタンが表示される。]({% image_buster /assets/img_archive/User_Search_Nonunique.png %}){: style="max-width:60%;"}
 
 ## ユースケース
 
 ユーザープロファイルは、ユーザーのエンゲージメント履歴、セグメントメンバーシップ、デバイス、オペレーティングシステムに関する情報に簡単にアクセスできるため、トラブルシューティングやテストに最適なリソースです。
 
-たとえば、ユーザーが問題を報告したときに、使用しているデバイスとオペレーティングシステムがわからない場合は、[[概要](#overview-tab)] タブを使用してこの情報を確認できます (ユーザーのメールアドレスまたはユーザー ID がわかっている場合)。また、ユーザーの言語を確認できるので、期待どおりに動作しなかった多言語キャンペーン][13]のトラブルシューティングを行う場合に役立ちます。
+たとえば、ユーザーが問題を報告したときに、使用しているデバイスとオペレーティングシステムがわからない場合は、[[概要](#overview-tab)] タブを使用してこの情報を確認できます (ユーザーのメールアドレスまたはユーザー ID がわかっている場合)。また、ユーザーの言語を確認できるので、期待どおりに動作しなかった[多言語キャンペーン]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/#campaigns-in-multiple-languages)のトラブルシューティングを行う場合に役立ちます。
 
 [[エンゲージメント](#engagement-tab)] タブを使用して、特定のユーザーがキャンペーンを受け取ったかどうかを確認できます。さらに、この特定のユーザーがキャンペーンを受け取った場合は、そのユーザーがいつキャンペーンを受け取ったかを確認できます。また、ユーザーが特定のセグメントに属しているかどうか、ユーザーがプッシュ、メール、またはその両方にオプトインしているかどうかを確認することもできます。この情報はトラブルシューティングに役立ちます。たとえば、ユーザーが受け取るはずのキャンペーンを受け取っていない場合や、受け取るはずではなかったキャンペーンを受け取っている場合は、この情報を確認する必要があります。
 
@@ -43,6 +43,7 @@ description: "この参考記事では、ダッシュボードでユーザーの
 - **概要:**ユーザー、セッションデータ、カスタム属性、カスタムイベント、購入、およびおよびユーザーが最後にログインしたデバイスに関する基本情報。
 - **エンゲージメント:**ユーザーの連絡先設定、受信したキャンペーン、セグメント、コミュニケーション統計、インストールアトリビューション、ランダムバケット番号に関する情報。
 - **メッセージング履歴:**過去30日間の、このユーザーの最近のメッセージング関連イベント。
+- **フィーチャーフラグの適格性:**ロールアウト、キャンバスステップ、実験にわたって、ユーザーが現在どのフィーチャーフラグの対象であるかを検証します。 
 
 ### 「概要」タブ {#overview-tab}
 
@@ -58,9 +59,9 @@ description: "この参考記事では、ダッシュボードでユーザーの
 | 購入 | このユーザーに帰属する生涯収益、前回の購入、購入の合計数、および各購入のリスト。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-このデータの詳細については、「ユーザーデータ収集][12]」を参照してください。
+このデータの詳細については、「[ユーザーデータ収集]({{site.baseurl}}/user_guide/data/user_data_collection/)」を参照してください。
 
-![ユーザープロファイルの「概要」タブ。][2]
+![ユーザープロファイルの [概要] タブ。]({% image_buster /assets/img_archive/user_profile2.png %})
 
 ### 「エンゲージメント」タブ {#engagement-tab}
 
@@ -68,17 +69,17 @@ description: "この参考記事では、ダッシュボードでユーザーの
 
 | エンゲージメントカテゴリー | 含有 |
 | --- | --- |
-| 連絡先の設定 | メール、SMS、プッシュのサブスクリプション ステータス、およびこのユーザーのサブスクリプショングループは、これら3つのチャネルに関連付けられています。このセクションには、プッシュトークンの変更ログ情報も含まれています。サブスクリプションおよびopt-in の設定方法については、[メール]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/)、[SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/)、[push]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/) を参照してください。 |
+| 連絡先の設定 | メール、SMS、プッシュのサブスクリプション ステータス、およびこのユーザーのサブスクリプショングループは、これら3つのチャネルに関連付けられています。このセクションには、プッシュトークンの変更ログ情報も含まれています。サブスクリプションおよびopt-in の設定方法については、[メール]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/)、[SMS]({{site.baseurl}}/sms_rcs_subscription_groups/)、[push]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/) を参照してください。 |
 | 受信したキャンペーン | 受信したキャンペーンは、ユーザーがキャンペーンを受け取ったとき、またはユーザーとのインタラクションデータを最初に検出したときにマークされます。一覧からキャンペーンを選択して表示します。 |
 | セグメント | このユーザーはセグメントに含まれています。一覧からセグメントを選択して表示します。 |
 | コミュニケーション統計 | このユーザーが各チャネルから御社からのメッセージを最後に受信した時期。 |
 | アトリビューションのインストール | ユーザーがアプリをインストールした方法と日時に関する情報。[ユーザーインストールの理解]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/install_attribution/)について詳しく説明します。 |
 | その他 | ユーザーの[ランダムバケット番号]({{site.baseurl}}/user_guide/engagement_tools/testing/random_bucket_numbers/)。 |
 | 受信したキャンバスメッセージ | このユーザーが受信したキャンバスメッセージとその時期。リストからメッセージを選択して表示します。 |
-| 予測 | このユーザーの[Churn 予測]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_churn/)および[イベント予測]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_events/)のスコア。 |
+| 予測 | このユーザーの[Churn 予測]({{site.baseurl}}/user_guide/brazeai/predictive_churn/)および[イベント予測]({{site.baseurl}}/user_guide/brazeai/predictive_events/)のスコア。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-![ユーザープロファイルのエンゲージメントタブで、コンタクト設定やコミュニケーション統計が表示される。][3]
+![ユーザープロファイルのエンゲージメントタブで、コンタクト設定やコミュニケーション統計が表示される。]({% image_buster /assets/img_archive/profiles_engagement_tab.png %})
 
 ### [メッセージ履歴] タブ
 
@@ -88,7 +89,7 @@ description: "この参考記事では、ダッシュボードでユーザーの
 この表についてフィードバックがある場合、または特定のイベントを見たい場合は、[user-targeting@braze.com](mailto:user-targeting@braze.com?subject=Messaging%20History%20Tab%20Feedback)に件名を「メッセージング履歴タブのフィードバック」としてメールを送ってほしい。
 {% endalert %}
 
-![ユーザーが受信したキャンペーンおよびキャンバスを示す [メッセージ履歴] タブ。][5]
+![ユーザーが受信したキャンペーンおよびキャンバスを示す [メッセージ履歴] タブ。]({% image_buster /assets/img_archive/profiles_messaging_history_tab.png %})
 
 #### イベントの表示と理解
 
@@ -106,6 +107,7 @@ description: "この参考記事では、ダッシュボードでユーザーの
 | アプリ内メッセージ | クリック<br>インプレッション |
 | コンテンツカードによって促進された | クリック<br>無視<br>インプレッション<br>送信 |
 | Webhook | 送信 |
+| WhatsApp | 中止<br>配信<br>失敗<br>フリークエンシーキャップ適用済み<br>インバウンド受信<br>既読<br>送信 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ##### メッセージ中止イベント
@@ -138,9 +140,3 @@ description: "この参考記事では、ダッシュボードでユーザーの
 メールの開封統計は、例えば異なる件名の効果を比較するために集計することは有用であるが、個々のユーザーの開封イベントを意味のあるものと仮定すべきではない。
 
 
-[1]: {% image_buster /assets/img_archive/User_Search_Nonunique.png %}
-[2]: {% image_buster /assets/img_archive/user_profile2.png %}
-[3]: {% image_buster /assets/img_archive/profiles_engagement_tab.png %}
-[5]: {% image_buster /assets/img_archive/profiles_messaging_history_tab.png %}
-[12]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/
-[13]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/#campaigns-in-multiple-languages

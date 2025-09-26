@@ -19,7 +19,7 @@ Relatórios de Retenção não estão disponíveis para campanhas acionadas por 
 
 ### Etapa 1: Selecione um intervalo de datas
 
-![Data do Relatório][8]{: style="float:right;max-width:30%;margin-left:15px;"}
+![Data do relatório]({% image_buster /assets/img/date_select_retention.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
 
 Comece visitando qualquer campanha ou canva no seu dashboard do Braze e selecione um intervalo de datas para o seu relatório. Selecionar um intervalo de datas apropriado é crucial por causa da maneira como isso afeta os relatórios de retenção. 
 
@@ -42,13 +42,13 @@ Em seguida, selecione **Analisar variantes**. A partir daqui, você pode analisa
 {% endtab %}
 {% endtabs %}
 
-![Selecione um evento de retenção][1]{: style="max-width:80%"}
+![Selecione um evento de retenção]({% image_buster /assets/img/retention_1.png %}){: style="max-width:80%"}
 
 ### Etapa 3: Gerar o relatório
 
 Depois de selecionar um evento de retenção, selecione **Gerar relatório** para iniciar a consulta.
 
-![Gerar relatório][2]{: style="max-width:80%"}
+![Relatório de execução]({% image_buster /assets/img/retention_2.png %}){: style="max-width:80%"}
 
 Essa consulta pode levar alguns minutos para ser executada, dependendo do volume de dados precisa ser recuperado para gerar os resultados. Se demorar muito, você verá uma notificação pedindo para tentar carregar o relatório novamente. Você pode precisar esperar até cinco minutos antes que o relatório seja carregado.
 
@@ -97,7 +97,7 @@ As medidas de retenção de intervalo mostram quantos usuários retornam no inte
 
 Relatórios de Intervalo são alguns dos relatórios mais intuitivos de ler. Eles afirmam claramente, de todos os usuários em uma coorte, qual porcentagem desses usuários realizou o evento de retenção dentro de um intervalo de datas específico. Por exemplo, na imagem a seguir, referenciando a coorte de Todos os Usuários, no intervalo de datas "Dia 0 (0-24hrs)", 35,71% da coorte realizou o relatório de retenção. Se um usuário realizar vários eventos de retenção em vários intervalos de datas, ele será contado como retido para cada intervalo.
 
-![Relatório de Retenção][5]
+![Relatório de retenção]({% image_buster /assets/img/range_retention.png %})
 
 ### Componentes do relatório de retenção
 
@@ -151,9 +151,5 @@ Relatórios de Retenção são fáceis de gerar, mas desafiadores de interpretar
 - Você está vendo fadiga de envio de mensagens?
 - Uma otimização específica que você fez em uma campanha ou canva X dias atrás teve um impacto positivo?
 
-[1]: {% image_buster /assets/img/retention_1.png %}
-[2]: {% image_buster /assets/img/retention_2.png %}
-[5]: {% image_buster /assets/img/range_retention.png %}
-[8]: {% image_buster /assets/img/date_select_retention.png %}
 
 

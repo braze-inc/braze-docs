@@ -32,7 +32,7 @@ noindex: true
 
 ## Paso 1: Sube tu token de APNs
 
- %} developer_guide/swift/apns_token.md
+{% multi_lang_include developer_guide/swift/apns_token.md %}
 
 ## Paso 2: Habilitar las capacidades push
 
@@ -63,7 +63,7 @@ El siguiente ejemplo de código incluye la integración para la autenticación p
 {% endalert %}
 
 {% tabs %}
-{% tab OBJETIVO-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 if (floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_9_x_Max) {
@@ -121,7 +121,7 @@ Debes asignar tu objeto delegado utilizando `center.delegate = self` de forma si
 Si no utilizas el framework `UserNotifications`, añade el siguiente código al método `application:didFinishLaunchingWithOptions:` del delegado de tu aplicación:
 
 {% tabs %}
-{% tab OBJETIVO-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeBadge | UIUserNotificationTypeAlert | UIUserNotificationTypeSound) categories:nil];

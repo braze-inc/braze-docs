@@ -57,10 +57,16 @@ guide_menu_list:
   - name: メッセージのアーカイブ
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/archiving/
     image: /assets/img/braze_icons/archive.svg
+  - name: ワークスペース間でのコピー
+    link: /docs/user_guide/engagement_tools/messaging_fundamentals/copying_across_workspaces/
+    image: /assets/img/braze_icons/copy-07.svg
   - name: メッセージの複製
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/duplicating/
     image: /assets/img/braze_icons/copy-04.svg
   - name: メッセージステータス
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/about_statuses/
+    image: /assets/img/braze_icons/book-closed.svg
+  - name: 送信前の確認
+    link: /docs/know_before_send/
     image: /assets/img/braze_icons/book-closed.svg
 ---

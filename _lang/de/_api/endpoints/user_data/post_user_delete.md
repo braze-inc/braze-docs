@@ -16,7 +16,7 @@ description: "Dieser Artikel beschreibt die Details des Endpunkts Nutzer:innen l
 
 > Verwenden Sie diesen Endpunkt, um ein beliebiges Nutzerprofil zu löschen, indem Sie einen bekannten Bezeichner für Nutzer:in angeben.
 
-Bis zu 50 `external_ids`, `user_aliases`, `braze_ids`, `email_addresses`, oder `phone_numbers` können in einer einzigen Anfrage enthalten sein. In einer Anfrage kann nur eine der Optionen `external_ids`, `user_aliases`, `braze_ids`, `email_addresses` oder `phone_numbers` enthalten sein. 
+Bis zu 50 `external_ids`, `user_aliases`, `braze_ids`, `email_addresses` oder `phone_numbers` können in einer einzigen Anfrage enthalten sein. In einer Anfrage kann nur eine der Optionen `external_ids`, `user_aliases`, `braze_ids`, `email_addresses` oder `phone_numbers` enthalten sein. 
 
 Wenn Sie einen Anwendungsfall haben, der nicht mit der Massenlöschung von Nutzer:innen über die API gelöst werden kann, wenden Sie sich bitte an das [Braze Support Team]({{site.baseurl}}/user_guide/administrative/access_braze/support/), um Hilfe zu erhalten.
 
@@ -32,7 +32,7 @@ Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.ba
 
 ## Rate-Limit
 
-{% multi_lang_include rate_limits.md endpunkt='nutzer:innen löschen' %}
+{% multi_lang_include rate_limits.md endpoint='users delete' %}
 
 ## Anfragetext
 
@@ -61,13 +61,17 @@ Authorization: Bearer YOUR_REST_API_KEY
 | `phone_numbers` | Optional | String-Array | Zu löschende Nutzer:innen-Telefonnummern. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-### Löschen von Nutzer:innen per E-Mail
+### Löschen von Nutzer:innen nach E-Mail-Adressen und Telefonnummern
 
-Wenn ein `email` als Bezeichner angegeben wird, ist ein zusätzlicher `prioritization` Wert im Bezeichner erforderlich. Die `prioritization` ist ein geordnetes Array und sollte angeben, welcher Nutzer:in gelöscht werden soll, wenn mehrere Nutzer:innen gefunden werden. Das bedeutet, dass Nutzer:innen nicht gelöscht werden, wenn mehr als ein Nutzer einer Priorisierung entspricht.
+Wenn eine E-Mail Adresse oder Telefonnummer als Bezeichner angegeben wird, ist ein zusätzlicher `prioritization` Wert im Bezeichner erforderlich. `prioritization` muss ein geordnetes Array sein und sollte angeben, welcher Nutzer:innen zu löschen ist, wenn es mehrere Nutzer:innen gibt. Das bedeutet, dass Nutzer:innen nicht gelöscht werden, wenn mehr als ein Nutzer einer Priorisierung entspricht.
 
-Die zulässigen Werte für das Array sind: `identified`, `unidentified`, `most_recently_updated`. `most_recently_updated` bezieht sich auf die Priorisierung des zuletzt aktualisierten Nutzer:innen.
+Die zulässigen Werte für das Array sind:
 
-Es kann jeweils nur eine der folgenden Optionen im Prioritätsfeld vorhanden sein:
+- `identified`
+- `unidentified`
+- `most_recently_updated` (referenziert auf den zuletzt aktualisierten Nutzer:in)
+
+Im Array `prioritization` darf jeweils nur eine der folgenden Optionen vorhanden sein:
 
 - `identified` bezieht sich auf die Priorisierung eines Nutzer:innen mit einem `external_id`
 - `unidentified` bezieht sich auf die Priorisierung eines Nutzer:in ohne ein `external_id`

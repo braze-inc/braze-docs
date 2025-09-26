@@ -10,7 +10,7 @@ channel:
 
 # 비디오 {#video}
 
-> HTML 인앱 메시지에서 동영상을 재생하려면 HTML에 다음 `<video>` 요소를 포함하고 동영상 이름을 파일 이름(또는 원격 자산의 URL)으로 바꿉니다. 다른 가능한 `<video>` 옵션은 [MDN 웹 문서에서][9] 찾을 수 있습니다.
+> HTML 인앱 메시지에서 동영상을 재생하려면 HTML에 다음 `<video>` 요소를 포함하고 동영상 이름을 파일 이름(또는 원격 자산의 URL)으로 바꿉니다. You can find other possible `<video>` options on [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video).
 
 ```html
 <video class="video" autoplay muted playsinline controls>
@@ -38,4 +38,3 @@ iOS 기기를 지원하려면:
 - iOS는 기본적으로 자동 재생을 지원하지 않습니다. 이 기본 옵션을 업데이트하려면 다음을 수정하면 됩니다. [`ABKInAppMessageHTMLViewController`](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyUI/ABKInAppMessage/ViewControllers/ABKInAppMessageHTMLViewController.m)
 
 
-[9]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video

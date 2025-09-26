@@ -15,7 +15,7 @@ channel:
 
 | Android 예제 (확장됨) | IOS 예시 (확장됨) |
 | :-----: | :----------: |
-| ![][1] | ![][2] |
+| ![]({% image_buster /assets/img_archive/pushstories_android_preview.png %}) | ![]({% image_buster /assets/img_archive/pushstories_ios_preview.png %}) |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
@@ -31,7 +31,7 @@ iOS SDK 버전 3.13.0+에서는 SDK가 이미지를 다운로드하는 방식의
 
 ## 푸시 스토리 사용 방법
 
-![][6]{: style="float:right;max-width:50%;margin-left:15px;margin-bottom:15px;"}
+![]({% image_buster /assets/img_archive/pushstories_composer_dropdown2.png %}){: style="float:right;max-width:50%;margin-left:15px;margin-bottom:15px;"}
 
 푸시 스토리를 사용하려면 다음과 같이 하세요:
 
@@ -44,13 +44,13 @@ iOS SDK 버전 3.13.0+에서는 SDK가 이미지를 다운로드하는 방식의
 페이지를 만들려면 다음 단계를 수행하십시오:
 
 1. 메인 작성기에서 **페이지 관리**를 클릭합니다.
-    <br><br>![][4]{: style="max-width:70%"}<br><br>
+    <br><br>![]({% image_buster /assets/img_archive/pushstories_add_pages.png %}){: style="max-width:70%"}<br><br>
 2. 각 페이지에 대한 이미지를 삽입하고 해당 이미지의 클릭 동작을 포함하십시오.
 3. 원하는 경우 각 페이지에 **제목** 및 **설명**을 추가하십시오. 한 페이지에 제목과 설명을 사용하는 경우 모든 페이지에 삽입해야 합니다.
 
 미리보기는 반영되고 상호작용할 수 있습니다.
 
-![][3]{: style="max-width:60%"}
+![]({% image_buster /assets/img_archive/pushstories_composer.png %}){: style="max-width:60%"}
 
 {% alert important %}
 이미지를 [연결된 콘텐츠]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/#about-connected-content)로 가져오는 경우 이미지 URL이 `https://`으로 시작하는지 확인하세요. `http://`을(를) 사용하면 앱이(가) 충돌합니다.
@@ -89,7 +89,7 @@ iOS SDK 버전 3.13.0+에서는 SDK가 이미지를 다운로드하는 방식의
 
 분석은 푸시 알림에 대한 현재 분석 섹션과 매우 유사하게 보일 것입니다. 푸시 스토리 분석의 경우 **직접 열기** 메트릭을 열어 페이지당 클릭 수를 확인할 수 있습니다.
 
-![iOS 푸시 성능/성과 테이블, 샘플 분석 및 직접 열람 측정기준에 대한 확장된 세부 정보.][5]
+![iOS Push Performance table with sample analytics and expanded details for the Direct Opens metric.]({% image_buster /assets/img_archive/pushstories_analytics.png %})
 
 ## 문제 해결
 
@@ -111,9 +111,3 @@ Apple은 여러 가지 요인에 따라 특정 유형의 알림이 기기로 전
 
 기본값으로, 푸시 스토리는 사용자가 이미지를 클릭한 후 Android에서 해제되지 않습니다. 알림을 해제하려면 [`cancelNotification`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.push/-braze-notification-utils/index.html#-1466259649%2FFunctions%2F-1725759721)을 호출하세요.  
 
-[1]: {% image_buster /assets/img_archive/pushstories_android_preview.png %}
-[2]: {% image_buster /assets/img_archive/pushstories_ios_preview.png %}
-[3]: {% image_buster /assets/img_archive/pushstories_composer.png %}
-[4]: {% image_buster /assets/img_archive/pushstories_add_pages.png %}
-[5]: {% image_buster /assets/img_archive/pushstories_analytics.png %}
-[6]: {% image_buster /assets/img_archive/pushstories_composer_dropdown2.png %}

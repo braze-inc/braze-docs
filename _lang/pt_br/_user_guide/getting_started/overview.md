@@ -31,13 +31,13 @@ Certifique-se de [adicionar seus colegas ao Braze]({{site.baseurl}}/user_guide/a
 
 Os usuários são seus clientes - as pessoas que recebem as mensagens que você envia usando o Braze. Todos os dados que você coleta sobre um usuário e ingere no Braze são armazenados no perfil do usuário, como dados demográficos, informações pessoais, preferências e comportamentos. Essas informações alimentam o envio de mensagens e é assim que você pode personalizar suas mensagens para o usuário certo.
 
-![][1]
+![]({% image_buster /assets/img/getting_started/user_profile.png %})
 
 Os segmentos dividem sua base de clientes em grupos menores que podem ser direcionados com envios de mensagens específicos. É possível usar diferentes variáveis para criar segmentos, desde características como gênero, local e idade até comportamentos como padrões de interação com campanhas anteriores ou em que ponto da jornada do cliente eles se encontram.
 
 Os segmentos são dinâmicos - os usuários podem entrar e sair dos segmentos em tempo real com base em seu comportamento e em sua posição em relação à sua marca. Isso garante que seus clientes recebam o envio de mensagens mais relevante para eles em um determinado momento. Você pode criar quantos segmentos forem necessários para fins de direcionamento e envio de mensagens.
 
-![][2]
+![]({% image_buster /assets/img/getting_started/segment.png %})
 
 Para saber mais, confira: [Primeiros passos: Usuários e segmentos]({{site.baseurl}}/user_guide/getting_started/users_segments/).
 
@@ -68,7 +68,7 @@ Para saber mais, confira: [Primeiros passos: Espaços de trabalho]({{site.baseur
 
 O Braze foi projetado para entrar em operação de forma rápida e fácil. Nosso tempo médio de obtenção de valor é de seis semanas em nossa base de clientes de centenas de marcas.
 
-![][3]
+![]({% image_buster /assets/img/getting_started/timetovalue.png %})
 
 Aqui está a estrutura do Braze para estimar a duração de sua integração com base em quatro componentes nos quais você pode trabalhar em paralelo. O intervalo típico é de 30 a 180 dias, com a maioria das contas concluindo sua integração em 45 a 60 dias.
 
@@ -84,6 +84,3 @@ Precisa de ajuda com sua migração? Nossos [parceiros certificados Braze](https
 
 Para saber mais, confira: [Primeiros passos: Visão geral da integração]({{site.baseurl}}/user_guide/getting_started/integration/).
 
-[1]: {% image_buster /assets/img/getting_started/user_profile.png %}
-[2]: {% image_buster /assets/img/getting_started/segment.png %}
-[3]: {% image_buster /assets/img/getting_started/timetovalue.png %}

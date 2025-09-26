@@ -1,5 +1,5 @@
 ---
-nav_title: API Usage Alerts
+nav_title: API usage alerts
 article_title: API Usage Alerts
 description: "This article provides an overview of the API usage alerts, which allows you to proactively detect unexpected traffic."
 page_order: 3.6
@@ -119,7 +119,7 @@ Be alerted when your workspace reaches its rate limit for `/users/track` endpoin
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 .reset-td-br-5 .reset-td-br-6 role="presentation" }
 {% endtab %}
 
-{% tab api-triggered campaigns %}
+{% tab API-triggered campaigns %}
 This alert configuration notifies you when errors occur for API triggered campaigns and Canvases, some of which may be high-priority.
 
 | Endpoint | API key | Response code | Threshold condition | Threshold volume | Within |

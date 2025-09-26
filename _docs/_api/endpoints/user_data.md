@@ -1,5 +1,5 @@
 ---
-nav_title: User Data
+nav_title: User data
 article_title: User Data Endpoints
 search_tag: Endpoint
 page_order: 9

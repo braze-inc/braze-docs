@@ -10,24 +10,32 @@ alias: /scim/automated_user_provisioning/
 
 # Aprovisionamiento automático de usuarios
 
-> Aprenda lo que necesita proporcionar para el aprovisionamiento automatizado de usuarios y cómo y dónde utilizar su token generado de System for Cross-domain Identity Management (SCIM) y el punto final de la API de SCIM. A continuación, puede llamar a este punto final con su API para aprovisionar automáticamente nuevos usuarios del cuadro de mandos.
+> Utiliza el aprovisionamiento SCIM para crear y administrar automáticamente usuarios Braze a través de la API. Este artículo te explica qué información debes proporcionar, cómo generar tu token SCIM y dónde encontrar tu punto final de la API SCIM.
 
-Para acceder a esta página, vaya a **Configuración** > **Configuración de administración** > **Aprovisionamiento SCIM**.
+## Paso 1: Acceder a la configuración de privionización del SCIM
 
-## Cómo conseguir tu token SCIM
+En el panel de Braze, ve a **Configuración** > **Configuración de administrador** > **Aprovisionamiento SCIM**.
 
-Tendrás que proporcionar la siguiente información para obtener tu token SCIM:
+## Paso 2: Configura tus ajustes SCIM
 
-1. Selecciona un espacio de trabajo predeterminado al que se añadirán los nuevos desarrolladores del panel. Si no especifica un espacio de trabajo en la [llamada a la API SCIM de creación de usuarios]({{site.baseurl}}/post_create_user_account/), éstos se añadirán aquí.
-2. Proporcionar un origen de servicio. El origen del servicio es la forma en que Braze identifica de dónde procede la solicitud.
-3. Opcionalmente, proporcione una lista separada por comas o un rango de direcciones IP permitidas para solicitudes SCIM. La cabecera `X-Origin-Request` de cada solicitud se utilizará para comprobar la dirección IP de la solicitud con la lista permitida.<br><br>
+Para habilitar el aprovisionamiento SCIM, proporciona la siguiente información:
+
+- **Espacio de trabajo predeterminado:** Selecciona el espacio de trabajo en el que se añadirán por defecto los nuevos usuarios. Si no especificas un espacio de trabajo en tu [solicitud de API SCIM]({{site.baseurl}}/post_create_user_account/), Braze asigna usuarios a este espacio de trabajo.
+- **Origen del servicio:** Introduce el dominio de origen de tus peticiones SCIM. Braze lo utiliza en el encabezado `X-Request-Origin` para verificar de dónde proceden las solicitudes.
+- **Lista de IP permitidas (opcional):** Puedes restringir las peticiones SCIM a determinadas direcciones IP.
+Introduce una lista o rango de direcciones IP separadas por comas para permitirlas. La cabecera `X-Request-Origin` de cada solicitud se utilizará para comprobar la dirección IP de la solicitud con la lista permitida.
 
 {% alert note %}
 Este punto final SCIM no se integra directamente con los proveedores de identidad.
 {% endalert %}
 
-![][1]
+![Formulario de configuración del aprovisionamiento SCIM con tres campos: Espacio de trabajo predeterminado, origen del servicio y lista opcional de IP permitidas. El botón "Generar token SCIM" está desactivado.]({% image_buster /assets/img/scim_unfilled.png %})
 
-Después de rellenar los campos obligatorios, puedes generar un token SCIM y ver tu punto final API SCIM. **Este token solo se presentará una vez.** Braze espera que todas las solicitudes SCIM contengan el token de portador de la API SCIM adjunto mediante un encabezado HTTP `Authorization`.
+## Paso 3: Consigue tu token SCIM y tu punto final
 
-[1]: {% image_buster /assets/img/scim.png %}
+Tras rellenar los campos obligatorios, pulsa **Generar to** ken SCIM para generar un token SCIM y ver tu punto final de API SCIM. Asegúrate de copiar el token SCIM antes de salir navegando. **Este token solo se presentará una vez.** 
+
+![Los campos Punto final de la API SCIM y Token SCIM se muestran con valores enmascarados y botones de copia. Debajo del campo token hay un botón "Restablecer token".]({% image_buster /assets/img/scim.png %})
+
+Braze espera que todas las solicitudes SCIM contengan el token de portador de la API SCIM adjunto mediante un encabezado HTTP `Authorization`.
+

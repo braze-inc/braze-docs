@@ -29,7 +29,7 @@ Para usar esse endpoint, você precisará de um token SCIM. Você usará a orige
 
 ## Limite de taxa
 
-{% multi_lang_include rate_limits.md endpoint='atualizar usuário do dashboard' %}
+{% multi_lang_include rate_limits.md endpoint='update dashboard user' %}
 
 ## Parâmetros da jornada
 

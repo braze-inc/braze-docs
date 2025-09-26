@@ -3,7 +3,7 @@ page_order: 0
 nav_title: ホーム
 layout: dev_guide
 guide_top_header: "Braze 開発者ガイド"
-guide_top_text: "ここでは、開発者がBraze SDKについて知る必要のあるすべての情報を得ることができる。各SDKは、独自のGitHub公開リポジトリでホストされており、Brazeの機能をテストしたり、独自のアプリケーションと一緒に実装するために使用できる、完全にビルド可能なサンプルアプリが含まれている。詳しくは、<a href='{{site.baseurl}}/developer_guide/references/'>学習、リポジトリ、サンプルアプリを</a>参照のこと。<br><br>Brazeを使用して構築している他の開発者とつながり、学び、刺激を受けたい？<a href='https://www.braze.com/dev-portal'>Braze開発者コミュニティに</a>参加する！"
+guide_top_text: "ここでは、開発者が Braze SDK について知る必要のあるすべての情報を得ることができます。各SDKは、独自のGitHub公開リポジトリでホストされており、Brazeの機能をテストしたり、独自のアプリケーションと一緒に実装したりするために使用できる、完全にビルド可能なサンプルアプリが含まれている。詳しくは、<a href='{{site.baseurl}}/developer_guide/references/'>参照資料、リポジトリ、サンプルアプリ</a>を参照してください。<br><br>Braze を使用して構築している他の開発者とつながり、学び、刺激を受けたいですか?<a href='https://www.braze.com/dev-portal'>Braze 開発者コミュニティ</a>に参加しましょう。"
 article_title: Braze 開発者ガイド
 description: "このランディングページでは、開発者は Braze で利用可能なすべての統合を見つけることができます。"
 

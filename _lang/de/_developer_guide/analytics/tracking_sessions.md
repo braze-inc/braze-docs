@@ -14,31 +14,7 @@ description: "Erfahren Sie, wie Sie Sitzungen über das Braze SDK tracken könne
 Für Wrapper-SDKs, die nicht aufgeführt sind, verwenden Sie stattdessen die entsprechende native Android- oder Swift-Methode.
 {% endalert %}
 
-## Über den Lebenszyklus einer Sitzung
-
-Eine Sitzung referenziert den Zeitraum, in dem das Braze SDK die Aktivitäten der Nutzer:in Ihrer App nach deren Start verfolgt. Sie können auch eine neue Sitzung erzwingen, indem [Sie die Methode `changeUser()` aufrufen]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/#setting-a-user-id).
-
-{% tabs %}
-{% tab android %}
-{% alert note %}
-Wenn Sie den [activity lifecycle callback]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-4-tracking-user-sessions-in-android) für Android eingerichtet haben, wird Braze automatisch `openSession()` und `closeSession()` für jede Aktivität in Ihrer App aufrufen.
-{% endalert %}
-
-Standardmäßig wird eine Sitzung gestartet, wenn `openSession()` zum ersten Mal aufgerufen wird. Wenn Ihre App in den Hintergrund geht, bleibt die Sitzung für `10` Sekunden aktiv (es sei denn, Sie [ändern den Standard-Timeout für die Sitzung](#changing-the-default-session-timeout)) oder der Nutzer:innen schließt Ihre App. Denken Sie daran: Wenn der Nutzer:in Ihre App schließt, während diese im Hintergrund läuft, werden die Sitzungsdaten möglicherweise erst dann in Braze gespeichert, wenn er die App erneut öffnet. 
-
-Wenn Sie `closeSession()` aufrufen, wird die Sitzung nicht sofort beendet. Stattdessen wird die Sitzung nach 10 Sekunden beendet, wenn `openSession()` nicht erneut vom Nutzer:innen aufgerufen wird, der eine andere Aktivität startet.
-{% endtab %}
-
-{% tab schnell %}
-Standardmäßig beginnt eine Sitzung, wenn Sie `Braze.init(configuration:)` aufrufen. Dies geschieht, wenn die Benachrichtigung `UIApplicationWillEnterForegroundNotification` getriggert wird, was bedeutet, dass die App in den Vordergrund getreten ist.
-
-Wenn Ihre App in den Hintergrund geht, wird `UIApplicationDidEnterBackgroundNotification` getriggert. Die Sitzung bleibt für `10` Sekunden aktiv (es sei denn, Sie [ändern den Standard-Timeout für die Sitzung](#changing-the-default-session-timeout)) oder der Nutzer:innen schließt Ihre App.
-{% endtab %}
-
-{% tab Internet %}
-Standardmäßig beginnt eine Sitzung, wenn Sie `braze.openSession()` zum ersten Mal aufrufen. Die Sitzung bleibt bis zu `30` Minuten der Inaktivität aktiv (es sei denn, Sie [ändern den Standard-Timeout für die Sitzung](#change-session-timeout)) oder der Nutzer:innen schließt die App.
-{% endtab %}
-{% endtabs %}
+{% multi_lang_include developer_guide/_shared/about_session_lifecycle.md %}
 
 ## Updates für Sitzungen abonnieren
 
@@ -194,7 +170,7 @@ AppDelegate.braze = braze;
 {% endtab %}
 
 {% tab Internet %}
-Standardmäßig ist das Sitzungs-Timeout auf `30` Sekunden eingestellt. Um dies zu ändern, übergeben Sie die Option `sessionTimeoutInSeconds` an Ihre [`initialize`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize) Funktion. Sie kann auf eine beliebige ganze Zahl größer oder gleich `1` gesetzt werden. 
+Standardmäßig ist das Sitzungs-Timeout auf `30` Minuten eingestellt. Um dies zu ändern, übergeben Sie die Option `sessionTimeoutInSeconds` an Ihre [`initialize`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize) Funktion. Sie kann auf eine beliebige ganze Zahl größer oder gleich `1` gesetzt werden. 
 
 ```js
 // Sets the session timeout to 15 minutes instead of the default 30

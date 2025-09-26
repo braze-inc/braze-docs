@@ -15,22 +15,32 @@ tool: Canvas
 [コンテキストコンポーネントのアーリーアクセス]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context) に参加している場合、Canvas エントリプロパティはCanvas コンテキスト変数の一部です。これは、`canvas_entry_properties` が`context` として参照されることを意味します。各`context` 変数には、名前、データ型、およびLiquid を含めることができる値が含まれます。
 {% endalert %}
 
-キャンバスエントリのプロパティとイベントプロパティは、キャンバスワークフロー内では機能が異なります。ユーザーがキャンバスに入るトリガーとなるイベントや API 呼び出しのプロパティは、`canvas_entry_properties` と呼ばれます。ユーザーがキャンバスジャーニー内を移動する際に発生するイベントのプロパティは、`event_properties` と呼ばれます。主な違いは、`canvas_entry_properties` は、API トリガキャンバスのエントリペイロードのプロパティにアクセスすることによって、単なるイベント以上のものに焦点を当てます。
+キャンバスエントリのプロパティとイベントプロパティは、キャンバスワークフロー内では機能が異なります。ユーザーがキャンバスに入るトリガーとなるイベントや API 呼び出しのプロパティは、`canvas_entry_properties` と呼ばれます。ユーザーがキャンバスジャーニー内を移動する際に発生するイベントのプロパティは、`event_properties` と呼ばれます。ここでの重要な違いは、`canvas_entry_properties` は、API でトリガーされるキャンバスのエントリペイロードのプロパティにもアクセスすることにより、イベント以上のものに焦点を当てていることです。
 
 キャンバスエントリのプロパティとイベントのプロパティの違いの概要については、次の表を参照してください。
 
 | | キャンバスエントリのプロパティ | イベントプロパティ
 |----|----|----|
 | **Liquid** | `canvas_entry_properties` | `event_properties` |
-| **永続性** | キャンバスフローを使用して構築されたキャンバスの期間中、すべての[メッセージ][1]ステップから参照できる。 | \- 1回のみ参照できます。<br> \- 後続のメッセージステップからは参照できません。 |
-| **元のキャンバスの動作** | \- 永続エントリのプロパティがオンでなければなりません。<br> \- キャンバスの最初のフルステップでのみ `canvas_entry_properties` を参照できます。キャンバスは、アクションベースまたは API トリガ－でなければなりません。 | \- キャンバスでアクションベースの配信を使用する任意のフルステップで `event_properties` を参照できます。<br> \- アクションベースのキャンバスの最初のフルステップを除いて、スケジュールされたフルステップでは使用できません。ただし、ユーザーが[キャンバスコンポーネント][2]を使用している場合、動作は `event_properties` のキャンバスフロールールに従います。 |
-| **キャンバスフローの動作** | キャンバスのどのステップでも`canvas_entry_properties` を参照できる。起動後の動作については、[起動後のキャンバスの編集]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/#canvas-entry-properties)を参照してください。 | \- 行われたアクションがカスタムイベントまたは購入イベントである場合、[アクションパス][3]ステップの**後**の最初のメッセージステップで `event_properties` を参照できます。<br> \- アクションパスステップの「その他のユーザー」パスの後に置くことはできません。<br> \- アクションパスとメッセージステップの間に、メッセージ以外のキャンバスコンポーネントを置くことができます。これらのメッセージ以外のコンポーネントの 1 つがアクションパスのステップである場合、ユーザーはそのアクションパスの「その他のユーザー」パスをたどることができます。 | 
+| **永続性** | キャンバスフローを使用して構築されたキャンバスの期間中、すべての[メッセージ]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/)ステップから参照できる。 | \- 1回のみ参照できます。<br> \- 後続のメッセージステップからは参照できません。 |
+| **キャンバスの動作** | キャンバスのどのステップでも`canvas_entry_properties` を参照できる。起動後の動作については、[起動後のキャンバスの編集]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/#canvas-entry-properties)を参照してください。 | \- 行われたアクションがカスタムイベントまたは購入イベントである場合、[アクションパス]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/)ステップの**後**の最初のメッセージステップで `event_properties` を参照できます。<br> \- アクションパスステップの「その他のユーザー」パスの後に置くことはできません。<br> \- アクションパスとメッセージステップの間に、他の非メッセージコンポーネントを含めることができます。これらのメッセージ以外のコンポーネントの 1 つがアクションパスのステップである場合、ユーザーはそのアクションパスの「その他のユーザー」パスをたどることができます。 | 
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% details 元のCanvas エディタの詳細 %}
-2023 年 2 月 28 日以降、元のエディターを使用したキャンバスの作成や複製はできなくなりました。この記事は、元のキャンバスワークフローで `canvas_entry_properties` や `event_properties` を使用する際の参考として用意されています。
 
-元のキャンバスエディターとキャンバスフローでは、リードメッセージのステップで `event_properties` を使用することはできません。代わりに、`canvas_entry_properties` を使用するか、`event_properties` を含むメッセージステップの**前に**、対応するイベントを持つアクションパスステップを追加する必要があります。
+元のエディターを使用したキャンバスの作成や複製はできなくなりました。この記事は、前のキャンバスワークフローでキャンバスエントリプロパティとイベントプロパティを使用する場合に参考にできます。
+
+**キャンバスエントリのプロパティ:**
+- 永続エントリプロパティがオンになっている必要があります。 
+- キャンバスの最初のフルステップでのみ `canvas_entry_properties` を参照できます。キャンバスは、アクションベースまたは API トリガ－でなければなりません。
+
+**エントリプロパティ:**
+- キャンバスでアクションベースの配信を使用する任意のフルステップで `event_properties` を参照できます。
+- アクションベースのキャンバスの最初の完全なステップ以外のスケジュールされた完全なステップでは使用できません。ただし、ユーザーが[キャンバスコンポーネント]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/)を使用している場合、動作は `event_properties` のキャンバスフロールールに従います。
+
+**イベントプロパティ:**
+- リードメッセージステップで`event_properties` を使用できません。代わりに、`canvas_entry_properties` を使用するか、`event_properties` を含むメッセージステップの**前に**、対応するイベントを持つアクションパスステップを追加する必要があります。
+
 {% enddetails %}
 
 ### 知っておくべきこと
@@ -57,7 +67,7 @@ tool: Canvas
 
 ## ユースケース
 
-![アクションパスステップの後に、ウィッシュリストに項目を追加したユーザの遅延ステップとメッセージステップ、および他のすべてのユーザのパスが続きます。][7]{: style="float:right;max-width:30%;margin-left:15px;"}
+![アクションパスステップの後に、希望リストに項目を追加したユーザーの遅延ステップとメッセージステップ、および他のすべてのユーザーのパス。]({% image_buster /assets/img_archive/canvas_entry_properties1.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
 
 `canvas_entry_properties` と`event_properties` の違いをさらに理解するために、ユーザーが「ウィッシュリストにアイテムを追加」というカスタムイベントを実行すると、アクションベースのキャンバスに入るというシナリオを考えてみます。 
 
@@ -67,10 +77,5 @@ tool: Canvas
 
 ユーザージャーニーの最初のメッセージステップは、アクションパスのステップからのカスタムの `event_properties` にアクセスできます。この場合、このメッセージステップにメッセージ内容の一部として ``{% raw %} {{event_properties.${property_name}}} {% endraw %}`` を含めることができます。ユーザーがウィッシュリストにアイテムを追加しなかった場合、「その他のユーザー」パスを進みます。そのため、`event_properties` を参照できず、無効な設定エラーが反映されます。
 
-なお、`event_properties` にアクセスできるのは、メッセージステップが、アクションパスステップの「その他のユーザー」以外のパスに遡ることができる場合のみです。メッセージステップが「その他のユーザー」パスに接続されていても、ユーザージャーニー内のアクションパスステップに遡ることができる場合には、`event_properties` にアクセスすることが可能です。これらの動作の詳細については、[メッセージステップ][8]を参照してください。
+なお、`event_properties` にアクセスできるのは、メッセージステップが、アクションパスステップの「その他のユーザー」以外のパスに遡ることができる場合のみです。メッセージステップが「その他のユーザー」パスに接続されていても、ユーザージャーニー内のアクションパスステップに遡ることができる場合には、`event_properties` にアクセスすることが可能です。これらの動作の詳細については、[メッセージステップ]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/)を参照してください。
 
-[1]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/
-[2]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/
-[3]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/
-[7]: {% image_buster /assets/img_archive/canvas_entry_properties1.png %}
-[8]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/

@@ -1,5 +1,5 @@
 ---
-nav_title: Active User Campaigns
+nav_title: Active user campaigns
 article_title: Active User Campaigns
 page_order: 0.5
 page_type: tutorial

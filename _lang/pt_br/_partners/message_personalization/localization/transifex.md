@@ -12,6 +12,10 @@ search_tag: Partner
 
 > O Transifex oferece serviços de tradução robustos aplicáveis a toda a sua base de usuários, independentemente do idioma.
 
+_Essa integração é mantida pela Transifex._
+
+## Sobre a integração
+
 A integração do Braze e Transifex aproveita o Connected Content para permitir que você extraia uma coleção de strings de recursos e inclua traduções relevantes em suas mensagens, em vez de linhas de formatação condicional baseada em idioma. Isso automatiza a tradução e libera suas equipes para se concentrarem em oferecer experiências brilhantes aos clientes.
 
 {% alert important %}
@@ -70,5 +74,5 @@ Este trecho de código de exemplo utiliza a API de tradução de recursos do Tra
 ```
 {% endraw %}
 
+
 [16]: [success@braze.com](mailto:success@braze.com)
-[31]: https://docs.transifex.com/api/translation-strings

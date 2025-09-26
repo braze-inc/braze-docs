@@ -8,7 +8,7 @@ description: "이 참조 문서에서는 캠페인에서 태그를 사용할 수
 
 # 조건부 메시징 로직
 
-> [태그][7]를 사용하면 메시징 캠페인에 프로그래밍 로직을 포함할 수 있습니다. 태그는 조건문을 실행하는 데 사용할 수 있을 뿐만 아니라 변수 할당이나 코드 블록을 반복하는 등의 고급 사용 사례에도 사용할 수 있습니다. <br><br>이 페이지에서는 null, nil 및 빈 속성 값을 처리하는 방법, 사용자 정의 속성을 참조하는 방법 등 태그를 사용할 수 있는 방법과 사용해야 하는 방법에 대해 설명합니다.
+> [태그를](https://docs.shopify.com/themes/liquid-documentation/tags) 사용하면 메시징 캠페인에 프로그래밍 로직을 포함할 수 있습니다. 태그는 조건문을 실행하는 데 사용할 수 있을 뿐만 아니라 변수 할당이나 코드 블록을 반복하는 등의 고급 사용 사례에도 사용할 수 있습니다. <br><br>이 페이지에서는 null, nil 및 빈 속성 값을 처리하는 방법, 사용자 정의 속성을 참조하는 방법 등 태그를 사용할 수 있는 방법과 사용해야 하는 방법에 대해 설명합니다.
 
 ## 태그 서식 지정
 
@@ -42,7 +42,7 @@ Buy now! Would 5% off convince you?
 
 ## 조건부 논리
 
-조건문과 같은 다양한 유형의 [메시지 내 지능형 논리][1]를 포함할 수 있습니다. The following example uses [conditionals][8] to internationalize a campaign:
+조건문과 같은 다양한 유형의 [지능형 로직을 메시지 내에](http://docs.shopify.com/themes/liquid-documentation/basics) 포함할 수 있습니다. 다음 예에서는 [조건문을](http://docs.shopify.com/themes/liquid-documentation/tags/control-flow-tags) 사용하여 캠페인을 국제화합니다:
 {% raw %}
 
 ```liquid
@@ -165,7 +165,7 @@ When you're finished with this tutorial, you'll be able to use tags with "if", "
 ```
 {% endraw %} 
 
-!['이름' 속성이 널인 Braze 대시보드의 메시지 예시입니다.][36]{: style="max-width:60%;"}
+!['이름' 속성이 널인 Braze 대시보드의 메시지 예시.]({% image_buster /assets/img/value_null.png %}){: style="max-width:60%;"}
 
 {% raw %}
 ```liquid
@@ -196,11 +196,11 @@ null 속성 값은 값 유형과 엄격하게 연관되지 않으므로(예: "nu
 
 ## 사용자 지정 속성 참조
 
-커스텀 속성][2]을 생성한 후에는 Liquid 메시징에서 이러한 커스텀 속성을 참조할 수 있습니다.
+[사용자 지정 속성을 생성한]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#managing-custom-attributes) 후에는 Liquid 메시징에서 이러한 사용자 지정 속성을 참조할 수 있습니다.
 
 조건 로직을 사용할 때는 올바른 구문을 사용하고 있는지 확인하려면 커스텀 속성의 데이터 유형을 알아야 합니다. 대시보드의 **사용자 지정** 속성 페이지에서 사용자 지정 속성과 연결된 데이터 유형을 찾은 다음 각 데이터 유형에 대해 나열된 다음 예제를 참조합니다.
 
-![사용자 지정 속성에 대한 데이터 유형을 선택합니다. 제공된 예는 데이터 유형이 문자열인 Favorite_Category의 속성을 보여줍니다.][20]{: style="max-width:80%;"}
+![사용자 지정 속성에 대한 데이터 유형을 선택합니다. 제공된 예는 데이터 유형이 문자열인 Favorite_Category의 속성을 보여줍니다.]({% image_buster /assets/img_archive/custom_attribute_data_type.png %}){: style="max-width:80%;"}
 
 {% alert tip %}
 문자열과 배열에는 직선 아포스트로피가 필요하지만 부울과 정수에는 아포스트로피가 없습니다.
@@ -208,7 +208,7 @@ null 속성 값은 값 유형과 엄격하게 연관되지 않으므로(예: "nu
 
 #### 부울
 
-[부울][9]은 이진 값이며, `true` 또는 `false`로 설정할 수 있습니다(예: `registration_complete: true`). 부울 값에는 아포스트로피가 없습니다.
+[부울은]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#booleans) 이진 값이며 `true` 또는 `false`, 예: `registration_complete: true` 로 설정할 수 있습니다. 부울 값에는 아포스트로피가 없습니다.
 
 {% raw %}
 
@@ -220,7 +220,7 @@ null 속성 값은 값 유형과 엄격하게 연관되지 않으므로(예: "nu
 
 #### 숫자
 
-[숫자][10]는 정수 또는 부동 소수점일 수 있는 숫자 값입니다. 예를 들어, 사용자는 `shoe_size: 10` 또는 `levels_completed: 287`을 가질 수 있습니다. 숫자 값에는 아포스트로피가 없습니다.
+[숫자는]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#numbers) 정수 또는 실수일 수 있는 숫자 값입니다. 예를 들어, 사용자는 `shoe_size: 10` 또는 `levels_completed: 287`을 가질 수 있습니다. 숫자 값에는 아포스트로피가 없습니다.
 
 {% raw %}
 
@@ -242,7 +242,7 @@ null 속성 값은 값 유형과 엄격하게 연관되지 않으므로(예: "nu
 
 #### 문자열
 
-[문자열][11]은 영숫자로 구성되며 사용자에 대한 데이터를 저장합니다. 예를 들어 `favorite_color: red` 또는 `phone_number: 3025981329`가 있을 수 있습니다. 문자열 값 주위에 아포스트로피를 붙여야 합니다.
+[문자열은]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#strings) 영숫자로 구성되며 사용자에 대한 데이터를 저장합니다. 예를 들어 `favorite_color: red` 또는 `phone_number: 3025981329`가 있을 수 있습니다. 문자열 값 주위에 아포스트로피를 붙여야 합니다.
 
 {% raw %}
 
@@ -256,7 +256,7 @@ null 속성 값은 값 유형과 엄격하게 연관되지 않으므로(예: "nu
 
 #### 배열
 
-[배열][12]은 사용자에 대한 정보 목록입니다. 예를 들어 사용자가 `last_viewed_shows: stranger things, planet earth, westworld`를 가질 수 있습니다. 배열 값은 주위에 아포스트로피를 포함해야 합니다.
+[배열은]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#arrays) 사용자에 대한 정보의 목록입니다. 예를 들어 사용자가 `last_viewed_shows: stranger things, planet earth, westworld`를 가질 수 있습니다. 배열 값은 주위에 아포스트로피를 포함해야 합니다.
 
 {% raw %}
 
@@ -270,7 +270,7 @@ null 속성 값은 값 유형과 엄격하게 연관되지 않으므로(예: "nu
 
 #### 시간
 
-이벤트가 발생한 시점의 타임스탬프입니다. 조건 로직에서 사용하려면 [시간][13] 값에 [수학 필터][5]가 있어야 합니다.
+이벤트가 발생한 시점의 타임스탬프입니다. 조건부 논리에 사용하려면 [시간]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#time) 값에 [수학 필터가]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/#math-filters) 있어야 합니다.
 
 {% raw %}
 
@@ -281,15 +281,3 @@ null 속성 값은 값 유형과 엄격하게 연관되지 않으므로(예: "nu
 {% endraw %}
 
 
-[36]:{% image_buster /assets/img/value_null.png %}
-[1]:http://docs.shopify.com/themes/liquid-documentation/basics
-[2]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#managing-custom-attributes
-[5]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/#math-filters
-[7]:https://docs.shopify.com/themes/liquid-documentation/tags
-[8]: http://docs.shopify.com/themes/liquid-documentation/tags/control-flow-tags "제어 흐름 태그"
-[9]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#booleans
-[10]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#numbers
-[11]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#strings
-[12]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#arrays
-[13]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#time
-[20]: {% image_buster /assets/img_archive/custom_attribute_data_type.png %}

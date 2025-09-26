@@ -1,5 +1,5 @@
 ---
-nav_title: About Tracking Data
+nav_title: About tracking data
 article_title: About landing page tracking data
 description: "Learn about tracking and anonymized data for landing pages in Braze."
 page_order: 10

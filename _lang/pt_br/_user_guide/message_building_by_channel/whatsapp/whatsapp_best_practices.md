@@ -18,7 +18,7 @@ O WhatsApp baseia sua [classificação de qualidade telefônica](https://www.fac
 
 Na primeira vez que enviar uma mensagem a um usuário no WhatsApp, essas opções serão exibidas no tópico da mensagem.
 
-![Envio de mensagens do WhatsApp com opções para bloquear ou denunciar um negócio][1]{: style="max-width:30%;"}
+![Thread de mensagens do WhatsApp com opções para bloquear ou denunciar um negócio]({% image_buster /assets/img/whatsapp/whatsapp_block_report.png %}){: style="max-width:30%;"}
 
 {% alert note %}
 Para obter métricas sobre seus blocos e relatórios, verifique se a [guia Insights](https://www.facebook.com/business/help/683499390267496) está ativada no WhatsApp Manager.
@@ -46,7 +46,5 @@ As aceitações não afetam a classificação de qualidade do telefone, portanto
 
 Uma prática recomendada sugerida é fornecer instruções sobre como fazer o out-out no rodapé da primeira mensagem que enviar aos usuários. Por exemplo, você pode informar que os usuários podem cancelar a inscrição no seu canal do WhatsApp respondendo com a palavra de disparo de aceitação. Você também pode incluir regularmente o rodapé de aceitação em campanhas futuras. Para saber como configurar isso, consulte [Aceitação e exclusão]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/opt-ins_and_opt-outs/).
  
-![Mensagem de WhatsApp com um rodapé informando para responder STOP para cancelar inscrição no canal][2]{: style="max-width:35%;"}
+![Mensagem do WhatsApp com um rodapé informando para responder STOP para cancelar a inscrição do canal]({% image_buster /assets/img/whatsapp/whatsapp_unsubscribe.png %}){: style="max-width:35%;"}
 
-[1]: {% image_buster /assets/img/whatsapp/whatsapp_block_report.png %}
-[2]: {% image_buster /assets/img/whatsapp/whatsapp_unsubscribe.png %}

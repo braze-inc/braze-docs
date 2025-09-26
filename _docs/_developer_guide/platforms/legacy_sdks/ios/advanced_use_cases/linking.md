@@ -1,5 +1,5 @@
 ---
-nav_title: Deep Linking
+nav_title: Deep linking
 article_title: Deep Linking for iOS
 platform: iOS
 page_order: 0

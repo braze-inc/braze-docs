@@ -1,6 +1,6 @@
 ---
 page_order: 0.1
-nav_title: Customizing Messages
+nav_title: Customizing messages
 article_title: Customizing push notifications for the Braze SDK
 channel:
   - push notifications

@@ -1,6 +1,6 @@
 ---
 page_order: 11
-nav_title: Best Practices
+nav_title: Best practices
 article_title: In-App Message Best Practices
 layout: dev_guide
 guide_top_header: "In-App Message Best Practices"

@@ -24,7 +24,7 @@ Haz clic en **Guardar perfil de color** cuando hayas terminado.
 
 ### Gestión de perfiles de color
 
-También puedes [duplicar][6] y [archivar][7] plantillas. Más información sobre la creación y gestión de plantillas y contenido creativo en [Plantillas y medios][8].
+También puedes [duplicar]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) y [archivar]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) plantillas. Más información sobre la creación y gestión de plantillas y contenido creativo en [Plantillas y medios]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
 
 ## Plantilla CSS {#in-app-message-templates}
 
@@ -84,7 +84,7 @@ Como puedes ver, puedes editarlo todo, desde el color de fondo hasta el tamaño 
 
 ### Gestión de plantillas CSS
 
-También puedes [duplicar][6] y [archivar][7] plantillas. Más información sobre la creación y gestión de plantillas y contenido creativo en [Plantillas y medios][8].
+También puedes [duplicar]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) y [archivar]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) plantillas. Más información sobre la creación y gestión de plantillas y contenido creativo en [Plantillas y medios]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
 
 ## Modal con CSS (sólo web) {#web-modal-css}
 
@@ -93,6 +93,3 @@ Si decides utilizar un Modal Web sólo con mensaje CSS, puedes aplicar tu propia
 Si decides aplicar tu propia plantilla, haz clic en **Aplicar plantilla** y elige una de la galería de plantillas de mensajes de la aplicación. Si no tiene ninguna opción, puede cargar una [plantilla CSS]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/color_profiles_and_css/#in-app-message-templates) utilizando el generador de plantillas CSS.
 
 
-[6]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/
-[7]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/
-[8]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/

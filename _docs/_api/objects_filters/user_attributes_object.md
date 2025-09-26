@@ -1,5 +1,5 @@
 ---
-nav_title: "User Attributes Object"
+nav_title: "User attributes object"
 article_title: API User Attributes Object
 page_order: 11
 page_type: reference

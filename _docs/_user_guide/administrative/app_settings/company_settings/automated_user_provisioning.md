@@ -1,5 +1,5 @@
 ---
-nav_title: Automated User Provisioning
+nav_title: Automated user provisioning
 article_title: Automated User Provisioning
 page_order: 10
 page_type: reference

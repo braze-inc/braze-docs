@@ -52,13 +52,13 @@
 
 2. キャンペーンがセッションの開始やカスタムイベントによってトリガーされる場合、このイベントやセッションがメッセージをトリガーするのに十分な頻度で発生していることを確認する必要があります。このデータを[概要]({{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/#understanding-your-app-usage-data)（セッションデータの場合）または[カスタムイベント]({{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting)ページで確認してください。
 
-![カスタムイベント「お気に入りに追加」の1ヶ月間の発生回数をグラフ化したカスタムイベントページ]({% image_buster /assets/img_archive/trouble5.png %})
+![カスタムイベント「お気に入りに追加」が1か月間に発生した回数のグラフが表示されているカスタムイベントページ]({% image_buster /assets/img_archive/trouble5.png %})
 
 ### インプレッションが以前より低下している
 
 1. ローンチ後、誰も意図せずにセグメンテーションやキャンペーンを変更していないことを確認する。セグメンテーションとキャンペーンの変更履歴は、いつ、誰が、どのような変更を行ったかをインサイトしてくれる。
 
-![ユーザーが最後にキャンペーンを閲覧してからの7つの変更点を、キャンペーン詳細ページで変更履歴を閲覧するためのリンク]({% image_buster /assets/img_archive/trouble4.png %})
+![キャンペーンの詳細ページで、ユーザーがキャンペーンを最後に閲覧してからの7つの変更点を含む変更履歴を表示するためのリンク]({% image_buster /assets/img_archive/trouble4.png %})
 
 2. 優先順位の高い別のアプリ内メッセージキャンペーンでトリガーイベントを再利用していないか確認する。
 

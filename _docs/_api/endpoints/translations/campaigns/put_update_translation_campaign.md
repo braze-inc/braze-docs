@@ -1,5 +1,5 @@
 ---
-nav_title: "PUT: Update Translation in a Campaign"
+nav_title: "PUT: Update translation in a campaign"
 article_title: "PUT: Update Translation in a Campaign"
 search_tag: Endpoint
 page_order: 1

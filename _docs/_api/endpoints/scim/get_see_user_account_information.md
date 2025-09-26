@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: Look Up an Existing Dashboard User Account"
+nav_title: "GET: Look up an existing dashboard user account"
 article_title: "GET: Look Up an Existing Dashboard User Account"
 alias: /get_see_user_account_information/
 search_tag: Endpoint

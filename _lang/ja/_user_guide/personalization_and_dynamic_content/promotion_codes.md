@@ -15,19 +15,19 @@ description: "この参考記事では、プロモーションコード・リス
 
 プロモーションコード (別名「プロモコード」) は、購入に重点を置いたインタラクションを促進することで、ユーザーのエンゲージメントを維持するための優れた方法です。プロモーションコードのリストからプルするメッセージを作成できます。 
 
-各プロモーションコードの有効期限は最大6ヶ月です。1つのリストにつき最大2000万個のコードを保存および管理できます。プロモーションコードのパフォーマンスを管理し、分析することで、プロモーション戦略やメッセージングのターゲットを決定できます。
+各プロモーションコードの有効期限は6 か月までで、[Support]({{site.baseurl}}/user_guide/administrative/access_braze/support/) に連絡することで、有効期限前に削除できます。1つのリストにつき最大2000万個のコードを保存および管理できます。プロモーションコードのパフォーマンスを管理し、分析することで、プロモーション戦略やメッセージングのターゲットを決定できます。
 
 {% alert important %}
-プロモーションコードはアプリ内メッセージでは送信できない。
+プロモーションコードは、キャンバスのアプリ内メッセージでは送信できません。[early access](#promotion-codes-iam-campaigns)に参加している場合、アプリ内メッセージキャンペーンでプロモーションコードを送信できます。
 {% endalert %}
 
 ## プロモーションコードのリストを作成する
 
 ### ステップ 1:プロモーションコードセクションに進む
 
-![プロモーションコードを作成するボタン。][1]{: style="float:right;max-width:30%;margin-left:15px;"}
+![プロモーションコードを作成するボタン。]({% image_buster /assets/img/promocodes/promocode1.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
 
-1. ダッシュボードから、**Data Settings** > **Promotion Codes** に移動します。
+1. ダッシュボードから [**データ設定**] > [**プロモーションコード**] に移動します。
 2. **プロモーションコードリストの作成**を選択します。
 
 ### ステップ 2:プロモーションコードの名前は?
@@ -42,7 +42,7 @@ description: "この参考記事では、プロモーションコード・リス
 - この一連のプロモーションコードを参照するには、Liquid でスニペット名を使用します。
 - コードスニペットが別のリストでまだ使用されていないことを確認します。
 
-!["SpringSale2025"という名前のプロモーションコードリスト(コードスニペット"spring25")。][3]{: style="max-width:80%"}
+![コードスニペット「spring25」が示されている「SpringSale2025」という名前のプロモーションコードリスト。]({% image_buster /assets/img/promocodes/promocode3.png %}){: style="max-width:80%"}
 
 ### ステップ 3:プロモーションコードオプションの選択
 
@@ -50,11 +50,11 @@ description: "この参考記事では、プロモーションコード・リス
 
 その時間内であれば、有効期限を何度でも変更・更新することができる。この有効期限は、このリストに追加されたすべてのコードに適用される。有効期限が切れると、そのコードはBrazeシステムから削除され、そのリストのコードスニペットを呼び出すメッセージは送信されなくなる。
 
-![残りのすべてのコードの有効期限が2025年4 月30 日の午前12 時に切れる設定をリストします。][4]{: style="max-width:80%"}
+![残りのすべてのコードが2025年4 月30 日の午前12 時に期限切れになる期限設定をリストします。]({% image_buster /assets/img/promocodes/promocode4.png %}){: style="max-width:80%"}
 
 また、オプションでカスタマイズした閾値アラートを設定するオプションもある。これらのアラートを設定すると、リスト内の利用可能なプロモーションコードが少なくなったとき、またはプロモーションコードリストの有効期限が近づいたときに、指定された受信者にEメールが送信される。受信者は 1 日 1 回通知を受け取ります。
 
-!["marketing@abc.com" に通知するしきい値アラートの例。プロモーションコードリストの有効期限が5 日以内の場合。][5]{: style="max-width:80%"}
+!["marketing@abc.com" を通知するしきい値アラートの例。プロモーションコードリストの有効期限が5 日以内の場合。]({% image_buster /assets/img/promocodes/promocode5.png %}){: style="max-width:80%"}
 
 ### ステップ 4:プロモーションコードのアップロード
 
@@ -65,7 +65,7 @@ CSV ファイルが次のガイドラインに従っていることを確認し�
 - プロモーションコードの列も含まれています。
 - 1行に1つのプロモーションコードがある。
 
-[Voucherify]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/voucherify/) との組み込み統合または [Talon.One]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/talonone/) を使用して、プロモーションコードを作成しエクスポートすることができます。
+[Voucherify]({{site.baseurl}}/partners/ecommerce/loyalty/voucherify/) との組み込み統合または [Talon.One]({{site.baseurl}}/partners/ecommerce/loyalty/talonone/) を使用して、プロモーションコードを作成しエクスポートすることができます。
 
 {% alert important %}
 最大ファイルサイズは 100 MB、最大リストサイズは 20 MM の未使用コードです。間違ったファイルがアップロードされた場合は、新しいファイルをアップロードすれば、前のファイルは置き換えられる。
@@ -73,13 +73,13 @@ CSV ファイルが次のガイドラインに従っていることを確認し�
 
 1. アップロードが完了したら、「**リストを保存**」を選択し、入力したすべての詳細とコードを保存する。
 
-!["springsale"という名前のCSV ファイルが正常にアップロードされました。][7]
+!["springsale" という名前のCSV ファイル。正常にアップロードされました。]({% image_buster /assets/img/promocodes/promocode7.png %})
 
 {:start="2"}
 2\.保存を選択すると、[**インポート履歴**] に新しい行が表示されます。
 3\.インポートが完了したかどうかを確認するためにテーブルを更新するには、テーブルの上部にある <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-sync" ></span> [**同期**] を選択します。
 
-![アップロード中のプロモーションコード。][8]
+![アップロード中のプロモーションコード。]({% image_buster /assets/img/promocodes/promocode8.png %})
 
 {% alert note %}
 大きなファイルはインポートに数分かかる。待つ間、インポートが進行している間はページを離れて他の作業をすることができます。インポートが終了すると、ステータスはテーブルの**Complete** に変わります。
@@ -97,12 +97,12 @@ CSV ファイルが次のガイドラインに従っていることを確認し�
 
 1. プロモーションコードリストの作成時に設定したコードスニペットをコピーするには、**Copy Snippet** を選択します。
 
-![メッセージに貼り付けるスニペットをコピーするオプション。][9]{: style="max-width:70%"}
+![メッセージに貼り付けるスニペットをコピーするオプション。]({% image_buster /assets/img/promocodes/promocode9.png %}){: style="max-width:70%"}
 
 {:start="2"}
 2\.そこから、このコードをダッシュボード内のメッセージに貼り付けることができる。
 
-![メッセージの例"この春、私たちの排他的オファー"コードスニペットが続く、素敵なものに自分をご自身でご処理ください。][10]{: style="max-width:70%"}
+![「Treat yourself to something nice this spring with our exclusive offer」とその後にコードスニペットが続くメッセージの例。]({% image_buster /assets/img/promocodes/promocode10.png %}){: style="max-width:70%"}
 
 [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/)を使用すると、アップロードされたCSVファイルから固有のプロモーションコードの1つをメッセージに挿入できます。そのコードはBrazeのバックエンドで送信済みとマークされ、他のメッセージが同じコードを送信しないようにする。
 
@@ -124,11 +124,21 @@ CSV ファイルが次のガイドラインに従っていることを確認し�
 
 残りのコード数は、**プロモーションコード**ページのプロモーションコード一覧の**残り**列にあります。
 
-![未使用コードのプロモーションコードの例。][12]
+![未使用コードがあるプロモーションコードの例。]({% image_buster /assets/img/promocodes/promocode11.png %})
 
 このコード数は、既存のプロモーションコード一覧ページを再訪した際にも確認できる。未使用のコードをCSV ファイルとしてエクスポートすることもできます。 
 
-!["Black Friday Sale"という名前のプロモーションコード。残りのコードは992 です。][13]{: style="max-width:70%"}
+!["Black Friday Sale"という名前のプロモーションコード。残りのコードが992 個あります。]({% image_buster /assets/img/promocodes/promocode12.png %}){: style="max-width:70%"}
+
+### アプリ内メッセージキャンペーンでのプロモーションコードの使用 {#promotion-codes-iam-campaigns}
+
+{% alert important %}
+アプリ内メッセージキャンペーンでのプロモーションコードの使用は、現在早期アクセス段階です。この初期のアクセスに参加したい場合は、Braze アカウントマネージャーに連絡してください。
+{% endalert %}
+
+[アプリ内メッセージキャンペーン]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages)を作成した後、[プロモーションコードリストスニペット]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes#creating-a-promotion-code-list)をアプリ内メッセージボディに挿入できます。 
+
+アプリ内メッセージのプロモーションコードは、ユーザがアプリ内メッセージの表示をトリガした場合にのみ控除され、使用されます。
 
 ## マルチチャネルとシングルチャネルの送信
 
@@ -191,13 +201,3 @@ Brazeでは、使用予定数よりも多くのプロモーションコードを
 
 後続のメッセージで同じプロモーションコードを参照するには、コードをカスタム属性としてユーザープロファイルに保存する必要があります。これを行うには、[Braze-to-Braze webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/braze_to_braze_webhooks/) を同じキャンペーンまたはキャンバスメッセージステップにアタッチします。
 
-[1]:{% image_buster /assets/img/promocodes/promocode1.png %}
-[3]:{% image_buster /assets/img/promocodes/promocode3.png %}
-[4]:{% image_buster /assets/img/promocodes/promocode4.png %}
-[5]:{% image_buster /assets/img/promocodes/promocode5.png %}
-[7]:{% image_buster /assets/img/promocodes/promocode7.png %}
-[8]:{% image_buster /assets/img/promocodes/promocode8.png %}
-[9]:{% image_buster /assets/img/promocodes/promocode9.png %}
-[10]:{% image_buster /assets/img/promocodes/promocode10.png %}
-[12]: {% image_buster /assets/img/promocodes/promocode11.png %}
-[13]: {% image_buster /assets/img/promocodes/promocode12.png %}

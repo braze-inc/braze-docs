@@ -34,7 +34,6 @@ Braze proporciona los siguientes filtros para ayudarle a limitar la velocidad a 
 - Última campaña push recibida
 - Última campaña de correo electrónico recibida
 - Último SMS recibido
-- Última fuente de noticias vista
 
 #### Aplicación de filtros
 
@@ -42,15 +41,15 @@ Supongamos que hemos creado un segmento denominado "Escaparate de filtros de reo
 
 Si tiene otros segmentos más específicos que reciben notificaciones recientemente, es posible que no desee que sus usuarios reciban campañas más genéricas dirigidas a este segmento. Aplicando el filtro "Última campaña push recibida" a este segmento, el usuario se ha asegurado de que si ha recibido otra notificación en las últimas 24 horas, se deslizará fuera de este segmento durante las próximas 24 horas. Si siguen cumpliendo los demás criterios del segmento 24 horas después y no han recibido más notificaciones, volverán a entrar en el segmento.
 
-![Sección Detalles del segmento con el filtro del segmento "Último mensaje recibido" resaltado.][1]
+![Sección Detalles del segmento con el filtro del segmento "Último mensaje recibido" resaltado.]({% image_buster /assets/img_archive/rate_limit_daily.png %})
 
 Si se aplica este filtro a todos los segmentos a los que se dirigen las campañas, los usuarios recibirán como máximo una notificación cada 24 horas. Así podrá priorizar sus mensajes, asegurándose de que los más importantes se envían antes que los menos importantes.
 
 #### Establecer un límite máximo de usuarios
 
-En el paso **Usuarios objetivo** de la composición de tu campaña, también puedes limitar el número total de usuarios que recibirán tu mensaje. Esto sirve como control independiente de los filtros de tu campaña, permitiéndote segmentar libremente a los usuarios sin preocuparte por el exceso de spam.
+En el paso **Audiencias objetivo** del compositor de tu campaña, también puedes limitar el número total de usuarios que recibirán tu mensaje. Esto sirve como control independiente de los filtros de tu campaña, permitiéndote segmentar libremente a los usuarios sin preocuparte por el exceso de spam.
 
-![Resumen de audiencia con una casilla seleccionada para limitar el número de personas que reciben la campaña.][2]
+![Resumen de audiencia con una casilla seleccionada para limitar el número de personas que reciben la campaña.]({% image_buster /assets/img_archive/total_limit.png %})
 
 Al seleccionar el límite máximo de usuarios, puede limitar la velocidad a la que sus usuarios reciben notificaciones por canal o globalmente en todos los tipos de mensajes.
 
@@ -76,22 +75,22 @@ Cuando se utiliza la limitación de la tasa con una prueba A/B, el límite de la
 
 ### Limitación de la tasa de velocidad de entrega
 
-Si prevé que las grandes campañas provocarán un aumento de la actividad de los usuarios y una sobrecarga de los servidores, puede especificar un límite de velocidad por minuto para el envío de mensajes, lo que significa que Braze no enviará más mensajes que el límite de velocidad establecido en un minuto.
+Si prevés que las grandes campañas provoquen un aumento de la actividad de los usuarios y sobrecarguen tus servidores, puedes especificar un límite de velocidad por minuto para el envío de mensajes, lo que significa que Braze no enviará más de lo que hayas configurado como límite de velocidad en un minuto.
 
-Al dirigirte a los usuarios durante la creación de la campaña, puedes navegar a **Audiencias objetivo** (para campañas) o a **Configuración de envío** (para Canvas) para seleccionar un límite de velocidad (en varios incrementos, desde tan bajo como 10 hasta tan alto como 500.000 mensajes por minuto). 
+Al dirigirte a los usuarios durante la creación de la campaña, puedes navegar a **Audiencias objetivo** (para campañas) o a **Configuración de envío** (para Canvas) para seleccionar un límite de velocidad (en varios incrementos, desde tan bajo como 10 hasta tan alto como 500.000 mensajes por minuto).
 
 Tenga en cuenta que las campañas no limitadas por tarifa pueden superar estos límites de entrega. Sin embargo, ten en cuenta que los mensajes se cancelarán si se retrasan 72 horas o más debido a un límite de velocidad bajo. Si el límite de velocidad es demasiado bajo, el creador de la campaña recibirá alertas en el panel y por correo electrónico.
 
-![Resumen de audiencia con una casilla seleccionada para limitar la tasa a la que terminará la campaña, y una tasa de 500.000 por minuto.][3]
+![Resumen de audiencia con una casilla seleccionada para limitar la tasa a la que finalizará la campaña, y una tasa de 500.000 por minuto.]({% image_buster /assets/img_archive/per_minute_rate_limit.png %})
 
-Otro ejemplo: si intentas enviar 75.000 mensajes con un límite de tasa de 10.000 por minuto, la entrega se repartirá en 8 minutos. Tu campaña no entregará más de 10.000 mensajes durante cada uno de los primeros siete minutos, y 5.000 durante el último minuto. 
+Otro ejemplo: si intentas enviar 75.000 mensajes con un límite de tasa de 10.000 por minuto, la entrega se repartirá en 8 minutos. Tu campaña no entregará más de 10.000 mensajes durante cada uno de los primeros siete minutos, y 5.000 durante el último minuto.
 
 Ten en cuenta que los mensajes con tasa limitada pueden no enviarse uniformemente a lo largo de cada minuto. Utilizando el ejemplo de un límite de tasa de 10.000 por minuto, esto significa que Braze se asegura de que no se envían más de 10.000 mensajes por minuto. Esto podría significar que un mayor porcentaje de los 10.000 mensajes se envían en el primer medio minuto frente al último medio minuto. 
 
 Además, ten en cuenta que el límite de velocidad se aplica al inicio del intento de envío del mensaje. Cuando hay fluctuaciones en el tiempo que tarda en completarse el envío, el número de envíos completados puede superar ligeramente el límite de velocidad en algunos minutos. Con el tiempo, el número de envíos por minuto no superará el límite de velocidad.
 
 {% alert important %}
-Tenga cuidado con retrasar los mensajes sensibles al tiempo con esta forma de limitación de velocidad. Si el segmento contiene 30 millones de usuarios, pero fijamos el límite de velocidad en 10.000 por minuto, una gran parte de tu base de usuarios no recibirá el mensaje hasta el día siguiente.
+Ten cuidado con retrasar los mensajes sensibles al tiempo con esta forma de limitar la tasa en relación con el número total de usuarios de un segmento. Por ejemplo, si el segmento contiene 30 millones de usuarios, pero fijamos el límite de velocidad en 10.000 por minuto, una gran parte de tu base de usuarios no recibirá el mensaje hasta el día siguiente.
 {% endalert %}
 
 #### Campañas monocanal
@@ -117,7 +116,7 @@ Al enviar un Canvas con un límite de velocidad, el límite de tasa se comparte 
 
 #### Limitación de velocidad y reintentos de contenido conectado
 
-Cuando la opción [Reintentar contenido conectado][19] está activada, Braze reintentará las llamadas fallidas respetando el límite de velocidad que hayas configurado para cada reenvío. Consideremos el caso de enviar 75.000 mensajes con un límite de velocidad de 10.000 por minuto. Imagina que en el primer minuto, la llamada falla o es lenta y sólo envía 4.000 mensajes.
+Cuando el [reintento de contenido conectado]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries/) está activado, Braze reintentará los fallos de llamada respetando el límite de velocidad que establezcas para cada reenvío. Consideremos el caso de enviar 75.000 mensajes con un límite de velocidad de 10.000 por minuto. Imagina que en el primer minuto, la llamada falla o es lenta y sólo envía 4.000 mensajes.
 
 En lugar de intentar compensar el retraso y enviar los 6.000 mensajes restantes en el segundo minuto o añadirlos a los 10.000 que ya están configurados para enviar, Braze moverá esos 6.000 mensajes al "final de la cola" y añadirá un minuto, si es necesario, al total de minutos que tardaría en enviar tu mensaje.
 
@@ -150,11 +149,11 @@ Por defecto, el límite de frecuencia se activa cuando se crean nuevas campañas
 - Cuántas veces debe recibir cada usuario los envíos de una campaña o componente Canvas desde un canal en un periodo de tiempo determinado.
 - Cuántas veces debe recibir cada usuario una campaña o componente Canvas enviado por [etiqueta](#frequency-capping-by-tag) dentro de un plazo determinado.
 
-Este plazo puede medirse en minutos, días, semanas (siete días) o meses, con una duración máxima de 30 días.
+Este plazo puede medirse en minutos, días o semanas (siete días), con una duración máxima de 30 días.
 
 Cada línea de tapas de frecuencia se conectará utilizando el operador `AND`, y puede añadir hasta 10 reglas por espacio de trabajo. Además, puedes incluir varios límites para los mismos tipos de mensajes. Por ejemplo, puedes limitar a los usuarios a no más de un push al día y no más de tres push a la semana.
 
-![Sección de limitación de frecuencia con listas de campañas y Lienzos a los que se aplicarán las normas y a los que no.][14]
+![Sección de limitación de frecuencia con listas de campañas y Lienzos a los que se aplicarán las reglas y a los que no.]({% image_buster /assets/img_archive/rate_limiting_overview_2.png %})
 
 #### Comportamiento cuando los usuarios tienen limitación de frecuencia en un paso en Canvas
 
@@ -166,7 +165,7 @@ Puede haber algunas campañas, como los mensajes transaccionales, que desee que 
 
 Si desea que una campaña en particular anule las reglas de limitación de frecuencia, puede configurarlo en el panel de control de Braze al programar la entrega de esa campaña configurarlo la **limitación de frecuencia** en **OFF**. 
 
-A continuación, se le preguntará si desea que esta campaña siga contando para su límite de frecuencia. Los mensajes que cuentan para la limitación de frecuencias se incluyen en los cálculos del filtro Canal Inteligente. Al enviar [campañas de API][15], que suelen ser transaccionales, podrá especificar que una campaña ignore las reglas de limitación de frecuencia [dentro de la solicitud de API][16] estableciendo `override_messaging_limits` en `true`.
+A continuación, se le preguntará si desea que esta campaña siga contando para su límite de frecuencia. Los mensajes que cuentan para la limitación de frecuencias se incluyen en los cálculos del filtro Canal Inteligente. Cuando envíes [campañas API]({{site.baseurl}}/developer_guide/rest_api/messaging/#messaging), que suelen ser transaccionales, tendrás la posibilidad de especificar que una campaña ignore las normas de limitación de frecuencia [dentro de la solicitud API]({{site.baseurl}}/developer_guide/rest_api/api_campaigns/#api-campaigns) configurando `override_messaging_limits` en `true`.
 
 Por defecto, las nuevas campañas y los lienzos que no respeten los límites de frecuencia tampoco contarán. Esto es configurable para cada campaña y Canvas.
 
@@ -174,7 +173,7 @@ Por defecto, las nuevas campañas y los lienzos que no respeten los límites de 
 Este comportamiento cambia el comportamiento por defecto cuando se desactiva la limitación de frecuencia para una campaña o Canvas. Los cambios son compatibles con las versiones anteriores y no afectan a los mensajes que están actualmente activos.
 {% endalert %}
 
-![Sección Controles de entrega con la limitación de frecuencia activada.][18]
+![Sección de controles de entrega con la limitación de frecuencia activada.]({% image_buster /assets/img_archive/frequencycappingupdate.png %})
 
 Los distintos canales de una campaña multicanal contabilizarán individualmente el límite de frecuencia. Por ejemplo, si crea una campaña multicanal con push y correo electrónico y ha configurado un límite de frecuencia para ambos canales, el push contará para una campaña push y el mensaje de correo electrónico contará para una campaña de mensaje de correo electrónico. La campaña también contará como una "campaña de cualquier tipo". Si los usuarios están limitados a una campaña push y una campaña de correo electrónico al día y un usuario recibe esta campaña multicanal, ya no podrá recibir campañas push o de correo electrónico durante el resto del día (a menos que una campaña ignore las reglas de limitación de frecuencia).
 
@@ -224,7 +223,7 @@ También puede combinar la limitación de frecuencia normal con la limitación d
 1. No más de tres campañas de notificaciones push o componentes Canvas por semana de todos los pasos de campaña y Canvas. <br>**Y**
 2. No más de dos componentes de campaña de notificaciones push o Canvas por semana con la etiqueta `promotional`.
 
-![Sección de limitación de frecuencia con dos reglas que limitan cuántas campañas de notificación push/Canvases se pueden enviar a un usuario cada 1 semana.][12]
+![Sección de limitación de frecuencia con dos reglas que limitan cuántas campañas de notificación push/Canvases se pueden enviar a un usuario cada 1 semana.]({% image_buster /assets/img/tag_rule_fnfn.png %} "rules")
 
 Como resultado, sus usuarios no recibirán más de tres envíos de campaña por semana en todas las campañas y pasos de Canvas y no más de dos campañas de notificaciones push o componentes de Canvas con la etiqueta `promotional`.
 
@@ -239,7 +238,7 @@ Cuando las reglas entren en conflicto, se aplicará a sus usuarios la regla de l
 1. No más de una campaña de notificación push o componente Canvas por semana de todos los componentes de campaña y Canvas. <br>**Y**
 2. No más de tres campañas de notificaciones push o componentes Canvas por semana con la etiqueta `promotional`.
 
-![Sección de limitación de frecuencia con reglas conflictivas para limitar cuántas campañas de notificación push/pasos en Canvas se envían a un usuario cada 1 semana.][11]
+![Sección de limitación de frecuencia con reglas conflictivas para limitar cuántas campañas de notificación push/pasos en Canvas se envían a un usuario cada 1 semana.]({% image_buster /assets/img/global_rules.png %} "reglas globales")
 
 En este ejemplo, su usuario no recibirá más de una campaña de notificación push o componentes de Canvas con la etiqueta "promocional" en una semana determinada, porque ha especificado que los usuarios no deben recibir más de una campaña de notificación push o componente de Canvas de todas las campañas y componentes de Canvas. En otras palabras, la norma de frecuencia aplicable más restrictiva es la que se aplicará a un usuario determinado.
 
@@ -284,14 +283,3 @@ Por ejemplo, puede establecer la siguiente regla:
 
 Esta regla garantizará que ningún usuario reciba más de 100 correos electrónicos por semana, ya que, como máximo, los usuarios recibirán tres correos electrónicos por semana de campañas o componentes de Canvas con la limitación de frecuencia activada.
 
-[11]: {% image_buster /assets/img/global_rules.png %} "normas globales"
-[12]: {% image_buster /assets/img/tag_rule_fnfn.png %} "reglas"
-[13]: {% image_buster /assets/img/standard_rules_fnfn.png %} "normas estándar"
-[1]: {% image_buster /assets/img_archive/rate_limit_daily.png %}
-[2]: {% image_buster /assets/img_archive/total_limit.png %}
-[3]: {% image_buster /assets/img_archive/per_minute_rate_limit.png %}
-[14]: {% image_buster /assets/img_archive/rate_limiting_overview_2.png %}
-[15]: {{site.baseurl}}/developer_guide/rest_api/messaging/#messaging
-[16]: {{site.baseurl}}/developer_guide/rest_api/api_campaigns/#api-campaigns
-[18]: {% image_buster /assets/img_archive/frequencycappingupdate.png %}
-[19]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries/

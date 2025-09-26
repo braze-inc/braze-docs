@@ -65,11 +65,21 @@ Si vous n’êtes pas en mesure ou ne désirez pas utiliser les CDN répertorié
 Pour obtenir une aide supplémentaire concernant la résolution des problèmes de votre configuration CDN, vous devez contacter votre fournisseur CDN.
 {% endalert %}
 
-Le tableau suivant comprend les guides étape par étape rédigés par SendGrid et SparkPost sur la configuration de certains CDN. Même si votre CDN spécifique n’a pas à être répertorié, vous devez vous assurer que votre CDN a la capacité d’appliquer des certificats SSL.
+Le tableau suivant comprend des guides étape par étape rédigés par des partenaires ESP sur la manière de configurer certains CDN. Même si votre CDN spécifique n’a pas à être répertorié, vous devez vous assurer que votre CDN a la capacité d’appliquer des certificats SSL.
 
 | SendGrid | SparkPost |
 | -------- | --------- |
-| [AWS Cloudfront](https://support.sendgrid.com/hc/en-us/articles/4412701748891-How-to-configure-SSL-for-click-tracking-using-CloudFront)<br>[CloudFlare](https://sendgrid.com/docs/ui/sending-email/content-delivery-networks/#using-cloudflare)<br>[Fastly](https://sendgrid.com/docs/ui/sending-email/content-delivery-networks/#using-fastly)<br>[KeyCDN](https://sendgrid.com/docs/ui/sending-email/content-delivery-networks/#using-keycdn) | [AWS Cloudfront](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-aws-cloudfront)<br>[CloudFlare](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-cloudflare)<br>[Cloudfront](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/)<br>[Fastly](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-fastly)<br>[Google Cloud Platform](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-google-cloud-platform)<br>[Microsoft Azure](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-microsoft-azure) |
+| [AWS Cloudfront](https://support.sendgrid.com/hc/en-us/articles/4412701748891-How-to-configure-SSL-for-click-tracking-using-CloudFront)<br>[CloudFlare](https://sendgrid.com/docs/ui/sending-email/content-delivery-networks/#using-cloudflare)<br>[Fastly](https://sendgrid.com/docs/ui/sending-email/content-delivery-networks/#using-fastly)<br>[KeyCDN](https://sendgrid.com/docs/ui/sending-email/content-delivery-networks/#using-keycdn) | [AWS Cloudfront](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-aws-cloudfront)<br>[CloudFlare](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-cloudflare)<br>[Fastly](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-fastly)<br>[Google Cloud Platform](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-google-cloud-platform)<br>[Microsoft Azure](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-microsoft-azure) |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+Pour Amazon SES, consultez [Option 2 : Configuration d'un domaine HTTPS](https://docs.aws.amazon.com/ses/latest/dg/configure-custom-open-click-domains.html) et spécifiez le domaine de suivi AWS par votre région en fonction de votre cluster Braze :
+
+- **Clusters Braze aux États-Unis :** `r.us-east-1.awstrack.me`
+- **Clusters Braze dans l’UE :** `r.eu-central-1.awstrack.me`
+
+{% alert important %}
+Lorsque vous configurez le domaine de diffusion de contenu de votre réseau de diffusion, veillez à activer l'en-tête `X-Forwarded-Host`. Cela permet d'éviter les problèmes de sécurité potentiels, tels que les attaques de l'en-tête de l'hôte. Reportez-vous à la documentation du réseau de diffusion de contenu ou à votre équipe d'assistance pour savoir comment procéder, car cela varie en fonction du réseau de diffusion de contenu.
+{% endalert %}
 
 #### Résolution des problèmes
 

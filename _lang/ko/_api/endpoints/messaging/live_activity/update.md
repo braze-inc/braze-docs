@@ -28,6 +28,8 @@ description: "이 문서에서는 실시간 활동 업데이트 엔드포인트�
 - `messages.live_activity.update` 권한을 사용하여 API 키를 생성합니다.
 - 브레이즈 스위프트 SDK를 사용하여 [원격]({{site.baseurl}}/developer_guide/push_notifications/live_notifications/?tab=remote&sdktab=swift) 또는 [로컬로]({{site.baseurl}}/developer_guide/push_notifications/live_notifications/?tab=local&sdktab=swift) 라이브 활동을 등록하세요.
 
+{% multi_lang_include api/payload_size_alert.md %}
+
 ## 사용량 제한
 
 {% multi_lang_include rate_limits.md endpoint='default' %}

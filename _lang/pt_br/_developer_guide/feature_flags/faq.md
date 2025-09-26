@@ -30,6 +30,9 @@ Um Feature Flag pode ser criado e integrado em poucos minutos.
 
 A maior parte do esforço envolvido estará relacionada à sua equipe de engenharia que está desenvolvendo o novo recurso que você planeja implementar. Mas quando se trata de adicionar um sinalizador de recurso, é tão simples quanto uma declaração `IF`/`ELSE` no código do seu app ou site:
 
+{% tabs %}
+{% tab JavaScript %}
+
 ```javascript
 import { getFeatureFlag } from "@braze/web-sdk";
 
@@ -40,6 +43,31 @@ else {
     // Show the old homepage
 }
 ```
+
+{% endtab %}
+{% tab Java %}
+
+```java
+if (braze.getFeatureFlag("new_shopping_cart").getEnabled()) {
+  // Show the new homepage your team has built
+} else {
+  // Show the old homepage
+}
+```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+if (braze.getFeatureFlag("new_shopping_cart")?.enabled == true) {
+  // Show the new homepage your team has built
+} else {
+  // Show the old homepage
+}
+```
+
+{% endtab %}
+{% endtabs %}
 
 ### Como os sinalizadores de recursos podem beneficiar as equipes de marketing? {#marketing-teams}
 

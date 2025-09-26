@@ -16,7 +16,7 @@ guide_featured_list:
     link: /docs/user_guide/analytics/reporting/reports_overview/
     image: /assets/img/braze_icons/list.svg
   - name: Données du segment
-    link: /docs/user_guide/analytics/reporting/viewing_and_understanding_segment_data/
+    link: /docs/viewing_and_understanding_segment_data/
     image: /assets/img/braze_icons/pie-chart-01.svg
   - name: Rapports d’engagement
     link: /docs/user_guide/analytics/reporting/engagement_reports/

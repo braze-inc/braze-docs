@@ -61,7 +61,7 @@ La mayoría de los ISP solo almacenan los datos de reputación durante 30 días.
 
 Nuestra función integrada de limitación de usuarios es una herramienta útil para ayudarle a calentar su dirección IP. Después de elegir los segmentos de mensajería deseados durante la creación de la campaña, en el paso [Usuarios objetivo]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/#step-4-build-the-remainder-of-your-campaign-or-canvas), seleccione el menú desplegable **Opciones avanzadas** para limitar sus usuarios. A medida que tu programa de calentamiento continúe, puedes aumentar gradualmente este límite para incrementar el volumen de correos electrónicos que envías.
 
-![][18]
+![]({% image_buster /assets/img_archive/email_ip_warming_sends_limit_new.png %})
 
 ## Segmentación de subdominios
 
@@ -93,12 +93,12 @@ Consulte nuestro [calendario de calentamiento de IP](#ip-warming-schedules) para
 
 ### Limpie sus listas de correo electrónico
 
-Confirme que su lista de correo electrónico está limpia y no tiene correos electrónicos antiguos o no verificados. Lo ideal es que te asegures de que cumples tanto la [CASL- como la CAN-SPAM][40].
+Confirme que su lista de correo electrónico está limpia y no tiene correos electrónicos antiguos o no verificados. Lo ideal es que te asegures de que [cumples tanto la CASL como la CAN-SPAM]({{site.baseurl}}/user_guide/administrative/privacy/spam_regulations/).
 
 ### Controla la reputación del remitente
 
 Cuando lleves a cabo el proceso de calentamiento de IP, asegúrate de vigilar cuidadosamente la reputación del remitente mientras realizas el proceso de calentamiento de IP. Es importante vigilar estas métricas específicas:
-- **Tasas de rebote:** Si alguna campaña rebota más de un 3-5%, debes evaluar la limpieza de tu lista siguiendo las directrices de nuestro artículo [Mantenla limpia: la importancia del saneamiento de las listas de correo electrónico][43]. Además, debería considerar la implementación de una [política de extinción][46] para dejar de enviar correos electrónicos a direcciones de correo electrónico no comprometidas o inactivas.
+- **Tasas de rebote:** Si alguna campaña rebota más de un 3-5%, deberías evaluar la limpieza de tu lista siguiendo las directrices de nuestro [Mantenla limpia: la importancia del saneamiento de las listas de correo electrónico](https://www.braze.com/blog/email-list-hygiene/). Además, deberías plantearte implantar una [política de suspensión]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/sunset_policies/) para dejar de enviar por correo electrónico a las direcciones de correo electrónico inactivas o no comprometidas.
 - **Informes de spam:** Si alguna campaña se considera spam en un porcentaje superior al 0,08%, debe reevaluar el contenido que envía, comprobar que está dirigido a un público interesado y asegurarse de que sus mensajes están redactados adecuadamente para despertar su interés.
 - **Tasas de apertura:** Las tasas de apertura son un indicador útil de la ubicación en la bandeja de entrada. Si sus tasas de apertura únicas superan el 25%, es probable que esté experimentando una alta colocación en la bandeja de entrada, lo que indica una reputación de remitente positiva.
 
@@ -110,9 +110,3 @@ Braze recomienda no utilizar [Intelligent Timing]({{site.baseurl}}/user_guide/br
 Es normal que se envíe correo a la carpeta de spam durante el calentamiento de IP porque su dominio e IP aún no han establecido una reputación positiva. Si el correo llega a la carpeta de spam, es posible que el administrador de correo tenga que añadir el dominio y la IP de envío Braze a la lista de permitidos de la empresa.
 {% endalert %}
 
-[18]: {% image_buster /assets/img_archive/email_ip_warming_sends_limit_new.png %}
-[40]: {{site.baseurl}}/user_guide/onboarding_with_braze/spam_regulations/
-[43]: https://www.braze.com/blog/email-list-hygiene/
-[44]: https://senderscore.org/
-[45]: http://www.senderbase.org/
-[46]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/sunset_policies/

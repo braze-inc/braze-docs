@@ -8,7 +8,7 @@ description: "このリファレンスページでは、Liquid がサポート�
 
 # 演算子
 
-> Liquid は、条件文で使用できる多くの [演算子][25] をサポートしています。このページでは、Liquidがサポートしているオペレータをカバーし、メッセージングでそれらをどのように使用できるかのユースケースを提供する。
+> Liquid は、条件文で使用できる多くの[演算子](https://docs.shopify.com/themes/liquid/basics/operators)をサポートしています。このページでは、Liquidがサポートしているオペレータをカバーし、メッセージングでそれらをどのように使用できるかのユースケースを提供する。
 
 この表は、サポートされている演算子の一覧である。かっこはLiquidでは無効な文字であり、タグが機能しないことに注意。
 
@@ -61,7 +61,7 @@ Need a sign to update your wardrobe? We added a 15% discount code to your accoun
 ```
 {% endraw %}
 
-![チュートリアルの完全なLiquidコードを含むプッシュ通知コンポーザー。][13]{: width="100%"}
+![チュートリアルの完全なLiquidコードを含むプッシュ通知コンポーザー]({% image_buster /assets/img/liquid-if-totalspend.png %}){: width="100%"}
 
 {% details 完全な Liquid コード %}
 {% raw %}
@@ -154,7 +154,7 @@ Hey! I've got a deal for you. Buy 2 of our newest releases and get 10% off!
 {% endraw %}
 {% enddetails %}
 
-![チュートリアルの完全なLiquidコードを含むプッシュ通知コンポーザー。][14]
+![チュートリアルの完全な Liquid コードを含むプッシュ通知作成画面。]({% image_buster /assets/img/liquid-if-elsif-games.png %})
 
 さて、ユーザーが最後に『*Awkward Dinner Party*』をプレイした場合、このようなメッセージが表示される：
 
@@ -216,13 +216,8 @@ Stream now!
 {% endraw %}
 {% enddetails %}
 
-![チュートリアルの完全なLiquidコードを含むプッシュ通知コンポーザー。][26]
+![チュートリアルの完全な Liquid コードを含むプッシュ通知作成画面。]({% image_buster /assets/img/abort-if.png %})
 
-また、接続コンテンツに基づいて[メッセージ][1]をアボートすることもできます。
+また、接続コンテンツに基づいて[メッセージ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/)をアボートすることもできます。
 
 
-[1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/
-[13]: {% image_buster /assets/img/liquid-if-totalspend.png %}
-[14]: {% image_buster /assets/img/liquid-if-elsif-games.png %}
-[25]: https://docs.shopify.com/themes/liquid/basics/operators
-[26]: {% image_buster /assets/img/abort-if.png %}

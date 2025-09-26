@@ -21,12 +21,12 @@ Para clonar tu Canvas, haz lo siguiente:
 2. Identifique el lienzo del que desea crear una copia en el flujo de trabajo Flujo del lienzo. Puede clonar lienzos con estado **Borrador**, **Activo** o **Detenido**. 
 3. Haga clic en <i class="fas fa-ellipsis-vertical"></i> **More actions** y seleccione **Clone to Canvas Flow**.
 
-![][1]{: style="max-width:25%;"}
+![]({% image_buster /assets/img_archive/clone_to_v2_workflow.png %}){: style="max-width:25%;"}
 
 {: start="4"}
 4\. Introduce el nombre de tu nuevo lienzo y haz clic en **Clonar en flujo de lienzo**. 
 
-![][2]{: style="max-width:70%;"}
+![]({% image_buster /assets/img_archive/clone_to_v2_modal.png %}){: style="max-width:70%;"}
 
 Ahora, tienes dos versiones de tu Canvas: el Canvas original y la versión Canvas Flow. Tu Lienzo original sigue teniendo su estado original, y el Lienzo clonado tiene el estado **Borrador**. Puedes seguir accediendo al lienzo original, pero Braze recomienda utilizar el flujo de trabajo Canvas Flow para seguir construyendo tus lienzos.
 
@@ -36,7 +36,7 @@ Antes, algunos lienzos con ramificaciones no podían clonarse. Ahora, puedes clo
 Si clona un Canvas activo, Braze seguirá enviando usuarios a través del Canvas original. Recomendamos detener un Canvas antes de clonarlo para evitar enviar mensajes duplicados a los usuarios de ambos Canvases.
 {% endalert %}
 
-![Tablero de lonas con dos lonas listadas: V2 Copia de Canvas V1 y Canvas V1. La Copia V2 del Canvas V1 tiene un ícono que indica que está utilizando el flujo de trabajo de Canvas Flow.][3]
+![Tablero de lonas con dos lonas listadas: V2 Copia de Canvas V1 y Canvas V1. La copia V2 del Canvas V1 tiene un icono que indica que está utilizando el flujo de trabajo del Canvas.]({% image_buster /assets/img_archive/clone_to_v2_dashboard.png %})
 
 Has completado la clonación de tu Canvas en el flujo de trabajo de Canvas Flow. Ahora, puedes seguir construyendo tus lienzos en esta experiencia actualizada.
 
@@ -53,7 +53,3 @@ En el caso de los lienzos activados por la API, coordine con su equipo de ingeni
 Para más información sobre las diferencias entre el editor original de Canvas y la experiencia Canvas Flow, consulta [las preguntas frecuentes sobre Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/faqs/#what-are-the-main-differences-between-canvas-flow-and-the-original-canvas-editor).
 
 
-[1]: {% image_buster /assets/img_archive/clone_to_v2_workflow.png %}
-[2]: {% image_buster /assets/img_archive/clone_to_v2_modal.png %}
-[3]: {% image_buster /assets/img_archive/clone_to_v2_dashboard.png %}
-[4]: {% image_buster /assets/img_archive/clone_to_flow_variant.png %}

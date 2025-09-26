@@ -1,5 +1,5 @@
 ---
-nav_title: "Recipients Object"
+nav_title: "Recipients object"
 article_title: API Recipients Object
 page_order: 9
 page_type: reference

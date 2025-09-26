@@ -1,5 +1,5 @@
 ---
-nav_title: Campaign Basics
+nav_title: Campaign basics
 article_title: Campaign Basics
 page_order: 1
 page_type: reference

@@ -1,5 +1,5 @@
 ---
-nav_title: Action Paths 
+nav_title: Action paths
 article_title: Action Paths 
 alias: /action_paths/
 page_order: 0.1
@@ -56,7 +56,7 @@ Add a trigger or multiple triggers to define your action groups. Here, you can s
 - Perform a [custom event]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)
 - Perform a conversion event
 - Add an email address
-- Change a custom attribute value (not nested custom attributes)
+- Change a custom attribute value (including arrays, but not nested custom attributes)
 - Update their subscription status or subscription group status
 - Interact with a campaign or Content Card
 - Enter a location

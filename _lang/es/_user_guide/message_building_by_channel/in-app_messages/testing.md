@@ -24,11 +24,11 @@ En **Vista Previa**, la vista de tu mensaje puede no ser idéntica a su represen
 
 Previsualice el aspecto que tendrá su mensaje para un usuario aleatorio, un usuario específico o un usuario personalizado; estos dos últimos son especialmente útiles si su mensaje contiene personalización o varios idiomas. También puedes previsualizar los mensajes para dispositivos móviles o tabletas para hacerte una mejor idea de lo que experimentarán los usuarios.
 
-![La pestaña Redactar al crear un mensaje dentro de la aplicación muestra una vista previa del aspecto que tendrá el mensaje. No se selecciona un usuario, por lo que el Líquido añadido en la sección del cuerpo se muestra tal cual.][1]
+![La pestaña Redactar al crear un mensaje dentro de la aplicación muestra una vista previa del aspecto que tendrá el mensaje. No se ha seleccionado un usuario, por lo que el Liquid añadido en la sección del cuerpo se muestra tal cual.]({%image_buster /assets/img/in-app-message-preview.png %})
 
 Braze dispone de tres generaciones de mensajes in-app. Puede ajustar con precisión a qué dispositivos deben enviarse sus mensajes, en función de la generación que admitan.
 
-![Cambio entre generaciones al previsualizar un mensaje in-app.][2]{: height="50%" width="50%"}
+![Cambio entre generaciones al previsualizar un mensaje dentro de la aplicación.]({% image_buster /assets/img/iam-generations.gif %}){: height="50%" width="50%"}
 
 ## Probar
 
@@ -40,7 +40,7 @@ Para enviar una prueba a [grupos de prueba de contenido]({{site.baseurl}}/user_g
 
 También puedes previsualizar los mensajes desde la pestaña **Prueba**, como si fueras un usuario. Puede seleccionar un usuario específico, un usuario aleatorio o crear un usuario personalizado.
 
-![Pestaña de prueba al crear un mensaje dentro de la aplicación. "Previsualizar mensaje como usuario" se establece en "Usuario personalizado" y los campos de perfil disponibles aparecen como opciones configurables.][3]
+![Pestaña de prueba al crear un mensaje dentro de la aplicación. "Vista previa del mensaje como usuario" está configurado como "Usuario personalizado" y los campos de perfil disponibles aparecen como opciones configurables.]({% image_buster /assets/img/iam-user-preview.png %})
 
 ### Lista de comprobación
 
@@ -49,6 +49,29 @@ También puedes previsualizar los mensajes desde la pestaña **Prueba**, como si
 - ¿Es su texto claro, conciso y correcto?
 - ¿Sus botones dirigen al usuario hacia dónde debe ir?
 
-[1]: {%image_buster /assets/img/in-app-message-preview.png %}
-[2]: {% image_buster /assets/img/iam-generations.gif %}
-[3]: {% image_buster /assets/img/iam-user-preview.png %}
+## Escáner de accesibilidad
+
+Para respaldar las mejores prácticas de accesibilidad, Braze analiza automáticamente el contenido de los mensajes dentro de la aplicación creados con el editor HTML tradicional, comparándolo con las normas de accesibilidad. Este escáner ayuda a identificar el contenido que puede no cumplir las Normas de Accesibilidad al Contenido en la Web[(WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/)). Las WCAG son un conjunto de normas técnicas reconocidas internacionalmente y desarrolladas por el Consorcio de la World Wide Web (W3C) para que los contenidos Web sean más accesibles a las personas con discapacidad.
+
+![Resultados del escaneo de accesibilidad]({% image_buster /assets/img/Accessibilty_Scanner_IAM.png %})
+
+{% alert note %}
+El escáner de accesibilidad de mensajes dentro de la aplicación sólo funciona con mensajes creados con HTML personalizado.
+{% endalert %}
+
+### Cómo funciona
+
+El escáner se ejecuta automáticamente en mensajes HTML personalizados y evalúa todo tu mensaje HTML según el [conjunto](https://www.w3.org/WAI/WCAG22/quickref/?versions=2.1&currentsidebar=%23col_customize&levels=aaa) completo [de reglas WCAG 2.1 AA](https://www.w3.org/WAI/WCAG22/quickref/?versions=2.1&currentsidebar=%23col_customize&levels=aaa). Para cada asunto marcado, muestra:
+
+- El elemento HTML específico implicado
+- Una descripción del problema de accesibilidad
+- Un enlace al contexto adicional o a las orientaciones de corrección
+
+### Comprender las pruebas de accesibilidad automatizadas
+
+{% multi_lang_include accessibility/automated_testing.md %}
+
+
+
+
+

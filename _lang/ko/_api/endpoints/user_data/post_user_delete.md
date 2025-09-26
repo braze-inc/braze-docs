@@ -61,13 +61,17 @@ Authorization: Bearer YOUR_REST_API_KEY
 | `phone_numbers` | 선택 사항 | 문자열 배열 | 삭제할 사용자 전화번호입니다. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-### 이메일로 사용자 삭제하기
+### 이메일 주소 및 전화번호로 사용자 삭제하기
 
-식별자로 `email`을 지정한 경우 식별자에 `prioritization` 값을 추가로 입력해야 합니다. `prioritization` 은 정렬된 배열이며 여러 사용자가 발견될 경우 삭제할 사용자를 지정해야 합니다. 즉, 우선순위와 일치하는 사용자가 두 명 이상일 경우 사용자를 삭제하지 않습니다.
+이메일 주소 또는 전화번호를 식별자로 지정하는 경우 식별자에 `prioritization` 값을 추가로 입력해야 합니다. `prioritization` 은 정렬된 배열이어야 하며 사용자가 여러 명인 경우 삭제할 사용자를 지정해야 합니다. 즉, 우선순위와 일치하는 사용자가 두 명 이상일 경우 사용자를 삭제하지 않습니다.
 
-배열에 허용되는 값은 `identified`, `unidentified`, `most_recently_updated`. `most_recently_updated`이며 이는 가장 최근에 업데이트된 사용자에게 우선순위를 지정하는 것을 의미합니다.
+배열에 허용되는 값은 다음과 같습니다:
 
-우선순위 배열에는 한 번에 다음 옵션 중 하나만 존재할 수 있습니다.
+- `identified`
+- `unidentified`
+- `most_recently_updated` (가장 최근에 업데이트한 사용자에게 우선순위를 부여하는 것을 의미함)
+
+`prioritization` 배열에는 한 번에 다음 옵션 중 하나만 존재할 수 있습니다:
 
 - `identified` 를 가진 사용자에게 우선순위를 지정하는 것을 말합니다. `external_id`
 - `unidentified` 없는 사용자에게 우선순위를 지정하는 것을 말합니다. `external_id`

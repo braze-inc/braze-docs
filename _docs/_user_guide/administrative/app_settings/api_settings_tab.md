@@ -1,5 +1,5 @@
 ---
-nav_title: APIs and Identifiers
+nav_title: APIs and identifiers
 article_title: APIs and Identifiers
 page_order: 3
 page_type: reference

@@ -71,52 +71,52 @@ AppDelegate.braze = braze
 
 #### REST API
 
-[`/users/track` エンドポイント ][users-track] を使用して [`push_subscribe`][user_attributes_object] 属性を更新する Braze の REST API で、ユーザーのサブスクリプションの状態を更新できます。
+ユーザーのサブスクリプションの状態を更新するには、Braze REST API で[`/users/track` エンドポイント]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)を使用して、ユーザーの [`push_subscribe`]({{site.baseurl}}/api/objects_filters/user_attributes_object) 属性を更新します。
 
 ### プッシュ通知のサブスクリプションの状態の確認
 
-![John Doeのユーザープロファイルで、プッシュ購読の状態がSubscribedに設定されている。][3]{: style="float:right;max-width:35%;margin-left:15px;"}
+![John Do のユーザープロファイルで、プッシュ購読の状態が Subscribed に設定されている。]({% image_buster /assets/img/push_example.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
 Braze でユーザーのプッシュ通知のサブスクリプションの状態を確認するには、3 つの方法があります。
 
-1. **ユーザープロフィール:**Braze ダッシュボードの [**[ユーザー検索][5]**] ページから、個々のユーザープロファイルにアクセスできます。Eメールアドレス、電話番号、または外部ユーザーIDを介して）ユーザーのプロフィールを見つけた後、**Engagement**タブを選択してユーザーの購読状態を表示し、手動で調整することができる。
+1. **ユーザープロフィール:**Braze ダッシュボードの [**[ユーザー検索]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/)**] ページから、個々のユーザープロファイルにアクセスできます。Eメールアドレス、電話番号、または外部ユーザーIDを介して）ユーザーのプロフィールを見つけた後、**Engagement**タブを選択してユーザーの購読状態を表示し、手動で調整することができる。
 <br><br>
-2. **Rest API でのエクスポート**：[セグメント別のユーザー][segment] または[識別子別のユーザー][identifier]のエクスポートのエンドポイントを使用して、個々のユーザープロファイルを JSON 形式でエクスポートできます。Brazeは、デバイスごとのプッシュ有効化情報を含むプッシュトークンオブジェクトを返す。
+2. **Rest API でのエクスポート**：[セグメント別のユーザー]({{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/)または[識別子別のユーザー]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/)のエクスポートのエンドポイントを使用して、個々のユーザープロファイルを JSON 形式でエクスポートできます。Brazeは、デバイスごとのプッシュ有効化情報を含むプッシュトークンオブジェクトを返す。
 
 ## プッシュ許可
 
 iOS、Web、Android のすべてのプッシュ対応プラットフォームで、OS レベルのシステムプロンプトからの明示的なオプトインが必要ですが、若干の違いがあり、それを以下にを示します。
 
-ユーザーの決定は最終的なものであり、却下後に再度依頼することはできないため、[プッシュプライマー][push-primers] の アプリ内メッセージを使用することが、オプトイン率を高めるための重要な戦略です。
+ユーザーの決断は最終的なものであり、彼らが辞退した後に再度お願いすることはできないため、[プッシュプライマーアプリ]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/)内メッセージを使用することは、オプトイン率を高めるための重要な戦略である。
 
 **ネイティブ OS のプッシュ許可プロンプト**
 
 |プラットフォーム|スクリーンショット|説明|
 |--|--|--|
-|iOS| ![iOS のネイティブプッシュプロンプト「My App から通知を送信してよいですか?」と、メッセージの下部にある「許可しない」と「許可する」の 2 つのボタン。][ios-push-prompt]{: style="max-width:410px;"} | ただし、[仮のプッシュ](#provisional-push)許可を申請する場合はこの限りではない。|
-|Android| ![Kitchenerieからの通知を許可しますか」と尋ねるアンドロイドのプッシュメッセージ。メッセージの下部に「許可する」と「許可しない」の2つのボタンがある。][android-push-prompt]{: style="max-width:410px;"} | このプッシュ許可は Android 13 で導入されました。Android 13 以前には、プッシュ通知の送信に許可は不要でした。|
-|Web| ![Web ブラウザーのネイティブプッシュプロンプト「Braze.com からの通知を表示しますか?」と、メッセージの下部にある「ブロックする」と「許可する」の 2 つのボタン。][web-push-prompt]{: style="max-width:410px;"} | |
+|iOS| ![iOS のネイティブプッシュプロンプト「My App から通知を送信してよいですか?」と、メッセージの下部にある「許可しない」と「許可する」の 2 つのボタン。]({% image_buster /assets/img/push_implementation_guide/ios-push-prompt.png %}){: style="max-width:410px;"} | ただし、[仮のプッシュ](#provisional-push)許可を申請する場合はこの限りではない。|
+|Android| ![Kitchenerieからの通知を許可しますか」と尋ねる Android のプッシュメッセージ。メッセージの下部に「許可する」と「許可しない」の2つのボタンがある。]({% image_buster /assets/img/push_implementation_guide/android-push-prompt.png %}){: style="max-width:410px;"} | このプッシュ許可は Android 13 で導入されました。Android 13 以前には、プッシュ通知の送信に許可は不要でした。|
+|Web| ![Webブラウザのネイティブ・プッシュ通知で、「Braze.com wants to show notification」と尋ねられ、メッセージの下部に「ブロック」と「許可」の2つのボタンがある。]({% image_buster /assets/img/push_implementation_guide/web-push-prompt.png %}){: style="max-width:410px;"} | |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### Android
 
 Android 13 以前には、プッシュ通知の送信に許可は不要でした。Android 12 とそれ以前では、最初のセッションで Braze が自動的にプッシュトークンを要求すると、すべてのユーザーが `Subscribed` と見なされました。この時点で、ユーザーはそのデバイスの有効なプッシュトークンと、`Subscribed` というデフォルトの購読状態で**プッシュ有効**になっている。
 
-[Android 13][android-13] 以降、プッシュ許可を求めて、ユーザーから許可を得る必要があります。アプリから手動で、適切なタイミングでユーザーに許可を求めることができますが、そうでない場合は、アプリが[通知チャネル](https://developer.android.com/reference/android/app/NotificationChannel)を作成するときに、ユーザーに自動的にプロンプトが表示されます。
+[Android 13から]({{site.baseurl}}/developer_guide/platforms/android/android_13/)、プッシュの権限はユーザーに求め、許可されなければならなくなった。アプリから手動で、適切なタイミングでユーザーに許可を求めることができますが、そうでない場合は、アプリが[通知チャネル](https://developer.android.com/reference/android/app/NotificationChannel)を作成するときに、ユーザーに自動的にプロンプトが表示されます。
 
 ### iOS
 
-![システムの通知センターに通知が表示され、下部に「Yachtrアプリからの通知を受信し続けますか」というメッセージと、その下に「受信し続ける」または「オフにする」の2つのボタンが表示される][ios-provisional-push]{: style="float:right;max-width:430px;width:40%;margin-left:15px;border:0"}
+![システムの通知センターに通知が表示され、下部に「Yachtrアプリからの通知を受け取り続けますか」というメッセージと、その下に「続ける」または「オフにする」の2つのボタンが表示される]({% image_buster /assets/img/push_implementation_guide/ios-provisional-push.png %}){: style="float:right;max-width:430px;width:40%;margin-left:15px;border:0"}
 
 アプリから暫定プッシュまたは承認プッシュを要求できます。 
 
-承認プッシュでは、通知を送信する前にユーザーからの明示的な許可が必要ですが、[暫定プッシュ][provisional-blog]では、音やアラートなしで通知センターに直接、__静かに__通知を送信できます。
+オーソライズド・プッシュでは、通知を送信する前にユーザーからの明示的な権限が必要だが、[プロビジョナル・プッシュでは](https://www.braze.com/resources/articles/mastering-provisional-push)、音やアラートを出さずに直接通知センターに__静かに__通知を送信することができる。
 
 #### 暫定承認とサイレントプッシュ{#provisional-push}
 
 iOS 12（2018年リリース）以前は、すべてのユーザーがプッシュ通知の受信を明示的にオプトインする必要があった。
 
-iOS12 で Apple は[暫定承認][provisional-blog]を導入し、ユーザーが明示的にオプトインする前に、ユーザーの通知センターにサイレントプッシュ通知の送信をブランドに許可したため、メッセージの価値を早期に示す機会が得られました。詳しくは[仮承認を]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#provisional-push-authentication--quiet-notifications)参照のこと。
+iOS12では、アップルは[仮承認を](https://www.braze.com/resources/articles/mastering-provisional-push)導入し、ユーザーが明示的にオプトインする前に、ブランドがユーザーの通知センターに静かなプッシュ通知を送信できるようにした。詳しくは[仮承認を]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#provisional-push-authentication--quiet-notifications)参照のこと。
 
 ### Web
 
@@ -128,9 +128,9 @@ iOS や Android の場合、アプリからいつでも許可プロンプトを�
 
 ## プッシュトークン
 
-[プッシュトークン][push-tokens] ] は、ユーザーのデバイスによって生成され、各受信者の通知を送信する場所を特定するためにBrazeに送信される一意の匿名識別子である。
+[プッシュトークン]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/)は、ユーザーのデバイスによって生成され、各受信者の通知を送信する場所を特定するために Braze に送信される一意の匿名識別子です。
 
-[プッシュトークン][push-tokens]には 2 つの分類方法があり、プッシュ通知をユーザーに送信する方法を理解するうえで不可欠です。
+[プッシュトークン]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/)には2つの分類方法があります。プッシュ通知をユーザーに送信する方法を理解するためには、これらを把握しておく必要があります。
 
 1. **フォアグラウンドプッシュ**は、ユーザーのデバイスのフォアグラウンドに、定期的に目に見えるプッシュ通知を送信する機能です。
 2. **バックグラウンドプッシュ**は、特定のデバイスがそのブランドからのプッシュ通知の受信をオプトインしているかどうかに関係なく使用できます。バックグラウンドプッシュを使用すると、ブランドはサイレントプッシュ通知 (意図的に表示しない通知） をデバイスに送信して、[アンインストール追跡]({{site.baseurl}}/user_guide/analytics/tracking/uninstall_tracking/)のような重要な機能をサポートできます。
@@ -149,7 +149,7 @@ iOS や Android の場合、アプリからいつでも許可プロンプトを�
 
 アプリや Web サイトは、1 つのデバイスにつき 1 つのプッシュ通知サブスクリプションのみを持つことができます。そのため、ユーザーがデバイスやウェブサイトからログアウトし、新しいユーザーがログインすると、プッシュトークンは新しいユーザーに再割り当てされる。これは、[**エンゲージメント**] タブの [**連絡先の設定**] セクションにあるユーザープロファイルに反映されます。
 
-![ユーザープロファイルの [エンゲージメント] タブにあるプッシュトークンの変更ログ。プッシュトークンが他のユーザーに移動した時点と、そのトークンがリストされます。][4]
+![ユーザープロファイルの\*\*エンゲージメント**タブにあるプッシュトークンの変更ログで、プッシュトークンがいつ別のユーザーに移動されたのか、そのトークンは何だったのかを一覧できる。]({% image_buster /assets/img/push_token_changelog.png %})
 
 プッシュ・プロバイダ（APN/FCM）には、1つのデバイス上の複数のユーザーを区別する方法がないため、最後にログインしたユーザーにプッシュ・トークンを渡し、デバイス上のどのユーザーをプッシュのターゲットにするかを決定する。
 
@@ -165,7 +165,7 @@ iOS や Android の場合、アプリからいつでも許可プロンプトを�
 - Brazeがプッシュ通知を送信する機能（フォアグラウンド・プッシュ・トークン）
 - どのデバイスでもプッシュを受信したいというユーザーの全体的な希望（プッシュ購読状態）
 
-![ユーザーが "Push Registered for Marketing（iOS）"であることを示すダッシュボードのスクリーンショット。][1]{: style="float:right;max-width:50%;margin-left:15px;"}
+![ユーザーが "Push Registered for Marketing (iOS)"]({% image_buster /assets/img/push_enablement.png %}) であることを示すダッシュボードのスクリーンショット。{: style="float:right;max-width:50%;margin-left:15px;"}
 
 ユーザーは、ワークスペース内のアプリについてアクティブなフォアグラウンドプッシュトークンを持っている場合に、「プッシュ有効」または「プッシュ登録済み」とみなされます。つまり、プッシュのイネーブルメントステータスはアプリに固有です。 
 
@@ -225,20 +225,3 @@ Androidの場合、Brazeは以下の場合にユーザーのプッシュが無�
 
 Brazeでのプッシュの使い方を最適化するための詳しいガイダンスについては、[プッシュのベストプラクティスに関する]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices)専用記事を参照のこと。
 
-[1]: {% image_buster /assets/img/push_enablement.png %}
-[2]: {% image_buster /assets/img/push_changelog.png %}
-[3]: {% image_buster /assets/img/push_example.png %}
-[4]: {% image_buster /assets/img/push_token_changelog.png %}
-[push-tokens]: {{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/
-[identifier] ：{{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/
-[segment] ：{{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/
-[5]: {{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/
-[ios-push-prompt] ： {% image_buster /assets/img/push_implementation_guide/ios-push-prompt.png %}
-[android-push-prompt] ： {% image_buster /assets/img/push_implementation_guide/android-push-prompt.png %}
-[web-push-prompt] ： {% image_buster /assets/img/push_implementation_guide/web-push-prompt.png %}
-[ios-provisional-push] ： {% image_buster /assets/img/push_implementation_guide/ios-provisional-push.png %}
-[push-primers]: {{site.baseurl}}/user_guide/message_building_by_channel/push/push_primer_messages/
-[android-13] ： {{site.baseurl}}/developer_guide/platform_integration_guides/android/android_13/
-[provisional-blog] ： https://www.braze.com/resources/articles/mastering-provisional-push
-[user_attributes_object]: {{site.baseurl}}/api/objects_filters/user_attributes_object
-[users-track] ：{{site.baseurl}}/api/endpoints/user_data/post_user_track/

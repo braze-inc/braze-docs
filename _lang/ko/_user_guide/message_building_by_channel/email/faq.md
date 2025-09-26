@@ -45,7 +45,7 @@ API 또는 SDK를 통해 사용자를 생성하기 전에 엔드포인트의 [`/
 
 또한 메시지가 전달되어 스팸으로 분류되어 심각한 평판 문제를 일으킬 수 있습니다. 전송되는 메시지의 수뿐만 아니라 사용자가 실제로 받은편지함에서 메시지를 보고 있는지 확인하기 위해 열람률과 클릭률도 모니터링하는 것이 중요합니다. 일반적으로 제공업체가 모든 스팸 사례를 보고하지는 않기 때문에 스팸률이 1%라도 발생하면 우려와 추가 분석이 필요할 수 있습니다.
 
-마지막으로, 비즈니스와 보내는 이메일 유형도 배달에 영향을 미칠 수 있습니다. 예를 들어, [거래 관련 이메일을][1] 주로 보내는 사람은 마케팅 메시지를 많이 보내는 사람보다 더 높은 수신율을 기대할 수 있습니다.
+마지막으로, 비즈니스와 보내는 이메일 유형도 배달에 영향을 미칠 수 있습니다. For example, someone sending mostly [transactional emails]({{site.baseurl}}/api/api_campaigns/transactional_api_campaign) should expect to see a better rate than someone sending many marketing messages.
 
 ### 이메일 전송 측정기준이 100% 합산되지 않는 이유는 무엇인가요?
 
@@ -89,7 +89,7 @@ API 또는 SDK를 통해 사용자를 생성하기 전에 엔드포인트의 [`/
 ### 사용자의 이메일 수신 그룹을 확인하려면 어떻게 해야 하나요?
 
 - **사용자 프로필:** 개별 사용자 프로필은 [사용자 검색]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/#access-profiles) 페이지의 Braze 대시보드를 통해 액세스할 수 있습니다. 여기에서 이메일 주소, 전화번호 또는 외부 사용자 아이디로 사용자 프로필을 조회할 수 있습니다. 고객 프로필의 인게이지먼트 탭에서 사용자의 이메일 구독 그룹을 볼 수 있습니다.
-- **Rest API:** 개별 사용자 프로필 구독 그룹은 [사용자의 구독 그룹 목록 엔드포인트][9] 또는 [사용자의 구독 그룹 상태 목록 엔드포인트에서][8] Braze REST API를 사용하여 볼 수 있습니다. 
+- **Rest API:** Individual user profiles subscription group can be viewed by the [List user’s subscription groups endpoint]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_groups/) or [List user’s subscription group status endpoint]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/) by using the Braze REST API. 
 
 ### 사용자의 이메일 수신 그룹을 업데이트하려면 어떻게 해야 하나요?
 
@@ -105,6 +105,3 @@ API 또는 SDK를 통해 사용자를 생성하기 전에 엔드포인트의 [`/
 
 **해결 방법:** 이와 동일한 결과를 얻으려면 이메일 본문을 편집할 때 **링크** 도구를 사용하여 구축 중인 이메일 캠페인에서 링크할 수 있는 외부 랜딩 페이지(예: 웹사이트)에 이메일 콘텐츠를 호스팅할 수 있습니다.
 
-[8]: {{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/
-[9]: {{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_groups/
-[1]: {{site.baseurl}}/api/api_campaigns/transactional_api_campaign

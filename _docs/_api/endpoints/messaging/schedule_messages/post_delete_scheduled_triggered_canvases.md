@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Delete Scheduled API-Triggered Canvases"
+nav_title: "POST: Delete scheduled API-triggered Canvases"
 article_title: "POST: Delete Scheduled API-Triggered Canvases"
 search_tag: Endpoint
 page_order: 4

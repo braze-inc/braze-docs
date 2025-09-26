@@ -52,9 +52,9 @@ Na mesma página, insira o seguinte:
 
 | Requisito | Informações |
 |---|---|
-| `SAML Name` | Isso aparecerá como o texto do botão na tela de login.<br>Normalmente, esse é o nome de seu provedor de identidade, como "Okta". |
-| `Target URL` | Isso acontecerá após a configuração da Braze em seu IdP.<br> Alguns IdPs fazem referência a isso como URL de SSO ou endpoint SAML 2.0. |
-| `Certificate` | O certificado `x.509` que é fornecido por seu provedor de identidade.|
+| Nome de SAML | Isso aparecerá como o texto do botão na tela de login.<br>Normalmente, esse é o nome de seu provedor de identidade, como "Okta". |
+| URL de destino | Isso acontecerá após a configuração da Braze em seu IdP.<br> Alguns IdPs fazem referência a isso como URL de SSO ou endpoint SAML 2.0. |
+| Certificado | O certificado `x.509` que é fornecido por seu provedor de identidade.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Confira se o seu certificado `x.509` segue esse formato ao adicioná-lo ao dashboard:
@@ -65,23 +65,23 @@ Confira se o seu certificado `x.509` segue esse formato ao adicioná-lo ao dashb
 -----END CERTIFICATE-----
 ```
 
-![Abertura das configurações de segurança e adição de detalhes de SSO SAML]({% image_buster /assets/img/samlsso.gif %})
+![Configurações SAML SSO com o toggle selecionado.]({% image_buster /assets/img/samlsso.png %})
 
 ### Etapa 3: Faça login no Braze
 
 Salve suas configurações de segurança e faça o registro. Em seguida, faça login novamente com seu provedor de identidade.
 
-![Tela de login do dashboard com SSO ativado]({% image_buster /assets/img/sso1.png %}){: style="max-width:40%;"}
+![Tela de login do dashboard com SSO ativado]({% image_buster /assets/img/sso1.png %}){: style="max-width:60%;"}
 
-## Configuração do seu RelayState
+## Configurando seu RelayState
 
 1. No Braze, acesse **Configurações** > **APIs e Identificadores**.
 2. Na aba **Chaves de API**, selecione o botão **Criar chave de API**.
-3. No campo **Nome da chave de API**, insira um nome para sua chave.
+3. No campo **nome da chave de API**, insira um nome para sua chave.
 4. Expanda o dropdown **SSO** em **Permissões** e marque **sso.saml.login**.<br><br>![A seção "Permissões" com sso.saml.login marcada.]({% image_buster /assets/img/relaystate_troubleshoot.png %}){: style="max-width:70%;"}<br><br>
 5. Selecione **Criar chave de API**.
 6. Na aba **Chaves de API**, copie o identificador ao lado da chave de API que você criou.
-7. Cole a chave de API do RelayState no RelayState do seu IdP (pode também aparecer como "Estado de Relay" ou "Estado de Relay Padrão" dependendo do seu IdP).
+7. Cole a chave de API do RelayState no RelayState do seu IdP (pode aparecer como "Estado de Relay" ou "Estado de Relay Padrão" dependendo do seu IdP).
 
 ## Comportamento de SSO
 
@@ -91,7 +91,7 @@ Os membros que aceitarem usar o SSO não poderão mais usar sua senha como fazia
 
 Você pode restringir os membros de sua organização para que façam login apenas com o Google SSO ou o SAML SSO. Para ativar as restrições, acesse **Security Settings** e selecione **Enforce Google SSO only login** ou **Enforce custom SAML SSO only login**.
 
-![Seção Authentication Rules (Regras de autenticação) da página Security Settings (Configurações de segurança)]({% image_buster /assets/img/sso3.png %})
+![Exemplo de configuração da seção "Regras de Autenticação" com um comprimento mínimo de senha de 8 caracteres e reutilização de senha de 3 vezes. As senhas expirarão após 180 dias, e os usuários serão desconectados após 1.440 minutos de inatividade.]({% image_buster /assets/img/sso3.png %})
 
 Ao ativar as restrições, os usuários do Braze da sua empresa não poderão mais se registrar usando uma senha, mesmo que já tenham se registrado com uma senha anteriormente.
 
@@ -126,14 +126,14 @@ Selecionar **Exportar**. Para **Selecionar o perfil de filtro de cookies**, sele
 
 ### O endereço de e-mail do usuário está configurado corretamente?
 
-Se você está recebendo o erro `ERROR_CODE_SSO_INVALID_EMAIL`, o endereço de e-mail do usuário não é válido. Confirme no rastreamento SAML que o campo `saml2:Attribute Name="email"` corresponde ao endereço de e-mail que o usuário está usando para fazer login. Se você usa o Microsoft Entra ID, o mapeamento de atributos é `email = user.userprincipalname`.
+Se você está recebendo o erro `ERROR_CODE_SSO_INVALID_EMAIL`, o endereço de e-mail do usuário não é válido. Confirme no rastreamento SAML que o campo `saml2:Attribute Name="email"` corresponde ao endereço de e-mail que o usuário está usando para fazer login. Se você usa o Microsoft Entra ID (anteriormente Azure Active Directory), o mapeamento de atributos é `email = user.userprincipalname`.
 
-O endereço de e-mail é sensível a maiúsculas e minúsculas e deve corresponder exatamente ao que foi configurado no Braze, incluindo o que foi configurado no seu provedor de identidade (como Okta, OneLogin, Azure Active Directory e outros).
+O endereço de e-mail é sensível a maiúsculas e minúsculas e deve corresponder exatamente ao que foi configurado no Braze, incluindo o que foi configurado no seu provedor de identidade (como Okta, OneLogin, Microsoft Entra ID e outros).
 
 Outros erros que indicam que você tem problemas com o endereço de e-mail do usuário incluem:
 - `ERROR_CODE_SSO_EMAIL_DOES_NOT_EXIST`: O endereço de e-mail do usuário não está dentro do dashboard.
 - `ERROR_CODE_SSO_SESSION_SIGN_IN_EMAIL_MISSING`: O endereço de e-mail do usuário está em branco ou mal configurado.
-- `ERROR_CODE_SSO_SESSION_SIGN_IN_EMAIL_MISMATCH` ou `ERROR_CODE_SSO_SIGN_IN_EMAIL_MISMATCH`: O endereço de e-mail do usuário não corresponde ao que foi usado para configurar o SSO.
+- `ERROR_CODE_SSO_SESSION_SIGN_IN_EMAIL_MISMATCH` ou `ERROR_CODE_SSO_SIGN_IN_EMAIL_MISMATCH`: O endereço de e-mail do usuário não corresponde ao usado para configurar o SSO.
 
 ### Você tem um certificado SAML válido (x.509 certificado)?
 
@@ -161,16 +161,16 @@ THIS_IS_A_MOCKED_CERTIFICATE_4ysJLTzETANBgkqhkiG9w0BAQsFADA0MTIwMAYDVQQDEylNaWNy
 
 Peça ao usuário afetado [limpar o cache e os cookies do navegador](https://its.uiowa.edu/services/how-clear-cache-and-cookies-your-web-browser), e então tente fazer login com SAML SSO novamente.
 
-### Você configurou seu RelayState?
+### Você definiu seu RelayState?
 
-Se você está recebendo o erro `ERROR_CODE_SSO_INVALID_RELAY_STATE`, seu RelayState pode estar mal configurado ou inexistente. Se você ainda não fez isso, precisa configurar seu RelayState em seu sistema de gerenciamento de IdP. Para etapas, consulte [Configurando seu RelayState](#setting-up-your-relaystate). 
+Se você está recebendo o erro `ERROR_CODE_SSO_INVALID_RELAY_STATE`, seu RelayState pode estar mal configurado ou inexistente. Se você ainda não fez isso, precisa definir seu RelayState em seu sistema de gerenciamento de IdP. Para etapas, consulte [Configurando seu RelayState](#setting-up-your-relaystate). 
 
 ### O usuário está preso em um loop de login entre Okta e Braze?
 
-Se um usuário não consegue fazer login porque está preso ciclando entre o SSO Okta e o painel da Braze, você precisa acessar o Okta e definir o destino da URL SSO para sua [instância Braze]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/) (por exemplo, `https://dashboard-07.braze.com`). 
+Se um usuário não consegue fazer login porque está preso alternando entre o SSO do Okta e o dashboard do Braze, você precisa acessar o Okta e definir o destino da URL do SSO para sua [Braze instance]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/) (por exemplo, `https://dashboard-07.braze.com`). 
 
-Se você estiver usando outro IdP, verifique se sua empresa fez o upload do certificado SAML ou x.509 correto para a Braze.
+Se você estiver usando outro IdP, verifique se sua empresa enviou o SAML ou x.509 certificado correto para o Braze.
 
 ### Você está usando uma integração manual?
 
-Se sua empresa não baixou o app Braze da loja de apps do seu IdP, você precisa baixar a integração pré-construída. Por exemplo, se Okta é seu IdP, você baixaria o app Braze da [página de integração](https://www.okta.com/integrations/braze/) deles.
+Se sua empresa não baixou o app do Braze da loja de apps do seu IdP, você precisa baixar a integração pré-construída. Por exemplo, se o Okta é seu IdP, você baixaria o app do Braze da [página de integração](https://www.okta.com/integrations/braze/) deles.

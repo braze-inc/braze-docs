@@ -27,7 +27,7 @@ description: "In diesem referenzierten Artikel werden die verschiedenen Komponen
   "email_template_id": (optional, string) if provided, we will use the subject/body/should_inline_css values from the given email template UNLESS they are specified here, in which case we will override the provided template,
   "message_variation_id": (optional, string) used when providing a campaign_id to specify which message variation this message should be tracked under,
   "extras": (optional, valid Key-Value Hash) extra hash - for SendGrid users, this will be passed to SendGrid as Unique Arguments,
-  "headers": (optional, valid Key-Value Hash) hash of custom extensions headers (available for SparkPost and SendGrid),
+  "headers": (optional, valid Key-Value Hash) hash of custom extensions headers (available for SparkPost, SendGrid, or Amazon SES),
   "should_inline_css": (optional, boolean) whether to inline CSS on the body. If not provided, falls back to the default CSS inlining value for the workspace,
   "attachments": (optional, array) array of JSON objects that define the files you need attached, defined by "file_name" and "url",
     "file_name": (required, string) the name of the file you want to attach to your email, excluding the extension (for example, ".pdf"). Attach files up to 2 MB. This is required if you use "attachments",
@@ -36,17 +36,18 @@ description: "In diesem referenzierten Artikel werden die verschiedenen Komponen
 ```
 
 - [Bezeichner der App]({{site.baseurl}}/api/identifier_types/)
-- Weitere Informationen und bewährte Verfahren für Preheader finden Sie in unserem Hilfeartikel zu [email body styling][46].
+  - Jede gültige `app_id` von einer App, die in Ihrem Workspace konfiguriert ist, funktioniert für alle Nutzer:innen in Ihrem Workspace, unabhängig davon, ob der Nutzer die spezifische App in seinem Profil hat oder nicht.
+- Weitere Informationen und bewährte Verfahren für Preheader finden Sie in unserem Hilfeartikel zur [Gestaltung von E-Mails]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/guidelines_and_tips/#body-styling).
 
 {% alert warning %}
 Braze empfiehlt, die Verwendung von Google Drive-Links für Ihre Anhänge `url` zu vermeiden, da dies die Aufrufe unserer Server zum Abrufen der Datei blockieren und dazu führen kann, dass die Nachricht nicht gesendet wird.
 {% endalert %}
 
-Gültige Anhangstypen sind: `txt`, `csv`, `log`, `css`, `ics`, `jpg`, `jpe`, `jpeg`, `gif`, `png`, `bmp`, `psd`, `tif`, `tiff`, `svg`, `indd`, `ai`, `eps`, `doc`, `docx`, `rtf`, `odt`, `ott`, `pdf`, `pub`, `pages`, `mobi`, `epub`, `mp3`, `m4a`, `m4v`, `wma`, `ogg`, `flac`, `wav`, `aif`, `aifc`, `aiff`, `mp4`, `mov`, `avi`, `mkv`, `mpeg`, `mpg`, `wmv`, `xls`, `xlsx`, `ods`, `numbers`, `odp`, `ppt`, `pptx`, `pps`, `key`, `zip`, `vcf`, und `pkpass`.
+Gültige Anhangstypen sind: `txt`, `csv`, `log`, `css`, `ics`, `jpg`, `jpe`, `jpeg`, `gif`, `png`, `bmp`, `psd`, `tif`, `tiff`, `svg`, `indd`, `ai`, `eps`, `doc`, `docx`, `rtf`, `odt`, `ott`, `pdf`, `pub`, `pages`, `mobi`, `epub`, `mp3`, `m4a`, `m4v`, `wma`, `ogg`, `flac`, `wav`, `aif`, `aifc`, `aiff`, `mp4`, `mov`, `avi`, `mkv`, `mpeg`, `mpg`, `wmv`, `xls`, `xlsx`, `ods`, `numbers`, `odp`, `ppt`, `pptx`, `pps`, `key`, `zip`, `vcf` und `pkpass`.
 
 Eine `email_template_id` kann am Ende jeder mit dem HTML-Editor erstellten E-Mail-Vorlage abgerufen werden. Im Folgenden sehen Sie ein Beispiel dafür, wie diese ID aussieht:
 
-![API Bezeichner Abschnitt einer HTML E-Mail Vorlage][31]
+![API Bezeichner Abschnitt einer HTML E-Mail Vorlage.]({% image_buster /assets/img_archive/email_template_id.png %}){: style="max-width:70%;"} 
 
 ## Beispiel für ein E-Mail-Objekt mit Anhang
 
@@ -94,5 +95,3 @@ Die Authentifizierung für E-Mail Dateianhänge in diesem Endpunkt befindet sich
 }
 ```
 
-[31]: {% image_buster /assets/img_archive/email_template_id.png %}
-[46]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/guidelines_and_tips/#body-styling

@@ -63,7 +63,7 @@ Um domínio de envio é usado no endereço do remetente na hora de enviar um e-m
 
 Em seguida, adicione os registros TXT e CNAME da parte inferior da página ao seu provedor DNS. Em seguida, retorne ao dashboard da Braze e clique em **Verificar**.
 
-![][1]
+![]({% image_buster /assets/img_archive/email_setup_rdns_records.png %})
 
 {% alert important %}
 O domínio de envio deve ser subordinado a um domínio que você possui. Por exemplo, se você é proprietário de "example.com", um subdomínio poderia ser "mail.example.com", o que lhe permite usar o endereço de envio "@mail.example.com".
@@ -85,4 +85,3 @@ Note que os domínios adicionais que foram adicionados não aparecerão na seç�
 
 Após a conclusão da verificação do remetente, recomendamos o aquecimento de IP para que suas mensagens cheguem às caixas de entrada dos destinos com uma taxa consistentemente alta. Depois de concluir essa configuração, consulte também a equipe de integração do Braze para confirmar se seus domínios e [endereço IP]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ip_warming/) estão funcionando.
 
-[1]: {% image_buster /assets/img_archive/email_setup_rdns_records.png %}

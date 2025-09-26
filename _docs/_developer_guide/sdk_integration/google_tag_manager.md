@@ -1,11 +1,11 @@
 ---
-nav_title: Google Tag Manager
+nav_title: Google tag manager
 article_title: Google Tag Manager with the Braze SDK
 platform: 
   - Android
   - FireOS
   - Swift
-page_order: 1.4
+page_order: 1.1
 description: "Learn how to initialize the Braze SDK using methods like runtime initialization, delayed initialization, or Google Tag Manager."
 
 ---

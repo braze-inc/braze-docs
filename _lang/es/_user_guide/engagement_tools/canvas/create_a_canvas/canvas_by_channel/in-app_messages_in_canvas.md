@@ -38,9 +38,9 @@ En el caso de los pasos del lienzo con entrada activada por acción, los usuario
 
 ## Caducidad de los mensajes en la aplicación
 
-En el compositor de mensajes in-app, puedes elegir cuándo caducará el mensaje in-app. Durante este tiempo, el mensaje dentro de la aplicación esperará a ser visto hasta que haya alcanzado la fecha de caducidad. Después de enviar el mensaje dentro de la aplicación, puedes verlo una vez.
+Puedes elegir cuándo caducará el mensaje dentro de la aplicación. Durante este tiempo, el mensaje dentro de la aplicación esperará a ser visto hasta que haya alcanzado la fecha de caducidad. Después de enviar el mensaje dentro de la aplicación, puedes verlo una vez.
 
-![]({% image_buster /assets/img_archive/canvas_expiration2.png %}){: style="max-width:85%"}
+![La sección Controles de mensaje de un paso Mensaje para un mensaje dentro de la aplicación. El mensaje dentro de la aplicación caducará tres días después de que el paso esté disponible.]({% image_buster /assets/img_archive/canvas_expiration2.png %}){: style="max-width:90%"}
 
 | Opción | Descripción | Ejemplo |
 |---|---|---|
@@ -167,7 +167,7 @@ Un usuario puede desencadenar dos mensajes dentro de la aplicación en tu Canvas
 
 Selecciona **Establecer prioridad exacta** y arrastra los diferentes pasos en Canvas para reordenar su prioridad en el Canvas. De manera predeterminada, los pasos anteriores en una variante en Canvas aparecerán antes que los pasos posteriores. Una vez que tus pasos estén en el orden de prioridad que prefieras, selecciona **Aplicar clasificación**.
 
-![El clasificador de prioridades con dos pasos "Primer IAM" y "Otro IAM".]({% image_buster /assets/img_archive/canvas_priority2.png %}){: style="max-width:85%"}
+![El clasificador de prioridades con dos pasos "Bienvenida IAM" y "Seguimiento IAM".]({% image_buster /assets/img_archive/canvas_priority2.png %}){: style="max-width:85%"}
 
 ### Hacer cambios en borradores de Lienzos activos
 
@@ -221,7 +221,7 @@ Puedes elegir entre las siguientes acciones desencadenantes para dirigirte a tus
 
 Un usuario tiene que entrar en el paso en Canvas, iniciar una sesión y, a continuación, realizar el desencadenamiento para recibir un mensaje dentro de la aplicación. Esto significa que no se admiten actualizaciones a mitad de sesión. Por ejemplo, si el desencadenante es iniciar una sesión, el usuario sólo tiene que entrar en el paso en Canvas e iniciar una sesión para recibir el mensaje dentro de la aplicación. Si el desencadenante no es iniciar una sesión, el usuario tiene que entrar en el paso en Canvas, iniciar una sesión y, a continuación, realizar el desencadenante para recibir el mensaje dentro de la aplicación.
 
-!["Hacer una compra específica" seleccionada como acción desencadenante.]({% image_buster /assets/img_archive/canvas_trigger_actions.png %}){: style="max-width:85%"}
+!["Hacer una compra específica" seleccionada como acción desencadenante.]({% image_buster /assets/img_archive/canvas_trigger_actions.png %}){: style="max-width:90%"}
 
 Las siguientes características de Canvas no están disponibles con los mensajes dentro de la aplicación, por lo que no se aplicarán a tus mensajes dentro de la aplicación aunque estén activadas.
 

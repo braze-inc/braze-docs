@@ -29,7 +29,7 @@ Tous les numéros U.S. doivent être des numéros de téléphone valides à 10 c
 
 Tous les numéros internationaux doivent commencer par `+`, suivi du code du pays et du numéro de téléphone. (e.g `+442071838750`)
 
-![][image]{: style="max-width:50%;border: 0;"}
+![]({% image_buster /assets/img/sms/e164.png %}){: style="max-width:50%;border: 0;"}
 
 Toutefois, pour garantir l'exactitude de vos envois vers plusieurs régions ayant des codes de pays ou de zone différents, il est recommandé d'utiliser le format `E.164`, même pour les numéros de téléphone basés sur U.S.
 
@@ -51,5 +51,4 @@ Pour qu’un client reçoive un message WhatsApp, il doit avoir un numéro de t�
 
 Si plusieurs utilisateurs ont le même numéro de téléphone dans un segment d'une même campagne ou étape du canvas, Braze dédupliquera l'envoi et n'enverra qu'un seul message à ce numéro de téléphone. 
 
-[image] : {% image_buster /assets/img/sms/e164.png %}
 

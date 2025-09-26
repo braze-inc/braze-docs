@@ -1,5 +1,5 @@
 ---
-nav_title: Creating Feature Flags
+nav_title: Creating feature flags
 article_title: Creating Feature Flags
 page_order: 20
 description: "This reference article covers how to create feature flags to coordinate new feature rollouts."
@@ -285,7 +285,7 @@ m.Braze.logFeatureFlagImpression("expanded_user_profile");
 
 To access the properties of a feature flag, use one of the following methods depending on the type you defined in the dashboard.
 
-If a property you referenced does not exist, these methods will return `null`.
+If there is no such property of the corresponding type for the key you provided, these methods will return `null`.
 
 {% tabs %}
 {% tab Web %}
@@ -320,7 +320,7 @@ const jsonProperty = featureFlag.getJsonProperty("footer_settings");
 // Returns the Feature Flag instance
 let featureFlag: FeatureFlag = braze.featureFlags.featureFlag(id: "expanded_user_profile")
 
-// Returns the String property
+// Returns the string property
 let stringProperty: String? = featureFlag.stringProperty(key: "color")
 
 // Returns the boolean property
@@ -330,13 +330,13 @@ let booleanProperty: Bool? = featureFlag.boolProperty(key: "expanded")
 let numberProperty: Double? = featureFlag.numberProperty(key: "height")
 
 // Returns the Unix UTC millisecond timestamp property as an integer
-let timestampProperty : Int? = featureFlag.timestampProperty(key: "account_start")
+let timestampProperty: Int? = featureFlag.timestampProperty(key: "account_start")
 
 // Returns the image property as a String of the image URL
-let imageProperty : String? = featureFlag.imageProperty(key: "homepage_icon")
+let imageProperty: String? = featureFlag.imageProperty(key: "homepage_icon")
 
 // Returns the JSON object property as a [String: Any] dictionary
-let jsonObjectProperty : [String: Any]? = featureFlag.jsonObjectProperty(key: "footer_settings")
+let jsonObjectProperty: [String: Any]? = featureFlag.jsonObjectProperty(key: "footer_settings")
 ```
 
 {% endtab %}

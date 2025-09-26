@@ -20,6 +20,16 @@ If a user isn’t available while creating a segment, their user data that deter
 
 Users can have multiple apps, so selecting a specific app in the **Apps Used** section of the segmentation page will yield results for users who at least have that app. The filter does not yield results for the users who exclusively have that app.
 
+## Filtering
+
+### Filter options changed
+
+Your filter options are related to the format (data type) that you're passing to Braze for your custom attribute. To review the data type that Braze is recognizing for your custom attributes, navigate to **Data Settings** > **Custom Attributes**.
+
+If your filter options have changed, this is an indication that your data is being passed to Braze in a different format (data type) than before. For detailed descriptions of different data types and their filtering options, refer to [custom attribute data types]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_attributes#custom-attribute-data-types).
+
+Keep in mind that changing the data type of a custom attribute in the dashboard will reject data that is sent to Braze in a different format.
+
 ## Analytics and reporting
 
 ### *Message Sent* or *Unique Recipients* in Campaign Analytics doesn't match segment count 
@@ -66,3 +76,15 @@ The second scenario is if the `app_id` field is populated when using the `/users
   }
 ]
 ```
+## Errors
+
+### Target audience is too complex to launch
+
+This rare error occurs if your target audience contains too many regex values, excessively long regex values, or too many filters. This includes all filters in a campaign or Canvas audience, whether the filters are located within the referenced segments or added as filters in the **Target Audience** step.
+
+If you receive this error, simplify your target audience before launching again, including:
+
+- If your audience references multiple segments, make sure the segments don't have redundancies, such as the same filters appearing in multiple segments.
+- Make sure you aren't referencing outdated data in segment filters. For example, an outdated filter might look for users who haven't received a certain Canvas step in the past week, even though the Canvas has been stopped for months.
+
+You can also [contact Support]({{site.baseurl}}/braze_support/) for further assistance with filter optimization.

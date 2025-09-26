@@ -1,5 +1,5 @@
 ---
-nav_title: Browser Extensions
+nav_title: Browser extensions
 article_title: Browser Extensions Integration for Web
 platform: Web
 page_order: 20

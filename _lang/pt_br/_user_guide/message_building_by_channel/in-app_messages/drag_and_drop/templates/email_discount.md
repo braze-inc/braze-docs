@@ -18,7 +18,7 @@ description: "Esta página de referência aborda como usar o editor de arrastar 
 
 Ao criar uma mensagem no app do tipo arrastar e soltar, selecione **Inscrição para e-mail com desconto de boas-vindas** para o modelo e, em seguida, selecione **Montar mensagem**. Esse modelo é compatível tanto com apps móveis quanto com navegadores da Web.
 
-![O editor de mensagens no app com o modelo para um formulário de envio de e-mail com desconto.][img1]
+![O editor de mensagens no app com o modelo para um formulário de envio de e-mail com desconto.]({% image_buster /assets/img/drag_and_drop/templates/email_capture_discount.png %})
 
 ### Etapa 2: Configure seus estilos de mensagens
 
@@ -30,7 +30,7 @@ Para começar a criar seu formulário de envio de e-mail, selecione o elemento d
 
 Você pode personalizar o texto do espaço reservado e o texto do rótulo do elemento de captura de e-mail.
 
-![O editor de mensagens no app com um menu lateral para personalizar o elemento de captura de e-mail.][img2]
+![O editor de mensagens no app com um menu lateral para personalizar o elemento de captura de e-mail.]({% image_buster /assets/img/drag_and_drop/templates/email_capture_field.png %})
 
 #### Validação de e-mail
 
@@ -42,7 +42,7 @@ Você pode personalizar o texto do espaço reservado e o texto do rótulo do ele
 
 ### Etapa 5: Estilize sua mensagem
 
-Personalize a aparência de seu formulário de inscrição e desconto usando os [componentes de mensagem no app do][3] tipo arrastar e soltar.
+Personalize a aparência de seu formulário de inscrição e desconto usando os [componentes de mensagem no app do]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#message-components) tipo arrastar e soltar.
 
 ## Análise dos resultados
 
@@ -53,7 +53,4 @@ Personalize a aparência de seu formulário de inscrição e desconto usando os 
 {% multi_lang_include drag_and_drop/templates.md section='email double opt-in' %}
 
 
-[img1]: {% image_buster /assets/img/drag_and_drop/templates/email_capture_discount.png %}
-[img2]: {% image_buster /assets/img/drag_and_drop/templates/email_capture_field.png %} 
 
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#message-components

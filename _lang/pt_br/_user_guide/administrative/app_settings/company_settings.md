@@ -31,4 +31,3 @@ Qualquer edição feita na seção **Configurações de Admin** será aplicada a
 
 <br>
 
-[1]: {{site.baseurl}}/user_guide/administrative/

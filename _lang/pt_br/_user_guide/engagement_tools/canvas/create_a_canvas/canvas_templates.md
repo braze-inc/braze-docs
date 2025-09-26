@@ -25,7 +25,7 @@ No dashboard do Braze, acesse **Envio de mensagens** > **Canvas** e selecione um
 
 No editor do Canvas, selecione **Editar Canvas** ou **Editar rascunho**, dependendo se o Canvas estiver ativo ou em um rascunho. Expanda o menu suspenso **Salvar como rascunho** no rodapé e selecione **Salvar como modelo**.
 
-![][2]
+![]({% image_buster /assets/img/save_canvas_as_template.png %})
 
 ### Etapa 3: Salve seu modelo
 
@@ -45,7 +45,7 @@ Se estiver usando a navegação mais antiga, poderá encontrar essa página em *
 
 Selecione **Criar modelo** e comece a configurar os detalhes do Canva. Você pode começar dando um nome ao seu modelo do Canva.
 
-![Um exemplo de modelo de canva chamado "Modelo de canva de venda anual" com a descrição "Use para a promoção anual de primavera".][1]
+![Um exemplo de modelo de tela chamado "Annual sale Canvas template" (Modelo de tela de venda anual) com a descrição "Use for annual spring promotion" (Use para a promoção anual de primavera).]({% image_buster /assets/img/canvas_template_example.png %})
 
 ### Etapa 3: Personalize seu modelo
 
@@ -66,7 +66,7 @@ Há duas maneiras de usar seu modelo ao criar um canva:
 
 O Braze tem uma seleção de modelos de canvas disponíveis para você usar como referência e como práticas recomendadas para casos de uso comuns. Embora esses modelos não possam ser editados, você pode visualizá-los em **Templates** > **Braze templates** ou usá-los em suas Canvas.
 
-![Modelos do Braze na seção de modelos do Canvas com seis modelos disponíveis.][3]
+![Modelos do Braze na seção de modelos do Canvas com seis modelos disponíveis.]({% image_buster /assets/img/braze_canvas_templates.png %})
 
 Selecione um dos modelos disponíveis a seguir para fazer referência ou usar como seu Canva.
 
@@ -162,6 +162,3 @@ Sim, você pode salvar etapas incompletas como um modelo do Canva. Entretanto, q
 
 Sim, você pode salvar as configurações no construtor do Canvas em um modelo do Canvas. Por exemplo, se você planeja usar uma combinação de segmentos e filtros com frequência, pode salvar essas configurações de **público-alvo** como parte do modelo do Canva.
 
-[1]: {% image_buster /assets/img/canvas_template_example.png %}
-[2]: {% image_buster /assets/img/save_canvas_as_template.png %}
-[3]: {% image_buster /assets/img/braze_canvas_templates.png %}

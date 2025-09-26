@@ -60,7 +60,7 @@ Exactly three years ago today we met for the first time!
 ```
 {% endraw %}
 
-**Explicación:** En este caso, utilizamos la variable reservada `now` para introducir en la plantilla la fecha y hora actuales en formato [ISO 8601ISO](http://en.wikipedia.org/wiki/ISO_8601 "8601 Time Code Wiki"). Los filtros `%B` (mes como "Mayo") y `%d` (día como "18") formatean el mes y el día actuales. A continuación, utilizamos los mismos filtros de fecha y hora en los valores de `signup_date` para asegurarnos de que podemos comparar los dos valores utilizando etiquetas condicionales y lógica.
+**Explicación:** Aquí utilizamos la variable reservada `now` para introducir la fecha y hora actuales en formato [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601). Los filtros `%B` (mes como "Mayo") y `%d` (día como "18") formatean el mes y el día actuales. A continuación, utilizamos los mismos filtros de fecha y hora en los valores de `signup_date` para asegurarnos de que podemos comparar los dos valores utilizando etiquetas condicionales y lógica.
 
 A continuación, repetimos otras tres declaraciones de variables para obtener las `%B` y `%d` para la `signup_date`, pero añadiendo también `%Y` (año como "2021"). De este modo, la fecha y la hora de `signup_date` se reducen al año. Saber el día y el mes nos permite comprobar si el aniversario del usuario es hoy, y saber el año nos indica cuántos años han pasado, ¡lo que nos permite saber por cuántos años felicitarle!
 

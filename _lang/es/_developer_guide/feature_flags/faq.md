@@ -30,6 +30,9 @@ Se puede crear e integrar una bandera de características en pocos minutos.
 
 La mayor parte del esfuerzo tendrá que ver con tu equipo de ingeniería y la construcción de la nueva característica que piensas lanzar. Pero cuando se trata de añadir una feature flag, es tan sencillo como una declaración `IF`/`ELSE` en el código de tu aplicación o sitio web:
 
+{% tabs %}
+{% tab JavaScript %}
+
 ```javascript
 import { getFeatureFlag } from "@braze/web-sdk";
 
@@ -40,6 +43,31 @@ else {
     // Show the old homepage
 }
 ```
+
+{% endtab %}
+{% tab Java %}
+
+```java
+if (braze.getFeatureFlag("new_shopping_cart").getEnabled()) {
+  // Show the new homepage your team has built
+} else {
+  // Show the old homepage
+}
+```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+if (braze.getFeatureFlag("new_shopping_cart")?.enabled == true) {
+  // Show the new homepage your team has built
+} else {
+  // Show the old homepage
+}
+```
+
+{% endtab %}
+{% endtabs %}
 
 ### ¿Cómo pueden beneficiar las feature flags a los equipos de marketing? {#marketing-teams}
 

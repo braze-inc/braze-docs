@@ -1,5 +1,5 @@
 ---
-nav_title: HTML Messages
+nav_title: HTML messages
 article_title: Adding the Braze JavaScript Interface to WebViews for Swift
 platform: Swift
 page_order: 0.5

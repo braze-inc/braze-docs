@@ -2,7 +2,7 @@ Gehen Sie im Braze Dashboard zu **Dateneinstellungen** > **Datenumwandlung**.
 
 Wählen Sie **Transformation erstellen**, um Ihre Transformation zu benennen, und wählen Sie dann Ihre Bearbeitungserfahrung.
 
-![Transformationsdetails mit der Möglichkeit, „Template verwenden“ oder „Von Grund auf neu beginnen“ für Ihre Bearbeitungserfahrung zu wählen.]({% image_buster /assets/img/data_transformation/data_transformation10.png %})
+![Details zur Transformation mit der Option "Eine Vorlage verwenden" oder "Von Grund auf neu beginnen" für Ihre Bearbeitungserfahrung.]({% image_buster /assets/img/data_transformation/data_transformation10.png %}){: style="max-width:80%;"}
 
 Wählen Sie **Template verwenden**, um eine Template-Bibliothek zu durchsuchen, die auch Anwendungsfälle der Datentransformation enthält. Oder wählen Sie **Von Grund auf neu**, um eine Standard-Codevorlage zu laden. 
 
@@ -24,8 +24,8 @@ Nachdem Sie Ihre Transformation erstellt haben, sehen Sie die Detailansicht der 
 
 {% if include.location == "typeform" %}
 
-![]({% image_buster /assets/img/typeform/data_transformation_typeform.png %})
-
-Erfassen Sie Ihre **Webhook-URL** zur Verwendung im nächsten Schritt.
+![Ein Beispiel für Webhook-Details und Transformation Code.]({% image_buster /assets/img/typeform/data_transformation_typeform.png %})
 
 {% endif %}
+
+Erfassen Sie Ihre **Webhook-URL** zur Verwendung im nächsten Schritt.

@@ -32,7 +32,7 @@ Para utilizar este punto final, necesitarás una [clave de API]({{site.baseurl}}
 
 ## Límite de velocidad
 
-{% multi_lang_include rate_limits.md endpoint='eliminar usuarios' %}
+{% multi_lang_include rate_limits.md endpoint='users delete' %}
 
 ## Cuerpo de la solicitud
 
@@ -61,13 +61,17 @@ Authorization: Bearer YOUR_REST_API_KEY
 | `phone_numbers` | Opcional | Matriz de cadenas | Números de teléfono de usuario que hay que borrar. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-### Eliminar usuarios por correo electrónico
+### Eliminar usuarios por direcciones de correo electrónico y números de teléfono
 
-Si se especifica un `email` como identificador, se requiere un valor `prioritization` adicional en el identificador. La `prioritization` es una matriz ordenada y debe especificar qué usuario eliminar si se encuentran varios usuarios. Esto significa que la eliminación de usuarios no se producirá si más de un usuario coincide con una priorización.
+Si se especifica una dirección de correo electrónico o un número de teléfono como identificador, se requiere un valor adicional `prioritization` en el identificador. `prioritization` debe ser una matriz ordenada y debe especificar qué usuario eliminar si hay varios usuarios. Esto significa que la eliminación de usuarios no se producirá si más de un usuario coincide con una priorización.
 
-Los valores permitidos para la matriz son: `identified`, `unidentified`, `most_recently_updated`. `most_recently_updated` se refiere a dar prioridad al usuario actualizado más recientemente.
+Los valores permitidos para la matriz son:
 
-En la matriz de priorización solo puede existir una de las siguientes opciones a la vez:
+- `identified`
+- `unidentified`
+- `most_recently_updated` (se refiere a dar prioridad al usuario actualizado más recientemente)
+
+En la matriz `prioritization` sólo puede existir una de las siguientes opciones a la vez:
 
 - `identified` se refiere a dar prioridad a un usuario con un `external_id`
 - `unidentified` se refiere a dar prioridad a un usuario sin un `external_id`

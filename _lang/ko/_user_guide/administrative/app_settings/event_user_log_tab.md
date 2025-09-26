@@ -32,11 +32,13 @@ description: "이 참조 문서에서는 Braze 통합에서 문제를 디버깅�
 * 캠페인 이벤트
 * 응답 데이터
 
-**원시 데이터** 버튼을 클릭하면 해당 특정 로그의 원시 JSON 데이터가 표시됩니다.
+Select the **Expand data** icon to show the raw JSON data for that specific log.
 
-![이벤트에 대한 원시 로그][10]
+![The "Expand data icon" next to a specific log.]({% image_buster /assets/img_archive/expand_data.png %})
 
 이벤트 사용자 로그는 기록된 후 30일 동안 대시보드에 남아 있습니다.
+
+![Raw logs for events]({% image_buster /assets/img_archive/rawlogs.png %}){: style="max-width:60%;"}
 
 ## 문제 해결
 
@@ -67,4 +69,3 @@ SDK 메서드를 호출하면 일반적으로 SDK는 해당 이벤트를 로컬�
 
 이러한 동작은 다음 세션에서 플러시되는 세션 종료 이벤트의 영향을 받지 않습니다.
 
-[10]: {% image_buster /assets/img_archive/rawlogs.png %}

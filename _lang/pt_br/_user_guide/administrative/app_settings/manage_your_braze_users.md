@@ -4,10 +4,10 @@ article_title: Usuários da empresa
 page_order: 23
 layout: dev_guide
 guide_top_header: "Usuários da empresa"
-guide_top_text: "Como administrador da conta Braze da sua empresa, talvez você precise gerenciar os usuários de forma mais granular ou caso a caso. O Braze pode ajudá-lo a fazer isso criando equipes e gerenciando permissões de usuários e configurações em toda a empresa."
+guide_top_text: "Como administrador da conta Braze da sua empresa, talvez você precise gerenciar os usuários de forma mais granular ou caso a caso. O Braze pode ajudá-lo a fazer isso criando Equipes e gerenciando permissões de usuários e configurações em toda a empresa."
 
 page_type: landing
-description: "Essa landing page lista artigos sobre como gerenciar seus usuários do Braze, como adicionar e excluir usuários, definir permissões de usuário, criar equipes e gerenciar configurações da empresa."
+description: "Esta landing page lista artigos sobre como gerenciar seus usuários do Braze, como adicionar e excluir usuários, definir permissões de usuários, criar Equipes e gerenciar configurações da empresa."
 
 guide_featured_title: "Artigos de seção"
 guide_featured_list:
@@ -22,6 +22,6 @@ guide_featured_list:
   image: /assets/img/braze_icons/users-01.svg
 ---
 
-## Quais são as diferenças entre equipes, conjuntos de permissões e funções? 
+## Quais são as diferenças entre Equipes, conjuntos de permissões e funções? 
 
 {% multi_lang_include permissions.md content="Differences" %}

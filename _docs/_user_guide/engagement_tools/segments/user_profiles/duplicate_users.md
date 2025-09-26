@@ -1,5 +1,5 @@
 ---
-nav_title: Duplicate Users
+nav_title: Duplicate users
 article_title: Duplicate Users
 description: "Learn how to find and merge duplicate users in your Braze dashboard."
 page_order: 0

@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: List Available Email Templates"
+nav_title: "GET: List available email templates"
 article_title: "GET: List Available Email Templates"
 search_tag: Endpoint
 page_order: 4

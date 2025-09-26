@@ -19,7 +19,7 @@ description: "この記事では、Braze アカウントの SAML シングルサ
 |---|---|
 | アサーションコンシューマーサービス (ACS) の URL | `https://<SUBDOMAIN>.braze.com/auth/saml/callback`<br><br> 欧州連合のドメインの場合、ASCのURLは`https://<SUBDOMAIN>.braze.eu/auth/saml/callback` 。<br><br> IdP によっては、これを応答 URL、サインオン URL、オーディエンス URL、またはオーディエンス URI と呼ぶこともあります。 |
 | エンティティ ID | `braze_dashboard` |
-| RelayState APIキー | **Settings（設定）**＞**API Keys（APIキー**）に進み、`sso.saml.login` 権限を持つAPIキーを作成し、生成されたAPIキーをIdP内の`RelayState` パラメータとして入力する。詳細なステップについては、[RelayStateの設定を](#setting-up-your-relaystate)参照のこと。 |
+| RelayState APIキー | **Settings（設定）**＞**API Keys（APIキー**）に進み、`sso.saml.login` 権限を持つAPIキーを作成し、生成されたAPIキーをIdP内の`RelayState` パラメータとして入力する。詳細な手順については、「[RelayState の設定](#setting-up-your-relaystate)」を参照してください。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## SAML SSOの設定
@@ -52,9 +52,9 @@ ID プロバイダーでの Braze の設定が完了すると、Braze アカウ�
 
 | 必要条件 | 詳細 |
 |---|---|
-| `SAML Name` | これは、ログイン画面にボタンのテキストとして表示されます。<br>これは通常、「Okta」のような ID プロバイダーの名前です。 |
-| `Target URL` | これは、IdP 内で Braze を設定した後に提供されます。<br> IdP によってはこれを SSO URL または SAML 2.0 エンドポイントと呼びます。 |
-| `Certificate` | ID プロバイダが提供する`x.509` 証明書。|
+| SAML 名 | これは、ログイン画面にボタンのテキストとして表示されます。<br>これは通常、「Okta」のような ID プロバイダーの名前です。 |
+| ターゲット URL | これは、IdP 内で Braze を設定した後に提供されます。<br> IdP によってはこれを SSO URL または SAML 2.0 エンドポイントと呼びます。 |
+| 証明書 | ID プロバイダが提供する`x.509` 証明書。|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ダッシュボードに `x.509` 証明書を追加するときに、次の形式になっていることを確認してください。
@@ -65,23 +65,23 @@ ID プロバイダーでの Braze の設定が完了すると、Braze アカウ�
 -----END CERTIFICATE-----
 ```
 
-![セキュリティ設定を開き、SAML SSOの詳細を追加する]({% image_buster /assets/img/samlsso.gif %})
+![トグルが選択された SAML SSO 設定。]({% image_buster /assets/img/samlsso.png %})
 
 ### ステップ 3:Braze へのサインイン
 
 セキュリティ設定を保存してログアウトします。次に、ID プロバイダーにサインインし直します。
 
-![SSOを有効にしたダッシュボードのログイン画面]({% image_buster /assets/img/sso1.png %}){: style="max-width:40%;"}
+![SSOを有効にしたダッシュボードのログイン画面]({% image_buster /assets/img/sso1.png %}){: style="max-width:60%;"}
 
 ## RelayStateの設定
 
-1. Brazeで、**設定**＞**APIと識別子と**進む。
+1. Braze で [**設定**] > [**API と識別子**] に移動します。
 2. **API Keys**タブで、**Create API key**ボタンを選択する。
 3. **APIキー名**フィールドに、キーの名前を入力する。
-4. **権限の**下にある**SSO**ドロップダウンを拡張し、以下をチェックする。 **sso.saml.login**.<br><br>![sso.saml.login をチェックした「権限」セクション]({% image_buster /assets/img/relaystate_troubleshoot.png %}){: style="max-width:70%;"}<br><br>
-5. **APIキーの作成**」を選択する。
+4. [**権限**] の下にある [**SSO**] ドロップダウンを展開して [**sso.saml.login**] をオンにします。<br><br>![[sso.saml.login] がオンになっている[権限] セクション。]({% image_buster /assets/img/relaystate_troubleshoot.png %}){: style="max-width:70%;"}<br><br>
+5. [**API キーを作成**] を選択します。
 6. **API Keys**タブで、作成したAPIキーの横にある識別子をコピーする。
-7. RelayState API KeyをIdPのRelayStateに貼り付ける（IdPによっては「Relay State」または「Default Relay State」と表示される場合もある）。
+7. RelayState API キーを IdP の RelayState に貼り付けます (IdPによっては「Relay State」または「Default Relay State」と表示されることもあります)。
 
 ## SSO の動作
 
@@ -91,7 +91,7 @@ SSO の利用を選択したメンバーは、以前とは異なり、パスワ�
 
 サインインに Google SSO または SAML SSOのいずれかのみを使用するように、組織のメンバーを制限できます。制限をオンにするには、［**セキュリティ設定**］ に移動し、［**Google SSO のみのログインを強制する**］、または ［**カスタム SAML SSO のみのログインを強制する**］ のいずれかを選択します。
 
-![セキュリティ設定ページの「認証ルール」セクション]({% image_buster /assets/img/sso3.png %})
+![認証ルール」セクションの設定例。パスワードの長さは最低8文字、パスワードの再利用可能回数は3回とする。パスワードは180日後に期限切れとなり、非アクティブ状態が1,440分間続くと、ユーザーは自動的にログアウトする。]({% image_buster /assets/img/sso3.png %})
 
 制限をオンにすると、たとえ以前にパスワードでログインしていたとしても、会社の Braze ユーザーはパスワードを使用したログインができなくなります。
 
@@ -126,26 +126,26 @@ Brazeのダッシュボードに行き、SSOを使ってサインインを試み
 
 ### ユーザーのメールは正しく設定されているか？
 
-エラー`ERROR_CODE_SSO_INVALID_EMAIL` 、ユーザーのメールアドレスが有効でない。SAML トレースで、`saml2:Attribute Name="email"` フィールドが、ユーザがログインに使用しているメール・アドレスと一致することを確認する。Microsoft Entra ID を使用する場合、属性マッピングは`email = user.userprincipalname` となる。
+エラー `ERROR_CODE_SSO_INVALID_EMAIL` が表示される場合は、ユーザーのメールアドレスが有効ではありません。SAML トレースで、`saml2:Attribute Name="email"` フィールドが、ユーザーがログインに使用しているメールアドレスと一致することを確認します。Microsoft Entra ID（旧 Azure Active Directory）を使用する場合、属性マッピングは`email = user.userprincipalname` となる。
 
-Eメールアドレスは大文字と小文字を区別し、IDプロバイダー（Okta、OneLogin、Azure Active Directoryなど）で設定されたものを含め、Brazeで設定されたものと完全に一致する必要がある。
+メールアドレスは大文字と小文字を区別し、IDプロバイダー（Okta、OneLogin、Microsoft Entra IDなど）で設定されたものを含め、Brazeで設定されたものと完全に一致する必要がある。
 
 ユーザーのメール・アドレスに問題があることを示すエラーには、他にも以下のようなものがある：
 - `ERROR_CODE_SSO_EMAIL_DOES_NOT_EXIST`:ユーザーのメールアドレスがダッシュボード内にない。
 - `ERROR_CODE_SSO_SESSION_SIGN_IN_EMAIL_MISSING`:ユーザーのEメールアドレスが空白であるか、その他の誤設定である。
 - `ERROR_CODE_SSO_SESSION_SIGN_IN_EMAIL_MISMATCH` または`ERROR_CODE_SSO_SIGN_IN_EMAIL_MISMATCH` ：ユーザーのメールがSSOの設定に使用したものと一致しない。
 
-### 有効な SAML 証明書（x.509 ）を持っているか。
+### 有効な SAML 証明書 (x.509) があるか?
 
-[この SAML 検証ツールを](https://www.samltool.com/validate_response.php)使用して、SAML 証明書を検証できる。期限切れの SAML 証明書は、無効な SAML 証明書でもあることに注意。
+[この SAML 検証ツール](https://www.samltool.com/validate_response.php)を使用して SAML 証明書を検証できます。期限切れの SAML 証明書は、無効な SAML 証明書でもあることに注意。
 
 ### 正しい SAML 証明書（x.509 証明書）をアップロードしたか。
 
 SAMLトレースの`ds:X509Certificate` セクションの証明書が、Brazeにアップロードした証明書と一致していることを確認する。これには、`-----BEGIN CERTIFICATE-----` ヘッダーと`-----END CERTIFICATE-----` フッターは含まれていない。
 
-### SAML 証明書（x.509 ）のタイプや書式を間違えたか。
+### SAML 証明書 (x.509 証明書) のタイプや形式に誤りがないか?
 
-ダッシュボードで提出した証明書に空白や余分な文字がないことを確認する。
+Braze ダッシュボードで送信した証明書に空白や余分な文字がないことを確認します。
 
 証明書をBrazeに入力する際、証明書はPrivacy Enhanced Mail (PEM)エンコードされ、正しくフォーマットされている必要がある（`-----BEGIN CERTIFICATE-----` ヘッダーと`-----END CERTIFICATE-----` フッターを含む）。 
 
@@ -159,17 +159,17 @@ THIS_IS_A_MOCKED_CERTIFICATE_4ysJLTzETANBgkqhkiG9w0BAQsFADA0MTIwMAYDVQQDEylNaWNy
 
 ### ユーザーのセッション・トークンは有効か？
 
-影響を受けたユーザーに[ブラウザのキャッシュと Cookie をクリアして](https://its.uiowa.edu/services/how-clear-cache-and-cookies-your-web-browser)もらい、SAML SSO でのログインを再試行する。
+影響を受けたユーザーに、[ブラウザーのキャッシュと Cookie をクリア](https://its.uiowa.edu/services/how-clear-cache-and-cookies-your-web-browser)してから SAML SSO でのログインを再試行するように依頼します。
 
-### RelayStateを設定したか？
+### RelayState を設定したか?
 
-エラー`ERROR_CODE_SSO_INVALID_RELAY_STATE` 、RelayStateが誤って設定されているか、存在しない可能性がある。まだの場合は、IdP管理システムでRelayStateを設定する必要がある。ステップについては、[RelayStateの設定を](#setting-up-your-relaystate)参照のこと。 
+エラー `ERROR_CODE_SSO_INVALID_RELAY_STATE` が表示される場合は、RelayState が誤って設定されているか、存在しない可能性があります。IdP 管理システムで RelayState をまだ設定していない場合は、これを設定する必要があります。手順については、「[RelayState の設定](#setting-up-your-relaystate)」を参照してください。 
 
 ### ユーザーはOktaとBrazeの間でサインインループから抜け出せないのか？
 
 ユーザーがOkta SSOとBrazeダッシュボードの間を行き来してサインインできない場合は、OktaにアクセスしてSSO URLの送信先を[Brazeインスタンスに]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/)設定する必要がある（たとえば、`https://dashboard-07.braze.com` ）。 
 
-他のIdPを使用している場合は、貴社が正しいSAMLまたはx.509 証明書をBrazeにアップロードしたかどうかを確認する。
+他のIdPを使用している場合は、貴社が正しいSAML証明書またはx.509 証明書をBrazeにアップロードしたかどうかを確認する。
 
 ### 手動統合を使用しているか？
 

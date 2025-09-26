@@ -4,23 +4,70 @@ alias: /currents_connector/
 hidden: true
 ---
 
-# Conector Currents personalizado para socios
+# Conector Currents personalizado
 
-## Serialización y formato de los datos
+> Aprende a integrar un conector Currents personalizado, para que puedas obtener datos de eventos de Braze en tiempo real, habilitando análisis, informes y automatización más personalizados.
 
-El formato de datos de destino es JSON sobre HTTPS. Los eventos se agruparán por predeterminado en lotes de 100 eventos, y se enviarán al punto final como una matriz JSON que contiene todos los eventos. Los lotes se enviarán en el siguiente formato:
+## Requisitos previos
 
-`{"events": [event1, event2, event3, etc...]}`
+Para integrar un conector de Currents personalizado en Braze, tendrás que proporcionar una URL de punto final y un [token de autenticación opcional](#authentication).
 
-Habrá un objeto JSON de nivel superior con la clave "events" que se asigna a una matriz de otros objetos JSON, cada uno de los cuales representa un único evento.
+Además, si tienes más de un grupo de aplicaciones en Braze, tendrás que configurar un conector Currents personalizado para cada grupo. Sin embargo, puedes dirigir todos los grupos de aplicaciones al mismo punto final, o a un punto final con un parámetro adicional `GET`, como `your_app_group_key=”Brand A”`.
 
-Los siguientes ejemplos son para eventos _individuales_ (tal y como formarían parte de la matriz más grande de objetos JSON, con cada objeto JSON representando un único evento en el lote).
+## Evitar la pérdida de datos
+
+### Control de errores
+
+Para evitar la pérdida de datos y la interrupción del servicio, es esencial que supervises tus puntos finales en todo momento y que intentes solucionar los errores graves o el tiempo de inactividad en un plazo de 24 horas.
+
+Para la mayoría de los tipos de error (como errores del servidor, errores de conexión a la red, etc.), Braze continuará poniendo en cola y reintentando las transmisiones de eventos durante un máximo de 24 horas. Pasado ese tiempo, se descartarán los eventos no transmitidos. Los conectores con tasas de error o tiempo de actividad constantemente bajos se suspenderán automáticamente.
+
+### Cambiar la resiliencia
+
+Ocasionalmente, realizaremos cambios no radicales en los esquemas de Braze Currents. Los cambios que no se rompen son nuevas columnas anulables o tipos de eventos.
+
+Normalmente avisamos de estos cambios con dos semanas de antelación, pero a veces no es posible. Es esencial que diseñes tu integración para manejar campos o tipos de eventos no reconocidos, de lo contrario es probable que se produzca una pérdida de datos.
+
+{% alert tip %}
+Para consultar la lista completa de esquemas de eventos Currents, [Eventos de interacción con mensajes]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events).
+{% endalert %}
+
+## Procesamiento por lotes y serialización
+
+El formato de datos de destino es JSON sobre HTTPS. Por predeterminado, los eventos se agrupan en lotes de 100 en función de lo siguiente:
+
+- **Número de eventos en cola**: Por ejemplo, si el tamaño del lote está configurado para 200 eventos y hay 200 eventos en la cola.
+- **Duración de un evento:** Normalmente, los eventos no se ponen en cola si duran más de 15 minutos. Cada tipo de evento tiene una cola independiente, por lo que la latencia puede variar según el tipo de evento.
+
+A continuación, los eventos se envían al punto final como una matriz JSON de todos los eventos con el siguiente formato:
+
+```json
+{"events": [event1, event2, event3, etc...]}
+```
+
+Habrá un objeto JSON de nivel superior con la clave `"events"` que mapeará a una matriz de otros objetos JSON, cada uno de los cuales representará un único evento.
+
+## Ejemplos de carga útil
+
+Los siguientes ejemplos muestran cargas útiles para eventos individuales, lo que significa que las cargas útiles pertenecerían a una matriz mayor de objetos JSON, donde cada objeto JSON representa un único evento del lote.
+
+Además, su estructura varía ligeramente de la estructura plana de [los Eventos de interacción con mensajes]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events). En concreto, contienen dos subobjetos:
+
+|Apellidos|Descripción|
+|----|-----------|
+|`"user"`|Contiene propiedades de usuario como `user_id`, `external_user_id`, `device_id` y `timezone`.|
+|`"properties"`|Contiene atributos de un suceso, como el `app/campaign/canvas/platform` al que se aplica.|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+Si un punto final descendente recibe una carga útil con cero eventos o un cuerpo de solicitud vacío, el resultado debe considerarse un no-op, lo que significa que no deben producirse efectos descendentes de esta llamada. Sin embargo, debes seguir comprobando el encabezado `Authorization` (como harías con una llamada normal a la API), y dar una respuesta HTTP adecuada para las [credenciales no válidas](#authentication), como `401` o `403`. Esto permite a Braze saber que las credenciales del conector son válidas.
 
 ### Actos relacionados con la campaña
 
 A continuación se muestran algunos ejemplos de cargas útiles para varios eventos, tal y como aparecerían si estuvieran asociados a una campaña:
 
-```
+#### Clic en mensaje dentro de la aplicación
+
+```json
 // In-App Message Click: users.messages.inappmessage.Click
 {
   "event_type": "users.messages.inappmessage.Click",
@@ -47,7 +94,9 @@ A continuación se muestran algunos ejemplos de cargas útiles para varios event
 }
 ```
 
-```
+#### Envío de notificación push
+
+```json
 // Push Notification Send: users.messages.pushnotification.Send
 {
   "event_type": "users.messages.pushnotification.Send",
@@ -72,7 +121,9 @@ A continuación se muestran algunos ejemplos de cargas útiles para varios event
 }
 ```
 
-```
+#### Apertura del correo electrónico
+
+```json
 // Email Open: users.messages.email.Open
 {
   "event_type": "users.messages.email.Open",
@@ -96,7 +147,9 @@ A continuación se muestran algunos ejemplos de cargas útiles para varios event
 }
 ```
 
-```
+#### Entrega de SMS
+
+```json
 // SMS Delivery: users.messages.sms.Delivery
 {
   "event_type": "users.messages.sms.Delivery",
@@ -124,7 +177,9 @@ A continuación se muestran algunos ejemplos de cargas útiles para varios event
 
 A continuación se muestran algunos ejemplos de cargas útiles para varios eventos, tal y como aparecerían si se asociaran a un Canvas:
 
-```
+#### Clic en mensaje dentro de la aplicación
+
+```json
 // In-App Message Click: users.messages.inappmessage.Click
 {
   "event_type": "users.messages.inappmessage.Click",
@@ -151,7 +206,9 @@ A continuación se muestran algunos ejemplos de cargas útiles para varios event
 }
 ```
 
-```
+#### Envío de notificación push
+
+```json
 // Push Notification Send: users.messages.pushnotification.Send
 {
   "event_type": "users.messages.pushnotification.Send",
@@ -176,7 +233,9 @@ A continuación se muestran algunos ejemplos de cargas útiles para varios event
 }
 ```
 
-```
+#### Apertura del correo electrónico
+
+```json
 // Email Open: users.messages.email.Open
 {
   "event_type": "users.messages.email.Open",
@@ -200,7 +259,9 @@ A continuación se muestran algunos ejemplos de cargas útiles para varios event
 }
 ```
 
-```
+#### Entrega de SMS
+
+```json
 // SMS Delivery: users.messages.sms.Delivery
 {
   "event_type": "users.messages.sms.Delivery",
@@ -228,7 +289,9 @@ A continuación se muestran algunos ejemplos de cargas útiles para varios event
 
 A continuación se muestran algunos ejemplos de cargas útiles para otros eventos que no están asociados ni a campañas ni a lienzos:
 
-```
+#### Evento personalizado
+
+```json
 // Custom Event: users.behaviors.CustomEvent
 {
   "event_type": "users.behaviors.CustomEvent",
@@ -258,7 +321,9 @@ A continuación se muestran algunos ejemplos de cargas útiles para otros evento
 }
 ```
 
-```
+#### Evento de compra
+
+```json
 // Purchase Event: users.behaviors.Purchase
 {
   "event_type": "users.behaviors.Purchase",
@@ -290,7 +355,9 @@ A continuación se muestran algunos ejemplos de cargas útiles para otros evento
 }
 ```
 
-```
+#### Comienzo de sesión
+
+```json
 // Session Start: users.behaviors.app.SessionStart
 {
   "event_type": "users.behaviors.app.SessionStart",
@@ -313,50 +380,105 @@ A continuación se muestran algunos ejemplos de cargas útiles para otros evento
 
 ## Autenticación
 
-Si es necesario, la autenticación se realizará pasando un token en la cabecera de `Authorization` HTTP, mediante el esquema de autorización `Bearer`, tal y como se especifica en [el RFC 6750](https://tools.ietf.org/html/rfc6750#section-2.1). En el futuro, Braze puede optar por utilizar el encabezado `Authorization` para implantar un esquema de autorización personalizado (único para Braze) de par clave-valor conforme [al RFC 7235](https://tools.ietf.org/html/rfc7235) (que es como funciona, por ejemplo, el esquema de autenticación personalizado de AWS).
+Los tokens de autenticación en tu carga útil son opcionales. Se pueden pasar a través de una cabecera HTTP `Authorization` utilizando el esquema de autorización `Bearer`, tal y como se especifica en [el RFC 6750](https://tools.ietf.org/html/rfc6750#section-2.1). Aunque es opcional, si se pasa un token de autenticación, Braze siempre lo validará primero, aunque no haya eventos en la carga útil.
 
-Según la RFC 6750, el token será un valor codificado en Base64 de al menos un carácter. Una peculiaridad notable del RFC 6750 es que permite que el token contenga los siguientes caracteres además de los caracteres normales de Base64: '-', '.', '_' y '~'. Los socios y clientes son libres de decidir si incluyen o no estos personajes en su token. Ten en cuenta que los clientes deben proporcionar este token en formato Base64; Braze no realizará esta codificación por nuestra parte.
+Según la RFC 6750, los tokens deben ser valores codificados en Base64 con al menos un carácter. Ten en cuenta que la RFC 6750 permite que los tokens contengan los siguientes caracteres, además de los caracteres normales de Base64: `-`, `.`, `_`, y `~`. Puedes elegir si quieres incluir o no estos caracteres en tu token; sin embargo, debe estar en formato Base64.
 
-Según el RFC 6750, la cabecera se construirá con el siguiente formato:
+Además, si la cabecera `Authorization` está presente, se construirá con el siguiente formato:
 
-`"Authorization: Bearer " + <token>`
+```plaintext
+"Authorization: Bearer " + <token>
+```
 
-Así, por ejemplo, si el token de la API es `0p3n5354m3==`, la cabecera de autorización tendrá el siguiente aspecto:
+Por ejemplo, si tu token de autenticación es `0p3n5354m3==`, tu cabecera `Authorization` debería ser similar a la siguiente:
 
-`Authorization: Bearer 0p3n5354m3==`
+```plaintext
+Authorization: Bearer 0p3n5354m3==
+```
+
+{% alert note %}
+En el futuro, podemos utilizar las cabeceras `Authorization` para implementar un esquema de autorización personalizado, par clave-valor, que sea único para Braze. Esto se adheriría a la especificación [RFC 7235](https://tools.ietf.org/html/rfc7235), que es como algunas empresas implementan sus esquemas de autenticación, como Amazon Web Services (AWS).
+{% endalert %}
 
 ## Control de versiones
 
-Todas las solicitudes de nuestros Conectores HTTP integrables se enviarán con un encabezado personalizado que designa la versión de la solicitud de Currents que se está realizando:
+Todas las solicitudes de nuestra integración de conector HTTP se enviarán con un encabezado personalizado que designará la versión de la solicitud de Currents que se está realizando:
 
-`Braze-Currents-Version: 1`
+```plaintext
+Braze-Currents-Version: 1
+```
 
-La versión siempre será `1` a menos que realicemos cambios gravemente incompatibles con el pasado en la carga útil o la semántica de la solicitud. No tenemos previsto incrementar este número muy a menudo, si es que lo hacemos alguna vez.
+La versión siempre será `1` a menos, ya que no esperamos incrementar este número muy a menudo, si es que lo hacemos alguna vez.
 
-Los eventos individuales seguirán las mismas reglas de evolución que nuestros esquemas S3 Avro existentes para la Exportación de Datos Currents. Es decir, se garantizará que los campos de cada evento sean compatibles con versiones anteriores de las cargas útiles de los eventos según la definición Avro de compatibilidad con versiones anteriores, incluidas las siguientes reglas:
+Al igual que los [esquemas de almacenamiento de nuestro almacén de datos]({{site.baseurl}}/user_guide/data/braze_currents/event_delivery_semantics?redirected=1), se garantiza que cada campo de evento de un evento individual es compatible con versiones anteriores de la carga útil del evento, según la definición de compatibilidad con versiones anteriores de [Apache Avro](https://avro.apache.org/):
 
-- Se garantiza que los campos de eventos específicos tengan siempre el mismo tipo de datos a lo largo del tiempo.
-- Cualquier nuevo campo que se añada a la carga útil con el tiempo debe ser considerado opcional por todas las partes.
-- Los campos obligatorios nunca se eliminarán.
+1. Se garantiza que los campos de eventos específicos tengan siempre el mismo tipo de datos a lo largo del tiempo.
+2. Cualquier nuevo campo que se añada a la carga útil con el tiempo debe ser considerado opcional por todas las partes.
+3. Los campos obligatorios nunca se eliminarán.
 
 ## Tratamiento de errores y mecanismo de reintento
 
-En caso de error, Braze pondrá en cola y reintentará la solicitud en función del código de retorno HTTP recibido. Cualquier código de error HTTP que no figure a continuación se tratará como un error HTTP 5XX.
+Si se produce un error, Braze pondrá en cola y reintentará la solicitud en función del código de retorno HTTP recibido. Seguirá intentándolo durante al menos dos días, mientras haya datos almacenados en el sistema. Si los datos se bloquean durante más de 24 horas, nuestros ingenieros de guardia serán alertados automáticamente. En este momento, nuestra estrategia de reintento es reintentar periódicamente.
 
-{% alert important %}
-Si nuestro mecanismo de reintento no consigue entregar eventos a su punto final durante más de 24 horas, se producirá una pérdida de datos.
+Si tu integración de Currents empieza a devolver errores `4XX`, Braze te enviará automáticamente un correo electrónico de notificación y ampliará automáticamente el periodo de retención a un mínimo de siete días.
+
+Cualquier código de error HTTP que no aparezca a continuación se tratará como un error HTTP `5XX`.
+
+{% alert warning %}
+Si el mecanismo de reintento de Braze no entrega un evento durante más de 24 horas, se producirá una pérdida de datos.
 {% endalert %}
 
 Los siguientes códigos de estado HTTP serán reconocidos por nuestro cliente conector:
-- **2XX** \- Éxito
-  - Los datos del evento no se reenviarán.<br><br>
-- **5XX** \- Error del servidor
-  - Los datos de eventos se reenviarán siguiendo un patrón de backoff exponencial con jitter. Si los datos no se envían correctamente en 24 horas, se descartarán.<br><br>
-- **400** \- Error del lado del cliente
-  - Nuestro conector de alguna manera envió al menos un evento malformado. Si esto ocurre, los datos del evento se dividirán en lotes de tamaño 1 y se volverán a enviar. Todos los eventos de estos lotes de tamaño 1 que reciban una respuesta HTTP 400 adicional se eliminarán de forma permanente. Animamos a nuestros socios y/o clientes a que nos informen si detectan que esto está ocurriendo.<br><br>
-- **401** (No autorizado), **403** (Prohibido), **404**
-  - El conector se ha configurado con credenciales no válidas. Los datos del suceso se reenviarán tras un retraso de entre 2 y 5 minutos. Si el cliente no resuelve este problema en un plazo de 48 horas, se eliminarán los datos del evento.<br><br>
-- **413** \- Carga útil demasiado grande
-  - Los datos del evento se dividirán en lotes más pequeños y se volverán a enviar.<br><br>
-- **429** \- Demasiadas peticiones
-  - Indica el límite de velocidad. Los datos de eventos se reenviarán siguiendo un patrón de backoff exponencial con jitter. Si los datos no se envían correctamente en 24 horas, se descartarán.
+
+<table>
+  <thead>
+    <tr>
+      <th>Código de estado</th>
+      <th>Respuesta</th>
+      <th>Descripción</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>2XX</code></td>
+      <td>Correcto</td>
+      <td>Los datos del evento no se reenviarán.</td>
+    </tr>
+    <tr>
+      <td><code>5XX</code></td>
+      <td>Error del lado del servidor</td>
+      <td>Los datos de eventos se reenviarán siguiendo un patrón de backoff exponencial con jitter. Si los datos no se envían correctamente en 24 horas, se descartarán.</td>
+    </tr>
+    <tr>
+      <td><code>400</code></td>
+      <td>Error del lado del cliente</td>
+      <td>El conector envió al menos un evento malformado. Los datos del suceso se dividirán en lotes de tamaño 1 y se volverán a enviar. Cualquier suceso de estos lotes de tamaño 1 que reciba otro <code>400</code> respuesta se eliminará de forma permanente. Debes denunciar los casos repetidos.</td>
+    </tr>
+    <tr>
+      <td><code>401</code></td>
+      <td>No autorizado</td>
+      <td>El conector se ha configurado con credenciales no válidas. Los datos del evento se volverán a enviar tras un retraso de 2-5 minutos. Si no se resuelve en 48 horas, se eliminarán los datos del evento.</td>
+    </tr>
+    <tr>
+      <td><code>403</code></td>
+      <td>Prohibido</td>
+      <td>El conector se ha configurado con credenciales no válidas. Los datos del evento se volverán a enviar tras un retraso de 2-5 minutos. Si no se resuelve en 48 horas, se eliminarán los datos del evento.</td>
+    </tr>
+    <tr>
+      <td><code>404</code></td>
+      <td>No se ha encontrado</td>
+      <td>El conector se ha configurado con credenciales no válidas. Los datos del evento se volverán a enviar tras un retraso de 2-5 minutos. Si no se resuelve en 48 horas, se eliminarán los datos del evento.</td>
+    </tr>
+    <tr>
+      <td><code>413</code></td>
+      <td>Payload demasiado grande</td>
+      <td>Los datos del evento se dividirán en lotes más pequeños y se volverán a enviar.</td>
+    </tr>
+    <tr>
+      <td><code>429</code></td>
+      <td>Demasiadas peticiones</td>
+      <td>Indica el límite de velocidad. Los datos de eventos se reenviarán siguiendo un patrón de backoff exponencial con jitter. Si no se envía correctamente en 24 horas, se descartará.</td>
+    </tr>
+  </tbody>
+</table>
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }

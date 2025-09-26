@@ -27,7 +27,7 @@ Para utilizar este punto final, necesitarás una [clave de API]({{site.baseurl}}
 
 ## Límite de velocidad
 
-{% multi_lang_include rate_limits.md endpoint='elemento de catálogo síncrono' %}
+{% multi_lang_include rate_limits.md endpoint='synchronous catalog item' %}
 
 ## Parámetros de la ruta
 

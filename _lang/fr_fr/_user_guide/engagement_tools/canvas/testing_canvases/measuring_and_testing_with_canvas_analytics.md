@@ -22,7 +22,7 @@ Le haut de la page **Canvas Details** contient les statistiques principales de C
 
 C’est l’endroit idéal pour avoir un aperçu de niveau supérieur pour vérifier si votre Canvas ne répond pas à votre objectif.
 
-![][24]
+![]({% image_buster /assets/img_archive/Journey_5.png %})
 
 ### modifications depuis la dernière consultation
 
@@ -38,7 +38,7 @@ Pour Canvas Flow, un utilisateur quittera le Canvas après être entré et avoir
 
 Ces indicateurs comprennent également les impressions, les destinataires uniques, le nombre de conversions et le revenu généré. Vous pouvez cliquer sur un composant pour décomposer vos données avec plus de précision et voir la performance spécifique au canal.
 
-![Deux exemples de détails de performance pour des composants Canvas. À gauche, les détails de la performance s’affichent pour un parcours utilisateur avec un composant Canvas. Sur la droite, les détails de la performance pour un composant Canvas étendu et une étape imbriquée qui affiche le nombre d’impressions du message in-app.][25]
+![Deux exemples de détails de performance pour des composants Canvas. À gauche, les détails de la performance s’affichent pour un parcours utilisateur avec un composant Canvas. À droite, vous trouverez des détails sur les performances d'un composant Canvas étendu et d'une étape imbriquée qui indique le nombre d'impressions de messages in-app.]({% image_buster /assets/img_archive/Journey_6.png %})
 
 ## Décomposition de performance par variante
 
@@ -54,7 +54,7 @@ Dans l'onglet **Analyser les variantes**, vous pouvez voir une répartition des 
 
 Vous pouvez rapidement inférer les variantes efficaces et identifier les cadences, le contenu, les déclencheurs, le timing appropriés et bien plus.
 
-![][26]
+![]({% image_buster /assets/img_archive/analyze_variants.png %})
 
 Les indicateurs de base comprennent les éléments suivants :  
 
@@ -77,14 +77,9 @@ Au-delà de cela, vous pouvez voir une répartition plus explicite des [événem
 
 ### Rapport d'entonnoir
 
-Le rapport d’entonnoir offre un rapport visuel qui vous permet d’analyser les parcours de vos clients après la réception d’un canvas. Si votre Canvas utilise un groupe de contrôle ou plusieurs variantes, vous pourrez comprendre comment les différentes variantes ont impacté l'entonnoir de conversion à un niveau plus granulaire et optimiser en fonction de ces données. Pour plus d'informations sur les rapports d'entonnoir, voir [Rapports d'entonnoir][2].
+Le rapport d’entonnoir offre un rapport visuel qui vous permet d’analyser les parcours de vos clients après la réception d’un canvas. Si votre Canvas utilise un groupe de contrôle ou plusieurs variantes, vous pourrez comprendre comment les différentes variantes ont impacté l'entonnoir de conversion à un niveau plus granulaire et optimiser en fonction de ces données. Pour plus d'informations sur les rapports d'entonnoir, voir [Rapports d'entonnoir]({{site.baseurl}}/user_guide/analytics/reporting/funnel_reports/).
 
 ### Rapport de rétention
 
-La rétention d’utilisateur est l’un des indicateurs les plus importants pour un marketeur. Gagner la confiance des utilisateurs pour les fidéliser est un indicateur de la croissance de l’entreprise. Braze vous permet désormais de mesurer la rétention des utilisateurs directement sur la page **Canvas Analytics**. Pour plus d'informations sur la façon de lire et d'interpréter votre rapport de rétention, consultez [Rapports de rétention][1].
+La rétention d’utilisateur est l’un des indicateurs les plus importants pour un marketeur. Gagner la confiance des utilisateurs pour les fidéliser est un indicateur de la croissance de l’entreprise. Braze vous permet désormais de mesurer la rétention des utilisateurs directement sur la page **Canvas Analytics**. Pour plus d'informations sur la façon de lire et d'interpréter votre rapport de rétention, consultez [Rapports de rétention]({{site.baseurl}}/user_guide/analytics/reporting/retention_reports/).
 
-[1]: {{site.baseurl}}/user_guide/engagement_tools/canvas/retention_reports/
-[2]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_funnel_reports/
-[24]:{% image_buster /assets/img_archive/Journey_5.png %}
-[25]:{% image_buster /assets/img_archive/Journey_6.png %}
-[26]:{% image_buster /assets/img_archive/analyze_variants.png %}

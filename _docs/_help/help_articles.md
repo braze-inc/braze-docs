@@ -1,5 +1,5 @@
 ---
-nav_title: Help Articles
+nav_title: Help articles
 article_title: Help Articles
 page_order: 1
 layout: dev_guide

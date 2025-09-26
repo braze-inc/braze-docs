@@ -1,5 +1,5 @@
 ---
-nav_title: Uninstall Tracking
+nav_title: Uninstall tracking
 article_title: Uninstall Tracking for iOS
 platform: iOS
 page_order: 7

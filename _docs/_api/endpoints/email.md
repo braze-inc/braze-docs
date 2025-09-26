@@ -1,5 +1,5 @@
 ---
-nav_title: "Email Lists & Addresses"
+nav_title: "Email lists & addresses"
 article_title: Email Lists & Addresses Endpoints
 search_tag: Endpoint
 page_order: 1

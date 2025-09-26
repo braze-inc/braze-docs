@@ -28,6 +28,8 @@ description: "この記事では、「ライブアクティビティを開始」
 - `messages.live_activity.start` の権限を持つ API キーを生成します。
 - 「[ライブアクティビティを作成]({{site.baseurl}}/developer_guide/push_notifications/live_notifications/?tab=local&sdktab=swift#swift_create-an-activity)」Braze SWIFT SDK を使用します。
 
+{% multi_lang_include api/payload_size_alert.md %}
+
 ## レート制限
 
 {% multi_lang_include rate_limits.md endpoint='default' %}

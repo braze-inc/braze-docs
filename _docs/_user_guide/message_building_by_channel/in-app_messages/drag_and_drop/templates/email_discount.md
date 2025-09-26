@@ -1,5 +1,5 @@
 ---
-nav_title: Email Sign-up with Discount
+nav_title: Email sign-up with discount
 article_title: Email Sign-up with Discount
 alias: "/email_discount/"
 page_order: 3

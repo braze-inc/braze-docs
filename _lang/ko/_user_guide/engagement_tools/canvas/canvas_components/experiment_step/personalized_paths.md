@@ -23,7 +23,7 @@ tool: Canvas
 
 캔버스에 [실험 경로]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/)를 추가한 다음 **개인화된 경로**를 켭니다.
 
-![][1]{: style="max-width:75%;" }
+![]({% image_buster /assets/img/experiment_step/experiment_personalized_path.png %})
 
 ### 2단계: 개인화된 경로 설정 구성
 
@@ -31,7 +31,7 @@ tool: Canvas
 
 그런 다음 **실험 기간**을 설정합니다. **실험 기간**에서는 지연 그룹의 각 사용자에게 가장 적합한 경로를 선택하기 전에 사용자를 모든 경로로 전송할 기간을 결정합니다. 기간은 첫 번째 사용자가 단계에 들어가면 시작됩니다.
 
-![][2]{: style="max-width:75%;" }
+![]({% image_buster /assets/img/experiment_step/experiment_personalized_settings.png %})
 
 ### 3단계: 폴백 결정
 
@@ -39,11 +39,11 @@ tool: Canvas
 
 또는 **향후 모든 사용자에게 경로 혼합을 계속 보내기**를 선택할 수도 있습니다.
 
-![][3]
+![]({% image_buster /assets/img/experiment_step/experiment_winning_statistical.png %})
 
 이 옵션을 선택하면 실험 경로 분포에 지정된 비율에 따라 향후 사용자에게 경로 혼합을 보냅니다.
 
-![][4]
+![]({% image_buster /assets/img/experiment_step/experiment_personalized_percentages.png %})
 
 ### 4단계: 경로를 추가하고 캔버스를 시작합니다.
 
@@ -145,9 +145,3 @@ tool: Canvas
 
 또는 로컬 전달을 사용하려면 24-48시간 이상의 실험 기간을 사용하세요. 이렇게 하면 이른 시간대의 사용자가 캔버스에 들어가서 실험을 시작해도 실험 기간에 충분한 시간이 남아 있습니다. 이후 시간대의 사용자는 캔버스와 개인화된 경로가 있는 실험 단계에 들어가 실험 기간이 만료되기 전에 전환할 수 있는 충분한 시간을 가질 수 있습니다.
 
-[1]: {% image_buster /assets/img/experiment_step/experiment_personalized_path.png %}
-[2]: {% image_buster /assets/img/experiment_step/experiment_personalized_settings.png %}
-[3]: {% image_buster /assets/img/experiment_step/experiment_winning_statistical.png %}
-[4]: {% image_buster /assets/img/experiment_step/experiment_personalized_percentages.png %}
-[5]: {% image_buster /assets/img/experiment_step/experiment_personalized_delay_group_pending.png %}
-[6]: {% image_buster /assets/img/experiment_step/experiment_personalized_delay_group_complete.png %}

@@ -47,7 +47,7 @@ Não se esqueça de informar aos desenvolvedores quais canais você quer usar pa
 | Push | Requer a implementação do SDK para fornecer o tratamento adequado das credenciais de envio de mensagens e tokens por push. |
 | E-mail | Esse é um processo totalmente diferente. Consulte a seção [Configuração de e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/) para obter mais detalhes sobre a integração. |
 | Cartões de conteúdo | Para começar a usar [os cartões de conteúdo]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/), entre em contato com o gerente de sucesso do cliente da Braze. |
-| SMS E MMS | Consulte a seção [Configuração de SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_setup/) para obter mais detalhes sobre a integração. |
+| SMS E MMS | Consulte a seção [Configuração de SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/sms/sms_setup/sms_sending/) para obter mais detalhes sobre a integração. |
 | Webhooks | Requer a implementação do SDK, bem como etapas específicas do canal. | 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

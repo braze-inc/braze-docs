@@ -30,22 +30,22 @@ description: "この記事では、「ハードバウンスメールアドレス
 
 | パラメーター | required | データ型 | 説明 |
 | ----------|-----------| ----------|----- |
-| `start_date` | オプション<br>(注を参照) | YYYY-MM-DD形式の文字列| ハードバウンドを取得する範囲の開始日であり、`end_date` より前である必要があります。これは、API によって UTC 時間の午前 0 時として扱われます。 |
-| `end_date` | オプション<br>(注を参照) | YYYY-MM-DD形式の文字列 | ハードバウンスを取得する範囲の終了日。これは、API によって UTC 時間の午前 0 時として扱われます。 |
+| `start_date` | オプション* | YYYY-MM-DD形式の文字列| *`start_date` または `email` のいずれかが必要です。これは、ハードバウンスを取得する範囲の開始日であり、`end_date` より前である必要があります。これは、API によって UTC 時間の午前 0 時として扱われます。 |
+| `end_date` | required | YYYY-MM-DD形式の文字列 | ハードバウンスを取得する範囲の終了日。これは、API によって UTC 時間の午前 0 時として扱われます。 |
 | `limit` | オプション | 整数 | 返される結果の数を制限するためのオプション・フィールド。デフォルトは100で、最大は500です。 |
 | `offset` | オプション | 整数 | 取得先となるリスト内のオプションの開始点。 |
-| `email` | オプション<br>（注を参照） | 文字列 | 指定されると、ユーザーがハードバウンスしたかどうかを返します。Eメールの文字列が正しくフォーマットされているか確認する。 |
+| `email` | オプション* | 文字列 | *`start_date` または `email` のいずれかが必要です。指定されると、ユーザーがハードバウンスしたかどうかを返します。Eメールの文字列が正しくフォーマットされているか確認する。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-{% alert note %}
-`start_date` と`end_date`、または `email` のいずれかを指定する必要があります。`start_date`、`end_date`、`email` の3つすべてを指定した場合、指定されたメールを優先し、日付の範囲は無視します。
+{% alert important %}
+`end_date` と `email` または `start_date` のいずれかを指定する必要があります。`start_date`、`end_date`、`email` の3つすべてを指定した場合、指定されたメールを優先し、日付の範囲は無視します。
 {% endalert %}
 
 日付範囲に `limit` の数を超えるハードバウンスがある場合、複数回の API 呼び出しが必要になります。呼び出しによって返されるのが `limit` を下回るか、結果がゼロになるまで、その都度 `offset` を増やします。`email` とともに `offset` および `limit` パラメーターを含めると、空の応答が返されることがあります。
 
 ## 例のリクエスト
 ```
-curl --location --request GET 'https://rest.iad-01.braze.com/email/hard_bounces?start_date=2019-01-01&end_date=2019-02-01&limit=100&offset=1&email=example@braze.com' \
+curl --location --request GET 'https://rest.iad-01.braze.com/email/hard_bounces?start_date=2019-01-01&end_date=2019-02-01&limit=100&offset=1' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE'
 ```
 

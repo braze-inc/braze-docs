@@ -1,5 +1,5 @@
 ---
-nav_title: "Push Action Buttons"
+nav_title: "Push action buttons"
 article_title: Push Action Buttons
 page_order: 1
 page_type: reference

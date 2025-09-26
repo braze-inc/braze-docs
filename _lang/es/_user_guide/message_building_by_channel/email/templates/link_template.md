@@ -34,8 +34,8 @@ Puede crear un número ilimitado de plantillas de enlaces para satisfacer sus di
 1. Vaya a **Plantillas** > **Plantillas de enlaces de correo electrónico**. 
 2. Selecciona **Crear plantilla de enlace de correo electrónico**.
 3. Dale un nombre a tu plantilla de enlaces.
-4. (opcional) Añade una descripción, un equipo o una etiqueta para añadir detalles sobre la plantilla del enlace.
-5. (Opcional) Selecciona la opción de alternar para añadir automáticamente la plantilla de enlace a los enlaces de las campañas de correo electrónico y los Lienzos. Esto se aplica al añadir un nuevo enlace a cualquier correo electrónico nuevo o existente.
+4. (Opcional) Añade una descripción, un equipo o una etiqueta para añadir detalles sobre la plantilla de enlace.
+5. (Opcional) Selecciona la opción de alternar para añadir automáticamente la plantilla de enlace a los enlaces en campañas de correo electrónico y Lienzos. Esto se aplica al añadir un nuevo enlace a cualquier correo electrónico nuevo o existente.
 
 Puede crear dos tipos de plantillas de enlaces:
 
@@ -78,7 +78,7 @@ Para acceder a la pestaña **Gestión de enlaces** en el editor de correo electr
 
 - **Editor de arrastrar y soltar:** Seleccione **Contenido** > pestaña **Gestión de enlaces**. A continuación, selecciona **Añadir una plantilla de enlace**. Para acceder a las plantillas de enlaces en el editor de arrastrar y soltar, debe tener activado [el alias de enlaces]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/link_aliasing/).
 
-![Pestaña Gestión de enlaces en el editor de arrastrar y soltar con una lista de ejemplos de plantillas de enlaces.][1]
+![Pestaña de gestión de enlaces en el editor de arrastrar y soltar con una lista de ejemplo de plantillas de enlaces.]({% image_buster /assets/img_archive/link_template_messagecomposer2.png %})
 
 {% alert note %}
 Las plantillas de enlaces no se aplican al texto sin formato. Esto significa que Currents puede mostrar clics que no incluyan los parámetros de las plantillas de enlace, ya que esos clics pueden proceder de la versión de texto sin formato del correo electrónico.
@@ -96,11 +96,5 @@ El archivado de plantillas no está disponible actualmente para las plantillas d
 
 ## Preguntas más frecuentes
 
-Para obtener respuestas a las preguntas más frecuentes sobre las plantillas de enlaces, consulte nuestra página [Preguntas frecuentes sobre plantillas][10].
+Para obtener respuestas a las preguntas más frecuentes sobre las plantillas de enlaces, consulta nuestra página [de Preguntas frecuentes sobre plantillas]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/faq/).
 
-[1]:{% image_buster /assets/img_archive/link_template_messagecomposer2.png %}
-[2]:{% image_buster /assets/img_archive/link_template_postappend.png %}
-[3]:{% image_buster /assets/img_archive/link_template_preappend.png %}
-[4]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/
-[10]: {{site.baseurl}}/user_guide/message_building_by_channel/email/templates/faq/
-[11]: {% image_buster /assets/img_archive/create_link_template.png %}

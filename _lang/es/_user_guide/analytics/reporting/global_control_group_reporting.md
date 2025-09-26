@@ -18,7 +18,7 @@ Para ver un informe de tu [grupo de control global]({{site.baseurl}}/user_guide/
 
 A continuación, selecciona el parámetro con el que deseas ejecutar el informe (sesiones o un evento personalizado concreto) y selecciona **Ejecutar informe**.
 
-![][6]
+![]({% image_buster /assets/img/control_group/control_group6.png %})
 
 ## Configurar tu informe
 
@@ -49,4 +49,3 @@ Cada espacio de trabajo tiene como máximo un grupo de control global y un grupo
 | Eventos por usuario | El número medio estimado de veces que los usuarios de cada grupo completaron sus eventos de conversión durante el periodo de tiempo seleccionado. | Total de eventos ÷ tamaño estimado del grupo. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-[6]: {% image_buster /assets/img/control_group/control_group6.png %}

@@ -19,7 +19,7 @@ Les rapports de rétention ne sont pas disponibles pour les campagnes déclench�
 
 ### Étape 1 : Sélectionner une plage de dates
 
-![Date du rapport][8]{: style="float:right;max-width:30%;margin-left:15px;"}
+![Date du rapport]({% image_buster /assets/img/date_select_retention.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
 
 Commencez par aller sur une campagne ou un Canvas dans votre tableau de bord de Braze, et sélectionnez une plage de dates pour votre rapport. La sélection d’une plage de dates appropriée est cruciale, elle affecte les rapports de rétention. 
 
@@ -42,13 +42,13 @@ Ensuite, sélectionnez **Analyser les variantes**. À partir de là, vous pouvez
 {% endtab %}
 {% endtabs %}
 
-![Sélectionnez un événement de rétention][1]{: style="max-width:80%"}
+![Sélectionnez un événement de rétention]({% image_buster /assets/img/retention_1.png %}){: style="max-width:80%"}
 
 ### Étape 3 : Générer le rapport
 
 Après avoir sélectionné un événement de rétention, sélectionnez **Exécuter le rapport** pour lancer la requête.
 
-![Exécuter le rapport][2]{: style="max-width:80%"}
+![Exécuter le/un rapport]({% image_buster /assets/img/retention_2.png %}){: style="max-width:80%"}
 
 Cette requête peut prendre quelques minutes pour exécuter, selon la quantité de données à récupérer pour générer les résultats. Si elle met trop de temps, vous verrez une notification vous demandant de réessayer de charger le rapport. Vous devrez peut-être attendre cinq minutes avant que le rapport ne soit chargé.
 
@@ -97,7 +97,7 @@ La rétention par plage mesure le nombre d’utilisateurs qui reviennent pendant
 
 Les rapports par plage sont certains des rapports les plus intuitifs à lire. Ils indiquent clairement, parmi tous les utilisateurs d’une cohorte, le pourcentage de ceux qui ont eu l’événement de rétention dans une plage de dates donnée. Par exemple, dans l’image suivante, pour la cohorte Tous les utilisateurs et la période « Jour 0 (0-24 h) », 35,71 % de la cohorte a eu le rapport de rétention. Si un utilisateur effectue plusieurs événements de rétention dans plusieurs plages de dates, il sera comptabilisé comme conservé pour chaque plage.
 
-![Rapport de rétention][5]
+![Rapport de rétention]({% image_buster /assets/img/range_retention.png %})
 
 ### Composants du rapport de rétention
 
@@ -151,9 +151,5 @@ Les rapports de rétention sont faciles à générer, mais difficiles à interpr
 - Constatez-vous une lassitude par rapport aux messages ?
 - Une optimisation spécifique que vous avez apportée à une campagne ou à un canvas il y a X jours a-t-elle eu un impact positif ?
 
-[1]: {% image_buster /assets/img/retention_1.png %}
-[2]: {% image_buster /assets/img/retention_2.png %}
-[5]: {% image_buster /assets/img/range_retention.png %}
-[8]: {% image_buster /assets/img/date_select_retention.png %}
 
 

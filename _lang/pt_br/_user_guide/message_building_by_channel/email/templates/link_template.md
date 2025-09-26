@@ -34,8 +34,8 @@ Você pode criar um número ilimitado de modelos de link para suportar suas vár
 1. Acessar **Modelos** > **Enviar modelo de link por e-mail**. 
 2. Selecione **Criar modelo de link de e-mail**.
 3. Dê um nome ao seu modelo de link.
-4. (opcional) Adicione uma descrição, equipe ou tag para adicionar detalhes sobre o modelo de link.
-5. (opcional) Selecione o botão de alternância para adicionar automaticamente o modelo de link a links em campanhas de e-mail e Canvas. Isso se aplica ao adicionar um novo link a qualquer e-mail novo ou existente.
+4. (Opcional) Adicione uma descrição, equipe ou tag para adicionar detalhes sobre o modelo de link.
+5. (Opcional) Selecione o botão de alternância para adicionar automaticamente o modelo de link a links em campanhas de e-mail e Canvas. Isso se aplica ao adicionar um novo link a qualquer e-mail novo ou existente.
 
 Existem dois tipos de modelos de link que você pode criar:
 
@@ -78,7 +78,7 @@ Para acessar a guia **Gerenciamento de Links** no editor de e-mail HTML atualiza
 
 - **Editor de arrastar e soltar:** Selecione **Conteúdo** > **Gerenciamento de Links**. Em seguida, selecione **Add a Link Template (Adicionar um modelo de link)**. Para acessar os modelos de link no editor de arrastar e soltar, você deve ter [aliasing de link]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/link_aliasing/) ativado.
 
-![Guia de gerenciamento de links no editor de arrastar e soltar com uma lista de exemplo de modelos de links.][1]
+![Guia Gerenciamento de links no editor de arrastar e soltar com uma lista de exemplos de modelos de links.]({% image_buster /assets/img_archive/link_template_messagecomposer2.png %})
 
 {% alert note %}
 Os modelos de link não são aplicados a texto simples. Isso significa que o Currents pode mostrar cliques que não incluem os parâmetros dos modelos de link, pois esses cliques podem vir da versão de texto simples do e-mail.
@@ -96,11 +96,5 @@ O recurso de arquivar modelos não está disponível atualmente para modelos de 
 
 ## Perguntas frequentes
 
-Para respostas a perguntas frequentes sobre modelos de links, confira nossa [página de Perguntas Frequentes sobre Modelos][10].
+Para obter respostas às perguntas mais frequentes sobre modelos de links, consulte nossa página de [perguntas frequentes sobre modelos]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/faq/).
 
-[1]:{% image_buster /assets/img_archive/link_template_messagecomposer2.png %}
-[2]:{% image_buster /assets/img_archive/link_template_postappend.png %}
-[3]:{% image_buster /assets/img_archive/link_template_preappend.png %}
-[4]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/
-[10]: {{site.baseurl}}/user_guide/message_building_by_channel/email/templates/faq/
-[11]: {% image_buster /assets/img_archive/create_link_template.png %}

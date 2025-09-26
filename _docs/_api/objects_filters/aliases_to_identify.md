@@ -1,5 +1,5 @@
 ---
-nav_title: "Aliases to Identify Object"
+nav_title: "Aliases to identify object"
 article_title: API Aliases to Identify Object
 page_order: 11
 page_type: reference

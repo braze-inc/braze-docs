@@ -21,7 +21,7 @@ Cette section fournit les clés API REST de votre espace de travail, les identif
 
 Pour renforcer la sécurité, vous pouvez spécifier une liste d’adresses IP et de sous-réseaux autorisés à faire des requêtes API REST pour une clé API REST spécifique. Vous définissez pour cela une liste d’autorisations, également appelée « Liste blanche ». Pour autoriser des adresses IP ou des sous-réseaux spécifiques, ajoutez-les à la section **Liste blanche des IP** lors de la création d'une nouvelle clé API REST : 
 
-![Section API IP Whitelisting (Whiteliste des adresses IP API) de création d’une nouvelle clé API][26]
+![Section "API IP Whitelisting" de la création d'une nouvelle clé API]({% image_buster /assets/img_archive/api-key-ip-whitelisting.png %})
 
 Si vous n’en spécifiez aucune, les requêtes pourront être envoyées depuis n’importe quelle adresse IP.
 
@@ -35,13 +35,7 @@ Cette section comprend une liste d’identifiants utilisés pour référencer de
 
 ### Autres identifiants
 
-Pour intégrer notre API, vous pouvez rechercher les identifiants liés à tous les segments, campagnes, cartes de contenu et autres auxquels vous souhaitez accéder à partir de l'API externe de Braze. Tous les messages doivent respecter le codage [UTF-8.][12]  Une fois que vous avez sélectionné l’un d’eux, l’identifiant s’affiche sous le menu déroulant.
+Pour intégrer notre API, vous pouvez rechercher les identifiants liés à tous les segments, campagnes, cartes de contenu et autres auxquels vous souhaitez accéder à partir de l'API externe de Braze. Tous les messages doivent respecter le codage [UTF-8.](https://en.wikipedia.org/wiki/UTF-8)  Une fois que vous avez sélectionné l’un d’eux, l’identifiant s’affiche sous le menu déroulant.
 
 Pour plus d'informations, reportez-vous aux [types d'identifiants API]({{site.baseurl}}/api/identifier_types/).
 
-[3]: {{site.baseurl}}/api/endpoints/user_data/
-[4]: {{site.baseurl}}/api/endpoints/messaging/
-[5]: {{site.baseurl}}/api/endpoints/email/
-[6]: {{site.baseurl}}/api/endpoints/export/
-[12]: https://en.wikipedia.org/wiki/UTF-8 "Wikipédia : UTF-8"
-[26]: {% image_buster /assets/img_archive/api-key-ip-whitelisting.png %}

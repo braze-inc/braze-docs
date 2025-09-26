@@ -21,21 +21,21 @@ Braze REST API를 사용하여 중복 사용자를 병합하려면 [POST를 참�
 
 Braze에서 **오디언스** > **사용자 검색**을 선택합니다.
 
-![탐색 메뉴에 강조 표시된 "사용자 검색" 타일.]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/select_search_users.png %}){: style="max-width:90%;"}
+![The "User Search" tile highlighted in the navigation menu.]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/select_search_users.png %}){: style="max-width:60%;"}
 
 중복 프로필에 대해 이메일 주소나 휴대폰 번호와 같은 고유 식별자를 입력한 다음 **검색**을 선택합니다.
 
-![검색창에 이메일을 입력한 Braze 대시보드의 '사용자 검색' 페이지]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/search_user.png %}){: style="max-width:60%;"}
+![The "User Search" page in the Braze dashboard.]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/search_user.png %}){: style="max-width:60%;"}
 
 ### 2단계: 병합이 중복됨
 
 병합 프로세스를 시작하려면 **중복 항목 병합**을 선택합니다.
 
-![중복된 사용자 프로필 중 하나]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/select_merge_duplicates.png %}){: style="max-width:55%;"}
+![One of the duplicate user's profiles.]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/select_merge_duplicates.png %}){: style="max-width:50%;"}
 
 유지할 고객 프로필과 병합할 고객 프로필을 선택한 다음 **프로필 병합**을 선택합니다. 중복된 프로필을 모두 병합할 때까지 이 과정을 반복합니다.
 
-![중복 프로필의 개별 병합 페이지입니다.]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/select_merge_profiles.png %}){: style="max-width:70%;"}
+![The individual merge page for a duplicate profile.]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/select_merge_profiles.png %}){: style="max-width:80%;"}
 
 {% alert warning %}
 병합 후에는 중복된 사용자 프로필을 복구할 수 없습니다.
@@ -49,7 +49,7 @@ Braze에서 **오디언스** > **사용자 검색**을 선택합니다.
 
 Braze 대시보드에서 **오디언스** > **오디언스 관리**를 선택합니다.
 
-![탐색 메뉴에 강조 표시된 "오디언스 관리" 타일]({% image_buster /assets/img/audience_management/duplicate_users/bulk_merging/select_manage_audience.png %}){: style="max-width:90%;"}
+![The "Manage Audience" tile highlighted in the navigation menu.]({% image_buster /assets/img/audience_management/duplicate_users/bulk_merging/select_manage_audience.png %}){: style="max-width:60%;"}
 
 ### 2단계: 결과 미리보기(선택 사항)
 
@@ -100,7 +100,7 @@ Braze에서 미리보기를 생성하여 이메일 주소로 CSV 파일로 전�
 - **다음을 사용하여 동점을 해결합니다**: 생성 날짜, 업데이트 날짜, 마지막 세션
 - **우선순위 지정**: 최신, 오래된
 
-!["프로필 유지" 및 "동점 해소" 옵션을 선택할 수 있는 섹션이 있는 "규칙 수정" 패널.]({% image_buster /assets/img/audience_management/duplicate_users/edit_rules.png %})
+![The "Edit rules" panel with sections to select options for "Profile to keep" and "Resolving ties".]({% image_buster /assets/img/audience_management/duplicate_users/edit_rules.png %}){: style="max-width:40%;"}
 
 예를 들어 전화번호가 있는 프로필을 유지할 수 있습니다. 여러 사용자가 동일한 전화번호를 사용하는 경우 **업데이트된 날짜** 필드를 사용하여 동점자를 해결하고 가장 최근에 업데이트된 사용자에게 우선순위를 지정할 수 있습니다.
 
@@ -120,13 +120,9 @@ Braze에서 미리보기를 생성하여 이메일 주소로 CSV 파일로 전�
 
 Similar to rules-based merging, scheduled merging allows you to automate the merging of user profiles on a daily basis using preconfigured rules.
 
-{% alert important %}
-Scheduled merging is in early access. Contact your Braze account manager if you're interested in participating in this early access.
-{% endalert %}
-
 ![The "Manage Audience" page with "schedule" button.]({% image_buster /assets/img/audience_management/duplicate_users/bulk_merging/select_scheduled_merge_rules.png %})
 
-After the feature is turned on, Braze will automatically assign a timeslot to perform the merge process daily. You can turn off scheduled merging at any time. Braze will notify the admins of your workspace 24 hours before the scheduled merge occurs, providing a reminder and time to review the configuration.
+After the feature is turned on, Braze will automatically assign a timeslot to perform the merge process daily at approximately 12 am in the user's company time zone. You can turn off scheduled merging at any time. Braze will notify the admins of your workspace 24 hours before the scheduled merge occurs, providing a reminder and time to review the configuration.
 
 {% alert warning %}
 병합 후에는 중복된 사용자 프로필을 복구할 수 없습니다.

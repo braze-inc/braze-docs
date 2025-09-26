@@ -61,7 +61,7 @@ A maioria dos provedores armazena dados de reputação por apenas 30 dias. Se vo
 
 Nosso recurso integrado de limitação de usuários serve como uma ferramenta útil para ajudá-lo a aquecer seu endereço IP. Depois de escolher os seus segmentos de envio de mensagens desejados durante a criação da campanha, na [etapa de Usuários Alvo]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/#step-4-build-the-remainder-of-your-campaign-or-canvas), selecione o menu suspenso **Opções Avançadas** para limitar seus usuários. À medida que sua programação de aquecimento continua, você pode aumentar gradualmente esse limite para aumentar o volume de e-mails que você envia.
 
-![][18]
+![]({% image_buster /assets/img_archive/email_ip_warming_sends_limit_new.png %})
 
 ## Segmentação de subdomínio
 
@@ -93,12 +93,12 @@ Consulte nosso [cronograma de aquecimento de IP](#ip-warming-schedules) para dis
 
 ### Limpe suas listas de e-mail
 
-Confirme que sua lista de e-mails está limpa e não possui e-mails antigos ou não verificados. Garantir que você esteja em conformidade com CASL e CAN-SPAM][40] é ideal.
+Confirme que sua lista de e-mails está limpa e não possui e-mails antigos ou não verificados. O ideal é garantir que você esteja [em conformidade com a CASL e com a CAN-SPAM]({{site.baseurl}}/user_guide/administrative/privacy/spam_regulations/).
 
 ### Monitore a reputação do remetente
 
 Ao conduzir o processo de aquecimento de IP, monitore cuidadosamente sua reputação do remetente enquanto conduz o processo de aquecimento de IP. Essas métricas específicas são importantes de observar:
-- **Taxas de bounce:** Se qualquer campanha tiver uma taxa de rejeição superior a 3-5%, você deve avaliar a limpeza da sua lista seguindo as diretrizes em nosso [Keep It Clean: A Importância da Higiene da Lista de E-mail][43] artigo. Além disso, você deve considerar implementar uma [política de descontinuação][46] para parar o envio de e-mail para endereços de e-mail inativos ou não engajados.
+- **Taxas de bounce:** Se alguma campanha tiver mais de 3 a 5% de bounce, você deverá avaliar a limpeza de sua lista seguindo as diretrizes de nosso site [Keep It Clean: A Importância da Higiene da Lista de E-mail](https://www.braze.com/blog/email-list-hygiene/) artigo. Além disso, você deve considerar a implementação de uma [política de sunsetting]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/sunset_policies/) para interromper o envio de e-mail para endereços de e-mail não engajados ou inativos.
 - **Relatórios de Spam:** Se qualquer campanha for relatada como spam a uma taxa superior a 0,08%, você deve reavaliar o conteúdo que está enviando, verificar se está direcionado a um público interessado e garantir que seus e-mails estejam adequadamente redigidos para despertar seu interesse.
 - **Taxas de Abertura:** As taxas de abertura são um proxy útil para a colocação na caixa de entrada. Se suas taxas de abertura únicas estiverem acima de 25%, você provavelmente está experimentando uma alta colocação na caixa de entrada, o que indica uma reputação positiva do remetente.
 
@@ -110,9 +110,3 @@ Braze recomenda não usar [Intelligent Timing]({{site.baseurl}}/user_guide/braze
 É normal que os e-mails sejam enviados para a pasta de spam durante o aquecimento de IP porque seu domínio e IP ainda não estabeleceram uma reputação positiva. Se o e-mail cair na sua pasta de spam, o administrador de e-mail pode precisar adicionar seu domínio de envio Braze e IP à lista de permissões da sua empresa.
 {% endalert %}
 
-[18]: {% image_buster /assets/img_archive/email_ip_warming_sends_limit_new.png %}
-[40]: {{site.baseurl}}/user_guide/onboarding_with_braze/spam_regulations/
-Daqui a [43]: https://www.braze.com/blog/email-list-hygiene/
-[44]: https://senderscore.org/
-Daqui a [45]: http://www.senderbase.org/
-[46]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/sunset_policies/

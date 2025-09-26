@@ -1,5 +1,5 @@
 ---
-nav_title: Tracking Sessions
+nav_title: Tracking sessions
 article_title: Tracking sessions through the Braze SDK
 page_order: 3.3
 description: "Learn how to track sessions through the Braze SDK."

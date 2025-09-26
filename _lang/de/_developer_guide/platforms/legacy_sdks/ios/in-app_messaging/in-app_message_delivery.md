@@ -32,7 +32,7 @@ Bei In-App-Nachrichten, die sofort nach der Zustellung angezeigt werden (Sitzung
 
 ## Mindestzeitintervall zwischen Auslösern
 
-Standardmäßig begrenzen wir die Rate für In-App-Nachrichten auf einmal alle 30 Sekunden, um ein hochwertiges Nutzer:in-Erlebnis zu ermöglichen.
+Standardmäßig begrenzen wir die Rate-Limits für In-App-Nachrichten auf einmal alle 30 Sekunden, um ein hochwertiges Nutzer:innen-Erlebnis zu ermöglichen.
 
 Sie können diesen Wert über `ABKMinimumTriggerTimeIntervalKey` im Parameter `appboyOptions` überschreiben, der an `startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions:` übergeben wird. Stellen Sie `ABKMinimumTriggerTimeIntervalKey` auf den ganzzahligen Wert ein, den Sie als Mindestzeit in Sekunden zwischen In-App-Nachrichten angeben möchten:
 

@@ -1,5 +1,5 @@
 ---
-nav_title: Handling a Large Control Group
+nav_title: Handling a large control group
 article_title: Handling a Large Control Group
 page_order: 2
 

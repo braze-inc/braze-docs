@@ -19,7 +19,7 @@ Visualize ou baixe nossa Coleção do Postman clicando em **Executar no Postman*
 
 ## Como usar a coleção Postman da Braze
 
-Se você tiver uma conta no Postman (você pode baixar as versões para MacOS, Windows e Linux do [site do Postman][1]), você pode abrir nossa documentação do Postman no seu próprio app do Postman clicando no botão laranja **Executar no Postman**. Você pode então [criar um ambiente](#setting-up-your-postman-environment), ou usar nosso ambiente de API REST Braze como um modelo, e editar as `POST` e `GET` solicitações disponíveis para atender às suas próprias necessidades.
+Se você tiver uma conta no Postman (você pode baixar as versões para MacOS, Windows e Linux do [site do Postman](https://www.getpostman.com)), você pode abrir nossa documentação do Postman no seu próprio app do Postman clicando no botão laranja **Executar no Postman**. Você pode então [criar um ambiente](#setting-up-your-postman-environment), ou usar nosso ambiente de API REST Braze como um modelo, e editar as `POST` e `GET` solicitações disponíveis para atender às suas próprias necessidades.
 
 ### Configurando seu ambiente Postman
 
@@ -31,14 +31,14 @@ Para configurar seu próprio ambiente, execute as seguintes etapas:
 
 1. Na guia **Workspaces**, selecione **Environments**.
 2. Clique no botão de **+** para criar um novo ambiente.
-3. Dê um nome a este ambiente (por exemplo, "Solicitações de API da Braze") e adicione chaves para `instance_url` e `api_key` com valores correspondentes à sua [instância da Braze][7] e [chave da API REST da Braze][8].
+3. Dê um nome a esse ambiente (por exemplo, "Braze API Requests") e adicione chaves para `instance_url` e `api_key` com valores correspondentes à sua [instância do Braze]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints) e à [chave da API REST do Braze]({{site.baseurl}}/api/api_key/).
 4. Clique em **Salvar**.
 
 {% alert note %}
 Em `POST` corpos da solicitação, o `api_key` deve ser encapsulado em aspas: `"MY-API-KEY-EXAMPLE"`. Em `GET` URLs, não deveria ser. Já fornecemos esta formatação para você nos corpos da solicitação `POST` desta documentação, `GET` URLs e modelo de ambiente para `YOUR-API-KEY-HERE`.
 {% endalert %}
 
-![Como adicionar variáveis para chave de API e URL da instância ao ambiente da API REST da Braze no Postman.][3]
+![Adição de variáveis para chave de API e URL de instância ao ambiente da API REST do Braze no Postman.]({% image_buster /assets/img_archive/postman_variable.png %})
 
 ### Usando as solicitações pré-construídas da coleção
 
@@ -50,24 +50,17 @@ Em geral, existem dois tipos de solicitações que os endpoints da API da Braze 
 
 Ao editar uma `POST` solicitação, abra a solicitação e navegue até a seção **Corpo** no editor de solicitações. Para legibilidade, selecione o botão de rádio **raw** para formatar o corpo da solicitação `JSON`.
 
-![Guia "Corpo" ao editar uma solicitação POST Rastrear usuário no Postman][4]
+![Guia Corpo ao editar uma solicitação POST de rastreamento de usuário no Postman]({% image_buster /assets/img_archive/postman_post.png %})
 
 #### Editar uma solicitação GET
 
 Ao editar uma solicitação `GET`, edite os parâmetros passados no URL da solicitação. Para fazer isso, selecione a guia **Params** e edite os pares chave-valor nos campos que aparecem.
 
-![Guia de parâmetros ao editar uma consulta GET Lista de endereços de e-mail não inscritos no Postman.][5]
+![Guia Params ao editar uma solicitação GET Query List of Unsubscribed Email Addresses no Postman.]({% image_buster /assets/img_archive/postman_get.png %})
 
 ### Envie sua solicitação
 
 Depois que sua solicitação de API estiver pronta, clique em **Enviar**. A solicitação é enviada e os dados da resposta são preenchidos em uma seção abaixo do editor de solicitações. A partir daqui, você pode visualizar os dados brutos retornados da API da Braze, ver o código de resposta HTTP, ver quanto tempo a solicitação levou para processar e visualizar as informações do cabeçalho.
 
-![Exemplo de dados de resposta do corpo de uma solicitação POST com status de 201 Criado e tempo de resposta de 269 milissegundos.][6]
+![Exemplo de dados de resposta do corpo de uma solicitação POST com status 201 Created e tempo de resposta de 269 milissegundos.]({% image_buster /assets/img_archive/postman_response.png %})
 
-[1]: https://www.getpostman.com
-[3]: {% image_buster /assets/img_archive/postman_variable.png %}
-[4]: {% image_buster /assets/img_archive/postman_post.png %}
-[5]: {% image_buster /assets/img_archive/postman_get.png %}
-[6]: {% image_buster /assets/img_archive/postman_response.png %}
-[7]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
-[8]: {{site.baseurl}}/api/api_key/

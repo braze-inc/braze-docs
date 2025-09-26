@@ -1,5 +1,5 @@
 ---
-nav_title: Best Practices
+nav_title: Best practices
 article_title: WhatsApp Best Practices
 page_order: 9
 description: "This article outlines suggested best practices when using the WhatsApp messaging channel, including how to maintain a high phone quality rating and avoid a high rate of blocks and reports."

@@ -34,7 +34,7 @@ Braze REST API のドキュメントで使用される用語の概要を次に�
 
 ### エンドポイント
 
-Brazeは、ダッシュボードとRESTエンドポイント用のさまざまなインスタンスを管理している。アカウントのプロビジョニングが完了したら、以下のURLのいずれかにログインする。どのインスタンスにプロビジョニングされるかに基づいて、正しいRESTエンドポイントを使用する。不明な場合は、[サポートチケット] [サポート] を開くか、以下の表を使用して、使用するダッシュボードの URL を正しい REST エンドポイントに一致させてください。
+Brazeは、ダッシュボードとRESTエンドポイント用のさまざまなインスタンスを管理している。アカウントのプロビジョニングが完了したら、以下のURLのいずれかにログインする。どのインスタンスにプロビジョニングされるかに基づいて、正しいRESTエンドポイントを使用する。不明な場合は、[サポートチケット]({{site.baseurl}}/braze_support/)を開くか、以下の表を使用して、使用するダッシュボードの URL と正しい REST エンドポイントを照合してください。
 
 {% alert important %}
 API呼び出しにエンドポイントを使用する場合は、RESTエンドポイントを使用する。
@@ -53,7 +53,7 @@ SDK 統合には、REST エンドポイントではなく [SDKエンドポイン
 - **External user ID**:`external_id` は、データの送信対象となる一意のユーザー識別子として機能します。この識別子は、同じユーザーに複数のプロファイルが作成されるのを避けるため、Braze SDK で設定したものと同じでなければなりません。
 - **BrazeユーザーID**：`braze_id` は、Brazeが設定する固有のユーザー識別子の役割を果たす。この識別子は、external_idsに加えて、REST APIを通じてユーザーを削除するために使用できる。
 
-詳細については、[iOS][9]、[Android][10]、[Webの][13]各プラットフォームに応じた以下の記事を参照のこと。
+詳細については、[iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/)、[Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/)、[Webの]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/)各プラットフォームに応じた以下の記事を参照してください。
 
 ## REST APIキーについて
 
@@ -63,7 +63,7 @@ REST Application Programming Interface キー （REST APIキー） は、API 呼
 
 REST API キーとワークスペース API キーの両方を`api_key` と呼ぶ。`api_key` はリクエストヘッダーとして各リクエストに含まれ、REST API を使用するための認証キーとして機能します。これらの REST API は、ユーザーの追跡、メッセージの送信、ユーザーデータのエクスポートなどに使用されます。新しい REST API キーを作成する際には、そのキーに特定のエンドポイントへのアクセス権を与える必要があります。API キーに特定の権限を割り当てることで、API キーが認証できる呼び出しを厳密に制限できます。
 
-![API キータブにある REST API キーのパネル。][27]
+![API キータブにある REST API キーのパネル。]({% image_buster /assets/img_archive/rest-api-key.png %})
 
 {% alert tip %}
 REST API キーに加えて、識別子キーと呼ばれるタイプのキーも存在し、API からアプリ、テンプレート、キャンバス、キャンペーン、コンテンツカード、セグメントといった特定のものを参照するために使用できます。詳細については、「[API 識別子のタイプ]({{site.baseurl}}/api/identifier_types/)」を参照してください。
@@ -195,18 +195,6 @@ APIキーのパーミッションは、特定のAPIコールへのアクセス�
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% endtab %}
-{% tab ニュースフィード %}
-
-{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
-
-| 許可 | エンドポイント | 説明 |
-|---|---|---|
-| `feed.list` | [`/feed/list`]({{site.baseurl}}/api/endpoints/export/news_feed/get_news_feed_cards/) | ニュースフィードカードの一覧を問い合わせる。 |
-| `feed.data_series` | [`/feed/data_series`]({{site.baseurl}}/api/endpoints/export/news_feed/get_news_feed_card_analytics/) | ニュースフィードの分析を時間範囲にわたって照会する。 |
-| `feed.details` | [`/feed/details`]({{site.baseurl}}/api/endpoints/export/news_feed/get_news_feed_card_details/) | 特定のニュースフィードの詳細を問い合わせる。 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
-
-{% endtab %}
 {% tab セッション %}
 
 | 許可 | エンドポイント | 説明 |
@@ -306,6 +294,17 @@ APIキーのパーミッションは、特定のAPIコールへのアクセス�
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% endtab %}
+{% tab SDK 認証 %}
+
+| 許可 | エンドポイント | 説明 |
+|---|---|---|
+| `sdk_authentication.create` | [`/app_group/sdk_authentication/create`]({{site.baseurl}}/api/endpoints/sdk_authentication/post_create_sdk_authentication_key) | アプリ用に新しい SDK 認証キーを作成する。 |
+| `sdk_authentication.primary` | [`/app_group/sdk_authentication/primary`]({{site.baseurl}}/api/endpoints/sdk_authentication/put_primary_sdk_authentication_key/) | SDK 認証キーをアプリのプライマリキーとしてマークします。 |
+| `sdk_authentication.delete` | [`/app_group/sdk_authentication/delete`]({{site.baseurl}}/api/endpoints/sdk_authentication/delete_sdk_authentication_key) | アプリの SDK 認証キーを削除する。 |
+| `sdk_authentication.keys` | [`/app_group/sdk_authentication/keys`]({{site.baseurl}}/api/endpoints/sdk_authentication/get_sdk_authentication_keys) | アプリのすべての SDK 認証キーを取得する。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
+{% endtab %}
 {% endtabs %}
 
 ### REST API キーを管理する
@@ -323,13 +322,13 @@ APIキーのパーミッションは、特定のAPIコールへのアクセス�
 | 最終閲覧日    | このキーが最後に使われた日付。使用されていないキーの場合、このフィールドには「N/A」と表示されます。                  |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-API キーの詳細を表示するには、キーにカーソルを合わせて [<i class="fa-solid fa-eye" alt="View">**表示**] を選択します。これには、このキーが持つすべての権限、ホワイトリストに登録されている IP (もしあれば)、このキーが Braze IP ホワイトリストに登録されているかどうかが含まれます。
+API キーの詳細を表示するには、キーにカーソルを合わせて [<i class="fa-solid fa-eye" alt="View"></i> **表示**] を選択します。これには、このキーが持つすべての権限、ホワイトリストに登録されている IP (もしあれば)、このキーが Braze IP ホワイトリストに登録されているかどうかが含まれます。
 
-![Braze ダッシュボードの API キー権限のリスト。][30]
+![Braze ダッシュボードの API キー権限のリスト。]({% image_buster /assets/img_archive/view-api-key.png %})
 
 [ユーザーを削除]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/adding_users_to_your_dashboard/)する場合、そのユーザーが作成した関連 API キーは削除されません。キーを削除するには、キーにカーソルを合わせ、[<i class="fa-solid fa-trash-can" alt="Delete"></i> **削除**] を選択します。
 
-![ゴミ箱のアイコンが強調表示され、「削除」を示す「最終閲覧日」という API キー。][29]{: style="max-width:30%;"}
+![ゴミ箱のアイコンが強調表示され、「削除」を示す「最終閲覧日」という API キー。]({% image_buster /assets/img_archive/api-key-options.png %}){: style="max-width:30%;"}
 
 ### REST APIキーのセキュリティ
 
@@ -343,13 +342,13 @@ REST API キーによって潜在的に機密性の高い REST API エンドポ�
 REST APIキーは、潜在的にセンシティブなREST APIエンドポイントへのアクセスを可能にするものであることを考慮し、それらが安全に保管され、使用されることを確認すること。例えば、このキーを使ってウェブサイトからAJAXコールを行ったり、その他の一般的な方法で公開したりしてはならない。
 {% endalert %}
 
-キーが誤って公開された場合は、開発者コンソールから削除できます。このプロセスに関するヘルプについては、[サポートチケット] [サポート] を開きます。
+キーが誤って公開された場合は、開発者コンソールから削除できます。このプロセスに関するヘルプについては、[[サポートチケット]({{site.baseurl}}/braze_support/)] を開きます。
 
 ### API IP の許可リスト
 
 セキュリティをさらに強化するため、特定の REST API キーに対して REST API 要求を実行できる IP アドレスやサブネットのリストを指定できます。これは、許可リストまたはホワイトリストと呼ばれます。特定のIPアドレスやサブネットを許可するには、新しいREST APIキーを作成する際に、**Whitelist IPs**セクションに追加する：
 
-![API キーの作成時に IP を許可リストに登録するオプション][26]
+![API キーの作成時に IP を許可リストに登録するオプション]({% image_buster /assets/img_archive/api-key-ip-whitelisting.png %})
 
 何も指定しない場合、すべての IP アドレスからリクエストを送信できます。
 
@@ -369,18 +368,3 @@ Ruby クライアントライブラリは、[ユーザーエンドポイント](
 このクライアントライブラリは現在ベータ版です。このライブラリをより良いものにするために協力してくれませんか?ご意見、ご感想は[smb-product@braze.com](mailto:smb-product@braze.com) まで。
 {% endalert %}
 
-[1]: https://en.wikipedia.org/wiki/UTF-8
-[7]: {{site.baseurl}}/api/objects_filters/connected_audience/
-[9]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/
-[10]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/
-[13]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/
-[2]: {{site.baseurl}}/api/identifier_types/
-[5]: {{site.baseurl}}/api/basics/
-[6]: https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#intro
-[25]: {% image_buster /assets/img_archive/api-key-permissions.png %}
-[26]: {% image_buster /assets/img_archive/api-key-ip-whitelisting.png %}
-[support] ： {{site.baseurl}}/braze_support/
-[28]: {% image_buster /assets/img_archive/create-new-key.png %}
-[29]: {% image_buster /assets/img_archive/api-key-options.png %}
-[27]: {% image_buster /assets/img_archive/rest-api-key.png %}
-[30]: {% image_buster /assets/img_archive/view-api-key.png %}

@@ -9,15 +9,21 @@ alias: /landing_pages/
 
 # ランディングページについて
 
-> Brazeのランディングページは、ユーザー獲得とエンゲージメント戦略を推進できる独立したウェブページである。
+> Braze のランディングページは、ユーザー獲得とエンゲージメント戦略を推進できる独立した Web ページです。
+
+![特典、画像、お客様の声のレイアウトが適用されたスキンケア製品発売ランディングページ]({% image_buster /assets/img/landing_pages/example_landing_page.png %}){: style="float:right;max-width:45%;margin-left:15px;"}
+
+ランディングページを使用して、オーディエンスの拡大、ユーザーデータの収集、特別なオファーのプロモート、マルチチャネルキャンペーンの促進を行います。
 
 ## 前提条件
 
-ランディングページにアクセス、作成、公開するには、管理者権限または次のすべての権限が必要です。
+ランディングページにアクセス、作成、公開するには、管理者権限または次のすべての[権限]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#list-of-permissions)が必要です。
 
 - ランディングページにアクセス
 - ランディングページの下書きを作成
 - ランディングページを公開
+
+{% multi_lang_include drag_and_drop_access.md variable_name='dnd editors' %}
 
 ## プランの階層
 
@@ -41,7 +47,7 @@ alias: /landing_pages/
 
 ### ランディングページ用の HTML エディターはありますか？
 
-カスタムコードブロックを使ってランディングページの HTML を編集できます。
+はい。HTML を追加または編集するには、ドラッグ＆ドロップ・エディターで**カスタムコード**ブロックを使用します。
 
 ### ランディングページ内に Webhook を作成できるますか?
 

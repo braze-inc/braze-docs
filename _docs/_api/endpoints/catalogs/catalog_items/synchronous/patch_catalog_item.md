@@ -1,5 +1,5 @@
 ---
-nav_title: "PATCH: Edit Catalog Item"
+nav_title: "PATCH: Edit catalog item"
 article_title: "PATCH: Edit Catalog Item"
 search_tag: Endpoint
 page_order: 4

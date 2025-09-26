@@ -64,7 +64,7 @@ Se todas as mensagens em sua campanha forem semelhantes ou tiverem o mesmo conte
 
 Escreva sua mensagem usando personalização (como Liquid ou Connected Content) conforme necessário. O LINE permite até cinco balões de mensagem em cada mensagem, que podem ter qualquer um dos layouts de mensagens disponíveis: texto, imagem, rich ou cartão.
 
-![Criador de LINE com uma mensagem exibida na prévia.][1]
+![Criador de LINE com uma mensagem exibida na prévia.]({% image_buster /assets/img/line/line_composer.png %})
 
 ### Dicas
 
@@ -80,7 +80,7 @@ A aparência final das mensagens da direita para a esquerda depende muito de com
 
 Alterne para a guia **Test (Teste** ) para enviar uma mensagem LINE de teste para grupos de teste de conteúdo ou usuários individuais, ou faça uma prévia da mensagem como um usuário diretamente no Braze.
 
-![A guia "Tests" (Testes) exibe uma prévia de uma mensagem de teste.][2]
+![A guia "Tests" (Testes) exibe uma prévia de uma mensagem de teste.]({% image_buster /assets/img/line/test_preview.png %})
 
 ## Etapa 4: Crie o restante de sua campanha ou Canva
 
@@ -97,7 +97,7 @@ As mensagens do LINE podem ser enviadas com base em um horário programado, em u
 
 ### Escolha os usuários a serem direcionados
 
-[Direcione os usuários]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/) escolhendo segmentos ou filtros para restringir seu público. Você já deve ter escolhido o grupo de inscrições, que restringe os usuários pelo nível ou categoria de comunicação que desejam ter com você. 
+[Direcione os usuários]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) escolhendo segmentos ou filtros para restringir seu público. Você já deve ter escolhido o grupo de inscrições, que restringe os usuários pelo nível ou categoria de comunicação que desejam ter com você. 
 
 Selecione o público maior de seus segmentos e, opcionalmente, restrinja esse segmento ainda mais com nossos [filtros]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/). Você receberá automaticamente um instantâneo de como é a população desse segmento aproximado no momento. Lembre-se de que a associação exata ao segmento de mensagens é sempre calculada imediatamente antes do envio da mensagem.
 
@@ -127,5 +127,3 @@ Depois de terminar de criar a última parte de sua campanha ou Canva, revise seu
 Em seguida, confira [os relatórios LINE]({{site.baseurl}}/line/reporting/) para saber como acessar os resultados de suas campanhas LINE.
 
 
-[1]: {% image_buster /assets/img/line/line_composer.png %}
-[2]: {% image_buster /assets/img/line/test_preview.png %}

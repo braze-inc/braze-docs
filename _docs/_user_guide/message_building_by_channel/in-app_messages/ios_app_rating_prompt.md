@@ -1,5 +1,5 @@
 ---
-nav_title: In-App Rating Prompt for iOS
+nav_title: In-App rating prompt for iOS
 article_title: In-App Rating Prompt for iOS
 page_order: 6
 description: "This article describes approaches and implications for using Braze to ask users to review your app."

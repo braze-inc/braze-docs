@@ -18,11 +18,8 @@ guide_featured_list:
     link: /docs/user_guide/engagement_tools/locations_and_geofences/creating_geofences/
     image: /assets/img/braze_icons/marker-pin-01.svg
   - name: モバイル統合
-    link: /docs/user_guide/engagement_tools/locations_and_geofences/mobile_integrations/
+    link: /docs/user_guide/engagement_tools/locations_and_geofences/creating_geofences/#mobile-integrations
     image: /assets/img/braze_icons/phone-02.svg
-  - name: よくある質問
-    link: /docs/user_guide/engagement_tools/locations_and_geofences/faqs/
-    image: /assets/img/braze_icons/annotation-question.svg
 ---
 
 ## 位置情報とジオフェンスについて
@@ -36,4 +33,3 @@ Braze を使用すると、現実世界でのユーザーの位置情報に基�
 
 - ユーザーがアプリを開くと、GPS の位置データを使用して最新の位置が取得されます。これにより、ユーザーがどこにいたかを確認し、このデータに基づいてセグメント化できます。
 - ジオフェンスは、定義された仮想の地理的領域です。ユーザーがバックグラウンドで位置情報の追跡を有効にしている場合は、ジオフェンスを使用して、ユーザーがジオフェンス内にいるときにリアルタイムでキャンペーンをトリガーできます。
-<br><br><br>

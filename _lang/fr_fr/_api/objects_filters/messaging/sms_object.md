@@ -24,3 +24,4 @@ description: "Cet article de référence explique les différents composants de 
 ```
 
 - [Identifiant d’application]({{site.baseurl}}/api/identifier_types/)
+  - Toute adresse `app_id` valide provenant d'une application configurée dans votre espace de travail fonctionnera pour tous les utilisateurs de votre espace de travail, que l'utilisateur ait ou non l'application spécifique sur son profil.

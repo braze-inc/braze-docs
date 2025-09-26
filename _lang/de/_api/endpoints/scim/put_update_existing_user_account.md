@@ -29,7 +29,7 @@ Um diesen Endpunkt zu verwenden, benötigen Sie ein SCIM-Token. Sie verwenden di
 
 ## Rate-Limit
 
-{% multi_lang_include rate_limits.md endpunkt='update dashboard nutzer:innen' %}
+{% multi_lang_include rate_limits.md endpoint='update dashboard user' %}
 
 ## Pfad-Parameter
 

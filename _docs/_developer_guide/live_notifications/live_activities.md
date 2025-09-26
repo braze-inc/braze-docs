@@ -1,5 +1,5 @@
 ---
-nav_title: Live Activities for Swift
+nav_title: Live activities for Swift
 article_title: Live Activities for the Swift Braze SDK
 page_order: 0.2
 description: "Learn how to set up Live Activities for the Swift Braze SDK."
@@ -178,7 +178,7 @@ The iOS operating system only generates push-to-start tokens during the first ap
 
 ###### Example
 
-In the following example, the `LiveActivityManager` class handles Live Activity objects. Then, the `registerPushToStart` method registers `SportActivityAttributes`:
+In the following example, the `LiveActivityManager` class handles Live Activity objects. Then, the `registerPushToStart` method registers `SportsActivityAttributes`:
 
 ```swift
 import BrazeKit
@@ -380,6 +380,8 @@ To verify that your push-to-start notification successfully arrived at the devic
 Verify that you have correctly implemented the instructions described [above](#swift_brazeActivityAttributes). Your `ActivityAttributes` should contain both the `BrazeLiveActivityAttributes` protocol conformance and the `brazeActivityId` property.
 
 After receiving a Live Activity push-to-start notification, double-check that you can see an outgoing network request to the `/push_token_tag` endpoint of your Braze URL and that it contains the correct activity ID under the `"tag"` field.
+
+Finally, make sure the Live Activity attribute type in your update payload matches the exact string and class used in your SDK method call to `registerPushToStart`. Use constants to avoid typos.  
 
 #### I am receiving an Access Denied response when I try to use the `live_activity/update` endpoint. Why?
 

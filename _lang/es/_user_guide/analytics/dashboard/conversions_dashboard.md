@@ -22,8 +22,8 @@ Para configurar su informe de panel de conversiones:
 3. Selecciona las campañas o los lienzos (o ambos) que quieras analizar. 
    - (opcional) Filtra campañas y Lienzos seleccionando una etiqueta.  
 4. Selecciona el **canal o canales** que quieres analizar para tus mensajes.
-5. (opcional) Selecciona una capa de **Desglose** para ver diferentes dimensiones de los datos, como por variante, paso en Canvas, país o idioma.
-6. (opcional) Si quieres calcular las conversiones de un evento que no se configuró como evento de conversión en la campaña o Canvas, activa [Usar eventos personalizados](#using-custom-events).
+5. Selecciona un **Desglose por** capas para ver diferentes dimensiones de los datos, como por variante, paso en Canvas, país o idioma.
+6. (Opcional) Si quieres calcular las conversiones de un evento que no se configuró como evento de conversión en la campaña o Canvas, activa [Usar eventos personalizados](#using-custom-events).
 7. Selecciona un [método de atribución](#attribution-methods) para analizar los mensajes seleccionados.
 
 {% alert note %}
@@ -59,7 +59,11 @@ El informe se divide en tres secciones:
 
 ### Detalles de la conversión
 
-La tabla de detalles de conversión siempre muestra una columna para *Destinatarios* y otra para *Conversiones* (tasa y total). Las otras dos columnas de la tabla que aparecen dependen de las opciones seleccionadas al configurar el informe. La siguiente tabla describe las métricas posibles.
+La tabla de detalles de conversión siempre muestra una columna para *Destinatarios* y otra para *Conversiones* (tasa y total). Las otras dos columnas de la tabla que aparecen dependen de las opciones seleccionadas al configurar el informe. 
+
+![Tabla de detalles de la conversión que muestra Toques como método de atribución para las columnas tres y cuatro.]({% image_buster /assets/img_archive/conversions2_details.png %}){: style="border:none"}
+
+La siguiente tabla describe las métricas posibles.
 
 | Métrica indicada | Descripción |
 | --- | --- |
@@ -68,8 +72,6 @@ La tabla de detalles de conversión siempre muestra una columna para *Destinatar
 | Método de atribución | Definido por el [método de atribución](#attribution-methods) que seleccionaste al configurar el informe. Para la atribución de Último Toque o si se seleccionan varios canales, aparece como [Toques](#terms-to-know). |
 | Tasa de conversión (método de atribución) | Definido por el [método de atribución](#attribution-methods) que seleccionaste al configurar el informe. Si se seleccionan varios canales, el atributo predeterminado es el de última pulsación. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-![]({% image_buster /assets/img_archive/conversions2_details.png %})
 
 Si seleccionaste detalles a nivel de desglose para campañas o Lienzos al [configurar tu informe](#setting-up-your-report) (paso 5), puedes hacer clic en <i class="fas fa-angle-down"></i> para ampliar la tabla.
 
@@ -85,7 +87,7 @@ Para descargar los datos de las series temporales, selecciona una opción de des
 Este gráfico sólo muestra los datos de un canal cada vez. Utilice el menú desplegable **Canal** del gráfico para seleccionar un único canal.
 {% endalert %}
 
-![]({% image_buster /assets/img_archive/conversions2_funnel.png %}){: style="max-width:70%"}
+![Gráfico de barras del embudo de conversiones de dos campañas de correo electrónico que muestran resultados similares para el correo electrónico entregado, el correo electrónico abierto, el correo electrónico clicado y las conversiones.]({% image_buster /assets/img_archive/conversions2_funnel.png %})
 
 ### Conversiones a lo largo del tiempo
 
@@ -93,7 +95,7 @@ Este gráfico de series temporales incluye una representación de las conversion
 
 Para descargar los datos de las series temporales, selecciona <i class="fas fa-bars"></i> y luego elige la opción de descarga. Las opciones disponibles son PNG, JPEG, PDF, SVG o CSV.
 
-![]({% image_buster /assets/img_archive/conversions2_over_time.png %}){: style="max-width:70%"}
+![Gráfico de series temporales de conversiones para dos campañas de correo electrónico, que muestra las conversiones por día.]({% image_buster /assets/img_archive/conversions2_over_time.png %})
 
 ### Métodos de atribución
 

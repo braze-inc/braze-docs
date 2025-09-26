@@ -30,9 +30,7 @@ Para habilitar los mensajes HTML dentro de la aplicación a través del SDK Web,
 
 ## Crear un cuestionario {#create}
 
-Al crear un [mensaje dentro de la aplicación][1], seleccione **Encuesta simple** como **Tipo de mensaje**.
-
-![]({% image_buster /assets/img/iam/survey-message-type.png %}){: style="max-width:80%"}
+Al crear un [mensaje dentro de la aplicación]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/), seleccione **Encuesta simple** como **Tipo de mensaje**.
 
 Esta plantilla de encuesta es compatible tanto con aplicaciones móviles como con navegadores web. Recuerda comprobar que tus SDK están en las [versiones de SDK mínimas](#supported-sdk-versions) requeridas para esta característica.
 
@@ -40,48 +38,44 @@ Esta plantilla de encuesta es compatible tanto con aplicaciones móviles como co
 
 Para empezar a construir tu cuestionario, añade tu pregunta en el campo **Encabezado** del cuestionario. Si lo desea, puede añadir un mensaje opcional **en el cuerpo** que aparecerá debajo de la pregunta de la encuesta.
 
-![Pestaña de composición del editor de cuestionarios simples, con campos para un encabezado, un cuerpo opcional y un texto de ayuda opcional.]({% image_buster /assets/img/iam/iam-survey2.png %}){: style="max-width:80%"}
+![Pestaña de composición del editor de cuestionarios simples, con campos para un encabezado, un cuerpo opcional y un texto de ayuda opcional.]({% image_buster /assets/img/iam/iam-survey2.png %}){: style="max-width:90%"}
 
 {% alert tip %}
 Estos campos pueden incluir tanto Liquid como emojis, ¡así que ponte elegante!
 {% endalert %}
 
-### Paso 2: Elige entre opción única o múltiple {#single-multiple-choice}
+### Paso 2: Configurar opciones {#single-multiple-choice}
 
-Utilice **Selección de una opción** o **Selección de varias opciones** para controlar si un usuario puede seleccionar sólo una opción o varias opciones. Puede añadir hasta 12 opciones en una encuesta.
+Puede añadir hasta 12 opciones en una encuesta.
 
-![Desplegable de opciones con la opción "Selección múltiple" seleccionada.]({% image_buster /assets/img/iam/single-multiple-choice.png %}){: style="max-width:60%"}
+Selecciona **Selección simple** o **Selección múltiple**. El **texto de ayuda** se actualizará automáticamente cuando cambies entre las dos opciones para que los usuarios sepan cuántas opciones pueden seleccionar. 
 
-{% alert tip %}
-Su **texto de ayuda** se actualizará automáticamente cuando cambie entre **Selección de opción única** y **Selección de opción múltiple** para que los usuarios sepan cuántas opciones pueden seleccionar.
-{% endalert %}
-
-### Paso 3: Recopilar atributos personalizados {#custom-attributes}
-
-Seleccione **Registrar atributos al enviar** para recopilar atributos basados en el envío del usuario. Puede utilizar esta opción para crear nuevos segmentos y campañas de retargeting. Por ejemplo, en una encuesta de satisfacción, podría enviar un correo electrónico de seguimiento a todos los usuarios que no estuvieran satisfechos.
+A continuación, determina si vas a [recoger atributos personalizados](#custom-attributes) o [sólo respuestas de registro](#no-attributes).
 
 ![Desplegable de opciones con la opción "Registrar atributos al enviar" seleccionada.]({% image_buster /assets/img/iam/collect-attributes.png %}){: style="max-width:60%"}
 
-Para añadir un atributo personalizado a cada opción, seleccione un nombre de atributo personalizado en el menú desplegable (o cree uno nuevo) y, a continuación, introduzca el valor que se establecerá cuando se envíe esta opción. Puede crear un nuevo atributo personalizado en su [Página de Configuración][5].
+#### Recopilar atributos personalizados {#custom-attributes}
 
-Por ejemplo, en una encuesta sobre preferencias de notificaciones, puede hacer que cada opción sea un atributo booleano (verdadero/falso) para permitir a los usuarios seleccionar los temas que les interesan. Si un usuario marca la opción "Promociones", se actualizará su [perfil de usuario][3] con el atributo personalizado `Promotions Topic` establecido en `true`. Si dejan la opción sin marcar, ese mismo atributo permanecerá inalterado.
+Seleccione **Registrar atributos al enviar** para recopilar atributos basados en el envío del usuario. Puede utilizar esta opción para crear nuevos segmentos y campañas de retargeting. Por ejemplo, en un [cuestionario de satisfacción](#user-satisfaction), podrías enviar un correo electrónico de seguimiento a todos los usuarios que no estuvieran satisfechos.
 
-![]({% image_buster /assets/img/iam/iam-survey3.png %}){: style="max-width:60%"}
-
-A continuación, puede crear un segmento para los usuarios con `Promotions Topic = true` para asegurarse de que sólo los usuarios interesados en sus promociones recibirán las campañas pertinentes.
-
-{% alert important %}
-Cuando la colección de atributos personalizados está activada, las opciones que comparten el mismo nombre de atributo personalizado se combinarán en una matriz.
-{% endalert %}
-
-#### Tipos de datos de atributos personalizados
+Para añadir un atributo personalizado a cada opción, seleccione un nombre de atributo personalizado en el menú desplegable (o cree uno nuevo) y, a continuación, introduzca el valor que se establecerá cuando se envíe esta opción. También puedes crear un nuevo atributo personalizado en tu [página de configuración]({{site.baseurl}}/user_guide/data/custom_data/managing_custom_data/).
 
 El tipo de datos de sus atributos personalizados es importante dependiendo de cómo haya configurado su encuesta.
 
 - **Selección múltiple:** El tipo de datos del atributo personalizado debe ser un array. Si el atributo personalizado se establece en un tipo de datos diferente, las respuestas no se registrarán.
 - **Selección de opción simple:** El tipo de datos del atributo personalizado _no debe_ ser un array. Las respuestas no se registrarán si el atributo es una matriz.
 
-#### Sólo registro de respuestas
+{% alert important %}
+Cuando la colección de atributos personalizados está activada, las opciones que comparten el mismo nombre de atributo personalizado se combinarán en una matriz.
+{% endalert %}
+
+##### Ejemplo 
+
+Por ejemplo, en un [cuestionario de preferencias de notificación](#notification-preferences), puedes hacer que cada opción sea un atributo booleano (verdadero/falso) para que los usuarios puedan seleccionar los temas que les interesan. Si un usuario marca la opción "Promociones", se actualizará su [perfil de usuario]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/) con el atributo personalizado `Promotions Topic` establecido en `true`. Si dejan la opción sin marcar, ese mismo atributo permanecerá inalterado.
+
+A continuación, puedes utilizar el filtro `Custom Attribute` para crear un segmento de usuarios con el atributo personalizado `Promotions Topic` `is` `true`, para asegurarte de que sólo los usuarios interesados en tus promociones recibirán las campañas pertinentes.
+
+#### Sólo registro de respuestas {#no-attributes}
 
 También puede optar por **Registrar sólo las respuestas (sin atributos)**. Cuando se selecciona esta opción, las respuestas de la encuesta se registran como clics de botón, pero los atributos personalizados no se registran en el perfil del usuario. Esto significa que puede seguir viendo las métricas de clics para cada opción de encuesta (consulte [Análisis](#analytics)), pero esa elección no se reflejará en su perfil de usuario.
 
@@ -91,7 +85,7 @@ Estas métricas de clics no están disponibles para el retargeting.
 
 Una vez que el usuario envía su respuesta, puede mostrar opcionalmente una página de confirmación, o simplemente cerrar el mensaje.
 
-Una página de confirmación es un buen lugar para agradecer a los usuarios su tiempo o proporcionar información adicional. Puede personalizar la llamada a la acción de esta página para guiar a los usuarios a otra página de su aplicación o sitio web.
+Una página de confirmación es un buen lugar para agradecer a los usuarios su tiempo o proporcionar información adicional. Puedes personalizar la llamada a la acción de esta página para guiar a los usuarios a otra página de tu aplicación o sitio web.
 
 Edite el texto del botón y el comportamiento al hacer clic en la sección **Botón Enviar** de la parte inferior de la pestaña **Encuesta**:
 
@@ -99,7 +93,7 @@ Edite el texto del botón y el comportamiento al hacer clic en la sección **Bot
 
 Si decide añadir una página de confirmación, vaya a la pestaña **Página de confirmación** para personalizar su mensaje:
 
-![Pestaña Página de confirmación del editor de encuestas simples. Los campos disponibles son cabecera, cuerpo opcional, texto del botón y comportamiento del botón al hacer clic.]({% image_buster /assets/img/iam/confirmation-page.png %}){: style="max-width:80%"}
+![Pestaña Página de confirmación del editor de encuestas simples. Los campos disponibles son cabecera, cuerpo opcional, texto del botón y comportamiento del botón al hacer clic.]({% image_buster /assets/img/iam/confirmation-page.png %}){: style="max-width:90%"}
 
 Si desea guiar a los usuarios a otra página de su aplicación o sitio web, cambie el **comportamiento Al hacer clic** del botón.
 
@@ -117,15 +111,19 @@ Una vez lanzada la campaña, puede analizar los resultados en tiempo real para v
 Las opciones de encuesta eliminadas seguirán apareciendo en los análisis, pero no se mostrarán como opción a los nuevos usuarios.
 {% endalert %}
 
-Para conocer las definiciones de las métricas de las encuestas, consulte el [Glosario de métricas de los informes][11] y filtre por "Mensaje en la aplicación".
+Puedes encontrar las métricas de rendimiento de tu cuestionario ampliando el desplegable **Resultados** de una variante específica en la sección **Rendimiento de los mensajes dentro de la aplicación** del análisis. Aquí tienes un desglose de lo que verás:
 
-![Panel de rendimiento de mensajes in-app con análisis de clics para cada opción y botón de la encuesta.]({% image_buster /assets/img/iam/iam-survey-analytics.png %}){: style="max-width:95%"}
+- **La interacción con el** cuestionario muestra cómo interactuaron los usuarios con el cuestionario en general, incluyendo el total de envíos, rechazos y clics dentro del cuerpo del mensaje.
+- **Los resultados del cuestionario** muestran un desglose de cuántos usuarios seleccionaron cada opción de respuesta, junto con el porcentaje de envíos totales que representa cada opción.
+- **Las métricas de la página de confirmación** (si están habilitadas) incluyen cuántos usuarios vieron la pantalla de confirmación, hicieron clic en su botón o la abandonaron sin interactuar.
 
-Consulta [los informes de mensajes en la aplicación][4] para obtener un desglose de las métricas de tu campaña.
+Para conocer las definiciones de las métricas de las encuestas, consulte el [Glosario de métricas de los informes]({{site.baseurl}}/user_guide/data/report_metrics/) y filtre por "Mensaje en la aplicación".
+
+Consulta [los informes de mensajes en la aplicación]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/reporting/) para obtener un desglose de las métricas de tu campaña.
 
 ### Corrientes {#currents}
 
-Las opciones seleccionadas pasarán automáticamente a Currents, en la sección [**Eventos de clic en mensajes de la aplicación**][6] `button_id` en el campo Cada elección se enviará con su identificador único universal (UUID).
+Las opciones seleccionadas pasarán automáticamente a Currents, en la sección [**Eventos de clic en mensajes de la aplicación**]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/#api_fzzdoylmrtwe) `button_id` en el campo Cada elección se enviará con su identificador único universal (UUID).
 
 ## Ejemplos
 
@@ -133,50 +131,86 @@ Las opciones seleccionadas pasarán automáticamente a Currents, en la sección 
 
 **Objetivo:** Mida la satisfacción de los clientes y envíe campañas de recuperación a los usuarios que hayan dejado puntuaciones bajas.
 
-Para este caso de uso, utilice la selección de una sola opción, con opciones que vayan de "Muy insatisfecho" a "Muy satisfecho". Cada opción tiene el atributo personalizado `customer_satisfaction` establecido en un número del 1 al 5, siendo 1 el menos satisfecho y 5 el más satisfecho.
+Para configurarlo, utiliza un cuestionario de selección de una sola opción con cinco opciones que vayan de "😡 Muy insatisfecho" a "😍 Muy satisfecho". Cada elección está mapeada en el atributo personalizado `customer_satisfaction`, con un valor numérico de 1 a 5 -donde 1 indica el menos satisfecho y 5 el más satisfecho-.
 
-Una vez lanzada la encuesta, puede dirigir las campañas de recuperación a los usuarios que se declararon "Muy insatisfechos" o "Insatisfechos", es decir, los usuarios con `customer_satisfaction` en 1 ó 2.
+| Elección                                | Atributo              | Valor |
+|---------------------------------------|------------------------|-------|
+| 😡 Muy insatisfecho                  | `customer_satisfaction` | 1     |
+| 😟 Insatisfecho                       | `customer_satisfaction` | 2     |
+| 🙂 Ni satisfecho ni insatisfecho | `customer_satisfaction` | 3     |
+| 😊 Satisfecho                          | `customer_satisfaction` | 4     |
+| 😍 Muy satisfecho                     | `customer_satisfaction` | 5     |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-![][7]
+Cuando un usuario envía el cuestionario, su valor seleccionado se registra como un atributo personalizado. A continuación, puedes crear campañas de seguimiento utilizando filtros de audiencia. Por ejemplo, dirige mensajes de recuperación a usuarios cuyo atributo `customer_satisfaction` sea 1 ó 2.
+
+### Preferencias de notificación
+
+**Objetivo:** Deja que los usuarios opten por tipos específicos de notificaciones.
+
+Para configurarlo, utiliza un cuestionario de selección múltiple en el que cada opción represente un tema de notificación. En lugar de asignar el mismo atributo con valores distintos, cada elección mapea un atributo booleano distinto que refleja el interés del usuario por ese tema. Si un usuario selecciona una opción, el atributo correspondiente se establece en `true`. Si no se selecciona, el atributo no se modifica.
+
+| Elección             | Atributo              | Valor  |
+|--------------------|------------------------|--------|
+| Actualizaciones de productos    | `wants_product_updates`| `true` |
+| Promociones         | `wants_promotions`     | `true` |
+| Invitaciones a eventos      | `wants_event_invites`  | `true` |
+| Cuestionarios y opiniones | `wants_surveys`        | `true` |
+| Consejos y tutoriales   | `wants_tips`           | `true` |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### Identificar los objetivos del cliente
 
 **Objetivo:** Identifique las principales razones por las que los usuarios visitan su aplicación.
 
-Para este caso de uso, utilice la selección de una sola opción, siendo cada opción una razón común por la que un usuario podría estar visitando su aplicación. Cada opción tiene el atributo personalizado `product_goal` establecido en el tema del caso de uso. 
+Para configurarlo, utiliza un cuestionario de selección de una sola opción, en el que cada opción represente un objetivo o intención común. Cada elección se mapea en el atributo personalizado `product_goal` con un valor correspondiente a la intención del usuario seleccionado.
 
-Por ejemplo, si el usuario selecciona "Actualizar mi cuenta", se configurará `product_goal = upgrade` en el perfil del usuario.
+| Elección                     | Atributo       | Valor     |
+|----------------------------|------------------|-----------|
+| Comprobación del estado            | `product_goal`   | `status`  |
+| Actualizar mi cuenta       | `product_goal`   | `upgrade` |
+| Programar una cita  | `product_goal`   | `schedule`|
+| Atención al cliente           | `product_goal`   | `support` |
+| Navegando              | `product_goal`   | `browse`  |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-![][8]
+Cuando un usuario envía el cuestionario, el valor seleccionado se registra como un atributo personalizado en su perfil. A continuación, puedes utilizar estos datos para personalizar futuras experiencias o segmentar a los usuarios en función de su objetivo principal.
 
 ### Mejorar los índices de conversión
 
 **Objetivo:** Comprende por qué los clientes no actualizan o no compran.
 
-Para este caso de uso, utilice la selección de una sola opción, siendo cada opción una razón común por la que un usuario podría no pasar a una cuenta Premium. Cada opción tiene el atributo personalizado `upgrade_reason` establecido en la selección del usuario. 
+Para configurarlo, utiliza un cuestionario de selección de una sola opción, en el que cada opción represente una barrera común a la mejora. Cada elección se mapea en el atributo personalizado `upgrade_reason` con un valor correspondiente que refleja la selección del usuario.
 
-Por ejemplo, si el usuario selecciona "Demasiado caro", aparecerá `upgrade_reason = expensive` en su perfil. Puede dirigirse a estos usuarios para campañas promocionales como descuentos o pruebas gratuitas.
+| Elección              | Atributo        | Valor       |
+|---------------------|------------------|-------------|
+| Demasiado caro       | `upgrade_reason` | `expensive` |
+| Sin valor        | `upgrade_reason` | `value`     |
+| Difícil de usar    | `upgrade_reason` | `difficult` |
+| Utilizar a un competidor  | `upgrade_reason` | `competitor`|
+| Otro motivo        | `upgrade_reason` | `other`     |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-![][9]
+Cuando un usuario envía el cuestionario, el valor seleccionado se guarda en su perfil. A continuación, puedes dirigirte a estos usuarios con campañas adaptadas a su objeción específica, como ofertas de descuento o mejoras de usabilidad.
 
 ### Características favoritas
 
 **Objetivo:** Entender qué funciones disfrutan utilizando los clientes.
 
-Para este caso de uso, utilice una selección múltiple en la que cada opción sea una función de la aplicación. Cada opción tiene el atributo personalizado `favorite_features` establecido en la selección del usuario. Dado que este caso de uso implica opciones múltiples, después de que el usuario haya completado la encuesta, su perfil se actualizará con el atributo `favorite_features` establecido en una matriz de todas las opciones seleccionadas.
+Para configurarlo, utiliza un cuestionario de selección múltiple en el que cada opción represente una característica de tu aplicación. Cada elección se mapea en el atributo personalizado `favorite_features`, y cuando el usuario envía el cuestionario, el atributo se establece en una matriz de los valores seleccionados.
 
-![][10]
+| Elección            | Atributo          | Valor        |
+|-------------------|--------------------|--------------|
+| Marcadores         | `favorite_features`| `bookmarks`  |
+| Aplicación móvil        | `favorite_features`| `mobile`     |
+| Compartir publicaciones     | `favorite_features`| `sharing`    |
+| Atención al cliente  | `favorite_features`| `support`    |
+| Personalización     | `favorite_features`| `custom`     |
+| Precio / Valor     | `favorite_features`| `value`      |
+| Comunidad         | `favorite_features`| `community`  |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-[1]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/
-[2]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types
-[3]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/
-[4]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/reporting/
-[5]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/managing_custom_data
-[6]: {{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/#api_fzzdoylmrtwe
+Como este cuestionario utiliza la selección múltiple, el perfil del usuario se actualizará con una lista de todos los valores de características seleccionados.
 
-[7]: {% image_buster /assets/img_archive/simple_survey_use_case_1.png %}
-[8]: {% image_buster /assets/img_archive/simple_survey_use_case_2.png %}
-[9]: {% image_buster /assets/img_archive/simple_survey_use_case_3.png %}
-[10]: {% image_buster /assets/img_archive/simple_survey_use_case_4.png %}
 
-[11]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/
+

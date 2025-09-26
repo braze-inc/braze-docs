@@ -1,5 +1,5 @@
 ---
-nav_title: Action Buttons
+nav_title: Action buttons
 article_title: Push Action Buttons for iOS
 platform: iOS
 page_order: 1

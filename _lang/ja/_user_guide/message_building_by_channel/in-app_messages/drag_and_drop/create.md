@@ -15,8 +15,6 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 
 > ドラッグ＆ドロップエディタを使用すると、キャンペーンやキャンバスのいずれかでドラッグ＆ドロップ編集体験を使用して、完全にカスタムおよびパーソナライズされたアプリ内メッセージを作成できます。
 
-{% multi_lang_include video.html id="tbrgv_mU1zI" align="right" source="youtube" %}
-
 既存のカスタムHTMLテンプレートやサードパーティが作成したテンプレートを使用したい場合は、ドラッグアンドドロップエディタで再作成する必要があります。
 
 アプリ内メッセージはキャンペーンを使用して送信するべきか[キャンバス]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas/)を使用するべきか分からない場合は？キャンペーンは単一のシンプルなメッセージングキャンペーンに適していますが、キャンバスはマルチステップのユーザーのジャーニーに適しています。メッセージを作成する場所を選択したら、次のステップに進み、ドラッグ＆ドロップでアプリ内メッセージを作成します。
@@ -69,7 +67,7 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 
 [**メッセージを作成**] を選択して、ドラッグ＆ドロップエディターでアプリ内メッセージのデザインを開始します。
 
-![「基本」、「背景画像」、「電話番号キャプチャ」、「空白」の各テンプレートを選択できる「Braze テンプレート」セクション。]({% image_buster /assets/img_archive/dnd_iam_select_template.png %}){: style="max-width:75%"}
+![「基本」、「背景画像」、「電話番号キャプチャ」、「空白」の各テンプレートを選択できる「Braze テンプレート」セクション。]({% image_buster /assets/img_archive/dnd_iam_select_template.png %})
 
 ダッシュボードの**テンプレート**セクションからすべてのテンプレートにアクセスすることもできます。
 
@@ -175,6 +173,8 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 
 はい、メッセージ内のボタンクリックに基づいて、最大2つのボタンをセグメント化できます。そのためには、ボタンの**レポート用識別子**を「0」と「1」に設定します。これにより、それぞれ「アプリ内メッセージボタン1をクリックした」と「アプリ内メッセージボタン2をクリックした」というセグメンテーションフィルターに対応します。
 
+![値が「0」の [レポート用の識別子] フィールド。]({% image_buster /assets/img/identifier_for_reporting.png %}){: style="max-width:50%;"}
+
 #### カスタムHTMLやJavaScriptを使用してアプリ内メッセージをカスタマイズしたり、既存のHTMLメッセージをエディタに転送したりできますか？
 
 既存のHTMLメッセージをエディターに直接転送することはできませんが、カスタムコードブロックに生のHTML、CSS、およびJavaScriptを挿入することができます。カスタムコードブロックを使用して、サードパーティのビデオや高度なLiquid（コネクテッドコンテンツや条件文など）を埋め込むことができます。
@@ -187,6 +187,6 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 
 そうです。将来のキャンペーンやキャンバスステップで再利用したいアプリ内メッセージがある場合は、エディタを終了した後に利用可能な**テンプレートとして保存**ボタンを使用してカスタムテンプレートとして保存できます。テンプレートとして保存する前に、まずキャンペーンを開始するか、下書きとして保存する必要があります。
 
-![テキスト更新に登録するためのアプリ内メッセージのプレビュー。]({% image_buster /assets/img_archive/dnd_iam_save_as_template.png %})
+![製品ツアーのアプリ内メッセージのプレビュー。]({% image_buster /assets/img_archive/dnd_iam_save_as_template.png %})
 
 **テンプレート** > **アプリ内メッセージテンプレート** に移動して、アプリ内メッセージテンプレートを作成および保存することもできます。

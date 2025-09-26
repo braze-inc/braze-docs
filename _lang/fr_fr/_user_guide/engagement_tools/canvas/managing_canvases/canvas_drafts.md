@@ -16,7 +16,7 @@ Si vous avez un Canvas actif qui nécessite des modifications à grande échelle
 
 Comme pour tout canvas, un seul utilisateur peut modifier un brouillon à la fois, et un canvas ne peut avoir qu'un seul brouillon à la fois. Ces brouillons n'ont aucune analyse car les modifications du brouillon n'ont pas encore été lancées.
 
-![Un exemple d’ébauche Canvas avec une bannière indiquant à l’utilisateur qu’il édite une ébauche Canvas avec l’option d’afficher le Canvas actif. Le pied de page dispose d’options pour revenir à l’affichage analytique, enregistrer en tant qu’ébauche ou lancer l’ébauche.][1]
+![Un exemple d’ébauche Canvas avec une bannière indiquant à l’utilisateur qu’il édite une ébauche Canvas avec l’option d’afficher le Canvas actif. Le pied de page comporte des options permettant de revenir à la vue d'analyse/analytique, d'enregistrer un brouillon ou de lancer un brouillon.]({% image_buster /assets/img_archive/canvas_draft1.png %})
 
 ## Création d'un projet
 
@@ -34,7 +34,7 @@ Pour référencer le Canvas actif, sélectionnez **Afficher le Canvas actif** da
 Vous ne pouvez faire référence qu'à des étapes qui ont déjà été lancées avant la création du projet. Cela signifie que si vous avez créé une étape ou un canal **après la** création du projet, il ne peut pas être référencé dans votre projet.
 
 {% alert note %}
-Si un bloc de contenu est référencé dans un projet Canvas, le Canvas est listé dans le décompte d'inclusion du bloc de contenu. Toutefois, si le bloc de contenu est référencé dans un brouillon d'un canvas **actif**, ce dernier ne sera pas pris en compte dans le décompte des inclusions de blocs de contenu.
+Si un bloc de contenu est référencé dans une ébauche de Canvas, le Canvas est listé dans le décompte d'inclusion du bloc de contenu. Toutefois, si le bloc de contenu est référencé dans un brouillon d'un canvas **actif**, ce dernier ne sera pas pris en compte dans le décompte des inclusions de blocs de contenu.
 {% endalert %}
 
 ### Priorisation des messages dans l'application
@@ -43,4 +43,3 @@ Pour les brouillons d'un Canvas actif, la priorité des messages dans l'applicat
 
 Cependant, les modifications de priorité des messages intégrés au niveau de l'étape sont enregistrées en tant que brouillon et appliquées lorsque le Canvas est mis à jour. Par exemple, dans une étape Message, le trieur de priorités sera mis à jour lorsqu'un utilisateur lancera le brouillon, étant donné que les paramètres de l'étape s'appliquent au niveau de l'étape.
 
-[1]: {% image_buster /assets/img_archive/canvas_draft1.png %}

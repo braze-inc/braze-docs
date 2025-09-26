@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: Export Campaign Details"
+nav_title: "GET: Export campaign details"
 article_title: "GET: Export Campaign Details"
 search_tag: Endpoint
 page_order: 4
@@ -89,7 +89,9 @@ The `messages` response will contain information about each message. The followi
     "alert": (string) the alert body text,
     "extras": (hash) any key-value pairs provided,
     "title": (string) the alert title text,
-    "action": (string) action link from click
+    "action": (string) action link from click,
+    "image_url": (string) the image URL for an Android notification image, an iOS notification image, or a Web push icon image,
+    "large_image_url": (string) the web notification image URL for Android Chrome and Windows web push actions; null in other cases
 }
 ```
 

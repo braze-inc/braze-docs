@@ -11,10 +11,6 @@ description: "This guide explains how to use the updated navigation."
 
 Braze navigation is designed to help you efficiently access features and content across devices. Let’s explore how to make the most of it.
 
-- **Simplified menus:** Navigate intuitively with a vertical menu structure that organizes tools in stacked submenus.
-- **Powerful search:** Find pages or items by name, type, or even previous names using the global search bar.
-- **Mobile-friendly design:** Access the full functionality of Braze navigation on any device.
-
 {% alert note %}
 This update simplifies your experience by transitioning all users to a unified navigation. The option to switch between navigation versions is no longer available.
 {% endalert %}

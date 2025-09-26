@@ -6,8 +6,7 @@ description: "Cet article de référence décrit les indicateurs LINE utilisés 
 page_type: reference
 channel:
  - LINE
-hidden: true
-permalink: /line/reporting/
+alias: /line/reporting/
 ---
 
 # Rapports LINE
@@ -40,7 +39,7 @@ Pour mesurer l'impact d'un message LINE individuel, vous pouvez ajouter un [grou
 
 Le tableau de bord **LINE Performance** indique le niveau de performance de votre message en fonction de différents critères. Les indicateurs de ce volet varient en fonction de votre canal de communication choisi, et selon que vous exécutez ou non un test multivarié. Vous pouvez cliquer sur l'icône <i class="fa fa-eye preview-icon"></i> **Preview** pour visualiser votre message pour chaque variante ou canal de communication.
 
-![Le panneau "LINE Performance" présente des indicateurs pour deux variantes.][1]
+![Le panneau "LINE Performance" montre les indicateurs pour deux variantes.]({% image_buster /assets/img/line/line_performance.png %})
 
 Si vous souhaitez simplifier votre vue, sélectionnez **\+ Ajouter/Supprimer des colonnes** et effacez les indicateurs souhaités. Par défaut, tous les indicateurs sont affichés.
 
@@ -72,4 +71,3 @@ Le panneau **Détails de l'événement de conversion** vous indique les performa
 Le panneau **Corrélation de conversion** vous donne des informations sur les attributs et les comportements des utilisateurs qui favorisent ou entravent les résultats que vous avez définis pour les campagnes. Pour plus d'informations, consultez la section [Corrélation de conversion]({{site.baseurl}}/user_guide/engagement_tools/testing/conversion_correlation).
 
 
-[1]: {% image_buster /assets/img/line/line_performance.png %}

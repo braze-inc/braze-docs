@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: View All Translations for a Canvas"
+nav_title: "GET: View all translations for a Canvas"
 article_title: "GET: View All Translations for a Canvas"
 search_tag: Endpoint
 page_order: 1

@@ -1,5 +1,5 @@
 ---
-nav_title: Tracking Sessions
+nav_title: Tracking sessions
 article_title: Tracking Sessions for Windows Universal
 platform: Windows Universal
 page_order: 0

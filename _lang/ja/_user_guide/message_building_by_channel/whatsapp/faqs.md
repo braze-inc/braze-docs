@@ -34,7 +34,9 @@ Braze ダッシュボードの埋め込みサインアップフローを通じ�
 埋め込みサインアップフローを完了すると、business.facebook.comでアカウントにアクセスでき、[WhatsAppセクション](https://business.facebook.com/wa/manage/home)に移動します。 
 
 #### 複数のWABAをBrazeに接続できますか？ 
-はい、ワークスペースごとに1つのWABAを接続できます。したがって、複数のWABAを複数のBrazeワークスペースに接続できます。例えば、異なるブランドのための異なるワークスペースや、異なる国のための異なるワークスペースがある場合、それぞれに独自のWABAを接続することができます。
+はい。ワークスペースあたり最大10個の WhatsApp ビジネスアカウントを追加できます。各ビジネスアカウントは、異なる Meta Business Manager の下にネストすることができます。
+
+![ワークスペースとWhatsApp Businessアカウントの相互接続を示す、BrazeとWhatsAppのエコシステム図: 1つのサブスクリプショングループを1つの電話番号に、複数のWhatsApp Businessアカウントを1つのワークスペースに、1つのワークスペースを複数のMeta Businessポートフォリオに接続できる。]({% image_buster /assets/img/whatsapp/whatsapp_braze_ecosystem.png %}) 
 
 ### WhatsAppビジネスアカウントの電話番号 
 

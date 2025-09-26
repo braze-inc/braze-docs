@@ -1,5 +1,5 @@
 ---
-nav_title: Feature Awareness and New App Version
+nav_title: Feature awareness and new app version
 article_title: Feature Awareness and New App Version
 page_order: 9
 page_type: reference

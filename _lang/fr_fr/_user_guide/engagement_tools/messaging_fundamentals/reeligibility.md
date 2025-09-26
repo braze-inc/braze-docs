@@ -26,7 +26,7 @@ Pour activer la rééligibilité pour une campagne, cochez la case **Autoriser l
 
 Pour les campagnes déclenchées dont la rééligibilité est activée, les utilisateurs qui [n'ont pas reçu le message de la campagne]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/#why-did-a-user-not-receive-my-triggered-campaign) (bien qu'ils aient effectué l'événement déclencheur) se qualifieront automatiquement pour le message la prochaine fois qu'ils effectueront l'événement déclencheur. Ceci est dû au fait que la rééligibilité est basée sur la réception des messages et non sur l'entrée de la campagne. En rendant les utilisateurs à nouveau éligibles pour une campagne déclenchée, vous leur permettez de recevoir effectivement (et non simplement déclencher) le message plus d'une fois.
 
-En outre, si vous essayez d'envoyer un message immédiatement avec une rééligibilité de zéro minute, nous essaierons toujours de le planifier immédiatement, indépendamment de la façon dont l'utilisateur a reçu les versions précédentes de la campagne ou de Canvas.
+En outre, si vous essayez d'envoyer un message immédiatement avec une rééligibilité de zéro minute, nous essaierons toujours de le planifier immédiatement, quelle que soit la façon dont l'utilisateur a reçu les versions précédentes de la campagne ou de Canvas.
 
 #### Rééligibilité aux campagnes déclenchées par les API
 

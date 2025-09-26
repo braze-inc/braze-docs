@@ -1,6 +1,6 @@
 ---
 page_order: 1
-nav_title: Deep Linking
+nav_title: Deep linking
 article_title: Deep linking in push notifications for the Braze SDK
 channel:
   - push notifications

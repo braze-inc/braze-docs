@@ -6,8 +6,7 @@ description: "この参考記事では、Braze で使用されている LINE の
 page_type: reference
 channel:
  - LINE
-hidden: true
-permalink: /line/reporting/
+alias: /line/reporting/
 ---
 
 # LINE レポート
@@ -40,7 +39,7 @@ LINE の開封とクリック関連の統計は、1 日にイベントを実行�
 
 [**LINEのパフォーマンス**] パネルでは、さまざまな角度からメッセージのパフォーマンスを確認できます。このパネルの指標は、選択したメッセージングチャネルや、多変量テストを実行しているかどうかに応じて異なります。<i class="fa fa-eye preview-icon"></i>[**プレビュー**] アイコンをクリックすると、バリアントやチャネルごとにメッセージを表示できます。
 
-![2 つのバリアントの指標が表示される [LINE のパフォーマンス] パネル。][1]
+![2つのバリアントの指標が表示される [LINE のパフォーマンス] パネル。]({% image_buster /assets/img/line/line_performance.png %})
 
 表示を簡素化する場合は、[**\+ 列を追加/削除**] を選択し、必要に応じて指標をクリアします。デフォルトでは、すべての指標が表示されます。
 
@@ -72,4 +71,3 @@ LINE の開封とクリック関連の統計は、1 日にイベントを実行�
 [**コンバージョンの相関**] パネルでは、どのようなユーザー属性と行動が、キャンペーンに設定した結果に役立つか、または悪影響を与えるかを把握できます。詳細については、「[コンバージョンの相関]({{site.baseurl}}/user_guide/engagement_tools/testing/conversion_correlation)」を参照してください。
 
 
-[1]: {% image_buster /assets/img/line/line_performance.png %}

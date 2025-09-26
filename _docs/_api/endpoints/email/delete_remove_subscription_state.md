@@ -1,5 +1,5 @@
 ---
-nav_title: "DELETE: Delete Subscription State by Email Address or Phone Number"
+nav_title: "DELETE: Delete subscription state by email address or phone number"
 article_title: "DELETE: Delete Subscription State by Email Address or Phone Number"
 search_tag: Endpoint
 page_order: 0

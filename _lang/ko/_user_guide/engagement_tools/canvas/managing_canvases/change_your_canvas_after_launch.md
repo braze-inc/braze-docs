@@ -25,7 +25,7 @@ tool:
 배리언트 분포는 출시 후에만 감소할 수 있습니다.
 {% endalert %}
 
-어떤 워크플로우로 캔버스를 생성했는지에 따라 출시 후 허용되는 캔버스 편집을 염두에 두세요. 캔버스가 원래 캔버스 워크플로를 사용하는 경우, 출시 후 편집을 수행하려면 먼저 캔버스 흐름으로 복제해야 합니다.
+Keep in mind the following permissible post-launch Canvas edits, depending on which workflow your Canvas was created with. 캔버스가 원래 캔버스 워크플로를 사용하는 경우, 출시 후 편집을 수행하려면 먼저 캔버스 흐름으로 복제해야 합니다.
 
 사용자 여정에서 다음 중 어느 것이든 삭제할 수 있습니다.
 
@@ -51,17 +51,18 @@ tool:
 2023년 2월 28일부터는 더 이상 기존 캔버스 환경을 사용하여 캔버스를 만들거나 복제할 수 없습니다. Braze는 기존 캔버스 환경을 사용하는 고객은 캔버스 흐름으로 전환할 것을 권장합니다. 향상된 편집 환경을 통해 캔버스를 더 잘 구축하고 관리할 수 있습니다. [캔버스를 캔버스 플로우로 복제하는 방법에 대해 자세히 알아보세요]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
 {% endalert %}
 
-기존 연결을 편집하거나 삭제할 수 없으며, 기존 연결된 단계 사이에 단계를 삽입할 수 없습니다. 캔버스 사용자 여정에 단계를 편집하거나 추가하려면 다음 세부 정보가 적용됩니다.
+You can't edit or delete existing connections, and you can't insert a step between existing connected steps. 캔버스 사용자 여정에 단계를 편집하거나 추가하려면 다음 세부 정보가 적용됩니다.
 
 - 캔버스에 아직 들어가지 않은 사용자는 새로 생성된 모든 단계에 참여할 수 있습니다. 
 - 캔버스 항목 설정이 사용자가 단계를 다시 입력할 수 있도록 허용하는 경우, 새로 생성된 단계를 이미 통과한 사용자는 다시 입력할 수 있습니다.
 - 현재 시작된 캔버스에 있는 사용자 중 사용자 여정의 새로 추가된 단계에 도달하지 않은 사용자는 새로 추가된 단계를 받을 수 있습니다.
+- 캔버스에서 지연 단계가 마지막 단계인 경우, 해당 단계에 도달한 사용자는 자동으로 캔버스를 벗어나게 되며 새로 생성된 단계를 받지 않습니다.
 
-캔버스 단계의 **지연** 또는 **창** 설정을 업데이트하면, 캔버스에 새로 들어오는 사용자와 아직 해당 단계에 대기 중이지 않은 사용자만 업데이트된 지연 시간에 메시지를 받게 됩니다. 캔버스에서 지연 단계가 마지막 단계인 경우, 해당 단계에 도달한 사용자는 자동으로 캔버스를 벗어나게 되며 새로 생성된 단계를 받지 않습니다. 
-
-{% alert note %}
-캔버스를 중지해도 메시지를 받기 위해 기다리는 사용자는 종료되지 않습니다. 캔버스를 다시 활성화했는데 사용자가 여전히 메시지를 기다리는 경우 메시지를 받게 됩니다(메시지를 보내야 하는 시간이 지나지 않았다면 메시지를 받지 못합니다).
+{% alert important %}
+If you update the **Delay** or **Window** settings for a Canvas step, users currently in that step at the time of the update will adhere to the delay time that was assigned when they originally entered it. Only new users entering the Canvas and those who haven't been queued for that step yet will receive the message at the updated time.
 {% endalert %}
+
+캔버스를 중지해도 메시지를 받기 위해 기다리는 사용자는 종료되지 않습니다. 캔버스를 다시 활성화했는데 사용자가 여전히 메시지를 기다리는 경우 메시지를 받게 됩니다(메시지를 보내야 하는 시간이 지나지 않았다면 메시지를 받지 못합니다).
 
 {% enddetails %}
 
@@ -144,7 +145,7 @@ tool:
 
 ### 실험 경로 단계
 
-캔버스에 활성 또는 진행 중인 실험 경로 단계가 있고 활성 캔버스를 업데이트하면(실험 경로 단계가 아니더라도) 진행 중인 실험이 다시 시작됩니다. 사용자가 실험 경로를 다시 입력하지 않도록 하려면 캔버스를 업데이트하는 대신 캔버스를 복제하고 새 캔버스를 만들 수 있습니다.
+If your Canvas has an active or in progress experiment and you update the active Canvas (even if it's not to the Experiment Path step), the in-progress experiment will end. To restart the experiment, you can disconnect the existing Experiment Path and launch a new one, or duplicate the Canvas and launch a new Canvas.
 
 ### 시간 지연
 

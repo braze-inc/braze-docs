@@ -16,9 +16,9 @@ description: "この記事では、APIのみを使用したBrazeエンドポイ�
 
 > このエンドポイントを使用して、Braze APIを使用して指定したユーザーに即時メッセージを送信する。
 
-リクエストを完了させるために、必ずメッセージング・オブジェクトを本文に含めること。
-
 セグメントをターゲットにしている場合、リクエストの記録は[開発者コンソール](https://dashboard.braze.com/app_settings/developer_console/activitylog/)に保存されます。
+
+{% multi_lang_include api/payload_size_alert.md %}
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#946cb701-96e3-48d7-868c-f079785b6d24 {% endapiref %}
 
@@ -31,6 +31,10 @@ description: "この記事では、APIのみを使用したBrazeエンドポイ�
 {% multi_lang_include rate_limits.md endpoint='send endpoints' category='message send endpoint' %}
 
 ## 要求本文:
+
+{% alert tip %}
+リクエストを完了させるために、必ず[メッセージングオブジェクト]({{site.baseurl}}/api/objects_filters/#messaging-objects)を本文に含めてください。
+{% endalert %}
 
 ```
 Content-Type: application/json

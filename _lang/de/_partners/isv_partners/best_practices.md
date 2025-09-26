@@ -101,7 +101,7 @@ Diese Funktionalität befindet sich derzeit im Early Access.
 - Dies ist ein öffentlich zugänglicher Endpunkt, mit dem Nutzer:innen in Braze erstellt und aktualisiert werden können, z.B. durch die Protokollierung von Attributen im Nutzerprofil. Für diesen Endpunkt gilt ein Rate-Limits von 50.000 Anfragen pro Minute auf der Ebene des Workspace.
 - Wenn Sie diesen Endpunkt verwenden, geben Sie den Schlüssel `partner` an, wie in unserer Dokumentation für Partner beschrieben.
 
-[Cloud-Datenaufnahme]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/cloud_ingestion/overview/#what-is-cloud-data-ingestion)
+[Ingestion von Cloud-Daten]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/cloud_ingestion/overview/#what-is-cloud-data-ingestion)
 - Ähnlich wie beim Endpunkt für das Tracking von Nutzern können Daten über Cloud Data Ingestion mit Nutzerprofilen synchronisiert werden. Wenn Sie dieses Tool verwenden, werden Attribute, Ereignisse und Käufe in Profilen protokolliert, indem Sie die Data Warehouse-Tabelle oder -Ansicht, die Sie mit dem gewünschten Braze Workspace synchronisieren möchten, einrichten und verbinden.
 
 [Datenpunkte]({{site.baseurl}}/user_guide/data/data_points/)
@@ -183,10 +183,7 @@ Dinge, die Sie beachten sollten:
 - Die Systeme von Braze können denselben Connected-Content-API-Aufruf mehr als einmal pro Empfänger:in tätigen. Das liegt daran, dass Braze möglicherweise einen Connected-Content-API-Aufruf tätigen muss, um eine Nachricht zu rendern, und dass Nachrichten für die Validierung, Wiederholungslogik oder andere interne Zwecke mehrmals pro Empfänger:in gerendert werden können. 
 
 Lesen Sie diese Artikel, um mehr über Connected-Content zu erfahren:
-- [Einen Connected-Content-Aufruf tätigen][1]
-- [Abbrechen von Connected-Content][2]
-- [Erneute Connected-Content-Versuche][3]
+- [Einen Connected-Content-Aufruf tätigen]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/)
+- [Abbrechen von Connected-Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content)
+- [Erneute Connected-Content-Versuche]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries)
 
-[1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/
-[2]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content
-[3]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries

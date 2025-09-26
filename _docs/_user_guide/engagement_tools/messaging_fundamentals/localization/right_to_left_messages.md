@@ -1,7 +1,8 @@
 ---
-nav_title: Right-to-Left Messages
+nav_title: Right-to-left messages
 article_title: Creating Right-to-Left Messages
 page_order: 1
+alias: /right_to_left_messages/
 page_type: reference
 description: "This page covers best practices for crafting messages in Braze that read from right-to-left."
 ---

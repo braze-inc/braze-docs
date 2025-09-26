@@ -21,7 +21,7 @@ Les Canvas sont robustes et complexes, et nous savons que vous passez du temps �
 
 Les [paramètres d'entrée]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2-set-up-your-canvas) sont importants pour comprendre comment vos toiles sont envoyées. Vérifiez si vous avez limité le nombre de personnes qui entreront potentiellement dans le Canvas.
 
-Les utilisateurs peuvent également quitter un canvas s'ils ne sont plus autorisés à recevoir des messages. Par exemple, si le Canvas ne contient que des notifications push et qu’un utilisateur refuse les notifications push après avoir reçu la première étape, alors l’utilisateur sortira du Canvas. Envisagez d'utiliser [différentes étapes du canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components) pour ajouter des parcours utilisateurs alternatifs.
+Les utilisateurs peuvent également quitter un canvas s'ils ne sont plus autorisés à recevoir des messages. Par exemple, si le Canvas ne contient que des notifications push et qu’un utilisateur refuse les notifications push après avoir reçu la première étape, alors l’utilisateur sortira du Canvas. Envisagez d'utiliser [différentes étapes du canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/) pour ajouter des parcours utilisateurs alternatifs.
 
 ## Segmentation de votre audience
 

@@ -26,7 +26,7 @@ Eメールリストのクリーニングサービスは、Eメールアドレス
 
 最もエンゲージメントの高いユーザーを特定するためには、まず、長期間にわたって離脱しているユーザーを排除します。メール送信者としての評判が損なわれないよう、6 か月以上メールのエンゲージメントがないユーザーにはメールを送信しないのがベストプラクティスです。メールリストをインポートする際は、過去 6 か月以内にメールを開封したユーザーだけを含めるようにします。
 
-長期的には、[サンセットポリシー][60]の導入も検討する必要があります。
+長期的には、[サンセットポリシー]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/sunset_policies/)の導入も検討する必要があります。
 
 ### 抑制リストを避ける
 
@@ -36,4 +36,3 @@ Eメールリストのクリーニングサービスは、Eメールアドレス
 
 メールリストの準備ができたら、Braze REST API や CSV ファイルなど、Braze にユーザーをインポートする方法がいくつかあります。詳細については、[ユーザーインポート]({{site.baseurl}}/user_guide/data/user_data_collection/user_import/)の専用記事を参照してください。
 
-[60]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/sunset_policies/

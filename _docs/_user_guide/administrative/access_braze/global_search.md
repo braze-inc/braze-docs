@@ -1,5 +1,5 @@
 ---
-nav_title: Searching Your Braze Dashboard
+nav_title: Searching your Braze dashboard
 article_title: Searching Your Braze Dashboard
 page_order: 0.5
 page_type: reference

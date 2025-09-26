@@ -8,7 +8,7 @@ description: "Le présent article de référence couvre la manière dont les bal
 
 # Logique de messagerie conditionnelle
 
-> Les [tags][7] vous permettent d'inclure une logique de programmation dans vos campagnes de communication. Les balises peuvent être utilisées pour exécuter des relevés conditionnels ainsi que pour des cas d’utilisation avancés, comme l’attribution de variables ou l’itération par un bloc de code. <br><br>Cette page explique comment les tags peuvent et doivent être utilisés, par exemple comment prendre en compte les valeurs d'attributs null, nil et blank, et comment référencer des attributs personnalisés.
+> Les [étiquettes](https://docs.shopify.com/themes/liquid-documentation/tags) vous permettent d'inclure une logique de programmation dans vos campagnes d'envoi de messages. Les balises peuvent être utilisées pour exécuter des relevés conditionnels ainsi que pour des cas d’utilisation avancés, comme l’attribution de variables ou l’itération par un bloc de code. <br><br>Cette page explique comment les tags peuvent et doivent être utilisés, par exemple comment prendre en compte les valeurs d'attributs null, nil et blank, et comment référencer des attributs personnalisés.
 
 ## Tags de mise en forme
 
@@ -42,7 +42,7 @@ Buy now! Would 5% off convince you?
 
 ## Logique conditionnelle
 
-Vous pouvez inclure de nombreux types de [logique intelligente dans les messages][1], comme une instruction conditionnelle. L'exemple suivant utilise [conditionals][8] ] pour internationaliser une campagne :
+Vous pouvez inclure de nombreux types de [logique intelligente dans les messages](http://docs.shopify.com/themes/liquid-documentation/basics), comme une instruction conditionnelle. L'exemple suivant utilise des [conditionnels](http://docs.shopify.com/themes/liquid-documentation/tags/control-flow-tags) pour internationaliser une campagne :
 {% raw %}
 
 ```liquid
@@ -165,7 +165,7 @@ La balise suivante vous permet de spécifier un message pour les utilisateurs ay
 ```
 {% endraw %} 
 
-![Un exemple de message dans le tableau de bord de Braze, utilisant un attribut null 'first name'.][36]{: style="max-width:60%;"}
+![Un exemple de message dans le tableau de bord de Braze, utilisant un attribut "prénom" nul.]({% image_buster /assets/img/value_null.png %}){: style="max-width:60%;"}
 
 {% raw %}
 ```liquid
@@ -196,11 +196,11 @@ Le tag suivant vous permet de spécifier un message pour les utilisateurs qui on
 
 ## Référencer des attributs personnalisés
 
-Après avoir [créé des attributs personnalisés][2], vous pouvez faire référence à ces attributs personnalisés dans votre messagerie Liquid.
+Après avoir [créé des attrib]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#managing-custom-attributes)uts personnalisés, vous pouvez y faire référence dans vos envois de messages liquides.
 
 Lorsque vous utilisez une logique conditionnelle, vous devez connaître le type de données de l’attribut personnalisé pour vous assurer que vous utilisez la syntaxe correcte. À partir de la page **Attributs personnalisés** dans le tableau de bord, recherchez le type de données associé à votre attribut personnalisé, puis consultez les exemples suivants répertoriés pour chaque type de données.
 
-![Sélection d’un type de données pour un attribut personnalisé. L'exemple fourni montre un attribut de type Favorite_Category avec des données de type chaîne de caractères.][20]{: style="max-width:80%;"}
+![Sélection d’un type de données pour un attribut personnalisé. L'exemple fourni montre un attribut Favorite_Category avec une chaîne de caractères comme type de données.]({% image_buster /assets/img_archive/custom_attribute_data_type.png %}){: style="max-width:80%;"}
 
 {% alert tip %}
 Les chaînes de caractères et les baies nécessitent des apostrophes droites autour de eux, tandis que les booléens et les entiers n’auront jamais d’apostrophes.
@@ -208,7 +208,7 @@ Les chaînes de caractères et les baies nécessitent des apostrophes droites au
 
 #### Valeur booléenne
 
-Les [booléens][9] sont des valeurs binaires et peuvent être définis sur `true` ou `false`, comme `registration_complete: true`. Les valeurs booléennes ne sont pas entourées d’apostrophes..
+Les [booléens]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#booleans) sont des valeurs binaires et peuvent avoir pour valeur `true` ou `false`, par exemple `registration_complete: true`. Les valeurs booléennes ne sont pas entourées d’apostrophes..
 
 {% raw %}
 
@@ -220,7 +220,7 @@ Les [booléens][9] sont des valeurs binaires et peuvent être définis sur `true
 
 #### Nombre
 
-Les [nombres][10] sont des valeurs numériques, qui peuvent être des entiers ou des floats. Par exemple, un utilisateur peut `shoe_size: 10` ou `levels_completed: 287`. Les chiffres ne sont pas entourés d’apostrophes.
+Les [nombres]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#numbers) sont des valeurs numériques, qui peuvent être des entiers ou des flottants. Par exemple, un utilisateur peut `shoe_size: 10` ou `levels_completed: 287`. Les chiffres ne sont pas entourés d’apostrophes.
 
 {% raw %}
 
@@ -242,7 +242,7 @@ Vous pouvez également utiliser d'autres [opérateurs de base](https://shopify.d
 
 #### Chaîne de caractères
 
-Une [chaîne de caractères][11] est composée de caractères alphanumériques et stocke un élément de données concernant votre utilisateur. Par exemple, vous pourriez avoir `favorite_color: red` ou `phone_number: 3025981329`. Les valeurs de chaîne de caractères doivent être entourées d’apostrophes.
+Une [chaîne de caractères]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#strings) est composée de caractères alphanumériques et stocke une donnée concernant votre utilisateur. Par exemple, vous pourriez avoir `favorite_color: red` ou `phone_number: 3025981329`. Les valeurs de chaîne de caractères doivent être entourées d’apostrophes.
 
 {% raw %}
 
@@ -256,7 +256,7 @@ Pour les chaînes de caractères, vous pouvez utiliser « == » ou « contient 
 
 #### Tableau
 
-Un [tableau][12] est une liste d'informations sur votre utilisateur. Par exemple, un utilisateur peut avoir `last_viewed_shows: stranger things, planet earth, westworld`. Les valeurs de baie doivent être entourées d’apostrophes.
+Un [tableau]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#arrays) est une liste d'informations sur votre utilisateur. Par exemple, un utilisateur peut avoir `last_viewed_shows: stranger things, planet earth, westworld`. Les valeurs de baie doivent être entourées d’apostrophes.
 
 {% raw %}
 
@@ -270,7 +270,7 @@ Pour les baies, vous devez utiliser « contains » et ne pas utiliser « == ».
 
 #### Date
 
-Un horodatage du moment où un événement a eu lieu. [Temps][13] les valeurs doivent avoir un [filtre mathématique][5] sur elles pour être utilisées dans la logique conditionnelle.
+Horodatage du moment où un événement a eu lieu. Les valeurs [temporelles]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#time) doivent être assorties d'un [filtre mathématique]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/#math-filters) pour être utilisées dans la logique conditionnelle.
 
 {% raw %}
 
@@ -281,15 +281,3 @@ Un horodatage du moment où un événement a eu lieu. [Temps][13] les valeurs do
 {% endraw %}
 
 
-[36]:{% image_buster /assets/img/value_null.png %}
-Il y a [1]: http://docs.shopify.com/themes/liquid-documentation/basics
-[2]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#managing-custom-attributes
-[5]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/#math-filters
-Il y a [7]: https://docs.shopify.com/themes/liquid-documentation/tags
-[8]: http://docs.shopify.com/themes/liquid-documentation/tags/control-flow-tags « Tags de flux de contrôle »
-[9]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#booleans
-[10]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#numbers
-[11]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#strings
-[12]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#arrays
-[13]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#time
-[20]: {% image_buster /assets/img_archive/custom_attribute_data_type.png %}

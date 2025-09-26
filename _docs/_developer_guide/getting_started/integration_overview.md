@@ -1,5 +1,5 @@
 ---
-nav_title: Integration Overview
+nav_title: Integration overview
 article_title: Integration Overview
 page_order: 2
 description: "This article provides a basic overview of the onboarding process."

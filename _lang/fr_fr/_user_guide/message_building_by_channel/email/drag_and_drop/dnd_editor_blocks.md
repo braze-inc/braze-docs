@@ -37,7 +37,7 @@ Le tableau suivant décrit comment les utilisateurs peuvent exploiter chaque typ
 |`Video`| Crée un lien vers le contenu vidéo. |
 |`Social`| Insère l’icône de la plateforme des réseaux sociaux. Des images personnalisées peuvent être chargées pour des icônes spécifiques aux marques. |
 |`Icons`| Insère une icône. Des images personnalisées peuvent être téléchargées. Une icône de marque substitutive surdimensionnée sera utilisée jusqu’à ce qu’une image soit chargée. |
-|`HTML`| Insère l’élément HTML brut. Idéal pour les fonctions Liquid avancées tels que le contenu connecté ou les instructions conditionnelles. | 
+|`HTML`| Insère l’élément HTML brut. Recommandé pour les liquides, tels que le contenu connecté ou les déclarations conditionnelles. | 
 |`Menu`| Crée un menu flexible pour le message que vous créez. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" } 
 
@@ -109,6 +109,8 @@ Reportez-vous au tableau suivant pour plus de détails sur le bloc éditeur de `
 |---|---|
 |`Link Type`| Détermine l’action lorsque vous cliquez sur le bouton et définit le protocole de lien approprié. |
 |`URL`| Dynamique basée sur la sélection `Link Type`.|
+|`Button options`| Définit diverses options pour les boutons, telles que la police, la largeur, la couleur, etc.|
+|`Button Hover`| Le style du bouton lorsqu'un utilisateur le survole à l'aide d'une souris ou d'un trackpad. Il s'agit de la couleur d'arrière-plan du bouton, de la couleur de la police et des styles de bordure.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Ligne de séparation
@@ -138,10 +140,14 @@ Reportez-vous au tableau suivant pour plus de détails sur le bloc éditeur de `
 
 | propriétés | Description |
 |---|---|
-|`Auto Width`| Modifie les pixels de l’image. |
-|`Align`| Déplace l’image à gauche, au centre ou à droite. |
-|`URL`| L’adresse d’hébergement de votre image. |
-|`Alternate text`| La copie écrite qui apparaît à la place d’une image lorsque l’image ne se charge pas. |
+|`Auto Width`| Modifie la largeur de l'image en pixels. |
+|`Align`| Oriente l'image vers la gauche, le centre ou la droite du bloc. |
+|`Image with Liquid`| Utilisez la logique Liquid pour définir dynamiquement différentes images au sein d'un même bloc de contenu. |
+|`URL`| Définissez une image en utilisant l'adresse de l'endroit où elle est hébergée. |
+|`Alternate text`| Une courte description de l'image qui donne aux utilisateurs les mêmes informations que celles présentées dans l'image. Ceci est essentiel pour l'accessibilité des lecteurs d'écran ou lorsque l'image ne se charge pas. |
+|`Image with Rounded Corners`| Rendre l'image avec des coins arrondis. Par défaut, les images sont rendues avec des coins carrés. |
+|`Action`| Déclenche une action lorsque l'utilisateur clique sur l'image.|
+|`Block Options`| Définit l'espacement autour du bloc d'image. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert tip %}

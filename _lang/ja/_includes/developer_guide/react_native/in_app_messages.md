@@ -1,4 +1,4 @@
-guide/prerequisites/react_native.md developer_ %}
+{% multi_lang_include developer_guide/prerequisites/react_native.md %}
 
 ## メッセージの種類
 

@@ -1,5 +1,5 @@
 ---
-nav_title: Setting Custom Attributes
+nav_title: Setting custom attributes
 article_title: Setting Custom Attributes for iOS
 platform: iOS
 page_order: 3

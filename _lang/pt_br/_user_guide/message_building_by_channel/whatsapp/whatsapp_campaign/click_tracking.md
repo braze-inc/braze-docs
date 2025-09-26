@@ -1,7 +1,7 @@
 ---
 nav_title: Rastreamento de cliques
 article_title: Rastreamento de cliques
-page_order: 5
+page_order: 2
 description: "Este artigo de referência aborda como ativar o rastreamento de cliques em suas mensagens do WhatsApp, testar links encurtados, usar seu domínio personalizado em links rastreados e muito mais."
 page_type: reference
 alias: "/whatsapp_click_tracking/"
@@ -19,10 +19,6 @@ O rastreamento de cliques permite medir quando alguém toca em um link na sua me
 
 Você pode ativar o rastreamento de cliques nas mensagens de resposta e de modelo. Ele funciona com links em botões e no corpo do texto e oferece suporte a URLs personalizados e domínios personalizados. Depois de ativada, você verá os dados de cliques nos relatórios de performance do WhatsApp e poderá segmentar os usuários com base em quem clicou em quê.
 
-{% alert important %}
-O rastreamento de cliques para o WhatsApp está atualmente em acesso antecipado. Entre em contato com seu gerente de conta Braze se estiver interessado em participar do acesso antecipado.
-{% endalert %}
-
 ## Como funciona?
 
 ### Envio de mensagens de resposta 
@@ -35,7 +31,7 @@ O link será encurtado para o domínio Braze ou para o domínio personalizado es
 
 Todos os URLs estáticos que começam com `http://` ou `https://` serão encurtados. Os URLs encurtados que contêm personalização Liquid (como direcionamento de rastreamento no nível do usuário) serão válidos por dois meses.
 
-![Criador de mensagens do WhatsApp com corpo de conteúdo e um botão.][1]
+![Criador de mensagens do WhatsApp com corpo de conteúdo e um botão.]({% image_buster /assets/img/whatsapp/click_tracking/message_composer.png %})
 
 ### Envio de mensagens de modelo 
 
@@ -43,17 +39,17 @@ Para mensagens de modelo, o URL de base deve ser enviado corretamente ao criar o
 
 #### Etapa 1: Crie um modelo compatível com rastreamento de cliques no WhatsApp
 
-1. No Gerenciador do WhatsApp, crie um URL de base que seja seu domínio personalizado ou `brz.ai`.
+1. No Gerenciador do WhatsApp, crie uma URL de base que seja seu domínio personalizado ou `brz.ai`.
 2. Certifique-se de que os links incluídos no modelo sejam compatíveis com o rastreamento de cliques.
 3. Não altere as variáveis do modelo depois que ele for configurado como uma campanha no Braze; as alterações posteriores não poderão ser incorporadas.
-4. Para links de botões de CTA, selecione **Dynamic (Dinâmico**) e, em seguida, forneça o URL de base (`brz.ai` ou seu domínio personalizado).<br><br>![Seção para criar uma chamada para ação.][2]<br><br>
-5. Para links no corpo do texto, ao escrever o modelo em seu Gerenciador do WhatsApp, remova todos os espaços inseridos para links contidos no corpo que você deseja rastrear.<br><br>![Caixa de texto para inserir o corpo do conteúdo da chamada para ação.][3]
+4. Para links de botões de CTA, selecione **Dynamic (Dinâmico**) e, em seguida, forneça o URL de base (`brz.ai` ou seu domínio personalizado).<br><br>![Seção para criar uma chamada para ação.]({% image_buster /assets/img/whatsapp/click_tracking/create_cta.png %})<br><br>
+5. Para links no corpo do texto, ao escrever o modelo em seu Gerenciador do WhatsApp, remova todos os espaços inseridos para links contidos no corpo que você deseja rastrear.<br><br>![Caixa de texto para inserir o corpo do conteúdo da chamada para ação.]({% image_buster /assets/img/whatsapp/click_tracking/cta_textbox.png %})
 
 #### Etapa 2: Complete seu modelo no Braze
 
 Ao criar, o Braze detectará automaticamente quais modelos têm domínios de URL compatíveis, tanto no corpo do texto quanto nos botões de CTA. O status será mostrado na parte inferior do modelo. 
 
-![A seção "Link Status" mostra um status ativo para rastreamento de cliques.][4]{: style="max-width:70%;"}
+![A seção "Link Status" mostra um status ativo para rastreamento de cliques.]({% image_buster /assets/img/whatsapp/click_tracking/link_status.png %}){: style="max-width:70%;"}
 
 - **Links compatíveis:** Os links enviados com o URL de base correspondente terão o rastreamento de cliques ativado.
 - **Links com suporte parcial:** Se alguns links em um modelo forem enviados como URLs completos, o rastreamento de cliques **não será** aplicado a esses links.
@@ -61,7 +57,7 @@ Ao criar, o Braze detectará automaticamente quais modelos têm domínios de URL
 
 O URL de destino precisará ser fornecido para qualquer link com um URL de base que corresponda a `brz.ai` ou ao seu domínio personalizado. 
 
-![Seção "Buttons" com campos para o nome do botão, URL do site e URL de rastreamento de cliques.][5]{: style="max-width:70%;"}
+![Seção "Buttons" com campos para o nome do botão, URL do site e URL de rastreamento de cliques.]({% image_buster /assets/img/whatsapp/click_tracking/buttons.png %}){: style="max-width:70%;"}
 
 {% multi_lang_include click_tracking.md section='Domínios personalizados' %}
 
@@ -101,19 +97,19 @@ Se um rascunho for criado em um Canva ativo, não será gerado um URL abreviado.
 
 ## Relatórios
 
-Quando o rastreamento de cliques está ativado ou é usado com modelos compatíveis, a tabela de performance do WhatsApp inclui a coluna **Total Clicks**, que mostra uma contagem de eventos de cliques por variante e uma taxa de cliques associada. Para obter mais detalhes sobre as métricas do WhatsApp, consulte [Performance das mensagens do WhatsApp]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_campaign_analytics#message-performance).
+Quando o rastreamento de cliques está ativado ou é usado com modelos compatíveis, a tabela de performance do WhatsApp inclui a coluna **Total Clicks**, que mostra uma contagem de eventos de cliques por variante e uma taxa de cliques associada. Para obter mais detalhes sobre as métricas do WhatsApp, consulte [Performance das mensagens do WhatsApp]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign_analytics).
 
-![Etapa do canva de mensagens do WhatsApp.][6]{: style="max-width:30%;"}
+![Etapa do canva de mensagens do WhatsApp.]({% image_buster /assets/img/whatsapp/click_tracking/canvas_step.png %}){: style="max-width:30%;"}
 
 Os dados de cliques serão informados automaticamente no dashboard de análise de dados.
 
-![Tabela de performance de envio de mensagens do WhatsApp.][7]
+![Tabela de performance de envio de mensagens do WhatsApp.]({% image_buster /assets/img/whatsapp/click_tracking/message_performance.png %})
 
 ## Redirecionamento de usuários 
 
 Você pode usar o filtro `Clicked/Opened Step` e a interação `clicked tracked WhatsApp link` para segmentar os usuários com base em suas interações com os links.
 
-![Grupo de filtros com um filtro para "clicou no link rastreado do WhatsApp".][8]
+![Grupo de filtros com um filtro para "clicou no link rastreado do WhatsApp".]({% image_buster /assets/img/whatsapp/click_tracking/filter_group.png %})
 
 {% multi_lang_include click_tracking.md section='Perguntas frequentes' %}
 
@@ -128,13 +124,4 @@ O rastreamento de cliques não funciona com deep linkings. Você pode encurtar l
 ### As prévias no dispositivo WhatsApp contam como cliques? 
 
 Não, eles não contribuem para a taxa de cliques das mensagens do WhatsApp. 
-
-[1]: {% image_buster /assets/img/whatsapp/click_tracking/message_composer.png %}
-[2]: {% image_buster /assets/img/whatsapp/click_tracking/create_cta.png %}
-[3]: {% image_buster /assets/img/whatsapp/click_tracking/cta_textbox.png %}
-[4]: {% image_buster /assets/img/whatsapp/click_tracking/link_status.png %}
-[5]: {% image_buster /assets/img/whatsapp/click_tracking/buttons.png %}
-[6]: {% image_buster /assets/img/whatsapp/click_tracking/canvas_step.png %}
-[7]: {% image_buster /assets/img/whatsapp/click_tracking/message_performance.png %}
-[8]: {% image_buster /assets/img/whatsapp/click_tracking/filter_group.png %}
 

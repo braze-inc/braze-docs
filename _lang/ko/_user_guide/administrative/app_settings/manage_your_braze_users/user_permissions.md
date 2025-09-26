@@ -42,7 +42,7 @@ tool: Dashboard
 {% endtab %}
 {% endtabs %}
 
-## 권한 집합과 역할은 팀과 어떻게 다른가요?
+## How do permission sets and roles differ from Teams?
 
 {% multi_lang_include permissions.md content="Differences" %}
 
@@ -54,9 +54,7 @@ tool: Dashboard
 
 ### 관리자
 
-관리자는 모든 기능에 접근할 수 있으며 회사의 모든 설정을 수정할 수 있는 권한이 있습니다. Braze에서 관리자만 할 수 있는 몇 가지 작업도 있습니다. 
-
-관리자만 할 수 있습니다.
+관리자는 모든 기능에 접근할 수 있으며 회사의 모든 설정을 수정할 수 있는 권한이 있습니다. They can:
 
 - [승인 설정 ]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/campaign_approval/#turning-on-campaign-approval)변경
 - 추가, 편집, 삭제, 일시 중지 또는 다른 [Braze 사용자]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/adding_users_to_your_dashboard/#adding-braze-users)의 일시 중지 해제
@@ -82,13 +80,13 @@ tool: Dashboard
 
 ### 워크스페이스
 
-Braze에서 사용자가 속한 각 워크스페이스에 대해 다른 권한을 부여할 수 있습니다. 워크스페이스 수준의 권한을 관리하려면 **워크스페이스 및 권한 선택**을 선택한 다음 권한을 수동으로 선택하거나 [이전에 생성한](#creating-a-permission-set) 권한 세트를 할당하세요.
+Braze에서 사용자가 속한 각 워크스페이스에 대해 다른 권한을 부여할 수 있습니다. To manage their workspace-level permissions, select **Select workspaces and permissions**, then choose their permissions manually to select or assign a permission set [you previously created](#creating-a-permission-set).
 
 사용자에게 다른 워크스페이스에 대해 다른 권한을 부여해야 하는 경우, 필요한 만큼 이 과정을 반복하세요. 각 권한에 대한 설명은 [권한 목록](#list-of-permissions)을 참조하십시오.
 
 {% tabs local %}
 {% tab 수동으로 선택 %}
-**작업 공간**에서 드롭다운에서 하나 이상의 작업 공간을 선택합니다. 그런 다음, **권한**에서 드롭다운에서 하나 이상의 권한을 선택합니다. 그들은 선택한 워크스페이스에 대해서만 이러한 권한이 부여됩니다. 선택적으로 **관리자 액세스 활성화**를 선택하여 이 워크스페이스에 대한 전체 권한을 부여할 수 있습니다.
+**작업 공간**에서 드롭다운에서 하나 이상의 작업 공간을 선택합니다. Then, under **Permissions**, choose one or more permissions from the dropdown. 그들은 선택한 워크스페이스에 대해서만 이러한 권한이 부여됩니다. 선택적으로 **관리자 액세스 활성화**를 선택하여 이 워크스페이스에 대한 전체 권한을 부여할 수 있습니다.
 
 완료되면 **사용자 업데이트**를 선택하세요.
 
@@ -106,7 +104,7 @@ Braze에서 사용자가 속한 각 워크스페이스에 대해 다른 권한�
 
 ## 사용자 권한 내보내기
 
-목록을 다운로드하려면 **설정** > **회사 사용자**로 이동한 다음 **사용자 내보내기**를 선택하세요. CSV 파일이 곧 이메일 주소로 전송될 예정입니다.
+To download a list of your users and their permissions, go to **Settings** > **Company Users**, then select **Export Users**. CSV 파일이 곧 이메일 주소로 전송될 예정입니다.
 
 ![Braze의 "회사 사용자" 페이지에서 "사용자 내보내기" 옵션이 선택된 상태입니다.]({% image_buster /assets/img/braze_permissions/exporting_user_permissions.png %})
 
@@ -121,10 +119,10 @@ Braze에서 사용자가 속한 각 워크스페이스에 대해 다른 권한�
 |관리자|관리자|사용자가 모든 사용 가능한 기능에 액세스할 수 있습니다. 이것은 모든 신규 사용자에 대한 기본값 설정입니다. 회사 이름 및 시간대를 포함한 회사 설정을 업데이트할 수 있으며, 제한된 사용자는 이를 수행할 수 없습니다.|
 |회사|워크스페이스 생성 및 삭제|사용자가 작업 공간을 생성하고 삭제할 수 있습니다.|
 |회사|회사 설정 관리|사용자가 회사 설정을 수정할 수 있습니다.|
-|워크스페이스|캠페인, 캔버스, 카드, 콘텐츠 블록, 기능 플래그, 세그먼트, 미디어 라이브러리, 위치, 프로모션 코드 및 환경 설정 센터에 액세스|사용자는 대시보드에서 캠페인 및 캔버스 성과 지표를 보고, 캠페인 및 캔버스 초안을 만들고 복제하고, 캠페인 및 캔버스 초안과 템플릿을 편집하고, 뉴스피드, 세그먼트, 템플릿 및 미디어의 초안을 보고, 템플릿을 만들고, 미디어를 업로드하고, 프로모션 코드 목록을 만들거나 업데이트하고, 참여 보고서를 보고, 글로벌 메시지 설정을 볼 수 있습니다. 그러나 이 권한을 가진 사용자는 기존 라이브 콘텐츠를 일시 중지하거나 편집할 수 없습니다.|
-|워크스페이스|개발자 콘솔 액세스|다음 설정 및 로그에 대한 전체 액세스를 허용합니다:{::nomarkdown}<ul><li><a href='/docs/user_guide/administrative/app_settings/api_settings_tab/'>API 키</a></li><li><a href='/docs/user_guide/administrative/app_settings/internal_groups_tab/'>내부 그룹</a></li><li><a href='/docs/user_guide/administrative/app_settings/message_activity_log_tab/'>메시지 활동 로그</a></li><li><a href='/docs/user_guide/administrative/app_settings/event_user_log_tab/'>이벤트 사용자 로그</a></li><li><a href='/docs/user_guide/data_and_analytics/cloud_ingestion/'>클라우드 데이터 수집 관리</a></li></ul>{:/}|
+|워크스페이스|캠페인, 캔버스, 카드, 콘텐츠 블록, 기능 플래그, 세그먼트, 미디어 라이브러리, 위치, 프로모션 코드 및 환경 설정 센터에 액세스|Allows users to view campaign and Canvas performance metrics, create and duplicate drafts of campaigns and Canvases, edit campaign and Canvas drafts and templates, view drafts of segments, templates and media, create templates, upload media, create or update promotion code lists, view engagement reports, and view global message settings in the dashboard. 그러나 이 권한을 가진 사용자는 기존 라이브 콘텐츠를 일시 중지하거나 편집할 수 없습니다.|
+|워크스페이스|개발자 콘솔 액세스|다음 설정 및 로그에 대한 전체 액세스를 허용합니다:{::nomarkdown}<ul><li><a href='/docs/user_guide/administrative/app_settings/api_settings_tab/'>API 키</a></li><li><a href='/docs/user_guide/administrative/app_settings/internal_groups_tab/'>내부 그룹</a></li><li><a href='/docs/user_guide/administrative/app_settings/message_activity_log_tab/'>메시지 활동 로그</a></li><li><a href='/docs/user_guide/administrative/app_settings/event_user_log_tab/'>이벤트 사용자 로그</a></li></ul>{:/}|
 |워크스페이스|캠페인 승인 및 거부|사용자가 캠페인을 승인하거나 거부할 수 있습니다. 캠페인에 대한 [승인 워크플로우]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/approvals/)가 이 권한에 적용되도록 활성화되어야 합니다. 이 설정은 현재 초기 액세스 중입니다. 관심이 있으시면 조기 액세스에 참여하려면 계정 매니저에게 연락하세요.|
-|워크스페이스|캔버스 승인 및 거부|사용자가 캔버스를 승인하거나 거부할 수 있습니다. 캔버스에 대한 [승인 워크플로]({{site.baseurl}}/canvas_approval)가 이 권한에 적용되도록 설정되어야 합니다.|
+|워크스페이스|캔버스 승인 및 거부|사용자가 캔버스를 승인하거나 거부할 수 있습니다. The [approval workflow for Canvases]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/approvals/) must be turned on for this permission to apply.|
 |워크스페이스|커런츠 통합 편집|사용자가 자격 증명을 포함하여 커런츠 연결을 수정할 수 있습니다. 기본값으로, "외부 통합" 권한이 할당된 사용자에게도 이 권한이 할당됩니다.|
 |워크스페이스|세그먼트 편집|사용자가 세그먼트를 생성하고 편집할 수 있습니다. 이 권한 없이도 기존 세그먼트 및 필터로 캠페인을 계속 생성할 수 있습니다. CSV에 있는 사용자로부터 세그먼트를 생성하거나 CSV에 있는 사용자 그룹을 리타겟하기 위해 이 권한이 필요합니다.|
 |워크스페이스|사용자 데이터 내보내기|사용자가 세그먼트, 캠페인 및 캔버스에서 사용자 데이터를 내보낼 수 있습니다. This permission includes sensitive user information like names, email addresses, and other collected personally identifiable information (PII). |
@@ -136,20 +134,19 @@ Braze에서 사용자가 속한 각 워크스페이스에 대해 다른 권한�
 |워크스페이스|대시보드 사용자 관리| Allows non-admins the ability to view, edit, and manage the **Company Users** page, and manage the dashboard users in their workspace by modifying the permissions of any user, including themselves. Users with this permission can’t delete users (only administrators can delete users).|
 |워크스페이스|이메일 설정 관리|사용자가 이메일 구성 변경 사항을 저장할 수 있습니다 (**설정** > **이메일 환경설정**).|
 |워크스페이스|이벤트, 속성, 구매 관리|사용자가 커스텀 속성을 편집할 수 있도록 허용합니다(이 기능이 없는 사용자는 여전히 커스텀 속성을 볼 수 있음). 커스텀 이벤트의 속성을 편집 및 보기, **데이터 설정**에서 제품의 속성을 편집 및 보기.|
-|워크스페이스|외부 통합 관리|**기술 파트너** 아래의 모든 탭에 접근할 수 있으며 Braze를 다른 플랫폼과 동기화할 수 있는 기능을 제공합니다.|
+|워크스페이스|외부 통합 관리|Allows access to all tabs under **Technology Partners**, ability to sync Braze with other platforms, and access to manage [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/cloud_ingestion/).|
 |워크스페이스|피처 플래그 관리|사용자가 [기능 플래그]({{site.baseurl}}/developer_guide/feature_flags/)를 생성하거나 편집할 수 있습니다.|
 |워크스페이스|미디어 라이브러리 자산 관리|사용자가 미디어 라이브러리 자산을 추가, 편집 및 삭제할 수 있습니다.|
 |워크스페이스|구독 그룹 관리|사용자가 구독 그룹을 생성하고 관리할 수 있습니다.|
 |워크스페이스|태그 관리|사용자가 태그( **태그 관리** )를 편집하거나 삭제할 수 있습니다. 캠페인이나 세그먼트에 태그를 추가하려면 이 권한이 필요하지 않습니다.|
 |워크스페이스|팀 관리|사용자가 **내부 팀**을 관리할 수 있습니다. 이 권한을 선택할 수 있는 능력은 Braze와의 계약에 따라 다릅니다.|
 |워크스페이스|변환 관리|사용자가 데이터 변환을 생성하고 관리할 수 있습니다.|
-|워크스페이스|카드 게시|이 권한은 뉴스피드가 사용 중지되는 경우에만 계정이 활성화된 경우에만 표시됩니다. 이것은 콘텐츠 카드에 영향을 미치지 않습니다. 사용자가 뉴스피드 카드를 만들고 편집할 수 있습니다. 이 권한 없이도 뉴스피드 카드를 여전히 볼 수 있습니다. 계정이 뉴스피드에 대해 활성화되어 있고 사용자가 기존 콘텐츠 블록을 실행할 수 있어야 하는 경우, "카드 게시" 및 "콘텐츠 블록 실행" 권한이 모두 필요합니다.|
 |워크스페이스|캠페인, 캔버스 발송|사용자가 캠페인 및 캔버스를 편집, 보관 및 중지하고 캠페인을 생성하고 캔버스를 시작할 수 있습니다. |
 |워크스페이스|청구 상세정보 보기|사용자가 구독 및 청구를 볼 수 있습니다.|
 |워크스페이스|커런츠 통합 보기|사용자가 자격 증명을 제외한 Currents 연결에 대한 모든 정보를 볼 수 있도록 합니다. 기본값으로, "캠페인 액세스, 캔버스, 카드, 콘텐츠 블록, 기능 플래그, 세그먼트, 미디어 라이브러리, 위치, 프로모션 코드 및 환경 설정 센터" 권한이 할당된 사용자에게도 이 권한이 할당됩니다.|
 |워크스페이스|PII로 분류된 사용자 지정 속성 보기|Allows non-admin users to view custom attributes that contain sensitive information and are marked as personally identifiable information (PII).|
-|워크스페이스|PII 보기|Allows users to view personally identifiable information (PII) fields as defined by your company within the dashboard. 사용자는 메시지 미리 보기의 **사용자로 미리 보기** 탭에서 PII 필드를 볼 수도 있습니다.|
-|워크스페이스|사용자 프로필 PII 준수사항 보기|Allows users to view user profiles that contain fields your company has defined as personally identifiable information (PII), but redacts the PII fields. |
+|워크스페이스|PII 보기|Allows users to view personally identifiable information (PII) fields as defined by your company within the dashboard. 사용자는 메시지 미리 보기의 **사용자로 미리 보기** 탭에서 PII 필드를 볼 수도 있습니다.<br><br>You need this permission to use [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/building_queries/), because it allows direct access to some customer data.|
+|워크스페이스|사용자 프로필 PII 준수사항 보기|Allows users to view user profiles that contain fields your company has defined as personally identifiable information (PII), but redacts the PII fields.<br><br>You need this permission to use the user search tool. |
 |워크스페이스|변환 보기|Allows users to view [Braze Data Transformations]({{site.baseurl}}/user_guide/data/data_transformation/overview/).|
 |워크스페이스|사용 데이터 보기|사용자가 앱 사용량을 볼 수 있도록 하며, 채널 성능 대시보드를 포함합니다.|
 |워크스페이스|중복 사용자 병합|사용자가 중복된 사용자 프로필을 병합할 수 있습니다.|
@@ -158,4 +155,10 @@ Braze에서 사용자가 속한 각 워크스페이스에 대해 다른 권한�
 |워크스페이스|캔버스 템플릿 보기|사용자가 캔버스 템플릿을 볼 수 있도록 허용합니다.|
 |워크스페이스|캔버스 템플릿 아카이브|사용자가 캔버스 템플릿을 보관할 수 있습니다.|
 |워크스페이스|Manage Custom Event Property Segmentation|Allows users to create segments based on event property recency and frequency.|
+|워크스페이스|Publish Landing Pages|Allows users to publish [landing pages]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/).|
+|워크스페이스|Create Landing Page Drafts|Allows users to create and save landing page drafts.|
+|워크스페이스|Access Landing Pages|Allows users to access the **Landing Pages** page.|
+|워크스페이스|Create and Edit Landing Page Templates|Allows users to create and edit landing page templates.|
+|워크스페이스|View Landing Page Templates|Allows users to view landing page templates.|
+|워크스페이스|Archive Landing Page Templates|Allows users to archive landing page templates.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }

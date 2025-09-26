@@ -26,7 +26,7 @@ Los servicios de limpieza de listas de correo electrónico pueden hacer esto por
 
 Para identificar a tus usuarios más interactivos, elimina primero a los usuarios que hayan dejado de interactuar. Es una buena práctica no enviar correos electrónicos a usuarios que no hayan interactuado con un mensaje en más de seis meses, ya que esto puede dañar la reputación del remitente. Cuando importe su lista de correo electrónico, asegúrese de incluir sólo a usuarios que hayan abierto un correo suyo en los últimos seis meses.
 
-A largo plazo, también deberías plantearte aplicar una [política de extinción][60].
+A largo plazo, también deberías plantearte aplicar una [política de extinción]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/sunset_policies/).
 
 ### Evitar las listas de supresión
 
@@ -36,4 +36,3 @@ Si está realizando la transición desde un proveedor de correo electrónico exi
 
 Una vez que tenga su lista de correo electrónico preparada, hay varias formas de importar usuarios a Braze, como a través de la API REST de Braze o archivos CSV. Más información en nuestro artículo dedicado a [la importación de usuarios]({{site.baseurl}}/user_guide/data/user_data_collection/user_import/).
 
-[60]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/sunset_policies/

@@ -1,5 +1,5 @@
 ---
-nav_title: Untriggered Campaign or Canvas
+nav_title: Untriggered campaign or Canvas
 article_title: Untriggered Campaign or Canvas
 page_order: 5
 

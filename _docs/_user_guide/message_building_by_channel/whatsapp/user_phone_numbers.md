@@ -1,5 +1,5 @@
 ---
-nav_title: "User Phone Numbers"
+nav_title: "User phone numbers"
 article_title: WhatsApp User Phone Numbers
 page_order: 1.5
 description: "This reference article covers WhatsApp phone number formatting, how to importing phone numbers, as well as how to add users to WhatsApp subscription groups."

@@ -1,5 +1,5 @@
 ---
-nav_title: Canvas Delivery Issue
+nav_title: Canvas delivery issue
 article_title: Canvas Delivery Issue
 page_order: 0
 page_type: solution

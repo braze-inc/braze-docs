@@ -58,7 +58,7 @@ Los mensajes in-app a pantalla completa ocuparán toda la altura de un dispositi
 
 Al previsualizar un mensaje de la aplicación a pantalla completa en la plataforma Braze, puedes habilitar la zona segura de imagen en el área del mensaje que está a salvo de recortes cuando se muestra en otros dispositivos. Además de probar la zona segura de la imagen en el panel de vista previa, le recomendamos que [pruebe su mensaje]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) como siempre.
 
-![Vista previa de un mensaje in-app en Braze con la opción "Mostrar zona segura de imágenes" activada. La zona segura de la imagen es una superposición sobre la imagen que visualiza qué partes de la imagen estarán a salvo del recorte.][3c]
+![Vista previa de un mensaje in-app en Braze con la opción "Mostrar zona segura de imágenes" activada. La zona segura de la imagen es una superposición sobre la imagen que visualiza qué partes de la imagen estarán a salvo del recorte.]({% image_buster /assets/img/image-safe-zone-full-screen-in-app-message.png %})
 
 ## Pantallas más grandes
 
@@ -77,5 +77,3 @@ En una tableta o en un navegador de escritorio, aparecerá un mensaje a pantalla
 {% endtab %}
 {% endtabs %}
 
-[3b]: {% image_buster /assets/img/full-screen-large-viewport.png %}
-[3c]: {% image_buster /assets/img/image-safe-zone-full-screen-in-app-message.png %}

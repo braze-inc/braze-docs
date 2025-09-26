@@ -1,7 +1,7 @@
 ---
 nav_title: Creación de un segmento
 article_title: Creación de un segmento
-page_order: 1
+page_order: 0
 page_type: tutorial
 description: "Este artículo explica cómo configurar y crear un segmento con Braze."
 tool: Segments
@@ -25,7 +25,7 @@ Opcionalmente, puedes hacer lo siguiente:
 - Añade un [equipo]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) a tu segmento.
 - Añade [etiquetas]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) a tu segmento para organizarlo mejor.
 
-![Crear Segmento modal donde el segmento se llama "Usuarios Caducados" con la Descripción del Segmento como "Este es nuestro segmento principal de Usuarios Caducados para dirigirnos a los no activos en los últimos catorce días" con dos botones: Cancelar y Crear segmento.][2]{: style="max-width:70%;"}
+![Crear Segmento modal donde el segmento se llama "Usuarios Caducados" con la Descripción del Segmento como "Este es nuestro segmento principal de Usuarios Caducados para dirigirnos a los no activos en los últimos catorce días" con dos botones: Cancelar y crear segmento.]({% image_buster /assets/img_archive/segment_app_selection.png %}){: style="max-width:80%;"}
 
 ## Paso 3: Elija su aplicación o plataforma
 
@@ -33,7 +33,7 @@ Elige a qué aplicaciones o plataformas deseas dirigirte seleccionando **Usuario
 
 Por ejemplo, si quieres enviar un mensaje dentro de la aplicación solo a dispositivos iOS, selecciona tu aplicación iOS. De este modo, los usuarios que utilicen tanto un dispositivo iOS como Android sólo recibirán el mensaje en su dispositivo iOS. En la lista de aplicaciones específicas, la opción **Usuarios sin aplicaciones** permite incluir usuarios sin sesiones y sin datos de aplicaciones (normalmente creados mediante importación de usuarios o API REST).
 
-![Panel de detalles del segmento con la opción "Usuarios de todas las aplicaciones" seleccionada en la sección Aplicaciones utilizadas.][5]{: style="max-width:70%;"}
+![Panel de detalles del segmento con la opción "Usuarios de todas las aplicaciones" seleccionada en la sección Aplicaciones utilizadas.]({% image_buster /assets/img_archive/Segment2.png %}){: style="max-width:80%;"}
 
 ## Paso 4: Añade filtros a tu segmento
 
@@ -47,11 +47,9 @@ Braze no genera perfiles para los usuarios hasta que han utilizado la aplicació
 
 Los filtros se organizan en grupos de filtros. Cada filtro debe formar parte de un grupo de filtros que tenga como mínimo un filtro. Un segmento puede tener varios grupos de filtros. Para añadir uno, seleccione **Añadir grupo de filtros**. Edite el nombre del grupo de filtros seleccionando el icono que aparece al pasar el ratón junto a él.
 
-![Grupo de filtros con un icono de edición junto a su nombre.][14]{: style="max-width:70%;"}
+![Filtrar grupo con un icono de edición junto a su nombre.]({% image_buster /assets/img_archive/edit_filter_group_name.png %})
 
-Seleccione los iconos situados junto a cada filtro para contraer el editor de filtros, duplicar el filtro o eliminarlo. Después de duplicar un filtro, puede ajustar sus valores dentro de cada desplegable.
-
-También puede utilizar el icono dentro de cada grupo de filtros para duplicar ese grupo de filtros y los filtros que contiene, o eliminar ese grupo de filtros de su segmento.
+Selecciona los iconos situados junto a cada filtro para contraer el editor de filtros o duplicar filtros individuales. Después de duplicar un filtro, puede ajustar sus valores dentro de cada desplegable.
 
 #### Lógica de segmentación mediante AND y OR
 
@@ -73,7 +71,7 @@ Dependiendo del filtro específico que seleccione, dispondrá de distintos opera
 Braze no genera perfiles para los usuarios hasta que han utilizado la aplicación por primera vez, por lo que no puedes dirigirte a usuarios que aún no han abierto tu aplicación.
 {% endalert %}
 
-![Grupos de filtros segmentadores con el operador AND.][9]{: style="max-width:70%;"}
+![El segmentador filtra los grupos con el operador AND.]({% image_buster /assets/img_archive/segmenter_filter_groups.png %})
 
 {% alert important %}
 Los segmentos que ya utilizan el filtro **Pertenencia a segmento** no pueden incluirse ni anidarse en otros segmentos. Esto evita un ciclo en el que el segmento A incluye al segmento B, que a su vez intenta incluir de nuevo al segmento A. Si eso ocurriera, el segmento seguiría haciendo referencia a sí mismo, haciendo imposible calcular quién pertenece realmente a él.
@@ -91,13 +89,13 @@ Cree un grupo de exclusión añadiendo filtros como lo haría para los grupos de
 
 Los usuarios excluidos no se contabilizarán en la estadística _Total de usuarios accesibles_ de su segmento.
 
-![Un grupo de exclusión con dos filtros.][12]{: style="max-width:70%;"}
+![Un grupo de exclusión con dos filtros.]({% image_buster /assets/img_archive/segmenter_exclusion_groups.png %})
 
 #### Segmentos de prueba
 
 Después de añadir aplicaciones y filtros a su segmento, puede probar si su segmento está configurado como se esperaba buscando un usuario para confirmar si coincide con los criterios del segmento. Para ello, busque la dirección `external_id` o `braze_id` de un usuario en la sección **Búsqueda de usuarios**.
 
-![Sección de búsqueda de usuarios con un campo de búsqueda.][6]{: style="max-width:80%;"}
+![Sección de búsqueda de usuarios con un campo de búsqueda.]({% image_buster /assets/img_archive/user_lookup.png %})
 
 La búsqueda de usuarios está disponible cuando:
 - Crear un segmento
@@ -106,11 +104,11 @@ La búsqueda de usuarios está disponible cuando:
 
 Cuando un usuario coincida con los criterios de segmento, filtro y aplicación, se emitirá una alerta.
 
-![Una búsqueda de usuario "user007" desencadena una alerta que dice: "user007 coincide con todos los segmentos, filtros y aplicaciones".][7]{: style=" max-width:80%;"}
+![Una búsqueda de usuario "usuarioprueba" desencadena una alerta que dice: "usuarioprueba coincide con todos los segmentos, filtros y aplicaciones.]({% image_buster /assets/img_archive/user_lookup_match.png %})
 
 Cuando un usuario no coincide con parte o la totalidad de los criterios de segmento, filtro o aplicación, los criterios que faltan se enumeran a efectos de resolución de problemas.
 
-![Una búsqueda de usuario "user1234" desencadena una alerta que dice: "user1234 does not match the following targeting criteria:" y muestra dos criterios que faltan: una permanencia superior a un año y que hoy sea un aniversario.][8]{: style=" max-width:80%;"}
+![Una búsqueda de usuario con una alerta que dice: "test1 no coincide con los siguientes criterios de selección:" y muestra los criterios que faltan.]({% image_buster /assets/img_archive/user_lookup_nomatch.png %})
 
 #### Segmentos de usuario único
 
@@ -150,7 +148,7 @@ Al segmentar con filtros dependientes del dispositivo (modelo de dispositivo, si
 
 Puede especificar que sólo se envíe una notificación push a cada usuario. Al [redactar el mensaje]({{ssite.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message#step-4-compose-your-push-message), seleccione **Sólo enviar al último dispositivo utilizado por el usuario** en **Configuración adicional**.
 
-![][13]{: style="max-width:60%;"}
+!["Configuración adicional" con una casilla de verificación para que sólo se envíe al último dispositivo utilizado por el usuario.]({% image_buster /assets/img_archive/send_to_last_device.png %}){: style="max-width:60%;"}
 
 ### Consideraciones
 
@@ -160,15 +158,3 @@ Puede especificar que sólo se envíe una notificación push a cada usuario. Al 
     - Un usuario puede haber estado en su segmento objetivo en el momento del envío, pero debido a comportamientos asociados a cualquiera de sus dispositivos, puede no formar parte de ese segmento después. Esto puede dar lugar a que un usuario reciba una campaña o un Canvas aunque en ese momento no coincida con los criterios de filtrado. <br><br>Por ejemplo, un usuario podría recibir un mensaje dirigido a usuarios con una versión de aplicación más reciente de SO 10.0 aunque actualmente tengan SO 13.0. En este caso, el usuario tenía el SO 10.0 cuando se envió el mensaje y después actualizó a SO 13.0.<br><br> Del mismo modo, si un usuario utiliza más tarde un dispositivo con una versión diferente de la aplicación, su perfil de usuario se actualizará con la nueva versión más reciente de la aplicación. Esto puede hacer que parezca que el usuario no debería haber cumplido los requisitos para recibir el mensaje, aunque los cumpliera cuando se envió.
 
 
-[1]: {% image_buster /assets/img_archive/Segment1.png %}
-[2]: {% image_buster /assets/img_archive/Segment2.png %}
-[3]: {% image_buster /assets/img_archive/segment_step4.png %}
-[5]: {% image_buster /assets/img_archive/segment_app_selection.png %}
-[6]: {% image_buster /assets/img_archive/user_lookup.png %}
-[7]: {% image_buster /assets/img_archive/user_lookup_match.png %}
-[8]: {% image_buster /assets/img_archive/user_lookup_nomatch.png %}
-[9]: {% image_buster /assets/img_archive/segmenter_filter_groups.png %}
-[11]: {% image_buster /assets/img_archive/segmenter_and_or.png %}
-[12]: {% image_buster /assets/img_archive/segmenter_exclusion_groups.png %}
-[13]: {% image_buster /assets/img_archive/send_to_last_device.png %}
-[14]: {% image_buster /assets/img_archive/edit_filter_group_name.png %}

@@ -1,5 +1,5 @@
 ---
-nav_title: Objects & Filters
+nav_title: Objects & filters
 article_title: Objects and Filters
 page_order: 1.5
 description: "This landing page lists the Braze API objects and filters used in your Braze API calls."

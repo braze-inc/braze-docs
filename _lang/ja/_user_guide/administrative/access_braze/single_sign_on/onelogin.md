@@ -29,7 +29,7 @@ description: "この記事では、シングルサインオンに OneLogin を�
 2. 上部のナビゲーションバーの [**アプリ**] > [**アプリの追加**] に移動します。「Braze」を検索し、Braze アプリを選択します。![OneLogin での Braze の検索結果。]({% image_buster /assets/img/onelogin_2.jpg %})<br><br>
 3. Braze アプリを会社に保存します。![]({% image_buster /assets/img/onelogin_3.jpg %})<br><br>
 4. 保存したら [**Configuration**] に移動し、**Braze ドメイン**と **RelayState** API キーを追加します。![OneLogin の Braze アプリ用の [Configuration] タブ。]({% image_buster /assets/img/onelogin_4.png %})<br><br>
-5. Braze には、[特定の形式][1]の SAML アサーションが必要です。Braze によりサポートされる [**パラメーター**] の 属性は事前入力されます。それらが正しいことを確認します。![OneLogin の Braze SAML パラメーター。]({% image_buster /assets/img/onelogin_5.jpg %})<br><br>
+5. Braze には、[特定の形式]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up/#configure-your-identity-provider)の SAML アサーションが必要です。Braze によりサポートされる [**パラメーター**] の 属性は事前入力されます。それらが正しいことを確認します。![OneLogin の Braze SAML パラメーター。]({% image_buster /assets/img/onelogin_5.jpg %})<br><br>
 6. [**SSO**] タブから、Braze ダッシュボードの設定に必要な**証明書**と **SAML 2.0 エンドポイント (HTTP)** をコピーします。![OneLogin で Braze アプリの [SSO] タブからコピーする証明書。]({% image_buster /assets/img/onelogin_6.jpg %})
 
 ### ステップ2:Braze での OneLogin の構成
@@ -47,10 +47,9 @@ OneLogin で Braze を設定すると、ターゲット URL (`SAML 2.0 Endpoint 
 | `Certificate` | PEM エンコードされた `x.509` 証明書は OneLogin から提供されます。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-![Braze の [セキュリティ設定] を開き、SAML SSO の詳細を追加している動画。]({% image_buster /assets/img/samlsso.gif %})
+![トグルが選択された SAML SSO 設定。]({% image_buster /assets/img/samlsso.png %})
 
 {% alert tip %}
 Braze アカウントユーザーを SAML SSO でのみサインイン可能にする場合は、[**会社の設定**] ページから[シングルサインオン認証を制限]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up/#restriction)できます。
 {% endalert %}
 
-[1]: {{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up/#configure-your-identity-provider

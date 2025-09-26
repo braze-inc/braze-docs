@@ -1,5 +1,5 @@
 ---
-nav_title: Create a Campaign
+nav_title: Create a campaign
 article_title: Create a Campaign
 layout: dev_guide
 page_order: 0

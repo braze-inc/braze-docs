@@ -1,5 +1,5 @@
 ---
-nav_title: Feature Flag Experiments
+nav_title: Feature flag experiments
 article_title: Feature Flag Experiments
 page_order: 40
 description: "Feature flag experiments let you A/B test changes to your applications to optimize conversion rates."

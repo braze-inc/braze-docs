@@ -1,5 +1,5 @@
 ---
-nav_title: Transactional Email Campaigns
+nav_title: Transactional email campaigns
 article_title: Transactional Email Campaigns
 page_order: 10
 

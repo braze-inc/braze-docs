@@ -88,7 +88,7 @@ Selecione **\+ Add New Header** para cada um dos seguintes cabeçalhos de solici
 {: start="4" }
 4\. Selecione **Salvar modelo**.
 
-![Um modelo de webhook preenchido para criar um lead.][6]{: style="max-width:70%;"}
+![Um modelo de webhook preenchido para criar um lead.]({% image_buster /assets/img/b2b/create_lead_webhook.png %}){: style="max-width:70%;"}
  
 ## Atualização de um lead no Salesforce Sales Cloud {#updating-lead}
 
@@ -141,7 +141,7 @@ Selecione **\+ Add New Header** para cada um dos seguintes cabeçalhos de solici
 {: start="4"}
 4\. Selecione **Salvar modelo**.
 
-![Um modelo de webhook preenchido para atualizar um lead.][7]{: style="max-width:70%;"}
+![Um modelo de webhook preenchido para atualizar um lead.]({% image_buster /assets/img/b2b/update_lead_webhook.png %}){: style="max-width:70%;"}
 
 ## Uso desses webhooks em um fluxo de trabalho operacional
 
@@ -154,7 +154,7 @@ Você pode adicionar rapidamente seus modelos a seus fluxos de trabalho operacio
 
 Para criar um lead no Salesforce quando um usuário fornece seu endereço de e-mail, é possível criar uma campanha que use o modelo de webhook "Atualizar lead" e dispare quando um usuário adicionar seu endereço de e-mail (por exemplo, preencher um formulário da Web).
 
-![Etapa 2 da criação de uma campanha baseada em ação e com a ação-gatilho "Adicionar um endereço de e-mail".][1]{: style="max-width:70%;"}
+![Etapa 2 da criação de uma campanha baseada em ação e com a ação-gatilho de "Adicionar um endereço de e-mail".]({% image_buster /assets/img/b2b/salesforce_create_campaign.png %}){: style="max-width:70%;"}
 
 ### Canva de pontuação de leads para ultrapassar o limite de Leads Qualificados de Marketing (MQL) {#lead-scoring}
 
@@ -167,21 +167,21 @@ Adicione uma etapa subsequente à sua atualização de usuário para verificar s
 1. Adicione uma etapa de **Jornada do público** com dois grupos: "Limite de MQL" e "Todos os demais".
 2. No grupo "MQL Threshold" (Limite de MQL), procure todos os usuários que atualmente não tenham um status de "MQL" (por exemplo, `lead_stage` é igual a "Lead"), mas que tenham uma pontuação de lead acima do limite definido (por exemplo, `lead_score` maior que 50). Em caso afirmativo, eles avançam para a próxima etapa; em caso negativo, saem.
 
-![O grupo de jornada do público "MQL Threshold" com filtros para `lead_stage` igual a "Lead" e `lead_score` maior que "50".][2]{: style="max-width:70%;"}
+![O grupo de jornada do público "MQL Threshold" com filtros para um `lead_stage` igual a "Lead" e um `lead_score` maior que "50".]({% image_buster /assets/img/b2b/salesforce_check_mql.png %}){: style="max-width:70%;"}
 
 {: start="3" }
 3\. Adicione uma etapa de **atualização de usuário** que atualize o valor do atributo `lead_stage` do usuário para "MQL".
 
-![A etapa de atualização do usuário "Update to MQL" que atualiza a atribuição `lead_stage` para ter um valor de "MQL".][3]{: style="max-width:70%;"}
+![A etapa de atualização do usuário "Update to MQL" que atualiza o atributo `lead_stage` para ter um valor de "MQL".]({% image_buster /assets/img/b2b/salesforce_update_mql.png %}){: style="max-width:70%;"}
 
 {: start="4" }
 4\. Adicione uma etapa de webhook que atualize o Salesforce com a nova etapa de MQL.
 
-![A etapa do webhook "Update Salesforce" com os detalhes concluídos.][4]{: style="max-width:70%;"}
+![A etapa do webhook "Update Salesforce" com detalhes concluídos.]({% image_buster /assets/img/b2b/salesforce_webhook.png %}){: style="max-width:70%;"}
 
 Agora seu fluxo do Canvas Flow atualizará os usuários que ultrapassaram seu limite de MQL!
 
-![Uma etapa de atualização do usuário do Canva que verifica se um usuário ultrapassa o limite de MQL e, se o usuário for aprovado, atualiza o Salesforce.][5]{: style="max-width:50%;"}
+![Uma etapa de atualização do usuário do Canva que verifica se um usuário ultrapassa o limite de MQL e, se o usuário for aprovado, atualiza o Salesforce.]({% image_buster /assets/img/b2b/salesforce_canvas.png %}){: style="max-width:50%;"}
 
 ## Solução de problemas
 
@@ -189,13 +189,5 @@ Esses fluxos de trabalho têm capacidade limitada de depuração no Salesforce, 
 
 Por exemplo, um erro causado por um URL inválido usado para recuperação de token oAuth seria exibido como `https://[insert_instance_name].my.salesforce.com/services/oauth2/token is not a valid URL`.
 
-![Um corpo de resposta de erro informando que o URL não é um URL válido.][8]
+![Um corpo de resposta de erro informando que o URL não é um URL válido.]({% image_buster /assets/img/b2b/error_message_invalid_url.png %})
 
-[1]: {% image_buster /assets/img/b2b/salesforce_create_campaign.png %}
-[2]: {% image_buster /assets/img/b2b/salesforce_check_mql.png %}
-[3]: {% image_buster /assets/img/b2b/salesforce_update_mql.png %}
-[4]: {% image_buster /assets/img/b2b/salesforce_webhook.png %}
-[5]: {% image_buster /assets/img/b2b/salesforce_canvas.png %}
-[6]: {% image_buster /assets/img/b2b/create_lead_webhook.png %}
-[7]: {% image_buster /assets/img/b2b/update_lead_webhook.png %}
-[8]: {% image_buster /assets/img/b2b/error_message_invalid_url.png %}

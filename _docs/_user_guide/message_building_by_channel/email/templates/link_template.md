@@ -1,5 +1,5 @@
 ---
-nav_title: Link Templates
+nav_title: Link templates
 article_title: Link Templates
 page_order: 4
 description: "This article covers how to create different types of link templates in your emails."

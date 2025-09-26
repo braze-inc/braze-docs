@@ -106,7 +106,7 @@ Les valeurs autorisées pour le tableau sont les suivantes :
 
 - `identified`
 - `unidentified`
-- `most_recently_updated` (priorité à l'utilisateur le plus récemment mis à jour)
+- `most_recently_updated` (Priorité à l'utilisateur le plus récemment mis à jour)
 - `least_recently_updated` (Priorité à l'utilisateur le moins récemment mis à jour)
 
 Une seule des options suivantes peut exister à la fois dans le tableau de priorisation :

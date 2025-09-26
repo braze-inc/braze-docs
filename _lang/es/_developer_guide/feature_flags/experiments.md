@@ -21,6 +21,9 @@ Antes de que puedas hacer un seguimiento de los datos de usuario en el experimen
 
 Para saber más sobre el registro de impresiones de feature flags, consulta [Crear feature flags]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/create/#impressions).
 
+{% tabs %}
+{% tab JavaScript %}
+
 ```javascript
 const featureFlag = braze.getFeatureFlag("my-new-feature");
 braze.logFeatureFlagImpression("my-new-feature");
@@ -29,8 +32,36 @@ if (featureFlag?.enabled) {
 } else {
    return <ExistingFeature />
 }
-
 ```
+
+{% endtab %}
+{% tab Java %}
+
+```java
+FeatureFlag featureFlag = braze.getFeatureFlag("my-new-feature");
+braze.logFeatureFlagImpression("my-new-feature");
+if (featureFlag != null && featureFlag.getEnabled()) {
+  return new NewFeature();
+} else {
+  return new ExistingFeature();
+}
+```
+
+{% endtab %}
+{% tab Kotlin %}
+
+```kotlin
+val featureFlag = braze.getFeatureFlag("my-new-feature")
+braze.logFeatureFlagImpression("my-new-feature")
+if (featureFlag?.enabled == true) {
+  return NewFeature()
+} else {
+  return ExistingFeature()
+}
+```
+
+{% endtab %}
+{% endtabs %}
 
 ## Crear un experimento de bandera de características
 
@@ -56,7 +87,7 @@ Para editar, añadir o eliminar propiedades predeterminadas adicionales, edita l
 
 ### Paso 4: Elige los usuarios a los que dirigirte
 
-Utiliza uno de tus segmentos o filtros para elegir a tus [usuarios objetivo]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/). Por ejemplo, puedes utilizar el filtro **Variante de indicador de característica recibida** para reorientar a los usuarios que ya han recibido una prueba A/B.
+Utiliza uno de tus segmentos o filtros para elegir a tus [usuarios objetivo]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/). Por ejemplo, puedes utilizar el filtro **Variante de indicador de característica recibida** para reorientar a los usuarios que ya han recibido una prueba A/B.
 
 ![La página "Objetivo" en un experimento de bandera de característica con "Variante de bandera de característica recibida" resaltada en la barra de búsqueda del grupo de filtrado.]({% image_buster /assets/img/feature_flags/variant-filter-dropdown.png %}){: style="max-width:70%"}
 

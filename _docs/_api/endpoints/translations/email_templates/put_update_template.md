@@ -1,5 +1,5 @@
 ---
-nav_title: "PUT: Update Translations for an Email Template"
+nav_title: "PUT: Update translations for an email template"
 article_title: "PUT: Update Translations for an Email Template"
 search_tag: Endpoint
 page_order: 4

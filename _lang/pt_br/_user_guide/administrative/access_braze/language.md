@@ -18,7 +18,7 @@ O dashboard do Braze está disponível em [vários idiomas](#supported-languages
 1. No cabeçalho global, clique em <i class="fa-solid fa-globe" aria-label="Selecione seu idioma"></i>.
 2. Escolha seu idioma na lista.
 
-![][1]{: style="max-width:60%"}
+![]({% image_buster /assets/img_archive/language_dashboard.png %}){: style="max-width:60%"}
 
 Pode levar alguns minutos para que o dashboard seja recarregado.
 
@@ -58,4 +58,3 @@ If you have limited permissions, your notification language is set to the defaul
 
 -->
 
-[1]: {% image_buster /assets/img_archive/language_dashboard.png %}

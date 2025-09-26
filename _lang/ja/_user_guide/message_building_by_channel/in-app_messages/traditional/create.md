@@ -8,6 +8,7 @@ channel:
 tool:
   - Campaigns
 search_rank: 4.8
+toc_headers: h2
 ---
 
 # アプリ内メッセージを作成する
@@ -66,9 +67,13 @@ search_rank: 4.8
 
 送信プラットフォームを選択したら、そのプラットフォームに関連するメッセージタイプ、レイアウト、その他のオプションを参照します。各メッセージの期待される動作や見た目については、[クリエイティブの詳細]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/)ページで、または以下の表のリンク先のメッセージタイプをクリックして詳細を確認してほしい。
 
-使用するメッセージタイプを決める際には、アプリ内メッセージキャンペーンでどの程度強く売り込む必要があるかを検討する必要があります。これは、メッセージがどれだけの画面領域を占め、お客様のアプリやサイトにおける顧客の通常の体験がどの程度妨げられるかを示す指標です。配信したいコンテンツがリッチになればなるほど、メッセージはより押しつけがましくなる。
+使用するメッセージタイプを決定するときには、メッセージが占めるスペースの大きさと、ユーザーエクスペリエンスでどの程度邪魔に感じられるかを考慮してください。
 
-![侵入性のスケールを示すグラフィック。スライダーが最も侵入性が低く、次にモーダル、そして全画面表示では最も侵入性が高くなります]({% image_buster /assets/img_archive/iam_intrusive.png %}){: style="max-width:80%" }
+- **スライドアップ**メッセージは最も新入生が低く、コンテンツをブロックすることなく、さりげなく表示されます。
+- **モーダル**メッセージは中央に表示され、注意を引くのに十分な程度で目立ちますが、画面全体を占めることがありません。
+- **フルスクリーン**メッセージは最も注目を集めるため、重要な告知やプロモーションに最適です。
+
+コンテンツが複雑なほど、より多くのスペースが必要になり、メッセージングがユーザーのフローを妨げる可能性が高くなります。
 
 ### メッセージの種類
 
@@ -176,13 +181,13 @@ Brazeが、あなたのコードに閉じるボタンや終了ボタンが含ま
 
 **Compose**タブでは、メッセージの内容と動作のあらゆる面を編集できる。
 
-![新しい顧客を歓迎し、ユーザープロファイルを設定するように促す、サンプルブランドのアプリ内メッセージ。][24]{: style="max-width:85%" }
+![新しい顧客を歓迎し、ユーザープロファイルを設定するように促す、サンプルブランドのアプリ内メッセージ。]({% image_buster /assets/img_archive/iam_compose.png %}){: style="max-width:85%" }
 
 **Compose」**タブの内容は、前のステップで選択したメッセージ・オプションによって異なるが、以下のオプションのいずれかを含むことができる：
 
 ### 言語
 
-**Add Languages**を選択し、表示されたリストから目的の言語を選択します。これで、[Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#conditional-logic) がメッセージに挿入されます。コンテンツを記述する前に言語を選択することをお勧めします。これにより、Liquid 内の適切な場所にテキストを入力することができます。私たちの[利用可能な言語の完全なリストを参照してください][18] 。
+**Add Languages**を選択し、表示されたリストから目的の言語を選択します。これで、[Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#conditional-logic) がメッセージに挿入されます。コンテンツを記述する前に言語を選択することをお勧めします。これにより、Liquid 内の適切な場所にテキストを入力することができます。[利用可能な言語の一覧を]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported)見る。
 
 ### 画像
 
@@ -198,7 +203,7 @@ Brazeが、あなたのコードに閉じるボタンや終了ボタンが含ま
 
 ##### AI コピーの生成
 
-魅力的な文章を作成するためのサポートが必要な場合は、[AI コピーライティングアシスタント]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/)を使用してみてください。商品名や説明を入力すると、AIが人間のようなマーケティングコピーを生成し、メッセージングに使用する。
+魅力的な文章を作成するためのサポートが必要な場合は、[AI コピーライティングアシスタント]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/)を使用してみてください。商品名や説明を入力すると、AIが人間のようなマーケティングコピーを生成し、メッセージングに使用する。
 
 ![アプリ内メッセージ作成画面のメッセージフィールドにある [AI コピーライター] ボタンをクリックします。]({% image_buster /assets/img/ai_copywriter/ai_copywriter_iam.png %}){: style="max-width:60%"}
 
@@ -210,13 +215,15 @@ Brazeが、あなたのコードに閉じるボタンや終了ボタンが含ま
 
 メッセージタイプで利用可能な場合、テキストの本文の下に最大 2 つのボタンを表示できます。カスタムボタンのテキストと色を作成、編集できる。また、メールキャプチャフォーム内にサービス使用条件のリンクを追加することもできます。
 
-![アプリ内メッセージのプライマリボタンとセカンダリボタン]({% image_buster /assets/img/primary-secondary-buttons.png %}){: style="float:right;margin-left:15px;height:30%;width:30%"}
-
 ボタンを1つしか使用しない場合、追加ボタンを設置するスペースは確保されず、メッセージ下部の空いているスペースに自動的に調整される。
 
 #### プライマリボタンの選択
 
-これらのボタンを独自の色でフォーマットする場合は、ボタン2を使用することをお勧めする。言い換えれば、ユーザーにどちらかのボタンをより多くクリックしてもらいたいのであれば、それが右側にあることを確認する。一般に、右側のボタンはクリックされる可能性が高くなります。特に、メッセージの残りの部分とは若干対照的な色や、目立つ色を使うとその可能性が高まります。この効果は、左側のボタンの外観がメッセージにより溶け込んでいる場合にはさらに強くなります。
+これらのボタンを独自の色でフォーマットする場合は、ボタン2を使用することをお勧めする。
+
+言い換えれば、ユーザーにどちらかのボタンをより多くクリックしてもらいたいのであれば、それが右側にあることを確認する。一般に、右側のボタンはクリックされる可能性が高くなります。特に、メッセージの残りの部分とは若干対照的な色や、目立つ色を使うとその可能性が高まります。この効果は、左側のボタンの外観がメッセージにより溶け込んでいる場合にはさらに強くなります。
+
+![アプリ内メッセージのプライマリボタンとセカンダリボタン]({% image_buster /assets/img/primary-secondary-buttons.png %})
 
 ### クリック時動作 {#button-actions}
 
@@ -267,7 +274,7 @@ Brazeが、あなたのコードに閉じるボタンや終了ボタンが含ま
 
 | フォーマット | インプット | 説明 |
 |---|---|---|
-|[カラープロフィール]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/color_profiles_and_css) | アプリ内のメッセージテンプレートギャラリーから申し込む。 | **Apply Templateを**選択し、ギャラリーから選択する。次に、**Save**を選択します。 |
+|[カラープロフィール]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/color_profiles_and_css) | アプリ内のメッセージテンプレートギャラリーから申し込む。 | [**テンプレートを適用**] をクリックし、ギャラリーから選択します。次に、**Save**を選択します。 |
 |文字揃え | 左、中央、または右。  | 新しいBraze SDKバージョンでのみ使用可能。 |
 |ヘッダー | HEXカラーコード。 | 希望のHEXカラーが表示される。色の不透明度も選択できます。  |
 |テキスト | HEXカラーコード。 | 希望のHEXカラーが表示される。色の不透明度も選択できます。 |
@@ -288,7 +295,7 @@ Brazeが、あなたのコードに閉じるボタンや終了ボタンが含ま
 
 ### キーと値のペア
 
-[キーと値のペア][19] を追加して、ユーザーのデバイスに追加のカスタムフィールドを送ることができます。
+[キーと値のペア]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/)を追加して、ユーザーのデバイスに追加のカスタムフィールドを送ることができます。
 
 ## ステップ 7:キャンペーンまたはキャンバスの残りの部分を作成する
 
@@ -344,7 +351,7 @@ Brazeが、あなたのコードに閉じるボタンや終了ボタンが含ま
 
 #### ターゲットとするユーザーを選択する
 
-次に、セグメントまたはフィルターを選択し、オーディエンスを絞り込んで、[ターゲットのユーザーを設定]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/)する必要があります。セグメントのおおよその人数について現在の状態を示すスナップショットが自動的に表示されます。正確なセグメントメンバーシップは常にメッセージが送信される直前に計算されることに注意してください。
+次に、セグメントまたはフィルターを選択し、オーディエンスを絞り込んで、[ターゲットのユーザーを設定]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/)する必要があります。セグメントのおおよその人数について現在の状態を示すスナップショットが自動的に表示されます。正確なセグメントメンバーシップは常にメッセージが送信される直前に計算されることに注意してください。
 
 {% alert note %}
 アプリ内メッセージのステップに遅延がある場合、セグメントメンバーシップは遅延後に評価される。ユーザーが適格である場合、アプリ内メッセージは次の利用可能なセッションで同期されます。
@@ -354,7 +361,7 @@ Brazeが、あなたのコードに閉じるボタンや終了ボタンが含ま
 
 シナリオによっては、アプリ内メッセージの表示をトリガーとして、ユーザーの適格性を再評価したい場合がある。例えば、頻繁に変更されるカスタム属性をターゲットにしたキャンペーンや、直前のプロフィール変更を反映すべきメッセージなどがある。
 
-![ターゲットユーザーステップのオーディエンスサマリーセクションで、「表示前にキャンペーンの適格性を再評価する」オプションが選択されている。]({% image_buster /assets/img_archive/re-evaluate-iam-membership.png %})
+![[表示する前にキャンペーンの適格性を再評価する] チェックボックスが選択されている。]({% image_buster /assets/img_archive/re-evaluate-iam-membership.png %}){:style="max-width:60%"}
 
 **表示前にキャンペーンの適格性を再評価する**]を選択すると、送信前にユーザーがまだこのメッセージの適格者であることを確認するために、Brazeに追加のリクエストが行われる。加えて、[リキッド]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/)変数や[コネクテッドコンテンツは]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/)、メッセージが表示される前に、その時点でテンプレート化される。
 
@@ -401,11 +408,3 @@ Braze は信頼性とスピードを重視しています。必要なデータ�
 200 カウントには、まだ終了時刻に達していないアクティブなアプリ内メッセージキャンペーンと終了時刻がないものが含まれます。終了時刻を過ぎたアクティブなアプリ内メッセージキャンペーンはカウントされません。平均的なBrazeの顧客は、一度に合計26のキャンペーンをアクティブにしているため、この制限が影響を与える可能性は低い。
 
 
-[2]: {% image_buster /assets/img/iam-generations.gif %}
-[16]: {{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/
-[18]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported
-[19]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/
-[24]: {% image_buster /assets/img_archive/iam_compose.png %}
-[25]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/
-[26]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/
-[27]: {% image_buster /assets/img_archive/re-evaluate-iam-membership.png %}

@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [Adjust](https://www.adjust.com/) は、モバイルアトリビューションおよび分析を扱う企業です。広告ソースのアトリビューションと高度な分析を組み合わせ、総合的なビジネスインテリジェンスを提供しています。
 
-_この統合はAdjustによって維持されている。_
+_この統合は Adjust によって管理されます。_
 
 ## 統合について
 
@@ -33,10 +33,10 @@ BrazeとAdjustの統合により、オーガニックインストール以外の
 
 #### Android
 
-Androidアプリをお持ちの場合は、一意のBrazeデバイスIDをAdjustに渡す必要があります。この ID は、Adjust SDK の`addSessionPartnerParameter()`メソッドで設定できます。`Adjust.onCreate.` で SDK を初期化する前に、次のコードスニペットを含める必要があります。
+Androidアプリをお持ちの場合は、一意のBrazeデバイスIDをAdjustに渡す必要があります。この ID は、Adjust SDK の`addGlobalPartnerParameter()`メソッドで設定できます。`Adjust.initSdk.` で SDK を初期化する前に、次のコードスニペットを含める必要があります。
 
 ```
-Adjust.addSessionPartnerParameter("braze_device_id", Braze.getInstance(getApplicationContext()).getDeviceId()););
+Adjust.addGlobalPartnerParameter("braze_device_id", Braze.getInstance(getApplicationContext()).getDeviceId()););
 ```
 
 #### iOS
@@ -56,7 +56,7 @@ If set to `true`, you must implement the iOS device ID mapping for Swift to pass
 
 iOSアプリがあれば、IDFVはAdjustによって収集され、Brazeに送信される。このIDは、Brazeで一意のデバイスIDにマッピングされる。
 
-[iOSアップグレードガイドに]({{site.baseurl}}/developer_guide/platforms/swift/ios_18/)記載されているように、IDFAをBrazeで収集している場合、BrazeはオプトインしたユーザーのIDFA値を引き続き保存する。このようにしないと、ユーザーをマッピングするためのフォールバック識別子として IDFV が使用されます。
+[iOS アップグレードガイド]({{site.baseurl}}/developer_guide/platforms/swift/ios_18/)で説明されているように、IDFA を Braze で収集している場合も、Braze はオプトインしたユーザーの IDFA 値を保存します。このようにしないと、ユーザーをマッピングするためのフォールバック識別子として IDFV が使用されます。
 
 {% endtab %}
 {% tab Swift %}
@@ -74,7 +74,7 @@ AdjustからBrazeにインストール後のイベントを送信する予定が
 
 Brazeで [**統合**] > [**テクノロジーパートナー**] に移動し、[**Adjust**] を選択します。 
 
-ここでは、REST エンドポイントが見つかり、Brazeデータインポートキーが生成されます。キーが生成されたら、新しいキーを作成するか、既存のキーを無効にできます。データインポートキーとRESTエンドポイントは、Adjustのダッシュボードでポストバックを設定する際に次のステップで使用される。<br><br>![Adjust テクノロジーページにある「インストールアトリビューションのデータインポート」ボックス。このボックスには、データインポートキーと REST エンドポイントが表示されている。][1]{: style="max-width:90%;"}
+ここでは、REST エンドポイントが見つかり、Brazeデータインポートキーが生成されます。キーが生成されたら、新しいキーを作成するか、既存のキーを無効にできます。データインポートキーとRESTエンドポイントは、Adjustのダッシュボードでポストバックを設定する際に次のステップで使用される。<br><br>![Adjust テクノロジーページにある「インストールアトリビューションのデータインポート」ボックス。このボックスには、データインポートキーと REST エンドポイントが表示されます。]({% image_buster /assets/img/attribution/adjust.png %}){: style="max-width:90%;"}
 
 ### ステップ3:Adjust で Braze を設定する
 
@@ -141,5 +141,3 @@ idfv={{most_recently_used_device.${id}}}
 {% endalert %}
 
 
-[1]: {% image_buster /assets/img/attribution/adjust.png %}
-[2]: {% image_buster /assets/img/attribution/adjust2.png %}

@@ -1,5 +1,5 @@
 ---
-nav_title: SAML Just-in-Time Provisioning
+nav_title: SAML Just-in-Time provisioning
 article_title: SAML Just-in-Time Provisioning
 page_order: 1
 page_type: tutorial

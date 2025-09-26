@@ -1,5 +1,5 @@
 ---
-nav_title: Message Formats
+nav_title: Message formats
 article_title: Push Message and Image Formats
 page_order: 5
 page_type: reference

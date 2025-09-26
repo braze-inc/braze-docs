@@ -18,7 +18,7 @@ Pour afficher un rapport pour votre [Global Control Group]({{site.baseurl}}/user
 
 Ensuite, sélectionnez le paramètre avec lequel vous souhaitez exécuter votre rapport (sessions ou événement personnalisé particulier) et sélectionnez **Exécuter le rapport.**
 
-![][6]
+![]({% image_buster /assets/img/control_group/control_group6.png %})
 
 ## Configuration de votre rapport
 
@@ -49,4 +49,3 @@ Chaque espace de travail comporte au maximum un groupe de contrôle global et un
 | Événements par utilisateur | L’estimation en moyenne du nombre de fois que les utilisateurs de chaque groupe ont effectué vos événements de conversion pendant la période sélectionnée. | Total des événements ÷ taille estimée du groupe. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-[6]: {% image_buster /assets/img/control_group/control_group6.png %}

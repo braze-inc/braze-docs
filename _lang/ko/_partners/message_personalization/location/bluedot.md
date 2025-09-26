@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Bluedot](https://bluedot.io/)은 앱에 정확하고 간단한 지오펜싱 플랫폼을 제공하는 위치 플랫폼입니다. Bluedot의 SDK를 사용하여 더 스마트하게 메시지를 보내고, 모바일 주문 체크인을 자동화하고, 워크플로를 최적화하고, 원활한 경험을 만들 수 있습니다. 
 
+_This integration is maintained by Bluedot._
+
+## 통합 정보
+
 Braze와 Bluedot의 통합을 통해 Bluedot 지오펜스 위치 서비스를 사용하여 여정, 캠페인을 구축하고 고객의 행동과 관심사를 분석하는 데 사용할 수 있는 사용자 이벤트를 생성할 수 있습니다. 사용자가 기기에서 생성한 이벤트(진입/종료)는 모든 관련 정보와 함께 Braze로 즉시 전송됩니다. 
 
 ## 전제 조건
@@ -53,3 +57,4 @@ Bluedot SDK에서 생성된 위치 이벤트에 따라 작동하는 푸시 캠�
 
 워크스페이스에 대해 **모든 사용자**를 타겟팅해야 합니다.
 ![원하는 세그먼트로 '모든 사용자'를 선택하도록 장려하는 타겟 사용자 단계를 포함하는 실행 기반 캠페인.]({%image_buster /assets/img_archive/Campaign-Target_users-BD.png %}){: style="max-width:80%"}
+

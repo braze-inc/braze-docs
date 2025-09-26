@@ -89,7 +89,7 @@ SDK를 업그레이드한 후에는 모바일 사용자가 앱을 업그레이�
   <tr>
     <td class="leftHeader">오디언스</td>
     <td class="tg-0pky">Braze는 캠페인이 전송될 때 오디언스 멤버십을 평가합니다.<br><br>신규 또는 익명 사용자는 캠페인이 전송된 후 카드를 보려고 시도하는 경우 자격 여부를 평가하지 않습니다. 반복 캠페인의 경우 다음 반복 간격이 됩니다.</td>
-    <td class="tg-0pky">Braze는 사용자가 다음에 앱을 열 때(세션 시작, <a href="#campaign_note">캠페인만 해당*</a>) 멤버십을 평가합니다.<br><br> 이 설정은 신규 또는 익명 사용자가 카드를 보려고 할 때 항상 적격성 여부를 평가하기 때문에 더 많은 오디언스에게 도달할 수 있습니다. 또한 노출 횟수<a href="#campaign_note">(캠페인만 해당*)</a>로 설정한 경우 사용량 제한조치(캠페인을 받을 수 있는 사람 수 제한)는 적용되지 않습니다.</td>
+    <td class="tg-0pky">Braze는 사용자가 다음에 앱을 열 때(세션 시작, <a href="#campaign_note">캠페인만 해당*</a>) 멤버십을 평가합니다.<br><br> 이 설정은 신규 또는 익명 사용자가 카드를 보려고 할 때 항상 적격성 여부를 평가하기 때문에 더 많은 오디언스에게 도달할 수 있습니다. <br><br>또한 노출 횟수<a href="#campaign_note">(캠페인만 해당*)</a>로 설정한 경우 사용량 제한조치(캠페인을 받을 수 있는 사람 수 제한)는 적용되지 않습니다.</td>
   </tr>
   <tr>
     <td class="leftHeader">개인화</td>
@@ -127,6 +127,3 @@ Braze는 캠페인이 시작된 후에는 카드 생성 방식을 변경하지 �
 
 사용자의 앱이 이전 버전의 SDK를 실행 중인 경우에도 지정된 카드 생성과 함께 전송된 콘텐츠 카드를 받게 됩니다. 그러나 이러한 사용자에게는 카드가 표시되는 데 시간이 더 오래 걸리며 다음 콘텐츠 카드 동기화 때까지 표시되지 않을 수 있습니다.
 
-[1]: {% image_buster /assets/img_archive/card_creation.png %}
-[2]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/
-[3]:https://www.braze.com/resources/articles/whats-an-app-session-anyway

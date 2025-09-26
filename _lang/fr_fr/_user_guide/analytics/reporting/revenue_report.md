@@ -16,7 +16,7 @@ Pour afficher un rapport sur vos chiffres d'affaires à partir du tableau de bor
 
 Vous pouvez personnaliser votre rapport du chiffre d'affaires en sélectionnant une plage de dates, les applications sur lesquelles portera le rapport, ainsi que des paramètres.
 
-![Page « Rapport de chiffre d’affaires » montrant le graphique « Évolution des performances » avec « Chiffre d’affaires » comme paramètre.][1]
+![La page "Rapport d'affaires" montre le graphique "Performance dans le temps" avec "Recettes" comme paramètre.]({% image_buster /assets/img/revenue_report.png %})
 
 ### Filtrage par date et par application
 
@@ -80,8 +80,6 @@ Vous pouvez visualiser les données suivantes dans le **graphique des performanc
 
 Consultez le tableau **Ventilation des produits** pour obtenir la liste des produits achetés au cours de la période sélectionnée, le nombre de produits achetés et le chiffre d'affaires généré par chacun d'entre eux.
 
-![Tableau « Ventilation des produits » affichant les colonnes « Nom du produit », « Achetés » et « Chiffre d'affaires ».][2]
+![Le tableau "Ventilation des produits" présente les colonnes "Nom du produit", "Achats" et "Chiffre d'affaires".]({% image_buster /assets/img/revenue_report_product_breakdown.png %})
 
 
-[1]: {% image_buster /assets/img/revenue_report.png %}
-[2]: {% image_buster /assets/img/revenue_report_product_breakdown.png %}

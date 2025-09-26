@@ -22,13 +22,11 @@ Si tu campaña se desencadena a partir de un evento personalizado, deberás aseg
 
 Por ejemplo, si el segmento incluye el evento `SessionStart` "Ha utilizado la aplicación más de una vez" y el evento que desencadena la campaña es `SessionStart`, el usuario recibirá el mensaje, pero no será necesariamente para la primera sesión. Esto se debe a que durante el primer paso, cuando se comprueba si un usuario debe recibir una campaña, la campaña está revisando la audiencia objetivo del segmento. 
 
-En resumen, evita configurar una campaña basada en acciones o Canvas con el mismo desencadenante que el filtro de audiencia (como un atributo modificado o la realización de un evento personalizado). Puede darse una [condición de carrera][2] en la que el usuario no esté en la audiencia cuando realice el evento desencadenante, lo que significa que no recibirá la campaña ni entrará en el Canvas.
+En resumen, evita configurar una campaña basada en acciones o Canvas con el mismo desencadenante que el filtro de audiencia (como un atributo modificado o la realización de un evento personalizado). Puede darse una [condición de carrera]({{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions/#race-conditions/) en la que el usuario no esté en la audiencia cuando realice el evento desencadenante, lo que significa que no recibirá la campaña ni entrará en el Canvas.
 
 {% alert tip %}
-Para obtener más ayuda con la solución de problemas de la campaña, asegúrate de ponerte en contacto con el soporte de Braze en los 30 días siguientes a la aparición del problema, ya que sólo disponemos de los registros de diagnóstico de los últimos 30 días.
+Para obtener más ayuda con la solución de problemas de la campaña, asegúrese de ponerse en contacto con el servicio de asistencia de Braze en los 30 días siguientes a la aparición del problema, ya que sólo disponemos de los registros de diagnóstico de los últimos 30 días.
 {% endalert %}
 
 _Última actualización: 25 de junio de 2024_
 
-[1]: {{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events/#session-start-event/
-[2]: {{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions/#race-conditions/

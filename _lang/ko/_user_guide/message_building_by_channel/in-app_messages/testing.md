@@ -24,11 +24,11 @@ channel:
 
 메시지가 무작위 사용자, 특정 사용자 또는 커스텀 사용자에게 어떻게 보일지 미리 볼 수 있습니다. 후자의 두 가지 기능은 메시지에 개인화 또는 여러 언어가 포함된 경우 특히 유용합니다. 또한 모바일 기기 또는 태블릿용 메시지를 미리 보고 사용자가 어떤 경험을 하게 될지 더 잘 파악할 수 있습니다.
 
-![인앱 메시지를 작성할 때 작성 탭에서 메시지가 어떻게 표시될지 미리 볼 수 있습니다. 사용자가 선택되지 않았으므로 본문 섹션에 추가된 Liquid가 그대로 표시됩니다.][1]
+![인앱 메시지를 작성할 때 작성 탭에서 메시지가 어떻게 표시될지 미리 볼 수 있습니다. A user is not selected, so the Liquid added in the body section displays as is.]({%image_buster /assets/img/in-app-message-preview.png %})
 
 Braze는 3세대 인앱 메시지를 사용할 수 있습니다. 지원하는 세대에 따라 메시지를 전송할 기기를 세밀하게 조정할 수 있습니다.
 
-![인앱 메시지를 미리 볼 때 세대 간 전환.][2]{: height="50%" width="50%"}
+![Switching between generations when previewing an in-app message.]({% image_buster /assets/img/iam-generations.gif %}){: height="50%" width="50%"}
 
 ## 테스트
 
@@ -40,7 +40,7 @@ Braze는 3세대 인앱 메시지를 사용할 수 있습니다. 지원하는 �
 
 **테스트** 탭에서 사용자가 된 것처럼 메시지를 미리 볼 수도 있습니다. 특정 사용자, 무작위 사용자 또는 커스텀 사용자를 선택할 수 있습니다.
 
-![인앱 메시지 작성 시 테스트 탭을 클릭합니다. "사용자로 메시지 미리보기"가 "커스텀 사용자"로 설정되어 있으며 사용 가능한 프로필 필드가 구성 가능한 옵션으로 표시됩니다.][3]
+![인앱 메시지 작성 시 테스트 탭을 클릭합니다. "Preview message as user" is set to "Custom User" with available profile fields appearing as configurable options.]({% image_buster /assets/img/iam-user-preview.png %})
 
 ### 테스트 체크리스트
 
@@ -49,6 +49,29 @@ Braze는 3세대 인앱 메시지를 사용할 수 있습니다. 지원하는 �
 - 카피가 명확하고 간결하며 정확한가요?
 - 버튼이 사용자가 어디로 이동해야 하는지 안내하나요?
 
-[1]: {%image_buster /assets/img/in-app-message-preview.png %}
-[2]: {% image_buster /assets/img/iam-generations.gif %}
-[3]: {% image_buster /assets/img/iam-user-preview.png %}
+## Accessibility scanner
+
+To support accessibility best practices, Braze automatically scans the content of in-app messages created using the traditional HTML editor against accessibility standards. This scanner helps identify content that may not meet Web Content Accessibility Guidelines ([WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/)) standards. WCAG is a set of internationally recognized technical standards developed by the World Wide Web Consortium (W3C) to make web content more accessible to people with disabilities.
+
+![Accessibility scan results]({% image_buster /assets/img/Accessibilty_Scanner_IAM.png %})
+
+{% alert note %}
+The in-app message accessibility scanner only runs on messages built with custom HTML.
+{% endalert %}
+
+### How it works
+
+The scanner runs automatically on custom HTML messages and evaluates your entire HTML message against the full [WCAG 2.1 AA rule set](https://www.w3.org/WAI/WCAG22/quickref/?versions=2.1&currentsidebar=%23col_customize&levels=aaa). For each flagged issue, it shows:
+
+- The specific HTML element involved
+- A description of the accessibility issue
+- A link to additional context or remediation guidance
+
+### Understanding automated accessibility testing
+
+{% multi_lang_include accessibility/automated_testing.md %}
+
+
+
+
+

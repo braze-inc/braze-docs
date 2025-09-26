@@ -16,6 +16,6 @@ noindex: true
 {% endsdktab %}
 
 {% sdktab swift %}
-guide/swift/analytics/logging_push_data.md developer_ %}
+{% multi_lang_include developer_guide/swift/analytics/logging_push_data.md %}
 {% endsdktab %}
 {% endsdktabs %}

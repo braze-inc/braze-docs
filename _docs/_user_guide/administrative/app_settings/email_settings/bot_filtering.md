@@ -1,5 +1,5 @@
 ---
-nav_title: Bot Filtering for Emails
+nav_title: Bot filtering for emails
 article_title: Bot Filtering for Emails
 page_type: reference
 page_order: 1

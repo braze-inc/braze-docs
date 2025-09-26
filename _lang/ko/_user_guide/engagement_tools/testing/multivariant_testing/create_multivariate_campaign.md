@@ -13,7 +13,7 @@ local_redirect: #optimizations
 
 > 단일 채널을 타겟팅하는 모든 캠페인에 대해 [다변량 또는 A/B 테스트]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/)를 만들 수 있습니다.
 
-!['캠페인 만들기' 버튼을 선택하면 드롭다운에서 멀티채널 또는 단일 채널을 선택할 수 있습니다.][2]{: style="max-width:25%;float:right;margin-left:15px;" }
+![The dropdown from selecting the "Create campaign" button to choose either multichannel or single channel.]({% image_buster /assets/img/ab_create_1.png %}){: style="max-width:25%;float:right;margin-left:15px;" }
 
 ## 1단계: 캠페인 만들기
 
@@ -26,11 +26,11 @@ local_redirect: #optimizations
 
 이형 상품 차별화를 시작하는 방법에 대한 몇 가지 아이디어는 [채널별 팁을](#tips-different-channels) 참조하세요.
 
-![캠페인에 '이형 상품 추가'를 선택합니다.][3]
+![Selecting "Add Variant" for a campaign.]({% image_buster /assets/img/ab_create_2.png %})
 
 ## 3단계: 캠페인 예약하기
 
-다변량 캠페인의 예약은 다른 Braze 캠페인의 예약과 동일하게 작동합니다. 모든 표준 [전달 유형][4]을 사용할 수 있습니다.
+다변량 캠페인의 예약은 다른 Braze 캠페인의 예약과 동일하게 작동합니다. All standard [delivery types]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/) are available.
 
 다변량 테스트가 시작되면 캠페인을 변경할 수 없습니다. 제목이나 HTML 본문과 같은 매개변수를 변경하면 Braze는 실험이 손상된 것으로 간주하고 즉시 실험을 비활성화합니다.
 
@@ -50,7 +50,7 @@ local_redirect: #optimizations
 
 결과를 볼 때 이형 상품의 전환율을 대조 그룹에서 제공한 기준 전환율과 비교할 수 있습니다. 이를 통해 메시지를 전혀 보내지 않았을 때 발생할 전환율과 배리언트의 효과를 모두 비교할 수 있습니다.
 
-![대조군, 배리언트 1, 배리언트 2 및 배리언트 3의 백분율 분석을 각 그룹에 대해 25%로 표시하는 A/B 테스트 패널입니다.][5]
+![A/B Testing panel that shows the percentage breakdown of the Control Group, Variant 1, Variant 2, and Variant 3 with 25% for each group.]({% image_buster /assets/img/ab_create_4.png %})
 
 {% alert important %}
 _열기_ 또는 _클릭_ 수로 우승자를 결정할 때 대조 그룹을 사용하는 것은 권장되지 않습니다. 대조군은 메시지를 수신하지 않으므로 해당 사용자는 열기나 클릭을 수행할 수 없습니다. 따라서 해당 그룹의 전환율은 정의상 0%이므로 배리언트 상품과 의미 있는 비교가 되지 않습니다.
@@ -62,7 +62,7 @@ A/B 테스트에서 사용량 제한을 사용하는 경우, 사용량 제한은
 
 #### 지능형 선택 기능이 있는 제어 그룹
 
-[지능형 선택을][1] 사용하는 캠페인의 대조군 크기는 이형 상품 수를 기준으로 합니다. 각 변종이 20% 이상의 사용자에게 전송되는 경우 대조군은 20%가 되고, 변종은 나머지 80%에 균등하게 분배됩니다. 그러나 각 배리언트가 20% 미만의 사용자에게 전송될 만큼 충분한 변종이 있는 경우 대조군은 더 작아져야 합니다. 지능형 선택이 테스트의 성과를 분석하기 시작하면 결과에 따라 대조군이 커지거나 줄어듭니다.
+The size of the control group for a campaign with [Intelligent Selection]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/) is based on the number of variants. 각 변종이 20% 이상의 사용자에게 전송되는 경우 대조군은 20%가 되고, 변종은 나머지 80%에 균등하게 분배됩니다. 그러나 각 배리언트가 20% 미만의 사용자에게 전송될 만큼 충분한 변종이 있는 경우 대조군은 더 작아져야 합니다. 지능형 선택이 테스트의 성과를 분석하기 시작하면 결과에 따라 대조군이 커지거나 줄어듭니다.
 
 ## 5단계: 전환 이벤트 지정(선택 사항)
 
@@ -89,7 +89,7 @@ A/B 테스트에서 사용량 제한을 사용하는 경우, 사용량 제한은
 | ---------------------| --------------- | ------------- |
 | 푸시 | 복사 <br> 이미지 및 이모티콘 사용 <br> 딥링크  <br> 숫자 표시(예: "3배" 대 "200% 증가")  <br> 시간 표시(예: "자정에 종료" 대 "6시간 후 종료") | 열람 수  <br> 전환율 |
 | 이메일 | 제목 <br> 표시 이름 <br> 인사말 <br> 본문 복사 <br> 이미지 및 이모티콘 사용 <br> 숫자 표시(예: "3배" 대 "200% 증가") <br> 시간 표시(예: "자정에 종료" 대 "6시간 후 종료") | 열람 수  <br> 전환율 |
-| 인앱 메시지 | "푸시"에 대해 나열된 측면 <br> [메시지 형식][7] | 클릭 <br> 전환율 |
+| 인앱 메시지 | "푸시"에 대해 나열된 측면 <br> [Message format]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/message_format/) | 클릭 <br> 전환율 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert tip %}
@@ -100,7 +100,7 @@ When running A/B tests, don't forget to generate [funnel reports]({{site.baseurl
 
 예를 들어 푸시를 테스트하는 경우 사용자가 푸시를 즉시 볼 수 있지만 이메일을 확인하거나 열기까지 며칠이 걸릴 수 있으므로 이메일을 테스트할 때보다 더 빠르게 유의미한 결과를 얻을 수 있습니다. 인앱 메시지를 테스트하는 경우, 사용자가 앱을 열어야 캠페인을 볼 수 있으므로 가장 활발하게 앱을 여는 사용자뿐만 아니라 일반적인 사용자로부터 결과를 수집할 때까지 더 오래 기다려야 한다는 점에 유의하세요.
 
-테스트를 얼마나 오래 실행해야 할지 잘 모르겠다면 [지능형 선택][6] 기능을 사용하면 위닝 배리언트를 효율적으로 찾을 수 있습니다.
+If you're unsure how long your test should run for, the [Intelligent Selection]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/) feature can be useful for finding a Winning Variant efficiently.
 
 ### 세그먼트 선택 {#choosing-a-segment}
 
@@ -130,10 +130,3 @@ When running A/B tests, don't forget to generate [funnel reports]({{site.baseurl
 대조 그룹에 무작위 버킷 번호를 수동으로 사용하는 경우 대조 그룹에서 [주의해야 할 사항을]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/#things-to-watch-for) 확인하세요.
 {% endalert %}
 
-[1]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/
-[2]: {% image_buster /assets/img/ab_create_1.png %}
-[3]: {% image_buster /assets/img/ab_create_2.png %}
-[4]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/
-[5]: {% image_buster /assets/img/ab_create_4.png %}
-[6]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/
-[7]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/message_format/

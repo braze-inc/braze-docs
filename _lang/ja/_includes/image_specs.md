@@ -28,7 +28,7 @@
 
 アプリ内メッセージに含めることができるテキスト文字数に制限はありませんが(ボタン、ヘッドライン、メインボディなどと同様に)、使用するテキスト文字数を調整します。テキストが多すぎると、ユーザーはメッセージを展開してスクロールする必要があります。
 
-アプリ内メッセージはすべて、推奨画像サイズ500KB、最大画像サイズ5MB、およびPNG、JPEG、およびGIF ファイルタイプをサポートしています。
+すべてのアプリ内メッセージの推奨画像サイズは500 KB、最大画像サイズは5 MB で、PNG、JPEG、GIF のファイルタイプをサポートしています。
 
 {% tabs %}
 {% tab ポートレート %}
@@ -90,47 +90,52 @@ table td {
 </style>
 
 <table>
-  <tr>
-    <th>画像タイプ</th>
-    <th>アスペクト比</th>
-    <th>画質</th>
-    <th>最大画像サイズ</th>
-    <th>ファイルタイプ</th>
-    <th>メモ</th>
-  </tr>
-  <tr>
-    <td>iOS</td>
-    <td>2:1(推奨)</td>
-    <td>最大1038 x 1038 px</td>
-    <td>5 MB</td>
-    <td>PNG、JPEG、GIF</td>
-    <td>2020年1月現在、iOS リッチプッシュ通知では、10MB 未満の画像であれば1038 x 1038 px の画像を処理できますが、できるだけ小さいファイルサイズを使用することをお勧めします。実際、大きなファイルを送信すると、不要なネットワークストレスを引き起こしたり、ダウンロードのタイムアウトがより頻繁に発生する可能性があります。<br><br>詳細については、<a href="{{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/">iOS リッチ通知</a>を参照してください。</td>
-  </tr>
-  <tr>
-    <td>Androidプッシュアイコン</td>
-    <td>1:1</td>
-    <td>該当なし</td>
-    <td>500 KB</td>
-    <td>PNG、JPEG</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Android拡張通知イメージ</td>
-    <td>2:1</td>
-    <td>小: 512 x 256 px<br>中: 1024 x 512 px<br>大: 2048 x 1024 px</td>
-    <td>500 KB</td>
-    <td>PNG、JPEG</td>
-    <td><a href="{{site.baseurl}}/user_guide/message_building_by_channel/push/android/rich_notifications/">Androidリッチ通知</a>で使用されます。</td>
-  </tr>
-  <tr>
-    <td>Android傾斜像</td>
-    <td>3:2</td>
-    <td>該当なし</td>
-    <td>該当なし</td>
-    <td>PNG、JPEG</td>
-    <td>詳細については、<a href="{{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/inline_image_push/">Androidインラインイメージプッシュ</a>を参照してください。</td>
-  </tr>
+  <thead>
+    <tr>
+      <th>画像タイプ</th>
+      <th>アスペクト比</th>
+      <th>最大画素数</th>
+      <th>最大画像サイズ</th>
+      <th>ファイルタイプ</th>
+      <th>メモ</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>iOS</td>
+      <td>2:1(推奨)</td>
+      <td>1038 x 1038</td>
+      <td>5 MB</td>
+      <td>PNG、JPEG、GIF</td>
+      <td>2020年1月現在、iOS リッチプッシュ通知では、10MB 未満の画像であれば1038 x 1038 px の画像を処理できますが、できるだけ小さいファイルサイズを使用することをお勧めします。実際、大きなファイルを送信すると、不要なネットワークストレスを引き起こしたり、ダウンロードのタイムアウトがより頻繁に発生する可能性があります。<br><br>詳細については、<a href="{{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/">iOS リッチ通知</a>を参照してください。</td>
+    </tr>
+    <tr>
+      <td>Androidプッシュアイコン</td>
+      <td>1:1</td>
+      <td>該当なし</td>
+      <td>500 KB</td>
+      <td>PNG、JPEG</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Android拡張通知イメージ</td>
+      <td>2:1</td>
+      <td><b>小:</b><br>512 x 256<br><br><b>中:</b><br>1024 x 512<br><br><b>大:</b><br>2048 x 1024</td>
+      <td>500 KB</td>
+      <td>PNG、JPEG</td>
+      <td><a href="{{site.baseurl}}/user_guide/message_building_by_channel/push/android/rich_notifications/">Androidリッチ通知</a>で使用されます。</td>
+    </tr>
+    <tr>
+      <td>Android傾斜像</td>
+      <td>3:2</td>
+      <td>該当なし</td>
+      <td>N/A</td>
+      <td>PNG、JPEG</td>
+      <td>詳細については、<a href="{{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/inline_image_push/">Androidインラインイメージプッシュ</a>を参照してください。</td>
+    </tr>
+  </tbody>
 </table>
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4  .reset-td-br-5 .reset-td-br-6 role="presentation"}
 
 {% endif %}
 

@@ -1,5 +1,5 @@
 ---
-nav_title: Creating Cards
+nav_title: Creating cards
 article_title: Creating Content Cards
 page_order: 0
 description: "This article covers components of creating a custom Content Card UI."

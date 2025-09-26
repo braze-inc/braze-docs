@@ -4,10 +4,10 @@ article_title: Utilisateurs de l’entreprise
 page_order: 23
 layout: dev_guide
 guide_top_header: "Utilisateurs de l’entreprise"
-guide_top_text: "En tant qu’administrateur de compte Braze de votre entreprise, vous pouvez juger nécessaire de gérer les utilisateurs sur une base plus granulaire ou cas par cas. Braze peut vous y aider en créant des Teams et en gérant les autorisations des utilisateurs et les paramètres à l'échelle de l'entreprise."
+guide_top_text: "En tant qu’administrateur de compte Braze de votre entreprise, vous pouvez juger nécessaire de gérer les utilisateurs sur une base plus granulaire ou cas par cas. Braze peut vous aider en créant des équipes et en gérant les autorisations des utilisateurs et les paramètres à l’échelle de l’entreprise."
 
 page_type: landing
-description: "Cette page d’accueil répertorie des articles sur la gestion des utilisateurs de Braze, tels que l’ajout et la suppression d’utilisateurs, la définition des autorisations utilisateur, la création d’équipes et la gestion des paramètres de l’entreprise."
+description: "Cette page de destination répertorie des articles sur la gestion de vos utilisateurs Braze, tels que l'ajout et la suppression d'utilisateurs, la définition des autorisations des utilisateurs, la création de Teams et la gestion des paramètres de l'entreprise."
 
 guide_featured_title: "Section Articles"
 guide_featured_list:
@@ -22,6 +22,6 @@ guide_featured_list:
   image: /assets/img/braze_icons/users-01.svg
 ---
 
-## Quelles sont les différences entre les équipes, les jeux de permissions et les rôles ? 
+## Quelles sont les différences entre les Teams, les jeux de permissions et les rôles ? 
 
 {% multi_lang_include permissions.md content="Différences" %}

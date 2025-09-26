@@ -16,12 +16,12 @@ Braze でのデータの収集方法について詳しくは、以下を参照�
 
 - `braze_id`:Brazeが割り当てた識別子で、変更不可能であり、当社のデータベース内で作成されたときに特定のユーザーと関連付けられる。
 - `external_id`:顧客が割り当てた識別子で、通常はUUIDである。ユーザーを一意に識別できる場合、`external_id` を割り当てることを推奨する。ユーザーが特定された後、匿名に戻すことはできない。
-- `user_alias`:`external_id` が割り当てられる前に、ID によってユーザーを参照する手段として、顧客が割り当てることができる一意の代替識別子。ユーザーエイリアスは、Braze[ユーザー識別]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/)エンドポイントを通じて利用可能になったときに、後で他のエイリアスまたは`external_id` 。
+- `user_alias`:`external_id` が割り当てられる前に、ID によってユーザーを参照する手段として、顧客が割り当てることができる一意の代替識別子。ユーザーエイリアスは、Braze [ユーザー識別]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/)エンドポイントを通じて利用可能になったときに、後で他のエイリアスまたは `external_id` とマージできます。
     - [ユーザー識別]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/)エンドポイント内では、`merge_behavior` フィールドを使用して、ユーザーエイリアスプロファイルのどのデータを既知のユーザープロファイルで永続化するかを指定できます。
     - ユーザーエイリアスを送信可能なプロファイルにするには、メールまたは電話番号あるいはこの両方をプロファイルに標準属性として含める必要があることに注意してください。
 - `device_id`:自動的に生成される、機器固有の識別子。ユーザープロファイルには、複数の`device_ids` を関連付けることができます。たとえば、仕事用コンピューター、ホームコンピューター、タブレット、および iOS アプリでアカウントにログインしたユーザーは、プロファイルに4つの `device_ids` が関連付けられます。
 - Eメールアドレスと電話番号
-    - Braze trackユーザーエンドポイントの識別子としてサポートされている。 
+    - Braze のユーザー追跡エンドポイントで識別子としてサポートされます。 
     - リクエスト内でメールアドレスまたは電話番号を識別子として使用する場合、3つの結果が考えられます。
         1. このメールアドレス/電話番号を持つユーザーがBraze内に存在しない場合、メールアドレスのみ/電話番号のみのユーザープロファイルが作成され、リクエスト内のデータがプロファイルに追加される。
         2. このメール/電話番号を含むプロファイルが Braze 内にすでに存在する場合、リクエストで送信されたすべてのデータが含まれるようにこのプロファイルが更新される。
@@ -110,7 +110,7 @@ Braze内にそのメールアドレスまたは電話番号を持つユーザー
 ## Braze へのユーザーオーディエンスの送信
 
 [コホートインポート同期パートナーのドキュメント]({{site.baseurl}}/partners/isv_partners/cohort_import/)<br>
-- ユーザーのオーディエンスは、BrazeコホートインポートAPIエンドポイントを使用して、コホートとしてBrazeに同期することができる。これらのオーディエンスをユーザー属性としてユーザープロファイルに保存するのではなく、お客様がBraze のセグメンテーションツール内のパートナーブランドフィルターを使用して、このコホートを作成し、ターゲットに設定できます。これにより、顧客が特定のユーザーセグメントを見つけてターゲットに設定することが容易になります。
+- ユーザーのオーディエンスは、Braze Cohort Import API エンドポイントを使用して、コホートとして Braze と動機できます。これらのオーディエンスをユーザー属性としてユーザープロファイルに保存するのではなく、お客様がBraze のセグメンテーションツール内のパートナーブランドフィルターを使用して、このコホートを作成し、ターゲットに設定できます。これにより、顧客が特定のユーザーセグメントを見つけてターゲットに設定することが容易になります。
 - コホートインポートエンドポイントはパブリックではなく、各パートナーに固有です。このため、コホートエンドポイントへの同期は、顧客のワークスペースのレート制限にカウントされない。 
 
 [ユーザートラック]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)<br>
@@ -125,7 +125,7 @@ Braze内にそのメールアドレスまたは電話番号を持つユーザー
 
 ### Currents
 
-Currentsは、Brazeのほぼリアルタイムのメッセージエンゲージメント分析ストリーミングツールである。これにより、お客様のワークスペースから送信されたキャンペーンおよびキャンバスのすべての送信、配信、開封、クリックなどに関するユーザーレベルのデータがストリーミングされます。いくつかの注意点があります。Currents の価格は、お客様のコネクターあたりの価格であるため、すべての新しい Currents パートナーは EA プロセスを実施する必要があります。カスタムブランドのUIを構築し、コネクタを一般に公開する前に、パートナーはEAの一部として5社の顧客を持つようお願いしている。 
+Currents は、Braze のほぼリアルタイムのメッセージエンゲージメント分析ストリーミングツールです。これにより、お客様のワークスペースから送信されたキャンペーンおよびキャンバスのすべての送信、配信、開封、クリックなどに関するユーザーレベルのデータがストリーミングされます。いくつかの注意点があります。Currents の価格は、お客様のコネクターあたりの価格であるため、すべての新しい Currents パートナーは EA プロセスを実施する必要があります。カスタムブランドのUIを構築し、コネクタを一般に公開する前に、パートナーはEAの一部として5社の顧客を持つようお願いしている。 
 - [パートナーのドキュメント]({{site.baseurl}}/partners/isv_partners/currents_integration/)
 - [メッセージエンゲージメントイベント]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) \- Currents コネクターを購入したすべてのお客様はこのイベントにアクセスできます。
 - [ユーザー行動イベント]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/)\- Current コネクターを購入したすべてのお客様が、このイベントが含まれている「すべてのイベント」コネクターを購入するとは限りません。 
@@ -162,7 +162,7 @@ API キャンペーン (上記の API によりトリガーされるキャンペ
 - [API キャンペーンをスケジュールする]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_schedule_messages/)
 
 ### IDを送信する
-Brazeエンドポイントを使用して送信IDを生成し、送信ごとにキャンペーン分析を分解するために使用できる。たとえば、ロケーションごとに `campaign_id` (API キャンペーン) が作成されている場合、送信ごとに送信 ID を生成して、特定のロケーションに対して異なるメッセージングがどの程度適切に実行されているかを追跡できます。 
+Braze エンドポイントを使用して送信 ID を生成し、キャンペーン分析を送信別に分類できるようにします。たとえば、ロケーションごとに `campaign_id` (API キャンペーン) が作成されている場合、送信ごとに送信 ID を生成して、特定のロケーションに対して異なるメッセージングがどの程度適切に実行されているかを追跡できます。 
 - [IDを送信する]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_create_send_ids/)
 
 ## コネクテッドコンテンツ
@@ -183,10 +183,7 @@ Brazeエンドポイントを使用して送信IDを生成し、送信ごとに�
 - Braze は、各受信者に複数回、同じコネクテッドコンテンツ API 呼び出しを行うことができます。これは、状況によっては Braze がメッセージペイロードを表示するためにコネクテッドコンテンツ API 呼び出しを行う必要があり、メッセージペイロードは、検証、再試行ロジック、またはその他の内部目的のために、受信者ごとに複数回レンダリングされることがあるためです。 
 
 コネクテッド・コンテンツの詳細については、以下の記事を参照されたい：
-- [コネクテッドコンテンツ呼び出しを実行する][1]
-- [コネクテッドコンテンツを中止する][2]
-- [コネクテッドコンテンツの再試行][3]
+- [コネクテッドコンテンツ呼び出しを実行する]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/)
+- [コネクテッドコンテンツを中止する]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content)
+- [コネクテッドコンテンツの再試行]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries)
 
-[1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/
-[2]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content
-[3]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries

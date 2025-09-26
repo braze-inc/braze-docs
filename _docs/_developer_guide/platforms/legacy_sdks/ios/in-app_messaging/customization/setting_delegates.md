@@ -1,5 +1,5 @@
 ---
-nav_title: Setting Delegates
+nav_title: Setting delegates
 article_title: Setting In-App Message Delegates for iOS
 platform: iOS
 page_order: 2

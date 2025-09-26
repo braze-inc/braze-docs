@@ -28,6 +28,9 @@ guide_featured_list:
 - name: Generative AI
   link: /docs/user_guide/brazeai/generative_ai/
   image: /assets/img/braze_icons/lightbulb-02.svg
+- name: Braze MCP Server
+  link: /docs/mcp/
+  image: /assets/img/braze_icons/dataflow-01.svg
 - name: Winning Variant and Personalized Variant
   link: /docs/user_guide/engagement_tools/testing/multivariant_testing/optimizations/
   image: /assets/img/braze_icons/trophy-01.svg

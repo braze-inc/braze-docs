@@ -5,7 +5,7 @@ alias: /race_conditions/
 page_order: 9
 page_type: reference
 description: "Cet article aborde les meilleures pratiques à suivre pour éviter les conditions de concurrence qui affectent vos campagnes de communication."
-
+toc_headers: h2
 ---
 
 # Conditions de concurrence
@@ -72,7 +72,7 @@ Au lieu d'utiliser plusieurs endpoints, vous pouvez inclure les [attributs de l'
 
 Lorsque ces objets sont inclus dans le déclencheur, les attributs sont traités en premier, avant que le message ne soit déclenché, ce qui élimine les conditions de concurrence potentielles. Notez que les propriétés du déclencheur ne mettent pas à jour le profil utilisateur, mais sont utilisées uniquement dans le contexte du message.
 
-#### Utilisez le POST : Suivi des utilisateurs (en vrac) endpoint
+#### Utilisez le POST : Suivi des utilisateurs (synchro) endpoint
 
 Utilisez le [point de terminaison`/users/track/sync/` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track_synchronous) pour enregistrer les événements et attributs clients personnalisés et mettre à jour les attributs du profil utilisateur de manière synchrone. L'utilisation de cet endpoint pour mettre à jour les profils utilisateurs en même temps et en un seul appel peut aider à prévenir d'éventuelles conditions de concurrence.
 
@@ -118,7 +118,3 @@ Dans ce cas, vous pouvez mettre en œuvre un délai de déclenchement dans une c
 {% endraw %}
 
 
-[1]: {{site.baseurl}}/api/objects_filters/user_attributes_object/
-[2]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/
-[3]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/
-[4]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/

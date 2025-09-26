@@ -22,7 +22,7 @@ Si votre campagne déclenche un événement personnalisé, vous devez vous assur
 
 Par exemple, si le segment inclut l'événement `SessionStart` "A utilisé l'application plus d'une fois" et que l'événement à partir duquel la campagne se déclenche est `SessionStart`, l'utilisateur recevra le message, mais pas nécessairement pour la première session. En effet, lors de la première étape au cours de la vérification pour savoir si un utilisateur doit recevoir une campagne, la campagne examine l’audience cible du segment. 
 
-En bref, évitez de configurer une campagne basée sur une action ou un Canvas avec le même déclencheur que le filtre d'audience (comme un attribut modifié ou l'exécution d'un événement personnalisé). Une [condition de concurrence][2] peut se produire : l'utilisateur n'est pas dans l'audience lorsqu'il effectue l'événement déclencheur, ce qui signifie qu'il ne recevra pas la campagne ou n'entrera pas dans le Canvas.
+En bref, évitez de configurer une campagne basée sur une action ou un Canvas avec le même déclencheur que le filtre d'audience (comme un attribut modifié ou l'exécution d'un événement personnalisé). Une [condition de concurrence]({{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions/#race-conditions/) peut se produire : l'utilisateur n'est pas dans l'audience lorsqu'il effectue l'événement déclencheur, ce qui signifie qu'il ne recevra pas la campagne ou n'entrera pas dans le Canvas.
 
 {% alert tip %}
 Pour toute assistance supplémentaire avec le dépannage de la campagne, assurez-vous de contacter le support Braze dans les 30 jours suivant la survenue de votre problème, car nous ne disposons que des 30 derniers jours de journaux de diagnostic.
@@ -30,5 +30,3 @@ Pour toute assistance supplémentaire avec le dépannage de la campagne, assurez
 
 _Dernière mise à jour le 25 juin 2024_
 
-[1]: {{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events/#session-start-event/
-[2]: {{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions/#race-conditions/

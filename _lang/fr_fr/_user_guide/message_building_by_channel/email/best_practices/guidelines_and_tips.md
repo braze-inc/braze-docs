@@ -60,6 +60,10 @@ Les adresses e-mail ciblées via les serveurs Braze doivent être validées selo
 
 Lorsque vous définissez vos adresses d’expéditeur, assurez-vous que votre domaine d’e-mail « De » correspond à votre domaine d’envoi (par exemple, `marketing.yourdomain.com`). Le non-respect de cette consigne peut entraîner un mauvais alignement SPF et DKIM. Tous les e-mails de réponse peuvent être définis dans votre domaine racine.
 
+{% alert note %}
+Le codage Unicode n'est pas pris en charge dans les adresses "from".
+{% endalert %}
+
 ### Vérification des détails HTML
 
 N’oubliez pas que certaines balises et attributs HTML ne sont pas autorisés car ils peuvent potentiellement permettre d’exécuter du code malveillant dans le navigateur.
@@ -229,5 +233,4 @@ Consultez les listes suivantes pour voir les balises et les attributs HTML qui n
 {% enddetails %}
 
 
-[24]: http://tools.ietf.org/html/rfc2822
 

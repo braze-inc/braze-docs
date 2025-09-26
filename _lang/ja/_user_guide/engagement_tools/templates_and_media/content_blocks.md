@@ -23,7 +23,7 @@ tool:
 
 ## コンテンツブロックの作成
 
-コンテンツブロックの作成に使用されるエディターには、クラシックとドラッグ＆ドロップの2種類があります。この2種類のエディターは、コンテンツブロックの種類に対応しています。HTML とドラッグ＆ドロップ。また、API][5] を使用してコンテンツブロックを作成および管理することもできます。
+コンテンツブロックの作成に使用されるエディターには、クラシックとドラッグ＆ドロップの2種類があります。この2種類のエディターは、コンテンツブロックの種類に対応しています。HTML とドラッグ＆ドロップ。[API を使用して]({{site.baseurl}}/api/endpoints/templates/)コンテンツブロックを作成、管理することもできます。
 
 {% tabs %}
 {% tab ドラッグ・アンド・ドロップ %}
@@ -80,7 +80,7 @@ tool:
 
 コンテンツブロックを編集したら、**Launch Content Block** を選択して、更新されたコンテンツブロックを保存して起動できます。または、[**その他**] > [**複製**] を選択して、コンテンツブロックの複製を作成することもできます。
 
-!["Welcome to the newsletter"を読むコンテンツブロック。][2]
+!["Welcome to the newsletter"を読むコンテンツブロック。]({% image_buster /assets/img/copy-content-block.png %})
 
 コンテンツブロックを[複製]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/)することもできます。これにより、コンテンツブロックのドラフトコピーが作成されます。
 
@@ -90,7 +90,7 @@ tool:
 
 このプレビューには、コンテンツブロックの作成者、タグ、作成日、最終編集日、説明、エディタータイプ、詳細のある包含数、コンテンツブロックの実際のプレビューなど、コンテンツブロックに関する情報が含まれます。
 
-![コンテンツブロック&クォート;Workout_Promo" 6 つのインクルードを含むサイクリングとダンスのプレビュー。][7]{: style="max-width:60%;"} 
+![6 つの組み込みを含むサイクリングとダンスの「Workout_Promo」コンテンツブロックのプレビュー。]({% image_buster /assets/img/preview_tab_content_block.png %}){: style="max-width:60%;"} 
 
 ### コンテンツブロックをネストする
 
@@ -104,7 +104,7 @@ tool:
 
 ### コンテンツブロックのアーカイブ
 
-![3つのオプションを表示する拡張設定ドロップダウンメニュー：アーカイブ、複製、ワークスペースにコピー。][3]{: style="max-width:20%;float:right;margin-left:15px;" }
+![3つのオプションを表示する拡張設定ドロップダウンメニュー：アーカイブ、複製、ワークスペースにコピー。]({% image_buster /assets/img/template_archive_cog.png %}){: style="max-width:20%;float:right;margin-left:15px;" }
 
 コンテンツブロックを使い終わったら、[テンプレートとメディア]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/)ページからアーカイブできます。アーカイブされたコンテンツブロックは読み取り専用なので、編集する前にコンテンツブロックをアーカイブ解除してください。コンテンツブロックは、いずれかのメッセージで使用されている場合はアーカイブできません。
 
@@ -115,11 +115,5 @@ tool:
 - このリストの最初の提案で合理的に管理できる数よりも多くのメッセージでブロックが使用されている場合は、ブロックからすべてのコンテンツを削除してアーカイブすることをお勧めします。これにより、新しく送信されるメールに古い情報が含まれることがなくなります。
 - コンテンツブロックを誤ってアーカイブした場合は、アーカイブを解除できます。
 
-![保存されたコンテンツ・ブロック・パネル。"Test_32 "の設定ドロップダウンメニューが展開され、3つのオプションが表示される：アーカイブ解除、複製、ワークスペースにコピー][4]
+![保存されたコンテンツ・ブロック・パネル。"Test_32 "の設定ドロップダウンメニューが展開され、3つのオプションが表示される：アーカイブ解除、複製、およびワークスペースにコピー]({% image_buster /assets/img/unarchive-content-block.png %})
 
-[2]: {% image_buster /assets/img/copy-content-block.png %}
-[3]: {% image_buster /assets/img/template_archive_cog.png %}
-[4]: {% image_buster /assets/img/unarchive-content-block.png %}
-[5]: {{site.baseurl}}/api/endpoints/templates/
-[6]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/
-[7]: {% image_buster /assets/img/preview_tab_content_block.png %}

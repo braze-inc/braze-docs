@@ -1,5 +1,5 @@
 ---
-nav_title: Push Clicks Unexpectedly Opening in App
+nav_title: Push clicks unexpectedly opening in app
 article_title: Push Clicks Unexpectedly Opening in App
 page_type: solution
 description: "This help article covers how to troubleshoot when a push link is expected to open in a web browser, not the app."

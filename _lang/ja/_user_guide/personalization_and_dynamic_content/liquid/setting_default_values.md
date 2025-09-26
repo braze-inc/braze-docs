@@ -14,7 +14,7 @@ description: "このリファレンス記事では、メッセージで使用す
 
 ## 仕組み
 
-デフォルト値を追加するには、[Liquid フィルター][3]を「デフォルト」という名前で指定します (インラインでフィルターを区別するには `|` を使用します)。
+デフォルト値を追加するには、[Liquid フィルター](http://docs.shopify.com/themes/liquid-documentation/filters)を「デフォルト」という名前で指定します (インラインでフィルターを区別するには `|` を使用します)。
 
 ```
 | default: 'Insert Your Desired Default Here'
@@ -212,8 +212,6 @@ Hello {{${first_name} | default: 'fellow traveler'}},
 {% endraw %}
 {% enddetails %}
 
-[3]: http://docs.shopify.com/themes/liquid-documentation/filters
 [31]:https://docs.shopify.com/themes/liquid/tags/variable-tags
 [32]:https://docs.shopify.com/themes/liquid/tags/iteration-tags
-[34]:{% image_buster /assets/img_archive/personalized_iflogic_.png %}
-[37]:\#accounting-for-null-attribute-values
+[37]:#accounting-for-null-attribute-values

@@ -12,7 +12,7 @@ description: "이 랜딩 페이지에는 Braze 사용 시 문제를 해결하고
 guide_featured_title: "주제"
 guide_featured_list:
   - name: 계정
-    link: /docs/help/help_articles/account/
+    link: /docs/user_guide/administrative/access_braze/troubleshooting/
     image: /assets/img/braze_icons/user-circle.svg
   - name: API
     link: /docs/help/help_articles/api/
@@ -32,9 +32,6 @@ guide_featured_list:
   - name: 이메일
     link: /docs/help/help_articles/email/
     image: /assets/img/braze_icons/mail-01.svg
-  - name: 인앱 메시지
-    link: /docs/help/help_articles/in-app_messages/
-    image: /assets/img/braze_icons/phone-02.svg
   - name: 푸시
     link: /docs/help/help_articles/push/
     image: /assets/img/braze_icons/message-square-02.svg

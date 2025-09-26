@@ -18,7 +18,7 @@ Cuando un usuario se desconecta de un dispositivo o sitio web, permanecerá acce
 
 Cuando se reasigna un token de notificaciones push, el cambio se refleja en el registro de cambios push del perfil de usuario. Puedes encontrarlo yendo a la pestaña **"Interacción"** del perfil de usuario.
 
-![El "Registro de cambios push" en la sección "Configuración de contactos".][1]{: style="max-width:50%;"}
+![El "Registro de cambios push" en la sección "Configuración de contactos".]({% image_buster /assets/img/push_changelog_faq.png %}){: style="max-width:50%;"}
 
 ### ¿Por qué un usuario con adhesión voluntaria no tiene un token de notificaciones push?
 
@@ -34,4 +34,3 @@ Si quieres que el token de notificaciones push se reasigne al usuario original:
 1. Haz que el usuario original inicie sesión en el perfil con el token de notificaciones push que falta.
 2. Desencadena un nuevo envío push. Esto devolverá el token a la cuenta si todavía tiene habilitada la función push en el dispositivo.
 
-[1]: {% image_buster /assets/img/push_changelog_faq.png %}

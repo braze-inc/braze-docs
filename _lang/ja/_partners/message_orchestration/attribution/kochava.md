@@ -12,7 +12,7 @@ search_tag: Partner
 
 > Kochava は、モバイルアトリビューションと分析を提供し、データを活用した成長を支援しています。Kochava Audience Platform では、アプリキャンペーンの計画、ターゲット、アクティベーション、測定、最適化を実施できます。
 
-_この統合はKochavaによって維持されている。_
+_この統合は Kochava によって管理されます。_
 
 ## 統合について
 
@@ -64,11 +64,11 @@ let deviceId = await AppDelegate.braze?.deviceId()
 
 Brazeで、**Partner Integrations** > **Technology Partners** に移動し、**Kochava** を選択します。 
 
-ここでは、REST エンドポイントが見つかり、Brazeデータインポートキーが生成されます。キーが生成されたら、新しいキーを作成するか、既存のキーを無効にできます。データインポートキーとRESTエンドポイントは、Kochavaのダッシュボードでポストバックを設定する次のステップで使用されます。<br><br>![この画像は、Kochavaテクノロジーページにある「インストールアトリビューションのためのデータインポート」ボックスを示しています。このボックスには、データインポートキーと REST エンドポイントが表示されている。][4]{: style="max-width:90%;"}
+ここでは、REST エンドポイントが見つかり、Brazeデータインポートキーが生成されます。キーが生成されたら、新しいキーを作成するか、既存のキーを無効にできます。データインポートキーとRESTエンドポイントは、Kochavaのダッシュボードでポストバックを設定する次のステップで使用されます。<br><br>![この画像は、Kochavaテクノロジーページにある「インストールアトリビューションのためのデータインポート」ボックスを示しています。このボックスには、データインポートキーと REST エンドポイントが表示されます。]({% image_buster /assets/img/attribution/kochava.png %}){: style="max-width:90%;"}
 
 ### ステップ3:Kochavaからのポストバックを設定する
 
-Kochava ダッシュボードに[ポストバックを追加します][18]。Brazeダッシュボードで見つけたデータインポートキーとRESTエンドポイントの入力を求められる。
+Kochava ダッシュボードに[ポストバックを追加します](https://support.kochava.com/campaign-management/create-a-kochava-certified-postback)。Braze のダッシュボードで見つけたデータインポートキーと REST エンドポイントの入力を求められます。
 
 ### ステップ4:統合を確認する
 
@@ -117,7 +117,3 @@ idfv={{most_recently_used_device.${id}}}
 {% endalert %}
 
 
-[18]: https://support.kochava.com/campaign-management/create-a-kochava-certified-postback "Kochava ポストバック"
-[29]: https://support.kochava.com/sdk-integration/sdk-kochavatracker-android/class-tracker?scrollto=marker_3
-[30]: https://support.kochava.com/sdk-integration/windows-and-xbox-one-sdk-integration?scrollto=marker_8
-[4]: {% image_buster /assets/img/attribution/kochava.png %}

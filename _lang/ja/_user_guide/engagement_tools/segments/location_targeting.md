@@ -1,7 +1,7 @@
 ---
 nav_title: ロケーションターゲティング
 article_title: ロケーションターゲティング
-page_order: 6.5
+page_order: 10
 page_type: tutorial
 tool: 
 - Segments
@@ -16,27 +16,27 @@ description: "この記事では、ロケーションターゲティングを設
 
 ## ステップ 1:セグメントを作成する
 
-[**セグメント**] ページの[**オーディエンス**] に移動して、現在のすべてのユーザーセグメントを表示します。このページでは、新しいセグメントを作成して名前を付けることができます。開始するには、[**セグメントを作成**] をクリックし、セグメントに名前を付けます。
+[**セグメント**] ページの[**オーディエンス**] に移動して、現在のすべてのユーザーセグメントを表示します。このページでは、新しいセグメントを作成して名前を付けることができます。開始するには、[**セグメントを作成**] を選択し、セグメントに名前を付けます。
 
-![][1]{: style="max-width:70%;"}
+![セグメントを作成するモーダル。]({% image_buster /assets/img_archive/createsegment2.png %}){: style="max-width:70%;"}
 
 ## ステップ 2: 位置情報をカスタマイズする
 
-セグメントを作成したら、[**最新の場所**] フィルターを追加して、ユーザーがアプリを最後に使用した場所でユーザーをターゲティングします。標準の円形領域またはカスタマイズ可能な多角形領域でユーザーをハイライトするオプションがあります。
+セグメントを作成したら、[**最新の場所**] フィルターを追加して、ユーザーがアプリを最後に使用した場所でユーザーをターゲティングします。標準の円形領域またはカスタマイズ可能な多角形領域の内部または外部でユーザーをハイライトするオプションがあります。
 
-![][2]
+![円内で最新の場所を示すためのフィルター]({% image_buster /assets/img_archive/filter_recent_location.png %})
 
 ### 円形領域
 
 円形領域の場合は、原点を移動し、セグメンテーションの位置半径を調整できます。
 
-![ニュージャージー州とニューヨーク州の間の都市の円形の輪郭。][3]{: style="max-width:70%;"}
+![ニュージャージー州とニューヨーク州の間の都市の円形の輪郭。]({% image_buster /assets/img_archive/location_circle.png %}){: style="max-width:70%;"}
 
 ### 多角形領域
 
 多角形領域の場合、セグメントに含めたい領域をより具体的に指定できます。
 
-![選択された多角形領域としてのニューヨーク州の概要。][4]{: style="max-width:70%;"}
+![選択された多角形領域としてのニューヨーク州の概要。]({% image_buster /assets/img_archive/create_polygon.png %}){: style="max-width:70%;"}
 
 ## パートナーシップによるビーコンとジオフェンスのサポート
 
@@ -46,7 +46,3 @@ description: "この記事では、ロケーションターゲティングを設
 - [インフィリオン]({{site.baseurl}}/partners/message_personalization/location/infillion/)
 - [Foursquare]({{site.baseurl}}/partners/message_personalization/location/foursquare/)
 
-[1]: {% image_buster /assets/img_archive/createsegment2.png %}
-[2]: {% image_buster /assets/img_archive/filter_recent_location.png %}
-[3]: {% image_buster /assets/img_archive/location_circle.png %}
-[4]: {% image_buster /assets/img_archive/create_polygon.png %}

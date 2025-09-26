@@ -25,7 +25,7 @@ You can do B2B account-based segmentation in two ways, depending on how you set 
 
 대상 기업 계정의 직원인 사용자를 세분화하고자 한다고 가정해 보겠습니다. 
 
-1. **대상** > **세그먼트 확장** > **새 확장 만들기** > **템플릿으로 시작으로** 이동하여 **이벤트용 카탈로그 세그먼트** 템플릿을 선택합니다. <br><br> !["이벤트 또는 구매를 위한 카탈로그 세그먼트 옵션이 있는 '템플릿 선택' 모달을 선택합니다.][1]<br><br>SQL 편집기는 사용자 이벤트 데이터를 카탈로그 데이터와 조인하여 특정 카탈로그 항목에 참여하는 사용자를 세분화하는 템플릿으로 자동으로 채워집니다. <br><br>!['변수' 탭이 열려 있는 새 확장을 위한 SQL 편집기입니다.][2]<br><br>
+1. **대상** > **세그먼트 확장** > **새 확장 만들기** > **템플릿으로 시작으로** 이동하여 **이벤트용 카탈로그 세그먼트** 템플릿을 선택합니다. <br><br> !["Select a Template" modal with catalog segment options for events or purchases.]({% image_buster /assets/img/b2b/select_a_template.png %})<br><br>SQL 편집기는 사용자 이벤트 데이터를 카탈로그 데이터와 조인하여 특정 카탈로그 항목에 참여하는 사용자를 세분화하는 템플릿으로 자동으로 채워집니다. <br><br>![A SQL editor for a new extension with an open "Variables" tab.]({% image_buster /assets/img/b2b/enter_new_name.png %})<br><br>
 2. 세그먼트를 생성하기 전에 **변수** 탭을 사용하여 템플릿에 필요한 필드를 입력합니다.<br><br>Braze가 카탈로그 항목에 대한 인게이지먼트를 기반으로 사용자를 식별하려면 다음을 수행해야 합니다.
 - 카탈로그 필드가 포함된 카탈로그를 선택합니다.
 - 이벤트 속성이 포함된 사용자 지정 이벤트를 선택합니다.
@@ -114,5 +114,3 @@ AND salesforce_opportunities.Stage = 'Closed Won'
 
 위 단계에서 계정 수준 세분화를 생성한 후에는 해당 세그먼트 확장을 타겟팅 기준으로 바로 가져올 수 있습니다. 또한 역할, 이전 캠페인 참여도 등과 같은 사용자 인구통계학적 기준을 점진적으로 적용하여 쉽게 레이어링할 수 있습니다. 자세한 내용은 [세그먼트에서 확장 프로그램 사용하기를]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/#step-6-use-your-extension-in-a-segment) 참조하세요.
 
-[1]: {% image_buster /assets/img/b2b/select_a_template.png %}
-[2]: {% image_buster /assets/img/b2b/enter_new_name.png %}

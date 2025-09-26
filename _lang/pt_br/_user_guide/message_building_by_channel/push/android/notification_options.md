@@ -25,7 +25,7 @@ Se quiser categorizar suas mensagens e agrupá-las na bandeja de notificação d
 
 Primeiro, crie sua campanha de push Android, depois olhe para o topo da guia **Compor** para o menu suspenso **Canal de Notificação**.
 
-![][28]{: style="max-width:60%;" }
+![]({% image_buster /assets/img_archive/notification_channel_dropdown.png %}){: style="max-width:60%;"}
 
 Selecione seu canal de notificação no menu suspenso. Você também deve selecionar um canal fallback caso as configurações do canal de notificação não funcionem corretamente.
 
@@ -33,8 +33,6 @@ Se você não tiver nenhum [canal de notificação]({{site.baseurl}}/user_guide/
 
 Para adicionar um ID de notificação ao seu canal de notificação, clique em **Gerenciar canal de notificação** no menu suspenso **Canal de notificação** e preencha os campos obrigatórios. Os canais de notificação devem ser definidos no app antes de poderem ser usados na plataforma Braze.
 
-![][29]{: style="max-width:80%;" }
+![]({% image_buster /assets/img_archive/notification_channels.png %}){: style="max-width:80%;" }
 
 
-[28]: {% image_buster /assets/img_archive/notification_channel_dropdown.png %}
-[29]: {% image_buster /assets/img_archive/notification_channels.png %}

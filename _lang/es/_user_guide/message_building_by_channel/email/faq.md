@@ -45,7 +45,7 @@ Sin embargo, una tasa puede ser superior al 98 % y seguir teniendo problemas de
 
 Además, es posible que los mensajes se entreguen y acaben en Spam, lo que indica problemas de reputación potencialmente graves. Es importante controlar no sólo el número de mensajes que se entregan, sino también las tasas de apertura y clics para determinar si los usuarios ven realmente los mensajes en sus bandejas de entrada. Dado que los proveedores no suelen informar de todos los casos de spam, una tasa de spam de incluso el 1% podría ser motivo de preocupación y análisis más detallado.
 
-Por último, su negocio y los tipos de correos electrónicos que envía también pueden afectar a la entrega. Por ejemplo, alguien que envíe principalmente [correos electrónicos transaccionales][1] debería esperar obtener una tasa mejor que alguien que envíe muchos mensajes de marketing.
+Por último, su negocio y los tipos de correos electrónicos que envía también pueden afectar a la entrega. Por ejemplo, alguien que envíe principalmente [correos electrónicos transaccionales]({{site.baseurl}}/api/api_campaigns/transactional_api_campaign) debería esperar obtener una tasa mejor que alguien que envíe muchos mensajes de marketing.
 
 ### ¿Por qué mis métricas de entrega de correo electrónico no suman el 100 %?
 
@@ -89,7 +89,7 @@ Puedes eliminar los correos electrónicos rebotados y los de la lista de correo 
 ### ¿Cómo puedo comprobar el grupo de suscripción de correo electrónico de un usuario?
 
 - **Perfil del usuario:** Se puede acceder a los perfiles de usuario individuales a través del panel Braze desde la página [Buscar usuarios]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/#access-profiles). Aquí puede buscar perfiles de usuario por dirección de correo electrónico, número de teléfono o ID de usuario externo. Dentro del perfil de un usuario, en la pestaña Compromiso, puede ver los grupos de suscripción de correo electrónico de un usuario.
-- **API REST:** El grupo de suscripción de perfiles de usuario individuales se puede ver mediante el [punto final Listar grupos de suscripción de usuario][9] o [Listar estado de grupo de suscripción de usuario][8] mediante la API REST de Braze. 
+- **API REST:** El grupo de suscripción de perfiles de usuario individuales se puede ver mediante el [punto final Listar grupos de suscripción de usuario]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_groups/) o [Listar estado de grupo de suscripción de usuario]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/) mediante la API REST de Braze. 
 
 ### ¿Cómo puedo actualizar el grupo de suscripción de correo electrónico de un usuario?
 
@@ -105,6 +105,3 @@ No, Braze no ofrece esta funcionalidad. Esto se debe a que una mayoría cada vez
 
 **Solución:** Para lograr este mismo resultado, puede alojar el contenido de su correo electrónico en una página de destino externa (como su sitio web), a la que se puede enlazar desde la campaña de correo electrónico que está creando utilizando la herramienta **Enlace** al editar el cuerpo del correo electrónico.
 
-[8]: {{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/
-[9]: {{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_groups/
-[1]: {{site.baseurl}}/api/api_campaigns/transactional_api_campaign

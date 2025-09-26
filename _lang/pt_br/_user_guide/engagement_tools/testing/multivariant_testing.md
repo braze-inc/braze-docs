@@ -99,16 +99,3 @@ Para resultados de teste precisos:
 A inclusão de um [grupo de controle]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/#including-a-control-group) permite saber se suas mensagens têm um impacto maior na conversão do usuário do que o envio de nenhuma mensagem.
 
 
-[2]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#conversion-events
-[70]: #tips-different-channels
-[80]: #choosing-a-segment
-[160]: {% image_buster /assets/img/ab_create_1.png %}
-[170]: {% image_buster /assets/img/ab_create_2.png %}
-[175]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/
-[180]: {% image_buster /assets/img/ab_create_4.png %}
-[210]: {% image_buster /assets/img/ab_create_8.png %}
-[10]: {% image_buster /assets/img/ab_send_winning_variant.png %}
-[272]: #intelligent-selection
-[273]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/message_format/
-[intelselection]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/
-[confidence]: {{site.baseurl}}/user_guide/intelligence/multivariate_testing/#understanding-confidence

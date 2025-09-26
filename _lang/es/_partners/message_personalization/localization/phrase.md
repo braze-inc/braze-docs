@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Phrase](https://phrase.com/) es un software basado en la nube para la gestión de la localización. Phrase permite automatizar los flujos de trabajo de traducción y facilita la localización continua para equipos ágiles.
 
+_Esta integración está mantenida por Phrase._
+
+## Sobre la integración
+
 La integración de Phrase y Braze permite traducir plantillas de correo electrónico y bloques de contenido sin salir de la interfaz de Braze. Con la integración de Phrase TMS para Braze, puedes aumentar el compromiso de los clientes e impulsar el crecimiento en nuevos mercados con una localización perfecta.
 
 ## Requisitos previos
@@ -20,7 +24,7 @@ La integración de Phrase y Braze permite traducir plantillas de correo electró
 | --- | --- |
 | Cuenta Phrase TMS | Se requiere una cuenta Phrase TMS Ultimate o Enterprise para beneficiarse de esta alianza. |
 | Clave de API REST de Braze | Una clave Braze REST API con todos los permisos. <br><br> Puede crearse en el panel Braze desde **Configuración** > **Claves API**. |
-| Punto final REST Braze | [La URL de tu punto final REST][1]. Tu punto final dependerá de la URL Braze de tu instancia. |
+| Punto final REST Braze | [La URL de tu punto final REST]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). Tu punto final dependerá de la URL Braze de tu instancia. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integración
@@ -81,4 +85,4 @@ En Phrase, ve a **Configuración > Integraciones > Conectores > Nuevo**.
 
 [La API del conector](https://cloud.memsource.com/web/docs/api#) puede automatizar pasos que de otro modo se realizarían manualmente a través de la interfaz de usuario. Los [webhooks](https://support.phrase.com/hc/en-us/articles/5709693398812) pueden utilizarse para que Phrase TMS notifique a sistemas de terceros determinados eventos (por ejemplo, un cambio de estado de un trabajo).
 
-[1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
+

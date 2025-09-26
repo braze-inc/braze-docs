@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Track Users"
+nav_title: "POST: Track users"
 article_title: "POST: Track Users"
 search_tag: Endpoint
 page_order: 4
@@ -17,7 +17,7 @@ description: "This article outlines details about the Track user Braze endpoint.
 > Use this endpoint to record custom events and purchases and update user profile attributes.
 
 {% alert note %}
-Braze processes the data passed through API at face value, and customers should only pass deltas (changing data) to minimize unnecessary data point consumption. To read more, refer to [Data points]({{site.baseurl}}/user_guide/data/data_points/). 
+Braze processes the data passed through API at face value, and customers should only pass deltas (changing data) to minimize unnecessary data point logging. To read more, refer to [Data points]({{site.baseurl}}/user_guide/data/data_points/). 
 {% endalert %}
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4cf57ea9-9b37-4e99-a02e-4373c9a4ee59 {% endapiref %}
@@ -277,7 +277,7 @@ If you receive the error "provided external_id is blacklisted and disallowed", y
 
 ## Frequently asked questions
 
-{% multi_lang_include email-via-sms-warning.md %}
+{% multi_lang_include alerts/important_alerts.md alert='Email via SMS' %}
 
 ### What happens when multiple profiles with the same email address are found?
 If the `external_id` exists, the most recently updated profile with an external ID will be prioritized for updates. If the `external_id` doesn't exist, the most recently updated profile will be prioritized for updates.

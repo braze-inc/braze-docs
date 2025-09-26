@@ -45,7 +45,7 @@ Se você ainda não fez isso, selecione **Salvar como rascunho**. Para começar 
 
 O editor usa dois tipos de componentes para a composição da landing page: [blocos básicos](#basic-blocks) e [blocos de formulário](#form-blocks). Todos os blocos devem ser colocados em uma fileira.
 
-![A seção 'Build' que contém 'Rows' e 'Form Blocks'.]({% image_buster /assets/img/landing_pages/dnd.png %}){: style="max-width:35%;"}
+![A seção 'Build' contendo 'Rows' e 'Form Blocks'.]({% image_buster /assets/img/landing_pages/dnd.png %}){: style="max-width:35%;"}
 
 #### Blocos básicos
 
@@ -71,7 +71,7 @@ Você pode usar esses blocos para criar um formulário que vincula os dados envi
 | Tipo de bloco     | Descrição |
 |---------------|-------------|
 | Captura de e-mail | Um campo de formulário para endereços de e-mail. Quando enviado, o endereço de e-mail é adicionado ao perfil do usuário no Braze. |
-| Captura de telefone | Um campo de formulário para números de telefone. Quando enviado, o usuário é inscrito no seu grupo de inscrições de SMS ou WhatsApp. |
+| Captura de telefone | Um campo de formulário para números de telefone. Quando enviado, o usuário é inscrito no seu grupo de inscrições de SMS ou Whatsapp. |
 | Campo de entrada   | Um campo de formulário compatível com atributos padrão (como nome e sobrenome) ou uma string de atributo personalizado de sua escolha. |
 | Menu suspenso      | Os usuários podem selecionar um item de uma lista predefinida. Você pode adicionar quaisquer strings de atributos personalizados à lista. |
 | Caixa de seleção      | Se um usuário marcar a caixa, a atribuição do bloco será definida como `true`. Se não estiver marcado, sua atribuição será definida como `false`. |

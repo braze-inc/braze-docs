@@ -1,5 +1,5 @@
 ---
-nav_title: Canvas Components
+nav_title: Canvas components
 article_title: Canvas Components
 page_order: 2
 alias: "/user_guide/engagement_tools/canvas/canvas_components/about/"

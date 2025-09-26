@@ -1,5 +1,5 @@
 ---
-nav_title: Card Creation
+nav_title: Card creation
 article_title: Card Creation
 alias: /card_creation/
 description: "This article describes the differences between Content Card creation at campaign launch or Canvas step entry versus at first impression."

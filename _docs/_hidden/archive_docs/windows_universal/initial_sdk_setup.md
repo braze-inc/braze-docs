@@ -1,5 +1,5 @@
 ---
-nav_title: Initial SDK Setup
+nav_title: Initial SDK setup
 article_title: Initial SDK Setup for Windows Universal
 platform: Windows Universal
 page_order: 0

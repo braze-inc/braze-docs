@@ -15,7 +15,7 @@ Você pode ver as transações da campanha de mensagens API, solucionar problema
 
 Para acessar o registro, acesse **Configurações** > **Registro de atividade de mensagens**.
 
-![Registro de atividade de mensagens][2]
+![Envio de mensagens do registro de atividade]({% image_buster /assets/img_archive/message_activity_log.png %})
 
 {% alert tip %}
 Além deste artigo, também recomendamos conferir nosso curso do Braze Learning sobre [Ferramentas de garantia de qualidade e depuração](https://learning.braze.com/quality-assurance-and-debugging-tools-in-the-dashboard/), que aborda como usar o Message Activity Log para conduzir sua própria solução de problemas e depuração.
@@ -43,7 +43,7 @@ Essas mensagens podem vir de nosso próprio sistema, de seus apps ou plataformas
 
 Para determinar o significado de suas mensagens, preste atenção ao texto de cada mensagem e às colunas que correspondem a ela, pois isso pode ajudá-lo a solucionar problemas usando dicas de contexto. 
 
-Por exemplo, se houver um registro cuja mensagem indique "empty-cart_app" e você não tiver certeza do que isso significa, olhe à esquerda na coluna **Type (Tipo** ). Se você vir "Erro de mensagem abortada", poderá presumir com segurança que a mensagem era o que foi escrito como [mensagem de abortamento][1] usando o Liquid e que a mensagem foi abortada porque o destinatário pretendido da mensagem tinha um carrinho vazio em seu app.
+Por exemplo, se houver um registro cuja mensagem indique "empty-cart_app" e você não tiver certeza do que isso significa, olhe à esquerda na coluna **Type (Tipo** ). Se você vir "Erro de mensagem abortada", poderá presumir com segurança que a mensagem era o que foi escrito como [mensagem de abortamento]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/#aborting-messages) usando o Liquid e que a mensagem foi abortada porque o destinatário pretendido da mensagem tinha um carrinho vazio em seu app.
 
 ### Envio de mensagens comuns
 
@@ -55,7 +55,7 @@ As mensagens listadas a seguir são para fins de exemplo e podem não correspond
 |---|---|---|
 | Soft bounce | O endereço de e-mail same@example.com é um soft bounce. | O endereço de e-mail era válido e a mensagem de e-mail chegou ao servidor de e-mail do destinatário, mas foi rejeitada por um problema "temporário". <br><br>Os motivos comuns do soft bounce incluem: {::nomarkdown} <ul> <li> A caixa de correio estava cheia (o usuário ultrapassou sua cota) </li> <li> O servidor estava fora do ar </li> <li> A mensagem era muito grande para a caixa de entrada do destinatário </li>  </ul> {:/} Se um e-mail tiver recebido um soft bounce, geralmente tentaremos novamente em um período de 72 horas, mas o número de tentativas de nova tentativa varia de acordo com o destinatário. |
 | Hard bounce | A conta de e-mail que você tentou acessar não existe. Tente verificar novamente o endereço de e-mail do destinatário quanto a erros de digitação ou espaços desnecessários. | Sua mensagem nunca chegou à caixa de entrada dessa pessoa porque não havia uma caixa de entrada para ser acessada. Se quiser se aprofundar mais, mensagens como essa podem, às vezes, ter links na coluna **Exibir detalhes** que lhe permitirão visualizar o perfil do destinatário pretendido.|
-| Bloquear | A mensagem de spam é rejeitada devido à política anti-spam. | Sua mensagem foi categorizada como spam. Esse erro de e-mail é registrado para um usuário se tivermos recebido um evento do ESP indicando que o e-mail foi descartado. Pode ser que seja apenas para o destinatário pretendido, mas se estiver vendo essa mensagem com frequência, talvez queira reavaliar seus hábitos de envio ou o conteúdo da sua mensagem. Além disso, pense no passado - você [aqueceu seu IP][8]? Caso contrário, entre em contato com o Braze para obter conselhos sobre como fazer isso.|
+| Bloquear | A mensagem de spam é rejeitada devido à política anti-spam. | Sua mensagem foi categorizada como spam. Esse erro de e-mail é registrado para um usuário se tivermos recebido um evento do ESP indicando que o e-mail foi descartado. Pode ser que seja apenas para o destinatário pretendido, mas se estiver vendo essa mensagem com frequência, talvez queira reavaliar seus hábitos de envio ou o conteúdo da sua mensagem. Além disso, pense no passado - você aqueceu [seu IP]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ip_warming/)? Caso contrário, entre em contato com o Braze para obter conselhos sobre como fazer isso.|
 | Erro de mensagem abortado | empty-cart_web | Se você tiver um app com um carrinho ou criar um envio com uma mensagem de abortar no app, poderá personalizar a mensagem que será retornada se o envio for abortado. Nesse caso, a mensagem retornada é empty-cart_web.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -87,6 +87,3 @@ Aqui está uma visão geral das condições que afetam o número de registros qu
     - Erros de atividade ao vivo
     - Erros de disparo de usuário ruim
 
-[1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/#aborting-messages
-[2]: {% image_buster /assets/img_archive/message_activity_log.png %}
-[8]: {{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ip_warming/

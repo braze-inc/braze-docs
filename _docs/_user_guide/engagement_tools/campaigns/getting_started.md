@@ -1,5 +1,5 @@
 ---
-nav_title: Getting Started
+nav_title: Getting started
 article_title: Getting Started with Campaigns
 layout: dev_guide
 guide_top_header: "Getting Started with Campaigns"

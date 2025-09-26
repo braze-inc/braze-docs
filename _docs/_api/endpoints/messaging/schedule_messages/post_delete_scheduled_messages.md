@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Delete Scheduled Messages"
+nav_title: "POST: Delete scheduled messages"
 article_title: "POST: Delete Scheduled Messages"
 search_tag: Endpoint
 page_order: 4

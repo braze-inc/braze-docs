@@ -1,5 +1,5 @@
 ---
-nav_title: Canvas by Channel
+nav_title: Canvas by channel
 config_only: true
 noindex: true
 page_order: 6

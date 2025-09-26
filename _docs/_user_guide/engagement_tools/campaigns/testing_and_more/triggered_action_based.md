@@ -1,5 +1,5 @@
 ---
-nav_title: API-Triggered and Action-Based Campaigns
+nav_title: API-triggered and action-based campaigns
 article_title: Testing API-Triggered and Action-Based Campaigns
 page_order: 2
 page_type: reference

@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Update Scheduled Messages"
+nav_title: "POST: Update scheduled messages"
 article_title: "POST: Update Scheduled Messages"
 search_tag: Endpoint
 page_order: 4

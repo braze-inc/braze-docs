@@ -20,42 +20,42 @@ description: "Saiba mais sobre mensagens no app e como configurá-las para o Bra
 {% endsdktab %}
 
 {% sdktab swift %}
-guide/swift/in_app_messages.md developer_ %}
+{% multi_lang_include developer_guide/swift/in_app_messages.md %}
 {% endsdktab %}
 
 {% sdktab web %}
-guide/web/in_app_messages.md developer_ %}
+{% multi_lang_include developer_guide/web/in_app_messages.md %}
 {% endsdktab %}
 
 {% sdktab android ott %}
-guide/android_ott/in_app_messages.md developer_ %}
+{% multi_lang_include developer_guide/android_ott/in_app_messages.md %}
 {% endsdktab %}
 
 {% sdktab cordova %}
-guide/cordova/in_app_messages.md developer_ %}
+{% multi_lang_include developer_guide/cordova/in_app_messages.md %}
 {% endsdktab %}
 
 {% sdktab flutter %}
-guide/flutter/in_app_messages.md developer_ %}
+{% multi_lang_include developer_guide/flutter/in_app_messages.md %}
 {% endsdktab %}
 
 {% sdktab react native %}
-guide/react_native/in_app_messages.md developer_ %}
+{% multi_lang_include developer_guide/react_native/in_app_messages.md %}
 {% endsdktab %}
 
 {% sdktab roku %}
-guide/roku/in_app_messages.md developer_ %}
+{% multi_lang_include developer_guide/roku/in_app_messages.md %}
 {% endsdktab %}
 
 {% sdktab tvos %}
-guide/tvos/in_app_messages.md developer_ %}
+{% multi_lang_include developer_guide/tvos/in_app_messages.md %}
 {% endsdktab %}
 
 {% sdktab unity %}
-guide/unity/in_app_messages.md developer_ %}
+{% multi_lang_include developer_guide/unity/in_app_messages.md %}
 {% endsdktab %}
 
 {% sdktab xamarin %}
-guide/xamarin/in_app_messages.md developer_ %}
+{% multi_lang_include developer_guide/xamarin/in_app_messages.md %}
 {% endsdktab %}
 {% endsdktabs %}

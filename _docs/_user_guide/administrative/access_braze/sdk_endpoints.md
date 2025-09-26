@@ -1,5 +1,5 @@
 ---
-nav_title: API and SDK Endpoints
+nav_title: API and SDK endpoints
 article_title: API and SDK Endpoints
 page_order: 1
 page_type: reference

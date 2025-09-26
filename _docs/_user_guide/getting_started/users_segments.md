@@ -1,5 +1,5 @@
 ---
-nav_title: Users and Segments
+nav_title: Users and segments
 article_title: Getting Started&#58; Users and Segments
 page_order: 2
 page_type: reference

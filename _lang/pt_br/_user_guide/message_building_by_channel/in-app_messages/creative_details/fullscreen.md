@@ -58,7 +58,7 @@ As mensagens no app em tela cheia preencherão toda a altura de um dispositivo e
 
 Ao fazer a prévia de uma mensagem no app em tela cheia na plataforma Braze, é possível ativar a Zona de segurança da imagem para a área da mensagem que está protegida contra cortes quando exibida em dispositivos. Além de testar a zona de segurança da imagem no painel de prévia, recomendamos que você [teste sua mensagem]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) como sempre.
 
-![Pré-visualização de uma mensagem no app na Braze com a opção "Exibir imagem em zona de segurança" ativada. A zona de segurança da imagem é uma sobreposição sobre a imagem que visualiza quais partes da imagem estarão protegidas contra cortes.][3c]
+![Pré-visualização de uma mensagem no app na Braze com a opção "Exibir imagem em zona de segurança" ativada. A zona de segurança da imagem é uma sobreposição sobre a imagem que visualiza quais partes da imagem estarão protegidas contra cortes.]({% image_buster /assets/img/image-safe-zone-full-screen-in-app-message.png %})
 
 ## Telas maiores
 
@@ -77,5 +77,3 @@ Em um tablet ou navegador de desktop, uma mensagem no app em tela cheia ficará 
 {% endtab %}
 {% endtabs %}
 
-[3b]: {% image_buster /assets/img/full-screen-large-viewport.png %}
-[3c]: {% image_buster /assets/img/image-safe-zone-full-screen-in-app-message.png %}

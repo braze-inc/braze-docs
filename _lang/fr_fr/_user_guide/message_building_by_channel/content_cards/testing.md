@@ -26,7 +26,7 @@ Pour envoyer un test à des [groupes de test de contenu]({{site.baseurl}}/user_g
 
 Vous pouvez également prévisualiser les messages à partir de l'onglet **Test** comme si vous étiez un utilisateur. Vous pouvez sélectionner un utilisateur spécifique, un utilisateur aléatoire ou créer un utilisateur personnalisé.
 
-![Custom_User_Preview][3]
+![Aperçu d'une carte de contenu dans l'onglet "Test".]({% image_buster /assets/img/cc-user-preview.png %}){: style="max-width:80%;"}
 
 ### Liste de contrôle des tests
 
@@ -52,7 +52,7 @@ C’est notamment utile pour comprendre pourquoi un utilisateur n’arrive pas �
         "session_id": "D1B051E6-469B-47E2-B830-5A728D1D4AC5",
         "data": {
           "ids": [
-            "NjE4NTAwNWE5ZDliZWU3OTM4N2NjZTQzXyRfY2M9YzNiMjU3NDAtZjExMy1jMDQ3LTRiMWQtZDI5NmYyODBhZjRmJm12PTYxODUwMDViOWQ5YmVlNzkzODdjY2U0NSZwaT1jbXA="
+            "NDg2MTY5MmUtNmZjZS00MjE1LWJkMDUtMzI1NGZiOWU5MDU3"
           ]
         },
         "name": "cci",
@@ -64,16 +64,14 @@ C’est notamment utile pour comprendre pourquoi un utilisateur n’arrive pas �
 5. Utilisez un outil de décodage comme [Base64 Decode and Encode](https://www.base64decode.org/) pour décoder le `id` du format Base64 et trouver le `campaign_id` associé. Dans notre exemple, cela donne les résultats suivants :
 
     ```
-    6185005a9d9bee79387cce43_$_cc=c3b25740-f113-c047-4b1d-d296f280af4f&mv=6185005b9d9bee79387cce45&pi=cmp
+    4861692e-6fce-4215-bd05-3254fb9e9057_$_cc=c3b25740-f113-c047-4b1d-d296f280af4f&mv=6185005b9d9bee79387cce45&pi=cmp
     ```
 
-    Où `6185005a9d9bee79387cce43` est le `campaign_id`.<br><br>
+    Où `4861692e-6fce-4215-bd05-3254fb9e9057` est le `campaign_id`.<br><br>
 
 6. Rendez-vous sur la page des **campagnes** et recherchez le site `campaign_id`.
 
-![Recherche de l'identifiant de la campagne sur la page des campagnes][1]
+![Recherche de l'identifiant de la campagne sur la page des campagnes]({% image_buster /assets/img_archive/cc_debug.png %}){: style="max-width:80%;"}
 
 Ensuite, vous pouvez examiner les paramètres et le contenu de vos messages pour déterminer pourquoi un utilisateur ne voit pas une carte de contenu particulière.
 
-[1]: {% image_buster /assets/img_archive/cc_debug.png %}
-[3]: {% image_buster /assets/img/cc-user-preview.png %}

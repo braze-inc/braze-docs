@@ -33,7 +33,7 @@ Si quieres segmentar a los usuarios para realizar pruebas dentro de una sola cam
 
 Al [crear un segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/), añade el filtro "N.º de contenedor aleatorio". A continuación, especifica un número o rango de números para incluirlos en tu segmento.
 
-![][2]
+![Un filtro de segmento para números de contenedor aleatorios no superiores a "3000".]({% image_buster /assets/img_archive/random_buckets_filterexample.png %})
 
 Puede utilizar este tipo de segmentos si desea realizar una prueba de tres variantes diferentes e incluir también un grupo de control. Considere el siguiente ejemplo de plan para crear segmentos de igual tamaño para tres variantes y un grupo de control:
 
@@ -57,4 +57,3 @@ La reentrada aleatoria de la audiencia puede ser útil para [las pruebas A/B]({{
 5. Lanza tu campaña y controla el rendimiento de cada contenedor. Puedes analizar métricas como las tasas de interacción y de conversión para determinar la eficacia de la reactivación de la audiencia aleatoria en tu caso de uso.
 
 
-[2]: {% image_buster /assets/img_archive/random_buckets_filterexample.png %}

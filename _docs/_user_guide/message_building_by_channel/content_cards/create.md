@@ -1,5 +1,5 @@
 ---
-nav_title: Creating a Content Card
+nav_title: Creating a content card
 article_title: Creating a Content Card
 page_order: 0
 description: "This reference article covers how to create, compose, configure, and send Content Cards using Braze campaigns and Canvases."
@@ -143,7 +143,9 @@ For Content Card campaigns with scheduled delivery, you can choose when Braze ev
 
 #### Choose users to target
 
-Next, [target users]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) by choosing segments or filters to narrow down your audience. You'll automatically be given a snapshot of what that approximate segment population looks like right now. Keep in mind that exact segment membership is always calculated just before the message is sent.
+Next, [target users]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) by choosing segments or filters to narrow down your audience. You'll automatically be given a preview of what that approximate segment population looks like right now. Keep in mind that exact segment membership is always calculated just before the message is sent.
+
+{% multi_lang_include target_audiences.md %}
 
 #### Choose conversion events
 
@@ -214,8 +216,8 @@ To prevent issues with the card limit, we advise the following best practices:
 
 Re-eligibility determines if and when a user can receive a message from the same campaign more than once. For Content Cards, understanding how this works is critical for managing recurring campaigns and ensuring users don't receive duplicate or stale messages.
 
-{% alert note %}
-When a Content Card becomes re-eligible, it may be sent again when the original card is still in a user's app. To avoid duplicate cards in a user's app, you can turn off re-eligibility or extend the re-eligibility window so that users won't be sent a new card until the original has expired.
+{% alert tip %}
+Do you want your content to last longer than 30 days? Try [Banners]({{site.baseurl}}/user_guide/message_building_by_channel/banners).
 {% endalert %}
 
 #### How re-eligibility is calculated

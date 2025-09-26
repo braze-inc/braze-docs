@@ -15,7 +15,7 @@ search_tag: Partner
 This document covers the use cases of the extension, how to install it in your event-forwarding libraries, and how to employ its capabilities in an event-forwarding [rule](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html?lang=en).
 
 {% alert note %}
-Sending attributes to Braze may increase your Braze data point consumption. Consult with your Braze account manager before sending attributes. Refer to the Braze documentation on [billable data points]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/#billable-data-points) for more information.
+Use of Adobe Event forwarding may increase your Braze data point usage. Refer to the Braze documentation on [data points]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/#billable-data-points) for more information.
 {% endalert %}
 
 ## Use cases
@@ -112,7 +112,7 @@ User attributes can be a JSON object containing fields that will create or updat
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
-All attributes added within the configuration will be sent each time the event is sent to Braze, regardless of whether the attribute's value has changed. When configuring user attributes, ensure you know how this will affect your data point consumption.
+All attributes added within the configuration will be sent each time the event is sent to Braze, regardless of whether the attribute's value has changed. When configuring user attributes, ensure you know how this will affect your data point usage.
 {% endalert %}
 
 {% endtab %}
@@ -180,7 +180,7 @@ User attributes can be a JSON object containing fields that will create or updat
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
-All attributes added within the configuration will be sent each time the event is sent to Braze, regardless of whether the attribute's value has changed. When configuring user attributes, please ensure you know how this will affect your data point consumption. 
+All attributes added within the configuration will be sent each time the event is sent to Braze, regardless of whether the attribute's value has changed. When configuring user attributes, please ensure you know how this will affect your data point usage. 
 {% endalert %}
 
 {% endtab %}

@@ -16,10 +16,10 @@ description: "Aprende a hacer un seguimiento de la ubicación mediante el SDK de
 {% endsdktab %}
 
 {% sdktab swift %}
-guide/swift/analytics/tracking_location.md developer_ %}
+{% multi_lang_include developer_guide/swift/analytics/tracking_location.md %}
 {% endsdktab %}
 
 {% sdktab web %}
-guide/web/analytics/tracking_location.md developer_ %}
+{% multi_lang_include developer_guide/web/analytics/tracking_location.md %}
 {% endsdktab %}
 {% endsdktabs %}

@@ -43,7 +43,7 @@ Añada las campañas y los mensajes Canvas que desea compilar en su informe. Pue
 - Seleccionar manualmente campañas y lienzos
 - Selección automática de campañas y lienzos en función de reglas específicas
 
-![engagement_reports_message_selection][2]
+![engagement_reports_message_selection]({% image_buster /assets/img_archive/engagement_report_add_messages.png %})
 
 #### Seleccionar manualmente campañas o lienzos
 
@@ -57,7 +57,7 @@ Esta opción te permite incluir automáticamente todos los mensajes que incluyan
 
 El paso **Añadir estadísticas** le muestra las estadísticas de los tipos de campañas o Lienzos que haya seleccionado. Por ejemplo, si seleccionaste mensajes de correo electrónico, sólo puedes ver las estadísticas de correo electrónico relevantes. Si elegiste una combinación de correo electrónico y push, puedes ver las estadísticas de esos dos canales.
 
-![engagement_report_add_stats][3]
+![engagement_report_add_stats]({% image_buster /assets/img_archive/engagement_report_add_stats.png %})
 
 | Canal | Estadísticas disponibles |
 | ------| --------------|
@@ -94,7 +94,7 @@ Por predeterminado, el intervalo de datos mostrado se basa en la zona horaria de
 
 Por defecto, los datos mostrados en los informes de interacción son diarios (un día). Para ver estos datos en diferentes intervalos, elige un número explícito de días o semanas para agregar los datos del informe. Así, en lugar de ver las métricas diarias, puedes ver tu interacción por semanas, meses, trimestres o similar. Si una agregación centrada en el tiempo no es suficiente, también puede optar por exportar los datos a nivel de campaña o de lienzo.
 
-![engagement_reports_data_coverage][4]
+![engagement_reports_data_coverage]({% image_buster /assets/img_archive/engagement_report_datacoverage.png %})
 
 #### Programa tu informe
 
@@ -103,7 +103,7 @@ Existen dos opciones a la hora de programar su informe:
 - **Enviar inmediatamente:** Una vez lanzado el informe, Braze lo enviará inmediatamente.
 - **Enviar a una hora determinada:** Esta opción te da la flexibilidad de elegir con qué frecuencia recibes este informe. Puede elegir enviar este informe cada determinado número de días, semanas o meses. También puede definir cuándo dejar de enviar el informe.
 
-![engagement_reports_schedule_report][5]{: style="max-width:65%;" }
+![engagement_reports_schedule_report]({% image_buster /assets/img_archive/engagement_report_reportschedule.png %}){: style="max-width:65%;" }
 
 ### Paso 5: Revisión y lanzamiento
 
@@ -116,7 +116,3 @@ Recibirá un correo electrónico con enlaces a sus informes en el momento u hora
 El informe contiene todas las estadísticas seleccionadas en la sección [Añadir estadísticas](#add-statistics-to-your-reports) del proceso de configuración.
 
 
-[2]: {% image_buster /assets/img_archive/engagement_report_add_messages.png %}
-[3]: {% image_buster /assets/img_archive/engagement_report_add_stats.png %}
-[4]: {% image_buster /assets/img_archive/engagement_report_datacoverage.png %}
-[5]: {% image_buster /assets/img_archive/engagement_report_reportschedule.png %}

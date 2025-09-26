@@ -23,7 +23,7 @@ platform:
 {% sdktabs %}
 {% sdktab android %}
 {% alert tip %}
-[안드로이드 브레이즈 SDK 변경 로그](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md) 사본은 [GitHub에서도](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md) 찾을 수 있습니다.
+[Android Braze SDK 변경 로그](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md) 사본은 GitHub에서도 찾을 수 있습니다.
 {% endalert %}
 
 {% markdown_embed https://raw.githubusercontent.com/braze-inc/braze-android-sdk/master/CHANGELOG.md %}
@@ -31,7 +31,7 @@ platform:
 
 {% sdktab swift %}
 {% alert tip %}
-[Swift Braze SDK 변경 로그](https://github.com/braze-inc/braze-swift-sdk/blob/master/CHANGELOG.md) 사본은 [GitHub에서도](https://github.com/braze-inc/braze-swift-sdk/blob/master/CHANGELOG.md) 찾을 수 있습니다.
+[Swift Braze SDK 변경 로그](https://github.com/braze-inc/braze-swift-sdk/blob/master/CHANGELOG.md) 사본은 GitHub에서도 찾을 수 있습니다.
 {% endalert %}
 
 {% markdown_embed https://raw.githubusercontent.com/braze-inc/braze-swift-sdk/main/CHANGELOG.md %}
@@ -39,7 +39,7 @@ platform:
 
 {% sdktab web %}
 {% alert tip %}
-[웹브레이즈 SDK 변경 로그](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md) 사본은 [GitHub에서도](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md) 찾을 수 있습니다.
+[웹 Braze SDK 변경 로그](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md) 사본은 GitHub에서도 찾을 수 있습니다.
 {% endalert %}
 
 {% markdown_embed https://raw.githubusercontent.com/braze-inc/braze-web-sdk/master/CHANGELOG.md %}
@@ -47,7 +47,7 @@ platform:
 
 {% sdktab cordova %}
 {% alert tip %}
-[코드바 브레이즈 SDK 변경 로그](https://github.com/braze-inc/braze-cordova-sdk/blob/master/CHANGELOG.md) 사본은 [GitHub에서도](https://github.com/braze-inc/braze-cordova-sdk/blob/master/CHANGELOG.md) 확인할 수 있습니다.
+[Cordova Braze SDK 변경 로그](https://github.com/braze-inc/braze-cordova-sdk/blob/master/CHANGELOG.md) 사본은 GitHub에서도 확인할 수 있습니다.
 {% endalert %}
 
 {% markdown_embed https://raw.githubusercontent.com/braze-inc/braze-cordova-sdk/master/CHANGELOG.md %}
@@ -55,7 +55,7 @@ platform:
 
 {% sdktab flutter %}
 {% alert tip %}
-[Flutter Braze SDK 변경 로그](https://github.com/braze-inc/braze-flutter-sdk/blob/master/CHANGELOG.md) 사본은 [GitHub에서도](https://github.com/braze-inc/braze-flutter-sdk/blob/master/CHANGELOG.md) 찾을 수 있습니다.
+[Flutter Braze SDK 변경 로그](https://github.com/braze-inc/braze-flutter-sdk/blob/master/CHANGELOG.md) 사본은 GitHub에서도 찾을 수 있습니다.
 {% endalert %}
 
 {% markdown_embed https://raw.githubusercontent.com/braze-inc/braze-flutter-sdk/master/CHANGELOG.md %}
@@ -63,7 +63,7 @@ platform:
 
 {% sdktab react native %}
 {% alert tip %}
-[리액트 네이티브 브라즈 SDK 변경 로그](https://github.com/braze-inc/braze-react-native-sdk/blob/master/CHANGELOG.md) 사본은 [GitHub에서도](https://github.com/braze-inc/braze-react-native-sdk/blob/master/CHANGELOG.md) 확인할 수 있습니다.
+[React Native Braze SDK 변경 로그](https://github.com/braze-inc/braze-react-native-sdk/blob/master/CHANGELOG.md) 사본은 GitHub에서도 확인할 수 있습니다.
 {% endalert %}
 
 {% markdown_embed https://raw.githubusercontent.com/braze-inc/braze-react-native-sdk/master/CHANGELOG.md %}

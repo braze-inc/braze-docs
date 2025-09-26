@@ -12,14 +12,14 @@ tool: Canvas
 
 > Jornadas de ação no canva permitem que você classifique seus usuários com base em suas ações. 
 
-Usando jornadas de ação, você pode:
+![Uma etapa do Action Paths em uma jornada do usuário do Canva.]({% image_buster /assets/img/canvas_actionpath.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
-![Uma etapa das jornadas de ação como a primeira etapa de uma jornada do usuário do Canva.][1]{: style="float:right;max-width:40%;margin-left:15px;"}
+Usando jornadas de ação, você pode:
 
 * Personalize os caminhos do usuário com base em uma ação específica, incluindo eventos de engajamento do usuário e eventos personalizados
 * Mantenha os usuários por uma determinada duração para priorizar sua próxima jornada com base em suas ações durante este período de avaliação
 
-## Crie uma jornada de ação
+## Criação de uma jornada de ação
 
 Para criar uma jornada de ação, adicione um componente ao seu canva. Arraste e solte o componente da barra lateral ou selecione o <i class="fas fa-plus-circle"></i> botão de mais na parte inferior de uma etapa e selecione **jornadas de ação**. 
 
@@ -29,7 +29,7 @@ Nas **Configurações de Ação**, defina a **Janela de Avaliação** para deter
 
 Dentro das **Configurações de Ação**, você também pode ativar a ordem classificada para seus componentes ativando a alternância **Avançar usuários com base na ordem classificada**.
 
-![As Configurações de ação com uma janela de avaliação de 1 dia.][4]
+![As Configurações de ação com uma janela de avaliação de 1 dia.]({% image_buster /assets/img/actionpath_settings.png %})
 
 Por padrão, **Ranking** está desativado. Quando um usuário entra na jornada de ação e realiza o evento de gatilho anexado a qualquer grupo de ação, ele avançará imediatamente pelo grupo de ação relevante. Se um usuário não realizar um evento de gatilho, ele avançará pelo grupo padrão **Todos os Outros** no final do período de avaliação.
 
@@ -63,7 +63,7 @@ Adicione um disparar ou vários disparar para definir seus grupos de ação. Aqu
 - Disparar um geofence
 - Enviar uma mensagem de entrada por SMS ou WhatsApp
 
-![Um grupo de ações chamado "Grupo 1" para usuários que fazem qualquer compra.][3]
+![Um grupo de ação denominado "Grupo 1" para usuários que fazem qualquer compra.]({% image_buster /assets/img/actionpath_group.png %})
 
 Em cada configuração de grupo de ação, você também tem a opção de marcar a caixa de seleção **Quero que esse grupo saia do Canvas**, o que significa que os usuários desse grupo sairão do Canvas no final do período de avaliação.
 
@@ -80,6 +80,3 @@ Se os usuários entrarem em uma jornada de ação várias vezes e tiverem vária
 Nota que as classificações não são [editáveis após o lançamento]({{site.baseurl}}/post-launch_edits/).
 
 
-[1]: {% image_buster /assets/img/canvas_actionpath.png %}
-[3]: {% image_buster /assets/img/actionpath_group.png %}
-[4]: {% image_buster /assets/img/actionpath_settings.png %} 

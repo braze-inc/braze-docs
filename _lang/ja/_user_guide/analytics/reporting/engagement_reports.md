@@ -43,7 +43,7 @@ tool:
 - キャンペーンとキャンバスを手動で選択する
 - 特定のルールに基づいてキャンペーンとキャンバスを自動的に選択する
 
-![engagement_reports_message_selection][2]
+![engagement_reports_message_selection]({% image_buster /assets/img_archive/engagement_report_add_messages.png %})
 
 #### キャンペーンまたはキャンバスの手動選択
 
@@ -57,7 +57,7 @@ tool:
 
 [**統計の追加**] ステップには、選択したキャンペーンまたはキャンバスのタイプに関する統計情報が表示されます。たとえば、電子メールメッセージを選択した場合、関連する電子メール統計のみを表示できます。メールとプッシュの組み合わせを選択した場合は、それらの2 つのチャネルの統計を表示できます。
 
-![engagement_report_add_stats][3]
+![engagement_report_add_stats]({% image_buster /assets/img_archive/engagement_report_add_stats.png %})
 
 | チャネル | 利用可能な統計値 |
 | ------| --------------|
@@ -94,7 +94,7 @@ tool:
 
 デフォルトでは、エンゲージメントレポートに表示されるデータは毎日(1 日) です。異なる間隔でこのデータを表示するには、明示的な日数または週数を選択してレポートのデータを集計します。そのため、毎日のメトリクスを表示する代わりに、週、月、四半期、または同様の方法でエンゲージメントを表示できます。時間中心の集計で不十分な場合は、キャンペーンまたはキャンバスのレベルでのデータのエクスポートを選択することもできます。
 
-![engagement_reports_data_coverage][4]
+![engagement_reports_data_coverage]({% image_buster /assets/img_archive/engagement_report_datacoverage.png %})
 
 #### レポートのスケジュールの設定
 
@@ -103,7 +103,7 @@ tool:
 - **すぐに送信:**レポートが開始された後、Braze はただちにこのレポートを送信します。
 - **指定した時刻に送信:**このオプションでは、このレポートを受け取る頻度を柔軟に選択できます。設定した日数、週数、月数ごとにこのレポートを送信するように選択できます。レポートの送信を停止するタイミングも定義できます。
 
-![engagement_reports_schedule_report][5]{: style="max-width:65%;" }
+![engagement_reports_schedule_report]({% image_buster /assets/img_archive/engagement_report_reportschedule.png %}){: style="max-width:65%;" }
 
 ### ステップ 5: レビューと開始
 
@@ -116,7 +116,3 @@ tool:
 レポートには、設定プロセスの「[統計の追加](#add-statistics-to-your-reports)」セクションで選択したすべての統計情報が含まれます。
 
 
-[2]: {% image_buster /assets/img_archive/engagement_report_add_messages.png %}
-[3]: {% image_buster /assets/img_archive/engagement_report_add_stats.png %}
-[4]: {% image_buster /assets/img_archive/engagement_report_datacoverage.png %}
-[5]: {% image_buster /assets/img_archive/engagement_report_reportschedule.png %}

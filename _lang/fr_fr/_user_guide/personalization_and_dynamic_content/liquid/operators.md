@@ -8,7 +8,7 @@ description: "Cette page de référence indique les opérateurs compatibles Liqu
 
 # Opérateurs
 
-> Liquid prend en charge de nombreux [opérateurs][25] qui peuvent être utilisés dans vos instructions conditionnelles. Cette page présente les opérateurs pris en charge par Liquid et fournit des exemples d'utilisation dans vos messages.
+> Liquid prend en charge de nombreux [opérateurs](https://docs.shopify.com/themes/liquid/basics/operators) qui peuvent être utilisés dans vos instructions conditionnelles. Cette page présente les opérateurs pris en charge par Liquid et fournit des exemples d'utilisation dans vos messages.
 
 Ce tableau énumère les opérateurs pris en charge. Notez que les parenthèses sont des caractères non valides dans Liquid et qu'elles empêchent vos étiquettes de fonctionner.
 
@@ -61,7 +61,7 @@ Need a sign to update your wardrobe? We added a 15% discount code to your accoun
 ```
 {% endraw %}
 
-![Un compositeur de notifications push avec le code Liquid complet du tutoriel.][13]{: width="100%"}
+![Un compositeur de notifications push avec le code Liquid complet du tutoriel.]({% image_buster /assets/img/liquid-if-totalspend.png %}){: width="100%"}
 
 {% details Code complet du liquide %}
 {% raw %}
@@ -154,7 +154,7 @@ Hey! I've got a deal for you. Buy 2 of our newest releases and get 10% off!
 {% endraw %}
 {% enddetails %}
 
-![Un compositeur de notifications push avec le code Liquid complet du tutoriel.][14]
+![Un compositeur de notifications push avec le code Liquid complet du tutoriel.]({% image_buster /assets/img/liquid-if-elsif-games.png %})
 
 Désormais, si un utilisateur a joué pour la dernière fois à *Awkward Dinner Party*, il recevra ce message :
 
@@ -216,13 +216,8 @@ Stream now!
 {% endraw %}
 {% enddetails %}
 
-![Un compositeur de notifications push avec le code Liquid complet du tutoriel.][26]
+![Un compositeur de notifications push avec le code Liquid complet du tutoriel.]({% image_buster /assets/img/abort-if.png %})
 
-Vous pouvez également [interrompre les messages][1] en fonction du contenu connecté.
+Vous pouvez également [interrompre les messages]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/) en fonction du contenu connecté.
 
 
-[1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/
-[13]: {% image_buster /assets/img/liquid-if-totalspend.png %}
-[14]: {% image_buster /assets/img/liquid-if-elsif-games.png %}
-Il y a [25]: https://docs.shopify.com/themes/liquid/basics/operators
-[26]: {% image_buster /assets/img/abort-if.png %}

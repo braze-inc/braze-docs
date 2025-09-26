@@ -46,7 +46,7 @@ tool: Canvas
 
 다음으로 전환 이벤트를 할당해 보겠습니다. 전환 이벤트는 캔버스의 성공 여부를 측정하는 데 사용할 수 있는 일종의 지표입니다. **사용자 지정 이벤트 이름에서** **이메일 클릭을** 사용자 지정 이벤트로 선택합니다.
 
-![기본 전환 이벤트 - 전환 유형이 "사용자 지정 이벤트 수행"이고 사용자 지정 이벤트 이름이 "이메일 클릭"인 A입니다. 전환 기한은 4일입니다.][1]
+![기본 전환 이벤트 - 전환 유형이 "사용자 지정 이벤트 수행"이고 사용자 지정 이벤트 이름이 "이메일 클릭"인 A입니다. There is a 4-day conversion deadline.]({% image_buster /assets/img/canvas_templates/onboarding1.png %})
 
 즉, 신규 사용자는 최대 4일 이내에 환영 이메일을 클릭해야 합니다. 이 경우 신규 사용자가 PantsLabyrinth에 참여하고 계절별 의류 정기배송을 구독해야 한다는 절박감을 느끼길 원합니다.
 
@@ -56,7 +56,7 @@ tool: Canvas
 
 다음으로, **입력 창을** 조정하여 사용자가 캔버스에 들어갈 수 있는 시간을 결정합니다. 10월 말에 PantsLabyrinth 구독이 출시될 예정이라고 가정해 보겠습니다. 여기에서 시작 시간을 **2024/10/28 오전 8:00로** 설정합니다. 선택 사항으로 사용자가 현지 시간대로 캔버스에 입장하도록 할 수도 있습니다.
 
-![시작 시간이 2024년 10월 28일 오전 8시로 설정된 응모 창입니다. 사용자는 현지 시간대로 이 메시지를 입력합니다.][4]
+![시작 시간이 2024년 10월 28일 오전 8시로 설정된 응모 창입니다. Users will enter this message in their local time zone.]({% image_buster /assets/img/canvas_templates/onboarding4.png %})
 
 ### 4단계: 오디언스 타겟팅
 
@@ -82,7 +82,7 @@ tool: Canvas
 
 오디언스 **분할이라는** 오디언스 경로 단계에서 참여 사용자에 대한 필터를 사용자 지정할 수 있습니다. 템플릿에서 필터는 **환영 이메일 단계의 이메일을 클릭함이며**, 이는 사용자가 환영 이메일을 클릭한 사용자와 클릭하지 않은 사용자의 두 그룹으로 나뉜다는 의미입니다.
 
-![참여도가 높은 사용자를 위한 하나의 경로와 그 외 모든 사용자를 위한 하나의 경로가 있는 오디언스 분할 단계입니다.][2]{: style="max-width:70%;"}
+![An Audience Split step with one path for engaged users and one path for everyone else.]({% image_buster /assets/img/canvas_templates/onboarding2.png %}){: style="max-width:70%;"}
 
 온라인 의류 리테일러인 팬츠래버린스는 모바일 사용자도 활발하게 확보하고 있습니다. 따라서 별도의 온보딩 캔버스에서 다음 필터를 선택하여 모바일 사용자를 식별하고 이러한 세그먼트로 분할할 수도 있습니다:
 
@@ -101,7 +101,3 @@ tool: Canvas
 캔버스 출시 전후에 고려해야 할 사항은 [출시 전/후 체크리스트를]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/pre_post_launch_checklist/#things-to-consider-before-launch) 확인하세요.
 {% endalert %}
 
-[1]: {% image_buster /assets/img/canvas_templates/onboarding1.png %}
-[2]: {% image_buster /assets/img/canvas_templates/onboarding2.png %}
-[3]: {% image_buster /assets/img/canvas_templates/onboarding3.png %}
-[4]: {% image_buster /assets/img/canvas_templates/onboarding4.png %}

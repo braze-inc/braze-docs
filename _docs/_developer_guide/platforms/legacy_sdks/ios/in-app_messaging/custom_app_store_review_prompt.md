@@ -1,5 +1,5 @@
 ---
-nav_title: Custom App Store review prompt
+nav_title: Custom app store review prompt
 article_title: Custom App Store review prompt
 platform: iOS
 page_order: 4

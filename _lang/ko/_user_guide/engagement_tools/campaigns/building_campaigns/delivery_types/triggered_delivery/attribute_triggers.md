@@ -22,7 +22,7 @@ tool:
 
 속성 트리거를 사용하려면 캠페인 또는 캔버스 구성요소를 생성하고 **실행 기반 전달**을 전달 방법으로 선택합니다. 그런 다음 사용하려는 속성 트리거를 선택합니다.
 
-![][1]
+![]({% image_buster /assets/img_archive/trigger_attribute.png %})
 
 ### 구독 상태 업데이트
 
@@ -66,7 +66,7 @@ tool:
 현재 배열 어트리뷰트에는 속성 트리거를 사용할 수 없습니다.
 {% endalert %}
 
-![임의의 새 값][2]
+![Any new value]({% image_buster /assets/img_archive/any_value.png %})
 
 또한 Liquid를 사용하여 고객의 새로운 로열티 등급으로 메시지 본문을 맞춤 설정하고 고객에게 변경 사항에 대한 자세한 정보를 제공할 수 있습니다.
 
@@ -82,7 +82,7 @@ Your loyalty tier was just changed to {{custom_attribute.${loyalty_tier}}}
 
 예를 들어, 로열티 등급이 최고 등급으로 변경된 사용자를 타겟팅할 수 있습니다. 이 예제에서는 최고 로열티 등급이 슈퍼 VIP라고 가정합니다. 사용자의 로열티 등급 커스텀 속성이 `Super VIP`로 변경될 때 트리거되도록 캠페인을 설정하여 사용자가 슈퍼 VIP가 된 것을 축하할 수 있습니다.
 
-![][4]
+![]({% image_buster /assets/img_archive/super_vip.png %})
 
 {% alert important %}
 - 배열 및 날짜 커스텀에는 특정 커스텀 속성에 대한 속성 트리거를 사용할 수 없습니다.
@@ -91,6 +91,3 @@ Your loyalty tier was just changed to {{custom_attribute.${loyalty_tier}}}
 - 사용자 지정 속성 값 변경 트리거는 새로 생성된 사용자에게도 적용됩니다.
 {% endalert %}
 
-[1]:{% image_buster /assets/img_archive/trigger_attribute.png %}
-[2]:{% image_buster /assets/img_archive/any_value.png %}
-[4]:{% image_buster /assets/img_archive/super_vip.png %}

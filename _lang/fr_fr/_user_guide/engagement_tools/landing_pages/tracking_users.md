@@ -7,11 +7,17 @@ page_order: 2
 
 # Suivi des utilisateurs par le biais d'un formulaire
 
-> Découvrez comment suivre les utilisateurs qui soumettent un formulaire via votre page d'atterrissage en ajoutant une étiquette Liquid {% raw %}`{% landing_page_url %}`{% endraw %} à vos messages. Cette étiquette Liquid est prise en charge sur tous les canaux d'envoi de messages de Braze, y compris les e-mails, les SMS, les messages in-app, et plus encore. Pour en savoir plus sur les données de suivi, voir [À propos des données de suivi des pages d'atterrissage]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/about_tracking_data).
+> Découvrez comment suivre les utilisateurs qui soumettent un formulaire via votre page d'atterrissage en ajoutant une étiquette Liquid de page d'atterrissage à vos messages. Cette étiquette Liquid est prise en charge sur tous les canaux d'envoi de messages de Braze, y compris les e-mails, les SMS, les messages in-app, et plus encore. Pour en savoir plus sur les données de suivi, voir [À propos des données de suivi des pages d'atterrissage]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/about_tracking_data).
 
 ## Fonctionnement
 
-Vous pouvez ajouter une étiquette Liquid de page d'atterrissage à n'importe lequel de vos messages monocanal ou multicanal dans Braze. Lorsqu'un utilisateur visite cette page de renvoi et soumet le formulaire, Braze relie automatiquement ces données à son profil existant, au lieu de créer un nouveau profil pour cet utilisateur.
+Vous pouvez ajouter une étiquette Liquid {% raw %}`{% landing_page_url %}`{% endraw %} à n'importe lequel de vos messages à canal unique ou multiple dans Braze. Lorsqu'un utilisateur visite cette page de renvoi et soumet le formulaire, Braze relie automatiquement ces données à son profil existant, au lieu de créer un nouveau profil pour cet utilisateur. Dans l'exemple suivant, une étiquette Liquid de la page d'atterrissage est utilisée pour renvoyer les clients à une enquête :
+
+{% raw %}
+```html
+<a href=" {% landing_page_url customer-survey %}" class="button">Take the Survey!</a>
+```
+{% endraw %}
 
 {% alert tip %}
 Vous pouvez également utiliser les pages d'atterrissage pour générer des leads en intégrant l'URL de la page dans vos canaux externes. Après avoir créé une page d'atterrissage, allez dans **Détails de la page d'atterrissage** pour obtenir l'URL unique de votre page d'atterrissage.
@@ -39,7 +45,7 @@ Allez dans **Messagerie** > **Campagnes**, puis choisissez une campagne. Dans l'
 
 ![Le bouton "Ajouter une personnalisation" dans l'éditeur par glisser-déposer.]({% image_buster /assets/img/landing_pages/select-personalization.png %}){: style="max-width:75%;"}
 
-Braze génère automatiquement une étiquette Liquid à l'aide de l'[URL de](#page-url) votre [page d'atterrissage](#page-url). Reportez-vous au tableau suivant pour générer votre étiquette :
+Braze génère automatiquement une étiquette Liquid à l'aide de [l'URL de votre page d'atterrissage](#page-url). Reportez-vous au tableau suivant pour générer votre étiquette :
 
 \|**Type de** personnalisation Choisissez la **page d'atterrissage**.
 \|**Choisissez** la page d'atterrissage que [vous avez créée précédemment](#prerequisites).
@@ -53,10 +59,18 @@ Votre extrait de code sera similaire à ce qui suit :
 
 {% raw %}
 ```ruby
-{% landing_page_url my-custom-url-handle %}
+{% landing_page_url custom-url-handle %}
 ```
 {% endraw %}
 
 ### Étape 3 : Finaliser et envoyer votre message
 
-Incorporez l'extrait de code liquid dans votre message, puis finalisez le reste de votre message. Lorsque vous êtes prêt, vous pouvez envoyer le message pour commencer à suivre les utilisateurs via votre page d'atterrissage.
+Incorporez l'extrait de code liquid dans votre message, puis finalisez le reste de votre message. Par exemple :
+
+{% raw %}
+```html
+<a href=" {% landing_page_url customer-survey %}" class="button">Take the Survey!</a>
+```
+{% endraw %}
+
+Lorsque vous êtes prêt, vous pouvez envoyer le message pour commencer à suivre les utilisateurs via votre page d'atterrissage.

@@ -18,7 +18,7 @@ description: "Esta página explica cómo dar la bienvenida a los nuevos usuarios
 
 Cuando crees un mensaje dentro de la aplicación arrastrando y soltando, selecciona **Flujo de incorporación** para tu plantilla y, a continuación, selecciona **Crear mensaje**. Esta plantilla es compatible tanto con aplicaciones móviles como con navegadores web.
 
-![El editor de mensajes dentro de la aplicación con la plantilla del flujo de incorporación.][img1]
+![El editor de mensajes dentro de la aplicación con la plantilla de flujo de incorporación.]({% image_buster /assets/img/drag_and_drop/templates/onboarding_editor.png %})
 
 ### Paso 2: Configura tus estilos de mensaje
 
@@ -32,12 +32,10 @@ Comprueba que tus mensajes están conectados en orden secuencial para que los us
 
 ### Paso 4: Estiliza tu mensaje
 
-Personaliza el aspecto de tu flujo de incorporación utilizando los [componentes de arrastrar y soltar de los mensajes dentro de la aplicación][3].
+Personaliza el aspecto de tu flujo de incorporación utilizando los [componentes de arrastrar y soltar de los mensajes dentro de la aplicación]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#message-components).
 
 ## Analizar los resultados
 
 {% multi_lang_include drag_and_drop/templates.md section='informes' %}
 
-[img1]: {% image_buster /assets/img/drag_and_drop/templates/onboarding_editor.png %}
 
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#message-components

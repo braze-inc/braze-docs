@@ -18,13 +18,13 @@ tool: Canvas
 이 템플릿을 성공적으로 사용하려면 다음이 필요합니다:
 
 - 이 캔버스에서 구매하면 사용자가 캔버스에서 나가게 되므로 별도의 구매 후 사용자 여정 캔버스가 필요합니다.
-- 구성된 [Braze 오디언스]({{site.baseurl}}/partners/canvas_steps)는 사용하는 파트너 및 오디언스와 동기화됩니다.
+- 구성된 [Braze 오디언스]({{site.baseurl}}/partners/canvas_audience_sync/)는 사용하는 파트너 및 오디언스와 동기화됩니다.
 
 ## 필요에 맞게 템플릿 조정하기
 
 주방 용품 전문 리테일 브랜드인 Kitchenerie에서 일하며, 최신 제품인 '거대한 종이 접시'를 장바구니에 추가했지만 구매를 하지 않은 사용자의 재참여를 유도하는 것이 목표라고 가정해 보겠습니다.
 
-캔버스를 만들기 전에, 행동 트리거, 세분화 등을 기반으로 광고를 전송하기 위해 Braze의 사용자 데이터를 Facebook 오디언스에 추가할 수 있도록 Braze 오디언스 [동기화와 Facebook]({{site.baseurl}}/partners/canvas_steps/facebook_audience_sync/) 통합을 설정했습니다.
+캔버스를 만들기 전에, 행동 트리거, 세분화 등을 기반으로 광고를 전송하기 위해 Braze의 사용자 데이터를 Facebook 오디언스에 추가할 수 있도록 Braze 오디언스 [동기화와 Facebook]({{site.baseurl}}/partners/canvas_audience_sync/facebook_audience_sync/) 통합을 설정했습니다.
 
 중단된 의도 템플릿에 액세스하려면 새 캔버스를 만들 때 **캔버스 템플릿 사용** > **브레이즈 템플릿을** 선택합니다. 그런 다음 **중단된 의도** 옆의 **템플릿 적용을** 선택합니다. 이제 템플릿을 검토하여 필요에 맞게 조정할 수 있습니다.
 
@@ -51,7 +51,7 @@ tool: Canvas
 2. **특정 구매를** 선택합니다. 이를 통해 특정 제품 이름을 선택할 수 있습니다.
 3. **거대한 종이 접시를** 선택합니다.
 
-![기본 전환 이벤트 - 전환 유형이 "구매"이고 제품명이 "거대한 종이 접시"인 전환 이벤트입니다. 전환 기한은 3일입니다.][1]
+![기본 전환 이벤트 - 전환 유형이 "구매"이고 제품명이 "거대한 종이 접시"인 전환 이벤트입니다. 전환 기한은 3일입니다.]({% image_buster /assets/img/canvas_templates/abandoned_intent1.png %})
 
 ### 3단계: 참가 일정 설정
 
@@ -62,19 +62,19 @@ tool: Canvas
 3. 입력 창에서 시작 시간 날짜를 선택합니다.
 4. 사용자가 현지 시간대로 입력할 수 있도록 허용하는 옵션을 선택합니다. 최적의 타이밍에 메시지를 보내면 메시지의 관련성을 유지하고 참여도를 높일 수 있습니다.
 
-![장바구니를 포기한 사용자를 대상으로 하는 액션 기반 캔버스로, 입력 기간은 사용자 현지 시간 기준 2024년 10월 15일 오후 3시 20분입니다.][2]
+![장바구니를 포기한 사용자를 대상으로 하는 액션 기반 캔버스로, 응모 기간은 사용자 현지 시간 기준 2024년 10월 15일 오후 3시 20분입니다.]({% image_buster /assets/img/canvas_templates/abandoned_intent2.png %})
 
 ### 4단계: 캔버스에 참가할 사람 결정
 
 다음으로, 타겟 고객을 지난 90일 동안 온라인에서만 쇼핑한 사용자로 정의해 보겠습니다. 이를 통해 우리 제품에 관심이 있는 사용자로 타겟을 좁힐 수 있습니다. 
 
-!["이 캔버스를 타겟팅할 사용자 세그먼트로 '온라인 쇼핑객 세그먼트 - 90일'을 설정합니다.][3]
+!["온라인 쇼핑객 세그먼트 - 90일"을 이 캔버스에서 타겟팅할 사용자 세그먼트로 설정합니다.]({% image_buster /assets/img/canvas_templates/abandoned_intent3.png %})
 
 캔버스에 재입장할 수 없고 잠재적으로 이 캔버스에 입장할 수 있는 사람 수에 제한이 없도록 입장 제어 기능을 그대로 유지합니다.
 
 종료 기준의 경우, 사용자는 '거대한 종이 접시'를 구매한 경우 캔버스를 종료하게 됩니다. 이렇게 하면 이미 구매한 품목에 대한 추가 메시지를 받지 않게 됩니다.
 
-![종료 기준은 거대한 종이 접시에 대한 특정 구매를 한 사용자가 캔버스에서 나가도록 결정하는 기준입니다.][4]
+![종료 기준은 거대한 종이 접시에 대한 특정 구매를 한 사용자가 캔버스에서 나가도록 결정하는 기준입니다.]({% image_buster /assets/img/canvas_templates/abandoned_intent4.png %})
 
 ### 5단계: 전송 설정을 선택하세요
 
@@ -87,14 +87,14 @@ tool: Canvas
 1. 작업 경로 단계를 선택한 다음 **구매 완료** 작업 그룹 이름을 선택합니다.
 2. **구매하기에서** **특정 구매를** 선택하고 제품에 대해 **거대한 종이 접시를** 선택합니다. 종료 기준과 마찬가지로, 이 제품을 구매한 사용자는 캔버스에서 종료됩니다.
 
-!["사용자가 거대한 종이 접시를 구매하면 캔버스를 종료하는 '구매 완료' 액션 그룹입니다.][5]
+!["사용자가 거대한 종이 접시를 구매하면 캔버스를 종료하는 '구매 완료' 액션 그룹입니다.]({% image_buster /assets/img/canvas_templates/abandoned_intent5.png %})
 
 {: start="3"}
 3\. 메시지 단계에서 **메시지 편집을** 선택하여 사용자에게 버려진 카트에 있는 품목을 알리는 이메일을 사용자 지정합니다.
 4\. 지연 단계를 그대로 유지합니다.
 5\. 대상 경로 단계 다음에 이어지는 메시지 단계에서는 사용자가 수신할 이메일 및 SMS 메시지를 사용자 지정합니다. 개인화된 메시지를 통해 사용자가 제품을 구매하도록 유도하고자 하는 곳입니다.
 
-![사용자가 받게 될 SMS 메시지의 미리보기입니다: "안녕하세요, 커다란 종이 접시를 카트에 두고 가셨네요! 지금 구매를 완료하고 호스팅을 한 단계 업그레이드하세요. 결제 시 MYPLATE 코드를 사용하면 주문 금액의 20%를 할인받을 수 있습니다!"][6]
+![사용자가 받게 될 SMS 메시지의 미리보기입니다: "안녕하세요, 커다란 종이 접시를 카트에 두고 가셨네요! 지금 구매를 완료하고 호스팅을 한 단계 업그레이드하세요. 결제 시 MYPLATE 코드를 사용하면 주문 금액의 20%를 할인받을 수 있습니다!"]({% image_buster /assets/img/canvas_templates/abandoned_intent6.png %})
 
 {: start="6"}
 6\. 다음 작업 경로 단계에서 **구매 완료** 작업 그룹을 선택합니다. 그런 다음 **특정 구매를** 선택하고 제품에 대해 **거대한 종이 접시를** 선택합니다. 이 단계는 첫 번째 액션 경로 단계를 반영하여 제품을 구매한 사용자를 종료하여 추가 메시지를 수신하지 않도록 합니다.
@@ -112,9 +112,3 @@ tool: Canvas
 캔버스 출시 전후에 고려해야 할 사항은 [출시 전/후 체크리스트를]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/pre_post_launch_checklist/#things-to-consider-before-launch) 확인하세요.
 {% endalert %}
 
-[1]: {% image_buster /assets/img/canvas_templates/abandoned_intent1.png %}
-[2]: {% image_buster /assets/img/canvas_templates/abandoned_intent2.png %}
-[3]: {% image_buster /assets/img/canvas_templates/abandoned_intent3.png %}
-[4]: {% image_buster /assets/img/canvas_templates/abandoned_intent4.png %}
-[5]: {% image_buster /assets/img/canvas_templates/abandoned_intent5.png %}
-[6]: {% image_buster /assets/img/canvas_templates/abandoned_intent6.png %}

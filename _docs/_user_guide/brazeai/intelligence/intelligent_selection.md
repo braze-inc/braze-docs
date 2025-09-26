@@ -34,7 +34,7 @@ Before adding Intelligent Selection to your campaign, make sure you’ve set thi
 - Your campaign sends on a recurring schedule. Single-send campaigns aren’t supported.
 - You’ve added at least two message variants.
 - You’ve defined a conversion event to measure performance across variants.
-- The re-eligibility window is set to 24 hours or longer. Shorter windows aren’t supported, as they would affect the integrity of the control variant. To learn more, refer to [Intelligence FAQ]({{site.baseurl}}/user_guide/brazeai/intelligence/faqs/#why-is-re-eligibility-in-less-than-24-hours-not-available-when-combined-with-intelligent-selection).
+- The re-eligibility window is set to 24 hours or longer. Shorter windows aren’t supported, as they would affect the integrity of the control variant. To learn more, refer to [this FAQ]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/#why-is-re-eligibility-in-less-than-24-hours-not-available-when-combined-with-intelligent-selection).
 {% endtab %}
 
 {% tab Canvas %}
@@ -80,7 +80,15 @@ In most cases, Intelligent Selection will choose one of the variants as the Winn
 It's possible for Intelligent Selection to stop optimizing without picking a single clear winner. Intelligent Selection stops optimizing when it has a 95% confidence that continuing the experiment won't improve the conversion rate by more than 1% of its present rate.
 {% endalert %}
 
-## Frequently Asked Questions (FAQ) {#faq}
+## Intelligent Selection variant distribution
+
+Intelligent Selection bases its variant distribution on the current status of campaign conversions. It only determines the final distributions after the training period. 
+
+This means that during the early stages of the campaign, both the 99% and 1% Intelligent Selections may receive approximately equal sends, but the final percentages for variant allocation may be set at 99%—1%.
+
+If you don't want Intelligent Selection to send 50/50 during the early stages of the campaign, we recommend using a traditional A/B test with fixed variants.
+
+## Frequently asked questions {#faq}
 
 ### Why is re-eligibility in less than 24 hours not available when combined with Intelligent Selection?
 
