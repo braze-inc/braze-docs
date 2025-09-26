@@ -15,16 +15,16 @@ platform:
 > Learn how to customize in-app messages for the Braze SDK. For advanced styling techniques, check out our tutorial for [customizing message styling using key-value pairs]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/customizing_message_styling).
 
 {% sdktabs %}
+{% sdktab web %}
+{% multi_lang_include developer_guide/web/in_app_messages/customization.md %}
+{% endsdktab %}
+
 {% sdktab android %}
 {% multi_lang_include developer_guide/android/in_app_messages/customization.md %}
 {% endsdktab %}
 
 {% sdktab swift %}
 {% multi_lang_include developer_guide/swift/in_app_messages/customization.md %}
-{% endsdktab %}
-
-{% sdktab web %}
-{% multi_lang_include developer_guide/web/in_app_messages/customization.md %}
 {% endsdktab %}
 
 {% sdktab react native %}

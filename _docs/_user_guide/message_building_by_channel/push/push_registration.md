@@ -56,6 +56,10 @@ Because there isn't a way for push providers (APNs/FCM) to distinguish between m
 Each device platform handles push token registration differently. Refer to the following for platform-specific details:
 
 {% tabs local %}
+{% tab web %}
+You must request explicit opt-in from users via the native browser permission dialog. Will receive a token after users opt-ed in. Unlike iOS and Android, which let your app show the permission prompt at any time, some modern browsers will only show the prompt if triggered by a "user gesture" (mouse click or keystroke). If your site tries to request push notification permission on page load, it will likely be ignored or silenced by the browser.
+{% endtab %}
+
 {% tab android %}
 When your app is installed, a push token is automatically generated for your app&#8212;however, it can only be used for [background push notifications](#foreground-vs-background) until the user explicitly opts-in. Additionally, registration is handled differently across different Android versions:
 
@@ -74,10 +78,6 @@ iOS does not automatically generate push tokens for an app when it's installed. 
 | **iOS 12**      | Yes                         | When a user opts-in to push notifications, you're given standard authorization, allowing you to send [foreground push notifications](#foreground-vs-background). However, you can also request [provisional authorization]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#provisional-push), which let's you send silent [background push notifications](#foreground-vs-background) directly to the notification center. |
 | **iOS 11 and later** | No                          | All users must explicitly opt-in to receive push notifications. A push token is generated only after permission is granted.                                     |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
-{% endtab %}
-
-{% tab web %}
-You must request explicit opt-in from users via the native browser permission dialog. Will receive a token after users opt-ed in. Unlike iOS and Android, which let your app show the permission prompt at any time, some modern browsers will only show the prompt if triggered by a "user gesture" (mouse click or keystroke). If your site tries to request push notification permission on page load, it will likely be ignored or silenced by the browser.
 {% endtab %}
 {% endtabs %}
 

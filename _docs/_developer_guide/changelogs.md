@@ -21,6 +21,14 @@ platform:
 > This reference page includes the changelogs for each Braze SDK and a link to the changelog in their public GitHub repository. For the full list of resources, see [References, Repositories, and Sample Apps]({{site.baseurl}}/developer_guide/references/).
 
 {% sdktabs %}
+{% sdktab web %}
+{% alert tip %}
+You can also find a copy of the [Web Braze SDK changelog on GitHub](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md).
+{% endalert %}
+
+{% markdown_embed https://raw.githubusercontent.com/braze-inc/braze-web-sdk/master/CHANGELOG.md %}
+{% endsdktab %}
+
 {% sdktab android %}
 {% alert tip %}
 You can also find a copy of the [Android Braze SDK changelog on GitHub](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md).
@@ -35,14 +43,6 @@ You can also find a copy of the [Swift Braze SDK changelog on GitHub](https://gi
 {% endalert %}
 
 {% markdown_embed https://raw.githubusercontent.com/braze-inc/braze-swift-sdk/main/CHANGELOG.md %}
-{% endsdktab %}
-
-{% sdktab web %}
-{% alert tip %}
-You can also find a copy of the [Web Braze SDK changelog on GitHub](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md).
-{% endalert %}
-
-{% markdown_embed https://raw.githubusercontent.com/braze-inc/braze-web-sdk/master/CHANGELOG.md %}
 {% endsdktab %}
 
 {% sdktab cordova %}
