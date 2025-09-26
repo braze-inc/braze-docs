@@ -183,16 +183,16 @@ The entire data payload for a single Content Card cannot exceed 2 KB **after** a
 * Title
 * Message
 * Image URL (the length of the URL string itself, not the image file size)
-* Link Text
+* Link text
 * Link URLs for all specified platforms (separate URLs for iOS, Android, and Web all count towards the total)
-* Key-Value Pairs (both the key names and their values)
+* Key-value pairs (both the key names and their values)
 
-Using Liquid to pull in long strings of text (e.g., from Custom Attributes) can cause you to exceed the limit. 
+Using Liquid to pull in long strings of text (such as from custom attributes) can cause you to exceed the limit. 
 
 The campaign composer will display a warning if your static content exceeds the limit. (We do not predict the size for dynamic content using Liquid.) **If the message size exceeds 2 KB, it will be aborted at send time.** You can see these aborts in the Message Activity Log with the reason `Content card maximum size exceeded`.
 
 {% alert important %}
-During **test** sends, Content Cards that exceed 2 KB can still be delivered and displayed properly.
+During test sends, Content Cards that exceed 2 KB can still be delivered and displayed properly.
 {% endalert %}
 
 Here are some best practices for managing Content Card payload size:
@@ -208,9 +208,9 @@ Each user can have up to 250 non-expired Content Cards in their feed at any give
 
 To prevent issues with the card limit, we advise the following best practices:
 
-* Use shorter expiration dates. For campaigns that are time sensitive (e.g., a weekend sale), set a specific expiration date. The ensures cards are automatically removed from the feed and don't count toward the limit after they are no longer relevant.
-*  Leverage action-based removal. Set up removal events for transactional or goal-based cards. For example, a card prompting a user to complete their profile should be removed as soon as a `profile_completed` event is logged.
-* Audit long-running campaigns. Review recurring or ongoing campaigns to ensure they aren't creating a poor experience for your users by filling the feed with too many cards over time.
+- **Use shorter expiration dates:** For campaigns that are time sensitive (such as a weekend sale), set a specific expiration date. This way, cards are automatically removed from the feed and won't count towards the limit after they are no longer relevant.
+- **Leverage action-based removal:** Set up removal events for transactional or goal-based cards. For example, a card prompting a user to complete their profile should be removed as soon as a `profile_completed` event is logged.
+- **Audit long-running campaigns:** Review recurring or ongoing campaigns to ensure they aren't creating a poor experience for your users by filling the feed with too many cards over time.
 
 ### Understanding re-eligibility for Content Cards
 
@@ -233,7 +233,7 @@ A common source of confusion is the interaction between campaign re-eligibility 
 
 All Content Cards are automatically purged from Braze's systems 30 days after they are created. If you have a long-running, recurring campaign with re-eligibility turned **off**, a user may still receive the same card again after 30 days. When the original card is purged, the system no longer sees a record of that user having received the campaign, making them eligible again on their next session. 
 
-To ensure users only ever receive a message from a specific campaign once, add an audience filter to your campaign or Canvas step for users that have not received a message from this campaign. This filter is the most reliable way to prevent duplicate sends from long-running campaigns. 
+For users to only receive a message from a specific campaign once, add an audience filter to your campaign or Canvas step for users who have not received a message from this campaign. This filter is the most reliable way to prevent duplicate sends from long-running campaigns.
 
 ### Managing live Content Cards
 
@@ -260,7 +260,7 @@ When you duplicate the campaign, you need to define the audience for the new ver
 
 ###### Impact
 
-* **Existing Recipients:** New and existing recipients would see the updated card at the next feed refresh if they are eligible.
+* **Existing recipients:** New and existing recipients would see the updated card at the next feed refresh if they are eligible.
 * **Reporting:** Each version of the card would have separate analytics.
 
 Let's say you've set a campaign to be triggered by a session start, and it has re-eligibility set to 30 days. A user received the campaign two days ago, and you want to change the copy. First, you'd archive the campaign and remove the cards from the feed. Second, you'd duplicate the campaign and re-launch with the new copy. If the user has another session, they'll immediately receive the new card.
@@ -271,9 +271,9 @@ Let's say you've set a campaign to be triggered by a session start, and it has r
 We recommend using this option for unique messages in a notification center or message inbox (such as promotions), when it’s important for analytics to be unified, or when the timeliness of the message isn't a concern (such as existing recipients can wait for the eligibility window before seeing the updated cards).
 {% endalert %}
 
-This approach keeps all your analytics unified in a single campaign. Newly elibible users will get the new card but delays the update for existing recipients until they are re-eligible:
+This approach keeps all your analytics unified in a single campaign. Newly eligible users will get the new card but delays the update for existing recipients until they are re-eligible:
 
-1. Stop your campaign and, when prompted, select `Remove card after the next sync`.
+1. Stop your campaign and, when prompted, select **Remove card after the next sync**.
 2. Edit your campaign as needed.
 3. Restart your campaign.
 
@@ -291,13 +291,17 @@ Let's say you have a campaign that's triggered by a session start and has re-eli
 You can manually remove cards for all users' feeds at any time by stopping the campaign.
 
 1. Open the Content Card campaign and select Stop Campaign.
-2. When prompted, select `Remove card after the next sync`. The card will be removed on the next feed refresh.
+2. When prompted, select **Remove card after the next sync**. The card will be removed on the next feed refresh.
 
 ##### Automated card removal {#action-based-card-removal}
 
 You can automatically remove a card when a user performs a specific action, such as completing a purchase or activating a feature.
 
-In your campaign or Canvas step, specify a removal event. When a user performs that event, the card will be removed from their feed on a subsequent refresh after Braze processes the event. Note: the removal is not instantaneous. There is a processing delay, so it may take several minutes and more than one feed refresh for the card to disappear.
+In your campaign or Canvas step, specify a removal event. When a user performs that event, the card will be removed from their feed on a subsequent refresh after Braze processes the event. 
+
+{% alert note %}
+This removal is not instantaneous. There is a processing delay, so it may take several minutes and more than one feed refresh for the card to disappear.
+{% endalert %}
 
 {% alert tip %}
 You can specify multiple custom events and purchases that should remove a card from a user's feed. When **any** of those actions are performed by the user, any existing cards sent by the campaign's cards will be removed. Any future eligible cards will continue to be sent according to the message's schedule.
