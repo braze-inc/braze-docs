@@ -28,7 +28,7 @@ Here are some examples of use cases that you can build with BrazeAI Decisioning 
 
 ### Prerequisites
 
-Before you can build a use case, you'll need to [integrate BrazeAI Decisioning Studio™]({{site.baseurl}}/developer_guide/brazeai/decisioning_studio/integration).
+Before you can build a use case, you'll need to [integrate BrazeAI Decisioning Studio™]({{site.baseurl}}/developer_guide/decisioning_studio/integration).
 
 ### Step 1: Contact OfferFit
 
