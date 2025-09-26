@@ -1,42 +1,42 @@
-# Building use cases
+# Building agents
 
-> Learn how to build a use case for BrazeAI Decisioning Studio™, so you can automate personalized experimentation and optimize outcomes like conversions, retention, or revenue&#8212;without manual A/B testing.
+> Learn how to build an agent for BrazeAI Decisioning Studio™, so you can automate personalized experimentation and optimize outcomes like conversions, retention, or revenue&#8212;without manual A/B testing.
 
-{% multi_lang_include offerfit/alert_multi_platform_support.md %}
+{% multi_lang_include decisioning_studio/alert_multi_platform_support.md %}
 
-## About use cases
+## About agents
 
-A use case is a custom configuration for the BrazeAI™ decisioning engine that's tailor-made to meet a specific business goal.
+An AI decisioning agent is a custom configuration for the BrazeAI™ decisioning engine that's tailor-made to meet a specific business goal.
 
-For example, you could build a repeat purchase use case to increase follow-up conversions after an initial sale. You define the audience and message in Braze, while your decisioning agents runs daily experiments and automatically tests different combinations of product offers, message timing, and frequency for each customer. Over time, BrazeAI™ learns what works best and orchestrates personalized sends through Braze to maximize repurchase rates.
+For example, you could build a repeat purchase agent to increase follow-up conversions after an initial sale. You define the audience and message in Braze, while your decisioning agents runs daily experiments and automatically tests different combinations of product offers, message timing, and frequency for each customer. Over time, BrazeAI™ learns what works best and orchestrates personalized sends through Braze to maximize repurchase rates.
 
-To build a good use case, you'll:
+To build a good agent, you'll:
 
 - Choose a success metric for BrazeAI™ to optimize for, such as revenue, conversions, or ARPU.
 - Define which dimensions to test, such as offer, subject line, creative, channel, or send time.
 - Select the options for each dimension, such as email versus SMS, or daily versus weekly frequency.
 
-![Example diagram of a decisioning studio use case for referral emails.]({% image_buster /assets/img/offerfit/example_use_cases_referral_email.png %})
+![Example diagram of a decisioning studio agent for referral emails.]({% image_buster /assets/img/decisioning_studio/example_use_cases_referral_email.png %})
 
-## Sample use cases
+## Sample agents
 
-Here are some examples of use cases that you can build with BrazeAI Decisioning Studio™. Your AI decisioning agents will learn from every customer interaction and apply those insights to the next day's actions.
+Here are some examples of agents that you can build with BrazeAI Decisioning Studio™. Your AI decisioning agents will learn from every customer interaction and apply those insights to the next day's actions.
 
-{% multi_lang_include offerfit/sample_use_cases.md %}
+{% multi_lang_include decisioning_studio/sample_agents.md %}
 
-## Building a use case
+## Building an agent
 
 ### Prerequisites
 
-Before you can build a use case, you'll need to [integrate BrazeAI Decisioning Studio™]({{site.baseurl}}/developer_guide/decisioning_studio/integration).
+Before you can build an agent, you'll need to [integrate BrazeAI Decisioning Studio™]({{site.baseurl}}/developer_guide/decisioning_studio/integration).
 
 ### Step 1: Contact AI Expert Services
 
-The AI Expert Services team will work closely with you to scope, design, and build your decisioning use case. If you haven't already, [reach out](https://offerfit.ai/book-now) to get started.
+The AI Expert Services team will work closely with you to scope, design, and build your decisioning agent. If you haven't already, [reach out](https://offerfit.ai/book-now) to get started.
 
-You'll complete the following steps together to build a custom use case that's right for you.
+You'll complete the following steps together to build a custom agent that's right for you.
 
-### Step 2: Design your use case
+### Step 2: Design your agent
 
 Alongside the AI Expert Services team, you'll define:
 
@@ -63,4 +63,4 @@ To set up Braze:
 
 ### Step 4: Launch and monitor
 
-After launching your use case, your AI Expert Services team will continue to monitor and tune it to your agreed-upon design. They'll also help you make any adjustments, expansions, or modifications to the use case, if needed.
+After launching your agent, your AI Expert Services team will continue to monitor and tune it to your agreed-upon design. They'll also help you make any adjustments, expansions, or modifications to the agent, if needed.

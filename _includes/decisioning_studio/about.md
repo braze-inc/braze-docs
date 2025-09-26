@@ -36,7 +36,7 @@ Building a good use case consists of:
 
 Here are some examples of use cases that you can build with BrazeAI Decisioning Studio™. Your AI decisioning agents will learn from every customer interaction and apply those insights to the next day's actions.
 
-{% multi_lang_include offerfit/sample_use_cases.md %}
+{% multi_lang_include decisioning_studio/sample_use_cases.md %}
 
 ## About API key permissions
 
@@ -46,11 +46,11 @@ During your BrazeAI Decisioning Studio™ integration, you'll create a Braze API
 This information can also be found on the [BrazeAI Decisioning Studio™ integration]({{site.baseurl}}/developer_guide/decisioning_studio/integration) page.
 {% endalert %}
 
-{% multi_lang_include offerfit/api_key_permissions.md %}
+{% multi_lang_include decisioning_studio/api_key_permissions.md %}
 
 ## Next steps
 
 Now that you know more about BrazeAI Decisioning Studio™, you're ready for the next steps:
 
 1. [Integrating decisioning studio]({{site.baseurl}}/developer_guide/decisioning_studio/integration)
-2. [Building a use case]({{site.baseurl}}/developer_guide/decisioning_studio/building_use_cases)
+2. [Building agents]({{site.baseurl}}/developer_guide/decisioning_studio/building_agents)

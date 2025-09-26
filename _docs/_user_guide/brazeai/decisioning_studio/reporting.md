@@ -15,10 +15,11 @@ Before you can view decisioning studio reports in the Braze, you'll need to:
 
 - Have an active contract for Braze and BrazeAI Decisioning Studio™. 
 - Contact your CSM to enable BrazeAI Decisioning Studio™ for you on your behalf.
+- Have a live BrazeAI Decisioning Studio™ agent.
 
 ## Viewing reports {#view}
 
-To view metrics for a decisioning studio use cases in Braze, go to **AI Decisioning** > **BrazeAI Decisioning Studio™**, then select a use case.
+To view metrics for a decisioning studio agents in Braze, go to **AI Decisioning** > **BrazeAI Decisioning Studio™**, then select an agent.
 
 ![BrazeAI Decisioning Studio™ reporting home screen showing a dashboard with multiple report cards. Each card displays a report type such as Performance, Insights, Diagnostics, and Timeline, with brief descriptions and icons for each.]( {% image_buster /assets/img/decisioning_studio/reporting_home.png %} )
 
@@ -30,7 +31,7 @@ After [opening a report](#view), you can change the date range by selecting a ne
 
 ![BrazeAI Decisioning Studio™ date range selector open with a calendar dropdown. The calendar displays selectable start and end dates for customizing the report view.]({% image_buster /assets/img/decisioning_studio/reporting_change_date_range.png %}){: style="max-width:50%;"}
 
-You can also set a default start date or choose dates to always exclude. Excluded dates will be filtered out of all reports for that use case.
+You can also set a default start date or choose dates to always exclude. Excluded dates will be filtered out of all reports for that agent.
 
 To set or exclude dates, select <i class="fa-solid fa-gear"></i> **Settings**, then change your default date or exclude dates as needed.
 
@@ -40,7 +41,7 @@ To set or exclude dates, select <i class="fa-solid fa-gear"></i> **Settings**, t
 
 ### Performance
 
-The performance report offers high-level use case metrics that compare treatment groups (from Braze) to one or more control groups, (like revenue). It supports two different views: **Trending** and **Driver Tree**.
+The performance report offers high-level agent metrics that compare treatment groups (from Braze) to one or more control groups, (like revenue). It supports two different views: **Trending** and **Driver Tree**.
 
 By default, the report uses the **Trending** view, which compares how BrazeAI™ performs over time compared to your control groups, and tracks the uplift evolution.
 
