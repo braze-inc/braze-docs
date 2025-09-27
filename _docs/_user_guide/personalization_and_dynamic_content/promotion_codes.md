@@ -104,11 +104,11 @@ If you've uploaded a CSV file with the incorrect promotion codes and selected **
 
 To send a promotion code in a message, select **Copy Snippet** next to the promotion code list [you previously created](#create).
 
-![An option to copy the snippet to paste into your message.]({% image_buster /assets/img/promocodes/promocode9.png %}){: style="max-width:70%"}
+![An option to copy the snippet to paste into your message.]({% image_buster /assets/img/promocodes/promocode9.png %}){: style="max-width:50%"}
 
 Paste the code snippets into one of your messages in Braze, then use [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) to insert one of the unique promotion codes from your list. That code will be marked as sent, ensuring no other message sends the same code.
 
-![An example message "Treat yourself to something nice this spring with our exclusive offer" followed by the code snippet.]({% image_buster /assets/img/promocodes/promocode10.png %}){: style="max-width:70%"}
+![An example message "Treat yourself to something nice this spring with our exclusive offer" followed by the code snippet.]({% image_buster /assets/img/promocodes/promocode10.png %}){: style="max-width:50%"}
 
 ### Across Canvas steps
 
@@ -139,6 +139,10 @@ Promotion codes in in-app messages will be deducted and used only when a user tr
 
 Test sends and seed group email sends will use up promotion codes unless requested otherwise. Contact your Braze account manager to update this feature behavior so promotion codes aren't used during test sends and seed group email sends.
 
+### With message extras for Currents
+
+{% multi_lang_include shopify.md section='Liquid promotion codes with Currents' %}
+
 ## Saving promotion codes to user profiles {#save-to-profile}
 
 To reference the same promotion code in subsequent messages, the code must be saved to the user profile as a custom attribute. This can be done through a [User Update step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update/) that assigns the discount code to a custom attribute, like “Promo Code”, directly before a Message step.
@@ -159,7 +163,7 @@ You can find the remaining code count in the **Remaining** column of the promoti
 
 This code count can also be found when revisiting a pre-existing promotion code list page. You can also export unused codes as a CSV file. 
 
-![A promotion code named "Black Friday Sale" with 992 remaining codes.]({% image_buster /assets/img/promocodes/promocode12.png %}){: style="max-width:70%"}
+![A promotion code named "Black Friday Sale" with 992 remaining codes.]({% image_buster /assets/img/promocodes/promocode12.png %}){: style="max-width:50%"}
 
 ## Multichannel and single-channel sends
 
