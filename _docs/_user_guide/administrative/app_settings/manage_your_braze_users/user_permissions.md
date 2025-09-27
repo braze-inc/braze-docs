@@ -207,4 +207,7 @@ As of April 2024, to create or update promotion code lists, Braze users need the
 |Workspace|Create and Edit Landing Page Templates|Allows users to create and edit landing page templates.|
 |Workspace|View Landing Page Templates|Allows users to view landing page templates.|
 |Workspace|Archive Landing Page Templates|Allows users to archive landing page templates.|
+|Workspace|View Custom AI Agents|Allows users to view [custom AI agents]({{site.baseurl}}/user_guide/brazeai/agents/). This feature is currently in beta.|
+|Workspace|Create Custom AI Agents|Allows users to create custom AI agents. This feature is currently in beta.|
+|Workspace|Edit Custom AI Agents|Allows users to edit custom AI agents. This feature is currently in beta.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
