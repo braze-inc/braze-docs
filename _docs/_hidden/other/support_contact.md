@@ -9,11 +9,22 @@ hide_toc: true
 
 
 <style type="text/css">
-
-div#suggestionsBox p {
-    font-size: 20px !important; 
-   
+.su-tooltip {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 8px 10px;
+  max-width: 280px;
+  font-size: 13px;
+  line-height: 1.4;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
+.su-tooltip strong {
+  font-size: 14px;
+  display: block;
+  margin-bottom: 4px;
+}
+
 
 lable.lable-gpt {
     font-weight: 700;
@@ -23,57 +34,7 @@ lable.lable-gpt {
     vertical-align: middle;
     margin-top: 15px;
 }
-.su_citation {
-  position: relative;
-  cursor: pointer;
-  margin-top: 11px;
-}
 
-/* Tooltip styling */
-.su_citation::after {
-  content: attr(title);
-  position: absolute;
-  bottom: 125%; 
-  left: 50%;
-  transform: translateX(-50%);
-  background: #333;
-  color: #fff;
-  padding: 6px 8px;
-  border-radius: 6px;
-  white-space: nowrap;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.2s ease-in-out;
-  font-size: 12px;
-  z-index: 999;
-}
-
-.su_citation::before {
-  content: attr(title);
-  position: absolute;
-  bottom: 125%; 
-  left: 50%;
-  transform: translateX(-50%);
-  background: #333;
-  color: #fff;
-  padding: 6px 8px;
-  border-radius: 6px;
-  white-space: nowrap;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.2s ease-in-out;
-  font-size: 12px;
-  z-index: 999;
-}
-
-/* Show tooltip on hover */
-.su_citation:hover::after,
-.su_citation:hover::before {
-  opacity: 1;
-}
-
-
- 
 @media (min-width: 768px) and (max-width: 1024px) {
     .container-fluid {
         width: 910px !important;
@@ -102,14 +63,10 @@ lable.lable-gpt {
 }
 }
 
-
   @media (max-width: 600px) {
-
-
     .btn-right {
     display: flex;
     flex-direction: column;
-   
 }
 
 
@@ -123,21 +80,21 @@ lable.lable-gpt {
     }
     .svg-hr svg {
     width: 417px !important;
-}
-  .svg1 svg {
-    width: 300px !important;;
-}
- .svg2 svg {
-    width: 300px !important;;
-}
+    }
+    .svg1 svg {
+      width: 300px !important;;
+    } 
+    .svg2 svg {
+      width: 300px !important;;
+    }
 
-.gpt-res-buttons {
-    flex-direction: column;
-}
+    .gpt-res-buttons {
+        flex-direction: column;
+    }
 
-.steps {
-    display: none !important;
-}
+    .steps {
+        display: none !important;
+    }
 
     .main-border {
         border-radius: 14px;
@@ -1054,7 +1011,6 @@ a:hover {
             margin-bottom: 8px;
         }
         
-  
         
         .su_citation {
           background: none;
@@ -1073,6 +1029,9 @@ a:hover {
         margin-left: 6px;
         
       }
+      span.highlight {
+    color: black !important;
+}
 </style>
 
 <div>
@@ -1177,7 +1136,7 @@ a:hover {
                 <div class="btn-right">
 
                 <lable class='lable-gpt'>Did this resolve your issue?</lable>
-                <button type="button" class="submit-btn" onclick="window.location.href='https://braze.com/docs'" >Yes, close this Window </button>
+                <button type="button" class="submit-btn" onclick="window.location.href='https://bz072507s.searchunify.com/docs/'" >Yes, close this Window </button>
                 <button type="button" class="submit-btn" id="toStep3">No, continue with ticket creation</button>
                 </div>
                 </div>
@@ -1308,6 +1267,7 @@ a:hover {
 
 <script type="text/javascript">
 
+   let citationClicked = false;
    const steps = document.querySelectorAll('.step');
     const step1 = document.getElementById('step1');
     const step2 = document.getElementById('step2');
@@ -2350,274 +2310,299 @@ $( document ).ready(function() {
 });
 
 
-    const suggestionsBox = document.getElementById('suggestionsBox');
-    const articlesDiv = document.getElementById('articles');
-    const articlesList = document.getElementById('articles-list');
-    const formContainer = document.querySelector(".form-container");
-    const formContainer1 = document.querySelector(".form-container1");
 
+   const suggestionsBox = document.getElementById('suggestionsBox');
+const articlesDiv = document.getElementById('articles');
+const articlesList = document.getElementById('articles-list');
+const formContainer = document.querySelector(".form-container");
+const formContainer1 = document.querySelector(".form-container1");
 
-    document.getElementById('toStep2').addEventListener('click', async function () {
-       
-        
-        const subject = document.getElementById('subject').value.trim();
-        const description = document.getElementById('description').value.trim();
-        document.querySelector('.gpt-heading').textContent = subject;
-        if (!subject || !description) {
-            alert('Please fill in all required fields');
-            return;
-        }
-
-        step1.style.display = 'none';
-        step2.style.display = 'block';
-        // steps.forEach(s => s.classList.remove('active'));
-        steps[1].classList.add('active');
-        // suggestionsBox.innerHTML = "<p>Loading suggestions...</p>";
-        articlesDiv.style.display = 'none';
-        articlesList.innerHTML = '';
-
-        try {
-          
-            const requestBody = {
-                query: subject,
-                streaming: true,
-                llm: true,
-                separator: "$___$__$_$",
-                searchBody: {
-                    react: 1,
-                    searchString: subject,
-                    uid: "63590d8d-65fd-11f0-ada3-0242ac120007",
-                    language: "en",
-                    searchUid: "22d6676b-80b1-4145-af19-6a422417e5d0",
-                    accessToken: "9ad5ad4164aea64521fd3c00a19b76c8",
-                    getAutoTunedResult: true,
-                    getSimilarSearches: true,
-                    smartFacets: false,
-                    showMoreSummary: false,
-                    minSummaryLength: 100,
-                    showContentTag: true,
-                     "sid-session": sid,
-                    "taid-device": taid,
-                },
-                llmContextId: "c2b9ea6c-d566-44dd-b664-9cb8c6a2af94"
-            };
-
-            const response = await fetch("https://bz072507s.searchunify.com/mlService/su-gpt", {
-                method: "POST",
-                headers: {
-                    "accept": "*/*",
-                    "content-type": "application/json",
-                    "origin": "https://d3afgxkm1vz2tp.cloudfront.net",
-                    "referer": "https://d3afgxkm1vz2tp.cloudfront.net/",
-                    "search-client-type": "6",
-                    "search-id": "22d6676b-80b1-4145-af19-6a422417e5d0",
-                    "sid-session": sid,
-                    "taid-device": taid,
-                    "token": "9ad5ad4164aea64521fd3c00a19b76c8",
-                    "uid": "63590d8d-65fd-11f0-ada3-0242ac120007",
-                },
-                body: JSON.stringify(requestBody)
-            });
-
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-
-            // Handle streaming response
-            const reader = response.body.getReader();
-            const decoder = new TextDecoder();
-            let fullResponse = '';
-            let articles = [];
-            let articlesCollected = false;
-
-            while (true) {
-                const { done, value } = await reader.read();
-                if (done) break;
-                
-                const chunk = decoder.decode(value);
-                const chunkParts = chunk.split('$___$__$_$');
-                
-                for (const part of chunkParts) {
-                    if (!part.trim()) continue;
-                    
-                    try {
-                        const data = JSON.parse(part);
-                        
-                        // Extract response content
-                        if (data.data?.choices?.[0]?.delta?.content) {
-                            fullResponse += data.data.choices[0].delta.content;
-                            suggestionsBox.innerHTML = fullResponse;
-                            document.querySelector('.flex-display').style.display = 'block';
-                            document.querySelector('.gpt-text1').style.display = 'block';
-                            document.querySelector('.gpt-text').style.display = 'none';
-                           
-                           
-let isFreshConversionStatus = true;
-const trackedCitations = new Set(); // ✅ keep track of already tracked citations
-
-const articleMap = {};
-document.querySelectorAll('#articles-list .article a').forEach(link => {
-  articleMap[link.href.split('_doc_doc_').pop()] = link.textContent.trim();
-});
-
-document.querySelectorAll('.su_citation').forEach(button => {
-  button.addEventListener('mouseenter', function () {
-    const url = this.getAttribute('data-url')?.split('_doc_doc_').pop() || '';
-    if (articleMap[url]) {
-      this.setAttribute('title', articleMap[url]);
-    }
-  });
-
-  button.addEventListener('click', function () {
-    const url = this.getAttribute('data-url')?.split('_doc_doc_').pop() || '';
-
-    if (!sid) {
-      return;
-    }
-
-    // --- Search payload (once per session) ---
-    if (isFreshConversionStatus && typeof subject !== "undefined" && subject.trim() !== "") {
-      const searchPayload = {
-        event: "search",
-        id: crypto.randomUUID(),
+async function getSearchResultByPost(subject, sid) {
+    const payload = {
+        langAttr: "",
+        react: 1,
+        isRecommendationsWidget: false,
         searchString: subject,
-        result_count: 0,
-        page_no: 1,
+        from: 0,
+        sortby: "_score",
+        orderBy: "desc",
+        pageNo: 1,
+        aggregations: [],
+        clonedAggregations: [],
         uid: "63590d8d-65fd-11f0-ada3-0242ac120007",
-        filter: {},
-        sid_session: sid || "",
-        taid_device: taid || "",
-        analyticsId: window._gza_analytics_id || crypto.randomUUID(),
-        referrer: document.referrer || "",
-        url: window.location.href
-      };
+        resultsPerPage: 10,
+        exactPhrase: "",
+        withOneOrMore: "",
+        withoutTheWords: "",
+        pageSize: 10,
+        sid: sid,
+        language: "en",
+        mergeSources: false,
+        versionResults: true,
+        suCaseCreate: false,
+        visitedtitle: "",
+        paginationClicked: false,
+        email: "",
+        storeContext: true,
+        searchUid: "a13d1e1d-31d8-4208-bed2-6993ab758b0c",
+        accessToken: "9ad5ad4164aea64521fd3c00a19b76c8",
+        getAutoTunedResult: true,
+        getSimilarSearches: true,
+        smartFacets: false
+    };
 
-
-      try {
-        const data = JSON.stringify(searchPayload);
-        const sent = navigator.sendBeacon(
-          "https://bz072507s.searchunify.com/analytics/suanlytics.png",
-          new Blob([data], { type: "application/json" })
-        );
-
-        if (!sent) {
-          fetch("https://bz072507s.searchunify.com/analytics/suanlytics.png", {
+    try {
+        const response = await fetch("https://bz072507s.searchunify.com/search/searchResultByPost", {
             method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: data
-          }).catch(console.error);
-        }
-      } catch (err) {
-        console.error("[Analytics] Error sending search payload", err);
-      }
+            headers: {
+                "accept": "*/*",
+                "content-type": "application/json",
+                "origin": "http://localhost:4000",
+                "referer": "http://localhost:4000/"
+            },
+            body: JSON.stringify(payload)
+        });
 
-      isFreshConversionStatus = false;
+        if (!response.ok) throw new Error(`Search API error: ${response.status}`);
+        const data = await response.json();
+        const results = data.result?.hits || data.hits || data.results || [];
+        console.log('resss==>', results);
+
+        return {
+            llmContextId: data.llmContextId || data.context?.llmContextId || data.response?.llmContextId || "fallback-llm-context",
+            results: results
+        };
+
+    } catch (err) {
+        console.error("Error fetching searchResultByPost:", err);
+        return { llmContextId: "fallback-llm-context", results: [] };
+    }
+}
+
+document.getElementById('toStep2').addEventListener('click', async function () {
+    const subject = document.getElementById('subject').value.trim();
+    const description = document.getElementById('description').value.trim();
+    if (!subject || !description) {
+        alert('Please fill in all required fields');
+        return;
     }
 
-    // --- Conversion payload (once per citation) ---
-    if (!trackedCitations.has(url)) {
-      const citationPayload = {
-        event: "conversion",
-        id: crypto.randomUUID(),
-        convUrl: url,
-        convSub: articleMap[url] || '',
-        index: "1_12_doc",
-        type: "doc",
-        relevance_score: "7.0017533",
-        searchString: subject,
-        rank: 53510,
-        analyticsId: window._gza_analytics_id || crypto.randomUUID(),
-        url: 'https://bz072507s.searchunify.com/docs/su_support_contact/',
-        referrer: document.referrer,
-        t: articleMap[url],
-        internal: "",
-        uid: "63590d8d-65fd-11f0-ada3-0242ac120007",
-        sid_session: sid || "",
-        taid_device: taid || "",
-      };
+    step1.style.display = 'none';
+    step2.style.display = 'block';
+    steps[1].classList.add('active');
+    articlesDiv.style.display = 'none';
+    articlesList.innerHTML = '';
 
+    const susResponse = await getSearchResultByPost(subject, sid);
+    const llmContextId = susResponse.llmContextId;
+    const results = susResponse.results;
 
-      try {
-        const data = JSON.stringify(citationPayload);
-        const sent = navigator.sendBeacon(
-          'https://bz072507s.searchunify.com/analytics/suanlytics.png',
-          new Blob([data], { type: 'application/json' })
-        );
+    // --- Build a map of article metadata for hover tooltip ---
+    const articleMetaMap = {};
+    results.forEach(result => {
+        const url = result.href || result.Id || "";
+        articleMetaMap[url] = {
+            title: result.highlight?.TitleToDisplay?.[0] || result.highlight?.TitleToDisplayString?.[0] || result.objLabel || "Untitled",
+            summary: result.highlight?.SummaryToDisplay?.[0] ||
+                     (result.autosuggestData?.find(d => d.key === "Summary")?.value?.[0]) ||
+                     "No summary available"
+        };
+    });
 
-        if (!sent) {
-          fetch('https://bz072507s.searchunify.com/analytics/suanlytics.png', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: data
-          }).catch(console.error);
-        }
-      } catch (err) {
-        console.error('[Analytics] Error sending conversion payload', err);
-      }
+    // --- Streaming / GPT Suggestions ---
+    try {
+        const requestBody = {
+            query: subject,
+            streaming: true,
+            llm: true,
+            separator: "$___$__$_$",
+            searchBody: {
+                react: 1,
+                searchString: subject,
+                uid: "63590d8d-65fd-11f0-ada3-0242ac120007",
+                language: "en",
+                searchUid: "22d6676b-80b1-4145-af19-6a422417e5d0",
+                accessToken: "9ad5ad4164aea64521fd3c00a19b76c8",
+                getAutoTunedResult: true,
+                getSimilarSearches: true,
+                smartFacets: false,
+                showMoreSummary: false,
+                minSummaryLength: 100,
+                showContentTag: true,
+                "sid-session": sid,
+                "taid-device": taid
+            },
+            llmContextId: llmContextId
+        };
 
-      trackedCitations.add(url);
-    } else {
-      console.log(`[DEBUG] Skipping duplicate conversion for: ${url}`);
-    }
+        const response = await fetch("https://bz072507s.searchunify.com/mlService/su-gpt", {
+            method: "POST",
+            headers: {
+                "accept": "*/*",
+                "content-type": "application/json",
+                "origin": "https://d3afgxkm1vz2tp.cloudfront.net",
+                "referer": "https://d3afgxkm1vz2tp.cloudfront.net/",
+                "search-client-type": "6",
+                "search-id": "22d6676b-80b1-4145-af19-6a422417e5d0",
+                "sid-session": sid,
+                "taid-device": taid,
+                "token": "9ad5ad4164aea64521fd3c00a19b76c8",
+                "uid": "63590d8d-65fd-11f0-ada3-0242ac120007"
+            },
+            body: JSON.stringify(requestBody)
+        });
 
-    setTimeout(() => window.open(url, '_blank'), 200);
-  });
-});
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
 
+        const reader = response.body.getReader();
+        const decoder = new TextDecoder();
+        let fullResponse = '';
+        let articles = [];
+        let articlesCollected = false;
 
+        while (true) {
+            const { done, value } = await reader.read();
+            if (done) break;
 
+            const chunk = decoder.decode(value);
+            const chunkParts = chunk.split('$___$__$_$');
 
+            for (const part of chunkParts) {
+                if (!part.trim()) continue;
+                try {
+                    const data = JSON.parse(part);
 
-
-
-                            
-                        }
-                        
-                        
-                        // Collect unique articles (only once)
-                        if (!articlesCollected && data.data?.articles) {
-                            const uniqueUrls = new Set(articles.map(a => a.href));
-                            for (const article of data.data.articles) {
-                                if (!uniqueUrls.has(article.href)) {
-                                    articles.push(article);
-                                    uniqueUrls.add(article.href);
-                                }
-                            }
-                            
-                            // Display articles if we have them
-                            if (articles.length > 0) {
-                                articlesList.innerHTML = articles.map(article => 
-                                    `<div class="article">
-                                        <a href="${article.href.split('_doc_doc_').pop()}" target="_blank">${article.title}</a>
-                                    </div>`
-                                ).join('');
-                                articlesDiv.style.display = 'block';
-                            }
-                            articlesCollected = true;
-                        }
-                        
-                        // Check for no_answer
-                        if (data.data?.no_answer && data.data.no_answer.length > 0 && fullResponse === '') {
-                            fullResponse = `<p>${data.data.no_answer[0]}</p>`;
-                            suggestionsBox.innerHTML = fullResponse;
-                        }
-                    } catch (e) {
-                        console.error('Error parsing chunk:', e);
+                    // Extract streaming content
+                    if (data.data?.choices?.[0]?.delta?.content) {
+                        fullResponse += data.data.choices[0].delta.content;
+                        suggestionsBox.innerHTML = fullResponse;
+                        document.querySelector('.flex-display').style.display = 'block';
+                        document.querySelector('.gpt-text1').style.display = 'block';
+                        document.querySelector('.gpt-text').style.display = 'none';
                     }
+
+                    // Collect articles only once
+                    if (!articlesCollected && data.data?.articles) {
+                        const uniqueUrls = new Set(articles.map(a => a.href));
+                        for (const article of data.data.articles) {
+                            if (!uniqueUrls.has(article.href)) {
+                                articles.push(article);
+                                uniqueUrls.add(article.href);
+                            }
+                        }
+
+                        if (articles.length > 0) {
+                            articlesList.innerHTML = articles.map(article =>
+                                `<div class="article">
+                                    <a href="${article.href.split('_doc_doc_').pop()}" target="_blank">${article.title}</a>
+                                </div>`
+                            ).join('');
+                            articlesDiv.style.display = 'block';
+                        }
+                        articlesCollected = true;
+                    }
+
+                    // Handle no_answer
+                    if (data.data?.no_answer?.length && fullResponse === '') {
+                        fullResponse = `<p>${data.data.no_answer[0]}</p>`;
+                        suggestionsBox.innerHTML = fullResponse;
+                    }
+
+                } catch (e) {
+                    console.error('Error parsing chunk:', e);
                 }
             }
-
-            // Final check if we got no response but have articles
-            if (fullResponse === '' && articles.length > 0) {
-                suggestionsBox.innerHTML = "<p>Here are some articles that might help:</p>";
-            } else if (fullResponse === '') {
-                suggestionsBox.innerHTML = "<p>No suggestions found.</p>";
-            }
-        } catch (err) {
-            suggestionsBox.innerHTML = `<p>Error: ${err.message}</p>`;
-            console.error(err);
         }
-    });
+
+        if (fullResponse === '' && articles.length > 0) {
+            suggestionsBox.innerHTML = "<p>Here are some articles that might help:</p>";
+        } else if (fullResponse === '') {
+            suggestionsBox.innerHTML = "<p>No suggestions found.</p>";
+        }
+
+        // --- Citation hover tooltip ---
+        const trackedCitations = new Set();
+        document.querySelectorAll('.su_citation').forEach(button => {
+            button.addEventListener('mouseenter', function () {
+                const url = this.getAttribute('data-url')?.split('_doc_doc_').pop() || '';
+                const meta = articleMetaMap[url];
+                if (meta) {
+                    let tooltip = document.createElement('div');
+                    tooltip.className = 'su-tooltip';
+                    tooltip.innerHTML = `<strong>${meta.title}</strong><small>${meta.summary}</small>`;
+                    document.body.appendChild(tooltip);
+
+                    const rect = this.getBoundingClientRect();
+                    tooltip.style.position = 'absolute';
+                    tooltip.style.top = `${rect.bottom + window.scrollY + 5}px`;
+                    tooltip.style.left = `${rect.left + window.scrollX}px`;
+                    tooltip.style.zIndex = 10000;
+
+                    this._tooltip = tooltip;
+                }
+            });
+
+            button.addEventListener('mouseleave', function () {
+                if (this._tooltip) {
+                    this._tooltip.remove();
+                    delete this._tooltip;
+                }
+            });
+
+            button.addEventListener('click', function () {
+                const url = this.getAttribute('data-url')?.split('_doc_doc_').pop() || '';
+                citationClicked = true;
+
+                // Conversion analytics (once per citation)
+                if (!trackedCitations.has(url)) {
+                    const citationPayload = {
+                        event: "conversion",
+                        id: crypto.randomUUID(),
+                        convUrl: url,
+                        convSub: articleMetaMap[url]?.title || '',
+                        index: "1_12_doc",
+                        type: "doc",
+                        relevance_score: "7.0017533",
+                        searchString: subject,
+                        rank: 53510,
+                        analyticsId: window._gza_analytics_id || crypto.randomUUID(),
+                        url: window.location.href,
+                        referrer: document.referrer,
+                        uid: "63590d8d-65fd-11f0-ada3-0242ac120007",
+                        sid_session: sid || "",
+                        taid_device: taid || ""
+                    };
+
+                    try {
+                        const data = JSON.stringify(citationPayload);
+                        const sent = navigator.sendBeacon(
+                            'https://bz072507s.searchunify.com/analytics/suanlytics.png',
+                            new Blob([data], { type: 'application/json' })
+                        );
+                        if (!sent) {
+                            fetch('https://bz072507s.searchunify.com/analytics/suanlytics.png', {
+                                method: 'POST',
+                                headers: { 'Content-Type': 'application/json' },
+                                body: data
+                            }).catch(console.error);
+                        }
+                    } catch (err) {
+                        console.error('[Analytics] Error sending conversion payload', err);
+                    }
+
+                    trackedCitations.add(url);
+                }
+
+                setTimeout(() => window.open(url, '_blank'), 200);
+            });
+        });
+
+    } catch (err) {
+        suggestionsBox.innerHTML = `<p>Error: ${err.message}</p>`;
+        console.error(err);
+    }
+});
+
 
     // Back to Step 1
     document.getElementById('backToStep1').addEventListener('click', function () {
@@ -2682,7 +2667,6 @@ function initCaseForm() {
     }
 
     function createNewSid() {
-        // Always 16-digit SID
         return Date.now().toString() + Math.floor(1000 + Math.random() * 9000);
     }
 
@@ -2710,6 +2694,8 @@ function initCaseForm() {
         .catch(err => console.error("API Error (search):", err));
     }
 
+
+
     document.getElementById('toStep3').addEventListener('click', function () {
         document.querySelector(".form-container").classList.add("hidden");
         document.querySelector(".form-container1").style.display = "block";
@@ -2729,13 +2715,17 @@ function initCaseForm() {
             const caseId = "CASE-" + Date.now() + "-" + Math.floor(Math.random() * 1000);
             const caseNumber = Math.floor(100000 + Math.random() * 900000);
 
-            // 🔹 Generate SID only if missing
             let sid = getCookie("_gz_sid");
             if (!sid) {
                 sid = createNewSid();
                 document.cookie = `_gz_sid=${sid}; path=/; SameSite=None; Secure`;
-                sendSearchEvent(subject, sid); // fire search event once
+                sendSearchEvent(subject, sid); 
             }
+
+            if (!citationClicked) {
+            const subject = document.getElementById('subject').value;
+           sendSearchEvent(subject, sid);
+           }
 
             fetch('https://bz072507s.searchunify.com/analytics/suanlytics.png', {
                 method: 'POST',
@@ -2748,7 +2738,7 @@ function initCaseForm() {
                     "event": "caseCreated",
                     "caseId": caseId,         
                     "caseNumber": caseNumber,
-                    "isFreshSearch": true,
+                     "isFreshSearch": !citationClicked,
                     "searchUid": "76a357a5-3804-449f-aa1e-211ed865a48b",
                     "referrer": document.referrer || "",
                     "e": "caseCreated",
