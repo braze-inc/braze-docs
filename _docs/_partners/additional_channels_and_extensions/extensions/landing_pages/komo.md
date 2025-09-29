@@ -55,7 +55,7 @@ Komo also enables the ability to pass through market research data captured when
 
 You will need to publish a Komo Hub with at least one card containing a data capture form. When published, you can test the user experience end-to-end and verify the integration is working correctly.
 
-![Content blocks list.]({% image_buster /assets/img/smartling/smartling-content-blocks-list.png %})
+![Komo Hub.]({% image_buster /assets/img/Braze Komo Images v2/Braze-Komo-Step1.png %})
 
 ### Step 2: Add the Braze Connected App 
 
@@ -63,11 +63,9 @@ In Komo, go to the **Company Settings** tab, and select the **Connected Apps** s
 
 Next, find the Braze integration from the list, and select the **Connect** button to enable the integration.
 
-![Content blocks list.]({% image_buster /assets/img/smartling/smartling-content-blocks-list.png %})
-(Insert image Braze-Komo-Step2a)
+![Connect Braze Integration.]({% image_buster /assets/img/Braze Komo Images v2/Braze-Komo-Step2a.png %})
 
-![Content blocks list.]({% image_buster /assets/img/smartling/smartling-content-blocks-list.png %})
-(Insert image Braze-Komo-Step2b)
+![Connect Braze Integration Step 2b.]({% image_buster /assets/img/Braze Komo Images v2/Braze-Komo-Step2b.png %})
 
 #### Configure the integration via a Workflow
 
@@ -77,13 +75,11 @@ Whether you scope the workflow within the scope of the netire Workspace, a Site 
 
 Once you've created a Workflow, define your trigger, search for Braze in the step menu and add the "Track User" step. 
 
-![Content blocks list.]({% image_buster /assets/img/smartling/smartling-content-blocks-list.png %})
-(Insert Braze-Komo-Step3a image)
+![Track User setup.]({% image_buster /assets/img/Braze Komo Images v2/Braze-Komo-Step3a.png %})
 
 From here, you can simply configure the events, attributions and subscriptions you want to sync from Komo to Braze. 
 
-![Content blocks list.]({% image_buster /assets/img/smartling/smartling-content-blocks-list.png %})
-(Insert Braze-Komo-Step3b image)
+![Content blocks list.]({% image_buster /assets/img/Braze Komo Images v2/Braze-Komo-Step3b.png %})
 
 ## Using the integration
 
