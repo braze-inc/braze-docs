@@ -88,6 +88,7 @@ You can use these blocks to create a form that links user-submitted data to thei
 | Input Field   | A form field that supports standard attributes (such as first and last name) or a custom attribute string of your choice. |
 | Dropdown      | Users can select an item from a pre-defined list. You can add any custom attribute strings to the list. |
 | Checkbox      | If a user checks the box, the block's attribute is set to `true`. If left unchecked, it's attribute is set to `false`. |
+| Checkbox Group| Users can optionally select from multiple choices presented. Values are either set or added to a defined array custom attribute. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert important %}
