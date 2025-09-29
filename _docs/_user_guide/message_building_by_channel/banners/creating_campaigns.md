@@ -32,7 +32,13 @@ Before you can launch your Banner campaign, your development team will need to [
 
 ### Step 3: Compose a Banner {#compose-a-banner}
 
-To compose your Banner, select **Edit message**. Here, you can create the Banner and define on-click behavior. 
+To compose your Banner, you can choose to:
+
+- Start with a blank template
+- Use a Braze banner template
+- Select a saved banner template
+
+![Option to choose a blank Banner or a template.]({% image_buster /assets/img/banners/choose_banner_composer.png %})
 
 #### Step 3.1: Style the Banner
 
