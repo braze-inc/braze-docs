@@ -15,6 +15,8 @@ guide_featured_title: "Features"
 guide_featured_list:
 - name: BrazeAI Decisioning Studio<sup>TM</sup>
   link: /docs/user_guide/brazeai/decisioning_studio/
+- name: Braze Agents
+  link: /docs/user_guide/brazeai/agents/
   image: /assets/img/braze_icons/star-06.svg
 - name: Intelligence Suite
   link: /docs/user_guide/brazeai/intelligence/
