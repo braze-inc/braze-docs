@@ -157,9 +157,9 @@ Using an email address or a hashed email address as your Braze external ID can h
 By default, Braze automatically converts emails from Shopify to lowercase before using them as the external ID. If you’re using email or hashed email as your external ID, confirm that your email addresses are also converted to lowercase before you assign them as your external ID or before hashing them from other data sources. This helps prevent discrepancies in external IDs and avoid creating duplicate user profiles in Braze.
 
 {% alert note %}
-**Next steps depend on your external ID selection:**
-- **If you selected a custom external ID type:** Complete steps 4.1—4.3 below to set up your custom external ID configuration.
-- **If you selected Shopify customer ID, email, or hashed email:** Skip steps 4.1—4.3 and continue directly to [step 4.4](#step-44-collect-your-email-or-sms-opt-ins-from-shopify-optional).
+The next steps depend on your external ID selection:<br><br>
+- **If you selected a custom external ID type:** Complete steps 4.1—4.3 to set up your custom external ID configuration.
+- **If you selected Shopify customer ID, email, or hashed email:** Skip steps 4.1—4.3 and continue directly to [step 4.4](#step-4.4).
 {% endalert %}
 
 ### Step 4.1: Create the `braze.external_id` metafield
