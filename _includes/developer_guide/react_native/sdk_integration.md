@@ -48,7 +48,7 @@ Ensure that your version of the Braze React Native SDK is at least 1.37.0. For t
 To install the Braze Expo plugin, run the following command:
 
 ```bash
-expo install @braze/expo-plugin
+npx expo install @braze/expo-plugin
 ```
 
 #### Step 2.2: Add the plugin to your app.json
@@ -125,7 +125,7 @@ Example configuration:
 Prebuilding your application will generate the native files necessary for the Braze Expo plugin to work.
 
 ```bash
-expo prebuild
+npx expo prebuild
 ```
 
 Run your application as specified in the [Expo docs](https://docs.expo.dev/workflow/customizing/). Keep in mind, if you make any changes to the configuration options, you'll be required to prebuild and run the application again.
