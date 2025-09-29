@@ -44,7 +44,7 @@ Data capture forms exist either at the start or end of Cards.
 {% endtab %}
 {% tab Market Research - Coming soon %}
 
-Komo also enables the ability to pass through market research data captured when a user answers a quiz question, poll, personality test, swiper, etc. This data will enable you to enhance a user's profile beyond data captured in form submissions.
+Komo also enables the ability to pass through market research data captured when a user answers a quiz question, poll, personality test, swiper, and similar. This data will enable you to enhance a user's profile beyond data captured in form submissions.
 
 {% endtab %}
 {% endtabs %}
@@ -63,7 +63,7 @@ In Komo, go to the **Company Settings** tab, and select the **Connected Apps** s
 
 Next, find the Braze integration from the list, and select the **Connect** button to enable the integration.
 
-![Connect Braze Integration.]({% image_buster /assets/img/Braze Komo Images v2/Braze-Komo-Step2a.png %})
+![Connect Braze Integration.]({% image_buster /assets/img/Braze Komo Images v2/Braze-Komo-Step2a.png %}){: style="max-width:50%;"}
 
 ![Connect Braze Integration Step 2b.]({% image_buster /assets/img/Braze Komo Images v2/Braze-Komo-Step2b.png %})
 
@@ -71,13 +71,13 @@ Next, find the Braze integration from the list, and select the **Connect** butto
 
 Now you need to setup a workflow, within a Workspace, Site or Card, to sync data to Braze. 
 
-Whether you scope the workflow within the scope of the netire Workspace, a Site (which contains many Cards) or a single Card, is just dependent on whether you want the workflow to trigger across many Cards or campaigns. 
+Whether you scope the workflow within the scope of the entire Workspace, a Site (which contains many Cards) or a single Card, is dependent on whether you want the workflow to trigger across many Cards or campaigns. 
 
-Once you've created a Workflow, define your trigger, search for Braze in the step menu and add the "Track User" step. 
+After you've created a Workflow, define your trigger, search for Braze in the step menu and add the "Track User" step. 
 
 ![Track User setup.]({% image_buster /assets/img/Braze Komo Images v2/Braze-Komo-Step3a.png %})
 
-From here, you can simply configure the events, attributions and subscriptions you want to sync from Komo to Braze. 
+From here, configure the events, attributions, and subscriptions you want to sync from Komo to Braze. 
 
 ![Content blocks list.]({% image_buster /assets/img/Braze Komo Images v2/Braze-Komo-Step3b.png %})
 
