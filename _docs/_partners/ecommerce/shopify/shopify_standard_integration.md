@@ -159,7 +159,7 @@ By default, Braze automatically converts emails from Shopify to lowercase before
 {% alert note %}
 The next steps depend on your external ID selection:<br><br>
 - **If you selected a custom external ID type:** Complete steps 4.1—4.3 to set up your custom external ID configuration.
-- **If you selected Shopify customer ID, email, or hashed email:** Skip steps 4.1—4.3 and continue directly to [step 4.4](#step-4.4).
+- **If you selected Shopify customer ID, email, or hashed email:** Skip steps 4.1—4.3 and continue directly to step 4.4.
 {% endalert %}
 
 ### Step 4.1: Create the `braze.external_id` metafield
