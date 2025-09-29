@@ -6,7 +6,7 @@
 
 ## Prerequisites
 
-Before you can integrate, you'll need an active BrazeAI Decisioning Studio™ license. Interested in learning more? [Book a call](https://offerfit.ai/book-now)
+Before you can integrate, you'll need an active BrazeAI Decisioning Studio™ license. Interested in learning more? [Book a call](https://www.braze.com/get-started/).
 
 ## Integrating decision studio
 

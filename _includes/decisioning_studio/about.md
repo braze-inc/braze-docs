@@ -4,11 +4,11 @@
 
 ## What's BrazeAI Decisioning Studio™?
 
-[BrazeAI Decisioning Studio™](https://www.offerfit.ai/) replaces A/B testing with AI decisioning that personalizes everything, and maximizes any metric: drive dollars, not clicks&#8212;with the decisioning studio, you can optimize any business KPI.
+[BrazeAI Decisioning Studio™](https://www.braze.com/product/brazeai-decisioning-studio/) replaces A/B testing with AI decisioning that personalizes everything, and maximizes any metric: drive dollars, not clicks&#8212;with the decisioning studio, you can optimize any business KPI.
 
 BrazeAI™ decisioning agents automatically discover the optimal action for every customer. Using your first-party data, BrazeAI™ can maximize any business KPI for a wide range of use cases, including cross-sell, upsell, repurchase, retention, renewal, referral, winback, and more.
 
-The AI Expert Services team will tailor BrazeAI Decisioning Studio™ to the specific needs of your business. While the decisioning studio works best with Braze, a variety of other platforms are already supported. To learn more, [book a call](https://offerfit.ai/book-now) with Braze.
+The AI Expert Services team will tailor BrazeAI Decisioning Studio™ to the specific needs of your business. While the decisioning studio works best with Braze, a variety of other platforms are already supported. To learn more, [book a call](https://www.braze.com/get-started/) with Braze.
 
 ## Key features
 

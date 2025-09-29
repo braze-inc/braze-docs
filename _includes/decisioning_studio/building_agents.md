@@ -32,7 +32,7 @@ Before you can build an agent, you'll need to [integrate BrazeAI Decisioning Stu
 
 ### Step 1: Contact AI Expert Services
 
-The AI Expert Services team will work closely with you to scope, design, and build your decisioning agent. If you haven't already, [reach out](https://offerfit.ai/book-now) to get started.
+The AI Expert Services team will work closely with you to scope, design, and build your decisioning agent. If you haven't already, [reach out](https://www.braze.com/get-started/) to get started.
 
 You'll complete the following steps together to build a custom agent that's right for you.
 
