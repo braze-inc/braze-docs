@@ -49,3 +49,11 @@ The Shopify integration supports Shopify customer create and customer update web
 {% endalert %}
 
 {% endif %}
+
+{% if include.alert == 'context variable' %}
+
+{% alert important %}
+Canvas entry properties are part of Canvas context variables. This means `canvas_entry_properties` is now referenced as `context`. Each `context` variable includes a name, data type, and a value that can include Liquid. Currently, `canvas_entry_properties` are still backwards compatible. For more details, see [Context]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context/#how-it-works) and [Canvas context object]({{site.baseurl}}/api/objects_filters/context_object).
+{% endalert %}
+
+{% endif %}

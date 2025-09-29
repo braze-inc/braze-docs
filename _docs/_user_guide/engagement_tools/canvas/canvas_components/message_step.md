@@ -62,9 +62,11 @@ All users who enter the Message step will advance to the next step when any one 
 If an action-based Canvas is triggered by an inbound SMS message, you can reference SMS properties in the first step (Message step) or a Message step that is nested under an Action Path step. For example, in the Message step, you could use `{{sms.${inbound_message_body}}}` or `{{sms.${inbound_media_urls}}}`.
 {% endraw %}
 
-## Referencing Canvas entry properties
+## Referencing context properties
 
-Canvas entry properties are configured in the **Entry Schedule** step of creating a Canvas and will indicate the trigger that enters a user into a Canvas. These properties can also access the properties of entry payloads in API-triggered Canvases. Note that the `context` object has a maximum size limit of 50 KB. 
+{% multi_lang_include alerts/important_alerts.md alert='context variable' %}
+
+Entry properties are configured in the **Entry Schedule** step of creating a Canvas and will indicate the trigger that enters a user into a Canvas. These properties can also access the properties of entry payloads in API-triggered Canvases. Note that the `context` object has a maximum size limit of 50 KB.
 
 Entry properties can be used in Liquid in any Message step. Use the following Liquid when referencing these entry properties: {% raw %}``context${property_name}``{% endraw %}. Events must be custom events or purchase events to be used this way.
 

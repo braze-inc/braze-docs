@@ -11,9 +11,7 @@ tool: Canvas
 
 > This reference article covers information about `context` and `event_properties`, including when to use each property and the differences in behavior. <br><br> For information about custom event properties in general, check out [Custom events properties]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties).
 
-{% alert important %}
-If you're participating in the [Context component early access]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context), Canvas entry properties are part of Canvas context variables. This means `canvas_entry_properties` is now referenced as `context`. Each `context` variable includes a name, data type, and a value that can include Liquid. Currently, `canvas_entry_properties` are still backwards compatible.
-{% endalert %}
+{% multi_lang_include alerts/important_alerts.md alert='context variable' %}
 
 Context properties and event properties function differently within your Canvas workflows. Properties of events or API calls that trigger a user's entry into a Canvas are known as `context`. Properties of events that occur as a user moves through a Canvas journey are known as `event_properties`. The key difference is `context` focuses on more than just events by also accessing the properties of entry payloads in API-triggered Canvases.
 
@@ -52,7 +50,7 @@ You can no longer create or duplicate Canvases using the original editor. Note t
 
 ### Timestamps for triggers
 
-If you're using timestamps with a [datetime type]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#custom-event-properties) from events that trigger an  action-based Canvases, which are referenced using [context]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties), timestamps are normalized to UTC.
+If you're using timestamps with a [datetime type]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#custom-event-properties) from events that trigger action-based Canvases, which are referenced using [context]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties), timestamps are normalized to UTC.
 
 Given this behavior, Braze strongly recommends you use a Liquid timezone filter like the following example to guarantee that your messages are sent with your [preferred timezone]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/#time-zone-filter).
 
