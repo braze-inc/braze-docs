@@ -13,7 +13,7 @@ tool: Canvas
 
 {% multi_lang_include alerts/important_alerts.md alert='context variable' %}
 
-Context properties and event properties function differently within your Canvas workflows. Properties of events or API calls that trigger a user's entry into a Canvas are known as `context`. Properties of events that occur as a user moves through a Canvas journey are known as `event_properties`. The key difference is `context` focuses on more than just events by also accessing the properties of entry payloads in API-triggered Canvases.
+Context properties and event properties function differently within your Canvas workflows. Properties of events or API calls that trigger a user's entry into a Canvas are known as `context`. Properties of events that occur as a user moves within a Canvas journey are known as `event_properties`. The key difference is `context` focuses on more than just events by also accessing the properties of entry payloads in API-triggered Canvases.
 
 Refer to the following table for a summary of differences between context and event properties.
 

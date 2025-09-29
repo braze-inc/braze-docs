@@ -6,7 +6,7 @@ page_type: reference
 alias: /api/objects_filters/canvas_entry_properties_object/
 tool:
   - Canvas
-description: "This article explains the Braze Canvas entry properties object."
+description: "This article explains the Braze Canvas context object."
 
 ---
 
