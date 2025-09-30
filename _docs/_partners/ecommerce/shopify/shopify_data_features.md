@@ -785,6 +785,10 @@ The Shopify integration currently doesn't support populating the Braze [purchase
 | `shopify_province` | The customer's province from their default address. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
+{% alert important %}
+A known issue with Shopify's latest API version is that the `shopify_last_order_name` field will populate without values. We will update this page when the issue is updated.
+{% endnote %}
+
 ### Liquid personalization
 
 To add Liquid personalization for your Shopify custom attributes, select **+ Personalization**. Then select **Custom Attributes** as your personalization type.
