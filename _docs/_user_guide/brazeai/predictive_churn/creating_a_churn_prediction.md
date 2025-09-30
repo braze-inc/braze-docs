@@ -52,9 +52,11 @@ Underneath the definition, you will see estimates of how many users (in the past
 
 ## Step 3: Filter your prediction audience
 
-Your prediction audience is the group of users you want to predict churn risk for. By default, this will be set to **All Users**, which means that this prediction will create churn risk scores for all of your active users (refer to the previous note for who is considered active for a churn model).
+Your prediction audience is the group of users for which you want to predict churn risk for. The prediction audience defines the group of users the machine learning model looks at to learn from the past. By default, this will be set to **All Users**, which means that this prediction will create churn risk scores for all of your active users (refer to the previous note for who is considered active for a churn model).
 
-The model will likely perform better if you narrow down and filter the group of users you want to prevent from churning with some criteria. Think about the specific users who are relevant for this use case. As an example, if you're a ride-sharing app with drivers and riders in your user base, and you're building a churn model for drivers that may stop driving for you, you'll want to filter your prediction audience to just drivers so that riders don't enter the model.
+Depending on your use case, you may want to use filters to specify the users you want to assess for the model. To do so, select **Define my own prediction audience** and choose your audience filters. As an example, if you're a ride-sharing app with drivers and riders in your user base, and you're building a churn model for riders, you'll want to filter your prediction audience to just riders. Keep in mind that many use cases do not require you to select a specific prediction audience. For instance, if your use case is to target users in the EU region that are most likely to churn, you can run your model on all users and then simply include a filter for EU region in the campaign’s segment.
+
+Braze will show you the estimated size of your prediction audience. If you specify your desired audience and do not meet the minimum required to run the model, try specifying a broader filter or use the **All Users** option. Note that the size of your "all users" group is not static and varies from model to model, as it takes into account your churn definition. For example, say churn definition is not making a purchase in 30 days; in this case, Braze runs the model on users that HAVE purchased in the last 30 days (and predicts the likelihood that they will NOT purchase in the next 30 days), so those are the users reflected in the "all users" metric.
 
 {% alert note %}
 The prediction audience cannot exceed 100 million users.
@@ -74,7 +76,9 @@ Just like the previous page, the bottom panel will show you the estimated number
 
 ## Step 4: Choose the update frequency for churn prediction
 
-The machine learning model created when you complete this page will be used on a schedule you select here to generate fresh churn risk scores. Select the **maximum frequency of updates** that you'll find useful. For example, if you're going to send a weekly promotion to prevent users from churning, set the update frequency to **Weekly** on the day and time of your choosing. 
+The machine learning model will generate event likelihood scores for users, and those scores will be updated based on the schedule you select here. You'll be able to target users based on their event likelihood score. 
+
+Select the **maximum frequency of updates** that you'll find useful. For example, if you're going to send a weekly promotion to prevent users from churning, set the update frequency to **Weekly** on the day and time of your choosing. 
 
 ![Prediction Update Schedule set to daily at 5 pm.]({% image_buster /assets/img/churn/churn2.png %})
 
@@ -84,7 +88,7 @@ Preview and demo prediction will never update users' risk of churn. Additionally
 
 ## Step 5: Build prediction
 
-Verify that the details you've provided are correct, and choose **Build Prediction**. You can also save your changes in draft form by selecting **Save As Draft** to return to this page and build the model later. After you select **Build Prediction**, the process that generates the model will begin. This could take between 30 minutes to a few hours depending on data volumes. For this prediction, you will see a page explaining that training is in progress for the duration of the model building process.
+Verify that the details you've provided are correct, and choose **Build Prediction**. You can also save your changes in draft form by selecting **Save As Draft** to return to this page and build the model later. After you select **Build Prediction**, the process that generates the model will begin. This could take between 30 minutes to a few hours depending on data volumes. For this prediction, you will see a page explaining that training is in progress for the duration of the model building process. Braze's model takes into account custom events, purchase events, campaign interaction events, and session data.
 
 Once it's done, the page will switch to the Analytics view automatically, and you will also get an email informing you that the prediction and results are ready. In the event of an error, the page will return to the Editing mode with an explanation of what went wrong.
 
