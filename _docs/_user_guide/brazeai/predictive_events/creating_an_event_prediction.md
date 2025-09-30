@@ -46,7 +46,7 @@ Your prediction audience is the group of users whose likelihood score you would 
 
 Depending on your use case, you may want to use filters to specify the users you want to assess for the model. To do so, select **Define my own prediction audience** and choose your audience filters. For example, you might want to focus on users who have been using your app for at least 30 days by selecting the "First Used App" filter set to 30 days. Setting up this audience tells Braze that you want your model to specifically learn from users that (at the time that the model runs) have used the app for at least 30 days.
 
-The prediction audience defines the group of users the machine learning model looks at to learn from the past. Braze will show you the estimated size of your prediction audience. If you specify your desired audience and do not meet the minimum required to run the model, try specifying a broader filter or use the **All Users** option. Keep in mind that many use cases do not require you to select a specific prediction audience. For instance, if your use case is to target users in the EU region that are most likely to churn, you can run your model on all users and then simply include a filter for EU region in the campaign’s segment.
+The prediction audience defines the group of users the machine learning model looks at to learn from the past. Braze will show you the estimated size of your prediction audience. If you specify your desired audience and do not meet the minimum required to run the model, try specifying a broader filter or use the **All Users** option. Keep in mind that many use cases don't require you to select a specific prediction audience. For example, if your use case is to target users in the EU region that are most likely to churn, you can run your model on all users and then include a filter for EU region in the campaign’s segment.
 
 {% alert note %}
 The prediction audience cannot exceed 100 million users.
@@ -64,7 +64,7 @@ For example, if the event window is set to 14 days, it will take 14 days to coll
 
 The machine learning model will generate event likelihood scores for users, and those scores will be updated based on the schedule you select here. You'll be able to target users based on their event likelihood score. 
 
-Select the **maximum frequency of updates** that you'll find useful. For example, if you're predicting purchases and are planning to send a weekly promotion, set the update frequency to **Weekly** on the day and time of your choosing.
+Select the **maximum frequency of updates** that you'll find useful. For example, if you're predicting purchases and planning to send a weekly promotion, set the update frequency to **Weekly** on the day and time of your choosing.
 
 {% alert note %}
 Preview and demo prediction will never update users' likelihood scores.
@@ -74,7 +74,7 @@ Preview and demo prediction will never update users' likelihood scores.
 
 Verify that the details you've provided are correct, and choose **Build Prediction**. You can also save your changes in draft form by selecting **Save As Draft** to return to this page and build the model later. 
 
-After you click **Build Prediction**, the process that generates the model will begin. This could take between 30 minutes to a few hours, depending on data volumes. For this prediction, you will see a page explaining that training is in progress for the duration of the model building process. Braze's model takes into account custom events, purchase events, campaign interaction events, and session data.
+After you click **Build Prediction**, the process that generates the model will begin. This could take between 30 minutes to a few hours, depending on data volumes. For this prediction, you will see a page explaining that training is in progress for the duration of the model building process. The Braze model takes into account custom events, purchase events, campaign interaction events, and session data.
 
 When completed, the page will switch to the analytics view automatically, and you will receive an email informing you that the prediction and results are ready. In the event of an error, the page will return to the editing mode with an explanation of what went wrong.
 
