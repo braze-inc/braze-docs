@@ -48,7 +48,7 @@ Contact your account manager or open a [support ticket]({{site.baseurl}}/braze_s
 In Amplitude, locate your Amplitude export API key.
 
 {% alert warning %}
-Keep your Amplitude API Key up to date. If your connector's credentials expire, the connector will stop sending events. If this persists for more than **48 hours**, the connector's events will be dropped, and data will be permanently lost.
+Keep your Amplitude API Key up to date. If your connector's credentials expire, the connector will stop sending events. If this persists for more than **5 days**, the connector's events will be dropped, and data will be permanently lost.
 {% endalert %}
 
 ### Step 2: Create Braze Current
