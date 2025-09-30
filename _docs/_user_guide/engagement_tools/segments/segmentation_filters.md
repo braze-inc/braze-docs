@@ -59,7 +59,7 @@ glossaries:
     tags:
       - Custom attributes
   - name: Day of Recurring Event
-    description: This filter looks at the month and day of custom attribute with the data type of "date", but does not look at the year. This filter is useful for annual events.<br><br>Time zone&#58;<br>This filter adjusts for whatever time zones the user is in.
+    description: This filter looks at the month and day of custom attribute with the data type of "date", but does not look at the year. This filter is useful for annual events.<br><br>Time zone&#58;<br>This filter adjusts for whatever time zones the user is in, so long as the message sends using the local time scheduling option; otherwise, this filter will use your account's company time zone.
     tags:
       - Custom attributes
   - name: Custom Event
