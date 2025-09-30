@@ -15,10 +15,6 @@ platform:
 
 > Learn how to create and manage Banner placements in the Braze SDK, including accessing their unique properties and logging impressions. For more general information, see [About Banners]({{site.baseurl}}/developer_guide/banners).
 
-## About placement requests {#requests}
-
-{% multi_lang_include banners/placement_requests.md %}
-
 ## Creating a placement
 
 ### Prerequisites
@@ -31,11 +27,9 @@ These are the minimum SDK versions needed to create Banner placements:
 
 ### Step 2: Refresh placements in your app {#requestBannersRefresh}
 
-Placements can be requested once per session and will be cached automatically when a user's session expires or when you change identified users using the `changeUser` method. The SDK will not re-fetch placements if you call the refresh method again during the same session. Instead, it will log an error and return an error message to the caller.
+Placements are cached automatically when a user's session expires or the `changeUser` method is called. {% multi_lang_include banners/refresh_limit.md %}
 
-{% alert tip %}
-Refresh placements as soon as possible to avoid delays in downloading or displaying Banners.
-{% endalert %}
+Use `requestBannersRefresh` to fetch Banner content for one or more placements. Call it early in the session to avoid delays in downloading or displaying Banners.
 
 {% tabs %}
 {% tab Web %}
@@ -84,16 +78,16 @@ Braze.requestBannersRefresh(["global_banner", "navigation_square_banner"]);
 {% endtab %}
 {% tab Unity %}
 
-```csharp
+{% alert note %}
 This feature is not currently supported on Unity.
-```
+{% endalert %}
 
 {% endtab %}
 {% tab Cordova %}
 
-```javascript
+{% alert note %}
 This feature is not currently supported on Cordova.
-```
+{% endalert %}
 
 {% endtab %}
 {% tab Flutter %}
@@ -105,9 +99,9 @@ braze.requestBannersRefresh(["global_banner", "navigation_square_banner"]);
 {% endtab %}
 {% tab Roku %}
 
-```brightscript
+{% alert note %}
 This feature is not currently supported on Roku.
-```
+{% endalert %}
 
 {% endtab %}
 {% endtabs %}
@@ -188,16 +182,16 @@ const bannerCardsSubscription = Braze.addListener(
 {% endtab %}
 {% tab Unity %}
 
-```csharp
+{% alert note %}
 This feature is not currently supported on Unity.
-```
+{% endalert %}
 
 {% endtab %}
 {% tab Cordova %}
 
-```javascript
+{% alert note %}
 This feature is not currently supported on Cordova.
-```
+{% endalert %}
 
 {% endtab %}
 {% tab Flutter %}
@@ -213,9 +207,9 @@ StreamSubscription bannerStreamSubscription = braze.subscribeToBanners((List<Bra
 {% endtab %}
 {% tab Roku %}
 
-```brightscript
+{% alert note %}
 This feature is not currently supported on Roku.
-```
+{% endalert %}
 
 {% endtab %}
 {% endtabs %}
@@ -427,16 +421,16 @@ const banner = await Braze.getBanner("global_banner");
 {% endtab %}
 {% tab Unity %}
 
-```csharp
+{% alert note %}
 This feature is not currently supported on Unity.
-```
+{% endalert %}
 
 {% endtab %}
 {% tab Cordova %}
 
-```javascript
+{% alert note %}
 This feature is not currently supported on Cordova.
-```
+{% endalert %}
 
 {% endtab %}
 {% tab Flutter %}
@@ -464,9 +458,9 @@ braze.getBanner("global_banner").then((banner) {
 {% endtab %}
 {% tab Roku %}
 
-```brightscript
+{% alert note %}
 This feature is not currently supported on Roku.
-```
+{% endalert %}
 
 {% endtab %}
 {% endtabs %}
