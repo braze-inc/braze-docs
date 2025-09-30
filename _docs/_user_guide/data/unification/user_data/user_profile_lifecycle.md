@@ -78,7 +78,7 @@ Each alias functions as a key-value pair that consists of two parts: an `alias_l
 
 ### Updating user aliases
 
-Unlike an `external_id`, an alias can be updated with a new name for a given label after it's set either by using our [User Data endpoints]({{site.baseurl}}/developer_guide/rest_api/user_data/#new-user-alias-endpoint) or passing a new name through the SDK. The user alias will then be visible when exporting that user's data.
+An alias can be updated with a new name for a given label after it's set either by using our [User Data endpoints]({{site.baseurl}}/developer_guide/rest_api/user_data/#new-user-alias-endpoint) or passing a new name through the SDK. The user alias will then be visible when exporting that user's data.
 
 ![Two different user profiles for separate users with the same user alias label but different alias names]({% image_buster /assets/img_archive/Braze_User_aliases.png %})
 
@@ -117,5 +117,3 @@ All user IDs can be used to find and identify users within your dashboard for te
 {% alert important %}
 Braze will ban or block users with over 5,000,000 sessions ("dummy users") and will no longer ingest their SDK events, as these users are generally the result of misintegration. If you find that this has happened to a legitimate user, reach out to your Braze account manager.
 {% endalert %}
-
-
