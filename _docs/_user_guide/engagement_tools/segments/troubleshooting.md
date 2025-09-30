@@ -14,7 +14,7 @@ description: "This reference article covers troubleshooting steps and considerat
 
 ### Target audience is too complex to launch
 
-This rare error occurs if your target audience contains too many regex values, excessively long regex values, or too many filters. This includes all filters in a campaign or Canvas audience, whether the filters are located within the referenced segments or added as filters in the **Target Audience** step.
+This rare error occurs if your target audience contains too many regex values, excessively long regex values, excessively detailed filters (such as "is any of 30,000 zip codes"), or too many filters. This includes all filters in a campaign or Canvas audience, whether the filters are located within the referenced segments or added as filters in the **Target Audience** step.
 
 When you add segment filters to a campaign or Canvas, those filters are translated into queries in Braze (the character count of these queries is not 1:1 to the number of characters a dashboard user sees). When Braze sends a campaign or Canvas, we run a query that combines all filters in the targeted audience. We apply a threshold limiting the number of characters in the resulting query for a target audience. For a given campaign or Canvas, we sum up the character count across all segments referenced, including all additional filters. For a given segment, we sum up the character count across all filters and filter values.
 
