@@ -249,10 +249,10 @@ From the root folder of the project:
 
 ```bash
 # To install using the React Native New Architecture
-cd ios && RCT_NEW_ARCH_ENABLED=1 pod install
+cd ios && pod install
 
 # To install using the React Native legacy architecture
-cd ios && pod install
+cd ios && RCT_NEW_ARCH_ENABLED=0 pod install
 ```
 
 #### Step 2.3: Configure the Braze SDK
