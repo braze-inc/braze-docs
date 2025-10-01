@@ -48,6 +48,9 @@ search_debug: false
 partner_api: true
 markdown_api: true
 
+# Markdown copy plugin - copies original .md files to _site for LLM processing
+markdown_copies: true
+
 # CLA Endpoint
 cla_url: "https://c9616da7-4322-4bed-9b51-917c1874fb31.trayapp.io/cla"
 
