@@ -3,11 +3,17 @@ name: Author Documentation
 on:
   workflow_dispatch:
     inputs:
+      prompt:
+        description: 'Prompt - leave blank if no specific instructions'
+        required: true
       specs_file:
         description: 'Path to the specs file'
         required: true
       feature_name:
         description: 'Name of feature'
+        required: true
+      style_guide:
+        description: 'style guide'
         required: true
 
 jobs:
@@ -30,4 +36,7 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
           python scripts/generate_docs.py \
+            --prompt "${{ github.event.inputs.prompt }}" \
             --specs "${{ github.event.inputs.specs_file }}" \
+            --style_guide "${{ github.event.inputs.style_guide }}" \
+            --output "${{ github.event.inputs.feature_name }}.md" \
