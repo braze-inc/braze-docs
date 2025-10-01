@@ -25,6 +25,7 @@ You can combine [`message_extras`]({{site.baseurl}}/user_guide/personalization_a
 {% capture code %}
 {% promotion('puttshacktest2') %}
 {% endcapture %}
+Use {{code}} for an exclusive discount!
 {% message_extras :key cardscode :value {{code}} %}
 ```
 {% endraw %}
