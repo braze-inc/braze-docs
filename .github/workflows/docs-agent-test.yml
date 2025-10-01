@@ -3,9 +3,6 @@ name: Author Documentation
 on:
   workflow_dispatch:
     inputs:
-      prompt:
-        description: 'Custom prompt for the documentation'
-        required: true
       specs_file:
         description: 'Path to the specs file'
         required: true
@@ -27,6 +24,10 @@ jobs:
 
       - name: Install dependencies
         run: pip install openai
-        
-      - name: Test step
-        run: echo "Testing docs workflow"
+
+      - name: Generate documentation
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          python scripts/generate_docs.py \
+            --specs "${{ github.event.inputs.specs_file }}" \
