@@ -27,3 +27,6 @@ jobs:
 
       - name: Install dependencies
         run: pip install openai
+        
+      - name: Test step
+        run: echo "Testing docs workflow"
