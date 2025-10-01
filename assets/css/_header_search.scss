@@ -579,7 +579,8 @@ $search_icon: $white;
 
   
   
-  #auto #search-box-autocomplete:focus{
+  #auto #search-box-autocomplete:focus ,
+  #auto #search-box-autocomplete.has-text{
 	width: 300px; 
 	background: white;
     box-shadow: none;
@@ -705,7 +706,7 @@ $search_icon: $white;
 
 .su__mobile_resultbox{
 	top: 42px !important;
-    width: 19.8vw !important; 
+    width: 100% !important; 
     border-radius: 0 !important;
     overflow-y: scroll !important;
     -ms-overflow-style: none !important;
@@ -725,4 +726,7 @@ button.su__btn.su__search_btn.su__animate-zoom.su__flex-vcenter.su__position-abs
 
 .su__suggestion-desc.su__align_flex.su__line-height-n.su__font-11.su__color-lgray.su__suggestSummary{
 	display: block !important;
+}
+#auto span.su__ribbon-title.su__font-11.su__px-2.su__rtlml-0.su__d-inline-block.su__radius-3.su_source_label_font.su__f-normal.su__sc-loading.su__source-label {
+    display: none;
 }

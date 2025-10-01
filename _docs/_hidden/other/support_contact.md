@@ -249,6 +249,10 @@ button.submit-btn {
       font-size: 16px;
       font-weight: bold;
   }
+
+  div#suggestionsBox li {
+      font-size: 14px;
+  }
   
    .gpt-text {
     margin-top: 2px;
@@ -2392,7 +2396,7 @@ document.getElementById('toStep2').addEventListener('click', async function () {
     steps[1].classList.add('active');
     articlesDiv.style.display = 'none';
     articlesList.innerHTML = '';
-
+    document.querySelector('.gpt-heading').textContent = subject;
     const susResponse = await getSearchResultByPost(subject, sid);
     const llmContextId = susResponse.llmContextId;
     const results = susResponse.results;
@@ -2714,6 +2718,8 @@ function initCaseForm() {
             const subject = document.getElementById('ticket_subject').value;
             const caseId = "CASE-" + Date.now() + "-" + Math.floor(Math.random() * 1000);
             const caseNumber = Math.floor(100000 + Math.random() * 900000);
+            const prioritySelect = document.getElementById('ticket_priority');
+            const issueSeverity = prioritySelect.options[prioritySelect.selectedIndex].text;
 
             let sid = getCookie("_gz_sid");
             if (!sid) {
@@ -2738,13 +2744,14 @@ function initCaseForm() {
                     "event": "caseCreated",
                     "caseId": caseId,         
                     "caseNumber": caseNumber,
-                     "isFreshSearch": !citationClicked,
+                    "Issue_Severity__c": issueSeverity,
+                    "isFreshSearch": !citationClicked,
                     "searchUid": "76a357a5-3804-449f-aa1e-211ed865a48b",
                     "referrer": document.referrer || "",
                     "e": "caseCreated",
                     "t": "Contact Us | What can we help you with today? | Bluebeam Technical",
                     "r": 60691,
-                    "sid_session": sid, // ✅ generated only on submit if missing
+                    "sid_session": sid, 
                     "taid_device": taid || "",
                     "internal": ""
                 })
@@ -2754,7 +2761,6 @@ function initCaseForm() {
     });
 }
 
-// 🔹 Initialize everything
 initCaseForm();
 
 
