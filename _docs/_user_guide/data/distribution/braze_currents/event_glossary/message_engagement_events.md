@@ -7853,7 +7853,7 @@ This event occurs when a user directly clicks on the Push notification to open t
 {% alert note %}
 In rare cases, a push open may appear before the corresponding push send event in Currents data because of the following:
 - Your SDK has an incorrect clock.
-- Batch write latency. The recorded send time can lag behind early deliveries, so very quick opens may be logged before the batch's final send timestamp is written. Large sends are dispatched and recorded in batches.
+- High batch write latency. The recorded send time can lag behind early deliveries, so very quick opens may be logged before the batch's final send timestamp is written. Large sends are dispatched and recorded in batches.
 {% endalert %}
 
 {% tabs %}
