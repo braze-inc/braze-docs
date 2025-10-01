@@ -63,6 +63,7 @@ module MarkdownExport
 
       File.read(full)
     rescue => e
+      Jekyll.logger.error "MarkdownCopyLLM:", "Failed to inline #{@markup}: #{e.class}: #{e.message}"
       "<!-- export: failed to inline #{@markup}: #{e.class}: #{e.message} -->"
     end
 
@@ -70,14 +71,19 @@ module MarkdownExport
 
     def resolve_path(markup, context)
       return "" if markup.nil? || markup.empty?
+      
+      # Extract just the file path, ignoring parameters like page="testing"
+      # e.g. "banners/testing.md page=\"testing\"" -> "banners/testing.md"
+      path = markup.split(/\s+/).first
+      
       # Accept quoted strings, bare words, or full Liquid expressions
       # e.g. "a/b.md", a/b.md, {{ var | downcase }}
-      if markup.start_with?('"', "'")
-        markup.gsub(/\A["']|["']\z/, '')
-      elsif markup.include?('{{')
-        Liquid::Template.parse(markup).render(context)
+      if path.start_with?('"', "'")
+        path.gsub(/\A["']|["']\z/, '')
+      elsif path.include?('{{')
+        Liquid::Template.parse(path).render(context)
       else
-        markup
+        path
       end
     end
   end
@@ -182,6 +188,11 @@ module Jekyll
       end
 
       Jekyll.logger.info "MarkdownCopyLLM:", "Exported #{copied} merged Markdown files"
+      
+      # Generate llms.txt after markdown files are created
+      if defined?(Jekyll::LlmsTxtGenerator)
+        Jekyll::LlmsTxtGenerator.generate_llms_txt(site)
+      end
     end
 
     def self.output_path_for(item)

@@ -51,6 +51,9 @@ markdown_api: true
 # Markdown copy plugin - copies original .md files to _site for LLM processing
 markdown_copies: true
 
+# LLMs.txt generator - creates dynamic llms.txt file
+llms_txt: true
+
 # CLA Endpoint
 cla_url: "https://c9616da7-4322-4bed-9b51-917c1874fb31.trayapp.io/cla"
 
