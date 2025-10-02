@@ -4,17 +4,13 @@ article_title: Suppression Lists
 page_order: 3
 page_type: reference
 tool: Segments
-description: "This page covers how to use suppression lists to specify which users should never receive your messages. Admin permissions are required to manage suppression lists."
+description: "This page covers how to use suppression lists to specify which users should never receive your messages."
 
 ---
 
 # Suppression lists
 
 > Suppression lists are groups of users who automatically do not receive any campaigns or Canvases. Suppression lists are defined by segment filters, and users will enter and exit suppression lists as they meet filter criteria. You can also set exception tags so that the suppression list won’t apply to campaigns or Canvases with those tags. Messages from campaigns or Canvases with exception tags will still reach suppression list users who are in the target segments.
-
-{% alert important %}
-Admin permissions are required to create, edit, save, activate, and deactivate suppression lists. All users can view suppression lists, but only admins can manage them due to their significant impact on messaging.
-{% endalert %}
 
 ## Why use suppression lists?
 
@@ -31,16 +27,16 @@ The only message type that suppression lists do not apply to is feature flags. U
 
 You can use exception tags so that suppression list users are still targeted by particular campaigns and Canvases. For details, refer to step 4 in [Setting up suppression lists](#setup). If you do not add exception tags to a suppression list, then users in that suppression list will not be targeted with any messaging besides feature flags. 
 
-![The "Exception Settings" section with a checkbox to not apply the suppression list to API-triggered campaigns and Canvases.]({% image_buster /assets/img/suppression_list_checkbox.png %}){: style="max-width:70%;"}
-
 {% alert note %}
 Suppression lists are applied to API campaigns that are created in the Braze dashboard with a `campaign_id`. Suppression lists don't apply to messages sent through [Braze messaging endpoints]({{site.baseurl}}/api/endpoints/messaging/) without an associated `campaign_id`. 
 {% endalert %}
 
+![The "Exception Settings" section with a checkbox to not apply the suppression list to API-triggered campaigns and Canvases.]({% image_buster /assets/img/suppression_list_checkbox.png %}){: style="max-width:70%;"}
+
 ## Setting up suppression lists {#setup}
 
 {% alert note %}
-Only admins can create, edit, save, activate, and deactivate suppression lists. All users can view suppression lists, but admin permissions are required for any management actions due to their significant impact on messaging.
+All users can view suppression lists, but only users with [admin permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/?tab=admin#list-of-permissions) can create and manage suppression lists.
 {% endalert %}
 
 1. Go to **Audience** > **Suppression Lists**.<br><br>![The "Suppression Lists" page with a list of three suppression lists.]({% image_buster /assets/img/suppression_lists_home.png %})<br><br>
