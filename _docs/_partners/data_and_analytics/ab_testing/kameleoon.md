@@ -33,13 +33,18 @@ This integration runs as a JavaScript tracker via Kameleoon’s engine.js. It ca
 
 Log in to your Kameleoon App, click on \*\*Admin\*\* and then \*\*Integrations\*\* down the sidebar.
 
+![A close up image of the Admin panel from Kameleoon's UI.]({% image_buster assets/img/kameleoon/img_1.png%})
+
 \#\#\# Step 2: Install the “Braze” tool
 
 By default, the tool is not installed. This is signaled by this icon:
+![An image of a grey square with a downward-pointing arrow.]({% image_buster assets/img/kameleoon/img_2.png%})
 
 By clicking on \*\*Install the tool\*\*, you will be able to select the projects on which you want to activate it, so that Kameleoon data can be correctly reported to Braze.
+![An image of the Braze tool UI in Kameloon.]({% image_buster assets/img/kameleoon/img_3.png%})
 
 Once you have configured the tool, click on \*\*Validate\*\* in the bottom-right corner: the configuration panel will close. You will then see an \*\*ON\*\* toggle to the right of the tool’s logo, as well as the number of projects the tool is configured on.
+![An image of the Braze tool toggle from Kameleoon's UI. The switch on the right hand side is green and says "on".]({% image_buster assets/img/kameleoon/img_4.png%})
 
 {% alert important %}  
 This feature is in Beta. \[Join Kameleoon Beta Program\]\[1\] to start using this integration.  
@@ -51,6 +56,7 @@ This feature is in Beta. \[Join Kameleoon Beta Program\]\[1\] to start using thi
 
 When finalizing your experiment, click the \*\*Integrations\*\* step to configure Braze as a tracking tool.  
 Select \*\*Braze\*\*
+![The Integrations dashboard in Kameleoon's UI, showing all available integrations. There is a box at the top that says "Active" integrations, with "Braze" inside]({% image_buster assets/img/kameleoon/img_5.png%})
 
 Braze will be mentioned in the summary before going live. Kameleoon will automatically transmit the data to Braze, and you will be able to use it for analysis and segmentation directly in the Braze interface.
 
@@ -58,9 +64,12 @@ Braze will be mentioned in the summary before going live. Kameleoon will automat
 
 In the same way as A/B testing, you can select Braze among the reporting tools for a personalization.
 
+![UI showing "reporting tools". Available integrations are displayed such as Heap, Mixpanel, Clarity. Braze is selected.]({% image_buster assets/img/kameleoon/img_6.png%})
+
 ## \#\#\#\#On the feature flag creation page
 
 Set up the integration in the feature flag environment in the integrations section. Enable it for the environments where you want it active.
+![Displays the Feature Flag page in Kameleoon with available integrations. There are two switches for each partner, "Delivery rules" and "Feature Experiments".]({% image_buster assets/img/kameleoon/img_7.png%})
 
 ## \#\#\#\#On the results page
 
@@ -70,14 +79,16 @@ To do this, click on \*\*Experiment configuration\*\* in the kebab menu on the t
 
 {% alert note %}  
 This integration require a \[hybrid implementation\]\[0\] and are only compatible with Web SDKs.
-
 {% endalert %}
+
+![The side panel of the results page in Kameleoon.]({% image_buster assets/img/kameleoon/img_8.png%})
 
 The reporting tools associated with the experiment are displayed. Click \*\*Edit\*\* to edit this selection.
 
 \#\#\# Step 4: Analyze and Leverage Your Kameleoon Data in Braze
 
 Once the integration has been set up, Kameleoon will send custom events called “kameleoon\_exposure” with properties such as \*\*Experiment name\*\*, \*\*Experiment ID\*\*, \*\*Variation name\*\*, \*\*Variation ID\*\* to Braze.
+![The custom event user log in Braze, showing an example playload of the event that has been recieved by Braze from Kameleoon.]({% image_buster assets/img/kameleoon/img_9.png%})
 
 You’ll then be able to view this data in the Custom Events, create custom event reports to identify Kameleoon campaign exposure and enable segmentation based on event properties. Custom events can be leveraged when creating subsequent or linked campaigns and canvasses through \[Action Paths\]\[3\], \[Action-based Triggers\]\[4\] or creating \[Segments\]\[5\]
 
