@@ -110,6 +110,18 @@ Personalized delays and extended delays are in early access. Contact your Braze 
 
 Select the **Personalize delay** toggle to set up a personalized delay for your users. You can use this with a [Context step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context) to select the context variable to delay by. This will override the time of day set in the selected attribute or property. This is useful when applying an offset in days or weeks, and you want users to move forward at a specific time. The time zone comes from the attribute or property, or uses the fallback if none is available. 
 
+#### Time zone handling for "at specific time" configuration
+
+When configuring personalized delays with the **at specific time** option, timezone behavior depends on the data type of your attribute or context variable:
+
+- **String data type with timezone**: If the attribute or context property is a string data type that includes timezone information, it conforms to the timezone specified in the string.
+  - Example: `"2025-06-10T10:00:00-08:00"` → Uses UTC-8 timezone
+- **String data type without timezone**: If the attribute or context property is a string data type without timezone information, it conforms to the fallback timezone.
+  - Example: `"2025-06-10"` → Uses fallback timezone
+- **Time data type**: If the attribute or context property is a time data type, it conforms to UTC.
+  - Example: `"2025-06-10T10:00:00-08:00"` → Converted to UTC+0
+  - This is because the time data type is always converted to UTC when saved in the database, so the "at specific time" will always reference UTC when the variable is set to time data type.
+
 Note that it's possible for a custom attribute or context variable to have neither a specific time nor a time zone if it's a string data type. If it's a time data type, you'll need to specify the time and time zone. However, if the custom attribute or context variable is an "irrelevant" string (such as "product_name"), the user will exit the Canvas.
 
 #### Use case
