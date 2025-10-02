@@ -9,8 +9,6 @@ module Jekyll
     def self.generate_llms_txt(site)
       return unless should_generate_llms_txt?(site)
       
-      Jekyll.logger.info "LlmsTxtGenerator:", "Generating dynamic llms.txt..."
-      
       # Get all markdown files from the site
       markdown_files = get_markdown_files(site)
       
@@ -47,6 +45,14 @@ module Jekyll
             relative_path = file_path.sub(site_dir, '').sub(/^\//, '')
             url_path = relative_path.sub(/\/index\.md$/, '/')
             
+            # Skip files with minimal content (layout-driven navigation pages)
+            content = File.read(file_path)
+            content_stripped = content.strip
+            
+            # Skip if content is too short or just contains HTML breaks
+            next if content_stripped.length < 50
+            next if content_stripped.match?(/^(<br\s*\/?>|\s)+$/i)
+            
             # Extract title from the markdown file
             title = extract_title_from_file(file_path)
             
@@ -54,7 +60,7 @@ module Jekyll
               title: title,
               url: "/#{url_path}",
               collection: collection,
-              content: File.read(file_path)
+              content: content
             }
           end
         end
@@ -132,9 +138,8 @@ module Jekyll
       # Define collection descriptions
       collection_descriptions = {
         'user_guide' => 'The User Guide provides comprehensive information for marketers, product managers, and business users on how to use Braze\'s features and capabilities.',
-        'developer_guide' => 'The Developer Guide provides technical documentation for developers integrating Braze SDKs and APIs.',
-        'api' => 'Complete API documentation for programmatic access to Braze\'s features.',
-        'pages' => 'Additional documentation pages.'
+        'developer_guide' => 'The Developer Guide provides technical documentation for developers integrating Braze SDKs.',
+        'api' => 'Complete API documentation for programmatic access to Braze\'s features.'
       }
 
       collections.each do |collection_name, files|

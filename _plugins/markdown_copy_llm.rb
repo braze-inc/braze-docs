@@ -253,7 +253,7 @@ module Jekyll
         copied += 1
       end
 
-      Jekyll.logger.info "MarkdownCopyLLM:", "Exported #{copied} merged Markdown files"
+      Jekyll.logger.info "MarkdownCopyLLM:", "Exported #{copied} Markdown files"
 
       # Generate llms.txt after markdown files are created (if you have a generator defined)
       if defined?(Jekyll::LlmsTxtGenerator)
