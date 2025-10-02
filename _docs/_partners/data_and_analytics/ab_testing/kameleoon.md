@@ -1,12 +1,16 @@
-\<\!-- In most cases, the ARTICLE\_TITLE will be your company name. If your tool requires several seperate pages on Braze Docs, you can add a relevant page descriptor to your title, such as "MyCompany Analytics." \--\>  
+---
+nav_title: Kameleoon
+article_title: Kameleoon
+description: "Learn how to integrate Kameleoon with Braze"
+alias: /partners/kameleoon/
+page_type: partner
+search_tag: Partner
+---
+
 \# Kameleoon
 
-\<\!-- The description starts with a '\>' character and contains an introduction to your company, a link to your main site, and a consice overview of your integration. In a following paragraph, highlight the the relationship between your company and Braze and how this partnership helps your customers. \--\>  
 \>\[Kameleoon\]([https://www.kameleoon.com](https://www.kameleoon.com)) is the only optimization solution with Experiment, AI-Powered Personalization, and Feature Management capabilities in a single unified platform.
 
-ADDITIONAL\_INFORMATION.
-
-\<\!-- Most partner integrations will require the following prerequisites. However, you may add additional prerequisites as needed. \--\>  
 \#\# Prerequisites
 
 Before you start, you'll need the following:
@@ -17,12 +21,10 @@ Before you start, you'll need the following:
 | Braze account| An active Braze account with the [Braze Web SDK](https://www.braze.com/docs/developer_guide/sdk_integration/?sdktab=web) integrated on your webpage. You’ll also need event property segmentation enabled. To request it, see [Considerations](https://www.braze.com/docs/partners/data_and_analytics/ab_testing/vwo#request-event-property-segmentation).|  
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-\<\!-- An optional section you can use to outline the typical or atypical use cases for your integration. \--\>  
 \#\# Use cases
 
 Kameleoon sends custom events to Braze to identify users participating in experimentation and personalization campaigns, enabling more precise targeting and personalized messaging.
 
-\<\!-- Create step-by-step instructions for integrating your tool with Braze. It's important to be concise and only outline the minimum neccesary steps. \--\>  
 \#\# Integrating Kameleoon
 
 This integration runs as a JavaScript tracker via Kameleoon’s engine.js. It can be quickly enabled from within Kameleoon’s UI.
@@ -30,8 +32,6 @@ This integration runs as a JavaScript tracker via Kameleoon’s engine.js. It ca
 \#\#\# Step 1: Navigate to the Kameleoon Integrations page
 
 Log in to your Kameleoon App, click on \*\*Admin\*\* and then \*\*Integrations\*\* down the sidebar.
-
-\<\!-- Use the "Make a post request", "Default behavior," and "Rate limit" sections to outline how users can make a POST request. If this information isn't required for your integration, you can remove these sections. →
 
 \#\#\# Step 2: Install the “Braze” tool
 
