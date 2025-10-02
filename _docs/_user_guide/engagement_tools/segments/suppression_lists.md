@@ -4,13 +4,17 @@ article_title: Suppression Lists
 page_order: 3
 page_type: reference
 tool: Segments
-description: "This page covers how to use suppression lists to specify which users should never receive your messages."
+description: "This page covers how to use suppression lists to specify which users should never receive your messages. Admin permissions are required to manage suppression lists."
 
 ---
 
 # Suppression lists
 
 > Suppression lists are groups of users who automatically do not receive any campaigns or Canvases. Suppression lists are defined by segment filters, and users will enter and exit suppression lists as they meet filter criteria. You can also set exception tags so that the suppression list won’t apply to campaigns or Canvases with those tags. Messages from campaigns or Canvases with exception tags will still reach suppression list users who are in the target segments.
+
+{% alert important %}
+Admin permissions are required to create, edit, save, activate, and deactivate suppression lists. All users can view suppression lists, but only admins can manage them due to their significant impact on messaging.
+{% endalert %}
 
 ## Why use suppression lists?
 
@@ -35,7 +39,9 @@ Suppression lists are applied to API campaigns that are created in the Braze das
 
 ## Setting up suppression lists {#setup}
 
-Because suppression lists can significantly impact the messages you send, only admins can edit, save, activate, and deactivate suppression lists (all users can view suppression lists).
+{% alert note %}
+Only admins can create, edit, save, activate, and deactivate suppression lists. All users can view suppression lists, but admin permissions are required for any management actions due to their significant impact on messaging.
+{% endalert %}
 
 1. Go to **Audience** > **Suppression Lists**.<br><br>![The "Suppression Lists" page with a list of three suppression lists.]({% image_buster /assets/img/suppression_lists_home.png %})<br><br>
 2. Select **Create Suppression List** and add a name.<br><br>![A window called "Create a Suppression List" with a field to enter a name.]({% image_buster /assets/img/create_suppression_list.png %}){: style="max-width:80%;"}<br><br>
