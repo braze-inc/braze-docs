@@ -20,9 +20,9 @@ As a best practice, Braze recommends keeping each line of text for both the opti
 
 ## Reduce push notification payload size
 
-The maximum payload size depend on the channel.
+The maximum payload size depend on the platform.
 
-| Channel | Maximum payload size |
+| Platform | Maximum payload size |
 | --- | --- |
 | Web | 3,807 bytes |
 | Android | 3,930 bytes |
