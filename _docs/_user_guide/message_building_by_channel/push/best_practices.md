@@ -20,7 +20,17 @@ As a best practice, Braze recommends keeping each line of text for both the opti
 
 ## Reduce push notification payload size
 
-Our maximum payload size is **3,807 bytes**. If your push exceeds this size, the message may not be sent. As a best practice, keep your payload to a few hundred bytes.
+The maximum payload size depend on the channel.
+
+| Channel | Maximum payload size |
+| --- | --- |
+| Web | 3,807 bytes |
+| Android | 3,930 bytes |
+| iOS | 3,960 bytes |
+| Kindle | 5,985 bytes |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+
+If your push exceeds the maximum payload size, the message may not be sent. As a best practice, keep your payload to a few hundred bytes.
 
 ### What is a push payload?
 
