@@ -41,6 +41,10 @@ For additional initialization settings, select **Braze Initialization Options** 
 
 ![The list of Braze Initialization Options in under 'Tag Configuration'.]({% image_buster /assets/img/web-gtm/braze_initialization_options.png %}){: style="max-width:65%;"}
 
+### Step 4: Set to Trigger on *all pages*
+
+The initialization tag should be run on all pages of your site. This allows you to use Braze SDK methods and record web push analytics.
+
 ### Step 5: Verify your integration
 
 You can verify your integration using either of the following options:
