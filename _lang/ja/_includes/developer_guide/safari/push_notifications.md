@@ -1,4 +1,4 @@
-{% multi_lang_include developer_guide/prerequisites/swift.md %} Swift SDK用に[プッシュ通知]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift)を設定する必要もあります。プッシュ通知は、[Safari v16.4](https://developer.apple.com/documentation/safari-release-notes/safari-16_4-release-notes) 以降を使用しているiOS およびiPadOS ユーザーにのみ送信できます。
+{% multi_lang_include developer_guide/prerequisites/web.md %} Web SDK用に[プッシュ通知]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=web)を設定する必要もあります。プッシュ通知は、[Safari v16.4](https://developer.apple.com/documentation/safari-release-notes/safari-16_4-release-notes) 以降を使用しているiOS およびiPadOS ユーザーにのみ送信できます。
 
 ## モバイル用のSafari プッシュの設定
 

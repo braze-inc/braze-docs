@@ -1,4 +1,4 @@
-{% multi_lang_include developer_guide/prerequisites/swift.md %} Vous devrez également [configurer les notifications push]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift) pour le SDK Swift. Notez que vous ne pouvez envoyer des notifications push qu'aux utilisateurs d'iOS et d'iPadOS qui utilisent [Safari v16.4](https://developer.apple.com/documentation/safari-release-notes/safari-16_4-release-notes) ou une version ultérieure.
+{% multi_lang_include developer_guide/prerequisites/web.md %} Vous devrez également [configurer les notifications push]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=web) pour le SDK Web. Notez que vous ne pouvez envoyer des notifications push qu'aux utilisateurs d'iOS et d'iPadOS qui utilisent [Safari v16.4](https://developer.apple.com/documentation/safari-release-notes/safari-16_4-release-notes) ou une version ultérieure.
 
 ## Configurer Safari push pour les mobiles
 
