@@ -37,6 +37,8 @@ If you want to perform long-term testing on the effectiveness of multiple campai
 
 If you want to segment users for testing within a single campaign or single Canvas, use [A/B testing]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/) for campaigns. For Canvases, you can create different [variants]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#adding-a-variant) for journey-level testing, or use [Experiment Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/) for step-level testing.
 
+For [feature flag experiments]({{site.baseurl}}/developer_guide/feature_flags/experiments/), we recommend **not** using the **Random Bucket #** filter for targeting. This is because random bucket numbers decide which users get which variant in a feature flag experiment, so if you're targeting a feature flag audience based on random bucket numbers, the control variants will be skewed. 
+
 ## Create segments using random bucket numbers
 
 When [creating a segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/), add the "Random Bucket #" filter. Then, specify a number or range of numbers to include in your segment.

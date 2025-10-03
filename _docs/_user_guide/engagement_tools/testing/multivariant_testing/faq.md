@@ -65,7 +65,7 @@ Confidence is a measurement of how confident Braze is that the variant is differ
 
 There is no practical way that a user’s attributes or behaviors before the creation of a particular campaign or Canvas could vary systematically between variants and control. 
 
-To assign users to message variants, Canvas variants, or their respective control groups, we start by linking their randomly generated user ID with the randomly generated campaign or Canvas ID. Next, we apply a sha256 hashing algorithm and divide that result by 100, and keep the remainder (also known as a modulus with 100). Finally, we order users into slices that correspond to the percentage assignments for variants (and optional control) chosen in the dashboard.
+To assign users to message variants, Canvas variants, or their respective control groups, we start by linking their randomly generated user ID with the randomly generated campaign or Canvas ID. Next, we apply a sha256 hashing algorithm and divide that result by 100, and keep the remainder (also known as a modulus with 100). Finally, we order users into slices that correspond to the percentage assignments for variants (and optional control) chosen in the dashboard. Note that this process doesn't apply to feature flag experiements, which require you to [distribute variants]({{site.baseurl}}/developer_guide/feature_flags/experiments/#step-5-distribute-variants).
 
 ### Why can't I use rate limiting with a control group?
 
