@@ -20,7 +20,7 @@ The following table describes how you can use each editor block type.
 | Email Capture | Inserts a form field for email addresses. When submitted, the email address is added to that user's profile in Braze. |
 | Dropdown      | Inserts a dropdown with a pre-defined list of items from which users can select one. You can add any custom attribute strings to the list. |
 | Checkbox      | Inserts a checkbox. If the user checks the box, the block's attribute is set to `true`. If left unchecked, its attribute is set to `false`. |
-| Checkbox Group| Users can optionally select from multiple choices presented. Values are either set or added to a defined array custom attribute. |
+| Checkbox Group| Users can select from multiple choices presented. Values are either set or added to a defined array custom attribute. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Properties
