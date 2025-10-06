@@ -1,5 +1,5 @@
 ---
-nav_title: Message Engagement Events
+nav_title: Message engagement events
 layout: message_engagement_events_glossary
 alias: /message_events_glossary/
 page_order: 5
