@@ -31,7 +31,7 @@ jobs:
             // Rule 1: If Copilot is assigned, add docs-team
             if (assignees.includes('copilot')) {
               console.log('Copilot is assigned - adding docs-team');
-              teamsToAdd.push('braze-inc/docs-team');
+              teamsToAdd.push('docs-team');
             }
             
             // Rule 2: If PR body contains privacy/legal/GDPR keywords, add legal team
@@ -80,7 +80,7 @@ jobs:
                 let commentBody = '🤖 **Auto-reviewer bot**: I\'ve automatically added reviewers based on the following:\n\n';
                 
                 if (teamsToAdd.includes('docs-team')) {
-                  commentBody += '- 📝 **@braze-inc/docs-team** - Copilot is assigned to this PR\n';
+                  commentBody += '- 📝 **@docs-team** - Copilot is assigned to this PR\n';
                 }
                 
                 if (reviewersToAdd.includes('ttsaiveerappan')) {
