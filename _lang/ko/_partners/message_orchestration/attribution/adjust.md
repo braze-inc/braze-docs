@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Adjust는](https://www.adjust.com/) 광고 소스에 대한 어트리뷰션과 고급 분석을 결합하여 비즈니스 인텔리전스를 종합적으로 파악할 수 있는 모바일 어트리뷰션 및 분석 회사입니다.
 
+_이 통합은 Adjust에서 유지 관리합니다._
+
+## 통합 정보
+
 Braze와 Adjust의 통합을 통해 비오가닉 설치 어트리뷰션 데이터를 가져와서 라이프사이클 캠페인 내에서 더욱 지능적으로 세분화할 수 있습니다.
 
 ## 전제 조건
@@ -29,10 +33,10 @@ Braze와 Adjust의 통합을 통해 비오가닉 설치 어트리뷰션 데이�
 
 #### Android
 
-Android 앱이 있는 경우, 조정에 고유한 Braze 디바이스 ID를 전달해야 합니다. 이 ID는 Adjust SDK의 `addSessionPartnerParameter()` 메서드에서 설정할 수 있습니다. `Adjust.onCreate.`에서 SDK를 초기화하기 전에 다음 코드 스니펫을 포함해야 합니다.
+Android 앱이 있는 경우, 조정에 고유한 Braze 디바이스 ID를 전달해야 합니다. 이 ID는 Adjust SDK의 `addGlobalPartnerParameter()` 메서드에서 설정할 수 있습니다. `Adjust.initSdk.`에서 SDK를 초기화하기 전에 다음 코드 스니펫을 포함해야 합니다.
 
 ```
-Adjust.addSessionPartnerParameter("braze_device_id", Braze.getInstance(getApplicationContext()).getDeviceId()););
+Adjust.addGlobalPartnerParameter("braze_device_id", Braze.getInstance(getApplicationContext()).getDeviceId()););
 ```
 
 #### iOS
@@ -52,12 +56,12 @@ If set to `true`, you must implement the iOS device ID mapping for Swift to pass
 
 iOS 앱이 있는 경우, Adjust에서 IDFV를 수집하여 Braze로 전송합니다. 이 ID는 Braze의 고유 기기 ID에 매핑됩니다.
 
-[iOS 14 업그레이드 가이드]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/archived_updates/ios_14/)에 설명된 대로 Braze로 IDFA를 수집하는 경우, Braze는 옵트인한 사용자에 대한 IDFA 값을 계속 저장합니다. 그렇지 않으면 IDFV가 사용자를 매핑하기 위한 대체 식별자로 사용됩니다.
+Braze는 [iOS 업그레이드 가이드에]({{site.baseurl}}/developer_guide/platforms/swift/ios_18/) 설명된 대로 Braze로 IDFA를 수집하는 경우 동의한 사용자에 대한 IDFA 값을 계속 저장합니다. 그렇지 않으면 IDFV가 사용자를 매핑하기 위한 대체 식별자로 사용됩니다.
 
 {% endtab %}
 {% tab Swift %}
 
-iOS 앱이 있는 경우 `useUUIDAsDeviceId` 필드를 `false`로 설정하여 IDFV를 수집하도록 선택할 수 있습니다. 설정하지 않으면 iOS 기여도가 Adjust에서 Braze로 정확하게 매핑되지 않습니다. 자세한 내용은 [IDFV 수집]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/)을 참조하세요.
+iOS 앱이 있는 경우 `useUUIDAsDeviceId` 필드를 `false`로 설정하여 IDFV를 수집하도록 선택할 수 있습니다. 설정하지 않으면 iOS 기여도가 Adjust에서 Braze로 정확하게 매핑되지 않습니다. 자세한 내용은 [IDFV 수집]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift)을 참조하세요.
 
 {% endtab %}
 {% endtabs %}
@@ -70,11 +74,7 @@ Adjust에서 Braze로 설치 후 이벤트를 보내려면 다음을 수행해�
 
 Braze에서 **통합** > **기술 파트너**로 이동하고 **Adjust**를 선택합니다. 
 
-{% alert note %}
-[이전 탐색]({{site.baseurl}}/navigation)을 사용하는 경우 **통합**에서 **기술 파트너**를 찾을 수 있습니다.
-{% endalert %}
-
-여기에서 REST 엔드포인트를 찾아 Braze 데이터 가져오기 키를 생성합니다. 키가 생성된 후에는 새 키를 생성하거나 기존 키를 무효화할 수 있습니다. 데이터 가져오기 키와 REST 엔드포인트는 Adjust의 대시보드에서 포스트백을 설정할 때 다음 단계에서 사용됩니다.<br><br>![이 이미지는 Adjust 기술 페이지에 있는 '설치 경로에 대한 데이터 가져오기' 상자를 보여줍니다. 이 상자에 데이터 가져오기 키와 REST 엔드포인트가 표시됩니다.][1]{: style="max-width:90%;"}
+여기에서 REST 엔드포인트를 찾아 Braze 데이터 가져오기 키를 생성합니다. 키가 생성된 후에는 새 키를 생성하거나 기존 키를 무효화할 수 있습니다. 데이터 가져오기 키와 REST 엔드포인트는 Adjust의 대시보드에서 포스트백을 설정할 때 다음 단계에서 사용됩니다.<br><br>![이 이미지는 Adjust 기술 페이지에 있는 '설치 경로에 대한 데이터 가져오기' 상자를 보여줍니다. 이 상자에는 데이터 가져오기 키와 REST 엔드포인트가 표시됩니다.]({% image_buster /assets/img/attribution/adjust.png %}){: style="max-width:90%;"}
 
 ### 3단계: Adjust에서 Braze 구성
 
@@ -112,7 +112,7 @@ Braze 캠페인에서 클릭 추적 링크를 사용하면 어떤 캠페인이 �
 
 {% tabs local %}
 {% tab Android %}
-Android의 경우 Braze를 사용하면 고객이 [Google 광고 ID 수집(GAID)]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection)에 옵트인할 수 있습니다. GAID도 Adjust SDK 통합을 통해 기본적으로 수집됩니다. 다음과 같은 리퀴드 로직을 활용하여 GAID를 클릭 추적 링크 조정에 포함할 수 있습니다:
+Android의 경우 Braze를 사용하면 고객이 [Google 광고 ID 수집(GAID)]({{site.baseurl}}/developer_guide/platform_integration_guides/android/sdk_integration#google-advertising-id)에 옵트인할 수 있습니다. GAID도 Adjust SDK 통합을 통해 기본적으로 수집됩니다. 다음과 같은 리퀴드 로직을 활용하여 GAID를 클릭 추적 링크 조정에 포함할 수 있습니다:
 {% raw %}
 ```
 {% if most_recently_used_device.${platform} == 'android' %}
@@ -140,5 +140,4 @@ idfv={{most_recently_used_device.${id}}}
 현재 클릭 추적 링크에 IDFV 또는 GAID와 같은 기기 식별자를 사용하지 않거나 향후에도 사용할 계획이 없는 경우에도 Adjust는 확률적 모델링을 통해 이러한 클릭을 어트리뷰션할 수 있습니다.
 {% endalert %}
 
-[1]: {% image_buster /assets/img/attribution/adjust.png %}
-[2]: {% image_buster /assets/img/attribution/adjust2.png %}
+

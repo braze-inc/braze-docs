@@ -24,6 +24,7 @@ The drag-and-drop product block feature is in early access and is currently only
 | eCommerce recommended events | [eCommerce recommended events]({{site.baseurl}}/ecommerce_events/) provide standardized data schemas for key behavioral events that occur before and after an order is placed. These events will eventually replace the legacy Braze purchase event and will become the standard for tracking commerce-related behavior. <br><br> eCommerce recommended events are required for dynamic product blocks.<br><br> eCommerce recommended events are currently in early access. Contact your Braze customer success manager if you’re interested in participating in this early access. |
 | eCommerce Canvas templates | The eCommerce recommended events support pre-built templates, including eCommerce Canvas templates designed for essential use cases such as abandoned browsing, abandoned carts, and order confirmations. <br><br>If you plan to implement any of these essential eCommerce use cases using the [eCommerce Canvas templates]({{site.baseurl}}/ecommerce_use_cases/), you must use or follow the provided Canvas template. |
 | Braze catalog | You need to create a Braze catalog that includes the following fields, which will be used in your product block configuration:{::nomarkdown}<code><ul><li>product_title</li><li>product_url</li><li>variant_image_url</li></ul></code>{:/} |
+| Catalog selection | For static product blocks, you must create a [catalog selection]({{site.baseurl}}/user_guide/data/activation/catalogs/selections/) to specify which products to include in your product block. |
 {: .reset-td-br-1 .reset-td-br-2 role=“presentation” }
 
 ## Types of drag-and-drop product blocks
@@ -31,7 +32,7 @@ The drag-and-drop product block feature is in early access and is currently only
 | Product block | Purpose | Use cases | Availability |
 | --- | --- | --- | --- |
 | Dynamic | Personalize your messaging with a showcase of products based on customer interactions by using [eCommerce recommended events]({{site.baseurl}}/ecommerce_events/) and catalogs within our [eCommerce Canvas templates]({{site.baseurl}}/ecommerce_use_cases/). | {::nomarkdown}<ul><li>Abandoned browse</li><li>Abandoned cart</li><li>Abandoned checkout</li><li>Order confirmations</li></ul>{:/} | Available in Canvas only. |
-| Static | Personalize products using only the data stored in a Braze catalog or [catalog selection]({{site.baseurl}}/user_guide/data/activation/catalogs/selections/). | Perfect for showcasing new product launches or category-specific offerings.| |
+| Static | Personalize products using data stored in a Braze catalog. You must use a [catalog selection]({{site.baseurl}}/user_guide/data/activation/catalogs/selections/) to specify which products to include. | Perfect for showcasing new product launches or category-specific offerings.| |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role=”presentation” }
 
 ## Product block content configuration
@@ -147,7 +148,7 @@ Select the product catalog you want to use for personalization. Make sure it ali
 {% tab Static product block %}
 
 Drag a product block into your email message and select the static block type. 
-Select the catalog you want to use for your product block. If your catalog has a selection, you must select it to further narrow the products that display in your product block.
+Select the catalog you want to use for your product block. You must select a catalog selection to specify which products display in your product block.
 
 {% endtab %}
 {% endtabs %}
