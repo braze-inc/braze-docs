@@ -56,6 +56,23 @@ event_documentation:
     api_tags:
       - Push
       - Token State Change
+    property_details:
+      -
+        - "The `push_token_foreground_push_disabled` field indicates whether the push token can receive foreground or background push."
+        - "If the user explicitly allowed push notification permission on their device, this will be `false`, and the token is able to receive foreground push notifications."
+        - "If the user explicitly denied push notification permission on their device, this will be `true`, and the token is only allowed with background push notifications."
+        - "If the push permission is unknown, this will be empty. By default, Braze will attempt to send foreground push notifications to the token."
+      -  
+        - "The `push_token_provisionally_opted_in` field only applies to iOS push tokens."
+        - "If you have [Provisional Authorization]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#provisional-push) set up, provisional tokens will have this field set to `true`. All other push tokens will be `false`."
+      - 
+        - "Whenever a push token enters Braze, its lifecycle events are recorded. There are three types of token change events (\"add\", \"update\", and \"remove\") recorded in the `push_token_state_change_type` field. Note the following details:"
+        - "For a new token that hasn't existed before, this ingests one \"add\" event."
+        - "For updating the token with the same token string on the same user (gateway or `foreground_push_disabled` or other \"secondary\" fields changed), this will ingest one \"update\" event on the same token."
+        - "If a token moved from one user to another user, this will ingest one \"remove\" event for the old user and one \"add\" event for the new user."
+        - "If the same user or device generates a new token, this will ingest one \"remove\" event for the old token and one \"add\" event for the new token."
+        - "If Braze is removing a token (for reasons like an uninstall or invalid token), this will ingest one \"remove\" event for the token."
+    
   users.RandomBucketNumberUpdate:
     description: This user event occurs every time a new user is created within their workspace. During this event, each new user gets assigned a random bucket number that you can then use to create uniformly-distributed segments of random users. Use this to group together a range of random bucket number values and compare performance across your campaigns and campaign variants.
     api_tags:
@@ -151,7 +168,6 @@ event_documentation:
   users.canvas.experimentstep.SplitEntry:
     description: This event occurs when a user enters a Canvas experiment step path.
     api_tags:
-      - Experiment Step
       - Canvas
   users.canvas.experimentstep.Conversion:
     description: This event occurs when a user convert for a Canvas experiment step.
@@ -395,7 +411,7 @@ event_documentation:
   users.canvasstep.Progression:
     description: This event occurs when a user progresses through a step in a Canvas with some outcome. Note that this event doesn't occur when steps are entered or exited. Currently, only split steps (Audience Paths, Decision Split, Action Paths, Experiment) and advance outcomes generate step progression events.
     api_tags:
-      - CanvasStep
+      - Canvas
       - Progression
   users.campaigns.EnrollInControl:
     description: This event occurs when a user is enrolled in a control variant set on a multi-variant campaign. This event is generated as there will be no channel send event for this user.
@@ -468,4 +484,4 @@ event_documentation:
     description: This event occurs when a user clicks a banner.
     api_tags:
       - Banner
-      - Click
+      - Clicks
