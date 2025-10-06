@@ -53,14 +53,6 @@ jobs:
 
             const fixesRef = `Fixes #${matchedIssue.number}`;
 
-            await github.rest.issues.createComment({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: pr.number,
-              body: `${fixesRef}`
-            });
-            core.info("Comment posted? yes");
-
             let newBody = pr.body || "";
             if (!newBody.includes(fixesRef)) {
               // Append the fixes reference to the PR body
