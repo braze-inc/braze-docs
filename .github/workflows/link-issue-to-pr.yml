@@ -51,11 +51,13 @@ jobs:
             core.info(`Matching issue found? ${issueFound ? "yes" : "no"}`);
             if (!issueFound) return;
 
+            const fixesRef = `Fixes #${matchedIssue.number}`;
+
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: pr.number,
-              body: `Fixes #${matchedIssue.number}`
+              body: `${fixesRef}`
             });
             core.info("Comment posted? yes");
 
