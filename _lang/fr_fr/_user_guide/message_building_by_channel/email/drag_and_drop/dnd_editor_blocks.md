@@ -162,8 +162,8 @@ Reportez-vous au tableau suivant pour plus de détails sur le bloc éditeur de `
 
 | propriétés | Description |
 |---|---|
-|`URL`| L’URL de la vidéo. |
-|`Title`| Généré automatiquement à partir des métadonnées de la vidéo ou peut être personnalisé.  Notez que seuls YouTube et Vimeo sont pris en charge. |
+|`URL`| L'URL de la vidéo. Notez que seuls YouTube et Vimeo sont pris en charge. |
+|`Title`| Généré automatiquement à partir des métadonnées de la vidéo ou peut être personnalisé. |
 |`Play Icon Style`| Inclut différentes options pour le bouton de lecture situé en haut d’une image vidéo. |
 |`Play Icon Color`| Option permettant de sélectionner **Clair** ou **Foncé** pour le bouton de lecture. |
 |`Play Icon Size`| Choisissez la taille du pixel pour le bouton de lecture. Les valeurs préfixées vont de 50 px à 80 px (incrémentées de 5 px). |

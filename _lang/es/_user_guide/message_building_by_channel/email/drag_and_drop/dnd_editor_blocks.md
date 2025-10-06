@@ -162,8 +162,8 @@ Consulte la tabla siguiente para obtener información detallada sobre el bloque 
 
 | Propiedades | descripción |
 |---|---|
-|`URL`| La URL del vídeo. |
-|`Title`| Se genera automáticamente a partir de los metadatos del vídeo o puede personalizarse.  Ten en cuenta que solo son compatibles YouTube y Vimeo. |
+|`URL`| La URL del vídeo. Ten en cuenta que solo son compatibles YouTube y Vimeo. |
+|`Title`| Se genera automáticamente a partir de los metadatos del vídeo o puede personalizarse. |
 |`Play Icon Style`| Incluye distintas opciones para el botón de reproducción situado en la parte superior de una imagen de vídeo. |
 |`Play Icon Color`| Opción de seleccionar **claro** u **oscuro** para el botón de reproducción. |
 |`Play Icon Size`| Elija el tamaño en píxeles del botón de reproducción. Rango prefijado de 50 px a 80 px (incrementado en 5 px). |
