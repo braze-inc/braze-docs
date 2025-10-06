@@ -156,8 +156,8 @@ In der folgenden Tabelle finden Sie Einzelheiten zum Editor-Block `Video`.
 
 | Eigenschaften | Beschreibung |
 |---|---|
-|`URL`| Die URL für das Video. Beachten Sie, dass nur YouTube und Vimeo unterstützt werden. |
-|`Title`| Wird automatisch aus den Metadaten des Videos generiert oder kann angepasst werden. |
+|`URL`| Die URL für das Video. |
+|`Title`| Wird automatisch aus den Metadaten des Videos generiert oder kann angepasst werden.  Beachten Sie, dass nur YouTube und Vimeo unterstützt werden. |
 |`Play Icon Style`| Enthält verschiedene Optionen für die Schaltfläche "Abspielen", die sich oben in einem Videobild befindet. |
 |`Play Icon Color`| Option zum Auswählen von **Hell** oder **Dunkel** für den Wiedergabe-Button. |
 |`Play Icon Size`| Wählen Sie die Pixelgröße für den Wiedergabe-Button. Vordefinierter Bereich von 50 px bis 80 px (erhöht um 5 px). |

@@ -162,8 +162,8 @@ Consulte a tabela a seguir para obter detalhes sobre o bloco do editor `Video`.
 
 | propriedades | descrição |
 |---|---|
-|`URL`| O URL do vídeo. Note que apenas o YouTube e o Vimeo são compatíveis com o recurso. |
-|`Title`| Gerado automaticamente a partir dos metadados do vídeo ou pode ser personalizado. |
+|`URL`| O URL do vídeo. |
+|`Title`| Gerado automaticamente a partir dos metadados do vídeo ou pode ser personalizado.  Note que apenas o YouTube e o Vimeo são compatíveis com o recurso. |
 |`Play Icon Style`| Inclui diferentes opções para o botão de reprodução localizado na parte superior de uma imagem de vídeo. |
 |`Play Icon Color`| Opção para selecionar **Claro** ou **Escuro** para o botão de reprodução. |
 |`Play Icon Size`| Escolha o tamanho do pixel para o botão de reprodução. Intervalo pré-fixado de 50 px a 80 px (incrementado em 5 px). |
