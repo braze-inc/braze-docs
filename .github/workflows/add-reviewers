@@ -34,13 +34,13 @@ jobs:
               teamsToAdd.push('braze-inc/docs-team');
             }
             
-            // Rule 2: If PR body contains privacy/legal/GDPR keywords, add aserafino
+            // Rule 2: If PR body contains privacy/legal/GDPR keywords, add legal team
             const keywords = ['privacy', 'legal', 'gdpr'];
             const containsKeyword = keywords.some(keyword => prBody.includes(keyword));
             
             if (containsKeyword) {
-              console.log('Found privacy/legal/GDPR keyword - adding aserafino');
-              reviewersToAdd.push('aserafino');
+              console.log('Found privacy/legal/GDPR keyword - adding legal team');
+              reviewersToAdd.push('ttsaiveerappan');
             }
             
             // Get current reviewers to avoid duplicates
@@ -83,7 +83,7 @@ jobs:
                   commentBody += '- 📝 **@braze-inc/docs-team** - Copilot is assigned to this PR\n';
                 }
                 
-                if (reviewersToAdd.includes('aserafino')) {
+                if (reviewersToAdd.includes('ttsaiveerappan')) {
                   commentBody += '- ⚖️ **@ttsaiveerappan** - PR contains privacy/legal/GDPR-related content\n';
                 }
                 
