@@ -59,6 +59,21 @@ jobs:
             });
             core.info("Comment posted? yes");
 
+            let newBody = pr.body || "";
+            if (!newBody.includes(fixesRef)) {
+              // Append the fixes reference to the PR body
+              newBody = `${newBody}\n\n${fixesRef}`.trim();
+              await github.rest.pulls.update({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: pr.number,
+                body: newBody
+              });
+              core.info("PR body updated with fixes reference");
+            } else {
+              core.info("PR body already contains fixes reference");
+            }
+
             await github.rest.issues.addLabels({
               owner: context.repo.owner,
               repo: context.repo.repo,
