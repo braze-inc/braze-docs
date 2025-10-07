@@ -27,6 +27,9 @@ guide_featured_list:
 - name: User Management
   link: /docs/line/user_management/
   image: /assets/img/braze_icons/users-01.svg
+- name: LINE Click Tracking
+  link: /docs/line/click_tracking/
+  image: /assets/img/braze_icons/bar-chart-01.svg
 - name: LINE Reporting
   link: /docs/line/reporting/
   image: /assets/img/braze_icons/bar-chart-01.svg
