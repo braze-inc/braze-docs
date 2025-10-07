@@ -8,7 +8,7 @@
 
 Antes de poder realizar la integración, necesitarás una licencia activa de BrazeAI Decisioning Studio™. ¿Quieres saber más? [Reserva una llamada](https://www.braze.com/get-started/).
 
-## Integración del estudio de decisiones
+## Integración de Decisioning Studio
 
 ### Paso 1: Obtén la URL de tu punto final
 
@@ -24,4 +24,4 @@ En Braze, ve a **Configuración** > **Claves de API** y, a continuación, crea u
 
 Ponte en contacto con tu administrador del éxito del cliente de BrazeAI Decisioning Studio™ y pídele que habilite BrazeAI Decisioning Studio™. Utilizarán tu clave de API de Braze y la URL del punto final para terminar de configurar tu integración.
 
-Cuando esté completo, trabajarás junto al equipo de Servicios Expertos en IA para [empezar a crear agentes para tu producto]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/building_agents). Cada agente está hecho a la medida de un objetivo de negocio concreto, por lo que trabajaréis juntos para diseñar una implementación adecuada para ti.
+Cuando esté completo, trabajarás junto al equipo de Servicios Expertos en IA para [empezar a crear agentes para tu producto]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/building_agents). Cada agente está hecho a la medida de un objetivo de negocio concreto, por lo que trabajarán juntos para diseñar una implementación adecuada para ti.
