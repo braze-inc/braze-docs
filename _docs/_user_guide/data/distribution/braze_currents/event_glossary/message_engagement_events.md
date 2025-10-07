@@ -1629,7 +1629,7 @@ This event occurs when a user has exited a Canvas by performing an event.
 ## Experiment Step Conversion events {#experiment-step-conversion-events}
 
 {% apitags %}
-Experiment Step, Canvas
+Canvas
 {% endapitags %}
 
 This event occurs when a user convert for a Canvas experiment step.
@@ -5411,7 +5411,7 @@ It's known behavior that the email open event fields `device_model` and `mailbox
 Email, Sends
 {% endapitags %}
 
-This event occurs when an email send request was successfully communicated between Braze and SendGrid. Though, this does not mean the email was received in the end user's inbox.
+This event occurs when an email send request was successfully communicated between Braze and SendGrid. Though, this does not mean the email was received in the user's inbox.
 
 {% tabs %}
 {% tab Amplitude %}
@@ -6026,7 +6026,7 @@ The `Unsubscribe` event is actually a specialized click event that is fired when
 ## Feature Flag Experiment Impression events {#feature-flag-experiment-impression-events}
 
 {% apitags %}
-FeatureFlags, Impression
+Feature Flags, Impression
 {% endapitags %}
 
 This event occures whenever a user has had an opportunity to interact with your feature, or when they could have interacted if the feature is disabled (in the case of a control group in an A/B test).
@@ -6958,7 +6958,11 @@ This event occurs when a user views an in-app message.
 {% api %}
 ## Abort events {#abort-events}
 
-when a scheduled LINE message cannot be delivered, before sending to LINE
+{% apitags %}
+LINE, Abort
+{% endapitags %}
+
+This event occurs when a scheduled LINE message cannot be delivered, before sending to LINE.
 
 {% tabs %}
 {% tab Amplitude %}
@@ -7154,7 +7158,11 @@ when a scheduled LINE message cannot be delivered, before sending to LINE
 {% api %}
 ## Click events {#click-events}
 
-when a user clicks a link in a LINE message where the link's domain matches the click tracking domain
+{% apitags %}
+LINE, Clicks
+{% endapitags %}
+
+This event occurs when a user clicks a link in a LINE message where the link's domain matches the click tracking domain.
 
 {% tabs %}
 {% tab Amplitude %}
@@ -7359,7 +7367,11 @@ when a user clicks a link in a LINE message where the link's domain matches the 
 {% api %}
 ## LINE Inbound Receive events {#line-inbound-receive-events}
 
-when a LINE message is received from a user
+{% apitags %}
+LINE, Inbound Received
+{% endapitags %}
+
+This event occurs when a LINE message is received from a user.
 
 {% tabs %}
 {% tab Amplitude %}
@@ -7555,7 +7567,11 @@ when a LINE message is received from a user
 {% api %}
 ## Send events {#send-events}
 
-when a LINE message is sent to LINE
+{% apitags %}
+LINE, Sends
+{% endapitags %}
+
+This event occurs when a LINE message is sent to LINE.
 
 {% tabs %}
 {% tab Amplitude %}
@@ -9084,7 +9100,11 @@ This event occurs when Braze processes a push message for a user, communicating 
 {% api %}
 ## Abort  events {#abort--events}
 
-An event that is created when an RCS send is interrupted due to an error detected within Braze and the message is dropped
+{% apitags %}
+RCS, Abort
+{% endapitags %}
+
+This event is created when an RCS send is interrupted due to an error detected within Braze, and the message is dropped.
 
 {% tabs %}
 {% tab Amplitude %}
@@ -9256,7 +9276,11 @@ An event that is created when an RCS send is interrupted due to an error detecte
 {% api %}
 ## Click events {#click-events}
 
-An event that is created when the end user interacts with an RCS message in a way that involves tapping or clicking on a UI element
+{% apitags %}
+RCS, Clicks
+{% endapitags %}
+
+An event that is created when the user interacts with an RCS message in a way that involves tapping or clicking on a UI element.
 
 {% tabs %}
 {% tab Amplitude %}
@@ -9470,7 +9494,11 @@ An event that is created when the end user interacts with an RCS message in a wa
 {% api %}
 ## Delivery events {#delivery-events}
 
-An event that is created when an RCS message is successfully delivered to an end user's mobile device
+{% apitags %}
+RCS, Delivery
+{% endapitags %}
+
+This event is created when an RCS message is successfully delivered to a user's mobile device.
 
 {% tabs %}
 {% tab Amplitude %}
@@ -9661,7 +9689,11 @@ An event that is created when an RCS message is successfully delivered to an end
 {% api %}
 ## Inbound Receive events {#inbound-receive-events}
 
-An event that is created when Braze receives an RCS message that originates from the end user.
+{% apitags %}
+RCS, Inbound Received
+{% endapitags %}
+
+This event is created when Braze receives an RCS message that originates from the user.
 
 {% tabs %}
 {% tab Amplitude %}
@@ -9849,7 +9881,11 @@ An event that is created when Braze receives an RCS message that originates from
 {% api %}
 ## Read events {#read-events}
 
-An event that is created when the end user opens an RCS message on their device, indicating that they have seen/read the message content
+{% apitags %}
+RCS, Read
+{% endapitags %}
+
+This event is created when a user opens an RCS message on their device, indicating that they have seen or read the message content.
 
 {% tabs %}
 {% tab Amplitude %}
@@ -10013,7 +10049,11 @@ An event that is created when the end user opens an RCS message on their device,
 {% api %}
 ## Rejection events {#rejection-events}
 
-An event that is created when an RCS message fails to be delivered to an end user's mobile device due to intervention by the carrier
+{% apitags %}
+RCS, Rejection
+{% endapitags %}
+
+An event that is created when an RCS message fails to be delivered to a user's mobile device due to intervention by the carrier.
 
 {% tabs %}
 {% tab Amplitude %}
@@ -10218,7 +10258,11 @@ An event that is created when an RCS message fails to be delivered to an end use
 {% api %}
 ## Send events {#send-events}
 
-An event that is created when an RCS messages is sent out of Braze's systems to our last-mile delivery partners
+{% apitags %}
+RCS, Sends
+{% endapitags %}
+
+This event is created when an RCS messages is sent out of Braze to our last-mile delivery partners.
 
 {% tabs %}
 {% tab Amplitude %}
@@ -11217,7 +11261,7 @@ This event occurs when an SMS experiences delivery failure. Use this event and t
 ## SMS Inbound Received events {#sms-inbound-received-events}
 
 {% apitags %}
-SMS, InboundReceived
+SMS, Inbound Received
 {% endapitags %}
 
 This event occurs when one of your users sends an SMS to a phone number in one of your Braze SMS subscription groups.
@@ -12853,7 +12897,7 @@ This event occurs if a WhatsApp message was aborted based on Liquid aborts, etc.
 ## WhatsApp Tracked Link Click events {#whatsapp-tracked-link-click-events}
 
 {% apitags %}
-WhatsApp, Click
+WhatsApp, Clicks
 {% endapitags %}
 
 This event occurs when a user clicks a link or button in a WhatsApp message where the link's domain matches the click tracking domain.
@@ -13052,7 +13096,7 @@ This event occurs when a user clicks a link or button in a WhatsApp message wher
 WhatsApp, Delivery
 {% endapitags %}
 
-This event occurs when an WhatsApp message sent made it successfully to the end-users device.
+This event occurs when an WhatsApp message sent made it successfully to the user's device.
 
 {% tabs %}
 {% tab Amplitude %}
@@ -13491,7 +13535,7 @@ This event occurs when WhatsApp cannot deliver the message to the user. A hard b
 ## WhatsApp Inbound Received events {#whatsapp-inbound-received-events}
 
 {% apitags %}
-WhatsApp, InboundReceived
+WhatsApp, Inbound Received
 {% endapitags %}
 
 This event occurs when one of your users sends a WhatsApp message to a phone number in one of your Braze WhatsApp subscription groups.
@@ -13734,7 +13778,7 @@ This event occurs when one of your users sends a WhatsApp message to a phone num
 WhatsApp, Read
 {% endapitags %}
 
-This event occurs when an WhatsApp message is read by the end user.
+This event occurs when an WhatsApp message is read by the user.
 
 {% tabs %}
 {% tab Amplitude %}
@@ -13950,7 +13994,7 @@ This event occurs when an WhatsApp message is read by the end user.
 WhatsApp, Sends
 {% endapitags %}
 
-This event occurs when a send request was successfully communicated between Braze and WhatsApp. Though, this does not mean the message was received by the end user.
+This event occurs when a send request was successfully communicated between Braze and WhatsApp. Though, this does not mean the message was received by the user.
 
 {% tabs %}
 {% tab Amplitude %}
