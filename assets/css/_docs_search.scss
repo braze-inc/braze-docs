@@ -272,6 +272,7 @@ section.su__w-100.su__py-4.su__search_section.su__bg-blue-grd {
 	background: white;
 	color: black;
 	outline: none;
+	outline: none;
 }
 #su_main_search button.su__btn.su__search_btn.su__animate-zoom.su__flex-vcenter.su__position-absolute.su__zindex.su__bg-transparent.su__rtlleft svg path {
     fill: #3e34d3;
@@ -301,13 +302,16 @@ input#search-box-autocomplete:focus-visible {
     font-weight: 400;
     display: -webkit-box;
     -webkit-line-clamp: 2;
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
     line-height: 19px;
+    line-height: 19px;
     margin-bottom: 8px;
     margin-top: 0px;
     white-space: normal;
+    margin-right: 215px;
     margin-right: 215px;
 }
 #su_main_search .su__suggestions-list.su__bg-gray-hover.su__flex-vcenter.su__text-black.su__fontsize-14.su__mb-1.null {

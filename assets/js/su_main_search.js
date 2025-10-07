@@ -1,10 +1,11 @@
-// su_main_search.js
 document.addEventListener("DOMContentLoaded", function () {
+
   function bindSearchForm(container) {
     const form = container.querySelector("form");
     const queryInput = container.querySelector("#search-box-autocomplete");
     const searchButton = container.querySelector(".su__search_btn");
     const clearButton = container.querySelector(".su__input-close");
+    const langSelect = document.querySelector("#lang_select");
 
     if (!form || form.dataset.listenerAdded) return;
 
@@ -12,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       e.stopImmediatePropagation();
-      handleSearch(queryInput);
+      handleSearch(queryInput, langSelect);
     });
 
     // Search button click
@@ -21,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
       searchButton.addEventListener("click", function (e) {
         e.preventDefault();
         e.stopImmediatePropagation();
-        handleSearch(queryInput);
+        handleSearch(queryInput, langSelect);
       });
     }
 
@@ -31,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (e.key === "Enter") {
           e.preventDefault();
           e.stopImmediatePropagation();
-          handleSearch(queryInput);
+          handleSearch(queryInput, langSelect);
         }
       });
       queryInput.setAttribute("placeholder", "Search Everything...");
@@ -39,7 +40,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Clear icon click
     if (queryInput) {
-      // Use event delegation in case the icon is added later
       container.addEventListener("click", function (e) {
         if (e.target.closest(".su__input-close")) {
           queryInput.value = "";
@@ -49,19 +49,15 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     form.dataset.listenerAdded = "true";
-    
   }
 
-  function handleSearch(queryInput) {
-    if (queryInput && queryInput.value.trim() !== "") {
-      const query = queryInput.value.trim();
-      const targetUrl = "/docs/search/?searchString=" + encodeURIComponent(query);
-      console.log("Redirecting to:", targetUrl);
-      window.location.href = targetUrl;
-    } else {
-      console.warn("Search input empty → no redirect");
-      if (queryInput) queryInput.focus();
-    }
+  function handleSearch(queryInput, langSelect) {
+    const query = queryInput ? queryInput.value.trim() : "";
+    const lang = langSelect ? langSelect.value : "en"; 
+
+    const targetUrl = `/docs/${lang}/search?searchString=${encodeURIComponent(query)}`;
+    console.log("Redirecting to:", targetUrl);
+    window.location.href = targetUrl;
   }
 
   // Watch for dynamic content

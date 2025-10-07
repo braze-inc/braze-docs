@@ -9,6 +9,7 @@ hide_toc: true
 
 
 <style type="text/css">
+
 .su-tooltip {
   background: #fff;
   border: 1px solid #ccc;
@@ -19,12 +20,12 @@ hide_toc: true
   line-height: 1.4;
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
+
 .su-tooltip strong {
   font-size: 14px;
   display: block;
   margin-bottom: 4px;
 }
-
 
 lable.lable-gpt {
     font-weight: 700;
@@ -60,7 +61,7 @@ lable.lable-gpt {
 
 #basic_page {
     min-height: calc(68vh - 186px) !important;
-}
+  }
 }
 
   @media (max-width: 600px) {
@@ -242,28 +243,30 @@ button.submit-btn {
    
   }
   div#suggestionsBox p {
-      font-size: 14px;
+      font-size: 16px;
   }
 
   div#suggestionsBox h2 {
-      font-size: 16px;
+      font-size: 18px;
       font-weight: bold;
   }
 
   div#suggestionsBox li {
-      font-size: 14px;
+      font-size: 16px;
   }
   
    .gpt-text {
     margin-top: 2px;
    }
+
    .gpt-heading{
-    color: #5711E5;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 20.8px; /* 115.556% */
+      color: #5711E5;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 20.8px; /* 115.556% */
    }
+
   .gpt-responce {
     display: inline-flex;
     gap:9px;
@@ -277,7 +280,7 @@ button.submit-btn {
     padding: 9px;
     border-radius: 8px;
     background: linear-gradient(342deg, rgba(212, 239, 243, 0.20) 17.09%, rgba(253, 163, 161, 0.30) 113.99%, #FBA9F8 280.75%);
-}
+  }
 
   textarea#description {
     border-radius: var(--inner, 8px);
@@ -296,26 +299,25 @@ button.submit-btn {
     border: 1px solid #7D7D83;
     background: var(--neutral-background-default, #FFF);
     display: flex;
-width: 1250px;
-height: var(--Field-height-Regular, 40px);
-padding-left: var(--md, 12px);
-justify-content: space-between;
-align-items: center;
-
+    width: 1250px;
+    height: var(--Field-height-Regular, 40px);
+    padding-left: var(--md, 12px);
+    justify-content: space-between;
+    align-items: center;
 }
+
   button#toStep2 {
     border-radius: var(--inner, 8px);
     border: 1px solid #0103C5;
     background: var(--neutral-background-default, #FFF);
-   color: #4411D6;
-text-align: center;
-leading-trim: both;
-text-edge: cap;
-
-font-size: 14px;
-font-style: normal;
-font-weight: 700;
-line-height: 20px; /* 142.857% */
+    color: #4411D6;
+    text-align: center;
+    leading-trim: both;
+    text-edge: cap;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px; /* 142.857% */
 }
 
   .main-form{
@@ -930,8 +932,6 @@ a:hover {
             transition: background-color 0.3s;
         }
 
-       
-
         /* Support Link */
         .support-link {
             color: #3498db;
@@ -957,7 +957,6 @@ a:hover {
             padding: 15px;
             border-radius: 4px;
             margin-top: 20px;
-            white-space: pre-wrap;
         }
 
         #articles {
@@ -1022,20 +1021,19 @@ a:hover {
           border: none;
           color: #081A59;
           font-family: "Aribau Grotesk TRIAL";
-          font-size: 14px;
-          font-style: normal;
+          font-size: 13px;
           font-weight: 400;
           line-height: 160%;
           border-radius: 2px;
-         background: rgba(87, 17, 229, 0.12);
-        margin-right: 11px;
-            cursor: pointer;
-        margin-left: 6px;
-        
+          background: rgba(87, 17, 229, 0.12);
+          margin-right: 11px;
+          cursor: pointer;
+          margin-left: 6px;
       }
+
       span.highlight {
-    color: black !important;
-}
+        color: black !important;
+      }
 </style>
 
 <div>
