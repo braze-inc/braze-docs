@@ -9,19 +9,19 @@ Tool:
   - Dashboard
 
 guide_top_header: "BrazeAI<sup>TM</sup>"
-guide_top_text: "BrazeAI<sup>TM</sup> alimente une collection d'outils accessibles et faciles à utiliser qui favorisent et simplifient la créativité, la personnalisation et l'optimisation de votre stratégie d'engagement. Grâce aux fonctionnalités de BrazeAI<sup>TM</sup>, vous pouvez disposer d'un conseiller de confiance pour guider votre créativité, prendre de meilleures décisions et optimiser l'expérience utilisateur pour vos clients."
+guide_top_text: "BrazeAI<sup>TM</sup> offre une collection d'outils accessibles et faciles à utiliser qui favorisent et simplifient la créativité, la personnalisation et l'optimisation de votre stratégie d'engagement. Grâce aux fonctionnalités de BrazeAI<sup>TM</sup>, vous disposez d'un conseiller de confiance pour guider votre créativité, prendre de meilleures décisions et optimiser l'expérience utilisateur pour vos clients."
 
 guide_featured_title: "Fonctionnalités"
 guide_featured_list:
-- name: <sup>Studio</sup> de prise de décision BrazeAITM
+- name: BrazeAI Decisioning Studio<sup>TM</sup>
   link: /docs/user_guide/brazeai/decisioning_studio/
-- name: Agents de Braze
+- name: Agents Braze
   link: /docs/user_guide/brazeai/agents/
   image: /assets/img/braze_icons/star-06.svg
 - name: Intelligence Suite
   link: /docs/user_guide/brazeai/intelligence/
   image: /assets/img/braze_icons/clock.svg
-- name: Prédiction de l’attrition
+- name: Prédiction du taux d’attrition
   link: /docs/user_guide/brazeai/predictive_churn/
   image: /assets/img/braze_icons/stars-01.svg
 - name: Événements prévisionnels
@@ -30,7 +30,7 @@ guide_featured_list:
 - name: Recommandations
   link: /docs/user_guide/brazeai/recommendations/
   image: /assets/img/braze_icons/hearts.svg
-- name: Première introduction
+- name: IA générative
   link: /docs/user_guide/brazeai/generative_ai/
   image: /assets/img/braze_icons/lightbulb-02.svg
 - name: Serveur MCP de Braze
