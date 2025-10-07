@@ -8,7 +8,12 @@ These instructions are for contributors using GitHub Copilot to draft or edit do
 
 ## Pull request titles
 
-The title of the pull request should always match the corresponding issue title, which includes the pre-pended ticket number in the title as `[BD-NUMBER]` where `NUMBER` is the Jira ticket number listed in the corresponding issue. An example PR request title is: `[BD-5016]: Update behaviour on link shortening when used with universal link`.
+The title of the pull request should always match the corresponding issue title.
+
+1. Retrieve the corresponding issue’s title from the GitHub context (issue.title).
+2. Set the pull request title to exactly match issue.title (PR title := issue.title)
+3. Do not hardcode, paraphrase, or insert example text. Preserve the title exactly as written, including the pre-pended Jira ticket number in the format [BD-NUMBER] if present.
+4. If no linked issue is found or issue.title is empty, stop and prompt for a valid issue with a properly formatted title.
 
 ## Pull request body
 
