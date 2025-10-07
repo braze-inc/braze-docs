@@ -114,9 +114,9 @@ Select the **Personalize delay** toggle to set up a personalized delay for your 
 
 When configuring personalized delays with the **at specific time** option, time zone behavior depends on the data type of your attribute or context variable:
 
-- **String data type with time zone:** If the attribute or context property is a string data type that includes time zone information, it conforms to the time zone specified in the string. For example, `"2025-06-10T10:00:00-08:00"` uses UTC-8.
-- **String data type without time zone:** If the attribute or context property is a string data type without time zone information, it conforms to the fallback time zone. For example, `"2025-06-10"` uses the fallback time zone.
-- **Time data type:** If the attribute or context property is a time data type, it conforms to UTC. This is because the time data type is always converted to UTC when saved in the database, so "at specific time" will always reference UTC when the variable is set to time data type. For example, `"2025-06-10T10:00:00-08:00"` uses UTC+0.
+- **String data type with time zone:** If the attribute or context variable is a string data type that includes time zone information, it conforms to the time zone specified in the string. For example, `2025-06-10T10:00:00-08:00` uses UTC-8.
+- **String data type without time zone:** If the attribute or context variable is a string data type without time zone information, it conforms to the fallback time zone. For example, `2025-06-10` uses the fallback time zone.
+- **Time data type:** If the attribute or context variable is a time data type, it conforms to UTC. This is because the time data type is always converted to UTC when saved in the database, so "at specific time" will always reference UTC when the variable is set to time data type. For example, `2025-06-10T10:00:00-08:00` uses UTC+0.
 
 {% alert note %}
 It's possible for a custom attribute or context variable to have neither a specific time nor a time zone if it's a string data type. If it's a time data type, you'll need to specify the time and time zone. However, if the custom attribute or context variable is an "irrelevant" string (such as "product_name"), the user will exit the Canvas.
