@@ -138,8 +138,8 @@ Refer to the following table for details on the `Video` editor block.
 
 | Properties | Description |
 |---|---|
-|URL| The URL for the video. |
-|Title| Auto-generated from the video meta data or can be customized. Note that only YouTube and Vimeo are supported. |
+|URL| The URL for the video. Note that only YouTube and Vimeo are supported. |
+|Title| Auto-generated from the video meta data or can be customized. |
 |Play Icon Style| Includes different options for the play button located at the top of a video image. |
 |Play Icon Color| Option to select either **Light** or **Dark** for the play button. |
 |Play Icon Size| Choose the pixel size for the play button. Pre-fixed range from 50&nbsp;px to 80&nbsp;px (incremented by 5&nbsp;px). |
