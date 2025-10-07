@@ -6026,7 +6026,7 @@ The `Unsubscribe` event is actually a specialized click event that is fired when
 ## Feature Flag Experiment Impression events {#feature-flag-experiment-impression-events}
 
 {% apitags %}
-Feature Flags, Impression
+Feature Flags, Impressions
 {% endapitags %}
 
 This event occures whenever a user has had an opportunity to interact with your feature, or when they could have interacted if the feature is disabled (in the case of a control group in an A/B test).
