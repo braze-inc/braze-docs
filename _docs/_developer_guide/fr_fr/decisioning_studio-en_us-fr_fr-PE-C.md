@@ -2,7 +2,7 @@
 page_order: 2.9
 nav_title: BrazeAI Decisioning Studio™
 article_title: Démarrer avec BrazeAI Decisioning Studio™
-description: "Démarrez avec BrazeAI Decisioning Studio™ pour prendre des décisions d'intelligence artificielle à l'échelle 1:1 qui maximisent tous les indicateurs de l'entreprise !"
+description: "Faites vos premiers pas avec BrazeAI Decisioning Studio™ pour prendre des décisions individualisées, basées sur l’IA, qui maximisent tous vos indicateurs d'entreprise !"
 
 noindex: true
 ---
