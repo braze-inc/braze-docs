@@ -173,7 +173,7 @@ event_documentation:
     description: This event occurs when a user convert for a Canvas experiment step.
     api_tags:
       - Canvas
-  users.messages.pushnotification.Send:1
+  users.messages.pushnotification.Send:
     description: This event occurs when Braze processes a push message for a user, communicating this to Apple Push Notification Service or Fire Cloud Messaging. This does not mean the push was delivered to the device, just that a message was sent.
     api_tags:
       - Push
