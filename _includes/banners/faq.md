@@ -4,11 +4,11 @@
 
 ## When do Banner updates appear for users?
 
-Banners are automatically refreshed at the start of each new user session with their latest data&#8212;there's no need to resend or update your Banner campaign.
+Banners are refreshed with their latest data whenever you call the refresh method&#8212;there's no need to resend or update your Banner campaign.
 
 ## How many placements can I request in a session?
 
-In a single user session, you can request a maximum of 10 placements. For each one you request, Braze will return the highest-priority Banner a user is eligible for. Additional requests will return an error.
+In a single refresh request, you can request a maximum of 10 placements. For each one you request, Braze will return the highest-priority Banner a user is eligible for. Additional requests will return an error.
 
 For more information, see [Placement requests]({% if include.section == "user" %}{{site.baseurl}}/user_guide/message_building_by_channel/banners#requests{% elsif include.section == "developer" %}{{site.baseurl}}/developer_guide/banners#requests{% endif %}).
 

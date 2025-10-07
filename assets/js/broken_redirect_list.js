@@ -1524,6 +1524,7 @@ validurls['/docs/developer_guide/platform_integration_guides/android/content_car
 validurls['/docs/developer_guide/platforms/android/content_cards/example'] = '/docs/developer_guide/content_cards?sdktab=android';
 validurls['/docs/developer_guide/platform_integration_guides/android/content_cards/gif'] = '/docs/developer_guide/platforms/android/content_cards/gif';
 validurls['/docs/developer_guide/platform_integration_guides/android/content_cards/jetpack_compose'] = '/docs/developer_guide/platforms/android/content_cards/jetpack_compose';
+validurls['/docs/developer_guide/platforms/android/content_cards/jetpack_compose'] = '/docs/developer_guide/content_cards/customizing_cards/feed/';
 validurls['/docs/developer_guide/platform_integration_guides/android/geofences'] = '/docs/developer_guide/platforms/android/geofences';
 validurls['/docs/developer_guide/platform_integration_guides/android/google_play_privacy'] = '/docs/developer_guide/platforms/android/google_play_privacy';
 validurls['/docs/developer_guide/platform_integration_guides/android/in_app_messages'] = '/docs/developer_guide/platforms/android/in_app_messages';
@@ -2973,12 +2974,22 @@ validurls['/docs/help/help_articles/segments/search_exact_text/'] = '/docs/user_
 validurls['/docs/help/help_articles/docs/'] = '/docs/user_guide/';
 validurls['/docs/help/help_articles/docs/scroll_bar_overlap/'] = '/docs/user_guide/';
 validurls['/docs/help/faqs/'] = '/docs/';
-
 validurls['/docs/help/help_articles/campaigns_and_canvas/'] = '/docs/user_guide/engagement_tools/';
 validurls['/docs/help/help_articles/campaigns_and_canvas/canvas_not_sending/'] = '/docs/user_guide/engagement_tools/canvas/troubleshooting/';
 validurls['/docs/help/help_articles/campaigns_and_canvas/locations_data_in_campaigns/'] = '/docs/user_guide/engagement_tools/locations_and_geofences/location_tracking/';
 validurls['/docs/help/help_articles/campaigns_and_canvas/more_people_in_control_group/'] = '/docs/user_guide/engagement_tools/canvas/troubleshooting/';
 validurls['/docs/help/help_articles/campaigns_and_canvas/using_custom_event_properties/'] = '/docs/developer_guide/analytics/logging_events/';
 validurls['/docs/help/help_articles/campaigns_and_canvas/conversions_low/'] = '/docs/user_guide/analytics/dashboard/conversions_dashboard/#troubleshooting';
+validurls['/docs/help/help_articles/push/'] = '/docs/user_guide/message_building_by_channel/push/';
+validurls['/docs/api/objects_filters/user_attributes_object/'] = '/docs/help/help_articles/push/push_token_migration/';
+validurls['/docs/help/help_articles/push/push_enablement/'] = '/docs/user_guide/message_building_by_channel/push/users_and_subscriptions/';
+validurls['/docs/help/help_articles/push/push_clicks_unexpectedly_open_in_app/'] = '/docs/user_guide/message_building_by_channel/push/troubleshooting/';
+validurls['/docs/help/help_articles/push/push_unsubscribes/'] = '/docs/user_guide/message_building_by_channel/push/push_reporting#push-performance';
+validurls['/docs/help/help_articles/push/reducing_payload_size/'] = '/docs/user_guide/message_building_by_channel/push/best_practices/';
+validurls['/docs/help/help_articles/push/resetting_push_permissions/'] = '/docs/user_guide/message_building_by_channel/push/troubleshooting/';
+validurls['/docs/user_guide/offerfit/integration'] = '/docs/user_guide/brazeai/decisioning_studio/integration';
+validurls['/docs/user_guide/offerfit/building_use_cases'] = '/docs/user_guide/brazeai/decisioning_studio/building_use_cases';
+validurls['/docs/partners/ecommerce/shopify_legacy/getting_started_shopify/'] = '/docs/shopify_overview/';
+validurls['/docs/editor_blocks_dnd_iam/'] = '/docs/user_guide/engagement_tools/messaging_fundamentals/drag_and_drop_editor_blocks/?sdktab=in-app%20messages';
 
 // validurls['OLD'] = 'NEW';

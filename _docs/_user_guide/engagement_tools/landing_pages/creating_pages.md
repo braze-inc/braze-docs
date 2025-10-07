@@ -49,11 +49,12 @@ If you haven't already, select **Save as draft**. To start customizing your page
 
 ![An example landing page being created in the drag-and-drop editor.]({% image_buster /assets/img/landing_pages/template.png %})
 
-The editor uses two types of components for landing page composition: [basic blocks](#basic-blocks) and [form blocks](#form-blocks). All blocks must be placed in a row.
+The editor uses two types of components for landing page composition: basic blocks and form blocks. All blocks must be placed in a row.
 
 ![The 'Build' section containing 'Rows' and 'Form Blocks'.]({% image_buster /assets/img/landing_pages/dnd.png %}){: style="max-width:35%;"}
 
-#### Basic blocks
+{% tabs %}
+{% tab Basic blocks %}
 
 You can use these blocks to add content and customize the layout of your landing page.
 
@@ -73,7 +74,8 @@ You can use these blocks to add content and customize the layout of your landing
 
 {% multi_lang_include span_text.md %}
 
-#### Form blocks
+{% endtab %}
+{% tab Form blocks %}
 
 You can use these blocks to create a form that links user-submitted data to their profile in Braze. Keep in mind, if you use form blocks, you'll also need to create an additional landing page for the confirmation state.
 
@@ -86,11 +88,15 @@ You can use these blocks to create a form that links user-submitted data to thei
 | Input Field   | A form field that supports standard attributes (such as first and last name) or a custom attribute string of your choice. |
 | Dropdown      | Users can select an item from a pre-defined list. You can add any custom attribute strings to the list. |
 | Checkbox      | If a user checks the box, the block's attribute is set to `true`. If left unchecked, it's attribute is set to `false`. |
+| Checkbox Group| Users can select from multiple choices presented. Values are either set or added to a defined array custom attribute. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert important %}
 After creating a landing page with a form, be sure to embed its [landing page Liquid tag]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/tracking_users) into your message. With this tag, Braze can automatically identify and update existing user profiles when they submit the form.
 {% endalert %}
+
+{% endtab %}
+{% endtabs %}
 
 #### Page container styles
 

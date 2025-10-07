@@ -75,7 +75,7 @@ Array filters are used to change the output of arrays.
 | [last](https://shopify.dev/docs/api/liquid/filters/last)          | Returns the last element of an array. In a custom attribute array, this is the most recently added value.          | ✅  Yes   |
 | [compact](https://shopify.dev/api/liquid/filters/compact)       | Removes any `nil` items from an array.                                                                             | ✅  Yes   |
 | [concat](https://shopify.dev/api/liquid/filters/concat)        | Combines an array with another array.                                                                              | ✅  Yes   |
-| [find_index](https://shopify.dev/docs/api/liquid/filters/find_index)         | Returns the item at the specified index location in an array. The first item in an array is referenced with `[0]`. | ✅  Yes   |
+| [find_index](https://shopify.dev/docs/api/liquid/filters/find_index)         | Returns the item at the specified index location in an array. The first item in an array is referenced with `[0]`. | ⛔  No   |
 | [map](https://shopify.dev/api/liquid/filters/map)           | Accepts an array element's attribute as a parameter and creates an array out of each array element's value.        | ✅  Yes   |
 | [reverse](https://shopify.dev/api/liquid/filters/reverse)       | Reverses the order of the items in an array.                                                                       | ✅  Yes   |
 | [size](https://shopify.dev/api/liquid/filters/size)          | Returns the size of a string (the number of characters) or an array (the number of elements).                      | ✅  Yes   |

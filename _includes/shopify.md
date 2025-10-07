@@ -15,3 +15,19 @@ To use the custom Shopify integration, refer to [Shopify custom integration setu
 {% endtabs %}
 
 {% endif %}
+
+{% if include.section == "Liquid promotion codes with Currents" %}
+
+You can combine [`message_extras`]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/message_extras/) with [promotion codes]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes/) to send promotion code information to Currents. Use the `capture` tag to store the promotion code in a variable, then reference that variable in `message_extras`:
+
+{% raw %}
+```liquid
+{% capture code %}
+{% promotion('puttshacktest2') %}
+{% endcapture %}
+Use {{code}} for an exclusive discount!
+{% message_extras :key cardscode :value {{code}} %}
+```
+{% endraw %}
+
+{% endif %}
