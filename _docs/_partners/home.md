@@ -358,4 +358,6 @@ valid_partner_list:
   url: /docs/partners/lemnisk/
 - name: Jasper
   url: /docs/partners/jasper/
+- name: Kameleoon
+  url: /docs/partners/kameleoon/
 ---
