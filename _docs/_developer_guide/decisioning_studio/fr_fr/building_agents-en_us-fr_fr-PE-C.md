@@ -1,8 +1,8 @@
 ---
-nav_title: Créer des agents de construction
+nav_title: Créer des agents
 article_title: Créer des agents pour BrazeAI Decisioning Studio™
 page_order: 2
-description: "Découvrez comment créer un agent pour BrazeAI Decisioning Studio™, afin d'automatiser les expérimentations personnalisées et d'optimiser les résultats tels que les conversions, la fidélisation ou les chiffres d'affaires, sans tests A/B manuels."
+description: "Découvrez comment créer un agent pour BrazeAI Decisioning Studio™, afin d'automatiser les expérimentations personnalisées et d'optimiser les résultats tels que les conversions, la fidélisation ou le chiffre d'affaires, sans tests A/B manuels."
 
 noindex: true
 ---
