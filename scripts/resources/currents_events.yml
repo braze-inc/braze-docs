@@ -94,14 +94,14 @@ event_documentation:
     description: This event occurs when a user clicks a link or button in a WhatsApp message where the link's domain matches the click tracking domain.
     api_tags:
       - WhatsApp
-      - Click
+      - Clicks
   users.messages.whatsapp.Read:
-    description: This event occurs when an WhatsApp message is read by the end user.
+    description: This event occurs when an WhatsApp message is read by the user.
     api_tags:
       - WhatsApp
       - Read
   users.messages.whatsapp.Delivery:
-    description: This event occurs when an WhatsApp message sent made it successfully to the end-users device.
+    description: This event occurs when an WhatsApp message sent made it successfully to the user's device.
     api_tags:
       - WhatsApp
       - Delivery
@@ -111,7 +111,7 @@ event_documentation:
       - WhatsApp
       - Failure
   users.messages.whatsapp.Send:
-    description: This event occurs when a send request was successfully communicated between Braze and WhatsApp. Though, this does not mean the message was received by the end user.
+    description: This event occurs when a send request was successfully communicated between Braze and WhatsApp. Though, this does not mean the message was received by the user.
     api_tags:
       - WhatsApp
       - Sends
@@ -124,7 +124,7 @@ event_documentation:
     description: This event occurs when one of your users sends a WhatsApp message to a phone number in one of your Braze WhatsApp subscription groups.
     api_tags:
       - WhatsApp
-      - InboundReceived
+      - Inbound Received
   users.messages.contentcard.Abort:
     description: This event occurs if a Content Card message was aborted based on Liquid aborts, etc.
     api_tags:
@@ -172,9 +172,8 @@ event_documentation:
   users.canvas.experimentstep.Conversion:
     description: This event occurs when a user convert for a Canvas experiment step.
     api_tags:
-      - Experiment Step
       - Canvas
-  users.messages.pushnotification.Send:
+  users.messages.pushnotification.Send:1
     description: This event occurs when Braze processes a push message for a user, communicating this to Apple Push Notification Service or Fire Cloud Messaging. This does not mean the push was delivered to the device, just that a message was sent.
     api_tags:
       - Push
@@ -209,7 +208,7 @@ event_documentation:
     property_details:
       - If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) data, reach out to your customer success manager or account manager to enable the feature flipper for sending `ad_id`.
   users.messages.email.Send:
-    description: This event occurs when an email send request was successfully communicated between Braze and SendGrid. Though, this does not mean the email was received in the end user's inbox.
+    description: This event occurs when an email send request was successfully communicated between Braze and SendGrid. Though, this does not mean the email was received in the user's inbox.
     api_tags:
       - Email
       - Sends
@@ -381,14 +380,14 @@ event_documentation:
       If we detect that this inbound message is a reply to an outbound campaign or Canvas component sent from Braze, we will also include the campaign or Canvas metadata with the event. Braze defines a reply as an inbound message coming within four hours of an outbound message. However, there is a one-minute cache for the attributed campaign information of the last outbound SMS received.
     api_tags:
       - SMS
-      - InboundReceived
+      - Inbound Received
   users.messages.featureflag.Impression:
     description: |
       This event occures whenever a user has had an opportunity to interact with your feature, or when they could have interacted if the feature is disabled (in the case of a control group in an A/B test).
 
       Feature flag impressions are only logged once per session.
     api_tags:
-      - FeatureFlags
+      - Feature Flags
       - Impression
   users.campaigns.Conversion:
     description: This event occurs when a user does an action that has been set as a conversion event in a campaign.
@@ -485,3 +484,59 @@ event_documentation:
     api_tags:
       - Banner
       - Clicks
+  users.messages.rcs.Click:
+    description: An event that is created when the user interacts with an RCS message in a way that involves tapping or clicking on a UI element.
+    api_tags:
+      - RCS
+      - Clicks
+  users.messages.rcs.Rejection:
+    description: An event that is created when an RCS message fails to be delivered to a user's mobile device due to intervention by the carrier.
+    api_tags:
+      - RCS
+      - Rejection
+  users.messages.line.Abort:
+    description: This event occurs when a scheduled LINE message cannot be delivered, before sending to LINE.
+    api_tags:
+      - LINE
+      - Abort
+  users.messages.line.Send:
+    description: This event occurs when a LINE message is sent to LINE.
+    api_tags:
+      - LINE
+      - Sends
+  users.messages.line.InboundReceive:
+    description: This event occurs when a LINE message is received from a user.
+    api_tags:
+      - LINE
+      - Inbound Received
+  users.messages.line.Click:
+    description: This event occurs when a user clicks a link in a LINE message where the link's domain matches the click tracking domain.
+    api_tags:
+      - LINE
+      - Clicks
+  users.messages.rcs.Delivery:
+    description: This event is created when an RCS message is successfully delivered to a user's mobile device.
+    api_tags:
+      - RCS
+      - Delivery
+  users.messages.rcs.InboundReceive:
+    description: This event is created when Braze receives an RCS message that originates from the user.
+    api_tags:
+      - RCS
+      - Inbound Received
+  users.messages.rcs.Read:
+    description: This event is created when a user opens an RCS message on their device, indicating that they have seen or read the message content.
+    api_tags:
+      - RCS
+      - Read
+  users.messages.rcs.Send:
+    description: This event is created when an RCS messages is sent out of Braze to our last-mile delivery partners.
+    api_tags:
+      - RCS
+      - Sends
+  users.messages.rcs.Abort:
+    description: This event is created when an RCS send is interrupted due to an error detected within Braze, and the message is dropped.
+    api_tags:
+      - RCS
+      - Abort
+
