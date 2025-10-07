@@ -14,7 +14,7 @@ jekyll-algolia-*
 .vscode
 .jekyll-metadata
 
-# Jetbrains IDEs
+# JetBrains IDEs
 .idea/
 braze-docs.iml
 
