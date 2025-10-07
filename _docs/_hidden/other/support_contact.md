@@ -205,8 +205,8 @@ button.submit-btn {
 }
 
 .for-line {
-    margin-top: -83px;
-    line-height: 4px;
+    margin-top: -29px;
+    line-height: 21px;
     margin-left: -11px;
     height: 300px;
 }
