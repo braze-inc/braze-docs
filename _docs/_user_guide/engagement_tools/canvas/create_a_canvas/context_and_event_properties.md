@@ -71,7 +71,7 @@ Given this behavior, Braze strongly recommends you use a Liquid timezone filter 
 
 To further understand the differences for `context` and `event_properties`, let's consider this scenario where users will enter an action-based Canvas if they perform the custom event "add item to wishlist". 
 
-The `context` are configured in the [Entry Schedule]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas#step-2b-set-your-canvas-entry-schedule) step of creating a Canvas and will correspond to when a user enters a Canvas. These `context` can also be referenced in any Message step.
+Context is configured in the [Entry Schedule]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas#step-2b-set-your-canvas-entry-schedule) step of creating a Canvas and will correspond to when a user enters a Canvas. Context can also be referenced in any Message step.
 
 In this Canvas, we have a user journey that begins with an Action Paths step to determine if a user has added an item to their wishlist. From here, if the user has added an item, they will experience a delay before receiving a message "New item in your wishlist!" from the Message step. 
 
