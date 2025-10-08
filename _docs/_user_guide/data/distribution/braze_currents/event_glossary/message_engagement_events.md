@@ -1629,7 +1629,7 @@ This event occurs when a user has exited a Canvas by performing an event.
 ## Experiment Step Conversion events {#experiment-step-conversion-events}
 
 {% apitags %}
-Experiment Step, Canvas
+Canvas
 {% endapitags %}
 
 This event occurs when a user convert for a Canvas experiment step.
@@ -5411,7 +5411,7 @@ It's known behavior that the email open event fields `device_model` and `mailbox
 Email, Sends
 {% endapitags %}
 
-This event occurs when an email send request was successfully communicated between Braze and SendGrid. Though, this does not mean the email was received in the end user's inbox.
+This event occurs when an email send request was successfully communicated between Braze and SendGrid. Though, this does not mean the email was received in the user's inbox.
 
 {% tabs %}
 {% tab Amplitude %}
@@ -6026,7 +6026,7 @@ The `Unsubscribe` event is actually a specialized click event that is fired when
 ## Feature Flag Experiment Impression events {#feature-flag-experiment-impression-events}
 
 {% apitags %}
-FeatureFlags, Impression
+Feature Flags, Impressions
 {% endapitags %}
 
 This event occures whenever a user has had an opportunity to interact with your feature, or when they could have interacted if the feature is disabled (in the case of a control group in an A/B test).
@@ -7847,6 +7847,12 @@ Push, Opens
 
 This event occurs when a user directly clicks on the Push notification to open the application. Currently, Push Open Events refer specifically to "Direct Opens" rather than "Total Opens". This does not include statistics shown at the campaign level of "influenced opens" as these are not attributed at the user level.
 
+{% alert note %}
+In rare cases, a push open may appear before the corresponding push send event in Currents data because of the following:
+- Your SDK has an incorrect clock.
+- High batch write latency. The recorded send time can lag behind early deliveries, so very quick opens may be logged before the batch's final send timestamp is written. Large sends are dispatched and recorded in batches.
+{% endalert %}
+
 {% tabs %}
 {% tab Amplitude %}
 ```json
@@ -9084,7 +9090,7 @@ This event occurs when an SMS experiences delivery failure. Use this event and t
 ## SMS Inbound Received events {#sms-inbound-received-events}
 
 {% apitags %}
-SMS, InboundReceived
+SMS, Inbound Received
 {% endapitags %}
 
 This event occurs when one of your users sends an SMS to a phone number in one of your Braze SMS subscription groups.
@@ -10715,7 +10721,7 @@ This event occurs if a WhatsApp message was aborted based on Liquid aborts, etc.
 ## WhatsApp Tracked Link Click events {#whatsapp-tracked-link-click-events}
 
 {% apitags %}
-WhatsApp, Click
+WhatsApp, Clicks
 {% endapitags %}
 
 This event occurs when a user clicks a link or button in a WhatsApp message where the link's domain matches the click tracking domain.
@@ -10914,7 +10920,7 @@ This event occurs when a user clicks a link or button in a WhatsApp message wher
 WhatsApp, Delivery
 {% endapitags %}
 
-This event occurs when an WhatsApp message sent made it successfully to the end-users device.
+This event occurs when an WhatsApp message sent made it successfully to the user's device.
 
 {% tabs %}
 {% tab Amplitude %}
@@ -11323,7 +11329,7 @@ This event occurs when WhatsApp cannot deliver the message to the user. A hard b
 ## WhatsApp Inbound Received events {#whatsapp-inbound-received-events}
 
 {% apitags %}
-WhatsApp, InboundReceived
+WhatsApp, Inbound Received
 {% endapitags %}
 
 This event occurs when one of your users sends a WhatsApp message to a phone number in one of your Braze WhatsApp subscription groups.
@@ -11536,7 +11542,7 @@ This event occurs when one of your users sends a WhatsApp message to a phone num
 WhatsApp, Read
 {% endapitags %}
 
-This event occurs when an WhatsApp message is read by the end user.
+This event occurs when an WhatsApp message is read by the user.
 
 {% tabs %}
 {% tab Amplitude %}
@@ -11737,7 +11743,7 @@ This event occurs when an WhatsApp message is read by the end user.
 WhatsApp, Sends
 {% endapitags %}
 
-This event occurs when a send request was successfully communicated between Braze and WhatsApp. Though, this does not mean the message was received by the end user.
+This event occurs when a send request was successfully communicated between Braze and WhatsApp. Though, this does not mean the message was received by the user.
 
 {% tabs %}
 {% tab Amplitude %}

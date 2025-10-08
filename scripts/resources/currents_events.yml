@@ -187,6 +187,10 @@ event_documentation:
     api_tags:
       - Push
       - Opens
+    alert_note: |
+      In rare cases, a push open may appear before the corresponding push send event in Currents data because of the following:
+      - Your SDK has an incorrect clock.
+      - High batch write latency. The recorded send time can lag behind early deliveries, so very quick opens may be logged before the batch's final send timestamp is written. Large sends are dispatched and recorded in batches.
     property_details:
       - For `ad_id`, `ad_id_type`, and `ad_tracking_enabled`, you need to explicitly collect the iOS IDFA and Android Google advertising ID through the native SDKs. Learn more about this setup for [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift) and [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
       - If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) data, contact your customer success manager to enable sending `ad_id`.
