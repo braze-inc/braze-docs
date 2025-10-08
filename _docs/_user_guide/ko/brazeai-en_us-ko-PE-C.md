@@ -1,7 +1,7 @@
 ---
 nav_title: BrazeAI
 article_title: BrazeAI
-description: "BrazeAI<sup>TM</sup>은 창의성, 개인화 및 인게이지먼트전략 최적화를 위한 진입 장벽을 낮춰주는 접근하기 쉽고 사용하기 쉬운 도구 모음을 제공합니다."
+description: "BrazeAI<sup>TM</sup>은 창의성, 개인화 및 인게이지먼트 전략 최적화를 위한 진입 장벽을 낮춰주는 접근하기 쉽고 사용하기 쉬운 도구 모음을 제공합니다."
 page_order: 6.5
 layout: dev_guide
 search_rank: 12
@@ -9,9 +9,9 @@ Tool:
   - Dashboard
 
 guide_top_header: "BrazeAI<sup>TM</sup>"
-guide_top_text: "BrazeAI<sup>TM</sup>은 창의성, 개인화 및 인게이지먼트전략 최적화를 위한 진입 장벽을 낮춰주는 접근하기 쉽고 사용하기 쉬운 도구 모음을 제공합니다. BrazeAI<sup>TM</sup> 기능을 사용하면 신뢰할 수 있는 조언자를 통해 창의력을 발휘하고, 더 나은 의사 결정을 내리고, 고객을 위한 사용자 경험을 최적화하는 데 도움을 받을 수 있습니다."
+guide_top_text: "BrazeAI<sup>TM</sup>은 창의성, 개인화 및 인게이지먼트 전략 최적화를 위한 진입 장벽을 낮춰주는 접근하기 쉽고 사용하기 쉬운 도구 모음을 제공합니다. BrazeAI<sup>TM</sup> 기능을 사용하면 신뢰할 수 있는 조언자를 통해 창의력을 발휘하고, 더 나은 의사 결정을 내리고, 고객을 위한 사용자 경험을 최적화하는 데 도움을 받을 수 있습니다."
 
-guide_featured_title: "기능"
+guide_featured_title: "피처"
 guide_featured_list:
 - name: BrazeAI Decisioning Studio<sup>TM</sup>
   link: /docs/user_guide/brazeai/decisioning_studio/
