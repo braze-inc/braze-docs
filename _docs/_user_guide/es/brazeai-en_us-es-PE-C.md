@@ -13,7 +13,7 @@ guide_top_text: "BrazeAI<sup>TM</sup> impulsa una colección de herramientas acc
 
 guide_featured_title: "Características"
 guide_featured_list:
-- name: Estudio de toma de decisiones <sup>BrazeAITM</sup>
+- name: BrazeAI Decisioning Studio<sup>TM</sup>
   link: /docs/user_guide/brazeai/decisioning_studio/
 - name: Agentes de Braze
   link: /docs/user_guide/brazeai/agents/
