@@ -73,6 +73,7 @@ Certain fields might take longer to display their most recent state after a camp
 </ul>
 If complete consistency is required, we recommend waiting an hour from the last update to these fields before sending out your messaging to your users.
 {% endalert %}
+
 {% api %}
 ## Uninstall events {#uninstall-events}
 
@@ -166,8 +167,8 @@ This event is not fired when the user actually uninstalls the app, as that's imp
 {
   "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
   "context" : {
-    "traits" : { },
-    "device" : { }
+    "device" : { },
+    "traits" : { }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
@@ -337,10 +338,10 @@ This event occurs when Braze receives a request to update the global subscriptio
 {
   "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
   "context" : {
+    "device" : { },
     "traits" : {
       "email" : "(optional, string) [PII] Email address of the user"
-    },
-    "device" : { }
+    }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
@@ -575,10 +576,10 @@ Subscription groups are only available for email, SMS, and WhatsApp channels at 
 {
   "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
   "context" : {
+    "device" : { },
     "traits" : {
       "email" : "(optional, string) [PII] Email address of the user"
-    },
-    "device" : { }
+    }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
@@ -789,8 +790,8 @@ Note that the conversion event is encoded in the `conversion_behavior` field, wh
 {
   "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
   "context" : {
-    "traits" : { },
-    "device" : { }
+    "device" : { },
+    "traits" : { }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
@@ -952,8 +953,8 @@ This event occurs when a user is enrolled in a control variant set on a multi-va
 {
   "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
   "context" : {
-    "traits" : { },
-    "device" : { }
+    "device" : { },
+    "traits" : { }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
@@ -1117,8 +1118,8 @@ Note that the conversion event is encoded in the `conversion_behavior` field, wh
 {
   "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
   "context" : {
-    "traits" : { },
-    "device" : { }
+    "device" : { },
+    "traits" : { }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
@@ -1278,8 +1279,8 @@ This event occurs when a user enters into the Canvas. This event tells you which
 {
   "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
   "context" : {
-    "traits" : { },
-    "device" : { }
+    "device" : { },
+    "traits" : { }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
@@ -1427,8 +1428,8 @@ This event occurs when a user has exited a Canvas by matching an audience.
 {
   "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
   "context" : {
-    "traits" : { },
-    "device" : { }
+    "device" : { },
+    "traits" : { }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
@@ -1576,8 +1577,8 @@ This event occurs when a user has exited a Canvas by performing an event.
 {
   "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
   "context" : {
-    "traits" : { },
-    "device" : { }
+    "device" : { },
+    "traits" : { }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
@@ -1739,8 +1740,8 @@ This event occurs when a user convert for a Canvas experiment step.
 {
   "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
   "context" : {
-    "traits" : { },
-    "device" : { }
+    "device" : { },
+    "traits" : { }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
@@ -1903,8 +1904,8 @@ This event occurs when a user enters a Canvas experiment step path.
 {
   "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
   "context" : {
-    "traits" : { },
-    "device" : { }
+    "device" : { },
+    "traits" : { }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
@@ -1961,10 +1962,6 @@ Canvas, Progression
 {% endapitags %}
 
 This event occurs when a user progresses through a step in a Canvas with some outcome. Note that this event doesn't occur when steps are entered or exited. Currently, only split steps (Audience Paths, Decision Split, Action Paths, Experiment) and advance outcomes generate step progression events.
-
-{% alert note %}
-Currently, `exit_reason` and `is_canvas_entry` will not populate with values, and `progression_type` will only populate with the value `Advanced to next step`.
-{% endalert %}
 
 {% tabs %}
 {% tab Amplitude %}
@@ -2078,8 +2075,8 @@ Currently, `exit_reason` and `is_canvas_entry` will not populate with values, an
 {
   "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
   "context" : {
-    "traits" : { },
-    "device" : { }
+    "device" : { },
+    "traits" : { }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
@@ -2271,10 +2268,10 @@ This event occurs when an originally scheduled banner message was aborted for so
 {
   "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
   "context" : {
-    "traits" : { },
     "device" : {
       "model" : "(optional, string) Model of the device"
-    }
+    },
+    "traits" : { }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
@@ -2475,10 +2472,10 @@ This event occurs when a user clicks a banner.
 {
   "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
   "context" : {
-    "traits" : { },
     "device" : {
       "model" : "(optional, string) Model of the device"
-    }
+    },
+    "traits" : { }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
@@ -2674,10 +2671,10 @@ This event occurs when a user views a banner.
 {
   "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
   "context" : {
-    "traits" : { },
     "device" : {
       "model" : "(optional, string) Model of the device"
-    }
+    },
+    "traits" : { }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
@@ -2870,8 +2867,8 @@ This event occurs if a Content Card message was aborted based on Liquid aborts, 
 {
   "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
   "context" : {
-    "traits" : { },
-    "device" : { }
+    "device" : { },
+    "traits" : { }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
@@ -3089,11 +3086,11 @@ This event occurs when a user clicks a Content Card.
 {
   "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
   "context" : {
-    "traits" : { },
     "device" : {
       "model" : "(optional, string) Model of the device",
       "type" : "(optional, string) Platform of the device"
-    }
+    },
+    "traits" : { }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
@@ -3322,11 +3319,11 @@ This event occurs when a user dismisses a Content Card.
 {
   "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
   "context" : {
-    "traits" : { },
     "device" : {
       "model" : "(optional, string) Model of the device",
       "type" : "(optional, string) Platform of the device"
-    }
+    },
+    "traits" : { }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
@@ -3555,11 +3552,11 @@ This event occurs when a user views a Content Card.
 {
   "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
   "context" : {
-    "traits" : { },
     "device" : {
       "model" : "(optional, string) Model of the device",
       "type" : "(optional, string) Platform of the device"
-    }
+    },
+    "traits" : { }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
@@ -3767,8 +3764,8 @@ This event occurs when a Content Card gets sent to a user.
 {
   "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
   "context" : {
-    "traits" : { },
-    "device" : { }
+    "device" : { },
+    "traits" : { }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
@@ -3968,10 +3965,10 @@ This event occurs if an email message was aborted based on Liquid aborts, etc.
 {
   "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
   "context" : {
+    "device" : { },
     "traits" : {
       "email" : "(required, string) [PII] Email address of the user"
-    },
-    "device" : { }
+    }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
@@ -4179,10 +4176,10 @@ This event occurs when an Internet Service Provider returns a hard bounce. A har
 {
   "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
   "context" : {
+    "device" : { },
     "traits" : {
       "email" : "(required, string) [PII] Email address of the user"
-    },
-    "device" : { }
+    }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
@@ -4425,11 +4422,11 @@ This event occurs when a user clicks an email. Multiple events may be generated 
 {
   "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
   "context" : {
-    "traits" : {
-      "email" : "(required, string) [PII] Email address of the user"
-    },
     "device" : {
       "model" : "(optional, string) Model of the device"
+    },
+    "traits" : {
+      "email" : "(required, string) [PII] Email address of the user"
     }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
@@ -4661,10 +4658,10 @@ This event occurs when an Internet Service Provider does not immediately deliver
 {
   "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
   "context" : {
+    "device" : { },
     "traits" : {
       "email" : "(required, string) [PII] Email address of the user"
-    },
-    "device" : { }
+    }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
@@ -4874,10 +4871,10 @@ This event occurs when an email sent made it successfully to the end-users inbox
 {
   "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
   "context" : {
+    "device" : { },
     "traits" : {
       "email" : "(required, string) [PII] Email address of the user"
-    },
-    "device" : { }
+    }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
@@ -5084,10 +5081,10 @@ This event occurs when the end-user hits the "spam" button on the email. Note th
 {
   "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
   "context" : {
+    "device" : { },
     "traits" : {
       "email" : "(required, string) [PII] Email address of the user"
-    },
-    "device" : { }
+    }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
@@ -5320,11 +5317,11 @@ It's known behavior that the email open event fields `device_model` and `mailbox
 {
   "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
   "context" : {
-    "traits" : {
-      "email" : "(required, string) [PII] Email address of the user"
-    },
     "device" : {
       "model" : "(optional, string) Model of the device"
+    },
+    "traits" : {
+      "email" : "(required, string) [PII] Email address of the user"
     }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
@@ -5414,7 +5411,7 @@ It's known behavior that the email open event fields `device_model` and `mailbox
 Email, Sends
 {% endapitags %}
 
-This event occurs when an email send request was successfully communicated between Braze and SendGrid. Though, this does not mean the email was received in the end user's inbox.
+This event occurs when an email send request was successfully communicated between Braze and SendGrid. Though, this does not mean the email was received in the user's inbox.
 
 {% tabs %}
 {% tab Amplitude %}
@@ -5542,10 +5539,10 @@ This event occurs when an email send request was successfully communicated betwe
 {
   "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
   "context" : {
+    "device" : { },
     "traits" : {
       "email" : "(required, string) [PII] Email address of the user"
-    },
-    "device" : { }
+    }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
@@ -5752,10 +5749,10 @@ This event occurs when an Internet Service Provider returns a soft bounce. A sof
 {
   "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
   "context" : {
+    "device" : { },
     "traits" : {
       "email" : "(required, string) [PII] Email address of the user"
-    },
-    "device" : { }
+    }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
@@ -5959,10 +5956,10 @@ The `Unsubscribe` event is actually a specialized click event that is fired when
 {
   "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
   "context" : {
+    "device" : { },
     "traits" : {
       "email" : "(required, string) [PII] Email address of the user"
-    },
-    "device" : { }
+    }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
@@ -6164,11 +6161,11 @@ Feature flag impressions are only logged once per session.
 {
   "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
   "context" : {
-    "traits" : { },
     "device" : {
       "model" : "(optional, string) Model of the device",
       "type" : "(optional, string) Platform of the device"
-    }
+    },
+    "traits" : { }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
@@ -6245,7 +6242,7 @@ Feature flag impressions are only logged once per session.
 In-App Messages, Abort
 {% endapitags %}
 
-This event occurs when an originally scheduled [templated in-app message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/faq/#what-are-templated-in-app-messages) was aborted.
+This event occurs when an originally scheduled in-app message was aborted.
 
 {% tabs %}
 {% tab Amplitude %}
@@ -6393,11 +6390,11 @@ This event occurs when an originally scheduled [templated in-app message]({{site
 {
   "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
   "context" : {
-    "traits" : { },
     "device" : {
       "model" : "(optional, string) Model of the device",
       "type" : "(optional, string) Platform of the device"
-    }
+    },
+    "traits" : { }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
@@ -6635,11 +6632,11 @@ This event occurs when a user clicks on an in-app message.
 {
   "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
   "context" : {
-    "traits" : { },
     "device" : {
       "model" : "(optional, string) Model of the device",
       "type" : "(optional, string) Platform of the device"
-    }
+    },
+    "traits" : { }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
@@ -6876,11 +6873,11 @@ This event occurs when a user views an in-app message.
 {
   "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
   "context" : {
-    "traits" : { },
     "device" : {
       "model" : "(optional, string) Model of the device",
       "type" : "(optional, string) Platform of the device"
-    }
+    },
+    "traits" : { }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
@@ -6962,7 +6959,7 @@ This event occurs when a user views an in-app message.
 ## Live Activity Outcome events {#live-activity-outcome-events}
 
 {% apitags %}
-Live Activity
+Live Activity, Outcome
 {% endapitags %}
 
 This event occurs when Braze receives a response from a third party provider (e.g. APNs) after the Live Activity send
@@ -7062,8 +7059,8 @@ This event occurs when Braze receives a response from a third party provider (e.
 {
   "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
   "context" : {
-    "traits" : { },
-    "device" : { }
+    "device" : { },
+    "traits" : { }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
@@ -7209,8 +7206,8 @@ This event occurs when Braze backend makes a request to its provider regarding L
 {
   "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
   "context" : {
-    "traits" : { },
-    "device" : { }
+    "device" : { },
+    "traits" : { }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
@@ -7389,8 +7386,8 @@ This event occurs if a push notification message was aborted based on Liquid abo
 {
   "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
   "context" : {
-    "traits" : { },
-    "device" : { }
+    "device" : { },
+    "traits" : { }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
@@ -7600,8 +7597,8 @@ This event occurs when an error is received from either Apple Push Notification 
 {
   "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
   "context" : {
-    "traits" : { },
-    "device" : { }
+    "device" : { },
+    "traits" : { }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
@@ -7766,11 +7763,11 @@ This event is not supported by our [Swift SDK](https://github.com/braze-inc/braz
 {
   "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
   "context" : {
-    "traits" : { },
     "device" : {
       "model" : "(optional, string) Model of the device",
       "type" : "(optional, string) Platform of the device"
-    }
+    },
+    "traits" : { }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
@@ -7849,6 +7846,12 @@ Push, Opens
 {% endapitags %}
 
 This event occurs when a user directly clicks on the Push notification to open the application. Currently, Push Open Events refer specifically to "Direct Opens" rather than "Total Opens". This does not include statistics shown at the campaign level of "influenced opens" as these are not attributed at the user level.
+
+{% alert note %}
+In rare cases, a push open may appear before the corresponding push send event in Currents data because of the following:
+- Your SDK has an incorrect clock.
+- High batch write latency. The recorded send time can lag behind early deliveries, so very quick opens may be logged before the batch's final send timestamp is written. Large sends are dispatched and recorded in batches.
+{% endalert %}
 
 {% tabs %}
 {% tab Amplitude %}
@@ -7989,11 +7992,11 @@ This event occurs when a user directly clicks on the Push notification to open t
 {
   "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
   "context" : {
-    "traits" : { },
     "device" : {
       "model" : "(optional, string) Model of the device",
       "type" : "(optional, string) Platform of the device"
-    }
+    },
+    "traits" : { }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
@@ -8218,8 +8221,8 @@ This event occurs when Braze processes a push message for a user, communicating 
 {
   "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
   "context" : {
-    "traits" : { },
-    "device" : { }
+    "device" : { },
+    "traits" : { }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
@@ -8418,8 +8421,8 @@ This event occurs if an SMS message was aborted based on Liquid aborts, etc.
 {
   "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
   "context" : {
-    "traits" : { },
-    "device" : { }
+    "device" : { },
+    "traits" : { }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
@@ -8615,10 +8618,10 @@ This event occurs when an SMS is sent to the carrier.
 {
   "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
   "context" : {
+    "device" : { },
     "traits" : {
       "phone" : "(optional, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)"
-    },
-    "device" : { }
+    }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
@@ -8814,10 +8817,10 @@ This event occurs when an SMS was successfully delivered to the user's mobile ph
 {
   "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
   "context" : {
+    "device" : { },
     "traits" : {
       "phone" : "(optional, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)"
-    },
-    "device" : { }
+    }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
@@ -9016,10 +9019,10 @@ This event occurs when an SMS experiences delivery failure. Use this event and t
 {
   "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
   "context" : {
+    "device" : { },
     "traits" : {
       "phone" : "(optional, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)"
-    },
-    "device" : { }
+    }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
@@ -9219,10 +9222,10 @@ If we detect that this inbound message is a reply to an outbound campaign or Can
 {
   "anonymousId" : "(optional, string) Braze user ID of the user who performed this event",
   "context" : {
+    "device" : { },
     "traits" : {
       "phone" : "(required, string) [PII] The user's phone number from which the message was received"
-    },
-    "device" : { }
+    }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
@@ -9424,10 +9427,10 @@ This event occurs when an SMS send gets rejected by the carrier, this can happen
 {
   "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
   "context" : {
+    "device" : { },
     "traits" : {
       "phone" : "(optional, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)"
-    },
-    "device" : { }
+    }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
@@ -9630,10 +9633,10 @@ This event occurs when a user sends an SMS.
 {
   "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
   "context" : {
+    "device" : { },
     "traits" : {
       "phone" : "(optional, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)"
-    },
-    "device" : { }
+    }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
@@ -9836,10 +9839,10 @@ This event occurs when a user clicks an SMS short link.
 {
   "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
   "context" : {
+    "device" : { },
     "traits" : {
       "phone" : "(optional, string) [PII] The user's phone number from which the message was received"
-    },
-    "device" : { }
+    }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
@@ -10033,8 +10036,8 @@ This event occurs if a webhook message was aborted based on Liquid aborts, etc.
 {
   "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
   "context" : {
-    "traits" : { },
-    "device" : { }
+    "device" : { },
+    "traits" : { }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
@@ -10246,8 +10249,8 @@ This event occurs if a webhook message was delivered but failed with an error re
 {
   "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
   "context" : {
-    "traits" : { },
-    "device" : { }
+    "device" : { },
+    "traits" : { }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
@@ -10450,8 +10453,8 @@ This event occurs when a webhook was processed and sent to the third party speci
 {
   "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
   "context" : {
-    "traits" : { },
-    "device" : { }
+    "device" : { },
+    "traits" : { }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
@@ -10647,10 +10650,10 @@ This event occurs if a WhatsApp message was aborted based on Liquid aborts, etc.
 {
   "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
   "context" : {
+    "device" : { },
     "traits" : {
       "phone" : "(optional, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)"
-    },
-    "device" : { }
+    }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
@@ -10846,10 +10849,10 @@ This event occurs when a user clicks a link or button in a WhatsApp message wher
 {
   "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
   "context" : {
+    "device" : { },
     "traits" : {
       "phone" : "(optional, string) [PII] The user's phone number from which the message was received"
-    },
-    "device" : { }
+    }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
@@ -10917,7 +10920,7 @@ This event occurs when a user clicks a link or button in a WhatsApp message wher
 WhatsApp, Delivery
 {% endapitags %}
 
-This event occurs when an WhatsApp message sent made it successfully to the end-users device.
+This event occurs when an WhatsApp message sent made it successfully to the user's device.
 
 {% tabs %}
 {% tab Amplitude %}
@@ -11044,10 +11047,10 @@ This event occurs when an WhatsApp message sent made it successfully to the end-
 {
   "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
   "context" : {
+    "device" : { },
     "traits" : {
       "phone" : "(optional, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)"
-    },
-    "device" : { }
+    }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
@@ -11251,10 +11254,10 @@ This event occurs when WhatsApp cannot deliver the message to the user. A hard b
 {
   "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
   "context" : {
+    "device" : { },
     "traits" : {
       "phone" : "(optional, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)"
-    },
-    "device" : { }
+    }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
@@ -11461,10 +11464,10 @@ This event occurs when one of your users sends a WhatsApp message to a phone num
 {
   "anonymousId" : "(optional, string) Braze user ID of the user who performed this event",
   "context" : {
+    "device" : { },
     "traits" : {
       "phone" : "(required, string) [PII] The user's phone number from which the message was received"
-    },
-    "device" : { }
+    }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
@@ -11539,7 +11542,7 @@ This event occurs when one of your users sends a WhatsApp message to a phone num
 WhatsApp, Read
 {% endapitags %}
 
-This event occurs when an WhatsApp message is read by the end user.
+This event occurs when an WhatsApp message is read by the user.
 
 {% tabs %}
 {% tab Amplitude %}
@@ -11666,10 +11669,10 @@ This event occurs when an WhatsApp message is read by the end user.
 {
   "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
   "context" : {
+    "device" : { },
     "traits" : {
       "phone" : "(optional, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)"
-    },
-    "device" : { }
+    }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
@@ -11740,7 +11743,7 @@ This event occurs when an WhatsApp message is read by the end user.
 WhatsApp, Sends
 {% endapitags %}
 
-This event occurs when a send request was successfully communicated between Braze and WhatsApp. Though, this does not mean the message was received by the end user.
+This event occurs when a send request was successfully communicated between Braze and WhatsApp. Though, this does not mean the message was received by the user.
 
 {% tabs %}
 {% tab Amplitude %}
@@ -11870,10 +11873,10 @@ This event occurs when a send request was successfully communicated between Braz
 {
   "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
   "context" : {
+    "device" : { },
     "traits" : {
       "phone" : "(optional, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)"
-    },
-    "device" : { }
+    }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
