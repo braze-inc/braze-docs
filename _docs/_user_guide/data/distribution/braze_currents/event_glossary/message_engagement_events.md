@@ -8651,6 +8651,12 @@ Push, Opens
 
 This event occurs when a user directly clicks on the Push notification to open the application. Currently, Push Open Events refer specifically to "Direct Opens" rather than "Total Opens". This does not include statistics shown at the campaign level of "influenced opens" as these are not attributed at the user level.
 
+{% alert note %}
+In rare cases, a push open may appear before the corresponding push send event in Currents data because of the following:
+- Your SDK has an incorrect clock.
+- High batch write latency. The recorded send time can lag behind early deliveries, so very quick opens may be logged before the batch's final send timestamp is written. Large sends are dispatched and recorded in batches.
+{% endalert %}
+
 {% tabs %}
 {% tab Amplitude %}
 ```json
