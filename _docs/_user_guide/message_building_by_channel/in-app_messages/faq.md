@@ -49,7 +49,7 @@ Once the in-app message is displayed, the eligibility will depend on when the in
 
 In-app messages will be delivered as templated in-app messages when **Re-evaluate campaign eligibility before displaying** is selected or if any of the following Liquid tags exist in the message:
 
-- `canvas_entry_properties`
+- `context`
 - `connected_content`
 - SMS variables such as {% raw %}`{sms.${*}}`{% endraw %}
 - `catalog_items`
