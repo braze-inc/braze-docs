@@ -4,16 +4,15 @@ article_title: Zero-copy personalization using CDI (syncing canvas triggers)
 page_order: 4
 page_type: reference
 description: "This page provides an overview of how to trigger Braze Canvases using CDI."
-
 ---
-
 
 # Zero-copy personalization using CDI (syncing canvas triggers)
 
 Learn how to sync canvas triggers using CDI for zero-copy personalization. This feature accesses user-specific information from your data storage solution and passes it to a destination canvas. Canvas steps can optionally include personalization fields that are not persisted on Braze user profiles.
 
-Important:  
+{% alert important %}  
 CDI canvas triggers are currently in early access. Contact your Braze account manager for access.
+{% endalert %}
 
 ## Syncing canvas triggers
 
@@ -251,9 +250,9 @@ To sync canvas triggers from file storage, create a source file with the followi
 | **`ALIAS_NAME` and `ALIAS_LABEL`** | Yes, one of external_id or alias_name and alias_label | These two columns create a user alias object. **`alias_name`** should be a unique identifier, and **`alias_label`** specifies the type of alias. Users may have multiple aliases with different labels, but only one **`alias_name`** per **`alias_label`**. |
 | **`PROPERTIES`** | Yes | JSON string of fields to make available as personalization properties in your canvas. This should contain user-specific information. |
 
-note:  
+{% alert tip %}
 Filenames must follow AWS rules and be unique. Append timestamps to help ensure uniqueness. For more on Amazon S3 syncing, see [File Storage Integrations](https://www.braze.com/docs/user_guide/data/cloud_ingestion/file_storage_integrations).
-
+{% endalert %}
 
 {% endtab %}
 {% endtabs %}
@@ -274,24 +273,25 @@ Once you've built your canvas, launch it and proceed to Step 3.
 
 With your source setup complete and destination canvas launched, navigate to **Data Settings > Cloud Data Ingestion** in Braze to create a new data sync.
 
-* 1. Set up connection: Enter connection details (or reuse existing credentials) and the source table from Step 1.  
-* 2. Set up sync details:   
+1. Set up connection: Enter connection details (or reuse existing credentials) and the source table from Step 1.  
+2. Set up sync details:   
   * Name the integration.  
   * Choose the ‘Canvas triggers’ data type.  
   * Choose your destination canvas (from Step 2).  
   * Choose a sync frequency  
-* 3. Set up notification preferences  
-* 4. Test connection:  
+3. Set up notification preferences  
+4. Test connection:  
   * If connecting to Snowflake, first add the public key displayed on the dashboard to the user created for Braze to connect to Snowflake. To complete this step, you will need someone with SECURITYADMIN access or higher in Snowflake.  
   * Click 'Test Connection' to ensure everything works as expected.  
-* Save the sync to begin syncing canvas triggers.
+5. Save the sync to begin syncing canvas triggers.
 
 Once the sync runs, users in your source table will begin to enter the canvas. Use canvas analytics and the Cloud Data Ingestion sync logs page to monitor performance.
 
-Important:  
+{% alert tip %}  
 Review your entire configuration (from sync behavior to canvas setup) to avoid unexpected sends. Canvas settings such as rate limiting, frequency capping, and segmentation filters can further refine message delivery.
 
-It is recommended to conduct a trial run with a small or test audience before implementing production use cases.
+We recommend conducting a trial run with a small or test audience before implementing production use cases.
+{% endalert %}
 
 ### Product Limits
 
