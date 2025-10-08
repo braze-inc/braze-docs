@@ -32,7 +32,8 @@ If needed, a step-by-step guide on how to use this new data type is provided bel
 
 {% tabs %}
 {% tab Snowflake %}
-1. Set up your source table in Snowflake. You can use the names in the following example or choose your own database, schema, and table names. You may also use a view or a materialized view instead of a table.  
+#### Step 1.1: Set up your source table in Snowflake 
+You can use the names in the following example or choose your own database, schema, and table names. You may also use a view or a materialized view instead of a table.  
 
 ```sql
 CREATE DATABASE BRAZE_CLOUD_PRODUCTION;
@@ -58,7 +59,8 @@ You can name the database, schema, and table as you’d like, but the column nam
 
 Note: Properties are not required for every row or user. However, properties values must be a valid JSON string. Input an empty {} string if there are no properties for the row.
 
-2. Set up a role, warehouse, and user and grant proper permissions. If you already have credentials from an existing sync, you can reuse them, but make sure to extend access to the canvas triggers source table.  
+#### Step 1.2: Set up credentials
+Set up a role, warehouse, and user and grant proper permissions. If you already have credentials from an existing sync, you can reuse them, but make sure to extend access to the canvas triggers source table.  
 
 ```sql
 
@@ -76,12 +78,14 @@ GRANT ROLE BRAZE_INGESTION_ROLE TO USER BRAZE_INGESTION_USER;
 
 ```
 
-3. If your account has network policies, allowlist the Braze IPs to enable the CDI service connection. For the list of IPs, see [Cloud Data Ingestion](https://www.braze.com/docs/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).  
+#### Step 1.3: Configure network policies 
+If your account has network policies, allowlist the Braze IPs to enable the CDI service connection. For the list of IPs, see [Cloud Data Ingestion](https://www.braze.com/docs/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).  
 
 {% endtab %}
 {% tab Redshift %}
 
-1. Set up your source table in Redshift. You can use the names in the following example or choose your own database, schema, and table names. You may also use a view or a materialized view instead of a table.
+#### Step 1.1: Set up your source table in Redshift 
+You can use the names in the following example or choose your own database, schema, and table names. You may also use a view or a materialized view instead of a table.
 
 ```sql
 CREATE DATABASE BRAZE_CLOUD_PRODUCTION;
@@ -107,7 +111,8 @@ You can name the database, schema, and table as you’d like, but the column nam
 
 Note: Properties are not required for every row or user. However, properties values be a valid JSON string. Input an empty {} string if there are no properties for the row.
 
-2. Set up a role, warehouse, and user and grant proper permissions. If you already have credentials from an existing sync, you can reuse them, but make sure to extend access to the canvas triggers source table.
+#### Step 1.2: Set up credentials 
+Set up a role, warehouse, and user and grant proper permissions. If you already have credentials from an existing sync, you can reuse them, but make sure to extend access to the canvas triggers source table.
 
 ```sql
 CREATE USER braze_user PASSWORD '{password}';
@@ -115,18 +120,30 @@ GRANT USAGE ON SCHEMA BRAZE_CLOUD_PRODUCTION.INGESTION to braze_user;
 GRANT SELECT ON TABLE CANVAS_TRIGGERS_SYNC TO braze_user;
 ```
 
-3. If your account has network policies, allowlist the Braze IPs to enable the CDI service connection. For the list of IPs, see [Cloud Data Ingestion](https://www.braze.com/docs/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
+#### Step 1.3: Configure newtwork policies 
+If your account has network policies, allowlist the Braze IPs to enable the CDI service connection. For the list of IPs, see [Cloud Data Ingestion](https://www.braze.com/docs/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
 
 {% endtab %}
 {% tab BigQuery %}
 
-1. (Optional) Create a new project or dataset for your source table.
+#### Step 1.1: (Optional) Create a new project or dataset for your source table.
 
 ```sql
 CREATE SCHEMA BRAZE-CLOUD-PRODUCTION.INGESTION;
 ```
 
-2. Set up your source table in BigQuery.
+#### Step 1.2: Set up your source table in BigQuery
+Refer to the following when creating your source table:  
+
+| Field Name | Type | Required? | 
+| :---- | :---- | :---- | 
+| **`UPDATED_AT`** | Timestamp | Yes | 
+| **`PROPERTIES`** | JSON | Yes | 
+| **`EXTERNAL_ID`** | STRING | NULLABLE | 
+| **`ALIAS_NAME`** | STRING | NULLABLE | 
+| **`ALIAS_LABEL`** | STRING | NULLABLE | 
+
+Note: Properties are not required for every row or user. However, properties values be a valid JSON string. Input an empty {} string if there are no properties for the row.
 
 ```sql
 CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.CANVAS_TRIGGERS_SYNC`
@@ -141,19 +158,8 @@ CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.CANVAS_TRIGGERS_SYNC`
 );
 ```
 
-Refer to the following when creating your source table:
-
-| Field Name | Type | Required? |
-| :---- | :---- | :---- |
-| **`UPDATED_AT`** | Timestamp | Yes |
-| **`PROPERTIES`** | JSON | Yes |
-| **`EXTERNAL_ID`** | STRING | NULLABLE |
-| **`ALIAS_NAME`** | STRING | NULLABLE |
-| **`ALIAS_LABEL`** | STRING | NULLABLE |
-
-Note: Properties are not required for every row or user. However, properties values be a valid JSON string. Input an empty {} string if there are no properties for the row.
-
-3. Create a user and grant permissions. If you already have credentials from another sync, you can reuse them as long as they have access to the canvas triggers table.
+#### Step 1.3: Set up credentials 
+Create a user and grant permissions. If you already have credentials from another sync, you can reuse them as long as they have access to the canvas triggers table.
 
 | Permission | Purpose |
 | :---- | :---- |
@@ -164,29 +170,19 @@ Note: Properties are not required for every row or user. However, properties val
 
 After granting permissions, generate a JSON key. See [Keys create and delete](https://cloud.google.com/iam/docs/keys-create-delete) for instructions. You’ll upload it in the Braze dashboard later.
 
-4. If your account has network policies, allowlist the Braze IPs to enable the CDI service connection. For the list of IPs, see [Cloud Data Ingestion](https://www.braze.com/docs/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
+#### Step 1.4: Configure network policies 
+If your account has network policies, allowlist the Braze IPs to enable the CDI service connection. For the list of IPs, see [Cloud Data Ingestion](https://www.braze.com/docs/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
 
 {% endtab %}
 {% tab Databricks %}
 
-1. Create a catalog or schema for your source table.
-
-**CREATE SCHEMA BRAZE-CLOUD-PRODUCTION.INGESTION;**
-
-2. Set up your source table in Databricks.
+#### Step 1.1: Create a catalog or schema for your source table.
 
 ```sql
-CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.USERS_ATTRIBUTES_SYNC`
-(
-  updated_at TIMESTAMP DEFAULT current_timestamp(),
-  --At least one of external_id or alias_name and alias_label is required  
-  external_id STRING,
-  --If using user alias, both alias_name and alias_label are required
-  alias_name STRING,
-  alias_label STRING,
-  properties STRING, STRUCT, or MAP
-);
+CREATE SCHEMA BRAZE-CLOUD-PRODUCTION.INGESTION;
 ```
+
+#### Step 1.2: Set up your source table in Databricks
 
 Refer to the following when creating your source table:
 
@@ -208,7 +204,22 @@ You can name the schema and table as you’d like, but the column names should m
 
 Note: Properties are not required for every row or user. However, properties values must be valid JSON strings. Input an empty {} string if there are no properties for the row.
 
-3. Create a personal access token in Databricks:
+
+```sql
+CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.USERS_ATTRIBUTES_SYNC`
+(
+  updated_at TIMESTAMP DEFAULT current_timestamp(),
+  --At least one of external_id or alias_name and alias_label is required  
+  external_id STRING,
+  --If using user alias, both alias_name and alias_label are required
+  alias_name STRING,
+  alias_label STRING,
+  properties STRING, STRUCT, or MAP
+);
+```
+
+#### Step 1.3: Set up credentials 
+Create a personal access token in Databricks:
 
 * Select your username, then select **User Settings.**  
 * On the **Access tokens** tab, select **Generate new token.**  
@@ -216,11 +227,12 @@ Note: Properties are not required for every row or user. However, properties val
 * Leave **Lifetime (days)** blank for no expiration, then select **Generate**.  
 * Copy and save the token securely for use in the Braze dashboard.
 
-4. If your account has network policies, allowlist the Braze IPs to enable the CDI service connection. For the list of IPs, see [Cloud Data Ingestion](https://www.braze.com/docs/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
+#### Step 1.4: Configure network policies 
+If your account has network policies, allowlist the Braze IPs to enable the CDI service connection. For the list of IPs, see [Cloud Data Ingestion](https://www.braze.com/docs/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
 
 {% endtab %}
 {% tab Fabric %}
-1. Set up your source table in Fabric.
+#### Step 1.1: Set up your source table in Fabric
 
 ```sql
 CREATE OR ALTER TABLE [warehouse].[schema].[CDI_table_name] 
@@ -236,9 +248,11 @@ CREATE OR ALTER TABLE [warehouse].[schema].[CDI_table_name]
 GO
 ```
 
-2. Create a service principal and grant permissions. If you already have credentials from another sync, you can reuse them—just make sure they have access to the accounts table.
+#### Step 1.2: Set up credentials 
+Create a service principal and grant permissions. If you already have credentials from another sync, you can reuse them—just make sure they have access to the accounts table.
 
-3. If your account has network policies, allowlist the Braze IPs to enable the CDI service connection. For the list of IPs, see [Cloud Data Ingestion](https://www.braze.com/docs/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
+#### Step 1.3: Configure network policies 
+If your account has network policies, allowlist the Braze IPs to enable the CDI service connection. For the list of IPs, see [Cloud Data Ingestion](https://www.braze.com/docs/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
 
 {% endtab %}
 {% tab File Storage %}
@@ -259,15 +273,11 @@ Filenames must follow AWS rules and be unique. Append timestamps to help ensure 
 
 ### Step 2: Configure your destination canvas
 
-Next, set up your destination canvas for canvas triggers. Create a new or select an existing API-triggered canvas. See [here](https://www.braze.com/docs/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-12-determine-your-canvas-entry-schedule) for instructions on how to create a canvas with an API-triggered delivery schedule type.
-
-After selecting the API-triggered delivery schedule type, continue with canvas setup and build your canvas. Canvases can range from simple single-message sends to complex customer workflows with multiple steps.
-
-Within your canvas steps, use [canvas entry properties](https://www.braze.com/docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties) to personalize messages with properties fields from your source table in Step 1.
-
-For example, if in Step 1 you instrumented a properties field for account__balance, you would use the following Liquid templating to personalize your message: \{\{canvas_entry_properties.\$\{account_balance\}\}\}.
-
-Once you've built your canvas, launch it and proceed to Step 3.
+1. Set up your destination canvas for canvas triggers. Create a new or select an existing API-triggered canvas. See [here](https://www.braze.com/docs/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-12-determine-your-canvas-entry-schedule) for instructions on how to create a canvas with an API-triggered delivery schedule type.
+2. After selecting the API-triggered delivery schedule type, continue with canvas setup and build your canvas. Canvases can range from simple single-message sends to complex customer workflows with multiple steps.
+3. Within your canvas steps, use [canvas entry properties](https://www.braze.com/docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties) to personalize messages with properties fields that you plan to sync from your source table.
+  * For example, if in Step 1 you instrumented a properties field for account__balance, you would use the following Liquid templating to personalize your message: \{\{canvas_entry_properties.\$\{account_balance\}\}\}.
+5. Once you've built your canvas, launch it and proceed to Step 3.
 
 ### Step 3: Create your zero copy sync
 
@@ -275,14 +285,14 @@ With your source setup complete and destination canvas launched, navigate to **D
 
 1. Set up connection: Enter connection details (or reuse existing credentials) and the source table from Step 1.  
 2. Set up sync details:   
-  * Name the integration.  
-  * Choose the ‘Canvas triggers’ data type.  
-  * Choose your destination canvas (from Step 2).  
-  * Choose a sync frequency  
+   *  Name the integration.  
+   * Choose the ‘Canvas triggers’ data type.  
+   * Choose your destination canvas (from Step 2).  
+   * Choose a sync frequency  
 3. Set up notification preferences  
 4. Test connection:  
-  * If connecting to Snowflake, first add the public key displayed on the dashboard to the user created for Braze to connect to Snowflake. To complete this step, you will need someone with SECURITYADMIN access or higher in Snowflake.  
-  * Click 'Test Connection' to ensure everything works as expected.  
+   * If connecting to Snowflake, first add the public key displayed on the dashboard to the user created for Braze to connect to Snowflake. To complete this step, you will need someone with SECURITYADMIN access or higher in Snowflake.  
+   * Click 'Test Connection' to ensure everything works as expected.  
 5. Save the sync to begin syncing canvas triggers.
 
 Once the sync runs, users in your source table will begin to enter the canvas. Use canvas analytics and the Cloud Data Ingestion sync logs page to monitor performance.
