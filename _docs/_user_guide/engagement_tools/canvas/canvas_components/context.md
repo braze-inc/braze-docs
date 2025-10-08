@@ -46,7 +46,7 @@ For example,
 
 Each time a user enters the Canvas&#8212;even if they have entered it before&#8212;the context variables will be redefined based on the latest entry data and Canvas setup. This stateful approach allows each Canvas entry to maintain its own independent context, allowing users to have multiple active states within the same journey while retaining the specific context for each state.
 
-For example, if a customer has two upcoming flights, they'll have two separate journey states running simultaneously—each with its own flight-specific context variables like departure time and destination. This allows you to send personalized reminders about their 2:00 PM flight to New York while sending different updates about their 8:00 AM flight to Los Angeles tomorrow, ensuring each message stays relevant to the specific booking.
+For example, if a customer has two upcoming flights, they'll have two separate journey states running simultaneously&#8212;each with its own flight-specific context variables like departure time and destination. This allows you to send personalized reminders about their 2 pm flight to New York while sending different updates about their 8 am flight to Los Angeles tomorrow, ensuring each message stays relevant to the specific booking.
 
 ## Creating a Context step
 
