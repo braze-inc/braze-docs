@@ -1,8 +1,8 @@
 ---
-nav_title: Intégration du studio de prise de décision
-article_title: Intégration du BrazeAI Decisioning Studio™
+nav_title: Intégrer Decisioning Studio
+article_title: Intégrer BrazeAI Decisioning Studio™
 page_order: 1
-description: "Découvrez comment intégrer BrazeAI Decisioning Studio™ dans Braze et devenez partenaire de l'équipe AI Expert Services pour créer des agents qui appliquent l'IA à la prise de décision 1:1 afin d'améliorer vos indicateurs clés."
+description: "Découvrez comment intégrer BrazeAI Decisioning Studio™ dans Braze et travaillez en partenariat avec l'équipe des services experts en intelligence artificielle pour créer des agents qui appliquent l'IA à la prise de décisions individualisées afin d'améliorer vos indicateurs clés."
 
 noindex: true
 ---
