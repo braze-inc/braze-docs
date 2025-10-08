@@ -1,5 +1,5 @@
 ---
-nav_title: "Bot Click Filtering"
+nav_title: "Bot click filtering"
 article_title: "SMS and RCS Bot Click Filtering"
 description: "This reference article covers SMS and RCS bot click filtering."
 alias: /sms_rcs_bot_click_filtering/
