@@ -306,6 +306,8 @@ For customers who have purchased Monthly Active Users - CY 24-25, Braze manages 
 
 Current limits based on expected ingestion can be found in the dashboard under **Settings** > **APIs and Identifiers** > **API Usage Dashboard**. We may modify rate limits to protect system stability or allow for increased data throughput on your account. Please contact Braze Support or your customer success manager for questions or concerns regarding hourly or per-second request limit and the needs of your business.
 
+### Rate-limit headers for Monthly Active Users CY 24-25
+
 All non-rate-limited (i.e., non 429) responses will contain the following HTTP response headers that indicate the state of the steady rate limit window to the client. We recommend using these headers to manage your request rate:
 
 | Header Name             | Description                                                                                 |
