@@ -265,7 +265,7 @@ After selecting the API-triggered delivery schedule type, continue with canvas s
 
 Within your canvas steps, use [canvas entry properties](https://www.braze.com/docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties) to personalize messages with properties fields from your source table in Step 1.
 
-For example, if in Step 1 you instrumented a properties field for account__balance, you would use the following Liquid templating to personalize your message: {{canvas_entry_properties.${account_balance}}}.
+For example, if in Step 1 you instrumented a properties field for account__balance, you would use the following Liquid templating to personalize your message: \{\{canvas_entry_properties.\$\{account_balance\}\}\}.
 
 Once you've built your canvas, launch it and proceed to Step 3.
 
