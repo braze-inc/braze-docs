@@ -15,7 +15,7 @@ guide_featured_title: "Recursos"
 guide_featured_list:
 - name: BrazeAI Decisioning <sup>StudioTM</sup>
   link: /docs/user_guide/brazeai/decisioning_studio/
-- name: Agentes de brasagem
+- name: Agentes da Braze
   link: /docs/user_guide/brazeai/agents/
   image: /assets/img/braze_icons/star-06.svg
 - name: Intelligence Suite
