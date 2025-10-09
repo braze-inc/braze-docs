@@ -54,4 +54,6 @@ valid_partner_list:
   url: /docs/partners/stripe/
 - name: Okendo
   url: /docs/partners/okendo/
+- name: Swym
+  url: /docs/partners/swym/
 ---
