@@ -70,14 +70,15 @@ hide_binary_feedback: false
 </div>
 
 <div class="d-none d-lg-block col-lg-2 d-print-none" id="toc_col">
-  {%- unless hide_toc -%}
   <div class="gitedit_div" style="margin-top: 30px;padding-left: 5px;">
       <a href="{{site.github_baseurl}}{{page.relative_path }}" class="extignore" target="_blank">
           <img src="{{site.baseurl}}/assets/img/{{site.github_icon}}" alt="Github" /> &nbsp; {{ site.data.i18n[site.language]['edit_github'] | default: "Edit this page on GitHub" }}
       </a>
   </div>
+  {%- unless hide_toc -%}
   <div id="toc" ></div>
   {%- endunless -%}
+
   {% unless hide_binary_feedback -%}
   {% include binary_feedback.html  %}
   {% endunless -%}
