@@ -18,7 +18,7 @@ CDI Canvas triggers are currently in early access. Contact your Braze account ma
 
 ### Quick start steps
 
-If you’re already familiar with Braze CDI, note that the setup for a Canvas trigger sync closely follows the process for [user-data CDI integrations](https://www.braze.com/docs/user_guide/data_and_analytics/cloud_ingestion/integrations#product-setup), with the following caveats:
+If you’re already familiar with Braze CDI, note that the setup for a Canvas trigger sync closely follows the process for [user-data CDI integrations]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/integrations/), with the following caveats:
 
 - Only external ID or user alias identifiers are supported. Email and phone numbers are not supported identifiers.  
 - Only existing Braze users can be synced. New users cannot be created.  
@@ -65,7 +65,7 @@ Properties are not required for every row or user. However, properties values mu
 
 ##### Step 1.2: Set up credentials
 
-Set up a role, warehouse, and user and grant proper permissions. If you already have credentials from an existing sync, you can reuse them, but make sure to extend access to the Canvas triggers source table.  
+Set up a role, warehouse, and user, and grant proper permissions. If you already have credentials from an existing sync, you can reuse them, but make sure to extend access to the Canvas triggers source table.  
 
 ```sql
 
@@ -85,7 +85,7 @@ GRANT ROLE BRAZE_INGESTION_ROLE TO USER BRAZE_INGESTION_USER;
 
 ##### Step 1.3: Configure network policies
 
-If your account has network policies, allowlist the Braze IPs to enable the CDI service connection. For the list of IPs, see [Cloud Data Ingestion](https://www.braze.com/docs/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).  
+If your account has network policies, allowlist the Braze IPs to enable the CDI service connection. For the list of IPs, see [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/integrations/?tab=snowflake#step-15-allow-braze-ips-in-snowflake-network-policy-optional).  
 
 {% endtab %}
 {% tab Redshift %}
@@ -132,7 +132,7 @@ GRANT SELECT ON TABLE CANVAS_TRIGGERS_SYNC TO braze_user;
 
 ##### Step 1.3: Configure network policies 
 
-If your account has network policies, allowlist the Braze IPs to enable the CDI service connection. For the list of IPs, see [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
+If your account has network policies, allowlist the Braze IPs to enable the CDI service connection. For the list of IPs, see [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/integrations/?tab=redshift#step-13-allow-access-to-braze-ips).
 
 {% endtab %}
 {% tab BigQuery %}
@@ -187,7 +187,7 @@ Create a user and grant permissions. If you already have credentials from anothe
 After granting permissions, generate a JSON key. See [Keys create and delete](https://cloud.google.com/iam/docs/keys-create-delete) for instructions. You’ll upload it in the Braze dashboard later.
 
 ##### Step 1.4: Configure network policies 
-If your account has network policies, allowlist the Braze IPs to enable the CDI service connection. For the list of IPs, see [Cloud Data Ingestion](https://www.braze.com/docs/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
+If your account has network policies, allowlist the Braze IPs to enable the CDI service connection. For the list of IPs, see [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/integrations/?tab=bigquery#step-13-allow-access-to-braze-ips).
 
 {% endtab %}
 {% tab Databricks %}
@@ -248,7 +248,7 @@ Create a personal access token in Databricks:
 
 ##### Step 1.4: Configure network policies 
 
-If your account has network policies, allowlist the Braze IPs to enable the CDI service connection. For the list of IPs, see [Cloud Data Ingestion](https://www.braze.com/docs/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
+If your account has network policies, allowlist the Braze IPs to enable the CDI service connection. For the list of IPs, see [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/integrations/?tab=databricks#step-13-allow-access-to-braze-ips).
 
 {% endtab %}
 {% tab Fabric %}
@@ -275,7 +275,7 @@ Create a service principal and grant permissions. If you already have credential
 
 ##### Step 1.3: Configure network policies 
 
-If your account has network policies, allowlist the Braze IPs to enable the CDI service connection. For the list of IPs, see [Cloud Data Ingestion](https://www.braze.com/docs/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
+If your account has network policies, allowlist the Braze IPs to enable the CDI service connection. For the list of IPs, see [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/integrations/?tab=microsoft%20fabric#step-15-allow-braze-ips-in-firewall-optional).
 
 {% endtab %}
 {% tab File Storage %}
@@ -298,7 +298,7 @@ Filenames must follow AWS rules and be unique. Append timestamps to help ensure 
 
 #### Step 2: Configure your destination Canvas
 
-1. Set up your destination Canvas for Canvas triggers. Create a new or select an existing API-triggered Canvas. See [here](https://www.braze.com/docs/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-12-determine-your-canvas-entry-schedule) for instructions on how to create a canvas with an API-triggered delivery schedule type.
+1. Set up your destination Canvas for Canvas triggers. Create a new or select an existing API-triggered Canvas. Refer to [Entry schedule types]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas#entry-schedule-types) for instructions on how to create a canvas with an API-triggered delivery schedule type.
 2. After selecting the API-triggered delivery schedule type, continue with Canvas setup and build your Canvas. Canvases can range from simple single-message sends to complex customer workflows with multiple steps.
 3. Within your Canvas steps, use [Canvas entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties) to personalize messages with properties fields that you plan to sync from your source table.
   * For example, if in Step 1 you instrumented a properties field for `account_balance`, you would use the following Liquid templating to personalize your message: `\{\{canvas_entry_properties.\$\{account_balance\}\}\}`.
@@ -309,7 +309,7 @@ Filenames must follow AWS rules and be unique. Append timestamps to help ensure 
 With your source setup complete and destination Canvas launched, create a new data sync:
 
 1. In Braze, go to **Data Settings** > **Cloud Data Ingestion** .
-1. Set up connection by entering connection details (or reuse existing credentials) and the source table from [Step 1](#step-1-set-up-data-source-for-canvas-triggers).
+1. Set up the connection by entering connection details (or reuse existing credentials) and the source table from [Step 1](#step-1-set-up-data-source-for-canvas-triggers).
 2. Provide a name the integration.
 3. Select the **Canvas triggers** data type.
 4. Choose your destination Canvas (from [Step 2](#step-2-configure-your-destination-canvas)).
@@ -318,10 +318,10 @@ With your source setup complete and destination Canvas launched, create a new da
 7. Select **Test Connection** to confirm everything works as expected. If connecting to Snowflake, first add the public key displayed on the dashboard to the user created for Braze to connect to Snowflake. To complete this step, you'll need **SECURITYADMIN** access or higher in Snowflake. 
 8. Save the sync to begin syncing Canvas triggers.
 
-Once the sync runs, users in your source table will begin to enter the Canvas. Use Canvas analytics and the Cloud Data Ingestion sync logs page to monitor performance.
+When the sync runs, users in your source table will begin to enter the Canvas. Use Canvas analytics and the Cloud Data Ingestion sync logs page to monitor performance.
 
 {% alert tip %}  
-Review your entire configuration (from sync behavior to Canvas setup) to avoid unexpected sends. Canvas settings such as rate limiting, frequency capping, and segmentation filters can further refine message delivery.<br><>br>We recommend conducting a trial run with a small or test audience before implementing production use cases.
+Review your entire configuration (from sync behavior to Canvas setup) to avoid unexpected sends. Canvas settings such as rate limiting, frequency capping, and segmentation filters can further refine message delivery.<br><br>We recommend conducting a trial run with a small or test audience before implementing production use cases.
 {% endalert %}
 
 ### Considerations
