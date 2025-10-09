@@ -308,7 +308,7 @@ For the full definitions of all Banners metrics, refer to the [Report Metrics Gl
     </tbody>
 </table>
 
-#### Messages Sent, Unique Recipients versus Unique Impressions
+#### Banner Metrics Calculation Examples
 
 There are a few metrics available that cover the visibility of your message. This includes _Messages Sent_, _Unique Recipients_, and _Unique Impressions_. Let’s use a few example scenarios to understand these metrics better.
 
