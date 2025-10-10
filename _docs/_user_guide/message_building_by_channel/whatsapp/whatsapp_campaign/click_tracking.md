@@ -19,6 +19,10 @@ Click tracking lets you measure when someone taps a link in your WhatsApp messag
 
 You can turn on click tracking in both response and template messages. It works with links in buttons and body text, and supports personalized URLs and custom domains. After it's turned on, you'll see click data in your WhatsApp performance reports and be able to segment users based on who clicked what.
 
+{% alert note %}
+Click tracking doesn’t work with deep links. You can shorten universal links from providers such as Branch or Appsflyer, but Braze is unable to troubleshoot issues that may arise in doing so (such as breaking the attribution or causing a redirect).
+{% endalert %}
+
 ## How it works
 
 ### Response messages 
@@ -116,10 +120,6 @@ You can use the `Clicked/Opened Step` filter and `clicked tracked WhatsApp link`
 ### Do I know which individual users are clicking on a URL?
 
 Yes. When click tracking is turned on (or enabled based on template configuration), you can retarget users who have clicked URLs by leveraging the WhatsApp retargeting filters or the WhatsApp click events (`users.messages.whatsapp.Click`) sent by Currents.
-
-### Does click tracking work with deep links or universal links?
-
-Click tracking doesn’t work with deep links. You can shorten universal links from providers such as Branch or Appsflyer, but Braze is unable to troubleshoot issues that may arise in doing so (such as breaking the attribution or causing a redirect).
 
 ### Do previews on the WhatsApp device count as clicks? 
 
