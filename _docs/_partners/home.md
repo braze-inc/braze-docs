@@ -360,4 +360,6 @@ valid_partner_list:
   url: /docs/partners/jasper/
 - name: Kameleoon
   url: /docs/partners/kameleoon/
+- name: Swym
+  url: /docs/partners/swym/
 ---
