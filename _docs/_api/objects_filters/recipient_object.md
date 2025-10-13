@@ -37,7 +37,7 @@ When `send_to_existing_only` is `true`, Braze will only send the message to exis
 - [User aliases]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases)
 - [External user ID]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields)
 - [Prioritization]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/#identifying-users-by-email)
-- [User attributes]({{site.baseurl}}/api/objects_filters/user_attributes_object/)
+- [User attributes object]({{site.baseurl}}/api/objects_filters/user_attributes_object/)
 
 ## Recipient object deduping
 
