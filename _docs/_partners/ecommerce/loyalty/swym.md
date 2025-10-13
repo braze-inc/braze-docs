@@ -1,7 +1,7 @@
 ---
 nav_title: Swym
 article_title: Swym
-description: "This reference article outlines the partnership between Braze and Swym, that empowers shoppers to save products and seamlessly continue their journey across website, mobile app, and retail stores."
+description: "This reference article outlines the partnership between Braze and Swym, which empowers shoppers to save products and seamlessly continue their journey across websites, mobile apps, and retail stores."
 alias: /partners/swym/
 page_type: partner
 search_tag: Partner
@@ -15,7 +15,7 @@ search_tag: Partner
 
 ## About the integration
 
-The Swym and Braze integration empowers you to deliver highly personalized, event-driven marketing campaigns that convert shopper intent into sales. Use the integration to make it easy for shoppers to pick up where they left off, to collaborate with others throughout their shopping journey, and to deploy high performance retargeting campaigns.
+The Swym and Braze integration empowers you to deliver highly personalized, event-driven marketing campaigns that convert shopper intent into sales. Use the integration to make it easy for shoppers to pick up where they left off, to collaborate with others throughout their shopping journey, and to deploy high-performance retargeting campaigns.
 
 ## Prerequisites
 
@@ -23,22 +23,22 @@ Before you start, you'll need the following:
 
 | Prerequisite          | Description                                                                                                                                |
 |-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
-| Swym  | Swym Wishlist Plus, Back in Stock app(s), or both must be installed on your eCommerce platform (Shopify or BigCommerce), and you must be on the Enterprise plan.       |
+| Swym  | Swym Wishlist Plus, Back in Stock apps, or both must be installed on your eCommerce platform (Shopify or BigCommerce), and you must be on the Enterprise plan.       |
 | A Braze REST API key  | A Braze REST API key with `users.track` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | A Braze REST endpoint | [Your REST endpoint URL]({{site.baseurl}}/api/basics/#endpoints). Your endpoint will depend on the Braze URL for your instance.                                                 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 ## Use cases
 
-By connecting Swym’s Wishlist Plus and Back in Stock Alerts apps with Braze, you can automatically send shopper activity events such as wishlist adds, back-in-stock subscriptions, price drop alerts, and reminders, into Braze as custom events. These events can then be used to trigger automated messages in Braze, and facilitate timely, relevant, and engaging communication that brings shoppers back to purchase.
+By connecting Swym’s Wishlist Plus and Back in Stock Alerts apps with Braze, you can automatically send shopper activity events, such as wishlist adds, back-in-stock subscriptions, price drop alerts, and reminders, into Braze as custom events. These events can then be used to trigger automated messages in Braze, facilitating timely, relevant, and engaging communication that brings shoppers back to make a purchase.
 
 ## Integrating Swym
 
 ### Step 1: Connect your Swym app to Braze
 
-Currently, the Braze integration with Swym is a managed integration and is not self-serve. To get started, contact ```support@getswym.com``` and provide the following information so that Swym can set up the integration on your behalf:
+Currently, the Braze integration with Swym is a managed integration and is not self-serve. To get started, contact the Swym support team at [support@getswym.com](mailto:support@getswym.com) and provide the following information so that Swym can set up the integration on your behalf:
 
-1. Generate a REST API key in your Braze dashboard with the `users.track` permission. For step-by-step guidance, you can refer to the [Braze API Guide]({{site.baseurl}}/api/basics/#about-rest-api-keys).
+1. Generate a [REST API key]({{site.baseurl}}/api/basics/#about-rest-api-keys) in your Braze dashboard with the `users.track` permission.
 
 ![Generating an API key in Braze.]({% image_buster /assets/img/swym/braze-api-key.png %})
 
@@ -47,9 +47,9 @@ Share credentials securely using [OneTimeSecret](https://onetimesecret.com/) (a 
 {% endalert %}
 
 {: start="2"}
-2. Braze manages multiple instances for its dashboard and REST endpoints. Provide the correct REST endpoint for the instance you are provisioned. For guidance, refer to the [Braze API Guide]({{site.baseurl}}/api/basics/#endpoints).
+2. Braze manages multiple instances for its dashboard and REST endpoints. Provide the [REST endpoint]({{site.baseurl}}/api/basics/#endpoints) for the instance you are provisioned.
 
-3. After the API key and Instance URL are shared with Swym's Support team, they will set up the integration for you and respond with a confirmation.
+3. After the API key and instance URL are shared with the Swym support team, they will set up the integration for you and respond with a confirmation.
 
 4. After setup is completed, the custom events from Swym will be automatically registered in Braze. You can view the list of registered Swym events in the Braze dashboard by going to **Data Settings** > **Custom Events**. 
 
@@ -59,7 +59,7 @@ Share credentials securely using [OneTimeSecret](https://onetimesecret.com/) (a 
 
 ### Step 2: Subscribe to events you want to send to Braze
 
-From your Wishlist Plus app, go to the **Marketing** tab and find the **Automations** section. Here, you can enable the events you want to subscribe to. 
+From your Wishlist Plus app, go to the **Marketing** tab and find the **Automations** section. Here, you can select the events you want to subscribe to. 
 
 ![Events to be subscribed.]({% image_buster /assets/img/swym/braze-event-subscription.png %})
 
@@ -80,7 +80,7 @@ From your Wishlist Plus app, go to the **Marketing** tab and find the **Automati
 
 | Event Name | When this event is triggered |  
 |------------|------------------------------|  
-| Back in Stock Acknowledgement | Shopper subscribes to be notified when a product is back in stock |  
+| Back in Stock Acknowledgment | Shopper subscribes to be notified when a product is back in stock |  
 | Restock Alert | Product a shopper requested a back-in-stock alert for is restocked |  
 | Restock Reminder | Follow-up alert (usually approximately 24 hours after the first restock alert, configurable)|   
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
@@ -91,4 +91,4 @@ To automate the delivery of personalized messages for your shoppers, you must cr
 
 ![An action-based event.]({% image_buster /assets/img/swym/braze-canvas-setup.png %})
 
-For detailed information refer to the [Swym help center](https://help.getswym.com/en/articles/12344153-braze-integration) or contact ```support@getswym.com```. 
+For additional details, refer to the [Swym help center](https://help.getswym.com/en/articles/12344153-braze-integration) or contact the Swym support team at [support@getswym.com](mailto:support@getswym.com). 
