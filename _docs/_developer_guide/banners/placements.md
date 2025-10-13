@@ -625,7 +625,7 @@ val jsonObjectProperty: JSONObject? = banner.getJSONProperty("footer_settings")
 
 ```javascript
 // Get the Banner instance
-const banner = Braze.getInstance(context).getBanner('placement_id_homepage_top');
+const banner = await Braze.getBanner('placement_id_homepage_top');
 if (!banner) return;
 
 // Get the string property
@@ -651,27 +651,28 @@ const jsonObjectProperty = banner.getJSONProperty('footer_settings');
 {% tab Flutter %}
 
 ```dart
-// Get the Banner instance
-final banner = Braze.instance.getBanner('placement_id_homepage_top');
-if (banner == null) return;
-
-// Get the string property
-final String? stringProperty = banner.getStringProperty('color');
-
-// Get the boolean property
-final bool? booleanProperty = banner.getBooleanProperty('expanded');
-
-// Get the number property
-final num? numberProperty = banner.getNumberProperty('height');
-
-// Get the timestamp property (as an int)
-final int? timestampProperty = banner.getTimestampProperty('account_start');
-
-// Get the image URL property as a string
-final String? imageProperty = banner.getImageProperty('homepage_icon');
-
-// Get the JSON object property as a Map
-final Map<String, dynamic>? jsonObjectProperty = banner.getJSONProperty('footer_settings');
+// Fetch the banner asynchronously
+_braze.getBanner(placementId).then(('placement_id_homepage_top') {
+  // Get the string property
+  final String? stringProperty = banner?.getStringProperty('color');
+  
+  // Get the boolean property
+  final bool? booleanProperty = banner?.getBooleanProperty('expanded');
+  
+  // Get the number property
+  final num? numberProperty = banner?.getNumberProperty('height');
+  
+  // Get the timestamp property
+  final int? timestampProperty = banner?.getTimestampProperty('account_start');
+  
+  // Get the image URL property
+  final String? imageProperty = banner?.getImageProperty('homepage_icon');
+  
+  // Get the JSON object propertyßß
+  final Map<String, dynamic>? jsonObjectProperty = banner?.getJSONProperty('footer_settings');
+  
+  // Use these properties as needed in your UI or logic
+});
 ```
 
 {% endtab %}
