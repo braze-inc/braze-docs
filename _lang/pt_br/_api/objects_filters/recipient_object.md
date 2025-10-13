@@ -13,7 +13,7 @@ description: "Este artigo de referência explica os diferentes componentes do ob
 
 É necessário que `external_user_id`, `user_alias`, `braze_id` ou `email` estejam presentes neste objeto. **As solicitações devem especificar apenas uma.**
 
-O objeto destinatários permite combinar o [objeto de alias de usuário]({{site.baseurl}}/api/objects_filters/user_alias_object/), o [objeto de propriedades do disparador]({{site.baseurl}}/api/objects_filters/trigger_properties_object/), o [objeto de propriedades de entrada do Canva]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/), e o [objeto de atributos do usuário]({{site.baseurl}}/api/objects_filters/user_attributes_object/).
+O objeto destinatários permite combinar o [objeto de alias de usuário]({{site.baseurl}}/api/objects_filters/user_alias_object/), o [objeto de propriedades do disparador]({{site.baseurl}}/api/objects_filters/trigger_properties_object/) e o [objeto de propriedades de entrada do Canva]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/).
 
 ## Corpo do objeto
 
@@ -25,9 +25,7 @@ O objeto destinatários permite combinar o [objeto de alias de usuário]({{site.
   "email": (optional, string) email address of user to receive message,
   "prioritization": (optional, array) see Prioritization; required when using email,
   "trigger_properties": (optional, object) personalization key-value pairs for this user when sending a campaign or message; see Trigger Properties,
-  "canvas_entry_properties": (optional, object) personalization key-value pairs for this user when triggering a Canvas; see Canvas Entry Properties,
-  "send_to_existing_only": (optional, boolean) defaults to true; cannot be used with user aliases,
-  "attributes": (optional, object) fields in the attributes object will create or update an attribute of that name with the given value on the specified user profile before the message is sent and existing values will be overwritten
+  "canvas_entry_properties": (optional, object) personalization key-value pairs for this user when triggering a Canvas; see Canvas Entry Properties
 }]
 ```
 
@@ -37,7 +35,6 @@ Quando `send_to_existing_only` for `true`, a Braze enviará a mensagem apenas pa
 - [Alias do usuário]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases)
 - [ID de usuário externo]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields)
 - [Priorização]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/#identifying-users-by-email)
-- [Atributos do usuário]({{site.baseurl}}/api/objects_filters/user_attributes_object/)
 
 ## Eliminação de objetos do destinatário
 
