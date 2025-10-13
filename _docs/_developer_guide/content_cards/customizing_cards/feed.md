@@ -117,7 +117,7 @@ Braze uses a token bucket algorithm to enforce the following rate limits:
 - `subscribeToContentCards()` will still return cached cards even when rate-limited
 
 {% alert important %}
-The global SDK network limit is 30 requests per 30 seconds. Keep this in mind when you run automated test or perform manual QA.
+The Braze SDK also applies rate limits to ensure performance and reliability. Keep this in mind when running automated tests or performing manual QA. See [Braze SDK rate limits]({{site.baseurl}}/developer_guide/sdk_integration/rate_limits/) for more information. 
 {% endalert %}
 
 ## Customizing displayed card order
