@@ -620,4 +620,59 @@ val jsonObjectProperty: JSONObject? = banner.getJSONProperty("footer_settings")
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
+
+{% tab React Native %}
+
+```javascript
+// Get the Banner instance
+const banner = Braze.getInstance(context).getBanner('placement_id_homepage_top');
+if (!banner) return;
+
+// Get the string property
+const stringProperty = banner.getStringProperty('color');
+
+// Get the boolean property
+const booleanProperty = banner.getBooleanProperty('expanded');
+
+// Get the number property
+const numberProperty = banner.getNumberProperty('height');
+
+// Get the timestamp property (as a number)
+const timestampProperty = banner.getTimestampProperty('account_start');
+
+// Get the image URL property as a string
+const imageProperty = banner.getImageProperty('homepage_icon');
+
+// Get the JSON object property
+const jsonObjectProperty = banner.getJSONProperty('footer_settings');
+```
+
+{% endtab %}
+{% tab Flutter %}
+
+```dart
+// Get the Banner instance
+final banner = Braze.instance.getBanner('placement_id_homepage_top');
+if (banner == null) return;
+
+// Get the string property
+final String? stringProperty = banner.getStringProperty('color');
+
+// Get the boolean property
+final bool? booleanProperty = banner.getBooleanProperty('expanded');
+
+// Get the number property
+final num? numberProperty = banner.getNumberProperty('height');
+
+// Get the timestamp property (as an int)
+final int? timestampProperty = banner.getTimestampProperty('account_start');
+
+// Get the image URL property as a string
+final String? imageProperty = banner.getImageProperty('homepage_icon');
+
+// Get the JSON object property as a Map
+final Map<String, dynamic>? jsonObjectProperty = banner.getJSONProperty('footer_settings');
+```
+
+{% endtab %}
 {% endtabs %}
