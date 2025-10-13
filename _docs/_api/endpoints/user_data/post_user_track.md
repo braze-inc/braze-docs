@@ -317,6 +317,6 @@ All non-rate-limited (such as non-`429`) responses will contain the following HT
 | `X-RateLimit-Reset`     | The number of seconds remaining before the current window resets                                    |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Note that the `RateLimit-Limit`, `RateLimit-Remaining`, and `RateLimit-Reset` headers are not returned when you hit an HTTP `429` error. When you hit the error, those headers are replaced with an `X-Ratelimit-Retry-After` header that returns an integer indicating the number of seconds before you can start making requests.
+Note that the `RateLimit-Limit`, `RateLimit-Remaining`, and `RateLimit-Reset` headers are not returned when you hit an HTTP `429` error. When the error occurs, those headers are replaced with an `X-Ratelimit-Retry-After` header that returns an integer indicating the number of seconds before you can start making requests.
 
 {% endapi %}
