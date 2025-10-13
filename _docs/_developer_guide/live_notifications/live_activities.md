@@ -333,7 +333,11 @@ Live Activity events are available in Currents, Snowflake Data Sharing, and Quer
 
 #### What platforms support Live Activities?
 
-Live Activities are currently a feature specific to iOS. The Live Activities article covers the [prerequisites]({{site.baseurl}}/developer_guide/platforms/swift/live_activities/#prerequisites) for managing Live Activities through the Braze Swift SDK.
+Currently, Live Activities are a feature specific to iOS and iPadOS. By default, activities launched on an iPhone or iPad will additionally be displayed on any paired watchOS 11+ or macOS 26+ device.
+
+![A screenshot of a macOS menu bar displaying a Live Activity as an alert.]({% image_buster /assets/img/live-activity-macos.png %}){: style="max-width:60%;"}
+
+The Live Activities article covers the [prerequisites]({{site.baseurl}}/developer_guide/platforms/swift/live_activities/#prerequisites) for managing Live Activities through the Braze Swift SDK.
 
 #### Do React Native apps support Live Activities?
 
