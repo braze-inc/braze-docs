@@ -132,6 +132,8 @@ To link the confirmation page:
 
 If you don’t include a confirmation page, users may not know their form was submitted successfully. Always include a confirmation experience to complete the journey.
 
+{% alert note %} If your confirmation page opens in a new tab, a user who returns to the original landing page and resubmits with updated information can overwrite the previous submission, resulting in inconsistent data. {% endalert %}
+
 ### Step 5: Preview the page
 
 You can preview your landing page in the editor's **Preview** tab. After saving your landing page as a draft, you can visit the URL by going to **Landing Pages** and selecting **Copy URL** next to your landing page. You can also share the URL with collaborators.
