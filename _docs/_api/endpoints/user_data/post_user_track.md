@@ -308,15 +308,15 @@ Current limits based on expected ingestion can be found in the dashboard under *
 
 ### Rate-limit headers for Monthly Active Users CY 24-25
 
-All non-rate-limited (i.e., non 429) responses will contain the following HTTP response headers that indicate the state of the hourly rate limit window to the client. We recommend using these headers to manage your request rate:
+All non-rate-limited (such as non-`429`) responses will contain the following HTTP response headers that indicate the state of the hourly rate limit window to the client. We recommend using these headers to manage your request rate:
 
-| Header Name             | Description                                                                                 |
+| Header name             | Description                                                                                 |
 | ----------------------- | ------------------------------------------------------------------------------------------- |
 | `X-RateLimit-Limit`     | The number of requests allowed per time period                                              |
 | `X-RateLimit-Remaining` | The approximate number of requests remaining within a window                                |
-| `X-RateLimit-Reset`     | Number of seconds remaining before current window resets                                    |
+| `X-RateLimit-Reset`     | The number of seconds remaining before the current window resets                                    |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Note that the RateLimit-Limit, RateLimit-Remaining, and RateLimit-Reset headers are not returned when you actually hit a HTTP 429 error. When you hit the error, those headers are replaced with a X-Ratelimit-Retry-After header that returns an int indicating the number of seconds before you can start making requests. 
+Note that the `RateLimit-Limit`, `RateLimit-Remaining`, and `RateLimit-Reset` headers are not returned when you hit an HTTP `429` error. When you hit the error, those headers are replaced with an `X-Ratelimit-Retry-After` header that returns an integer indicating the number of seconds before you can start making requests.
 
 {% endapi %}
