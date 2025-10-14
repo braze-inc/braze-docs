@@ -112,12 +112,10 @@ Este informe sólo contiene los 10.000 eventos de seguridad más recientes de su
 - Reinicio de la autenticación de dos factores completado
 - Desarrollador autorizado 2FA
 - Desarrollador adicional añadido
-- Cuenta añadida
 - Desarrollador Suspendido
 - Desarrollador no suspendido
 - Desarrollador Actualizado
 - Desarrollador eliminado
-- Cuenta eliminada
 - Estado de la suscripción del usuario actualizado
 - Usuario actualizado
 

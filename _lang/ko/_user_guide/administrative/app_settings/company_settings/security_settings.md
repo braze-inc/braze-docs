@@ -112,12 +112,10 @@ If you're having issues logging in with two-factor authentication, contact your 
 - Two-Factor Auth Reset Completed
 - Cleared Developer 2FA
 - Added Additional Developer
-- Added Account
 - Developer Suspended
 - Developer Unsuspended
 - Developer Updated
 - Removed Developer
-- Removed Account
 - User Subscription Status Updated
 - User Updated
 
