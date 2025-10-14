@@ -112,10 +112,12 @@ Esse relatório contém apenas os 10.000 eventos de segurança mais recentes de 
 - Reinicialização da autenticação de dois fatores concluída
 - Desenvolvedor liberado 2FA
 - Desenvolvedor adicional adicionado
+- Conta adicionada
 - Desenvolvedor suspenso
 - Desenvolvedor não suspenso
 - Desenvolvedor atualizado
 - Desenvolvedor removido
+- Conta removida
 - Atualização do status da inscrição do usuário
 - Usuário atualizado
 

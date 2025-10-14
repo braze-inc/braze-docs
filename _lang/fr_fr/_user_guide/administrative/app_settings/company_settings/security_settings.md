@@ -112,10 +112,12 @@ Ce rapport contient uniquement les 10 000 événements de sécurité les plus 
 - Réinitialisation de l'authentification à deux facteurs terminée
 - Autorisé Développeur 2FA
 - Ajout d'un développeur supplémentaire
+- Compte ajouté
 - Suspension du développeur
 - Développeur non suspendu
 - Développeur mis à jour
 - Développeur supprimé
+- Compte supprimé
 - Mise à jour de l'état de l'abonnement des utilisateurs
 - Utilisateur mis à jour
 

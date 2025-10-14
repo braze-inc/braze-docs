@@ -99,15 +99,20 @@ Dieser Bericht enthält nur die letzten 10.000 Sicherheitsereignisse für Ihr Ko
 
 {% details Gemeldete Sicherheitsereignisse %}
 ### Anmeldung und Konto 
-- Entfernte Entwickler:in
-- Zusätzlicher Entwickler:in
 - Eingetragen
 - Anmeldung fehlgeschlagen
 - Einrichtung der Zwei-Faktoren-Authentifizierung abgeschlossen
 - Zurücksetzen der Zwei-Faktor-Authentifizierung abgeschlossen
 - Freigegebene Entwickler:in 2FA
+- Zusätzlicher Entwickler:in hinzugefügt
+- Konto hinzugefügt
 - Entwickler:in suspendiert
 - Entwickler:in Unsuspended
+- Entwickler:in aktualisiert
+- Entfernte Entwickler:in
+- Konto entfernt
+- Benutzer-Abonnement-Status aktualisiert
+- Benutzer aktualisiert
 
 ### Erhöhter Zugang
 - Elevated Access Flow gestartet
