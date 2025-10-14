@@ -79,8 +79,22 @@ document.addEventListener("DOMContentLoaded", function () {
   const input = document.getElementById("search-box-autocomplete");
 
   if (input) {
-    const placeholderText = "Search Everything";
+    const translations = {
+      en: "Search everything",
+      "pt-br": "Buscar tudo",
+      ko: "전체 검색",
+      fr: "Rechercher tout",
+      es: "Buscar todo",
+      de: "Alles durchsuchen",
+      ja: "すべて検索"
+    };
+
+    let lang = document.documentElement.lang;
+    let placeholderText = translations[lang] || translations.en;
     input.setAttribute("placeholder", placeholderText);
+    queryInput.setAttribute("placeholder", `${placeholderText}...`);
+    // const placeholderText = "Search Everything";
+    // input.setAttribute("placeholder", placeholderText);
   
     function toggleWidth(input) {
       if (input.value.trim() !== "") {
