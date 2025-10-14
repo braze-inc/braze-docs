@@ -1343,7 +1343,7 @@ $( document ).ready(function() {
       <div class="row">
           <div class="col">
 {% alert tip%}
-Get more from Support: track all your cases, add attachments, and find answers faster in the Support Portal. Find out more [here]({{site.baseurl}}/user_guide/administrative/access_braze/support/).
+Track all your cases, add attachments, and find answers faster in the Support Portal. Find out more [here]({{site.baseurl}}/user_guide/administrative/access_braze/support/).
 {% endalert %}
           </div>
       </div>
