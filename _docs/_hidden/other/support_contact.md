@@ -1492,6 +1492,7 @@ Track all your cases, add attachments, and find answers faster in the Support Po
               <a target="" href="{{site.baseurl}}/help/faqs/">Frequently Asked Questions</a><br />
               <a target="" href="https://learning.braze.com/">Braze Learning</a><br />
               <a target="" href="https://dashboard.braze.com/">Braze Dashboard</a><br />
+              <a target="" href="{{site.baseurl}}/user_guide/administrative/access_braze/support/">Support Portal</a><br />
             </div>
 
 
