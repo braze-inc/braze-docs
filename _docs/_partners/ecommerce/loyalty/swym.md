@@ -43,7 +43,7 @@ Currently, the Braze integration with Swym is a managed integration and is not s
 ![Generating an API key in Braze.]({% image_buster /assets/img/swym/braze-api-key.png %})
 
 {% alert important %}
-Share credentials securely using [OneTimeSecret](https://onetimesecret.com/) (a one-time, self-destructive link tool) to keep your API keys protected.
+To protect your API keys, Swym recommends that you share credentials securely using a one-time, self-destructive link tool (for example, [OneTimeSecret](https://onetimesecret.com/)).
 {% endalert %}
 
 {: start="2"}
