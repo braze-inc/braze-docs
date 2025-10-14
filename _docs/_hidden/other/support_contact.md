@@ -1474,7 +1474,7 @@ $( document ).ready(function() {
 
         <div id="support-portal-banner" style="background-color: #f4f4f7; padding: 10px; text-align: left; border-bottom: 1px solid #dfdfe3;">
           <p style="margin: 0; font-size: 16px;">
-              Designated support contacts can use the Braze Support Portal to track all your company's cases. Learn how to activate the portal in our <a target="" href="{{site.baseurl}}/user_guide/administrative/access_braze/support/">Braze support</a> documentation, and explore the portal's features in our <a target="" href="https://learning.braze.com/the-braze-support-portal">learning course</a>.
+              Get more from Support: track all your cases, add attachments, and find answers faster in the Support Portal. Find out more <a href="https://www.braze.com/docs/user_guide/administrative/access_braze/support">here</a>
           </p>
         </div>
         
