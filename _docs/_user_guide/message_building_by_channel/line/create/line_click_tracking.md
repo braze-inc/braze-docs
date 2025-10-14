@@ -13,9 +13,6 @@ channel:
 
 > This page covers how to turn on click tracking in your LINE messages, test shortened links, use your custom domain in tracked links, and more.
 
-{% alert important %}
-LINE click tracking is in early access. Contact your Braze customer success manager if you're interested in participating in this early access.
-{% endalert %}
 
 When LINE click tracking is turned on, Braze automatically shortens your URLs, adds tracking mechanisms, and records clicks in real time. While LINE offers you aggregate click data, Braze provides granular user information that is timely and actionable. This data empowers you to create more targeted segmentation and retargeting strategies, such as segmenting users based on click behavior and triggering messages in response to specific clicks.
 
