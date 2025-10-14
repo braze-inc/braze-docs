@@ -35,7 +35,7 @@ To set up click tracking for a text message:
 ![LINE message composer with a Text message containing a long URL: https://braze.com/docs/user_guide/message_building_by_channel/line/create/]({% image_buster /assets/img/line/click_tracking_text_message.png %})
 
 {: start="2"}
-2. Go to the **Settings** tab and confirm **Click Tracking** is enabled. (Click tracking is enabled by default for all new messages.)
+2. Go to the **Settings** tab and confirm **Click Tracking** is turned on. Click tracking is turned on by default for all new messages.
 
 {% alert note %}
 You can view previews of the shortened link while in the **Settings** or **Preview & Test** tab. The full link will display in the composer while you build your message.
@@ -54,7 +54,7 @@ To set up click tracking for a rich message:
 ![LINE message composer with a Rich message with two tappable areas that each have a URL.]({% image_buster /assets/img/line/rich_message_click_tracking.png %})
 
 {: start="4"}
-4. Go to the **Settings** tab and confirm **Click Tracking** is enabled. (Click tracking is enabled by default for all new messages.)
+4. Go to the **Settings** tab and confirm **Click Tracking** is turned on. Click tracking is turned on by default for all new messages.
 
 ### Card-based messages
 
@@ -66,7 +66,7 @@ To set up click tracking for a card-based message:
 ![LINE message composer with a card-based message with two buttons that each have a URL.]({% image_buster /assets/img/line/card_based_message_click_tracking.png %})
 
 {: start="3"}
-3. Go to the **Settings** tab and confirm **Click Tracking** is enabled. (Click tracking is enabled by default for all new messages.)
+3. Go to the **Settings** tab and confirm **Click Tracking** is turned on. Click tracking is turned on by default for all new messages.
 
 {% alert note %}
 URLs in the **Title** or **Description** fields will not be shortened because these fields aren't clickable within LINE.
@@ -130,7 +130,7 @@ You can retarget users who have clicked a URL in a LINE message by using the fol
 
 ![LINE action-based delivery trigger.]({% image_buster /assets/img/line/line_action_based.png %})
 
-- Segmentation Filters
+- Segmentation filters
     - Clicked/Opened Campaign
     - Clicked/Opened Campaign or Canvas with Tag 
     - Clicked/Opened Step
@@ -157,7 +157,7 @@ No, click tracking works without any SDK integration.
 
 ### Do I know which individual users are clicking on a URL?
 
-Yes. When click tracking is enabled, you can retarget users who have clicked URLs by using the [LINE retargeting filters](#retargeting-users).
+Yes. When click tracking is turned on, you can retarget users who have clicked URLs by using the [LINE retargeting filters](#retargeting-users).
 
 ### Does click tracking work with deep links or universal links?
 
