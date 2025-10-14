@@ -27,15 +27,17 @@ The only message type that suppression lists do not apply to is feature flags. U
 
 You can use exception tags so that suppression list users are still targeted by particular campaigns and Canvases. For details, refer to step 4 in [Setting up suppression lists](#setup). If you do not add exception tags to a suppression list, then users in that suppression list will not be targeted with any messaging besides feature flags. 
 
-![The "Exception Settings" section with a checkbox to not apply the suppression list to API-triggered campaigns and Canvases.]({% image_buster /assets/img/suppression_list_checkbox.png %}){: style="max-width:70%;"}
-
 {% alert note %}
 Suppression lists are applied to API campaigns that are created in the Braze dashboard with a `campaign_id`. Suppression lists don't apply to messages sent through [Braze messaging endpoints]({{site.baseurl}}/api/endpoints/messaging/) without an associated `campaign_id`. 
 {% endalert %}
 
+![The "Exception Settings" section with a checkbox to not apply the suppression list to API-triggered campaigns and Canvases.]({% image_buster /assets/img/suppression_list_checkbox.png %}){: style="max-width:70%;"}
+
 ## Setting up suppression lists {#setup}
 
-Because suppression lists can significantly impact the messages you send, only admins can edit, save, activate, and deactivate suppression lists (all users can view suppression lists).
+{% alert note %}
+All users can view suppression lists, but only users with [admin permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/?tab=admin#list-of-permissions) can create and manage suppression lists.
+{% endalert %}
 
 1. Go to **Audience** > **Suppression Lists**.<br><br>![The "Suppression Lists" page with a list of three suppression lists.]({% image_buster /assets/img/suppression_lists_home.png %})<br><br>
 2. Select **Create Suppression List** and add a name.<br><br>![A window called "Create a Suppression List" with a field to enter a name.]({% image_buster /assets/img/create_suppression_list.png %}){: style="max-width:80%;"}<br><br>

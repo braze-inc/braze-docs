@@ -306,6 +306,17 @@ For customers who have purchased Monthly Active Users - CY 24-25, Braze manages 
 
 Current limits based on expected ingestion can be found in the dashboard under **Settings** > **APIs and Identifiers** > **API Usage Dashboard**. We may modify rate limits to protect system stability or allow for increased data throughput on your account. Please contact Braze Support or your customer success manager for questions or concerns regarding hourly or per-second request limit and the needs of your business.
 
+### Rate limit headers for Monthly Active Users CY 24-25
 
+All non-rate-limited (such as non-`429`) responses will contain the following HTTP response headers that indicate the state of the hourly rate limit window to the client. We recommend using these headers to manage your request rate:
+
+| Header name             | Description                                                                                 |
+| ----------------------- | ------------------------------------------------------------------------------------------- |
+| `X-RateLimit-Limit`     | The number of requests allowed per time period                                              |
+| `X-RateLimit-Remaining` | The approximate number of requests remaining within a window                                |
+| `X-RateLimit-Reset`     | The number of seconds remaining before the current window resets                                    |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+Note that the `RateLimit-Limit`, `RateLimit-Remaining`, and `RateLimit-Reset` headers are not returned when you hit an HTTP `429` error. When the error occurs, those headers are replaced with an `X-Ratelimit-Retry-After` header that returns an integer indicating the number of seconds before you can start making requests.
 
 {% endapi %}
