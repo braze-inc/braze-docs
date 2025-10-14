@@ -54,6 +54,124 @@ guide_featured_list:
 For more information on any of the updates listed on this page, reach out to your account manager or [open a support ticket]({{site.baseurl}}/user_guide/administrative/access_braze/support/). You can also check out our [SDK Changelogs]({{site.baseurl}}/developer_guide/changelogs) for more information about our monthly SDK releases, improvements, and breaking changes.
 {% endalert %}
 
+## October 14, 2025 release
+
+### BrazeAI Decisioning Studio™
+
+[BrazeAI Decisioning Studio™](https://www.braze.com/product/brazeai-decisioning-studio/) replaces A/B testing with AI decisioning that personalizes everything, and maximizes any metric: drive dollars, not clicks. With BrazeAI Decisioning Studio™, you can optimize any business KPI. Refer to our dedicated section [BrazeAI Decisioning Studio™]({{site.baseurl}}/user_guide/brazeai/decisioning_studio) for sample use cases and key features.
+
+### Data flexibility
+
+#### New Currents events
+
+These new events were added to the [Currents glossary]({{site.baseurl}}/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events):
+
+- `users.messages.rcs.Click`
+- `users.messages.rcs.Rejection`
+- `users.messages.line.Abort`
+- `users.messages.line.Send`.
+- `users.messages.line.InboundReceive`
+- `users.messages.line.Click`
+- `users.messages.rcs.Delivery`
+- `users.messages.rcs.InboundReceive`
+- `users.messages.rcs.Read`
+- `users.messages.rcs.Send`
+- `users.messages.rcs.Abort`
+
+#### Suppression lists
+
+{% multi_lang_include release_type.md release="General availability" %}
+
+[Suppression lists]({{site.baseurl}}/user_guide/engagement_tools/segments/suppression_lists) are groups of users who automatically do not receive any campaigns or Canvases. Suppression lists are defined by segment filters, and users will enter and exit suppression lists as they meet filter criteria.
+
+#### Zero-copy personalization
+
+{% multi_lang_include release_type.md release="Early access" %}
+
+Sync Canvas triggers using Cloud Data Ingestion for [zero-copy personalization]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/zero_copy_sync/). This feature accesses user-specific information from your data storage solution and passes it to a destination Canvas. Canvas steps can optionally include personalization fields that are not persisted on Braze user profiles.
+
+#### Canvas Context variables for Audience Paths and Decision Split steps
+
+{% multi_lang_include release_type.md release="Early access" %}
+
+You can [create context variable filters]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context/#context-variable-filters) that use previously declared context variables in [Audience Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths) and [Decision Split]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split) steps.
+
+### Unlocking creativity
+
+#### Deal Cards for emails
+
+Use [Deal Cards]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/gmail_promotions_tab) to provide key deal information directly at the top of email bodies. This allows recipients to quickly understand the offer details and take action.
+
+#### Templates for Banners
+
+When you [compose your Banner]({{site.baseurl}}/user_guide/message_building_by_channel/banners/creating_campaigns), you can now either start with a blank template, use a Braze template, or select a saved Banner template.
+
+### Robust channels
+
+#### SMS and RCS bot click filtering
+
+{% multi_lang_include release_type.md release="General availability" %}
+
+[SMS and RCS bot click filtering]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/bot_click_filtering/) enhances campaign analytics and workflows by excluding suspected bot clicks. A “bot click” refers to automated clicks on shortened links in SMS and RCS messages, such as those from web crawlers, Android and iOS link previews, or CPaaS security software. This feature facilitates accurate reporting, segmentation, and orchestration to engage real users.
+
+#### Transfer WhatsApp phone numbers
+
+Transfer a WhatsApp Business Account (WABA) phone number and its associated subscription group [from one workspace to another]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/transfer_between_workspaces/) within Braze.
+
+#### WhatsApp Flows response messages and preview
+
+In a Canvas, you can create a WhatsApp message step that uses a [response message]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/whatsapp_flows/?tab=response%20message#configuring-whatsapp-flow-messages-and-responses) and flow message. You can also select **Preview Flow** to preview the Flow directly in Braze to confirm it behaves as expected
+
+### WhatsApp product messages
+
+[Product messages]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/product_messages/) empower you to send interactive WhatsApp messages that showcase products directly from your Meta catalog.
+
+### AI and ML automation
+
+#### Braze Agents
+
+{% multi_lang_include release_type.md release="Beta" %}
+
+[Braze Agents]({{site.baseurl}}/user_guide/brazeai/agents/) are AI-powered helpers you can create inside Braze. Agents can generate content, make intelligent decisions, and enrich your data so you can deliver more personalized customer experiences.
+
+### New Braze partnerships
+
+#### Jasper - Templates
+
+The [Jasper]({{site.baseurl}}/partners/jasper/) and Braze integration empowers you to streamline content creation and campaign execution. With Jasper, your marketing teams can generate high-quality, on-brand copy in minutes. Braze will then facilitate the delivery of these messages to the right audience at the optimal time. This integration fosters seamless workflows, reduces manual effort, and drives stronger engagement outcomes.
+
+### SDK updates
+
+The following SDK updates have been released. Breaking updates are listed below; all other updates can be found by checking the corresponding SDK changelogs.
+
+- [Cordova SDK 14.0.0](https://github.com/braze-inc/braze-cordova-sdk/blob/master/CHANGELOG.md)
+    - Updated the native Android bridge [from Braze Android SDK 37.0.0 to 39.0.0](https://github.com/braze-inc/braze-android-sdk/compare/v37.0.0...v39.0.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed).
+        - The minimum required GradlePluginKotlinVersion is now 2.1.0.
+    - Updated the native iOS bridge [from Braze Swift SDK 12.0.0 to 13.2.0](https://github.com/braze-inc/braze-swift-sdk/compare/12.0.0...13.2.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed). This includes Xcode 26 support.
+    - Removes support for News Feed. The following APIs have been removed:
+        - `launchNewsFeed`
+        - `getNewsFeed`
+        - `getNewsFeedUnreadCount`
+        - `getNewsFeedCardCount`
+        - `getCardCountForCategories`
+        - `getUnreadCardCountForCategories`
+- [React Native SDK 17.0.0-17.0.1](https://www.npmjs.com/package/@braze/react-native-sdk/v/17.0.1)
+    - Updates the native Android SDK version bindings [from Braze Android SDK 37.0.0 to 39.0.0](https://github.com/braze-inc/braze-android-sdk/compare/v37.0.0...v39.0.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed).
+    - Removes support for News Feed. The following APIs have been removed:
+        - `launchNewsFeed`
+        - `requestFeedRefresh`
+        - `getNewsFeedCards`
+        - `logNewsFeedCardClicked`
+        - `logNewsFeedCardImpression`
+        - `getCardCountForCategories`
+        - `getUnreadCardCountForCategories`
+        - `Braze.Events.NEWS_FEED_CARDS_UPDATED`
+        - `Braze.CardCategory`
+- [Web SDK 6.2.0](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md)
+- [Flutter SDK 15.1.0](https://pub.dev/packages/braze_plugin/changelog)
+- [Unity SDK 10.0.0](https://github.com/braze-inc/braze-unity-sdk/blob/master/CHANGELOG.md)
+    - Updated the native iOS bridge [from Braze Swift SDK 12.0.0 to 13.2.0](https://github.com/braze-inc/braze-swift-sdk/compare/12.0.0...13.2.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed). This includes Xcode 26 support.
+
 ## September 16, 2025 release
 
 ### Data flexibility
