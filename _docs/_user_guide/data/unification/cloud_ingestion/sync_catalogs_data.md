@@ -216,7 +216,7 @@ ID,PAYLOAD,DELETED
 {% endsubtab %}
 {% endsubtabs %}
 
-For setup details, see [File Storage Integrations]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/file_storage_integrations/).
+For setup details, see [File storage integrations]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/file_storage_integrations/).
 
 {% endtab %}
 {% endtabs %}
