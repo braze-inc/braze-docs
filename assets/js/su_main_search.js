@@ -35,7 +35,21 @@ document.addEventListener("DOMContentLoaded", function () {
           handleSearch(queryInput, langSelect);
         }
       });
-      queryInput.setAttribute("placeholder", "Search Everything...");
+
+      const translations = {
+        en: "Search everything",
+        "pt-br": "Buscar tudo",
+        ko: "전체 검색",
+        fr: "Rechercher tout",
+        es: "Buscar todo",
+        de: "Alles durchsuchen",
+        ja: "すべて検索"
+      };
+
+      let lang = document.documentElement.lang;
+      let placeholderText = translations[lang] || translations.en;
+      queryInput.setAttribute("placeholder", `${placeholderText}...`);
+
     }
 
     // Clear icon click
@@ -43,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
       container.addEventListener("click", function (e) {
         if (e.target.closest(".su__input-close")) {
           queryInput.value = "";
-          queryInput.focus(); 
+          queryInput.focus();
         }
       });
     }
@@ -53,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function handleSearch(queryInput, langSelect) {
     const query = queryInput ? queryInput.value.trim() : "";
-    const lang = langSelect ? langSelect.value : "en"; 
+    const lang = langSelect ? langSelect.value : "en";
 
     const targetUrl = `/docs/${lang}/search?searchString=${encodeURIComponent(query)}`;
     console.log("Redirecting to:", targetUrl);
