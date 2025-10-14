@@ -28,7 +28,7 @@ To efficiently automate this communication, this integration uses two key Braze 
 
 ## Prerequisites
 
-| Prerequisite | Description
+| Prerequisite | Description |
 | - | - |
 | External AI system | A third-party AI or communication system capable of building and managing chatbots, automated client service systems using APIs, or both. |
 | Braze and WhatsApp integration | A WhatsApp number managed by Braze |
@@ -57,7 +57,7 @@ First, create a webhook campaign to establish a way to send WhatsApp messages re
 {% endraw %}
 
 {: start="5"}
-5. In step 2 of the campaign composer, select the **Action-Based** delivery type and the campaign trigger of **Send a WhatsApp inbound message**.
+5. In the **Schedule Delivery** step of your campaign composer, select **Action-Based** for the delivery type and **Send a WhatsApp inbound message** for the campaign trigger.
 
 ![Action-based delivery with a trigger of sending a WhatsApp inbound message.]({% image_buster /assets/img/whatsapp/inbound_message_trigger.png %})
 
@@ -66,7 +66,7 @@ First, create a webhook campaign to establish a way to send WhatsApp messages re
 
 ### Step 2: Create an API-triggered campaign for outbound messages {#step-2}
 
-Second, create an API-triggered campaign to establish a way for your external system to send messages back to users through WhatsApp.
+Next, create an API-triggered campaign to establish a way for your external system to send messages back to users through WhatsApp.
 
 1. In Braze, create a WhatsApp campaign. 
 2. In the message composer, select either **WhatsApp Template Message** or **Response Message**, then select the template or response message layout. You can select any response message layout because the inbound message opened the 24-hour WhatsApp window.
@@ -74,21 +74,21 @@ Second, create an API-triggered campaign to establish a way for your external sy
 ![Message composer with options to select the message type and message layout.]({% image_buster /assets/img/whatsapp/response_message_layout.png %})
 
 {: start="3"}
-3. Add the API trigger property to the message body, such as {% raw %}```{{api_trigger_properties.${external_system_msg+body}}}```{% endraw %}. This allows your AI system to populate the message that will send.
+3. Add the API trigger property to the message body, such as {% raw %}```{{api_trigger_properties.${external_system_msg+body}}}```{% endraw %}. This allows your AI system to populate the message that will be sent.
 
 ![Message composer with message body that contains trigger properties.]({% image_buster /assets/img/whatsapp/api_trigger_properties.png %})
 
 {: start="4"}
-4. In step 2 of the campaign composer, select the **Action-Based** delivery type.
+4. In the **Schedule Delivery** step of your campaign composer, select **Action-Based** for the delivery type.
 5. Save the campaign, then take a note of the unique `campaign_id` that Braze generates for this campaign. You’ll need the ID for the next step.
 
 ### Step 3: Connect the external system to the API-triggered campaign
 
-Third and finally, configure your external system to call Braze and send the response.
+Lastly, configure your external system to call Braze and send the response.
 
 1. In your external system's code, after processing the received message and generating the response, make a POST request to the Braze `/messages/send` endpoint.
-2. In the `/messages/send` request body, include the `campaign_id` from [Step 2](#step-2), the user's external_id, and the content of the external system's response.
-3. Use the API trigger property from [Step 2](#step-2) to insert the external system's response, and don’t forget to include your API Key in the request header for authentication, such as in this CURL example:
+2. In the `/messages/send` request body, include the `campaign_id` from [Step 2](#step-2), the user's `external_id`, and the content of the external system's response.
+3. Use the API trigger property from [Step 2](#step-2) to insert the external system's response, and don’t forget to include your API Key in the request header for authentication, such as in this cURL example:
 
 {% raw %}
 ```json
