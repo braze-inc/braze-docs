@@ -1341,6 +1341,15 @@ $( document ).ready(function() {
 
 <div class="container-fluid" id="main-container">
       <div class="row">
+          <div class="col">
+              <div id="support-portal-banner" style="background-color: #f4f4f7; padding: 10px; text-align: left; border-bottom: 1px solid #dfdfe3; margin-bottom: 20px;">
+                <p style="margin: 0; font-size: 16px;">
+                    Get more from Support: track all your cases, add attachments, and find answers faster in the Support Portal. Find out more <a href="https://www.braze.com/docs/user_guide/administrative/access_braze/support">here</a>
+                </p>
+              </div>
+          </div>
+      </div>
+      <div class="row">
           <div class="col" >
               <h1 class="h1">Need Help? </h1>
               <div class="gradient-line"></div>
@@ -1472,12 +1481,6 @@ $( document ).ready(function() {
         </div>
         <div class="col-sm-5" id="ticket_resources">
 
-        <div id="support-portal-banner" style="background-color: #f4f4f7; padding: 10px; text-align: left; border-bottom: 1px solid #dfdfe3;">
-          <p style="margin: 0; font-size: 16px;">
-              Get more from Support: track all your cases, add attachments, and find answers faster in the Support Portal. Find out more <a href="https://www.braze.com/docs/user_guide/administrative/access_braze/support">here</a>
-          </p>
-        </div>
-        
         <div id="support-search-div">
          </div>
 
