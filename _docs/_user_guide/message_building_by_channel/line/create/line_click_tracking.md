@@ -1,5 +1,5 @@
 ---
-nav_title: LINE Click Tracking
+nav_title: LINE click tracking
 article_title: LINE Click Tracking
 page_order: 2
 description: "This page covers how to turn on click tracking in your LINE messages, test shortened links, use your custom domain in tracked links, and more."
