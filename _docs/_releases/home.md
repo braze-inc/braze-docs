@@ -122,11 +122,11 @@ Transfer a WhatsApp Business Account (WABA) phone number and its associated subs
 
 In a Canvas, you can create a WhatsApp message step that uses a [response message]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/whatsapp_flows/?tab=response%20message#configuring-whatsapp-flow-messages-and-responses) and flow message. You can also select **Preview Flow** to preview the Flow directly in Braze to confirm it behaves as expected
 
-### WhatsApp product messages
+#### WhatsApp product messages
 
 [Product messages]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/product_messages/) empower you to send interactive WhatsApp messages that showcase products directly from your Meta catalog.
 
-### Integrating Braze and WhatsApp with an external system
+#### Integrating Braze and WhatsApp with an external system
 
 [Leverage the power of AI chatbots and live agent hand-offs]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_use_cases/external_system/) on the WhatsApp channel to streamline your customer support operations. By automating routine inquiries and seamlessly transitioning to human agents when needed, you can significantly improve response times and enhance the overall customer experience.
 
@@ -143,6 +143,10 @@ In a Canvas, you can create a WhatsApp message step that uses a [response messag
 #### Jasper - Templates
 
 The [Jasper]({{site.baseurl}}/partners/jasper/) and Braze integration empowers you to streamline content creation and campaign execution. With Jasper, your marketing teams can generate high-quality, on-brand copy in minutes. Braze will then facilitate the delivery of these messages to the right audience at the optimal time. This integration fosters seamless workflows, reduces manual effort, and drives stronger engagement outcomes.
+
+#### Swym - Loyalty and retargeting
+
+[Swym]({{site.baseurl}}/partners/swym/) helps eCommerce brands capture shopping intent with Wishlists, Save for Later, Gift Registry, and Back-in-Stock alerts. Using rich, permission-based data, you can craft hyper-targeted campaigns and deliver personalized shopping experiences that drive engagement, boost conversions, and increase loyalty.
 
 ### SDK updates
 
