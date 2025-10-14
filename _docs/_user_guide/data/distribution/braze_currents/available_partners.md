@@ -17,7 +17,6 @@ Naming conventions for events that flow for one partner from Braze may not match
 {% endalert %}
 
 ## Data warehouse storage
-[![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/introduction-to-data-warehouses){: style="float:right;width:120px;border:0;" class="noimgborder"}
 Data warehouse storage offers a collection source for all the information streamed from Currents. These partners can either act as warehouses (for flat file storage) or be used to power business intelligence tools and machine learning algorithms, get insights on marketing performance, and more.
 
 * [Amazon S3]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/amazon_s3/)
