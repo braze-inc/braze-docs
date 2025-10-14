@@ -92,9 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let lang = document.documentElement.lang;
     let placeholderText = translations[lang] || translations.en;
     input.setAttribute("placeholder", placeholderText);
-    queryInput.setAttribute("placeholder", `${placeholderText}...`);
-    // const placeholderText = "Search Everything";
-    // input.setAttribute("placeholder", placeholderText);
+ 
   
     function toggleWidth(input) {
       if (input.value.trim() !== "") {
