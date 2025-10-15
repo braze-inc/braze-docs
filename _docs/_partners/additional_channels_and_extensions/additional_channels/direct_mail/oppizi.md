@@ -101,4 +101,4 @@ The following is an example request body:
 
 ### Step 4: Preview and test your request in Braze
 
-After adding your request body containing Oppizi’s workflow ID, preview the request and run a test to confirm your setup is working as expected. Now, you're ready to go with your automated direct mail campaigns.
+After adding your request body with Oppizi’s workflow ID, preview the request and run a test to confirm your setup is working as expected. Now, you're ready to go with your automated direct mail campaigns.
