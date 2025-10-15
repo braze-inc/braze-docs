@@ -279,7 +279,7 @@ The `flow_response_message` type allows you to send a flow-based message in What
 
 ##### Constraints
 
-- **flow_button**: Must include both caption and flow_id.
+- **flow_button**: Must include both caption and `flow_id`.
 - **caption**: Maximum 20 characters.
 - **flow_id**: Must be a valid published Flow ID.
 
