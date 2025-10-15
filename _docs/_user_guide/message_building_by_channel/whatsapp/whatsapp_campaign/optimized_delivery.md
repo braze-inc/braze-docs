@@ -23,17 +23,10 @@ Benefits of using optimized delivery include:
 - **Proven results:** In India, messages identified as more likely to be read or clicked had up to 9% more messages delivered compared to sending through Cloud API.
 - **Targeted delivery:** Meta’s advanced AI identifies high-engagement messages and delivers them to more users, allowing you to deliver the right message to more of the right people on WhatsApp.
 
-## Prerequisites
-
-| Prerequisite | Description |
-| - | - |
-| Marketing Messages Lite API | This must be enabled at the Facebook Business Account level. |
-| WhatsApp Business Account | This must be active and not restricted from messaging due to any violations. |
-{: .reset-td-br-1 .reset-td-br-2 role=”presentation” }
 
 ### Regional availability
 
-The availability and optimization capabilities of optimized delivery depends on the region of the business phone number and the user. To learn more, refer to [Geographic availability of features](https://developers.facebook.com/docs/whatsapp/marketing-messages-lite-api/get-started#geographic-availability-of-features). 
+The availability and optimization capabilities of optimized delivery depend on the region of the business phone number and the user. To learn more, refer to [Geographic availability of features](https://developers.facebook.com/docs/whatsapp/marketing-messages-lite-api/get-started#geographic-availability-of-features). 
 
 ## Setting up optimized delivery
 
@@ -47,12 +40,12 @@ The availability and optimization capabilities of optimized delivery depends on 
 
 ![WhatsApp Business Account Management section with a listed subscription group that has an Active number status.]({% image_buster /assets/img/whatsapp/optimized_delivery_message.png %})
 
-Alternatively, you can enable optimized delivery directly in your WhatsApp manager, and then begin sending in Braze.
+Alternatively, you can enable optimized delivery directly in your WhatsApp manager and then begin sending in Braze.
 
 ### Troubleshooting your setup
 
-- **General Error:** If something goes wrong during the upgrade, this error banner will display and advise you to [contact Support]({{site.baseurl}}/braze_support/).
-- **Ineligible Error:** If you are restricted by Meta, this error banner will display and note that "At least one WhatsApp Business Account is restricted by Meta. Accounts must be in good standing to upgrade.” This error message can’t be dismissed until the issue is resolved.
+- **General error:** If something goes wrong during the upgrade, this error banner will display and advise you to [contact Support]({{site.baseurl}}/braze_support/).
+- **Ineligible error:** If you are restricted by Meta, this error banner will display: "At least one WhatsApp Business Account is restricted by Meta. Accounts must be in good standing to upgrade.” This can’t be dismissed until the issue is resolved.
 
 ## Using optimized delivery in campaigns and Canvases
 
