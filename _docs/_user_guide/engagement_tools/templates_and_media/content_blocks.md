@@ -45,7 +45,7 @@ There are two types of editors used to create a Content Block—classic and drag
 | Name | Required field with a maximum of 100 characters. It cannot be renamed after the Content Block has been saved. Additionally, you cannot name a new Content Block the same name as a previous Content Block, even if the previous one has been archived. |
 | Description | (optional) Maximum of 250 characters. Describe the Content Block so that other Braze users know what it's for and where it's used. |
 | Content Size | Maximum of 50 KB. |
-| Placement | Content Blocks cannot be used within an email footer. |
+| Placement | Content Blocks cannot be used within an email footer set in Email Settings. However, you can create a Content Block that includes a custom footer for use in your emails. |
 | Creation | HTML editor or drag-and-drop editor. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -100,7 +100,19 @@ Content Blocks can be nested, but only once. You can nest Content Block A into C
 Nothing will prevent you from nesting a third level of Content Block, but you will not see the content expand in nests beyond the second. The content and the Liquid snippet are removed from the message.
 {% endalert %}
 
-Additionally, Content Blocks cannot be used within an email footer, though email footers can be used within Content Blocks.
+### Content Blocks and email footers
+
+Content Blocks cannot be used within an email footer that is configured in Email Settings. However, you can create a Content Block that includes footer content for use in your emails. This approach provides more flexibility and allows you to use the same footer across multiple messages.
+
+#### Recommended workflow for footers with Content Blocks
+
+To use footers with Content Blocks, follow this workflow:
+
+1. **Create the footer in Email Settings**: Set up your workspace-wide email footer in **Settings** > **Email Preferences** > **Custom Footer**. This ensures compliance with regulations and provides a fallback footer.
+2. **Create a Content Block with footer content**: Build a Content Block in the Content Blocks Library that includes your desired footer content. This Content Block can include your custom footer styling, branding, and any additional footer elements.
+3. **Use the Content Block in your emails**: Insert the footer Content Block into your email templates or campaigns using the Content Block Liquid tag.
+
+This approach allows you to maintain consistent footer branding while having the flexibility to customize footer content across different email campaigns.
 
 ### Archiving Content Blocks
 
