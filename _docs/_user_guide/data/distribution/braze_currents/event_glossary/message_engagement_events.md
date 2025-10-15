@@ -210,7 +210,7 @@ This event is not fired when the user actually uninstalls the app, as that's imp
 Subscription
 {% endapitags %}
 
-This event occurs when Braze receives a request to update the global subscription state of the user, even if the request doesn't alter the current subscription state for the user.
+This event occurs when Braze receives a request to update the global subscription state of the user.
 
 {% tabs %}
 {% tab Amplitude %}
