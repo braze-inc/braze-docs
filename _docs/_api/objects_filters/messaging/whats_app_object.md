@@ -264,7 +264,7 @@ The `flow_response_message` type allows you to send a flow-based message in What
   "flow_button": (required, object) the flow button object that contains:
     "caption": (required, string) the text that will appear on the flow button,
     "flow_id": (required, string) the unique identifier of the WhatsApp Flow,
-  "generate_custom_attribute": (optional, boolean) whether to generate a custom attribute for flow responses
+  "generate_custom_attribute": (optional, boolean) whether to save flow response on the user profile and generate a custom attribute upon responding to this flow message
 }
 ```
 
