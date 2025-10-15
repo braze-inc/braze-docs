@@ -13,6 +13,8 @@ page_order: 4
 
 Within the Drag and Drop editor, you can insert liquid personalization both within the editor and in the page or block settings in the right-hand panel. For detailed instructions on implementing liquid, please reference our [liquid documentation]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#using-liquid-1).
 
+![Landing page editor with liquid personalization added.]({% image_buster /assets/img/landing_pages/lp_liquid_.png%}){: style="max-width:35%;"}
+
 ## Previewing & Testing Personalized Pages
 
 When previewing a landing page within the editor, you can view the page as a random user, an existing user, or a custom user.
