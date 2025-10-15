@@ -171,6 +171,15 @@ After the token is saved, it can be dynamically templated into the subsequent Co
 ```
 {% endraw %}
 
+### Editing credentials
+
+You can edit the credential name for authentication types.
+
+- For basic authentication, you can update the username and password. Note that the previously entered password will not be visible.
+- For token authentication, you can update the header key-value pairs and the allowed domain. Note that the previously set header values will not be visible.
+
+![The option to edit credentials.]({% image_buster /assets/img/connected_content/edit_credentials.png %}){: style="max-width:60%"}
+
 ## Connected Content IP allowlisting
 
 When a message using Connected Content is sent from Braze, the Braze servers automatically make network requests to our customers' or third parties' servers to pull back data. With IP allowlisting, you can verify that Connected Content requests are actually coming from Braze, adding an additional layer of security.
