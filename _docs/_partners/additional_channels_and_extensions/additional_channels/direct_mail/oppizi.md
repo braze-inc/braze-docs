@@ -61,7 +61,7 @@ For request method and headers, Oppizi requires an HTTP method along with the fo
   - **Authorization:** `Bearer <oppiziAPIKey>`
   - **Content-Type:** `application/json`
 
-![An example of the Oppizi webhook header in Braze.]({% image_buster /assets/oppizi/oppizi_braze_webhook_headers.png %})
+![An example of the Oppizi webhook header in Braze.]({% image_buster /assets/img/oppizi/oppizi_braze_webhook_headers.png %})
 
 For the **Request Body**, you must include the field **oppiziWorkflowID**. This ID is generated when a workflow is created in Oppiz and is required to specify which direct mail workflow your recipients should be added to. Each direct mail workflow in Oppizi has a unique ID, so if you create an Oppizi webhook template in Braze, make sure to always update the workflow ID to the correct one.
 
