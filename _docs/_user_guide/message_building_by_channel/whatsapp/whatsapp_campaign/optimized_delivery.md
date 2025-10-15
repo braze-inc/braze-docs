@@ -23,7 +23,6 @@ Benefits of using optimized delivery include:
 - **Proven results:** In India, messages identified as more likely to be read or clicked had up to 9% more messages delivered compared to sending through Cloud API.
 - **Targeted delivery:** Meta’s advanced AI identifies high-engagement messages and delivers them to more users, allowing you to deliver the right message to more of the right people on WhatsApp.
 
-
 ### Regional availability
 
 The availability and optimization capabilities of optimized delivery depend on the region of the business phone number and the user. To learn more, refer to [Geographic availability of features](https://developers.facebook.com/docs/whatsapp/marketing-messages-lite-api/get-started#geographic-availability-of-features). 
