@@ -31,6 +31,10 @@ Purchase events must be enabled to use RFM SQL segments because the monetary val
 
 1. Go to **Audience** > **Segment Extensions**.
 2. Select **New Extension**, and then select **Recency, frequency, and monetary value (RFM) segment**.
+
+![Modal with the option to create a catalog segment for events, purchases, or RFM segments.]({% image_buster /assets/img/segment/select_rfm_segment.png %}){: style="max-width:80%" }
+
+{: start="3"}
 3. In the **Variables** panel, select your **Time Range** to specify the time period of purchase data to analyze. The time range you select will be the time range that user behavior data gets pulled from and depends on your campaign goals.
 
 | Time range field | Description | Use case |
