@@ -362,4 +362,6 @@ valid_partner_list:
   url: /docs/partners/kameleoon/
 - name: Swym
   url: /docs/partners/swym/
+- name: StackAdapt
+  url: /docs/partners/stackadapt/
 ---
