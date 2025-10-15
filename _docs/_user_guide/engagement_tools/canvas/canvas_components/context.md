@@ -149,7 +149,7 @@ The following Action Path is set up to match the basic property `brand` for the 
 {% tabs %}
 {% tab Perform custom event %}
 
-The exit criteria states that at any point in a user's journey in the Canvas, they'll exit the Canvas if:
+The exit criteria state that at any point in a user's journey in the Canvas, they'll exit the Canvas if:
 
 - They perform the custom event **Abandon Cart**, and
 - The basic property **Item in Cart** matches the string value of the context variable `cart_item_threshold`.
@@ -159,7 +159,7 @@ The exit criteria states that at any point in a user's journey in the Canvas, th
 {% endtab %}
 {% tab Make purchase %}
 
-The exit criteria states that at any point in a user’s journey in the Canvas, they'll exit the Canvas if:
+The exit criteria state that at any point in a user’s journey in the Canvas, they'll exit the Canvas if:
 
 - They make a specific purchase for the "book" product name, and
 - That purchase's nested property "loyalty_program" is equal to the user's custom attribute "VIP".
@@ -198,7 +198,7 @@ By selecting the **Compare to a context variable or custom attribute** toggle, y
 {% tabs %}
 {% tab Example 1 %}
 
-Let's say you want to send a personalized reminder to users after a dynamic period of inactivity, which includes anyone who hasn't logged into your app in the last three days should get a message.
+Let's say you want to send a personalized reminder to users after a dynamic period of inactivity, which includes anyone who hasn't logged into your app in the last three days, should receive a message.
 
 You have a context variable `re_engagement_date` that is defined as {% raw %}`{{now | minus: 3 | append: ' days'}}`{% endraw %}. Note that `3 days` can be a variable amount that is also stored as a user's custom attribute. So if the `re_engagement_date` is after the `last_login_date` (stored as a custom attribute on the user profile), they'll be sent a message.
 
@@ -335,7 +335,7 @@ Context variables use their most recent value throughout the Canvas, with each u
 
 ### Does the Canvas Context time zone consistency standardization impact API-triggered Canvases?
 
-No, this change only impacts action-triggered Canvases. All API trigger properties have the string type, not the time type, so the original time zone is always preserved. However, we still recommend using an explicit time zone filter in Liquid when the property is used.
+No, this change only impacts action-triggered Canvases. Timestamps sent into API-triggered Canvases will have the string type, not the time type, so the original time zone is always preserved.
 
 ### How does this relate to the exceptions noted in Canvas entry properties and event properties?
 
