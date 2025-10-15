@@ -110,6 +110,8 @@ We recommend setting up page container-level styles before you customize styles 
 
 You can make your landing page responsive to the size of a user's device by vertically stacking columns on smaller screens. To enable this, add a column into the row you want to make responsive, and then toggle on **Vertically stack on smaller screens** in the **Customize columns** section.
 
+When enabled, you can also reverse stack columns as well. This lets you control the vertical order of multi-column content on smaller screens so pages look and feel better on mobile - without custom code.
+
 ![The "Vertically stack on smaller screens" toggle in the "Customize columns" section.]({% image_buster /assets/img/landing_pages/device_responsive_toggle.png %}){: style="max-width:50%;"}
 
 #### Optional and required fields
