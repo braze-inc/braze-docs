@@ -68,7 +68,6 @@ Canvas entry properties are configured in the **Entry Schedule** step of creatin
 
 Entry properties can be used in Liquid in any Message step. Use the following Liquid when referencing these entry properties: {% raw %}``canvas_entry_properties${property_name}``{% endraw %}. Events must be custom events or purchase events to be used this way.
 
-
 {% alert note %}
 For in-app message channels specifically, `canvas_entry_properties` can only be referenced in Canvas.
 {% endalert %}
