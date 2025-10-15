@@ -61,4 +61,6 @@ valid_partner_list:
   url: /docs/partners/survicate/
 - name: Typeform
   url: /docs/partners/typeform/
+- name: Oppizi
+  url: /docs/partners/oppizi/
 ---
