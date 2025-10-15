@@ -503,7 +503,7 @@ You can use custom properties from your Banner campaign to retrieve key–value 
 
 You'll need to [add custom properties]({{site.baseurl}}/user_guide/message_building_by_channel/banners/creating_campaigns/#custom-properties) to your Banner campaign. Additionally, these are the minimum SDK versions required to access custom properties:
 
-{% sdk_min_versions swift:13.1.0 android:38.0.0 web:6.1.0 %}
+{% sdk_min_versions swift:13.1.0 android:38.0.0 web:6.1.0 reactnative:17.0.0 flutter:15.1.0 %}
 
 ### Accessing custom properties
 
