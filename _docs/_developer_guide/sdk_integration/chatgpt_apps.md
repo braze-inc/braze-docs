@@ -13,24 +13,18 @@ platform:
 
 ## Overview
 
-ChatGPT Apps provide a powerful platform for building AI-powered applications. By integrating Braze with your ChatGPT App, you can:
+ChatGPT Apps provide a powerful platform for building AI conversational applications. By integrating Braze with your ChatGPT App, you can continue to maintain first-party data control in the age of AI, including how to:
 
-- Track user engagement and behavior within your ChatGPT App
-- Implement user segmentation based on AI interaction patterns  
-- Retarget users across your owned channels based on their AI conversations
-- Maintain first-party data control in the age of AI
-
-While we work to create a complete feature-set for this new platform, please keep in mind that session and messaging support is not yet available. This guide will show you how to:
-
-- log custom events
-- log purchase events
-
+- Track user engagement and behavior within your ChatGPT App (__eg: which questions or chat features are your customers using__)
+- Segment and retarget Braze campaigns based on AI interaction patterns (__eg: Email users who have used chat more than 3 times per week__)
 
 ### Key Benefits for Marketing Teams
 
-**Own Your Customer Journey**: While users interact with your brand through ChatGPT, you maintain visibility into their behavior, preferences, and engagement patterns. This data flows directly into your Braze dashboard, not just the AI platform's analytics.
+**Own Your Customer Journey**: While users interact with your brand through ChatGPT, you maintain visibility into their behavior, preferences, and engagement patterns. This data flows directly onto Braze user profiles, not just the AI platform's analytics.
 
-**Cross-Platform Retargeting**: Track user interactions in your ChatGPT App and retarget them across your owned channels (email, SMS, push notifications) with personalized campaigns based on their AI usage patterns.
+**Cross-Platform Retargeting**: Track user interactions in your ChatGPT App and retarget them across your owned channels (email, SMS, push notifications, in-app messaging) with personalized campaigns based on their AI usage patterns.
+
+**Return 1:1 promotional content to ChatGPT conversations**: Deliver Braze in-app messages, Content Cards, and more directly within your ChatGPT experience using the custom conversational UI components your team has built for your app.
 
 **AI Conversation Intelligence**: Understand what users are asking about, what problems they're trying to solve, and how your ChatGPT App is helping them. Use this insight to improve your product, content, and messaging strategies.
 
@@ -53,7 +47,7 @@ By integrating Braze with your ChatGPT App, you ensure that every AI interaction
 
 Before integrating Braze with your ChatGPT App, ensure you have:
 
-- A Braze account and an SDK API key
+- A new Web App and API Key in your Braze workspace
 - A [ChatGPT App](https://openai.com/index/introducing-apps-in-chatgpt/) created in the OpenAI platform (here is their [sample app](https://github.com/openai/openai-apps-sdk-examples))
 
 {% multi_lang_include developer_guide/chatgpt_apps/sdk_integration.md %}
