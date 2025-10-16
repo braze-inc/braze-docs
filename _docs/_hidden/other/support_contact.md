@@ -1342,7 +1342,7 @@ $( document ).ready(function() {
 <div class="container-fluid" id="main-container">
       <div class="row">
           <div class="col">
-{% alert tip%}
+{% alert tip %}
 Track all your cases, add attachments, and find answers faster in the Support Portal. Find out more [here]({{site.baseurl}}/user_guide/administrative/access_braze/support/).
 {% endalert %}
           </div>
