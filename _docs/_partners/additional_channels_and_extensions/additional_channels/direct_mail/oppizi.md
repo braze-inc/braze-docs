@@ -28,7 +28,7 @@ With the Oppizi integration, you can:
 
 * **Send automated direct mail postcards** using Braze triggers connected to Oppizi's webhook and direct mail workflows.
 * **Configure thresholds, waves, and limits** in Oppizi direct mail workflows to control the sending of your campaigns.
-* **Design professional postcards** with Oppizi’s built-in design tool – no design experience required.
+* **Design professional postcards** with Oppizi’s built-in design tool—no design experience required.
 * **Track campaign performance** in real time with Oppizi’s dashboard.
 
 ## Integration
