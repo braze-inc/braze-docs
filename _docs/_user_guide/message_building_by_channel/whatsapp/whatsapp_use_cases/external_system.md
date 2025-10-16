@@ -30,7 +30,7 @@ To efficiently automate this communication, this integration uses two key Braze 
 
 | Prerequisite | Description |
 | - | - |
-| External AI system | A third-party AI or communication system capable of building and managing chatbots, automated client service systems using APIs, or both. |
+| External system | A third-party AI or communication system capable of building and managing chatbots, automated client service systems using APIs, or both. |
 | Braze and WhatsApp integration | A WhatsApp number managed by Braze |
 | Braze REST API Key | A REST API key with `campaigns.trigger.send` permissions. This can be created in the Braze dashboard by going to **Settings** > **API Keys**. |
 {: .reset-td-br-1 .reset-td-br-2 role=”presentation” }
