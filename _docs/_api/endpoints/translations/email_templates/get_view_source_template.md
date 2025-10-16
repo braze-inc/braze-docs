@@ -87,7 +87,7 @@ The status code `400` could return the following response body. Refer to [Troubl
 The following table lists possible returned errors and their associated troubleshooting steps.
 
 | Error message                           | Troubleshooting                                                                    |
-|-----------------------------------------|------------------------------------------------------------------------------------|                      |
+|-----------------------------------------|------------------------------------------------------------------------------------|
 | `MULTI_LANGUAGE_NOT_ENABLED`            | Multi-language settings aren't turned on for your workspace.                       |
 | `MULTI_LANGUAGE_NOT_ENABLED_ON_MESSAGE` | Only email templates and email, push, and in-app-message campaigns or Canvas messages with emails can be translated.             |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
