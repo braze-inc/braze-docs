@@ -100,7 +100,7 @@ The following table lists possible returned errors and their associated troubles
 | `The provided translations have exceeded the maximum of 20MB.` | The provided payload exceeds the size limit. |
 | `You have exceeded the maximum number of requests. Please try again later.` | All Braze APIs have built-in rate limiting, and this error will automatically returned when the rate has exceeded the allotted amount for this authentication token. |
 | `This message does not support multi-language.` | This can occur when a message ID doesn't support multi-language messages yet. Only messages in the following channels can be translated: push, in-app messages, and email. |
-| `Something went wrong. Translation IDs are mismatched or translated text exceeds limits.`| This is a catch-all error. Please submit a support ticket for further investigation. |
+| `Something went wrong. Translation IDs are mismatched or translated text exceeds limits.`| This is a catch-all error. Contact [Braze Support]({{site.baseurl}}/user_guide/administrative/access_braze/support) for further assistance. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}
