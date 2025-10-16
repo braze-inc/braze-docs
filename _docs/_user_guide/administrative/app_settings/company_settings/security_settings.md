@@ -154,10 +154,12 @@ This report only contains the most recent 10,000 security events for your accoun
 - Two-Factor Auth Reset Completed
 - Cleared Developer 2FA
 - Added Additional Developer
+- Added Account
 - Developer Suspended
 - Developer Unsuspended
 - Developer Updated
 - Removed Developer
+- Removed Account
 - User Subscription Status Updated
 - User Updated
 
