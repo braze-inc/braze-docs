@@ -48,8 +48,6 @@ StackAdapt can sync a variety of Braze profile fields, including, but not limite
 
 {% tabs local %}
 {% tab Standard attributes %}
-
-#### Standard attributes
 - Email
 - Date of Birth
 - First Name
@@ -65,16 +63,10 @@ StackAdapt can sync a variety of Braze profile fields, including, but not limite
 
 {% endtab %}
 {% tab Custom attributes %}
-
-### Custom attributes
-
 Attributes that are specific to your app or business, defined based on your specific business needs.
 
 {% endtab %}
 {% tab Attribution data %}
-
-### Attribution data
-
 - Attributed Ad
 - Attributed Adgroup
 - Attributed Campaign
@@ -82,9 +74,6 @@ Attributes that are specific to your app or business, defined based on your spec
 
 {% endtab %}
 {% tab Subscription status %}
-
-### Subscription status
-
 - Email Subscription Status
 - Push Subscription Status 
 
