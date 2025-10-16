@@ -15,7 +15,7 @@ It's unlikely that you'll need to manage these systems, but this information can
 
 ## Translation lifecycle
 
-We use Phrase, a translation management system (TMS), alongside GitHub to translate Braze Docs into a variety of languages. For each language, Phrase translates the English files stored in `_docs` then stores the translated files within the corresponding subdirectory in `_lang`.
+We use Phrase, a translation management system (TMS), alongside GitHub to translate Braze Docs into a variety of languages. For each language, Phrase translates the English files stored in `_docs`, and then stores the translated files within the corresponding subdirectory in `_lang`.
 
 At regular intervals, we manually trigger Phrase so new content on Braze Docs can be translated into each language. Updates are compiled into a single pull request, then reviewed by our team and merged into the `develop` branch when ready.
 
@@ -40,7 +40,7 @@ For the full list of patterns, see [`translation_regex.json`](https://github.com
 
 ## Updating Phrase regular expressions
 
-Phrase TMS only supports Java regular expressions and the list of regular expressions must be entered as a single string, similar to the following:
+Phrase TMS supports only Java regular expressions, and you must enter the list of regular expressions as a single string, similar to the following:
 
 {% raw %}
 ```plaintext
