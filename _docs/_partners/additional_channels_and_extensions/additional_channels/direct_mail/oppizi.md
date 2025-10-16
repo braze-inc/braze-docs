@@ -54,7 +54,7 @@ In your webhook template, fill out the following fields:
 - **Webhook URL:** ```https://webhook.oppizi.com/events```
 - **Request body:** **Raw Text**
 
-For request method and headers, Oppizi requires an HTTP method along with the following HTTP headers to be included in the template. fill out the following fields:
+For request method and headers, Oppizi requires an HTTP method along with the following HTTP headers to be included in the template. Fill out the following fields:
 
 - **HTTP method:** POST
 - **Request headers:**
