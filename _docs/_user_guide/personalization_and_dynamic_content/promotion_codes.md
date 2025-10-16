@@ -18,7 +18,7 @@ Promotion codes—also called promo codes—are a great way to keep users engage
 Each promotion code has an expiration date of up to six months. You can store and manage up to 20 million codes per list. By managing and analyzing the performance of your promotion codes, you can make targeted decisions for your promotional strategies and messaging.
 
 {% alert important %}
-Promotion codes can't be sent in in-app messages in Canvas. If you're participating in the [early access](#promotion-codes-iam-campaigns), promotion codes can be sent in in-app message campaigns.
+Promotion codes can't be sent in in-app messages in Canvas.
 {% endalert %}
 
 ## Creating a promotion code list {#create}
@@ -68,7 +68,7 @@ Make sure your CSV file follows these guidelines:
 You can use our built-in integration with [Voucherify]({{site.baseurl}}/partners/ecommerce/loyalty/voucherify/) or [Talon.One]({{site.baseurl}}/partners/ecommerce/loyalty/talonone/) to create and export promotion codes.
 
 {% alert important %}
-The maximum file size is 100&nbsp;MB and the maximum list size is 20MM of unused codes. If you find the wrong file was uploaded, upload a new one, and the previous one will be replaced.
+The maximum file size is 100&nbsp;MB, and the maximum list size is 20MM of unused codes. If you find the wrong file was uploaded, upload a new one, and the previous one will be replaced.
 {% endalert %}
 
 1. After the upload is complete, select **Save List** to save all the details and codes you just entered.
@@ -126,10 +126,6 @@ If no promotion codes are available, test or live messages that rely on codes wi
 {% endalert %}
 
 ### In in-app message campaigns {#promotion-codes-iam-campaigns}
-
-{% alert important %}
-Using promotion codes in in-app message campaigns is currently in early access. Contact your Braze account manager if you're interested in participating in this early access.
-{% endalert %}
 
 After creating an [in-app message campaign]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages), you can insert a [promotion code list snippet]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes#creating-a-promotion-code-list) into your in-app message message body. 
 
