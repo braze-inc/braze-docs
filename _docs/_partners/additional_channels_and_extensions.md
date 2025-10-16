@@ -63,4 +63,6 @@ valid_partner_list:
   url: /docs/partners/typeform/
 - name: Oppizi
   url: /docs/partners/oppizi/
+- name: StackAdapt
+  url: /docs/partners/stackadapt/
 ---
