@@ -4,6 +4,7 @@ page_order: 6
 description: "This page includes the event changes for each Currents release."
 tool: Currents
 ---
+
 # Currents Changelog
 
 ## Changes in Version 3
@@ -67,3 +68,4 @@ It can be linked to the RCS Rejection event via a send ID and dispatch ID. (Even
 
 * Field changes to event type `users.messages.sms.Delivery`:
     * Added new `boolean` field `is_sms_fallback`: Indicates that a SMS fallback message was sent due to a rejected RCS message. The message could result in delivery, delivery failure, or rejection. It can be linked to the RCS Rejection event via a send ID and dispatch ID
+
