@@ -364,4 +364,6 @@ valid_partner_list:
   url: /docs/partners/swym/
 - name: StackAdapt
   url: /docs/partners/stackadapt/
+- name: Oppizi
+  url: /docs/partners/oppizi/
 ---

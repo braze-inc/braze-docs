@@ -11,7 +11,7 @@ description: "Learn how to use the Braze SDK debugger, so you can troubleshoot i
 
 ## Prerequisites
 
-To use the Braze SDK debugger, you'll need `View PII` and `View User Profiles PII Compliant` permissions. Additionally, your Braze SDK needs to meet or point to the following minimum versions: 
+To use the Braze SDK debugger, you'll need "View PII" and "View User Profiles PII Compliant" permissions. To download your debugging session logs, you'll also need the "Export User Data" permission. Additionally, your Braze SDK needs to meet or point to the following minimum versions: 
 
 {% sdk_min_versions swift:10.2.0 android:32.1.0 %}
 

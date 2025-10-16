@@ -41,12 +41,20 @@ Each context variable includes:
 
 When defined, you can use a context variable throughout the Canvas by referencing it in this format: {% raw %}`{{context.${example_variable_name}}}`{% endraw %}.
 
-For example,
-{% raw %}`{{context.${flight_time}}}{% endraw %}` could return the user's scheduled flight time.
+For example, {% raw %}`{{context.${flight_time}}}`{% endraw %} could return the user's scheduled flight time.
 
 Each time a user enters the Canvas&#8212;even if they have entered it before&#8212;the context variables will be redefined based on the latest entry data and Canvas setup. This stateful approach allows each Canvas entry to maintain its own independent context, allowing users to have multiple active states within the same journey while retaining the specific context for each state.
 
 For example, if a customer has two upcoming flights, they'll have two separate journey states running simultaneously&#8212;each with its own flight-specific context variables like departure time and destination. This allows you to send personalized reminders about their 2 pm flight to New York while sending different updates about their 8 am flight to Los Angeles tomorrow, so that each message stays relevant to the specific booking.
+
+## Considerations
+
+- You can have up to 10 context variables per Context step.
+- You can store up to 50&nbsp;KB per context variable. For example, if you store an HTML and Liquid snippet in a context variable that exceeds this, the context variable won't be evaluated or stored for the user.
+- Each context variable name can be up to 100 characters.
+- Context variable names must be valid identifiers (letters, numbers, underscores only).
+- Context variable definitions can be up to 10,240 characters. 
+- Context variables passed into an API-triggered Canvas share the same namespaces as context variables created in a Context step in a Canvas. This means if you send a variable `purchased_item` in the `/canvas/trigger/send` endpoint [context object]({{site.baseurl}}/api/objects_filters/context_object), it can be referenced as {% raw %}`{context.${purchased_item}}`{% endraw %}, and re-declaring that variable in a Context step in the Canvas will override what was previously sent.
 
 ## Creating a Context step
 
@@ -149,7 +157,7 @@ The following Action Path is set up to match the basic property `brand` for the 
 {% tabs %}
 {% tab Perform custom event %}
 
-The exit criteria states that at any point in a user's journey in the Canvas, they'll exit the Canvas if:
+The exit criteria state that at any point in a user's journey in the Canvas, they'll exit the Canvas if:
 
 - They perform the custom event **Abandon Cart**, and
 - The basic property **Item in Cart** matches the string value of the context variable `cart_item_threshold`.
@@ -159,7 +167,7 @@ The exit criteria states that at any point in a user's journey in the Canvas, th
 {% endtab %}
 {% tab Make purchase %}
 
-The exit criteria states that at any point in a user’s journey in the Canvas, they'll exit the Canvas if:
+The exit criteria state that at any point in a user’s journey in the Canvas, they'll exit the Canvas if:
 
 - They make a specific purchase for the "book" product name, and
 - That purchase's nested property "loyalty_program" is equal to the user's custom attribute "VIP".
@@ -198,7 +206,7 @@ By selecting the **Compare to a context variable or custom attribute** toggle, y
 {% tabs %}
 {% tab Example 1 %}
 
-Let's say you want to send a personalized reminder to users after a dynamic period of inactivity, which includes anyone who hasn't logged into your app in the last three days should get a message.
+Let's say you want to send a personalized reminder to users after a dynamic period of inactivity, which includes anyone who hasn't logged into your app in the last three days, should receive a message.
 
 You have a context variable `re_engagement_date` that is defined as {% raw %}`{{now | minus: 3 | append: ' days'}}`{% endraw %}. Note that `3 days` can be a variable amount that is also stored as a user's custom attribute. So if the `re_engagement_date` is after the `last_login_date` (stored as a custom attribute on the user profile), they'll be sent a message.
 
@@ -216,11 +224,15 @@ The following filter compares the context variable `reminder_date` to be before 
 
 ## Previewing user paths
 
-We recommend testing and previewing your user paths to make sure your messages are sent to the right audience and context variables are evaluated to the expected outcomes.
+We recommend testing and [previewing your user paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/preview_user_paths) to make sure your messages are sent to the right audience and context variables are evaluated to the expected outcomes.
+
+{% alert note %}
+If you're previewing your Canvas in the **Preview & Test Send** section of the editor, the timestamp in the test message preview **will not** be standardized to UTC because this panel generates previews as strings. This means if a Canvas is set up to accept a `time` object, the message preview won't accurately preview what occurs when the Canvas is live. To test your Canvas most accurately, we recommend previewing user paths instead.
+{% endalert %}
 
 Be sure to observe any common scenarios that create invalid context variables. When previewing your user path, you can view the outcomes of personalized Delay steps using context variables, and any audience, decision, or Action Path step comparisons that match users to any context variables.
 
-If the context variable is valid, you can reference the variable throughout your Canvas. However, if the context variable wasn’t created correctly, future steps in your Canvas won’t perform correctly either. For example, if you create a Context step to assign users an appointment time but set the appointment time's value to a past date, the reminder email in your Message step will never be sent. 
+If the context variable is valid, you can reference the variable throughout your Canvas. However, if the context variable wasn’t created correctly, future steps in your Canvas won’t perform correctly either. For example, if you create a Context step to assign users an appointment time but set the appointment time's value to a past date, the reminder email in your Message step will never be sent.
 
 ## Converting Connected Content strings to JSON
 
@@ -335,7 +347,7 @@ Context variables use their most recent value throughout the Canvas, with each u
 
 ### Does the Canvas Context time zone consistency standardization impact API-triggered Canvases?
 
-No, this change only impacts action-triggered Canvases. All API trigger properties have the string type, not the time type, so the original time zone is always preserved. However, we still recommend using an explicit time zone filter in Liquid when the property is used.
+No, this change only impacts action-triggered Canvases. Timestamps sent into API-triggered Canvases will have the string type, not the time type, so the original time zone is always preserved.
 
 ### How does this relate to the exceptions noted in Canvas entry properties and event properties?
 
