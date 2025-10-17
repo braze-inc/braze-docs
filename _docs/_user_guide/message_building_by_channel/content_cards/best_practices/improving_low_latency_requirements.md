@@ -8,7 +8,7 @@ channel:
 ---
 
 {% alert tip %}
-Are you trying to display prominent, customized banners on your app or website? Try our new Banners product - built to support low latency banner use cases.
+Are you trying to display prominent, customized banners on your app or website? Try [Banners](#todo) - built to support low latency banner use cases.
 {% endalert %}
 
 # Content Cards as Banners
