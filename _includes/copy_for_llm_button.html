@@ -41,6 +41,16 @@ document.addEventListener('DOMContentLoaded', function() {
   copyBtn.addEventListener('click', async function() {
     const markdownContent = this.getAttribute('data-markdown-content');
     
+    // Log custom event to Braze
+    if (window.braze?.logCustomEvent) {
+      braze.logCustomEvent("copy_for_llm_clicked", {
+        page_url: window.location.pathname,
+        page_title: document.title,
+        content_length: markdownContent ? markdownContent.length : 0
+      });
+      braze.requestImmediateDataFlush();
+    }
+    
     if (!markdownContent) {
       showFeedback('No content available to copy', 'error');
       return;
