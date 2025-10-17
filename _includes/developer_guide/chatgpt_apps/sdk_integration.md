@@ -34,6 +34,24 @@ There are two ways to integrate Braze with your ChatGPT App depending on your us
 
 For displaying Braze messaging and tracking user interactions within your custom ChatGPT App widgets, use the Web SDK integration.
 
+#### Configure Widget Metadata
+
+Add the following metadata to your MCP server file to allow Braze domains:
+
+```javascript
+"openai/widgetCSP": {
+  connect_domains: ["https://YOUR-SDK-ENDPOINT"],
+  resource_domains: [
+    "https://appboy-images.com",
+    "https://braze-images.com",
+    "https://cdn.braze.eu",
+    "https://use.fontawesome.com"
+  ],
+}
+```
+
+Replace `YOUR-SDK-ENDPOINT` with your actual Braze SDK endpoint.
+
 #### Set Up the useBraze Hook
 
 ```javascript
