@@ -1,47 +1,50 @@
 ---
-nav_title: Personalizing Landing Pages
-article_title: Personalizing Landing Pages
+nav_title: Personalizing landing pages
+article_title: Personalizing landing pages
 description: "This article covers how to personalize Braze landing pages with the drag-and-drop editor."
 page_order: 4
 ---
 
-# Personalizing Landing Pages
+# Personalizing landing pages
 
-> Liquid personalization for landing pages is only available on the Pro tier of Landing Pages. Currently, Connected Content and Promo Codes are not supported via liquid personalization in landing pages.
+> Use Liquid personalization in landing pages to dynamically tailor the content with user profile data. For example, you can personalize headlines based on different user attributes without managing multiple static landing pages.
 
-## How to Personalize Pages
+{% alert important %}
+Liquid personalization for landing pages is only available on the Pro tier of landing pages. Currently, [Connected Content] and [promotion codes] are not supported with Liquid personalization in landing pages.
+{% endalert %}
 
-Within the Drag and Drop editor, you can insert liquid personalization both within the editor and in the page or block settings in the right-hand panel. For detailed instructions on implementing liquid, please reference our [liquid documentation]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#using-liquid-1).
+## Inserting Liquid
 
-![Landing page editor with liquid personalization added.]({% image_buster /assets/img/landing_pages/lp_liquid_.png%}){: style="max-width:35%;"}
+In the drag-and-drop editor, you can insert Liquid personalization both in the editor and in the page or block settings in the right-hand panel. For instructions on implementing Liquid, check out our dedicated [Liquid documentation]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#using-liquid-1).
 
-## Previewing & Testing Personalized Pages
+![Landing page editor with Liquid personalization added.]({% image_buster /assets/img/landing_pages/lp_liquid_.png %})
 
-When previewing a landing page within the editor, you can view the page as a random user, an existing user, or a custom user.
+## Preview and test
 
-However, when previewing the landing page from the datatable or the Landing Page details page, you will only be able to view it as a random user.
+When previewing a landing page in the editor, you can view the page as a random user, an existing user, or a custom user.
 
-## Personalization Considerations on Landing Pages
+However, when previewing the landing page from the data table or the **Landing Page details** page, you'll only be able to view it as a random user.
 
-To maintain optimal performance for your end users, please note the following size limits:
+## Personalization considerations
 
-- When saving a landing page, if the size exceeds **500KB**, you may receive a warning message indicating that the page has exceeded our size limits, which may prevent it from being published.
-- When rendering with liquid personalization, the total size must not exceed **1MB**; otherwise, the page may be automatically unpublished by Braze.
+To maintain optimal performance with personalized landing pages, note the following size limits:
 
-If your page violates these size limits, you will be notified via email that it may be unpublished if it continues to exceed the limit. Once the threshold is reached, the page will automatically be unpublished, and you will receive a notification.
+- **Saving a landing page:** If the size exceeds 500&nbsp;KB, you may receive a warning message indicating that the page has exceeded our size limits, which may prevent it from being published.
+- **Rendering with Liquid personalization:** The total size must not exceed 1&nbsp;MB. Otherwise, the page may be automatically unpublished by Braze.
 
-### How to Avoid Unpublishing
+### Avoid unpublishing landing pages
 
-To prevent your page from violating size limits or experiencing slow load times, avoid using liquid personalization that:
+If your page exceeds these size limits, you'll receive an email that it may be unpublished if it continues to exceed the limit. When the threshold is reached, the page will be automatically unpublished, and you'll receive a notification.
 
-- Continuously loops through or references large data sets
-- Relies on extensive mathematical or conditional logic within the liquid block
+To prevent your page from exceeding size limits or experiencing slow load times, make sure to use Liquid personalization that:
 
-## Fallback Pages
+- Doesn't continuously loops through or references large data sets.
+- Doesn't rely on extensive mathematical or conditional logic within the Liquid block.
 
-If your end users attempt to access a page that has been unpublished due to any of the following reasons, they will see a message indicating that the page cannot currently be loaded:
+## Fallback pages
 
-- Complex or broken liquid causing long render times
+If your users attempt to access a page that has been unpublished, they'll see a message indicating that the page cannot currently be loaded. Reasons that a page has been unpublished include:
+
+- Complex or broken Liquid, which can cause long render times
 - User network issues
-- Page unpublished due to exceeding the maximum size limit
-
+- Exceeding the maximum landing page size limits
