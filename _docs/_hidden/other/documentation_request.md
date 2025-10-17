@@ -487,7 +487,7 @@ hide_toc: true
               </div>
 
               <div class="form-group" id="resource_urls">
-                <label for="doc_request" id="resource_urls_label">Resource URLs</label>
+                <label for="resource_urls" id="resource_urls_label">Resource URLs</label>
                  <div class="sublabel" style="margin-bottom:6px;">Include URLs from Confluence, Productboard, Google Docs, Jira, or any other resources about this feature.</div>
                 <textarea name="Resource_Urls" class="form-control" id="resource_urls" data-toggle="popover" data-trigger="focus" data-placement="top" data-content=""
                   rows="2" ></textarea>
