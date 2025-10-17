@@ -8,24 +8,115 @@ Copy the `braze.js` file from our [ChatGPT Apps integration repository](https://
 
 ### 2. Install Dependencies
 
-The Braze JavaScript SDK provides the core functionality for tracking user events and sending data to Braze. It's primarily designed for headless (server-side) environments, making it perfect for ChatGPT Apps integration. Note that this SDK is currently in [Beta](https://www.braze.com/company/legal/beta-terms).
+The SDK you need depends on your integration approach:
 
+**For Client-Side Integration (Recommended):**
+```bash
+npm install @braze/web-sdk
+```
+
+**For Server-Side Integration:**
 ```bash
 npm install @braze/javascript-sdk
 ```
 
+The Braze JavaScript SDK is primarily designed for headless (server-side) environments and is currently in [Beta](https://www.braze.com/company/legal/beta-terms).
+
 ## Implementation
 
-The following code snippets should be added to your MCP server file (typically `server.js` or `server.ts`) where you handle ChatGPT App requests and tool calls. These snippets show how to integrate Braze tracking into your existing server logic.
+There are two ways to integrate Braze with your ChatGPT App depending on your use case:
 
-### Import the Braze Functions
+### Client-Side Integration (Custom Widgets) - Recommended
+
+{% alert tip %}
+**Recommended Approach**: This method enables rich messaging experiences and real-time user interaction tracking within your ChatGPT App widgets.
+{% endalert %}
+
+For displaying Braze messaging and tracking user interactions within your custom ChatGPT App widgets, use the Web SDK integration.
+
+#### Set Up the useBraze Hook
+
+```javascript
+import { useBraze } from "./utils/braze";
+
+function YourWidget() {
+  const braze = useBraze({
+    apiKey: "your-braze-api-key",
+    baseUrl: "your-braze-endpoint.braze.com",
+  });
+
+  useEffect(() => {
+    if (!braze.isInitialized) {
+      return;
+    }
+
+    // Set user identity
+    braze.changeUser("user-id-123");
+    
+    // Log widget interactions
+    braze.logCustomEvent("viewed_pizzaz_list");
+  }, [braze.isInitialized]);
+
+  return (
+    // Your widget JSX
+  );
+}
+```
+
+#### Display Braze Content Cards
+
+```javascript
+const [cards, setCards] = useState([]);
+
+useEffect(() => {
+  // Get cached content cards
+  setCards(braze.getCachedContentCards()?.cards ?? []);
+
+  // Subscribe to content card updates
+  braze.subscribeToContentCardsUpdates((contentCards) => {
+    setCards(contentCards.cards);
+  });
+
+  // Open session
+  braze.openSession();
+
+  return () => {
+    braze.removeAllSubscriptions();
+  }
+}, []);
+```
+
+#### Track Widget Events
+
+```javascript
+// Track user interactions within your widget
+const handleButtonClick = () => {
+  braze.logCustomEvent("widget_button_clicked", {
+    button_type: "save_list",
+    widget_name: "pizza_list"
+  });
+};
+
+const handleItemInteraction = (itemId) => {
+  braze.logCustomEvent("item_interacted", {
+    item_id: itemId,
+    interaction_type: "view_details"
+  });
+};
+```
+
+### Server-Side Integration (MCP Server)
+
+For tracking events and purchases from your MCP server, add these code snippets to your server file (typically `server.js` or `server.ts`) where you handle ChatGPT App requests and tool calls.
+
+#### Import the Braze Functions
 
 ```javascript
 // Import the desired methods from wherever you saved the file
 import { BrazeSessionInfo, logCustomEvent, logPurchase } from "./braze/braze.js";
 ```
 
-### Set Up Session Information
+#### Set Up Session Information
 
 ```javascript
 // Create session info for Braze
@@ -35,7 +126,7 @@ const brazeSessionInfo: BrazeSessionInfo = {
 };
 ```
 
-### Track User Interactions
+#### Track User Interactions
 
 ```javascript
 // Log custom events for user interactions
@@ -47,7 +138,7 @@ await logCustomEvent(brazeSessionInfo, "chatgpt_app_interaction", {
 });
 ```
 
-### Track Purchases and Transactions
+#### Track Purchases and Transactions
 
 ```javascript
 // Calculate order details for purchases
@@ -75,44 +166,6 @@ await logPurchase(
   args.quantity, 
   purchaseProperties
 );
-```
-
-<!-- ### Handle Authentication Context
-
-```javascript
-// Extract user info from authentication
-const authHeader = req.headers.authorization;
-const token = AuthService.extractTokenFromHeader(authHeader);
-let userInfo = null;
-
-if (token) {
-  userInfo = AuthService.validateToken(token);
-}
-
-// Convert to Braze-compatible format
-const serverUserInfo = userInfo ? {
-  userId: userInfo.userId,
-  userEmail: userInfo.email,
-  userName: userInfo.name
-} : undefined;
-``` -->
-
-### Track Conversation Events
-
-```javascript
-// When a user starts a conversation
-await logCustomEvent(brazeSessionInfo, "conversation_started", {
-  app_id: "your_chatgpt_app_id",
-  user_input_length: userMessage.length,
-  timestamp: new Date().toISOString()
-});
-
-// When AI provides a response
-await logCustomEvent(brazeSessionInfo, "ai_response_generated", {
-  response_length: aiResponse.length,
-  response_time_ms: responseTime,
-  model_used: "gpt-4"
-});
 ```
 
 {% alert tip %}

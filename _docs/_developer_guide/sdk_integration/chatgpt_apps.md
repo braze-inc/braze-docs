@@ -52,6 +52,3 @@ Before integrating Braze with your ChatGPT App, ensure you have:
 
 {% multi_lang_include developer_guide/chatgpt_apps/sdk_integration.md %}
 
-{% alert note %}
-This integration requires careful consideration of data privacy and user consent. Ensure you comply with all applicable regulations and have proper user consent mechanisms in place.
-{% endalert %}
