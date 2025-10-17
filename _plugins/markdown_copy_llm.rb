@@ -75,6 +75,20 @@ module MarkdownExport
     end
   end
 
+  class MdexpDetails < Liquid::Block
+    def initialize(tag_name, markup, tokens)
+      super
+      @caption = markup
+    end
+
+    def render(context)
+      caption = @caption.to_s.strip
+      body = super
+      # Convert to markdown-friendly format
+      "**#{caption}**\n\n#{body}\n"
+    end
+  end
+
   # -------- Inline raw Markdown includes; tolerate empty/variable/extra args --------
   class MdexpMultiLangInclude < Liquid::Tag
     def initialize(tag_name, markup, tokens)
@@ -143,6 +157,7 @@ Liquid::Template.register_tag('mdexp_subtabs',       MarkdownExport::MdexpSubtab
 Liquid::Template.register_tag('mdexp_subtab',        MarkdownExport::MdexpSubtab)
 Liquid::Template.register_tag('mdexp_sdksubtabs',    MarkdownExport::MdexpSdkSubtabs)
 Liquid::Template.register_tag('mdexp_sdksubtab',     MarkdownExport::MdexpSdkSubtab)
+Liquid::Template.register_tag('mdexp_details',       MarkdownExport::MdexpDetails)
 Liquid::Template.register_tag('mdexp_multi_lang_include', MarkdownExport::MdexpMultiLangInclude)
 
 module Jekyll
@@ -231,7 +246,11 @@ module Jekyll
         /\{%-?\s*endsubtab\s*-?%\}/       => '{% endmdexp_subtab %}',
 
         # multi_lang_include
-        /\{%-?\s*multi_lang_include\b/    => '{% mdexp_multi_lang_include'
+        /\{%-?\s*multi_lang_include\b/    => '{% mdexp_multi_lang_include',
+        
+        # details
+        /\{%-?\s*details\b/               => '{% mdexp_details',
+        /\{%-?\s*enddetails\s*-?%\}/      => '{% endmdexp_details %}'
       }
       replacements.each { |re, sub| content.gsub!(re, sub) }
       content = safe_utf8(content) # ensure still UTF-8 after gsubs
