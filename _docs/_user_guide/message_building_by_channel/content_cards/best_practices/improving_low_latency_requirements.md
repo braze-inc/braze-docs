@@ -17,7 +17,7 @@ If you are experience latency with your Content Cards implementation for critica
 
 ## 1. Use Schedule Entry instead of Action-based Entry
 
-Action-based cards require background processing where Braze must first receive notice of the triggering action (eg: a purchase has occured, a session start), and then create the user's content card. As a result, these cards won't be available until some time after the event is sent up.
+Action-based cards (Campaigns or Canvas) require background processing where Braze must first receive notice of the triggering action (eg: a purchase has occured, a session start), and then create the user's content card. As a result, these cards won't be available until some time after the event is sent up.
 
 Action-based cards will introduce added complexity to your application where you may find yourself continuously polling and refreshing to wait for the card to be available.
 
