@@ -287,21 +287,21 @@ Multiple properties may be logged each time a custom event is logged.
 
 Check with your developers which event properties are being tracked. Keep in mind that all event properties are case-sensitive. For additional information on tracking custom events, check out these articles based on your platform:
 
-* [Android]({{site.baseurl}}/developer_guide/analytics/logging_events?tab=android)
-* [iOS]({{site.baseurl}}/developer_guide/analytics/logging_events?tab=swift)
-* [Web]({{site.baseurl}}/developer_guide/analytics/logging_events?tab=web)
+* [Android]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=android)
+* [iOS]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=swift)
+* [Web]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=web)
 
 ### Verify log
 
 To confirm that the event properties are successfully tracked, you can view all event properties from the **Custom Events** page.
 
-1. Navigating to **Data Settings** > **Custom Events**.
+1. Go to **Data Settings** > **Custom Events**.
 2. Locate your custom event from the list.
 3. For your event, select **Manage Properties** to view the names of the properties associated with an event.
 
 ### Verify values
 
-After adding your user as a test user, follow these steps to verify your values: 
+After [adding your user as a test user]({{site.baseurl}}/user_guide/administrative/app_settings/internal_groups_tab/#adding-test-users), follow these steps to verify your values: 
 
 1. Perform the custom event within the app.
 2. Wait for roughly 10 seconds for the data to flush.
