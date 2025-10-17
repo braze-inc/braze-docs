@@ -148,6 +148,7 @@ Liquid::Template.register_tag('mdexp_multi_lang_include', MarkdownExport::MdexpM
 module Jekyll
   class MarkdownCopyLLM
     RAW_KEY = "__export_merged_md"
+    PUBLIC_KEY = "llm_markdown_content"
 
     def self.init
       Jekyll.logger.info "MarkdownCopyLLM:", "export plugin loaded"
@@ -155,7 +156,10 @@ module Jekyll
       # Capture export Markdown just before normal rendering
       Jekyll::Hooks.register [:pages, :documents], :pre_render do |item, payload|
         next unless should_capture?(item, item.site)
-        item.data[RAW_KEY] = render_liquid_markdown_friendly(item, payload, item.site)
+        processed_markdown = render_liquid_markdown_friendly(item, payload, item.site)
+        item.data[RAW_KEY] = processed_markdown
+        # Also store in a publicly accessible key for client-side access
+        item.data[PUBLIC_KEY] = processed_markdown
       end
 
       # Emit files after normal site write
@@ -170,7 +174,8 @@ module Jekyll
       markdown?(item, site) &&
         !item.path.include?('_site/') &&
         !item.path.start_with?('_') &&
-        %w[_includes _layouts _data _plugins].none? { |d| item.path.start_with?(d) }
+        %w[_includes _layouts _data _plugins].none? { |d| item.path.start_with?(d) } &&
+        is_developer_guide?(item)
     end
 
     def self.markdown?(item, site)
@@ -178,6 +183,19 @@ module Jekyll
       return true if %w[.md .markdown].include?(ext)
       # Uncomment if you use custom extensions that go through Markdown:
       # site.find_converter_instance(Jekyll::Converters::Markdown).matches(ext)
+      false
+    end
+
+    def self.is_developer_guide?(item)
+      # Check if the item belongs to the developer_guide collection
+      return true if item.respond_to?(:collection) && item.collection.label == 'developer_guide'
+      
+      # Check if the path contains developer_guide
+      return true if item.path.include?('developer_guide')
+      
+      # Check if the URL contains developer_guide
+      return true if item.url.include?('developer_guide')
+      
       false
     end
 
@@ -253,12 +271,7 @@ module Jekyll
         copied += 1
       end
 
-      Jekyll.logger.info "MarkdownCopyLLM:", "Exported #{copied} Markdown files"
-
-      # Generate llms.txt after markdown files are created (if you have a generator defined)
-      if defined?(Jekyll::LlmsTxtGenerator)
-        Jekyll::LlmsTxtGenerator.generate_llms_txt(site)
-      end
+      Jekyll.logger.info "MarkdownCopyLLM:", "Exported #{copied} Markdown files from developer_guide collection"
     end
 
     def self.output_path_for(item)
