@@ -428,7 +428,7 @@ hide_toc: true
           </div>
           <div class="row">
             <div class="col">
-              <input type='hidden' name='Name' value=' ' />
+              <input type='hidden' name='Name' value='' />
               <div class="form-group" id="doc_urgent_div">
               <div class="form-check">
                 <label class="form-check-label" for="doc_urgent" style="display: block;">
