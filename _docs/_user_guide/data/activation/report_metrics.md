@@ -829,7 +829,7 @@ SMS/MMS
 Email
 {% endapitags %}
 
-{% multi_lang_include analytics/metrics.md metric='Soft Bounce' %} If an email receives a soft bounce, we will usually retry within 72 hours, but the number of retry attempts varies from receiver to receiver.
+{% multi_lang_include analytics/metrics.md metric='Soft Bounce' %} Note that _Soft Bounces_ differ from _Deferrals_. If no email was successfully delivered during this retry period, Braze will send one soft bounce event per attempted campaign sent. Before February 25, 2025, these retries were counted as multiple soft bounces for 1 campaign send.
 
 While soft bounces aren’t tracked in your campaign analytics, you can monitor the soft bounces in the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/). You can also exclude these users from your sending or look back at the amount of soft bounces from the last 30 days with the [Soft Bounced segment filter]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#soft-bounced). In the Message Activity Log, you can also see the reason for the soft bounces and understand possible discrepancies between the “sends” and “deliveries” for your email campaigns.
 

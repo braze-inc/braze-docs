@@ -356,4 +356,14 @@ valid_partner_list:
   url: /docs/partners/okendo/
 - name: Lemnisk
   url: /docs/partners/lemnisk/
+- name: Jasper
+  url: /docs/partners/jasper/
+- name: Kameleoon
+  url: /docs/partners/kameleoon/
+- name: Swym
+  url: /docs/partners/swym/
+- name: StackAdapt
+  url: /docs/partners/stackadapt/
+- name: Oppizi
+  url: /docs/partners/oppizi/
 ---

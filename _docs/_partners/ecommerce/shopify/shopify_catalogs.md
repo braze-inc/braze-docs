@@ -2,7 +2,7 @@
 nav_title: Shopify Product Sync
 article_title: Shopify Product Sync
 alias: /shopify_catalogs/
-page_order: 4
+page_order: 5
 description: "This reference article covers how to import your products from Shopify into Braze catalogs."
 ---
 
@@ -79,20 +79,6 @@ Refer to [Catalogs additional use cases]({{site.baseurl}}/user_guide/data/activa
 {% alert warning %}
 Modifying the Shopify catalog in any way may unintentionally interfere with real-time product syncs. Do not make any edits to the Shopify catalog, as these have the potential to be overridden by Shopify. Instead, make the necessary product updates in your Shopify instance.<br><br>To delete your Shopify catalog, go to the Shopify page and deactivate sync. Do not delete the Shopify catalog directly on the catalogs page. 
 {% endalert %}
-
-##### Using `product_handle` or `product_url`
-
-To access and use `product_handle` and `product_url`, disconnect and reconnect your Shopify catalog by doing the following.
-
-1. Go to the Shopify integration page and select **Edit configuration**.
-
-![Shopify integration page.]({% image_buster /assets/img/Shopify/edit_config.png %})
-
-{: start="2"}
-2. In the **Sync catalog** step, toggle off the catalog and then update the settings.
-3. Toggle on the catalog and update the settings.
-
-![Shopify "Sync catalog" step with catalog toggle.]({% image_buster /assets/img/Shopify/catalog_toggle.png %})
 
 ## Back-in-stock and price-drop use cases
 

@@ -1,0 +1,22 @@
+| Permission | Purpose | Required? |
+| :--- | ----- | :---: |
+| [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track) | Updates custom attributes on user profiles, in addition to creating temporary user profiles when using test sends. | &#10003; |
+| [`/users/delete`]({{site.baseurl}}/api/endpoints/user_data/post_user_delete) | Deletes temporary user profiles that were created while using test sends. | Only for test sends |
+| [`/users/export/segment`]({{site.baseurl}}/api/endpoints/export/user_data/post_users_segment) | Updates the available audience communications every morning by exporting the list of users from each selected segment. | &#10003; |
+| [`/users/export/ids`]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier) | Retrieves a list of identifiers when targeting users using an `external_id` instead of a segment. Since decisioning studio doesn’t accept Personally Identifiable Information (PII), you'll need to ensure your `fields_to_export` parameter returns only non-PII fields.
+ | Only if using `external_ids` |
+| [`/messages/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages) | Sends recommended variants at the recommended time using API Campaigns that are configured for decisioning studio's experimenter. | &#10003; |
+| [`/campaigns/list`]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaigns/#prerequisites) | Retrieves the list of active campaigns and extracts available email content for experimentation. | &#10003; |
+| [`/campaigns/data_series`]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_analytics) | Exports aggregated campaign data to enable reporting, validation, and troubleshooting in decisioning studio, so you can compare reporting values and analyze baseline performance.<br><br>While not required, this permission is recommended. |  |
+| [`/campaigns/details`]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_details) | Retrieves HTML content, subject line, and image resources from existing Campaigns for experimentation. | &#10003; |
+| [`/canvas/list`]({{site.baseurl}}/api/endpoints/export/canvas/get_canvases) | Retrieves the list of active Canvases to extract available email content for experimentation. | &#10003; |
+| [`/canvas/data_series`]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_analytics) | Exports aggregated canvas data for reporting and validation, especially when BAU is orchestrated via Canvas.<br><br>While not required, this permission is recommended. |  |
+| [`/canvas/details`]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_details/#prerequisites) | Retrieves HTML content, subject line, and image resources from existing Canvases for experimentation. | &#10003; |
+| [`/segments/list`]({{site.baseurl}}/api/endpoints/export/segments/get_segment) | Retrieves all existing segments as potential target audiences for the decisioning studio experimenter. | &#10003; |
+| [`/segments/data_series`]({{site.baseurl}}/api/endpoints/export/segments/get_segment_analytics) | Exports segment size information, which is shown in decisioning studio when selecting an audience. | &#10003; |
+| [`/segments/details`]({{site.baseurl}}/api/endpoints/export/segments/get_segment_details/#prerequisites) | Retrieves segment details such as entry and exit criteria to help understand changes in audience size or performance. |  |
+| [`/templates/email/create`]({{site.baseurl}}/api/endpoints/templates/email_templates/post_create_email_template) | Creates copies of selected base HTML templates with [dynamic placeholders]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid) (Braze liquid tags) for experimentation, avoiding changes to the originals. | &#10003; |
+| [`/templates/email/update`]({{site.baseurl}}/api/endpoints/templates/email_templates/post_update_email_template) | Pushes updates to decisioning studio-created template copies when experimentation criteria change, such as call-to-actions. | &#10003; |
+| [`/templates/email/info`]({{site.baseurl}}/api/endpoints/templates/email_templates/get_see_email_template_information/#prerequisites) | Retrieves information about decisioning studio-created templates in your Braze instance. | &#10003; |
+| [`/templates/email/list`]({{site.baseurl}}/api/endpoints/templates/email_templates/get_list_email_templates) | Validates that templates were successfully copied over to your Braze instance. | &#10003; |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }

@@ -1,7 +1,7 @@
 ---
 nav_title: "Reporting"
 article_title: Reporting for SMS, MMS, and RCS
-page_order: 11
+page_order: 12
 description: "This reference article covers SMS, MMS, and RCS metrics used at Braze, as well as how to view them in your SMS, MMS, and RCS campaigns."
 alias: /sms_mms_rcs_reporting/
 page_type: reference

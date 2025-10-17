@@ -80,6 +80,9 @@ If you created a segment where you expect users to enter and exit regularly, man
 
 ## Use cases
 
+{% tabs local %}
+{% tab Health %}
+
 ### Health app
 
 Let's say you have a health app and want to segment users who have booked a visit for the dentist. You also have the following:
@@ -100,6 +103,9 @@ You would set up a catalog segment by using the following variables:
 | `(Under Filter SQL Results) Value`| Dental |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
+{% endtab %}
+{% tab SaaS %}
+
 ### SaaS platform
 
 Let’s say you have B2B SaaS platform and want to segment users who are employees of an existing customer. You also have the following:
@@ -119,6 +125,9 @@ You would set up a catalog segment by using the following variables:
 | `(Under Filter SQL Results) Catalog field` | Classification |
 | `(Under Filter SQL Results) Value` | Enterprise |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+{% endtab %}
+{% endtabs %}
 
 ## Frequently asked questions
 

@@ -4,16 +4,13 @@ article_title: Email
 page_order: 1.5
 layout: dev_guide
 guide_top_header: "Email"
-guide_top_text: "With email at Braze, you can create completely customized and personalized email messages in either campaigns or Canvas that will grab your user's attention fast. Check out the following articles to learn more."
+guide_top_text: "With email at Braze, you can create completely customized and personalized email messages in either campaigns or Canvas that will grab your user's attention fast outside of your app or website. Customize your email messages from managing your audience to including eye-catching multimedia content. To see examples of email campaigns, check out our <a href='https://www.braze.com/customers/'>case studies</a>."
 description: "This landing page is home to Braze email. Here, you can learn how to create an email campaign, how to use the drag-and-drop editor, how to manage user subscriptions, the preference center, and more."
 channel:
   - email
 search_rank: 2
 guide_featured_title: "Popular articles"
 guide_featured_list:
-- name: About Email
-  link: /docs/user_guide/message_building_by_channel/email/about/
-  image: /assets/img/braze_icons/check-square-broken.svg
 - name: Managing User Subscriptions
   link: /docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/
   image: /assets/img/braze_icons/users-01.svg
@@ -39,7 +36,7 @@ guide_menu_list:
   link: /docs/user_guide/message_building_by_channel/email/email_setup/
   image: /assets/img/braze_icons/mail-01.svg
 - name: Locales in Messages
-  link: /docs/user_guide/message_building_by_channel/email/using_locales/
+  link: /docs/locales_in_messages/
   image: /assets/img/braze_icons/users-01.svg
 - name: Preference Center
   link: /docs/user_guide/message_building_by_channel/email/preference_center/
@@ -77,8 +74,27 @@ guide_menu_list:
 - name: Frequently Asked Questions
   link: /docs/user_guide/message_building_by_channel/email/faq/
   image: /assets/img/braze_icons/annotation-question.svg
-
-
 ---
 
-<br><br>
+## [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/messaging-channels-email){: style="float:right;width:120px;border:0;" class="noimgborder"} Customize your emails
+
+You can customize your email messaging in a variety of ways, including:
+
+- [Braze email templates]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/email_template/)
+- [Custom HTML templates]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/html_email_template/)
+- [Blocks for drag-and-drop editor]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_editor_blocks/)
+- [User subscriptions]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/)
+
+## Great use cases
+
+Here are some great use cases to get you inspired!
+
+| Use case | Explanation |
+| --- | --- |
+| Re-engagement | Reach users outside of your app, including those who have not installed the app. |
+| Onboarding | Onboard and encourage new users to turn on push notifications or share the app on social networks. |
+| Rich messages | Allow for rich and dynamic HTML messages. |
+| Multimedia content | Ease of multimedia content placement that engages users such as videos and images. |
+| Newsletters | Conveniently send monthly or weekly newsletters to maintain user engagement. |
+| Transactions | Notify users of recent purchases and deliver important product and shipping information with [transactional emails]({{site.baseurl}}/user_guide/message_building_by_channel/email/transactional_message_api_campaign/).
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }

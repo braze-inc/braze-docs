@@ -1,6 +1,6 @@
 ---
 nav_title: Compliance documentation for message archiving and field level encryption
-article: Compliance Documentation for Message Archiving and Field Level Encryption
+article_title: Compliance Documentation for Message Archiving and Field Level Encryption
 permalink: /compliance_documentation_message_archiving_field_level_encryption/
 description: "Compliance documentation relating to Shopify Integration."
 page_order: 8

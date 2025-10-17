@@ -44,7 +44,7 @@ Data capture forms exist either at the start or end of Cards.
 {% endtab %}
 {% tab Market Research - Coming soon %}
 
-Coming soon, Komo will be adding the ability to pass through market research data captured when a user answers a quiz question, poll, personality test, swiper, etc. This data will enable you to enhance a user's profile beyond data captured in form submissions.
+Komo also enables the ability to pass through market research data captured when a user answers a quiz question, poll, personality test, swiper, and similar. This data will enable you to enhance a user's profile beyond data captured in form submissions.
 
 {% endtab %}
 {% endtabs %}
@@ -53,32 +53,34 @@ Coming soon, Komo will be adding the ability to pass through market research dat
 
 ### Step 1: Publish a Komo Engagement Hub and card
 
-You will need to publish a Komo Engagement Hub with at least one card containing a data capture form. When published, you can test the user experience end-to-end and verify the integration is working correctly.
+You will need to publish a Komo Hub with at least one card containing a data capture form. When published, you can test the user experience end-to-end and verify the integration is working correctly.
 
-![]({% image_buster /assets/img/komo/komo_hub_publish.png %})
+![Komo Hub.]({% image_buster /assets/img/Braze Komo Images v2/Braze-Komo-Step1.png %})
 
-### Step 2: Add the Braze integration
+### Step 2: Add the Braze Connected App 
 
-In Komo, go to the **Hub Settings** tab, and select the **Integrations** section. Next, find the Braze integration from the list, and select the **Connect** button to enable the integration.
+In Komo, go to the **Company Settings** tab, and select the **Connected Apps** section. 
 
-![]({% image_buster /assets/img/komo/komo_hub_settings_integrations.png %})
+Next, find the Braze integration from the list, and select the **Connect** button to enable the integration.
 
-![]({% image_buster /assets/img/komo/komo_hub_settings_braze_connect.png %})
+![Connect Braze Integration.]({% image_buster /assets/img/Braze Komo Images v2/Braze-Komo-Step2a.png %}){: style="max-width:50%;"}
 
-#### Configure user mapping
+![Connect Braze Integration Step 2b.]({% image_buster /assets/img/Braze Komo Images v2/Braze-Komo-Step2b.png %})
 
-The first thing you will need to configure is how you will map users captured in Komo to users within Braze. If you are capturing the `braze_id` or `external_id` by a field within Komo, then you can select the appropriate key; otherwise, select the most common option will be a user alias of email or phone.
+#### Configure the integration via a Workflow
 
-![]({% image_buster /assets/img/komo/komo_hub_settings_braze_key.png %}){: style="max-width:65%;"}
+Now you need to setup a workflow, within a Workspace, Site or Card, to sync data to Braze. 
 
-Next, you will need to define a map of the Komo fields you want to transfer into Braze attributes. Komo captures a large amount of data, so only the fields mapped in the Braze integration will be sent to Braze.
+Whether you scope the workflow within the scope of the entire Workspace, a Site (which contains many Cards) or a single Card, is dependent on whether you want the workflow to trigger across many Cards or campaigns. 
 
-![]({% image_buster /assets/img/komo/komo_hub_settings_braze_settings.png %}){: style="max-width:65%;"}
+After you've created a Workflow, define your trigger, search for Braze in the step menu and add the "Track User" step. 
 
-Finally, add your API key and REST endpoint URL and click **Save** to enable the integration.
+![Track User setup.]({% image_buster /assets/img/Braze Komo Images v2/Braze-Komo-Step3a.png %})
+
+From here, configure the events, attributions, and subscriptions you want to sync from Komo to Braze. 
+
+![Content blocks list.]({% image_buster /assets/img/Braze Komo Images v2/Braze-Komo-Step3b.png %})
 
 ## Using the integration
 
-Once your integration has been completed, you can use the Komo data sent to Braze to create segments for targeting.
-
-
+Now your integration is up and running, and you can monitor each run in the Workflow Runs tab. 

@@ -24,6 +24,9 @@ guide_featured_list:
   - name: File Storage Integrations
     link: /docs/user_guide/data/unification/cloud_ingestion/file_storage_integrations/
     image: /assets/img/braze_icons/folder.svg 
+  - name: Zero-copy Personalization
+    link: /docs/user_guide/data/unification/cloud_ingestion/zero_copy_sync/
+    image: /assets/img/braze_icons/tag-01.svg
   - name: Sync Catalogs Data
     link: /docs/user_guide/data/unification/cloud_ingestion/sync_catalogs_data/
     image: /assets/img/braze_icons/refresh-ccw-02.svg

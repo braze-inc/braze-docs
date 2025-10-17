@@ -1,0 +1,32 @@
+name: Author Documentation
+
+on:
+  workflow_dispatch:
+    inputs:
+      prompt:
+        description: 'Custom prompt for the documentation'
+        required: true
+      specs_file:
+        description: 'Path to the specs file'
+        required: true
+      feature_name:
+        description: 'Name of feature'
+        required: true
+
+jobs:
+  author-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: pip install openai
+        
+      - name: Test step
+        run: echo "Testing docs workflow"

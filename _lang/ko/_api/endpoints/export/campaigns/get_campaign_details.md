@@ -11,7 +11,7 @@ description: "이 문서에서는 내보내기 캠페인 세부 정보 Braze 엔
 {% api %}
 # 캠페인 세부 정보 내보내기
 {% apimethod get %}
-/캠페인/세부정보
+/campaigns/details
 {% endapimethod %}
 
 > 이 엔드포인트를 사용하여 지정된 캠페인에 대한 관련 정보를 검색할 수 있으며, 이 정보는 `campaign_id` 에서 확인할 수 있습니다.
