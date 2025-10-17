@@ -31,7 +31,11 @@ Together with scheduled sends, the "At First Impression" option will avoid laten
 
 This means that together with Scheduled entry, cards will be available immediately, as soon as you need them, at both Session Start, or for a time-based eligibility window.
 
-## 3. Don't refresh cards excessively
+## 3. Canvas Entry is a pre-requisite for receiving cards
+
+When using Canvas, remember that a user must first enter the canvas based on your configured entry criteria, and __then__ must also flow through your content card message step. Only then will the card be available for your app or website. Remember, there is built in latency for the card to be created once the user passes through the step and may delay when the card is available.
+
+## 4. Don't refresh cards excessively
 
 Content Cards are automatically refreshed by the SDK at each new session start. Your integration is able to manually request a content cards refresh at any time during the active app session.
 
@@ -39,7 +43,7 @@ Calling the `requestContentCardsRefresh` method too frequently may lead to rate 
 
 For this reason, ensure you're only calling this refresh method at important times in the user lifecycle, for example, after a user makes a purchase, or after a user upgrades their account.
 
-## 4. Avoid Connected Content
+## 5. Avoid Connected Content
 
 Connected Content helps to enrich Content Cards with 1st party or 3rd party API data. However, when included in a Content Card message, it will block the availability of the card until this network request can be completed. In some cases, this will cause SDKs to retry a few seconds later in an effort to not delay your app's rendering logic which may wait for the SDK to complete its refresh task.
 
