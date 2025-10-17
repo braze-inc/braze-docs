@@ -1275,6 +1275,20 @@ a:hover {
     const step2 = document.getElementById('step2');
     const step3 = document.getElementById('step3');
 
+    document.getElementById('subject').addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+        e.preventDefault(); 
+        document.getElementById('toStep2').click(); // Trigger the button click
+    }
+});
+
+document.getElementById('description').addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+        e.preventDefault(); 
+        document.getElementById('toStep2').click(); // Trigger the button click
+    }
+});
+
 
     const caseId = "CASE-" + Date.now() + "-" + Math.floor(Math.random() * 1000);
     const caseNumber = Math.floor(100000 + Math.random() * 900000);
@@ -2312,8 +2326,7 @@ $( document ).ready(function() {
 });
 
 
-
-   const suggestionsBox = document.getElementById('suggestionsBox');
+const suggestionsBox = document.getElementById('suggestionsBox');
 const articlesDiv = document.getElementById('articles');
 const articlesList = document.getElementById('articles-list');
 const formContainer = document.querySelector(".form-container");
