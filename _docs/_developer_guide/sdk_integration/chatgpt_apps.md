@@ -30,9 +30,6 @@ ChatGPT Apps provide a powerful platform for building AI conversational applicat
 
 **Revenue Attribution**: Track purchases and conversions that originate from ChatGPT App interactions.
 
-### How It Works
-high-level flow diagram for non-technical stakeholders
-
 <!-- ### Practical Use Cases
 
 - **E-commerce**: Track product inquiries, cart additions, and purchases made through ChatGPT conversations
