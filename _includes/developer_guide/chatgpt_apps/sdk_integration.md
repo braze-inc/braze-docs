@@ -1,7 +1,5 @@
 # ChatGPT app integration
 
-![Content Cards integrated into ChatGPT app]({% image_buster /assets/img/chatgpt_app_integration.png %}){: style="max-width:40%;border:none;"}
-
 ## Setup
 
 ### Step 1: Get the Braze integration file

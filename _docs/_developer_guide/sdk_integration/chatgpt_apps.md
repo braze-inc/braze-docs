@@ -11,6 +11,8 @@ platform:
 
 > This guide covers how to integrate Braze with ChatGPT apps to enable analytics and event logging within AI-powered applications.
 
+![A Content Card integrated into ChatGPT app.]({% image_buster /assets/img/chatgpt_app_integration.png %}){: style="float:right;max-width:30%;border:none;" }
+
 ## Overview
 
 ChatGPT apps provide a powerful platform for building AI conversational applications. By integrating Braze with your ChatGPT app, you can continue to maintain first-party data control in the age of AI, including how to:
