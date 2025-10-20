@@ -19,7 +19,7 @@ In the drag-and-drop editor, you can insert Liquid personalization both in the e
 
 ![Landing page editor with Liquid personalization added.]({% image_buster /assets/img/landing_pages/lp_liquid_.png %})
 
-## Preview and test
+## Previewing and testing
 
 When previewing a landing page in the editor, you can view the page as a random user, an existing user, or a custom user.
 
