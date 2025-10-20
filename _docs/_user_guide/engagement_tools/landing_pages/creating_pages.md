@@ -132,7 +132,9 @@ To link the confirmation page:
 
 If you don’t include a confirmation page, users may not know their form was submitted successfully. Always include a confirmation experience to complete the journey.
 
-{% alert note %} If your confirmation page opens in a new tab, a user who returns to the original landing page and resubmits with updated information can overwrite the previous submission, resulting in inconsistent data. {% endalert %}
+{% alert note %} 
+If your confirmation page opens in a new tab, a user who returns to the original landing page and resubmits with updated information can overwrite the previous submission, resulting in inconsistent data. 
+{% endalert %}
 
 ### Step 5: Preview the page
 
