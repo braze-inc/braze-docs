@@ -1,40 +1,40 @@
-# ChatGPT App Integration
+# ChatGPT app integration
 
 ## Setup
 
-### 1. Get the Braze Integration File
+### Step 1: Get the Braze integration file
 
-Copy the `braze.js` file from our [ChatGPT Apps integration repository](https://github.com/braze-inc/chatgpt-apps-braze-integration/blob/main/src/braze/braze.ts) to your project. This file contains all the necessary Braze SDK configuration and helper functions.
+Copy the `braze.js` file from our [ChatGPT apps integration repository](https://github.com/braze-inc/chatgpt-apps-braze-integration/blob/main/src/braze/braze.ts) to your project. This file contains all the necessary Braze SDK configuration and helper functions.
 
-### 2. Install Dependencies
+### Step 2: Install dependencies
 
 The SDK you need depends on your integration approach:
 
-**For Client-Side Integration (Recommended):**
+**For client-side integration (recommended):**
 ```bash
 npm install @braze/web-sdk
 ```
 
-**For Server-Side Integration:**
+**For server-side integration:**
 ```bash
 npm install @braze/javascript-sdk
 ```
 
-The Braze JavaScript SDK is primarily designed for headless (server-side) environments and is currently in [Beta](https://www.braze.com/company/legal/beta-terms).
+The Braze JavaScript SDK is primarily designed for headless (server-side) environments and is currently in [beta](https://www.braze.com/company/legal/beta-terms).
 
 ## Implementation
 
-There are two ways to integrate Braze with your ChatGPT App depending on your use case:
+There are two ways to integrate Braze with your ChatGPT app depending on your use case:
 
-### Client-Side Integration (Custom Widgets) - Recommended
+### Client-side integration (custom widgets)
 
 {% alert tip %}
-**Recommended Approach**: This method enables rich messaging experiences and real-time user interaction tracking within your ChatGPT App widgets.
+**Recommended Approach:** This method enables rich messaging experiences and real-time user interaction tracking within your ChatGPT app widgets.
 {% endalert %}
 
-For displaying Braze messaging and tracking user interactions within your custom ChatGPT App widgets, use the Web SDK integration. A full messaging example can be found in our sample repository [here](https://github.com/braze-inc/chatgpt-apps-braze-integration/tree/main/src/inbox).
+For displaying Braze messaging and tracking user interactions within your custom ChatGPT app widgets, use the Web SDK integration. A full messaging example can be found in our sample repository [here](https://github.com/braze-inc/chatgpt-apps-braze-integration/tree/main/src/inbox).
 
-#### Configure Widget Metadata
+#### Configure widget metadata
 
 Add the following metadata to your MCP server file to allow Braze domains:
 
@@ -52,7 +52,7 @@ Add the following metadata to your MCP server file to allow Braze domains:
 
 Replace `YOUR-SDK-ENDPOINT` with your actual Braze SDK endpoint.
 
-#### Set Up the useBraze Hook
+#### Set up the useBraze hook
 
 ```javascript
 import { useBraze } from "./utils/braze";
@@ -104,7 +104,7 @@ useEffect(() => {
 }, []);
 ```
 
-#### Track Widget Events
+#### Track widget events
 
 ```javascript
 // Track user interactions within your widget
@@ -123,18 +123,18 @@ const handleItemInteraction = (itemId) => {
 };
 ```
 
-### Server-Side Integration (MCP Server)
+### Server-side integration (MCP server)
 
-For tracking events and purchases from your MCP server, add these code snippets to your server file (typically `server.js` or `server.ts`) where you handle ChatGPT App requests and tool calls.
+For tracking events and purchases from your MCP server, add these code snippets to your server file (typically `server.js` or `server.ts`) where you handle ChatGPT app requests and tool calls.
 
-#### Import the Braze Functions
+#### Import the Braze functions
 
 ```javascript
 // Import the desired methods from wherever you saved the file
 import { BrazeSessionInfo, logCustomEvent, logPurchase } from "./braze/braze.js";
 ```
 
-#### Set Up Session Information
+#### Set up session information
 
 ```javascript
 // Create session info for Braze
@@ -144,7 +144,7 @@ const brazeSessionInfo: BrazeSessionInfo = {
 };
 ```
 
-#### Track User Interactions
+#### Track user interactions
 
 ```javascript
 // Log custom events for user interactions
@@ -156,7 +156,7 @@ await logCustomEvent(brazeSessionInfo, "chatgpt_app_interaction", {
 });
 ```
 
-#### Track Purchases and Transactions
+#### Track purchases and transactions
 
 ```javascript
 // Calculate order details for purchases
@@ -187,5 +187,5 @@ await logPurchase(
 ```
 
 {% alert tip %}
-Use the [SDK Debugger]({{site.baseurl}}/developer_guide/sdk_integration/debugging) to verify your integration and troubleshoot any issues.
+Use the [SDK debugger]({{site.baseurl}}/developer_guide/sdk_integration/debugging) to verify your integration and troubleshoot any issues.
 {% endalert %}
