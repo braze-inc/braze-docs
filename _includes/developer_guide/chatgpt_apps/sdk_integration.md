@@ -1,5 +1,7 @@
 # ChatGPT app integration
 
+![Content Cards integrated into ChatGPT app]({% image_buster /assets/img/chatgpt_app_integration.png %}){: style="max-width:40%;border:none;"}
+
 ## Setup
 
 ### Step 1: Get the Braze integration file
@@ -10,17 +12,17 @@ Copy the `braze.js` file from our [ChatGPT apps integration repository](https://
 
 The SDK you need depends on your integration approach:
 
-**For client-side integration (recommended):**
+**For client-side integration:**
 ```bash
 npm install @braze/web-sdk
 ```
 
-**For server-side integration:**
+<!-- **For server-side integration:**
 ```bash
 npm install @braze/javascript-sdk
-```
+``` -->
 
-The Braze JavaScript SDK is primarily designed for headless (server-side) environments and is currently in [beta](https://www.braze.com/company/legal/beta-terms).
+<!-- The Braze JavaScript SDK is primarily designed for headless (server-side) environments and is currently in [beta](https://www.braze.com/company/legal/beta-terms). -->
 
 ## Implementation
 
@@ -125,9 +127,10 @@ const handleItemInteraction = (itemId) => {
 
 ### Server-side integration (MCP server)
 
-For tracking events and purchases from your MCP server, add these code snippets to your server file (typically `server.js` or `server.ts`) where you handle ChatGPT app requests and tool calls.
+<!-- For tracking events and purchases from your MCP server, add these code snippets to your server file (typically `server.js` or `server.ts`) where you handle ChatGPT app requests and tool calls. -->
+For tracking events and purchases from your MCP server, use our [REST API](https://www.braze.com/docs/api/home). If you also need messaging functionality on your MCP server, please reach out with a [support case](https://support.braze.com/login).
 
-#### Import the Braze functions
+<!-- #### Import the Braze functions
 
 ```javascript
 // Import the desired methods from wherever you saved the file
@@ -188,4 +191,4 @@ await logPurchase(
 
 {% alert tip %}
 Use the [SDK debugger]({{site.baseurl}}/developer_guide/sdk_integration/debugging) to verify your integration and troubleshoot any issues.
-{% endalert %}
+{% endalert %} -->
