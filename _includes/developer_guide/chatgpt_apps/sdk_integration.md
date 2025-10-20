@@ -4,7 +4,7 @@
 
 ### 1. Get the Braze Integration File
 
-Copy the `braze.js` file from our [ChatGPT Apps integration repository](https://github.com/braze-inc/chatgpt-apps-braze-integration) to your project. This file contains all the necessary Braze SDK configuration and helper functions.
+Copy the `braze.js` file from our [ChatGPT Apps integration repository](https://github.com/braze-inc/chatgpt-apps-braze-integration/blob/main/src/braze/braze.ts) to your project. This file contains all the necessary Braze SDK configuration and helper functions.
 
 ### 2. Install Dependencies
 
@@ -32,7 +32,7 @@ There are two ways to integrate Braze with your ChatGPT App depending on your us
 **Recommended Approach**: This method enables rich messaging experiences and real-time user interaction tracking within your ChatGPT App widgets.
 {% endalert %}
 
-For displaying Braze messaging and tracking user interactions within your custom ChatGPT App widgets, use the Web SDK integration.
+For displaying Braze messaging and tracking user interactions within your custom ChatGPT App widgets, use the Web SDK integration. A full messaging example can be found in our sample repository [here](https://github.com/braze-inc/chatgpt-apps-braze-integration/tree/main/src/inbox).
 
 #### Configure Widget Metadata
 
