@@ -162,6 +162,7 @@ If you enable SalesWings insights push to Braze, SalesWings will update your Bra
 | `sw_session_count` | integer | Number of tracked sessions on your website for this lead |
 | `sw_tags` | array of string | The names of SalesWings tags configured in the [Rule Engine](https://helium.saleswings.pro/falcon) that apply to this lead |
 | Additional lead score attributes | float | One Custom Attribute for every additional lead score configured in the [Rule Engine](https://helium.saleswings.pro/falcon). The attribute name is derived from the SalesWings score name, for example, a score named `Likeliness to meet` will be sent as Custom Attribute `sw_likeliness_to_meet`. If a score is renamed after it's created, it will be still synced with the initial Custom Attribute name. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 When the push is enabled, SalesWings immediately starts sending Custom Attributes to Braze as soon as underlying data points change in SalesWings lead profiles, and eventually syncs all the existing leads even if they don't have new updates.
 
