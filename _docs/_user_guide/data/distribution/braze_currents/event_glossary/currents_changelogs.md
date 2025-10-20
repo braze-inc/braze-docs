@@ -7,7 +7,7 @@ tool: Currents
 
 # Currents Changelog
 
-## Changes in Version 3
+## Changes in Version 3 (release date 2025-10-08)
 
 * Added new event type `users.messages.rcs.Click`.
 
