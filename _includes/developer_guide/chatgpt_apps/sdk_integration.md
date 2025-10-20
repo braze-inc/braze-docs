@@ -8,7 +8,7 @@ Copy the `braze.js` file from our [ChatGPT apps integration repository](https://
 
 ### Step 2: Install dependencies
 
-The SDK you need depends on your integration approach:
+Install our Web SDK for Braze's most up-to-date set of features:
 
 **For client-side integration:**
 ```bash
@@ -36,7 +36,7 @@ For displaying Braze messaging and tracking user interactions within your custom
 
 #### Configure widget metadata
 
-Add the following metadata to your MCP server file to allow Braze domains:
+Add the following metadata to your MCP server file to allow Braze domains, ensuring to update the CDN domain based on [your region](https://www.braze.com/docs/developer_guide/platforms/web/content_security_policy):
 
 ```javascript
 "openai/widgetCSP": {
