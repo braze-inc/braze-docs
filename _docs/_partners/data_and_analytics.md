@@ -56,7 +56,7 @@ valid_partner_list:
 - name: Inbox Monster
   url: /docs/partners/inbox_monster/
 - name: Kickbox
-  url: /docs/partners/kickbox
+  url: /docs/partners/kickbox/
 - name: Amazon S3
   url: /docs/partners/amazon_s3/
 - name: Google Cloud Storage
