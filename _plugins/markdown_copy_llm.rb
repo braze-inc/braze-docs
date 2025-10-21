@@ -1,11 +1,11 @@
 # _plugins/markdown_copy_llm.rb
+# frozen_string_literal: true
+
 require 'jekyll'
 require 'liquid'
+require 'fileutils'
 
-# --- Encoding helpers (fix UTF-8 vs US-ASCII issues in hosted builds like Vercel) ---
-Encoding.default_external = Encoding::UTF_8
-Encoding.default_internal = Encoding::UTF_8
-
+# --- Encoding helpers (no global Encoding overrides) ---
 def safe_utf8(str)
   s = String(str || "")
   s = s.dup
@@ -89,7 +89,21 @@ module MarkdownExport
     end
   end
 
-  # -------- Inline raw Markdown includes; tolerate empty/variable/extra args --------
+  # -------- Alert blocks: flatten to Markdown with a bolded label --------
+  class MdexpAlert < Liquid::Block
+    def initialize(tag_name, markup, tokens)
+      super
+      @type = markup.to_s.strip # e.g., "tip", "warning", "important"
+    end
+
+    def render(context)
+      body = super
+      type = @type.empty? ? "note" : @type
+      "**#{type.capitalize}:**\n\n#{body}\n"
+    end
+  end
+
+  # -------- Inline raw Markdown includes; reprocess with SAME pipeline (recursive) --------
   class MdexpMultiLangInclude < Liquid::Tag
     def initialize(tag_name, markup, tokens)
       super
@@ -123,7 +137,32 @@ module MarkdownExport
 
       # Read as binary then coerce to UTF-8 safely
       data = File.binread(full)
-      safe_utf8(data)
+      content = safe_utf8(data)
+
+      # Apply the SAME export rewrites (tabs, alias tag names, details, alerts, etc.)
+      content = Jekyll::MarkdownCopyLLM.apply_export_rewrites(content)
+
+      # Re-render via Liquid with the SAME flags and context (allow recursion)
+      depth = (context.registers[:_mdexp_depth] || 0)
+      if depth >= 12
+        return "<!-- export: include depth exceeded (#{depth}) for #{path} -->"
+      end
+      registers = context.registers.merge(_mdexp_depth: depth + 1)
+
+      tpl = site.liquid_renderer
+               .file(full)
+               .parse(content)
+
+      out = tpl.render!(
+        context.environments.first,
+        registers: registers,
+        strict_filters: false,
+        strict_variables: false
+      )
+
+      # IMPORTANT: Do NOT call resolve_site_variables here.
+      # The outer pre_render pipeline will apply it once to the full page output.
+      safe_utf8(out)
     rescue => e
       Jekyll.logger.error "MarkdownCopyLLM:", "Failed to inline #{@markup}: #{e.class}: #{e.message}"
       "<!-- export: failed to inline #{@markup}: #{e.class}: #{e.message} -->"
@@ -158,12 +197,59 @@ Liquid::Template.register_tag('mdexp_subtab',        MarkdownExport::MdexpSubtab
 Liquid::Template.register_tag('mdexp_sdksubtabs',    MarkdownExport::MdexpSdkSubtabs)
 Liquid::Template.register_tag('mdexp_sdksubtab',     MarkdownExport::MdexpSdkSubtab)
 Liquid::Template.register_tag('mdexp_details',       MarkdownExport::MdexpDetails)
+Liquid::Template.register_tag('mdexp_alert',         MarkdownExport::MdexpAlert)
 Liquid::Template.register_tag('mdexp_multi_lang_include', MarkdownExport::MdexpMultiLangInclude)
 
 module Jekyll
   class MarkdownCopyLLM
     RAW_KEY = "__export_merged_md"
     PUBLIC_KEY = "llm_markdown_content"
+
+    # ---- Shared export rewrites (reused by main render and includes) ----
+    def self.export_replacements
+      {
+        # legacy sdktabs (idempotent: match both original and mdexp_ variants)
+        /\{%-?\s*(sdktabs|mdexp_sdktabs)\b/               => '{% mdexp_sdktabs',
+        /\{%-?\s*(endsdktabs|endmdexp_sdktabs)(?:\s+[^%]*)?\s*-?%\}/      => '{% endmdexp_sdktabs %}',
+        /\{%-?\s*(sdktab|mdexp_sdktab)\b/                => '{% mdexp_sdktab',
+        /\{%-?\s*(endsdktab|endmdexp_sdktab)(?:\s+[^%]*)?\s*-?%\}/       => '{% endmdexp_sdktab %}',
+
+        # generic tabs used in many docs (idempotent)
+        /\{%-?\s*(tabs|mdexp_tabs)\b/                  => '{% mdexp_tabs',
+        /\{%-?\s*(endtabs|endmdexp_tabs)(?:\s+[^%]*)?\s*-?%\}/         => '{% endmdexp_tabs %}',
+        /\{%-?\s*(tab|mdexp_tab)\b/                   => '{% mdexp_tab',
+        /\{%-?\s*(endtab|endmdexp_tab)(?:\s+[^%]*)?\s*-?%\}/          => '{% endmdexp_tab %}',
+
+        # sdk subtabs (idempotent)
+        /\{%-?\s*(sdksubtabs|mdexp_sdksubtabs)\b/            => '{% mdexp_sdksubtabs',
+        /\{%-?\s*(endsdksubtabs|endmdexp_sdksubtabs)(?:\s+[^%]*)?\s*-?%\}/   => '{% endmdexp_sdksubtabs %}',
+        /\{%-?\s*(sdksubtab|mdexp_sdksubtab)\b/             => '{% mdexp_sdksubtab',
+        /\{%-?\s*(endsdksubtab|endmdexp_sdksubtab)(?:\s+[^%]*)?\s*-?%\}/    => '{% endmdexp_sdksubtab %}',
+
+        # generic subtabs (idempotent)
+        /\{%-?\s*(subtabs|mdexp_subtabs)\b/               => '{% mdexp_subtabs',
+        /\{%-?\s*(endsubtabs|endmdexp_subtabs)(?:\s+[^%]*)?\s*-?%\}/      => '{% endmdexp_subtabs %}',
+        /\{%-?\s*(subtab|mdexp_subtab)\b/                => '{% mdexp_subtab',
+        /\{%-?\s*(endsubtab|endmdexp_subtab)(?:\s+[^%]*)?\s*-?%\}/       => '{% endmdexp_subtab %}',
+
+        # alerts (idempotent)
+        /\{%-?\s*(alert|mdexp_alert)\b/                 => '{% mdexp_alert',
+        /\{%-?\s*(endalert|endmdexp_alert)(?:\s+[^%]*)?\s*-?%\}/        => '{% endmdexp_alert %}',
+
+        # multi_lang_include (idempotent)
+        /\{%-?\s*(multi_lang_include|mdexp_multi_lang_include)\b/    => '{% mdexp_multi_lang_include',
+
+        # details (idempotent)
+        /\{%-?\s*(details|mdexp_details)\b/               => '{% mdexp_details',
+        /\{%-?\s*(enddetails|endmdexp_details)(?:\s+[^%]*)?\s*-?%\}/      => '{% endmdexp_details %}'
+      }
+    end
+
+    def self.apply_export_rewrites(str)
+      s = String(str)
+      export_replacements.each { |re, sub| s.gsub!(re, sub) }
+      s
+    end
 
     def self.init
       Jekyll.logger.info "MarkdownCopyLLM:", "export plugin loaded"
@@ -219,40 +305,8 @@ module Jekyll
     def self.render_liquid_markdown_friendly(item, payload, site)
       content = safe_utf8(item.content.to_s)
 
-      # Robust rewrites: handle {% ... %} and {%- ... -%} and whitespace
-      replacements = {
-        # legacy sdktabs
-        /\{%-?\s*sdktabs\b/               => '{% mdexp_sdktabs',
-        /\{%-?\s*endsdktabs\s*-?%\}/      => '{% endmdexp_sdktabs %}',
-        /\{%-?\s*sdktab\b/                => '{% mdexp_sdktab',
-        /\{%-?\s*endsdktab\s*-?%\}/       => '{% endmdexp_sdktab %}',
-
-        # generic tabs used in many docs
-        /\{%-?\s*tabs\b/                  => '{% mdexp_tabs',
-        /\{%-?\s*endtabs\s*-?%\}/         => '{% endmdexp_tabs %}',
-        /\{%-?\s*tab\b/                   => '{% mdexp_tab',
-        /\{%-?\s*endtab\s*-?%\}/          => '{% endmdexp_tab %}',
-
-        # sdk subtabs
-        /\{%-?\s*sdksubtabs\b/            => '{% mdexp_sdksubtabs',
-        /\{%-?\s*endsdksubtabs\s*-?%\}/   => '{% endmdexp_sdksubtabs %}',
-        /\{%-?\s*sdksubtab\b/             => '{% mdexp_sdksubtab',
-        /\{%-?\s*endsdksubtab\s*-?%\}/    => '{% endmdexp_sdksubtab %}',
-
-        # generic subtabs
-        /\{%-?\s*subtabs\b/               => '{% mdexp_subtabs',
-        /\{%-?\s*endsubtabs\s*-?%\}/      => '{% endmdexp_subtabs %}',
-        /\{%-?\s*subtab\b/                => '{% mdexp_subtab',
-        /\{%-?\s*endsubtab\s*-?%\}/       => '{% endmdexp_subtab %}',
-
-        # multi_lang_include
-        /\{%-?\s*multi_lang_include\b/    => '{% mdexp_multi_lang_include',
-        
-        # details
-        /\{%-?\s*details\b/               => '{% mdexp_details',
-        /\{%-?\s*enddetails\s*-?%\}/      => '{% endmdexp_details %}'
-      }
-      replacements.each { |re, sub| content.gsub!(re, sub) }
+      # Apply shared rewrites
+      content = apply_export_rewrites(content)
       content = safe_utf8(content) # ensure still UTF-8 after gsubs
 
       page_drop      = item.to_liquid
@@ -319,8 +373,7 @@ module Jekyll
     end
 
     def self.should_copy?(site)
-      site.config['markdown_copies'] != false &&
-        (ENV['JEKYLL_ENV'] == 'production' || site.config['markdown_copies'] == true)
+        ENV['JEKYLL_ENV'] == 'production' || site.config['markdown_copies'] == true
     end
   end
 end
