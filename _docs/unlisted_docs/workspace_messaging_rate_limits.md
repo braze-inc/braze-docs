@@ -19,7 +19,7 @@ Workspace messaging rate limits apply to all outbound messaging from your worksp
 
 To configure your workspace messaging rate limit:
 
-1. In the Braze dashboard, go to **Settings** > **Global Rate Limits**.
+1. In the Braze dashboard, go to **Settings** > **Workspace Messaging Rate Limits**.
 2. Set your desired messaging rate limit.
 3. Save your settings.
 
