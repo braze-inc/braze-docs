@@ -270,7 +270,27 @@ module Jekyll
                         strict_filters: false,
                         strict_variables: false)
 
+      # Post-process to resolve site variables to absolute URLs
+      out = resolve_site_variables(out, site)
+      
       safe_utf8(out)
+    end
+
+    # Post-process content to resolve site variables to absolute URLs
+    def self.resolve_site_variables(content, site)
+      base_url = site.config['homeurl'] || "https://www.braze.com"
+      base_path = site.config['baseurl'] || "/docs"
+      
+      # Resolve {{ site.baseurl }} to absolute URL
+      content = content.gsub(/\{\{\s*site\.baseurl\s*\}\}/, "#{base_url}#{base_path}")
+      
+      # Resolve relative links that start with /docs to absolute URLs
+      content = content.gsub(/\]\(\/docs\//, "](#{base_url}#{base_path}/")
+      
+      # Resolve any remaining relative links that start with / to absolute URLs
+      content = content.gsub(/\]\(\/(?!\/)/, "](#{base_url}/")
+      
+      safe_utf8(content)
     end
 
     def self.copy_markdown_files(site)
