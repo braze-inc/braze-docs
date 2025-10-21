@@ -752,6 +752,7 @@ The Shopify integration currently doesn't support populating the Braze [purchase
 {% endtabs %}
 
 ## Supported Shopify custom attributes
+
 {% tabs local %}
 {% tab Example Payload %}
 {% subtabs %}
@@ -787,7 +788,7 @@ The Shopify integration currently doesn't support populating the Braze [purchase
 
 {% alert important %}
 A known issue with Shopify's latest API version is that the `shopify_last_order_name` field will populate without values. We will update this page when the issue is updated.
-{% endnote %}
+{% endalert %}
 
 ### Liquid personalization
 
