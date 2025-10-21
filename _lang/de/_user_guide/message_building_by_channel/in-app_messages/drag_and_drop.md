@@ -14,7 +14,7 @@ guide_featured_list:
   link: /docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/
   image: /assets/img/braze_icons/phone-02.svg
 - name: Editor-Blöcke
-  link: /docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/editor_blocks/
+  link: /docs/user_guide/engagement_tools/messaging_fundamentals/drag_and_drop_editor_blocks/?sdktab=in-app%20messages
   image: /assets/img/braze_icons/align-left.svg
 
 guide_menu_title: Templates
@@ -47,4 +47,6 @@ guide_menu_list:
   link: /docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/seasonal_promo/
   image: /assets/img/braze_icons/snowflake-01.svg
 ---
-<br><br>
+
+{% multi_lang_include drag_and_drop/drag_and_drop_access.md variable_name='dnd editors' %}
+
