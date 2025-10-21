@@ -297,7 +297,7 @@ valid_partner_list:
 - name: Inbox Monster
   url: /docs/partners/inbox_monster/
 - name: Kickbox
-  url: /docs/partners/kickbox
+  url: /docs/partners/kickbox/
 - name: mypostcard
   url: /docs/partners/message_orchestration/additional_channels/direct_mail/mypostcard/
 - name: SEEN
