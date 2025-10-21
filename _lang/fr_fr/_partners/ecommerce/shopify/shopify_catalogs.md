@@ -61,7 +61,6 @@ Reportez-vous aux [cas d'utilisation supplémentaires des catalogues]({{site.bas
 - `product_title`
 - `variant_title`
 - `status`
-- `body_html`
 - `product_image_url`
 - `variant_image_url`
 - `vendor`
