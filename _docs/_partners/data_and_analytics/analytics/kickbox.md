@@ -34,7 +34,7 @@ To integrate with Kickbox, follow the steps in [Integrating with Braze](https://
 
 ###Bulk Verification
 
-You may also choose to verify your entire list every few months or quarterly, to protect yourself from emails that churn or lists that degrade over time and slowly bring your deliverability down.<br><br>To do this, you need only change one part of the workflow described above, the Entry Schedule settings. Rather than selecting "Action-Based Delivery", select "Scheduled". Then choose a scheduled time for your list to be verified all at once.
+You may also choose to verify your entire list every few months or quarterly, to protect yourself from emails that churn or lists that degrade over time and slowly bring your deliverability down.<br><br>To do this, you need only change one part of the workflow outlined by Kickbox, the Entry Schedule settings. Rather than selecting "Action-Based Delivery", select "Scheduled". Then choose a scheduled time for your list to be verified all at once.
 
 ###Create Verified Segments
 
