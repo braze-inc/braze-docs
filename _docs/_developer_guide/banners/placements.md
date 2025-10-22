@@ -115,7 +115,7 @@ This feature is not currently supported on Roku.
 ### Step 3: Listen for updates {#subscribeToBannersUpdates}
 
 {% alert tip %}
-If you insert Banners using the SDK methods in this guide, all analytics events (such as impressions and clicks) will be handled automatically,  and impressions will only be logged when the banner is in view.
+If you insert Banners using the SDK methods in this guide, all analytics events (such as impressions and clicks) will be handled automatically, and impressions will only be logged when the banner is in view.
 {% endalert %}
 
 {% tabs %}
