@@ -156,7 +156,7 @@ Navigieren Sie in mParticle zu **Setup > Outputs > Add Outputs** und wählen Sie
 
 Das mParticle und Braze SDK wird durch die Integration des Embedded Kits in Ihrer Anwendung vorhanden sein. Im Gegensatz zu einer direkten Braze-Integration kümmert sich mParticle jedoch um den Aufruf der meisten SDK-Methoden von Braze für Sie. Die mParticle Methoden, die Sie zum Tracking von Nutzerdaten verwenden, werden automatisch auf die Braze SDK Methoden abgebildet. 
 
-Diese Abbildungen des SDK von mParticle für [Android](https://github.com/mparticle-integrations/mparticle-android-integration-appboy), [iOS](https://github.com/mparticle-integrations/mparticle-apple-integration-appboy) und [Internet](https://github.com/mparticle-integrations/mparticle-javascript-integration-braze) sind Open Source und können auf der [GitHub-Seite von mParticle](https://github.com/mparticle-integrations) gefunden werden. 
+Diese Abbildungen des SDK von mParticle für [Android](https://github.com/mparticle-integrations/mparticle-android-integration-appboy), [iOS](https://github.com/mparticle-integrations/mparticle-apple-integration-appboy) und [Internet](https://github.com/Appboy/integration-appboy) sind Open Source und können auf der [GitHub-Seite von mParticle](https://github.com/mparticle-integrations) gefunden werden. 
 
 Die SDK-Integration des Embedded Kit erlaubt es Ihnen, unsere gesamte Suite an Features zu nutzen (Push, In-App-Nachrichten und alle relevanten Messaging Analytics Tracking).
 
