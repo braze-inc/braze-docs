@@ -115,7 +115,7 @@ This feature is not currently supported on Roku.
 ### Step 3: Listen for updates {#subscribeToBannersUpdates}
 
 {% alert tip %}
-If you insert banners using the SDK methods in this guide, all analytics events will be handled automatically.
+If you insert banners using the SDK methods in this guide, all analytics events (impressions, clicks, etc.) will be handled automatically,  and impressions will only be logged when the banner is in view.
 {% endalert %}
 
 {% tabs %}
@@ -506,7 +506,7 @@ Test Banners are like any other banners, except they're removed at the next app 
 
 ## Logging impressions
 
-Braze automatically logs impressions when you use SDK methods to insert a Banner&#8212;so no need to track impressions manually.
+Braze automatically logs impressions for banners that are in-view when you use SDK methods to insert a Banner&#8212;so no need to track impressions manually.
 
 ## Dimensions and sizing
 
