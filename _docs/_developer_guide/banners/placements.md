@@ -506,7 +506,7 @@ Test Banners are like any other banners, except they're removed at the next app 
 
 ## Logging impressions
 
-Braze automatically logs impressions for banners that are in-view when you use SDK methods to insert a Banner&#8212;so no need to track impressions manually.
+Braze automatically logs impressions for Banners that are in view when you use SDK methods to insert a Banner&#8212;so no need to track impressions manually.
 
 ## Dimensions and sizing
 
