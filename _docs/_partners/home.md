@@ -90,8 +90,8 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/analytics/kubit/
 - name: Segment
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/segment/
-- name: mParticle
-  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/mparticle/
+- name: mParticle 
+  url: /docs/partners/mparticle/
 - name: Tealium
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/tealium/
 - name: RudderStack
