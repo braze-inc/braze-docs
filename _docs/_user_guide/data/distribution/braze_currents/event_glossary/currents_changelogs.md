@@ -5,7 +5,7 @@ description: "This page includes the event changes for each Currents release."
 tool: Currents
 ---
 
-# Currents Changelog
+# Currents changelog
 
 ## Changes in Version 3 (release date 2025-10-08)
 
