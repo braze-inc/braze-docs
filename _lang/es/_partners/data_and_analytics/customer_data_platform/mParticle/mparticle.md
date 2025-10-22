@@ -156,7 +156,7 @@ En mParticle, vaya a **Configuración > Salidas > Añadir salidas** y seleccione
 
 El SDK de mParticle y Braze estará presente en tu aplicación a través de la integración del kit embebido. Sin embargo, a diferencia de una integración directa con Braze, mParticle se encarga de llamar a la mayoría de los métodos del SDK de Braze por ti. Los métodos de mParticle que utilices para hacer un seguimiento de los datos de usuario se mapearán automáticamente con los métodos del SDK de Braze. 
 
-Estos mapeos del SDK de mParticle para [Android](https://github.com/mparticle-integrations/mparticle-android-integration-appboy), [iOS](https://github.com/mparticle-integrations/mparticle-apple-integration-appboy) y [Web](https://github.com/Appboy/integration-appboy) son de código abierto y se pueden encontrar en LA [página de GitHub de mParticle](https://github.com/mparticle-integrations). 
+Estos mapeos del SDK de mParticle para [Android](https://github.com/mparticle-integrations/mparticle-android-integration-appboy), [iOS](https://github.com/mparticle-integrations/mparticle-apple-integration-appboy) y [Web](https://github.com/mparticle-integrations/mparticle-javascript-integration-braze) son de código abierto y se pueden encontrar en LA [página de GitHub de mParticle](https://github.com/mparticle-integrations). 
 
 La integración del SDK del kit incrustado le permite aprovechar nuestro conjunto completo de funciones (push, mensajes dentro de la aplicación y todo el seguimiento analítico de mensajes pertinente).
 

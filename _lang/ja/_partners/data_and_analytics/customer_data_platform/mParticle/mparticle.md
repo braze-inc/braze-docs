@@ -156,7 +156,7 @@ mParticleで、**セットアップ > 出力 > 出力の追加**に移動し、*
 
 mParticle と Braze SDK は、埋め込みキット統合によってアプリケーションに表示されます。ただし、直接の Braze 統合とは異なり、mParticle が Braze SDK のメソッドのほとんどの呼び出しを処理します。ユーザーデータの追跡に使用する mParticle メソッドは、Braze SDK メソッドに自動的に マッピングされます。 
 
-これらのmParticleのSDKの[Android](https://github.com/mparticle-integrations/mparticle-android-integration-appboy)、[iOS](https://github.com/mparticle-integrations/mparticle-apple-integration-appboy)、[Web](https://github.com/Appboy/integration-appboy)のマッピングはオープンソースであり、[mParticleのGitHubページ](https://github.com/mparticle-integrations)で見つけることができます。 
+これらのmParticleのSDKの[Android](https://github.com/mparticle-integrations/mparticle-android-integration-appboy)、[iOS](https://github.com/mparticle-integrations/mparticle-apple-integration-appboy)、[Web](https://github.com/mparticle-integrations/mparticle-javascript-integration-braze)のマッピングはオープンソースであり、[mParticleのGitHubページ](https://github.com/mparticle-integrations)で見つけることができます。 
 
 埋め込みキット SDK 統合により、Braze のフルスイート機能 (プッシュ、アプリ内メッセージ、および関連するすべてのメッセージ分析トラッキング) を利用できます。
 
