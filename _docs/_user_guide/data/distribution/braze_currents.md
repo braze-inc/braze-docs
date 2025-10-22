@@ -29,6 +29,9 @@ guide_featured_list:
 - name: "Customer Behavior Events"
   link: /docs/user_guide/data/braze_currents/event_glossary/customer_behavior_events/
   image: /assets/img/braze_icons/users-01.svg
+- name: "Currents Changelog"
+  link: /docs/user_guide/data/braze_currents/currents_changelog/
+  image: /assets/img/braze_icons/arrows-right.svg
 - name: "How Braze Uses Currents"
   link: /docs/user_guide/data/braze_currents/how_braze_uses_currents/
   image: /assets/img/braze_icons/expand-05.svg
