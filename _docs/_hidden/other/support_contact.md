@@ -240,19 +240,19 @@ button.submit-btn {
   div#suggestionsBox h1 {
     font-size: 20px;
     font-weight: bold;
-   
-  }
-  div#suggestionsBox p {
-      font-size: 16px;
   }
 
-  div#suggestionsBox h2 {
+  div#suggestionsBox p {
+      font-size: 14px;
+  }
+
+  div#suggestionsBox h2, div#suggestionsBox h3 {
       font-size: 18px;
       font-weight: bold;
   }
 
   div#suggestionsBox li {
-      font-size: 16px;
+      font-size: 14px;
   }
   
    .gpt-text {
@@ -262,7 +262,6 @@ button.submit-btn {
    .gpt-heading{
       color: #5711E5;
       font-size: 18px;
-      font-style: normal;
       font-weight: 700;
       line-height: 20.8px; /* 115.556% */
    }
@@ -272,14 +271,9 @@ button.submit-btn {
     gap:9px;
     color: #212123;
     font-size: 16px;
-    font-style: normal;
     font-weight: 700;
-    line-height: 16px;
-    width: auto;
-    max-width: none;
+    line-height: 20px;
     padding: 9px;
-    border-radius: 8px;
-    background: linear-gradient(342deg, rgba(212, 239, 243, 0.20) 17.09%, rgba(253, 163, 161, 0.30) 113.99%, #FBA9F8 280.75%);
   }
 
   textarea#description {
@@ -315,13 +309,12 @@ button.submit-btn {
     leading-trim: both;
     text-edge: cap;
     font-size: 14px;
-    font-style: normal;
     font-weight: 700;
     line-height: 20px; /* 142.857% */
 }
 
   .main-form{
-        margin-bottom: 29px;
+    margin-bottom: 29px;
   }
 
   .main-border {
@@ -953,10 +946,8 @@ a:hover {
 
         /* Response Styles */
         #suggestionsBox {
-            background-color: #fff;
             padding: 15px;
             border-radius: 4px;
-            margin-top: 20px;
         }
 
         #articles {
@@ -989,40 +980,28 @@ a:hover {
                 display: flex;
                 align-items: center;
             }
-            
-          
         }
+
         #suggestionsBox {
-            background-color: #fff;
             padding: 15px;
             border-radius: 4px;
-            margin-top: 20px;
             line-height: 26px;
         }
-        
         
         #suggestionsBox h1, #suggestionsBox h2, #suggestionsBox h3 {
             color: #2c3e50;
             margin-top: 0;
         }
         
-        #suggestionsBox ul {
-            padding-left: 20px;
-        }
-        
-        #suggestionsBox li {
-            margin-bottom: 8px;
-        }
-        
+        #suggestionsBox ul { padding-left: 20px; }        
+        #suggestionsBox li { margin-bottom: 8px; }
+        span.highlight { color: black !important; }
         
         .su_citation {
-          background: none;
-          border-radius: 2px;
           border: none;
           color: #081A59;
           font-family: "Aribau Grotesk TRIAL";
           font-size: 13px;
-          font-weight: 400;
           line-height: 160%;
           border-radius: 2px;
           background: rgba(87, 17, 229, 0.12);
@@ -1031,9 +1010,14 @@ a:hover {
           margin-left: 6px;
       }
 
-      span.highlight {
-        color: black !important;
+
+      .gptGradientContainer{
+          background: linear-gradient(342.01deg, rgba(212, 239, 243, 0.2) 17.09%, rgba(253, 163, 161, 0.3) 113.99%, #FBA9F8 280.75%);
+          margin-bottom:24px;
+          border-radius:8px;
+          padding:12px;
       }
+
 </style>
 
 <div>
@@ -1085,6 +1069,7 @@ a:hover {
             <!-- Step 2 -->
             <div id="step2" style="display:none;">
                 <h2 class='gpt-heading'></h2>
+                <div class="gptGradientContainer">
                  <div class='gpt-responce'>
                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
   <path d="M16.1 14.5812L15.305 16.3662L13.544 17.1722C13.456 17.2137 13.3816 17.2793 13.3295 17.3615C13.2774 17.4436 13.2498 17.5389 13.2498 17.6362C13.2498 17.7335 13.2774 17.8287 13.3295 17.9109C13.3816 17.9931 13.456 18.0587 13.544 18.1002L15.305 18.9062L16.1 20.7062C16.1389 20.7952 16.203 20.8709 16.2844 20.9241C16.3657 20.9773 16.4608 21.0056 16.558 21.0056C16.6551 21.0056 16.7502 20.9773 16.8315 20.9241C16.9129 20.8709 16.977 20.7952 17.016 20.7062L17.811 18.9212L19.582 18.1152C19.6699 18.0737 19.7443 18.0081 19.7964 17.9259C19.8485 17.8437 19.8762 17.7485 19.8762 17.6512C19.8762 17.5539 19.8485 17.4586 19.7964 17.3765C19.7443 17.2943 19.6699 17.2287 19.582 17.1872L17.821 16.3812L17.026 14.5812C16.9857 14.4921 16.9206 14.4165 16.8385 14.3635C16.7564 14.3104 16.6607 14.2822 16.563 14.2822C16.4652 14.2822 16.3695 14.3104 16.2874 14.3635C16.2053 14.4165 16.1402 14.4921 16.1 14.5812Z" fill="#91186E"/>
@@ -1095,12 +1080,10 @@ a:hover {
 <div class='gpt-text1'>Generated answer for you </div>
                  </div>
 
-                
-         
                 <div id="suggestionsBox">
                 <div class= "for-line">
                 
-                <div class="svg1"><svg xmlns="http://www.w3.org/2000/svg" width="1250" height="9" viewBox="0 0 1250 9" fill="none">
+                <div class="svg1"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="9" viewBox="0 0 1250 9" fill="none">
   <path d="M1246.26 0H3.74224C1.67546 0 0 2.01472 0 4.5C0 6.98528 1.67546 9 3.74224 9H1246.26C1248.32 9 1250 6.98528 1250 4.5C1250 2.01472 1248.32 0 1246.26 0Z" fill="url(#paint0_linear_45139_47694)" fill-opacity="0.4"/>
   <defs>
     <linearGradient id="paint0_linear_45139_47694" x1="0" y1="4.5" x2="890.654" y2="4.5" gradientUnits="userSpaceOnUse">
@@ -1110,7 +1093,7 @@ a:hover {
     </linearGradient>
   </defs>
 </svg></div>
-                <div class="svg2"><svg xmlns="http://www.w3.org/2000/svg" width="1250" height="9" viewBox="0 0 1250 9" fill="none">
+                <div class="svg2"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="9" viewBox="0 0 1250 9" fill="none">
   <path d="M3.74231 0H1246.26C1248.32 0 1250 2.01472 1250 4.5C1250 6.98528 1248.32 9 1246.26 9H3.74231C1.67554 9 0 6.98528 0 4.5C0 2.01472 1.67554 0 3.74231 0Z" fill="url(#paint0_linear_45139_47693)" fill-opacity="0.4"/>
   <defs>
     <linearGradient id="paint0_linear_45139_47693" x1="890.652" y1="4.5" x2="-0.00114137" y2="4.5" gradientUnits="userSpaceOnUse">
@@ -1131,7 +1114,8 @@ a:hover {
                     <h3>Related Articles:</h3>
                     <div id="articles-list"></div>
                 </div>
-                <br>
+                </div>
+                
                 <div class="flex-display">
                 <div class="gpt-res-buttons">
                 <button type="button" class="submit-btn" id="backToStep1" style="background-color:grey;">Back</button>
@@ -2326,7 +2310,8 @@ $( document ).ready(function() {
 });
 
 
-const suggestionsBox = document.getElementById('suggestionsBox');
+
+   const suggestionsBox = document.getElementById('suggestionsBox');
 const articlesDiv = document.getElementById('articles');
 const articlesList = document.getElementById('articles-list');
 const formContainer = document.querySelector(".form-container");
