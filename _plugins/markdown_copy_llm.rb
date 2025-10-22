@@ -103,6 +103,14 @@ module MarkdownExport
     end
   end
 
+  # -------- Scrolly blocks: flatten to plain Markdown --------
+  class MdexpScrolly < Liquid::Block
+    def render(context)
+      # Just return the content as plain markdown
+      super
+    end
+  end
+
   # -------- Inline raw Markdown includes; reprocess with SAME pipeline (recursive) --------
   class MdexpMultiLangInclude < Liquid::Tag
     def initialize(tag_name, markup, tokens)
@@ -198,6 +206,7 @@ Liquid::Template.register_tag('mdexp_sdksubtabs',    MarkdownExport::MdexpSdkSub
 Liquid::Template.register_tag('mdexp_sdksubtab',     MarkdownExport::MdexpSdkSubtab)
 Liquid::Template.register_tag('mdexp_details',       MarkdownExport::MdexpDetails)
 Liquid::Template.register_tag('mdexp_alert',         MarkdownExport::MdexpAlert)
+Liquid::Template.register_tag('mdexp_scrolly',       MarkdownExport::MdexpScrolly)
 Liquid::Template.register_tag('mdexp_multi_lang_include', MarkdownExport::MdexpMultiLangInclude)
 
 module Jekyll
@@ -235,6 +244,10 @@ module Jekyll
         # alerts (idempotent)
         /\{%-?\s*(alert|mdexp_alert)\b/                 => '{% mdexp_alert',
         /\{%-?\s*(endalert|endmdexp_alert)(?:\s+[^%]*)?\s*-?%\}/        => '{% endmdexp_alert %}',
+
+        # scrolly (idempotent)
+        /\{%-?\s*(scrolly|mdexp_scrolly)\b/                 => '{% mdexp_scrolly',
+        /\{%-?\s*(endscrolly|endmdexp_scrolly)(?:\s+[^%]*)?\s*-?%\}/        => '{% endmdexp_scrolly %}',
 
         # multi_lang_include (idempotent)
         /\{%-?\s*(multi_lang_include|mdexp_multi_lang_include)\b/    => '{% mdexp_multi_lang_include',

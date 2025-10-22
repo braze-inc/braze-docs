@@ -14,6 +14,15 @@ Copy for LLM Button - Only show on developer guide pages that have processed mar
     <span class="copy-for-llm-text">Copy for LLM</span>
   </button>
   
+  <button 
+    id="view-markdown-btn" 
+    class="btn btn-outline-secondary btn-sm copy-for-llm-button"
+    title="View this page as markdown in a new tab"
+  >
+    <i class="fas fa-eye" aria-hidden="true"></i>
+    <span class="copy-for-llm-text">View as Markdown</span>
+  </button>
+  
   <!-- Success/Error feedback -->
   <div id="copy-for-llm-feedback" class="copy-for-llm-feedback" style="display: none;">
     <span class="copy-for-llm-message"></span>
@@ -23,6 +32,7 @@ Copy for LLM Button - Only show on developer guide pages that have processed mar
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const copyBtn = document.getElementById('copy-for-llm-btn');
+  const viewMarkdownBtn = document.getElementById('view-markdown-btn');
   const feedback = document.getElementById('copy-for-llm-feedback');
   const message = feedback.querySelector('.copy-for-llm-message');
   
@@ -71,6 +81,40 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
   
+  // View as Markdown button functionality
+  if (viewMarkdownBtn) {
+    viewMarkdownBtn.addEventListener('click', function() {
+      // Get the current page URL and convert to /index.md format
+      const currentUrl = window.location.pathname;
+      let markdownUrl;
+      
+      // Handle different URL patterns to get to /index.md
+      if (currentUrl.endsWith('/')) {
+        // Remove trailing slash and add /index.md
+        markdownUrl = currentUrl.slice(0, -1) + '/index.md';
+      } else if (currentUrl.endsWith('.html')) {
+        // Replace .html with /index.md
+        markdownUrl = currentUrl.replace('.html', '/index.md');
+      } else {
+        // Add /index.md
+        markdownUrl = currentUrl + '/index.md';
+      }
+      
+      // Log custom event to Braze
+      if (window.braze?.logCustomEvent) {
+        braze.logCustomEvent("view_as_markdown_clicked", {
+          page_url: window.location.pathname,
+          page_title: document.title,
+          markdown_url: markdownUrl
+        });
+        braze.requestImmediateDataFlush();
+      }
+      
+      // Open in new tab
+      window.open(markdownUrl, '_blank');
+    });
+  }
+  
   function showFeedback(text, type) {
     message.textContent = text;
     feedback.className = `copy-for-llm-feedback copy-for-llm-${type}`;
@@ -116,7 +160,9 @@ document.addEventListener('DOMContentLoaded', function() {
 <style>
 .copy-for-llm-wrapper {
   position: relative;
-  display: inline-block;
+  display: inline-flex;
+  gap: 0.5rem;
+  align-items: center;
 }
 
 .copy-for-llm-button {
@@ -180,6 +226,11 @@ document.addEventListener('DOMContentLoaded', function() {
   .copy-for-llm-button {
     font-size: 0.8rem;
     padding: 0.3rem 0.6rem;
+  }
+  
+  .copy-for-llm-wrapper {
+    flex-wrap: wrap;
+    gap: 0.25rem;
   }
 }
 
