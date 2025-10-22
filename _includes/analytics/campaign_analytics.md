@@ -287,7 +287,7 @@ For the full definitions of all Banners metrics, refer to the [Report Metrics Gl
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-clicks">Unique Clicks</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Clicks' %} Each user is only counted once.</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Clicks No Dispatch ID' %} Each user is only counted once.</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#primary-conversions">Primary Conversions</a></td>
