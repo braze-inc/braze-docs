@@ -10,9 +10,9 @@ description: "このページでは、アプリ内メッセージのドラッグ
 
 > SMS、RCS、WhatsAppのサインアップフォームは、アプリ内メッセージのドラッグ＆ドロップエディターで利用できるテンプレートである。これらのテンプレートを使ってユーザーの電話番号を収集し、SMS、MMS、RCS、WhatsAppサブスクリプショングループを拡大しよう。
 
-![電話サインアップフォームのテンプレートを使って作成したアプリ内メッセージの3つの例。]({% image_buster /assets/img_archive/dnd_iam_phone_capture_example2.png %})
+]({% image_buster /assets/img_archive/dnd_iam_phone_capture_example2.png %})電話サインアップフォームのテンプレートを使って作成したアプリ内メッセージの3つの例。()
 
-{% multi_lang_include drag_and_drop/templates.md section='SDKの要件' %}
+{% multi_lang_include drag_and_drop/templates.md section='SDK requirements' %}
 
 ## 電話番号登録フォームの作成
 
@@ -20,27 +20,27 @@ description: "このページでは、アプリ内メッセージのドラッグ
 
 アプリ内メッセージをドラッグ＆ドロップで作成する場合、テンプレートに**SMSサインアップ**（RCSサインアップに対応）または**WhatsAppサインアップを**選択し、**メッセージの作成を**選択する。これらのテンプレートは、モバイルアプリとWebブラウザの両方でサポートされています。
 
-![]({% image_buster /assets/img_archive/dnd_iam_phone_capture_template.png %}) アプリ内メッセージ作成時に、SMSサインアップまたはWhatsAppサインアップをテンプレートとして選択するモーダル。{: style="max-width:80%"}
+]({% image_buster /assets/img_archive/dnd_iam_phone_capture_template.png %}){: style="max-width:80%"}() アプリ内メッセージ作成時に、SMSサインアップまたはWhatsAppサインアップをテンプレートとして選択するモーダル。
 
 ### ステップ 2: メッセージスタイルを設定する
 
 {% multi_lang_include drag_and_drop/templates.md section='message style' %}
 
-![カスタムフォントのアップロードと選択のワークフロー]({% image_buster /assets/img_archive/dnd_iam_phone_capture_custom_font.gif %})
+]({% image_buster /assets/img_archive/dnd_iam_phone_capture_custom_font.gif %})カスタムフォントのアップロードと選択のワークフロー()
 
 ### ステップ 3: 電話番号入力コンポーネントをカスタマイズする
 
 サインアップフォームの作成を開始するには、エディターで電話番号の入力コンポーネントを選択します。
 
-![電話番号の入力コンポーネントを選択したサインアップフォーム作成時のプレビューエリア]({% image_buster /assets/img_archive/dnd_iam_phone_capture_select.png %}){: style="max-width:80%"}
+]({% image_buster /assets/img_archive/dnd_iam_phone_capture_select.png %})電話番号の入力コンポーネントを選択したサインアップフォーム作成時のプレビューエリア{: style="max-width:80%"}()
 
 サイドメニューから、このテンプレートが電話番号を収集するサブスクリプショングループを指定します。コンプライアンスのベストプラクティスに従うために、電話番号のサインアップフォームごとに 1 つの購読グループに対する同意のみを収集できます。ただし、必要に応じて、他の購読グループの同意を収集するために複数のフォームを使用できます。
 
-![サブスクリプショングループドロップダウンにサブスクリプショングループが選択されています。]({% image_buster /assets/img_archive/dnd_iam_phone_capture_subscription.png %}){: style="max-width:40%"}
+]({% image_buster /assets/img_archive/dnd_iam_phone_capture_subscription.png %})サブスクリプショングループドロップダウンにサブスクリプショングループが選択されています。{: style="max-width:40%"}()
 
 デフォルトでは、グローバルに数値を収集しますが、収集する国の数は制限できます。これは、特定の国の電話番号を持つユーザーにのみメッセージを送信する場合に役立ち、リストの清潔さを保つのに役立ちます。そのためには、**すべての国から番号を収集する**をオフにして、ドロップダウンを使用して特定の国を選択します。ユーザーは、あなたが明示的に追加した国のみを選択できるようになります。
 
-![国のドロップダウンから、番号を収集したい国を選択します。]({% image_buster /assets/img_archive/dnd_iam_phone_capture_countries.png %}){: style="max-width:40%"}
+]({% image_buster /assets/img_archive/dnd_iam_phone_capture_countries.png %})国のドロップダウンから、番号を収集したい国を選択します。{: style="max-width:40%"}()
 
 #### 無効な電話番号
 
@@ -68,10 +68,10 @@ SMSとRCSのコンプライアンスに関する詳細は、[SMS、MMS、RCSに�
 
 ドラッグアンドドロップ[アプリ内メッセージコンポーネント]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#message-components)を使用して、メッセージの外観と感触をカスタマイズします。
 
-## 結果を分析する
+## 結果の分析
 
-{% multi_lang_include drag_and_drop/templates.md section='レポート' %}
+{% multi_lang_include drag_and_drop/templates.md section='reporting' %}
 
-![アプリ内メッセージの各リンクのクリック数を表示するアプリ内メッセージパフォーマンスパネル]({% image_buster /assets/img_archive/dnd_iam_phone_capture_analytics.png %})
+]({% image_buster /assets/img_archive/dnd_iam_phone_capture_analytics.png %})アプリ内メッセージの各リンクのクリック数を表示するアプリ内メッセージパフォーマンスパネル()
 
 
