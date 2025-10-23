@@ -62,15 +62,12 @@ Before launching a Canvas with a Flow, you can select **Preview Flow** to previe
 
 ## Saving the full Flow response {#full-flow}
 
-### Step 1: Compose your WhatsApp message
-
-When composing your WhatsApp message, select the plus icon to open the **Add Personalization** window, then select **WhatsApp Properties** for the personalization type and **inbound_flow_response** for the custom attribute. This will save information to user profiles or forward it to other services, like webhooks.
-
-![WhatsApp message composer with an "Add Personalization" component to insert a WhatsApp properties personalization with the custom attribute `inbound_flow_response`.]({% image_buster /assets/img/whatsapp/flows/inbound_flow_response.png %}){: style="max-width:60%;"}
-
-### Step 2: Generate the Flow custom attribute
-
 When incorporating a WhatsApp Flow message into a Braze Canvas or campaign, you may want to capture and utilize specific information that users submit through the Flow. Braze needs to receive additional  information regarding the structure of the user response, specifically the expected shape of the JSON response, to generate the required nested custom attribute (NCA) schema.
+
+### Step 1: Generate the Flow custom attribute
+
+{% tabs local %}
+{% tab Recommended method %}
 
 The simplest way to give Braze the information about the response structure is to save the Flow response as a custom attribute and complete a test send.
 
@@ -78,7 +75,7 @@ The simplest way to give Braze the information about the response structure is t
 
 If you're using a Flow that hasn't been previously used within Braze, when viewing the **Flow Custom Attribute** section in the **Compose Messages**, you may not see any information. This means the schema hasn't been generated yet.
 
-![Meta Flow section with an option to view the Flow custom attribute.]({% image_buster /assets/img/whatsapp/flows/flow_custom_attribute.png %}){: style="max-width:80%;"}
+![Meta Flow section with an option to view the Flow custom attribute.]({% image_buster /assets/img/whatsapp/flows/flow_custom_attribute.png %}){: style="max-width:70%;"}
 
 To resolve this, do the following:
 
@@ -92,7 +89,36 @@ To resolve this, do the following:
 
 Now, Braze has the shape of the Flow response JSON and can generate the custom attribute.
 
-### Step 3: View the saved Flow response
+{% endtab %}
+{% tab Alternative method %}
+
+Use the advanced JSON editor to save attributes from the Flow response to custom attributes, or use a multi-step Canvas to save the response to a nested custom attribute. 
+
+{% subtabs %}
+{% subtab Advanced JSON editor %}
+
+In the advanced JSON editor, enter {% raw %}`{"attributes": [{"flow_1": {{whats_app.${inbound_flow_response}}}}]}`{% endraw %}, where “flow_1” is the custom attribute you’d like the flow to be saved to.
+
+![User Update step with an advanced JSON editor.]({% image_buster /assets/img/whatsapp/flows/user_update_advanced_json_editor.png %})
+
+{% endsubtab %}
+{% subtab UI editor %}
+
+1. Confirm that you have already created a custom attribute with the object data type ("flow_1" in this example) inside of your workspace data settings.
+2. In the UI editor, use the Liquid {% raw %}```{{whats_app.${inbound_flow_response}}}``` to populate the custom attribute and save the entire user’s Flow response to it. You need to populate the key value as ```{{whats_app.${inbound_flow_response}}}```{% endraw %} before selecting the custom attribute you created.
+
+![User Update step that uses the UI editor.]({% image_buster /assets/img/whatsapp/flows/user_update_ui_editor.png %})
+
+After Braze receives a Flow response, we will save the nested custom attribute with the prescribed naming to the user profile. That custom attribute can be pulled when building Canvases. 
+
+![A window displaying the contents of a "flow_1" custom attribute.]({% image_buster /assets/img/whatsapp/flows/user_attribute_flow.png %})
+
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+{% endtabs %}
+
+### Step 2: View the saved Flow response
 
 When the Flow completes, Braze automatically creates a Flow custom attribute with a name based on the Flow ID. You can then go to the user profile to view the saved Flow response as a nested object in the **Custom Attributes** section.
 
