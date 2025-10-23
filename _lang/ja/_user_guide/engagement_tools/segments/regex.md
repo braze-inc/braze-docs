@@ -10,7 +10,7 @@ tool:
   
 ---
 
-# [![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/regular-expression-basics-for-braze){: style="float:right;width:120px;border:0;" class="noimgborder"}正規表現
+# []({% image_buster /assets/img/bl_icon3.png %})Brazeラーニングコース{: style="float:right;width:120px;border:0;" class="noimgborder"}()](https://learning.braze.com/regular-expression-basics-for-braze)正規表現
 
 <!--{% multi_lang_include video.html id="3h5Xbhl-TxE" align="right" %}-->
 
@@ -22,7 +22,7 @@ tool:
 
 - [正規表現の基礎](https://learning.braze.com/regular-expression-basics-for-braze) Braze ラーニングコース 
 - [正規表現チートシート]({{site.baseurl}}/regex_cheat_sheet/)
-- [サンプルデータ RTF]({% image_buster /assets/download_file/regex-dummy-data.rtf %})
+- [サンプルデータ RTF]({% image_buster /assets/download_file/regex-dummy-data.rtf %})()
 
 ## 正規表現デバッガー
 
@@ -33,7 +33,7 @@ tool:
 {% endalert %}
 
 {% tabs %}
-{% tab 正規表現デバッガー %}
+{% tab Regex Debugger %}
 <div>
 このフォームでは、基本的な検証と正規表現のテストを行うことができます。
 ​
@@ -164,7 +164,7 @@ $( document ).ready(function() {
 
 例えば、"@braze.com" で終わるメールをフィルタリングしたいとする。メールアドレスフィルターを使用して `matches regex` に設定し、正規表現フィールドに「@braze.com」と入力します。他のメールドメインでも同様です。
 
-!["@braze.com".]({% image_buster /assets/img/regex/regeximg1.png %})の正規表現に一致するメールアドレスのフィルタ
+braze.com"@]({% image_buster /assets/img/regex/regeximg1.png %})".()の正規表現に一致するメールアドレスのフィルタ
 
 #### 値 ≥x または ≤x の場合、フィルターの番号文字列はどのように使用できますか？
 
@@ -190,7 +190,7 @@ $( document ).ready(function() {
 
 例えば、"San" で始まる都市に住むユーザーをターゲットにする場合、正規表現は `^San \w` とします。この正規表現を使えば、サンフランシスコ、サンディエゴ、サンノゼなどの都市のユーザーをターゲットにできます。
 
-![正規表現「^San \\w」に一致する市区町村のフィルター。]({% image_buster /assets/img/regex/regeximg2.png %})
+]({% image_buster /assets/img/regex/regeximg2.png %})正規表現「^San \\w」に一致する市区町村のフィルター。()
 
 #### 特定の電話番号をフィルタリングする方法を教えてください。
 
@@ -206,6 +206,6 @@ $( document ).ready(function() {
 ^1?718\d\d\d\d\d\d\d
 ```
 
-![正規表現「^1?718\\d\\d\\d\\d\\d\\d\\d」に一致する電話番号のフィルター。]({% image_buster /assets/img/regex/regeximg3.png %})
+]({% image_buster /assets/img/regex/regeximg3.png %})正規表現「^1?718\\d\\d\\d\\d\\d\\d\\d」に一致する電話番号のフィルター。()
 
 
