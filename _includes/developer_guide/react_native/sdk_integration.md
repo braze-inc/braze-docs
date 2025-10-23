@@ -48,7 +48,7 @@ Ensure that your version of the Braze React Native SDK is at least 1.37.0. For t
 To install the Braze Expo plugin, run the following command:
 
 ```bash
-expo install @braze/expo-plugin
+npx expo install @braze/expo-plugin
 ```
 
 #### Step 2.2: Add the plugin to your app.json
@@ -125,7 +125,7 @@ Example configuration:
 Prebuilding your application will generate the native files necessary for the Braze Expo plugin to work.
 
 ```bash
-expo prebuild
+npx expo prebuild
 ```
 
 Run your application as specified in the [Expo docs](https://docs.expo.dev/workflow/customizing/). Keep in mind, if you make any changes to the configuration options, you'll be required to prebuild and run the application again.
@@ -156,8 +156,8 @@ To connect to Braze servers, create a `braze.xml` file in your project's `res/va
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<string name="com_braze_api_key">YOU_APP_IDENTIFIER_API_KEY</string>
-<string translatable="false" name="com_braze_custom_endpoint">YOUR_CUSTOM_ENDPOINT_OR_CLUSTER</string>
+  <string translatable="false" name="com_braze_api_key">YOU_APP_IDENTIFIER_API_KEY</string>
+  <string translatable="false" name="com_braze_custom_endpoint">YOUR_CUSTOM_ENDPOINT_OR_CLUSTER</string>
 </resources>
 ```
 
@@ -249,10 +249,10 @@ From the root folder of the project:
 
 ```bash
 # To install using the React Native New Architecture
-cd ios && RCT_NEW_ARCH_ENABLED=1 pod install
+cd ios && pod install
 
 # To install using the React Native legacy architecture
-cd ios && pod install
+cd ios && RCT_NEW_ARCH_ENABLED=0 pod install
 ```
 
 #### Step 2.3: Configure the Braze SDK

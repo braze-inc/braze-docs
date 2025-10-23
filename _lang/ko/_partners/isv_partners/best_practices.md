@@ -8,20 +8,20 @@ hidden: true
 ## 데이터 수집
 
 Braze가 데이터를 수집하는 방법에 대해 자세히 알아보세요.
-- [SDK 데이터 수집]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/)
-- [데이터 수집 모범 사례]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/best_practices/)
-- [사용자 프로필 수명 주기]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/)
+- [SDK 데이터 수집]({{site.baseurl}}/user_guide/data/user_data_collection/sdk_data_collection/)
+- [데이터 수집 모범 사례]({{site.baseurl}}/user_guide/data/user_data_collection/best_practices/)
+- [사용자 프로필 수명 주기]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/)
 
 ## 브레이즈 식별자
 
 - `braze_id`: Braze에서 할당된 식별자로, 변경할 수 없으며 데이터베이스에서 생성될 때 해당 사용자와 연결됩니다.
 - `external_id`: 고객이 할당하는 식별자(일반적으로 UUID). 사용자를 고유하게 식별할 수 있는 경우 고객은 `external_id`를 할당하는 것이 좋습니다. 사용자가 식별된 후에는 익명으로 되돌릴 수 없습니다.
-- `user_alias`: `external_id` 할당 전에 ID로 사용자를 참조하기 위한 수단으로 고객이 할당할 수 있는 고유한 대체 식별자. 사용자 별칭은 나중에 Braze의 [사용자 식별]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/) 엔드포인트를 통해 사용할 수 있게 되면 다른 별칭이나 `external_id` 와 병합할 수 있습니다.
+- `user_alias`: `external_id` 할당 전에 ID로 사용자를 참조하기 위한 수단으로 고객이 할당할 수 있는 고유한 대체 식별자. User aliases can later be merged with other aliases or an `external_id` when one becomes available through the Braze [User identify]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/) endpoint.
     - [사용자 식별]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/) 엔드포인트 내에서 `merge_behavior` 필드를 사용하여 알려진 사용자 프로필에 유지되어야 하는 사용자 별칭 프로필의 데이터를 지정할 수 있습니다.
     - 사용자 별칭이 전송 가능한 프로필이 되려면 프로필에 이메일 및/또는 전화번호를 표준 속성으로 포함해야 합니다.
 - `device_id`: 자동으로 생성되는 기기별 식별자입니다. 고객 프로필에는 여러 개의 `device_ids`를 연결할 수 있습니다. 예를 들어 회사 컴퓨터, 집 컴퓨터, 태블릿, iOS 앱에서 계정에 로그인한 사용자는 프로필에 4개의 `device_ids`를 연결할 수 있습니다.
 - 이메일 주소 및 전화번호:
-    - Braze의 사용자 추적 엔드포인트에서 식별자로 지원됩니다. 
+    - Supported as an identifier in the Braze track user endpoint. 
     - 요청 내에서 이메일 주소 또는 전화번호를 식별자로 사용하는 경우 다음과 같은 세 가지 결과가 발생할 수 있습니다.
         1. 이 이메일/휴대폰을 가진 사용자가 Braze 내에 존재하지 않는 경우 이메일 전용/휴대폰 전용 사용자 프로필이 생성되며, 요청의 모든 데이터가 프로필에 추가됩니다.
         2. 이 이메일/전화 번호가 포함된 프로필이 이미 Braze 내에 존재하는 경우, 요청 내에서 전송된 모든 데이터를 포함하도록 프로필이 업데이트됩니다.
@@ -104,20 +104,20 @@ Braze가 데이터를 수집하는 방법에 대해 자세히 알아보세요.
 [클라우드 데이터 수집]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/cloud_ingestion/overview/#what-is-cloud-data-ingestion)
 - 사용자 추적 엔드포인트와 마찬가지로 클라우드 데이터 수집을 통해 데이터를 고객 프로필에 동기화할 수 있습니다. 이 도구를 사용할 때 동기화하려는 데이터 웨어하우스 테이블 또는 보기를 설정하고 원하는 Braze 작업 공간에 연결하여 속성, 이벤트 및 구매를 프로필에 기록합니다.
 
-[데이터 포인트]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points#data-points)
+[데이터 포인트]({{site.baseurl}}/user_guide/data/data_points/)
 - Braze는 값의 변경 여부와 관계없이 고객 프로필에 '쓸' 때마다 데이터 포인트가 발생하는 데이터 포인트 소비 모델을 보유하고 있습니다. 따라서 변경된 속성만 Braze에 전송하는 것이 좋습니다. 
 
 ## 사용자 오디언스를 Braze로 보내기
 
 [코호트 가져오기 동기화 파트너 설명서]({{site.baseurl}}/partners/isv_partners/cohort_import/)<br>
-- Braze의 코호트 가져오기 API 엔드포인트를 사용하여 사용자의 오디언스를 코호트로 Braze에 동기화할 수 있습니다. 이러한 오디언스가 고객 프로필에 사용자 속성으로 저장되는 대신, 고객은 세분화 툴 내의 파트너 브랜드 필터를 통해 이 코호트를 구축하고 타겟팅할 수 있습니다. 이를 통해 고객은 특정 사용자 세그먼트를 더 쉽고 간편하게 찾고 타겟팅할 수 있습니다.
+- Audiences of users can be synced to Braze as a cohort using the Braze Cohort Import API endpoints. 이러한 오디언스가 고객 프로필에 사용자 속성으로 저장되는 대신, 고객은 세분화 툴 내의 파트너 브랜드 필터를 통해 이 코호트를 구축하고 타겟팅할 수 있습니다. 이를 통해 고객은 특정 사용자 세그먼트를 더 쉽고 간편하게 찾고 타겟팅할 수 있습니다.
 - 코호트 가져오기 엔드포인트는 공개되지 않으며 각 파트너에 따라 다릅니다. 따라서 코호트 엔드포인트에 대한 동기화는 고객의 워크스페이스 사용량 제한에 포함되지 않습니다. 
 
 [사용자 추적]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)<br>
 - 사용자 속성을 통해 특정 오디언스에서 사용자를 표시하여 Braze에서 사용자를 생성하는 데 즉시 사용할 수 있는 공개적으로 액세스할 수 있는 엔드포인트입니다. 이 엔드포인트와 코호트 가져오기 엔드포인트의 주요 차이점은 이 엔드포인트를 사용하여 전송된 오디언스는 고객 프로필에 저장되는 반면, 코호트 가져오기 엔드포인트는 세분화 툴에 필러로 표시된다는 점입니다. 이 엔드포인트에는 워크스페이스 수준에서 분당 50,000건의 요청으로 사용량 제한이 적용됩니다.
 - 이 엔드포인트를 사용할 때는 [파트너 설명서]({{site.baseurl}}/partners/isv_partners/api_partner)에 표시된 대로 `partner` 키를 포함해야 합니다.
 
-[데이터 포인트]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points#data-points)<br>
+[데이터 포인트]({{site.baseurl}}/user_guide/data/data_points/)<br>
 - Braze는 값의 변경 여부와 관계없이 고객 프로필에 '쓸' 때마다 데이터 포인트가 발생하는 데이터 포인트 소비 모델을 보유하고 있습니다.
 - 데이터 포인트는 코호트 가져오기와 사용자 추적 엔드포인트 모두에서 발생합니다.
 
@@ -125,10 +125,10 @@ Braze가 데이터를 수집하는 방법에 대해 자세히 알아보세요.
 
 ### 커런츠
 
-커런츠는 Braze의 실시간에 가까운 메시지 인게이지먼트 분석 스트리밍 툴입니다. 이렇게 하면 고객의 워크스페이스에서 전송된 캠페인 및 캔버스에 대한 모든 전송, 전달, 열람, 클릭 등에 대한 사용자 수준 데이터가 스트리밍됩니다. 몇 가지 주의해야 할 사항이 있습니다: 커런츠는 고객의 커넥터당 가격이 책정되므로 모든 신규 커런츠 파트너는 EA 프로세스를 거쳐야 합니다. 커스텀 브랜드 UI를 구축하고 커넥터를 공개적으로 제공하기 전에 파트너에게 5명의 고객을 EA의 일부로 확보할 것을 요청합니다. 
+Currents are a near real-time message engagement analytics streaming tool in Braze. 이렇게 하면 고객의 워크스페이스에서 전송된 캠페인 및 캔버스에 대한 모든 전송, 전달, 열람, 클릭 등에 대한 사용자 수준 데이터가 스트리밍됩니다. 몇 가지 주의해야 할 사항이 있습니다: 커런츠는 고객의 커넥터당 가격이 책정되므로 모든 신규 커런츠 파트너는 EA 프로세스를 거쳐야 합니다. 커스텀 브랜드 UI를 구축하고 커넥터를 공개적으로 제공하기 전에 파트너에게 5명의 고객을 EA의 일부로 확보할 것을 요청합니다. 
 - [파트너 설명서]({{site.baseurl}}/partners/isv_partners/currents_integration/)
-- [메시지 참여 이벤트]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events) \- 커런츠 커넥터를 구매한 모든 고객은 이러한 이벤트에 액세스할 수 있습니다.
-- [사용자 행동 이벤트]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events) \- 현재 커넥터를 구매하는 모든 고객이 이러한 이벤트를 포함하는 '모든 이벤트' 커넥터를 구매하는 것은 아닙니다. 
+- [메시지 참여 이벤트]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) \- 커런츠 커넥터를 구매한 모든 고객은 이러한 이벤트에 액세스할 수 있습니다.
+- [사용자 행동 이벤트]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/) \- 현재 커넥터를 구매하는 모든 고객이 이러한 이벤트를 포함하는 '모든 이벤트' 커넥터를 구매하는 것은 아닙니다. 
 
 ### Snowflake 데이터 공유
 
@@ -162,7 +162,7 @@ API 캠페인을 생성할 때(위에서 언급한 API 트리거 캠페인과는
 - [API 캠페인 예약하기]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_schedule_messages/)
 
 ### ID 보내기
-Braze의 엔드포인트를 사용하여 캠페인 분석을 전송별로 세분화하는 데 사용할 수 있는 전송 ID를 생성하세요. 예를 들어, 위치별로 `campaign_id`(API 캠페인)가 생성된 경우 특정 위치에 대한 다양한 메시징의 성과를 추적하기 위해 전송별로 전송 ID를 생성할 수 있습니다. 
+Use the Braze endpoint to generate a send ID which can be used to break down campaign analytics by send. 예를 들어, 위치별로 `campaign_id`(API 캠페인)가 생성된 경우 특정 위치에 대한 다양한 메시징의 성과를 추적하기 위해 전송별로 전송 ID를 생성할 수 있습니다. 
 - [ID 보내기]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_create_send_ids/)
 
 ## 연결된 콘텐츠
@@ -183,10 +183,7 @@ Braze의 엔드포인트를 사용하여 캠페인 분석을 전송별로 세분
 - Braze 시스템은 수신자당 동일한 연결된 콘텐츠 API를 두 번 이상 호출할 수 있습니다. 이는 Braze가 메시지 페이로드를 렌더링하기 위해 연결된 콘텐츠 API 호출을 해야 할 수 있으며, 유효성 검사, 재시도 로직 또는 기타 내부 목적을 위해 수신자당 메시지 페이로드가 여러 번 렌더링될 수 있기 때문입니다. 
 
 커넥티드 콘텐츠에 대해 자세히 알아보려면 이 문서를 참조하세요:
-- [연결된 콘텐츠 호출][1]
-- [연결된 콘텐츠 중단][2]
-- [연결된 콘텐츠 재시도 횟수][3]
+- [Making a Connected Content call]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/)
+- [Aborting Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content)
+- [Connected Content retries]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries)
 
-[1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/
-[2]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content
-[3]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries

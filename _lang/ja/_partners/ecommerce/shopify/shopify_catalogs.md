@@ -61,7 +61,6 @@ Braze カタログに同期された製品は、[カタログ制限]({{site.base
 - `product_title`
 - `variant_title`
 - `status`
-- `body_html`
 - `product_image_url`
 - `variant_image_url`
 - `vendor`

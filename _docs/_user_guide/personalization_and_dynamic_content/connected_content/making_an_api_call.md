@@ -94,7 +94,7 @@ You can then use this basic authentication credential in your API calls by refer
 
 {% raw %}
 ```
-Hi there, here is some fun trivia for you!: {% connected_content https://yourwebsite.com/random/trivia :auth_credential credential_name %}
+Hi there, here is some fun trivia for you!: {% connected_content https://yourwebsite.com/random/trivia :basic_auth credential_name %}
 ```
 {% endraw %}
 
@@ -103,6 +103,10 @@ If you delete a credential, keep in mind that any Connected Content calls trying
 {% endalert %}
 
 ### Using token authentication
+
+{% alert important %} 
+The token authentication credential type is currently in early access. Contact your Braze account manager if you're interested in participating in this early access. 
+{% endalert %}
 
 When using Braze Connected Content, you may find that certain APIs require a token instead of a username and password. Braze can also store credentials that hold token authentication header values.
 
@@ -139,8 +143,9 @@ The following example illustrates retrieving and saving an access token to a loc
 {% connected_content
      https://your_API_access_token_endpoint_here/
      :method post
+     :auth_credentials access_token_credential_abc
      :headers {
-       "Content-Type": "YOUR-CONTENT-TYPE",
+       "Content-Type": "YOUR-CONTENT-TYPE"
      }
      :cache_max_age 900
      :save token_response
@@ -165,6 +170,15 @@ After the token is saved, it can be dynamically templated into the subsequent Co
 %}
 ```
 {% endraw %}
+
+### Editing credentials
+
+You can edit the credential name for authentication types.
+
+- For basic authentication, you can update the username and password. Note that the previously entered password will not be visible.
+- For token authentication, you can update the header key-value pairs and the allowed domain. Note that the previously set header values will not be visible.
+
+![The option to edit credentials.]({% image_buster /assets/img/connected_content/edit_credentials.png %}){: style="max-width:60%"}
 
 ## Connected Content IP allowlisting
 
@@ -209,7 +223,14 @@ It’s expected that a Connected Content API call can be made more than once per
 
 Connected Content doesn’t have its own rate limit. Instead, the rate limit is based on the message-sending rate. We recommend setting the messaging rate limit below your intended Connected Content rate limit if there are more Connected Content calls than messages sent.  
 
-### What’s caching behavior?
+### What is caching behavior?
 
 By default, POST requests do not cache. However, you can add the `:cache_max_age` parameter to force the POST call to cache.
+
 Caching can help reduce duplicate Connected Content calls. However, it isn’t guaranteed to always result in a single Connected Content call per user.
+
+### What is the Connected Content HTTP default behavior? 
+
+{% multi_lang_include connected_content.md section='default behavior' %}
+
+{% multi_lang_include connected_content.md section='http post' %}

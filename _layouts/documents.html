@@ -44,6 +44,14 @@ layout: default
     <div id="breadcrumb">
     </div>
     {%- endunless -%}
+    
+    {%- comment -%} Add Copy for LLM button for developer guide pages {%- endcomment -%}
+    {%- if page.collection == 'developer_guide' -%}
+    <div class="copy-for-llm-page-header">
+      {% include copy_for_llm_button.html %}
+    </div>
+    {%- endif -%}
+    
     {{ content }}
 
     </div>

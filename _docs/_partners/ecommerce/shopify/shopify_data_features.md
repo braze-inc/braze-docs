@@ -5,7 +5,7 @@ description: "This reference article covers Shopify data features."
 page_type: partner
 search_tag: Partner
 alias: /shopify_data_features/
-page_order: 3
+page_order: 4
 ---
 
 # Shopify data features
@@ -15,6 +15,8 @@ page_order: 3
 ## Tracked Shopify events
 
 The Shopify integration uses [eCommerce recommended events]({{site.baseurl}}/user_guide/data/custom_data/recommended_events/ecommerce_events/) to capture key shopping behaviors. For implementation examples and marketing strategies using these events, refer to [eCommerce use cases]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/ecommerce_use_cases/).
+
+{% multi_lang_include alerts/important_alerts.md alert='Shopify customer create' %}
 
 {% tabs %}
 {% tab Example Payload %}
@@ -467,7 +469,7 @@ For more information on how to build out a Liquid `for` loop to dynamically add 
 {% subtab Checkout started %}
 **Event**: `ecommerce.checkout_started`<br>
 **Type**: Recommended event<br>
-**Triggered**: When a customer adds, removes, or updates their shopping cart<br>
+**Triggered**: When a user navigates to the checkout page<br>
 **Use Case**: Checkout abandonment
 
 For Abandoned Checkout Canvases, you first need to use the following Liquid tag:

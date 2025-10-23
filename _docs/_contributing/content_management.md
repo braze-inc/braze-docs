@@ -1,6 +1,6 @@
 ---
 nav_title: Managing content
-article: Managing Content
+article_title: Managing Content
 description: "This is an overview of how content is managed on Braze Docs."
 page_order: 2 
 noindex: true
@@ -61,7 +61,7 @@ Replace the following.
 ```markdown
 ---
 nav_title: Contributing to Braze Docs
-article: Contributing to Braze Docs
+article_title: Contributing to Braze Docs
 description: "Here's what you need to start contributing to Braze Docs!"
 page_order: 0
 search_tag: Contributing

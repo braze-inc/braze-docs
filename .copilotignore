@@ -1,0 +1,23 @@
+_lang/
+.bundle/
+_algolia_api_key
+.gem/
+/_site
+.sass-cache
+.DS_Store
+.tags
+.tags1
+.ruby-version
+jekyll-algolia-*
+**/.asset_pipeline
+.jekyll-cache
+.vscode
+.jekyll-metadata
+
+# JetBrains IDEs
+.idea/
+braze-docs.iml
+
+# Braze scripts
+scripts/temp
+node_modules

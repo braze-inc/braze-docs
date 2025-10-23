@@ -41,6 +41,9 @@ guide_featured_list:
 - name: "Reporting"
   link: /docs/sms_mms_rcs_reporting/
   image: /assets/img/braze_icons/phone-02.svg
+- name: "SMS and RCS Bot Click Filtering"
+  link: /docs/sms_rcs_bot_click_filtering/
+  image: /assets/img/braze_icons/phone-02.svg
 - name: "Billing Calculators"
   link: /docs/sms_rcs_billing_calculators/
   image: /assets/img/braze_icons/calculator.svg

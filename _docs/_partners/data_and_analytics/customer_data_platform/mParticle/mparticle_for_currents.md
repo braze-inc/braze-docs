@@ -56,7 +56,7 @@ In Braze, navigate to **Currents > + Create Current > Create mParticle Export**.
 ![The mParticle Currents page in Braze. Here, you can find fields for integration name, contact email, API key, and secret key.]({% image_buster /assets/img_archive/currents-mparticle-edit.png %})
 
 {% alert important %}
-It's important to keep your mParticle API Key and mParticle Secret Key up to date; if your connector's credentials expire, the connector will stop sending events. If this persists for more than **48 hours**, the connector's events will be dropped and data will be permanently lost.
+It's important to keep your mParticle API Key and mParticle Secret Key up to date; if your connector's credentials expire, the connector will stop sending events. If this persists for more than **5 days**, the connector's events will be dropped and data will be permanently lost.
 {% endalert %}
 
 All events sent to mParticle will include the user's `external_user_id` as the `customerid`. At this time, Braze does not send event data for users who do not have their `external_user_id` set. If you'd like to map the `external_user_id` to a different ID in mParticle that is not the default `customerid`, please contact your Braze CSM. 

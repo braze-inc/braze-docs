@@ -64,6 +64,8 @@ The following events will be enabled by default in the standard integration.
 
 For more information on the data tracked through the integration, refer to [Shopify Data Features]({{site.baseurl}}/shopify_data_features/).
 
+{% multi_lang_include alerts/important_alerts.md alert='Shopify customer create' %}
+
 ### Historical backfill setup
 
 Through the standard setup, you have the option to perform an initial load of your Shopify customers and orders from the last 90 days prior to your Shopify integration connection. To do so, select the checkbox to include the initial data load as part of your integration. 
@@ -154,7 +156,11 @@ Using an email address or a hashed email address as your Braze external ID can h
 
 By default, Braze automatically converts emails from Shopify to lowercase before using them as the external ID. If you’re using email or hashed email as your external ID, confirm that your email addresses are also converted to lowercase before you assign them as your external ID or before hashing them from other data sources. This helps prevent discrepancies in external IDs and avoid creating duplicate user profiles in Braze.
 
-If you selected a custom external ID type, proceed to steps 4.1—4.3. Otherwise, continue to step 4.4.
+{% alert note %}
+The next steps depend on your external ID selection:<br><br>
+- **If you selected a custom external ID type:** Complete steps 4.1—4.3 to set up your custom external ID configuration.
+- **If you selected Shopify customer ID, email, or hashed email:** Skip steps 4.1—4.3 and continue directly to step 4.4.
+{% endalert %}
 
 ### Step 4.1: Create the `braze.external_id` metafield
 

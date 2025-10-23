@@ -32,7 +32,7 @@ The Braze and Segment integration allows you to leverage Braze Currents to expor
 In your Segment dashboard, select your Segment source. Next, go to **Settings > API keys**. Here you will find the **Segment Write Key**.
 
 {% alert warning %}
-It's important to keep your Segment write key up to date. If your connector's credentials expire, the connector will stop sending events. If this persists for more than **48 hours**, the connector's events will be dropped, and data will be permanently lost.
+It's important to keep your Segment write key up to date. If your connector's credentials expire, the connector will stop sending events. If this persists for more than **5 days**, the connector's events will be dropped, and data will be permanently lost.
 {% endalert %}
 
 ### Step 2: Create a new Currents connector

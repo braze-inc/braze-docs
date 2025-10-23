@@ -51,13 +51,22 @@ jobs:
             core.info(`Matching issue found? ${issueFound ? "yes" : "no"}`);
             if (!issueFound) return;
 
-            await github.rest.issues.createComment({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: pr.number,
-              body: `Fixes #${matchedIssue.number}`
-            });
-            core.info("Comment posted? yes");
+            const fixesRef = `Fixes #${matchedIssue.number}`;
+
+            let newBody = pr.body || "";
+            if (!newBody.includes(fixesRef)) {
+              // Append the fixes reference to the PR body
+              newBody = `${newBody}\n\n${fixesRef}`;
+              await github.rest.pulls.update({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: pr.number,
+                body: newBody
+              });
+              core.info("PR body updated with fixes reference");
+            } else {
+              core.info("PR body already contains fixes reference");
+            }
 
             await github.rest.issues.addLabels({
               owner: context.repo.owner,
