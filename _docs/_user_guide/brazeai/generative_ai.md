@@ -21,9 +21,6 @@ guide_featured_list:
 - name: AI Liquid Assistant
   link: /docs/user_guide/brazeai/generative_ai/liquid/
   image: /assets/img/braze_icons/beaker-02.svg
-- name: BrazeAI Operator
-  link: /docs/operator/
-  image: /assets/img/braze_icons/stars-01.svg
 - name: SQL Query Builder
   link: /docs/user_guide/analytics/query_builder/
   image: /assets/img/braze_icons/tool-01.svg

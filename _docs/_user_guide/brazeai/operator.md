@@ -1,7 +1,7 @@
 ---
 nav_title: Operator
 article_title: BrazeAI Operator
-page_order: 1.5
+page_order: 0.7
 alias: /operator/
 description: "This reference article covers BrazeAI Operator, an AI-powered assistant built into the Braze dashboard."
 ---
