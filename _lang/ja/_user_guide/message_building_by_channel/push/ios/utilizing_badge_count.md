@@ -1,6 +1,6 @@
 ---
 nav_title: バッジ数の使用法
-article_title: バッジ数の使用法
+article_title: バッジ数の活用
 page_order: 8
 
 page_type: reference
