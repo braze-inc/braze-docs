@@ -23,13 +23,13 @@ Sie können Kampagnen und Canvase erstellen, die starten, sich verzweigen und mi
 
 Legen Sie Ihre Trigger-Wörter fest, wenn Sie eine aktionsbasierte Zustellungskampagne planen.
 
-![Aktionsbasierter Trigger von "Diese Kampagne an Nutzer:innen senden, die eingehende Nachrichten an die Abo-Gruppe gesendet haben, in der sich der Nachrichtentext befinde" und ein leeres Feld.][1]
+]({% image_buster /assets/img/line/trigger_word_campaign.png %})Action-based trigger of "Send this campaign to users who sent inbound LINE to subscription group where the message body is" and a blank field.()
 
 ### Canvas
 
 Legen Sie Ihre Auslösewörter innerhalb von [Aktionspfaden]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths) in Ihrem Canvas fest.
 
-![Aktionspfad mit einem Trigger von "Diese Kampagne an Nutzer:innen senden, die eingehende Nachrichten an die Abo-Gruppe gesendet haben, in der sich der Nachrichtentext befindet" und einem leeren Feld.][2]
+]({% image_buster /assets/img/line/trigger_word_canvas.png %})Action path with a trigger of "Send this campaign to users who sent inbound LINE to subscription group where the message body is" and a blank field.()
 
 ### Anforderungen
 
@@ -47,5 +47,3 @@ Nachdem Sie Aktionsgruppen für die benutzerdefinierten Filterphrasen erstellt h
 
 Für diese Nachricht sollten Sie eine LINE-Nachricht senden, die den Benutzer darüber informiert, dass dieser Kanal nicht von einem Menschen überwacht wird, und ihn bei Bedarf an einen Support-Kanal weiterleitet.
 
-[1]: {% image_buster /assets/img/line/trigger_word_campaign.png %}
-[2]: {% image_buster /assets/img/line/trigger_word_canvas.png %}
