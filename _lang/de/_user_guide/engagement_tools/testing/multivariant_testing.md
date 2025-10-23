@@ -51,19 +51,7 @@ Zu den spezifischen Szenarien, in denen Multivariate- und A/B-Tests nützlich se
 
 ### Verteilung der Variationen
 
-Die Verteilung zwischen den Varianten ist nicht immer gleichmäßig. So funktioniert die Verteilung von Varianten.
-
-Jedes Mal, wenn eine Nachricht in einer multivariaten Kampagne versendet wird, wählt das System selbständig eine zufällige Option gemäß den von Ihnen festgelegten Prozentsätzen aus und weist auf der Grundlage des Ergebnisses eine Variante zu. Es ist wie das Werfen einer Münze - Anomalien sind möglich. Wenn Sie schon einmal 100 Mal eine Münze geworfen haben, wissen Sie, dass Sie wahrscheinlich nicht jedes Mal eine exakte 50:50-Aufteilung zwischen Kopf und Zahl erhalten werden, auch wenn Sie nur zwei Möglichkeiten haben. Sie könnten 52 Kopf und 48 Zahl erhalten.
-
-Wenn Sie mehrere Varianten haben, die Sie gleichmäßig aufteilen möchten, müssen Sie auch sicherstellen, dass die Anzahl der Varianten ein Vielfaches von 100 ist. Andernfalls wird bei einigen Varianten ein höherer Prozentsatz der Nutzer auf diese Variante verteilt sein als bei anderen. Wenn Ihre Kampagne zum Beispiel 7 Varianten hat, kann es keine gleichmäßige Verteilung der Varianten geben, da 7 als ganze Zahl nicht gleichmäßig durch 100 teilbar ist. In diesem Fall hätten Sie 2 Varianten von 15 % und 5 Varianten von 14 %.
-
-#### Hinweis zu In-App-Nachrichten
-
-Wenn Sie A/B-Tests für In-App-Nachrichten durchführen, kann es vorkommen, dass Ihre Analysen eine höhere Verteilung zwischen einer Variante und einer anderen zeigen, auch wenn die prozentuale Verteilung gleich ist. Betrachten Sie zum Beispiel das folgende Diagramm der *eindeutigen Empfänger* für Variante A und Variante C.
-
-![Grafik der eindeutigen Empfänger:innen für zwei Varianten mit einer ähnlichen Form zwischen Variante A und Variante C, wobei Variante A eine höhere Anzahl von eindeutigen Empfänger:innen pro Tag aufweist]({% image_buster /assets/img/variant_distribution_iam.png %})
-
-Variante A hat eine durchgängig höhere Anzahl von *Unique Recipients* als Variante C. Das liegt nicht an der Verteilung der Varianten, sondern daran, wie *Unique Recipients* für In-App-Nachrichten berechnet werden. Bei In-App-Nachrichten sind *Unique Recipients* eigentlich *Unique Impressions*, also die Gesamtzahl der Personen, die die In-App-Nachricht erhalten und angesehen haben. Das bedeutet, dass ein Benutzer, der die Nachricht aus irgendeinem Grund nicht erhält oder sich entscheidet, sie nicht anzusehen, nicht in die Zählung der *eindeutigen Empfänger* einbezogen wird und die Variantenverteilung verzerrt erscheinen kann.
+{% multi_lang_include multivariant_testing.md section='Variant distribution' %}
 
 ## Tipps für multivariate und A/B-Tests
 
@@ -99,16 +87,3 @@ Für genaue Testergebnisse:
 Wenn Sie eine [Kontrollgruppe]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/#including-a-control-group) einbeziehen, können Sie feststellen, ob Ihre Nachrichten eine größere Auswirkung auf die Konversion der Nutzer haben als wenn Sie gar keine Nachricht senden.
 
 
-[2]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#conversion-events
-[70]: #tips-different-channels
-[80]: #choosing-a-segment
-[160]: {% image_buster /assets/img/ab_create_1.png %}
-[170]: {% image_buster /assets/img/ab_create_2.png %}
-[175]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/
-[180]: {% image_buster /assets/img/ab_create_4.png %}
-[210]: {% image_buster /assets/img/ab_create_8.png %}
-[10]: {% image_buster /assets/img/ab_send_winning_variant.png %}
-[272]: #intelligente-auswahl
-[273]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/message_format/
-[intelselection]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/
-[confidence]: {{site.baseurl}}/user_guide/intelligence/multivariate_testing/#understanding-confidence
