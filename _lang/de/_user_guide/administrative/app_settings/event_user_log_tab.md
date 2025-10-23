@@ -32,11 +32,13 @@ Jedes Protokoll ist in mehrere Abschnitte unterteilt, die Folgendes enthalten k�
 * Kampagnen-Events
 * Antwortdaten
 
-Klicken Sie auf die Schaltfläche **Rohdaten**, um die JSON-Rohdaten für dieses bestimmte Protokoll anzuzeigen.
+Wählen Sie das Symbol **Daten erweitern** aus, um die JSON-Rohdaten für dieses bestimmte Protokoll anzuzeigen.
 
-![Rohprotokolle für Events][10]
+]({% image_buster /assets/img_archive/expand_data.png %})Das Symbol "Daten erweitern" neben einem bestimmten Protokoll.()
 
 Event-Nutzerprotokolle bleiben 30 Tage lang im Dashboard, nachdem sie protokolliert wurden.
+
+]({% image_buster /assets/img_archive/rawlogs.png %})Rohprotokolle für Ereignisse{: style="max-width:60%;"}()
 
 ## Fehlersuche
 
@@ -67,4 +69,3 @@ In Bezug auf Nutzersitzungen können Sie Braze verwenden, um Daten wie diese zu 
 
 Diese Verhaltensweisen werden nicht dadurch beeinflusst, dass das Sitzungsende-Event bei der nächsten Sitzung gespült wird.
 
-[10]: {% image_buster /assets/img_archive/rawlogs.png %}
