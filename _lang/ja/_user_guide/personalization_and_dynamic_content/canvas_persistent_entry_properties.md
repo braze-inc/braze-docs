@@ -1,5 +1,5 @@
 ---
-title: キャンバスの永続エントリプロパティ
+nav_title: キャンバスの永続エントリプロパティ
 article_title: キャンバスの永続エントリプロパティ
 page_order: 6
 layout: redirect
