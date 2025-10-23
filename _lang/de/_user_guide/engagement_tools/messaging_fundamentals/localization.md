@@ -25,7 +25,7 @@ Technische Details zum Empfang der Lokalisierung finden Sie in der offiziellen D
 Ziehen Sie die folgenden Ansätze für die Verwaltung Ihrer Übersetzungen in Betracht.
 
 {% tabs local %}
-{% tab Kampagne %}
+{% tab campaign %}
 ### Ein Template für alle
 
 Bei diesem Ansatz wird die Lokalisierung mit [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid) auf ein einzelnes Template in Braze angewendet. Nach dem Versand bietet das Dashboard aggregierte Kampagnen-Analysen. Das Engagement auf Benutzerebene kann mit benutzerdefinierten Segmenttrichtern gemessen werden, z. B. durch die Kombination von Filtern für **Land** und **empfangene Kampagne**.
@@ -50,12 +50,12 @@ Dieser Ansatz trennt die Template-Erstellung in verschiedene Sende-Locales. Nach
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
 
-{% tab Canvas %}
+{% tab canvas %}
 ### Eine Reise für alle
 
 Bei diesem Ansatz wird die Lokalisierung innerhalb von [Canvas Journeys]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/the_basics/#building-the-customer-journey) und Liquid durchgeführt, um Nachrichten für jeden Nutzer:innen zu definieren. 
 
-Nachdem ein Canvas versendet wurde, bietet das Dashboard aggregierte [Canvas-Analysen]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/), während das Engagement auf Benutzerebene über benutzerdefinierte [Segmenttrichter]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_funnels/) gemessen werden kann, z. B. durch Kombination von [**Land**]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#country) und [**Empfangener Canvas-Schritt**]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#received-canvas-step) Filter.
+Nachdem ein Canvas versendet wurde, bietet das Dashboard aggregierte [Canvas-Analysen]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/), während das Engagement auf Benutzerebene über benutzerdefinierte [Segmenttrichter]({{site.baseurl}}/user_guide/engagement_tools/segments/measuring_segment_size/) gemessen werden kann, z. B. durch Kombination von [**Land**]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#country) und [**Empfangener Canvas-Schritt**]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#received-canvas-step) Filter.
 
 | Vorteile | Überlegungen |
 | --- | --- |
@@ -85,7 +85,7 @@ Nach dem Versand bietet das Dashboard dynamische Analytics pro Land und innerhal
 Um personalisierte Nachrichten auf der Grundlage der Sprache oder des Gebietsschemas eines Nutzers zu versenden, verwenden Sie eine der folgenden Methoden:
 
 {% tabs local %}
-{% tab Manuell %}
+{% tab Manually %}
 Sie können Ihre Inhalte manuell in den Textkörper Ihrer Nachricht einfügen und [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/) verwenden, um dem Empfänger: [in]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#conditional-logic) der richtigen Sprache anzuzeigen. Um dies zu tun:
 
 1. Verfassen Sie Ihre Nachricht und wählen Sie dann **Sprache** aus, um Liquid bedingte Logik für jede der von Ihnen ausgewählten Sprachen zu generieren.
@@ -113,7 +113,7 @@ Wir empfehlen immer, eine Erklärung {% raw %}`{% else %}`{% endraw %} in Ihre N
 {% endalert %}
 {% endtab %}
 
-{% tab Content-Blöcke %}
+{% tab Content Blocks %}
 Braze [Content Blocks]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/#content-blocks) sind wiederverwendbare Inhaltsblöcke. Wenn ein Block geändert wird, ändern sich alle Referenzen auf diesen Block. Zum Beispiel werden Aktualisierungen eines E-Mail-Header- oder Footer in allen E-Mails oder Übersetzungen übernommen. Diese Blöcke können auch über die REST API [erstellt]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/post_create_email_content_block/#create-content-block) und [aktualisiert]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/post_update_content_block/) werden, und Nutzer:innen können Übersetzungen programmatisch hochladen. 
 
 Beim Erstellen einer Kampagne im Dashboard können Content-Blöcke mit dem Tag {% raw %}`{{content_blocks.${name_of_content_block}}}`{% endraw %} referenziert werden. Diese Blöcke können alle Übersetzungen enthalten, die in einer bedingten Logik für jede Sprache untergebracht sind, wie in Option 1 gezeigt, oder es kann ein separater Block für jede Sprache verwendet werden.
@@ -126,8 +126,8 @@ Content-Blöcke können auch als Übersetzungsverwaltungsprozess verwendet werde
 5. Ihr Dienst greift auf den [Endpunkt`/content_block/update` ]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/post_update_content_block/) zu, um übersetzten Content zu aktualisieren und das Tag auf „Übersetzung abgeschlossen“ zu setzen.
 {% endtab %}
 
-{% tab Kataloge %}
-[Kataloge]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/) ermöglichen Ihnen den Zugriff auf Daten aus importierten JSON-Objekten über API und CSV-Dateien, um Ihre Nachrichten anzureichern, ähnlich wie bei benutzerdefinierten Attributen oder benutzerdefinierten Ereigniseigenschaften über Liquid. Zum Beispiel:
+{% tab Catalogs %}
+[Kataloge]({{site.baseurl}}/user_guide/data/activation/catalogs/) ermöglichen Ihnen den Zugriff auf Daten aus importierten JSON-Objekten über API und CSV-Dateien, um Ihre Nachrichten anzureichern, ähnlich wie bei benutzerdefinierten Attributen oder benutzerdefinierten Ereigniseigenschaften über Liquid. Zum Beispiel:
 
 {% subtabs local %}
 {% subtab API %}
@@ -222,7 +222,7 @@ Erstellen Sie eine CSV-Datei im folgenden Format:
 {% endsubtab %}
 {% endsubtabs %}
 
-Auf diese Katalogeintragungen kann mit Hilfe der unten gezeigten [Personalisierung]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog/#using-catalogs-in-a-message) oder mit Hilfe von [Auswahlen]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections), mit denen Sie Datengruppen erstellen können, Bezug genommen werden. 
+Auf diese Katalogeintragungen kann mit Hilfe der unten gezeigten [Personalisierung]({{site.baseurl}}/user_guide/data/activation/catalogs/catalog/#using-catalogs-in-a-message) oder mit Hilfe von [Auswahlen]({{site.baseurl}}/user_guide/data/activation/catalogs/selections), mit denen Sie Datengruppen erstellen können, Bezug genommen werden. 
 
 {% raw %}
 ```liquid
@@ -233,7 +233,7 @@ Auf diese Katalogeintragungen kann mit Hilfe der unten gezeigten [Personalisieru
 {% endraw %}
 {% endtab %}
 
-{% tab Lokalisierte Nachrichten %}
+{% tab Locale messages %}
 Fügen Sie Ihrer Nachricht Lokalisierungen hinzu und verwenden Sie diese, um Nutzer:innen in verschiedenen Sprachen innerhalb einer einzigen Kampagne oder eines Canvas für die E-Mail- oder Push-Kanäle anzusprechen. Eine vollständige Anleitung finden Sie unter [Lokalisierung in E-Mail Nachrichten]({{site.baseurl}}/user_guide/message_building_by_channel/email/using_locales/) oder [Lokalisierung in Push-Nachrichten]({{site.baseurl}}/user_guide/message_building_by_channel/push/using_locales/).
 
 {% alert important %}
@@ -241,7 +241,7 @@ Diese Funktion befindet sich derzeit in der Early Access-Phase. Wenden Sie sich 
 {% endalert %}
 {% endtab %}
 
-{% tab Braze Partner %}
+{% tab Braze partners %}
 Viele Partner von Braze bieten Lösungen zur Lokalisierung an, darunter [Transifex]({{site.baseurl}}/partners/message_personalization/localization/transifex/#about-transifex) und [Crowdin](https://crowdin.com/). In der Regel nutzen die Benutzer die Plattform zusammen mit einem internen Team und einem Übersetzungsbüro. Diese Übersetzungen werden dann dort hochgeladen und sind dann über die REST API zugänglich. Diese Dienste nutzen häufig auch [Connected-Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/), was es Nutzern:innen erlaubt, die Übersetzungen über APIs abzurufen.
 
 Die folgenden Connected Content-Aufrufe rufen beispielsweise Transifex und Crowdin auf, um eine Übersetzung zu holen. Dabei wird {% raw %}`{{${language}}}`{% endraw %} genutzt, um die richtige Übersetzung für einen bestimmten Benutzer zu ermitteln. Diese Übersetzung wird dann in dem JSON-Block „Strings“ gespeichert und referenziert.
@@ -266,7 +266,7 @@ Die folgenden Connected Content-Aufrufe rufen beispielsweise Transifex und Crowd
 {% endsubtabs %}
 {% endtab %}
 
-{% tab Tabellenkalkulationen %}
+{% tab Spreadsheets %}
 Hosten Sie die Übersetzungen in einer Tabelle und verwenden Sie dann eine der folgenden Methoden, um Ihre Nachricht in der entsprechenden Sprache zu versenden.
 
 {% subtabs local %}
