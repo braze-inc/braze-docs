@@ -121,6 +121,11 @@ The "Everyone Else" rule acts as a default. If a user doesn't qualify for any pr
 
 By default, rules are ordered in the sequence that they are created in, but rules can be re-ordered by dragging and dropping them within the dashboard. 
 
+![An image showing that a user can add a rule to a feature flag.]({% image_buster assets/img/feature_flags/add_rule.png %}){: style="max-width:85%;"}
+
+![An image showing a summary of a feature flag with multiple rules added and an everyone else rule.]({% image_buster assets/img/feature_flags/mr_rules_overview.png %}){: style="max-width:85%;"}
+
+
 ### Multi-rule feature flag use cases
 
 #### Gradually release a checkout page
