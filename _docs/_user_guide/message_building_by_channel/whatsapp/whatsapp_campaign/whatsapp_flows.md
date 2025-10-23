@@ -105,11 +105,9 @@ After the schema generates, the Flow **Custom Attribute** section will display t
 - **Existing attributes:** If a custom attribute for a particular Flow is already generated, the Flow will load with the attribute information available. In these cases, you don't need to send a test message to generate the schema, as Braze already recognizes the expected response messages.
 - **Flow changes:** If you make any changes to the Flow after the schema generates, you must send an additional test message so Braze can understand that the shape of the Flow response has changed and adjust the attribute structure accordingly. This action is limited to once every 24 hours. 
 - **Consistency:** The Flow custom attribute generated is consistent and will be the same attribute for this specific Flow, regardless the Canvas it's used in.
-- **Manual option:** You aren't required to select the **Save Flow responses as a custom attribute** checkbox. You can manually generate the custom attribute through the steps documented in [](), which avoids duplicating user steps.
+- **Manual option:** You aren't required to select the **Save Flow responses as a custom attribute** checkbox. You can manually generate the custom attribute by [saving specific fields from Flow responses to a specific custom attribute](#saving-specific-fields-from-flow-responses-to-a-specific-custom-attribute), which avoids duplicating user steps.
 
 ## Saving specific fields from Flow responses to a specific custom attribute 
-
-### Step 2: Extract fields from Flow responses
 
 You can use nested custom attributes or the `json_parse` Liquid tag to extract specific fields from Flow responses.
 
