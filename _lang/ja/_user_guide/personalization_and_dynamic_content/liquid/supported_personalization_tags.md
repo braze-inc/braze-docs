@@ -117,7 +117,7 @@ User is in list of apps
 
 さらに、プッシュ通知では、プッシュトークンが API を介してインポートされた場合など、特定の状況下で Braze がプッシュ通知に添付されたデバイスを判別できないことがあります。その結果、これらのメッセージの値は `null` になります。
 
-![プッシュメッセージで first_name 変数が使用されている場合にデフォルト値「there」を使う例。]({% image_buster /assets/img_archive/personalized_firstname_.png %})
+]({% image_buster /assets/img_archive/personalized_firstname_.png %})プッシュメッセージで first_name 変数が使用されている場合にデフォルト値「there」を使う例。()
 
 ### デフォルト値の代わりに条件付きロジックを使う
 
@@ -163,7 +163,7 @@ User is in list of apps
 
 メッセージ作成画面で、`assign` タグを使用して変数を作成できます。変数には一意の名前を使用することをお勧めします。サポートされているパーソナライゼーションタグ(`language` など) と同じ名前の変数を作成すると、メッセージングロジックに影響する可能性があります。
 
-変数を作成したら、メッセージング・ロジックやメッセージの中でその変数を参照できる。このタグは、[Connected Content]({% image_buster /assets/img_archive/personalized_firstname_.png %}) 機能から返されたコンテンツを再フォーマットしたいときに便利です。詳しくは、Shopifyの[変数タグに関する](https://docs.shopify.com/themes/liquid/tags/variable-tags)ドキュメントを参照されたい。
+変数を作成したら、メッセージング・ロジックやメッセージの中でその変数を参照できる。このタグは、[Connected Content]({% image_buster /assets/img_archive/personalized_firstname_.png %}) ]機能から返されたコンテンツを再フォーマットしたいときに便利だ。詳しくは、Shopifyの[変数タグに関する](https://docs.shopify.com/themes/liquid/tags/variable-tags)ドキュメントを参照されたい。
 
 {% alert tip %}
 すべてのメッセージに同じ変数を割り当てていることに気づいているか？`assign` タグを何度も書き出す代わりに、そのタグをコンテンツブロックとして保存し、メッセージの先頭に置くことができます。
