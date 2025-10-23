@@ -93,7 +93,7 @@ Liquid 内の Braze では、ハッシュを変数 （式など） としてイ�
 
 {% endraw %}
 
-{% details json_parse の入力と出力の例 %}
+{% details json_parse example input and output %}
 
 ### インプット 
 
@@ -115,7 +115,7 @@ Item Name: {{ item.store_name }}
 
 {% enddetails %}
 
-{% details as_json_string の入力と出力の例 %}
+{% details as_json_string example input and output %}
 
 ### インプット
 
