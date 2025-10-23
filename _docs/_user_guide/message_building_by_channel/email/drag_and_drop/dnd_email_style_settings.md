@@ -128,4 +128,4 @@ This setting will be the pre-configured for all future Content Blocks. Existing 
 
 We recommend matching the Content Block width to the email template width.
 
-![Content Block width set to 600px.]({% image_buster /assets/img_archive/dnd_content_block_width_updated.png %})
+![Content Block width set to 600px.]({% image_buster /assets/img_archive/dnd_content_block_width_update.png %})
