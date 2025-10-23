@@ -11,9 +11,9 @@ alias: /landing_pages/
 
 > Braze のランディングページは、ユーザー獲得とエンゲージメント戦略を推進できる独立した Web ページです。
 
-![特典、画像、お客様の声のレイアウトが適用されたスキンケア製品発売ランディングページ]({% image_buster /assets/img/landing_pages/example_landing_page.png %}){: style="float:right;max-width:45%;margin-left:15px;"}
-
 ランディングページを使用して、オーディエンスの拡大、ユーザーデータの収集、特別なオファーのプロモート、マルチチャネルキャンペーンの促進を行います。
+
+{% multi_lang_include video.html id="eg4r7agod1" source="wistia" %}
 
 ## 前提条件
 
@@ -23,15 +23,15 @@ alias: /landing_pages/
 - ランディングページの下書きを作成
 - ランディングページを公開
 
-{% multi_lang_include drag_and_drop_access.md variable_name='dnd editors' %}
+{% multi_lang_include drag_and_drop/drag_and_drop_access.md variable_name='dnd editors' %}
 
 ## プランの階層
 
-使用できる公開されたランディングページとカスタムドメインの数は、プランタイプ (無料または有料 (増分)) によって異なります。
+利用できる公開ランディングページとカスタムドメインの数は、無料または有料（インクリメンタル）のプランタイプによって異なる。
 
 | 機能                                                                                                   | 無料階層     | 有料ティア (増分)     |
 | :---------------------------------------------------------------------------------------------------------------- | :--------------- | ----------------- |
-| 公開ランディングページ                                                                 | 1社につき5つ | 20追加 |
+| ランディングページの公開                                                                 | 1社につき5つ | 20追加 |
 | カスタムドメイン          | 1社につき1つ | 5追加 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 
@@ -39,7 +39,7 @@ alias: /landing_pages/
 
 ### ランディングページの最大サイズは何ですか?
 
-ランディングページの本文サイズは最大1MBです。
+ランディングページの本体サイズは500KBまで。
 
 ### ランディングページを公開するための技術的な要件はありますか？
 
