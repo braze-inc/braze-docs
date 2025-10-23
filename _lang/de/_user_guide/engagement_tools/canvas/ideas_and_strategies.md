@@ -18,7 +18,7 @@ guide_featured_list:
   - name: Checkliste vor und nach dem Start
     link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/pre_post_launch_checklist/
     image: /assets/img/braze_icons/check-square-broken.svg
-  - name: Starten mit Canvas Flow
+  - name: Starten mit Canvas
     link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/launching_canvas_flow/
     image: /assets/img/braze_icons/git-branch-01.svg
 
