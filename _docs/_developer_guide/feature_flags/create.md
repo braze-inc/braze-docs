@@ -43,7 +43,7 @@ Go to **Messaging** > **Feature Flags**, then select **Create Feature Flag**.
 
 ### Step 2: Fill out the details
 
-Under **Details**, enter a name, ID, and description for your feature flag.
+Under **Feature flag details**, enter a name, ID, and description for your feature flag.
 
 ![A form showing that you can add a name, ID, description and properties to a feature flag.]({% image_buster /assets/img/feature_flags/create_ff_properties.png %}){: style="max-width:75%"}
 
@@ -58,11 +58,11 @@ Under **Details**, enter a name, ID, and description for your feature flag.
 
 ### Step 2a: Create custom properties
 
-Under **Properties**, you can optinally create custom properties your app can access through the Braze SDK when your feature is enabled. You can assign a string, boolean, image, timestamp, JSON or a number value to each variable, as well as set a default value.
+Under **Properties**, you can optionally create custom properties your app can access through the Braze SDK when your feature is enabled. You can assign a string, boolean, image, timestamp, JSON, or a number value to each variable, as well as set a default value.
 
 {% tabs local %}
 {% tab example %}
-In the following example, the feature flag shows an out-of-stock banner for an ecommerce store using the custom properties listed: 
+In the following example, the feature flag shows an out-of-stock banner for an eCommerce store using the custom properties listed: 
 
 |Property Name|Type|Value|
 |--|--|--|
@@ -82,20 +82,20 @@ There is no limit to the number of properties you can add. However, a feature fl
 
 ### Step 4: Choose segments to target
 
-Before rolling out a feature flag, you need to choose a [segment]({{site.baseurl}}/user_guide/engagement_tools/segments/) of users to target. Click **Add Rule** on your newly created flag and then use the filter group and segment dropdown menus to filter users out of your target audience. Add multiple filters to narrow your audience further.
+Before rolling out a feature flag, you need to choose a [segment]({{site.baseurl}}/user_guide/engagement_tools/segments/) of users to target. Select **Add Rule** on your newly created flag and then use the filter group and segment dropdown menus to filter users out of your target audience. Add multiple filters to further narrow your audience.
 
 ![A textbox labeled Rollout Traffic with the ability to add segments and filters.]({% image_buster /assets/img/feature_flags/segmentation_ff.png %}){: style="max-width:75%;"}
 
 ### Step 5: Set the rollout traffic {#rollout}
 
-By default, Feature flags are always inactive, which allows you to separate your feature release's date from your total user activation. To begin your rollout, use the **Rollout Traffic** section to enter a percentage in the text box. This will choose the percentage of random users in your selected segment to receive this new feature.
+By default, feature flags are always inactive, which allows you to separate your feature release's date from your total user activation. To begin your rollout, use the **Rollout Traffic** section to enter a percentage in the text box. This will choose the percentage of random users in your selected segment to receive this new feature.
 
 {% alert important %}
 Do not set your rollout traffic above 0% until you are ready for your new feature to go live. When you initially define your feature flag in the dashboard, leave this setting at 0%.
 {% endalert %}
 
 {% alert important %}
-To roll out a flag with just one rule or to a singular audience, add your first rule with segmentation criteria and rollout percentages selected. Lastly, ensure the **Everyone Else** rule is toggled off, and save your flag. 
+To roll out a flag with just one rule or to a singular audience, add your first rule with segmentation criteria and rollout percentages selected. Lastly, confirm the **Everyone Else** rule is toggled off, and save your flag. 
 {% endalert %}
 
 ## Multi-rule feature flag rollouts
@@ -125,7 +125,6 @@ By default, rules are ordered in the sequence that they're created, but you can 
 
 ![An image showing a summary of a feature flag with multiple rules added and an everyone else rule.]({% image_buster assets/img/feature_flags/mr_rules_overview.png %}){: style="max-width:85%;"}
 
-
 ### Multi-rule feature flag use cases
 
 #### Gradually release a checkout page
@@ -133,7 +132,8 @@ By default, rules are ordered in the sequence that they're created, but you can 
 Let's say you work for an eCommerce brand and have a new checkout page that you want to rollout across different geographies to ensure stability. Using multi-rule feature flags, you can set the following:
 
 - **Rule 1:** Your US segment is set to 100%.
-- **Rule 2:** Your segment is set to 50% of your Brazilian users, so not all of them receive the flow at one time. - Rule 3 (Everyone Else): For all other users, toggle on your "Everyone Else" rule and set it to 15%, so that a portion of all users can check out with the new flow.
+- **Rule 2:** Your segment is set to 50% of your Brazilian users, so not all of them receive the flow at one time. 
+- **Rule 3 (Everyone Else):** For all other users, toggle on your "Everyone Else" rule and set it to 15%, so that a portion of all users can check out with the new flow.
 
 #### Reach internal testers first
 
@@ -141,7 +141,7 @@ Let's say you're a product manager who wants to make sure your internal testers 
 
 ## Using the "enabled" field for your feature flags {#enabled}
 
-Once you have defined your feature flag, configure your app or site to check whether or not it is enabled for a particular user. When it is enabled, you'll set some action or reference the feature flag's variable properties based on your use case. The Braze SDK provides getter methods to pull your feature flag's status and its properties into your app. 
+After you've defined your feature flag, configure your app or site to check whether or not it is enabled for a particular user. When it is enabled, you'll set some action or reference the feature flag's variable properties based on your use case. The Braze SDK provides getter methods to pull your feature flag's status and its properties into your app. 
 
 Feature flags are refreshed automatically at session start so that you can display the most up-to-date version of your feature upon launch. The SDK caches these values so they can be used while offline. 
 
