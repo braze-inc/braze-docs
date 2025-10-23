@@ -7,4 +7,4 @@ description: "Dieser Referenzartikel befasst sich mit dem Dashboard für die Nac
 tool: Dashboard
 ---
 
-{% multi_lang_include message_usage.md %}
+{% multi_lang_include analytics/message_usage.md %}
