@@ -1,6 +1,6 @@
 ---
 nav_title: 電子メール認証
-article_title: 電子メール認証
+article_title: メール認証
 page_order: 2
 page_type: reference
 description: "このリファレンスでは、電子メール認証（電子メールの送信元に関する検証可能な情報を電子メールに付与することを目的とした技術のコレクション）について説明する。"
@@ -63,5 +63,5 @@ DMARCレコードはまた、DMARCレコードに記載されている報告用�
 2. [**メッセージのソースを表示]** を選択します。
 3. [**DMARC**] ステータスが「PASS」かどうかを確認します。
 
-![DMARCの値が "PASS "であるメール。]({% image_buster /assets/img_archive/dmarc_example.png %})
+]({% image_buster /assets/img_archive/dmarc_example.png %})DMARCの値が "PASS "であるメール。()
 
