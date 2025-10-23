@@ -112,7 +112,7 @@ Puedes hacer que tu página de destino sea receptiva al tamaño del dispositivo 
 
 Cuando está habilitado, también puedes invertir las columnas de apilamiento para controlar el orden vertical del contenido de varias columnas en pantallas más pequeñas. Esto hace que las páginas se vean y se sientan mejor en el móvil sin necesidad de código personalizado.
 
-Alternar "Apilar verticalmente en pantallas pequeñas" en la sección "Personalizar columnas".]({% image_buster /assets/img/landing_pages/device_responsive_toggle.png %}){: style="max-width:50%;"}
+![Alternar "Apilar verticalmente en pantallas pequeñas" en la sección "Personalizar columnas".]({% image_buster /assets/img/landing_pages/device_responsive_toggle.png %}){: style="max-width:50%;"}
 
 #### Campos opcionales y obligatorios
 
