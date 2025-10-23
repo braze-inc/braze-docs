@@ -21,7 +21,7 @@ Standardmäßig sendet Braze eine Nachricht nur einmal an einen Nutzer:innen, au
 ## Wiederwählbarkeit einschalten
 
 {% tabs local %}
-{% tab Kampagne %}
+{% tab campaign %}
 Um die Wiederzulassung für eine Kampagne zu aktivieren, wählen Sie im Abschnitt **Zustellungssteuerung** das Kontrollkästchen **Nutzer:innen wieder für den Empfang von Kampagnen zulassen** aus. Die maximale Frist für die erneute Qualifizierung für eine Kampagne beträgt 720 Tage.
 
 Bei getriggerten Kampagnen mit aktivierter Wiederzulassung werden Nutzer:innen, die [die Nachricht der Kampagne nicht erhalten haben]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/#why-did-a-user-not-receive-my-triggered-campaign) (obwohl sie das Trigger-Ereignis abgeschlossen haben), automatisch für die Nachricht qualifiziert, wenn sie das nächste Mal das Trigger-Ereignis abschließen. Das liegt daran, dass die erneute Qualifizierung auf dem Empfang der Nachrichten und nicht auf dem Kampagnen-Entry beruht. Wenn Sie Nutzern die Möglichkeit geben, sich erneut für eine ausgelöste Kampagne zu qualifizieren, ermöglichen Sie ihnen, die Nachricht mehr als einmal zu erhalten (und nicht nur auszulösen).
@@ -35,10 +35,15 @@ Die Anzahl, wie oft ein:e Nutzer:in eine über die API getriggerte Kampagne erh�
 Nehmen wir zum Beispiel an, Sie verwenden eine API-getriggerte Kampagne, um dem Nutzer:innen eine Kampagne zu einem Artikel zu schicken, den er kürzlich angesehen hat. In diesem Fall können Sie die Kampagne darauf beschränken, maximal eine Nachricht pro Tag zu senden, unabhängig davon, wie viele Artikel sie angesehen haben, während Sie den API-Trigger für jeden Artikel auslösen. Wenn Ihre API-ausgelöste Kampagne hingegen transaktionsabhängig ist, möchten Sie sicherstellen, dass der Benutzer die Kampagne jedes Mal erhält, wenn er die Transaktion durchführt, indem Sie die Verzögerung auf null Minuten einstellen.
 {% endtab %}
 
-{% tab Canvas %}
+{% tab canvas %}
+
 Um die Wiederzulassung eines Canvas zu aktivieren, wählen Sie **Nutzer:innen den erneuten Zugang zu diesem Canvas** im Bereich **Eingangskontrollen**. Sie können wählen, ob Sie Nutzern:innen den Wiedereintritt nach der maximalen Dauer des Canvas oder nach einem bestimmten Zeitfenster erlauben.
 
 Die erneute Qualifizierung für Canvas-Varianten ist an den Canvas-Entry und nicht an den Empfang von Nachrichten gebunden. Benutzer, die ein Canvas betreten und keine Nachrichten erhalten, können das Canvas nicht erneut betreten, es sei denn, die Wiederzulassung ist aktiviert.
+
+Beachten Sie, dass ein Nutzer:innen einen Canvas nicht erst verlassen muss, bevor er ihn erneut betreten kann, wenn die Wiederholbarkeit auf null Sekunden eingestellt ist. Das bedeutet, dass ein Nutzer:innen denselben Canvas erneut betreten kann. Sie können zusätzliche Filter hinzufügen, um zu verhindern, dass Nutzer:innen denselben Schritt oder dieselbe Nachricht mehrfach erhalten. Wenn ein Nutzer:innen jedoch zum zweiten Mal einen Canvas betritt, sind die Schritte, die er beim ersten Mal im Canvas erhalten hat, für ihn nicht sichtbar. Das bedeutet, dass der Nutzer:innen die gleiche Nachricht noch einmal erhalten kann. Um dies zu verhindern, können Sie den Canvas so konfigurieren, dass ein erneuter Eintritt nicht möglich ist, oder die Wiederzulassung für die maximale Dauer des Canvas festlegen.
+
+Sie können auch eine [User Update-Komponente]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update/) für den Nutzer, der den Schritt erhält, verwenden, um dies als angepasstes Attribut zu protokollieren. Damit können Sie Nutzer:innen herausfiltern, die den Schritt während ihrer Canvas-Journey erhalten haben.
 
 ### Beispiel
 
