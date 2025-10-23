@@ -52,11 +52,6 @@ glossaries:
     tags:
       - iOS
       - Android
-  - name: "Stille Push-Benachrichtigung"
-    description: "Eine Push-Benachrichtigung, die das Gerät nicht aufweckt, wenn sie auf dem Gerät wiedergegeben wird. Stattdessen wird die Benachrichtigung in der Benachrichtigungsleiste des Geräts gespeichert."
-    tags:
-      - iOS
-      - Android
   - name: "Vorläufige Push-Benachrichtigungen für iOS"
     description: "Die von Apple in iOS 12 eingeführte provisorische Autorisierung erfolgt automatisch bei der Installation von iOS-Apps und ermöglicht es Marken, stille Benachrichtigungen zu senden, ohne den Nutzern eine Push-Anfrage zu zeigen. Wenn die stille Push-Benachrichtigung gesendet und in der Benachrichtigungsleiste des Geräts angezeigt wird, erhalten die Benutzer die Möglichkeit, Push-Benachrichtigungen zuzulassen oder abzubrechen."
     tags:
@@ -70,8 +65,8 @@ glossaries:
     tags:
       - iOS
       - Android
-  - name: "Push-Benachrichtigungen im Hintergrund"
-    description: "Push-Benachrichtigungen, die nicht für das Gerät gerendert werden. Wird in der Regel verwendet, um Informationspakete für Hintergrundprozesse und Deinstallationsverfolgung an die App zu senden. Ein Push-Token mit Background Enablement ist erforderlich, damit Push im Hintergrund gesendet werden kann."
+  - name: "Push-Benachrichtigungen im Hintergrund oder lautlos"
+    description: "Push-Benachrichtigungen, die nicht auf dem Gerät wiedergegeben werden. Wird in der Regel verwendet, um Informationspakete für Hintergrundprozesse und Deinstallationsverfolgung an die App zu senden. Ein Push-Token mit Enablement für den Hintergrund ist erforderlich, damit ein Push im Hintergrund oder im Stillen gesendet werden kann."
     tags:
       - iOS
       - Android
