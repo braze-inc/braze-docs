@@ -58,7 +58,7 @@ For example, if a customer has two upcoming flights, they'll have two separate j
   - Variable 1: 30&nbsp;KB
   - Variable 2: 19&nbsp;KB
   - Variable 3: 2&nbsp;KB
-  Variable 3 won't be evaluated or stored because the sum of all other context variables exceeds 50&nbsp;KB.
+  - This means Variable 3 won't be evaluated or stored because the sum of all other context variables exceeds 50&nbsp;KB.
 
 ## Creating a Context step
 
