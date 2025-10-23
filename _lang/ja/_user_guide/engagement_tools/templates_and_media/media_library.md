@@ -37,7 +37,7 @@ tool: Media
 
 \![メッセージ作成画面によってメディアライブラリにアクセスする一般的な方法が2つあります。そのうちの1つでは、「画像とGIF」というタイトルの付いたメールドラッグ＆ドロップエディターと「メディアライブラリから追加」ボタンが表示されます。もう1つでは、「メディア」というタイトルと「画像を追加」のボタンが付いたプッシュやアプリ内メッセージなどの標準エディターが表示されます。]({% image_buster /assets/img_archive/media_library_composers.png %})({: style="border:none"})
 
-{% alert tip %} メディアライブラリの詳細については、[テンプレートとメディアに関するよくある質問]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/faqs)をご覧ください。 &
+{% alert tip %} メディアライブラリーに関する詳しいヘルプは、[テンプレート& メディアFAQを]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/faqs)参照のこと。 {% endalert %}
 
 ## 画像の仕様
 
