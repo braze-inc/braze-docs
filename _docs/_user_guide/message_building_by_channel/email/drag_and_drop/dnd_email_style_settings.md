@@ -124,6 +124,8 @@ Using the email template width, you can adjust and set a width for consistency a
 
 ## Content Block width
 
-You can also set the Content Block width in the email drag-and-drop editor. We recommend matching the Content Block width to the email template width.
+This setting will be the pre-configured for all future Content Blocks. Existing Content Blocks won't be updated. You can set all Content Blocks to be set at 100%, adhering to the width where a Content Block is inserted, or define a specific pixel value.
 
-![Content Block width set to 600px.]({% image_buster /assets/img_archive/dnd_content_block_width.png %})
+We recommend matching the Content Block width to the email template width.
+
+![Content Block width set to 600px.]({% image_buster /assets/img_archive/dnd_content_block_width_update.png %})
