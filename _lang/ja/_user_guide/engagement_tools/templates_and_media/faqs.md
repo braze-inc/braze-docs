@@ -32,11 +32,11 @@ description: "この記事では、Braze のメディアライブラリに関す
 
 既存の画像をトリミングするには、メディアライブラリから画像を選択し、[**新しい画像のトリミングと保存**] をクリックします。 
 
-![メディアライブラリの画像のプレビュー。]({% image_buster /assets/img_archive/media_library_crop1.png %}){: height="75%" width="75%"}
+]({% image_buster /assets/img_archive/media_library_crop1.png %})メディアライブラリの画像のプレビュー。{: height="75%" width="75%"}()
 
-すると、トリミングコンポーザーにリダイレクトされるので、そこで比率の種類を選択し、新しい画像の名前を編集します。[**保存**] をクリックすると、新しい画像を使用できます。
+すると、トリミングコンポーザーにリダイレクトされるので、そこで比率の種類を選択し、新しい画像の名前を編集します。**Save**を選択すると、新しい"画像を使用できます。
 
-![メディアライブラリの画像をトリミングして保存するウィンドウ。]({% image_buster /assets/img_archive/media_library_crop2.png %}){: height="75%" width="75%"}
+]({% image_buster /assets/img_archive/media_library_crop2.png %})メディアライブラリの画像をトリミングして保存するウィンドウ。{: height="75%" width="75%"}()
 
 ### アップロードしようとすると画像がタイムアウトし続けます。どうしたらいいですか?
 
