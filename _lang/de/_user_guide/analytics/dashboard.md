@@ -24,7 +24,7 @@ guide_featured_list:
   - name: Zustellbarkeitszentrum
     link: /docs/user_guide/analytics/dashboard/deliverability_center/
     image: /assets/img/braze_icons/navigation-pointer-01.svg
-  - name: Dashboard für die API-Nutzung
+  - name: Dashboard zur API-Nutzung
     link: /docs/user_guide/analytics/dashboard/api_usage_dashboard/
     image: /assets/img/braze_icons/trend-up-01.svg
 ---
