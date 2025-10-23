@@ -14,5 +14,5 @@ channel:
 
 > この記事では、メールレポートのさまざまな構成要素と、ダッシュボードのどこにあるのかを説明する。
 
-{% multi_lang_include campaign_analytics.md channel="email" %}
+{% multi_lang_include analytics/campaign_analytics.md channel="email" %}
 
