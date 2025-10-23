@@ -104,7 +104,7 @@ Puedes configurar los estilos que se aplicarán a todos los bloques de component
 
 Te recomendamos que configures los estilos a nivel de contenedor de página antes de personalizar los estilos a nivel de bloque. También puedes añadir una imagen de fondo para toda la página.
 
-La sección "Contenedor de página" con opciones para personalizar las imágenes de fondo, los colores, los detalles de los bordes y el estilo del contenido.]({% image_buster /assets/img/landing_pages/page_container.png %}){: style="max-width:40%;"}
+![La sección "Contenedor de página" con opciones para personalizar las imágenes de fondo, los colores, los detalles de los bordes y el estilo del contenido.]({% image_buster /assets/img/landing_pages/page_container.png %}){: style="max-width:40%;"}
 
 #### Receptivo a los dispositivos del usuario
 
