@@ -27,7 +27,7 @@ Bei Kampagnen bestimmt die Art der Zustellung, wann Ihre Nutzer:innen Ihre Kampa
 ### Zeitbasierte Optionen
 
 {% tabs %}
-{% tab Kampagne %}
+{% tab campaign %}
 Bei der geplanten Zustellung haben Sie die Wahl zwischen den folgenden Optionen:
 
 - Senden, sobald die Kampagne gestartet ist
@@ -35,7 +35,7 @@ Bei der geplanten Zustellung haben Sie die Wahl zwischen den folgenden Optionen:
 - [Intelligentes Timing]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/)
 {% endtab %}
 
-{% tab Canvas %}
+{% tab canvas %}
 Bei der zeitgesteuerten Zustellung geben die Nutzer:innen einen Zeitplan ein, ähnlich wie Sie eine Kampagne planen würden. Sie können Nutzer:innen in ein Canvas einschreiben, sobald es gestartet wird oder zu einem bestimmten Zeitpunkt.
 
 #### Bezeichnete Zeiten
@@ -47,11 +47,11 @@ Sie können wählen, ob Sie Ihr Canvas mit einer bestimmten Häufigkeit des Eing
 ### Aktionsbasierte Optionen
 
 {% tabs %}
-{% tab Kampagne %}
+{% tab campaign %}
 Bei der aktionsbasierten Zustellung werden Kampagnen an Nutzer:innen gesendet, die eine bestimmte Aktion ausführen. Nachdem diese Aktion erfolgt ist, können Sie entscheiden, wann die Kampagne gesendet werden soll: sofort, nach einer bestimmten Zeit, zu einem bestimmten Zeitpunkt oder zu einem Zeitpunkt in der Zukunft.
 {% endtab %}
 
-{% tab Canvas %}
+{% tab canvas %}
 Die aktionsbasierten Optionen legen fest, welche Aktionen (oder Trigger) ein Nutzer:innen ausführen muss, um ein Canvas zu betreten, und zu welchem Zeitpunkt er mit dem Betreten beginnen darf. Sie könnten Ihre Nutzer:innen zum Beispiel durch die folgenden Aktionen bewerten:
 
 - Öffnen Ihrer App
@@ -67,11 +67,11 @@ Das Eingangsfenster Ihres Canvas bestimmt, welche Nutzer:innen das Canvas zur fe
 ### API triggern Optionen
 
 {% tabs %}
-{% tab Kampagne %}
+{% tab campaign %}
 Wenn Sie API-getriggert als Option für die Zustellung auswählen, erhalten Sie eine Kampagnen ID, um die Kampagne zu identifizieren, die mit dem [Endpunkt`/campaigns/trigger/send` ]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/#prerequisites) gesendet werden soll.
 {% endtab %}
 
-{% tab Canvas %}
+{% tab canvas %}
 Wenn Sie als Eingangstyp "API-getriggert" auswählen, erhalten Sie eine Canvas ID, mit der Sie die Kampagne identifizieren können, die Sie mit dem [Endpunkt`/canvas/trigger/send` ]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases) einsenden möchten.
 {% endtab %}
 {% endtabs %}
