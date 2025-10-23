@@ -119,7 +119,7 @@ The "Everyone Else" rule acts as a default. If a user doesn't qualify for any pr
 
 ### Re-ordering rules
 
-By default, rules are ordered in the sequence that they are created in, but rules can be re-ordered by dragging and dropping them within the dashboard. 
+By default, rules are ordered in the sequence that they're created, but you can reorder these rules by dragging and dropping them in the dashboard.
 
 ![An image showing that a user can add a rule to a feature flag.]({% image_buster assets/img/feature_flags/add_rule.png %}){: style="max-width:85%;"}
 
@@ -132,12 +132,12 @@ By default, rules are ordered in the sequence that they are created in, but rule
 
 Let's say you work for an eCommerce brand and have a new checkout page that you want to rollout across different geographies to ensure stability. Using multi-rule feature flags, you can set the following:
 
-- Rule 1: Your US segment is set to 100%.
-- Rule 2: Your segment is set to 50% of your Brazilian users, so not all of them receive the flow at one time. - Rule 3 (Everyone Else): For all other users, toggle on your "Everyone Else" rule and set it to 15%, so that a portion of all users can checkout with the new flow.
+- **Rule 1:** Your US segment is set to 100%.
+- **Rule 2:** Your segment is set to 50% of your Brazilian users, so not all of them receive the flow at one time. - Rule 3 (Everyone Else): For all other users, toggle on your "Everyone Else" rule and set it to 15%, so that a portion of all users can check out with the new flow.
 
 #### Reach internal testers first
 
-Let's say you're a Product Manager who wants to make sure your internal testers always receive the feature flag when you release a new product. You can add your internal testers segment to your first rule and set it to 100%, so that your internal testers are eligible during every feature rollout.
+Let's say you're a product manager who wants to make sure your internal testers always receive the feature flag when you release a new product. You can add your internal testers segment to your first rule and set it to 100%, so that your internal testers are eligible during every feature rollout.
 
 ## Using the "enabled" field for your feature flags {#enabled}
 
