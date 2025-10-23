@@ -27,6 +27,9 @@ guide_featured_list:
 - name: ユーザーマネージャー
   link: /docs/line/user_management/
   image: /assets/img/braze_icons/users-01.svg
+- name: LINE クリックトラッキング
+  link: /docs/line/click_tracking/
+  image: /assets/img/braze_icons/bar-chart-01.svg
 - name: LINE レポート
   link: /docs/line/reporting/
   image: /assets/img/braze_icons/bar-chart-01.svg
@@ -35,4 +38,4 @@ guide_featured_list:
   image: /assets/img/braze_icons/message-square-02.svg
 ---
 
-{% multi_lang_include drag_and_drop_access.md variable_name='dnd editors' %}
+{% multi_lang_include drag_and_drop/drag_and_drop_access.md variable_name='dnd editors' %}
