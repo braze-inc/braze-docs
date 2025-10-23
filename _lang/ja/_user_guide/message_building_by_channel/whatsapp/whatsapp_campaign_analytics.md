@@ -15,6 +15,6 @@ channel:
 
 > この記事では、Braze で使用している WhatsApp の指標と、WhatsApp キャンペーンでそれらを表示する方法について説明します。
 
-{% multi_lang_include campaign_analytics.md channel="whatsapp" %}
+{% multi_lang_include analytics/campaign_analytics.md channel="whatsapp" %}
 
 
