@@ -142,7 +142,7 @@ Si tu página de confirmación se abre en una pestaña nueva, un usuario que vue
 
 Puedes previsualizar tu página de destino en la pestaña **Vista previa** del editor. Después de guardar tu página de destino como borrador, puedes visitar la URL yendo a **Páginas de destino** y seleccionando **Copiar URL** junto a tu página de destino. También puedes compartir la URL con colaboradores.
 
-Una página de destino con el menú abierto para mostrar la opción "Copiar URL".]({% image_buster /assets/img/landing_pages/copy-url.png %})
+![Una página de destino con el menú abierto para mostrar la opción "Copiar URL".]({% image_buster /assets/img/landing_pages/copy-url.png %})
 
 Antes de publicar, asegúrate:
 
