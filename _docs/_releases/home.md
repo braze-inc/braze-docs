@@ -77,6 +77,7 @@ These new events were added to the [Currents glossary]({{site.baseurl}}/user_gui
 - `users.messages.rcs.Read`
 - `users.messages.rcs.Send`
 - `users.messages.rcs.Abort`
+- `users.messages.inappmessage.Abort`
 
 These new fields were added to the following Currents events:
 
