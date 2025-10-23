@@ -13,5 +13,5 @@ tool: Reports
 
 > この記事では、プッシュ・キャンペーンの成功を確認・分析するためのプッシュ・レポートについて説明する。
 
-{% multi_lang_include campaign_analytics.md channel="push" %}
+{% multi_lang_include analytics/campaign_analytics.md channel="push" %}
 
