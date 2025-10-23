@@ -43,6 +43,5 @@ Wenn Sie ein Benutzerprofil im Braze-Dashboard anzeigen, können Sie sehen, ob d
 
 Wenn die `native_line_id` eingestellt wurde, wird sie unter **LINE User ID** angezeigt. Andernfalls wird es nicht angezeigt.
 
-![Zeile Kontakteinstellungen auf dem Tab Engagement.][1]{: style="max-width:60%;"}
+]({% image_buster /assets/img/line/line_contact_settings.png %})Line Contact Einstellungen im Tab Engagement.{: style="max-width:50%;"}()
 
-[1]: {% image_buster /assets/img/line/line_contact_settings.png %}
