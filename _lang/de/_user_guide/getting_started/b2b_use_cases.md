@@ -1,5 +1,5 @@
 ---
-nav_title: B2B Anwendungsfälle
+nav_title: Firmenkundengeschäft
 page_order: 11
 layout: dev_guide
 guide_top_header: "Firmenkundengeschäft"
