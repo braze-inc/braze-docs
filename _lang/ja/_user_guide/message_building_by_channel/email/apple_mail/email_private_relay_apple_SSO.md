@@ -1,5 +1,5 @@
 ---
-nav_title: Apple Private Relay へのメール送信
+nav_title: Apple Private Relayにメールを送信する
 article_title: Apple Private Relay へのメール送信
 alias: /email_relay/
 page_order: 0
