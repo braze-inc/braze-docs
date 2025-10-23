@@ -19,7 +19,7 @@ Para acceder al constructor de páginas de destino, necesitas [ciertos permisos]
 
 Ve a **Mensajería** > **Páginas de destino** y, a continuación, selecciona **Crear página de destino**. También puedes seleccionar el nombre de una página de destino existente para duplicarla o realizar cambios en ella.
 
-La sección de páginas de destino en el panel de Braze.]({% image_buster /assets/img/landing_pages/landing-pages-homepage.png %})
+![La sección de páginas de destino en el panel de Braze.]({% image_buster /assets/img/landing_pages/landing-pages-homepage.png %})
 
 ### Paso 2: Introduce los datos de la página
 
@@ -47,11 +47,11 @@ Te sugerimos que sigas estas buenas prácticas:
 
 Si aún no lo has hecho, selecciona **Guardar como borrador**. Para empezar a personalizar tu página, selecciona **Editar página de destino**. El editor de arrastrar y soltar se precargará con una plantilla predeterminada que puedes personalizar para adaptarla a tu caso de uso.
 
-Un ejemplo de página de destino creada en el editor de arrastrar y soltar.]({% image_buster /assets/img/landing_pages/template.png %})
+![Un ejemplo de página de destino creada en el editor de arrastrar y soltar.]({% image_buster /assets/img/landing_pages/template.png %})
 
 El editor utiliza dos tipos de componentes para la composición de la página de destino: bloques básicos y bloques de formulario. Todos los bloques deben colocarse en fila.
 
-La sección "Construir" contiene "Filas" y "Bloques de formulario".]({% image_buster /assets/img/landing_pages/dnd.png %}){: style="max-width:35%;"}
+![La sección "Construir" contiene "Filas" y "Bloques de formulario".]({% image_buster /assets/img/landing_pages/dnd.png %}){: style="max-width:35%;"}
 
 {% tabs %}
 {% tab Basic blocks %}
@@ -79,7 +79,7 @@ Puedes utilizar estos bloques para añadir contenido y personalizar el diseño d
 
 Puedes utilizar estos bloques para crear un formulario que vincule los datos enviados por el usuario con su perfil en Braze. Ten en cuenta que, si utilizas bloques de formulario, también tendrás que crear una página de destino adicional para el estado de confirmación.
 
-Bloque de formulario que registra a un nuevo cliente y le envía un código de descuento a su correo electrónico.]({% image_buster /assets/img/landing_pages/form.png %}){: style="max-width:70%;"}
+![Bloque de formulario que registra a un nuevo cliente y le envía un código de descuento a su correo electrónico.]({% image_buster /assets/img/landing_pages/form.png %}){: style="max-width:70%;"}
 
 | Tipo de bloque     | Descripción |
 |---------------|-------------|
@@ -120,7 +120,7 @@ Puedes elegir si un campo de formulario es obligatorio u opcional. Los campos ob
 
 Por ejemplo, para imponer la captura del consentimiento antes del envío del formulario, puedes activar la **entrada de campo Obligatorio** para establecer una casilla de verificación obligatoria con el texto de exención de responsabilidad adecuado.
 
-Un campo de formulario de casilla de verificación con la opción "Campo de entrada obligatoria" alternada.]({% image_buster /assets/img/landing_pages/lp-optional-required.png %}){: style="max-width:50%;"}
+![Un campo de formulario de casilla de verificación con la opción "Campo de entrada obligatoria" alternada.]({% image_buster /assets/img/landing_pages/lp-optional-required.png %}){: style="max-width:50%;"}
 
 ### Paso 4: Crea una página de confirmación (opcional)
 
@@ -160,13 +160,13 @@ Utiliza plantillas de páginas de destino para crear plantillas para tus próxim
 
 Puedes previsualizar, archivar, editar o duplicar plantillas de páginas de destino. Al editar una página de destino, también puedes guardarla como plantilla, realizar cambios en la plantilla o eliminar el contenido de la página de destino. 
 
-Un desplegable con opciones para guardar, cambiar y eliminar una página de destino.]({% image_buster /assets/img/landing_pages/manage-lp-template.png %}){: style="max-width:60%;"}
+![Un desplegable con opciones para guardar, cambiar y eliminar una página de destino.]({% image_buster /assets/img/landing_pages/manage-lp-template.png %}){: style="max-width:60%;"}
 
 ## Ver análisis
 
 Para analizar la eficacia de tu página de destino, ve a **Mensajería** > **Páginas de destino** y, a continuación, selecciona una página de destino que hayas publicado. Aquí puedes hacer un seguimiento del número de visitas, clics y tasas de envío de tu página de destino.
 
-La sección de análisis de una página de destino.]({% image_buster /assets/img/landing_pages/analytics.png %})
+![La sección de análisis de una página de destino.]({% image_buster /assets/img/landing_pages/analytics.png %})
 
 ## Tratamiento de errores de envío de formularios {#handling-form-submission-errors}
 
