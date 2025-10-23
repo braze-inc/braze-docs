@@ -80,6 +80,21 @@ You can export the row-level logs for a sync run using the **Export rows** butto
 
 Logs can’t be exported directly from the dashboard. After the export is generated, you’ll receive an email with a link to download the log export file. 
 
+## Notifications
+You can configure email notifications to stay informed about the status of your CDI syncs. These settings are configured when you create a sync and can be updated at any time.
+
+### Sync Error Notifications
+At least one email address contact is required to receive notifications for sync-level errors. These alerts are sent when an entire sync job fails to run or complete, or if the sync runs into an error that requires user intervention to change (e.g., expired credentials or a missing source table).
+
+### Additional Notifications (Optional)
+**Row Error:** Toggle this option to receive alerts when a certain percentage of rows fail to update within a sync.
+
+**Failure threshold (%):** If enabled, specify the percentage of row failures that should trigger an alert. For example, setting it to 1 would send a notification if 1% or more of the rows in a sync run result in an error.
+
+**Sync success:** Toggle this option to receive a notification upon the successful completion of a sync.
+
+**Alert even if no rows change:** If Sync success is enabled, check this box if you wish to be notified even when a successful sync run processes 0 new or updated rows.
+
 ## Data Retention
 
 Sync log data, including all row-level payloads and error details, is retained for a maximum of **30 days**. Logs older than 30 days will be automatically purged.
