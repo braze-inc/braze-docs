@@ -72,7 +72,7 @@ When you open Operator, you’ll see a few suggested prompts to help you get sta
 
 ### Viewing reasoning
 
-Operator shows its reasoning steps in collapsible sections labeled Reasoned. Select the dropdown to expand these sections and see how Operator arrived at an answer.
+Operator shows its reasoning steps in collapsible sections labeled **Reasoned**. Select the dropdown to expand these sections and see how Operator arrived at an answer.
 
 ![Dropdown for "Reasoned" expanded with more details on how Operator answered.]({% image_buster /assets/img/operator/operator_reasoning.png %}){:style="max-width:60%"}
 
