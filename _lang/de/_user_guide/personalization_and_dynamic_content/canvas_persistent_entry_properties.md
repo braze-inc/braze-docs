@@ -1,5 +1,5 @@
 ---
-title: Persistente Canvas-Entry-Eigenschaften
+nav_title: Persistente Canvas-Entry-Eigenschaften
 article_title: Persistente Canvas-Entry-Eigenschaften
 page_order: 6
 layout: redirect
