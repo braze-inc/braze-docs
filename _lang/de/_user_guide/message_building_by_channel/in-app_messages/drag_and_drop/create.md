@@ -15,7 +15,8 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 
 > Mit dem Drag-and-Drop-Editor können Sie vollständig angepasste und personalisierte In-App-Nachrichten in Kampagnen und Canvasen erstellen.
 
-{% multi_lang_include video.html id="tbrgv_mU1zI" align="right" source="youtube" %}
+
+{% multi_lang_include video.html id="j94omgo73o" align="right" source="wistia" %}
 
 Wenn Sie Ihre vorhandenen benutzerdefinierten HTML-Vorlagen oder von Dritten erstellte Vorlagen verwenden möchten, müssen diese im Drag-and-Drop-Editor neu erstellt werden.
 
@@ -30,7 +31,7 @@ Sie sind sich nicht sicher, ob Ihre In-App-Nachricht über eine Kampagne oder ei
 | {::nomarkdown}{% sdk_min_versions swift:5.0.0 android:8.0.0 web:2.5.0 %}{:/} | {::nomarkdown}{% sdk_min_versions swift:6.5.0 android:26.0.0 web:4.8.1 %}{:/} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-{% details Weitere Informationen zu den Mindest-SDKs %}
+{% details More information on minimum SDKs %}
 
 Nachrichten, die mit dem Drag-and-Drop-Editor erstellt wurden, können nur an Nutzer:innen mit den Mindestversionen des SDK (siehe Tabelle oben) versendet werden. Wenn ein Nutzer:innen seine App nicht aktualisiert hat (d.h. mit einer älteren SDK-Version arbeitet), wird er die In-App-Nachricht nicht erhalten.
 
@@ -69,7 +70,7 @@ Wenn Sie den Drag-and-Drop-Editor als Bearbeitungsmethode ausgewählt haben, hab
 
 Wählen Sie **Nachricht erstellen**, um mit dem Entwurf Ihrer In-App-Nachricht im Drag-and-Drop-Editor zu beginnen.
 
-![Unter Braze Templates können Sie ein Basis-Template, eines mit Hintergrundbild oder zur Erfassung von Telefonnummern oder ein leeres Template auswählen.]({% image_buster /assets/img_archive/dnd_iam_select_template.png %}){: style="max-width:75%"}
+]({% image_buster /assets/img_archive/dnd_iam_select_template.png %})Der Bereich Braze Templates, in dem Sie ein einfaches, ein Hintergrundbild, eine Telefonnummer oder ein leeres Template auswählen können.()
 
 Sie können auf alle Vorlagen auch über den Bereich **Vorlagen** im Dashboard zugreifen.
 
@@ -77,10 +78,10 @@ Sie können auf alle Vorlagen auch über den Bereich **Vorlagen** im Dashboard z
 
 Durch das Hinzufügen von Seiten zu Ihrer In-App-Nachricht können Sie Nutzer:innen durch einen sequentiellen Ablauf leiten, z.B. ein Onboarding oder eine Willkommensreise. Sie können Seiten im Bereich **Seiten** der Registerkarte **Erstellen** verwalten.
 
-![Eine In-App-Nachricht für ein Gesundheitsunternehmen mit drei Seiten.]({% image_buster /assets/img_archive/dnd_iam_mockup.png %})
+]({% image_buster /assets/img_archive/dnd_iam_mockup.png %})Eine In-App-Nachricht für ein Gesundheitsunternehmen mit drei Seiten.()
 
 {% tabs %}
-{% tab Seiten hinzufügen %}
+{% tab Adding pages %}
 
 In-App-Nachrichten beginnen standardmäßig mit einer Seite. Um eine neue Seite hinzuzufügen:
 
@@ -99,7 +100,7 @@ So duplizieren Sie eine vorhandene Seite:
 3. Geben Sie der Seite einen aussagekräftigen Namen. Das hilft Ihnen, wenn Sie Seiten miteinander verbinden.
 
 {% endtab %}
-{% tab Löschen oder Umbenennen von Seiten %}
+{% tab Deleting or renaming pages %}
 
 So löschen oder benennen Sie eine Seite um:
 
@@ -121,7 +122,7 @@ Um Seiten miteinander zu verbinden:
 4. Wählen Sie die Seite, auf die Sie verlinken möchten, von der Startseite aus.
 5. Fahren Sie fort, bis alle Seiten verlinkt sind.
 
-![Der primäre Aktions-Button wird bearbeitet, um auf die zweite Seite der In-App-Nachricht zu gelangen.]({% image_buster/assets/img_archive/dnd_iam_multipage.gif %})
+]({% image_buster/assets/img_archive/dnd_iam_multipage.gif %})Der primäre Aktions-Button wird bearbeitet, um auf die zweite Seite der In-App-Nachricht zu gelangen.()
 
 Wenn eine Seite mit keiner anderen Seite verknüpft ist, kann die Nachricht nicht gestartet werden.
 
@@ -175,6 +176,8 @@ Für In-App-Nachrichten, die mit dem Drag-and-Drop-Editor erstellt wurden, werde
 
 Ja, die Segmentierung auf Grundlage von Button-Klicks ist für bis zu zwei Buttons in Ihrer Nachricht möglich. Setzen Sie dazu den **Berichtsbezeichner** Ihrer Buttons auf "0" und "1", was den Segmentierungsfiltern "Auf In-App-Nachricht-Button 1 geklickt" bzw. "Auf In-App-Nachricht-Button 2 geklickt" entspricht.
 
+]({% image_buster /assets/img/identifier_for_reporting.png %})Das Feld "Bezeichner für die Berichterstattung" mit einem Wert von "0".{: style="max-width:50%;"}()
+
 #### Kann ich meine In-App-Nachrichten mit benutzerdefiniertem HTML oder JavaScript anpassen oder bestehende HTML-Nachrichten in den Editor übertragen?
 
 Sie können vorhandene HTML-Nachrichten nicht direkt in den Editor übertragen, aber rohes HTML, CSS und JavaScript in einen angepassten Code-Block einfügen. Sie können angepasste Code-Blöcke verwenden, um Videos von Drittanbietern und erweitertes Liquid wie Connected-Content oder bedingte Anweisungen einzubetten.
@@ -187,6 +190,6 @@ Derzeit ist der Editor nur auf modale und bildschirmfüllende Nachrichten beschr
 
 Ja Jede In-App-Nachricht, die Sie in einer zukünftigen Kampagne oder einem Canvas-Schritt wiederverwenden möchten, können Sie über die Schaltfläche **Als Vorlage speichern**, die nach dem Verlassen des Editors verfügbar ist, als eigene Vorlage speichern. Bevor Sie sie als Vorlage speichern können, müssen Sie die Kampagne zunächst starten ODER als Entwurf speichern.
 
-![Vorschau einer In-App-Nachricht zur Anmeldung für Textnachrichten.]({% image_buster /assets/img_archive/dnd_iam_save_as_template.png %})
+]({% image_buster /assets/img_archive/dnd_iam_save_as_template.png %})Eine Vorschau auf eine In-App-Nachricht für eine Produkt-Tour.()
 
 Sie können auch In-App-Nachrichtenvorlagen erstellen und speichern, indem Sie zu **Vorlagen** > **In-App-Nachrichtenvorlagen** navigieren.
