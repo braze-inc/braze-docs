@@ -124,8 +124,7 @@ Using the email template width, you can adjust and set a width for consistency a
 
 ## Content Block width
 
-This setting will be the pre-configured for all future Content Blocks. Existing Content Blocks won't be updated.
-You can set all Content Blocks to be set at 100%, adhering to the width where a Content Block is inserted or define a specific PX value.
+This setting will be the pre-configured for all future Content Blocks. Existing Content Blocks won't be updated. You can set all Content Blocks to be set at 100%, adhering to the width where a Content Block is inserted, or define a specific pixel value.
 
 We recommend matching the Content Block width to the email template width.
 
