@@ -39,26 +39,30 @@ To manage feature flags in the dashboard, you'll either need to be an Administra
 
 Go to **Messaging** > **Feature Flags**, then select **Create Feature Flag**.
 
-![A list of previously created feature flags on the Braze dashboard]({% image_buster /assets/img/feature_flags/feature-flags-list.png %}){: style="max-width:75%"}
+![A datatable showing an existing feature flag and how to create a new one.]({% image_buster /assets/img/feature_flags/create_ff.png %}){: style="max-width:75%"}
 
 ### Step 2: Fill out the details
 
-Under **Details**, enter a name, ID, and description for your feature flag.
+Under **Feature flag details**, enter a name, ID, and description for your feature flag.
 
-| Field        | Description                                                                                                                                                                                                         |
-|--------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Name         | A human-readable title for your marketers and administrators.                                                                                                                                                       |
+![A form showing that you can add a name, ID, description and properties to a feature flag.]({% image_buster /assets/img/feature_flags/create_ff_properties.png %}){: style="max-width:75%"}
+
+
+| Field        | Description                                                                |
+|--------------|----------------------------------------------------------------------------|
+| Name         | A human-readable title for your marketers and administrators.              |
 | ID           | The unique ID you'll use in your code to check if this feature is [enabled for a user](#enabled). This ID cannot be changed later, so review our [ID naming best practices](#naming-conventions) before continuing. |
-| Description  | An optional description that gives some context about your feature flag.                                                                                                                                            |
+| Description  | An optional description that gives some context about your feature flag.   |
+| Properties   | Optional properties that remotely configure your feature flag. They can be overwritten in Canvas steps or feature flag experiments. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-### Step 3: Create custom properties
+### Step 2a: Create custom properties
 
-Under **Properties**, create custom properties your app can access through the Braze SDK when your feature is enabled. You can assign a string, boolean, image, timestamp, JSON or a number value to each variable, as well as set a default value.
+Under **Properties**, you can optionally create custom properties your app can access through the Braze SDK when your feature is enabled. You can assign a string, boolean, image, timestamp, JSON, or a number value to each variable, as well as set a default value.
 
 {% tabs local %}
 {% tab example %}
-In the following example, the feature flag shows an out-of-stock banner for an ecommerce store using the custom properties listed: 
+In the following example, the feature flag shows an out-of-stock banner for an eCommerce store using the custom properties listed: 
 
 |Property Name|Type|Value|
 |--|--|--|
@@ -78,23 +82,66 @@ There is no limit to the number of properties you can add. However, a feature fl
 
 ### Step 4: Choose segments to target
 
-Before rolling out a feature flag, you need to choose a [segment]({{site.baseurl}}/user_guide/engagement_tools/segments/) of users to target. Use the **Add Filter** dropdown menu to filter users out of your target audience. Add multiple filters to narrow your audience further.
+Before rolling out a feature flag, you need to choose a [segment]({{site.baseurl}}/user_guide/engagement_tools/segments/) of users to target. Select **Add Rule** on your newly created flag and then use the filter group and segment dropdown menus to filter users out of your target audience. Add multiple filters to further narrow your audience.
 
-![Two dropdown menus. The first reads Target Users by Segment. The second reads Additional Filters.]({% image_buster /assets/img/feature_flags/feature-flags-targeting.png %})
+![A textbox labeled Rollout Traffic with the ability to add segments and filters.]({% image_buster /assets/img/feature_flags/segmentation_ff.png %}){: style="max-width:75%;"}
 
 ### Step 5: Set the rollout traffic {#rollout}
 
-By default, Feature flags are always disabled, which allows you to separate your feature release's date from your total user activation. To begin your rollout, use the **Rollout Traffic** slider, or enter a percentage in the text box, to choose the percentage of random users in your selected segment to receive this new feature.
-
-![A slider labeled Rollout Traffic, spanning between 0 and 100.]({% image_buster /assets/img/feature_flags/feature-flags-rollout.png %}){: style="max-width:75%;"}
+By default, feature flags are always inactive, which allows you to separate your feature release's date from your total user activation. To begin your rollout, use the **Rollout Traffic** section to enter a percentage in the text box. This will choose the percentage of random users in your selected segment to receive this new feature.
 
 {% alert important %}
 Do not set your rollout traffic above 0% until you are ready for your new feature to go live. When you initially define your feature flag in the dashboard, leave this setting at 0%.
 {% endalert %}
 
+{% alert important %}
+To roll out a flag with just one rule or to a singular audience, add your first rule with segmentation criteria and rollout percentages selected. Lastly, confirm the **Everyone Else** rule is toggled off, and save your flag. 
+{% endalert %}
+
+## Multi-rule feature flag rollouts
+
+Use multi-rule feature flag rollouts to define a sequence of rules for evaluating users, which allows for precise segmentation and controlled feature releases. This method is ideal for deploying the same feature to diverse audiences. 
+
+### Evaluation order
+
+Feature flag rules are evaluated from top to bottom, in the order they're listed. A user qualifies for the first rule they meet. If a user doesn't meet any rules, their eligibility is determined by the default "Everyone Else" rule.
+
+### User qualification
+
+- If a user meets the criteria for the first rule, they are immediately eligible to receive the feature flag.
+- If a user doesn't qualify for the first rule, they're evaluated against the second rule, and so on.
+
+The sequential evaluation continues until a user qualifies for a rule or reaches the "Everyone Else" rule at the bottom of the list.
+
+### "Everyone Else" rule
+
+The "Everyone Else" rule acts as a default. If a user doesn't qualify for any preceding rules, their eligibility for the feature flag will be determined by the toggle setting of the "Everyone Else" rule. For example, if the "Everyone Else" rule is toggled "Off", in the default state, a user who doesn't meet the criteria for any other rules won't receive the feature flag upon their session start.
+
+### Re-ordering rules
+
+By default, rules are ordered in the sequence that they're created, but you can reorder these rules by dragging and dropping them in the dashboard.
+
+![An image showing that a user can add a rule to a feature flag.]({% image_buster assets/img/feature_flags/add_rule.png %}){: style="max-width:85%;"}
+
+![An image showing a summary of a feature flag with multiple rules added and an everyone else rule.]({% image_buster assets/img/feature_flags/mr_rules_overview.png %}){: style="max-width:85%;"}
+
+### Multi-rule feature flag use cases
+
+#### Gradually release a checkout page
+
+Let's say you work for an eCommerce brand and have a new checkout page that you want to rollout across different geographies to ensure stability. Using multi-rule feature flags, you can set the following:
+
+- **Rule 1:** Your US segment is set to 100%.
+- **Rule 2:** Your segment is set to 50% of your Brazilian users, so not all of them receive the flow at one time. 
+- **Rule 3 (Everyone Else):** For all other users, toggle on your "Everyone Else" rule and set it to 15%, so that a portion of all users can check out with the new flow.
+
+#### Reach internal testers first
+
+Let's say you're a product manager who wants to make sure your internal testers always receive the feature flag when you release a new product. You can add your internal testers segment to your first rule and set it to 100%, so that your internal testers are eligible during every feature rollout.
+
 ## Using the "enabled" field for your feature flags {#enabled}
 
-Once you have defined your feature flag, configure your app or site to check whether or not it is enabled for a particular user. When it is enabled, you'll set some action or reference the feature flag's variable properties based on your use case. The Braze SDK provides getter methods to pull your feature flag's status and its properties into your app. 
+After you've defined your feature flag, configure your app or site to check whether or not it is enabled for a particular user. When it is enabled, you'll set some action or reference the feature flag's variable properties based on your use case. The Braze SDK provides getter methods to pull your feature flag's status and its properties into your app. 
 
 Feature flags are refreshed automatically at session start so that you can display the most up-to-date version of your feature upon launch. The SDK caches these values so they can be used while offline. 
 

@@ -61,7 +61,6 @@ Consulta los [casos de uso adicionales de Catálogos]({{site.baseurl}}/user_guid
 - `product_title`
 - `variant_title`
 - `status`
-- `body_html`
 - `product_image_url`
 - `variant_image_url`
 - `vendor`

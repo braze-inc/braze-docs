@@ -61,7 +61,6 @@ Refer to [Catalogs additional use cases]({{site.baseurl}}/user_guide/data/activa
 - `product_title`
 - `variant_title`
 - `status`
-- `body_html`
 - `product_image_url`
 - `variant_image_url`
 - `vendor`
