@@ -752,6 +752,7 @@ The Shopify integration currently doesn't support populating the Braze [purchase
 {% endtabs %}
 
 ## Supported Shopify custom attributes
+
 {% tabs local %}
 {% tab Example Payload %}
 {% subtabs %}
@@ -784,6 +785,10 @@ The Shopify integration currently doesn't support populating the Braze [purchase
 | `shopify_zipcode` | The customer's zipcode from their default address. |
 | `shopify_province` | The customer's province from their default address. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+
+{% alert important %}
+A known issue with Shopify's latest API version is that the `shopify_last_order_name` field will populate without values. We will update this page when the issue is updated.
+{% endalert %}
 
 ### Liquid personalization
 
