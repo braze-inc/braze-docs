@@ -34,11 +34,11 @@ description: "このリファレンス記事では、Braze 連携における問
 
 [**データを展開する**] ボタンを選択すると、その特定のログの生の JSON データが表示されます。
 
-![]({% image_buster /assets/img_archive/expand_data.png %}) 特定のログの横にある「データ展開アイコン」。
+]({% image_buster /assets/img_archive/expand_data.png %})() 特定のログの横にある「データ展開アイコン」。
 
 イベントユーザーログは、記録後 30 日間ダッシュボードに残ります。
 
-![イベントの生ログ]({% image_buster /assets/img_archive/rawlogs.png %}){: style="max-width:60%;"}
+]({% image_buster /assets/img_archive/rawlogs.png %})イベントの生ログ{: style="max-width:60%;"}()
 
 ## トラブルシューティング
 
