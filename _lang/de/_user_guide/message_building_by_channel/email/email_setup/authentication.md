@@ -63,5 +63,5 @@ Wenn Sie zum Beispiel Google Mail verwenden, gehen Sie folgendermaßen vor:
 2. Wählen Sie **Original anzeigen**.
 3. Prüfen Sie, ob der **DMARC**-Status auf "PASS" lautet.
 
-![E-Mail mit dem DMARC-Wert "PASS".]({% image_buster /assets/img_archive/dmarc_example.png %})
+]({% image_buster /assets/img_archive/dmarc_example.png %})E-Mail mit dem DMARC-Wert "PASS".()
 
