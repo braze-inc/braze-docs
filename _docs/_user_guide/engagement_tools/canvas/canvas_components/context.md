@@ -344,6 +344,15 @@ Your appointment is scheduled for 2025-08-05 8:15am, we'll see you then!
 
 Because the America/Los Angeles time zone is specified using Liquid, the timestamp here is in PST.
 
+The preferred time zone can also be sent in the event properties payload and used in Liquid logic:
+
+```
+{
+  "appointment_time": "2025-08-05T08:15:30:250-0800"
+  "user_timezone": "America/Los_Angeles"
+}
+```
+
 ### How do context variables differ from Canvas entry properties?
 
 If you’re participating in the Context step early access, Canvas entry properties are now included as Canvas context variables. This means you can send Canvas entry properties using the Braze API and reference them in other steps, similar to using a context variable with the Liquid snippet.
