@@ -1,5 +1,5 @@
 ---
-nav_title: Home Dashboard
+nav_title: Home dashboard
 article_title: Home Dashboard (Previously Overview)
 page_order: 1
 page_type: reference
