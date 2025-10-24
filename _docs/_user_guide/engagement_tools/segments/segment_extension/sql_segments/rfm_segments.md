@@ -14,13 +14,13 @@ tool: Segments
 
 RFM analysis is a marketing technique that identifies your best users by scoring users on a scale from 0—3 for each category (recency, frequency, monetary), where 3 is the best score and 0 is the worst. Recency, frequency, and monetary values are all based on data from a specific time range of your choosing.
 
-**RFM categories**
+## RFM categories
 
 | Category | Definition |
 | --- | --- |
 | Recency | How recently a customer made a purchase. A higher score means more recent purchases. |
 | Frequency | How frequently a customer made a purchase. A higher score means higher frequency. |
-| Monetary value | Total amount of money customer spent. A higher score means higher spending. |
+| Monetary value | Total amount of money a customer spent. A higher score means higher spending. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {% alert note %}
