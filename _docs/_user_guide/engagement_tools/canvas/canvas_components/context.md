@@ -355,7 +355,9 @@ This will result in the following message:
 Your appointment is scheduled for 2025-08-05 4:15pm, we’ll see you then!
 ```
 
-Because no time zone is specified using Liquid, the timestamp here is in UTC. To specify a time zone clearly, we can use Liquid `time_zone` filters like this: 
+Because no time zone is specified using Liquid, the timestamp here is in UTC. 
+
+To specify a time zone clearly, we can use Liquid `time_zone` filters like this: 
 
 {% raw %}
 ```
