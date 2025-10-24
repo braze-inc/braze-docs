@@ -344,7 +344,7 @@ Your appointment is scheduled for 2025-08-05 8:15am, we'll see you then!
 
 Because the America/Los Angeles time zone is specified using Liquid, the timestamp here is in PST.
 
-The preferred time zone can also be sent in the event properties payload and used in Liquid logic:
+The preferred time zone can also be sent in the event properties payload like this and used in Liquid logic:
 
 ```
 {
