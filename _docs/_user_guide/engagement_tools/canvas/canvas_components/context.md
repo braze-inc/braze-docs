@@ -257,35 +257,6 @@ While most event properties using timestamp type are already in UTC in Canvas, t
 In all circumstances, we strongly recommend using [Liquid time_zone filters]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/#things-to-know) for timestamps to be represented in the desired time zone. You can reference this [frequently asked question](#faq-example) for an example.
 {% endalert %}
 
-### Using Liquid to denote a timestamp in your preferred time zone
-
-Consider the following Liquid snippet:
-
-{% raw %}
-```
-Your appointment is scheduled for {{canvas_entry_properties.${appointment_time} | time_zone: "America/Los_Angeles" | date: "%Y-%m-%d %l:%M %p"}}, we'll see you then!
-```
-{% endraw %}
-
-This logic results in the following output: `Your appointment is scheduled for 2025-08-05 8:15am, we'll see you then!`
-
-The preferred time zone can also be sent in the event properties payload and used in Liquid logic: 
-
-```
-{
-  "appointment_time": "2025-08-05T08:15:30:250-0800"
-  "user_timezone": "America/Los_Angeles"
-}
-```
-
-This is an example of the Liquid snippet:
-
-{% raw %}
-```
-Your appointment is scheduled for {{canvas_entry_properties.${appointment_time} | time_zone: canvas_entry_properties.${user_timezone} | date: "%Y-%m-%d %l:%M %p"}}, we'll see you then!
-```
-{% endraw %}
-
 ## Troubleshooting {#troubleshooting}
 
 ### Invalid context variables
@@ -339,7 +310,7 @@ The following is an example on how to do this with an input `timestamp_property:
 | {% raw %}```{{canvas_entry_properties.${timestamp_property} | time_zone: "America/Los_Angeles" | date: "%Y-%m-%d %l:%M %p"}}```{% endraw %} | `2025-08-05 8:15am` | Yes |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-#### What is a practical example of how the previous and new timestamp behavior might affect my messages? {#faq-example}
+#### What is a practical example of how the new timestamp behavior might affect my messages? {#faq-example}
 
 Let’s say we have an action-based Canvas that has the following content in a Message step:
 
