@@ -328,7 +328,7 @@ No.
 
 #### Will this change impact Canvas entry properties?
 
-Yes, this will impact `canvas_entry_properties` if the `canvas_entry_property` is being used in an action-based Canvas and the property type is `time`.
+Yes, this will impact `canvas_entry_properties` if the `canvas_entry_property` is being used in an action-based Canvas and the property type is `time`. In all circumstances, we recommend using Liquid `time_zone` filters for timestamps to be represented in the desired timezone.
 
 The following is an example on how to do this with an input `timestamp_property: 2025-08-05T08:15:30:250-0800`.
 
