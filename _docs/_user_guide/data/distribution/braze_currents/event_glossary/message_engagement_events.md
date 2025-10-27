@@ -436,7 +436,7 @@ Subscription
 This event occurs when the subscription state of a user in a subscription group changes.
 
 {% alert important %}
-Subscription groups are only available for email, SMS, and WhatsApp channels at this time.
+Subscription groups are only available for email, SMS, RCS, and WhatsApp channels at this time.
 {% endalert %}
 
 {% tabs %}
