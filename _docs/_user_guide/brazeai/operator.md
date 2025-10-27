@@ -32,7 +32,7 @@ If Customers chooses to bring their own API Key to integrate with Braze AI Opera
 
 ### How is my data used and sent to OpenAI?
 
-In order to generate AI output through Braze AI features that Braze identifies as leveraging OpenAI (“Output”), Braze will send your prompts, the content displayed in the Dashboard and Workspace data relevant to your queries, as applicable (“Input”) to OpenAI. Per OpenAI’s API platform commitments, data sent to OpenAI’s API via Braze is not used to train or improve OpenAI models. Between you and Braze, Output is your intellectual property. Braze will not assert any claims of copyright ownership on such Output. Braze makes no warranty of any kind with respect to any AI-generated content generally, including Output.
+In order to generate AI output through Braze AI features that Braze identifies as leveraging OpenAI (“Output”), Braze will send your prompts, the content displayed in the Dashboard and Workspace data relevant to your queries, as applicable (“Input”) to OpenAI. Per [OpenAI’s API platform commitments](https://openai.com/enterprise-privacy/), data sent to OpenAI’s API via Braze is not used to train or improve OpenAI models. Between you and Braze, Output is your intellectual property. Braze will not assert any claims of copyright ownership on such Output. Braze makes no warranty of any kind with respect to any AI-generated content generally, including Output.
 
 ## How to access Operator
 
