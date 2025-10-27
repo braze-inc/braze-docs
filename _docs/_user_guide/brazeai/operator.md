@@ -80,6 +80,8 @@ You can select from these GPT models to use for different request types with Ope
 - [GPT-5 mini](https://platform.openai.com/docs/models/gpt-5-mini) (default)
 - [GPT-5](https://platform.openai.com/docs/models/gpt-5)
 
+![Dropdown for different GPT models to choose.]({% image_buster /assets/img/operator/operator_model.png %}){:style="max-width:70%"}
+
 ### Page-aware context
 
 Operator understands the page you're currently working on in Braze and can tailor responses based on that context. For example, if you open Operator while building a Canvas, it can suggest steps or provide guidance relevant to Canvas, without you needing to explain where you are. 
@@ -92,7 +94,7 @@ When you open Operator, you’ll see a few suggested prompts to help you get sta
 
 Operator shows its reasoning steps in collapsible sections labeled **Reasoned**. Select the dropdown to expand these sections and see how Operator arrived at an answer.
 
-![Dropdown for "Reasoned" expanded with more details on how Operator answered.]({% image_buster /assets/img/operator/operator_reasoning.png %}){:style="max-width:60%"}
+![Dropdown for "Reasoned" expanded with more details on how Operator answered.]({% image_buster /assets/img/operator/operator_reasoning.png %}){:style="max-width:50%"}
 
 ### Suggested actions
 
