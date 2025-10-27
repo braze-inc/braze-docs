@@ -24,7 +24,7 @@ During the beta, Operator supports **Ask** mode only. You can:
 - Troubleshoot issues using [page-aware context](#page-aware-context)
 - Learn best practices and onboarding guidance
 
-### Model providers as Sub-processors or third-party providers
+### Model providers as sub-processors or third-party providers
 
 Where Customer uses a uses an integration with an LLM provider provided by Braze through the Braze Services (“Braze-provided LLM”), the providers of such Braze-provided LLM will be acting as Braze Sub-processors, subject to the terms of the Data Processing Addendum (DPA) between Customer and Braze. Currently, BrazeAI Operator integrates with OpenAI.
 
