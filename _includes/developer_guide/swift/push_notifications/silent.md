@@ -32,15 +32,47 @@ Attaching both a title and body with `content-available=1` is not recommended be
 
 When sending a silent push notification, you might also want to include some data in the notification payload, so your application can reference the event. This could save you a few networking requests and increase the responsiveness of your app.
 
+### Dashboard preview vs. actual behavior
+
+{% alert note %}
+**Important:** The Braze dashboard preview will display a visual representation of your push notification even for silent pushes. This is for preview purposes only and does not reflect how the notification will behave on a device. On the device, properly configured silent notifications will not display any UI or play any sounds.
+{% endalert %}
+
+## Using silent push with badge counts
+
+To update your app's badge count with a silent push notification:
+
+1. Enable the `content-available` flag in your push notification
+2. Set a badge number in the dashboard or via the API
+3. Do not include a title or message to ensure the notification remains silent
+
+```swift
+// Example handling of badge count from a silent push:
+func application(
+  _ application: UIApplication, 
+  didReceiveRemoteNotification userInfo: [AnyHashable: Any],
+  fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void
+) {
+  if let badgeCount = userInfo["aps"]?["badge"] as? NSNumber {
+    UIApplication.shared.applicationIconBadgeNumber = badgeCount.intValue
+  }
+  completionHandler(.newData)
+}
+```
+
+{% alert important %}
+To use badge count in the composer, the `badge_count_in_composer` feature flag must be enabled for your app group. Contact Braze support to enable this feature.
+{% endalert %}
+
 ## Ignoring internal push notifications
 
 Braze uses silent push notifications to internally handle certain advanced features, such as uninstall tracking or geofences. If your app takes automatic actions on application launches or background pushes, consider gating that activity so it's not triggered by any internal push notifications.
 
-For example, if you have logic that calls your servers for new content upon every background push or application launch, you may want to prevent triggering Braze’s internal pushes to avoid unnecessary network traffic. Because Braze sends certain kinds of internal pushes to all users at approximately the same time, significant server load may occur if on-launch network calls from internal pushes are not gated.
+For example, if you have logic that calls your servers for new content upon every background push or application launch, you may want to prevent triggering Braze's internal pushes to avoid unnecessary network traffic. Because Braze sends certain kinds of internal pushes to all users at approximately the same time, significant server load may occur if on-launch network calls from internal pushes are not gated.
 
 ### Step 1: Check your app for automatic actions
 
-Check your application for automatic actions in the following places and update your code to ignore Braze’s internal pushes:
+Check your application for automatic actions in the following places and update your code to ignore Braze's internal pushes:
 
 1. **Push Receivers.** Background push notifications will call `application:didReceiveRemoteNotification:fetchCompletionHandler:` on the `UIApplicationDelegate`.
 2. **Application Delegate.** Background pushes can launch [suspended](https://developer.apple.com/documentation/uikit/app_and_environment/managing_your_app_s_life_cycle) apps into the background, triggering the `application:willFinishLaunchingWithOptions:` and `application:didFinishLaunchingWithOptions:` methods on your `UIApplicationDelegate`. Check the `launchOptions` of these methods to determine if the application has been launched from a background push.
@@ -54,11 +86,10 @@ For example:
 {% tabs %}
 {% tab swift %}
 
-
 ```swift
 func application(_ application: UIApplication,
-                 didReceiveRemoteNotification userInfo: [AnyHashable : Any],
-                 fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+               didReceiveRemoteNotification userInfo: [AnyHashable : Any],
+               fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
   if (!Braze.Notifications.isInternalNotification(userInfo)) {
     // Gated logic here (for example pinging server for content)
   }
@@ -67,7 +98,6 @@ func application(_ application: UIApplication,
 
 {% endtab %}
 {% tab OBJECTIVE-C %}
-
 
 ```objc
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult result))completionHandler {
@@ -79,3 +109,7 @@ func application(_ application: UIApplication,
 
 {% endtab %}
 {% endtabs %}
+
+## For more information
+
+For a comprehensive guide on silent push notifications, including troubleshooting and best practices, see our [Silent Push Notifications Guide]({{site.baseurl}}/user_guide/message_building_by_channel/push/silent_push_notifications_guide/).
