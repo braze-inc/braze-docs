@@ -36,49 +36,6 @@ myWebView.addJavascriptInterface(javascriptInterface, "brazeInternalBridge")
 {% endtab %}
 {% endtabs %}
 
-## Using deep links
-
-When using deep links or external links in HTML in-app messages on Android, **do not** call `brazeBridge.closeMessage()` in your JavaScript. The Android SDK automatically closes the in-app message when it redirects to a link. Calling `closeMessage()` interferes with this process and may cause the message to become unresponsive when users return to your app.
-
-### Example: Button with deep link
-
-The following example shows the correct way to create a button with a deep link. Notice that `brazeBridge.closeMessage()` is not called—the SDK handles closing the message automatically.
-
-{% tabs %}
-{% tab HTML %}
-
-```html
-<button id="deepLinkButton">Go to Feature</button>
-
-<script>
-  window.addEventListener("ab.BridgeReady", function(){
-    document.getElementById("deepLinkButton").onclick = function() {
-      // Log button click for analytics (optional)
-      brazeBridge.logClick("0");
-      // Redirect to deep link - SDK will automatically close the message
-      window.location.href = "myapp://feature/screen";
-      // Do NOT call brazeBridge.closeMessage() here
-    };
-  }, false);
-</script>
-```
-
-{% endtab %}
-{% tab Alternative Syntax %}
-
-You can also use inline event handlers:
-
-```html
-<a href="myapp://feature/screen" onclick="brazeBridge.logClick('0')">Go to Feature</a>
-```
-
-{% endtab %}
-{% endtabs %}
-
-{% alert warning %}
-Do not use `brazeBridge.closeMessage()` when redirecting to deep links or external URLs, as the Android SDK already handles closing the in-app message automatically. Calling `closeMessage()` in this scenario may cause the message to become unresponsive.
-{% endalert %}
-
 ## Embedding YouTube content
 
 YouTube and other HTML5 content can play in HTML in-app messages. This requires hardware acceleration to be enabled in the activity where the in-app message is being displayed; see the [Android developer guide](https://developer.android.com/guide/topics/graphics/hardware-accel.html#controlling) for more details. Hardware acceleration is only available on Android API versions 11 and later.
@@ -96,3 +53,20 @@ The following is an example of an embedded YouTube video in an HTML snippet:
     </div>
 </body>
 ```
+
+## Using deep links
+
+When using deep links or external links in Android HTML in-app messages, **do not** call `brazeBridge.closeMessage()` in your JavaScript. The SDK's internal logic automatically closes the in-app message when it redirects to a link. Calling `appboyBridge.closeMessage()` interferes with this process and may cause the message to become unresponsive when users return to your app. 
+
+
+The following is an example of a deep link in a code snippet:
+
+{% raw %}
+```javascript
+<script>
+document.querySelectorAll('[data-button-id]').forEach(function (node)
+Unknown macro: { node.addEventListener('click', function () { appboyBridge.logClick(node.dataset.buttonId); appboyBridge.closeMessage(); }); }
+);
+</script>
+```
+{% endraw %}
