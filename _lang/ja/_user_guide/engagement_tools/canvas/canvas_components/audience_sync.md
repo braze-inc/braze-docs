@@ -1,5 +1,5 @@
 ---
-nav_title: キャンバスオーディエンスの同期
+nav_title: キャンバスオーディエンス同期
 page_order: 10
 noindex: true
 tool: Canvas
