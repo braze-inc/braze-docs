@@ -62,7 +62,7 @@ Before launching a Canvas with a Flow, you can select **Preview Flow** to previe
 
 ## Saving the full Flow response {#full-flow}
 
-When incorporating a WhatsApp Flow message into a Braze Canvas or campaign, you may want to capture and utilize specific information that users submit through the Flow. Braze needs to receive additional  information regarding the structure of the user response, specifically the expected shape of the JSON response, to generate the required nested custom attribute (NCA) schema.
+When incorporating a WhatsApp Flow message into a Braze Canvas or campaign, you may want to capture and utilize specific information that users submit through the Flow. Braze needs to receive additional information regarding the structure of the user response, specifically the expected shape of the JSON response, to generate the required nested custom attribute (NCA) schema.
 
 ### Step 1: Generate the Flow custom attribute
 
