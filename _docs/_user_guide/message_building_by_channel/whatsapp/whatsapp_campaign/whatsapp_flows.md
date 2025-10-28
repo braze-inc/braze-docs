@@ -90,7 +90,7 @@ To resolve this, do the following:
 Now, Braze has the shape of the Flow response JSON and can generate the custom attribute.
 
 {% endtab %}
-{% tab Alternative method %}
+{% tab Alternative methods %}
 
 Use the advanced JSON editor to save attributes from the Flow response to custom attributes, or use a multi-step Canvas to save the response to a nested custom attribute. 
 
@@ -177,16 +177,16 @@ In the UI editor, select the following:
 
 ![WhatsApp message composer with an "Add Personalization" component to insert a WhatsApp properties personalization with the custom attribute `inbound_flow_response`.]({% image_buster /assets/img/whatsapp/flows/parsed_json.png %})
 
-{% alert note %}
-A new WhatsApp message “clears” the Canvas’s ability to use (and reuse) the Liquid Flow response, so make sure that follow-up messages are after all User Update steps, webhooks, or other steps that use the Liquid Flow response. 
-{% endalert %}
-
 When you’re ready, send a test message to test the Flow. Then, launch the Canvas!
 
 {% endtab %}
 {% endtabs %}
 
-### Step 3: Add a Flow personalization tag
+{% alert note %}
+A new WhatsApp message “clears” the Canvas’s ability to use (and reuse) the Liquid Flow response, so make sure that follow-up messages are after all User Update steps, webhooks, or other steps that use the Liquid Flow response. 
+{% endalert %}
+
+## Adding a Flow personalization tag
 
 To use the Flow response through Liquid with [supported personalization tags]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/), complete the following steps:
 
