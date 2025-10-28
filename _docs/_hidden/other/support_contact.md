@@ -1069,6 +1069,7 @@ a:hover {
             <!-- Step 2 -->
             <div id="step2" style="display:none;">
                 <h2 class='gpt-heading'></h2>
+                 <h2 class='gpt-heading'></h2>
                 <div class="gptGradientContainer">
                  <div class='gpt-responce'>
                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
@@ -1115,7 +1116,7 @@ a:hover {
                     <div id="articles-list"></div>
                 </div>
                 </div>
-                
+
                 <div class="flex-display">
                 <div class="gpt-res-buttons">
                 <button type="button" class="submit-btn" id="backToStep1" style="background-color:grey;">Back</button>
@@ -1258,20 +1259,27 @@ a:hover {
     const step1 = document.getElementById('step1');
     const step2 = document.getElementById('step2');
     const step3 = document.getElementById('step3');
+   const subjectInput = document.getElementById('subject');
+const descriptionInput = document.getElementById('description');
+const nextButton = document.getElementById('toStep2');
 
-    document.getElementById('subject').addEventListener('keypress', function(e) {
+// Step 1: Enter in Subject → focus Description
+subjectInput.addEventListener('keypress', function(e) {
     if (e.key === 'Enter') {
-        e.preventDefault(); 
-        document.getElementById('toStep2').click(); // Trigger the button click
+        e.preventDefault();
+        descriptionInput.focus();
     }
 });
 
-document.getElementById('description').addEventListener('keypress', function(e) {
+
+
+nextButton.addEventListener('keypress', function(e) {
     if (e.key === 'Enter') {
-        e.preventDefault(); 
-        document.getElementById('toStep2').click(); // Trigger the button click
+        e.preventDefault();
+        nextButton.click();
     }
 });
+
 
 
     const caseId = "CASE-" + Date.now() + "-" + Math.floor(Math.random() * 1000);
@@ -2310,8 +2318,7 @@ $( document ).ready(function() {
 });
 
 
-
-   const suggestionsBox = document.getElementById('suggestionsBox');
+const suggestionsBox = document.getElementById('suggestionsBox');
 const articlesDiv = document.getElementById('articles');
 const articlesList = document.getElementById('articles-list');
 const formContainer = document.querySelector(".form-container");
@@ -2480,6 +2487,8 @@ document.getElementById('toStep2').addEventListener('click', async function () {
                         document.querySelector('.gpt-text1').style.display = 'block';
                         document.querySelector('.gpt-text').style.display = 'none';
                     }
+                 
+
 
                     // Collect articles only once
                     if (!articlesCollected && data.data?.articles) {
