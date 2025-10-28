@@ -56,7 +56,7 @@ The following is an example of an embedded YouTube video in an HTML snippet:
 
 ## Using deep links
 
-When using deep links or external links in Android HTML in-app messages, **do not** call `brazeBridge.closeMessage()` in your JavaScript. The SDK's internal logic automatically closes the in-app message when it redirects to a link. Calling `appboyBridge.closeMessage()` interferes with this process and may cause the message to become unresponsive when users return to your app. 
+When using deep links or external links in Android HTML in-app messages, **do not** call `brazeBridge.closeMessage()` in your JavaScript. The SDK's internal logic automatically closes the in-app message when it redirects to a link. Calling `brazeBridge.closeMessage()` interferes with this process and may cause the message to become unresponsive when users return to your app. 
 
 
 The following is an example of a deep link in a code snippet:
@@ -65,7 +65,7 @@ The following is an example of a deep link in a code snippet:
 ```javascript
 <script>
 document.querySelectorAll('[data-button-id]').forEach(function (node)
-Unknown macro: { node.addEventListener('click', function () { appboyBridge.logClick(node.dataset.buttonId); appboyBridge.closeMessage(); }); }
+Unknown macro: { node.addEventListener('click', function () { brazeBridge.logClick(node.dataset.buttonId); brazeBridge.closeMessage(); }); }
 );
 </script>
 ```
