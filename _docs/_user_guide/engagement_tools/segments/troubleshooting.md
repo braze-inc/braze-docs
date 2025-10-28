@@ -16,6 +16,8 @@ description: "This reference article covers troubleshooting steps and considerat
 
 This rare error occurs if your target audience contains too many regex values, excessively long regex values, excessively detailed filters (such as "is any of 30,000 zip codes"), or too many filters. This includes all filters in a campaign or Canvas audience, whether the filters are located within the referenced segments or added as filters in the **Target Audience** step.
 
+![Error for a target audience that hits the complexity threshold.]({% image_buster /assets/img/segment/target_audience_too_complex_error.png %})
+
 When you add segment filters to a campaign or Canvas, those filters are translated into queries in Braze (the character count of these queries is not 1:1 to the number of characters a dashboard user sees). When Braze sends a campaign or Canvas, we run a query that combines all filters in the targeted audience. We apply a threshold limiting the number of characters in the resulting query for a target audience. For a given campaign or Canvas, we sum up the character count across all segments referenced, including all additional filters. For a given segment, we sum up the character count across all filters and filter values.
 
 Your dashboard will display an error when a campaign, Canvas, or segment exceeds the threshold and can't be launched. If you receive this error, simplify your target audience before launching again, including:
@@ -35,9 +37,24 @@ We began limiting character counts in April 2025. Campaigns and Canvases that la
 
 This banner displays at the top of a campaign or Canvas list whenever active or stopped campaigns or Canvases have audiences that exceed the audience complexity threshold. Select the banner to filter the list to just the campaigns or Canvases exceeding the threshold, then follow the troubleshooting steps in [Target audience is too complex to launch](#target-audience-is-too-complex-to-launch).
 
+![Error banner that says 4 active or stopped Canvases exceed the audience complexity threshold.]({% image_buster /assets/img/segment/audience_complexity_threshold_banner.png %})
+
 ### Filter exceeds 10,000 characters or is too long to save
 
 Braze limits individual segment filters to a maximum of 10,000 characters. A warning appears whenever an individual filter exceeds 10,000 characters, whether the filter is within a segment or added directly to campaign or Canvas. 
+
+{% tabs %}
+{% tab Segment error %}
+
+![Error banner for a filter that has a value that exceeds 10,000 characters.]({% image_buster /assets/img/segment/filter_error.png %})
+
+{% endtab %}
+{% tab Canvas or campaign error %}
+
+![Error for a custom attribute filter, `menu_item`, which has an attribute value that exceeds 10,000 characters.]({% image_buster /assets/img/segment/segment_filter_error.png %})
+
+{% endtab %}
+{% endtabs %}
 
 This error occurs very rarely, but when it does occur, it’s typically with regex filters that target a list of user IDs or email addresses. In that case, you can follow these steps to convert the filters to a CSV:
 
