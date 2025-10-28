@@ -9,7 +9,7 @@ channel:
   - RCS
 search_rank: 3
 guide_top_header: "SMS、MMS、RCS"
-guide_top_text: "SMS（Short Messaging Service）、MMS（Multimedia Messaging Service）、RCS（Rich Communication Services）は、ユーザーの電話番号を利用するため、他の多くのメッセージングチャネルよりもダイレクトな方法で、リアルタイムにユーザーにアプローチすることができる。Braze SMS、MMS、またはRCSを使い始めるには、以下のトピックをチェックしよう！<br><br>以下のトピックのどれにも準備ができていない？BrazeのSMSを知るには、<a href='/docs/sms_setup/'>SMSセットアップ</a>コレクションに進んでください。<br><br>**SMS、MMS、RCSは一部のBrazeパッケージでのみ利用可能。使い始める場合は、アカウントマネージャーまたはカスタマーサクセスマネージャーにお問い合わせください。"
+guide_top_text: "SMS（Short Messaging Service）、MMS（Multimedia Messaging Service）、RCS（Rich Communication Services）は、ユーザーの電話番号を利用するため、他の多くのメッセージングチャネルよりもダイレクトな方法で、リアルタイムにユーザーにアプローチすることができる。Braze SMS、MMS、またはRCSを使い始めるには、以下のトピックをチェックしよう！<br><br>以下のトピックのどれにも準備ができていない？BrazeのSMSを知るには、<a href='/docs/about_sms/'>SMSセットアップ</a>コレクションに進んでください。<br><br>**SMS、MMS、RCSの使用可否はBrazeパッケージに依存する。使い始める場合は、アカウントマネージャーまたはカスタマーサクセスマネージャーにお問い合わせください。"
 description: "このランディングページには、SMS (ショートメッセージングサービス)、MMS (マルチメディアメッセージングサービス)、RCS (リッチコミュニケーションサービス) がまとめられています。これらのサービスは、ユーザーの電話番号を使用して、リアルタイムでユーザーに到達できるため、他のほとんどのメッセージングチャネルよりも直接的にユーザーにリーチする方法です。"
 
 guide_featured_title: "一般記事"
@@ -41,6 +41,9 @@ guide_featured_list:
 - name: "レポート"
   link: /docs/sms_mms_rcs_reporting/
   image: /assets/img/braze_icons/phone-02.svg
+- name: "SMSとRCSボットのクリックフィルター"
+  link: /docs/sms_rcs_bot_click_filtering/
+  image: /assets/img/braze_icons/phone-02.svg
 - name: "課金計算機"
   link: /docs/sms_rcs_billing_calculators/
   image: /assets/img/braze_icons/calculator.svg
@@ -53,8 +56,11 @@ guide_menu_list:
 - name: "SMSについて"
   link: /docs/about_sms/
   image: /assets/img/braze_icons/check-square-broken.svg
-- name: "SMSの設定"
-  link: /docs/sms_setup/
+- name: "知っておくべきSMS用語"
+  link: /docs/sms_terms_to_know/
+  image: /assets/img/braze_icons/book-closed.svg
+- name: "SMSメッセージ送信"
+  link: /docs/sms_message_sending/
   image: /assets/img/braze_icons/phone-02.svg
 - name: "SMS メッセージを作成する"
   link: /docs/create_sms_message/
