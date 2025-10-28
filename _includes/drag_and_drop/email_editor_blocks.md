@@ -14,7 +14,7 @@ The following table describes how users can use each editor block type.
 
 | Name | Description |
 |---|---|
-|Title| Adds text with H1, H2, and H3 tags for email. | 
+|Title| Adds text for Headers within the email. | 
 |Paragraph| Enters text into their message. A toolbar helps with font and text editing functionality. | 
 |List| Adds a bulleted list. |
 |Button| Adds a standard button. Properties for this block allow for editing and setting links easily. | 
@@ -37,7 +37,7 @@ Refer to the following table for details on the `Title` editor block properties.
 
 | Properties | Description |
 |---|---|
-|Title| Selects the heading style. Only H1, H2, or H3 are available. | 
+|Title| Selects the heading style. | 
 |Font family| This is the font style for your title. |
 |Font weight| This is the overall boldness of the font. |
 |Font size| Determines the size of your text. |

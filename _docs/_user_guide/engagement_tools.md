@@ -28,4 +28,7 @@ guide_menu_list:
   - name: Location & Geofences
     link: /docs/user_guide/engagement_tools/locations_and_geofences/
     image: /assets/img/braze_icons/marker-pin-06.svg
+  - name: Feature flags
+    link: /docs/user_guide/engagement_tools/feature_flags/
+    image: /assets/img/braze_icons/flag-02.svg
 ---

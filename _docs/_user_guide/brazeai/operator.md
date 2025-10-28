@@ -24,6 +24,16 @@ During the beta, Operator supports **Ask** mode only. You can:
 - Troubleshoot issues using [page-aware context](#page-aware-context)
 - Learn best practices and onboarding guidance
 
+### Model providers as sub-processors or third-party providers
+
+Where Customer uses a uses an integration with an LLM provider provided by Braze through the Braze Services (“Braze-provided LLM”), the providers of such Braze-provided LLM will be acting as Braze Sub-processors, subject to the terms of the Data Processing Addendum (DPA) between Customer and Braze. Currently, BrazeAI Operator integrates with OpenAI.
+
+If Customers chooses to bring their own API Key to integrate with Braze AI Operator, the provider of Customer’s own LLM subscription will be considered a Third Party Provider, as defined in the contract between Customer and Braze. 
+
+### How is my data used and sent to OpenAI?
+
+In order to generate AI output through Braze AI features that Braze identifies as leveraging OpenAI (“Output”), Braze will send your prompts, the content displayed in the Dashboard and Workspace data relevant to your queries, as applicable (“Input”) to OpenAI. Per [OpenAI’s API platform commitments](https://openai.com/enterprise-privacy/), data sent to OpenAI’s API via Braze is not used to train or improve OpenAI models. Between you and Braze, Output is your intellectual property. Braze will not assert any claims of copyright ownership on such Output. Braze makes no warranty of any kind with respect to any AI-generated content generally, including Output.
+
 ## How to access Operator
 
 You can open Operator from any page in the Braze dashboard.  
@@ -39,7 +49,7 @@ You can open Operator from any page in the Braze dashboard.
 
 {% alert tip %}
 Try maximizing to expand the panel for easier reading, or minimizing it to keep Operator available while you continue working.  
-{% endalert %}
+{% endalert %} 
 
 ## How to talk to Operator
 
@@ -62,9 +72,19 @@ Think of Operator as a conversation, not a search engine. Short, natural prompts
 
 Operator includes the following features during beta:
 
+### GPT models
+
+You can select from these GPT models to use for different request types with Operator:
+
+- [GPT-5 nano](https://platform.openai.com/docs/models/gpt-5-nano)
+- [GPT-5 mini](https://platform.openai.com/docs/models/gpt-5-mini) (default)
+- [GPT-5](https://platform.openai.com/docs/models/gpt-5)
+
+![Dropdown for different GPT models to choose.]({% image_buster /assets/img/operator/operator_model.png %}){:style="max-width:70%"}
+
 ### Page-aware context
 
-Operator understands the page you’re currently working on in Braze and can tailor responses based on that context. For example, if you open Operator while building a Canvas, it can suggest steps or provide guidance relevant to Canvas, without you needing to explain where you are. 
+Operator understands the page you're currently working on in Braze and can tailor responses based on that context. For example, if you open Operator while building a Canvas, it can suggest steps or provide guidance relevant to Canvas, without you needing to explain where you are. 
 
 ### Suggested prompts
 
@@ -74,7 +94,7 @@ When you open Operator, you’ll see a few suggested prompts to help you get sta
 
 Operator shows its reasoning steps in collapsible sections labeled **Reasoned**. Select the dropdown to expand these sections and see how Operator arrived at an answer.
 
-![Dropdown for "Reasoned" expanded with more details on how Operator answered.]({% image_buster /assets/img/operator/operator_reasoning.png %}){:style="max-width:60%"}
+![Dropdown for "Reasoned" expanded with more details on how Operator answered.]({% image_buster /assets/img/operator/operator_reasoning.png %}){:style="max-width:50%"}
 
 ### Suggested actions
 
@@ -122,3 +142,7 @@ While Operator has access to the context of the work you're doing in Braze, Oper
 As a private beta, Operator may have occasional errors, interruptions, or incomplete features.
 
 If you’re unsure whether a question is supported, try phrasing it in terms of how Operator can help you navigate or take actions inside the Braze dashboard, rather than pulling analytics or historical data.
+
+### Number of messages sent
+
+There is a limit of how many messages you can send to Operator. We recommend using the default GPT-5 mini or GPT-5 nano for your queries and using GPT-5 judiciously for more complex tasks.
