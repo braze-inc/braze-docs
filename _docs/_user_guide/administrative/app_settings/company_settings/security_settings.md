@@ -242,11 +242,11 @@ The following attributes can be designated as PII and hidden from Braze users wh
 
 ### Limited areas
 
-The following assumes that all fields are set as PII, and the users mentioned are those who use the Braze platform. Also, "preceeding" attributes refer to those in the [Potential PII attributes](#potential-pii-attributes) table.
+The following assumes that all fields are set as PII, and the users mentioned are those who use the Braze platform. Also, "preceding" attributes refer to those in the [Potential PII attributes](#potential-pii-attributes) table.
 
 | Dashboard Navigation | Result | Notes |
 | -------------------- | ------ | ----- |
-| User search | The user who logs in is unable to search by email address, phone number, first name, or last name: {::nomarkdown} <ul> <li> Won't be shown the preceeding standard and custom attributes when viewing a user profile. </li> <li> Can't edit the preceeding standard attributes of a user profile from the Braze dashboard. </li> <li> Can't update the subscription status on a user profile. </li></ul> {:/} | Access to this section still requires access to view a user profile. |
+| User search | The user who logs in is unable to search by email address, phone number, first name, or last name: {::nomarkdown} <ul> <li> Won't be shown the preceding standard and custom attributes when viewing a user profile. </li> <li> Can't edit the preceding standard attributes of a user profile from the Braze dashboard. </li> <li> Can't update the subscription status on a user profile. </li></ul> {:/} | Access to this section still requires access to view a user profile. |
 | User import | The user can't download files from the **User Import** page. | |
 | {::nomarkdown} <ul> <li> Segments </li> <li> Campaigns </li> <li> Canvas </li> </ul> {:/} | In the **User Data** dropdown: {::nomarkdown} <ul> <li> The user won't have the <b>CSV Export Email Address</b> option. </li> <li> The user won't be provided the preceding standard and custom attributes in the CSV file when selecting <b>CSV Export User Data</b>. </li> </ul> {:/} | |
 | Internal test group | The user won't have access to the preceding standard attributes of any user added to the internal test group. | |
