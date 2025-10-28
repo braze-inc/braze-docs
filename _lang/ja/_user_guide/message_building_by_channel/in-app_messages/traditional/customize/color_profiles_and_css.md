@@ -1,5 +1,5 @@
 ---
-nav_title: カラープロファイルとCSSテンプレート
+nav_title: カラープロファイルsとCSS テンプレートs
 article_title: アプリ内メッセージのカラープロファイルとCSSテンプレート
 page_order: 4
 page_type: reference
@@ -24,7 +24,7 @@ channel:
 
 ### カラープロファイルの管理
 
-テンプレートを[複製]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/)および[アーカイブ]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/)することもできます！テンプレートおよびクリエイティブコンテンツの作成と管理の詳細については、[「テンプレートとメディア」]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/)を参照してください。
+テンプレートを[複製]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/)および[アーカイブ]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/)することもできます！[ テンプレート s & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/) で、テンプレート s とクリエイティブコンテンツの作成と管理について詳しく説明します。
 
 ## CSS テンプレート{#in-app-message-templates}
 
@@ -84,7 +84,7 @@ CSSテンプレートに名前を付けてタグを付け、デフォルトの�
 
 ### CSSテンプレートの管理
 
-テンプレートを[複製]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/)および[アーカイブ]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/)することもできます！テンプレートおよびクリエイティブコンテンツの作成と管理の詳細については、[「テンプレートとメディア」]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/)を参照してください。
+テンプレートを[複製]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/)および[アーカイブ]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/)することもできます！[ テンプレート s & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/) で、テンプレート s とクリエイティブコンテンツの作成と管理について詳しく説明します。
 
 ## モーダル with CSS (Web only) {#web-modal-css}
 
