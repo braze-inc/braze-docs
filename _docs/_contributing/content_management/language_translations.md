@@ -35,7 +35,7 @@ Here's a few examples of the kind of patterns skip for translation:
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {% alert tip %}
-For the full list of patterns, see [`translation_regex.json`](https://github.com/braze-inc/braze-docs/blob/develop/scripts/tests/utils/translation_regex.json) in GitHub.
+For the full list of patterns, see [`translation_regex.json`](https://github.com/braze-inc/braze-docs/blob/develop/scripts/utils/translation_regex.json) in GitHub.
 {% endalert %}
 
 ## Updating Phrase regular expressions
