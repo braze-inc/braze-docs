@@ -14,5 +14,5 @@ tool:
 
 > このリファレンス記事では、アプリ内メッセージのレポートと分析、キャンペーンの詳細、メッセージのパフォーマンス、および過去のパフォーマンスについて説明します。
 
-{% multi_lang_include campaign_analytics.md channel="in-app message" %}
+{% multi_lang_include analytics/campaign_analytics.md channel="in-app message" %}
 
