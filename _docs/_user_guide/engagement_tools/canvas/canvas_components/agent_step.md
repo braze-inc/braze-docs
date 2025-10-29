@@ -40,13 +40,14 @@ Agent outputs are called "output variables" and are stored in a [context variabl
 1. Give the variable a name.
 2. Select a data type. 
 
-Agent outputs can be saved as strings, numbers, or booleans. This makes them flexible for both text personalization and conditional logic in your Canvas. Here are some common uses for each type:
+Agent outputs can be saved as strings, numbers, booleans, or objects. This makes them flexible for both text personalization and conditional logic in your Canvas. Here are some common uses for each type:
 
 | Data type | Common uses |
 | --- | --- |
 | String | Message personalization (subject lines, copy, responses) |
 | Number | Scoring, thresholds, routing in [Audience Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths) |
 | Boolean | Yes/No branching in [Decision Splits]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split) |
+| Object | Defining JSON request schema to reference in a context variable and subsequent Message step |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 When defined, you can use an output variable throughout the Canvas by using the same template syntax as you would with a context variable. Either use the **Context Variable** segment filter, or template agent responses directly using Liquid: {% raw %}`{{context.${response_variable_name}}}` {% endraw %}.
