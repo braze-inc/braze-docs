@@ -49,8 +49,8 @@ Der Inhalt dieser Datei sollte dem folgenden Codeschnipsel ähneln. Stellen Sie 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<string name="com_braze_api_key">YOUR_APP_IDENTIFIER_API_KEY</string>
-<string translatable="false" name="com_braze_custom_endpoint">YOUR_CUSTOM_ENDPOINT_OR_CLUSTER</string>
+  <string translatable="false" name="com_braze_api_key">YOUR_APP_IDENTIFIER_API_KEY</string>
+  <string translatable="false" name="com_braze_custom_endpoint">YOUR_CUSTOM_ENDPOINT_OR_CLUSTER</string>
 </resources>
 ```
 
@@ -67,7 +67,147 @@ Fügen Sie als Nächstes die folgenden Berechtigungen zu Ihrem `AndroidManifest.
 Mit der Veröffentlichung von Android M wechselte Android von einem Installationszeit- zu einem Laufzeit-Berechtigungsmodell. Diese beiden Berechtigungen sind jedoch normale Berechtigungen. Sie werden automatisch gewährt, wenn sie im App-Manifest aufgeführt sind. Weitere Informationen finden Sie in der [Dokumentation zu den Berechtigungen](https://developer.android.com/training/permissions/index.html) von Android.
 {% endalert %}
 
-### Schritt 4: Enablement des Trackings von Nutzer:innen-Sitzungen
+### Schritt 4: Verzögerte Initialisierung einschalten (optional)
+
+Um die verzögerte Initialisierung zu verwenden, ist die Mindestversion des Braze SDK erforderlich:
+
+{% sdk_min_versions android:38.0.0 %}
+
+{% alert note %}
+Während die verzögerte Initialisierung aktiviert ist, werden alle Netzwerkverbindungen abgebrochen, so dass das SDK keine Daten an die Braze Server senden kann.
+{% endalert %}
+
+#### Schritt 4.1: Aktualisieren Sie Ihr `braze.xml`
+
+Die verzögerte Initialisierung ist standardmäßig deaktiviert. Zum Enablement verwenden Sie eine der folgenden Optionen:
+
+{% tabs %}
+{% tab Braze XML Datei %}
+In der Datei `braze.xml` Ihres Projekts setzen Sie `com_braze_enable_delayed_initialization` auf `true`.
+
+```xml
+<bool name="com_braze_enable_delayed_initialization">true</bool>
+```
+{% endtab %}
+
+{% tab Zur Laufzeit %}
+Um die verzögerte Initialisierung zur Laufzeit zu aktivieren, verwenden Sie die folgende Methode.
+
+{% subtabs %}
+{% subtab JAVA %}
+
+```java
+Braze.enableDelayedInitialization(context);
+```
+
+{% endsubtab %}
+{% subtab KOTLIN %}
+
+```kotlin
+Braze.enableDelayedInitialization(context)
+```
+
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+{% endtabs %}
+
+#### Schritt 4.2: Konfigurieren Sie Push Analytics (optional)
+
+Wenn die verzögerte Initialisierung aktiviert ist, werden Push Analytics standardmäßig in eine Warteschlange gestellt. Sie können Push Analytics jedoch auch [explizit in die Warteschlange stellen](#explicitly-queue-push-analytics) oder [ablehnen](#drop-push-analytics).
+
+##### Ausdrücklich Warteschlange {#explicitly-queue-push-analytics}
+
+Um Push Analytics explizit in die Warteschlange zu stellen, wählen Sie eine der folgenden Optionen:
+
+{% tabs %}
+{% tab Braze XML Datei %}
+Setzen Sie in Ihrer Datei `braze.xml` `com_braze_delayed_initialization_analytics_behavior` auf `QUEUE`:
+
+```xml
+<string name="com_braze_delayed_initialization_analytics_behavior">QUEUE</string>
+```
+{% endtab %}
+
+{% tab Zur Laufzeit %}
+Fügen Sie `QUEUE` zu Ihrer [`Braze.enableDelayedInitialization()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/enable-delayed-initialization.html) Methode hinzu:
+
+{% subtabs %}
+{% subtab JAVA %}
+
+```java
+Braze.enableDelayedInitialization(context, DelayedInitializationAnalyticsBehavior.QUEUE);
+```
+
+{% endsubtab %}
+{% subtab KOTLIN %}
+
+```kotlin
+Braze.enableDelayedInitialization(context, DelayedInitializationAnalyticsBehavior.QUEUE)
+```
+
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+{% endtabs %}
+
+##### Ablegen {#drop-push-analytics}
+
+Um Push Analytics zu löschen, wählen Sie eine der folgenden Optionen:
+
+{% tabs %}
+{% tab Braze XML Datei %}
+Setzen Sie in Ihrer Datei `braze.xml` `com_braze_delayed_initialization_analytics_behavior` auf `DROP`: 
+
+```xml
+<string name="com_braze_delayed_initialization_analytics_behavior">DROP</string>
+```
+{% endtab %}
+
+{% tab Zur Laufzeit %}
+Fügen Sie `DROP` zu der [`Braze.enableDelayedInitialization()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/enable-delayed-initialization.html) Methode hinzu:
+
+{% subtabs %}
+{% subtab JAVA %}
+
+```java
+Braze.enableDelayedInitialization(context, DelayedInitializationAnalyticsBehavior.DROP);
+```
+
+{% endsubtab %}
+{% subtab KOTLIN %}
+
+```kotlin
+Braze.enableDelayedInitialization(context, DelayedInitializationAnalyticsBehavior.DROP)
+```
+
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+{% endtabs %}
+
+#### Schritt 4.3: Manuelles Initialisieren des SDK
+
+Nach der von Ihnen gewählten Verzögerungszeit verwenden Sie die [`Braze.disableDelayedInitialization()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/disable-delayed-initialization.html) Methode, um das SDK manuell zu initialisieren.
+
+{% tabs local %}
+{% tab JAVA %}
+
+```java
+Braze.disableDelayedInitialization(context);
+```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+Braze.disableDelayedInitialization(context)
+```
+
+{% endtab %}
+{% endtabs %}
+
+### Schritt 5: Enablement des Trackings von Nutzer:innen-Sitzungen
 
 Wenn Sie das Tracking von Nutzersitzungen aktivieren, können Aufrufe von `openSession()`, `closeSession()`,[`ensureSubscribedToInAppMessageEvents()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/ensure-subscribed-to-in-app-message-events.html)und die `InAppMessageManager` Registrierung automatisch verarbeitet werden.
 
@@ -118,6 +258,47 @@ Wenn Sie beim Testen auf Probleme stoßen, aktivieren Sie die [ausführliche Pro
 4. Versetzen Sie die App für mindestens 10 Sekunden in den Hintergrund und holen Sie sie dann in den Vordergrund. Überprüfen Sie, ob eine neue Sitzung protokolliert wurde.
 
 ## Optionale Konfigurationen
+
+### Laufzeitkonfiguration
+
+Um Ihre Braze-Optionen im Code und nicht in der Datei `braze.xml` festzulegen, verwenden Sie die [Laufzeitkonfiguration](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/configure.html). Wenn ein Wert an beiden Stellen existiert, wird stattdessen der Laufzeitwert verwendet. Nachdem alle erforderlichen Einstellungen zur Laufzeit vorgenommen wurden, können Sie Ihre `braze.xml` Datei löschen.
+
+Im folgenden Beispiel wird ein [Builder-Objekt](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/index.html) erstellt und dann an [`Braze.configure()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/configure.html). Beachten Sie, dass nur einige der verfügbaren Laufzeitoptionen angezeigt werden - die vollständige Liste finden Sie in unserer [KDoc](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/index.html).
+
+{% tabs %}
+{% tab JAVA %}
+
+```java
+BrazeConfig brazeConfig = new BrazeConfig.Builder()
+        .setApiKey("api-key-here")
+        .setCustomEndpoint("YOUR_CUSTOM_ENDPOINT_OR_CLUSTER")
+        .setSessionTimeout(60)
+        .setHandlePushDeepLinksAutomatically(true)
+        .setGreatNetworkDataFlushInterval(10)
+        .build();
+Braze.configure(this, brazeConfig);
+```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+val brazeConfig = BrazeConfig.Builder()
+        .setApiKey("api-key-here")
+        .setCustomEndpoint("YOUR_CUSTOM_ENDPOINT_OR_CLUSTER")
+        .setSessionTimeout(60)
+        .setHandlePushDeepLinksAutomatically(true)
+        .setGreatNetworkDataFlushInterval(10)
+        .build()
+Braze.configure(this, brazeConfig)
+```
+
+{% endtab %}
+{% endtabs %}
+
+{% alert tip %}
+Sie suchen ein weiteres Beispiel? Sehen Sie sich unsere [Hello Braze Beispiel App](https://github.com/braze-inc/braze-android-sdk/blob/master/samples/hello-braze/src/main/java/com/braze/helloworld/CustomApplication.java) an.
+{% endalert %}
 
 ### Google Advertising ID
 
