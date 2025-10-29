@@ -23,11 +23,7 @@ The integration paths outlined below are not exhaustive. They primarily rely on 
 More advanced integration paths, including leveraging [Connected Content]({{site.baseurl}}/docs/user_guide/personalization_and_dynamic_content/connected_content) to call Cloudinary’s [Admin API](https://cloudinary.com/documentation/admin_api#banner) are possible, but the approach will vary between customers. Contact your Cloudinary and Braze CSM for guidance with Connected Content
 {% endalert %}
 
-
-
 ## Prerequisites
-
-Before you start, you need the following:
 
 | Requirements     | Description |                        
 |-----------------------|-----------------|
@@ -130,7 +126,7 @@ https://papish.cloudinary.us/image/list/$locale_!unknown!/$audience_!unknown!/fn
 
 Cloudinary’s [Text Overlay Transformations](https://cloudinary.com/documentation/accessible_media_visual_audio_clarity#text_overlays_on_images_and_videos) can be used to leverage user data from Braze directly within a Cloudinary Asset. More guidance on how Transformation parameters can be used to design an asset can be offered by Cloudinary, our example demonstrates how the `l_text` transformations can be used to insert a users name onto an asset. 
 
-Further customisation can be achieved by leveraging Liquid tags when developing campaigns and canvases to determine what text should populate the “l_text” parameters.
+Further customisation can be achieved by leveraging Liquid tags when developing campaigns and canvases to determine what text should populate the `l_text` parameters.
 
 ```bash
 
