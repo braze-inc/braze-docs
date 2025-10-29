@@ -1,5 +1,5 @@
 ---
-nav_title: 解約分析
+nav_title: チャーン分析
 article_title: 解約予測分析
 description: "この記事では、解約予測分析ページに含まれるさまざまなコンポーネントと、インサイトに満ちた積極的な意思決定を行うためにそれらをどのように使用できるかを説明します。"
 page_order: 1.5
@@ -25,7 +25,7 @@ page_order: 1.5
 
 スライダーを動かすと、下側のパネルの左半分のバーに、予測オーディエンス全体からターゲットになるユーザの数が表示されます。
 
-![]({% image_buster /assets/img/churn/churnTargeting.gif %})
+\![]({% image_buster /assets/img/churn/churnTargeting.gif %})
 
 ## 解約スコアとカテゴリ {#churn_score}
 
@@ -43,7 +43,7 @@ page_order: 1.5
 
 チャートの下のパネルの右側では、予測対象ユーザーのこの領域をターゲットとする期待精度の推定値を示します。過去の予測対象ユーザーに関するデータと、その過去のデータについて解約ユーザーと非解約ユーザーを識別するモデルの精度に基づいて、これらのプログレスバーは、スライダーで強調表示されたオーディエンスを使用した将来の潜在的なメッセージについて以下を推定します。
 
-![]({% image_buster /assets/img/churn/churnEstimatedResults.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
+\![]({% image_buster /assets/img/churn/churnEstimatedResults.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
 - 解約すると予想される選択済みユーザーの数
 - 解約**しない**と予想される選択済みユーザーの数
