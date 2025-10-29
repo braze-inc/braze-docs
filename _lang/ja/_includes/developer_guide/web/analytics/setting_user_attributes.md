@@ -2,9 +2,25 @@
 
 ## デフォルトのユーザー属性
 
+### 定義済みのメソッド
+
+Brazeは、[`User`クラス](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html)内で次のユーザー属性を設定するための定義済みメソッドを提供します:
+
+- 名
+- 姓
+- 言語
+- 国
+- 生年月日
+- メールアドレス
+- 性別
+- 市区町村
+- 電話番号
+
+### デフォルト属性の設定
+
 {% tabs %}
-{% tab 標準実装 %}
-ユーザーのデフォルト属性を設定するには、Braze インスタンスで`getCurrentUser()` メソッドを呼び出して、アプリの現在のユーザーへの参照を取得します。次に、メソッドを呼び出してユーザー属性を設定できます。
+{% tab 方法を使って %}
+ユーザーにデフォルト属性を設定するには、Brazeインスタンスで`getUser()` メソッドを呼び出し、アプリの現在のユーザーへの参照を取得する。そして、ユーザー属性を設定するメソッドを呼び出すことができる。
 
 {% subtabs local %}
 {% subtab First name %}
@@ -26,7 +42,7 @@ braze.getUser().setDateOfBirth(2000, 12, 25);
 {% endtab %}
 
 {% tab Google Tag Manager %}
-Google Tag Manager を使用して、標準ユーザー属性(ユーザーのファーストネームなど) をカスタムユーザー属性と同じ方法でログに記録する必要があります。標準属性項目に渡す値が、[[ユーザークラス](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html)] のドキュメントで指定されている予期される形式と一致していることを確認します。
+Googleタグマネージャーを使用して、標準ユーザー属性（ユーザーの名など）は、カスタムユーザー属性と同じ方法でログに記録されるべきである。標準属性項目に渡す値が、[[ユーザークラス](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html)] のドキュメントで指定されている予期される形式と一致していることを確認します。
 
 たとえば、性別属性は、値として次のいずれかを使用できます。`"m" | "f" | "o" | "u" | "n" | "p"`したがって、ユーザーの性別を女性に設定するには、次の内容のカスタムHTML タグを作成します。
 
@@ -38,27 +54,39 @@ window.braze.getUser().setGender("f")
 {% endtab %}
 {% endtabs %}
 
-Brazeは、[`User`クラス](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html)内で次のユーザー属性を設定するための定義済みメソッドを提供します:
+### デフォルト属性の設定を解除する
 
-- 名
-- 姓
-- 言語
-- 国
-- 生年月日
-- メールアドレス
-- 性別
-- 市区町村
-- 電話番号
+デフォルトのユーザー属性を解除するには、関連するメソッドに`null` 。以下に例を示します。
+
+{% tabs local %}
+{% tab 名 %}
+```javascript
+braze.getUser().setFirstName(null);
+```
+{% endtab %}
+{% tab 性別 %}
+```javascript
+braze.getUser().setGender(null);
+```
+{% endtab %}
+{% tab 生年月日 %}
+```javascript
+braze.getUser().setDateOfBirth(null, null, null);
+```
+{% endtab %}
+{% endtabs %}
 
 ## カスタムユーザー属性
 
+### カスタム属性の設定
+
 {% tabs %}
-{% tab 標準実装 %}
-デフォルトのユーザー属性メソッドに加えて、ユーザーに[カスタム属性]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types)を設定することもできます。完全なメソッド指定については、[JSDocs](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html)を参照してください。
+{% tab 方法を使って %}
+デフォルトのユーザー属性に加え、[カスタム属性を]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types)設定することもできる。完全なメソッドの仕様は[JSDocsを](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html)参照のこと。
 
 {% subtabs local %}
 {% subtab String %}
-`string` 値を使用してカスタム属性を設定するには:
+`string` 、カスタム属性を設定する：
 
 ```javascript
 braze.getUser().setCustomUserAttribute(
@@ -69,7 +97,7 @@ braze.getUser().setCustomUserAttribute(
 
 {% endsubtab %}
 {% subtab Integer %}
-`integer` 値を使用してカスタム属性を設定するには:
+`integer` 、カスタム属性を設定する：
 
 ```javascript
 braze.getUser().setCustomUserAttribute(
@@ -86,7 +114,7 @@ braze.getUser().incrementCustomUserAttribute(
 
 {% endsubtab %}
 {% subtab Date %}
-`date` 値を使用してカスタム属性を設定するには:
+`date` 、カスタム属性を設定する：
 
 ```javascript
 braze.getUser().setCustomUserAttribute(
@@ -110,11 +138,11 @@ braze.getUser().setCustomUserAttribute(
 {% endsubtab %}
 {% subtab Array %}
 
-カスタム属性配列には最大25 個の要素を含めることができます。**データ型**に対して手動で設定された(自動的に検出されない)個々のアレイは、**データ設定**> **カスタム属性**の下のBrazeダッシュボードで100まで増加できます。この最大値を増やす場合は、Braze アカウントマネージャにお問い合わせください。
+カスタム属性配列の要素は最大25個まで持つことができる。**データ型を**手動で設定した（自動検出しない）個々のアレイは、Brazeダッシュボードの「**データ設定**」>「カスタム属性」で100まで増やすことができる。この上限を増やしたい場合は、Brazeアカウントマネージャーに連絡すること。
 
 [配列]({{site.baseurl}}/developer_guide/platform_wide/getting_started/analytics_overview/#arrays) が要素数の最大値を超える場合、要素数の最大値に切り詰められます。
 
-`array` 値を使用してカスタム属性を設定するには:
+`array` 、カスタム属性を設定する：
 
 ```javascript
 braze.getUser().setCustomUserAttribute(YOUR_ATTRIBUTE_KEY_STRING, YOUR_ARRAY_OF_STRINGS);
@@ -133,7 +161,7 @@ braze.getUser().removeFromCustomAttributeArray(YOUR_ATTRIBUTE_KEY_STRING, "value
 {% endsubtabs %}
 
 {% alert important %}
-カスタム属性のキーと値には、最大 255 文字しか使用できません。有効なカスタム属性値の詳細については、[リファレンスドキュメント](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html)を参照してください。
+カスタム属性のキーと値は、最大255文字までしか持つことができない。有効なカスタム属性値の詳細については、[リファレンスドキュメントを](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html)参照のこと。
 {% endalert %}
 {% endtab %}
 
@@ -154,21 +182,37 @@ GTM テンプレートでは、イベントまたは購買のネストされた�
 {% endtab %}
 {% endtabs %}
 
-### カスタム属性の設定解除
+### カスタム属性の設定を解除する
 
-カスタム属性は、その値を `null` に設定することで設定解除できます。
+カスタム属性を解除するには、関連するメソッドに`null` 。
 
 ```javascript
 braze.getUser().setCustomUserAttribute(YOUR_ATTRIBUTE_KEY_STRING, null);
 ```
 
+### 階層化カスタム属性
+
+また、カスタム属性の中にプロパティを入れ子にすることもできる。以下の例では、階層化プロパティを持つ`favorite_book` オブジェクトが、ユーザープロファイルのカスタム属性として設定されている。詳しくは、[階層化カスタム]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support)属性を参照のこと。
+
+```javascript
+import * as braze from "@braze/web-sdk";
+
+const favoriteBook = {
+  title: "The Hobbit",
+  author: "J.R.R. Tolkien",
+  publishing_date: "1937"
+};
+
+braze.getUser().setCustomUserAttribute("favorite_book", favoriteBook);
+```
+
 ### REST API の使用
 
-REST API を使用して、ユーザー属性を設定または設定解除することもできます。詳細については、[User Data Endpoints]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data)を参照してください。
+また、REST APIを使用して、ユーザー属性を設定または解除することもできる。詳細については、[ユーザーデータエンドポイント]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data)を参照してください。
 
 ## ユーザーサブスクリプションの設定
 
-ユーザーのサブスクリプション (メールまたはプッシュ) を設定するには、それぞれ関数 `setEmailNotificationSubscriptionType()` または `setPushNotificationSubscriptionType()` を呼び出します。どちらの関数も`enum` 型`braze.User.NotificationSubscriptionTypes` を引数として取ります。この型には、次の 3 つの状態があります。
+ユーザーのサブスクリプション (メールまたはプッシュ) を設定するには、それぞれ関数 `setEmailNotificationSubscriptionType()` または `setPushNotificationSubscriptionType()` を呼び出します。どちらの関数も引数として`enum` 型`braze.User.NotificationSubscriptionTypes` を取る。この型には、次の 3 つの状態があります。
 
 | サブスクリプションのステータス | 定義 |
 | ------------------- | ---------- |
@@ -181,13 +225,13 @@ REST API を使用して、ユーザー属性を設定または設定解除す�
 
 [ユーザーのサブスクリプションの管理]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions)を訪れて、サブスクリプションと明示的なオプトインの実装に関する詳細情報をご覧ください。
 
-### メールからのユーザの登録解除
+### ユーザーのメール配信停止
 
 ```javascript
 braze.getUser().setEmailNotificationSubscriptionType(braze.User.NotificationSubscriptionTypes.UNSUBSCRIBED);
 ```
 
-### プッシュからのユーザーのサブスクライブ解除
+### ユーザーのプッシュ配信停止
 
 ```java
 braze.getUser().setPushNotificationSubscriptionType(braze.User.NotificationSubscriptionTypes.UNSUBSCRIBED);
