@@ -1,6 +1,6 @@
-{% multi_lang_include developer_guide/prerequisites/cordova.md %} También tendrás que [configurar las notificaciones push]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift), lo que incluye implementar el framework `UNNotification`.
+{% multi_lang_include developer_guide/prerequisites/swift.md %} También tendrás que [configurar las notificaciones push]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift), lo que incluye implementar el framework `UNNotification`.
 
-Se necesitan las siguientes versiones del SDK para recibir historias push:
+Se requiere la siguiente versión mínima del SDK para recibir historias push:
 
 {% sdk_min_versions swift:5.0.0 %}
 
