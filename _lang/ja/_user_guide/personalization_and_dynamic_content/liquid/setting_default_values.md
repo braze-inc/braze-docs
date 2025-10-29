@@ -1,5 +1,5 @@
 ---
-nav_title: デフォルト値の設定
+nav_title: デフォルト値を設定する
 article_title: Liquid のデフォルト値の設定
 page_order: 5
 description: "このリファレンス記事では、メッセージで使用するパーソナライゼーション 属性のデフォルト フォールバックを設定する方法について説明します。"
@@ -78,7 +78,7 @@ Hi {{${first_name} | default: 'valued user'}}, consider upgrading to premium for
 ```
 {% endraw %}
 
-{% details 完全な Liquid コード %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% assign is_premium_user = {{custom_attribute.${premium_user}}} | default: false %}
@@ -144,7 +144,7 @@ State: {{custom_attribute.${address.state} | default: 'Unknown'}}
 ```
 {% endraw %}
 
-{% details 完全な Liquid コード %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 Hi {{${first_name} | default: 'valued user'}}
@@ -191,7 +191,7 @@ Hello {{${first_name} | default: 'fellow traveler'}},
 ```
 {% endraw %}
 
-{% details 完全な Liquid コード %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% if {{custom_attribute.${upcoming_trips}}} == blank %}
