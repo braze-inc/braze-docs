@@ -1,5 +1,5 @@
 ---
-nav_title: プライバシー・ポータル
+nav_title: プライバシーポータル
 article_title: プライバシー・ポータル
 page_order: 60
 layout: dev_guide
