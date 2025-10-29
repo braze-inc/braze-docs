@@ -7,7 +7,10 @@
    {% noindex {{ page.path }} %}
   <link rel="icon" type="image/x-icon" href="{{site.baseurl}}/assets/favicon.ico" sizes="160x160">
 
-  <meta name="description" content="{% if page.description %}{{ 페이지.설명 | 스트립_html | 스트립_새줄 | 잘라낸 단어: 25 }}{% else %}{% if page.content.size &gt; 5 %}{{ page.content | strip_html | truncatewords: 25 }}{% else %}{{ 페이지.id | 슬라이스: 1,page.id.size | replace: &apos;/&apos;, &apos; &apos; | replace: &apos;_&apos;, &apos; &apos; }}{% endif %}{% endif %}{% endif %}"><link rel="canonical" {% if page.url="=" site.index_url %} href="{{ site.baseurl | prepend: site.homeurl }}" else endif/><meta name="keywords" content="braze, docs, documentation, appboy, academy{{ page.id | replace: &apos;_&apos;, &apos; &apos; | replace: &apos;/&apos;, &apos;, &apos; }} ">
+  <meta name="description" content="{% if page.description %}{{ 페이지.설명 | 스트립_html | 스트립_새줄 | 잘라낸 단어: 25 }}{% else %}{% if page.content.size &gt; 5 %}{{ page.content | strip_html | truncatewords: 25 }}{% else %}{{ 페이지.ID | 슬라이스: 1,page.id.size | replace: &apos;/&apos;, &apos; &apos; | replace: &apos;_&apos;, &apos; &apos; }}{% endif %}{% endif %}{% endif %}">
+  <link rel="canonical" {% if page.url="=" site.index_url %} href="{{ site.baseurl | prepend: site.homeurl }}" else endif/>
+
+  <meta name="keywords" content="Braze, 문서, 설명서, Appboy, academy{{ page.id | replace: &apos;_&apos;, &apos; &apos; | replace: &apos;/&apos;, &apos;, &apos; }} ">
 
   <script type="application/ld+json">
   {
@@ -62,9 +65,13 @@
 
 {% 자바스크립트_자산_태그 글로벌 %} - /assets/js/highlight.js - /assets/js/breadcrumb.js - /assets/js/left_nav.js - /assets/js/js.cookie.js - /assets/js/toc.js - /assets/js/documents.js - /assets/js/feedback.js - /assets/js/contentcards.js {% endjavascript_asset_tag %}
 
-<script type='text/javascript' src='{{site.baseurl}}/assets/js/swiper.js' ></script><script type="text/javascript" src="{{site.baseurl}}/assets/js/algolia_search.js?{{site.time | date: " %s'}}'></script>
+<script type='text/javascript' src='{{site.baseurl}}/assets/js/swiper.js' ></script>
+
+<script type="text/javascript" src="{{site.baseurl}}/assets/js/algolia_search.js?{{site.time | date: " %s'}}'></script>
 
 <script src="{{site.baseurl}}/assets/js/mermaid.js"></script>
+
+<script type="text/javascript" src="{{site.baseurl}}/assets/js/copy-heading-tag-links.js"></script>
 
 <script type="text/javascript">
 
@@ -134,4 +141,11 @@
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
 </script>
 
+<meta name="tool" content="{{ page.tool | join: ', ' | default: '' }}" />
+<meta name="platform" content="{{ page.platform | join: ', ' | default: '' }}" />
+{% assign page_ids = page.id | split: '/' %}
+<meta name="type" content="{{ page_ids[1] | replace: '_', ' ' | default: '' }}" />
+<meta name="category" content="{{ page_ids[2] | replace: '_', ' ' | default: '' }}" />
+<meta name="page_name" content="{{ page_ids | last | replace: '_', ' ' | default: '' }}" />
+<meta name="channel" content="{{ page.channel | join: ', ' | default: '' }}" />
 </head>
