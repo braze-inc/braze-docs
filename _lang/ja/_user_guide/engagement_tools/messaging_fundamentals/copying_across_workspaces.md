@@ -1,5 +1,5 @@
 ---
-nav_title: ワークスペース間でのコピー
+nav_title: ワークスペース間のコピー
 article_title: ワークスペース間でのコピー
 page_order: 4.5
 alias: "/copying_to_workspaces/"
@@ -17,7 +17,7 @@ tool:
 キャンペーンやキャンバスを別のワークスペースにコピーすると、編集してローンチするまでそのコピーは下書きとして残り、成功したメッセージング戦略を維持・発展させることができる。
 
 {% tabs local %}
-{% tab キャンペーン %}
+{% tab campaigns %}
 
 {% alert important %}
 一般的にワークスペース間でキャンペーンをコピーできます。コンテンツカードのチャネルサポートは現在利用できません。
@@ -32,7 +32,7 @@ tool:
 3. コピー後、キャンペーンを見直し、テストして、すべてのフィールドが正しく機能することを確認する。
 
 {% endtab %}
-{% tab キャンバス %}
+{% tab canvas %}
 
 {% alert important %}
 一般的にワークスペース間でキャンバスをコピーできます。次のチャネルは現在サポートされていません:LINE、コンテンツカード、WhatsApp。
@@ -58,7 +58,7 @@ tool:
 ### 詳細
 
 {% tabs local %}
-{% tab キャンペーン %}
+{% tab campaigns %}
 
 | コピーしました | 省略 |
 |---|---|
@@ -74,7 +74,7 @@ tool:
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
-{% tab キャンバス %}
+{% tab canvas %}
 
 | コピーしました | 省略 |
 |---|---|
@@ -95,7 +95,7 @@ tool:
 ### 変換動作
 
 {% tabs local %}
-{% tab キャンペーン %}
+{% tab campaigns %}
 
 | コピーしました | 省略 |
 |---|---|
@@ -106,7 +106,7 @@ tool:
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
-{% tab キャンバス %}
+{% tab canvas %}
 
 | コピーしました | 省略 |
 |---|---|
@@ -122,7 +122,7 @@ tool:
 ### アクション
 
 {% tabs local %}
-{% tab キャンペーン %}
+{% tab campaigns %}
 
 | コピーしました | 省略 |
 |---|---|
@@ -133,7 +133,7 @@ tool:
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
-{% tab キャンバス %}
+{% tab canvas %}
 
 | コピーしました | 省略 |
 |---|---|
@@ -149,7 +149,7 @@ tool:
 ### メッセージのバリエーション
 
 {% tabs local %}
-{% tab キャンペーン %}
+{% tab campaigns %}
 
 | コピーしました | 省略 |
 |---|---|
@@ -160,7 +160,7 @@ tool:
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
-{% tab キャンバス %}
+{% tab canvas %}
 
 | コピーしました | 省略 |
 |---|---|
@@ -177,7 +177,7 @@ tool:
 ### メールメッセージのバリエーション
 
 {% tabs local %}
-{% tab キャンペーン %}
+{% tab campaigns %}
 
 | コピーしました | 省略 |
 |---|---|
@@ -190,7 +190,7 @@ tool:
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
-{% tab キャンバス %}
+{% tab canvas %}
 
 | コピーしました | 省略 |
 |---|---|
@@ -208,7 +208,7 @@ tool:
 ### メール本文
 
 {% tabs local %}
-{% tab キャンペーン %}
+{% tab campaigns %}
 
 | コピーしました | 省略 |
 |---|---|
@@ -220,7 +220,7 @@ tool:
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
-{% tab キャンバス %}
+{% tab canvas %}
 
 | コピーしました | 省略 |
 |---|---|
@@ -237,7 +237,7 @@ tool:
 ### メールテンプレート
 
 {% tabs local %}
-{% tab キャンペーン %}
+{% tab campaigns %}
 
 | コピーしました | 省略 |
 |---|---|
@@ -249,7 +249,7 @@ tool:
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
-{% tab キャンバス %}
+{% tab canvas %}
 
 | コピーしました | 省略 |
 |---|---|
@@ -266,7 +266,7 @@ tool:
 ### コンテンツブロック
 
 {% tabs local %}
-{% tab キャンペーン %}
+{% tab campaigns %}
 
 | コピーしました | 省略 |
 |---|---|
@@ -277,7 +277,7 @@ tool:
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
-{% tab キャンバス %}
+{% tab canvas %}
 
 | コピーしました | 省略 |
 |---|---|
@@ -293,7 +293,7 @@ tool:
 ### SMSメッセージのバリエーション
 
 {% tabs local %}
-{% tab キャンペーン %}
+{% tab campaigns %}
 
 | コピーしました | 省略 |
 |---|---|
@@ -304,7 +304,7 @@ tool:
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
-{% tab キャンバス %}
+{% tab canvas %}
 
 | コピーしました | 省略 |
 |---|---|
