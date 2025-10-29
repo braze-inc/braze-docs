@@ -34,6 +34,7 @@ More advanced integration paths, including leveraging [Connected Content]({{site
 
 The most direct way to leverage images and videos directly from Cloudinary's DAM when setting up a Braze campaigns and canvasses is to pull the URL from Cloudinary’s Media Library’s Asset page.
 
+![A grid view of Cloudinary's Image Asset Library, with the top right of one of the images highlighted, showing a "Copy URL" tooltip]({% image_buster assets/img/cloudinary/one.png %})
 
 
 
@@ -138,6 +139,8 @@ Further customisation can be achieved by leveraging Liquid tags when developing 
 Output URL Example: 
 
 <img src="https://res.cloudinary.com/demo/image/upload/l_text:Arial_300:%20John%20Smith%20,co_white,b_rgb:00000080/fl_layer_apply,g_north_west,y_200/docs/white-church-europe-sea.jpg">
+
+![A white church with a blue roof overlooking the sea, in the top left of the image the words "John Smith" are imposed on an opage dark great rectangle]({% image_buster assets/img/cloudinary/two.png %})
 
 ```
 
