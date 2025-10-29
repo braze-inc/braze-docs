@@ -14,13 +14,13 @@ Le champ **Durée en vie** (TTL) vous permet de définir une durée personnalis�
 
 Le texte récapitulatif vous permet de définir un texte supplémentaire dans la vue de notification étendue. Il sert également de légende pour les notifications avec des images.
 
-![Un message Android avec le titre « Salutations d’Appboy ! », le message « C’est le corps du message ! Vous pouvez même ajouter des emojis." et texte du résumé "Voici le texte du résumé."]({% image_buster /assets/img_archive/summary_text.png %}){: style="max-width:65%;"}
+![Un message Android avec le titre "Ceci est le titre de la notification" et le texte résumé "Ceci est le texte résumé de la notification".]({% image_buster /assets/img/android/push/collapsed-android-notification.png %}){: style="max-width:65%;"}
 
-Le texte récapitulatif s’affiche sous le corps du message dans la vue étendue.
+Le texte récapitulatif s’affiche sous le corps du message dans la vue étendue. 
+
+![Un message Android avec le titre "Ceci est le titre de la notification" et le texte résumé "Ceci est le texte résumé de la notification".]({% image_buster /assets/img/android/push/expanded-android-notification.png %}){: style="max-width:65%;"}
 
 Pour les notifications push qui incluent des images, le texte du message s’affiche dans la vue réduite tandis que le texte récapitulatif s’affiche comme légende d’image lorsque la notification est étendue. 
-
-![Un envoi de messages Android avec le titre "Appboy !", le message "Ceci est le corps du message.." et le texte du résumé "et ceci est le texte du résumé."]({% image_buster /assets/img_archive/messagesummary.gif %}){: style="max-width:65%;"}
 
 ### URI personnalisés {#custom-uri}
 
