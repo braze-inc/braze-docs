@@ -404,6 +404,10 @@ erDiagram
 
 ### `IOSFOREGROUND_SHARED`
 
+{% alert important %}
+Dieses Ereignis wird vom [Swift SDK](https://github.com/braze-inc/braze-swift-sdk) nicht unterstützt und ist im [Obj-C SDK](https://github.com/Appboy/appboy-ios-sdk) veraltet.
+{% endalert %}
+
 ```json
 // USERS_MESSAGES_PUSHNOTIFICATION_IOSFOREGROUND_SHARED
 // When a user receives a push notification while the app is open.
