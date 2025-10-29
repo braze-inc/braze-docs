@@ -131,7 +131,7 @@ class GlideBrazeImageLoader : IBrazeImageLoader {
 
 ### Schritt 2: Einstellen des Delegaten für den Bildlader
 
-Das Braze SDK verwendet jeden angepassten Bildlader, der mit [`setBrazeImageLoader`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.images/-i-braze-image-loader/index.html) angegeben wird. Wir empfehlen, den angepassten Bildlader in einer angepassten Anwendungsunterklasse festzulegen:
+Das Braze SDK verwendet jeden angepassten Bildlader, der mit [`IBrazeImageLoader`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.images/-i-braze-image-loader/index.html) angegeben wird. Wir empfehlen, den angepassten Bildlader in einer angepassten Anwendungsunterklasse festzulegen:
 
 {% tabs %}
 {% tab JAVA %}
