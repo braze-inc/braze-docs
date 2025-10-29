@@ -2,7 +2,27 @@
 
 ## 기본 사용자 속성
 
-사용자에 대한 기본 속성을 설정하려면, Braze 인스턴스에서 `getCurrentUser()` 메서드를 호출하여 앱의 현재 사용자에 대한 참조를 가져옵니다. 그런 다음 사용자 속성을 설정하기 위해 메서드를 호출할 수 있습니다.
+### 미리 정의된 메서드
+
+Braze는 [`BrazeUser`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html) 클래스 내에서 다음 사용자 속성을 설정하기 위한 미리 정의된 메서드를 제공합니다. 메서드 사양은 [우리 KDoc](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html)을 참조하십시오.
+
+- First name
+- 성
+- 국가
+- 언어
+- 생년월일
+- 이메일
+- 성별
+- 출생지
+- Phone number
+
+{% alert note %}
+이름과 성, 국가, 출생지와 같은 모든 문자열 값은 255자로 제한됩니다.
+{% endalert %}
+
+### 기본 속성 설정
+
+사용자에 대한 기본 속성을 설정하려면 Braze 인스턴스에서 `getCurrentUser()` 메서드를 호출하여 앱의 현재 사용자에 대한 참조를 가져옵니다. 그런 다음 사용자 속성을 설정하기 위해 메서드를 호출할 수 있습니다.
 
 {% tabs %}
 {% tab 자바 %}
@@ -28,25 +48,37 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endtab %}
 {% endtabs %}
 
-Braze는 [BrazeUser 클래스](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html) 내에서 다음 사용자 속성을 설정하기 위해 미리 정의된 메서드를 제공합니다. 메서드 사양에 대해서는 [우리 KDoc](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html)를 참조하십시오.
+### 기본 속성 해제
 
-- 이름
-- 성
-- 국가
-- 언어
-- 생년월일
-- 이메일
-- 성별
-- 출생지
-- 전화번호
+사용자 속성을 해제하려면 관련 메서드에 `null`을 전달하십시오.
 
-{% alert note %}
-이름과 성, 국가, 출생지와 같은 모든 문자열 값은 255자로 제한됩니다.
-{% endalert %}
+{% tabs %}
+{% tab 자바 %}
+
+```java
+Braze.getInstance(context).getCurrentUser(new IValueCallback<BrazeUser>() {
+  @Override
+  public void onSuccess(BrazeUser brazeUser) {
+    brazeUser.setFirstName(null);
+  }
+}
+```
+
+{% endtab %}
+{% tab 코틀린 %}
+
+```kotlin
+Braze.getInstance(context).getCurrentUser { brazeUser ->
+  brazeUser.setFirstName(null)
+}
+```
+
+{% endtab %}
+{% endtabs %}
 
 ## 사용자 지정 사용자 속성
 
-기본 사용자 속성 외에도, Braze는 여러 가지 데이터 유형을 사용하여 커스텀 속성을 정의할 수 있도록 허용합니다. 각 속성의 세분화 옵션에 대한 자세한 정보는 [사용자 데이터 수집]({{site.baseurl}}/developer_guide/analytics)을 참조하십시오.
+기본 사용자 속성 외에도 Braze는 여러 가지 데이터 유형을 사용하여 커스텀 속성을 정의할 수 있도록 허용합니다. 각 속성의 세분화 옵션에 대한 자세한 내용은 [사용자 데이터 수집]({{site.baseurl}}/developer_guide/analytics)을 참조하십시오.
 
 ### 사용자 지정 속성 설정
 
@@ -296,9 +328,9 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endtab %}
 {% endtabs %}
 
-### 사용자 지정 속성 설정 해제하기
+### 커스텀 속성 해제
 
-사용자 지정 속성은 다음 방법을 사용하여 설정 해제할 수도 있습니다:
+커스텀 속성을 해제하려면 관련 속성 키를 `unsetCustomUserAttribute` 메서드에 전달하십시오.
 
 {% tabs %}
 {% tab 자바 %}
@@ -324,9 +356,46 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endtab %}
 {% endtabs %}
 
-### REST API 사용하기
+### 커스텀 속성 중첩
 
-사용자 속성을 설정하거나 해제하기 위해 우리의 REST API를 사용할 수도 있습니다. 자세한 정보는 [사용자 데이터 엔드포인트]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data)를 참조하십시오.
+커스텀 속성 내에서 속성을 중첩할 수도 있습니다. 다음 예제에서는 중첩 속성이 있는 `favorite_book` 객체가 사용자 프로필의 커스텀 속성으로 설정됩니다. 자세한 내용은 [중첩 커스텀 속성]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support)을 참조하십시오.
+
+{% tabs %}
+{% tab 자바 %}
+```java
+JSONObject favoriteBook = new JSONObject();
+try {
+  favoriteBook.put("title", "The Hobbit");
+  favoriteBook.put("author", "J.R.R. Tolkien");
+  favoriteBook.put("publishing_date", "1937");
+} catch (JSONException e) {
+  e.printStackTrace();
+}
+
+braze.getCurrentUser(user -> {
+  user.setCustomUserAttribute("favorite_book", favoriteBook);
+  return null;
+});
+```
+{% endtab %}
+
+{% tab 코틀린 %}
+```kotlin
+val favoriteBook = JSONObject()
+  .put("title", "The Hobbit")
+  .put("author", "J.R.R. Tolkien")
+  .put("publishing_date", "1937")
+
+braze.getCurrentUser { user ->
+  user.setCustomUserAttribute("favorite_book", favoriteBook)
+}
+```
+{% endtab %}
+{% endtabs %}
+
+### REST API 사용
+
+REST API를 사용하여 사용자 속성을 설정하거나 해제할 수도 있습니다. 자세한 정보는 [사용자 데이터 엔드포인트]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data)를 참조하십시오.
 
 ## 사용자 구독 설정
 
