@@ -37,9 +37,3 @@ guide_featured_list:
     link: /docs/user_guide/engagement_tools/canvas/troubleshooting/
     image: /assets/img/braze_icons/annotation-question.svg
 ---
-
-{% alert important %}
-2023 年 2 月 28 日以降、従来のキャンバスエクスペリエンスを使用したキャンバスの作成や複製ができなくなりました。Braze では、元のキャンバスエクスペリエンスを使用しているお客様に、キャンバスフローへの移行をお勧めしています。これは、キャンバスの構築と管理をより良く行う目的で改良された編集エクスペリエンスです。「[キャンバスからキャンバスフローへの複製]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/)」を参照してください。
-{% endalert %}
-
-<br>

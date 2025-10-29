@@ -1,5 +1,5 @@
 ---
-nav_title: Apple Private Relay へのメール送信
+nav_title: Apple Private Relayにメールを送信する
 article_title: Apple Private Relay へのメール送信
 alias: /email_relay/
 page_order: 0
@@ -22,7 +22,7 @@ Apple のプライベートメールリレーにメールを送信するには�
 SendGrid をメールプロバイダーとして使用している場合、DNS を変更せずに Apple にメールを送信することができます。 
 
 1. [Apple Developer Portalにログインします](https://developer.apple.com/)
-2. **Certificates, Identifiers & Profiles** ページに移動します。
+2. **証明書、識別子& プロファイルの**ページにアクセスする。
 3. [**Services**] > [**Sign in with Apple for Email Communication**] を選択します。
 4. [**Email Sources**] セクションで、ドメインとサブドメインを追加します。
 - アドレスは、`bounces+<YOUR_UID>@<YOUR_WHITELABELED_SUBDOMAIN_AND_DOMAIN>` (例: `bounces+1234567@braze.online.docs.com`) の形式にする必要があります。 

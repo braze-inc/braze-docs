@@ -30,6 +30,9 @@ guide_featured_list:
   - name: 配信タイプ
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/delivery_types/
     image: /assets/img/braze_icons/beaker-02.svg
+  - name: エディターブロック
+    link: /docs/dnd/editor_blocks/
+    image: /assets/img/braze_icons/align-left.svg
   - name: ローカライゼーション
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/localization/
     image: /assets/img/braze_icons/globe-02.svg

@@ -1,5 +1,5 @@
 ---
-nav_title: "高度なプッシュ・オプション"
+nav_title: "高度なプッシュオプション"
 article_title: 高度なプッシュ・オプション
 page_order: 5
 layout: dev_guide
