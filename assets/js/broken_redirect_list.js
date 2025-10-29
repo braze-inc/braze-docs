@@ -2990,4 +2990,7 @@ validurls['/docs/editor_blocks_dnd_iam/'] = '/docs/user_guide/engagement_tools/m
 validurls['/docs/partners/additional_channels_and_extensions/calendar/rokt_calendar/'] = '/docs/partners/additional_channels_and_extensions/';
 validurls['/docs/partners/rokt_calendar/'] = '/docs/partners/additional_channels_and_extensions/';
 
+validurls['/docs/help/help_articles/push/push_token_migration/'] = '/docs/api/objects_filters/user_attributes_object/#migrating-push-tokens';
+validurls['/docs/api/objects_filters/context_object/'] = '/docs/user_guide/engagement_tools/canvas/canvas_components/context/';
+
 // validurls['OLD'] = 'NEW';
