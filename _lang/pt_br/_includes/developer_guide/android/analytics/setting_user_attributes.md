@@ -2,7 +2,27 @@
 
 ## Atribuições padrão do usuário
 
-Para definir uma atribuição padrão para um usuário, chame o método `getCurrentUser()` em sua instância do Braze para obter uma referência ao usuário atual do seu app. Em seguida, é possível chamar métodos para definir uma atribuição de usuário.
+### Métodos predefinidos
+
+O Braze fornece métodos predefinidos para definir os seguintes atributos de usuário dentro da classe [`BrazeUser`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html). Para especificações de método, consulte [nosso KDoc](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html).
+
+- Nome
+- Sobrenome
+- País
+- Idioma
+- Data de nascimento
+- E-mail
+- Gênero
+- Cidade natal
+- Número de telefone
+
+{% alert note %}
+Todos os valores de string, como nome, sobrenome, país e cidade natal, estão limitados a 255 caracteres.
+{% endalert %}
+
+### Definindo atributos padrão
+
+Para definir um atributo padrão para um usuário, chame o método `getCurrentUser()` na sua instância do Braze para obter uma referência ao usuário atual do seu app. Então você pode chamar métodos para definir um atributo de usuário.
 
 {% tabs %}
 {% tab JAVA %}
@@ -28,25 +48,37 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endtab %}
 {% endtabs %}
 
-O Braze fornece métodos predefinidos para configurar as seguintes atribuições de usuário dentro da [classe BrazeUser](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html). Para obter as especificações do método, consulte [nosso KDoc](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html).
+### Removendo atributos padrão
 
-- Nome
-- Sobrenome
-- País
-- Idioma
-- Data de nascimento
-- E-mail
-- Gênero
-- Cidade natal
-- Número de telefone
+Para remover um atributo de usuário, passe `null` para o método relevante.
 
-{% alert note %}
-Todos os valores de string, como nome, sobrenome, país e cidade natal, estão limitados a 255 caracteres.
-{% endalert %}
+{% tabs %}
+{% tab JAVA %}
+
+```java
+Braze.getInstance(context).getCurrentUser(new IValueCallback<BrazeUser>() {
+  @Override
+  public void onSuccess(BrazeUser brazeUser) {
+    brazeUser.setFirstName(null);
+  }
+}
+```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+Braze.getInstance(context).getCurrentUser { brazeUser ->
+  brazeUser.setFirstName(null)
+}
+```
+
+{% endtab %}
+{% endtabs %}
 
 ## Atributos personalizados do usuário
 
-Além dos atributos padrão de usuários, o Braze também permite definir atributos personalizados usando vários tipos de dados diferentes. Para saber mais sobre a opção de segmentação de cada atributo, consulte [Coleta de dados de usuários]({{site.baseurl}}/developer_guide/analytics).
+Além dos atributos de usuário padrão, o Braze também permite que você defina atributos personalizados usando vários tipos de dados diferentes. Para mais informações sobre a opção de segmentação de cada atributo, veja [coleta de dados de usuários]({{site.baseurl}}/developer_guide/analytics).
 
 ### Definindo atributos personalizados
 
@@ -296,9 +328,9 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endtab %}
 {% endtabs %}
 
-### Desativação de um atributo personalizado
+### Removendo atributos personalizados
 
-Os atributos personalizados também podem ser desmarcados usando o seguinte método:
+Para remover um atributo personalizado, passe a chave do atributo relevante para o método `unsetCustomUserAttribute`.
 
 {% tabs %}
 {% tab JAVA %}
@@ -324,11 +356,48 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endtab %}
 {% endtabs %}
 
+### Aninhando atributos personalizados
+
+Você também pode aninhar propriedades dentro de atributos personalizados. No exemplo a seguir, um objeto `favorite_book` com propriedades aninhadas é definido como um atributo personalizado no perfil do usuário. Para mais detalhes, consulte [Nested Custom Attributes]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support).
+
+{% tabs %}
+{% tab JAVA %}
+```java
+JSONObject favoriteBook = new JSONObject();
+try {
+  favoriteBook.put("title", "The Hobbit");
+  favoriteBook.put("author", "J.R.R. Tolkien");
+  favoriteBook.put("publishing_date", "1937");
+} catch (JSONException e) {
+  e.printStackTrace();
+}
+
+braze.getCurrentUser(user -> {
+  user.setCustomUserAttribute("favorite_book", favoriteBook);
+  return null;
+});
+```
+{% endtab %}
+
+{% tab KOTLIN %}
+```kotlin
+val favoriteBook = JSONObject()
+  .put("title", "The Hobbit")
+  .put("author", "J.R.R. Tolkien")
+  .put("publishing_date", "1937")
+
+braze.getCurrentUser { user ->
+  user.setCustomUserAttribute("favorite_book", favoriteBook)
+}
+```
+{% endtab %}
+{% endtabs %}
+
 ### Usando a API REST
 
-Também é possível usar nossa API REST para definir ou cancelar as atribuições do usuário. Para saber mais, consulte [Pontos de extremidade de dados de usuários]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data).
+Você também pode usar nossa API REST para definir ou remover atributos de usuários. Para saber mais, consulte [User Data Endpoints]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data).
 
-## Configuração de inscrições de usuários
+## Definindo assinaturas de usuários
 
 Para configurar uma inscrição para seus usuários (envio de e-mail ou push), chame as funções `setEmailNotificationSubscriptionType()` ou `setPushNotificationSubscriptionType()`, respectivamente. Ambas as funções usam o tipo de enum `NotificationSubscriptionType` como argumentos. Esse tipo tem três estados diferentes:
 
