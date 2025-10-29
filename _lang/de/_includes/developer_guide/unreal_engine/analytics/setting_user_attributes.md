@@ -1,14 +1,6 @@
 ## Standard Attribute für Nutzer:innen
 
-Um ein Standardattribut für einen Nutzer festzulegen, rufen Sie die Methode `GetCurrentUser()` für das gemeinsame Objekt `UBrazeUser` auf, um einen Verweis auf den aktuellen Nutzer:in Ihrer App zu erhalten. Dann können Sie Methoden aufrufen, um ein Nutzer:in-Attribut zu setzen.
-
-```cpp
-UBraze->GetCurrentUser([](UBrazeUser* BrazeUser) {
-    if (BrazeUser) {
-        BrazeUser->SetFirstName(TEXT("Alex"));
-    }
-});
-```
+### Unterstützte Attribute
 
 Die folgenden Attribute sollten für das Objekt `UBrazeUser` festgelegt werden:
 
@@ -21,6 +13,18 @@ Die folgenden Attribute sollten für das Objekt `UBrazeUser` festgelegt werden:
 - `SetHomeCity`
 - `SetPhoneNumber`
 - `SetGender`
+
+### Einstellung von Standardattributen
+
+Um ein Standardattribut für einen Nutzer festzulegen, rufen Sie die Methode `GetCurrentUser()` für das gemeinsame Objekt `UBrazeUser` auf, um einen Verweis auf den aktuellen Nutzer:in Ihrer App zu erhalten. Dann können Sie Methoden aufrufen, um ein Nutzer:in-Attribut zu setzen.
+
+```cpp
+UBraze->GetCurrentUser([](UBrazeUser* BrazeUser) {
+    if (BrazeUser) {
+        BrazeUser->SetFirstName(TEXT("Alex"));
+    }
+});
+```
 
 ## Angepasste Attribute für Nutzer:innen
 
