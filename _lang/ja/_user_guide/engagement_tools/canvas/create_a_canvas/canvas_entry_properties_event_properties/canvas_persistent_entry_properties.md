@@ -10,9 +10,11 @@ page_order: 5
 
 # 永続的なエントリプロパティ
 
-> キャンバスがカスタムイベント、購入、または API 呼び出しによってトリガーされる際、キャンバスワークフローの各ステップでのパーソナライゼーションに、API 呼び出し、カスタムイベント、購入イベントからのメタデータを使用することができます。 
+> キャンバスがカスタムイベント、購入、または API 呼び出しによってトリガーされる際、キャンバスワークフローの各ステップでのパーソナライゼーションに、API 呼び出し、カスタムイベント、購入イベントからのメタデータを使用することができます。これらのプロパティを使えば、よりキュレーションされたメッセージを送ることができる。
 
-この機能がリリースされる前は、キャンバスの最初のステップでのみエントリプロパティを使用できました。キャンバスジャーニー全体でエントリープロパティを使用できるようになり、よりキュレートされたメッセージを顧客に送信し、高度に洗練されたエンドユーザーエクスペリエンスを作成することが可能になりました。
+{% alert important %}
+永続エントリー・プロパティは、オリジナルのキャンバス・エディタの成果物であるため、歴史的な参照のために残っている用語への非推奨の参照がある。現在の更新キャンバス・エディターについては、[キャンバス・エントリー・プロパティとイベント・プロパティを]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties)参照のこと。
+{% endalert %}
 
 ## エントリプロパティを使用する
 
@@ -77,15 +79,15 @@ url -X POST \
     }' \
 ```
  
-このリクエストでは、「food allergies」のグローバル値は「none」です。Customer_123 の場合、値は「dairy」です。Liquid スニペットの {%raw%}`{{canvas_entry_properties.${food_allergies}}}`{%endraw%} を含むこのキャンバスのメッセージでは、「Customer_123」に「dairy」、他のすべてのユーザーには「none」がテンプレート化されます。 
+このリクエストでは、「food allergies」のグローバル値は「none」です。Customer_123, 、値は "dairy "である。リキッドスニペット{%raw%}`{{canvas_entry_properties.${food_allergies}}}`{%endraw%} を含むこのキャンバスのメッセージは、Customer_123 は "dairy"、それ以外は "none "でテンプレートされる。 
 
 ## ユースケース
 
 ユーザーが e コマースサイトでアイテムをブラウズした後に、そのアイテムをカートに追加しないときにトリガーされるキャンバスがある場合、キャンバスの最初のステップを、アイテムの購入に興味があるかどうかを尋ねるプッシュ通知にすることができます。製品名は、{% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %} を使用して参照できます。
 
-![]({% image_buster /assets/img/persistent_entry_properties/PEP1.png %}){: style="border:0;margin-left:15px;"}
+\![]({% image_buster /assets/img/persistent_entry_properties/PEP1.png %}){: style="border:0;margin-left:15px;"}
 
 2 番目のステップでは、ユーザーがカートにアイテムを追加したにもかかわらず、まだ購入していない場合、別のプッシュ通知を送信してチェックアウトするように促すことができます。`product_name` エントリプロパティは、引き続き {% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %} を使用して参照できます。
 
-![]({% image_buster /assets/img/persistent_entry_properties/PEP12.png %}){: style="border:0;margin-left:15px;"}
+\![]({% image_buster /assets/img/persistent_entry_properties/PEP12.png %}){: style="border:0;margin-left:15px;"}
 
