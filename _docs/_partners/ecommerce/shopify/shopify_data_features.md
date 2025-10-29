@@ -787,7 +787,12 @@ The Shopify integration currently doesn't support populating the Braze [purchase
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {% alert important %}
-A known issue with Shopify's latest API version is that the `shopify_last_order_name` field will populate without values. We will update this page when the issue is updated.
+A known issue with Shopify's latest API version prevents the `shopify_last_order_name` user attribute from correctly populating. The impact on users is as follows:<br><br>
+
+- **Existing users:** For any user who already has a value for `shopify_last_order_name`, that value will persist. However, it will not be updated by any subsequent orders.
+- **New users:** For any new users, field will not populate and will remain empty or null.
+
+We will update this page when Shopify resolves this issue.
 {% endalert %}
 
 ### Liquid personalization
