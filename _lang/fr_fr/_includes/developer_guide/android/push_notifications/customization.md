@@ -79,58 +79,9 @@ Avec les boutons d’action de notification, les intentions `BRAZE_PUSH_INTENT_N
 Créez votre listener de notification push dans `Application.onCreate` pour vous assurer que votre listener est déclenché après qu'un utilisateur final ait tapé une notification alors que votre application est dans un état terminé.
 {% endalert %}
 
-## Personnalisation des polices de caractères
-
-### Étape 1 : Créer une famille de polices
-
-Voici un exemple de définition d'une famille de polices personnalisée à l'aide du [guide des familles de polices](https://developer.android.com/guide/topics/ui/look-and-feel/fonts-in-xml.html#font-family). Pour cet exemple, nous utilisons la [police Bungee Shade](https://fonts.google.com/specimen/Bungee+Shade).
-
-```html
-<?xml version="1.0" encoding="utf-8"?>
-<font-family xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:app="http://schemas.android.com/apk/res-auto">
-
-  <!--Note: You must declare both sets of attributes
-      so that your fonts load on devices running Android 8.0 (API level 26) or lower.
-      See https://developer.android.com/guide/topics/ui/look-and-feel/fonts-in-xml.html -->
-
-  <font android:fontStyle="normal"
-        android:fontWeight="400"
-        android:font="@font/bungeeshade"
-
-        app:fontStyle="normal"
-        app:fontWeight="400"
-        app:font="@font/bungeeshade"/>
-</font-family>
-```
-
-Après avoir stocké la définition de la famille de polices dans `/res/font/bungee_font_family.xml`, nous pouvons nous y référer dans le XML en tant que `@font/bungee_font_family`.
-
-### Étape 2 : Référencez votre famille de polices
-
-Maintenant que la famille de polices est créée, vous pouvez substituer le style Braze par défaut dans votre `styles.xml` pour inclure des références à la famille de polices.
-
-Par exemple, la substitution de styles suivante utiliserait la famille de polices `bungee` pour tous les messages in-app Braze.
-
-```html
-<style name="Braze.InAppMessage">
-  <item name="android:fontFamily">@font/bungee_font_family</item>
-  <item name="fontFamily">@font/bungee_font_family</item>
-</style>
-
-<style name="Braze.Cards">
-  <item name="android:fontFamily">@font/another_custom_font_family</item>
-  <item name="fontFamily">@font/another_custom_font_family</item>
-</style>
-```
-
-{% alert warning %}
-Les deux attributs de style `android:fontFamily` et `fontFamily` doivent être définis pour maintenir la compatibilité entre toutes les versions de SDK.
-{% endalert %}
-
 ## Personnalisation de l'affichage des notifications {#customization-display}
 
-### Étape 1 : Créer votre fabrique de notification personnalisée
+### Étape 1 : Créer votre fabrique de notification personnalisée
 
 Dans certains scénarios, vous pourriez désirer personnaliser les notifications push d’une manière qui pourrait être encombrante ou non disponible côté serveur. Pour vous donner un contrôle complet de l'affichage des notifications, nous avons ajouté la possibilité de définir vos propres objets de notification. [`IBrazeNotificationFactory`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze-notification-factory/index.html) pour créer des objets de notification qui seront affichés par Braze.
 
@@ -224,9 +175,9 @@ setCustomBrazeNotificationFactory(null)
 {% endtab %}
 {% endtabs %}
 
-## Texte du multiplicateur de rendu
+## Rendu d'un texte multicolore
 
-Dans la version 3.1.1 du SDK Braze, il est possible d'envoyer du HTML à un appareil pour rendre le texte multicolore dans les notifications push.
+Dans le SDK Braze version 3.1.1, du HTML peut être envoyé à un appareil pour afficher du texte multicolore dans les notifications push.
 
 ![Un envoi de messages Android "Multicolor Push test message" où les lettres sont de différentes couleurs, en italique et avec une couleur de fond.]({% image_buster /assets/img/multicolor_android_push.png %}){: style="max-width:40%;"}
 
@@ -387,7 +338,7 @@ Vous pouvez présenter une image plus grande dans votre notification push Androi
 
 ### Compatibilité
 
-Bien que vous puissiez envoyer des images en ligne à n'importe quel appareil, les appareils et les SDK qui ne respectent pas les versions minimales afficheront une image standard à la place. Pour que les images en ligne s'affichent correctement, le SDK Android Braze v10.0.0+ et un appareil fonctionnant sous Android M+ sont nécessaires.
+Bien que vous puissiez envoyer des images en ligne à n'importe quel appareil, les appareils et les SDK qui ne respectent pas les versions minimales afficheront une image standard à la place. Pour que les images en ligne s'affichent correctement, le SDK Android Braze v10.0.0+ et un appareil fonctionnant sous Android M+ sont nécessaires. Le SDK doit également être activé pour que l'image soit rendue.
 
 {% alert note %}
 Les appareils fonctionnant sous Android 12 s’afficheront différemment en raison des modifications dans les styles personnalisés de notification push.
@@ -421,13 +372,13 @@ Le champ **Durée en vie** (TTL) vous permet de définir une durée personnalis�
 
 Le texte récapitulatif vous permet de définir un texte supplémentaire dans la vue de notification étendue. Il sert également de légende pour les notifications avec des images.
 
-![Un message Android avec le titre « Salutations d’Appboy ! », le message « C’est le corps du message ! Vous pouvez même ajouter des emojis." et texte du résumé "Voici le texte du résumé."]({% image_buster /assets/img_archive/summary_text.png %}){: style="max-width:65%;"}
+![Un message Android avec le titre "Ceci est le titre de la notification" et le texte résumé "Ceci est le texte résumé de la notification".]({% image_buster /assets/img/android/push/collapsed-android-notification.png %}){: style="max-width:65%;"}
 
-Le texte récapitulatif s’affiche sous le corps du message dans la vue étendue.
+Le texte récapitulatif s’affiche sous le corps du message dans la vue étendue. 
+
+![Un message Android avec le titre "Ceci est le titre de la notification" et le texte résumé "Ceci est le texte résumé de la notification".]({% image_buster /assets/img/android/push/expanded-android-notification.png %}){: style="max-width:65%;"}
 
 Pour les notifications push qui incluent des images, le texte du message s’affiche dans la vue réduite tandis que le texte récapitulatif s’affiche comme légende d’image lorsque la notification est étendue. 
-
-![Un envoi de messages Android avec le titre "Appboy !", le message "Ceci est le corps du message.." et le texte du résumé "et ceci est le texte du résumé."]({% image_buster /assets/img_archive/messagesummary.gif %}){: style="max-width:65%;"}
 
 ### URI personnalisés {#custom-uri}
 
