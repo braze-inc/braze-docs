@@ -5,13 +5,13 @@
 ## Types de messages
 
 {% tabs %}
-{% multi_lang_include developer_guide/_shared/push_notifications/message_types/android.md %}
-{% multi_lang_include developer_guide/_shared/push_notifications/message_types/swift.md %}
+{% multi_lang_include developer_guide/_shared/in_app_messages/message_types/android.md %}
+{% multi_lang_include developer_guide/_shared/in_app_messages/message_types/swift.md %}
 {% endtabs %}
 
 ## Activation des messages in-app
 
-### Étape 1 : Ajouter un observateur
+### Étape 1 : Ajouter un observateur
 
 Pour traiter les messages in-app, vous pouvez ajouter un observateur à `BrazeTask.BrazeInAppMessage` :
 
