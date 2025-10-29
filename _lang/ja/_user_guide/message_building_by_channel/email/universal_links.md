@@ -75,7 +75,7 @@ Android アプリリンクでは、他の Web URL とは別にドメインから
 #### ステップ 1a: アプリ {#step-1a} の登録
 
 1. developer.apple.comを実行してログインしてください。
-2. **証明書、識別子、プロファイル**をクリックします。
+2. **Certificates, Identifiers& Profiles** をクリックする。
 3. **識別子**をクリックします。
 4. アプリ識別子がまだ登録されていない場合は、+ をクリックして作成します。
    a. **名前**を入力してください。これはあなたが望むものなら何でもかまいません。
@@ -87,7 +87,7 @@ Android アプリリンクでは、他の Web URL とは別にドメインから
 2. [**関連ドメイン**] を選択します。
 3. [**保存**] をクリックします。
 
-![]({% image_buster /assets/img_archive/universal_links_1b.png %}){: style="max-width:75%;"}
+\![]({% image_buster /assets/img_archive/universal_links_1b.png %}){: style="max-width:75%;"}
 
 #### ステップ1c: Xcodeプロジェクトで関連ドメインをオンにする {#step-1c}
 
@@ -107,7 +107,7 @@ Android アプリリンクでは、他の Web URL とは別にドメインから
 
 [ドメイン] セクションで、適切なドメインタグを追加します。`applinks:` をプレフィックスとして使用する必要があります。この場合、`applinks:yourdomain.com`を追加したことがわかります。
 
-![]({% image_buster /assets/img_archive/universal_links_1d.png %})
+\![]({% image_buster /assets/img_archive/universal_links_1d.png %})
 
 #### ステップ1e: ビルド時に権利ファイルが含まれていることを確認してください
 
@@ -200,9 +200,9 @@ Android アプリリンクでは、他の Web URL とは別にドメインから
 
 ### ステップ 3:アプリのマニフェストファイルを更新してください
 
-`AndroidManifest.xml` ファイルで、アプリライケーション要素内にメタデータ要素を追加します。メタデータ要素には、「asset_statements」の `android:name` 属性と、Web サイトの URL が含まれる文字列配列を持つリソースファイルを指す `android:resource` 属性が必要です。
+`AndroidManifest.xml` ファイルで、アプリライケーション要素内にメタデータ要素を追加します。meta-data要素には、"asset_statements" の`android:name` 属性と、WebサイトのURLを含む文字列配列のリソース・ファイルをポイントする`android:resource` 属性を指定する。
 
-### ステップ 4:アプリをディープリンクに対応させる準備をする
+### ステップ 4: アプリをディープリンクに対応させる準備をする
 
 Androidアプリでは、受信したディープリンクを処理する必要があります。これを行うには、アクティビティを開始したインテントを取得し、そこからデータを抽出します。
 
@@ -311,7 +311,7 @@ HTMLエディターではメールメッセージに、ドラッグ＆ドロッ�
 - **名前:** `data-msys-clicktrack`
 - **値:** `0`
 
-![テキストリンクのカスタム属性。]({% image_buster /assets/img/text_click_tracking_off.png %}){: style="max-width:60%;"}
+\![テキストリンクのカスタム属性。]({% image_buster /assets/img/text_click_tracking_off.png %}){: style="max-width:60%;"}
 
 ##### ボタンまたは画像のカスタム属性
 
@@ -331,7 +331,7 @@ HTMLエディターではメールメッセージに、ドラッグ＆ドロッ�
 - **値:** `0`
 - **タイプ:**リンク
 
-![ボタンのカスタム属性。]({% image_buster /assets/img/button_click_tracking_off.png %}){: style="max-width:60%;"}
+\![ボタンのカスタム属性。]({% image_buster /assets/img/button_click_tracking_off.png %}){: style="max-width:60%;"}
 
 ### クリックトラッキングによるユニバーサルリンクのトラブルシューティング
 
