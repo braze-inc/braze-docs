@@ -305,3 +305,26 @@ Wenn Sie einen zusätzlichen Firebase Messaging Service (FMS) verwenden möchten
 Wenn Sie Expo Application Services (EAS) verwenden und `enableBrazeIosRichPush` oder `enableBrazeIosPushStories` aktiviert haben, müssen Sie die entsprechenden Bundle-Bezeichner für jede App-Erweiterung in Ihrem Projekt deklarieren. Es gibt mehrere Möglichkeiten für diesen Schritt. Diese hängen von der Konfiguration Ihres Projekt für die Verwaltung der Codesignierung mit EAS ab.
 
 Eine Möglichkeit besteht darin, die Konfiguration `appExtensions` in der Datei `app.json` zu verwenden. Weitere Informationen hierzu finden Sie in der [Expo-Dokumentation zu App-Erweiterungen](https://docs.expo.dev/build-reference/app-extensions/). Alternativ können Sie die Einstellung `multitarget` in der Datei `credentials.json` einrichten. Weitere Informationen hierzu finden Sie in der [Expo-Dokumentation zu lokalen Zugangsdaten](https://docs.expo.dev/app-signing/local-credentials/#multi-target-project).
+
+### Fehlersuche
+
+Dies sind allgemeine Fehlerbehebungen für Push-Benachrichtigungen, die mit dem Braze React Native SDK und dem Expo-Plugin integriert sind.
+
+#### Push-Benachrichtigungen funktionieren nicht mehr {#troubleshooting-stopped-working}
+
+Wenn Push-Benachrichtigungen über das Expo-Plugin nicht mehr funktionieren:
+
+1. Vergewissern Sie sich, dass das Braze SDK noch Tracking-Sitzungen durchführt.
+2. Prüfen Sie, ob das SDK nicht durch einen expliziten oder impliziten Aufruf von `wipeData` deaktiviert wurde.
+3. Überprüfen Sie alle kürzlich durchgeführten Upgrades für Expo oder die zugehörigen Bibliotheken, da es zu Konflikten mit Ihrer Braze-Konfiguration kommen kann.
+4. Überprüfen Sie die kürzlich hinzugefügten Projektabhängigkeiten und kontrollieren Sie, ob sie Ihre bestehenden Delegatenmethoden für Push-Benachrichtigungen manuell überschreiben.
+
+{% alert tip %}
+Für iOS-Integrationen können Sie auch auf unser [Tutorial zur Einrichtung von Push-Benachrichtigungen](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b1-standard-push-notifications) referenzieren, um mögliche Konflikte mit Ihren Projektabhängigkeiten zu erkennen.
+{% endalert %}
+
+#### Gerätetoken lässt sich nicht bei Braze registrieren {#troubleshooting-token-registration}
+
+Wenn sich Ihr Gerät Token nicht bei Braze registrieren lässt, lesen Sie zunächst [Push-Benachrichtigungen funktionieren nicht mehr](#troubleshooting-stopped-working).
+
+Wenn Ihr Problem weiterhin besteht, kann es sein, dass eine andere Abhängigkeit Ihre Konfiguration der Push-Benachrichtigung von Braze beeinträchtigt. Sie können versuchen, es zu entfernen oder stattdessen `Braze.registerPushToken` manuell aufrufen.
