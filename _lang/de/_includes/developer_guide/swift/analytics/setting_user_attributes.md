@@ -2,7 +2,23 @@
 
 ## Standard-Nutzerattribute
 
-Um Nutzer:innen-Attribute festzulegen, müssen Sie das entsprechende Feld auf dem gemeinsamen Objekt `ABKUser` einstellen. Im Folgenden sehen Sie ein Beispiel für die Einstellung des Attributs Vorname:
+### Unterstützte Attribute
+
+Die folgenden Attribute sollten für das Objekt `Braze.User` festgelegt werden:
+
+- `firstName`
+- `lastName`
+- `email`
+- `dateOfBirth`
+- `country`
+- `language`
+- `homeCity`
+- `phone`
+- `gender`
+
+### Einstellung von Standardattributen
+
+Um ein Standardattribut für Nutzer:innen festzulegen, stellen Sie das entsprechende Feld auf dem gemeinsamen Objekt `Braze.User` ein. Im Folgenden sehen Sie ein Beispiel für die Einstellung des Attributs Vorname:
 
 {% tabs %}
 {% tab schnell %}
@@ -21,17 +37,26 @@ AppDelegate.braze?.user.set(firstName: "Alex")
 {% endtab %}
 {% endtabs %}
 
-Die folgenden Attribute sollten für das Objekt `Braze.User` festgelegt werden:
+### Standardattribute zurücksetzen
 
-- `firstName`
-- `lastName`
-- `email`
-- `dateOfBirth`
-- `country`
-- `language`
-- `homeCity`
-- `phone`
-- `gender`
+Um ein Standardattribut für Nutzer:innen zu deaktivieren, übergeben Sie `nil` an die entsprechende Methode.
+
+{% tabs %}
+{% tab schnell %}
+
+```swift
+AppDelegate.braze?.user.set(firstName: nil)
+```
+
+{% endtab %}
+{% tab objektiv-c %}
+
+```objc
+[AppDelegate.braze.user setFirstName:nil];
+```
+
+{% endtab %}
+{% endtabs %}
 
 ## Angepasste Nutzerattribute
 
@@ -188,12 +213,11 @@ AppDelegate.braze?.user.incrementCustomUserAttribute(key: "your_attribute_key", 
 {% endtab %}
 {% endtabs %}
 
-### Zurücksetzen eines benutzerdefinierten Attributs
-
-Benutzerdefinierte Attribute können auch mit der folgenden Methode deaktiviert werden:
+### Angepasste Attribute nicht anpassen
 
 {% tabs %}
 {% tab schnell %}
+Um ein angepasstes Attribut wieder freizugeben, übergeben Sie den entsprechenden Attributschlüssel an die Methode `unsetCustomAttribute`.
 
 ```swift
 AppDelegate.braze?.user.unsetCustomAttribute(key: "your_attribute_key")
@@ -201,11 +225,42 @@ AppDelegate.braze?.user.unsetCustomAttribute(key: "your_attribute_key")
 
 {% endtab %}
 {% tab objektiv-c %}
+Um ein angepasstes Attribut wieder freizugeben, übergeben Sie den entsprechenden Attributschlüssel an die Methode `unsetCustomAttributeWithKey`.
 
 ```objc
 [AppDelegate.braze.user unsetCustomAttributeWithKey:@"your_attribute_key"];
 ```
 
+{% endtab %}
+{% endtabs %}
+
+### Verschachtelte angepasste Attribute
+
+Sie können auch Eigenschaften innerhalb angepasster Attribute verschachteln. Im folgenden Beispiel wird ein `favorite_book` Objekt mit verschachtelten Eigenschaften als angepasstes Attribut auf das Nutzerprofil gesetzt. Weitere Einzelheiten finden Sie unter [Verschachtelte angepasste Attribute]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support).
+
+{% tabs %}
+{% tab schnell %}
+```swift
+let favoriteBook: [String: Any?] = [
+  "title": "The Hobbit",
+  "author": "J.R.R. Tolkien",
+  "publishing_date": "1937"
+]
+
+braze.user.setCustomAttribute(key: "favorite_book", dictionary: favoriteBook)
+```
+{% endtab %}
+
+{% tab objektiv-c %}
+```objc
+NSDictionary *favoriteBook = @{
+  @"title": @"The Hobbit",
+  @"author": @"J.R.R. Tolkien",
+  @"publishing_date": @"1937"
+};
+
+[AppDelegate.braze.user setCustomAttributeWithKey:@"favorite_book" dictionary:favoriteBook];
+```
 {% endtab %}
 {% endtabs %}
 
