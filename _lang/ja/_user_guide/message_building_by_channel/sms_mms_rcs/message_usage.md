@@ -8,4 +8,4 @@ description: "このリファレンス記事では、SMS、RCS、およびWhatsA
 tool: Dashboard
 ---
 
-{% multi_lang_include message_usage.md %}
+{% multi_lang_include analytics/message_usage.md %}
