@@ -3,7 +3,7 @@ nav_title: "Options de notification"
 article_title: Options de notification Android
 page_order: 2
 page_type: reference
-description: "Le présent article de référence couvre plusieurs options de notification Android et comment les utiliser au mieux dans les campagnes Braze."
+description: "Cet article de référence traite de plusieurs options de notification Android et de la manière de les utiliser au mieux dans le cadre des campagnes Braze."
 
 platform: Android
 channel:
@@ -21,18 +21,18 @@ Lorsque vous [composez votre message de notification push]({{site.baseurl}}/user
 
 ## Groupes de notification
 
-Si vous souhaitez catégoriser vos messages et les regrouper dans la zone de notification de votre utilisateur, vous pouvez utiliser la fonction de canaux de notification d’Android via Braze.
+Si vous souhaitez catégoriser vos messages et les regrouper dans la barre de notification de votre utilisateur, vous pouvez utiliser la fonctionnalité Canaux de notification d'Android par l'intermédiaire de Braze.
 
 Tout d'abord, créez votre campagne push Android, puis regardez en haut de l'onglet **Composer** pour le menu déroulant **Canal de notification.** 
 
-![]({% image_buster /assets/img_archive/notification_channel_dropdown.png %}){: style="max-width:60%;"}
+\![]({% image_buster /assets/img_archive/notification_channel_dropdown.png %}){: style="max-width:60%;"}
 
-Sélectionnez votre canal de notification dans la liste déroulante. Vous devez également sélectionner un canal de secours en cas de dysfonctionnement de votre paramètre de canal de notification.
+Sélectionnez votre canal de notification dans le menu déroulant. Vous devez également sélectionner un canal de repli en cas de dysfonctionnement de vos paramètres de canal de notification.
 
-Si aucun [canal de notification]({{site.baseurl}}/user_guide/message_building_by_channel/push/android/notification_channels/) n'est répertorié ici, vous pouvez en ajouter un en utilisant l'ID du canal de notification. Contactez vos développeurs pour trouver quels sont vos ID de canal de notification ou pour en créer de nouveaux si besoin. 
+Si aucun [canal de notification]({{site.baseurl}}/user_guide/message_building_by_channel/push/android/notification_channels/) n'est répertorié ici, vous pouvez en ajouter un en utilisant l'ID du canal de notification. Contactez vos développeurs pour connaître les ID de vos canaux de notification ou pour créer de nouveaux ID si nécessaire. 
 
-Pour ajouter un ID de notification à votre canal de notification, cliquez sur **Gestion du canal de notification** dans le menu déroulant du **canal de notification** et remplissez les champs requis. Les canaux de notification doivent être définis sur l’application avant de pouvoir être utilisés sur la plateforme Braze.
+Pour ajouter un ID de notification à votre canal de notification, cliquez sur **Gestion du canal de notification** dans le menu déroulant du **canal de notification** et remplissez les champs requis. Les canaux de notification doivent être définis sur l'app avant de pouvoir être utilisés dans la plateforme Braze.
 
-![]({% image_buster /assets/img_archive/notification_channels.png %}){: style="max-width:80%;" }
+\![]({% image_buster /assets/img_archive/notification_channels.png %}){: style="max-width:80%;" }
 
 
