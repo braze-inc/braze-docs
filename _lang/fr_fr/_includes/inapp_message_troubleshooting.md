@@ -33,7 +33,7 @@
 3. Selon les circonstances, les messages in-app téléchargeront ou chargeront les images pertinentes à partir du disque avant de les afficher. Si vous disposez d'une connexion réseau lente ou d'appareils très peu performants, ce processus peut prendre du temps. Veillez à ce que vos images soient optimisées pour être aussi petites que possible.
 {% endcase %}
 
-Pour une discussion plus approfondie de ces scénarios, consultez [la section sur la résolution des problèmes avancés](#troubleshooting-in-app-advanced).
+Pour une discussion plus approfondie de ces scénarios, consultez <a id="troubleshooting-in-app-advanced">la section sur la résolution des problèmes avancés</a>.
 
 ## Problèmes d'analyse des impressions et des clics
 
@@ -64,7 +64,7 @@ Si vous avez défini un délégué de message in-app pour gérer manuellement l'
 
 ## Résolution avancée des problèmes {#troubleshooting-in-app-advanced}
 
-La plupart des problèmes de messages in-app peuvent être divisés en deux catégories principales : livraison et affichage. Pour savoir pourquoi un message in-app attendu ne s'est pas affiché sur votre appareil, confirmez que le [message in-app a bien été envoyé à l'appareil](#troubleshooting-in-app-message-delivery), puis [résolvez le problème d'affichage du message.](#troubleshooting-in-app-message-display)
+La plupart des problèmes de messages in-app peuvent être divisés en deux catégories principales : livraison et affichage. Pour savoir pourquoi un message in-app attendu ne s'est pas affiché sur votre appareil, confirmez que le <a id="troubleshooting-in-app-message-delivery">message in-app a bien été envoyé à l'appareil</a>, puis <a id="troubleshooting-in-app-message-display">résolvez le problème d'affichage du message.</a>
 
 ### Résolution des problèmes réception/distribution {#troubleshooting-in-app-message-delivery}
 
@@ -72,19 +72,19 @@ Le SDK demande des messages in-app aux serveurs Braze au démarrage de la sessio
 
 #### Vérifier si les messages sont demandés et retournés
 
-1. Ajoutez vous en tant qu'[utilisateur test]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users) dans le tableau de bord.
+1. Ajoutez vous en tant qu'utilisateur test]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users) sur le tableau de bord.
 2. Configurez une campagne de messages in-app ciblée pour votre utilisateur.
 3. Assurez-vous qu’une nouvelle session se produit dans votre application.
-4. Utilisez les [journaux d’événements utilisateurs]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab) pour vérifier que votre appareil demande des messages in-app au démarrage de la session. Recherchez la requête SDK associée à l’événement de démarrage de session de votre utilisateur test.
+4. Utilisez le journal des événements utilisateurs]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab) pour vérifier que votre appareil demande des messages in-app au démarrage de la session. Recherchez la requête SDK associée à l’événement de démarrage de session de votre utilisateur test.
   - Si votre application était censée demander des messages intégrés déclenchés, vous devriez voir `trigger` dans le champ **Réponses demandées** sous **Données de réponse**.
   - Si votre application était censée demander des messages intégrés originaux, vous devriez voir `in_app` dans le champ **Réponses demandées** sous **Données de réponse**.
-5. Utilisez les [journaux d’événements utilisateurs]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab) pour vérifier si les messages in-app corrects sont renvoyés dans les données de réponse.<br>![]({% image_buster /assets/img_archive/event_user_log_iams.png %})
+5. Utilisez les journaux des événements utilisateurs]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab) pour vérifier si les messages in-app corrects sont renvoyés dans les données de réponse.<br>![]({% image_buster /assets/img_archive/event_user_log_iams.png %})
 
 ##### Résoudre les problèmes de messages non demandés
 
 Si vos messages in-app ne sont pas demandés, il est possible que votre application ne suive pas correctement les sessions, car les messages in-app sont actualisés au démarrage de la session. Assurez-vous également que votre application démarre réellement une session en fonction de la sémantique du délai d’expiration de session de votre application :
 
-![La requête de SDK trouvée dans les journaux des événements utilisateurs affichant un événement de démarrage de session réussi.]({% image_buster /assets/img_archive/event_user_log_session_start.png %})
+![La demande de SDK trouvée dans le journal des événements utilisateurs affichant un événement de démarrage de session réussi.]({% image_buster /assets/img_archive/event_user_log_session_start.png %})
 
 ##### Résoudre les problèmes de messages non renvoyés
 
