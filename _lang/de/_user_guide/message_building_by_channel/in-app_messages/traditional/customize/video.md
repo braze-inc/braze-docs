@@ -10,7 +10,7 @@ channel:
 
 # Video {#video}
 
-> Um ein Video in einer HTML-In-App-Nachricht abzuspielen, fügen Sie das folgende `<video>`-Element in Ihr HTML ein und ersetzen die Videonamen durch den Namen Ihrer Datei (oder die URL des Remote-Assets). Weitere mögliche Optionen finden Sie unter `<video>` auf [MDN Web Docs][9].
+> Um ein Video in einer HTML-In-App-Nachricht abzuspielen, fügen Sie das folgende `<video>`-Element in Ihr HTML ein und ersetzen die Videonamen durch den Namen Ihrer Datei (oder die URL des Remote-Assets). Weitere mögliche Optionen finden Sie unter `<video>` auf [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video).
 
 ```html
 <video class="video" autoplay muted playsinline controls>
@@ -38,4 +38,3 @@ Zur Unterstützung von iOS-Geräten:
 - iOS unterstützt standardmäßig keine automatische Wiedergabe. Um diese Standardoption zu aktualisieren, können Sie die Option [`ABKInAppMessageHTMLViewController`](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyUI/ABKInAppMessage/ViewControllers/ABKInAppMessageHTMLViewController.m) ändern.
 
 
-[9]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video
