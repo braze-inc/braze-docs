@@ -1,72 +1,72 @@
 ---
-nav_title: Notions de base des campagnes
-article_title: Notions de base des campagnes
+nav_title: Les bases de la campagne
+article_title: Les bases de la campagne
 page_order: 1
 page_type: reference
-description: "Le présent article de référence aborde les fondamentaux des campagnes, notamment diverses questions que vous devez vous poser lorsque vous configurez votre première campagne."
+description: "Cet article de référence présente les bases des campagnes, en abordant différentes questions que vous devriez vous poser lorsque vous implantez vos premières campagnes."
 tool: Campaigns
 
 ---
 
-# Notions de base des campagnes
+# L'essentiel des campagnes
 
-> Le présent article de référence aborde les fondamentaux des campagnes, notamment diverses questions que vous devez vous poser lorsque vous configurez votre première campagne.
+> Cet article de référence présente les bases des campagnes, en abordant différentes questions que vous devriez vous poser lorsque vous implantez vos premières campagnes.
 
-## Comprendre la structure d’une campagne
+## Comprendre la structure de la campagne
 
-Avant d’aborder les détails plus précis de l’implémentation des campagnes, nous allons identifier les détails clés permettant de comprendre comment les campagnes fonctionnent sur les différents canaux de communication.
+Avant d'aborder les moindres détails de l'implémentation des campagnes, identifions les éléments clés permettant de comprendre le fonctionnement des campagnes sur les différents canaux d'envoi de messages.
 
-Les campagnes sont une étape de message unique pour contacter vos utilisateurs sur les canaux, appelés généralement canaux de communication. Ces canaux de communication comprennent les cartes de contenu, les e-mails, les messages in-app, les notifications push, les SMS et MMS et les webhooks. En comprenant la localisation de vos consommateurs, vous pouvez tirer parti des canaux de communication appropriés pour communiquer.
+Les campagnes sont une étape de message unique pour se connecter à vos utilisateurs sur les canaux, ou plus communément appelés canaux d'envoi de messages. Ces canaux d'envoi de messages comprennent les cartes de contenu, les e-mails, les messages in-app, le push, les SMS et MMS, et les webhooks. En comprenant où résident vos personnalisés, vous pouvez exploiter les canaux d'envoi de messages appropriés pour communiquer.
 
-## Création du parcours client
+## Créer le parcours client
 
-Étant donné que les campagnes peuvent être créées seulement en fonction du canal de communication, vous pouvez utiliser les cinq W de visualisation pour essayer d’identifier et de conceptualiser vos buts et vos stratégies d’engagement client.
+Les campagnes pouvant être créées de manière unique en fonction du canal d'envoi des messages, vous pouvez utiliser ces cinq W de la visualisation pour vous aider à identifier et à conceptualiser vos stratégies et vos objectifs en matière d'engagement client.
 
-### Le « quoi » : Nommez votre campagne
+### Le "quoi" : Donnez un nom à votre campagne
 
-> Qu’essayez-vous de faire faire ou comprendre à votre utilisateur ?
+> Qu'essayez-vous d'aider l'utilisateur à faire ou à comprendre ?
 
-Ne sous-estimez jamais le pouvoir du nom. Braze est conçu pour la collaboration, c’est donc le moment idéal pour évaluer la façon dont vous communiquez les objectifs à votre équipe. Pour en savoir plus sur les parcours clients, consultez notre cours d'apprentissage Braze sur [le mappage des cycles de vie des utilisateurs](https://learning.braze.com/mapping-customer-lifecycles)!
+Ne sous-estimez jamais le pouvoir du nom. Braze est créé pour la collaboration, c'est donc le moment idéal pour vous familiariser avec la manière dont vous communiquerez vos objectifs à votre équipe. Pour en savoir plus sur les parcours clients, consultez notre cours d'apprentissage Braze sur [le mappage des cycles de vie des utilisateurs](https://learning.braze.com/mapping-customer-lifecycles)!
 
-### Le « quand » : Créer des conditions de démarrage
+### Le "quand" : Créer des conditions de départ
 
-> Quand un client sera-t-il confronté à cette campagne ? 
+> Quand le client sera-t-il confronté à cette campagne ? 
 
-Les utilisateurs peuvent entrer dans votre campagne de trois manières : à une date et heure donnée (planifiée), lorsqu’ils effectuent une action donnée (par événement) ou lorsqu’ils effectuent une action déclenchant un appel API (déclenchée par API). 
+Les utilisateurs peuvent entrer dans votre campagne de trois façons : à une date et une heure définies (planifiées), lorsqu'ils effectuent une action spécifique (basées sur l'action) ou lorsqu'ils font quelque chose qui déclenche un appel API (déclenchées par l'API). 
 
-La livraison planifiée implique d’ajuster vos campagnes pour qu’elles soient envoyées à un moment particulier et, optionnellement, à une cadence donnée. Les campagnes par événement répondent à des comportements des clients spécifiques, lorsqu’ils se produisent en temps réel. Ils peuvent comprendre : effectuer un achat ou interagir avec une autre campagne. Des campagnes déclenchées par l'API peuvent être mises en place pour déterminer les actions clés des clients sur votre plateforme qui, une fois réalisées, déclencheront un appel API vers Braze et enverront vos campagnes.
+La réception/distribution planifiée consiste à ajuster vos campagnes pour qu'elles soient envoyées à une heure précise et, éventuellement, selon une cadence déterminée. Les campagnes basées sur l'action répondent à des comportements spécifiques des clients au fur et à mesure qu'ils se produisent en temps réel. Il peut s'agir d'effectuer un achat ou d'interagir avec une autre campagne. Des campagnes déclenchées par l'API peuvent être mises en place pour déterminer les actions clés des clients sur votre plateforme qui, une fois réalisées, déclencheront un appel API vers Braze et enverront vos campagnes.
 
-### Le « qui » : Sélectionnez une audience d’entrée
+### Le "qui" : Sélectionnez une audience
 
-> Qui (Who) essayez-vous de joindre ? 
+> Qui cherchez-vous à atteindre ? 
 
-Vous pouvez utiliser des [segments]({{site.baseurl}}/user_guide/engagement_tools/segments) prédéfinis pour cibler les utilisateurs en fonction de leurs caractéristiques démographiques, comportementales ou techniques et de leurs actions. Ajoutez plus de filtres lorsque vous construisez votre campagne pour ajuster encore plus vos segments. Seuls les utilisateurs répondant à ces critères d’audience cible peuvent accéder au parcours. Consultez ce tableau pour obtenir un sommaire rapide des types de filtres disponibles.
+Vous pouvez utiliser des [segments]({{site.baseurl}}/user_guide/engagement_tools/segments) prédéfinis pour cibler les utilisateurs en fonction de leurs caractéristiques démographiques, comportementales ou techniques et de leurs actions. Ajoutez d'autres filtres lorsque vous créez votre campagne afin d'adapter davantage votre segmentation. Seuls les utilisateurs qui correspondent à ces critères d'audience cible peuvent accéder au voyage. Consultez ce tableau pour un résumé rapide des types de filtres disponibles.
 
 | Filtre | Description |
 |---|---|
-| Données personnalisées | Segmentez les utilisateurs en fonction d’événements et d’attributs que vous définissez. Vous pouvez utiliser des fonctionnalités spécifiques pour votre produit. |
-| Activité de l’utilisateur | Segmentez les clients sur la base de leurs actions et de leurs achats. |
-| Reciblage | Segmentez des clients qui ont envoyé, reçu ou interagi avec des campagnes précédentes. |
-| Activité de marketing | Segmentez les clients en fonction de comportements universels, tels que le dernier engagement ou les campagnes reçues. |
-| Attributs utilisateur | Segmentez les clients en fonction de leurs caractéristiques et attributs constants. |
-| Attribution d’installation | Segmenter les clients par leur première source, groupe d'annonces, campagne ou annonce. |
+| Données personnalisées | Segmentez les utilisateurs en fonction des événements et des attributs que vous définissez. Peut utiliser des fonctionnalités spécifiques à votre produit. |
+| Activité de l'utilisateur | Segmentez les clients en fonction de leurs actions et de leurs achats. |
+| Reciblage | Segmentez les clients qui ont été envoyés, reçus ou qui ont interagi avec des campagnes précédentes. |
+| Activité de marketeur | Segmentez les clients en fonction de comportements universels comme le dernier engagement ou les campagnes reçues. |
+| Attributs de l'utilisateur | Segmenter les clients en fonction de leurs attributs et caractéristiques constants. |
+| Attribution d'installation | Segmentez les clients en fonction de leur première source, du groupe d'annonces, de la campagne ou de l'annonce. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-### Le « pourquoi » : Identifier des événements de conversion
+### Le "pourquoi" : Identifier les événements de conversion
 
-> Pourquoi créez-vous cette campagne ? 
+> Pourquoi créez-vous cette campagne ? 
 
-Il est toujours important d’avoir un objectif défini en tête et les campagnes vous permettent de comprendre comment vous vous situez par rapport aux KPI tels que l’engagement de session, les achats et les événements personnalisés. En sélectionnant au moins un [événement de conversion]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/), vous aurez la possibilité de comprendre les performances de votre campagne.
+Il est toujours important d'avoir un objectif défini en tête, et les campagnes vous aident à comprendre vos performances par rapport à des indicateurs clés de performance tels que l'engagement des sessions, les achats et les événements personnalisés. En sélectionnant au moins un [événement de conversion]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/), vous aurez la possibilité de comprendre les performances de votre campagne.
 
-### Le « où » : Trouver mon audience
+### Le "où" : Trouver mon audience
 
-> Où puis-je atteindre au mieux mon audience ?
+> Où puis-je atteindre au mieux mon audience ?
 
-C’est l’endroit où nous déterminons quels canaux de communication sont les plus pertinents pour votre parcours utilisateur. Dans l’absolu, nous souhaiterions atteindre vos utilisateurs là où ils sont les plus actifs.
+C'est ici que nous déterminons quels canaux de communication sont les plus judicieux pour votre parcours utilisateur. Idéalement, vous souhaitez atteindre vos utilisateurs là où ils sont le plus actifs.
 
-### Le « comment » : Consolider l’expérience
+### Le "comment" : Créer l'expérience
 
-> Comment puis-je créer ma campagne après avoir identifié les cinq W ?
+> Comment créer ma campagne après avoir identifié les cinq "W" ?
 
-Envisagez de mettre en place des variantes et des tests A/B alors que vous devenez plus averti dans le domaine de la création de campagnes. Considérez que les campagnes prennent en charge jusqu’à huit variantes avec un groupe de contrôle. Utilisez vos analyses de campagne pour effectuer des choix bien renseignés en construisant votre campagne, pour tout ajuster depuis votre audience segmentée à votre contenu de communication proprement dit.
+Envisagez d'implémenter des variantes et des tests A/B à mesure que vous vous familiarisez avec la création de campagnes. Notez que les campagnes prennent en charge jusqu'à huit variantes avec un groupe de contrôle. Utilisez les analyses/analytiques de votre campagne pour faire des choix éclairés au fur et à mesure que vous créez votre campagne, en ajustant tout ce qui va de votre audience segmentée au contenu de votre envoi messages.
 
