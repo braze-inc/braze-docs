@@ -84,7 +84,7 @@ To update the stats for a calculation you've previously run, select **Refresh ex
 Note that a calculation's accuracy is only 99.999% or greater. So for large segments, you may notice slight variations&#8212;even when calculating exact statistics&#8212;which is normal behavior. In addition, exact statistics results are cached for 24 hours unless you make edits to your segment, in which case you can re-calculate the exact statistics.
 
 {% alert note %}
-Segments divided evenly by [random bucket numbers]({{site.baseurl}}/user_guide/engagement_tools/testing/random_bucket_numbers/) won't be the same size. For example, if you create one segment with the filter **Random Bucket # less than 5000** and one segment with the filter **Random Bucket # at least 5000**, it is possible and normal for the segment sizes to vary by up to a few percentage points. This is because of situations such as inactive users getting deleted and users being unreachable.
+Segments divided evenly by [random bucket numbers]({{site.baseurl}}/user_guide/engagement_tools/testing/random_bucket_numbers/) won't be the same size. For example, if you create one segment with the filter **Random Bucket # less than 5000** and one segment with the filter **Random Bucket # at least 5000**, it is possible and expected for the segment sizes to vary by up to a few percentage points. This is because of situations such as inactive users getting deleted and users being unreachable.
 {% endalert %}
 
 ![The "Reachable users" panel with an option to show the breakdown.]({% image_buster /assets/img_archive/reachable_users_breakdown.png %})
