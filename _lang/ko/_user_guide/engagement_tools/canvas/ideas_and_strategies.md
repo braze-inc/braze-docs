@@ -8,7 +8,7 @@ page_order: 5
 
 tool: Canvas
 page_type: landing
-description: "이 랜딩 페이지에는 모범 사례, 출시 전/후 체크리스트, Canvas 출시에 대한 안내 등 Canvas 아이디어와 전략이 담겨 있습니다."
+description: "이 랜딩 페이지에서는 모범 사례, 출시 전/후 체크리스트, 캔버스 출시에 대한 안내 등 캔버스 아이디어와 전략을 확인할 수 있습니다."
 
 guide_featured_title: "섹션 기사"
 guide_featured_list:
@@ -18,7 +18,7 @@ guide_featured_list:
   - name: 출시 전 및 출시 후 체크리스트
     link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/pre_post_launch_checklist/
     image: /assets/img/braze_icons/check-square-broken.svg
-  - name: 캔버스 플로우로 시작하기
+  - name: 캔버스로 시작하기
     link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/launching_canvas_flow/
     image: /assets/img/braze_icons/git-branch-01.svg
 
@@ -39,7 +39,7 @@ guide_menu_list:
   - name: 예약 알림 이메일 시스템
     link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/booking_use_case/
     image: /assets/img/braze_icons/channel-email.svg
-  - name: 전자상거래 사용 사례
+  - name: 전자 상거래 사용 사례
     link: /docs/ecommerce_use_cases/
     image: /assets/img/braze_icons/users-01.svg
 
