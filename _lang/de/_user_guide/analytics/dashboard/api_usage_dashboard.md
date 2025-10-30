@@ -1,6 +1,6 @@
 ---
-nav_title: Dashboard für die API-Nutzung
-article_title: Dashboard für die API-Nutzung
+nav_title: Dashboard zur API-Nutzung
+article_title: Dashboard zur API-Nutzung
 alias: "/api_usage/"
 page_order: 3.5
 description: "Dieser Artikel bietet eine Übersicht über das Dashboard zur API-Nutzung."
@@ -10,21 +10,28 @@ description: "Dieser Artikel bietet eine Übersicht über das Dashboard zur API-
 
 > Mit dem Dashboard zur API-Nutzung können Sie den bei Braze eingehenden REST API-Verkehr überwachen, um Trends bei der Nutzung unserer REST APIs zu erkennen und mögliche Probleme zu beheben.
 
-Sehen Sie sich Ihr Dashboard zur API-Nutzung an, indem Sie zu **Einstellungen** > **APIs und Identifikatoren** gehen und **Dashboard** auswählen. Das Standard Dashboard ist eine Ansicht aller eingehenden REST API Anfragen für Ihren Workspace im Laufe des letzten Tages (24 Stunden). Je nach Anwendungsfall können Sie die Steuerelemente des Dashboards anpassen, um den Datenverkehr zu filtern oder zu gruppieren und auch den Zeitbereich des Dashboards zu konfigurieren.
+## Über das Dashboard zur API-Nutzung
 
-![API Usage Dashboard mit 130 Anfragen insgesamt, mit einer Erfolgsquote von 70 Prozent und einer Fehlerquote von 30 Prozent.]({% image_buster /assets/img/api_usage_dashboard/api_usage_dashboard.png %})
+Um Ihr Dashboard zur API-Nutzung einzusehen, gehen Sie zu **Einstellungen** > **APIs und Bezeichner** und wählen Sie dann **Dashboard**.
 
-## Zusammenfassung Details
+Das Standard Dashboard ist eine Ansicht aller eingehenden REST API Anfragen für Ihren Workspace im Laufe des letzten Tages (24 Stunden). Je nach Anwendungsfall können Sie die Steuerelemente des Dashboards anpassen, um den Datenverkehr zu filtern oder zu gruppieren und auch den Zeitbereich des Dashboards zu konfigurieren.
+
+\![API Usage Dashboard mit 130 Anfragen insgesamt, mit einer Erfolgsquote von 70 Prozent und einer Fehlerquote von 30 Prozent.]({% image_buster /assets/img/api_usage_dashboard/api_usage_dashboard.png %})
+
+## Verfügbare Metriken
 
 Das Dashboard zur API-Nutzung enthält die folgenden Statistiken:
 
-- **Anfragen insgesamt:** Die Gesamtzahl der Anfragen, die für Ihren aktuellen Workspace an Braze gesendet wurden, unter Berücksichtigung der auf das Dashboard angewendeten Filter und Kontrollen.
-- **Erfolgsquote:** Der prozentuale Anteil aller Anfragen, bei denen Braze eine `2XX` Erfolgsmeldung ausgegeben hat.
-- **Fehlerquote:** Der Prozentsatz der gesamten Anfragen, bei denen Braze eine `4XX` oder `5XX` Fehlerantwort ausgab.
+| Metrisch         | Beschreibung |
+|----------------|-------------|
+| Anfragen gesamt | Die Gesamtzahl der Anfragen, die für Ihren aktuellen Workspace an Braze gesendet wurden, unter Berücksichtigung der auf das Dashboard angewendeten Filter und Kontrollen. |
+| Erfolgsrate   | Der prozentuale Anteil aller Anfragen, bei denen Braze eine `2XX` Erfolgsmeldung ausgegeben hat. |
+| Fehlerrate     | Der Prozentsatz der gesamten Anfragen, bei denen Braze eine `4XX` oder `5XX` Fehlerantwort ausgab. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
-## Dashboard Kontrollen
+## Verwendung des Dashboards
 
-![Filter, die Sie auf das Dashboard anwenden können, einschließlich: API-Schlüssel, Endpunkt, Antwortcodes, Gruppendaten und Datum.]({% image_buster /assets/img/api_usage_dashboard/filters.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
+\![Filter, die Sie auf das Dashboard anwenden können, einschließlich: API-Schlüssel, Endpunkt, Antwort-Codes, Gruppendaten und Datum.]({% image_buster /assets/img/api_usage_dashboard/filters.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
 ### Filter
 
