@@ -1,6 +1,6 @@
 ---
-nav_title: Pruebas
-article_title: Pruebas de las tarjetas de contenido
+nav_title: Prueba
+article_title: Probando tarjetas de contenido
 page_order: 3
 description: "Este artículo de referencia explica cómo previsualizar y probar las tarjetas de contenido, así como algunas buenas prácticas."
 channel:
@@ -8,43 +8,43 @@ channel:
   
 ---
 
-# Pruebas de las tarjetas de contenido
+# Probando tarjetas de contenido
 
-> Es muy importante probar siempre las tarjetas de contenido antes de enviar las campañas. Nuestras funciones de previsualización y prueba ofrecen dos maneras de echar un vistazo a sus tarjetas de contenido. Puedes previsualizar tu mensaje para ayudarte a visualizarlo mientras lo redactas, así como enviar un mensaje de prueba a ti mismo o al dispositivo de un usuario concreto. Le recomendamos que aproveche ambas.
+> Es muy importante que pruebes siempre tus tarjetas de contenido antes de enviar tus campañas. Nuestras capacidades de vista previa y de prueba ofrecen dos formas de echar un vistazo a tus tarjetas de contenido. Puedes previsualizar tu mensaje para ayudarte a visualizarlo mientras lo redactas, así como enviarte un mensaje de prueba a ti mismo o al dispositivo de un usuario concreto. Te recomendamos que aproveches ambas.
 
 ## Vista previa
 
-Puedes previsualizar tu tarjeta mientras la redactas. Esto le ayudará a visualizar el mensaje final desde la perspectiva del usuario.
+Puedes obtener una vista previa de tu tarjeta mientras la compones. Esto debería ayudarte a visualizar cómo será tu mensaje final desde la perspectiva de tu usuario.
 
-En la pestaña **Vista previa** de tu compositor, la vista de tu mensaje puede no ser idéntica a su representación real en el dispositivo del usuario. Recomendamos enviar siempre un mensaje de prueba a un dispositivo para asegurarse de que los medios, la copia, la personalización y los atributos personalizados se generan correctamente.
+En la pestaña **Vista previa** de tu compositor, la vista de tu mensaje podría no ser idéntica a su representación real en el dispositivo del usuario. Te recomendamos que envíes siempre un mensaje de prueba a un dispositivo para asegurarte de que tus medios, copia, personalización y atributos personalizados se generan correctamente.
 
-## Probar
+## Prueba
 
-Para enviar una prueba a [grupos de prueba de contenido]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups) o a usuarios individuales, antes de enviarla debe estar activada la función push en los dispositivos de prueba con tokens push válidos registrados para el usuario de prueba. Los usuarios de iOS deben tocar la notificación push enviada por Braze para ver la tarjeta de contenido de la prueba. Este comportamiento sólo se aplica a las tarjetas de contenido de prueba.
+Para enviar una prueba a [grupos de prueba de contenido]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups) o a usuarios individuales, debe habilitarse la función push en tus dispositivos de prueba con tokens de notificaciones push válidos registrados para el usuario de prueba antes del envío. Para los usuarios de iOS, debes tocar la notificación push enviada por Braze para ver la tarjeta de contenido de la prueba. Este comportamiento sólo se aplica a las tarjetas de contenido de prueba.
 
 ### Vista previa del mensaje como usuario
 
-También puedes previsualizar los mensajes desde la pestaña **Prueba** como si fueras un usuario. Puede seleccionar un usuario específico, un usuario aleatorio o crear un usuario personalizado.
+También puedes obtener una vista previa de los mensajes desde la pestaña de **Prueba**, como si fueras un usuario. Puedes seleccionar un usuario concreto, un usuario aleatorio o crear un usuario personalizado.
 
-![Una vista previa de la tarjeta de contenido en la pestaña "Prueba".]({% image_buster /assets/img/cc-user-preview.png %}){: style="max-width:80%;"}
+Una vista previa de la tarjeta de contenido en la pestaña "Prueba".]({% image_buster /assets/img/cc-user-preview.png %}){: style="max-width:80%;"}
 
-### Lista de comprobación
+### Lista de control
 
-- ¿Aparecen las imágenes y los medios de comunicación y actúan como se esperaba?
-- ¿Funciona el Líquido como se esperaba? ¿Ha previsto un [valor de atributo por defecto]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#accounting-for-null-attribute-values) en caso de que Liquid no devuelva ninguna información?
-- ¿Es su texto claro, conciso y correcto?
-- ¿Sus enlaces dirigen al usuario a donde debe ir?
+- ¿Aparecen las imágenes y los medios y actúan como se espera de ellos?
+- ¿Funciona el Liquid como se esperaba? ¿Has previsto un [valor de atributo predeterminado]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#accounting-for-null-attribute-values) para el caso de que Liquid no devuelva información?
+- ¿Es tu texto claro, conciso y correcto?
+- ¿Tus enlaces dirigen al usuario a donde debe ir?
 
 ## Depurar
 
-Una vez enviadas las tarjetas de contenido, puede desglosar o depurar cualquier problema desde el [registro de usuario de eventos]({{site.baseurl}}/user_guide/administrative/app_settings/event_user_log_tab/) de la consola de desarrollador. 
+Una vez enviadas tus tarjetas de contenido, puedes desglosar o depurar cualquier problema desde el [registro de usuarios del evento]({{site.baseurl}}/user_guide/administrative/app_settings/event_user_log_tab/) en la consola para desarrolladores. 
 
-Un caso de uso común es tratar de depurar por qué un usuario no puede ver una tarjeta de contenido en particular. Para ello, puedes buscar en **los registros de usuarios del evento** las tarjetas de contenido entregadas al SDK al inicio de la sesión, pero antes de una impresión, y rastrearlas hasta una campaña específica:
+Un caso de uso común es intentar depurar por qué un usuario no puede ver una determinada tarjeta de contenido. Para ello, puedes buscar en **los registros de usuarios del evento** las tarjetas de contenido entregadas al SDK al inicio de la sesión, pero antes de una impresión, y rastrearlas hasta una campaña específica:
 
-1. Vaya a **Configuración** > **Registro de usuario de eventos**.
+1. Ve a **Configuración** > **Registro de usuarios** del evento **.**
 2. Localiza y amplía la Solicitud de SDK para tu usuario de prueba.
-3. Haga clic en **Datos brutos**.
-4. Busca la dirección `id` para tu sesión. A continuación se muestra un extracto de ejemplo:
+3. Haz clic en **Datos brutos**.
+4. Encuentra la dirección `id` para tu sesión. A continuación se muestra un extracto de ejemplo:
 
     ```json
     [
@@ -61,7 +61,7 @@ Un caso de uso común es tratar de depurar por qué un usuario no puede ver una 
     ]
     ```
 
-5. Utilice una herramienta de descodificación como [Base64 Decode and Encode](https://www.base64decode.org/) para descodificar el `id` del formato Base64 y encontrar el `campaign_id` asociado. En nuestro ejemplo, el resultado es el siguiente:
+5. Utiliza una herramienta de descodificación como [Base64 Decode and Encode](https://www.base64decode.org/) para descodificar el `id` del formato Base64 y encontrar el `campaign_id` asociado. En nuestro ejemplo, el resultado es el siguiente:
 
     ```
     4861692e-6fce-4215-bd05-3254fb9e9057_$_cc=c3b25740-f113-c047-4b1d-d296f280af4f&mv=6185005b9d9bee79387cce45&pi=cmp
@@ -69,9 +69,9 @@ Un caso de uso común es tratar de depurar por qué un usuario no puede ver una 
 
     Donde `4861692e-6fce-4215-bd05-3254fb9e9057` es el `campaign_id`.<br><br>
 
-6. Vaya a la página de **Campañas** y busque `campaign_id`.
+6. Ve a la página de **Campañas** y busca `campaign_id`.
 
-![Buscar campaign_id en la página de Campañas]({% image_buster /assets/img_archive/cc_debug.png %}){: style="max-width:80%;"}
+\![Busca campaign_id en la página de Campañas]({% image_buster /assets/img_archive/cc_debug.png %}){: style="max-width:80%;"}
 
-A partir de ahí, puede revisar la configuración y el contenido de sus mensajes para determinar por qué un usuario no puede ver una tarjeta de contenido concreta.
+A partir de ahí, puedes revisar tu configuración de mensajería y contenido para profundizar y determinar por qué un usuario no puede ver una tarjeta de contenido concreta.
 
