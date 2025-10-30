@@ -1,22 +1,22 @@
 ---
 nav_title: Abandon des messages
-article_title: Abandon des messages Liquid
+article_title: Abandon des messages liquides
 page_order: 7
-description: "Cet article de référence présente l’abandon des messages Liquid et quelques exemples de cas d’utilisation."
+description: "Cet article de référence traite de l'interruption des envois de messages liquid et de quelques exemples d'utilisation."
 
 ---
 
-# Abandonner des messages
+# Abandon des messages
 
-> En option, vous pouvez utiliser l'étiquette Liquid message `abort_message("optional reason for aborting")` dans les conditionnels pour empêcher l'envoi d'un message à un utilisateur. Cet article de référence répertorie quelques exemples de la manière dont cette fonctionnalité peut être utilisée dans les campagnes marketing.
+> En option, vous pouvez utiliser l'étiquette Liquid message `abort_message("optional reason for aborting")` dans les conditionnels pour empêcher l'envoi d'un message à un utilisateur. Cet article de référence présente quelques exemples d'utilisation de cette fonctionnalité dans le cadre de campagnes marketing.
 
 {% alert note %}
-Si une étape du message est annulée dans un canvas, l'utilisateur **ne quitte pas** le canvas et **passe** à l’étape suivante.
+Si une étape du message est interrompue dans un canvas, l'utilisateur **ne** quittera **pas** le canvas et passera à l'étape suivante **.** 
 {% endalert %}
 
-## Abandon du message si « Nombre de jeux assisté » = 0
+## Message d'abandon si "Nombre de parties suivies" = 0
 
-Supposons par exemple que vous ne souhaitiez pas envoyer un message aux clients qui n’ont pas participé à un jeu :
+Par exemple, disons que vous ne voulez pas envoyer de message aux clients qui n'ont pas assisté à un match :
 
 {% raw %}
 ```liquid
@@ -30,9 +30,9 @@ Love the games? Get 10% off your next one with code SAVE10.
 ```
 {% endraw %}
 
-Ce message ne sera envoyé qu’aux clients connus pour avoir assisté à un match.
+Ce message ne sera envoyé qu'aux clients dont on sait qu'ils ont assisté à un match.
 
-## Communiquer uniquement avec les clients anglophones
+## Message Clients parlant anglais uniquement
 
 Vous pouvez envoyer des messages à des clients anglophones uniquement en créant une instruction "if" qui correspondra lorsque la langue du client est l'anglais et une instruction "else" qui annulera le message pour toute personne qui ne parle pas anglais ou qui n'a pas de langue dans son profil.
 
@@ -59,7 +59,7 @@ Vous pouvez également faire en sorte que le message d'abandon enregistre quelqu
 ```
 {% endraw %}
 
-![Message d'erreur dans la console de développement avec un message d'abandon "language was nil".]({% image_buster /assets/img_archive/developer_console.png %})
+!Message d'erreur dans la console de développement avec un message d'abandon "language was nil".]({% image_buster /assets/img_archive/developer_console.png %})
 
 ## Demande d'envoi de messages d'annulation
 
