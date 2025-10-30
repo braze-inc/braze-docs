@@ -31,7 +31,7 @@ Esta integración es puramente para actualizar Salesforce desde Braze como parte
 Esta integración requiere que crees una aplicación conectada en Salesforce Sales Cloud siguiendo los pasos de la documentación de Salesforce: [Configura una aplicación conectada para el flujo de credenciales de cliente OAuth 2.0](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&type=5).
 
 Cuando configures los ajustes OAuth necesarios para la aplicación conectada, mantén todos los ajustes OAuth con sus valores y selecciones predeterminados, excepto los siguientes:
-1. Selecciona **Habilitar para el flujo de dispositivos**. Puedes dejar **la URL de devolución de llamada** en blanco, ya que estará predeterminada a un marcador de posición.
+1. Selecciona **Habilitar para** el flujo de **dispositivos**. Puedes dejar **la URL de devolución de llamada** en blanco, ya que estará predeterminada a un marcador de posición.
 2. Para **los Ámbitos OAuth** seleccionados, añade **Administrar datos de usuario a través de API (api)**.
 3. Selecciona **Habilitar flujo de credenciales de cliente**.
 
@@ -41,12 +41,12 @@ Como plataforma de interacción con los clientes, Braze puede generar nuevos cli
 
 ### Paso 1: Recoge tu `client_id` y `client_secret`
 
-1. En Salesforce, ve a **Herramientas de la plataforma** > **Aplicaciones** > **Administrador de aplicaciones**.
+1. En Salesforce, ve a **Herramientas de la plataforma** > **Aplicaciones** > Administrador de aplicaciones.
 2. Busca tu aplicación Braze recién creada y selecciona **Ver**.
 3. En **Clave y secreto del consumidor**, selecciona **Gestionar detalles del consumidor**.
 4. En la página resultante, toma nota de tu **Clave de Consumidor** y de tu **Secreto de Consumidor**. La **Clave del Consumidor** es tu `client_id`, y el **Secreto del Consumidor** es tu `client_secret`.
 
-### Paso 2: Configure su plantilla de webhook
+### Paso 2: Configura tu plantilla webhook
 
 Utiliza plantillas para reutilizar rápidamente este webhook en toda la plataforma Braze. 
 
@@ -60,7 +60,7 @@ Utiliza plantillas para reutilizar rápidamente este webhook en toda la platafor
 | --- | --- |
 | URL del webhook | {% raw %}`https://[insert_instance_name].my.salesforce.com/services/data/v60.0/sobjects/Lead/`{% endraw %} |
 | Método HTTP | `POST` |
-| Cuerpo de la solicitud | Pares clave-valor de JSON |
+| Cuerpo de la solicitud | Pares clave-valor JSON |
 {: .reset-td-br-1 .reset-td-br-2 role=”presentation” }
 
 #### Valores clave de la propiedad del cuerpo
@@ -75,7 +75,7 @@ Selecciona **\+ Añadir nueva propiedad de cuerpo** para cada uno de los pares c
 | empresa | {% raw %}`{{custom_attribute.${company}}}`{% endraw %} |
 {: .reset-td-br-1 .reset-td-br-2 role=”presentation” }
 
-#### Encabezado de solicitud
+#### Encabezados de solicitud
 
 Selecciona **\+ Añadir nuevo encabezado** para cada uno de los siguientes encabezados de solicitud.
 
@@ -88,7 +88,7 @@ Selecciona **\+ Añadir nuevo encabezado** para cada uno de los siguientes encab
 {: start="4" }
 4\. Selecciona **Guardar plantilla**.
 
-![Una plantilla webhook rellenada para crear un cliente potencial.]({% image_buster /assets/img/b2b/create_lead_webhook.png %}){: style="max-width:70%;"}
+Una plantilla webhook rellenada para crear un cliente potencial.]({% image_buster /assets/img/b2b/create_lead_webhook.png %}){: style="max-width:70%;"}
  
 ## Actualizar un cliente potencial en Salesforce Sales Cloud {#updating-lead}
 
@@ -98,13 +98,13 @@ Este ejemplo muestra específicamente cómo actualizar la etapa de un cliente po
 
 ### Paso 1: Recoge tu `client_id` y `client_secret`
 
-1. En Salesforce, ve a **Herramientas de la plataforma** > **Aplicaciones** > **Administrador de aplicaciones**.
+1. En Salesforce, ve a **Herramientas de la plataforma** > **Aplicaciones** > Administrador de aplicaciones.
 2. Busca tu aplicación Braze recién creada y selecciona **Ver**.
 3. En **Clave y secreto del consumidor**, selecciona **Gestionar detalles del consumidor**.
 4. En la página resultante, toma nota de tu **Clave de Consumidor** y de tu **Secreto de Consumidor**.
     - La **Clave del Consumidor** es tu `client_id`, y el **Secreto del Consumidor** es tu `client_secret`.
 
-### Paso 2: Configure su plantilla de webhook
+### Paso 2: Configura tu plantilla webhook
 
 1. En Braze, ve a **Plantillas**, selecciona **Plantillas de webhook** y, a continuación, **\+ Crear plantilla de webhook**.
 2. Proporciona un nombre para la plantilla, como "Salesforce Sales Cloud > Actualizar cliente potencial a MQL".
@@ -116,7 +116,7 @@ Este ejemplo muestra específicamente cómo actualizar la etapa de un cliente po
 | --- | --- |
 |URL del webhook | {% raw %}`https://[insert_instance_name].my.salesforce.com/services/data/v60.0/sobjects/Lead/{{${user_id}}}`{% endraw %} |
 | Método HTTP | `PATCH` |
-| Cuerpo de la solicitud | Pares clave-valor de JSON |
+| Cuerpo de la solicitud | Pares clave-valor JSON |
 {: .reset-td-br-1 .reset-td-br-2 role=”presentation” }
 
 #### Valores clave de la propiedad del cuerpo
@@ -128,7 +128,7 @@ Selecciona **\+ Añadir nueva propiedad del cuerpo** para el siguiente par clave
 | `Lead_Stage__c` | `MQL` |
 {: .reset-td-br-1 .reset-td-br-2 role=”presentation” }
 
-#### Encabezado de solicitud
+#### Encabezados de solicitud
 
 Selecciona **\+ Añadir nuevo encabezado** para cada uno de los siguientes encabezados de solicitud.
 
@@ -141,7 +141,7 @@ Selecciona **\+ Añadir nuevo encabezado** para cada uno de los siguientes encab
 {: start="4"}
 4\. Selecciona **Guardar plantilla**.
 
-![Una plantilla webhook rellenada para actualizar un cliente potencial.]({% image_buster /assets/img/b2b/update_lead_webhook.png %}){: style="max-width:70%;"}
+Una plantilla webhook rellenada para actualizar un cliente potencial.]({% image_buster /assets/img/b2b/update_lead_webhook.png %}){: style="max-width:70%;"}
 
 ## Utilizar estos webhooks en un flujo de trabajo operativo
 
@@ -152,9 +152,9 @@ Puedes añadir rápidamente tus plantillas a tus flujos de trabajo operativos en
 
 ### Nueva campaña principal {#new-lead}
 
-Para crear un cliente potencial en Salesforce cuando un usuario proporcione su dirección de correo electrónico, puedes crear una campaña que utilice la plantilla de webhook "Actualizar cliente potencial" y se desencadene cuando un usuario añada su dirección de correo electrónico (por ejemplo, cuando rellene un formulario Web).
+Para crear un cliente potencial en Salesforce cuando un usuario proporcione su dirección de correo electrónico, puedes crear una campaña que utilice la plantilla de webhook "Actualizar cliente potencial" y que se desencadene cuando un usuario añada su dirección de correo electrónico (por ejemplo, cuando rellene un formulario Web).
 
-![Paso 2 para crear una campaña basada en una acción y cuya acción desencadenante sea "Añadir una dirección de correo electrónico".]({% image_buster /assets/img/b2b/salesforce_create_campaign.png %}){: style="max-width:70%;"}
+Paso 2 de la creación de una campaña basada en acciones y con la acción desencadenante "Añadir una dirección de correo electrónico".]({% image_buster /assets/img/b2b/salesforce_create_campaign.png %}){: style="max-width:70%;"}
 
 ### Lead scoring Canvas para superar el umbral de Lead Cualificado en Marketing (MQL) {#lead-scoring}
 
@@ -165,29 +165,29 @@ Añade un paso posterior a tu actualización de usuarios para comprobar si un us
 #### Añadir paso en Canvas para comprobar los usuarios que han superado el umbral MQL 
 
 1. Añade un paso de **Ruta de audiencia** con dos grupos: "Umbral MQL" y "Todos los demás".
-2. En el grupo "Umbral de MQL", busca a los usuarios que actualmente no tengan un estado de "MQL" (por ejemplo, `lead_stage` es igual a "Lead"), pero que tengan una puntuación de lead superior al umbral que hayas definido (por ejemplo, `lead_score` superior a 50). Si es así, avanzan al siguiente paso, si no, salen.
+2. En el grupo "Umbral de MQL", busca a los usuarios que actualmente no tengan un estado de "MQL" (por ejemplo, `lead_stage` es igual a "Lead"), pero que tengan una puntuación de lead superior al umbral que hayas definido (por ejemplo, `lead_score` mayor de 50). Si es así, avanzan al siguiente paso, si no, salen.
 
-![El grupo de la ruta de audiencia "Umbral MQL" con filtros para un `lead_stage` igual a "Lead" y un `lead_score` superior a "50".]({% image_buster /assets/img/b2b/salesforce_check_mql.png %}){: style="max-width:70%;"}
+\![El grupo de la ruta de audiencia "Umbral MQL" con filtros para un `lead_stage` igual a "Lead" y un `lead_score` superior a "50".]({% image_buster /assets/img/b2b/salesforce_check_mql.png %}){: style="max-width:70%;"}
 
 {: start="3" }
 3\. Añade un paso de **Actualización de Usuario** que actualice el valor del atributo `lead_stage` del usuario a "MQL".
 
-![El paso de actualización de usuario "Actualizar a MQL" que actualiza el atributo `lead_stage` para que tenga el valor "MQL".]({% image_buster /assets/img/b2b/salesforce_update_mql.png %}){: style="max-width:70%;"}
+\![El paso de actualización de usuario "Actualizar a MQL" que actualiza el atributo `lead_stage` para que tenga el valor "MQL".]({% image_buster /assets/img/b2b/salesforce_update_mql.png %}){: style="max-width:70%;"}
 
 {: start="4" }
 4\. Añade un paso webhook que actualice Salesforce con la nueva etapa MQL.
 
-![El paso webhook "Actualizar Salesforce" con los detalles completados.]({% image_buster /assets/img/b2b/salesforce_webhook.png %}){: style="max-width:70%;"}
+El paso webhook "Actualizar Salesforce" con los detalles completados.]({% image_buster /assets/img/b2b/salesforce_webhook.png %}){: style="max-width:70%;"}
 
 ¡Ahora tu flujo Canvas actualizará a los usuarios que hayan cruzado tu umbral de MQL!
 
-![Un paso de actualización de usuarios en Canvas que comprueba si un usuario supera el umbral MQL y, si lo supera, actualiza Salesforce.]({% image_buster /assets/img/b2b/salesforce_canvas.png %}){: style="max-width:50%;"}
+\![Un paso en Canvas de actualización de usuarios que comprueba si un usuario supera el umbral MQL y, si lo supera, actualiza Salesforce.]({% image_buster /assets/img/b2b/salesforce_canvas.png %}){: style="max-width:50%;"}
 
 ## Solución de problemas
 
-Estos flujos de trabajo tienen una capacidad de depuración limitada dentro de Salesforce, por lo que recomendamos consultar el [Registro de actividad de mensajes]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab#message-activity-log) Braze para averiguar por qué falló un Webhook y si se produjo algún error.
+Estos flujos de trabajo tienen una capacidad de depuración limitada dentro de Salesforce, por lo que recomendamos consultar el [Registro de actividad de mensajes]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab#message-activity-log) Braze para averiguar por qué ha fallado un Webhook y si se ha producido algún error.
 
 Por ejemplo, un error causado por una URL no válida utilizada para la recuperación del token oAuth se mostraría como `https://[insert_instance_name].my.salesforce.com/services/oauth2/token is not a valid URL`.
 
-![Un cuerpo de respuesta de error que indica que la URL no es una URL válida.]({% image_buster /assets/img/b2b/error_message_invalid_url.png %})
+Un cuerpo de respuesta de error que indica que la URL no es válida.]({% image_buster /assets/img/b2b/error_message_invalid_url.png %})
 
