@@ -14,31 +14,31 @@ channel:
 
 # Alertas de campanha
 
-> Queremos alertar você quando algo não parecer exatamente como esperado e oferecer a tranquilidade de saber que o navio está navegando sem problemas. Os alertas de limite de campanha proporcionam tranquilidade - seja o primeiro a saber se uma campanha importante enviar mais ou menos mensagens do que o esperado.
+> Queremos alertá-lo quando algo não parecer exatamente como esperado e lhe dar a tranquilidade de saber que o navio está navegando sem problemas. Os alertas de limite de campanha proporcionam tranquilidade - seja o primeiro a saber se uma campanha importante enviar mais ou menos mensagens do que o esperado.
 
 Os alertas de campanha estão disponíveis para as seguintes campanhas:
 
 - Campanhas programadas recorrentes
 - Campanhas baseadas em ações
-- Campanhas disparadas por API
+- Campanhas acionadas por API
 
 ## Configurando seu alerta de campanha
 
-Navegue até a página de análise de dados de sua campanha para começar a configurar seu alerta. Ao selecionar **Configurar alerta**, você poderá especificar os limites superior e inferior do alerta, bem como os destinatários e os canais do alerta.
+Navegue até a página de análise de sua campanha para começar a configurar seu alerta. Ao selecionar **Set Up Alert (Configurar alerta)**, você poderá especificar os limites superior e inferior do alerta, bem como os destinatários e canais do alerta.
 
-![Caixa de diálogo Monitoramento de Campanha com dois botões: Cancelar e Salvar.]({% image_buster /assets/img_archive/campaign_alerts.png %})
+Caixa de diálogo Campaign Monitoring com dois botões: Cancelar e Salvar.]({% image_buster /assets/img_archive/campaign_alerts.png %})
 
-Para uma campanha recorrente programada, você pode definir limites superiores e inferiores para as mensagens enviadas cada vez que a campanha for enviada. Para uma campanha disparada, você pode definir limites superiores e inferiores para o número de mensagens enviadas por hora e por dia.
+Para uma campanha recorrente programada, você pode definir limites superiores e inferiores para as mensagens enviadas sempre que a campanha for enviada. Para uma campanha acionada, você pode definir limites superiores e inferiores para o número de mensagens enviadas por hora e por dia.
 
-Você pode configurar um alerta de e-mail, um alerta de webhook ou ambos. Os alertas de webhook podem ser muito úteis, pois permitem que você envie um alerta para um canal do Slack. Para saber mais sobre a integração de alertas de campanha com o Slack, consulte nossa [documentação]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/#slack-incoming-webhook-integration).
+Você pode configurar um alerta de e-mail, um alerta de webhook ou ambos. Os alertas de webhook podem ser muito úteis, pois permitem que você envie um alerta para um canal do Slack. Para obter mais informações sobre a integração de alertas de campanha com o Slack, consulte nossa [documentação]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/#slack-incoming-webhook-integration).
 
 {% alert note %}
 Ao definir alertas de campanha para campanhas futuras, você poderá receber atualizações antes do início e depois do término da campanha. Isso ocorre porque os alertas de campanha continuarão a ser enviados até que a campanha seja interrompida manualmente.
 {% endalert %}
 
-## Carga útil do webhook de alerta de campanha
+## Carga do webhook de alerta de campanha
 
-A seguir, um exemplo de carga útil para o corpo de um webhook de alerta de campanha. Este exemplo usa um alerta configurado para ser enviado quando as mensagens enviadas caírem abaixo de 500 para um determinado envio de campanha.
+A seguir, um exemplo de carga útil para o corpo de um webhook de alerta de campanha. Este exemplo usa um alerta que é configurado para ser enviado quando as mensagens enviadas caem abaixo de 500 para um determinado envio de campanha.
 
 ```
 {"text":"Your campaign 'Sample campaign' had fewer than 500 messages sent this run. It had 4 messages sent this run. See https://dashboard-01.braze.com/engagement/campaigns/5b44b00ffbe76a7024f242e6/51804f26dd365acfa700026a?page=-2",
