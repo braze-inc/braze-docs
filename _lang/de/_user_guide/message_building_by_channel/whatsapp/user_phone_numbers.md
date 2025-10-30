@@ -1,5 +1,5 @@
 ---
-nav_title: "Benutzer-Telefonnummern"
+nav_title: "Nutzertelefonnummern"
 article_title: WhatsApp Benutzer-Telefonnummern
 page_order: 1.5
 description: "Dieser Referenzartikel behandelt die Formatierung von WhatsApp-Telefonnummern, den Import von Telefonnummern sowie das Hinzufügen von Benutzern zu WhatsApp-Abonnementgruppen."
@@ -29,7 +29,7 @@ Alle U.S.-Nummern müssen gültige, 10-stellige Telefonnummern mit einer gültig
 
 Alle internationalen Nummern beginnen mit einem `+`, gefolgt von der Landesvorwahl und der Telefonnummer. (e.g `+442071838750`)
 
-![][Bild]{: style="max-width:50%;border: 0;"}
+\![]({% image_buster /assets/img/sms/e164.png %}){: style="max-width:50%;border: 0;"}
 
 Um jedoch die Genauigkeit zu gewährleisten, wenn Sie in mehrere Regionen mit unterschiedlichen Länder- oder Ortsvorwahlen senden, wird empfohlen, das Format `E.164` zu verwenden, auch für Telefonnummern mit U.S.
 
@@ -51,5 +51,4 @@ Damit ein Kunde eine WhatsApp-Nachricht erhalten kann, muss er über eine gülti
 
 Wenn mehrere Benutzer innerhalb eines Segments einer einzelnen Kampagne oder eines Canvas-Schrittes dieselbe Telefonnummer haben, wird Braze den Versand deduplizieren und nur eine Nachricht an diese eine Telefonnummer senden. 
 
-[Bild]: {% image_buster /assets/img/sms/e164.png %}
 
