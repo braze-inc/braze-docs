@@ -16,11 +16,6 @@ public class CustomDeeplinkHandler implements IBrazeDeeplinkHandler {
   private static final String TAG = BrazeLogger.getBrazeLogTag(CustomDeeplinkHandler.class);
 
   @Override
-  public void gotoNewsFeed(Context context, NewsfeedAction newsfeedAction) {
-    newsfeedAction.execute(context);
-  }
-
-  @Override
   public void gotoUri(Context context, UriAction uriAction) {
     String uri = uriAction.getUri().toString();
     // Open YouTube URLs in the YouTube app and not our app
@@ -57,10 +52,6 @@ public class CustomDeeplinkHandler implements IBrazeDeeplinkHandler {
 
 ```kotlin
 class CustomDeeplinkHandler : IBrazeDeeplinkHandler {
-
-  override fun gotoNewsFeed(context: Context, newsfeedAction: NewsfeedAction) {
-    newsfeedAction.execute(context)
-  }
 
   override fun gotoUri(context: Context, uriAction: UriAction) {
     val uri = uriAction.uri.toString()
@@ -121,9 +112,6 @@ BrazeDeeplinkHandler.setBrazeDeeplinkHandler(new IBrazeDeeplinkHandler() {
       context.startActivity(intent);
     }
   }
-
-  @Override
-  public void gotoNewsFeed(Context context, NewsfeedAction newsfeedAction) {}
 });
 ```
 
@@ -148,34 +136,24 @@ BrazeDeeplinkHandler.setBrazeDeeplinkHandler(object : IBrazeDeeplinkHandler {
       context.startActivity(intent)
     }
   }
-
-  override fun gotoNewsFeed(context: Context, newsfeedAction: NewsfeedAction) {}
 })
 ```
 
 {% endtab %}
 {% endtabs %}
 
-## ニュースフィードへのディープリンク{#Android_Deep_Advance}
-
-{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
-
-プッシュ通知から Braze ニュースフィードにディープリンクするには、ニュースフィードアクティビティの[カスタムディープリンクを作成]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#step-4-add-deep-links)します。
-
-次に、プッシュ通知キャンペーンを設定する際に ([ダッシュボード]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message)または [API]({{site.baseurl}}/api/endpoints/messaging/) を通じて) 、 ニュースフィードのディープリンクに移動するように通知を構成します。
-
-## WebViewアクティビティのカスタマイズ {#Custom_Webview_Activity}
+## WebView アクティビティのカスタマイズ {#Custom_Webview_Activity}
 
 デフォルトでは、Braze によってアプリ内でウェブサイトのディープリンクが開かれると、[`BrazeWebViewActivity`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui/-braze-web-view-activity/index.html)によって処理されます。これを変更するには、以下を行います。
 
-1. キー`com.braze.Constants.BRAZE_WEBVIEW_URL_EXTRA`で`Intent.getExtras()`から対象の URL を扱うアクティビティを新規作成します。例については、[`BrazeWebViewActivity.java`](https://github.com/braze-inc/braze-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/BrazeWebViewActivity.kt)を参照してください。
+1. キー`com.braze.Constants.BRAZE_WEBVIEW_URL_EXTRA`で`Intent.getExtras()`から対象の URL を扱うアクティビティを新規作成します。例については、[`BrazeWebViewActivity.kt`](https://github.com/braze-inc/braze-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/BrazeWebViewActivity.kt)を参照してください。
 2. そのアクティビティを`AndroidManifest.xml`に追加し、`exported`を`false`に設定します。
     ```xml
     <activity
         android:name=".MyCustomWebViewActivity"
         android:exported="false" />
     ```
-3. カスタムアクティビティを`BrazeConfig`[ビルダーオブジェクト](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-custom-web-view-activity-class.html)に設定します。ビルダーをビルドし、[`Application.onCreate()`](https://developer.android.com/reference/android/app/Application.html#onCreate()) の[`Braze.configure()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/index.html#-1864418529%2FFunctions%2F-1725759721) に渡します。
+3. カスタムアクティビティを`BrazeConfig`[ビルダーオブジェクト](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-custom-web-view-activity-class.html)に設定します。ビルダーをビルドし、[`Application.onCreate()`](https://developer.android.com/reference/android/app/Application.html#onCreate()) の[`Braze.configure()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/configure.html) に渡します。
 {% tabs %}
 {% tab JAVA %}
 
@@ -239,7 +217,7 @@ Jetpack Compose をNavHost で使用する場合にディープリンクを処�
         )
     }
     ```
-3. アプリケーションアーキテクチャによっては、現在のアクティビティに送信される新しいインテントも処理する必要があります。
+3. アプリアーキテクチャによっては、現在のアクティビティに送信された新しいインテントも処理する必要があります。
     ```kotlin
     DisposableEffect(Unit) {
         val listener = Consumer<Intent> {
