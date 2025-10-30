@@ -1,34 +1,34 @@
 ---
-nav_title: Usuários de envio de mensagens
-article_title: Direcionamento de usuários para previsão de churn
-description: "Este artigo de referência aborda as possíveis próximas etapas após a criação de uma previsão de churn, como a implementação de filtros e considerações estratégicas."
+nav_title: Mensagens para usuários
+article_title: Segmentação de usuários para previsão de churn
+description: "Este artigo de referência cobre os próximos passos potenciais após você ter criado uma previsão de churn, como implementar filtros e considerações estratégicas."
 page_order: 1.2
 
 ---
 
-# Usuários de envio de mensagens {#what-do-next}
+# Mensagens para usuários {#what-do-next}
 
 {% alert note %}
-As previsões prévias e de demonstração não permitirão que os usuários sejam direcionados para envio de mensagens, e os botões **Criar segmento** e **Criar campanha** serão desativados. Para adquirir essa funcionalidade, entre em contato com o gerente da sua conta.
+Previsões de visualização e demonstração não permitirão que os usuários sejam segmentados para mensagens, e os botões **Criar Segmento** e **Criar Campanha** estarão desativados. Para adquirir essa funcionalidade, entre em contato com seu gerente de conta.
 {% endalert %}
 
-## Implementação de filtros {#filters}
+## Implementando filtros {#filters}
 
-Depois de decidir qual intervalo de _Pontuação de risco de churn_ ou categoria deseja segmentar, você pode usar os botões **Criar segmento** ou **Criar campanha** para criar um novo segmento ou campanha que filtre os usuários com o _Pontuação de risco de churn_ ou a categoria selecionada com o controle deslizante.
+Uma vez que você decidiu qual faixa de _Pontuação de Risco de Churn_ ou categoria deseja segmentar, você pode usar os botões **Criar Segmento** ou **Criar Campanha** para criar um novo segmento ou campanha que filtre usuários com a _Pontuação de Risco de Churn_ ou categoria selecionada com o controle deslizante.
 
-Também é possível usar filtros em campanhas ou segmentos para direcionar os usuários de acordo com esse limite. Você pode filtrar os usuários por "Pontuação de churn" ou "Categoria de churn" em campanhas, canvas e segmentos, da mesma forma que usa qualquer outro filtro na Braze.
+Você também pode usar filtros em campanhas ou segmentos para segmentar os usuários de acordo com esse limite. Você pode filtrar usuários por "Pontuação de Churn" ou "Categoria de Churn" em campanhas, Canvas e segmentos, assim como você usa qualquer outro filtro no Braze.
 
-![Os filtros de churn disponíveis ao definir um público incluem Categoria de probabilidade de compra e Pontuação de probabilidade de compra.]({% image_buster /assets/img_archive/predictive_churn_filters.png %})
+\![Filtros de churn disponíveis ao definir um público incluem Categoria de Probabilidade de Compra e Pontuação de Probabilidade de Compra.]({% image_buster /assets/img_archive/predictive_churn_filters.png %})
 
 ## Considerações estratégicas
 
-Agora que você identificou e selecionou o grupo de usuários em risco de churn que você acha que precisa de alguns incentivos ou de uma nova série de envios de mensagens para mantê-los ativos e engajados, o que fazer? Você simplesmente os adiciona proativamente à sua série de usuários passivos atuais? Ou você cria uma série totalmente nova de canvas e campanhas? 
+Agora que você identificou e selecionou o grupo de usuários em risco de churn que você acredita que precisam de alguns incentivos ou uma nova série de mensagens para mantê-los ativos e engajados, o que você faz? Você apenas os adiciona proativamente à sua série de usuários passivos atual? Ou você cria uma nova série de Canvases e campanhas? 
 
-**Aqui estão algumas ideias a serem consideradas:**
+**Aqui estão algumas ideias a considerar:**
 
-- Direcione seus usuários de médio a alto risco previstos com um desconto especial, mercadoria gratuita (presente físico ou créditos digitais), conteúdo exclusivo ou acesso antecipado a uma nova experiência (produto, recurso de app, nível).<br><br>
-- Coloque esses usuários em uma Canva diária por uma semana, enviando mensagens no canal que eles mais preferem, faça uma explosão concentrada por três dias, alcançando os clientes em todos os canais, do e-mail ao Facebook, ou envie uma mensagem de uma pessoa real, solicitando feedback sobre a marca ou oferecendo uma dica profissional.<br><br>
-- Talvez você só precise de uma maneira nova e divertida de reiterar o valor da sua marca e todas as maneiras pelas quais esses clientes já encontraram valor na sua marca antes. Isso pode parecer um boletim informativo semanal específico para uma pessoa, uma série de histórias reais de usuários reais sobre sua marca ou alguma outra jogada de marketing de conteúdo.
+- Alvo seus usuários de risco médio a alto previstos com um desconto especial, mercadorias gratuitas (presente físico ou créditos digitais), conteúdo exclusivo ou acesso antecipado a uma nova experiência (produto, recurso do aplicativo, nível).<br><br>
+- Coloque esses usuários em um Canvas diário por uma semana, entregando mensagens no canal que eles mais preferem, faça uma explosão concentrada por três dias, alcançando clientes em todos os canais, desde e-mail até Facebook, ou envie uma mensagem de uma pessoa real, pedindo feedback sobre a marca ou oferecendo uma dica profissional.<br><br>
+- Talvez você só precise de uma nova e divertida maneira de reiterar o valor da sua marca, e todas as maneiras que esses clientes encontraram valor na sua antes. Isso pode parecer um boletim informativo semanal específico para personas, uma série de histórias reais de usuários reais sobre sua marca, ou algum outro tipo de estratégia de marketing de conteúdo.
 
-Lembre-se de que é possível enviar mensagens para diferentes níveis de usuários em risco de forma diferente! Assim, os clientes de maior risco poderiam obter descontos mais altos do que os clientes de médio risco, enquanto os clientes de menor risco simplesmente recebem novos tipos de envio de mensagens ou conteúdo, mas nenhum incentivo maior. Você também pode colocar outros filtros nesses segmentos para qualificar ainda mais quem recebe quais ofertas ou mensagens.
+Lembre-se de que você pode se comunicar com diferentes níveis de usuários em risco de maneiras diferentes! Assim, os clientes de maior risco podem receber descontos maiores do que os clientes de risco médio, enquanto os clientes de menor risco simplesmente recebem novos tipos de mensagens ou conteúdo, mas sem um incentivo maior. Você também pode adicionar outros filtros a esses segmentos para qualificar ainda mais quem recebe quais ofertas ou mensagens.
 
