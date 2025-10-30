@@ -11,7 +11,7 @@ tool:
 
 # Campaign and Canvas diagnostics dashboard
 
-> The purpose of this dashboard is to help you understand why messages from your Campaigns or Canvases may not have been sent as expected. It provides a high-level breakdown of message sending outcomes, allowing you to spot trends and diagnose potential issues in your messaging setup.
+> The purpose of this dashboard is to help you understand why messages from your campaigns or Canvases may not have been sent as expected. It provides a high-level breakdown of message sending outcomes, allowing you to spot trends and diagnose potential issues in your messaging setup.
 
 {% alert important %}
 The campaign and Canvas diagnostics dashboard is currently in early access. Contact your customer success manager if you're interested in participating in the early access.
@@ -67,6 +67,6 @@ This can happen for several reasons:
 
 This can occur for two primary reasons:
 
-- **Multi-channel messages:** The Campaign or Canvas step was configured to send on multiple channels (such as push and email). A single user can receive a "Sent" outcome for one channel (e.g., Email) and an "Abort" outcome for another (e.g., "Not Enabled for Channel" for Push). In this case, that one user would be counted twice in the chart: once as a "Sent" and once as an "Abort."
+- **Multi-channel messages:** The campaign or Canvas step was configured to send on multiple channels (such as push and email). A single user can receive a "Sent" outcome for one channel (e.g., Email) and an "Abort" outcome for another (e.g., "Not Enabled for Channel" for Push). In this case, that one user would be counted twice in the chart: once as a "Sent" and once as an "Abort."
   - **Example:** You send a push campaign to 100 users, targeting both iOS and Android. If a user only has an iOS device, they will receive the iOS push ("Sent") but will also trigger an abort for the Android push ("Not Enabled for Channel").
 - **Multiple Message steps (Canvas Only):** Your Canvas may have more than one message step in a given path. This dashboard aggregates all outcomes, so a single user could be counted multiple times if they pass through multiple message steps within the selected time range.
