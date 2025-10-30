@@ -1,12 +1,12 @@
-{% multi_lang_include developer_guide/prerequisites/cordova.md %} Vous devrez également mettre en place [les notifications push]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift), ce qui implique l'implémentation du framework `UNNotification`.
+{% multi_lang_include developer_guide/prerequisites/swift.md %} Vous devrez également mettre en place [les notifications push]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift), ce qui implique l'implémentation du framework `UNNotification`.
 
-Les versions SDK suivantes sont nécessaires pour recevoir des Push Stories :
+La version minimale suivante du SDK est requise pour recevoir les contenus push :
 
 {% sdk_min_versions swift:5.0.0 %}
 
 ## Mise en place des contenus push
 
-### Étape 1 : Ajout de la cible d'extension de contenu de notification {#notification-content-extension}
+### Étape 1 : Ajout de la cible d'extension de contenu de notification {#notification-content-extension}
 
 Dans votre projet d'application, sélectionnez **Fichier > Nouveau > Cible**, ajoutez une nouvelle cible `Notification Content Extension` et activez-la.
 
