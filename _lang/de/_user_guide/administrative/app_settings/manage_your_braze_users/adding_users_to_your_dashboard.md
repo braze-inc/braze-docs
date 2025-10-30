@@ -29,13 +29,13 @@ Um einen neuen Benutzer hinzuzufügen:
 Die im Profil eines Benutzers angegebene Abteilung bestimmt, welche Arten von Mitteilungen er von Braze erhält. Auf diese Weise erhält jeder nur die Mitteilungen und Benachrichtigungen, die für seine Nutzung von Braze relevant sind.
 {% endalert %}
 
-![][2]
+\![Felder für Nutzer:in.]({% image_buster /assets/img/add_new_user_2.png %}){: style="max-width:60%;"}
 
 {:start="4"}
 
 4. Für Benutzer, die keine Administratoren sind, wählen Sie die [Berechtigungen]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#editing-a-users-permissions) auf Unternehmens- und Arbeitsbereichsebene aus, die dieser Benutzer haben soll.
 
-![][3]
+\![Berechtigungen auf Workspace-Ebene mit einem Abschnitt für angepasste Berechtigungsfelder.]({% image_buster /assets/img/add_new_user_3.png %})
 
 ### Anforderungen an die E-Mail-Adresse
 
@@ -53,21 +53,21 @@ Wenn Sie einen Benutzer sperren, wird sein Konto in einen inaktiven Zustand vers
 
 Um einen Benutzer zu sperren, gehen Sie zu **Einstellungen** > **Firmenbenutzer**, suchen Sie seinen Benutzernamen und wählen Sie <i class="fa-solid fa-user-lock"></i> **Sperren**.
 
-![Einen Benutzer sperren][4]
+\![Option, um einen Nutzer:in zu sperren.]({% image_buster /assets/img_archive/suspend_user.png %})
 
 Administratoren können einen Benutzer auch sperren, indem sie seinen Namen in der Liste auswählen und in der Fußzeile auf **Benutzer sperren** klicken.
 
-![Personen bei Bearbeitung der Nutzerdaten sperren.][5]
+\![Nutzer:innen bei der Bearbeitung der Benutzerdetails suspendieren.]({% image_buster /assets/img_archive/suspend_user2.png %}){: style="max-width:70%;"}
 
 ## Zuweisung von Nutzer:innen und Verantwortlichkeiten
 
-{% multi_lang_include permissions.md content="Unterschiede" %}
+{% multi_lang_include permissions.md content="Differences" %}
 
 ## Löschung von Braze-Benutzern
 
 Um einen Benutzer zu löschen, gehen Sie zu **Einstellungen** > **Firmenbenutzer**, suchen Sie seinen Benutzernamen und wählen Sie <i class="fa fa-trash-can"></i> **Benutzer löschen**.
 
-![Einen Benutzer löschen][34]
+\![Nutzer:in löschen]({% image_buster /assets/img_archive/delete_user_new.png %})
 
 Mit der Löschung gehen folgende Daten verloren:
 
@@ -85,6 +85,12 @@ Braze speichert die folgenden Kontodaten:
 - Benutzerdefinierte Attribute oder Testdaten, die mit ihrem Konto verbunden sind
 - Kampagnen oder Canvases, die sie erstellt haben (der Name des Benutzers erscheint jedoch nicht darin, z. B. in der Spalte **Zuletzt bearbeitet von** )
 
+### Auswirkungen des Löschens eines Dashboard Nutzers:innen
+
+Wenn ein Nutzer:innen des Dashboards gelöscht wird, hat dies keine nennenswerten Auswirkungen auf die von ihm im Dashboard erstellten Assets, wie Kampagnen, Segmente und Canvase. Beachten Sie jedoch, dass im Feld **Erstellt von** für diese Assets anstelle der E-Mail Adresse des gelöschten Nutzers:innen ein Wert "null" angezeigt wird.
+
+Wenn anschließend ein neuer Dashboard-Benutzer mit der gleichen E-Mail Adresse wie der gelöschte Nutzer:innen angelegt wird, wird Braze die vom gelöschten Nutzer:innen angelegten Assets nicht erneut mit dem neuen Nutzer:innen verknüpfen. Der neue Nutzer:innen des Dashboards fängt bei Null an und wird nicht als Ersteller von bestehenden Assets im Dashboard anerkannt.
+
 ## Fehlersuche
 
 ### "E-Mail ist bereits vergeben", wenn Sie versuchen, eine Nutzer:in hinzuzufügen
@@ -98,10 +104,3 @@ Um diesen neuen Nutzer:innen zu erstellen, können Sie einen der folgenden Schri
 
 Wenn Sie die Aktivierung der Nachrichten im Posteingang nicht erhalten, wenn Sie `testing+01@braze.com` verwenden, bestätigen Sie Ihrem IT Team, dass Sie Nachrichten von dieser Art von E-Mail Adresse annehmen können. Einige Administratoren filtern Nachrichten, die an E-Mail-Adressen mit einem `+` gesendet werden.
 
-[1]: {% image_buster /assets/img/add_new_user_1.png %}
-[2]: {% image_buster /assets/img/add_new_user_2.png %}
-[3]: {% image_buster /assets/img/add_new_user_3.png %}
-[4]: {% image_buster /assets/img_archive/suspend_user.png %}
-[5]: {% image_buster /assets/img_archive/suspend_user2.png %}
-[27]: {% image_buster /assets/img/add-user.gif %} "Einen neuen Benutzerprozess hinzufügen"
-[34]: {% image_buster /assets/img_archive/delete_user_new.png %}
