@@ -13,7 +13,7 @@ channel:
 
 ## Requisitos previos
 
-Antes de que puedas probar mensajes [de Banner]({{site.baseurl}}/user_guide/message_building_by_channel/banners/creating_campaigns/) en Braze, tendrás que crear una [campaña de Banner en Braze]({{site.baseurl}}/user_guide/message_building_by_channel/banners/creating_campaigns/). Además, comprueba que la ubicación que quieres probar ya está [colocada en tu aplicación o sitio web]({{site.baseurl}}/developer_guide/banners/creating_placements). 
+Antes de que puedas probar mensajes [de Banner]({{site.baseurl}}/user_guide/message_building_by_channel/banners/creating_campaigns/) en Braze, tendrás que crear una [campaña de Banner en Braze]({{site.baseurl}}/user_guide/message_building_by_channel/banners/creating_campaigns/). Además, comprueba que la ubicación que quieres probar ya está [colocada en tu aplicación o sitio web]({{site.baseurl}}/developer_guide/banners/placements). 
 
 ## Probar un banner
 
