@@ -62,7 +62,7 @@ To set up consistent user updates, bring over existing users' LINE IDs, and sync
 5. [(Optional) Merge user profiles](#step-5-merge-profiles-optional)
 
 {% alert note %}
-Braze doesn't support more than one LINE account in a single workspace. If you have multiple LINE accounts, you can use each one in a different workspace.
+You can only have one LINE account in a single workspace. If you have multiple LINE accounts, we recommend using each one in a different workspace.
 {% endalert %}
 
 ## Step 1: Import or update existing LINE users
