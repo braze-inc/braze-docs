@@ -3,8 +3,8 @@
 ## Tipos de mensajes
 
 {% tabs %}
-{% multi_lang_include developer_guide/_shared/push_notifications/message_types/android.md %}
-{% multi_lang_include developer_guide/_shared/push_notifications/message_types/swift.md %}
+{% multi_lang_include developer_guide/_shared/in_app_messages/message_types/android.md %}
+{% multi_lang_include developer_guide/_shared/in_app_messages/message_types/swift.md %}
 {% endtabs %}
 
 ## Modelo de datos
@@ -25,7 +25,7 @@ El modelo de mensajes dentro de la aplicación proporciona la base para todos lo
 |`zippedAssetsUrl` | Los activos comprimidos preparados para mostrar contenido HTML.                                                                    |
 |`useWebView`      | Indica si la acción de hacer clic en el botón debe redirigirse utilizando una vista Web.                                            |
 |`duration`        | La duración de la visualización del mensaje.                                                                                          |
-|`clickAction`     | El tipo de acción de clic del botón. Los tres tipos son: `NEWS_FEED`, `URI`, y `NONE`.                                     |
+|`clickAction`     | El tipo de acción de clic del botón. Los tipos son: `URI`, y `NONE`.                                     |
 |`dismissType`     | El tipo de cierre del mensaje. Los dos tipos son: `SWIPE` y `AUTO_DISMISS`.                                                 |
 |`messageType`     | El tipo de mensaje dentro de la aplicación admitido por el SDK. Los cuatro tipos son: `SLIDEUP`, `MODAL`, `FULL` y `HTML_FULL`.          |
 |`extras`          | El diccionario de extras de mensajes. Valor predeterminado: `[:]`.                                                                   |
@@ -44,7 +44,7 @@ Se pueden añadir botones a los mensajes dentro de la aplicación para realizar 
 |`text`            | El texto del botón.                                                                                                     |
 |`uri`             | La URI asociada a la acción de hacer clic en el botón.                                                                            |
 |`useWebView`      | Indica si la acción de hacer clic en el botón debe redirigirse utilizando una vista Web.                                                 |
-|`clickAction`     | El tipo de acción de clic que se procesa cuando el usuario hace clic en el botón. Los tres tipos son: `NEWS_FEED`, `URI`, y `NONE`. |
+|`clickAction`     | El tipo de acción de clic que se procesa cuando el usuario hace clic en el botón. Los tipos son: `URI`, y `NONE`. |
 |`id`              | El ID del botón del mensaje.                                                                                               |
 |`toString()`      | El botón como representación de una cadena.                                                                                      |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
