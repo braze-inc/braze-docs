@@ -2,7 +2,7 @@
 nav_title: Push Max
 article_title: Push Max
 page_type: reference
-description: "Push Max amplifica las notificaciones push de Android siguiendo las notificaciones push fallidas y reenviando la notificación push cuando el usuario tenga más probabilidades de recibirla."
+description: "Push Max amplifica las notificaciones push de Android haciendo un seguimiento de las notificaciones push fallidas y reenviando el push cuando es más probable que el usuario lo reciba."
 
 permalink: /user_guide/message_building_by_channel/push/android/push_max/
 platform: Android
@@ -13,77 +13,77 @@ channel:
 
 # Push Max
 
-> Obtenga información sobre Push Max y cómo puede utilizar esta función para mejorar potencialmente la capacidad de entrega de las notificaciones push de Android a los [dispositivos OEM chinos]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/chinese_push_deliverability/).
+> Infórmate sobre Push Max y cómo puedes utilizar esta característica para mejorar potencialmente la capacidad de entrega de las notificaciones push de Android a los [dispositivos OEM chinos]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/chinese_push_deliverability/).
 
 ## ¿Qué es Push Max?
 
-Push Max amplifica las notificaciones push de Android siguiendo las notificaciones push fallidas y reenviando la notificación push cuando el usuario tenga más probabilidades de recibirla.
+Push Max amplifica las notificaciones push de Android haciendo un seguimiento de las notificaciones push fallidas y reenviando el push cuando es más probable que el usuario lo reciba.
 
-Algunos dispositivos Android fabricados por fabricantes chinos de equipos originales (OEM), como Xiaomi, OPPO y Vivo, emplean un sólido esquema de optimización de la batería para prolongar su duración. Este comportamiento puede tener la consecuencia no deseada de cerrar el procesamiento de aplicaciones en segundo plano, lo que reduce la capacidad de entrega de notificaciones push en estos dispositivos si la aplicación no está en primer plano. Esta circunstancia se da con mayor frecuencia en los mercados de Asia-Pacífico (APAC).
+Algunos dispositivos Android fabricados por fabricantes chinos de equipos originales (OEM), como Xiaomi, OPPO y Vivo, emplean un sólido esquema de optimización de la batería para prolongar su duración. Este comportamiento puede tener la consecuencia no deseada de cerrar el procesamiento en segundo plano de la aplicación, lo que reduce la capacidad de entrega de notificaciones push en estos dispositivos si la aplicación no está en primer plano. Esta circunstancia se da con mayor frecuencia en los mercados de Asia-Pacífico (APAC).
 
 ## Disponibilidad
 
-- Disponible sólo para las notificaciones push de Android
-- No compatible con mensajes basados en acciones o activados por la API
-- No se admite cuando se selecciona la opción de [enviar sólo al último dispositivo utilizado por el usuario]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#device-options).
+- Disponible sólo para notificaciones push de Android
+- No se admite para mensajes basados en acciones o desencadenados por la API.
+- No se admite cuando se selecciona la opción de [enviar sólo al último dispositivo utilizado por el usuario]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#device-options) 
 
 ## Requisitos previos
 
-Las notificaciones push enviadas mediante Push Max sólo se entregarán a dispositivos que tengan al [menos la siguiente versión mínima del SDK]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions):
+Las notificaciones push enviadas mediante Push Max sólo se entregarán a dispositivos que tengan al menos la siguiente [versión mínima del SDK]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions):
 
 {% sdk_min_versions android:29.0.1 %}
 
 ## Utilizar Push Max
 
 {% tabs %}
-{% tab Campañas %}
+{% tab Campaigns %}
 
 Para utilizar Push Max en tu campaña:
 
 1. Crea una campaña push.
-2. Seleccione **Android Push** como plataforma.
+2. Selecciona **Android Push** como plataforma.
 3. Ve al paso **Programar la entrega**.
-4. Seleccione **Enviar usando Push Max**.
+4. Selecciona **Enviar con Push Max**.
 
-![Sección Capacidad de entrega push de Android del paso Programar la entrega con la opción "Enviar usando Push Max".]({% image_buster /assets/img_archive/push_max_campaigns.png %})
+\![Sección Capacidad de entrega push de Android del paso Programar entrega con la opción "Enviar usando Push Max".]({% image_buster /assets/img_archive/push_max_campaigns.png %})
 
 {% endtab %}
 {% tab Canvas %}
 
-Para utilizar Push Max en su lienzo:
+Para utilizar Push Max en tu Canvas:
 
-1. Añade un paso de Mensaje a tu Canvas.
-2. Seleccione **Android Push** como plataforma.
-3. Vaya a la pestaña **Configuración de la entrega**.
-4. Seleccione **Enviar usando Push Max**.
+1. Añade un paso en Canvas con un mensaje.
+2. Selecciona **Android Push** como plataforma.
+3. Ve a la pestaña **Configuración de la entrega**.
+4. Selecciona **Enviar con Push Max**.
 
-![Pestaña de configuración de entrega de un paso de mensaje push de Android con la opción "Enviar usando Push Max".]({% image_buster /assets/img_archive/push_max_canvas.png %})
+\![Pestaña de configuración de entrega de un paso de mensajes push de Android con la opción "Enviar usando Push Max".]({% image_buster /assets/img_archive/push_max_canvas.png %})
 
 {% endtab %}
 {% endtabs %}
 
-Las dos funciones siguientes, Intelligent Timing y Time to Live, pueden utilizarse conjuntamente con Push Max para aumentar potencialmente la capacidad de entrega de sus notificaciones push para Android.
+Las dos características siguientes, Intelligent Timing y Time to Live, pueden utilizarse junto con Push Max para aumentar potencialmente la capacidad de entrega de tus notificaciones push de Android.
 
 ### Intelligent Timing
 
-Push Max funciona mejor cuando [la sincronización inteligente]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/) está activada. Intelligent Timing puede calcular y enviar la notificación push en el momento en que es más probable que el usuario esté utilizando la aplicación y que la notificación push llegue a su destino.
+Push Max funciona mejor cuando está activada la [función Intelligent Timing]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/). Intelligent Timing puede calcular y enviar la notificación push en el momento en que es más probable que el usuario esté utilizando la aplicación y sea más probable que se entregue el push.
 
 ### Tiempo de vida (TTL)
 
-Time to Live (TTL) puede rastrear notificaciones push fallidas a Firebase Cloud Messaging (FCM) y reintentar la notificación cuando es probable que el usuario la reciba.
+El tiempo de vida (TTL) puede realizar un seguimiento de las notificaciones push fallidas a la mensajería en la nube de Firebase (FCM) y reintentar la notificación cuando sea probable que el usuario la reciba.
 
-Por defecto, el tiempo de vida está fijado en 28 días, que es el máximo. Puede reducir el TTL predeterminado para todos los nuevos mensajes push de Android desde **Configuración** > **Configuración del área de trabajo** > **Tiempo de vida (TTL) de push**, o puede configurar el número de días por mensaje en la pestaña **Configuración** al redactar una notificación push de Android.
+Por defecto, el Tiempo de vida está predeterminado en 28 días, que es el máximo. Puedes disminuir el TTL predeterminado para todos los nuevos mensajes push de Android desde **Configuración** > **Configuración del espacio de trabajo** > **Configuración push**, o puedes configurar el número de días en función de cada mensaje en la pestaña **Configuración** al redactar una notificación push de Android.
 
-![Campo Tiempo de vida configurado a 28 días.]({% image_buster /assets/img_archive/time_to_live.png %}){: style="max-width:60%"}
+\![Campo Tiempo de vida ajustado a 28 días.]({% image_buster /assets/img_archive/time_to_live.png %}){: style="max-width:60%"}
 
-## Lo que hay que saber
+## Lo que debes saber
 
-### Códigos de promoción
+### Códigos promocionales
 
-Te recomendamos que no utilices [códigos promocionales]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes/) Braze en mensajes en los que Push Max esté activado.
+Te recomendamos que no utilices [códigos promocionales]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes/) Braze en mensajes en los que esté activado Push Max.
 
-Esto se debe a que los códigos de promoción son únicos. Si una notificación push que contiene un código promocional no se entrega, cuando esa notificación se reenvíe debido a Push Max, se enviará un nuevo código promocional. Esto puede hacer que consuma los códigos promocionales más rápido de lo esperado.
+Esto se debe a que los códigos promocionales son únicos. Si una notificación push que contiene un código promocional no se entrega, cuando esa notificación se vuelva a enviar debido a Push Max, se enviará un nuevo código promocional. Esto puede hacer que consumas códigos promocionales más rápido de lo esperado.
 
-### Propiedades de los eventos Canvas y propiedades de entrada
+### Propiedades del evento Canvas y propiedades de la entrada
 
-Es posible que Push Max no funcione como se espera si incluye en su mensaje referencias líquidas a [las propiedades de entrada del lienzo o a las propiedades de los eventos]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties). Esto se debe a que las propiedades de entrada y evento no están disponibles cuando Push Max está intentando reenviar el mensaje.
+Es posible que Push Max no funcione como se espera si incluyes en tu mensaje referencias Liquid a [propiedades de entrada del Canvas o propiedades del evento]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties). Esto se debe a que las propiedades de la entrada y del evento no están disponibles cuando Push Max intenta reenviar el mensaje.
