@@ -217,6 +217,10 @@ This report only contains the most recent 10,000 security events for your accoun
 
 The **View PII** permission is only accessible to a few select Braze users. By default, all admins have their **View PII** permission turned on in user permissions. This means they can see all standard and custom attributes that your company has defined as PII throughout the dashboard. When this permission is turned off for users, those users won't be able to see any of those attributes.
 
+{% alert note %}
+You need the **View PII** permission to use [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/building_queries/), because it allows direct access to some customer data.
+{% endalert %}
+
 For the existing team permission capabilities, refer to [Setting user permissions]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#available-limited-and-team-role-permissions).
 
 ### Defining PII
@@ -229,6 +233,8 @@ You can select the fields your company designates as PII in the dashboard. To do
 
 The following attributes can be designated as PII and hidden from Braze users who don't have **View PII** permissions.
 
+#### Potential PII attributes
+
 | Standard attributes | Custom attributes |
 | ------------------- | ----------------- |
 | {::nomarkdown} <ul> <li>Email address </li> <li> Phone number </li> <li> First name </li> <li> Last name </li> <li> Gender </li> <li> Birthday </li> <li> Device IDs </li> <li> Most recent location </li> </ul> {:/} | {::nomarkdown} <ul> <li> All custom attributes<ul><li>Individual custom attributes can be marked as PII if you don't need to hide all attributes.</li></ul></li> </ul> {:/} |
@@ -236,19 +242,19 @@ The following attributes can be designated as PII and hidden from Braze users wh
 
 ### Limited areas
 
-The following assumes that all fields are set as PII, and the users mentioned are those who use the Braze platform.
+The following assumes that all fields are set as PII, and the users mentioned are those who use the Braze platform. Also, "preceding" attributes refer to those in the [Potential PII attributes](#potential-pii-attributes) table.
 
 | Dashboard Navigation | Result | Notes |
 | -------------------- | ------ | ----- |
-| User search | The user who logs in is unable to search by email address, phone number, first name, or last name: {::nomarkdown} <ul> <li> Won't be shown the preceding standard and custom attributes when viewing a user profile. </li> <li> Can't edit the preceding standard attributes of a user profile from the Braze dashboard. </li> </ul> {:/} | Access to this section still requires access to view the user profile. |
+| User search | The user who logs in is unable to search by email address, phone number, first name, or last name: {::nomarkdown} <ul> <li> Won't be shown the preceding standard and custom attributes when viewing a user profile. </li> <li> Can't edit the preceding standard attributes of a user profile from the Braze dashboard. </li> <li> Can't update the subscription status on a user profile. </li></ul> {:/} | Access to this section still requires access to view a user profile. |
 | User import | The user can't download files from the **User Import** page. | |
-| {::nomarkdown} <ul> <li> Segments </li> <li> Campaigns </li> <li> Canvas </li> </ul> {:/} | In the **User Data** dropdown: {::nomarkdown} <ul> <li> The user won't have the <b>CSV Export Email Address</b> option. </li> <li> The user won't be provided the preceding standard and customer attributes in the CSV file when selecting <b>CSV Export User Data</b>. </li> </ul> {:/} | |
+| {::nomarkdown} <ul> <li> Segments </li> <li> Campaigns </li> <li> Canvas </li> </ul> {:/} | In the **User Data** dropdown: {::nomarkdown} <ul> <li> The user won't have the <b>CSV Export Email Address</b> option. </li> <li> The user won't be provided the preceding standard and custom attributes in the CSV file when selecting <b>CSV Export User Data</b>. </li> </ul> {:/} | |
 | Internal test group | The user won't have access to the preceding standard attributes of any user added to the internal test group. | |
 | Message activity log | The user won't have access to the preceding standard attributes for any users identified in the message activity log. | |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert note %}
-When previewing a message, the **View PII** permission isn't applied, so users can see the preceding standard attributes if they were referenced in the message through Liquid.
+When previewing a message, the **View PII** permission isn't applied, so users can see the [preceding standard attributes](#potential-pii-attributes) if they were referenced in the message through Liquid.
 {% endalert %}
 
 ## Data deletion preferences 
