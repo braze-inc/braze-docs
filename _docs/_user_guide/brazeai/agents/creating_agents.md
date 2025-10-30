@@ -210,6 +210,6 @@ If something feels off, update the agent’s configuration and test again. Run a
 
 #### Monitoring your agent
 
-In the **Logs** tab of your agent, you can monitor actual agent calls that occur in your Canvases and catalogs. This includes information such as the timestamp, calling location, duration, and token count. You can select **View** for a specific agent call to see the input, output, and user ID.
+In the **Logs** tab of your agent, you can monitor actual agent calls that occur in your Canvases and catalogs. This includes information such as the timestamp, calling location, duration, and token count. Select **View** for a specific agent call to see the input, output, and user ID.
 
 ![Logs for an agent City Trends and Recommendation Booking, which include when and where the agent has been called. The details panel shows the input prompt, output response, and an associated user ID.]( {% image_buster /assets/img/ai_agent/agent_logs.png %} )
