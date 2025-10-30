@@ -2324,9 +2324,36 @@ const articlesList = document.getElementById('articles-list');
 const formContainer = document.querySelector(".form-container");
 const formContainer1 = document.querySelector(".form-container1");
 
-async function getSearchResultByPost(subject, sid) {
+const langSelect = document.getElementById('lang_select');
+console.log("language ==>", langSelect);
+
+let selectedLanguage = 'en'; 
+
+const languageMap = {
+  'en': 'English',
+  'de': 'German',
+  'es': 'Spanish',
+  'fr': 'French',
+  'ja': 'Japanese',
+  'ko': 'Korean',
+  'pt-br': 'Portuguese'
+};
+
+langSelect.addEventListener('change', (e) => {
+  const langCode = e.target.value;
+  selectedLanguage = langCode; 
+  console.log('Language changed to:', langCode, '(', languageMap[langCode] || 'English', ')');
+
+  if (window.currentSubject && window.currentSid) {
+    getSearchResultByPost(window.currentSubject, window.currentSid, selectedLanguage);
+  }
+});
+
+async function getSearchResultByPost(subject, sid , language) {
+  const langCode = language || langSelect.value || 'en'; 
+  console.log('Resolved language code:', langCode);
     const payload = {
-        langAttr: "",
+        langAttr: "en",
         react: 1,
         isRecommendationsWidget: false,
         searchString: subject,
@@ -2334,7 +2361,12 @@ async function getSearchResultByPost(subject, sid) {
         sortby: "_score",
         orderBy: "desc",
         pageNo: 1,
-        aggregations: [],
+        aggregations: [
+        {
+          type: "language",
+          filter: [langCode] 
+        }
+      ],
         clonedAggregations: [],
         uid: "63590d8d-65fd-11f0-ada3-0242ac120007",
         resultsPerPage: 10,
@@ -2345,7 +2377,7 @@ async function getSearchResultByPost(subject, sid) {
         sid: sid,
         language: "en",
         mergeSources: false,
-        versionResults: true,
+        versionResults: false,
         suCaseCreate: false,
         visitedtitle: "",
         paginationClicked: false,
