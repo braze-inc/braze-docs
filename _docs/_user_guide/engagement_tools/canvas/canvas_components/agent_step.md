@@ -47,7 +47,7 @@ Agent outputs can be saved as strings, numbers, booleans, or objects. This makes
 | String | Message personalization (subject lines, copy, responses) |
 | Number | Scoring, thresholds, routing in [Audience Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths) |
 | Boolean | Yes/No branching in [Decision Splits]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split) |
-| Object | Defining JSON request schema to reference in a context variable and subsequent Message step |
+| Object | Leverage one or more of the above data types with a single LLM call in a predictable data structure |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 When defined, you can use an output variable throughout the Canvas by using the same template syntax as you would with a context variable. Either use the **Context Variable** segment filter, or template agent responses directly using Liquid: {% raw %}`{{context.${response_variable_name}}}` {% endraw %}.
@@ -56,7 +56,7 @@ When defined, you can use an output variable throughout the Canvas by using the 
 
 You must decide what data the agent should receive at runtime. The following options are available:  
 
-- **Include all Canvas context:** Pass all available Canvas context variables (such as [Canvas entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties)) and any other context that it has been given through Context steps.  
+- **Include all Canvas context:** Pass all available Canvas context variables (such as [Canvas entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties)) into the Agent step. You can use Context steps upstream of the agent steps to add more data to Context ahead of it.
 - **Provide values:** Pass only selected properties, such as a user’s first name or favorite color. Choose this option to only give the agent access to the values you assign here. For each **Key**, enter the [Liquid tag]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags) that defines the specific user profile field or context variable.  
 
 {% alert note %}
