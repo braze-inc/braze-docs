@@ -1,8 +1,8 @@
 ---
-nav_title: Informe
-article_title: Informes de mensajes en la aplicación
+nav_title: Informar
+article_title: Informes de mensajes dentro de la aplicación
 page_order: 5
-description: "Este artículo de referencia trata sobre los informes y análisis de mensajes dentro de la aplicación, incluidos los detalles de la campaña, el rendimiento de los mensajes y el rendimiento histórico."
+description: "Este artículo de referencia cubre los informes y análisis de mensajes dentro de la aplicación, incluidos los detalles de la campaña, el rendimiento de los mensajes y el rendimiento histórico."
 channel:
   - in-app messages
 tool:
@@ -12,7 +12,7 @@ tool:
 
 # Informes de mensajes dentro de la aplicación {#iam-reporting}
 
-> Este artículo de referencia trata sobre los informes y análisis de mensajes dentro de la aplicación, incluidos los detalles de la campaña, el rendimiento de los mensajes y el rendimiento histórico.
+> Este artículo de referencia cubre los informes y análisis de mensajes dentro de la aplicación, incluidos los detalles de la campaña, el rendimiento de los mensajes y el rendimiento histórico.
 
-{% multi_lang_include campaign_analytics.md channel="mensaje in-app" %}
+{% multi_lang_include analytics/campaign_analytics.md channel="in-app message" %}
 
