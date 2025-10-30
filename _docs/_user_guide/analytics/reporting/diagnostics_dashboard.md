@@ -25,7 +25,7 @@ It is crucial to understand that this dashboard reports on Braze's internal proc
 
 A message marked as "sent" in this dashboard means Braze successfully processed the message and handed it off to the relevant third-party sending partner. It does not guarantee final delivery to the end-user's device.
 
-When Braze "sends" a message, the final delivery depends on these external services. Consider the following examples for each channel:
+When Braze "sends" a message, the final delivery may depend on external services. Consider the following examples for each channel:
 
 - **Email:** Braze hands the message to an Email Service Provider (ESP). The ESP is then responsible for the final delivery. That ESP, for example, may report a "bounce" if the email address is invalid or the inbox is full.
 - **SMS:** Braze hands the message to an SMS gateway (like Twilio). That gateway is responsible for the final delivery to the mobile carrier.
