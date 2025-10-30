@@ -2,11 +2,7 @@
 
 ## Atribuições padrão do usuário
 
-Para definir as atribuições do usuário coletadas automaticamente pelo Braze, você pode usar os métodos setter fornecidos com o SDK.
-
-```dart
-braze.setFirstName('Name');
-```
+### Atribuições suportadas
 
 Há suporte para as seguintes atribuições:
 
@@ -24,15 +20,23 @@ Há suporte para as seguintes atribuições:
 Todos os valores de string, como nome, sobrenome, país e cidade natal, estão limitados a 255 caracteres.
 {% endalert %}
 
+### Definindo atributos padrão 
+
+Para definir atributos de usuário coletados automaticamente pelo Braze, você pode usar os métodos de configuração incluídos no SDK.
+
+```dart
+braze.setFirstName('Name');
+```
+
 ## Atributos personalizados do usuário
 
 ### Definindo atributos personalizados
 
-Além dos atributos padrão de usuários, o Braze também permite definir atributos personalizados usando vários tipos de dados diferentes:
+Além dos atributos de usuário padrão, o Braze também permite que você defina atributos personalizados usando uma série de diferentes tipos de dados:
 
 {% tabs %}
 {% tab String %}
-Para definir um atributo personalizado com um valor `string`:
+Para definir um atributo personalizado com um valor de `string`:
 
 ```dart
 braze.setStringCustomUserAttribute("custom string attribute", "string custom attribute");
@@ -40,7 +44,7 @@ braze.setStringCustomUserAttribute("custom string attribute", "string custom att
 
 {% endtab %}
 {% tab Inteiro %}
-Para definir um atributo personalizado com um valor `integer`:
+Para definir um atributo personalizado com um valor de `integer`:
 
 ```dart
 // Set Integer Attribute
@@ -51,7 +55,7 @@ braze.incrementCustomUserAttribute("key", integer);
 
 {% endtab %}
 {% tab Double %}
-Para definir um atributo personalizado com um valor `double`:
+Para definir um atributo personalizado com um valor de `double`:
 
 ```dart
 braze.setDoubleCustomUserAttribute("custom double attribute key", double);
@@ -59,7 +63,7 @@ braze.setDoubleCustomUserAttribute("custom double attribute key", double);
 
 {% endtab %}
 {% tab Booleano %}
-Para definir um atributo personalizado com um valor `boolean`:
+Para definir um atributo personalizado com um valor de `boolean`:
 
 ```dart
 braze.setBoolCustomUserAttribute("custom boolean attribute key", boolean);
@@ -67,14 +71,14 @@ braze.setBoolCustomUserAttribute("custom boolean attribute key", boolean);
 {% endtab %}
 
 {% tab Data %}
-Para definir um atributo personalizado com um valor `date`:
+Para definir um atributo personalizado com um valor de `date`:
 
 ```dart
 braze.setDateCustomUserAttribute("custom date attribute key", date);
 ```
 {% endtab %}
 {% tab Vetor %}
-Para definir um atributo personalizado com um valor `array`:
+Para definir um atributo personalizado com um valor de `array`:
 
 ```dart
 // Adding to an Array
@@ -89,7 +93,9 @@ braze.removeFromCustomAttributeArray("key", "attribute");
 Os valores de atributos personalizados têm um comprimento máximo de 255 caracteres; valores mais longos serão truncados.
 {% endalert %}
 
-### Desconfigurando um atributo personalizado
+### Removendo atributos personalizados
+
+Para remover um atributo personalizado, passe a chave do atributo relevante para o método `unsetCustomUserAttribute`.
 
 ```dart
 braze.unsetCustomUserAttribute('attribute_key');
