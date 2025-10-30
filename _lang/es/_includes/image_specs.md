@@ -61,7 +61,7 @@ Todos los mensajes dentro de la aplicación tienen un tamaño de imagen recomend
 
 | Tipo | Relación de aspecto | Calidad de imagen | Notas |
 | --- | --- | --- | --- |
-| Modal (sólo imagen) | 1:1 | Alta resolución 1200 x 2000 px <br> Resolución mínima 600 x 600 px | El mensaje cambiará de tamaño para adaptarse a imágenes de la mayoría de las relaciones de aspecto. |
+| Modal (sólo imagen) | 1:1 | Resolución máxima recomendada: 1200 x 2000 px <br> Resolución mínima: 600 x 600 px | El mensaje cambiará de tamaño para adaptarse a imágenes de la mayoría de las relaciones de aspecto. La resolución máxima recomendada tiene una relación de aspecto 3:5, que puede no proporcionar resultados óptimos. Aunque las imágenes más grandes son utilizables, pueden provocar tiempos de carga más largos. <br> La relación de aspecto ideal para las imágenes es 1:1, y el incumplimiento de esta relación puede desencadenar una advertencia durante la carga. Esta advertencia es una sugerencia para obtener mejores resultados y no impide subir imágenes más grandes. |
 | Modal con texto | 29:10 | Alta resolución 1450 x 500 px <br> Resolución mínima 600 x 205 px | Las imágenes altas se reducirán y se centrarán horizontalmente. Las imágenes anchas se recortarán por los bordes izquierdo y derecho. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 }
 
