@@ -404,13 +404,10 @@ erDiagram
 
 ### `IOSFOREGROUND_SHARED`
 
-{% alert important %}
-This event is not supported by the [Swift SDK](https://github.com/braze-inc/braze-swift-sdk) and is now deprecated using the [Obj-C SDK](https://github.com/Appboy/appboy-ios-sdk).
-{% endalert %}
-
 ```json
 // USERS_MESSAGES_PUSHNOTIFICATION_IOSFOREGROUND_SHARED
 // When a user receives a push notification while the app is open.
+// This event is not supported by the Swift SDK and is deprecated in the Obj-C SDK.
 
 {
     "primary_key": {
