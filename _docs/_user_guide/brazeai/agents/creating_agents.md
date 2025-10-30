@@ -161,20 +161,34 @@ You can select [brand guidelines]({{site.baseurl}}/user_guide/administrative/app
 
 Select from a list of catalogs for your agent to reference and further personalize your message.
 
-{% alert important %}
-For an agent to reference a catalog, the catalog must include a [selection]({{site.baseurl}}/user_guide/data/activation/catalogs/selections).
+{% alert note %}
+Currently, for an agent to be able to reference a desired column of a catalog, that column must exist in at least one [selection]({{site.baseurl}}/user_guide/data/activation/catalogs/selections) of the catalog.
 {% endalert %}
 
-### Response schema
+### Output format
 
-Use the **Response Schema** field to structure the agent's output by providing how to organize and define the output using JSON. Let's say you want to collect user feedback for their most recent dining experience at your restaurant chain. You can insert the following response schema to return a data object that includes a sentiment variable and reasoning variable.
+Use the **Output format** field to structure the agent's output by providing how to organize and define the output using JSON. Let's say you want to collect user feedback for their most recent dining experience at your restaurant chain. You can insert the following JSON to return a data object that includes a sentiment variable and reasoning variable.
 
 ```json
-example
+{
+  "type": "object",
+  "properties": {
+    "sentiment": {
+      "type": "string"
+    },
+    "reasoning": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "sentiment",
+    "reasoning"
+  ]
+}
 ```
 
 {% alert note %}
-Response schemas aren't currently supported by Claude AI. If you're using an Anthropic key, we recommend manually adding the structure to the agent prompt.
+Output formats aren't currently supported by Claude AI. If you're using an Anthropic key, we recommend manually adding the structure to the agent prompt.
 {% endalert %}
 
 #### Testing your agent  

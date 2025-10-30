@@ -43,7 +43,7 @@ Agents are configured with instructions (system prompts) that define how they be
 | Context | Data passed into the agent at runtime wherever it is deployed, such as user profile fields or catalog rows. This input provides the information the agent uses to generate outputs. |
 | [Output variable]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/agent_step/#step-3-define-the-output-variable) | The output the agent produces when used in Canvas steps. Output variables store the agent’s result to personalize content or guide workflow paths. Output variables can be a string, number, or boolean data type.  |
 | Invocation | A single run of the agent. This counts against your daily and total limits. |
-| [Response schema]({{site.baseurl}}/user_guide/brazeai/agents/creating_agents/#response-schema) | The OpenAPI JSON schema for the agent to reference in the response output. |
+| [Output format]({{site.baseurl}}/user_guide/brazeai/agents/creating_agents/#output-format) | The predefined data structure of the agent's response.. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Limitations
