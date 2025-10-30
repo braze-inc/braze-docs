@@ -21,19 +21,15 @@ The campaign and Canvas diagnostics dashboard is currently in early access. Cont
 
 ## Sent and delivered
 
-It is crucial to understand that this dashboard reports on Braze's internal processing of a message, not its final delivery status.
+It is crucial to understand that this dashboard reports on Braze's internal processing of a message, not its final delivery status. This dashboard helps you diagnose issues that happen before this handoff.
 
-A message marked as "Sent" in this dashboard means Braze successfully processed the message and handed it off to the relevant third-party sending partner.
-
-It does not guarantee final delivery to the end-user's device.
+A message marked as "sent" in this dashboard means Braze successfully processed the message and handed it off to the relevant third-party sending partner. It does not guarantee final delivery to the end-user's device.
 
 When Braze "sends" a message, the final delivery depends on these external services. Consider the following examples for each channel:
 
 - **Email:** Braze hands the message to an Email Service Provider (ESP). The ESP is then responsible for the final delivery. That ESP, for example, may report a "bounce" if the email address is invalid or the inbox is full.
 - **SMS:** Braze hands the message to an SMS gateway (like Twilio). That gateway is responsible for the final delivery to the mobile carrier.
 - **Push:** Braze hands the message to the appropriate push notification service (such as Apple Push Notification service for iOS or Firebase Cloud Messaging for Android). That service is responsible for the final delivery of the notification to the device.
-
-This dashboard helps you diagnose issues that happen before this handoff.
 
 ### Data freshness
 
