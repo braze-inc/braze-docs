@@ -41,7 +41,6 @@ You can find the diagnostics dashboard by going to **Analytics** > **Dashboard B
 
 To run the dashboard and view your data, configure the filters at the top of the page:
 
-- **Select Time Range:** Choose the time period you wish to analyze.
 - **Select Campaigns or Canvases:** Choose to view data for one or more campaigns or Canvases.
 
 Select **Run** to load the data for your selected filters.
