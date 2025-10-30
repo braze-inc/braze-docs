@@ -13,7 +13,7 @@ channel:
 
 ## Conditions préalables
 
-Avant de pouvoir tester les messages des bannières dans Braze, vous devez créer une [campagne de communication dans Braze]({{site.baseurl}}/user_guide/message_building_by_channel/banners/creating_campaigns/). En outre, vérifiez que le placement que vous souhaitez tester est déjà [placé dans votre application ou votre site web.]({{site.baseurl}}/developer_guide/banners/creating_placements) 
+Avant de pouvoir tester les messages des bannières dans Braze, vous devez créer une [campagne de communication dans Braze]({{site.baseurl}}/user_guide/message_building_by_channel/banners/creating_campaigns/). En outre, vérifiez que le placement que vous souhaitez tester est déjà [placé dans votre application ou votre site web.]({{site.baseurl}}/developer_guide/banners/placements) 
 
 ## Tester une bannière
 
