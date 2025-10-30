@@ -1,6 +1,6 @@
-{% multi_lang_include developer_guide/prerequisites/swift.md %} 또한 Swift SDK에 대한 [푸시 알림을 설정해야]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift) 합니다. [Safari v16.4](https://developer.apple.com/documentation/safari-release-notes/safari-16_4-release-notes) 이상을 사용하는 iOS 및 iPadOS 사용자에게만 푸시 알림을 보낼 수 있다는 점에 유의하세요.
+{% multi_lang_include developer_guide/prerequisites/web.md %} 웹 소프트웨어 개발 키트에 대한 [푸시 알림도 설정해야]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=web) 합니다. [Safari v16.4](https://developer.apple.com/documentation/safari-release-notes/safari-16_4-release-notes) 이상을 사용하는 iOS 및 iPadOS 사용자에게만 푸시 알림을 보낼 수 있다는 점에 유의하세요.
 
-## 모바일용 Safari 푸시 설정
+## 모바일용 Safari 푸시 설정하기
 
 ### 1단계: 매니페스트 파일 만들기 {#manifest}
 
@@ -38,12 +38,12 @@
 
 ### 4단계: 홈 화면에 추가 {#add-to-homescreen}
 
-인기 있는 브라우저(예: Safari, Chrome, FireFox, Edge)는 모두 최신 버전에서 웹 푸시 알림을 지원합니다. iOS 또는 iPadOS에서 푸시 권한을 요청하려면 **공유 대상** > **홈 화면에 추가를** 선택하여 웹사이트를 사용자의 홈 화면에 추가해야 합니다. [홈 화면에 추가를](https://support.apple.com/guide/iphone/bookmark-favorite-webpages-iph42ab2f3a7/ios#iph4f9a47bbc) 사용하면 사용자가 웹사이트를 북마크에 추가하여 귀사의 아이콘을 소중한 홈 화면 공간에 추가할 수 있습니다.
+인기 있는 웹 브라우저(예: Safari, Chrome, FireFox, Edge)는 모두 이후 버전에서 웹 푸시 알림을 지원합니다. iOS 또는 iPadOS에서 푸시 권한을 요청하려면 **공유 대상** > **홈 화면에 추가를** 선택하여 웹사이트를 사용자의 홈 화면에 추가해야 합니다. [홈 화면에 추가를](https://support.apple.com/guide/iphone/bookmark-favorite-webpages-iph42ab2f3a7/ios#iph4f9a47bbc) 사용하면 사용자가 웹사이트를 북마크에 추가하여 귀사의 아이콘을 소중한 홈 화면 공간에 추가할 수 있습니다.
 
 ![웹사이트를 북마크하고 홈 화면에 저장하는 옵션을 보여주는 iPhone]({% image_buster /assets/img/push_implementation_guide/add-to-homescreen.png %}){: style="max-width:40%"}
 
 ### 5단계: 기본 푸시 프롬프트 표시 {#push-prompt}
-이제 앱을 홈 화면에 추가한 후 사용자가 버튼 클릭과 같은 작업을 수행할 때 푸시 권한을 요청할 수 있습니다. [`requestPushPermission`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestpushpermission) 메서드를 사용하거나 [노코드 푸시 프라이머 인앱 메시지]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/)를 사용하여 수행할 수 있습니다.
+앱을 홈 화면에 추가한 후 사용자가 버튼을 클릭하는 등의 동작을 수행할 때 푸시 권한을 요청할 수 있습니다. [`requestPushPermission`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestpushpermission) 메서드를 사용하거나 [노코드 푸시 프라이머 인앱 메시지]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/)를 사용하여 수행할 수 있습니다.
 
 {% alert note %}
 프롬프트를 수락하거나 거부한 후 홈 화면에 웹사이트를 삭제하고 다시 설치해야 프롬프트가 다시 표시될 수 있습니다.
