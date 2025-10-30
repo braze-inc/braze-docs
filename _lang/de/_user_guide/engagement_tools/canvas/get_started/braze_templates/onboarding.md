@@ -33,20 +33,20 @@ Passen wir die Canvas-Details an, um unser Ziel zu erreichen.
 
 1. Wählen Sie **Bearbeiten** neben dem Namen der Vorlage.
 
-![Der aktuelle Titel und die Beschreibung des Canvas.]({% image_buster /assets/img/canvas_templates/onboarding_old_name_description.png %}){: style="max-width:60%;"}
+\![Der aktuelle Titel und die Beschreibung des Canvas.]({% image_buster /assets/img/canvas_templates/onboarding_old_name_description.png %}){: style="max-width:60%;"}
 
 {:start="2"}
 2\. Aktualisieren Sie den Namen von Canvas, um anzugeben, dass Canvas für die Aufnahme neuer Nutzer:innen gedacht ist.
 3\. Aktualisieren Sie die Beschreibung und geben Sie an, dass das Canvas eine Abbildung einer Nutzer-Journey enthält, die Vertrauen und Loyalität fördert.
 4\. Fügen Sie das Tag **Onboarding** hinzu, damit wir auf der Canvas-Startseite danach filtern können.
 
-![Der neue Name, die Beschreibung und der Tag für das Canvas.]({% image_buster /assets/img/canvas_templates/onboarding_new_name_description.png %}){: style="max-width:60%;"}
+\![Der neue Name, die Beschreibung und der Tag für das Canvas.]({% image_buster /assets/img/canvas_templates/onboarding_new_name_description.png %}){: style="max-width:60%;"}
 
 ### Schritt 2: Konversions-Events zuweisen
 
 Als nächstes weisen wir unsere Konvertierungsereignisse zu. Konversions-Events sind eine Art Metrik, mit der Sie den Erfolg des Canvas messen können. Wählen Sie für **Benutzerdefinierter Ereignisname** die Option **E-Mail-Klick** als benutzerdefiniertes Ereignis.
 
-![Primäres Konversions-Event – A mit dem Konversions-Typ „Führt nutzerdefiniertes Event aus“ und dem Namen des nutzerdefinierten Events „E-Mail-Klick“. Es gibt eine Frist von 4 Tagen für die Konversion.][1]
+\![Primäre Konversion-Event - A mit dem Konversionstyp "Führt angepasstes Event durch" mit dem angepassten Event-Namen "E-Mail Klick". Es gibt eine Frist von 4 Tagen für die Konversion.]({% image_buster /assets/img/canvas_templates/onboarding1.png %})
 
 Das bedeutet, dass neue Nutzer:innen bis zu vier Tage Zeit haben, die Willkommens-E-Mail anzuklicken. In diesem Fall möchten wir, dass unsere neuen Kunden ein Gefühl der Dringlichkeit verspüren, sich bei PantsLabyrinth zu engagieren und eine wiederkehrende Lieferung von saisonaler Kleidung zu abonnieren.
 
@@ -56,7 +56,7 @@ Da das Ziel darin besteht, neue Benutzer von PantsLabyrinth anzusprechen, werden
 
 Als nächstes passen Sie das **Eingabefenster** an, um festzulegen, wann Benutzer das Canvas betreten können. Nehmen wir an, es gibt Ende Oktober ein neues HosenLabyrinth-Abonnement. Hier stellen wir die Startzeit auf **2024/10/28 8:00 Uhr** ein. Optional können wir den Nutzer:innen auch erlauben, den Canvas in ihrer lokalen Zeitzone aufzurufen.
 
-![Ein Eingabefenster mit der Startzeit 28\. Oktober 2024 um 8 Uhr. Nutzer:innen werden diese Nachricht in ihrer Ortszeit eingeben.][4]
+\![Ein Eingangsfenster mit der Startzeit 28\. Oktober 2024 um 8 Uhr. Nutzer:innen werden diese Nachricht in ihrer Ortszeit eingeben.]({% image_buster /assets/img/canvas_templates/onboarding4.png %})
 
 ### Schritt 4: Targeting Ihrer Zielgruppe
 
@@ -82,7 +82,7 @@ Jetzt erhalten unsere Benutzer diese Willkommens-E-Mail, nachdem sie eine Sitzun
 
 Im Schritt „Zielgruppenpfad“ namens **Zielgruppen-Split** können wir den Filter für unsere engagierten Nutzer:innen anpassen. In der Vorlage ist der Filter **Hat geklickt für den Schritt Willkommens-E-Mail**, was bedeutet, dass die Benutzer in zwei Gruppen aufgeteilt werden: Benutzer, die die Willkommens-E-Mail angeklickt haben, und diejenigen, die dies nicht getan haben.
 
-![Ein Schritt zur Aufteilung der Zielgruppe mit einem Pfad für engagierte Nutzer:innen und einem Pfad für alle anderen.][2]{: style="max-width:70%;"}
+\![Ein Schritt zur Aufteilung der Zielgruppe mit einem Pfad für engagierte Nutzer:innen und einem Pfad für alle anderen.]({% image_buster /assets/img/canvas_templates/onboarding2.png %}){: style="max-width:70%;"}
 
 Als Online-Kleiderhändler hat PantsLabyrinth auch eine aktive Gruppe von mobilen Nutzern. In einem separaten Onboarding-Canvas können wir also auch den folgenden Filter auswählen, um unsere mobilen Nutzer:innen zu identifizieren und in diese Segmente aufzuteilen:
 
@@ -101,7 +101,3 @@ Nachdem Sie unser Canvas getestet und überprüft haben, um sicherzustellen, das
 In unserer [Checkliste für die Zeit vor und nach dem Start eines]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/pre_post_launch_checklist/#things-to-consider-before-launch) Canvas finden Sie die Dinge, die Sie beachten sollten, bevor und nachdem Sie ein Canvas starten.
 {% endalert %}
 
-[1]: {% image_buster /assets/img/canvas_templates/onboarding1.png %}
-[2]: {% image_buster /assets/img/canvas_templates/onboarding2.png %}
-[3]: {% image_buster /assets/img/canvas_templates/onboarding3.png %}
-[4]: {% image_buster /assets/img/canvas_templates/onboarding4.png %}
