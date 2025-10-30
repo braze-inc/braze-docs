@@ -1,0 +1,3 @@
+{% alert important %}
+Ihre Nachricht wird nur an Nutzer:innen gesendet, die bereits den Bedingungen entsprechen, die Sie im Schritt **Targeting** festgelegt haben. Danach müssen sie immer noch den Trigger erfüllen, den Sie im Schritt **Zustellung planen** definieren. Stellen Sie sich die Zielgruppe wie einen Wartesaal vor - nur die Personen, die sich bereits darin befinden, können weitergehen, wenn die nächste Aktion stattfindet.
+{% endalert %}
