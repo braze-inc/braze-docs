@@ -52,6 +52,8 @@ Agent outputs can be saved as strings, numbers, booleans, or objects. This makes
 
 When defined, you can use an output variable throughout the Canvas by using the same template syntax as you would with a context variable. Either use the **Context Variable** segment filter, or template agent responses directly using Liquid: {% raw %}`{{context.${response_variable_name}}}` {% endraw %}.
 
+To use a specific property from an object output variable, use dot notation to access that property using Liquid: {% raw %}`{{context.${response_variable_name}.field_name}}`{% endraw %}
+
 ### Step 4: Decide what context to provide the agent  
 
 You must decide what data the agent should receive at runtime. The following options are available:  
