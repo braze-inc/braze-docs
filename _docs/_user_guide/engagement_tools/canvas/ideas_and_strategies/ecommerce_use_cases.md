@@ -128,29 +128,17 @@ The following settings are pre-configured in your Canvas:
 - Message step 
     - Review the email template and HTML block with a Liquid templating example to add products to your message in the pre-built template. If you use your own email template, you can also reference [Liquid variables](#message-personalization), as demonstrated in the following section.
 
-### How the abandoned cart re-entry logic works
 
-The Abandoned Cart Canvas allows users to re-enter the flow as they update their cart, but this behavior changes once checkout begins. Understanding this logic helps ensure your messaging strategy aligns with customer behavior.
+### How abandoned cart re-entry logic works
 
-#### Cart update loop
+When a user starts the checkout process, their cart is marked as `checkout_started`. From that point onward, any further cart updates with the same cart ID will not qualify the user to re-enter the abandoned cart user journey.
 
-When a user adds items to their cart or updates their cart contents, they can re-enter the Abandoned Cart Canvas. This re-entry mechanism keeps their cart data and messaging up to date based on their latest selections.
+1. When a user adds an item to their cart, they enter the Canvas.
+2. Each time they add or update items, they re-enter the Canvas—this keeps their cart data and messaging up to date.
+3. When the user starts the checkout process, their cart is tagged as `checkout_started`, and they exit the Canvas.
+4. Any future cart updates using the same cart ID will not trigger re-entry because this cart has already moved into the checkout stage.
 
-**Example flow:**
-1. User adds Product A to their cart → Enters the Abandoned Cart Canvas
-2. User adds Product B to their cart → Re-enters the Canvas with updated cart data
-3. User removes Product A → Re-enters the Canvas with the updated cart containing only Product B
-
-#### Checkout started flag
-
-Once a user starts the checkout process, their cart is flagged with `checkout_started`. From this point forward, any subsequent updates to the same cart ID will **not** trigger re-entry into the Abandoned Cart Canvas. This prevents messaging users who have already moved into the checkout stage.
-
-**Example flow:**
-1. User adds items to their cart → Enters the Abandoned Cart Canvas
-2. User starts checkout → Cart is flagged as `checkout_started` and user exits the Canvas
-3. User returns and adds more items to the same cart → Does **not** re-enter the Abandoned Cart Canvas
-
-This behavior ensures that once customers progress to checkout, they're targeted by the [Abandoned Checkout Canvas](#abandoned-checkout) instead, which is designed for users further along in the purchase journey.
+This behavior ensures that once customers progress to checkout, they're targeted by the [abandoned checkout Canvas](#abandoned-checkout) instead, which is designed for users further along in the purchase journey.
 
 ### Abandoned cart product personalization for emails {#abandoned-cart-checkout}
 
