@@ -220,7 +220,7 @@ glossaries:
     description: 시간에 따른 캠페인의 다양한 통계를 매일 시리즈로 검색할 수 있습니다.
     tags:
       - Campaigns
-  - name: "<a href='/docs/api/endpoints/export/campaigns/get_campaign_details/'>/캠페인/세부정보</a>"
+  - name: "<a href='/docs/api/endpoints/export/campaigns/get_campaign_details/'>/campaigns/details</a>"
     description: 지정된 캠페인에 대한 관련 정보를 검색합니다.
     tags:
       - Campaigns

@@ -14,13 +14,13 @@ You might have gotten here from searching a term for an integration or feature t
 
 ## Deprecated articles
 
-- [Custom push broadcast receiver for Android]({{site.baseurl}}/help/release_notes/deprecations/custom_broadcast_receiver/)
-- [Eclipse SDK setup]({{site.baseurl}}/help/release_notes/deprecations/eclipse_setup_deprecated/)
-- [TLS 1.0 and 1.1 deprecation]({{site.baseurl}}/help/release_notes/deprecations/tls_deprecation/)
-- [Twilio webhook integration]({{site.baseurl}}/help/release_notes/deprecations/twilio/)
-- [Apptimize partnership]({{site.baseurl}}/help/release_notes/deprecations/apptimize/)
-- [Grouparoo partnership]({{site.baseurl}}/help/release_notes/deprecations/grouparoo)
-- [Shopify `checkout.liquid` deprecation]({{site.baseurl}}/help/release_notes/deprecations/shopify_checkout/)
+- [Custom push broadcast receiver for Android]({{site.baseurl}}/releases/deprecations/custom_broadcast_receiver/)
+- [Eclipse SDK setup]({{site.baseurl}}/releases/deprecations/eclipse_setup_deprecated/)
+- [TLS 1.0 and 1.1 deprecation]({{site.baseurl}}/releases/deprecations/tls_deprecation/)
+- [Twilio webhook integration]({{site.baseurl}}/releases/deprecations/twilio/)
+- [Apptimize partnership]({{site.baseurl}}/releases/deprecations/apptimize/)
+- [Grouparoo partnership]({{site.baseurl}}/releases/deprecations/grouparoo)
+- [Shopify `checkout.liquid` deprecation]({{site.baseurl}}/releases/deprecations/shopify_checkout/)
 
 ## Deprecations log
 
@@ -83,7 +83,7 @@ Support for the [Twilio webhook integration]({{site.baseurl}}/partners/twilio/) 
 
 **Support withdrawn**: August 2019
 
-If you are currently using [Apptimize with Braze]({{site.baseurl}}/help/release_notes/deprecations/apptimize), you will not experience a disruption of service. You can still set Apptimize custom attributes to Braze user profiles. However, no formal escalation support with the partner will be provided.
+If you are currently using [Apptimize with Braze]({{site.baseurl}}/releases/deprecations/apptimize), you will not experience a disruption of service. You can still set Apptimize custom attributes to Braze user profiles. However, no formal escalation support with the partner will be provided.
 
 ### Original in-app messages
 

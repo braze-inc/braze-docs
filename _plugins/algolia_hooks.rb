@@ -7,6 +7,7 @@ module Jekyll
       def self.before_indexing_each(record, node, context)
         # Do not index deprecation warnings
         #return nil if node.matches?('.deprecation-notice')
+
         # Add my name as an author to each record
         #record[:author] = 'Myself'
         path_map = ['type','category']
@@ -37,15 +38,15 @@ module Jekyll
             record[:content] = record[:content].force_encoding('UTF-8').encode('UTF-8', invalid: :replace, undef: :replace, replace: '').gsub(/^\d+\n/,'').gsub(/[\u0080-\u00ff]/,'')[0 ... 4400]
           end
           # fix glossary generating algolia record that's too big
-          if record[:glossaries]
-            record.delete(:glossaries)
-          end
-          if record[:comment]
-            record.delete(:comment)
-          end
-          record
+          record.delete(:glossaries)
+          record.delete(:comment)
+          # remove llm keys added from _plugins/llms_txt_generator.rb
+          record.delete(:llm_markdown_content)
+          record.delete(:__export_merged_md)
+
+          return record
         else
-          nil
+          return nil
         end
       end
     end

@@ -69,7 +69,7 @@ Thanks for traveling with us! Enjoy your unique discount code: SUMMRTRVLS240.
 ```
 {% endraw %}
 
-{% details 完全な Liquid コード %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 Happy summer, {{${first_name} | default: "traveler"}}!
@@ -136,7 +136,7 @@ Hi {{${first_name} | default: 'there'}}, don't forget to complete your purchase!
 ```
 {% endraw %}
 
-{% details 完全な Liquid コード %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% if {{custom_attribute.${cart_items}}} != blank %}
@@ -200,7 +200,7 @@ Get ready! Our Anniversary Sale is in {{ difference_days }} days!
 ```
 {% endraw %}
 
-{% details 完全な Liquid コード %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% assign sale_date = {{custom_attribute.${anniversary_date}}} | date: "%s" %}
@@ -270,7 +270,7 @@ We heard {{this_month}} is a special month! Enjoy a 50% discount on your purchas
 ```
 {% endraw %}
 
-{% details 完全な Liquid コード %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% assign this_month = 'now' | date: "%B" %}
@@ -397,7 +397,7 @@ We noticed it’s been a while since you last purchased {{custom_attribute.${fav
 ```
 {% endraw %}
 
-{% details 完全な Liquid コード %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% if {{custom_attribute.${favorite_product}}} == blank or {{custom_attribute.${last_purchase_date}}} == blank %}

@@ -11,46 +11,62 @@ search_tag: Partner
 partner_top_header: "Message Orchestration"
 
 valid_partner_list:
-- name: Alpaco
-  url: /docs/partners/message_orchestration/channel_extensions/email_templates/alpaco/
-- name: Antavo
-  url: /docs/partners/message_orchestration/channel_extensions/loyalty/antavo/
-- name: Jampp
-  url: /docs/partners/message_orchestration/additional_channels/retargeting/jampp/
-- name: Remerge
-  url: /docs/partners/message_orchestration/additional_channels/retargeting/remerge/
-- name: Facebook
-  url: /docs/partners/message_orchestration/additional_channels/retargeting/facebook/
-- name: Passkit
-  url: /docs/partners/message_orchestration/additional_channels/mobile_wallet/passkit/
-- name: Inkit
-  url: /docs/partners/message_orchestration/additional_channels/direct_mail/inkit/
-- name: Lob
-  url: /docs/partners/message_orchestration/additional_channels/direct_mail/lob/
-- name: 메신저
-  url: /docs/partners/message_orchestration/additional_channels/instant_chat/messenger/
-- name: Rokt Calendar
-  url: /docs/partners/message_orchestration/additional_channels/calendar/rokt_calendar/
+- name: Jacquard
+  url: /docs/partners/jacquard/
 - name: Adjust
-  url: /docs/partners/message_orchestration/attribution/adjust/
-- name: AppsFlyer
-  url: /docs/partners/message_orchestration/attribution/appsflyer/
-- name: 브랜치
-  url: /docs/partners/message_orchestration/attribution/branch/branch_for_deeplinking/
-- name: Kochava
-  url: /docs/partners/message_orchestration/attribution/kochava/
-- name: Singular
-  url: /docs/partners/message_orchestration/attribution/singular/
-- name: Vizbee
-  url: /docs/partners/message_orchestration/attribution/vizbee_for_tv_deeplinking/
+  url: /docs/partners/adjust/
 - name: Airbridge
-  url: /docs/partners/message_orchestration/attribution/airbridge/
-- name: Dyspatch.io
-  url: /docs/partners/message_orchestration/channel_extensions/email_templates/dyspatch/
+  url: /docs/partners/airbridge/
+- name: 브랜치
+  url: /docs/partners/branch_for_attribution/
+- name: 브랜치
+  url: /docs/partners/branch_for_deeplinking/
+- name: Kochava
+  url: /docs/partners/kochava/
+- name: Singular
+  url: /docs/partners/singular/
+- name: Contentful
+  url: /docs/partners/contentful/
+- name: AppsFlyer
+  url: /docs/partners/appsflyer/
+- name: Vizbee
+  url: /docs/partners/vizbee/
+- name: Adikteev
+  url: /docs/partners/adikteev/
+- name: Contentsquare
+  url: /docs/partners/contentsquare/
+- name: Facebook
+  url: /docs/partners/facebook/
+- name: Jampp
+  url: /docs/partners/jampp/
+- name: LiveRamp
+  url: /docs/partners/liveramp/
+- name: Looker
+  url: /docs/partners/looker/
+- name: Quikly
+  url: /docs/partners/quikly/
+- name: Remerge
+  url: /docs/partners/remerge/
+- name: Alpaco
+  url: /docs/partners/alpaco/
+- name: Blayer
+  url: /docs/partners/blayer/
+- name: Dyspatch
+  url: /docs/partners/dyspatch/
+- name: Email Love
+  url: /docs/partners/email_love/
+- name: IAM Studio
+  url: /docs/partners/iam_studio/
+- name: Knak
+  url: /docs/partners/knak/
+- name: Sageflo
+  url: /docs/partners/sageflo/
+- name: SmarterSends
+  url: /docs/partners/smartersends/
 - name: Stensul
-  url: /docs/partners/message_orchestration/channel_extensions/email_templates/stensul/
+  url: /docs/partners/stensul/
 - name: Stripo
-  url: /docs/partners/message_orchestration/channel_extensions/email_templates/stripo/
+  url: /docs/partners/stripo/
 - name: Taxi for Email
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/taxi_for_email/
 - name: Talon.One
@@ -87,8 +103,6 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/additional_channels/retargeting/quikly/
 - name: IAM Studio(NNT)
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/iam_studio/
-- name: Ada
-  url: /docs/partners/message_orchestration/channel_extensions/surveys/ada/
 - name: B.Layer
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/blayer/
 - name: Sageflo
@@ -113,4 +127,6 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/additional_channels/instant_chat/dixa/
 - name: Narvar
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/narvar/
+- name: Tapcart
+  url: /docs/partners/message_orchestration/channel_extensions/ecommerce/tapcart/
 ---

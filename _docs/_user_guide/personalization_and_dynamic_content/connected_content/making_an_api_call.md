@@ -171,6 +171,15 @@ After the token is saved, it can be dynamically templated into the subsequent Co
 ```
 {% endraw %}
 
+### Editing credentials
+
+You can edit the credential name for authentication types.
+
+- For basic authentication, you can update the username and password. Note that the previously entered password will not be visible.
+- For token authentication, you can update the header key-value pairs and the allowed domain. Note that the previously set header values will not be visible.
+
+![The option to edit credentials.]({% image_buster /assets/img/connected_content/edit_credentials.png %}){: style="max-width:60%"}
+
 ## Connected Content IP allowlisting
 
 When a message using Connected Content is sent from Braze, the Braze servers automatically make network requests to our customers' or third parties' servers to pull back data. With IP allowlisting, you can verify that Connected Content requests are actually coming from Braze, adding an additional layer of security.
@@ -214,8 +223,14 @@ It’s expected that a Connected Content API call can be made more than once per
 
 Connected Content doesn’t have its own rate limit. Instead, the rate limit is based on the message-sending rate. We recommend setting the messaging rate limit below your intended Connected Content rate limit if there are more Connected Content calls than messages sent.  
 
-### What’s caching behavior?
+### What is caching behavior?
 
 By default, POST requests do not cache. However, you can add the `:cache_max_age` parameter to force the POST call to cache.
 
 Caching can help reduce duplicate Connected Content calls. However, it isn’t guaranteed to always result in a single Connected Content call per user.
+
+### What is the Connected Content HTTP default behavior? 
+
+{% multi_lang_include connected_content.md section='default behavior' %}
+
+{% multi_lang_include connected_content.md section='http post' %}

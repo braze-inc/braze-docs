@@ -24,11 +24,17 @@ guide_featured_list:
 
 The core of Braze Pilot is its library of app simulations. Each app is a realistic simulation of an industry-specific fictional brand, instrumented to log a rich assortment of events and attributes that create endless opportunities for powering common Braze use cases.
 
+{% tabs local %}
+{% tab Fitness %}
+
 ### Steppington
 
 Steppington is a fitness app with workouts, exercise goals, and a Steppington+ premium service. It offers several places to demonstrate [Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards), a section that can be revealed with [feature flags]({{site.baseurl}}/developer_guide/feature_flags), and a robust library of custom event logging that make it possible to illustrate many customer journeys for this industry.
 
 ![The home page for Steppington with icons for marathon training, yoga, cycling, and weights.]({% image_buster /assets/img/braze_pilot/steppington_app.png %}){:style="max-width:50%"}
+
+{% endtab %}
+{% tab eCommerce %}
 
 ### PantsLabyrinth
 
@@ -36,11 +42,17 @@ PantsLabyrinth is an eCommerce app that sells (you guessed it) pants! The PantsL
 
 ![A product page for PantsLabyrinth with options to add jeans to cart.]({% image_buster /assets/img/braze_pilot/pantslabyrinth_app.png %}){:style="max-width:50%"}
 
+{% endtab %}
+{% tab Streaming %}
+
 ### MovieCanon 
 
 MovieCanon is a streaming service perfectly designed to illustrate common Braze use cases around content engagement. 
 
 ![The MovieCanon app with different thrillers to watch.]({% image_buster /assets/img/braze_pilot/moviecanon_app.png %}){:style="max-width:50%"}
+
+{% endtab %}
+{% endtabs %}
 
 ## How Pilot connects with your Braze dashboard
 
@@ -76,7 +88,7 @@ This connection status means Braze recognizes your user profile through a unique
 
 To check what type of connection you have, you can check the connection status at the top right of your screen.
 
-{% tabs %}
+{% tabs local %}
 {% tab Anonymous user  %}
 
 **Anonymous** indicates you're logging data as an anonymous user.

@@ -1524,6 +1524,7 @@ validurls['/docs/developer_guide/platform_integration_guides/android/content_car
 validurls['/docs/developer_guide/platforms/android/content_cards/example'] = '/docs/developer_guide/content_cards?sdktab=android';
 validurls['/docs/developer_guide/platform_integration_guides/android/content_cards/gif'] = '/docs/developer_guide/platforms/android/content_cards/gif';
 validurls['/docs/developer_guide/platform_integration_guides/android/content_cards/jetpack_compose'] = '/docs/developer_guide/platforms/android/content_cards/jetpack_compose';
+validurls['/docs/developer_guide/platforms/android/content_cards/jetpack_compose'] = '/docs/developer_guide/content_cards/customizing_cards/feed/';
 validurls['/docs/developer_guide/platform_integration_guides/android/geofences'] = '/docs/developer_guide/platforms/android/geofences';
 validurls['/docs/developer_guide/platform_integration_guides/android/google_play_privacy'] = '/docs/developer_guide/platforms/android/google_play_privacy';
 validurls['/docs/developer_guide/platform_integration_guides/android/in_app_messages'] = '/docs/developer_guide/platforms/android/in_app_messages';
@@ -2958,6 +2959,38 @@ validurls['/docs/help/release_notes/deprecations/twilio'] = '/docs/releases/depr
 validurls['/docs/help/release_notes'] = '/docs/releases/release_notes';
 validurls['/docs/help/release_notes/sdk_changelogs'] = '/docs/releases/sdk_changelogs';
 
-validurls['/docs/help/release_notes'] = '/docs/releases/home';
+validurls['/docs/help/release_notes/'] = '/docs/releases/home';
+validurls['/docs/help/help_articles/content_cards/'] = '/docs/user_guide/message_building_by_channel/content_cards/';
+validurls['/docs/help/help_articles/content_cards/empty_content_card_feed/'] = '/docs/user_guide/message_building_by_channel/content_cards/';
+validurls['/docs/help/help_articles/email/'] = '/docs/user_guide/message_building_by_channel/email/';
+validurls['/docs/help/help_articles/email/open_rates/'] = '/docs/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/';
+validurls['/docs/help/help_articles/email/html_looks_strange/'] = '/docs/user_guide/message_building_by_channel/email/html_editor/troubleshooting/';
+validurls['/docs/help/help_articles/segments/'] = '/docs/user_guide/engagement_tools/segments/';
+validurls['/docs/help/help_articles/segments/my_filter_options_have_changed/'] = '/docs/user_guide/engagement_tools/segments/troubleshooting/';
+validurls['/docs/help/help_articles/segments/segment_showing_0_users/'] = '/docs/user_guide/engagement_tools/segments/measuring_segment_size/';
+validurls['/docs/help/help_articles/segments/segmentation_logic_with_and_or/'] = '/docs/user_guide/engagement_tools/segments/creating_a_segment/#segmentation-logic-using-and-and-or';
+validurls['/docs/help/help_articles/segments/exporting_large_segments/'] = '/docs/user_guide/data/distribution/export_braze_data/segment_data_to_csv#exporting-segment-data-to-csv';
+validurls['/docs/help/help_articles/segments/search_exact_text/'] = '/docs/user_guide/engagement_tools/segments/managing_segments/#searching-for-segments';
+validurls['/docs/help/help_articles/docs/'] = '/docs/user_guide/';
+validurls['/docs/help/help_articles/docs/scroll_bar_overlap/'] = '/docs/user_guide/';
+validurls['/docs/help/faqs/'] = '/docs/';
+
+validurls['/docs/help/help_articles/push/'] = '/docs/user_guide/message_building_by_channel/push/';
+validurls['/docs/api/objects_filters/user_attributes_object/'] = '/docs/help/help_articles/push/push_token_migration/';
+validurls['/docs/help/help_articles/push/push_enablement/'] = '/docs/user_guide/message_building_by_channel/push/users_and_subscriptions/';
+validurls['/docs/help/help_articles/push/push_clicks_unexpectedly_open_in_app/'] = '/docs/user_guide/message_building_by_channel/push/troubleshooting/';
+validurls['/docs/help/help_articles/push/push_unsubscribes/'] = '/docs/user_guide/message_building_by_channel/push/push_reporting#push-performance';
+validurls['/docs/help/help_articles/push/reducing_payload_size/'] = '/docs/user_guide/message_building_by_channel/push/best_practices/';
+validurls['/docs/help/help_articles/push/resetting_push_permissions/'] = '/docs/user_guide/message_building_by_channel/push/troubleshooting/';
+validurls['/docs/user_guide/offerfit/integration'] = '/docs/user_guide/brazeai/decisioning_studio/integration';
+validurls['/docs/user_guide/offerfit/building_use_cases'] = '/docs/user_guide/brazeai/decisioning_studio/building_use_cases';
+validurls['/docs/partners/ecommerce/shopify_legacy/getting_started_shopify/'] = '/docs/shopify_overview/';
+validurls['/docs/editor_blocks_dnd_iam/'] = '/docs/user_guide/engagement_tools/messaging_fundamentals/drag_and_drop_editor_blocks/?sdktab=in-app%20messages';
+
+validurls['/docs/partners/additional_channels_and_extensions/calendar/rokt_calendar/'] = '/docs/partners/additional_channels_and_extensions/';
+validurls['/docs/partners/rokt_calendar/'] = '/docs/partners/additional_channels_and_extensions/';
+
+validurls['/docs/help/help_articles/push/push_token_migration/'] = '/docs/api/objects_filters/user_attributes_object/#migrating-push-tokens';
+validurls['/docs/api/objects_filters/context_object/'] = '/docs/user_guide/engagement_tools/canvas/canvas_components/context/';
 
 // validurls['OLD'] = 'NEW';

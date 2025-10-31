@@ -45,5 +45,5 @@ guide_menu_list:
 ---
 
 {% alert important %}
-Braze Audience Syncs to Criteo, Pinterest, Snapchat, and TikTok are Audience Sync Pro integrations. For more information on these integrations, reach out to your Braze account manager.
+Availabilty for Braze Audience Syncs to Criteo, Pinterest, Snapchat, and TikTok depends on your Braze package. Reach out to your account manager or customer success manager to get started.
 {% endalert %}
