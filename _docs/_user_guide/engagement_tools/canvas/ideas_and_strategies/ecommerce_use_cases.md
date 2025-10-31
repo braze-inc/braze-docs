@@ -138,7 +138,7 @@ When a user starts the checkout process, their cart is marked as `checkout_start
 3. When the user starts the checkout process, their cart is tagged as `checkout_started`, and they exit the Canvas.
 4. Any future cart updates using the same cart ID will not trigger re-entry because this cart has already moved into the checkout stage.
 
-This behavior ensures that once customers progress to checkout, they're targeted by the [abandoned checkout Canvas](#abandoned-checkout) instead, which is designed for users further along in the purchase journey.
+When users move to the checkout user journey, they're targeted by the [abandoned checkout Canvas](#abandoned-checkout) instead, which is designed for users further along in the purchase journey.
 
 ### Abandoned cart product personalization for emails {#abandoned-cart-checkout}
 
