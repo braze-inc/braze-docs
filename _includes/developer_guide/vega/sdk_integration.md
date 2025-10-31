@@ -1,8 +1,8 @@
-## About the Vega Braze SDK
+## About the Braze Vega SDK
 
-The Vega Braze SDK lets you collect analytics and display rich in-app messages to your users. 
+The Braze Vega SDK lets you collect analytics and display rich in-app messages to your users. Most methods in the Braze Vega SDK are asynchronous and return promises that should be awaited or resolved.
 
-## Integrating the Vega SDK
+## Integrating the Braze Vega SDK
 
 ### Step 1: Install the Braze library
 
