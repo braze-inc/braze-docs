@@ -1,6 +1,6 @@
 ## About the Vega Braze SDK
 
-The Vega Braze SDK lets you collect analytics and display rich in-app messages, push, and Content Card messages to your users. The Vega SDK has many similarities with the Web SDK's API, with the main differences being that the User class no longer exists and that most methods are now asynchronous due to the nature of Vega's storage APIs.
+The Vega Braze SDK lets you collect analytics and display rich in-app messages to your users. 
 
 ## Integrating the Vega SDK
 
