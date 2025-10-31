@@ -110,5 +110,7 @@ Refer to the following table for recommended image sizes. Smaller, high-quality 
 
 A high percentage of emails are read on mobile devices. Using [deep linking]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/) is a great practice for engaging with these mobile email recipients. With push notifications and in-app messages, a deep link takes the user directly to a specified destination within an app. 
 
-However, emails don't provide the clarity of knowing whether recipients have the app installed. So, avoiding deep linking helps prevent error messages for these email recipients who do not have the app.
+However, emails don't provide the clarity of knowing whether recipients have the app installed. While deep links are not supported in emails, you can leverage universal links, which act as regular URLs and can be configured to open the app, open a specific page of the app, redirect the user to the app store, or redirect the user to a webpage when the app is not installed.
+
+To learn more, see [Universal links and App Links]({{site.baseurl}}/user_guide/message_building_by_channel/email/universal_links/).
 
