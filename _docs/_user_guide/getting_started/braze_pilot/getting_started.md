@@ -24,7 +24,10 @@ Next, accept the terms and conditions, and then enter your work email into the f
 
 Braze Pilot enables you to initialize the Braze SDK against any Braze dashboard. Once the SDK is initialized, Pilot will start sending engagement data to Braze and allow you to trigger any messaging launched from that Braze dashboard.
 
-There are two methods for configuring the SDK connection in Pilot.
+There are two methods for configuring the SDK connection in Pilot: Demo QR codes and the setup wizard.
+
+{% tabs local %}
+{% tab Demo QR codes %}
 
 ### Method 1: Demo QR codes
 
@@ -34,6 +37,9 @@ Scan a QR code that includes all details required to initialize the SDK, create 
 | --- | --- |
 | ![QR code for Android.]({% image_buster /assets/img/braze_pilot/android_qr_code.png %}){:style="max-width:60%"} | ![QR code for iOS.]({% image_buster /assets/img/braze_pilot/ios_qr_code.png %}){:style="max-width:60%"} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+{% endtab %}
+{% tab Setup wizard %}
 
 ### Method 2: Setup wizard
 
@@ -45,11 +51,14 @@ This connection is workspace-specific. This means that if you initialize the con
 
 ![The workspace dropdown in the Braze dashboard with "Demo - Braze" selected as the active workspace.]({% image_buster /assets/img/braze_pilot/dashboard_workspace.png %}){:style="max-width:60%"}
 
+{% endtab %}
+{% endtabs %}
+
 ## Step 4: Allow push permissions
 
 Finally, it’s recommended that you allow the app to send you push permissions if you’d like to test push capabilities through the app. You can give the app these permissions in the following ways: updating the settings for the app in your device settings, or launching a push primer message from Braze to the app.
 
-{% tabs %}
+{% tabs local %}
 {% tab Update the settings for the app %}
 
 Open your device settings and locate Braze Pilot. Then, update the settings to allow notifications to appear on your lock screen.

@@ -1,5 +1,5 @@
 ---
-nav_title: Braze テンプレートの使用
+nav_title: Brazeテンプレートを使う
 article_title: Braze テンプレートの使用
 page_order: 2
 layout: dev_guide

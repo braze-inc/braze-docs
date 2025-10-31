@@ -32,7 +32,7 @@ Enter the minimum required information:
 
 | Field         | Description |
 | ------------- | ----------- |
-| **API Key**   | Your [Braze API Key]({{site.baseurl}}/api/basics/#about-rest-api-keys), found in the Braze dashboard under **Settings > API Keys**. |
+| **API Key**   | Your [Braze API Key]({{site.baseurl}}/api/basics/#about-rest-api-keys), found in the Braze dashboard under **Settings** > **App Settings**. |
 | **API Endpoint** | Your REST endpoint URL. Your endpoint will depend on the Braze URL for [your instance]({{site.baseurl}}/api/basics/#endpoints). |
 | **SDK Version**  | The most recent `MAJOR.MINOR` version of the Web Braze SDK listed in the [changelog]({{site.baseurl}}/developer_guide/changelogs/?sdktab=web). For example, if the latest version is `4.1.2`, enter `4.1`. For more information, see [About SDK version management]({{site.baseurl}}/developer_guide/sdk_integration/version_management/). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
@@ -40,6 +40,10 @@ Enter the minimum required information:
 For additional initialization settings, select **Braze Initialization Options** and choose any options you need.
 
 ![The list of Braze Initialization Options in under 'Tag Configuration'.]({% image_buster /assets/img/web-gtm/braze_initialization_options.png %}){: style="max-width:65%;"}
+
+### Step 4: Set to Trigger on *all pages*
+
+The initialization tag should be run on all pages of your site. This allows you to use Braze SDK methods and record web push analytics.
 
 ### Step 5: Verify your integration
 
