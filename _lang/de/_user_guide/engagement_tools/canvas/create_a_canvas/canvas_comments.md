@@ -12,7 +12,7 @@ tool: Canvas
 
 > Kommentare in Canvase können ein großartiger Ort für die Zusammenarbeit Ihres Marketing-Teams sein, um die Feinheiten Ihrer Canvase zu identifizieren, zu diskutieren und zu überprüfen. Während Sie ein Canvas erstellen, können Sie Kommentare abgeben und verwalten, um diese Bereiche zu identifizieren, die möglicherweise zusätzliches Feedback von Ihren Kollegen benötigen.
 
-![][1]{: style="float:right;max-width:70%;margin-left:15px;"}
+\![]({% image_buster /assets/img_archive/canvas_comments.png %}){: style="float:right;max-width:70%;margin-left:15px;"}
 
 ## Vorteile
 
@@ -48,7 +48,7 @@ Sie können die Kommentare oder Themen eines anderen Benutzers nicht löschen. J
 
 ## Benachrichtigungen verwalten
 
-![][2]{: style="float:right;max-width:70%;margin-left:15px;"}
+\![]({% image_buster /assets/img_archive/canvas_notifications.png %}){: style="float:right;max-width:70%;margin-left:15px;"}
 
 Um E-Mail-Benachrichtigungen für ein Canvas zu verwalten, öffnen Sie die Seitenleiste und klicken Sie auf <i class="fa-solid fa-bell"></i> **Benachrichtigungen**. Hier können Sie Ihre Benachrichtigungseinstellungen auswählen.
 
@@ -59,5 +59,3 @@ Um die Benachrichtigung über Kommentare für ein Canvas auszuschalten, wählen 
 Beachten Sie, dass der Schalter **Kommentare innerhalb von Canvases** unter diesen Benachrichtigungseinstellungen steuert, ob Sie sich für oder gegen Benachrichtigungen in allen Canvases entschieden haben. Wenn Sie diese Einstellung also deaktivieren, erhalten Sie keine E-Mail-Benachrichtigungen über Kommentaraktionen.
 
 
-[1]: {% image_buster /assets/img_archive/canvas_comments.png %}
-[2]: {% image_buster /assets/img_archive/canvas_notifications.png %}
