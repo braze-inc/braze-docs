@@ -8,7 +8,7 @@ description: "Cet article apporte des réponses aux questions fréquemment posé
 
 ---
 
-# Foire aux questions
+# Questions fréquemment posées
 
 > Cette page fournit des réponses aux questions fréquemment posées sur la bibliothèque multimédia de Braze.
 
@@ -16,7 +16,7 @@ description: "Cet article apporte des réponses aux questions fréquemment posé
 
 Non, il n'y a pas de limite de stockage pour les ressources de la bibliothèque multimédia. Toutefois, la taille des ressources est limitée (5 Mo maximum).
 
-### Les ressources téléchargées ont-elles des dates d’expiration ?
+### Existe-t-il des dates d'expiration pour les ressources téléchargées ?
 
 Non, les ressources téléchargées dans la bibliothèque multimédia seront conservées pendant toute la durée de votre contrat avec Braze.
 
@@ -24,27 +24,27 @@ Non, les ressources téléchargées dans la bibliothèque multimédia seront con
 
 Non, la bibliothèque multimédia ne prend pas en charge les fichiers vidéo. Nous vous recommandons de les héberger en externe ou sur une plateforme telle que YouTube.
 
-### Puis-je rogner tous les types d’images ?
+### Puis-je recadrer tous les types d'images ?
 
 Non, la bibliothèque multimédia ne permet pas de recadrer les images GIF.
 
-### Comment rogner une image existante ?
+### Comment recadrer une image existante ?
 
-Vous pouvez recadrer une image existante en la sélectionnant dans la bibliothèque multimédia et en cliquant sur **Recadrer et enregistrer une nouvelle image**. 
+Vous pouvez recadrer une image existante en la sélectionnant dans la bibliothèque multimédia et en cliquant sur **Recadrer & Enregistrer une nouvelle image**. 
 
-![Aperçu de l'image de la bibliothèque multimédia.]({% image_buster /assets/img_archive/media_library_crop1.png %}){: height="75%" width="75%"}
+\![Aperçu de l'image de la bibliothèque multimédia.]({% image_buster /assets/img_archive/media_library_crop1.png %}){: height="75%" width="75%"}
 
-Vous serez ensuite redirigé vers un outil de rognage avec lequel vous pourrez sélectionner votre type de proportions et modifier le nom de la nouvelle image. Lorsque vous cliquez sur **Enregistrer**, votre nouvelle image peut être utilisée.
+Vous serez alors redirigé vers un compositeur de recadrage où vous pourrez sélectionner votre type de ratio et modifier le nom de la nouvelle image. Lorsque vous sélectionnez **Enregistrer**, votre nouvelle image peut être utilisée.
 
-![Fenêtre permettant de recadrer et d'enregistrer l'image de la bibliothèque multimédia.]({% image_buster /assets/img_archive/media_library_crop2.png %}){: height="75%" width="75%"}
+\![Fenêtre permettant de recadrer et d'enregistrer l'image de la bibliothèque multimédia.]({% image_buster /assets/img_archive/media_library_crop2.png %}){: height="75%" width="75%"}
 
-### Le délai d’attente expire lorsque j’essaie de télécharger mon image. Que puis-je faire ?
+### Mon image est toujours bloquée lorsque j'essaie de la télécharger. Que puis-je faire à ce sujet ?
 
-Cela peut se produire pour diverses raisons. Assurez-vous tout d’abord que votre image est optimisée avant d’essayer de la télécharger. Il s'agit de passer votre image dans un optimiseur d'image tel qu'[ImageOptim](https://imageoptim.com/mac).
+Cela peut se produire pour diverses raisons, mais une solution courante consiste à s'assurer que votre image est optimisée avant d'essayer de la télécharger. Il s'agit de passer votre image dans un optimiseur d'image tel qu'[ImageOptim](https://imageoptim.com/mac).
 
-Par ailleurs, si votre image a été créée dans Photoshop (ou un logiciel similaire) et qu’elle comporte de nombreuses couches, vous pouvez aussi fusionner ou réduire le nombre de couches.
+En outre, si votre image a été créée dans Photoshop (ou un logiciel similaire) et comporte de nombreux calques, la fusion et la réduction du nombre de calques peuvent également s'avérer utiles.
 
-### Comment se fait-il que je n’arrive à télécharger aucune image dans les éditeurs de notifications push ?
+### Pourquoi ne puis-je pas télécharger n'importe quelle image dans les compositeurs de poussée ?
 
-La plupart des éditeurs comportent des restrictions sur les formats d’image autorisés.
+En effet, la plupart des compositeurs imposent des restrictions sur la taille du rapport d'image autorisé.
 

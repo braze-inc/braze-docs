@@ -1,114 +1,114 @@
 ---
-nav_title: Adoção de Recursos
-article_title: Adoção de Recursos
+nav_title: Adoção de recursos
+article_title: Adoção de recursos
 page_order: 3
 page_type: reference
-description: "Este artigo descreve como usar um modelo de canva Braze para enviar mensagens personalizadas em tempo hábil para destacar os benefícios e dicas de uso."
+description: "Este artigo descreve como usar um modelo do Braze Canvas para enviar mensagens personalizadas em tempo hábil para destacar os benefícios e as dicas de uso."
 tool: Canvas
 ---
 
 # Adoção de recursos
 
-> Este modelo é projetado para impulsionar o uso de seus novos recursos, produtos existentes, ofertas adicionais ou qualquer outra área que você gostaria que seus clientes experimentassem. Ao aproveitar a comunicação personalizada e um conjunto estruturado de mensagens, você pode apresentar novas funcionalidades aos usuários de forma fluida e obter feedback valioso deles. 
+> Esse modelo foi projetado para impulsionar o uso de seus novos recursos, produtos existentes, ofertas adicionais ou qualquer outra área que você gostaria que seus clientes experimentassem. Ao aproveitar a comunicação personalizada e um conjunto estruturado de mensagens, é possível apresentar novos recursos aos usuários e obter feedback valioso deles. 
 
-Neste artigo, vamos guiá-lo por um caso de uso para o Modelo de **Adoção de Funcionalidades**, que é destinado às etapas de retenção e fidelidade do ciclo de vida do usuário. Após este artigo, você terá personalizado uma jornada do usuário que incentiva os usuários a utilizarem novos recursos e coleta o sentimento do usuário.
+Neste artigo, vamos orientá-lo em um caso de uso do modelo **Adoção de recursos**, que se destina aos estágios de retenção e fidelidade do ciclo de vida do usuário. Após este artigo, você terá personalizado uma jornada de usuário que incentiva os usuários a usar novos recursos e coleta o sentimento do usuário.
 
 ## Pré-requisitos
 
-Para usar com sucesso este modelo, você precisará de um [evento personalizado]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) que faça referência a quando os usuários usaram o recurso.
+Para usar esse modelo com êxito, você precisará de um [evento personalizado]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) que faça referência a quando os usuários usaram o recurso.
 
 ## Adaptar o modelo às suas necessidades
 
-Vamos supor que você trabalhe na Calorie Rocket, um app de entrega de comida, que recentemente lançou o Cruise Control, um recurso para agendar entregas de comida recorrentes, e você quer incentivar mais usuários a adotar esse novo recurso. No nosso exemplo, usaremos o evento personalizado `scheduled_delivery` para rastrear quando os usuários tentaram o recurso de Controle de Cruzeiro.
+Digamos que você trabalhe na Calorie Rocket, um aplicativo de entrega de alimentos, que lançou recentemente o Cruise Control, um recurso para agendar entregas recorrentes de alimentos, e você quer incentivar mais usuários a adotar esse novo recurso. Em nosso exemplo, usaremos o evento personalizado `scheduled_delivery` para rastrear quando os usuários experimentaram o recurso Cruise Control.
 
-Para acessar o modelo de volta ao estoque, ao criar um novo canva, selecione **Usar um modelo de canva** > **Modelos de Braze**. Em seguida, ao lado de **Adoção de Recursos**, selecione **Aplicar Modelo**. Agora, podemos examinar o modelo para adequá-lo às nossas necessidades.
+Para acessar o modelo em estoque, ao criar um novo Canvas, selecione **Usar um modelo de Canvas** > **Modelos de brasagem**. Em seguida, ao lado de **Feature Adoption**, selecione **Apply Template (Aplicar modelo**). Agora, podemos examinar o modelo para adequá-lo às nossas necessidades.
 
 ### Etapa 1: Configurar os detalhes
 
-Vamos ajustar os detalhes do Canva para refletir nosso objetivo.
+Vamos ajustar os detalhes do Canvas para refletir nosso objetivo.
 
 1. Selecione **Editar** ao lado do nome do modelo.
 
-![O título e a descrição atuais do Canva.]({% image_buster /assets/img/canvas_templates/feature_adoption/select_edit_details.png %}){: style="max-width:60%;"}
+\![O título e a descrição atuais do Canvas.]({% image_buster /assets/img/canvas_templates/feature_adoption/select_edit_details.png %}){: style="max-width:60%;"}
 
 {:start="2"}
-2\. Atualize o canva para especificar que o canva é para direcionamento de usuários para coletar feedback dos usuários.
-3\. Atualize a descrição para especificar que o canva é para incentivar os usuários a enviar feedback e acompanhar o sentimento dos usuários em relação ao novo recurso de Controle de Cruzeiro.
-4\. Adicione a tag **Feature adoption** para que possamos filtrá-la na página inicial do canva.
+2\. Atualize o nome do Canvas para especificar que o Canvas é para direcionar usuários para coletar feedback do usuário.
+3\. Atualize a descrição para especificar que o Canvas serve para incentivar os usuários a enviar feedback e acompanhar a opinião dos usuários sobre o novo recurso Cruise Control.
+4\. Adicione a tag **Feature adoption** para que possamos filtrá-la na página inicial do Canvas.
 
-![O novo nome e descrição para o canva. A nova descrição afirma: Uma adoção de canva para rastrear a adoção e o sentimento do usuário para o Controle de Cruzeiro, uma funcionalidade para agendar entregas de alimentos recorrentes.]({% image_buster /assets/img/canvas_templates/feature_adoption/enter_new_canvas_name.png %}){: style="max-width:60%;"}
+\![O novo nome e a descrição do Canvas. A nova descrição indica: Um Canvas de adoção de recursos para rastrear a adoção e o sentimento dos usuários em relação ao Cruise Control, um recurso para agendar entregas recorrentes de alimentos.]({% image_buster /assets/img/canvas_templates/feature_adoption/enter_new_canvas_name.png %}){: style="max-width:60%;"}
 
 ### Etapa 2: Atribuir um evento de conversão
 
-Em seguida, vamos adicionar um evento de conversão para nosso canva para sinalizar a adoção de recursos. Isso nos permitirá personalizar a jornada experimental em nossa experiência do usuário mais tarde.
+Em seguida, vamos adicionar um evento de conversão ao nosso Canvas para sinalizar a adoção do recurso. Isso nos permitirá personalizar o Caminho do Experimento em nossa jornada do usuário posteriormente.
 
-1. Em **atribuir Eventos de Conversão**, selecione **Adicionar Evento de Conversão**.
-2. Em **Evento de Conversão Primária - A**, selecione **Executa Evento Personalizado** como o **tipo de evento de conversão**.
+1. Em **Assign Conversion Events (Atribuir eventos de conversão**), selecione **Add Conversion Event (Adicionar evento de conversão**).
+2. Em **Primary Conversion Event - A**, selecione **Performs Custom Event** como o **tipo de evento de conversão**.
 3. Selecione nosso evento personalizado `scheduled_delivery`.
 4. Manteremos o prazo de conversão em três dias.
 
-![A janela de evento de conversão no canva.]({% image_buster /assets/img/canvas_templates/feature_adoption/assign_conversion_event_cruise_control.png %}){: style="max-width:90%;"}
+\![A janela do evento de conversão no Canvas.]({% image_buster /assets/img/canvas_templates/feature_adoption/assign_conversion_event_cruise_control.png %}){: style="max-width:90%;"}
 
-### Etapa 3: Ajustar o cronograma de entrada
+### Etapa 3: Adaptar o cronograma de entrada
 
-Nosso objetivo é incentivar nossos usuários a adotarem o Controle de Cruzeiro, mas não queremos que nosso envio de mensagens seja muito frequente. Então, manteremos este canva como uma entrega agendada e faremos os seguintes ajustes na seção **Opções Baseadas em Tempo**.
+Nosso objetivo é incentivar nossos usuários a adotar o Cruise Control, mas não queremos que nossas mensagens sejam muito frequentes. Portanto, manteremos esse Canvas como uma entrega programada e faremos os seguintes ajustes na seção **Time-Based Options**.
 
-1. Atualizar **Frequência de Entrada** para **Semanal**.
+1. Atualize **a frequência de entrada** para **semanal**.
 2. Mantenha a recorrência como está.
-3. Selecione **Mon** para direcionar usuários no início da semana.
-4. Selecione o horário de início para o canva.
-5. Atualize os **parâmetros de término** para encerrar o canva no último dia do ano.
+3. Selecione **Mon** para segmentar os usuários no início da semana.
+4. Selecione o horário de início do nosso Canvas.
+5. Atualize os **parâmetros de término** para encerrar o Canvas no último dia do ano.
 
-Vamos manter a opção de permitir que os usuários entrem no canva em seu fuso local.
+Manteremos a opção de permitir que os usuários insiram o Canvas em seu fuso horário local.
 
 ### Etapa 4: Selecione o público-alvo
 
-Agora, vamos definir nosso público-alvo atualizando os seguintes detalhes no modelo:
+Agora, vamos configurar nosso público-alvo atualizando os seguintes detalhes no modelo:
 
-1. Selecione o segmento **Todos os Usuários**.
+1. Selecione o segmento **Todos os usuários**.
 2. Remova os filtros adicionais do modelo. 
-3. Crie este filtro usando nosso evento personalizado: `Has scheduled_delivery for exactly 0 times`. Isso nos permite excluir usuários que já usaram o recurso de entrar em nosso canva.
+3. Crie esse filtro usando nosso evento personalizado: `Has scheduled_delivery for exactly 0 times`. Isso nos permite excluir usuários que já usaram o recurso de entrar em nosso Canvas.
 
-![O segmento para todos os usuários que não usaram o Cruise Control.]({% image_buster /assets/img/canvas_templates/feature_adoption/cruise_control_segment.png %}){: style="max-width:90%;"}
+\![O segmento para todos os usuários que não usaram o Cruise Control.]({% image_buster /assets/img/canvas_templates/feature_adoption/cruise_control_segment.png %}){: style="max-width:90%;"}
 
 {: start="4"}
-4\. Tendo em mente que o Calorie Rocket anteriormente permitiu que alguns usuários testassem em beta a nova funcionalidade Controle de Cruzeiro, atualizaremos os critérios de saída para excluir esses usuários de entrar no canva.
+4\. Tendo em mente que o Calorie Rocket permitiu anteriormente que alguns usuários fizessem o teste beta do novo recurso Cruise Control, atualizaremos os critérios de saída para excluir esses usuários do Canvas.
 
 ### Etapa 5: Selecione suas configurações de envio
 
-Manteremos as configurações de inscrição padrão, então enviaremos apenas para usuários que se inscreveram ou optaram por receber mensagens ou notificações, e pularemos as outras configurações (limitação de frequência, horário de silêncio e grupos de semente).
+Manteremos as configurações de assinatura padrão, para que enviemos apenas aos usuários que se inscreveram ou optaram por receber mensagens ou notificações, e ignoraremos as outras configurações (limite de frequência, horas de silêncio e grupos de sementes).
 
-### Etapa 6: Personalize sua tela
+### Etapa 6: Personalize seu Canvas
 
-#### Construa a jornada de Ação
+#### Crie o caminho da ação
 
-Em seguida, vamos construir a primeira etapa da jornada de Ação, que tem como objetivo indicar se nossos usuários têm interesse no novo recurso. Faremos os seguintes ajustes no modelo:
+Em seguida, vamos criar a primeira etapa do Caminho de Ação, que tem como objetivo indicar se os usuários têm interesse no novo recurso. Faremos os seguintes ajustes no modelo:
 
-1. Como a funcionalidade de Controle de Cruzeiro só está disponível após um pedido ter sido adicionado a um carrinho, nomearemos o primeiro grupo de ações **Adicionado ao carrinho** e selecionaremos `added_to_cart` para o evento personalizado.
+1. Como o recurso Cruise Control só está disponível depois que um pedido é adicionado a um carrinho, nomearemos o primeiro grupo de ações como **Added to cart (Adicionado ao carrinho** ) e selecionaremos `added_to_cart` para o evento personalizado.
 
-![O nome do grupo de ações definido como "Adicionado ao carrinho" e o "Executar Evento Personalizado" definido como "adicionado_ao_carrinho".]({% image_buster /assets/img/canvas_templates/feature_adoption/action_path_added_to_cart.png %}){: style="max-width:60%;"}
+\![O nome do grupo de ação definido como "Added to cart" (Adicionado ao carrinho) e "Perform Custom Event" (Executar evento personalizado) definido como "added_to_cart".]({% image_buster /assets/img/canvas_templates/feature_adoption/action_path_added_to_cart.png %}){: style="max-width:60%;"}
 
 {: start="2"}
-2\. Mantenha o segundo grupo de ações **Taken Tour** como está, pois queremos avaliar se os usuários fizeram um tour pelo app, e se o fizeram, então avançarão para a segunda jornada.
-3\. Para a Ação subsequente Jornada chamada **Assess Usage**, substitua **Used Feature >3x** por **Viewed Cruise Control settings**.
-4\. Selecione o **Executar Evento Personalizado** dropdown, em seguida selecione `scheduled_delivery` para o evento personalizado.
+2\. Mantenha o segundo grupo de ações **Taken Tour** como está, pois queremos avaliar se os usuários fizeram um tour pelo aplicativo e, se tiverem feito, eles avançarão para o segundo caminho.
+3\. Para o Caminho de ação subsequente denominado **Avaliar uso**, substitua **Recurso usado >3x** por **Configurações de controle de cruzeiro visualizadas**.
+4\. Selecione o menu suspenso **Perform Custom Event (Executar evento personalizado** ) e, em seguida, selecione `scheduled_delivery` para o evento personalizado.
 
-![O nome do grupo de ações definido como 'Recurso Usado >3x' e o 'Executar Evento Personalizado' definido como 'entrega_agendada'.]({% image_buster /assets/img/canvas_templates/feature_adoption/action_path_assess_usage.png %}){: style="max-width:60%;"}
+\![O nome do grupo de ação definido como "Recurso usado >3x" e a opção "Executar evento personalizado" definida como 'scheduled_delivery'.]({% image_buster /assets/img/canvas_templates/feature_adoption/action_path_assess_usage.png %}){: style="max-width:60%;"}
 
-#### Configurar pesquisa de feedback
+#### Configure a pesquisa de feedback
 
-Em seguida, iremos acessar a etapa da Mensagem chamada **Feedback Survey** para incluir nossa pesquisa de feedback para que nossos usuários possam preencher após usar o Cruise Control pela primeira vez. As opções de resposta da nossa pesquisa para nossos usuários são:
+Em seguida, iremos para a etapa Message (Mensagem) chamada **Feedback Survey (Pesquisa de feedback** ) para incluir nossa pesquisa de feedback para os usuários preencherem depois de usar o Cruise Control pela primeira vez. As opções de resposta da pesquisa para nossos usuários são:
 
-- **Amei!**
-- **Não é para mim.**
+- **Adorei!**
+- **Não para mim.**
 
-1. Para as duas opções da pesquisa, selecione **Feedback de Experiência** como nosso atributo personalizado para capturar e rastrear feedback sobre o Controle de Cruzeiro. Este atributo personalizado terá dois valores para representar as respostas da pesquisa (`good` e `bad`).
-2. Atualize os valores dos atributos para corresponder às opções da pesquisa. Isso nos permitirá acompanhar a resposta de um usuário.
+1. Para as duas opções de pesquisa, selecione **Experience Feedback** como nosso atributo personalizado para capturar e rastrear o feedback sobre o Cruise Control. Esse atributo personalizado terá dois valores para representar as respostas da pesquisa (`good` e `bad`).
+2. Atualize os valores dos atributos para que correspondam às opções da pesquisa. Isso nos permitirá rastrear a resposta de um usuário.
 
-### Etapa 7: Teste e inicie seu Canva
+### Etapa 7: Teste e inicie seu Canvas
 
-Depois de testar e revisar nosso Canvas para garantir que ele funcione conforme o esperado, selecione **Launch Canvas** para iniciar o Canvas. Agora, podemos direcionar os usuários com uma jornada personalizada para incentivá-los a adotar nosso novo recurso Controle de Cruzeiro.
+Depois de testar e revisar nosso Canvas para garantir que ele funcione conforme o esperado, selecione **Launch Canvas** para iniciar o Canvas. Agora, podemos direcionar os usuários com uma jornada de usuário personalizada para incentivá-los a adotar nosso novo recurso Cruise Control.
 
 {% alert tip %}
-Confira nossa [lista de verificação pré e pós-lançamento]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/pre_post_launch_checklist/#things-to-consider-before-launch) para saber o que considerar antes e depois de lançar um Canva.
+Confira nossa [lista de verificação pré e pós-lançamento]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/pre_post_launch_checklist/#things-to-consider-before-launch) para saber o que considerar antes e depois de lançar um Canvas.
 {% endalert %}

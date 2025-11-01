@@ -1,198 +1,200 @@
 ---
-nav_title: Perguntas frequentes
-article_title: Perguntas frequentes sobre o Canva
+nav_title: PERGUNTAS FREQUENTES
+article_title: Perguntas frequentes sobre o Canvas
 page_order: 8
 alias: "/canvas_v2_101/"
-description: "Este artigo fornece respostas a perguntas frequentes sobre o Canvas e o Canvas Flow."
+description: "Este artigo fornece respostas a perguntas frequentes sobre o Canvas."
 tool: Canvas
 
 ---
 
 # Perguntas frequentes
 
-> Este artigo fornece respostas a algumas perguntas frequentes sobre o Canvas e o [Canvas Flow](#canvas-flow).
+> Este artigo fornece respostas a algumas perguntas frequentes sobre o Canvas.
 
-{% alert important %}
-A partir de 28 de fevereiro de 2023, não será mais possível criar ou duplicar Canvas usando a experiência original do Canvas. A Braze recomenda que os clientes que usam a experiência original do Canvas migrem para o Canvas Flow. É uma experiência de edição aprimorada para melhor construir e gerenciar canvas. Saiba mais sobre a [clonagem de canvas no Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
-{% endalert %}
+### Quantas etapas posso incluir em um Canvas?
 
-## Geral
+Você pode adicionar até 200 etapas em um Canvas.
 
-### O que acontece se o público e o horário de envio forem idênticos para um Canva que tenha uma variante, mas várias ramificações?
+### O que acontece se o público e o tempo de envio forem idênticos para um Canvas que tem uma variante, mas várias ramificações?
 
-Colocamos um trabalho na fila para cada etapa - eles são executados mais ou menos ao mesmo tempo, e um deles "vence". Na prática, isso pode ser classificado de maneira um pouco uniforme, mas é provável que haja pelo menos uma ligeira tendência para a etapa que foi criada primeiro. 
+Colocamos um trabalho na fila para cada etapa - eles são executados mais ou menos ao mesmo tempo, e um deles "vence". Na prática, isso pode ser classificado de maneira um pouco uniforme, mas é provável que haja pelo menos uma leve tendência para a etapa que foi criada primeiro. 
 
 Além disso, não podemos garantir exatamente como será essa distribuição. Se você quiser uma divisão uniforme, adicione um filtro [Random Bucket Number]({{site.baseurl}}/user_guide/engagement_tools/testing/random_bucket_numbers/).
 
-### O que acontece quando você interrompe um Canva?
+### Posso iniciar um Canvas com etapas desconectadas?
 
-Quando você interrompe um Canva, aplica-se o seguinte:
+Sim. Você também pode salvar Canvases após o lançamento com etapas desconectadas. 
 
-- Os usuários serão impedidos de entrar na canva.
-- Nenhuma outra mensagem será enviada, independentemente de onde um usuário esteja no fluxo.
-- **Exceção:** As telas com e-mails não serão interrompidas imediatamente. Depois que as solicitações de envio acessam o SendGrid, não há nada que possamos fazer para impedir que elas sejam entregues ao usuário.
+### Para onde os usuários vão quando chegam a uma etapa desconectada?
 
-### Devo construir um canva ou canvas separados por ciclo de vida do usuário?
+Se um usuário estiver em uma etapa desconectada do seu fluxo de trabalho do Canvas, ele avançará para a etapa subsequente, se houver uma, e a configuração da etapa determinará como o usuário deve avançar. O objetivo é permitir que os usuários façam alterações nas etapas sem precisar conectá-las diretamente ao restante do Canvas. Isso também lhe dá algum espaço para testes antes de entrar em operação imediatamente, permitindo efetivamente salvar um rascunho.
 
-Dependendo do que você está procurando realizar com seu canva, pode ser necessário adotar diferentes abordagens em como você constrói a jornada do usuário. A flexibilidade do canva permite que você mapeie jornadas de usuários para qualquer estágio do ciclo de vida do usuário. Confira nossos [modelos de canva Braze]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/braze_templates) para vários exemplos de abordagens simplificadas para criar jornadas de usuário eficazes.
+Recomendamos verificar a exibição de análise dos usuários pendentes em uma etapa do Canvas antes de desconectar uma etapa.
 
-#### Mensagens no app no Canva
+### O que acontece quando você interrompe um Canvas?
 
-Mensagens no app são enviadas na próxima sessão. Isso significa que, se o usuário entrar na etapa do Canva antes de o Canvas ser interrompido, ele ainda receberá a mensagem no app no início da próxima sessão, desde que a mensagem no app ainda não tenha expirado.
+Quando você interrompe um Canvas, aplica-se o seguinte:
 
-É possível que um usuário inicie uma sessão antes que o canva seja interrompido, mas não seja exibida a mensagem no app imediatamente. Isso pode ocorrer se a mensagem no app for acionada por um evento personalizado ou se estiver atrasada. Isso significa que é possível para um usuário registrar uma impressão de mensagem no app e "receber" a mensagem no app após o canva ser interrompido. No entanto, o usuário teria que ter iniciado a sessão antes que o canva fosse interrompido, mas **depois** que eles receberam a etapa do canva.
+- Os usuários serão impedidos de entrar no Canvas.
+- Nenhuma outra mensagem será enviada, independentemente de onde o usuário esteja no fluxo.
+- **Exceção:** As telas com e-mails não serão interrompidas imediatamente. Depois que as solicitações de envio vão para o SendGrid, não há nada que possamos fazer para impedir que elas sejam entregues ao usuário.
+
+### Devo criar um Canvas ou Canvases separados por ciclo de vida do usuário?
+
+Dependendo do que você deseja realizar com o Canvas, talvez sejam necessárias abordagens diferentes para criar a jornada do usuário. A flexibilidade do Canvas permite mapear as jornadas do usuário para qualquer estágio do ciclo de vida do usuário. Confira nossos [modelos do Braze Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/braze_templates) para ver vários exemplos de abordagens simplificadas para a criação de jornadas de usuário eficazes.
+
+### Quando são enviadas as mensagens in-app no Canvas?
+
+As mensagens no aplicativo são enviadas no início da próxima sessão. Isso significa que se o usuário entrar na etapa do Canvas antes de o Canvas ser interrompido, ele ainda receberá a mensagem in-app no início da próxima sessão, desde que a mensagem in-app ainda não tenha expirado.
+
+É possível que um usuário inicie uma sessão antes que o Canvas seja interrompido, mas que a mensagem no aplicativo não seja exibida imediatamente. Isso pode ocorrer se a mensagem in-app for acionada por um evento personalizado ou estiver atrasada. Isso significa que é possível que um usuário registre uma impressão de mensagem in-app e "receba" a mensagem in-app depois que o Canvas for interrompido. No entanto, o usuário teria que iniciar a sessão antes que o Canvas fosse interrompido, mas **depois de** receber a etapa do Canvas.
 
 {% alert note %}
-A interrupção de um Canva não fará com que os usuários que estão esperando para receber mensagens saiam da jornada do usuário. Se você reativar o Canva e os usuários ainda estiverem aguardando a mensagem, eles a receberão (a menos que o tempo em que a mensagem deveria ter sido enviada já tenha passado, então eles não a receberão).
+A interrupção de um Canvas não fará com que os usuários que estão esperando para receber mensagens saiam da jornada do usuário. Se você reativar o Canvas e os usuários ainda estiverem aguardando a mensagem, eles a receberão (a menos que o tempo em que a mensagem deveria ter sido enviada já tenha passado, então eles não a receberão).
 {% endalert %}
 
-### Quando um evento de exceção é disparado?
+### Quando um evento de exceção é acionado?
 
-Eventos de exceção só disparam enquanto o usuário está esperando para receber o componente canva com o qual está associado. Se um usuário executar uma ação antecipadamente, o evento de exceção não será disparado. Se quiser excluir usuários que tenham realizado um determinado evento com antecedência, use [filtros]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/).
+Os eventos de exceção só são acionados enquanto o usuário está esperando para receber o componente do Canvas ao qual está associado. Se um usuário executar uma ação antecipadamente, o evento de exceção não será acionado. Se quiser excluir usuários que realizaram um determinado evento com antecedência, use [filtros]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/).
 
 ### Como a edição de um Canvas afeta os usuários que já estão no Canvas?
 
-Se você editar algumas das etapas de um Canvas de várias etapas, os usuários que já estavam no público, mas não receberam as etapas, receberão a versão atualizada da mensagem. Note que isso só ocorrerá se eles ainda não tiverem sido avaliados para a etapa.
+Se você editar algumas das etapas de um Canvas de várias etapas, os usuários que já estavam no público, mas não receberam as etapas, receberão a versão atualizada da mensagem. Observe que isso só ocorrerá se eles ainda não tiverem sido avaliados para a etapa.
 
-Para saber mais sobre o que pode ser editado após o lançamento, consulte [Alterar seu canva após o lançamento]({{site.baseurl}}/post-launch_edits/).
+Para obter mais informações sobre o que você pode editar após o lançamento, consulte [Alteração do Canvas após o lançamento]({{site.baseurl}}/post-launch_edits/).
 
-### Como as conversões de usuários são rastreadas em um Canva?
+### Como as conversões de usuários são rastreadas em um Canvas?
 
-Um usuário só pode converter uma vez por entrada no Canva. As conversões são atribuídas à mensagem mais recente recebida pelo usuário para essa entrada. O bloco de resumo no início de uma canva reflete todas as conversões realizadas pelos usuários dentro daquela jornada, independentemente de terem recebido uma mensagem ou não. Cada etapa subsequente mostrará apenas as conversões que ocorreram enquanto essa foi a etapa mais recente que o usuário recebeu.
+Um usuário só pode converter uma vez por entrada no Canvas. As conversões são atribuídas à mensagem mais recente recebida pelo usuário para essa entrada. O bloco de resumo no início de um Canvas reflete todas as conversões realizadas pelos usuários dentro desse caminho, independentemente de terem ou não recebido uma mensagem. Cada etapa subsequente mostrará apenas as conversões que ocorreram enquanto essa foi a etapa mais recente que o usuário recebeu.
 
-{% details Exemplos %}
+{% details Expand for examples %}
 
 **Exemplo 1**
 
-Há uma jornada do Canvas com 10 notificações por push e o evento de conversão é "início da sessão" ("Abre o app"):
+Há um caminho do Canvas com 10 notificações por push e o evento de conversão é "início da sessão" ("Abre o aplicativo"):
 
-- O usuário A abre o app após entrar, mas antes de receber a primeira mensagem.
-- O usuário B abre o app após cada notificação por push.
+- O usuário A abre o aplicativo depois de entrar, mas antes de receber a primeira mensagem.
+- O usuário B abre o aplicativo após cada notificação push.
 
-**Resultado:** O resumo mostrará duas conversões, enquanto as etapas individuais mostrarão uma conversão de uma na primeira etapa e zero para todas as etapas subsequentes.
+**Resultado:** O resumo mostrará duas conversões, enquanto as etapas individuais mostrarão uma conversão de um na primeira etapa e zero em todas as etapas subsequentes.
 
 {% alert note %}
-Se o horário de silêncio estiver ativo quando o evento de conversão acontecer, as mesmas regras se aplicam.
+Se o Quiet Hours estiver ativo quando o evento de conversão ocorrer, as mesmas regras se aplicam.
 {% endalert %}
 
 **Exemplo 2**
 
-Há uma etapa do Canva com o Horário de silêncio ativado:
+Há um Canvas de uma etapa com o Quiet Hours ativado:
 
-1. O usuário entra no Canva.
-2. A primeira etapa não tem uma postergação, mas está dentro do horário de silêncio definido, portanto, a mensagem é suprimida.
+1. O usuário entra no Canvas.
+2. A primeira etapa não tem um atraso, mas está dentro das Quiet Hours definidas, portanto, a mensagem é suprimida.
 3. O usuário realiza o evento de conversão.
 
-**Resultado:** O usuário será contado como convertido na variante geral da canva, mas não na etapa, pois não recebeu a etapa.
+**Resultado:** O usuário será contado como convertido na variante geral do Canvas, mas não na etapa, pois não recebeu a etapa.
 
 {% enddetails %}
 
 ### Qual é a diferença entre os diferentes tipos de taxa de conversão?
 
-- Total canva conversões refletem quantos usuários únicos completaram um evento de conversão, não quantas conversões cada um completou. 
-- A taxa de conversão da variante ou o bloco de resumo no início de uma Canva reflete todas as conversões realizadas pelos usuários nessa jornada, independentemente de terem recebido ou não uma mensagem, como um total agregado. 
-- A taxa de conversão da etapa reflete quantos indivíduos receberam essa etapa da mensagem e concluíram qualquer um dos eventos de conversão descritos.
+- O total de conversões do Canvas reflete quantos usuários únicos concluíram um evento de conversão, não quantas conversões cada um deles concluiu. 
+- A taxa de conversão da variante ou o bloco de resumo no início de um Canvas reflete todas as conversões realizadas pelos usuários nesse caminho, independentemente de terem recebido ou não uma mensagem, como um total agregado. 
+- A taxa de conversão de etapas reflete quantos indivíduos receberam essa etapa da mensagem e concluíram qualquer um dos eventos de conversão descritos.
 
 ### Qual é a diferença entre um componente e uma etapa?
 
-Um [componente]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/) é uma parte individual do Canvas que pode ser usada para determinar a eficácia do Canva. Os componentes podem incluir ações como a divisão da jornada do usuário, a adição de uma postergação e até mesmo o teste de várias jornadas do Canva. Uma etapa do canva refere-se à jornada personalizada do usuário em suas filiais dos canvas. Essencialmente, seu Canva é feito de componentes individuais que criam etapas para a jornada do usuário.
+Um [componente]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/) é uma parte individual do seu Canvas que você pode usar para determinar a eficácia do seu Canvas. Os componentes podem incluir ações como a divisão da jornada do usuário, a adição de um atraso e até mesmo o teste de vários caminhos do Canvas. Uma etapa no Canvas refere-se à jornada personalizada do usuário em suas ramificações do Canvas. Essencialmente, o Canvas é feito de componentes individuais que criam etapas para a jornada do usuário.
 
-### Como posso visualizar a análise de dados de cada um dos meus componentes do Canva?
+### Como posso visualizar as análises de cada um dos meus componentes do Canvas?
 
-Para visualizar a análise de dados de um componente do Canvas, acesse seu Canvas e role a página **Detalhes do Canvas** para baixo. Aqui, você pode visualizar a análise de dados de cada componente. Confira a [análise de dados do Canva]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/) para obter mais detalhes.
+Para visualizar as análises de um componente do Canvas, acesse seu Canvas e role a página **Detalhes do Canvas** para baixo. Aqui, você pode visualizar as análises de cada componente. Confira a [análise do Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/) para obter mais detalhes.
 
-### Ao analisar o número de usuários únicos, a análise de dados do Canva ou o segmentador é mais preciso?
+### Ao analisar o número de usuários únicos, o Canvas Analytics ou o segmentador é mais preciso?
 
-O segmentador é uma estatística mais precisa para dados de usuários exclusivos em comparação com as estatísticas do Canva ou da campanha. Isso ocorre porque canva e as estatísticas de campanha são números que Braze incrementa quando algo acontece—o que significa que existem variáveis que podem resultar nesse número sendo diferente daquele do segmentador. Por exemplo, os usuários podem converter mais de uma vez em um Canva ou em uma campanha.
+O segmentador é uma estatística mais precisa para dados de usuários exclusivos em comparação com as estatísticas do Canvas ou da campanha. Isso ocorre porque as estatísticas do Canvas e da campanha são números que o Braze incrementa quando algo acontece, o que significa que há variáveis que podem fazer com que esse número seja diferente do número do segmentador. Por exemplo, os usuários podem converter mais de uma vez para um Canvas ou campanha.
 
-### Por que o número de usuários que entram em um Canva não corresponde ao número esperado?
+### Por que o número de usuários que entram em um Canvas não corresponde ao número esperado?
 
-O número de usuários que entram em um Canva pode ser diferente do número esperado devido à forma como o público e os disparadores são avaliados. Na Braze, um público é avaliado antes do disparador (a menos que esteja usando um disparador de [alteração de atribuição]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/attribute_triggers/#change-custom-attribute-value)). Isso fará com que os usuários saiam do Canva se não fizerem parte do público selecionado antes que qualquer ação-gatilho seja avaliada.
+O número de usuários que entram em um Canvas pode ser diferente do número esperado devido à forma como os públicos e os acionadores são avaliados. No Braze, um público é avaliado antes do acionador (a menos que seja usado um acionador de [alteração de atributo]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/attribute_triggers/#change-custom-attribute-value) ). Isso fará com que os usuários saiam do Canvas se não fizerem parte do público selecionado antes que qualquer ação de acionamento seja avaliada.
 
-### O que acontece com os usuários anônimos durante sua jornada no canva?
+### O que acontece com os usuários anônimos durante sua jornada no Canvas?
 
-Enquanto usuários anônimos podem entrar e sair de Canvases, suas ações não estão associadas a um perfil de usuário específico até que sejam identificados, então suas interações podem não ser totalmente rastreadas em sua análise de dados. Você pode usar o [Construtor de Consultas]({{site.baseurl}}/user_guide/analytics/query_builder/) para gerar um relatório dessas métricas.
+Embora os usuários anônimos possam entrar e sair do Canvases, suas ações não são associadas a um perfil de usuário específico até que sejam identificados, portanto, suas interações podem não ser totalmente rastreadas em suas análises. Você pode usar o [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/) para gerar um relatório dessas métricas.
 
-### Por que minha taxa de conversão da etapa do Canva não é igual à taxa de conversão total da variante do Canvas?
+### Por que minha taxa de conversão de etapas do Canvas não é igual à taxa de conversão total da variante do Canvas?
 
-É comum que o total de conversão de uma variante do Canva seja maior do que a soma do total de suas etapas. Isso ocorre porque um usuário pode realizar um evento de conversão para uma variante assim que entra na variante. Entretanto, esse mesmo evento de conversão não conta para uma etapa do canva. Portanto, qualquer usuário que entrar no Canvas e realizar o evento de conversão antes de receber a primeira etapa do Canva será contabilizado no total de conversões de variantes, e não no total de etapas. O mesmo se aplica a um usuário que entra no Canvas, mas sai dele antes de receber qualquer etapa do canva.
+É comum que o total de conversão de uma variante do Canvas seja maior do que a soma de seu total de etapas. Isso ocorre porque um usuário pode executar um evento de conversão para uma variante assim que entra na variante. No entanto, esse mesmo evento de conversão não conta para uma etapa do Canvas. Portanto, qualquer usuário que entrar no Canvas e realizar o evento de conversão antes de receber a primeira etapa do Canvas será contabilizado no total de conversões de variantes, e não no total de etapas. O mesmo se aplica a um usuário que entra no Canvas, mas sai dele antes de receber qualquer etapa.
 
-### Como os públicos do Canva são avaliados? 
+### Como os públicos do Canvas são avaliados? 
 
-Por padrão, os filtros e segmentos para etapas completas do Canva são verificados no momento do envio. Para o Canvas Flow, o componente Divisão de decisão realiza uma avaliação logo após receber uma etapa anterior (ou antes de uma postergação).
+Por padrão, os filtros e segmentos para etapas completas no Canvas são verificados no momento do envio. A etapa Decision Split executa uma avaliação logo após receber uma etapa anterior (ou antes de um atraso).
 
 {% alert tip %}
-Para obter mais assistência com a solução de problemas dos canvas, entre em contato com o suporte da Braze em até 30 dias após a ocorrência do problema, pois só temos os registros de diagnóstico dos últimos 30 dias.
+Para obter mais assistência com a solução de problemas do Canvas, entre em contato com o Suporte Braze dentro de 30 dias após a ocorrência do problema, pois só temos os registros de diagnóstico dos últimos 30 dias.
 {% endalert %}
 
-## Canvas Flow
+### Qual é a diferença entre "Has not entered Canvas variation" e "Is not in Canvas control group"?
 
-### O que é o Canvas Flow?
+Consulte [Filtros de segmentação]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters) para obter definições completas de filtros.
 
-O Canvas Flow é a experiência de edição aprimorada que simplifica a forma como os profissionais de marketing podem criar e gerenciar suas jornadas de usuário do Canvas. Você pode esperar visualizar e usar facilmente os componentes do Canvas no construtor do Canvas. Você também tem acesso a mais recursos de edição pós-lançamento para editar conexões entre etapas, excluir etapas e variantes e redirecionar usuários para etapas diferentes.
+#### Não entrou na variação do Canvas
 
-### Como faço para converter um Canvas existente em Canvas Flow?
+O usuário nunca inseriu um caminho de variação de um Canvas específico. Todos os usuários que não estão no grupo de controle são incluídos, independentemente de terem entrado no Canvas. Isso inclui usuários que inseriram outra variação e usuários que não inseriram nenhuma variação. 
 
-Você pode [clonar seu Canvas para o Canvas Flow]({{site.baseurl}}/cloning_canvases/). Isso cria uma cópia de seu Canvas original no fluxo de trabalho do Canvas Flow.
+#### Não está no grupo de controle do Canvas
 
-### O que acontecerá com os canvas que criei usando o editor original?
+O usuário entrou no Canvas, mas não está no grupo de controle e, consequentemente, recebeu uma variação. Isso inclui apenas os usuários que entraram no Canvas.
 
-Todas as suas canvas existentes e o editor de canvas original continuarão a existir e serão suportados pela Braze. Os clientes que optarem por participar do Canvas Flow para acesso antecipado terão a opção de criar um Canvas usando o fluxo de trabalho original ou do Flow.
+Observe que a atribuição de variação ocorre na entrada do Canvas. Se um usuário não tiver inserido um Canvas, não lhe será atribuída nenhuma variante. Em outras palavras, eles não estarão no grupo de controle ou em uma variante.
 
-### Há um limite para quantos passos posso incluir?
+{% details Expand for original Canvas editor FAQs %}
 
-Sim. Um canva criado com o Canvas Flow pode conter até 200 etapas.
+### Como faço para converter um Canvas existente do editor original para o editor atual?
 
-### Posso iniciar um Canva com etapas desconectadas?
+Você pode [clonar seu Canvas]({{site.baseurl}}/cloning_canvases/). Isso cria uma cópia de seu Canvas original no fluxo de trabalho mais atual do Canvas.
 
-Sim! O Canvas Flow permite que você inicie seu Canvas com etapas desconectadas. Você também pode salvar Canvas após o lançamento com etapas desconectadas. 
+### Quais são as principais diferenças entre os editores atuais e originais do Canvas?
 
-### Para onde os usuários acessam quando chegam a uma etapa desconectada?
+#### Barra de ferramentas do componente Canvas
 
-Se um usuário estiver em uma etapa desconectada do fluxo de trabalho do Canvas Flow, ele avançará para a etapa subsequente, se houver uma, e a configuração da etapa ditará como o usuário deve avançar. O objetivo é permitir que os usuários façam alterações nas etapas sem precisar conectá-las diretamente ao restante do Canva. Isso também abre algum espaço para testes antes de entrar em operação imediatamente, permitindo efetivamente salvar um rascunho.
+Anteriormente, com o editor original do Canvas, uma etapa completa era adicionada por padrão sempre que você criava qualquer etapa na jornada do usuário. Essas etapas completas são substituídas por diferentes componentes do Canvas, o que lhe dá o benefício de maior visibilidade e personalização para sua experiência de edição. Você pode ver imediatamente todos os seus componentes do Canvas na barra de ferramentas da etapa do Canvas.
 
-Recomendamos verificar a exibição de análise de dados para usuários pendentes em uma etapa do Canva antes de desconectar uma etapa.
+#### Comportamento de etapas
 
-### Quais são as principais diferenças entre o Canvas Flow e o editor original do Canvas?
+Anteriormente, cada etapa completa incluía informações como configurações de atraso e programação, eventos de exceção, filtros de público, configuração de mensagens e opções de avanço de mensagens, tudo em um único componente. Essas são configurações separadas no editor atual para tornar a experiência de criação do Canvas mais personalizável e introduzem algumas diferenças na funcionalidade.
 
-#### Barra de ferramentas do componente canva
+#### Avanço do componente de mensagem
 
-Anteriormente, com o editor do Canva original, uma etapa completa era adicionada por padrão sempre que você criava qualquer etapa na jornada do usuário. Agora, com o Canvas Flow, essas etapas completas são substituídas por diferentes componentes do Canvas, o que lhe dá o benefício de maior visibilidade e personalização para sua experiência de edição. Você pode ver imediatamente todos os componentes do canva na barra de ferramentas Etapa do canva.
+[Os componentes da mensagem]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) adiantam todos os usuários que entram na etapa. Não há necessidade de especificar o comportamento de avanço da mensagem, o que simplifica a configuração da etapa geral. Se quiser implementar a opção **Advance when message sent**, adicione um Audience Paths separado para filtrar os usuários que não receberam a etapa anterior.  
 
-#### Comportamento das etapas
+#### Atraso no comportamento de "entrada
 
-Anteriormente, cada etapa completa incluía informações como configurações de postergação e programação, eventos de exceção, filtros de público, configuração de mensagens e opções de avanço de mensagens, tudo em um único componente. Essas são configurações separadas no Canvas Flow para tornar sua experiência de construção do Canvas mais personalizável e introduz algumas diferenças na funcionalidade.
+[Os componentes de atraso]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/) aguardarão todo o tempo de atraso antes de prosseguir para a próxima etapa. 
 
-#### Envio de mensagens
+Digamos que, em 12 de abril, tenhamos um componente Delay em que o atraso é definido para enviar o usuário para a próxima etapa em um dia, às 14h. Um usuário entra no componente às 14h01 do dia 13 de abril. 
+- No fluxo de trabalho original, o usuário passaria para a próxima etapa às 14 horas do dia 14 de abril, ou seja, menos de um dia após o horário de entrada. 
+- No editor atual, o usuário passaria para a próxima etapa às 14 horas do dia 15 de abril. Observe que esse é o mesmo horário, mas mais de um dia após o horário de entrada. 
 
-Os [componentes de mensagens]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) adiantam todos os usuários que entram na etapa. Não há necessidade de especificar o comportamento de avanço de mensagens, o que simplifica a configuração da etapa geral. Se quiser implementar a opção **Advance when message sent**, adicione uma jornada do público separada para filtrar os usuários que não receberam a etapa anterior.  
+#### Comportamento de tempo inteligente
 
-#### Comportamento de postergação
+Como [o Intelligent Timing]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/) é armazenado no componente Message, os atrasos serão aplicados antes dos cálculos do Intelligent Timing. Isso significa que, dependendo de quando um usuário entra no componente, ele pode receber a mensagem mais tarde do que receberia em um Canvas criado com o fluxo de trabalho original do Canvas.
 
-Os [componentes de postergação]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/) aguardarão todo o tempo de postergação antes de prosseguir para a próxima etapa. 
-
-Digamos que, em 12 de abril, tenhamos um componente Delay em que a postergação é definida para enviar o usuário para a próxima etapa em um dia, às 14h. Um usuário entra no componente às 14h01 do dia 13 de abril. 
-- No fluxo de trabalho original, o usuário passaria para a próxima etapa às 14 horas do dia 14 de abril, ou seja, menos de um dia após a hora de entrada. 
-- Para o Canvas Flow, o usuário passaria para a próxima etapa às 14 horas do dia 15 de abril. Note que esse é o mesmo horário, mas mais de um dia após o horário de entrada. 
-
-#### Comportamento Intelligent Timing
-
-Como o [Intelligent Timing]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/) é armazenado no componente Mensagem, as postergações serão aplicadas antes dos cálculos do Intelligent Timing. Isso significa que, dependendo de quando um usuário entra no componente, ele pode receber a mensagem mais tarde do que receberia em um Canvas criado com o fluxo de trabalho original do Canvas.
-
-Digamos que sua postergação esteja definida para 2 dias, o Intelligent Timing esteja ativado e tenha determinado que o melhor horário para o envio de mensagens é às 14 horas. Um usuário entra na etapa de postergação às 2:01 pm.
-- **Canvas Flow:** Serão necessárias 48 horas para que a postergação passe, de modo que o usuário receba a mensagem no terceiro dia, às 14 horas.
+Digamos que seu atraso esteja definido para 2 dias, que o Intelligent Timing esteja ativado e que ele tenha determinado que o melhor horário para enviar sua mensagem é às 14 horas. Um usuário entra na etapa de atraso às 2:01 pm.
+- **Fluxo de trabalho atual:** Serão necessárias 48 horas para que o atraso passe, de modo que o usuário receba a mensagem no terceiro dia, às 14 horas.
 - **Fluxo de trabalho original:** O usuário recebe a mensagem no segundo dia, às 14 horas.
 
-Note que, se o Intelligent Timing estiver ativado, a mensagem será enviada dentro de 24 horas após o usuário inserir o componente Message no horário inteligente identificado (mesmo que nenhum componente de postergação esteja envolvido).
+Observe que, se o Intelligent Timing estiver ativado, a mensagem será enviada dentro de 24 horas após o usuário inserir o componente Message no horário inteligente identificado (mesmo que nenhum componente Delay esteja envolvido).
 
 #### Eventos de exceção
 
 ##### Horário de silêncio
 
-A funcionalidade de evento de exceção no Canvas Flow é aplicada usando jornadas de ação, que são separadas das etapas de mensagens. O Horário de silêncio é aplicado no componente Mensagem. Isso significa que, se um usuário já tiver passado pela jornada de ação (e não tiver sido excluído com o evento de exceção lá), então atingiu o Horário de silêncio quando chegou ao componente Mensagem e teve seu Canva configurado de forma que a mensagem seja reenviada após o período de Horário de silêncio, o evento de exceção não será mais aplicado. Note que esse caso de uso não é comum.
+O evento de exceção é aplicado usando caminhos de ação, que são separados das etapas de mensagem. As horas de silêncio são aplicadas no componente Mensagem. Isso significa que, se um usuário já tiver passado pelo Caminho de ação (e não tiver sido excluído com o evento de exceção), ele encontrará o Quiet Hours quando chegar ao componente Message e tiver seu Canvas configurado de forma que a mensagem seja reenviada após o período de Quiet Hours, o evento de exceção não será mais aplicado. Observe que esse caso de uso não é comum.
 
-Para segmentos e filtros, o componente Canvas Flow Message tem um novo recurso chamado Validações de entrega que permite aos usuários configurar segmentos e filtros adicionais que são validados no momento do envio. Isso evita o caso extremo do Horário de silêncio mencionado anteriormente.
+Para segmentos e filtros, a etapa Mensagem tem validações de entrega que permitem aos usuários configurar segmentos e filtros adicionais que são validados no momento do envio. Isso evita o caso extremo do Quiet Hours mencionado anteriormente.
 
 ##### Configuração de programação "In" ou "On the next"
 
-Os eventos de exceção no Canvas Flow são criados usando jornadas de ação. As jornadas de ação suportam apenas "após uma janela de tempo X" e não "em X tempo" ou "na próxima vez X".
+Os eventos de exceção são criados usando caminhos de ação. Os Caminhos de Ação somente suportam "após uma janela de tempo X" e não "em X tempo" ou "no próximo X tempo".
+
+{% enddetails %}
