@@ -86,7 +86,7 @@ tool: Canvas
 
 1. クルーズコントロール機能は、注文がカートに追加された後でのみ利用可能になるため、最初のアクショングループには「**Added to cart**」という名前を付け、カスタムイベントとして `added_to_cart` を選択します。
 
-\![カートに追加]({% image_buster(/assets/img/canvas_templates/feature_adoption/action_path_added_to_cart.png %}){: style="max-width:60%;"}
+\![カートに追加]({% image_buster /assets/img/canvas_templates/feature_adoption/action_path_added_to_cart.png %}){: style="max-width:60%;"}
 
 {: start="2"}
 2\.2番目のアクショングループ**Taken Tour** はそのままにしておきます。ユーザーがアプリをツアーしたかどうかを評価し、アプリがあれば2番目のパスに進みます。
