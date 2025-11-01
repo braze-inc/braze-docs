@@ -6,7 +6,7 @@ page_order: 1.5
 
 ---
 
-# Análisis predictivos del abandono de clientes
+# Análisis predictivo del abandono de clientes
 
 > Una vez creada y entrenada tu predicción, tendrás acceso a la página **Análisis de predicciones**. Esta página te ayuda a decidir a qué usuarios debes dirigirte en función de su _puntuación de riesgo de abandono_ o categoría. 
 
@@ -25,7 +25,7 @@ La distribución de las puntuaciones de toda la audiencia de predicción se mues
 
 A medida que muevas el control deslizante, la barra de la mitad izquierda del panel inferior te informará de a cuántos usuarios de toda la audiencia de predicción se dirigiría la predicción.
 
-![]({% image_buster /assets/img/churn/churnTargeting.gif %})
+\![]({% image_buster /assets/img/churn/churnTargeting.gif %})
 
 ## Puntuación de abandono y categoría {#churn_score}
 
@@ -41,14 +41,14 @@ Las puntuaciones y las categorías correspondientes se actualizarán según el c
 
 ## Precisión estimada {#estimated_results}
 
-En la mitad derecha del panel, debajo del gráfico, mostramos estimaciones de la precisión esperada al dirigirnos a esta franja de la audiencia de predicción. Basándose en los datos sobre los usuarios de la audiencia de predicción en el pasado, y en la aparente precisión del modelo para discriminar entre los usuarios que abandonan y los que no abandonan en esos datos pasados, estas barras de progreso hacen una estimación para un futuro mensaje potencial utilizando la audiencia resaltada con el control deslizante:
+En la mitad derecha del panel, debajo del gráfico, mostramos estimaciones de la precisión esperada al dirigirnos a esta franja de la audiencia de predicción. Basándose en los datos sobre los usuarios de la audiencia de predicción en el pasado, y en la precisión aparente del modelo para discriminar entre los usuarios que abandonan y los que no abandonan en esos datos pasados, estas barras de progreso hacen una estimación para un posible mensaje futuro utilizando la audiencia resaltada con el control deslizante:
 
-![]({% image_buster /assets/img/churn/churnEstimatedResults.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
+\![]({% image_buster /assets/img/churn/churnEstimatedResults.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
-- Cuántos usuarios seleccionados se prevé que cancelen
+- ¿Cuántos usuarios seleccionados se espera que abandonen?
 - ¿Cuántos usuarios seleccionados se espera que **no** abandonen?
 
-Con esta información, te animamos a que decidas cuántos de los usuarios que abandonan quieres captar y cuál es el coste de un error falso positivo para tu empresa. Si envías una promoción valiosa, es posible que quieras reducir al mínimo el número de usuarios que no abandonan, y conseguir tantos usuarios que abandonan como permita el modelo. O, si eres menos sensible a los falsos positivos y los usuarios reciben mensajes adicionales, puedes enviar mensajes a una mayor parte de la audiencia para captar a más usuarios que abandonan e ignorar los errores probables.
+Con esta información, te animamos a que decidas cuántos de los usuarios que abandonan quieres captar y cuál es el coste de un error falso positivo para tu empresa. Si estás enviando una promoción valiosa, puede que te interese reducir al mínimo el número de usuarios que no abandonan, pero conseguir tantos usuarios que abandonan como permita el modelo. O, si eres menos sensible a los falsos positivos y los usuarios reciben mensajes adicionales, puedes enviar mensajes a una mayor parte de la audiencia para captar a más usuarios que abandonan e ignorar los errores probables.
 
 ### Usuarios que se espera que abandonen
 

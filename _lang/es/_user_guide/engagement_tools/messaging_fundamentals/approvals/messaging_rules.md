@@ -1,5 +1,5 @@
 ---
-nav_title: Reglas de mensajería
+nav_title: Normas de mensajería
 article_title: Reglas de mensajería
 page_order: 1
 page_type: reference
@@ -52,11 +52,11 @@ Puedes crear hasta CINCO reglas de mensajería.
 3. Dale un nombre a esta regla (por ejemplo, "Todas las suscripciones de usuarios").
 4. En **Tipo de mensaje**, selecciona **Campaña**, **Canvas** o **Tanto Canvas como Campañas** para aplicar la regla de aprobación.
 5. Introduce un número para **el máximo de usuarios accesibles**. Para más información, consulta [Estadísticas de audiencia]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users#audience-statistics).
-6. Seleccione **Guardar**.
+6. Selecciona **Guardar**.
 
-![Un ejemplo de regla de mensajería "Regla 1" para campañas con 100.000 usuarios como máximo. Hay un usuario que puede aprobar el Canvas y la campaña a lanzar.]({% image_buster /assets/img/target_population_approval_example.png %}){: style="max-width:90%;"}
+\![Un ejemplo de regla de mensajería "Regla 1" para campañas con 100.000 usuarios como máximo. Hay un usuario que puede aprobar el Canvas y la campaña a lanzar.]({% image_buster /assets/img/target_population_approval_example.png %}){: style="max-width:90%;"}
 
-### Paso 2: Determinar el lanzamiento con aprobación (opcional)
+### Paso 2: Determinar el lanzamiento con aprobación (opcional)
 
 Selecciona **Permitir lanzamiento con aprobación**. A continuación, en **Con aprobación de**, selecciona los aprobadores que tienen permiso para aprobar el Canvas o la campaña si se cumple el máximo.
 
@@ -65,7 +65,7 @@ Toma nota de los siguientes detalles sobre el lanzamiento de mensajes con aproba
 - Si se cumple el máximo y se selecciona un **aprobador**, el usuario Braze con el permiso de aprobación podrá seleccionar **Aprobado** en el desplegable de aprobación **Audiencia objetivo**.
 - Si se alcanza el máximo y no se selecciona una aprobación, se impedirá el lanzamiento del Canvas o de la campaña.
 
-![El paso "Resumen" del flujo de trabajo Canvas que muestra que necesitas una aprobación para lanzarlo.]({% image_buster /assets/img/non_approver_banner.png %}){: style="max-width:90%;"}
+\![El paso en Canvas "Resumen" del flujo de trabajo que muestra que necesitas una aprobación para lanzarlo.]({% image_buster /assets/img/non_approver_banner.png %}){: style="max-width:90%;"}
 
 ## Preguntas más frecuentes
 
