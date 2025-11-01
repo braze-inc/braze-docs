@@ -12,7 +12,7 @@ alias: /landing_pages/data_tracking/
 
 ## Méthodes de suivi
 
-### Web SDK
+### SDK Web
 
 Le SDK web de Braze n'est initialisé que lorsqu'un utilisateur soumet un formulaire sur la page de renvoi. Avant la soumission du formulaire, aucune donnée personnelle n'est collectée et le SDK ne suit pas activement les utilisateurs. Une fois l'initialisation terminée, le SDK ne stocke aucune donnée dans le navigateur (comme les cookies, le stockage local ou autres).
 

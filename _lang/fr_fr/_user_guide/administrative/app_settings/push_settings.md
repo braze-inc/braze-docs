@@ -1,6 +1,6 @@
 ---
-nav_title: Paramètres de notifications push
-article_title: Paramètres de notifications push
+nav_title: Pousser les réglages
+article_title: Réglages par poussée
 page_order: 16
 page_type: reference
 description: "Cet article donne un aperçu des paramètres de poussée dans le tableau de bord de Braze."
@@ -8,7 +8,7 @@ channel: push
 
 ---
 
-# Paramètres de notifications push
+# Réglages par poussée
 
 > La page **Paramètres de push** vous permet de configurer les paramètres clés de vos notifications push, notamment la durée en ligne/en production/instantanée (TTL) et la priorité FCM par défaut pour les campagnes Android. Ces paramètres permettent d'optimiser la réception/distribution de vos notifications push et leur efficacité, garantissant ainsi une meilleure expérience à vos utilisateurs.
 
@@ -36,7 +36,7 @@ Pour définir un autre TTL des notifications push par défaut :
 2. Pour chaque plateforme Android, définissez une valeur de durée en ligne/instantanée par défaut. Vous pouvez définir des incréments plus petits, comme les heures ou les secondes, pour un contrôle plus précis.
 3. Sélectionnez **Enregistrer** pour appliquer vos modifications.
 
-![Les notifications TTL push pour les appareils Firebase, Web, Kindle et Huawei.]({% image_buster /assets/img/push_ttl.png %})
+\![Paramètres TTL des notifications push pour les appareils Firebase, Web, Kindle et Huawei.]({% image_buster /assets/img/push_ttl.png %})
 
 ## Priorité par défaut du FCM pour les campagnes Android
 
@@ -44,10 +44,10 @@ Vous pouvez définir la priorité par défaut de l'envoi de messages dans le nua
 
 Les options prioritaires de la FCM sont les suivantes :
 
-| Priorité | Description | Cas d’utilisation |
+| Priorité | Description | Cas d'utilisation |
 | --- | --- | --- |
-| Normale | Priorité à la réception/distribution standard qui optimise l'utilisation de la batterie. | Contenu ne nécessitant pas une attention immédiate |
-| Élevée | Les messages sont envoyés immédiatement | Notifications urgentes nécessitant une réception/distribution rapide |
+| Normal | Priorité de réception/distribution standard qui optimise l'utilisation de la batterie. | Contenu ne nécessitant pas une attention immédiate |
+| Haut | Les messages sont envoyés immédiatement. | Notifications urgentes nécessitant une réception/distribution rapide |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 Pour définir la priorité par défaut du FCM :
@@ -56,7 +56,7 @@ Pour définir la priorité par défaut du FCM :
 2. Dans la section Priorité du FCM, sélectionnez "Normal" ou "Haut" comme réglage par défaut.
 3. Sélectionnez **Enregistrer** pour appliquer vos modifications.
 
-![Paramètres de priorité de réception/distribution Android.]({% image_buster /assets/img/push_fcm_priority_settings.png %})
+\![Paramètres de priorité de réception/distribution Android.]({% image_buster /assets/img/push_fcm_priority_settings.png %})
 
 Ce paramètre s'applique globalement à toutes les nouvelles campagnes push Android, sauf si une priorité différente est sélectionnée lors de la création d'une campagne spécifique. 
 
