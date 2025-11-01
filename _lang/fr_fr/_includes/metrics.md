@@ -106,6 +106,10 @@ Le <i>% de livraisons</i> est le pourcentage du nombre total de messages (envois
 On parle d'<i>échec de réception/distribution</i> lorsque le SMS n'a pas pu être envoyé en raison d'un débordement des files d'attente (envoi de SMS à un débit supérieur à celui que vos codes longs ou courts peuvent supporter).
 {% endif %}
 
+{% if include.metric == "Delivery Failures RCS" %}
+Les <i>échecs de réception/distribution</i> se produisent lorsque le RCS n'a pas pu être envoyé en raison d'un débordement des files d'attente (envoi de RCS à un rythme supérieur à celui que votre expéditeur vérifié peut gérer).
+{% endif %}
+
 {% if include.metric == "Failed Delivery Rate" %}
 Le <i>taux de réception/distribution échouée</i> est le pourcentage d'envois qui ont échoué parce que le message n'a pas pu être envoyé. Cela peut se produire pour diverses raisons, notamment des débordements de file d'attente, des suspensions de compte et des erreurs de support dans le cas des MMS.
 {% endif %}
@@ -163,7 +167,7 @@ Les <i>ouvertures</i> sont des instances incluant à la fois les <i>ouvertures d
 {% endif %}
 
 {% if include.metric == "Opt-Out" %}
-On parle de <i>désabonnement</i> lorsqu'un utilisateur a répondu à votre message avec un <a href="https://braze.com/docs/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#default-opt-in-opt-out-keywords">mot-clé de désabonnement</a> et qu'il a été désabonné de votre programme SMS.
+On parle d'<i>abonnement</i> lorsqu'un utilisateur a répondu à votre message avec un <a href="https://braze.com/docs/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#default-opt-in-opt-out-keywords">mot-clé d'exclusion</a> et qu'il s'est désabonné de votre programme SMS ou RCS.
 {% endif %}
 
 {% if include.metric == "Pending Retry" %}
@@ -175,7 +179,7 @@ Les <i>conversions principales (A)</i> ou <i>événement de conversion principal
 {% endif %}
 
 {% if include.metric == "Reads" %}
-La <i>lecture</i> est le moment où l'utilisateur lit le message WhatsApp. Les reçus de lecture de l'utilisateur doivent être activés pour que Braze puisse assurer le suivi des lectures.
+La <i>lecture</i> est le moment où l'utilisateur lit le message. Les reçus de lecture de l'utilisateur doivent être activés pour que Braze puisse assurer le suivi des lectures.
 {% endif %}
 
 {% if include.metric == "Read Rate" %}
@@ -187,7 +191,7 @@ La <i>réception</i> est définie différemment selon les canaux et peut avoir l
 {% endif %}
 
 {% if include.metric == "Rejections" %}
-Les <i>rejets</i> désignent les cas où le SMS a été rejeté par l'opérateur. Cela peut se produire pour plusieurs raisons, notamment le filtrage du contenu par l'opérateur, la disponibilité de l'appareil de destination, le fait que le numéro de téléphone n'est plus en service, etc.
+Il y a <i>rejet</i> lorsque le SMS ou le RCS a été rejeté par l'opérateur. Cela peut se produire pour plusieurs raisons, notamment le filtrage du contenu par l'opérateur, la disponibilité de l'appareil de destination, le fait que le numéro de téléphone n'est plus en service, etc.
 {% endif %}
 
 {% if include.metric == "Revenue" %}
@@ -199,7 +203,7 @@ Le <i>chiffre d'affaires</i> est le chiffre d'affaires total, en dollars, réali
 {% endif %}
 
 {% if include.metric == "Sent" %}
-<i>Envoyé</i> est chaque fois qu'une campagne ou une étape du canvas a été lancée ou déclenchée, et qu'un SMS a été envoyé depuis Braze. Il est possible que le SMS ne soit pas parvenu à l'appareil de l'utilisateur en raison d'erreurs.
+<i>Envoyé</i>, c'est à chaque fois qu'une campagne ou une étape du canvas a été lancée ou déclenchée, et qu'un SMS ou un RCS a été envoyé depuis Braze. Il est possible que le SMS ou le RCS n'ait pas atteint l'appareil de l'utilisateur en raison d'erreurs.
 {% endif %}
 
 {% if include.metric == "Sends" %}
@@ -227,7 +231,7 @@ Le nombre de <i>soumissions à l'enquête</i> est le nombre total de clics sur l
 {% endif %}
 
 {% if include.metric == "Total Clicks" %}
-Le <i>nombre total de clics</i> est le nombre de destinataires uniques qui ont cliqué sur un lien dans l'e-mail délivré.
+Le <i>nombre total de clics</i> est le nombre de destinataires uniques qui ont cliqué sur un lien dans le message envoyé.
 {% endif %}
 
 {% if include.metric == "Total Dismissals" %}
@@ -250,6 +254,11 @@ Le <i>chiffre d'affaires</i> total est le chiffre d'affaires total, en dollars, 
 Le nombre de <i>clics uniques</i> est le nombre distinct de destinataires qui ont cliqué au moins une fois sur un lien dans un message et est mesuré par <a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'>dispatch_id.</a>
 {% endif %}
 
+<!-- Pull channels like Banners that don't have a Dispatch ID-->
+{% if include.metric == "Unique Clicks No Dispatch ID" %}
+Le nombre de <i>clics uniques</i> est le nombre distinct de destinataires qui ont cliqué au moins une fois sur un lien dans un message.
+{% endif %}
+
 {% if include.metric == "Unique Dismissals" %}
 <i>Fermetures uniques</i> est le nombre de destinataires uniques qui ont renvoyé une carte de contenu d'une campagne. Un utilisateur qui rejette plusieurs fois une carte de contenu d’une campagne constitue un rejet unique.
 {% endif %}
@@ -257,11 +266,11 @@ Le nombre de <i>clics uniques</i> est le nombre distinct de destinataires qui on
 <!-- Unique Impressions & Unique Recipients have a dedicated section in campaign_analytics.md -->
 
 {% if include.metric == "Unique Impressions" %}
-Les <i>impressions uniques</i> correspondent au nombre total d'utilisateurs qui ont reçu et visualisé un message donné au cours d'une journée.
+Les <i>impressions uniques</i> correspondent au nombre total d'utilisateurs qui ont reçu et visualisé un message d'une campagne donnée.
 {% endif %}
 
 {% if include.metric == "Unique Recipients" %}
-<i>Destinataires uniques</i> est le nombre de destinataires uniques quotidiens, c'est-à-dire les utilisateurs qui ont reçu un message particulier au cours d'une journée.
+<i>Destinataires uniques</i> est le nombre de destinataires uniques quotidiens, c'est-à-dire les utilisateurs qui ont reçu un nouveau message au cours d'une journée. Pour que ce compte s'incrémente plus d'une fois pour un utilisateur, celui-ci doit recevoir un nouvel envoi de messages un autre jour.
 {% endif %}
 
 {% if include.metric == "Unique Opens" %}
