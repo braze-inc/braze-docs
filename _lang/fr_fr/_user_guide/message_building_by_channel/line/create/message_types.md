@@ -17,7 +17,7 @@ alias: /line/create/message_types/
 
 Lorsque vous composez un message LINE, vous pouvez glisser-déposer des types de messages dans le compositeur et les personnaliser.
 
-![Panneau des types de messages avec les types de messages à glisser dans l'éditeur de composition, y compris le texte, l'image, le message riche et le message à base de cartes.]({% image_buster /assets/img/line/line_message_types.png %}){: style="max-width:40%;"}
+Panneau des types de messages avec les types de messages à glisser dans l'éditeur du compositeur, y compris le texte, l'image, le message riche et le message basé sur une carte.]({% image_buster /assets/img/line/line_message_types.png %}){: style="max-width:40%;"}
 
 ## Texte
 
@@ -28,7 +28,7 @@ Les cas d'utilisation sont les suivants :
 - Envoyez des vœux d'anniversaire personnalisés avec des cartes de promotion uniques
 - Partagez des mises à jour rapides sur les événements à venir
 
-![Un message textuel rappelant à l'utilisateur de ne pas oublier la fête du vendredi noir et la possibilité d'enregistrer jusqu'à 80 % d'économies avant minuit.]({% image_buster /assets/img/line/line_text_message.png %}){: style="max-width:40%;"}
+Un message textuel rappelant à l'utilisateur qu'il ne doit pas oublier la fête du vendredi noir et la possibilité d'enregistrer jusqu'à 80 % d'économies avant minuit.]({% image_buster /assets/img/line/line_text_message.png %}){: style="max-width:40%;"}
 
 ## Image
 
@@ -39,14 +39,14 @@ Les cas d'utilisation sont les suivants :
 - Mettez en avant les promotions de fin de saison pour inciter les utilisateurs à s'approvisionner en vêtements d'hiver pour l'année prochaine grâce à de bonnes affaires.
 - Lancez un compte à rebours visuel pour une vente annuelle dans tout le magasin
 
-![Un message d'image envoyant des messages pour la vente d'un grille-pain.]({% image_buster /assets/img/line/line_image_message.png %}){: style="max-width:40%;"}
+\![Un message d'image envoyant des messages pour la vente d'un grille-pain.]({% image_buster /assets/img/line/line_image_message.png %}){: style="max-width:40%;"}
 
 ### Image URL
 
 Utilisez des images URL pour les cas d'utilisation qui les intègrent :
 - Les images dynamiques Liquid en incluant le Liquid dans l'attribut source de votre image. Par exemple, vous pouvez insérer {% raw %} `https://example.com/images/?imageBanner={{first_name}}` {% endraw %} comme URL de l'image pour inclure le prénom d'un utilisateur dans l'image
 - [Contenu connecté]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) en tirant des images directement de votre serveur web ou d'API accessibles au public.
-- [Braze établit des catalogues]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/) en accédant à des images à partir de fichiers CSV importés et d'endpoints API.
+- [Braze établit des catalogues]({{site.baseurl}}/user_guide/data/activation/catalogs/) en accédant à des images à partir de fichiers CSV importés et d'endpoints API.
 
 | **Spécifications** | **Propriétés recommandées** |
 |--------------------------|----------------------------|
@@ -61,10 +61,10 @@ Un message riche en LIGNE est une image qui contient un ou plusieurs liens qui s
 
 Les cas d'utilisation sont les suivants :
 - Affichez une grille des sacs à main nouvellement arrivés avec des liens vers la page produit de chaque sac.
-- Présentez un menu interactif qui lance une commande combo en sélectionnant un article.
+- Présentez un menu interactif qui permet de lancer une commande combo en sélectionnant un article.
 - Présentez plusieurs promotions que les utilisateurs peuvent choisir en sélectionnant un carré de la grille.
 
-![Un message riche de six cases avec une photo d'une grille en noir et blanc sur laquelle les utilisateurs peuvent appuyer pour recevoir une offre aléatoire.]({% image_buster /assets/img/line/line_rich_message.png %})
+Un message riche de six cases avec une photo d'une grille en noir et blanc sur laquelle les utilisateurs peuvent appuyer pour recevoir une offre aléatoire.]({% image_buster /assets/img/line/line_rich_message.png %})
 
 ### Mappage de l'image 
 
@@ -97,7 +97,7 @@ Les cas d'utilisation sont les suivants :
 - Mettez en avant les vestes les plus vendues de la saison
 - Présenter un échantillon d'outils et de gadgets de cuisine inclus dans un kit.
 
-![Un message basé sur des cartes avec au moins deux cartes qui font la promotion des sandwichs dans l'éditeur du compositeur.]({% image_buster /assets/img/line/line_card_message.png %})
+!Un message à base de cartes avec au moins deux cartes qui font la promotion des sandwichs dans l'éditeur du compositeur.]({% image_buster /assets/img/line/line_card_message.png %})
 
 ### Message
 
@@ -113,10 +113,10 @@ Les cas d'utilisation sont les suivants :
 
 | **Spécifications** | **Propriétés recommandées** |
 |--------------------------|----------------------------|
-| URL de l’image                 | 2 000 caractères maximum |
+| URL de l'image                 | 2 000 caractères maximum |
 | Format de l'image              | JPEG ou PNG |
 | Largeur                     | 1 024 pixels  |
-| Taille du fichier                 | 1 MO |
+| Taille du fichier                 | 1 MB |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 

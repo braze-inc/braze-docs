@@ -17,7 +17,7 @@ La personalización Liquid para páginas de destino sólo está disponible en el
 
 En el editor de arrastrar y soltar, puedes insertar la personalización de Liquid tanto en el editor como en la configuración de la página o del bloque en el panel derecho. Para obtener instrucciones sobre la implantación de Liquid, consulta nuestra [documentación]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#using-liquid-1) dedicada [a Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#using-liquid-1).
 
-![Editor de páginas de destino con personalización Liquid añadida.]({% image_buster /assets/img/landing_pages/lp_liquid_.png %})
+\![Editor de páginas de destino con personalización Liquid añadida.]({% image_buster /assets/img/landing_pages/lp_liquid_.png %})
 
 ## Vista previa y pruebas
 
