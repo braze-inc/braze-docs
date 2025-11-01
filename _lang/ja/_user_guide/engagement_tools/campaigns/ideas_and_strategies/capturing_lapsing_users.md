@@ -23,7 +23,7 @@ tool:
 - **最後のアプリ使用**から 2 週間以上
 - **最後のアプリ使用**から 3 週間未満
 
-![]({% image_buster /assets/img_archive/2weeklapse1.png %}){: style="max-width:70%;"}
+\![]({% image_buster /assets/img_archive/2weeklapse1.png %}){: style="max-width:70%;"}
 
 「離脱ユーザー - 2 週間」など、セグメントに覚えやすい名前を付けます。ここでは週単位で繰り返すようにキャンペーンを設定するので、セグメントに少なくとも 1 週間分のユーザーをキャプチャする必要があります。アプリを最後に使用したのが 2 ～ 3週間前だったユーザーを選択したのはそのためです。
 
@@ -31,19 +31,19 @@ tool:
 
 次に、**Create Campaign**をクリックし、このセグメントに送信するキャンペーンのタイプを選択します。この例では、新しい[push campaign]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message)を作成します。
 
-![]({% image_buster /assets/img_archive/2weeklapse2.png %}){: style="max-width:70%;"}
+\![]({% image_buster /assets/img_archive/2weeklapse2.png %}){: style="max-width:70%;"}
 
 キャンペーンに「離脱ユーザーへのメッセージ - 2 週間」という名前を付け、メッセージの内容を作成します。この例では、iOS ユーザーのみをターゲットにしますが、Android および iOS プッシュ通知にも Braze を使用できます。 
 
 ユーザーが最後にアプリを使った時間に近いほど、関連性の高いトピックが重要になります。アプリを使用してから 2 週間以上経っているユーザーにメッセージを送信する場合は、関連するコンテンツを表示し、アプリを使用するメリットを強調することが重要です。
 
-![]({% image_buster /assets/img_archive/2weeklapse3.png %}){: style="max-width:70%;"}
+\![]({% image_buster /assets/img_archive/2weeklapse3.png %}){: style="max-width:70%;"}
 
 次に、[**時間ベースのスケジューリングオプション**] の[ローカルタイムゾーン配信]({{site.baseurl}}/help/faqs/#what-does-local-time-zone-delivery-offer)を使用して、毎週木曜日の5:45 pmにメッセージを送信する繰り返しスケジュールを作成します。セッショングラフを確認して、使用率の高い期間の直前にユーザーをターゲティングすることをお勧めします。これにより、アプリを使用する可能性が最も高いときに、ユーザーのリエンゲージメントを促します。これは後で変更して、最初の仮説をテストすることができます。
 
-![]({% image_buster /assets/img_archive/2weeklapse4.png %}){: style="max-width:70%;"}
+\![]({% image_buster /assets/img_archive/2weeklapse4.png %}){: style="max-width:70%;"}
 
-## ステップ 3:キャンペーンを開始する
+## ステップ 3: キャンペーンを開始する
 
 これで、キャンペーンを送信する準備ができました。作成画面の最終ページの設定を確認し、[**キャンペーンを開始**] をクリックしてください。
 
