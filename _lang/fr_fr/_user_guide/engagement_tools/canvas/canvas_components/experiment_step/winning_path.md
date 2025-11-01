@@ -1,75 +1,77 @@
 ---
-nav_title: Chemin gagnant 
-article_title: Chemin gagnant dans les chemins d’expérience 
+nav_title: Le chemin de la victoire
+article_title: "Chemin d'expérience gagnant" 
 page_type: reference
-description: "Cet article de référence couvre le chemin gagnant, une fonctionnalité qui vous permet d’automatiser vos tests A/B lorsqu’ils sont activés pour une étape des chemins d'expérience."
+description: "Cet article de référence traite du chemin gagnant, une fonctionnalité qui vous permet d'automatiser vos tests A/B lorsqu'elle est activée pour une étape chemins d'expérience."
 tool: Canvas
 ---
 
-# Chemin gagnant dans les chemins d’expérience
+# Chemin d'expérience gagnant
 
-> Le chemin gagnant (Winning Path) est similaire à la [variante gagnante (Winning Variant)]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/) dans les campagnes, et vous permet d'automatiser vos tests A/B.
+> Winning Path est similaire à [Winning Variante]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/) dans les campagnes, et vous permet d'automatiser vos tests A/B.
 
-Lorsque le chemin gagnant est activé dans une étape des chemins d'expérience, après une période spécifiée, tous les utilisateurs suivants seront envoyés sur le chemin avec le taux de conversion le plus élevé.
+Lorsque l'option Chemin gagnant est activée dans une étape des chemins d'expérience, tous les utilisateurs suivants seront envoyés, après une période de temps déterminée, sur le chemin ayant le taux de conversion le plus élevé.
 
-## Utilisation du chemin gagnant
+## Utiliser le parcours gagnant
 
-### Étape 1 : Ajouter une étape des chemins chemins d'expérience
+### Étape 1 : Ajouter une étape des chemins chemins d'expérience
 
-Ajoutez un [chemin d'expérience]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/) à votre canvas, puis activez l'option **Chemin gagnant**.
+Ajoutez un [chemin d'expérience]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/) à votre Canvas, puis activez l'option **Chemin d'expérience**.
 
-![Paramètres des chemins d’expérience intitulés "Distribute Subsequent Users to Winning Path" (Envoyez les utilisateurs suivants dans le chemin gagnant). La section comprend un basculeur pour le chemin gagnant et des options pour configurer l'événement de conversion et la fenêtre d'expérience.]({% image_buster /assets/img/experiment_step/experiment_winning_path_recurring.png %})
+\![Paramètres du chemin d'expérience intitulés "Distribuer les utilisateurs suivants vers le chemin d'expérience gagnant". La section comprend un basculeur pour le chemin d'expérience, et des options pour configurer l'événement de conversion et la fenêtre d'expérience.]({% image_buster /assets/img/experiment_step/experiment_winning_path_recurring.png %})
 
-### Étape 2 : Configurer les paramètres du chemin gagnant
+### Étape 2 : Configurer les paramètres du chemin gagnant
 
-Pour définir un chemin gagnant, spécifiez l’événement de conversion devant déterminer le gagnant. Si aucun événement de conversion n'est disponible, revenez à la première étape de la configuration de Canvas et [attribuez des événements de conversion]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#choose-conversion-events). Notez que si vous déterminez le gagnant à l’aide des ouvertures et des clics, seul le premier message du chemin qui génère des ouvertures ou des clics contribuera à déterminer le gagnant.
+Indiquez l'événement de conversion qui doit déterminer le gagnant. Si aucun événement de conversion n'est disponible, revenez à la première étape de la configuration de Canvas et [attribuez des événements de conversion]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#choose-conversion-events). 
 
-Ensuite, définissez la **fenêtre d'expérience**. La **fenêtre d'expérience** spécifie la durée de l'expérience avant que le chemin gagnant ne soit déterminé et que tous les utilisateurs qui suivent ne soient envoyés sur ce chemin. Cette fenêtre débute au moment où le premier utilisateur accède à l’étape.
+Si vous choisissez les ouvertures ou les clics comme événement de conversion, assurez-vous que la première étape du chemin est une [étape de Message.]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step) Braze ne compte que l'engagement à partir de la première étape du message dans chaque voie respective. Si le parcours commence par une étape différente (comme une étape de retard ou de parcours d'audience) et que le message arrive plus tard, ce message ne sera pas pris en compte lors de l'évaluation de la performance.
 
-![Paramètres du chemin d'expérience gagnante avec l'événement de conversion "Clics" sélectionné pour une fenêtre d'expérience de 12 heures.]({% image_buster /assets/img/experiment_step/experiment_winning_settings.png %})
+Ensuite, définissez la **fenêtre d'expérience**. La **fenêtre d'expérience** spécifie la durée de l'expérience avant que le chemin gagnant ne soit déterminé et que tous les utilisateurs qui suivent ne soient envoyés sur ce chemin. La fenêtre commence lorsque le premier utilisateur entre dans l'étape.
 
-### Étape 3 : Déterminer la solution de secours {#statistical-significance}
+Paramètres du chemin d'expérience gagnant avec l'événement de conversion "Clics" sélectionné pour une fenêtre d'expérience de 12 heures.]({% image_buster /assets/img/experiment_step/experiment_winning_settings.png %})
 
-Par défaut, si les résultats du test ne sont pas suffisants pour déterminer un vainqueur statistiquement significatif, tous les utilisateurs futurs seront envoyés sur le chemin le plus performant.
+### Étape 3 : Déterminer la solution de repli {#statistical-significance}
+
+Par défaut, si les résultats du test ne sont pas suffisants pour déterminer un gagnant statistiquement significatif, tous les utilisateurs futurs seront envoyés sur le chemin le plus performant.
 
 Vous pouvez également sélectionner **Continuer à envoyer le mélange de chemins à tous les futurs utilisateurs**. Cette option enverra les futurs utilisateurs dans la combinaison de chemins selon les pourcentages spécifiés dans la distribution des chemins d'expérience.
 
-!["Continuer à envoyer à tous les futurs utilisateurs la combinaison de chemins" sélectionné comme ce qui arrivera aux utilisateurs si le résultat du test n'est pas statistiquement significatif.]({% image_buster /assets/img/experiment_step/experiment_winning_statistical.png %})
+\!["Continuez à envoyer à tous les futurs utilisateurs le mélange de chemins" sélectionné comme ce qui arrivera aux utilisateurs si le résultat du test n'est pas statistiquement significatif.]({% image_buster /assets/img/experiment_step/experiment_winning_statistical.png %})
 
 {% alert note %}
-Un groupe retardé apparaîtra dans votre distribution de chemins uniquement si votre canvas est configuré pour une entrée unique et que votre étape d'expérience comporte trois chemins ou moins. Les toiles récurrentes et déclenchées n'auront pas de groupe de retard lorsque le chemin gagnant est activé.
+Un groupe de retard n'apparaîtra dans votre distribution de chemins que si votre Canvas est configuré pour une entrée unique et que votre étape des chemins d'expérience comporte trois chemins ou moins. Les toiles récurrentes et déclenchées n'auront pas de groupe de retard lorsque le chemin gagnant est activé.
 {% endalert %}
 
-### Étape 4 : Ajoutez vos chemins et lancez le Canvas
+### Étape 4 : Ajoutez vos chemins et lancez le Canvas
 
-Un seul composant Chemin d'expérience peut contenir jusqu'à quatre chemins. Toutefois, si votre Canvas est configuré pour une [entrée unique](#one-time-entry), un chemin doit être réservé au groupe de retard que Braze ajoute automatiquement lorsque le chemin gagnant est activé. Cela signifie que pour les toiles à entrée unique, vous pouvez ajouter jusqu'à trois chemins d'expérience.
+Un seul composant "chemin d'expérience" peut contenir jusqu'à quatre chemins. Toutefois, si votre Canvas est configuré pour une [entrée unique](#one-time-entry), un chemin doit être réservé au groupe de retard que Braze ajoute automatiquement lorsque le chemin gagnant est activé. Cela signifie que pour les toiles à entrée unique, vous pouvez ajouter jusqu'à trois chemins d'expérience.
 
-Terminez la configuration de votre canvas si nécessaire, puis lancez-le. Lorsque le premier utilisateur est entré dans l'expérience, vous pouvez consulter le Canvas pour voir les analyses/analytiques au fur et à mesure qu'elles arrivent et [suivre les performances de votre expérience]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/#tracking-performance).
+Terminez la configuration de votre Canvas si nécessaire, puis lancez-le. Lorsque le premier utilisateur est entré dans l'expérience, vous pouvez consulter le Canvas pour voir les analyses/analytiques au fur et à mesure qu'elles arrivent et [suivre les performances de votre expérience]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/#tracking-performance).
 
 Après la conclusion d'un chemin gagnant, tous les utilisateurs suivants qui entrent dans le Canvas suivront le chemin gagnant, y compris les utilisateurs qui sont entrés à nouveau et qui faisaient auparavant partie du groupe de contrôle de l'étape du chemin d'expérience.
 
-## Analyses {#analytics}
+## Analyse/analytique (si utilisé comme adjectif) {#analytics}
 
-Si l'option Chemin gagnant est activée, la vue analytique est séparée en deux onglets : **Expérience d’origine** et **Chemin gagnant**.
+Si l'option "Winning Path" a été activée, votre analyse/analytique est séparée en deux onglets : **Expérience initiale** et **chemin d'honneur**.
 
-- **Première expérience :** Affiche les indicateurs de chaque chemin pendant la fenêtre d’expérimentation. Vous pouvez consulter un résumé des performances de tous les chemins d'accès pour les événements de conversion spécifiés et voir quel chemin d'accès a été sélectionné comme vainqueur.
-- **Chemin gagnant (Winning Path) :** Affiche uniquement les indicateurs pour le chemin gagnant à partir du moment où l’expérience d’origine est terminée.
+- **Première expérience :** Montre les indicateurs pour chaque chemin d'expérience pendant la fenêtre d'expérience. Vous pouvez consulter un résumé des performances de tous les chemins d'accès pour les événements de conversion spécifiés et voir quel chemin d'accès a été sélectionné comme vainqueur.
+- **Le chemin de la victoire :** Affiche uniquement les indicateurs du chemin d'expérience gagnante à partir du moment où l'expérience initiale s'est terminée.
 
-## Choses à savoir
+## Ce qu'il faut savoir
 
 ### Entrée unique {#one-time-entry}
 
-Lorsque vous utilisez des parcours gagnants dans un canvas où les utilisateurs ne sont autorisés à entrer qu'une seule fois, un groupe de retard est automatiquement inclus. Pendant la durée de l'expérience, un pourcentage d'utilisateurs sera maintenu dans le groupe de retard pendant que les autres utilisateurs entreront dans vos chemins d'expérience.
+Lorsque vous utilisez des parcours gagnants dans un canvas où les utilisateurs ne sont autorisés à entrer qu'une seule fois, un groupe de retard est automatiquement inclus. Pendant la durée de l'expérience, un pourcentage d'utilisateurs sera maintenu dans le groupe de retard pendant que les autres utilisateurs entrent dans vos chemins d'expérience.
 
-![Étape des chemins d'expérience avec un groupe interne pour le chemin gagnant]({% image_buster /assets/img/experiment_step/experiment_one_time.png %}){: style="max-width:75%"}
+!étape des chemins d'expérience avec un groupe de retard pour le chemin gagnant]({% image_buster /assets/img/experiment_step/experiment_one_time.png %}){: style="max-width:75%"}
 
 Lorsque le test est terminé et qu'un chemin gagnant est déterminé, les utilisateurs affectés au groupe de retardement seront dirigés vers le chemin choisi et continueront à travers le Canvas.
 
-![Étape des chemins d'expérience d'un groupe interne envoyé sur le chemin gagnant]({% image_buster /assets/img/experiment_step/experiment_one_time_results.png %}){: style="max-width:75%"}
+!étape des chemins d'expérience avec un groupe de retard envoyé sur le chemin gagnant]({% image_buster /assets/img/experiment_step/experiment_one_time_results.png %}){: style="max-width:75%"}
 
 ### Diffusion selon l'heure locale
 
-Nous vous déconseillons d’utiliser la livraison à l'heure locale dans les Canvas utilisant des chemins gagnants. En effet, les fenêtres d’expérience débutent lorsque le premier utilisateur les franchit. Les utilisateurs qui se trouvent dans des fuseaux horaires très précoces peuvent entrer dans l'étape et déclencher le début de la fenêtre d'expérience beaucoup plus tôt que prévu, ce qui peut avoir pour conséquence que l'expérience se termine avant que la majorité de vos utilisateurs se trouvant dans des fuseaux horaires plus classiques n'aient eu le temps d'entrer dans le Canvas ou de se convertir, ou les deux à la fois. 
+Nous ne recommandons pas d'utiliser la diffusion selon l'heure/distribution locale dans Canvas with Winning Paths. En effet, les fenêtres d'expérimentation commencent lorsque le premier utilisateur passe. Les utilisateurs qui se trouvent dans des fuseaux horaires très précoces peuvent entrer dans l'étape et déclencher le début de la fenêtre d'expérience beaucoup plus tôt que prévu, ce qui peut avoir pour conséquence que l'expérience se termine avant que la majorité de vos utilisateurs se trouvant dans des fuseaux horaires plus classiques n'aient eu le temps d'entrer dans le Canvas ou de se convertir, ou les deux à la fois. 
 
-Sinon, si vous souhaitez utiliser la diffusion selon l’heure locale, utilisez une fenêtre d’expérience de 24 à 48 heures ou plus. De cette manière, les utilisateurs des premiers fuseaux horaires entrent dans le Canvas et déclenchent le démarrage de l'expérience, mais il reste encore beaucoup de temps dans la fenêtre d'expérience. Les utilisateurs situés dans des fuseaux horaires plus tardifs auront encore suffisamment de temps pour entrer dans le Canvas et l'étape des chemins d'expérience avec des voies gagnantes et éventuellement se convertir avant l'expiration de la fenêtre d'expérience.
+Par ailleurs, si vous souhaitez utiliser la réception/distribution locale, utilisez une fenêtre d'expérimentation de 24 à 48 heures ou plus. De cette manière, les utilisateurs des premiers fuseaux horaires entrent dans le Canvas et déclenchent le démarrage de l'expérience, mais il reste encore beaucoup de temps dans la fenêtre d'expérience. Les utilisateurs situés dans des fuseaux horaires plus tardifs auront encore suffisamment de temps pour entrer dans le Canvas et l'étape des chemins d'expérience avec des voies gagnantes et éventuellement se convertir avant l'expiration de la fenêtre d'expérience.
 
