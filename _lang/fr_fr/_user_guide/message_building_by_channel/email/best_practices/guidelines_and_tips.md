@@ -1,42 +1,42 @@
 ---
-nav_title: Recommandations pour les e-mails
-article_title: Recommandations pour les e-mails
+nav_title: "Lignes directrices pour l'e-mail"
+article_title: "Lignes directrices concernant l'e-mail"
 page_order: 1
 page_type: reference
-description: "Le présent article couvre les conseils généraux et les astuces à garder en tête lorsque vous créez des campagnes par e-mail pour différents cas d’utilisation et différents sujets."
+description: "Cet article présente des conseils généraux et des astuces à garder à l'esprit lorsque vous créez des campagnes d'e-mail pour différents cas d'utilisation et sujets."
 channel: email
 
 ---
 
-# Recommandations pour les e-mails
+# Lignes directrices pour l'e-mail
 
-> Lorsque vous créez votre campagne par e-mail, il est important de garder à l’esprit comment vos messages vont être reçus par vos divers utilisateurs et par les ESP (fournisseurs de services d'e-mail). 
+> Lorsque vous créez votre campagne d'e-mailing, il est important de garder à l'esprit la façon dont vos messages sont reçus par vos différents utilisateurs et fournisseurs de services d'e-mailing (ESP). 
 
-Voici quelques conseils rapides à garder à l’esprit en construisant votre contenu :
+Voici quelques conseils rapides à garder à l'esprit lorsque vous créez votre contenu :
 
-- Lors du formatage de votre e-mail, utilisez les feuilles de style inline en tant que CSS.
-- Pour utiliser un modèle d’e-mail sur mobile et PC en même temps, spécifiez une largeur inférieure à 500 pixels.
-- Les images chargées dans le modèle d'e-mail doivent être inférieures à 5 Mo. Les formats pris en charge incluent PNG, JPEG et GIF.
-- Ne définissez pas de hauteurs et de largeurs pour les images, car cela générera un espace blanc inutile dans un e-mail dégradé.
-- Les balises `div` ne doivent pas être utilisées car la plupart des clients e-mail ne les prennent pas en charge. Utilisez plutôt des tables imbriquées.
-- Évitez d’utiliser Javascript parce qu’il ne fonctionne avec aucun ESP.
-- Braze améliore les temps de chargement en utilisant un CDN global pour héberger toutes les images des e-mails.
+- Lors de la mise en forme de votre e-mail, utilisez des feuilles de style en ligne (CSS).
+- Pour utiliser un seul modèle d'e-mail pour les versions mobile et de bureau, veillez à ce que la largeur soit inférieure à 500 pixels.
+- Les images téléchargées dans le modèle d'e-mail doivent être inférieures à 5 Mo. Les formats pris en charge sont PNG, JPEG et GIF.
+- Ne définissez pas de hauteurs et de largeurs pour les images, car cela entraînerait des espaces blancs inutiles dans un e-mail dégradé.
+- `div` ne doivent pas être utilisées car la plupart des clients d'e-mail ne les prennent pas en charge. Utilisez plutôt des tableaux imbriqués.
+- Évitez d'utiliser JavaScript car il ne fonctionne avec aucun ESP.
+- Braze améliore les temps de chargement en utilisant un réseau de diffusion de contenu global pour héberger toutes les images des e-mails.
 
-### Utiliser du texte alternatif
+### Mise en œuvre d'un texte alternatif
 
-Comme les filtres anti-spam surveillent à la fois la version HTML et la version texte brut d’un message, l’utilisation d’alternatives en texte brut est un excellent moyen de réduire votre score de spam. De plus, le texte alternatif `(alt="")` peut compléter, voire remplacer les images incluses dans le corps de votre e-mail, qui peuvent avoir été filtrées et supprimées par le fournisseur d’e-mail d’un utilisateur. Les lecteurs d’écran dévoilent le texte alternatif pour expliquer les images. C’est donc l’occasion d’utiliser un langage simple pour fournir des informations clés sur une image.
+Étant donné que les filtres anti-spam recherchent à la fois une version HTML et une version en texte brut d'un message, l'utilisation d'alternatives en texte brut est un excellent moyen de réduire votre score anti-spam. En outre, le texte alternatif `(alt="")` peut servir à compléter et, dans certains cas, à remplacer les images incluses dans le corps de votre e-mail qui ont pu être filtrées par le fournisseur d'accès à l'e-mail de l'utilisateur. Les lecteurs d'écran annoncent un texte alt pour expliquer les images. C'est donc l'occasion d'utiliser un langage clair et simple pour fournir des informations clés sur une image.
 
-### Validation de l’e-mail
+### Validation de l'e-mail
 
 {% alert important %}
-La validation est utilisée pour les adresses e-mail du tableau de bord, les adresses e-mail de l’utilisateur final (vos clients), ainsi que les adresses de réponse et de réponse effectuées par e-mail.
+La validation est utilisée pour les adresses e-mail du tableau de bord, les adresses e-mail des utilisateurs finaux (vos clients) et les adresses de départ et de destination d'un message e-mail.
 {% endalert %}
 
-La validation de l'email est effectuée lorsqu'une adresse email utilisateur a été mise à jour ou est importée dans Braze via l'API, le téléchargement CSV, le SDK ou modifiée dans le tableau de bord. Prenez en compte le fait que les adresses e-mail ne peuvent pas comprendre d’espace et que, si elles sont envoyées à l’aide de l’API, les espaces entraîneront une erreur 400.
+La validation de l'e-mail est effectuée lorsque l'adresse e-mail d'un utilisateur a été mise à jour ou est importée dans Braze via l'API, le téléchargement CSV, le SDK ou modifiée dans le tableau de bord. Notez que vos adresses e-mail ne peuvent pas contenir d'espaces blancs et que si vous les envoyez à l'aide de l'API, les espaces blancs entraîneront une erreur 400.
 
-Les adresses e-mail ciblées via les serveurs Braze doivent être validées selon les normes [RFC 2822](https://datatracker.ietf.org/doc/html/rfc2822), Braze n'accepte pas certains caractères et les reconnaît comme invalides. Si un e-mail est renvoyé, Braze marque l’adresse e-mail comme non valide et le statut d’abonnement n’est pas modifié. 
+Les adresses e-mail ciblées via les serveurs de Braze doivent être validées selon les normes [RFC 2822](https://datatracker.ietf.org/doc/html/rfc2822). Braze n'accepte pas certains caractères et les reconnaît comme invalides. Si un e-mail est rejeté, Braze marque l'e-mail comme invalide et le statut de l'abonnement n'est pas modifié. 
 
-{% details Caractères non acceptés en dehors des normes RFC %}
+{% details Unaccepted characters outside of RFC standards %}
 - *
 - /
 - ?
@@ -53,12 +53,12 @@ Les adresses e-mail ciblées via les serveurs Braze doivent être validées selo
 - [
 - ]
 - ~
-- , 
+- ,
 {% enddetails %}
 
-### Définir les adresses « De » et « Répondre à »
+### Définition des adresses de départ et de destination des réponses
 
-Lorsque vous définissez vos adresses d’expéditeur, assurez-vous que votre domaine d’e-mail « De » correspond à votre domaine d’envoi (par exemple, `marketing.yourdomain.com`). Le non-respect de cette consigne peut entraîner un mauvais alignement SPF et DKIM. Tous les e-mails de réponse peuvent être définis dans votre domaine racine.
+Lorsque vous définissez vos adresses "from", assurez-vous que votre domaine d'e-mail "from" correspond à votre domaine d'envoi (tel que `marketing.yourdomain.com`). Si vous ne le faites pas, vous risquez d'avoir un décalage entre SPF et DKIM. Tous les e-mails de réponse peuvent être définis sur votre domaine racine.
 
 {% alert note %}
 Le codage Unicode n'est pas pris en charge dans les adresses "from".
@@ -66,10 +66,10 @@ Le codage Unicode n'est pas pris en charge dans les adresses "from".
 
 ### Vérification des détails HTML
 
-N’oubliez pas que certaines balises et attributs HTML ne sont pas autorisés car ils peuvent potentiellement permettre d’exécuter du code malveillant dans le navigateur.
+Gardez à l'esprit que certaines étiquettes et certains attributs HTML ne sont pas autorisés car ils peuvent potentiellement laisser un code malveillant s'exécuter dans le navigateur.
 
-Consultez les listes suivantes pour voir les balises et les attributs HTML qui ne sont pas autorisés dans vos e-mails :
-{% details Développer pour les balises HTML non autorisées %}
+Consultez les listes suivantes pour connaître les tags et attributs HTML interdits dans vos e-mails :
+{% details Expand for disallowed HTML tags %}
 - `<!doctype>`
 - `<applet>`
 - `<bgsound>`
@@ -87,7 +87,7 @@ Consultez les listes suivantes pour voir les balises et les attributs HTML qui n
 - `<svg>`
 {% enddetails %}
 
-{% details Développer pour les attributs HTML non autorisés %}
+{% details Expand for disallowed HTML attributes %}
 - `<animationend>`
 - `<animationiteration>`
 - `<animationstart>`

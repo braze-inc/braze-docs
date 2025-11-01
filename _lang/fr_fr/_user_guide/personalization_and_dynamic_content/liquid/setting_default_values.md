@@ -1,16 +1,16 @@
 ---
-nav_title: Configuration des valeurs par défaut
-article_title: Configuration des valeurs par défaut de Liquid
+nav_title: Définition des valeurs par défaut
+article_title: Réglage des valeurs par défaut des liquides
 page_order: 5
-description: "Cet article de référence explique comment définir les valeurs de secours par défaut pour tout attribut de personnalisation que vous utilisez dans vos messages."
+description: "Cet article de référence explique comment définir des valeurs de repli par défaut pour tout attribut de personnalisation que vous utilisez dans vos messages."
 
 ---
 
-# Configuration des valeurs par défaut
+# Définition des valeurs par défaut
 
 {% raw %}
 
-> Des valeurs de secours par défaut peuvent être définies pour tout attribut de personnalisation que vous utilisez dans vos messages. Cet article explique comment fonctionnent les valeurs par défaut, comment les configurer et comment les utiliser dans vos messages.
+> Des valeurs de repli par défaut peuvent être définies pour tout attribut de personnalisation utilisé dans vos messages. Cet article explique comment fonctionnent les valeurs par défaut, comment les configurer et comment les utiliser dans vos messages.
 
 ## Comment ils fonctionnent
 
@@ -22,19 +22,19 @@ Des valeurs par défaut peuvent être ajoutées en spécifiant un [filtre liquid
 
 Si une valeur par défaut n'est pas fournie et que le champ est manquant ou n'est pas défini pour l'utilisateur, le champ sera vide dans le message.
 
-L’exemple suivant montre la syntaxe correcte pour ajouter une valeur par défaut. Dans ce cas, la mention "Valued User" remplacera l'attribut `{{ ${first_name} }}` si le champ `first_name` d'un utilisateur est vide ou indisponible.
+L'exemple suivant montre la syntaxe correcte pour ajouter une valeur par défaut. Dans ce cas, la mention "Valued User" remplacera l'attribut `{{ ${first_name} }}` si le champ `first_name` d'un utilisateur est vide ou indisponible.
 
 ```liquid
 Hi {{ ${first_name} | default: 'Valued User' }}, thanks for using the App!
 ```
 
-Pour un utilisateur nommé Janet Doe, le message s’affiche comme suit :
+Pour un utilisateur nommé Janet Doe, le message apparaîtra comme suit :
 
 ```
 Hi Janet, thanks for using the App!
 ```
 
-OU
+Ou bien...
 
 ```
 Hi Valued User, thanks for using the App!
@@ -49,7 +49,7 @@ La valeur par défaut s'affiche pour les valeurs vides, mais pas pour les valeur
 
 L'exemple ci-dessus montre comment définir une valeur par défaut pour une chaîne de caractères. Vous pouvez définir des valeurs par défaut pour tout type de données Liquid ayant la valeur `empty`, `nil` (non défini) ou `false`, ce qui inclut les chaînes, les booléens, les tableaux, les objets et les nombres.
 
-### Cas d’utilisation : Booléens
+### Cas d'utilisation : Booléens
 
 Imaginons que vous disposiez d'un attribut personnalisé booléen appelé `premium_user` et que vous souhaitiez envoyer un message personnalisé en fonction du statut premium de l'utilisateur. Certains utilisateurs n'ont pas de statut premium, vous devrez donc définir une valeur par défaut pour capturer ces utilisateurs.
 
@@ -78,7 +78,7 @@ Hi {{${first_name} | default: 'valued user'}}, consider upgrading to premium for
 ```
 {% endraw %}
 
-{% details Code Liquid complet %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% assign is_premium_user = {{custom_attribute.${premium_user}}} | default: false %}
@@ -91,7 +91,7 @@ Hi {{${first_name} | default: 'valued user'}}, consider upgrading to premium for
 {% endraw %}
 {% enddetails %}
 
-### Cas d’utilisation : Chiffres
+### Cas d'utilisation : Chiffres
 
 Imaginons que vous disposiez d'un attribut personnalisé numérique appelé `reward_points` et que vous souhaitiez envoyer un message contenant les points de récompense de l'utilisateur. Certains utilisateurs n'ont pas de points de récompense, vous devrez donc définir une valeur par défaut pour tenir compte de ces utilisateurs.
 
@@ -112,7 +112,7 @@ Hi {{${first_name} | default: 'valued user'}}, you have {{custom_attribute.${rew
 ```
 {% endraw %}
 
-### Cas d’utilisation : Objets
+### Cas d'utilisation : Objets
 
 Supposons que vous ayez un objet d'attribut personnalisé imbriqué appelé `location` qui contient les propriétés `city` et `state`. Si l'une de ces propriétés n'est pas définie, vous devez encourager l'utilisateur à la fournir.
 
@@ -144,7 +144,7 @@ State: {{custom_attribute.${address.state} | default: 'Unknown'}}
 ```
 {% endraw %}
 
-{% details Code Liquid complet %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 Hi {{${first_name} | default: 'valued user'}}
@@ -158,7 +158,7 @@ State: {{custom_attribute.${address.state} | default: 'Unknown'}}
 {% endraw %}
 {% enddetails %}
 
-### Cas d’utilisation : Tableaux
+### Cas d'utilisation : Tableaux
 
 Supposons que vous disposiez d'un attribut personnalisé de type tableau appelé `upcoming_trips` qui contient des voyages avec les propriétés `destination` et `departure_date`. Vous souhaitez envoyer aux utilisateurs des messages personnalisés en fonction de la planification de leurs déplacements.
 
@@ -172,7 +172,7 @@ Supposons que vous disposiez d'un attribut personnalisé de type tableau appelé
 {% endraw %}
 
 {: start="2"}
-2\. Indiquez le message à envoyer si `upcoming_trips` a un contenu :<br><br>**2a.** Adressez-vous à l'utilisateur et incluez une valeur par défaut, au cas où vous n'auriez pas son nom. <br>**2b.** Utilisez une étiquette `for` pour spécifier que vous allez extraire des propriétés (ou des informations) pour chaque voyage contenu dans `upcoming_trips`. <br>**2c.** Listez les propriétés dans le message et incluez une valeur par défaut si l'adresse `departure_date` n'est pas définie. (Disons qu'une adresse `destination` est requise pour la création d'un voyage, il n'est donc pas nécessaire de définir une valeur par défaut pour cela).<br>**2d.** Fermez l'étiquette `for`, puis la logique conditionnelle.
+2\. Indiquez le message à envoyer si `upcoming_trips` a un contenu :<br><br>**2a.** Adressez-vous à l'utilisateur et incluez une valeur par défaut, au cas où vous n'auriez pas son nom. <br>**2b.** Utilisez une étiquette `for` pour spécifier que vous allez extraire des propriétés (ou des informations) pour chaque voyage contenu dans `upcoming_trips`. <br>**2c.** Listez les propriétés dans le message et incluez une valeur par défaut si l'adresse `departure_date` n'est pas définie. (Supposons qu'une adresse `destination` soit requise pour la création d'un voyage, il n'est donc pas nécessaire de définir une valeur par défaut pour cela).<br>**2d.** Fermez l'étiquette `for`, puis la logique conditionnelle.
 
 {% raw %}
 ```liquid
@@ -191,7 +191,7 @@ Hello {{${first_name} | default: 'fellow traveler'}},
 ```
 {% endraw %}
 
-{% details Code Liquid complet %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% if {{custom_attribute.${upcoming_trips}}} == blank %}

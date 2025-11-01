@@ -1,8 +1,8 @@
 ---
-nav_title: Nouvelles tentatives de contenu connecté
-article_title: Nouvelles tentatives de contenu connecté
+nav_title: Connecté Tentatives de contenu connecté
+article_title: Répétitions du contenu connecté
 page_order: 5
-description: "Cet article de référence explique comment gérer les tentatives de contenu connecté."
+description: "Cet article de référence explique comment traiter les tentatives de relance du contenu connecté."
 
 ---
 
@@ -12,10 +12,10 @@ description: "Cet article de référence explique comment gérer les tentatives 
 
 ## Fonctionnement des tentatives 
 
-Le contenu connecté reposant sur la réception de données provenant d'API, une API peut être indisponible par intermittence pendant que Braze effectue l'appel. Dans ce cas, Braze prend en charge la logique de nouvelle tentative pour tenter de nouveau la demande à l’aide d’un délai exponentiel.
+Le contenu connecté reposant sur la réception de données provenant d'API, une API peut être indisponible par intermittence pendant que Braze effectue l'appel. Dans ce cas, Braze prend en charge la logique de réessai pour réessayer la demande en utilisant des délais exponentiels.
 
 {% alert note %}
-Contenu connecté `:retry` n’est pas disponible pour les messages dans l’application.
+Le contenu connecté `:retry` n'est pas disponible pour les messages in-app.
 {% endalert %}
 
 ## Utilisation de la logique de réessai
@@ -39,6 +39,6 @@ Si une nouvelle tentative réussit, le message est envoyé et aucune autre tenta
 
 #### Lorsque l'appel API échoue et que les tentatives sont activées
 
-Si l'appel API échoue et que cette option est activée, Braze relance l'appel en respectant la [limite de débit]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#delivery-speed-rate-limiting) que vous avez définie pour chaque nouvel envoi. Le braze déplace les messages défaillants vers l’arrière de la file d’attente et ajoute des minutes supplémentaires, si nécessaire, au nombre total de minutes qu’il faudrait pour envoyer votre message.
+Si l'appel API échoue et que cette option est activée, Braze relance l'appel tout en respectant la [limite de débit]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#delivery-speed-rate-limiting) que vous avez définie pour chaque nouvel envoi. Braze placera les messages qui n'ont pas abouti en fin de file d'attente et ajoutera, si nécessaire, des minutes supplémentaires au nombre total de minutes nécessaires à l'envoi de votre message.
 
 Si l'appel au contenu connecté échoue plus de cinq fois, l'envoi de messages est interrompu, de la même manière qu'une [étiquette de message]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/) déclenché.

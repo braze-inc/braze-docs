@@ -37,8 +37,8 @@ jobs:
               return;
             }
 
-            // 3) Parse i18n_phrase-<lang>-<YYYYMMDD>
-            const m = branch.match(/^i18n_phrase-([a-z_]+)-(\d{8})$/);
+            // 3) Parse i18n_phrase-<lang>-<YYYYMMDD> with optional trailing content
+            const m = branch.match(/^i18n_phrase-([a-z_]+)-(\d{8})(?:--\d+)?$/);
             if (!m) {
               core.info(`Pass: branch pattern not matched: ${branch}`);
               return;

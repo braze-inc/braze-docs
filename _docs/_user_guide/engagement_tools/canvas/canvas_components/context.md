@@ -53,7 +53,7 @@ For example, if a customer has two upcoming flights, they'll have two separate j
 - Each context variable name can be up to 100 characters.
 - Context variable names must be valid identifiers (letters, numbers, underscores only).
 - Context variable definitions can be up to 10,240 characters. 
-- Context variables passed into an API-triggered Canvas share the same namespaces as context variables created in a Context step in a Canvas. This means if you send a variable `purchased_item` in the `/canvas/trigger/send` endpoint [context object]({{site.baseurl}}/api/objects_filters/context_object), it can be referenced as {% raw %}`{context.${purchased_item}}`{% endraw %}, and re-declaring that variable in a Context step in the Canvas will override what was previously sent.
+- Context variables passed into an API-triggered Canvas share the same namespaces as context variables created in a Context step in a Canvas. This means if you send a variable `purchased_item` in the [`/canvas/trigger/send` endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) context object, it can be referenced as {% raw %}`{context.${purchased_item}}`{% endraw %}, and re-declaring that variable in a Context step in the Canvas will override what was previously sent.
 - You can store up to 50&nbsp;KB per context step, distributed up to 10 variables per step. Variable sizes that sum up to over 50&nbsp;KB in one step won't be evaluated or stored for the user. These sizes are calculated in sequence. For example, if you have 3 variables in a Context step:
   - Variable 1: 30&nbsp;KB
   - Variable 2: 19&nbsp;KB

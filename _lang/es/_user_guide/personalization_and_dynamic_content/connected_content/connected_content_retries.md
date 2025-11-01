@@ -12,10 +12,10 @@ description: "Este artículo de referencia explica cómo tratar los reintentos d
 
 ## Cómo funcionan los reintentos 
 
-Dado que el Contenido conectado depende de la recepción de datos de las API, una API podría no estar disponible de forma intermitente mientras Braze realiza la llamada. En este caso, Braze admite la lógica de reintento para reintentar la solicitud utilizando un backoff exponencial.
+Dado que el Contenido conectado depende de la recepción de datos de las API, una API podría no estar disponible de forma intermitente mientras Braze realiza la llamada. En este caso, Braze admite la lógica de reintento para reintentar la solicitud utilizando la retirada exponencial.
 
 {% alert note %}
-Contenido conectado `:retry` no está disponible para los mensajes in-app.
+Contenido conectado `:retry` no está disponible para mensajes dentro de la aplicación.
 {% endalert %}
 
 ## Utilizar la lógica de reintento
@@ -39,6 +39,6 @@ Si un intento de reintento tiene éxito, el mensaje se envía y no se intentan m
 
 #### Cuando falla la llamada a la API y se habilitan los reintentos
 
-Si la llamada a la API falla y esta opción está activada, Braze reintentará la llamada respetando el [límite de velocidad]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#delivery-speed-rate-limiting) establecido para cada reenvío. Braze moverá cualquier mensaje fallido al final de la cola y añadirá minutos adicionales, si es necesario, al total de minutos que tardaría en enviar su mensaje.
+Si la llamada a la API falla y esto está habilitado, Braze reintentará la llamada respetando el [límite de velocidad]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#delivery-speed-rate-limiting) que establezcas para cada reenvío. Braze moverá cualquier mensaje fallido al final de la cola y añadirá minutos adicionales, si es necesario, al total de minutos que tardaría en enviarse tu mensaje.
 
 Si la llamada a Contenido conectado da error más de cinco veces, el mensaje se aborta, de forma similar a como se desencadena una [etiqueta de mensaje de abortar]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/).
