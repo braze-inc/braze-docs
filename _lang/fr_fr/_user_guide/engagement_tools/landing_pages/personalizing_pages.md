@@ -17,7 +17,7 @@ La personnalisation liquide pour les pages d'atterrissage n'est disponible que s
 
 Dans l'éditeur par glisser-déposer, vous pouvez insérer la personnalisation des liquides à la fois dans l'éditeur et dans les paramètres de la page ou du bloc dans le panneau de droite. Pour obtenir des instructions sur la mise en œuvre de Liquid, consultez notre [documentation]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#using-liquid-1) dédiée à [Liquid.]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#using-liquid-1)
 
-![L'éditeur de pages d'atterrissage avec la personnalisation des liquides a été ajouté.]({% image_buster /assets/img/landing_pages/lp_liquid_.png %})
+L'éditeur de pages d'atterrissage avec la personnalisation des liquides a été ajouté.]({% image_buster /assets/img/landing_pages/lp_liquid_.png %})
 
 ## Prévisualisation et test
 
