@@ -1,5 +1,5 @@
 ---
-nav_title: Ihre Kampagne planen
+nav_title: Zeitplan für Ihre Kampagne
 article_title: Ihre Kampagne planen
 layout: dev_guide
 page_order: 3

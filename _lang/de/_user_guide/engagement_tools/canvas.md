@@ -33,10 +33,7 @@ guide_featured_list:
   - name: Häufig gestellte Fragen
     link: /docs/user_guide/engagement_tools/canvas/faqs/
     image: /assets/img/braze_icons/annotation-question.svg
+  - name: Fehlerbehebung Canvase
+    link: /docs/user_guide/engagement_tools/canvas/troubleshooting/
+    image: /assets/img/braze_icons/annotation-question.svg
 ---
-
-{% alert important %}
-Seit dem 28\. Februar 2023 ist es nicht mehr möglich, Canvase in der klassischen Canvas-Umgebung zu erstellen oder zu duplizieren. Braze empfiehlt Kunden, die die klassische Canvas-Umgebung nutzen, den Wechsel zu Canvas Flow. Es handelt sich um eine verbesserte Bearbeitungsfunktion, mit der Sie Canvases besser erstellen und verwalten können. Erfahren Sie mehr über das [Klonen Ihrer Canvases in Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
-{% endalert %}
-
-<br>

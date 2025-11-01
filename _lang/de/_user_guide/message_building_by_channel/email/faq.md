@@ -22,16 +22,8 @@ Beachten Sie, dass diese Deduplizierung erfolgt, wenn die anvisierten Benutzer i
 API-abhängige Kampagnen werden dedupliziert oder versenden Duplikate – je nachdem, wo die Zielgruppe definiert ist. Mail-Doubletten müssen also direkt als separate `user_ids` im API-Aufruf angegangen werden, um mehrere Details zu erhalten. Hier werden drei mögliche Szenarien für API-gestützte Kampagnen vorgestellt:
 
 - **Szenario 1: Doppelte E-Mails im Zielsegment:** Wenn dieselbe E-Mail in mehreren Benutzerprofilen erscheint, die in den Zielgruppenfiltern des Dashboards für eine API-ausgelöste Kampagne gruppiert sind, erhält nur eines der Profile die E-Mail.
-- **Szenario 2: Doppelte E-Mails in verschiedenen `user_ids` des Empfängerobjekts ** Wenn dieselbe E-Mail in mehreren `External_user_IDs` erscheint, auf die das Objekt `recipients`` verweist, wird die E-Mail zweimal gesendet.
-- **Szenario 3: Doppelte E-Mails aufgrund von doppelten user_ids im Empfängerobjekt:** Wenn Sie versuchen, dasselbe Benutzerprofil zweimal hinzuzufügen, wird nur eines der Profile die E-Mail erhalten.
-
-### Wie prüfe ich, ob eine E-Mail Adresse bereits mit einer Nutzer:in verknüpft ist?
-
-Bevor Sie einen Nutzer:innen über die API oder das SDK anlegen, rufen Sie den [`/users/export/ids`]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) Endpunkt auf und geben Sie die `email_address` des Nutzers:innen an. Wenn es ein Nutzerprofil zurückgibt, ist dieser Nutzer:in bereits mit dieser E-Mail verknüpft.
-
-Wir empfehlen Ihnen dringend, bei der Erstellung neuer Nutzer:innen auf eindeutige E-Mail-Adressen zu achten und die Weitergabe oder den Import von Nutzer:innen mit der gleichen E-Mail-Adresse zu vermeiden. Andernfalls kann es zu unbeabsichtigten Konsequenzen kommen, die sich auf den Versand von Nachrichten, Targeting, Berichte und andere Features auswirken.
-
-Nehmen wir an, Sie haben doppelte Profile, aber bestimmte angepasste Events oder Attribute befinden sich nur in einem Profil. Wenn Sie versuchen, Kampagnen oder Canvase mit mehreren Kriterien zu triggern, kann Braze den Nutzer:innen nicht als geeignet identifizieren, da es zwei Nutzerprofile gibt. Oder wenn eine Kampagne auf eine E-Mail Adresse abzielt, die von zwei Nutzern geteilt wird, zeigt die Seite **Nutzer:innen suchen** an, dass beide Nutzerprofile die Kampagne erhalten haben.
+- **Szenario 2: Doppelte E-Mails in verschiedenen `user_ids` des Empfängerobjekts ** Wenn dieselbe E-Mail in mehreren `External_user_IDs` auftaucht, die durch das Objekt `Empfänger` referenziert werden, wird die E-Mail zweimal gesendet.
+- **Szenario 3: Doppelte E-Mails aufgrund von doppelten user_ids innerhalb des Empfänger:in-Objekts:** Wenn Sie versuchen, dasselbe Benutzerprofil zweimal hinzuzufügen, wird nur eines der Profile die E-Mail erhalten.
 
 ### Werden Aktualisierungen meiner Einstellungen für ausgehende E-Mails rückwirkend angewendet?
 
@@ -45,7 +37,7 @@ Allerdings kann es auch bei über 98 % Probleme mit der Zustellbarkeit geben. W
 
 Außerdem kann es vorkommen, dass Nachrichten zugestellt werden und im Spam landen, was auf potenziell ernsthafte Reputationsprobleme hinweist. Es kommt darauf an, nicht nur die Anzahl zugestellter Nachrichten zu kontrollieren sondern auch die Öffnungs- und Klickraten, um festzustellen, ob Ihre Nachrichten im Posteingang tatsächlich gesehen werden. Da die Anbieter in der Regel nicht jeden Spam melden, kann selbst eine Spam-Quote von 1 % Anlass zur Sorge und zu weiteren Analysen sein.
 
-Schließlich können auch Ihr Unternehmen und die Art der von Ihnen versendeten E-Mails die Zustellung beeinflussen. Wer zum Beispiel hauptsächlich [Transaktions-E-Mails][1] versendet, sollte mit einer besseren Quote rechnen als jemand, der viele Marketing-Nachrichten verschickt.
+Schließlich können auch Ihr Unternehmen und die Art der von Ihnen versendeten E-Mails die Zustellung beeinflussen. Wer zum Beispiel hauptsächlich [Transaktions-E-Mails]({{site.baseurl}}/api/api_campaigns/transactional_api_campaign) versendet, sollte mit einer besseren Quote rechnen als jemand, der viele Marketing-Nachrichten verschickt.
 
 ### Warum betragen die Kennzahlen zur E-Mail-Zustellung zusammengenommen weniger als 100%?
 
@@ -80,21 +72,6 @@ Bestimmte Elemente von E-Mails wie überlange Nachrichten oder zu viele Ausrufez
 
 Bewährte Methoden für den Umgang mit diesen Antworten finden Sie unter [Handhabung von höheren Klickraten]({{site.baseurl}}/help/help_articles/email/open_rates/).
 
-### Wie lassen sich E-Mail-Adressen aus Bounce- und Spam-Listen entfernen?
-
-Mit den folgenden Endpunkten können Sie abgelehnte und als Spam eingestufte E-Mail-Adressen entfernen:
-- [`/email/bounce/remove`]({{site.baseurl}}/api/endpoints/email/post_remove_hard_bounces)
-- [`/email/spam/remove`]({{site.baseurl}}/api/endpoints/email/post_remove_spam)
-
-### Wie kann ich die E-Mail-Abonnementgruppe eines Benutzers überprüfen?
-
-- **Benutzerprofil:** Auf einzelne Benutzerprofile können Sie über das Braze-Dashboard von der Seite [Benutzer suchen]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/#access-profiles) aus zugreifen. Hier können Sie Benutzerprofile nach E-Mail-Adresse, Telefonnummer oder externer Benutzer-ID abrufen. Wenn Sie sich in einem Benutzerprofil befinden, können Sie auf der Registerkarte Engagement die E-Mail-Abonnementgruppen eines Benutzers einsehen.
-- **Rest-API:** Die Abonnementgruppen der einzelnen Benutzerprofile können über den [Endpunkt Abonnementgruppen des Benutzers auflisten][9] oder den [Endpunkt Status der Abonnementgruppen des Benutzers auflisten][8] mit Hilfe der Braze REST API angezeigt werden. 
-
-### Wie kann ich die E-Mail-Abonnementgruppe eines Benutzers aktualisieren?
-
-Die Benutzer werden daran gehindert, den Canvas zu betreten, und es werden keine weiteren Nachrichten verschickt. Bei E-Mail-Kampagnen und Canvases bewirkt die Stopptaste nicht, dass der Versand sofort beendet wird. Denn wenn die Sendeanfragen gesendet worden sind, kann ihre Zustellung nicht mehr verhindert werden.
-
 ### Kann Braze Abmeldelinks ermitteln, die als Abmeldungen gezählt werden?
 
 Braze erfasst Abmeldelinks, wenn folgende Liquid in E-Mails verwendet wird: {%raw%}`${set_user_to_unsubscribed_url}`{%endraw%}
@@ -105,6 +82,3 @@ Nein, Braze bietet diese Funktion nicht an. Der Grund dafür ist, dass ein immer
 
 **Workaround:** Um dasselbe Ergebnis zu erzielen, können Sie den Inhalt Ihrer E-Mail auf einer externen Landing Page (z. B. Ihrer Website) hosten, die dann von der E-Mail-Kampagne, die Sie erstellen, mit dem **Link-Tool** beim Bearbeiten des E-Mail-Textes verlinkt werden kann.
 
-[8]: {{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/
-[9]: {{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_groups/
-[1]: {{site.baseurl}}/api/api_campaigns/transactional_api_campaign

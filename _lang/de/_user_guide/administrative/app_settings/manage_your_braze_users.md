@@ -4,10 +4,10 @@ article_title: "Unternehmensnutzer:innen"
 page_order: 23
 layout: dev_guide
 guide_top_header: "Unternehmensnutzer:innen"
-guide_top_text: "Als Braze-Kontoverwalter in Ihrem Unternehmen müssen Sie vielleicht Benutzer auf einer detaillierteren oder fallweisen Basis verwalten. Braze kann Ihnen dabei helfen, indem es Teams erstellt und Nutzerberechtigungen und unternehmensweite Einstellungen verwaltet."
+guide_top_text: "Als Braze-Kontoverwalter in Ihrem Unternehmen müssen Sie vielleicht Benutzer auf einer detaillierteren oder fallweisen Basis verwalten. Braze kann Ihnen dabei helfen, indem es Teams erstellt und Nutzer:innen und unternehmensweite Einstellungen verwaltet."
 
 page_type: landing
-description: "Auf dieser Landing Page finden Sie Artikel zur Verwaltung Ihrer Braze-Benutzer, z. B. zum Hinzufügen und Löschen von Benutzern, zum Festlegen von Benutzerberechtigungen, zum Erstellen von Teams und zum Verwalten von Unternehmenseinstellungen."
+description: "Auf dieser Landing Page finden Sie Artikel zur Verwaltung Ihrer Braze Nutzer:innen, wie z.B. das Hinzufügen und Löschen von Nutzern:innen, das Festlegen von Nutzerrechten, das Erstellen von Teams und die Verwaltung von Unternehmenseinstellungen."
 
 guide_featured_title: "Abschnittsartikel"
 guide_featured_list:
@@ -22,6 +22,6 @@ guide_featured_list:
   image: /assets/img/braze_icons/users-01.svg
 ---
 
-## Was sind die Unterschiede zwischen Teams, Berechtigungen und Rollen? 
+## Was sind die Unterschiede zwischen Teams, Berechtigungsgruppen und Rollen? 
 
-{% multi_lang_include permissions.md content="Unterschiede" %}
+{% multi_lang_include permissions.md content="Differences" %}
