@@ -61,7 +61,7 @@ Alle In-App-Nachrichten haben eine empfohlene Bildgröße von 500 KB, eine maxim
 
 | Typ | Seitenverhältnis | Bildqualität | Anmerkungen |
 | --- | --- | --- | --- |
-| Modal (nur Bild) | 1:1 | Hohe Auflösung 1200 x 2000 px <br> Mindestauflösung 600 x 600 px | Die Nachricht passt sich an die meisten Bildformate an. |
+| Modal (nur Bild) | 1:1 | Maximal empfohlene Auflösung: 1200 x 2000 px <br> Mindestauflösung: 600 x 600 px | Die Nachricht passt sich an die meisten Bildformate an. Die empfohlene maximale Auflösung hat ein Seitenverhältnis von 3:5, was möglicherweise keine optimalen Ergebnisse liefert. Größere Bilder sind zwar brauchbar, aber sie können zu längeren Ladezeiten führen. <br> Das ideale Seitenverhältnis für Bilder ist 1:1, und die Nichteinhaltung dieses Verhältnisses kann beim Hochladen eine Warnung auslösen. Diese Warnung ist ein Vorschlag für optimale Ergebnisse und verhindert nicht das Hochladen von größeren Bildern. |
 | Modal mit Text | 29:10 | Hohe Auflösung 1450 x 500 px <br> Mindestauflösung 600 x 205 px | Große Bilder werden verkleinert und horizontal zentriert. Breite Bilder werden am linken und rechten Rand abgeschnitten. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 }
 
