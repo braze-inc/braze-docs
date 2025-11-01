@@ -10,7 +10,7 @@ Antes de integrar el SDK de Braze Flutter, tendrás que completar lo siguiente:
 
 | Requisito previo | Descripción |
 | --- | --- |
-| Identificador de la aplicación API Braze | Para localizar el identificador de tu aplicación, ve a **Configuración** > **API e identificadores** > Identificadores de aplicación. Para más información, consulta [Tipos de identificadores de la API]({{site.baseurl}}/api/identifier_types/#app-identifier).|
+| Identificador de la aplicación API Braze | Para localizar el identificador de tu aplicación, ve a **Configuración** > **API e identificadores** > Identificadores de aplicación. Para más información, consulta [Tipos de identificadores API]({{site.baseurl}}/api/identifier_types/#app-identifier).|
 | Punto final REST Braze | La URL de su punto final REST. Tu punto final dependerá de la [URL Braze de tu instancia]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints).|
 | SDK de Flutter | Instala el [SDK](https://docs.flutter.dev/get-started/install) oficial [de Flutter](https://docs.flutter.dev/get-started/install) y asegúrate de que cumple la [versión mínima admitida](https://github.com/braze-inc/braze-flutter-sdk#requirements) del SDK de Flutter de Braze. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -33,8 +33,8 @@ Para conectarte a los servidores de Braze, crea un archivo `braze.xml` en la car
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<string name="com_braze_api_key">YOUR_APP_IDENTIFIER_API_KEY</string>
-<string translatable="false" name="com_braze_custom_endpoint">YOUR_CUSTOM_ENDPOINT_OR_CLUSTER</string>
+  <string translatable="false" name="com_braze_api_key">YOUR_APP_IDENTIFIER_API_KEY</string>
+  <string translatable="false" name="com_braze_custom_endpoint">YOUR_CUSTOM_ENDPOINT_OR_CLUSTER</string>
 </resources>
 ```
 

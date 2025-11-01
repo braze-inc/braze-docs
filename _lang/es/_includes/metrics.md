@@ -254,6 +254,11 @@ Se <i>envía</i> cada vez que se ha lanzado o desencadenado una campaña o un pa
 <i>Clics únicos</i> es el número distinto de destinatarios que han hecho clic en un enlace dentro de un mensaje al menos una vez y se mide por <a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a>.
 {% endif %}
 
+<!-- Pull channels like Banners that don't have a Dispatch ID-->
+{% if include.metric == "Unique Clicks No Dispatch ID" %}
+<i>Clics únicos</i> es el número distinto de destinatarios que han hecho clic en un enlace dentro de un mensaje al menos una vez.
+{% endif %}
+
 {% if include.metric == "Unique Dismissals" %}
 <i>Descartes únicos</i> es el número de destinatarios únicos que descartaron una tarjeta de contenido de una campaña. Un usuario que descarta varias veces una tarjeta de contenido de una campaña representa un único descarte.
 {% endif %}
