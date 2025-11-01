@@ -1,20 +1,20 @@
 ---
-nav_title: Establecer valores por defecto
+nav_title: Configuración de valores predeterminados
 article_title: Configuración de valores predeterminados de Liquid
 page_order: 5
-description: "En este artículo de referencia se explica cómo establecer valores de reserva predeterminados para cualquier atributo de personalización que utilices en tus mensajes."
+description: "Este artículo de referencia explica cómo establecer valores predeterminados de alternativa para cualquier atributo de personalización que utilices en tus mensajes."
 
 ---
 
-# Establecer valores por defecto
+# Configuración de valores predeterminados
 
 {% raw %}
 
-> Se pueden establecer valores por defecto para cualquier atributo de personalización que utilices en tus mensajes. Este artículo explica cómo funcionan los valores predeterminados, cómo configurarlos y cómo utilizarlos en tus mensajes.
+> Se pueden establecer valores alternativos predeterminados para cualquier atributo de personalización que utilices en tus mensajes. Este artículo explica cómo funcionan los valores predeterminados, cómo configurarlos y cómo utilizarlos en tus mensajes.
 
 ## Cómo funcionan
 
-Se pueden añadir valores por defecto especificando un filtro [Liquid](http://docs.shopify.com/themes/liquid-documentation/filters) (utilice `|` para distinguir el filtro en línea, como se muestra) con el nombre "default".
+Se pueden añadir valores predeterminados especificando un filtro [Liquid](http://docs.shopify.com/themes/liquid-documentation/filters) (utiliza `|` para distinguir el filtro en línea, como se muestra) con el nombre "predeterminado".
 
 ```
 | default: 'Insert Your Desired Default Here'
@@ -22,7 +22,7 @@ Se pueden añadir valores por defecto especificando un filtro [Liquid](http://do
 
 Si no se proporciona un valor predeterminado y el campo falta o no está configurado en el usuario, el campo aparecerá en blanco en el mensaje.
 
-El siguiente ejemplo muestra la sintaxis correcta para añadir un valor por defecto. En este caso, las palabras "Usuario valorado" sustituirán al atributo `{{ ${first_name} }}` si el campo `first_name` de un usuario está vacío o no está disponible.
+El siguiente ejemplo muestra la sintaxis correcta para añadir un valor predeterminado. En este caso, las palabras "Usuario valorado" sustituirán al atributo `{{ ${first_name} }}` si el campo `first_name` de un usuario está vacío o no está disponible.
 
 ```liquid
 Hi {{ ${first_name} | default: 'Valued User' }}, thanks for using the App!
@@ -51,7 +51,7 @@ El ejemplo anterior muestra cómo establecer un valor predeterminado para una ca
 
 ### Casos de uso: Booleanos
 
-Supongamos que tienes un atributo personalizado booleano llamado `premium_user` y quieres enviar un mensaje personalizado basado en el estado Premium del usuario. Algunos usuarios no tienen un estado Premium configurado, por lo que tendrás que establecer un valor predeterminado para capturar a esos usuarios.
+Supongamos que tienes un atributo personalizado booleano llamado `premium_user` y quieres enviar un mensaje personalizado basado en el estado Premium del usuario. Algunos usuarios no tienen configurado un estado Premium, por lo que tendrás que establecer un valor predeterminado para capturar a esos usuarios.
 
 1. Asignarás una variable llamada `is_premium_user` al atributo `premium_user` con un valor predeterminado de `false`. Esto significa que si `premium_user` es `nil`, el valor de `is_premium_user` será predeterminado a `false`. 
 
@@ -78,7 +78,7 @@ Hi {{${first_name} | default: 'valued user'}}, consider upgrading to premium for
 ```
 {% endraw %}
 
-{% details Código completo de Liquid %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% assign is_premium_user = {{custom_attribute.${premium_user}}} | default: false %}
@@ -144,7 +144,7 @@ State: {{custom_attribute.${address.state} | default: 'Unknown'}}
 ```
 {% endraw %}
 
-{% details Código completo de Liquid %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 Hi {{${first_name} | default: 'valued user'}}
@@ -191,7 +191,7 @@ Hello {{${first_name} | default: 'fellow traveler'}},
 ```
 {% endraw %}
 
-{% details Código completo de Liquid %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% if {{custom_attribute.${upcoming_trips}}} == blank %}

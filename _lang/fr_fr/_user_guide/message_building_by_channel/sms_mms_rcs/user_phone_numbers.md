@@ -1,8 +1,8 @@
 ---
-nav_title: "Numéro de téléphone de l’utilisateur"
-article_title: Numéro de téléphone de l’utilisateur SMS
+nav_title: "Numéros de téléphone des utilisateurs"
+article_title: Numéros de téléphone des utilisateurs de SMS
 page_order: 7
-description: "Cet article de référence couvre le formatage du numéro de téléphone par SMS, la procédure d’importation des numéros de téléphone, ainsi que la façon d’ajouter des utilisateurs à des groupes d’abonnement SMS."
+description: "Cet article de référence traite du formatage des numéros de téléphone SMS, de l'importation d'utilisateurs et de l'ajout d'utilisateurs à des groupes d'abonnement SMS."
 page_type: reference
 alias: /user_phone_numbers/
 channel: 
@@ -11,9 +11,9 @@ channel:
   - RCS
 ---
 
-# Numéro de téléphone de l’utilisateur
+# Numéros de téléphone des utilisateurs
 
-> Le présent article abordera différents sujets autour des numéros de téléphone de vos utilisateurs ou clients. Si vous cherchez des informations sur vos propres numéros, consultez notre article sur l' [envoi de numéros de téléphone]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/short_and_long_codes/).
+> Cet article abordera différents sujets autour des numéros de téléphone de vos utilisateurs ou clients. Si vous cherchez des informations sur vos propres numéros, consultez notre article sur l' [envoi de numéros de téléphone]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/short_and_long_codes/).
 
 ## Format recommandé
 
@@ -22,14 +22,14 @@ Nous vous recommandons d'importer les numéros de téléphone au format [`E.164`
 - **U.S. chiffres :** Tous les numéros U.S. doivent être des numéros de téléphone valides à 10 chiffres avec un code régional valide. S'il manque un `+` et un code pays à un numéro de téléphone à 10 chiffres, Braze le mappera en tant que numéro U.S.
 - **Numéros internationaux :** Tous les numéros internationaux doivent commencer par un `+`, suivi du code du pays et du numéro de téléphone. Par exemple, `+442071838750`.
 
-![Exemple de numéro de téléphone international e164 valide.]({% image_buster /assets/img/sms/e164.png %}){: style="max-width:50%;border: 0;"}
+Exemple d'un numéro de téléphone international e164 valide.]({% image_buster /assets/img/sms/e164.png %}){: style="max-width:50%;border: 0;"}
 
 Voici quelques exemples illustrant les différences entre le formatage local et le formatage `E.164`:
 
-| Pays | Local | Code pays | `E.164` |
+| Pays | Local | Code du pays | `E.164` |
 |---|---|---|---|
-| États-Unis | `4155552671` | 1 | `+14155552671` |
-| UK | `2071838750` | 44 | `+442071838750` |
+| ÉTATS-UNIS | `4155552671` | 1 | `+14155552671` |
+| ROYAUME-UNI | `2071838750` | 44 | `+442071838750` |
 | Brésil | `1155256325` | 55 | `+551155256325` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 reset-td-br-4}
 
@@ -44,11 +44,11 @@ Lorsque vous importez des numéros de téléphone, il est important de respecter
 Les numéros de téléphone des utilisateurs s'affichent dans Braze sous la forme d'une chaîne de caractères. Si vous importez un nombre qui contient des non chiffres (tels que `,`, `-`, `(`, ou autres), les non chiffres seront supprimés lors du rendu dans Braze. Par exemple, l'importation de `+1 (724) 123-4567` s'affichera sous la forme `17241234567`.
 {% endalert %}
 
-## Gestion des numéros de téléphone non valides
+## Traitement des numéros de téléphone non valides
 
-Lorsqu'un numéro de téléphone est considéré comme invalide, Braze marque le numéro de téléphone de l'utilisateur comme invalide et ne tente pas d'envoyer d'autres communications à ce numéro de téléphone. Un numéro de téléphone non valide est signalé dans l'**onglet Engagement** d’un profil utilisateur.
+Lorsqu'un numéro de téléphone est considéré comme invalide, Braze marque le numéro de téléphone de l'utilisateur comme invalide et ne tente pas d'envoyer d'autres communications à ce numéro de téléphone. Un numéro de téléphone non valide est signalé dans l'**onglet Engagement d'** un profil utilisateur.
 
-![Exemple de message d'erreur pour les numéros de téléphone non valides dans Braze.]({% image_buster /assets/img/sms/invalid_banner.png %}){: style="max-width:50%;border: 0;"}
+Exemple de message d'erreur pour les numéros de téléphone non valides dans Braze.]({% image_buster /assets/img/sms/invalid_banner.png %}){: style="max-width:50%;border: 0;"}
 
 Un numéro de téléphone est considéré comme invalide pour les raisons suivantes :
 
