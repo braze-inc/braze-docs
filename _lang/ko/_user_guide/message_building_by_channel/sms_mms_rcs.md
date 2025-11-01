@@ -1,6 +1,6 @@
 ---
-nav_title: "SMS, MMS, 및 RCS"
-article_title: "SMS, MMS, 및 RCS"
+nav_title: "SMS, MMS 및 RCS"
+article_title: "SMS, MMS 및 RCS"
 page_order: 4
 layout: dev_guide
 channel:
@@ -8,9 +8,9 @@ channel:
   - MMS
   - RCS
 search_rank: 3
-guide_top_header: "SMS, MMS, 및 RCS"
-guide_top_text: "SMS (단문 메시지 서비스), MMS (멀티미디어 메시지 서비스), 및 RCS (풍부한 커뮤니케이션 서비스)는 대부분의 다른 메시징 채널보다 사용자에게 더 직접적으로 도달할 수 있는 방법을 제공합니다. 이는 사용자의 전화번호를 활용하여 실시간으로 도달할 수 있게 합니다. Braze SMS, MMS 또는 RCS를 시작하기 위해 다음 주제를 확인하세요!<br><br>다음 주제에 대한 준비가 되지 않았나요? Braze의 SMS <a href='/docs/sms_setup/'>설정</a> 컬렉션으로 이동하여 SMS에 대해 알아보세요. <br><br>**SMS, MMS 및 RCS는 선택된 Braze 패키지에서만 사용할 수 있습니다. 시작하려면 계정 관리자 또는 고객 성공 관리자에게 문의하세요.**"
-description: "이 랜딩 페이지는 SMS (단문 메시지 서비스), MMS (멀티미디어 메시지 서비스) 및 RCS (풍부한 커뮤니케이션 서비스)의 홈입니다. 이러한 서비스는 사용자의 전화번호를 활용하기 때문에 다른 대부분의 메시징 채널보다 더 직접적으로 사용자에게 다가갈 수 있는 방법을 제공하며, 실시간으로 사용자에게 연락할 수 있습니다."
+guide_top_header: "SMS, MMS 및 RCS"
+guide_top_text: "SMS(단문 메시지 서비스), MMS(멀티미디어 메시지 서비스) 및 RCS(풍부한 커뮤니케이션 서비스)는 대부분의 다른 메시징 채널보다 사용자에게 더 직접적으로 도달할 수 있는 방법을 제공합니다. 이는 사용자의 전화번호를 활용하여 실시간으로 도달할 수 있게 해줍니다. Braze SMS, MMS 또는 RCS를 시작하기 위해 다음 주제를 확인하세요!<br><br>다음 주제에 대해 준비가 되지 않으셨나요? Braze에서 SMS를 알아보려면 <a href='/docs/about_sms/'>SMS 설정</a> 컬렉션으로 이동하세요. <br><br>**SMS, MMS 및 RCS의 가용성은 귀하의 Braze 패키지에 따라 다릅니다. 시작하려면 계정 관리자 또는 고객 성공 관리자에게 문의하세요.**"
+description: "이 랜딩 페이지는 SMS(단문 메시지 서비스), MMS(멀티미디어 메시지 서비스) 및 RCS(풍부한 커뮤니케이션 서비스)의 홈입니다. 이 서비스는 사용자의 전화번호를 활용하여 실시간으로 도달할 수 있게 해주므로 대부분의 다른 메시징 채널보다 사용자에게 더 직접적으로 도달할 수 있는 방법을 제공합니다."
 
 guide_featured_title: "일반 기사"
 guide_featured_list:
@@ -38,8 +38,11 @@ guide_featured_list:
 - name: "SMS 및 RCS 발신자"
   link: /docs/sending_phone_numbers/
   image: /assets/img/braze_icons/phone-02.svg
-- name: "보고"
+- name: "보고서"
   link: /docs/sms_mms_rcs_reporting/
+  image: /assets/img/braze_icons/phone-02.svg
+- name: "SMS 및 RCS 봇 클릭 필터링"
+  link: /docs/sms_rcs_bot_click_filtering/
   image: /assets/img/braze_icons/phone-02.svg
 - name: "청구 계산기"
   link: /docs/sms_rcs_billing_calculators/
@@ -50,11 +53,14 @@ guide_featured_list:
 
 guide_menu_title: "SMS"
 guide_menu_list:
-- name: "SMS 정보"
+- name: "SMS에 대하여"
   link: /docs/about_sms/
   image: /assets/img/braze_icons/check-square-broken.svg
-- name: "SMS 설정"
-  link: /docs/sms_setup/
+- name: "알아야 할 SMS 용어"
+  link: /docs/sms_terms_to_know/
+  image: /assets/img/braze_icons/book-closed.svg
+- name: "SMS 메시지 전송"
+  link: /docs/sms_message_sending/
   image: /assets/img/braze_icons/phone-02.svg
 - name: "SMS 메시지 만들기"
   link: /docs/create_sms_message/
@@ -65,7 +71,7 @@ guide_menu_list:
 
 guide_menu_title2: "MMS"
 guide_menu_list2:
-- name: "MMS 정보"
+- name: "MMS에 대하여"
   link: /docs/about_mms/
   image: /assets/img/braze_icons/brush-02.svg
 - name: "MMS 짧은 코드 및 긴 코드"

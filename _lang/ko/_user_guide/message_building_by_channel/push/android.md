@@ -6,10 +6,10 @@ layout: dev_guide
 page_type: landing
 channel: push
 platform: android
-description: "이 랜딩 페이지에는 Braze의 모든 Android 푸시 관련 내용이 나열되어 있습니다."
+description: "이 랜딩 페이지에는 Braze에 대한 모든 것이 Android 푸시로만 나열되어 있습니다."
 
 guide_top_header: "Android 푸시"
-guide_top_text: "다음 문서에는 Braze의 Android 푸시에 관한 모든 것이 나열되어 있습니다."
+guide_top_text: "다음 문서에는 Android 푸시에 대한 모든 것이 나열되어 있습니다."
 
 guide_featured_title: "섹션 기사"
 guide_featured_list:

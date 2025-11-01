@@ -8,7 +8,7 @@ page_order: 0
 search_rank: 2
 tool: Campaigns
 page_type: landing
-description: "이 섹션에서는 캠페인에 대한 소개와 캠페인을 사용하여 메시지 전략을 수립하는 방법을 설명합니다."
+description: "이 섹션에서는 캠페인에 대한 소개와 캠페인을 사용하여 메시징 전략을 구축하는 방법에 대해 설명합니다."
 
 guide_featured_title: "섹션 기사"
 guide_featured_list:
@@ -21,7 +21,7 @@ guide_featured_list:
 
 guide_menu_title: "Additional resources"
 guide_menu_list:
-  - name: 메시징 기초(Messaging Fundamentals)
+  - name: 메시징 기본 사항
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/
     image: /assets/img/braze_icons/mail-01.svg
 ---

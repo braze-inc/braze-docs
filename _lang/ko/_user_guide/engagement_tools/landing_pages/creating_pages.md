@@ -19,7 +19,7 @@ page_order: 0
 
 **메시징** > **랜딩 페이지로** 이동한 다음 **랜딩 페이지 만들기를** 선택합니다. 기존 랜딩 페이지의 이름을 선택하여 복제하거나 변경할 수도 있습니다.
 
-![Braze 대시보드의 랜딩 페이지 섹션입니다.]({% image_buster /assets/img/landing_pages/landing-pages-homepage.png %})
+Braze 대시보드의 랜딩 페이지 섹션입니다.]({% image_buster /assets/img/landing_pages/landing-pages-homepage.png %})
 
 ### 2단계: 페이지 세부 정보를 입력합니다.
 
@@ -47,11 +47,11 @@ page_order: 0
 
 아직 **저장하지** 않았다면 **초안으로 저장을** 선택합니다. 페이지 커스텀을 시작하려면 **랜딩 페이지 편집을** 선택합니다. 드래그 앤 드롭 편집기에는 사용 사례에 맞게 커스텀할 수 있는 기본값 템플릿이 미리 로드됩니다.
 
-![드래그 앤 드롭 편집기에서 생성 중인 랜딩 페이지 예시입니다.]({% image_buster /assets/img/landing_pages/template.png %})
+드래그 앤 드롭 편집기에서 생성 중인 랜딩 페이지 예시입니다.]({% image_buster /assets/img/landing_pages/template.png %})
 
 편집기는 랜딩 페이지 구성에 기본 블록과 양식 블록이라는 두 가지 유형의 컴포넌트를 사용합니다. 모든 블록은 일렬로 배치해야 합니다.
 
-!['행'과 '양식 블록'이 포함된 '구축' 섹션입니다.]({% image_buster /assets/img/landing_pages/dnd.png %}){: style="max-width:35%;"}
+'행'과 '양식 블록'이 포함된 '구축' 섹션입니다.]({% image_buster /assets/img/landing_pages/dnd.png %}){: style="max-width:35%;"}
 
 {% tabs %}
 {% tab Basic blocks %}
@@ -79,7 +79,7 @@ page_order: 0
 
 이 블록을 사용하여 사용자가 제출한 데이터를 Braze의 고객 프로필에 연결하는 양식을 만들 수 있습니다. 양식 블록을 사용하는 경우 확인 상태에 대한 추가 랜딩 페이지도 만들어야 한다는 점을 기억하세요.
 
-![신규 고객을 등록하고 이메일로 할인 코드를 전송하는 양식 블록입니다.]({% image_buster /assets/img/landing_pages/form.png %}){: style="max-width:70%;"}
+신규 고객을 등록하고 이메일로 할인 코드를 전송하는 양식 블록입니다.]({% image_buster /assets/img/landing_pages/form.png %}){: style="max-width:70%;"}
 
 | 블록 유형     | 설명 |
 |---------------|-------------|
@@ -112,7 +112,7 @@ page_order: 0
 
 인에이블먼트가 활성화되면 작은 화면에서 여러 열로 된 콘텐츠의 세로 순서를 제어하기 위해 열을 역방향으로 쌓을 수도 있습니다. 이렇게 하면 커스텀 코드 없이도 모바일에서 페이지의 모양과 느낌을 개선할 수 있습니다.
 
-!['열 커스텀' 섹션에서 '작은 화면에 세로로 쌓기' 토글을 클릭합니다.]({% image_buster /assets/img/landing_pages/device_responsive_toggle.png %}){: style="max-width:50%;"}
+'열 커스텀' 섹션에서 '작은 화면에 세로로 쌓기' 토글을 클릭합니다.]({% image_buster /assets/img/landing_pages/device_responsive_toggle.png %}){: style="max-width:50%;"}
 
 #### 선택 및 필수 필드
 
@@ -120,7 +120,7 @@ page_order: 0
 
 예를 들어 양식 제출 전에 동의 캡처를 적용하려면 **필수 필드 입력을** 사용 설정하여 적절한 고지 사항 텍스트와 함께 확인란을 필수로 설정할 수 있습니다.
 
-!['필수 입력 필드' 토글이 선택된 체크박스 양식 필드입니다.]({% image_buster /assets/img/landing_pages/lp-optional-required.png %}){: style="max-width:50%;"}
+'필수 입력 필드' 토글이 선택된 체크박스 양식 필드입니다.]({% image_buster /assets/img/landing_pages/lp-optional-required.png %}){: style="max-width:50%;"}
 
 ### 4단계: 확인 페이지 만들기(선택 사항)
 
@@ -142,7 +142,7 @@ page_order: 0
 
 편집기의 **미리보기** 탭에서 랜딩 페이지를 미리 볼 수 있습니다. 랜딩 페이지를 초안으로 저장한 후 **랜딩 페이지** 로 이동하여 랜딩 페이지 옆에 있는 **URL 복사를** 선택하여 URL을 방문할 수 있습니다. 공동 작업자와 URL을 공유할 수도 있습니다.
 
-![메뉴가 열려 있는 랜딩 페이지에 'URL 복사' 옵션이 표시됩니다.]({% image_buster /assets/img/landing_pages/copy-url.png %})
+메뉴가 열려 있는 랜딩 페이지에 'URL 복사' 옵션이 표시됩니다.]({% image_buster /assets/img/landing_pages/copy-url.png %})
 
 게시하기 전에 다음 사항을 확인하세요:
 
@@ -160,13 +160,13 @@ page_order: 0
 
 랜딩 페이지 템플릿을 미리 보고, 보관하고, 편집하거나 복제할 수 있습니다. 랜딩 페이지를 편집할 때 랜딩 페이지를 템플릿으로 저장하거나 템플릿을 변경하거나 랜딩 페이지의 콘텐츠를 삭제할 수도 있습니다. 
 
-![랜딩 페이지를 저장, 변경, 삭제할 수 있는 옵션이 있는 드롭다운입니다.]({% image_buster /assets/img/landing_pages/manage-lp-template.png %}){: style="max-width:60%;"}
+랜딩 페이지를 저장, 변경, 삭제할 수 있는 옵션이 있는 드롭다운입니다.]({% image_buster /assets/img/landing_pages/manage-lp-template.png %}){: style="max-width:60%;"}
 
 ## 분석 보기
 
 랜딩 페이지의 효과를 분석하려면 **메시징** > **랜딩 페이지로** 이동한 다음 게시한 랜딩 페이지를 선택합니다. 여기에서 페이지 조회 수, 페이지 클릭 수, 페이지 제출 수 및 랜딩 페이지의 제출률을 추적할 수 있습니다.
 
-![랜딩 페이지의 분석 섹션입니다.]({% image_buster /assets/img/landing_pages/analytics.png %})
+랜딩 페이지의 분석 섹션입니다.]({% image_buster /assets/img/landing_pages/analytics.png %})
 
 ## 양식 제출 오류 처리 {#handling-form-submission-errors}
 
