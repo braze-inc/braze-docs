@@ -407,6 +407,7 @@ erDiagram
 ```json
 // USERS_MESSAGES_PUSHNOTIFICATION_IOSFOREGROUND_SHARED
 // When a user receives a push notification while the app is open.
+// This event is not supported by the Swift SDK and is deprecated in the Obj-C SDK.
 
 {
     "primary_key": {

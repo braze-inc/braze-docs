@@ -1561,7 +1561,7 @@ USERS_MESSAGES_PUSHNOTIFICATION_INFLUENCEDOPEN_SHARED: when a user opens the app
 	BROWSER (VARCHAR(16777216)): Device browser - extracted from user_agent - on which the open occurred
 	SF_CREATED_AT (TIMESTAMP_LTZ(9)): when this event was picked up by the Snowpipe
 
-USERS_MESSAGES_PUSHNOTIFICATION_IOSFOREGROUND_SHARED: when a user receives a push notification while the app is open
+USERS_MESSAGES_PUSHNOTIFICATION_IOSFOREGROUND_SHARED: when a user receives a push notification while the app is open. This event is not supported by the Swift SDK and is deprecated in the Obj-C SDK.
 	ID (VARCHAR(16777216)): Globally unique ID for this event
 	USER_ID (VARCHAR(16777216)): Braze user ID of the user who performed this event
 	EXTERNAL_USER_ID (VARCHAR(16777216)): [PII] External ID of the user
