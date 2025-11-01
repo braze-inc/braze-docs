@@ -1,114 +1,114 @@
 ---
 nav_title: Carrinho abandonado
-article_title: Carrinho abandonado
+article_title: Carrinho Abandonado
 page_order: 1
 page_type: reference
-description: "Este artigo descreve como usar um modelo do Braze Canvas para fazer o engajamento com os usuários em tempo real e incentivá-los a concluir suas compras."
+description: "Este artigo descreve como usar um modelo de Canvas do Braze para interagir com os usuários em tempo real e incentivá-los a completar suas compras."
 tool: Canvas
 ---
 
 # Carrinho abandonado
 
-> Engajamento com os usuários em tempo real para incentivá-los a concluir suas compras. Use esse modelo para criar uma jornada do usuário que se concentre no envio de mensagens oportunas e personalizadas que lembrem os usuários de seus carrinhos abandonados, destacando os benefícios do produto e oferecendo incentivos, como códigos de desconto.
+> Interaja com os usuários em tempo real para incentivá-los a completar suas compras. Use este modelo para criar uma jornada do usuário que se concentra em enviar mensagens personalizadas e oportunas que lembram os usuários de seus carrinhos abandonados, destacando os benefícios dos produtos e oferecendo incentivos, como códigos de desconto.
 
-Neste artigo, vamos orientá-lo em um caso de uso do modelo **Abandoned Intent**, que se destina ao estágio de consideração do ciclo de vida do usuário. Após este artigo, você terá personalizado uma jornada do usuário que incentiva as compras de usuários que não fizeram compras depois de adicionar itens aos carrinhos.
+Neste artigo, vamos guiá-lo por um caso de uso para o modelo **Intenção Abandonada**, que é destinado à fase de consideração do ciclo de vida do usuário. Após este artigo, você terá personalizado uma jornada do usuário que incentiva compras de usuários que não realizaram compras após adicionar itens aos seus carrinhos.
 
 ## Pré-requisitos
 
-Para usar esse modelo com sucesso, você precisará do seguinte:
+Para usar este modelo com sucesso, você precisará do seguinte:
 
-- Um Canvas separado para a jornada do usuário pós-compra, já que fazer uma compra nesse Canvas fará com que os usuários saiam do Canvas.
-- Um [Braze Audience Sync]({{site.baseurl}}/partners/canvas_audience_sync/) configurado com os parceiros e públicos que você usa.
+- Uma jornada do usuário pós-compra separada, pois fazer uma compra neste Canvas fará com que os usuários saiam do Canvas.
+- Uma [Sincronização de Audiência do Braze]({{site.baseurl}}/partners/canvas_audience_sync/) configurada com os parceiros e audiências que você utiliza.
 
-## Adaptar o modelo às suas necessidades
+## Personalizando o modelo para suas necessidades
 
-Digamos que trabalhamos na Kitchenerie, uma marca de varejo especializada em utensílios de cozinha, e nossa meta é reengajar os usuários que adicionaram o produto mais recente, "Enormous Paper Plate", aos seus carrinhos, mas não fizeram a compra.
+Vamos supor que trabalhamos na Kitchenerie, uma marca de varejo especializada em utensílios de cozinha, e nosso objetivo é reengajar usuários que adicionaram o último produto "Prato de Papel Enorme" aos seus carrinhos, mas não realizaram suas compras.
 
-Antes de criar o Canva, configuramos a integração [Braze Audience Sync to Facebook]({{site.baseurl}}/partners/canvas_audience_sync/facebook_audience_sync/) para que possamos adicionar dados de usuários do Braze ao público do Facebook para enviar anúncios com base em disparadores comportamentais, segmentação e muito mais.
+Antes de criar o Canvas, configuramos a integração [Sincronização de Audiência do Braze com o Facebook]({{site.baseurl}}/partners/canvas_audience_sync/facebook_audience_sync/) para que possamos adicionar dados de usuários do Braze às Audiências do Facebook para enviar anúncios com base em gatilhos comportamentais, segmentação e mais.
 
-Para acessar o modelo de intenção abandonada, ao criar um novo Canvas, selecione **Usar um modelo de Canvas** > **Modelos do Braze**. Em seguida, ao lado de **Abandoned Intent**, selecione **Apply Template (Aplicar modelo)**. Agora, podemos examinar o modelo para adequá-lo às nossas necessidades.
+Para acessar o modelo de intenção abandonada, ao criar um novo Canvas, selecione **Usar um modelo de Canvas** > **Modelos do Braze**. Em seguida, ao lado de **Intenção Abandonada**, selecione **Aplicar Modelo**. Agora, podemos passar pelo modelo para ajustá-lo às nossas necessidades.
 
-### Etapa 1: Configurar os detalhes
+### Passo 1: Configure os detalhes
 
-Vamos ajustar os detalhes do Canva para refletir nosso objetivo.
+Vamos ajustar os detalhes do Canvas para refletir nosso objetivo.
 
 1. Selecione **Editar** ao lado do nome do modelo.
 
-![O título e a descrição atuais do Canva.]({% image_buster /assets/img/canvas_templates/abandoned_intent_old_name_description.png %}){: style="max-width:60%;"}
+\![O título e a descrição atuais do Canvas.]({% image_buster /assets/img/canvas_templates/abandoned_intent_old_name_description.png %}){: style="max-width:60%;"}
 
 {:start="2"}
-2\. Atualize o nome do Canvas para especificar que o Canvas é para direcionamento de usuários com carrinhos abandonados.
-3\. Atualize a descrição para especificar que o Canva serve para incentivar os usuários a concluir as compras do último lançamento sazonal de utensílios de cozinha.
-4\. Adicione a tag **Abandono de carrinho** para que possamos filtrá-la na página inicial do Canva.
+2\. Atualize o nome do Canvas para especificar que o Canvas é para direcionar usuários com carrinhos abandonados.
+3\. Atualize a descrição para especificar que o Canvas é para incentivar os usuários a completarem compras do último lançamento de utensílios de cozinha sazonais.
+4\. Adicione a tag **Abandonar Carrinho** para que possamos filtrá-la na página inicial do Canvas.
 
-![O novo nome, a descrição e a tag do Canva.]({% image_buster /assets/img/canvas_templates/abandoned_intent_new_name_description.png %}){: style="max-width:60%;"}
+\![O novo nome, descrição e tag para o Canvas.]({% image_buster /assets/img/canvas_templates/abandoned_intent_new_name_description.png %}){: style="max-width:60%;"}
 
-### Etapa 2: Atribua seus eventos de conversão
+### Passo 2: Atribua seus eventos de conversão
 
-Em seguida, vamos atribuir nosso evento de conversão. Como nosso foco está em nosso produto "Enormous Paper Plate", faremos o seguinte para o **evento de conversão primária A**:
+Em seguida, vamos atribuir nosso evento de conversão. Como nosso foco é no produto "Prato de Papel Enorme", faremos o seguinte para **Evento de Conversão Primário A**:
 
-1. Para o **tipo de evento Conversion (Conversão)**, selecione **Makes Purchase (Compra)**.
+1. Para o **tipo de evento de conversão**, selecione **Faz Compra**.
 2. Selecione **Fazer uma compra específica**. Isso nos permite selecionar um nome de produto específico.
-3. Selecione **Enormous Paper Plate**.
+3. Selecione **Prato de Papel Enorme**.
 
-![Evento de conversão primária - Um evento com o tipo de conversão "Faz compra" com o nome do produto "Enormous Paper Plate". Há um prazo de conversão de 3 dias.]({% image_buster /assets/img/canvas_templates/abandoned_intent1.png %})
+\![Evento de Conversão Primário - A com o tipo de conversão "Faz Compra" com o nome do produto "Prato de Papel Enorme". Há um prazo de conversão de 3 dias.]({% image_buster /assets/img/canvas_templates/abandoned_intent1.png %})
 
-### Etapa 3: Definir uma programação de entrada
+### Passo 3: Defina um cronograma de entrada
 
-Embora a programação de entrada desse modelo esteja definida como **API-Triggered**, nosso caso de uso se beneficiará mais com uma entrada baseada em ação para esse Canva, pois queremos nos concentrar nos usuários que abandonaram o carrinho (que é uma ação).
+Enquanto o cronograma de entrada deste modelo está definido para **API-Triggered**, nosso caso de uso se beneficiará mais ao ter uma entrada baseada em ação para este Canvas, já que queremos focar em usuários que abandonaram seu carrinho (que é uma ação).
 
-1. Selecione **Baseado em ação** como o tipo de programação de entrada.
-2. Selecione **Abandono de carrinho** como o disparador.
-3. Na janela de entrada, selecione a data de início.
-4. Selecione a opção para permitir que os usuários insiram seu fuso local. Isso pode manter a relevância do envio de mensagens e levar a um maior engajamento se as mensagens forem enviadas nos melhores horários para envio.
+1. Selecione **Ação Baseada** como o tipo de cronograma de entrada.
+2. Selecione **Carrinho Abandonado** como o gatilho.
+3. Para a janela de entrada, selecione a data e hora de início.
+4. Selecione a opção para permitir que os usuários entrem em seu fuso horário local. Isso pode manter nossas mensagens relevantes e levar a um maior engajamento se as mensagens forem enviadas em horários ideais.
 
-![Um Canvas baseado em ações que visa usuários que abandonaram seu carrinho, com a janela de entrada em 15 de outubro de 2024 às 15:20 no fuso local dos usuários.]({% image_buster /assets/img/canvas_templates/abandoned_intent2.png %})
+\![Um Canvas baseado em ação que visa usuários que abandonaram seu carrinho, com a janela de entrada em 15 de outubro de 2024 às 15:20 no fuso horário local dos usuários.]({% image_buster /assets/img/canvas_templates/abandoned_intent2.png %})
 
-### Etapa 4: Determinar quem entra no Canva
+### Passo 4: Determine quem entra no Canvas
 
-Em seguida, vamos definir nosso público-alvo como usuários que fizeram compras exclusivamente on-line conosco nos últimos 90 dias. Isso nos ajuda a restringir nosso público a usuários que sabemos que estão engajados com nossos produtos. 
+Em seguida, vamos definir nosso público-alvo como usuários que compraram exclusivamente online conosco nos últimos 90 dias. Isso nos ajuda a restringir nosso público a usuários que sabemos que estão engajados com nossos produtos. 
 
-!["Segmento de Compradores Online - 90 Dias" como o segmento de usuários a serem alvo para este Canvas.]({% image_buster /assets/img/canvas_templates/abandoned_intent3.png %})
+\!["Segmento de Compradores Online - 90 Dias" como o segmento de usuários a serem alvo para este Canvas.]({% image_buster /assets/img/canvas_templates/abandoned_intent3.png %})
 
-Deixaremos os controles de entrada como estão, para que os usuários não tenham permissão para entrar novamente nesse Canvas e não haja limite para o número de pessoas que podem potencialmente entrar nesse Canvas.
+Deixaremos os controles de entrada como estão, para que os usuários não possam reentrar neste Canvas e não há limite para o número de pessoas que podem potencialmente entrar neste Canvas.
 
-Para os critérios de saída, os usuários sairão do Canva se tiverem comprado o "Enormous Paper Plate". Dessa forma, eles não receberão mais mensagens sobre um item que já compraram.
+Para os critérios de saída, os usuários sairão do Canvas se tiverem comprado o "Prato de Papel Enorme". Dessa forma, eles não receberão mais mensagens sobre um item que já compraram.
 
-![Critérios de saída que determinam usuários que fazem uma compra específica do enorme prato de papel sairão do Canvas.]({% image_buster /assets/img/canvas_templates/abandoned_intent4.png %})
+\![Critérios de saída que determinam que usuários que fazem uma compra específica do prato de papel enorme sairão do Canvas.]({% image_buster /assets/img/canvas_templates/abandoned_intent4.png %})
 
-### Etapa 5: Selecione suas configurações de envio
+### Passo 5: Selecione suas configurações de envio
 
-Manteremos as configurações de inscrição padrão, para que enviemos apenas aos usuários que se inscreveram ou aceitaram receber mensagens ou notificações, e deixaremos as outras configurações como estão.
+Manteremos as configurações de assinatura padrão, então enviaremos apenas para usuários que se inscreveram ou optaram por receber mensagens ou notificações, e deixaremos as outras configurações como estão.
 
-### Etapa 6: Personalize sua tela
+### Passo 6: Personalize seu Canvas
 
-Agora, criaremos nosso Canvas personalizando as etapas do modelo:
+Agora, construiremos nosso Canvas personalizando os passos template:
 
-1. Selecione a etapa Jornadas de ação e, em seguida, selecione o nome do grupo de ação **Compra efetuada**.
-2. Em **Make Purchase**, selecione **Make A Specific Purchase** e escolha **Enormous Paper Plate** como produto. Semelhante aos critérios de saída, usuários que comprarem este produto sairão do Canvas.
+1. Selecione o passo Action Paths, em seguida, selecione o nome do grupo de ações **Fez a compra**.
+2. Para **Fazer Compra**, selecione **Fazer Uma Compra Específica** e escolha **Prato de Papel Enorme** para o produto. Semelhante aos critérios de saída, os usuários que comprarem este produto sairão do Canvas.
 
-![Grupo de ação "Fez a compra" que sairá do Canvas se o usuário comprar o enorme prato de papel.]({% image_buster /assets/img/canvas_templates/abandoned_intent5.png %})
+\!["Grupo de ações 'Fez a compra' que sairá do Canvas se o usuário comprar o prato de papel enorme.]({% image_buster /assets/img/canvas_templates/abandoned_intent5.png %})
 
 {: start="3"}
-3\. Para a etapa Message (Mensagem), selecione **Edit message (Editar mensagem)** para personalizar o e-mail que será enviado aos nossos usuários, notificando-os sobre os itens em seu carrinho abandonado.
-4\. Mantenha a etapa de postergação como está.
-5\. Nas etapas de Mensagem subsequentes à etapa de Jornada do público, personalizaremos o e-mail e a mensagem SMS que nossos usuários receberão. É aqui que queremos incentivar nossos usuários a comprar produtos com envio de mensagens personalizadas.
+3\. Para o passo Mensagem, selecione **Editar mensagem** para personalizar o e-mail que será enviado aos nossos usuários, notificando-os sobre os itens em seu carrinho abandonado.
+4\. Mantenha o passo Delay como está.
+5\. Nos passos de Mensagem subsequentes ao passo Audience Path, personalizaremos o e-mail e a mensagem SMS que nossos usuários receberão. É aqui que queremos incentivar nossos usuários a comprar produtos com mensagens personalizadas.
 
-![Uma prévia da mensagem SMS que os usuários receberão: "Olá, você deixou o enorme prato de papel no carrinho! Conclua sua compra agora e dê uma etapa em seu jogo de hospedagem. Use o código MYPLATE na finalização da compra para 20 por cento de desconto no seu pedido!"]({% image_buster /assets/img/canvas_templates/abandoned_intent6.png %})
+\![Uma prévia da mensagem SMS que os usuários receberão: "Oi, você deixou o prato de papel enorme para trás no seu carrinho! Complete sua compra agora e melhore seu jogo de anfitrião. Use o código MYPLATE na finalização da compra para 20 por cento de desconto no seu pedido!"]({% image_buster /assets/img/canvas_templates/abandoned_intent6.png %})
 
 {: start="6"}
-6\. Na próxima etapa das jornadas de ação, selecione o grupo de ação **Compra efetuada**. Em seguida, selecione **Fazer uma compra específica** e escolha **Enormous Paper Plate** como o produto. Essa etapa espelhará a primeira etapa das jornadas de ação, encerrando os usuários que compraram nosso produto para que eles não recebam mais envios de mensagens.
-7\. Certifique-se de que a etapa de sincronização do público do Facebook esteja configurada para sincronizar com o Facebook. Isso ajudará ainda mais no redirecionamento de anúncios.
+6\. No próximo passo Action Paths, selecione o grupo de ações **Fez a compra**. Em seguida, selecione **Fazer uma compra específica** e escolha **Prato de Papel Enorme** para o produto. Esta etapa refletirá a primeira etapa dos Caminhos de Ação, saindo dos usuários que compraram nosso produto para que não recebam mais mensagens.
+7\. Certifique-se de que nossa etapa de Sincronização de Público esteja configurada para sincronizar com o Facebook. Isso ajudará ainda mais com a retargetização de anúncios.
 
 {% alert tip %}
-Você pode usar as [propriedades de entrada do Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/) para personalizar as mensagens no seu Canvas com base no produto ao qual está se referindo.
+Você pode usar [Propriedades de entrada do Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/) para personalizar as mensagens em seu Canvas com base no produto ao qual você está se referindo.
 {% endalert %}
 
-### Etapa 7: Teste e inicie o Canva
+### Etapa 7: Teste e lance o Canvas
 
-Depois de testar e revisar nosso Canvas para garantir que ele funcione conforme o esperado, selecione **Launch Canvas** para iniciar o Canvas. Agora, podemos direcionar os usuários de forma consciente com uma jornada de usuário personalizada para incentivá-los a finalizar a compra do produto que adicionaram aos carrinhos!
+Após testar e revisar nosso Canvas para garantir que funcione como esperado, selecione **Lançar Canvas** para lançar o Canvas. Agora, podemos direcionar os usuários de forma consciente com uma jornada personalizada para incentivá-los a conferir o produto que adicionaram aos seus carrinhos!
 
 {% alert tip %}
-Confira nossa [lista de verificação pré e pós-lançamento]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/pre_post_launch_checklist/#things-to-consider-before-launch) para saber o que considerar antes e depois de lançar um Canva.
+Confira nossa [Lista de verificação pré e pós-lançamento]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/pre_post_launch_checklist/#things-to-consider-before-launch) para coisas a considerar antes e depois de lançar um Canvas.
 {% endalert %}
 

@@ -1,6 +1,6 @@
 ---
 nav_title: Paramètres
-article_title: Paramètres (anciennement Console de développement)
+article_title: Paramètres (anciennement console de développement)
 page_order: 3
 layout: dev_guide
 guide_top_header: "Paramètres"
@@ -17,7 +17,7 @@ guide_featured_list:
   - name: Clés API
     link: /docs/user_guide/administrative/app_settings/api_settings_tab/
     image: /assets/img/braze_icons/key-01.svg
-  - name: Journal des activités liées aux messages
+  - name: "Journal d'activité des messages"
     link: /docs/user_guide/administrative/app_settings/message_activity_log_tab/
     image: /assets/img/braze_icons/list.svg
   - name: Journal des événements utilisateurs
@@ -26,34 +26,34 @@ guide_featured_list:
   - name: Groupes internes
     link: /docs/user_guide/administrative/app_settings/internal_groups_tab/
     image: /assets/img/braze_icons/users-01.svg
-  - name: Cryptage au niveau du champ de l’identifiant
+  - name: Identifiant Cryptage au niveau du champ
     link: /docs/user_guide/data/field_level_encryption/
     image: /assets/img/braze_icons/mail-01.svg
 
 guide_menu_title: "Workspace settings"
 guide_menu_list:
-  - name: Balises
+  - name: Tags
     link: /docs/user_guide/administrative/app_settings/tags/
     image: /assets/img/braze_icons/tag-01.svg
-  - name: Préférences des e-mails
+  - name: "Préférences en matière d'e-mail"
     link: /docs/user_guide/administrative/app_settings/email_settings/
     image: /assets/img/braze_icons/mail-01.svg
-  - name: Paramètres de notifications push
+  - name: Réglages par poussée
     link: /docs/user_guide/administrative/app_settings/push_settings/
     image: /assets/img/braze_icons/settings-01.svg
   - name: Paramètres multilingues
     link: /docs/multi_language_support/
     image: /assets/img/braze_icons/list.svg
-  - name: Directives de marque
+  - name: Lignes directrices de la marque
     link: /docs/user_guide/administrative/app_settings/brand_guidelines/
     image: /assets/img/braze_icons/edit-05.svg
 
 guide_menu_title2: "Company settings"
 guide_menu_list2:
-  - name: Paramètres d’administration
+  - name: Paramètres administratifs
     link: /docs/user_guide/administrative/app_settings/company_settings/
     image: /assets/img/braze_icons/tool-02.svg
-  - name: Utilisateurs de l’entreprise
+  - name: "Utilisateurs de l'entreprise"
     link: /docs/user_guide/administrative/app_settings/manage_your_braze_users/
     image: /assets/img/braze_icons/users-01.svg
   - name: Facturation
