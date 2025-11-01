@@ -15,7 +15,7 @@ Para evitar el almacenamiento en caché, puedes especificar `:no_cache`, lo que 
 
 ## Configuración predeterminada de la caché
 
-La antigüedad de la caché es de hasta cinco minutos (300 segundos). Puedes actualizarlo añadiendo el parámetro `:cache_max_age` a la llamada al Contenido conectado. Un ejemplo:
+La antigüedad de la caché es de hasta cinco minutos (300 segundos). Puedes actualizarlo añadiendo el parámetro `:cache_max_age` a la llamada al Contenido conectado. Un ejemplo es:
 
 {% raw %}
 ```
@@ -23,9 +23,9 @@ La antigüedad de la caché es de hasta cinco minutos (300 segundos). Puedes act
 ```
 {% endraw %}
 
-Las peticiones GET se almacenan en caché. Puedes configurarlo añadiendo el parámetro :no_cache a la llamada al Contenido conectado.
+Las peticiones GET se almacenan en caché. Puedes configurarlo añadiendo el parámetro :no_cache a la llamada Contenido conectado.
 
-Las peticiones POST no se almacenan en caché. Esto puede forzarse añadiendo el parámetro :cache_max_age a la llamada al Contenido conectado. El tiempo mínimo de caché es de 5 minutos, y el tiempo máximo de caché es de 4 horas.
+Las peticiones POST no se almacenan en caché. Esto puede forzarse añadiendo el parámetro :cache_max_age a la llamada Contenido conectado. El tiempo mínimo de caché es de 5 minutos, y el tiempo máximo de caché es de 4 horas.
 
 {% alert note %}
 La configuración de la caché no está garantizada. El almacenamiento en caché puede reducir las llamadas a tus puntos finales, por lo que recomendamos utilizar varias llamadas por punto final dentro de la duración del almacenamiento en caché, en lugar de depender excesivamente de éste.
@@ -39,13 +39,13 @@ El cuerpo de respuesta del Contenido conectado puede ser de hasta 1 MB. Si el cu
 
 El Contenido conectado guardará en caché el valor que devuelva de los puntos finales GET durante un mínimo de cinco minutos. Si no se especifica un tiempo de caché, el tiempo de caché predeterminado es de cinco minutos.
 
-El tiempo de caché del contenido conectado puede configurarse para que sea mayor con :cache_max_age, como se muestra en el siguiente ejemplo. El tiempo mínimo de caché es de cinco minutos y el máximo de cuatro horas. Los datos del Contenido conectado se almacenan en caché en memoria utilizando un sistema de caché volátil, como Memcached. 
+El tiempo de caché del Contenido conectado puede configurarse para que sea más largo con :cache_max_age,, como se muestra en el siguiente ejemplo. El tiempo mínimo de caché es de cinco minutos y el máximo de cuatro horas. Los datos del Contenido conectado se almacenan en caché en memoria utilizando un sistema de caché volátil, como Memcached. 
 
-Como resultado, independientemente del tiempo de caché especificado, los datos de Contenido Conectado pueden ser desalojados de la caché en memoria de Braze antes de lo especificado. Esto significa que las duraciones de caché son sugerencias y pueden no representar realmente la duración que se garantiza que los datos serán almacenados en caché por Braze y es posible que vea más solicitudes de Contenido Conectado de las que podría esperar con una duración de caché determinada.
+Como resultado, independientemente del tiempo de caché especificado, los datos de Contenido Conectado pueden ser desalojados de la caché en memoria de Braze antes de lo especificado. Esto significa que las duraciones de caché son sugerencias y pueden no representar realmente la duración que se garantiza que los datos serán almacenados en caché por Braze y puede que veas más solicitudes de Contenido conectado de las que esperas con una duración de caché determinada.
 
 ### Caché durante los segundos especificados
 
-Este ejemplo almacenará en caché durante 900 segundos (o 15 minutos).
+Este ejemplo almacenará en caché 900 segundos (o 15 minutos).
 
 {% raw %}
 ```
@@ -53,9 +53,9 @@ Este ejemplo almacenará en caché durante 900 segundos (o 15 minutos).
 ```
 {% endraw %}
 
-### Eliminación de caché
+### Reventar la caché
 
-Para evitar que Connected Content almacene en caché el valor que devuelve de una solicitud GET, puede utilizar la configuración `:no_cache`. Sin embargo, las respuestas de los hosts internos de Braze seguirán almacenándose en caché.
+Para evitar que el Contenido conectado almacene en caché el valor que devuelve de una petición GET, puedes utilizar la configuración `:no_cache`. Sin embargo, las respuestas de los servidores internos de Braze seguirán almacenándose en caché.
 
 {% raw %}
 ```js
@@ -64,12 +64,12 @@ Para evitar que Connected Content almacene en caché el valor que devuelve de un
 {% endraw %}
 
 {% alert important %}
-Asegúrese de que el punto final de contenido conectado proporcionado puede gestionar grandes cantidades de tráfico antes de utilizar esta opción, o es probable que aumente la latencia de envío (mayores retrasos o intervalos de tiempo más amplios entre la solicitud y la respuesta) debido a que Braze realiza solicitudes de contenido conectado para cada mensaje.
+Asegúrate de que el punto final de contenido conectado proporcionado puede gestionar grandes cantidades de tráfico antes de utilizar esta opción, o es probable que aumente la latencia de envío (mayores retrasos o intervalos de tiempo más amplios entre la solicitud y la respuesta) debido a que Braze realiza solicitudes de contenido conectado para cada mensaje.
 {% endalert %}
 
 Con un POST no necesitas almacenar en caché el busto, ya que Braze nunca almacena en caché los resultados de las peticiones POST.
 
-## Lo que hay que saber
+## Lo que debes saber
 
 - El almacenamiento en caché puede ayudar a reducir las llamadas duplicadas de Contenido conectado. Sin embargo, no está garantizado que siempre resulte en una única llamada de Contenido conectado por usuario.
 - El almacenamiento en caché del Contenido conectado se basa en la URL y el espacio de trabajo. Si la llamada al contenido conectado es a la misma URL, puede almacenarse en caché en todas las campañas y lienzos.

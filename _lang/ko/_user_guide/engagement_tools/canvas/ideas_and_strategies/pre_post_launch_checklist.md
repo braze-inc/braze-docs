@@ -23,7 +23,7 @@ tool: Canvas
 버퍼를 충분히 예약하지 않은 경우 알림이 표시됩니다. 빠른 해결책은 사용자가 24시간 동안 타겟팅된 세그먼트에 머물 수 있도록 전송 시간을 조정하는 것입니다.
 {% endalert %}
 
-![캔버스는 현지 시간으로 2025년 4월 30일 오전 10시부터 사용자에게 일시에 입장할 예정입니다.]({% image_buster /assets/img_archive/canvas_checklist1.png %}){: style="max-width:75%;"}
+캔버스는 현지 시간으로 2025년 4월 30일 오전 10시부터 사용자에게 일시에 입장할 예정입니다.]({% image_buster /assets/img_archive/canvas_checklist1.png %}){: style="max-width:75%;"}
 
 ### 오디언스 필터에 정규표현식 사용 고려하기
 
