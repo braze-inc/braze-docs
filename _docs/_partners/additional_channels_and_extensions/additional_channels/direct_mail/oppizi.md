@@ -51,7 +51,7 @@ Next, create a webhook template for Oppizi in Braze to use in future campaigns o
 
 In your webhook template, fill out the following fields:
 
-- **Webhook URL:** ```https://webhook.oppizi.com/events```
+- **Webhook URL:** ```https://webhooks.oppizi.com/events```
 - **Request body:** **Raw Text**
 
 For request method and headers, Oppizi requires an HTTP method along with the following HTTP headers to be included in the template. Fill out the following fields:
@@ -79,7 +79,7 @@ The following is an example request body:
     "event" : "workflow.addRecipient",
     "oppiziWorkflowID" : "<oppiziWorkflowID>",
     "recipient" : {
-        "brazeID" : "{{${braze_id}}}",
+        "recipientID" : "{{${braze_id}}}",
         "firstName" : "{{${first_name}}}",
         "lastName" : "{{${last_name}}}",
         "address1" : "{{custom_attribute.${address1}}}",

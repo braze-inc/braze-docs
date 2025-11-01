@@ -1,28 +1,28 @@
 ---
-nav_title: Suivi de localisation
-article_title: Suivi de localisation
+nav_title: Emplacement/localisation
+article_title: Emplacements/localisation
 page_order: 0
 page_type: reference
-description: "Cet article de référence explique comment utiliser le suivi de localisation et le ciblage de localisation dans vos applications ainsi que les partenaires qui prennent en charge le suivi de localisation."
+description: "Cet article de référence explique comment utiliser la géolocalisation et le ciblage d'emplacements dans vos apps et quels partenaires prennent en charge la géolocalisation."
 tool: Location
 search_rank: 2
 ---
 
-# Suivi de localisation
+# Emplacement/localisation
 
-> La collecte des données de localisation enregistre le dernier emplacement depuis lequel un utilisateur a ouvert votre application à l’aide des données de localisation GPS. Vous pouvez utiliser ces informations pour segmenter les données en fonction des utilisateurs qui se trouvaient dans un emplacement défini.
+> La collecte d'emplacements permet de capturer l'emplacement/localisation le plus récent d'un utilisateur lorsque l'application a été ouverte à l'aide des données de localisation GPS. Vous pouvez utiliser ces informations pour segmenter les données en fonction des utilisateurs qui se trouvaient dans un emplacement/localisation défini.
 
-## Activer le suivi de localisation
+## Activation de l'emplacement/localisation
 
-Pour activer la collecte des données de localisation sur votre application, reportez-vous au guide du développeur de la plateforme que vous utilisez :
+Pour activer la collecte d'emplacements/localisations sur votre app, reportez-vous au guide du développeur de la plateforme que vous utilisez :
 
 - [iOS]({{site.baseurl}}/developer_guide/analytics/tracking_location/?sdktab=swift)
 - [Android]({{site.baseurl}}/developer_guide/analytics/tracking_location/?sdktab=android)
 - [Web]({{site.baseurl}}/developer_guide/analytics/tracking_location/?sdktab=web)
 
-En général, les applications mobiles utilisent la puce GPS de l’appareil ainsi que d’autres systèmes (comme les scans Wi-Fi) pour suivre la localisation des utilisateurs. tandis que les applications Web utilisent le WPS (Wi-Fi Positioning System) pour suivre leur localisation. Toutes ces plateformes nécessitent que l’utilisateur s’abonne au suivi de la localisation. L’exactitude de vos données de suivi de localisation peut être affectée par le fait que vos utilisateurs aient activé ou non le Wi-Fi sur leur appareil. Les utilisateurs Android peuvent également choisir différents modes de localisation : les données des utilisateurs qui sont en mode « Économiseur de batterie » ou « Appareil uniquement » peuvent être inexactes.
+En général, les applications mobiles utilisent la puce GPS de l'appareil et d'autres systèmes (comme le balayage Wi-Fi) pour suivre l'emplacement/localisation de l'utilisateur. Les applications web utiliseront le WPS (Wi-Fi Positioning System) pour suivre l'emplacement/localisation de l'utilisateur. Toutes ces plateformes exigeront des utilisateurs qu'ils acceptent l'emplacement/localisation. La précision de vos données d'emplacement/localisation peut être affectée par l'activation ou non du Wi-Fi sur les appareils de vos utilisateurs. Les utilisateurs d'Android peuvent également choisir différents modes d'emplacement/localisation : les utilisateurs qui sont en mode "Économie de batterie" ou "Appareil uniquement" peuvent avoir des données inexactes.
 
-### Emplacement des utilisateurs du SDK par adresse IP
+### Emplacement/localisation des utilisateurs du SDK par adresse IP
 
 À partir du 26 novembre 2024, Braze détectera les emplacements/localisations des utilisateurs à partir du pays géolocalisé en utilisant l'adresse IP du début de la première session SDK. 
 
@@ -30,15 +30,15 @@ Auparavant, Braze utilisait le code pays des paramètres régionaux de l'apparei
 
 Désormais, Braze utilisera l'adresse IP pour définir la valeur du pays sur les profils utilisateurs créés via le SDK, et ce paramètre de pays basé sur l'IP sera disponible pendant et après la première session.
 
-## Ciblage de localisation
+## Emplacements/ciblage
 
-En utilisant des segments et des données de suivi de la localisation, vous pouvez configurer des campagnes et des stratégies basées sur la localisation de vos utilisateurs. Par exemple, vous voudrez peut-être lancer une campagne promotionnelle pour les utilisateurs qui vivent dans une région donnée, ou exclure les utilisateurs situés dans une région dont les réglementations sont plus strictes.
+Grâce aux données d'emplacement/localisation et aux segments, vous pouvez implémenter des campagnes et des stratégies basées sur l'emplacement. Par exemple, vous pouvez vouloir mener une campagne promotionnelle pour les utilisateurs qui vivent dans une ligne/en production/instantanée ou exclure les utilisateurs d'une région dont la réglementation est plus stricte.
 
-Reportez-vous à [le ciblage par lieu]({{site.baseurl}}/user_guide/engagement_tools/segments/location_targeting/) pour plus d'informations sur la création d'un segment de lieu.
+Reportez-vous à la section [Ciblage des emplacements]({{site.baseurl}}/user_guide/engagement_tools/segments/location_targeting/) pour plus d'informations sur la création d'un segment d'emplacement/localisation.
 
-## Réglage de l’attribut de localisation par défaut
+## Définition difficile de l'attribut emplacement/localisation par défaut
 
-Vous pouvez également utiliser l’[endpoint `users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) dans notre API pour mettre à jour l'attribut standard [`current_location`]({{site.baseurl}}/api/objects_filters/user_attributes_object/). Voici un exemple :
+Vous pouvez également utiliser l'[endpoint`users/track` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) de notre API pour mettre à jour l'attribut [`current_location`]({{site.baseurl}}/api/objects_filters/user_attributes_object/) pour mettre à jour l'attribut standard. En voici un exemple :
 
 ```
 https://[your_braze_rest_endpoint]/users/track
@@ -62,24 +62,24 @@ En combinant la prise en charge des balises ou des géorepérages existants avec
 - [Infillion]({{site.baseurl}}/partners/message_personalization/location/infillion/)
 - [Foursquare]({{site.baseurl}}/partners/message_personalization/location/foursquare/)
 
-## Foire aux questions
+## Questions fréquemment posées
 
-### Quand Braze recueille-t-il des données de localisation ?
+### Quand Braze recueille-t-il des données d'emplacement/localisation ?
 
-Braze enregistre uniquement les données de localisation lorsque l’application est ouverte en avant-plan. Par conséquent, notre filtre `Most Recent Location` cible les utilisateurs en fonction du dernier endroit où ils ont ouvert l’application (également appelé début de session).
+Braze ne collecte l'emplacement/localisation que lorsque l'application est ouverte au premier plan. Par conséquent, notre filtre `Most Recent Location` cible les utilisateurs en fonction de l'endroit où ils ont ouvert l'application pour la dernière fois (également appelé début de session).
 
-Gardez les nuances suivantes à l’esprit :
+Vous devez également tenir compte des nuances suivantes :
 
-- Si le suivi de la géolocalisation est désactivé, le filtre `Most Recent Location` affichera le dernier emplacement enregistré.
-- Si un utilisateur a déjà eu un emplacement enregistré sur son profil, il sera éligible pour le filtre `Location Available`, même s’il a désactivé le suivi de la géolocalisation depuis que l’emplacement a été enregistré.
+- Si l'emplacement/localisation est désactivé, le filtre `Most Recent Location` affichera le dernier emplacement/localisation enregistré.
+- Si un utilisateur a déjà eu un emplacement/localisation stocké sur son profil, il sera concerné par le filtre `Location Available`, même s'il s'est désabonné de la géolocalisation depuis lors.
 
-### Quelle est la différence entre le filtre Most Recent Device Locale (Dernière localisation de l’appareil) et Most Recent Location (Dernière localisation) ?
+### Quelle est la différence entre les filtres "Locale de l'appareil le plus récent" et "Emplacement le plus récent" ?
 
-La `Most Recent Device Locale` provient des paramètres de l’appareil de l’utilisateur. Par exemple, pour les utilisateurs d'iPhone, cela apparaît dans leur appareil à **Réglages** > **Général** > **Langue et région.** Ce filtre est utilisé pour collecter des informations sur la langue et la mise en forme régionale, telles que les dates et adresses, et est indépendant du filtre `Most Recent Location`.
+Le site `Most Recent Device Locale` provient des paramètres de l'appareil de l'utilisateur. Par exemple, pour les utilisateurs d'iPhone, cela apparaît dans leur appareil sous **Réglages** > **Général** > **Langue & Région.** Ce filtre est utilisé pour capturer les formats linguistiques et régionaux, tels que les dates et les adresses, et est indépendant du filtre `Most Recent Location`.
 
-La `Most Recent Location` correspond aux dernières données GPS connues du dispositif. Elle est mise à jour au début de la session et est stockée dans le profil de l'utilisateur.
+Le site `Most Recent Location` est le dernier emplacement/localisation GPS connu de l'appareil. Elle est mise à jour au début de la session et est stockée dans le profil de l'utilisateur.
 
-### Si un utilisateur désactive le suivi de la géolocalisation, leurs anciennes données de géolocalisation seront-elles supprimées de Braze ?
+### Si un utilisateur s'abonne au suivi de l'emplacement/localisation, ses anciennes données d'emplacement seront-elles supprimées de Braze ?
 
 Non. Si un emplacement/localisation a déjà été enregistré sur le profil d'un utilisateur, ces données ne seront pas automatiquement supprimées si l'utilisateur choisit par la suite de ne plus suivre l'emplacement/localisation.
 

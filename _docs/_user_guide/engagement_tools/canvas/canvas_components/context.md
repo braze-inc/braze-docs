@@ -50,11 +50,15 @@ For example, if a customer has two upcoming flights, they'll have two separate j
 ## Considerations
 
 - You can have up to 10 context variables per Context step.
-- You can store up to 50&nbsp;KB per context variable. For example, if you store an HTML and Liquid snippet in a context variable that exceeds this, the context variable won't be evaluated or stored for the user.
 - Each context variable name can be up to 100 characters.
 - Context variable names must be valid identifiers (letters, numbers, underscores only).
 - Context variable definitions can be up to 10,240 characters. 
-- Context variables passed into an API-triggered Canvas share the same namespaces as context variables created in a Context step in a Canvas. This means if you send a variable `purchased_item` in the `/canvas/trigger/send` endpoint [context object]({{site.baseurl}}/api/objects_filters/context_object), it can be referenced as {% raw %}`{context.${purchased_item}}`{% endraw %}, and re-declaring that variable in a Context step in the Canvas will override what was previously sent.
+- Context variables passed into an API-triggered Canvas share the same namespaces as context variables created in a Context step in a Canvas. This means if you send a variable `purchased_item` in the [`/canvas/trigger/send` endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) context object, it can be referenced as {% raw %}`{context.${purchased_item}}`{% endraw %}, and re-declaring that variable in a Context step in the Canvas will override what was previously sent.
+- You can store up to 50&nbsp;KB per context step, distributed up to 10 variables per step. Variable sizes that sum up to over 50&nbsp;KB in one step won't be evaluated or stored for the user. These sizes are calculated in sequence. For example, if you have 3 variables in a Context step:
+  - Variable 1: 30&nbsp;KB
+  - Variable 2: 19&nbsp;KB
+  - Variable 3: 2&nbsp;KB
+  - This means Variable 3 won't be evaluated or stored because the sum of all other context variables exceeds 50&nbsp;KB.
 
 ## Creating a Context step
 
@@ -247,60 +251,11 @@ When making a [Connected Content call]({{site.baseurl}}/user_guide/personalizati
 
 ## Time zone consistency standardization
 
-With the addition of Canvas Context, all timestamps with a [datetime type]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#custom-event-properties) from [trigger event properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties) in action-based Canvases will always be normalized to [UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time). Previously, timestamps for event properties were normalized to UTC with [some exceptions]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/#things-to-know). Now, this will provide a more consistent experience for editing Canvas steps and messages.
-
-Consider this example of how this change might affect a timestamp in Canvas. Let's say we have an action-based Canvas that uses an event property in the first step of the Canvas with the following Message step: 
-
-{% raw %}
-`Your appointment is scheduled for {{canvas_entry_properties.${appointment_time} | date: "%Y-%m-%d %l:%M %p"}}, we'll see you then!`
-{% endraw %}
-
-![Context journey with a Message step as the first step.]({% image_buster /assets/img/context_timezone_example.png %}){: style="max-width:50%"}
-
-The step will also have an event payload like: 
-
-```
-{
-  "appointment_time": "2025-08-05T08:15:30:250-0800"
-}
-```
-
-Historically, the message would be: `Your appointment is scheduled for 2025-08-05 8:15am, we'll see you then!`
-
-With the Canvas Context early access, the message will now be: `Your appointment is scheduled for 2025-08-05 4:15pm, we’ll see you then!` This is due to the timestamp being in UTC, which is 8 hours ahead of Pacific Time (the time zone specified in the original payload with `-08:00`).
+While most event properties using the timestamp type are already in UTC in Canvas, there are some exceptions. With the addition of Canvas Context, all default timestamp event properties in action-based Canvases will consistently be in UTC. This change is part of a broader effort to ensure a more predictable and consistent experience when editing Canvas steps and messages. Note that this change will impact all action-based Canvases, whether the specific Canvas is using a Context step or not.
 
 {% alert important %}
-To account for this timestamp change, in all circumstances, we strongly recommend [using Liquid filters]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/#things-to-know) for timestamps are represented in the desired time zone.
+In all circumstances, we strongly recommend using [Liquid time_zone filters]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/#things-to-know) for timestamps to be represented in the desired time zone. You can reference this [frequently asked question](#faq-example) for an example.
 {% endalert %}
-
-### Using Liquid to denote a timestamp in your preferred time zone
-
-Consider the following Liquid snippet:
-
-{% raw %}
-```
-Your appointment is scheduled for {{canvas_entry_properties.${appointment_time} | time_zone: "America/Los_Angeles" | date: "%Y-%m-%d %l:%M %p"}}, we'll see you then!
-```
-{% endraw %}
-
-This logic results in the following output: `Your appointment is scheduled for 2025-08-05 8:15am, we'll see you then!`
-
-The preferred time zone can also be sent in the event properties payload and used in Liquid logic: 
-
-```
-{
-  "appointment_time": "2025-08-05T08:15:30:250-0800"
-  "user_timezone": "America/Los_Angeles"
-}
-```
-
-This is an example of the Liquid snippet:
-
-{% raw %}
-```
-Your appointment is scheduled for {{canvas_entry_properties.${appointment_time} | time_zone: canvas_entry_properties.${user_timezone} | date: "%Y-%m-%d %l:%M %p"}}, we'll see you then!
-```
-{% endraw %}
 
 ## Troubleshooting {#troubleshooting}
 
@@ -322,9 +277,85 @@ Refer to [Context variable data types](#context-variable-types) for the example 
 
 ## Frequently asked questions
 
+### What will be changing when Canvas Context becomes generally available?
+
+When Canvas Context becomes generally available, the following details will apply:
+
+- All timestamps with a [datetime type]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#custom-event-properties) from [trigger event properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties) in action-based Canvases will always be in [UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time). 
+- This change will impact all action-based Canvases, whether the specific Canvas is using a Context step or not.
+
+#### What is the reason for this change?
+
+This change is part of a broader effort to create a more predictable and consistent experience when editing Canvas steps and messages.
+
+#### When is this change taking effect?
+
+- If you're participating in the Canvas Context early access, this change has already been applied. 
+- If you're not participatig in the Canvas Context early access, this change will apply when you join the early access or when Canvas Context becomes generally available.
+
+#### Are API-triggered or scheduled Canvases impacted by this change?
+
+No.
+
+#### Will this change impact Canvas entry properties?
+
+Yes, this will impact `canvas_entry_properties` if the `canvas_entry_property` is being used in an action-based Canvas and the property type is `time`. In all circumstances, we recommend using Liquid `time_zone` filters for timestamps to be represented in the desired timezone.
+
+Here is an example on how to do this:
+
+| Liquid in Message step | Output | Is this the way to represent time zones correctly in Liquid? |
+|---|---|---|
+| {% raw %}```{{canvas_entry_properties.${timestamp_property}}}```{% endraw %} | `2025-08-05T08:15:30:250-0800` | No |
+| {% raw %}```{{canvas_entry_properties.${timestamp_property} | date: "%Y-%m-%d %l:%M %p"}}```{% endraw %} | `2025-08-05 4:15pm` | No
+| {% raw %}```{{canvas_entry_properties.${timestamp_property} | time_zone: "America/Los_Angeles" | date: "%Y-%m-%d %l:%M %p"}}```{% endraw %} | `2025-08-05 8:15am` | Yes |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
+#### What is a practical example of how the new timestamp behavior might affect my messages? {#faq-example}
+
+Let’s say we have an action-based Canvas that has the following content in a Message step:
+
+{% raw %}
+```
+Your appointment is scheduled for {{canvas_entry_properties.${appointment_time} | date: "%Y-%m-%d %l:%M %p"}}, we'll see you then!
+```
+{% endraw %}
+
+This will result in the following message: 
+
+```
+Your appointment is scheduled for 2025-08-05 4:15pm, we’ll see you then!
+```
+
+Because no time zone is specified using Liquid, the timestamp here is in UTC. 
+
+To specify a time zone clearly, we can use Liquid `time_zone` filters like this: 
+
+{% raw %}
+```
+Your appointment is scheduled for {{canvas_entry_properties.${appointment_time} | time_zone: "America/Los_Angeles" | date: "%Y-%m-%d %l:%M %p"}}, we'll see you then!
+```
+{% endraw %}
+
+This will result in the following message: 
+
+```
+Your appointment is scheduled for 2025-08-05 8:15am, we'll see you then!
+```
+
+Because the America/Los Angeles time zone is specified using Liquid, the timestamp here is in PST.
+
+The preferred time zone can also be sent in the event properties payload like this and used in Liquid logic:
+
+```
+{
+  "appointment_time": "2025-08-05T08:15:30:250-0800"
+  "user_timezone": "America/Los_Angeles"
+}
+```
+
 ### How do context variables differ from Canvas entry properties?
 
-If you're participating in the Context step early access, Canvas entry properties are now included as Canvas context variables. This means you can send Canvas entry properties using the Braze API and reference them in other steps, similar to using a context variable with the Liquid snippet.
+If you’re participating in the Context step early access, Canvas entry properties are now included as Canvas context variables. This means you can send Canvas entry properties using the Braze API and reference them in other steps, similar to using a context variable with the Liquid snippet.
 
 ### Can variables reference each other in a singular Context step?
 
@@ -344,11 +375,3 @@ This also applies across multiple Context steps. For example, imagine this seque
 4. All subsequent steps that reference `JobInfo` will now use the updated value `job_description`.
 
 Context variables use their most recent value throughout the Canvas, with each update affecting all following steps that reference that variable.
-
-### Does the Canvas Context time zone consistency standardization impact API-triggered Canvases?
-
-No, this change only impacts action-triggered Canvases. Timestamps sent into API-triggered Canvases will have the string type, not the time type, so the original time zone is always preserved.
-
-### How does this relate to the exceptions noted in Canvas entry properties and event properties?
-
-Participating in the Canvas Context early access removes [those exceptions]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/#things-to-know), regardless if you're using a Canvas Context step.

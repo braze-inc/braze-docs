@@ -10,7 +10,7 @@ page_order: 4
 > Use Liquid personalization in landing pages to dynamically tailor the content with user profile data. For example, you can personalize headlines based on different user attributes without managing multiple static landing pages.
 
 {% alert important %}
-Liquid personalization for landing pages is only available on the Pro tier of landing pages. Currently, [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content) and [promotion codes]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes) are not supported with Liquid personalization in landing pages.
+Liquid personalization for landing pages is only available on the Pro tier of landing pages. Currently, [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content), [multi-language]({{site.baseurl}}/user_guide/administrative/app_settings/multi_language_settings), and [promotion codes]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes) are not supported with Liquid personalization in landing pages.
 {% endalert %}
 
 ## Inserting Liquid

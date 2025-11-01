@@ -25,7 +25,6 @@ ChatGPT apps provide a powerful platform for building AI conversational applicat
 - **Own your customer journey:** While users interact with your brand through ChatGPT, you maintain visibility into their behavior, preferences, and engagement patterns. This data flows directly onto Braze user profiles, not just the AI platform's analytics.
 - **Cross-platform retargeting:** Track user interactions in your ChatGPT app and retarget them across your owned channels (email, SMS, push notifications, in-app messaging) with personalized campaigns based on their AI usage patterns.
 - **Return 1:1 promotional content to ChatGPT conversations:** Deliver Braze [in-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages), [Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards), and more directly within your ChatGPT experience using the custom conversational UI components your team has built for your app.
-- **AI conversation intelligence:** Understand what users are asking about, what problems they're trying to solve, and how your ChatGPT app is helping them. Use this insight to improve your product, content, and messaging strategies.
 - **Revenue attribution:** Track purchases and conversions that originate from ChatGPT app interactions.
 
 <!-- ### Practical Use Cases

@@ -1,8 +1,8 @@
 ---
 nav_title: Opérateurs
-article_title: Opérateurs Liquid
+article_title: Opérateurs de liquides
 page_order: 2
-description: "Cette page de référence indique les opérateurs compatibles Liquid, ainsi que les exemples pertinents."
+description: "Cette page de référence présente les opérateurs pris en charge par Liquid, ainsi que des exemples pertinents."
 
 ---
 
@@ -12,17 +12,17 @@ description: "Cette page de référence indique les opérateurs compatibles Liqu
 
 Ce tableau énumère les opérateurs pris en charge. Notez que les parenthèses sont des caractères non valides dans Liquid et qu'elles empêchent vos étiquettes de fonctionner.
 
-|   Syntaxe| Description de l’opérateur|
+|   Syntaxe| Description de l'opérateur|
 |---------|-----------|
-| ==  | est égal à        |
-| !=  | n’est pas égal à|
+| ==  | équivaut        |
+| !=  | n'est pas égal à|
 |  >  | supérieur à  |
-| <   | inférieur à     |
+| <   | moins de     |
 | >=| supérieur ou égal à|
-| <= | Inférieure ou égale à |
+| <= | inférieur ou égal à |
 | ou | condition A ou condition B|
 | et | condition A et condition B|
-| contient | vérifie si une chaîne de caractères ou un tableau de chaîne de caractères contient une chaîne de caractères|
+| contient | vérifie si une chaîne ou un tableau de chaînes contient une chaîne de caractères|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Tutoriels
@@ -61,9 +61,9 @@ Need a sign to update your wardrobe? We added a 15% discount code to your accoun
 ```
 {% endraw %}
 
-![Un compositeur de notifications push avec le code Liquid complet du tutoriel.]({% image_buster /assets/img/liquid-if-totalspend.png %}){: width="100%"}
+Un compositeur de notifications push avec le code liquid complet du tutoriel.]({% image_buster /assets/img/liquid-if-totalspend.png %}){: width="100%"}
 
-{% details Code complet du liquide %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% if {{custom_attribute.${total_spend}}} >0 %}
@@ -138,7 +138,7 @@ Hey! I've got a deal for you. Buy 2 of our newest releases and get 10% off!
 ```
 {% endraw %}
 
-{% details Code complet du liquide %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% if {{custom_attribute.${recent_game}}} == 'Awkward Dinner Party' %}
@@ -154,7 +154,7 @@ Hey! I've got a deal for you. Buy 2 of our newest releases and get 10% off!
 {% endraw %}
 {% enddetails %}
 
-![Un compositeur de notifications push avec le code Liquid complet du tutoriel.]({% image_buster /assets/img/liquid-if-elsif-games.png %})
+Un compositeur de notifications push avec le code liquid complet du tutoriel.]({% image_buster /assets/img/liquid-if-elsif-games.png %})
 
 Désormais, si un utilisateur a joué pour la dernière fois à *Awkward Dinner Party*, il recevra ce message :
 
@@ -180,9 +180,9 @@ Si un utilisateur n'a joué à aucun jeu ou si cet attribut personnalisé n'exis
 Hey! I've got a deal for you. Buy 2 of our newest releases and get 10% off!
 ```
 
-### Abandon du message en fonction du lieu
+### Message d'abandon en fonction de l'emplacement/localisation
 
-Vous pouvez abandonner un message pour presque tous les motifs. Annulons un message si un utilisateur n'est pas basé dans une zone spécifiée, car il risque de ne pas pouvoir bénéficier de la promotion, du spectacle ou de la réception/distribution.
+Vous pouvez interrompre un message sur la base d'à peu près n'importe quoi. Annulons un message si un utilisateur n'est pas basé dans une zone spécifiée, car il risque de ne pas pouvoir bénéficier de la promotion, du spectacle ou de la réception/distribution.
 
 1. Rédigez une instruction conditionnelle utilisant l'opérateur equals (`==`) pour vérifier si le fuseau horaire de l'utilisateur est `America/Los_Angeles`, puis créez un message à envoyer à ces utilisateurs. 
 
@@ -204,7 +204,7 @@ Stream now!
 ```
 {% endraw %}
 
-{% details Code complet du liquide %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% if {{${time_zone}}} =='America/Los_Angeles' %}
@@ -216,7 +216,7 @@ Stream now!
 {% endraw %}
 {% enddetails %}
 
-![Un compositeur de notifications push avec le code Liquid complet du tutoriel.]({% image_buster /assets/img/abort-if.png %})
+Un compositeur de notifications push avec le code liquid complet du tutoriel.]({% image_buster /assets/img/abort-if.png %})
 
 Vous pouvez également [interrompre les messages]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/) en fonction du contenu connecté.
 

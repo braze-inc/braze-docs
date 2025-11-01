@@ -3,14 +3,14 @@ nav_title: Directrices de marca
 article_title: Directrices de marca
 page_order: 1
 page_type: reference
-description: "Este artículo de referencia describe cómo crear, administrar y utilizar las directrices de marca que pueden aplicarse a tus mensajes a través del asistente de redacción de IA."
+description: "Este artículo de referencia describe cómo crear, administrar y utilizar directrices de marca que pueden aplicarse a tus mensajes a través del asistente de redacción de IA."
 ---
 
 # Directrices de marca
 
 > Adapta el estilo de tus textos generados por IA para que coincidan con la voz, el tono y la personalidad de tu marca con directrices de marca personalizadas.
 
-Puedes crear y administrar tus directrices de marca yendo a **Configuración** > **Directrices de marca**. También puedes crearlos en el [asistente de redacción AI]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/brand_guidelines/).
+Puedes crear y administrar tus directrices **de** marca yendo a **Configuración** > **Directrices de marca**. También puedes crearlos en el [asistente de redacción AI]({{site.baseurl}}/user_guide/brazeai/generative_ai/brand_guidelines/).
 
 ## Crear directrices de marca
 
@@ -18,9 +18,9 @@ Puedes crear y administrar tus directrices de marca yendo a **Configuración** >
 
 En la página **Directrices de marca**, selecciona **Crear nuevo**. Si quieres que esta directriz de marca sea la predeterminada para el espacio de trabajo, marca **Usar como directriz de marca predeterminada**. Puedes tener un predeterminado por espacio de trabajo.
 
-### Paso 2: Describe la personalidad de tu marca
+### Paso 2: Describe la personalidad de tu marca
 
-Para la **personalidad de** marca, piensa en lo que hace única a tu marca. Incluye rasgos, valores, voz y cualquier arquetipo que defina tu marca. Aquí tienes algunas características a tener en cuenta:
+Para la **personalidad de** marca, piensa en lo que hace única a tu marca. Incluye rasgos, valores, voz y cualquier arquetipo que defina tu marca. He aquí algunas características a tener en cuenta:
 
 | **Característica**       | **Definición**                                                                       | **Ejemplo**                                                        |
 |--------------------------|--------------------------------------------------------------------------------------|--------------------------------------------------------------------|
@@ -32,15 +32,15 @@ Para la **personalidad de** marca, piensa en lo que hace única a tu marca. Incl
 | Arquetipo de marca          | El arquetipo que representa a la persona de tu marca (El Héroe, El Creador, etc.).    | Encarnamos el arquetipo del "Explorador", siempre en busca de nuevos retos y aventuras. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-### Paso 3: Definir el lenguaje que debe evitarse (opcional)
+### Paso 3: Definir el lenguaje que debe evitarse (opcional)
 
 En **Exclusiones**, enumera cualquier lenguaje o estilo que no se ajuste a tu marca. Por ejemplo, quizá quieras evitar el "sarcasmo", las "actitudes negativas" o los tonos "condescendientes".
 
-![La ventana "Crear directriz de marca" con campos para introducir el nombre, la descripción, la personalidad, las exclusiones y el tono.][1]
+\![La ventana "Crear directriz de marca" con campos para introducir el nombre, la descripción, la personalidad, las exclusiones y el tono.]({% image_buster /assets/img/guidelines_create.png %})
 
-### Paso 4: Prueba tus directrices
+### Paso 4: Pon a prueba tus directrices
 
-Pon a prueba tus directrices para ver cómo rinden. Amplía **Prueba tus directrices** para generar un texto de ejemplo y ajústalo según sea necesario.
+Prueba tus directrices para ver cómo rinden. Amplía **Prueba tus directrices** para generar un texto de ejemplo y ajústalo según sea necesario.
 
 ### Paso 5: Guarda tus directrices
 
@@ -52,20 +52,14 @@ Puedes cambiar el idioma de salida independientemente del idioma en que esté tu
 
 ## Gestión de las directrices de la marca
 
-Puedes editar las directrices de marca seleccionándolas en la página **Directrices de marca**. Archiva una directriz de marca para hacerla inactiva y eliminarla del asistente de redacción AI. Para que vuelva a estar activa y seleccionable, puedes filtrar las directrices de marca archivadas y luego desarchivarlas.
+Puedes editar las directrices **de** marca seleccionándolas en la página **Directrices de marca**. Archiva una directriz de marca para hacerla inactiva y eliminarla del asistente de redacción AI. Para que vuelva a estar activa y seleccionable, puedes filtrar las directrices de marca archivadas y luego desarchivarlas.
 
-![La página "Directrices de marca" filtró las directrices de marca archivadas.][4]
+La página "Directrices de marca" filtró las directrices de marca archivadas.]({% image_buster /assets/img/unarchive_brand_guideline.png %})
 
 ## Utilizar directrices de marca
 
-Cuando redactes un mensaje, abre el [asistente de redacción de IA]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/) y selecciona tu directriz de marca en el desplegable **Aplicar directriz de marca**. Si designas una pauta de marca concreta como predeterminada, se seleccionará automáticamente en el desplegable, pero puedes elegir una pauta diferente. 
+Cuando redactes un mensaje, abre el [asistente de redacción de IA]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/) y selecciona tu directriz de marca en el desplegable **Aplicar directriz de marca**. Si designas una pauta de marca concreta como predeterminada, se seleccionará automáticamente en el desplegable, pero puedes elegir una pauta diferente. 
 
-!["AI copywriting assistant" con "Alertas importantes!!" seleccionada como directriz de la marca.][2]
+\!["Asistente de redacción AI con "¡¡¡Alertas importantes!!!" seleccionado como directriz de marca.]({% image_buster /assets/img/guidelines_ai_assistant.png %})
 
-## ¿Cómo se utilizan y envían mis datos a OpenAI?
-
-Para generar copia utilizando una directriz de marca, Braze enviará tu consulta incluyendo el contenido de tu directriz a OpenAI. Todas las consultas enviadas a OpenAI desde Braze son anónimas, lo que significa que OpenAI no podrá identificar de quién se envió la consulta a menos que incluyas información identificadora única en la entrada que proporciones o en los datos de tu campaña anterior al habilitar la opción denominada "Referencia a datos de campañas anteriores". Según [la política de OpenAI](https://openai.com/policies/api-data-usage-policies), los datos enviados a la API de OpenAI mediante Braze no se utilizan para entrenar o mejorar sus modelos y se eliminarán al cabo de 30 días. Entre tú y Braze, cualquier contenido generado utilizando GPT es de tu propiedad intelectual. Braze no hará valer ninguna reclamación de propiedad de derechos de autor sobre dicho contenido y no ofrece ninguna garantía de ningún tipo con respecto a cualquier contenido generado por IA.
-
-[1]: {% image_buster /assets/img/guidelines_create.png %}
-[2]: {% image_buster /assets/img/guidelines_ai_assistant.png %}
-[4]: {% image_buster /assets/img/unarchive_brand_guideline.png %}
+{% multi_lang_include brazeai/generative_ai/policy.md %}

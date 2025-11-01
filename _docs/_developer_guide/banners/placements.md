@@ -115,23 +115,48 @@ This feature is not currently supported on Roku.
 ### Step 3: Listen for updates {#subscribeToBannersUpdates}
 
 {% alert tip %}
-If you insert banners using the SDK methods in this guide, all analytics events will be handled automatically.
+If you insert Banners using the SDK methods in this guide, all analytics events (such as impressions and clicks) will be handled automatically, and impressions will only be logged when the banner is in view.
 {% endalert %}
 
 {% tabs %}
 {% tab Web %}
+{% subtabs %}
+{% subtab Javascript %}
+If you're using vanilla JavaScript with the Web Braze SDK, use [`subscribeToBannersUpdates`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetobannersupdates) to listen for placement updates and then call [`requestBannersRefresh`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestbannersrefresh) to fetch them.
 
 ```javascript
 import * as braze from "@braze/web-sdk";
 
 braze.subscribeToBannersUpdates((banners) => {
-  console.log(`Banners were updated`);
+  console.log("Banners were updated");
 });
 
 // always refresh after your subscriber function has been registered
 braze.requestBannersRefresh(["global_banner", "navigation_square_banner"]);
 ```
+{% endsubtab %}
+{% subtab React %}
+If you're using React with the Web Braze SDK, set up [`subscribeToBannersUpdates`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetobannersupdates) inside a `useEffect` hook and call [`requestBannersRefresh`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestbannersrefresh) after registering your listener.
 
+```typescript
+import * as braze from "@braze/web-sdk";
+
+useEffect(() => {
+  const subscriptionId = braze.subscribeToBannersUpdates((banners) => {
+    console.log("Banners were updated");
+  });
+
+  // always refresh after your subscriber function has been registered
+  braze.requestBannersRefresh(["global_banner", "navigation_square_banner"]);
+
+  // cleanup listeners
+  return () => {
+    braze.removeSubscription(subscriptionId);
+  }
+}, []);
+```
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
 {% tab Swift %}
 
@@ -481,7 +506,7 @@ Test Banners are like any other banners, except they're removed at the next app 
 
 ## Logging impressions
 
-Braze automatically logs impressions when you use SDK methods to insert a Banner&#8212;so no need to track impressions manually.
+Braze automatically logs impressions for Banners that are in view when you use SDK methods to insert a Banner&#8212;so no need to track impressions manually.
 
 ## Dimensions and sizing
 
