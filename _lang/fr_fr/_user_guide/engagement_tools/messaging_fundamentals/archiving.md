@@ -18,10 +18,10 @@ tool:
 Lorsque vous archivez une campagne ou un Canvas, plus aucun message ne sera envoyé et vos messages in-app ne s'afficheront pas. Vous pouvez toujours consulter les résultats après l'archivage, mais vous ne pourrez pas modifier la campagne ou le Canvas. Pour ce faire, vous devez d'abord le [désarchiver](#unarchiving-campaigns-and-canvases).
 
 {% tabs local %}
-{% tab campagne %}
+{% tab campaign %}
 Pour archiver une campagne :
 
-1. Sélectionnez **Envoi de messages** > **Campagnes**.
+1. Allez dans **Envoi de messages** > Campagnes.
 2. Passez la souris sur la ligne de la campagne et sélectionnez le menu <i class="fas fa-ellipsis-vertical"></i>.
 3. Sélectionnez **Archive**.
 {% endtab %}
@@ -29,7 +29,7 @@ Pour archiver une campagne :
 {% tab canvas %}
 Pour archiver un Canvas :
 
-1. Allez dans **Messagerie** > **Canvas.**
+1. Allez dans **Messagerie** > **Canvas**.
 2. Passez la souris sur la ligne du canvas et sélectionnez le menu <i class="fas fa-ellipsis-vertical"></i>.
 3. Sélectionnez **Archive**.
 {% endtab %}
@@ -39,4 +39,4 @@ Pour archiver un Canvas :
 
 Lorsque vous désarchivez une campagne ou un canvas, il n'est pas mis en ligne/en production/instantané, son statut passe seulement à **Actif**. Après le désarchivage, vous pouvez modifier et revoir la configuration du message sans qu'aucun message ne soit envoyé.
 
-Pour reprendre la campagne ou le canvas et commencer à envoyer des messages, sélectionnez le menu g<i class="fas fa-ellipsis-vertical"></i> pour la ligne correspondante et sélectionnez **Reprendre**.
+Pour reprendre la campagne ou le canvas et commencer à envoyer des messages, sélectionnez le menu <i class="fas fa-ellipsis-vertical"></i> pour la ligne correspondante et sélectionnez **Reprendre**.

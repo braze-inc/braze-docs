@@ -1,23 +1,23 @@
 ---
 page_order: 0.1
-nav_title: Démarrage
-article_title: Commencer avec Braze
+nav_title: Pour commencer
+article_title: Démarrer avec Braze
 layout: dev_guide
 search_rank: 4
 
-guide_top_header: "Commencer avec Braze"
-guide_top_text: "Bienvenue chez Braze, nous sommes heureux que vous soyez là ! Cette collection d'articles vous aidera à faire vos premiers pas avec notre plateforme et vous présentera les termes, les caractéristiques et les fonctionnalités clés de Braze."
-description: "Cette collection d'articles vous aidera à faire vos premiers pas avec notre plateforme et vous présentera les termes, les caractéristiques et les fonctionnalités clés de Braze."
+guide_top_header: "Démarrer avec Braze"
+guide_top_text: "Bienvenue à Braze, nous sommes heureux de vous accueillir ! Cette collection d'articles vous aidera à démarrer avec notre plateforme et vous présentera les termes clés, les fonctionnalités et les caractéristiques de Braze."
+description: "Cette collection d'articles vous aidera à démarrer avec notre plateforme et vous présentera les termes clés, les fonctionnalités et les caractéristiques de Braze."
 
 guide_featured_title: "Parcours d'apprentissage"
 guide_featured_list:
   - name: Aperçu de Braze
     link: /docs/user_guide/getting_started/overview/
     image: /assets/img/braze_icons/announcement-01.svg
-  - name: Utilisateurs et segments
+  - name: Utilisateurs et segmentations
     link: /docs/user_guide/getting_started/users_segments/
     image: /assets/img/braze_icons/check-done-02.svg
-  - name: Campagnes et canvas
+  - name: Campagnes et toiles
     link: /docs/user_guide/getting_started/campaigns_canvases/
     image: /assets/img/braze_icons/message-smile-circle.svg
   - name: Espaces de travail
@@ -35,6 +35,6 @@ guide_featured_list:
 
 <br>
 
-Vous pouvez suivre ce guide, ou vous pouvez consulter [Braze Learning](https://learning.braze.com) pour des cours guidés, tels que nos parcours d'apprentissage [Marketer](https://learning.braze.com/path/marketer) et [Developer](https://learning.braze.com/path/developer).
+Vous pouvez suivre ce guide ou consulter les cours d'apprentissage de [Braze](https://learning.braze.com), tels que nos parcours d'apprentissage pour [marketeurs](https://learning.braze.com/path/marketer) et [développeurs](https://learning.braze.com/path/developer).
 
 <br> 

@@ -1,5 +1,5 @@
 ---
-nav_title: Preguntas frecuentes
+nav_title: PREGUNTAS FRECUENTES
 article_title: Preguntas frecuentes sobre pruebas multivariantes y A/B
 page_order: 21
 page_type: reference
@@ -23,9 +23,13 @@ Las pruebas multivariantes son una extensión de las pruebas A/B, que permiten a
 
 ### ¿Cómo se calculan los resultados de las pruebas A/B?
 
-Braze comprueba todas las variantes entre sí con las pruebas chi-cuadrado de Pearson, que miden si una variante supera estadísticamente a todas las demás a un nivel de significación de p < 0,05, o lo que denominamos significación del 95%. Entre todas las variantes que superan este umbral de significación, se determina que la variante con mejor rendimiento es la "ganadora".
+Braze prueba todas las variantes entre sí con las pruebas chi-cuadrado de Pearson, que miden si una variante supera estadísticamente a todas las demás a un nivel de significación de p < 0,05, o lo que denominamos significación del 95%. Entre todas las variantes que superan este umbral de significación, se determina que la variante con mejor rendimiento es la "ganadora".
 
 Se trata de una prueba independiente de la puntuación de confianza, que sólo describe el rendimiento de una variante en comparación con el control con un valor numérico entre 0 y 100%. En concreto, representa nuestra confianza en que la diferencia estandarizada en la tasa de conversión entre la variante y el control es significativamente superior al azar.
+
+### ¿Por qué la distribución de variantes no es uniforme?
+
+{% multi_lang_include multivariant_testing.md section='Variant distribution' %}
 
 ## Ejecución y conclusión de las pruebas
 
@@ -37,7 +41,7 @@ Para campañas recurrentes, basadas en acciones y desencadenadas por API, puedes
 
 ### ¿Cómo gestiona Braze a los usuarios que han recibido una variante de mensaje en una campaña recurrente o en un paso en Canvas de entrada? 
 
-Los usuarios son asignados aleatoriamente a una variante concreta antes de recibir la campaña por primera vez. Cada vez que se reciba la campaña sucesivamente (o el usuario vuelva a entrar en una variante de Canvas), recibirá la misma variante, a menos que se modifiquen los porcentajes de la variante. Si los porcentajes de variantes cambian, los usuarios pueden redistribuirse a otras variantes. Los usuarios permanecen en estas variantes hasta que se vuelven a modificar los porcentajes. Los usuarios sólo serán redistribuidos para las variantes que fueron editadas.
+Los usuarios son asignados aleatoriamente a una variante concreta antes de recibir la campaña por primera vez. Cada vez que se reciba la campaña sucesivamente (o el usuario vuelva a entrar en una variante de Canvas), recibirá la misma variante, a menos que se modifiquen los porcentajes de la variante. Si cambian los porcentajes de variantes, los usuarios pueden ser redistribuidos a otras variantes. Los usuarios permanecen en estas variantes hasta que se vuelven a modificar los porcentajes. Los usuarios sólo serán redistribuidos para las variantes que fueron editadas.
 
 Por ejemplo, supongamos que tenemos una campaña o Canvas con tres variantes. Si sólo se modifican o actualizan la Variante A y la Variante B, los usuarios de la Variante C no se redistribuirán porque el porcentaje de variantes de la Variante C no se modificó. Los grupos de control siguen siendo coherentes si el porcentaje de variantes no varía. Los usuarios que hayan recibido mensajes anteriormente no pueden entrar en el grupo de control en un envío posterior, ni ningún usuario del grupo de control puede recibir nunca un mensaje.
 

@@ -1,5 +1,5 @@
 ---
-nav_title: Utilisation des gabarits de Braze
+nav_title: Utilisation des modèles de Braze
 article_title: Utilisation des gabarits de Braze
 page_order: 2
 layout: dev_guide
@@ -10,9 +10,9 @@ page_type: landing
 description: "Cette page d'accueil contient des articles qui vous guideront sur la manière de personnaliser et d'exploiter les modèles Braze Canvas pour les adapter à vos cas d'utilisation, qu'il s'agisse de cibler les utilisateurs pour l'adoption de fonctionnalités ou de personnaliser les messages pour l'onboarding des utilisateurs."
 tool: Canvas
 
-guide_featured_title: "Section Articles"
+guide_featured_title: "Articles de section"
 guide_featured_list:
-  - name: Panier abandonné
+  - name: Abandon de panier
     link: /docs/user_guide/engagement_tools/canvas/get_started/braze_templates/abandoned_cart/
     image: /assets/img/braze_icons/users-right.svg
   - name: En stock
@@ -24,7 +24,7 @@ guide_featured_list:
   - name: Fonctionnalité Adoption
     link: /docs/user_guide/engagement_tools/canvas/get_started/braze_templates/feature_adoption/
     image: /assets/img/braze_icons/flag-02.svg
-  - name: Clients dormants
+  - name: Lapsing User
     link: /docs/user_guide/engagement_tools/canvas/get_started/braze_templates/lapsed_user/
     image: /assets/img/braze_icons/target-05.svg
   - name: Onboarding

@@ -15,7 +15,7 @@ En este artículo, te guiaremos a través de un caso de uso de la plantilla de *
 
 ## Requisitos previos
 
-Antes de utilizar esta plantilla, debes crear las siguientes [plantillas de correo electrónico]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/email_template) para hacer referencia a ellas en el Canvas:
+Antes de utilizar esta plantilla, necesitas crear las siguientes [plantillas de correo electrónico]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/email_template) para hacer referencia a ellas en el Canvas:
 
 - Un correo electrónico de bienvenida a todos los usuarios de tu aplicación
 - Un correo electrónico con consejos sobre cómo utilizar tu aplicación
@@ -33,30 +33,30 @@ Vamos a ajustar los detalles del Canvas para reflejar nuestro objetivo.
 
 1. Selecciona **Editar** junto al nombre de la plantilla.
 
-![El título actual y la descripción del Canvas.]({% image_buster /assets/img/canvas_templates/onboarding_old_name_description.png %}){: style="max-width:60%;"}
+\![El título actual y la descripción del Canvas.]({% image_buster /assets/img/canvas_templates/onboarding_old_name_description.png %}){: style="max-width:60%;"}
 
 {:start="2"}
 2\. Actualiza el nombre del Canvas para especificar que es para la incorporación de nuevos usuarios.
 3\. Actualiza la descripción para especificar que el Canvas mapea un recorrido del usuario que fomenta la confianza y la fidelización de los usuarios.
 4\. Añade la etiqueta **Incorporación** para que podamos filtrarla en la página de inicio de Canvas.
 
-![El nuevo nombre, descripción y etiqueta para el Canvas.]({% image_buster /assets/img/canvas_templates/onboarding_new_name_description.png %}){: style="max-width:60%;"}
+\![El nuevo nombre, descripción y etiqueta del Canvas.]({% image_buster /assets/img/canvas_templates/onboarding_new_name_description.png %}){: style="max-width:60%;"}
 
-### Paso 2: Asigna tus eventos de conversión
+### Paso 2: Asigna tus eventos de conversión
 
 A continuación, vamos a asignar nuestros eventos de conversión. Los eventos de conversión son un tipo de métrica que puede utilizarse para medir el éxito del Canvas. En **Nombre de evento personalizado**, selecciona **Enviar clic** como evento personalizado.
 
-![Evento de conversión primaria - A con el tipo de conversión "Realiza evento personalizado" con el nombre de evento personalizado "Clic de correo electrónico". Hay un plazo de 4 días para la conversión.]({% image_buster /assets/img/canvas_templates/onboarding1.png %})
+\![Evento de conversión primaria - A con el tipo de conversión "Realiza evento personalizado" con el nombre de evento personalizado "Clic de correo electrónico". Hay un plazo de conversión de 4 días.]({% image_buster /assets/img/canvas_templates/onboarding1.png %})
 
 Esto significa que los nuevos usuarios tienen hasta cuatro días para hacer clic en el correo electrónico de bienvenida. En este caso, queremos que nuestros nuevos usuarios sientan la urgencia de interactuar con PantsLabyrinth y suscribirse a una entrega recurrente de ropa de temporada.
 
-### Paso 3: Establecer un horario de entrada
+### Paso 3: Establecer un horario de entrada
 
 Como el objetivo es captar nuevos usuarios de PantsLabyrinth, mantendremos el Canvas basado en acciones. En **Iniciar sesión**, selecciona **Iniciar sesión en cualquier aplicación** para que los usuarios que inicien una sesión en cualquier aplicación puedan entrar en el Canvas.
 
 A continuación, ajusta la **Ventana de entrada** para determinar cuándo pueden entrar los usuarios en el Canvas. Supongamos que a finales de octubre se lanza una suscripción a PantsLabyrinth. Aquí es donde estableceremos la hora de inicio como **2024/10/28 8:00 h**. Opcionalmente, también podemos dejar que los usuarios introduzcan el Canvas en su zona horaria local.
 
-![Una ventana de entrada con hora de inicio el 28 de octubre de 2024 a las 8 de la mañana. Los usuarios introducirán este mensaje en su zona horaria local.]({% image_buster /assets/img/canvas_templates/onboarding4.png %})
+Una ventana de entrada con hora de inicio el 28 de octubre de 2024 a las 8 de la mañana. Los usuarios introducirán este mensaje en su zona horaria local.]({% image_buster /assets/img/canvas_templates/onboarding4.png %})
 
 ### Paso 4: Dirígete a tu audiencia
 
@@ -82,12 +82,12 @@ Ahora, nuestros usuarios recibirán este correo electrónico de bienvenida despu
 
 En el paso Ruta de audiencia, llamado **División de la audiencia**, podemos personalizar el filtro para nuestros usuarios comprometidos. En la plantilla, el filtro es **Ha hecho clic en el correo electrónico para el paso Correo electrónico de** bienvenida, lo que significa que los usuarios se dividen en dos grupos: los usuarios que han hecho clic en el correo electrónico de bienvenida y los que no.
 
-![Un paso de división de la audiencia con una ruta para los usuarios comprometidos y otra para todos los demás.]({% image_buster /assets/img/canvas_templates/onboarding2.png %}){: style="max-width:70%;"}
+Un paso de división de la audiencia con una ruta para los usuarios comprometidos y otra para todos los demás.]({% image_buster /assets/img/canvas_templates/onboarding2.png %}){: style="max-width:70%;"}
 
-Como comercio minorista de ropa online, PantsLabyrinth también tiene un grupo activo de usuarios móviles. Así, en un Canvas de incorporación independiente, también podemos seleccionar el siguiente filtro para identificar y dividir a nuestros usuarios móviles en estos segmentos:
+Como comercio minorista de ropa online, PantsLabyrinth también tiene un grupo activo de usuarios móviles. Así, en un Canvas de incorporación separado, también podemos seleccionar el siguiente filtro para identificar y dividir a nuestros usuarios móviles en estos segmentos:
 
 - **Ha hecho clic en la tarjeta de contenido para el paso Bienvenido Tarjeta de contenido**
-- **El resto**
+- **Todos los demás**
 
 #### Dirígete a más usuarios con las Rutas de audiencia
 

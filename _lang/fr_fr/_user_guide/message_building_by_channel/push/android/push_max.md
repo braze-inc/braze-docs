@@ -1,8 +1,8 @@
 ---
-nav_title: Maximiser les notifications push
-article_title: Maximiser les notifications push
+nav_title: Pousser Max
+article_title: Pousser Max
 page_type: reference
-description: "L’option Maximiser les notifications push amplifie les notifications push Android en suivant celles qui ont échoué pour les renvoyer lorsque les utilisateurs ont le plus de chances de les recevoir."
+description: "Push Max amplifie les notifications push Android en suivant les notifications push qui ont échoué et en renvoyant le push lorsque l'utilisateur est plus susceptible de le recevoir."
 
 permalink: /user_guide/message_building_by_channel/push/android/push_max/
 platform: Android
@@ -11,15 +11,15 @@ channel:
 
 ---
 
-# Maximiser les notifications push
+# Pousser Max
 
-> Découvrez Push Max et apprenez comment utiliser cette fonctionnalité pour améliorer la livrabilité des notifications push Android sur les [appareils OEM chinois]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/chinese_push_deliverability/).
+> Découvrez Push Max et comment vous pouvez utiliser cette fonctionnalité pour améliorer la livrabilité des notifications push Android sur les [appareils OEM chinois.]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/chinese_push_deliverability/)
 
 ## Qu'est-ce que Push Max ?
 
-L’option Maximiser les notifications push amplifie les notifications push Android en suivant celles qui ont échoué pour les renvoyer lorsque les utilisateurs ont le plus de chances de les recevoir.
+Push Max amplifie les notifications push Android en suivant les notifications push qui ont échoué et en renvoyant le push lorsque l'utilisateur est plus susceptible de le recevoir.
 
-Certains appareils Android fabriqués par des équipementiers chinois, tels que Xiaomi, OPPO et Vivo, emploient un schéma robuste d'optimisation de la batterie pour prolonger son autonomie. Ce comportement peut avoir pour conséquence involontaire d'arrêter le traitement des applications en arrière-plan, ce qui réduit la livrabilité des notifications push sur ces appareils si l'application n'est pas au premier plan. Cette situation se produit le plus souvent sur les marchés de l'Asie-Pacifique (APAC).
+Certains appareils Android fabriqués par des équipementiers chinois, tels que Xiaomi, OPPO et Vivo, utilisent un schéma d'optimisation de la batterie robuste pour prolonger son autonomie. Ce comportement peut avoir pour conséquence involontaire d'arrêter le traitement des applications en arrière-plan, ce qui réduit la livrabilité des notifications push sur ces appareils si l'application n'est pas au premier plan. Cette situation se produit le plus souvent sur les marchés de l'Asie-Pacifique (APAC).
 
 ## Disponibilité
 
@@ -29,54 +29,54 @@ Certains appareils Android fabriqués par des équipementiers chinois, tels que 
 
 ## Conditions préalables
 
-Les notifications push envoyées à l'aide de Push Max ne seront délivrées qu'aux appareils disposant [au minimum de la version suivante du SDK]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions) :
+Les notifications push envoyées à l'aide de Push Max ne seront délivrées qu'aux appareils disposant au [minimum de la version]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions) suivante [du SDK]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions):
 
 {% sdk_min_versions android:29.0.1 %}
 
 ## Utilisation de Push Max
 
 {% tabs %}
-{% tab Campagnes %}
+{% tab Campaigns %}
 
 Pour utiliser Push Max dans votre campagne :
 
 1. Créez une campagne de push.
 2. Sélectionnez **Android Push** comme plateforme.
-3. Passez à l'étape de la **Planifier l’envoi**.
+3. Passez à l'étape de la **planification de la réception/distribution**.
 4. Sélectionnez **Envoyer à l'aide de Push Max.**
 
-![Section Livrabilité des notifications push Android de l'étape Planifier l’envoi, avec l'option « Envoyer avec Push Max ».]({% image_buster /assets/img_archive/push_max_campaigns.png %})
+!section Android Push Deliverability de l'étape Schedule Delivery avec l'option "Send using Push Max".]({% image_buster /assets/img_archive/push_max_campaigns.png %})
 
 {% endtab %}
 {% tab Canvas %}
 
 Pour utiliser Push Max dans votre canvas :
 
-1. Ajoutez une étape Message à votre canvas.
+1. Ajoutez une étape Message à votre Canvas.
 2. Sélectionnez **Android Push** comme plateforme.
-3. Accédez à l'onglet **Paramètres de réception**.
+3. Accédez à l'onglet **Paramètres de réception/distribution**.
 4. Sélectionnez **Envoyer à l'aide de Push Max.**
 
-![Onglet Paramètres de réception d'une étape Message de notifications push Android, avec l'option « Envoyer avec Push Max ».]({% image_buster /assets/img_archive/push_max_canvas.png %})
+!onglet Paramètres de réception/distribution d'une étape d'un message Push Android avec l'option "Envoyer à l'aide de Push Max".]({% image_buster /assets/img_archive/push_max_canvas.png %})
 
 {% endtab %}
 {% endtabs %}
 
 Les deux fonctionnalités suivantes, le timing intelligent et la durée en vie, peuvent être utilisées en tandem avec Push Max pour augmenter potentiellement la livrabilité de vos notifications push Android.
 
-### Timing intelligent
+### Le timing intelligent
 
 Push Max fonctionne mieux lorsque le [timing intelligent]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/) est activé. Le timing intelligent peut calculer et envoyer la notification push à un moment où l'utilisateur est le plus susceptible d'utiliser l'application et où le push a le plus de chances d'être délivré.
 
 ### Durée en ligne/en vie (TTL)
 
-La durée de vie peut assurer le suivi des échecs des notifications push vers Firebase Cloud Messaging (FCM) et réessayer de renvoyer la notification lorsque l'utilisateur est susceptible de la recevoir.
+La durée en ligne/en production/instantanée (TTL) peut suivre les échecs des notifications push vers Firebase Cloud Messaging (FCM) et réessayer la notification lorsque l'utilisateur est susceptible de la recevoir.
 
-Par défaut, la durée de vie est fixée à 28 jours, soit le maximum. Vous pouvez réduire la durée TTL par défaut pour tous les nouveaux messages push Android à partir de **Paramètres** > **Paramètres de l'espace de travail** > **Push Time to Live (TTL)**, ou vous pouvez configurer le nombre de jours par message dans l'onglet **Paramètres** lors de la composition d'une notification push Android.
+Par défaut, la durée en ligne/en production/instantanée est fixée à 28 jours, ce qui est le maximum. Vous pouvez diminuer le TTL par défaut pour tous les nouveaux messages push Android à partir de **Paramètres** > **Paramètres de l'espace de travail** > **Paramètres Push**, ou vous pouvez configurer le nombre de jours par message dans l'onglet **Paramètres** lors de la composition d'une notification push Android.
 
-![La durée en ligne/en vie est fixée à 28 jours.]({% image_buster /assets/img_archive/time_to_live.png %}){: style="max-width:60%"}
+!La durée en ligne/en production/instantanée est fixée à 28 jours.]({% image_buster /assets/img_archive/time_to_live.png %}){: style="max-width:60%"}
 
-## Choses à savoir
+## Ce qu'il faut savoir
 
 ### Codes de promotion
 

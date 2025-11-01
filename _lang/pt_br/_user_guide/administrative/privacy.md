@@ -11,7 +11,7 @@ page_type: reference
 
 guide_featured_title: "Artigos"
 guide_featured_list:
-- name: Assistência técnica de proteção de dados
+- name: Assistência técnica em proteção de dados
   link: /docs/dp-technical-assistance
   image: /assets/img/braze_icons/database-01.svg
 - name: Regulamentações de spam
