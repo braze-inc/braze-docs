@@ -1,5 +1,5 @@
 ---
-nav_title: ドラッグ・アンド・ドロップ・エディター
+nav_title: ドラッグアンドドロップエディタ
 article_title: メール用ドラッグ＆ドロップ・エディター
 alias: /dnd/
 page_order: 3
@@ -19,7 +19,7 @@ guide_featured_list:
   link: /docs/dnd/email_template/
   image: /assets/img/braze_icons/table.svg
 - name: エディターブロック
-  link: /docs/dnd/editor_blocks/
+  link: /docs/user_guide/engagement_tools/messaging_fundamentals/drag_and_drop_editor_blocks/?sdktab=email
   image: /assets/img/braze_icons/align-left.svg
 - name: グローバルスタイル設定
   link: /docs/dnd/global_style_settings/

@@ -1,5 +1,5 @@
 ---
-nav_title: "iOSオプション"
+nav_title: "iOS オプション"
 article_title: iOSプッシュオプション
 page_order: 8
 layout: dev_guide

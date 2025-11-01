@@ -13,6 +13,14 @@ guide_top_text: "BrazeAI<sup>TM</sup> は、お客様のエンゲージメント
 
 guide_featured_title: "機能"
 guide_featured_list:
+- name: BrazeAI Decisioning Studio<sup>TM</sup>
+  link: /docs/user_guide/brazeai/decisioning_studio/
+- name: Braze エージェント
+  link: /docs/user_guide/brazeai/agents/
+  image: /assets/img/braze_icons/star-06.svg
+- name: BrazeAIオペレーター
+  link: /docs/operator/
+  image: /assets/img/braze_icons/edit-05.svg
 - name: Intelligence Suite
   link: /docs/user_guide/brazeai/intelligence/
   image: /assets/img/braze_icons/clock.svg
@@ -22,12 +30,15 @@ guide_featured_list:
 - name: 予測イベント
   link: /docs/user_guide/brazeai/predictive_events/
   image: /assets/img/braze_icons/calendar-check-01.svg
-- name: おすすめ
+- name: レコメンデーション
   link: /docs/user_guide/brazeai/recommendations/
-  image: /assets/img/braze_icons/user-check-01.svg
+  image: /assets/img/braze_icons/hearts.svg
 - name: 生成 AI
   link: /docs/user_guide/brazeai/generative_ai/
   image: /assets/img/braze_icons/lightbulb-02.svg
+- name: Braze MCP サーバー
+  link: /docs/mcp/
+  image: /assets/img/braze_icons/dataflow-01.svg
 - name: 勝者バリアントとパーソナライズされたバリアント
   link: /docs/user_guide/engagement_tools/testing/multivariant_testing/optimizations/
   image: /assets/img/braze_icons/trophy-01.svg
@@ -37,9 +48,6 @@ guide_featured_list:
 - name: パーソナライズされたパス
   link: /docs/user_guide/engagement_tools/canvas/canvas_components/experiment_step/personalized_paths/
   image: /assets/img/braze_icons/chevron-up-double.svg
-- name: おすすめ
-  link: /docs/user_guide/brazeai/recommendations/
-  image: /assets/img/braze_icons/hearts.svg
 ---
 
 <br>
