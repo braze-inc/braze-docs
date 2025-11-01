@@ -23,7 +23,7 @@ Si estás introduciendo usuarios según su zona horaria local utilizando un hora
 Verás una alerta si no has programado un buffer suficiente. Una solución rápida es ajustar la hora de envío para garantizar que los usuarios puedan permanecer en el segmento objetivo durante 24 horas completas.
 {% endalert %}
 
-![Un Canvas programado para que los usuarios entren a la vez a partir de las 10 de la mañana del 30 de abril de 2025, en su hora local.]({% image_buster /assets/img_archive/canvas_checklist1.png %}){: style="max-width:75%;"}
+\![Un Canvas programado para que los usuarios entren a la vez a partir de las 10 de la mañana del 30 de abril de 2025, en su hora local.]({% image_buster /assets/img_archive/canvas_checklist1.png %}){: style="max-width:75%;"}
 
 ### Considera la posibilidad de utilizar expresiones regulares para filtrar la audiencia
 

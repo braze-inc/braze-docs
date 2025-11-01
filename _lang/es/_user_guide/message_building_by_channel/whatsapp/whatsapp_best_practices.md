@@ -1,8 +1,8 @@
 ---
 nav_title: Buenas prácticas
 article_title: Buenas prácticas de WhatsApp
-page_order: 8
-description: "En este artículo se describen las mejores prácticas sugeridas a la hora de utilizar el canal de mensajería WhatsApp, incluido cómo mantener un alto índice de calidad telefónica y evitar un alto índice de bloqueos e informes."
+page_order: 9
+description: "Este artículo describe las mejores prácticas sugeridas al utilizar el canal de mensajería de WhatsApp, incluyendo cómo mantener una alta tasa de calidad telefónica y evitar una alta tasa de bloqueos e informes."
 page_type: reference
 channel:
   - WhatsApp
@@ -10,41 +10,41 @@ channel:
 ---
 # Buenas prácticas de WhatsApp
 
-> Antes de enviar tus mensajes de WhatsApp, consulta estas prácticas recomendadas para mantener un alto índice de calidad telefónica, evitar bloqueos e informes y dar de alta y baja a usuarios.
+> Antes de enviar tus mensajes de WhatsApp, consulta estas prácticas recomendadas para mantener una alta tasa de calidad telefónica, evitar bloqueos e informes, y la adhesión voluntaria y la baja de usuarios.
 
 ## Mantener una alta tasa de calidad telefónica 
 
-WhatsApp basa su [calificación de calidad telefónica](https://www.facebook.com/business/help/896873687365001) en las acciones que realizan los usuarios que reciben tus mensajes, como bloquearte o denunciar tu negocio. Es importante mantener un índice de calidad alto, ya que si es bajo y no mejora al cabo de cierto tiempo, tu límite de mensajes puede disminuir.
+WhatsApp basa su [tasa de calidad telefónica](https://www.facebook.com/business/help/896873687365001) en las acciones que realizan los usuarios que reciben tus mensajes, como bloquearte o denunciar tu actividad. Es importante mantener una tasa de calidad alta, ya que si es baja y no mejora durante cierto tiempo, tu límite de mensajería puede disminuir.
 
-La primera vez que envíe un mensaje a un usuario en WhatsApp, estas opciones aparecerán en el hilo del mensaje.
+La primera vez que envíes un mensaje a un usuario en WhatsApp, estas opciones aparecerán dentro del hilo de mensajes.
 
-![Hilo de mensajes de WhatsApp con opciones para bloquear o denunciar un negocio]({% image_buster /assets/img/whatsapp/whatsapp_block_report.png %}){: style="max-width:30%;"}
+\![Hilo de mensajes de WhatsApp con opciones para bloquear o denunciar un negocio]({% image_buster /assets/img/whatsapp/whatsapp_block_report.png %}){: style="max-width:30%;"}
 
 {% alert note %}
-Para obtener métricas sobre tus bloqueos e informes, asegúrate de que la [pestaña Insights](https://www.facebook.com/business/help/683499390267496) está activada en tu WhatsApp Manager.
+Para obtener información métrica sobre tus bloqueos e informes, asegúrate de que la [pestaña "Información"](https://www.facebook.com/business/help/683499390267496) está activada en tu administrador de WhatsApp.
 {% endalert %}
 
-Para evitar casos elevados de bloqueos e informes, Braze sugiere las siguientes prácticas recomendadas para mantener una calificación de calidad telefónica alta y límites de mensajería estables. 
+Para evitar instancias elevadas de bloqueos e informes, Braze sugiere las siguientes prácticas recomendadas para mantener una alta tasa de calidad telefónica y unos límites de mensajería estables. 
 
-### Cumplir los requisitos y directrices de registro de WhatsApp
+### Sigue los requisitos y directrices de adhesión voluntaria de WhatsApp
 
-Asegúrate de que todos los usuarios han dado su consentimiento activo para recibir mensajes de WhatsApp antes de empezar a comunicarte con ellos por WhatsApp. Cuando pida a los usuarios que se registren, debe decirles que están aceptando específicamente recibir mensajes de su empresa a través de WhatsApp.
+Asegúrate de que todos los usuarios han dado su consentimiento activo para recibir mensajes de WhatsApp antes de empezar a comunicarte con ellos por WhatsApp. Cuando pidas a los usuarios que se adhieran voluntariamente, debes decirles que están aceptando específicamente recibir mensajes de tu empresa a través de WhatsApp.
 
 {% alert note %}
 Para obtener información sobre los requisitos de adhesión voluntaria y consejos útiles, consulta [Conseguir la adhesión voluntaria para WhatsApp](https://developers.facebook.com/docs/whatsapp/overview/getting-opt-in/).
 {% endalert %}
 
-### Siga las mejores prácticas de mensajería
+### Sigue las mejores prácticas de mensajería
 
-- Haz que el nombre de tu canal refleje tu marca para que los usuarios reconozcan que el mensaje procede de ti y no de spam.
-- Envíe un mensaje de confirmación a los usuarios después de recoger su consentimiento.
-- Envíe mensajes en los momentos adecuados.
+- Haz que el nombre de tu canal refleje tu marca para que los usuarios reconozcan que el mensaje es tuyo, no correo no deseado.
+- Envía un mensaje de confirmación a los usuarios después de recoger su consentimiento de adhesión voluntaria.
+- Envía mensajes en los momentos adecuados.
 
-### Ofrecer a los clientes la opción de no participar
+### Dar a los clientes la opción de excluirse voluntariamente
 
-Las cancelaciones no afectan a tu valoración de la calidad telefónica, por lo que es mejor que un usuario opte por no recibir comunicaciones de WhatsApp frente a bloquearte o denunciarte.
+Las exclusiones voluntarias no afectan a tu tasa de calidad telefónica, por lo que es mejor que un usuario se excluya voluntariamente de recibir comunicaciones de WhatsApp que bloquearte o denunciarte.
 
-Una buena práctica sugerida es proporcionar instrucciones sobre cancelaciones en el pie de página del primer mensaje que envíes a los usuarios. Por ejemplo, puede indicar que los usuarios pueden darse de baja de su canal de WhatsApp respondiendo con su palabra desencadenante de baja. También puede incluir regularmente el pie de página de exclusión en futuras campañas. Para saber cómo configurarlo, consulte [Opt-in y opt-out]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/opt-ins_and_opt-outs/).
+Una buena práctica sugerida es proporcionar instrucciones sobre cómo salir en el pie de página del primer mensaje que envíes a los usuarios. Por ejemplo, podrías indicar que los usuarios pueden cancelar suscripción a tu canal de WhatsApp respondiendo con tu palabra desencadenante de baja. También podrías incluir regularmente el pie de página de adhesión voluntaria en futuras campañas. Para saber cómo configurarlo, consulta [Adhesión voluntaria y exclusión voluntaria]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/opt-ins_and_opt-outs/).
  
-![Mensaje de WhatsApp con un pie de página indicando que respondas STOP para cancelar suscripción al canal]({% image_buster /assets/img/whatsapp/whatsapp_unsubscribe.png %}){: style="max-width:35%;"}
+\![Mensaje de WhatsApp con un pie de página en el que se indica que respondas STOP para cancelar suscripción al canal]({% image_buster /assets/img/whatsapp/whatsapp_unsubscribe.png %}){: style="max-width:35%;"}
 

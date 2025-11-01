@@ -25,8 +25,8 @@ Para ayudarte a empezar, hemos creado plantillas SQL básicas para una segmentac
 
 Supongamos que quieres segmentar a los usuarios que son empleados de una cuenta de empresa objetivo. 
 
-1. Ve a **Audiencia** > **Extensiones de segmento** > **Crear nueva extensión** > **Empezar con una plantilla** y selecciona la plantilla **Segmento de catálogo para eventos**. <br><br> !["Selecciona una plantilla" modal con opciones de segmento de catálogo para eventos o compras.]({% image_buster /assets/img/b2b/select_a_template.png %})<br><br>El editor SQL se rellena automáticamente con una plantilla que une los datos de eventos de usuario con los datos del catálogo para segmentar a los usuarios que interactúan con determinados elementos del catálogo. <br><br>![Un editor SQL para una nueva extensión con una pestaña "Variables" abierta.]({% image_buster /assets/img/b2b/enter_new_name.png %})<br><br>
-2. Utilice la pestaña **Variables** para proporcionar los campos necesarios para su plantilla antes de generar su segmento.<br><br>Para que Braze identifique a los usuarios en función de su compromiso con los artículos del catálogo, debe hacer lo siguiente:
+1. Ve a **Audiencia** > **Extensiones de segmento** > **Crear nueva extensión** > **Empezar con una plantilla** y selecciona la plantilla **Segmento de catálogo para eventos**. <br><br> \!["Selecciona una plantilla" modal con opciones de segmento de catálogo para eventos o compras.]({% image_buster /assets/img/b2b/select_a_template.png %})<br><br>El editor SQL se rellena automáticamente con una plantilla que une los datos de eventos de usuario con los datos del catálogo para segmentar a los usuarios que interactúan con determinados elementos del catálogo. <br><br>\![Un editor SQL para una nueva extensión con una pestaña "Variables" abierta.]({% image_buster /assets/img/b2b/enter_new_name.png %})<br><br>
+2. Utiliza la pestaña **Variables** para proporcionar los campos necesarios para tu plantilla antes de generar tu segmento.<br><br>Para que Braze identifique a los usuarios en función de su interacción con los elementos del catálogo, tienes que hacer lo siguiente:
 - Selecciona un catálogo que contenga un campo de catálogo
 - Selecciona un evento personalizado que contenga una propiedad de evento
 - Haz coincidir los valores del campo del catálogo y de las propiedades del evento
@@ -39,8 +39,8 @@ Selecciona las siguientes variables para un caso de uso de segmentación basada 
 | --- | --- |
 | Catálogo | Catálogo de cuentas |
 | Campo del catálogo | ID |
-| Evento personalizado | cuenta_vinculada |
-| Propiedad de evento personalizado | id_cuenta |
+| Evento personalizado | account_linked |
+| Propiedad personalizada del evento | account_id |
 | (En Filtrar resultados SQL) Campo del catálogo | Clasificación |
 | (En Filtrar resultados SQL) Valor | Empresa |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -108,7 +108,7 @@ AND salesforce_opportunities.Stage = 'Closed Won'
 
 ### Opción 2: Cuando utilices fuentes conectadas para tus objetos de negocio
 
-Para obtener información básica sobre cómo utilizar fuentes conectadas en la segmentación, consulta [Segmentos CDI]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/). Utiliza las plantillas que se tratan en [Al utilizar catálogos](#option-1-when-using-catalogs-for-your-business-objects) para inspirarte sobre cómo dar formato a las tablas de origen, ya que puedes darles el formato que quieras.
+Para obtener información básica sobre cómo utilizar fuentes conectadas en la segmentación, consulta [Extensiones de segmento CDI]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/). Utiliza las plantillas que se tratan en [Al utilizar catálogos](#option-1-when-using-catalogs-for-your-business-objects) para inspirarte sobre cómo dar formato a las tablas de origen, ya que puedes darles el formato que quieras.
 
 ## Utilizar tu extensión basada en cuentas en un segmento
 
