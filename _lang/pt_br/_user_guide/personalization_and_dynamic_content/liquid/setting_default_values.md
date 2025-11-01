@@ -1,8 +1,8 @@
 ---
 nav_title: Definição de valores padrão
-article_title: Definição de valores padrão do Liquid
+article_title: Definição de valores padrão do líquido
 page_order: 5
-description: "Este artigo de referência cobre como definir valores de fallback padrão para qualquer atributo de personalização que você usa em suas mensagens."
+description: "Este artigo de referência aborda como definir valores de fallback padrão para qualquer atributo de personalização que você usa em suas mensagens."
 
 ---
 
@@ -14,7 +14,7 @@ description: "Este artigo de referência cobre como definir valores de fallback 
 
 ## Como eles funcionam
 
-Os valores padrão podem ser adicionados especificando um [Liquid Filter](http://docs.shopify.com/themes/liquid-documentation/filters) (use `|` para distinguir o filtro em linha, como mostrado) com o nome "default".
+Os valores padrão podem ser adicionados especificando um [Liquid Filter](http://docs.shopify.com/themes/liquid-documentation/filters) (use `|` para distinguir o filtro em linha, conforme mostrado) com o nome "default".
 
 ```
 | default: 'Insert Your Desired Default Here'
@@ -28,7 +28,7 @@ O exemplo a seguir mostra a sintaxe correta para adicionar um valor padrão. Nes
 Hi {{ ${first_name} | default: 'Valued User' }}, thanks for using the App!
 ```
 
-Para um usuário chamado Janet Doe, a mensagem apareceria como:
+Para um usuário chamado Janet Doe, a mensagem apareceria para o usuário como
 
 ```
 Hi Janet, thanks for using the App!
@@ -47,11 +47,11 @@ O valor padrão será exibido para valores vazios, mas não para valores em bran
 
 ## Definição de valores padrão para diferentes tipos de dados
 
-O exemplo acima mostra como definir um padrão para uma string. Você pode definir valores padrão para qualquer tipo de dados Liquid que tenha o valor de `empty`, `nil` (indefinido) ou `false`, o que inclui strings, booleanos, vetores de objetos e números.
+O exemplo acima mostra como definir um padrão para uma string. Você pode definir valores padrão para qualquer tipo de dados Liquid que tenha o valor `empty`, `nil` (indefinido) ou `false`, o que inclui cadeias de caracteres, booleanos, matrizes, objetos e números.
 
 ### Caso de uso: Booleanos
 
-Digamos que você tenha um atributo personalizado booleano chamado `premium_user` e queira enviar uma mensagem personalizada com base no status premium do usuário. Alguns usuários não têm um status premium configurado, portanto, você precisará configurar um valor padrão para capturar esses usuários.
+Digamos que você tenha um atributo booleano personalizado chamado `premium_user` e queira enviar uma mensagem personalizada com base no status premium do usuário. Alguns usuários não têm um status premium configurado, portanto, você precisará configurar um valor padrão para capturar esses usuários.
 
 1. Você atribuirá uma variável chamada `is_premium_user` ao atributo `premium_user` com um valor padrão de `false`. Isso significa que, se `premium_user` for `nil`, o valor de `is_premium_user` terá como padrão `false`. 
 
@@ -61,7 +61,7 @@ Digamos que você tenha um atributo personalizado booleano chamado `premium_user
 ```
 
 {: start="2"}
-2\. Em seguida, use a lógica condicional para especificar a mensagem a ser enviada se `is_premium_user` for `true`. Em outras palavras, o que enviar se `premium_user` for `true`. Você também atribuirá um valor padrão ao nome do usuário, caso não tenhamos o nome do usuário.
+2\. Em seguida, use a lógica condicional para especificar a mensagem a ser enviada se `is_premium_user` for `true`. Em outras palavras, o que enviar se `premium_user` for `true`. Você também atribuirá um valor padrão ao primeiro nome do usuário, caso não tenhamos o nome do usuário.
 
 ```liquid
 {% if is_premium_user %}
@@ -78,7 +78,7 @@ Hi {{${first_name} | default: 'valued user'}}, consider upgrading to premium for
 ```
 {% endraw %}
 
-{% details Código Liquid completo %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% assign is_premium_user = {{custom_attribute.${premium_user}}} | default: false %}
@@ -93,9 +93,9 @@ Hi {{${first_name} | default: 'valued user'}}, consider upgrading to premium for
 
 ### Caso de uso: Números
 
-Digamos que você tenha um atributo personalizado numérico chamado `reward_points` e queira enviar uma mensagem com os pontos de recompensas do usuário. Alguns usuários não têm pontos de recompensas configurados, portanto, você precisará configurar um valor padrão para levar em conta esses usuários.
+Digamos que você tenha um atributo personalizado numérico chamado `reward_points` e queira enviar uma mensagem com os pontos de recompensa do usuário. Alguns usuários não têm pontos de recompensa configurados, portanto, você precisará configurar um valor padrão para levar em conta esses usuários.
 
-1. Comece a mensagem com o primeiro nome do usuário ou com um valor padrão de `Valued User`, caso não tenha o nome dele.
+1. Inicie a mensagem com o primeiro nome do usuário ou com um valor padrão de `Valued User`, caso você não tenha o nome dele.
 
 {% raw %}
 ```liquid
@@ -104,7 +104,7 @@ Hi {{${first_name} | default: 'valued user'}},
 {% endraw %}
 
 {: start="2"}
-2\. Termine a mensagem com quantos pontos de recompensa o usuário tem usando o atributo personalizado chamado `reward_points` e usando o valor padrão de `0`. Todos os usuários cujo `reward_points` tenha um valor `nil` terão pontos de recompensas `0` na mensagem.
+2\. Finalize a mensagem com quantos pontos de recompensa o usuário tem usando o atributo personalizado chamado `reward_points` e usando o valor padrão de `0`. Todos os usuários cujo `reward_points` tenha um valor `nil` terão pontos de recompensa `0` na mensagem.
 
 {% raw %}
 ```liquid
@@ -116,7 +116,7 @@ Hi {{${first_name} | default: 'valued user'}}, you have {{custom_attribute.${rew
 
 Digamos que você tenha um objeto de atributo personalizado aninhado chamado `location` que contém as propriedades `city` e `state`. Se alguma dessas propriedades não estiver definida, você deve incentivar o usuário a fornecê-la.
 
-1. Dirija-se ao usuário pelo nome e inclua um valor padrão, caso não tenha o nome dele.
+1. Dirija-se ao usuário pelo primeiro nome e inclua um valor padrão, caso não tenha o nome dele.
 
 {% raw %}
 ```liquid
@@ -125,7 +125,7 @@ Hi {{${first_name} | default: 'valued user'}},
 {% endraw %}
 
 {: start="2"}
-2\. Escreva uma mensagem dizendo que gostaria de confirmar o local do usuário.
+2\. Escreva uma mensagem que diga que você gostaria de confirmar a localização do usuário.
 
 {% raw %}
 ```liquid
@@ -134,7 +134,7 @@ We'd like to confirm the location associated with your account. We use this loca
 {% endraw %}
 
 {: start="3"}
-3\. Insira o local do usuário na mensagem e atribua valores padrão para quando a propriedade de endereço não estiver definida.
+3\. Insira o local do usuário na mensagem e atribua valores padrão para quando a propriedade address não estiver definida.
 
 {% raw %}
 ```liquid
@@ -144,7 +144,7 @@ State: {{custom_attribute.${address.state} | default: 'Unknown'}}
 ```
 {% endraw %}
 
-{% details Código Liquid completo %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 Hi {{${first_name} | default: 'valued user'}}
@@ -160,7 +160,7 @@ State: {{custom_attribute.${address.state} | default: 'Unknown'}}
 
 ### Caso de uso: Matrizes
 
-Digamos que você tenha um atributo personalizado de matriz chamado `upcoming_trips` que contém viagens com as propriedades `destination` e `departure_date`. Deseja enviar mensagens personalizadas aos usuários com base no fato de eles terem viagens programadas.
+Digamos que você tenha um atributo personalizado de matriz chamado `upcoming_trips` que contém viagens com as propriedades `destination` e `departure_date`. Você deseja enviar mensagens personalizadas aos usuários com base no fato de eles terem viagens programadas.
 
 1. Escreva uma lógica condicional para especificar que uma mensagem não deve ser enviada se `upcoming_trips` for `empty`.
 
@@ -172,7 +172,7 @@ Digamos que você tenha um atributo personalizado de matriz chamado `upcoming_tr
 {% endraw %}
 
 {: start="2"}
-2\. Especifique a mensagem a ser enviada se o site `upcoming_trips` tiver conteúdo:<br><br>**2a.** Dirija-se ao usuário e inclua um valor padrão, caso não tenha o nome dele. <br>**2b.** Use uma tag `for` para especificar que você extrairá propriedades (ou informações) para cada viagem contida em `upcoming_trips`. <br>**2c.** Liste as propriedades na mensagem e inclua um valor padrão para o caso de o `departure_date` não estar definido. (Digamos que um `destination` seja necessário para que uma viagem seja criada, portanto, você não precisa definir um valor padrão para isso).<br>**2d.** Feche a tag `for` e, em seguida, feche a lógica condicional.
+2\. Especifique a mensagem a ser enviada se `upcoming_trips` tiver conteúdo:<br><br>**2a.** Dirija-se ao usuário e inclua um valor padrão, caso não tenha o nome dele. <br>**2b.** Use uma tag `for` para especificar que você extrairá propriedades (ou informações) para cada viagem contida em `upcoming_trips`. <br>**2c.** Liste as propriedades na mensagem e inclua um valor padrão para o caso de o `departure_date` não estar definido. (Digamos que um `destination` seja necessário para que uma viagem seja criada, portanto, você não precisa definir um valor padrão para isso).<br>**2d.** Feche a tag `for` e, em seguida, feche a lógica condicional.
 
 {% raw %}
 ```liquid
@@ -191,7 +191,7 @@ Hello {{${first_name} | default: 'fellow traveler'}},
 ```
 {% endraw %}
 
-{% details Código Liquid completo %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% if {{custom_attribute.${upcoming_trips}}} == blank %}

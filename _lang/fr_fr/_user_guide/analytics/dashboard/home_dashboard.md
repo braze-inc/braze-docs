@@ -17,33 +17,37 @@ La page d **'accueil** comporte deux sections principales :
 - [Reprendre là où vous vous êtes arrêté](#pick-up-where-you-left-off)
 - [Aperçu des performances](#peformance-overview)
 
-![Tableau de bord de Braze.]({% image_buster /assets/img_archive/home_dashboard.png %})
+!Tableau de bord de Braze.]({% image_buster /assets/img_archive/home_dashboard.png %})
 
 ## Reprendre là où vous vous êtes arrêté
 
 Vous pouvez reprendre là où vous vous étiez arrêté dans le tableau de bord de Braze, avec un accès direct aux fichiers que vous avez récemment modifiés ou créés. Cette section apparaît en haut de la page d **'accueil** du tableau de bord de Braze.
 
-Vous pouvez revenir sur des campagnes, des canvas et des segments récemment modifiés ou créés. Chaque carte est associée à des tags qui indiquent le type de contenu (campagne, Canvas, segment) et le statut (actif, brouillon, archivé, arrêté).
+Vous pouvez revenir sur des campagnes, des canevas et des segments récemment modifiés ou créés. Chaque carte est associée à des tags qui indiquent le type de contenu (campagne, Canvas, segment) et le statut (actif, brouillon, archivé, arrêté).
 
-![Un projet de canvas, un segment actif et un projet de campagne dans la section "Reprenez là où vous vous êtes arrêté".]({% image_buster /assets/img/pick_up_where_you_left_off.png %})
+{% alert note %}
+La section **Reprendre là où vous vous étiez arrêté** apparaît après que vous avez modifié ou créé une campagne, un Canvas ou un segment.
+{% endalert %}
+
+Une ébauche de canvas, un segment actif et une ébauche de campagne dans la section "Reprenez là où vous vous êtes arrêté".]({% image_buster /assets/img/pick_up_where_you_left_off.png %})
 
 ## Aperçu des performances
 
 Par défaut, la section **Aperçu des performances** affiche les données des 30 derniers jours pour toutes les apps et tous les sites. Vos indicateurs sont tous calculés sur la base de la plage de dates sélectionnée.
 
-![Champs de date et d'application sur le tableau de bord de l'accueil.]({% image_buster /assets/img_archive/home_dashboard_select_date.png %}){: style="max-width:60%;"}
+\![Champs de plage de dates et d'applications sur le tableau de bord de l'accueil.]({% image_buster /assets/img_archive/home_dashboard_select_date.png %}){: style="max-width:60%;"}
 
 Les pourcentages sont calculés sur la base de la plage de dates actuelle par rapport à la plage de dates précédente, à l'exception des *Utilisateurs actifs mensuels* (MAU), qui utilisent le dernier jour de la période précédente au lieu d'une plage. 
 
-Par exemple, si vous définissez votre plage de dates sur les **7 derniers jours** et que votre *nombre d'utilisateurs actifs quotidiens* affiche un pourcentage d'augmentation de 1,8 %, cela signifie que vous avez eu 1,8 % d'utilisateurs actifs quotidiens en plus cette semaine par rapport à la semaine dernière.
+Par exemple, si vous définissez votre plage de dates sur **les 7 derniers jours** et que votre nombre d'utilisateurs *actifs quotidiens* affiche un pourcentage d'augmentation de 1,8 %, cela signifie que vous avez eu 1,8 % d'utilisateurs actifs quotidiens en plus cette semaine par rapport à la semaine dernière.
 
-![]({% image_buster /assets/img_archive/home_dashboard_metric_tile.png %}){: style="max-width:60%;"}
+\![]({% image_buster /assets/img_archive/home_dashboard_metric_tile.png %}){: style="max-width:60%;"}
 
-### Afficher la répartition
+### Répartition des spectacles
 
 Sélectionnez **Afficher la décomposition** pour chaque ligne des statistiques de l'aperçu des performances afin d'afficher la valeur de chaque statistique par jour pour la plage de dates spécifiée.
 
-![Développez]({% image_buster /assets/img_archive/home_dashboard_breakdown.png %})
+\![Développer]({% image_buster /assets/img_archive/home_dashboard_breakdown.png %})
 
 ## Statistiques disponibles
 
@@ -57,28 +61,28 @@ Un faible ratio MAU/utilisateur peut indiquer que vous devez diversifier vos can
 
 ### Sessions à vie
 
-Le nombre *de sessions à vie* est le nombre total de sessions enregistrées par Braze depuis son intégration. En termes simples, une session correspond à chaque fois qu'un utilisateur utilise l'application ou visite votre site web. Pour une définition plus précise de la manière dont les sessions sont définies par plate-forme, consultez la page correspondante du site web de l'UE.
+Le nombre *de sessions à vie* est le nombre total de sessions enregistrées par Braze depuis son intégration. En termes simples, une session correspond à chaque fois qu'un utilisateur utilise l'application ou visite votre site web. Pour une définition plus précise de la manière dont les sessions sont définies par plate-forme, consultez la page correspondante du site web de la Commission européenne.
 [iOS]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=swift), [Android et FireOS]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=android), ou les articles des développeurs sur le suivi des sessions [Web]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=web).
 
-### Utilisateur actif par mois
+### Utilisateurs actifs par mois
 
-Les *utilisateurs actifs mensuels* (MAU) correspondent au nombre d'utilisateurs ayant enregistré une session dans votre appli ou votre site au cours des 30 derniers jours. Les MAU sont calculés chaque soir pour une fenêtre glissante de 30 jours. Le MAU vous permet de bien comprendre l'état de santé d'une appli ou d'un site sur une longue période, car il lisse les incohérences entre les jours où l'intensité d'utilisation varie.
+Les *utilisateurs actifs mensuels* (MAU) correspondent au nombre d'utilisateurs ayant enregistré une session dans votre appli ou votre site au cours des 30 derniers jours. Les MAU sont calculées chaque nuit avec une fenêtre de 30 jours glissants. Le MAU vous permet de bien comprendre l'état de santé d'une appli ou d'un site sur une longue période, car il lisse les incohérences entre les jours où l'intensité d'utilisation varie.
 
 Le pourcentage figurant à côté du nombre de MAU indique l'évolution des MAU pour cette période par rapport à la période précédente.
 
 $$\text{Change in MAU} = \frac{\text{MAU of last date in range} - \text{MAU of day before start date}}{\text{MAU of day before start date}}$$
 
 {% alert note %}
-Les utilisateurs anonymes sont également pris en compte dans votre MAU. Pour les appareils mobiles, les utilisateurs anonymes dépendent de l’appareil. Pour les utilisateurs Web, les utilisateurs anonymes dépendent du cache du navigateur.
+Les utilisateurs anonymes sont également pris en compte dans votre MAU. Pour les appareils mobiles, les utilisateurs anonymes dépendent de l'appareil. Pour les utilisateurs web, les utilisateurs anonymes dépendent du cache du navigateur.
 {% endalert %}
 
-### Utilisateurs actifs quotidiens
+### Utilisateurs actifs par jour
 
 Les *utilisateurs actifs quotidiens* (DAU) affichent le nombre d'utilisateurs uniques qui enregistrent au moins une session dans votre appli ou votre site un jour donné. Le DAU peut être une statistique utile pour examiner la variabilité quotidienne de l'utilisation de votre appli ou de votre site et adapter vos campagnes d'envoi de messages pour qu'elles soient aussi efficaces que possible. Par exemple, l'utilisation de votre application peut connaître un pic appréciable le week-end - cela vous informerait que vous pourriez atteindre plus d'utilisateurs avec des messages in-app ces jours-là par rapport aux jours de la semaine.
 
 ### Nouveaux utilisateurs
 
-*Nouveaux utilisateurs* vous indique combien d'utilisateurs n'ayant jamais enregistré de session ont commencé à utiliser votre application ou votre site. Ce nombre est un total de nouveaux utilisateurs sur la période donnée. Cette statistique peut être très utile pour suivre l’efficacité de vos efforts marketing.
+*Nouveaux utilisateurs* vous indique combien d'utilisateurs n'ayant jamais enregistré de session ont commencé à utiliser votre application ou votre site. Ce chiffre représente le total des nouveaux utilisateurs au cours de la période donnée. Cette statistique peut s'avérer très utile pour évaluer l'efficacité de vos efforts publicitaires.
 
 {% alert note %}
 Lors de l'intégration initiale de Braze, tous les utilisateurs auront l'air de nouveaux utilisateurs car Braze n'a jamais enregistré de session pour eux auparavant.
@@ -86,7 +90,7 @@ Lors de l'intégration initiale de Braze, tous les utilisateurs auront l'air de 
 
 ### Adhérence
 
-La valeur d' *adhérence* est un rapport entre le nombre d'utilisateurs quotidiens et le nombre de MAU pour une période donnée. Par essence, l'adhérence mesure le pourcentage de vos utilisateurs actifs mensuels qui reviennent quotidiennement.
+La valeur d' *adhérence* est un rapport entre le nombre d'utilisateurs quotidiens et le nombre de MAU pour une période donnée. Par essence, l'adhérence mesure le pourcentage de vos MAU qui reviennent quotidiennement.
 
 Par exemple, si la plage de dates est définie sur 30 jours, un ratio de 50 % indique qu'en moyenne un utilisateur actif utilise l'appli ou le site web pendant 15 jours sur 30 ou qu'environ la moitié de vos utilisateurs actifs reviennent quotidiennement. L'adhérence est un indicateur de succès important, car la plupart des utilisateurs n'abandonnent pas une application parce qu'ils la détestent, mais plutôt parce qu'elle ne fait pas partie de leur routine quotidienne. Par conséquent, vous pouvez utiliser l'adhérence comme indicateur pour mesurer le degré d'engagement de vos utilisateurs.
 
@@ -106,5 +110,5 @@ La valeur MAU est calculée chaque nuit et n'est mise à jour que le lendemain.
 
 ### Sessions quotidiennes par MAU
 
-Le nombre de *sessions quotidiennes par UAM* est le rapport entre le *nombre de sessions quotidiennes* et le nombre d'UAM pour un jour donné. Cette statistique vous indique le nombre de sessions par jour que vous pouvez espérer enregistrer par MAU. Une fois regroupés et calculés, ces chiffres peuvent vous donner une idée de la fréquence relative à laquelle vos utilisateurs utilisent votre application ou votre site. En d'autres termes, si le *nombre de sessions quotidiennes par MAU* est en moyenne de 0,5, vous pouvez vous attendre à ce que chaque utilisateur actif par mois enregistre une session tous les 2 jours environ.  
+Le nombre de *sessions quotidiennes par UAM* est le rapport entre le *nombre de sessions quotidiennes* et le nombre d'UAM pour un jour donné. Cette statistique vous indique le nombre de sessions par jour que vous pouvez espérer enregistrer par MAU. Une fois agrégés et calculés, ces chiffres peuvent vous donner une idée de la fréquence relative à laquelle vos utilisateurs utilisent votre application ou votre site. En d'autres termes, si le nombre de *sessions quotidiennes par UAM* est en moyenne de 0,5, vous pouvez vous attendre à ce que chaque UAM enregistre une session tous les deux jours environ.  
 

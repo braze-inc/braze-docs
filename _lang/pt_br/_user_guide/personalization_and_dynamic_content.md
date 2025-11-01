@@ -6,17 +6,17 @@ layout: dev_guide
 
 guide_top_header: "Mensagens personalizadas"
 guide_top_text: "O Braze permite que você personalize suas campanhas inserindo informações específicas do usuário, como o nome do usuário, nas mensagens."
-description: "Essa landing page aborda a personalização e o conteúdo dinâmico na Braze, incluindo Liquid, conteúdo conectado, deep links, blocos de conteúdo, códigos promocionais e muito mais."
+description: "Essa landing page aborda a personalização e o conteúdo dinâmico no Braze, incluindo Liquid, Connected Content, deep linking, Content Blocks, códigos promocionais e muito mais."
 
 guide_featured_title: "Tópicos"
 guide_featured_list:
-- name: Liquid
+- name: Líquido
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/
   image: /assets/img/braze_icons/beaker-02.svg
 - name: Conteúdo conectado
   link: /docs/user_guide/personalization_and_dynamic_content/connected_content/
   image: /assets/img/braze_icons/server-01.svg
-- name: "Deep linking para conteúdo no aplicativo"
+- name: "Deep Linking para conteúdo no aplicativo"
   link: /docs/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/
   image: /assets/img/braze_icons/phone-02.svg
 - name: Blocos de conteúdo
@@ -25,14 +25,14 @@ guide_featured_list:
 - name: "Pares de chave-valor"
   link: /docs/user_guide/personalization_and_dynamic_content/key_value_pairs/
   image: /assets/img/braze_icons/key-01.svg
-- name: Códigos de promoção
+- name: Códigos promocionais
   link: /docs/user_guide/personalization_and_dynamic_content/promotion_codes/
   image: /assets/img/braze_icons/tag-01.svg
-- name: Propriedades de entrada persistente do canvas
+- name: Propriedades de entrada persistente do Canvas
   link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/canvas_persistent_entry_properties/
   image: /assets/img/braze_icons/dataflow-03.svg
 - name: Catálogos
-  link: /docs/user_guide/personalization_and_dynamic_content/catalogs/
+  link: /docs/user_guide/data/activation/catalogs/
   image: /assets/img/braze_icons/list.svg
 ---
 

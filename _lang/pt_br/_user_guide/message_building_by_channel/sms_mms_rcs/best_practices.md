@@ -1,6 +1,6 @@
 ---
 nav_title: "Práticas recomendadas"
-article_title: "Melhores Práticas para SMS, MMS e RCS" 
+article_title: "Práticas recomendadas para SMS, MMS e RCS" 
 page_order: 15
 description: "Este artigo de referência aborda as práticas recomendadas para SMS/MMS."
 alias: /sms_mms_rcs_best_practices/
@@ -12,37 +12,37 @@ channel:
   
 ---
 
-# Melhores práticas para SMS, MMS e RCS 
+# Práticas recomendadas para SMS, MMS e RCS 
 
-> Saiba mais sobre as melhores práticas para SMS, MMS e RCS com a Braze, incluindo nossas recomendações para monitoramento de opt-out e aumento de tráfego.
+> Saiba mais sobre as práticas recomendadas para SMS, MMS e RCS com o Braze, incluindo nossas recomendações para monitoramento de desativação e bombeamento de tráfego.
 
-## Recomendações de monitoramento de aceitação
+## Recomendações de monitoramento de recusa
 
-O cumprimento das solicitações dos destinatários para aceitação de comunicações é exigido por lei. O não cumprimento das solicitações dos destinatários de SMS para aceitação do canal pode incorrer em penalidades, inclusive multas, e pode levar a ações judiciais. A Braze possui recursos para ativar a gestão robusta de opt-in e opt-out de SMS e MMS, além de mecanismos para ajudar a garantir que os pedidos sejam processados corretamente.
+A lei exige o cumprimento das solicitações dos destinatários para que optem por não receber comunicações. O não cumprimento das solicitações dos destinatários de SMS para desativar o canal pode incorrer em penalidades, inclusive multas, e pode levar a ações judiciais. O Braze possui recursos para permitir um gerenciamento robusto de opt-in e out de SMS e MMS, além de mecanismos para ajudar a garantir que as solicitações sejam processadas corretamente.
 
-De acordo com seus contratos de inscrição conosco, nossos clientes são os únicos responsáveis pela conformidade com a lei aplicável no uso de nossos serviços. Dessa forma, recomendamos enfaticamente que os clientes prestem muita atenção à configuração correta de suas definições de SMS e que testem essas configurações minuciosamente, tomem medidas para monitorar a conformidade com a aceitação e ajam prontamente caso identifiquem casos de não conformidade com pedidos de aceitação.
+De acordo com seus contratos de assinatura conosco, nossos clientes são os únicos responsáveis pela conformidade com a legislação aplicável no uso de nossos serviços. Dessa forma, recomendamos enfaticamente que os clientes prestem muita atenção à configuração correta de suas definições de SMS e que testem essas configurações minuciosamente, tomem medidas para monitorar a conformidade com o opt-out e ajam prontamente caso identifiquem instâncias de não conformidade com solicitações de opt-out.
 
-Ao configurar SMS e MMS na Braze para gerenciar opt-ins e opt-outs, consulte a seguinte lista de recursos:
-* [Grupos de inscrições de SMS]({{site.baseurl}}/sms_rcs_subscription_groups/): Grupos de inscrições e métodos e status de aceitação/exclusão.
-* [APIs REST de grupos de inscrições]({{site.baseurl}}/api/endpoints/subscription_groups): Como processar aceitações e desistências recebidas de uma fonte que não seja uma resposta direta a uma mensagem.
+Ao configurar SMS e MMS no Braze para gerenciar opt-ins e opt-outs, consulte a lista de recursos a seguir:
+* [Grupos de assinatura de SMS]({{site.baseurl}}/sms_rcs_subscription_groups/): Grupos de assinatura e métodos e status de opt-in/out.
+* [APIs REST do grupo de assinaturas]({{site.baseurl}}/api/endpoints/subscription_groups): Como processar opt-ins e outs que eles recebem de uma fonte que não seja uma resposta direta a uma mensagem.
 * [Processamento de palavras-chave]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/): Explicações sobre como o Braze aborda o processamento e o gerenciamento de palavras-chave.
-* [Aceitação dupla de SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/double_opt_in/): Exige que os usuários confirmem explicitamente sua intenção de aceitação antes de poderem receber mensagens SMS. A aceitação dupla de SMS é um requisito para alguns países, portanto, a Braze recomenda configurá-la.
-* [Envio de mensagens SMS]({{site.baseurl}}/sending_phone_numbers/): Fundamentos do envio de SMS no Braze, incluindo a importância dos grupos de inscrições, os requisitos para segmentos de SMS e corpos de mensagens e muito mais.
+* [SMS double opt-in]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/double_opt_in/): Exige que os usuários confirmem explicitamente sua intenção de adesão antes de poderem receber mensagens SMS. O double opt-in de SMS é um requisito para alguns países, portanto, a Braze recomenda a configuração desse recurso.
+* [Envio de mensagens SMS]({{site.baseurl}}/sending_phone_numbers/): Fundamentos do envio de SMS no Braze, incluindo a importância dos grupos de assinatura, os requisitos para segmentos de SMS e corpos de mensagens e muito mais.
 
 ### Considerações
 
-Onde SMS e MMS foram configurados em várias instâncias, e devido a uma má configuração, um opt-out de campanha ou Canvas é enviado para o espaço de trabalho errado.
+Quando o SMS e o MMS foram configurados em várias instâncias e, devido a uma configuração incorreta, uma campanha ou os cancelamentos do Canvas são enviados para o espaço de trabalho errado.
 
-* A Braze possui um sistema de monitoramento para identificar tais instâncias. Se esse comportamento for sinalizado, a Braze repontuará as aceitações para a instância correta e preencherá novamente todas as aceitações que ocorreram durante o período.
-* Recomendamos enfaticamente que os clientes testem as aceitações para cada grupo de inscrições que tenham na Braze. Identificar esse problema antes de lançar uma mensagem é melhor do que fazer a mitigação depois que o problema foi identificado.
+* A Braze possui um sistema de monitoramento para identificar tais casos. Se esse comportamento for sinalizado, o Braze repontuará os opt-outs para a instância correta e preencherá novamente todos os opt-outs que ocorreram durante o período.
+* Recomendamos enfaticamente que os clientes testem os opt-outs para cada grupo de assinatura que tiverem no Braze. Identificar esse problema antes de lançar uma mensagem é melhor do que mitigá-lo depois que o problema foi identificado.
 
-O Braze gerencia as inscrições de SMS/MMS tanto no nível do perfil do usuário (`user_id`) quanto no nível do número de telefone (`channel_id`). Quando um número de telefone é aceito ou excluído, a atualização se aplica a todos os perfis que compartilham esse número. No caso de um usuário final ter feito a aceitação com um determinado número de telefone, mas depois mudar de número de telefone, o novo número de telefone herdará o status do grupo de inscrições do usuário. Assim, se um usuário final tiver optado pela aceitação, mas depois entrar novamente no app ou no site com um novo número de telefone, ele não receberá mensagens indesejadas.
+O Braze gerencia as assinaturas de SMS/MMS tanto no nível do perfil do usuário (`user_id`) quanto no nível do número de telefone (`channel_id`). Quando um número de telefone é ativado ou desativado, a atualização se aplica a todos os perfis que compartilham esse número. No caso de um usuário final que optou por um determinado número de telefone, mas depois mudou de número de telefone, o novo número de telefone herdará o status do grupo de assinatura do usuário. Assim, se um usuário final tiver optado por não participar, mas depois entrar novamente no aplicativo ou site com um novo número de telefone, ele não receberá mensagens indesejadas.
 
 ## Recomendações de bombeamento de tráfego
 
 ### O que é bombeamento de tráfego?
 
-O traffic pumping é uma forma de fraude que ocorre quando um malfeitor usa um formulário on-line para disparar o envio de mensagens SMS em alto volume (por exemplo, mensagens de aceitação ou senhas de uso único). O malfeitor configura um número de telefone de tarifa premium para o qual essas mensagens são enviadas e reivindica uma participação na receita da operadora de celular com a qual o número de tarifa premium foi configurado, gerando assim uma receita ilícita.
+O bombeamento de tráfego é uma forma de fraude que ocorre quando um agente mal-intencionado usa um formulário on-line para acionar o envio de mensagens SMS em alto volume (por exemplo, mensagens de opt-in ou senhas de uso único). O malfeitor configura um número de telefone de tarifa premium para o qual essas mensagens são enviadas e reivindica uma participação na receita da operadora de celular com a qual o número de tarifa premium foi configurado, gerando assim uma receita ilícita.
 
 ### Como identificar o bombeamento de tráfego
 
@@ -54,5 +54,5 @@ O traffic pumping é uma forma de fraude que ocorre quando um malfeitor usa um f
 
 ### Impacto do bombeamento de tráfego
 
-Os clientes são responsáveis por monitorar o tráfego que estão enviando e receberão uma fatura por todos os SMS enviados por meio de sua conta. Entre o Braze e o Cliente, o Cliente é a parte que está em melhor posição para detectar e evitar o bombeamento de tráfego.
+Os clientes são responsáveis por monitorar o tráfego que estão enviando e receberão uma fatura por todos os SMS enviados por meio de sua conta. Entre a Braze e o Cliente, o Cliente é a parte que está em melhor posição para detectar e evitar o bombeamento de tráfego.
 
