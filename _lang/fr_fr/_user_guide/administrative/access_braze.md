@@ -1,15 +1,15 @@
 ---
-nav_title: Accès à Braze
-article_title: Accès à Braze
+nav_title: Accès Braze
+article_title: Accès Braze
 page_order: 0
 layout: dev_guide
-guide_top_header: "Accès à Braze"
+guide_top_header: "Accès Braze"
 guide_top_text: "Vous trouverez ici des articles qui vous aideront à accéder à votre compte ou à votre tableau de bord Braze, comme la première connexion à votre compte, la double vérification de vos endpoints, la réinitialisation des mots de passe, et plus encore."
 
 page_type: reference
-description: "Cette page d’accueil contient des articles sur l’accès à votre compte ou tableau de bord de Braze. Vous trouverez ici des ressources sur l’authentification unique (SSO), la connexion, les instances Braze, les endpoints du SDK, la réinitialisation du mot de passe etc."
+description: "Cette page d'atterrissage contient des articles sur l'accès à votre compte ou tableau de bord Braze. Vous y trouverez des ressources sur le SSO, l'identifiant, les instances Braze, les endpoints SDK, la réinitialisation des mots de passe, et plus encore."
 
-guide_featured_title: "Section Articles"
+guide_featured_title: "Articles de section"
 guide_featured_list:
 - name: Naviguer dans Braze
   link: /docs/user_guide/administrative/access_braze/navigation/
@@ -35,7 +35,7 @@ guide_featured_list:
 - name: Résolution des problèmes
   link: /docs/user_guide/administrative/access_braze/troubleshooting/
   image: /assets/img/braze_icons/annotation-question.svg
-- name: Assistance Braze
+- name: Soutien de Braze
   link: /docs/user_guide/administrative/access_braze/support/
   image: /assets/img/braze_icons/mail-01.svg
 ---

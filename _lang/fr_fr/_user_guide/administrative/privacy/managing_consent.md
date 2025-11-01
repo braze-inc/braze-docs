@@ -3,14 +3,14 @@ nav_title: Gestion du consentement
 article_title: Gestion du consentement
 page_order: 10
 page_type: reference
-description: "Cet article de référence fournit des conseils sur la manière de gérer le consentement avec Braze."
+description: "Cet article de référence fournit des conseils sur la manière de gérer le consentement à l'aide de Braze."
 ---
 
 # Gestion du consentement
 
 > Cet article de référence fournit des conseils sur la manière de gérer le consentement de vos utilisateurs à l'aide de Braze.
 
-Braze ne peut pas fournir de conseils spécifiques sur l'interprétation des lois et des règlements, ni offrir des orientations sur la gestion des consentements, car cela dépendra de l'interprétation de la loi par votre équipe juridique. Cependant, nous proposons une gamme d'outils pour la gestion des abonnements et des consentements.
+Braze ne peut pas fournir de conseils spécifiques sur l'interprétation des lois et des règlements, ni offrir des orientations sur la gestion des consentements, car cela dépendra de l'interprétation de la loi par votre équipe juridique. Cependant, nous offrons une gamme d'outils pour soutenir la gestion des abonnements et des consentements.
 
 Votre approche doit dépendre de la rigueur exigée par votre équipe juridique sur la base de son interprétation de la loi. Voici quelques options à envisager, de la plus stricte à la moins stricte :
 
