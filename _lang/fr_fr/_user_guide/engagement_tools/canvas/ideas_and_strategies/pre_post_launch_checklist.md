@@ -23,7 +23,7 @@ Si vous saisissez les utilisateurs en fonction de leur fuseau horaire local à l
 Vous verrez une alerte si vous n'avez pas planifié un tampon suffisant. Une solution rapide consiste à ajuster l'heure d'envoi pour que les utilisateurs puissent rester dans le segmentage ciblé pendant 24 heures complètes.
 {% endalert %}
 
-![Une toile planifiée pour entrer en une seule fois chez les utilisateurs à partir de 10 heures le 30 avril 2025, à leur heure locale.]({% image_buster /assets/img_archive/canvas_checklist1.png %}){: style="max-width:75%;"}
+!Une toile planifiée pour entrer en une seule fois chez les utilisateurs à partir de 10 heures le 30 avril 2025, à leur heure locale.]({% image_buster /assets/img_archive/canvas_checklist1.png %}){: style="max-width:75%;"}
 
 ### Pensez à utiliser des expressions régulières pour les filtres d'audience
 

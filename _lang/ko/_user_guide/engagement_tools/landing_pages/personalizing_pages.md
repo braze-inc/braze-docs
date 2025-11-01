@@ -17,7 +17,7 @@ page_order: 4
 
 드래그 앤 드롭 편집기에서는 편집기와 오른쪽 패널의 페이지 또는 블록 설정 모두에서 Liquid 개인화를 삽입할 수 있습니다. Liquid 구현에 대한 지침은 전용 [Liquid 설명서를]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#using-liquid-1) 참조하세요.
 
-![Liquid 개인화 기능이 추가된 랜딩 페이지 편집기.]({% image_buster /assets/img/landing_pages/lp_liquid_.png %})
+Liquid 개인화 기능이 추가된 랜딩 페이지 편집기.]({% image_buster /assets/img/landing_pages/lp_liquid_.png %})
 
 ## 미리 보기 및 테스트
 

@@ -1,9 +1,9 @@
 ---
-nav_title: "Automatiser l'inscription Zoom"
-article_title: "Automatiser l'inscription Zoom"
+nav_title: "Automatiser l'enregistrement de Zoom"
+article_title: "Automatiser l'enregistrement de Zoom"
 page_order: 1
 page_type: tutorial
-description: "Cet article décrit comment automatiser l’enregistrement de participants Zoom dans vous campagnes par e-mail, notification push ou message in-app."
+description: "Cet article décrit comment automatiser l'inscription des participants à Zoom dans vos campagnes d'e-mails, de push et de messages in-app."
 channel: 
   - email
   - push
@@ -11,88 +11,52 @@ channel:
 
 ---
 
-# Automatiser l’enregistrement Zoom
+# Automatiser l'enregistrement de Zoom
 
-> Les clients de Braze hébergent fréquemment des webinaires depuis ces dernières années. Lorsque vous hébergez un webinaire Zoom, les utilisateurs doivent saisir leurs informations sur une page d’accueil Zoom pour s’inscrire. 
+> Depuis quelques années, les clients de Braze organisent de plus en plus souvent des webinaires. Lors de l'organisation d'un webinaire Zoom, les utilisateurs doivent saisir leurs informations sur une page de renvoi Zoom pour s'inscrire. 
 
-Le flux utilisateur conseillé est décrit ci-dessous :
-1. Planifiez un webinaire sur Zoom et générez un `webinarId`.
-2. Utilisez Braze pour promouvoir les webinaires Zoom à l’aide des canaux e-mail, de notification push et de message in-app. 
-3. Ajoutez un bouton d’appel à l’action dans ces communications ajoutant automatiquement les utilisateurs au webinaire.
+Un flux d'utilisateurs recommandé est présenté ci-dessous :
+1. Planifiez un webinaire dans Zoom et générez un `webinarId`.
+2. Utilisez Braze pour promouvoir les webinaires Zoom via des canaux d'e-mail, de push et de messages in-app. 
+3. Incluez dans ces communications un bouton d'appel à l'action qui ajoute automatiquement les utilisateurs au webinaire.
 
-Cela peut être accompli en utilisant les [API Zoom](https://marketplace.zoom.us/docs/api-reference/zoom-api/methods/#operation/meetingRegistrantCreate) pour ajouter automatiquement un utilisateur à un webinaire via un clic sur un bouton dans un e-mail, une notification push ou un message intégré à l'application. Utilisez l’endpoint suivant, en remplaçant l'ID du webinaire dans la requête d’API. 
+Pour ce faire, vous pouvez utiliser les [API de Zoom](https://marketplace.zoom.us/docs/api-reference/zoom-api/methods/#operation/meetingRegistrantCreate) pour ajouter automatiquement un utilisateur à un webinaire grâce à un clic sur un bouton dans un e-mail, un push ou un message in-app. Utilisez l'endpoint suivant, en remplaçant l'ID du webinaire dans la requête API. 
 
-POST : `/meetings/{webinarId}/registrants`
+POST : `/meetings/{webinarId}/registrants`
 
-Pour plus d'informations, consultez l’endpoint [Ajouter un participant au webinaire](https://developers.zoom.us/docs/api/rest/reference/zoom-api/methods/#operation/webinarRegistrantCreate) de Zoom.<br><br>
+Pour plus d'informations, reportez-vous au [point de terminaison](https://developers.zoom.us/docs/api/rest/reference/zoom-api/methods/#operation/webinarRegistrantCreate) Zoom [Ajouter une personne inscrite à un webinaire](https://developers.zoom.us/docs/api/rest/reference/zoom-api/methods/#operation/webinarRegistrantCreate).<br><br>
 
 {% tabs %}
-{% tab E-mail %}
+{% tab Email %}
 
-Créez une campagne par e-mail avec un bouton d’appel à l’action dans le corps du message. Lorsqu'un utilisateur clique sur le bouton, redirigez-le vers la page de destination du webinaire (avec les paramètres appropriés inclus dans le lien de redirection). 
+Créez une campagne e-mail avec un bouton d'appel à l'action dans le corps du message. Lorsqu'un utilisateur clique sur le bouton, redirigez-le vers la page d'atterrissage du webinaire (avec les paramètres appropriés inclus dans le lien de redirection). 
 
-En utilisant les paramètres de l’URL pour transmettre les données utilisateur, construisez un appel API pour qu’il se déclenche lors du chargement de la page pour ajouter un utilisateur au webinaire.
+En utilisant les paramètres de l'URL pour transmettre les données de l'utilisateur, créez un appel API à lancer au chargement de la page pour ajouter l'utilisateur au webinaire.
 
-![Message e-mail avec modélisation Liquid pour inclure le prénom, le nom de famille, l'adresse e-mail et la ville.]({% image_buster /assets/img/zoom/zoom1.png %})
+\![Message e-mail avec Liquid templating utilisé pour inclure le prénom, le nom, l'adresse e-mail et la ville.]({% image_buster /assets/img/zoom/zoom1.png %})
 
-Les utilisateurs sont maintenant enregistrés pour le webinaire avec les détails existant déjà dans leur profil Braze.
-
-{% endtab %}
-{% tab Notification push %}
-
-1. Créer une campagne de notification push<br><br>
-
-	Définir le comportement lors du clic pour le bouton pour le lier à la page d’accueil du webinaire.<br>
-
-	![Lien vers le webinaire en cas de clic sur un bouton.]({% image_buster /assets/img/zoom/zoom2.png %})<br><br>
-
-	Un exemple simple de page d’accueil pour les utilisateurs s’inscrivant à l’aide d’un clic de bouton d’une notification push. Communiquez à votre utilisateur la raison pour laquelle il s’est inscrit et confirmez leur enregistrement :<br>
-
-	![]({% image_buster /assets/img/zoom/zoom4.png %})<br><br>
-
-
-2. Créez une campagne webhook déclenchée par le message in-app ou le clic de bouton.<br><br>
- 	Inscrivez l’utilisateur au webinaire en utilisant les données utilisateur existantes sur leur profil Braze.<br>
-
-	![Une campagne basée sur l'action qui sera envoyée aux utilisateurs ayant cliqué sur un bouton pour une campagne spécifique.]({% image_buster /assets/img/zoom/zoom6.png %})<br><br>
-
-	Exemple d’appel webhook à l’endpoint Zoom.<br>
-	{% raw %}
-	```json
-	POST https://api.zoom.com/meetings/{webinarId}/registrants
-
-	{
-		"email": "{{${email_addresses}}}",
-		"first_name": "{{${first_name}}}",
-		"last_name": "{{${last_name}}}",
-		"city": "{{${city}}}",
-		"country": "{{${country}}}",
-		"phone": "{{${phone_number}}}"
-	}
-	```
-	{% endraw %}
-
-3. Les utilisateurs sont maintenant enregistrés pour le webinaire avec les détails existant déjà dans leur profil Braze.
+Les utilisateurs sont maintenant inscrits au webinaire avec les détails qui existent déjà sur leur profil Braze.
 
 {% endtab %}
-{% tab Message dans l'application %}
+{% tab Push %}
 
-1. Créer une campagne de communication in-app<br><br>
+1. Créer une campagne de push<br><br>
 
 	Définissez le comportement du bouton au clic pour qu'il renvoie à la page d'atterrissage du webinaire.<br>
 
-	![Lien vers le webinaire en cas de clic sur un bouton.]({% image_buster /assets/img/zoom/zoom3.png %})<br><br>
+	Lien vers le webinaire lorsqu'un bouton est cliqué.]({% image_buster /assets/img/zoom/zoom2.png %})<br><br>
 
-	Un exemple simple de page d’accueil pour les utilisateurs s’inscrivant à l’aide d’un clic de bouton d’un message in-app. Communiquez à votre utilisateur la raison pour laquelle il s’est inscrit et confirmez leur enregistrement :<br>
+	Un exemple simple de page d'atterrissage pour les utilisateurs qui s'inscrivent via un clic de bouton à partir d'un push. Indiquez à l'utilisateur ce pour quoi il s'est inscrit et confirmez son inscription :<br>
 
-	![]({% image_buster /assets/img/zoom/zoom4.png %})<br><br>
+	\![]({% image_buster /assets/img/zoom/zoom4.png %})<br><br>
 
-2. Créez une campagne webhook déclenchée par le message in-app ou le clic de bouton.<br><br>
-	Inscrivez l’utilisateur au webinaire en utilisant les données utilisateur existantes sur leur profil Braze.<br>
 
-	![Une campagne basée sur l'action qui sera envoyée aux utilisateurs ayant cliqué sur un bouton pour une campagne spécifique.]({% image_buster /assets/img/zoom/zoom5.png %})<br><br>
+2. Créez une campagne webhook déclenchée par le message in-app ou le clic sur le bouton.<br><br>
+ 	À l'aide des données existantes sur le profil utilisateur de Braze, inscrivez l'utilisateur au webinaire.<br>
 
-	Exemple d’appel webhook à l’endpoint Zoom.<br>
+	!Une campagne basée sur une action qui sera envoyée aux utilisateurs qui ont cliqué sur un bouton d'une campagne spécifique.]({% image_buster /assets/img/zoom/zoom6.png %})<br><br>
+
+	Exemple d'appel webhook vers l'endpoint Zoom.<br>
 	{% raw %}
 	```json
 	POST https://api.zoom.com/meetings/{webinarId}/registrants
@@ -107,7 +71,43 @@ Les utilisateurs sont maintenant enregistrés pour le webinaire avec les détail
 	}
 	```
 	{% endraw %}
-3. Les utilisateurs sont maintenant enregistrés pour le webinaire avec les détails existant déjà dans leur profil Braze.
+
+3. Les utilisateurs sont maintenant inscrits au webinaire avec les détails qui existent déjà sur leur profil Braze.
+
+{% endtab %}
+{% tab In-app message %}
+
+1. Créer une campagne de messages in-app<br><br>
+
+	Définissez le comportement du bouton au clic pour qu'il renvoie à la page d'atterrissage du webinaire.<br>
+
+	Lien vers le webinaire lorsqu'un bouton est cliqué.]({% image_buster /assets/img/zoom/zoom3.png %})<br><br>
+
+	Un exemple simple de page d'atterrissage pour les utilisateurs qui s'inscrivent via un clic sur un bouton à partir d'un message in-app. Indiquez à l'utilisateur ce pour quoi il s'est inscrit et confirmez son inscription :<br>
+
+	\![]({% image_buster /assets/img/zoom/zoom4.png %})<br><br>
+
+2. Créez une campagne webhook déclenchée par le message in-app ou le clic sur le bouton.<br><br>
+	À l'aide des données existantes sur le profil utilisateur de Braze, inscrivez l'utilisateur au webinaire.<br>
+
+	Une campagne basée sur une action qui sera envoyée aux utilisateurs qui ont cliqué sur un bouton d'une campagne spécifique.]({% image_buster /assets/img/zoom/zoom5.png %})<br><br>
+
+	Exemple d'appel webhook vers l'endpoint Zoom.<br>
+	{% raw %}
+	```json
+	POST https://api.zoom.com/meetings/{webinarId}/registrants
+
+	{
+		"email": "{{${email_addresses}}}",
+		"first_name": "{{${first_name}}}",
+		"last_name": "{{${last_name}}}",
+		"city": "{{${city}}}",
+		"country": "{{${country}}}",
+		"phone": "{{${phone_number}}}"
+	}
+	```
+	{% endraw %}
+3. Les utilisateurs sont maintenant inscrits au webinaire avec les détails qui existent déjà sur leur profil Braze.
 
 {% endtab %}
 {% endtabs %}
