@@ -1,12 +1,12 @@
 ---
-nav_title: Bibliothèque de scénarios d’utilisation de Liquid
-article_title: Bibliothèque de scénarios d’utilisation de Liquid
+nav_title: "Bibliothèque de cas d'utilisation liquides"
+article_title: "Bibliothèque de cas d'utilisation liquides"
 page_order: 10
 search_rank: 2
 excerpt_separator: ""
 page_type: glossary
 layout: liquid_use_case_glossary
-description: "Cette page d’accueil est une présentation des scénarios d’utilisation de Liquid organisés par catégorie, tels que les anniversaires, l’utilisation d’applications, les comptes à rebours, etc."
+description: "Cette page d'atterrissage accueille des exemples de cas d'utilisation de Liquid organisés par catégorie, tels que les anniversaires, l'utilisation des apps, les comptes à rebours, et plus encore."
 
 ---
 
@@ -23,9 +23,9 @@ Anniversaires et fêtes
 - [Envoyez des campagnes aux utilisateurs au cours de leur mois d'anniversaire](#birthday-month)
 - [Évitez d'envoyer des messages les jours fériés.](#holiday-avoid)
 
-### Personnaliser les messages en fonction de l’année anniversaire d’un utilisateur {#anniversary-year}
+### Personnalisation des messages en fonction de l'année d'anniversaire de l'utilisateur {#anniversary-year}
 
-Ce scénario d’utilisation montre comment calculer l’anniversaire d’utilisation d’une application d’un utilisateur en fonction de sa date d’inscription initiale et afficher différents messages en fonction du nombre d’années célébrées.
+Ce cas d'utilisation montre comment calculer l'anniversaire de l'application d'un utilisateur en fonction de sa date d'inscription initiale et afficher différents messages en fonction du nombre d'années fêtées.
 
 {% raw %}
 ```liquid
@@ -60,15 +60,15 @@ Exactly three years ago today we met for the first time!
 ```
 {% endraw %}
 
-**Explication :** Ici, nous utilisons la variable réservée `now` pour introduire la date et l'heure actuelles au format [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601). Les filtres `%B` (mois comme « mai ») et `%d` (jour comme « 18 ») formatent le mois et le jour actuels. Nous utilisons ensuite les mêmes filtres de date et de temps sur les valeurs `signup_date` pour nous assurer de comparer les deux valeurs à l’aide des balises conditionnelles et de la logique.
+**Explication :** Ici, nous utilisons la variable réservée `now` pour introduire la date et l'heure actuelles au format [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601). Les filtres `%B` (mois comme "mai") et `%d` (jour comme "18") formatent le mois et le jour actuels. Nous utilisons ensuite les mêmes filtres de date et d'heure sur les valeurs de `signup_date` afin de pouvoir comparer les deux valeurs à l'aide d'étiquettes et de logiques conditionnelles.
 
-Ensuite, nous renouvelons trois autres instructions variables pour obtenir `%B` et `%d` pour la `signup_date`, mais ajoutons également `%Y` (année comme « 2021 »). Ceci compose la date et de l’heure de la `signup_date` sous forme d’année. Connaître le jour et le mois nous permet de vérifier si l’anniversaire de l’utilisateur est aujourd’hui, et en sachant que l’année nous dit combien d’années ont passées, ce qui nous permet de savoir pour combien d’années le féliciter !
+Ensuite, nous répétons trois autres déclarations de variables pour obtenir `%B` et `%d` pour `signup_date`, mais nous ajoutons également `%Y` (année comme "2021"). La date et l'heure du site `signup_date` sont ainsi transformées en une simple année. Connaître le jour et le mois nous permet de vérifier si l'anniversaire de l'utilisateur a lieu aujourd'hui, et connaître l'année nous permet de savoir combien d'années se sont écoulées, ce qui nous permet de savoir combien d'années il faut féliciter l'utilisateur !
 
-{% alert tip %} Vous pouvez créer autant de conditions que d’années au cours desquelles vous avez collecté des dates d’inscription. {% endalert %}  
+{% alert tip %} Vous pouvez créer autant de conditions que d'années pendant lesquelles vous avez collecté des dates d'inscription. {% endalert %}  
 
-### Personnaliser les messages en fonction de la semaine d’anniversaire d’un utilisateur {#birthday-week}
+### Personnalisation des messages en fonction de la semaine d'anniversaire de l'utilisateur {#birthday-week}
 
-Ce scénario d’utilisation présente comment trouver l’anniversaire d’un utilisateur, le comparer à la date actuelle, puis afficher des messages d’anniversaire spéciaux avant, pendant et après la semaine d’anniversaire.
+Ce cas d'utilisation montre comment trouver la date d'anniversaire d'un utilisateur, la comparer à la date du jour, puis afficher des envois de messages spéciaux avant, pendant et après la semaine d'anniversaire.
 
 {% raw %}
 ```liquid
@@ -89,13 +89,13 @@ No birthday for you!
 ```
 {% endraw %}
 
-**Explication :** Comme dans le cas de l' [année d'anniversaire](#anniversary-year), nous prenons ici la variable réservée `now` et utilisons le filtre `%W` (semaine telle que la semaine 12 sur les 52 de l'année) pour obtenir le numéro de la semaine de l'année dans laquelle tombe l'anniversaire de l'utilisateur. Si la semaine d’anniversaire de l’utilisateur correspond à la semaine en cours, nous lui envoyons un message de félicitations ! 
+**Explication :** Comme dans le cas de l' [année anniversaire](#anniversary-year), nous prenons ici la variable réservée `now` et utilisons le filtre `%W` (semaine telle que la semaine 12 sur les 52 de l'année) pour obtenir le numéro de la semaine de l'année dans laquelle tombe l'anniversaire de l'utilisateur. Si la semaine d'anniversaire de l'utilisateur correspond à la semaine en cours, nous lui envoyons un message de félicitations ! 
 
-Nous incluons également des instructions pour `last_week` et `next_week` pour personnaliser votre envoi de messages.
+Nous incluons également des déclarations pour `last_week` et `next_week` afin de personnaliser davantage vos messages.
 
-### Envoyer des campagnes aux utilisateurs pendant leur mois d’anniversaire {#birthday-month}
+### Envoyez des campagnes aux utilisateurs au cours de leur mois d'anniversaire {#birthday-month}
 
-Ce scénario d’utilisation indique comment calculer le mois d’anniversaire d’un utilisateur, vérifier si son anniversaire tombe pendant le mois en cours et, si tel est le cas, envoyer un message spécial.
+Ce cas d'utilisation montre comment calculer le mois d'anniversaire d'un utilisateur, vérifier si son anniversaire tombe dans le mois en cours et, si c'est le cas, envoyer un message spécial.
 
 {% raw %}
 ```liquid
@@ -109,11 +109,11 @@ Message body
 ```
 {% endraw %}
 
-**Explication :** Similaire au cas d'utilisation de la [semaine d'anniversaire](#birthday-week), sauf qu'ici nous utilisons le filtre `%B` (mois comme "mai") pour calculer quels utilisateurs ont un anniversaire ce mois-ci. Une application potentielle pourrait traiter les utilisateurs ayant un anniversaire dans un e-mail mensuel.
+**Explication :** Similaire au cas d'utilisation de la [semaine d'anniversaire](#birthday-week), sauf qu'ici nous utilisons le filtre `%B` (mois comme "mai") pour calculer quels utilisateurs ont un anniversaire ce mois-ci. Une application potentielle pourrait être de s'adresser aux utilisateurs qui fêtent leur anniversaire dans un e-mail mensuel.
 
-### Évitez d’envoyer des messages lors des fêtes principales {#holiday-avoid}
+### Évitez d'envoyer des messages les jours fériés. {#holiday-avoid}
 
-Ce scénario d’utilisation indique comment envoyer des messages pendant la période des fêtes tout en évitant les jours fériés principaux, lorsque l’engagement est susceptible d’être faible.
+Ce cas d'utilisation montre comment envoyer des messages pendant la période des fêtes tout en évitant les jours de grandes vacances, où l'engagement risque d'être faible.
 
 {% raw %}
 ```liquid
@@ -126,27 +126,27 @@ Message if today isn't one of the provided holidays.
 ```
 {% endraw %}
 
-**Explication :** Ici, nous assignons le terme `today` à la variable réservée `now` (la date et l'heure actuelles), en utilisant les filtres `%Y` (année comme "2023"), `%m` (mois comme "12") et `%d` (jour comme "25") pour formater la date. Nous exécutons ensuite notre instruction conditionnelle pour dire que si la variable `today` correspond aux jours fériés de votre choix, le message sera abandonné. 
+**Explication :** Ici, nous assignons le terme `today` à la variable réservée `now` (la date et l'heure actuelles), en utilisant les filtres `%Y` (année comme "2023"), `%m` (mois comme "12") et `%d` (jour comme "25") pour formater la date. Nous exécutons ensuite notre instruction conditionnelle pour dire que si la variable `today` correspond aux jours de vacances de votre choix, le message sera interrompu. 
 
-L’exemple présenté correspond à la veille de Noël, le jour de Noël et le lendemain de Noël.
+L'exemple fourni utilise la veille de Noël, le jour de Noël et le lendemain de Noël.
 
 {% endapi %}
 
 {% api %}
 
-## Utilisation de l’application
+## Utilisation de l'application
 
 {% apitags %}
-Utilisation de l’application
+Utilisation de l'application
 {% endapitags %}
 
 - [Envoyez des messages dans la langue de l'utilisateur s'il a ouvert une session.](#app-session-language)
 - [Personnaliser les messages en fonction de la date à laquelle l'utilisateur a ouvert l'application pour la dernière fois.](#app-last-opened)
 - [Afficher un message différent si la dernière utilisation de l'application remonte à moins de trois jours.](#app-last-opened-less-than)
 
-### Envoyer des messages dans la langue d’un utilisateur s’il s’est connecté à une session {#app-session-language}
+### Envoyez des messages dans la langue de l'utilisateur s'il n'a pas ouvert de session. {#app-session-language}
 
-Ce scénario d’utilisation vérifie si un utilisateur s’est connecté à une session et, si ce n’est pas le cas, inclut une logique d’affichage d’un message reposant sur la langue collecté manuellement via un attribut personnalisé, le cas échéant. S’il n’y a pas d’informations de langue liées au compte, il affiche le message dans la langue par défaut. Si un utilisateur s’est connecté à une session, il extrait toutes les informations de langue liées à l’utilisateur et affiche le message approprié. 
+Ce cas d'utilisation vérifie si un utilisateur a ouvert une session et, si ce n'est pas le cas, inclut une logique d'affichage d'un message basé sur la langue collectée manuellement via un attribut personnalisé, le cas échéant. Si aucune information linguistique n'est liée à leur compte, le message s'affichera dans la langue par défaut. Si un utilisateur a ouvert une session, il récupère toutes les informations linguistiques liées à l'utilisateur et affiche le message approprié. 
 
 {% raw %}
 ```liquid
@@ -171,18 +171,18 @@ Has language - Default language
 {% endraw %}
 
 {% raw %}
-**Explication :** Ici, nous utilisons deux instructions `if` regroupées, imbriquées. La première instruction `if` vérifie si l’utilisateur a démarré une session en vérifiant si `last_used_app_date` est `nil`. En effet, `{{${language}}}` est automatiquement collecté par le SDK lorsqu’un utilisateur se connecte à une session. Si l’utilisateur ne s’est pas connecté à une session, nous n’avons pas encore sa langue, donc cette vérification s’effectue si des attributs personnalisés liés à la langue ont été enregistrés et, sur la base de ces informations, affiche un message dans cette langue, si possible.
+**Explication :** Ici, nous utilisons deux déclarations `if` groupées, imbriquées l'une dans l'autre. La première instruction `if` vérifie si l'utilisateur a démarré une session en vérifiant si l'adresse `last_used_app_date` est `nil`. En effet, `{{${language}}}` est collecté automatiquement par le SDK lorsqu'un utilisateur ouvre une session. Si l'utilisateur n'a pas ouvert de session, nous ne connaissons pas encore sa langue. Cette fonction vérifie donc si des attributs personnalisés liés à la langue ont été enregistrés et, sur la base de ces informations, affiche un message dans cette langue, si possible.
 {% endraw %}
 
-Le second énoncé `if` vérifie l’attribut de base (par défaut), car l’utilisateur n’a pas `nil` pour la `last_used_app_date`, ce qui signifie qu’il s’est connecté à une session et que nous avons sa langue.
+La deuxième instruction `if` vérifie simplement l'attribut standard (par défaut) parce que l'utilisateur n'a pas `nil` pour `last_used_app_date`, ce qui signifie qu'il a ouvert une session et que nous connaissons sa langue.
 
 {% alert note %}
 [`Nil`](https://shopify.github.io/liquid/basics/types/#nil) est une variable réservée qui est renvoyée lorsque le code Liquid ne donne aucun résultat. `Nil` est traité comme `false` dans un bloc `if`.
 {% endalert %}
 
-### Personnaliser les messages en fonction du moment où un utilisateur a ouvert l’application {#app-last-opened}
+### Personnaliser les messages en fonction de la date à laquelle l'utilisateur a ouvert l'application pour la dernière fois. {#app-last-opened}
 
-Ce scénario d’utilisation calcule la dernière ouverture de l’application par l’utilisateur et affiche un message personnalisé différent selon la durée.
+Ce cas d'utilisation calcule la dernière fois qu'un utilisateur a ouvert votre appli et affichera un message personnalisé différent en fonction de la durée.
 
 {% raw %}
 ```liquid
@@ -197,9 +197,9 @@ It's been a while; here are some of our latest updates.
 ```
 {% endraw %}
 
-### Afficher un message différent si un utilisateur a utilisé l’application il y a moins de trois jours {#app-last-opened-less-than}
+### Afficher un message différent si la dernière utilisation de l'application remonte à moins de trois jours. {#app-last-opened-less-than}
 
-Ce cas d'utilisation calcule depuis combien de temps un utilisateur a utilisé votre application et, en fonction de la durée, affiche un message personnalisé différent.
+Ce cas d'utilisation calcule depuis combien de temps un utilisateur a utilisé votre application et, en fonction de la durée, affichera un message personnalisé différent.
 
 {% raw %}
 ```liquid
@@ -218,27 +218,27 @@ Message for a less active user
 
 {% api %}
 
-## Comptes à rebours
+## Compte à rebours
 
 {% apitags %}
-Comptes à rebours
+Compte à rebours
 {% endapitags %}
 
 - [Ajouter X jours à la date du jour](#countdown-add-x-days)
 - [Calculer un compte à rebours à partir d'un point donné dans le temps](#countdown-difference-days)
-- [Créer un compte à rebours pour les dates et priorités d’expédition spécifiques](#countdown-shipping-options)
+- [Créez un compte à rebours pour des dates d'expédition spécifiques et des priorités](#countdown-shipping-options)
 - [Créer un compte à rebours en jours](#countdown-days)
-- [Créer un compte à rebours de jours, d'heures et de minutes](#countdown-dynamic)
+- [Créez un compte à rebours de jours, d'heures et de minutes.](#countdown-dynamic)
 - [Indiquer le nombre de jours restants jusqu'à une certaine date](#countdown-future-date)
-- [Afficher le nombre de jours restants avant l'arrivée d'un attribut personnalisé de la date](#countdown-custom-date-attribute)
-- [Afficher le temps restant et interrompre le message s’il n’y a que X temps restant](#countdown-abort-window)
-- [Message in-app à envoyer X jours avant la fin de l’abonnement de l’utilisateur](#countdown-membership-expiry)
+- [Affichez le nombre de jours restants avant l'arrivée d'un attribut personnalisé de la date.](#countdown-custom-date-attribute)
+- [Affichez le temps restant et interrompez le message s'il ne reste que X minutes.](#countdown-abort-window)
+- [Message in-app à envoyer X jours avant la fin de l'adhésion de l'utilisateur final.](#countdown-membership-expiry)
 - [Personnaliser les messages in-app en fonction de la date et de la langue de l'utilisateur.](#countdown-personalize-language)
-- [Modèle de date dans 30 jours, formaté en tant que mois et jour](#countdown-template-date)
+- [Modèle de date dans 30 jours, formatée en mois et jour](#countdown-template-date)
 
-### Ajouter X jours à partir de date d’aujourd’hui {#countdown-add-x-days}
+### Ajouter x jours à la date du jour {#countdown-add-x-days}
 
-Ce scénario d’utilisation ajoute un nombre spécifique de jours à la date actuelle à référencer et ajouter dans les messages. Par exemple, vous pouvez envoyer en milieu de semaine un message indiquant les événements prévus dans la région pour le week-end.
+Ce cas d'utilisation permet d'ajouter un nombre spécifique de jours à la date du jour afin d'y faire référence et d'y ajouter des messages. Par exemple, vous pouvez envoyer en milieu de semaine un message indiquant les événements prévus dans la région pour le week-end.
 
 {% raw %}
 ```liquid
@@ -246,15 +246,15 @@ Here are the movies we're showing on {{ "now" | date:'%s' | plus:259200 | date:"
 ```
 {% endraw %}
 
-La `plus` valeur sera toujours en secondes, donc nous finissons par le filtre `%F` pour traduire les secondes en jours.
+La valeur `plus` sera toujours exprimée en secondes, nous terminons donc par le filtre `%F` pour convertir les secondes en jours.
 
 {% alert important %}
-Vous pouvez inclure une URL ou un lien profond vers une liste d’événements dans votre message afin d’envoyer l’utilisateur une liste d’actions qui se produisent à l’avenir.
+Vous pouvez inclure dans votre message une URL ou un lien profond vers une liste d'événements afin d'envoyer l'utilisateur vers une liste d'actions qui se dérouleront dans le futur.
 {% endalert %}
 
-### Calculer un compte à rebours à partir d’un point dans le temps {#countdown-difference-days}
+### Calculer un compte à rebours à partir d'un point donné dans le temps {#countdown-difference-days}
 
-Ce scénario d’utilisation calcule la différence de jours entre une date spécifique et la date actuelle. Cette différence peut servir à afficher un compte à rebours à vos utilisateurs.
+Ce cas d'utilisation calcule la différence en jours entre une date spécifique et la date actuelle. Cette différence peut être utilisée pour afficher un compte à rebours à vos utilisateurs.
 
 {% raw %}
 ```liquid
@@ -266,9 +266,9 @@ you have {{ difference_days }} days left!
 ```
 {% endraw %}
 
-### Créer un compte à rebours pour les dates et priorités d’expédition spécifiques {#countdown-shipping-options}
+### Créez un compte à rebours pour des dates d'expédition spécifiques et des priorités {#countdown-shipping-options}
 
-Ce scénario d’utilisation capture différentes options d’expédition, calcule la durée nécessaire à la réception et affiche des messages encourageant les utilisateurs à acheter à temps pour recevoir leur colis à une date donnée.
+Ce cas d'utilisation saisit différentes options d'expédition, calcule le délai de réception et affiche des messages encourageant les utilisateurs à acheter à temps pour recevoir leur colis avant une certaine date.
 
 {% raw %}
 ```liquid
@@ -310,7 +310,7 @@ This is the last day for overnight shipping so your order gets here on time for 
 
 ### Créer un compte à rebours en jours {#countdown-days}
 
-Ce scénario d’utilisation calcule le temps restant entre un événement spécifique et la date actuelle et affiche le nombre de jours restants jusqu’à l’événement.
+Ce cas d'utilisation calcule le temps restant entre un événement spécifique et la date actuelle et affiche le nombre de jours restants avant l'événement.
 
 {% raw %}
 ```liquid
@@ -323,14 +323,14 @@ Your order will arrive in {{ difference_days }} days!
 {% endraw %}
 
 {% alert important %}
-Vous aurez besoin d’un champ d’attribut personnalisé avec une valeur `date`.
+Vous aurez besoin d'un champ d'attribut personnalisé avec une valeur `date`.
 {% endalert %}
 
-### Créer un compte à rebours de jours à heures à minutes {#countdown-dynamic}
+### Créez un compte à rebours de jours, d'heures et de minutes. {#countdown-dynamic}
 
-Ce scénario d’utilisation calcule le temps restant entre un événement spécifique et la date actuelle. En fonction du temps restant jusqu’à l’événement, il modifie la valeur de temps (jours, heures, minutes) pour afficher différents messages personnalisés.
+Ce cas d'utilisation calcule le temps restant entre un événement spécifique et la date actuelle. En fonction du temps restant avant l'événement, il modifiera la valeur du temps (jours, heures, minutes) pour afficher différents envois personnalisés.
 
-Par exemple, s’il y a reste deux jours jusqu’à ce que la commande d’un client arrive, vous pourriez dire : « Votre commande arrivera dans 2 jours ». En revanche, s'il reste moins d'un jour, vous pourriez indiquer plutôt « Votre commande arrivera dans 17 heures ».
+Par exemple, s'il reste deux jours avant que la commande d'un client n'arrive, vous pouvez dire : "Votre commande arrivera dans deux jours." En revanche, s'il reste moins d'un jour, vous pouvez dire "Votre commande arrivera dans 17 heures".
 
 {% raw %}
 ```liquid
@@ -351,12 +351,12 @@ You have {{difference_days}} days left till your order arrives!
 {% endraw %}
 
 {% alert important %}
-Vous aurez besoin d’un champ d’attribut personnalisé avec une valeur `date`. Vous devrez également définir des seuils de temps lorsque vous voulez afficher le temps en jours, heures et minutes.
+Vous aurez besoin d'un champ d'attribut personnalisé avec une valeur `date`. Vous devrez également définir des seuils temporels pour l'affichage de l'heure en jours, heures et minutes.
 {% endalert %}
 
-### Affiche le nombre de jours restant avant une date donnée {#countdown-future-date}
+### Indiquer le nombre de jours restants jusqu'à une certaine date {#countdown-future-date}
 
-Ce scénario d’utilisation calcule le temps restant entre un événement spécifique et la date actuelle et affiche un message indiquant le nombre de jours restants jusqu’à l’événement.
+Ce cas d'utilisation calcule la différence entre la date actuelle et la date de l'événement futur et affiche un message indiquant le nombre de jours avant l'événement.
 
 {% raw %}
 ```liquid
@@ -368,11 +368,11 @@ There are {{difference_days}} days until your birthday!
 ```
 {% endraw %}
 
-### Afficher le nombre de jours restants jusqu’à ce qu’un attribut de date personnalisée arrive {#countdown-custom-date-attribute}
+### Affichez le nombre de jours restants avant l'arrivée d'un attribut personnalisé de la date. {#countdown-custom-date-attribute}
 
-Ce scénario d’utilisation calcule la différence en jours entre les dates actuelles et futures et affiche un message si la différence correspond à un nombre défini.
+Ce cas d'utilisation calcule la différence en jours entre la date actuelle et la date future et affiche un message si la différence correspond à un nombre défini.
 
-Dans cet exemple, un utilisateur recevra un message dans les deux jours suivant l’attribut de date personnalisée. Sinon, le message ne sera pas envoyé.
+Dans cet exemple, un utilisateur recevra un message dans les deux jours suivant l'attribut personnalisé de la date. Dans le cas contraire, le message ne sera pas envoyé.
 
 {% raw %}
 ```liquid
@@ -388,11 +388,11 @@ Your surgery is in 2 days on {{custom_attribute.${surgery_date}}}
 ```
 {% endraw %}
 
-### Afficher le temps restant et interrompre le message s’il n’y a que X temps restant {#countdown-abort-window}
+### Afficher le temps restant et interrompre le message s'il ne reste que x minutes. {#countdown-abort-window}
 
-Ce cas d’utilisation calcule la durée jusqu’à une certaine date et, en fonction de la longueur (saut d’envoi de messages si la date est trop courte), affiche différents messages personnalisés. 
+Ce cas d'utilisation calculera le temps restant jusqu'à une certaine date et, en fonction de la durée (en sautant les messages si la date est trop proche), affichera différents messages personnalisés. 
 
-Par exemple, « Vous avez x heures restantes pour acheter pour acheter votre billet pour Londres », mais le message n’est pas envoyé dans les deux heures qui précèdent l’heure de vol pour Londres.
+Par exemple, "Il vous reste x heures pour acheter votre billet pour Londres", mais n'envoyez pas le message si vous êtes à moins de deux heures du vol pour Londres.
 
 {% raw %}
 ```liquid
@@ -409,11 +409,11 @@ Still traveling to {{event_properties.${toStation}}} in more than 24 hours? Book
 ```
 {% endraw %}
 
-{% alert important %} Vous aurez besoin de créer une propriété d’événement personnalisé. {% endalert %}
+{% alert important %} Vous aurez besoin d'une propriété d'événement personnalisée. {% endalert %}
 
-### Messages in-app pour envoyer X jours avant la fin de l’abonnement de l’utilisateur {#countdown-membership-expiry}
+### Message in-app à envoyer x jours avant la fin de l'adhésion des utilisateurs finaux. {#countdown-membership-expiry}
 
-Ce scénario d’utilisation capture la date d’expiration de votre abonnement, calcule la durée jusqu’à ce qu’elle expire et affiche différents messages en fonction du délai d’expiration de votre abonnement.
+Ce cas d'utilisation capture la date d'expiration de votre adhésion, calcule le temps restant avant l'expiration et affiche différents messages en fonction du temps restant avant l'expiration de votre adhésion.
 
 {% raw %}
 ```liquid
@@ -437,15 +437,15 @@ You have few days left in your trial. Make sure to upgrade!
 ```
 {% endraw %}
 
-### Personnaliser les messages dans l’appli en fonction de la date et de la langue de l’utilisateur {#countdown-personalize-language}
+### Personnaliser les messages in-app en fonction de la date et de la langue des utilisateurs. {#countdown-personalize-language}
 
-Ce scénario d’utilisation calcule un compte à rebours jusqu’à un événement et, en fonction du paramètre de langue d’un utilisateur, affiche le compte à rebours dans sa langue.
+Ce cas d'utilisation calcule un compte à rebours jusqu'à un événement et, en fonction des paramètres linguistiques de l'utilisateur, affiche le compte à rebours dans sa langue.
 
-Par exemple, vous pouvez envoyer une série de messages incitatifs aux utilisateurs une fois par mois pour leur indiquer combien de temps une offre reste valide avec quatre messages in-app :
+Par exemple, vous pouvez envoyer une série de messages de montée en gamme aux utilisateurs une fois par mois pour leur indiquer combien de temps une offre est encore valable avec quatre messages in-app :
 
-- Initial
-- 2 jours restants
-- 1 jour restant
+- Initiale
+- 2 jours restants
+- 1 jour restant
 - Dernier jour
 
 {% raw %}
@@ -518,12 +518,12 @@ Hi, the offer is only valid today.
 {% endraw %}
 
 {% alert important %}
-Vous devrez attribuer une valeur `date` et inclure la logique d’abandon si la date donnée tombe en dehors de la plage de dates. Pour les calculs de jour exacts, la date de fin attribuée doit inclure 23:59:59.
+Vous devrez assigner une valeur `date` et inclure une logique d'abandon si la date donnée se situe en dehors de la plage de dates. Pour les calculs de jours exacts, la date de fin attribuée doit inclure 23:59:59.
 {% endalert %}
 
-### Modèle de date 30 jours à partir d’aujourd’hui, formaté en tant que mois et jour {#countdown-template-date}
+### Modèle de date dans 30 jours, formatée en mois et jour {#countdown-template-date}
 
-Ce scénario d’utilisation affiche la date 30 jours à partir de maintenant à utiliser dans les envois de messages.
+Ce cas d'utilisation affichera la date dans 30 jours pour l'envoi de messages.
 
 {% raw %}
 ```liquid
@@ -542,13 +542,13 @@ Ce scénario d’utilisation affiche la date 30 jours à partir de maintenant �
 Attribut personnalisé
 {% endapitags %}
 
-- [Personnaliser un message en fonction d'attributs personnalisés](#attribute-matching)
-- [Soustraire deux attributs personnalisés pour afficher la différence sous la forme d'une valeur monétaire](#attribute-monetary-difference)
-- [Insérer le prénom d'un utilisateur si son nom complet est stocké dans le champ first_name](#attribute-first-name)
+- [Personnalisation d'un message sur la base d'attributs personnalisés.](#attribute-matching)
+- [Soustrayez deux attributs personnalisés pour afficher la différence sous la forme d'une valeur monétaire.](#attribute-monetary-difference)
+- [Référence le prénom d'un utilisateur si son nom complet est stocké dans le champ first_name ](#attribute-first-name)
 
-### Personnaliser un message en fonction des attributs personnalisés correspondants {#attribute-matching}
+### Personnalisation d'un message sur la base d'attributs personnalisés. {#attribute-matching}
 
-Ce scénario d’utilisation vérifie si un utilisateur a des attributs personnalisés spécifiques et, le cas échéant, affiche différents messages personnalisés. 
+Ce cas d'utilisation vérifie si un utilisateur possède des attributs personnalisés spécifiques et, le cas échéant, affiche différents messages personnalisés. 
 
 {% raw %}
 ```liquid
@@ -566,9 +566,9 @@ There is a shovel here.
 ```
 {% endraw %}
 
-### Soustraire deux attributs personnalisés pour afficher la différence en valeur monétaire {#attribute-monetary-difference}
+### Soustrayez deux attributs personnalisés pour afficher la différence sous la forme d'une valeur monétaire. {#attribute-monetary-difference}
 
-Ce scénario d’utilisation capture deux attributs personnalisés monétaires, puis calcule et affiche la différence pour permettre aux utilisateurs de savoir combien de temps ils leur restent pour atteindre leur objectif.
+Ce cas d'utilisation capture deux attributs personnalisés monétaires, puis calcule et affiche la différence pour indiquer aux utilisateurs la distance qui les sépare de leur objectif.
 
 {% raw %}
 ```liquid
@@ -579,9 +579,9 @@ You only have ${{ difference | round: 0 | number_with_delimiter }} left to raise
 ```
 {% endraw %}
 
-### Insérer le prénom d'un utilisateur si son nom complet est stocké dans le champ first_name{#attribute-first-name}
+### Référence le prénom d'un utilisateur si son nom complet est stocké dans le champ first_name  {#attribute-first-name}
 
-Ce scénario d’utilisation capture le prénom d’un utilisateur (si le prénom et le nom sont stockés dans un champ unique), puis utilise ce prénom pour afficher un message de bienvenue.
+Ce cas d'utilisation capture le prénom d'un utilisateur (si le prénom et le nom de famille sont stockés dans un seul champ) et utilise ensuite ce prénom pour afficher un message de bienvenue.
 
 {% raw %}
 ```liquid
@@ -590,7 +590,7 @@ Ce scénario d’utilisation capture le prénom d’un utilisateur (si le préno
 Hi {{name[0]}}, here's your message!
 ```
 
-**Explication :** Le filtre `split` transforme la chaîne de caractères contenue dans `{{${first_name}}}` en tableau. En utilisant `{{name[0]}}`, nous ne faisons alors référence qu’au premier élément du tableau, qui est le prénom de l’utilisateur. 
+**Explication :** Le filtre `split` transforme la chaîne de caractères contenue dans `{{${first_name}}}` en un tableau. En utilisant `{{name[0]}}`, nous ne faisons référence qu'au premier élément du tableau, qui est le prénom de l'utilisateur. 
 
 {% endraw %}
 {% endapi %}
@@ -609,11 +609,11 @@ Hi {{name[0]}}, here's your message!
 - [Suivre le nombre de fois qu'un événement personnalisé s'est produit au cours du mois écoulé.](#track)
 
 
-### Annuler la notification push si un événement personnalisé arrive dans les deux heures qui suivent {#event-abort-push}
+### Abandonner la notification push si un événement personnalisé a lieu dans les deux heures qui suivent. {#event-abort-push}
 
-Ce cas d’utilisation calcule le temps restant jusqu’à un événement et, selon le temps restant, affiche différents messages personnalisés.
+Ce cas d'utilisation calcule le temps qui reste avant un événement et, en fonction du temps restant, affiche différents messages personnalisés.
 
-Par exemple, vous souhaiterez peut-être empêcher l'envoi d'une notification push si une propriété d'événement personnalisé passe dans les deux prochaines heures. Cet exemple utilise le scénario d’un panier abandonné pour un billet de train.
+Par exemple, vous pouvez vouloir empêcher l'envoi d'un message push si une propriété d'événement personnalisé est dépassée dans les deux prochaines heures. Cet exemple reprend le scénario d'un abandon de panier pour un billet de train.
 
 {% raw %}
 ```liquid
@@ -630,9 +630,9 @@ Still traveling to {{event_properties.${toStation}}} in more than 24 hours? Book
 ```
 {% endraw %}
 
-### Envoyer une campagne à chaque fois qu’un utilisateur effectue un événement personnalisé trois fois {#event-three-times}
+### Envoyez une campagne chaque fois qu'un utilisateur effectue un événement personnalisé à trois reprises. {#event-three-times}
 
-Ce scénario d’utilisation vérifie si un utilisateur a effectué un événement personnalisé trois fois et, si tel est le cas, affiche un message ou envoie une campagne. 
+Ce cas d'utilisation vérifie si un utilisateur a effectué un événement personnalisé trois fois et, le cas échéant, affiche un message ou envoie une campagne. 
 
 {% raw %}
 ```liquid
@@ -646,12 +646,12 @@ Did you forget something in your shopping cart?
 ```
 {% endraw %}
 
-{% alert important %} Vous devez disposer d’une propriété de l’événement du nombre d’événements personnalisés ou utiliser un webhook sur votre endpoint Braze. Ceci permet d’incrémenter un attribut personnalisé (`example_event_count`) à chaque fois que l’utilisateur exécute l’événement. Cet exemple utilise une cadence de trois (1, 4, 7, 10, etc.). Pour démarrer la cadence à partir de zéro (0, 3, 6, 9, etc.), enlevez `minus: 1`.
+{% alert important %} Vous devez disposer d'une propriété d'événement personnalisé ou utiliser un webhook vers votre endpoint Braze. Il s'agit d'incrémenter un attribut personnalisé (`example_event_count`) chaque fois que l'utilisateur effectue l'événement. Cet exemple utilise une cadence de trois (1, 4, 7, 10, etc.). Pour démarrer la cadence à partir de zéro (0, 3, 6, 9, etc.), enlevez `minus: 1`.
 {% endalert %}
 
-### Envoyer un message aux utilisateurs qui n’ont acheté qu’une seule catégorie {#event-purchased-one-category}
+### Envoyez un message aux utilisateurs qui n'ont acheté que dans une seule catégorie. {#event-purchased-one-category}
 
-Ce scénario d’utilisation capture une liste des catégories achetées par un utilisateur et, si une seule catégorie d’achat existe, elle affiche un message.
+Ce cas d'utilisation capture une liste des catégories dans lesquelles un utilisateur a effectué des achats, et s'il n'existe qu'une seule catégorie d'achat, il affichera un message.
 
 {% raw %}
 ```liquid
@@ -665,9 +665,9 @@ Ce scénario d’utilisation capture une liste des catégories achetées par un 
 ```
 {% endraw %}
 
-### Suivre combien de fois un événement personnalisé s’est produit au cours du dernier mois {#track}
+### Suivre le nombre de fois qu'un événement personnalisé s'est produit au cours du mois écoulé. {#track}
 
-Ce cas d’utilisation calcule le nombre de fois qu’un événement personnalisé a été enregistré entre le premier du mois en cours et le mois précédent. Vous pouvez alors exécuter un appel utilisateurs/suivi pour mettre à jour et enregistrer cette valeur en tant qu’attribut personnalisé. Prenez note du fait que cette campagne devra être exécutée pendant deux mois consécutifs avant que des données mensuelles puissent être utilisées.
+Ce cas d'utilisation calcule le nombre de fois qu'un événement personnalisé a été enregistré entre le 1er du mois en cours et le mois précédent. Vous pouvez ensuite lancer un appel à users/track pour mettre à jour cette valeur et la stocker en tant qu'attribut personnalisé. Notez que cette campagne doit se dérouler sur deux mois consécutifs pour que les données mensuelles puissent être utilisées.
 
 {% raw %}
 ```liquid
@@ -733,9 +733,9 @@ Langue
 - [Afficher une image en fonction de la langue de l'utilisateur](#language-image-display)
 - [Personnalisation des messages en fonction du jour de la semaine et de la langue de l'utilisateur](#language-personalize-message)
 
-### Afficher les noms des mois dans une langue différente {#language-display-month}
+### Afficher les noms de mois dans une autre langue {#language-display-month}
 
-Ce scénario d’utilisation affiche la date, le mois et l’année en cours, avec le mois dans une langue différente. L’exemple présenté est suédois.
+Ce cas d'utilisation permet d'afficher la date, le mois et l'année en cours, avec le mois dans une langue différente. L'exemple fourni utilise le suédois.
 
 {% raw %}
 ```liquid
@@ -771,9 +771,9 @@ Ce scénario d’utilisation affiche la date, le mois et l’année en cours, av
 ```
 {% endraw %}
 
-### Afficher une image selon la langue d’un utilisateur {#language-image-display}
+### Afficher une image en fonction de la langue de l'utilisateur {#language-image-display}
 
-Ce cas d’utilisation affichera une image selon la langue d’un utilisateur. Notez que ce cas d'utilisation n'a été testé qu'avec des images téléchargées dans la bibliothèque multimédia de Braze.
+Ce cas d'utilisation permet d'afficher une image en fonction de la langue de l'utilisateur. Notez que ce cas d'utilisation n'a été testé qu'avec des images téléchargées dans la bibliothèque multimédia de Braze.
 
 {% raw %}
 ```liquid
@@ -789,11 +789,11 @@ Fallback image URL
 ```
 {% endraw %}
 
-### Personnaliser l’envoi de messages en fonction du jour de la semaine et de la langue de l’utilisateur {#language-personalize-message}
+### Personnalisation des messages en fonction du jour de la semaine et de la langue de l'utilisateur {#language-personalize-message}
 
-Ce scénario d’utilisation vérifie le jour actuel de la semaine et, en fonction du jour, si la langue de l’utilisateur est définie sur l’une des options de langue fournies, il affiche un message spécifique dans sa langue.
+Ce cas d'utilisation vérifie le jour de la semaine en cours et, en fonction du jour, si la langue de l'utilisateur est réglée sur l'une des options linguistiques proposées, il affichera un message spécifique dans cette langue.
 
-L’exemple fourni s’arrête mardi mais peut être répété pour chaque jour de la semaine.
+L'exemple fourni s'arrête au mardi mais peut être répété pour chaque jour de la semaine.
 
 {% raw %}
 ```liquid
@@ -856,12 +856,12 @@ Divers
 - [Interroger les valeurs d'un tableau à partir d'un attribut personnalisé à combinaisons multiples](#misc-query-array-values)
 - [Formater une chaîne de caractères en numéro de téléphone](#phone-number)
 
-### Éviter d’envoyer des e-mails aux clients qui ont bloqué des e-mails marketing {#misc-avoid-blocked-emails}
+### Évitez d'envoyer des e-mails aux clients qui ont bloqué les e-mails marketing. {#misc-avoid-blocked-emails}
 
 Ce cas d'utilisation prend une liste d'utilisateurs bloqués enregistrée dans un bloc de contenu et vérifie que ces utilisateurs bloqués ne sont pas communiqués ou ciblés dans les prochaines campagnes ou Canvases.
 
 {% alert important %}
-Pour utiliser ce Liquid, enregistrez d’abord la liste des e-mails bloqués dans un bloc de contenu. La liste ne doit pas comporter d'espaces ou de caractères supplémentaires entre les adresses e-mail (par exemple, `test@braze.com,abc@braze.com`).
+Pour utiliser ce liquide, enregistrez d'abord la liste des e-mails bloqués dans un bloc de contenu. La liste ne doit pas comporter d'espaces ou de caractères supplémentaires entre les adresses e-mail (par exemple, `test@braze.com,abc@braze.com`).
 {% endalert %}
 
 {% raw %}
@@ -877,15 +877,15 @@ Your message here!
 ```
 {% endraw %}
 
-**Explication :** Nous vérifions ici si l’e-mail de votre destinataire potentiel est dans cette liste en faisant référence au bloc de contenu des e-mails bloqués. Si l’e-mail est trouvé, le message ne s’affichera pas.
+**Explication :** Nous vérifions ici si l'e-mail de votre destinataire potentiel figure dans cette liste en nous référant au bloc de contenu des e-mails bloqués. Si l'e-mail est trouvé, le message n'est pas envoyé.
 
 {% alert note %}
-Les blocs de contenu ont une limite de taille de 5 Mo.
+La taille des blocs de contenu est limitée à 5 Mo.
 {% endalert %}
 
-### Utiliser l’état d’abonnement d’un client pour personnaliser le contenu dans des messages {#misc-personalize-content}
+### Utilisez l'état de l'abonnement d'un client pour personnaliser le contenu des messages. {#misc-personalize-content}
 
-Ce cas d’utilisation utilise l’état d’abonnement d’un client pour envoyer du contenu personnalisé. Les clients abonnés à un groupe d’abonnement spécifique recevront un message exclusif pour les groupes d’abonnement par e-mail.
+Ce cas d'utilisation prend l'état de l'abonnement d'un client pour lui envoyer un contenu personnalisé. Les clients qui sont abonnés à un groupe d'abonnement spécifique recevront un message exclusif pour les groupes d'abonnement e-mail.
 
 {% raw %}
 ```liquid
@@ -896,9 +896,9 @@ This is an exclusive message for subscribed users!
 ```
 {% endraw %}
 
-### Capitaliser la première lettre de chaque mot dans une chaîne de caractères {#misc-capitalize-words-string}
+### Mettez une majuscule à la première lettre de chaque mot d'une chaîne de caractères {#misc-capitalize-words-string}
 
-Ce scénario d’utilisation prend une chaîne de mots, les répartit dans un tableau et capitalise la première lettre de chaque mot.
+Ce cas d'utilisation prend une chaîne de caractères, les divise en un tableau et met en majuscule la première lettre de chaque mot.
 
 {% raw %}
 ```liquid
@@ -909,11 +909,11 @@ Ce scénario d’utilisation prend une chaîne de mots, les répartit dans un ta
 ```
 {% endraw %}
 
-**Explication :** Ici, nous avons attribué une variable à notre attribut de chaîne de caractères choisi et utilisé le filtre `split` pour diviser la chaîne de caractères en un tableau. Nous avons ensuite utilisé la balise `for` pour attribuer la variable `words` à chacun des éléments de notre nouveau tableau, avant d’afficher ces mots avec le filtre `capitalize` et le filtre `append` pour ajouter des espaces entre chacun des termes.
+**Explication :** Ici, nous avons assigné une variable à l'attribut chaîne de caractères que nous avons choisi, et nous avons utilisé le filtre `split` pour diviser la chaîne en un tableau. Nous avons ensuite utilisé l'étiquette `for` pour affecter la variable `words` à chacun des éléments de notre tableau nouvellement créé, avant d'afficher ces mots avec le filtre `capitalize` et le filtre `append` pour ajouter des espaces entre chacun des termes.
 
-### Comparer la valeur d’attribut personnalisé à un tableau {#misc-compare-array}
+### Comparer la valeur d'un attribut personnalisé à un tableau {#misc-compare-array}
 
-Ce scénario d’utilisation répertorie les boutiques favorites, vérifie si l’une des boutiques préférées d’un utilisateur figure dans cette liste et, si tel est le cas, affiche une offre spéciale pour ces boutiques.
+Ce cas d'utilisation prend une liste de magasins préférés, vérifie si l'un des magasins préférés de l'utilisateur figure dans cette liste et, si c'est le cas, affiche une offre spéciale de ces magasins.
 
 {% raw %}
 ```liquid
@@ -931,11 +931,11 @@ Today's offer from {{store}}
 ```
 {% endraw %}
 
-{% alert important %} Cette séquence possède une balise `break` dans la déclaration conditionnelle principale. La boucle s’arrête alors lorsqu’une correspondance est trouvée. Si vous souhaitez afficher plusieurs ou toutes les correspondances, supprimez la balise `break`. {% endalert %}
+{% alert important %} Cette séquence comporte une étiquette `break` dans l'instruction conditionnelle principale. Ainsi, la boucle s'arrête lorsqu'une correspondance est trouvée. Si vous souhaitez afficher un grand nombre de tags ou tous les tags, supprimez l'étiquette `break`. {% endalert %}
 
-### Créer un rappel d’événement à venir {#misc-event-reminder}
+### Créer un rappel d'événement à venir {#misc-event-reminder}
 
-Ce scénario d’utilisation permet aux utilisateurs de configurer des rappels à venir en fonction des événements personnalisés. Le scénario exemple permet à un utilisateur de définir un rappel pour une date de renouvellement de police de 26 jours ou plus, dans lequel les rappels sont envoyés 26, 13, 7 ou 2 jours avant la date de renouvellement de la police.
+Ce cas d'utilisation permet aux utilisateurs de mettre en place des rappels à venir en fonction d'événements personnalisés. L'exemple de scénario permet à un utilisateur de programmer un rappel pour une date de renouvellement de police située à 26 jours ou plus, les rappels étant envoyés 26, 13, 7 ou 2 jours avant la date de renouvellement de la police.
 
 Dans ce cas d'utilisation, les éléments suivants doivent figurer dans le corps d'une [campagne webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/) ou d'une étape du canvas.
 
@@ -1077,17 +1077,17 @@ Users are scheduled to enter the journey on day 2.
 
 {% alert important %} 
 
-Vous aurez besoin d’un événement personnalisé `reminder_capture` et les propriétés d’événement personnalisé doivent inclure au moins :
+Vous aurez besoin d'un événement personnalisé `reminder_capture`, et les propriétés de l'événement personnalisé doivent inclure au moins :
 
-- `reminder-id` : Identificateur de l’événement personnalisé
-- `reminder_date` : Date d’envoi du rappel à l’utilisateur
-- `message_personalisation_X` : Toutes les propriétés nécessaires pour personnaliser le message au moment de l’envoi
+- `reminder-id`: Identifiant de l'événement personnalisé
+- `reminder_date`: Date soumise par l'utilisateur pour l'échéance de son rappel
+- `message_personalisation_X`: Toute propriété nécessaire à la personnalisation du message au moment de l'envoi
 
 {% endalert %}
 
-### Rechercher une chaîne de caractères dans un tableau {#misc-string-in-array}
+### Recherche d'une chaîne de caractères dans un tableau {#misc-string-in-array}
 
-Ce scénario d’utilisation vérifie si une matrice d’attributs personnalisée contient une chaîne de caractères spécifique et, si elle existe, affiche un message spécifique.
+Ce cas d'utilisation vérifie si un tableau d'attributs personnalisés contient une chaîne de caractères spécifique et, s'il existe, affiche un message spécifique.
 
 {% raw %}
 ```liquid
@@ -1097,11 +1097,11 @@ Link your Hertz account to use Hertz Fast Lane.
 ```
 {% endraw %}
 
-### Rechercher la plus grande valeur dans un tableau {#misc-largest-value}
+### Trouver la plus grande valeur d'un tableau {#misc-largest-value}
 
-Ce scénario d’utilisation calcule la valeur la plus élevée dans un tableau d’attributs personnalisée donné à utiliser dans l’envoi de messages à l’utilisateur.
+Ce cas d'utilisation calcule la valeur la plus élevée d'un tableau d'attributs personnalisés donné, à utiliser dans l'envoi de messages aux utilisateurs.
 
-Par exemple, vous pouvez présenter le score le plus élevé actuel ou l’enchère la plus élevée d’un article à un utilisateur.
+Par exemple, vous pourriez vouloir montrer à un utilisateur le meilleur score actuel ou l'enchère la plus élevée sur un objet.
 
 {% raw %}
 ```liquid
@@ -1117,13 +1117,13 @@ Par exemple, vous pouvez présenter le score le plus élevé actuel ou l’ench�
 {% endraw %}
 
 {% alert important %}
-Vous devez utiliser un attribut personnalisé qui a une valeur entière et fait partie d’un tableau (liste). {% endalert %}
+Vous devez utiliser un attribut personnalisé ayant une valeur entière et faisant partie d'un tableau (liste). {% endalert %}
 
-### Rechercher la plus petite valeur dans un tableau {#misc-smallest-value}
+### Trouver la plus petite valeur d'un tableau {#misc-smallest-value}
 
-Ce scénario d’utilisation calcule la valeur la plus faible dans un tableau d’attributs personnalisée donnée à utiliser dans l’envoi de messages de l’utilisateur.
+Ce cas d'utilisation calcule la valeur la plus basse d'un tableau d'attributs personnalisés donné pour l'utiliser dans l'envoi de messages aux utilisateurs.
 
-Par exemple, vous pouvez présenter le score le plus bas ou l’article le moins cher à un utilisateur.
+Par exemple, vous pouvez vouloir montrer à un utilisateur le score le plus bas ou l'article le moins cher.
 
 {% raw %}
 ```liquid
@@ -1138,11 +1138,11 @@ Par exemple, vous pouvez présenter le score le plus bas ou l’article le moins
 ```
 {% endraw %}
 
-{% alert important %} Vous devez utiliser un attribut personnalisé qui a une valeur entière et fait partie d’un tableau (liste). {% endalert %}
+{% alert important %} Vous devez utiliser un attribut personnalisé ayant une valeur entière et faisant partie d'un tableau (liste). {% endalert %}
 
-### Extraire la fin d’une chaîne de caractères{#misc-query-end-of-string}
+### Interroger la fin d'une chaîne de caractères {#misc-query-end-of-string}
 
-Ce scénario d’utilisation interroge la fin d’une chaîne de caractères à utiliser dans l’envoi de messages.
+Ce cas d'utilisation permet d'interroger la fin d'une chaîne de caractères pour l'envoi de messages.
 
 {% raw %}
 ```liquid
@@ -1158,9 +1158,9 @@ Your last marketplace search was on {{custom_attribute.${Last marketplace buyer 
 ```
 {% endraw %}
 
-### Interroger les valeurs d'un tableau à l'aide d’un attribut personnalisé avec plusieurs combinaisons {#misc-query-array-values}
+### Interroger les valeurs d'un tableau à partir d'un attribut personnalisé à combinaisons multiples {#misc-query-array-values}
 
-Ce scénario d’utilisation prend une liste des spectacles qui ne seront bientôt plus à l’affiche, vérifie si l’un des spectacles favoris d’un utilisateur figure dans cette liste et, si tel est le cas, afficher un message informant l’utilisateur qu’il ne sera bientôt plus à l’affiche.
+Ce cas d'utilisation prend une liste d'émissions arrivant bientôt à expiration, vérifie si l'une des émissions favorites de l'utilisateur figure dans cette liste et, le cas échéant, affiche un message informant l'utilisateur que l'émission va bientôt expirer.
 
 {% raw %} 
 ```liquid
@@ -1181,11 +1181,11 @@ All episodes of {{new_shows_clean | join: ', ' }} expire on 9/8 - watch them now
 ```
 {% endraw %}
 
-{% alert important %} Vous devrez d’abord trouver des correspondances entre les tableaux, puis créer une logique à la fin pour séparer les correspondances. {% endalert %}
+{% alert important %} Vous devrez d'abord trouver des correspondances entre les tableaux, puis créer une logique à la fin pour répartir les correspondances. {% endalert %}
 
-### Formater une chaîne de caractères pour en faire un numéro de téléphone {#phone-number}
+### Formater une chaîne de caractères en numéro de téléphone {#phone-number}
 
-Ce cas d’utilisation vous montrera comment indexer le champ de profil utilisateur `phone_number` (par défaut formaté en tant que chaîne de caractères d’entiers) et le reformater selon vos normes locales de numéros de téléphone. Par exemple, 1234567890 vers (123)-456-7890.
+Ce cas d'utilisation vous montre comment indexer le champ de profil utilisateur `phone_number` (par défaut, formaté comme une chaîne de caractères entiers), et le reformater en fonction de vos normes locales de numéro de téléphone. Par exemple, 1234567890 au (123)-456-7890.
 
 {% raw %} 
 ```liquid
@@ -1199,23 +1199,23 @@ Ce cas d’utilisation vous montrera comment indexer le champ de profil utilisat
 
 {% api %}
 
-## Ciblage de la plateforme
+## Ciblage de la plate-forme
 
 {% apitags %}
-Ciblage de la plateforme
+Ciblage de la plate-forme
 {% endapitags %}
 
 - [Différencier la copie en fonction du système d'exploitation de l'appareil](#platform-device-os)
-- [Cibler uniquement une plateforme spécifique](#platform-target)
+- [Cibler uniquement une plate-forme spécifique](#platform-target)
 - [Ciblez uniquement les appareils iOS dotés d'une version spécifique du système d'exploitation.](#platform-target-ios-version)
 - [Cibler uniquement les navigateurs web](#platform-target-web)
 - [Cibler un opérateur mobile spécifique](#platform-target-carrier)
 
-### Différencier les copies par OS d’appareil {#platform-device-os}
+### Différencier la copie en fonction du système d'exploitation de l'appareil {#platform-device-os}
 
-Ce scénario d’utilisation vérifie la plate-forme sur laquelle un utilisateur est connecté et, en fonction de sa plateforme, affiche des envois de messages spécifiques.
+Ce cas d'utilisation vérifie la plateforme sur laquelle se trouve l'utilisateur et, en fonction de celle-ci, affiche des messages spécifiques.
 
-Par exemple, vous pouvez montrer aux utilisateurs mobiles les versions plus courtes du texte du message tout en affichant aux autres utilisateurs la version classique et plus longue du texte. Vous pouvez également montrer aux utilisateurs mobiles certains envois de messages pertinents pour eux, mais qui ne seraient pas pertinents pour les utilisateurs Web. Par exemple, la communication iOS peut parler d’Apple Pay, mais les communications Android doivent mentionner Google Pay.
+Par exemple, vous pourriez vouloir montrer aux utilisateurs mobiles des versions plus courtes du texte du message tout en montrant aux autres utilisateurs la version normale, plus longue, du texte. Vous pourriez également montrer aux utilisateurs mobiles certains envois de messages pertinents pour eux, mais qui ne le seraient pas pour les utilisateurs du web. Par exemple, les messages iOS peuvent parler d'Apple Pay, mais les messages Android doivent mentionner Google Pay.
 
 {% raw %}
 ```liquid
@@ -1229,14 +1229,14 @@ This is the regular copy and much longer than the short version.
 {% endraw %}
 
 {% alert note %}
-Liquid est sensible à la casse, `targeted_device.${platform}` renvoie la valeur entièrement en minuscules.
+Liquid est sensible à la casse, `targeted_device.${platform}` renvoie la valeur en minuscules.
 {% endalert %}
 
 ### Cibler uniquement une plate-forme spécifique {#platform-target}
 
-Ce scénario d’utilisation capture la plate-forme de l’appareil des utilisateurs et, en fonction de la plateforme, affiche un message.
+Ce cas d'utilisation saisit la plate-forme de l'appareil de l'utilisateur et, en fonction de celle-ci, affiche un message.
 
-Par exemple, vous pouvez envoyer un message uniquement aux utilisateurs Android. Cette option peut être utilisée comme alternative à la sélection d’une application dans l’outil Segmentation.
+Par exemple, vous pouvez vouloir envoyer un message uniquement aux utilisateurs d'Android. Cette option peut être utilisée comme alternative à la sélection d'une application dans l'outil de segmentation.
 
 {% raw %}
 ```liquid
@@ -1250,11 +1250,11 @@ This is a message for an Android user!
 ```
 {% endraw %}
 
-### Cibler uniquement les appareils avec une version d’OS spécifique {#platform-target-ios-version}
+### Ciblez uniquement les appareils dotés d'une version spécifique du système d'exploitation. {#platform-target-ios-version}
 
-Ce scénario d’utilisation vérifie si la version OS d’un utilisateur appartient à un certain ensemble de versions et, si tel est le cas, affiche un message spécifique.
+Ce cas d'utilisation vérifie si la version du système d'exploitation d'un utilisateur est comprise dans un certain ensemble de versions et, le cas échéant, affiche un message spécifique.
 
-L’exemple utilisé envoie un avertissement aux utilisateurs sur une version d’OS 10.0 ou antérieure signalant qu’ils vont rendre obsolète la prise en charge du système d’exploitation de l’appareil de l’utilisateur.
+L'exemple utilisé envoie un avertissement aux utilisateurs d'une version 10.0 ou antérieure du système d'exploitation, les informant que la prise en charge du système d'exploitation de l'appareil de l'utilisateur est progressivement supprimée.
 
 {% raw %}
 ```liquid
@@ -1268,9 +1268,9 @@ We are phasing out support for your device's operating system. Be sure to update
 ```
 {% endraw %}
 
-### Cibler uniquement les navigateurs Web {#platform-target-web}
+### Cibler uniquement les navigateurs web {#platform-target-web}
 
-Ce scénario d’utilisation vérifie si l’appareil cible d’un utilisateur fonctionne sur Mac ou Windows et, le cas échéant, affiche un message spécifique.
+Ce cas d'utilisation vérifie si l'appareil cible d'un utilisateur fonctionne sous Mac ou Windows et, le cas échéant, affiche un message spécifique.
 
 {% raw %}
 ```liquid
@@ -1284,7 +1284,7 @@ This message will display on your desktop web browser.
 ```
 {% endraw %}
 
-Le cas d’usage suivant vérifie si un utilisateur Web est sur iOS ou Android et, si oui, affichera un message particulier.
+Le cas d'utilisation suivant vérifie si un internaute est sous iOS ou Android et, si c'est le cas, affiche un message spécifique.
 
 {% raw %}
 ```liquid
@@ -1304,9 +1304,9 @@ Content for Android.
 
 ### Cibler un opérateur mobile spécifique {#platform-target-carrier}
 
-Ce scénario d’utilisation vérifie si le fournisseur d’accès d’un appareil d’un utilisateur est Verizon et, si tel est le cas, affiche un message spécifique.
+Ce cas d'utilisation vérifie si l'opérateur de l'appareil de l'utilisateur est Verizon et, le cas échéant, affiche un message spécifique.
 
-Pour  les canaux de notifications push et de message in-app, vous pouvez spécifier le support de l’appareil dans votre corps de message en utilisant Liquid. Si le fournisseur d’accès de l’appareil du destinataire ne correspond pas, le message ne sera pas envoyé.
+Pour les notifications push et les canaux de messages in-app, vous pouvez spécifier le transporteur de l'appareil dans le corps de votre message à l'aide de Liquid. Si la porteuse de l'appareil du destinataire ne correspond pas, le message ne sera pas envoyé.
 
 {% raw %}
 ```liquid
@@ -1324,23 +1324,23 @@ This is a message for Verizon users!
 
 {% api %}
 
-## Fuseau horaire
+## Fuseaux horaires
 
 {% apitags %}
-Fuseau horaire
+Fuseaux horaires
 {% endapitags %}
 
 - [Personnaliser un message en fonction du fuseau horaire de l'utilisateur](#personalize-timezone)
 - [Ajouter le fuseau horaire CST à un attribut personnalisé](#time-append-cst)
 - [Insérer un horodatage](#time-insert-timestamp)
 - [N'envoyez un push Canvas que pendant une fenêtre de temps dans le fuseau horaire local de l'utilisateur.](#time-canvas-window)
-- [Envoyer une campagne de messages in-app récurrente dans une fenêtre de temps dans le fuseau horaire local d’un utilisateur](#time-reocurring-iam-window)
+- [Envoyez une campagne de messages in-app récurrente entre une fenêtre de temps dans le fuseau horaire local d'un utilisateur.](#time-reocurring-iam-window)
 - [Envoyez des messages différents en semaine et le week-end dans le fuseau horaire local de l'utilisateur.](#time-weekdays-vs-weekends)
 - [Envoyer des messages différents en fonction de l'heure de la journée dans le fuseau horaire local de l'utilisateur.](#time-of-day)
 
-### Personnaliser un message selon le fuseau horaire d’un utilisateur {#personalize-timezone}
+### Personnaliser un message en fonction du fuseau horaire de l'utilisateur {#personalize-timezone}
 
-Ce cas d’utilisation affiche des messages différents selon le fuseau horaire de l’utilisateur.
+Ce cas d'utilisation affiche des messages différents en fonction du fuseau horaire de l'utilisateur.
 
 {% raw %}
 ```liquid
@@ -1356,16 +1356,16 @@ Message for time zone yy.
 
 ### Ajouter le fuseau horaire CST à un attribut personnalisé {#time-append-cst}
 
-Ce scénario d’utilisation affiche un attribut de date personnalisée dans un fuseau horaire donné.
+Ce cas d'utilisation permet d'afficher un attribut personnalisé de date dans un fuseau horaire donné.
 
-Option 1 :
+Option 1 :
 {% raw %}
 ```liquid
 {{custom_attribute.${application_expires_date} | time_zone: -0005 | date: '%B, %d %Y' }}
 ```
 {% endraw %}
 
-Option 2 :
+Option 2 :
 {% raw %}
 ```liquid
 {{custom_attribute.${application_expires_date} | time_zone: 'America/Chicago' | date: '%B %d %Y %z' }}
@@ -1374,9 +1374,9 @@ Option 2 :
 
 ### Insérer un horodatage {#time-insert-timestamp}
 
-Ce scénario d’utilisation affiche un message qui inclut un horodatage dans le fuseau horaire actuel de l’utilisateur.
+Ce cas d'utilisation affiche un message comprenant un horodatage dans le fuseau horaire actuel.
 
-L’exemple suivant indique la date YYYY-mm-dd HH:MM:SS, comme 2021-05-03 10:41:04.
+L'exemple suivant affiche la date sous la forme AAAA-mm-jj HH:MM:SS, par exemple 2021-05-03 10:41:04.
 
 {% raw %}
 ```liquid
@@ -1384,9 +1384,9 @@ L’exemple suivant indique la date YYYY-mm-dd HH:MM:SS, comme 2021-05-03 10:41:
 ```
 {% endraw %}
 
-### Envoyer une notification push de Canvas uniquement pendant une période de temps dans le fuseau horaire local d’un utilisateur {#time-canvas-window}
+### N'envoyez un push Canvas que pendant une fenêtre de temps dans le fuseau horaire local de l'utilisateur. {#time-canvas-window}
 
-Ce scénario d’utilisation vérifie l’heure d’un utilisateur dans son fuseau horaire local et, s’il correspond à un horaire défini, il affiche un message spécifique.
+Ce cas d'utilisation vérifie l'heure d'un utilisateur dans son fuseau horaire local et, si elle se situe dans une plage horaire définie, il affiche un message spécifique.
 
 {% raw %}
 ```liquid
@@ -1400,11 +1400,11 @@ Here's a message that will send between 8 am and 8 pm!
 ```
 {% endraw %}
 
-### Envoyer une campagne de messages in-app récurrente entre une fenêtre de temps dans la zone horaire locale d’un utilisateur {#time-reoccurring-iam-window}
+### Envoyez une campagne de messages in-app récurrente entre une fenêtre de temps dans le fuseau horaire local d'un utilisateur. {#time-reoccurring-iam-window}
 
-Ce scénario d’utilisation affiche un message si l’heure actuelle d’un utilisateur se trouve dans une fenêtre définie.
+Ce cas d'utilisation affiche un message si l'heure actuelle de l'utilisateur se situe dans une fenêtre définie.
 
-Par exemple, le scénario suivant permet à un utilisateur de savoir qu’une boutique est fermée.
+Par exemple, le scénario suivant permet à un utilisateur de savoir qu'un magasin est fermé.
 
 {% raw %}
 ```liquid
@@ -1420,9 +1420,9 @@ Store's closed. Come back between 11 am and 9 pm!
 ```
 {% endraw %}
 
-### Envoyer différents messages en semaine par rapport aux week-ends dans le fuseau horaire local d’un utilisateur {#time-weekdays-vs-weekends}
+### Envoyez des messages différents en semaine et le week-end dans le fuseau horaire local de l'utilisateur. {#time-weekdays-vs-weekends}
 
-Ce scénario d’utilisation vérifie si le jour actuel de la semaine d’un utilisateur est un samedi ou un dimanche et, en fonction de la journée, affiche différents messages.
+Ce cas d'utilisation vérifiera si le jour de la semaine de l'utilisateur est un samedi ou un dimanche et affichera des messages différents en fonction du jour.
 
 {% raw %}
 ```liquid
@@ -1436,11 +1436,11 @@ It's {{today}}, why don't you visit the store?
 ```
 {% endraw %}
 
-### Envoyer des messages différents en fonction de l’heure de la journée dans le fuseau horaire local d’un utilisateur {#time-of-day}
+### Envoyer des messages différents en fonction de l'heure de la journée dans le fuseau horaire local de l'utilisateur. {#time-of-day}
 
-Ce scénario d’utilisation affiche un message si l’heure actuelle d’un utilisateur se trouve dans une fenêtre définie.
+Ce cas d'utilisation affiche un message si l'heure actuelle de l'utilisateur se situe en dehors d'une fenêtre définie.
 
-Par exemple, vous pourriez souhaiter indiquer à un utilisateur une opportunité sensible au temps qui dépend de l’heure de la journée.
+Par exemple, vous pouvez informer un utilisateur d'une opportunité qui dépend de l'heure de la journée.
 
 {% raw %}
 ```liquid
@@ -1454,16 +1454,16 @@ Check out this new bar after work today. HH specials!
 ```
 {% endraw %}
 
-{% alert note %} Ceci est le contraire des [heures calmes]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/time_based_campaign/#time-based-functionalities-for-campaigns). {% endalert %}
+{% alert note %} C'est le contraire des [heures calmes]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/time_based_campaign/#time-based-functionalities-for-campaigns). {% endalert %}
 
 {% endapi %}
 
 {% api %}
 
-## Week/Day/Month
+## Semaine/jour/mois
 
 {% apitags %}
-Week/Day/Month
+Semaine/jour/mois
 {% endapitags %}
 
 - [Insérer le nom du mois précédent dans un message](#month-name)
@@ -1472,9 +1472,9 @@ Week/Day/Month
 - [Envoyez un message différent chaque jour du mois](#day-of-month)
 - [Envoyez un message différent chaque jour de la semaine](#day-of-week)
 
-### Tirer le nom du mois précédent dans un message {#month-name}
+### Insérer le nom du mois précédent dans un message {#month-name}
 
-Ce scénario d’utilisation prend le mois en cours et affiche le mois précédent à utiliser dans l’envoi de messages.
+Ce cas d'utilisation prend le mois en cours et affiche le mois précédent à utiliser dans les messages.
 
 {% raw %}
 ```liquid
@@ -1520,11 +1520,11 @@ Here's an overview of what your spending looked like in {{month}}.
 ```
 {% endraw %}
 
-### Envoyer une campagne à la fin de chaque mois {#month-end}
+### Envoyez une campagne à la fin de chaque mois {#month-end}
 
-Ce scénario d’utilisation vérifiera si la date actuelle tombe dans une liste de dates et, en fonction de la date, affiche un message spécifique.
+Ce cas d'utilisation vérifie si la date actuelle est comprise dans une liste de dates et, en fonction de la date, affiche un message spécifique.
 
-{% alert note %} Cela ne tient pas compte des années bissextiles (29 février). {% endalert %}
+{% alert note %} Cela ne tient pas compte des années bissextiles (29 février). {% endalert %}
 
 {% raw %}
 ```liquid
@@ -1540,11 +1540,11 @@ The date is correct
 ```
 {% endraw %}
 
-### Envoyer une campagne le dernier jour du mois {#day-of-month-last}
+### Envoyez une campagne le dernier (jour de la semaine) du mois {#day-of-month-last}
 
-Ce scénario d’utilisation capture le mois et le jour en cours et calcule si le jour actuel tombe le dernier jour de la semaine du mois.
+Ce cas d'utilisation saisit le mois et le jour en cours et calcule si le jour en cours tombe dans le dernier jour de semaine du mois.
 
-Par exemple, vous pouvez envoyer une enquête à vos utilisateurs le dernier mercredi du mois, demandant des commentaires sur les produits.
+Par exemple, vous pouvez envoyer une enquête à vos utilisateurs le dernier mercredi du mois pour leur demander leur avis sur le produit.
 
 {% raw %}
 ```liquid
@@ -1602,9 +1602,9 @@ Par exemple, vous pouvez envoyer une enquête à vos utilisateurs le dernier mer
 ```
 {% endraw %}
 
-### Envoyer un message différent chaque jour du mois {#day-of-month}
+### Envoyez un message différent chaque jour du mois {#day-of-month}
 
-Ce scénario d’utilisation vérifie si la date actuelle correspond à celle d’une liste et, en fonction du jour, affiche un message distinct.
+Ce cas d'utilisation vérifie si la date actuelle correspond à une date figurant dans une liste et, en fonction du jour, affiche un message distinct.
 
 {% raw %}
 ```liquid
@@ -1628,9 +1628,9 @@ Message for 2019-12-03
 ```
 {% endraw %}
 
-### Envoyer un message différent chaque jour de la semaine {#day-of-week}
+### Envoyez un message différent chaque jour de la semaine {#day-of-week}
 
-Ce scénario d’utilisation vérifie le jour de la semaine et, en fonction du jour, affiche un message distinct.
+Ce cas d'utilisation vérifie le jour de la semaine en cours et, selon le jour, affiche un message distinct.
 
 {% raw %}
 ```liquid

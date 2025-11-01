@@ -15,7 +15,7 @@ Los enlaces universales de Apple y los enlaces de aplicaciones de Android son me
 
 Los enlaces universales (iOS) y los enlaces a aplicaciones (Android) son enlaces Web estándar (`http://mydomain.com`) que apuntan tanto a una página Web como a un contenido dentro de una aplicación.
 
-Cuando se abre un enlace universal o App Link, el sistema operativo comprueba si alguna aplicación instalada está registrada para ese dominio. Si se encuentra una aplicación, se inicia inmediatamente sin cargar la página web. Si no se encuentra ninguna aplicación, la URL web se carga en el navegador web predeterminado del usuario, que también podría configurarse para redirigir a la App Store o a Google Play Store respectivamente.
+Cuando se abre un enlace universal o App Link, el sistema operativo comprueba si alguna aplicación instalada está registrada para ese dominio. Si se encuentra una aplicación, se inicia inmediatamente sin cargar la página Web. Si no se encuentra ninguna aplicación, la URL web se carga en el navegador web predeterminado del usuario, que también podría configurarse para redirigir a la App Store o a Google Play Store respectivamente.
 
 Claramente, los enlaces universales permiten a un sitio web asociar sus páginas web con pantallas de aplicaciones específicas, de modo que cuando un usuario hace clic en un enlace a una página web que corresponde a una pantalla de aplicación, la aplicación puede abrirse directamente (si la aplicación está instalada en ese momento).
 
@@ -24,19 +24,19 @@ Esta tabla resume las principales diferencias entre los vínculos universales y 
 |                        | Enlaces universales y enlaces de aplicaciones                                  | Vínculos profundos                   |
 | ---------------------- | -------------------------------------------------------------- | ---------------------------- |
 | Compatibilidad de plataformas | iOS (versión 9 y posteriores) y Android (versión 6.0 y posteriores)  | Utilizado en varios SO móviles    |
-| Propósito                | Vincula fácilmente el contenido de la web y de la aplicación en dispositivos iOS y Android | Enlace al contenido específico de la aplicación |
+| Propósito                | Vincula fácilmente el contenido de la Web y de la aplicación en dispositivos iOS y Android | Enlace al contenido específico de la aplicación |
 | Función               | Dirige a páginas Web o al contenido de una aplicación en función del contexto           | Abre pantallas específicas de la aplicación   |
 | Instalación de la aplicación       | Abre la aplicación si la aplicación está instalada, si no, abre el contenido Web | Requiere la instalación de una aplicación |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-## Casos prácticos
+## Casos de uso
 
-Los enlaces universales y los enlaces a aplicaciones son los más utilizados para las campañas de correo electrónico, ya que los correos electrónicos se pueden abrir y hacer clic tanto desde ordenadores de sobremesa como desde dispositivos móviles.
+Los enlaces universales y los enlaces a aplicaciones son los más utilizados para las campañas de correo electrónico, ya que los correos electrónicos se pueden abrir y clicar tanto desde ordenadores de sobremesa como desde dispositivos móviles.
 
 Algunos canales no funcionan bien con estos enlaces. Por ejemplo, las notificaciones push, los mensajes dentro de la aplicación y las tarjetas de contenido deben utilizar vínculos profundos basados en esquemas (`mydomain://`).
 
 {% alert note %}
-Los enlaces de las aplicaciones Android requieren un `IBrazeDeeplinkHandler` personalizado con lógica para gestionar los enlaces de sus dominios de forma separada de otras URL de la Web. Puede ser más fácil utilizar en su lugar vínculos en profundidad y mantener uniformes las prácticas de vinculación para canales distintos del correo electrónico.
+Los enlaces de las aplicaciones Android requieren un `IBrazeDeeplinkHandler` personalizado con lógica para gestionar los enlaces de sus dominios de forma separada de otras URL de la Web. Puede ser más fácil utilizar vínculos en profundidad en su lugar y mantener uniformes las prácticas de vinculación para canales distintos del correo electrónico.
 {% endalert %}
 
 ## Requisitos previos
@@ -75,7 +75,7 @@ Estos pasos están adaptados de la documentación para desarrolladores de Apple.
 #### Paso 1a: Registra tu aplicación {#step-1a}
 
 1. Ve a developer.apple.com y conéctate.
-2. Haz clic en **Certificados, identificadores y perfiles**.
+2. Haz clic en **Certificados, Identificadores & Perfiles**.
 3. Haz clic en **Identificadores**.
 4. Si aún no tienes un identificador de aplicación registrado, haz clic en + para crearlo.
    a. Introduce un **Nombre**. Puede ser lo que tú quieras.
@@ -87,7 +87,7 @@ Estos pasos están adaptados de la documentación para desarrolladores de Apple.
 2. Selecciona **Dominios asociados**.
 3. Haz clic en **Guardar**.
 
-![]({% image_buster /assets/img_archive/universal_links_1b.png %}){: style="max-width:75%;"}
+\![]({% image_buster /assets/img_archive/universal_links_1b.png %}){: style="max-width:75%;"}
 
 #### Paso 1c: Activa los dominios asociados en tu proyecto Xcode {#step-1c}
 
@@ -107,15 +107,15 @@ Si aparece el error "Un ID de aplicación con el identificador 'tu-app-id' no es
 
 En la sección de dominios, añade la etiqueta de dominio adecuada. Debes anteponer el prefijo `applinks:`. En este caso, puedes ver que hemos añadido `applinks:yourdomain.com`.
 
-![]({% image_buster /assets/img_archive/universal_links_1d.png %})
+\![]({% image_buster /assets/img_archive/universal_links_1d.png %})
 
 #### Paso 1e: Confirma que el archivo de derechos está incluido en la compilación
 
-En el navegador de proyectos, asegúrate de que tu nuevo archivo de derechos está seleccionado en **Membresía objetivo**.
+En el navegador de proyectos, asegúrate de que tu nuevo archivo de derechos está seleccionado en **Afiliación de destino**.
 
 Xcode debería encargarse de ello automáticamente.
 
-### Paso 2: Configura tu sitio web para alojar el archivo AASA
+### Paso 2: Configura tu sitio web para alojar el archivo AASA
 
 Para asociar el dominio de tu sitio web con tu aplicación nativa en iOS, tienes que alojar el archivo Apple App Site Association (AASA) en tu sitio web. Este archivo sirve como forma segura de verificar la propiedad del dominio a iOS. Antes de iOS 9, los desarrolladores podían registrar cualquier esquema URI para abrir sus aplicaciones, sin ninguna verificación. Sin embargo, con AASA, este proceso es ahora mucho más seguro y fiable.
 
@@ -144,14 +144,14 @@ El archivo AASA contiene un objeto JSON con una lista de aplicaciones y las ruta
 Estas cadenas distinguen entre mayúsculas y minúsculas y se ignoran las cadenas de consulta y los identificadores de fragmentos.
 {% endalert %}
 
-### Paso 3: Aloja el archivo AASA en tu dominio
+### Paso 3: Aloja el archivo AASA en tu dominio
 
 Cuando tengas listo tu archivo AASA, ya puedes alojarlo en tu dominio en `https://<<yourdomain>>/apple-app-site-association` o en `https://<<yourdomain>>/.well-known/apple-app-site-association`.
 
-Sube el archivo `apple-app-site-association` a tu servidor web HTTPS. Puedes colocar el archivo en la raíz de tu servidor o en el subdirectorio `.well-known`. No añadas `.json` al nombre del archivo.
+Sube el archivo `apple-app-site-association` a tu servidor Web HTTPS. Puedes colocar el archivo en la raíz de tu servidor o en el subdirectorio `.well-known`. No añadas `.json` al nombre del archivo.
 
 {% alert important %}
-iOS solo intentará obtener el archivo AASA a través de una conexión segura (HTTPS).
+iOS sólo intentará obtener el archivo AASA a través de una conexión segura (HTTPS).
 {% endalert %}
 
 Al alojar el archivo de AASA, asegúrate de que el archivo sigue estas directrices:
@@ -172,7 +172,7 @@ Para admitir enlaces universales en tu aplicación, sigue estos pasos:
 En Xcode, abre la sección **Dominios asociados** en la pestaña **Capacidades** y añade una entrada para cada dominio que admita tu aplicación, precedida de `applinks:`. Por ejemplo, `applinks:www.mywebsite.com`.
 
 {% alert note %}
-Apple recomienda limitar esta lista a no más de 20 o 30 dominios.
+Apple recomienda limitar esta lista a no más de 20 ó 30 dominios.
 {% endalert %}
 
 ### Paso 5: Prueba tu enlace universal
@@ -187,18 +187,18 @@ Añade el enlace universal a un correo electrónico y envíalo a un dispositivo 
 Estos pasos están adaptados de la documentación para desarrolladores de Android. Para más información, consulta [Añadir enlaces a aplicaciones Android](https://developer.android.com/training/app-links#add-app-links) y [Crear enlaces profundos al contenido de las aplicaciones](https://developer.android.com/training/app-links/deep-linking).
 
 {% alert note %}
-Los enlaces de las aplicaciones Android requieren un `IBrazeDeeplinkHandler` personalizado con lógica para gestionar los enlaces de sus dominios de forma separada de otras URL de la Web. Puede ser más fácil utilizar en su lugar vínculos en profundidad y mantener uniformes las prácticas de vinculación para canales distintos del correo electrónico.
+Los enlaces de las aplicaciones Android requieren un `IBrazeDeeplinkHandler` personalizado con lógica para gestionar los enlaces de sus dominios de forma separada de otras URL de la Web. Puede ser más fácil utilizar vínculos en profundidad en su lugar y mantener uniformes las prácticas de vinculación para canales distintos del correo electrónico.
 {% endalert %}
 
 ### Paso 1: Crear vínculos profundos
 
 En primer lugar, tienes que crear vínculos profundos para tu aplicación Android. Esto puede hacerse añadiendo [filtros de intención](https://developer.android.com/guide/components/intents-filters) en tu archivo `AndroidManifest.xml`. El filtro de intención debe incluir la acción `VIEW` y la categoría `BROWSABLE`, junto con la URL de tu sitio web en el elemento de datos.
 
-### Paso 2: Asocia tu aplicación a tu sitio web
+### Paso 2: Asocia tu aplicación a tu sitio web
 
 Tienes que asociar tu aplicación a tu sitio web. Esto puede hacerse creando un archivo de Enlaces de Activos Digitales. Este archivo debe estar en formato JSON e incluye detalles sobre las aplicaciones Android que pueden abrir enlaces a tu sitio web. Debe colocarse en el directorio `.well-known` de tu sitio web.
 
-### Paso 3: Actualiza el archivo de manifiesto de tu aplicación
+### Paso 3: Actualiza el archivo de manifiesto de tu aplicación
 
 En tu archivo `AndroidManifest.xml`, añade un elemento de metadatos dentro del elemento de aplicación. El elemento de metadatos debe tener un atributo `android:name` de "asset_statements" y un atributo `android:resource` que apunte a un archivo de recursos con una cadena que incluya la URL de tu sitio web.
 
@@ -311,7 +311,7 @@ Selecciona lo siguiente para el atributo personalizado:
 - **Nombre:** `data-msys-clicktrack`
 - **Valor:** `0`
 
-![Un atributo personalizado para un enlace de texto.]({% image_buster /assets/img/text_click_tracking_off.png %}){: style="max-width:60%;"}
+\![Un atributo personalizado para un enlace de texto.]({% image_buster /assets/img/text_click_tracking_off.png %}){: style="max-width:60%;"}
 
 ##### Atributo personalizado para un botón o una imagen
 
@@ -331,7 +331,7 @@ Selecciona lo siguiente para el atributo personalizado:
 - **Valor:** `0`
 - **Tipo:** Enlace
 
-![Un atributo personalizado para un botón.]({% image_buster /assets/img/button_click_tracking_off.png %}){: style="max-width:60%;"}
+\![Un atributo personalizado para un botón.]({% image_buster /assets/img/button_click_tracking_off.png %}){: style="max-width:60%;"}
 
 ### Solución de problemas de enlaces universales con seguimiento de clics
 

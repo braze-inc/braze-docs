@@ -21,7 +21,7 @@ Una vez construido el modelo de predicción, a los usuarios de la audiencia de p
 
 La actualización de las puntuaciones de riesgo de la audiencia de predicción puede hacerse con la [frecuencia que elijas]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_churn/creating_a_churn_prediction/#step-4-choose-the-update-frequency-for-churn-predictions). De este modo, puedes llegar a los usuarios que corren el riesgo de abandonar antes de que lo hagan y evitar que ocurra en primer lugar. Utilizando hasta tres predicciones activas, puedes aprovechar Predictive Churn para adaptar modelos individuales que te ayuden a evitar el abandono en segmentos específicos de tus usuarios que consideres más valiosos.
 
-![Un resumen del abandono, que incluye una audiencia de predicción pasada con entrenamiento con datos históricos. Esto contribuye a predecir el riesgo de futuros abandonos midiendo la audiencia prevista hoy con una puntuación de riesgo de abandono.]({% image_buster /assets/img/churn/churn_overview.png %})
+\![Un resumen del abandono, que incluye una audiencia de predicción pasada con entrenamiento con datos históricos. Esto contribuye a predecir el riesgo de abandono futuro, midiendo la audiencia prevista hoy con una puntuación de riesgo de abandono.]({% image_buster /assets/img/churn/churn_overview.png %})
 
 ## Acceder al Predictive Churn
 
