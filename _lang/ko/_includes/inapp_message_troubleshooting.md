@@ -33,14 +33,14 @@
 3. 상황에 따라 인앱 메시지는 표시되기 전에 디스크에서 관련 이미지를 다운로드하거나 로드합니다. 네트워크 연결 속도가 느리거나 성능이 매우 낮은 기기를 사용하는 경우 이 프로세스에 시간이 걸릴 수 있습니다. 이미지가 가능한 한 작게 최적화되었는지 확인하세요.
 {% endcase %}
 
-이러한 시나리오에 대해 자세히 알아보려면 [고급 문제 해결 섹션](#troubleshooting-in-app-advanced)을 참조하세요.
+이러한 시나리오에 대해 자세히 알아보려면 <a id="troubleshooting-in-app-advanced">고급 문제 해결 섹션</a>을 참조하세요.
 
 ## 노출 및 클릭 분석 관련 문제
 
 {% if include.sdk == "iOS" %}
 ### 노출 수 및 클릭 수가 기록되지 않습니다.
 
-메시지 표시 또는 클릭 작업을 수동으로 처리하도록 인앱 메시지 위임자를 설정한 경우 인앱 메시지에 대한 [클릭](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/logclick(buttonid:using:)) 및 [노출](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/logimpression(using:))을 수동으로 기록합니다.
+메시지 표시 또는 클릭 액션을 수동으로 처리하도록 인앱 메시지 위임자를 설정한 경우 인앱 메시지에 대한 [클릭](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/logclick(buttonid:using:)) 및 [노출](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/logimpression(using:))을 수동으로 기록해야 합니다.
 {% elsif include.sdk == "Android" %}
 ### 노출 수 및 클릭 수가 기록되지 않습니다.
 메시지 표시 또는 클릭 작업을 수동으로 처리하도록 인앱 메시지 위임자를 설정한 경우 인앱 메시지에 대한 클릭 및 노출을 수동으로 기록합니다.
@@ -64,7 +64,7 @@
 
 ## 고급 문제 해결 {#troubleshooting-in-app-advanced}
 
-대부분의 인앱 메시지 문제는 전달과 표시라는 두 가지 주요 카테고리로 분류할 수 있습니다. 예상 인앱 메시지가 기기에 표시되지 않는 문제를 해결하려면 [인앱 메시지가 기기에 전달되었는지](#troubleshooting-in-app-message-delivery) 확인한 다음 [메시지 표시 문제](#troubleshooting-in-app-message-display)를 해결하세요.
+대부분의 인앱 메시지 문제는 전달과 표시라는 두 가지 주요 카테고리로 분류할 수 있습니다. 예상 인앱 메시지가 기기에 표시되지 않는 문제를 해결하려면 <a id="troubleshooting-in-app-message-delivery">인앱 메시지가 기기에 전달되었는지</a> 확인한 다음 <a id="troubleshooting-in-app-message-display">메시지 표시 문제</a>를 해결하세요.
 
 ### 배달 문제 해결 {#troubleshooting-in-app-message-delivery}
 
@@ -72,13 +72,13 @@ SDK는 세션 시작 시 Braze 서버에 인앱 메시지를 요청합니다. �
 
 #### 메시지 요청 및 반환 여부 확인
 
-1. 대시보드에서 [테스트 유저]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users)로 자신을 추가합니다.
+1. 테스트 사용자]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users) 대시보드에서)로 자신을 추가합니다.
 2. 사용자를 대상으로 인앱 메시지 캠페인을 설정합니다.
 3. 애플리케이션에서 새 세션이 발생하는지 확인합니다.
-4. [이벤트 사용자 로그]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab))를 사용하여 세션 시작 시 기기에서 인앱 메시지를 요청하는지 확인하세요. 테스트 사용자의 세션 시작 이벤트와 연결된 SDK 요청을 찾습니다.
+4. 이벤트 사용자 로그]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab) )를 사용하여 세션 시작 시 디바이스에서 인앱 메시지를 요청하는지 확인하세요. 테스트 사용자의 세션 시작 이벤트와 연결된 SDK 요청을 찾습니다.
   - 앱에서 트리거된 인앱 메시지를 요청하는 경우 **응답 데이터** 아래 **요청된 응답** 필드에 `trigger`가 표시되어야 합니다.
   - 앱에서 원본 인앱 메시지를 요청하는 경우 **응답 데이터** 아래 **요청된 응답** 필드에 `in_app`이 표시되어야 합니다.
-5. [이벤트 사용자 로그]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab) )를 사용하여 응답 데이터에서 올바른 인앱 메시지가 반환되고 있는지 확인하세요.<br>![]({% image_buster /assets/img_archive/event_user_log_iams.png %})
+5. 이벤트 사용자 로그]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab) )를 사용하여 응답 데이터에서 올바른 인앱 메시지가 반환되는지 확인하세요.<br>![]({% image_buster /assets/img_archive/event_user_log_iams.png %})
 
 ##### 요청되지 않는 메시지 문제 해결
 
@@ -91,11 +91,11 @@ SDK는 세션 시작 시 Braze 서버에 인앱 메시지를 요청합니다. �
 인앱 메시지가 반환되지 않는다면 캠페인 타겟팅에 문제가 있는 것일 수 있습니다:
 
 1. 세그먼트에 사용자가 포함되어 있지 않습니다.
-  - 사용자의 [\*\*참여**]({{ site.baseurl }}/user_guide/engagement_tools/segments/using_user_search/#engagement-tab) 탭에서 **세그먼트** 아래에 올바른 세그먼트가 표시되는지 확인합니다.
+  - 사용자의 [\*\*참여**]({{ site.baseurl }}/user_guide/engagement_tools/segments/using_user_search/#engagement-tab) 탭에서 **세그먼트** 아래에 올바른 세그먼트가 표시되는지 확인하세요.
 2. 사용자가 이전에 인앱 메시지를 받은 적이 있으며 다시 받을 자격이 없습니다.
-  - **캠페인 작성기**의 **전달** 단계 아래에서 [캠페인 재자격 설정]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/))을 확인하고 재자격 설정이 테스트 설정과 일치하는지 확인합니다.
+  - **캠페인 컴포저의** **전달** 단계 아래 [캠페인 재자격 설정]({{ site.baseurl }}/user_guide/참여_tools/campaigns/building_campaigns/delivery_types/reeligibility/) )을 확인하고 재자격 설정이 테스트 설정과 일치하는지 확인합니다.
 3. 사용자가 캠페인의 빈도 한도에 도달했습니다.
-  - 캠페인[빈도 제한 설정]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping))을 확인하여 테스트 설정과 일치하는지 확인하세요.
+  - 캠페인 [빈도 제한 설정]({{ site.baseurl }}/user_guide/참여_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping) )을 확인하여 테스트 설정과 일치하는지 확인하세요.
 4. 캠페인에 대조 그룹이 있는 경우 사용자가 대조 그룹에 속했을 수 있습니다.
   - 캠페인 이형 상품이 **컨트롤로** 설정된 수신된 캠페인 이형 상품 필터로 세그먼트를 생성하고 사용자가 해당 세그먼트에 속하는지 확인하여 이 문제가 발생했는지 확인할 수 있습니다.
   - 통합 테스트 목적으로 캠페인을 생성할 때는 대조군 추가를 옵트아웃해야 합니다.
