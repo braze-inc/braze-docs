@@ -1,9 +1,9 @@
 ---
 nav_title: Video
-article_title: Vídeo en los mensajes de la aplicación
+article_title: Video en mensajes dentro de la aplicación
 page_order: 4
 page_type: reference
-description: "Este artículo describe cómo incrustar vídeos en tus mensajes HTML in-app."
+description: "Este artículo describe cómo incrustar videos en tus mensajes HTML dentro de la aplicación."
 channel:
   - in-app messages
 ---
@@ -20,21 +20,21 @@ channel:
 </video>
 ```
 
-Para utilizar un activo de vídeo local, asegúrese de incluir este archivo al cargar activos en su campaña.
+Para utilizar un activo de video local, asegúrate de incluir este archivo cuando subas activos a tu campaña.
 
 {% alert note %}
-El contenido de video solo está disponible cuando el dispositivo tiene una velocidad de red razonable, a menos que el video proceda del dispositivo localmente.
+El contenido de video sólo está disponible cuando el dispositivo tiene una velocidad de red razonable, a menos que el video proceda del dispositivo localmente.
 {% endalert %}
 
 ## Consideraciones sobre Android
 
-Para incrustar vídeo y otros contenidos HTML5 en mensajes HTML in-app en Android, es necesario activar la aceleración por hardware en la Actividad en la que se muestra el mensaje in-app. Para más información, consulta la [guía del desarrollador de Android]({{site.baseurl}}/developer_guide/in_app_messages/html_messages/#android_embedding-youtube-content).
+Para incrustar video y otros contenidos HTML5 en mensajes HTML dentro de la aplicación en Android, es necesario habilitar la aceleración por hardware en la Actividad donde se muestra el mensaje dentro de la aplicación. Para más información, consulta la [guía del desarrollador de Android]({{site.baseurl}}/developer_guide/in_app_messages/html_messages/#android_embedding-youtube-content).
 
 ## Consideraciones sobre iOS
 
-Para ser compatible con dispositivos iOS:
+Para admitir dispositivos iOS:
 
-- Debe incluir el atributo `playsinline` porque la reproducción a pantalla completa no es compatible por el momento.
-- iOS no admite la reproducción automática por defecto. Para actualizar esta opción por defecto, puede modificar la opción [`ABKInAppMessageHTMLViewController`](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyUI/ABKInAppMessage/ViewControllers/ABKInAppMessageHTMLViewController.m)
+- Debes incluir el atributo `playsinline` porque la reproducción a pantalla completa no es compatible por el momento.
+- iOS no admite la reproducción automática predeterminada. Para actualizar esta opción predeterminada, puedes modificar la opción [`ABKInAppMessageHTMLViewController`](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyUI/ABKInAppMessage/ViewControllers/ABKInAppMessageHTMLViewController.m)
 
 

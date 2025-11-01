@@ -1,16 +1,16 @@
 ---
-nav_title: Análises de dados da campanha
-article_title: Análises de dados da campanha
+nav_title: Análise de campanhas
+article_title: Análise de campanhas
 page_order: 4.5
 layout: dev_guide
-guide_top_header: "Análise de dados da campanha"
-guide_top_text: "A análise de dados da campanha fornece atualizações em tempo real sobre os resultados de alto nível de cada campanha e variante dessa campanha, bem como detalhes no nível da mensagem. Escolha seu canal de envio de mensagens dentre os listados para saber mais sobre a análise de dados da campanha específica para esse canal. Também recomendamos que você confira nosso curso do Braze Learning <a href='https://learning.braze.com/campaign-setup-delivery-targeting-conversions'>de Configuração de Campanha</a> para obter uma visão geral dessas análises de dados."
+guide_top_header: "Análise de campanhas"
+guide_top_text: "A análise de campanhas fornece atualizações em tempo real sobre os resultados de alto nível de cada campanha e variante dentro dessa campanha, bem como detalhes em nível de mensagem. Escolha seu canal de mensagens dentre os listados para saber mais sobre a análise de campanha específica para esse canal. Também recomendamos que você confira nosso curso de aprendizado do Braze sobre <a href='https://learning.braze.com/campaign-setup-delivery-targeting-conversions'>configuração de campanhas</a> para obter uma visão geral dessas análises."
 
 page_type: landing
-description: "Essa landing page abrange relatórios de campanha para cada canal de envio de mensagens e relatórios de retenção e funil."
+description: "Essa página de destino abrange relatórios de campanha para cada canal de mensagens e relatórios de retenção e funil."
 tool: Reports
 
-guide_featured_title: "Canais de envio de mensagens"
+guide_featured_title: "Canais de mensagens"
 guide_featured_list:
   - name: Cartões de conteúdo
     link: /docs/user_guide/message_building_by_channel/content_cards/reporting/
@@ -18,13 +18,13 @@ guide_featured_list:
   - name: E-mail
     link: /docs/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/
     image: /assets/img/braze_icons/mail-01.svg
-  - name: Feature Flags
+  - name: Sinalizadores de recursos
     link: /docs/developer_guide/feature_flags/experiments/
     image: /assets/img/braze_icons/flag-06.svg
-  - name: Mensagens no app
+  - name: Mensagens no aplicativo
     link: /docs/user_guide/message_building_by_channel/in-app_messages/reporting/
     image: /assets/img/braze_icons/message-text-circle-01.svg
-  - name: Push
+  - name: Empurrar
     link: /docs/user_guide/message_building_by_channel/push/push_reporting/
     image: /assets/img/braze_icons/phone-01.svg
   - name: SMS
