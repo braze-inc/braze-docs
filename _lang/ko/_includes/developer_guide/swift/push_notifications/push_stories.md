@@ -1,6 +1,6 @@
-{% multi_lang_include developer_guide/prerequisites/cordova.md %} 또한 [푸시 알림을 설정해야]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift) 하며, 여기에는 `UNNotification` 프레임워크 구현이 포함됩니다.
+{% multi_lang_include developer_guide/prerequisites/swift.md %} 또한 `UNNotification` 프레임워크 구현을 포함하여 [푸시 알림을 설정해야]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift) 합니다.
 
-푸시 스토리를 수신하려면 다음 SDK 버전이 필요합니다.
+푸시 스토리를 받으려면 다음 최소 소프트웨어 개발 키트 버전이 필요합니다:
 
 {% sdk_min_versions swift:5.0.0 %}
 
