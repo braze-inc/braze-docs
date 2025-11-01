@@ -9,11 +9,11 @@ description: "Este artículo de referencia enumera las URL del panel, los puntos
 
 # API y puntos finales SDK
 
-> Su instancia de Braze determina la URL necesaria para iniciar sesión en Braze, acceder a la API e integrar su SDK. Obtén más información sobre el SDK de Braze en nuestro curso de Braze Learning, [Braze 101](https://learning.braze.com/braze-101).
+> Tu instancia de Braze determina la URL necesaria para iniciar sesión en Braze, acceder a la API e integrar tu SDK. Obtén más información sobre el SDK de Braze en nuestro curso de Braze Learning, [Braze 101](https://learning.braze.com/braze-101).
 
-Braze gestiona varias instancias diferentes para nuestro panel, SDK y puntos finales REST, que llamamos "clústeres". Tu administrador de incorporación a Braze te dirá en qué grupo te encuentras.
+Braze gestiona varias instancias diferentes para nuestro panel, SDK y puntos finales REST, que llamamos "clusters". Tu administrador de incorporación a Braze te dirá en qué grupo te encuentras.
 
-Si inicia sesión en [dashboard.braze.com](https://dashboard.braze.com) le enviará automáticamente a la dirección correcta del clúster.
+Si te registras en [dashboard.braze.com](https://dashboard.braze.com) te enviará automáticamente a la dirección correcta del clúster.
 
 {% multi_lang_include data_centers.md datacenters='instances' %}
 

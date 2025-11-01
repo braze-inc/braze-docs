@@ -4,8 +4,8 @@ article_title: Détails créatifs
 page_order: 3.5
 layout: dev_guide
 guide_top_header: "Détails créatifs"
-guide_top_text: "Avant de faire preuve de créativité avec nos messages in-app, vous devez connaître certaines directives. Tous les modèles de messages in-app sont conçus pour afficher des longueurs de texte et des tailles d’images variables sur des appareils modernes. Pour que votre message s'affiche correctement sur tous les téléphones, tablettes et ordinateurs, nous vous recommandons de suivre ces directives et de toujours <a href='/docs/user_guide/message_building_by_channel/in-app_messages/testing/'>tester vos messages</a> avant de les lancer."
-description: "Ce hub d’accueil couvre les exigences de conception et de contenu pour les trois types de messages in-app, à savoir modal, slideup et plein écran."
+guide_top_text: "Avant de faire preuve de créativité avec nos messages in-app, vous devez connaître certaines directives. Tous les modèles d'envois in-app sont conçus pour afficher des longueurs de texte et des tailles d'images variables sur les appareils modernes. Pour que votre message s'affiche correctement sur tous les téléphones, tablettes et ordinateurs, nous vous recommandons de suivre ces directives et de toujours <a href='/docs/user_guide/message_building_by_channel/in-app_messages/testing/'>tester vos messages</a> avant de les lancer."
+description: "Ce hub d'atterrissage couvre les exigences en matière de conception et de contenu pour les trois types de messages in-app, modale, slideup et fullscreen."
 
 channel:
   - in-app messages
@@ -15,10 +15,10 @@ tools:
 guide_featured_title: "Spécifications par type de message"
 
 guide_featured_list:
-- name: Boîte de dialogue modale
+- name: "Fenêtre modale/boîte de dialogue modale, etc."
   link: /docs/user_guide/message_building_by_channel/in-app_messages/creative_details/modal/
   image: /assets/img/braze_icons/layout-alt-01.svg
-- name: Fenêtre contextuelle
+- name: Contextuel
   link: /docs/user_guide/message_building_by_channel/in-app_messages/creative_details/slideup/
   image: /assets/img/braze_icons/arrow-circle-broken-up.svg
 - name: "Plein écran"
@@ -27,61 +27,61 @@ guide_featured_list:
 
 ---
 
-## Directives relatives au contenu
+## Lignes directrices sur le contenu
 
 ### Texte
 
-Nous recommandons que le corps et les en-têtes de messages in-app soient brefs et concis (une à deux lignes pour les en-têtes, trois pour le corps). Au-delà de trois lignes, un défilement vertical du message doit probablement se faire, et les utilisateurs peuvent ne pas avoir d’engagement avec la totalité du contenu. Le seuil qui déclenche le défilement peut varier en fonction de la taille de l'appareil de l'utilisateur final, du style personnalisé ou de la présence d'images dans les messages, mais trois lignes sont généralement suffisantes.
+Pour les corps de messages in-app ou les en-têtes, nous vous recommandons de rester bref et gentil - une à deux lignes pour les en-têtes et jusqu'à trois pour les corps de messages. Après trois lignes, le message devra probablement défiler verticalement, et les utilisateurs risquent de ne pas s'intéresser à l'ensemble du contenu. Le seuil qui déclenche le défilement peut varier en fonction de la taille de l'appareil de l'utilisateur final, du style personnalisé ou de la présence d'images dans les messages, mais trois lignes sont généralement suffisantes.
 
-Si vous utilisez la dernière génération de messages in-app (Génération 3), vous constatez que les polices sont par défaut celles Sans Serif du système d’exploitation iOS et Android. Les messages in-app Web sont par défaut en Helvetica.
+Si vous utilisez la dernière génération d'envois in-app (génération 3), vous constaterez que les polices sont par défaut Sans Serif du système d'exploitation pour iOS et Android. Les messages web in-app utiliseront par défaut la police Helvetica.
 
 ### Images
 
 Nos lignes directrices pour les images sont plus structurées que celles pour le texte, car nous voulons nous assurer que vos messages s'affichent comme prévu, et magnifiquement sur les téléphones, les tablettes et les ordinateurs de tous les modèles et de toutes les tailles.
 
-En général, Braze recommande d’utiliser des images tenant dans un écran 16:10.
+En général, Braze recommande d'utiliser des images qui s'intègrent dans un écran 16:10.
 
 - **Toutes les images doivent être inférieures à 5 Mo.**
 - Nous n'acceptons que les fichiers de type PNG, JPEG et GIF.
-- Nous vous recommandons d'héberger les images dans la [bibliothèque multimédia]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/) afin de permettre au SDK de Braze de télécharger des ressources à partir de notre réseau de diffusion contenu pour l'affichage des messages hors ligne.
+- Nous vous recommandons d'héberger les images dans la [bibliothèque multimédia]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/) afin de permettre au SDK de Braze de télécharger des ressources depuis notre réseau de diffusion de contenu pour l'affichage des messages hors ligne.
 - Pour les messages en plein écran, suivez nos lignes directrices pour la [zone de sécurité de l'image.]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/fullscreen/#image-safe-zone)
 
-{% alert tip %} Créez des ressources en toute confiance ! Nos modèles d'images de messages in-app et nos superpositions de zones de sécurité sont conçus pour s'adapter aux appareils de toutes tailles. [Télécharger le ZIP de modèles de conception]({% image_buster /assets/download_file/Braze-In-App-Message-Design-Templates.zip %}) {% endalert %}
+{% alert tip %} Créez des ressources en toute confiance ! Nos modèles d'images de messages in-app et nos superpositions de zones de sécurité sont conçus pour s'adapter aux appareils de toutes tailles. [Téléchargez les modèles de conception ZIP]({% image_buster /assets/download_file/Braze-In-App-Message-Design-Templates.zip %}) {% endalert %}
 
-{% tabs %}{% tab Plein écran %}
+{% tabs %}{% tab Fullscreen %}
 
-![Message in-app plein écran sur un écran d’application. Le message plein écran comprend une grande image, un en-tête, le corps du message et deux boutons.]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
+Un message in-app en plein écran envahit l'écran de l'application. Le message en plein écran comprend une grande image, un en-tête, le corps du message et deux boutons.]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
 
-| Disposition | Taille de la ressource | Remarques |
+| Mise en page | Taille des ressources | Notes |
 |--- | --- | --- |
-| Image + Texte | Rapport hauteur/largeur de 6:5<br>Haute résolution 1200 x 1000 px<br> Minimum 600 x 500 px | Un rognage peut se produire sur tous les côtés, mais l’image occupe toujours la moitié supérieure de la fenêtre |
-| Image uniquement | Rapport hauteur/largeur de 3:5<br>Haute résolution 1200 x 2000 px<br> Minimum 600 x 1000 px | Un rognage peut se produire sur les bords gauche et droit des appareils de plus grande taille |
+| Image + texte | Rapport hauteur/largeur 6:5<br>Haute résolution 1200 x 1000 px<br> Minimum 600 x 500 px | L'image peut être recadrée de tous les côtés, mais elle remplira toujours les 50 % supérieurs de la fenêtre de visualisation. |
+| Image seulement | Rapport hauteur/largeur 3:5<br>Haute résolution 1200 x 2000 px<br> Minimum 600 x 1000 px | Un recadrage peut se produire sur les bords gauche et droit sur les appareils plus grands |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-[Plus de détails pour les messages plein écran]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/fullscreen)
+[Plus de détails pour les fullscreens]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/fullscreen)
 
 
 {% endtab %}
-{% tab Fenêtre modale %}
+{% tab Modal %}
 
-![Message in-app modal apparaissant au centre d’une application et d’un site Web comme boîte de dialogue. Le message modal comprend une image, un en-tête, un corps de message et deux boutons.]({% image_buster /assets/img/modal-behavior.gif %}){: style="border:0px;"}
+!message modal in-app apparaissant au centre d'une application et d'un site web sous forme de dialogue. La fenêtre modale comprend une image, un en-tête, un corps de message et deux boutons.]({% image_buster /assets/img/modal-behavior.gif %}){: style="border:0px;"}
 
-| Disposition | Taille de la ressource | Remarques |
+| Mise en page | Taille des ressources | Notes |
 |--- | --- | ------ |
-| Image + Texte | Rapport hauteur/largeur 29:10<br>Haute résolution 1450 x 500 px<br> Minimum 600 x 205 px | Les images hautes seront réduites et centrées horizontalement. Les images larges seront rognées sur les bords gauche et droit. |
-| Image uniquement | Presque n’importe quel rapport hauteur/largeur<br>Haute résolution jusqu'à 1200 x 2000 px<br> Minimum 600 x 600 px | Le message sera redimensionné pour s’adapter à la plupart des tailles d'image. |
+| Image + texte | Rapport hauteur/largeur 29:10<br>Haute résolution 1450 x 500 px<br> Minimum 600 x 205 px | Les images de grande taille seront réduites et centrées horizontalement. Les images larges seront coupées sur les bords gauche et droit. |
+| Image seulement | Presque tous les rapports hauteur/largeur<br>Haute résolution jusqu'à 1200 x 2000 px<br> Minimum 600 x 600 px | Le message sera redimensionné pour s'adapter aux images de la plupart des rapports hauteur/largeur. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 [Détails supplémentaires pour les modaux]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/modal)
 
 {% endtab %}
-{% tab Contextuel %}
+{% tab Slideup %}
 
-![Message in-app slideup apparaissant en bas de l’écran de l’application. Le contextuel comprend une image d'icône et un bref message.]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
+!Message in-app contextuel apparaissant en bas de l'écran de l'application. Le contextuel comprend une image d'icône et un bref message.]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
 
-| Disposition | Taille de la ressource | Remarques |
+| Mise en page | Taille des ressources | Notes |
 |--- | --- | --- |
-| Image + Texte | Format 1:1<br>Haute résolution 150 x 150 px<br> Minimum 50 x 50 px | Les images de différents rapports hauteur/largeur seront insérées dans un conteneur d’images carré, sans rognage. |
+| Image + texte | Rapport hauteur/largeur 1:1<br>Haute résolution 150 x 150 px<br> Minimum 50 x 50 px | Les images de différents rapports hauteur/largeur tiendront dans un conteneur d'image carré, sans recadrage. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 [Plus de détails pour les contextuels]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/slideup)
@@ -89,12 +89,12 @@ En général, Braze recommande d’utiliser des images tenant dans un écran 16:
 {% endtab %}
 {% endtabs %}
 
-### GIF et vidéos
+### GIFs et vidéos
 
-Braze prend actuellement en charge les GIF pour les messages in-app Web (inclus), [Android]({{site.baseurl}}/developer_guide/in_app_messages/gifs/?sdktab=android) et iOS (inclus), étant donné qu'ils ont été activés lors de l'intégration de la plateforme souhaitée. Pour en savoir plus sur la vidéo dans les messages in-app, consultez notre [documentation sur la personnalisation.]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#video)
+Braze prend actuellement en charge les GIF pour les messages in-app Web (inclus), [Android]({{site.baseurl}}/developer_guide/in_app_messages/gifs/?sdktab=android) et iOS (inclus), étant donné qu'ils ont été activés lors de l'intégration souhaitée de la plateforme. Pour en savoir plus sur la vidéo dans les messages in-app, consultez notre [documentation sur la personnalisation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#video).
 
-## Considérations supplémentaires
+## Autres considérations
 
-Les messages in-app de Braze possèdent des spécifications de création globales et individuelles. Pour en savoir plus sur la personnalisation complète des messages in-app, consultez notre page [Personnalisation.]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/) 
+Les messages in-app de Braze ont des spécifications créatives à la fois globales et individuelles. Pour en savoir plus sur la personnalisation complète des messages in-app, consultez notre page [Personnalisation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/).
 
 <br>
