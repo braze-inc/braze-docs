@@ -24,7 +24,7 @@ Para utilizar correctamente esta plantilla, necesitarás lo siguiente:
 
 Supongamos que trabajamos para Decorumsoft, un desarrollador de videojuegos para móviles. Utilizaremos la plantilla de comentarios posteriores a la compra para recabar opiniones sobre el lanzamiento de nuestro último videojuego, Proxy War 3: Guerra de sed. Con esta información, elaboraremos nuestros planes de desarrollo para la expansión Liquid Mirage.
 
-Antes de crear el Canvas, configuramos la integración de [Braze Audience Sync con Google]({{site.baseurl}}/partners/canvas_audience_sync/google_audience_sync/), de modo que podamos añadir datos de usuarios de Braze a Google Audiences para enviar anuncios basados en desencadenantes de comportamiento, segmentación y mucho más.
+Antes de crear el Canvas, configuramos la integración [Braze Audience Sync to Google]({{site.baseurl}}/partners/canvas_audience_sync/google_audience_sync/) para que podamos añadir datos de usuarios de Braze a Google Audiences para enviar anuncios basados en desencadenantes de comportamiento, segmentación y mucho más.
 
 Para acceder a la plantilla de comentarios posteriores a la compra, al crear un nuevo Canvas, selecciona **Utilizar una plantilla de Canvas** > **Plantillas de Braze**. A continuación, junto a **Comentarios posteriores a la compra**, selecciona **Aplicar plantilla**. Ahora, podemos repasar la plantilla para adaptarla a nuestras necesidades.
 
@@ -34,24 +34,24 @@ Vamos a ajustar los detalles del Canvas para reflejar nuestro objetivo.
 
 1. Selecciona **Editar** junto al nombre de la plantilla.
 
-![El título actual y la descripción del Canvas.]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/select_edit_details.png %}){: style="max-width:50%;"}
+\![El título actual y la descripción del Canvas.]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/select_edit_details.png %}){: style="max-width:50%;"}
 
 {:start="2"}
 2\. Actualiza el nombre del Canvas para especificar que es para dirigirse a usuarios recientes.
 3\. Actualiza la descripción para especificar que el Canvas sirve para animar a los usuarios a enviar sus opiniones.
 4\. Añade la etiqueta **Feedback** para filtrarla en la página de inicio de Canvas.
 
-![El nuevo nombre y descripción del Canvas. La nueva descripción dice 'Un Canvas de opinión posterior a la compra para medir el interés por la próxima expansión para PWD3, Liquid Mirage.']({% image_buster /assets/img/canvas_templates/post_purchase_feedback/enter_new_canvas_name.png %}){: style="max-width:50%;"}
+\![El nuevo nombre y descripción del Canvas. La nueva descripción dice Un Canvas de opinión posterior a la compra para medir el interés por la próxima expansión de PWD3, Espejismo Líquido".]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/enter_new_canvas_name.png %}){: style="max-width:50%;"}
 
-### Paso 2: Asignar eventos de conversión
+### Paso 2: Asignar eventos de conversión
 
 A continuación, vamos a asignar nuestros eventos de conversión. Actualiza el **evento de conversión primaria - A** para **Hacer una compra específica** y selecciona **Guerra de poderes**.
 
-!["Asignar eventos de conversión" para el tipo de evento de conversión de la compra del producto del juego Proxy War.]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/select_conversion_event.png %}){: style="max-width:90%;"}
+\!["Asignar eventos de conversión" sección para el tipo de evento de conversión de la compra del producto del juego Guerra de Proxies.]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/select_conversion_event.png %}){: style="max-width:90%;"}
 
 Mantendremos el plazo de conversión de la plantilla en tres días porque queremos dirigirnos a nuestros usuarios más recientes.
 
-### Paso 3: Establecer un horario de entrada
+### Paso 3: Establecer un horario de entrada
 
 1. Mantén el tipo de horario de entrada como **Basado en acciones**.
 2. Establece la **Hora de inicio** de la ventana de entrada en la fecha de lanzamiento del juego.
@@ -63,7 +63,7 @@ Nuestra audiencia objetivo para los comentarios son los usuarios que han comprad
 1. Selecciona nuestro segmento objetivo, "Comprado Proxy War 3", que consiste en usuarios que han comprado el juego.
 2. Selecciona un filtro para incluir a los usuarios que hayan comprado "Proxy War 3" más de "0" veces.
 
-![Un segmento denominado "Comprado Proxy War 3" que segmenta a los usuarios que han comprado el juego.]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/entry_window_segment.png %}){: style="max-width:90%;"}
+\![Un segmento llamado "Comprado Proxy War 3" que segmenta a los usuarios que han comprado el juego.]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/entry_window_segment.png %}){: style="max-width:90%;"}
 
 {: start="3"}
 3\. Actualiza los controles de entrada para que no permitan a los usuarios volver a entrar en el Canvas después de la duración máxima del Canvas.
@@ -74,7 +74,7 @@ Mantendremos la configuración predeterminada de suscripción, para que sólo en
 
 Como queremos ser precavidos con nuestros envíos, seleccionaremos **Habilitar horas tranquilas** para evitar solicitar respuestas entre las 11 de la noche y las 10 de la mañana en la zona horaria de nuestros usuarios, y sólo enviaremos en la siguiente hora disponible.
 
-![Paso "Configuración de envío" dirigido a usuarios suscritos o que han optado por la adhesión voluntaria. Se activan las horas tranquilas.]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/send_settings_with_quiet_hours.png %}){: style="max-width:90%;"}
+\!["Enviar configuración" paso dirigido a usuarios suscritos o con adhesión voluntaria. Las horas tranquilas están activadas.]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/send_settings_with_quiet_hours.png %}){: style="max-width:90%;"}
 
 Para nuestro ejemplo, omitiremos las demás configuraciones (limitación de frecuencia y grupos semilla).
 
@@ -86,7 +86,7 @@ Comenzaremos nuestra personalización pasando por cada componente de mensajería
 
 1. En el constructor Canvas, selecciona el primer paso de Mensaje en el recorrido del usuario.
 2. Selecciona la variante **Correo electrónico**.
-3. Rellena la **Información de envío** con un asunto que fomente las opiniones de los usuarios. 
+3. Rellena la **Información de envío** con un asunto que fomente la opinión de los usuarios. 
 4. Selecciona **Editar mensaje** para sustituir el mensaje de correo electrónico de la plantilla por nuestro mensaje de encuesta de opinión. Esto incluye sustituir los enlaces de cada llamada a la acción para capturar qué opción se selecciona, a la que se hará referencia en el paso Ruta de acción de nuestro recorrido del usuario.
 
 {% alert tip %}
@@ -103,13 +103,13 @@ A continuación, tendremos que rellenar los datos de la variante **Mensaje dentr
 4. Para cada una de las tres opciones del cuestionario, selecciona **Opinión sobre la experiencia** como atributo personalizado. 
 5. Mantendremos los valores de los atributos en el perfil de usuario tal como están, ya que estos valores se alinean con nuestro atributo personalizado.
 
-![Un cuestionario que pregunta al usuario si le ha gustado su reciente compra de Proxy War 3 con tres opciones: "Me encantó", "Estuvo bien" y "No es para mí".]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/survey_example_iam.png %}){: style="max-width:90%;"}
+\![Un cuestionario que pregunta al usuario si le ha gustado su reciente compra de Proxy War 3 con tres opciones: "Me encantó", "Estuvo bien" y "No es para mí".]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/survey_example_iam.png %}){: style="max-width:90%;"}
 
 #### Construye la ruta de acción
 
 Utilizando nuestro atributo personalizado `Experience Feedback` y los valores de atributo de la sección anterior, actualizaremos la ruta de acción de la plantilla para que coincida con nuestro atributo y valores.
 
-![El grupo de "Buenas opiniones" para el paso de la Ruta de acción que incluye a los usuarios que respondieron "Me encantó" a nuestro cuestionario.]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/action_path_good_example.png %}){: style="max-width:90%;"}
+\![El grupo de "Buenas opiniones" para el paso de la ruta de acción que incluye a los usuarios que respondieron "Me encantó" a nuestro cuestionario.]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/action_path_good_example.png %}){: style="max-width:90%;"}
 
 ### Configurar reorientación de anuncios
 
@@ -121,7 +121,7 @@ A continuación, vamos a configurar el webhook para desencadenar posibles casos 
 
 Para el paso de mensajes denominado **Creación de casos de asistencia**, actualizaremos la plantilla para componer un webhook para los usuarios que no estén satisfechos con su compra y quieran un reembolso.
 
-![Un webhook que crea casos de soporte para clientes que tienen un sentimiento negativo y quieren un reembolso por su compra de Proxy War 3.]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/webhook_example.png %}){: style="max-width:90%;"}
+\![Un webhook que crea casos de soporte para clientes que tienen un sentimiento negativo y quieren un reembolso por su compra de Proxy War 3.]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/webhook_example.png %}){: style="max-width:90%;"}
 
 ### Paso 6: Prueba y lanza el Canvas
 

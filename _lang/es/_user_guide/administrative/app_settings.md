@@ -1,15 +1,15 @@
 ---
 nav_title: Configuración
-article_title: "Configuración (antes \"Consola para desarrolladores\")"
+article_title: Configuración (antes Consola para desarrolladores)
 page_order: 3
 layout: dev_guide
 guide_top_header: "Configuración"
-guide_top_text: "Aquí encontrará temas relacionados con la configuración global de su espacio de trabajo."
+guide_top_text: "Aquí puedes encontrar temas relacionados con la configuración global de tu espacio de trabajo."
 
 page_type: landing
-description: "En esta página se enumeran los temas relacionados con la configuración de la aplicación y el espacio de trabajo."
+description: "Esta página de inicio enumera los temas relacionados con la configuración de la aplicación y del espacio de trabajo."
 
-guide_featured_title: "Instalación y pruebas"
+guide_featured_title: "Configuración y pruebas"
 guide_featured_list:
   - name: Gestión del espacio de trabajo
     link: /docs/user_guide/administrative/app_settings/workspaces/
@@ -20,7 +20,7 @@ guide_featured_list:
   - name: Registro de actividad de mensajes
     link: /docs/user_guide/administrative/app_settings/message_activity_log_tab/
     image: /assets/img/braze_icons/list.svg
-  - name: Registro de eventos de usuario
+  - name: Registro de usuarios del evento
     link: /docs/user_guide/administrative/app_settings/event_user_log_tab/
     image: /assets/img/braze_icons/list.svg
   - name: Grupos internos
@@ -38,7 +38,7 @@ guide_menu_list:
   - name: Preferencias de correo electrónico
     link: /docs/user_guide/administrative/app_settings/email_settings/
     image: /assets/img/braze_icons/mail-01.svg
-  - name: Configuración de push
+  - name: Configuración push
     link: /docs/user_guide/administrative/app_settings/push_settings/
     image: /assets/img/braze_icons/settings-01.svg
   - name: Configuración multilingüe
@@ -50,7 +50,7 @@ guide_menu_list:
 
 guide_menu_title2: "Company settings"
 guide_menu_list2:
-  - name: Configuración de administrador
+  - name: Configuración del administrador
     link: /docs/user_guide/administrative/app_settings/company_settings/
     image: /assets/img/braze_icons/tool-02.svg
   - name: Usuarios de la empresa

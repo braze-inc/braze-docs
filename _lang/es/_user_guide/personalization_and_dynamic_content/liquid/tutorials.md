@@ -23,7 +23,7 @@ Cuando hayas terminado con estos tutoriales, serás capaz de:
 | [Recordatorios de carrito de la compra abandonado](#reminders) | operadores, lógica condicional |
 | [Cuenta atrás del evento](#countdown) | variables, filtros de fechas |
 | [Mensaje mensual de cumpleaños](#birthday) | variables, filtros de fechas, operadores |
-| [Promocionar un producto favorito](#favorite-product) | variables, filtros de fechas, ecuaciones, operadores |
+| [Promociona tu producto favorito](#favorite-product) | variables, filtros de fechas, ecuaciones, operadores |
 {: .reset-br-td-1 .reset-br-td-2}
 
 ## Mensajes personalizados para segmentos de usuarios {#segments}
@@ -69,7 +69,7 @@ Thanks for traveling with us! Enjoy your unique discount code: SUMMRTRVLS240.
 ```
 {% endraw %}
 
-{% details Código completo de Liquid %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 Happy summer, {{${first_name} | default: "traveler"}}!
@@ -86,7 +86,7 @@ Thanks for traveling with us! Enjoy your unique discount code: SUMMRTRVLS240.
 
 ## Recordatorios de carrito de la compra abandonado {#reminders}
 
-Enviemos mensajes personalizados para recordar a los usuarios los artículos que han dejado en su cesta. Además, los personalizaremos para que se envíen en función del número de artículos que haya en su cesta, de modo que si tienen más de tres artículos o menos, los enumeraremos todos. Si hay más de tres elementos, enviaremos un mensaje más conciso.
+Enviemos mensajes personalizados para recordar a los usuarios los artículos que han dejado en su cesta. Además, los personalizaremos para que se envíen en función del número de artículos que tengan en su cesta, de modo que si tienen más de tres artículos o menos, los enumeraremos todos. Si hay más de tres elementos, enviaremos un mensaje más conciso.
 
 1. Comprobemos si el carrito del usuario está vacío abriendo una lógica condicional Liquid con el operador `!=`, que significa "no es igual". En este caso, estableceremos la condición de que el atributo personalizado `cart_items` no sea igual a un valor en blanco.
 
@@ -106,7 +106,7 @@ Enviemos mensajes personalizados para recordar a los usuarios los artículos que
 {% endraw %}
 
 {: start="3"}
-3\. Escribe un mensaje que salude al usuario por su nombre de pila o, si no está disponible, utiliza "ahí" como valor predeterminado. Incluye lo que debe indicarse si hay más de tres artículos en el carrito. Como no queremos abrumar al usuario con una lista completa, vamos a enumerar las tres primeras `cart_items`.
+3\. Escribe un mensaje que salude al usuario por su nombre de pila o, si no está disponible, utiliza "allí" como valor predeterminado. Incluye lo que debe indicarse si hay más de tres artículos en el carrito. Como no queremos abrumar al usuario con una lista completa, vamos a enumerar las tres primeras `cart_items`.
 
 {% raw %}
 ```liquid
@@ -136,7 +136,7 @@ Hi {{${first_name} | default: 'there'}}, don't forget to complete your purchase!
 ```
 {% endraw %}
 
-{% details Código completo de Liquid %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% if {{custom_attribute.${cart_items}}} != blank %}
@@ -200,7 +200,7 @@ Get ready! Our Anniversary Sale is in {{ difference_days }} days!
 ```
 {% endraw %}
 
-{% details Código completo de Liquid %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% assign sale_date = {{custom_attribute.${anniversary_date}}} | date: "%s" %}
@@ -270,7 +270,7 @@ We heard {{this_month}} is a special month! Enjoy a 50% discount on your purchas
 ```
 {% endraw %}
 
-{% details Código completo de Liquid %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% assign this_month = 'now' | date: "%B" %}
@@ -397,7 +397,7 @@ We noticed it’s been a while since you last purchased {{custom_attribute.${fav
 ```
 {% endraw %}
 
-{% details Código completo de Liquid %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% if {{custom_attribute.${favorite_product}}} == blank or {{custom_attribute.${last_purchase_date}}} == blank %}
