@@ -16,7 +16,7 @@ alias: /landing_pages/data_tracking/
 
 El SDK de la Web Braze sólo se inicializa cuando un usuario envía un formulario en la página de destino. Antes del envío del formulario, no se recopilan datos personales y el SDK no realiza un seguimiento activo de los usuarios. Una vez completada la inicialización, el SDK no almacena ningún dato en el navegador (como cookies, almacenamiento local u otros).
 
-Cuando se envía un formulario, el SDK recopilará los siguientes datos:
+Cuando se envía un formulario, el SDK recogerá los siguientes datos:
 
 - Evento de presentación del formulario (nombre del evento y hora de presentación)
 - Datos especificados por tu equipo en el formulario (como nombre, correo electrónico y número de teléfono)

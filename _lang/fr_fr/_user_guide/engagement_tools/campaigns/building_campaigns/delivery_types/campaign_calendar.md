@@ -1,47 +1,47 @@
 ---
 nav_title: Calendrier de contenu
-article_title: Calendrier de contenu
+article_title: Calendrier du contenu
 page_order: 4
 tool: Campaigns
 page_type: reference
-description: "Cette page de référence décompose les composants du calendrier de contenu."
+description: "Cette page de référence présente les éléments du calendrier de contenu."
 ---
 
 # Calendrier de contenu
 
-> Le calendrier de contenu offre une vue d'ensemble de haut niveau pour vos prochaines campagnes programmées.
+> Le calendrier de contenu offre un aperçu de haut niveau de vos prochaines campagnes planifiées.
 
-Vous pouvez analyser les données des messages, ainsi que voir et gérer vos campagnes planifiées. Pour ouvrir le calendrier, sélectionnez **Messagerie** > **Calendrier de contenu**.
+Vous pouvez analyser les données d'envoi des messages, ainsi qu'afficher et gérer vos campagnes planifiées. Pour ouvrir le calendrier, sélectionnez **Messagerie** > **Calendrier de contenu.**
 
-## Analyse des messages
+## Analyse/analytique des messages (si utilisés comme adjectifs)
 
-La section d'analyse des messages contient deux rapports pour vos campagnes programmées récentes et à venir :
+La section analyse/analytique des messages contient deux rapports pour vos campagnes planifiées récentes et à venir :
 
-- **Types de messages à venir :** Le nombre de campagnes de notifications push, d’e-mail et de messages in-app planifiées au cours des 14 prochains jours.
-- **Messages envoyés :** Le nombre de messages envoyés et ouverts au cours des 14 derniers jours.
+- **Types d'envois à venir :** Le nombre de campagnes de push, d'e-mails et d'envois de messages in-app planifiés dans les 14 prochains jours.
+- **Envois de messages :** Nombre de messages envoyés et ouverts au cours des 14 derniers jours.
 
-Vous pouvez afficher les analyses de messagerie pour un jour spécifique dans un rapport en plaçant votre curseur sur ce jour dans le rapport.
+Vous pouvez consulter les analyses/analytiques des messages pour un jour spécifique dans un rapport en plaçant votre curseur sur ce jour dans le rapport.
 
-![Les graphiques 'Types de messages à venir' et 'Messages envoyés' dans l'analyse des messages.]({% image_buster /assets/img/campaign_calendar/content_calendar_messaging_analytics.png %})
+Les graphiques "Types de messages à venir" et "Messages envoyés" dans Messaging Analytics.]({% image_buster /assets/img/campaign_calendar/content_calendar_messaging_analytics.png %})
 
-Pour télécharger une copie de vos données, sélectionnez <i class="fa-solid fa-bars" style="color: #2e7487;"></i> **menu contextuel du graphique**, puis choisissez votre format de fichier préféré.
+Pour télécharger une copie de vos données, sélectionnez <i class="fa-solid fa-bars" style="color: #2e7487;"></i> **Chart context menu**, puis choisissez le format de fichier de votre choix.
 
 ## Envoyer le calendrier
 
-Le calendrier d'envoi affiche toutes vos campagnes programmées pour le mois en cours.
+Le calendrier d'envoi affiche toutes vos campagnes planifiées pour le mois en cours.
 
 {% alert note %}
-Les messages intégrés à l'application sont toujours basés sur des actions, vous ne verrez donc aucune campagne de messages intégrés à l'application dans le calendrier d'envoi.
+Les messages in-app sont toujours basés sur des actions, vous ne verrez donc aucune campagne de messages in-app dans le calendrier d'envoi.
 {% endalert %}
 
-Vous pouvez changer le mois en sélectionnant <i class="fa-solid fa-chevron-left" style="color: #2e7487;"></i> **Voir le mois précédent** ou <i class="fa-solid fa-chevron-right" style="color: #2e7487;"></i> **Voir le mois suivant**. Pour revenir au mois en cours, sélectionnez **Aujourd'hui**.
+Vous pouvez changer de mois en sélectionnant <i class="fa-solid fa-chevron-left" style="color: #2e7487;"></i> **Voir le mois précédent** ou <i class="fa-solid fa-chevron-right" style="color: #2e7487;"></i> **Voir le mois suivant.** Pour revenir au mois en cours, sélectionnez **Aujourd'hui.**
 
-![Le calendrier d'envoi affichant toutes les campagnes programmées pour le mois en cours.]({% image_buster /assets/img/campaign_calendar/content_calendar_sends.png %})
+Le calendrier d'envoi affiche toutes les campagnes planifiées pour le mois en cours.]({% image_buster /assets/img/campaign_calendar/content_calendar_sends.png %})
 
-Chaque couleur sur le calendrier représente un type de campagne programmé différent :
+Chaque couleur du calendrier représente un type de campagne planifiée différent :
 
-- **Rouge:** Campagnes planifiées à canal unique.
-- **Bleu:** Campagnes programmées multicanal.
-- **Or:** Campagnes arrêtées, qui sont incluses dans le calendrier à des fins de référence historique.
+- **Rouge :** Campagnes planifiées à canal unique.
+- **Bleu :** Campagnes planifiées multicanal.
+- **L'or :** Les campagnes interrompues, qui sont incluses dans le calendrier à titre de référence historique.
 
-Vous pouvez consulter ou modifier vos campagnes en sélectionnant la campagne dans le calendrier. Pour plus d'informations, voir [Gérer les campagnes]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns).
+Vous pouvez afficher ou modifier vos campagnes en sélectionnant la campagne dans le calendrier. Pour plus d'informations, voir [Gestion des campagnes]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns).

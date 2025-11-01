@@ -1,10 +1,10 @@
 ---
-nav_title: Utilización del recuento de insignias
-article_title: Utilización del recuento de insignias
+nav_title: Utilizar el recuento de señales
+article_title: Utilizar el recuento de señales
 page_order: 8
 
 page_type: reference
-description: "En este artículo se explica cómo utilizar el recuento de insignias de iOS para volver a captar a los usuarios que no han recibido una notificación push o que han desactivado las notificaciones push en primer plano."
+description: "Este artículo trata sobre el uso del recuento de señales de iOS para reactivar la interacción de los usuarios que no han notado un push o que han desactivado las notificaciones push en primer plano."
 platform: iOS
 channel: 
 - push
@@ -12,33 +12,33 @@ channel:
 
 ---
 
-# Utilizar el recuento de insignias
+# Utilizar el recuento de señales
 
-> El recuento de insignias de iOS muestra el número de notificaciones no leídas dentro de tu aplicación, tomando la forma de un círculo rojo en la esquina superior derecha del icono de la aplicación. En los últimos años, las insignias se han convertido en un medio eficaz de reactivación de la interacción de los usuarios de aplicaciones.
+> La cuenta de señales de iOS muestra el número de notificaciones no leídas dentro de tu aplicación, tomando la forma de un círculo rojo en la esquina superior derecha del icono de la aplicación. En los últimos años, las señales se han convertido en un medio eficaz de reactivación de la interacción de los usuarios de aplicaciones.
 
-El recuento de insignias puede utilizarse para volver a captar a los usuarios que no hayan recibido una notificación push o que hayan desactivado las notificaciones push en primer plano. Del mismo modo, puede utilizarse para notificar a los usuarios los mensajes que no han visto, como las actualizaciones de la aplicación.
+El recuento de señales puede utilizarse para reactivar la interacción de tus usuarios que no hayan notado un push, o que hayan desactivado las notificaciones push en primer plano. Del mismo modo, puede utilizarse para notificar a tus usuarios los mensajes que no han visto, como las actualizaciones dentro de la aplicación.
 
-## Recuento de insignias con Braze
+## Recuento de señales con Braze
 
-Puedes especificar el recuento de señales deseado cuando redactes una notificación push a través del panel de Braze. Esto puede establecerse en un atributo del usuario con mensajes personalizados, lo que permite una lógica infinitamente personalizable. Si desea enviar un push silencioso que actualice el recuento de insignias sin molestar al usuario, añada el indicador "Contenido disponible" a su push y deje vacío el contenido de su mensaje.
+Puedes especificar el recuento de señales deseado cuando redactes una notificación push a través del panel de Braze. Puede establecerse como un atributo del usuario con mensajería personalizada, lo que permite una lógica infinitamente personalizable. Si deseas enviar un push silencioso que actualice el recuento de señales sin molestar al usuario, añade la bandera "Contenido disponible" a tu push y deja vacío el contenido de su mensaje.
 
 {% alert note %}
-¿Te preguntas cómo configurar el recuento de insignias para Android? Android gestiona automáticamente el badging de aplicaciones para push, por lo que no hay ajustes de personalización para el badging en Braze.
+¿Te preguntas cómo configurar el recuento de señales para Android? Android gestiona automáticamente las señales de las aplicaciones para push, por lo que no hay configuraciones personalizadas para las señales en Braze.
 {% endalert %}
 
-### Eliminar el recuento de insignias
+### Eliminar el recuento de señales
 
-Establezca el recuento de insignias en 0 o "" para eliminar el recuento de insignias del icono de la aplicación. Braze también borrará automáticamente la insignia cuando se reciba una notificación push mientras la aplicación está en primer plano.
+Establece el recuento de señales en 0 o "" para eliminar el recuento de señales del icono de la aplicación. Braze también borrará automáticamente la señal cuando se reciba una notificación push mientras la aplicación está en primer plano.
 
 ## Buenas prácticas
 
-Para optimizar el poder de reactivación de la interacción de las insignias, es crucial que configures los ajustes de estas de forma que simplifiquen al máximo la experiencia del usuario.
+Para optimizar el poder de reactivación de la interacción de las señales, es crucial que configures los ajustes de tus señales de forma que simplifiquen al máximo la experiencia del usuario.
 
-### Mantén bajo el número de insignias
-Los estudios demuestran que, cuando el número de insignias supera los dos dígitos, los usuarios suelen perder interés en las actualizaciones y a menudo dejan de utilizar la aplicación.
+### Mantén bajo el número de señales
+Los estudios demuestran que, cuando el número de señales supera los dos dígitos, los usuarios suelen perder interés en las actualizaciones y a menudo dejan de utilizar la aplicación.
 
-> Puede haber excepciones a esta regla dependiendo de la naturaleza de tu aplicación (por ejemplo, aplicaciones de correo electrónico y mensajería en grupo).
+> Puede haber excepciones a esta regla dependiendo de la naturaleza de tu aplicación (por ejemplo, correo electrónico y aplicaciones de mensajería en grupo).
 
-### Limitar lo que puede representar un recuento de insignias
-A la hora de colocar una placa, conviene que las notificaciones sean lo más claras y directas posible. Al limitar el número de cosas que puede representar una notificación de insignia, puede proporcionar a sus usuarios una sensación de familiaridad con las funciones y actualizaciones de su aplicación.
+### Limitar las cosas que puede representar un recuento de señales
+Cuando pongas una señal, querrás que las notificaciones sean lo más claras y directas posible. Limitando el número de cosas que puede representar una notificación de señal, puedes proporcionar a tus usuarios una sensación de familiaridad con las características y actualizaciones de tu aplicación.
 
