@@ -10,9 +10,9 @@ page_type: landing
 tool: 
 - Templates
 - Media
-description: "Cette page d’accueil regroupe plusieurs articles sur les modèles et médias. Vous trouverez ici des ressources sur la bibliothèque multimédia et vous aider à gérer vos modèles, à télécharger des images, à créer des blocs de contenu, etc."
+description: "Cette page d'atterrissage accueille les modèles et les médias. Vous y trouverez des ressources sur la bibliothèque multimédia, la gestion des modèles, le téléchargement d'images, la création de blocs de contenu, etc."
 
-guide_featured_title: "Section Articles"
+guide_featured_title: "Articles de section"
 guide_featured_list:
   - name: Bibliothèque multimédia
     link: /docs/user_guide/engagement_tools/templates_and_media/media_library/
@@ -20,18 +20,18 @@ guide_featured_list:
   - name: Blocs de contenu
     link: /docs/user_guide/engagement_tools/templates_and_media/content_blocks/
     image: /assets/img/braze_icons/columns-01.svg
-  - name: Modèles de canvas
+  - name: Modèles de canevas
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_templates/#available-braze-templates
     image: /assets/img/braze_icons/palette.svg
   - name: Gestion des modèles
     link: /docs/user_guide/engagement_tools/templates_and_media/managing_templates/
     image: /assets/img/braze_icons/archive.svg
-  - name: Foire aux questions
+  - name: Questions fréquemment posées
     link: /docs/user_guide/engagement_tools/templates_and_media/faqs/
     image: /assets/img/braze_icons/annotation-question.svg
 ---
 
-## À propos des modèles et des médias
+## À propos des modèles et médias
 
 Vous pouvez utiliser et gérer des modèles et du contenu créatif dans la section **Modèles** pour les fonctionnalités suivantes :
 

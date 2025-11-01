@@ -153,6 +153,43 @@ Example Output:
 {% endtab %}
 {% endtabs %}
 
+### Brand guidelines
+
+You can select [brand guidelines]({{site.baseurl}}/user_guide/administrative/app_settings/brand_guidelines) for your agent to adhere to in its responses. For example, if you want your agent to generate SMS copy to encourage users to sign up for a gym membership, you can use this field to reference your predefined bold, motivational guideline.
+
+### Catalogs
+
+Select from a list of catalogs for your agent to reference and further personalize your message.
+
+{% alert note %}
+Currently, for an agent to be able to reference a desired column of a catalog, that column must exist in at least one [selection]({{site.baseurl}}/user_guide/data/activation/catalogs/selections) of the catalog.
+{% endalert %}
+
+### Output format
+
+Use the **Output format** field to structure the agent's output by providing how to organize and define the output using JSON. Let's say you want to collect user feedback for their most recent dining experience at your restaurant chain. You can insert the following JSON to return a data object that includes a sentiment variable and reasoning variable.
+
+```json
+{
+  "type": "object",
+  "properties": {
+    "sentiment": {
+      "type": "string"
+    },
+    "reasoning": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "sentiment",
+    "reasoning"
+  ]
+}
+```
+
+{% alert note %}
+Output formats aren't currently supported by Claude AI. If you're using an Anthropic key, we recommend manually adding the structure to the agent prompt.
+{% endalert %}
 
 #### Testing your agent  
 
@@ -171,3 +208,8 @@ Review the output with a critical eye. Consider the following questions:
 
 If something feels off, update the agent’s configuration and test again. Run a few different inputs to see how the agent adapts across scenarios, especially edge cases like no data or invalid responses.
 
+#### Monitoring your agent
+
+In the **Logs** tab of your agent, you can monitor actual agent calls that occur in your Canvases and catalogs. This includes information such as the timestamp, calling location, duration, and token count. Select **View** for a specific agent call to see the input, output, and user ID.
+
+![Logs for an agent City Trends and Recommendation Booking, which include when and where the agent has been called. The details panel shows the input prompt, output response, and an associated user ID.]( {% image_buster /assets/img/ai_agent/agent_logs.png %} )

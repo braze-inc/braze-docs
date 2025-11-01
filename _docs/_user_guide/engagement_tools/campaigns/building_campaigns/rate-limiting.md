@@ -110,10 +110,6 @@ When sending a multi-channel campaign with a speed rate limit, each channel is s
 - Users could receive the different channels at different times, and it is not predictable which channel they will get first. 
     - For example, if you send a campaign that contains an email and an SMS, you may have 10,000 users with valid phone numbers and 50,000 users with valid email addresses. If you set the campaign to send 100 messages per minute (a slow rate limit for the campaign size), a user could receive the SMS in the first batch of sends and the email in the last batch of sends, almost nine hours later.
 
-#### Multi-platform push campaigns
-
-For push campaigns delivering on multiple platforms, the selected rate limit will be equally distributed across platforms. A push campaign leveraging Android and iOS with a 10,000 rate-limit per minute will equally distribute the 10,000 messages across the two platforms.
-
 #### Canvas delivery speed rate limiting {#canvas-delivery-speed}
 
 When sending a Canvas with a speed rate limit, the rate limit is shared between channels. This means the total number of messages sent per minute from the Canvas will not exceed the rate limit. For example, if your Canvas has a rate limit of 10,000 per minute and uses email and SMS, Braze will send a total of 10,000 messages per minute across email and SMS.

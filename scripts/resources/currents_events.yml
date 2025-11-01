@@ -445,7 +445,7 @@ event_documentation:
         | Canvas User Update Step | When a user is updated by the Canvas user update step |
         {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
   users.behaviors.subscription.GlobalStateChange:
-    description: This event occurs when Braze receives a request to update the global subscription state of the user, even if the request doesn't alter the current subscription state for the user.
+    description: This event occurs when Braze receives a request to update the global subscription state of the user.
     api_tags:
     - Subscription
     property_details:

@@ -210,7 +210,7 @@ This event is not fired when the user actually uninstalls the app, as that's imp
 Subscription
 {% endapitags %}
 
-This event occurs when Braze receives a request to update the global subscription state of the user, even if the request doesn't alter the current subscription state for the user.
+This event occurs when Braze receives a request to update the global subscription state of the user.
 
 {% tabs %}
 {% tab Amplitude %}
@@ -436,7 +436,7 @@ Subscription
 This event occurs when the subscription state of a user in a subscription group changes.
 
 {% alert important %}
-Subscription groups are only available for email, SMS, and WhatsApp channels at this time.
+Subscription groups are only available for email, SMS, RCS, and WhatsApp channels at this time.
 {% endalert %}
 
 {% tabs %}
@@ -6956,7 +6956,7 @@ This event occurs when a user views an in-app message.
 {% endapi %}
 
 {% api %}
-## Abort events {#abort-events}
+## LINE Abort events {#line-abort-events}
 
 {% apitags %}
 LINE, Abort
@@ -7156,7 +7156,7 @@ This event occurs when a scheduled LINE message cannot be delivered, before send
 {% endapi %}
 
 {% api %}
-## Click events {#click-events}
+## LINE Click events {#line-click-events}
 
 {% apitags %}
 LINE, Clicks
@@ -7565,7 +7565,7 @@ This event occurs when a LINE message is received from a user.
 {% endapi %}
 
 {% api %}
-## Send events {#send-events}
+## LINE Send events {#line-send-events}
 
 {% apitags %}
 LINE, Sends
@@ -9104,7 +9104,7 @@ This event occurs when Braze processes a push message for a user, communicating 
 {% endapi %}
 
 {% api %}
-## Abort  events {#abort--events}
+## RCS Abort events {#rcs-abort-events}
 
 {% apitags %}
 RCS, Abort
@@ -9280,7 +9280,7 @@ This event is created when an RCS send is interrupted due to an error detected w
 {% endapi %}
 
 {% api %}
-## Click events {#click-events}
+## RCS Click events {#rcs-click-events}
 
 {% apitags %}
 RCS, Clicks
@@ -9498,7 +9498,7 @@ An event that is created when the user interacts with an RCS message in a way th
 {% endapi %}
 
 {% api %}
-## Delivery events {#delivery-events}
+## RCS Delivery events {#rcs-delivery-events}
 
 {% apitags %}
 RCS, Delivery
@@ -9693,7 +9693,7 @@ This event is created when an RCS message is successfully delivered to a user's 
 {% endapi %}
 
 {% api %}
-## Inbound Receive events {#inbound-receive-events}
+## RCS Inbound Received events {#rcs-inbound-received-events}
 
 {% apitags %}
 RCS, Inbound Received
@@ -9885,7 +9885,7 @@ This event is created when Braze receives an RCS message that originates from th
 {% endapi %}
 
 {% api %}
-## Read events {#read-events}
+## RCS Read events {#rcs-read-events}
 
 {% apitags %}
 RCS, Read
@@ -10053,7 +10053,7 @@ This event is created when a user opens an RCS message on their device, indicati
 {% endapi %}
 
 {% api %}
-## Rejection events {#rejection-events}
+## RCS Rejection events {#rcs-rejection-events}
 
 {% apitags %}
 RCS, Rejection
@@ -10262,7 +10262,7 @@ An event that is created when an RCS message fails to be delivered to a user's m
 {% endapi %}
 
 {% api %}
-## Send events {#send-events}
+## RCS Send events {#rcs-send-events}
 
 {% apitags %}
 RCS, Sends

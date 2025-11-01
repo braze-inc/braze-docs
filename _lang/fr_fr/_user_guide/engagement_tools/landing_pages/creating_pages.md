@@ -19,7 +19,7 @@ Pour accéder au générateur de pages d'atterrissage, vous devez [disposer de c
 
 Accédez à l'option **Messages** > **Pages d'atterrissage**, puis sélectionnez **Créer une page d'atterrissage**. Vous pouvez également sélectionner le nom d'une page d'atterrissage existante pour la dupliquer ou y apporter des modifications.
 
-![La section des pages d'atterrissage dans le tableau de bord de Braze.]({% image_buster /assets/img/landing_pages/landing-pages-homepage.png %})
+\![La section des pages d'atterrissage dans le tableau de bord de Braze.]({% image_buster /assets/img/landing_pages/landing-pages-homepage.png %})
 
 ### Étape 2 : Entrez les détails de la page
 
@@ -47,11 +47,11 @@ Nous vous suggérons de suivre ces bonnes pratiques :
 
 Si vous ne l'avez pas encore fait, sélectionnez **Enregistrer comme brouillon**. Pour commencer à personnaliser votre page, sélectionnez **Modifier la page d'atterrissage**. L'éditeur par glisser-déposer est préchargé avec un modèle par défaut que vous pouvez personnaliser pour l'adapter à votre cas d'utilisation.
 
-![Un exemple de page d'atterrissage créée dans l'éditeur par glisser-déposer.]({% image_buster /assets/img/landing_pages/template.png %})
+Un exemple de page d'atterrissage créée dans l'éditeur par glisser-déposer.]({% image_buster /assets/img/landing_pages/template.png %})
 
 L'éditeur utilise deux types de composants pour la composition des pages d'atterrissage : les blocs de base et les blocs de formulaire. Tous les blocs doivent être placés en rangée.
 
-![La section 'Créer' contenant les 'Lignes' et les 'Blocs de formulaires'.]({% image_buster /assets/img/landing_pages/dnd.png %}){: style="max-width:35%;"}
+La section 'Créer' contenant les 'Lignes' et les 'Blocs de formulaires'.]({% image_buster /assets/img/landing_pages/dnd.png %}){: style="max-width:35%;"}
 
 {% tabs %}
 {% tab Basic blocks %}
@@ -79,7 +79,7 @@ Vous pouvez utiliser ces blocs pour ajouter du contenu et personnaliser la mise 
 
 Vous pouvez utiliser ces blocs pour créer un formulaire qui relie les données soumises par l'utilisateur à son profil dans Braze. Gardez à l'esprit que si vous utilisez des blocs de formulaire, vous devrez également créer une page d'atterrissage supplémentaire pour l'état de confirmation.
 
-![Un bloc de formulaire qui enregistre un nouveau client et lui envoie un code de réduction par e-mail.]({% image_buster /assets/img/landing_pages/form.png %}){: style="max-width:70%;"}
+Un bloc de formulaire qui enregistre un nouveau client et lui envoie un code de réduction par e-mail.]({% image_buster /assets/img/landing_pages/form.png %}){: style="max-width:70%;"}
 
 | Type de bloc     | Description |
 |---------------|-------------|
@@ -104,7 +104,7 @@ Vous pouvez définir des styles à appliquer à tous les blocs de composants per
 
 Nous vous recommandons de définir les styles au niveau du conteneur de la page avant de personnaliser les styles au niveau du bloc. Vous pouvez également ajouter une image de fond pour l'ensemble de la page.
 
-![La section "Conteneur de page" contient des options permettant de personnaliser les images d'arrière-plan, les couleurs, les détails des bordures et le style personnalisé du contenu.]({% image_buster /assets/img/landing_pages/page_container.png %}){: style="max-width:40%;"}
+La section "Conteneur de page" contient des options permettant de personnaliser les images d'arrière-plan, les couleurs, les détails des bordures et le style personnalisé du contenu.]({% image_buster /assets/img/landing_pages/page_container.png %}){: style="max-width:40%;"}
 
 #### Adapté aux appareils des utilisateurs
 
@@ -112,7 +112,7 @@ Vous pouvez rendre votre page d'atterrissage réactive à la taille de l'apparei
 
 Lorsque cette option est activée, vous pouvez également inverser la pile de colonnes pour contrôler l'ordre vertical du contenu multi-colonnes sur les écrans de petite taille. Cela permet aux pages d'avoir un meilleur aspect et une meilleure convivialité sur mobile, sans code personnalisé.
 
-![Le basculeur "Empiler verticalement sur les petits écrans" dans la section "Personnaliser les colonnes".]({% image_buster /assets/img/landing_pages/device_responsive_toggle.png %}){: style="max-width:50%;"}
+\![Le basculeur "Empiler verticalement sur les petits écrans" dans la section "Personnaliser les colonnes".]({% image_buster /assets/img/landing_pages/device_responsive_toggle.png %}){: style="max-width:50%;"}
 
 #### Champs facultatifs et obligatoires
 
@@ -120,7 +120,7 @@ Vous pouvez choisir si un champ de formulaire est obligatoire ou facultatif. Les
 
 Par exemple, pour imposer la saisie du consentement avant l'envoi du formulaire, vous pouvez activer l'option **Saisie** d'un champ obligatoire pour définir une case à cocher obligatoire avec le texte d'exclusion de responsabilité approprié.
 
-![Un champ de formulaire à cases à cocher dont la case "Champ de saisie obligatoire" est basculée.]({% image_buster /assets/img/landing_pages/lp-optional-required.png %}){: style="max-width:50%;"}
+Un champ de formulaire à cases à cocher dont la case "Champ de saisie obligatoire" est basculée.]({% image_buster /assets/img/landing_pages/lp-optional-required.png %}){: style="max-width:50%;"}
 
 ### Étape 4 : Créer une page de confirmation (facultatif)
 
@@ -142,7 +142,7 @@ Si votre page de confirmation s'ouvre dans un nouvel onglet, un utilisateur qui 
 
 Vous pouvez prévisualiser votre page d'atterrissage dans l'onglet **Aperçu de** l'éditeur. Après avoir enregistré votre page d'atterrissage en tant que brouillon, vous pouvez visiter l'URL en allant dans **Pages d'atterrissage** et en sélectionnant **Copier l'URL** à côté de votre page d'atterrissage. Vous pouvez également partager l'URL avec des collaborateurs.
 
-![Une page d'atterrissage avec le menu ouvert pour montrer l'option "Copier l'URL".]({% image_buster /assets/img/landing_pages/copy-url.png %})
+Une page d'atterrissage avec le menu ouvert pour montrer l'option "Copier l'URL".]({% image_buster /assets/img/landing_pages/copy-url.png %})
 
 Avant de publier, assurez-vous que
 
@@ -160,13 +160,13 @@ Utilisez les modèles de page d'atterrissage pour créer des modèles pour vos p
 
 Vous pouvez prévisualiser, archiver, modifier ou dupliquer des modèles de pages d'atterrissage. Lorsque vous modifiez une page d'atterrissage, vous pouvez également enregistrer votre page d'atterrissage en tant que modèle, apporter des modifications au modèle ou supprimer le contenu de la page d'atterrissage. 
 
-![Un menu déroulant avec des options permettant d'enregistrer, de modifier et de supprimer une page d'atterrissage.]({% image_buster /assets/img/landing_pages/manage-lp-template.png %}){: style="max-width:60%;"}
+Un menu déroulant avec des options permettant d'enregistrer, de modifier et de supprimer une page d'atterrissage.]({% image_buster /assets/img/landing_pages/manage-lp-template.png %}){: style="max-width:60%;"}
 
 ## Visualisation de l'analyse/analytique (si utilisée anjective)
 
 Pour analyser l'efficacité de votre page d'atterrissage, allez dans **Messagerie** > **Pages d'atterrissage**, puis sélectionnez une page d'atterrissage que vous avez publiée. Ici, vous pouvez suivre le nombre de pages vues, de clics sur les pages, de soumissions de pages et les taux de soumission pour votre page d'atterrissage.
 
-![La section analyse/analytique d'une page d'atterrissage.]({% image_buster /assets/img/landing_pages/analytics.png %})
+La section analyse/analytique d'une page d'atterrissage.]({% image_buster /assets/img/landing_pages/analytics.png %})
 
 ## Traitement des erreurs de soumission de formulaire {#handling-form-submission-errors}
 

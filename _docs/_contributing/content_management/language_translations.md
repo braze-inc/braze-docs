@@ -35,7 +35,7 @@ Here's a few examples of the kind of patterns skip for translation:
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {% alert tip %}
-For the full list of patterns, see [`translation_regex.json`](https://github.com/braze-inc/braze-docs/blob/develop/scripts/tests/utils/translation_regex.json) in GitHub.
+For the full list of patterns, see [`translation_regex.json`](https://github.com/braze-inc/braze-docs/blob/develop/scripts/utils/translation_regex.json) in GitHub.
 {% endalert %}
 
 ## Updating Phrase regular expressions
@@ -44,7 +44,7 @@ Phrase TMS supports only Java regular expressions, and you must enter the list o
 
 {% raw %}
 ```plaintext
-(?:^|\n)[ \t]*([`~]{3,})[^\n]*\n[\s\S]*?\n(?:^|\n)[ \t]*\1[ \t]*(?=\n|$)|(?<!\\)(`+)[^\r\n]*?\1|\{:[^}]+\}|<[^>]+>|#(?:[A-Fa-f0-9]{6})|\b[A-Za-z]++(?:\.[A-Za-z0-9]++)++\b|\]\([^)]*\)|\{#[^}]*\}|\{%-?\s*[\w-]+(?:%(?!})|[^%])*?-?%}|\{\{-?\s*[^}]*?-?}}|(?<!\S)\S*_\S*(?!\S)
+(?:^|\n)[ \t]*([`~]{3,})[^\n]*\n[\s\S]*?\n(?:^|\n)[ \t]*\1[ \t]*(?=\n|$)|(?<!\\)(`+)[^\r\n]*?\1|\{:[^}]+\}|<[^>]+>|#(?:[A-Fa-f0-9]{6})|\b[A-Za-z]++(?:\.[A-Za-z0-9]++)++\b|!\[|\]\([^)]*\)|\{#[^}]*\}|\{%-?\s*[\w-]+(?:%(?!})|[^%])*?-?%}|\{\{-?\s*[^}]*?-?}}|(?<!\S)\S*_\S*(?!\S)
 ```
 {% endraw %}
 

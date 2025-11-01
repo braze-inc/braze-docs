@@ -43,34 +43,41 @@
   },
   {
     "order": 7,
+    "name": "markdown_image_open",
+    "description": "Match only the opening of a Markdown image syntax: `![`",
+    "type": "markdown",
+    "regex": "!\\["
+  },
+  {
+    "order": 8,
     "name": "markdown_link_target",
     "description": "Match the target URL portion of markdown links ](...)",
     "type": "markdown",
     "regex": "\\]\\([^)]*\\)"
   },
   {
-    "order": 8,
+    "order": 9,
     "name": "curly_comment_blocks",
     "description": "Match curly comment markers of the form {#...}",
     "type": "markdown",
     "regex": "\\{#[^}]*\\}"
   },
   {
-    "order": 9,
+    "order": 10,
     "name": "liquid_tags",
     "description": "Match Liquid tags {%...%} including optional trim hyphens",
     "type": "liquid",
     "regex": "\\{%-?\\s*[\\w-]+(?:%(?!})|[^%])*?-?%}"
   },
   {
-    "order": 10,
+    "order": 11,
     "name": "liquid_outputs",
     "description": "Match Liquid outputs {{...}} including optional trim hyphens",
     "type": "liquid",
     "regex": "\\{\\{-?\\s*[^}]*?-?}}"
   },
   {
-    "order": 11,
+    "order": 12,
     "name": "underscore_tokens",
     "description": "Match any contiguous token that contains at least one underscore and no spaces",
     "type": "text",

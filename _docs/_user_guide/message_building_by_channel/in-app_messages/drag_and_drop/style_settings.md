@@ -74,6 +74,12 @@ You can also slide to adjust the size of existing columns.
 
 As a best practice, format your row and column properties before formatting any of the blocks inside the rows. There are many places where you can adjust the spacing and alignment, so starting from the foundation makes it easier to edit as you go.
 
+#### Background image
+
+You can add a background image to a row in the **Row properties** panel. Toggle on **Background image**, and then provide an image URL or select an image from the [media library]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/). Finally, configure your alt text, size, position, and whether the image repeats to create patterns across the row.
+
+![A row background image of a pizza that has a horizontal repeat pattern.]({% image_buster /assets/img_archive/background_row.png %})
+
 ### Blocks
 
 Blocks represent different types of content you can use in your message. Drag one inside an existing row segment, and it will auto-adjust to the cell width.

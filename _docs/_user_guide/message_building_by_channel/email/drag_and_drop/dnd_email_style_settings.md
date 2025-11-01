@@ -69,7 +69,7 @@ You can add up to 17 fallback fonts. The first fallback font selected will be th
 
 ## Title styling
 
-Here, you can adjust the styles of your email titles by editing the font size, font color, and text alignment. This applies to the main header and secondary header. 
+Here, you can adjust the styles of your email titles by editing the font size, font color, and text alignment. 
 
 ![Title Styling settings for a center-aligned main header and secondary header.]({% image_buster /assets/img_archive/dnd_title_styling.png %})
 
