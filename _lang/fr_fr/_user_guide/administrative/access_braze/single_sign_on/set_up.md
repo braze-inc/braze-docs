@@ -1,48 +1,48 @@
 ---
-nav_title: Configuration Authentification unique (SSO) SAML
-article_title: Configuration Authentification unique (SSO) SAML
+nav_title: "Configuration de l'authentification unique SAML (SSO)"
+article_title: "Configuration de l'authentification unique SAML (SSO)"
 page_order: 0
 page_type: tutorial
-description: "Cet article vous expliquera comment activer l’authentification unique SAML pour votre compte Braze."
+description: "Cet article vous explique comment activer l'authentification unique SAML pour votre compte Braze."
 
 ---
 
-# Le fournisseur de services (SP) a initié une connexion
+# Identifiant initié par le fournisseur de services (SP)
 
 > Cet article vous explique comment activer l'authentification unique SAML pour votre compte Braze et comment obtenir une trace SAML.
 
-## Conditions
+## Exigences
 
-Lors de la configuration, il vous sera demandé de fournir une URL de connexion et une URL d’Assertion Consumer Service (ACS).  
+Lors de la configuration, il vous sera demandé de fournir une URL de connexion et une URL d'Assertion Consumer Service (ACS).  
 
-| Condition | Détails |
+| Exigence | Détails |
 |---|---|
-| URL de l’Assertion Consumer Service (ACS) | `https://<SUBDOMAIN>.braze.com/auth/saml/callback` <br><br> Pour les domaines de l'Union européenne, l'URL ASC est `https://<SUBDOMAIN>.braze.eu/auth/saml/callback`. <br><br> Pour certains IdP, il peut également s'agir de l'URL de réponse, de l'URL de connexion, de l'URL d'audience ou de l'URI d'audience. |
-| Entity ID | `braze_dashboard` |
-| RelayState API key | Sélectionnez **Paramètres** > **Clés API** et créez une clé API avec les autorisations `sso.saml.login`, puis saisissez la clé API générée comme paramètre `RelayState` dans votre IdP. Pour plus de détails, reportez-vous à la section [Configuration de votre RelayState](#setting-up-your-relaystate). |
+| URL du service consommateur d'assertions (ACS) | `https://<SUBDOMAIN>.braze.com/auth/saml/callback` <br><br> Pour les domaines de l'Union européenne, l'URL ASC est `https://<SUBDOMAIN>.braze.eu/auth/saml/callback`. <br><br> Pour certains IdP, il peut également s'agir de l'URL de réponse, de l'URL de connexion, de l'URL de l'audience ou de l'URI de l'audience. |
+| ID de l'entité | `braze_dashboard` |
+| Clé API de RelayState | Allez dans **Paramètres** > **Clés API** et créez une clé API avec les autorisations `sso.saml.login`, puis saisissez la clé API générée comme paramètre `RelayState` dans votre IdP. Pour plus de détails, reportez-vous à la section [Configuration de votre RelayState](#setting-up-your-relaystate). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Configuration de l'authentification unique SAML (SSO)
 
-### Étape 1 : Configurer votre fournisseur d’identité
+### Étape 1 : Configurer votre fournisseur d'identité
 
 Configurez Braze en tant que fournisseur de services (SP) dans votre fournisseur d'identité (IdP) à l'aide des informations suivantes. En outre, configurez le mappage des attributs SAML.
 
 {% alert important %}
-Si vous prévoyez d'utiliser Okta comme fournisseur d'identité, assurez-vous d'utiliser l'intégration prédéfinie disponible sur le [site d'Okta](https://www.okta.com/integrations/braze/).
+Si vous prévoyez d'utiliser Okta comme fournisseur d'identité, assurez-vous d'utiliser l'intégration préconstruite qui se trouve sur le [site d'Okta](https://www.okta.com/integrations/braze/).
 {% endalert %}
 
-| Attribut SAML | Requis ? | Attributs SAML acceptés |
+| Attribut SAML | Nécessaire ? | Attributs SAML acceptés |
 |---|---|---|
-|`email` | Requis | `email` <br> `mail` <br> `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/email` |
-| `first_name` | Facultatif | `first_name` <br> `firstname` <br> `firstName`<br>`http://schemas.xmlsoap.org/ws/2005/05/identity/claims/first_name` |
-| `last_name` | Facultatif | `last_name` <br> `lastname` <br> `lastName` <br>`http://schemas.xmlsoap.org/ws/2005/05/identity/claims/last_name` |
+|`email` | Exigée | `email` <br> `mail` <br> `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/email` |
+| `first_name` | En option | `first_name` <br> `firstname` <br> `firstName`<br>`http://schemas.xmlsoap.org/ws/2005/05/identity/claims/first_name` |
+| `last_name` | En option | `last_name` <br> `lastname` <br> `lastName` <br>`http://schemas.xmlsoap.org/ws/2005/05/identity/claims/last_name` |
 
 {% alert note %}
-Braze n’exige que `email` dans l’assertion SAML.
+Braze n'exige que `email` dans l'assertion SAML.
 {% endalert %}
 
-### Étape 2 : Configurer Braze
+### Étape 2 : Configurer Braze
 
 Lorsque vous aurez fini de configurer Braze dans votre fournisseur d'identité, celui-ci vous fournira une URL cible et un certificat `x.509` à introduire dans votre compte Braze.
 
@@ -50,10 +50,10 @@ Une fois que votre gestionnaire de compte a activé l'authentification SAML pour
 
 Sur la même page, saisissez les données suivantes :
 
-| Condition | Détails |
+| Exigence | Détails |
 |---|---|
-| Nom SAML | Cela apparaîtra comme le texte du bouton sur l’écran de connexion.<br>Il s'agit généralement du nom de votre fournisseur d'identité, comme « Okta ». |
-| URL cible | Ceci est fourni après la configuration de Braze au sein de votre IdP.<br> Certains IdP font référence à l’URL d’authentification unique ou à l’endpoint SAML 2.0. |
+| Nom SAML | Le texte du bouton apparaîtra sur l'écran d'identification.<br>Il s'agit généralement du nom de votre fournisseur d'identité, comme "Okta". |
+| URL de ciblage | Elle est fournie après la configuration de Braze au sein de votre IdP.<br> Certains IdP y font référence en tant qu'URL SSO ou endpoint SAML 2.0. |
 | Certificat | Le certificat `x.509` fourni par votre fournisseur d'identité.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -65,33 +65,33 @@ Assurez-vous que votre certificat `x.509` respecte ce format lorsque vous l'ajou
 -----END CERTIFICATE-----
 ```
 
-![Paramètres SAML SSO avec la bascule sélectionnée.]({% image_buster /assets/img/samlsso.png %})
+\![Paramètres de l'authentification SAML unique (SSO) avec le basculeur sélectionné.]({% image_buster /assets/img/samlsso.png %})
 
-### Étape 3 : Se connecter à Braze
+### Étape 3 : Connectez-vous à Braze
 
 Enregistrez vos paramètres de sécurité et déconnectez-vous. Ensuite, reconnectez-vous avec votre fournisseur d'identité.
 
-![Écran de connexion du tableau de bord avec authentification unique activée]({% image_buster /assets/img/sso1.png %}){: style="max-width:60%;"}
+!écran d'identification du tableau de bord avec SSO activé]({% image_buster /assets/img/sso1.png %}){: style="max-width:60%;"}
 
 ## Mise en place de votre RelayState
 
 1. Dans Braze, allez dans **Paramètres** > **API et identifiants**.
 2. Dans l'onglet **Clés API**, sélectionnez le bouton **Créer une clé API**.
 3. Dans le champ **Nom de la clé API**, saisissez un nom pour votre clé.
-4. Développez la liste déroulante **SSO** sous **Permissions** et cochez **sso.saml.login**.<br><br>![La section "Permissions" avec sso.saml.login coché.]({% image_buster /assets/img/relaystate_troubleshoot.png %}){: style="max-width:70%;"}<br><br>
+4. Développez la liste déroulante **SSO** sous **Permissions** et cochez **sso.saml.login**.<br><br>\![La section "Permissions" avec sso.saml.login coché.]({% image_buster /assets/img/relaystate_troubleshoot.png %}){: style="max-width:70%;"}<br><br>
 5. Sélectionnez **Créer une clé API**.
 6. Dans l'onglet **Clés API**, copiez l'identifiant à côté de la clé API que vous avez créée.
 7. Collez la clé API RelayState dans le RelayState de votre IdP (elle peut également apparaître comme "Relay State" ou "Default Relay State" en fonction de votre IdP).
 
-## Comportement d’authentification unique (SSO)
+## Comportement SSO
 
-Les membres qui choisissent d’utiliser l’authentification unique ne pourront plus utiliser leur mot de passe comme ils l’ont fait auparavant. Les utilisateurs qui continuent à utiliser leur mot de passe seront en mesure de ne pas les utiliser à moins que les paramètres suivants les limitent.
+Les membres qui optent pour l'utilisation du SSO ne pourront plus utiliser leur mot de passe comme auparavant. Les utilisateurs qui continuent à utiliser leur mot de passe pourront, à moins d'être limités par les paramètres suivants.
 
-## Restriction 
+## Restriction
 
-Vous pouvez également choisir de limiter les membres de votre organisation pour qu’ils se connectent uniquement avec l’authentification unique de Google ou l’authentification unique (SSO) SAML. Pour activer les restrictions, allez dans **Paramètres de sécurité** et sélectionnez soit **Appliquer la connexion Google SSO unique**, soit **Appliquer la connexion SAML SSO personnalisée (SSO SAML) unique.**
+Vous pouvez restreindre les membres de votre organisation à se connecter uniquement avec Google SSO ou SAML SSO. Pour activer les restrictions, allez dans **Paramètres de sécurité** et sélectionnez soit **Appliquer la connexion Google SSO unique**, soit **Appliquer la connexion SAML SSO personnalisée (SSO SAML) unique.**
 
-![Exemple de configuration de la section "Règles d'authentification" avec un mot de passe d'une longueur minimale de 8 caractères et une possibilité de réutilisation du mot de passe de 3 fois. Les mots de passe expireront après 180 jours et les utilisateurs seront déconnectés après 1 440 minutes d'inactivité.]({% image_buster /assets/img/sso3.png %})
+Exemple de configuration de la section "Règles d'authentification" avec un mot de passe d'une longueur minimale de 8 caractères et une possibilité de réutiliser le mot de passe 3 fois. Les mots de passe expireront après 180 jours et les utilisateurs seront déconnectés après 1 440 minutes d'inactivité.]({% image_buster /assets/img/sso3.png %})
 
 En activant les restrictions, les utilisateurs de Braze de votre entreprise ne pourront plus se connecter à l'aide d'un mot de passe, même s'ils se sont déjà connectés avec un mot de passe auparavant.
 
@@ -106,21 +106,21 @@ Pour exécuter une trace SAML, vous avez besoin d'un traceur SAML. Voici deux op
 - [Google Chrome](https://chromewebstore.google.com/detail/saml-tracer/mpdajninpobndbfcldcmbpnnbhibjmch)
 - [Mozilla Firefox](https://addons.mozilla.org/en-US/firefox/addon/saml-tracer/)
 
-### Étape 1 : Ouvrez le traceur SAML
+### Étape 1 : Ouvrez le traceur SAML
 
-Sélectionnez le traceur SAML dans la barre de navigation de votre navigateur. Assurez-vous que l'option **Pause** n'est pas sélectionnée, car cela empêcherait le traceur SAML de capturer ce qui est envoyé dans les demandes SAML. Lorsque le traceur SAML est ouvert, vous verrez qu'il remplit la trace.
+Sélectionnez le traceur SAML dans la barre de navigation de votre navigateur. Assurez-vous que l'option **Pause** n'est pas sélectionnée, car cela empêcherait le traceur SAML de capturer ce qui est envoyé dans les requêtes SAML. Lorsque le traceur SAML est ouvert, vous verrez qu'il remplit la trace.
 
-![Traceur SAML pour Google Chrome.]({% image_buster /assets/img/saml_tracer_example.png %})
+\![Traceur SAML pour Google Chrome.]({% image_buster /assets/img/saml_tracer_example.png %})
 
-### Étape 2 : Connectez-vous à Braze à l'aide du SSO
+### Étape 2 : Connectez-vous à Braze à l'aide du SSO
 
 Rendez-vous sur votre tableau de bord de Braze et essayez de vous connecter à l'aide du SSO. Si vous rencontrez une erreur, ouvrez le traceur SAML et réessayez. Une trace SAML a été collectée avec succès s'il y a une ligne avec une URL comme `https://dashboard-XX.braze.com/auth/saml/callback` et une étiquette SAML orange.
 
-### Étape 3 : Exporter et envoyer à Braze
+### Étape 3 : Exporter et envoyer à Braze
 
 Sélectionnez **Exporter**. Pour **Sélectionner un profil de filtrage des cookies**, sélectionnez **Aucun.** Sélectionnez ensuite **Exporter**. Cela générera un fichier JSON que vous pourrez envoyer à l'assistance de Braze pour une résolution des problèmes plus poussée.
 
-![Menu "Export SAML-trace preferences" avec l'option "None" sélectionnée.]({% image_buster /assets/img/export_saml_trace_preferences.png %})
+\!["Export SAML-trace preferences" avec l'option "None" sélectionnée.]({% image_buster /assets/img/export_saml_trace_preferences.png %})
 
 ## Résolution des problèmes
 
@@ -131,13 +131,13 @@ Si vous obtenez l'erreur `ERROR_CODE_SSO_INVALID_EMAIL`, l'adresse e-mail de l'u
 L'adresse e-mail est sensible à la casse et doit correspondre exactement à celle qui a été configurée dans Braze, y compris celle configurée dans votre fournisseur d'identité (comme Okta, OneLogin, Microsoft Entra ID, et autres).
 
 D'autres erreurs indiquent que vous avez des problèmes avec l'adresse e-mail de l'utilisateur :
-- `ERROR_CODE_SSO_EMAIL_DOES_NOT_EXIST` : L'adresse e-mail de l'utilisateur ne figure pas dans le tableau de bord.
-- `ERROR_CODE_SSO_SESSION_SIGN_IN_EMAIL_MISSING` : L'adresse e-mail de l'utilisateur est vide ou mal configurée.
+- `ERROR_CODE_SSO_EMAIL_DOES_NOT_EXIST`: L'adresse e-mail de l'utilisateur ne figure pas dans le tableau de bord.
+- `ERROR_CODE_SSO_SESSION_SIGN_IN_EMAIL_MISSING`: L'adresse e-mail de l'utilisateur est vide ou mal configurée.
 - `ERROR_CODE_SSO_SESSION_SIGN_IN_EMAIL_MISMATCH` ou `ERROR_CODE_SSO_SIGN_IN_EMAIL_MISMATCH`: L'adresse e-mail de l'utilisateur ne correspond pas à celle utilisée pour configurer le SSO.
 
 ### Disposez-vous d'un certificat SAML valide (certificatx.509 ) ?
 
-Vous pouvez valider votre certificat SAML en utilisant [cet outil de validation SAML](https://www.samltool.com/validate_response.php). Notez qu'un certificat SAML expiré est également un certificat SAML invalide.
+Vous pouvez valider votre certificat SAML à l'aide de [cet outil de validation SAML](https://www.samltool.com/validate_response.php). Notez qu'un certificat SAML expiré est également un certificat SAML invalide.
 
 ### Avez-vous téléchargé un certificat SAML correct (x.509 certificate) ?
 

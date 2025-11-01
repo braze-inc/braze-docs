@@ -10,7 +10,7 @@ description: "Cet article donne un aperçu du filtrage des bots pour les e-mails
 
 # Filtrage des bots pour les e-mails
 
-> Configurez le filtrage des robots dans vos [préférences d'e-mail]({{site.baseurl}}/user_guide/administrative/app_settings/email_settings) pour exclure tous les clics suspectés d'être des machines ou des robots. Un "bot click" dans un e-mail fait référence à un clic sur des hyperliens dans un e-mail qui est généré par un programme automatisé. En filtrant ces clics de robots, vous pouvez déclencher et envoyer intentionnellement des messages à des destinataires qui sont engagés.
+> Configurez le filtrage des robots dans vos [préférences d'e-mail]({{site.baseurl}}/user_guide/administrative/app_settings/email_settings) pour exclure tous les clics suspectés d'être des machines ou des robots. Un "bot click" dans un e-mail fait référence à un clic sur des hyperliens dans un e-mail généré par un programme automatisé. En filtrant ces clics de robots, vous pouvez déclencher et envoyer intentionnellement des messages à des destinataires qui sont engagés.
 
 {% alert important %}
 À partir du 9 juillet 2025, tous les nouveaux espaces de travail créés auront le paramètre de filtrage des robots activé pour des rapports de clics plus précis dans Braze.
@@ -22,11 +22,15 @@ Braze dispose d'un système de détection qui emploie plusieurs entrées pour id
 
 ## Indicateurs affectés par les clics des robots
 
-Les indicateurs suivants de Braze peuvent être affectés par les clics des robots :
+{% alert note %}
+Le filtrage des robots bloque activement les clics automatisés suspects pour améliorer la précision de vos indicateurs d'engagement. Cependant, les scanners et les robots évoluent continuellement au fil du temps, et Braze ne peut donc pas garantir la suppression de toutes les interactions non humaines.
+{% endalert %}
 
-- Taux de clics totaux
+Les indicateurs suivants de Braze peuvent être affectés par les clics de robots :
+
+- Taux de clics total
 - Taux de clics uniques
-- Taux de Click-to-Open
+- Taux de clics d'ouverture
 - Taux de conversion (si "Campagne de clics" est sélectionné comme événement de conversion)
 - Carte thermique
 - Certains filtres de segmentation
@@ -35,11 +39,11 @@ Les [fonctionnalités de Braze Intelligence]({{site.baseurl}}/user_guide/brazeai
 
 - Sélection intelligente
 - Canal intelligent
-- Timing intelligent
+- Le timing intelligent
 - Étape de l'expérience
-    - Chemin gagnant
-    - Chemin personnalisé
-- Campagne arrêtée
+    - Le chemin de la victoire
+    - Parcours personnalisé
+- Campagne
     - Variante gagnante
     - Variante personnalisée
 - Estimation du taux d'ouverture réel
@@ -50,11 +54,11 @@ Les désabonnements dus à des clics de robots présumés ne seront pas affecté
 
 Les [filtres de segmentation]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters) suivants peuvent être affectés par le filtrage des bots pour les messages e-mail :
 
-- [Campagne ou Canvas avec balise cliqué(e)/ouvert(e)]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#clicked-opened-campaign-or-canvas-with-tag)
+- [Campagne ou canvas cliqué/ouvert avec étiquette]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#clicked-opened-campaign-or-canvas-with-tag)
 - [Étape cliquée/ouverte]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#clicked-opened-step)
 - [Alias cliqué dans la campagne]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#clicked-alias-in-campaign)
-- [Alias cliqué dans l'étape de Canvas]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#clicked-alias-in-canvas-step)
-- [Alias cliqué dans n'importe quelle campagne ou étape de canvas]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#clicked-alias-in-any-campaign-or-canvas-step)
+- [Alias cliqué dans l'étape du canvas]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#clicked-alias-in-canvas-step)
+- [Alias cliqué dans n'importe quelle campagne ou étape du canvas]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#clicked-alias-in-any-campaign-or-canvas-step)
 - [Dernier envoi de messages]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#last-engaged-with-message)
 - [Canal intelligent]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#intelligent-channel)
 
@@ -64,7 +68,7 @@ Allez dans **Paramètres** > **Préférences e-mail.** Sélectionnez ensuite **S
 
 Tout clic suspecté d'être le fait d'un robot ne sera supprimé qu'après l'activation du paramètre et ne s'appliquera pas rétroactivement aux indicateurs de votre espace de travail.
 
-![Le paramètre de filtrage des e-mails est activé dans les préférences d'e-mail.]({% image_buster /assets/img/bot_tracking_email.png %})
+!Le paramètre de filtrage des e-mails est activé dans les préférences d'e-mail.]({% image_buster /assets/img/bot_tracking_email.png %})
 
 {% alert important %}
 Si vous activez ce paramètre et que vous le désactivez par la suite, Braze ne pourra pas rétablir dans votre analyse/analytique les activités des bots précédemment supprimées.
@@ -75,11 +79,11 @@ Si vous activez ce paramètre et que vous le désactivez par la suite, Braze ne 
 Braze enverra les champs `is_suspected_bot_click` et `suspected_bot_click_reason` dans Currents et Snowflake pour un événement Email Click.
 
 | Champ | Type de données | Description
-| `is_suspected_bot_click` | Booléen | Indique qu'il s'agit d'un clic suspecté d'être un bot. Les valeurs envoyées seront nulles jusqu'à ce que vous activiez le paramètre **Remove bots clicks workspace** ( Supprimer les robots de l' espace de travail). Cette approche vous permet de comprendre de manière programmatique quand le filtrage des clics suspectés de bot a commencé dans votre espace de travail, de sorte que vous puissiez comparer avec précision ces données à celles de Currents et Snowflake. |
+| `is_suspected_bot_click` | Booléen | Indique qu'il s'agit d'un clic suspecté d'être un bot. Les valeurs envoyées seront nulles jusqu'à ce que vous activiez le paramètre **Remove bots clicks** workspace ( **Supprimer les robots de l'** espace de travail). Cette approche vous permet de comprendre de manière programmatique quand le filtrage des clics suspectés de bot a commencé dans votre espace de travail, de sorte que vous puissiez comparer avec précision ces données à celles de Currents et Snowflake. |
 | `suspected_bot_click_reason` | Array | Indique la raison pour laquelle il s'agit d'un clic suspecté d'être effectué par un robot. Des valeurs telles que `user_agent` et `ip_address` y figureront, même si le paramètre de filtrage de l'espace de travail des robots est désactivé. Ce champ peut fournir des informations sur l'impact potentiel de l'activation de ce paramètre en comparant le nombre de clics provenant de robots présumés aux interactions humaines. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-## Foire aux questions
+## Questions fréquemment posées
 
 ### Quel sera l'impact du filtrage des robots sur les performances de ma campagne ?
 

@@ -1,33 +1,33 @@
 ---
-nav_title: Perguntas frequentes
-article_title: Perguntas frequentes sobre mensagens no app
+nav_title: FAQ
+article_title: FAQ de Mensagens no Aplicativo
 page_order: 19
-description: "Este artigo fornece respostas às perguntas mais frequentes sobre mensagens no app."
+description: "Este artigo fornece respostas para perguntas frequentes sobre Mensagens no Aplicativo."
 tool: in-app messages
 
 ---
 
 # Perguntas frequentes
 
-> Este artigo fornece respostas a algumas perguntas frequentes sobre mensagens no app.
+> Este artigo fornece respostas para algumas perguntas frequentes sobre mensagens no aplicativo.
 
-### O que é uma mensagem no navegador e como ela difere de uma mensagem no app?
+### O que é uma mensagem no navegador e como ela difere de uma mensagem no aplicativo?
 
-As mensagens no navegador são mensagens no app enviadas para navegadores da Internet. Para criar uma mensagem no navegador, certifique-se de selecionar **Navegador da Web** no campo **Enviar para ao** criar sua campanha de mensagens no app ou no Canvas. 
+Mensagens no navegador são mensagens no aplicativo enviadas para navegadores da web. Para criar uma mensagem no navegador, certifique-se de selecionar **Web Browser** no campo **Send To** ao criar sua campanha de mensagem no aplicativo ou Canvas. 
 
-### Uma mensagem no app será exibida se um dispositivo estiver off-line?
+### Uma mensagem no aplicativo será exibida se um dispositivo estiver offline?
 
-Depende. Como as mensagens no app são entregues no início da sessão, o dispositivo pode baixar a carga útil antes de ficar off-line, e a mensagem no app ainda pode ser exibida enquanto estiver off-line. Se a carga útil não for baixada, a mensagem no app não será exibida.
+Depende. Como as mensagens no aplicativo são entregues no início da sessão, o dispositivo pode baixar a carga útil antes de ficar offline, a mensagem no aplicativo ainda pode ser exibida enquanto estiver offline. Se a carga útil não for baixada, a mensagem no aplicativo não será exibida.
 
-### Se um usuário já tiver uma carga útil de mensagem no app em seu dispositivo e a expiração da mensagem for alterada, a expiração será atualizada no dispositivo?
+### Se um usuário já tiver uma carga útil de mensagem no aplicativo em seu dispositivo e a expiração da mensagem for alterada, a expiração será atualizada em seu dispositivo?
 
-Quando um usuário inicia uma sessão, o Braze verifica se foram feitas alterações em quaisquer mensagens no app para as quais ele seja elegível e as atualiza de acordo. Portanto, se a expiração tiver sido alterada e eles registrarem uma sessão, a mensagem no app será enviada ao dispositivo com as informações atualizadas.
+Quando um usuário inicia uma sessão, a Braze verifica se houve alterações em mensagens no aplicativo para as quais ele é elegível e as atualiza de acordo. Portanto, se a expiração foi alterada e ele registra uma sessão, a mensagem no aplicativo é enviada para o dispositivo com as informações atualizadas.
 
-### Como faço para configurar o Horário de silêncio para uma campanha de mensagens no app?
+### Como configuro Horários Silenciosos para uma campanha de mensagem no aplicativo?
 
-O recurso Horário de silêncio não está disponível para uso com campanhas de mensagens no app. Esse recurso é usado para impedir o envio de mensagens aos seus usuários durante horários específicos. Para campanhas de mensagens no app, seus usuários só receberão mensagens no app se estiverem ativos no aplicativo. 
+O recurso de Horários Silenciosos não está disponível para uso com campanhas de mensagens no aplicativo. Este recurso é usado para evitar que mensagens sejam enviadas aos seus usuários durante horas específicas. Para campanhas de mensagens no aplicativo, seus usuários só receberão mensagens no aplicativo se estiverem ativos dentro do aplicativo. 
 
-Como solução alternativa para enviar mensagens no app durante um horário específico, use o seguinte exemplo de código Liquid. Isso permite que a mensagem seja abortada se a mensagem no app for exibida após as 19h59 ou antes das 8h no fuso horário especificado.
+Como uma solução alternativa para enviar mensagens no aplicativo durante um horário específico, use o seguinte código Liquid de exemplo. Isso permite que a mensagem seja abortada se a mensagem no aplicativo for exibida após as 19h59 ou antes das 8h no fuso horário especificado.
 
 {% raw %}
 ```liquid
@@ -39,35 +39,35 @@ MESSAGE HERE
 ```
 {% endraw %}
 
-### Quando é calculada a elegibilidade para uma mensagem no app?
+### Quando a elegibilidade para uma mensagem no aplicativo é calculada?
 
-A elegibilidade para uma mensagem no app é calculada no momento da entrega. Se uma mensagem no app estiver programada para ser enviada às 7h, a elegibilidade será verificada para essa mensagem no app às 7h.
+A elegibilidade para uma mensagem no aplicativo é calculada no momento da entrega. Se uma mensagem no aplicativo está programada para ser enviada às 7h, a elegibilidade é verificada para essa mensagem no aplicativo às 7h.
 
-Quando a mensagem no app for exibida, a elegibilidade dependerá de quando a mensagem no app for baixada e disparada.
+Uma vez que a mensagem no aplicativo é exibida, a elegibilidade dependerá de quando a mensagem no aplicativo é baixada e acionada.
 
-### O que são mensagens no app modeladas?
+### O que são mensagens no aplicativo com modelo?
 
-As mensagens no app serão entregues como modelos de mensagens no app quando a opção **Reavaliar elegibilidade da campanha antes de exibir** estiver selecionada ou se qualquer uma das seguintes Liquid tags existir na mensagem:
+As mensagens no aplicativo serão entregues como mensagens no aplicativo com modelo quando **Reavaliar a elegibilidade da campanha antes de exibir** for selecionado ou se qualquer uma das seguintes tags Liquid existir na mensagem:
 
 - `canvas_entry_properties`
 - `connected_content`
-- Variáveis de SMS, como {% raw %}`{sms.${*}}`{% endraw %}
+- Variáveis SMS como {% raw %}`{sms.${*}}`{% endraw %}
 - `catalog_items`
 - `catalog_selection_items`
 - `event_properties`
 
-Isso significa que, durante o início da sessão, o dispositivo receberá o disparo dessa mensagem no app, em vez da mensagem inteira. Quando o usuário dispara a mensagem no app, o dispositivo do usuário faz uma solicitação de rede para buscar a mensagem real.
+Isso significa que durante o início da sessão, o dispositivo receberá o gatilho daquela mensagem no aplicativo em vez da mensagem inteira. Quando o usuário aciona a mensagem no aplicativo, o dispositivo do usuário fará uma solicitação de rede para buscar a mensagem real.
 
 {% alert note %}
-A mensagem não será entregue se o dispositivo não tiver acesso à Internet. A mensagem pode não ser entregue se a lógica do Liquid demorar muito para ser resolvida.
+A mensagem não será entregue se o dispositivo não tiver acesso à internet. A mensagem pode não ser entregue se a lógica Liquid demorar muito para ser resolvida.
 {% endalert %}
 
-### Por que minha campanha de mensagens no app arquivada ainda está fornecendo impressões de mensagens no app?
+### Por que minha campanha de mensagem no aplicativo arquivada ainda está entregando impressões de mensagens no aplicativo?
 
-Isso pode ocorrer para usuários que atenderam aos critérios do segmento quando a campanha de mensagens no app estava ativa.
+Isso pode ocorrer para usuários que atenderam aos critérios do segmento quando a campanha de mensagem no aplicativo estava ativa.
 
-Para evitar isso, durante a configuração de sua campanha, selecione **Reavaliar elegibilidade da campanha antes de exibi-la**. 
+Para evitar isso, durante a configuração da sua campanha, selecione **Reavaliar a elegibilidade da campanha antes de exibir**. 
 
-### Como o Braze calcula a expiração de uma mensagem no app definida como "após 1 dia(s)"?
+### Como a Braze calcula a expiração de uma mensagem no aplicativo definida para "após 1 dia(s)"?
 
-O Braze calcula o tempo de expiração de um dia como 24 horas após os usuários serem elegíveis para receber uma mensagem.
+A Braze calcula um tempo de expiração de um dia como 24 horas após os usuários serem elegíveis para receber uma mensagem.

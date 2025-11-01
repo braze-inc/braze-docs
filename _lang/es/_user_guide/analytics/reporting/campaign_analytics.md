@@ -1,13 +1,13 @@
 ---
-nav_title: Análisis de la campaña
-article_title: Análisis de la campaña
+nav_title: Análisis de campaña
+article_title: Análisis de campaña
 page_order: 4.5
 layout: dev_guide
-guide_top_header: "Análisis de campañas"
-guide_top_text: "Los análisis de campaña le ofrecen actualizaciones en tiempo real de los resultados de alto nivel de cada campaña y variante dentro de esa campaña, así como detalles a nivel de mensaje. Elija su canal de mensajería de la lista para obtener más información sobre los análisis de campaña específicos de ese canal. También le recomendamos que consulte nuestro curso Braze Learning sobre <a href='https://learning.braze.com/campaign-setup-delivery-targeting-conversions'>configuración de campañas</a> para obtener una visión general de estos análisis."
+guide_top_header: "Análisis de campaña"
+guide_top_text: "Los análisis de campaña te proporcionan actualizaciones en tiempo real sobre los resultados de alto nivel de cada campaña y variante dentro de esa campaña, así como detalles a nivel de mensaje. Elige tu canal de mensajería de entre los que aparecen en la lista para obtener más información sobre los análisis de campaña específicos de ese canal. También te recomendamos que consultes nuestro curso de Braze Learning <a href='https://learning.braze.com/campaign-setup-delivery-targeting-conversions'>Configuración de campaña</a> para obtener un resumen de estos análisis."
 
 page_type: landing
-description: "Esta página de destino incluye informes de campaña para cada canal de mensajería e informes de retención y embudo."
+description: "Esta página de destino cubre los informes de campaña de cada canal de mensajería y los informes de retención y embudo."
 tool: Reports
 
 guide_featured_title: "Canales de mensajería"
@@ -18,7 +18,7 @@ guide_featured_list:
   - name: Correo electrónico
     link: /docs/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/
     image: /assets/img/braze_icons/mail-01.svg
-  - name: Conmutador de características
+  - name: Banderas de características
     link: /docs/developer_guide/feature_flags/experiments/
     image: /assets/img/braze_icons/flag-06.svg
   - name: Mensajes dentro de la aplicación
