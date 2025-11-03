@@ -70,7 +70,6 @@ document.addEventListener("DOMContentLoaded", function () {
       const targetUrl = `/docs/${lang}/search?searchString=${encodeURIComponent(
         query
       )}`;
-      console.log("Redirecting to:", targetUrl);
       window.location.href = targetUrl;
     } else {
       console.warn("Search input not found or empty.");

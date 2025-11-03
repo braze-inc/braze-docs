@@ -70,7 +70,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const lang = langSelect ? langSelect.value : "en";
 
     const targetUrl = `/docs/${lang}/search?searchString=${encodeURIComponent(query)}`;
-    console.log("Redirecting to:", targetUrl);
     window.location.href = targetUrl;
   }
 
