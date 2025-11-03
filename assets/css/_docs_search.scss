@@ -278,7 +278,7 @@ section.su__w-100.su__py-4.su__search_section.su__bg-blue-grd {
     fill: #3e34d3;
 }
 input#search-box-autocomplete:focus-visible {
-	border: 2px solid black;
+	border: 2px solid white !important;
   }
 
  #su_main_search .svg-search {
@@ -301,7 +301,6 @@ input#search-box-autocomplete:focus-visible {
     font-style: normal;
     font-weight: 400;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
@@ -369,3 +368,4 @@ input#search-box-autocomplete:focus-visible {
     margin-left: 9px;
 	color: white ;
 }
+

@@ -7,40 +7,70 @@ document.addEventListener("DOMContentLoaded", function () {
    */
   function bindSearchForm(form) {
     if (form && !form.dataset.listenerAdded) {
-      const originalAction = form.getAttribute('action') || '';
-      
-      form.addEventListener("submit", function (e) {
-        e.preventDefault();
-        e.stopImmediatePropagation(); 
-        handleSearch();
-        return false;
-      }, true); 
+      const originalAction = form.getAttribute("action") || "";
 
+      // Handle form submit
+      form.addEventListener(
+        "submit",
+        function (e) {
+          e.preventDefault();
+          e.stopImmediatePropagation();
+          handleSearch();
+          return false;
+        },
+        true
+      );
+
+      // Handle search button click
       const searchButton = form.querySelector(".su__search_btn");
       if (searchButton) {
-        searchButton.addEventListener("click", function (e) {
+        searchButton.addEventListener(
+          "click",
+          function (e) {
+            e.preventDefault();
+            e.stopImmediatePropagation();
+            handleSearch();
+            return false;
+          },
+          true
+        );
+      }
+
+      // Handle clear (×) button click
+      const clearButton = form.querySelector(".su__input-close");
+      if (clearButton) {
+        clearButton.addEventListener("click", function (e) {
           e.preventDefault();
-          e.stopImmediatePropagation(); 
-          handleSearch(); 
-          return false;
-        }, true); 
+          e.stopImmediatePropagation();
+
+          const input = form.querySelector("#search-box-autocomplete");
+          if (input) {
+            input.value = "";
+            input.classList.remove("has-text");
+            input.focus();
+          }
+        });
       }
 
       form.dataset.listenerAdded = "true";
-      form.setAttribute('data-original-action', originalAction);
+      form.setAttribute("data-original-action", originalAction);
     }
   }
 
+  /**
+   * Handle search action
+   */
   function handleSearch() {
     const queryInput = document.getElementById("search-box-autocomplete");
     const langSelect = document.getElementById("lang_select");
+    const lang = langSelect ? langSelect.value : "en";
 
     if (queryInput && queryInput.value.trim() !== "") {
       const query = queryInput.value.trim();
-      const lang = langSelect ? langSelect.value : "en"; 
-      const targetUrl = `/docs/${lang}/search?searchString=${encodeURIComponent(query)}`;
+      const targetUrl = `/docs/${lang}/search?searchString=${encodeURIComponent(
+        query
+      )}`;
       console.log("Redirecting to:", targetUrl);
-      
       window.location.href = targetUrl;
     } else {
       console.warn("Search input not found or empty.");
@@ -49,36 +79,12 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   /**
-   * MutationObserver → waits for dynamic injection of searchForm
+   * Set up placeholder, key events & has-text logic
    */
-  const observer = new MutationObserver((mutations) => {
-    mutations.forEach((mutation) => {
-      if (mutation.addedNodes.length) {
-        const form = document.getElementById("searchForm");
-        if (form) bindSearchForm(form);
-      }
-    });
-  });
+  function setupInputWatcher() {
+    const input = document.getElementById("search-box-autocomplete");
+    if (!input) return;
 
-  observer.observe(document.body, { 
-    childList: true, 
-    subtree: true,
-    attributes: false,
-    characterData: false
-  });
-
-  // Initial binding if form already exists
-  const initialForm = document.getElementById("searchForm");
-  if (initialForm) {
-    setTimeout(() => bindSearchForm(initialForm), 100);
-  }
-
-  /**
-   * Placeholder & key events
-   */
-  const input = document.getElementById("search-box-autocomplete");
-
-  if (input) {
     const translations = {
       en: "Search everything",
       "pt-br": "Buscar tudo",
@@ -86,42 +92,80 @@ document.addEventListener("DOMContentLoaded", function () {
       fr: "Rechercher tout",
       es: "Buscar todo",
       de: "Alles durchsuchen",
-      ja: "すべて検索"
+      ja: "すべて検索",
     };
 
-    let lang = document.documentElement.lang;
-    let placeholderText = translations[lang] || translations.en;
+    const lang = document.documentElement.lang;
+    const placeholderText = translations[lang] || translations.en;
     input.setAttribute("placeholder", placeholderText);
- 
-  
-    function toggleWidth(input) {
-      if (input.value.trim() !== "") {
-        input.classList.add("has-text"); 
-        input.focus(); 
+
+    // --- Function to toggle has-text class ---
+    function toggleHasTextClass() {
+      if (input.value && input.value.trim() !== "") {
+        input.classList.add("has-text");
       } else {
-        input.classList.remove("has-text"); 
+        input.classList.remove("has-text");
       }
     }
-  
-    input.addEventListener("input", () => toggleWidth(input));
-    input.addEventListener("blur", () => toggleWidth(input));
-  
-    input.addEventListener("keypress", function (e) {
-      if (e.key === "Enter") {
-        e.preventDefault();
-        e.stopImmediatePropagation();
-        handleSearch();
-        return false;
-      }
-    }, true);
+
+    // --- Watch for typing or pasting ---
+    input.addEventListener("input", toggleHasTextClass);
+    input.addEventListener("blur", toggleHasTextClass);
+    input.addEventListener("focus", toggleHasTextClass);
+
+    // --- Handle Enter key manually ---
+    input.addEventListener(
+      "keypress",
+      function (e) {
+        if (e.key === "Enter") {
+          e.preventDefault();
+          e.stopImmediatePropagation();
+          handleSearch();
+          return false;
+        }
+      },
+      true
+    );
+
+    // --- Run check immediately and periodically for autofill/preload ---
+    const checkDelays = [0, 100, 300, 1000, 2000];
+    checkDelays.forEach((delay) => setTimeout(toggleHasTextClass, delay));
   }
-  
-  // Override AngularJS form handling
+
+  /**
+   * MutationObserver → waits for dynamic injection of searchForm or input
+   */
+  const observer = new MutationObserver((mutations) => {
+    mutations.forEach((mutation) => {
+      if (mutation.addedNodes.length) {
+        const form = document.getElementById("searchForm");
+        if (form) bindSearchForm(form);
+
+        const input = document.getElementById("search-box-autocomplete");
+        if (input) setupInputWatcher();
+      }
+    });
+  });
+
+  observer.observe(document.body, {
+    childList: true,
+    subtree: true,
+  });
+
+  // Initial setup if already present
+  const initialForm = document.getElementById("searchForm");
+  if (initialForm) {
+    setTimeout(() => bindSearchForm(initialForm), 100);
+  }
+
+  setupInputWatcher();
+
+  // Override AngularJS form handling (if present)
   setTimeout(() => {
     const form = document.getElementById("searchForm");
     if (form) {
-      form.removeAttribute('ng-submit');
-      form.removeAttribute('data-ng-submit');
+      form.removeAttribute("ng-submit");
+      form.removeAttribute("data-ng-submit");
       bindSearchForm(form);
     }
   }, 500);
