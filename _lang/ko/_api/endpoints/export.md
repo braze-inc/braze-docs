@@ -11,7 +11,7 @@ description: "이 랜딩 페이지에서는 Braze 내보내기 엔드포인트�
 page_type: landing
 
 guide_top_header: "엔드포인트 내보내기"
-guide_top_text: "이 엔드포인트 모음을 사용하면 KPI, 뉴스피드 카드, 앱 세션, 사용자, 세그먼트, 캠페인 및 캔버스에 대한 다양한 수준의 세부 정보에 액세스하고 내보낼 수 있습니다. <br> <br> 매개변수 및 요청 본문을 작성할 때 <a href='/docs/user_guide/administrative/access_braze/braze_instances/' target='_blank'>Braze 인스턴스</a>, <a href='/docs/api/api_key/' target='_blank'>API 키</a>, <a href='/docs/api/identifier_types/' target='_blank'>API 식별자를</a> 알고 있어야 합니다."
+guide_top_text: "이 엔드포인트 모음을 사용하면 KPI, 앱 세션, 사용자, 세그먼트, 캠페인 및 캔버스에 대한 다양한 수준의 세부 정보에 액세스하고 내보낼 수 있습니다. <br> <br> 매개변수 및 요청 본문을 작성할 때 <a href='/docs/user_guide/administrative/access_braze/braze_instances/' target='_blank'>Braze 인스턴스</a>, <a href='/docs/api/api_key/' target='_blank'>API 키</a>, <a href='/docs/api/identifier_types/' target='_blank'>API 식별자를</a> 알고 있어야 합니다."
 
 guide_featured_title: "캠페인 엔드포인트 내보내기"
 guide_featured_list:
@@ -69,18 +69,6 @@ guide_menu_list3:
   - name: "GET: 날짜별 제거에 대한 KPI"
     link: /docs/api/endpoints/export/kpi/get_kpi_uninstalls_date/
     image: /assets/img/braze_icons/target-04.svg
-
-guide_menu_title4: "Export News Feed endpoints"
-guide_menu_list4:
-  - name: "GET: 뉴스피드 카드 참여 통계"
-    link: /docs/api/endpoints/export/news_feed/get_news_feed_card_analytics/
-    image: /assets/img/braze_icons/download-cloud-01.svg
-  - name: "GET: 뉴스피드 카드 세부 정보"
-    link: /docs/api/endpoints/export/news_feed/get_news_feed_card_details/
-    image: /assets/img/braze_icons/download-cloud-01.svg
-  - name: "GET: 뉴스피드 카드 목록"
-    link: /docs/api/endpoints/export/news_feed/get_news_feed_cards/
-    image: /assets/img/braze_icons/download-cloud-01.svg
 
 guide_menu_title5: "Export purchase endpoints"
 guide_menu_list5:

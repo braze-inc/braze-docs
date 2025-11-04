@@ -106,6 +106,10 @@
 <i>전송 실패</i>는 대기줄이 넘쳐서 SMS를 보낼 수 없는 경우(긴 코드 또는 짧은 코드가 처리할 수 있는 속도보다 높은 속도로 SMS를 전송하는 경우)를 말합니다.
 {% endif %}
 
+{% if include.metric == "Delivery Failures RCS" %}
+<i>배달 실패는</i> 대기열이 넘쳐서 RCS를 전송할 수 없는 경우(RCS 인증 발신자가 처리할 수 있는 속도보다 높은 속도로 RCS를 전송하는 경우)입니다.
+{% endif %}
+
 {% if include.metric == "Failed Delivery Rate" %}
 <i>배달 실패율은</i> 메시지를 보낼 수 없어 실패한 전송의 백분율입니다. 이는 대기열 오버플로, 계정 일시 정지, MMS의 경우 미디어 오류 등 다양한 이유로 발생할 수 있습니다.
 {% endif %}
@@ -163,7 +167,7 @@
 {% endif %}
 
 {% if include.metric == "Opt-Out" %}
-<i>옵트아웃</i>은 사용자가 <a href="https://braze.com/docs/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#default-opt-in-opt-out-keywords">옵트아웃 키워드</a>를 사용하여 메시지에 답장하고 SMS 프로그램에서 수신 거부된 경우입니다.
+<i>옵트아웃은</i> 사용자가 <a href="https://braze.com/docs/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#default-opt-in-opt-out-keywords">옵트아웃 키워드를</a> 사용하여 메시지에 답장을 보낸 후 SMS 또는 RCS 프로그램에서 수신 거부된 경우입니다.
 {% endif %}
 
 {% if include.metric == "Pending Retry" %}
@@ -175,7 +179,7 @@
 {% endif %}
 
 {% if include.metric == "Reads" %}
-<i>읽기</i>는 사용자가 WhatsApp 메시지를 읽은 경우입니다. 사용자의 읽음 확인이 Braze에서 읽음을 추적하려면 "켜짐" 상태여야 합니다.
+<i>읽기는</i> 사용자가 메시지를 읽은 경우입니다. 사용자의 읽음 확인이 Braze에서 읽음을 추적하려면 "켜짐" 상태여야 합니다.
 {% endif %}
 
 {% if include.metric == "Read Rate" %}
@@ -187,7 +191,7 @@
 {% endif %}
 
 {% if include.metric == "Rejections" %}
-<i>거부됨</i>은 이동통신사에 의해 SMS가 거부된 경우입니다. 이것은 여러 가지 이유로 발생할 수 있습니다. 여기에는 통신사 콘텐츠 필터링, 대상 기기의 가용성, 전화번호가 더 이상 서비스되지 않음 등이 포함됩니다.
+<i>거부란</i> 이동통신사에 의해 SMS 또는 RCS가 거부된 경우를 말합니다. 이것은 여러 가지 이유로 발생할 수 있습니다. 여기에는 통신사 콘텐츠 필터링, 대상 기기의 가용성, 전화번호가 더 이상 서비스되지 않음 등이 포함됩니다.
 {% endif %}
 
 {% if include.metric == "Revenue" %}
@@ -199,7 +203,7 @@
 {% endif %}
 
 {% if include.metric == "Sent" %}
-<i>전송</i>은 캠페인 또는 캔버스 단계가 시작되거나 트리거되어 Braze에서 SMS가 전송될 때마다 발생합니다. 오류로 인해 SMS가 사용자의 디바이스에 도달하지 못했을 수 있습니다.
+<i>전송은</i> 캠페인 또는 캔버스 단계가 시작되거나 트리거되어 Braze에서 SMS 또는 RCS가 전송될 때마다 발생합니다. 오류로 인해 SMS 또는 RCS가 사용자의 디바이스에 도달하지 못했을 수 있습니다.
 {% endif %}
 
 {% if include.metric == "Sends" %}
@@ -227,7 +231,7 @@
 {% endif %}
 
 {% if include.metric == "Total Clicks" %}
-<i>총 클릭</i> 수는 전달된 이메일의 링크를 클릭한 고유 수신자 수입니다.
+<i>총 클릭</i> 수는 전달된 메시지의 링크를 클릭한 고유 수신자 수입니다.
 {% endif %}
 
 {% if include.metric == "Total Dismissals" %}
@@ -257,11 +261,11 @@
 <!-- Unique Impressions & Unique Recipients have a dedicated section in campaign_analytics.md -->
 
 {% if include.metric == "Unique Impressions" %}
-<i>고유 노출</i> 수는 하루에 특정 메시지를 수신하고 조회한 총 사용자 수입니다.
+<i>고유 노출</i> 수는 특정 캠페인에서 메시지를 수신하고 조회한 총 사용자 수입니다.
 {% endif %}
 
 {% if include.metric == "Unique Recipients" %}
-<i>고유 수신자</i>는 일일 고유 수신자 수 또는 하루에 특정 메시지를 받은 사용자 수입니다.
+<i>고유 수신자는</i> 일일 고유 수신자 수 또는 하루에 새 메시지를 받은 사용자의 수입니다. 사용자에 대해 이 횟수가 두 번 이상 증가하려면 사용자가 다른 날에 새 메시지를 수신해야 합니다.
 {% endif %}
 
 {% if include.metric == "Unique Opens" %}

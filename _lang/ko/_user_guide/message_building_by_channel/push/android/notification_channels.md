@@ -12,13 +12,13 @@ channel:
 
 # 알림 채널
 
-> [알림 채널][1] 은 Android O에서 추가된 푸시 알림을 정리하는 방법입니다. O부터는 모든 푸시 알림에 메시지 유형(예: '채팅 알림' 또는 '팔로우 알림')을 나타내는 알림 채널이 있어야 합니다. 그러면 사용자는 개별 채널에 따라 알림의 일부 기능(예: 스누즈, 소음/진동 설정 또는 수신 거부 등)을 제어할 수 있습니다.
+> [Notification Channels](https://www.braze.com/blog/android-o-push-notifications-channels/) are a way to organize push notifications that were added with Android O. Starting with O, all push notifications must have a Notification Channel that indicates the type of message (for example, "chat notifications," or "follow notifications"). 그러면 사용자는 개별 채널에 따라 알림의 일부 기능(예: 스누즈, 소음/진동 설정 또는 수신 거부 등)을 제어할 수 있습니다.
 
 ## Android O로 전환하기
 
 알림 채널은 애플리케이션의 코드에서만 생성할 수 있으며 Braze 대시보드에서 프로그래밍 방식으로 생성할 수 없습니다. 엔지니어링 팀이 마케터와 협력하여 원하는 알림 채널이 대시보드에 제대로 추가되도록 하는 것이 좋습니다.
 
-Android O부터는 푸시 알림을 표시하려면 유효한 채널이 필요합니다. 앱이 Android O 이상을 타겟팅하는 경우 Braze SDK 버전 2.1.0 이상을 사용해야 합니다. 개발팀은 애플리케이션 코드에서 사용하려는 채널과 각 채널에 대한 권장 알림 설정(예: 중요도, 사운드, 조명)을 정의해야 합니다. Android의 개발자 설명서는 [여기][4]에서, Braze의 개발자 설명서는 [여기][2]에서 확인할 수 있습니다.
+Android O부터는 푸시 알림을 표시하려면 유효한 채널이 필요합니다. 앱이 Android O 이상을 타겟팅하는 경우 Braze SDK 버전 2.1.0 이상을 사용해야 합니다. 개발팀은 애플리케이션 코드에서 사용하려는 채널과 각 채널에 대한 권장 알림 설정(예: 중요도, 사운드, 조명)을 정의해야 합니다. You can find Android's developer documentation [here](https://developer.android.com/preview/features/notification-channels.html) and Braze's developer documentation [here.]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/#step-5-define-notification-channels)
 
 {% alert note %}
 Android는 채널 이름에 대한 현지화를 지원하므로 애플리케이션 코드에서 하나의 채널 ID를 채널 이름의 여러 번역본에 연결할 수 있습니다.
@@ -75,11 +75,11 @@ Braze에 잘못된 채널 ID를 제공한 경우(예: 개발자가 SDK에서 생
 
 특정 캠페인 또는 캔버스 단계에 알림 채널을 적용하면 Android 푸시의 **도달 가능한 사용자** 집계(타겟 오디언스 단계에 위치)는 변경되지 않는 것으로 나타납니다. 단, 선택한 알림 채널을 구독한 사용자만 메시지를 볼 수 있으며, 이 오디언스를 기준으로 캠페인 분석(클릭 수 등)이 측정됩니다.
 
-![][6]
+![]({% image_buster /assets/img_archive/Click_Here.png %})
 
 {:start="4"}
 4\. **알림 채널 추가**를 클릭합니다.
-5\. 추가하려는 알림 채널의 이름과 아이디를 입력합니다.<br><br>![][8]<br><br>
+5\. 추가하려는 알림 채널의 이름과 아이디를 입력합니다.<br><br>![]({% image_buster /assets/img_archive/Enter_Channel.png %})<br><br>
 6\. 추가하려는 각 알림 채널에 대해 4단계와 5단계를 반복합니다.
 7\. **저장**을 눌러 변경 사항을 저장합니다.
 
@@ -89,7 +89,7 @@ Braze에 잘못된 채널 ID를 제공한 경우(예: 개발자가 SDK에서 생
 
 1. 기존 캠페인 또는 캔버스를 엽니다.
 2. Android 푸시 작성기로 이동합니다.
-3. 알림 채널 옵션을 펼친 후 **알림 채널 관리**를 선택합니다. <br><br>![][9]{: style="max-width:80%;"}<br><br>
+3. 알림 채널 옵션을 펼친 후 **알림 채널 관리**를 선택합니다. <br><br>![]({% image_buster /assets/img_archive/Change_Fallback.png %}){: style="max-width:80%;"}<br><br>
 4. 채널을 대시보드에 추가합니다(아직 추가하지 않은 경우).
 5. 대체 채널로 지정하려는 채널 옆의 라디오 다이얼을 선택합니다.
 6. 변경 사항을 저장합니다. 변경 사항은 전 세계에 적용됩니다.
@@ -99,14 +99,6 @@ Braze에 잘못된 채널 ID를 제공한 경우(예: 개발자가 SDK에서 생
 1. 캠페인 또는 캔버스에서 Android 푸시 작성기로 이동합니다.
 2. 드롭다운에서 사용하려는 채널을 선택합니다. 드롭다운이 없는 대신 다음과 같은 보기가 있는 경우 캠페인에 채널을 추가한 후 선택해야 합니다.
 
-![][10]
+![]({% image_buster /assets/img_archive/No_Select.png %})
 
-[1]: https://www.braze.com/blog/android-o-push-notifications-channels/
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/#step-5-define-notification-channels
 [3]: https://developer.android.com/preview/features/notification-channels.html#DeletingChannels
-[4]: https://developer.android.com/preview/features/notification-channels.html
-[6]: {% image_buster /assets/img_archive/Click_Here.png %}
-[8]: {% image_buster /assets/img_archive/Enter_Channel.png %}
-[9]: {% image_buster /assets/img_archive/Change_Fallback.png %}
-[10]: {% image_buster /assets/img_archive/No_Select.png %}
-[11]: {% image_buster /assets/img_archive/Select_Channel.png %}

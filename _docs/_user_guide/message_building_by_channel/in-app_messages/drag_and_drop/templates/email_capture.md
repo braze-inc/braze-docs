@@ -1,5 +1,5 @@
 ---
-nav_title: Email Sign-up Form
+nav_title: Email sign-up form
 article_title: Email Sign-up Form
 alias: "/email_capture/"
 page_order: 2

@@ -16,16 +16,16 @@ noindex: true
 
 Die Installation des iOS SDK über [CocoaPods](http://cocoapods.org/) automatisiert den Großteil des Installationsprozesses für Sie. Bevor Sie mit diesem Vorgang beginnen, sollten Sie sicherstellen, dass Sie [Ruby Version 2.0.0](https://www.ruby-lang.org/en/installation/) oder höher verwenden. Für die Installation dieses SDK sind jedoch keine Kenntnisse der Ruby-Syntax erforderlich.
 
-Führen Sie den folgenden Befehl aus, um loszulegen:
+Führen Sie als Erstes folgenden Befehl aus:
 
 ```bash
 $ sudo gem install cocoapods
 ```
 
-Wenn Sie Probleme mit CocoaPods haben, lesen Sie die [Anleitung zur FehlerbehebungCocoaPods](http://guides.cocoapods.org/using/troubleshooting.html "Troubleshooting Guide").
+Wenn Sie Probleme mit CocoaPods haben, lesen Sie bitte die [Anleitung zur Fehlerbehebung](http://guides.cocoapods.org/using/troubleshooting.html) für CocoaPods.
 
 {% alert note %}
-Wenn Sie aufgefordert werden, die ausführbare Datei `rake` zu überschreiben, ziehen Sie für weitere Informationen die Anleitungen auf CocoaPods.org zurate: [Erste Schritte ](http://guides.cocoapods.org/using/getting-started.html "CocoaPods-Installationsanleitung").
+Wenn Sie aufgefordert werden, die ausführbare Datei `rake` zu überschreiben, finden Sie weitere Informationen in der Anleitung ["Erste Schritte"](http://guides.cocoapods.org/using/getting-started.html) auf CocoaPods.org.
 {% endalert %}
 
 ## Schritt 2: Erstellen der Poddatei

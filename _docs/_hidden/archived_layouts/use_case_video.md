@@ -1,5 +1,5 @@
 ---
-nav_title: Use Case with Video
+nav_title: Use case with video
 
 page_order: 7
 

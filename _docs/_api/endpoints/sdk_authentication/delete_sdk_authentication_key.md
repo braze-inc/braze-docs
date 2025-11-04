@@ -1,5 +1,5 @@
 ---
-nav_title: "DELETE: Remove SDK Authentication Key"
+nav_title: "DELETE: Remove SDK authentication key"
 article_title: "DELETE: Remove SDK Authentication Key"
 search_tag: Endpoint
 page_order: 3

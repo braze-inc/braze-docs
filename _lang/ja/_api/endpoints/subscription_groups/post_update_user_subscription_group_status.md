@@ -21,7 +21,7 @@ description: "この記事では、「ユーザーのサブスクリプション
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#8895e87e-6324-47a3-a833-adf29a258bb9 {% endapiref %}
 
-**SMSサブスクリプショングループ**用のこのエンドポイントをテストするか例を見たい場合:
+**SMS と RCS 購読グループ**用のこのエンドポイントをテストするか例を見たい場合:
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#72558b32-7dbe-4cba-bd22-a7ce513076dd {% endapiref %}
 
@@ -36,7 +36,7 @@ description: "この記事では、「ユーザーのサブスクリプション
 ## 要求本文:
 
 {% tabs %}
-{% tab SMS %}
+{% tab SMS と RCS %}
 ```
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
@@ -48,10 +48,10 @@ Authorization: Bearer YOUR-REST-API-KEY
    "subscription_state": (required, string) available values are "unsubscribed" (not in subscription group) or "subscribed" (in subscription group),
    "external_id": (required*, array of strings) the external ID of the user or users, may include up to 50 IDs,
    "phone": (required*, array of strings in E.164 format) The phone number of the user (must include at least one phone number and at most 50 phone numbers),
-   // SMS subscription group - one of external_id or phone is required
+   // SMS and RCS subscription group - one of external_id or phone is required
  }
 ```
-\* SMSサブスクリプショングループ:`external_id` または`phone` のみが受け入れられます。
+\* SMS と RCS の購読グループ：`external_id` または`phone` のみが受け入れられます。
 
 {% endtab %}
 {% tab メール %}
@@ -88,7 +88,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | `subscription_state` | 必須 | 文字列 | 使用できる値は、`unsubscribed` (サブスクリプショングループに含まれない) または `subscribed` (サブスクリプショングループに含まれる) です。 |
 | `external_id` | 必須* | 文字列の配列 | ユーザーの `external_id` には、最大で 50 個の `id` を含めることができます。 |
 | `email` | 必須* | 文字列または文字列の配列 | ユーザーのメールアドレスは、文字列の配列として渡すことができます。少なくとも 1 件のメールアドレス (最大 50件 まで) を含める必要があります。<br><br>同じワークスペース内の複数のユーザー (`external_id`) が同じメールアドレスを共有している場合、そのメールアドレスを共有するすべてのユーザーは、サブスクリプショングループの変更で更新されます。 |
-| `phone` | 必須* | [E.164](https://en.wikipedia.org/wiki/E.164)形式の文字列 | ユーザーの電話番号は文字列の配列として渡すことができます。少なくとも1つの電話番号を含むこと（50件まで）。<br><br>同じワークスペース内の複数のユーザー(`external_id`)が同じ電話番号を共有している場合、電話番号を共有しているすべてのユーザーが同じサブスクリプショングループの変更で更新される。 |
+| `phone` | 必須* | [E.164](https://en.wikipedia.org/wiki/E.164)形式の文字列 | ユーザーの電話番号は文字列の配列として渡すことができます。少なくとも 1 つの電話番号を含める必要があります（最大 50 件）。<br><br>同じワークスペース内の複数のユーザー (`external_id`) が同じ電話番号を共有している場合、その電話番号を共有しているすべてのユーザーは同じ購読グループの変更で更新されます。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 例のリクエスト
@@ -108,7 +108,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/subscription/statu
 '
 ```
 
-### SMS
+### SMS と RCS
 
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/subscription/status/set' \

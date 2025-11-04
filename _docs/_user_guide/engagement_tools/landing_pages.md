@@ -1,5 +1,5 @@
 ---
-nav_title: Landing Pages
+nav_title: Landing pages
 article_title: Landing Pages
 page_order: 31
 guide_top_header: "Landing Pages"
@@ -11,9 +11,13 @@ alias: /landing_pages/
 
 > Braze landing pages are standalone web pages that can drive your user acquisition and engagement strategy.
 
-![Skincare product launch landing page featuring benefits, images, and a customer testimonial layout.]({% image_buster /assets/img/landing_pages/example_landing_page.png %}){: style="float:right;max-width:45%;margin-left:15px;"}
-
 Use landing pages to grow your audience, capture user data, promote special offers, and support multichannel campaigns.
+
+{% alert note %}
+Landing page and custom domain availabilty depends on your Braze package. Reach out to your account manager or customer success manager to get started.
+{% endalert %}
+
+{% multi_lang_include video.html id="eg4r7agod1" source="wistia" %}
 
 ## Prerequisites
 
@@ -25,21 +29,11 @@ Before you can access, create, and publish landing pages, you either need admini
 
 {% multi_lang_include drag_and_drop/drag_and_drop_access.md variable_name='dnd editors' %}
 
-## Plan tiers
-
-The number of published landing pages and custom domains you can use depends on your plan type: free or paid (incremental).
-
-| Feature                                                                                                   | Free tier     | Paid tier (incremental)     |
-| :---------------------------------------------------------------------------------------------------------------- | :--------------- | ----------------- |
-| Published landing pages                                                                 | Five per company | 20 additional |
-| Custom domains          | One per company | Five additional |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
-
 ## Frequently asked questions
 
 ### What's the maximum size for landing pages?
 
-The landing page body size can be up to 1 MB.
+The landing page body size can be up to 500 KB.
 
 ### Are there any technical requirements to publish a landing page?
 

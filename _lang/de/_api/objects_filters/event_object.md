@@ -15,11 +15,11 @@ description: "In diesem referenzierten Artikel erfahren Sie, was das Event-Objek
 
 Ein Ereignisobjekt ist ein Objekt, das über die API übergeben wird, wenn ein bestimmtes Ereignis eintritt. Ereignisobjekte sind in einem Ereignis-Array untergebracht. Jedes Event-Objekt im Events-Array repräsentiert ein einzelnes Vorkommen eines angepassten Events durch einen bestimmten Nutzer:in zum angegebenen Zeitwert. Das Event-Objekt verfügt über viele verschiedene Felder, die Sie anpassen können, indem Sie Event-Eigenschaften in Nachrichten, Datenerfassung und Personalisierung festlegen und verwenden.
 
-Wie Sie angepasste Events für eine bestimmte Plattform einrichten, erfahren Sie in der Anleitung zur Plattformintegration im [Entwicklerhandbuch][1]. Verweisen Sie auf den entsprechenden Artikel für Ihre Plattform:
+Wie Sie angepasste Events für eine bestimmte Plattform einrichten, erfahren Sie in der Anleitung zur Plattformintegration im [Entwicklerhandbuch]({{site.baseurl}}/developer_guide/home/). Verweisen Sie auf den entsprechenden Artikel für Ihre Plattform:
 
-- [Android][2]
-- [iOS][3]
-- [Internet][4]
+- [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/)
+- [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_custom_events/)
+- [Internet]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_custom_events/)
 
 ### Objektkörper
 
@@ -44,7 +44,7 @@ Wie Sie angepasste Events für eine bestimmte Plattform einrichten, erfahren Sie
 
 - [Externe Benutzer-ID]({{site.baseurl}}/api/basics/#user-ids)
 - [Bezeichner der App]({{site.baseurl}}/api/identifier_types/)
-- [ISO 8601 Zeitcode][22]
+- [ISO 8601 Zeitcode](https://en.wikipedia.org/wiki/ISO_8601)
 
 #### Nur bestehende Profile aktualisieren
 
@@ -74,7 +74,7 @@ Objekte mit Event-Eigenschaften, die Array- oder Objektwerte enthalten, können 
 
 ### Persistenz der Eigenschaften von Ereignissen
 
-Event-Eigenschaften dienen zum Filtern und zur Liquid Personalisierung von Nachrichten, die durch ihre übergeordneten Ereignisse getriggert werden. Standardmäßig werden sie nicht auf dem Braze Nutzerprofil persistent gehalten. Um die Werte von Event-Eigenschaften bei der Segmentierung zu verwenden, lesen Sie bitte den Abschnitt [Angepasste Events][5], in dem die verschiedenen Ansätze zur langfristigen Speicherung von Werten für Event-Eigenschaften beschrieben werden.
+Event-Eigenschaften dienen zum Filtern und zur Liquid Personalisierung von Nachrichten, die durch ihre übergeordneten Ereignisse getriggert werden. Standardmäßig werden sie nicht auf dem Braze Nutzerprofil persistent gehalten. Um die Werte von Event-Eigenschaften bei der Segmentierung zu verwenden, lesen Sie bitte den Abschnitt [Angepasste Events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/), in dem die verschiedenen Ansätze zur langfristigen Speicherung von Werten für Event-Eigenschaften beschrieben werden.
 
 #### Ereignis Beispiel Anfrage
 
@@ -109,19 +109,10 @@ Authorization: Bearer YOUR-REST-API-KEY
   ]
 }
 ```
-- [ISO 8601 Zeitcode Wiki][19]
+- [ISO 8601 Zeitcode Wiki](http://en.wikipedia.org/wiki/ISO_8601)
 
 ## Ereignis-Objekte
 
 Anhand des angegebenen Beispiels können wir sehen, dass jemand vor kurzem einen Trailer gesehen und dann einen Film ausgeliehen hat. Wir können zwar nicht in eine Kampagne gehen und die Nutzer auf der Grundlage dieser Eigenschaften segmentieren, aber wir können diese Eigenschaften strategisch nutzen, indem wir sie in Form einer Quittung verwenden, um eine angepasste Nachricht über einen Kanal mit Liquid zu versenden. Zum Beispiel: "Hallo **Beth**, danke, dass Sie **The Sad Egg** von **Dan Alexander** ausgeliehen haben, hier sind einige Filmempfehlungen, die auf Ihrer Ausleihe basieren..."
 
 
-[1]: {{site.baseurl}}/developer_guide/home/
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/
-[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_custom_events/
-[4]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_custom_events/
-[5]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/
-[19]: http://en.wikipedia.org/wiki/ISO_8601 "ISO 8601 Zeitcode Wiki"
-[21]: {{site.baseurl}}/api/api_key/#the-app-identifier-api-key
-[22]: https://en.wikipedia.org/wiki/ISO_8601 "ISO 8601 Time Code"
-[23]: {{site.baseurl}}/api/basics/#external-user-id-explanation

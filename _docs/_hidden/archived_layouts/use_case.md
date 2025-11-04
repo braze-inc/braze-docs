@@ -1,5 +1,5 @@
 ---
-nav_title: Use Case
+nav_title: Use case
 
 page_order: 7
 

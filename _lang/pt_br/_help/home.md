@@ -17,7 +17,7 @@ resources_list:
     link: /docs/help/faqs/
     image: /assets/img/braze_icons/book-open-01.svg
   - name: Notas de versão
-    link: /docs/help/release_notes/most_recent/
+    link: /docs/help/release_notes/
     image: /assets/img/braze_icons/sticker-square.svg
   - name: Login do Braze Learning
     link: https://learning.braze.com/
@@ -26,12 +26,12 @@ resources_list:
     link: https://www.youtube.com/channel/UCEXVTEWeAHx1OlddOMRTaOg
     image: /assets/img/braze_icons/youtube.svg
   - name: Suporte da Braze
-    link: /docs/braze_support/
+    link: /docs/user_guide/administrative/access_braze/support/
     image: /assets/img/braze_icons/mail-01.svg
 
 popular_topic_list:
   - name: Saiba antes de enviar
-    link: /docs/help/help_articles/campaigns_and_canvas/know_before_send/
+    link: /docs/user_guide/engagement_tools/messaging_fundamentals/know_before_send/
   - name: Migração de token por push
     link: /docs/help/help_articles/push/push_token_migration/
   - name: Registro de propriedades de eventos personalizados
@@ -39,13 +39,11 @@ popular_topic_list:
   - name: ID do despacho
     link: /docs/help/help_articles/data/dispatch_id/
   - name: Envios de e-mail
-    link: /docs/help/help_articles/email/email_bounces/
+    link: /docs/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/
   - name: Exclusão de usuários via API
     link: /docs/help/help_articles/api/delete_user/
   - name: Alteração do tipo de dados personalizados
     link: /docs/help/help_articles/data/change_custom_data_type/
-  - name: As mensagens no app não estão sendo exibidas
-    link: /docs/help/help_articles/in-app_messages/in-app_messages_not_displaying/  
   - name: Uso do registro de eventos
     link: /docs/help/help_articles/campaigns_and_canvas/using_event_logging/ 
 ---

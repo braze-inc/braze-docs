@@ -34,8 +34,8 @@ channel:
 1. **템플릿** > **이메일 링크 템플릿**로 이동합니다. 
 2. **이메일 링크 템플릿 만들기** 선택.
 3. 링크 템플릿에 이름을 지정하세요.
-4. (선택 사항) 링크 템플릿에 대한 세부정보를 추가하기 위해 설명, 팀 또는 태그를 추가하세요.
-5. (선택 사항) 이메일 캠페인 및 캔버스의 링크에 링크 템플릿을 자동으로 추가하려면 토글을 선택하세요. 이것은 새 링크를 새 이메일이나 기존 이메일에 추가할 때 적용됩니다.
+4. (Optional) Add a description, team, or tag to add details about the link template.
+5. (Optional) Select the toggle to automatically add the link template to links in email campaigns and Canvases. 이것은 새 링크를 새 이메일이나 기존 이메일에 추가할 때 적용됩니다.
 
 생성할 수 있는 링크 템플릿에는 두 가지 유형이 있습니다:
 
@@ -78,7 +78,7 @@ URL 뒤에 쿼리 매개변수를 추가하려면 이메일 메시지에서:
 
 - **드래그 앤 드롭 편집기:** **콘텐츠** > **링크 관리** 탭을 선택합니다. 그런 다음, **링크 템플릿 추가**를 선택합니다. 드래그 앤 드롭 편집기에서 링크 템플릿에 액세스하려면 [링크 별칭 지정]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/link_aliasing/)이(가) 켜져 있어야 합니다.
 
-![드래그 앤 드롭 편집기의 링크 관리 탭에 링크 템플릿의 예제 목록이 있습니다.][1]
+![Link Management tab in the drag-and-drop editor with an example list of link templates.]({% image_buster /assets/img_archive/link_template_messagecomposer2.png %})
 
 {% alert note %}
 링크 템플릿은 일반 텍스트에 적용되지 않습니다. 이것은 커런츠가 링크 템플릿의 매개변수를 포함하지 않는 클릭을 표시할 수 있음을 의미합니다. 이러한 클릭은 이메일의 일반 텍스트 버전에서 올 수 있습니다.
@@ -96,11 +96,5 @@ You can also [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_
 
 ## 자주 묻는 질문
 
-링크 템플릿에 대한 자주 묻는 질문에 대한 답변은 [템플릿 FAQ][10] 페이지를 확인하세요.
+For answers to frequently asked questions about link templates, check out our [Templates FAQ]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/faq/) page.
 
-[1]:{% image_buster /assets/img_archive/link_template_messagecomposer2.png %}
-[2]:{% image_buster /assets/img_archive/link_template_postappend.png %}
-[3]:{% image_buster /assets/img_archive/link_template_preappend.png %}
-[4]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/Liquid/
-[10]: {{site.baseurl}}/user_guide/message_building_by_channel/email/templates/faq/
-[11]: {% image_buster /assets/img_archive/create_link_template.png %}

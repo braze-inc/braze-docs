@@ -1,5 +1,5 @@
 ---
-nav_title: Creating an MMS Campaign
+nav_title: Creating an MMS campaign
 article_title: Creating an MMS Campaign
 page_order: 2
 description: "This reference article covers the steps involved in creating, sending, and previewing an MMS message."

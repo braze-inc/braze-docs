@@ -1,5 +1,5 @@
 ---
-nav_title: "Windows Object"
+nav_title: "Windows object"
 article_title: Windows Messaging Object
 page_order: 14
 page_type: reference

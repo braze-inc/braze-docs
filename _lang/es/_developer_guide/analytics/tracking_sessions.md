@@ -14,31 +14,7 @@ description: "Aprende a hacer un seguimiento de las sesiones a través del SDK d
 Para los SDK envoltorio que no aparecen en la lista, utiliza en su lugar el método nativo de Android o Swift correspondiente.
 {% endalert %}
 
-## Sobre el ciclo de vida de la sesión
-
-Una sesión se refiere al periodo de tiempo durante el cual el SDK de Braze realiza un seguimiento de la actividad del usuario en tu aplicación después de su lanzamiento. También puedes forzar una nueva sesión [llamando al método `changeUser()` ]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/#setting-a-user-id).
-
-{% tabs %}
-{% tab Android %}
-{% alert note %}
-Si has configurado la [devolución de llamada del ciclo de vida de la actividad]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-4-tracking-user-sessions-in-android) para Android, Braze llamará automáticamente a `openSession()` y `closeSession()` para cada actividad de tu aplicación.
-{% endalert %}
-
-Por defecto, una sesión se inicia cuando se llama por primera vez a `openSession()`. Si tu aplicación pasa a segundo plano, la sesión permanecerá activa durante `10` segundos (a menos que [cambies el tiempo de espera predeterminado de la sesión](#changing-the-default-session-timeout)) o el usuario cierre tu aplicación. Ten en cuenta que, si el usuario cierra tu aplicación mientras está en segundo plano, es posible que los datos de la sesión no se configuren en Braze hasta que vuelva a abrir la aplicación. 
-
-Si llamas a `closeSession()`, la sesión no finalizará inmediatamente. En cambio, finalizará la sesión al cabo de 10 segundos si el usuario no vuelve a llamar a `openSession()` para iniciar otra actividad.
-{% endtab %}
-
-{% tab swift %}
-Por defecto, una sesión se inicia cuando llamas a `Braze.init(configuration:)`. Esto ocurre cuando se desencadena la notificación `UIApplicationWillEnterForegroundNotification`, lo que significa que la aplicación ha pasado a primer plano.
-
-Si tu aplicación pasa a segundo plano, se desencadenará `UIApplicationDidEnterBackgroundNotification`. La sesión permanecerá activa durante `10` segundos (a menos que [cambies el tiempo de espera predeterminado de la sesión](#changing-the-default-session-timeout)) o el usuario cierre tu aplicación.
-{% endtab %}
-
-{% tab Web %}
-Por defecto, una sesión se inicia cuando llamas por primera vez a `braze.openSession()`. La sesión permanecerá activa hasta `30` minutos de inactividad (a menos que [cambies el tiempo de espera predeterminado de la sesión](#change-session-timeout)) o el usuario cierre la aplicación.
-{% endtab %}
-{% endtabs %}
+{% multi_lang_include developer_guide/_shared/about_session_lifecycle.md %}
 
 ## Suscribirse a las actualizaciones de la sesión
 
@@ -194,7 +170,7 @@ AppDelegate.braze = braze;
 {% endtab %}
 
 {% tab Web %}
-Por defecto, el tiempo de espera de la sesión está predeterminado en `30` segundos. Para cambiar esto, pasa la opción `sessionTimeoutInSeconds` a tu [`initialize`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize) función. Puede establecerse en cualquier número entero mayor o igual que `1`. 
+Por defecto, el tiempo de espera de la sesión está predeterminado en `30` minutos. Para cambiar esto, pasa la opción `sessionTimeoutInSeconds` a tu [`initialize`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize) función. Puede establecerse en cualquier número entero mayor o igual que `1`. 
 
 ```js
 // Sets the session timeout to 15 minutes instead of the default 30

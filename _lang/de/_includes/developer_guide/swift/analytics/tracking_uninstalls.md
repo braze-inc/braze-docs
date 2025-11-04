@@ -6,7 +6,7 @@ Gehen Sie in Ihrem Xcode-Projekt zu **Fähigkeiten** und stellen Sie sicher, das
 
 ### Schritt 2: Interne Push-Benachrichtigungen ignorieren
 
-Das Swift Braze SDK verwendet Push-Benachrichtigungen im Hintergrund, um Analytics zum Uninstall-Tracking zu sammeln. Um sicherzustellen, dass Ihre App keine unerwünschten Aktionen ausführt, wenn diese gesendet werden, müssen Sie dafür sorgen, dass [interne Push-Benachrichtigungen ignoriert werden]({{site.baseurl}}/developer_guide/push_notifications/silent/?sdktab=swift#swift_ignoring-internal-push-notifications).
+Das Swift Braze SDK verwendet Push-Benachrichtigungen im Hintergrund, um Analytics zum Uninstall-Tracking zu sammeln. Um sicherzustellen, dass Ihre App keine unerwünschten Aktionen durchführt, wenn diese gesendet werden, müssen Sie dafür sorgen, dass [interne Push-Benachrichtigungen ignoriert werden]({{site.baseurl}}/developer_guide/push_notifications/silent/?sdktab=swift#swift_ignoring-internal-push-notifications).
 
 ### Schritt 3: Senden Sie einen Push zu Testzwecken (optional)
 

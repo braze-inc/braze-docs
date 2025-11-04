@@ -13,10 +13,6 @@ noindex: true
 
 # Anpassen des Verhaltens von In-App-Nachrichten bei Klick
 
-{% alert note %}
-Dieser Artikel enthält Informationen zum News Feed, der nicht mehr verwendet wird. Braze empfiehlt Kunden, die unser News Feed-Tool verwenden, auf unseren Nachrichtenkanal Content Cards umzusteigen - er ist flexibler, anpassbarer und zuverlässiger. Weitere Informationen finden Sie im [Migrationsleitfaden]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/).
-{% endalert %}
-
 Die Eigenschaft `inAppMessageClickActionType` von `ABKInAppMessage` definiert das Aktionsverhalten nach dem Klicken auf die In-App-Nachricht. Diese Eigenschaft ist schreibgeschützt. Wenn Sie das Klickverhalten der In-App-Nachricht ändern möchten, können Sie die folgende Methode auf `ABKInAppMessage` aufrufen:
 
 {% tabs %}
@@ -40,7 +36,6 @@ Die `inAppMessageClickActionType` kann auf einen der folgenden Werte eingestellt
 
 | `ABKInAppMessageClickActionType` | On-Click-Verhalten |
 | -------------------------- | -------- |
-| `ABKInAppMessageDisplayNewsFeed` | Der Newsfeed wird angezeigt, wenn auf die Nachricht geklickt wird, und die Nachricht wird ausgeblendet. Beachten Sie, dass der Parameter `uri` ignoriert und die Eigenschaft `uri` von `ABKInAppMessage` auf Null gesetzt wird. |
 | `ABKInAppMessageRedirectToURI` | Die angegebene URI wird angezeigt, wenn auf die Nachricht geklickt wird, und die Nachricht wird ausgeblendet. Beachten Sie, dass der Parameter `uri` nicht Null sein darf. |
 | `ABKInAppMessageNoneClickAction` | Die Nachricht wird ausgeblendet, wenn sie angeklickt wird. Beachten Sie, dass der Parameter `uri` ignoriert und die Eigenschaft `uri` von `ABKInAppMessage` auf Null gesetzt wird. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -132,7 +127,7 @@ if inAppMessage is ABKInAppMessageImmersive {
 {% endtab %}
 {% endtabs %}
 
-Wenn eine In-App-Nachricht Buttons enthält, werden nur die Klickaktionen auf dem Modell `ABKInAppMessageButton` ausgeführt. Der Text der In-App-Nachricht kann nicht angeklickt werden, obwohl dem Modell `ABKInAppMessage` die standardmäßige Klickaktion ("Newsfeed") zugewiesen wurde.
+Wenn eine In-App-Nachricht Buttons enthält, werden nur die Klickaktionen auf dem Modell `ABKInAppMessageButton` ausgeführt. Die In-App-Nachricht kann nicht angeklickt werden, obwohl dem Modell `ABKInAppMessage` die Standard-Klick-Aktion zugewiesen ist.
 
 ## Methoden-Deklarationen
 

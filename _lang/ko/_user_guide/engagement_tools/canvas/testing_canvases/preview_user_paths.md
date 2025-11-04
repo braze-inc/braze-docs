@@ -19,7 +19,7 @@ Tool:
 1. 캔버스 빌더로 이동합니다. 저장하지 않은 변경 사항을 저장하고 오류를 해결합니다.
 2. 바닥글에서 **테스트 캔버스**를 선택합니다.
 3. 테스트 사용자를 선택합니다.
-4. (선택 사항) 테스트를 받을 수신자를 선택합니다.
+4. (Optional) Select a recipient for the test.
 5. **테스트 실행**을 선택합니다.
 
 캔버스 편집 권한이 없는 경우에도 미리 보기를 실행할 수 있지만, 이 미리 보기는 저장되지 않은 변경 사항이 있는 경우 실행됩니다.
@@ -101,11 +101,9 @@ If you test an Action Path with actions that correspond to exit criteria (includ
 
 이 시나리오에서 캔버스는 앱에서 세션이 없는 사용자를 타겟팅하도록 설정되어 있습니다. 이 여정에는 환영 이메일이 포함된 메시지 단계, 하루 동안 설정된 지연 단계, 세션이 하나 이상 있는 사용자와 그 외의 모든 사용자로 분할되는 오디언스 경로 단계가 포함됩니다. 사용자가 어느 오디언스 경로에 속해 있는지에 따라 후속 메시지 단계가 전송됩니다.
 
-![An example of a Canvas with a Message step, Delay step, Audience Paths step, and two Message steps.][1]{:style="max-width:70%"}
+![An example of a Canvas with a Message step, Delay step, Audience Paths step, and two Message steps.]({% image_buster /assets/img/preview_user_path_example.png %}){:style="max-width:70%"}
 
 테스트 사용자는 캔버스 진입 기준을 충족하므로 캔버스에 들어가서 사용자 여정을 진행할 수 있습니다. 그러나 테스트 사용자가 지난 달력 날짜에 앱을 열지 않았기 때문에 "다른 모든 사용자" 경로로 계속 이동하여 다음과 같은 푸시 알림을 받게 됩니다. "마지막 기회! 첫 번째 과제를 완료하면 특별 보너스를 받을 수 있습니다."
 
-![The "Test Results" section that shows the test user has met the entry criteria and provides a summary of their journey, including which steps they were sent.][2]
+![The "Test Results" section that shows the test user has met the entry criteria and provides a summary of their journey, including which steps they were sent.]({% image_buster /assets/img/preview_user_path_results_example.png %})
 
-[1]: {% image_buster /assets/img/preview_user_path_example.png %}
-[2]: {% image_buster /assets/img/preview_user_path_results_example.png %}

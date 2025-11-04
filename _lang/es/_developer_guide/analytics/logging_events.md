@@ -35,23 +35,6 @@ Braze.getInstance(context).logCustomEvent(YOUR_EVENT_NAME)
 {% endsubtab %}
 {% endsubtabs %}
 
-Si has integrado [Infillion Beacons](https://infillion.com/software/beacons/) en tu aplicación, puedes utilizar además `visit.getPlace()` para registrar eventos específicos de ubicación. `requestImmediateDataFlush` verifica que tu evento se registrará incluso si tu aplicación está en segundo plano.
-
-{% subtabs %}
-{% subtab java %}
-```java
-Braze.getInstance(context).logCustomEvent("Entered " + visit.getPlace());
-Braze.getInstance(context).requestImmediateDataFlush();
-```
-{% endsubtab %}
-
-{% subtab kotlin %}
-```kotlin
-Braze.getInstance(context).logCustomEvent("Entered " + visit.getPlace())
-Braze.getInstance(context).requestImmediateDataFlush()
-```
-{% endsubtab %}
-{% endsubtabs %}
 {% endtab %}
 
 {% tab swift %}
@@ -88,6 +71,26 @@ Si quieres utilizar Google Tag Manager en su lugar, puedes utilizar el tipo de e
 ```dart
 braze.logCustomEvent('YOUR_EVENT_NAME');
 ```
+{% endtab %}
+
+{% tab infillón %}
+Si has integrado [Infillion Beacons](https://infillion.com/software/beacons/) en tu aplicación Android, puedes utilizar opcionalmente `visit.getPlace()` para registrar eventos específicos de ubicación. `requestImmediateDataFlush` verifica que tu evento se registrará incluso si tu aplicación está en segundo plano.
+
+{% subtabs %}
+{% subtab java %}
+```java
+Braze.getInstance(context).logCustomEvent("Entered " + visit.getPlace());
+Braze.getInstance(context).requestImmediateDataFlush();
+```
+{% endsubtab %}
+
+{% subtab kotlin %}
+```kotlin
+Braze.getInstance(context).logCustomEvent("Entered " + visit.getPlace())
+Braze.getInstance(context).requestImmediateDataFlush()
+```
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
 
 {% tab nativo de react %}

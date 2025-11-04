@@ -1,5 +1,5 @@
 ---
-nav_title: IP Warming
+nav_title: IP warming
 article_title: IP Warming
 page_order: 1
 page_type: reference

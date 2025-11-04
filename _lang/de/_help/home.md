@@ -31,7 +31,7 @@ resources_list:
 
 popular_topic_list:
   - name: Informationen vor dem Versand
-    link: /docs/help/help_articles/campaigns_and_canvas/know_before_send/
+    link: /docs/user_guide/engagement_tools/messaging_fundamentals/know_before_send/
   - name: Migration von Push-Token
     link: /docs/help/help_articles/push/push_token_migration/
   - name: Protokollierung angepasster Event-Eigenschaften

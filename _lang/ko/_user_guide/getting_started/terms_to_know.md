@@ -83,7 +83,7 @@ glossaries:
   - name: 푸시 토큰
     description: "푸시 토큰은 앱과 iOS, Android 또는 웹 디바이스 간의 연결을 생성하기 위해 Apple 또는 Google에서 생성 및 할당하는 고유 키입니다. <a href=\"https://www.braze.com/docs/help/help_articles/push/push_token_migration/#push-token-migration\">푸시 토큰 마이그레이션</a>은 이미 생성된 키를 Braze로 가져오는 것입니다."
   - name: 푸시 TTL
-    description: "Also known as <a href=\"https://www.braze.com/docs/user_guide/administrative/app_settings/push_ttl_settings/\">Push TTL</a>, time to live refers to the period that campaigns will continue to attempt to be delivered to an offline user."
+    description: "Also known as <a href=\"https://www.braze.com/docs/user_guide/administrative/app_settings/push_settings/\">Push TTL</a>, time to live refers to the period that campaigns will continue to attempt to be delivered to an offline user."
   - name: 레이스 조건
     description: "<a href=\"http://www.braze.com/docs/user_guide/engagement_tools/testing/race_conditions/\">경합 조건</a>은 시스템이 여러 작업을 동시에 수행하려고 할 때 발생하는 바람직하지 않은 상황을 설명하는 소프트웨어 엔지니어링 개념으로, 시스템의 특성상 작업이 올바른 순서로 수행되어야 올바르게 수행될 수 있습니다. <br><br>Braze 플랫폼에서 이벤트 발생 시점에 기록된 사용자 데이터로 트리거된 캠페인을 세그먼트화하면 경쟁 조건이 발생할 수 있습니다. 이는 세그먼트 멤버십이 결정되고 캠페인이 전송될 때 캠페인이 세그먼트화되는 사용자 속성의 변경이 아직 처리되지 않아 사용자가 캠페인을 수신하지 못하는 경우에 발생합니다."
   - name: 사용량 제한

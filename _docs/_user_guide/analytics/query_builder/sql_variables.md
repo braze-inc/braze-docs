@@ -1,5 +1,5 @@
 ---
-nav_title: SQL Variables
+nav_title: SQL variables
 article_title: Query Builder SQL variables
 page_order: 2
 page_type: reference
@@ -371,7 +371,7 @@ Select one or more custom events or custom event properties from a list.
 ```sql
 SELECT event_name
 FROM CUSTOM_EVENTS_TABLE
-WHERE event_name = '{{custom_events.${Purchased Game}}}';
+WHERE event_name IN ({{custom_events.${Purchased Game}}}); 
 ```
 {% endraw %}
 {% endsubtab %}

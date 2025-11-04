@@ -139,7 +139,7 @@ Wählen Sie im Xcode-Projekt den Namen Ihrer App und dann **Allgemein** aus. Pr�
 
 #### Schritt 2.2: Fügen Sie das Protokoll BrazeLiveActivityAttributes hinzu {#brazeActivityAttributes}
 
-Fügen Sie in Ihrer `ActivityAttributes` -Implementierung die Konformität mit dem `BrazeLiveActivityAttributes` -Protokoll hinzu und fügen Sie dann die Eigenschaft `brazeActivityId` zu Ihrem Attribut-Modell hinzu.
+Fügen Sie in Ihrer `ActivityAttributes` Implementierung die Konformität mit dem `BrazeLiveActivityAttributes` Protokoll hinzu und fügen Sie dann die Eigenschaft `brazeActivityId` zu Ihrem Attribut-Modell hinzu.
 
 {% alert important %}
 iOS bildet die Eigenschaft `brazeActivityId` auf das entsprechende Feld in Ihrer Push-to-Start-Payload für Live-Aktivitäten ab. Sie sollte also nicht umbenannt oder mit einem anderen Wert versehen werden.
@@ -368,7 +368,7 @@ Um zu überprüfen, ob Ihre Push-to-Start-Benachrichtigung erfolgreich auf dem G
 
 #### Warum empfängt meine Live Activity nach dem Start mit Push-to-Start keine neuen Updates?
 
-Überprüfen Sie, ob Sie die [oben](#swift_brazeActivityAttributes) beschriebenen Anweisungen korrekt umgesetzt haben. Ihr `ActivityAttributes` sollte sowohl die `BrazeLiveActivityAttributes` Protokollkonformität als auch die Eigenschaft `brazeActivityId` enthalten.
+Überprüfen Sie, ob Sie die [oben](#swift_brazeActivityAttributes) beschriebenen Anweisungen korrekt umgesetzt haben. Ihre `ActivityAttributes` sollte sowohl die `BrazeLiveActivityAttributes` Protokollkonformität als auch die Eigenschaft `brazeActivityId` enthalten.
 
 Nachdem Sie eine Push-Benachrichtigung über eine Live-Aktivität erhalten haben, überprüfen Sie, ob Sie eine ausgehende Netzwerkanfrage an den Endpunkt `/push_token_tag` Ihrer Braze-URL sehen können und ob diese die korrekte Aktivitäts-ID unter dem Feld `"tag"` enthält.
 

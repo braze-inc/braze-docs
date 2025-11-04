@@ -49,6 +49,6 @@ Die Anzeige angepasster In-App-Nachrichten im HTML-Format in einem iFrame wird d
 {% endsubtabs %}
 
 {% alert tip %}
-Sie können auch angepasste In-App-Nachricht-Ansichten für Ihre App definieren. Einen vollständigen Überblick finden Sie unter [Anpassen von Fabriken]({{site.baseurl}}/developer_guide/in_app_messages/customization#android_setting-custom-factories).
+Sie können auch angepasste In-App-Nachricht-Ansichten für Ihre App definieren. Eine vollständige Anleitung finden Sie unter [Anpassen von Fabriken]({{site.baseurl}}/developer_guide/in_app_messages/customization#android_setting-custom-factories).
 {% endalert %}
 {% endtab %}

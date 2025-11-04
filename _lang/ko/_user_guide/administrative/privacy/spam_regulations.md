@@ -13,16 +13,16 @@ channel:
 
 # 스팸 규정
 
-> 전자 메일, 푸시 알림 및 SMS를 포함한 전자 통신 발신자를 규제하는 여러 법률이 있습니다. 항상 귀하 또는 귀하의 사용자에게 영향을 미칠 수 있는 [현지 규정][4]을 인지하고 있어야 합니다. 
+> 전자 메일, 푸시 알림 및 SMS를 포함한 전자 통신 발신자를 규제하는 여러 법률이 있습니다. 항상 귀하 또는 귀하의 사용자에게 영향을 미칠 수 있는 [현지 규정](https://en.wikipedia.org/wiki/Email_spam_legislation_by_country)을 인지하고 있어야 합니다. 
 
 Braze는 자체 연구를 기반으로 관련 정보를 제공하고 있지만, 완전하고 최신의 세부 사항을 위해 이러한 법률의 전체 본문도 참조해야 합니다.
 
-- [CAN-SPAM][1]
-- [캐나다의 스팸 방지법][2]
+- [CAN-SPAM](#can-spam)
+- [캐나다의 스팸 방지법](#casl)
 
 ## CAN-SPAM
 
-2003년 CAN-SPAM 법은 U.S의 이메일 발송자를 규제합니다. "상업적 제품 또는 서비스의 광고 또는 홍보를 주된 목적으로 하는 모든 이메일 메시지"를 발송하는 것입니다. 공식 [연방 거래 위원회][5] 웹사이트에서 자세한 내용을 읽을 수 있습니다.
+2003년 CAN-SPAM 법은 U.S의 이메일 발송자를 규제합니다. "상업적 제품 또는 서비스의 광고 또는 홍보를 주된 목적으로 하는 모든 이메일 메시지"를 발송하는 것입니다. 공식 [연방 거래 위원회](http://www.business.ftc.gov/documents/bus61-can-spam-act-compliance-guide-business) 웹사이트에서 자세한 내용을 읽을 수 있습니다.
 
 CAN-SPAM에 대한 7가지 주요 요구 사항이 있습니다:
 
@@ -38,7 +38,7 @@ CAN-SPAM에 대한 7가지 주요 요구 사항이 있습니다:
 
 ## 캐나다의 스팸 방지법 (CASL) {#casl}
 
-2014년 7월 1일, 캐나다의 스팸 방지법(CASL)이 캐나다 거주자에게 발송되는 이메일에 대해 발효됩니다. 캐나다 정부 [Justice Laws Website][3]에서 법률 전문을 읽을 수 있습니다. 법은 본질적으로 이메일 및 푸시 알림을 받는 캐나다 수신자가 통신에 대해 "명시적 또는 묵시적" 동의를 제공해야 한다고 말합니다.
+2014년 7월 1일, 캐나다의 스팸 방지법(CASL)이 캐나다 거주자에게 발송되는 이메일에 대해 발효됩니다. 캐나다 정부 [Justice Laws Website](http://laws-lois.justice.gc.ca/eng/annualstatutes/2010_23/FullText.html)에서 법률 전문을 읽을 수 있습니다. 법은 본질적으로 이메일 및 푸시 알림을 받는 캐나다 수신자가 통신에 대해 "명시적 또는 묵시적" 동의를 제공해야 한다고 말합니다.
 
 ### CASL 대 CAN-SPAM
 
@@ -62,7 +62,7 @@ CASL은 2017년 7월 1일에 끝나는 3년의 전환 기간을 가지고 있지
 - 구독, 멤버십 또는 계정에 대한 사실 정보를 제공하는 메시지
 - 제품 또는 서비스, 제품 업데이트 또는 업그레이드를 전달하는 메시지
 
->  이것은 면제 목록의 전부가 아닙니다. 자세한 내용은 [법의 전체 텍스트][3]를 참조하십시오.
+>  이것은 면제 목록의 전부가 아닙니다. 자세한 내용은 [법의 전체 텍스트](http://laws-lois.justice.gc.ca/eng/annualstatutes/2010_23/FullText.html)를 참조하십시오.
 
 ### 메시지 동의
 
@@ -112,11 +112,5 @@ iOS에서 사용자는 항상 푸시 알림을 옵트인하도록 요청받았�
 
 ### Android {#spam-android}
 
-Android에서 사용자는 개인정보처리방침 또는 최종 사용자 사용권 계약에 명시된 묵시적 옵트인에 의해 옵트인된 것으로 간주할 수 있습니다. 사용자가 처음으로 앱을 시작할 때 초기 화면에서 명시적인 옵트인 절차를 구현하는 것이 좋습니다. 자세한 내용은 [푸시 모범 사례][6] 기사를 참조하십시오. 사용자가 받을 푸시 알림 유형을 안내하여 옵트인 비율을 높일 수 있습니다.
+Android에서 사용자는 개인정보처리방침 또는 최종 사용자 사용권 계약에 명시된 묵시적 옵트인에 의해 옵트인된 것으로 간주할 수 있습니다. 사용자가 처음으로 앱을 시작할 때 초기 화면에서 명시적인 옵트인 절차를 구현하는 것이 좋습니다. 자세한 내용은 [푸시 모범 사례]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/) 기사를 참조하십시오. 사용자가 받을 푸시 알림 유형을 안내하여 옵트인 비율을 높일 수 있습니다.
 
-[1]: #can-spam
-[2]: #casl
-[3]: http://laws-lois.justice.gc.ca/eng/annualstatutes/2010_23/FullText.html
-[4]: https://en.wikipedia.org/wiki/Email_spam_legislation_by_country "위키백과: 이메일 스팸 관련 법률 국가별 현황"
-[5]: http://www.business.ftc.gov/documents/bus61-can-spam-act-compliance-guide-business "CAN-SPAM 법: 비즈니스 준수를 위한 가이드"
-[6]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/

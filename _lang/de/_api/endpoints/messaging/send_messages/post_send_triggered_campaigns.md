@@ -70,12 +70,12 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## Parameter der Anfrage
 
-| Parameter | Erforderlich | Daten Typ | Beschreibung |
+| Parameter | Erforderlich | Datentyp | Beschreibung |
 | --------- | ---------| --------- | ----------- |
 |`campaign_id`|Erforderlich|String|Siehe [Bezeichner der Kampagne]({{site.baseurl}}/api/identifier_types/). |
 |`send_id`| Optional | String | Siehe [Bezeichner senden]({{site.baseurl}}/api/identifier_types/). |
 |`trigger_properties`| Optional | Objekt | Siehe [Eigenschaften des Auslösers]({{site.baseurl}}/api/objects_filters/trigger_properties_object/). Die Schlüssel-Wert-Paare für die Personalisierung gelten für alle Nutzer:innen in dieser Anfrage. |
-|`broadcast`| Optional | Boolesche | Sie müssen `broadcast` auf true setzen, wenn Sie eine Nachricht an ein ganzes Segment senden, auf das eine Kampagne oder ein Canvas abzielt. Dieser Parameter ist standardmäßig auf false eingestellt (Stand: 31\. August 2017). <br><br> Wenn `broadcast` auf true gesetzt ist, kann eine `recipients` Liste nicht aufgenommen werden. Seien Sie jedoch vorsichtig, wenn Sie `broadcast: true` setzen, denn wenn Sie dieses Flag unbeabsichtigt setzen, kann dies dazu führen, dass Sie Ihre Nachricht an eine größere Zielgruppe als erwartet senden. |
+|`broadcast`| Optional | Boolesch | Sie müssen `broadcast` auf true setzen, wenn Sie eine Nachricht an ein ganzes Segment senden, auf das eine Kampagne oder ein Canvas abzielt. Dieser Parameter ist standardmäßig auf false eingestellt (Stand: 31\. August 2017). <br><br> Wenn `broadcast` auf true gesetzt ist, kann eine `recipients` Liste nicht aufgenommen werden. Seien Sie jedoch vorsichtig, wenn Sie `broadcast: true` setzen, denn wenn Sie dieses Flag unbeabsichtigt setzen, kann dies dazu führen, dass Sie Ihre Nachricht an eine größere Zielgruppe als erwartet senden. |
 |`audience`| Optional | Verbundenes Objekt der Zielgruppe| Siehe [verbundene Zielgruppe]({{site.baseurl}}/api/objects_filters/connected_audience/). |
 |`recipients`| Optional | Array | Siehe [Empfänger:innen Objekt]({{site.baseurl}}/api/objects_filters/recipient_object/).<br><br>Wenn `send_to_existing_only` `false` ist, muss ein Attribut-Objekt enthalten sein.<br><br>Wenn `recipients` nicht angegeben wird und `broadcast` auf true gesetzt ist, wird die Nachricht an das gesamte Segment gesendet, auf das die Kampagne abzielt. <br><br> Wenn `email` der Bezeichner ist, müssen Sie [`prioritization`]({{site.baseurl}}/api/endpoints/user_data/post_user_identify#identifying-users-by-email) in das Empfänger:innen-Objekt aufnehmen. |
 |`attachments`| Optional | Array | Wenn `broadcast` auf true gesetzt ist, kann die Liste `attachments` nicht einbezogen werden. |

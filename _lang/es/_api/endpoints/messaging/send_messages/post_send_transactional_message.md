@@ -33,7 +33,7 @@ Para utilizar este punto final, deberás generar una clave de API con el permiso
 
 ## Límite de velocidad
 
-{% multi_lang_include rate_limits.md endpoint='correo electrónico transaccional' %}
+{% multi_lang_include rate_limits.md endpoint='transactional email' %}
 
 ## Parámetros de la ruta
 

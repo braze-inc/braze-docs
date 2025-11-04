@@ -31,11 +31,11 @@ Before creating your first CDI Segment, set up a new Connected Source with your 
 
 먼저 새 [세그먼트 확장]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/)을 만든 다음 **전체 새로고침**을 선택합니다.
 
-![]({% image_buster /assets/img/segment/segment_extension_modal.png %}){: style="max-width:70%;"}
+![]({% image_buster /assets/img/segment/segment_extension_modal.png %}){: style="max-width:60%;"}
 
 데이터 소스로 **CDI 데이터 테이블**을 선택하십시오.
 
-![]({% image_buster /assets/img/segment/cdi_data_tables.png %}){: style="max-width:80%;"}
+![]({% image_buster /assets/img/segment/cdi_data_tables.png %}){: style="max-width:60%;"}
 
 CDI 설정의 일부로, CDI 세그먼트에서 사용할 다양한 연결을 선택할 수 있습니다. 각 연결에는 특정 데이터 테이블 세트가 있습니다. 개발 팀은 CDI 설정 중에 연결 및 데이터 테이블을 구성할 수 있습니다.
 

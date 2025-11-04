@@ -1,9 +1,9 @@
 ---
-nav_title: Principes de base de l’envoi de messages (Messaging Fundamentals)
-article_title: Principes de base de l’envoi de messages (Messaging Fundamentals)
+nav_title: "Principes de base de l'envoi de messages"
+article_title: "Principes de base de l'envoi de messages"
 layout: dev_guide
 page_order: 0
-guide_top_header: "Principes de base de l’envoi de messages (Messaging Fundamentals)"
+guide_top_header: "Principes de base de l'envoi de messages"
 guide_top_text: "> Dans Braze, vous pouvez composer, envoyer et gérer vos messages en utilisant <a href='/docs/user_guide/getting_started/campaigns_canvases'>une campagne ou un Canvas</a>. Pour ces deux méthodes d'envoi de messages, il existe des principes fondamentaux communs de composition (mise en place de votre message) et de gestion (traitement administratif de votre message)."
 page_type: landing
 tool: 
@@ -27,16 +27,19 @@ guide_featured_list:
   - name: Événements de conversion
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/conversion_events/
     image: /assets/img/braze_icons/edit-05.svg
-  - name: Types de livraison
+  - name: Types de réception/distribution
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/delivery_types/
     image: /assets/img/braze_icons/beaker-02.svg
+  - name: Blocs éditeurs
+    link: /docs/dnd/editor_blocks/
+    image: /assets/img/braze_icons/align-left.svg
   - name: Localisation
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/localization/
     image: /assets/img/braze_icons/globe-02.svg
   - name: Rééligibilité
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/reeligibility/
     image: /assets/img/braze_icons/users-01.svg
-  - name: Ciblage des utilisateurs
+  - name: Le ciblage des utilisateurs
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/targeting_users/
     image: /assets/img/braze_icons/target-04.svg
 
@@ -51,16 +54,22 @@ guide_menu_description: |
 
   ### Related articles
 guide_menu_list:
-  - name: Flux de travail d’approbation
+  - name: "Processus d'approbation"
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/approvals/
     image: /assets/img/braze_icons/brush-02.svg
   - name: Archivage des messages
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/archiving/
     image: /assets/img/braze_icons/archive.svg
+  - name: "Copier d'un espace de travail à l'autre"
+    link: /docs/user_guide/engagement_tools/messaging_fundamentals/copying_across_workspaces/
+    image: /assets/img/braze_icons/copy-07.svg
   - name: Duplication des messages
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/duplicating/
     image: /assets/img/braze_icons/copy-04.svg
   - name: "Statuts de l'envoi de messages"
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/about_statuses/
+    image: /assets/img/braze_icons/book-closed.svg
+  - name: "Savoir avant d'envoyer"
+    link: /docs/know_before_send/
     image: /assets/img/braze_icons/book-closed.svg
 ---

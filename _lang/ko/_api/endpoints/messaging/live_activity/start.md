@@ -28,6 +28,8 @@ description: "이 문서에서는 라이브 활동 시작 엔드포인트에 대
 - `messages.live_activity.start` 권한을 사용하여 API 키를 생성합니다.
 - 브레이즈 스위프트 SDK를 사용하여 [라이브 활동을 생성합니다]({{site.baseurl}}/developer_guide/push_notifications/live_notifications/?tab=local&sdktab=swift#swift_create-an-activity).
 
+{% multi_lang_include api/payload_size_alert.md %}
+
 ## 사용량 제한
 
 {% multi_lang_include rate_limits.md endpoint='default' %}

@@ -43,7 +43,7 @@ glossaries:
   - name: カスタムイベント
     description: "<a href=\"https://www.braze.com/docs/user_guide/data/custom_data/custom_events\">カスタムイベント</a>はユーザーによって行われるアクションであり、アプリケーションに対する価値の高いユーザーインタラクションをトラッキングするのに適しています。"
   - name: データポイント
-    description: "データポイントは以下の場合にカウントされます。<a href=\"https://www.braze.com/docs/user_guide/data/custom_data/custom_attributes/\">カスタム属性が</a>設定または更新されたとき (同じ値で更新している場合でも)、<a href=\"https://www.braze.com/docs/user_guide/data/custom_data/custom_events\">カスタムイベント</a>や購入イベントがログに記録されたとき、標準データ （たとえば、<code>email</code>、<code>first_name</code>、<code>last_name</code>、<code>country</code>、あるいは <code>home_city</code>) が記録されるとき、セッションが開始されるとき、セッションが終了するとき。"
+    description: "データポイントは、<a href=\"https://www.braze.com/docs/user_guide/data/custom_data/custom_attributes/\">カスタム属性が</a>設定または更新されたとき（同じ値で更新している場合でも）、<a href=\"https://www.braze.com/docs/user_guide/data/custom_data/custom_events\">カスタムイベントや</a>購入イベントが記録されたとき、標準データ（たとえば、<code>メール</code>、<code>姓名</code>、<code>国名</code>、<code>出身地</code>）が記録されたとき、セッションが開始されたとき、セッションが終了したときにカウントされる。"
   - name: ディープリンク
     description: "<a href=\"https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/\">ディープリンク</a>は、顧客を次のアクションやエンゲージメントに導くために使われます。ディープリンクを使えば、Web サイトまたはモバイルアプリ内のターゲットコンテンツとメッセージを接続できます。"
   - name: 休眠ユーザー
@@ -83,7 +83,7 @@ glossaries:
   - name: プッシュ・トークン
     description: "プッシュトークンは、アプリと iOS、Android、またはWeb デバイス間の接続を作成するために、Apple または Google によって作成され、割り当てられた一意のキーです。<a href=\"https://www.braze.com/docs/help/help_articles/push/push_token_migration/#push-token-migration\">プッシュトークンの移行とは</a>、すでに生成されたキーをBrazeにインポートすることである。"
   - name: プッシュ有効時間 (TTL)
-    description: "この有効時間は<a href=\"https://www.braze.com/docs/user_guide/administrative/app_settings/push_ttl_settings/\">プッシュ TTL</a> とも呼ばれ、キャンペーンがオフラインのユーザーへの配信試行を続ける期間を示します。"
+    description: "この有効時間は<a href=\"https://www.braze.com/docs/user_guide/administrative/app_settings/push_settings/\">プッシュ TTL</a> とも呼ばれ、キャンペーンがオフラインのユーザーへの配信試行を続ける期間を示します。"
   - name: 競合状態
     description: "<a href=\"http://www.braze.com/docs/user_guide/engagement_tools/testing/race_conditions/\">レースコンディションとは</a>、ソフトウェア工学の概念であり、システムが複数の操作を同時に実行しようとしたときに発生する望ましくない状況を説明するものであるが、システムの性質上、操作を正しく実行するには正しい順序で実行しなければならない。<br><br>Brazeプラットフォームでは、イベント発生時に記録されたユーザーデータに基づいてトリガーキャンペーンをセグメント化すると、レースコンディションが発生する可能性がある。これは、セグメントメンバーシップが決定され、キャンペーンが送信された時点で、キャンペーンがセグメントされたユーザー属性の変更がまだユーザーに対して処理されていない場合に起こり、ユーザーがキャンペーンを受け取らないことにつながる。"
   - name: レート制限

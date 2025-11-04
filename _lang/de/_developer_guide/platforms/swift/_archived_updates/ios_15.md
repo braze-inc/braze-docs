@@ -17,7 +17,7 @@ noindex: true
 
 Im Rahmen unserer jährlichen Tests von iOS-Betas haben wir eine von Apple vorgenommene Änderung festgestellt, die dazu führt, dass bestimmte UI-Navigationsleisten transparent statt undurchsichtig erscheinen. Dies wird unter iOS 15 sichtbar sein, wenn Sie das Braze Standard UI für Content-Cards verwenden oder wenn Deeplinks im Internet innerhalb Ihrer App statt in einer separaten Browser-App geöffnet werden.
 
-Um diese visuelle Veränderung in iOS 15 zu vermeiden, empfehlen wir Ihnen dringend, so bald wie möglich auf das [Braze iOS SDK v4.3.2](https://github.com/Appboy/appboy-ios-sdk/releases/tag/4.3.2) zu upgraden, bevor Nutzer:innen ihr Telefon auf das neue Betriebssystem iOS 15 aktualisieren.
+Um diese visuelle Veränderung in iOS 15 zu vermeiden, empfehlen wir Ihnen dringend, so schnell wie möglich auf das [Braze iOS SDK v4.3.2](https://github.com/Appboy/appboy-ios-sdk/releases/tag/4.3.2) zu upgraden, bevor die Nutzer:innen ihr Telefon auf das neue Betriebssystem iOS 15 aktualisieren.
 
 ## Neue Benachrichtigungseinstellungen {#notification-settings}
 
@@ -64,7 +64,7 @@ Mit diesem Feature haben Sie die Möglichkeit, Nutzer um Erlaubnis zu fragen! Nu
 
 ### Verwendung von Standort-Buttons bei Braze
 
-Für die Verwendung von Standort Buttons mit Braze ist keine zusätzliche Integration erforderlich. Ihre App sollte den Standort eines Nutzers:innen wie gewohnt weitergeben (sobald dieser seine Zustimmung gegeben hat).
+Für die Verwendung von Standort Buttons mit Braze ist keine zusätzliche Integration erforderlich. Ihre App sollte den Standort eines Nutzers:innen wie gewohnt weitergeben (sobald dieser seine Zustimmung erteilt hat).
 
 Laut Apple wird für Nutzer:innen, die den Zugriff auf den Standort im Hintergrund bereits freigegeben haben, die Option "Während der Nutzung der App" diese Berechtigung auch nach dem Upgrade auf iOS 15 weiterhin gewähren.
 
@@ -74,5 +74,5 @@ In diesem Jahr hat Apple zahlreiche Updates zum Tracking von E-Mails und zum Dat
 
 ## Standort der Safari IP-Adresse
 
-In iOS 15 werden Nutzer:innen die Möglichkeit haben, Safari so zu konfigurieren, dass der anhand ihrer IP-Adressen ermittelte Standort anonymisiert oder verallgemeinert wird. Denken Sie daran, wenn Sie standortbasiertes Targeting oder Segmentierung verwenden.
+In iOS 15 werden Nutzer:in die Lage versetzt, Safari so zu konfigurieren, dass der anhand ihrer IP-Adressen ermittelte Standort anonymisiert oder verallgemeinert wird. Denken Sie daran, wenn Sie standortbasiertes Targeting oder Segmentierung verwenden.
 

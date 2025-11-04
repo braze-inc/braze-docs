@@ -1,11 +1,11 @@
 ---
 nav_title: Personalizar
-article_title: Mensagens personalizadas no app
+article_title: Mensagens personalizadas no aplicativo
 page_order: 2
 layout: dev_guide
-guide_top_header: "Mensagens personalizadas no app"
-guide_top_text: "Além dos modelos padrão de mensagens no app, o Braze também oferece modelos personalizados de envio de mensagens que permitem HTML personalizado, modais com CSS personalizado, formulários de captura de e-mail, vídeo e muito mais."
-description: "Essa landing page abrange os modelos personalizados de envio de mensagens no app que permitem HTML personalizado, modais com CSS personalizado, vídeo, formulários de captura de e-mail e muito mais."
+guide_top_header: "Mensagens personalizadas no aplicativo"
+guide_top_text: "Além dos modelos padrão de mensagens no aplicativo, o Braze também oferece modelos de mensagens personalizadas que permitem HTML personalizado, modais com CSS personalizado, formulários de captura de e-mail, vídeo e muito mais."
+description: "Essa página de destino abrange os modelos personalizados de mensagens no aplicativo que permitem HTML personalizado, modais com CSS personalizado, vídeo, formulários de captura de e-mail e muito mais."
 
 channel:
   - in-app messages

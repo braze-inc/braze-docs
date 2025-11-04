@@ -1,5 +1,5 @@
 ---
-nav_title: Building Campaigns
+nav_title: Building campaigns
 article_title: Building Campaigns
 layout: dev_guide
 guide_top_header: "Building Campaigns"

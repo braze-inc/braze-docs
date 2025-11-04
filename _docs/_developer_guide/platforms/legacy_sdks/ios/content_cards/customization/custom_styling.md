@@ -1,5 +1,5 @@
 ---
-nav_title: Custom Styling
+nav_title: Custom styling
 article_title: Custom Content Card Styling for iOS
 platform: iOS
 page_order: 1

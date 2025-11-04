@@ -22,20 +22,16 @@ Confirma que tu aplicación está recopilando datos de ubicación:
 
 Para ver si los datos de ubicación del usuario se envían a Braze, utiliza el filtro **Ubicación disponible**. Este filtro te permite ver el porcentaje de usuarios con una "ubicación más reciente".
 
-![][25]
+![]({% image_buster /assets/img_archive/trouble7.png %})
 
 ## Transferencia de datos
 
 Confirma que tus desarrolladores pasan datos de ubicación a Braze. Normalmente, el SDK gestiona automáticamente la transmisión de datos de ubicación después de que el usuario dé sus permisos, pero es posible que tus desarrolladores hayan desactivado el seguimiento de ubicación en Braze. Puedes encontrar más información sobre el seguimiento de ubicación en:
-- [Android][26]
-- [iOS][27]
-- [Web][28]
+- [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/location_tracking/)
+- [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/location_tracking/)
+- [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/location_tracking/)
 
 ¿Aún necesitas ayuda? Abre un [ticket de soporte]({{site.baseurl}}/braze_support/).
 
 _Última actualización: 16 de noviembre de 2022_
 
-[25]: {% image_buster /assets/img_archive/trouble7.png %}
-[26]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/location_tracking/
-[27]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/location_tracking/
-[28]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/location_tracking/

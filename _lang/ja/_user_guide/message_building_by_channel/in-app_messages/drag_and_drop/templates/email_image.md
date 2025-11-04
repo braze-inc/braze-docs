@@ -1,5 +1,5 @@
 ---
-nav_title: イメージを使用した電子メールのサインアップ
+nav_title: "\"画像 での電子メールサインアップ"
 article_title: バックグラウンドイメージを使用した電子メールサインアップ
 alias: "/email_image/"
 page_order: 4
@@ -18,31 +18,31 @@ description: "このページでは、アプリ内メッセージドラッグア
 
 ドラッグ＆ドロップのアプリ内メッセージを作成するときには、テンプレートとして [**背景画像付きのメールサインアップ**] を選択し、その後 [**メッセージを作成**] を選択します。このテンプレートは、モバイルアプリとWebブラウザの両方でサポートされています。
 
-![メールサインアップフォームのテンプレートがあり、背景イメージがあるアプリ内メッセージエディタ。][img1]
+\![バックグラウンド "画像付きのメールサインアップフォームのテンプレートを持つアプリ内メッセージエディタ。]({% image_buster /assets/img/drag_and_drop/templates/email_capture_image.png %})
 
-### ステップ2:メッセージスタイルを設定する
+### ステップ 2: メッセージスタイルを設定する
 
 {% multi_lang_include drag_and_drop/templates.md section='message style' %}
 
-### ステップ 3:メール登録コンポーネントのカスタマイズ
+### ステップ 3: メール登録コンポーネントのカスタマイズ
 
 メールサインアップフォームの作成を開始するには、エディタでメールキャプチャ要素を選択します。デフォルトでは、収集されたメールアドレスはグローバルサブスクリプショングループ**Subscribed**を持ちます。特定のサブスクリプショングループにユーザーをオプトインするには、[メールサブスクリプションの状態を更新する]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions#updating-email-subscription-states)を参照してください。
 
 メールキャプチャ要素のプレースホルダーテキストとラベルテキストをカスタマイズできます。
 
-![メールキャプチャ要素をカスタマイズするためのサイドメニューを持つアプリ内メッセージエディタ。][img2]
+\![メールキャプチャ要素をカスタマイズするためのサイドメニューを持つアプリ内メッセージエディタ。]({% image_buster /assets/img/drag_and_drop/templates/email_capture_field_image.png %})
 
 #### メール検証
 
 {% multi_lang_include drag_and_drop/templates.md section='email validation' %}
 
-### ステップ 4:免責事項の言語を追加（オプション）
+### ステップ 4: 免責事項の言語を追加（オプション）
 
 {% multi_lang_include drag_and_drop/templates.md section='email disclaimer' %}
 
 ### ステップ 5: メッセージにスタイルを設定する
 
-ドラッグアンドドロップ[アプリ内メッセージコンポーネント][3]を使用して、サインアップフォームの外観と感触をカスタマイズします。**メッセージコンテナー**メニューでデフォルトの背景画像 URL を置き換えて独自の背景画像を追加するか、URL を削除して[メディアライブラリ]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/)から画像を選択します。
+ドラッグアンドドロップ[アプリ内メッセージコンポーネント]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#message-components)を使用して、サインアップフォームの外観と感触をカスタマイズします。**メッセージコンテナー**メニューでデフォルトの背景画像 URL を置き換えて独自の背景画像を追加するか、URL を削除して[メディアライブラリ]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/)から画像を選択します。
 
 ## 結果の分析
 
@@ -53,8 +53,5 @@ description: "このページでは、アプリ内メッセージドラッグア
 {% multi_lang_include drag_and_drop/templates.md section='email double opt-in' %}
 
 
-[img1]: {% image_buster /assets/img/drag_and_drop/templates/email_capture_image.png %}
-[img2]: {% image_buster /assets/img/drag_and_drop/templates/email_capture_field_image.png %} 
 
 
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#message-components

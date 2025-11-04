@@ -1,5 +1,5 @@
 ---
-nav_title: Churn Analytics
+nav_title: Churn analytics
 article_title: Predictive Churn Analytics
 description: "This reference article covers the different components included in the Churn Prediction Analytics page and how they can be used to make insightful, driven decisions."
 page_order: 1.5

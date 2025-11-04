@@ -1,5 +1,5 @@
 ---
-nav_title: Creating a Segment
+nav_title: Creating a segment
 article_title: Creating a Segment
 page_order: 0
 page_type: tutorial
@@ -63,6 +63,25 @@ Selecting "OR" for your filters means that your segment will contain users satis
 When selecting "OR" for filters that include a negative filter (such as "is not" in a subscription group), remember that users only need to fulfill one of the "OR" filters to be included in the segment. To apply the negative filter regardless of the other filters, use an [exclusion group](#exclusion).
 {% endalert %}
 
+{% details When to avoid the OR operator %}
+
+There can be user targeting situations where using the `OR` operator should be avoided. The `OR` operator creates a statement that evaluates to true if a user meets the criteria for one or more of the filters in a statement. For example, if you want to create a segment of users who belong to "Foodies" but don't belong to either "Non-foodies" or "Candy-lovers", then using the `OR` operator would work here.
+
+![Filter group for users in segment "foodies" and not in segments "non-foodies" or "candy-lovers".]({% image_buster /assets/img_archive/or_operator_segment.png %})
+
+However, if your goal is to segment users who belong to the "Foodies" segment and aren't in either of the "Non-foodies" and "Candy-lovers" segments, then use the `AND` operator. This way, users who receive the campaign or Canvas are in the intended segment ("foodies") and not in the other segments ("Non-foodies" and "Candy-lovers") at the same time. 
+
+The following negative targeting criteria should not be used with the `OR` operator when two or more filters are referencing the same attribute:
+
+- `not included`
+- `is not`
+- `does not equal`
+- `does not match regex`
+
+If `not included`, `is not`, `does not equal`, or `does not match regex` are used with the `OR` operator two or more times in a statement, users with all values for the relevant attribute will be targeted.
+
+{% enddetails %}
+
 #### Filter operators
 
 Depending on the specific filter you select, you will have different operators for identifying filter values. To dive deeper into the operators available for different types of custom attributes, see [Custom attribute storage]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#setting-custom-attributes). Note that when using the “is any of” operator, the maximum number of items you can include in that field is 256.
@@ -91,11 +110,21 @@ Excluded users will not be counted as part of your segment’s _Total reachable 
 
 ![An exclusion group with two filters.]({% image_buster /assets/img_archive/segmenter_exclusion_groups.png %})
 
+#### Viewing funnel statistics
+
+Select **View funnel statistics** to display the statistics for that filter group and see how each added filter impacts your segment statistics. You'll see an estimated count and percentage for users who are targeted by all filters up to that point. Once the statistics are displayed for a filter group, they will update automatically whenever you change the filters. These statistics are estimated and may take a moment to generate.
+
+Keep in mind that if you use AND in between your filters, the funnel statistics will decrease; if you use OR in between your filters, the funnel statistics will increase.
+
+![Two filters with segment funnel statistics.]({% image_buster /assets/img_archive/segment_funnel_statistics.png %})
+
+By adding filters that document your user flow, you can see the points where users fall off. For example, if you're a social networking app and you want to see where you might be losing users during your onboarding process, you may want to add custom data filters for signing up, adding friends, and sending the first message. If you find that 85% of users are signing up and adding friends, but only 45% sent the first message, then you'll know to focus on encouraging more message sends during your onboarding and marketing campaigns.
+
 #### Testing segments
 
 After adding apps and filters to your segment, you can test if your segment is set up as expected by looking up a user to confirm if they match the segment criteria. To do so, search for a user’s `external_id` or `braze_id` in the **User Lookup** section. Note that you cannot search by email address in **User Lookup**.
 
-![User Lookup section with a search field.]({% image_buster /assets/img_archive/user_lookup.png %})
+![User Lookup section with a search field.]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:70%;"}
 
 User lookup is available when:
 - Creating a segment

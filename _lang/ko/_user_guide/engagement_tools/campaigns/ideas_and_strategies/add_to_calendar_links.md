@@ -14,7 +14,7 @@ channel: email
 
 그렇게 하려면 이메일을 작성하고 링크를 삽입할 위치를 결정하세요. 그런 다음 Google 캘린더용 옵션 하나와 다른 캘린더(iCal 또는 Outlook과 같은)용 옵션 하나를 추가합니다. 예를 들어, "Google 캘린더에 추가" 및 "iCal 또는 Outlook에 추가".
 
-![대시보드에서 링크를 추가할 때 링크 대화 상자. "링크 정보" 탭이 선택되고 텍스트가 "Google 캘린더에 추가"로 설정됩니다.][1]{: style="max-width:50%"}
+![대시보드에서 링크를 추가할 때 링크 대화 상자. The "Link Info" tab is selected and the text is set to "Add to Google Calendar".]({% image_buster /assets/img_archive/calendar_1.png %}){: style="max-width:50%"}
 
 ## URL 형식
 
@@ -79,27 +79,22 @@ https://ics.agical.io/?subject=Meet%20Braze&location=114%20Sansome%20Street&dtst
 
 클릭하면 Google 캘린더가 새 탭 또는 창에서 열리며, 초대장에 이벤트 세부 정보가 미리 채워져 있고 사용자가 저장할 준비가 됩니다. 이것은 모바일과 데스크탑 모두에서 발생합니다.
 
-![Google 캘린더 대화상자에서 이벤트 세부 정보를 추가하고 저장 준비가 된 이벤트를 추가합니다.][2]{: style="max-width:75%"}
+![Google Calendar dialog to add an event with the event's details added and ready to save.]({% image_buster /assets/img_archive/calendar_2.png %}){: style="max-width:75%"}
 
 ### iCal 또는 Outlook
 
 데스크탑에서 클릭하면 ICS 파일이 다운로드됩니다. 사용자는 ICS 파일을 열어 iCal 또는 Outlook을 열고 사용자가 이벤트를 캘린더에 추가하도록 요청해야 합니다.
 
-![iCal 캘린더에 새 이벤트를 추가하는 대화 상자가 있어 사용자가 캘린더를 선택하고 확인하도록 요청합니다.][3]{: style="max-width:75%"}
+![iCal calendar with a dialog for adding a new event, which prompts the user to select a calendar and confirm.]({% image_buster /assets/img_archive/calendar_3.png %}){: style="max-width:75%"}
 
-![이벤트가 추가된 iCal 캘린더.][4]{: style="max-width:81%"}
+![iCal calendar with the event added.]({% image_buster /assets/img_archive/calendar_4.png %}){: style="max-width:81%"}
 
 모바일에서 사용자는 링크를 길게 눌러 캘린더에 추가하라는 메시지가 표시됩니다.
 
-![캘린더 링크를 길게 누르면 나타나는 iOS 팝업으로, "캘린더에 추가" 버튼이 포함되어 있습니다.][5]{: style="max-width:50%"}
+![iOS pop-up when you press and hold on a calendar link, which includes a button to "Add to Calendar".]({% image_buster /assets/img_archive/calendar_5.png %}){: style="max-width:50%"}
 
 자세한 내용은 다음을 참조하십시오:
 * [Google 캘린더에 이벤트 만들기](https://developers.google.com/calendar/api/guides/create-events)
 * [이메일 메시지에 캘린더 추가 링크 만들기](https://support.microsoft.com/en-us/office/create-an-add-to-calendar-link-in-an-email-message-34f8ea28-322a-4867-b423-2998f9634e59)
 
 
-[1]: {% image_buster /assets/img_archive/calendar_1.png %}
-[2]: {% image_buster /assets/img_archive/calendar_2.png %}
-[3]: {% image_buster /assets/img_archive/calendar_3.png %}
-[4]: {% image_buster /assets/img_archive/calendar_4.png %}
-[5]: {% image_buster /assets/img_archive/calendar_5.png %}

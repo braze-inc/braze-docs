@@ -1,12 +1,12 @@
 Braze SDK をインストールすると、基本的な分析機能{% if include.platform == 'iOS' %}と、ユーザーエンゲージメントのためのアプリ内メッセージが提供されます{% endif %}。
 
-{{include.platform}} Braze SDK は、Objective-C および Swift プロジェクトの依存関係マネージャーである [CocoaPods][apple_initial_setup_1] を使用してインストールまたは更新する必要があります。CocoaPods を使用すると、統合と更新がさらに簡単になります。
+{{include.platform}} Braze SDK は、Objective-C および Swift プロジェクトの依存関係マネージャーである [CocoaPods](http://cocoapods.org/) を使用してインストールまたは更新する必要があります。CocoaPods を使用すると、統合と更新がさらに簡単になります。
 
 ## {{include.platform}} SDK CocoaPodsの統合
 
 ### ステップ1:CocoaPods をインストールする
 
-{{include.platform}} [CocoaPods][apple_initial_setup_1]経由でSDKをインストールすると、インストール作業の大部分がオートメーション化される。この処理を始める前に、[Rubyのバージョンが2.0.0][apple_initial_setup_2]以上であることを確認すること。なお、このSDKをインストールするのにRubyの構文の知識は必要ない。
+{{include.platform}} [CocoaPods](http://cocoapods.org/)経由でSDKをインストールすると、インストール作業の大部分がオートメーション化される。この処理を始める前に、[Rubyのバージョンが2.0.0](https://www.ruby-lang.org/en/installation/)以上であることを確認すること。なお、このSDKをインストールするのにRubyの構文の知識は必要ない。
 
 以下のコマンドを実行するだけで始められる：
 
@@ -14,11 +14,11 @@ Braze SDK をインストールすると、基本的な分析機能{% if include
 $ sudo gem install cocoapods
 ```
 
-**注**:`rake` 実行可能ファイルを上書きするプロンプトが表示された場合、詳細については [CocoaPods.org の Getting started Directions][apple_initial_setup_3] を参照してください。
+**注**:`rake` 実行可能ファイルを上書きするプロンプトが表示された場合、詳細については [CocoaPods.org の Getting started Directions](http://guides.cocoapods.org/using/getting-started.html) を参照してください。
 
-**注**:CocoaPodsに関する問題がある場合は、[CocoaPodsトラブルシューティングガイド][apple__initial_setup_25]]を参照してください。
+**Note**:CocoaPods に関する問題がある場合は、[CocoaPods トラブルシューティングガイド](http://guides.cocoapods.org/using/troubleshooting.html)を参照してください。
 
-### ステップ2:ポッドファイルを作成する
+### ステップ2: ポッドファイルを作成する
 
 CocoaPods Ruby Gem をインストールしたら、Xcode プロジェクト ディレクトリに `Podfile` という名前のファイルを作成する必要があります。
 
@@ -43,9 +43,9 @@ pod install
 
 この時点で、CocoaPods によって作成された新しい Xcode プロジェクトワークスペースを開くことができるはずです。Xcode プロジェクトの代わりに、必ずこの Xcode ワークスペースを使用してください。 
 
-![新しいワークスペース][apple_initial_setup_15]
+![新しいワークスペース]({% image_buster /assets/img_archive/podsworkspace.png %})
 
-### ステップ 4:アプリデリゲートの更新
+### ステップ 4: アプリデリゲートの更新
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -81,7 +81,7 @@ Swift プロジェクトでの Objective-C コードの使用方法について�
 Appboy.start(withApiKey: "YOUR-API-KEY", in:application, withLaunchOptions:launchOptions)
 ```
 
-**注**:Brazeの`sharedInstance` シングルトンは、`startWithApiKey:` が呼び出される前にnilになる。これは、Brazeの機能を使用するための前提条件だからである。
+**Note**:Braze の `sharedInstance` シングルトンは、Braze 機能を使用するための前提条件であるため、`startWithApiKey:` が呼び出される前に nil になります。
 
 {% endtab %}
 {% endtabs %}
@@ -104,12 +104,12 @@ Appboy.start(withApiKey: "YOUR-API-KEY", in:application, withLaunchOptions:launc
 Braze 担当者は、[正しいエンドポイント]({{ site.baseurl }}/user_guide/administrative/access_braze/sdk_endpoints/).についてすでに通知しているはずです。
 
 #### コンパイル時のエンドポイント構成 (推奨)
-既存のカスタムエンドポイントが与えられた場合...
+既存のカスタムエンドポイントが指定されている場合...
 - Braze iOS SDK v 3.0.2以降では、`Info.plist` ファイルを使用してカスタムエンドポイントを設定できます。`Appboy` ディクショナリを Info.plist ファイルに追加します。`Appboy` 辞書内で、`Endpoint` 文字列サブエントリを追加し、値をカスタムエンドポイント URL の権限 (たとえば、`https://sdk.iad-01.braze.com` ではなく `sdk.iad-01.braze.com`) に設定します。
 
 #### ランタイムエンドポイント構成
 
-既存のカスタムエンドポイントが与えられた場合...
+既存のカスタムエンドポイントが指定されている場合...
 - Braze iOS SDK v 3.17.0以降では、`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions:` に渡される `appboyOptions` パラメーター内の `ABKEndpointKey` を使用してエンドポイントの設定をオーバーライドできます。値をカスタムエンドポイント URL 権限 (たとえば、`https://sdk.iad-01.braze.com` ではなく `sdk.iad-01.braze.com`) に設定します。
 
 {% alert note %}
@@ -173,25 +173,10 @@ Appboy.start(withApiKey: "YOUR-API-KEY",
 - `launchOptions` – `application:didFinishLaunchingWithOptions:` から取得するオプション `NSDictionary`
 - `appboyOptions` – Braze のスタートアップ構成値を持つオプションの `NSDictionary`
 
-Braze起動キーの一覧については、[Appboy.h][apple_initial_setup_5]を参照してください。
+Braze起動キーの一覧については、[Appboy.h](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h)を参照してください。
 
 ## Appboy.sharedInstance() および Swift の nullability
 一般的な慣例とは多少異なりますが、`Appboy.sharedInstance()` シングルトンはオプションです。これは、`startWithApiKey:` が呼び出さられる前は `sharedInstance` が `nil` であり、遅延初期化を使用できる非標準で無効ではない実装がいくつかあるためです。
 
 Appboy の `sharedInstance` (標準実装) にアクセスする前に `didFinishLaunchingWithOptions:` デリゲートで `startWithApiKey:` を呼び出すと、`Appboy.sharedInstance()?.changeUser("testUser")` のようなオプションのチェーンを使用して、煩雑なチェックを回避できます。これは、非 null `sharedInstance` を想定した Objective-C 実装と同等になります。
 
-[apple_initial_setup_1]: http://cocoapods.org/
-[apple_initial_setup_2]: https://www.ruby-lang.org/en/installation/
-[apple_initial_setup_3]: http://guides.cocoapods.org/using/getting-started.html "CocoaPods のインストール手順"
-[apple_initial_setup_4]: http://guides.cocoapods.org/syntax/podfile.html
-[apple_initial_setup_5]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h
-[apple_initial_setup_8]: #manual-sdk-integration
-[apple_initial_setup_12]: #appboy-podfiles-for-non-64-bit-apps
-[apple_initial_setup_15]: {% image_buster /assets/img_archive/podsworkspace.png %}
-[apple_initial_setup_17]: http://guides.cocoapods.org/using/getting-started.html#updating-cocoapods
-[apple_initial_setup_19]: https://developer.apple.com/library/ios/documentation/swift/conceptual/buildingcocoaapps/MixandMatch.html
-[apple_initial_setup_21]: {{ site.baseurl }}/partner_integrations/#attribution-integration
-[apple_initial_setup_25]:http://guides.cocoapods.org/using/troubleshooting.html "CocoaPodsトラブルシューティングガイド"
-[apple_initial_setup_27]: https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md "iOS Changelog"
-[apple_initial_setup_31]: {{ site.baseurl }}/developer_guide/rest_api/basics/#endpoints
-[apple_initial_setup_32]: {{ site.baseurl }}/support_contact/

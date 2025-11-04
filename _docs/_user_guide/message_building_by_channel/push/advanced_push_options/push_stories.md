@@ -1,5 +1,5 @@
 ---
-nav_title: "Push Stories"
+nav_title: "Push stories"
 article_title: Push Stories
 page_order: 2
 page_type: reference

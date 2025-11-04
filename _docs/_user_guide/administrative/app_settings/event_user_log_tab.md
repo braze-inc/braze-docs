@@ -1,5 +1,5 @@
 ---
-nav_title: Event User Log
+nav_title: Event user log
 article_title: Event User Log
 page_order: 7
 page_type: reference

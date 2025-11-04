@@ -1,5 +1,5 @@
 ---
-nav_title: Email Subscriptions
+nav_title: Email subscriptions
 article_title: Email Subscriptions
 page_order: 6
 description: "This reference article covers the different user subscription states, how to create and manage subscription groups, and how to segment users based on their subscriptions."
@@ -129,6 +129,11 @@ You can see the number of users who changed their subscription state (subscribed
 2. Select the arrow under **Subscription Groups** to see the aggregate count of state changes, as submitted by your customers.
 
 ![The "Email Message Performance" page displaying the aggregate count of state changes submitted by customers.]({% image_buster /assets/img/campaign_analytics_sub_groups.png %})
+
+### Checking a user's email subscription group
+
+- **User profile:** Individual user profiles can be accessed through the Braze dashboard from the [Search Users]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/#access-profiles) page. Here, you can look up user profiles by email address, phone number, or external user ID. You can also view a user's email subscription groups in the **Engagement** tab.
+- **Braze REST API:** Use the [List user’s subscription groups endpoint]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_groups/) or [List user’s subscription group status endpoint]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/) to view individual user profile's subscription groups. 
 
 ## Email preference center
 

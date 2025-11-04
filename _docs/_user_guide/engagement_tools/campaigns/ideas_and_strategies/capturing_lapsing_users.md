@@ -1,5 +1,5 @@
 ---
-nav_title: Capturing Lapsing Users
+nav_title: Capturing lapsing users
 article_title: Capturing Lapsing Users
 page_order: 1
 page_type: tutorial

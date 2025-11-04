@@ -15,46 +15,46 @@ description: "Cette page d'atterrissage abrite tout ce qui concerne les notifica
 {% endsdktab %}
 
 {% sdktab swift %}
-guide/swift/push_notifications.md developer_ %}
+{% multi_lang_include developer_guide/swift/push_notifications.md %}
 {% endsdktab %}
 
 {% sdktab web %}
-guide/web/push_notifications.md developer_ %}
+{% multi_lang_include developer_guide/web/push_notifications.md %}
 {% endsdktab %}
 
 {% sdktab android tv %}
-guide/android_tv/push_notifications.md developer_ %}
+{% multi_lang_include developer_guide/android_tv/push_notifications.md %}
 {% endsdktab %}
 
 {% sdktab cordova %}
-guide/cordova/push_notifications.md developer_ %}
+{% multi_lang_include developer_guide/cordova/push_notifications.md %}
 {% endsdktab %}
 
 {% sdktab flutter %}
-guide/flutter/push_notifications.md developer_ %}
+{% multi_lang_include developer_guide/flutter/push_notifications.md %}
 {% endsdktab %}
 
 {% sdktab huawei %}
-guide/huawei/push_notifications.md developer_ %}
+{% multi_lang_include developer_guide/huawei/push_notifications.md %}
 {% endsdktab %}
 
 {% sdktab react native %}
-guide/react_native/push_notifications.md developer_ %}
+{% multi_lang_include developer_guide/react_native/push_notifications.md %}
 {% endsdktab %}
 
 {% sdktab safari %}
-guide/safari/push_notifications.md developer_ %}
+{% multi_lang_include developer_guide/safari/push_notifications.md %}
 {% endsdktab %}
 
 {% sdktab unity %}
-guide/unity/push_notifications.md developer_ %}
+{% multi_lang_include developer_guide/unity/push_notifications.md %}
 {% endsdktab %}
 
 {% sdktab unreal engine %}
-guide/unreal_engine/push_notifications.md developer_ %}
+{% multi_lang_include developer_guide/unreal_engine/push_notifications.md %}
 {% endsdktab %}
 
 {% sdktab xamarin %}
-guide/xamarin/push_notifications.md developer_ %}
+{% multi_lang_include developer_guide/xamarin/push_notifications.md %}
 {% endsdktab %}
 {% endsdktabs %}

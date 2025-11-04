@@ -1,5 +1,5 @@
 ---
-nav_title: Refreshing the Feed
+nav_title: Refreshing the feed
 article_title: Refreshing the Content Card Feed for iOS
 platform: iOS
 page_order: 4

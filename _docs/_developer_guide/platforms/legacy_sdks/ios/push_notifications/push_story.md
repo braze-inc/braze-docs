@@ -1,5 +1,5 @@
 ---
-nav_title: Push Stories
+nav_title: Push stories
 article_title: Push Stories for iOS
 platform: iOS
 page_order: 27

@@ -39,4 +39,4 @@ To archive a Canvas:
 
 When you unarchive a campaign or Canvas, it won't go live&mdash;its status will only be changed to **Active**. After unarchiving, you can edit and review how the message is set up without any messages being sent.
 
-To resume the campaign or Canvas and begin sending messages, select the g<i class="fas fa-ellipsis-vertical"></i> menu for the respective row and select **Resume**.
+To resume the campaign or Canvas and begin sending messages, select the <i class="fas fa-ellipsis-vertical"></i> menu for the respective row and select **Resume**.

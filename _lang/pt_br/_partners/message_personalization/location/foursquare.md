@@ -14,6 +14,8 @@ search_tag: Partner
 
 > [O Foursquare](https://foursquare.com/) é uma plataforma de dados de localização que fornece direcionamento de dados de localização em suas campanhas no Braze. Use o Pilgrim SDK do Foursquare nos apps iOS e Android para fornecer disparos de eventos em tempo real com base no local, permitindo que você aproveite os poderosos recursos de direcionamento geográfico do Foursquare para enviar mensagens relevantes e personalizadas com o Braze.
 
+
+
 ## Pré-requisitos
 
 | Requisito | Descrição |
@@ -32,7 +34,7 @@ Para integrar as duas plataformas, é necessário integrar os dois SDKs e mapear
 Para mapear corretamente os campos entre os dois SDKs, defina o mesmo ID de usuário em ambos os sistemas usando o [método`changeUser`]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/#setting-user-ids) no SDK da Braze e o método `setUserId` de [`PilgrimUserInfo`](https://developer.foursquare.com/docs/pilgrim-sdk/advanced-setup-guide#custom-user-data) no SDK da Pilgrim.
 
 ### Etapa 2: Configurar o console do Pilgrim
-![Uma imagem do console da Pilgrim solicitando o ID do grupo, o ID do aplicativo Android e o ID do aplicativo iOS.][2]{: style="float:right;max-width:40%;margin-left:15px;"}
+
 
 Encontre os IDs do espaço de trabalho e do app no console de desenvolvedor do Braze. Em seguida, insira sua chave da API REST da Braze e os IDs do app no Foursquare Pilgrim Console.
 
@@ -60,5 +62,4 @@ Para redirecionar seus usuários, use o SDK do Pilgrim para definir um atributo 
 
 Também é possível segmentar os usuários no Braze que visitaram um determinado tipo de local com base no site `primaryCategoryId` do Foursquare em um determinado período de tempo. Para aproveitar esse ponto de dados para seus casos de uso de redirecionamento, registre `primaryCategoryId` como uma propriedade de evento durante o processo de segmentação do público. Para identificar os usuários e as propriedades usadas pela API do Foursquare e pelo Pilgrim SDK, consulte [o site do desenvolvedor do Foursquare](https://developer.foursquare.com/).
 
-[1]: {% image_buster /assets/img_archive/dashboard_keys_locations.png %}
-[2]: {% image_buster /assets/img_archive/pilgrim-dev-console.png %}
+

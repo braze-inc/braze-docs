@@ -1,5 +1,5 @@
 ---
-nav_title: Modal Dismissal
+nav_title: Modal dismissal
 article_title: In-App Message Modal Dismissal for iOS
 platform: iOS
 page_order: 29

@@ -43,4 +43,3 @@ Wenn Sie die API für Server-zu-Server-Aufrufe verwenden, müssen Sie möglicher
 
 Die Antworten des Endpunkts für die Nachrichtenplanung enthalten die `dispatch_id` der Nachricht, um auf den Versand der Nachricht zurück zu referenzieren. Die `dispatch_id` ist die ID des Nachrichtenversands (eindeutige ID für jede von Braze gesendete 'Übertragung').
 
-[33]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/

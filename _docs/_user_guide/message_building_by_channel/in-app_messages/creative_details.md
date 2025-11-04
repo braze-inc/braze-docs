@@ -1,5 +1,5 @@
 ---
-nav_title: Creative Details
+nav_title: Creative details
 article_title: Creative Details
 page_order: 3.5
 layout: dev_guide

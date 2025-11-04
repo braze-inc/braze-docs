@@ -1,5 +1,5 @@
 ---
-nav_title: Revenue Report
+nav_title: Revenue report
 article_title: Revenue Report
 page_type: reference
 description: "This page describes how to use the Revenue Report page to view data on revenue over specific periods of time, a specific product revenue, and your app’s total revenue."

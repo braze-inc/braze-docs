@@ -35,23 +35,6 @@ Braze.getInstance(context).logCustomEvent(YOUR_EVENT_NAME)
 {% endsubtab %}
 {% endsubtabs %}
 
-Se você integrou [Infillion Beacons](https://infillion.com/software/beacons/) em seu app, você pode usar `visit.getPlace()` para registrar eventos específicos de localização. `requestImmediateDataFlush` verifica se seu evento será registrado mesmo que seu app esteja em segundo plano.
-
-{% subtabs %}
-{% subtab java %}
-```java
-Braze.getInstance(context).logCustomEvent("Entered " + visit.getPlace());
-Braze.getInstance(context).requestImmediateDataFlush();
-```
-{% endsubtab %}
-
-{% subtab kotlin %}
-```kotlin
-Braze.getInstance(context).logCustomEvent("Entered " + visit.getPlace())
-Braze.getInstance(context).requestImmediateDataFlush()
-```
-{% endsubtab %}
-{% endsubtabs %}
 {% endtab %}
 
 {% tab swift %}
@@ -76,7 +59,7 @@ Para uma implementação padrão do SDK Web, você pode usar o seguinte método:
 braze.logCustomEvent("YOUR_EVENT_NAME");
 ```
 
-Se você gostaria de usar o Google Tag Manager em vez disso, você pode usar o tipo de tag **Evento Personalizado** para chamar o [`logCustomEvent` método](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcustomevent) e enviar eventos personalizados para o Braze, incluindo opcionalmente propriedades de eventos personalizados. Para fazer isso:
+Se você quiser usar o Google Tag Manager em vez disso, pode usar o tipo de tag **Evento Personalizado** para chamar o [`logCustomEvent` método](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcustomevent) e enviar eventos personalizados para o Braze, incluindo opcionalmente propriedades de eventos personalizados. Para fazer isso:
 
 1. Digite o **nome do evento** usando uma variável ou digitando um nome de evento.
 2. Use o botão **Adicionar linha** para adicionar propriedades de eventos.
@@ -88,6 +71,26 @@ Se você gostaria de usar o Google Tag Manager em vez disso, você pode usar o t
 ```dart
 braze.logCustomEvent('YOUR_EVENT_NAME');
 ```
+{% endtab %}
+
+{% tab infillion %}
+Se você integrou [Infillion Beacons](https://infillion.com/software/beacons/) no seu aplicativo Android, você pode opcionalmente usar `visit.getPlace()` para registrar eventos específicos de localização. `requestImmediateDataFlush` verifica se seu evento será registrado mesmo que seu aplicativo esteja em segundo plano.
+
+{% subtabs %}
+{% subtab java %}
+```java
+Braze.getInstance(context).logCustomEvent("Entered " + visit.getPlace());
+Braze.getInstance(context).requestImmediateDataFlush();
+```
+{% endsubtab %}
+
+{% subtab kotlin %}
+```kotlin
+Braze.getInstance(context).logCustomEvent("Entered " + visit.getPlace())
+Braze.getInstance(context).requestImmediateDataFlush()
+```
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
 
 {% tab react native %}

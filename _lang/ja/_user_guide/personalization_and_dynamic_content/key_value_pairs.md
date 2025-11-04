@@ -76,7 +76,7 @@ Braze のメッセージ作成画面は、**alert** と**そのプロパティ**
 
 これらの値は、プッシュ・メッセージを作成する際に**Settings**タブで入力することができる。[**アラートオプション**] を選択し、新しいキーと値のエントリに自動的に入力される、キーのアラートディクショナリーキーを選択します。
 
-![][16]
+\![]({% image_buster /assets/img_archive/keyvalue_automatickeys.png %})
 {% raw %}
 BrazeがAPNにプッシュ通知を送信する際、ペイロードはJSONとしてフォーマットされる。
 
@@ -111,9 +111,9 @@ BrazeがAPNにプッシュ通知を送信する際、ペイロードはJSONと�
 
 ```aps``` ライブラリーのペイロード値のほかに、カスタムのキーと値のペアをユーザーのデバイスに送信できます。これらのペアの値は、ディクショナリ（オブジェクト）、配列、文字列、数値、ブーリアンというプリミティブな型に限定される。
 
-![][17]
+\![]({% image_buster /assets/img_archive/keyvalue_enterpairs.png %})
 
-カスタムキーと値のペアのユースケースには、内部メトリクスの保持やユーザーインターフェイスのコンテキストの設定が含まれるが、これらに限定されるものではない。Brazeでは、追加のキーと値のペアをプッシュ通知とともに送信し、[extrasキー][1]内のアプリケーションで使用することができる。別のキーを使いたい場合は、アプリがこのカスタムキーを扱えることを確認すること。
+カスタムキーと値のペアのユースケースには、内部メトリクスの保持やユーザーインターフェイスのコンテキストの設定が含まれるが、これらに限定されるものではない。Brazeでは、追加のキーと値のペアをプッシュ通知とともに送信し、[extrasキー]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/advanced_settings/#extracting-data-from-push-key-value-pairs)内のアプリケーションで使用することができる。別のキーを使いたい場合は、アプリがこのカスタムキーを扱えることを確認すること。
 
 {% alert warning %}
 アプリケーションでabというトップレベルのキーや辞書を扱うのは避けるべきである。
@@ -127,7 +127,7 @@ HTTP/2プロバイダーAPIを使用している場合、APNに送信する個�
 
 ###### API トリガーキャンペーン
 
-Braze では、`extras` として知られるカスタム定義の文字列キーと値のペアを送信できます。API トリガーおよびスケジュールされた API トリガー キャンペーンから extras にアクセスするには、ダッシュボードでキーを「example_key」に設定し、値を {% raw %}`"$json:{"foo": 1, "bar": 1}"`{% endraw %} に設定します。これにより、開発者コンソールに `"extras": { "test": { "foo": 1, "bar": 1 }` が出力されます。
+Braze では、`extras` として知られるカスタム定義の文字列キーと値のペアを送信できます。APIトリガーおよびスケジュールされたAPIトリガーキャンペーンでエクストラにアクセスするには、ダッシュボードでキーを"example_key", に、値を{% raw %}`"$json:{"foo": 1, "bar": 1}"`{% endraw %} に設定する。これにより、開発者コンソールに `"extras": { "test": { "foo": 1, "bar": 1 }` が出力されます。
 
 ### Android
 
@@ -145,19 +145,19 @@ iOSのプッシュと同様に、カスタムのキーと値のペアをユー�
 
 ###### API トリガーキャンペーン
 
-Braze では、`extras` として知られるカスタム定義の文字列キーと値のペアを送信できます。API トリガーおよびスケジュールされた API トリガー キャンペーンから extras にアクセスするには、ダッシュボードでキーを「example_key」に設定し、値を {% raw %}`"$json:{"foo": 1, "bar": 1}"`{% endraw %} に設定します。これにより、開発者コンソールに `"extras": { "test": { "foo": 1, "bar": 1 }` が出力されます。
+Braze では、`extras` として知られるカスタム定義の文字列キーと値のペアを送信できます。APIトリガーおよびスケジュールされたAPIトリガーキャンペーンでエクストラにアクセスするには、ダッシュボードでキーを"example_key", に、値を{% raw %}`"$json:{"foo": 1, "bar": 1}"`{% endraw %} に設定する。これにより、開発者コンソールに `"extras": { "test": { "foo": 1, "bar": 1 }` が出力されます。
 
 ##### FCMメッセージング・オプション
 
-アンドロイドのプッシュ通知は、FCMメッセージオプションでさらにカスタマイズできる。これには、[通知の優先順位][8]、[音][10]、遅延、寿命、折りたたみ可能性などが含まれる。これらの値は、プッシュ・メッセージを作成する際に**Settings**タブで指定することができる。Braze メッセージ作成画面でこれらのオプションを設定する方法の詳細については、[プッシュ通知の詳細設定][7]を参照してください。
+アンドロイドのプッシュ通知は、FCMメッセージオプションでさらにカスタマイズできる。これには、[通知の優先順位]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/customization/advanced_settings/#notification-priority)、[音]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/customization/advanced_settings/#sounds)、遅延、寿命、折りたたみ可能性などが含まれる。これらの値は、プッシュ・メッセージを作成する際に**Settings**タブで指定することができる。Braze メッセージ作成画面でこれらのオプションを設定する方法の詳細については、[プッシュ通知の詳細設定]({{site.baseurl}}/developer_guide/push_notifications/customization/?sdktab=android#android_settings)を参照してください。
 
-![][18]
+\![]({% image_buster /assets/img_archive/keyvalue_androidkeys.png %})
 
 ### サイレントプッシュ通知
 
-サイレントプッシュ通知は、アラートメッセージやサウンドを含まないプッシュ通知で、アプリのインターフェースやコンテンツをバックグラウンドで更新するために使用される。これらの通知はキーと値のペアを使用して、バックグラウンドアプリのアクションをトリガーします。サイレント・プッシュ通知も[アンインストールのトラッキングに役立って][4]いる。
+サイレントプッシュ通知は、アラートメッセージやサウンドを含まないプッシュ通知で、アプリのインターフェースやコンテンツをバックグラウンドで更新するために使用される。これらの通知はキーと値のペアを使用して、バックグラウンドアプリのアクションをトリガーします。サイレント・プッシュ通知も[アンインストールのトラッキングに役立って]({{site.baseurl}}/user_guide/analytics/tracking/uninstall_tracking/)いる。
 
-マーケティング担当者は、アプリのユーザーにプッシュ通知を送る前に、サイレント・プッシュ通知が期待される行動を引き起こすかどうかをテストすべきである。[iOS][2] または [Android][13] のサイレントプッシュ通知を作成したら、必ず[外部ユーザー ID][14] または[メールアドレス][15]をフィルター処理して、テストユーザーのみをターゲットにしてください。
+マーケティング担当者は、アプリのユーザーにプッシュ通知を送る前に、サイレント・プッシュ通知が期待される行動を引き起こすかどうかをテストすべきである。[iOS]({{site.baseurl}}/developer_guide/push_notifications/silent/?sdktab=swift) または [Android]({{site.baseurl}}/developer_guide/push_notifications/silent/?sdktab=android) のサイレントプッシュ通知を作成したら、必ず[外部ユーザー ID]({{site.baseurl}}/developer_guide/rest_api/messaging/#external-user-id) または[メールアドレス]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/)をフィルター処理して、テストユーザーのみをターゲットにしてください。
 
 キャンペーンの開始時に、表示されるプッシュ通知がテストデバイスで受信していないことを確認する必要があります。
 
@@ -169,47 +169,26 @@ iOSオペレーティングシステムは、一部の機能（アンインス�
 
 アプリ内メッセージにキーと値のペアを追加するには、メッセージ作成画面で**設定**タブを選択し、**新しいペアを追加を**選択し、キーと値のペアを指定する。
 
-![][21]
+\![]({% image_buster /assets/img_archive/keyvalue_iam.png %})
 
 #### API トリガーキャンペーン
 
-Braze では、`extras` として知られるカスタム定義の文字列キーと値のペアを送信できます。API トリガーおよびスケジュールされた API トリガー キャンペーンから extras にアクセスするには、ダッシュボードでキーを「example_key」に設定し、値を {% raw %}`"$json:{"foo": 1, "bar": 1}"`{% endraw %} に設定します。これにより、開発者コンソールに `"extras": { "test": { "foo": 1, "bar": 1 }` が出力されます。
+Braze では、`extras` として知られるカスタム定義の文字列キーと値のペアを送信できます。APIトリガーおよびスケジュールされたAPIトリガーキャンペーンでエクストラにアクセスするには、ダッシュボードでキーを"example_key", に、値を{% raw %}`"$json:{"foo": 1, "bar": 1}"`{% endraw %} に設定する。これにより、開発者コンソールに `"extras": { "test": { "foo": 1, "bar": 1 }` が出力されます。
 
 ## メール
 
-SparkPostとSendGridの両方が、電子メールのキーと値のペアをサポートしている。SendGrid を使用する場合、キーと値のペアは[一意の引数][11]として送信されます。SendGrid では、データが 10,000 バイトに達するまでキーと値のペアを無制限にアタッチできます。これらのキーと値のペアについては、SendGrid の [Event Webhook][12] の投稿を参照してください。
+SparkPostとSendGridの両方が、電子メールのキーと値のペアをサポートしている。SendGrid を使用する場合、キーと値のペアは[一意の引数](https://docs.sendgrid.com/for-developers/sending-email/unique-arguments)として送信されます。SendGrid では、データが 10,000 バイトに達するまでキーと値のペアを無制限にアタッチできます。これらのキーと値のペアについては、SendGrid の [Event Webhook](https://sendgrid.com/docs/for-developers/tracking-events/event/) の投稿を参照してください。
 
 {% alert note %}
 メールがバウンスされた場合、SparkPost または SendGrid にキーと値のペアは配信されません。
 {% endalert %}
 
-![Brazeのメールメッセージ作成画面の [送信情報] タブ。][22]
+\![Brazeのメッセージ作成画面の送信情報タブ。]({% image_buster /assets/img_archive/keyvalue_email.png %})
 
-## コンテンツカード
+## コンテンツカードによって促進された
 
 コンテンツカードにキーと値のペアを追加するには、Braze のメッセージ作成画面の [**設定**] タブに移動し、[**新しいペアを追加**] を選択します。
 
-![コンテンツ・カードにキーと値のペアを追加する][24]{: style="max-width:70%;"}
+\![コンテンツカードにキーと値のペアを追加する。]({% image_buster /assets/img_archive/kvp_content_cards.png %}){: style="max-width:70%;"}
 
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/advanced_settings/#extracting-data-from-push-key-value-pairs
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications/
-[4]: {{site.baseurl}}/user_guide/data_and_analytics/tracking/uninstall_tracking/
-[7]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/customization/advanced_settings/
-[8]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/customization/advanced_settings/#notification-priority
-[9]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/advanced_settings/#delivery-options
-[10]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/customization/advanced_settings/#sounds
-[11]: https://docs.sendgrid.com/for-developers/sending-email/unique-arguments
-[12]: https://sendgrid.com/docs/for-developers/tracking-events/event/
-[13]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/silent_push_notifications/
-[14]: {{site.baseurl}}/developer_guide/rest_api/messaging/#external-user-id
-[15]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/
-[16]: {% image_buster /assets/img_archive/keyvalue_automatickeys.png %}
-[17]: {% image_buster /assets/img_archive/keyvalue_enterpairs.png %}
-[18]: {% image_buster /assets/img_archive/keyvalue_androidkeys.png %}
-[19]: {% image_buster /assets/img_archive/keyvalue_android.png %}
-[20]: {% image_buster /assets/img_archive/keyvalue_web.png %}
-[21]: {% image_buster /assets/img_archive/keyvalue_iam.png %}
-[22]: {% image_buster /assets/img_archive/keyvalue_email.png %}
-[23]: {% image_buster /assets/img_archive/keyvalue_newsfeed.png %}
-[24]: {% image_buster /assets/img_archive/kvp_content_cards.png %}

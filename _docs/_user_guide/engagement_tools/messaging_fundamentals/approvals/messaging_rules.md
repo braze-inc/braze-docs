@@ -1,5 +1,5 @@
 ---
-nav_title: Messaging Rules
+nav_title: Messaging rules
 article_title: Messaging Rules
 page_order: 1
 page_type: reference

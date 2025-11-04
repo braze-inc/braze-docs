@@ -21,9 +21,9 @@ tool:
 
 iOS용 리치 푸시 알림을 만들기 전에 다음 세부정보를 확인하세요:
 
-- 앱이 리치 알림을 보낼 수 있도록 하려면 개발자가 앱에 서비스 확장 기능을 추가해야 하므로 [iOS 푸시 통합][1] 지침을 따르세요.
+- To ensure your app can send rich notifications, follow the [iOS push integration]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#ios-10-rich-notifications) instructions, as your developer will need to add a service extension to your app.
 - 현재 대시보드 내에서 직접 업로드할 수 있도록 지원하는 파일 형식은 JPEG, PNG 또는 GIF입니다. 이러한 파일은 이러한 추가 파일 유형과 함께 템플릿 가능한 URL 필드에 입력할 수도 있습니다: AIF, M4A, MP3, MP4 또는 WAV.
-- Apple의 [][2] 설명서를 참조하여 미디어 제한 및 사양을 확인하십시오.
+- Reference [Apple's documentation](https://developer.apple.com/reference/usernotifications/unnotificationattachment) for media limitations and specs.
 - 빠른 푸시 캠페인을 만들 때는 iOS 리치 알림을 사용할 수 없습니다.
 - iOS는 화면에 맞게 이미지 크기를 조정하고 활성 또는 잠긴 보기의 리치 이미지 크기를 조정합니다.
 
@@ -121,30 +121,23 @@ iOS 15의 경우, 시간 민감 및 중요 표시가 제목을 타임스탬프 �
 
 ### 1단계: 푸시 캠페인 만들기
 
-[캠페인 단계에][3] 따라 iOS용 푸시 알림을 작성합니다. 리치 콘텐츠가 포함되지 않은 푸시 알림을 설정할 때 사용하는 것과 동일한 작성기를 사용하게 됩니다.
+Follow the [campaign steps]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message) to compose a push notification for iOS. 리치 콘텐츠가 포함되지 않은 푸시 알림을 설정할 때 사용하는 것과 동일한 작성기를 사용하게 됩니다.
 
 ### 2단계: 미디어 추가
 
 메시지 작성창의 **리치 알림 미디어** 필드에 이미지, GIF, 오디오 또는 동영상 파일을 추가합니다. 콘텐츠 파일을 추가하는 방법에 대한 [요구 사항](#requirements)을 참조하세요.
 
-푸시 알림에 대한 요약 텍스트의 예.
+![An example of summary text for a push notification.]({% image_buster /assets/img_archive/rich_notification_add_image.png %}){: style="max-width:70%;" }
 
 iOS 10에서 실행되는 기기를 보유한 사용자에게만 메시지를 보내도록 이 메시지를 제한할 수도 있습니다. iOS 10으로 업그레이드하지 않은 사용자의 경우 **리치 알림을 지원하는 기기로만 보내기**를 선택하지 않은 상태로 두면 리치 콘텐츠가 없는 텍스트 전용 알림으로 표시됩니다.
 
-확장된 알림 이미지 섹션으로, 여기에서 이미지를 추가하거나 이미지 URL을 입력할 수 있습니다.
+![The Expanded notification image section where you can add an image or enter an image URL.]({% image_buster /assets/img_archive/rich_notification_ios10_select.png %}){: style="max-width:70%;" }
 
 ### 3단계: 캠페인 계속 만들기
 
-리치 알림 콘텐츠가 대시보드에 업로드되면 [캠페인 예약하기][6]를 계속 진행할 수 있습니다.
+Once your rich notification content is uploaded to the dashboard, you can continue [scheduling your campaign]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#schedule-push-campaign).
 
 사용자가 푸시 알림을 받으면 푸시 메시지를 세게 눌러 이미지를 확대할 수 있습니다.
 
-![사용자가 푸시 알림을 받고 메시지를 세게 누르면 "안녕하세요!"라는 확장된 이미지가 표시됩니다.][8]{: style="max-width:50%;" }
+![A user receives a push notification and hard presses the message to show an expanded image that says "Hello!".]({% image_buster /assets/img_archive/rich_notification_ios.gif %}){: style="max-width:50%;" }
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#ios-10-rich-notifications
-[2]: https://developer.apple.com/reference/usernotifications/unnotificationattachment
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message
-[4]: {% image_buster /assets/img_archive/rich_notification_add_image.png %}
-[5]: {% image_buster /assets/img_archive/rich_notification_ios10_select.png %}
-[6]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#schedule-push-campaign
-[8]: {% image_buster /assets/img_archive/rich_notification_ios.gif %}

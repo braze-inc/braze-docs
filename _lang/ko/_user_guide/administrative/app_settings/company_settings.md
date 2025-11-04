@@ -31,4 +31,3 @@ guide_featured_list:
 
 <br>
 
-[1]: {{site.baseurl}}/user_guide/administrative/

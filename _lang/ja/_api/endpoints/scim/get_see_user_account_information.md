@@ -6,11 +6,11 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "この記事では、既存のダッシュボードユーザーアカウントリソースID Brazeエンドポイントを検索するについての詳細を概説する。"
+description: "この記事では、「リソース ID による既存のダッシュボードユーザーアカウントの検索」Braze エンドポイントの詳細について説明します。"
 ---
 
 {% api %}
-# リソースIDで既存のダッシュボードユーザーアカウントを検索する
+# リソース ID で既存のダッシュボードユーザーアカウントを検索する
 {% apimethod get %}
 /scim/v2/Users/{id}
 {% endapimethod %}
@@ -61,6 +61,7 @@ curl --location --request GET 'https://rest.iad-01.braze.com/scim/v2/Users/dfa24
     },
     "department": "finance",
     "lastSignInAt": "Thursday, January 1, 1970 12:00:00 AM",
+    "createdAt": "Thursday, January 1, 1970 12:00:00 AM",
     "permissions": {
         "companyPermissions": ["manage_company_settings"],
         "roles": [

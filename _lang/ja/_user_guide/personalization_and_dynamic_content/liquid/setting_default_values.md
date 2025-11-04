@@ -1,5 +1,5 @@
 ---
-nav_title: デフォルト値の設定
+nav_title: デフォルト値を設定する
 article_title: Liquid のデフォルト値の設定
 page_order: 5
 description: "このリファレンス記事では、メッセージで使用するパーソナライゼーション 属性のデフォルト フォールバックを設定する方法について説明します。"
@@ -14,7 +14,7 @@ description: "このリファレンス記事では、メッセージで使用す
 
 ## 仕組み
 
-デフォルト値を追加するには、[Liquid フィルター][3]を「デフォルト」という名前で指定します (インラインでフィルターを区別するには `|` を使用します)。
+デフォルト値を追加するには、[Liquid フィルター](http://docs.shopify.com/themes/liquid-documentation/filters)を「デフォルト」という名前で指定します (インラインでフィルターを区別するには `|` を使用します)。
 
 ```
 | default: 'Insert Your Desired Default Here'
@@ -78,7 +78,7 @@ Hi {{${first_name} | default: 'valued user'}}, consider upgrading to premium for
 ```
 {% endraw %}
 
-{% details 完全な Liquid コード %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% assign is_premium_user = {{custom_attribute.${premium_user}}} | default: false %}
@@ -144,7 +144,7 @@ State: {{custom_attribute.${address.state} | default: 'Unknown'}}
 ```
 {% endraw %}
 
-{% details 完全な Liquid コード %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 Hi {{${first_name} | default: 'valued user'}}
@@ -191,7 +191,7 @@ Hello {{${first_name} | default: 'fellow traveler'}},
 ```
 {% endraw %}
 
-{% details 完全な Liquid コード %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% if {{custom_attribute.${upcoming_trips}}} == blank %}
@@ -212,8 +212,6 @@ Hello {{${first_name} | default: 'fellow traveler'}},
 {% endraw %}
 {% enddetails %}
 
-[3]: http://docs.shopify.com/themes/liquid-documentation/filters
 [31]:https://docs.shopify.com/themes/liquid/tags/variable-tags
 [32]:https://docs.shopify.com/themes/liquid/tags/iteration-tags
-[34]:{% image_buster /assets/img_archive/personalized_iflogic_.png %}
-[37]:\#accounting-for-null-attribute-values
+[37]:#accounting-for-null-attribute-values

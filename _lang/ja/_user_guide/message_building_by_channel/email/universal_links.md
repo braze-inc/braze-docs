@@ -75,7 +75,7 @@ Android アプリリンクでは、他の Web URL とは別にドメインから
 #### ステップ 1a: アプリ {#step-1a} の登録
 
 1. developer.apple.comを実行してログインしてください。
-2. **証明書、識別子、プロファイル**をクリックします。
+2. **Certificates, Identifiers& Profiles** をクリックする。
 3. **識別子**をクリックします。
 4. アプリ識別子がまだ登録されていない場合は、+ をクリックして作成します。
    a. **名前**を入力してください。これはあなたが望むものなら何でもかまいません。
@@ -87,7 +87,7 @@ Android アプリリンクでは、他の Web URL とは別にドメインから
 2. [**関連ドメイン**] を選択します。
 3. [**保存**] をクリックします。
 
-![]({% image_buster /assets/img_archive/universal_links_1b.png %}){: style="max-width:75%;"}
+\![]({% image_buster /assets/img_archive/universal_links_1b.png %}){: style="max-width:75%;"}
 
 #### ステップ1c: Xcodeプロジェクトで関連ドメインをオンにする {#step-1c}
 
@@ -107,7 +107,7 @@ Android アプリリンクでは、他の Web URL とは別にドメインから
 
 [ドメイン] セクションで、適切なドメインタグを追加します。`applinks:` をプレフィックスとして使用する必要があります。この場合、`applinks:yourdomain.com`を追加したことがわかります。
 
-![]({% image_buster /assets/img_archive/universal_links_1d.png %})
+\![]({% image_buster /assets/img_archive/universal_links_1d.png %})
 
 #### ステップ1e: ビルド時に権利ファイルが含まれていることを確認してください
 
@@ -200,9 +200,9 @@ Android アプリリンクでは、他の Web URL とは別にドメインから
 
 ### ステップ 3:アプリのマニフェストファイルを更新してください
 
-`AndroidManifest.xml` ファイルで、アプリライケーション要素内にメタデータ要素を追加します。メタデータ要素には、「asset_statements」の `android:name` 属性と、Web サイトの URL が含まれる文字列配列を持つリソースファイルを指す `android:resource` 属性が必要です。
+`AndroidManifest.xml` ファイルで、アプリライケーション要素内にメタデータ要素を追加します。meta-data要素には、"asset_statements" の`android:name` 属性と、WebサイトのURLを含む文字列配列のリソース・ファイルをポイントする`android:resource` 属性を指定する。
 
-### ステップ 4:アプリをディープリンクに対応させる準備をする
+### ステップ 4: アプリをディープリンクに対応させる準備をする
 
 Androidアプリでは、受信したディープリンクを処理する必要があります。これを行うには、アクティビティを開始したインテントを取得し、そこからデータを抽出します。
 
@@ -263,13 +263,13 @@ SparkPostのクリックトラッキングリンクをユニバーサルリン�
 
 次に、アプリがカスタムパスを適切に処理するように設定されていることを確認してください。[SparkPost クリックトラッキングの使用](https://support.sparkpost.com/docs/tech-resources/deep-links-self-serve#preferred-solution-using-sparkpost-click-tracking-on-deep-links)に関する SparkPost の記事を参照してください。この記事には、[iOS](https://support.sparkpost.com/docs/tech-resources/deep-links-self-serve#ios-swift-forwarding-clicks-to-sparkpost)および[Android](https://support.sparkpost.com/docs/tech-resources/deep-links-self-serve#forwarding-clicks-from-android-to-sparkpost)のサンプルコードが含まれています。
 
-### リンクごとのクリックトラッキングをオフにする
+### リンクごとのクリック追跡をオフにする
 
-HTMLエディターでメールメッセージにHTMLコードを追加するか、ドラッグ＆ドロップエディターでコンポーネントにHTMLコードを追加することで、特定のリンクのクリックトラッキングをオフにすることができる。
+HTMLエディターではメールメッセージに、ドラッグ＆ドロップエディターではHTMLブロックにHTMLコードを追加することで、特定のリンクのクリック追跡をオフにすることができる。
 
 #### SendGrid
 
-メールサービスプロバイダがSendGridの場合、HTMLコード`clicktracking=off` ：
+メールサービスプロバイダーが SendGrid の場合は、次のような HTML コード `clicktracking=off` を使用します。
 
 ```HTML
 <a clicktracking=off href="[INSERT https LINK HERE]">click here</a>
@@ -277,10 +277,18 @@ HTMLエディターでメールメッセージにHTMLコードを追加するか
 
 #### SparkPost 
 
-メールサービスプロバイダーがSparkPostの場合、HTMLコード`data-msys-clicktrack="0"` ：
+メールサービスプロバイダーが SparkPost の場合は、次のような HTML コード `data-msys-clicktrack="0"` を使用します。
 
 ```HTML
 <a data-msys-clicktrack="0" href="[INSERT https LINK HERE]">click here</a>
+```
+
+#### Amazon SES
+
+メールサービスプロバイダーが Amazon SES の場合は、次のような HTML コード `ses:no-track` を使用します。
+
+```HTML
+<a ses:no-track href="[INSERT https LINK HERE]">click here</a>
 ```
 
 #### ドラッグアンドドロップエディタ
@@ -291,39 +299,39 @@ HTMLエディターでメールメッセージにHTMLコードを追加するか
 
 #### SendGrid
 
-カスタム属性は以下を選択する：
+カスタム属性として以下を選択します。
 
-- **名前だ：** `clicktracking`
-- **価値がある：** `off`
+- **名前:** `clicktracking`
+- **値:** `off`
 
 #### SparkPost
 
-カスタム属性は以下を選択する：
+カスタム属性として以下を選択します。
 
-- **名前だ：** `data-msys-clicktrack`
-- **価値がある：** `0`
+- **名前:** `data-msys-clicktrack`
+- **値:** `0`
 
-![テキストリンクのカスタム属性。][2]{: style="max-width:60%;"}
+\![テキストリンクのカスタム属性。]({% image_buster /assets/img/text_click_tracking_off.png %}){: style="max-width:60%;"}
 
-##### ボタンまたは画像, 写真のカスタム属性
+##### ボタンまたは画像のカスタム属性
 
 #### SendGrid
 
-カスタム属性は以下を選択する：
+カスタム属性として以下を選択します。
 
-- **名前だ：** `clicktracking`
-- **価値がある：** `off`
-- **タイプだ：**リンク
+- **名前:** `clicktracking`
+- **値:** `off`
+- **タイプ:**リンク
 
 #### SparkPost
 
-カスタム属性は以下を選択する：
+カスタム属性として以下を選択します。
 
-- **名前だ：** `data-msys-clicktrack`
-- **価値がある：** `0`
-- **タイプだ：**リンク
+- **名前:** `data-msys-clicktrack`
+- **値:** `0`
+- **タイプ:**リンク
 
-![ボタンのカスタム属性。][1]{: style="max-width:60%;"}
+\![ボタンのカスタム属性。]({% image_buster /assets/img/button_click_tracking_off.png %}){: style="max-width:60%;"}
 
 ### クリックトラッキングによるユニバーサルリンクのトラブルシューティング
 
@@ -345,5 +353,3 @@ AASA ファイル(iOS) またはデジタルアセットリンクファイル (A
 - **iOS:**アプリ用に Xcode で設定された関連ドメインを確認します ([ステップ1c]({{site.baseurl}}/help/help_articles/email/universal_links/?tab=ios#step-1c))。クリックトラッキングドメインがそのリストに含まれていることを確認してください。
 - **Android :**アプリ情報ページを開封します（アプリアイコンを長押しして、ⓘをクリックします）。アプリ情報メニュー内で、**デフォルトで開封**を見つけてタップします。これにより、アプリを開くことが許可されているすべての検証済みリンクが表示されます。クリックトラッキングドメインがそのリストに含まれていることを確認してください。
 
-[1]: {% image_buster /assets/img/button_click_tracking_off.png %}
-[2]: {% image_buster /assets/img/text_click_tracking_off.png %}

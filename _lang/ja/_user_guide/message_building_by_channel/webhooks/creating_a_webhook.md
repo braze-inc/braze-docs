@@ -1,5 +1,5 @@
 ---
-nav_title: Webhookの作成
+nav_title: Webhookを作成する
 article_title: Webhookを作成する
 page_order: 1
 channel:
@@ -23,7 +23,7 @@ Webhookとは何か、Brazeでどのように使えるかについては、先�
 メッセージは、キャンペーンとキャンバスのどちらを使用して配信すべきでしょうか。キャンペーンは単一のシンプルなメッセージングキャンペーンに適していますが、キャンバスはマルチステップのユーザーのジャーニーに適しています。
 
 {% tabs %}
-{% tab キャンペーン %}
+{% tab Campaign %}
 
 **ステップ:**
 
@@ -40,7 +40,7 @@ Webhookとは何か、Brazeでどのように使えるかについては、先�
 {% endalert %}
 
 {% endtab %}
-{% tab キャンバス %}
+{% tab Canvas %}
 
 **ステップ:**
 
@@ -65,13 +65,13 @@ Webhookをゼロから作成するか、既存のテンプレートを使用す�
 - HTTPメソッド
 - Request body
 
-![Facebook MessengerのWebhookテンプレートの例がある「Compose」タブ。]({% image_buster /assets/img_archive/webhook_compose.png %})
+\![Webhookテンプレートの例がある "Compose "タブ。]({% image_buster /assets/img_archive/webhook_compose.png %})
 
 #### 言語 {#internationalization}
 
-[国際化][16]は、URLおよびリクエストボディでサポートされています。メッセージを複数言語で送信するには、[**言語を追加**] をクリックして、必須フィールドに入力します。 
+[国際化]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/#campaigns-in-multiple-languages)は、URLおよびリクエストボディでサポートされています。メッセージを複数言語で送信するには、[**言語を追加**] をクリックして、必須フィールドに入力します。 
 
-コンテンツを記述する前に言語を選択することをお勧めします。これにより、Liquid 内の適切な場所にテキストを入力することができます。利用可能なすべての言語のリストについては、[サポートされている言語]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported)を参照してください。
+コンテンツを記述する前に言語を選択することをお勧めします。これにより、Liquid 内の適切な場所にテキストを入力することができます。使用可能な言語の完全なリストについては、[サポートされている言語]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported)を参照してください。
 
 右から左に書かれた言語でコピーを追加する場合、右から左に書かれたメッセージの最終的な見た目は、サービスプロバイダーがどのようにそれらをレンダリングするかに大きく左右されることに注意してください。右から左へのメッセージを可能な限り正確に表示するためのベストプラクティスについては、[右から左へのメッセージを作成する]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/)を参照してください。
 
@@ -85,7 +85,7 @@ Brazeは、標準ポート`80`（HTTP）および`443`（HTTPS）で通信する
 
 ##### Liquid の使用
 
-[Liquid][15] を使用して Webhook URL をパーソナライズできます。場合によっては、特定のエンドポイントがユーザーを識別するか、URLの一部としてユーザー固有の情報を提供する必要がある場合があります。Liquidを使用する場合は、URLで使用するユーザー固有の情報ごとに[デフォルト値][19]を含めるようにしてください。
+[Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) を使用して Webhook URL をパーソナライズできます。場合によっては、特定のエンドポイントがユーザーを識別するか、URLの一部としてユーザー固有の情報を提供する必要がある場合があります。Liquidを使用する場合は、URLで使用するユーザー固有の情報ごとに[デフォルト値]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=web)を含めるようにしてください。
 
 #### HTTPメソッド
 
@@ -99,17 +99,17 @@ Brazeは、標準ポート`80`（HTTP）および`443`（HTTPS）で通信する
 
 JSONキーと値のペアを使用すると、JSON形式を期待するエンドポイントへのリクエストを簡単に作成できます。JSONリクエストを期待するエンドポイントでのみ使用できる。例えば、キーが `message_body` の場合、対応する値には `Your order just arrived!` があります。キーと値のペアを入力すると、コンポーザーがリクエストをJSON構文で構成し、JSONリクエストのプレビューが自動的に表示されます。
 
-![JSON キーと値のペアに設定されたリクエスト本文。]({% image_buster /assets/img/webhook_json_1.png %})
+\![リクエスト・ボディはJSONのキーと値のペアに設定されている。]({% image_buster /assets/img/webhook_json_1.png %})
 
-Liquid を使用してキーと値のペアをパーソナライズできます (ユーザー属性、[カスタム属性][17]、または[イベントプロパティ][18]を含めるなど)。例えば、リクエストに顧客の名とメールアドレスを含めることができます。各属性の[デフォルト値を][19]必ず含めること。
+Liquid を使用してキーと値のペアをパーソナライズできます (ユーザー属性、[カスタム属性]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#additional-notes-and-best-practices)、または[イベントプロパティ]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)を含めるなど)。例えば、リクエストに顧客の名とメールアドレスを含めることができます。各属性の[デフォルト値を]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=web)必ず含めること。
 
 ##### 生のテキスト
 
 [生のテキスト] オプションを使用すると、任意の形式の本文を受け入れるエンドポイントへのリクエストを作成する柔軟性が得られます。例えば、リクエストがXML形式であることを期待するエンドポイントへのリクエストを書くためにこれを使うかもしれない。 
 
-両方の[パーソナライゼーション][15]と[国際化][16]は、Liquidを使用して生のテキストでサポートされています。
+両方の[パーソナライゼーション]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/)と[国際化]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/#campaigns-in-multiple-languages)は、Liquidを使用して生のテキストでサポートされています。
 
-![Liquid を使用した生のテキストを含むリクエスト本文の例。]({% image_buster /assets/img_archive/webhook_rawtext.png %})
+\![Liquidを使った生のテキストを含むリクエストボディの例。]({% image_buster /assets/img_archive/webhook_rawtext.png %})
 
 `Content-Type` [リクエストヘッダー](#request-headers-optional) を `application/x-www-form-url-encoded` に設定した場合、リクエストボディは URL エンコードされた文字列としてフォーマットする必要があります。以下に例を示します。
 
@@ -119,15 +119,15 @@ to={{custom_attribute.${example}}}&text=Your+order+just+arrived
 ```
 {% endraw %}
 
-![URL エンコードされた文字列を含むリクエスト本文。]({% image_buster /assets/img_archive/webhook_rawtext_URL-encoded.png %})
+\![URLエンコードされた文字列を含むリクエストボディ。]({% image_buster /assets/img_archive/webhook_rawtext_URL-encoded.png %})
 
-## ステップ 3:追加設定を構成する
+## ステップ 3: 追加設定を構成する
 
 #### リクエストヘッダー (オプション)
 
 特定のエンドポイントでは、リクエストにヘッダーを含める必要がある場合があります。作成画面の [**作成**] セクションで、ヘッダーを必要な数だけ追加できます。
 
-![リクエストヘッダーの「許可」キーと「コンテンツタイプ」キーの例]({% image_buster /assets/img_archive/webhook_request_headers_example.png %})
+\![Authorization "キーと "Content-type "キーのリクエストヘッダー例。]({% image_buster /assets/img_archive/webhook_request_headers_example.png %})
 
 一般的なリクエストヘッダーは`Content-Type`仕様 (XML や JSON など、本文に含まれるデータのタイプを示す) と、ベンダーやシステムに対する認証情報を含む認証ヘッダーです。 
 
@@ -158,9 +158,9 @@ to={{custom_attribute.${example}}}&text=Your+order+just+arrived
 ## ステップ 5: キャンペーンまたはキャンバスの残りの部分を作成する
 
 {% tabs %}
-{% tab キャンペーン %}
+{% tab Campaign %}
 
-次に、キャンペーンの残りの部分を構築します。Webhook を作成するためにツールを活用する方法の詳細については、以下のセクションを参照してください。
+次に、キャンペーンの残りの部分を作成します。Webhook を作成するためにツールを活用する方法の詳細については、以下のセクションを参照してください。
 
 #### 配信スケジュールまたはトリガーを選択する
 
@@ -172,7 +172,9 @@ Webhook は、スケジュールされた時刻、アクション、または AP
 
 #### ターゲットとするユーザーを選択する
 
-次に、セグメントやフィルターを選択して[ターゲットユーザー]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/)を絞り込み、オーディエンスを絞り込む必要があります。このステップでは、セグメントからより多くのオーディエンスを選択し、必要に応じてフィルターを使用してさらにセグメントを絞り込みます。セグメントのおおよその人数について現在の状態を示すスナップショットが自動的に表示されます。正確なセグメントメンバーシップは常にメッセージが送信される直前に計算されることに注意してください。
+次に、セグメントやフィルターを選択して[ターゲットユーザー]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/)を絞り込み、オーディエンスを絞り込む必要があります。このステップでは、セグメントからより多くのオーディエンスを選択し、必要に応じてフィルターを使用してさらにセグメントを絞り込みます。そのセグメンテーションの母集団が今どのようなものなのか、自動的にプレビューが表示される。正確なセグメントメンバーシップは常にメッセージが送信される直前に計算されることに注意してください。
+
+{% multi_lang_include target_audiences.md %}
 
 #### コンバージョンイベントを選択する
 
@@ -180,7 +182,7 @@ Braze では、キャンペーンを受信した後、ユーザーが指定の�
 
 {% endtab %}
 
-{% tab キャンバス %}
+{% tab Canvas %}
 
 キャンバスコンポーネントが完成していない場合は、残りのセクションを完成させます。詳細については、キャンバスの残りの部分を構築する方法、多変量テストとインテリジェントセレクションを実装する方法などについては、キャンバスドキュメントの[キャンバスを構築する]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-3-build-your-canvas)ステップを参照してください。
 
@@ -195,17 +197,20 @@ Braze では、キャンペーンを受信した後、ユーザーが指定の�
 
 ### エラー、リトライロジック、タイムアウト
 
-webhookはBrazeサーバーが外部エンドポイントにリクエストを送信することに依存しており、構文やその他のエラーが発生する可能性があります。Webhookエラーを回避するための最初のステップは、Webhookキャンペーンを構文エラーについてテストし、パーソナライズされた変数にデフォルト値があることを確認することです。ただし、期限切れの API キー、レート制限、予期しないサーバーエラーなどの問題が原因で、Webhook が失敗する場合があります。Webhook の送信に失敗した場合、エラーメッセージが[メッセージアクティビティログ][42]に記録されます。
+Webhook は Braze サーバーが外部エンドポイントにリクエストを送信することに依存しており、エラーが発生する可能性があります。最も一般的なエラーは、構文エラー、期限切れの API キー、レート制限、予期しないサーバー側の問題などです。Webhook キャンペーンを送信する前に、次のようにします。
 
-この説明には、エラーが発生した時間、アプリ名、およびエラーメッセージが含まれています:
+- Webhook をテストして構文エラーがないか確認する
+- パーソナライズされた変数がデフォルト値を持つようにする。
 
-![Webhook エラーとメッセージ「現在のユーザーに関する情報を照会するには、アクティブなアクセストークンを使用する必要があります」。]({% image_buster /assets/img_archive/webhook-error.png %})
+Webhook の送信に失敗すると、エラーメッセージが[メッセージアクティビティログ]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/)に記録されます。これにはエラーのタイムスタンプ、アプリ名、エラーの詳細などが含まれます。
 
-メッセージ本文がエラーの原因について十分に明確でない場合、使用しているAPIエンドポイントのドキュメントを確認する必要があります。これらは通常、エンドポイントが使用するエラーコードの説明と、それらが通常引き起こされる原因を提供します。
+\![現在のユーザーに関する情報を照会するには、アクティブ・アクセストークンを使用する必要があります」というメッセージのWebhookエラーが発生した。]({% image_buster /assets/img_archive/webhook-error.png %})
 
-他のキャンペーンと同様に、BrazeはWebhookキャンペーンの配信とそれに伴うコンバージョンを追跡します。Webhook リクエストが送信されると、受信側のサーバーは、リクエストの処理内容を示す応答コードを返します。 
+エラーメッセージがエラーの原因について十分に明確でない場合、使用しているAPIエンドポイントのドキュメントを確認する必要があります。これらは通常、エンドポイントが使用するエラーコードの説明と、それらが通常引き起こされる原因を提供します。
 
-次の表は、サーバーが送信する可能性のあるさまざまな応答、それらがキャンペーン分析に与える影響、およびエラーの場合にBrazeがキャンペーンを再配信しようとするかどうかをまとめたものです。
+#### 応答コードと再試行ロジック
+
+Webhook リクエストが送信されると、受信側のサーバーは、リクエストの処理内容を示す応答コードを返します。次の表は、サーバーが送信する可能性のあるさまざまな応答、それらがキャンペーン分析に与える影響、およびエラーの場合にBrazeがキャンペーンを再配信しようとするかどうかをまとめたものです。
 
 | 応答コード | 受領済みとしてマークされましたか？ | 再試行? |
 |---------------|-----------|----------|
@@ -218,8 +223,12 @@ webhookはBrazeサーバーが外部エンドポイントにリクエストを�
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert note %}
-`5XX` エラーの場合、Brazeは指数関数的バックオフを使用して、30分間に最大5回までWebhook送信を再試行する。その他のエラーについては、Brazeは最大24時間再試行を続ける。<br><br>各Webhookはタイムアウトするまでに90秒が許可されています。
+Braze は指数バックオフを使用して、上記のステータスコードを30分以内に5回まで再試行します。エンドポイントに到達できない場合、24時間にわたって再試行が行われることがあります。<br><br>各Webhookはタイムアウトするまでに90秒が許可されています。
 {% endalert %}
+
+#### トラブルシューティングとその他のエラーの詳細
+
+詳細な説明、トラブルシューティングのステップ、特定の Webhook エラーを解決するためのガイダンスについては、[Webhook およびコネクテッドコンテンツリクエストのトラブルシューティング]({{site.baseurl}}/help/help_articles/api/webhook_connected_content_errors/)を参照してください。Braze の不健全ホスト検出システムの仕組みや、Braze Currents の自動メールや追加ロギングによるエラー通知の仕組みについての詳しい説明もあります。
 
 ### IP 許可リスト {#ip-allowlisting}
 
@@ -238,15 +247,9 @@ Braze-to-Braze Webhook を作成していて、許可リストを使用してい
 webhookを使用する方法はたくさんあり、私たちの技術パートナー（Alloys）と一緒に、顧客やユーザーと直接コミュニケーションを向上させるためにwebhookを使用できます。
 
 以下を参照してください。
-* [Messenger]({{site.baseurl}}/partners/message_orchestration/additional_channels/instant_chat/messenger/)
-* [Remerge]({{site.baseurl}}/partners/message_orchestration/additional_channels/retargeting/remerge)
-* [Lob.com]({{site.baseurl}}/partners/message_orchestration/additional_channels/direct_mail/lob)
+* [Messenger]({{site.baseurl}}/partners/additional_channels_and_extensions/additional_channels/instant_chat/messenger/)
+* [Remerge]({{site.baseurl}}/partners/remerge/)
+* [Lob.com]({{site.baseurl}}/partners/additional_channels_and_extensions/additional_channels/direct_mail/lob/)
 * その他多くの[テクノロジーパートナー]({{site.baseurl}}/partners/home/)
 
 
-[15]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/
-[16]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/#campaigns-in-multiple-languages
-[17]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#additional-notes-and-best-practices
-[18]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/
-[19]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/
-[42]: {{site.baseurl}}/user_guide/administrative/app_settings/developer_console/message_activity_log_tab/

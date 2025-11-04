@@ -1,5 +1,7 @@
 ---
 layout: default
+hide_feedback: true
+hide_binary_feedback: false
 ---
 {%- comment -%} Assigned variables first by page, then by layout {%- endcomment -%}
 {%- assign hide_nav = page.hide_nav -%}
@@ -44,6 +46,14 @@ layout: default
     <div id="breadcrumb">
     </div>
     {%- endunless -%}
+    
+    {%- comment -%} Add Copy for LLM button for developer guide pages {%- endcomment -%}
+    {%- if page.collection == 'developer_guide' -%}
+    <div class="copy-for-llm-page-header">
+      {% include copy_for_llm_button.html %}
+    </div>
+    {%- endif -%}
+    
     {{ content }}
 
     </div>
@@ -67,13 +77,17 @@ layout: default
     {% include footer.html %}
 </div>
 
-{%- unless hide_toc -%}
 <div class="d-none d-lg-block col-lg-2 d-print-none" id="toc_col">
   <div class="gitedit_div" style="margin-top: 30px;padding-left: 5px;">
       <a href="{{site.github_baseurl}}{{page.relative_path }}" class="extignore" target="_blank">
           <img src="{{site.baseurl}}/assets/img/{{site.github_icon}}" alt="Github" /> &nbsp; {{ site.data.i18n[site.language]['edit_github'] | default: "Edit this page on GitHub" }}
       </a>
   </div>
+  {%- unless hide_toc -%}
   <div id="toc" ></div>
+  {%- endunless -%}
+
+  {% unless hide_binary_feedback -%}
+  {% include binary_feedback.html  %}
+  {% endunless -%}
 </div>
-{%- endunless -%}

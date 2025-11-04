@@ -1,5 +1,5 @@
 ---
-nav_title: Automate Zoom Registration
+nav_title: Automate Zoom registration
 article_title: Automate Zoom Registration
 page_order: 1
 page_type: tutorial

@@ -52,9 +52,9 @@ ID 제공업체에서 Braze 설정을 완료하면, ID 공급업체에서 Braze 
 
 | 요구 사항 | 세부 정보 |
 |---|---|
-| `SAML Name` | 로그인 화면의 버튼 텍스트에 표시됩니다.<br>일반적으로 "Okta"와 같은 ID 공급자의 이름입니다. |
-| `Target URL` | 이는 IdP 내에서 Braze를 설정한 후에 제공됩니다.<br> 일부 IdP는 이를 SSO URL 또는 SAML 2.0 엔드포인트로 참조합니다. |
-| `Certificate` | ID 공급업체에서 제공하는 `x.509` 인증서입니다.|
+| SAML Name | 로그인 화면의 버튼 텍스트에 표시됩니다.<br>일반적으로 "Okta"와 같은 ID 공급자의 이름입니다. |
+| Target URL | 이는 IdP 내에서 Braze를 설정한 후에 제공됩니다.<br> 일부 IdP는 이를 SSO URL 또는 SAML 2.0 엔드포인트로 참조합니다. |
+| Certificate | ID 공급업체에서 제공하는 `x.509` 인증서입니다.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 대시보드에 인증서를 추가할 때 `x.509` 인증서가 이 형식을 따르는지 확인하세요:
@@ -65,13 +65,13 @@ ID 제공업체에서 Braze 설정을 완료하면, ID 공급업체에서 Braze 
 -----END CERTIFICATE-----
 ```
 
-![보안 설정 열기 및 SAML SSO 세부 정보 추가]({% image_buster /assets/img/samlsso.gif %})
+![SAML SSO settings with the toggle selected.]({% image_buster /assets/img/samlsso.png %})
 
 ### 3단계: Braze에 로그인
 
 보안 설정을 저장하고 로그아웃합니다. 그런 다음 ID 공급업체를 통해 다시 로그인합니다.
 
-![SSO가 활성화된 대시보드 로그인 화면]({% image_buster /assets/img/sso1.png %}){: style="max-width:40%;"}
+![Dashboard login screen with SSO enabled]({% image_buster /assets/img/sso1.png %}){: style="max-width:60%;"}
 
 ## 릴레이 상태 설정
 
@@ -91,7 +91,7 @@ SSO를 사용하기로 선택한 회원은 더 이상 이전처럼 비밀번호�
 
 조직의 구성원이 Google SSO 또는 SAML SSO로만 로그인하도록 제한할 수 있습니다. 제한을 사용 설정하려면 **보안 설정**으로 이동하여 **Google SSO 전용 로그인 적용** 또는 **커스텀 SAML SSO 전용 로그인 적용**을 선택합니다.
 
-![보안 설정 페이지의 인증 규칙 섹션]({% image_buster /assets/img/sso3.png %})
+![Example setup of "Authentication Rules" section with a minimum password length of 8 characters and password reusability of 3 times. The passwords will expire after 180 days, and users will be logged out after 1,440 minutes of inactivity.]({% image_buster /assets/img/sso3.png %})
 
 제한을 설정하면 이전에 비밀번호로 로그인한 적이 있더라도 회사의 Braze 사용자는 더 이상 비밀번호를 사용하여 로그인할 수 없게 됩니다.
 
@@ -126,9 +126,9 @@ Braze 대시보드로 이동하여 SSO를 사용하여 로그인을 시도합니
 
 ### 사용자의 이메일 주소가 올바르게 설정되어 있나요?
 
-`ERROR_CODE_SSO_INVALID_EMAIL` 라는 오류가 표시되는 경우 사용자의 이메일 주소가 유효하지 않습니다. SAML 추적에서 `saml2:Attribute Name="email"` 필드가 사용자가 로그인에 사용하는 이메일 주소와 일치하는지 확인합니다. Microsoft Entra ID를 사용하는 경우 속성 매핑은 `email = user.userprincipalname` 입니다.
+`ERROR_CODE_SSO_INVALID_EMAIL` 라는 오류가 표시되는 경우 사용자의 이메일 주소가 유효하지 않습니다. SAML 추적에서 `saml2:Attribute Name="email"` 필드가 사용자가 로그인에 사용하는 이메일 주소와 일치하는지 확인합니다. If you use Microsoft Entra ID (formerly Azure Active Directory), the attribute mapping is `email = user.userprincipalname`.
 
-이메일 주소는 대소문자를 구분하며, ID 공급자(예: Okta, OneLogin, Azure Active Directory 등)에 구성된 주소를 포함하여 Braze에서 설정한 주소와 정확히 일치해야 합니다.
+The email address is case sensitive and must exactly match the one that was set up in Braze, including the one configured in your identity provider (such as Okta, OneLogin, Microsoft Entra ID, and others).
 
 사용자의 이메일 주소에 문제가 있음을 나타내는 기타 오류는 다음과 같습니다:
 - `ERROR_CODE_SSO_EMAIL_DOES_NOT_EXIST`: 사용자의 이메일 주소가 대시보드에 없습니다.

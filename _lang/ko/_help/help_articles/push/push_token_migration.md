@@ -75,7 +75,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 {% tab 외부 ID 누락 %}
 다른 시스템에서 푸시 토큰을 가져올 때 `external_id`를 항상 사용할 수 있는 것은 아닙니다. 이 경우 `push_token_import` 플래그를 `true`로 설정하고 `app_id` 및 `token` 값을 지정합니다. Braze는 각 토큰에 대해 임시 익명 고객 프로필을 생성하여 이러한 개인에게 계속 메시지를 보낼 수 있도록 합니다. 토큰이 이미 Braze에 존재하는 경우 요청은 무시됩니다.
 
-예를 들어, 다음과 같습니다.
+For example:
 
 ```json
 curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \

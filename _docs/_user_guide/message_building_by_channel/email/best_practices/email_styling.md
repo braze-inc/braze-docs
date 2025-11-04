@@ -1,5 +1,5 @@
 ---
-nav_title: Email Styling
+nav_title: Email styling
 article_title: Email Styling
 page_order: 2
 page_type: reference

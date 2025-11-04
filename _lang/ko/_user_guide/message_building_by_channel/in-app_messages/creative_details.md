@@ -1,7 +1,7 @@
 ---
 nav_title: 창의적인 세부 사항
 article_title: 창의적인 세부 사항
-page_order: 4
+page_order: 3.5
 layout: dev_guide
 guide_top_header: "창의적인 세부 사항"
 guide_top_text: "창의적인 인앱 메시지를 작성하기 전에 몇 가지 지침을 알아두어야 합니다. 모든 인앱 메시지 템플릿은 최신 기기에서 다양한 길이의 텍스트와 크기의 이미지를 표시하도록 설계되었습니다. 모든 휴대폰, 태블릿 및 컴퓨터에서 메시지가 잘 표시되도록 하려면 이러한 지침을 따르고 항상 <a href='/docs/user_guide/message_building_by_channel/in-app_messages/testing/'>메시지</a>를 테스트하는 것이 좋습니다."

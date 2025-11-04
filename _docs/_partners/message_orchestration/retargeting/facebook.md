@@ -103,3 +103,21 @@ When building Facebook audiences, you may wish to include or exclude certain use
 
 Once you've successfully exported a segment as a Facebook Audience, you can create additional groups using Facebook [Lookalike Audiences](https://www.facebook.com/business/help/164749007013531?id=401668390442328). This feature looks at your chosen audience's demographics, interests, and other attributes and creates a new audience of people with similar attributes.
 
+## Troubleshooting
+
+### Error Validating Access Token
+
+When using Facebook Export, the `Error Validating Access Token` error will display if:
+- You changed your password, which invalidates your current session
+- Facebook logged you out as a security precaution
+
+To resolve this error, follow these steps:
+1. Log out of Facebook, then log back in.
+2. In Braze, remove your Facebook credentials and save. Confirm the credentials were removed by trying to export a segment (the export icon should be disabled).
+3. Re-add and save your Facebook credentials.
+4. Try to export again. 
+
+If the export doesn't work, do the following:
+1. Remove your credentials again and save.
+2. Re-add your credentials and save.
+3. Disconnect and reconnect the Facebook integration on the **Technology Partners** page.

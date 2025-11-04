@@ -1,5 +1,5 @@
 ---
-nav_title: Tracking Custom Events
+nav_title: Tracking custom events
 article_title: Tracking Custom Events for Windows Universal
 platform: Windows Universal
 page_order: 2

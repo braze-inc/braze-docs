@@ -25,6 +25,7 @@ SendGrid를 이메일 공급업체로 사용하는 경우 DNS를 변경하지 �
 2. **인증서, 식별자 및 프로필** 페이지로 이동합니다.
 3. **서비스** > **이메일 통신을 위해 Apple로 로그인을** 선택합니다.
 4. **이메일 소스** 섹션에서 도메인과 하위 도메인을 추가합니다.
+- The address should be formatted as: `bounces+<YOUR_UID>@<YOUR_WHITELABELED_SUBDOMAIN_AND_DOMAIN>` (an example is: `bounces+1234567@braze.online.docs.com`). 
 
 원하는 "보낸 사람" 주소가 `abmail` 주소인 경우 하위 도메인에 해당 주소를 포함하세요. 예를 들어 `docs.braze.com` 대신 `abmail.docs.braze.com` 을 사용합니다.
 

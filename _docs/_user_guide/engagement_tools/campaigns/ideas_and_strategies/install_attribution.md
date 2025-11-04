@@ -1,5 +1,5 @@
 ---
-nav_title: Understanding User Installs
+nav_title: Understanding user installs
 article_title: Understanding User Installs 
 page_order: 7
 page_type: reference

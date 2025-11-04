@@ -1,5 +1,5 @@
 ---
-nav_title: Seasonal Promotion with Image
+nav_title: Seasonal promotion with image
 article_title: Seasonal Promotion with Background Image
 alias: "/seasonal_promotion/"
 page_order: 8

@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: Export Custom Attributes"
+nav_title: "GET: Export custom attributes"
 article_title: "GET: Export Custom Attributes"
 search_tag: Endpoint
 page_order: 4

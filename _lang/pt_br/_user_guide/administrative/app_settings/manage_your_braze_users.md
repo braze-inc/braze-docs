@@ -7,11 +7,11 @@ guide_top_header: "Usuários da empresa"
 guide_top_text: "Como administrador da conta Braze da sua empresa, talvez você precise gerenciar os usuários de forma mais granular ou caso a caso. O Braze pode ajudá-lo a fazer isso criando equipes e gerenciando permissões de usuários e configurações em toda a empresa."
 
 page_type: landing
-description: "Essa landing page lista artigos sobre como gerenciar seus usuários do Braze, como adicionar e excluir usuários, definir permissões de usuário, criar equipes e gerenciar configurações da empresa."
+description: "Essa página de destino lista artigos sobre como gerenciar seus usuários do Braze, como adicionar e excluir usuários, definir permissões de usuário, criar equipes e gerenciar configurações da empresa."
 
 guide_featured_title: "Artigos de seção"
 guide_featured_list:
-- name: Gerenciando usuários do Braze
+- name: Gerenciamento de usuários do Braze
   link: /docs/user_guide/administrative/app_settings/manage_your_braze_users/adding_users_to_your_dashboard/
   image: /assets/img/braze_icons/user-plus-01.svg
 - name: Definição de permissões de usuário

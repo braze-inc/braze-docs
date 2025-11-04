@@ -294,6 +294,10 @@ Das Segmentierungs-Tool berücksichtigt diese Nutzer:innen unabhängig davon, ob
 
 Jedes Event-Objekt im Event-Array repräsentiert ein einzelnes Vorkommen eines angepassten Events durch einen Nutzer:in zu einem bestimmten Zeitpunkt. Das bedeutet, dass jedes Ereignis, das in Braze aufgenommen wird, seine eigene ID hat, so dass "doppelte" Ereignisse als separate, eindeutige Ereignisse behandelt werden.
 
+### Wie geht `/users/track` mit ungültigen, verschachtelten angepassten Attributen um?
+
+Wenn ein verschachteltes angepasstes Attribut ungültige Werte enthält (z.B. ungültige Zeitformate oder Nullwerte), werden alle verschachtelten angepassten Attribute in der Anfrage nicht verarbeitet. Dies gilt für alle verschachtelten Strukturen innerhalb dieses spezifischen Attributs. Um eine erfolgreiche Verarbeitung zu gewährleisten, überprüfen Sie vor dem Senden, ob alle Werte innerhalb der verschachtelten angepassten Attribute gültig sind.
+
 ## Monatlich aktive Nutzer:innen CY 24-25
 Für Kunden, die Monatlich aktive:r Nutzer:innen - CY 24-25 erworben haben, verwaltet Braze verschiedene Rate-Limits auf seinem Endpunkt `/users/track`:
 - Die stündlichen Rate-Limits richten sich nach der erwarteten Aktivität der Datenaufnahme auf Ihrem Konto, die von der Anzahl der monatlich aktiven Nutzer:innen, der Branche, der Saisonalität oder anderen Faktoren abhängen kann.

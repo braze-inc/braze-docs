@@ -64,11 +64,11 @@ let deviceId = await AppDelegate.braze?.deviceId()
 
 Dans Braze, accédez à **Intégrations partenaires** > **Partenaires technologiques** et sélectionnez **Kochava**. 
 
-Ici, vous trouverez l’endpoint REST et générerez votre clé d'importation des données Braze. Une fois la clé générée, vous pouvez créer une nouvelle clé ou invalider une clé existante. La clé d'importation des données et l’endpoint REST sont utilisés à l'étape suivante lors de la configuration d'un postback dans le tableau de bord de Kochava.<br><br>![Cette image montre la case « Importation de données pour l'attribution de l'installation » qui se trouve sur la page technologique de Kochava. Dans cette zone, vous pouvez voir la clé d'importation des données et l’endpoint REST.][4]{: style="max-width:90%;"}
+Ici, vous trouverez l’endpoint REST et générerez votre clé d'importation des données Braze. Une fois la clé générée, vous pouvez créer une nouvelle clé ou invalider une clé existante. La clé d'importation des données et l’endpoint REST sont utilisés à l'étape suivante lors de la configuration d'un postback dans le tableau de bord de Kochava.<br><br>![Cette image montre la case « Importation de données pour l'attribution de l'installation » qui se trouve sur la page technologique de Kochava. Dans cette boîte, la clé d'importation des données et l'endpoint REST sont affichés.]({% image_buster /assets/img/attribution/kochava.png %}){: style="max-width:90%;"}
 
 ### Étape 3 : Configurer un système de communication automatisé depuis Kochava
 
-[Ajoutez un postback][18] dans votre tableau de bord de Kochava. Vous serez invité à indiquer la clé d'importation des données et l'endpoint REST que vous avez trouvés dans le tableau de bord de Braze.
+[Ajoutez un postback](https://support.kochava.com/campaign-management/create-a-kochava-certified-postback) dans votre tableau de bord de Kochava. Vous serez invité à indiquer la clé d'importation des données et l'endpoint REST que vous avez trouvés dans le tableau de bord de Braze.
 
 ### Étape 4 : Confirmez l'intégration
 
@@ -117,7 +117,3 @@ Si vous n'utilisez actuellement aucun identifiant d'appareil, tel que l'IDFV ou 
 {% endalert %}
 
 
-[18]: https://support.kochava.com/campaign-management/create-a-kochava-certified-postback "Systèmes de communication automatisés Kochava"
-[29]: https://support.kochava.com/sdk-integration/sdk-kochavatracker-android/class-tracker?scrollto=marker_3
-[30]: https://support.kochava.com/sdk-integration/windows-and-xbox-one-sdk-integration?scrollto=marker_8
-[4]: {% image_buster /assets/img/attribution/kochava.png %}

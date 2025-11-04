@@ -1,4 +1,4 @@
-{% multi_lang_include developer_ %}
+{% multi_lang_include developer_guide/prerequisites/web.md %}
 
 ## Nachrichten triggern
 
@@ -20,7 +20,7 @@ Weitere Informationen über die Semantik des SDK für den Sitzungsstart finden S
 
 Standardmäßig können Sie einmal alle 30 Sekunden eine In-App-Nachricht senden.
 
-Um dies außer Kraft zu setzen, fügen Sie die folgende Eigenschaft zu Ihrer Braze-Konfiguration hinzu - bevor die Braze-Instanz initialisiert wird. Sie können ihn auf eine beliebige positive ganze Zahl setzen, die das minimale Zeitintervall in Sekunden darstellt. Zum Beispiel:
+Um dies außer Kraft zu setzen, fügen Sie die folgende Eigenschaft zu Ihrer Braze-Konfiguration hinzu, bevor die Braze-Instanz initialisiert wird. Sie können ihn auf eine beliebige positive ganze Zahl setzen, die das minimale Zeitintervall in Sekunden darstellt. Zum Beispiel:
 
 ```javascript
 // Sets the minimum time interval between triggered in-app messages to 5 seconds instead of the default 30

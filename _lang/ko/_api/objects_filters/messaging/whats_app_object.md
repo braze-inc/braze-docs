@@ -19,8 +19,8 @@ description: "이 참고 문서에서는 Braze WhatsApp 객체의 다양한 구�
   "app_id": (required, string) see App Identifier,
   "subscription_group_id": (required, string) the ID of your subscription group,
   "message_variation_id": (optional, string) used when providing a campaign_id to specify which message variation this message should be tracked under,
-  "message_type": (required, string) the type of WhatsApp message being sent under the `message` key (template_message | text_response_message | text_image_response_message | quick_reply_response_message),
-  "message": (required, object) message object specifying fields the required fields based on the specified message_type. See Message Types for field specifications.
+  "message_type": (required, string) the type of WhatsApp message being sent under the `message` key (template_message | text_response_message | text_image_response_message | quick_reply_response_message | list_response_message),
+  "message": (required, object) The message object that must include the required fields based on the selected `message_type`. Below are the specific message structures for each type. Refer to the relevant message type for the required fields and their format.
 }
 ```
 
@@ -100,6 +100,8 @@ description: "이 참고 문서에서는 Braze WhatsApp 객체의 다양한 구�
 }
 ```
 
+### 응답 메시지
+
 #### text_response_message
 
 ```json
@@ -169,5 +171,83 @@ description: "이 참고 문서에서는 Braze WhatsApp 객체의 다양한 구�
       "text": "No thanks"
     }
   ]
+}
+```
+
+#### 리스트_응답_메시지
+
+`list_response_message` 유형은 WhatsApp에서 목록 기반 메시지를 보낼 수 있습니다. 이 메시지 유형에는 수신자가 상호 작용할 수 있는 항목 목록이 포함되어 있습니다.
+
+```json
+{
+  "header": (optional, string) the header of the message to send,
+  "body": (required, string) the body of the message to send,
+  "footer": (optional, string) the footer of the message to send,
+  "list": (required, object) the list object that contains:
+    "list_button_text": (required, string) the text that will appear on the list button,
+    "list_sections": (required, array) an array of List Section Objects
+}
+```
+
+#### 섹션 개체 나열
+
+```json
+{
+  "section_title": (required, string) The title of the section,
+  "list_rows": (required, array) An array of List Row Objects
+}
+```
+
+#### 행 개체 나열
+
+```json
+{
+  "row_title": (required, string) The title of the row,
+  "row_description": (optional, string) The description for the row
+}
+```
+
+##### 제약 조건
+
+- **list_sections**: 섹션이 하나 이상 있어야 합니다.
+- **list_rows**: 모든 섹션에 최대 10개의 행을 포함할 수 있습니다.
+- **행_설명**: 각 행에 대해 선택 사항입니다.
+
+##### 예시
+
+```json
+{
+  "body": "Here is a list of options to choose from:",
+  "list": {
+    "list_button_text": "Choose an option",
+    "list_sections": [
+      {
+        "section_title": "Section 1",
+        "list_rows": [
+          {
+            "row_title": "Option 1"
+          },
+          {
+            "row_title": "Option 2",
+            "row_description": "Description for Option 2"
+          }
+        ]
+      },
+      {
+        "section_title": "Section 2",
+        "list_rows": [
+          {
+            "row_title": "Option 3"
+          },
+          {
+            "row_title": "Option 4"
+          },
+          {
+            "row_title": "Option 5"
+          }
+        ]
+      }
+    ]
+  }
 }
 ```

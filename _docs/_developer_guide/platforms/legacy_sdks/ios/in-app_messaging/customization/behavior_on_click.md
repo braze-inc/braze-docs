@@ -1,5 +1,5 @@
 ---
-nav_title: Custom On-Click Behavior
+nav_title: Custom on-click behavior
 article_title: Customizing In-App Message On-Click Behavior for iOS
 platform: iOS
 page_order: 5

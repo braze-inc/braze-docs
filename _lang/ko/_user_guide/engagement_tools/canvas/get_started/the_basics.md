@@ -107,7 +107,7 @@ tool: Canvas
 * [푸시]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/)
 * [인앱 메시지]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/)
 * [콘텐츠 카드]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/)
-* [SMS 또는 MMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/about_sms/)
+* [SMS or MMS]({{site.baseurl}}/about_sms/)
 * [웹훅]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/)
 
 ### "방법": 완벽한 경험 구축

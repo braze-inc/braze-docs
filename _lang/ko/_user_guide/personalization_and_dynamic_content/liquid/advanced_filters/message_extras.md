@@ -30,8 +30,18 @@ alias: "/message_extras_tag/"
 
 ## 태그를 사용하는 방법
 
-1. 채널의 메시지 본문에 Liquid 태그를 입력하세요. 또는 **개인화 추가** 모달을 사용하고 개인화 유형에 대해 **메시지 추가 기능**을 선택할 수 있습니다. <br>![개인화 추가 모달에서 개인화 유형으로 메시지 추가 기능이 선택되었습니다.][1]{: style="max-width:70%;"}
-2. 각 `message_extras` 태그에 대한 [키-값 페어]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/)를 입력하세요. <br>![메시지 엑스트라 태그에 대한 키-값 쌍의 예입니다. 제목 필드에는 "Your New Favorites."라고 적혀 있습니다. 메시지는 메시지 추가 태그의 키-값 페어를 읽고 다음 문장을 읽습니다. Braze는 여러분의 새로운 즐겨찾기가 될 신선하고 흥미로운 제품들을 다양하게 선보이게 되어 기쁩니다][2]{: style="max-width:70%;"}
+1. 채널의 메시지 본문에 Liquid 태그를 입력하세요. 또는 **개인화 추가** 모달을 사용하고 개인화 유형에 대해 **메시지 추가 기능**을 선택할 수 있습니다. 
+
+![The Add Personalization modal with Message Extras selected as the personalization type.]({% image_buster /assets/img_archive/message_extras1.png %}){: style="max-width:35%;"}
+
+{: start="2"}
+
+2. 각 `message_extras` 태그에 대한 [키-값 페어]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/)를 입력하세요. 
+
+![메시지 엑스트라 태그에 대한 키-값 쌍의 예입니다. 제목 필드에는 "Your New Favorites."라고 적혀 있습니다. 메시지는 메시지 추가 태그의 키-값 페어를 읽고 다음 문장을 읽습니다. "We're excited to bring you a side selection of fresh and exciting products that are sure to become your new go-to favorites"]({% image_buster /assets/img_archive/message_extras2.png %}){: style="max-width:70%;"}
+
+{: start="3"}
+
 3. 캠페인 또는 캔버스가 발송된 후, Braze는 발송 시간에 동적 데이터를 커런츠 또는 Snowflake 데이터 공유 발송 이벤트를 통해 `message_extras` 필드에 첨부합니다.
 
 ## 구문 검사
@@ -64,5 +74,3 @@ alias: "/message_extras_tag/"
 
 {% sdk_min_versions web:5.2.0 android:30.4.0 swift:8.4.0 %}
 
-[1]: {% image_buster /assets/img_archive/message_extras1.png %}
-[2]: {% image_buster /assets/img_archive/message_extras2.png %}

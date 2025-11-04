@@ -14,7 +14,7 @@ search_tag: Partner
 
 > [Foursquare](https://foursquare.com/) は、Braze キャンペーンに位置情報データターゲティング機能を提供する位置情報データプラットフォームです。iOSとAndroidアプリでFoursquareのPilgrim SDKを使用して、位置情報に基づいたリアルタイムのイベントトリガーを提供し、Foursquareの強力なジオターゲティング機能を利用して、Brazeで関連性の高いパーソナライズされたメッセージを送信できる。
 
-_この統合はFoursquare によって維持されます。_
+_この統合は Foursquare によって管理されます。_
 
 ## 前提条件
 
@@ -34,7 +34,7 @@ _この統合はFoursquare によって維持されます。_
 2つの SDK 間でフィールドを正しくマッピングするには、Braze SDK の[`changeUser` メソッド]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/#setting-user-ids)と Pilgrim SDK の [`PilgrimUserInfo`](https://developer.foursquare.com/docs/pilgrim-sdk/advanced-setup-guide#custom-user-data) の `setUserId` メソッドを使用して、両方のシステムで同じユーザー ID を設定します。
 
 ### ステップ2:Pilgrim コンソールを設定する
-![Group ID、Android App ID、iOS App ID の入力を促す Pilgrim コンソール。][2]{: style="float:right;max-width:40%;margin-left:15px;"}
+![Group ID、Android App ID、iOS App ID の入力を求める Pilgrim コンソールの画像。]({% image_buster /assets/img_archive/pilgrim-dev-console.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
 Braze開発者コンソールでワークスペースとApp IDを見つける。次に、Foursquare Pilgrim ConsoleにBraze REST API KeyとApp IDを入力する。
 
@@ -63,5 +63,3 @@ Pilgrim SDK を使用するには、位置情報サービスを有効にする�
 また Braze で、特定のタイプの会場を訪問したユーザーを、特定の期間内の Foursquare の `primaryCategoryId` に基づいてセグメント化することもできます。このデータポイントをリターゲティングのユースケースに利用するには、オーディエンスのセグメンテーションプロセスでイベントプロパティとして `primaryCategoryId` をログに記録します。Foursquare API と Pilgrim SDK で使用されるユーザーとプロパティを確認するには、[Foursquare の開発者サイトを](https://developer.foursquare.com/)参照のこと。
 
 
-[1]: {% image_buster /assets/img_archive/dashboard_keys_locations.png %}
-[2]: {% image_buster /assets/img_archive/pilgrim-dev-console.png %}

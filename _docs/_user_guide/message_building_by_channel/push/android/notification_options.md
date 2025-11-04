@@ -1,5 +1,5 @@
 ---
-nav_title: "Notification Options"
+nav_title: "Notification options"
 article_title: Android Notification Options
 page_order: 2
 page_type: reference

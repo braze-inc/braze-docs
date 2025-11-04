@@ -1,5 +1,5 @@
 ---
-nav_title: Creating a Churn Prediction
+nav_title: Creating a churn prediction
 article_title: Creating a Churn Prediction
 description: "This article covers how to create a churn prediction within the Braze dashboard."
 page_order: 1.1
@@ -24,7 +24,7 @@ There is a limit of five concurrently active churn predictions. Prior to purchas
 
 On the **Basics** page, give your new prediction a unique name. You can also provide an optional description to take any notes on this particular prediction.
 
-Click **Forward** to move to the next step. Optionally, you can click **Build Now** to use all the default settings and skip to the last step of creation. You will have a chance to review the settings before starting the build process. You can return to any step later by selecting it in the progress tracker on the top.
+Select **Forward** to move to the next step. Optionally, you can select **Build Now** to use all the default settings and skip to the last step of creation. You'll have an opportunity to review the settings before starting the build process. You can return to any step later by selecting it in the progress tracker.
 
 ## Step 2: Define churn
 
@@ -34,7 +34,9 @@ Remember, you don't need to explain what behaviors might precede churn—only wh
 
 #### Churn window
 
-Churn window is the time frame in which a user performs the behavior specified to constitute churning. It can be set up to 60 days. This window is used to query historical data for training the prediction. Additionally, after the prediction is created and users receive scores, the _Churn Risk Score_ indicates how likely a user is to churn within the number of days specified by the churn window. 
+The churn window is the period when a user’s activity meets the criteria for churning. You can set it for up to 60 days, depending on the available data. This window is used to pull historical data to train your prediction. Once the prediction is built, you’ll see if there was enough data for accurate results.
+
+After the prediction builds and users receive scores, the _Churn Risk Score_ shows how likely a user is to churn within the time frame you set in the churn window. 
 
 Here's an example of a simple definition based on lapsing sessions in the last 7 days.
 
@@ -43,14 +45,18 @@ Here's an example of a simple definition based on lapsing sessions in the last 7
 For this case, we select `do not` and `start a session`. You can combine other filters with `AND` and `OR` as you see fit to create the definition you need. Interested in some potential churn definitions to consider? You can find some inspiration in the following section on [Sample churn definitions](#sample-definitions).
 
 {% alert note %}
-For `do`, we assume that active users did not take the action you specify for this row prior to becoming churned. Doing the action causes them to become churned. <br><br>For `do not`, we consider active users to be those that did do that action in the days prior, and then stopped.
+For `do`, we assume that active users did not take the action you specify for this row prior to becoming churned. Doing the action causes them to become churned. <br><br>For `do not`, we consider active users to be those that did do that action in the days prior, and then stopped. <br><br>**Example:** If churn is defined as "has not purchased in the past 60 days", we consider active users those who did purchase in the past 60 days. As a result, anybody who didn't make a purchase in the last 60 days is not considered an active user. This means a churn audience created from this churn definition would only include users who have purchased in the past 60 days. This may make the resulting predictive churn audience look significantly smaller than the original population—most users in a workspace might already meet the definition of churned and therefore not be active in the churn prediction.
 {% endalert %}
 
 Underneath the definition, you will see estimates of how many users (in the past who churned and who didn't churn according to your definition) are available. You will also see the minimum values required. Braze must have this minimum count of users available in historical data so that the prediction has enough data to learn from.
 
 ## Step 3: Filter your prediction audience
 
-Your prediction audience is the group of users you want to predict churn risk for. By default, this will be set to **All Users**, which means that this prediction will create churn risk scores for all of your active users. Usually, the model will likely perform better if you narrow down and filter the group of users you want to prevent from churning with some criteria. Think about the specific users who mean the most to you that you'd like to retain and define them here. For example, you might want to retain users who first used the app more than a month ago or have ever made a purchase.
+Your prediction audience is the group of users for which you want to predict churn risk for. The prediction audience defines the group of users the machine learning model looks at to learn from the past. By default, this is set to **All Users**, which means that this prediction will create churn risk scores for all of your active users (refer to the previous note for who is considered active for a churn model).
+
+Depending on your use case, you may want to use filters to specify the users you want to assess for the model. To do so, select **Define my own prediction audience** and choose your audience filters. For example, if you're a ride-sharing app with drivers and riders in your user base, and you're building a churn model for riders, you'll want to filter your prediction audience to just riders. Keep in mind that many use cases don't require you to select a specific prediction audience. For example, if your use case is to target users in the EU region that are most likely to churn, you can run your model on all users and then simply include a filter for EU region in the campaign’s segment.
+
+Braze will show you the estimated size of your prediction audience. If you specify your desired audience and don't meet the minimum required to run the model, try specifying a broader filter or use the **All Users** option. Note that the size of your "all users" group isn't static and varies from model to model, as it takes into account your churn definition. For example, say churn definition is **not** making a purchase in 30 days; in this case, Braze runs the model on users who **have** purchased in the last 30 days (and predicts the likelihood that they will **not** purchase in the next 30 days), so those are the users reflected in the "all users" metric.
 
 {% alert note %}
 The prediction audience cannot exceed 100 million users.
@@ -70,7 +76,9 @@ Just like the previous page, the bottom panel will show you the estimated number
 
 ## Step 4: Choose the update frequency for churn prediction
 
-The machine learning model created when you complete this page will be used on a schedule you select here to generate fresh churn risk scores. Select the **maximum frequency of updates** that you'll find useful. For example, if you're going to send a weekly promotion to prevent users from churning, set the update frequency to **Weekly** on the day and time of your choosing. 
+The machine learning model will generate event likelihood scores for users, and those scores will be updated based on the schedule you select here. You'll be able to target users based on their event likelihood score. 
+
+Select the **maximum frequency of updates** that you'll find useful. For example, if you're going to send a weekly promotion to prevent users from churning, set the update frequency to **Weekly** on the day and time of your choosing. 
 
 ![Prediction Update Schedule set to daily at 5 pm.]({% image_buster /assets/img/churn/churn2.png %})
 
@@ -80,9 +88,9 @@ Preview and demo prediction will never update users' risk of churn. Additionally
 
 ## Step 5: Build prediction
 
-Verify that the details you've provided are correct, and choose **Build Prediction**. You can also save your changes in draft form by selecting **Save As Draft** to return to this page and build the model later. After you click **Build Prediction**, the process that generates the model will begin. This could take between 30 minutes to a few hours depending on data volumes. For this prediction, you will see a page explaining that training is in progress for the duration of the model building process.
+Verify that the details you've provided are correct, and choose **Build Prediction**. You can also save your changes in draft form by selecting **Save As Draft** to return to this page and build the model later. After you select **Build Prediction**, the process that generates the model will begin. This could take between 30 minutes to a few hours depending on data volumes. For this prediction, you will see a page explaining that training is in progress for the duration of the model building process. The Braze model takes into account custom events, purchase events, campaign interaction events, and session data.
 
-Once it's done, the page will switch to the Analytics view automatically, and you will also get an email informing you that the prediction and results are ready. In the event of an error, the page will return to the Editing mode with an explanation of what went wrong.
+After it's done, the page will switch to the Analytics view automatically, and you will also get an email informing you that the prediction and results are ready. In the event of an error, the page will return to the Editing mode with an explanation of what went wrong.
 
 The prediction will be rebuilt ("retrained") again every **two weeks automatically** to keep it updated on the most recent data available. Note that this is a separate process from when users' _Churn Risk Scores_, the output of the prediction, are produced. The latter is determined by the update frequency you chose in Step 4.
 

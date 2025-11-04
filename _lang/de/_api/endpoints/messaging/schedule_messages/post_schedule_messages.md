@@ -76,15 +76,14 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Parameter | Erforderlich | Datentyp | Beschreibung |
 | --------- | ---------| --------- | ----------- |
-|`broadcast`| Optional | Boolesch | Sie müssen `broadcast` auf true setzen, wenn Sie eine Nachricht an ein ganzes Segment senden, auf das eine Kampagne oder ein Canvas abzielt. Dieser Parameter ist standardmäßig auf false eingestellt (Stand: 31\. August 2017). <br><br> Wenn `broadcast` auf true gesetzt ist, kann eine `recipients` Liste nicht aufgenommen werden. Seien Sie jedoch vorsichtig, wenn Sie `broadcast: true` setzen, denn wenn Sie dieses Flag unbeabsichtigt setzen, kann dies dazu führen, dass Sie Ihre Nachricht an eine größere Zielgruppe als erwartet senden. |
+|`broadcast`| Optional | Boolesch | Sie müssen `broadcast` auf true setzen, wenn Sie eine Nachricht an ein ganzes Segment senden, auf das eine Kampagne oder ein Canvas abzielt. Dieser Parameter ist standardmäßig auf `false` eingestellt. <br><br> Wenn `broadcast` auf `true` eingestellt ist, kann eine Empfänger:innen-Liste nicht aufgenommen werden. Seien Sie jedoch vorsichtig, wenn Sie `broadcast: true` setzen, denn wenn Sie dieses Flag unbeabsichtigt setzen, kann dies dazu führen, dass Sie Ihre Nachricht an eine größere Zielgruppe als erwartet senden. |
 | `external_user_ids` | Optional | String-Array | Siehe [externer Bezeichner für Nutzer:innen]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields). |
 | `user_aliases` | Optional | Array von Nutzer:innen-Alias-Objekten | Siehe [Nutzer-Alias Objekt]({{site.baseurl}}/api/objects_filters/user_alias_object/). |
 | `audience` | Optional | Verbundenes Objekt der Zielgruppe | Siehe [verbundene Zielgruppe]({{site.baseurl}}/api/objects_filters/connected_audience/). |
 | `segment_id` | Optional | String | Siehe [Bezeichner für Segmente]({{site.baseurl}}/api/identifier_types/). |
 | `campaign_id`|Optional|String| Siehe [Bezeichner der Kampagne]({{site.baseurl}}/api/identifier_types/). |
-| `recipients` | Optional | Array von Empfänger:innen-Objekten | Siehe [Empfänger:innen Objekt]({{site.baseurl}}/api/objects_filters/recipient_object/). |
 | `send_id` | Optional | String | Siehe [Bezeichner senden]({{site.baseurl}}/api/identifier_types/). |
-| `override_messaging_limits` | Optional | Boolesch | Globale Rate-Limits für Kampagnen ignorieren, Standardwert: false |
+| `override_messaging_limits` | Optional | Boolesch | Frequency-Capping für Kampagnen ignorieren, Standardwert ist false |
 |`recipient_subscription_state`| Optional | String | Verwenden Sie diese Option, um Nachrichten nur an Nutzer:in (`opted_in`), nur an Nutzer:in (`subscribed`) oder an alle Nutzer:in zu senden, auch an abgemeldete Nutzer (`all`), die sich angemeldet haben. <br><br>Die Verwendung von `all` Nutzer:innen ist nützlich für Transaktions-E-Mails Messaging. Standardmäßig ist `subscribed` eingestellt. |
 | `schedule` | Erforderlich | Objekt Zeitplan | Siehe [Zeitplan Objekt]({{site.baseurl}}/api/objects_filters/schedule_object/) |
 | `messages` | Optional | Messaging Objekt | Siehe [verfügbare Messaging-Objekte]({{site.baseurl}}/api/objects_filters/#messaging-objects). |

@@ -1,5 +1,5 @@
 ---
-nav_title: Uploading an HTML Email Template
+nav_title: Uploading an HTML email template
 article_title: Uploading an HTML Email Template
 page_order: 2
 description: "This reference article covers how to create, manage, and troubleshoot an HTML email template using the Braze dashboard."

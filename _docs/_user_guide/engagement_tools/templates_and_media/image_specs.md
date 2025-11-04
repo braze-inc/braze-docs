@@ -1,5 +1,5 @@
 ---
-nav_title: Image Specifications
+nav_title: Image specifications
 article_title: Image Specifications
 page_order: 4.1
 

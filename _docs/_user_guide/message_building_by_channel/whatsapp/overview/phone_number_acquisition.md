@@ -1,5 +1,5 @@
 ---
-nav_title: Phone Number Acquisition
+nav_title: Phone number acquisition
 article_title: Phone Number Acquisition
 page_order: 3
 description: "This reference article covers how to acquire a phone number from Twilio and Infobip."
@@ -38,7 +38,7 @@ Your phone number must meet these WhatsApp API requirements:
 
 ### Step 2: Configure your phone number
 
-Follow Twilio's instructions to [set up your Twilio phone number to receive the verification code via email using voicemail transcription](https://www.twilio.com/docs/whatsapp/self-sign-up#setting-up-your-twilio-phone-number-to-receive-the-verification-code-via-email-using-voicemail-transcription). **Do not follow the instructions in any other step, as that will connect your phone number to Twilio, not Braze.**
+Follow Twilio's instructions to [set up your Twilio phone number to receive the verification code via email using Twilio Voice Only](https://www.twilio.com/docs/whatsapp/self-sign-up#verify-your-whatsapp-sender). **Do not follow the instructions in any other step, as that will connect your phone number to Twilio, not Braze.**
 
 {% alert warning %}
 **Only follow Twilio's instructions to receive a verification code.**

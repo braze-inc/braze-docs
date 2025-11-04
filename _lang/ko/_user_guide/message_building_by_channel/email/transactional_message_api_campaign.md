@@ -30,14 +30,14 @@ Braze 트랜잭션 이메일은 일부 Braze 패키지의 일부로만 사용할
 즉, 트랜잭션 이메일을 사용하여 속도가 가장 중요한 단일 사용자를 대상으로 서비스에서 발생하는 비즈니스 크리티컬 알림을 보낼 수 있습니다. 
 
 {% alert important %}
-트랜잭션 이메일은 추가 비용 없이 사용자를 타겟팅하는 데 사용할 수 있는 트랜잭션 캠페인과는 다릅니다. 예를 들어 트랜잭션 캠페인에는 사용자가 장바구니에 상품을 추가한 후 전송되는 메시지가 포함될 수 있습니다. 자세한 내용은 [오디언스 타겟팅 옵션을]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/) 확인하세요.
+트랜잭션 이메일은 추가 비용 없이 사용자를 타겟팅하는 데 사용할 수 있는 트랜잭션 캠페인과는 다릅니다. 예를 들어 트랜잭션 캠페인에는 사용자가 장바구니에 상품을 추가한 후 전송되는 메시지가 포함될 수 있습니다. Check out [audience targeting options]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) for more information.
 {% endalert %}
 
 ## 1단계: 새 캠페인 만들기
 
 새 트랜잭션 이메일 캠페인을 만들려면 캠페인을 만들고 메시징 채널로 **트랜잭션 이메일**을 선택합니다.
 
-![거래 이메일에 대한 옵션이 강조 표시된 캠페인 만들기 드롭다운을 클릭합니다.][1]{: style="float:right;max-width:35%;margin-left:15px;"}
+![Create Campaign dropdown with the highlighted option for transactional email.]({% image_buster /assets/img/transactional_email_campaign.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
 이제 거래 이메일 캠페인 구성으로 넘어갈 수 있습니다.
 
@@ -48,10 +48,10 @@ Braze 트랜잭션 이메일은 일부 Braze 패키지의 일부로만 사용할
 따라서 이 캠페인 유형을 설정할 때는 다른 Braze 캠페인 유형에서 익숙한 몇 가지 설정이 필요하지 않습니다.
 
 - **배달** 단계가 간소화되어 예약 옵션이 제거되었습니다. 트랜잭션 이메일은 항상 **배달** 페이지에 표시된 캠페인 ID를 사용하여 Braze REST API를 통해 트리거됩니다. 서비스에서 전송 요청을 트리거할 때 모든 사용자가 이러한 중요한 트랜잭션 알림에 도달할 수 있는지 확인하기 위해 재자격 제어 및 최대 게재빈도 설정과 같은 추가 설정도 제거되었습니다.
-- **대상 사용자** 단계가 제거되었습니다. 트랜잭션 이메일은 전체 사용자층(수신 거부한 사용자 포함)을 적격 사용자로 등록하므로 필터나 세그먼트를 지정할 필요가 없습니다. 따라서 이 메시지를 수신해야 하는 대상에 적용할 로직이 있는 경우, 특정 사용자에게 메시지를 트리거하기 위해 Braze에 API 요청을 할 것인지 결정하기 전에 해당 로직을 적용하는 것이 좋습니다.
+- The **Target Audiences** step has been removed. 트랜잭션 이메일은 전체 사용자층(수신 거부한 사용자 포함)을 적격 사용자로 등록하므로 필터나 세그먼트를 지정할 필요가 없습니다. 따라서 이 메시지를 수신해야 하는 대상에 적용할 로직이 있는 경우, 특정 사용자에게 메시지를 트리거하기 위해 Braze에 API 요청을 할 것인지 결정하기 전에 해당 로직을 적용하는 것이 좋습니다.
 - **전환** 단계가 제거되었습니다. 현재 트랜잭션 이메일은 전환 이벤트 추적을 지원하지 않습니다.
 
-![작성, 전달 및 확인 워크플로우를 통해 거래 이메일 캠페인을 생성합니다.][2]{: style="max-width:80%;"}
+![Compose, Delivery, and Confirm workflow to create a Transactional Email campaign.]({% image_buster /assets/img/transactional_campaign_compose.png %}){: style="max-width:80%;"}
 
 거래 이메일 캠페인을 구성하려면 다음 단계를 따르세요:
 
@@ -73,5 +73,3 @@ Braze 트랜잭션 이메일은 일부 Braze 패키지의 일부로만 사용할
 따라서 트랜잭션 이메일 캠페인의 어떤 필드에도 `Connected Content` 또는 `Promotion Code` 태그를 포함하는 것을 지원하지 않습니다.
 
 
-[1]: {% image_buster /assets/img/transactional_email_campaign.png %}
-[2]: {% image_buster /assets/img/transactional_campaign_compose.png %}

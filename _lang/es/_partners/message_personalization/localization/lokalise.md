@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Lokalise](https://lokalise.com) es un servicio de administración de traducciones para equipos ágiles.
 
+_Esta integración está mantenida por Lokalise._
+
+## Sobre la integración
+
 La integración de Braze y Lokalise aprovecha el Contenido conectado para permitirte insertar fácilmente contenido traducido en tus campañas Braze en función de la configuración de idioma del usuario.
 
 ## Requisitos previos
@@ -47,11 +51,11 @@ Por ejemplo, vamos a crear una clave de traducción sencilla, `description`:
 3. Añade "Web" en el desplegable **Plataformas**. 
 4. Cuando estés listo, haz clic en **Guardar**.
 
-![][1]{: style="max-width:60%"}
+![]({% image_buster /assets/img/lokalise/1_add_key.png %}){: style="max-width:60%"}
 
 Tu clave de traducción debería aparecer en el editor de proyectos:
 
-![][2]{: style="max-width:90%"}
+![]({% image_buster /assets/img/lokalise/2_translation_key_added.png %}){: style="max-width:90%"}
 
 #### Problemas conocidos
 
@@ -62,7 +66,7 @@ Tu clave de traducción debería aparecer en el editor de proyectos:
 
 Abre tu proyecto Lokalise y haz clic en **Aplicaciones**. Aquí, busca e instala la aplicación Braze. Verás la siguiente pantalla:
 
-![Configuración de Braze en Lokalise con el ID del proyecto y la URL de los archivos de traducción.][3]
+![Configuración de Braze en Lokalise con el ID del proyecto y la URL de los archivos de traducción.]({% image_buster /assets/img/lokalise/3_lokalise_braze_app.png %})
 
 En la **URL del Archivo de Traducción**, Lokalise publica un archivo JSON que contiene todas las traducciones de tus claves en el proyecto. Obtendrás tantas URL de archivos de traducción como idiomas de destino tengas en tu proyecto. Por eso las URL de los archivos de traducción resultantes tienen dos partes:
 
@@ -75,7 +79,7 @@ La URL del archivo de traducción es la URL que necesitarás al configurar una c
 
 Para probar esta URL, cópiala y sustituye {% raw %}`{{${language}}}`{% endraw %} por un código de idioma (por ejemplo, `en`) y abre esta URL en tu navegador. Verás un archivo JSON con tus claves y traducciones:
 
-![][4]
+![]({% image_buster /assets/img/lokalise/4_testing_json_lokalise.png %})
 
 ### Paso 4: Uso de traducciones en la campaña Braze
 
@@ -104,7 +108,7 @@ Ahora utiliza la variable traducciones para mostrar las traducciones deseadas po
 Por ejemplo, para mostrar la clave `description`, utiliza`{{ translations.description }}`.
 
 {% endraw %}
-![][6]
+![]({% image_buster /assets/img/lokalise/6_integration_usage_sample.png %})
 
 Por último, guarda la plantilla de correo electrónico y visualízala previamente. Deberías ver que se muestra tu traducción.
 
@@ -122,9 +126,4 @@ Sí, claro. Puedes consultar la documentación de Braze para saber cómo añadir
 **Después de actualizar el archivo de traducción en Lokalise, ¿por qué no puedo ver ningún cambio en el contenido traducido en Braze?**<br>
 Braze almacena en caché el contenido traducido, que puede tardar unos minutos en actualizarse. Si estás probando tus campañas y necesitas ver los resultados de las traducciones inmediatamente, puedes utilizar el parámetro `:cache_max_age` como se explica en este artículo de referencia.
 
-[1]: {% image_buster /assets/img/lokalise/1_add_key.png %}
-[2]: {% image_buster /assets/img/lokalise/2_translation_key_added.png %}
-[3]: {% image_buster /assets/img/lokalise/3_lokalise_braze_app.png %}
-[4]: {% image_buster /assets/img/lokalise/4_testing_json_lokalise.png %}
-[5]: {% image_buster /assets/img/lokalise/5_edit_email.png %}
-[6]: {% image_buster /assets/img/lokalise/6_integration_usage_sample.png %}
+

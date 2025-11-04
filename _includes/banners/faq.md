@@ -4,17 +4,17 @@
 
 ## When do Banner updates appear for users?
 
-Banners are automatically refreshed at the start of each new user session with their latest data&#8212;there's no need to resend or update your Banner campaign.
+Banners are refreshed with their latest data whenever you call the refresh method&#8212;there's no need to resend or update your Banner campaign.
 
 ## How many placements can I request in a session?
 
-In a single user session, you can request a maximum of 10 placements. For each one you request, Braze will return the highest-priority Banner a user is eligible for. Additional requests will return an error.
+In a single refresh request, you can request a maximum of 10 placements. For each one you request, Braze will return the highest-priority Banner a user is eligible for. Additional requests will return an error.
 
 For more information, see [Placement requests]({% if include.section == "user" %}{{site.baseurl}}/user_guide/message_building_by_channel/banners#requests{% elsif include.section == "developer" %}{{site.baseurl}}/developer_guide/banners#requests{% endif %}).
 
 ## How many Banner campaigns can be active simultaneously?
 
-Each workspace can support up to 100 active Banner campaigns. If this limit is reached, you'll need to [archive or deactivate]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/about_statuses/#changing-the-status) an existing campaign before creating a new one.
+Each workspace can support up to 200 active Banner campaigns. If this limit is reached, you'll need to [archive or deactivate]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/about_statuses/#changing-the-status) an existing campaign before creating a new one.
 
 ## For campaigns sharing a placement, which Banner is displayed first?
 
@@ -22,7 +22,7 @@ If a user qualifies for multiple Banner campaigns that share the same placement,
 
 ## Can I use Banners in my existing Content Card feed?
 
-Banners are different from Content Cards, meaning you can’t use Banners and Content Cards in the same feed. To replace existing Content Card feeds with Banners, you’ll need to [create placements in your app or website]({{site.baseurl}}/developer_guide/banners/creating_placements/).
+Banners are different from Content Cards, meaning you can’t use Banners and Content Cards in the same feed. To replace existing Content Card feeds with Banners, you’ll need to [create placements in your app or website]({{site.baseurl}}/developer_guide/banners/placements/).
 
 ## Can users manually dismiss a Banner?
 
@@ -44,7 +44,7 @@ The simpler the messaging in your Banner, the faster it will render. It’s best
 
 ## Are all Liquid tags supported?
 
-No. However, most Liquid tags are supported for Banner messages, except for `catalog_items` that are re-rendered using the [`:rerender` tag]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/using_catalogs/#using-liquid).
+No. However, most Liquid tags are supported for Banner messages, except for `catalog_items` that are re-rendered using the [`:rerender` tag]({{site.baseurl}}/user_guide/data/activation/catalogs/using_catalogs/#using-liquid).
 
 ## Can I capture click events?
 

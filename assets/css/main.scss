@@ -310,3 +310,10 @@ details {
     color: $text-color;
   }
 }
+
+/* Disable red highlighting for escape characters in code blocks */
+pre code span.se {
+  color: inherit !important;
+  background: none !important;
+  font-weight: normal !important;
+}

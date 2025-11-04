@@ -1,5 +1,5 @@
 ---
-nav_title: "Types of Push Notifications"
+nav_title: "Types of push notifications"
 article_title: Types of Push Notifications
 page_order: 1
 page_type: glossary
@@ -52,11 +52,6 @@ glossaries:
     tags:
       - iOS
       - Android
-  - name: "Silent Push Notification"
-    description: "A push notification that does not wake up the device when rendering on the device. Instead, the notification will be stored in the device's notification tray."
-    tags:
-      - iOS
-      - Android
   - name: "Provisional Push Notifications for iOS"
     description: "Introduced by Apple in iOS 12, provisional authorization automatically occurs on install for iOS apps, allowing brands to send silent notifications without displaying a push prompt to users. When the silent push is sent and viewed in the device's notification tray, users will be given the option to allow or discontinue push notifications."
     tags:
@@ -70,8 +65,8 @@ glossaries:
     tags:
       - iOS
       - Android
-  - name: "Background Push Notifications"
-    description: "Push notifications that are not rendered for the device. Usually used to send packets of information down to the app for background processes and uninstall tracking. A Background-enabled push token is required for background push to be sent."
+  - name: "Background or Silent Push Notifications"
+    description: "Push notifications that are not rendered on the device. Usually used to send packets of information down to the app for background processes and uninstall tracking. A background-enabled push token is required for a background or silent push to be sent."
     tags:
       - iOS
       - Android

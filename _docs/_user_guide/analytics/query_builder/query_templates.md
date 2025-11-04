@@ -1,5 +1,5 @@
 ---
-nav_title: Query Templates
+nav_title: Query templates
 article_title: Query Builder Templates
 page_order: 1
 page_type: reference

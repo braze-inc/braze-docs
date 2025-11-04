@@ -19,15 +19,15 @@ tool:
 
 ## カスタムイベントプロパティを確認する
 
-[カスタムイベントプロパティー][22] は、カスタムイベントs を記述するメタデータです。カスタムイベントがログに記録されるたびに、複数のプロパティーがログに記録されます。
+[カスタムイベントプロパティー]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties) は、カスタムイベントs を記述するメタデータです。カスタムイベントがログに記録されるたびに、複数のプロパティーがログに記録されます。
 
 ### イベントを検証する
 
 どのイベント・プロパティがトラッキングされているかを開発者に確認する。すべてのイベント・プロパティは大文字と小文字を区別することに留意してほしい。カスタム・イベントのトラッキングに関する追加情報については、プラットフォーム別に以下の記事を参照されたい：
 
-* [Android][51]
-* [iOS][23]
-* [Web][52]
+* [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/)
+* [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_custom_events/)
+* [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_custom_events/)
 
 ### ログを確認する
 
@@ -43,14 +43,9 @@ tool:
 
 1. アプリ内でカスタムイベントを実行する。
 2. データがフラッシュされるまで約10秒待ちます。
-3. [イベントユーザーログ][24]を更新して、渡されたカスタムイベントとイベントプロパティの値を表示します。
+3. [イベントユーザーログ]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab)を更新して、渡されたカスタムイベントとイベントプロパティの値を表示します。
 
 それでもサポートが必要な場合は、[サポートチケットを]({{site.baseurl}}/braze_support/)を登録してください。
 
 _最終更新日：2023年4月10日_
 
-[22]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties
-[23]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_custom_events/
-[24]: {{site.baseurl}}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab
-[51]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/ 
-[52]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_custom_events/

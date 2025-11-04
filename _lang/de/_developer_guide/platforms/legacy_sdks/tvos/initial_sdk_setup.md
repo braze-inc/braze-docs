@@ -33,8 +33,8 @@ Führen Sie als Erstes folgenden Befehl aus:
 $ sudo gem install cocoapods
 ```
 
-- Wenn Sie aufgefordert werden, die ausführbare Datei `rake` zu überschreiben, finden Sie weitere Informationen unter [Erste SchritteCocoaPods](http://guides.cocoapods.org/using/getting-started.html "Installationsanleitung") auf CocoaPods.org.
-- Wenn Sie Probleme mit CocoaPods haben, lesen Sie bitte die [CocoaPods-FehlerbehebungCocoaPods](http://guides.cocoapods.org/using/troubleshooting.html "Troubleshooting Guide").
+- Wenn Sie aufgefordert werden, die ausführbare Datei `rake` zu überschreiben, finden Sie weitere Informationen unter [Erste Schritte](http://guides.cocoapods.org/using/getting-started.html) auf CocoaPods.org.
+- Wenn Sie Probleme mit CocoaPods haben, lesen Sie bitte die [Anleitung zur Fehlerbehebung für CocoaPods](http://guides.cocoapods.org/using/troubleshooting.html).
 
 ### Schritt 2: Erstellen der Poddatei
 
@@ -193,5 +193,5 @@ Wenn Sie `startWithApiKey:` in Ihrem `didFinishLaunchingWithOptions:` Delegaten 
 Sie können unser tvOS SDK auch manuell integrieren - holen Sie sich einfach das Framework aus unserem [Public Repository](https://github.com/appboy/appboy-ios-sdk) und initialisieren Sie Braze wie in den vorangegangenen Abschnitten beschrieben.
 
 ## Nutzeridentifizierung und Analytics-Berichte
-In unserer [iOS-Dokumentation]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=swift) finden Sie Informationen zum Einstellen von Benutzer-IDs, zum Protokollieren angepasster Events und zum Einstellen von Attributen für Nutzer:innen. Wir empfehlen Ihnen auch, sich mit unseren [Namenskonventionen für Events]({{site.baseurl}}/user_guide/data/custom_data/event_naming_conventions/) vertraut zu machen.
+In unserer [iOS Dokumentation]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=swift) finden Sie Informationen zum Einstellen von Benutzer-IDs, zum Protokollieren angepasster Events und zum Einstellen von Nutzer:innen-Attributen. Wir empfehlen Ihnen auch, sich mit unseren [Namenskonventionen für Events]({{site.baseurl}}/user_guide/data/custom_data/event_naming_conventions/) vertraut zu machen.
 

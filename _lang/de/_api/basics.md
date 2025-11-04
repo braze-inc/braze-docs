@@ -34,7 +34,7 @@ Im Folgenden finden Sie eine Übersicht der Begriffe, die in der Dokumentation d
 
 ### Endpunkte
 
-Braze verwaltet eine Reihe von verschiedenen Instanzen für unser Dashboard und die REST-Endpunkte. Wenn Ihr Konto eingerichtet ist, melden Sie sich unter einer der folgenden URLs an. Verwenden Sie den richtigen REST-Endpunkt, je nachdem, für welche Instanz Sie bereitgestellt werden. Wenn Sie sich nicht sicher sind, öffnen Sie ein [Support-Ticket][Support] oder verwenden Sie die folgende Tabelle, um die URL des von Ihnen verwendeten Dashboards mit dem richtigen REST-Endpunkt abzugleichen.
+Braze verwaltet eine Reihe von verschiedenen Instanzen für unser Dashboard und die REST-Endpunkte. Wenn Ihr Konto eingerichtet ist, melden Sie sich unter einer der folgenden URLs an. Verwenden Sie den richtigen REST-Endpunkt, je nachdem, für welche Instanz Sie bereitgestellt werden. Wenn Sie sich nicht sicher sind, öffnen Sie ein [Support-Ticket]({{site.baseurl}}/braze_support/) oder verwenden Sie die folgende Tabelle, um die URL des Dashboards, das Sie verwenden, dem richtigen REST-Endpunkt zuzuordnen.
 
 {% alert important %}
 Wenn Sie Endpunkte für API-Aufrufe verwenden, benutzen Sie den REST Endpunkt.
@@ -53,7 +53,7 @@ Für die meisten APIs hat Braze ein Standard Rate-Limit von 250.000 Anfragen pro
 - **Externe Nutzer:innen ID**: Die `external_id` dient als eindeutiger Bezeichner des Nutzers:in, für den Sie Daten übermitteln. Dieser Bezeichner sollte mit dem übereinstimmen, den Sie im Braze SDK festgelegt haben, um zu vermeiden, dass mehrere Profile für denselben Nutzer:in erstellt werden.
 - **Braze ID**: `braze_id` dient als eindeutiger Bezeichner für Nutzer:innen, der von Braze festgelegt wird. Dieser Bezeichner kann zusätzlich zu external_ids verwendet werden, um Nutzer:innen über die REST API zu löschen.
 
-Weitere Informationen finden Sie in den folgenden Artikeln zu Ihrer Plattform: [iOS][9], [Android][10] und [Internet][13].
+Weitere Informationen finden Sie in den folgenden Artikeln zu Ihrer Plattform: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/) und [Internet]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/).
 
 ## Über REST API-Schlüssel
 
@@ -63,7 +63,7 @@ Workspaces und API-Schlüssel gehen bei Braze Hand in Hand. Workspaces sind so k
 
 Wir referenzieren sowohl den REST-API-Schlüssel als auch den Workspace-API-Schlüssel als `api_key`. Die `api_key` ist in jeder Anfrage als Anfrage-Header enthalten und dient als Authentifizierungsschlüssel, der Ihnen die Nutzung unserer REST APIs erlaubt. Diese REST APIs dienen dem Tracking von Nutzer:innen, dem Versand von Nachrichten, dem Export von Nutzerdaten und vielem mehr. Wenn Sie einen neuen REST API-Schlüssel erstellen, müssen Sie ihm Zugriff auf bestimmte Endpunkte geben. Indem Sie einem API-Schlüssel bestimmte Berechtigungen zuweisen, können Sie genau festlegen, welche Aufrufe ein API-Schlüssel authentifizieren kann.
 
-![REST API-Schlüssel Panel auf dem Tab API-Schlüssel.][27]
+![REST API-Schlüssel Panel auf dem Tab API-Schlüssel.]({% image_buster /assets/img_archive/rest-api-key.png %})
 
 {% alert tip %}
 Neben den REST-API-Schlüsseln gibt es auch eine Art von Bezeichner-Schlüsseln, die dazu dienen, bestimmte Dinge wie Apps, Templates, Canvase, Kampagnen, Content Cards und Segmente aus der API zu referenzieren. Weitere Informationen finden Sie unter [API-Kennungstypen]({{site.baseurl}}/api/identifier_types/).
@@ -195,18 +195,6 @@ API-Schlüssel-Berechtigungen sind Berechtigungen, die Sie einem Nutzer:innen od
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% endtab %}
-{% tab News Feed %}
-
-{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
-
-| Erlaubnis | Endpunkt | Beschreibung |
-|---|---|---|
-| `feed.list` | [`/feed/list`]({{site.baseurl}}/api/endpoints/export/news_feed/get_news_feed_cards/) | Abfragen einer Liste von Newsfeed-Cards. |
-| `feed.data_series` | [`/feed/data_series`]({{site.baseurl}}/api/endpoints/export/news_feed/get_news_feed_card_analytics/) | Abfragen von Newsfeed-Analytics über einen bestimmten Zeitraum. |
-| `feed.details` | [`/feed/details`]({{site.baseurl}}/api/endpoints/export/news_feed/get_news_feed_card_details/) | Abfragen von Details zu einem bestimmten Newsfeed. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
-
-{% endtab %}
 {% tab Sitzungen %}
 
 | Erlaubnis | Endpunkt | Beschreibung |
@@ -306,6 +294,17 @@ API-Schlüssel-Berechtigungen sind Berechtigungen, die Sie einem Nutzer:innen od
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% endtab %}
+{% tab SDK-Authentifizierung %}
+
+| Erlaubnis | Endpunkt | Beschreibung |
+|---|---|---|
+| `sdk_authentication.create` | [`/app_group/sdk_authentication/create`]({{site.baseurl}}/api/endpoints/sdk_authentication/post_create_sdk_authentication_key) | Erstellen Sie einen neuen SDK-Authentifizierungsschlüssel für Ihre App. |
+| `sdk_authentication.primary` | [`/app_group/sdk_authentication/primary`]({{site.baseurl}}/api/endpoints/sdk_authentication/put_primary_sdk_authentication_key/) | Markieren Sie einen SDK-Authentifizierungsschlüssel als Primärschlüssel für Ihre App. |
+| `sdk_authentication.delete` | [`/app_group/sdk_authentication/delete`]({{site.baseurl}}/api/endpoints/sdk_authentication/delete_sdk_authentication_key) | Löschen Sie einen SDK-Authentifizierungsschlüssel für Ihre App. |
+| `sdk_authentication.keys` | [`/app_group/sdk_authentication/keys`]({{site.baseurl}}/api/endpoints/sdk_authentication/get_sdk_authentication_keys) | Erhalten Sie alle SDK Authentifizierungsschlüssel für Ihre App. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
+{% endtab %}
 {% endtabs %}
 
 ### REST API-Schlüssel verwalten
@@ -325,11 +324,11 @@ Der Tab **API-Schlüssel** enthält die folgenden Informationen für jeden Schl�
 
 Um die Details eines API-Schlüssels anzuzeigen, bewegen Sie den Mauszeiger über den Schlüssel und wählen Sie <i class="fa-solid fa-eye" alt="View"></i> **Ansicht**. Dazu gehören alle Berechtigungen, die dieser Schlüssel hat, IPs auf der Whitelist (falls vorhanden) und ob dieser Schlüssel in die IP-Whitelist von Braze aufgenommen wurde.
 
-![Die Liste der API-Schlüssel-Berechtigungen im Braze-Dashboard.][30]
+![Die Liste der API-Schlüssel-Berechtigungen im Braze-Dashboard.]({% image_buster /assets/img_archive/view-api-key.png %})
 
 Beachten Sie, dass beim [Löschen von Nutzer:innen]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/adding_users_to_your_dashboard/) die zugehörigen API-Schlüssel, die von den Nutzer:innen erstellt wurden, nicht gelöscht werden. Um eine Taste zu löschen, bewegen Sie den Mauszeiger über die Taste und wählen Sie <i class="fa-solid fa-trash-can" alt="Delete"></i> **Löschen**.
 
-![Ein API-Schlüssel mit dem Namen 'Last Seen', wobei das Papierkorbsymbol hervorgehoben ist und 'Löschen' anzeigt.][29]{: style="max-width:30%;"}
+![Ein API-Schlüssel mit dem Namen "Zuletzt gesehen", wobei das Papierkorbsymbol hervorgehoben ist und "Löschen" anzeigt.]({% image_buster /assets/img_archive/api-key-options.png %}){: style="max-width:30%;"}
 
 ### REST API-Schlüssel Sicherheit
 
@@ -343,13 +342,13 @@ Eine gute Sicherheitspraxis besteht darin, einem Nutzer:innen nur so viel Zugrif
 Da REST API-Schlüssel den Zugang zu potenziell sensiblen REST API-Endpunkten erlauben, sollten Sie sicherstellen, dass sie sicher gespeichert und verwendet werden. Verwenden Sie diesen Schlüssel beispielsweise nicht, um AJAX-Aufrufe von Ihrer Website aus zu tätigen oder ihn auf andere Weise öffentlich zugänglich zu machen.
 {% endalert %}
 
-Wenn ein Schlüssel versehentlich freigelegt wurde, kann er aus der Entwickler:in gelöscht werden. Wenn Sie Hilfe bei diesem Vorgang benötigen, öffnen Sie ein [support ticket][support].
+Wenn ein Schlüssel versehentlich freigelegt wurde, kann er aus der Entwickler:in gelöscht werden. Wenn Sie Hilfe bei diesem Vorgang benötigen, öffnen Sie ein [Support-Ticket]({{site.baseurl}}/braze_support/).
 
 ### API IP allowlisting
 
 Für zusätzliche Sicherheit können Sie eine Liste von IP-Adressen und Subnetzen angeben, die für einen bestimmten REST-API-Schlüssel Anfragen an die REST API zulassen. Dies wird als Allowlisting oder Whitelisting bezeichnet. Um bestimmte IP-Adressen oder Subnetze zuzulassen, fügen Sie sie bei der Erstellung eines neuen REST-API-Schlüssels dem Abschnitt **Whitelist IPs** hinzu:
 
-![Option, um IPs bei der Erstellung eines API-Schlüssels aufzulisten.][26]
+![Option, um IPs bei der Erstellung eines API-Schlüssels aufzulisten.]({% image_buster /assets/img_archive/api-key-ip-whitelisting.png %})
 
 Wenn Sie nichts angeben, können Anfragen von jeder IP-Adresse gesendet werden.
 
@@ -369,18 +368,3 @@ Die Ruby Client Bibliothek unterstützt die [Nutzer:innen Endpunkte]({{site.base
 Diese Client Bibliothek befindet sich derzeit in der Beta-Phase. Möchten Sie uns helfen, diese Bibliothek zu verbessern? Senden Sie uns Ihr Feedback an [smb-product@braze.com](mailto:smb-product@braze.com).
 {% endalert %}
 
-[1]: https://en.wikipedia.org/wiki/UTF-8
-[7]: {{site.baseurl}}/api/objects_filters/connected_audience/
-[9]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/
-[10]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/
-[13]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/
-[2]: {{site.baseurl}}/api/identifier_types/
-[5]: {{site.baseurl}}/api/basics/
-[6]: https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#intro
-[25]: {% image_buster /assets/img_archive/api-key-permissions.png %}
-[26]: {% image_buster /assets/img_archive/api-key-ip-whitelisting.png %}
-[Unterstützung]: {{site.baseurl}}/braze_support/
-[28]: {% image_buster /assets/img_archive/create-new-key.png %}
-[29]: {% image_buster /assets/img_archive/api-key-options.png %}
-[27]: {% image_buster /assets/img_archive/rest-api-key.png %}
-[30]: {% image_buster /assets/img_archive/view-api-key.png %}

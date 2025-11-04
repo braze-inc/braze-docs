@@ -1,5 +1,5 @@
 ---
-nav_title: Common Push Error Messages
+nav_title: Common push error messages
 article_title: Common Push Error Messages
 page_order: 22
 page_type: reference

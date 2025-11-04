@@ -1,5 +1,5 @@
 ---
-nav_title: Low Campaign or Canvas Conversions
+nav_title: Low campaign or Canvas conversions
 article_title: Low Campaign or Canvas Conversions
 page_order: 4
 

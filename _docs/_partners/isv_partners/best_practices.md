@@ -105,7 +105,7 @@ This functionality is currently in early access.
 - Similar to the user track endpoint, data can be synced to user profiles through Cloud Data Ingestion. When using this tool, attributes, events, and purchases are logged to profiles by setting up and connecting the data warehouse table or view you would like to sync to the desired Braze workspace.
 
 [Data points]({{site.baseurl}}/user_guide/data/data_points/)
-- Braze has a data point consumption model where data points are incurred per “write” to the user profile regardless of whether the value has changed. For this reason, we recommend that only those attributes that have changed are sent to Braze. 
+- Braze has a data point model where data points are logged per “write” to the user profile regardless of whether the value has changed. For this reason, we recommend that only those attributes that have changed are sent to Braze. 
 
 ## Sending audiences of users to Braze
 
@@ -118,7 +118,7 @@ This functionality is currently in early access.
 - When using this endpoint, ensure that you are including the `partner` key as shown in our [Partner documentation]({{site.baseurl}}/partners/isv_partners/api_partner).
 
 [Data points]({{site.baseurl}}/user_guide/data/data_points/)<br>
-- Braze has a data point consumption model where data points are incurred per “write” to the user profile regardless of if the value has changed.
+- Braze has a data point model where data points are logged per “write” to the user profile regardless of if the value has changed.
 - Data points are incurred by both cohort import and the user track endpoints.
 
 ## Engagement analytics streaming to partner
@@ -176,7 +176,7 @@ Connected Contents' versatility makes this a feature used by many of our custome
 - Localization and translation
 
 Things to be aware of:
-- Braze does not charge for API calls and will not count toward your data point allotment.
+- Braze does not charge for API calls and will not count toward your data point usage.
 - There is a limit of 1 MB for Connected Content responses.
 - Connected Content calls will happen when the message is sent, except for in-app messages, which will make this call when the message is viewed.
 - Connected Content calls do not follow redirects.Braze requires that server response time is less than 2 seconds for performance reasons; if the server takes longer than 2 seconds to respond, the content will not be inserted.

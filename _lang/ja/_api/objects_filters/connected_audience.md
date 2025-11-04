@@ -160,4 +160,4 @@ description: "この記事では、接続オーディエンスオブジェクト
 
 ### 考慮事項
 
-Connectedオーディエンスは、デフォルト属性、カスタムイベント、セグメント、またはメッセージエンゲージメントイベントによってユーザーをフィルターすることはできない。これらのフィルターを使用するには、それらをオーディエンスセグメントに組み込み、そのセグメントを [`segment_id`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages#request-parameters).
+接続オーディエンスは、デフォルト属性、カスタムイベント、セグメント、またはメッセージエンゲージメントイベントによってユーザーをフィルターすることはできません。これらのフィルターを使用するには、それらをオーディエンスセグメントに組み込み、そのセグメントを [`segment_id`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages#request-parameters) に指定することをお勧めします。

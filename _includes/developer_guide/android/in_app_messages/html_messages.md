@@ -2,7 +2,7 @@
 
 ## About HTML messages
 
-With the Braze JavaScript interface, you can leverage Braze inside the custom WebViews within your app. The interface's [`ScriptMessageHandler`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/webviewbridge/scriptmessagehandler) is responsible for:
+With the Braze JavaScript interface, you can leverage Braze inside the custom WebViews within your app. The [`InAppMessageJavascriptInterface`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.jsinterface/-in-app-message-javascript-interface/index.html) is responsible for:
 
 1. Injecting the Braze JavaScript bridge into your WebView, as outlined in [User Guide: HTML in-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#custom-html-messages).
 2. Passing the bridge methods received from your WebView to the [Braze Android SDK](https://github.com/braze-inc/braze-android-sdk).
@@ -53,3 +53,19 @@ The following is an example of an embedded YouTube video in an HTML snippet:
     </div>
 </body>
 ```
+
+## Using deep links
+
+When using deep links or external links in Android HTML in-app messages, **do not** call `brazeBridge.closeMessage()` in your JavaScript. The SDK's internal logic automatically closes the in-app message when it redirects to a link. Calling `brazeBridge.closeMessage()` interferes with this process and may cause the message to become unresponsive when users return to your app. 
+
+The following is an example of a deep link in a code snippet:
+
+{% raw %}
+```javascript
+<script>
+document.querySelectorAll('[data-button-id]').forEach(function (node)
+Unknown macro: { node.addEventListener('click', function () { brazeBridge.logClick(node.dataset.buttonId); brazeBridge.closeMessage(); }); }
+);
+</script>
+```
+{% endraw %}

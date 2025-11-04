@@ -21,7 +21,7 @@ Os canvas são robustos e complexos e sabemos que você dedica tempo e cuidado a
 
 As [configurações de entrada]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2-set-up-your-canvas) são importantes para entender como as telas estão sendo enviadas. Verifique se você limitou o número de pessoas que potencialmente entrarão no Canva.
 
-Os usuários também podem sair de um Canva se não forem mais elegíveis para receber mensagens. Por exemplo, se o Canvas contiver apenas notificações por push e um usuário optar pela aceitação do push após receber a primeira etapa do canva, esse usuário sairá do Canvas. Considere o uso de [diferentes etapas do Canva]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components) para adicionar jornadas de usuário alternativas.
+Os usuários também podem sair de um Canva se não forem mais elegíveis para receber mensagens. Por exemplo, se o Canvas contiver apenas notificações por push e um usuário optar pela aceitação do push após receber a primeira etapa do canva, esse usuário sairá do Canvas. Considere o uso de [diferentes etapas do Canva]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/) para adicionar jornadas de usuário alternativas.
 
 ## Segmentação de seu público
 

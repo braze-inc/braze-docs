@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: Export Canvas Data Series Analytics"
+nav_title: "GET: Export Canvas data series analytics"
 article_title: "GET: Export Canvas Data Series Analytics"
 search_tag: Endpoint
 page_order: 4

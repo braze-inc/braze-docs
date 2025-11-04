@@ -1,5 +1,5 @@
 ---
-nav_title: Testing Campaigns
+nav_title: Testing campaigns
 article_title: Testing Campaigns
 layout: dev_guide
 guide_top_header: "Testing Campaigns"
