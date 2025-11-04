@@ -7,7 +7,7 @@ on:
     types: [opened, reopened, synchronize, edited]
 
 permissions:
-  contents: write  # Changed from 'read' to 'write' to allow commits
+  contents: write
   pull-requests: write
   issues: write
 
