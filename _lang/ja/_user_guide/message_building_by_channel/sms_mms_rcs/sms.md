@@ -10,7 +10,7 @@ channel:
 search_rank: 2
 ---
 
-# [\![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/messaging-channels-sms){: style="float:right;width:120px;border:0;" class="noimgborder"}SMSについて
+# [![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/messaging-channels-sms){: style="float:right;width:120px;border:0;" class="noimgborder"}SMSについて
 
 > \![この記事では、SMSの統合を支援し、顧客 s.と効果的かつ戦略的に通信できることを知るために、いくつかの一般的なユースケースを共有しています。["Brazeへようこそ!]弊社の製品をご利用いただきありがとうございます。開始するには、ドキュメントを参照してください。https://www.braze.com/docs/ ヘルプのためのテキストヘルプと停止するための停止。"]({% image_buster /assets/img/sms/sms_about.png %}){: style="float:right;max-width:30%;margin-left:15px;margin-top:10px;border: 0;"}
 
