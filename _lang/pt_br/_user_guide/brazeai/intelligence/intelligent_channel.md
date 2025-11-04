@@ -6,7 +6,7 @@ description: "Este artigo aborda o filtro O canal inteligente, um filtro que sel
 search_rank: 11
 ---
 
-# [\![Curso Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/most-engaged-channel){: style="float:right;width:120px;border:0;" class="noimgborder"} Filtro de canal inteligente
+# [![Curso Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/most-engaged-channel){: style="float:right;width:120px;border:0;" class="noimgborder"} Filtro de canal inteligente
 
 > O filtro `Intelligent Channel` (anteriormente `Most Engaged`) seleciona a parte do seu público para a qual o canal de mensagens selecionado é o "melhor" canal. 
 

@@ -8,7 +8,7 @@ tool: Currents
 search_rank: 8
 ---
 
-# [\![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/currents-the-basics-2/){: style="float:right;width:120px;border:0;" class="noimgborder"}Currentsの設定
+# [![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/currents-the-basics-2/){: style="float:right;width:120px;border:0;" class="noimgborder"}Currentsの設定
 
 > このページでは、Braze Currents の連携と設定を行う一般的なプロセスを概説します。
 

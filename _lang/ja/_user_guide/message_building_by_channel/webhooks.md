@@ -29,7 +29,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/check-square-broken.svg
 ---
 
-## [\![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/understanding-webhooks){: style="float:right;width:120px;border:0;" class="noimgborder"} ユースケース
+## [![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/understanding-webhooks){: style="float:right;width:120px;border:0;" class="noimgborder"} ユースケース
 
 Webhook は、複数のシステムを接続するための優れた方法です。結局、Webhook はアプリの通信方法です。ウェブフックが特に役立つ一般的なシナリオをいくつか紹介しよう：
 

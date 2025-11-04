@@ -10,7 +10,7 @@ channel:
 search_rank: 2
 ---
 
-# [\![Curso de Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/messaging-channels-sms){: style="float:right;width:120px;border:0;" class="noimgborder"} Acerca de los SMS
+# [![Curso de Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/messaging-channels-sms){: style="float:right;width:120px;border:0;" class="noimgborder"} Acerca de los SMS
 
 > ¡En este artículo se comparten algunos casos de uso comunes, requisitos y términos que debes conocer y que te ayudarán en tu integración de SMS y te permitirán comunicarte de forma eficaz y estratégica con tus clientes.\![Mensaje SMS con el texto "¡Bienvenido a Braze! Estamos encantados de tenerte a bordo. Consulta nuestra documentación para empezar. https://www.braze.com/docs/ Escribe AYUDA para obtener ayuda y STOP para detenerte".]({% image_buster /assets/img/sms/sms_about.png %}){: style="float:right;max-width:30%;margin-left:15px;margin-top:10px;border: 0;"}
 
