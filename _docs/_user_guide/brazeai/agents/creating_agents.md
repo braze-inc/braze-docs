@@ -90,7 +90,7 @@ Here are some general best practices to get you started with prompting:
 7. Encourage reasoning ("Think aloud, then answer").
 8. Pilot, inspect, and iterate. Small tweaks can lead to big quality gains.
 9. Handle the edge cases, add guardrails, and add refusal instructions.
-10. Measure and document what works internally for re-use and scaling.
+10. Measure and document what works internally for reuse and scaling.
 
 For more details on prompting best practices, refer to guides from the following model providers:
 
