@@ -1,4 +1,4 @@
-{% multi_lang_include developer_guide/prerequisites/swift.md %} Você também precisará [configurar notificações por push]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift) para o Swift SDK. Observe que só é possível enviar notificações por push para usuários do iOS e iPadOS que estejam usando [o Safari v16.4](https://developer.apple.com/documentation/safari-release-notes/safari-16_4-release-notes) ou posterior.
+{% multi_lang_include developer_guide/prerequisites/web.md %} Você também precisará [configurar notificações por push]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=web) para o Web SDK. Note que só é possível enviar notificações por push para usuários do iOS e iPadOS que estejam usando [o Safari v16.4](https://developer.apple.com/documentation/safari-release-notes/safari-16_4-release-notes) ou posterior.
 
 ## Configuração do Safari push para celular
 
@@ -46,7 +46,7 @@ Todos os navegadores populares (como Safari, Chrome, FireFox e Edge) suportam no
 Após o app ter sido adicionado à sua tela inicial, agora é possível solicitar permissão de push quando o usuário realizar uma ação (como clicar em um botão). Isso pode ser feito usando o método [`requestPushPermission`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestpushpermission) ou com uma [mensagem no app sem código push primer]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/).
 
 {% alert note %}
-Depois de aceitar ou recusar o aviso, você precisa excluir e reinstalar o site na tela inicial para poder mostrar o aviso novamente.
+Depois de aceitar ou recusar o aviso, você precisa excluir e reinstalar o site na sua tela inicial para poder mostrar o aviso novamente.
 {% endalert %}
 
 ![Um prompt push pedindo para "permitir" ou "não permitir" notificações]({% image_buster /assets/img/push_implementation_guide/safari-mobile-push-prompt.png %}){: style="max-width:40%"}
