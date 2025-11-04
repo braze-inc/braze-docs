@@ -22,9 +22,9 @@ guide_featured_list:
   - name: Filter für die Segmentierung
     link: /docs/user_guide/engagement_tools/segments/segmentation_filters/
     image: /assets/img/braze_icons/flag-02.svg
-  - name: Segmente Funnels
-    link: /docs/user_guide/engagement_tools/segments/segment_funnels/
-    image: /assets/img/braze_icons/users-right.svg
+  - name: Segmentdaten
+    link: /docs/viewing_and_understanding_segment_data/
+    image: /assets/img/braze_icons/pie-chart-01.svg
 
 guide_menu_title: "More articles"
 guide_menu_list:
@@ -91,5 +91,5 @@ Sie können Ihre Segmente weiter verfeinern, indem Sie [Segmenterweiterungen]({{
 - **Events und Nachrichten-Interaktionen:** Segmentieren Sie die Nutzer danach, ob sie in den letzten dreißig Tagen einen Kauf getätigt haben und außerdem mit einer bestimmten In-App-Nachricht interagiert haben.
 - **Daten abfragen:** 
   - **Snowflake abfragen:** Segmentieren Sie Nutzer:innen mit kombinierten Daten aus Braze und externen Quellen, wie z. B. einem CRM oder einem Data Warehouse, indem Sie [SQL-Segmenterweiterungen]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/) zur Abfrage von Snowflake verwenden.
-  - **Synchronisierung aus dem Data Warehouse:** Segmentieren Sie Nutzer:innen mit Daten, die direkt aus Ihrem Data Warehouse oder Dateispeichersystem mit Braze synchronisiert wurden, indem Sie [CDI Segmente]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/) verwenden.
+  - **Synchronisierung aus dem Data Warehouse:** Segmentieren Sie Nutzer:innen mit Daten, die direkt aus Ihrem Data Warehouse oder Dateispeichersystem mit Braze synchronisiert wurden, indem Sie [CDI Segment-Erweiterungen]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/) verwenden.
 
