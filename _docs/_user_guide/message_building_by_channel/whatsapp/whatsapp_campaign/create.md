@@ -198,6 +198,10 @@ The following features are supported for outbound WhatsApp messages you send thr
 | Audio | Audio is only supported through response messaging. Files must be hosted through URL. | < 16 MB | `.aac`, `.amr`, `.mp3`, `.mp4`, `.ogg` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
+{% alert important %}
+Meta has a known issue that can prevent some MP4 videos from playing on Android devices due to specific encoding or container settings. Until a permanent fix is available, reformatting the MP4 file resolves the issue for most senders. Test all videos on Android devices to confirm correct deliverability. <br><br>You can reformat the MP4 file by MP4 using a web tool, such as [cloudconvert](https://cloudconvert.com/mp4-converter). Upload your MP4 file into the tool, convert it to MP4 again, and then download the converted file.
+{% endalert %}
+
 ### Inbound messages
 
 The following features are supported for inbound WhatsApp messages you receive through Braze:
