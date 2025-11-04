@@ -2,11 +2,7 @@
 
 ## Atributos predeterminados del usuario
 
-Para configurar los atributos de usuario recogidos automáticamente por Braze, puedes utilizar los métodos de configuración que vienen con el SDK.
-
-```dart
-braze.setFirstName('Name');
-```
+### Atributos admitidos
 
 Se admiten los siguientes atributos:
 
@@ -23,6 +19,14 @@ Se admiten los siguientes atributos:
 {% alert important %}
 Todos los valores de cadena como nombre, apellidos, país y ciudad de residencia están limitados a 255 caracteres.
 {% endalert %}
+
+### Configuración de atributos predeterminados 
+
+Para configurar los atributos de usuario recogidos automáticamente por Braze, puedes utilizar los métodos de configuración incluidos en el SDK.
+
+```dart
+braze.setFirstName('Name');
+```
 
 ## Atributos personalizados del usuario
 
@@ -89,7 +93,9 @@ braze.removeFromCustomAttributeArray("key", "attribute");
 Los valores de atributos personalizados tienen una longitud máxima de 255 caracteres; los valores más largos se truncarán.
 {% endalert %}
 
-### Desactivar un atributo personalizado
+### Desactivar atributos personalizados
+
+Para desactivar un atributo personalizado, pasa la clave del atributo correspondiente al método `unsetCustomUserAttribute`.
 
 ```dart
 braze.unsetCustomUserAttribute('attribute_key');
