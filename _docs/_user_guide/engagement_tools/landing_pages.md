@@ -14,7 +14,7 @@ alias: /landing_pages/
 Use landing pages to grow your audience, capture user data, promote special offers, and support multichannel campaigns.
 
 {% alert note %}
-Landing page and custom domain availabilty depends on your Braze package. Reach out to your account manager or customer success manager to get started.
+Landing page and custom domain availability depends on your Braze package. Reach out to your account manager or customer success manager to get started.
 {% endalert %}
 
 {% multi_lang_include video.html id="eg4r7agod1" source="wistia" %}
