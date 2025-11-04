@@ -32,8 +32,6 @@ resources_list:
 popular_topic_list:
   - name: Know Before You Send
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/know_before_send/
-  - name: Migrating Push Token
-    link: /docs/help/help_articles/push/push_token_migration/
   - name: Logging Custom Event Properties
     link: /docs/help/help_articles/campaigns_and_canvas/using_custom_event_properties/
   - name: Dispatch ID

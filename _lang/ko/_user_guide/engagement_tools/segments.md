@@ -22,9 +22,9 @@ guide_featured_list:
   - name: 세분화 필터
     link: /docs/user_guide/engagement_tools/segments/segmentation_filters/
     image: /assets/img/braze_icons/flag-02.svg
-  - name: 세그먼트 퍼널
-    link: /docs/user_guide/engagement_tools/segments/segment_funnels/
-    image: /assets/img/braze_icons/users-right.svg
+  - name: 세그먼트 데이터
+    link: /docs/viewing_and_understanding_segment_data/
+    image: /assets/img/braze_icons/pie-chart-01.svg
 
 guide_menu_title: "More articles"
 guide_menu_list:

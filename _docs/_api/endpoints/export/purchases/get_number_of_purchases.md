@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: Export Number of Purchases"
+nav_title: "GET: Export number of purchases"
 article_title: "GET: Export Number of Purchases"
 search_tag: Endpoint
 page_order: 3

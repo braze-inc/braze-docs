@@ -26,7 +26,6 @@ WhatsApp 전화번호 마이그레이션에 대한 자세한 내용은 [임베�
 ## WhatsApp 휴대폰 번호 마이그레이션하기
 
 1. WhatsApp 관리자에서 내 휴대폰 번호와 연결된 WhatsApp 비즈니스 계정(WABA)을 선택한 다음 **계정 도구** > **휴대폰 번호로** 이동합니다.
-2. **2단계 인증 끄기를** 선택하고 다음 단계를 완료합니다.<br><br>![WhatsApp 비즈니스 관리자가 '전화번호' 페이지로 열립니다.][1]{: style="max-width:80%;"} <br><br> 전화번호를 다른 WhatsApp 비즈니스 그룹으로 마이그레이션하는 경우 메타의 임베디드 가입에 표시 이름이 일치해야 하는 경우 **전화번호** 페이지에서 기존 표시 이름을 메모해 두세요. 다음 단계에서 해당 이름을 입력합니다.<br><br>![전화번호 옆에 표시 이름이 'Braze'로 표시된 WhatsApp 비즈니스 매니저의 전화번호 페이지(]({% image_buster /assets/img/whatsapp/phone_numbers.png %}){: style="max-width:80%;"}<br><br>
+2. **2단계 인증 끄기를** 선택하고 다음 단계를 완료합니다.<br><br>![WhatsApp Business Manager opened to the "Phone numbers" page.]({% image_buster /assets/img/whatsapp/waba_manager.png %}){: style="max-width:80%;"} <br><br> 전화번호를 다른 WhatsApp 비즈니스 그룹으로 마이그레이션하는 경우 메타의 임베디드 가입에 표시 이름이 일치해야 하는 경우 **전화번호** 페이지에서 기존 표시 이름을 메모해 두세요. 다음 단계에서 해당 이름을 입력합니다.<br><br>![전화번호 옆에 표시 이름이 'Braze'로 표시된 WhatsApp 비즈니스 매니저의 전화번호 페이지(]({% image_buster /assets/img/whatsapp/phone_numbers.png %}){: style="max-width:80%;"}<br><br>
 3. 메타의 임베디드 가입 워크플로우를 완료할 때까지 계속 진행하세요. 
 
-[1]: {% image_buster /assets/img/whatsapp/waba_manager.png %}

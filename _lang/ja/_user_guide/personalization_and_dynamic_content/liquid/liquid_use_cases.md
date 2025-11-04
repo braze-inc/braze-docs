@@ -1,5 +1,5 @@
 ---
-nav_title: リキッド ユースケース ライブラリ
+nav_title: 流動ユースケース ライブラリー
 article_title: リキッド ユースケース ライブラリ
 page_order: 10
 search_rank: 2
@@ -60,7 +60,7 @@ Exactly three years ago today we met for the first time!
 ```
 {% endraw %}
 
-**説明:**ここでは、予約変数 `now` を使用して、[ISO 8601](http://en.wikipedia.org/wiki/ISO_8601 "ISO 8601 タイムコードの Wiki") 形式で現在の日付と時刻をテンプレート化します。フィルター `%B` (「5 月」などの月) および `%d` (「18」などの日) は、現在の月と日の形式を設定します。次に、`signup_date` の値に同じ日付と時間のフィルターを使い、条件タグとロジックを使って2つの値を比較できるようにする。
+**説明:**ここでは予約変数 `now` を使用して、[ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) 形式で現在の日付と時刻をテンプレート化します。フィルター `%B` (「5 月」などの月) および `%d` (「18」などの日) は、現在の月と日の形式を設定します。次に、`signup_date` の値に同じ日付と時間のフィルターを使い、条件タグとロジックを使って2つの値を比較できるようにする。
 
 そして、さらに 3 つの変数ステートメントを繰り返して、`signup_date` の `%B` と `%d` を取得し、`%Y` (「2021」などの年) も追加します。これにより、`signup_date` の日付と時刻が年号だけになる。日と月が分かると、そのユーザーの記念日が今日かどうかを確認することができ、年が分かると、何年経ったかが分かります。したがって、何周年を祝うかを知ることができます。
 
@@ -544,7 +544,7 @@ Hi, the offer is only valid today.
 
 - [一致するカスタム属性に基づいてメッセージをパーソナライズする](#attribute-matching)
 - [2つのカスタム属性を引いて、その差を金額で表示する](#attribute-monetary-difference)
-- [フルネームがfirst_nameフィールドに格納されている場合、ユーザーのファーストネームを参照する。](#attribute-first-name)
+- [ユーザーのフルネームがfirst_name フィールドに保存されている場合、そのユーザーの名を参照する。](#attribute-first-name)
 
 ### 一致するカスタム属性に基づいてメッセージをパーソナライズする {#attribute-matching}
 
@@ -579,7 +579,7 @@ You only have ${{ difference | round: 0 | number_with_delimiter }} left to raise
 ```
 {% endraw %}
 
-### ユーザーの姓名が first_name フィールドに格納されている場合、ユーザーの名を参照します。{#attribute-first-name}
+### ユーザーのフルネームがfirst_name フィールドに保存されている場合、そのユーザーの名を参照する。 {#attribute-first-name}
 
 このユースケースでは、ユーザーの名を取得し (姓と名の両方が単一のフィールドに格納されている場合)、ユーザーの名を使用してウェルカムメッセージを表示します。
 
@@ -1460,10 +1460,10 @@ Check out this new bar after work today. HH specials!
 
 {% api %}
 
-## Week/Day/Month
+## 週/日/月
 
 {% apitags %}
-Week/Day/Month
+週/日/月
 {% endapitags %}
 
 - [前月の名前をメッセージに入れる](#month-name)

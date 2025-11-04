@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: List Users' Subscription Group Status"
+nav_title: "GET: List users' subscription group status"
 article_title: "GET: List User's Subscription Group Status"
 search_tag: Endpoint
 page_order: 4

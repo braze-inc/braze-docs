@@ -12,6 +12,10 @@ search_tag: Partner
 
 > Kochava는 모바일 기여도 분석 및 다양한 분석을 제공하여 성장에 데이터를 활용할 수 있도록 지원합니다. Kochava Audience Platform은 앱 캠페인에 대한 계획을 비롯해 타겟팅, 활성화, 측정, 최적화가 가능합니다.
 
+_이 통합은 Kochava에서 유지 관리합니다._
+
+## 통합 정보
+
 Braze와 Kochava의 통합은 어떤 캠페인이 설치, 인앱 활동 등을 유도하는지 더 잘 파악하기 위해 기여도 데이터를 Braze로 전송하여 캠페인에 대한 보다 전체적인 이해를 높일 수 있도록 지원합니다.
 
 ## 전제 조건
@@ -60,15 +64,11 @@ let deviceId = await AppDelegate.braze?.deviceId()
 
 Braze에서 **파트너 통합** > **기술 파트너**로 이동하여 **Kochava**를 선택합니다. 
 
-{% alert note %}
-[이전 탐색]({{site.baseurl}}/navigation)을 사용하는 경우 **통합**에서 **기술 파트너**를 찾을 수 있습니다.
-{% endalert %}
-
-여기에서 REST 엔드포인트를 찾아 Braze 데이터 가져오기 키를 생성합니다. 키가 생성된 후에는 새 키를 생성하거나 기존 키를 무효화할 수 있습니다. 데이터 가져오기 키와 REST 엔드포인트는 Kochava의 대시보드에서 포스트백을 설정할 때 다음 단계에서 사용됩니다.<br><br>![이 이미지는 Kochava 기술 페이지에 있는 '설치 경로에 대한 데이터 가져오기' 상자를 보여줍니다. 이 상자에 데이터 가져오기 키와 REST 엔드포인트가 표시됩니다.][4]{: style="max-width:90%;"}
+여기에서 REST 엔드포인트를 찾아 Braze 데이터 가져오기 키를 생성합니다. 키가 생성된 후에는 새 키를 생성하거나 기존 키를 무효화할 수 있습니다. 데이터 가져오기 키와 REST 엔드포인트는 Kochava의 대시보드에서 포스트백을 설정할 때 다음 단계에서 사용됩니다.<br><br>![이 이미지는 Kochava 기술 페이지에 있는 '설치 경로에 대한 데이터 가져오기' 상자를 보여줍니다. 이 상자에는 데이터 가져오기 키와 REST 엔드포인트가 표시됩니다.]({% image_buster /assets/img/attribution/kochava.png %}){: style="max-width:90%;"}
 
 ### 3단계: Kochava에서 포스트백 설정
 
-Kochava 대시보드에서 [포스트백을 추가][18]합니다. Braze의 대시보드에서 찾은 데이터 가져오기 키와 REST 엔드포인트에 대한 프롬프트가 표시됩니다.
+Kochava 대시보드에서 [포스트백을 추가](https://support.kochava.com/campaign-management/create-a-kochava-certified-postback)합니다. Braze 대시보드에서 찾은 데이터 가져오기 키와 REST 엔드포인트를 입력하라는 메시지가 표시됩니다.
 
 ### 4단계: 통합 확인
 
@@ -117,7 +117,3 @@ idfv={{most_recently_used_device.${id}}}
 {% endalert %}
 
 
-[18]: https://support.kochava.com/campaign-management/create-a-kochava-certified-postback "Kochava 포스트백"
-[29]: https://support.kochava.com/sdk-integration/sdk-kochavatracker-android/class-tracker?scrollto=marker_3
-[30]: https://support.kochava.com/sdk-integration/windows-and-xbox-one-sdk-integration?scrollto=marker_8
-[4]: {% image_buster /assets/img/attribution/kochava.png %}

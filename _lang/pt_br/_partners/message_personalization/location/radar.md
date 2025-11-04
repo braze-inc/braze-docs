@@ -10,11 +10,15 @@ search_tag: Partner
 
 # Radar
 
-> [Radar](https://www.onradar.com/) é a principal plataforma de geofencing e monitoramento de localização. A plataforma Radar possui três produtos principais: [Geofences](https://radar.io/product/geofencing), [Trip Tracking](https://radar.io/product/trip-tracking) e [Geo APIs](https://radar.io/product/api). A combinação da plataforma da Braze de engajamento líder do setor com as capacidades de geofencing líderes do setor da Radar permite que você impulsione a receita e a fidelidade por meio de uma ampla gama de experiências de produtos e serviços baseados em local. Isso inclui rastreamento de coleta e entrega, notificações acionadas por local, personalização contextual, verificação de local, localizadores de lojas, preenchimento automático de endereço e mais.
+> [Radar](https://www.onradar.com/) é a principal plataforma de geofencing e monitoramento de localização. A plataforma Radar possui três produtos principais: [Geofences](https://radar.io/product/geofencing), [Trip Tracking](https://radar.io/product/trip-tracking) e [Geo APIs](https://radar.io/product/api).  Isso inclui rastreamento de coleta e entrega, notificações acionadas por local, personalização contextual, verificação de local, localizadores de lojas, preenchimento automático de endereço e mais.
+
+
+
+## Sobre a integração
 
 A integração entre a Braze e a Radar permite acessar gatilhos sofisticados de campanhas baseadas em local e enriquecimento de perfil de usuário com dados primários de local. Quando eventos de geofence ou rastreamento de viagem da Radar são gerados, eventos personalizados e atributos de usuário são enviados para a Braze em tempo real. Esses eventos e atributos podem então ser usados para disparar campanhas baseadas em local, impulsionar operações de coleta e entrega na última milha, monitorar a logística de frotas e remessas, ou construir segmentos de usuários com base em padrões de local. 
 
-Além disso, as APIs do Radar Geo podem ser aproveitadas para enriquecer ou personalizar suas campanhas de marketing através de [Conteúdo Conectado]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/). 
+Além disso, as APIs do Radar Geo podem ser aproveitadas para enriquecer ou personalizar suas campanhas de marketing através de [Conteúdo Conectado]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/). 
 
 ## Pré-requisitos
 
@@ -68,7 +72,7 @@ Por exemplo, mire em qualquer usuário que tenha visitado sua loja nos últimos 
 
 O exemplo a seguir mostra como executar uma promoção para atrair usuários próximos à loja com uma oferta digital. 
 
-![Uma imagem do Android de uma mensagem por push de conteúdo conectado que exibe "Novas promoções em uma loja Walmart ou Target perto de você".][1]{: style="float:right;max-width:30%;border:0;"}
+
 
 Para começar, você precisará ter sua chave de API publicável do Radar em mãos para usar nos URLs de suas solicitações.
 
@@ -179,4 +183,4 @@ near you!
 Visite a [documentação do Radar](https://radar.io/documentation/api) para todas as APIs do Radar que podem ser aproveitadas no Conteúdo Conectado.
 {% endalert %}
 
-[1]: {% image_buster /assets/img/radar_example.png %}
+

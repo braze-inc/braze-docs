@@ -1,6 +1,6 @@
 ---
 nav_title: Branch
-article: Branch
+article_title: Branch
 layout: redirect
 redirect_to: /docs/partners/branch_for_deeplinking/
 ---

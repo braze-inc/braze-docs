@@ -20,22 +20,17 @@ Pour identifier rapidement la cause, nous recommandons de vérifier le suivi des
 
 ## Suivi des événements
 
-Lorsqu'une campagne déclenche le démarrage d'une session ou un événement personnalisé, vous devez vous assurer que cet événement, ou cette session, se produit suffisamment souvent pour déclencher le message. Vérifiez ces données sur les pages [Aperçu][1] (pour les données de session) ou [Événements personnalisés][2]:
+Lorsqu'une campagne déclenche le démarrage d'une session ou un événement personnalisé, vous devez vous assurer que cet événement, ou cette session, se produit suffisamment souvent pour déclencher le message. Vérifiez ces données sur les pages [Aperçu]({{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/) (pour les données de session) ou [Événements personnalisés]({{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting):
 
-![La page Événements personnalisés avec les statistiques du nombre d’Événements personnalisés.][43]
+![La page des événements personnalisés avec les statistiques sur le nombre d'événements personnalisés.]({% image_buster /assets/img_archive/trouble5.png %})
 
 ## Échéances de conversion
 
-Pour chaque événement de conversion que vous sélectionnez par campagne, vous définissez le [délai][44]. Cela signifie que vous fixez un délai dans lequel une conversion doit avoir lieu pour qu'elle soit prise en compte dans chaque campagne.
+Pour chaque événement de conversion que vous sélectionnez par campagne, vous fixez la [date limite]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#step-2-add-conversion-events). Cela signifie que vous fixez un délai dans lequel une conversion doit avoir lieu pour qu'elle soit prise en compte dans chaque campagne.
 
-Vérifiez que vous avez pris connaissance des informations sur [le calcul des conversions][45] afin de comprendre les indicateurs de votre campagne. Pour les conversions d'utilisateurs dans Canvas, reportez-vous à la [FAQ Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/faqs/#how-are-user-conversions-tracked-in-a-canvas). 
+Vérifiez que vous avez pris connaissance des informations relatives au [calcul des conversions]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#conversion-tracking-rule) afin de comprendre les indicateurs de votre campagne. Pour les conversions d'utilisateurs dans Canvas, reportez-vous à la [FAQ Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/faqs/#how-are-user-conversions-tracked-in-a-canvas). 
 
 Vous avez toujours besoin d’aide ? Ouvrez un [ticket de support]({{site.baseurl}}/braze_support/).
 
 _Dernière mise à jour le 6 mai 2021_
 
-[1]: {{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/
-[2]: {{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting
-[43]: {% image_buster /assets/img_archive/trouble5.png %}
-[44]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#step-2-add-conversion-events
-[45]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#conversion-tracking-rule

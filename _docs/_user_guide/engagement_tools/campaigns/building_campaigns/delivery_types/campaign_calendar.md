@@ -1,5 +1,5 @@
 ---
-nav_title: Content Calendar
+nav_title: Content calendar
 article_title: Content Calendar
 page_order: 4
 tool: Campaigns

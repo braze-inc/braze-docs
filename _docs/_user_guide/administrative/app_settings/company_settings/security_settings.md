@@ -1,5 +1,5 @@
 ---
-nav_title: Security Settings
+nav_title: Security settings
 article_title: Security Settings
 page_order: 2
 toc_headers: h2
@@ -133,7 +133,7 @@ If a user can’t re-verify, they’ll be redirected to where they left off and 
 
 ![Elevated Access toggle.]({% image_buster /assets/img/elevated_access.png %})
 
-## Downloading a security event report
+## Downloading a security event report {#security-event-report}
 
 The Security Event report is a CSV report of security events such as account invitations, account removals, failed and successful login attempts, and other activities. You can use it to perform internal audits.
 
@@ -154,10 +154,12 @@ This report only contains the most recent 10,000 security events for your accoun
 - Two-Factor Auth Reset Completed
 - Cleared Developer 2FA
 - Added Additional Developer
+- Added Account
 - Developer Suspended
 - Developer Unsuspended
 - Developer Updated
 - Removed Developer
+- Removed Account
 - User Subscription Status Updated
 - User Updated
 

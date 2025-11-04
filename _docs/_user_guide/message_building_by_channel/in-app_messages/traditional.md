@@ -1,5 +1,5 @@
 ---
-nav_title: Traditional Editor
+nav_title: Traditional editor
 article_title: Traditional Editor for In-App Messages
 page_order: 3
 layout: dev_guide

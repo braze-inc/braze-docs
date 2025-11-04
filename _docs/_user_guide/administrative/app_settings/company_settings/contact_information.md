@@ -1,5 +1,5 @@
 ---
-nav_title: Contact Information
+nav_title: Contact information
 article_title: Contact Information
 page_order: 0
 page_type: reference
@@ -19,7 +19,7 @@ description: "This reference article covers important information for admins on 
 
 To access this page, go to **Settings** > **Admin Settings** > **Contact Information**.
 
-This page is where you can manage your company's contact information and time zone. Make sure to hit **Save** before you leave the page!
+This page is where you can manage your company's contact information and time zone. Make sure to select **Save** before you leave the page!
 
 ## Consequences of switching your time zone
 

@@ -40,8 +40,9 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```json
 {
   "canvas_id": (required, string) see Canvas identifier,
-  "context": (optional, object) personalization key-value pairs that will apply to all users in this request,
+  "canvas_entry_properties": (optional, object) personalization key-value pairs that will apply to all users in this request,
   "broadcast": (optional, boolean) see Broadcast -- defaults to false on 8/31/17, must be set to true if `recipients` is omitted,
+  "segment_id": (optional, string) see segment identifier,
   "audience": (optional, connected audience object) see connected audience,
   // Including 'audience' will only send to users in the audience
   "recipients": (optional, array; if not provided and broadcast is not set to 'false', message will send to the entire segment targeted by the Canvas)
@@ -64,14 +65,15 @@ Authorization: Bearer YOUR-REST-API-KEY
 | パラメーター | required | データ型 | 説明 |
 | --------- | ---------| --------- | ----------- |
 |`canvas_id`| 必須 | string | [キャンバス識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。 |
-|`canvas_entry_properties`| オプション | オブジェクト | [キャンバスエントリのプロパティー]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/)を参照してください。カスタマイズキーと値のペアは、このリクエストのすべてのユーザーに適用されます。キャンバスエントリのプロパティオブジェクトの最大サイズは 50 KB に制限されています。 |
+|`canvas_entry_properties`| オプション | オブジェクト | これには、[Canvas エントリプロパティ]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/)が含まれます。カスタマイズキーと値のペアは、このリクエストのすべてのユーザーに適用されます。キャンバスエントリのプロパティオブジェクトの最大サイズは 50 KB に制限されています。<br><br>**注:**[キャンバスコンテキスト早期アクセス]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context/)に参加している場合、このパラメーターは `context` で、キャンバスエントリプロパティが含まれます。 |
 |`broadcast`| オプション | ブール値 | キャンペーンまたはキャンバスが対象とするSegment全体にメッセージを送信する場合は、`broadcast` をtrue に設定する必要があります。このパラメーターはデフォルトで false です (2017 年 8 月 31 日現在)。<br><br> `broadcast` が true に設定されている場合、`recipients` リストを含めることはできません。ただし、`broadcast: true` を設定するときは注意が必要です。意図せずにこのフラグを設定すると、想定よりも大きな視聴者にメッセージが送信される可能性があるためです。 |
+|`segment_id `| オプション | string | [セグメント識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。 |
 |`audience`| オプション| 接続されたオーディエンスオブジェクト | [接続オーディエンス]({{site.baseurl}}/api/objects_filters/connected_audience/)を参照してください。 |
-|`recipients`| オプション | 配列 | [受信者オブジェクト]({{site.baseurl}}/api/objects_filters/recipient_object/)を参照してください。<br><br>指定されておらず、`broadcast` がtrue に設定されている場合、メッセージはキャンバスがターゲットとするセグメント全体に送信されます。<br><br> `recipients` 配列には最大 50 個のオブジェクトを含めることができ、各オブジェクトには 1 つの `external_user_id` 文字列と `canvas_entry_properties` オブジェクトが含まれます。この呼び出しには、`external_user_id`、`user_alias`、または`email` が必要です。リクエストでは 1 つだけ指定する必要があります。<br><br>`email` が識別子の場合、[`prioritization`]({{site.baseurl}}/api/endpoints/user_data/post_user_identify#identifying-users-by-email) を受信者オブジェクトに含める必要があります。 |
+|`recipients`| オプション | 配列 | [受信者オブジェクト]({{site.baseurl}}/api/objects_filters/recipient_object/)を参照してください。<br><br>指定されておらず、`broadcast` がtrue に設定されている場合、メッセージはキャンバスがターゲットとするセグメント全体に送信されます。<br><br> `recipients` 配列には最大 50 個のオブジェクトを含めることができ、各オブジェクトには 1 つの `external_user_id` 文字列と `canvas_entry_properties` オブジェクトが含まれます。この呼び出しには、`external_user_id`、`user_alias`、または `email` が必要です。リクエストでは 1 つだけ指定する必要があります。<br><br>`email` が識別子の場合、[`prioritization`]({{site.baseurl}}/api/endpoints/user_data/post_user_identify#identifying-users-by-email) を受信者オブジェクトに含める必要があります。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert important %}
-`recipients` パラメータの場合、`send_to_existing_only` が`true` のとき、Braze は既存のユーザにのみメッセージを送信します。ただし、このフラグは、ユーザーのエイリアスでは使えません。<br><br>`send_to_existing_only` が `false` の場合、属性オブジェクトが含まれていなければなりません。`send_to_existing_only` が`false` **および** の場合、指定された`id` を持つユーザが存在しない場合、Braze はメッセージを送信する前にそのID と属性を持つユーザを作成します。
+`recipients` パラメータの場合、`send_to_existing_only` が `true` のとき、Braze は既存のユーザにのみメッセージを送信します。ただし、このフラグは、ユーザーのエイリアスでは使えません。<br><br>`send_to_existing_only` が `false` の場合、属性オブジェクトが含まれていなければなりません。`send_to_existing_only` が `false`** で**、指定された `id` を持つユーザーが存在しない場合、Braze はそのID と属性 を持つユーザーを作成してからメッセージを送信します。
 {% endalert %}
 
 サーバー間の呼び出しに API を使用する顧客には、ファイアウォールの内側にある場合は、適切な API URL を許可リストに追加する必要が生じることがあります。

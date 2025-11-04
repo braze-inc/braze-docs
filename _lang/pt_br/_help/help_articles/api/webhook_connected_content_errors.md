@@ -141,7 +141,11 @@ Aqui estão algumas dicas para solucionar erros comuns do site `5XX`:
 
 Os webhooks do Braze e o Connected Content empregam um mecanismo de detecção de host insalubre para detectar quando o host de destino apresenta uma alta taxa de lentidão significativa ou sobrecarga, resultando em tempos limite, excesso de solicitações ou outros resultados que impedem que o Braze se comunique com sucesso com o endpoint de destino. Ele atua como uma salvaguarda para reduzir a carga desnecessária que pode estar causando dificuldades ao host de destino. Ele também serve para estabilizar a infraestrutura do Braze e manter velocidades rápidas de envio de mensagens.
 
-Em geral, se o número de **falhas exceder 3.000 em qualquer janela de tempo móvel de um minuto** (por combinação exclusiva de nome de host e grupo de app - **não** por jornada de endpoint), o Braze interromperá temporariamente as solicitações ao host de destino por um minuto, simulando respostas com um código de erro `598` para indicar a integridade ruim. Após um minuto, o Braze retomará as solicitações em velocidade máxima se o host for considerado saudável. Se o host ainda não estiver saudável, o Braze aguardará mais um minuto antes de tentar novamente.
+Os limites de detecção diferem entre webhooks e Connected Content:
+- **Para webhooks**: Se o número de **falhas exceder 3.000 em qualquer janela de tempo móvel de um minuto** (por combinação exclusiva de nome de host e **grupo** de app - não por jornada de endpoint), o Braze interromperá temporariamente as solicitações ao host de destino por um minuto.
+- **Para conteúdo conectado**: Se o número de **falhas exceder 3.000 E a taxa de erro exceder 90% em qualquer janela de tempo móvel de um minuto** (por combinação exclusiva de nome de host e **grupo** de app - não por jornada de endpoint), o Braze interromperá temporariamente as solicitações ao host de direcionamento por um minuto.
+
+Quando as solicitações são interrompidas, o Braze simula respostas com um código de erro `598` para indicar a integridade ruim. Após um minuto, o Braze retomará as solicitações em velocidade máxima se o host for considerado saudável. Se o host ainda não estiver saudável, o Braze aguardará mais um minuto antes de tentar novamente.
 
 Os códigos de erro a seguir contribuem para a contagem de falhas do detector de host não íntegro: `408`, `429`, `502`, `503`, `504`, `529`.
 
@@ -159,7 +163,7 @@ Se ocorrerem mais de 100.000 erros de webhook ou de endpoint Connected Content (
 
 - Nome do espaço de trabalho
 - Um link para o Canva ou a campanha
-- URL do ponto de extremidade
+- URLs dos endpoints
 - Código de erro
 - Hora em que o erro foi observado pela última vez
 - Links para o registro de atividades de mensagens e documentação relacionada
@@ -182,4 +186,14 @@ Para inscrever-se para receber esses e-mails, faça o seguinte:
 
 ### Entradas do registro de atividade de mensagens
 
-Haverá pelo menos uma entrada no [registro de atividades de mensagens]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab) relacionada ao erro que disparou o e-mail automático.
+Haverá pelo menos uma entrada no [Registro de atividades de mensagens]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab) relacionada ao erro que disparou o e-mail automático.
+
+### Insights adicionais sobre falhas no Braze Currents
+
+Para aumentar a transparência dos problemas relacionados a webhooks, o Braze envia dados detalhados de eventos de falha de webhook para o Currents e o Snowflake Data Sharing. Esses eventos incluem solicitações de webhook com falha (como respostas HTTP `4xx` ou `5xx` ), proporcionando mais observabilidade sobre como os problemas de webhook podem afetar a entrega de mensagens. Note que os eventos de falha incluem erros de terminal, bem como erros que estão sendo tentados novamente.
+
+{% alert note %}
+As solicitações de Connected Content não estão incluídas nesses eventos de falha do webhook.
+{% endalert %}
+
+Para saber mais, consulte o [glossário de eventos de engajamento com mensagens]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/).

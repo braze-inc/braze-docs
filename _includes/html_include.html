@@ -115,6 +115,7 @@
 
 <script src="{{site.baseurl}}/assets/js/mermaid.js"></script>
 
+<script type="text/javascript" src="{{site.baseurl}}/assets/js/copy-heading-tag-links.js"></script>
 
 <script type="text/javascript">
 
@@ -186,5 +187,9 @@
 
 <meta name="tool" content="{{ page.tool | join: ', ' | default: '' }}" />
 <meta name="platform" content="{{ page.platform | join: ', ' | default: '' }}" />
-
+{% assign page_ids = page.id | split: '/' %}
+<meta name="type" content="{{ page_ids[1] | replace: '_', ' ' | default: '' }}" />
+<meta name="category" content="{{ page_ids[2] | replace: '_', ' ' | default: '' }}" />
+<meta name="page_name" content="{{ page_ids | last | replace: '_', ' ' | default: '' }}" />
+<meta name="channel" content="{{ page.channel | join: ', ' | default: '' }}" />
 </head>

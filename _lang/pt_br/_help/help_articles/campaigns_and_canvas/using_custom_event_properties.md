@@ -19,15 +19,15 @@ Existem três verificações importantes a serem realizadas para garantir que se
 
 ## Verificar propriedades do evento personalizado
 
-[Propriedades de evento personalizado][22] são metadados que descrevem eventos personalizados. Várias propriedades podem ser registradas cada vez que um evento personalizado é registrado.
+[Propriedades de evento personalizado]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties) são metadados que descrevem eventos personalizados. Várias propriedades podem ser registradas cada vez que um evento personalizado é registrado.
 
 ### Verificar eventos
 
 Verifique com seus desenvolvedores quais propriedades de eventos estão sendo rastreadas. Lembre-se de que todas as propriedades do evento diferenciam maiúsculas de minúsculas. Para obter informações adicionais sobre rastreamento de eventos personalizados, confira estes artigos com base na sua plataforma:
 
-* [Android][51]
-* [iOS][23]
-* [Web][52]
+* [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/)
+* [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_custom_events/)
+* [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_custom_events/)
 
 ### Verificar registro
 
@@ -43,14 +43,9 @@ Depois de adicionar seu usuário como um usuário teste, siga estas etapas para 
 
 1. Execute o evento personalizado dentro do app.
 2. Aguarde cerca de 10 segundos para que os dados sejam liberados.
-3. Atualize o [registro de usuários de eventos][24] para ver o evento personalizado e o valor da propriedade do evento que foi passado com ele.
+3. Atualize o [registro de usuários de eventos]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab) para ver o evento personalizado e o valor da propriedade do evento que foi passado com ele.
 
 Ainda precisa de ajuda? Abra um [ticket de suporte]({{site.baseurl}}/braze_support/).
 
 _Última atualização em 10 de abril de 2023_
 
-[22]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties
-[23]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_custom_events/
-[24]: {{site.baseurl}}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab
-[51]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/ 
-[52]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_custom_events/

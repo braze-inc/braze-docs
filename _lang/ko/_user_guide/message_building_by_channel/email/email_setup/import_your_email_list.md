@@ -26,7 +26,7 @@ channel: email
 
 참여도가 가장 높은 사용자를 파악하려면 먼저 장기 휴면 사용자를 제거하세요. 6개월 이상 이메일에 참여하지 않은 사용자에게 이메일을 보내면 이메일 발송자 평판이 손상될 수 있으므로 이메일을 보내지 않는 것이 좋습니다. 이메일 목록을 가져올 때는 지난 6개월 이내에 회원님이 보낸 이메일을 열어본 사용자만 포함해야 합니다.
 
-장기적으로는 [일몰 정책][60]을 시행하는 것도 고려해야 합니다.
+In the long term, you should also consider implementing a [sunset policy]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/sunset_policies/).
 
 ### 금지 목록 피하기
 
@@ -36,4 +36,3 @@ channel: email
 
 이메일 목록이 준비되면 Braze REST API 또는 CSV 파일 등 여러 가지 방법으로 사용자를 Braze로 가져올 수 있습니다. Read more at our dedicated [User Import]({{site.baseurl}}/user_guide/data/user_data_collection/user_import/) article.
 
-[60]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/sunset_policies/

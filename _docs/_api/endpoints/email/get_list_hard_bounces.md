@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: Query Hard Bounced Emails"
+nav_title: "GET: Query hard bounced emails"
 article_title: "GET: Query Hard Bounced Emails"
 search_tag: Endpoint
 page_order: 1

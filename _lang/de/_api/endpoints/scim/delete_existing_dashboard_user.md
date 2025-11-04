@@ -27,7 +27,7 @@ Um diesen Endpunkt zu verwenden, benötigen Sie ein SCIM-Token. Sie verwenden di
 
 ## Rate-Limit
 
-{% multi_lang_include rate_limits.md endpunkt='dashboard nutzer:innen löschen' %}
+{% multi_lang_include rate_limits.md endpoint='delete dashboard user' %}
 
 ## Pfad-Parameter
 
@@ -36,7 +36,7 @@ Um diesen Endpunkt zu verwenden, benötigen Sie ein SCIM-Token. Sie verwenden di
 | `id` | Erforderlich | String | Die ID des Nutzers:innen. Dieser Parameter wird von den Methoden `POST` `/scim/v2/Users/` oder `GET`  `/scim/v2/Users?filter=userName eq "user@test.com"` zurückgegeben. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-## Anfragetext
+## Körper der Anfrage
 
 ```json
 Content-Type: application/json

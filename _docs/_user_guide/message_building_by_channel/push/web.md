@@ -1,5 +1,5 @@
 ---
-nav_title: "Web Push"
+nav_title: "Web push"
 article_title: Web Push Notifications
 page_order: 8.5
 page_type: reference

@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Export User Profile by Identifier"
+nav_title: "POST: Export user profile by identifier"
 article_title: "POST: Export User Profile by Identifier"
 search_tag: Endpoint
 page_order: 4

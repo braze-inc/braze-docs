@@ -1,7 +1,7 @@
 ---
 nav_title: 세그먼트 확장
 article_title: 세그먼트 확장
-page_order: 3.1
+page_order: 6
 page_type: reference
 description: "이 도움말 문서에서는 세그먼트 확장 기능을 설정하고 사용하여 세분화 기능을 향상시키는 방법을 안내합니다."
 tool: Segments
@@ -39,7 +39,7 @@ SQL을 사용하고 싶지 않을 때 가장 적합합니다.
 - **증분 새로 고침:** 최근 2일간의 데이터를 자동으로 새로 고치거나 필요에 따라 수동으로 새로 고치는 Snowflake SQL 세그먼트를 작성합니다. 정확성과 비용 효율성의 균형을 맞추는 데 가장 적합합니다.
 - **전체 새로 고침:** 수동으로 새로 고칠 때 전체 오디언스를 다시 계산하는 Snowflake SQL 세그먼트를 작성합니다. 오디언스를 위한 완벽한 최신 보기가 필요한 경우에 가장 적합합니다.
 
-![다양한 세그먼트 확장 생성 경험을 선택할 수 있는 표입니다.][20]{: style="max-width:50%"}
+![Table with different Segment Extension creation experiences to select from.]({% image_buster /assets/img/segment/segment_extension_modal.png %}){: style="max-width:50%"}
 
 SQL을 사용하는 경험을 선택하는 경우 자세한 내용은 [SQL 세그먼트 확장]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/)을 참조하세요.
 
@@ -49,15 +49,15 @@ SQL을 사용하는 경험을 선택하는 경우 자세한 내용은 [SQL 세�
 
 필터링하려는 사용자 유형을 설명하여 세그먼트 확장의 이름을 지정합니다. 이렇게 하면 세그먼트에 필터로 적용할 때 이 확장 프로그램을 쉽고 정확하게 검색할 수 있습니다.
 
-!["온라인 쇼핑객 확장 - 90일"이라는 이름의 세그먼트 확장에 "매일 확장 재생성" 확인란을 선택합니다.][2]
+![Segment Extension named "Online Shoppers Extension - 90 Days".]({% image_buster /assets/img/segment/segment_extension2.png %})
 
 ### 3단계: 기준 선택
 
 타겟팅할 구매, 메시지 인게이지먼트 또는 커스텀 이벤트 기준 중에서 선택합니다. 원하는 이벤트 유형 기준을 선택한 후 사용자 목록에 타겟팅할 구매 항목, 메시지 상호 작용 또는 특정 커스텀 이벤트를 선택합니다. 그런 다음 사용자가 이벤트를 완료해야 하는 횟수(이상, 미만 또는 같음)와 기간(특히 세그먼트 확장의 경우 과거 730일(2년)까지 거슬러 올라갈 수 있음)을 선택합니다.
 
-730일 이상의 이벤트 데이터를 기반으로 **세그먼트**에 있는 다른 필터를 사용하여 세그먼테이션을 수행할 수 있습니다. 기간을 선택할 때 상대적인 날짜 범위(예: 지난 X일), 시작 날짜, 종료 날짜 또는 정확한 날짜 범위(날짜 A~날짜 B)를 지정할 수 있습니다.
+730일 이상의 이벤트 데이터를 기반으로 **세그먼트**에 있는 다른 필터를 사용하여 세그먼테이션을 수행할 수 있습니다. When choosing your time period, you can specify a relative date range to select the past X number of days, a start date, an end date, or an exact date range (date A to date B).
 
-![사용자가 사용자 정의 이벤트 "# of aaa"를 0회 이상 수행한 경우의 세분화 기준입니다. 날짜 범위는 2023년 8월 1일부터 2023년 8월 10일까지입니다.][3]
+![Segmentation criteria for users who performed a custom event more than 2 times in the date range of March 1st, 2025 through March 31st, 2025.]({% image_buster /assets/img/segment/segment_extension1.png %})
 
 #### 이벤트 속성 세분화
 
@@ -65,17 +65,17 @@ SQL을 사용하는 경험을 선택하는 경우 자세한 내용은 [SQL 세�
 
 문자열 속성의 경우 한 번에 여러 값을 입력할 수 있습니다. 아래 예에서 이 필터는 골드, 실버 또는 브론즈 중 하나에 해당하는 상태를 가진 사용자를 찾습니다.
 
-![문자열 속성을 기반으로 세그먼트화.][13.5]
+![Segmenting based on string properties.]({% image_buster /assets/img/segment/property5.png %})
 
-![숫자 속성을 기반으로 세분화합니다.][13]
+![Segmenting based on numeric properties.]({% image_buster /assets/img/segment/property2.png %})
 
-![부울 속성을 기반으로 세분화합니다.][14]
+![Segmenting based on boolean properties.]({% image_buster /assets/img/segment/property3.png %})
 
-![날짜/시간 개체를 기반으로 세분화하기.][15]
+![Segmenting based on datetime objects.]({% image_buster /assets/img/segment/property4.png %})
 
 We also support segmentation based on [nested event properties]({{site.baseurl}}/user_guide/data/custom_data/custom_events/nested_objects/).
 
-![중첩된 이벤트 속성을 기반으로 세분화합니다.][18]
+![Segmenting based on nested event properties.]({% image_buster /assets/img/segment/nested_segment_extensions.png %})
 
 세그먼트 확장은 이벤트 속성정보의 장기 저장에 의존하며 타임스탬프가 찍힌 속성 저장 제한이 없습니다. 지난 2년 동안 추적된 이벤트 속성정보를 되돌아볼 수 있습니다. 세그먼트 확장 내에서 이벤트 속성을 사용해도 데이터 포인트 사용에는 영향을 미치지 않습니다.
 
@@ -85,86 +85,33 @@ You don't need Segment Extensions to use event properties or nested custom attri
 
 ### 4단계: 새로고침 설정 지정(선택 사항)
 
-정기적으로 확장 프로그램을 새로고침할 필요가 없다면, 새로고침 설정을 사용하지 않고 저장할 수 있으며, Braze는 그 순간의 사용자 멤버십에 따라 세그먼트 확장 프로그램을 생성하는 기본값으로 설정됩니다. 기본값 동작을 사용하면 오디언스를 한 번만 생성한 다음 일회성 캠페인으로 타겟팅할 수 있습니다.
-
-당신의 세그먼트는 항상 초기 저장 후에 처리를 시작합니다. 세그먼트가 새로고침될 때마다, Braze는 세그먼트를 다시 실행하고 새로고침 시점의 세그먼트에 있는 사용자들을 반영하도록 세그먼트 멤버십을 업데이트합니다. 이것은 귀하의 반복 캠페인이 가장 관련성이 높은 사용자에게 도달하는 데 도움이 될 수 있습니다.
-
-#### 정기적인 새로고침 설정
-
-정기 일정을 설정하려면 특정 확장 프로그램의 오른쪽 상단 모서리에서 **새로고침 설정**을 선택하십시오. 모든 유형의 세그먼트 확장, SQL 세그먼트, CDI 세그먼트 및 간단한 양식 기반 세그먼트 확장을 포함하여 새로고침 설정을 지정하는 옵션이 제공됩니다.
-
-{% alert important %}
-To optimize your data management, refresh settings are automatically turned off for unused Segment Extensions. Segment Extension are considered unused when they're:
-
-- Not used in any active or inactive (draft, stopped, archived) campaigns, Canvases, or segments; or
-- 7일이 넘도록 수정되지 않음
-
-Braze will notify the company contact and creator of the extension if this setting is turned off. 매일 확장 프로그램을 재생성하는 옵션은 언제든지 다시 설정할 수 있습니다.
-{% endalert %}
-
-#### 새로고침 설정 선택하기
-
-![새로고침 간격 설정은 주간 새로고침 빈도로, 시작 시간은 오전 10시이며, 월요일이 선택된 날입니다.][21]{: style="max-width:60%;"}
-
-**새로고침 설정** 패널 내에서 이 세그먼트 확장이 새로고침되는 빈도: 매시간, 매일, 매주 또는 매월을 선택할 수 있습니다. 당신은 또한 새로고침이 발생할 특정 시간(귀사의 시간대에 있는)을 선택해야 합니다, 예를 들어:
-
-- 매주 월요일 오전 11시 회사 시간에 발송되는 이메일 캠페인이 있고, 발송 직전에 세그먼트가 새로고침되도록 하려면, 매주 월요일 오전 10시에 새로고침 일정을 선택해야 합니다.
-- 세그먼트가 매일 새로고침되도록 하려면, 일일 새로고침 빈도를 선택한 다음 새로고침할 시간을 선택하세요.
-
-{% alert note %}
-양식 기반 세그먼트 확장에 대해 시간별 새로고침 일정 설정 기능은 제공되지 않습니다(하지만 일별, 주별 또는 월별 일정을 설정할 수 있습니다).
-{% endalert %}
-
-#### 신용 소비 및 추가 비용
-
-새로고침이 세그먼트의 쿼리를 다시 실행하기 때문에, SQL 세그먼트의 각 새로고침은 SQL 세그먼트 크레딧을 소모하고, CDI 세그먼트의 각 새로고침은 서드파티 데이터 웨어하우스 내에서 비용이 발생합니다.
-
-{% alert note %}
-세그먼트는 데이터 처리 시간 때문에 새로고침하는 데 최대 60분이 걸릴 수 있습니다. 현재 새로 고침 중인 세그먼트는 세그먼트 확장 목록에서 "처리 중" 상태를 가집니다. 이것은 몇 가지 의미를 갖습니다:
-
-- 특정 시간 전에 세그먼트 처리를 완료하려면 60분 더 이른 새로고침 시간을 선택하세요. 
-- 특정 세그먼트 확장에 대해 한 번에 하나의 새로고침만 발생할 수 있습니다. 기존 새로고침이 이미 처리 중일 때 새 새로고침이 시작되면, Braze는 새 새로고침 요청을 취소하고 진행 중인 처리를 계속합니다.
-{% endalert %}
-
-#### 오래된 확장을 자동으로 비활성화하는 기준
-
-세그먼트 확장이 오래된 경우 예약된 새로고침은 자동으로 비활성화됩니다. 세그먼트 확장이 오래된 경우 다음 기준을 충족합니다:
-
-- 활성 캠페인이나 캔버스에서 사용되지 않음
-- 활성 캠페인이나 캔버스에 있는 세그먼트에서 사용되지 않음
-- [분석 추적]({{site.baseurl}}/user_guide/analytics/tracking/segment_analytics_tracking#segment-analytics-tracking)이 켜져 있는 세그먼트에서 사용되지 않음
-- 7일 이상 수정되지 않음
-- 7일 이상 캠페인이나 캔버스(초안 포함) 또는 세그먼트에 추가되지 않음
-
-세그먼트 확장에 대한 예약된 새로고침이 비활성화된 경우, 해당 확장은 그렇게 표시하는 알림이 있습니다.
-
-![이 확장은 활성 캠페인, 캔버스 또는 세그먼트에서 사용되지 않기 때문에 "예약된 새로고침이 이 확장에 대해 꺼졌습니다."라는 알림이 있습니다. 세그먼트 확장은 2025년 2월 23일 오전 12:00에 비활성화되었습니다."][1]
-
-오래된 세그먼트 확장을 사용하려면 [새로고침 설정을 검토](#step-4-designate-refresh-settings-optional)하고, 사용 사례에 맞는 새로고침 일정을 선택한 다음, 수정 사항을 저장하십시오.
+{% multi_lang_include segments.md section='Refresh settings' %}
 
 ### 5단계: 세그먼트 확장 저장
 
-Once you select **Save**, your extension will begin processing. 확장 프로그램을 생성하는 데 걸리는 시간은 사용자 수, 캡처하는 커스텀 이벤트 또는 구매 이벤트의 수, 기록에서 되돌아보는 일수에 따라 달라집니다.
+After you select **Save**, your extension will begin processing. 확장 프로그램을 생성하는 데 걸리는 시간은 사용자 수, 캡처하는 커스텀 이벤트 또는 구매 이벤트의 수, 기록에서 되돌아보는 일수에 따라 달라집니다.
 
 확장 프로그램이 처리되는 동안 확장 프로그램 이름 옆에 작은 애니메이션이 표시되고 확장 프로그램 목록의 **마지막 처리된** 열에 "처리 중"이라는 단어가 표시됩니다. 처리 중일 때는 확장자를 편집할 수 없다는 점에 유의하세요.
 
-!["세그먼트 확장" 페이지에 두 개의 활성 확장이 있습니다.][5]
+!["Segment Extensions" page with two active extensions.]({% image_buster /assets/img/segment/segment_extension5.png %})
+
+When a Segment Extension is processing, Braze will continue to use the version history of the segment from before the processing began for audience segmentation purposes. Processing takes place each time a save or refresh occurs, and involves querying and updating user profiles - in other words, your segment's membership does not update instantaneously. This means that unless a user's action is performed before the refresh begins processing, we can't guarantee that the user will be included in the Segment Extension once that particular refresh is complete. Conversely, users who were in the Segment Extension before the refresh that  no longer meet the criteria will continue to match your segment until the refresh process is complete and updates are applied.
 
 ### 6단계: 세그먼트에서 확장 프로그램 사용
 
-확장을 생성한 후에는 세그먼트를 만들거나 캠페인 또는 캔버스의 오디언스를 정의할 때 필터로 사용할 수 있습니다. 먼저 **사용자 속성** 섹션의 필터 목록에서 **Braze 세그먼트 확장**을 선택합니다.
+After you have created an extension, you can use it as a filter when creating a segment or defining an audience for a campaign or Canvas. 먼저 **사용자 속성** 섹션의 필터 목록에서 **Braze 세그먼트 확장**을 선택합니다.
 
-!["필터" 섹션에 "Braze 세그먼트 확장"을 보여주는 필터 드롭다운이 있습니다.][6]
+!["Filters" section with a filter dropdown showing "Braze Segment Extensions".]({% image_buster /assets/img/segment/segment_extension7.png %})
 
 Braze 세그먼트 확장자 필터 목록에서 이 세그먼트에 포함하거나 제외할 확장자를 선택합니다.
 
-!["브레이즈 세그먼트 확장" 필터로 세그먼트 "온라인 쇼핑객 확장..."을 포함합니다.][7]
+![A "Braze Segment Extensions" filter that includes a segment "1 email click in the last 56 days".]({% image_buster /assets/img/segment/segment_extension6.png %})
 
-To view the extension criteria, select **View Extension Details** to show the details in a modal popup.
+To view the extension criteria, select **View Extension Details** to show the details in a new window.
 
-!["온라인 쇼핑객 확장 - 90일"에 대한 확장 세부정보입니다.][8]{: style="max-width:70%;"}
+![Extension for "1 email click in the last 56 days".]({% image_buster /assets/img/segment/segment_extension8.png %}){: style="max-width:70%;"}
 
-이제 평소와 같이 [세그먼트 만들기][11]를 진행할 수 있습니다.
+Now you can proceed as usual with [creating your segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/).
 
 ## Frequently asked questions
 
@@ -178,22 +125,15 @@ To view the extension criteria, select **View Extension Details** to show the de
 
 아니요. 세그먼트 확장을 보관하기 전에 모든 활성 메시징에서 제거해야 합니다.
 
-[1]: {% image_buster /assets/img/segment/segment_extension_disabled.png %}
-[2]: {% image_buster /assets/img/segment/segment_extension2.png %}
-[3]: {% image_buster /assets/img/segment/segment_extension1.png %}
-[5]: {% image_buster /assets/img/segment/segment_extension5.png %}
-[6]: {% image_buster /assets/img/segment/segment_extension7.png %}
-[7]: {% image_buster /assets/img/segment/segment_extension6.png %}
-[8]: {% image_buster /assets/img/segment/segment_extension8.png %}
-[10]: {{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/
-[11]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/
-[12]: {% image_buster /assets/img/segment/property1.png %}
-[13]: {% image_buster /assets/img/segment/property2.png %}
-[13.5]: {% image_buster /assets/img/segment/property5.png %}
-[14]: {% image_buster /assets/img/segment/property3.png %}
-[15]: {% image_buster /assets/img/segment/property4.png %}
-[16]: {% image_buster /assets/img/Shopify/arrow.jpeg %}
-[17]: {% image_buster /assets/img/segment/segment_extension9.png %}
-[18]: {% image_buster /assets/img/segment/nested_segment_extensions.png %}
-[20]: {% image_buster /assets/img/segment/segment_extension_modal.png %}
-[21]: {% image_buster /assets/img/segment/segment_interval_settings.png %}
+### Can I use arrays in Segment Extensions?
+
+예. To use arrays, append brackets (`[]`) to your property name. If your property is `location_code`,  you would enter `location_code[]`. 
+
+Braze uses `[]` to traverse arrays and check if any item in the traversed array matches the event property. For example, you could create a segment of users who match at least one value of an array property.
+
+### How does Braze calculate the time period for a relative time period of "last \__ days"?
+
+When Segment Extensions calculates the relative time period ("last X days"), the start time is set to midnight UTC. For example, for a Segment Extension that refreshes at 2024-09-16 21:00 UTC and specifies 10 days, the start time is set to 2024-09-06 00:00 UTC, not 2024-09-06 21:00 UTC. 
+
+However, you can specify the time zones by using SQL segments to identify users who performed the custom event 10 days ago based on midnight in company time, or users who performed the event 10 days ago based on the current time.
+

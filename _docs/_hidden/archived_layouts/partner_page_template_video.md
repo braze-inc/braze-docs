@@ -1,5 +1,5 @@
 ---
-nav_title: Partner Page with Video
+nav_title: Partner page with video
 
 page_order: 4
 

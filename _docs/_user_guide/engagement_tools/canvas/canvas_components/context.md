@@ -4,6 +4,7 @@ article_title: Context
 alias: /context/
 page_order: 1.5
 page_type: reference
+toc_headers: "h2"
 description: "This reference article covers how to create and use Context steps in your Canvas."
 tool: Canvas
 
@@ -14,14 +15,14 @@ tool: Canvas
 > Context steps allow you to create and update one or more variables for a user as they move through a Canvas. For example, if you have a Canvas that manages seasonal discounts, you can use a context variable to store a different discount code each time a user enters the Canvas.
 
 {% alert important %}
-Context steps are currently in early access. Contact your Braze account manager if you're interested in participating in this early access.
+Context steps are currently in early access. Contact your Braze account manager if you're interested in participating in this early access.<br><br>Note that opting into the Canvas Context step early access will make changes to how timestamps are handled across all your Canvases. To learn more about this, refer to [Time zone consistency standardization](#time-zone-consistency-standardization).
 {% endalert %}
 
 ## How it works
 
 ![A Context step as the first step of a Canvas.]({% image_buster /assets/img/context_step3.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
-Context steps allows you to create and use temporary data during a user's journey through a specific Canvas. This data exists only within that Canvas journey and doesn't persist across different Canvases or outside the session.
+Context steps allow you to create and use temporary data during a user's journey through a specific Canvas. This data exists only within that Canvas journey and doesn't persist across different Canvases or outside the session.
 
 Within this framework, each Context step can define multiple context variables&mdash;temporary pieces of data that enable you to personalize delays, segment users dynamically, and enrich messaging without permanently altering a user's profile information.
 
@@ -40,10 +41,24 @@ Each context variable includes:
 
 When defined, you can use a context variable throughout the Canvas by referencing it in this format: {% raw %}`{{context.${example_variable_name}}}`{% endraw %}.
 
-For example,
-{% raw %}`{{context.${flight_time}}}{% endraw %}` could return the user's scheduled flight time.
+For example, {% raw %}`{{context.${flight_time}}}`{% endraw %} could return the user's scheduled flight time.
 
-Each time a user enters the Canvas&#8212;even if they have entered it before&#8212;the context variables will be redefined based on the latest entry data and Canvas setup. This allows journeys to stay personalized and accurate, even for users with multiple entries.
+Each time a user enters the Canvas&#8212;even if they have entered it before&#8212;the context variables will be redefined based on the latest entry data and Canvas setup. This stateful approach allows each Canvas entry to maintain its own independent context, allowing users to have multiple active states within the same journey while retaining the specific context for each state.
+
+For example, if a customer has two upcoming flights, they'll have two separate journey states running simultaneously&#8212;each with its own flight-specific context variables like departure time and destination. This allows you to send personalized reminders about their 2 pm flight to New York while sending different updates about their 8 am flight to Los Angeles tomorrow, so that each message stays relevant to the specific booking.
+
+## Considerations
+
+- You can have up to 10 context variables per Context step.
+- Each context variable name can be up to 100 characters.
+- Context variable names must be valid identifiers (letters, numbers, underscores only).
+- Context variable definitions can be up to 10,240 characters. 
+- Context variables passed into an API-triggered Canvas share the same namespaces as context variables created in a Context step in a Canvas. This means if you send a variable `purchased_item` in the [`/canvas/trigger/send` endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) context object, it can be referenced as {% raw %}`{context.${purchased_item}}`{% endraw %}, and re-declaring that variable in a Context step in the Canvas will override what was previously sent.
+- You can store up to 50&nbsp;KB per context step, distributed up to 10 variables per step. Variable sizes that sum up to over 50&nbsp;KB in one step won't be evaluated or stored for the user. These sizes are calculated in sequence. For example, if you have 3 variables in a Context step:
+  - Variable 1: 30&nbsp;KB
+  - Variable 2: 19&nbsp;KB
+  - Variable 3: 2&nbsp;KB
+  - This means Variable 3 won't be evaluated or stored because the sum of all other context variables exceeds 50&nbsp;KB.
 
 ## Creating a Context step
 
@@ -68,18 +83,12 @@ To define a context variable:
 
 Now you can use your context variable anywhere you use Liquid, such as in Message and User Update steps, by selecting **Add Personalization**. For a full walkthrough, see [Using context variables](#using-context-variables).
 
-### Step 3: Test user paths (optional)
-
-If the context variable is valid, you can reference the variable throughout your Canvas. However, if the context variable wasn't created correctly, future steps in your Canvas won't perform correctly either. We recommend testing and [previewing your user paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/preview_user_paths) to make sure your messages are sent to the right audience. Look out for common scenarios that create [invalid context variables](#troubleshooting).
-
-For example, if you create a Context step to assign users an appointment time but set the appointment time's value to a past date, the reminder email you craft in your Message step will never be sent. 
-
 ## Context variable data types {#context-variable-types}
 
 Context variables that are created or updated in the step can be assigned the following data types.
 
 {% alert note %}
-Context variables have the same expected formats for data types as [custom events]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#expected-format), but context variables do not support nested objects.
+Context variables have the same expected formats for data types as [custom events]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#expected-format). <br><br>For nested objects and array of objects, use the [`as_json_string` Liquid filter](#converting-connected-content-strings-to-json). If you're creating the same object in a Context step, you'll need to render the object using `as_json_string`, such as {%raw%}```{{context.${object_array} | as_json_string }}```{%endraw%}
 {% endalert %}
 
 | Data type | Example variable name | Example value |
@@ -117,6 +126,118 @@ Next, we'll create a Message step to target users where {% raw %}`{{context.${lo
 You can add [personalized delay options]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/#personalized-delays) with the information from the Context step, meaning you can select the variable that delays users.
 {% endalert %}
 
+### For Action Paths and exit criteria
+
+You can leverage comparing property filters with either context variables or custom attributes in these trigger actions: **Perform Custom Event** and **Make Purchase**. These action triggers also support property filters for both basic and nested properties. 
+
+- When comparing against basic properties, the available comparisons will match the type of the property defined by the custom event. For example, string properties will have exactly equal, regex matches. Boolean properties will be true or false. 
+- When comparing against nested properties, types are not pre-defined, so you can select comparisons across multiple data types for booleans, numbers, strings, time, and day of year, similar to the comparisons for nested custom attributes. If you select a data type that doesn't match the actual data type of the nested property at the time of comparison, the user will not match the Action Path or exit criteria.
+
+#### Action Path examples
+
+{% alert important %}
+For custom attribute comparisons, we'll use the custom attribute value at the time the action is performed. This means a user won't match the Action Path group if a user doesn't have this custom attribute populated at the time of comparison, or if the custom attribute value doesn't match the defined property comparisons. This is the case even if the user would have matched when they entered the Action Path step.
+{% endalert %}
+
+{% tabs %}
+{% tab Perform custom event %}
+
+The following Action Path is set up to sort users who performed the custom event `Account_Created` with the basic property `source` to the context variable `app_source_variable`.
+
+![An example Action Path that references a context variable when performing a custom event.]({% image_buster /assets/img/context_action_path1.png %})
+
+{% endtab %}
+{% tab Make purchase %}
+
+The following Action Path is set up to match the basic property `brand` for the specific product name `shoes` to a context variable `promoted_shoe_brand`.
+
+![An example Action Path that references a context variable when making a purchase.]({% image_buster /assets/img/context_action_path2.png %})
+
+{% endtab %}
+{% endtabs %}
+
+#### Exit criteria examples
+
+{% tabs %}
+{% tab Perform custom event %}
+
+The exit criteria state that at any point in a user's journey in the Canvas, they'll exit the Canvas if:
+
+- They perform the custom event **Abandon Cart**, and
+- The basic property **Item in Cart** matches the string value of the context variable `cart_item_threshold`.
+
+![Exit criteria set up to exit a user if they perform a custom event based on the context variable.]({% image_buster /assets/img/context_exit_criteria1.png %})
+
+{% endtab %}
+{% tab Make purchase %}
+
+The exit criteria state that at any point in a user’s journey in the Canvas, they'll exit the Canvas if:
+
+- They make a specific purchase for the "book" product name, and
+- That purchase's nested property "loyalty_program" is equal to the user's custom attribute "VIP".
+
+![Exit criteria set up to exit a user if they make a purchase.]({% image_buster /assets/img/context_exit_criteria2.png %})
+
+{% endtab %}
+{% endtabs %}
+
+### Context variable filters
+
+You can create filters that use previously declared context variables in [Audience Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths) and [Decision Split]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split) steps.
+
+{% alert important %}
+Context variable filters are only available for Audience Paths and Decision Split steps. 
+{% endalert %}
+
+Context variables are declared and only accessible in the scope of a Canvas, meaning they can't be referenced in segments. Context variable filters function similarly in Audience Paths and Decision Split steps—Audience Path steps represent multiple groups, while Decision Split steps represent binary decisions.
+
+![Decision Split step example with the option to create a filter with a context variable.]({% image_buster /assets/img/context_decision_split.png %}){: style="max-width:90%;"}
+
+Similar to how Canvas context variables have pre-defined types, the comparisons between context variables and static values must have [matching data types]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_attributes/nested_custom_attribute_support/#supported-data-types). The context variable filter allows comparisons across multiple data types for booleans, numbers, strings, time, and day of year, similar to the comparisons for [nested custom attributes]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_attributes/nested_custom_attribute_support/).
+
+{% alert note %}
+Use the same data type for your context variable and comparison. For example, if your context variable is a time data type, use time comparisons (such as "before" or "after"). Using mismatching data types (such as string comparisons with a time context variable) may cause unexpected behavior.
+{% endalert %}
+
+Here is an example of a context variable filter comparing the context variable `product_name` to the regex `/braze/`.
+
+![A filter setup for the context variable "product_name" to match the regex "/braze/".]({% image_buster /assets/img/context_variable_filter1.png %}){: style="max-width:90%;"}
+
+#### Comparing to context variables or custom attributes
+
+By selecting the **Compare to a context variable or custom attribute** toggle, you can construct context variable filters that compare against previously-defined context variables or user custom attributes. This can be useful for performing comparisons that are dynamic per user, like API-triggered `context`, or to condense complex comparison logic defined across context variables.
+
+{% tabs %}
+{% tab Example 1 %}
+
+Let's say you want to send a personalized reminder to users after a dynamic period of inactivity, which includes anyone who hasn't logged into your app in the last three days, should receive a message.
+
+You have a context variable `re_engagement_date` that is defined as {% raw %}`{{now | minus: 3 | append: ' days'}}`{% endraw %}. Note that `3 days` can be a variable amount that is also stored as a user's custom attribute. So if the `re_engagement_date` is after the `last_login_date` (stored as a custom attribute on the user profile), they'll be sent a message.
+
+![A filter setup with custom attributes as the personalization type for the context variable "re_engagement_date" after the custom attribute "last_login_date".]({% image_buster /assets/img/context_variable_filter2.png %})
+
+{% endtab %}
+{% tab Example 2 %}
+
+The following filter compares the context variable `reminder_date` to be before the context variable `appointment_deadline`. This can help group users in an Audience Paths step to determine whether they should receive additional reminders before their appointment deadline.
+
+![A filter setup with context variables as the personalization type for the context variable "reminder_date" on the context variable "appointment_deadline".]({% image_buster /assets/img/context_variable_filter3.png %})
+
+{% endtab %}
+{% endtabs %}
+
+## Previewing user paths
+
+We recommend testing and [previewing your user paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/preview_user_paths) to make sure your messages are sent to the right audience and context variables are evaluated to the expected outcomes.
+
+{% alert note %}
+If you're previewing your Canvas in the **Preview & Test Send** section of the editor, the timestamp in the test message preview **will not** be standardized to UTC because this panel generates previews as strings. This means if a Canvas is set up to accept a `time` object, the message preview won't accurately preview what occurs when the Canvas is live. To test your Canvas most accurately, we recommend previewing user paths instead.
+{% endalert %}
+
+Be sure to observe any common scenarios that create invalid context variables. When previewing your user path, you can view the outcomes of personalized Delay steps using context variables, and any audience, decision, or Action Path step comparisons that match users to any context variables.
+
+If the context variable is valid, you can reference the variable throughout your Canvas. However, if the context variable wasn’t created correctly, future steps in your Canvas won’t perform correctly either. For example, if you create a Context step to assign users an appointment time but set the appointment time's value to a past date, the reminder email in your Message step will never be sent.
+
 ## Converting Connected Content strings to JSON
 
 When making a [Connected Content call]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call) in a Context step, JSON returned from the call will be evaluated as a string data type for consistency and error prevention. If you want to convert this string into JSON, convert it by using `as_json_string`. For example:
@@ -127,6 +248,14 @@ When making a [Connected Content call]({{site.baseurl}}/user_guide/personalizati
 {{ product | as_json_string }}
 ```
 {%endraw%}
+
+## Time zone consistency standardization
+
+While most event properties using the timestamp type are already in UTC in Canvas, there are some exceptions. With the addition of Canvas Context, all default timestamp event properties in action-based Canvases will consistently be in UTC. This change is part of a broader effort to ensure a more predictable and consistent experience when editing Canvas steps and messages. Note that this change will impact all action-based Canvases, whether the specific Canvas is using a Context step or not.
+
+{% alert important %}
+In all circumstances, we strongly recommend using [Liquid time_zone filters]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/#things-to-know) for timestamps to be represented in the desired time zone. You can reference this [frequently asked question](#faq-example) for an example.
+{% endalert %}
 
 ## Troubleshooting {#troubleshooting}
 
@@ -148,9 +277,85 @@ Refer to [Context variable data types](#context-variable-types) for the example 
 
 ## Frequently asked questions
 
+### What will be changing when Canvas Context becomes generally available?
+
+When Canvas Context becomes generally available, the following details will apply:
+
+- All timestamps with a [datetime type]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#custom-event-properties) from [trigger event properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties) in action-based Canvases will always be in [UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time). 
+- This change will impact all action-based Canvases, whether the specific Canvas is using a Context step or not.
+
+#### What is the reason for this change?
+
+This change is part of a broader effort to create a more predictable and consistent experience when editing Canvas steps and messages.
+
+#### When is this change taking effect?
+
+- If you're participating in the Canvas Context early access, this change has already been applied. 
+- If you're not participatig in the Canvas Context early access, this change will apply when you join the early access or when Canvas Context becomes generally available.
+
+#### Are API-triggered or scheduled Canvases impacted by this change?
+
+No.
+
+#### Will this change impact Canvas entry properties?
+
+Yes, this will impact `canvas_entry_properties` if the `canvas_entry_property` is being used in an action-based Canvas and the property type is `time`. In all circumstances, we recommend using Liquid `time_zone` filters for timestamps to be represented in the desired timezone.
+
+Here is an example on how to do this:
+
+| Liquid in Message step | Output | Is this the way to represent time zones correctly in Liquid? |
+|---|---|---|
+| {% raw %}```{{canvas_entry_properties.${timestamp_property}}}```{% endraw %} | `2025-08-05T08:15:30:250-0800` | No |
+| {% raw %}```{{canvas_entry_properties.${timestamp_property} | date: "%Y-%m-%d %l:%M %p"}}```{% endraw %} | `2025-08-05 4:15pm` | No
+| {% raw %}```{{canvas_entry_properties.${timestamp_property} | time_zone: "America/Los_Angeles" | date: "%Y-%m-%d %l:%M %p"}}```{% endraw %} | `2025-08-05 8:15am` | Yes |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
+#### What is a practical example of how the new timestamp behavior might affect my messages? {#faq-example}
+
+Let’s say we have an action-based Canvas that has the following content in a Message step:
+
+{% raw %}
+```
+Your appointment is scheduled for {{canvas_entry_properties.${appointment_time} | date: "%Y-%m-%d %l:%M %p"}}, we'll see you then!
+```
+{% endraw %}
+
+This will result in the following message: 
+
+```
+Your appointment is scheduled for 2025-08-05 4:15pm, we’ll see you then!
+```
+
+Because no time zone is specified using Liquid, the timestamp here is in UTC. 
+
+To specify a time zone clearly, we can use Liquid `time_zone` filters like this: 
+
+{% raw %}
+```
+Your appointment is scheduled for {{canvas_entry_properties.${appointment_time} | time_zone: "America/Los_Angeles" | date: "%Y-%m-%d %l:%M %p"}}, we'll see you then!
+```
+{% endraw %}
+
+This will result in the following message: 
+
+```
+Your appointment is scheduled for 2025-08-05 8:15am, we'll see you then!
+```
+
+Because the America/Los Angeles time zone is specified using Liquid, the timestamp here is in PST.
+
+The preferred time zone can also be sent in the event properties payload like this and used in Liquid logic:
+
+```
+{
+  "appointment_time": "2025-08-05T08:15:30:250-0800"
+  "user_timezone": "America/Los_Angeles"
+}
+```
+
 ### How do context variables differ from Canvas entry properties?
 
-If you're participating in the Context step early access, Canvas entry properties are now included as Canvas context variables. This means you can send Canvas entry properties using the Braze API and reference them in other steps, similar to using a context variable with the Liquid snippet.
+If you’re participating in the Context step early access, Canvas entry properties are now included as Canvas context variables. This means you can send Canvas entry properties using the Braze API and reference them in other steps, similar to using a context variable with the Liquid snippet.
 
 ### Can variables reference each other in a singular Context step?
 
@@ -170,5 +375,3 @@ This also applies across multiple Context steps. For example, imagine this seque
 4. All subsequent steps that reference `JobInfo` will now use the updated value `job_description`.
 
 Context variables use their most recent value throughout the Canvas, with each update affecting all following steps that reference that variable.
-
-

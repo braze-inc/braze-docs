@@ -1,5 +1,5 @@
 ---
-nav_title: Consent & Address Collection
+nav_title: Consent & address collection
 article_title: Consent & Address Collection
 page_order: 6
 page_type: reference

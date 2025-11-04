@@ -30,7 +30,7 @@ Para usar esse endpoint, você precisará de uma [chave de API]({{site.baseurl}}
 
 ## Limite de taxa
 
-{% multi_lang_include rate_limits.md endpoint='migração de id externo' %}
+{% multi_lang_include rate_limits.md endpoint='external id migration' %}
 
 ## Corpo da solicitação
 

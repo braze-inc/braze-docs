@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: List Upcoming Scheduled Campaigns and Canvases"
+nav_title: "GET: List upcoming scheduled campaigns and Canvases"
 article_title: "GET: List Upcoming Scheduled Campaigns and Canvases"
 search_tag: Endpoint
 page_order: 0

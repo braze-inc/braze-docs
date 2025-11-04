@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: Export Product IDs"
+nav_title: "GET: Export product IDs"
 article_title: "GET: Export Product IDs"
 search_tag: Endpoint
 page_order: 1

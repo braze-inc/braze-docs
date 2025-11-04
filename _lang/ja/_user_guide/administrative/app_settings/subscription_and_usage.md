@@ -29,7 +29,7 @@ search_rank: 5
 
 ここには、ワークスペースに適用される使用量のグラフがあります。購入した製品によって、ダッシュボードに表示される使用量の指標がこの画像とは異なる場合があります。 
 
-![1 か月あたりのユニーク訪問者数を示す使用量グラフ][3]{: style="max-width:90%;"}
+![月次固有訪問者を示す使用量グラフ]({% image_buster /assets/img/subscription_and_billing4.png %}){: style="max-width:90%;"}
 
 これらのグラフには、1 か月あたりのアクティブユーザー数、1 か月あたりのユニーク訪問者数、およびメール送信数が表示されます。このような使用量のグラフは、使用量の予算を立てたり、全体の使用量のうち多くを占めているワークスペースをより詳しく理解しようとしたりするときに、特に役立ちます。
 
@@ -41,11 +41,11 @@ search_rank: 5
 
 **アプリケーション別の最も使用されているイベントと属性**では、属性のドライバーとカスタムイベントデータポイントの消費量を確認できます。 
 
-![アプリ別に最も使用されるイベントと属性][4]
+![アプリケーション別に使用されるほとんどのイベントと属性]({% image_buster /assets/img/most_used_events_attributes_time.png %})
 
 アプリごとに、**See breakdown** を選択して、選択した期間の各特定のカスタム属性、プロファイル属性、カスタムイベントの見積もりカウント、およびその属性またはイベントによって駆動されたアプリの属性とイベントの更新の割合を表示できます。 
 
-![アプリ別の最も使用されたイベントと属性の内訳タブ][1]
+![アプリケーションごとに使用されるイベントと属性の詳細タブ]({% image_buster /assets/img/most_used_events_attributes_2.png %}){: style="max-width:60%"}
 
 このようなデータの内訳は、どの特定のデータポイントが割り当ての大きな割合を占めているかを理解するときに役立ちます。データポイントを誤って、また無駄な方法で費やしていないことを確認するために、この情報を適時監視することをお勧めします。カスタマーサクセスマネージャーは、現在のプランを最大限に活用するためのガイダンスや、より柔軟性の高いオプションを提供できます。 
 
@@ -53,7 +53,7 @@ search_rank: 5
 
 [**データポイント使用量の合計**] タブには、データポイントの使用量の詳細が表示されます。このセクションの全データを、週単位または月単位で集計して表示できます。
 
-![データポイントの使用状況の週別フィルタリング][2]
+![データポイント使用率の週別フィルタリング]({% image_buster /assets/img/subscription_and_billing2.png %})
 
 ### 契約の詳細
 
@@ -66,7 +66,7 @@ search_rank: 5
 - **割り当てられたデータポイント:**請求期間ごとに契約で割り当てられるデータポイントの量。
 - **契約のデータポイント使用量:**契約期間中に消費された全データポイントの累積合計であり、次の請求期間ではリセットされません。
 
-![「データポイント使用量の合計」タブの「契約の詳細」セクション][5]
+![[データポイント使用量の合計] タブの [契約の詳細] セクション]({% image_buster /assets/img/contract_details.png %})
 
 ### 会社の請求データ
 
@@ -74,42 +74,27 @@ search_rank: 5
 
 このグラフには、アプリ全体でのデータポイントの使用状況が表示されます。
 
-![「アプリレベルでの合計データポイント使用量」に、各アプリのデータポイント使用量が示されている。][14]
+![アプリケーションレベルの合計データポイント使用率は、各アプリで使用されるデータポイントを示します。]({% image_buster /assets/img/app_level_total.png %})
 
 合計のいずれかを選択して、**Data Point Usage Over Time**テーブルを表示します。このテーブルには、各ワークスペースの週間データポイントの合計が表示されます。 空白の**App Name**列を持つ行は、アプリに関連付けられていないデータポイント(`app_id`を指定しないリクエストで使用されるデータポイントなど)を表します。
 
-![2つのワークスペースの週単位の合計データポイント数を示す「経時的なデータポイント使用量」。][15]
+![2つのワークスペースの週単位の合計データポイント数を示す [経時的なデータポイント使用量]。]({% image_buster /assets/img/data_point_usage_time.png %})
 
 #### ワークスペースデータポイントの使用状況
 
 このグラフでは、会社のデータポイント使用量の合計をワークスペース別に評価できます。このグラフを使用すると、会社のデータポイント使用量における各ワークスペースの割合を評価できます。
 
-![2つのワークスペースのワークスペースデータポイント使用率グラフ][7]{: style="max-width:90%;"}
+![2 つのワークスペースのワークスペースデータポイント使用量グラフ]({% image_buster /assets/img/appgroup_datapoint_usage.png %}){: style="max-width:90%;"}
 
 #### イベントソース別の請求サイクルデータポイントの使用状況
 
 このグラフでは、さまざまなAPI 属性、カスタムイベント、セッションなど、さまざまなイベントソース間でデータポイントの使用状況がどのように分散されているかを表示できます。
 
-![イベントソース別の請求サイクルデータポイントの使用状況。異なるイベントソース間のデータポイントの割り当てを表示します。][13]
+![イベントソースごとの請求サイクルデータポイントの使用状況。異なるイベントソース間のデータポイントの割り当てを表示します。]({% image_buster /assets/img/event_source_stats.png %})
 
 #### 経時的なデータポイント使用量
 
 このグラフにより、割り当てられたデータポイントの量に対するデータポイント使用量の合計をすぐに確認できます。
 
-![データポイント使用量の経時変化と、現在の課金周期に割り当てられているデータポイントsと、実行中の合計との対比][8]{: style="max-width:90%;"}
+![現在の課金サイクルで割り当てられたデータポイントと、実行中の合計]({% image_buster /assets/img/company_data_point_usage_time.png %})を比較した、時間の経過に伴うデータポイントの使用{: style="max-width:90%;"}
 
-[1]: {% image_buster /assets/img/most_used_events_attributes_2.png %}
-[2]: {% image_buster /assets/img/subscription_and_billing2.png %}
-[3]: {% image_buster /assets/img/subscription_and_billing4.png %}
-[4]: {% image_buster /assets/img/most_used_events_attributes_time.png %}
-[5]: {% image_buster /assets/img/contract_details.png %}
-[6]: {% image_buster /assets/img/current_billing_cycle.png %}
-[7]: {% image_buster /assets/img/appgroup_datapoint_usage.png %}
-[8]: {% image_buster /assets/img/company_data_point_usage_time.png %}
-[9]: {% image_buster /assets/img/appgroup_drilldown.png %}
-[10]: {% image_buster /assets/img/appgroup_level_datapoint_usage_bycategory.png %}
-[11]: {% image_buster /assets/img/appgroup_level_usage_time.png %}
-[12]: {% image_buster /assets/img/app_level_stats.png %}
-[13]: {% image_buster /assets/img/event_source_stats.png %}
-[14]: {% image_buster /assets/img/app_level_total.png %}
-[15]: {% image_buster /assets/img/data_point_usage_time.png %}

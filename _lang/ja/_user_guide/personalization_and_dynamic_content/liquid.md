@@ -3,6 +3,7 @@ nav_title: Liquid
 article_title: Liquid
 page_order: 0
 layout: dev_guide
+alias: /liquid/
 search_rank: 3
 guide_top_header: "液体タグを使用したカスタマイズ"
 guide_top_text: "Braze は、指定されたユーザーの値を自動的にメッセージに置き換えます。中括弧の2組の内側に式を置き、補間値を使用していることをBrazeに通知します。これらの括弧内では、置換するユーザー値は、先頭にドル記号を付けた追加の括弧で囲む必要があります。<br><br>Liquid の詳細については、Braze Learning のガイド付きの「<b><a href='https://learning.braze.com/path/dynamic-personalization-with-liquid'>Liquid のダイナミックパーソナライゼーション</a></b>」の Braze 学習パスをご覧ください。"
@@ -50,7 +51,7 @@ guide_featured_list:
 
 > Liquid は、Shopify が開発した Ruby で書かれているオープンソースのテンプレート言語です。Braze では、Liquid を使用してユーザーのプロファイルからデータをメッセージにテンプレート化します。 
 
-例えば、整数データ型のユーザープロファイルからカスタム属性を取得し、その値を最も近い整数に丸めることができます。Liquid の構文と使用方法については、[**サポートされているパーソナライゼーションタグ**][1]を参照してください。
+例えば、整数データ型のユーザープロファイルからカスタム属性を取得し、その値を最も近い整数に丸めることができます。Liquid の構文と使用方法については、[**サポートされているパーソナライゼーションタグ**]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/)を参照してください。
 
 リキッドテンプレーティング言語は、オブジェクト、タグs、およびフィルターs の使用をサポートします。
 
@@ -82,13 +83,13 @@ Braze は、**Shopify** からのLiquid 5 までのLiquid をサポートしま�
 
 各 Liquid 要素は色分けされているので、Liquid エディターではこれらを一目で区別することができます。
 
-![]({% image_buster /assets/img/liquid_color_code.png %})
+\![]({% image_buster /assets/img/liquid_color_code.png %})
 
 #### 入力予測 Liquid
 
 また、パーソナライズされたメッセージを作成する際に、カスタム属性や属性名などに入力予測 Liquid を利用することもできます。
 
-![]({% image_buster /assets/img/liquid_auto_complete.gif %}){: style="max-width:70%;"}
+\![]({% image_buster /assets/img/liquid_auto_complete.gif %}){: style="max-width:70%;"}
 
 ## 知っておくべき用語
 
@@ -109,4 +110,3 @@ Braze は、**Shopify** からのLiquid 5 までのLiquid をサポートしま�
 
 <br>
 
-[1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/

@@ -25,17 +25,17 @@ Wir raten davon ab, verschachtelte JSON-Werte als Schlüssel-Wert-Paare zu sende
 {% endalert %}
 
 {% tabs %}
-{% tab Android %}
+{% tab android %}
 
 Schlüssel-Wert-Paare werden in Objekten des Typs <a href="https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/#-2118252107%2FProperties%2F-1725759721" target="_blank">`card`</a> als `extras` gespeichert. Diese können verwendet werden, um Daten zusammen mit einer Karte zur weiteren Bearbeitung durch die Anwendung zu senden. Rufen Sie <a href="https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/extras.html" target="_blank">`card.extras`</a> auf, um auf diese Werte zuzugreifen.
 
 {% endtab %}
-{% tab iOS %}
+{% tab schnell %}
 
 Schlüssel-Wert-Paare werden in Objekten des Typs <a href="https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard" target="_blank">`card`</a> als `extras` gespeichert. Diese können verwendet werden, um Daten zusammen mit einer Karte zur weiteren Bearbeitung durch die Anwendung zu senden. Rufen Sie <a href="https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/data-swift.struct/extras" target="_blank">`card.extras`</a> auf, um auf diese Werte zuzugreifen.
 
 {% endtab %}
-{% tab Web %}
+{% tab Internet %}
 
 Schlüssel-Wert-Paare werden in Objekten des Typs <a href="https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.card.html" target="_blank">`card`</a> als `extras` gespeichert. Diese können verwendet werden, um Daten zusammen mit einer Karte zur weiteren Bearbeitung durch die Anwendung zu senden. Rufen Sie `card.extras` auf, um auf diese Werte zuzugreifen.
 
@@ -82,7 +82,7 @@ Badges sind kleine Symbole, die dazu dienen, die Aufmerksamkeit eines Nutzers zu
 Sie können die Anzahl der ungelesenen Content-Cards anzeigen, die Ihr Nutzer als Badge auf dem Symbol Ihrer App sieht. 
 
 {% tabs %}
-{% tab Android %}
+{% tab android %}
 
 Sie können die Anzahl der ungelesenen Karten jederzeit telefonisch erfragen:
 
@@ -107,7 +107,7 @@ Anhand dieser Informationen können Sie dann ein Badge anzeigen, das die Anzahl 
 
 
 {% endtab %}
-{% tab iOS %}
+{% tab schnell %}
 
 Das folgende Beispiel verwendet `braze.contentCards`, um die Anzahl der ungelesenen Content-Cards abzufragen und anzuzeigen. Nachdem die App geschlossen und die Sitzung des Benutzers beendet wurde, fordert dieser Code eine Kartenzählung an und filtert die Anzahl der Karten anhand der Eigenschaft `viewed`.
 
@@ -147,7 +147,7 @@ for (BRZContentCardRaw *card in AppDelegate.braze.contentCards.cards) {
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Web %}
+{% tab Internet %}
 
 Sie können die Anzahl der ungelesenen Karten jederzeit telefonisch erfragen:
 

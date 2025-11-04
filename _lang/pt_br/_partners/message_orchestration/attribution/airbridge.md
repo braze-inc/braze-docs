@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Airbridge](https://www.airbridge.io/) é uma plataforma unificada de medição móvel que ajuda você a descobrir as verdadeiras fontes de crescimento por meio de atribuição móvel, medição incrementalista e modelagem de mix de marketing.
 
+_Esta integração é mantida pelo Airbridge._
+
+## Sobre a integração
+
 A integração do Braze e Airbridge permite que você passe todos os dados de atribuição da instalação não orgânica do Airbridge para o Braze para criar campanhas de marketing personalizadas.
 
 ## Pré-requisitos
@@ -190,18 +194,14 @@ AirbridgeUnity.StartTracking()
 
 No Braze, navegue para **Integrações de Parceiros** > **Parceiros de Tecnologia** e selecione **Airbridge**.
 
-{% alert note %}
-Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), você pode encontrar **Parceiros de Tecnologia** em **Integrações**.
-{% endalert %}
-
 Aqui você encontra o endpoint REST e gera sua chave de importação de dados da Braze. Depois que a chave é gerada, você pode criar outra ou invalidar uma existente. A chave de importação de dados e o endpoint REST são usados na próxima etapa ao configurar um postback no dashboard do Airbridge.
 
-![][1]
+![]({% image_buster /assets/img/airbridge/airbridge_integration_step_1.png %})
 
 ### Etapa 3: Configure Braze no dashboard do Airbridge
 
 1. Na Airbridge, navegue até **Integrations > Third-party Integrations** (Integrações > Integrações de terceiros) na barra lateral esquerda e selecione **Braze**.
-2. Forneça a chave de importação de dados e o endpoint REST que você encontrou no dashboard do Braze.
+2. Forneça a chave de importação de dados e o endpoint REST que você encontrou no dashboard da Braze.
 3. Selecione o tipo de evento (evento de instalação ou evento de instalação e abertura de deeplink) e salve.
 
 {% alert note %}
@@ -231,7 +231,7 @@ Supondo que você configure sua integração conforme sugerido, a Braze mapeará
 
 Sua base de usuários pode ser segmentada por dados de atribuição no dashboard da Braze usando os filtros de atribuição da instalação.
 
-![][2]
+![]({% image_buster /assets/img/airbridge/airbridge_integration_step_2.png %})
 
 ## Dados de atribuição do Meta Business
 
@@ -273,5 +273,4 @@ idfv={{most_recently_used_device.${id}}}
 Se você não usa identificadores de dispositivo, como o IDFV ou GAID, nos seus links de rastreamento de cliques nem planeja adotá-los, a Airbridge ainda será capaz de atribuir esses cliques através de um modelo probabilístico.
 {% endalert %}
 
-[1]: {% image_buster /assets/img/airbridge/airbridge_integration_step_1.png %}
-[2]: {% image_buster /assets/img/airbridge/airbridge_integration_step_2.png %}
+

@@ -24,7 +24,7 @@ Die Integration von Phrase und Braze erlaubt es Ihnen, E-Mail Templates und Cont
 | --- | --- |
 | Phrase TMS-Konto | Um die Vorteile dieser Partnerschaft zu nutzen, benötigen Sie ein Phrase TMS Ultimate- oder Enterprise-Konto. |
 | Braze REST API-Schlüssel | Ein REST-API-Schlüssel von Braze mit allen Berechtigungen. <br><br> Dieser kann im Braze-Dashboard unter **Einstellungen** > **API-Schlüssel** erstellt werden. |
-| Braze REST Endpunkt | [Ihre URL für den REST-Endpunkt][1]. Ihr Endpunkt hängt von der Braze-URL für Ihre Instanz ab. |
+| Braze REST Endpunkt | [Ihre URL für den REST-Endpunkt]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). Ihr Endpunkt hängt von der Braze-URL für Ihre Instanz ab. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration
@@ -86,4 +86,3 @@ Navigieren Sie in Phrasee zu **Einstellungen > Integrationen > Konnektoren > Neu
 Die [Konnektor API](https://cloud.memsource.com/web/docs/api#) kann Schritte automatisieren, die sonst manuell über die UI ausgeführt werden. Mit [Webhooks](https://support.phrase.com/hc/en-us/articles/5709693398812) kann Phrase TMS Systeme von Drittanbietern über bestimmte Ereignisse benachrichtigen (z.B. eine Änderung des Auftragsstatus).
 
 
-[1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints

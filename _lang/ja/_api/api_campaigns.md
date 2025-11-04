@@ -42,8 +42,7 @@ APIキャンペーンは通常トランザクション型であるため、グ�
 ## API呼び出し
 
 API キャンペーンを保存したら、API リクエストに次の内容を含めます。 
-- API リクエストで生成された `campaign_id` フィールドは、[][2]「メッセージ送信」エンドポイント[][2]に記載されています。
+- API リクエストで生成された `campaign_id` フィールドは、[]({{site.baseurl}}/api/endpoints/messaging/#send-endpoints)「メッセージ送信」エンドポイント[]({{site.baseurl}}/api/endpoints/messaging/#send-endpoints)に記載されています。
 - キャンペーンに含まれる各プラットフォームの[メッセージオブジェクト]({{site.baseurl}}/api/objects_filters/#messaging-objects)。メッセージオブジェクトにメッセージバリエーションIDを提供します。これにより、統計が収集され、そのバリアントの下に表示されるように指定されます。次のメッセージオブジェクトがサポートされています：Android、コンテンツカード、メール、iOS、Kindle、SMS/MMS、Web プッシュ、Webhook。
 
-[2]: {{site.baseurl}}/api/endpoints/messaging/#send-endpoints
 

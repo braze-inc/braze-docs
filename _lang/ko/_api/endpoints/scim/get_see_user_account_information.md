@@ -61,6 +61,7 @@ curl --location --request GET 'https://rest.iad-01.braze.com/scim/v2/Users/dfa24
     },
     "department": "finance",
     "lastSignInAt": "Thursday, January 1, 1970 12:00:00 AM",
+    "createdAt": "Thursday, January 1, 1970 12:00:00 AM",
     "permissions": {
         "companyPermissions": ["manage_company_settings"],
         "roles": [

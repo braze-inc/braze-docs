@@ -30,8 +30,18 @@ Liquid タグ `message_extras` は、Currents や Snowflake Data Sharing の対�
 
 ## `message_extras` タグの使い方
 
-1. チャネルのメッセージ本文に、`message_extras` Liquidタグを入力する。または、**パーソナライゼーションを追加**モーダルを使用して、パーソナライゼーションタイプとして**メッセージエクストラ**を選択できます。<br>![パーソナライゼーションタイプとして [メッセージエクストラ] が選択された [パーソナライゼーションを追加] モーダル。][1]{: style="max-width:70%;"}
-2. 各`message_extras`タグの[キーと値のペア]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/)を入力してください。<br>![メッセージエクストラタグのキーと値のペアの例。[タイトル] フィールドには「あなたの新しいお気に入り」と表示されています。メッセージはメッセージエクストラのタグのキーと値のペアと、次の文を読み取ります。「当社は、あなたの新しいお気に入りになること間違いなしの新鮮で心躍る製品のサイドセレクションをお知らせできることを嬉しく思います」][2]{: style="max-width:70%;"}
+1. チャネルのメッセージ本文に、`message_extras` Liquidタグを入力する。または、**パーソナライゼーションを追加**モーダルを使用して、パーソナライゼーションタイプとして**メッセージエクストラ**を選択できます。 
+
+\![メッセージエクストラを含む追加パーソナライゼーション モーダルがパーソナライゼーションの種類として選択されました。]({% image_buster /assets/img_archive/message_extras1.png %}){: style="max-width:35%;"}
+
+{: start="2"}
+
+2. 各`message_extras`タグの[キーと値のペア]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/)を入力してください。 
+
+\![メッセージエクストラタグのキーと値のペアの例。[タイトル] フィールドには「あなたの新しいお気に入り」と表示されています。メッセージはメッセージエクストラのタグのキーと値のペアと、次の文を読み取ります。「当社は、あなたの新しいお気に入りになること間違いなしの新鮮で心躍る製品のサイドセレクションをお知らせできることを嬉しく思います」]({% image_buster /assets/img_archive/message_extras2.png %}){: style="max-width:70%;"}
+
+{: start="3"}
+
 3. キャンペーンまたはキャンバスが送信された後、Brazeは送信時にダイナミックなデータをCurrentsまたはSnowflake Data Sharingの送信イベントを介して`message_extras`フィールドに添付します。
 
 ## 構文の確認
@@ -44,6 +54,10 @@ Liquid タグ `message_extras` は、Currents や Snowflake Data Sharing の対�
 - 順序の一致しないキーと値 
   - {% raw %}例えば、```{% message_extras :value 123 :key test %}```{% endraw %}
 
+## Currentsへのプロモーションコード発信
+
+{% multi_lang_include shopify.md section='Liquid promotion codes with Currents' %}
+
 ## 考慮事項
 
 - キーの値が 1 KB を超える場合、切り詰められます。 
@@ -54,15 +68,13 @@ Liquid タグ `message_extras` は、Currents や Snowflake Data Sharing の対�
 
 ## よくある質問
 
-#### 送信イベントのmessage_extrasフィールドを、開封やクリックのようなエンゲージメントイベントにどのように関連付けることができますか？ 
+#### 送信イベントのmessage_extras フィールドを開封 s やクリックなどのエンゲージメントイベントに関連付けるにはどうすればよいですか? 
 
 `dispatch_id` が生成され、送信イベントで提供されます。これは、特定のクリック、開封、または配信されたイベントに関連付けるための一意の識別子として使用できます。Currents または Snowflake でこのフィールドを使用およびクエリできます。[`dispatch_id` 行動]({{site.baseurl}}/help/help_articles/data/dispatch_id/) について詳しく学びます。
 
-#### アプリ内メッセージで message_extras を使用できますか? {#iam-sdk}
+#### アプリ内メッセージ s でmessage_extras を使用できますか? {#iam-sdk}
 
 はい、ユーザーのデバイスが次の最小SDKバージョンにある限り、`message_extras`をアプリ内メッセージで使用できます。
 
 {% sdk_min_versions web:5.2.0 android:30.4.0 swift:8.4.0 %}
 
-[1]: {% image_buster /assets/img_archive/message_extras1.png %}
-[2]: {% image_buster /assets/img_archive/message_extras2.png %}

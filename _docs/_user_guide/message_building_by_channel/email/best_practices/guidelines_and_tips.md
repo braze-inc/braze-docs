@@ -1,5 +1,5 @@
 ---
-nav_title: Email Guidelines
+nav_title: Email guidelines
 article_title: Email Guidelines
 page_order: 1
 page_type: reference

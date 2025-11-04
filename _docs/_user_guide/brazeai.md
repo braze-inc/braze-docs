@@ -13,6 +13,14 @@ guide_top_text: "BrazeAI<sup>TM</sup> powers a collection of accessible, easy-to
 
 guide_featured_title: "Features"
 guide_featured_list:
+- name: BrazeAI Decisioning Studio<sup>TM</sup>
+  link: /docs/user_guide/brazeai/decisioning_studio/
+- name: Braze Agents
+  link: /docs/user_guide/brazeai/agents/
+  image: /assets/img/braze_icons/star-06.svg
+- name: BrazeAI Operator
+  link: /docs/operator/
+  image: /assets/img/braze_icons/edit-05.svg
 - name: Intelligence Suite
   link: /docs/user_guide/brazeai/intelligence/
   image: /assets/img/braze_icons/clock.svg
@@ -28,6 +36,9 @@ guide_featured_list:
 - name: Generative AI
   link: /docs/user_guide/brazeai/generative_ai/
   image: /assets/img/braze_icons/lightbulb-02.svg
+- name: Braze MCP Server
+  link: /docs/mcp/
+  image: /assets/img/braze_icons/dataflow-01.svg
 - name: Winning Variant and Personalized Variant
   link: /docs/user_guide/engagement_tools/testing/multivariant_testing/optimizations/
   image: /assets/img/braze_icons/trophy-01.svg

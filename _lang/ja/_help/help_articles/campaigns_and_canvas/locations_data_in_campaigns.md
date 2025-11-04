@@ -22,20 +22,16 @@ Brazeは、SDKを通じてユーザーの最新の位置情報をデフォルト
 
 ユーザーの位置情報がBrazeに送信されているかどうかを確認するには、**Location Available**フィルターを使用する。このフィルターによって、「最新の位置情報」を持つユーザーの割合を見ることができる。
 
-![][25]
+![]({% image_buster /assets/img_archive/trouble7.png %})
 
 ## データ転送
 
 開発者が位置情報をBrazeに渡していることを確認する。通常、位置データの受け渡しは、ユーザーが権限を付与した後に SDK によって自動的に処理されますが、開発者が Braze での位置情報の追跡を無効にしている可能性があります。位置情報のトラッキングに関する詳細は、以下を参照されたい：
-- [Android][26]
-- [iOS][27]
-- [Web][28]
+- [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/location_tracking/)
+- [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/location_tracking/)
+- [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/location_tracking/)
 
 それでもサポートが必要な場合は、[サポートチケットを]({{site.baseurl}}/braze_support/)を登録してください。
 
-_最終更新日：2022年11月16日_
+_最終更新日: 2022年11月16日_
 
-[25]: {% image_buster /assets/img_archive/trouble7.png %}
-[26]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/location_tracking/
-[27]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/location_tracking/
-[28]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/location_tracking/

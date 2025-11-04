@@ -24,3 +24,4 @@ description: "이 참고 문서에서는 Braze SMS 객체의 다양한 구성 �
 ```
 
 - [앱 식별자]({{site.baseurl}}/api/identifier_types/)
+  - 워크스페이스에 구성된 앱의 유효한 `app_id` 은 사용자의 프로필에 특정 앱이 있는지 여부에 관계없이 워크스페이스의 모든 사용자에게 적용됩니다.

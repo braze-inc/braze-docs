@@ -1,5 +1,5 @@
 ---
-nav_title: Fuzzy Opt-Out
+nav_title: Fuzzy opt-out
 article_title: Fuzzy Opt-Out
 description: "This reference article covers how to configure fuzzy opt-out, a setting that attempts to recognize when an inbound message does not match an opt-out keyword."
 page_type: reference
@@ -36,7 +36,7 @@ To configure fuzzy opt-out, navigate to the subscription group keyword managemen
 3. Enable **Fuzzy Opt-Out** by toggling it on.
 4. Modify the fuzzy opt-out response as desired. 
 
-![Section to edit opt-out keywords.]({% image_buster /assets/img/sms/fuzzy2.png %}){: style="max-width:70%;"}
+![Section to edit opt-out keywords.]({% image_buster /assets/img/sms/fuzzy2.png %})
 
 ## Best practices for fuzzy opt-out messages
 

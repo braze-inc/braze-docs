@@ -1,5 +1,5 @@
 ---
-nav_title: Using Event Logging
+nav_title: Using event logging
 article_title: Using Event Logging
 page_order: 6
 page_type: solution

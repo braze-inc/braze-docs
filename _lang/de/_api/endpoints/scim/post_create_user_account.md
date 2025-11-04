@@ -26,7 +26,7 @@ Um diesen Endpunkt zu verwenden, benötigen Sie ein SCIM-Token. Sie verwenden di
 
 ## Rate-Limit
 
-{% multi_lang_include rate_limits.md endpunkt='Dashboard Nutzer:innen erstellen' %}
+{% multi_lang_include rate_limits.md endpoint='create dashboard user' %}
 
 ## Anfragetext
 ```

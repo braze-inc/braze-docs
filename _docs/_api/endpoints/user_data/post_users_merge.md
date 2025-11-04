@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Merge Users"
+nav_title: "POST: Merge users"
 article_title: "POST: Merge Users"
 search_tag: Endpoint
 page_order: 6

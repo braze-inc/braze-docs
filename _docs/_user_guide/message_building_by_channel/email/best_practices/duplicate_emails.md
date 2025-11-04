@@ -1,5 +1,5 @@
 ---
-nav_title: Duplicate Emails
+nav_title: Duplicate emails
 article_title: Duplicate Emails
 page_order: 7
 page_type: reference

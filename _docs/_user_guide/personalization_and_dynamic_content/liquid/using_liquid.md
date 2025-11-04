@@ -79,6 +79,20 @@ You can insert tags by typing two open curly brackets `{{` in any message, which
 
 If you're using a custom tag, you can copy and paste the tag into whatever message you desire.
 
+#### Exceptions for double brackets
+
+If using a tag within another Liquid tag, such as `{% assign %}` or `{% if %}`, you can use either double brackets or no brackets. It is only when the tag stands alone that it has to be encased in double brackets. For simplicity, you can always use double brackets. 
+
+The following tags are all correct:
+
+```liquid
+{% if custom_attribute.${Number_Game_Attended} == 1 %}
+{% if {{custom_attribute.${Number_Game_Attended}}} == 1 %}
+
+{% assign value_one = {{custom_attribute.${one}}} %}
+{% assign value_one = custom_attribute.${one} %}
+```
+
 {% endraw %}
 
 {% alert note %}

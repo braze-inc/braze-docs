@@ -22,9 +22,9 @@ guide_featured_list:
   - name: セグメンテーションフィルター
     link: /docs/user_guide/engagement_tools/segments/segmentation_filters/
     image: /assets/img/braze_icons/flag-02.svg
-  - name: セグメントファンネル
-    link: /docs/user_guide/engagement_tools/segments/segment_funnels/
-    image: /assets/img/braze_icons/users-right.svg
+  - name: セグメントデータ
+    link: /docs/viewing_and_understanding_segment_data/
+    image: /assets/img/braze_icons/pie-chart-01.svg
 
 guide_menu_title: "More articles"
 guide_menu_list:
@@ -91,5 +91,5 @@ Braze のセグメントがユーザーのターゲット設定にどのよう�
 - **イベントとメッセージのインタラクション:**過去 30 日間に購入を行ったかどうか、また特定のアプリ内メッセージと対話したかどうかによって、ユーザーをセグメント化します。
 - **データのクエリ:** 
   - **Snowflake のクエリ:**[SQL Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/)を使用してSnowflakeを照会することにより、BrazeおよびCRMやデータウェアハウスなどの外部ソースから結合されたデータを含むセグメントユーザー。
-  - **データウェアハウスとの同期:**[CDI セグメント]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/)により、データウェアハウスまたはファイルストレージシステムから Braze に直接同期されたデータを使用して、ユーザーをセグメント化します。
+  - **データウェアハウスとの同期:**セグメントユーザーは、[CDI Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/) を使用して、データウェアハウスまたはファイルストレージシステムからBrazeに直接同期されたデータを使用します。
 

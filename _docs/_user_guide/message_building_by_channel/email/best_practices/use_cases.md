@@ -1,5 +1,5 @@
 ---
-nav_title: Email Use Cases
+nav_title: Email use cases
 article_title: Email Use Cases
 page_order: 3
 page_type: reference

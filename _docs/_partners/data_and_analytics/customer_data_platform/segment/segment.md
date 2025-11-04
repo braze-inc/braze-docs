@@ -197,7 +197,7 @@ Define the settings for your destination. Not at all settings will apply to all 
 | Track all pages | **Classic Destination Web Device-Mode (maintenance) Only**<br><br>Segment recommends migrating to the Web Actions framework destination where this setting can be [enabled through mappings](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#braze-web-settings-mapping).<br><br>This will send all [page calls](https://segment.com/docs/spec/page/) to Braze as a "Loaded/Viewed a Page" event. |
 | Track only named pages | **Classic Destination Web Device-Mode (maintenance) Only**<br><br>Segment recommends migrating to the Web Actions framework destination where this setting can be [enabled through mappings](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#braze-web-settings-mapping).<br><br>This will send only page calls to Braze with a name associated with them. |
 | Log purchase when revenue is present | **Classic Destination Web Device-Mode (maintenance) Only**<br><br>Segment recommends migrating to the Web Actions framework destination where this setting can be [enabled through mappings](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#braze-web-settings-mapping).<br><br>When this option is enabled, all Track calls with the revenue property will trigger a purchase event. | 
-| Only track known users | **Classic Destination Web Device-Mode (maintenance) Only**<br><br>Segment recommends migrating to the Web Actions Framework destination where this setting can be enabled through mappings.<br><br>If enabled, this new setting delays calling of `window.appboy.initialize` until there is a valid `userId`. | 
+| Only track known users | **Classic Destination Web Device-Mode (maintenance) Only**<br><br>Segment recommends migrating to the Web Actions Framework destination where this setting can be enabled through mappings.<br><br>If enabled, this new setting delays calling of `window.braze.initialize` until there is a valid `userId`. | 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
@@ -349,7 +349,7 @@ All other traits will be recorded as [custom attributes]({{site.baseurl}}/user_g
 In the [Web Mode Actions](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#update-user-profile) and [Cloud Mode Actions](https://segment.com/docs/connections/destinations/catalog/braze-cloud-mode-actions/#update-user-profile) destinations, the above mappings can be set using the Update User Profile Action.
 
 {% alert important %}
-When passing user attribute data, check that you only pass values for attributes that have changed since the last update. This will ensure you do not unnecessarily consume data points toward your allotment. For client-side sources, use Segment's open-source [Middleware](https://github.com/segmentio/segment-braze-mobile-middleware) tool to optimize your integration and limit data point usage by debouncing duplicate `identify()` calls from Segment. 
+When passing user attribute data, check that you only pass values for attributes that have changed since the last update. This will ensure you do not unnecessarily log data points. For client-side sources, use Segment's open-source [Middleware](https://github.com/segmentio/segment-braze-mobile-middleware) tool to optimize your integration and limit data point usage by debouncing duplicate `identify()` calls from Segment. 
 
 {% endalert %}
 {% endtab %}
@@ -476,7 +476,7 @@ However, customizing when the Braze SDK is integrated or specifying initializati
 
 {% details Sending deltas to Braze. %}
 
-When passing user attribute data, check that you only pass values for attributes that have changed since the last update. This will ensure you do not unnecessarily consume data points toward your allotment. For client-side sources, use Segment's open-source [Middleware](https://github.com/segmentio/segment-braze-mobile-middleware) tool to optimize your integration and limit Data Point usage by debouncing duplicate `identify()` calls from Segment. 
+When passing user attribute data, check that you only pass values for attributes that have changed since the last update. This will prevent logging of unnecessary data points. For client-side sources, use Segment's open-source [Middleware](https://github.com/segmentio/segment-braze-mobile-middleware) tool to optimize your integration and limit data point usage by debouncing duplicate `identify()` calls from Segment.
 
 {% enddetails %}
 

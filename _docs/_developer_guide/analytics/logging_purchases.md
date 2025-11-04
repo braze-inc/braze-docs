@@ -1,5 +1,5 @@
 ---
-nav_title: Logging Purchases
+nav_title: Logging purchases
 article_title: Logging purchases through the Braze SDK
 page_order: 3.2
 description: "Learn how to log purchases through the Braze SDK."
@@ -13,6 +13,8 @@ description: "Learn how to log purchases through the Braze SDK."
 {% alert note %}
 For wrapper SDKs not listed, use the relevant native Android or Swift method instead.
 {% endalert %}
+
+Any non-USD currency reported will display in Braze in USD based on the exchange rate on the date it was reported. To prevent currency conversion, hardcode the currency to USD.
 
 ## Logging purchases and revenue
 

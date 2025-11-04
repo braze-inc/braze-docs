@@ -1,5 +1,5 @@
 ---
-nav_title: Add-to-Calendar Links
+nav_title: Add-to-calendar links
 article_title: Add-to-Calendar Links
 page_order: 1
 page_type: tutorial

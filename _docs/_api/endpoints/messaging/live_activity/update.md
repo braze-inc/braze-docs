@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Update Live Activity"
+nav_title: "POST: Update live activity"
 article_title: "POST: Update Live Activity"
 search_tag: Endpoint
 page_order: 1

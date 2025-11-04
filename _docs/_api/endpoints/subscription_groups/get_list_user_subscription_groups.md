@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: List User's Subscription Groups"
+nav_title: "GET: List users subscription groups"
 article_title: "GET: List User's Subscription Groups"
 search_tag: Endpoint
 page_order: 4
@@ -14,7 +14,7 @@ description: "This article outlines details about the List user's subscription g
 /subscription/user/status
 {% endapimethod %}
 
-> Use this endpoint to list and get the subscription groups of a certain user.
+> Use this endpoint to list and get the subscription groups with the history of a certain user.
 
 If you want to see examples or test this endpoint for **Email Subscription Groups**:
 
@@ -78,6 +78,8 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/use
 {% endtabs %}
 
 ## Example response
+
+Only subscription groups that have had a subscription status update in a user's history will be included in a successful response. This means that newly created subscription groups will not be listed.
 
 ```json
 {

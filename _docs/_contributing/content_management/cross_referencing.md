@@ -1,6 +1,6 @@
 ---
-nav_title: Cross-Referencing
-article: Cross-referencing
+nav_title: Cross-referencing
+article_title: Cross-referencing
 description: "Learn how to cross-reference other pages on Braze Docs."
 page_order: 3
 noindex: true

@@ -18,7 +18,7 @@ tool:
 
 이 보고서를 실행하려면 다음을 수행하십시오:
 1. **쿼리 작성기에서** 템플릿을 사용하여 새 SQL 보고서를 만들도록 선택합니다. 
-2. 메트릭에 세그먼트 분석이 포함된 필터 템플릿은 다음과 같습니다:
+2. Select **Segment breakdowns** for the metric, which filters templates for those where the metrics include breakdowns of segment, which are:
 - 세그먼트별 이메일 성능/성과 측정기준
 - 세그먼트별 변형 또는 단계에 대한 이메일 참여 측정기준
 - 세그먼트별 구매 및 매출

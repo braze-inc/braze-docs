@@ -1,5 +1,5 @@
 ---
-nav_title: Managing Consent
+nav_title: Managing consent
 article_title: Managing Consent
 page_order: 10
 page_type: reference

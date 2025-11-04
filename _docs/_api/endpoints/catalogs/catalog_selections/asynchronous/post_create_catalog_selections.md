@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Create Catalog Selection"
+nav_title: "POST: Create catalog selection"
 article_title: "POST: Create Catalog Selection"
 search_tag: Endpoint
 page_order: 2

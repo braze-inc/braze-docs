@@ -109,7 +109,7 @@ Nehmen wir an, Sie wollen einen neuen Typ von Benutzerprofil für Ihre App einf�
 
 ```javascript
 const featureFlag = braze.getFeatureFlag("expanded_user_profile");
-if (featureFlag.enabled) {
+if (featureFlag?.enabled) {
   console.log(`expanded_user_profile is enabled`);
 } else {
   console.log(`expanded_user_profile is not enabled`);
@@ -121,7 +121,7 @@ if (featureFlag.enabled) {
 
 ```swift
 let featureFlag = braze.featureFlags.featureFlag(id: "expanded_user_profile")
-if featureFlag.enabled {
+if featureFlag?.enabled == true {
   print("expanded_user_profile is enabled")
 } else {
   print("expanded_user_profile is not enabled")
@@ -131,7 +131,7 @@ if featureFlag.enabled {
 {% tab Java %}
 ```java
 FeatureFlag featureFlag = braze.getFeatureFlag("expanded_user_profile");
-if (featureFlag.getEnabled()) {
+if (featureFlag != null && featureFlag.getEnabled()) {
   Log.i(TAG, "expanded_user_profile is enabled");
 } else {
   Log.i(TAG, "expanded_user_profile is not enabled");
@@ -143,7 +143,7 @@ if (featureFlag.getEnabled()) {
 
 ```kotlin
 val featureFlag = braze.getFeatureFlag("expanded_user_profile")
-if (featureFlag.enabled) {
+if (featureFlag?.enabled == true) {
   Log.i(TAG, "expanded_user_profile is enabled.")
 } else {
   Log.i(TAG, "expanded_user_profile is not enabled.")
@@ -155,7 +155,7 @@ if (featureFlag.enabled) {
 
 ```javascript
 const featureFlag = await Braze.getFeatureFlag("expanded_user_profile");
-if (featureFlag.enabled) {
+if (featureFlag?.enabled) {
   console.log(`expanded_user_profile is enabled`);
 } else {
   console.log(`expanded_user_profile is not enabled`);
@@ -166,7 +166,7 @@ if (featureFlag.enabled) {
 {% tab Unity %}
 ```csharp
 var featureFlag = Appboy.AppboyBinding.GetFeatureFlag("expanded_user_profile");
-if (featureFlag.Enabled) {
+if (featureFlag != null && featureFlag.Enabled) {
   Console.WriteLine("expanded_user_profile is enabled");
 } else {
   Console.WriteLine("expanded_user_profile is not enabled");
@@ -177,7 +177,7 @@ if (featureFlag.Enabled) {
 {% tab Cordova %}
 ```javascript
 const featureFlag = await BrazePlugin.getFeatureFlag("expanded_user_profile");
-if (featureFlag.enabled) {
+if (featureFlag?.enabled) {
   console.log(`expanded_user_profile is enabled`);  
 } else {
   console.log(`expanded_user_profile is not enabled`);
@@ -186,8 +186,8 @@ if (featureFlag.enabled) {
 {% endtab %}
 {% tab Flutter %}
 ```dart
-BrazeFeatureFlag featureFlag = await braze.getFeatureFlagByID("expanded_user_profile");
-if (featureFlag.enabled) {
+BrazeFeatureFlag? featureFlag = await braze.getFeatureFlagByID("expanded_user_profile");
+if (featureFlag?.enabled == true) {
   print("expanded_user_profile is enabled");
 } else {
   print("expanded_user_profile is not enabled");
@@ -198,7 +198,7 @@ if (featureFlag.enabled) {
 {% tab Roku %}
 ```brightscript
 featureFlag = m.braze.getFeatureFlag("expanded_user_profile")
-if featureFlag.enabled
+if featureFlag <> invalid and featureFlag.enabled
   print "expanded_user_profile is enabled"
 else
   print "expanded_user_profile is not enabled"
@@ -277,7 +277,7 @@ m.Braze.logFeatureFlagImpression("expanded_user_profile");
 
 Um auf die Eigenschaften eines Feature-Flags zuzugreifen, verwenden Sie je nach dem im Dashboard definierten Typ eine der folgenden Methoden.
 
-Wenn ein Feature-Flag nicht aktiviert ist oder eine Eigenschaft, die Sie referenzieren, nicht existiert, geben diese Methoden `null` zurück.
+Wenn eine Eigenschaft, die Sie referenziert haben, nicht existiert, geben diese Methoden `null` zurück.
 
 {% tabs %}
 {% tab JavaScript %}
@@ -825,7 +825,7 @@ Um das Änderungsprotokoll eines Feature-Flags anzuzeigen, öffnen Sie ein Featu
 
 ![Seite "Bearbeiten" eines Feature-Flags mit dem hervorgehobenen Button "Changelog"]({% image_buster /assets/img/feature_flags/changelog/open_changelog.png %}){: style="max-width:60%;"}
 
-Hier können Sie überprüfen, wann eine Änderung vorgenommen wurde, wer sie vorgenommen hat, zu welcher Kategorie sie gehört und vieles mehr.
+Hier können Sie nachsehen, wann eine Änderung stattgefunden hat, wer die Änderung vorgenommen hat, zu welcher Kategorie sie gehört und vieles mehr.
 
 ![Changelog des ausgewählten Feature-Flags]({% image_buster /assets/img/feature_flags/changelog/changelog.png %}){: style="max-width:90%;"}
 

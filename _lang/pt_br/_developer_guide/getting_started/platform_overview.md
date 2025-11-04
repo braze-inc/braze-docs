@@ -88,7 +88,7 @@ Depois de definir um segmento, as ferramentas de mensagens privadas do Braze per
 | [E-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/about/) | Envie mensagens em HTML avançado criando seu e-mail usando o editor de rich-text, nosso editor de arrastar e soltar ou fazendo upload de um de seus modelos HTML existentes. |
 | [Mensagem no app]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/) | Envie notificações discretas no app usando a interface de usuário nativa personalizada da Braze. |
 | [Push]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/) | Dispare automaticamente notificações por push de campanhas de mensagens ou itens de notícias usando o serviço de Notificações por Push da Apple (APNs) para iOS ou o Firebase Cloud Messaging (FCM) para Android. |
-| [SMS/MMS*]({{site.baseurl}}/user_guide/message_building_by_channel/sms/about_sms/) | Use SMS/MMS para enviar notificações de transações, compartilhar promoções, enviar lembretes e muito mais. |
+| [SMS, MMS e RCS]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs)* | Use SMS, MMS ou RCS para enviar notificações transacionais, compartilhar promoções, enviar lembretes e mais. |
 | [Web push]({{site.baseurl}}/user_guide/message_building_by_channel/push/web) | Envie notificações ao navegador da Web, mesmo que os usuários não estejam ativos no site no momento. |
 | [Webhooks]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/) | Use webhooks para disparar ações que não sejam do aplicativo, fornecendo dados em tempo real a outros sistemas e aplicativos. |
 | [WhatsApp*]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/) | Conecte-se diretamente com seus usuários e clientes aproveitando a popular plataforma de envio de mensagens ponto a ponto: WhatsApp. |
@@ -117,7 +117,7 @@ Como um recurso técnico, você estará envolvido em muitos dos detalhes básico
 
 | Recursos | O que você aprenderá|
 |---|---|
-| [Depurando o SDK]({{site.baseurl}}/developer_guide/sdk_integration/debugging) | Ao solucionar problemas da sua integração, a ferramenta de debug do SDK será uma ferramenta útil. Certifique-se de tê-la à mão! |
+| [Depurando o SDK]({{site.baseurl}}/developer_guide/sdk_integration/debugging) | Ao solucionar problemas na sua integração, a ferramenta de debug do SDK será uma ferramenta útil. Certifique-se de tê-la à mão! |
 | [GitHub público do Braze](https://github.com/braze-inc/) | Você encontrará informações detalhadas sobre integração e exemplos de código em nosso repositório do GitHub. |
 | [Repositório GitHub do Android SDK](https://github.com/braze-inc/braze-android-sdk/) | O repositório GitHub do Android SDK. |
 | [Referência do SDK do Android](https://appboy.github.io/appboy-android-sdk/kdoc/index.html) | Documentação de classe para o Android SDK. |

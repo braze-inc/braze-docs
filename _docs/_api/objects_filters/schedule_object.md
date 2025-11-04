@@ -1,5 +1,5 @@
 ---
-nav_title: "Schedule Object"
+nav_title: "Schedule object"
 article_title: API Schedule Object
 page_order: 12
 page_type: reference

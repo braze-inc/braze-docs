@@ -1,5 +1,5 @@
 ---
-nav_title: Email Sign-up with Confirmation
+nav_title: Email sign-up with confirmation
 article_title: Email Sign-up with Confirmation Page
 alias: "/email_confirmation_page/"
 page_order: 6

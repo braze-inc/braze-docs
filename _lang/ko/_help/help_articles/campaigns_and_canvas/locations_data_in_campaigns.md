@@ -22,20 +22,16 @@ Braze는 기본적으로 SDK를 통해 사용자의 가장 최근 위치를 캡�
 
 사용자 위치 데이터가 Braze로 전송되고 있는지 확인하려면 **위치 사용 가능** 필터를 사용하세요. 이 필터를 사용하면 '가장 최근 위치'를 가진 사용자의 비율을 확인할 수 있습니다.
 
-![][25]
+![]({% image_buster /assets/img_archive/trouble7.png %})
 
 ## 데이터 전송
 
 개발자가 위치 데이터를 Braze에 전달하고 있는지 확인하세요. 일반적으로 위치 데이터 전달은 사용자가 권한을 부여한 후 SDK에서 자동으로 처리되지만, 개발자가 Braze에서 위치 추적을 비활성화했을 수 있습니다. 위치 추적에 대한 자세한 내용은 다음에서 확인할 수 있습니다:
-- [Android][26]
-- [iOS][27]
-- [웹][28]
+- [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/location_tracking/)
+- [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/location_tracking/)
+- [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/location_tracking/)
 
 아직도 도움이 필요하신가요? [지원 티켓]({{site.baseurl}}/braze_support/)을 여세요.
 
 _마지막 업데이트: 2022년 11월 16일_
 
-[25]: {% image_buster /assets/img_archive/trouble7.png %}
-[26]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/location_tracking/
-[27]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/location_tracking/
-[28]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/location_tracking/

@@ -1,6 +1,6 @@
 ---
 nav_title: Metadata
-article: Metadata
+article_title: Metadata
 description: "These are the metadata keys that can be added to a page's YAML front matter."
 page_order: 0
 noindex: true
@@ -87,6 +87,29 @@ nav_title: Getting started
 {% endtabs %}
 
 ## Optional keys
+
+### `alias`
+
+The `alias` key is used to create an alternate URL path for a page. This is useful for providing a simpler static link that remains valid even if a file is moved or renamed. Unlike a [redirect]({{site.baseurl}}/contributing/content_management/redirecting_urls), the alias path loads the page directly without appending `?redirect` to the URL, which makes page loading faster.
+
+In the following example, visiting `www.braze.com/docs/brazeai/liquid` will point to the real page path instead: `www.braze.com/docs/user_guide/brazeai/generative_ai/liquid`.
+
+{% tabs local %}
+{% tab usage example %}
+```markdown
+---
+nav_title: Liquid Code
+article_title: Generating Liquid code with BrazeAI
+description: "Learn about the AI Liquid Assistant and how you can use it to generate Liquid snippets for your messaging."
+alias: "/brazeai/liquid"
+---
+```
+{% endtab %}
+{% endtabs %}
+
+{% alert important %}
+Because the `alias` key must be unique across all URLs, it should only be used sparingly so it doesn't conflict with any existing or future URLs.
+{% endalert %}
 
 ### `channel`
 

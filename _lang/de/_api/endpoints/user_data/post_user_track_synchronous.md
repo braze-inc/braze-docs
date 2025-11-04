@@ -14,7 +14,7 @@ description: "Dieser Artikel beschreibt Details zum synchronen Tracking von Nutz
 /users/track/sync
 {% endapimethod %}
 
-> Verwenden Sie diesen Endpunkt, um angepasste Events und Käufe aufzuzeichnen und die Attribute des Nutzerprofils synchron zu aktualisieren. Dieser Endpunkt funktioniert ähnlich wie der [Endpunkt`/users/track` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track), der die Nutzerprofile asynchron aktualisiert.
+> Verwenden Sie diesen Endpunkt, um angepasste Events und Käufe aufzuzeichnen und die Attribute des Nutzerprofils synchron zu aktualisieren. Dieser Endpunkt funktioniert ähnlich wie der [Endpunkt `/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track), der die Nutzerprofile asynchron aktualisiert.
 
 {% alert important %}
 Dieser Endpunkt befindet sich derzeit in der Beta-Phase. Kontaktieren Sie Ihren Braze-Konto Manager:in, wenn Sie an dieser Beta teilnehmen möchten.
@@ -38,7 +38,7 @@ Kund:innen, die die API für Server-zu-Server-Aufrufe verwenden, müssen möglic
 
 ## Rate-Limit
 
-Für diesen Endpunkt gilt für alle Kund:innen ein Basisgeschwindigkeitslimit von 500 Anfragen pro Minute. Jede Anfrage von `/users/track/sync` kann bis zu einem Ereignisobjekt, einem Attribut-Objekt oder einem Kauf-Objekt enthalten. Jedes Objekt (Ereignis-, Attribut- und Kauf-Arrays) kann jeweils eine:n Nutzer:in aktualisieren.
+Für diesen Endpunkt gilt für alle Kund:in ein Basisgeschwindigkeitslimit von 500 Anfragen pro Minute. Jede Anfrage von `/users/track/sync` kann bis zu einem Ereignisobjekt, einem Attribut-Objekt oder einem Kauf-Objekt enthalten. Jedes Objekt (Ereignis-, Attribut- und Kauf-Arrays) kann jeweils eine:n Nutzer:in aktualisieren.
 
 ## Anfragetext
 

@@ -1,5 +1,5 @@
 ---
-nav_title: チャネル別メッセージ構築
+nav_title: チャネル別のメッセージング構築
 article_title: チャネル別メッセージ構築
 page_order: 5
 layout: dev_guide
@@ -10,6 +10,9 @@ description: "このランディングページは、Braze メッセージング
 
 guide_featured_title: "使用可能なチャネル"
 guide_featured_list:
+- name: バナー
+  link: /docs/user_guide/message_building_by_channel/banners/
+  image: /assets/img/braze_icons/table.svg
 - name: コンテンツカードによって促進された
   link: /docs/user_guide/message_building_by_channel/content_cards/
   image: /assets/img/braze_icons/table.svg
@@ -22,8 +25,8 @@ guide_featured_list:
 - name: プッシュメッセージング
   link: /docs/user_guide/message_building_by_channel/push/
   image: /assets/img/braze_icons/marker-pin-01.svg
-- name: SMS &amp; MMS
-  link: /docs/user_guide/message_building_by_channel/sms/
+- name: SMS、MMS、RCS
+  link: /docs/user_guide/message_building_by_channel/sms_mms_rcs/
   image: /assets/img/braze_icons/message-text-circle-01.svg
 - name: Webhook
   link: /docs/user_guide/message_building_by_channel/webhooks/
@@ -32,6 +35,15 @@ guide_featured_list:
   link: /docs/user_guide/message_building_by_channel/whatsapp/
   image: /assets/img/braze_icons/whatsapp.svg
 ---
+
+## アクセシビリティに関するリソース
+
+Braze を使えば、各チャネルでアクセスしやすいメッセージングキャンペーンを作成できます。エンジニアと協力して、実装においてアクセシビリティ基準を満たすようにしてください。追加のガイダンスが必要な場合は、以下をお勧めします。
+
+- [アクセシブルなメッセージの基礎](https://learning.braze.com/accessible-messaging-foundations):この Braze ラーニングコースでは、ブランドコミュニケーションに適用される基本的なアクセシビリティの原則を学びます。
+- [アクセシブルなメッセージを作成する]({{site.baseurl}}/help/accessibility/):代替テキストを追加し、Braze 内で支援技術向けのコンテンツを直接構造化する方法について説明します。
+
+{% multi_lang_include accessibility/feedback.md %}
 
 ## メッセージチャネルの選択
 
@@ -42,7 +54,7 @@ guide_featured_list:
 
 次のマトリックスは、重要なメッセージングチャネルの長所と短所を、内容と緊急性の観点から表示しています。メッセージの緊急性とコンテンツがどの程度リッチであるべきかを常に考えてから、キャンペーンに適したチャネルを選択してください。
 
-![モバイル/Web プッシュはシンプルな内容で緊急性が高い。メールはリッチな内容で緊急性が高い。アプリ内/ブラウザーメッセージはシンプルな内容で緊急性が低い。コンテンツカードは緊急性が低く、リッチな内容である]({% image_buster /assets/img_archive/messaging_matrix.png %})
+\![モバイル＆Webプッシュはシンプルなコンテンツ、緊急度が高い、メールはリッチコンテンツ、緊急度が高い、アプリ内／ブラウザメッセージはシンプルなコンテンツ、緊急度が低い、コンテンツカードは緊急度が低い、リッチコンテンツである。]({% image_buster /assets/img_archive/messaging_matrix.png %})
 
 このマトリックスを活用する方法の詳細については、Braze ラーニングコースの「[メッセージングマトリックスを理解する](https://learning.braze.com/understand-the-messaging-matrix)」をご覧ください。
 

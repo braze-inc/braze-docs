@@ -1,7 +1,7 @@
 ---
 nav_title: "Nutzer:innen einstellen"
 article_title: "Festlegen von Nutzer:innen IDs über das Braze SDK"
-page_order: 1.2
+page_order: 1.1
 description: "Lernen Sie, wie Sie Nutzer:innen IDs über das Braze SDK festlegen."
 
 ---
@@ -56,7 +56,7 @@ AppDelegate.braze?.changeUser(userId: "YOUR_USER_ID")
 {% endtab %}
 
 {% tab WEB %}
-Für eine standardmäßige Internet SDK-Implementierung können Sie die folgende Methode verwenden:
+Für eine Standard Internet SDK-Implementierung können Sie die folgende Methode verwenden:
 
 ```javascript
 braze.changeUser(YOUR_USER_ID_STRING);
@@ -95,7 +95,7 @@ UBraze->ChangeUser(TEXT("YOUR_USER_ID_STRING"));
 {% endtabs %}
 
 {% alert warning %}
-**Weisen Sie keine statische Standard ID zu oder rufen Sie `changeUser()` an, wenn sich ein Nutzer:innen abmeldet.** Auf diese Weise können Sie keine erneute Interaktion mit zuvor eingeloggten Nutzer:innen auf gemeinsam genutzten Geräten durchführen. Verfolgen Sie stattdessen alle Nutzer:in separat und stellen Sie sicher, dass der Abmeldeprozess Ihrer App es zulässt, zu einem zuvor angemeldeten Nutzer:in zurückzukehren. Wenn eine neue Sitzung beginnt, aktualisiert Braze automatisch die Daten für das neu aktive Profil.
+**Weisen Sie keine statische Standard ID zu oder rufen Sie `changeUser()` an, wenn sich ein Nutzer:innen abmeldet.** Auf diese Weise können Sie keine erneute Interaktion mit zuvor eingeloggten Nutzer:innen auf gemeinsam genutzten Geräten durchführen. Verfolgen Sie stattdessen alle Nutzer:innen IDs separat und stellen Sie sicher, dass der Abmeldeprozess Ihrer App den Wechsel zu einem zuvor angemeldeten Nutzer:innen zulässt. Wenn eine neue Sitzung beginnt, aktualisiert Braze automatisch die Daten für das neu aktive Profil.
 {% endalert %}
 
 ## Nutzer-Aliasse
@@ -163,7 +163,7 @@ Wir empfehlen Ihnen, Nutzer:innen IDs nach dem [UUID-Standard (Universally Uniqu
 
 Alternativ können Sie einen vorhandenen eindeutigen Bezeichner (z.B. einen Namen oder eine E-Mail Adresse) hashen, um stattdessen Ihre Nutzer:innen zu generieren. Wenn Sie dies tun, stellen Sie sicher, dass Sie eine [SDK-Authentifizierung]({{site.baseurl}}/developer_guide/authentication/) implementieren, damit Sie Nutzer:innen vor einem Identitätswechsel schützen können.
 
-Es ist zwar wichtig, dass Sie Ihre Nutzer:innen IDs von Anfang an richtig benennen, aber Sie können sie in Zukunft jederzeit mit Hilfe des [`/users/external_ids/rename`]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/) Endpunkt.
+Es ist zwar wichtig, dass Sie Ihre Nutzer:innen IDs von Anfang an richtig benennen, aber Sie können sie in Zukunft jederzeit mit dem [`/users/external_ids/rename`]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/) Endpunkt.
 
 | Empfohlen | Nicht empfohlen |
 | ------------ | ----------- |

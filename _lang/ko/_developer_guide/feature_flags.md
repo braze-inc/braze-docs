@@ -57,6 +57,9 @@ Braze 기능 플래그를 사용하면 대신 점진적으로 기능을 롤아�
 
 앱 코드에서는 Braze 기능 플래그가 활성화된 경우에만 **라이브 채팅 시작** 버튼이 표시됩니다:
 
+{% tabs %}
+{% tab 자바스크립트 %}
+
 ```javascript
 import {useState} from "react";
 import * as braze from "@braze/web-sdk";
@@ -76,8 +79,56 @@ return (<>
   Need help? <button>Email Our Team</button>
   {liveChatEnabled && <button>Start Live Chat</button>}
 </>)
+```
+
+{% endtab %}
+{% tab Java %}
+
+```java
+// Get the initial value from the Braze SDK
+FeatureFlag featureFlag = braze.getFeatureFlag("enable_live_chat");
+Boolean liveChatEnabled = featureFlag != null && featureFlag.getEnabled();
+
+// Listen for updates from the Braze SDK
+braze.subscribeToFeatureFlagsUpdates(event -> {
+  FeatureFlag newFeatureFlag = braze.getFeatureFlag("enable_live_chat");
+  Boolean newValue = newFeatureFlag != null && newFeatureFlag.getEnabled();
+  liveChatEnabled = newValue;
+});
+
+// Only show the Live Chat view if the Braze SDK determines it is enabled
+if (liveChatEnabled) {
+  liveChatView.setVisibility(View.VISIBLE);
+} else {
+  liveChatView.setVisibility(View.GONE);
+}
+```
+
+{% endtab %}
+{% tab Kotlin %}
+
+```kotlin
+// Get the initial value from the Braze SDK
+val featureFlag = braze.getFeatureFlag("enable_live_chat")
+var liveChatEnabled = featureFlag?.enabled
+
+// Listen for updates from the Braze SDK
+braze.subscribeToFeatureFlagsUpdates() { event ->
+  val newValue = braze.getFeatureFlag("enable_live_chat")?.enabled
+  liveChatEnabled = newValue
+}
+
+// Only show the Live Chat view if the Braze SDK determines it is enabled
+if (liveChatEnabled) {
+  liveChatView.visibility = View.VISIBLE
+} else {
+  liveChatView.visibility = View.GONE
+}
 
 ```
+
+{% endtab %}
+{% endtabs %}
 
 ### 앱 변수 원격 제어
 
@@ -92,6 +143,9 @@ return (<>
 ![일반 판매 페이지로 연결되는 링크 및 텍스트 속성이 있는 기능 플래그.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-navigation-link-1.png %})
 
 앱에서는 Braze의 getter 메서드를 사용하여 이 기능 플래그의 속성정보를 검색하고 해당 값을 기반으로 탐색 링크를 빌드합니다.
+
+{% tabs %}
+{% tab 자바스크립트 %}
 
 ```javascript
 import * as braze from "@braze/web-sdk";
@@ -114,6 +168,40 @@ return (<>
   </div>
 </>)
 ```
+
+{% endtab %}
+{% tab Java %}
+
+```java
+// liveChatView is the View container for the Live Chat UI
+FeatureFlag featureFlag = braze.getFeatureFlag("navigation_promo_link");
+if (featureFlag != null && featureFlag.getEnabled()) {
+  liveChatView.setVisibility(View.VISIBLE);
+} else {
+  liveChatView.setVisibility(View.GONE);
+}
+liveChatView.setPromoLink(featureFlag.getStringProperty("link"));
+liveChatView.setPromoText(featureFlag.getStringProperty("text"));
+
+```
+
+{% endtab %}
+{% tab Kotlin %}
+
+```kotlin
+// liveChatView is the View container for the Live Chat UI
+val featureFlag = braze.getFeatureFlag("navigation_promo_link")
+if (featureFlag?.enabled == true) {
+  liveChatView.visibility = View.VISIBLE
+} else {
+  liveChatView.visibility = View.GONE
+}
+liveChatView.promoLink = featureFlag?.getStringProperty("link")
+liveChatView.promoText = featureFlag?.getStringProperty("text")
+```
+
+{% endtab %}
+{% endtabs %}
 
 이제 추수감사절 전날에는 Braze 대시보드에서 해당 속성정보 값만 변경하면 됩니다.
 
@@ -149,6 +237,9 @@ return (<>
 
 앱에서 기능 플래그가 활성화되어 있는지 여부를 확인하고 응답에 따라 결제 흐름을 교체합니다:
 
+{% tabs %}
+{% tab 자바스크립트 %}
+
 ```javascript
 import * as braze from "@braze/web-sdk";
 
@@ -160,6 +251,35 @@ if (featureFlag?.enabled) {
   return <OldCheckoutFlow />
 }
 ```
+
+{% endtab %}
+{% tab Java %}
+
+```java
+FeatureFlag featureFlag = braze.getFeatureFlag("enable_checkout_v2");
+braze.logFeatureFlagImpression("enable_checkout_v2");
+if (featureFlag != null && featureFlag.getEnabled()) {
+  return new NewCheckoutFlow();
+} else {
+  return new OldCheckoutFlow();
+}
+```
+
+{% endtab %}
+{% tab Kotlin %}
+
+```kotlin
+val featureFlag = braze.getFeatureFlag("enable_checkout_v2")
+braze.logFeatureFlagImpression("enable_checkout_v2")
+if (featureFlag?.enabled == true) {
+  return NewCheckoutFlow()
+} else {
+  return OldCheckoutFlow()
+}
+```
+
+{% endtab %}
+{% endtabs %}
 
 [기능 플래그 실험에서]({{site.baseurl}}/developer_guide/feature_flags/experiments/) A/B 테스트를 설정하겠습니다.
 

@@ -12,9 +12,9 @@ tool: Canvas
 
 > 캔버스의 작업 경로를 사용하면 사용자의 작업에 따라 사용자를 정렬할 수 있습니다. 
 
-작업 경로를 사용하면 가능합니다.
+![캔버스 사용자 여정의 액션 경로 단계]({% image_buster /assets/img/canvas_actionpath.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
-![캔버스 사용자 여정의 첫 번째 단계인 작업 경로 단계입니다.][1]{: style="float:right;max-width:40%;margin-left:15px;"}
+작업 경로를 사용하면 가능합니다.
 
 * 사용자 참여 이벤트 및 사용자 지정 이벤트 등 특정 행동을 기반으로 사용자 경로를 사용자 지정합니다.
 * 이 평가 기간 동안 사용자의 행동에 따라 다음 경로의 우선순위를 정하기 위해 주어진 기간 동안 사용자를 보류합니다.
@@ -29,7 +29,7 @@ tool: Canvas
 
 **작업 설정에서** **순위 순서에 따른 고급 사용자** 토글을 켜서 구성 요소의 순위 순서를 설정할 수도 있습니다.
 
-![평가 기간이 1일인 작업 설정입니다.][4]
+![평가 기간이 1일인 조치 설정]({% image_buster /assets/img/actionpath_settings.png %})
 
 기본적으로 **순위**는 꺼져 있습니다. 사용자가 행동 경로에 들어가서 동작 그룹에 연결된 트리거 이벤트를 수행하면 해당 동작 그룹을 통해 즉시 진행됩니다. 사용자가 트리거 이벤트를 수행하지 않으면 평가 기간이 끝날 때 기본 **모두 기타** 그룹으로 진행됩니다.
 
@@ -63,7 +63,7 @@ tool: Canvas
 - 지오펜스 트리거
 - SMS 또는 WhatsApp 인바운드 메시지 보내기
 
-![모든 구매를 하는 사용자를 위한 '그룹 1'이라는 작업 그룹입니다.][3]
+![구매를 하는 사용자를 위한 '그룹 1'이라는 작업 그룹.]({% image_buster /assets/img/actionpath_group.png %})
 
 각 활동 그룹 설정에서 **이 그룹이 캔버스에서 나가기를 원함** 확인란을 선택하여 이 그룹에 속한 사용자가 평가 기간이 끝나면 캔버스에서 나가도록 하는 옵션도 있습니다.
 
@@ -80,6 +80,3 @@ tool: Canvas
 Note that the rankings aren't [editable after launch]({{site.baseurl}}/post-launch_edits/).
 
 
-[1]: {% image_buster /assets/img/canvas_actionpath.png %}
-[3]: {% image_buster /assets/img/actionpath_group.png %}
-[4]: {% image_buster /assets/img/actionpath_settings.png %} 

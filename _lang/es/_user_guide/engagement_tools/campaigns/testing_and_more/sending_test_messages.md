@@ -1,6 +1,6 @@
 ---
-nav_title: Cómo enviar mensajes de prueba
-article_title: Cómo enviar mensajes de prueba
+nav_title: Envío de mensajes de prueba
+article_title: Envío de mensajes de prueba
 page_order: 0
 tool: 
   - Campaigns
@@ -11,89 +11,81 @@ description: "Este artículo de referencia explica cómo enviar mensajes de prue
 
 # Envío de mensajes de prueba
 
-> Antes de enviar una campaña de mensajería a tus usuarios, como mejor práctica sugerida, te recomendamos que la pruebes para asegurarte de que tiene el aspecto adecuado y funciona según lo previsto. Puede crear y enviar mensajes de prueba a determinados dispositivos o miembros del equipo mediante las herramientas del panel Braze.
+> Antes de enviar una campaña de mensajería a tus usuarios, como mejor práctica sugerida, te recomendamos que la pruebes para asegurarte de que tiene el aspecto adecuado y funciona según lo previsto. Puedes crear y enviar mensajes de prueba a determinados dispositivos o miembros del equipo utilizando las herramientas del panel de Braze.
 
 {% alert important %}
-Asegúrese de guardar el borrador de la campaña después de probarla para evitar que se borre. Puedes enviar mensajes de prueba sin guardar el mensaje como borrador.
+Asegúrate de guardar el borrador de tu campaña después de probarla para evitar que se borre. Puedes enviar mensajes de prueba sin guardar el mensaje como borrador.
 {% endalert %}
 
 ## Paso 1: Identifica a tus usuarios de prueba
 
-Antes de probar su campaña de mensajería, es importante identificar a sus usuarios de prueba. Estos usuarios pueden ser ID de usuario o direcciones de correo electrónico existentes, o bien usuarios nuevos que se utilizan exclusivamente para probar campañas de mensajería. 
+Antes de probar tu campaña de mensajería, es importante identificar a tus usuarios de prueba. Estos usuarios pueden ser ID de usuario o direcciones de correo electrónico existentes, o usuarios nuevos que se utilizan exclusivamente para probar campañas de mensajería. 
 
 ### Opcional: Crear un grupo de prueba de contenidos
 
-Una forma práctica de organizar a los usuarios de prueba es crear un [Grupo de prueba de contenido]({{site.baseurl}}/user_guide/administrative/app_settings/internal_groups_tab/), que incluye un grupo de usuarios que recibirán mensajes de prueba de las campañas. Puede añadir este grupo de prueba en el campo **Añadir grupos de prueba de contenido** bajo **Destinatarios de prueba** en su campaña, y lanzar sus pruebas sin crear o añadir usuarios de prueba individuales.
+Una forma práctica de organizar a tus usuarios de prueba es crear un [Grupo de prueba de contenido]({{site.baseurl}}/user_guide/administrative/app_settings/internal_groups_tab/), que incluye un grupo de usuarios que recibirán mensajes de prueba de las campañas. Puedes añadir este grupo de prueba al campo **Añadir grupos de prueba de contenido** en **Destinatarios de prueba** de tu campaña, y lanzar tus pruebas sin crear ni añadir usuarios de prueba individuales.
 
-## Paso 2: Enviar mensajes de prueba específicos del canal
+## Paso 2: Enviar mensajes de prueba específicos del canal
 
-Para conocer los pasos para enviar mensajes de prueba, consulte la siguiente sección para su canal respectivo.
+Para conocer los pasos para enviar mensajes de prueba, consulta la sección siguiente para tu canal respectivo.
 
-{% tabs %}
-{% tab Correo electrónico %}
+{% tabs local %}
+{% tab Email %}
 
-1. Redacte su mensaje de correo electrónico.
-2. Haga clic en **Previsualizar y probar**.
-3. Seleccione la pestaña **Enviar prueba** y añada su dirección de correo electrónico o ID de usuario en el campo **Añadir usuarios individuales**. 
-4. Haga clic en **Enviar prueba** para enviar el borrador de correo electrónico a su bandeja de entrada.
+1. Redacta tu mensaje de correo electrónico.
+2. Selecciona **Vista previa y Prueba**.
+3. Selecciona la pestaña **Envío de prueba** y añade tu dirección de correo electrónico o ID de usuario en el campo **Añadir usuarios individuales**. 
+4. Selecciona **Enviar prueba** para enviar el correo electrónico redactado a tu buzón de entrada.
 
-![Correo electrónico de prueba]({% image_buster /assets/img_archive/testemail.png %}){: style="max-width:40%;" }
+\![Correo electrónico de prueba]({% image_buster /assets/img_archive/testemail.png %}){: style="max-width:40%;" }
 
 {% endtab %}
 {% tab Push %}
 
-#### Notificaciones push móvil
+#### Push móvil
 
 1. Redacta tu push móvil.
-2. Seleccione la pestaña **Configuración** y añada su dirección de correo electrónico o ID de usuario en el campo **Añadir usuarios individuales**.
-3. Haz clic en **Enviar prueba** para enviar el mensaje redactado a tu dispositivo.
+2. Selecciona la pestaña **Configuración** y añade tu dirección de correo electrónico o ID de usuario en el campo **Añadir usuarios individuales**.
+3. Selecciona **Enviar prueba** para enviar tu mensaje redactado a tu dispositivo.
 
-![Push de prueba]({% image_buster /assets/img_archive/testpush.png %})
+\![Prueba push]({% image_buster /assets/img_archive/testpush.png %})
 
 #### Web push
 
 1. Crea tu notificación push web.
-2. Seleccione la pestaña **Prueba**. 
-3. Comprueba **Enviar prueba a mí mismo**.
-4. Haga clic en **Enviar prueba** para enviar su web push a su navegador web.
+2. Selecciona la pestaña **Prueba**. 
+3. Selecciona **Enviar prueba a mí mismo**.
+4. Selecciona **Enviar prueba** para enviar tu notificación push web a tu navegador web.
 
-![Notificación push web de prueba]({% image_buster /assets/img_archive/testwebpush.png %})
+\![Prueba push web]({% image_buster /assets/img_archive/testwebpush.png %})
 
-Si ya has aceptado mensajes push desde el salpicadero de Braze, el push aparecerá en la esquina de tu pantalla. De lo contrario, haga clic en **Permitir** cuando se le solicite y aparecerá el mensaje.
+Si ya has aceptado mensajes push desde el panel de Braze, el push aparecerá en la esquina de tu pantalla. De lo contrario, haz clic en **Permitir** cuando se te solicite y aparecerá el mensaje.
 
 {% endtab %}
-{% tab Mensaje en la aplicación %}
+{% tab In-App Message %}
 
-Si tienes configuradas notificaciones push en tu aplicación y en tu dispositivo de prueba, puedes enviar mensajes de prueba a tu aplicación para ver cómo se ve en tiempo real. 
+Si tienes configuradas notificaciones push dentro de tu aplicación y en tu dispositivo de prueba, puedes enviar mensajes dentro de la aplicación de prueba a tu aplicación para ver cómo es en tiempo real. 
 
-1. Redacta tu mensaje en la aplicación.
-2. Seleccione la pestaña **Prueba** y añada su dirección de correo electrónico o ID de usuario en el campo **Añadir usuarios individuales**. 
-3. Haga clic en **Enviar prueba** para enviar el mensaje push al dispositivo.
+1. Redacta tu mensaje dentro de la aplicación.
+2. Selecciona la pestaña **Prueba** y añade tu dirección de correo electrónico o ID de usuario en el campo **Añadir usuarios individuales**. 
+3. Selecciona **Enviar prueba** para enviar tu mensaje push a tu dispositivo.
 
 Aparecerá un mensaje push de prueba en la parte superior de la pantalla de tu dispositivo.
 
-![Pruebe In App]({% image_buster /assets/img_archive/test-in-app.png %})
+Prueba en la aplicación]({% image_buster /assets/img_archive/test-in-app.png %})
 
-Al hacer clic directamente en el mensaje push y abrirlo, accederá a su aplicación, donde podrá ver su prueba de mensajes in-app. Tenga en cuenta que esta función de prueba de mensajes en la aplicación depende de que el usuario haga clic en una notificación push de prueba para activar el mensaje en la aplicación. Para que la notificación push de prueba se envíe correctamente, el usuario debe estar habilitado para recibir notificaciones push en la aplicación correspondiente.
-
-#### Solución de problemas
-
-* Si tu campaña de mensajes in-app no se activa con una campaña push, comprueba la segmentación de la campaña in-app para confirmar que el usuario se ajusta al público objetivo **antes de** recibir el mensaje push.
-* En los envíos de prueba en Android e iOS, es posible que los mensajes in-app que utilizan el comportamiento **Solicitar permiso** push al hacer clic no se muestren en algunos dispositivos. Como solución:
-  * **Android:** Los dispositivos deben tener Android 13 y nuestro SDK para Android versión 21.0.0. Otra razón puede ser que el dispositivo en el que se muestra el mensaje in-app ya tenga un aviso a nivel de sistema. Es posible que hayas seleccionado **No volver a preguntar**, por lo que puede que tengas que reinstalar la aplicación para restablecer los permisos de notificación antes de volver a probarla.
-  * **iOS:** Recomendamos a su equipo de desarrolladores que revise la implementación de las notificaciones push para su aplicación y elimine manualmente cualquier código que solicite permisos push. Para más información, consulta [Mensajes push primer dentro de la aplicación]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/).
-* Para que una campaña de mensajes in-app basada en acciones se entregue, los eventos personalizados deben registrarse a través del SDK Braze, no de las API REST, para que el usuario pueda recibir los mensajes in-app elegibles directamente en su dispositivo. Los usuarios pueden recibir el mensaje in-app si realizan el evento durante la sesión.
+Si haces clic directamente y abres el mensaje push, accederás a tu aplicación, donde podrás ver tu prueba de mensajes dentro de la aplicación. Ten en cuenta que esta característica de prueba de mensajes dentro de la aplicación depende de que el usuario haga clic en una notificación push de prueba para desencadenar el mensaje dentro de la aplicación. Como tal, el usuario debe ser elegible para recibir notificaciones push en la aplicación correspondiente para la entrega correcta de la notificación push de prueba.
 
 {% endtab %}
-{% tab Tarjeta de contenido %}
+{% tab Content Card %}
 
-Después de crear su tarjeta de contenido, puede enviar una tarjeta de contenido de prueba a su aplicación para ver qué aspecto tendrá en tiempo real.
+Después de crear tu tarjeta de contenido, puedes enviar una tarjeta de contenido de prueba a tu aplicación para ver qué aspecto tendrá en tiempo real.
 
 1. Redacta tu tarjeta de contenido.
-2. Seleccione la pestaña **Prueba** y seleccione al menos un grupo de prueba de contenido o un usuario individual para recibir este mensaje de prueba. 
-3. Haga clic en **Enviar prueba** para enviar la tarjeta de contenido a la aplicación.
+2. Selecciona la pestaña **Prueba** y selecciona al menos un grupo de prueba de contenido o un usuario individual para recibir este mensaje de prueba. 
+3. Selecciona **Enviar prueba** para enviar tu tarjeta de contenido a tu aplicación.
 
-![Tarjeta de contenido de prueba]({% image_buster /assets/img/contentcard_test.png %})
+\![Tarjeta de contenido de prueba]({% image_buster /assets/img/contentcard_test.png %})
 
 {% endtab %}
 {% tab SMS/MMS %}
@@ -101,131 +93,116 @@ Después de crear su tarjeta de contenido, puede enviar una tarjeta de contenido
 Después de crear tu mensaje SMS o MMS, puedes enviar un mensaje de prueba a tu teléfono para ver qué aspecto tendrá en tiempo real. 
 
 1. Redacta tu mensaje SMS o MMS.
-2. Seleccione la pestaña **Prueba** y seleccione al menos un grupo de prueba de contenido o un usuario individual para recibir este mensaje de prueba. 
-3. Haga clic en **Enviar prueba** para enviar su mensaje de prueba.
+2. Selecciona la pestaña **Prueba** y selecciona al menos un grupo de prueba de contenido o un usuario individual para recibir este mensaje de prueba. 
+3. Selecciona **Enviar prueba** para enviar tu mensaje de prueba.
 
-![Tarjeta de contenido de prueba]({% image_buster /assets/img/sms_test.png %})
+\![Tarjeta de contenido de prueba]({% image_buster /assets/img/sms_test.png %})
 
 {% endtab %}
 {% tab Webhook %}
 
-Después de crear tu webhook, puedes hacer un envío de prueba para comprobar la respuesta del webhook. Seleccione la pestaña **Prueba** y seleccione **Enviar prueba** para enviar un envío de prueba a la URL de webhook suministrada. También puede seleccionar un usuario individual para previsualizar la respuesta como un usuario específico. 
+Después de crear tu webhook, puedes hacer un envío de prueba para comprobar la respuesta del webhook. Selecciona la pestaña **Prueba** y selecciona **Enviar prueba** para realizar un envío de prueba a la URL del webhook suministrado. También puedes seleccionar un usuario individual para obtener una vista previa de la respuesta como usuario específico. 
 
-![Tarjeta de contenido de prueba]({% image_buster /assets/img/webhook_test.png %})
-
-{% endtab %}
-{% tab Canal de noticias %}
-
-{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
-
-Para enviar una tarjeta de noticias de prueba es necesario configurar un segmento de prueba y enviar una campaña de prueba.
-
-##### Paso 1: Crear un segmento de prueba designado
-
-Una vez configurado un segmento de prueba, puede utilizar estos canales de mensajería. El proceso requiere unos breves pasos y, si se configura correctamente, sólo tendrá que hacerse una vez.
-
-1. Vaya a la página **Segmentos** y [cree un nuevo segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/). 
-2. Haga clic en el menú desplegable de **Añadir filtro** y localice los filtros de comprobación en la parte inferior de la lista <br><br>![Prueba de filtros]({% image_buster /assets/img_archive/testmessages1.png %})<br><br>
-3. Utilice los filtros de comprobación para seleccionar usuarios con direcciones de correo electrónico específicas o [ID de usuario]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=swift) externos.<br><br>![Prueba de las opciones de filtro]({% image_buster /assets/img_archive/testmessages2.png %})
-<br><br>Estos filtros tienen las siguientes opciones:
-- **Es igual**: Busca una coincidencia exacta con el correo electrónico o el ID de usuario que proporcione. Utilízalo si solo quieres enviar las campañas de prueba a dispositivos asociados a un único correo electrónico o ID de usuario.
-- **No es igual**: Excluye un determinado correo electrónico o ID de usuario de las campañas de prueba.
-- **Partidos**: Busca usuarios que tengan direcciones de correo electrónico o ID de usuario que coincidan con parte del término de búsqueda que proporciones. Podrías utilizarlo para encontrar sólo a los usuarios con una dirección "@yourcompany.com", lo que te permitiría enviar mensajes a todos los miembros de tu equipo.
-<br><br>
-Estos filtros también pueden utilizarse conjuntamente para limitar la lista de usuarios de prueba. Por ejemplo, el segmento de prueba podría incluir un filtro de direcciones de correo electrónico que `matches` "@braze.com" y otro filtro que `does not equal` "sales@braze.com". También puedes seleccionar varios correos electrónicos específicos utilizando la opción `matches` y separando las direcciones de correo electrónico con un carácter "|" (por ejemplo, `matches` "email1@braze.com|email2@braze.com").
-<br><br>
-4. Añada los filtros de prueba a su segmento de prueba.
-5. Haga clic en **Vista previa** en la parte superior del editor de segmentos o exporte los datos de usuario de ese segmento a CSV para verificar que ha seleccionado sólo los usuarios que pretendía.
-6. Haga clic en el menú desplegable **Datos de usuario** y seleccione **CSV Exportar todos los datos de usuario** para exportar los datos de usuario del segmento. 
-
-![Verificar segmento de prueba]({% image_buster /assets/img_archive/testmessages3.png %})
-
-> Exportar los datos de usuario del segmento en formato CSV te dará la imagen más precisa de quién se incluye en ese segmento. La ficha **Vista previa** es sólo una muestra de los usuarios del segmento y, por lo tanto, puede parecer que no se han seleccionado todos los miembros previstos. Para más información, consulte [Visualización y comprensión de datos de segmentos][7].
-
-Una vez que haya confirmado que sólo se dirige a los usuarios que desea que reciban el mensaje de prueba, puede seleccionar este segmento en una campaña existente que desee probar o hacer clic en el botón **Iniciar campaña** del menú de segmentos.
-
-##### Paso 2: Enviar una campaña de prueba
-
-Para enviar tarjetas de noticias de prueba, debe dirigirse al segmento de prueba creado previamente. Empiece por crear una campaña multicanal y siga los pasos habituales. Cuando llegue al paso **Usuarios objetivo**, seleccione su segmento de prueba como se muestra en la siguiente imagen.
-
-![Segmento de prueba]({% image_buster /assets/img_archive/test_segment.png %})
-
-Termina de confirmar la campaña y lánzala para probar tus tarjetas de canal de noticias.
-
-> Si tiene intención de utilizar una sola campaña para enviarse un mensaje de prueba más de una vez, marque la casilla "Permitir que los usuarios vuelvan a ser elegibles para recibir la campaña" en la parte **Programación** del compositor de la campaña.
+\![Tarjeta de contenido de prueba]({% image_buster /assets/img/webhook_test.png %})
 
 {% endtab %}
 {% endtabs %}
 
 ## Probar campañas personalizadas 
 
-Si está probando campañas que rellenan datos de usuario o utilizan propiedades de evento personalizadas, tendrá que tomar medidas adicionales o diferentes.
+Si estás probando campañas que rellenan datos de usuario o utilizan propiedades del evento personalizadas, tendrás que dar pasos adicionales o diferentes.
 
-### Probar campañas personalizadas con atributos de usuario
+### Campañas de prueba personalizadas con atributos de usuario
 
-Si utiliza [personalización][26] en su mensaje, tendrá que tomar medidas adicionales para previsualizar correctamente su campaña y comprobar que los datos del usuario rellenan correctamente el contenido.
+Si utilizas [la personalización]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/overview/) en tu mensaje, tendrás que tomar medidas adicionales para previsualizar adecuadamente tu campaña y comprobar que los datos de usuario rellenan correctamente el contenido.
 
-Cuando envíe un mensaje de prueba, asegúrese de elegir la opción **Seleccionar usuario existente** o Vista previa como **usuario personalizado**.
+Cuando envíes un mensaje de prueba, asegúrate de elegir la opción **Seleccionar usuario existente** o la vista previa como **Usuario personalizado**.
 
-![Probar un mensaje personalizado][23]{: style="max-width:70%;" }
+\![Probar un mensaje personalizado]({% image_buster /assets/img_archive/personalized_testing.png %}){: style="max-width:70%;" }
 
 #### Seleccionar un usuario existente
 
-Si selecciona un usuario existente, introduzca el ID de usuario específico o el correo electrónico en el campo de búsqueda. A continuación, utiliza la vista previa del panel de control para ver qué aspecto tendría tu mensaje para ese usuario y envía un mensaje de prueba a tu dispositivo que refleje lo que vería ese usuario.
+Si seleccionas un usuario existente, introduce el ID de usuario o correo electrónico específico en el campo de búsqueda. A continuación, utiliza la vista previa del panel para ver cómo le aparecería tu mensaje a ese usuario, y envía un mensaje de prueba a tu dispositivo que refleje lo que vería ese usuario.
 
-![Seleccionar un usuario][24]
+\![Selecciona un usuario]({% image_buster /assets/img_archive/personalized_testing_select.png %})
 
 #### Seleccionar un usuario personalizado
 
-Si realiza una vista previa como usuario personalizado, introduzca texto para los distintos campos disponibles para la personalización, como el nombre del usuario y cualquier atributo personalizado. Una vez más, puedes ingresar tu propia dirección de correo electrónico para enviar una prueba a tu dispositivo.
+Si la vista previa es como usuario personalizado, introduce texto para los distintos campos disponibles para la personalización, como el nombre del usuario y cualquier atributo personalizado. Una vez más, puedes introducir tu propia dirección de correo electrónico para enviar una prueba a tu dispositivo.
 
-![Usuario personalizado][25]
+Usuario personalizado]({% image_buster /assets/img_archive/personalized_testing_custom.png %})
 
-### Probar campañas personalizadas con propiedades de eventos personalizadas
+### Probar campañas personalizadas con propiedades del evento personalizadas
 
-Probar campañas personalizadas con [propiedades de eventos personalizados][19] difiere ligeramente de probar otros tipos de campañas descritas. La forma más sólida de probar campañas personalizadas utilizando propiedades de eventos personalizados es activar la campaña usted mismo haciendo lo siguiente:
+Probar campañas personalizadas con [propiedades del evento personalizadas]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#custom-event-properties) difiere ligeramente de probar otros tipos de campañas esbozadas. 
 
-1. Escribe la copia que implica la propiedad del evento. ![Composición de mensajes de prueba con propiedades][15]
-2. Utilice [entrega basada en acciones][21] para entregar la campaña cuando se produzca el evento.
+{% tabs local %}
+{% tab Trigger manually %}
+
+#### Método 1: Desencadenar la campaña manualmente
+
+Puedes desencadenar tú mismo la campaña como una forma sólida de probar campañas personalizadas utilizando propiedades del evento personalizadas:
+
+1. Escribe la copia relativa a la propiedad del evento. 
+
+\![Componer mensaje de prueba con propiedades]({% image_buster /assets/img_archive/testeventproperties-compose.png %})
+
+{: start="2"}
+2\. Utiliza la [entrega basada en acciones]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/) para entregar la campaña cuando se produzca el evento.
 
 {% alert note %}
-Si estás probando una campaña push para iOS, debes establecer el retraso en 1 minuto para que te dé tiempo a salir de la aplicación, ya que iOS no entrega notificaciones push para la aplicación abierta en ese momento. Otros tipos de campañas pueden configurarse para delivery inmediato.
+Si estás probando una campaña push de iOS, debes establecer el retraso en un minuto para que te dé tiempo a salir de la aplicación, ya que iOS no entrega notificaciones push para la aplicación abierta en ese momento. Otros tipos de campañas pueden configurarse para que se entreguen inmediatamente.
 {% endalert %}
 
-![Entrega de mensajes de prueba][16]
+\![Prueba de entrega de mensajes]({% image_buster /assets/img_archive/testeventproperties-delivery.png %})
 
 {: start="3"}
-3\. Seleccione a los usuarios como lo haría para las pruebas utilizando un filtro de pruebas o seleccionando su propia dirección de correo electrónico y termine de crear la campaña. 
+3\. Dirígete a los usuarios como lo harías para las pruebas, utilizando un filtro de pruebas o dirigiéndote a tu propia dirección de correo electrónico, y termina de crear la campaña. 
 
-![Segmentación de mensajes de prueba][17]
+\![Prueba de selección de mensajes]({% image_buster /assets/img_archive/testeventproperties-target.png %})
 
 {: start="4"}
 4\. Entra en tu aplicación y completa el evento personalizado.
 
-La campaña se activará y mostrará el mensaje personalizado con la propiedad de evento.
+La campaña desencadenará y mostrará el mensaje personalizado con la propiedad del evento.
 
-![Ejemplo de mensaje de prueba][18]
+\![Ejemplo de mensaje de prueba]({% image_buster /assets/img_archive/testeventproperties-message2.png %})
 
-Alternativamente, si guardas ID de usuario personalizadas, también puedes probar la campaña enviándote un mensaje de prueba personalizado a ti mismo.
+{% endtab %}
+{% tab Test message %}
 
-1. Escriba el texto de su campaña.
-2. Seleccione la pestaña **Prueba** y elija **Usuario personalizado**. 
+#### Método 2: Enviarte un mensaje de prueba
+
+Alternativamente, si guardas ID de usuario personalizados, también puedes probar la campaña enviándote a ti mismo un mensaje de prueba personalizado.
+
+1. Escribe el texto de tu campaña.
+2. Selecciona la pestaña **Prueba** y elige **Usuario personalizado**. 
 3. Añade la propiedad del evento personalizado en la parte inferior de la página, y añade tu ID de usuario o dirección de correo electrónico en la casilla superior.
-4. Haga clic en **Enviar prueba** para recibir un mensaje personalizado con la propiedad.
+4. Selecciona **Enviar prueba** para recibir un mensaje personalizado con la propiedad.
 
-![Pruebas con el usuario personalizado][22]
+\![Pruebas con usuario personalizado]({% image_buster /assets/img_archive/testeventproperties-customuser.png %})
 
-[7]: {{site.baseurl}}/user_guide/data_and_analytics/reporting/viewing_and_understanding_segment_data/#user-preview
-[13]: {% image_buster /assets/img_archive/test-push-for-in-app.png %}
-[15]: {% image_buster /assets/img_archive/testeventproperties-compose.png %}
-[16]: {% image_buster /assets/img_archive/testeventproperties-delivery.png %}
-[17]: {% image_buster /assets/img_archive/testeventproperties-target.png %}
-[18]: {% image_buster /assets/img_archive/testeventproperties-message.PNG %}
-[19]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/#custom-event-properties
-[20]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/personalized_messaging/#personalized-messaging
-[21]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/
-[22]: {% image_buster /assets/img_archive/testeventproperties-customuser.png %}
-[23]: {% image_buster /assets/img_archive/personalized_testing.png %}
-[24]: {% image_buster /assets/img_archive/personalized_testing_select.png %}
-[25]: {% image_buster /assets/img_archive/personalized_testing_custom.png %}
-[26]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/overview/
+{% endtab %}
+{% tab Liquid %}
+
+#### Método 3: Utilizar Liquid
+
+Puedes probar las propiedades del evento personalizado introduciendo manualmente los valores con Liquid. 
+
+1. En el editor de mensajes, introduce valores para tus propiedades del evento personalizadas.
+2. Selecciona la pestaña **Vista previa como usuario** para comprobar que se muestra el mensaje correcto.
+
+{% endtab %}
+{% endtabs %}
+
+## Solución de problemas
+
+### Mensajes dentro de la aplicación
+
+Si tu campaña de mensajes dentro de la aplicación no está desencadenada por una campaña push, comprueba la segmentación de la campaña dentro de la aplicación para confirmar que el usuario cumple con la audiencia objetivo **antes de** recibir el mensaje push.
+
+En los envíos de prueba en Android e iOS, es posible que los mensajes dentro de la aplicación que utilizan el comportamiento **Solicitar permiso** push al hacer clic no se muestren en algunos dispositivos. Como solución:
+- **Android:** Los dispositivos deben tener Android 13 y nuestro SDK para Android versión 21.0.0. Otra razón puede ser que el dispositivo en el que se muestra el mensaje dentro de la aplicación ya tenga un aviso a nivel de sistema. Es posible que hayas seleccionado **No volver a preguntar**, por lo que puede que tengas que reinstalar la aplicación para restablecer los permisos de notificación antes de volver a probarla.
+- **iOS:** Recomendamos a tu equipo de desarrolladores que revise la implementación de las notificaciones push de tu aplicación y elimine manualmente cualquier código que solicite permisos push. Para más información, consulta [Push primer mensajes dentro de la aplicación]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/).
+
+Para entregar una campaña de mensajería dentro de la aplicación basada en acciones, los eventos personalizados deben registrarse a través del SDK de Braze, no de las API REST, para que el usuario pueda recibir mensajes elegibles dentro de la aplicación directamente en su dispositivo. Los usuarios pueden recibir el mensaje dentro de la aplicación si realizan el evento durante la sesión.

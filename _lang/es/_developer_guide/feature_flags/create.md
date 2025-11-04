@@ -109,7 +109,7 @@ Supongamos que vas a lanzar un nuevo tipo de perfil de usuario para tu aplicaci�
 
 ```javascript
 const featureFlag = braze.getFeatureFlag("expanded_user_profile");
-if (featureFlag.enabled) {
+if (featureFlag?.enabled) {
   console.log(`expanded_user_profile is enabled`);
 } else {
   console.log(`expanded_user_profile is not enabled`);
@@ -121,7 +121,7 @@ if (featureFlag.enabled) {
 
 ```swift
 let featureFlag = braze.featureFlags.featureFlag(id: "expanded_user_profile")
-if featureFlag.enabled {
+if featureFlag?.enabled == true {
   print("expanded_user_profile is enabled")
 } else {
   print("expanded_user_profile is not enabled")
@@ -131,7 +131,7 @@ if featureFlag.enabled {
 {% tab Java %}
 ```java
 FeatureFlag featureFlag = braze.getFeatureFlag("expanded_user_profile");
-if (featureFlag.getEnabled()) {
+if (featureFlag != null && featureFlag.getEnabled()) {
   Log.i(TAG, "expanded_user_profile is enabled");
 } else {
   Log.i(TAG, "expanded_user_profile is not enabled");
@@ -143,7 +143,7 @@ if (featureFlag.getEnabled()) {
 
 ```kotlin
 val featureFlag = braze.getFeatureFlag("expanded_user_profile")
-if (featureFlag.enabled) {
+if (featureFlag?.enabled == true) {
   Log.i(TAG, "expanded_user_profile is enabled.")
 } else {
   Log.i(TAG, "expanded_user_profile is not enabled.")
@@ -155,7 +155,7 @@ if (featureFlag.enabled) {
 
 ```javascript
 const featureFlag = await Braze.getFeatureFlag("expanded_user_profile");
-if (featureFlag.enabled) {
+if (featureFlag?.enabled) {
   console.log(`expanded_user_profile is enabled`);
 } else {
   console.log(`expanded_user_profile is not enabled`);
@@ -166,7 +166,7 @@ if (featureFlag.enabled) {
 {% tab Unity %}
 ```csharp
 var featureFlag = Appboy.AppboyBinding.GetFeatureFlag("expanded_user_profile");
-if (featureFlag.Enabled) {
+if (featureFlag != null && featureFlag.Enabled) {
   Console.WriteLine("expanded_user_profile is enabled");
 } else {
   Console.WriteLine("expanded_user_profile is not enabled");
@@ -177,7 +177,7 @@ if (featureFlag.Enabled) {
 {% tab Cordova %}
 ```javascript
 const featureFlag = await BrazePlugin.getFeatureFlag("expanded_user_profile");
-if (featureFlag.enabled) {
+if (featureFlag?.enabled) {
   console.log(`expanded_user_profile is enabled`);  
 } else {
   console.log(`expanded_user_profile is not enabled`);
@@ -186,8 +186,8 @@ if (featureFlag.enabled) {
 {% endtab %}
 {% tab Flutter %}
 ```dart
-BrazeFeatureFlag featureFlag = await braze.getFeatureFlagByID("expanded_user_profile");
-if (featureFlag.enabled) {
+BrazeFeatureFlag? featureFlag = await braze.getFeatureFlagByID("expanded_user_profile");
+if (featureFlag?.enabled == true) {
   print("expanded_user_profile is enabled");
 } else {
   print("expanded_user_profile is not enabled");
@@ -198,7 +198,7 @@ if (featureFlag.enabled) {
 {% tab Roku %}
 ```brightscript
 featureFlag = m.braze.getFeatureFlag("expanded_user_profile")
-if featureFlag.enabled
+if featureFlag <> invalid and featureFlag.enabled
   print "expanded_user_profile is enabled"
 else
   print "expanded_user_profile is not enabled"
@@ -277,7 +277,7 @@ m.Braze.logFeatureFlagImpression("expanded_user_profile");
 
 Para acceder a las propiedades de una bandera de característica, utiliza uno de los métodos siguientes, según el tipo que hayas definido en el panel.
 
-Si la bandera de una característica no está habilitada, o una propiedad a la que haces referencia no existe, estos métodos devolverán `null`.
+Si una propiedad a la que has hecho referencia no existe, estos métodos devolverán `null`.
 
 {% tabs %}
 {% tab JavaScript %}

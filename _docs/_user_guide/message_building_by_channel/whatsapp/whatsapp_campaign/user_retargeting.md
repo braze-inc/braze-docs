@@ -1,7 +1,7 @@
 ---
-nav_title: User Retargeting
+nav_title: User retargeting
 article_title: User Retargeting
-page_order: 3
+page_order: 4
 description: "This reference article covers how users can retarget their messages by users WhatsApp interactions."
 page_type: reference
 channel:

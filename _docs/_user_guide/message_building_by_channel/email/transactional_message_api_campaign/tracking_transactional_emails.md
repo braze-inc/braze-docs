@@ -1,5 +1,5 @@
 ---
-nav_title: Tracking Transactional Emails
+nav_title: Tracking transactional emails
 article_title: Tracking Transactional Emails
 page_order: 1
 description: "This reference article covers how to set up real-time tracking for transactional email campaigns."

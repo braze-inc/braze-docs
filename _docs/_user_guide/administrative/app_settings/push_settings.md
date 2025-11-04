@@ -1,5 +1,5 @@
 ---
-nav_title: Push Settings
+nav_title: Push settings
 article_title: Push Settings
 page_order: 16
 page_type: reference

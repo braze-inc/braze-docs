@@ -1,5 +1,5 @@
 ---
-nav_title: メールを作成する
+nav_title: メールの作成
 article_title: ユーザ定義HTMLを使用したメールの作成
 page_order: 1
 description: "この参考記事では、Brazeプラットフォームを使ってEメールを作成する方法を説明する。メッセージを作成し、コンテンツをプレビューし、キャンペーンやキャンバスのスケジュールを立てる方法についてのベストプラクティスが含まれている。"
@@ -27,7 +27,7 @@ Eメールキャンペーンの事例をご覧になりたい方は、[ケース
 メッセージは、キャンペーンとキャンバスのどちらを使用して配信すべきでしょうか。キャンペーンは単一のシンプルなメッセージングキャンペーンに適していますが、キャンバスはマルチステップのユーザーのジャーニーに適しています。
 
 {% tabs %}
-{% tab キャンペーン %}
+{% tab Campaign %}
 
 1. [**メッセージング**] > [**キャンペーン**] の順に進み、[**キャンペーンを作成**] を選択します。
 2. [**メール**] を選択するか、複数のチャネルを対象とするキャンペーンの場合は、［**マルチチャネル**] を選択します。
@@ -40,7 +40,7 @@ Eメールキャンペーンの事例をご覧になりたい方は、[ケース
 キャンペーン内のすべてのメッセージが類似しているか、同じ内容になる場合は、メッセージを作成してからバリアントを追加します。その後、[**バリアントを追加**] ドロップダウンから [**バリアントをコピー**] を選択できます。
 {% endalert %}
 {% endtab %}
-{% tab キャンバス %}
+{% tab Canvas %}
 
 1. キャンバス作成ツールを使用して [[キャンバスを作成]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/)] します。
 2. キャンバスを設定したら、キャンバスビルダーにステップを追加します。ステップに、明確で意味のある名前を付けます。
@@ -51,13 +51,15 @@ Eメールキャンペーンの事例をご覧になりたい方は、[ケース
 {% endtab %}
 {% endtabs %}
 
+{% multi_lang_include drag_and_drop/drag_and_drop_access.md variable_name='email html editor' %}
+
 ## ステップ 2: 編集経験を選択してください {#step-2-choose-your-template-and-compose-your-email}
 
 Brazeでは、メールキャンペーンを作成する際に、[ドラッグ＆ドロップエディターと]({{site.baseurl}}/dnd/)標準のHTMLエディターの2種類の編集機能を提供している。好みの編集体験に適したタイルを選ぶ。 
 
-![ドラッグ＆ドロップエディター、HTMLエディター、テンプレートのいずれかを選択し、メール編集を体験できる。][3]{: style="max-width:75%" }
+\![ドラッグアンドドロップエディタ、HTMLエディタ、またはテンプレート s をメールの編集体験用に選択します。]({% image_buster /assets/img_archive/choose_email_creation.png %}){: style="max-width:75%" }
 
-次に、既存の[メールテンプレート][10]の選択、ファイルから[テンプレートをアップロード][18] (HTML エディターのみ)、または空白のテンプレートの使用ができます。 
+次に、既存の[メールテンプレート]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/#creating-an-email-template)を選択するか、ファイルから[テンプレートをアップロード]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/html_email_template/)するか (HTML エディターのみ)、または空白のテンプレートを使用できます。 
 
 {% alert tip %}
 1つのメールキャンペーンにつき1つの編集経験を選択することをお勧めする。例えば、1つのメールキャンペーンで、エディターを切り替えるのではなく、**HTMLクラシック** **エディターかブロックエディターの**どちらかを選択する。
@@ -67,7 +69,7 @@ Brazeでは、メールキャンペーンを作成する際に、[ドラッグ�
 
 テンプレートを選択すると、メールの概要が表示されます、そこから全画面エディターに直接移動して、メールの下書き、送信情報の変更、配信可能性や法令遵守に関する警告の表示ができます。HTML、クラシック、プレーンテキスト、[AMP]({{site.baseurl}}/user_guide/message_building_by_channel/email/amphtml/) のタブを切り替えながら作成できます。 
 
-![「HTML から再生成」ボタン。][1]{: style="max-width:30%;float:right;margin-left:15px;border:none;" }
+\!["HTML"ボタンから再生成します。]({% image_buster /assets/img_archive/regenerate_from_html.png %}){: style="max-width:30%;float:right;margin-left:15px;border:none;" }
 
 プレーンテキスト版の編集が検出されるまで、メールのプレーンテキスト版は常に HTML 版から自動的に更新されます。編集が検出されると、Brazeは平文を更新しなくなる。上書きされるべきではない意図的な変更を行ったと考えられるからだ。プレーンテキストが同期していない場合にのみ表示される「**HTML から生成**」アイコンを選択すると、「**プレーンテキスト**」タブで自動同期に戻すことができます。
 
@@ -75,16 +77,16 @@ Brazeでは、メールキャンペーンを作成する際に、[ドラッグ�
 ほとんどの受信トレイはJavaScriptをサポートしていないため、正確なプレビューでメールに動きを加えるには、JavaScriptを必要とする要素の代わりにGIFを使用する。
 {% endalert %}
 
-![メールを作成するための [メールのバリアント] パネル。][14]{: style="max-width:75%" }
+\![メールバリアントパネルでメールを作成します。]({% image_buster /assets/img/email.png %}){: style="max-width:75%" }
 
 {% alert important %}
 Brazeは、属性として参照されているHTMLイベントハンドラを自動的に削除する。これによりHTMLが変更されるので、完了後にメールを再チェックすることをお勧めする。[HTML ハンドラー](https://www.w3schools.com/tags/ref_eventattributes.asp)の詳細を参照してください。
 {% endalert %}
 
 {% alert tip %}
-魅力的な文章を作成するためのサポートが必要な場合は、[AI コピーライティングアシスタント]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/)を使用してみてください。商品名や説明を入力すると、AIが人間のようなマーケティングコピーを生成し、メッセージングに使用する。
+魅力的な文章を作成するためのサポートが必要な場合は、[AI コピーライティングアシスタント]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/)を使用してみてください。商品名や説明を入力すると、AIが人間のようなマーケティングコピーを生成し、メッセージングに使用します。
 
-![メール作成画面の [本文] タブにある [AI コピーライターを起動] ボタン。]({% image_buster /assets/img/ai_copywriter/ai_copywriter_email.png %}){: style="max-width:80%"}
+\![メールコンポーザーの本文タブにあるAIコピーライターボタンを起動します。]({% image_buster /assets/img/ai_copywriter/ai_copywriter_email.png %}){: style="max-width:80%"}
 {% endalert %}
 
 アラビア語やヘブライ語などの右から左へのメッセージ作成にお困りですか？ベストプラクティスについては、[右から左へのメッセージを作成するを]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/)参照のこと。
@@ -97,6 +99,8 @@ Brazeは、属性として参照されているHTMLイベントハンドラを�
 2. [**返信先アドレス**] としてメールアドレスを選択します。[**返信先アドレスをカスタマイズ**] を選択してカスタマイズすることもできます。
 3. 次に、[**BCCアドレス**] としてメールアドレス選択し、このアドレスからあなたのメールアドレスが表示できるようにします。
 4. メールに件名を追加します。必要に応じて、プリヘッダーおよびその後の空白を追加することもできます。
+
+{% multi_lang_include alerts/tip_alerts.md alert='Liquid email display name and reply-to address' %}
 
 右側のパネルに、追加した送信情報が入力されたプレビューが表示されます。この情報は、[**設定**] > [**メール設定**] > [**送信設定**] で更新することもできます。
 
@@ -172,17 +176,19 @@ Eメールの余分な値は、CurrentsやSnowflakeには公開されない。�
 
 完璧なEメールを作成し終えたら、送信する前にテストする必要がある。概要画面の下部から ［**プレビュー後にテスト**] を選択します。 
 
-ここで、顧客の受信トレイでメールがどのように表示されるかをプレビューできます。**プレビューをユーザー**として選択すると、ランダムユーザーとしてメールをプレビューしたり、特定のユーザーを選択したり、カスタムユーザーを作成したりできます。これにより、コネクテッドコンテンツとパーソナライゼーションの呼び出しがコールが正常に機能していることをテストできます。
+ここで、顧客の受信トレイでメールがどのように表示されるかをプレビューできます。**プレビューをユーザー**として選択すると、ランダムユーザーとしてメールをプレビューしたり、特定のユーザーを選択したり、カスタムユーザーを作成したりできます。これにより、コネクテッドコンテンツとパーソナライゼーションの呼び出しがコールが正常に機能していることをテストできます。 
 
-また、デスクトップ、モバイル、プレーンテキストのビューを切り替えて、異なるコンテクストでメッセージがどのように表示されるかを知ることもできる。
+次に**プレビューリンクをコピー**して、ランダムなユーザーに対してメールがどのように表示されるかを示す共有可能なプレビューリンクを生成し、コピーできます。リンクは 7 日間有効であり、それ以降は再生成が必要になります。
+
+また、デスクトップビュー、モバイルビュー、およびプレーンテキストビューを切り替えるして、さまざまなコンテキストでメッセージがどのように耳にアプリするかを把握することもできます。
 
 {% alert tip %}
 ユーザーがダークモードのときにメールがどのように表示されるかを確認するには、**プレビューとテスト」**セクションにある**「ダークモードプレビュー」**トグルを選択する（ドラッグ＆ドロップエディターのみ）。
 {% endalert %}
 
-最終チェックの準備ができたら、**テスト送信を**選択し、自分自身またはコンテンツテスターのグループにテストメッセージを送信して、さまざまなデバイスやメールクライアントでメールが正しく表示されることを確認しよう。
+最終確認の準備ができたら、**Test Send**を選択し、自分またはコンテンツテスタのグループにテストメッセージを送信して、メールがさまざまな機器やメール クライアントに正しく表示されることを確認します。
 
-![メール作成時の [テスト送信] オプションとプレビューの例。][15]
+\![メールの作成時に、送信オプションとサンプルメール プレビューをテストします。]({% image_buster /assets/img_archive/newEmailTest.png %})
 
 メールに問題がある場合や変更を加えたい場合には、[**メールを編集**] を選択してエディターに戻ります。
 
@@ -205,7 +211,7 @@ Eメールの余分な値は、CurrentsやSnowflakeには公開されない。�
 - 無効な**From**アドレスと**Reply-To**アドレス
 - **ヘッダー**キーが重複している
 - Liquid の構文の問題
-- 400kbを超えるメール本文（本文は[102kb以下][16]]にすることを強く推奨する
+- 400kbを超えるメール本文（本文は[102kb以下]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/guidelines_and_tips/#email-size)にすることを強く推奨します)
 - **本文**または**件名が**空白の電子メール
 - 配信停止リンクのないメール
 - 送信元のメールが許可リストに登録されていない（配信可能性を確保するため、送信は高度に制限される）
@@ -213,7 +219,7 @@ Eメールの余分な値は、CurrentsやSnowflakeには公開されない。�
 ## ステップ 4:キャンペーンまたはキャンバスの残りの部分を作成する
 
 {% tabs %}
-{% tab キャンペーン %}
+{% tab Campaign %}
 次に、キャンペーンの残りの部分を作成します。Eメールキャンペーンを構築するための最適なツールの使用方法については、次のセクションを参照してください。
 
 #### 配信スケジュールまたはトリガーを選択する
@@ -228,7 +234,9 @@ APIトリガーキャンペーンの場合、トリガーアクションが**Int
 
 #### ターゲットとするユーザーを選択する
 
-次に、セグメントまたはフィルターを選択して[ユーザーをターゲットに設定]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/)し、オーディエンスを絞り込む必要があります。そのセグメントのうちメールでリーチ可能なユーザー数など、そのセグメントの母集団の現在のスナップショットが自動的に表示されます。正確なセグメントメンバーシップは常にメッセージが送信される直前に計算されることに注意してください。
+次に、セグメントまたはフィルターを選択し、オーディエンスを絞り込んで、[ターゲットのユーザーを設定]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/)する必要があります。自動的に、そのSegmentの個体群が現在どのように見えるかのプレビューが与えられます。これには、そのSegment内の何個のユーザーがメールを介して到達可能かが含まれます。正確なセグメントメンバーシップは常にメッセージが送信される直前に計算されることに注意してください。
+
+{% multi_lang_include target_audiences.md %}
 
 また、特定の[サブスクリプションステータス]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/)を持つユーザー (メールに登録してオプトインしたユーザーなど) にのみキャンペーンを送信することもできます。
 
@@ -245,7 +253,7 @@ APIトリガーキャンペーンの場合、トリガーアクションが**Int
 そのためには、[**オーディエンスの概要**] で、このキャンペーンの送信先に [オプトイン済みのユーザーのみ] を選択します。このオプションは、オプトインしたユーザーだけにメールが届くようにチェックし、Brazeはデフォルトでプッシュが有効になっているユーザーにのみプッシュを送信する。
 
 {% alert important %}
-この構成では、**Target Users**ステップに、オーディエンスを単一のチャネルに限定するフィルタ（例えば、`Push Enabled = True` や`Email Subscription = Opted-In` ）を含めない。
+この設定では、**ターゲットオーディエンス**ステップに、オーディエンスを1つのチャネルに制限するフィルターを含めないでください (`Foreground Push Enabled = True` や `Email Subscription = Opted-In` など)。
 {% endalert %}
 
 #### コンバージョンイベントを選択する
@@ -260,7 +268,7 @@ Braze では、キャンペーンを受信した後、ユーザーが指定の�
 ユーザーが指定されたアクションを取った場合、コンバージョンがカウントされる最大30日間のウィンドウを許可することができる。Brazeはキャンペーンの開封とクリックを自動的に追跡するが、[インテリジェントセレクションを]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/)活用するために、ユーザーがメールアドレスを開封またはクリックしたときにコンバージョンイベントを設定したい場合がある。
 {% endtab %}
 
-{% tab キャンバス %}
+{% tab Canvas %}
 キャンバスコンポーネントがまだ完成していない場合は、残りのセクションを完成させます。キャンバスの残りの部分の構築方法、多変量テストとインテリジェントセレクションの実装方法などの詳細については、キャンバスドキュメントの「[キャンバスを構築する」]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-3-build-your-canvas)ステップを参照のこと。
 {% endtab %}
 {% endtabs %}
@@ -271,17 +279,3 @@ Braze では、キャンペーンを受信した後、ユーザーが指定の�
 
 メールキャンペーンの結果にアクセスする方法については、[メール]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/)レポートをご覧ください。
 
-[1]: {% image_buster /assets/img_archive/regenerate_from_html.png %}
-[3]: {% image_buster /assets/img_archive/choose_email_creation.png %}
-[5]: {% image_buster /assets/img_archive/targetsegment_email_new.png %}
-[6]: {% image_buster /assets/img_archive/confirm_email.png %}
-[10]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/#creating-an-email-template
-[13]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/
-[14]: {% image_buster /assets/img/email.png %}
-[15]: {% image_buster /assets/img_archive/newEmailTest.png %}
-[16]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/guidelines_and_tips/#email-size
-[18]: {{site.baseurl}}/user_guide/message_building_by_channel/email/templates/html_email_template/
-[19]: {% image_buster /assets/img_archive/new_campaign_email.png %}
-[20]: {{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/
-[21]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/
-[22]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/

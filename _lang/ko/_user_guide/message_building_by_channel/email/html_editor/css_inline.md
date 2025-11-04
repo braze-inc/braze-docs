@@ -16,15 +16,13 @@ channel:
 
 ## CSS 인라이닝 사용
 
-HTML 편집기의 **보내기 정보** 탭에서 체크박스를 선택하여 이메일 메시지에 대해 CSS 인라인 처리가 켜져 있는지 꺼져 있는지를 제어할 수 있습니다.
+이메일 메시지에 대해 CSS 인라인을 켜거나 끌 수 있습니다. HTML 편집기의 **보내기 정보** 탭에 있는 **인라인 CSS 사용** 토글을 사용하세요.
 
-![HTML 작성기에서 CSS 인라이닝을 관리하려면 확인란을 선택합니다.][2]{: style="max-width:80%;"}
+![HTML 작성기에서 CSS 인라인 관리를 위한 체크박스입니다.]({% image_buster /assets/img_archive/css-inline2.png %}){: style="max-width:40%;"}
 
 ### 기본 인라이닝 상태
 
 **설정** > **이메일 환경설정**에서 전역적으로 기본 켜기 또는 끄기 상태를 설정할 수 있습니다. **CSS 인라이닝** 설정을 찾습니다. 이 설정은 모든 새 이메일 메시지가 시작할 때 원하는 기본값을 결정합니다. 이 설정을 변경해도 기존 이메일 메시지에는 영향을 미치지 않습니다. 이메일 메시지를 작성하는 동안 언제든지 이 기본값을 재정의할 수도 있습니다.
 
-![이메일 설정에 있는 새 이메일의 인라인 CSS 기본 옵션.][1]
+![이메일 설정에 위치한 기본적으로 새 이메일에 대한 인라인 CSS 옵션입니다.]({% image_buster /assets/img_archive/css-inline1.png %})
 
-[1]:{% image_buster /assets/img_archive/css-inline1.png %}
-[2]:{% image_buster /assets/img_archive/css-inline2.png %}

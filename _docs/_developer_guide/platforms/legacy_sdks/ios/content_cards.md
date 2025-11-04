@@ -1,5 +1,5 @@
 ---
-nav_title: Content Cards
+nav_title: Content cards
 page_order: 3
 config_only: true
 noindex: true

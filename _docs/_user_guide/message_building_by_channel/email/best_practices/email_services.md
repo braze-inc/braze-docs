@@ -1,5 +1,5 @@
 ---
-nav_title: Email Services
+nav_title: Email services
 article_title: Email Services
 page_order: 9
 page_type: reference

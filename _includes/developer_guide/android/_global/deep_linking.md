@@ -16,11 +16,6 @@ public class CustomDeeplinkHandler implements IBrazeDeeplinkHandler {
   private static final String TAG = BrazeLogger.getBrazeLogTag(CustomDeeplinkHandler.class);
 
   @Override
-  public void gotoNewsFeed(Context context, NewsfeedAction newsfeedAction) {
-    newsfeedAction.execute(context);
-  }
-
-  @Override
   public void gotoUri(Context context, UriAction uriAction) {
     String uri = uriAction.getUri().toString();
     // Open YouTube URLs in the YouTube app and not our app
@@ -57,10 +52,6 @@ public class CustomDeeplinkHandler implements IBrazeDeeplinkHandler {
 
 ```kotlin
 class CustomDeeplinkHandler : IBrazeDeeplinkHandler {
-
-  override fun gotoNewsFeed(context: Context, newsfeedAction: NewsfeedAction) {
-    newsfeedAction.execute(context)
-  }
 
   override fun gotoUri(context: Context, uriAction: UriAction) {
     val uri = uriAction.uri.toString()
@@ -121,9 +112,6 @@ BrazeDeeplinkHandler.setBrazeDeeplinkHandler(new IBrazeDeeplinkHandler() {
       context.startActivity(intent);
     }
   }
-
-  @Override
-  public void gotoNewsFeed(Context context, NewsfeedAction newsfeedAction) {}
 });
 ```
 
@@ -148,8 +136,6 @@ BrazeDeeplinkHandler.setBrazeDeeplinkHandler(object : IBrazeDeeplinkHandler {
       context.startActivity(intent)
     }
   }
-
-  override fun gotoNewsFeed(context: Context, newsfeedAction: NewsfeedAction) {}
 })
 ```
 
@@ -160,14 +146,14 @@ BrazeDeeplinkHandler.setBrazeDeeplinkHandler(object : IBrazeDeeplinkHandler {
 
 By default, when website deeplinks are opened inside the app by Braze, they are handled by [`BrazeWebViewActivity`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui/-braze-web-view-activity/index.html). To change this:
 
-1. Create a new Activity that handles the target URL from `Intent.getExtras()` with the key `com.braze.Constants.BRAZE_WEBVIEW_URL_EXTRA`. For an example, see [`BrazeWebViewActivity.java`](https://github.com/braze-inc/braze-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/BrazeWebViewActivity.kt).
+1. Create a new Activity that handles the target URL from `Intent.getExtras()` with the key `com.braze.Constants.BRAZE_WEBVIEW_URL_EXTRA`. For an example, see [`BrazeWebViewActivity.kt`](https://github.com/braze-inc/braze-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/BrazeWebViewActivity.kt).
 2. Add that activity to `AndroidManifest.xml` and set `exported` to `false`.
     ```xml
     <activity
         android:name=".MyCustomWebViewActivity"
         android:exported="false" />
     ```
-3. Set your custom Activity in a `BrazeConfig` [builder object](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-custom-web-view-activity-class.html). Build the builder and pass it to [`Braze.configure()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/index.html#-1864418529%2FFunctions%2F-1725759721) in your [`Application.onCreate()`](https://developer.android.com/reference/android/app/Application.html#onCreate()).
+3. Set your custom Activity in a `BrazeConfig` [builder object](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-custom-web-view-activity-class.html). Build the builder and pass it to [`Braze.configure()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/configure.html) in your [`Application.onCreate()`](https://developer.android.com/reference/android/app/Application.html#onCreate()).
 {% tabs %}
 {% tab JAVA %}
 

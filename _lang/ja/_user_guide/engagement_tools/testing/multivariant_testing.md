@@ -1,5 +1,5 @@
 ---
-nav_title: 多変量テストと AB テスト
+nav_title: 多変量&amp;アンプ;A/B 検定
 article_title: 多変量テストと AB テスト
 page_order: 2
 page_type: reference
@@ -51,19 +51,7 @@ Braze のドキュメントでは、「多変量テスト」は「AB テスト�
 
 ### バリアントの分布
 
-バリアント間の分布は必ずしも均等ではありません。バリアント分布の仕組みを紹介します。
-
-メッセージが多変量キャンペーンで送信されるたびに、システムは設定された割合に従ってランダムなオプションを独自に選択し、結果に基づいてバリアントを割り当てます。コインをめくるようなものです。異常はあり得ます。コインを100回めくったことのある人なら、選択肢が2つしかないのに、毎回表と裏が正確に半々になることはおそらくないだろうと知っているでしょう。表は52個、裏は48個になるかもしれません。
-
-均等に分割したいバリアントが複数ある場合は、バリアントの数も100の倍数になるようにする必要があります。そうしないと、一部のバリアントは、他のバリアントと比較して、そのバリアントに分散されたユーザの割合が高くなります。たとえば、キャンペーンに7つのバリアントがある場合、7は整数として100で均等に割らないため、偶数のバリアント分布が存在することはできません。この場合、15%の2つのバリアント14%の5つのバリアントを持つことになります。
-
-#### アプリ内メッセージに関する注意
-
-アプリ内メッセージで AB テストを実行すると、あるバリアントと別のバリアントの間で、割合が均等に分割されている場合でも、分析でバリアント分布が高いように表示されることがあります。たとえば、バリアント A とバリアント C の*ユニーク受信者*の次のグラフを考えてみます。
-
-![バリアント A とバリアント C の間に類似した形状を持つ 2 つのバリアントのユニーク受信者のグラフ。バリアント A の方が 1 日あたりのユニーク受信者数が高い]({% image_buster /assets/img/variant_distribution_iam.png %})
-
-バリアント A は、バリアント C よりも*ユニーク受信者*の数が一貫して多いです。これは、バリアント分布によるものではなく、アプリ内メッセージの*ユニーク受信者数*の計算方法によるものです。アプリ内メッセージの場合、*ユニーク受信者数*は実際には*ユニークインプレッション数*で、アプリ内メッセージを受け取って閲覧した人の合計数です。つまり、ユーザーが何らかの理由でメッセージを受け取らなかったり、メッセージを閲覧しないことにした場合、そのユーザーは*ユニーク受信者*数に含まれず、バリアント分布が偏っているように見える可能性があります。
+{% multi_lang_include multivariant_testing.md section='Variant distribution' %}
 
 ## 多変量テストとABテストのヒント
 
@@ -99,16 +87,3 @@ Braze のドキュメントでは、「多変量テスト」は「AB テスト�
 [コントロールグループ]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/#including-a-control-group)を含めると、メッセージをまったく送信しないよりも、メッセージがユーザーのコンバージョンに大きな影響を与えているかどうかを知ることができます。
 
 
-[2]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#conversion-events
-[70]: #tips-different-channels
-[80]: #choosing-a-segment
-[160]: {% image_buster /assets/img/ab_create_1.png %}
-[170]: {% image_buster /assets/img/ab_create_2.png %}
-[175]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/
-[180]: {% image_buster /assets/img/ab_create_4.png %}
-[210]: {% image_buster /assets/img/ab_create_8.png %}
-[10]: {% image_buster /assets/img/ab_send_winning_variant.png %}
-[272]: #intelligent-selection
-[273]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/message_format/
-[intelselection] ：{{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/
-[confidence]: {{site.baseurl}}/user_guide/intelligence/multivariate_testing/#understanding-confidence

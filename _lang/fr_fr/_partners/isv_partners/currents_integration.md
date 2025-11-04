@@ -12,7 +12,7 @@ hidden: true
 
 Pour intégrer un connecteur Currents personnalisé dans Braze, vous devrez fournir une URL d'endpoint et un [jeton d'authentification facultatif](#authentication).
 
-En outre, si vous avez plusieurs groupes d'applications dans Braze, vous devrez configurer un connecteur Braze Currents personnalisé pour chaque groupe. Cependant, vous pouvez faire pointer tous les groupes d'applications vers le même endpoint, ou vers un endpoint avec un paramètre supplémentaire `GET`, tel que `your_app_group_key=”Brand A”`.
+En outre, si vous avez plusieurs groupes d'applications dans Braze, vous devrez configurer un connecteur Currents personnalisé pour chaque groupe. Cependant, vous pouvez faire pointer tous les groupes d'applications vers le même endpoint, ou vers un endpoint avec un paramètre supplémentaire `GET`, tel que `your_app_group_key=”Brand A”`.
 
 ## Prévenir la perte de données
 
@@ -24,7 +24,7 @@ Pour la plupart des types d'erreurs (erreurs de serveur, erreurs de connexion au
 
 ### Changez la résilience
 
-De temps à autre, nous apportons des modifications non irréversibles aux schémas de Braze Currents. Les modifications non radicales sont de nouvelles colonnes ou de nouveaux types d'événements nullables.
+De temps à autre, nous apportons des modifications non radicales aux schémas de Braze Currents. Les modifications non radicales sont de nouvelles colonnes ou de nouveaux types d'événements nullables.
 
 Nous donnons généralement un préavis de deux semaines pour ces changements, mais cela n'est pas toujours possible. Il est essentiel que vous conceviez votre intégration de manière à gérer les champs ou les types d'événements non reconnus, faute de quoi vous risquez de perdre des données.
 
@@ -37,7 +37,7 @@ Pour la liste complète des schémas d'événements liés aux messages, [Message
 Le format de données cible est JSON sur HTTPS. Par défaut, les événements sont regroupés par 100 en fonction des critères suivants :
 
 - **Nombre d'événements en file d'attente**: Par exemple, si la taille du lot est configurée pour 200 événements et qu'il y a 200 événements dans la file d'attente.
-- **Durée d'un événement :** En règle générale, les événements ne sont pas mis en file d'attente s'ils durent plus de 15 minutes. Chaque type d'événement dispose d'une file d'attente distincte, de sorte que la latence peut varier d'un type d'événement à l'autre.
+- **Durée d'un événement :** En règle générale, les événements ne sont pas mis en file d'attente s'ils durent plus de 15 minutes. Chaque type d'événement dispose d'une file d'attente distincte, de sorte que le temps de latence peut varier d'un type d'événement à l'autre.
 
 Les événements sont ensuite envoyés à l'endpoint sous la forme d'un tableau JSON de tous les événements au format suivant :
 
@@ -410,7 +410,7 @@ Braze-Currents-Version: 1
 
 La version sera toujours `1` sauf si nous ne prévoyons pas d'incrémenter ce nombre très souvent, voire jamais.
 
-Tout comme les [schémas de stockage de]({{site.baseurl}}/user_guide/data/braze_currents/event_delivery_semantics?redirected=1) nos [entrepôts de données]({{site.baseurl}}/user_guide/data/braze_currents/event_delivery_semantics?redirected=1), chaque champ d'un événement individuel est garanti comme étant rétrocompatible avec les versions précédentes de la charge utile de l'événement, conformément à la définition de la rétrocompatibilité d'[Apache Avro](https://avro.apache.org/):
+Tout comme les [schémas de stockage de nos entrepôts de données]({{site.baseurl}}/user_guide/data/braze_currents/event_delivery_semantics?redirected=1), chaque champ d'un événement individuel est garanti comme étant rétrocompatible avec les versions précédentes de la charge utile de l'événement, conformément à la définition de la rétrocompatibilité d'[Apache Avro](https://avro.apache.org/) :
 
 1. Il est garanti que les champs d'événements spécifiques auront toujours le même type de données au fil du temps.
 2. Tous les nouveaux champs ajoutés à la charge utile au fil du temps doivent être considérés comme facultatifs par toutes les parties.
@@ -433,7 +433,7 @@ Les codes d'état HTTP suivants seront reconnus par notre client de connecteur 
 <table>
   <thead>
     <tr>
-      <th>Code de statut</th>
+      <th>Code d'état</th>
       <th>Réponse</th>
       <th>Description</th>
     </tr>

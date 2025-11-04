@@ -1,5 +1,5 @@
 ---
-nav_title: SDK Migration from Airship to Braze
+nav_title: SDK migration from Airship to Braze
 permalink: /sdk_migration_guide_airship/
 hidden: true
 page_type: reference
@@ -18,7 +18,7 @@ Braze uses Apple's device token for iOS.
 
 #### Push token migration
 
-It is required to [migrate push tokens via API]({{site.baseurl}}/help/help_articles/push/push_token_migration/#migration-via-api). The documentation linked contains specific steps, as well as an example payload, but the overall process is as follows:
+It is required to [migrate push tokens through API]({{site.baseurl}}/api/objects_filters/user_attributes_object/#migrating-push-tokens). The documentation linked contains specific steps, as well as an example payload, but the overall process is as follows:
 
 1. Import the tokens via the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/). For large batch imports, we have resources available to help expedite the process. Reach out to your COM or SA for more details!
 2. If the token already exists in Braze it will be ignored, otherwise an anonymous profile will be generated.

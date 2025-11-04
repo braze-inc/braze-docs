@@ -1,5 +1,5 @@
 ---
-nav_title: Feature Adoption
+nav_title: Feature adoption
 article_title: Feature Adoption
 page_order: 3
 page_type: reference

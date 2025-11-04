@@ -1,5 +1,5 @@
 ---
-nav_title: ドラッグアンドドロップの電子メール環境設定センター
+nav_title: ドラッグアンドドロップメール ユーザー設定センター
 article_title: ドラッグアンドドロップの電子メール環境設定センター
 alias: "/dnd_preference_center/"
 description: "このリファレンスページでは、ドラッグ＆ドロップエディターでメールユーザー設定センターを作成する方法について説明します。"
@@ -8,25 +8,27 @@ page_order: 2
 
 # ドラッグ＆ドロップによるメールユーザー設定センターの作成
 
-> ドラッグ＆ドロップエディターを使用すると、ユーザー設定センターの作成およびカスタマイズを行って、特定タイプの通信を受信するユーザーの管理に役立てることができます。ワークスペースあたりのユーザー設定センターは最大 50 です。
+> ドラッグ＆ドロップエディターを使用すると、ユーザー設定センターの作成およびカスタマイズを行って、特定タイプの通信を受信するユーザーの管理に役立てることができます。1 ワークスペースにつき最大100 のユーザー設定センターを使用できます。
 
-## ステップ 1:メールユーザー設定センターの作成
+{% multi_lang_include drag_and_drop/drag_and_drop_access.md variable_name='dnd editors' %}
 
-**Audience** > **Subscriptions** > **E メールユーザー設定センター** に移動して、ユーザー設定センターを作成します。
+## ステップ 1: メールユーザー設定センターの作成
+
+**Audience**> **E メールユーザー設定センターs** に移動して、ユーザー設定センターを作成します。
 
 ここには、カスタムユーザー設定センターが一覧表示されます。**Create New**を選択して新しいユーザー設定センターを作成するか、既存の名前を選択して変更します。
 
-![名前、説明、タイプ、ステータス、最終編集日、および作成者が含まれるカスタムユーザー設定センターのリスト。][1]
+\![名前、説明、種類、ステータス、最終編集日、およびユーザー によって作成されたカスタムユーザー設定センターs の一覧。]({% image_buster /assets/img/preference_center/preference_center1.png %})
 
-## ステップ 2:メールユーザー設定センターの命名
+## ステップ 2: メールユーザー設定センターの命名
 
 ユーザー設定センターの名前には、英数字、ダッシュ、またはアンダースコアのみを使用できます。指定した名前によって、生成されるリキッドタグのシンタックスが決まります。 
 
 このリキッドタグは、任意の送信メール キャンペーンs またはキャンバスステップs に含めることができ、ユーザーをユーザー設定センターに送信します。
 
-![ユーザー設定センターの Liquid の例。][2]
+\![ユーザー設定センターのリキッドの例。]({% image_buster /assets/img/preference_center/preference_center2.png %})
 
-## ステップ 3:ユーザー設定センターへの購読グループの追加
+## ステップ 3: ユーザー設定センターへの購読グループの追加
 
 **Launch Editor**を選択して、ドラッグアンドドロップエディタでユーザー設定センターのデザインを開始します。
 
@@ -41,7 +43,7 @@ page_order: 2
 - [**すべてを購読**] チェックボックスを追加するか削除します。このチェックボックスをオンにすると、ユーザーはこのブロックに表示されるすべての購読グループに登録されます。
 - [**すべて購読解除**] チェックボックスを追加するか削除します。このチェックボックスをオンにすると、ユーザーはこのブロックに表示されるすべての購読グループから削除されます。
 
-![ユーザー設定センターの例で、すべてのメッセージ、マーケティング、ニュースレター、ウィークリーメールの購読、またはすべての配信停止のオプションがある。][3]{: style="max-width:38%;"} ![][4]{: style="max-width:45%;"}
+\![すべてのメール、マーケティング、ニュースレター、週刊メールsを購読するか、all.]({% image_buster /assets/img/preference_center/preference_center3.png %}){: style="max-width:38%;"}から配信停止するかを選択できるユーザー設定センターの事例]]({% image_buster /assets/img/preference_center/preference_center4.png %}){: style="max-width:45%;"}
 
 テンプレートの下部にある [**すべて購読解除**] ボタンは削除できず、ユーザーが受信しているすべてのメールメッセージを[グローバルに購読解除]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-states)します。
 
@@ -51,7 +53,7 @@ page_order: 2
 
 [**共通のスタイル**] タブから、ユーザー設定センター内の関連するすべてのブロックに適用する特定のスタイルを設定できます。この項で設定したスタイルは、指定したブロックで上書きする場合を除き、メッセージ内のあらゆる場所で使用されます。より簡単にデザインするために、ページレベルのスタイルを設定してから、ブロックレベルでスタイルをカスタマイズすることをお勧めします。
 
-![テキスト、ボタン、リンクの一般的なスタイル設定の例。][5]{: style="max-width:45%;"}
+\![テキスト、ボタン、リンクの一般的なスタイル設定の例。]({% image_buster /assets/img/preference_center/preference_center5.png %}){: style="max-width:45%;"}
 
 {% alert tip %}
 [共通のスタイル] に戻るには、個々のブロックプロパティにある [X] ボタンを選択します。次に、メッセージコンテナー、メッセージの [X] ボタン、またはエディターの背景を選択します。
@@ -62,24 +64,24 @@ page_order: 2
 ユーザー設定センターを簡単に作成できるように、ドラッグ＆ドロップエディターでは、行とブロックの 2 つの主要コンポーネントを使用使用します。すべてのブロックは行に配置する必要があります。
 
 {% tabs %}
-{% tab 行 %}
+{% tab Rows %}
 
 行は、セルを使用してメッセージのセクションの水平方向の構成を定義する構造単位です。
 
-![メッセージの行のタイプを選択するオプション。]({% image_buster /assets/img/preference_center/preference_center6.png %}){: style="max-width:45%;"}
+\![メッセージ内の行のタイプを選択するオプション。]({% image_buster /assets/img/preference_center/preference_center6.png %}){: style="max-width:45%;"}
 
 行を選択すると、列カスタマイズセクションに必要な列数を追加または削除して、異なるコンテンツ要素を並べて配置できます。スライドして、既存の列のサイズを調整することもできます。
 
-![背景色、ボーダースタイル、ボーダー半径、パディングなど、列のプロパティをカスタマイズするオプション。]({% image_buster /assets/img/preference_center/preference_center7.png %}){: style="max-width:45%;"}
+\![バックグラウンドカラー、ボーダースタイル、ボーダー半径、パディングなど、列のプロパティーをカスタマイズするためのオプション。]({% image_buster /assets/img/preference_center/preference_center7.png %}){: style="max-width:45%;"}
 
 ベストプラクティスとして、行および列のプロパティーを書式設定してから、行内のブロックを書式設定します。間隔と配置は、さまざまな場所で調整できるため、基礎から始めると簡単に編集できます。
 
 {% endtab %}
-{% tab ブロック %}
+{% tab Blocks %}
 
 ブロックは、メッセージで使用できるさまざまなタイプのコンテンツを表します。既存の行Segmentの内側に1 つドラッグすると、セルの幅に自動的に調整されます。
 
-![タイトル、段落、ボタン、画像、スペーサーなどのブロックを選択するオプション。]({% image_buster /assets/img/preference_center/preference_center8.png %}){: style="max-width:45%;"}
+\![タイトル、段落、ボタン、"画像、スペーサーを含むブロックs を選択するオプション。]({% image_buster /assets/img/preference_center/preference_center8.png %}){: style="max-width:45%;"}
 
 すべてのブロックには、パディング上の粒状コントロールなど、独自の設定s があります。右側のパネルは、選択したコンテンツ要素のスタイルパネルに自動的に切り替えるします。詳細については、[エディタのブロックプロパティー]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/editor_blocks/)を参照してください。
 
@@ -92,9 +94,9 @@ page_order: 2
 
 確認ページをカスタマイズするのを忘れないでください!ドラッグアンドドロップエディタウィンドウの上部にある**Confirmation Page**を選択すると、このページを編集できます。このページは、ユーザー設定センターを使用してユーザーが自分の設定を更新すると表示されます。上記と同じスタイル設定機能は、このページにもアプリします。
 
-![ユーザーの好みが更新されたことを伝える確認ページの例。][9]{: style="max-width:65%;"}
+\![ユーザーの好みを伝える確認画面の一例が更新 dです。]({% image_buster /assets/img/preference_center/preference_center9.png %}){: style="max-width:65%;"}
 
-## ステップ 6:ユーザー設定センターのプレビューと起動
+## ステップ6: ユーザー設定センターのプレビューと起動
 
 エディタ内で**プレビュー**タブを選択することで、ユーザー設定センターをプレビューできます。ただし、テスト機能は無効です。ユーザー設定センターを編集したら、**Done**ボタンを選択してエディタを閉じることができます。
 
@@ -104,11 +106,11 @@ page_order: 2
 
 ## ユーザー設定センターの使用
 
-{% multi_lang_include preference_center_warning.md %}
+{% multi_lang_include alerts/important_alerts.md alert='Preference Center warning' %}
 
 ユーザー設定センターへのリンクをメールs に配置するには、**Copy Liquid** アイコンを選択して、目的のユーザー設定センターのLiquid タグをコピーします。
 
-![ユーザー設定センターの行にある [Liquid をコピー] オプション。][10]{: style="max-width:75%;"}
+\![ユーザー設定センターの行の「リキッドのコピー」オプション。]({% image_buster /assets/img/preference_center/preference_center10.png %}){: style="max-width:75%;"}
 
 [ 配信停止 URL]({{site.baseurl}}/user_guide/message_building_by_channel/email/custom_email_footer/#adding-a-custom-unsubscribe-link) の挿入方法と同様に、リキッドタグをメールの任意の位置に追加します。
 
@@ -116,16 +118,5 @@ page_order: 2
 
 ユーザーがユーザー設定センターで**Save**を選択したときにエラーが発生すると、次のデフォルト エラーが表示されます。これは、エディタでカスタマイズまたはスタイル設定できません。ただし、これらのページでは、エラーメッセージのローカライゼーションが引き続きサポートされています。 
 
-![エラーメッセージ「ユーザー設定の保存中に問題が発生しました。もう一度やり直してください。][11]{: style="max-width:55%;"}
+\![ &quot を指摘するエラー; あなたの好みを保存するのに問題がありました。もう一度やり直してください。]({% image_buster /assets/img/preference_center/preference_center11.png %}){: style="max-width:55%;"}
 
-[1]: {% image_buster /assets/img/preference_center/preference_center1.png %}
-[2]: {% image_buster /assets/img/preference_center/preference_center2.png %}
-[3]: {% image_buster /assets/img/preference_center/preference_center3.png %}
-[4]: {% image_buster /assets/img/preference_center/preference_center4.png %}
-[5]: {% image_buster /assets/img/preference_center/preference_center5.png %}
-[6]: {% image_buster /assets/img/preference_center/preference_center6.png %}
-[7]: {% image_buster /assets/img/preference_center/preference_center7.png %}
-[8]: {% image_buster /assets/img/preference_center/preference_center8.png %}
-[9]: {% image_buster /assets/img/preference_center/preference_center9.png %}
-[10]: {% image_buster /assets/img/preference_center/preference_center10.png %}
-[11]: {% image_buster /assets/img/preference_center/preference_center11.png %} 

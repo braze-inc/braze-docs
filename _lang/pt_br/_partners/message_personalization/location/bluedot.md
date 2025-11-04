@@ -12,6 +12,10 @@ search_tag: Partner
 
 > A [Bluedot](https://bluedot.io/) é uma plataforma de localização que fornece recursos precisos e simples de geofencing para seus apps. Use o SDK da Bluedot para enviar mensagens mais inteligentes, automatizar check-ins de pedidos móveis, otimizar fluxos de trabalho e criar experiências sem atrito. 
 
+_Esta integração é mantida pela Bluedot._
+
+## Sobre a integração
+
 A integração entre Braze e Bluedot permite que você use os serviços de local geofence da Bluedot para criar eventos de usuário que podem ser usados para criar jornadas, campanhas e analisar os comportamentos e interesses dos clientes. Os eventos (entrada/saída) gerados pelo usuário em seu dispositivo são enviados imediatamente ao Braze com todas as informações relevantes. 
 
 ## Pré-requisitos
@@ -53,3 +57,4 @@ Configure uma campanha baseada em ações no Braze que enviará mensagens com ba
 
 Certifique-se de direcionar **todos os usuários** para seu espaço de trabalho.
 ![Uma campanha baseada em ações com a etapa de usuários-alvo que o incentiva a selecionar "Todos os usuários" como o segmento desejado.]({%image_buster /assets/img_archive/Campaign-Target_users-BD.png %}){: style="max-width:80%"}
+

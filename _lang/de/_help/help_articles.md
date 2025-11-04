@@ -12,7 +12,7 @@ description: "Auf dieser Landing Page finden Sie Hilfeartikel, die Ihnen bei der
 guide_featured_title: "Themen"
 guide_featured_list:
   - name: Konto
-    link: /docs/help/help_articles/account/
+    link: /docs/user_guide/administrative/access_braze/troubleshooting/
     image: /assets/img/braze_icons/user-circle.svg
   - name: API
     link: /docs/help/help_articles/api/

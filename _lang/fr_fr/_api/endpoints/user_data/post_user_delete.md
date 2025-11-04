@@ -61,13 +61,17 @@ Authorization: Bearer YOUR_REST_API_KEY
 | `phone_numbers` | Facultatif | Tableau de chaînes de caractères | Numéros de téléphone de l'utilisateur à supprimer. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-### Suppression des utilisateurs par e-mail
+### Suppression d'utilisateurs par adresses e-mail et numéros de téléphone
 
-Si un `email` est spécifié comme identifiant, une valeur `prioritization` supplémentaire est requise dans l'identifiant. Le `prioritization` est un tableau ordonné et doit spécifier quel utilisateur supprimer si plusieurs utilisateurs sont trouvés. Cela signifie que la suppression des utilisateurs ne se produira pas si plus d'un utilisateur correspond à une priorisation.
+Si une adresse e-mail ou un numéro de téléphone est spécifié comme identifiant, une valeur supplémentaire `prioritization` est requise dans l'identifiant. `prioritization` doit être un tableau ordonné et doit spécifier quel utilisateur doit être supprimé s'il y a plusieurs utilisateurs. Cela signifie que la suppression des utilisateurs ne se produira pas si plus d'un utilisateur correspond à une priorisation.
 
-Les valeurs autorisées pour le tableau sont les suivantes : `identified`, `unidentified`, `most_recently_updated`. `most_recently_updated` signifie que la priorité est accordée à l'utilisateur ayant effectué la dernière mise à jour.
+Les valeurs autorisées pour le tableau sont les suivantes :
 
-Une seule des options suivantes peut exister à la fois dans le tableau de priorisation :
+- `identified`
+- `unidentified`
+- `most_recently_updated` (Priorité à l'utilisateur le plus récemment mis à jour)
+
+Une seule des options suivantes peut exister à la fois dans le tableau `prioritization`:
 
 - `identified` Il s'agit de donner la priorité à un utilisateur ayant une `external_id`
 - `unidentified` Il s'agit de donner la priorité à un utilisateur qui n'a pas de `external_id`

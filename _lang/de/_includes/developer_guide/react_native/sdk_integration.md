@@ -11,7 +11,7 @@ Die folgende Mindestversion des SDK ist mit allen Apps kompatibel, die [die neue
 Ab SDK-Version 6.0.0 verwendet Braze ein React Native Turbo-Modul, das sowohl mit der New Architecture als auch mit der Legacy-Bridge-Architektur kompatibel ist, d.h. es ist keine zusätzliche Einrichtung erforderlich.
 
 {% alert warning %}
-Wenn Ihre iOS App mit `RCTAppDelegate` konform ist und unserem früheren `AppDelegate` Setup folgt, überprüfen Sie die Beispiele in [Vollständiges natives Setup](#reactnative_step-2-complete-native-setup), um Abstürze beim Abonnieren von Ereignissen im Turbo Modul zu vermeiden.
+Wenn Ihre iOS App mit `RCTAppDelegate` konform ist und unserem früheren `AppDelegate` Setup folgt, lesen Sie die Beispiele in [Vollständiges natives Setup](#reactnative_step-2-complete-native-setup), um Abstürze beim Abonnieren von Ereignissen im Turbo Modul zu vermeiden.
 {% endalert %}
 
 ## Integration des React Native SDK

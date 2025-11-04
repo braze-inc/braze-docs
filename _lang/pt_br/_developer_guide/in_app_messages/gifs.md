@@ -12,10 +12,10 @@ channel:
 
 {% sdktabs %}
 {% sdktab android %}
-{% multi_lang_include developer_guide/android/_global/gifs.md%}
+{% multi_lang_include developer_guide/android/_global/gifs.md %}
 {% endsdktab %}
 
 {% sdktab swift %}
-guide/swift/gifs.md%} developer_
+{% multi_lang_include developer_guide/swift/gifs.md %}
 {% endsdktab %}
 {% endsdktabs %}

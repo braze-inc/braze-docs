@@ -106,8 +106,8 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 - `identified`
 - `unidentified`
-- `most_recently_updated` (最新の更新されたユーザの優先順位付けを参照)
-- `least_recently_updated` (最新のユーザーの優先順位付けを参照)
+- `most_recently_updated` (最近更新されたユーザーを優先することを意味します）
+- `least_recently_updated` (最も最近更新されていないユーザーを優先することを意味します）
 
 優先配列には、一度に以下のオプションのうち1つしか存在できません。
 
@@ -165,7 +165,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 
 ### 未確認ユーザーをマージする
 
-以下のリクエストは、電子メールアドレス "john.smith@braze.com" を持つ、直近に更新された未確認ユーザーを、`external_id` "john "を持つユーザーにマージします。`most_recently_updated` または`least_recently_updated` を使用すると、クエリは1 人の識別されていないユーザーにのみフィルタリングされます。そのため、このメールアドレスを持つ未確認のユーザーが2人いた場合、`external_id` "john "のユーザーにマージされるのは1人だけである。
+以下のリクエストは、電子メールアドレス "john.smith@braze.com" を持つ、直近に更新された未確認ユーザーを、`external_id` "john "を持つユーザーにマージします。`most_recently_updated` または`least_recently_updated` を使用すると、クエリは 1 人の識別されていないユーザーにのみフィルタリングされます。そのため、このメールアドレスを持つ未確認のユーザーが2人いた場合、`external_id` "john "のユーザーにマージされるのは1人だけである。
 
 ```json
 curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
@@ -189,7 +189,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 
 ### 未確認ユーザーを識別されたユーザーにマージする
 
-この次の例は、電子メールアドレス "john.smith@braze.com" を持つ、最も最近更新された未確認ユーザーを、電子メールアドレス "john.smith@braze.com" を持つ、最も最近更新された識別されたユーザーにマージします。`most_recently_updated` または`least_recently_updated` を使用すると、クエリは1 人のユーザー(`identifier_to_merge` では1 人のユーザー、`identifier_to_keep` では1 人のユーザー) にのみフィルタリングされます。
+この次の例は、電子メールアドレス "john.smith@braze.com" を持つ、最も最近更新された未確認ユーザーを、電子メールアドレス "john.smith@braze.com" を持つ、最も最近更新された識別されたユーザーにマージします。`most_recently_updated` または`least_recently_updated` を使用すると、クエリは 1 人のユーザー(`identifier_to_merge` では1 人のユーザー、`identifier_to_keep` では1 人のユーザー) にのみフィルタリングされます。
 
 ```json
 curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \

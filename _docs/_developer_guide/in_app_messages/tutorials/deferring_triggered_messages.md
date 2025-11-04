@@ -1,5 +1,5 @@
 ---
-nav_title: Deferring Triggered Messages
+nav_title: Deferring triggered messages
 article_title: "Tutorial: Deferring and restoring triggered messages"
 description: ""
 page_order: 1
@@ -16,7 +16,7 @@ layout: scrolly
 
 ## Deferring and restoring triggered messages for Android
 
-{% multi_lang_include developer_guide/_shared/tutorial_feedback.md %}
+{% multi_lang_include developer_guide/_shared/tutorial_feedback.md tutorial="Deferring Triggered Messages Android" %}
 
 {% scrolly %}
 
@@ -172,7 +172,7 @@ To display the previously-deferred message, call `showDeferredMessage(true)` fro
 
 ## Deferring and restoring triggered messages for Swift
 
-{% multi_lang_include developer_guide/_shared/tutorial_feedback.md %}
+{% multi_lang_include developer_guide/_shared/tutorial_feedback.md tutorial="Deferring Triggered Messages Swift" %}
 
 {% scrolly %}
 
@@ -307,7 +307,7 @@ To display the previously-deferred message, call `showDeferredMessage(true)` fro
 
 ## Deferring and restoring triggered messages for Web
 
-{% multi_lang_include developer_guide/_shared/tutorial_feedback.md %}
+{% multi_lang_include developer_guide/_shared/tutorial_feedback.md tutorial="Deferring Triggered Messages Web" %}
 
 {% scrolly %}
 

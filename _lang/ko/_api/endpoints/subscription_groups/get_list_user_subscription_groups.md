@@ -28,7 +28,7 @@ description: "이 문서에서는 사용자의 구독 그룹 Braze 엔드포인�
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#54bd7ca8-60d9-4654-aff5-406479f3c666 {% endapiref %}
 
-## 필수 구성 요소
+## Prerequisites
 
 이 엔드포인트를 사용하려면 `subscription.groups.get` 권한이 있는 [API 키]({{site.baseurl}}/api/basics#rest-api-key/)가 필요합니다.
 

@@ -1,20 +1,17 @@
 ---
-nav_title: Gérer les campagnes
-article_title: Gérer les campagnes
+nav_title: Gestion des campagnes
+article_title: Gestion des campagnes
 layout: dev_guide
-guide_top_header: "Gérer les campagnes"
-guide_top_text: "Une fois que vous avez lancé votre Campagne, installez-vous confortablement et regardez les données se charger devant vos yeux. Si vous avez besoin de modifier votre campagne, de configurer des alertes ou d'archiver votre campagne, consultez les articles suivants pour obtenir de l'aide."
+guide_top_header: "Gestion des campagnes"
+guide_top_text: "Une fois que vous avez lancé votre campagne, il est temps de vous asseoir et de regarder les données arriver. Si vous devez apporter des modifications à votre campagne, implémenter des campagnes ou archiver votre campagne, consultez les articles suivants pour obtenir de l'aide."
 page_order: 3
 
 tool: Campaigns
 page_type: landing
-description: "Cette page d’accueil couvre la gestion des campagnes. Ici, vous pouvez trouver des articles sur l'approbation des campagnes, la duplication, les alertes, l'archivage, la modification de votre campagne après son lancement, et plus encore."
+description: "Cette page d'atterrissage traite de la gestion des campagnes. Vous y trouverez des articles sur l'approbation des campagnes, la duplication, les alertes, l'archivage, la modification de votre campagne après son lancement, etc."
 
-guide_featured_title: "Section Articles"
+guide_featured_title: "Articles de section"
 guide_featured_list:
-  - name: "Copie d'un espace de travail à l'autre"
-    link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/copying_to_workspace
-    image: /assets/img/braze_icons/copy-04.svg
   - name: Modifier votre campagne après son lancement
     link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/change_your_campaign_after_launch/
     image: /assets/img/braze_icons/edit-05.svg
@@ -27,13 +24,19 @@ guide_featured_list:
 
 guide_menu_title: "Additional resources"
 guide_menu_list:
-  - name: Flux de travail d’approbation
+  - name: "Processus d'approbation"
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/approvals/
     image: /assets/img/braze_icons/brush-02.svg
-  - name: Archiver des campagnes
+  - name: "Règles d'envoi de messages pour approbation"
+    link: /docs/user_guide/engagement_tools/messaging_fundamentals/approvals/messaging_rules/
+    image: /assets/img/braze_icons/check-square.svg
+  - name: Archivage des campagnes
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/archiving/
     image: /assets/img/braze_icons/archive.svg
-  - name: Dupliquer des campagnes
+  - name: "Copier d'un espace de travail à l'autre"
+    link: /docs/user_guide/engagement_tools/messaging_fundamentals/copying_across_workspaces/
+    image: /assets/img/braze_icons/copy-07.svg
+  - name: Duplication des campagnes
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/duplicating/
     image: /assets/img/braze_icons/copy-04.svg
 ---

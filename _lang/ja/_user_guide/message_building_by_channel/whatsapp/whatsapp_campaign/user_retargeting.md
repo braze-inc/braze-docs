@@ -1,13 +1,11 @@
 ---
-nav_title: ユーザ・リターゲティング
-article_title: ユーザ・リターゲティング
-page_order: 1
+nav_title: ユーザー リターゲティング
+article_title: ユーザーのリターゲット
+page_order: 4
 description: "この参考記事では、WhatsAppのユーザーとのやり取りによってユーザーがメッセージを再ターゲットする方法を取り上げている。"
 page_type: reference
 channel:
   - WhatsApp
-page_order: 4.1
-
 ---
 
 # ユーザ・リターゲティング 
@@ -25,11 +23,11 @@ page_order: 4.1
 最後にWhatsAppを受信した日、または特定のWhatsAppキャンペーンからWhatsAppを受信したかでユーザーをフィルタリングできる。フィルターはキャンペーンビルダーのターゲットユーザーステップで設定できる。
 
 **最後に受信した WhatsApp によるフィルター処理する**<br>
-![][5]{: style="max-width:75%"}
+\![2025年4月22日に最後にWhatsAppを受信したときのフィルタリング。]({% image_buster /assets/img/whatsapp/whatsapp23.png %}){: style="max-width:75%"}
 
 **WhatsAppキャンペーンからの受信メッセージでフィルタする**<br>
 特定のWhatsAppキャンペーンからのメッセージを受信したユーザーをフィルターする。このフィルターを使えば、WhatsAppキャンペーンからのメッセージを受信していないユーザーを除外することもできる。<br>
-![][4]
+\![WhatsApp キャンペーンを受信するためのフィルター。]({% image_buster /assets/img/whatsapp/whatsapp22.png %}){: style="max-width:75%"}
 
 ### エンゲージメントで絞り込む
 WhatsApp キャンペーンまたはキャンバスステップを読んだ、あるいは読んでいないユーザーをリターゲティングします。 
@@ -37,23 +35,19 @@ WhatsApp キャンペーンまたはキャンバスステップを読んだ、�
 **特定のWhatsAppキャンペーンを開封/閲覧したユーザーを再ターゲットする**
 1. **Clicked/Opened Campaign**フィルターを使用してセグメントを作成する。
 2. [**WhatsApp メッセージの読み取り**] を選択します。
-3. 希望のキャンペーンを選択する。<br>
+3. 希望のキャンペーンを選択してください。<br>
 
-![][3]
+\![WhatsAppを読み取ったときのフィルター。]({% image_buster /assets/img/whatsapp/whatsapp21.png %}){: style="max-width:75%"}
 
 **特定のキャンバスステップを開いた / 読んだユーザーのリターゲティング**
 1. **クリックされた／開かれたステップ**フィルターを使用してセグメントを作成する。
 2. [**WhatsApp メッセージの読み取り**] を選択します。
 3. 目的のキャンバスとキャンバスステップを選択します。<br>
 
-![][2]
+\![WhatsApp ステップを読み取るためのフィルター。]({% image_buster /assets/img/whatsapp/whatsapp20.png %}){: style="max-width:75%"}
 
-**キャンペーンまたはキャンバスのアトリビューションによるフィルター処理**<br>
+**キャンペーンまたはキャンバスアトリビューションでフィルター**<br>
 特定の WhatsApp キャンペーン、キャンバスコンポーネント、またはタグを開封した / 読んだユーザーをフィルター処理します。
-![][1]
 
-[1]: {% image_buster /assets/img/whatsapp/whatsapp19.png %}
-[2]: {% image_buster /assets/img/whatsapp/whatsapp20.png %}
-[3]: {% image_buster /assets/img/whatsapp/whatsapp21.png %}
-[4]: {% image_buster /assets/img/whatsapp/whatsapp22.png %}
-[5]: {% image_buster /assets/img/whatsapp/whatsapp23.png %} 
+\![指定したWhatsAppを開封するためのフィルタリング。]({% image_buster /assets/img/whatsapp/whatsapp19.png %}){: style="max-width:75%"}
+

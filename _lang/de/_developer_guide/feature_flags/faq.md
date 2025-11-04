@@ -30,6 +30,9 @@ Ein Feature-Flag kann in wenigen Minuten erstellt und integriert werden.
 
 Der größte Teil des Aufwands entfällt auf Ihr Entwicklerteam, das das neue Feature entwickelt, das Sie einführen möchten. Das Hinzufügen eines Feature-Flag selbst ist so einfach wie eine `IF`/`ELSE`-Anweisung im Code Ihrer App oder Website:
 
+{% tabs %}
+{% tab JavaScript %}
+
 ```javascript
 import { getFeatureFlag } from "@braze/web-sdk";
 
@@ -40,6 +43,31 @@ else {
     // Show the old homepage
 }
 ```
+
+{% endtab %}
+{% tab Java %}
+
+```java
+if (braze.getFeatureFlag("new_shopping_cart").getEnabled()) {
+  // Show the new homepage your team has built
+} else {
+  // Show the old homepage
+}
+```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+if (braze.getFeatureFlag("new_shopping_cart")?.enabled == true) {
+  // Show the new homepage your team has built
+} else {
+  // Show the old homepage
+}
+```
+
+{% endtab %}
+{% endtabs %}
 
 ### Wie können Marketing Teams von Feature-Flags profitieren? {#marketing-teams}
 

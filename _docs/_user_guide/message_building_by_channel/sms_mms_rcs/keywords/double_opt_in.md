@@ -1,5 +1,5 @@
 ---
-nav_title: Double Opt-In
+nav_title: Double opt-in
 article_title: Double Opt-In
 description: "This reference article covers the double opt-in feature, and explains how to enable the feature, select opt-in keywords and reply messages, and enter users into the double opt-in workflow through subscription updates that occur in REST API, SDK, and preference center updates."
 page_type: reference

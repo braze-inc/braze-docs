@@ -1,5 +1,5 @@
 ---
-nav_title: Handling Clicks Manually
+nav_title: Handling clicks manually
 article_title: Handling Content Card Clicks Manually for iOS
 platform: iOS
 page_order: 3

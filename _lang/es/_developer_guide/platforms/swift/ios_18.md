@@ -31,7 +31,7 @@ La nueva característica de [duplicación del iPhone](https://www.apple.com/news
 
 [La Inteligencia de Apple](https://developer.apple.com/documentation/Updates/Apple-Intelligence) ya está disponible para dispositivos con iOS 18.1 y versiones posteriores.
 
-Como usuario de Braze, la nueva característica más importante que debes conocer son [los resúmenes de notificaciones](https://support.apple.com/en-us/108781), que utilizan el procesamiento en el dispositivo para agrupar y generar automáticamente resúmenes de texto para las notificaciones push relacionadas enviadas desde una única aplicación. Los usuarios finales pueden tocar para ampliar un resumen y ver cada notificación push tal y como se envió originalmente.
+Como usuario de Braze, la nueva característica más importante que debes conocer son [los resúmenes de notificación](https://support.apple.com/en-us/108781), que utilizan el procesamiento en el dispositivo para agrupar y generar automáticamente resúmenes de texto para notificaciones push relacionadas enviadas desde una única aplicación. Los usuarios finales pueden tocar para ampliar un resumen y ver cada notificación push tal y como se envió originalmente.
 
 Debido a cómo se generan estos resúmenes, no tendrás control sobre su comportamiento específico ni sobre el texto generado. Sin embargo, esto no afectará a ninguna característica de análisis o informes, como el seguimiento push-click.
 

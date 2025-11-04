@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Update Email Template"
+nav_title: "POST: Update email template"
 article_title: "POST: Update Email Templates"
 search_tag: Endpoint
 page_order: 4

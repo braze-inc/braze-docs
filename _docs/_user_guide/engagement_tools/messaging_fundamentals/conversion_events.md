@@ -1,5 +1,5 @@
 ---
-nav_title: Conversion Events
+nav_title: Conversion events
 article_title: Conversion Events
 page_order: 4
 page_type: reference

@@ -1,5 +1,5 @@
 ---
-nav_title: Messaging Users
+nav_title: Messaging users
 article_title: Messaging LINE Users
 page_order: 2
 description: "This reference article covers how chat with users by using templated campaigns and Canvases."
