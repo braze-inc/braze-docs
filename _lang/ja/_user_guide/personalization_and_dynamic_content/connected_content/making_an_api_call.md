@@ -6,7 +6,7 @@ description: "この記事では、コネクテッドコンテンツ API 呼び�
 search_rank: 2
 ---
 
-# [\![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/connected-content){: style="float:right;width:120px;border:0;" class="noimgborder"} コネクテッドコンテンツAPIコールを作る
+# [![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/connected-content){: style="float:right;width:120px;border:0;" class="noimgborder"} コネクテッドコンテンツAPIコールを作る
 
 > コネクテッド・コンテンツを使えば、ユーザーに送るメッセージに、APIでアクセスできるあらゆる情報を直接挿入することができる。Web サーバーから直接、またはパブリックにアクセス可能な API からコンテンツをプルできます。<br><br>このページではコネクテッドコンテンツ API 呼び出しの方法、高度なコネクテッドコンテンツユースケース、エラー処理などについて説明します。
 
