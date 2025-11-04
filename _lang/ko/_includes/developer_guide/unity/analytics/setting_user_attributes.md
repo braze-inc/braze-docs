@@ -2,27 +2,93 @@
 
 ## 기본 사용자 속성
 
-사용자 속성을 설정하려면 `BrazeBinding` 객체에서 적절한 메서드를 호출해야 합니다. 다음은 이 메서드를 사용하여 호출할 수 있는 기본 제공 속성 목록입니다.
+### 미리 정의된 메서드
 
-| 속성                 | 코드 샘플 |
-|---------------------------|-------------|
-| 이름                | `AppboyBinding.SetUserFirstName("first name");` |
-| 성                 | `AppboyBinding.SetUserLastName("last name");` |
-| 사용자 이메일                | `AppboyBinding.SetUserEmail("email@email.com");` |
-| 성별                    | `AppboyBinding.SetUserGender(Appboy.Models.Gender);` |
-| 생년월일                | `AppboyBinding.SetUserDateOfBirth("year(int)", "month(int)", "day(int)");` |
-| 사용자 국가              | `AppboyBinding.SetUserCountry("country name");` |
-| 사용자 거주 구/군/시            | `AppboyBinding.SetUserHomeCity("city name");` |
-| 사용자 이메일 구독   | `AppboyBinding.SetUserEmailNotificationSubscriptionType(AppboyNotificationSubscriptionType);` |
-| 사용자 푸시 구독    | `AppboyBinding.SetUserPushNotificationSubscriptionType(AppboyNotificationSubscriptionType);` |
-| 사용자 전화번호         | `AppboyBinding.SetUserPhoneNumber("phone number");` |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+Braze는 `BrazeBinding` 객체를 사용하여 다음 사용자 속성을 설정하기 위한 미리 정의된 메서드를 제공합니다. 자세한 내용은 [Braze Unity 선언 파일](https://github.com/braze-inc/braze-unity-sdk/blob/master/Assets/Plugins/Appboy/BrazePlatform.cs)을 참조하십시오.
+
+- First name
+- Last name
+- 사용자 이메일
+- Gender
+- 생년월일
+- 사용자 국가
+- 사용자 거주 구/군/시
+- 사용자 이메일 구독
+- 사용자 푸시 구독
+- 사용자 전화번호
+
+### 기본 속성 설정
+
+기본 속성을 설정하려면 `BrazeBinding` 객체에서 관련 메서드를 호출하십시오.
+
+{% tabs local %}
+{% tab 이름 %}
+```csharp
+BrazeBinding.SetUserFirstName("first name");
+```
+{% endtab %}
+{% tab 성 %}
+```csharp
+BrazeBinding.SetUserLastName("last name");
+```
+{% endtab %}
+{% tab 이메일 %}
+```csharp
+BrazeBinding.SetUserEmail("email@email.com");
+```
+{% endtab %}
+{% tab 성별 %}
+```csharp
+BrazeBinding.SetUserGender(Appboy.Models.Gender);
+```
+{% endtab %}
+{% tab 생년월일 %}
+```csharp
+BrazeBinding.SetUserDateOfBirth("year(int)", "month(int)", "day(int)");
+```
+{% endtab %}
+{% tab 국가 %}
+```csharp
+BrazeBinding.SetUserCountry("country name");
+```
+{% endtab %}
+{% tab 거주 도시 %}
+```csharp
+BrazeBinding.SetUserHomeCity("city name");
+```
+{% endtab %}
+{% tab 이메일 구독 %}
+```csharp
+BrazeBinding.SetUserEmailNotificationSubscriptionType(AppboyNotificationSubscriptionType);
+```
+{% endtab %}
+{% tab 푸시 구독 %}
+```csharp
+BrazeBinding.SetUserPushNotificationSubscriptionType(AppboyNotificationSubscriptionType);
+```
+{% endtab %}
+{% tab 전화번호 %}
+```csharp
+BrazeBinding.SetUserPhoneNumber("phone number");
+```
+{% endtab %}
+{% endtabs %}
+
+### 기본 속성 해제
+
+기본 사용자 속성을 해제하려면 관련 메서드에 `null`을 전달하십시오.
+
+```csharp
+BrazeBinding.SetUserFirstName(null);
+```
 
 ## 사용자 지정 사용자 속성
 
-기본 사용자 속성 외에도 Braze는 여러 가지 데이터 유형을 사용하여 커스텀 속성을 정의할 수 있도록 허용합니다. 각 속성의 세분화 옵션에 대한 자세한 내용은 [사용자 데이터 수집]({{site.baseurl}}/developer_guide/analytics)을 참조하십시오.
+기본 사용자 속성 외에도 Braze는 여러 다른 데이터 유형을 사용하여 커스텀 속성을 정의할 수 있도록 허용합니다. 각 속성의 세분화 옵션에 대한 자세한 내용은 []({{site.baseurl}}/developer_guide/analytics)사용자 데이터 수집]({{site.baseurl}}/developer_guide/analytics)을 참조하십시오.
 
 ### 사용자 지정 속성 설정
+
+커스텀 속성을 설정하려면 속성 유형에 해당하는 메서드를 사용하십시오: 
 
 {% tabs %}
 {% tab 문자열 %}
@@ -93,7 +159,7 @@ AppboyBinding.RemoveFromCustomUserAttributeArray("key", "Attribute")
 
 ### 커스텀 속성 해제
 
-커스텀 사용자 속성을 해제하려면 다음 메서드를 사용하십시오:
+커스텀 속성을 해제하려면 관련 속성 키를 `UnsetCustomUserAttribute` 메서드에 전달하십시오. 
 
 ```csharp
 AppboyBinding.UnsetCustomUserAttribute("custom attribute key");
@@ -101,11 +167,11 @@ AppboyBinding.UnsetCustomUserAttribute("custom attribute key");
 
 ### REST API 사용
 
-사용자 속성을 설정하거나 해제하기 위해 REST API를 사용할 수도 있습니다. 자세한 내용은 [사용자 데이터 엔드포인트]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data)을 참조하십시오.
+사용자 속성을 설정하거나 해제하려면 REST API를 사용할 수도 있습니다. 자세한 정보는 [사용자 데이터 엔드포인트]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data)를 참조하십시오.
 
 ## 사용자 구독 설정
 
-사용자를 위한 이메일 또는 푸시 구독을 설정하려면 다음 함수 중 하나를 호출하십시오.
+사용자에게 이메일 또는 푸시 구독을 설정하려면 다음 함수 중 하나를 호출하십시오.
 
 ```csharp
 // Email notifications
@@ -115,9 +181,9 @@ AppboyBinding.SetUserEmailNotificationSubscriptionType()
 AppboyBinding.SetPushNotificationSubscriptionType()`
 ```
 
-두 함수 모두 `Appboy.Models.AppboyNotificationSubscriptionType`을 인수로 사용하며, 세 가지 다른 상태가 있습니다:
+두 함수 모두 `Appboy.Models.AppboyNotificationSubscriptionType`을(를) 인수로 사용하며, 세 가지 다른 상태가 있습니다:
 
-| 구독 상태 | 정의 |
+| Subscription Status | 정의 |
 | ------------------- | ---------- |
 | `OPTED_IN` | 구독하고 명시적으로 동의한 경우 |
 | `SUBSCRIBED` | 구독 중이지만 명시적으로 옵트인하지 않은 경우 |
