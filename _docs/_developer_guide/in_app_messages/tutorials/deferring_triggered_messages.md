@@ -11,6 +11,92 @@ layout: scrolly
 > Follow along with the sample code in this tutorial to defer and restore triggered in-app messages using the Braze SDK.
 
 {% sdktabs %}
+{% sdktab web %}
+{% multi_lang_include developer_guide/prerequisites/web.md %} However, no additional setup is required.
+
+## Deferring and restoring triggered messages for Web
+
+{% multi_lang_include developer_guide/_shared/tutorial_feedback.md tutorial="Deferring Triggered Messages Web" %}
+
+{% scrolly %}
+
+```js file=index.js
+import * as braze from "@braze/web-sdk";
+// Remove any calls to `braze.automaticallyShowInAppMessages()`
+
+braze.initialize("YOUR-API-KEY", {
+  baseUrl: "YOUR-ENDPOINT",
+  enableLogging: true,
+});
+
+braze.subscribeToInAppMessage(function (message) {
+  const shouldDefer = true; // customize for your own logic
+  if (shouldDefer) {
+    braze.deferInAppMessage(message);
+  } else {
+    braze.showInAppMessage(message);
+  }
+});
+
+// elsewhere in your app
+document.getElementById("button").onclick = function () {
+  const deferredMessage = braze.getDeferredInAppMessage();
+  if (deferredMessage) {
+    braze.showInAppMessage(deferredMessage);
+  }
+};
+```
+
+!!step
+lines-index.js=2
+
+#### 1. Remove calls to `automaticallyShowInAppMessages()`
+
+Remove any calls to [`automaticallyShowInAppMessages()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#automaticallyshowinappmessages) , as they’ll override any custom logic you implement later.
+
+!!step
+lines-index.js=6
+
+#### 2. Enable debugging (optional)
+
+To make troubleshooting easier while developing, consider enabling debugging.
+
+!!step
+lines-index.js=9-16
+
+#### 3. Subscribe to the in-app message callback handler
+
+Register a callback with [`subscribeToInAppMessage(callback)`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetoinappmessage) to receive a message any time an in-app message is triggered.
+
+!!step
+lines-index.js=11-12
+
+#### 4. Defer the `message` instance
+
+To defer the message, call [`deferInAppMessage(message)`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#deferinappmessage). Braze will serialize and save this message so you can display it on a future page load.
+
+!!step
+lines-index.js=18-24
+
+#### 5. Retrieve a previously deferred message
+
+To retrieve any previously-deferred messages, call [`getDeferredInAppMessage()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#getdeferredinappmessage). 
+
+!!step
+lines-index.js=21-23
+
+#### 6. Display the deferred message
+
+After retrieving a deferred message, display it by passing it to [`showInAppMessage(message)`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showinappmessage).
+
+!!step
+lines-index.js=13-15
+
+#### 7. Display a message immediately
+
+To show a message instead of deferring it, call [`showInAppMessage(message)`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showinappmessage) directly in your `subscribeToInAppMessage` callback.
+{% endscrolly %}
+{% endsdktab %}
 {% sdktab android %}
 {% multi_lang_include developer_guide/prerequisites/android.md %} You'll also need to [enable in-app messages for Android]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=android#android_enabling-in-app-messages).
 
@@ -300,92 +386,6 @@ lines-ContentView.swift=1-14
 
 To display the previously-deferred message, call `showDeferredMessage(true)` from your UI, such as a button or tap.
 
-{% endscrolly %}
-{% endsdktab %}
-{% sdktab web %}
-{% multi_lang_include developer_guide/prerequisites/web.md %} However, no additional setup is required.
-
-## Deferring and restoring triggered messages for Web
-
-{% multi_lang_include developer_guide/_shared/tutorial_feedback.md tutorial="Deferring Triggered Messages Web" %}
-
-{% scrolly %}
-
-```js file=index.js
-import * as braze from "@braze/web-sdk";
-// Remove any calls to `braze.automaticallyShowInAppMessages()`
-
-braze.initialize("YOUR-API-KEY", {
-  baseUrl: "YOUR-ENDPOINT",
-  enableLogging: true,
-});
-
-braze.subscribeToInAppMessage(function (message) {
-  const shouldDefer = true; // customize for your own logic
-  if (shouldDefer) {
-    braze.deferInAppMessage(message);
-  } else {
-    braze.showInAppMessage(message);
-  }
-});
-
-// elsewhere in your app
-document.getElementById("button").onclick = function () {
-  const deferredMessage = braze.getDeferredInAppMessage();
-  if (deferredMessage) {
-    braze.showInAppMessage(deferredMessage);
-  }
-};
-```
-
-!!step
-lines-index.js=2
-
-#### 1. Remove calls to `automaticallyShowInAppMessages()`
-
-Remove any calls to [`automaticallyShowInAppMessages()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#automaticallyshowinappmessages) , as they’ll override any custom logic you implement later.
-
-!!step
-lines-index.js=6
-
-#### 2. Enable debugging (optional)
-
-To make troubleshooting easier while developing, consider enabling debugging.
-
-!!step
-lines-index.js=9-16
-
-#### 3. Subscribe to the in-app message callback handler
-
-Register a callback with [`subscribeToInAppMessage(callback)`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetoinappmessage) to receive a message any time an in-app message is triggered.
-
-!!step
-lines-index.js=11-12
-
-#### 4. Defer the `message` instance
-
-To defer the message, call [`deferInAppMessage(message)`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#deferinappmessage). Braze will serialize and save this message so you can display it on a future page load.
-
-!!step
-lines-index.js=18-24
-
-#### 5. Retrieve a previously deferred message
-
-To retrieve any previously-deferred messages, call [`getDeferredInAppMessage()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#getdeferredinappmessage). 
-
-!!step
-lines-index.js=21-23
-
-#### 6. Display the deferred message
-
-After retrieving a deferred message, display it by passing it to [`showInAppMessage(message)`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showinappmessage).
-
-!!step
-lines-index.js=13-15
-
-#### 7. Display a message immediately
-
-To show a message instead of deferring it, call [`showInAppMessage(message)`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showinappmessage) directly in your `subscribeToInAppMessage` callback.
 {% endscrolly %}
 {% endsdktab %}
 {% endsdktabs %}

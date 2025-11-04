@@ -19,6 +19,21 @@ For wrapper SDKs not listed, use the relevant native Android or Swift method ins
 To log a custom event, use the following event-logging method.
 
 {% tabs %}
+{% tab web %}
+For a standard Web SDK implementation, you can use the following method:
+
+```javascript
+braze.logCustomEvent("YOUR_EVENT_NAME");
+```
+
+If you'd like to use Google Tag Manager instead, you can use the **Custom Event** tag type to call the [`logCustomEvent` method](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcustomevent) and send custom events to Braze, optionally including custom event properties. To do this:
+
+1. Enter the **Event Name** by either using a variable or typing an event name.
+2. Use the **Add Row** button to add event properties.
+
+![A dialog box showing the Braze Action Tag configuration settings. Settings included are "tag type"(custom event), "event name" (button click), and "event properties".]({% image_buster /assets/img/web-gtm/gtm-custom-event.png %})
+{% endtab %}
+
 {% tab android %}
 For native Android, you can use the following method:
 
@@ -50,21 +65,6 @@ AppDelegate.braze?.logCustomEvent(name: "YOUR_EVENT_NAME")
 ```
 {% endsubtab %}
 {% endsubtabs %}
-{% endtab %}
-
-{% tab web %}
-For a standard Web SDK implementation, you can use the following method:
-
-```javascript
-braze.logCustomEvent("YOUR_EVENT_NAME");
-```
-
-If you'd like to use Google Tag Manager instead, you can use the **Custom Event** tag type to call the [`logCustomEvent` method](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcustomevent) and send custom events to Braze, optionally including custom event properties. To do this:
-
-1. Enter the **Event Name** by either using a variable or typing an event name.
-2. Use the **Add Row** button to add event properties.
-
-![A dialog box showing the Braze Action Tag configuration settings. Settings included are "tag type"(custom event), "event name" (button click), and "event properties".]({% image_buster /assets/img/web-gtm/gtm-custom-event.png %})
 {% endtab %}
 
 {% tab flutter %}
@@ -125,6 +125,21 @@ When you log a custom event, you have the option to add metadata about that cust
 To add metadata properties, use the following event-logging method.
 
 {% tabs %}
+{% tab web %}
+```javascript
+braze.logCustomEvent("YOUR-EVENT-NAME", {
+  you: "can", 
+  pass: false, 
+  orNumbers: 42,
+  orDates: new Date(),
+  or: ["any", "array", "here"],
+  andEven: {
+     deeply: ["nested", "json"]
+  }
+});
+```
+{% endtab %}
+
 {% tab android %}
 {% subtabs %}
 {% subtab java %}
@@ -205,21 +220,6 @@ AppDelegate.braze?.logCustomEvent(
 ```
 {% endsubtab %}
 {% endsubtabs %}
-{% endtab %}
-
-{% tab web %}
-```javascript
-braze.logCustomEvent("YOUR-EVENT-NAME", {
-  you: "can", 
-  pass: false, 
-  orNumbers: 42,
-  orDates: new Date(),
-  or: ["any", "array", "here"],
-  andEven: {
-     deeply: ["nested", "json"]
-  }
-});
-```
 {% endtab %}
 
 {% tab flutter %}

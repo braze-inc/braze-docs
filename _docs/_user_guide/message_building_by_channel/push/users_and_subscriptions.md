@@ -175,6 +175,18 @@ For information on how to check push registration state, visit [push registratio
 ## Other platform-specific scenarios
 
 {% tabs %}
+{% tab Web %}
+
+When a user accepts the native push permission prompt, their subscription status will be changed to `opted in`.
+
+To manage subscriptions, you can use the user method [`setPushNotificationSubscriptionType`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setpushnotificationsubscriptiontype) to create a preference settings page on your site, after which you can filter users by opt-out status on the dashboard.
+
+If a user disables notifications within their browser, the next push notification sent to that user will bounce, and Braze will update the user's push token accordingly. This is used to manage eligibility for the push-enabled filters (`Background or Foreground Push Enabled`, `Foreground Push Enabled` and `Foreground Push Enabled for App`). The subscription status set on the user's profile is a user-level setting and doesn't change when a push bounces.
+
+{% alert note %}
+Web platforms do not allow background or silent push.
+{% endalert %}
+{% endtab %}
 {% tab Android %}
 
 If a foreground push enabled user disables push in their OS settings, then at the start of the next session:
@@ -213,18 +225,6 @@ In this scenario, since a background push token will still exist, you can contin
 iOS doesn't allow apps to intercept a push notification prior to the push notification displaying. This means that apps (and Braze) have no control over whether you can display or hide the notification. A user can opt out of push notifications for an app under the device settings, but that is controlled by the operating system.
 {% endalert %}
 
-{% endtab %}
-{% tab Web %}
-
-When a user accepts the native push permission prompt, their subscription status will be changed to `opted in`.
-
-To manage subscriptions, you can use the user method [`setPushNotificationSubscriptionType`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setpushnotificationsubscriptiontype) to create a preference settings page on your site, after which you can filter users by opt-out status on the dashboard.
-
-If a user disables notifications within their browser, the next push notification sent to that user will bounce, and Braze will update the user's push token accordingly. This is used to manage eligibility for the push-enabled filters (`Background or Foreground Push Enabled`, `Foreground Push Enabled` and `Foreground Push Enabled for App`). The subscription status set on the user's profile is a user-level setting and doesn't change when a push bounces.
-
-{% alert note %}
-Web platforms do not allow background or silent push.
-{% endalert %}
 {% endtab %}
 {% endtabs %}
 

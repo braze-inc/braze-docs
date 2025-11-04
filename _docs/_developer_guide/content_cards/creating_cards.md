@@ -23,6 +23,11 @@ platform:
 ### Step 1: Create a custom UI 
 
 {% tabs local %}
+{% tab web %}
+
+First, create your custom HTML component that will be used to render the cards. 
+
+{% endtab %}
 {% tab android %}
 
 First, create your own custom fragment. The default [`ContentCardsFragment`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html) is only designed to handle our default Content Card types, but is a good starting point.
@@ -31,11 +36,6 @@ First, create your own custom fragment. The default [`ContentCardsFragment`](htt
 {% tab swift %}
 
 First, create your own custom view controller component. The default [`BrazeContentCardUI.ViewController`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller) is only designed to handle our default Content Card types, but is a good starting point.
-
-{% endtab %}
-{% tab web %}
-
-First, create your custom HTML component that will be used to render the cards. 
 
 {% endtab %}
 {% endtabs %}

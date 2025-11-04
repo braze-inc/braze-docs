@@ -15,17 +15,17 @@ glossary_filter_text: "Select any of the following channels to narrow Push Type 
 
 # category to icon/fa or image mapping
 glossary_tags:
-  - name: iOS
-  - name: Android
   - name: Web
+  - name: Android
+  - name: iOS
 
 glossaries:
   - name: "Regular Push"
     description: "The all-encompassing Push message. These appear on your user's device with a notification sound and message which slides in or appears in a notification bar or stack."
     tags:
-      - iOS
-      - Android
       - Web
+      - Android
+      - iOS
   - name: "Web Push"
     description: "These push messages appear in Web Apps or Browsers. They still require permission to reach the customer. Note that Web Push does not work if the user is using a hidden browser."
     tags:
@@ -33,9 +33,9 @@ glossaries:
   - name: "Push Primer Campaigns"
     description: "In-app message campaigns used to gain explicit push opt-in or opt-out signal from users. Through the primer, you can avoid sending notifications to users that are likely to turn off push through the device settings. For iOS, push campaigns are relevant as foreground push notifications (such as notifications that wake up the device) are not enabled until a user explicitly opts into iOS' native push prompt."
     tags:
-      - iOS
-      - Android
       - Web
+      - Android
+      - iOS
   - name: "Push Stories"
     description: "Push Stories are immersive messages that take your user through a visual journey in the form of a carousel. These are available for mobile devices only."
     tags:
@@ -44,9 +44,9 @@ glossaries:
   - name: "Push with Action Buttons"
     description: "Push with action buttons are messages that allow you to provide options to your users and offer several calls to action."
     tags:
-      - iOS
-      - Android
       - Web
+      - Android
+      - iOS
   - name: "Rich Push Notifications"
     description: "Rich Push Notifications are notifications with immersive images and creative content that can expand beyond a simple icon and call to action text."
     tags:
@@ -68,9 +68,9 @@ glossaries:
   - name: "Background or Silent Push Notifications"
     description: "Push notifications that are not rendered on the device. Usually used to send packets of information down to the app for background processes and uninstall tracking. A background-enabled push token is required for a background or silent push to be sent."
     tags:
-      - iOS
-      - Android
       - Web
+      - Android
+      - iOS
   - name: "Wearable Push Notifications"
     description: "These push notifications allow brands to send messages directly to wearable devices like the Apple Watch."
     tags:
