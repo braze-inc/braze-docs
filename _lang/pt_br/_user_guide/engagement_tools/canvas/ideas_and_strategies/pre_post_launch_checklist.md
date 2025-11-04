@@ -23,7 +23,7 @@ Se você estiver inserindo usuários de acordo com o fuso horário local usando 
 Você verá um alerta se não tiver programado um buffer suficiente. Uma solução rápida é ajustar o tempo de envio para garantir que os usuários possam permanecer no segmento-alvo por 24 horas completas.
 {% endalert %}
 
-![Um Canvas programado para entrar nos usuários de uma só vez a partir das 10 horas do dia 30 de abril de 2025, em seu horário local.]({% image_buster /assets/img_archive/canvas_checklist1.png %}){: style="max-width:75%;"}
+\![Um Canvas programado para entrar nos usuários de uma só vez a partir das 10 horas do dia 30 de abril de 2025, em seu horário local.]({% image_buster /assets/img_archive/canvas_checklist1.png %}){: style="max-width:75%;"}
 
 ### Considere o uso de expressões regulares para filtros de público-alvo
 

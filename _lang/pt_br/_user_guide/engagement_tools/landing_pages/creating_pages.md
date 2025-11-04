@@ -19,7 +19,7 @@ Para acessar o construtor de landing pages, você precisa de [determinadas permi
 
 Acesse **Messaging** > **Landing Pages (** **Mensagens** > **Páginas de destino**) e selecione **Create landing page (Criar página de destino**). Você também pode selecionar o nome de uma landing page existente para duplicá-la ou fazer alterações nela.
 
-![A seção de páginas de destino no painel do Braze.]({% image_buster /assets/img/landing_pages/landing-pages-homepage.png %})
+\![A seção de páginas de destino no painel do Braze.]({% image_buster /assets/img/landing_pages/landing-pages-homepage.png %})
 
 ### Etapa 2: Insira os detalhes da página
 
@@ -47,11 +47,11 @@ Sugerimos seguir estas práticas recomendadas:
 
 Se ainda não o fez, selecione **Salvar como rascunho**. Para começar a personalizar sua página, selecione **Editar página de destino**. O editor de arrastar e soltar será pré-carregado com um modelo padrão que você pode personalizar para se adequar ao seu caso de uso.
 
-![Um exemplo de página de destino sendo criada no editor de arrastar e soltar.]({% image_buster /assets/img/landing_pages/template.png %})
+\![Um exemplo de página de destino sendo criada no editor de arrastar e soltar.]({% image_buster /assets/img/landing_pages/template.png %})
 
 O editor usa dois tipos de componentes para a composição da página de destino: blocos básicos e blocos de formulários. Todos os blocos devem ser colocados em uma fileira.
 
-![A seção "Build" que contém "Rows" e "Form Blocks".]({% image_buster /assets/img/landing_pages/dnd.png %}){: style="max-width:35%;"}
+\![A seção "Build" que contém "Rows" e "Form Blocks".]({% image_buster /assets/img/landing_pages/dnd.png %}){: style="max-width:35%;"}
 
 {% tabs %}
 {% tab Basic blocks %}
@@ -79,7 +79,7 @@ Você pode usar esses blocos para adicionar conteúdo e personalizar o layout da
 
 Você pode usar esses blocos para criar um formulário que vincule os dados enviados pelo usuário ao seu perfil no Braze. Lembre-se de que, se você usar blocos de formulários, também precisará criar uma página de destino adicional para o estado de confirmação.
 
-![Um bloco de formulário que registra um novo cliente e envia um código de desconto para o e-mail dele.]({% image_buster /assets/img/landing_pages/form.png %}){: style="max-width:70%;"}
+\![Um bloco de formulário que registra um novo cliente e envia um código de desconto para o e-mail dele.]({% image_buster /assets/img/landing_pages/form.png %}){: style="max-width:70%;"}
 
 | Tipo de bloco     | Descrição |
 |---------------|-------------|
@@ -104,7 +104,7 @@ Você pode definir estilos a serem aplicados em todos os blocos de componentes r
 
 Recomendamos configurar os estilos no nível do contêiner da página antes de personalizar os estilos no nível do bloco. Você também pode adicionar uma imagem de fundo para a página inteira.
 
-![A seção "Contêiner de página" com opções para personalizar imagens de fundo, cores, detalhes de borda e estilo de conteúdo.]({% image_buster /assets/img/landing_pages/page_container.png %}){: style="max-width:40%;"}
+\![A seção "Contêiner de página" com opções para personalizar imagens de fundo, cores, detalhes de borda e estilo de conteúdo.]({% image_buster /assets/img/landing_pages/page_container.png %}){: style="max-width:40%;"}
 
 #### Responsivo aos dispositivos do usuário
 
@@ -112,7 +112,7 @@ Você pode tornar sua página de destino responsiva ao tamanho do dispositivo do
 
 Quando ativado, você também pode inverter as colunas de empilhamento para controlar a ordem vertical do conteúdo de várias colunas em telas menores. Isso faz com que as páginas tenham uma melhor aparência e comportamento em dispositivos móveis sem código personalizado.
 
-![A opção "Vertically stack on smaller screens" (Empilhar verticalmente em telas menores) na seção "Customize columns" (Personalizar colunas).]({% image_buster /assets/img/landing_pages/device_responsive_toggle.png %}){: style="max-width:50%;"}
+A opção "Vertically stack on smaller screens" (Empilhar verticalmente em telas menores) na seção "Customize columns" (Personalizar colunas).]({% image_buster /assets/img/landing_pages/device_responsive_toggle.png %}){: style="max-width:50%;"}
 
 #### Campos opcionais e obrigatórios
 
@@ -120,7 +120,7 @@ Você pode escolher se um campo de formulário é obrigatório ou opcional. Os c
 
 Por exemplo, para impor a captura de consentimento antes do envio do formulário, você pode ativar **a entrada de campo obrigatória** para definir uma caixa de seleção como obrigatória com o texto de isenção de responsabilidade apropriado.
 
-![Um campo de formulário de caixa de seleção com a opção "Campo de entrada obrigatório" selecionada.]({% image_buster /assets/img/landing_pages/lp-optional-required.png %}){: style="max-width:50%;"}
+\![Um campo de formulário de caixa de seleção com a opção "Campo de entrada obrigatório" selecionada.]({% image_buster /assets/img/landing_pages/lp-optional-required.png %}){: style="max-width:50%;"}
 
 ### Etapa 4: Criar uma página de confirmação (opcional)
 
@@ -142,7 +142,7 @@ Se a sua página de confirmação abrir em uma nova guia, um usuário que retorn
 
 Você pode visualizar sua página de destino na guia **Preview (Visualização** ) do editor. Depois de salvar sua página de destino como rascunho, você pode visitar o URL acessando **Landing Pages** e selecionando **Copiar URL** ao lado da página de destino. Você também pode compartilhar o URL com os colaboradores.
 
-![Uma página de destino com o menu aberto para mostrar a opção "Copiar URL".]({% image_buster /assets/img/landing_pages/copy-url.png %})
+\![Uma página de destino com o menu aberto para mostrar a opção "Copiar URL".]({% image_buster /assets/img/landing_pages/copy-url.png %})
 
 Antes de publicar, certifique-se de que:
 
@@ -160,13 +160,13 @@ Use modelos de página de destino para criar modelos para suas próximas campanh
 
 Você pode visualizar, arquivar, editar ou duplicar modelos de landing page. Ao editar uma landing page, você também pode salvar sua landing page como modelo, fazer alterações no modelo ou excluir o conteúdo da landing page. 
 
-![Um menu suspenso com opções para salvar, alterar e excluir uma página de destino.]({% image_buster /assets/img/landing_pages/manage-lp-template.png %}){: style="max-width:60%;"}
+\![Um menu suspenso com opções para salvar, alterar e excluir uma página de destino.]({% image_buster /assets/img/landing_pages/manage-lp-template.png %}){: style="max-width:60%;"}
 
 ## Visualização de análises
 
 Para analisar a eficácia de sua página de destino, vá para **Mensagens** > **Páginas de destino** e selecione uma página de destino que você publicou. Aqui, você pode acompanhar o número de visualizações de página, cliques na página, envios de página e as taxas de envio da sua página de destino.
 
-![A seção de análise de uma página de destino.]({% image_buster /assets/img/landing_pages/analytics.png %})
+\![A seção de análise de uma página de destino.]({% image_buster /assets/img/landing_pages/analytics.png %})
 
 ## Tratamento de erros de envio de formulários {#handling-form-submission-errors}
 
