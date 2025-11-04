@@ -1,5 +1,5 @@
 ---
-nav_title: 一般的なプッシュ・エラー・メッセージ
+nav_title: 一般的なプッシュエラーメッセージ
 article_title: 一般的なプッシュ・エラー・メッセージ
 page_order: 22
 page_type: reference

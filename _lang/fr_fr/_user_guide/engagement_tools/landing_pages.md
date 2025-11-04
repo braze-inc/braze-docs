@@ -1,9 +1,9 @@
 ---
-nav_title: Pages d’accueil
-article_title: Pages d’accueil
+nav_title: "Pages d'atterrissage"
+article_title: "Pages d'atterrissage"
 page_order: 31
-guide_top_header: "Pages d’accueil"
-description: "Cet article contient des ressources sur la création et la personnalisation des pages d’accueil Braze."
+guide_top_header: "Pages d'atterrissage"
+description: "Cet article contient des ressources pour créer et personnaliser les pages d'atterrissage de Braze."
 alias: /landing_pages/
 ---
 
@@ -11,37 +11,31 @@ alias: /landing_pages/
 
 > Les pages d'atterrissage de Braze sont des pages web autonomes qui peuvent piloter votre stratégie d'acquisition et d'engagement des utilisateurs.
 
-![Page d'atterrissage pour le lancement d'un produit de soins de la peau présentant des fonctionnalités, des images et une présentation de témoignages de clients.]({% image_buster /assets/img/landing_pages/example_landing_page.png %}){: style="float:right;max-width:45%;margin-left:15px;"}
-
 Utilisez les pages d'atterrissage pour développer votre audience, capturer les données des utilisateurs, promouvoir des offres spéciales et soutenir des campagnes multicanal.
+
+{% alert note %}
+La disponibilité des pages d'atterrissage et des domaines personnalisés dépend de votre offre Braze. Contactez votre gestionnaire de compte ou votre gestionnaire satisfaction client pour commencer.
+{% endalert %}
+
+{% multi_lang_include video.html id="eg4r7agod1" source="wistia" %}
 
 ## Conditions préalables
 
 Avant de pouvoir accéder aux pages d'atterrissage, les créer et les publier, vous devez disposer [d'autorisations d']({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#list-of-permissions) administrateur ou de toutes les autorisations suivantes :
 
-- Accéder aux pages d’accueil
-- Créer des ébauches de page d’accueil
-- Publier les pages d’accueil
+- Accéder aux pages d'atterrissage
+- Créez des ébauches de page d'atterrissage
+- Publier des pages d'atterrissage
 
-{% multi_lang_include drag_and_drop_access.md variable_name='dnd editors' %}
+{% multi_lang_include drag_and_drop/drag_and_drop_access.md variable_name='dnd editors' %}
 
-## Paliers de régime
-
-Le nombre de pages de destination publiées et de domaines personnalisés que vous pouvez utiliser dépend de votre type de plan : gratuit ou payant (incrémental).
-
-| Fonctionnalité                                                                                                   | Tiercé libre     | Niveau payant (incrémental)     |
-| :---------------------------------------------------------------------------------------------------------------- | :--------------- | ----------------- |
-| Pages d'atterrissage publiées                                                                 | Cinq par entreprise | 20 supplémentaires |
-| Domaines personnalisés          | Un par entreprise | Cinq autres |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
-
-## Foire aux questions
+## Questions fréquemment posées
 
 ### Quelle est la taille maximale des pages d'atterrissage ?
 
-La taille du corps de la page d'accueil peut aller jusqu'à 1 Mo.
+La taille du corps de la page d'atterrissage peut aller jusqu'à 500 KB.
 
-### Y a-t-il des exigences techniques pour publier une page d'accueil ?
+### Existe-t-il des exigences techniques pour publier une page d'atterrissage ?
 
 Non, il n'y a pas d'exigences techniques.
 
