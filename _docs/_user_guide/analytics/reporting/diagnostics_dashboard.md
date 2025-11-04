@@ -37,13 +37,18 @@ The data in this dashboard updates approximately every 15 minutes. Note that thi
 
 ## Configuring the dashboard
 
-You can find the diagnostics dashboard by going to **Analytics** > **Dashboard Builder**.
+You can access the diagnostics dashboard by going going to **Analytics** > **Dashboard Builder**.
 
-To run the dashboard and view your data, configure the filters at the top of the page:
+![The dashboard builder with a list of different campaign and Canvas diagnostic dashboards.]({% image_buster /assets/img/campaign_canvas_dashboard.png %})
 
-- **Select Campaigns or Canvases:** Choose to view data for one or more campaigns or Canvases.
+To run the dashboard and view your data, configure the filters: 
 
-Select **Run** to load the data for your selected filters.
+- **Date range:** Select the date range for your report.
+- **Source:** Choose to view data for one or more campaigns or Canvases.
+
+Select **Run Dashboard** to load the data for your selected filters.
+
+![Campaign and Canvas diagnostics example from May 25 to May 31, 2025 for a welcome series campaign.]({% image_buster /assets/img/campaign_canvas_dashboard_example.png %})
 
 ## Interpreting the data
 
@@ -54,14 +59,14 @@ Select **Run** to load the data for your selected filters.
 This can happen for several reasons:
 
 - **Audience criteria:** Fewer users than expected may have satisfied the audience criteria (for example, they weren't in the segment or didn't have the necessary attributes) when the campaign or Canvas was launched.
-- **Processing in progress:** Messages may still be actively processing. Users may still be in earlier steps of the Canvas and have not reached any message steps.
+- **Processing in progress:** Messages may still be actively processing. Users may still be in earlier steps of the Canvas and have not reached any Message steps.
 - **Data freshness:** The dashboard data updates approximately every 15 minutes, but this is not a guarantee. The newest data for this campaign or canvas may not have reached the dashboard yet.
-- **Edge cases:** There is a small chance you are encountering an edge case that is not captured in this dashboard at this time. If you suspect this is the case, contact [Braze support].
+- **Edge cases:** There is a small chance you are encountering an edge case that is not captured in this dashboard at this time. If you suspect this is the case, contact [Braze Support]({{site.baseurl}}/user_guide/administrative/access_braze/support).
 
 ### Why is the sum of _Total Aborts_ and _Message Sends_ greater than the audience for a campaign and Canvas?
 
 This can occur for two primary reasons:
 
-- **Multi-channel messages:** The campaign or Canvas step was configured to send on multiple channels (such as push and email). A single user can receive a "Sent" outcome for one channel (e.g., Email) and an "Abort" outcome for another (e.g., "Not Enabled for Channel" for Push). In this case, that one user would be counted twice in the chart: once as a "Sent" and once as an "Abort."
-  - **Example:** You send a push campaign to 100 users, targeting both iOS and Android. If a user only has an iOS device, they will receive the iOS push ("Sent") but will also trigger an abort for the Android push ("Not Enabled for Channel").
-- **Multiple Message steps (Canvas Only):** Your Canvas may have more than one message step in a given path. This dashboard aggregates all outcomes, so a single user could be counted multiple times if they pass through multiple message steps within the selected time range.
+- **Multi-channel messages:** The campaign or Canvas step was configured to send on multiple channels (such as push and email). A single user can receive a "sent" outcome for one channel (such as email) and an "abort" outcome for another (such as "Not Enabled for Channel" for push). In this case, that one user would be counted twice in the chart: once as a "sent" and once as an "abort."
+  - **Example:** You send a push campaign to 100 users, targeting both iOS and Android. If a user only has an iOS device, they will receive the iOS push ("sent") but will also trigger an abort for the Android push ("Not Enabled for Channel").
+- **Multiple Message steps (Canvas only):** Your Canvas may have more than one message step in a given path. This dashboard aggregates all outcomes, so a single user could be counted multiple times if they pass through multiple message steps within the selected time range.
