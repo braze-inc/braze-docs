@@ -128,6 +128,18 @@ The following settings are pre-configured in your Canvas:
 - Message step 
     - Review the email template and HTML block with a Liquid templating example to add products to your message in the pre-built template. If you use your own email template, you can also reference [Liquid variables](#message-personalization), as demonstrated in the following section.
 
+
+### How abandoned cart re-entry logic works
+
+When a user starts the checkout process, their cart is marked as `checkout_started`. From that point onward, any further cart updates with the same cart ID will not qualify the user to re-enter the abandoned cart user journey.
+
+1. When a user adds an item to their cart, they enter the Canvas.
+2. Each time they add or update items, they re-enter the Canvas—this keeps their cart data and messaging up to date.
+3. When the user starts the checkout process, their cart is tagged as `checkout_started`, and they exit the Canvas.
+4. Any future cart updates using the same cart ID will not trigger re-entry because this cart has already moved into the checkout stage.
+
+When users move to the checkout user journey, they're targeted by the [abandoned checkout Canvas](#abandoned-checkout) instead, which is designed for users further along in the purchase journey.
+
 ### Abandoned cart product personalization for emails {#abandoned-cart-checkout}
 
 Abandoned cart user journeys require a special `shopping_cart` Liquid tag for product personalization. 
@@ -176,7 +188,7 @@ If you use Shopify, create your cart URL by using this Liquid template:
 
 {% raw %}
 ```liquid
-{{context.source}}/checkouts/cn/{{context.cart_id}}
+{{context.${source}}}/checkouts/cn/{{context.${cart_id}}} 
 ```
 {% endraw %}
 

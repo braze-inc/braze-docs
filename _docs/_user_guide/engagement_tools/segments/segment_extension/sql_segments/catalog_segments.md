@@ -1,7 +1,7 @@
 ---
 nav_title: "Catalog segments"
 article_title: Catalog Segments
-page_order: 1
+page_order: 0
 page_type: reference
 alias: "/catalog_segments/"
 description: "This article describes how to create catalog segments, which use catalog data in SQL Segment Extensions to build audiences of users."
@@ -20,7 +20,7 @@ Catalog segments use SQL to join data from catalogs and data from custom events 
 
 ## Creating a catalog segment
 
-1. Go to **Segment Extensions** > **Create New Extension** > **Start With Template** and select a template. <br>![Modal with the option to create a catalog segment for events or purchases.]({% image_buster /assets/img/catalog-segments-template.png %}){: style="max-width:80%" }
+1. Go to **Segment Extensions** > **Create New Extension** > **Start With Template** and select a template. <br>![Modal with the option to create a catalog segment for events, purchases, or RFM segments.]({% image_buster /assets/img/catalog-segments-template.png %}){: style="max-width:80%" }
 
 {: start="2"}
 2. The SQL editor automatically populates with a template. <br>![SQL editor with a pregenerated template.]({% image_buster /assets/img/catalog-segments-editor.png %}){: style="max-width:80%" }<br>This template joins user event data with catalog data to segment users who engaged with certain catalog items.
@@ -80,6 +80,9 @@ If you created a segment where you expect users to enter and exit regularly, man
 
 ## Use cases
 
+{% tabs local %}
+{% tab Health %}
+
 ### Health app
 
 Let's say you have a health app and want to segment users who have booked a visit for the dentist. You also have the following:
@@ -100,6 +103,9 @@ You would set up a catalog segment by using the following variables:
 | `(Under Filter SQL Results) Value`| Dental |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
+{% endtab %}
+{% tab SaaS %}
+
 ### SaaS platform
 
 Let’s say you have B2B SaaS platform and want to segment users who are employees of an existing customer. You also have the following:
@@ -119,6 +125,9 @@ You would set up a catalog segment by using the following variables:
 | `(Under Filter SQL Results) Catalog field` | Classification |
 | `(Under Filter SQL Results) Value` | Enterprise |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+{% endtab %}
+{% endtabs %}
 
 ## Frequently asked questions
 

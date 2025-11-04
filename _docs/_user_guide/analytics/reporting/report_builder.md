@@ -25,12 +25,14 @@ page_order: 6.2
 
 1. Go to **Analytics** > **Report Builder (New)**.
 2. Select **Create New Report**.
-3. In the **Rows** dropdown, select one of the following to create a report:
+3. In the **Rows** dropdown, select what you'd like to report on:
     - Campaigns
     - Canvases
     - Campaigns and Canvases
     - Channels
     - Tags
+
+    Note that your **Rows** selection will impact [the metrics that you can view](#metrics-availability). For example, you can view multivariate metrics only if you report on **Canvases**, or **Campaigns** with a **Variant** drilldown. You cannot view those metrics when reporting on **Campaigns and Canvases**, even if those campaigns and Canvases have multivariate tests. 
 
 ![The "Rows and columns" section with fields to select the rows and groupings for your report.]({% image_buster /assets/img/report_builder_2/rows_and_columns.png %}){: style="width:90%;"}
 

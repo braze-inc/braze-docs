@@ -305,3 +305,26 @@ If you want to use an additional Firebase Messaging Service (FMS), you can speci
 If you are using Expo Application Services (EAS) and have enabled `enableBrazeIosRichPush` or `enableBrazeIosPushStories`, you will need to declare the corresponding bundle identifiers for each app extension in your project. There are multiple ways you can approach this step, depending on how your project is configured to manage code signing with EAS.
 
 One approach is to use the `appExtensions` configuration in your `app.json` file by following Expo's [app extensions documentation](https://docs.expo.dev/build-reference/app-extensions/). Alternatively, you can set up the `multitarget` setting in your `credentials.json` file by following Expo's [local credentials documentation](https://docs.expo.dev/app-signing/local-credentials/#multi-target-project).
+
+### Troubleshooting
+
+These are common troubleshooting steps for push notification integrations with the Braze React Native SDK and Expo plugin.
+
+#### Push notifications stopped working {#troubleshooting-stopped-working}
+
+If push notifications through the Expo plugin have stopped working:
+
+1. Check that the Braze SDK is still tracking sessions.
+2. Check that the SDK wasn't disabled by an explicit or implicit call to `wipeData`.
+3. Review any recent upgrades to Expo or it's related libraries, as there may be conflicts with your Braze configuration.
+4. Review recently added project dependencies and check if they are manually overriding your existing push notification delegate methods.
+
+{% alert tip %}
+For iOS integrations, you can also reference our [push notification setup tutorial](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b1-standard-push-notifications) to help you identify potential conflicts with your project dependencies.
+{% endalert %}
+
+#### Device token won't register with Braze {#troubleshooting-token-registration}
+
+If your device token won't register with Braze, first review [Push notifications stopped working](#troubleshooting-stopped-working).
+
+If your issue persists, there may be a separate dependency interfering with your Braze push notification configuration. You can try removing it or manually call `Braze.registerPushToken` instead.

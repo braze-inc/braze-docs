@@ -1,26 +1,26 @@
 ---
-nav_title: Logique de messagerie conditionnelle
-article_title: Logique de messagerie conditionnelle Liquid
+nav_title: "Logique conditionnelle d'envoi des messages"
+article_title: "Logique conditionnelle de l'envoi de messages liquides"
 page_order: 6
-description: "Le présent article de référence couvre la manière dont les balises peuvent être utilisées dans vos campagnes."
+description: "Cet article de référence explique comment les tags peuvent et doivent être utilisés dans vos campagnes."
 
 ---
 
-# Logique de messagerie conditionnelle
+# Logique conditionnelle d'envoi des messages
 
-> Les [étiquettes](https://docs.shopify.com/themes/liquid-documentation/tags) vous permettent d'inclure une logique de programmation dans vos campagnes d'envoi de messages. Les balises peuvent être utilisées pour exécuter des relevés conditionnels ainsi que pour des cas d’utilisation avancés, comme l’attribution de variables ou l’itération par un bloc de code. <br><br>Cette page explique comment les tags peuvent et doivent être utilisés, par exemple comment prendre en compte les valeurs d'attributs null, nil et blank, et comment référencer des attributs personnalisés.
+> Les [étiquettes](https://docs.shopify.com/themes/liquid-documentation/tags) vous permettent d'inclure une logique de programmation dans vos campagnes d'envoi de messages. Les tags peuvent être utilisés pour l'exécution d'instructions conditionnelles ainsi que pour des cas d'utilisation avancés, comme l'affectation de variables ou l'itération dans un bloc de code. <br><br>Cette page explique comment les tags peuvent et doivent être utilisés, par exemple comment prendre en compte les valeurs d'attributs null, nil et blank, et comment référencer des attributs personnalisés.
 
 ## Tags de mise en forme
 
 {% raw %}
-Une balise doit être enveloppée dans `{% %}`.
+Une étiquette doit être enveloppée dans `{% %}`.
 {% endraw %}
 
-Pour faciliter votre vie, Braze a inclus un formatage de couleurs qui s’activera en vert et violet si vous avez correctement formaté votre syntaxe Liquid. Le formatage vert peut aider à identifier les balises, tandis que le formatage violet met en évidence les zones qui contiennent une personnalisation.
+Pour vous faciliter un peu la vie, Braze a inclus un formatage en couleur qui s'activera en vert et en violet si vous avez correctement formaté votre syntaxe Liquid. La mise en forme verte peut aider à identifier les tags, tandis que la mise en forme violette met en évidence les zones qui contiennent de la personnalisation.
 
-Si vous rencontrez des difficultés à utiliser des messages conditionnels, essayez d’écrire la syntaxe conditionnelle avant d’insérer vos attributs personnalisés et autres éléments de Liquid.
+Si vous avez des difficultés à utiliser l'envoi conditionnel de messages, essayez de rédiger la syntaxe conditionnelle avant d'insérer vos attributs personnalisés et d'autres éléments Liquid.
 
-Par exemple, ajoutez les éléments suivants dans le champ de message :  
+Par exemple, ajoutez d'abord ce qui suit dans le champ du message :  
 {% raw %}
 ```liquid
 {% if X >0 %}
@@ -28,9 +28,9 @@ Par exemple, ajoutez les éléments suivants dans le champ de message :
 {% endif %}
 ```
 
-Assurez-vous qu’il est en vert, puis remplacez le `X` avec le Liquid de votre choix ou le contenu connecté en utilisant le bleu `+` dans l’angle du message, et `0` avec la valeur souhaitée.
+Assurez-vous qu'il apparaît en vert, puis remplacez le `X` par le contenu liquide ou connecté de votre choix en utilisant le `+` bleu dans le coin du champ de message, et le `0` par la valeur que vous souhaitez.
 <br><br>
-Ajoutez ensuite vos variations de message selon vos besoins entre les conditions `else` :
+Ensuite, ajoutez les variations de votre message au fur et à mesure que vous en avez besoin entre les conditionnels de `else`:
 ```liquid
 {% if {{custom_attribute.${total_spend}}} >0 %}
 Thanks for purchasing! Here's another 10% off!
@@ -65,13 +65,13 @@ La logique conditionnelle commence par l'étiquette `if`, qui énonce la premiè
 
 #### `else`
 
-Vous avez la possibilité d’inclure une instruction `{% else %}` dans votre logique conditionnelle. Si aucune des conditions que vous avez définies n'est remplie, l'instruction `{% else %}` spécifie le message qui doit être envoyé. Dans cet exemple, nous choisissons par défaut l'anglais si la langue de l'utilisateur n'est ni l'anglais, ni l'espagnol, ni le chinois.
+Vous avez la possibilité d'inclure une déclaration `{% else %}` dans votre logique conditionnelle. Si aucune des conditions que vous avez définies n'est remplie, l'instruction `{% else %}` spécifie le message qui doit être envoyé. Dans cet exemple, nous choisissons par défaut l'anglais si la langue de l'utilisateur n'est ni l'anglais, ni l'espagnol, ni le chinois.
 
 #### `endif`
 
 L'étiquette `{% endif %}` indique que vous avez terminé votre logique conditionnelle. Vous devez inclure l'étiquette `{% endif %}` dans tout message comportant une logique conditionnelle. Si vous n'incluez pas d'étiquette `{% endif %}` dans votre logique conditionnelle, vous obtiendrez une erreur car Braze ne pourra pas analyser votre message.
 
-### Tutoriel : Fournir un contenu basé sur l'emplacement/localisation
+### Tutoriel : Fournir un contenu basé sur l'emplacement/localisation
 
 À la fin de ce tutoriel, vous serez en mesure d'utiliser des tags avec des instructions "if", "elsif" et "else" pour diffuser du contenu en fonction de l'emplacement/localisation de l'utilisateur.
 
@@ -121,7 +121,7 @@ L'étiquette `{% endif %}` indique que vous avez terminé votre logique conditio
 
 {% endraw %}
 
-{% details Code complet du liquide %}
+{% details Full Liquid code %}
 
 {% raw %}
 ```liquid
@@ -145,17 +145,17 @@ L'étiquette `{% endif %}` indique que vous avez terminé votre logique conditio
 
 {% enddetails %}
 
-## Prise en compte des valeurs d'attribut nulles, nil et vides
+## Prise en compte des valeurs d'attributs null, nil et blank
 
-La logique conditionnelle est un moyen utile de tenir compte des valeurs d'attributs qui ne sont pas définies dans les profils des utilisateurs.
+La logique conditionnelle est un moyen utile de prendre en compte les valeurs d'attributs qui ne sont pas définies dans les profils utilisateurs.
 
-### Valeurs d'attribut nulles et nil
+### Valeurs d'attributs nulles et nuls
 
 Une valeur nulle se produit lorsque la valeur d'un attribut personnalisé n'a pas été définie. Par exemple, un utilisateur qui n'a pas encore défini son prénom n'aura pas de prénom enregistré dans Braze.
 
 Dans certaines circonstances, vous souhaiterez peut-être envoyer un message complètement différent aux utilisateurs qui ont un prénom et à ceux qui n'en ont pas.
 
-La balise suivante vous permet de spécifier un message pour les utilisateurs ayant un attribut  « prénom »  nul.
+L'étiquette suivante vous permet de spécifier un message pour les utilisateurs dont l'attribut "prénom" est nul :
 
 {% raw %}
 ```liquid
@@ -165,7 +165,7 @@ La balise suivante vous permet de spécifier un message pour les utilisateurs ay
 ```
 {% endraw %} 
 
-![Un exemple de message dans le tableau de bord de Braze, utilisant un attribut "prénom" nul.]({% image_buster /assets/img/value_null.png %}){: style="max-width:60%;"}
+Un exemple de message dans le tableau de bord de Braze, utilisant un attribut null 'first name'.]({% image_buster /assets/img/value_null.png %}){: style="max-width:60%;"}
 
 {% raw %}
 ```liquid
@@ -176,15 +176,15 @@ Hey {{${first_name} | default: 'there'}}, we're having a sale! Hurry up and get 
 {% endif %}
 ```
 
-Notez qu'une valeur d'attribut nulle n'est pas strictement associée à un type de valeur (par exemple, une chaîne "nulle" est la même qu'un tableau "nul"), donc dans l'exemple ci-dessus, la valeur d'attribut nulle fait référence à un prénom non défini, qui serait une chaîne.
+Notez qu'une valeur d'attribut null n'est pas strictement associée à un type de valeur (par exemple, une chaîne "null" est la même chose qu'un tableau "null"). Dans l'exemple ci-dessus, la valeur d'attribut null fait référence à un prénom non défini, qui serait une chaîne.
 
 {% endraw %}
 
 ### Valeurs d'attributs vides
 
-Une valeur vide se produit lorsque l'attribut sur un profil utilisateur n'est pas défini, est défini avec une chaîne d'espaces (` `) ou est défini comme `false`. Les valeurs vides doivent être vérifiées avant les autres variables pour éviter une erreur de traitement Liquid.
+Une valeur vide apparaît lorsque l'attribut d'un profil utilisateur n'est pas défini, est défini avec une chaîne de caractères (` `) ou est défini comme `false`. Les valeurs vides doivent être vérifiées avant les autres variables afin d'éviter une erreur de traitement du liquide.
 
-Le tag suivant vous permet de spécifier un message pour les utilisateurs qui ont un attribut "prénom" vide.
+L'étiquette suivante vous permet de spécifier un message pour les utilisateurs dont l'attribut "prénom" est vide.
 
 {% raw %}
 ```liquid
@@ -194,21 +194,21 @@ Le tag suivant vous permet de spécifier un message pour les utilisateurs qui on
 ```
 {% endraw %} 
 
-## Référencer des attributs personnalisés
+## Référencement d'attributs personnalisés
 
 Après avoir [créé des attrib]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#managing-custom-attributes)uts personnalisés, vous pouvez y faire référence dans vos envois de messages liquides.
 
-Lorsque vous utilisez une logique conditionnelle, vous devez connaître le type de données de l’attribut personnalisé pour vous assurer que vous utilisez la syntaxe correcte. À partir de la page **Attributs personnalisés** dans le tableau de bord, recherchez le type de données associé à votre attribut personnalisé, puis consultez les exemples suivants répertoriés pour chaque type de données.
+Lorsque vous utilisez la logique conditionnelle, vous devez connaître le type de données de l'attribut personnalisé afin de vous assurer que vous utilisez la bonne syntaxe. Dans la page **Attributs personnalisés** du tableau de bord, recherchez le type de données associé à votre attribut personnalisé, puis référez-vous aux exemples suivants listés pour chaque type de données.
 
-![Sélection d’un type de données pour un attribut personnalisé. L'exemple fourni montre un attribut Favorite_Category avec une chaîne de caractères comme type de données.]({% image_buster /assets/img_archive/custom_attribute_data_type.png %}){: style="max-width:80%;"}
+\![Sélection d'un type de données pour un attribut personnalisé. L'exemple fourni montre un attribut Favorite_Category avec une chaîne de caractères comme type de données.]({% image_buster /assets/img_archive/custom_attribute_data_type.png %}){: style="max-width:80%;"}
 
 {% alert tip %}
-Les chaînes de caractères et les baies nécessitent des apostrophes droites autour de eux, tandis que les booléens et les entiers n’auront jamais d’apostrophes.
+Les chaînes de caractères et les tableaux doivent être entourés d'apostrophes droites, tandis que les booléens et les entiers n'ont jamais d'apostrophes.
 {% endalert %}
 
-#### Valeur booléenne
+#### Booléen
 
-Les [booléens]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#booleans) sont des valeurs binaires et peuvent avoir pour valeur `true` ou `false`, par exemple `registration_complete: true`. Les valeurs booléennes ne sont pas entourées d’apostrophes..
+Les [booléens]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#booleans) sont des valeurs binaires et peuvent avoir pour valeur `true` ou `false`, par exemple `registration_complete: true`. Les valeurs booléennes ne sont pas entourées d'apostrophes.
 
 {% raw %}
 
@@ -220,7 +220,7 @@ Les [booléens]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custo
 
 #### Nombre
 
-Les [nombres]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#numbers) sont des valeurs numériques, qui peuvent être des entiers ou des flottants. Par exemple, un utilisateur peut `shoe_size: 10` ou `levels_completed: 287`. Les chiffres ne sont pas entourés d’apostrophes.
+Les [nombres]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#numbers) sont des valeurs numériques, qui peuvent être des entiers ou des flottants. Par exemple, un utilisateur peut avoir `shoe_size: 10` ou `levels_completed: 287`. Les valeurs numériques ne sont pas entourées d'apostrophes.
 
 {% raw %}
 
@@ -230,7 +230,7 @@ Les [nombres]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_
 
 {% endraw %}
 
-Vous pouvez également utiliser d'autres [opérateurs de base](https://shopify.dev/docs/themes/liquid/reference/basics/operators), tels que inférieur à (<) ou supérieur à (>) pour les nombres entiers :
+Vous pouvez également utiliser d'autres [opérateurs de base](https://shopify.dev/docs/themes/liquid/reference/basics/operators) tels que moins que (<) ou plus grand que (>) pour les nombres entiers :
 
 {% raw %}
 
@@ -242,7 +242,7 @@ Vous pouvez également utiliser d'autres [opérateurs de base](https://shopify.d
 
 #### Chaîne de caractères
 
-Une [chaîne de caractères]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#strings) est composée de caractères alphanumériques et stocke une donnée concernant votre utilisateur. Par exemple, vous pourriez avoir `favorite_color: red` ou `phone_number: 3025981329`. Les valeurs de chaîne de caractères doivent être entourées d’apostrophes.
+Une [chaîne de caractères]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#strings) est composée de caractères alphanumériques et stocke une donnée concernant votre utilisateur. Par exemple, vous pouvez avoir `favorite_color: red` ou `phone_number: 3025981329`. Les valeurs chaînes de caractères doivent être entourées d'apostrophes.
 
 {% raw %}
 
@@ -252,11 +252,11 @@ Une [chaîne de caractères]({{site.baseurl}}/user_guide/data_and_analytics/cust
 
 {% endraw %}
 
-Pour les chaînes de caractères, vous pouvez utiliser « == » ou « contient » dans votre Liquid.
+Pour les chaînes de caractères, vous pouvez utiliser à la fois "==" et "contains" dans votre liquide.
 
-#### Tableau
+#### Réseau
 
-Un [tableau]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#arrays) est une liste d'informations sur votre utilisateur. Par exemple, un utilisateur peut avoir `last_viewed_shows: stranger things, planet earth, westworld`. Les valeurs de baie doivent être entourées d’apostrophes.
+Un [tableau]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#arrays) est une liste d'informations sur votre utilisateur. Par exemple, un utilisateur peut avoir `last_viewed_shows: stranger things, planet earth, westworld`. Les valeurs du tableau doivent être entourées d'apostrophes.
 
 {% raw %}
 
@@ -266,11 +266,11 @@ Un [tableau]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_a
 
 {% endraw %}
 
-Pour les baies, vous devez utiliser « contains » et ne pas utiliser « == ». 
+Pour les tableaux, vous devez utiliser "contains" et ne pouvez pas utiliser "==". 
 
-#### Date
+#### L'heure
 
-Horodatage du moment où un événement a eu lieu. Les valeurs [temporelles]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#time) doivent être assorties d'un [filtre mathématique]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/#math-filters) pour être utilisées dans la logique conditionnelle.
+L'heure à laquelle un événement s'est produit. Les valeurs [temporelles]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#time) doivent être assorties d'un [filtre mathématique]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/#math-filters) pour être utilisées dans la logique conditionnelle.
 
 {% raw %}
 

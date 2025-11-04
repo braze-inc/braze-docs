@@ -25,7 +25,7 @@ En comprenant les profils utilisateurs, vous pouvez obtenir des informations sur
 - **Achats :** Cette section enregistre l'historique des achats de l'utilisateur. C'est essentiel pour comprendre les habitudes d'achat et les préférences de l'utilisateur.
 - **Appareils :** Cette section répertorie les appareils que l'utilisateur a utilisés pour interagir avec votre marque. Il peut s'agir d'appareils mobiles, de navigateurs web et d'appareils connectés (tels que les wearables et les téléviseurs intelligents).
 - **Engagement :** Cette section contient des informations sur les interactions de l'utilisateur avec les messages que vous lui envoyez, les segments auxquels il appartient, le statut de son abonnement, etc.
-- **Historique des messages :** Il s'agit d'un enregistrement de tous les messages qui ont été envoyés à l'utilisateur à partir du canal de communication correspondant (comme l'e-mail ou le push).
+- **L'envoi de messages :** Il s'agit d'un enregistrement de tous les messages qui ont été envoyés à l'utilisateur à partir du canal de communication correspondant (comme l'e-mail ou le push).
 
 {% alert tip %}
 Les SDK de la plateforme Braze collectent automatiquement 27 attributs et événements différents. Grâce à ces événements et attributs standard, vous pouvez créer des segments dès l'intégration du SDK.
@@ -40,8 +40,8 @@ Les attributs sont des caractéristiques ou des propriétés spécifiques associ
 Les attributs standard sont des attributs prédéfinis que vous pouvez suivre avec Braze après avoir intégré le SDK dans votre application. Il s'agit d'éléments communs d'information sur les utilisateurs que la plupart des apps trouveraient utiles, comme les données démographiques et les données sur les appareils. En voici quelques exemples :
 
 - Prénom
-- Nom
-- E-mail
+- Nom de famille
+- e-mail
 - Genre
 - Date de naissance
 - Pays
@@ -72,9 +72,9 @@ Les attributs personnalisés vous donnent la possibilité de collecter et d'anal
 
 Les attributs standard et personnalisés peuvent être utilisés pour segmenter votre audience et personnaliser vos messages marketing. Par exemple, vous pouvez envoyer une offre spéciale aux utilisateurs d'une certaine ville (attribut standard) qui ont effectué plus de 10 achats (attribut personnalisé).
 
-### Événements
+### Evénements
 
-Les événements représentent des actions ou des comportements spécifiques effectués par les utilisateurs au sein de votre appli ou de votre site web. Parmi les exemples d'événements, on peut citer le lancement d'une application, un achat, la consultation d'un contenu ou toute autre action. En suivant et en analysant ces événements, vous pouvez obtenir des informations sur le comportement des utilisateurs et les modèles d'engagement.
+Les événements conseillent des actions ou des comportements spécifiques effectués par les utilisateurs au sein de votre application ou de votre site web. Parmi les exemples d'événements, on peut citer le lancement d'une application, un achat, la consultation d'un contenu ou toute autre action. En suivant et en analysant ces événements, vous pouvez obtenir des informations sur le comportement des utilisateurs et les modèles d'engagement.
 
 #### Événements standard
 
@@ -83,7 +83,7 @@ Les [événements standard]({{site.baseurl}}/user_guide/data_and_analytics/custo
 - **Début de la session :** Cet événement est déclenché lorsqu'un utilisateur ouvre l'application.
 - **Fin de la session :** Cet événement est déclenché lorsqu'un utilisateur ferme l'application.
 - **Achat :** Cet événement est déclenché lorsqu'un utilisateur effectue un achat dans l'appli.
-- **Clic sur la notification push :** Cet événement est déclenché lorsqu'un utilisateur clique sur une notification push.
+- **Notification push Click :** Cet événement est déclenché lorsqu'un utilisateur clique sur une notification push.
 
 #### Événements personnalisés
 
@@ -105,13 +105,13 @@ Les événements personnalisés vous donnent la possibilité de suivre les actio
 
 Braze utilise des points de données pour vous aider à définir les informations les plus impactantes pour votre entreprise. Les points de données constituent une partie cruciale du fonctionnement de Braze et sont utilisés pour la facturation, la tarification et, surtout, la personnalisation et l'optimisation de vos campagnes marketing.
 
-Les points de données sont consommés lorsque les données de profil d'un utilisateur sont mises à jour ou lorsqu'il effectue des actions spécifiques. Ces actions peuvent inclure le démarrage d'une session, la fin d'une session, l'enregistrement d'un événement personnalisé ou la réalisation d'un achat. Il est important de noter que toutes les données collectées par Braze ne comptent pas comme des points de données. Par exemple, les données et les événements collectés par défaut par les Services Braze, tels que les jetons push, les informations sur les appareils et tous les événements de suivi de l'engagement des campagnes, comme les ouvertures d'e-mail et les clics sur les notifications push, ne sont pas jetés en tant que points de données.
+Les points de données sont consommés lorsque les données de profil d'un utilisateur sont mises à jour ou lorsqu'il effectue des actions spécifiques. Ces actions peuvent être le démarrage d'une session, la fin d'une session, l'enregistrement d'un événement personnalisé ou la réalisation d'un achat. Il est important de noter que toutes les données collectées par Braze ne comptent pas comme des points de données. Par exemple, les données et les événements collectés par défaut par les Services Braze, tels que les jetons push, les informations sur les appareils et tous les événements de suivi de l'engagement des campagnes, comme les ouvertures d'e-mail et les clics sur les notifications push, ne sont pas jetés en tant que points de données.
 
-En réfléchissant bien aux informations à suivre en tant que points de données, vous ciblez les données ayant le plus d'impact sur l'expérience de vos utilisateurs. Votre gestionnaire de compte Braze vous aidera à recommander les meilleures pratiques en matière de données en fonction de vos besoins.
+En réfléchissant bien aux informations à suivre en tant que points de données, vous ciblez les données qui ont le plus d'impact sur l'expérience de vos utilisateurs. Votre gestionnaire de compte Braze vous aidera à recommander les meilleures pratiques en matière de données en fonction de vos besoins.
 
 Consultez notre article dédié pour en savoir plus sur les [points de données]({{site.baseurl}}/user_guide/data/data_points/).
 
-## Segments
+## Segmentations
 
 La [segmentation]({{site.baseurl}}/user_guide/engagement_tools/segments) vous permet de cibler les utilisateurs en fonction de leurs caractéristiques et actions démographiques, comportementales, sociales ou techniques (c'est-à-dire les attributs et les événements). L'utilisation créative et intelligente de la segmentation et de l'automatisation des messages vous permet de faire évoluer vos utilisateurs de façon fluide/sans heurts tout au long de leur parcours client.
 
@@ -122,15 +122,15 @@ Conseils pour travailler avec des segments :
 - Vous n'êtes pas limité à l'utilisation d'un seul filtre à la fois. Créez des segments granulaires finement ajustés en superposant plusieurs filtres.
 - Vous pouvez utiliser les actions ou les inactions de vos utilisateurs pour comprendre comment atteindre vos utilisateurs là où ils veulent s'engager avec vous. Ces actions peuvent être des événements personnalisés, un engagement lié à une campagne ou un Canvas existant, ou même un message spécifique au sein d'un Canvas.
 
-### Cas d’utilisation
+### Cas d'utilisation
 
 Supposons que vous dirigiez un magasin de vêtements en ligne et que vous ayez mis en place un flux d'envoi de messages pour envoyer une série d'e-mails aux utilisateurs qui ont ajouté un article à leur panier mais n'ont pas terminé leur achat. Ce flux de panier abandonné pourrait inclure un e-mail de rappel initial, un e-mail de suivi offrant une réduction et un e-mail de rappel final.
 
-![]({% image_buster /assets/img/getting_started/segment_example.png %}){: style="max-width:70%" }
+\![]({% image_buster /assets/img/getting_started/segment_example.png %}){: style="max-width:70%" }
 
-Vous pouvez créer un segment d'utilisateurs qui ont déclenché l'événement personnalisé "Ajout d'un article au panier" mais qui n'ont pas déclenché l'événement personnalisé "Achats effectués". Ensuite, dans ce segment, vous pourriez identifier davantage les utilisateurs qui ont ouvert l'e-mail de rappel initial (engagement avec un message spécifique) mais qui n'ont pas effectué d'achat.
+Vous pouvez créer un segment d'utilisateurs qui ont déclenché l'événement personnalisé "Ajout d'un article au panier" mais qui n'ont pas déclenché l'événement personnalisé "Achat terminé". Ensuite, dans ce segment, vous pourriez identifier davantage les utilisateurs qui ont ouvert l'e-mail de rappel initial (engagement avec un message spécifique) mais qui n'ont pas effectué d'achat.
 
-![]({% image_buster /assets/img/getting_started/segment_example_breakdown.png %})
+\![]({% image_buster /assets/img/getting_started/segment_example_breakdown.png %})
 
 Ce segment pourrait être ciblé par une campagne plus agressive pour tenter de convertir ces utilisateurs en acheteurs. Par exemple, vous pouvez leur envoyer une offre spéciale ou une recommandation personnalisée en fonction des articles de leur panier.
 

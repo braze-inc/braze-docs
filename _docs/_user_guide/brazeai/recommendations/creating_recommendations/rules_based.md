@@ -82,7 +82,7 @@ Create your recommendation engine using either a catalog or Connected Content:
 {% tab using a catalog %}
 To create your recommendation engine using a catalog:
 
-1. [Create a catalog]({{site.baseurl}}/user_guide/data/activation/catalogs/catalog/) of products.
+1. [Create a catalog]({{site.baseurl}}/user_guide/data/activation/catalogs/create/) of products.
 2. For each product, add a list of recommended products as a string separated by a delimiter (like a pipe `|`) in a column named “product_recommendations”.
 3. Pass the product ID that you want to find recommendations for to the catalog.
 4. Get the `product_recommendations` value for that catalog item and split it by the delimiter with a Liquid split filter.

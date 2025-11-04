@@ -3,7 +3,7 @@ nav_title: Ideas y estrategias
 article_title: Ideas y estrategias
 layout: dev_guide
 guide_top_header: "Ideas y estrategias"
-guide_top_text: "Obtenga más información sobre cómo probar y comprobar sus lienzos con diferentes ideas y estrategias."
+guide_top_text: "Obtén más información sobre cómo probar y comprobar tus Lienzos con diferentes ideas y estrategias."
 page_order: 5
 
 tool: Canvas
@@ -18,7 +18,7 @@ guide_featured_list:
   - name: Lista de comprobación previa y posterior al lanzamiento
     link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/pre_post_launch_checklist/
     image: /assets/img/braze_icons/check-square-broken.svg
-  - name: Lanzamiento con Canvas Flow
+  - name: Lanzamiento con Canvas
     link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/launching_canvas_flow/
     image: /assets/img/braze_icons/git-branch-01.svg
 

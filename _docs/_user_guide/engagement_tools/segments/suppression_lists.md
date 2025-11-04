@@ -12,10 +12,6 @@ description: "This page covers how to use suppression lists to specify which use
 
 > Suppression lists are groups of users who automatically do not receive any campaigns or Canvases. Suppression lists are defined by segment filters, and users will enter and exit suppression lists as they meet filter criteria. You can also set exception tags so that the suppression list won’t apply to campaigns or Canvases with those tags. Messages from campaigns or Canvases with exception tags will still reach suppression list users who are in the target segments.
 
-{% alert important %}
-Suppression lists are currently in beta. If you're interested in being part of this beta, reach out to your customer success manager. During the beta, functionality may change, and you can have up to five active suppression lists at a time, but let your customer success manager know if you need more. 
-{% endalert %}
-
 ## Why use suppression lists?
 
 Suppression lists are dynamic and automatically apply to all forms of messaging, but you can set exceptions for selected tags. If your selected exception tags are used in a campaign or Canvas, then that suppression list won't apply to that campaign or Canvas. Messages from campaigns or Canvases with exception tags will still reach any suppression list users that are part of your target segments.
@@ -31,15 +27,17 @@ The only message type that suppression lists do not apply to is feature flags. U
 
 You can use exception tags so that suppression list users are still targeted by particular campaigns and Canvases. For details, refer to step 4 in [Setting up suppression lists](#setup). If you do not add exception tags to a suppression list, then users in that suppression list will not be targeted with any messaging besides feature flags. 
 
-![The "Exception Settings" section with a checkbox to not apply the suppression list to API-triggered campaigns and Canvases.]({% image_buster /assets/img/suppression_list_checkbox.png %}){: style="max-width:70%;"}
-
 {% alert note %}
 Suppression lists are applied to API campaigns that are created in the Braze dashboard with a `campaign_id`. Suppression lists don't apply to messages sent through [Braze messaging endpoints]({{site.baseurl}}/api/endpoints/messaging/) without an associated `campaign_id`. 
 {% endalert %}
 
+![The "Exception Settings" section with a checkbox to not apply the suppression list to API-triggered campaigns and Canvases.]({% image_buster /assets/img/suppression_list_checkbox.png %}){: style="max-width:70%;"}
+
 ## Setting up suppression lists {#setup}
 
-Because suppression lists can significantly impact the messages you send, only admins can edit, save, active, and deactivate suppression lists (all users can view suppression lists).
+{% alert note %}
+All users can view suppression lists, but only users with [admin permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/?tab=admin#list-of-permissions) can create and manage suppression lists.
+{% endalert %}
 
 1. Go to **Audience** > **Suppression Lists**.<br><br>![The "Suppression Lists" page with a list of three suppression lists.]({% image_buster /assets/img/suppression_lists_home.png %})<br><br>
 2. Select **Create Suppression List** and add a name.<br><br>![A window called "Create a Suppression List" with a field to enter a name.]({% image_buster /assets/img/create_suppression_list.png %}){: style="max-width:80%;"}<br><br>
@@ -54,7 +52,7 @@ Though the setup process seems similar to [segment creation]({{site.baseurl}}/us
 {: start="4"}
 4. Determine whether to have exceptions based on tag by checking the box beneath your segment name (refer to [Why use suppression lists?](#why-use-suppression-lists) for more information), then add the tags of campaigns or Canvases that users in this suppression list should still receive. <br><br>In other words, if you add the exception tag “Shipping confirmation”, users in your suppression list will be excluded from all messaging except those that use the tag “Shipping confirmation".<br><br>![The "Shipping List Details" section with an exception tag applied called "Shipping confirmation".]({% image_buster /assets/img/exception_tags.png %})<br><br>
 5. Save or activate your suppression list.
-- When you save, your suppression list will be saved but won't be activated, which means it won't go into effect. Your suppression list will remain inactive until you activate it, and inactive suppression lists won't impact messaging (users won't excluded from messages).
+- When you save, your suppression list will be saved but won't be activated, which means it won't go into effect. Your suppression list will remain inactive until you activate it, and inactive suppression lists won't impact messaging (users won't be excluded from messages).
 - When you activate, your suppression list will be saved and immediately go into effect, which means users in your suppression list will immediately be excluded from campaigns or Canvases (except for ones containing an exception tag).
 
 {% alert note %}

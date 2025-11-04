@@ -4,8 +4,8 @@ article_title: Plantillas de correo electrónico
 page_order: 5
 layout: dev_guide
 guide_top_header: "Plantillas de correo electrónico"
-guide_top_text: "Perfeccione la difusión de su correo electrónico creando plantillas de correo electrónico personalizadas y adaptadas a su marca en Braze. Consulte estos artículos para saber cómo crear o cargar plantillas de correo electrónico, y cómo aprovechar las plantillas de enlace de correo electrónico y el alias de enlace."
-description: "Esta sección incluye artículos sobre plantillas de correo electrónico, plantillas de enlaces de correo electrónico, alias de enlaces, etc."
+guide_top_text: "Perfecciona tu alcance por correo electrónico creando plantillas de correo electrónico receptivas, personalizadas y acordes con tu marca en Braze. Consulta estos artículos para saber cómo crear o cargar plantillas de correo electrónico, y cómo aprovechar las plantillas de enlaces de correo electrónico y el aliasing de enlaces."
+description: "Esta sección incluye artículos sobre plantillas de correo electrónico, plantillas de enlaces de correo electrónico, aliasing de enlaces y mucho más."
 channel:
   - email
 
@@ -20,7 +20,7 @@ guide_featured_list:
 - name: Aliasing de enlaces
   link: /docs/user_guide/message_building_by_channel/email/templates/link_aliasing/
   image: /assets/img/braze_icons/link-03.svg
-- name: Plantilla de enlaces
+- name: Plantillas de enlaces
   link: /docs/user_guide/message_building_by_channel/email/templates/link_template/
   image: /assets/img/braze_icons/link-03.svg
 - name: Preguntas frecuentes

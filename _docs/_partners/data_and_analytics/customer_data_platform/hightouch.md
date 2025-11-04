@@ -1,6 +1,6 @@
 ---
 nav_title: Hightouch
-article: Hightouch
+article_title: Hightouch
 layout: redirect
 redirect_to: /docs/partners/hightouch/
 ---

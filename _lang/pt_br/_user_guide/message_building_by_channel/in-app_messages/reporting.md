@@ -1,8 +1,8 @@
 ---
 nav_title: Relatórios
-article_title: Envio de mensagens no app
+article_title: Relatório de mensagens no aplicativo
 page_order: 5
-description: "Este artigo de referência aborda relatórios e análises de dados de mensagens no app, incluindo detalhes de campanhas, performance de mensagens e histórico de performance."
+description: "Este artigo de referência aborda relatórios e análises de mensagens in-app, incluindo detalhes da campanha, desempenho da mensagem e desempenho histórico."
 channel:
   - in-app messages
 tool:
@@ -10,9 +10,9 @@ tool:
 
 ---
 
-# Relatórios de mensagens no app {#iam-reporting}
+# Relatórios de mensagens no aplicativo {#iam-reporting}
 
-> Este artigo de referência aborda relatórios e análises de dados de mensagens no app, incluindo detalhes de campanhas, performance de mensagens e histórico de performance.
+> Este artigo de referência aborda relatórios e análises de mensagens in-app, incluindo detalhes da campanha, desempenho da mensagem e desempenho histórico.
 
-{% multi_lang_include campaign_analytics.md channel="mensagem no app" %}
+{% multi_lang_include analytics/campaign_analytics.md channel="in-app message" %}
 

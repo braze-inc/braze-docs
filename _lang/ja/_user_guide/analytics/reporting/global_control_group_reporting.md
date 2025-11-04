@@ -1,5 +1,5 @@
 ---
-nav_title: グローバルコントロールグループ 
+nav_title: 地球コントロールグループ
 article_title: グローバルコントロールグループレポート
 page_type: reference
 description: "このページでは、ダッシュボードの [グローバルコントロールグループレポート] ページにあるレポート指標について説明します。"
@@ -18,7 +18,7 @@ tool:
 
 次に、レポートを実行したいパラメータ（セッションまたは特定のカスタムイベント）を選択し、「**レポートを実行**」を選択する。
 
-![]({% image_buster /assets/img/control_group/control_group6.png %})
+\![]({% image_buster /assets/img/control_group/control_group6.png %})
 
 ## レポートを設定する
 

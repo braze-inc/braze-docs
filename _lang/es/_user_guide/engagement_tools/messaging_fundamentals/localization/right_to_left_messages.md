@@ -2,6 +2,7 @@
 nav_title: Mensajes de derecha a izquierda
 article_title: Creación de mensajes de derecha a izquierda
 page_order: 1
+alias: /right_to_left_messages/
 page_type: reference
 description: "En esta página se describen las mejores prácticas para elaborar mensajes en Braze que se lean de derecha a izquierda."
 ---
@@ -22,7 +23,7 @@ Además, comprueba la puntuación y los emojis para determinar si tu mensaje se 
 | Interpretación occidental estándar | Renderizado de derecha a izquierda |
 |------------------|------------------------|
 | Muestra el signo de exclamación y el emoji al **final** de las frases. | Muestra el signo de exclamación y el emoji al **principio** de la frase. |
-| ![Un ejemplo de mensaje estándar de derecha a izquierda.]({% image_buster /assets/img/right-to-left/standard.png %}) | ![Un ejemplo de mensajes de izquierda a derecha.]({% image_buster /assets/img/right-to-left/right-to-left.png %}) |
+| \![Un ejemplo de mensaje estándar de derecha a izquierda.]({% image_buster /assets/img/right-to-left/standard.png %}) | \![Un ejemplo de mensajes de izquierda a derecha.]({% image_buster /assets/img/right-to-left/right-to-left.png %}) |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 
 ## Crear un mensaje de derecha a izquierda
@@ -32,7 +33,7 @@ Para crear tu mensaje de derecha a izquierda en Braze:
 1. Redacta tu mensaje estándar en el editor Braze.
 2. Copia el texto del mensaje de Braze y, a continuación, utiliza una herramienta de localización para convertirlo en un mensaje de derecha a izquierda.
 3. Vuelve a pegar tu mensaje convertido en Braze.
-4. Comprueba el formato y la alineación del texto. Si estás creando un mensaje de correo electrónico de arrastrar y soltar o HTML, puedes hacerlo dentro del compositor. Si no, tendrás que utilizar otro procesador de textos.<br><br>![Menú del editor de arrastrar y soltar de correo electrónico con botón para alternar la alineación del texto entre derecha-izquierda e izquierda-derecha.]({% image_buster /assets/img/rtl_button.png %}){: style="max-width:50%;"}
+4. Comprueba el formato y la alineación del texto. Si estás creando un mensaje de correo electrónico de arrastrar y soltar o HTML, puedes hacerlo dentro del compositor. Si no, tendrás que utilizar otro procesador de textos.<br><br>Menú del editor de arrastrar y soltar con botón para alternar la alineación del texto entre derecha-izquierda e izquierda-derecha.]({% image_buster /assets/img/rtl_button.png %}){: style="max-width:50%;"}
 
 ## Consideraciones
  
@@ -40,7 +41,7 @@ Para crear tu mensaje de derecha a izquierda en Braze:
 
 El método de copiar y pegar para mensajes push puede ser difícil de usar con notificaciones push más largas, porque el contenido más largo puede aparecer en varias líneas en un dispositivo móvil. Si copias el texto de tu mensaje desde fuera de Braze (como un documento de Word) y lo pegas directamente en Braze, la alineación de las frases y la colocación de las palabras pueden cambiar. Para evitarlo, copia y pega por partes y añade un salto de línea. Por ejemplo, copia y pega las cinco primeras palabras, añade un salto de línea, copia las cinco palabras siguientes, añade un salto de línea, etc.
 
-Las funciones de vista previa y de prueba están diseñadas para mensajes de izquierda a derecha, por lo que los mensajes de derecha a izquierda no se mostrarán correctamente en la sección de **vista previa y de prueba**, pero se mostrarán correctamente en los dispositivos de usuario si sus ajustes están configurados para ello. Te sugerimos que te envíes mensajes a ti mismo en un entorno en vivo para confirmar que se muestran correctamente en función de la configuración del dispositivo.
+Las funciones de vista previa y de prueba están diseñadas para mensajes de izquierda a derecha, por lo que los mensajes de derecha a izquierda no se mostrarán correctamente en la sección de **prueba de la vista previa & **, pero se mostrarán correctamente en los dispositivos de usuario si sus ajustes están configurados para ello. Te sugerimos que te envíes mensajes a ti mismo en un entorno en vivo para confirmar que se muestran correctamente en función de la configuración del dispositivo.
 
 ### Texto bidireccional
 
@@ -52,7 +53,7 @@ Un formato adecuado para el texto bidireccional es especialmente importante cuan
 
 ### Caracteres especiales, números y emojis
 
-Los caracteres especiales (como signos de puntuación, símbolos matemáticos y divisas), números, viñetas y emojis pueden "saltar" al elaborar mensajes de derecha a izquierda en Braze. Para evitarlo, escribe tu copia con el formato adecuado en un procesador de textos externo, y luego pega la copia en Braze. También puede ser útil evitar colocar los emojis al principio del texto y, en su lugar, separarlos (y los caracteres especiales y los números) del texto con saltos de línea para evitar problemas de alineación.
+Los caracteres especiales (como puntuación, símbolos matemáticos y divisas), números, viñetas y emojis pueden "saltar" al elaborar mensajes de derecha a izquierda en Braze. Para evitarlo, escribe tu copia con el formato adecuado en un procesador de textos externo, y luego pega la copia en Braze. También puede ser útil evitar colocar los emojis al principio del texto y, en su lugar, separarlos (y los caracteres especiales y los números) del texto con saltos de línea para evitar problemas de alineación.
 
 ### Mensajes en árabe
 

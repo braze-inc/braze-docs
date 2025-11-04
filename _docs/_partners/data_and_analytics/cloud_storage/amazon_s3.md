@@ -137,7 +137,7 @@ Name your Current. In the **Credentials** section, make sure **AWS Secret Access
 ![]({{site.baseurl}}/assets/img/currents-s3-example.png)
 
 {% alert warning %}
-Keep your AWS access key ID and secret access key up to date. If your connector's credentials expire, the connector will stop sending events. If this persists for more than **48 hours**, the connector's events will be dropped, and data will be permanently lost.
+Keep your AWS access key ID and secret access key up to date. If your connector's credentials expire, the connector will stop sending events. If this persists for more than **5 days**, the connector's events will be dropped, and data will be permanently lost.
 {% endalert %}
 
 You can also add the following customization based on your needs:
@@ -315,7 +315,9 @@ A notification will inform you whether your credentials have been successfully v
 Users that have integrated a cloud data storage solution, and are trying to export APIs, dashboard reports, or CSV reports will experience the following:
 
 - All API exports will not return a download URL in the response body and must be retrieved through data storage.
-- All dashboard reports and CSV reports will be sent to the users email for download (no storage permissions required) and backed up on Data Storage. 
+- All dashboard reports and CSV reports will be sent to the users email for download (no storage permissions required) and backed up on Data Storage.
+
+{% multi_lang_include alerts/important_alerts.md alert='S3 file bucket export' %}
 
 ## Multiple connectors
 

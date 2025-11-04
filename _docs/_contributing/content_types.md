@@ -1,6 +1,6 @@
 ---
 nav_title: Content types
-article: Content Types
+article_title: Content Types
 page_order: 4
 ---
 

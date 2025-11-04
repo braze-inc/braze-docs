@@ -12,14 +12,17 @@ channel: email
 
 guide_featured_title: "Artículos de sección"
 guide_featured_list:
-  - name: "Creación de un correo electrónico con HTML personalizado"
+  - name: "Crear un correo electrónico con HTML personalizado"
     link: /docs/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/
     image: /assets/img/braze_icons/mail-01.svg
-  - name: "CSS Inlining"
+  - name: "Inserción CSS"
     link: /docs/user_guide/message_building_by_channel/email/html_editor/css_inline/
     image: /assets/img/braze_icons/file-code-01.svg
-  - name: "Ficha Promociones de Gmail"
+  - name: "Pestaña Promociones de Gmail"
     link: /docs/user_guide/message_building_by_channel/email/html_editor/gmail_promotions_tab/
     image: /assets/img/braze_icons/message-check-circle.svg
+  - name: Solución de problemas
+    link: /docs/user_guide/message_building_by_channel/email/html_editor/troubleshooting/
+    image: /assets/img/braze_icons/annotation-question.svg
 
 ---

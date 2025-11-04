@@ -317,6 +317,12 @@ a:hover {
 #support-search-div .aa-Form button {
   padding-top: 10px;
 }
+#support-portal-banner p {
+  line-height: 30px;
+}
+#support-portal-banner p a {
+  line-height: 30px;
+}
 </style>
 
 
@@ -1335,6 +1341,13 @@ $( document ).ready(function() {
 
 <div class="container-fluid" id="main-container">
       <div class="row">
+          <div class="col">
+{% alert tip %}
+Track all your cases, add attachments, and find answers faster in the Support Portal. Find out more [here]({{site.baseurl}}/user_guide/administrative/access_braze/support/).
+{% endalert %}
+          </div>
+      </div>
+      <div class="row">
           <div class="col" >
               <h1 class="h1">Need Help? </h1>
               <div class="gradient-line"></div>
@@ -1465,12 +1478,12 @@ $( document ).ready(function() {
               </form>
         </div>
         <div class="col-sm-5" id="ticket_resources">
+
         <div id="support-search-div">
          </div>
 
            <div id="support-search-panel"></div>
-
-            <legend>Useful Resources</legend>
+            <legend>Additional resources</legend>
 
             <div id="ticket_usefulresources">
               <a target="" href="{{site.baseurl}}/user_guide/introduction/">User Guide</a><br />
@@ -1479,7 +1492,9 @@ $( document ).ready(function() {
               <a target="" href="{{site.baseurl}}/help/faqs/">Frequently Asked Questions</a><br />
               <a target="" href="https://learning.braze.com/">Braze Learning</a><br />
               <a target="" href="https://dashboard.braze.com/">Braze Dashboard</a><br />
+              <a target="" href="{{site.baseurl}}/user_guide/administrative/access_braze/support/">Support Portal</a><br />
             </div>
+
 
         </div>
     </div>

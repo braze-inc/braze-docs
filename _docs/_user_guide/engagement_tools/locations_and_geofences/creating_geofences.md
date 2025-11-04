@@ -63,14 +63,14 @@ We recommend creating geofences with a radius of at least 200 meters for optimal
 
 ## Bulk upload geofences {#creating-geofence-sets-via-bulk-upload}
 
-Geofences may be uploaded in bulk as a GeoJSON object of type `FeatureCollection`. Each geofence is a `Point` geometry type in the feature collection. The properties for each feature require a `radius` key, and an optional `name` key for each geofence. 
+Geofences may be uploaded in bulk as a GeoJSON object of type `FeatureCollection`. Each geofence is a `Point` geometry type in the feature collection. The properties for each feature require a `radius` key and an optional `name` key for each geofence. 
 
 To upload your GeoJSON, select **More** > **Upload GeoJSON**.
 
 When creating your geofences, consider the following details:
 
 - The `coordinates` value in the GeoJSON is formatted as `[Longitude, Latitude]`.
-- The maximum geofence radius that may be uploaded is 10,000 meters (about 100 kilometers or 62 miles).
+- The maximum geofence radius that may be uploaded is 10,000 meters (about 10 kilometers or 6.2 miles).
 
 ### Example
 
@@ -165,7 +165,7 @@ Location tracking is used to collect and store a user's most recent location dat
 
 Braze geofences use a combination of all location providers available to a device to triangulate the user's location. These include Wi-Fi, GPS, and cellular towers.
 
-Typical accuracy is in 20–50m range and best-case accuracy will be in the 5-10m range. In rural areas, accuracy may degrade significantly, potentially going up to several kilometers. Braze recommends creating geofences with larger radii in rural locations.
+Typical accuracy is in 20–50m range, and best-case accuracy will be in the 5-10m range. In rural areas, accuracy may degrade significantly, potentially going up to several kilometers. Braze recommends creating geofences with larger radii in rural locations.
 
 For more information on the accuracy of geofences, refer to [Android](https://developer.android.com/develop/sensors-and-location/location/geofencing) and [iOS](https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/LocationAwarenessPG/RegionMonitoring/RegionMonitoring.html#//apple_ref/doc/uid/TP40009497-CH9-SW1) documentation.
 
@@ -185,5 +185,5 @@ No, Braze doesn't store geofence data on user profiles. Geofences are monitored 
 
 ### Can I set up a geofence within a geofence?
 
-As a best practice, avoid setting up geofences inside each other as this may cause issues with triggering notifications.
+As a best practice, avoid setting up geofences that overlap with each other, as this may cause issues with triggering notifications.
 

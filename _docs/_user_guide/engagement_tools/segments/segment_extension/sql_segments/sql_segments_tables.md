@@ -705,7 +705,7 @@ Field | Type | Description
 `timezone` | `null,`&nbsp;`string` | Time zone of the user
 `language` | `null,`&nbsp;`string` | [PII] Language of the user
 `abort_type` | `null,`&nbsp;`string` | Type of abort, one of: `liquid_abort_message` or `rate_limit`
-`abort_log` | `null,`&nbsp;`string` | [PII] Log message describing abort details (maximum of 128 characters)
+`abort_log` | `null,`&nbsp;`string` | [PII] Log message describing abort details (maximum of 2,000 characters)
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### USERS_MESSAGES_CONTENTCARD_CLICK_SHARED {#USERS_MESSAGES_CONTENTCARD_CLICK_SHARED}
@@ -876,7 +876,7 @@ Field | Type | Description
 `email_address` | `string` | [PII] email address of the user
 `ip_pool` | `null,`&nbsp;`string` | IP Pool from which the email send was made
 `abort_type` | `null,`&nbsp;`string` | Type of abort, one of: `liquid_abort_message` or `rate_limit`
-`abort_log` | `null,`&nbsp;`string` | [PII] Log message describing abort details (maximum of 128 characters)
+`abort_log` | `null,`&nbsp;`string` | [PII] Log message describing abort details (maximum of 2,000 characters)
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### USERS_MESSAGES_EMAIL_BOUNCE_SHARED {#USERS_MESSAGES_EMAIL_BOUNCE_SHARED}
@@ -1172,7 +1172,7 @@ Field | Type | Description
 `ad_id_type` | `null,`&nbsp;`string` | One of `ios_idfa`, `google_ad_id`, `windows_ad_id`, OR `roku_ad_id`
 `ad_tracking_enabled` | `null, boolean` | Whether advertising tracking is enabled for the device
 `abort_type` | `null,`&nbsp;`string` | Type of abort, one of: `liquid_abort_message` or `rate_limit`
-`abort_log` | `null,`&nbsp;`string` | [PII] Log message describing abort details (maximum of 128 characters)
+`abort_log` | `null,`&nbsp;`string` | [PII] Log message describing abort details (maximum of 2,000 characters)
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### USERS_MESSAGES_INAPPMESSAGE_CLICK_SHARED {#USERS_MESSAGES_INAPPMESSAGE_CLICK_SHARED}
@@ -1278,7 +1278,7 @@ Field | Type | Description
 `carrier` | `null,`&nbsp;`string` | carrier of the device
 `browser` | `null,`&nbsp;`string` | browser of the device
 `abort_type` | `null,`&nbsp;`string` | Type of abort, one of: `liquid_abort_message` or `rate_limit`
-`abort_log` | `null,`&nbsp;`string` | [PII] Log message describing abort details (maximum of 128 characters)
+`abort_log` | `null,`&nbsp;`string` | [PII] Log message describing abort details (maximum of 2,000 characters)
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### USERS_MESSAGES_NEWSFEEDCARD_CLICK_SHARED {#USERS_MESSAGES_NEWSFEEDCARD_CLICK_SHARED}
@@ -1358,7 +1358,7 @@ Field | Type | Description
 `language` | `null,`&nbsp;`string` | [PII] Language of the user
 `platform` | `string` | Platform of the device
 `abort_type` | `null,`&nbsp;`string` | Type of abort, one of: `liquid_abort_message` or `rate_limit`
-`abort_log` | `null,`&nbsp;`string` | [PII] Log message describing abort details (maximum of 128 characters)
+`abort_log` | `null,`&nbsp;`string` | [PII] Log message describing abort details (maximum of 2,000 characters)
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### USERS_MESSAGES_PUSHNOTIFICATION_BOUNCE_SHARED {#USERS_MESSAGES_PUSHNOTIFICATION_BOUNCE_SHARED}
@@ -1556,7 +1556,7 @@ Field | Type | Description
 `canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step message variation this user received
 `subscription_group_api_id` | `null,`&nbsp;`string` | External ID of the subscription group
 `abort_type` | `null,`&nbsp;`string` | Type of abort, one of: `liquid_abort_message` or `rate_limit`
-`abort_log` | `null,`&nbsp;`string` | [PII] Log message describing abort details (maximum of 128 characters)
+`abort_log` | `null,`&nbsp;`string` | [PII] Log message describing abort details (maximum of 2,000 characters)
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### USERS_MESSAGES_SMS_CARRIERSEND_SHARED {#USERS_MESSAGES_SMS_CARRIERSEND_SHARED}
@@ -1782,7 +1782,7 @@ Field | Type | Description
 `timezone` | `null,`&nbsp;`string` | Time zone of the user
 `language` | `null,`&nbsp;`string` | [PII] Language of the user
 `abort_type` | `null,`&nbsp;`string` | Type of abort, one of: `liquid_abort_message` or `rate_limit`
-`abort_log` | `null,`&nbsp;`string` | [PII] Log message describing abort details (maximum of 128 characters)
+`abort_log` | `null,`&nbsp;`string` | [PII] Log message describing abort details (maximum of 2,000 characters)
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### USERS_MESSAGES_WEBHOOK_SEND_SHARED {#USERS_MESSAGES_WEBHOOK_SEND_SHARED}
@@ -1835,7 +1835,7 @@ Field | Type | Description
 `canvas_step_message_variation_api_id` | `null,`&nbsp;`string` | API ID of the Canvas step message variation this user received
 `dispatch_id` | `null,`&nbsp;`string` | ID of the dispatch this message belongs to
 `abort_type` | `null,`&nbsp;`string` | Type of abort, one of: `liquid_abort_message` or `rate_limit`
-`abort_log` | `null,`&nbsp;`string` | [PII] Log message describing abort details (maximum of 128 characters)
+`abort_log` | `null,`&nbsp;`string` | [PII] Log message describing abort details (maximum of 2,000 characters)
 `sf_created_at` | `timestamp`,&nbsp;`null` | When this event was picked up by the Snowpipe      
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 

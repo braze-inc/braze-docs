@@ -18,7 +18,7 @@ Promotion codes—also called promo codes—are a great way to keep users engage
 Each promotion code has an expiration date of up to six months. You can store and manage up to 20 million codes per list. By managing and analyzing the performance of your promotion codes, you can make targeted decisions for your promotional strategies and messaging.
 
 {% alert important %}
-Promotion codes can't be sent in in-app messages in Canvas. If you're participating in the [early access](#promotion-codes-iam-campaigns), promotion codes can be sent in in-app message campaigns.
+Promotion codes can't be sent in in-app messages in Canvas.
 {% endalert %}
 
 ## Creating a promotion code list {#create}
@@ -68,7 +68,7 @@ Make sure your CSV file follows these guidelines:
 You can use our built-in integration with [Voucherify]({{site.baseurl}}/partners/ecommerce/loyalty/voucherify/) or [Talon.One]({{site.baseurl}}/partners/ecommerce/loyalty/talonone/) to create and export promotion codes.
 
 {% alert important %}
-The maximum file size is 100&nbsp;MB and the maximum list size is 20MM of unused codes. If you find the wrong file was uploaded, upload a new one, and the previous one will be replaced.
+The maximum file size is 100&nbsp;MB, and the maximum list size is 20MM of unused codes. If you find the wrong file was uploaded, upload a new one, and the previous one will be replaced.
 {% endalert %}
 
 1. After the upload is complete, select **Save List** to save all the details and codes you just entered.
@@ -104,11 +104,11 @@ If you've uploaded a CSV file with the incorrect promotion codes and selected **
 
 To send a promotion code in a message, select **Copy Snippet** next to the promotion code list [you previously created](#create).
 
-![An option to copy the snippet to paste into your message.]({% image_buster /assets/img/promocodes/promocode9.png %}){: style="max-width:70%"}
+![An option to copy the snippet to paste into your message.]({% image_buster /assets/img/promocodes/promocode9.png %}){: style="max-width:50%"}
 
 Paste the code snippets into one of your messages in Braze, then use [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) to insert one of the unique promotion codes from your list. That code will be marked as sent, ensuring no other message sends the same code.
 
-![An example message "Treat yourself to something nice this spring with our exclusive offer" followed by the code snippet.]({% image_buster /assets/img/promocodes/promocode10.png %}){: style="max-width:70%"}
+![An example message "Treat yourself to something nice this spring with our exclusive offer" followed by the code snippet.]({% image_buster /assets/img/promocodes/promocode10.png %}){: style="max-width:50%"}
 
 ### Across Canvas steps
 
@@ -127,10 +127,6 @@ If no promotion codes are available, test or live messages that rely on codes wi
 
 ### In in-app message campaigns {#promotion-codes-iam-campaigns}
 
-{% alert important %}
-Using promotion codes in in-app message campaigns is currently in early access. Contact your Braze account manager if you're interested in participating in this early access.
-{% endalert %}
-
 After creating an [in-app message campaign]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages), you can insert a [promotion code list snippet]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes#creating-a-promotion-code-list) into your in-app message message body. 
 
 Promotion codes in in-app messages will be deducted and used only when a user triggers the display of the in-app message.
@@ -138,6 +134,10 @@ Promotion codes in in-app messages will be deducted and used only when a user tr
 ### In test messages
 
 Test sends and seed group email sends will use up promotion codes unless requested otherwise. Contact your Braze account manager to update this feature behavior so promotion codes aren't used during test sends and seed group email sends.
+
+### With message extras for Currents
+
+{% multi_lang_include shopify.md section='Liquid promotion codes with Currents' %}
 
 ## Saving promotion codes to user profiles {#save-to-profile}
 
@@ -159,7 +159,7 @@ You can find the remaining code count in the **Remaining** column of the promoti
 
 This code count can also be found when revisiting a pre-existing promotion code list page. You can also export unused codes as a CSV file. 
 
-![A promotion code named "Black Friday Sale" with 992 remaining codes.]({% image_buster /assets/img/promocodes/promocode12.png %}){: style="max-width:70%"}
+![A promotion code named "Black Friday Sale" with 992 remaining codes.]({% image_buster /assets/img/promocodes/promocode12.png %}){: style="max-width:50%"}
 
 ## Multichannel and single-channel sends
 
