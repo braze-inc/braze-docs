@@ -78,6 +78,7 @@ The following is an example request body:
 {
     "event" : "workflow.addRecipient",
     "oppiziWorkflowID" : "<oppiziWorkflowID>",
+    "requestType" : "live",
     "recipient" : {
         "recipientID" : "{{${braze_id}}}",
         "firstName" : "{{${first_name}}}",
@@ -101,4 +102,9 @@ The following is an example request body:
 
 ### Step 4: Preview and test your request in Braze
 
-After adding your request body with Oppizi’s workflow ID, preview the request and run a test to confirm your setup is working as expected. Now, you're ready to go with your automated direct mail campaigns.
+After adding your request body with Oppizi’s workflow ID, run a test to ensure everything is working correctly.
+
+To run the test, change `"requestType"` from `"live"` to `"test"` in the request body. This step is crucial to prevent adding test recipients to your direct mail audience.
+Once the test succeeds, switch `"requestType"` back to `"live"` and save your canvas.
+
+You’re now ready to launch your automated direct mail campaigns.
