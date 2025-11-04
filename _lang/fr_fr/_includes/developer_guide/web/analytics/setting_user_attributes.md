@@ -2,9 +2,25 @@
 
 ## Attributs par défaut de l’utilisateur
 
+### Méthodes prédéfinies
+
+Braze fournit des méthodes prédéfinies pour définir les attributs utilisateur suivants dans la [classe `User`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html) :
+
+- Prénom
+- Nom
+- Langue
+- Pays
+- Date de naissance
+- E-mail
+- Genre
+- Ville d’origine
+- Numéro de téléphone
+
+### Définition des attributs par défaut
+
 {% tabs %}
-{% tab mise en œuvre des normes %}
-Pour définir un attribut par défaut pour un utilisateur, appelez la méthode `getCurrentUser()` sur votre instance Braze pour obtenir une référence à l'utilisateur actuel de votre application. Vous pouvez ensuite appeler des méthodes pour définir un attribut utilisateur.
+{% tab l'utilisation de méthodes %}
+Pour définir un attribut par défaut pour un utilisateur, appelez la méthode `getUser()` sur votre instance Braze pour obtenir une référence à l'utilisateur actuel de votre application. Vous pouvez ensuite appeler des méthodes pour définir un attribut utilisateur.
 
 {% subtabs local %}
 {% subtab First name %}
@@ -38,22 +54,34 @@ window.braze.getUser().setGender("f")
 {% endtab %}
 {% endtabs %}
 
-Braze fournit des méthodes prédéfinies pour définir les attributs utilisateur suivants dans la [classe `User`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html) :
+### Désactivation des attributs par défaut
 
-- Prénom
-- Nom
-- Langue
-- Pays
-- Date de naissance
-- E-mail
-- Genre
-- Ville d’origine
-- Numéro de téléphone
+Pour désactiver un attribut par défaut de l'utilisateur, passez `null` à la méthode correspondante. Par exemple :
+
+{% tabs local %}
+{% tab Prénom %}
+```javascript
+braze.getUser().setFirstName(null);
+```
+{% endtab %}
+{% tab Genre %}
+```javascript
+braze.getUser().setGender(null);
+```
+{% endtab %}
+{% tab Date de naissance %}
+```javascript
+braze.getUser().setDateOfBirth(null, null, null);
+```
+{% endtab %}
+{% endtabs %}
 
 ## Attributs utilisateur personnalisés
 
+### Définition des attributs personnalisés
+
 {% tabs %}
-{% tab mise en œuvre des normes %}
+{% tab l'utilisation de méthodes %}
 Outre les méthodes d'attribut par défaut, vous pouvez également définir des [attributs personnalisés]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types) pour vos utilisateurs. Pour connaître les spécifications complètes de la méthode, consultez [nos JSDocs](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html).
 
 {% subtabs local %}
@@ -154,12 +182,28 @@ Le modèle GTM ne prend pas en charge les propriétés imbriquées pour les év�
 {% endtab %}
 {% endtabs %}
 
-### Enlever la configuration d’un attribut personnalisé
+### Désactivation des attributs personnalisés
 
-Il est possible d’enlever la configuration d’un attribut personnalisé en définissant sa valeur sur `null`.
+Pour désactiver un attribut personnalisé, transmettez `null` à la méthode correspondante.
 
 ```javascript
 braze.getUser().setCustomUserAttribute(YOUR_ATTRIBUTE_KEY_STRING, null);
+```
+
+### Imbrication d'attributs personnalisés
+
+Vous pouvez également imbriquer des propriétés dans des attributs personnalisés. Dans l'exemple suivant, un objet `favorite_book` avec des propriétés imbriquées est défini comme un attribut personnalisé sur le profil utilisateur. Pour plus de détails, reportez-vous à la section [Attributs personnalisés imbriqués]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support).
+
+```javascript
+import * as braze from "@braze/web-sdk";
+
+const favoriteBook = {
+  title: "The Hobbit",
+  author: "J.R.R. Tolkien",
+  publishing_date: "1937"
+};
+
+braze.getUser().setCustomUserAttribute("favorite_book", favoriteBook);
 ```
 
 ### Utiliser l'API REST
