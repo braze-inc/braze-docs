@@ -12,8 +12,6 @@
 
 Ein RCS-verifizierter Sender ist eine visuelle Darstellung Ihrer Marke, die einen Markennamen, ein Logo, eine optionale Beschriftung und ein überprüftes Badge enthält. Dies verschafft dem RCS-verifizierten Sender einen erheblichen Vorteil gegenüber SMS Codes, wenn es darum geht, das Vertrauen der Nutzer:innen zu gewinnen.  
 
-![Ein Beispiel für einen RCS-überprüften Sender in einer RCS-Nachricht namens "Cat Failz Cafe".]{% image_buster /assets/img/rcs/rcs_sender.png %}{: style="max-width:60%;"}
-
 ##### Details
 
 | Visuelle Komponenten | Zugang | Durchsatz | MMS aktiviert | 1-Weg vs. 2-Wege |
