@@ -188,7 +188,7 @@ Currently the editor is limited to modal and fullscreen messages only. You can s
 
 #### Can I save my in-app message as a template after I build it within my campaign or Canvas?
 
-Yes. For any in-app message you want to re-use in a future campaign or Canvas step, you can save it as a custom template using the **Save as template** button, available after you exit the editor. Before you can save it as a template, you must first launch the campaign OR save it as a draft.
+Yes. For any in-app message you want to reuse in a future campaign or Canvas step, you can save it as a custom template using the **Save as template** button, available after you exit the editor. Before you can save it as a template, you must first launch the campaign OR save it as a draft.
 
 ![A preview of an in-app message for a product tour.]({% image_buster /assets/img_archive/dnd_iam_save_as_template.png %})
 

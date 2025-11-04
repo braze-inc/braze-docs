@@ -45,7 +45,7 @@ Let's say you have an action path with an evaluation period of one day with two 
 
 In the preceding example, if **Ranking** is off and when a user performs one of the trigger events ("Start Session" or "Make Purchase"), that user is advanced in the relevant action group based on the trigger action.
 
-Note that Canvas entry properties differ from event properties. Canvas entry properties are properties from the event that triggered the Canvas. These properties can only be used in the first full step of a Canvas when using the original Canvas workflow. When using Canvas, persistent entry properties are enabled and allow the entry properties to be re-used throughout the whole Canvas. Conversely, event properties originate from an event or action that occurs as the user goes through their workflow.
+Note that Canvas entry properties differ from event properties. Canvas entry properties are properties from the event that triggered the Canvas. These properties can only be used in the first full step of a Canvas when using the original Canvas workflow. When using Canvas, persistent entry properties are enabled and allow the entry properties to be reused throughout the whole Canvas. Conversely, event properties originate from an event or action that occurs as the user goes through their workflow.
 
 ### Action groups
 
