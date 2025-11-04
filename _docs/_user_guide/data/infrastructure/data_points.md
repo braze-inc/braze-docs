@@ -52,7 +52,9 @@ The following actions do not log data points:
 An array is an ordered collection of items stored within a custom attribute. In terms of consumption, updating an array costs one data point per API call. If you add values to an array incrementally, it will count as one data point per value. 
 
 {% alert tip %}
-If you set the whole array at once, it will count as a single data point. As such, arrays are a great tool to keep user profiles up-to-date with relevant information and reduce costs.
+For simple arrays, if you set the whole array at once, it will count as a single data point. As such, arrays are a great tool to keep user profiles up-to-date with relevant information and reduce costs.
+
+Arrays of objects consume a data point for each key that is updated. Ensure that only deltas are passed to Braze to reduce unnecessary data point consumption.
 {% endalert %}
 
 #### Nested custom attributes
