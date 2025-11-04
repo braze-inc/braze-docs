@@ -149,10 +149,10 @@ setCustomBrazeNotificationFactory(brazeNotificationFactory: IBrazeNotificationFa
 {% endtab %}
 {% endtabs %}
 
-Der empfohlene Ort, um Ihre angepasste `IBrazeNotificationFactory` einzustellen, ist in der Methode `Application.onCreate()` application lifecycle (nicht activity). Dies ermöglicht die korrekte Einstellung der Benachrichtigungsfabrik, wenn Ihr App-Prozess aktiv ist.
+Der empfohlene Ort, um Ihre angepasste `IBrazeNotificationFactory` einzustellen, ist in der Methode `Application.onCreate()` application lifecycle (nicht activity). Dadurch ist es zulässig, dass die Benachrichtigungsfabrik korrekt eingestellt wird, wenn Ihr App-Prozess aktiv ist.
 
 {% alert important %}
-Das Erstellen einer eigenen Push-Benachrichtigung von Grund auf ist ein fortgeschrittener Anwendungsfall und sollte nur mit gründlichen Tests und einem tiefen Verständnis der Push-Funktionen von Braze durchgeführt werden. Sie müssen zum Beispiel sicherstellen, dass Ihre Push-Benachrichtigungen korrekt geöffnet werden.
+Das Erstellen einer eigenen Push-Benachrichtigung von Grund auf ist ein fortgeschrittener Anwendungsfall und sollte nur nach gründlichen Tests und einem tiefen Verständnis der Push-Funktionen von Braze durchgeführt werden. Sie müssen zum Beispiel sicherstellen, dass Ihre Push-Benachrichtigungen korrekt geöffnet werden.
 {% endalert %}
 
 Um Ihre angepasste [`IBrazeNotificationFactory`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze-notification-factory/index.html) zu deaktivieren und zur Standard-Braze-Behandlung für Push zurückzukehren, übergeben Sie `null` an unseren angepassten Notification Factory Setter:
@@ -189,10 +189,10 @@ Dieses Beispiel wird mit dem folgenden HTML-Code wiedergegeben:
 <p><em>test</em> <span style="text-decoration: underline; background-color: #ff6600;"><strong>message</strong></span></p>
 ```
 
-Denken Sie daran, dass Android einschränkt, welche HTML-Elemente und Tags in Ihren Push-Benachrichtigungen zulässig sind. Zum Beispiel ist `marquee` nicht zulässig.
+Beachten Sie, dass Android einschränkt, welche HTML-Elemente und Tags in Ihren Push-Benachrichtigungen zulässig sind. Zum Beispiel ist `marquee` nicht zulässig.
 
 {% alert important %}
-Die Darstellung von mehrfarbigem Text ist gerätespezifisch und wird je nach Android-Gerät oder -Version möglicherweise nicht angezeigt.
+Die Wiedergabe von mehrfarbigem Text ist gerätespezifisch und wird je nach Android-Gerät oder -Version möglicherweise nicht angezeigt.
 {% endalert %}
 
 Um mehrfarbigen Text in einer Push-Benachrichtigung darzustellen, können Sie Ihr `braze.xml` oder `BrazeConfig` aktualisieren:
@@ -269,7 +269,7 @@ Derzeit listet Google die unterstützten HTML Tags für Android nicht direkt in 
     </tr>
     <tr>
       <td><code>&lt;sub&gt;</code></td>
-      <td>Subskriptiver Text</td>
+      <td>Tiefgestellter Text</td>
     </tr>
     <tr>
       <td><code>&lt;tt&gt;</code></td>
@@ -332,13 +332,13 @@ Derzeit listet Google die unterstützten HTML Tags für Android nicht direkt in 
 
 ### Funktionsweise
 
-Sie können ein größeres Bild in Ihrer Android Push-Benachrichtigung mit Hilfe von Inline Image Push präsentieren. Bei diesem Design müssen Nutzer die Push-Benachrichtigung nicht mehr manuell erweitern, um das Bild zu vergrößern. Im Gegensatz zu normalen Android-Push-Benachrichtigungen haben die Inline-Image-Push-Bilder ein Seitenverhältnis von 3:2.
+Sie können ein größeres Bild in Ihrer Android Push-Benachrichtigung mit Hilfe von Inline-Image-Push präsentieren. Bei diesem Design müssen Nutzer die Push-Benachrichtigung nicht mehr manuell erweitern, um das Bild zu vergrößern. Im Gegensatz zu normalen Android-Push-Benachrichtigungen haben die Inline-Image-Push-Bilder ein Seitenverhältnis von 3:2.
 
 ![]({% image_buster /assets/img/android/push/inline_image_push_android_1.png %}){: style="max-width:50%;"}
 
 ### Kompatibilität
 
-Sie können zwar Inline-Bilder an jedes Gerät senden, aber Geräte und SDKs, die die Mindestversionen nicht erfüllen, zeigen stattdessen ein Standardbild an. Damit Inline-Bilder korrekt angezeigt werden, benötigen Sie sowohl das Android Braze SDK v10.0.0+ als auch ein Gerät mit Android M+.
+Sie können zwar Inline-Bilder an jedes Gerät senden, aber Geräte und SDKs, die die Mindestversionen nicht erfüllen, zeigen stattdessen ein Standardbild an. Damit Inline-Bilder richtig angezeigt werden, benötigen Sie sowohl das Android Braze SDK v10.0.0+ als auch ein Gerät mit Android M+. Das SDK muss ebenfalls aktiviert sein, damit das Bild gerendert werden kann.
 
 {% alert note %}
 Geräte mit Android 12 werden aufgrund von Änderungen in den benutzerdefinierten Push-Benachrichtigungsstilen anders dargestellt.

@@ -25,7 +25,7 @@ Konfigurieren Sie als Nächstes die Eigenschaft `enableBrazeIosPushStories` auf 
 }
 ```
 
-Fügen Sie dann den Bundle-Bezeichner für diese App-Erweiterung zur Konfiguration der Zugangsdaten Ihres Projekts hinzu: `<your-app-bundle-id>.BrazeExpoPushStories`. Weitere Einzelheiten zu diesem Vorgang finden Sie unter [Verwendung von App-Erweiterungen mit Expo Application Services](#reactnative_app-extensions).
+Fügen Sie dann den Bundle-Bezeichner für diese App-Erweiterung zur Konfiguration der Zugangsdaten Ihres Projekts hinzu: `<your-app-bundle-id>.BrazeExpoPushStories`. Weitere Einzelheiten zu diesem Vorgang finden Sie unter [Verwendung von App-Erweiterungen mit Expo Application Services]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=react%20native#reactnative_app-extensions).
 
 {% alert warning %}
 Wenn Sie Push-Storys mit Expo Application Services verwenden, stellen Sie sicher, dass Sie das Flag `EXPO_NO_CAPABILITY_SYNC=1` verwenden, wenn Sie `eas build` ausführen. Es gibt ein bekanntes Problem in der Befehlszeile, das die App-Gruppen-Funktion aus dem Provisioning-Profil der Erweiterung entfernt.
