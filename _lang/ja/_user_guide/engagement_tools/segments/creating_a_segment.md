@@ -8,7 +8,7 @@ tool: Segments
 search_rank: 3
 ---
 
-# [\![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/segmentation-course){: style="float:right;width:120px;border:0;" class="noimgborder"}Segmentの作成
+# [![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/segmentation-course){: style="float:right;width:120px;border:0;" class="noimgborder"}Segmentの作成
 
 > セグメンテーションにより、人口統計、行動、または技術的な特徴やアクションに基づいてユーザーをターゲットすることができます。セグメンテーションとメッセージングの自動化を創造的かつインテリジェントに使用することで、ユーザーをファーストタッチから長期顧客へとシームレスに移行できます。セグメントは、データの変更に応じてリアルタイムで更新されます。また、ターゲットおよびメッセージングの目的で必要な数のセグメントを作成できます。
 

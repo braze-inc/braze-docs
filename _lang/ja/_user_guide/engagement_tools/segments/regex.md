@@ -10,7 +10,7 @@ tool:
   
 ---
 
-# [\![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/regular-expression-basics-for-braze){: style="float:right;width:120px;border:0;" class="noimgborder"} 正規表現
+# [![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/regular-expression-basics-for-braze){: style="float:right;width:120px;border:0;" class="noimgborder"} 正規表現
 
 <!--{% multi_lang_include video.html id="3h5Xbhl-TxE" align="right" %}-->
 
