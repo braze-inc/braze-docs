@@ -41,12 +41,12 @@ You can access the diagnostics dashboard by going going to **Analytics** > **Das
 
 ![The dashboard builder with a list of different campaign and Canvas diagnostic dashboards.]({% image_buster /assets/img/campaign_canvas_dashboard.png %})
 
-To run the dashboard and view your data, configure the filters: 
+To run the dashboard and view your data:
 
-- **Date range:** Select the date range for your report.
-- **Source:** Choose to view data for one or more campaigns or Canvases.
-
-Select **Run Dashboard** to load the data for your selected filters.
+1. Select a date range.
+2. Choose either **Campaigns** or **Canvases** as the source for your dashboard reports. 
+3. Next, choose one or more campaigns or Canvases.
+4. Select **Run Dashboard** to load the data for your selected filters.
 
 ![Campaign and Canvas diagnostics example from May 25 to May 31, 2025 for a welcome series campaign.]({% image_buster /assets/img/campaign_canvas_dashboard_example.png %})
 
