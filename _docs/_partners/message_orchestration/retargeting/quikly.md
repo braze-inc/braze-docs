@@ -175,6 +175,6 @@ Remember to save your template before leaving the page! <br>Updated webhook temp
 {% endtabs %}
 
 ## Support
-Reach out to your client success manager at Quikly with any questions.
+Contact your client success manager at Quikly with any questions.
 
 

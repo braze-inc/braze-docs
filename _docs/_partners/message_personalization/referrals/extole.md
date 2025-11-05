@@ -52,7 +52,7 @@ Complete the following steps to quickly get your integration up and running. You
 
 ### Extole program events
 
-Below are the default events, event properties, and user attributes Extole will send to Braze. Reach out to your Extole implementation or customer success managers to identify and add additional Extole events to your integration.
+Below are the default events, event properties, and user attributes Extole will send to Braze. Contact your Extole implementation or customer success managers to identify and add additional Extole events to your integration.
 
 | Event | Description | Event Properties | User Attributes |
 | ----------- | ----------- | ----------- | ----------- |

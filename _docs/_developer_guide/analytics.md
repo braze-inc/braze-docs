@@ -83,7 +83,7 @@ Talk to villagers for essential tips on how to beat levels!
 ```
 {% endraw %}
 
-Custom event properties are designed to help you personalize your messaging or build granular action-based delivery campaigns. If you would like to create segments based on event property recency and frequency, reach out to your customer success manager or our Support team.
+Custom event properties are designed to help you personalize your messaging or build granular action-based delivery campaigns. If you would like to create segments based on event property recency and frequency, contact your customer success manager or our Support team.
 
 ## Custom attributes
 
@@ -143,7 +143,7 @@ abUser.addToCustomAttributeArray('favorite_foods', 'pizza'); // => ['wings', 'pa
 abUser.addToCustomAttributeArray('favorite_foods', 'ice cream'); // => ['pasta', 'fries', 'pizza', 'ice cream']
 ```
 
-The maximum number of elements in custom attribute arrays defaults to 25. The maximum for individual arrays can be increased to up to 100 in the Braze dashboard, under **Data Settings** > **Custom Attributes**. If you would like this maximum increased, reach out to your customer service manager. Arrays exceeding the maximum number of elements will be truncated to contain the maximum number of elements.
+The maximum number of elements in custom attribute arrays defaults to 25. The maximum for individual arrays can be increased to up to 100 in the Braze dashboard, under **Data Settings** > **Custom Attributes**. If you would like this maximum increased, contact your customer service manager. Arrays exceeding the maximum number of elements will be truncated to contain the maximum number of elements.
 
 The following table describes available segmentation options for array attributes.
 

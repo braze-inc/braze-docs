@@ -20,7 +20,7 @@ Braze uses Apple's device token for iOS.
 
 It is required to [migrate push tokens through API]({{site.baseurl}}/api/objects_filters/user_attributes_object/#migrating-push-tokens). The documentation linked contains specific steps, as well as an example payload, but the overall process is as follows:
 
-1. Import the tokens via the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/). For large batch imports, we have resources available to help expedite the process. Reach out to your COM or SA for more details!
+1. Import the tokens via the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/). For large batch imports, we have resources available to help expedite the process. Contact your COM or SA for more details!
 2. If the token already exists in Braze it will be ignored, otherwise an anonymous profile will be generated.
 3. Perform quality assurance on the push integration. Ensure that the steps to [configure push]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift) have been completed.
 
@@ -37,7 +37,7 @@ Push tokens may show up as `subscribed` in the Braze dashboard, but will change 
 With Braze, a user can have multiple push tokens (one for each device) and by targeting all valid push tokens, you can send notifications to multiple user devices. It is also possible to configure campaigns to only send to the most recent device of a user.
 
 ## Campaign configuration
-At a high level, Braze is a truly unique tool in the customer engagement space. Because of our extensive customization options and growing feature set, campaigns migrated into Braze often benefit from replanning to leverage the benefits of these tools, and our campaign planning framework (reach out to your COM or SA for more details) is purpose-built for just that.
+At a high level, Braze is a truly unique tool in the customer engagement space. Because of our extensive customization options and growing feature set, campaigns migrated into Braze often benefit from replanning to leverage the benefits of these tools, and our campaign planning framework (contact your COM or SA for more details) is purpose-built for just that.
 
 ### Composition
 #### Push notifications
