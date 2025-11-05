@@ -12,7 +12,7 @@ search_tag: Partner
 
 Movable Ink is able to ingest behavioral events from Braze through their Customer Data API. The events are stored on the user profiles based on the unique user ID (UUID) that is passed to Movable Ink.
 
-For more information on Stories, the Movable Ink Customer Data API, and how Movable Ink leverages behavioral data, please visit the following support center articles:
+For more information on Stories, the Movable Ink Customer Data API, and how Movable Ink leverages behavioral data, visit the following support center articles:
 
 - [Power content with behavioral data](https://support.movableink.com/hc/en-us/sections/360001239453-Power-content-with-behavioral-data)
 - [Customer Data API Introduction and Guide](https://support.movableink.com/hc/en-us/articles/13815957200663-Customer-Data-API-introduction-and-guide)

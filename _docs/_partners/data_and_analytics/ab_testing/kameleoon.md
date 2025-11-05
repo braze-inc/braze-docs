@@ -120,7 +120,7 @@ Before you can use event property segmentation, you'll need it enabled in Braze.
          We would like to enable event property segmentation for events sent from our Kameleoon&lt;&gt;Braze integration. Here are the details:<br><br>
          - <strong>Event Name:</strong> Kameleoon<br>
          - <strong>Event Properties:</strong> <code>kameleoon_campaign_name</code>, <code>kameleoon_variation_name</code><br><br>
-         Please confirm once the properties have been enabled in our account.<br><br>
+         Confirm when the properties have been enabled in our account.<br><br>
          Thank you.
          </td>
       </tr>

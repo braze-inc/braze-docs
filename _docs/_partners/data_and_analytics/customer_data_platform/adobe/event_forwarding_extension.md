@@ -180,7 +180,7 @@ User attributes can be a JSON object containing fields that will create or updat
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
-All attributes added within the configuration is sent each time the event is sent to Braze, regardless of whether the attribute's value has changed. When configuring user attributes, please ensure you know how this will affect your data point usage. 
+All attributes added within the configuration are sent each time the event is sent to Braze, regardless of whether the attribute's value has changed. When configuring user attributes, ensure you know how this affects your data point usage. 
 {% endalert %}
 
 {% endtab %}

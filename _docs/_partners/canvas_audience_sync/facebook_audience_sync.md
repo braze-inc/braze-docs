@@ -271,7 +271,7 @@ table td {
     </tr>
     <tr>
       <td><b>Failed to create audience</b></td>
-      <td>On the Facebook Technology Partner page, you are seeing “Connected”, but there’s an error on the Facebook Audience Sync step when syncing an audience, “Failed to create audience 'audience name'". Authorization of your Facebook account failed. Please visit the Technology Partners page to reconnect your account.</td>
+  <td>On the Facebook Technology Partner page, you are seeing “Connected”, but there’s an error on the Facebook Audience Sync step when syncing an audience, “Failed to create audience 'audience name'". Authorization of your Facebook account failed. Visit the Technology Partners page to reconnect your account.</td>
       <td>Follow the steps in <a href='/docs/partners/canvas_steps/facebook_audience_sync/#audit-your-facebook-account'>this troubleshooting section</a> to check your account for any issues.
       </td>
     </tr>

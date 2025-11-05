@@ -65,7 +65,7 @@ The messages in the Message Activity Log can come from a variety of sources: Bra
 
 For example, some potential "Block" messages, in addition to the one listed in the preceding table, could be:
 
-- Unfortunately, messages from [_IP_ADDRESS_] weren't sent. Please contact your Internet Service provider since part of their network is on our block list.
+- Unfortunately, messages from [_IP_ADDRESS_] weren't sent. Contact your Internet service provider because part of their network is on our block list.
 - Message rejected due to local policy.
 - The message was blocked by the receiver as spam.
 - Service unavailable, Client host [_IP_ADDRESS_] blocked using Spamhaus.
