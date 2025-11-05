@@ -75,6 +75,6 @@ The **View Error** section will show the error code and some additional informat
 
 ![An example error log shown in the Wyng platform.]({% image_buster /assets/img/wyng/16.jpg %}){: style="max-width:80%;"}
 
-If you have any additional questions, reach out to Wyng support ([support@wyng.com](mailto:contact@wyng.com)) for assistance.
+If you have any additional questions, contact Wyng support ([support@wyng.com](mailto:contact@wyng.com)) for assistance.
 
 

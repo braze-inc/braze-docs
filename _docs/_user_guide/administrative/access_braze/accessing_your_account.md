@@ -65,7 +65,7 @@ The multi-company developers feature allows sharing of a single user account acr
 
 If you have SSO and want to set up multi-company developers, you need to enable a SAML Custom Entity ID by setting up a custom SAML SSO integration. Follow the steps in [Service Provider (SP) initiated login]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up/), but apply these changes:
 - Change **Entity ID** to `braze_dashboard_<companyID>` for each dashboard integration.
-- Reach out to your customer success manager or account manager to enable the `saml_sso_custom_entity_id` feature flipper for each dashboard.
+- Contact your customer success manager or account manager to enable the `saml_sso_custom_entity_id` feature flipper for each dashboard.
 
 ### Considerations for Single Sign-On (SSO)
 

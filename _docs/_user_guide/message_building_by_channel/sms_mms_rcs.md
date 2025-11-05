@@ -9,7 +9,7 @@ channel:
   - RCS
 search_rank: 3
 guide_top_header: "SMS, MMS, and RCS"
-guide_top_text: "SMS (Short Messaging Service), MMS (Multimedia Messaging Service), and RCS (Rich Communication Services) offer a more direct way to reach your users than most other messaging channels, as it utilizes their phone number, allowing you to reach them in real-time. Check out the following topics to get started with Braze SMS, MMS, or RCS!<br><br>Not ready for any of the following topics? Head to our <a href='/docs/about_sms/'>SMS setup</a> collection to get to know SMS at Braze. <br><br>**SMS, MMS, and RCS availability depends on your Braze package. Reach out to your account manager or customer success manager to get started.**"
+guide_top_text: "SMS (Short Messaging Service), MMS (Multimedia Messaging Service), and RCS (Rich Communication Services) offer a more direct way to reach your users than most other messaging channels, as it utilizes their phone number, allowing you to reach them in real-time. Check out the following topics to get started with Braze SMS, MMS, or RCS!<br><br>Not ready for any of the following topics? Head to our <a href='/docs/about_sms/'>SMS setup</a> collection to get to know SMS at Braze. <br><br>**SMS, MMS, and RCS availability depends on your Braze package. Contact your account manager or customer success manager to get started.**"
 description: "This landing page is home to SMS (Short Messaging Service), MMS (Multimedia Messaging Service), and RCS (Rich Communication Services). These services offer a more direct way to reach your users than most other messaging channels, as it utilizes their phone number, allowing you to reach them in real-time."
 
 guide_featured_title: "General articles"

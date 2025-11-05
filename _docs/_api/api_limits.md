@@ -19,7 +19,7 @@ API rate limits are subject to change depending on the proper usage of our syste
 
 ## Rate limits by request type
 
-Refer to the following for the default API rate limits of different request types. These default limits can be increased upon request. Reach out to your customer success manager for more information.
+Refer to the following for the default API rate limits of different request types. These default limits can be increased upon request. Contact your customer success manager for more information.
 
 ### Requests with different rate limits
 
