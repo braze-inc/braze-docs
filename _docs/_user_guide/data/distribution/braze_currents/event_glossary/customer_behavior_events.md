@@ -1268,6 +1268,8 @@ This event occurs when a push token is inserted, updated or removed. Use this to
 {% endtab %}
 {% endtabs %}
 
+{% endapi %}
+
 #### Property details
 
 - The `push_token_foreground_push_disabled` field indicates whether the push token can receive foreground or background push.
