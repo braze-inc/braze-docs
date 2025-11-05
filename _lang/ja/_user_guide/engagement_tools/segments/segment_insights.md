@@ -9,7 +9,7 @@ tool:
 description: "この操作方法に関する記事では、セグメントインサイトを使用、解釈、および共有する方法について説明します。"
 ---
 
-# [\![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/segmentation-course){: style="float:right;width:120px;border:0;" class="noimgborder"}セグメントインサイト
+# [![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/segmentation-course){: style="float:right;width:120px;border:0;" class="noimgborder"}セグメントインサイト
 
 > セグメントインサイトの使用、解釈、共有の方法を学びましょう。 
 

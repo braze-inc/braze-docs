@@ -26,7 +26,7 @@ The new Dark Mode option, located in the Style tab when [creating an in-app mess
 
 ![User switching between Light Mode style and Dark Mode styles in the Style tab when creating an in-app message.]({% image_buster /assets/img_archive/iam-dark-mode.gif %})
 
-When this option is enabled, you can choose dark theme colors for your in-app message using the color picker, or by selecting existing [Color Profiles]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#color-profile) to re-use existing Dark or Light themes.
+When this option is enabled, you can choose dark theme colors for your in-app message using the color picker, or by selecting existing [Color Profiles]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#color-profile) to reuse existing Dark or Light themes.
 
 {% alert note %}
 You may still use this feature even if your app does not offer its own dark theme. However, devices which do not support Dark Mode will display the Light theme by default. Changing the devices theme on Android while an in-app message is being displayed won't change which theme is used for that in-app message.

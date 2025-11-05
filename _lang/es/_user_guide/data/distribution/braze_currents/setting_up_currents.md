@@ -8,7 +8,7 @@ tool: Currents
 search_rank: 8
 ---
 
-# [\![Curso de Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/currents-the-basics-2/){: style="float:right;width:120px;border:0;" class="noimgborder"} Configuración de Currents
+# [![Curso de Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/currents-the-basics-2/){: style="float:right;width:120px;border:0;" class="noimgborder"} Configuración de Currents
 
 > Esta página resume y describe el proceso genérico de integración y configuración de Braze Currents.
 

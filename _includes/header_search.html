@@ -1,5 +1,11 @@
-<script src="{{site.baseurl}}/assets/js/algolia_header_search.js?{{site.time | date: '%s'}}" ></script>
-<div class="flex-row ml-auto d-flex" id="search-form_div">
-    <div id="header-search-form"></div>
-    <div id="header-search-panel"></div>
+<script src="{{site.baseurl}}/assets/js/su_header_search.js?{{site.time | date: '%s'}}" ></script>
+<script type="text/javascript" src="https://d1qc2gcokjmuap.cloudfront.net/217433e2c4c2797776e373f19d94feff/search-clients/63590d8d-65fd-11f0-ada3-0242ac120007/an.js"></script>
+<script type="text/javascript" src="https://d1qc2gcokjmuap.cloudfront.net/217433e2c4c2797776e373f19d94feff/search-clients/63590d8d-65fd-11f0-ada3-0242ac120007/searchbox.js"></script>
+<link rel="stylesheet" href="https://d1qc2gcokjmuap.cloudfront.net/217433e2c4c2797776e373f19d94feff/search-clients/63590d8d-65fd-11f0-ada3-0242ac120007/searchbox.css">
+<div id="auto">
+    <div ng-controller="SearchautoController">
+      <div bind-html-compile="autocompleteHtml"></div>
+    </div>
 </div>
+
+

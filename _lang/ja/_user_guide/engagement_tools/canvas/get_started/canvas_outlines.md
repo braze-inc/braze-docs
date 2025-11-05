@@ -10,7 +10,7 @@ tool: Canvas
 
 # キャンバスの概要
 
-[\![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/page/courses){: style="float:right;width:120px;border:0;" class="noimgborder"}
+[![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/page/courses){: style="float:right;width:120px;border:0;" class="noimgborder"}
 
 > この記事では、[Delay]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/)と[Message]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/)のステップを組み合わせて、キャンバスを使用してターゲットを絞ったパーソナライズされた メッセージングを実現する方法を示すいくつかの事例を紹介します。
 

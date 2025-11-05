@@ -8,7 +8,7 @@ channel: email
 
 ---
 
-# [\![Curso do Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability){: style="float:right;width:120px;border:0;" class="noimgborder"} Armadilhas da entregabilidade e armadilhas de spam
+# [![Curso do Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability){: style="float:right;width:120px;border:0;" class="noimgborder"} Armadilhas da entregabilidade e armadilhas de spam
 
 A capacidade de entrega de seu e-mail pode ser afetada por qualquer uma das seguintes armadilhas de spam:
 
