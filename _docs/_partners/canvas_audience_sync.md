@@ -45,5 +45,5 @@ guide_menu_list:
 ---
 
 {% alert important %}
-Availabilty for Braze Audience Syncs to Criteo, Pinterest, Snapchat, and TikTok depends on your Braze package. Reach out to your account manager or customer success manager to get started.
+Availability for Braze Audience Syncs to Criteo, Pinterest, Snapchat, and TikTok depends on your Braze package. Contact your account manager or customer success manager to get started.
 {% endalert %}

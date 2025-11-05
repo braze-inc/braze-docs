@@ -175,7 +175,7 @@ In the Braze dashboard, go to **Audience**, choose your **SMS subscription group
 |------------------|---------------------------------------------------------------------------------------------------------------------------|
 | Keyword Category | The name of your keyword category, such as `ZendeskSMS1`.                                                                 |
 | Keywords         | Your custom keywords, such as `SUPPORT`.                                                                                  |
-| Reply Message    | The message that will be sent when a keyword is detected, such as "A customer service rep will reach out to you shortly." |
+| Reply Message    | The message that will be sent when a keyword is detected, such as "A customer service rep will contact you shortly." |
 {: .reset-td-br-1 .reset-td-br-2 }
 
 ![An example SMS keyword category in Braze.]({% image_buster /assets/img/zendesk/instant_chat/chat11.png %}){: style="max-width:70%;"}
