@@ -20,7 +20,7 @@ MMS is currently supported for US short codes (5-6 digit numbers), US and CA lon
 
 Some users may not implement or use MMS short codes, but they will be available if needed at a later date.
 
-For users who got their short codes before Braze supported MMS, all existing customers with US short codes are eligible to instantly enable MMS. Reach out to your customer success manager if this situation applies to you and you would like MMS enabled.
+For users who got their short codes before Braze supported MMS, all existing customers with US short codes are eligible to instantly enable MMS. Contact your customer success manager if this situation applies to you and you would like MMS enabled.
 
 {% alert important %}
 When enabling MMS for short codes that previously didn't have MMS enabled, the short codes might need to be re-approved in an approval process that could take weeks. It's important to account for this timing when deciding to enable MMS.

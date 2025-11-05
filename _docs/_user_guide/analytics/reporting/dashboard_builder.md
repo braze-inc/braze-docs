@@ -82,7 +82,7 @@ Adjust the tile size by dragging the bottom-right corner of the tile, and adjust
 
 ### Available dashboards
 
-Braze provides pre-built dashboards for frequent use cases such as analysis of revenue using last-touch attribution. Note that the ability to edit a dashboard is not yet available. Reach out to your customer success manager if you'd like to see certain dashboard in the future.
+Braze provides pre-built dashboards for frequent use cases such as analysis of revenue using last-touch attribution. Note that the ability to edit a dashboard is not yet available. Contact your customer success manager if you'd like to see certain dashboard in the future.
 
 #### Revenue - Last Touch Attribution
 

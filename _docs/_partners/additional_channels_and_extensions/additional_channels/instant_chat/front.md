@@ -144,7 +144,7 @@ In the Braze dashboard, go to **Audience**, choose your **SMS subscription group
 |---|---|
 |Keyword Category|The name of your keyword category, such as `FrontSMS1`.|
 |Keywords|Your custom keywords, such as `TIMETOMOW`. Avoid common words to prevent accidental triggers. Keep in mind, keywords are case insensitive, so `lawn` would match `LAWN`.|
-|Reply Message|The message that will be sent when a keyword is detected, such as "A landscaper will reach out to you shortly."|
+|Reply Message|The message that will be sent when a keyword is detected, such as "A landscaper will contact you shortly."|
 {: .reset-td-br-1 .reset-td-br-2 }
 
 ![An example SMS keyword category in Braze.]({% image_buster /assets/img/front/front_keyword.png %}){: style="max-width:65%;"}
