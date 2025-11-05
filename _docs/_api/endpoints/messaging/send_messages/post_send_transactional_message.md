@@ -122,7 +122,7 @@ The endpoint may also return an error code and a human-readable message in some 
 | `You do not have permission to access this resource` | The API key used does not have permission to take this action |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Most endpoints at Braze have a rate limit implementation that will return a 429 response code if you have made too many requests. The transactional sending endpoint works differently—if you exceed your allotted rate limit, our system will continue to ingest the API calls, return success codes, and send the messages, however those messages may not be subject to the contractual SLA for the feature. Please contact Braze Support if you need more information about this functionality.
+Most endpoints at Braze have a rate limit implementation that will return a 429 response code if you have made too many requests. The transactional sending endpoint works differently—if you exceed your allotted rate limit, our system will continue to ingest the API calls, return success codes, and send the messages, however those messages may not be subject to the contractual SLA for the feature. Contact Braze Support if you need more information about this functionality.
 
 ## Transactional HTTP event postback
 
