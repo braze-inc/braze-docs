@@ -57,19 +57,21 @@ After the approval workflow is turned on, you'll need to set user permissions so
 
 {% tabs %}
 {% tab campaign %}
-You must have the ["Approve and Deny Campaigns" permission]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#managing-limited-and-team-role-permissions). This permission controls who can update the approval status of a campaign. It's possible to self-approve components of a campaign. A user with this permission can do any of the following actions in the campaign workflow:
+You must have the ["Approve and Deny Campaigns" permission]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#managing-limited-and-team-role-permissions). This permission controls who can update the approval status of a campaign. With this permission, you can do the following:
 
+- Self-approve the campaign
 - Approve and launch the campaign
-- Approve but not launch the campaign
+- Approve but not launch the campaign (a different user with the "Send Campaigns, Canvases" permission can launch the campaign)
 - Neither approve or launch the campaign
 
 {% endtab %}
 
 {% tab canvas %}
-You must have the ["Approve and Deny Canvases" permission]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#managing-limited-and-team-role-permissions). This permission controls who can update the approval status of a Canvas. It's possible to self-approve components of a Canvas. A user with this permission can do any of the following actions in the Canvas workflow:
+You must have the ["Approve and Deny Canvases" permission]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#managing-limited-and-team-role-permissions). This permission controls who can update the approval status of a Canvas. With this permission, you can do the following:
 
+- Self-approve the Canvas
 - Approve and launch the Canvas
-- Approve but not launch the Canvas
+- Approve but not launch the Canvas (a different user with the "Send Campaigns, Canvases" permission can launch the Canvas)
 - Neither approve or launch the Canvas
 
 After approval statuses are set on the **Summary** step, any subsequent changes made to the Canvas will reset all approval statuses when saved. This applies to any changes made either in a draft Canvas or a post-launch Canvas. For example, if you only make changes to the target audience, the **Summary** step will revert approval statuses for all sections back to the default state, pending. Note that if the Canvas was already approved, but you save it again, the approvals will be reverted even if no changes have been made.
