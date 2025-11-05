@@ -16,7 +16,7 @@ _This integration is maintained by Certona._
 
 ## About the integration
 
-The Braze and Certona integration leverages Certona's machine learning product recommendations in Braze campaigns and Canvases through Connected Content.
+The Braze and Certona integration uses Certona's machine learning product recommendations in Braze campaigns and Canvases through Connected Content.
 
 ## Prerequisites
 

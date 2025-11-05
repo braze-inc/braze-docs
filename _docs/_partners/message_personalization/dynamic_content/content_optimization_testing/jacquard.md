@@ -3,7 +3,7 @@ nav_title: Jacquard
 article_title: Jacquard
 alias: /partners/jacquard/
 page_order: 1
-description: "This reference article outlines the partnership between Braze and Jacquard Dynamic Optimisation that leverages Braze Currents and Connected Content to collect click tracking information from your subscribers through webhooks. Jacquard then ties those events back to your language variants for real-time language optimization."
+description: "This reference article outlines the partnership between Braze and Jacquard Dynamic Optimisation that uses Braze Currents and Connected Content to collect click tracking information from your subscribers through webhooks. Jacquard then ties those events back to your language variants for real-time language optimization."
 page_type: partner
 search_tag: Partner
 ---
@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [Jacquard](https://www.jacquard.com/) brings together artificial intelligence, computational linguistics, and a spirit of customer-centricity to help deploy brand language, at scale, across channels that are customized to your brand voice.
 
-Dynamic Optimisation, powered by Jacquard X, leverages Braze Currents and Connected Content to collect click tracking information from your subscribers through webhooks. Jacquard then ties those events back to your language variants for real-time language optimization. 
+Dynamic Optimisation, powered by Jacquard X, uses Braze Currents and Connected Content to collect click tracking information from your subscribers through webhooks. Jacquard then ties those events back to your language variants for real-time language optimization. 
 
 ## Prerequisites
 
@@ -48,6 +48,6 @@ By default, the Current will include certain PII attributes like email and addre
 
 Contact your Jacquard account team for the required code snippets.
 
-These snippets leverage [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content) and, after they're placed in your emails, will dynamically pull in language and a tracking pixel so Jacquard can optimize your language in real-time using Jacquard X.
+These snippets use [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content) and, after they're placed in your emails, will dynamically pull in language and a tracking pixel so Jacquard can optimize your language in real-time using Jacquard X.
 
 
