@@ -135,7 +135,7 @@ Alphanumeric Sender IDs allow you to set your company name or brand (such as "Ki
 | {::nomarkdown} <ul> <li> No additional charge to implement </li> <li> Improves brand awareness </li> <li> Increases SMS open rates </li> <li> Matches sending speed of phone numbers inside the subscription group </li> <li> Available immediately if pre-registration is not required </li> </ul> {:/} | {::nomarkdown} <ul> <li> <a href='/docs/user_guide/message_building_by_channel/sms/keywords/#two-way-messaging-custom-keyword-responses/'>Two-way messaging</a> is not supported </li> <li> Not all countries support this feature </li> <li> Some countries require an additional approval processes </li> <li> MMS is not enabled </li> </ul> {:/} |
 {: .reset-td-br-1 .reset-td-br-2}
 
-For more information on Alphanumeric Sender ID, please contact your customer success manager. 
+For more information on Alphanumeric Sender ID, contact your customer success manager. 
 {% endtab %}
 {% tab SMS Toll-Free Number %}
 
