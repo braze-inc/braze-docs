@@ -27,7 +27,7 @@ The Braze and Komo integration allows you to gather first and zero-party data th
 
 | Requirement | Description |
 | ----------- | ----------- |
-| Komo account | You will need an active Komo account to take advantage of this partnership. Visit [Komo](https://komo.tech/) to start a trial now. |
+| Komo account | You need an active Komo account to take advantage of this partnership. Visit [Komo](https://komo.tech/) to start a trial now. |
 | Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | Braze REST endpoint | [Your REST endpoint URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). Your endpoint will depend on the Braze URL for your instance.<br><br>For example, it should look something like: https://rest.iad-03.braze.com |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
@@ -37,7 +37,7 @@ The Braze and Komo integration allows you to gather first and zero-party data th
 {% tabs local %}
 {% tab Data Capture - Form Submission %}
 
-When a user submits a customizable data capture form in Komo, the Komo fields mapped in the Braze integration will be passed to Braze via the `/users/track/` API call.
+When a user submits a customizable data capture form in Komo, the Komo fields mapped in the Braze integration is passed to Braze via the `/users/track/` API call.
 
 Data capture forms exist either at the start or end of Cards.
 
@@ -53,7 +53,7 @@ Komo also enables the ability to pass through market research data captured when
 
 ### Step 1: Publish a Komo Engagement Hub and card
 
-You will need to publish a Komo Hub with at least one card containing a data capture form. When published, you can test the user experience end-to-end and verify the integration is working correctly.
+You must publish a Komo Hub with at least one card containing a data capture form. When published, you can test the user experience end-to-end and verify the integration is working correctly.
 
 ![Komo Hub.]({% image_buster /assets/img/Braze Komo Images v2/Braze-Komo-Step1.png %})
 
@@ -69,7 +69,7 @@ Next, find the Braze integration from the list, and select the **Connect** butto
 
 #### Configure the integration via a Workflow
 
-Now you need to setup a workflow, within a Workspace, Site or Card, to sync data to Braze. 
+Now you must setup a workflow, within a Workspace, Site or Card, to sync data to Braze. 
 
 Whether you scope the workflow within the scope of the entire Workspace, a Site (which contains many Cards) or a single Card, is dependent on whether you want the workflow to trigger across many Cards or campaigns. 
 

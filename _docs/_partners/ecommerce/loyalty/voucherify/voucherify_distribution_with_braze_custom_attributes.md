@@ -15,7 +15,7 @@ search_tag: Partner
 _This integration is maintained by Voucherify._
 
 {% alert tip %}
-Before you use Braze custom attributes in Voucherify distributions, you need to add your Braze users to the Voucherify dashboard. You can use Braze Connected Content to synchronize users or import your customers through CSV or API. Visit [Voucherify](https://support.voucherify.io/article/67-how-to-import-my-customers) to learn more.
+Before you use Braze custom attributes in Voucherify distributions, you must add your Braze users to the Voucherify dashboard. You can use Braze Connected Content to synchronize users or import your customers through CSV or API. Visit [Voucherify](https://support.voucherify.io/article/67-how-to-import-my-customers) to learn more.
 {% endalert %}
 
 Braze custom attributes enable you to assign Voucherify codes to custom attributes in user profiles in Braze. You can use unique coupons, gift cards, loyalty cards, and referral codes. First, connect Voucherify with Braze, create a distribution in Voucherify, and finally create a campaign in Braze with the custom attribute snippet in your message template.
@@ -38,7 +38,7 @@ First, connect your Voucherify account with Braze.
 
 When connected, you can start a new Voucherify [distribution](https://support.voucherify.io/article/19-how-does-the-distribution-manager-work) that assigns a code to the custom attribute in the user profile in Braze. Later on, you can use received attributes with codes in your Braze campaigns.
 
-Before setting up distribution, you need to add your Braze users to the Voucherify dashboard. Visit [Voucherify](https://support.voucherify.io/article/67-how-to-import-my-customers) to learn more.
+Before setting up distribution, you must add your Braze users to the Voucherify dashboard. Visit [Voucherify](https://support.voucherify.io/article/67-how-to-import-my-customers) to learn more.
 
 ![]({% image_buster /assets/img/voucherify/voucherify_custom_attributes_distribution.png %})
 
@@ -60,7 +60,7 @@ Manual mode is a one-time action that assigns codes to a chosen audience. Go to 
 
     ![]({% image_buster /assets/img/voucherify/voucherify_custom_attributes_name_distribution.png %}){: style="max-width:90%;margin-top:15px;margin-bottom:15px;"}<br>  
     
-    Choose a campaign that will be a source of unique codes **(1)** and select a segment of users or a single customer as your receivers **(2)**. Visit [Voucherify](https://support.voucherify.io/article/51-customer-segments) to learn more about customer segments.  
+    Choose a campaign that is a source of unique codes **(1)** and select a segment of users or a single customer as your receivers **(2)**. Visit [Voucherify](https://support.voucherify.io/article/51-customer-segments) to learn more about customer segments.  
     
     ![]({% image_buster /assets/img/voucherify/voucherify_custom_attributes_name_distribution_choose_segment.png %}){: style="max-width:90%;margin-top:15px;margin-bottom:15px;"}  
 
@@ -68,7 +68,7 @@ Manual mode is a one-time action that assigns codes to a chosen audience. Go to 
     
     ![]({% image_buster /assets/img/voucherify/voucherify_custom_attributes_consents.png %}){: style="max-width:90%;margin-top:15px;margin-bottom:15px;"}  
     
-3.  Choose Braze as a channel and map custom fields that will be added to the user profile in Braze. You need to add the field representing the code of the published voucher; the rest of the fields are optional.  
+3.  Choose Braze as a channel and map custom fields that is added to the user profile in Braze. You must add the field representing the code of the published voucher; the rest of the fields are optional.  
     
     ![]({% image_buster /assets/img/voucherify/voucherify_custom_attributes_channel.png %}){: style="max-width:90%;margin-top:15px;margin-bottom:15px;"}  
     

@@ -23,7 +23,7 @@ The Braze and Remerge integration helps you develop robust, cross-channel lifecy
 | Requirement | Description |
 |---|---|
 | Remerge account | A Remerge account is required to take advantage of this partnership. |
-| Remerge webhook key | This key will be provided by Remerge. |
+| Remerge webhook key | This key is provided by Remerge. |
 | Android app ID | Your unique Braze application identifier for Android (such as "com.example"). |
 | iOS app ID | Your unique Braze application identifier for iOS (such as "012345678"). |
 | Enable IDFA collection in Braze SDK | IDFA collection is optional within the Braze SDK and disabled by default. | 

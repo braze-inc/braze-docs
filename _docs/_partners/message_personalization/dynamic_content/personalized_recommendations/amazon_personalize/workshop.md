@@ -19,7 +19,7 @@ The following examples are deployed in a fully-functional example eCommerce site
 
 ## Requirements
 
-You will need to clone the [Retail Demo Store repository](https://github.com/aws-samples/retail-demo-store/) and follow the steps outlined to deploy the workshop environment to your AWS account. An AWS account is required to complete the workshop and to run the integration code.
+You must clone the [Retail Demo Store repository](https://github.com/aws-samples/retail-demo-store/) and follow the steps outlined to deploy the workshop environment to your AWS account. An AWS account is required to complete the workshop and to run the integration code.
 
 ## Integration architecture
 
@@ -32,11 +32,11 @@ Before setting up Braze to send personalized messages to users, review the relev
 3. When a Braze campaign runs, a Connected Content template is used to fetch recommendations from Personalize and populate an email template for a target user.
 4. Product catalog information can be used to train recommendation models as well.
 
-Braze will send emails to your users based on their behavior or attributes of their user profiles. This data can help identify users and build user profiles to help determine when to send a message or email.
+Braze sends emails to your users based on their behavior or attributes of their user profiles. This data can help identify users and build user profiles to help determine when to send a message or email.
 
 This event data flow will happen in parallel to the behavioral event data being sent to Amazon Personalize. In this workshop, the demo store uses Amplify to send events to Personalize. This data is used to train a recommendations model that can then be used in Braze Connected Content calls to personalize content to users when your Braze campaign runs.
 
-Braze Connected Content will be able to get these recommendations via a recommendation service running in AWS. The Retail Demo Store workshop shows an example recommendation service deployment. In a deployment scenario in your own infrastructure, you will need to deploy a similar service to get items from your own catalog service.
+Braze Connected Content is able to get these recommendations via a recommendation service running in AWS. The Retail Demo Store workshop shows an example recommendation service deployment. In a deployment scenario in your own infrastructure, you must deploy a similar service to get items from your own catalog service.
 
 ## Setting up the reference architecture workshop
 

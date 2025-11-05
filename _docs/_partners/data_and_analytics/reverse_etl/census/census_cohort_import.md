@@ -23,11 +23,11 @@ In the prompt that appears, name this connection, and provide your Braze endpoin
 
 ### Step 2: Create a Census sync
 
-To sync customers to Braze, you must build a sync. Here, you will define where to sync data and how you would like fields mapped across the two platforms.
+To sync customers to Braze, you must build a sync. Here, you define where to sync data and how you would like fields mapped across the two platforms.
 
 1. Navigate to the **Syncs** tab and select **New Sync**.<br><br> 
 2. In the composer, select the source data model from your data warehouse.<br><br>
-3. Configure where the model will be synced to. Select **Braze** as the destination and **User & Cohort** as the object to sync.<br>![In the "Select a Destination" prompt, "Braze" is selected as the connection, and various objects are listed.]({% image_buster /assets/img/census/census_2.png %}){: style="max-width:80%;"}<br><br>
+3. Configure where the model is synced to. Select **Braze** as the destination and **User & Cohort** as the object to sync.<br>![In the "Select a Destination" prompt, "Braze" is selected as the connection, and various objects are listed.]({% image_buster /assets/img/census/census_2.png %}){: style="max-width:80%;"}<br><br>
 4. Select the **Source Column** that identifies the users to add to a cohort, and select **External User ID** as the **Identifier Type**.<br><br>
 5. In the **Cohort Name** dropdown, select a cohort, create a cohort, or select a Source Column to populate the cohort name.<br><br>
 6. Use the **When a record is removed from source data** dropdown to select what happens to users when they're removed from the source dataset, such as **Do nothing** or **Remove matching record from cohort**.<br><br>
@@ -36,7 +36,7 @@ To sync customers to Braze, you must build a sync. Here, you will define where t
 
 Now you can run your sync!
 
-During a sync, any fields that you map will first be synced to the user object to update what already exists in Braze. After that, the updated user will be added to the specified cohort.
+During a sync, any fields that you map will first be synced to the user object to update what already exists in Braze. After that, the updated user is added to the specified cohort.
 
 After the sync, you can create and add a Braze segment with a Census cohort filter to future Braze campaigns and Canvases to target those users. 
 
@@ -45,7 +45,7 @@ When using the Census and Braze integration, Census will only send the deltas (c
 {% endalert %}
 
 {% alert important %}
-Only users who already exist within Braze will be added or removed from a cohort. Cohort Import will not create new users in Braze.
+Only users who already exist within Braze is added or removed from a cohort. Cohort Import will not create new users in Braze.
 {% endalert %}
 
 ## User Matching

@@ -20,7 +20,7 @@ The RevenueCat and Braze integration allows you to automatically sync your custo
 
 ## Prerequisites
 
-At a minimum, you will need to enable the integration from the RevenueCat dashboard to connect RevenueCat to Braze. If you're using the Braze SDK, you can use the RevenueCat and Braze SDKs together to enhance the integration by ensuring the same customer identifier is being used in both systems.
+At a minimum, you must enable the integration from the RevenueCat dashboard to connect RevenueCat to Braze. If you're using the Braze SDK, you can use the RevenueCat and Braze SDKs together to enhance the integration by ensuring the same customer identifier is being used in both systems.
 
 | Requirement | Description |
 |---|---|
@@ -110,14 +110,14 @@ After you've set up the RevenueCat purchases SDK and Braze SDK to have the same 
 
 1. Navigate to your project in the RevenueCat dashboard and find the **Integrations** card in the left menu. Select **+ New**.
 2. Next, select **Braze** from the available integration and add your Braze instance and Braze REST API key. 
-3. Enter the event names that RevenueCat will send or choose the default event names. More details on available events can be found in [step 3](#configure-event-names).
+3. Enter the event names that RevenueCat sends or choose the default event names. More details on available events can be found in [step 3](#configure-event-names).
 4. Select whether you want RevenueCat to report proceeds (after app store cut) or revenue (gross sales).
 
 ![Braze settings in RevenueCat with fields for Braze instance, API key identifier, and sandbox identifier.]({% image_buster /assets/img/revenuecat/braze_settings_in_revenuecat.png %})
 
 ### Step 3: Configure event names {#configure-event-names}
 
-Enter the event names that RevenueCat will send or select from the default event names by selecting **Use Default Event Names**. The events that RevenueCat supports sending are described in the following chart.
+Enter the event names that RevenueCat sends or select from the default event names by selecting **Use Default Event Names**. The events that RevenueCat supports sending are described in the following chart.
 
 | Event | Description |
 |---|---|
@@ -142,6 +142,6 @@ After configuring Braze settings in RevenueCat, events will automatically begin 
 
 ### Add a sandbox API key for Testing
 
-If you only provide one Braze REST API key to RevenueCat, only production events will be sent. If you also want to send sandbox testing events, [create another Braze REST API key]({{site.baseurl}}/api/basics/#app-group-rest-api-keys) and add it to your Braze settings in RevenueCat.
+If you only provide one Braze REST API key to RevenueCat, only production events are sent. If you also want to send sandbox testing events, [create another Braze REST API key]({{site.baseurl}}/api/basics/#app-group-rest-api-keys) and add it to your Braze settings in RevenueCat.
 
 

@@ -119,7 +119,7 @@ This guide will walk you through the steps to create, test, and ensure the funct
 #### Dynamic product block
 
 {% alert note %}
-Dynamic product blocks require [eCommerce recommended events]({{site.baseurl}}/ecommerce_events/) and can only be used within [Canvases]({{site.baseurl}}/ecommerce_use_cases). For Braze Shopify users, these events are automatically included as part of the integration. For non-Shopify users, you need to work with your developers to pass these events into Braze and ensure that the primary product identifier within the events is added as the catalog item ID. 
+Dynamic product blocks require [eCommerce recommended events]({{site.baseurl}}/ecommerce_events/) and can only be used within [Canvases]({{site.baseurl}}/ecommerce_use_cases). For Braze Shopify users, these events are automatically included as part of the integration. For non-Shopify users, you need to work with your developers to pass these events into Braze and ensure that the primary product identifier within the events are added as the catalog item ID. 
 {% endalert %}
 
 Create a new Canvas that uses one of the available Braze templates for your specific use case:

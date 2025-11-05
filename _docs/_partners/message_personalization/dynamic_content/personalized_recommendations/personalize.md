@@ -41,13 +41,13 @@ The Braze and Personalize.AI integration allows you to export data from Personal
 1. In Personalize.AI, navigate to the **Integrations** tab, located under **Operationalization**, in your Personalize.AI instance.
 2. Click on **Braze**. 
 3. Configure your integration with Braze.
-    * **Connection Name:** Name your connection. This is how your integration will be referred to in Personalize.AI.
+    * **Connection Name:** Name your connection. This is how your integration is referred to in Personalize.AI.
     * **Sync Frequency:** The sync frequency controls how often Personalize.AI exports data to Braze. Select **Daily**, **Weekly**, or **Monthly**. 
     * **API Key:** Add your Braze API key.
     * **API URL:** Add your Braze REST endpoint URL.
 4. Click **EXPORT** to export data to Braze.
 
-Once your data has been exported, Personalize.AI will continue to pass data to Braze at the intervals determined by the sync frequency you set during integration.
+Once your data has been exported, Personalize.AI continues to pass data to Braze at the intervals determined by the sync frequency you set during integration.
 
 ## Using this integration
 

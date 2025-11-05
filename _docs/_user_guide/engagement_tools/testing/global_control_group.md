@@ -128,7 +128,7 @@ Your Global Control Group is formed using Random Bucket Numbers, and thus if you
 
 #### Duplicate email addresses
 
-If two users who have different external user IDs have the same email address, and one of these users is in the control group and the other is not, then an email will still be sent to that email address whenever the non-control group user is eligible for an email. When this occurs, we will mark both user profiles as having received the campaign or Canvas containing that email.
+If two users who have different external user IDs have the same email address, and one of these users are in the control group and the other is not, then an email will still be sent to that email address whenever the non-control group user is eligible for an email. When this occurs, we will mark both user profiles as having received the campaign or Canvas containing that email.
 
 #### Global Control Group and message-specific control groups
 
@@ -142,7 +142,7 @@ Users in your Global Control Group are withheld from receiving any messages othe
 
 You may see multiple **Global Control** segments in the **Additional API Identifiers** section of the [API Keys]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) page. This is because each time the Global Control Group is enabled or disabled, a new Global Control Group is formed. This leads to multiple segments labeled "Global Control Group".
 
-Only one of these segments is active and can be queried using the [`/users/export/global_control_group` endpoint]({{site.baseurl}}/api/endpoints/export/user_data/post_users_global_control_group/), or exported from the dashboard. The export from the dashboard specifically states which subsegments make up this Global Control Group.
+Only one of these segments are active and can be queried using the [`/users/export/global_control_group` endpoint]({{site.baseurl}}/api/endpoints/export/user_data/post_users_global_control_group/), or exported from the dashboard. The export from the dashboard specifically states which subsegments make up this Global Control Group.
 
 ## Testing best practices
 

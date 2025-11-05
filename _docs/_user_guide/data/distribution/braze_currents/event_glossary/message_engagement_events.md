@@ -10268,7 +10268,7 @@ An event that is created when an RCS message fails to be delivered to a user's m
 RCS, Sends
 {% endapitags %}
 
-This event is created when an RCS messages is sent out of Braze to our last-mile delivery partners.
+This event is created when an RCS messages are sent out of Braze to our last-mile delivery partners.
 
 {% tabs %}
 {% tab Amplitude %}

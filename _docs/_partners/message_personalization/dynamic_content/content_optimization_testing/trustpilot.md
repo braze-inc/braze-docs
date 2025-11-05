@@ -23,7 +23,7 @@ Before you start, you'll need the following:
 | Prerequisite | Description |
 | --- | --- |
 | A Trustpilot account | You need a Trustpilot account with access to Trustpilot's API. |
-| A Trustpilot authentication key | You will need to set up an API key and request an access token. |
+| A Trustpilot authentication key | You must set up an API key and request an access token. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 ## Integration
@@ -33,7 +33,7 @@ Before you start, you'll need the following:
 1. [Log into Trustpilot](https://app.contentful.com/login) with your credentials.  
 2. Create or retrieve the API key and secret in the Trustpilot dashboard by going to **Integrations** > **Developers** > **APIs**. If you don't already have an API key, create a new one:  
    1. Go to **Application Name** > **Create Application**  
-   2. Copy your API key and secret, which will be used to authenticate your Connected Content requests.
+   2. Copy your API key and secret, which is used to authenticate your Connected Content requests.
 
 ## Sending Trustpilot review invitations
 

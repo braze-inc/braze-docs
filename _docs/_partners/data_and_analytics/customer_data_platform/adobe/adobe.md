@@ -12,7 +12,7 @@ search_tag: Partner
 
 > Built on the Adobe Experience Platform, Adobe's real-time customer data platform brings together known and anonymous data from multiple enterprise sources to create customer profiles. These profiles can then be used to provide personalized experiences across all channels and devices in real-time.
 
-The Braze and Adobe CDP integration connects and maps your brand's Adobe data (custom attributes and segments) to Braze in real-time. You can then act on this data, delivering personalized, targeted experiences to your users. With Adobe, the integration is intuitive. Simply take any Adobe [identity](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en), map it to a Braze external ID, and send it off to the Braze platform. All data sent will be accessible in Braze through a new `AdobeExperiencePlatformSegments` attribute.
+The Braze and Adobe CDP integration connects and maps your brand's Adobe data (custom attributes and segments) to Braze in real-time. You can then act on this data, delivering personalized, targeted experiences to your users. With Adobe, the integration is intuitive. Simply take any Adobe [identity](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en), map it to a Braze external ID, and send it off to the Braze platform. All data sent is accessible in Braze through a new `AdobeExperiencePlatformSegments` attribute.
 
 {% alert important %}
 The Adobe Experience Platform integration currently doesn't support dynamic audience membership. This means it can only add values to user profiles, not remove them.
@@ -56,7 +56,7 @@ Next, in the  **Authentication** step, enter your Braze connection details:
 - **Name**: Enter the name you'd like to recognize this destination by in the future.
 - **Destination**: Enter a description that will help you identify this destination.
 - **Endpoint instance**: Enter your Braze endpoint instance.
-- **Marketing use case**: Marketing use cases indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing use cases or create your own marketing use case. To read more about Adobe marketing use cases, visit [Data governance in Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/privacy/data-governance-overview.html?lang=en#destinations).
+- **Marketing use case**: Marketing use cases indicate the intent for which data is exported to the destination. You can select from Adobe-defined marketing use cases or create your own marketing use case. To read more about Adobe marketing use cases, visit [Data governance in Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/privacy/data-governance-overview.html?lang=en#destinations).
 
 ![]({% image_buster /assets/img/adobe/braze-destination-authentication.png %}){: style="max-width:60%;"}
 

@@ -83,7 +83,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | `campaign_id`|Optional|String| See [campaign identifier]({{site.baseurl}}/api/identifier_types/). |
 | `send_id` | Optional | String | See [send identifier]({{site.baseurl}}/api/identifier_types/). |
 | `override_messaging_limits` | Optional | Boolean | Ignore frequency capping for campaigns, defaults to false |
-|`recipient_subscription_state`| Optional | String | Use this to send messages to only users who have opted in (`opted_in`), only users who have subscribed or are opted in (`subscribed`) or to all users, including unsubscribed users (`all`). <br><br>Using `all` users is useful for transactional email messaging. Defaults to `subscribed`. |
+|`recipient_subscription_state`| Optional | String | Use this to send messages to only users who have opted in (`opted_in`), only users who have subscribed or are opted in (`subscribed`) or to all users, including unsubscribed users (`all`). <br><br>Using `all` users are useful for transactional email messaging. Defaults to `subscribed`. |
 | `schedule` | Required | Schedule object | See [schedule object]({{site.baseurl}}/api/objects_filters/schedule_object/) |
 | `messages` | Optional | Messaging object | See [available messaging objects]({{site.baseurl}}/api/objects_filters/#messaging-objects). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }

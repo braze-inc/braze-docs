@@ -10,7 +10,7 @@ description: "This article covers the actions you can take to manage your segmen
 
 # Managing Segments
 
-> The Segments section allows you to view a comprehensive list of your existing segments, create new segments, and edit existing segments. You can refine the list of segments by selecting a variety of filters and columns so only the most relevant information to you is displayed.
+> The Segments section allows you to view a comprehensive list of your existing segments, create new segments, and edit existing segments. You can refine the list of segments by selecting a variety of filters and columns so only the most relevant information to you are displayed.
 
 ![The Segments section displaying a list of Active segments.]({% image_buster /assets/img/segment/segments_page.png %})
 

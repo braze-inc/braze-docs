@@ -1284,7 +1284,7 @@ This message will display on your desktop web browser.
 ```
 {% endraw %}
 
-The following use case checks if a web users is on iOS or Android and, if so, will display a specific message.
+The following use case checks if a web users are on iOS or Android and, if so, will display a specific message.
 
 {% raw %}
 ```liquid

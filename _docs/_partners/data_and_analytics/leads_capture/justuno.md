@@ -55,7 +55,7 @@ To send profile data from Justuno to a specific Braze email or SMS Subscription 
 | ID Type                          | Required? | Description                                                                                                   |
 |----------------------------------|-----------|---------------------------------------------------------------------------------------------------------------|
 | Braze SMS Subscription Group ID  | Yes       | This ID is used to collect SMS consent from user profiles. If no ID is entered in Justuno, profiles will not have consent when Justuno pushes that profile to Braze. |
-| Braze Email Subscription Group ID | No        | If this ID is not entered in Justuno, Justuno will send the profile data to Braze as a user with no associated subscription groups. |
+| Braze Email Subscription Group ID | No        | If this ID is not entered in Justuno, Justuno sends the profile data to Braze as a user with no associated subscription groups. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 #### Step 3.1: Locate the IDs in Braze

@@ -20,7 +20,7 @@ The Braze and Mixpanel integration allows you to [import Mixpanel Cohorts into B
 | Requirement | Description |
 |---|---|
 | Mixpanel account | A [Mixpanel account](https://mixpanel.com/) is required to take advantage of this partnership. |
-| Currents | In order to export data back into Mixpanel, you need to have [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) set up for your account. |
+| Currents | In order to export data back into Mixpanel, you must have [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) set up for your account. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" } 
 
 ## Data export integration
@@ -33,11 +33,11 @@ Contact your account manager or open a [support ticket]({{site.baseurl}}/braze_s
 
 ### Step 1: Get Mixpanel credentials
 
-In your Mixpanel dashboard, click into the **Project Settings** in either a new or existing project. Here you will find the Mixpanel API secret and Mixpanel Token. These credentials will be used in the next step to create your Currents connection. 
+In your Mixpanel dashboard, click into the **Project Settings** in either a new or existing project. Here you find the Mixpanel API secret and Mixpanel Token. These credentials are used in the next step to create your Currents connection. 
 
 ### Step 2: Create Braze Current
 
-In Braze, navigate to **Currents > **+ Create Current** > **Create Mixpanel Export**. Provide an integration name, contact email, Mixpanel API secret, and Mixpanel token in the listed fields. Next, select the events you want to track; a list of available events is provided. Lastly, click **Launch Current**.
+In Braze, navigate to **Currents > **+ Create Current** > **Create Mixpanel Export**. Provide an integration name, contact email, Mixpanel API secret, and Mixpanel token in the listed fields. Next, select the events you want to track; a list of available events are provided. Lastly, click **Launch Current**.
 
 ![The Braze Mixpanel Currents page. This page includes fields for integration name, contact email, API secret, and mixpanel export token. The lower half of the Currents page lists available Currents events you can send.]({% image_buster /assets/img_archive/mixpanel4.png %}){: style="max-width:80%;"}
 

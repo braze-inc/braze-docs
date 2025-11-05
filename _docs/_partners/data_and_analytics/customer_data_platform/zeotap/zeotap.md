@@ -45,11 +45,11 @@ The identifiers that appear are both available in the segment and supported by B
 
 ### Step 3: Create Braze segment
 
-After successfully creating, pushing, and processing a segment in Zeotap, the Zeotap users will appear in the Braze dashboard. You can look up users by user ID in the Braze dashboard. 
+After successfully creating, pushing, and processing a segment in Zeotap, the Zeotap users appears in the Braze dashboard. You can look up users by user ID in the Braze dashboard. 
 
 ![A Braze user profile showing the segment one through four listed as "true" under "Custom attributes".]({% image_buster /assets/img/zeotap/zeotap4.png %})
 
-If a user is part of the Zeotap segment, the segment name appears as a custom attribute on their user profile with the boolean value `true`. Take note of the custom attribute name as you will need it when creating a Braze segment. 
+If a user is part of the Zeotap segment, the segment name appears as a custom attribute on their user profile with the boolean value `true`. Take note of the custom attribute name as you need it when creating a Braze segment. 
 
 Next, you must create and define this segment within Braze:
 1. From the Braze dashboard, select **Segments** and then **Create Segment**.

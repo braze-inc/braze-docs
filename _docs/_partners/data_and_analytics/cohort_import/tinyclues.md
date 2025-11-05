@@ -29,15 +29,15 @@ To integrate Braze and Tinyclues, you must configure the Tinyclues platform, exp
 
 In Braze, navigate to **Partner Integrations** > **Technology Partners** and select **Tinyclues**. 
 
-Here, you will find your REST endpoint and generate your Braze data import key. After the key is generated, you can create a new key or invalidate an existing one.<br><br>![]({% image_buster /assets/img/tinyclues/tinyclues_6.png %}){: style="max-width:90%;"} 
+Here, you find your REST endpoint and generate your Braze data import key. After the key is generated, you can create a new key or invalidate an existing one.<br><br>![]({% image_buster /assets/img/tinyclues/tinyclues_6.png %}){: style="max-width:90%;"} 
 
-To complete the integration, you will need to provide the data import key and REST endpoint to your Tinyclues data operations team. Tinyclues will then establish the connection and reach out to you after the setup is complete.
+To complete the integration, you must provide the data import key and REST endpoint to your Tinyclues data operations team. Tinyclues will then establish the connection and reach out to you after the setup is complete.
 
 ### Step 2: Export a campaign from the Tinyclues platform
 
 Each time you want to create a cohort of Tinyclues users to use in Braze, you'll have to first export it from the Tinyclues platform.
 
-In Tinyclues, select the campaign(s) you want to export and click **Export Campaigns**. Upon export, the audience will be automatically uploaded to your Braze account.
+In Tinyclues, select the campaign(s) you want to export and click **Export Campaigns**. Upon export, the audience is automatically uploaded to your Braze account.
 
 ![]({% image_buster /assets/img/tinyclues/tinyclues_1.png %})
 
@@ -51,7 +51,7 @@ In Braze, navigate to **Segments**, name your Tinyclues cohort segment, and sele
 Having trouble locating your cohort? Check out our [troubleshooting](#troubleshooting) section for guidance. 
 
 {% alert important %}
-Only users who already exist within Braze will be added or removed from a cohort. Cohort Import will not create new users in Braze.
+Only users who already exist within Braze is added or removed from a cohort. Cohort Import will not create new users in Braze.
 {% endalert %}
 
 ## Using this integration

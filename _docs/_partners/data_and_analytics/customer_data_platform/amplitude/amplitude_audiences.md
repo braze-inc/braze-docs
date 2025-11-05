@@ -21,7 +21,7 @@ The Braze and Amplitude bi-directional integration allows you to [import your Am
 | Requirement | Description |
 |---|---|
 | Amplitude account | An [Amplitude account](https://amplitude.com/) is required to take advantage of this partnership. |
-| Currents | In order to export data back into Amplitude, you need to have [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) set up for your account. |
+| Currents | In order to export data back into Amplitude, you must have [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) set up for your account. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" } 
 
 ## Choose an integration 
@@ -39,7 +39,7 @@ Amplitude and Braze offer two different integration methods. Read through the fo
 | ----------- | ----------- |
 | Braze REST API key | A Braze REST API key with the all permissions.<br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | Braze REST endpoint | [Your REST endpoint URL][1]. Your endpoint will depend on the Braze URL for your instance. |
-| Braze app identifier | The identifier for the app that will receive Amplitude events. This can be found within the **Braze Dashboard > Developer Console > Settings**. |
+| Braze app identifier | The identifier for the app that receives Amplitude events. This can be found within the **Braze Dashboard > Developer Console > Settings**. |
 
 ### Amplitude Setup
 
@@ -53,9 +53,9 @@ Refer to [Braze Event Streaming](https://www.docs.developers.amplitude.com/data/
 
 ## Sync user traits and computations
 
-Use Audiences to send user properties and computations to Braze as custom attributes. You will be able to sync user properties or computed properties for users who have been active in the last 90 days.
+Use Audiences to send user properties and computations to Braze as custom attributes. You are able to sync user properties or computed properties for users who have been active in the last 90 days.
 
-When a user's property or a computation updates, Amplitude will update a custom attribute in Braze with the same name as that user property or computation.
+When a user's property or a computation updates, Amplitude updates a custom attribute in Braze with the same name as that user property or computation.
 
 User trait and computation syncs will create new users for user identifiers that do not yet exist within Braze. Computations and user traits can only be synced using user identifiers. A user identifier can be any of the following:
 - External ID

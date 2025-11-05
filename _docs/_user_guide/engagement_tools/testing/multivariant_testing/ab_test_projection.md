@@ -37,4 +37,4 @@ In testing, we found the projections to be about 70% accurate when picking betwe
 
 ### How do we use your data?
 
-This feature learns from past A/B tests carried out on Braze. The actual copy of your or any Braze customers' messages is never provided to the model. We first extract the high-level language patterns that predict winning messages in A/B tests. Then, we provide those patterns to our AI to teach it to discern which linguistic features constitute superior subject lines.
+This feature learns from past A/B tests carried out on Braze. The actual copy of your or any Braze customers' messages are never provided to the model. We first extract the high-level language patterns that predict winning messages in A/B tests. Then, we provide those patterns to our AI to teach it to discern which linguistic features constitute superior subject lines.

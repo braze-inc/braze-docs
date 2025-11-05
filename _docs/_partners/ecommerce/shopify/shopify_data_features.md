@@ -531,7 +531,7 @@ Then you can add the following Liquid tags into your message to reference the pr
 {% endraw %}
 
 {% alert tip %}
-Shopify’s checkout completed webhook doesn't contain product URLs or image URLs. As a result, you need to use Catalogs Liquid personalization as mentioned in [Abandoned Cart product personalization for emails]({{site.baseurl}}/ecommerce_use_cases/#order-confirmation-and-feedback-survey). 
+Shopify’s checkout completed webhook doesn't contain product URLs or image URLs. As a result, you must use Catalogs Liquid personalization as mentioned in [Abandoned Cart product personalization for emails]({{site.baseurl}}/ecommerce_use_cases/#order-confirmation-and-feedback-survey). 
 {% endalert %}
 
 {% endsubtab %}
@@ -787,12 +787,12 @@ The Shopify integration currently doesn't support populating the Braze [purchase
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {% alert important %}
-A known issue with Shopify's latest API version prevents the `shopify_last_order_name` user attribute from correctly populating. The impact on users is as follows:<br><br>
+A known issue with Shopify's latest API version prevents the `shopify_last_order_name` user attribute from correctly populating. The impact on users are as follows:<br><br>
 
 - **Existing users:** For any user who already has a value for `shopify_last_order_name`, that value will persist. However, it will not be updated by any subsequent orders.
 - **New users:** For any new users, field will not populate and will remain empty or null.
 
-We will update this page when Shopify resolves this issue.
+We updates this page when Shopify resolves this issue.
 {% endalert %}
 
 ### Liquid personalization
@@ -817,7 +817,7 @@ After selecting your custom attribute, input a default value and copy the Liquid
 - Country
 
 {% alert note %}
-Braze will only update supported Shopify custom attributes and Braze standard attributes if there is a difference in data from the existing user profile. For example, if the inbound Shopify data contains a first name of Bob and Bob already exists as a first name on the Braze user profile, Braze will not trigger an update, and you will not be charged a data point.
+Braze will only update supported Shopify custom attributes and Braze standard attributes if there is a difference in data from the existing user profile. For example, if the inbound Shopify data contains a first name of Bob and Bob already exists as a first name on the Braze user profile, Braze will not trigger an update, and you not be charged a data point.
 {% endalert %}
 
 ## SDK data collection 
@@ -826,10 +826,10 @@ For more information on what data is collected by the Braze SDKs, see [SDK data 
 
 ## Historical backfill
 
-During your Shopify store onboarding, you can initiate an initial data sync through historical backfill to immediately engage with your customers. As part of this backfill, Braze will run an initial data sync of all customers and order placed from the last 90 days prior to your Shopify integration connection. When Braze imports your Shopify customers, we will assign the `external_id` type that you chose in your configuration settings.
+During your Shopify store onboarding, you can initiate an initial data sync through historical backfill to immediately engage with your customers. As part of this backfill, Braze will run an initial data sync of all customers and order placed from the last 90 days prior to your Shopify integration connection. When Braze imports your Shopify customers, we assign the `external_id` type that you chose in your configuration settings.
 
 {% alert note %}
-If you plan to integrate with a custom external ID (for either the [standard integration]({{site.baseurl}}/partners/ecommerce/shopify/shopify_standard_integration/#step-4-configure-how-you-manage-users) or the [custom integration]({{site.baseurl}}/partners/ecommerce/shopify/shopify_custom_integration/#step-6-configure-how-you-manage-users-optional)), you will be required to add your custom external ID as a Shopify customer metafield to all existing Shopify customer profiles and then perform the historical backfill. 
+If you plan to integrate with a custom external ID (for either the [standard integration]({{site.baseurl}}/partners/ecommerce/shopify/shopify_standard_integration/#step-4-configure-how-you-manage-users) or the [custom integration]({{site.baseurl}}/partners/ecommerce/shopify/shopify_custom_integration/#step-6-configure-how-you-manage-users-optional)), you are required to add your custom external ID as a Shopify customer metafield to all existing Shopify customer profiles and then perform the historical backfill. 
 {% endalert %}
 
 ### Setting up Shopify historical backfill

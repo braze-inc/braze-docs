@@ -16,7 +16,7 @@ _This integration is maintained by DataGrail._
 
 ## About the integration
 
-The Braze and DataGrail integration allows you to detect consumer data collected and stored within Braze to quickly process DSRs (access, delete, and do-not-sell requests). Braze will be added to an accurate blueprint of where consumer data lives in your organization with automated data mapping — no more surveys or spreadsheets are needed to maintain a privacy framework or produce a record of processing activities (RoPA). 
+The Braze and DataGrail integration allows you to detect consumer data collected and stored within Braze to quickly process DSRs (access, delete, and do-not-sell requests). Braze is added to an accurate blueprint of where consumer data lives in your organization with automated data mapping — no more surveys or spreadsheets are needed to maintain a privacy framework or produce a record of processing activities (RoPA). 
 
 ## Prerequisites
 

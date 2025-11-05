@@ -53,7 +53,7 @@ For Snowflake, data sharing happens between a [data provider](https://docs.snowf
 1. In Braze, go to **Partner Integrations** > **Data Sharing**.
 2. Enter your Snowflake account details and locator. To get your account locator, run `SELECT CURRENT_ACCOUNT()` in the destination account.
 3. If you're using a CRR share, specify the cloud provider and region.
-4. When you're finished, select **Create Datashare**. This will send the datashare to your Snowflake account.
+4. When you're finished, select **Create Datashare**. This sends the datashare to your Snowflake account.
 
 ### Step 2: Create the database in Snowflake
 
@@ -70,7 +70,7 @@ If you delete and recreate a share in the Braze dashboard, you must drop the pre
 
 ## Usage and visualization
 
-After the data share is provisioned, you will need to create a database from the incoming data share, making all the tables shared appear in your Snowflake instance and be queryable just like any other data you're storing in your instance. However, keep in mind that the shared data is read-only and can only be queried but not modified or deleted in any way.
+After the data share is provisioned, you must create a database from the incoming data share, making all the tables shared appear in your Snowflake instance and be queryable just like any other data you're storing in your instance. However, keep in mind that the shared data is read-only and can only be queried but not modified or deleted in any way.
 
 Similar to Currents, you can use your Snowflake Secure Data Sharing to:
 
@@ -108,7 +108,7 @@ Because new columns are considered non-breaking, Braze strongly recommends expli
 
 #### Breaking changes
 
-When possible, breaking changes will be preceded by an announcement and a migration period. Examples of breaking changes include:
+When possible, breaking changes is preceded by an announcement and a migration period. Examples of breaking changes include:
 - Removing a table or view
 - Removing a column from an existing table or view
 - Changing the type or nullability of an existing column
@@ -121,9 +121,9 @@ Braze currently hosts all user-level data in the Snowflake AWS US East-1, EU-Cen
 
 #### Retention policy
 
-Any data older than two years will be archived and moved to long term storage. As part of the archival process, all events are anonymized and any personal identifiable information (PII) sensitive fields are stripped out (this includes optionally PII fields like `properties`). Archived data still contains the `user_id` field, which allows for per-user analytics across all events data.
+Any data older than two years is archived and moved to long term storage. As part of the archival process, all events are anonymized and any personal identifiable information (PII) sensitive fields are stripped out (this includes optionally PII fields like `properties`). Archived data still contains the `user_id` field, which allows for per-user analytics across all events data.
 
-You will be able to query against the most recent two years of data for each event in the corresponding `USERS_*_SHARED` view. Additionally, each event will have a `USERS_*_SHARED_ALL` view which can be queried against to return both anonymized and non-anonymized data.
+You are able to query against the most recent two years of data for each event in the corresponding `USERS_*_SHARED` view. Additionally, each event will have a `USERS_*_SHARED_ALL` view which can be queried against to return both anonymized and non-anonymized data.
 
 #### Historical data
 
@@ -131,11 +131,11 @@ The archive of historical event data in Snowflake goes back to April 2019. In th
 
 ### General Data Protection Regulation (GDPR) compliance
 
-Nearly every event record Braze stores includes a few fields representing users' personally identifiable information (PII). Some events may include email address, phone number, device ID, language, gender, and location information. If a user's request to be forgotten is submitted to Braze, we will null out those PII fields for any event belonging to those users. This way, we're not removing the historical record of the event, but now the event can never be tied back to a specific individual.
+Nearly every event record Braze stores includes a few fields representing users' personally identifiable information (PII). Some events may include email address, phone number, device ID, language, gender, and location information. If a user's request to be forgotten is submitted to Braze, we null out those PII fields for any event belonging to those users. This way, we're not removing the historical record of the event, but now the event can never be tied back to a specific individual.
 
 ### Speed, performance, cost of queries
 
-The speed, performance, and cost of any query run on top of the data are determined by the warehouse size you use to query the data. In some cases, depending on how much data you're accessing for analytics, you may find that you need to use a larger warehouse size for the query to be successful. Snowflake has excellent resources available about how to best determine which size to use including [Overview of warehouses](https://docs.snowflake.net/manuals/user-guide/warehouses-overview.html) and [Warehouse considerations](https://docs.snowflake.net/manuals/user-guide/warehouses-considerations.html)
+The speed, performance, and cost of any query run on top of the data are determined by the warehouse size you use to query the data. In some cases, depending on how much data you're accessing for analytics, you may find that you must use a larger warehouse size for the query to be successful. Snowflake has excellent resources available about how to best determine which size to use including [Overview of warehouses](https://docs.snowflake.net/manuals/user-guide/warehouses-overview.html) and [Warehouse considerations](https://docs.snowflake.net/manuals/user-guide/warehouses-considerations.html)
 
 > For a set of example queries to reference when setting up snowflake, check out our [sample queries]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/sample_queries/) and [ETL event pipeline setup]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/etl_pipline_setup/) examples.
 

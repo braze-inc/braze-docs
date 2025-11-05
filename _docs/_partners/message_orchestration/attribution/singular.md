@@ -33,7 +33,7 @@ The Braze and Singular integration allows you to import paid install attribution
 
 #### Android
 
-If you have an Android app, you will need to include the following code snippet, which passes a unique Braze user ID to Singular.
+If you have an Android app, you must include the following code snippet, which passes a unique Braze user ID to Singular.
 
 ```java
 String appboyDeviceId = Braze.getInstance(context).getDeviceId();
@@ -43,7 +43,7 @@ SingularConfig config = new SingularConfig("SDK KEY", "SDK SECRET")
 #### iOS
 
 {% alert important %}
-Prior to February 2023, our Singular attribution integration used the IDFV as the primary identifier to match iOS attribution data. It is not necessary for Braze customers using Objective-C to fetch the Braze `device_id` and sent to Singular upon install as there will be no disruption of service. 
+Prior to February 2023, our Singular attribution integration used the IDFV as the primary identifier to match iOS attribution data. It is not necessary for Braze customers using Objective-C to fetch the Braze `device_id` and sent to Singular upon install as there is no disruption of service. 
 {% endalert%}
 
 For those using the Swift SDK v5.7.0+, if you wish to continue using IDFV as the mutual identifier, you must ensure that the `useUUIDAsDeviceId` field is set to `false` so there is no disruption of the integration. 
@@ -76,9 +76,9 @@ config.setGlobalProperty("brazeDeviceId", withValue: brazeDeviceId, overrideExis
 
 In Braze, navigate to **Partner Integrations** > **Technology Partners** and select **Singular**. 
 
-Here, you will find the REST endpoint and generate your Braze data import key. After the key is generated, you can create a new key or invalidate an existing one. 
+Here, you find the REST endpoint and generate your Braze data import key. After the key is generated, you can create a new key or invalidate an existing one. 
 
-You will need to provide the data import key and REST endpoint to your Singular account manager to complete the integration.<br><br>![This image shows the "Data Import for Install Attribution" box found in the Singular technology page. In this box, you are shown the data import key and the REST endpoint.]({% image_buster /assets/img/attribution/singular.png %}){: style="max-width:90%;"}
+You must provide the data import key and REST endpoint to your Singular account manager to complete the integration.<br><br>![This image shows the "Data Import for Install Attribution" box found in the Singular technology page. In this box, you are shown the data import key and the REST endpoint.]({% image_buster /assets/img/attribution/singular.png %}){: style="max-width:90%;"}
 
 ### Step 3: Confirm the integration
 
@@ -88,7 +88,7 @@ Note that this will not happen until we receive data about an attributed install
 
 ## Facebook and X (formerly Twitter) attribution data
 
-Attribution data for Facebook and X (formerly Twitter) campaigns is not available through our partners. These media sources do not permit their partners to share attribution data with third parties and, therefore, our partners cannot send that data to Braze.
+Attribution data for Facebook and X (formerly Twitter) campaigns are not available through our partners. These media sources do not permit their partners to share attribution data with third parties and, therefore, our partners cannot send that data to Braze.
 
 ## Singular click tracking URLs in Braze (optional)
 

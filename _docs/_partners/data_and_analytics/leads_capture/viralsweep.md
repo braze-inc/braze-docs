@@ -44,7 +44,7 @@ In the integrations configuration window, provide your Braze REST API key and RE
 Click **Connect**.
 
 ### Step 3 : Add Braze Credentials
-You're connected! The promotion is now connected to Braze, and all entries collected by ViralSweep will be sent into Braze automatically.
+You're connected! The promotion is now connected to Braze, and all entries collected by ViralSweep is sent into Braze automatically.
 
 ## Frequently asked questions
 
@@ -65,7 +65,7 @@ You're connected! The promotion is now connected to Braze, and all entries colle
 - Tracking campaign name
 
 ### Does ViralSweep update subscribers?
-Yes. If you run a promotion and ViralSweep passes someone to Braze, then you run another promotion in the future and the same person enters, that person's information will automatically be updated in Braze (if any new information is provided). Mainly, the referral URL will be updated with the newest URL for each promotion they enter, and the promotion ID field will contain the ID of all the promotions they have entered.
+Yes. If you run a promotion and ViralSweep passes someone to Braze, then you run another promotion in the future and the same person enters, that person's information will automatically be updated in Braze (if any new information is provided). Mainly, the referral URL is updated with the newest URL for each promotion they enter, and the promotion ID field will contain the ID of all the promotions they have entered.
 
 ## Troubleshooting
 

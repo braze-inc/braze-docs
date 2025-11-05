@@ -71,7 +71,7 @@ Your survey can be shared in two ways: by embedding the first question into your
 
 - **Embed the code**
   - Copy the code snippet under **Email embed code** within the Braze integration section of the **Send survey** tab. Insert the code into the HTML of your Braze email where you would like the beginning of the survey to appear. 
-  - If you are having difficulties rendering the survey questions or if they look incorrectly formatted, you will need to go into the **Sending Info** tab in the message composer and uncheck **Inline CSS**.
+  - If you are having difficulties rendering the survey questions or if they look incorrectly formatted, you must go into the **Sending Info** tab in the message composer and uncheck **Inline CSS**.
 - **Include a link**
   - Copy the link under **Survey Link** in the Braze integration section of the **Send survey** tab. Note that the Liquid included in the link {% raw %}`?user_braze_id={{${braze_id}}}`{% endraw %} will automatically be replaced for each user upon send.
 

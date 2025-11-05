@@ -68,14 +68,14 @@ Within the **Configure Job** prompt, provide a label and an optional description
 Finally, choose the preferable option for the **Existing Users** checkbox. Leaving this box checked will add users who already exist in the selected Lytics audience. If unchecked, users will only be exported to Braze when entering or exiting the audience after the workflow begins.
 
 {% alert note %}
-By checking this box, all existing users in the selected audience will be pushed into Braze. If your Braze pricing includes data points, monitor data point usage accordingly.
+By checking this box, all existing users in the selected audience is pushed into Braze. If your Braze pricing includes data points, monitor data point usage accordingly.
 {% endalert %}
 
 Click **Complete** when finished to initiate the export and save.
 
 ![]({% image_buster /assets/img/lytics/braze_backfill.png %}){: style="max-width:80%;"}
 
-After the export job is configured, Lytics will send the selected audiences to Braze through the native integration. The following is a sample audience showing the JSON structure of the audience sent to Braze.
+After the export job is configured, Lytics sends the selected audiences to Braze through the native integration. The following is a sample audience showing the JSON structure of the audience sent to Braze.
 
 ```json
 {
@@ -103,7 +103,7 @@ After the export job is configured, Lytics will send the selected audiences to B
 }
 ```
 
-A new user will be created in Braze for any `external_id` included within the audience export that does not yet exist in Braze. 
+A new user is created in Braze for any `external_id` included within the audience export that does not yet exist in Braze. 
 
 ## Importing data from Braze to Lytics
 

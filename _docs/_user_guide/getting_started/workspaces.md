@@ -47,7 +47,7 @@ Whichever apps you choose to have in one workspace will have their data aggregat
 - Email Subscription (This becomes an all-or-none situation and can leave you open to compliance issues.)
 
 {% alert note %}
-The aggregation of data across app instances in these filters is why we do not recommend housing substantially different apps within the same workspace. It can make targeting tricky!
+The aggregation of data across app instances in these filters are why we do not recommend housing substantially different apps within the same workspace. It can make targeting tricky!
 {% endalert %}
 
 ### Separate workspaces

@@ -31,7 +31,7 @@ The Smartling Braze integration allows you to translate HTML email templates, Co
 
 **Email templates**
 * Only HTML email templates are supported.
-* You will need to decide on how your translated emails are delivered to Braze by the connector:
+* You must decide on how your translated emails are delivered to Braze by the connector:
   * **One Email for All Languages:** The connector delivers all languages in the same email as the source.
   * **One Email per Language:** The connector creates a new email for each language in Braze.
 
@@ -67,7 +67,7 @@ Refer to Smartling [documentation](https://help.smartling.com/hc/en-us/articles/
 
 ### Step 2: Send content to Smartling
 
-Once the Braze connector has been connected and set up, you will find Braze content in the **Braze** tab in your Smartling project. Refer to Smartling [documentation](https://help.smartling.com/hc/en-us/articles/13248577069979) to learn more.
+Once the Braze connector has been connected and set up, you find Braze content in the **Braze** tab in your Smartling project. Refer to Smartling [documentation](https://help.smartling.com/hc/en-us/articles/13248577069979) to learn more.
 
 Smartling provides advanced features to search and select content by:
 

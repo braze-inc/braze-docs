@@ -27,7 +27,7 @@ The Braze and Amazon S3 integration features two integration strategies:
 | ----------- | ----------- |
 | Amazon S3 account | An Amazon S3 account is required to take advantage of this partnership. |
 | Dedicated S3 bucket | Before integrating with Amazon S3, you must create an S3 bucket for your app.<br><br>If you already have an S3 bucket, we still recommend creating a new bucket specifically for Braze so you can limit permissions. Refer to the following instructions on how to create a new bucket. |
-| Currents | In order to export data back into Amazon S3, you need to have [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) set up for your account. |
+| Currents | In order to export data back into Amazon S3, you must have [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) set up for your account. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 #### Creating a new S3 bucket
@@ -60,7 +60,7 @@ To retrieve your access key ID and secret access key, you'll need to [create an 
 
 ### Step 2: Get credentials {#secret-key-2}
 
-After creating a new user, select **Show User Security Credentials** to reveal your access key ID and secret access key. Next, note these credentials somewhere or select the **Download Credentials** button, as you will need to input these into the Braze dashboard later on.
+After creating a new user, select **Show User Security Credentials** to reveal your access key ID and secret access key. Next, note these credentials somewhere or select the **Download Credentials** button, as you must input these into the Braze dashboard later on.
 
 ![]({% image_buster /assets/img_archive/S3_Credentials.png %})
 
@@ -137,7 +137,7 @@ Name your Current. In the **Credentials** section, make sure **AWS Secret Access
 ![]({{site.baseurl}}/assets/img/currents-s3-example.png)
 
 {% alert warning %}
-Keep your AWS access key ID and secret access key up to date. If your connector's credentials expire, the connector will stop sending events. If this persists for more than **5 days**, the connector's events will be dropped, and data will be permanently lost.
+Keep your AWS access key ID and secret access key up to date. If your connector's credentials expire, the connector will stop sending events. If this persists for more than **5 days**, the connector's events are dropped, and data is permanently lost.
 {% endalert %}
 
 You can also add the following customization based on your needs:
@@ -241,7 +241,7 @@ Within the same IAM section of the console, select **Roles** > **Create Role**.
 ![]({{site.baseurl}}/assets/img/create_role_1_list.png)
 
 Retrieve your Braze account ID and external ID from your Braze account:
-- **Currents**: In Braze, go to **Partner Integrations** > **Data Export**. Next, select **Create Current** then **Amazon S3 Data Export**. Here you will find the identifiers needed to create your role.
+- **Currents**: In Braze, go to **Partner Integrations** > **Data Export**. Next, select **Create Current** then **Amazon S3 Data Export**. Here you find the identifiers needed to create your role.
 - **Dashboard data export**: In Braze, go to **Partner Integrations** > **Technology Partners** and select **Amazon S3**. Here you'll find the identifiers needed to create your role.
 
 Back on the AWS Console, select **Another AWS Account** as the trusted entity selector type. Provide your Braze account ID, check the **Require external ID** box, and enter the Braze external ID. Select **Next** when complete.
@@ -315,14 +315,14 @@ A notification will inform you whether your credentials have been successfully v
 Users that have integrated a cloud data storage solution, and are trying to export APIs, dashboard reports, or CSV reports will experience the following:
 
 - All API exports will not return a download URL in the response body and must be retrieved through data storage.
-- All dashboard reports and CSV reports will be sent to the users email for download (no storage permissions required) and backed up on Data Storage.
+- All dashboard reports and CSV reports are sent to the users email for download (no storage permissions required) and backed up on Data Storage.
 
 {% multi_lang_include alerts/important_alerts.md alert='S3 file bucket export' %}
 
 ## Multiple connectors
 
-If you intend to create more than one Currents connector to send to your S3 bucket, you will be able to use the same credentials, but must specify a different folder path for each. These can be created in the same workspace, or split and created within multiple workspaces. You also have the option of creating a single policy for each integration, or create one policy that covers both integrations. 
+If you intend to create more than one Currents connector to send to your S3 bucket, you are able to use the same credentials, but must specify a different folder path for each. These can be created in the same workspace, or split and created within multiple workspaces. You also have the option of creating a single policy for each integration, or create one policy that covers both integrations. 
 
-If you plan on using the same S3 bucket for both Currents and data exports, you will need to create two separate policies as each integration requires different permissions.
+If you plan on using the same S3 bucket for both Currents and data exports, you must create two separate policies as each integration requires different permissions.
 
 

@@ -11,7 +11,7 @@ tool:
 
 # Targeting users
 
-> Determining how to target your users is one of the most crucial steps when creating a campaign or Canvas. By understanding how to segment your audience based on their behaviors, preferences and demographics, you can tailor and personalize your messaging.
+> Determining how to target your users are one of the most crucial steps when creating a campaign or Canvas. By understanding how to segment your audience based on their behaviors, preferences and demographics, you can tailor and personalize your messaging.
 
 ## Creating a target audience
 

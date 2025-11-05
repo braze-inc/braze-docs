@@ -45,7 +45,7 @@ To create a segment of these users, do the following:
 4. From here, choose the ActionIQ custom attribute. 
 5. After the segment is created, you can select it as an audience filter when creating a campaign or Canvas.
 
-Additionally, this integration will update any custom or standard attribute in a Braze user profile with their ActionIQ attribute values.
+Additionally, this integration updates any custom or standard attribute in a Braze user profile with their ActionIQ attribute values.
 
 #### Requirements
 

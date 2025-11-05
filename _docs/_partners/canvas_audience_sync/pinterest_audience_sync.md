@@ -56,7 +56,7 @@ When successfully connected, you'll return to the partner page, where you can vi
 
 ![An updated version of the Pinterest technology partners page showing the ad accounts successfully connected.]({% image_buster /assets/img/pinterest/pinterest3.png %}){: style="max-width:80%;"}
 
-Your Pinterest connection will be applied at the Braze workspace level. If your Pinterest admin removes you from your Pinterest Business Hub or access to the connected Pinterest accounts, Braze will detect an invalid token. As a result, your active Canvases using Pinterest Audience components will show errors, and Braze will not be able to sync users.
+Your Pinterest connection is applied at the Braze workspace level. If your Pinterest admin removes you from your Pinterest Business Hub or access to the connected Pinterest accounts, Braze will detect an invalid token. As a result, your active Canvases using Pinterest Audience components will show errors, and Braze will not be able to sync users.
 
 ### Step 2: Add an Audience Sync Step with Pinterest
 
@@ -82,7 +82,7 @@ Enter a name for the new audience, select **Add Users to Audience**, and select 
 
 ![Expanded view of the Custom Audience Canvas step. Here, the desired Ad account is selected, and a new audience is created.]({% image_buster /assets/img/audience_sync/pinterest_sync.png %})
 
-Users will be notified at the top of the step editor if the audience is created successfully or if errors arise during this process. Users can also reference this audience for user removal later in the Canvas journey because the audience was created in draft mode.
+Users are notified at the top of the step editor if the audience is created successfully or if errors arise during this process. Users can also reference this audience for user removal later in the Canvas journey because the audience was created in draft mode.
 
 ![An alert that appears after a new audience is created in the Canvas component.]({% image_buster /assets/img/audience_sync/pinterest_sync3.png %})
 
@@ -99,7 +99,7 @@ Braze also offers the ability to add users to existing Pinterest audiences to en
 
 ### Step 4: Launch Canvas
 
-Once you have configured your Audience Sync to Pinterest, launch the Canvas! The new audience will be created, and users who flow through the Audience Sync step will be passed into this audience on Pinterest. If your Canvas contains subsequent components, your users will advance to the next step in their user journey.
+Once you have configured your Audience Sync to Pinterest, launch the Canvas! The new audience is created, and users who flow through the Audience Sync step is passed into this audience on Pinterest. If your Canvas contains subsequent components, your users will advance to the next step in their user journey.
 
 You can view the audience on Pinterest by entering your ads manager account and selecting Audiences from the Ads dropdown. From the Audience page, you can see the size of each audience after it reaches ~100.
 
@@ -127,14 +127,14 @@ The following table includes metrics and descriptions to help you better underst
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert important %}
-Remember that there will be a delay in reporting for synced users and errored metrics due to the bulk flusher and the 13-hour retry, respectively.
+Remember that there is a delay in reporting for synced users and errored metrics due to the bulk flusher and the 13-hour retry, respectively.
 {% endalert %}   
 
 ## Frequently asked questions
 
 ### How long will it take for my audiences to populate in Pinterest?
 
-The audience size will update within 24-48 hours on the **Audiences** page in Pinterest's Ads Manager.
+The audience size updates within 24-48 hours on the **Audiences** page in Pinterest's Ads Manager.
 
 ### How do I know if users have matched after passing users to Pinterest?
 

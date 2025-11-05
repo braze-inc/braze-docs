@@ -26,9 +26,9 @@ If you don't already have the Braze SDK implemented in your web channel, you can
 
 ### Celebrus connector for Braze SDK
 
-The Celebrus connector for Braze SDK provides high-level web and mobile app channel data for Braze. In the Braze SDK, the Celebrus `System Identity` from the Celebrus identity graph will be used as the identifier for Braze integration. Other identifiers are supported for syncing custom attributes via the Braze Custom Attributes Celebrus connector.
+The Celebrus connector for Braze SDK provides high-level web and mobile app channel data for Braze. In the Braze SDK, the Celebrus `System Identity` from the Celebrus identity graph is used as the identifier for Braze integration. Other identifiers are supported for syncing custom attributes via the Braze Custom Attributes Celebrus connector.
 
-The connector deploys and configures the Braze SDK in your channel, so you will need to configure some settings in the Braze SDK data stream and provide the values for these three settings:
+The connector deploys and configures the Braze SDK in your channel, so you must configure some settings in the Braze SDK data stream and provide the values for these three settings:
 
 ```
     response.addParameter("sdk_endpoint", "sdk.xxxxxx.braze.com");
@@ -54,7 +54,7 @@ This integration uses Braze Cloud Data Ingestion. Follow the instructions in [Da
 
 Celebrus captures and assigns unique identifiers to an individual such as email, phone, `external_id`or user alias and sends to Braze via CDI. This allows data to be synced to Braze for the same individual.
 
-Celebrus will use the defined identifiers to send the customer attributes that are defined in the Celebrus profile builder, but only when attribute values change. Note that the attribute names defined in the Celebrus profile builder will be used in Braze by default. So be sure you update these names to adhere to [Braze naming conventions]({{site.baseurl}}/api/objects_filters/user_attributes_object/).
+Celebrus will use the defined identifiers to send the customer attributes that are defined in the Celebrus profile builder, but only when attribute values change. Note that the attribute names defined in the Celebrus profile builder is used in Braze by default. So be sure you update these names to adhere to [Braze naming conventions]({{site.baseurl}}/api/objects_filters/user_attributes_object/).
 
 {% alert important %}
 For now, this release doesn't support events and purchases.<br><br> This integration sends attributes as string values, so some attributes are lists (such as signals). For now, lists can't be converted to arrays. There are no nested attributes.

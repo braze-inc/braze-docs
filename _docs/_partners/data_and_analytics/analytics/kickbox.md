@@ -9,11 +9,11 @@ search_tag: Partner
 
 # Kickbox
 
-> [Kickbox](https://kickbox.com/) is an all-in-one email verification platform, packed with the features, integrations, and security you need to keep your email data clean and deliverable. The Kickbox integration improves the deliverability of your Braze campaigns by using Kickbox email verification to identify undeliverable and low quality email addresses before you hit send.
+> [Kickbox](https://kickbox.com/) is an all-in-one email verification platform, packed with the features, integrations, and security you must keep your email data clean and deliverable. The Kickbox integration improves the deliverability of your Braze campaigns by using Kickbox email verification to identify undeliverable and low quality email addresses before you hit send.
 
 Kickbox allows you to validate the quality of your users' email addresses at the moment a user profile is updated in Braze. This is achieved by a dedicated Canvas or campaign workflow, which is triggered by the population of a profile's `email` field.
 
-The Canvas or campaign will send a webhook to Kickbox, sharing the user's email address. Kickbox will validate the email address and use the Braze REST API endpoint to update the user profile with a custom attribute detailing its quality.
+The Canvas or campaign sends a webhook to Kickbox, sharing the user's email address. Kickbox will validate the email address and use the Braze REST API endpoint to update the user profile with a custom attribute detailing its quality.
 
 ## Prerequisites
 

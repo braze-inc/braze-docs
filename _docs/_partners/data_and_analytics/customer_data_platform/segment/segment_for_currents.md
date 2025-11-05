@@ -22,17 +22,17 @@ The Braze and Segment integration allows you to leverage Braze Currents to expor
 | ----------- | ----------- |
 | Segment account | A [Segment account](https://app.segment.com/login) is required to take advantage of this partnership. |
 | Braze destination | You must have already [set up Braze as a destination]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment/#connection-settings/) in your Segment integration.<br><br>This includes providing the correct Braze data center and REST API key in your [connection settings]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment/#connection-settings). |
-| Currents | In order to export data back into Segment, you need to have [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) set up for your account. |
+| Currents | In order to export data back into Segment, you must have [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) set up for your account. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration
 
 ### Step 1: Obtain Segment write key
 
-In your Segment dashboard, select your Segment source. Next, go to **Settings > API keys**. Here you will find the **Segment Write Key**.
+In your Segment dashboard, select your Segment source. Next, go to **Settings > API keys**. Here you find the **Segment Write Key**.
 
 {% alert warning %}
-It's important to keep your Segment write key up to date. If your connector's credentials expire, the connector will stop sending events. If this persists for more than **5 days**, the connector's events will be dropped, and data will be permanently lost.
+It's important to keep your Segment write key up to date. If your connector's credentials expire, the connector will stop sending events. If this persists for more than **5 days**, the connector's events are dropped, and data is permanently lost.
 {% endalert %}
 
 ### Step 2: Create a new Currents connector

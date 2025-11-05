@@ -20,16 +20,16 @@ The Facebook Messenger platform is intended for "non-promotional messages that f
 
 Acknowledge the following before proceeding with integration:
 - Facebook does not allow the usage of the Messenger platform to send marketing messages. 
-- You will need the user's explicit permission for messages from your page. 
+- You need the user's explicit permission for messages from your page. 
 - To send messages to users who are not test users of your Facebook App, your app will need to pass Facebook's [app review](https://developers.facebook.com/docs/messenger-platform/app-review).<br><br>
 
 | Requirement| Origin| Access| Description|
 | ---| ---| ---|
-| Facebook Messenger page| Facebook| [https://www.facebook.com/pages/create](https://www.facebook.com/pages/create) | A Facebook page will be used as the identity of your bot. When people chat with your app, they will see the page name and profile picture.|
+| Facebook Messenger page| Facebook| [https://www.facebook.com/pages/create](https://www.facebook.com/pages/create) | A Facebook page is used as the identity of your bot. When people chat with your app, they will see the page name and profile picture.|
 | Facebook Messenger app| Facebook| [https://developers.facebook.com/apps](https://developers.facebook.com/apps) | The Facebook app contains the settings for your Messenger bot, including access tokens.
 | App bot review and approval | Facebook | [https://developers.facebook.com/docs/messenger-platform/app-review](https://developers.facebook.com/docs/messenger-platform/app-review) | When you are ready to release your bot to the public, you must submit it to Facebook for review and approval. This review process allows us to ensure your Messenger bot abides by our policies and functions as expected before making it available to everyone on Messenger. |
-| Page-scope IDs (PSIDs) | Facebook | [https://developers.facebook.com/docs/messenger-platform/reference/webhook-events/messages](https://developers.facebook.com/docs/messenger-platform/reference/webhook-events/messages) | You need to have users PSIDs to send messages on Facebook Messenger. When a user interacts with your app via Messenger, Facebook will create a PSID. This PSID can be sent to Braze as a string custom attribute.
-| Page access token | Facebook | [https://developers.facebook.com/docs/messenger-platform/getting-started/app-setup#page_access_token](https://developers.facebook.com/docs/messenger-platform/getting-started/app-setup#page_access_token) | These access tokens are similar to user access tokens, except that they provide permission to APIs that read, write or modify the data belonging to a Facebook Page. To obtain a page access token, you need to obtain a user access token and ask for the `manage_pagespermission`. After you have the user access token, you then get the page access token via the Graph API.|
+| Page-scope IDs (PSIDs) | Facebook | [https://developers.facebook.com/docs/messenger-platform/reference/webhook-events/messages](https://developers.facebook.com/docs/messenger-platform/reference/webhook-events/messages) | You must have users PSIDs to send messages on Facebook Messenger. When a user interacts with your app via Messenger, Facebook will create a PSID. This PSID can be sent to Braze as a string custom attribute.
+| Page access token | Facebook | [https://developers.facebook.com/docs/messenger-platform/getting-started/app-setup#page_access_token](https://developers.facebook.com/docs/messenger-platform/getting-started/app-setup#page_access_token) | These access tokens are similar to user access tokens, except that they provide permission to APIs that read, write or modify the data belonging to a Facebook Page. To obtain a page access token, you must obtain a user access token and ask for the `manage_pagespermission`. After you have the user access token, you then get the page access token via the Graph API.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Integration
@@ -39,9 +39,9 @@ For those who require additional help getting your bot set up, a full Messenger 
 
 ### Step 1: Collect your PSIDs
 
-To send messages on Facebook Messenger, you need to collect your users' page-specific IDs (PSIDs) to identify your user and interact with them consistently. PSIDs are not the same as the user's Facebook ID. Facebook creates this identifier any time you message a customer or when a customer messages you.
+To send messages on Facebook Messenger, you must collect your users' page-specific IDs (PSIDs) to identify your user and interact with them consistently. PSIDs are not the same as the user's Facebook ID. Facebook creates this identifier any time you message a customer or when a customer messages you.
 
-PSIDs can be found using one of the various [entry points](https://developers.facebook.com/docs/messenger-platform/discovery) Facebook offers. After the user messages your app or takes an action in a conversation, such as tapping a button or sending a message, their PSID will be included in the `sender.id` property of the webhook event, so your bot can identify who took the action.
+PSIDs can be found using one of the various [entry points](https://developers.facebook.com/docs/messenger-platform/discovery) Facebook offers. After the user messages your app or takes an action in a conversation, such as tapping a button or sending a message, their PSID is included in the `sender.id` property of the webhook event, so your bot can identify who took the action.
 
 ```
 {
@@ -62,7 +62,7 @@ PSIDs can be found using one of the various [entry points](https://developers.fa
 }
 ```
 
-Whenever you send a message, their PSID will be included in the `recipient.id` property of the request to identify who should receive the message.
+Whenever you send a message, their PSID is included in the `recipient.id` property of the request to identify who should receive the message.
 
 ### Step 2: Send to Braze as a custom attribute
 

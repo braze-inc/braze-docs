@@ -84,7 +84,7 @@ To accomplish this, Braze sends the blocklisting information down to each device
 
 ### Considerations for blocklisting
 
-Blocklisting a high number of events and attributes is possible, but not advisable. This is because each time an event is performed or an attribute is (potentially) sent up to Braze, this event or attribute has to be checked against the entire blocklist.
+Blocklisting a high number of events and attributes are possible, but not advisable. This is because each time an event is performed or an attribute is (potentially) sent up to Braze, this event or attribute has to be checked against the entire blocklist.
 
 Up to 300 items are sent to the SDK for blocklisting. If you blocklist more than 300 items, this data will be sent from the SDK. If you do not need to use the event or attribute in the future, consider removing it from your app code during your next release. Changes to the blocklist may take a few minutes to propagate. You can re-enable any blocklist event or attribute at any time.
 

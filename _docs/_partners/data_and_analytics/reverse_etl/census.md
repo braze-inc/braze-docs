@@ -36,17 +36,17 @@ In the prompt that appears, name this connection, and provide your Braze endpoin
 
 ### Step 2: Create a Census sync
 
-To sync customers to Braze, you must build a sync. Here, you will define where to sync data and how you would like fields mapped across the two platforms.
+To sync customers to Braze, you must build a sync. Here, you define where to sync data and how you would like fields mapped across the two platforms.
 
 1. Navigate to the **Syncs** tab and select **New Sync**.<br><br> 
 2. In the composer, select the source data model from your data warehouse.<br><br>
-3. Configure where the model will be synced to. Select **Braze** as the destination and the [supported object type](#supported-objects) to sync.<br>![In the "Select a Destination" prompt, "Braze" is selected as the connection, and various objects are listed.]({% image_buster /assets/img/census/census_2.png %}){: style="max-width:80%;"}<br><br>
+3. Configure where the model is synced to. Select **Braze** as the destination and the [supported object type](#supported-objects) to sync.<br>![In the "Select a Destination" prompt, "Braze" is selected as the connection, and various objects are listed.]({% image_buster /assets/img/census/census_2.png %}){: style="max-width:80%;"}<br><br>
 4. Select what synchronization rule you want to apply (**Update or Create** is the most common choice, but you can choose more advanced rules to handle deleting data, for example).<br><br>
 5. Next, for record matching purposes, choose a sync key to [map](#supported-objects) your Braze object to a model field.<br>![In the "Select a Sync Key" prompt, "External User ID" from Braze is matched to "user_id" in the source.]({% image_buster /assets/img/census/census_1.png %}){: style="max-width:80%;"}<br><br>
 6. Lastly, map the Census data fields to the equivalent Braze fields.<br>![Census mapping]({% image_buster /assets/img/census/census_3.png %}){: style="max-width:80%;"}<br><br>
 7. Confirm details and create the sync. 
 
-After the sync runs, you will find the user data in Braze. You can now create and add a Braze segment to future Braze campaigns and Canvases to target these users. 
+After the sync runs, you find the user data in Braze. You can now create and add a Braze segment to future Braze campaigns and Canvases to target these users. 
 
 {% alert note %}
 When using the Census and Braze integration, Census will only send the deltas (changing data) on each sync to Braze. 

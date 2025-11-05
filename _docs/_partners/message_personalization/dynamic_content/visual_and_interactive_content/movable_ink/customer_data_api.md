@@ -10,7 +10,7 @@ search_tag: Partner
 
 > Braze and Movable Ink’s Customer Data API integration allows marketers to activate customer event data stored in Braze to generate personalized content within Movable Ink.
 
-Movable Ink is able to ingest behavioral events from Braze through their Customer Data API. The events will be stored on the user profiles based on the unique user ID (UUID) that is passed to Movable Ink.
+Movable Ink is able to ingest behavioral events from Braze through their Customer Data API. The events are stored on the user profiles based on the unique user ID (UUID) that is passed to Movable Ink.
 
 For more information on Stories, the Movable Ink Customer Data API, and how Movable Ink leverages behavioral data, please visit the following support center articles:
 
@@ -23,9 +23,9 @@ For more information on Stories, the Movable Ink Customer Data API, and how Mova
 | Requirement | Description |
 |---|---|
 | Movable Ink account | A Movable Ink account is required to take advantage of this partnership. |
-| Movable Ink API credentials | Movable Ink's Solutions team will generate API credentials for you. The API credentials consist of:{::nomarkdown}<ul><li>An endpoint URL (where the data will be sent to)</li><li>Username and password (used to authenticate the API)</li></ul>{:/} If desired, Movable Ink can supply the username and password as a base64-encoded value to be used as a basic authorization header value. |
-| Behavioral event payloads | You will need to share your event payloads with your Movable Ink Client Experience team. See [Sharing event payloads](#event-payloads) with Movable Ink for details. |
-| Creative assets and business logic | You will need to share creative assets with Movable Ink, including Adobe Photoshop (PSD) files directing Movable Ink on how to build the block and a fallback image. You will also need to provide business logic for how and when to display the partner-activated Content Block. |
+| Movable Ink API credentials | Movable Ink's Solutions team will generate API credentials for you. The API credentials consist of:{::nomarkdown}<ul><li>An endpoint URL (where the data is sent to)</li><li>Username and password (used to authenticate the API)</li></ul>{:/} If desired, Movable Ink can supply the username and password as a base64-encoded value to be used as a basic authorization header value. |
+| Behavioral event payloads | You must share your event payloads with your Movable Ink Client Experience team. See [Sharing event payloads](#event-payloads) with Movable Ink for details. |
+| Creative assets and business logic | You must share creative assets with Movable Ink, including Adobe Photoshop (PSD) files directing Movable Ink on how to build the block and a fallback image. You also need to provide business logic for how and when to display the partner-activated Content Block. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration
@@ -65,10 +65,10 @@ For more information on Stories, the Movable Ink Customer Data API, and how Mova
 
 #### Step 1d: Test your webhook {#step-1d}
 
-You will need to share a sample payload with your Movable Ink Client Experience team. You can generate this payload in the **Test** tab based on the payload that you have constructed.
+You must share a sample payload with your Movable Ink Client Experience team. You can generate this payload in the **Test** tab based on the payload that you have constructed.
 
 {% alert important %}
-Movable Ink recommends waiting to test your webhook in Braze until your Movable Ink Client Experience team has confirmed that they have completed the mapping and are ready to receive a test. If this mapping is not complete, you will likely receive an error when testing.
+Movable Ink recommends waiting to test your webhook in Braze until your Movable Ink Client Experience team has confirmed that they have completed the mapping and are ready to receive a test. If this mapping is not complete, you likely receive an error when testing.
 {% endalert %}
 
 To test your webhook, do the following:

@@ -75,8 +75,8 @@ The following table lists the required tag parameters you must include in your B
 | Parameter | Description |
 | --------- | ----------- |
 | Braze REST API endpoint | Set this to the URL of your Braze REST [endpoint]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). |
-| Braze API key | Set this to your Braze [API key]({{site.baseurl}}/developer_guide/rest_api/basics/#app-group-rest-api-keys) that will be included in each request. |
-| Braze `external_id` | Set this key to the client event property that corresponds to your users' `external_id` and will be used as the [Braze user identifier]({{site.baseurl}}/developer_guide/rest_api/basics/#external-user-id-explanation). |
+| Braze API key | Set this to your Braze [API key]({{site.baseurl}}/developer_guide/rest_api/basics/#app-group-rest-api-keys) that is included in each request. |
+| Braze `external_id` | Set this key to the client event property that corresponds to your users' `external_id` and is used as the [Braze user identifier]({{site.baseurl}}/developer_guide/rest_api/basics/#external-user-id-explanation). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Event mapping
@@ -85,7 +85,7 @@ The following table lists event mapping options concerning the Snowplow event as
 
 | Mapping option | Description |
 | --------- | ----------- |
-| Include self describing event | Turned on by default. Indicates if the Snowplow self-describing event data will be included in the event's properties objects sent to Braze. |
+| Include self describing event | Turned on by default. Indicates if the Snowplow self-describing event data is included in the event's properties objects sent to Braze. |
 | Snowplow event context rules | Describes how the Braze tag will use the context entities attached to a Snowplow event. |
 | Extract entity from array if single element | Snowplow entities are always in arrays, as multiple of the same entity can be attached to an event. This option will pick the single element from the array if the array only contains a single element. |
 | Include all entities in the event object | Turned on by default. Includes all entities on an event within the Braze event's properties object. Disable this option to select individual entities for inclusion. |
@@ -116,7 +116,7 @@ The entity can be specified in two different formats:
 
 | Entity mapping option | Description |
 | --------- | ----------- |
-| Include unmapped entities in event | When remapping or moving some entities to user attributes with the preceding customization, this option enables you to ensure that all unmapped entities (such as any entities not found in the [event property rules](#event-property-rules)) will be included in the properties object of the Braze event. |
+| Include unmapped entities in event | When remapping or moving some entities to user attributes with the preceding customization, this option enables you to ensure that all unmapped entities (such as any entities not found in the [event property rules](#event-property-rules)) is included in the properties object of the Braze event. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 

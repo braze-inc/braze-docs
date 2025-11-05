@@ -57,5 +57,5 @@ To send data to a destination, click the **Send to Destination** arrow on the da
 
 ## Using this integration
 
-Once the flow is set up, nothing more is required. Nexla will handle any changes in the source data, scale to any new data, and notify you of any schema changes or errors for triage. If you'd like to make changes to transformations, the source, or the destination, you can click into these options and make the change, and Nexla will update the flow instantly.
+Once the flow is set up, nothing more is required. Nexla will handle any changes in the source data, scale to any new data, and notify you of any schema changes or errors for triage. If you'd like to make changes to transformations, the source, or the destination, you can click into these options and make the change, and Nexla updates the flow instantly.
 

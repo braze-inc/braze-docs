@@ -27,7 +27,7 @@ The following table lays out the parameters you can use in your calls to the use
 | `get_amp_props` | Optional<br>(Defaults to false) | Return a full set of user properties for this user, not including computations. |
 | `get_cohort_ids` | Optional<br>(Defaults to false) | Return a list of all of the cohort IDs that this user is a part of that have been set up to be tracked. By default cohort membership is not tracked for users for any cohort. |
 | `get_computations` | Optional<br>(Defaults to false) | Return a list of all of the computations that are enabled for this user. |
-| `comp_id` | Optional | Return a single computation that might be enabled for this user. It will return a null value if it does not exist. If `get_computations` is true, all values will be fetched, including this one (unless it is archived or deleted).|
+| `comp_id` | Optional | Return a single computation that might be enabled for this user. It will return a null value if it does not exist. If `get_computations` is true, all values is fetched, including this one (unless it is archived or deleted).|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 The following table covers the parameters you can most typically expect to see in Amplitude's responses.
@@ -35,7 +35,7 @@ The following table covers the parameters you can most typically expect to see i
 | Response Parameter | Description |
 | ------------------ | ----------- |
 | `rec_id` | The recommendation id that was requested. |
-| `child_rec_id` | A more detailed recommendation id that Amplitude may use on the backend as part of an internal experiment to improve model performance. In most cases, this will be the same as `rec_id`. |
+| `child_rec_id` | A more detailed recommendation id that Amplitude may use on the backend as part of an internal experiment to improve model performance. In most cases, this is the same as `rec_id`. |
 | `items` | List of recommendations for this user. |
 | `is_control` | true if this user is part of the control group. |
 | `recommendation_source` | Name of the model that was used to generate this recommendation |

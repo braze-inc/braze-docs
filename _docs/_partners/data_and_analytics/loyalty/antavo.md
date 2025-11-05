@@ -51,7 +51,7 @@ To configure field mapping in Antavo:
 
 1. Click **Add new field** <i class="fas fa-plus" alt=""></i>.
 2. Use the dropdown field to select the Antavo **Loyalty field** that you want to synchronize to Braze.
-3. Enter the **Remote field** that represents the equivalent custom attribute in Braze to which the data will be populated.  
+3. Enter the **Remote field** that represents the equivalent custom attribute in Braze to which the data is populated.  
 
 {% alert note %}
 You can find your list of custom attributes in Braze under **Data Settings** > **Custom Attributes**. If the field you enter is not defined in Braze, a new field will automatically be generated with the first sync.
@@ -67,7 +67,7 @@ When any value of the configured fields changes in Antavo, not only the synchron
 ![Sync Fields page in Antavo.]({% image_buster /assets/img/antavo/data_field_mapping.png %})
 
 {% alert important %}
-To minimize data point usage, we recommend only mapping the fields that will be actioned on within Braze.
+To minimize data point usage, we recommend only mapping the fields that is actioned on within Braze.
 {% endalert %}
 
 #### Supported data types

@@ -226,7 +226,7 @@ To set up reporting webhooks:
 #### Updating an endpoint
 When you edit an endpoint, it can take up to 5 minutes for the cache to refresh and send events to your new endpoint instead.
 #### Retries
-Currently, there are no retries on these events. If a response is not received within 5 seconds, the event is dropped and not retried. Regal will be adding retries in a future release.
+Currently, there are no retries on these events. If a response is not received within 5 seconds, the event is dropped and not retried. Regal is adding retries in a future release.
 #### Events
 Regal's [Reporting Webhooks guide](https://developer.regal.io/docs/reporting-webhooks#events) includes the complete list of Reporting events they publish. There you can see definitions of properties and sample payloads as well.
 
@@ -238,14 +238,14 @@ The Braze [Data Transformation]({{site.baseurl}}/data_transformation) feature al
 
 2. To test the connection, create an outbound call from the Regal Agent Desktop to your cell phone and submit the Conversation Summary form to create a call.completed event.
 
-3. Determine what identifiers you will use to map your Regal contacts to your Braze profiles. The available identifiers in Regal events include:
+3. Determine what identifiers you use to map your Regal contacts to your Braze profiles. The available identifiers in Regal events include:
    - `userId` - only set on events if you've previously sent this identifier for a contact
    - `traits.phone`
    - `traits.email` - only set on events if you've previously sent this identifier for a contact
 
 #### Braze-supported identifiers
 - Braze does not support phone numbers as an identifier. To use this as an identifier, the phone number can be set as a [user alias]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases) in Braze.
-- When using Braze Data Transformation email address can be used as an identifier. If the email address exists as a profile within Braze, the existing profile will be updated. If the email address does not yet exist within Braze, an email-only profile will be created.
+- When using Braze Data Transformation email address can be used as an identifier. If the email address exists as a profile within Braze, the existing profile is updated. If the email address does not yet exist within Braze, an email-only profile is created.
 
 ## Use cases
 

@@ -72,7 +72,7 @@ Next, create your personalized in-app message by adding custom fonts and using L
 
 ### Step 3: Export the template
 
-Once all editing has been completed, export the template by clicking **Export**. After exporting, the in-app message HTML code will be generated. Copy this code by clicking the **Copy code** button. 
+Once all editing has been completed, export the template by clicking **Export**. After exporting, the in-app message HTML code is generated. Copy this code by clicking the **Copy code** button. 
 
 ![]({% image_buster /assets/img/iam_studio/export_iam_code.png %}){: style="max-width:45%;"}
 

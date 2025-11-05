@@ -51,7 +51,7 @@ The Braze and Sendbird Notifications integration offers a range of use cases to 
 
 ### Step 2: Set up the Braze integration on Sendbird dashboard
 
-From **Sendbird Dashboard**, select your application, navigate to **Notifications > Integrations**, and click **Add** under the **Braze** section. Here, you will need your Braze REST API key and Braze REST endpoint.
+From **Sendbird Dashboard**, select your application, navigate to **Notifications > Integrations**, and click **Add** under the **Braze** section. Here, you need your Braze REST API key and Braze REST endpoint.
 
 Once you have provided all fields, click **Save** to complete the integration and access the integration endpoints and API token.
 
@@ -108,7 +108,7 @@ To integrate the notifications' delivery and open status event with a campaignâ€
 2. After youâ€™ve created a custom event, click **Manage Properties**, add a property named "status", and choose "String" as the property type.
 3. When you compose a notification in campaigns or Canvases, enter the name of the custom event into the **Event Name** field.
 
-This custom event will be triggered twice for each notification, when a message is sent and when a user opens the message.
+This custom event is triggered twice for each notification, when a message is sent and when a user opens the message.
 - When a message is sent, a custom event is triggered with `SENT` status.
 - When a message is read, a custom event is triggered with `READ` status.
 

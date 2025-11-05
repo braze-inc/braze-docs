@@ -43,7 +43,7 @@ Stylitics provides bundle data for this integration. Your email service provider
 2. ESP updates trigger email code to include Stylitics content.
 3. ESP will test, preview and launch the updates triggered series. 
 
-Stylitics will only be providing the bundle data for the items. Between you and your ESP, you will have user data and can plug in Stylitics bundle data to send to the users.
+Stylitics provides only the bundle data for the items. Between you and your ESP, you have user data and can plug in Stylitics bundle data to send to the users.
 
 ## Data exchange
 

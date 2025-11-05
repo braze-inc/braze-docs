@@ -51,7 +51,7 @@ To protect your API keys, Swym recommends that you share credentials securely us
 
 3. After the API key and instance URL are shared with the Swym support team, they will set up the integration for you and respond with a confirmation.
 
-4. After setup is completed, the custom events from Swym will be automatically registered in Braze. You can view the list of registered Swym events in the Braze dashboard by going to **Data Settings** > **Custom Events**. 
+4. After setup is completed, the custom events from Swym is automatically registered in Braze. You can view the list of registered Swym events in the Braze dashboard by going to **Data Settings** > **Custom Events**. 
 
 5. View the properties of each Swym event by selecting **Manage Properties** for the corresponding custom event. These properties contain the event values that can be used to personalize your messages.
 

@@ -25,7 +25,7 @@ The Braze and Clarisights integration allows you to import data from Braze campa
 | Clarisights account | A Clarisights workspace is required to take advantage of this partnership |
 | Braze REST API key | A Braze REST API key with the following permissions:  <br> - `campaigns.list` <br>  - `campaigns.details`<br> - `campaigns.data_series` <br> - `canvas.details`<br> - `canvas.list` <br>  - `canvas.data_series` <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | Braze REST endpoint | [Your REST endpoint URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). Your endpoint will depend on the Braze URL for your instance. |
-| Braze workspace name | The name of the workspace associated with the Braze API key. This name will be used to identify the workspace integration on Clarisights. |
+| Braze workspace name | The name of the workspace associated with the Braze API key. This name is used to identify the workspace integration on Clarisights. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Use cases
@@ -55,13 +55,13 @@ Unified dashboards for CMOs and CXOs.
 To sync Braze data to Clarisights, you must build a Braze connector and connect Braze workspaces.
 
 1. In Clarisights, navigate to the **Integrations** page, locate the **Braze** connector, and select **+ Connect**.<br>![A list of available connectors from the Clarisights integrations marketplace.]({{site.baseurl}}/assets/img/clarisights/integrations.png)<br><br>
-2. Next, using the integration flow, connect your Clarisights account to Braze. This can be done by providing your Braze REST API key, Braze workspace name, and Braze REST endpoint.<br>![Braze workspace connector in the Clarisights platform. This page has fields for Braze workspace name, Braze REST API key, and Braze REST endpoint.]({{site.baseurl}}/assets/img/clarisights/braze_flow.png)<br><br>Before successful integration, users will see the connected workspaces on the same page.<br>![Within "Braze Accounts" you will find a list of connected workspaces.]({{site.baseurl}}/assets/img/clarisights/connected.png)<br><br>
+2. Next, using the integration flow, connect your Clarisights account to Braze. This can be done by providing your Braze REST API key, Braze workspace name, and Braze REST endpoint.<br>![Braze workspace connector in the Clarisights platform. This page has fields for Braze workspace name, Braze REST API key, and Braze REST endpoint.]({{site.baseurl}}/assets/img/clarisights/braze_flow.png)<br><br>Before successful integration, users will see the connected workspaces on the same page.<br>![Within "Braze Accounts" you find a list of connected workspaces.]({{site.baseurl}}/assets/img/clarisights/connected.png)<br><br>
 
 ## Using this integration
 
 To include Braze as a data source in your Clarisights reports, navigate to **Create New Report**. Name your report and select **Braze** as a data source in the prompt that appears. You can also choose the metrics and dimensions to include in the report. When completed, select **Create Report**. 
 
-The data from Braze will start flowing from the time of the next scheduled data import. Reach out to your Clarisights customer success manager to request backfills for longer durations. 
+The data from Braze starts flowing from the time of the next scheduled data import. Reach out to your Clarisights customer success manager to request backfills for longer durations. 
 
 ![Clarisight report settings showing fields for name and data source. For this example, "Braze" is selected as the data source.]({{site.baseurl}}/assets/img/clarisights/braze_report.png)
 

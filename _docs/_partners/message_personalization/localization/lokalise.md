@@ -28,15 +28,15 @@ The Braze and Lokalise integration leverages Connected Content to allow you to e
 
 ### Create a new Lokalise project
 
-To create a new translation project, log in to Lokalise and select **New Project**. Next, name your project, choose a **Base Language** (the language you will translate from), add one or more **Target Languages**, and choose **Software Localization** project type. When you are ready, click **Proceed**.
+To create a new translation project, log in to Lokalise and select **New Project**. Next, name your project, choose a **Base Language** (the language you translate from), add one or more **Target Languages**, and choose **Software Localization** project type. When you are ready, click **Proceed**.
 
 ## Integration
 
-In Lokalise, you will create a translation key for each of the Connected Content variables you define in Braze. When the translations are ready, you can generate one JSON file per language and publish it on the URLs that will serve your Connected Content.
+In Lokalise, you create a translation key for each of the Connected Content variables you define in Braze. When the translations are ready, you can generate one JSON file per language and publish it on the URLs that will serve your Connected Content.
 
 ### Step 1: Configuring user languages
 
-If you haven't done so already, open the Braze dashboard and proceed to **Users > User import**. Here, you can import your users. When preparing a CSV file for importing, make sure to include a language column with users' languages. This language field will be used later when displaying translations. 
+If you haven't done so already, open the Braze dashboard and proceed to **Users > User import**. Here, you can import your users. When preparing a CSV file for importing, make sure to include a language column with users' languages. This language field is used later when displaying translations. 
 
 {% alert important %}
 Language codes used must match across both Braze and Lokalise.
@@ -64,7 +64,7 @@ Your translation key should appear in the project editor:
 
 ### Step 3: Configuring the Braze app on Lokalise
 
-Open your Lokalise project, and click **Apps**. Here, search and install the Braze app. You will see the following screen:
+Open your Lokalise project, and click **Apps**. Here, search and install the Braze app. You see the following screen:
 
 ![Braze configuration on Lokalise listing the project ID and the translation files URL.]({% image_buster /assets/img/lokalise/3_lokalise_braze_app.png %})
 
@@ -73,11 +73,11 @@ In the **Translation File URL**, Lokalise publishes a JSON file containing all t
 1. The first part of the URL path is common to all languages.
 2. The JSON file name at the end of the URL is based on the language code.
 
-The translation file URL is the URL that you will need when configuring a Braze campaign. You can update the content on the JSON file by clicking **Refresh**. Note that the URL will stay the same, and you won't need to change your Connected Content call in Braze.
+The translation file URL is the URL that you need when configuring a Braze campaign. You can update the content on the JSON file by clicking **Refresh**. Note that the URL will stay the same, and you won't need to change your Connected Content call in Braze.
 
 ### Test URL
 
-To test this URL, copy it and replace {% raw %}`{{${language}}}`{% endraw %} with a language code (for example, `en`) and open this URL in your browser. You will see a JSON file with your keys and translations:
+To test this URL, copy it and replace {% raw %}`{{${language}}}`{% endraw %} with a language code (for example, `en`) and open this URL in your browser. You see a JSON file with your keys and translations:
 
 ![]({% image_buster /assets/img/lokalise/4_testing_json_lokalise.png %})
 
@@ -87,7 +87,7 @@ To test this URL, copy it and replace {% raw %}`{{${language}}}`{% endraw %} wit
 
 When ready, return to Braze and open an existing campaign or create a new one. We'll create a new email campaign with sample content for this example. Click **Edit Email Body**.
 
-To insert your translations, you need to add the Connected Content request in the HTML, either at the top of the document or right before the first place where a translation is needed. This can be done by inserting the following markup:
+To insert your translations, you must add the Connected Content request in the HTML, either at the top of the document or right before the first place where a translation is needed. This can be done by inserting the following markup:
 
 {% raw %}
 `{% connected_content https://exports.live.lokalise.cloud/braze/123abc/456xyz/{{${language}}}.json :save translations %}`

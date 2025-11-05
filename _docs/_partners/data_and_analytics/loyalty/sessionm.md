@@ -227,7 +227,7 @@ Create an API-triggered campaign or Canvas in Braze to be triggered by SessionM.
 
 ![API trigger properties.]({% image_buster /assets/img/sessionm/apiTriggerProperties.png %})
 
-In the **Schedule Delivery** tab, note down the campaign or Canvas ID as this will be added to SessionM campaign **Advanced Settings**.
+In the **Schedule Delivery** tab, note down the campaign or Canvas ID as this is added to SessionM campaign **Advanced Settings**.
 
 ![API triggered campaign.]({% image_buster /assets/img/sessionm/apiTriggerCampaign.png %})
 

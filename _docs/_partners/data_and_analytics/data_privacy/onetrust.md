@@ -10,7 +10,7 @@ search_tag: Partner
 
 # OneTrust
 
-> [OneTrust](https://www.onetrust.com/) is a privacy and security software provider providing the visibility you need to better understand your trust landscape, action to leverage powerful insights, and automation to keep you elevated from the competition. 
+> [OneTrust](https://www.onetrust.com/) is a privacy and security software provider providing the visibility you must better understand your trust landscape, action to leverage powerful insights, and automation to keep you elevated from the competition. 
 
 _This integration is maintained by OneTrust._
 
@@ -50,14 +50,14 @@ Follow the prompts in the **Enter Credential Details** screen and provide the fo
 {% tabs %}
 {% tab User Consent Update %}
 1. In the OneTrust integrations menu, navigate to **Gallery** > **Braze** > **Add** to create a new workflow.![]({% image_buster /assets/img/onetrust/onetrust.png %})<br><br>
-2. Provide a name and notification email in the workflow modal. Click the **Create** button. On creation, you will be taken to the Workflow Builder. Your Braze workflow will be seeded with API calls and actions that can be used to process deletion requests. <br><br>
+2. Provide a name and notification email in the workflow modal. Click the **Create** button. On creation, you are taken to the Workflow Builder. Your Braze workflow is seeded with API calls and actions that can be used to process deletion requests. <br><br>
 3. In the Workflow Builder, choose the action you want to trigger in the workflow.<br>![]({% image_buster /assets/img/onetrust/onetrust2.png %})
 
 {% endtab %}
 {% tab User Deletion %}
 
 1. In the OneTrust integrations menu, navigate to **Gallery** > **Braze** > **Add** to create a new workflow.![]({% image_buster /assets/img/onetrust/onetrust.png %})<br><br>
-2. Provide a name and notification email in the workflow modal. Click the **Create** button. On creation, you will be taken to the Workflow Builder. Your Braze workflow will be seeded with API calls and actions that can be used to process deletion requests. <br><br>
+2. Provide a name and notification email in the workflow modal. Click the **Create** button. On creation, you are taken to the Workflow Builder. Your Braze workflow is seeded with API calls and actions that can be used to process deletion requests. <br><br>
 3. In the Workflow Builder, choose the action you want to trigger in the workflow.<br>![]({% image_buster /assets/img/onetrust/onetrust8.png %})
 {% endtab %}
 {% endtabs %}

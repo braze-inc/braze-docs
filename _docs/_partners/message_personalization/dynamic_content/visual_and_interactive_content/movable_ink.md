@@ -60,7 +60,7 @@ Intelligent Creative has many offerings that Braze users can take advantage of. 
 
 Customers will need to create a data source that can be a CSV, website import, or API integration.
 
-![Different data source options that will appear: CSV Upload, Website, or API Integration.]({% image_buster /assets/img/movable_ink/movable_ink1.png %})
+![Different data source options that appear: CSV Upload, Website, or API Integration.]({% image_buster /assets/img/movable_ink/movable_ink1.png %})
 
 {% tabs local %}
 {% tab CSV Data Source %}
@@ -71,7 +71,7 @@ Customers will need to create a data source that can be a CSV, website import, o
 {% tab Website Data Source %}
 - **Website Data Source**: Each row must have at least one segment column and one content column. After your CSV has been uploaded, select which columns should be used to target the content.
   - Within this process, you'll need to map:
-    - Which fields will be used as Segments
+    - Which fields are used as Segments
     - Which fields you want as data fields that can be dynamically personalized in the creative (for example: user attributes or custom attributes like first name, last name, city, etc.)
 
 ![The fields that will show up when selecting "Website" as your data source.]({% image_buster /assets/img/movable_ink/movable_ink3.png %})
@@ -95,7 +95,7 @@ Movable Ink has an easy editor for you to drag and drop elements like text or im
 
 ![The Movable Ink block editor showing the different customizable elements.]({% image_buster /assets/img/movable_ink/create_campaign2.png %})
 
-Before finishing your campaign, make sure to preview the dynamic images and test out the query parameters to see what the images will look like upon view. When complete, a dynamic URL will be generated that can then be inserted into Braze!
+Before finishing your campaign, make sure to preview the dynamic images and test out the query parameters to see what the images will look like upon view. When complete, a dynamic URL is generated that can then be inserted into Braze!
 
 For more information on how to use the Movable Ink Platform, visit the [Movable Ink support center](https://support.movableink.com/)
 
@@ -147,7 +147,7 @@ This template will take the current time (in seconds), append it to the end of t
 
 1. In the Braze platform, paste the URL in the **Rich Notification Media** field.![]({% image_buster /assets/img/movable_ink/image.png %}){: style="max-width:60%"}<br><br>
 2. For mobile: Content Cards images on iOS and Android are cached upon receipt and do not refresh. 
-  - As a workaround, schedule your campaign as a daily, weekly, or monthly recurring message with a corresponding expiration so the Content Card will be re-templated. For example, a Content Card that should refresh once a day should be set as a daily scheduled send with a 1-day expiration.
+  - As a workaround, schedule your campaign as a daily, weekly, or monthly recurring message with a corresponding expiration so the Content Card is re-templated. For example, a Content Card that should refresh once a day should be set as a daily scheduled send with a 1-day expiration.
 3. To ensure that Movable Ink's real-time images work and will not be affected by caching when the Content Card is re-templated, use Liquid to append a timestamp to the end of the Movable Ink image URL.
 
 To do this, use the following syntax, replacing the image URL as needed:

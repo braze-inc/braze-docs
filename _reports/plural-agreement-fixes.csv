@@ -1,0 +1,4 @@
+file,line,original,replacement,tag
+_docs/_partners/data_and_analytics/cloud_storage/microsoft_azure_blob_storage_for_currents.md,94,dashboard reports and CSV reports is,dashboard reports and CSV reports are,plural-fix
+_docs/_partners/data_and_analytics/cloud_storage/google_cloud_storage_for_currents.md,121,dashboard reports and CSV reports is,dashboard reports and CSV reports are,plural-fix
+_docs/_partners/data_and_analytics/cloud_storage/amazon_s3.md,318,dashboard reports and CSV reports is,dashboard reports and CSV reports are,plural-fix

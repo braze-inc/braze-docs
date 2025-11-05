@@ -68,7 +68,7 @@ Remember, API calls should only be done to update data that has changed in order
 
 ## User and device identifiers
 
-User profiles in Braze can be associated with any type of user or device identifiers; the list of options available depends on how you have integrated data collection with Braze. For Adikteev, you will need to find a common identifier between the your MMP and your user profiles in Braze in order to send the churn segment information properly.
+User profiles in Braze can be associated with any type of user or device identifiers; the list of options available depends on how you have integrated data collection with Braze. For Adikteev, you must find a common identifier between the your MMP and your user profiles in Braze in order to send the churn segment information properly.
 
 ## Data retention and deletion
 

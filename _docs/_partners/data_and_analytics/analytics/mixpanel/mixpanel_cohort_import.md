@@ -15,12 +15,12 @@ search_tag: Partner
 Any integration you set up will log data points. If you have any questions about the nuances of Braze data points, your Braze account manager can answer them.
 
 {% alert important %}
-In adherence to Mixpanel's data retention policies, events sent before January 1, 2010 will be removed during import.
+In adherence to Mixpanel's data retention policies, events sent before January 1, 2010 is removed during import.
 {% endalert %}
 
 ### Step 1: Get the Braze data import key
 
-In Braze, navigate to **Partner Integrations** > **Technology Partners** and select **Mixpanel**. Here, you will find the REST endpoint and generate your Braze data import key. 
+In Braze, navigate to **Partner Integrations** > **Technology Partners** and select **Mixpanel**. Here, you find the REST endpoint and generate your Braze data import key. 
 
 Once generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in Mixpanel's dashboard.<br><br>![]({% image_buster /assets/img_archive/currents-mixpanel-edit.png %})
 
@@ -37,7 +37,7 @@ In Mixpanel, navigate to **Data Management > Cohorts**. Select the cohort to sen
 ![]({% image_buster /assets/img_archive/mixpanel3.png %}){: style="max-width:50%;"}
 
 {% alert important %}
-Only users who already exist within Braze will be added or removed from a cohort. Cohort Import will not create new users in Braze.
+Only users who already exist within Braze is added or removed from a cohort. Cohort Import will not create new users in Braze.
 {% endalert %}
 
 ### Step 4: Segment users in Braze

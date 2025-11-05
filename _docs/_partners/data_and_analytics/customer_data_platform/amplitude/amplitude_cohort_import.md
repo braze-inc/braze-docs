@@ -16,7 +16,7 @@ Any integration you set up will count toward your account's data point volume.
 
 ### Step 1: Get the Braze data import key
 
-In Braze, navigate to **Partner Integrations** > **Technology Partners** and select **Amplitude**. Here, you will find the REST endpoint and generate your Braze data import key. 
+In Braze, navigate to **Partner Integrations** > **Technology Partners** and select **Amplitude**. Here, you find the REST endpoint and generate your Braze data import key. 
 
 Once generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in Amplitude's dashboard.<br><br>![]({% image_buster /assets/img/amplitude3.png %})
 
@@ -38,7 +38,7 @@ Amplitude supports multiple identifier mapping properties in priority order. You
 Once you have created a cohort, click **Sync to...** to export these users to Braze.
 
 {% alert important %}
-Only users who already exist within Braze will be added or removed from a cohort. Cohort Import will not create new users in Braze.
+Only users who already exist within Braze is added or removed from a cohort. Cohort Import will not create new users in Braze.
 {% endalert %}
 
 #### Defining sync cadence

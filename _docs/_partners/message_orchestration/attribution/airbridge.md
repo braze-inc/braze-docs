@@ -35,7 +35,7 @@ The server-to-server integration can be enabled by including the following code 
 
 #### Android
 
-If you have an Android app, you will need to pass a unique Braze device ID to Airbridge.
+If you have an Android app, you must pass a unique Braze device ID to Airbridge.
 
 {% tabs %}
 {% tab Android %}
@@ -194,7 +194,7 @@ AirbridgeUnity.StartTracking()
 
 In Braze, navigate to **Partner Integrations** > **Technology Partners** and select **Airbridge**.
 
-Here, you will find the REST endpoint and generate your Braze data import key. After the key is generated generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in Airbridge's dashboard.
+Here, you find the REST endpoint and generate your Braze data import key. After the key is generated generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in Airbridge's dashboard.
 
 ![]({% image_buster /assets/img/airbridge/airbridge_integration_step_1.png %})
 
@@ -235,7 +235,7 @@ Your user base can be segmented by attribution data in the Braze dashboard using
 
 ## Meta Business attribution data
 
-Attribution data for Meta Business campaigns is not available through our partners. This media source does not permit their partners to share attribution data with third parties and, therefore, our partners cannot send that data to Braze.
+Attribution data for Meta Business campaigns are not available through our partners. This media source does not permit their partners to share attribution data with third parties and, therefore, our partners cannot send that data to Braze.
 
 ## Airbridge click tracking URLs in Braze (optional)
 

@@ -222,7 +222,7 @@ For the existing team permission capabilities, refer to [Setting user permission
 ### Defining PII
 
 {% alert important %}
-Selecting and defining certain fields as PII fields only affects what Users can view on the Braze dashboard and does not impact how the End User data in such PII fields is handled.<br><br>Consult your legal team to align your dashboard's settings with any privacy regulations and policies applicable to your company, including those related to [data retention]({{site.baseurl}}/data_retention/).
+Selecting and defining certain fields as PII fields only affects what Users can view on the Braze dashboard and does not impact how the End User data in such PII fields are handled.<br><br>Consult your legal team to align your dashboard's settings with any privacy regulations and policies applicable to your company, including those related to [data retention]({{site.baseurl}}/data_retention/).
 {% endalert %}
 
 You can select the fields your company designates as PII in the dashboard. To do this, go to **Company Settings** > **Admin Settings** > **Security Settings**.
@@ -257,7 +257,7 @@ You can use this setting to set preferences for whether certain fields should be
 
 When a user is deleted, Braze removes all PII from event data but retains the anonymized data for analytics purposes. Some user-defined fields may contain PII if you send end-user information to Braze. If these fields contain PII, you can opt to delete the data when event data is anonymized for deleted users; if the fields contain no PII, they can be retained for analytics.
 
-You are responsible for determining the correct preferences for your workspace. The best way to determine the appropriate settings is to review with internal teams sending events data to Braze and to teams using message extras in Braze to confirm whether the fields may contain PII.  
+You are responsible for determining the correct preferences for your workspace. The best way to determine the appropriate settings are to review with internal teams sending events data to Braze and to teams using message extras in Braze to confirm whether the fields may contain PII.  
 
 ### Relevant fields  
 

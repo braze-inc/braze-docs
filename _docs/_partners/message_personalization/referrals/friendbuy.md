@@ -49,9 +49,9 @@ Go to back to your [Friendbuy account](https://retailer.friendbuy.io/) and refre
 | **Friendbuy Date of Last Share** | The date and time the Advocate last shared with a Friend via any share channel. If the Advocate has not shared yet, the property won't be visible. | Time      |
 | **Friendbuy Campaign ID**        | The Campaign ID associated with the personal referral link generated for an Advocate                                                               | String    |
 | **Friendbuy Campaign Name**      | The Campaign Name associated with the personal referral link generated for an Advocate                                                             | String    |
-| **Friendbuy Coupon Code**        | The most recent Referral coupon code distributed to the customer. Note: only one code will be displayed                                            | String    |
+| **Friendbuy Coupon Code**        | The most recent Referral coupon code distributed to the customer. Note: only one code is displayed                                            | String    |
 | **Friendbuy Coupon Value**       | The currency value of the most recent coupon code distributed to the customer.                                                                     | Number    |
-| **Friendbuy Coupon Status**      | The status of the most recent coupon code distributed to the customer. Note: status will be 'distributed' or 'redeemed'                            | String    |
+| **Friendbuy Coupon Status**      | The status of the most recent coupon code distributed to the customer. Note: status is 'distributed' or 'redeemed'                            | String    |
 | **Friendbuy Coupon Currency**    | Currency code (USD, CAD, etc.) or percent (%) associated with the most recent coupon code distributed to the customer.                             | String    |
 | **Friendbuy Coupon Campaign ID** | The Campaign ID associated with the coupon code generated for a customer.                                                                          | String    |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }

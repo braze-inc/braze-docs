@@ -71,7 +71,7 @@ An API campaign allows tracking metrics for all SmarterSends mail within Braze a
 1. In Braze, [create an API campaign]({{site.baseurl}}/api/api_campaigns/#create-a-new-campaign).
 2. Click **Email** under **Select Message Channel** to add a messaging channel to begin tracking metrics.
 3. Next, copy and paste the campaign ID from Braze to the **Campaign ID** field in SmarterSends. 
-4. Copy and paste the message variation ID from Braze to the **Message Variant ID** field in SmarterSends. This will be the default message ID used if you decide not to create a message ID for each group in SmarterSends.
+4. Copy and paste the message variation ID from Braze to the **Message Variant ID** field in SmarterSends. This is the default message ID used if you decide not to create a message ID for each group in SmarterSends.
 5. For each group you create in SmarterSends, add a message variant to your API campaign in Braze. Then, copy the message variant ID to the group's message variant ID in SmarterSends.
 
 {% alert tip %}

@@ -20,14 +20,14 @@ Dynamic Optimisation, powered by Jacquard X, leverages Braze Currents and Connec
 |---|---|
 | Jacquard account | A [Jacquard account](https://www.jacquard.com/) is required to take advantage of this partnership. |
 | Jacquard connect server token | A long string of characters that will serve as your Braze campaign's password to access your Jacquard language.<br><br>You can request this from your Jacquard customer success manager if you haven't already been provided it. |
-| Currents | In order to export data to Currents, you need to have [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) set up for your account. |
+| Currents | In order to export data to Currents, you must have [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) set up for your account. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration
 
 ### Step 1: Request Jacquard Amazon S3 credentials
 
-You'll need Jacquard to set up a dedicated Amazon S3 bucket to receive your click tracking events from Braze. Reach out to your Jacquard customer success manager to start this process. When the bucket is created, you will be provided unique credentials to create your Current. 
+You'll need Jacquard to set up a dedicated Amazon S3 bucket to receive your click tracking events from Braze. Reach out to your Jacquard customer success manager to start this process. When the bucket is created, you are provided unique credentials to create your Current. 
 
 ### Step 2: Create Current
 

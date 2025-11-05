@@ -21,7 +21,7 @@ Before you start, you'll need the following:
 |-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
 |  Braze REST API key  | A Braze REST API key with `users.export.segment` and `campaigns.trigger.send` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | CNAME configuration | A subdomain must be created for the tracking pixel used in the email for Notify to track user engagement with messaging to further inform the model. Share the subdomain URL with Notify after it's created. |
-| Database opt-in export | Send the campaign and purchase data from the past year (12 months) to Notify. ​This export will be used to train Notify predictive model. <br><br> **Fields:** <br><br> **Email:** A SHA256 hash of the email, converted to lowercase and with any leading or trailing spaces removed.<br><br>**Segment:** The segment information defining the level of activity (active or inactive).<br><br>**Sub-segment:** Any other relevant activity information such as purchase activity level.|
+| Database opt-in export | Send the campaign and purchase data from the past year (12 months) to Notify. ​This export is used to train Notify predictive model. <br><br> **Fields:** <br><br> **Email:** A SHA256 hash of the email, converted to lowercase and with any leading or trailing spaces removed.<br><br>**Segment:** The segment information defining the level of activity (active or inactive).<br><br>**Sub-segment:** Any other relevant activity information such as purchase activity level.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration

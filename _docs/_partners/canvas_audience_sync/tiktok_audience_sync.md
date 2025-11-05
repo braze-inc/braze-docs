@@ -50,11 +50,11 @@ You'll then be redirected to the TikTok OAuth page to authorize Braze for ad acc
 
 ![]({% image_buster /assets/img/tiktok/tiktok2.png %}){: style="max-width:75%;"}
 
-Once successfully connected, you will return to the partner page. Here, you can view which accounts are connected and disconnect existing accounts.
+Once successfully connected, you return to the partner page. Here, you can view which accounts are connected and disconnect existing accounts.
 
 ![]({% image_buster /assets/img/tiktok/tiktok3.png %}){: style="max-width:75%;"}
 
-Your TikTok connection will be applied at the Braze app-group level. If your TikTok admin removes you from your TikTok Business Center or access to the connected TikTok accounts, Braze will detect an invalid token. As a result, your active Canvases using TikTok Audience components will show errors, and Braze will not be able to sync users.
+Your TikTok connection is applied at the Braze app-group level. If your TikTok admin removes you from your TikTok Business Center or access to the connected TikTok accounts, Braze will detect an invalid token. As a result, your active Canvases using TikTok Audience components will show errors, and Braze will not be able to sync users.
 
 ### Step 2: Add a TikTok Audience component in Canvas
 
@@ -82,7 +82,7 @@ Enter a name for the new audience, select **Add Users to Audience**, and select 
 
 ![]({% image_buster /assets/img/audience_sync/tiktok3.png %})
 
-Users will be notified at the top of the step editor if the audience is created successfully or if errors arise during this process. Users can also reference this audience for user removal later in the Canvas journey because the audience was created in draft mode.
+Users are notified at the top of the step editor if the audience is created successfully or if errors arise during this process. Users can also reference this audience for user removal later in the Canvas journey because the audience was created in draft mode.
 
 ![]({% image_buster /assets/img/audience_sync/tiktok2.png %})
 
@@ -100,7 +100,7 @@ Braze also offers the ability to add users to existing TikTok audiences to ensur
 {% endtabs %}
 
 ### Step 4: Launch Canvas
-Once you have configured your TikTok Audience component, simply launch the Canvas! A new audience will be created, and users who flow through the TikTok Audience component will be passed into this audience on TikTok. If your Canvas contains subsequent components, your users will advance to the next step in their user journey.
+Once you have configured your TikTok Audience component, simply launch the Canvas! A new audience is created, and users who flow through the TikTok Audience component is passed into this audience on TikTok. If your Canvas contains subsequent components, your users will advance to the next step in their user journey.
 
 You can view the audience in TikTok by entering your **Ads Manager Account** and selecting **Audiences** from the **Assets** dropdown. From the **Audience** page, you can see the size of each audience after it reaches &#126;1,000.
 
@@ -128,7 +128,7 @@ The following table includes metrics and descriptions to help you better underst
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert important %}
-Remember that there will be a delay in reporting for users synced and users errored metrics due to the bulk flusher and the 13-hour retry, respectively.
+Remember that there is a delay in reporting for users synced and users errored metrics due to the bulk flusher and the 13-hour retry, respectively.
 {% endalert %}
 
 ## Frequently asked questions
@@ -147,7 +147,7 @@ TikTok does not provide this information for their data privacy policies.
 
 ### How long will it take for my audiences to populate in TikTok?
 
-The audience size will update within 24-48 hours on the Audiences page in TikTok’s Ads Manager.
+The audience size updates within 24-48 hours on the Audiences page in TikTok’s Ads Manager.
 
 ### What is the maximum number of audiences I can have in my TikTok ad account?
 

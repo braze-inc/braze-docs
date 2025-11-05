@@ -34,7 +34,7 @@ The Braze and Branch integration will help you understand exactly when and where
 
 #### Android 
 
-If you have an Android app, you will need to pass a unique Braze device ID to Branch. This ID can be set in the Branch SDK's `setRequestMetadataKey()` method. The following code snippet must be included before calling `initSession`. You must also initialize the Braze SDK before setting the request metadata in the Branch SDK.
+If you have an Android app, you must pass a unique Braze device ID to Branch. This ID can be set in the Branch SDK's `setRequestMetadataKey()` method. The following code snippet must be included before calling `initSession`. You must also initialize the Braze SDK before setting the request metadata in the Branch SDK.
 
 {% tabs local %}
 {% tab Java %}
@@ -52,7 +52,7 @@ Branch.getInstance().setRequestMetadata("$braze_install_id", Braze.getInstance(c
 #### iOS
 
 {% alert important %}
-Prior to February 2023, our Branch attribution integration used the IDFV as the primary identifier to match iOS attribution data. It is not necessary for Braze customers using Objective-C to fetch the Braze `device_id` and sent to Branch upon install as there will be no disruption of service. 
+Prior to February 2023, our Branch attribution integration used the IDFV as the primary identifier to match iOS attribution data. It is not necessary for Braze customers using Objective-C to fetch the Braze `device_id` and sent to Branch upon install as there is no disruption of service. 
 {% endalert%}
 
 For those using the Swift SDK v5.7.0+, if you wish to continue using IDFV as the mutual identifier, you must ensure that the `useUUIDAsDeviceId` field is set to `false` so there is no disruption of the integration. 
@@ -84,7 +84,7 @@ braze.deviceId { deviceId in
 
 In Braze, navigate to **Partner Integrations** > **Technology Partners** and select **Branch**. 
 
-Here, you will find the REST endpoint and generate your Braze data import key. After the key is generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in Branch's dashboard.<br><br>![This image shows the "Data Import for Install Attribution" box found in the Branch technology page. In this box, you are shown the data import key and the REST endpoint.]({% image_buster /assets/img/attribution/branch.png %}){: style="max-width:90%;"}
+Here, you find the REST endpoint and generate your Braze data import key. After the key is generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in Branch's dashboard.<br><br>![This image shows the "Data Import for Install Attribution" box found in the Branch technology page. In this box, you are shown the data import key and the REST endpoint.]({% image_buster /assets/img/attribution/branch.png %}){: style="max-width:90%;"}
 
 ### Step 3: Set up data feeds
 
@@ -101,7 +101,7 @@ Note that this will not happen until we receive data about an attributed install
 
 ## Facebook and X (formerly Twitter) attribution data
 
-Attribution data for Facebook and X (formerly Twitter) campaigns is not available through our partners. These media sources do not permit their partners to share attribution data with third parties and, therefore, our partners cannot send that data to Braze.
+Attribution data for Facebook and X (formerly Twitter) campaigns are not available through our partners. These media sources do not permit their partners to share attribution data with third parties and, therefore, our partners cannot send that data to Braze.
 
 ## Branch click tracking URLs in Braze (optional)
 

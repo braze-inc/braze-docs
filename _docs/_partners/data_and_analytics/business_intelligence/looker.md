@@ -63,7 +63,7 @@ Be aware of different naming conventions! Custom names can cause incongruities i
 Looker Actions allow you to flag users within Braze via the REST API endpoint from a Looker Look. Actions require that a dimension is tagged with `braze_id`. The Action will append the flagged value to the user's `looker_export` custom attribute.
 
 {% alert important %}
-Only existing users will be flagged. You cannot use pivoted Looks when flagging data in Braze.
+Only existing users are flagged. You cannot use pivoted Looks when flagging data in Braze.
 {% endalert %}
 
 #### Step 1: Set up a Braze Looker action
@@ -97,7 +97,7 @@ Note the following limitations:
 - Supported types are `Strings`, `Boolean`, `Numbers`, and `Dates`.
 - Attribute names are case-sensitive.
 - Standard attributes can also be set as long as they match the [standard user profile]({{site.baseurl}}/api/endpoints/user_data/#braze-user-profile-fields) names exactly.
-- The full tag should be formatted within quotes. For example, `tags: ["braze[first_name]"]`. Other tags can also be assigned but will be ignored.
+- The full tag should be formatted within quotes. For example, `tags: ["braze[first_name]"]`. Other tags can also be assigned but is ignored.
 - Additional information can be found on [GitHub](https://github.com/looker/actions/tree/master/src/actions/braze).
 
 #### Step 4: Send the Looker action
@@ -105,12 +105,12 @@ Note the following limitations:
 1. Within a Look with a `braze_id` dimension selected, click the settings gear ( <i class="fas fa-cog"></i> ) on the upper right, and select **Send...**.
 2. Select the custom Braze Action.
 3. Under **Unique Key**, provide the primary user mapping key for the Braze account (`external_id` or `braze_id`).
-4. Give the export a name. If none is provided, `LOOKER_EXPORT` will be used.
+4. Give the export a name. If none is provided, `LOOKER_EXPORT` is used.
 5. Under **Advanced Options**, select **Results in Table** or **All Results** and then **Send**.<br><br>![]({% image_buster /assets/img/send-looker-action.png %})<br><br>If the export was correctly sent, then `LOOKER_EXPORT` should appear in the user's profile as a custom attribute with the value you entered in the action.<br><br>![]({% image_buster /assets/img/custom-attributes-looker.png %})
 
 ##### Example outgoing API
 
-The following is an example of an outgoing API call, which will be sent to the [`/users/track/` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/).
+The following is an example of an outgoing API call, which is sent to the [`/users/track/` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/).
 
 ###### Header
 ```

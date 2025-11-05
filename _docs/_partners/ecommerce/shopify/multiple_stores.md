@@ -48,7 +48,7 @@ To view each store integration and configure advanced settings, select a store i
 
 ### Shopify alias
 
-When you connect multiple stores, synced Shopify users who have logged in or placed an order will receive a new alias in the format: {% raw %}`shopify_customer_id_{{storename}}`{% endraw %}.
+When you connect multiple stores, synced Shopify users who have logged in or placed an order receives a new alias in the format: {% raw %}`shopify_customer_id_{{storename}}`{% endraw %}.
 
 ### Braze external ID
 
@@ -62,7 +62,7 @@ You can choose from the following options for your Braze external ID:
 
 ### Merged fields
 
-When a user profile is synced, the following fields will be merged. For full details on merging behavior, refer to [Merge behavior]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/#merge-behavior).
+When a user profile is synced, the following fields are merged. For full details on merging behavior, refer to [Merge behavior]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/#merge-behavior).
 
 - Device information
 - Total session count (combined from both profiles)
@@ -102,7 +102,7 @@ Alternatively, you can sync email and SMS marketing opt-in information directly 
 
 ### Synced attributes
 
-When you connect more than one store, the following attributes will be synced with the most recent state of the Shopify profile:
+When you connect more than one store, the following attributes are synced with the most recent state of the Shopify profile:
 - First Name
 - Last Name
 - Email

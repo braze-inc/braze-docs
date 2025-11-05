@@ -29,7 +29,7 @@ A retailer uses Odicci’s gamified experiences to collect email addresses for a
 
 1. A customer completes a game in Odicci, providing their email address.
 2. Odicci automatically syncs this data to Braze.
-3. Braze triggers a personalized "Thank You" email and includes a discount code.
+3. Braze triggers a personalized "Thank you" email and includes a discount code.
 
 ## Prerequisites
 

@@ -42,9 +42,9 @@ In Lexer, navigate to **Manage > Integration**, select the **Braze** tile, and c
 ![]({% image_buster /assets/img/lexer/braze_integrate_screen.png %})
 
 ### Choosing an AWS S3 option (Lexer-managed or self-managed)
-Using a Lexer-managed bucket is the preferred way of connecting Braze to your Lexer hub and will reduce the amount of setup needed. Lexer will provide the one-off details you will need to configure Braze.
+Using a Lexer-managed bucket is the preferred way of connecting Braze to your Lexer hub and will reduce the amount of setup needed. Lexer provides the one-off details you must configure Braze.
 
-If you have already connected an S3 bucket to Braze and are using it for other purposes, you will need to instead provide Lexer access to this self-managed bucket by following the preceding steps.
+If you have already connected an S3 bucket to Braze and are using it for other purposes, you must instead provide Lexer access to this self-managed bucket by following the preceding steps.
 
 This integration works by providing Lexer with your existing API token and secrets, allowing Lexer to make these exports on your behalf. It also imports your Braze data into Lexer using these credentials and your S3 configuration to sync your data on both platforms automatically.
 
@@ -66,11 +66,11 @@ Lexer Activate will automatically update your Braze profiles, adding or removing
 
 ### Step 2: Verify activation
 
-Once your activation has been confirmed as sent in Activate, you will see records begin to update in Braze. Your profiles won't be fully updated in Braze until after receiving a confirmation email from Lexer.
+Once your activation has been confirmed as sent in Activate, you see records begin to update in Braze. Your profiles won't be fully updated in Braze until after receiving a confirmation email from Lexer.
 
 ### Step 3: Create your Braze segment
 
-In Braze, you will see your audience name in Lexer is now a value in your `lexer_audience` custom attribute. Braze has a limit of 100 values per attribute.
+In Braze, you see your audience name in Lexer is now a value in your `lexer_audience` custom attribute. Braze has a limit of 100 values per attribute.
 
 To create your segment, navigate to **Segment > + Create Segment** and select **Custom Attribute** as the filter. Next, select `lexer_audience` as your attribute and your desired Lexer audience name. When completed, **Save** your audience.
 

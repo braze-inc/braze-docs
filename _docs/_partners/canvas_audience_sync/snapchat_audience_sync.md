@@ -53,11 +53,11 @@ Once you have selected confirm, you'll be redirected back into Braze to select w
 
 ![A list of available ad accounts you can connect to Snapchat.]({% image_buster /assets/img/snapchat/snapchat2.png %}){: style="max-width:80%;"}
 
-Once successfully connected, you will be returned to the partner page, where you can view which accounts are connected and disconnect existing accounts.
+Once successfully connected, you are returned to the partner page, where you can view which accounts are connected and disconnect existing accounts.
 
 ![An updated version of the Snapchat technology partners page showing the ad accounts successfully connected.]({% image_buster /assets/img/snapchat/snapchat3.png %}){: style="max-width:80%;"}
 
-Your Snapchat connection will be applied at the Braze workspace level. If your Snapchat admin removes you from your Snapchat Business Manager or access to the connected Snapchat ad accounts, Braze will detect an invalid token. As a result, your active Canvases using Snapchat will show errors, and Braze will not be able to sync users.
+Your Snapchat connection is applied at the Braze workspace level. If your Snapchat admin removes you from your Snapchat Business Manager or access to the connected Snapchat ad accounts, Braze will detect an invalid token. As a result, your active Canvases using Snapchat will show errors, and Braze will not be able to sync users.
 
 ### Step 2: Add an Audience Sync Step with Snapchat
 
@@ -83,7 +83,7 @@ Enter a name for the new audience, select **Add Users to Audience**, and select 
 
 ![Expanded view of the Custom Audience Canvas step. Here, the desired Ad account is selected, and a new audience is created.]({% image_buster /assets/img/audience_sync/snapchat3.png %})
 
-Users will be notified at the top of the step editor if the audience is created successfully or if errors arise during this process. Users can also reference this audience for user removal later in the Canvas journey because the audience was created in draft mode.
+Users are notified at the top of the step editor if the audience is created successfully or if errors arise during this process. Users can also reference this audience for user removal later in the Canvas journey because the audience was created in draft mode.
 
 ![An alert that appears after a new audience is created in the Canvas component.]({% image_buster /assets/img/audience_sync/snapchat2.png %})
 
@@ -101,7 +101,7 @@ Braze also offers the ability to add users to existing Snapchat audiences to ens
 
 ### Step 4: Launch Canvas
 
-Once you have configured your Audience Sync to Snapchat, launch the Canvas! A new audience will be created, and users who flow through the Audience Sync step will be passed into this audience on Snapchat. If your Canvas contains subsequent components, your users will advance to the next step in their user journey.
+Once you have configured your Audience Sync to Snapchat, launch the Canvas! A new audience is created, and users who flow through the Audience Sync step is passed into this audience on Snapchat. If your Canvas contains subsequent components, your users will advance to the next step in their user journey.
 
 You can view the audience in Snapchat by entering your ads manager account and selecting **Audiences** from the Assets section of the navigation. From the **Audiences** page, you can see the size of each audience after it reaches ~1,000.
 
@@ -129,7 +129,7 @@ The following table includes metrics and descriptions to help you better underst
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert important %}
-Remember that there will be a delay in reporting for synced users and errored metrics due to the bulk flusher and the 13-hour retry, respectively.
+Remember that there is a delay in reporting for synced users and errored metrics due to the bulk flusher and the 13-hour retry, respectively.
 {% endalert %}   
 
 ## Frequently asked questions

@@ -40,7 +40,7 @@ The Braze and Segment integration allows you to use [Engage](https://segment.com
 
 In Braze, navigate to **Partner Integrations** > **Technology Partners** and select **Segment**.
 
-Here, you will find your REST endpoint and generate your Braze data import key. After the key is generated, you can create a new key or invalidate an existing one.
+Here, you find your REST endpoint and generate your Braze data import key. After the key is generated, you can create a new key or invalidate an existing one.
 
 ### Step 3: Connect the Braze Cohorts Destination
 Follow [Segment’s instructions](https://segment.com/docs/connections/destinations/catalog/actions-braze-cohorts/#getting-started) on setting up the Cohorts Destination to sync your Engage audiences as cohorts to Braze.
@@ -63,8 +63,8 @@ In Braze, navigate to **Segments**, create a new segment, and select **Segment C
 #### Computed traits and audiences
 
 [Computed traits](https://segment.com/docs/engage/audiences/computed-traits/) and [audiences](https://segment.com/docs/Engage/audiences/) can be sent to Braze as custom attributes or custom events.
-- Traits and audiences sent using the `identify` call will appear in Braze as custom attributes.
-- Traits and audiences sent using the `track` call will appear in Braze as custom events.
+- Traits and audiences sent using the `identify` call appears in Braze as custom attributes.
+- Traits and audiences sent using the `track` call appears in Braze as custom events.
 
 You can choose which method to use (or choose to use both) when you connect the computed trait to the Braze destination.
 
@@ -84,7 +84,7 @@ For example, if you have an Engage computed trait for "Last Product Viewed Item,
 
 You can send computed traits and audiences to Braze as `track` calls to create custom events in Braze. 
 
-Continuing the previous example, if a user has a computed trait for "Last Product Viewed Item", it will appear on users' Braze profiles as `Trait Computed` with the corresponding count and most recent timestamp under **Custom Events**. If this were instead an Engage audience, you would find your audience, count, and most recent timestamp listed under **Custom Attributes** set as `true`.
+Continuing the previous example, if a user has a computed trait for "Last Product Viewed Item", it appears on users' Braze profiles as `Trait Computed` with the corresponding count and most recent timestamp under **Custom Events**. If this were instead an Engage audience, you would find your audience, count, and most recent timestamp listed under **Custom Attributes** set as `true`.
 
 | Computed Trait | Audiences |
 | -------------- | --------- |

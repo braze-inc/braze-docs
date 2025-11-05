@@ -42,12 +42,12 @@ Apppboy.getInstance(context).getDeviceId();
 #### iOS
 
 {% alert important %}
-Prior to February 2023, our Kochava attribution integration used the IDFV as the primary identifier to match iOS attribution data. It is not necessary for Braze customers using Objective-C to fetch the Braze `device_id` and sent to Kochava upon install as there will be no disruption of service. 
+Prior to February 2023, our Kochava attribution integration used the IDFV as the primary identifier to match iOS attribution data. It is not necessary for Braze customers using Objective-C to fetch the Braze `device_id` and sent to Kochava upon install as there is no disruption of service. 
 {% endalert%}
 
 For those using the Swift SDK v5.7.0+, if you wish to continue using IDFV as the mutual identifier, you must ensure that the `useUUIDAsDeviceId` field is set to `false` so there is no disruption of the integration. If set to `true`, you must implement the iOS device ID mapping for Swift in order to pass the Braze `device_id` to Kochava upon app install in order for Braze to appropriately match iOS attributions.
 
-Braze has two APIs that will produce the same value, one with a completion handler and another using the new Swift concurrency support. Note that you will need to modify the following code snippets to conform with Kochava's [iOS SDK](https://support.kochava.com/sdk-integration/ios-sdk-integration/) instructions. For additional help, reach out to Kochava support.
+Braze has two APIs that will produce the same value, one with a completion handler and another using the new Swift concurrency support. Note that you must modify the following code snippets to conform with Kochava's [iOS SDK](https://support.kochava.com/sdk-integration/ios-sdk-integration/) instructions. For additional help, reach out to Kochava support.
 
 ##### Completion handler
 ```
@@ -64,11 +64,11 @@ let deviceId = await AppDelegate.braze?.deviceId()
 
 In Braze, navigate to **Partner Integrations** > **Technology Partners** and select **Kochava**. 
 
-Here, you will find the REST endpoint and generate your Braze data import key. After the key is generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in Kochava's dashboard.<br><br>![This image shows the "Data Import for Install Attribution" box found in the Kochava technology page. In this box, you are shown the data import key and the REST endpoint.]({% image_buster /assets/img/attribution/kochava.png %}){: style="max-width:90%;"}
+Here, you find the REST endpoint and generate your Braze data import key. After the key is generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in Kochava's dashboard.<br><br>![This image shows the "Data Import for Install Attribution" box found in the Kochava technology page. In this box, you are shown the data import key and the REST endpoint.]({% image_buster /assets/img/attribution/kochava.png %}){: style="max-width:90%;"}
 
 ### Step 3: Set up a postback from Kochava
 
-[Add a postback](https://support.kochava.com/campaign-management/create-a-kochava-certified-postback) in your Kochava dashboard. You will be prompted for the data import key and REST endpoint that you found in the Braze dashboard.
+[Add a postback](https://support.kochava.com/campaign-management/create-a-kochava-certified-postback) in your Kochava dashboard. You are prompted for the data import key and REST endpoint that you found in the Braze dashboard.
 
 ### Step 4: Confirm the integration
 
@@ -78,7 +78,7 @@ Note that this will not happen until we receive data about an attributed install
 
 ## Facebook and X (formerly Twitter) attribution data
 
-Attribution data for Facebook and X (formerly Twitter) campaigns is not available through our partners. These media sources do not permit their partners to share attribution data with third parties and, therefore, our partners cannot send that data to Braze.
+Attribution data for Facebook and X (formerly Twitter) campaigns are not available through our partners. These media sources do not permit their partners to share attribution data with third parties and, therefore, our partners cannot send that data to Braze.
 
 ## Kochava click tracking URLs in Braze (optional)
 
