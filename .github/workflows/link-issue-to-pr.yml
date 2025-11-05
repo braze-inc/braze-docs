@@ -24,7 +24,7 @@ jobs:
             const pr = context.payload.pull_request;
             
             // Step 1: Check if PR author is Copilot
-            const isCopilot = pr.user.login === 'app/copilot-swe-agent';
+            const isCopilot = pr.user.login === 'Copilot';
             
             if (!isCopilot) {
               core.info(`PR author is ${pr.user.login}, not Copilot - skipping BD sync`);
