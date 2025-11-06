@@ -65,7 +65,7 @@ Can't see the code because of the scroll bar? Learn how to fix that [here]({{sit
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert tip %}
-File naming conventions may change in the future. Braze recommends searching all keys in your bucket that have a prefix of &lt;your-bucket-prefix&gt;.
+File naming conventions may change. Braze recommends searching all keys in your bucket that have a prefix of &lt;your-bucket-prefix&gt;.
 {% endalert %}
 
 ### Avro write threshold
