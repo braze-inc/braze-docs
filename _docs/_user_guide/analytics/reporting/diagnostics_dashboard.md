@@ -11,7 +11,7 @@ toc_headers: "h2"
 
 # Campaign and Canvas diagnostics dashboard
 
-> The purpose of this dashboard is to help you understand why messages from your campaigns or Canvases may not have been sent as expected. It provides a high-level breakdown of message sending outcomes, allowing you to spot trends and diagnose potential issues in your messaging setup.
+> This dashboard provides a high-level breakdown of message sending outcomes, allowing you to spot trends and diagnose potential issues in your messaging setup. Using this dashboard can help you understand why messages from your campaigns or Canvases may not have been sent as expected.
 
 {% alert important %}
 The campaign and Canvas diagnostics dashboard is currently in early access. Contact your customer success manager if you're interested in participating in the early access.
