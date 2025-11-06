@@ -67,6 +67,6 @@ This can happen for several reasons:
 This can occur for the following reasons:
 
 - **Multi-channel messages:** The campaign or Canvas step was configured to send on multiple channels (such as SMS and email). A single user can receive a "sent" outcome for one channel (such as email) and an "abort" outcome for another (such as "User not enabled for SMS/MMS/RCS"). In this case, that one user would be counted twice in the chart: once as a "sent" and once as an "abort."
-  - **Example:** You send a push campaign to 100 users, targeting both iOS and Android. If a user only has an iOS device, they will receive the iOS push ("sent") but will also trigger an abort for the Android push ("Not Enabled for Channel").
+  - **Example:** You send a push campaign to 100 users, targeting both iOS and Android. If a user only has an iOS device, they will receive the iOS push ("sent") but will also trigger an abort for the Android push ("User not enabled for Android push, app, or device").
 - **Multiple Message steps (Canvas only):** Your Canvas may have more than one message step in a given path. This dashboard aggregates all outcomes, so a single user could be counted multiple times if they pass through multiple message steps within the selected time range.
 -**Test messages:** Test sending (which is counted in the dashboard) is making the total counts higher than the audience size. 
