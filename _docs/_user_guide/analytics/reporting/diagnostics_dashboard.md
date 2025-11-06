@@ -21,7 +21,7 @@ The campaign and Canvas diagnostics dashboard is currently in early access. Cont
 
 ## Sent and delivered
 
-It is crucial to understand that this dashboard reports on Braze's internal processing of a message, not its final delivery status. This dashboard helps you diagnose issues that happen before this handoff.
+It is crucial to understand that this dashboard reports on Braze's internal processing of a message, not its final delivery status.
 
 A message marked as "sent" in this dashboard means Braze successfully processed the message and handed it off to the relevant third-party sending partner. It does not guarantee final delivery to the end-user's device.
 
