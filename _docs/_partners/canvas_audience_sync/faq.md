@@ -23,7 +23,7 @@ You can check the specific time range in the Troubleshooting section of the docu
 
 The specific fields used for each partner may vary depending on the partner's requirements. 
 
-For example, when you configure an Audience Sync to Facebook, you are able to use a wide variety of first-party fields like email, phone, first name, and last name, whereas, with Snapchat, you only be able to select either email, phone, or mobile advertiser ID. 
+For example, when you configure an Audience Sync to Facebook, you can use a wide variety of first-party fields like email, phone, first name, and last name, whereas, with Snapchat, you only be able to select either email, phone, or mobile advertiser ID. 
 
 It is important to note that the user fields you can select to sync correlate with Braze standard attributes and the mobile advertising IDs. You must ensure you appropriately pass this data via our SDKs or APIs. 
 

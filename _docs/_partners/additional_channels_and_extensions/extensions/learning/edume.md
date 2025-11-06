@@ -25,7 +25,7 @@ The Braze and eduMe integration leverages Braze [Connected Content]({{site.baseu
 | eduMe account | An eduMe account is required to take advantage of this partnership. |
 | eduMe API key | You must request an API key from your eduMe customer success contact. This key is used in your Braze Connected Content call. |
 | eduMe link signing secret | You must request your customer success contact at eduMe to set up a link signing secret for your organization. This secret is used to enable seamless links in Connected Content. You not have to do anything with this secret. |
-| eduMe group and content IDs | These identifiers are needed to set up your Connected Content calls. Reach out to your eduMe customer service contact for help obtaining these identifiers. |
+| eduMe group and content IDs | These identifiers are needed to set up your Connected Content calls. Contact your eduMe customer service contact for help obtaining these identifiers. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration

@@ -70,7 +70,7 @@ Feel free to respond directly to this number!
 
 #### Step 2.2: Schedule the delivery
 
-For the delivery type, select **API-Triggered delivery**, then copy the Campaign ID which is used in the next steps.
+For the delivery type, select **API-Triggered delivery**, then copy the campaign ID, which is used in the next steps.
 
 ![API Triggered delivery]({% image_buster /assets/img/zendesk/instant_chat/chat4.png %}){: style="max-width:70%;"}
 
@@ -175,7 +175,7 @@ In the Braze dashboard, go to **Audience**, choose your **SMS subscription group
 |------------------|---------------------------------------------------------------------------------------------------------------------------|
 | Keyword Category | The name of your keyword category, such as `ZendeskSMS1`.                                                                 |
 | Keywords         | Your custom keywords, such as `SUPPORT`.                                                                                  |
-| Reply Message    | The message that is sent when a keyword is detected, such as "A customer service rep will reach out to you shortly." |
+| Reply Message    | The message that is sent when a keyword is detected, such as "A customer service rep will contact you shortly." |
 {: .reset-td-br-1 .reset-td-br-2 }
 
 ![An example SMS keyword category in Braze.]({% image_buster /assets/img/zendesk/instant_chat/chat11.png %}){: style="max-width:70%;"}
