@@ -39,6 +39,9 @@ guide_menu_list:
   - name: Canvas Analytics
     link: /docs/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/
     image: /assets/img/braze_icons/line-chart-down-01.svg
+  - name: Campaign and Canvas Diagnostics
+    link: /docs/user_guide/analytics/reporting/diagnostics_dashboard/
+    image: /assets/img/braze_icons/globe-slated-02.svg
   - name: Custom Events
     link: /docs/user_guide/data/custom_data/custom_events/
     image: /assets/img/braze_icons/calendar-check-02.svg
