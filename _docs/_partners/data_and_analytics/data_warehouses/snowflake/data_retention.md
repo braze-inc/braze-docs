@@ -24,7 +24,7 @@ Braze automatically anonymizes events data for users that are deleted from Braze
 
 You can retain non-anonymized data by copying your data from the shared `BRAZE_RAW_EVENTS` schema to another database and schema in Snowflake. To do so, follow these steps:
 
-1. In your Snowflake account, create the procedure `COPY_BRAZE_SHARE`, which is used to copy all the data shared by Braze to another database and schema within Snowflake. 
+1. In your Snowflake account, create the procedure `COPY_BRAZE_SHARE`, which will be used to copy all the data shared by Braze to another database and schema within Snowflake. 
 
 {% raw %}
 ```sql
@@ -162,7 +162,7 @@ Repeatedly running the procedure won't create duplicate records because this pro
 
 You can retain non-anonymized data by unloading data from the shared `BRAZE_RAW_EVENTS` schema to a stage. To do so, follow these steps:
 
-1. Create the procedure `UNLOAD_BRAZE_SHARE`, which is used to copy all the data shared by Braze to the specified stage.
+1. Create the procedure `UNLOAD_BRAZE_SHARE`, which will be used to copy all the data shared by Braze to the specified stage.
 
 {% raw %}
 ```sql

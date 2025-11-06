@@ -86,7 +86,7 @@ There are two ways you can check a user's push subscription state with Braze:
 
 All push-enabled platforms - iOS, Web, and Android - require explicit opt-in via an OS-level system prompt, with some slight differences described below.
 
-Because a user's decision is final and you can't ask again after they decline, using [push primer]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/) in-app messages are an important strategy for increasing your opt-in rates.
+Because a user's decision is final and you can't ask again after they decline, using [push primer]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/) in-app messages is an important strategy for increasing your opt-in rates.
 
 **Native OS push permission prompts**
 

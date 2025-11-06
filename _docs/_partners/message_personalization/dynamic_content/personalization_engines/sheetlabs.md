@@ -40,7 +40,7 @@ Refer to [Sheetlabs](https://app.sheetlabs.com/docs/producers/braze/) for more i
 In Sheetlabs, upload an Excel spreadsheet, or link your Google account and import a Google Sheet. 
 
 - To import an Excel spreadsheet, click **Data Tables** in the menu bar, and then **Import from CSV/Excel**.
-- To import from Google Sheets, click **Data Tables** in the menu bar, and then **Import from Google**. You then need to provide your Google login credentials and import the sheet.
+- To import from Google Sheets, click **Data Tables** in the menu bar, and then **Import from Google**. You will then need to provide your Google login credentials and import the sheet.
 
 You may also opt to keep your Google Sheet in sync, which means that Sheetlabs will automatically fetch the latest data from your Google Sheet when it changes.
 
@@ -48,7 +48,7 @@ Make sure you include the Braze user ID in your spreadsheet or something else th
 
 ### Step 2: Create an API in Sheetlabs
 
-Next, in Sheetlabs, go to **APIs > Create API**, and give your API a name. You likely want to allow queries via a lookup field from your spreadsheet, such as the Braze user ID.
+Next, in Sheetlabs, go to **APIs > Create API**, and give your API a name. You will likely want to allow queries via a lookup field from your spreadsheet, such as the Braze user ID.
 
 At this point, you should be able to access your API with a link like:<br> [`https://sheetlabs.com/ACME/email1_translations?country=en`](https://sheetlabs.com/ACME/email1_translations?country=en).
 

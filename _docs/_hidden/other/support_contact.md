@@ -1468,7 +1468,7 @@ Track all your cases, add attachments, and find answers faster in the Support Po
                          In order to provide you with technical support or address service or technical problems, be aware that Braze may need to access your dashboard and data.
                           </label>
                           <label style="font-size: 12px;">
-                          Braze technical support operates during standard business hours across multiple time zones to serve our global customer base. For specific support hours in your region or for issues logged outside of business hours, refer to the support handbook. Response times may vary based on when your request is submitted, your support tier, and the severity of the issue.
+                          Braze technical support operates during standard business hours across multiple time zones to serve our global customer base. For specific support hours in your region or for issues logged outside of business hours, please refer to the support handbook. Response times may vary based on when your request is submitted, your support tier, and the severity of the issue.
                           </label>
                       </div>
                       <button type="submit" name="Submit Ticket" value="Submit" class="btn btn-black" id="ticket_submit_button" role="button"> SUBMIT TICKET </button>

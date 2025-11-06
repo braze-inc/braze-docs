@@ -42,7 +42,7 @@ curl --request GET \
      --header 'Authorization: Bearer 1/<TRANSFIX_BEARER_TOKEN>'
 ```
 
-For example, if your Transifex project is located at `https://www.transifex.com/appboy-3/french2/french_translationspo/`, the `project_name` is "french2" and the `resource_name` is "french_translationspo".
+For example, if your Transifex project is located at `https://www.transifex.com/appboy-3/french2/french_translationspo/`, the `project_name` will be "french2" and the `resource_name` will be "french_translationspo".
 
 ## Connected Content message example
 

@@ -46,7 +46,7 @@ You can set separate API keys for test and live environments.
 
 {:start="4"}
 4. Select your Braze endpoint.
-5. Input any event or event attribute filtering to ensure only relevant data is sent to Braze for engagement marketing. Whenever Radar events are generated, Radar sends custom events and user attributes to Braze. Events from iOS devices is sent using your iOS API keys; events and user attributes from Android devices is sent using your Android API keys.
+5. Input any event or event attribute filtering to ensure only relevant data is sent to Braze for engagement marketing. Whenever Radar events are generated, Radar will send custom events and user attributes to Braze. Events from iOS devices will be sent using your iOS API keys; events and user attributes from Android devices will be sent using your Android API keys.
 
 {% alert note %}
 By default, Radar `userId` maps to Braze `external_id` for logged in users. However, you can track logged out users or specify custom mappings by setting Radar `metadata.brazeAlias` or `metadata.brazeExternalId`. If you set `metadata.brazeAlias`, you must also add a matching alias in Braze with label `radarAlias`.
@@ -60,7 +60,7 @@ You can use custom events and user attributes to build location-based segments o
 
 Send a push notification to the user with arrival instructions as they arrive at your store for a curbside pickup.
 
-![An action-based delivery campaign showing that the campaign is delivered when the "arrived_at_trip_destination" custom event occurs, and the "trip_metadata" equals "curbside".]({% image_buster /assets/img_archive/radar-campaign.png %})
+![An action-based delivery campaign showing that the campaign will be delivered when the "arrived_at_trip_destination" custom event occurs, and the "trip_metadata" equals "curbside".]({% image_buster /assets/img_archive/radar-campaign.png %})
 
 ### Build an audience segment of recent store visitors
 

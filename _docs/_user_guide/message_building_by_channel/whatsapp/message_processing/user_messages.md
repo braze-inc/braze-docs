@@ -85,7 +85,7 @@ Continue building the Canvas as you would otherwise from this point forward.
 
 ### Responses
 
-You most likely want a reply message for each response. We recommend having a catch-all option for responses outside the bounds of quick replies (such as for customers who respond with a general message rather than a predetermined prompt). For example, "We’re sorry, we didn’t recognize your response. For support issues, please message <support channel>."
+You will most likely want a reply message for each response. We recommend having a catch-all option for responses outside the bounds of quick replies (such as for customers who respond with a general message rather than a predetermined prompt). For example, "We’re sorry, we didn’t recognize your response. For support issues, please message <support channel>."
 
 ![A Canvas built out showing the responses for each call-to-action button.]({% image_buster /assets/img/whatsapp/whatsapp18.png %})
 

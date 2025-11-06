@@ -15,7 +15,7 @@ Use the Braze and Simon Data integration to create and sync sophisticated audien
 
 ## Prerequisites
 
-To get started, you must authenticate your Braze account within your Simon Data account.
+To get started, you need to authenticate your Braze account within your Simon Data account.
 
 | Requirement         | Description                                                                                                                                                               |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

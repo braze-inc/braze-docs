@@ -33,5 +33,5 @@ To learn how to integrate Tapcart with Braze, checkout [Tapcart’s integration 
 Note that the following features are not currently supported: Push Stories, Web Push, In-App Messages customization.
 
 {% alert note %}
-If you have additional questions, contact your Tapcart Implementation Specialist or email [help@tapcart.co](mailto:help@tapcart.co).
+If you have any additional questions, contact your Tapcart Implementation Specialist or email [help@tapcart.co](mailto:help@tapcart.co).
 {% endalert %}

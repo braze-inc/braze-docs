@@ -10,7 +10,7 @@ toc_headers: h2
 
 # Race conditions
 
-> A race condition occurs when an outcome depends on the sequence or timing of multiple events. For example, if the desired sequence of events are “Event A” then “Event B”, but sometimes “Event A” comes first, and other times “Event B” comes first—that is known as a race condition. This can lead to unexpected results or errors because these events compete to access shared resources or data.
+> A race condition occurs when an outcome depends on the sequence or timing of multiple events. For example, if the desired sequence of events is “Event A” then “Event B”, but sometimes “Event A” comes first, and other times “Event B” comes first—that is known as a race condition. This can lead to unexpected results or errors because these events compete to access shared resources or data.
 
 {% multi_lang_include video.html id="LyJaxDoMtMs" align="right" %}
 
@@ -28,7 +28,7 @@ Consider the following scenarios and implement best practices to avoid these rac
 
 ## Scenario 1: Targeting new users
 
-In Braze, one of the most common race conditions occurs with messages that target newly created users. The expected order of events are:
+In Braze, one of the most common race conditions occurs with messages that target newly created users. The expected order of events is:
 
 1. A user gets created;
 2. The same user is immediately targeted for a message, performs a custom event, or logs a custom attribute.

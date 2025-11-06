@@ -57,7 +57,7 @@ You can use the estimated accuracy to check how many selected users are expected
 
 All machine learning models make errors. There may be users in your selection who have a high likelihood score but do not end up actually performing the event. They would not perform the event if you took no action. They will be targeted anyway, so this is an error or "false positive." The full width of this second progress bar represents the expected number of users who will not perform the event, and the filled portion is those who will be incorrectly targeted using the current slider position.
 
-Using this information, we encourage you to decide how many of the true positives you want to capture, how many false positives you can accept being targeted, and what the cost of errors are for your business. If you are sending out a valuable promotion, you may want to target only non-purchasers (false positives) by favoring the left side of the chart. Or, you may want to encourage buyers who often purchase (true positives) to do so again by selecting a section of users that favors the right side of the chart.
+Using this information, we encourage you to decide how many of the true positives you want to capture, how many false positives you can accept being targeted, and what the cost of errors is for your business. If you are sending out a valuable promotion, you may want to target only non-purchasers (false positives) by favoring the left side of the chart. Or, you may want to encourage buyers who often purchase (true positives) to do so again by selecting a section of users that favors the right side of the chart.
 
 ## Prediction quality {#prediction_quality}
 

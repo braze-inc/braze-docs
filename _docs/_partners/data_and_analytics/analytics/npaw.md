@@ -38,7 +38,7 @@ see the **Braze** integration option. After clicking on this, it will expand and
 ![NPAW integration]({% image_buster /assets/img/npaw_integration.png %})
 
 Fill in the details with the appropriate information gathered from the perquisites section, where:
-* **Connector Name** is an **alphanumeric** string that is used to refer to this integration in the future. This value can be set to anything you like as long as it contains **only** letters and numbers.
+* **Connector Name** is an **alphanumeric** string that will be used to refer to this integration in the future. This value can be set to anything you like as long as it contains **only** letters and numbers.
 * **User ID** is the ID previously chosen to link your YOUBORA software with your Braze account. For example, if you choose to perform the link via your **Braze ID**, select **Braze ID** from the dropdown to assign the value to the proper field.
 * **API Key** is your YOUBORA tools suite API Key found previously within the **API** section under **Settings** .
 * **Endpoint** is the customizable URL endpoint previously setup within your Braze dashboard.
@@ -49,7 +49,7 @@ Once all the fields have been filled out, simply click on the **Connect** button
 
 Once you have finished configuring your integration with Braze, navigate to the **Users** product and select the **Sample Manager** within the **Sections Manager**.
 
-After creating a sample within the **Sample Manger**, you now be able to click on the triple dot icon on the right-hand side to send all users within your sample to Braze.
+After creating a sample within the **Sample Manger**, you will now be able to click on the triple dot icon on the right-hand side to send all users within your sample to Braze.
 
 ![NPAW sample manager]({% image_buster /assets/img/npaw_sample_manager.png %})
 

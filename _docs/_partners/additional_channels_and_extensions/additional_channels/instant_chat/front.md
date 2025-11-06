@@ -23,8 +23,8 @@ Before you start, you'll need the following:
 | Prerequisite             | Description                                                               |
 |---------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
 | A Front account            | A Front account is required to take advantage of this partnership.|
-| Braze Data Transformation Webhook URL | [Braze Data Transformation]({{site.baseurl}}/user_guide/data/data_transformation/overview/) is used to reformat the incoming webhook from Front so it can be accepted by the Braze /users/track endpoint.|
-| A Front REST API Key         | A Front REST API key is used to make an outbound webhook request from Braze to Front. |
+| Braze Data Transformation Webhook URL | [Braze Data Transformation]({{site.baseurl}}/user_guide/data/data_transformation/overview/) will be used to reformat the incoming webhook from Front so it can be accepted by the Braze /users/track endpoint.|
+| A Front REST API Key         | A Front REST API key will be used to make an outbound webhook request from Braze to Front. |
 
 ## Use cases
 
@@ -105,7 +105,7 @@ For the delivery type, select **Action-Based delivery**; then for the custom eve
 ![The "Schedule Delivery" page.]({% image_buster /assets/img/front/custom_event_trigger.png %})
 
 {% alert note %}
-This custom event is the Data Transformation that writes to the user’s profile. Agent messages are saved as an event property on this event.
+This custom event is the Data Transformation that writes to the user’s profile. Agent messages will be saved as an event property on this event.
 {% endalert %}
 
 Finally, under **Delivery Controls**, enable re-eligibility.
@@ -120,7 +120,7 @@ In the Front dashboard, go to **Settings** > **Channels** > **Add Channels**, th
 
 ### Step 4: Configure the settings
 
-In the outbound API endpoint field, enter the Data Transformation Webhook URL [you created earlier](#step-1-set-up-a-data-transformation-in-braze). All outbound messages from live agents on your new Braze channel is sent here. This channel also provides an endpoint URL for Braze to forward SMS messages to in the **Incoming URL** Field.
+In the outbound API endpoint field, enter the Data Transformation Webhook URL [you created earlier](#step-1-set-up-a-data-transformation-in-braze). All outbound messages from live agents on your new Braze channel will be sent here. This channel also provides an endpoint URL for Braze to forward SMS messages to in the **Incoming URL** Field.
 
 Be sure to make a note of this URL&#8212;you'll need it later.
 
@@ -144,7 +144,7 @@ In the Braze dashboard, go to **Audience**, choose your **SMS subscription group
 |---|---|
 |Keyword Category|The name of your keyword category, such as `FrontSMS1`.|
 |Keywords|Your custom keywords, such as `TIMETOMOW`. Avoid common words to prevent accidental triggers. Keep in mind, keywords are case insensitive, so `lawn` would match `LAWN`.|
-|Reply Message|The message that is sent when a keyword is detected, such as "A landscaper will reach out to you shortly."|
+|Reply Message|The message that will be sent when a keyword is detected, such as "A landscaper will contact you shortly."|
 {: .reset-td-br-1 .reset-td-br-2 }
 
 ![An example SMS keyword category in Braze.]({% image_buster /assets/img/front/front_keyword.png %}){: style="max-width:65%;"}
@@ -218,7 +218,7 @@ Then configure your filter:
 
 ### Billable Segments
 
-- SMS messages at Braze are charged per message segment. Understanding what defines a segment and how these messages are split is key in understanding how you are billed for messages. See more information in our [documentation]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/segments/).
+- SMS messages at Braze are charged per message segment. Understanding what defines a segment and how these messages will be split is key in understanding how you will be billed for messages. See more information in our [documentation]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/segments/).
 - Long agent responses will consume more billable segments.
 
 ### Logging data points

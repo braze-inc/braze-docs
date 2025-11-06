@@ -108,6 +108,6 @@ The following table lists possible returned errors and their associated troubles
 | `400 Invalid integration ID` | Check that your `integration_id` is valid. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-For additional status codes and associated error messages, refer to [Fatal errors & responses]({{site.baseurl}}/api/errors/#fatal-errors).
+For additional status codes and associated error messages, please refer to [Fatal errors & responses]({{site.baseurl}}/api/errors/#fatal-errors).
 
 {% endapi %}

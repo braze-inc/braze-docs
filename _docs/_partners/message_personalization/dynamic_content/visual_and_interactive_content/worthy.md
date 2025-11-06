@@ -17,7 +17,7 @@ _This integration is maintained by Worthy._
 ## About the integration
 
 - Create a Connected Content server and secured API for your messaging.
-- Construct your in-app messages with analytics and click-tracking that appears directly in Braze.
+- Construct your in-app messages with analytics and click-tracking that will appear directly in Braze.
 - Automatically export HTML via Worthy's drag-and-drop editor to use in **Custom Code** in-app message campaigns in Braze, complete with the required API connections and dynamic content you configure.
 
 ## Use cases
@@ -33,7 +33,7 @@ _This integration is maintained by Worthy._
 | Requirement | Description |
 | --- | --- |
 | [Worthy](https://worthy.ai/) account | A Worthy account is required to take advantage of this partnership. |
-| Braze SDK | You must configure the Braze SDK in your mobile application to send rich in-app messages. |
+| Braze SDK | You will need to configure the Braze SDK in your mobile application to send rich in-app messages. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Integration

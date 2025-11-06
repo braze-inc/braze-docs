@@ -158,4 +158,4 @@ Contact your Eagle Eye Customer Success Manager to have a resource assigned to y
 
 ## Support
 
-For integration support or troubleshooting, contact the Eagle Eye support team at [support@eagleeye.com](mailto:support@eagleeye.com).
+For integration support or troubleshooting, please contact the Eagle Eye support team at [support@eagleeye.com](mailto:support@eagleeye.com).

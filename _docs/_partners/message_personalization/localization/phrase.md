@@ -74,8 +74,8 @@ In Phrase, navigate to **Settings > Integrations > Connectors > New**.
     {% elsif {{custom_attribute.${attribute_name}}} == 'de-DE' or {{custom_attribute.${attribute_name}}} == 'de-AT' or {{custom_attribute.${attribute_name}}} == 'de-CH' %}
     {% endraw %}
     ```
-5. Click **Test connection**. A checkmark appears if the connection is successful. Hover over the icon to see additional details.<br><br>
-7. Lastly, click **Save**. This connector is available on the **Connectors** page.
+5. Click **Test connection**. A checkmark will appear if the connection is successful. Hover over the icon to see additional details.<br><br>
+7. Lastly, click **Save**. This connector will be available on the **Connectors** page.
 
 ## Step 3: Send content to Phrase and export back to Braze
 

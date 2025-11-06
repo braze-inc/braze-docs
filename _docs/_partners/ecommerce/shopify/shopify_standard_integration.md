@@ -29,7 +29,7 @@ If your Shopify account is associated with more than one store, you can change t
 {% endalert %}
 
 {: start="4"}
-4. After installing the Braze app, you’ll be redirected to Braze to confirm the workspace you want to connect to Shopify. A Shopify store can connect to only one workspace. If you must switch, select the correct workspace.<br><br>![A window asking you to confirm that you’re in the right workspace.]({% image_buster /assets/img/Shopify/confirm_workspace1.png %}){: style="max-width:70%;"}
+4. After installing the Braze app, you’ll be redirected to Braze to confirm the workspace you want to connect to Shopify. A Shopify store can connect to only one workspace. If you need to switch, select the correct workspace.<br><br>![A window asking you to confirm that you’re in the right workspace.]({% image_buster /assets/img/Shopify/confirm_workspace1.png %}){: style="max-width:70%;"}
 
 {: start="5"}
 5. Select **Begin setup**.<br><br>!["Integration settings" with field to enter domain and a button to begin setup.]({% image_buster /assets/img/Shopify/choose_account.png %})
@@ -55,7 +55,7 @@ Now you’ll select the Shopify data you want to track.
 
 ![“Tracking Shopify data” section with a checkbox to track behavioral events and user attributes.]({% image_buster /assets/img/Shopify/tracking_shopify_data.png %})
 
-The following events are enabled by default in the standard integration.
+The following events will be enabled by default in the standard integration.
 
 | Braze recommended events | Shopify custom events | Shopify custom attributes |
 | --- | --- | --- |
@@ -72,14 +72,14 @@ Through the standard setup, you have the option to perform an initial load of yo
 
 ![Historical data backfill toggle.]({% image_buster /assets/img/Shopify/historical_data_backfill_sync.png %})
 
-This table contains the data that is initially loaded through the backfill.
+This table contains the data that will be initially loaded through the backfill.
 
 | Braze recommended events | Shopify custom events | Braze standard attributes | Braze subscription statuses |
 | --- | --- | --- | --- |
 | {::nomarkdown}<ul><li>Order placed</li></ul>{:/}  | {::nomarkdown}<ul><li>shopify_tags</li><li>shopify_total_spent</li><li>shopify_order_count</li><li>shopify_last_order_id</li><li>shopify_last_order_name</li><li>shopify_zipcode</li>shopify_province</li></ul>{:/} | {::nomarkdown}<ul><li>Email</li><li>First Name</li><li>Last Name</li><li>Phone</li><li>City</li><li>Country</li></ul>{:/} | {::nomarkdown}<ul><li>Email marketing subscriptions associated with this Shopify store</li><li>SMS marketing subscriptions associated with this Shopify store</li></ul>{:/} |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation"}
 
-As your Shopify customer records are loaded into Braze, the Shopify customer ID is used as the Braze external ID. 
+As your Shopify customer records are loaded into Braze, the Shopify customer ID will be used as the Braze external ID. 
 
 {% alert note %}
 If you’re an existing Braze customer with active campaigns or Canvases, review [Shopify data features]({{site.baseurl}}/partners/ecommerce/shopify/shopify_data_features/#historical-backfill) for more details. 
@@ -123,7 +123,7 @@ With the Braze SDKs, you can track custom events or custom attributes that go be
   </tbody>
 </table>
 
-Tracking custom data helps you gain deeper insights into user behavior and personalize their experience even further. To implement custom events, you must edit your [storefront's theme code](https://help.shopify.com/en/manual/online-store/themes/theme-structure/extend/edit-theme-code) in the `theme.liquid` file. You may need help from your developers.
+Tracking custom data helps you gain deeper insights into user behavior and personalize their experience even further. To implement custom events, you need to edit your [storefront's theme code](https://help.shopify.com/en/manual/online-store/themes/theme-structure/extend/edit-theme-code) in the `theme.liquid` file. You may need help from your developers.
 
 For example, the following JavaScript snippet tracks if the current user subscribes to a newsletter, and logs that as a custom event on their profile in Braze:
 
@@ -176,7 +176,7 @@ After the metafield is created, populate it for your customers. We recommend the
 
 ### Step 4.2: Create an endpoint to retrieve your external ID
 
-You must create a public endpoint that Braze can call to retrieve the external ID. This is necessary for scenarios where Shopify can't provide the `braze.external_id` metafield. 
+You need to create a public endpoint that Braze can call to retrieve the external ID. This is necessary for scenarios where Shopify can't provide the `braze.external_id` metafield. 
 
 #### Endpoint specifications
 
@@ -220,18 +220,18 @@ Repeat [Step 4](#step-4), and enter your endpoint URL after selecting custom ext
 
 - If your external ID isn't generated when Braze sends a request to your endpoint, the integration will default to using the Shopify customer ID when the `changeUser` function is called. This step is crucial for merging the anonymous user profile with the identified user profile. As a result, there may be a temporary period during which different types of external IDs exist within your workspace.
 - When the external ID is available in the `braze.external_id` metafield, the integration will prioritize and assign this external ID. 
-    - If the Shopify customer ID was previously set as the Braze external ID, it is replaced with the `braze.external_id` metafield value. 
+    - If the Shopify customer ID was previously set as the Braze external ID, it will be replaced with the `braze.external_id` metafield value. 
 
 ### Step 4.4: Collect your email or SMS opt-ins from Shopify (optional)
 
 You have the option to collect your email or SMS marketing opt-ins from Shopify. 
 
-If you use the email or SMS channels, you can sync your email and SMS marketing opt-in states into Braze. If you sync email marketing opt-ins from Shopify, Braze will automatically create an email subscription group for all users associated with that specific store. You must create a unique name for this subscription group.
+If you use the email or SMS channels, you can sync your email and SMS marketing opt-in states into Braze. If you sync email marketing opt-ins from Shopify, Braze will automatically create an email subscription group for all users associated with that specific store. You need to create a unique name for this subscription group.
 
 ![“Collect subscribers” section with option to collect email or SMS marketing opt-ins.]({% image_buster /assets/img/Shopify/collect_email_subscribers.png %})
 
 {% alert note %}
-As mentioned in [Shopify overview]({{site.baseurl}}/shopify_overview/), if you want to use a third-party capture form, your developers need to integrate Braze SDK code. This will let you capture the email address and global email subscription status from form submissions. Specifically, you must implement and test these methods to your `theme.liquid` file:<br><br>
+As mentioned in [Shopify overview]({{site.baseurl}}/shopify_overview/), if you want to use a third-party capture form, your developers need to integrate Braze SDK code. This will let you capture the email address and global email subscription status from form submissions. Specifically, you need to implement and test these methods to your `theme.liquid` file:<br><br>
 - [setEmail](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setemail): Sets the email address on the user profile
 - [setEmailNotificationSubscriptionType](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setemailnotificationsubscriptiontype): Updates the global email subscription status
 {% endalert %}
@@ -258,7 +258,7 @@ The Braze SDKs enable various messaging channels, including Content Cards.
 
 #### Content Cards and Feature Flags
 
-To add content cards or feature flags, you must collaborate with your developers to insert the necessary SDK code directly into your `theme.liquid` file. For detailed instructions, refer to [Integrating the Braze SDK]({{site.baseurl}}/developer_guide/sdk_integration/). 
+To add content cards or feature flags, you will need to collaborate with your developers to insert the necessary SDK code directly into your `theme.liquid` file. For detailed instructions, refer to [Integrating the Braze SDK]({{site.baseurl}}/developer_guide/sdk_integration/). 
 
 #### Web push notifications
 
@@ -271,7 +271,7 @@ If you wish to see this supported in the future, submit a product request throug
 1. After you configure your setup, select **Finish Setup**.
 2. Enable the Braze app embed within your Shopify theme settings. Select **Open Shopify** to be redirected to your Shopify account to enable the app embed within your store’s theme settings. 
 
-![Banner that says you must active the Braze app embed in Shopify and contains a button to open Shopify.]({% image_buster /assets/img/Shopify/open_shopify.png %})
+![Banner that says you need to active the Braze app embed in Shopify and contains a button to open Shopify.]({% image_buster /assets/img/Shopify/open_shopify.png %})
 
 {: start="3"}
 3. After you enable the app embed, your setup is complete!

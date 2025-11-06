@@ -43,7 +43,7 @@ Adjust.addGlobalPartnerParameter("braze_device_id", Braze.getInstance(getApplica
 
 <!--
 {% alert important %}
-Prior to February 2023, our Adjust attribution integration used the IDFV as the primary identifier to match iOS attribution data. Braze customers don't need to use Objective-C to fetch the Braze `device_id` and send it to Adjust upon installation as there is no service disruption. 
+Prior to February 2023, our Adjust attribution integration used the IDFV as the primary identifier to match iOS attribution data. Braze customers don't need to use Objective-C to fetch the Braze `device_id` and send it to Adjust upon installation as there will be no service disruption. 
 {% endalert%}
 
 For those using the Swift SDK v5.7.0+, if you wish to continue using IDFV as the mutual identifier, you must ensure that the `useUUIDAsDeviceId` field is set to `false` so there is no disruption of the integration. 
@@ -54,9 +54,9 @@ If set to `true`, you must implement the iOS device ID mapping for Swift to pass
 {% tabs local %}
 {% tab Objective-C %}
 
-If you have an iOS app, your IDFV is collected by Adjust and sent to Braze. This ID will then be mapped to a unique device ID in Braze.
+If you have an iOS app, your IDFV will be collected by Adjust and sent to Braze. This ID will then be mapped to a unique device ID in Braze.
 
-Braze will still store IDFA values for users that have opted-in if you are collecting the IDFA with Braze, as described in our [iOS Upgrade Guide]({{site.baseurl}}/developer_guide/platforms/swift/ios_18/). Otherwise, the IDFV is used as a fallback identifier to map users.
+Braze will still store IDFA values for users that have opted-in if you are collecting the IDFA with Braze, as described in our [iOS Upgrade Guide]({{site.baseurl}}/developer_guide/platforms/swift/ios_18/). Otherwise, the IDFV will be used as a fallback identifier to map users.
 
 {% endtab %}
 {% tab Swift %}
@@ -67,14 +67,14 @@ If you have an iOS app, you may opt to collect IDFV by setting the `useUUIDAsDev
 {% endtabs %}
 
 {% alert note %}
-If you are planning to send post-install events from Adjust into Braze, you must: <br><br>1) Ensure that you append `external_id` as a session and event parameter within the Adjust SDK. For revenue event forwarding, you also need to set up `product_id` as a parameter for events. Visit [Adjust's documentation](https://github.com/adjust/sdks) for more information on defining partner parameters for event forwarding.<br><br>2) Generate a new API key to input into Adjust. This can be done by selecting the **Generate API Key** button found within the Adjust partner page in the Braze dashboard.
+If you are planning to send post-install events from Adjust into Braze, you will need to: <br><br>1) Ensure that you append `external_id` as a session and event parameter within the Adjust SDK. For revenue event forwarding, you will also need to set up `product_id` as a parameter for events. Visit [Adjust's documentation](https://github.com/adjust/sdks) for more information on defining partner parameters for event forwarding.<br><br>2) Generate a new API key to input into Adjust. This can be done by selecting the **Generate API Key** button found within the Adjust partner page in the Braze dashboard.
 {% endalert %}
 
 ### Step 2: Get the Braze data import key
 
 In Braze, navigate to **Integrations** > **Technology Partners** and select **Adjust**. 
 
-Here, you find the REST endpoint and generate your Braze data import key. After the key is generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in Adjust's dashboard.<br><br>![This image shows the "Data Import for Install Attribution" box found in the Adjust technology page. In this box, you are shown the data import key and the REST endpoint.]({% image_buster /assets/img/attribution/adjust.png %}){: style="max-width:90%;"}
+Here, you will find the REST endpoint and generate your Braze data import key. After the key is generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in Adjust's dashboard.<br><br>![This image shows the "Data Import for Install Attribution" box found in the Adjust technology page. In this box, you are shown the data import key and the REST endpoint.]({% image_buster /assets/img/attribution/adjust.png %}){: style="max-width:90%;"}
 
 ### Step 3: Configure Braze in Adjust
 
@@ -102,7 +102,7 @@ Assuming you configure your integration as suggested, Braze will map Adjust's da
 
 ## Facebook and X (formerly Twitter) attribution data
 
-Attribution data for Facebook and X (formerly Twitter) campaigns are not available through our partners. These media sources do not permit their partners to share attribution data with third parties and, therefore, our partners cannot send that data to Braze.
+Attribution data for Facebook and X (formerly Twitter) campaigns is not available through our partners. These media sources do not permit their partners to share attribution data with third parties and, therefore, our partners cannot send that data to Braze.
 
 ## Adjust click tracking URLs in Braze (optional)
 

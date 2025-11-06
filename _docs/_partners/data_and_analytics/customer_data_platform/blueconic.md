@@ -19,19 +19,19 @@ _This integration is maintained by Blueconic._
 The Braze and BlueConic integration allows users to unify data across persistent, individual profiles and then sync it across the two systems for import goals via an Amazon Web Services S3 server. Potential goals include growth-focused initiatives, customer lifecycle orchestration, modeling and analytics, digital products and experiences, audience-based monetization, and more. This integration supports both scheduled batch import and export. 
 
 {% alert important %}
-When using the integration, BlueConic sends deltas (changing data) on each sync. This includes any profiles that have changed since the last send and all attributes of that profile. Monitor data point usage accordingly.
+When using the integration, BlueConic will send deltas (changing data) on each sync. This includes any profiles that have changed since the last send and all attributes of that profile. Monitor data point usage accordingly.
 {% endalert %}
 
 ## Prerequisites
 
 | Requirement | Description |
 | --- | --- |
-| BlueConic account | A [BlueConic account](https://www.blueconic.com/) is required to take advantage of this partnership. You need access to [view and edit connections](https://support.blueconic.com/hc/en-us/articles/202607121-BlueConic-Roles) within your BlueConic account to access the plugins. |
+| BlueConic account | A [BlueConic account](https://www.blueconic.com/) is required to take advantage of this partnership. You will need access to [view and edit connections](https://support.blueconic.com/hc/en-us/articles/202607121-BlueConic-Roles) within your BlueConic account to access the plugins. |
 | Braze REST API key | A Braze REST API key with `users.track`, `users.export.segment`, `campaigns.list`, `campaigns.details`, `segments.lists`, and `segments.details` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | Braze REST endpoint | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance](https://portal.aws.amazon.com/billing/signup#/start). |
-| S3 authentication | You need access to an Amazon Web Services (S3) server to export and import the data. |
+| S3 authentication | You will need access to an Amazon Web Services (S3) server to export and import the data. |
 | Access key ID<br>Secret access key | The access key ID and secret access key will allow you to authenticate your S3 server for importing and exporting. |
-| AWS bucket | You must connect to S3 within the plugin. After authentication, the available buckets will show in a dropdown menu. This is where files to be imported or exported are stored. |
+| AWS bucket | You will need to connect to S3 within the plugin. After authentication, the available buckets will show in a dropdown menu. This is where files to be imported or exported are stored. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Integration
@@ -69,7 +69,7 @@ Once the authentication is complete, you must create at least one import or expo
 {% tab Export %}
 
 1. Select **Export data to Braze** in the left panel to configure your data export from BlueConic to Braze.<br><br>
-2. Choose a BlueConic segment for the export. Only profiles in this segment with matching identifiers in Braze is exported.<br>![A BlueConic segment of 20k profiles.]({% image_buster /assets/img/blueconic/braze8.png %}){: style="max-width:80%;"}<br><br>
+2. Choose a BlueConic segment for the export. Only profiles in this segment with matching identifiers in Braze will be exported.<br>![A BlueConic segment of 20k profiles.]({% image_buster /assets/img/blueconic/braze8.png %}){: style="max-width:80%;"}<br><br>
 3. Next, link identifiers between BlueConic profiles and Braze fields. You can optionally choose to let BlueConic create new records if no existing match is found.<br>![The Braze field "External ID" set to map to the BlueConic "Braze external ID" field.]({% image_buster /assets/img/blueconic/braze7.png %}){: style="max-width:80%;"}<br><br>
 4. Next, match the BlueConic data fields you are exporting to Braze fields. Use the dropdown menu from the BlueConic icon to choose the type of [information](https://support.blueconic.com/hc/en-us/articles/4405501836955-Braze-Connection#creating-export-goals) you want to export. Available information includes profile properties, BlueConic profile identifiers, associated segments, all viewed interactions, permission levels, and a static text value.<br>![]({% image_buster /assets/img/blueconic/braze6.png %}){: style="max-width:80%;"}<br><br>
 5. Lastly, click **Run the connection** to start the connection. Visit [BlueConic](https://support.blueconic.com/hc/en-us/articles/205957522-Scheduling-Connections) to learn more about scheduling and running connections.

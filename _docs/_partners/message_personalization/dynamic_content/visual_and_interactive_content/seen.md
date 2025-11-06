@@ -23,7 +23,7 @@ Before you start, you'll need the following:
 |-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
 | A SEEN campaign   | A SEEN campaign is required to take advantage of this partnership.                                                                     |
 | Data source   | You'll need to send data to SEEN to personalize your videos. Make sure you have all relevant data available in Braze, and that you pass data with **braze_id** as the identifier. |
-| Braze Data Transformation Webhook URL   | Braze Data Transformation is used to reformat the incoming data from SEEN so it can be accepted by Braze’s /users/track endpoint. |
+| Braze Data Transformation Webhook URL   | Braze Data Transformation will be used to reformat the incoming data from SEEN so it can be accepted by Braze’s /users/track endpoint. |
 
 ## Rate limit
 
@@ -52,7 +52,7 @@ Create a new [webhook campaign]({{site.baseurl}}/user_guide/message_building_by_
   <tbody>
     <tr>
       <td><strong>Webhook URL</strong></td>
-      <td>Use the following webhook URL. You receive your <code>campaign_slug</code> from SEEN to call the correct endpoint.<br><br><code>https://api.seen.io/v1/campaigns/{campaign_slug}/receivers/</code></td>
+      <td>Use the following webhook URL. You will receive your <code>campaign_slug</code> from SEEN to call the correct endpoint.<br><br><code>https://api.seen.io/v1/campaigns/{campaign_slug}/receivers/</code></td>
     </tr>
     <tr>
       <td><strong>HTTP Method</strong></td>
@@ -71,7 +71,7 @@ Create a new [webhook campaign]({{site.baseurl}}/user_guide/message_building_by_
     </tr>
     <tr>
       <td><strong>Request headers</strong></td>
-      <td>Use the following information to fill out your request headers:<br>- <strong>Authorization:</strong> <code>Token {token}</code><br>- <strong>Content-Type:</strong> <code>application/json</code><br><br>You receive your Authentication Token from SEEN.</td>
+      <td>Use the following information to fill out your request headers:<br>- <strong>Authorization:</strong> <code>Token {token}</code><br>- <strong>Content-Type:</strong> <code>application/json</code><br><br>You will receive your Authentication Token from SEEN.</td>
     </tr>
   </tbody>
 </table>
@@ -84,7 +84,7 @@ If everything works as intended, go to Braze, then set the rate at which the cam
 
 ### Step 2: Create data transformation
 
-1. Create new [custom attribute]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#managing-custom-attributes) fields for `landing_page_url` and `email_thumbnail_url`. These are the two attributes we is using in this example.
+1. Create new [custom attribute]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#managing-custom-attributes) fields for `landing_page_url` and `email_thumbnail_url`. These are the two attributes we will be using in this example.
 2. Open [Data Transformation]({{site.baseurl}}/user_guide/data_and_analytics/data_transformation/creating_a_transformation/#prerequisites) under **Data Settings**, and select **Create transformation**.
 3. Give your transformation a name, then choose **Start from scratch** and set **Destination** to **POST: Track users**.
 4. Select **Share your Webhook URL with SEEN**.

@@ -34,7 +34,7 @@ The following Currents integration is supported for both [Amazon S3](#setting-up
 
 #### Step 1: Locate your external ID {#step-one}
 
-In the [Fivetran Dashboard](https://fivetran.com/dashboard), select **+ Connector**, and then select the **Braze** connector to launch the setup form. Next, select **Amazon S3**. Note the external ID provided here; you need it to allow Fivetran to access your S3 bucket. 
+In the [Fivetran Dashboard](https://fivetran.com/dashboard), select **+ Connector**, and then select the **Braze** connector to launch the setup form. Next, select **Amazon S3**. Note the external ID provided here; you will need it to allow Fivetran to access your S3 bucket. 
 
 ![The Fivetran set up Braze connector form. The external ID field needed for this step is located in the middle of the page in a light gray box.]({% image_buster /assets/img/fivetran_braze_setupform_as3.png %})
 
@@ -84,7 +84,7 @@ In AWS, navigate to **Roles**, then select **Create New Role**.
 
 ![The "Roles" page with the button to create a new role.]({% image_buster /assets/img/fivetran_iam_new_role.png %})
 
-Select **Another AWS Account** and provide the Fivetran account ID `834469178297`. Make sure to check the **Require external ID** checkbox. Here, you provide the external ID found in step 1.
+Select **Another AWS Account** and provide the Fivetran account ID `834469178297`. Make sure to check the **Require external ID** checkbox. Here, you will provide the external ID found in step 1.
 
 ![The field to input your "Account ID", a checkbox to require the external ID, and a blank textbox to input your "External ID".]({% image_buster /assets/img/fivetran_another_aws_account.png %})
 
@@ -130,7 +130,7 @@ Navigate to your [Google Storage Console](https://console.cloud.google.com/stora
 
 ![The Google Storage Console available buckets. Locate a bucket and select the vertical three dot icon to open the drop down that allows you to edit bucket permissions.]({% image_buster /assets/img/fivetran_edit_bucket_permissions_gcs.png %})
 
-Next, grant `Storage Object Viewer` access to the email from [step 1](#step-one2) by adding the email as a member. Make a note of the bucket name; you need it in the next step to configure Fivetran.
+Next, grant `Storage Object Viewer` access to the email from [step 1](#step-one2) by adding the email as a member. Make a note of the bucket name; you will need it in the next step to configure Fivetran.
 
 ![Bucket with permissions.]({% image_buster /assets/img/fivetran_add_members_gcs.png %})
 

@@ -17,8 +17,8 @@ _This integration is maintained by Punchh._
 
 Using the Punchh coupon framework and Braze, you can achieve the following scenarios:
 
-- Generate a coupon code when the guest clicks a coupon generation link in an email: The coupon code is generated dynamically and shown on a web page.
-- Generate a coupon code when the guest opens an email: The coupon code is generated dynamically and shown as an image within the email.
+- Generate a coupon code when the guest clicks a coupon generation link in an email: The coupon code will be generated dynamically and shown on a web page.
+- Generate a coupon code when the guest opens an email: The coupon code will be generated dynamically and shown as an image within the email.
 
 ## Integrating dynamic coupon code generation
 
@@ -27,7 +27,7 @@ Using the Punchh coupon framework and Braze, you can achieve the following scena
 1. Using a Punchh coupon campaign, create a dynamic generation coupon campaign as shown in the following image.
 2. The Punchh coupon framework will generate the following parameters to enable dynamic coupon generation:
     - Dynamic coupon generation token: This is a system-generated security token for encryption.
-    - Dynamic coupon generation URL: This URL is embedded in the email as a link or image, as required by the business.
+    - Dynamic coupon generation URL: This URL will be embedded in the email as a link or image, as required by the business.
 
 ![The form for creating a coupon campaign in Punchh.]({% image_buster /assets/img/punchh/punchh8.png %}){: style="max-width:60%;"}
 
@@ -94,7 +94,7 @@ https://fakebrandz.punchh.com/request_coupons/7xY3bL9jRfZ1pA6mc8qD2eS4vT5wX?sign
 ```
 {% endraw %}
 
-When a user clicks the coupon URL, they'll be redirected to a Punchh-hosted web page, where their generated coupon is displayed.
+When a user clicks the coupon URL, they'll be redirected to a Punchh-hosted web page, where their generated coupon will be displayed.
 
 ![Example confirmation message after a user successfully generates a coupon code.]({% image_buster /assets/img/punchh/punchh7.png %})
 

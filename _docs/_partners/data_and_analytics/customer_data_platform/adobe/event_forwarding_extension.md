@@ -47,7 +47,7 @@ To connect the Edge Network to Braze, the following are required:
 
 ### Step 2: Create a secret
 
-Create a new [event forwarding secret](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=en) and set the value to your [Braze API key](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=en#configuration-details). This is used to authenticate the connection to your account while keeping the value secure.
+Create a new [event forwarding secret](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=en) and set the value to your [Braze API key](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=en#configuration-details). This will be used to authenticate the connection to your account while keeping the value secure.
 
 ### Step 3: Install and configure the Braze extension
 
@@ -112,7 +112,7 @@ User attributes can be a JSON object containing fields that will create or updat
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
-All attributes added within the configuration is sent each time the event is sent to Braze, regardless of whether the attribute's value has changed. When configuring user attributes, ensure you know how this will affect your data point usage.
+All attributes added within the configuration will be sent each time the event is sent to Braze, regardless of whether the attribute's value has changed. When configuring user attributes, ensure you know how this will affect your data point usage.
 {% endalert %}
 
 {% endtab %}
@@ -147,7 +147,7 @@ To link the event to a user, you must complete either the `External User ID` fie
 | Purchase time | Date-time as a string in ISO 8601 or in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format. | Yes |
 | Currency | Currency as a string in [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) alphabetic currency code format. | Yes |
 | Price | The price of the object. | Yes |
-| Quantity | The quantity purchased. If not provided, the default value is 1. The maximum value must be lower than 100. | No |
+| Quantity | The quantity purchased. If not provided, the default value will be 1. The maximum value must be lower than 100. | No |
 | App identifier | The app identifier or `app_id` is a parameter associating activity with a specific app in your workspace. It designates which app within the workspace you are interacting with. | No |
 | Purchase properties | A JSON object containing custom properties of the purchase. | No |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
@@ -180,7 +180,7 @@ User attributes can be a JSON object containing fields that will create or updat
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
-All attributes added within the configuration are sent each time the event is sent to Braze, regardless of whether the attribute's value has changed. When configuring user attributes, ensure you know how this affects your data point usage. 
+All attributes added within the configuration will be sent each time the event is sent to Braze, regardless of whether the attribute's value has changed. When configuring user attributes, please ensure you know how this will affect your data point usage. 
 {% endalert %}
 
 {% endtab %}
@@ -188,5 +188,5 @@ All attributes added within the configuration are sent each time the event is se
 
 ### Step 6: Validate data within Braze
 
-If the event collection and Adobe Experience Platform integration were successful, you see events within the Braze console when [viewing user profiles]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/). Specifically, the new event data sent to Braze is reflected in the **Purchases** or **Custom Events** section of a particular user’s [overview tab]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/#overview-tab).
+If the event collection and Adobe Experience Platform integration were successful, you will see events within the Braze console when [viewing user profiles]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/). Specifically, the new event data sent to Braze is reflected in the **Purchases** or **Custom Events** section of a particular user’s [overview tab]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/#overview-tab).
 

@@ -54,7 +54,7 @@ If your credentials and API definitions are correct, Braze will return a success
 
 ![Testing an External API configuration with a sample payload and success response]({% image_buster /assets/img/lemnisk/test_ext_api.png %})
 
-Next, you'll verify that your events are being sent to Braze successfully. In the Braze dashboard, go to **Audience** > **Search Users**, then enter one of the identifiers from your External API configuration (such as a user email address). If everything is working correctly, the profile that received your test API trigger is listed.
+Next, you'll verify that your events are being sent to Braze successfully. In the Braze dashboard, go to **Audience** > **Search Users**, then enter one of the identifiers from your External API configuration (such as a user email address). If everything is working correctly, the profile that received your test API trigger will be listed.
 
 ![Viewing a user's profile and activity overview in Braze]({% image_buster /assets/img/lemnisk/braze_cov.png %})
 

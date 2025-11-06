@@ -30,9 +30,9 @@ Braze offers two integration options for Shopify merchants that are designed to 
 
 ## How the integration works
 
-If you've already set up and turned on historical backfill in your configuration settings, the intial data sync will immediately begin. Braze will import all customers and order placed events from the last 90 days prior to your Shopify integration connection. When Braze imports your Shopify customers, we assign the `external_id` type that you chose in your configuration settings.
+If you've already set up and turned on historical backfill in your configuration settings, the intial data sync will immediately begin. Braze will import all customers and order placed events from the last 90 days prior to your Shopify integration connection. When Braze imports your Shopify customers, we will assign the `external_id` type that you chose in your configuration settings.
 
-If you plan to integrate with a custom external ID (for either the [standard integration]({{site.baseurl}}/partners/ecommerce/shopify/shopify_standard_integration/#step-4-configure-how-you-manage-users) or the [custom integration]({{site.baseurl}}/partners/ecommerce/shopify/shopify_custom_integration/#step-6-configure-how-you-manage-users-optional)), you are required to add your custom external ID as a Shopify customer metafield to all existing Shopify customer profiles and then perform the [historical backfill]({{site.baseurl}}/partners/ecommerce/shopify/shopify_data_features/#historical-backfill). 
+If you plan to integrate with a custom external ID (for either the [standard integration]({{site.baseurl}}/partners/ecommerce/shopify/shopify_standard_integration/#step-4-configure-how-you-manage-users) or the [custom integration]({{site.baseurl}}/partners/ecommerce/shopify/shopify_custom_integration/#step-6-configure-how-you-manage-users-optional)), you will be required to add your custom external ID as a Shopify customer metafield to all existing Shopify customer profiles and then perform the [historical backfill]({{site.baseurl}}/partners/ecommerce/shopify/shopify_data_features/#historical-backfill). 
 
 Following the initial data sync, Braze will continuously track new data and updates, directly from Shopify and Braze SDKs.
 
@@ -46,7 +46,7 @@ After the integration is live, Braze will gather user data from two key sources 
 - **Shopify Web Pixel API and app embeds:** This powers the Braze Web SDK and Javascript SDK to support on-site tracking, identity management, eCommerce behavioral data, and power messaging channels like in-app messages.
 - **Shopify webhooks:** eCommerce behavioral data, product syncing, and subscriber collection
 
-During integration onboarding, you must select when the Braze SDKs initialize and load your Shopify site: 
+During integration onboarding, you will need to select when the Braze SDKs initialize and load your Shopify site: 
 - Upon site visit (such as session start)
     - **What it does:** Tracks anonymous users—such as guest shoppers—to access more data for deeper personalization 
 - Upon account signup (such as account login) 
@@ -77,11 +77,11 @@ The integration requires Braze SDKs and Shopify services to work together to app
 
 ### Syncing Shopify email and SMS marketing opt-ins
 
-If you enable subscriber collection in your configuration settings, you must assign a subscription group for each store you connect to Braze. This means your customers is categorized as either “subscribed” or “unsubscribed” to your store’s subscription group.
+If you enable subscriber collection in your configuration settings, you need to assign a subscription group for each store you connect to Braze. This means your customers will be categorized as either “subscribed” or “unsubscribed” to your store’s subscription group.
 
 The Shopify marketing opt-in status for email and SMS marketing can be updated in the following ways:
 - **Manual update:** You can manually change a user’s email or SMS marketing opt-in status in your Shopify admin.
-- **Shopify newsletter footer:** If a user enters their email in the Shopify default newsletter footer, their opt-in status is updated.
+- **Shopify newsletter footer:** If a user enters their email in the Shopify default newsletter footer, their opt-in status will be updated.
 - **Checkout process:** If a user updates their opt-in status during checkout.
 
 {% alert note %}
@@ -135,7 +135,7 @@ When you use these sign-up form templates, Braze automatically updates the globa
 
 #### Third-party sign-up forms 
 
-If you're using a third-party platform or Shopify plugin for your sign-up forms, you must work with your developers to integrate Braze SDK code to capture the email address and global email subscription status from form submissions. To learn more, review [Shopify standard integration setup]({{site.baseurl}}/shopify_standard_integration/) and [Shopify custom integration setup]({{site.baseurl}}/shopify_custom_integration/).
+If you're using a third-party platform or Shopify plugin for your sign-up forms, you need to work with your developers to integrate Braze SDK code to capture the email address and global email subscription status from form submissions. To learn more, review [Shopify standard integration setup]({{site.baseurl}}/shopify_standard_integration/) and [Shopify custom integration setup]({{site.baseurl}}/shopify_custom_integration/).
 
 ### Product syncing 
 
@@ -143,4 +143,4 @@ Braze supports the ability to sync your Shopify store’s products into a Braze 
 
 ## Data subject requests
 
-As part of the Braze platform’s Shopify integration, Braze automatically receives [Shopify’s compliance webhooks](https://shopify.dev/docs/apps/build/privacy-law-compliance/). However, because customers are the data controllers of their End Users’ data, customers must carry out any actions required to address Data Subject Requests received with respect to End User data in Braze (including End User data received via the Shopify integration). See our [Data Protection Technical Assistance]({{site.baseurl}}/dp-technical-assistance) documentation for more details.
+As part of the Braze platform’s Shopify integration, Braze automatically receives [Shopify’s compliance webhooks](https://shopify.dev/docs/apps/build/privacy-law-compliance/). However, because customers are the data controllers of their End Users’ data, customers must carry out any actions required to address Data Subject Requests received with respect to End User data in Braze (including End User data received via the Shopify integration). Please see our [Data Protection Technical Assistance]({{site.baseurl}}/dp-technical-assistance) documentation for more details.

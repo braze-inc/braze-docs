@@ -15,7 +15,7 @@ Tool:
 
 ## Feature availability
 
-All Braze customers will immediately have access to Audience Sync to Google and Facebook. To unlock additional Audience Sync destinations including TikTok, Pinterest, Snapchat, or Criteo, you must purchase Audience Sync Pro. Contact your Braze account manager for more details.
+All Braze customers will immediately have access to Audience Sync to Google and Facebook. To unlock additional Audience Sync destinations including TikTok, Pinterest, Snapchat, or Criteo, you will need to purchase Audience Sync Pro. Contact your Braze account manager for more details.
 
 ## Use cases
 
@@ -75,7 +75,7 @@ To use an Audience Sync Pro partner including TikTok, Pinterest, Snapchat, or Cr
 
 ![Audience Sync Pro with no partners selected yet.]({% image_buster /assets/img/audience_sync/audience_sync_pro1.png %}){: style="max-width:75%;"}
 
-First, select the partners you intend to use by selecting Select Partners. Each purchase of Audience Sync Pro provides you three allotted Audience Sync Pro destinations, which are available within each of your workspaces within your dashboard.
+First, select the partners you intend to use by selecting Select Partners. Each purchase of Audience Sync Pro will provide you 3 allotted Audience Sync Pro destinations, which will be available within each of your workspaces within your dashboard.
 
 ![Option to select up to three partners to connect to Braze.]({% image_buster /assets/img/audience_sync/audience_sync_pro2.png %}){: style="max-width:65%;"}
 
@@ -89,11 +89,11 @@ Lastly, create your Audience Sync step in Canvas using this Audience Sync Pro de
 
 ### Audience Sync error emails
 
-If the error is related to the overall partner integration (such as an authorization issue), an email is sent to the user who connected the integration. If that user no longer exists, then the administrators receive the emails. 
+If the error is related to the overall partner integration (such as an authorization issue), an email is sent to the user who connected the integration. If that user no longer exists, then the administrators will receive the emails. 
 
 If the error is related to issues with the Audience Sync component (such as "Audience Does Not Exist") in Canvas, an email is sent to the user who set up the Canvas. If that user no longer exists, then it falls back to the company administrator.
 
-To configure who receives these emails, contact your customer success manager to add recipients under **Notification Preferences**. Because this feature will change the current behavior, you'll need to immediately add recipients to this new notification preference as Braze doesn't opt-in anyone by default, and to make sure no error emails are missed.
+To configure who will receive these emails, contact your customer success manager to add recipients under **Notification Preferences**. Because this feature will change the current behavior, you'll need to immediately add recipients to this new notification preference as Braze doesn't opt-in anyone by default, and to make sure no error emails are missed.
 
 ## Data privacy considerations
 
@@ -103,7 +103,7 @@ This documentation is not intended to provide, nor may it be relied upon as prov
 
 When building audiences for Ad Tracking, you may wish to include or exclude certain users based on their preferences, and to comply with privacy laws, such as the “Do Not Sell or Share” right under the [CCPA](https://oag.ca.gov/privacy/ccpa). Marketers should implement the relevant filters for users’ eligibility within their Canvas entry criteria. Below we list some options.
 
-If you have collected the [iOS IDFA through the Braze SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/#optional-idfa-collection), you are able to use the "Ads Tracking Enabled" filter. Select the value as `true` to only send users into Audience Sync destinations where they have opted in.
+If you have collected the [iOS IDFA through the Braze SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/#optional-idfa-collection), you will be able to use the "Ads Tracking Enabled" filter. Select the value as `true` to only send users into Audience Sync destinations where they have opted in.
 
 ![A Canvas with an entry audience of "Ad Tracking Enabled is true".]({% image_buster /assets/img/audience_sync/audience_sync2.png %})
 

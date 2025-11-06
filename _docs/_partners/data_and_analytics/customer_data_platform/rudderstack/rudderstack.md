@@ -42,7 +42,7 @@ In the Braze destination, provide the app key, Braze REST API key, data cluster,
 
 You can choose to integrate RudderStack's web and native client-side libraries with Braze using one the following approaches:
 
-- [Side-by-side / device mode](#device-mode)**:** RudderStack sends the event data to Braze directly from your client (browser or mobile application).
+- [Side-by-side / device mode](#device-mode)**:** RudderStack will send the event data to Braze directly from your client (browser or mobile application).
 - [Server-to-server / cloud mode](#cloud-mode)**:** The Braze SDK sends the event data directly to RudderStack, which is then transformed and routed to Braze.
 - [Hybrid mode](#hybrid-mode)**:** Use hybrid mode to send iOS and Android auto-generated and user-generated events to Braze using a single connection.
 
@@ -69,7 +69,7 @@ To complete the device mode integration, refer to the detailed RudderStack instr
 
 In this mode, the SDK sends the event data directly to the RudderStack server. RudderStack then transforms this data and routes it to the desired destination. This transformation is done in the RudderStack backend using RudderStack's transformer module.
 
-To enable the integration, you must map the RudderStack methods to Braze, as described under [supported methods](#supported-methods).
+To enable the integration, you will need to map the RudderStack methods to Braze, as described under [supported methods](#supported-methods).
 
 {% alert note %} 
 RudderStack's server-side SDKs (Java, Python, Node.js, Go, Ruby) support only cloud mode. This is because their server-side SDKs operate in the RudderStack backend and cannot load any Braze-specific SDK. 

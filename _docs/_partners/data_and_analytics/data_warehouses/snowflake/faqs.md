@@ -22,7 +22,7 @@ Use data sharing for the same region in the following scenarios:
 Otherwise, use data sharing for cross region. 
 
 ### What should I do with my data share when I switch to a new Snowflake account?
-You can delete the old data share associated with your old Snowflake account and then create a new share for the new account. All historical data is available in the new share. 
+You can delete the old data share associated with your old Snowflake account and then create a new share for the new account. All historical data will be available in the new share. 
 
 ### Why don't I see data in my data share?
 You might have used the wrong Snowflake account ID when creating your data share. The account ID on the data sharing dashboard must match the output of `CURRENT_ACCOUNT()` from your Snowflake account.

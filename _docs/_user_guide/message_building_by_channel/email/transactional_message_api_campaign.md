@@ -43,7 +43,7 @@ Now, you can move on to configuring your transactional email campaign.
 
 ## Step 2: Configure your campaign
 
-The campaign creation flow for Transaction Email campaigns are simplified compared to that of a [standard email campaign]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/) to ensure your business-critical transaction email can reach all users.
+The campaign creation flow for Transaction Email campaigns is simplified compared to that of a [standard email campaign]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/) to ensure your business-critical transaction email can reach all users.
 
 As a result, you'll notice several settings you may be familiar with from other Braze campaign types are not required when setting up this campaign type:
 

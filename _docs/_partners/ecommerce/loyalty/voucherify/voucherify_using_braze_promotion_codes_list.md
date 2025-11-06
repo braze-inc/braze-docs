@@ -28,7 +28,7 @@ You can use the Voucherify campaign name to name the list and check data consist
 
 ![]({% image_buster /assets/img/voucherify/voucherify_promotion_code_list.png %}){: style="max-width:50%;"}
 
-Next, add the code snippet that refers to the codes from the list; it is populated with a unique code when the message is sent.
+Next, add the code snippet that refers to the codes from the list; it will be populated with a unique code when the message is sent.
 
 ### Additional settings
 
