@@ -109,13 +109,13 @@ When sending a Canvas with a speed rate limit, the rate limit is shared between 
 
 As an alternative to a rate limit that gets shared across an entire multi-channel campaign or Canvas, you can select a specific rate limit per channel. In this case, the rate limit will apply to each of your selected channels. For example, you can set your campaign or Canvas to send a maximum of 5,000 webhooks and 2,500 SMS messages per minute across the campaign or Canvas.
 
-![Separate rate limits for two channels, webhook and SMS/MMS/RCS, with 5,000 and 2,500 messages per minute respectively.]({% image_buster /assets/img_archive/channel_rate_limits.png %}){: style="max-width:50%;"} 
+![Separate rate limits for two channels, webhook and SMS/MMS/RCS, with 5,000 and 2,500 messages per minute respectively.]({% image_buster /assets/img_archive/channel_rate_limits.png %}){: style="max-width:70%;"} 
 
 ##### Push notifications
 
 For campaigns or Canvases with push platforms (like Android, iOS, Web Push, or Kindle), you can select **Push notifications** to enforce a rate limit that is shared between all push platforms in your campaign or Canvas.
 
-![The channel dropdown with options for push platforms and push notifications.]({% image_buster /assets/img_archive/push_notifications_rate_limit.png %})
+![The channel dropdown with options for push platforms and push notifications.]({% image_buster /assets/img_archive/push_notifications_rate_limit.png %}){: style="max-width:30%;"} 
 
 {% alert note %}
 If you select a limit for push notifications, you can't set individual push channel rate limits. This also applies if you select individual push channel limits, then shared push notification limits aren't available.
