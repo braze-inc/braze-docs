@@ -43,7 +43,6 @@ The following are already supported for content cards, in-app messages, banners:
 - ✅ Keyboard navigation support
 - ✅ Focus management
 - ✅ Screen reader announcements
-- ✅ Semantic HTML structure
 - ✅ Alt text support for images
 
 # Accessibility Guide for SDK Integrators
