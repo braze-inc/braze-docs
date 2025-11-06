@@ -62,7 +62,7 @@ If you want anonymous users to see a Content Card in their very first session, u
 For both options, after a card is created, Braze does not recalculate audience eligibility or personalization.
 {% endalert %}
 
-### Differences between creating cards at launch or entry versus at first impression {#differences}
+### Differences between creating cards at launch or entry versus at first impression
 
 This section describes the main differences between card creation at campaign launch or step entry versus at first impression.
 
