@@ -118,7 +118,7 @@ For campaigns or Canvases with push platforms (like Android, iOS, Web Push, or K
 ![The channel dropdown with options for push platforms and push notifications.]({% image_buster /assets/img_archive/push_notifications_rate_limit.png %}){: style="max-width:30%;"} 
 
 {% alert note %}
-If you select a limit for push notifications, you can't set individual push channel rate limits. This also applies if you select individual push channel limits, then shared push notification limits aren't available.
+If you select a limit for push notifications, you can't set individual push channel rate limits. Likewise, if you select limits for individual push channels, you can't set shared push notification limits.
 {% endalert %}
 
 ##### Rate limiting considerations
