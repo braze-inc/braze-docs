@@ -23,8 +23,8 @@ search_tag: Partner
 | SessionM | A SessionM Core REST API key | The SessionM API key associated with your instance and the Braze integration. This key can be used for all core based calls including tags. This can be created in the SessionM dashboard from **Digital Properties**. |
 | SessionM | A SessionM Core REST API secret | The SessionM API secret associated with your instance and the Braze integration. This key can be used for all core based calls including tags. This can be created in the SessionM dashboard from **Digital Properties**. |
 | SessionM | A SessionM Connect REST endpoint | Your endpoint will depend on the SessionM URL of your instance. Contact your SessionM technical account manager or Delivery team to provide. |
-| SessionM | A SessionM Connect REST Authorization string | The SessionM Connect Basic Authorization string associated with your instance. This authentication string can be used for all connect based calls including get_user_offers. Contact your SessionM technical account manager or Delivery team to provide. |
-| SessionM | A SessionM Connect REST Retailer ID | A unique guid identification to the specific customer associated with your instance. Contact your SessionM technical account manager or Delivery team. |
+| SessionM | A SessionM Connect REST Authorization string | The SessionM Connect Basic Authorization string associated with your instance. This authentication string can be used for all connect based calls including get_user_offers. Please contact your SessionM technical account manager or Delivery team to provide. |
+| SessionM | A SessionM Connect REST Retailer ID | A unique guid identification to the specific customer associated with your instance. Contact your SessionM technical account manager or Delivery team to provide. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert note %} 
@@ -227,7 +227,7 @@ Create an API-triggered campaign or Canvas in Braze to be triggered by SessionM.
 
 ![API trigger properties.]({% image_buster /assets/img/sessionm/apiTriggerProperties.png %})
 
-In the **Schedule Delivery** tab, note down the campaign or Canvas ID as this is added to SessionM campaign **Advanced Settings**.
+In the **Schedule Delivery** tab, note down the campaign or Canvas ID as this will be added to SessionM campaign **Advanced Settings**.
 
 ![API triggered campaign.]({% image_buster /assets/img/sessionm/apiTriggerCampaign.png %})
 

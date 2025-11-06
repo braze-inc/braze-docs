@@ -54,7 +54,7 @@ Only users who already exist within Braze are added or removed from a cohort. Co
 #### Step 3.1: Define your query
 
 {% alert note %}
-Query columns must be specified with the exact column names and data type. The query columns must include at least one of the columns: `user_ids`, `device_ids`, or braze alias column match with configuration on the UI. Only user profiles that exist within Braze is added to a cohort. Cohort Import will not create new user profiles.
+Query columns must be specified with the exact column names and data type. The query columns must include at least one of the columns: `user_ids`, `device_ids`, or braze alias column match with configuration on the UI. Only user profiles that exist within Braze will be added to a cohort. Cohort Import will not create new user profiles.
 {% endalert %}
 
 1. Navigate to **Data Workbench** > **Queries**.
@@ -89,7 +89,7 @@ FROM
   example_cohort_table
 ```
 
-After running the query, these user aliases is added to the cohort in Braze:
+After running the query, these user aliases will be added to the cohort in Braze:
 
  - `TDCohort1`
  - `TDCohort2`
@@ -116,7 +116,7 @@ FROM
   example_cohort_table
 ```
 
-After running the query, these user aliases is added to the cohort in Braze:
+After running the query, these user aliases will be added to the cohort in Braze:
 
  - `"alias_label":"email", "alias_name":"TDCohort1@gmail.com"`
  - `"alias_label":"email", "alias_name":"TDCohort2@gmail.com"`
@@ -147,7 +147,7 @@ FROM
   example_cohort_table
 ```
 
-After running the query, these device IDs are added to the cohort in Braze:
+After running the query, these device IDs will be added to the cohort in Braze:
 
 - `1a2b3c`
 - `4d5f6g`
@@ -165,10 +165,10 @@ Once the query has been built, select **Export Results**. You can select an exis
 
 | Export Result Mapping |	Description	| 
 | ----------- | ----------- |
-| Cohort ID	| This is the backend cohort identifier that is sent to Braze. 	|
-| Cohort Name (Optional)	| This is the name that appears within the Cohort Filter in the Braze segmentation tool. If this is not set, the `Cohort ID` is used as the `Cohort Name`.	|
+| Cohort ID	| This is the backend cohort identifier that will be sent to Braze. 	|
+| Cohort Name (Optional)	| This is the name that will appear within the Cohort Filter in the Braze segmentation tool. If this is not set, the `Cohort ID` will be used as the `Cohort Name`.	|
 | Operation	| Used to determine whether the query should add or remove profiles from the cohort in Braze.	| 
-| Aliases (Optional) | When defined, the name of the corresponding column within your query is sent as the `alias_label`, and the values of each row in the column is sent as the `alias_name`.	| 
+| Aliases (Optional) | When defined, the name of the corresponding column within your query will be sent as the `alias_label`, and the values of each row in the column will be sent as the `alias_name`.	| 
 | Thread Count | Number of concurrent API calls. |
 
 Follow [Treasure Data's steps](https://docs.treasuredata.com/articles/#!int/braze-cohort-export-integration/a/ExportIntegrationTemplate-SpecifytheResultExportTarget) for configuring your export to meet your use case.
@@ -192,10 +192,10 @@ Create a new segment or choose an existing segment to sync to Braze as a cohort.
 | Activation Name	| The name of your activation.	|
 | Activation Description| A brief description of the activation.	|
 | Authentication	| Choose the Braze cohort authentication created in step 2.	| 
-| Cohort ID	| This is the backend cohort identifier that is sent to Braze. 	|
-| Cohort Name (Optional)	| This is the name that appears within the Cohort Filter in the Braze segmentation tool. If this is not set, the `Cohort ID` is used as the `Cohort Name`.	|
+| Cohort ID	| This is the backend cohort identifier that will be sent to Braze. 	|
+| Cohort Name (Optional)	| This is the name that will appear within the Cohort Filter in the Braze segmentation tool. If this is not set, the `Cohort ID` will be used as the `Cohort Name`.	|
 | Operation	| Used to determine whether the query should add or remove profiles from the cohort in Braze.	| 
-| Aliases (Optional) | When defined, the name of the corresponding column within your query is sent as the `alias_label`, and the values of each row in the column is sent as the `alias_name`.	| 
+| Aliases (Optional) | When defined, the name of the corresponding column within your query will be sent as the `alias_label`, and the values of each row in the column will be sent as the `alias_name`.	| 
 | Thread Count | Number of concurrent API calls. |
 
 #### Step 3.3: Set up output mapping
@@ -204,16 +204,16 @@ Create a new segment or choose an existing segment to sync to Braze as a cohort.
 
 | Activation Output Mapping |	Description	| 
 | ----------- | ----------- |
-| Attribute Columns	| Determine the columns from your segment database that is mapped as identifiers when syncing profiles to a Braze cohort.	|
+| Attribute Columns	| Determine the columns from your segment database that will be mapped as identifiers when syncing profiles to a Braze cohort.	|
 | String Builder| The string builder is not necessary for the Braze integration.	|
 
 {% alert important %}
  - When using `device_id` as the identifier, the **Output Column Name** must be named `device_ids`.
- - When using aliases as the identifier, the **Output Column Name** must be the name of the corresponding column within your query is sent as the `alias_label`, and the values of each row in the column is sent as the `alias_name`.
+ - When using aliases as the identifier, the **Output Column Name** must be the name of the corresponding column within your query will be sent as the `alias_label`, and the values of each row in the column will be sent as the `alias_name`.
  - When using `external_id` as the identifier, the **Output Column Name** must be named `user_ids`.
 {% endalert %}
 
-All non-relevant or misnamed column names is ignored. You may choose to use more than one identifier in your syncs.
+All non-relevant or misnamed column names will be ignored. You may choose to use more than one identifier in your syncs.
 
 #### Step 3.4: Define your activation schedule
 

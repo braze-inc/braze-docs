@@ -56,13 +56,13 @@ Read below to learn about these attributes.
 - Value tiers
 - Recent engagement data
 
-Verify the names of custom attributes that are sent to Braze from Amperity. Amperity adds a custom attribute whenever there isn’t a matching name.
+Verify the names of custom attributes that will be sent to Braze from Amperity. Amperity will add a custom attribute whenever there isn’t a matching name.
 
-Custom attributes are updated only for those users that have a matching `external_id` or `braze_id` within Braze.
+Custom attributes will be updated only for those users that have a matching `external_id` or `braze_id` within Braze.
 
 ### Amperity Audiences
 
-Audiences synced from Amperity to Braze are logged to user profiles as custom attributes. These can then be used to target those users in Braze.
+Audiences synced from Amperity to Braze will be logged to user profiles as custom attributes. These can then be used to target those users in Braze.
 
 ![Dropdown list of filters with Custom Attributes displaying in the Custom Data category.]({% image_buster /assets/img/amperity/custom_attributes_filters.png %}){: style="max-width:60%;"}
 
@@ -84,7 +84,7 @@ The data type used depends on the nature of the attribute. For example, an email
 
 ### Duplication of attributes
 
-Avoid sending custom attributes that duplicate default user profile fields. For example, birthdates should be sent to Braze as a user profile field named "dob" to match the Braze standard attribute. If they are sent as "birthday", "Birthdate", or any other string, a custom attribute is created, and the values in the "dob" field are not updated.
+Avoid sending custom attributes that duplicate default user profile fields. For example, birthdates should be sent to Braze as a user profile field named "dob" to match the Braze standard attribute. If they are sent as "birthday", "Birthdate", or any other string, a custom attribute will be created, and the values in the "dob" field will not be updated.
 
 ### Data points
 
@@ -153,7 +153,7 @@ Navigate to the query function in Amperity and construct an SQL query that will 
 1. Go to the **Orchestration** section and click the option to add a new orchestration. 
 2. Specify what the orchestration should do. This usually involves specifying the SQL query that should be executed and where the results should be sent. In this case, select the SQL query you created to generate the list of active customers and specify Braze as the destination for the results.
 3. Define when and how often the orchestration should run. For example, you might run the orchestration daily at a specific time.
-4. Save the orchestration after configuring it to your liking. It is added to your list of orchestrations in Amperity.
+4. Save the orchestration after configuring it to your liking. It will be added to your list of orchestrations in Amperity.
 5. Test the orchestration to make sure it works as expected. You can do this by manually triggering the orchestration and checking the results in Braze.
 
 ##### Step 3: Run the orchestration 
@@ -178,7 +178,7 @@ Check out Amperity’s documentation for examples of different segment types you
 2. Give your campaign a descriptive and unique name that will help you identify it later, especially if you have multiple campaigns.
 3. Select the segment of customers that you want to target with this campaign. This should be the segment you created earlier. <br>![The dropdown field for segments to exclude from targeting.]({% image_buster /assets/img/amperity/select_segments.png %}){: style="max-width:50%;"}<br><br>
 4. Choose the data you want to send as part of the campaign. This can include a range of customer attributes. ![The Edit Campaign Attributes modal allows for selecting a destination and customer attributes. ]({% image_buster /assets/img/amperity/edit_campaign_attributes.png %}){: style="max-width:90%;"}<br><br>
-5. Select **Braze** as the destination where the campaign data is sent.
+5. Select **Braze** as the destination where the campaign data will be sent.
 6. Choose when and how often you want the campaign to run. This can be a one-time event or a recurring schedule.
 7. Save your campaign and run a test to make sure it works as expected.
 

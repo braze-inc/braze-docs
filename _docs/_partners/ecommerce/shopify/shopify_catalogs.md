@@ -10,7 +10,7 @@ description: "This reference article covers how to import your products from Sho
 
 > You can sync all products from your Shopify store to a Braze [catalog]({{site.baseurl}}/user_guide/data/activation/catalogs) for deeper messaging personalization. 
 
-Shopify catalogs updates in near real-time as you make edits and changes to the products in your Shopify store. You can enrich your abandoned cart, order confirmation, and more with the most up-to-date product details and information.
+Shopify catalogs will update in near real-time as you make edits and changes to the products in your Shopify store. You can enrich your abandoned cart, order confirmation, and more with the most up-to-date product details and information.
 
 ## Setting up your Shopify product sync {#setting-up}
 
@@ -32,7 +32,7 @@ Select what product identifier to use as the catalog ID:
 
 The ID and header values for the product identifier you choose can only include letters, numbers, hyphens, and underscores. If the product identifier doesn't follow this format, Braze will filter it out of your catalog sync.
 
-This is the primary identifier you use to reference Braze catalog information. 
+This will be the primary identifier you use to reference Braze catalog information. 
 
 {% alert note %}
 If you are selecting SKU as your catalog ID, make sure that all your products and variants in your store have a SKU set and they are unique. 
@@ -42,13 +42,13 @@ If you are selecting SKU as your catalog ID, make sure that all your products an
 
 ### Step 3: Sync in progress
 
-You receive a dashboard notification, and your status will display as “In Progress” to indicate the initial sync is starting. Note that the time it takes for the sync to finish will depend on how many products and variants Braze will need to sync over from Shopify. During this time, you can leave this page and wait for a dashboard notification or email to notify you when this is complete.
+You will receive a dashboard notification, and your status will display as “In Progress” to indicate the initial sync is starting. Note that the time it takes for the sync to finish will depend on how many products and variants Braze will need to sync over from Shopify. During this time, you can leave this page and wait for a dashboard notification or email to notify you when this is complete.
 
 Note that if your initial sync exceeds your [catalog limit]({{site.baseurl}}/user_guide/data/activation/catalogs/create/#tiers), Braze will stop syncing any more products. If you exceed the limit after the sync is successful due to new products being added over time, the sync will no longer be active. In both these cases, product updates from Shopify will no longer be reflected in Braze. Contact your account manager to consider upgrading your tier. 
 
 ### Step 4: Sync completed
 
-You receive a dashboard notification and an email after the sync is successful. The Shopify partner page will also update the status under Shopify catalogs to “Syncing". You can view your products by clicking the catalog name on the Shopify partner page.
+You will receive a dashboard notification and an email after the sync is successful. The Shopify partner page will also update the status under Shopify catalogs to “Syncing". You can view your products by clicking the catalog name on the Shopify partner page.
 
 Refer to [Catalogs additional use cases]({{site.baseurl}}/user_guide/data/activation/catalogs/use) to learn more about how to leverage catalog data to personalize your message.
 
@@ -89,7 +89,7 @@ Note that with the Shopify integration, you'll need to create a custom event tha
 
 ## Changing catalog ID
 
-To change the product identifier for your Shopify catalog, you must deactivate the sync. Confirm you have stopped sending any messages using this Shopify catalog data first. Re-run the Shopify catalog initial sync and select your desired product identifier by following the [product sync](#setting-up) steps.
+To change the product identifier for your Shopify catalog, you will need to deactivate the sync. Confirm you have stopped sending any messages using this Shopify catalog data first. Re-run the Shopify catalog initial sync and select your desired product identifier by following the [product sync](#setting-up) steps.
 
 ## Deactivating your product sync {#deactivate}
 
@@ -102,6 +102,6 @@ If your Shopify product sync runs into an error, it could be a result of the fol
 | --- | --- | --- |
 | Server Error | This occurs if there is a server error on Shopify’s side when we attempt to sync your products. | [Deactivate sync](#deactivate) and re-sync your entire inventory of products again. |
 | Duplicate SKU | This occurs if you use a SKU as your catalog item ID and have products with the same SKU. Since catalog item ID has to be unique, all your products must have unique SKUs. | Audit your full list of products and variants in Shopify to make sure that there are no duplicate SKUs. If there are duplicate SKUs, update these to be unique SKUs only in your Shopify store account. After this is corrected, [deactivate sync](#deactivate) and re-sync your entire inventory of products again. |
-| Catalog Limit Exceeded | This occurs if you exceed your catalog limit. Braze is unable to finish the sync or keep the syncing active due to no more storage availability. | There are two solutions to this issue:<br><br>1. Reach out to your account manager to upgrade your tier to increase your catalog limit. <br><br>2. Free up storage space by deleting any of the following:<br>- Catalog items from other catalogs<br>- Other catalogs<br>- Selections created<br><br> After using either of the solutions, the sync must be deactivated and then re-synced. |
+| Catalog Limit Exceeded | This occurs if you exceed your catalog limit. Braze will be unable to finish the sync or keep the syncing active due to no more storage availability. | There are two solutions to this issue:<br><br>1. Contact your account manager to upgrade your tier to increase your catalog limit. <br><br>2. Free up storage space by deleting any of the following:<br>- Catalog items from other catalogs<br>- Other catalogs<br>- Selections created<br><br> After using either of the solutions, the sync must be deactivated and then re-synced. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 

@@ -208,7 +208,7 @@ The package entitlement shown in the Braze dashboard is rounded to the nearest u
 
 #### Free version
 
-The storage size for the free version of catalogs are up to 100&nbsp;MB. You can have unlimited items as long as they're under 100&nbsp;MB. 
+The storage size for the free version of catalogs is up to 100&nbsp;MB. You can have unlimited items as long as they're under 100&nbsp;MB. 
 
 #### Catalogs Pro
 

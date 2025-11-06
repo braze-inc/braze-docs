@@ -15,7 +15,7 @@ search_tag: Partner
 | Requirement | Description |
 | --- | --- |
 | Movable Ink account | A Movable Ink account is required to take advantage of this partnership. |
-| Data source | You must connect a data source to Movable Ink. This can be done through CSV, website import, or API. |
+| Data source | You need to connect a data source to Movable Ink. This can be done through CSV, website import, or API. |
 | MMS sending capabilities | Confirm that you're set up for MMS through Braze.
 | [Link shortening]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/link_shortening/) | Confirm that link shortening is turned on. | 
 | Contact card | Your brand (the sender) must be saved as a contact on the user's phone for link preview to work with iOS. This can be done with a contact card or another method. |
@@ -33,7 +33,7 @@ To allow link preview images for iOS, users must add your brand (the sender) as 
 
 #### Step 1: Create a contact card campaign
 
-After users save your brand as a contact, either through a [contact card]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/mms/contact_card/) or another method, they is able to view **Tap to Load Preview** prompts and Movable Ink links.
+After users save your brand as a contact, either through a [contact card]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/mms/contact_card/) or another method, they will be able to view **Tap to Load Preview** prompts and Movable Ink links.
 
 ![1]{: style="max-width:30%;"}
 

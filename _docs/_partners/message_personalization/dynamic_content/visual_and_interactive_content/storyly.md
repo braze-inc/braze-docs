@@ -45,18 +45,18 @@ The Braze Storyly integration is explained in the following video:
 
 {% multi_lang_include video.html id="3-OEqQs48Zw" source="youtube" %}
 
-Make sure that your Storyly integration holds custom parameters. These parameters is matched to the Braze `external id` user property. Custom parameter implementation is explained here for [iOS](https://integration.storyly.io/ios/personalization-customaudience.html), [Android](https://integration.storyly.io/android/personalization-customaudience.html), [React Native](https://integration.storyly.io/react-native/personalization-customaudience.html), [Flutter](https://integration.storyly.io/flutter/personalization-customaudience.html), and [Web](https://integration.storyly.io/web/personalization-customaudience.html) .
+Make sure that your Storyly integration holds custom parameters. These parameters will be matched to the Braze `external id` user property. Custom parameter implementation is explained here for [iOS](https://integration.storyly.io/ios/personalization-customaudience.html), [Android](https://integration.storyly.io/android/personalization-customaudience.html), [React Native](https://integration.storyly.io/react-native/personalization-customaudience.html), [Flutter](https://integration.storyly.io/flutter/personalization-customaudience.html), and [Web](https://integration.storyly.io/web/personalization-customaudience.html) .
 
 You can also refer to the [Storyly](https://docs.storyly.io/page/connect-your-braze-audiences-with-storyly) documentation for more information.
 
 ### Step 1: Set the integration on Storyly dashboard
 
-An integration be created within the **Storyly Dashboard > Settings > Integrations > Connect with Braze**. Here, you need your Braze REST API key and Braze REST endpoint. 
+An integration be created within the **Storyly Dashboard > Settings > Integrations > Connect with Braze**. Here, you will need your Braze REST API key and Braze REST endpoint. 
 
 ### Step 2: Get your segments 
 
 Next, you can use Braze segments to create a Storyly audience. This can be created within the **Storyly Dashboard > Settings > Audiences > New Audience > Create Audience with Braze**.
 
-Here, there is two syncing options. Select **One-time sync** for specific campaign stories, or **Daily Sync** for long-term stories.
+Here, there will be two syncing options. Select **One-time sync** for specific campaign stories, or **Daily Sync** for long-term stories.
 
 

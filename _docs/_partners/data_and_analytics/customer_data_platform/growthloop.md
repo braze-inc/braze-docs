@@ -43,9 +43,9 @@ When you sign into the Segmentation Platform within GrowthLoop, navigate to the 
 
 Scroll until you can find Braze, and click **Add Braze**.
 
-A popup appears to configure the connection to the destination.
+A popup will appear to configure the connection to the destination.
 
-- **Destination name**: This is how the destination is named and referred to in the app going forward
+- **Destination name**: This is how the destination will be named and referred to in the app going forward
 - **Sync frequency**: Select Daily or Hourly; this will control how often GrowthLoop exports audiences to Braze
 - **API key**: API key created in the requirements, with the necessary permissions
 - **API URL**: URL as defined in the requirements

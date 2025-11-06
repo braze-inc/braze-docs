@@ -20,7 +20,7 @@ Additionally, if you have more than one app group in Braze, you'll need to confi
 
 To avoid data loss and service interruption, its essential that you monitor your endpoints at all times and aim to address hard errors or downtime within 24 hours.
 
-For most error types, (such as server errors, network connection errors, etc.), Braze continues to queue and retry event transmissions for up to 24 hours. After that time, non-transmitted events are dropped. Connectors with consistently poor error rates or uptime is automatically suspended.
+For most error types, (such as server errors, network connection errors, etc.), Braze will continue to queue and retry event transmissions for up to 24 hours. After that time, non-transmitted events will be dropped. Connectors with consistently poor error rates or uptime will be automatically suspended.
 
 ### Change resilience
 
@@ -45,7 +45,7 @@ Events are then sent to the endpoint as a JSON array of all events in the follow
 {"events": [event1, event2, event3, etc...]}
 ```
 
-There is a top-level JSON object with the key `"events"` that maps to an array of further JSON objects, each representing a single event.
+There will be a top-level JSON object with the key `"events"` that maps to an array of further JSON objects, each representing a single event.
 
 ## Payload examples
 
@@ -384,7 +384,7 @@ Authentication tokens in your payload are optional. They can be passed through a
 
 Per RFC 6750, tokens should be Base64-encoded values with at least one character. Keep in mind, RFC 6750 allows tokens to contain the following characters in addition to the normal Base64 characters: `-`, `.`, `_`, and `~`. You can choose whether you'd like to include these characters in your token or not&#8212;however, it must be in Base64 format.
 
-Additionally, if the `Authorization` header is present, it is constructed using the following format:
+Additionally, if the `Authorization` header is present, it will be constructed using the following format:
 
 ```plaintext
 "Authorization: Bearer " + <token>
@@ -402,7 +402,7 @@ In the future, we may use `Authorization` headers to implement a custom, key-val
 
 ## Versioning
 
-All requests from our HTTP connector integration is sent with a custom header designating the version of the Currents request being made:
+All requests from our HTTP connector integration will be sent with a custom header designating the version of the Currents request being made:
 
 ```plaintext
 Braze-Currents-Version: 1
@@ -418,17 +418,17 @@ Just like our [data warehouse storage schemas]({{site.baseurl}}/user_guide/data/
 
 ## Error handling and retry mechanism
 
-If an error occurs, Braze will queue and retry the request based on the HTTP return code received. It continues to retry for at least two days, as long as data is buffered in the system. If data is stuck for more than 24 hours, our on-call engineers is alerted automatically. At this time, our backoff strategy is to retry periodically.
+If an error occurs, Braze will queue and retry the request based on the HTTP return code received. It will continue to retry for at least two days, as long as data is buffered in the system. If data is stuck for more than 24 hours, our on-call engineers will be alerted automatically. At this time, our backoff strategy is to retry periodically.
 
 If your Currents integration starts returning `4XX` errors, Braze will automatically send you a notification email and automatically extend the retention period to a minimum of seven days.
 
-Any HTTP error code not listed below is treated as an HTTP `5XX` error.
+Any HTTP error code not listed below will be treated as an HTTP `5XX` error.
 
 {% alert warning %}
 If the Braze retry mechanism fails to deliver an event for more than 24 hours, data loss will occur.
 {% endalert %}
 
-The following HTTP status codes is recognized by our connector client:
+The following HTTP status codes will be recognized by our connector client:
 
 <table>
   <thead>
@@ -447,37 +447,37 @@ The following HTTP status codes is recognized by our connector client:
     <tr>
       <td><code>5XX</code></td>
       <td>Server-side error</td>
-      <td>Event data is re-sent in an exponential backoff pattern with jitter. If the data is not successfully sent within 24 hours, it is dropped.</td>
+      <td>Event data will be re-sent in an exponential backoff pattern with jitter. If the data is not successfully sent within 24 hours, it will be dropped.</td>
     </tr>
     <tr>
       <td><code>400</code></td>
       <td>Client-side error</td>
-      <td>The connector sent at least one malformed event. The event data is split into batches of size 1 and re-sent. Any events in these size-1 batches that receive another <code>400</code> response is dropped permanently. You should report repeated occurrences.</td>
+      <td>The connector sent at least one malformed event. The event data will be split into batches of size 1 and re-sent. Any events in these size-1 batches that receive another <code>400</code> response will be dropped permanently. You should report repeated occurrences.</td>
     </tr>
     <tr>
       <td><code>401</code></td>
       <td>Unauthorized</td>
-      <td>The connector was configured with invalid credentials. Event data is re-sent after a delay of 2–5 minutes. If unresolved within 48 hours, the event data is dropped.</td>
+      <td>The connector was configured with invalid credentials. Event data will be re-sent after a delay of 2–5 minutes. If unresolved within 48 hours, the event data will be dropped.</td>
     </tr>
     <tr>
       <td><code>403</code></td>
       <td>Forbidden</td>
-      <td>The connector was configured with invalid credentials. Event data is re-sent after a delay of 2–5 minutes. If unresolved within 48 hours, the event data is dropped.</td>
+      <td>The connector was configured with invalid credentials. Event data will be re-sent after a delay of 2–5 minutes. If unresolved within 48 hours, the event data will be dropped.</td>
     </tr>
     <tr>
       <td><code>404</code></td>
       <td>Not Found</td>
-      <td>The connector was configured with invalid credentials. Event data is re-sent after a delay of 2–5 minutes. If unresolved within 48 hours, the event data is dropped.</td>
+      <td>The connector was configured with invalid credentials. Event data will be re-sent after a delay of 2–5 minutes. If unresolved within 48 hours, the event data will be dropped.</td>
     </tr>
     <tr>
       <td><code>413</code></td>
       <td>Payload Too Large</td>
-      <td>Event data is split into smaller batches and re-sent.</td>
+      <td>Event data will be split into smaller batches and re-sent.</td>
     </tr>
     <tr>
       <td><code>429</code></td>
       <td>Too Many Requests</td>
-      <td>Indicates rate limiting. Event data is re-sent in an exponential backoff pattern with jitter. If not successfully sent within 24 hours, it is dropped.</td>
+      <td>Indicates rate limiting. Event data will be re-sent in an exponential backoff pattern with jitter. If not successfully sent within 24 hours, it will be dropped.</td>
     </tr>
   </tbody>
 </table>

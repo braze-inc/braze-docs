@@ -24,7 +24,7 @@ RFM analysis is a marketing technique that identifies your best users by scoring
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {% alert note %}
-Purchase events must be enabled to use RFM SQL segments because the monetary value for your users are determined by the revenue they’ve generated through Braze purchase events.
+Purchase events must be enabled to use RFM SQL segments because the monetary value for your users is determined by the revenue they’ve generated through Braze purchase events.
 {% endalert %}
 
 ## Creating an RFM segment

@@ -23,15 +23,15 @@ Learn more about how Braze collects data:
 - Email Address & Phone Number:
     - Supported as an identifier in the Braze track user endpoint. 
     - When using the email address or phone numbers as the identifier within a request, there are three possible outcomes:
-        1. If a user with this email/phone does not exist within Braze, an email-only/phone-only user profile is created, and any data in the request is added to the profile.
-        2. If a profile with this email/phone already exists within Braze, it is updated to include any data sent within the request.
-        3. In a use case with more than one profile with this email/phone, the most recently updated profile is prioritized.
+        1. If a user with this email/phone does not exist within Braze, an email-only/phone-only user profile will be created, and any data in the request will be added to the profile.
+        2. If a profile with this email/phone already exists within Braze, it will be updated to include any data sent within the request.
+        3. In a use case with more than one profile with this email/phone, the most recently updated profile will be prioritized.
     - Note that if an email-only/phone-only user profile exists and then an identified profile with the same email/phone is created (such as another profile with the same email address AND an external ID), Braze will create a second profile. Subsequent updates will go to the profile with the external ID.
         - The two profiles can be merged using the Braze [/merge/users]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/) endpoint
 
 ## Handling anonymous users
 
-For a use case where you must create or update a user profile in Braze without having access to an `external_id`, another identifier like an email address or phone number can be passed into the Braze [Export user by identifier]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) endpoint to determine if a profile for the user exists within Braze. 
+For a use case where you need to create or update a user profile in Braze without having access to an `external_id`, another identifier like an email address or phone number can be passed into the Braze [Export user by identifier]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) endpoint to determine if a profile for the user exists within Braze. 
 
 ```json
 {
@@ -40,7 +40,7 @@ For a use case where you must create or update a user profile in Braze without h
 }
 ```
 
-If a user exists within Braze with that email or phone, their profile is returned. Otherwise, an empty "users" array is returned. The benefit of using the export endpoint to determine if a user with that email address already exists is that this will allow you to determine if any anonymous user profiles are associated with the user. For example, an anonymous profile created via the SDK (which will have `braze_id`) or a previously created User alias profile. 
+If a user exists within Braze with that email or phone, their profile will be returned. Otherwise, an empty "users" array will be returned. The benefit of using the export endpoint to determine if a user with that email address already exists is that this will allow you to determine if any anonymous user profiles are associated with the user. For example, an anonymous profile created via the SDK (which will have `braze_id`) or a previously created User alias profile. 
 
 If the request does not return a user profile, you can choose to either create a user alias or create an email-only user:
 
@@ -152,7 +152,7 @@ Customers can set up campaigns and Canvases to be API-triggered. The API request
 - [Triggering campaigns via API]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/#request-body)
     - Campaigns are singular messages, such as individual emails.
 - [Triggering Canvases via API]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/#request-body)
-    - Canvas is a unified interface where marketers can create campaigns with multiple messages and steps to form a cohesive journey. When triggering a Canvas, you are entering a user into the Canvas flow, where they continue to receive messaging until they no longer fit the Canvas criteria. 
+    - Canvas is a unified interface where marketers can create campaigns with multiple messages and steps to form a cohesive journey. When triggering a Canvas, you are entering a user into the Canvas flow, where they will continue to receive messaging until they no longer fit the Canvas criteria. 
 - [API trigger properties/Canvas entry properties]({{site.baseurl}}/api/objects_filters/trigger_properties_object) 
     - Data that can be dynamically populated into the message at the time of sending.
 

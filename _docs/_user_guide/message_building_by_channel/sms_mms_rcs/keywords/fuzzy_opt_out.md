@@ -73,7 +73,7 @@ Focus on guiding users. For example, if your opt-out keyword is "STOP", these ar
   </thead>
   <tbody>
     <tr>
-      <td>"To unsubscribe from all messages, reply with the word STOP."</td>
+      <td>"To unsubscribe from all messages, please reply with the word STOP."</td>
       <td>"You have successfully been unsubscribed. You will not receive any more messages from this number. Reply START to resubscribe." (This is a direct confirmation of unsubscribe, which is misleading in a fuzzy opt-out scenario.)</td>
     </tr>
     <tr>

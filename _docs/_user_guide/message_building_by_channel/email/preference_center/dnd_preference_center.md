@@ -116,7 +116,7 @@ Add the Liquid tag to the desired place in your email, similar to how [unsubscri
 
 ## Handling errors
 
-If an error occurs when a user selects **Save** on a preference center, they will be presented with the following default error message, which cannot be customized or styled in the editor. However, localization of the error messages are still supported on these pages. 
+If an error occurs when a user selects **Save** on a preference center, they will be presented with the following default error message, which cannot be customized or styled in the editor. However, localization of the error messages is still supported on these pages. 
 
 ![An error noting "There was a problem saving your preferences. Please try again."]({% image_buster /assets/img/preference_center/preference_center11.png %}){: style="max-width:55%;"}
 

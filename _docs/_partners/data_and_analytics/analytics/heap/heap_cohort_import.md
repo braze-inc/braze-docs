@@ -54,7 +54,7 @@ To use your Heap segment, create a Braze campaign or Canvas and select the segme
 ![In the Braze campaign builder on the targeting step, the "Target users by segment" filter is set to "Heap cohort".]({% image_buster /assets/img/heap/heap3.png %}){: style="max-width:90%;"}
 
 {% alert important %}
-Only users who already exist within Braze are added or removed from a cohort. Cohort Import will not create new users in Braze.
+Only users who already exist within Braze will be added or removed from a cohort. Cohort Import will not create new users in Braze.
 {% endalert %}
 
 ## Integration details

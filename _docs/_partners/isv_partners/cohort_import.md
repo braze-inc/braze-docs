@@ -10,7 +10,7 @@ hidden: true
 
 ## Cluster URLs
 
-Braze hosts our application on multiple clusters throughout the US and EU. The URL for the import endpoints is different depending on the cluster the client's company instance is hosted on:
+Braze hosts our application on multiple clusters throughout the US and EU. The URL for the import endpoints will be different depending on the cluster the client's company instance is hosted on:
 
 | INSTANCE | REST ENDPOINT |
 | ----- | ------------------------------- |
@@ -41,7 +41,7 @@ The Partner API Key identifies the integration partner and authenticates the req
 
 When setting up the integration in the partner's application, the client should be asked to specify their Braze cluster so the integration knows which cluster URL and partner API key to use when importing data.
 
-Braze provides the Partner API Key(s) to the partner prior to the partner beginning integration development. In general, we provides a single key that is valid for all US clusters, and another key that is valid for our EU cluster.
+Braze will provide the Partner API Key(s) to the partner prior to the partner beginning integration development. In general, we will provide a single key that is valid for all US clusters, and another key that is valid for our EU cluster.
 
 ### Client data import key
 
@@ -57,7 +57,7 @@ The Cohort name endpoint can be used to specify the name of a cohort based on it
 
 | Field | Type | Required | Notes |
 | ----- | ---- | -------- | ----- |
-| `partner_api_key` | String | Yes | Partner-specific API Key, used in all requests from partner to Braze. This key is cluster-specific (see [Partner API key](#partner-api-key)), so the partner will need to know the cluster to which cohorts is written. |
+| `partner_api_key` | String | Yes | Partner-specific API Key, used in all requests from partner to Braze. This key will be cluster-specific (see [Partner API key](#partner-api-key)), so the partner will need to know the cluster to which cohorts will be written. |
 | `client_secret` | String | Yes | Data Import Key for the client whose cohort this belongs to. |
 | `cohort_id` | String | Yes | Identifier for the cohort. This identifier should be unique for the specified client. |
 | `name` | String | Yes | Client-specified name for the cohort |
@@ -83,7 +83,7 @@ The User cohort endpoint allows for specifying which users have been added to or
 
 | Field | Type | Required | Notes |
 | ----- | ---- | -------- | ----- |
-| `partner_api_key` | String | Yes | Partner-specific API Key, used in all requests from partner to Braze. This key is cluster-specific (see [Partner API key](#partner-api-key)), so the integration will need to know the cluster to which cohorts is written. |
+| `partner_api_key` | String | Yes | Partner-specific API Key, used in all requests from partner to Braze. This key will be cluster-specific (see [Partner API key](#partner-api-key)), so the integration will need to know the cluster to which cohorts will be written. |
 | `client_secret` | String | Yes | Data Import Key for the client whose cohort this belongs to. |
 | `cohort_id` | String | Yes | Identifier for the cohort. The identifier should be unique for the specified client. |
 | `cohort_changes` | Array of objects | Yes | Objects can have two fields. One, `user_ids`, is required and can be an array of `external_ids`, `device_ids`, and `aliases`. Each element is an ID for a user whose status in the cohort has changed. The second field, `should_remove`, is an optional boolean indicating whether the users in this object should be removed from the cohort instead of added. The default is false. The maximum combined length of the user IDs in a single request is 1,000.<br/><br/>Identified users can be matched by either their `external_id` or `alias`. Anonymous users can be matched by their `device_id`. If you pass in a device ID for an identified user, Braze will not add or remove that user. You must use external IDs or aliases for identified users. |
@@ -109,7 +109,7 @@ In addition to the maximum of 1,000 user IDs per request in the user cohort endp
 
 ## Cohort filter
 
-Braze will add a filter that allows a dashboard user to include or exclude users from a targeted audience if they are in a partner cohort. The filter provides a dropdown list of the names of all cohorts known to Braze for that client. This filter will only be visible to clients that partner and Braze have agreed to partner with in this integration.
+Braze will add a filter that allows a dashboard user to include or exclude users from a targeted audience if they are in a partner cohort. The filter will provide a dropdown list of the names of all cohorts known to Braze for that client. This filter will only be visible to clients that partner and Braze have agreed to partner with in this integration.
 
 ## Troubleshooting
 

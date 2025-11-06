@@ -64,7 +64,7 @@ Once an AppsFlyer audience has been uploaded to Braze, you can use it as a filte
 ![User attributes filter "AppsFlyer Cohorts" selected.]({% image_buster /assets/img/appsflyer_audiences/appsflyer_cohorts_as_filter.png %})
 
 {% alert important %}
-Only users who already exist within Braze are added or removed from a cohort. Cohort Import will not create new users in Braze.
+Only users who already exist within Braze will be added or removed from a cohort. Cohort Import will not create new users in Braze.
 {% endalert %}
 
 ## User Matching

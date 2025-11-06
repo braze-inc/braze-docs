@@ -21,7 +21,7 @@ By integrating Braze and Stripe, you can:
 
 | Requirement | Description |
 | ----------- | ----------- |
-| Stripe account | A Stripe account with access to webhooks are required to take advantage of this partnership. |
+| Stripe account | A Stripe account with access to webhooks is required to take advantage of this partnership. |
 | Braze Data Transformation | A [Data Transformation URL]({{site.baseurl}}/data_transformation/) is necessary to receive data from Stripe. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -43,7 +43,7 @@ Then, send a test event to your Data Transformation.
 
 ### Step 3: Write transformation code to accept your chosen Stripe events
 
-Next, you'll transform the webhook payload that is sent from Stripe to a JavaScript object return value.
+Next, you'll transform the webhook payload that will be sent from Stripe to a JavaScript object return value.
 
 1. Refresh your Data Transformation and make sure you can see the Stripe test payload in the **Webhook details** section.
 2. Update your Data Transformation code to support your chosen Stripe events.
@@ -66,7 +66,7 @@ This return value must adhere to the `/users/track` endpoint request body format
 
 ### Step 4: Publish your Stripe webhook
 
-After writing your Data Transformation, select **Validate** to make your Data Transformation code is formatted correctly and will work as expected. Then, save and activate your Data Transformation. After activating, custom event data is logged to a user's profile when they complete the event.
+After writing your Data Transformation, select **Validate** to make your Data Transformation code is formatted correctly and will work as expected. Then, save and activate your Data Transformation. After activating, custom event data will be logged to a user's profile when they complete the event.
 
 ![A Stripe custom event "Charge Succeeded" in a Braze user profile.]({% image_buster /assets/img/stripe/stripe_braze_profile_event.png %}){: style="max-width:80%;"}
 
@@ -237,7 +237,7 @@ After writing your Data Transformation, select **Validate** to make your Data Tr
 
 The following are example templates built using our [example Stripe webhook payload](#example). These templates can be used as a starting point. You can start from scratch or delete specific components as you see fit.
 
-In this example template, we're logging a custom event to the Braze profile. The event type is sent as the custom event name, and the data object is passed as event properties. 
+In this example template, we're logging a custom event to the Braze profile. The event type will be sent as the custom event name, and the data object will be passed as event properties. 
 
 ### Use case: customer as an identifier
 

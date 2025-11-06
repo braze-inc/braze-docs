@@ -26,12 +26,12 @@ The Braze and Digioh integration allows you to use their flexible drag-and-drop 
 |---|---|
 |Digioh account | A [Digioh account](https://www.digioh.com/) is required to take advantage of this partnership. |
 | Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
-| Braze API `/users/track/` endpoint | Your REST endpoint URL with the `/users/track/` details appended to it. Your endpoint will depend on the [Braze URL for your instance]({{site.baseurl}}/api/basics/#endpoints).<br><br>For example, if your REST API endpoint is `https://rest.iad-01.braze.com` your `/users/track/` endpoint is `https://rest.iad-01.braze.com/users/track/`. |
+| Braze API `/users/track/` endpoint | Your REST endpoint URL with the `/users/track/` details appended to it. Your endpoint will depend on the [Braze URL for your instance]({{site.baseurl}}/api/basics/#endpoints).<br><br>For example, if your REST API endpoint is `https://rest.iad-01.braze.com` your `/users/track/` endpoint will be `https://rest.iad-01.braze.com/users/track/`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Integration 
 
-To integrate Digioh, you must first configure the Braze connector. When completed, you must apply the integration to a lightbox (widget). Visit [Digioh](https://help.digioh.com/knowledgebase/digioh-integration-basics/) to read more about integration basics.
+To integrate Digioh, you must first configure the Braze connector. When completed, you will need to apply the integration to a lightbox (widget). Visit [Digioh](https://help.digioh.com/knowledgebase/digioh-integration-basics/) to read more about integration basics.
 
 ### Step 1: Create Digioh integration 
 

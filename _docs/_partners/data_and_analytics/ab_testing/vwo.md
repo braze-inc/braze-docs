@@ -35,7 +35,7 @@ By integrating VWO with Braze, you can leverage VWO experiment data to create ta
 
    ![Enable Braze Integration]({% image_buster /assets/img/vwo/vwo2_enable_braze.png %})
 
-6. After you've enabled the integration, VWO starts sending experiment data to Braze at the campaign level.
+6. After you've enabled the integration, VWO will start sending experiment data to Braze at the campaign level.
 
 ### Step 2: Create a segment in Braze with VWO event properties
 
@@ -88,7 +88,7 @@ Before you can use event property segmentation, you'll need it enabled in Braze.
          We would like to enable event property segmentation for events sent from our VWO&lt;&gt;Braze integration. Here are the details:<br><br>
          - <strong>Event Name:</strong> VWO<br>
          - <strong>Event Properties:</strong> <code>vwo_campaign_name</code>, <code>vwo_variation_name</code><br><br>
-         Confirm when the properties have been enabled in our account.<br><br>
+         Please confirm once the properties have been enabled in our account.<br><br>
          Thank you.
          </td>
       </tr>

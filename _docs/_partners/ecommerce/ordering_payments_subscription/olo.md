@@ -20,7 +20,7 @@ By integrating Olo and Braze, you can:
 
 | Requirement | Description |
 | ----------- | ----------- |
-| Olo account | An Olo account with access to webhooks are required to take advantage of this partnership. Set up webhook subscriptions via the [self-service webhooks tool](https://olosupport.zendesk.com/hc/en-us/articles/360061153692-Self-Service-Webhooks) within the Olo Dashboard. |
+| Olo account | An Olo account with access to webhooks is required to take advantage of this partnership. Set up webhook subscriptions via the [self-service webhooks tool](https://olosupport.zendesk.com/hc/en-us/articles/360061153692-Self-Service-Webhooks) within the Olo Dashboard. |
 | Braze Data Transformation | A [Data Transformation URL]({{site.baseurl}}/data_transformation/) is necessary to receive data from Olo. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -43,7 +43,7 @@ To handle multiple Olo events within this single transformation, look for the `X
 Use the [self-service webhooks tool](https://olosupport.zendesk.com/hc/en-us/articles/360061153692-Self-Service-Webhooks) within the Olo dashboard to set up webhooks to send to your Data Transformation.
 
 1. Choose what events should be sent to Braze
-2. Configure the **Destination URL**. This is the Data Transformation URL created in [step 1](#step-1).
+2. Configure the **Destination URL**. This will be the Data Transformation URL created in [step 1](#step-1).
 
 {% alert note %}
 `OAuth` and the `X-Olo-Signature` header shared secret are not needed for the transformation.
@@ -52,11 +52,11 @@ Use the [self-service webhooks tool](https://olosupport.zendesk.com/hc/en-us/art
 {:start="3"}
 3. Verify that the webhook is configured correctly by sending a [Test Event](https://developer.olo.com/docs/load/webhooks#operation/test) to your Data Transformation. Only Olo Dashboard users with the [Developer Tools permission](https://olosupport.zendesk.com/hc/en-us/articles/115001427843-Dashboard-Permissions) can send Test Events.
 
-Olo requires a successful response from the Test Event webhook before you are able to complete the Olo webhook configuration process.
+Olo requires a successful response from the Test Event webhook before you will be able to complete the Olo webhook configuration process.
 
 ### Step 3: Write transformation code to accept your chosen Olo events
 
-In this step, you transform the webhook payload that is sent from the source platform to a JavaScript object return value.
+In this step, you will transform the webhook payload that will be sent from the source platform to a JavaScript object return value.
 
 1. Send a request to your Data Transformation URL with a sample event payload of an Olo event you intend to support. See [request body format](#request-body-format) for help formatting your request.
 2. Refresh your Data Transformation and make sure you can see the sample event payload in the **Webhook Details**.
@@ -82,11 +82,11 @@ This section contains example templates that can be used as a starting point. Fe
 
 In each template the code defines a variable, `brazecall`, to build a `/users/track` request.
 
-After the `/users/track `request is assigned to `brazecall`, you explicitly return `brazecall` to create an output.
+After the `/users/track `request is assigned to `brazecall`, you will explicitly return `brazecall` to create an output.
 
 ### Single event transformation
 
-If you are only looking to support a single Olo event you not need to use the `X-Olo-Event-Type` header to conditionally create the `/users/track` request payload. For example, logging a purchase event or a custom event to the user profile when an Olo Order Placed webhook is sent to Braze.
+If you are only looking to support a single Olo event you will not need to use the `X-Olo-Event-Type` header to conditionally create the `/users/track` request payload. For example, logging a purchase event or a custom event to the user profile when an Olo Order Placed webhook is sent to Braze.
 
 ### Logging each product as a purchase
 
@@ -242,7 +242,7 @@ return brazecall;
 
 ### Step 4: Publish your Olo webhook
 
-After you have activated your Data Transformation in Braze, use the [self-service webhooks tool](https://olosupport.zendesk.com/hc/en-us/articles/360061153692-Self-Service-Webhooks) within the Olo dashboard to publish your webhook. When the webhook is published, the Data Transformation starts to receive Olo webhook event messages.
+After you have activated your Data Transformation in Braze, use the [self-service webhooks tool](https://olosupport.zendesk.com/hc/en-us/articles/360061153692-Self-Service-Webhooks) within the Olo dashboard to publish your webhook. When the webhook is published, the Data Transformation will start to receive Olo webhook event messages.
 
 ## Things to know
 

@@ -20,7 +20,7 @@ The Braze and Treasure Data integration allows you to seamlessly control the flo
 | Requirement | Description |
 | ----------- | ----------- |
 | Treasure Data | A [Treasure Data account](https://console.treasuredata.com/users/sign_in) is required to take advantage of this partnership. |
-| Currents | To export data back into Treasure Data, you must have [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) set up for your account. |
+| Currents | To export data back into Treasure Data, you need to have [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) set up for your account. |
 | Treasure Data URL | This can be obtained by navigating to your Treasure Data dashboard and copying the ingestion URL.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -38,7 +38,7 @@ Ingestion into Treasure Data through event-collector currently doesn't happen in
 
 ### Step 1: Setup Treasure Data Postback API with Braze
 
-Instructions for creating a Postback API can be found on the [Treasure Data website](https://docs.treasuredata.com/display/public/PD/Postback+API). Braze will directly send the updated events to Treasure Data in real time, with the exception of ingestion through event-collector. When completed, Treasure Data provides a data source URL to copy for use in the next step.
+Instructions for creating a Postback API can be found on the [Treasure Data website](https://docs.treasuredata.com/display/public/PD/Postback+API). Braze will directly send the updated events to Treasure Data in real time, with the exception of ingestion through event-collector. When completed, Treasure Data will provide a data source URL to copy for use in the next step.
 
 ### Step 2: Create Current
 
@@ -47,7 +47,7 @@ In Braze, navigate to **Currents** > **+ Create Current** > **Treasure Data Expo
 All events sent to Treasure Data will include the user’s `external_user_id`. At this time, Braze does not send event data to Treasure Data for users who haven't set their `external_user_id`.
 
 {% alert important %}
-Keep your Treasure Data URL up to date. If your connector’s URL is incorrect, Braze won't be able to send events. If this persists for more than **5 days**, the connector’s events are dropped and data is permanently lost.
+Keep your Treasure Data URL up to date. If your connector’s URL is incorrect, Braze won't be able to send events. If this persists for more than **5 days**, the connector’s events will be dropped and data will be permanently lost.
 {% endalert %}
 
 #### Example event field value

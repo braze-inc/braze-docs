@@ -83,7 +83,7 @@ Add the **Output Name** attribute from the **Offer History** table. Lastly, add 
 
 Create a second export template for append-only operations named **Braze Append**.
 
-You set only two attributes for this template. For **PID**, set the **Header Row Value** as `external_id`. For **Output Name**, set the **Header Row** as `output_name`.
+You will set only two attributes for this template. For **PID**, set the **Header Row Value** as `external_id`. For **Output Name**, set the **Header Row** as `output_name`.
 
 ![A sample export template with the `external_id` and output name attributes.]({% image_buster /assets/img/redpoint/rpi_to_braze_append_export_format.png %}){: style="max-width:75%;"}
 
@@ -113,7 +113,7 @@ Next, define an **Export path format** on both channels that point to a shared n
 
 ![]({% image_buster /assets/img/redpoint/rpi_to_braze_channel_config_specific.png %}){: style="max-width:75%;"}
 
-The export directory format on both channels is identical and should end with `\\[Channel]\\[Offer]\\[Workflow ID]`.
+The export directory format on both channels will be identical and should end with `\\[Channel]\\[Offer]\\[Workflow ID]`.
 
 ![]({% image_buster /assets/img/redpoint/rpi_to_braze_export_directory_setup.png %}){: style="max-width:50%;"}
 
@@ -121,7 +121,7 @@ The export directory format on both channels is identical and should end with `\
 
 Navigate to the **Post Execution** tab in the Channels **Configuration** screen. 
 
-Check the **Post-execution** checkbox to call a service URL after channel execution. Enter your Redpoint Data Management web service URL. This entry is identical on both your Onboarding and Append channel.
+Check the **Post-execution** checkbox to call a service URL after channel execution. Enter your Redpoint Data Management web service URL. This entry will be identical on both your Onboarding and Append channel.
 
 ![]({% image_buster /assets/img/redpoint/rpi_to_braze_channel_config_post_execution.png %}){: style="max-width:75%;"}
 

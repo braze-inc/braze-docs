@@ -15,7 +15,7 @@ Once the share is provisioned, all data is immediately accessible from within th
 
 ![]({% image_buster /assets/img/snowflake2.png %})
 
-Within your Snowflake instance, you see one share per region. Each table has a column, `app_group_id`, which is effectively a tenant key for Braze. As new customers are added to a share within the same region, it appears as different `app_group_ids` within the existing tables.
+Within your Snowflake instance, you will see one share per region. Each table has a column, `app_group_id`, which is effectively a tenant key for Braze. As new customers are added to a share within the same region, it will appear as different `app_group_ids` within the existing tables.
 
 {% alert important %}
 Braze currently hosts all user-level data in the Snowflake AWS US East-1 and EU-Central (Frankfurt) regions. Although Braze can share cross-region, it is most cost-effective for the customers if we share with `US-EAST-1` and/or `EU-CENTRAL-1`. 
@@ -43,11 +43,11 @@ Because new columns are considered non-breaking, Braze strongly recommends expli
 
 ### Breaking changes
 
-When possible, breaking changes is preceded by an announcement and a migration period. Examples of breaking changes include:
+When possible, breaking changes will be preceded by an announcement and a migration period. Examples of breaking changes include:
 - Removing a table or view
 - Removing a column from an existing table or view
 - Changing the type or nullability of an existing column
 
 ## General Data Protection Regulation (GDPR) compliance
 
-Nearly every event record Braze stores includes a few fields representing users’ personally identifiable information (PII). Some events may include email address, phone number, device ID, language, gender, and location information. If a user’s request to be forgotten is submitted to Braze, we null out those PII fields for any event belonging to those users. This way, we’re not removing the historical record of the event, but now the event can never be tied back to a specific individual.
+Nearly every event record Braze stores includes a few fields representing users’ personally identifiable information (PII). Some events may include email address, phone number, device ID, language, gender, and location information. If a user’s request to be forgotten is submitted to Braze, we will null out those PII fields for any event belonging to those users. This way, we’re not removing the historical record of the event, but now the event can never be tied back to a specific individual.

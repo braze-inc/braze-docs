@@ -45,11 +45,11 @@ In Segment, navigate to **Destinations** > **Braze** > **Configure Braze** > **S
 
 You can integrate Segment's web source (Analytics.js) and native client-side libraries with Braze using either a side-by-side (device-mode) integration or a server-to-server (cloud-mode) integration.
 
-Your choice of connection mode is determined by the type of Source the destination is configured for.
+Your choice of connection mode will be determined by the type of Source the destination is configured for.
 
 | Integration | Details |
 | ----------- | ------- |
-| [Side-by-side<br>(device-mode)](#side-by-side-sdk-integration) |Uses Segment's SDK to translate events into Braze native calls, allowing access to deeper features and more comprehensive usage of Braze than the server-to-server integration.<br><br>Note that Segment does not support all Braze methods (for example, Content Cards). To use a Braze method that isn't mapped through a corresponding mapping, you have to invoke the method by adding native Braze code to your codebase. |
+| [Side-by-side<br>(device-mode)](#side-by-side-sdk-integration) |Uses Segment's SDK to translate events into Braze native calls, allowing access to deeper features and more comprehensive usage of Braze than the server-to-server integration.<br><br>Note that Segment does not support all Braze methods (for example, Content Cards). To use a Braze method that isn't mapped through a corresponding mapping, you will have to invoke the method by adding native Braze code to your codebase. |
 | [Server-to-server<br>(cloud-mode)](#server-to-server-integration) | Forwards data from Segment to Braze REST API endpoints.<br><br>Does not support Braze UI features such as in-app messaging, Content Cards, or push notifications. There also exists automatically captured data, such as device-level fields, that are unavailable through this method.<br><br>Consider a side-by-side integration if you wish to use these features.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -133,7 +133,7 @@ Within your app codebase, conditionally initialize the Segment SDK by device typ
 When a push token is registered from a device and sent to Braze, it is associated with the app identifier used when initializing the SDK. The device-type conditional initialization helps confirm that any push tokens sent to Braze are associated with the relevant app.
 
 {% alert important %}
-If the React Native app initializes Braze with the same Braze app identifier for all devices, then all React Native users are considered Android or iOS users in Braze, and all push tokens are associated with that operating system.
+If the React Native app initializes Braze with the same Braze app identifier for all devices, then all React Native users will be considered Android or iOS users in Braze, and all push tokens will be associated with that operating system.
 {% endalert %}
 
 To set up Braze as a device-mode destination for each source, choose **Actions** as the **Destination framework**, then select **Save**.
@@ -189,13 +189,13 @@ Define the settings for your destination. Not at all settings will apply to all 
 | Allow crawler activity | By default, the Braze Web SDK ignores activity from known spiders or web crawlers, such as Google, based on the user agent string. This saves data points, makes analytics more accurate, and may improve page rank. However, if you want Braze to log activity from these crawlers instead, you may set this option to `TRUE`. |
 | Enable logging | Set to `TRUE` to enable logging by default. Note that this will cause Braze to log to the JavaScript console, which is visible to all users. Before you release your page to production, you should remove this or provide an alternate logger with `setLogger`. |
 | Allow user-supplied JavaScript | By default, the Braze Web SDK does not allow user-supplied JavaScript click actions, as it allows Braze dashboard users to run JavaScript on your site. To indicate that you trust the Braze dashboard users to write non-malicious JavaScript click actions, set this property to `TRUE`. If `enableHtmlInAppMessages` is `TRUE`, this option will also be set to `TRUE`. |
-| App version| If you provide a value for this option, user events sent to Braze is associated with the given version, which can be used for user segmentation. |
+| App version| If you provide a value for this option, user events sent to Braze will be associated with the given version, which can be used for user segmentation. |
 | Session timeout in seconds | Defaults to 30.<br>By default, sessions time out after 30 minutes of inactivity. Provide a value for this configuration option to override that default with a value of your own. | 
 | Device property allowlist | By default, the Braze SDK automatically detects and collects all device properties in `DeviceProperties`. To override this behavior, provide an array of `DeviceProperties`. Note that without some properties, not all features will function properly. For instance, local time zone delivery will not function without the time zone. |
-| Localization | By default, any SDK-generated user-visible messages are displayed in the user's browser language. Provide a value for this option to override that behavior and force a specific language. The value for this option should be an ISO 639-1 language code. |
+| Localization | By default, any SDK-generated user-visible messages will be displayed in the user's browser language. Provide a value for this option to override that behavior and force a specific language. The value for this option should be an ISO 639-1 language code. |
 | No cookies | By default, the Braze SDK will store small amounts of data (user ids, session ids) in cookies. This is done to allow Braze to recognize users and sessions across different subdomains of your site. If this presents a problem for you, pass `TRUE` for this option to disable cookie storage and rely entirely on HTML 5 localStorage to identify users and sessions. |
-| Track all pages | **Classic Destination Web Device-Mode (maintenance) Only**<br><br>Segment recommends migrating to the Web Actions framework destination where this setting can be [enabled through mappings](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#braze-web-settings-mapping).<br><br>This sends all [page calls](https://segment.com/docs/spec/page/) to Braze as a "Loaded/Viewed a Page" event. |
-| Track only named pages | **Classic Destination Web Device-Mode (maintenance) Only**<br><br>Segment recommends migrating to the Web Actions framework destination where this setting can be [enabled through mappings](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#braze-web-settings-mapping).<br><br>This sends only page calls to Braze with a name associated with them. |
+| Track all pages | **Classic Destination Web Device-Mode (maintenance) Only**<br><br>Segment recommends migrating to the Web Actions framework destination where this setting can be [enabled through mappings](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#braze-web-settings-mapping).<br><br>This will send all [page calls](https://segment.com/docs/spec/page/) to Braze as a "Loaded/Viewed a Page" event. |
+| Track only named pages | **Classic Destination Web Device-Mode (maintenance) Only**<br><br>Segment recommends migrating to the Web Actions framework destination where this setting can be [enabled through mappings](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#braze-web-settings-mapping).<br><br>This will send only page calls to Braze with a name associated with them. |
 | Log purchase when revenue is present | **Classic Destination Web Device-Mode (maintenance) Only**<br><br>Segment recommends migrating to the Web Actions framework destination where this setting can be [enabled through mappings](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#braze-web-settings-mapping).<br><br>When this option is enabled, all Track calls with the revenue property will trigger a purchase event. | 
 | Only track known users | **Classic Destination Web Device-Mode (maintenance) Only**<br><br>Segment recommends migrating to the Web Actions Framework destination where this setting can be enabled through mappings.<br><br>If enabled, this new setting delays calling of `window.braze.initialize` until there is a valid `userId`. | 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -233,7 +233,7 @@ The Cloud Mode (Actions) Destination offers a [Create Alias action](https://segm
 
 It is also possible to engineer a workaround and use `braze_id` to send anonymous user data in cloud-mode. This requires manually including the user's `braze_id` in all your Segment API calls. You can learn more about how to set up this workaround in [Segment's documentation](https://segment.com/docs/connections/destinations/catalog/braze/#capture-the-braze_id-of-anonymous-users).
 
-Destinations data sent to Braze can be batched within Cloud Mode Actions. Batch sizes are capped at 75 events, and these batches will accumulate over a 30-second period before being flushed. Request batching is done per-action. For example, Identify Calls (attributes) is batched in a request and Track Calls (custom events) is batched in a second request. Braze recommends enabling this feature as it will reduce the number of requests being sent from Segment to Braze. In turn, this will reduce the risk of the destination hitting Braze rate limits and retrying requests. 
+Destinations data sent to Braze can be batched within Cloud Mode Actions. Batch sizes are capped at 75 events, and these batches will accumulate over a 30-second period before being flushed. Request batching is done per-action. For example, Identify Calls (attributes) will be batched in a request and Track Calls (custom events) will be batched in a second request. Braze recommends enabling this feature as it will reduce the number of requests being sent from Segment to Braze. In turn, this will reduce the risk of the destination hitting Braze rate limits and retrying requests. 
 
 You can turn on batching for an action by navigating to your Braze Destination > **Mappings**. From there, click the 3-dot icon to the right of the mapping and select **Edit Mapping**. Scroll to the bottom of the **Select mappings** section and make sure that **Batch Data to Braze** is set to **Yes**.
 
@@ -336,7 +336,7 @@ analytics.identify(
 
 ##### Custom attributes
 
-All other traits is recorded as [custom attributes]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/).
+All other traits will be recorded as [custom attributes]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/).
 
 | Segment method | Braze method | Example |
 |---|---|---|
@@ -357,9 +357,9 @@ When passing user attribute data, check that you only pass values for attributes
 {% tab Track %}
 #### Track
 
-When you track an event, we record that event as a [custom event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-events) using the name provided. 
+When you track an event, we will record that event as a [custom event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-events) using the name provided. 
 
-Metadata sent within the properties object of the track call is logged in Braze as the custom event properties for the associated event. All [custom event property data types]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties) are supported.
+Metadata sent within the properties object of the track call will be logged in Braze as the custom event properties for the associated event. All [custom event property data types]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties) are supported.
 
 In the [Web Mode Actions](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#track-event) and [Cloud Mode Actions](https://segment.com/docs/connections/destinations/catalog/braze-cloud-mode-actions/#track-event) destinations, the above mappings can be set using the Track Event Action.
 
@@ -372,7 +372,7 @@ In the [Web Mode Actions](https://segment.com/docs/connections/destinations/cata
 
 ##### Order completed {#order-completed}
 
-When you track an event with the name `Order Completed` using the format described in Segment's [eCommerce API](https://segment.com/docs/spec/ecommerce/v2/), we record the products you've listed as [purchases]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data).
+When you track an event with the name `Order Completed` using the format described in Segment's [eCommerce API](https://segment.com/docs/spec/ecommerce/v2/), we will record the products you've listed as [purchases]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data).
 
 In the [Web Mode Actions](https://segment.com/docs/connections/destinations/catalog/braze-web-device-mode-actions/#track-purchase) and [Cloud Mode Actions](https://segment.com/docs/connections/destinations/catalog/braze-cloud-mode-actions/#track-purchase) destinations, the default mapping can be customized through the Track Purchase Action.
 
@@ -392,7 +392,7 @@ This event type can be used as a trigger in the Web Mode Actions and Cloud Actio
 
 When using the side-by-side (device-mode) integration, your [overview]({{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/) metrics (lifetime sessions, MAU, DAU, stickiness, daily sessions, and daily sessions per MAU) can be used to ensure that Braze is receiving data from Segment.
 
-You can view your data in the [custom events]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_custom_event_data/#custom-event-data) or [revenue]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data) pages, or by [creating a segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment). The dashboard's **Custom Events** page lets you view custom event counts over time. Note that you not be able to use [formulas]({{site.baseurl}}/user_guide/data_and_analytics/creating_a_formula/#creating-a-formula) that include MAU and DAU statistics when using a server-to-server (cloud mode) integration.
+You can view your data in the [custom events]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_custom_event_data/#custom-event-data) or [revenue]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data) pages, or by [creating a segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment). The dashboard's **Custom Events** page lets you view custom event counts over time. Note that you will not be able to use [formulas]({{site.baseurl}}/user_guide/data_and_analytics/creating_a_formula/#creating-a-formula) that include MAU and DAU statistics when using a server-to-server (cloud mode) integration.
 
 If you're sending purchase data to Braze (see order completed in the **Track** tab of [Step 3](#methods)), the [revenue]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data) page allows you to view data on revenue or purchases over specific periods or your app's total revenue.
 
@@ -404,7 +404,7 @@ If you use a server-to-server integration (cloud-mode), filters related to autom
 
 ## User deletion and suppression 
 
-If you must delete or suppress users, note that [Segment's user delete feature](https://segment.com/docs/privacy/user-deletion-and-suppression/#which-destinations-can-i-send-deletion-requests-to) **is** mapped to the Braze [`/users/delete` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/). Note that verification of these deletions could take up to 30 days.
+If you need to delete or suppress users, note that [Segment's user delete feature](https://segment.com/docs/privacy/user-deletion-and-suppression/#which-destinations-can-i-send-deletion-requests-to) **is** mapped to the Braze [`/users/delete` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/). Note that verification of these deletions could take up to 30 days.
 
 You must ensure that you select a common user identifier between Braze and Segment (as in `external_id`). After you've initiated a deletion request with Segment, you can view the status within the deletion requests tab in your Segment dashboard.
 
@@ -422,7 +422,7 @@ All identifiers supported in the Cloud Mode Actions destination are supported as
 
 {% details Review use cases to avoid data overages. %}
 
-Segment **does not** limit the number of data elements clients send to them. Segment allows you to send all or decide which events you send to Braze. Rather than sending all of your events using Segment, we suggest you review use cases with your marketing and editorial teams to determine which events you send to Braze to avoid data overages.
+Segment **does not** limit the number of data elements clients send to them. Segment allows you to send all or decide which events you will send to Braze. Rather than sending all of your events using Segment, we suggest you review use cases with your marketing and editorial teams to determine which events you will send to Braze to avoid data overages.
 
 {% enddetails %}
 
@@ -454,7 +454,7 @@ The proper format must be followed to ensure that you input your Braze SDK endpo
 Scenarios where data will not pass as expected:
 
 1. Nested custom attributes
-  - Although [nested custom attributes]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support/) can technically be sent to Braze through Segment, the **entire payload** is sent each time. This will incur [data points]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/#data-points) per key passed in the nested object each time the payload is sent.<br><br> To spend only a subset of data points when the payload sends, you can use the custom [destination functions](https://segment.com/docs/connections/functions/destination-functions/) feature owned by Segment. This feature in the Segment platform allows you to customize how data is sent to downstream destinations.
+  - Although [nested custom attributes]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support/) can technically be sent to Braze through Segment, the **entire payload** will be sent each time. This will incur [data points]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/#data-points) per key passed in the nested object each time the payload is sent.<br><br> To spend only a subset of data points when the payload sends, you can use the custom [destination functions](https://segment.com/docs/connections/functions/destination-functions/) feature owned by Segment. This feature in the Segment platform allows you to customize how data is sent to downstream destinations.
 
   {% alert note %}
   Custom destination functions are controlled within Segment, and Braze has limited insight into functions that have been configured externally.

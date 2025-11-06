@@ -61,16 +61,16 @@ Once selected, provide the following:
 - Your Braze API key: This can be created in the Braze dashboard from **Settings** > **API Keys**.
 - Time window: Octolis will apply the rate limiting in the given period.
 - Request volume: Number of requests you can make within this time frame.
-- Custom attributes: Specify here the new fields you send to Braze, their format (string, integer, float), and tick the **Required for syncs** if you want one of them to be mandatory for a sync.
+- Custom attributes: Specify here the new fields you will send to Braze, their format (string, integer, float), and tick the **Required for syncs** if you want one of them to be mandatory for a sync.
 
 ![]({% image_buster /assets/img/Octolis/Braze_screen3.png %})
 
-Once configured, Braze appears as a new destination on the home screen.
+Once configured, Braze will appear as a new destination on the home screen.
 
 ### Step 3: Create a new sync
 
 From the menu, click **Syncs** and select **Add sync** at the top right. Select the audience you want to select from the audience you have previously created.
-Next, select **Braze** as the destination and which entity you send data to.
+Next, select **Braze** as the destination and which entity you will send data to.
 
 ![]({% image_buster /assets/img/Octolis/Braze_screen4.png %})
 
@@ -84,11 +84,11 @@ Here is a specific definition of settings fields.
 
 | Field | Description |
 | --- | --- |
-| Where do you want to sync the audience to? | The Braze entity where you create or update records. |
+| Where do you want to sync the audience to? | The Braze entity where you will create or update records. |
 | Which field is used to identify a record? | The field will use Octolis to identify a record if it already exists in Braze. |
-| How often do you want to send each record? | By default, the sync is incremental for all integrations (API, database, FTP). This means that only new values since the last update is updated. If necessary, you can also send whole tables at regular intervals. On initiation, Octolis sends the complete table. |
+| How often do you want to send each record? | By default, the sync will be incremental for all integrations (API, database, FTP). This means that only new values since the last update will be updated. If necessary, you can also send whole tables at regular intervals. On initiation, Octolis will send the complete table. |
 | Which fields should be synced? | Octolis to Braze fields mapping. The list of all available fields appears in the dropdown menu. To send a computed field to Braze, you must first ensure that you created the corresponding column within your Braze entity. |
-| When do you want to sync the audience? | How the data is sent to Braze: manually, in real-time, or programmed.  |
+| When do you want to sync the audience? | How the data will be sent to Braze: manually, in real-time, or programmed.  |
 | Sync when record is... | Create: For opt-ins, it is important that the Braze table remains master. You don't want Octolis to trigger a sync when the field is updated.<br><br>Update: On the other hand, for a first name field, for example, you want to be able to update the field in your Braze table each time a customer gives you a new entry. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

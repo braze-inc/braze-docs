@@ -69,7 +69,7 @@ If you're experiencing SDK rate limit issues, review the following networking me
 - `logCustomEvent()`
 - `logPurchase()`
 
-When contacting [support@braze.com](mailto:support@braze.com), include the following details for each of the networking SDK methods you use:
+When contacting [support@braze.com](mailto:support@braze.com), please include the following details for each of the networking SDK methods you use:
 
 ```plaintext
 Method name:

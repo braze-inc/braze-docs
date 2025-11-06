@@ -34,7 +34,7 @@ Before you start, you'll need the following:
 
 When you set up this integration, Mention Me will automatically create your customer attributes and events&#8212;so no need to do this beforehand.
 
-Your customer's email addresses in Braze is used to link relevant events and custom attributes. Mention Me sends events and contact profile attributes for any prospect or existing customer who triggers this event via Mention Me, regardless of their opt-in status.
+Your customer's email addresses in Braze will be used to link relevant events and custom attributes. Mention Me will send events and contact profile attributes for any prospect or existing customer who triggers this event via Mention Me, regardless of their opt-in status.
 
 For more details, refer to [Contact profile attributes and events](https://help.mention-me.com/hc/en-gb/articles/26677937177501-What-Mention-Me-data-is-sent-to-Braze).
 

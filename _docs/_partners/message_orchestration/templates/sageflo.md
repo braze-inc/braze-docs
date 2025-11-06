@@ -24,7 +24,7 @@ Give local teams the tools they need to market smarter by leveraging sophisticat
 | ----------- | ----------- |
 | Sageflo Radiate account | A Sageflo Radiate account is required to take advantage of this partnership. |
 | Braze REST API key | A Braze REST API key with full `templates` and `campaigns` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
-| Braze REST endpoint | [Your REST endpoint URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). Your API endpoint matches the dashboard URL for your Braze instance. <br><br> For example, if your dashboard URL is `https://dashboard-03.braze.com`, your endpoint is `dashboard-03`. |
+| Braze REST endpoint | [Your REST endpoint URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). Your API endpoint matches the dashboard URL for your Braze instance. <br><br> For example, if your dashboard URL is `https://dashboard-03.braze.com`, your endpoint will be `dashboard-03`. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Use cases
@@ -38,7 +38,7 @@ Radiate is ideal for franchise and retail businesses looking to scale their mark
 
 ## Integration
 
-Your Sageflo account team will take point on setting up your integration. You are asked to provide your Braze API credentials and Sageflo will work with your marketing team to configure audience segments for specific locations and branches. 
+Your Sageflo account team will take point on setting up your integration. You will be asked to provide your Braze API credentials and Sageflo will work with your marketing team to configure audience segments for specific locations and branches. 
 
 Once connected, Sageflo will:
 

@@ -68,7 +68,7 @@ Tealium does not batch consent events (subscription preferences) or user deletio
 
 | Integration | Details |
 | ----------- | ------- |
-| [Side-by-side](#side-by-side-sdk-integration) | Uses Tealium's SDK to translate events into the Braze native calls, allowing access to deeper features and more comprehensive usage of Braze than the server-to-server integration.<br><br>If you plan on using Braze remote commands, note that Tealium does not support all Braze methods (for example, Content Cards). To use a Braze method that isn't mapped through a corresponding remote command, you have to invoke the method by adding native Braze code to your codebase.|
+| [Side-by-side](#side-by-side-sdk-integration) | Uses Tealium's SDK to translate events into the Braze native calls, allowing access to deeper features and more comprehensive usage of Braze than the server-to-server integration.<br><br>If you plan on using Braze remote commands, note that Tealium does not support all Braze methods (for example, Content Cards). To use a Braze method that isn't mapped through a corresponding remote command, you will have to invoke the method by adding native Braze code to your codebase.|
 | [Server-to-server](#server-to-server-integration) | Forwards data from Tealium to the Braze REST API endpoints.<br><br>Does not support Braze UI features such as in-app messaging,  Content Cards, or push notifications. There also exists automatically captured data, such as device-level fields, that are not available through this method.<br><br>Consider a side-by-side integration if you wish to use these features.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -76,7 +76,7 @@ Tealium does not batch consent events (subscription preferences) or user deletio
 
 ### Remote commands
 
-Remote commands are a feature of the Tealium iOS and Android libraries that allow you to make calls from the Tealium SDK—through the Braze servers—to Braze. The Braze remote command module will automatically install and build the required Braze libraries and handle all message rendering and analytics tracking. To use Braze mobile remote command, you need Tealium libraries installed in your apps.
+Remote commands are a feature of the Tealium iOS and Android libraries that allow you to make calls from the Tealium SDK—through the Braze servers—to Braze. The Braze remote command module will automatically install and build the required Braze libraries and handle all message rendering and analytics tracking. To use Braze mobile remote command, you will need Tealium libraries installed in your apps.
 
 Tealium offers two ways to integrate Mobile Remote Command, there is no loss of functionality between integration types, and the underlying native code is identical.
 
@@ -112,7 +112,7 @@ You can find more details on how to set up Braze mobile remote command and an ov
 - [Remote command tag](https://docs.tealium.com/client-side-tags/braze-mobile-remote-command-tag/)
 
 {% alert important %}
-Braze mobile remote commands do not support all Braze methods and messaging channels (for example, Content Cards). To use a Braze method that isn't mapped through a corresponding remote command, you have to invoke the method directly by adding native Braze code to your codebase.
+Braze mobile remote commands do not support all Braze methods and messaging channels (for example, Content Cards). To use a Braze method that isn't mapped through a corresponding remote command, you will have to invoke the method directly by adding native Braze code to your codebase.
 {% endalert%}
 
 ### Braze Web SDK tag
@@ -144,16 +144,16 @@ If you wish to use this data and these features, consider our [side-by-side]({{s
 Tealium requires that you first set up a valid data source for your connector to draw from.
 1. From the sidebar in Tealium under **Server-Side**, navigate to **Sources > Data Sources > + Add Data Source**.
 2. Locate your desired platform within the available categories, and name your source, this is a required field.<br>![]({% image_buster /assets/img/tealium/data_source.png %}){: style="max-width:80%;margin-left:15px;margin-bottom:15px;"}
-3. From the **Event Specifications** options, choose the [event specifications](https://docs.tealium.com/server-side/event-specifications/about/) you would like to include. Event specifications help you identify the event names and required attributes to track in your installation. These specifications is applied to incoming events.<br>![]({% image_buster /assets/img/tealium/event_specs.png %}){: style="max-width:80%;margin-left:15px;margin-bottom:15px;"}<br>Take some time to think about what data is most valuable to you and which specifications seem most appropriate for your use case. [Custom event specifications](https://docs.tealium.com/iq-tag-management/events/about/) are also available. <br>
+3. From the **Event Specifications** options, choose the [event specifications](https://docs.tealium.com/server-side/event-specifications/about/) you would like to include. Event specifications help you identify the event names and required attributes to track in your installation. These specifications will be applied to incoming events.<br>![]({% image_buster /assets/img/tealium/event_specs.png %}){: style="max-width:80%;margin-left:15px;margin-bottom:15px;"}<br>Take some time to think about what data is most valuable to you and which specifications seem most appropriate for your use case. [Custom event specifications](https://docs.tealium.com/iq-tag-management/events/about/) are also available. <br>
 4. The next dialogue advances to the **Get Code** step. The base code and event tracking code provided here serve as your installation guide. Download the provided PDF if you wish to share these instructions with your team. Select **Save & Continue** when finished.<br>
-5. You now be able to view your saved source as well as add or remove event specs. <br>![]({% image_buster /assets/img/tealium/braze_connection.png %}){: style="max-width:80%;margin-left:15px;margin-bottom:15px;"}<br>From the detailed data source view you can perform the following actions:
+5. You will now be able to view your saved source as well as add or remove event specs. <br>![]({% image_buster /assets/img/tealium/braze_connection.png %}){: style="max-width:80%;margin-left:15px;margin-bottom:15px;"}<br>From the detailed data source view you can perform the following actions:
 - View and copy the data source key
 - View installation instructions
 - Return to the **Get Code** page
 - Add or remove event specifications
 - Navigate to view live events related to an event specification
 - And more...<br>
-6. Lastly, select **Save / Publish** found at the top of the page. If you do not publish your source, you are unable to find it when configuring your Braze connector.
+6. Lastly, select **Save / Publish** found at the top of the page. If you do not publish your source, you will be unable to find it when configuring your Braze connector.
 
 Refer to [Data Sources](https://docs.tealium.com/server-side/data-sources/about-data-sources/) for further instruction on setting up and editing your data source.
 
@@ -181,7 +181,7 @@ If you have created a connector before, you may optionally use an existing one f
 
 #### Action
 
-Next, name your connector action and select an action type that sends data according to the mapping you configure. Here, you map Braze attributes, events, and purchases to Tealium attribute, event, and purchase names.
+Next, name your connector action and select an action type that will send data according to the mapping you configure. Here, you will map Braze attributes, events, and purchases to Tealium attribute, event, and purchase names.
 
 {% alert important %}
 Not all fields offered are required.
@@ -197,13 +197,13 @@ This action allows you to track user, event, and purchase attributes all in one 
 | Parameters | Description |
 | ---------- | ----------- |
 | User ID | Use this field to map the Tealium user ID field to its Braze equivalent. Map one or more user ID attributes. When multiple IDs are specified, the first non-blank value is picked based on the following priority order: External ID, Braze ID, Alias Name, and Alias Label.<br><br>- External ID and Braze ID should not be specified if importing push tokens.<br>- If specifying a user alias, the alias name and alias label should be set. <br><br>For more information, check out the Braze [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/). |
-| User attributes | Use existing Braze user profile field names to update user profile values in the Braze dashboard or add your own custom [user attribute]({{site.baseurl}}/api/objects_filters/user_attributes_object/) data to the user profiles.<br><br>- By default, new users are created if one does not exist.<br>- By setting **Update Existing Only** to `true`, only existing users are updated, and no new user is created.<br>- If a Tealium attribute is empty, it is converted to null and removed from the Braze user profile. Enrichments should be used if null values should not be sent to Braze to remove a user attribute. |
+| User attributes | Use existing Braze user profile field names to update user profile values in the Braze dashboard or add your own custom [user attribute]({{site.baseurl}}/api/objects_filters/user_attributes_object/) data to the user profiles.<br><br>- By default, new users will be created if one does not exist.<br>- By setting **Update Existing Only** to `true`, only existing users will be updated, and no new user will be created.<br>- If a Tealium attribute is empty, it will be converted to null and removed from the Braze user profile. Enrichments should be used if null values should not be sent to Braze to remove a user attribute. |
 | Modify user attributes | Use this field to increment or decrement certain user attributes<br><br>- Integer attributes may be incremented by positive or negative integers.<br>- Array attributes may be modified by adding or removing values from existing arrays. |
-| Event | An event represents a single occurrence of a custom event by a particular user at a timestamp. Use this field to track and map event attributes like those in the Braze [event object]({{site.baseurl}}/api/objects_filters/event_object/). <br><br>- Event attribute `Name` is required for every mapped event.<br>- Event attribute `Time` is automatically set to now unless explicitly mapped. <br>- By default, new events are created if one does not exist. By setting `Update Existing Only` to `true`, only existing events are updated, and no new event is created.<br>-  Map array type attributes to add multiple events. Array type attributes must be of equal length.<br>- Single value attributes can be used and applied to each event. |
+| Event | An event represents a single occurrence of a custom event by a particular user at a timestamp. Use this field to track and map event attributes like those in the Braze [event object]({{site.baseurl}}/api/objects_filters/event_object/). <br><br>- Event attribute `Name` is required for every mapped event.<br>- Event attribute `Time` is automatically set to now unless explicitly mapped. <br>- By default, new events will be created if one does not exist. By setting `Update Existing Only` to `true`, only existing events will be updated, and no new event will be created.<br>-  Map array type attributes to add multiple events. Array type attributes must be of equal length.<br>- Single value attributes can be used and applied to each event. |
 | Event template | Provide event templates to be referenced in body data. Templates can be used to transform data before sending it to Braze. Refer to Tealium's [Templates Guide](https://docs.tealium.com/server-side/connectors/webhook-connectors/trimou-templating-engine/) to learn more. |
 | Event template variable | Provide event template variables as data input. Refer to Tealium's [Template Variables Guide](https://docs.tealium.com/server-side/connectors/webhook-connectors/template-variables/) to learn more. |
-| Purchase | Use this field to track and map user purchase attributes like those in the Braze [purchase object]({{site.baseurl}}/api/objects_filters/purchase_object/).<br><br>- Purchase attributes `Product ID`, `Currency`, and `Price` are required for every mapped purchase.<br>- Purchase attribute `Time` is automatically set to now unless explicitly mapped.<br>- By default, new purchases is created if one does not exist. By setting `Update Existing Only` to `true`, only existing purchases is updated, and no new purchase is created.<br>- Map array type attributes to add multiple purchase items. Array type attributes must be of equal length.<br>- Single value attributes can be used and will apply to each item.|
-| Purchase template | Templates can be used to transform data prior to it being sent to Braze.<br>- Define a purchase template if you need nested objects support.<br>- When a purchase template is defined, the configuration set up in the purchases section of your action is ignored.<br>- Refer to Tealium's [Templates Guide](https://docs.tealium.com/server-side/connectors/webhook-connectors/trimou-templating-engine/) to learn more.|
+| Purchase | Use this field to track and map user purchase attributes like those in the Braze [purchase object]({{site.baseurl}}/api/objects_filters/purchase_object/).<br><br>- Purchase attributes `Product ID`, `Currency`, and `Price` are required for every mapped purchase.<br>- Purchase attribute `Time` is automatically set to now unless explicitly mapped.<br>- By default, new purchases will be created if one does not exist. By setting `Update Existing Only` to `true`, only existing purchases will be updated, and no new purchase will be created.<br>- Map array type attributes to add multiple purchase items. Array type attributes must be of equal length.<br>- Single value attributes can be used and will apply to each item.|
+| Purchase template | Templates can be used to transform data prior to it being sent to Braze.<br>- Define a purchase template if you need nested objects support.<br>- When a purchase template is defined, the configuration set up in the purchases section of your action will be ignored.<br>- Refer to Tealium's [Templates Guide](https://docs.tealium.com/server-side/connectors/webhook-connectors/trimou-templating-engine/) to learn more.|
 | Purchase template variable | Provide product template variables as data input. Refer to Tealium's [Template Variables Guide](https://docs.tealium.com/server-side/connectors/webhook-connectors/template-variables/) to learn more. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -256,7 +256,7 @@ There are three primary ways that you might accidentally log unnecessary data po
 
 #### Sending duplicate data - only send Braze deltas of attributes
 
-Tealium does not send Braze deltas of user attributes. For example, if you have an EventStream action that tracks a user's first name, email, and cell phone number, Tealium sends all three attributes to Braze anytime the action is triggered. Tealium won't be looking for what changed or was updated and send only that information.
+Tealium does not send Braze deltas of user attributes. For example, if you have an EventStream action that tracks a user's first name, email, and cell phone number, Tealium will send all three attributes to Braze anytime the action is triggered. Tealium won't be looking for what changed or was updated and send only that information.
 
 **Solution**: <br>You can check your backend to assess whether an attribute has changed or not, and if so, call Tealium's relevant methods to update the user profile. **This is what users who integrate Braze directly usually do.** <br>**OR**<br> If you don't store your own version of a user profile in your backend and can't tell if attributes change or not, you can use AudienceStream and 
 [create enrichments](https://docs.tealium.com/server-side/attributes/manage-enrichments/add-enrichment/) to only send user attributes when values have changed. See Tealium's documentation on [enrichment rules](https://docs.tealium.com/server-side-connectors/braze-connector/).

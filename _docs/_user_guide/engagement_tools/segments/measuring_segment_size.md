@@ -20,7 +20,7 @@ Braze updates the user's segment membership as data is sent back to our servers 
 
 Each segment displays the total number of users that are members of that segment. When filtering for **Users from all apps**, it also displays some of the most frequently used messaging channels (such as web push or email) and the number of reachable users for those specific channels. 
 
-It is possible that the number of total users are different than the number of users reachable by each channel. In addition, not all channels are listed in the reachable users table. For example, Content Cards, webhooks, and WhatsApp aren't shown in the breakdown. This means that the total reachable users count could be greater than the sum of the users for each displayed channel.
+It is possible that the number of total users is different than the number of users reachable by each channel. In addition, not all channels are listed in the reachable users table. For example, Content Cards, webhooks, and WhatsApp aren't shown in the breakdown. This means that the total reachable users count could be greater than the sum of the users for each displayed channel.
 
 ![A table displaying total reachable users broken down by users reachable by email, iOS push, Android push, web push, and Kindle push.]({% image_buster /assets/img_archive/segmenter_reachable_users.png %})
 
@@ -65,7 +65,7 @@ To view the number of users that are reachable for each message channel, select 
 
 The _Total_ metric represents unique users. For example, if a user has both Android push and iOS push, they will get counted for both of those rows, but will only count as 1 user in the _Total_ row.
 
-However, it's possible that the number of total users are different than the sum of users reachable by each channel, as a single user may belong to different reachable user groups. For example, a user might have both a valid email address and valid Android push token and be opted in to both, but have no associated iOS push token. 
+However, it's possible that the number of total users is different than the sum of users reachable by each channel, as a single user may belong to different reachable user groups. For example, a user might have both a valid email address and valid Android push token and be opted in to both, but have no associated iOS push token. 
 
 Keep in mind, not all channels are listed in the **Reachable users** table (such as Content Cards, webhooks, and WhatsApp). For example, if you have users only reachable through Whatsapp, they will be reflected in the _Total_ but not in any of the channel-specific rows. This means that the total reachable users count can be different from the sum of the users for each displayed channel.
 

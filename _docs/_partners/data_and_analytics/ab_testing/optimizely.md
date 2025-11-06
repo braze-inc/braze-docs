@@ -24,7 +24,7 @@ The Braze and Optimizely integration is a two-way integration that allows you to
 |----------------------------------|-------------|
 | Optimizely Data Platform account | An Optimizely Data Platform (ODP) account is required to take advantage of this partnership. |
 | Braze REST API key               | A Braze REST API key with the following permissions: `users.track`,`users.export.segments`,`segments.list`,`campaigns.trigger.send`, and `canvas.trigger.send`. |
-| Currents                         | To export data back into Optimizely, you must have Braze Currents set up for your account. |
+| Currents                         | To export data back into Optimizely, you need to have Braze Currents set up for your account. |
 | Optimizely URL and Token         | This can be obtained by navigating to your Optimizely dashboard and copying the ingestion URL and token. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

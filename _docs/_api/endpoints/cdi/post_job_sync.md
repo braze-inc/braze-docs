@@ -63,6 +63,6 @@ The following table lists possible returned errors and their associated troubles
 | `429 Another job is in progress` | There is a sync currently running for this integration. Try again after the sync has completed. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-For additional status codes and associated error messages, refer to [Fatal errors & responses]({{site.baseurl}}/api/errors/#fatal-errors).
+For additional status codes and associated error messages, please refer to [Fatal errors & responses]({{site.baseurl}}/api/errors/#fatal-errors).
 
 {% endapi %}

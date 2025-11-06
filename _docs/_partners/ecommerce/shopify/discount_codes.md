@@ -69,7 +69,7 @@ In the User Update step, do the following for each field:
 
 ![A User Update step that updates a "Promo Code" attribute with the Liquid snippet.][6]
 
-Now, you can add the custom attribute {% raw %}`{{custom_attribute.${Promo Code}}}`{% endraw %} to any message, and the discount code is templated in.
+Now, you can add the custom attribute {% raw %}`{{custom_attribute.${Promo Code}}}`{% endraw %} to any message, and the discount code will be templated in.
 
 ## Discount code behavior
 
@@ -81,7 +81,7 @@ When a discount code snippet is used in a multichannel campaign or Canvas step, 
 
 {% details Different Canvas steps or separate campaigns %}
 
-When a discount code is referenced by multiple steps in the same Canvas or by separate campaigns, an eligible user receives multiple unique promotion codes (one code for each Canvas step or campaign).
+When a discount code is referenced by multiple steps in the same Canvas or by separate campaigns, an eligible user will receive multiple unique promotion codes (one code for each Canvas step or campaign).
 
 {% enddetails %}
 

@@ -40,7 +40,7 @@ Before creating a model, you must determine your use case for this integration. 
 - Provide a list of items or search results tailored to each user, increasing engagement by showing items by relevancy to the user.
 - Find recommendations for similar items, helping users discover new things.
 
-In the following guide, we focus on the user personalized recommendations recipe.
+In the following guide, we will focus on the user personalized recommendations recipe.
 
 {% endtab %}
 {% tab Datasets %}
@@ -68,7 +68,7 @@ For a user recommendations recipe, you must provide an interactions dataset cont
 
 ### Step 1: Training
 
-Once datasets are imported, you can create a solution. A solution uses one of Amazon Personalize [recipes](https://docs.aws.amazon.com/personalize/latest/dg/working-with-predefined-recipes.html) (algorithms) to train a model. In our case, we use the `USER_PERSONALIZATION` recipe. Training the solution creates a solution version (trained model) which you can evaluate based on the performance metrics of the model.
+Once datasets are imported, you can create a solution. A solution uses one of Amazon Personalize [recipes](https://docs.aws.amazon.com/personalize/latest/dg/working-with-predefined-recipes.html) (algorithms) to train a model. In our case, we will use the `USER_PERSONALIZATION` recipe. Training the solution creates a solution version (trained model) which you can evaluate based on the performance metrics of the model.
 
 Amazon Personalize lets you adjust hyperparameters that the model uses for training. For example:
 - The "User history length percentile" parameter found in the Amazon Personalize console lets you adjust the percentile of user history to include in the training:<br><br>![Min max user profile setting]({% image_buster /assets/img/amazon_personalize/min_and_max_user_percentile.png %})

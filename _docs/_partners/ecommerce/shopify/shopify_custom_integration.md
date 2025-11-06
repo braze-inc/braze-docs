@@ -14,7 +14,7 @@ page_order: 3
 
 This guide uses Shopify’s Hydrogen framework as an example. However, you can follow a similar approach if your brand uses Shopify for the backend of your store with a "headless" front-end setup.  
 
-To integrate your Shopify headless store with Braze, you must complete these two goals:
+To integrate your Shopify headless store with Braze, you need to complete these two goals:
 
 1. **Initialize and load the Braze Web SDK to enable onsite tracking**<br><br> Manually add code into your Shopify website to enable Braze onsite tracking. By implementing the Braze SDK on your Shopify headless store, you can track onsite activities, including sessions, anonymous user behavior, pre-checkout shopper actions, and any [custom events]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) or [custom attributes]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/) you choose to include with your development team. You can also add any channels supported by the SDKs, such as in-app messages or Content Cards. 
 
@@ -390,7 +390,7 @@ async function loadCriticalData({context, params, request}) {
 
 #### Cart Updated events
 
-In addition to tracking the `cart_updated` event, you must send the cart token value over to Braze. We use the cart token value to process order webhooks received from Shopify. This is done by creating a user alias with the Shopify cart token as its name. 
+In addition to tracking the `cart_updated` event, you need to send the cart token value over to Braze. We use the cart token value to process order webhooks received from Shopify. This is done by creating a user alias with the Shopify cart token as its name. 
 
 1. Define functions for tracking the `cart_updated` event and setting the cart token:
 
@@ -589,7 +589,7 @@ Before continuing with the onboarding process, confirm that you've enabled the B
 
 ### Step 3: Track Shopify data 
 
-Enhance your integration by adding more Shopify events and attributes, which is powered by Shopify webhooks. For detailed information on the data tracked through this integration, refer to [Shopify Data Features]({{site.baseurl}}/shopify_data_features/). 
+Enhance your integration by adding more Shopify events and attributes, which will be powered by Shopify webhooks. For detailed information on the data tracked through this integration, refer to [Shopify Data Features]({{site.baseurl}}/shopify_data_features/). 
 
 ![Setup step to track Shopify data.]({% image_buster /assets/img/Shopify/track_shopify_data_setup.png %})
 
@@ -601,7 +601,7 @@ If you prefer to perform the backfill later, you can complete the initial setup 
 
 ![Section to set up historical data backfill.]({% image_buster /assets/img/Shopify/historical_backfill_setup.png %})
 
-This table contains the data that is initially loaded through the backfill.
+This table contains the data that will be initially loaded through the backfill.
 
 | Braze recommended events | Shopify custom events | Braze standard attributes | Braze subscription statuses |
 | --- | --- | --- | --- |
@@ -682,7 +682,7 @@ After the metafield is created, populate it for your customers. We recommend the
 
 #### Step 6.2: Create an endpoint to retrieve your external ID
 
-You must create a public endpoint that Braze can call to retrieve the external ID. This is necessary for scenarios where Shopify can't provide the `braze.external_id` metafield. 
+You need to create a public endpoint that Braze can call to retrieve the external ID. This is necessary for scenarios where Shopify can't provide the `braze.external_id` metafield. 
 
 ##### Endpoint specifications
 
@@ -726,18 +726,18 @@ Repeat [Step 6](#step-6), and enter your endpoint URL after selecting custom ext
 
 - If your external ID isn't generated when Braze sends a request to your endpoint, the integration will default to using the Shopify customer ID when the `changeUser` function is called. This step is crucial for merging the anonymous user profile with the identified user profile. As a result, there may be a temporary period during which different types of external IDs exist within your workspace.
 - When the external ID is available in the `braze.external_id` metafield, the integration will prioritize and assign this external ID. 
-    - If the Shopify customer ID was previously set as the Braze external ID, it is replaced with the `braze.external_id` metafield value. 
+    - If the Shopify customer ID was previously set as the Braze external ID, it will be replaced with the `braze.external_id` metafield value. 
 
 #### Step 6.4: Collect your email or SMS opt-ins from Shopify (optional)
 
 You have the option to collect your email or SMS marketing opt-ins from Shopify. 
 
-If you use the email or SMS channels, you can sync your email and SMS marketing opt-in states into Braze. If you sync email marketing opt-ins from Shopify, Braze will automatically create an email subscription group for all users associated with that specific store. You must create a unique name for this subscription group.
+If you use the email or SMS channels, you can sync your email and SMS marketing opt-in states into Braze. If you sync email marketing opt-ins from Shopify, Braze will automatically create an email subscription group for all users associated with that specific store. You need to create a unique name for this subscription group.
 
 ![“Collect subscribers” section with option to collect email or SMS marketing opt-ins.]({% image_buster /assets/img/Shopify/collect_email_subscribers.png %})
 
 {% alert note %}
-As mentioned in [Shopify overview]({{site.baseurl}}/shopify_overview/), if you want to use a third-party capture form, your developers need to integrate Braze SDK code. This will let you capture the email address and global email subscription status from form submissions. Specifically, you must implement and test these methods to your `theme.liquid` file:<br><br>
+As mentioned in [Shopify overview]({{site.baseurl}}/shopify_overview/), if you want to use a third-party capture form, your developers need to integrate Braze SDK code. This will let you capture the email address and global email subscription status from form submissions. Specifically, you need to implement and test these methods to your `theme.liquid` file:<br><br>
 - [setEmail](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setemail): Sets the email address on the user profile
 - [setEmailNotificationSubscriptionType](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setemailnotificationsubscriptiontype): Updates the global email subscription status
 {% endalert %}

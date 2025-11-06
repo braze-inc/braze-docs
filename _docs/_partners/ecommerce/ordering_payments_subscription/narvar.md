@@ -29,7 +29,7 @@ search_tag: Partner
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
-If you’re interested in additional notification types or channels, contact your Braze and Narvar Customer Success Manager.
+If you’re interested in additional notification types or channels, please contact your Braze and Narvar CSM.
 {% endalert %}
 
 ## Integration Details

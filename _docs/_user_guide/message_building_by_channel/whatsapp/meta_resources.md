@@ -163,7 +163,7 @@ Ultimately, this update provides you with a quicker feedback loop (30 minutes ve
 
 Starting June 14, 2023, Meta is introducing new experimentation practices to the WhatsApp platform in order to assess how marketing messages impact consumer experience and engagement. This experiment may affect your marketing messages sent on the WhatsApp Business API with Braze.
 
-Meta intends to continue such experimentation on the WhatsApp platform. See [Meta’s documentation](https://developers.facebook.com/docs/whatsapp/on-premises/guides/experiments?content_id=86oue5PtwEgcBJl) for more information.
+Meta intends to continue such experimentation on the WhatsApp platform. Please see [Meta’s documentation](https://developers.facebook.com/docs/whatsapp/on-premises/guides/experiments?content_id=86oue5PtwEgcBJl) for more information.
 
 **WhatsApp experimentation affects marketing messages only.** This experiment has the potential to impact the delivery of marketing template messages. Utility and authentication templates will continue to be delivered without any experimentation impact.
 
@@ -179,7 +179,7 @@ In the experiment, Meta randomly chooses approximately 1% of WhatsApp consumers 
 
 If a message isn’t delivered due to the experiment, a specific error code will be surfaced under Activity Log and within Currents. The message will also be counted as a failure and incorporated into your WhatsApp Failures metrics across all reporting within the Braze dashboard. You will not be charged for these messages.
 
-This 130472 error code will state “User’s number is part of an experiment.” See [Meta’s documentation](https://developers.facebook.com/docs/whatsapp/cloud-api/support/error-codes?content_id=8SJRLBEjYGvXO9k) for more information on WhatsApp Cloud API error codes.
+This 130472 error code will state “User’s number is part of an experiment.” Please see [Meta’s documentation](https://developers.facebook.com/docs/whatsapp/cloud-api/support/error-codes?content_id=8SJRLBEjYGvXO9k) for more information on WhatsApp Cloud API error codes.
 
 ### Can I opt out of Meta's experiment?
 
