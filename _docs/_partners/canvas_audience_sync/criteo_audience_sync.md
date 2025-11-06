@@ -51,7 +51,7 @@ Once you have selected confirm, you’ll then be redirected back into Braze to s
 
 ![A list of available ad accounts you can connect to Criteo.]({% image_buster /assets/img/criteo/criteo7.png %}){: style="max-width:80%;"}
 
-Once you have successfully connected, you are taken back to the partner page, where you can view which accounts are connected and disconnect existing accounts.
+After you have successfully connected, you are taken back to the partner page, where you can view which accounts are connected and disconnect existing accounts.
 
 ![An updated version of the Criteo technology partners page showing the ad accounts successfully connected.]({% image_buster /assets/img/criteo/criteo4.png %}){: style="max-width:80%;"}
 

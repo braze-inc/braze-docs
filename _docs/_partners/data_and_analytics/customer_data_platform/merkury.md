@@ -42,11 +42,11 @@ You must have the [Braze Web SDK]({{site.baseurl}}/developer_guide/platform_inte
 
 ### Step 2: Deploy Merkle's Merkury tag
 
-Deploy the Merkury tag on your website. This will make the Merkury identity connector available on your website. Your Merkle account manager provides you with a detailed guide with instructions.
+Deploy the Merkury tag on your website to make the Merkury identity connector available on your website. Your Merkle account manager will provide you with a detailed guide with instructions.
 
 ### Step 3: Create custom attributes
 
-Merkury identity connector populates the following fields, and you must create them in Braze as [custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes#custom-attributes).
+The Merkury identity connector populates the following fields, which you must create in Braze as [custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes#custom-attributes).
 
 | Attribute name | Data type | Description |
 | --- | --- | --- |
