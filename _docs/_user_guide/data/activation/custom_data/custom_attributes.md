@@ -54,6 +54,8 @@ There are two ways you can remove custom attributes from user profiles:
 
 The usage report lists all the Canvases, campaigns, and segments using a specific custom attribute. This list doesn't include uses of Liquid. 
 
+The usage report also contains a Values tab that shows the values of the custom attribute found when sampling a subset of your users (typically around 35,000 users). Percentages of each value are displayed in a pie chart and counts can be found below in a table format. Please note that due to sampling, there will be values missing, which is more likely to happen for values that occur infrequently. A missing value does not mean that no users have that value, it just means that the value was not found within the sample. Thus, this feature provides a sense of the most common values, but should not be used for troubleshooting or other use cases where it's important to incorporate data from all users.
+
 You can view up to 100 usage reports at a time by selecting the checkboxes next to the respective custom attributes and then selecting **View usage report**.
 
 ### Exporting data
