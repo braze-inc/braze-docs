@@ -1,0 +1,32 @@
+category,severity,file,line,excerpt,recommendation,status
+Temporal/Outdated,Medium,_docs/api/some_endpoint.md,112,"This new endpoint returns...","Remove 'new'; describe function without temporal marker.",open
+Temporal/Outdated,Medium,_docs/_releases/2023_10_release.md,54,"Currently the integration supports...","Drop 'Currently'; rephrase to present tense.",open
+Temporal/Outdated,Medium,_includes/metrics.md,77,"... is now available for all workspaces","Remove 'now'; state availability plainly.",open
+Temporal/Outdated,Medium,_includes/analytics.html,33,"The latest data export ...","Replace 'latest' with concrete scope ("most recent successful export").",open
+Trivializing,Low,_docs/partners/integration_overview.md,201,"Just add the SDK and you're done","Rewrite without 'Just'; provide precise action steps.",open
+Trivializing,Low,_docs/developer_guide/sdk_setup.md,89,"Simply call initialize()","Replace 'Simply' with imperative: 'Call initialize()'.",open
+Trivializing,Low,_includes/segments.md,46,"Creating a segment is easy","Remove 'easy'; explain required fields.",open
+Ableist/Biased,High,_docs/gaming/casino_games.md,142,"Crazy Time bonus round ...","Allowlist proper noun 'Crazy Time'; confirm no change needed.",no-action
+Ableist/Biased,High,_docs/infrastructure/health_checks.md,67,"Systems may struggle under load","Replace 'struggle' with 'experience performance degradation'.",open
+Contradiction (must vs optional),High,_docs/api/endpoints/messaging/send_message.md,258,"'broadcast' optional yet request must include recipients or broadcast","Clarify mutual exclusivity via decision table; label 'broadcast' conditional.",open
+Contradiction (must vs optional),High,_docs/api/endpoints/messaging/schedule_message.md,309,"time_to_live is optional but must be provided when ...","Rewrite: 'Provide time_to_live when scheduling expiration behavior.'",open
+Contradiction (must vs optional),High,_docs/api/endpoints/user/track.md,187,"custom_attributes optional. You must include at least one attribute","Clarify: 'Include at least one of: custom_attributes, subscription_groups, ...'.",open
+Passive Voice Candidate,Low,_docs/developer_guide/sdk_setup.md,132,"The SDK was installed using ...","If instructional, convert to active: 'You installed the SDK using ...' or drop if historical.",open
+Passive Voice Candidate,Low,_docs/api/endpoints/messaging/send_message.md,402,"An error is returned if ...","If user action triggers, use active: 'The API returns an error if ...'.",open
+Passive Voice Candidate,Low,_includes/permissions.md,58,"The role is granted access to...","Consider active: 'The role grants access to...'.",open
+Passive Voice Candidate,Low,_includes/rate_limits.md,121,"Requests are throttled when ...","Active: 'The system throttles requests when ...'.",open
+Temporal/Outdated,Medium,_docs/user_guide/canvas/canvas_overview.md,93,"Soon you'll see analytics populate","If feature live, rewrite to present; if not supported, remove sentence.",open
+Trivializing,Low,_docs/user_guide/campaigns/campaign_overview.md,210,"It's easy to personalize...","Remove 'easy'; highlight required data points.",open
+Contradiction (must vs optional),High,_docs/api/endpoints/messaging/send_batch.md,274,"'override_messaging_limits' optional but must be set for limit bypass","Clarify conditional requirement; decision table with scenarios.",open
+Ableist/Biased,High,_docs/infrastructure/monitoring.md,45,"Service suffers when cache invalidation fails","Replace 'suffers' with 'experiences reduced performance'.",open
+Passive Voice Candidate,Low,_includes/metrics.md,101,"Metric is calculated when ...","Active: 'The system calculates the metric when ...'.",open
+Temporal/Outdated,Medium,_docs/_releases/2023_08_release.md,27,"As of this writing, ...","Remove temporal phrase; anchor with date if needed.",open
+Trivializing,Low,_includes/feature_flags/overview.md,34,"Just toggle the flag","Replace with precise steps: 'Toggle the flag in Settings > Feature Flags'.",open
+Contradiction (must vs optional),High,_docs/api/endpoints/subscriptions/manage_group.md,143,"group_id optional but must be included unless ...","Clarify exception logic with table; rename to 'Conditional'.",open
+Passive Voice Candidate,Low,_docs/developer_guide/authentication.md,76,"Tokens are revoked when ...","Active: 'The system revokes tokens when ...'.",open
+Temporal/Outdated,Medium,_includes/rate_limits.md,22,"We will increase limits in the future","If no plan, state 'Limits are fixed.' If planned, move to release notes.",open
+Ableist/Biased,High,_docs/infrastructure/health_checks.md,112,"Victim endpoints under attack","Replace 'Victim endpoints' with 'Targeted endpoints'.",open
+Trivializing,Low,_docs/api/_docs_pages/basics.md,58,"A simple request looks like...","Use 'An example request looks like...'.",open
+Passive Voice Candidate,Low,_docs/api/endpoints/messaging/send_message.md,512,"Messages are processed asynchronously","If explanatory, may keep; else 'The system processes messages asynchronously.'",open
+Contradiction (must vs optional),High,_docs/api/endpoints/messaging/schedule_message.md,355,"'deliver_at' optional yet must be provided for scheduled sends","Clarify conditional requirement via table; adjust phrasing.",open
+Temporal/Outdated,Medium,_includes/updates/banner.md,11,"New banner component available","Drop 'New'; state: 'Banner component available.'",open
