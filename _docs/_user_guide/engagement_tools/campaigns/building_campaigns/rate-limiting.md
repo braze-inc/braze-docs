@@ -97,13 +97,16 @@ Be wary of delaying time-sensitive messages with this form of rate limiting in r
 
 #### Multichannel campaigns
 
-When sending a multi-channel campaign with a speed rate limit, the rate limit is shared between channels. This means the total number of messages sent per minute from the campaign will not exceed the rate limit. For example, if your campaign has a rate limit of 10,000 per minute and uses email and SMS, Braze will send a total of 10,000 messages per minute across email and SMS.
+When sending a multi-channel campaign with a speed rate limit, each channel is sent independently of the others. As a result, the following may occur:
 
-![The option to limit the rate at which the campaign will send selected with 500,000 messages per minute.]({% image_buster /assets/img_archive/multichannel_campaigns_rate_limit.png %}){: style="max-width:50%;"} 
+- The total number of messages sent per minute could be more than the rate limit. 
+    - For example, if your campaign has a rate limit of 10,000 per minute and uses email and SMS, Braze can send a max of 20,000 total messages each minute (10,000 email and 10,000 SMS).
+- Users could receive the different channels at different times, and it is not predictable which channel they will get first. 
+    - For example, if you send a campaign that contains an email and an SMS, you may have 10,000 users with valid phone numbers and 50,000 users with valid email addresses. If you set the campaign to send 100 messages per minute (a slow rate limit for the campaign size), a user could receive the SMS in the first batch of sends and the email in the last batch of sends, almost nine hours later.
 
 #### Canvas delivery speed rate limiting {#canvas-delivery-speed}
 
-When sending a Canvas with a speed rate limit, the rate limit is shared between all channels and all Canvas steps. This means the total number of messages sent per minute from the Canvas will not exceed the rate limit. For example, if your Canvas has a rate limit of 10,000 per minute and uses email and SMS, Braze will send a total of 10,000 messages per minute across email and SMS.
+When sending a Canvas with a speed rate limit, the rate limit is shared between channels. This means the total number of messages sent per minute from the Canvas will not exceed the rate limit. For example, if your Canvas has a rate limit of 10,000 per minute and uses email and SMS, Braze will send a total of 10,000 messages per minute across email and SMS.
 
 #### Rate limiting and Connected Content retries
 
