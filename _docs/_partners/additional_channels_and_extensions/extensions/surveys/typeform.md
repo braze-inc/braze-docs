@@ -614,7 +614,7 @@ return brazecall;
 
 After you have written your data transformation, click **Validate** to make your Data Transformation code is formatted correctly and will work as expected. Then, save and activate your Data Transformation.
 
-Once activated, custom event data is logged to a user's profile when they complete your form.
+When activated, custom event data is logged to a user's profile when they complete your form.
 
 ![]({% image_buster /assets/img/typeform/typeform_custom_event.png %})
 

@@ -23,7 +23,7 @@ Use the optilyz and Braze webhook integration to send your customers direct mail
 | Requirement | Description |
 |---|---|
 |optilyz account | An optilyz account is required to take advantage of this partnership. |
-| optilyz API key<br><br>`<OPTILYZ_API_KEY>`| Your optilyz customer success manager provides you with your optilyz API key.<br><br>This API key will enable you to connect your Braze and optilyz accounts. |
+| optilyz API key<br><br>`<OPTILYZ_API_KEY>`| Your optilyz customer success manager will provide you with your optilyz API key.<br><br>This API key will enable you to connect your Braze and optilyz accounts. |
 | optilyz automation ID<br><br>`<OPTILYZ_AUTOMATION_ID>` | The automation ID can be found in a box on the page header.<br><br>When logged into optilyz, you can navigate to the automation you want to send data into.<br>The automation must be activated first. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
@@ -45,7 +45,7 @@ To create an optilyz webhook template to use in future campaigns or Canvases, na
 If you would like to create a one-off optilyz webhook campaign or use an existing template, select **Webhook** in Braze when creating a new campaign.
 
 In your new Webhook template, fill out the following fields:
-- **Webhook URL**: The Webhook URL is unique to each customer and your optilyz customer success manager provides it to you.
+- **Webhook URL**: The Webhook URL is unique to each customer and your optilyz customer success manager will provide it to you.
 - **Request Body**: Raw Text
 
 #### Request headers and method

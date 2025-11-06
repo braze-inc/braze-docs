@@ -50,7 +50,7 @@ To set up the native app, follow these steps on the LiveRamp docs: [Set Up the L
 Before preparing any PII-based tables, be sure you understand [LiveRamp’s privacy filter](https://docs.liveramp.com/identity/en/perform-identity-resolution-in-snowflake.html) which is run during jobs to ensure that the attribute columns (non-identifiers) in your input tables do not contain values that are too unique. This is critical for maintaining consumer privacy and avoiding reidentification.
 {% endalert %}
 
-Next, create a data table with the [required format](https://docs.liveramp.com/identity/en/perform-identity-resolution-in-snowflake.html) that is called against the LiveRamp native app. Refer to the following categories to determine which of your identifiers are eligible for resolution:
+Next, create a data table with the [required format](https://docs.liveramp.com/identity/en/perform-identity-resolution-in-snowflake.html) that will be called against the LiveRamp native app. Refer to the following categories to determine which of your identifiers are eligible for resolution:
 
 | Identifier Type | Description  |
 |-----------------|--------------|
@@ -146,4 +146,4 @@ Benchmarks allow you to compare your metrics with industry standards, available 
 
 ### Breaking vs. Non-Breaking Changes
 
-Be aware of changes that can affect your integration. Breaking changes is preceded by an announcement and a migration period.
+Be aware of changes that can affect your integration. Breaking changes will be preceded by an announcement and a migration period.

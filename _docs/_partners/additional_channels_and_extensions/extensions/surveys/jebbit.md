@@ -41,7 +41,7 @@ Submit your file using the following [Dropbox URL](https://www.dropbox.com/reque
 A Jebbit engineer assigned to your integration will push through a test submission from Jebbit to Braze, so you can see how the data will look in your Braze environment. This is the final step in activating the integration. Now that your Jebbit data is set up, use it to drive your marketing initiatives.
 
 {% alert note %}
-The attribute ID you have set in Jebbit is how the attribute field name is shown in Braze.
+The attribute ID you have set in Jebbit is how the attribute field name will be shown in Braze.
 {% endalert %}
 
 ## Customization

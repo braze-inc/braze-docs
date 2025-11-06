@@ -94,7 +94,7 @@ Select **Create Content Block** to get started.
 
 Next, you must define your **Content Block Liquid Tag**. After saving this Content Block, this Liquid tag can be referenced when composing messages. In this example, we have assigned the Liquid tag as {% raw %}`{{content_blocks.${passKit_SmartPass_url}}}`{% endraw %}. 
 
-Within this Content Block, we not directly include the payload, but reference it in a {% raw %}`{{passData}}`{% endraw %} variable. The first code snippet you must add to your Content Block captures a Base64 encoding of the {% raw %}`{{passData}}`{% endraw %} variable.
+Within this Content Block, we won't directly include the payload, but reference it in a {% raw %}`{{passData}}`{% endraw %} variable. The first code snippet you must add to your Content Block captures a Base64 encoding of the {% raw %}`{{passData}}`{% endraw %} variable.
 {% raw %}
 ```liquid
 {% capture base64JsonPayload %}{{passDatapassData|base64_encode}}{% endcapture %}
@@ -103,7 +103,7 @@ Within this Content Block, we not directly include the payload, but reference it
 
 ### Step 3: Create your encryption signature using a SHA1 HMAC hash
 
-Next, you are creating your encryption signature using a [SHA1 HMAC](https://en.wikipedia.org/wiki/HMAC) hash of the project URL and the payload. 
+Next, you will create your encryption signature using a [SHA1 HMAC](https://en.wikipedia.org/wiki/HMAC) hash of the project URL and the payload. 
 
 The second code snippet you must add to your Content Block captures the URL to be used for hashing.
 {% raw %}
@@ -201,7 +201,7 @@ Your message body should look something like this:
 The output URL for the sample is:
 ![The output URL that includes a long, randomly generated string of letters and numbers.]({% image_buster /assets/img/passkit/passkit2.png %}){: style="max-width:70%"}
 
-The output URL is long. The reason for this is that it contains all the pass data and incorporates best-in-class security to ensure data integrity and no tempering via URL modification. If using SMS to distribute this URL, you may want to run it through a link shortening process such as [bit.ly](https://dev.bitly.com/v4/#operation/createFullBitlink). This can be done through a Connected Content call to a bit.ly endpoint.
+The output URL will be long. The reason for this is that it contains all the pass data and incorporates best-in-class security to ensure data integrity and no tempering via URL modification. If using SMS to distribute this URL, you may want to run it through a link shortening process such as [bit.ly](https://dev.bitly.com/v4/#operation/createFullBitlink). This can be done through a Connected Content call to a bit.ly endpoint.
 
 ## Update pass using the PassKit webhook
 

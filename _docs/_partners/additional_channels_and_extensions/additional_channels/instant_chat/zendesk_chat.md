@@ -86,7 +86,7 @@ Go to **Objects and rules** > **Business rules** > **Triggers**.
 2. Create a new **trigger** (for example, **Respond via SMS Braze**).
 3. Under **Conditions**, select:
 - **Ticket>Comment** is **Present and requester can see comment** so that the message is triggered whenever a new public comment is included in a ticket update
-- **Ticket>Update** *is not* **Web service (API)** so that when a user sends a message from Braze, it isn't forwarded back to their cell phone. Only messages coming from Zendesk is forwarded.
+- **Ticket>Update** *is not* **Web service (API)** so that when a user sends a message from Braze, it isn't forwarded back to their cell phone. Only messages coming from Zendesk are forwarded.
 
 ![Respond via SMS Braze.]({% image_buster /assets/img/zendesk/instant_chat/chat6.png %}){: style="max-width:70%;"}
 

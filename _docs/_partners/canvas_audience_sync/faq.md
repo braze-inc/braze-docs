@@ -29,7 +29,7 @@ It is important to note that the user fields you can select to sync correlate wi
 
 ### What happens when my data is being processed to send to each Audience Sync partner?
 
-The data you select to send to your Audience Sync destination is normalized. Each partner may have different specifications for data normalization based on their API requirements, so review each partner-specific endpoint for further details.
+The data you select to send to your Audience Sync destination will be normalized. Each partner may have different specifications for data normalization based on their API requirements, so review each partner-specific endpoint for further details.
 
 In addition, Braze will hash all data before syncing users with our Audience Sync partners, ensuring that all PII is hashed using SHA256.
 
