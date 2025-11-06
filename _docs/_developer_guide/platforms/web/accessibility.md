@@ -288,7 +288,7 @@ For Content Cards displayed inline, consider viewport constraints:
 ## Testing Accessibility
 ### Manual Testing Checklist
 
-- Navigate Content Cards with keyboard only (Tab, Enter, Space)
+- Navigate Content Cards and In-App Messages with keyboard only (Tab, Enter, Space)
 - Test with screen reader (NVDA, JAWS, VoiceOver)
 - Verify all images have alt text
 - Check color contrast ratios (use tools like WebAIM Contrast Checker)
