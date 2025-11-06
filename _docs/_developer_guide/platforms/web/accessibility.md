@@ -39,19 +39,20 @@ The minimum SDK version that satisfies WCAG 2.1 is around v3.4.0. However, we re
 
 The following are already supported for content cards, in-app messages, banners:
 
-✅ ARIA roles and labels  
-✅ Keyboard navigation support  
-✅ Focus management  
-✅ Screen reader announcements  
-✅ Minimum 45x45px touch targets  
-✅ Semantic HTML structure  
-✅ Proper heading hierarchy  
-✅ Alt text support for images  
-✅ Color contrast compliance  
+- ✅ ARIA roles and labels
+- ✅ Keyboard navigation support
+- ✅ Focus management
+- ✅ Screen reader announcements
+- ✅ Semantic HTML structure
+- ✅ Alt text support for images
 
 # Accessibility Guide for SDK Integrators
 
 This guide provides tips and best practices for ensuring maximum accessibility when integrating the Braze Web SDK into your web application.
+
+### Avoid Sporatic Viewport Changes
+
+Session start modals, full, or HTML in-app messages may shift elements of the page around sporatically. This makes navigating via keyboard shortcuts more confusing for the user.
 
 ## Content Cards
 
@@ -248,20 +249,6 @@ The SDK provides focus indicators, but you can enhance them:
 .ab-card a:focus {
   outline: 2px dashed #1676d0;
   outline-offset: 2px;
-}
-```
-
-### Touch Target Sizes
-
-The SDK ensures buttons meet the minimum 45x45px touch target size (WCAG 2.5.5). If you customize button sizes, maintain this minimum:
-
-```css
-/* Don't make buttons smaller than 45x45px */
-.ab-close-button,
-.ab-refresh-button,
-.ab-message-button {
-  min-width: 45px;
-  min-height: 45px;
 }
 ```
 
