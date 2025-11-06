@@ -51,7 +51,7 @@ In Braze, navigate to **Segments**, name your Tinyclues cohort segment, and sele
 Having trouble locating your cohort? Check out our [troubleshooting](#troubleshooting) section for guidance. 
 
 {% alert important %}
-Only users who already exist within Braze is added or removed from a cohort. Cohort Import will not create new users in Braze.
+Only users who already exist within Braze are added or removed from a cohort. Cohort Import will not create new users in Braze.
 {% endalert %}
 
 ## Using this integration

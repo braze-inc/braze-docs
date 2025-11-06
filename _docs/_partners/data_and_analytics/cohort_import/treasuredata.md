@@ -29,7 +29,7 @@ This feature is currently in beta. For more information, contact your Treasure D
 
 ### Step 1: Get your Braze data import key
 
-In Braze, navigate to **Partner Integrations** > **Technology Partners** and select **Treasure Data**. Here, you find your REST endpoint and generate your Braze data import key. After the key is generated, you can create a new key or invalidate an existing one.
+In Braze, navigate to **Partner Integrations** > **Technology Partners** and select **Treasure Data**. Here, you will find your REST endpoint and generate your Braze data import key. After the key is generated, you can create a new key or invalidate an existing one.
 
 ### Step 2: Create a data connection
 
@@ -46,7 +46,7 @@ Search for the Braze Integration in the **Catalog**, then hover over the icon an
 Sync your cohorts to Braze through an activation in the **Audience Studio** or by executing a query in the **Data Workbench**.
 
 {% alert important %}
-Only users who already exist within Braze is added or removed from a cohort. Cohort Import will not create new users in Braze.
+Only users who already exist within Braze are added or removed from a cohort. Cohort Import will not create new users in Braze.
 {% endalert %}
 
 {% tabs local %}

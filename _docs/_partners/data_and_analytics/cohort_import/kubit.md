@@ -14,7 +14,7 @@ search_tag: Partner
 
 ### Step 1: Get the Braze data import key
 
-In Braze, navigate to **Partner Integrations** > **Technology Partners** and select **Kubit**. Here, you find the REST endpoint and generate your Braze data import key. 
+In Braze, navigate to **Partner Integrations** > **Technology Partners** and select **Kubit**. Here, you will find the REST endpoint and generate your Braze data import key. 
 
 Once generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in Kubit's dashboard.
 
@@ -41,7 +41,7 @@ Next, select the desired import cadence. One-time imports allow you to import on
 ![]({% image_buster /assets/img/kubit/import_schedule.png %}){: style="max-width:40%;"}
 
 {% alert important %}
-Only users who already exist within Braze is added or removed from a cohort. Cohort Import will not create new users in Braze.
+Only users who already exist within Braze are added or removed from a cohort. Cohort Import will not create new users in Braze.
 {% endalert %}
 
 #### Verify import status
