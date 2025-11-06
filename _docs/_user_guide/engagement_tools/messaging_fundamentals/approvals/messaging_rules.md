@@ -63,7 +63,7 @@ Select **Allow launching with approval**. Next, for **With Approval From**, sele
 Note the following details on launching messages with approval:
 
 - If the maximum is met and an approver is selected, the Braze user with the approval permission will be able to select **Approved** from the **Target Audience** approval dropdown.
-- If the maximum is met an an approve is not selected, the Canvas or campaign will be prevented from launching.
+- If the maximum is met and an approver is not selected, the Canvas or campaign is prevented from launching.
 
 ![The "Summary" step of the Canvas workflow that shows you need an approval to launch.]({% image_buster /assets/img/non_approver_banner.png %}){: style="max-width:90%;"}
 
