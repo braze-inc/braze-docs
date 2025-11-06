@@ -44,7 +44,7 @@ If you are selecting SKU as your catalog ID, make sure that all your products an
 
 You receive a dashboard notification, and your status will display as “In Progress” to indicate the initial sync is starting. Note that the time it takes for the sync to finish will depend on how many products and variants Braze will need to sync over from Shopify. During this time, you can leave this page and wait for a dashboard notification or email to notify you when this is complete.
 
-Note that if your initial sync exceeds your [catalog limit]({{site.baseurl}}/user_guide/data/activation/catalogs/create/#tiers), Braze will stop syncing any more products. If you exceed the limit after the sync is successful due to new products being added over time, the sync will no longer be active. In both these cases, product updates from Shopify will no longer be reflected in Braze. Reach out to your account manager to consider upgrading your tier. 
+Note that if your initial sync exceeds your [catalog limit]({{site.baseurl}}/user_guide/data/activation/catalogs/create/#tiers), Braze will stop syncing any more products. If you exceed the limit after the sync is successful due to new products being added over time, the sync will no longer be active. In both these cases, product updates from Shopify will no longer be reflected in Braze. Contact your account manager to consider upgrading your tier. 
 
 ### Step 4: Sync completed
 

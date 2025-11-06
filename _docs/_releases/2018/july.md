@@ -11,7 +11,7 @@ description: "This article contains release notes for July 2018."
 
 You can now trigger campaigns and Canvas steps based on attribute value changes, such as subscription status and custom attribute changes. Previously, you needed to send Braze an event or API trigger in order to trigger a campaign in real time. but with attribute triggers, you can set up triggered workflows directly from Braze without adding an event!
 
-This feature is not yet available for all customers. Reach out to your account manager if you are interested in enabling this feature for your Braze account.
+This feature is not yet available for all customers. Contact your account manager if you are interested in enabling this feature for your Braze account.
 
 ## Canvas time option addition: Local time
 

@@ -140,7 +140,7 @@ To do this, use the following syntax, replacing the image URL as needed:
 {% endraw %}
 This template will take the current time (in seconds), append it to the end of the Movable Ink image tab (as a query param), and then output the final result. You can preview it with the **Test** tab&#8212;this will evaluate the code and show a preview.
 
-**3.** Lastly, re-evaluate segment membership. To do this, enable the `Re-evaluate audience membership and liquid at send-time` option located on the **Target Audiences** step of a campaign. If this is option is not available, reach out to your customer success manager or Braze support. This option will instruct Braze SDKs to re-request the campaign, providing a unique URL each time an in-app message is triggered.
+**3.** Lastly, re-evaluate segment membership. To do this, enable the `Re-evaluate audience membership and liquid at send-time` option located on the **Target Audiences** step of a campaign. If this is option is not available, contact your customer success manager or Braze support. This option will instruct Braze SDKs to re-request the campaign, providing a unique URL each time an in-app message is triggered.
 
 {% endtab %}
 {% tab Content Card %}

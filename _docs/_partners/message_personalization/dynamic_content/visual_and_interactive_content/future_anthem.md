@@ -33,7 +33,7 @@ With this integration, you can:
 
 ## Integration
 
-The Future Anthem Customer Success team will help set up your integration. Reach out to your Customer Success contact and they'll help you identify the most relevant attributes for you to send to Braze.
+The Future Anthem Customer Success team will help set up your integration. Contact your Customer Success contact and they'll help you identify the most relevant attributes for you to send to Braze.
 
 |Example attributes in Future Anthem|Example attributes in Braze|
 |-----------------------------------|---------------------------|

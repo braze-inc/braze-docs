@@ -62,7 +62,7 @@ The following requirements are typical requirements you might need from Braze. W
 
 ## [Type of Integration] Integration
 
-This is where you break down the integration into steps. Do not just write endless paragraphs - these are technical documents which will be used by marketers and developers alike to get the integration up and running. Your only goal for this section is to write descriptive documentation that helps the Braze User get the job done. By 'Type of Integration' in the section title, we mean to indicate whether or not this is a Side-by-Side integration, server-to-server, or Out-of the Box. This enables you to have multiple Integration Sections if there is more than one way to integrate with this partner.
+This is where you break down the integration into steps. Do not just write endless paragraphs - these are technical documents which will be used by marketers and developers alike to get the integration up and running. Your only goal for this section is to write descriptive documentation that helps the Braze User get the job done. By 'Type of Integration' in the section title, we mean to indicate whether or not this is a Side-by-Side integration, server-to-server, or default. This enables you to have multiple Integration Sections if there is more than one way to integrate with this partner.
 
 If this is a Currents Integration, this page should be located in the Currents section, and a corresponding Nav Page should be build that redirects to that location in Currents.
 

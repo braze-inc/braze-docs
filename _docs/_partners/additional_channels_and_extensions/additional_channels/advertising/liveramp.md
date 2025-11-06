@@ -27,14 +27,14 @@ Snowflake's [Secure Data Shares](https://docs.snowflake.com/en/user-guide/data-s
 | Prerequisite       | Description                                                                                                                                                                                     |
 |-------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Snowflake Account | You need a Snowflake account with admin-level permissions.                                                                                                                                      |
-| LiveRamp Account  | Reach out to your LiveRamp account team or [snowflake@liveramp.com](mailto:snowflake@liveramp.com) to discuss the required LiveRamp applications within Snowflake.                              |
+| LiveRamp Account  | Contact your LiveRamp account team or [snowflake@liveramp.com](mailto:snowflake@liveramp.com) to discuss the required LiveRamp applications within Snowflake.                              |
 {: .reset-td-br-1 .reset-td-br-2 }
 
 ## Setting up the integration
 
 ### Step 1: Request a data share from Braze
 
-First, reach out to your Braze account manager or customer success manager to purchase a Snowflake Data Share Connector for your Braze account. When you request a data share, Braze will provision the share from the workspace(s) that the share was purchased. After the share is provisioned, all data is immediately accessible from within your Snowflake instance in the form of an incoming data share. Once the share is visible in your instance create a database from the share so you can see and query the tables.
+First, contact your Braze account manager or customer success manager to purchase a Snowflake Data Share Connector for your Braze account. When you request a data share, Braze will provision the share from the workspace(s) that the share was purchased. After the share is provisioned, all data is immediately accessible from within your Snowflake instance in the form of an incoming data share. Once the share is visible in your instance create a database from the share so you can see and query the tables.
 
 For a full walkthrough, see [Snowflake integration guide with Braze]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/).
 
@@ -117,7 +117,7 @@ With your data now pseudonymized to your dedicated encoding of RampID, you have 
 ## Troubleshooting
 
 {% alert note %}
-If you have more specific issues or questions, reach out to [martech@liveramp.com](mailto:martech@liveramp.com).
+If you have more specific issues or questions, contact [martech@liveramp.com](mailto:martech@liveramp.com).
 {% endalert %}
 
 ### Snowflake Regions

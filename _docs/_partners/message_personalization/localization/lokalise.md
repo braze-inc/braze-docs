@@ -16,7 +16,7 @@ _This integration is maintained by Lokalise._
 
 ## About the integration
 
-The Braze and Lokalise integration leverages Connected Content to allow you to easily insert translated content into your Braze campaigns based on user language settings.
+The Braze and Lokalise integration uses Connected Content to allow you to easily insert translated content into your Braze campaigns based on user language settings.
 
 ## Prerequisites
 

@@ -34,7 +34,7 @@ The SEEN API currently accepts 1,000 calls per hour.
 In the following example, we'll send users' data to SEEN for video generation, and receive a unique landing page link and a unique, personalized thumbnail back to Braze for distribution. This example uses a POST webhook to send data to SEEN, and data transformation to receive the data back to Braze. If you have multiple video campaigns with SEEN, repeat the process to connect Braze with all video campaigns.
 
 {% alert tip %}
-If you experience any issues, reach out to your SEEN customer success manager for assistance.
+If you experience any issues, contact your SEEN customer success manager for assistance.
 {% endalert %}
 
 ### Step 1: Create a webhook campaign

@@ -13,7 +13,7 @@ search_tag: Partner
 > [Amazon S3](https://aws.amazon.com/s3/) is a highly scalable storage system offered by Amazon Web Services.
 
 {% alert important %}
-If you're switching between cloud storage providers, reach out to your Braze customer success manager for further assistance on setting up and validating your new integration.
+If you're switching between cloud storage providers, contact your Braze customer success manager for further assistance on setting up and validating your new integration.
 {% endalert %}
 
 The Braze and Amazon S3 integration features two integration strategies:
