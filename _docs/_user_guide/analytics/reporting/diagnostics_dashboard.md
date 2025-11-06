@@ -43,7 +43,6 @@ You can access the diagnostics dashboard by going to **Analytics** > **Dashboard
 
 To run the dashboard and view your data:
 
-1. Select a date range.
 2. Choose either **Campaigns** or **Canvases** as the source for your dashboard reports. 
 3. Next, choose one or more campaigns or Canvases.
 4. Select **Run Dashboard** to load the data for your selected filters.
