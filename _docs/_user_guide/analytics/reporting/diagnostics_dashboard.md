@@ -37,7 +37,7 @@ The data in this dashboard updates approximately every 15 minutes. Note that thi
 
 ## Configuring the dashboard
 
-You can access the diagnostics dashboard by going going to **Analytics** > **Dashboard Builder**.
+You can access the diagnostics dashboard by going to **Analytics** > **Dashboard Builder**.
 
 ![The dashboard builder with a list of different campaign and Canvas diagnostic dashboards.]({% image_buster /assets/img/campaign_canvas_dashboard.png %})
 
