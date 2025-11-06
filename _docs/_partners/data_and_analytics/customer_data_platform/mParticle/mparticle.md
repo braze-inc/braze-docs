@@ -129,7 +129,7 @@ Once saved, you can reference this segment during Canvas or campaign creation in
 
 #### Deactivating and deleting connections
 
-Since mParticle does not directly maintain segments in Braze, it will not delete segments when the corresponding mParticle audience connection is deleted or deactivated. When this happens, mParticle will not update the audience user attributes in Braze to remove the audience from each user.
+Because mParticle does not directly maintain segments in Braze, it will not delete segments when the corresponding mParticle audience connection is deleted or deactivated. When this happens, mParticle will not update the audience user attributes in Braze to remove the audience from each user.
 
 To remove the audience from a Braze user before deletion, adjust the audience filters to force the audience size to 0 before deleting an audience. After the audience calculation has completed and returns 0 users, delete the audience. Then, the audience membership will update in Braze to `false` for the single attribute option or remove the audience ID from the array format.
 
@@ -249,7 +249,7 @@ Forward erasure requests to Braze by configuring a data subject request output t
 
 #### Enabling enrich user attributes/identities (server-to-server only) {#enriched}
 
-In the mParticle connection settings, Braze recommends turning off **Include Enriched User Attributes**. If enabled, mParticle will forward all available user attributes (such as standard attributes, custom attributes, and calculated attributes) from the existing profile to Braze on each logged event. This will result in high consumption of data points since mParticle will send Braze the same unchanged attributes on each call.
+In the mParticle connection settings, Braze recommends turning off **Include Enriched User Attributes**. If enabled, mParticle will forward all available user attributes (such as standard attributes, custom attributes, and calculated attributes) from the existing profile to Braze on each logged event. This results in high consumption of data points because mParticle sends Braze the same unchanged attributes on each call.
 
 For example, if a user adds their first name, last name, and phone number during their first session and later signs up for a newsletter and adds the same information and an email, triggering a newsletter sign-up event:
 - If turned on (default), five data points will be incurred. (sign-up event, email address, first name, last name, and phone number)

@@ -192,7 +192,7 @@ Under **Delivery Controls**, enable re-eligibility.
 
 #### Step 5.4: Create your second webhook campaign
 
-Since your second webhook campaign will match the first, you can [duplicate the first one and rename it]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns/#duplicating-segments-or-campaigns). You can do so now.
+Because your second webhook campaign matches the first, you can [duplicate the first one and rename it]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns/#duplicating-segments-or-campaigns).
 
 #### Step 5.5: Schedule the second delivery
 
