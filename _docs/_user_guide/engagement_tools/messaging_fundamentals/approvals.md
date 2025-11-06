@@ -15,13 +15,13 @@ tool:
 
 ## How it works
 
-You can review the details of your campaign or Canvas in the final step of your editor. For campaigns, this is **Review Summary**, and for Canvases, this is **Summary**. 
+You can review the details of your campaign or Canvas in the final step of editing. 
 
 For both Canvases and campaigns, all changes must be saved before approving, even if they're your own changes. Each section of the summary must be approved by a user with the appropriate permissions before the message can launch. The default status for each section is **Pending Approval**.
 
 {% tabs %}
 {% tab campaign %}
-To launch a campaign, you must approve these key components:
+To launch a campaign, you must approve these components:
 
 - **Messages:** This is the campaign message.
 - **Delivery:** This is the delivery type and determines when users will receive the campaign.

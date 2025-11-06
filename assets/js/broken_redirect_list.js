@@ -2994,5 +2994,6 @@ validurls['/docs/help/help_articles/push/push_token_migration/'] = '/docs/api/ob
 validurls['/docs/api/objects_filters/context_object/'] = '/docs/user_guide/engagement_tools/canvas/canvas_components/context/';
 validurls['/docs/user_guide/administrative/app_settings/manage_your_braze_users/adding_users_to_your_dashboard/'] = '/docs/user_guide/administrative/app_settings/manage_your_braze_users/';
 
+validurls['/docs/partners/message_personalization/dynamic_content/cloudinary/'] = '/docs/partners/cloudinary/';
 
 // validurls['OLD'] = 'NEW';
