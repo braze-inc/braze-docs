@@ -15,11 +15,7 @@ description: "This page covers how to use messaging rules in the approval workfl
 Messaging rules apply to a workspace and are made up of a message type and a maximum number of reachable users.
 
 - **Message type:** Defines what message type the rule will be applied to: campaign, Canvas, or both Canvas and campaigns.
-- **Maximum reachable users:** Determines what audience size that will require an additional approval.
-
-### Shared message types and maximum reachable users
-
-Two rules can exist with the same number of reachable users for the same message type. For example, you can set a maximum of 10,000 users for Canvas and 10,000 users for both Canvas and campaigns. 
+- **Maximum reachable users:** Determines what audience size that will require an additional approval. 
 
 ### Separate approvers
 
@@ -30,7 +26,7 @@ Two rules can share the same user maximum so that you can organize and separate 
 
 ### No overlapping reachable users
 
-You can’t set rules with an overlapping number of users for the same message type. For example, the following messaging rule **can't** be set: 
+To avoid confusion, you cannot set identical rules with an overlapping number of users for the same message type and approvers. For example, the following messaging rule **can't** be set: 
 
 - Rule C for Canvas with a maximum of 10,000 users 
 - Rule D for Canvas with a maximum of 1,000,000 users
