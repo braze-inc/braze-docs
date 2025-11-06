@@ -25,7 +25,7 @@ Check out our free [Developer Learning Path](https://learning.braze.com/path/dev
 
 ## What is Braze?
 
-Braze is a customer engagement platform. This simply means that Braze helps you listen to your users, understand your users’ actions and behaviors, and then act on them. The Braze platform has three primary components: the SDK, the dashboard, and the REST API.
+Braze is a customer engagement platform. It ingests user data, surfaces user actions and behaviors, and lets you act on them. The platform has three primary components: the SDK, the dashboard, and the REST API.
 
 If you're a marketer looking for a more general overview of Braze, check out the [Getting Started section for marketers]({{site.baseurl}}/user_guide/getting_started/overview/), instead.
 
@@ -68,7 +68,7 @@ Data stored in Braze is retained and usable for segmentation, personalization, a
 
 ### App analytics
 
-The Braze dashboard displays graphs that are updated in real-time based upon a number of analytics metrics as well as custom events that you instrument in your application. Consistently measuring and optimizing your campaigns with A/B testing, custom reporting and analytics, and automated intelligence helps you keep customers engaged and stand out from competitors in your space.
+The Braze dashboard displays graphs updated in real time based on analytics metrics and custom events you instrument. Consistent measurement and optimization using A/B testing, custom reporting, analytics, and automated intelligence support customer engagement and differentiation.
 
 ### User segmentation
 
