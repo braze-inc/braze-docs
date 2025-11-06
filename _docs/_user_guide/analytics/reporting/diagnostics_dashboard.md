@@ -19,7 +19,7 @@ The campaign and Canvas diagnostics dashboard is currently in early access. Cont
 
 ## Key concepts
 
-## Sent and delivered
+### Sent and delivered
 
 It is crucial to understand that this dashboard reports on Braze's internal processing of a message, not its final delivery status.
 
@@ -51,28 +51,29 @@ To run the dashboard and view your data:
 
 ## Interpreting the data
 
-### Summary tiles  
-At the top of the page, you will see key summary tiles. For your selected time frame, these show:
+### Summary tiles
 
-- **Total Aborts:** The total count of messages that were aborted and Canvas audience members who didn’t enter the Canvas or fell out of exited the Canvas due to either encountering a step failure or meeting the exit criteria performing an exit event. (TODO consult with CLX on language here)  
-- **Message Sends:** The total count of messages that Braze successfully processed and sent:  
-  * For email, SMS/MMS/RCS, WhatsApp, LINE and push this means the message was successfully handed off to a sending partner.  
-  * For webhooks, this means the webhook request was made successfully, returning a 2xx response.  
-  * For content cards, this means the card was sent and is eligible for viewing.    
-  * For in-app-messages, this means the message was surfaced to the user.
+At the top of the page, there are key summary tiles for your selected timeframe that show:
+
+- **Total Aborts:** The total count of messages that were aborted and Canvas audience members who didn’t enter the Canvas or fell out of exited the Canvas due to either encountering a step failure or meeting the exit criteria performing an exit event.
+- **Message Sends:** The total count of messages that Braze successfully processed and sent. 
+  - **Email, SMS/MMS/RCS, WhatsApp, LINE, and push:** The message was successfully handed off to a sending partner.  
+  - **Webhooks:** The webhook request was made successfully, returning a `2xx` response.  
+  - **Content Cards:** The card was sent and is eligible for viewing.    
+  - **In-app-messages:** The message was surfaced to the user.
 
 ### Message outcomes over time
 
-This time series chart shows a day-by-day breakdown of the different reasons a message was aborted or a user was dropped from a Canvas. This chart doesn't display the number of _Sends_.  
+This time series chart shows a day-by-day breakdown of the different reasons a message was aborted or a user was dropped from a Canvas. This chart doesn't display the number of sends.  
 
 {% alert note %}
-To keep the chart organized, any abort or drop reason with zero occurrences in your selected time range will not be displayed as a line on the chart.
+To keep the chart organized, any abort or drop reason with zero occurrences in your selected time range will not be displayed on the chart.
 {% endalert %}
 
 ### Message outcomes breakdown
 
 This chart shows the breakdown of all message outcomes within your selected time range. It provides a complete picture of:
-- The total number of _Sends_ as a proportion of all outcomes.  
+- The total number of sends as a proportion of all outcomes.  
 - The proportional breakdown of each abort and drop reason. This helps you quickly identify the most common reasons messages are not being sent.
 
 The following table defines the outcomes available in this dashboard:
@@ -81,7 +82,7 @@ The following table defines the outcomes available in this dashboard:
 | ---- | ---- |
 | Content Card expired | The Content Card expired before the user saw it |
 | Content Card invalid | The Content Card had errors and was not sent to the user. Some common reasons for this include: {::nomarkdown}<ul><li> Maximum size exceeded (2 KB) </li><li> Expiration date is invalid </li><li> Message contains invalid characters </li></ul>{:/} |
-| Personalized delay step failure | The [personalized delay step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/#personalized-delays) failed, causing the user to exit the Canvas. This failure could happen when: {::nomarkdown}<ul><li> the variable provided to the personalized delay step was empty or an invalid type </li><li> the delay is past the maximum duration allowed within the Canvas</li></ul>{:/} |
+| Personalized delay step failure | The [personalized delay step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/#personalized-delays) failed, causing the user to exit the Canvas. This failure could happen when: {::nomarkdown}<ul><li> The variable provided to the personalized delay step was empty or an invalid type </li><li> the delay is past the maximum duration allowed within the Canvas</li></ul>{:/} |
 | Duplicate user identifier | Multiple users with a matching identifier (ex: external id, email address, phone number) were eligible to receive this message. To prevent duplicate sends to the same user, this message was aborted. |
 | Exception or exit event | The user was previously eligible to receive the message, but either the user performed an [exception event for the action-based campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/#step-3-select-exception-events) so the message was aborted **or** the user met the Canvas [exit criteria]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria/#setting-up-exit-criteria) so they were dropped mid-journey. |
 | Frequency capped | The user already received the maximum number of messages allowed per your workspace's [frequency capping]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#about-frequency-capping) rules, so the send was canceled. |
@@ -93,7 +94,7 @@ The following table defines the outcomes available in this dashboard:
 | Push credentials invalid | The [push credentials]({{site.baseurl}}/user_guide/message_building_by_channel/push/troubleshooting/#valid-push-token) for this app are missing or invalid, so the send was canceled. Update your credentials in App Settings. |
 | Quiet hours abort | Quiet hours was enabled for the campaign or Canvas step with the fallback set to "Abort message". The user triggered the campaign or entered the Canvas message step during quiet hours so the message was aborted. However, this does not exit the user from the Canvas. |
 | Rate limited over 72 hours | The message was throttled for longer than 72 hours due to [delivery speed rate limits]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#delivery-speed-rate-limiting), so the send was aborted. |
-| Sent | The message was sent. However, this does not necessarily mean the message was delivered. For email, SMS/MMS/RCS, WhatsApp, LINE, and push, this means the message was successfully handed off to a sending partner. For webhooks, this means the webhook request was made successfully, returning a `2xx` response. For Content Cards, this means the card was sent and is eligible for viewing.    For in-app-messages, this means the message was surfaced to the user.  |
+| Sent | The message was sent. However, this does not necessarily mean the message was delivered. For email, SMS/MMS/RCS, WhatsApp, LINE, and push, this means the message was successfully handed off to a sending partner. For webhooks, this means the webhook request was made successfully, returning a `2xx` response. For Content Cards, this means the card was sent and is eligible for viewing. For in-app-messages, this means the message was surfaced to the user.  |
 | User no longer eligible | The user was previously in the target audience, but no longer matched the audience criteria at the time of send, so the message was aborted. This can happen if there is a gap between the message launch or trigger and the message send time. |
 | User no longer eligible for step | The user exited the Canvas because they didn't meet the [delivery validations]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/#delivery-validations) set for the Message step. |
 | User not eligible | The user was not eligible due to audience eligibility, re-eligibility rules, or channel eligibility checks. For campaigns, this applies to messages who were triggered by an action-based or API-triggered campaign. For Canvases, it pertains to users that matched on configured interaction or behavioral events. |
@@ -104,7 +105,7 @@ The following table defines the outcomes available in this dashboard:
 | User not enabled for SMS/MMS/RCS | SMS messages cannot be sent to this user. Some common reasons for this include: {::nomarkdown}<ul><li> The user doesn't have a phone number on their user profile. </li><li> The user's phone number has been marked invalid due to delivery failures. </li><li> The user's phone number is not in valid E.164 format, and attempts to automatically format the number failed. </li><li> The user's subscription state excludes them from receiving the SMS message.</li></ul>{:/} |
 | User not enabled for WhatsApp | WhatsApp messages cannot be sent to this user. Some common reasons for this include: {::nomarkdown}<ul><li> The user doesn't have a phone number on their user profile. </li><li> The user's phone number has been marked invalid due to delivery failures. </li><li> The user's subscription state excludes them from receiving this message. </li><li> The user doesn't have a WhatsApp account.</li></ul>{:/} |
 | User not re-eligible | The user triggered the message, but it wasn't sent because of re-eligibility settings. This can happen if the user already received the message too recently, or if re-eligibility is turned off. If the user triggered this campaign already and was found to be ineligible for the send, they will sit in a 4-hour lock that prevents them from triggering it again during that time, resulting in this outcome. |
-| User profile not found | The user either never existed or no longer exists in Braze. Some common cases include: {::nomarkdown}<ul><li> The user was targeted using API messaging but never existed in Braze. </li><li> The user was deleted before the message was sent. </li><li>The user was merged with another profile before the message was sent.</li></ul>{:/} |
+| User profile not found | The user either never existed or no longer exists in Braze. Some common cases include: {::nomarkdown}<ul><li> The user was targeted using API messaging but never existed in Braze. </li><li>The user was deleted before the message was sent. </li><li>The user was merged with another profile before the message was sent.</li></ul>{:/} |
 | Volume limited | The campaign met the set volume limit, so the send was canceled. |
 | Webhook failed | The webhook received an unsuccessful response code (non `2xx`). See the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab#dev-console-troubleshooting) for more details. Logs that are more than 60 hours old are cleaned and no longer accessible, Webhook errors are sampled up to 20 logs per hour. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
