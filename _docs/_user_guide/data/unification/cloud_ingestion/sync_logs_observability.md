@@ -8,7 +8,7 @@ description: "This page provides an overview of the observability features avail
 
 # Sync Logs and Observability
 
-Cloud Data Ingestion (CDI) **Sync Logs** allow you to monitor all data processed by CDI, verify whether data was synced successfully, and diagnose any issues with "incorrect" or missing data.
+Cloud Data Ingestion (CDI) Sync Logs allow you to monitor all data processed by CDI, verify whether data was synced successfully, and diagnose any issues with "incorrect" or missing data.
 
 Access the logs by navigating to **Data Settings \> Cloud Data Ingestion** and selecting the **Sync logs** tab.
 
