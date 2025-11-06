@@ -65,7 +65,7 @@ This can happen for several reasons:
 
 ### Why is the sum of _Total Aborts_ and _Message Sends_ greater than the audience for a campaign and Canvas?
 
-This can occur for two primary reasons:
+This can occur for the following reasons:
 
 - **Multi-channel messages:** The campaign or Canvas step was configured to send on multiple channels (such as push and email). A single user can receive a "sent" outcome for one channel (such as email) and an "abort" outcome for another (such as "Not Enabled for Channel" for push). In this case, that one user would be counted twice in the chart: once as a "sent" and once as an "abort."
   - **Example:** You send a push campaign to 100 users, targeting both iOS and Android. If a user only has an iOS device, they will receive the iOS push ("sent") but will also trigger an abort for the Android push ("Not Enabled for Channel").
