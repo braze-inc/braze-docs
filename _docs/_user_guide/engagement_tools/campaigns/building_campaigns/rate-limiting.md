@@ -105,42 +105,6 @@ When sending a multi-channel campaign with a speed rate limit, the rate limit is
 
 When sending a Canvas with a speed rate limit, the rate limit is shared between all channels and all Canvas steps. This means the total number of messages sent per minute from the Canvas will not exceed the rate limit. For example, if your Canvas has a rate limit of 10,000 per minute and uses email and SMS, Braze will send a total of 10,000 messages per minute across email and SMS.
 
-#### Channel-based rate limits
-
-As an alternative to a rate limit that gets shared across an entire multi-channel campaign or Canvas, you can select a specific rate limit per channel. In this case, the rate limit will apply to each of your selected channels. For example, you can set your campaign or Canvas to send a maximum of 5,000 webhooks and 2,500 SMS messages per minute across the campaign or Canvas.
-
-![Separate rate limits for two channels, webhook and SMS/MMS/RCS, with 5,000 and 2,500 messages per minute respectively.]({% image_buster /assets/img_archive/channel_rate_limits.png %}){: style="max-width:70%;"} 
-
-##### Push notifications
-
-For campaigns or Canvases with push platforms (like Android, iOS, Web Push, or Kindle), you can select **Push notifications** to enforce a rate limit that is shared between all push platforms in your campaign or Canvas.
-
-![The channel dropdown with options for push platforms and push notifications.]({% image_buster /assets/img_archive/push_notifications_rate_limit.png %}){: style="max-width:30%;"} 
-
-{% alert note %}
-If you select a limit for push notifications, you can't set individual push channel rate limits. Likewise, if you select limits for individual push channels, you can't set shared push notification limits.
-{% endalert %}
-
-##### Rate limiting considerations
-
-Some notes to keep in mind when configuring rate limits and what behavior you should expect:
-
-SMS sends are subject to a rate limit of 50,000 per subscription group. Some SMS providers may enforce other limits.
-
-The following messages will not be throttled by or counted towards the rate limit:
-
-- Test sends
-- Seed groups
-- Content Cards configured to create "at first impression" (This will be controlled by the rate of app impressions. Refer to [Card creation]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/#differences) for more information on the differences between Card Creation options.)
-
-Delivery rate speed limits aren't supported for the following:
-
-- SMS autoresponses
-- SLA-backed messages (such as [Transactional Email]({{site.baseurl}}/user_guide/message_building_by_channel/email/transactional_message_api_campaign))
-- In-app messages
-- Feature flags
-- Banners
-
 #### Rate limiting and Connected Content retries
 
 When the [Connected Content retry]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries/) is turned on, Braze will retry call failures while respecting the rate limit you set for each resend. Let’s consider the scenario of sending 75,000 messages with a 10,000 per minute rate limit. Imagine that in the first minute, the call fails or is slow and only sends 4,000 messages.
