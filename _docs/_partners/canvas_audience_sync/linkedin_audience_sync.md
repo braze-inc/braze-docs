@@ -96,7 +96,7 @@ Next, save your audience by clicking the **Create Audience** button at the botto
 
 ![An example "leads" audience with the selected Braze ad account, "leads" audience, the action to add users to the audience, and email, Android GAID, and first and last name as fields to match.]({% image_buster /assets/img/linkedin/linkedin10.png %})
 
-Users will be notified at the top of the step editor if the audience is created successfully or if errors arise during this process. Users can also reference this audience for user removal later in the Canvas journey because the audience was created in draft mode.
+Braze displays a notification at the top of the step editor if the audience is created successfully or if errors arise. Users can reference this audience for user removal later in the Canvas journey because the audience was created in draft mode.
 
 ![Confirmation that the "leads" audience was created.]({% image_buster /assets/img/linkedin/linkedin9.png %})
 
@@ -123,9 +123,9 @@ You can view the audience on LinkedIn by going into your ad account and selectin
 
 ## User syncing and rate limit considerations
 
-As users reach the Audience Sync Step, Braze will sync these users in near real-time while respecting LinkedIn’s API rate limits. In practice, Braze will try to batch and process as many users every 5 seconds before sending these users to LinkedIn.
+As users reach the Audience Sync step, Braze syncs them in near real time while respecting LinkedIn’s API rate limits. Braze batches and processes as many users as possible every 5 seconds before sending them to LinkedIn.
 
-LinkedIn’s API rate limit states no more than ten queries per second and 100,000 users per request. If a Braze customer reaches this rate limit, Braze the Canvas will retry the sync for up to about 13 hours. If the sync is not possible, these users are listed under the Users Errored metric.
+LinkedIn’s API rate limit allows no more than ten queries per second and 100,000 users per request. If a customer reaches this limit, Braze retries the sync for up to about 13 hours. If the sync is still not possible, Braze lists these users under the Users Errored metric.
 
 ## Understanding analytics
 

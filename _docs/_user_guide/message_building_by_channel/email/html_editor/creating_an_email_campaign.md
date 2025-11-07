@@ -24,7 +24,7 @@ If this is your first time creating an email campaign, we highly recommend check
 
 ## Step 1: Choose where to build your message
 
-Not sure whether your message should be sent using a campaign or a Canvas? Campaigns are better for single, simple messaging campaigns, while Canvases are better for multi-step user journeys.
+Not sure whether to send your message using a campaign or a Canvas? Use campaigns for single, simple messaging. Use Canvases for multi-step user journeys.
 
 {% tabs %}
 {% tab Campaign %}
@@ -71,7 +71,7 @@ After you've selected your template, you'll see an overview of your email where 
 
 ![The "Regenerate from HTML" button.]({% image_buster /assets/img_archive/regenerate_from_html.png %}){: style="max-width:30%;float:right;margin-left:15px;border:none;" }
 
-The plaintext version of your email will always update automatically from the HTML version until an edit to the plaintext version is detected. When an edit is detected, Braze will no longer update the plaintext, as we assume you made intentional changes that shouldn't be overwritten. You can revert to automatic synchronization in the **Plaintext** tab by selecting the **Regenerate from HTML** icon, which only appears if the plaintext isn't synchronizing.
+Braze automatically updates the plaintext version from the HTML version until it detects an edit to the plaintext. After Braze detects an edit, it stops updating the plaintext because it assumes you made intentional changes. To restore automatic sync, go to **Plaintext** and select **Regenerate from HTML** (visible only when plaintext isn't synchronizing).
 
 {% alert tip %}
 To add motion in an email with an accurate preview, use GIFs instead of elements that require JavaScript, as most inboxes don't support JavaScript.
@@ -80,7 +80,7 @@ To add motion in an email with an accurate preview, use GIFs instead of elements
 ![Email Variants panel for composing your email.]({% image_buster /assets/img/email.png %}){: style="max-width:75%" }
 
 {% alert important %}
-Braze will automatically remove HTML event handlers referenced as attributes. This will modify the HTML, so it is recommended to re-check the email after it's completed. Learn more about [HTML handlers](https://www.w3schools.com/tags/ref_eventattributes.asp).
+Braze automatically removes HTML event handlers referenced as attributes. This modifies the HTML, so re-check the email after you finish. Learn more about [HTML handlers](https://www.w3schools.com/tags/ref_eventattributes.asp).
 {% endalert %}
 
 {% alert tip %}
@@ -93,7 +93,7 @@ Need help crafting right-to-left messages for languages like Arabic and Hebrew? 
 
 ### Step 3a: Add your sending information
 
-After you've finished designing and building your email message, it's time to add your sending information in the **Sending Settings** section.
+After you finish designing and building your email message, add your sending information in **Sending Settings**.
 
 1. Under **Sending Info**, select an email as the **From Display Name + Address**. You can also customize this by selecting **Customize From Display Name + Address**.
 2. Select an email as the **Reply-To Address**. You can also customize this by selecting **Customize Reply-To Address**.
@@ -106,11 +106,11 @@ A preview in the right-hand panel will populate with the sending information you
 
 #### Advanced
 
-Under **Sending Settings** > **Advanced**, you can turn on inline CSS and add personalization for email headers and email extras, which allows you to send additional data back to other email service providers.
+Under **Sending Settings** > **Advanced**, turn on inline CSS and add personalization for email headers and email extras to send additional data back to other email service providers.
 
 ##### Email headers
 
-To add email headers, select **Add New Header**. Email headers contain information about the email being sent. These [key-value pairs]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/) typically have information about the sender, recipient, authentication protocols, and email routing information. Braze automatically adds the necessary header information required by the RFC for emails to be delivered to your inbox provider properly.
+To add email headers, select **Add New Header**. Email headers contain information about the email being sent. These [key-value pairs]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/) typically include sender, recipient, authentication protocol, and routing information. Braze automatically adds the RFC-required header information for emails to reach inbox providers.
 
 Braze allows you the flexibility to add additional email headers as needed for advanced use cases. There are a few reserved fields that the Braze platform will overwrite during sending. 
 
@@ -174,7 +174,7 @@ Email extra values are not published to Currents or Snowflake. If you're looking
 
 ### Step 3b: Preview and test your message
 
-After you finish composing your perfect email, you need to test it before sending it out. From the bottom of the overview screen, select **Preview and Test**. 
+After you finish composing your email, test it before sending. From the bottom of the overview screen, select **Preview and Test**. 
 
 Here, you can preview how your email will appear in a customer's inbox. With **Preview as User** selected, you can preview your email as a random user, select a specific user, or create a custom user. This allows you to test that your Connected Content and personalization calls are working as they should. 
 
@@ -186,7 +186,7 @@ You can also switch between desktop, mobile, and plaintext views to get a sense 
 Curious about what your email looks like for dark mode users? Select the **Dark Mode Preview** toggle located in the **Preview and Test** section (drag-and-drop editor only).
 {% endalert %}
 
-When you're ready for a final check, select **Test Send** and send a test message to yourself or a group of content testers to ensure that your email displays properly on a variety of devices and email clients.
+When you're ready for a final check, select **Test Send** and send a test message to yourself or a tester group to confirm the email displays properly across devices and clients.
 
 ![Test Send option and example email preview when composing your email.]({% image_buster /assets/img_archive/newEmailTest.png %})
 
@@ -220,11 +220,11 @@ The editor will call out any problems it catches with your message before you se
 
 {% tabs %}
 {% tab Campaign %}
-Next, build the remainder of your campaign! See the following sections for further details on how to best use our tools to build your email campaign.
+Next, build the remainder of your campaign. See the following sections for details on how to use Braze tools to build your email campaign.
 
 #### Choose delivery schedule or trigger
 
-Emails can be delivered based on a scheduled time, an action, or based on an API trigger. For more, refer to [Scheduling your campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/).
+Deliver emails based on a scheduled time, an action, or an API trigger. For more, refer to [Scheduling your campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/).
 
 {% alert note %}
 For API-triggered campaigns, when the trigger action is set to **Interact With Campaign**, selecting a **Receive** option as the interaction will cause your new campaign to trigger as soon as Braze marks the selected campaign as sent, even if that message bounces or fails to be delivered.
@@ -234,7 +234,7 @@ You can also set the campaign's duration, specify [Quiet Hours]({{site.baseurl}}
 
 #### Choose users to target
 
-Next, you need to [target users]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) by choosing segments or filters to narrow down your audience. You'll automatically be given a preview of what that segment population looks like right now, including how many users within that segment are reachable through email. Keep in mind that exact segment membership is always calculated just before the message is sent.
+Next, [target users]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) by choosing segments or filters. Braze shows a live preview of the segment population, including how many users are reachable through email. Exact segment membership is calculated just before send.
 
 {% multi_lang_include target_audiences.md %}
 
@@ -265,7 +265,7 @@ Braze allows you to track how often users perform specific actions, [conversion 
 - Performs specific custom event
 - Opens email
 
-You can allow up to a 30-day window during which a conversion will be counted if the user takes the specified action. While Braze automatically tracks opens and clicks for your campaign, you may wish to set the conversion event to be when a user opens or clicks on an email address to take advantage of [Intelligent Selection]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/).
+You can allow up to a 30-day window during which Braze counts a conversion if the user takes the specified action. While Braze tracks opens and clicks automatically, you may set the conversion event to an open or click to use [Intelligent Selection]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/).
 {% endtab %}
 
 {% tab Canvas %}
@@ -275,7 +275,7 @@ If you haven't done so already, complete the remaining sections of your Canvas c
 
 ## Step 5: Review and deploy
 
-The final section will give you a summary of the campaign you've just designed. Confirm all the relevant details and select **Launch Campaign**. Now, it's time to wait for all the data to roll in! 
+The final section summarizes the campaign you designed. Confirm all relevant details and select **Launch Campaign**. 
 
 To learn how you can access the results of your email campaigns, check out [Email reporting]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/).
 

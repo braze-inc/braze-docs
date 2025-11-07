@@ -112,9 +112,9 @@ Additional information on these instructions is available in [AppsFlyer's docume
 
 ### Step 4: Confirm the integration
 
-Once Braze receives attribution data from AppsFlyer, the status connection indicator on the AppsFlyer technology partners page in Braze will change from "Not Connected" to "Connected". A timestamp of the last successful request will also be included. 
+After Braze receives attribution data from AppsFlyer, the status connection indicator on the AppsFlyer technology partners page in Braze changes from "Not Connected" to "Connected" and includes a timestamp of the last successful request.
 
-Note that this will not happen until we receive data about an attributed install. Organic installs, which should be excluded from the AppsFlyer postback, are ignored by our API and are not counted when determining if a successful connection was established.
+This status changes only after Braze receives data about an attributed install. Braze ignores organic installs (excludes them from the AppsFlyer postback) and does not count them when determining if the connection is successful.
 
 ### Step 5: Viewing user attribution data
 
