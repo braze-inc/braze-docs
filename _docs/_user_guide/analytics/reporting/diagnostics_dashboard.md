@@ -4,6 +4,7 @@ article_title: Campaign and Canvas diagnostics dashboard
 page_order: 6.2
 page_type: reference
 description: "This reference article covers the campaign and Canvas diagnostics dashboard, which helps you understand why messages from your campaigns or Canvases may not have been sent as expected."
+alias: /diagnostics_dashboard/
 tool: 
   - Reports
 toc_headers: "h2"
