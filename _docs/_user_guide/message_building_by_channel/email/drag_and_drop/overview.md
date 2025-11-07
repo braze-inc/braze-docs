@@ -73,7 +73,7 @@ Although the drag-and-drop editor simplifies your workflow with these blocks, yo
 
 ## Using the drag-and-drop editor
 
-Not sure whether your email message should be sent using a campaign or a Canvas? Campaigns are better for single, simple messaging campaigns, while Canvases are better for multi-step user journeys.
+Not sure whether your email message should be sent using a campaign or a Canvas? Campaigns are better for single, targeted messaging campaigns, while Canvases are better for multi-step user journeys.
 
 After you've selected where to build your message, let's dive into the steps to create a drag-and-drop email.
 

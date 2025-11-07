@@ -10,9 +10,9 @@ channel:
 
 # Dark Mode themes
 
-> Dark Mode offers users the opportunity to set a system-wide color preference (introduced on [Android 10](https://developer.android.com/guide/topics/ui/look-and-feel/darktheme) and [iOS 13](https://developer.apple.com/documentation/appkit/supporting_dark_mode_in_your_interface/)). The "Dark" themes are intended to conserve battery life, and reduce strain on users' eyes, while providing app developers an easier way to implement the dark color themes that users prefer.
+> Dark Mode offers users the opportunity to set a system-wide color preference (introduced on [Android 10](https://developer.android.com/guide/topics/ui/look-and-feel/darktheme) and [iOS 13](https://developer.apple.com/documentation/appkit/supporting_dark_mode_in_your_interface/)). "Dark" themes are intended to conserve battery life and reduce strain on users' eyes while providing app developers a way to implement dark color themes.
 
-Braze in-app messages support adding an alternate Dark theme to help deliver the right color message to your users based on their preference, and helps provide consistency with your app's design.
+Braze in-app messages support adding an alternate Dark theme to deliver the right color message to your users based on their preference and maintain consistency with your app's design.
 
 ## How Dark Mode works
 
@@ -22,7 +22,7 @@ When Dark Mode is enabled, the device's native menus and screens (push notificat
 
 ## Setting a Dark Mode theme
 
-The new Dark Mode option, located in the Style tab when [creating an in-app message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/), lets you easily add an alternate color theme for users who are in Dark Mode on their device.
+The Dark Mode option, located in the Style tab when [creating an in-app message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/), lets you add an alternate color theme for users who are in Dark Mode on their device.
 
 ![User switching between Light Mode style and Dark Mode styles in the Style tab when creating an in-app message.]({% image_buster /assets/img_archive/iam-dark-mode.gif %})
 

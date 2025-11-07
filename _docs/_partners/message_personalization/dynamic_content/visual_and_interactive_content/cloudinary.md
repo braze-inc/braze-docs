@@ -9,11 +9,11 @@ search_tag: Partner
 
 # Cloudinary
 
-> [Cloudinary](https://cloudinary.com/) is an image and video platform that empowers you to manage, edit, optimize, and deliver images and video on a massive scale to any campaign across channels and customer journeys. When integrated and enabled, Cloudinary's media management will power and provide dynamic, contextual, and personalized asset delivery for your Braze campaigns and Canvases. 
+> [Cloudinary](https://cloudinary.com/) is an image and video platform used to manage, edit, optimize, and deliver images and video at scale to any campaign across channels and customer journeys. When integrated and enabled, Cloudinary's media management powers dynamic, contextual, and personalized asset delivery for your Braze campaigns and Canvases. 
 
 ## About this integration
 
-Connecting Cloudinary to Braze empowers brands to access visual media stored in Cloudinary Assets for use in Braze messaging channels. With Cloudinary’s dynamic links, you can select and customize images and videos in real time based on Braze user attributes. Together, Cloudinary and Braze make it easy to craft visually stunning, highly personalized campaigns that tell every product’s story and deliver one-of-a-kind experiences at scale.
+Connecting Cloudinary to Braze gives brands access to visual media stored in Cloudinary Assets for use in Braze messaging channels. With Cloudinary’s dynamic links, you can select and customize images and videos in real time based on Braze user attributes. Together, Cloudinary and Braze support crafting visually rich, personalized campaigns that tell each product’s story and deliver one-of-a-kind experiences at scale.
 
 This page outlines four possible, but not exhaustive, integration methods between Cloudinary and Braze. These integration methods primarily rely on modifying asset links manually copied from Cloudinary’s Media Library. 
 
