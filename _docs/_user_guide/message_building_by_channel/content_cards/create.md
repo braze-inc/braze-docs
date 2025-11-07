@@ -18,7 +18,7 @@ search_rank: 3.9
 
 ## Step 1: Choose where to build your message
 
-Not sure whether your message should be sent with a campaign or a Canvas? Campaigns are better for single, simple messaging campaigns (such as informing users about a new product with a single message), while Canvases are better for multi-step user journeys (such as sending tailored product suggestions based on user behavior over time).
+Not sure whether you should send your message with a campaign or a Canvas? Use campaigns for single, simple messaging (such as informing users about a product with one message). Use Canvases for multi-step user journeys (such as sending tailored product suggestions based on user behavior over time).
 
 {% tabs %}
 {% tab Campaign %}
@@ -90,7 +90,7 @@ Add an image to your Content Card by selecting **Add Image** or providing an ima
 
 #### Pin to top
 
-A pinned card will display at the top of a user's feed and can't be dismissed by the user. If more than one card in a user's feed is pinned, the pinned cards will display in chronological order. After a card has been sent, you can't retroactively update its pinned option. Changing this option after a campaign has been sent will only affect future sends.
+Braze displays a pinned card at the top of a user's feed and the user can't dismiss it. If a user's feed has multiple pinned cards, Braze orders them chronologically. After you send a card, you can't retroactively update its pinned option. Changing this option after you send a campaign only affects future sends.
 
 ![Side-by-side of the Content Card preview in Braze for Mobile and Web with the option "Pin this card to the top of the feed" selected.]({% image_buster /assets/img/cc_pin_to_top.png %}){:style="border:none"}
 
@@ -184,7 +184,7 @@ Each user can have up to 250 non-expired Content Cards in their feed at any give
 
 ### Sending behavior
 
-After Content Cards have been sent, they sit waiting in an "inbox" ready to be delivered to the user (similar to what happens for emails). After content is pulled into the Content Card (at the time of display), it cannot be changed during its lifespan. This applies even if you're calling an API through Connected Content, and the data from the endpoint changes. This data won't get updated. It can only be stopped from sending to new users and removed from users' feeds. If you modify a campaign, only future cards that are sent will have the update.
+After Braze sends Content Cards, they sit in an "inbox" ready to be delivered to the user (similar to emails). After Braze pulls content into the Content Card at display time, the content does not change during the card's lifespan. This includes API calls through Connected Content if endpoint data changes. Braze does not update that data. You can only stop sending new cards and remove existing cards from feeds. If you modify a campaign, only future cards reflect the update.
 
 If you need to remove old cards, you must first stop the campaign. To stop a campaign, open your Content Card campaign and select **Stop Campaign**. Stopping the campaign will prompt you to decide how to handle users who have already received your card. 
 
@@ -202,7 +202,7 @@ Some Content Cards are only relevant until a user performs some action. For exam
 
 Within a campaign or Canvas message, you can optionally add a **Removal Event** to specify which custom events or purchases should cause previously sent cards to be removed from that user's feed, triggered by the SDK or REST API.
 
-Cards will be removed on subsequent refreshes after Braze has processed the specified event.
+Braze removes cards on subsequent refreshes after it processes the specified event.
 
 {% alert tip %}
 You can specify multiple custom events and purchases that should remove a card from a user's feed. When **any** of those actions are performed by the user, any existing cards sent by the campaign's cards will be removed. Any future eligible cards will continue to be sent according to the message's schedule.
@@ -212,7 +212,7 @@ You can specify multiple custom events and purchases that should remove a card f
 
 ### Updating launched cards
 
-Content Cards can't be edited after they are sent. If you find you need to make changes to cards that have already been sent, consider using [campaign re-eligibility]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/reeligibility/) as shown in the following options.
+You can't edit Content Cards after you send them. If you need to change sent cards, consider using [campaign re-eligibility]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/reeligibility/) with the following options.
 
 {% alert note %}
 When a Content Card becomes re-eligible, it may be sent again when the original card is still in a user's app. To avoid duplicate cards in a user's app, you can turn off re-eligibility or extend the re-eligibility window so that users won't be sent a new card until the original has expired.
@@ -233,8 +233,8 @@ Let's say you've set a campaign to be triggered by a session start, and it has r
 
 ##### Impact
 
-* **Reporting:** Each version of the card would have separate analytics.
-* **Existing Recipients:** New and existing recipients would see the updated card at the next feed refresh if they are eligible.
+* **Reporting:** Each card version has separate analytics.
+* **Existing Recipients:** New and existing recipients see the updated card at the next feed refresh if eligible.
 
 {% alert tip %}
 We recommend this option for messages where you are showing the latest content in the card (such as home page banners), changes must be shown immediately, or when re-eligibility is turned off.
@@ -257,8 +257,8 @@ Let's say you have a campaign that's triggered by a session start and has re-eli
 
 ##### Impact
 
-* **Reporting:** One campaign will contain all reporting analytics for the card versions launched. Braze won't differentiate between the versions launched.
-* **Existing recipients:** Users who have already received the card would not receive the updated cards until they become re-eligible. If re-eligibility is turned off, they would never receive the new card.
+* **Reporting:** One campaign contains all analytics for all launched card versions. Braze doesn't differentiate between versions.
+* **Existing recipients:** Users who already received the card don't receive updated cards until they become re-eligible. If re-eligibility is off, they never receive the new card.
 
 {% alert tip %}
 We recommend using this option for unique messages in a notification center or message inbox (such as promotions), when it’s important for analytics to be unified, or when the timeliness of the message isn't a concern (such as existing recipients can wait for the eligibility window before seeing the updated cards).

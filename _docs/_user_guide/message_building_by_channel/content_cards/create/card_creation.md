@@ -33,7 +33,7 @@ You can choose when Braze creates a card on the **Delivery** step when creating 
 The following options are available:
 
 - **At campaign launch:** The previous default behavior for Content Cards. Braze calculates audience eligibility and personalization when the campaign launches, then creates the card and stores it until the user opens your app. 
-- **At first impression (recommended):** When the user next opens your app (that is, starts a new [session](https://www.braze.com/resources/articles/whats-an-app-session-anyway)), Braze determines which Content Cards the user is eligible for, templates any personalization like Liquid or Connected Content, then creates the card. This option will usually see better performance in card deliveries.
+- **At first impression (recommended):** When the user next opens your app (starts a new [session](https://www.braze.com/resources/articles/whats-an-app-session-anyway)), Braze determines which Content Cards the user is eligible for, templates any personalization like Liquid or Connected Content, then creates the card. This option usually delivers better performance.
 
 Regardless of your selected option, the Content Card expiration date countdown will begin when the campaign launches.
 
@@ -47,7 +47,7 @@ You can choose when Braze creates a card on the **Messaging Channels** tab of a 
 The following options are available:
 
 - **At step entry:** The previous default behavior for Content Cards. Braze calculates audience eligibility when the user enters the Canvas step, then creates the card and stores it until the user opens your app.
-- **At first impression (recommended):** Braze calculates audience eligibility when the user enters the Canvas step. When the user next opens your app (that is, starts a new [session](https://www.braze.com/resources/articles/whats-an-app-session-anyway)), Braze templates any personalization like Liquid or Connected Content, then creates the card. This option will see better performance in card deliveries and more up to date personalization.
+- **At first impression (recommended):** Braze calculates audience eligibility when the user enters the Canvas step. When the user next opens your app (starts a new [session](https://www.braze.com/resources/articles/whats-an-app-session-anyway)), Braze templates any personalization like Liquid or Connected Content, then creates the card. This option delivers better performance in card deliveries and more up-to-date personalization.
 
 Regardless of your selected option, the Content Card expiration date countdown will begin when the user enters the Canvas step.
 
@@ -98,13 +98,13 @@ This section describes the main differences between card creation at campaign la
   </tr>
   <tr>
     <td class="leftHeader">Analytics</td>
-    <td class="tg-0pky"><em>Messages Sent</em> refers to the number of cards created and available to be seen. This doesn't count whether the users viewed the card.</td>
-    <td class="tg-0pky"><em>Messages Sent</em> refers to the number of cards sent to a user after a session start. In Canvas, users entering the step without starting a session will not have a card sent, which is why this metric may not align with the number of users entering a step.<br><br>While your reachable users and impressions will not change, you can expect to see a decrease in send volume (<em>Messages Sent</em>) when a card is created at first impression compared to if the same card was created at campaign launch or Canvas step entry.</td>
+  <td class="tg-0pky"><em>Messages Sent</em> refers to the number of cards Braze created and made available. This doesn't count whether users viewed the card.</td>
+  <td class="tg-0pky"><em>Messages Sent</em> refers to the number of cards Braze sends to a user after a session start. In Canvas, if a user enters the step without starting a session, Braze doesn't send a card, so this metric may not align with the number of users entering a step.<br><br>While reachable users and impressions don't change, expect lower send volume (<em>Messages Sent</em>) when you create a card at first impression compared to campaign launch or Canvas step entry.</td>
   </tr>
   <tr>
     <td class="leftHeader">Processing time</td>
-    <td class="tg-0pky">Cards are created for every eligible user in the segment at the time of launch. For large audiences, we recommend to select <b>At First Impression</b>, as cards will be available more quickly after launch.</td>
-    <td class="tg-0pky">Cards are created the first time a user tries to view the card, so it may take 1-2 seconds to display on the first impression.</td>
+  <td class="tg-0pky">Braze creates cards for every eligible user in the segment at launch time. For large audiences, select <b>At First Impression</b> so cards are available more quickly after launch.</td>
+  <td class="tg-0pky">Braze creates a card the first time a user tries to view it, so it may take 1–2 seconds to display on the first impression.</td>
   </tr>
 </tbody>
 </table>
@@ -119,11 +119,11 @@ Braze recommends not changing how cards are created after a campaign has launche
 
 ### Potential processing time
 
-We recommend that campaigns with large audiences select the option to create cards at first impression, as cards will be available much more quickly after the campaign is launched. Campaigns which are triggered on session start may also want to consider moving to create card at first impression (available through scheduled delivery) to realize performance improvements.
+For large audiences, select the option to create cards at first impression so cards are available quickly after launch. Campaigns triggered on session start may also benefit from moving to create at first impression (available through scheduled delivery) to improve performance.
 
 When cards are created at first impression, it may take 1–2 seconds for the cards to process. The length of this processing time depends on various factors, such as the card size and the complexity of the message templating options. For example, the processing time for cards using Connected Content will be at least as long as the Connected Content response time.
 
 ### Previous SDK versions
 
-If a user's app is running a previous version of the SDK, they will still receive Content Cards sent with a specified card creation. However, cards will take longer to appear to these users, and may not appear until the next Content Card sync.
+If a user's app runs a previous SDK version, they still receive Content Cards you send. However, cards take longer to appear and may not show until the next Content Card sync.
 
