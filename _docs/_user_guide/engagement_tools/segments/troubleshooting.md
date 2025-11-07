@@ -39,7 +39,7 @@ This banner displays at the top of a campaign or Canvas list whenever active or 
 
 ![Error banner that says 4 active or stopped Canvases exceed the audience complexity threshold.]({% image_buster /assets/img/segment/audience_complexity_threshold_banner.png %})
 
-### Filter exceeds 10,000 bytes/ is too long to save
+### Filter exceeds 10,000 bytes or is too long to save
 
 Braze limits individual segment filters to a maximum of 10,000 bytes, which is equivalent to 10,000 English characters or 3,333 Japanese characters. A warning appears whenever an individual filter exceeds 10,000 bytes, whether the filter is within a segment or added directly to campaign or Canvas. 
 
