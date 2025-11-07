@@ -161,6 +161,10 @@ You can select [brand guidelines]({{site.baseurl}}/user_guide/administrative/app
 
 If your goal is to use an agent to generate copy to encourage users to log into your mobile app, you can set a higher temperature for your agent to be more creative and use the nuances of the context variables. If you're using an agent to generate copy for user sentiment analysis, it may be ideal to set a lower temperature to avoid any agent speculation on negative survey responses. We recommend testing this setting and reviewing the agent's generated copy to fit your scenario.
 
+{% alert note %}
+Temperatures aren't currently supported for use with OpenAI.
+{% endalert %}
+
 ### Catalogs
 
 Select from a list of catalogs for your agent to reference and further personalize your message.
