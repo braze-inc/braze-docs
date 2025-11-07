@@ -743,7 +743,7 @@ Shopify’s checkout completed webhook doesn't contain product URLs or image URL
 {% endraw %}
 
 {% alert note %}
-The Shopify integration doesn't support populating the Braze [purchase event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events#purchase-events). As a result, purchase filters, Liquid tags, action-based triggers, and analytics should use the ecommerce.order_placed event. 
+The Shopify integration currently doesn't support populating the Braze [purchase event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events#purchase-events). As a result, purchase filters, Liquid tags, action-based triggers, and analytics should use the `ecommerce.order_placed` event. 
 {% endalert %}
 
 {% endsubtab %}
@@ -792,7 +792,7 @@ A known issue with the current Shopify API version prevents the `shopify_last_or
 - **Existing users:** For any user who already has a value for `shopify_last_order_name`, that value persists but is not updated by subsequent orders.
 - **New users:** For any new users, the field does not populate and remains empty or null.
 
-This page is updated after Shopify resolves this issue.
+This page will be updated after Shopify resolves this issue.
 {% endalert %}
 
 ### Liquid personalization

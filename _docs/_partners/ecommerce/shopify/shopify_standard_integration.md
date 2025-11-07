@@ -262,7 +262,7 @@ To add content cards or feature flags, you will need to collaborate with your de
 
 #### Web push notifications
 
-Web push is not supported for the Shopify integration. To request support, submit a product request through the [Braze product portal]({{site.baseurl}}/user_guide/administrative/access_braze/portal/).
+Web push currently is not supported for the Shopify integration. To request support, submit a product request through the [Braze product portal]({{site.baseurl}}/user_guide/administrative/access_braze/portal/).
 
 ## Step 7: Finish setup
 

@@ -68,7 +68,7 @@ Data stored in Braze is retained and usable for segmentation, personalization, a
 
 ### App analytics
 
-The Braze dashboard displays graphs updated in real time based on analytics metrics and custom events you instrument. Consistent measurement and optimization using A/B testing, custom reporting, analytics, and automated intelligence support customer engagement and differentiation.
+The Braze dashboard displays graphs updated in real time based on analytics metrics and custom events that you instrument. Consistent measurement and optimization using A/B testing, custom reporting, analytics, and automated intelligence helps to support your customer engagement and differentiation.
 
 ### User segmentation
 
