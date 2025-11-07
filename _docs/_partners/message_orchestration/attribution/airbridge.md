@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Airbridge
 
-> [Airbridge](https://www.airbridge.io/) is a unified mobile measurement platform for discovering sources of growth through mobile attribution, incrementality measurement, and marketing mix modeling.
+> [Airbridge](https://www.airbridge.io/) is a unified mobile measurement platform for discovering sources of growth through mobile attribution, incremental measurement, and marketing mix modeling.
 
 _This integration is maintained by Airbridge._
 

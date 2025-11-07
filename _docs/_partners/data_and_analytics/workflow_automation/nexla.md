@@ -25,7 +25,7 @@ The Braze and Nexla integration allows customers that use [Currents]({{site.base
 
 ## Use cases
 
-Nexla's data-as-a-product, [Nexsets](https://nexla.zendesk.com/hc/en-us/articles/360052999674-Dataset-Information), enable working with data of any format without managing metadata. When you set up data flows to or from Braze with Nexla, no-code tools are available within minutes. After the data flow is set to a destination, Nexla monitors the flow and scales to any amount of data.
+Nexla's data-as-a-product, [Nexsets](https://nexla.zendesk.com/hc/en-us/articles/360052999674-Dataset-Information), enables working with data of any format without managing metadata. When you set up data flows to or from Braze with Nexla, no-code tools are available within minutes. After the data flow is set to a destination, Nexla monitors the flow and scales to any amount of data.
 
 ## Integration
 
@@ -41,7 +41,7 @@ If you do not already have a Nexla account, head to the Nexla [website](https://
 3. Select **Add a New Credential**, name the credential, add your Braze API key and REST endpoint, and **Save**.
 4. Lastly, select your data and click **Save**. 
 
-Nexla searches the source for available data and generates a [Nexset](https://nexla.zendesk.com/hc/en-us/articles/360052999674-Dataset-Information) for transformation or sending to a destination.
+Nexla will search the source for available data and generate a [Nexset](https://nexla.zendesk.com/hc/en-us/articles/360052999674-Dataset-Information) for transformation or sending to a destination.
 
 #### If Braze is your destination
 
