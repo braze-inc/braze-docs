@@ -71,7 +71,7 @@ Choose to show or hide the user's custom Braze events.
 
 #### Display a list of purchases
 
-Choose to show or hide a list products purchased by the user. Here, you can see how many times it was purchased. To view the first and last purchase date, hover above the item. 
+Choose to show or hide a list of products the user purchased. Here, you can see how many times the user purchased the product. To view the first and last purchase date, hover over the item. 
 
 ### Example integration
 

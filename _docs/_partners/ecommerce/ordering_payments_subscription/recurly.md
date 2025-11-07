@@ -82,11 +82,11 @@ For effective customer engagement, you must [configure custom events]({{site.bas
 
 Because Recurly uses the Braze `/users/track` endpoint, the integration is subject to standard Braze rate limits of 50,000 requests per minute.
 
-Recurly batches certain subscription lifecycle events as single API calls to Braze to reduce the number of calls made.
+Recurly batches certain subscription lifecycle events into single API calls to Braze to reduce the number of requests.
 
-- Creation of multiple subscriptions at the same time are batched and sent to Braze as a single request.
-- When multiple subscriptions are renewed at the same time for an account, each of those renewals is batched into a single request.
-- Same model subscription lifecycle events are sent as a single request. An example being a newly created invoice with a payment would send a single API request with both the `Recurly Invoice Created` and `Recurly Successful Payment` custom events.
+- Recurly batches and sends multiple subscriptions created at the same time as a single request.
+- Recurly batches multiple same-time renewals for an account into a single request.
+- Recurly sends same-model subscription lifecycle events in a single request. For example, a newly created invoice with a payment results in one API request containing both the `Recurly Invoice Created` and `Recurly Successful Payment` custom events.
 
 Batches are sent to Braze in groups of up to 75 events at a time. For example, if 100 subscriptions were created at once, Recurly would make two API requests to Braze. See [batching User Track requests]({{site.baseurl}}/api/api_limits/#batch-user-track) for details.
 
