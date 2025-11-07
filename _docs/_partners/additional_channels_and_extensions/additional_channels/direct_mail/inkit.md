@@ -46,7 +46,7 @@ Once you have selected the Inkit webhook template, you should see the following:
 - **Webhook URL**: Blank
 - **Request Body**: Raw Text
 
-In the Webhook URL field, you will need to [create](https://docs.inkit.com/docs/set-up-a-webhook-to-an-event) and input a Inkit webhook URL.
+In the Webhook URL field, [create](https://docs.inkit.com/docs/set-up-a-webhook-to-an-event) and input a Inkit webhook URL.
 
 ![Request body code and webhook URL shown in the Braze webhook builder compose tab.]({% image_buster /assets/img/inkit-integration.png %})
 

@@ -29,7 +29,7 @@ Braze Audience Sync to Criteo is an Audience Sync Pro integration. For more info
 
 ## Prerequisites 
 
-You will need to ensure that you have the following items created and/or completed prior to setting up your Audience Sync to Criteo.
+You must ensure that you have the following items created and/or completed prior to setting up your Audience Sync to Criteo.
 
 | Requirement | Origin | Description |
 | --- | --- | --- |
@@ -45,13 +45,13 @@ In the Braze dashboard, go to **Partner Integrations** > **Technology Partners**
 
 ![Criteo technology page in Braze that includes an Overview section and Criteo section with the Connected Criteo button.]({% image_buster /assets/img/criteo/criteo5.png %}){: style="max-width:80%;"}
 
-A Criteo oAuth page will appear to authorize Braze for the permissions related to your Audience Sync integration.
+A Criteo oAuth page appears to authorize Braze for the permissions related to your Audience Sync integration.
 
 Once you have selected confirm, you’ll then be redirected back into Braze to select which Criteo ad accounts you wish to sync to. 
 
 ![A list of available ad accounts you can connect to Criteo.]({% image_buster /assets/img/criteo/criteo7.png %}){: style="max-width:80%;"}
 
-Once you have successfully connected, you will be taken back to the partner page, where you can view which accounts are connected and disconnect existing accounts.
+After you have successfully connected, you are taken back to the partner page, where you can view which accounts are connected and disconnect existing accounts.
 
 ![An updated version of the Criteo technology partners page showing the ad accounts successfully connected.]({% image_buster /assets/img/criteo/criteo4.png %}){: style="max-width:80%;"}
 

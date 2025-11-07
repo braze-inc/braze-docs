@@ -109,7 +109,7 @@ After you have defined a segment, Braze messaging tools allow you to engage with
 
 ## Integrating Braze
 
-Braze is designed to get up and running quickly and easily. Our average time-to-value is six weeks across our customer base of hundreds of brands. For more on the integration process, check out: [Getting Started: Integration overview]({{site.baseurl}}/developer_guide/getting_started/integration_overview/).
+Braze is designed for rapid integration. The average time-to-value is six weeks across our customer base. For more on the integration process, see [Getting Started: Integration overview]({{site.baseurl}}/developer_guide/getting_started/integration_overview/).
 
 ## Resources to bookmark
 
