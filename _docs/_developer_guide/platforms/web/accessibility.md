@@ -12,7 +12,7 @@ description: "This article describes our support for accessibility as well as li
 
 > This article provides an overview of Braze's support for accessibility as well as consideration for your integration
 
-Braze supports the standards provided by the [Web Content Accessibility Guidelines (WCAG 2.1)](https://www.w3.org/TR/WCAG21/). We maintain a [100/100 lighthouse score](https://developer.chrome.com/docs/lighthouse/accessibility/scoring) for content cards, in-app messages, and content cards on all of our new builds to ensure we maintain our accessibility standards.
+Braze Web SDK supports the standards provided by the [Web Content Accessibility Guidelines (WCAG 2.1)](https://www.w3.org/TR/WCAG21/). We maintain a [100/100 lighthouse score](https://developer.chrome.com/docs/lighthouse/accessibility/scoring) for content cards, and in-app messages on all of our new builds to uphold our standard for accessibility.
 
 ---
 
@@ -37,7 +37,7 @@ The minimum SDK version that satisfies WCAG 2.1 is around v3.4.0. However, we re
 
 ## Accessibility Features
 
-The following are already supported for content cards, in-app messages, banners:
+The following are already supported for content cards, and in-app messages:
 
 - ✅ ARIA roles and labels
 - ✅ Keyboard navigation support
@@ -45,17 +45,15 @@ The following are already supported for content cards, in-app messages, banners:
 - ✅ Screen reader announcements
 - ✅ Alt text support for images
 
-# Accessibility Guide for SDK Integrators
+## Accessibility Guide for SDK Integrators
 
-This guide provides tips and best practices for ensuring maximum accessibility when integrating the Braze Web SDK into your web application.
+Please read the [message fundamental accessibility guide](/docs/user_guide/engagement_tools/messaging_fundamentals/accessibility) first for general accessibility guidelines.
 
-### Avoid Sporatic Viewport Changes
+This guide provides Web SDK specific tips and best practices for ensuring maximum accessibility when integrating the Braze Web SDK into your web application.
 
-Session start modals, full, or HTML in-app messages may shift elements of the page around sporatically. This makes navigating via keyboard shortcuts more confusing for the user.
+### Content Cards
 
-## Content Cards
-
-### Setting Maximum Height
+#### Setting Maximum Height
 
 To prevent Content Cards from taking up too much vertical space and improve accessibility, you can set a maximum height on the feed container:
 
@@ -73,187 +71,28 @@ To prevent Content Cards from taking up too much vertical space and improve acce
 }
 ```
 
-### Ensuring Scrollable Content is Accessible
+#### Viewport Considerations
 
-The SDK automatically makes the feed scrollable with `overflow-y: auto`. Ensure your customizations maintain keyboard accessibility:
-
-```css
-/* Ensure the feed can receive focus and is scrollable with keyboard */
-.ab-feed:focus {
-  outline: 2px solid #1676d0; /* Visible focus indicator */
-  outline-offset: 2px;
-}
-```
-
-### Customizing Card Spacing
-
-Adjust card spacing for better readability:
+For Content Cards displayed inline, consider viewport constraints:
 
 ```css
-.ab-card {
-  margin-bottom: 20px; /* Default is 20px, adjust as needed */
-}
-
-/* Ensure sufficient spacing between cards for touch targets */
+/* Limit feed height on mobile to prevent covering too much screen */
 @media (max-width: 768px) {
-  .ab-card {
-    margin-bottom: 24px; /* Larger spacing on mobile */
+  body > .ab-feed {
+    max-height: 80vh; /* Leave space for other content */
   }
 }
 ```
 
-## In-App Messages
+### In-App Messages
 
-### Modal Message Accessibility
+{% alert warning %}
+Due to the nature of slide up in-app messages, they are not accessible for screen readers. Do not put important information within a slide up in-app message.
+{% endalert %}
 
-Modal messages automatically include:
-- `role="dialog"` with `aria-modal="true"`
-- Proper ARIA labels (`aria-labelledby` or `aria-label`)
-- Focus trapping and keyboard navigation
+### Mobile Considerations
 
-Ensure your custom CSS doesn't interfere with these features:
-
-```css
-/* Don't override focus styles - SDK handles accessibility */
-.ab-in-app-message:focus,
-.ab-in-app-message *:focus {
-  /* Let SDK handle focus styles */
-}
-```
-
-### Scrollable Message Content
-
-In-App Messages with long content automatically become scrollable. The SDK sets appropriate `max-height` values. If you customize heights, ensure scrolling remains accessible:
-
-```css
-.ab-message-text {
-  /* SDK already handles overflow-y: auto */
-  /* Maintain scrollable behavior for accessibility */
-}
-```
-
-## Keyboard Navigation
-
-### Built-in Keyboard Support
-
-The SDK includes keyboard navigation support:
-
-- **Content Cards Feed**: 
-  - Tab navigation through cards and buttons
-  - Enter/Space to activate buttons
-  - Focus management for sidebar feeds
-
-- **In-App Messages**:
-  - Tab trapping in modal messages
-  - Enter/Space to dismiss or interact
-  - Escape key handling (where applicable)
-
-### Custom Keyboard Handlers
-
-If you add custom keyboard handlers, ensure they don't interfere with built-in accessibility:
-
-```javascript
-// Example: Adding custom keyboard navigation
-document.addEventListener('keydown', (event) => {
-  // Always check if the event was already handled
-  if (event.defaultPrevented) {
-    return;
-  }
-  
-  // Your custom keyboard handling
-});
-```
-
-## Screen Reader Support
-
-### ARIA Attributes
-
-The SDK automatically includes ARIA attributes:
-
-- **Content Cards**:
-  - `role="article"` on individual cards
-  - `role="dialog"` on the feed container
-  - `aria-label` on buttons and interactive elements
-  - `aria-labelledby` for card titles
-
-- **In-App Messages**:
-  - `role="alert"` for slide-up messages
-  - `role="dialog"` for modal messages
-  - `aria-modal="true"` for modal dialogs
-  - `role="article"` for message content
-
-### Image Alt Text
-
-Ensure images in Content Cards have descriptive alt text:
-
-```javascript
-// The SDK automatically sets alt text from card.altImageText
-// Make sure your Braze dashboard provides meaningful alt text
-// If no alt text is provided, the SDK uses an empty string (prevent verbose announcements)
-```
-
-**Best Practice**: Always provide meaningful alt text in your Braze campaigns for images in Content Cards.
-
-### Semantic HTML
-
-The SDK uses semantic HTML elements:
-- `<h1>` for card titles
-- `<button>` for interactive elements (close buttons, etc.)
-- Proper heading hierarchy
-
-Avoid overriding these with CSS that changes their semantic meaning.
-
-## Visual Accessibility
-
-### Color Contrast
-
-Ensure sufficient color contrast when customizing colors:
-
-```css
-/* Minimum contrast ratios (WCAG AA):
-   - Normal text: 4.5:1
-   - Large text (18pt+): 3:1
-   - UI components: 3:1
-*/
-
-/* Example: Customizing card text colors */
-.ab-title {
-  color: #333; /* Ensure sufficient contrast with background */
-}
-
-.ab-description {
-  color: #545454; /* Default meets contrast requirements */
-}
-
-/* Links should have sufficient contrast */
-.ab-url-area a {
-  color: #1676d0; /* Default meets contrast requirements */
-}
-```
-
-### Focus Indicators
-
-The SDK provides focus indicators, but you can enhance them:
-
-```css
-/* Enhanced focus indicators for better visibility */
-.ab-close-button:focus,
-.ab-refresh-button:focus {
-  outline: 2px solid #1676d0;
-  outline-offset: 2px;
-  opacity: 1; /* Close button becomes visible on focus */
-}
-
-/* Ensure all interactive elements have visible focus */
-.ab-card a:focus {
-  outline: 2px dashed #1676d0;
-  outline-offset: 2px;
-}
-```
-
-## Mobile Considerations
-
-### Responsive Design
+#### Responsive Design
 
 The SDK includes responsive breakpoints. Ensure your customizations work across screen sizes:
 
@@ -272,21 +111,9 @@ The SDK includes responsive breakpoints. Ensure your customizations work across 
 }
 ```
 
-### Viewport Considerations
 
-For Content Cards displayed inline, consider viewport constraints:
-
-```css
-/* Limit feed height on mobile to prevent covering too much screen */
-@media (max-width: 768px) {
-  body > .ab-feed {
-    max-height: 80vh; /* Leave space for other content */
-  }
-}
-```
-
-## Testing Accessibility
-### Manual Testing Checklist
+### Testing Accessibility
+#### Manual Testing Checklist
 
 - Navigate Content Cards and In-App Messages with keyboard only (Tab, Enter, Space)
 - Test with screen reader (NVDA, JAWS, VoiceOver)
@@ -297,10 +124,11 @@ For Content Cards displayed inline, consider viewport constraints:
 - Test modal message focus trapping
 - Verify all interactive elements are reachable via keyboard
 
-## Common Accessibility Issues to Avoid
+### Common Accessibility Issues to Avoid
 
 1. **Don't remove focus styles**: The SDK's focus indicators are essential for keyboard users
 2. **Don't use `display: none` on interactive elements**: Use `visibility: hidden` or `opacity: 0` if you need to hide elements
 3. **Don't override ARIA attributes**: The SDK sets appropriate ARIA roles and labels
 4. **Don't remove `tabindex` attributes**: These control keyboard navigation order
 5. **Don't set `overflow: hidden` without providing scroll**: Ensure scrollable content remains accessible
+6. **Don't interfere with built-in keyboard handlers**: Ensure that existing keyboard navigation works
