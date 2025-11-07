@@ -16,7 +16,7 @@ If your project uses NPM, you can add the Braze Vega SDK as a dependency.
 npm install @braze/vega-sdk --save
 ```
 
-Once installed, you can import the methods you need:
+After installation, you can import the methods you need:
 
 ```javascript
 import { initialize, changeUser, openSession } from "@braze/vega-sdk";
@@ -30,7 +30,7 @@ If your project uses Yarn, you can add the Braze Vega SDK as a dependency.
 yarn add @braze/vega-sdk
 ```
 
-Once installed, you can import the methods you need:
+After installation, you can import the methods you need:
 
 ```javascript
 import { initialize, changeUser, openSession } from "@braze/vega-sdk";
