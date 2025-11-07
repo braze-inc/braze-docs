@@ -8,7 +8,7 @@ description: "This reference article covers BrazeAI Operator, an AI-powered assi
 
 # BrazeAI<sup>TM</sup> Operator
 
-> BrazeAI<sup>TM</sup> Operator is an AI-powered assistant built into the Braze dashboard. Operator helps you find answers, troubleshoot issues, and learn best practices without leaving your workflow.
+> BrazeAI<sup>TM</sup> Operator is an AI-powered assistant built into the Braze dashboard. Operator provides answers, troubleshooting guidance, and best practices within your workflow.
 
 {% alert important %}
 BrazeAI<sup>TM</sup> Operator is in a private beta with limited functionality. For help getting started, contact your customer success manager.
@@ -16,7 +16,7 @@ BrazeAI<sup>TM</sup> Operator is in a private beta with limited functionality. F
 
 ## About Operator
 
-Operator is your built-in AI assistant in the Braze dashboard. It helps you move faster by answering questions, suggesting next steps, and guiding you through tasks—all without leaving your workflow.
+Operator is a built-in AI assistant in the Braze dashboard. It answers questions, suggests next steps, and guides you through tasks—all within your workflow.
 
 During the beta, Operator supports **Ask** mode only. You can:
 

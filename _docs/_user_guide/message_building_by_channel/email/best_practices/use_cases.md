@@ -52,7 +52,7 @@ Try to make your message personal to show the user that they are still valued. R
 
 ## Social
 
-Email can help you build up a social fanbase by directing recipients toward your social media platforms. Include links to your social media accounts within the email to make it easy for users to connect.
+Email can build a social fanbase by directing recipients to your social media platforms. Include links to your social media accounts to streamline user connection.
 
 Make it fun! Try running a photo contest, promoting a hashtag, or having a giveaway. The following is an email from Hailo that offers a reward for participating in photo challenges:
 
