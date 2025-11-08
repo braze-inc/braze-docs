@@ -1,0 +1,39 @@
+# Optimizes only the images that are added or modified in a pull request.
+name: "Optimize Images"
+
+on:
+  pull_request:
+    # Run this workflow only if image files under assets/img/ are changed.
+    paths:
+      - 'assets/img/**/*.png'
+      - 'assets/img/**/*.jpg'
+      - 'assets/img/**/*.jpeg'
+
+jobs:
+  optimize:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checks out the PR branch with history so diffs can be detected.
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # Installs CLI tools for image optimization.
+      - run: sudo apt-get update && sudo apt-get install -y pngquant jpegoptim
+
+      # Finds only added/modified PNG or JPG files in the PR and optimizes them in place.
+      - run: |
+          git diff --name-only --diff-filter=AM origin/${{ github.base_ref }}...HEAD \
+            | grep -E '^assets/img/.*\.(png|jpg|jpeg)$' \
+            | while read f; do
+                case "$f" in
+                  *.png)  pngquant --skip-if-larger --ext .png --force 80 "$f" ;;
+                  *.jpg|*.jpeg) jpegoptim --strip-all --max=80 "$f" ;;
+                esac
+              done
+
+      # Automatically commits any optimized images back into the PR branch.
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "optimize png, jpg, and jpeg files"
