@@ -46,7 +46,7 @@ All translation IDs are considered universal unique identifiers (UUIDs), which c
 ## Example request
 
 ```
-curl --location --request GET 'https://rest.iad-03.braze.com/campaigns/translations?campaign_id=&message_variation_id=&locale=' \
+curl --location --request GET 'https://rest.iad-03.braze.com/campaigns/translations?campaign_id={campaign_id}&message_variation_id={message_variation_id}&locale={locale_uuid}' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
