@@ -1,7 +1,7 @@
 ---
 nav_title: Wyng
 article_title: Wyng
-description: "This reference article outlines the partnership between Braze and Wyng, a zero-party data platform, that makes it easy to collect, use, and integrate customer preferences and attributes via micro-experiences, customer preference portals, and an API platform."
+description: "This reference article outlines the partnership between Braze and Wyng, a zero-party data platform used to collect, use, and integrate customer preferences and attributes via micro-experiences, customer preference portals, and an API platform."
 alias: /partners/wyng/
 page_type: partner
 search_tag: Partner
@@ -9,7 +9,7 @@ search_tag: Partner
 
 # Wyng
 
-> [Wyng](https://wyng.com/) makes it easy to build interactive digital experiences (that is, quizzes, preference centers, promotions) that engage consumers at the right moments, collect preferences and other zero-party data, and personalize in real-time.
+> [Wyng](https://wyng.com/) provides tools to build interactive digital experiences (quizzes, preference centers, promotions) that engage consumers at key moments, collect preferences and other zero-party data, and personalize in real time.
 
 _This integration is maintained by Wyng._
 

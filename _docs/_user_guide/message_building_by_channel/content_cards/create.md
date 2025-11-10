@@ -18,7 +18,7 @@ search_rank: 3.9
 
 ## Step 1: Choose where to build your message
 
-Not sure whether your message should be sent with a campaign or a Canvas? Campaigns are better for single, simple messaging campaigns (such as informing users about a new product with a single message), while Canvases are better for multi-step user journeys (such as sending tailored product suggestions based on user behavior over time).
+Not sure whether your message should be sent with a campaign or a Canvas? Campaigns are better for single, targeted messaging campaigns (such as informing users about a new product with a single message), while Canvases are better for multi-step user journeys (such as sending tailored product suggestions based on user behavior over time).
 
 {% tabs %}
 {% tab Campaign %}
@@ -57,7 +57,7 @@ To learn more about the expected behavior and look of each type, refer to [Creat
 
 | Message Type | Example | Description |
 |---|---|---|
-|[Classic]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#classic)| ![A Classic Content Card with a small icon and text to encourage booking a workout class.]({% image_buster/assets/img_archive/cc_steppington_classic.png %}) |The Classic Card has a simple layout with a bolded title, message text, and an optional image that sits to the left of the title and text. It's best to use a square image or icon with the Classic Card. |
+|[Classic]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#classic)| ![A Classic Content Card with a small icon and text to encourage booking a workout class.]({% image_buster/assets/img_archive/cc_steppington_classic.png %}) |The Classic Card has a straightforward layout with a bolded title, message text, and an optional image that sits to the left of the title and text. It's best to use a square image or icon with the Classic Card. |
 |[Captioned Image]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#captioned-image)| ![A Captioned Content Card with a image of a weightlifter and text to encourage booking a workout class.]({% image_buster/assets/img_archive/cc_steppington_captioned.png %}) | The Captioned Image Card showcases your content with copy and an attention-grabbing image. |
 |[Image Only]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#banner)| ![An Image Only Content Card with text only.]({% image_buster/assets/img_archive/cc_steppington_banner.png %}) | The Image Only Card commands attention with space for images, GIFs, and other creative non-text content. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }

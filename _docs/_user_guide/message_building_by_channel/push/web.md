@@ -21,7 +21,7 @@ Web push is another great way to engage with users of your web application. Cust
 Web push notifications deliver urgent, actionable updates that drive quick conversions. With web push, you can:
 
 - Trigger messages right when important data changes, like a price decreases
-- Drive people back to your website with simple call-to-action buttons
+- Drive people back to your website with clear call-to-action buttons
 - Personalize your push with product and customer information to make your message relevant
 
 Web push works the same way app push notifications operate on your phone. For more information on composing a web push, check out [Creating a push notification]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message).

@@ -146,8 +146,7 @@ To download this report, do the following:
 This report only contains the most recent 10,000 security events for your account. If you need specific event data, contact technical support.
 
 {% details Reported security events %}
-
-### Login and account 
+### Login and account
 - Signed In
 - Failed Login
 - Two-Factor Auth Setup Completed
@@ -162,17 +161,20 @@ This report only contains the most recent 10,000 security events for your accoun
 - Removed Account
 - User Subscription Status Updated
 - User Updated
+- Developer Account Updated
 
 ### Elevated access
 - Started Elevated Access Flow
 - Completed Elevated Access Flow
 - Failed 2FA Verification For Elevated Access
+- Enabled Elevated Access Enforcement
+- Disabled Elevated Access Enforcement
 
-### Campaign
+Campaign
 - Added Campaign
 - Edited Campaign
 
-### Canvas
+Canvas
 - Added Journey
 - Edited Journey
 
@@ -181,6 +183,8 @@ This report only contains the most recent 10,000 security events for your accoun
 - Edited Segment
 - Exported data to CSV
 - Exported Segment via API
+- Segment Users Deleted
+- Cleared Cohort
 
 ### REST API key
 - Added REST API key
@@ -194,23 +198,64 @@ This report only contains the most recent 10,000 security events for your accoun
 ### Permission
 - Cleared Developer 2FA
 - Updated Account Permission
+- Added Team
+- Edited Team
+- Archived Team
+- Unarchived Team
+- Created App Group Permission Set
+- Edited App Group Permission Set
+- Removed App Group Permission Set
+- Created Custom Role
+- Updated Custom Role
+- Deleted Custom Role
 
 ### Company settings
 - Added App Group
 - Added App
 - Company Settings Changed
+- Updated Company Security Settings
+- Updated Security Event Cloud Export
+- Added Landing Pages Custom Domain
+- Removed Landing Pages Custom Domain
+- Custom Domain Created
+- Custom Domain Deleted
+- Enabled Global Control Group
+- Disabled Global Control Group
+- Updated Global Control Exclusions
+- Updated Subscription Group SMS Allow List
 
 ### Email template
 - Added Email Template
 - Updated Email Template
 
 ### Push credential
-- Updated Push Credential
-- Removed Push Credential
+Updated Push Credential
+Removed Push Credential
 
 ### SDK Debugger
 - Started SDK Debugger Session
 - Exported SDK Debugger Log
+
+### Users
+- Users Deleted
+- Users Viewed
+- User Import Started
+- User Subscription Group Status Updated
+- User Deleted
+- Single User Deletion Cancelled
+- Bulk User Deletion Cancelled
+
+### Catalogs
+- Catalog Created
+- Catalog Deleted
+
+### Braze Agents
+- Created Agent
+- Edited Agent
+
+### BrazeAI Operator 
+- Requested BrazeAI Operator Response
+- BrazeAI Operator Responded
 {% enddetails %}
 
 ## Viewing personally identifiable information (PII) {#view-pii}
