@@ -36,7 +36,7 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 | `workflow_id`          | Required | String    | The ID of the Canvas.              |
 | `step_id`              | Required | String    | The ID of your Canvas step.        |
 | `message_variation_id` | Required | String    | The ID for your message variation. |
-| `locale_id`            | Optional | String    | The ID of the locale.              |
+| `locale_id`            | Optional | String    | The ID (uuid) of the locale.              |
 | `post_launch_draft_version`| Optional | Boolean | When `true` (default) returns the latest draft version instead of the latest live published version.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
