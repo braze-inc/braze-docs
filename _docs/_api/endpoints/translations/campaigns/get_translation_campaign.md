@@ -117,8 +117,10 @@ The following table lists possible returned errors and their associated troubles
 | Error message                           | Troubleshooting                                                                    |
 |-----------------------------------------|------------------------------------------------------------------------------------|
 | `INVALID_CAMPAIGN_ID`                   | Confirm the campaign ID matches the campaign you're translating.                   |
+| `INVALID_LOCALE_ID` | Confirm your locale ID exists in your message translation. |
 | `INVALID_MESSAGE_VARIATION_ID`          | Confirm your message ID is correct.                                                |
 | `MESSAGE_NOT_FOUND`                     | Check that the message to be translated.                                           |
+| `LOCALE_NOT_FOUND` | Confirm the locale exists in your multi-language settings. |
 | `MULTI_LANGUAGE_NOT_ENABLED`            | Multi-language settings aren't turned on for your workspace.                       |
 | `MULTI_LANGUAGE_NOT_ENABLED_ON_MESSAGE` | Only email, push, and in-app-message campaigns or Canvas messages with emails can be translated.             |
 | `UNSUPPORTED_CHANNEL`                   | Only email, push, or in-app-message campaigns or Canvas messages can be translated. |
