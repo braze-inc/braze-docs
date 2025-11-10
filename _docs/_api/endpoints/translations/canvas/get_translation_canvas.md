@@ -40,7 +40,9 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 | `post_launch_draft_version`| Optional | Boolean | When `true` (default) returns the latest draft version instead of the latest live published version.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-Note all translation IDs are considered universal unique identifiers (UUIDs), which can be found in **Multi-Language Support** settings or in the request response.
+{% alert note %}
+All translation IDs are considered universal unique identifiers (UUIDs), which can be found in the GET endpoint's response.
+{% endalert %}
 
 ## Example request
 
