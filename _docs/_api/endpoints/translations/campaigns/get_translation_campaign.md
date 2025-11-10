@@ -40,7 +40,7 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}
-All translation IDs are considered universal unique identifiers (UUIDs), which can be found in **Multi-Language Support** settings or in the request response.
+All translation IDs are considered universal unique identifiers (UUIDs), which can be found in the request response.
 {% endalert %}
 
 ## Example request
