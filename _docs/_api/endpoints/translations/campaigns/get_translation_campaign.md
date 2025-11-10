@@ -122,7 +122,7 @@ The following table lists possible returned errors and their associated troubles
 | `MESSAGE_NOT_FOUND`                     | Check that the message to be translated.                                           |
 | `LOCALE_NOT_FOUND` | Confirm the locale exists in your multi-language settings. |
 | `MULTI_LANGUAGE_NOT_ENABLED`            | Multi-language settings aren't turned on for your workspace.                       |
-| `MULTI_LANGUAGE_NOT_ENABLED_ON_MESSAGE` | Only email, push, and in-app-message campaigns or Canvas messages with emails can be translated.             |
+| `MULTI_LANGUAGE_NOT_ENABLED_ON_MESSAGE` | The message does not have multi-language setup.             |
 | `UNSUPPORTED_CHANNEL`                   | Only email, push, or in-app-message campaigns or Canvas messages can be translated. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
