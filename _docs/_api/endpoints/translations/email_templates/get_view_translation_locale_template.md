@@ -12,7 +12,7 @@ description: "This article outlines details about the View specific translation 
 {% api %}
 # View a specific translation and locale for email template endpoint
 {% apimethod get %}
-/templates/translations/email?locale_id={locale_uuid}&template_id={template_id}
+/templates/translations/email
 {% endapimethod %}
 
 > Use this endpoint to view a specific translation and locale for an [email template]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates).
@@ -34,7 +34,8 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 | Parameter     | Required | Data Type | Description                     |
 |---------------|----------|-----------|---------------------------------|
 | `template_id` | Required | String    | The ID for your email template. |
-| `locale_id`   | Required | String    | The ID of the locale.           |
+| `locale_id`   | Optional | String    | The ID of the locale.           |
+| `post_launch_draft_version`| Optional | Boolean | When `true` (default) returns the latest draft version instead of the latest live published version.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 Note all translation IDs are considered universal unique identifiers (UUIDs), which can be found in **Multi-Language Support** settings or in the request response.
@@ -42,7 +43,7 @@ Note all translation IDs are considered universal unique identifiers (UUIDs), wh
 ## Example request
 
 ```
-curl --location --request GET 'https://rest.iad-03.braze.com/templates/translations/email?locale_id={locale_uuid}&template_id={template_id}/' \
+curl --location --request GET 'https://rest.iad-03.braze.com/templates/translations/email?locale_id={locale_uuid}&template_id={template_id}' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
