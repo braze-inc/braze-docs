@@ -267,7 +267,7 @@ A common use case is to insert an attribute into your anchor tag to disable clic
 * **SendGrid:** `clicktracking = "off"`
 * **SparkPost:** `data-msys-clicktrack = "0"`
 
-Another common use case is to flag specific links as universal links. Universal links are links that redirect to your app, giving your users an integrated experience. Note that a link name can be up to 63 bytes and is automatically truncated if it exceeds the limit.
+Another common use case is to flag specific links as universal links. Universal links are links that redirect to your app, giving your users an integrated experience.
 
 * **SendGrid:** `universal = "true"`
 * **SparkPost:** `data-msys-sublink = "open-in-app"` (a [custom sub-path](https://support.sparkpost.com/docs/tech-resources/deep-links-self-serve#custom-link-sub-paths) must be configured)
@@ -312,3 +312,7 @@ Anything added outside of `<head>` tags will be added after the `<body>` tag in 
 | `style` | `media` | Specifies the media or device for which styles apply. | ```<style media="print">body { font-size: 12pt; }</style>``` |
 | `title` | No attributes | The `title` tag doesn't accept any attributes. | ```<title>Kitchenerie</title>``` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
+
+{% alert note %}
+Link names can be up to 63 bytes and are automatically truncated if they exceed the limit.
+{% endalert %}
