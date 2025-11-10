@@ -35,7 +35,7 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 | --------- | ---------| --------- | ----------- |
 |`campaign_id`| Required | String | The ID of your campaign. |
 |`message_variation_id`| Required | String | The ID of your message variation. |
-|`locale`| Optional | String | A locale UUID to filter the responses. |
+|`locale_id`| Optional | String | A locale UUID to filter the responses. |
 | `post_launch_draft_version`| Optional | Boolean | When `true` (default) returns the latest draft version instead of the latest live published version.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
