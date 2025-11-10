@@ -4,59 +4,54 @@ article_title: Accessibility
 platform: Web
 page_order: 22
 page_type: reference
-description: "This article describes our support for accessibility as well as limitations"
+description: "This article describes how Braze supports accessibility."
 
 ---
 
 # Accessibility
 
-> This article provides an overview of Braze's support for accessibility as well as consideration for your integration
+> This article provides an overview of how Braze supports accessibility within your integration.
 
-Braze Web SDK supports the standards provided by the [Web Content Accessibility Guidelines (WCAG 2.1)](https://www.w3.org/TR/WCAG21/). We maintain a [100/100 lighthouse score](https://developer.chrome.com/docs/lighthouse/accessibility/scoring) for content cards, and in-app messages on all of our new builds to uphold our standard for accessibility.
-
----
+Braze Web SDK supports the standards provided by the [Web Content Accessibility Guidelines (WCAG 2.1)](https://www.w3.org/TR/WCAG21/). We maintain a [100/100 lighthouse score](https://developer.chrome.com/docs/lighthouse/accessibility/scoring) for content cards and in-app messages on all of our new builds to uphold our accessibility standard.
 
 ## Prerequisites
 
-The minimum SDK version that satisfies WCAG 2.1 is around v3.4.0. However, we recommend upgrading to at least v6.0.0 for major image tag fixes.
+The minimum SDK version that satisfies WCAG 2.1 is close to v3.4.0. However, we recommend upgrading to at least v6.0.0 for major image tag fixes.
 
-**Notable Accessibility Fixes**
+### Notable accessibility fixes
 
-
-| Version | Type | Key Changes |
+| Version | Type | Key changes |
 |---------|------|-------------|
-| **6.0.0** | **Major** | Images as `<img>` tags, `imageAltText`/`language` fields, general UI accessibility improvements |
+| **6.0.0** | **Major** | Images as `<img>` tags, `imageAltText` or `language` fields, general UI accessibility improvements |
 | **3.5.0** | Minor | Scrollable text accessibility improvements |
 | **3.4.0** | Fix | Content Cards `article` role fix |
 | **3.2.0** | Minor | 45x45px minimum touch targets for buttons |
 | **3.1.2** | Minor | Default alt text for images |
-| **2.4.1** | **Major** | Semantic HTML (`h1`/`button`), ARIA attributes, keyboard navigation, focus management |
+| **2.4.1** | **Major** | Semantic HTML (`h1` or `button`), ARIA attributes, keyboard navigation, focus management |
 | **2.0.5** | Minor | Focus management, keyboard navigation, labels |
+{: .reset-td-br-1, .reset-td-br-2 role="presentation" }
 
----
+## Supported accessibility features
 
-## Accessibility Features
+We support these features for content cards and in-app messages:
 
-The following are already supported for content cards, and in-app messages:
+- ARIA roles and labels
+- Keyboard navigation support
+- Focus management
+- Screen reader announcements
+- Alt text support for images
 
-- ✅ ARIA roles and labels
-- ✅ Keyboard navigation support
-- ✅ Focus management
-- ✅ Screen reader announcements
-- ✅ Alt text support for images
+## Accessibility guidelines for SDK integrations
 
-## Accessibility Guide for SDK Integrators
-
-Please read the [message fundamental accessibility guide](/docs/user_guide/engagement_tools/messaging_fundamentals/accessibility) first for general accessibility guidelines.
-
-This guide provides Web SDK specific tips and best practices for ensuring maximum accessibility when integrating the Braze Web SDK into your web application.
+Refer to [Building accessible messages in Braze]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/accessibility) for general accessibility guidelines. This guide provides tips and best practices for maximum accessibility when integrating the Braze Web SDK into your web application.
 
 ### Content Cards
 
-#### Setting Maximum Height
+#### Setting a maximum height
 
-To prevent Content Cards from taking up too much vertical space and improve accessibility, you can set a maximum height on the feed container:
+To prevent Content Cards from taking up too much vertical space and improve accessibility, you can set a maximum height on the feed container, such as in this example:
 
+{% raw %}
 ```css
 /* Limit the height of the Content Cards feed */
 .ab-feed {
@@ -70,11 +65,13 @@ To prevent Content Cards from taking up too much vertical space and improve acce
   overflow: hidden;
 }
 ```
+{% endraw %}
 
-#### Viewport Considerations
+#### Viewport considerations
 
-For Content Cards displayed inline, consider viewport constraints:
+For Content Cards that are displayed inline, consider viewport constraints, such as in this example.
 
+{% raw %}
 ```css
 /* Limit feed height on mobile to prevent covering too much screen */
 @media (max-width: 768px) {
@@ -83,19 +80,21 @@ For Content Cards displayed inline, consider viewport constraints:
   }
 }
 ```
+{% endraw %}
 
-### In-App Messages
+### In-app messages
 
 {% alert warning %}
-Due to the nature of slide up in-app messages, they are not accessible for screen readers. Do not put important information within a slide up in-app message.
+Do not put important information within slide up in-app messages, as they are not accessible for screen readers.
 {% endalert %}
 
-### Mobile Considerations
+### Mobile considerations
 
-#### Responsive Design
+#### Responsive design
 
-The SDK includes responsive breakpoints. Ensure your customizations work across screen sizes:
+The SDK includes responsive breakpoints. Confirm that your customizations work across screen sizes, such as in this example:
 
+{% raw %}
 ```css
 /* Mobile-specific accessibility considerations */
 @media (max-width: 768px) {
@@ -110,25 +109,30 @@ The SDK includes responsive breakpoints. Ensure your customizations work across 
   }
 }
 ```
+{% endraw %}
 
+### Testing accessibility
 
-### Testing Accessibility
-#### Manual Testing Checklist
+#### Manual test checklist
 
-- Navigate Content Cards and In-App Messages with keyboard only (Tab, Enter, Space)
+Manually test your accessiblity by completing these tasks:
+
+- Navigate Content Cards and in-app messages with keyboard only (Tab, Enter, Space)
 - Test with screen reader (NVDA, JAWS, VoiceOver)
 - Verify all images have alt text
 - Check color contrast ratios (use tools like WebAIM Contrast Checker)
 - Test on mobile devices with touch
 - Verify focus indicators are visible
 - Test modal message focus trapping
-- Verify all interactive elements are reachable via keyboard
+- Verify all interactive elements are reachable by a keyboard
 
-### Common Accessibility Issues to Avoid
+### Common accessibility issues
 
-1. **Don't remove focus styles**: The SDK's focus indicators are essential for keyboard users
-2. **Don't use `display: none` on interactive elements**: Use `visibility: hidden` or `opacity: 0` if you need to hide elements
-3. **Don't override ARIA attributes**: The SDK sets appropriate ARIA roles and labels
-4. **Don't remove `tabindex` attributes**: These control keyboard navigation order
-5. **Don't set `overflow: hidden` without providing scroll**: Ensure scrollable content remains accessible
-6. **Don't interfere with built-in keyboard handlers**: Ensure that existing keyboard navigation works
+To avoid common accessibility issues, do the following:
+
+1. **Keep focus styles:** The SDK's focus indicators are essential for keyboard users.
+2. **Only use `display: none` on non-interactive elements:** Use `visibility: hidden` or `opacity: 0` to hide interactive elements.
+3. **Don't override ARIA attributes:** The SDK sets appropriate ARIA roles and labels.
+4. **Use `tabindex` attributes:** These control keyboard navigation order.
+5. **Provide a scroll if you set `overflow: hidden`:** Confirm that scrollable content remains accessible.
+6. **Don't interfere with built-in keyboard handlers:** Confirm that existing keyboard navigation works.
