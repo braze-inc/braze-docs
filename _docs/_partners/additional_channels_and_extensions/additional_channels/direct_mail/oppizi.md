@@ -102,7 +102,7 @@ The following is an example request body:
 
 ### Step 4: Preview and test your request in Braze
 
-After adding your request body with Oppizi’s workflow ID, run a test to check that everything is working correctly.
+After adding your request body with Oppizi’s workflow ID, run a test to confirm your setup is working as expected.
 
 To run the test, update `requestType` from `live` to `test` in the request body. Note this step is crucial to prevent adding test recipients to your direct mail audience.
 
