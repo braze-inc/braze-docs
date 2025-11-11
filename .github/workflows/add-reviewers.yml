@@ -35,7 +35,7 @@ jobs:
             }
             
             // Rule 2: If PR diff contains privacy/legal/GDPR keywords, add legal team
-            const { data: diffData } = await github.rest.pulls.get({
+            const diffData = await github.rest.pulls.get({
               owner: context.repo.owner,
               repo: context.repo.repo,
               pull_number: prNumber,
