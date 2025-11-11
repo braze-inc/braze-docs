@@ -45,12 +45,59 @@ jobs:
             });
             
             const diff = diffData.toLowerCase();
-            const keywords = ['privacy', 'legal', 'gdpr'];
+            const keywords = [
+              'law'
+              'laws'
+              'regulation'
+              'regulations'
+              'privacy'
+              'personal data'
+              'personally identifiable information'
+              'pii'
+              'legal'
+              'contract'
+              'msa'
+              'data processing addendum'
+              'dpa'
+              'gdpr'
+              'ccpa'
+              'tcpa'
+              'hipaa'
+              'coppa'
+              'compliance'
+              'comply'
+              'compliant'
+              'jurisdiction'
+              'confidentiality'
+              'cookie'
+              'consent'
+              'personal information'
+              'phi'
+              'opt-in'
+              'opt in'
+              'opt-out'
+              'opt out'
+              'spam'
+              'can-spam'
+              'casl'
+              'liability'
+              'liable'
+              'tracking'
+              'governance'
+              'agreement'
+              'notice'
+              'policy'
+              'subscribe'
+              'subscription'
+              'subscribed'
+              'directive'
+              'directives'
+              'act'];
             const containsKeyword = keywords.some(keyword => diff.includes(keyword));
             
             if (containsKeyword) {
               console.log('Found privacy/legal/GDPR keyword in diff - adding legal team');
-              reviewersToAdd.push('ttsaiveerappan');
+              reviewersToAdd.push('ats-91');
             }
             
             // Get current reviewers to avoid duplicates
