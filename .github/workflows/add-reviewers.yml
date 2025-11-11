@@ -35,6 +35,7 @@ jobs:
             }
             
             // Rule 2: If PR diff contains privacy/legal/GDPR keywords, add legal team
+            const legalTeam = 'ats-91';
             const diffData = await github.rest.pulls.get({
               owner: context.repo.owner,
               repo: context.repo.repo,
@@ -98,7 +99,7 @@ jobs:
             if (containsKeyword) {
               console.log('Found privacy/legal/GDPR keyword in diff - adding legal team');
               console.log('Diff: ', diff);
-              reviewersToAdd.push('ats-91');
+              reviewersToAdd.push(legalTeam);
             }
             
             // Get current reviewers to avoid duplicates
@@ -141,8 +142,8 @@ jobs:
                   commentBody += '- 📝 **@braze-inc/docs-team** - Copilot is assigned to this PR\n';
                 }
                 
-                if (reviewersToAdd.includes('ats-91')) {
-                  commentBody += '- ⚖️ **@ats-91** - PR diff contains privacy/legal/GDPR-related content\n';
+                if (reviewersToAdd.includes(legalTeam)) {
+                  commentBody += '- ⚖️ **@'+legalTeam+'** - PR diff contains privacy/legal/GDPR-related content\n';
                 }
                 
                 await github.rest.issues.createComment({
