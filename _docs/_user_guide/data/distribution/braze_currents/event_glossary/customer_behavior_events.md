@@ -42,8 +42,9 @@ Certain events return a `platform` value that specifies the platform of the user
 {% alert important %}
 Storage schemas apply to the flat file event data we send to data warehouse storage partners (such as Google Cloud Storage, Amazon S3, and Microsoft Azure Blob Storage). Some event and destination combinations listed here are not yet generally available. For information on which events are supported by various partners, refer to our list of [available partners]({{site.baseurl}}/user_guide/data/braze_currents/available_partners/) and check their respective pages.<br><br>Additionally, note that Currents will drop events with excessively large payloads of greater than 900&nbsp;KB.
 {% endalert %}
+
 {% api %}
-## Random Bucket Number Update events
+## Random Bucket Number Update events {#random-bucket-number-update-events}
 
 {% apitags %}
 Random Bucket Number
@@ -77,7 +78,7 @@ This Currents event is only available for customers that have purchased an "all 
 {% endapi %}
 
 {% api %}
-## Custom events
+## Custom events {#custom-events}
 
 {% apitags %}
 Custom Events
@@ -146,11 +147,11 @@ This event occurs when a specific custom event is triggered. Use this to track w
 {
   "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
   "context" : {
-    "traits" : { },
     "device" : {
       "model" : "(optional, string) Model of the device",
       "type" : "(optional, string) Platform of the device"
-    }
+    },
+    "traits" : { }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
@@ -200,11 +201,11 @@ This event occurs when a specific custom event is triggered. Use this to track w
 
 - For Custom Events, the payload will also be populated with any [custom event properties]({{site.baseurl}}/user_guide/data/custom_data/custom_events#custom-event-properties) that are associated with the event.
 - For `ad_id`, `ad_id_type`, and `ad_tracking_enabled`, you need to explicitly collect the iOS IDFA and Android Google ad ID through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift), [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
-- If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) data, reach out to your customer success manager or account manager to enable the feature flipper for sending `ad_id`.
+- If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) data, contact your customer success manager or account manager to enable the feature flipper for sending `ad_id`.
 {% endapi %}
 
 {% api %}
-## Install Attribution events
+## Install Attribution events {#install-attribution-events}
 
 {% apitags %}
 Attribution
@@ -259,8 +260,8 @@ This event occurs when an app installation is attributed to a source. Use this t
 {
   "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
   "context" : {
-    "traits" : { },
-    "device" : { }
+    "device" : { },
+    "traits" : { }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
@@ -295,7 +296,7 @@ This event occurs when an app installation is attributed to a source. Use this t
 {% endapi %}
 
 {% api %}
-## Location events
+## Location events {#location-events}
 
 {% apitags %}
 Locations
@@ -374,11 +375,11 @@ This event is triggered when a user visits a specified location. Use this to tra
 {
   "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
   "context" : {
-    "traits" : { },
     "device" : {
       "model" : "(optional, string) Model of the device",
       "type" : "(optional, string) Platform of the device"
-    }
+    },
+    "traits" : { }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
@@ -433,11 +434,11 @@ This event is triggered when a user visits a specified location. Use this to tra
 #### Property details
 
 - For `ad_id`, `ad_id_type`, and `ad_tracking_enabled`, you need to explicitly collect the iOS IDFA and Android Google ad ID through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift), [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
-- If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) data, reach out to your customer success manager or account manager to enable the feature flipper for sending `ad_id`.
+- If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) data, contact your customer success manager or account manager to enable the feature flipper for sending `ad_id`.
 {% endapi %}
 
 {% api %}
-## Purchase events
+## Purchase events {#purchase-events}
 
 {% apitags %}
 Purchases
@@ -516,11 +517,11 @@ Purchases are special custom events and come with a JSON encoded string of custo
 {
   "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
   "context" : {
-    "traits" : { },
     "device" : {
       "model" : "(optional, string) Model of the device",
       "type" : "(optional, string) Platform of the device"
-    }
+    },
+    "traits" : { }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
@@ -573,11 +574,11 @@ Purchases are special custom events and come with a JSON encoded string of custo
 
 - For Purchase events, the payload will also be populated with any [purchase event properties]({{site.baseurl}}/user_guide/data/custom_data/purchase_events/#purchase-properties) that are associated with the event.
 - For `ad_id`, `ad_id_type`, and `ad_tracking_enabled`, you need to explicitly collect the iOS IDFA and Android Google ad ID through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift), [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
-- If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) data, reach out to your customer success manager or account manager to enable the feature flipper for sending `ad_id`.
+- If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) data, contact your customer success manager or account manager to enable the feature flipper for sending `ad_id`.
 {% endapi %}
 
 {% api %}
-## First Session events
+## First Session events {#first-session-events}
 
 {% apitags %}
 Sessions
@@ -644,11 +645,11 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
 {
   "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
   "context" : {
-    "traits" : { },
     "device" : {
       "model" : "(optional, string) Model of the device",
       "type" : "(optional, string) Platform of the device"
-    }
+    },
+    "traits" : { }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
@@ -694,7 +695,7 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
 {% endapi %}
 
 {% api %}
-## Session End events
+## Session End events {#session-end-events}
 
 {% apitags %}
 Sessions
@@ -759,11 +760,11 @@ This occurs when a user exits your application, therefore ending their current s
 {
   "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
   "context" : {
-    "traits" : { },
     "device" : {
       "model" : "(optional, string) Model of the device",
       "type" : "(optional, string) Platform of the device"
-    }
+    },
+    "traits" : { }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
@@ -806,7 +807,7 @@ This occurs when a user exits your application, therefore ending their current s
 {% endapi %}
 
 {% api %}
-## Session Start events
+## Session Start events {#session-start-events}
 
 {% apitags %}
 Sessions
@@ -873,11 +874,11 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
 {
   "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
   "context" : {
-    "traits" : { },
     "device" : {
       "model" : "(optional, string) Model of the device",
       "type" : "(optional, string) Platform of the device"
-    }
+    },
+    "traits" : { }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
@@ -918,7 +919,7 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
 {% endapi %}
 
 {% api %}
-## Live Activity Push To Start Token Change events
+## Live Activity Push To Start Token Change events {#live-activity-push-to-start-token-change-events}
 
 {% apitags %}
 Live Activity, Push To Start Token
@@ -981,8 +982,8 @@ This event occurs when Braze syncs Live Activity push to start token with the us
 {
   "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
   "context" : {
-    "traits" : { },
-    "device" : { }
+    "device" : { },
+    "traits" : { }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
@@ -1027,7 +1028,7 @@ This event occurs when Braze syncs Live Activity push to start token with the us
 {% endapi %}
 
 {% api %}
-## Live Activity Update Token Change events
+## Live Activity Update Token Change events {#live-activity-update-token-change-events}
 
 {% apitags %}
 Live Activity, Update Token
@@ -1090,8 +1091,8 @@ This event occurs when Braze syncs Live Activity update token with the user
 {
   "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
   "context" : {
-    "traits" : { },
-    "device" : { }
+    "device" : { },
+    "traits" : { }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
@@ -1136,7 +1137,7 @@ This event occurs when Braze syncs Live Activity update token with the user
 {% endapi %}
 
 {% api %}
-## Push Notification Token State Change events
+## Push Notification Token State Change events {#push-notification-token-state-change-events}
 
 {% apitags %}
 Push, Token State Change
@@ -1212,8 +1213,8 @@ This event occurs when a push token is inserted, updated or removed. Use this to
 {
   "anonymousId" : "(required, string) Braze user ID of the user who performed this event",
   "context" : {
-    "traits" : { },
-    "device" : { }
+    "device" : { },
+    "traits" : { }
   },
   "event" : "(required, string) The event type name, as it is exported to Segment",
   "messageId" : "(required, string) Globally unique ID for this event",
@@ -1267,13 +1268,15 @@ This event occurs when a push token is inserted, updated or removed. Use this to
 {% endtab %}
 {% endtabs %}
 
+{% endapi %}
+
 #### Property details
 
 - The `push_token_foreground_push_disabled` field indicates whether the push token can receive foreground or background push.
   - If the user explicitly allowed push notification permission on their device, this will be `false`, and the token is able to receive foreground push notifications.
   - If the user explicitly denied push notification permission on their device, this will be `true`, and the token is only allowed with background push notifications.
   - If the push permission is unknown, this will be empty. By default, Braze will attempt to send foreground push notifications to the token.
-- The `push_token_provisionally_opted_in` field only applies to iOS push tokens. 
+- The `push_token_provisionally_opted_in` field only applies to iOS push tokens.
   - If you have [Provisional Authorization]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#provisional-push) set up, provisional tokens will have this field set to `true`. All other push tokens will be `false`.
 - Whenever a push token enters Braze, its lifecycle events are recorded. There are three types of token change events ("add", "update", and "remove") recorded in the `push_token_state_change_type` field. Note the following details:
   - For a new token that hasn't existed before, this ingests one "add" event.
@@ -1281,6 +1284,3 @@ This event occurs when a push token is inserted, updated or removed. Use this to
   - If a token moved from one user to another user, this will ingest one "remove" event for the old user and one "add" event for the new user.
   - If the same user or device generates a new token, this will ingest one "remove" event for the old token and one "add" event for the new token.
   - If Braze is removing a token (for reasons like an uninstall or invalid token), this will ingest one "remove" event for the token.
-
-
-{% endapi %}

@@ -20,7 +20,7 @@ tool:
 管理者が承認ワークフローをオンにした場合、メッセージを起動する前に、サマリーの各セクションが適切な権限を持つユーザーによって承認されている必要があります。各セクションのデフォルトステータスは**承認待ち**です。
 
 {% tabs %}
-{% tab キャンペーン %}
+{% tab campaign %}
 キャンペーンを起動するには、次の主要コンポーネントを承認する必要があります。
 
 - **メッセージ:**これはキャンペーンメッセージです。
@@ -29,7 +29,7 @@ tool:
 - **コンバージョンイベント:**これは、エンゲージメントとレポートの目的で追跡しているメトリクスです。
 {% endtab %}
 
-{% tab キャンバス %}
+{% tab canvas %}
 キャンバスを起動するには、次の主要コンポーネントを承認する必要があります。
 
 - **コンバージョンイベント:**これは、エンゲージメントとレポートの目的で追跡しているメトリクスです。
@@ -43,8 +43,8 @@ tool:
 ## 承認ワークフローの有効化
 
 デフォルトでは、キャンペーンとキャンバスの承認ワークフロー設定はオフになっています。この機能を有効にするには、[**設定** > [**承認ワークフロー**] に移動し、該当するトグルを選択します。
-- **[ワークスペース] 内のすべてのキャンペーンに承認ワークフローを使用する]**
-- **[ワークスペース] 内のすべてのキャンバスに承認ワークフローを使用する]**
+- **[ワークスペース] 内のすべてのキャンペーンにアプリ 認証ワークフローを使用する**
+- **[ワークスペース] 内のすべてのキャンバスにアプリの承認ワークフローを使用する**
 
 {% alert important %}
 キャンペーン承認は、[API キャンペーン]({{site.baseurl}}/api/api_campaigns) および[Transactional Email キャンペーン]({{site.baseurl}}/user_guide/message_building_by_channel/email/transactional_message_api_campaign) のビルディングワークフローではサポートされていません。
@@ -55,11 +55,11 @@ tool:
 承認ワークフローを有効にした後、ダッシュボードユーザーがキャンペーンとキャンバスをすぐに承認または拒否できるように、ユーザー権限を設定する必要があります。どちらの権限も、ワークスペースまたは[チーム]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) に適用するか、[権限セット]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#permission-sets) に追加することもできます。
 
 {% tabs %}
-{% tab キャンペーン %}
+{% tab campaign %}
 [「キャンペーンを承認および却下」権限]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#managing-limited-and-team-role-permissions)が必要です。この権限は、誰がキャンペーンの承認ステータスを更新できるかを制御します。キャンペーンのコンポーネントを自己承認することは可能です。
 {% endtab %}
 
-{% tab キャンバス %}
+{% tab canvas %}
 [「キャンバスを承認および却下」権限]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#managing-limited-and-team-role-permissions)が必要です。この権限を持つユーザは、キャンバスワークフローで次のいずれかの操作を実行できます。
 
 - キャンバスを承認するが起動しない

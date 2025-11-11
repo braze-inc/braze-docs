@@ -61,7 +61,6 @@ Sie erhalten eine Benachrichtigung auf dem Dashboard und eine E-Mail, nachdem di
 - `product_title`
 - `variant_title`
 - `status`
-- `body_html`
 - `product_image_url`
 - `variant_image_url`
 - `vendor`

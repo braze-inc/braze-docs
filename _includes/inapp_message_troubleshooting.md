@@ -60,7 +60,7 @@ If you have set an in-app message delegate to manually handle message display or
 
 ![Link to view changelog on the Campaign Details page with seven changes since the user has last viewed the campaign]({% image_buster /assets/img_archive/trouble4.png %})
 
-2. Ensure you didn't re-use your trigger event in a separate in-app message campaign with a higher priority.
+2. Ensure you didn't reuse your trigger event in a separate in-app message campaign with a higher priority.
 
 ## Advanced Troubleshooting {#troubleshooting-in-app-advanced}
 

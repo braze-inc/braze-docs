@@ -6,7 +6,7 @@ layout: dev_guide
 channel:
   - WhatsApp
 guide_top_header: "WhatsApp"
-guide_top_text: "WhatsApp is a popular peer-to-peer messaging platform used across the world offering conversation-based messaging for businesses. The WhatsApp messaging channel offers a direct way to reach users and customers on the WhatsApp platform. <br><br>**WhatsApp access is only available in select Braze packages. Reach out to your account manager or customer success manager to get started.**"
+guide_top_text: "WhatsApp is a popular peer-to-peer messaging platform used across the world offering conversation-based messaging for businesses. The WhatsApp messaging channel offers a direct way to reach users and customers on the WhatsApp platform. <br><br>**WhatsApp availability depends on your Braze package. Contact your account manager or customer success manager to get started.**"
 description: "This landing page is home to all things WhatsApp including how to create a WhatsApp campaign, opt-ins and ops-outs, quick replies, reporting, and more."
 search_rank: 3
 alias: /whatsapp/

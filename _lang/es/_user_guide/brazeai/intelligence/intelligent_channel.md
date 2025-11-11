@@ -6,13 +6,13 @@ description: "Este artículo cubre el filtro El canal inteligente, un filtro que
 search_rank: 11
 ---
 
-# [![Curso de Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/most-engaged-channel){: style="float:right;width:120px;border:0;" class="noimgborder"}Filtro de canal inteligente
+# [![Curso de Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/most-engaged-channel){: style="float:right;width:120px;border:0;" class="noimgborder"} Filtro de canal inteligente
 
 > El filtro `Intelligent Channel` (antes `Most Engaged`) selecciona la parte de tu audiencia para la que el canal de mensajería seleccionado es su "mejor" canal. 
 
 ## Acerca del filtro de canales
 
-![El filtro Canal inteligente con un desplegable para los distintos canales que se pueden seleccionar.]({% image_buster /assets/img/intelligent_channel_filter.png %}){: style="float:right;max-width:40%;margin-left:10px;margin-top:10px;border:0"}
+\![El filtro Canal inteligente con un desplegable para los distintos canales que se pueden seleccionar.]({% image_buster /assets/img/intelligent_channel_filter.png %}){: style="float:right;max-width:40%;margin-left:10px;margin-top:10px;border:0"}
 
 En este caso, mejor significa el canal que tiene la mayor probabilidad de interacción, dado el historial del usuario. Puedes seleccionar como canal correo electrónico, SMS, WhatsApp, web push o mobile push (incluyendo cualquier SO o dispositivo móvil disponible).
 
@@ -28,13 +28,13 @@ Para calcular la tasa de interacción del canal SMS, activa [el acortamiento de 
 
 ## La opción "Datos insuficientes
 
-Para que Braze determine qué canal es "el mejor", tiene que haber datos suficientes. Esto significa que un usuario debe haber recibido al menos tres o más mensajes a través de al menos dos de los tres canales disponibles. No es necesario que los mensajes se hayan abierto. 
+Para que Braze determine qué canal es "el mejor", tiene que haber datos suficientes. Esto significa que un usuario debe haber recibido al menos tres o más mensajes por canal a través de al menos dos de los tres canales disponibles. No es necesario que los mensajes se hayan abierto. 
 
 Si los usuarios no han recibido suficientes mensajes a través de los canales, esos usuarios entrarán en la opción "Datos insuficientes" de este filtro. Esto te permite utilizar cualquiera de los tres canales de mensajería disponibles para dirigirte a estos usuarios.
 
 Por ejemplo, supongamos que quieres que los usuarios que prefieren los mensajes push reciban un push y que los usuarios que no tienen suficientes datos reciban el mismo mensaje push. En ese caso, podrías establecer el filtro de canal inteligente en **Push móvil** y utilizar **OR** para añadir un segundo filtro de canal inteligente establecido en **Datos insuficientes**. Una campaña independiente con el filtro de canal inteligente ajustado a correo electrónico podría dirigirse a los usuarios que prefieren el correo electrónico.
 
-![Filtros de canal inteligentes para push móvil o datos insuficientes.]({% image_buster /assets/img/intelligent_example.png %}){:style="border:none"}
+\![Los canales inteligentes filtran los datos móviles push o insuficientes.]({% image_buster /assets/img/intelligent_example.png %}){:style="border:none"}
 
 {% alert note %}
 Las campañas y los pasos en Canvas que ignoren la [limitación de frecuencia]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#delivery-rules) no serán tenidos en cuenta por el canal inteligente y no podrán contribuir a los requisitos de datos.

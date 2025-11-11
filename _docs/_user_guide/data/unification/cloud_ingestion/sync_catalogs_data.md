@@ -193,6 +193,32 @@ GO
 3. If you have network policies in place, you must give Braze network access to your Microsoft Fabric instance. For a list of IPs, see the [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
 
 {% endtab %}
+{% tab S3 %}
+Set up your source files in S3 by providing JSON or CSV files. Keep in mind:
+
+- Files cannot include an `UPDATED_AT` column  
+- You can include an optional `DELETED` field to mark items for removal 
+
+{% subtabs %}
+{% subtab JSON %}
+```json
+{"id":"85","payload":"{\"product_name\":\"Product 85\",\"price\":85.85}"}
+{"id":"1","payload":"{\"product_name\":\"Product 1\",\"price\":1.01}","deleted":true}
+```
+{% endsubtab %}
+
+{% subtab CSV %}
+```plaintext
+ID,PAYLOAD,DELETED
+85,"{""product_name"": ""Product 85"", ""price"": 85.85}",false
+1,"{""product_name"": ""Product 1"", ""price"": 1.01}",true
+```
+{% endsubtab %}
+{% endsubtabs %}
+
+For setup details, see [File storage integrations]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/file_storage_integrations/).
+
+{% endtab %}
 {% endtabs %}
 
 ## How the integration works

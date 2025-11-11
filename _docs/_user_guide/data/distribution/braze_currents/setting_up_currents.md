@@ -26,14 +26,14 @@ The following requirements are the basic, minimum requirements to integrate with
 
 | Requirement | Origin | Access | Description
 |---|---|---|---|
-| Account with partner | Arrange account with that partner or reach out to your Braze account manager for suggestions. | Check that partner's site or reach out to that partner to sign up. | Braze will not send data to a partner if you don't have access to that data through your company's account.
-| Partner API Key or Token | Usually the partner's dashboard. | Just copy and paste it into the designated Braze field. | Braze has a designated field for this in the integrations page for that partner. We need this to map where we are sending your data. **It's important to keep your Partner Keys or Tokens up to date; invalid credentials may result in disabling your connector, and dropping events.**
+| Account with partner | Arrange account with that partner or contact your Braze account manager for suggestions. | Check that partner's site or contact that partner to sign up. | Braze will not send data to a partner if you don't have access to that data through your company's account.
+| Partner API Key or Token | Usually the partner's dashboard. | Copy and paste it into the designated Braze field. | Braze has a designated field for this in the integrations page for that partner. We need this to map where we send your data. **Keep your Partner Keys or Tokens up to date; invalid credentials may disable your connector and drop events.**
 | Authentication Code/Key, Secret Key, Certification File | Contact a representative for your account with that partner. May also exist in the partner's dashboard. | Copy and paste keys into the designated Braze field. Generate and upload `.json` or other certification files into the appropriate place in Braze. | Braze has a designated field for this in the integrations page for that partner. This gives Braze credentials and authorizes us to write files to your partner account. **It's important to keep your authentication details up to date; invalid credentials may result in disabling your connector, and dropping events.**
-| Bucket, Folder Path | Some partners organize and sort data by buckets. This should be found in the partner's dashboard. | If this is required, be sure to copy the bucket name or file path exactly into the designated space in Braze. We don't want your data to get lost! | Though this is required for some partners, it's important to get right when you do need it. |
+| Bucket, Folder Path | Some partners organize and sort data by buckets. This should be found in the partner's dashboard. | If this is required, copy the bucket name or file path exactly into the designated space in Braze. | Though this is required for some partners, it's important to get right when you do need it. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert important %}
-It's important to keep your Partner Keys, Partner Tokens, and authentication details updated; if your connector's credentials expire, the connector will stop sending events. If this persists for more than **48 hours**, the connector's events will be dropped and data will be permanently lost.
+It's important to keep your Partner Keys, Partner Tokens, and authentication details updated; if your connector's credentials expire, the connector will stop sending events. If this persists for more than **5 days**, the connector's events will be dropped and data will be permanently lost.
 {% endalert %}
 
 ## Setting up Currents

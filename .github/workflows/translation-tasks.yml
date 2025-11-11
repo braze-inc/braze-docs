@@ -7,7 +7,7 @@ on:
     types: [opened, reopened, synchronize, edited]
 
 permissions:
-  contents: read
+  contents: write
   pull-requests: write
   issues: write
 
@@ -15,6 +15,41 @@ jobs:
   translation-tasks:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout PR branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Fix inline image syntax
+        run: |
+          branch="${{ github.event.pull_request.head.ref }}"
+          
+          # Only run for phrase translation branches
+          if [[ ! "$branch" =~ ^i18n_phrase- ]]; then
+            echo "Skipping: not a phrase translation branch"
+            exit 0
+          fi
+          
+          # Fix the syntax
+          find ./_docs ./_lang -type f -exec sed -i 's/\[\\!\[/[![/g' {} + 2>/dev/null || true
+          
+          # Check if there are changes
+          if git diff --quiet; then
+            echo "No changes needed"
+            exit 0
+          fi
+          
+          # Configure git
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Commit and push
+          git add ./_docs ./_lang
+          git commit -m "fix: correct inline image syntax [\![ to [!["
+          git push
+
       - name: Rename title and add label
         uses: actions/github-script@v7
         with:
@@ -37,8 +72,8 @@ jobs:
               return;
             }
 
-            // 3) Parse i18n_phrase-<lang>-<YYYYMMDD>
-            const m = branch.match(/^i18n_phrase-([a-z_]+)-(\d{8})$/);
+            // 3) Parse i18n_phrase-<lang>-<YYYYMMDD> with optional trailing content
+            const m = branch.match(/^i18n_phrase-([a-z_]+)-(\d{8})(?:--\d+)?$/);
             if (!m) {
               core.info(`Pass: branch pattern not matched: ${branch}`);
               return;

@@ -1,5 +1,5 @@
 ---
-nav_title: IPとドメインを設定する
+nav_title: IPとドメインの設定
 article_title: IPとドメインを設定する
 page_order: 0
 page_type: tutorial
@@ -63,7 +63,7 @@ IP、ドメイン、サブドメイン、IPプールの設定が完了したら�
 
 次に、ページの下にあるTXTレコードとCNAMEレコードをDNSプロバイダーに追加する。その後、Braze ダッシュボードに戻って、[**確認**] をクリックします。
 
-![]({% image_buster /assets/img_archive/email_setup_rdns_records.png %})
+\![]({% image_buster /assets/img_archive/email_setup_rdns_records.png %})
 
 {% alert important %}
 送信ドメインは、所有するドメインの下位ドメインである必要があります。例えば、「example.com」を所有している場合、サブドメインは「mail.example.com」になり、送信アドレス「@mail.example.com」を使用できます。

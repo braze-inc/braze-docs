@@ -14,7 +14,7 @@ search_tag: Partner
 > [Google Cloud Storage](https://cloud.google.com/storage/) is massively scalable object storage for unstructured data offered by Google as part of the Cloud Computing product suite.
 
 {% alert important %}
-If you're switching between cloud storage providers, reach out to your Braze customer success manager for further assistance on setting up and validating your new integration.
+If you're switching between cloud storage providers, contact your Braze customer success manager for further assistance on setting up and validating your new integration.
 {% endalert %}
 
 The Braze and Google Cloud Storage integration allows you to stream Currents data to Google Cloud Storage. You can later use an ETL process (Extract, Transform, Load) to transfer your data to other locations, such as Google BigQuery.
@@ -80,7 +80,7 @@ In Braze, navigate to **Currents** > **+ Create Current** > **Google Cloud Stora
 Next, upload your JSON private key under **GCS JSON Credentials** and provide your CGS bucket name and GCS prefix (optional). 
 
 {% alert important %}
-It's important to keep your credentials file up to date; if your connector's credentials expire, the connector will stop sending events. If this persists for more than **48 hours**, the connector's events will be dropped, and data will be permanently lost.
+It's important to keep your credentials file up to date; if your connector's credentials expire, the connector will stop sending events. If this persists for more than **5 days**, the connector's events will be dropped, and data will be permanently lost.
 {% endalert %}
 
 ![The Google Cloud Storage Currents page in Braze. On this page exist fields for integration name, contact email, GCS JSON credential, GCS bucket name, and prefix.]({% image_buster /assets/img/gcs6.png %})

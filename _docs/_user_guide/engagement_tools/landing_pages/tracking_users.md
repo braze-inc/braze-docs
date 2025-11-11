@@ -15,7 +15,7 @@ You can add a {% raw %}`{% landing_page_url %}`{% endraw %} Liquid tag to any of
 
 {% raw %}
 ```html
-<a href=" {% landing_page_url customer-survey %}" class="button">Take the Survey!</a>
+<a href="{% landing_page_url customer-survey %}" class="button">Take the Survey!</a>
 ```
 {% endraw %}
 

@@ -1,50 +1,50 @@
 ---
-nav_title: Consentement et collecte d’adresses
-article_title: Consentement et collecte d’adresses
+nav_title: "Consentement et collecte d'adresses"
+article_title: "Consentement et collecte d'adresses"
 page_order: 6
 page_type: reference
-description: "Le présent article de référence couvre les bonnes pratiques pour recueillir le consentement et les adresses e-mail d’utilisateur et définit les différents états d’abonnement utilisateurs possibles."
+description: "Cet article de référence présente les meilleures pratiques pour recueillir le consentement et les adresses e-mail des utilisateurs et définit les différents états possibles de l'utilisateur abonné."
 channel: email
 
 ---
 
-# Consentement et collecte d’adresses
+# Consentement et collecte d'adresses
 
-> Avant d’envoyer vos e-mails initiaux, il est important d’obtenir d’abord l’autorisation de vos clients. C’est une courtoisie commune et fait des merveilles pour vos tarifs ouverts !
+> Avant d'envoyer vos premiers e-mails, il est important d'obtenir l'autorisation de vos clients. C'est un geste de courtoisie qui fait des merveilles pour vos taux d'ouverture !
 
-## États des abonnés
+## États de l'abonné
 
-Il existe trois statuts d’abonnement aux e-mails pour un utilisateur : **abonné**, **inscrit** et **désabonné**. Pour modifier l'état de l'abonnement d'un utilisateur, consultez notre article sur la [modification des abonnements]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#changing-subscriptions) ou utilisez nos [API d'abonnement.]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/)
+Il existe trois états d'abonnement à un e-mail pour un utilisateur : **"opted in**", " **subscribed**" et " **unsubscribed**". Pour modifier l'état de l'abonnement d'un utilisateur, consultez notre article sur la [modification des abonnements]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#changing-subscriptions) ou utilisez nos [API d'abonnement.]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/)
 
-| États des abonnés | Description |
+| État de l'abonné | Description |
 |---|---|
-| Abonné | Ces clients ont cliqué sur le lien dans un e-mail de confirmation et ont activement choisi de recevoir vos messages. |
+| Abonné | Ces clients ont cliqué sur le lien figurant dans un e-mail de confirmation et ont activement accepté de recevoir vos messages. |
 | Abonné | Par défaut, les utilisateurs sont abonnés aux e-mails tant qu'ils ont une adresse e-mail valide enregistrée dans leur profil. Les utilisateurs restent abonnés jusqu'à ce qu'ils se désabonnent ou qu'ils choisissent de s'abonner. |
-| Désabonné | Pour être marqué comme désabonné, un client est explicitement désinscrit de vos e-mails ou a signalé un e-mail comme spam. |
+| Désabonné | Pour être marqué comme désabonné, un client doit soit s'être explicitement désabonné de vos e-mails, soit avoir marqué un e-mail comme spam. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-## Méthodes de collecte des adresses
+## Méthodes de collecte d'adresses
 
-En plus d’obtenir l’autorisation de vos utilisateurs avant de leur envoyer des messages, il existe plusieurs méthodes pour recueillir ces adresses e-mail qui peuvent avoir un impact sur votre livrabilité. 
+Outre l'obtention de l'autorisation de vos utilisateurs avant l'envoi de messages, il existe plusieurs méthodes de collecte de ces adresses e-mail qui peuvent avoir un impact sur votre livrabilité. 
 
-### Liste d’adresses achetées
+### Listes d'adresses achetées
 
-L’envoi d’e-mails à des listes achetées ou louées est en violation de votre contrat Braze ! Si vous achetez des e-mails, vous envoyez des messages totalement non sollicités et vous mettez à risque de problèmes de livrabilité.
+L'envoi d'e-mails à des listes achetées ou louées constitue une violation de votre contrat avec Braze ! Si vous achetez des e-mails, vous envoyez des messages totalement non sollicités et vous vous exposez à des problèmes de livrabilité.
 
-### Co-inscription
+### Co-enregistrement
 
-La co-inscription désigne une convention entre des entreprises pour recueillir des informations sur l’utilisateur. Il s’agit d’une méthode de collecte à risque. Elle permet aux utilisateurs de recevoir des e-mails de tiers, parfois sans la connaissance ou l’autorisation du client. Si vous allez sur cette route, assurez-vous d’avoir des divulgations claires et la capacité de se désabonner au point de collecte.
+L'enregistrement conjoint fait référence à un accord entre des entreprises pour collecter des informations sur les utilisateurs. Il s'agit d'une méthode de collecte risquée. Il permet aux utilisateurs de recevoir des e-mails de tiers, parfois à l'insu du client ou sans son autorisation. Si vous optez pour cette solution, veillez à ce que les informations soient claires et à ce qu'il soit possible de se désinscrire au point de collecte.
 
-### Abonnement pré-sélectionné ou forcé
+### Abonnement présélectionné ou forcé
 
-L’abonnement présélectionné est une méthode d’inscription par e-mail dans laquelle la boîte de message électronique est déjà cochée pour que les abonnés reçoivent votre e-mail. En laissant la case cochée, les abonnés s’engagent et donnent leur consentement pour recevoir votre e-mail. Cette méthode a tendance à irriter (c’est également illégal pour les courriels envoyés vers ou au Canada). Vous pouvez obtenir une liste de courriels de taille convenable, mais vous ne pouvez vraiment pas vous assurer que ces utilisateurs veulent vos e-mails marketing.
+L'opt-in présélectionné est une méthode d'inscription par e-mail dans laquelle la case d'inscription est déjà cochée pour que les abonnés reçoivent votre e-mail. En laissant la case cochée, les abonnés acceptent de recevoir votre e-mail. Cette méthode a tendance à ennuyer les gens (elle est également illégale pour les courriers envoyés au Canada). Vous pouvez vous retrouver avec une liste d'e-mails de taille convenable, mais vous ne pouvez pas être sûr que ces utilisateurs souhaitent recevoir vos e-mails de marketing.
 
 ### Abonnement unique
 
-Un abonnement unique se produit lorsque les abonnés s’inscrivent via un formulaire d’abonnement et sont immédiatement ajoutés à votre liste de courriels. Avec cette méthode, les utilisateurs utilisent une seule étape pour s’abonner, comme saisir dans leur adresse e-mail dans un champ de collecte ou cocher une case dans le cadre d’une transaction.
+On parle d'abonnement unique lorsque les utilisateurs s'inscrivent via un formulaire d'abonnement et sont immédiatement ajoutés à votre liste d'e-mails. Avec cette méthode, les utilisateurs ne font qu'une seule démarche pour s'abonner, comme taper leur adresse e-mail dans un champ de collecte ou sélectionner une case dans le cadre d'une transaction.
 
 ### Abonnement confirmé
 
-Un abonnement confirmé se produit lorsqu’un utilisateur coche une case demandant la communication par e-mail, et un message de confirmation est envoyé en retour. Cette méthode permet aux utilisateurs de choisir le type et la fréquence du contenu qui améliorent l’engagement. 
+Un abonnement confirmé se produit lorsqu'un utilisateur coche une case demandant une communication par e-mail, et qu'un message de confirmation est envoyé en retour. Cette méthode permet aux utilisateurs de choisir le type et la fréquence du contenu améliore l'engagement. 
 
-Pour cibler uniquement les utilisateurs les plus engagés, vous pouvez également passer à la méthode d’abonnement à double confirmation. Cette approche ajoute une étape supplémentaire dans laquelle l’utilisateur doit cliquer sur un bouton ou un lien dans l’e-mail de confirmation pour être placé dans la liste d’e-mails. 
+Pour confirmer que vous ne ciblez que les utilisateurs les plus engagés, vous pourriez également utiliser la méthode du double abonnement confirmé. Cette approche ajoute une étape supplémentaire au cours de laquelle l'utilisateur doit cliquer sur un bouton ou un lien dans l'e-mail de confirmation pour être inscrit dans la liste d'e-mails. 

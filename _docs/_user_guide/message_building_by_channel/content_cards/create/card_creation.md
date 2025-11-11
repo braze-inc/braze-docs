@@ -62,7 +62,7 @@ If you want anonymous users to see a Content Card in their very first session, u
 For both options, after a card is created, Braze does not recalculate audience eligibility or personalization.
 {% endalert %}
 
-### Differences between creating cards at launch or entry versus at first impression
+### Differences between creating cards at launch or entry versus at first impression {#differences}
 
 This section describes the main differences between card creation at campaign launch or step entry versus at first impression.
 
@@ -89,7 +89,7 @@ This section describes the main differences between card creation at campaign la
   <tr>
     <td class="leftHeader">Audience</td>
     <td class="tg-0pky">Braze evaluates audience membership when the campaign sends.<br><br>New or anonymous users will not be evaluated for eligibility if they try to view the card after the campaign sends. For recurring campaigns, this will be at the next recurrence interval.</td>
-    <td class="tg-0pky">Braze evaluates membership when the user next opens your app (starts a session, <a href="#campaign_note">campaigns only*</a>).<br><br> This setting will have a wider audience reach because any new or anonymous users will always be evaluated for eligibility when they try to view the card. <br><br>Additionally, rate limiting (limiting the number of people who will receive the campaign) is not applicable when set to at first impression (<a href="#campaign_note">campaigns only*</a>).</td>
+    <td class="tg-0pky">Braze evaluates membership when the user next opens your app (starts a session, <a href="#campaign_note">campaigns only*</a>).<br><br> This setting will have a wider audience reach because any new or anonymous users will always be evaluated for eligibility when they try to view the card. <br><br>Additionally, rate limiting (limiting the number of people who will receive the card) is not applicable when set to at first impression.</td>
   </tr>
   <tr>
     <td class="leftHeader">Personalization</td>

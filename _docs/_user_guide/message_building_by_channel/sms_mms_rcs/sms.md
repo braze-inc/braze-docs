@@ -1,7 +1,7 @@
 ---
 nav_title: "SMS"
 article_title: About SMS
-page_order: 12
+page_order: 13
 description: "This reference article covers general use cases of the SMS channel and requirements needed to get SMS up and running."
 page_type: reference
 alias: /about_sms/
@@ -23,7 +23,7 @@ SMS, also known as Short Message Service, is used to send text messages to mobil
 |---|---|
 | General Marketing | SMS messages are a direct, flexible, and efficient way to communicate upcoming deals, favorable sales, and current or anticipated products to your customers. |
 | Reminders | SMS messages can be effective in notifying users who have set an appointment for a service. For example, sending an SMS message reminding a customer the day before a doctor's appointment will help minimize missed appointments, saving both you and your customers time and money. |
-| Transactional Messages | SMS messages are an efficient way to send out transactional notifications such as order confirmations and shipping information, providing them all the information they need in one convenient place. Note that legal guidelines exist that must be adhered to when sending Transactional Messages. If you are unsure of these guidelines, reach out to your internal legal team.|
+| Transactional Messages | SMS messages are an efficient way to send out transactional notifications such as order confirmations and shipping information, providing them all the information they need in one convenient place. Note that legal guidelines exist that must be adhered to when sending Transactional Messages. If you are unsure of these guidelines, contact your internal legal team.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Requirements

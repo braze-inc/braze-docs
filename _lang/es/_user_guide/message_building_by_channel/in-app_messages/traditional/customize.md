@@ -1,11 +1,11 @@
 ---
-nav_title: Personalice
-article_title: Mensajes personalizados en la aplicación
+nav_title: Personalizar
+article_title: Mensajes dentro de la aplicación personalizados
 page_order: 2
 layout: dev_guide
-guide_top_header: "Mensajes personalizados en la aplicación"
-guide_top_text: "Además de las plantillas de mensajes estándar de la aplicación, Braze también ofrece plantillas de mensajes personalizadas que permiten HTML personalizado, modales con CSS personalizado, formularios de captura de correo electrónico, vídeo y mucho más."
-description: "Esta página de destino cubre las plantillas personalizadas de mensajería in-app que permiten HTML personalizado, modales con CSS personalizado, vídeo, formularios de captura de correo electrónico y mucho más."
+guide_top_header: "Mensajes dentro de la aplicación personalizados"
+guide_top_text: "Además de las plantillas de mensajes dentro de la aplicación estándar, Braze también ofrece plantillas de mensajería personalizadas que permiten HTML personalizado, modales con CSS personalizado, formularios de captura de correo electrónico, video y mucho más."
+description: "Esta página de destino cubre las plantillas personalizadas de mensajería dentro de la aplicación que permiten HTML personalizado, modales con CSS personalizado, video, formularios de captura de correo electrónico y mucho más."
 
 channel:
   - in-app messages

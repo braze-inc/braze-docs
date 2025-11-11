@@ -22,6 +22,10 @@ Braze has a detection system that employs multiple inputs to identify suspected 
 
 ## Metrics affected by bot clicks
 
+{% alert note %}
+Bot filtering actively blocks suspected automated clicks to improve the accuracy of your engagement metrics. However, scanners and bots continually evolve over time, so Braze can't guarantee the removal of all non-human interactions.
+{% endalert %}
+
 The following Braze metrics can be affected by bot clicks:
 
 - Total Click Rate

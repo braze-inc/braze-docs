@@ -1341,6 +1341,13 @@ $( document ).ready(function() {
 
 <div class="container-fluid" id="main-container">
       <div class="row">
+          <div class="col">
+{% alert tip %}
+Track all your cases, add attachments, and find answers faster in the Support Portal. Find out more [here]({{site.baseurl}}/user_guide/administrative/access_braze/support/).
+{% endalert %}
+          </div>
+      </div>
+      <div class="row">
           <div class="col" >
               <h1 class="h1">Need Help? </h1>
               <div class="gradient-line"></div>
@@ -1472,12 +1479,6 @@ $( document ).ready(function() {
         </div>
         <div class="col-sm-5" id="ticket_resources">
 
-        <div id="support-portal-banner" style="background-color: #f4f4f7; padding: 10px; text-align: left; border-bottom: 1px solid #dfdfe3;">
-          <p style="margin: 0; font-size: 16px;">
-              Designated support contacts can use the Braze Support Portal to track all your company's cases. Learn how to activate the portal in our <a target="" href="{{site.baseurl}}/user_guide/administrative/access_braze/support/">Braze support</a> documentation, and explore the portal's features in our <a target="" href="https://learning.braze.com/the-braze-support-portal">learning course</a>.
-          </p>
-        </div>
-        
         <div id="support-search-div">
          </div>
 
@@ -1491,6 +1492,7 @@ $( document ).ready(function() {
               <a target="" href="{{site.baseurl}}/help/faqs/">Frequently Asked Questions</a><br />
               <a target="" href="https://learning.braze.com/">Braze Learning</a><br />
               <a target="" href="https://dashboard.braze.com/">Braze Dashboard</a><br />
+              <a target="" href="{{site.baseurl}}/user_guide/administrative/access_braze/support/">Support Portal</a><br />
             </div>
 
 

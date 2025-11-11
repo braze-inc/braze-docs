@@ -6,7 +6,7 @@ layout: dev_guide
 
 guide_top_header: "Mensajería personalizada"
 guide_top_text: "Braze te permite personalizar tus campañas insertando en los mensajes información específica del usuario, como su nombre."
-description: "Esta página de inicio cubre la personalización y el contenido dinámico en Braze, incluyendo Liquid, contenido conectado, vinculación en profundidad, bloques de contenido, códigos promocionales y más."
+description: "Esta página de destino cubre la personalización y el contenido dinámico en Braze, incluyendo Liquid, contenido conectado, vinculación en profundidad, bloques de contenido, códigos promocionales y más."
 
 guide_featured_title: "Temas"
 guide_featured_list:
@@ -28,11 +28,11 @@ guide_featured_list:
 - name: Códigos promocionales
   link: /docs/user_guide/personalization_and_dynamic_content/promotion_codes/
   image: /assets/img/braze_icons/tag-01.svg
-- name: Propiedades de la entrada persistente de Canvas
+- name: Propiedades de entrada persistente de Canvas
   link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/canvas_persistent_entry_properties/
   image: /assets/img/braze_icons/dataflow-03.svg
 - name: Catálogos
-  link: /docs/user_guide/personalization_and_dynamic_content/catalogs/
+  link: /docs/user_guide/data/activation/catalogs/
   image: /assets/img/braze_icons/list.svg
 ---
 

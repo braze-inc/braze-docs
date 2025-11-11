@@ -90,7 +90,7 @@ Here are some general best practices to get you started with prompting:
 7. Encourage reasoning ("Think aloud, then answer").
 8. Pilot, inspect, and iterate. Small tweaks can lead to big quality gains.
 9. Handle the edge cases, add guardrails, and add refusal instructions.
-10. Measure and document what works internally for re-use and scaling.
+10. Measure and document what works internally for reuse and scaling.
 
 For more details on prompting best practices, refer to guides from the following model providers:
 
@@ -153,6 +153,51 @@ Example Output:
 {% endtab %}
 {% endtabs %}
 
+### Brand guidelines
+
+You can select [brand guidelines]({{site.baseurl}}/user_guide/administrative/app_settings/brand_guidelines) for your agent to adhere to in its responses. For example, if you want your agent to generate SMS copy to encourage users to sign up for a gym membership, you can use this field to reference your predefined bold, motivational guideline.
+
+### Temperature
+
+If your goal is to use an agent to generate copy to encourage users to log into your mobile app, you can set a higher temperature for your agent to be more creative and use the nuances of the context variables. If you're using an agent to generate copy for user sentiment analysis, it may be ideal to set a lower temperature to avoid any agent speculation on negative survey responses. We recommend testing this setting and reviewing the agent's generated copy to fit your scenario.
+
+{% alert note %}
+Temperatures aren't currently supported for use with OpenAI.
+{% endalert %}
+
+### Catalogs
+
+Select from a list of catalogs for your agent to reference and further personalize your message.
+
+{% alert note %}
+Currently, for an agent to be able to reference a desired column of a catalog, that column must exist in at least one [selection]({{site.baseurl}}/user_guide/data/activation/catalogs/selections) of the catalog.
+{% endalert %}
+
+### Output format
+
+Use the **Output format** field to structure the agent's output by providing how to organize and define the output using JSON. Let's say you want to collect user feedback for their most recent dining experience at your restaurant chain. You can insert the following JSON to return a data object that includes a sentiment variable and reasoning variable.
+
+```json
+{
+  "type": "object",
+  "properties": {
+    "sentiment": {
+      "type": "string"
+    },
+    "reasoning": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "sentiment",
+    "reasoning"
+  ]
+}
+```
+
+{% alert note %}
+Output formats aren't currently supported by Claude AI. If you're using an Anthropic key, we recommend manually adding the structure to the agent prompt.
+{% endalert %}
 
 #### Testing your agent  
 
@@ -171,3 +216,8 @@ Review the output with a critical eye. Consider the following questions:
 
 If something feels off, update the agent’s configuration and test again. Run a few different inputs to see how the agent adapts across scenarios, especially edge cases like no data or invalid responses.
 
+#### Monitoring your agent
+
+In the **Logs** tab of your agent, you can monitor actual agent calls that occur in your Canvases and catalogs. This includes information such as the timestamp, calling location, duration, and token count. Select **View** for a specific agent call to see the input, output, and user ID.
+
+![Logs for an agent City Trends and Recommendation Booking, which include when and where the agent has been called. The details panel shows the input prompt, output response, and an associated user ID.]( {% image_buster /assets/img/ai_agent/agent_logs.png %} )
