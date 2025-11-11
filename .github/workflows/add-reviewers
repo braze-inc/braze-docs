@@ -10,7 +10,7 @@ jobs:
     permissions:
       pull-requests: write
     steps:
-      - name: Check assignees and PR body
+      - name: Check assignees and PR diff
         id: check
         uses: actions/github-script@v7
         with:
@@ -34,12 +34,22 @@ jobs:
               teamsToAdd.push('docs-team');
             }
             
-            // Rule 2: If PR body contains privacy/legal/GDPR keywords, add legal team
+            // Rule 2: If PR diff contains privacy/legal/GDPR keywords, add legal team
+            const { data: diffData } = await github.rest.pulls.get({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: prNumber,
+              mediaType: {
+                format: 'diff'
+              }
+            });
+            
+            const diff = diffData.toLowerCase();
             const keywords = ['privacy', 'legal', 'gdpr'];
-            const containsKeyword = keywords.some(keyword => prBody.includes(keyword));
+            const containsKeyword = keywords.some(keyword => diff.includes(keyword));
             
             if (containsKeyword) {
-              console.log('Found privacy/legal/GDPR keyword - adding legal team');
+              console.log('Found privacy/legal/GDPR keyword in diff - adding legal team');
               reviewersToAdd.push('ttsaiveerappan');
             }
             
@@ -84,7 +94,7 @@ jobs:
                 }
                 
                 if (reviewersToAdd.includes('ttsaiveerappan')) {
-                  commentBody += '- ⚖️ **@ttsaiveerappan** - PR contains privacy/legal/GDPR-related content\n';
+                  commentBody += '- ⚖️ **@ttsaiveerappan** - PR diff contains privacy/legal/GDPR-related content\n';
                 }
                 
                 await github.rest.issues.createComment({
