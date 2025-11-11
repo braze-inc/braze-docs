@@ -29,7 +29,7 @@ jobs:
             let teamsToAdd = [];
             
             // Rule 1: If Copilot is assigned, add docs-team
-            if (assignees.includes('copilot')) {
+            if (assignees.includes('github-copilot[bot]')) {
               console.log('Copilot is assigned - adding docs-team');
               teamsToAdd.push('docs-team');
             }
