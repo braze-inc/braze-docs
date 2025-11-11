@@ -97,6 +97,7 @@ jobs:
             
             if (containsKeyword) {
               console.log('Found privacy/legal/GDPR keyword in diff - adding legal team');
+              console.log('Diff: ', diff);
               reviewersToAdd.push('ats-91');
             }
             
@@ -140,8 +141,8 @@ jobs:
                   commentBody += '- 📝 **@braze-inc/docs-team** - Copilot is assigned to this PR\n';
                 }
                 
-                if (reviewersToAdd.includes('ttsaiveerappan')) {
-                  commentBody += '- ⚖️ **@ttsaiveerappan** - PR diff contains privacy/legal/GDPR-related content\n';
+                if (reviewersToAdd.includes('ats-91')) {
+                  commentBody += '- ⚖️ **@ats-91** - PR diff contains privacy/legal/GDPR-related content\n';
                 }
                 
                 await github.rest.issues.createComment({
