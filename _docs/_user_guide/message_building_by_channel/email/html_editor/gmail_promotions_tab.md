@@ -95,7 +95,9 @@ We recommend uploading your product images to the media library, then copy and p
 
 ### Step 4: Generate and paste HTML code
 
-After building yur Gmail Promotion card, select **Generate HTML code**. Copy and paste the script into the `<head>` element of your email's HTML.
+After building yur Gmail Promotion card, select **Generate HTML code**. Copy and paste the script into the `<head>` element of your email's HTML. 
+
+The code generated from the HTML editor can also be copied and used in the drag-and-drop editor by pasting the code into the `<head>` element.
 
 {% alert warning %}
 The Promotions script only appears if your email lands in the Gmail Promotions tab. Currently, Gmail uses algorithms to determine where your email will land. However, if a user ever marks your email as a promotion, Gmail's algorithm will be ignored, and your email will automatically land in the Promotions tab moving forward.
@@ -108,6 +110,10 @@ In general, adhere to these [best practices recommended by Gmail](https://develo
 {% alert tip %}
 While you can use Liquid within this script, we strongly suggest that you test your messaging as much as possible to avoid an error.
 {% endalert %}
+
+## Measuring Gmail Cards
+
+Gmail does not return any analytics back to sender on these cards. To track engagement, you can append a UTM parameter on the link to track clicks on a particular deal card's URL, or you can create a specific code only for Gmail Promotion Cards to track how many of your customers are converting using the card's code.
 
 ### Incorporate images
 
