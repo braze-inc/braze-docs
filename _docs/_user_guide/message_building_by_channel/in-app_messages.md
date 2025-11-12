@@ -25,7 +25,7 @@ guide_featured_list:
 guide_menu_title: "More articles"
 guide_menu_list:
 - name: "Testing"
-  link: /docs/user_guide/message_building_by_channel/in-app_messages/testing/
+  link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/
   image: /assets/img/braze_icons/beaker-02.svg
 - name: "Reporting"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/reporting/
