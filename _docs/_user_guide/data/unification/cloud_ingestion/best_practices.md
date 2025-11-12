@@ -1,102 +1,87 @@
 ---
-nav_title: Overview
-article_title: Cloud Data Ingestion Overview 
+nav_title: Best practices
+article_title: Cloud Data Ingestion Best Practices 
 page_order: 0
 page_type: reference
 description: "This page provides an overview of Cloud Data Ingestion, best practices, and product limitations."
 
 ---
 
-# Braze Cloud Data Ingestion overview
+# Best practices
 
-> Braze Cloud Data Ingestion allows you to set up a direct connection from your data warehouse or file storage system to Braze to sync relevant user or catalog data. When synced to Braze, this data can be leveraged for use cases such as personalization, triggering, or segmentation. 
+> Refer to these best practices when using Cloud Data Ingestion.
 
-## How it works
+## Understanding the `UPDATED_AT` column
 
-With Braze Cloud Data Ingestion (CDI), you set up an integration between your data warehouse instance and Braze workspace to sync data on a recurring basis. This sync runs on a schedule you set, and each integration can have a different schedule. Syncs can run as frequently as every 15 minutes or as infrequently as once per month. If you need syncs to occur more frequently than 15 minutes, contact your customer success manager or consider using REST API calls for real-time data ingestion.
+{% alert note %}
+`UPDATED_AT` is relevant for data warehouse integrations only, not for S3 syncs.
+{% endalert %}
 
-When a sync runs, Braze directly connects to your data warehouse instance, retrieves all new data from the specified table, and updates the corresponding data on your Braze dashboard. Each time the sync runs, any updated data will be reflected in Braze.
+In your initial setup, you created the `UPDATED_AT` column in your table or view. Each time a sync runs, Braze looks for rows that have not previously been synced by using this column. Any rows where `UPDATED_AT` is later than the last `UPDATED_AT` timestamp from the previous successful sync run will be selected and pulled into Braze.
 
-## Supported data sources
+{% alert important %}
+Braze CDI will sync rows strictly based on the `UPDATED_AT` value, regardless of whether the row content is the same as what’s currently in Braze. Given that, we recommend using `UPDATED_AT` properly to only sync new or updated data to avoid unnecessary data point usage.
+{% endalert %}
 
-Cloud Data Ingestion can sync data from the following sources to Braze:
+### Example: Recurring sync
 
-- Data warehouse sources 
-   - Amazon Redshift
-   - Databricks 
-   - Google BigQuery
-   - Microsoft Fabric
-   - Snowflake
+To illustrate how `UPDATED_AT` is used in a CDI sync, consider this example recurring sync for updating user attributes:
 
-- File storage sources 
-   - Amazon S3
-
-## Supported data types 
-
-Cloud Data Ingestion supports the following data types: 
-- User attributes, including:
-   - Nested custom attributes
-   - Arrays of objects
-   - Subscription statuses
-- Custom events
-- Purchase events
-- Catalog items
-- User delete requests
-
-User data can be updated by external ID, user alias, Braze ID, email, or phone number. Users can be deleted by external ID, user alias, or Braze ID. 
-
-## What gets synced
-
-Each time a sync runs, Braze looks for rows that have not previously been synced. We check this using the `UPDATED_AT` column in your table or view. Any rows where `UPDATED_AT` is equal to or later than the last `UPDATED_AT` timestamp from the last successful sync job will be selected and pulled into Braze.
-
-In your data warehouse, add the following users and attributes to your table, setting the `UPDATED_AT` time to the time you add this data:
+**Recurring sync, first run on July 2, 2022 at 12 pm**
 
 | UPDATED_AT | EXTERNAL_ID | PAYLOAD |
 | --- | --- | --- |
-| `2022-07-19 09:07:23` | `customer_1234` | {<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_1":"abcdefg",<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_2": {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"attribute_a":"example_value_2",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"attribute_b":"example_value_2"<br>&nbsp;&nbsp;&nbsp;&nbsp;},<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_3":"2019-07-16T19:20:30+1:00"<br>} |
-| `2022-07-19 09:07:23` | `customer_3456` | {<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_1":"abcdefg",<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_2":42,<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_3":"2019-07-16T19:20:30+1:00",<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_5":"testing"<br>} |
+| `2022-07-17 08:30:00` | `customer_1234` | {<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_1":"abcdefg",<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_2": {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"attribute_a":"example_value_1",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"attribute_b":"example_value_1"<br>&nbsp;&nbsp;&nbsp;&nbsp;},<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_3":"2019-07-16T19:20:30+1:00"<br>} |
+| `2022-07-18 11:59:23` | `customer_3456` | {<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_1":"abcdefg",<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_2":42,<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_3":"2019-07-16T19:20:30+1:00",<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_5":"testing"<br>} |
 | `2022-07-19 09:07:23` | `customer_5678` | {<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_1":"abcdefg",<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_4":true,<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_5":"testing_123"<br>} |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-During the next scheduled sync, all rows with a `UPDATED_AT` timestamp equal to or later than the most recent timestamp will be synced to the Braze user profiles. Fields will be updated or added, so you do not need to sync the full user profile each time. After the sync, users will reflect the new updates:
+All rows are synced because this is the first run for the sync. The last `UPDATED_AT` for this sync is now set at `2022-07-19 09:07:23`.
 
-```json
-{
-  "external_id":"customer_1234",
-  "email":"jane@example.com",
-  "attribute_1":"abcdefg",
-  "attribute_2":{
-        "attribute_a":"example_value_1",
-        "attribute_b":"example_value_2"
-    },
-  "attribute_3":"2019-07-16T19:20:30+1:00",
-  "attribute_4":false,
-  "attribute_5":"testing"
-}
-```
-```json
-{
-  "external_id":"customer_3456",
-  "email":"michael@example.com",
-  "attribute_1":"abcdefg",
-  "attribute_2":42,
-  "attribute_3":"2019-07-16T19:20:30+1:00",
-  "attribute_4":true,
-  "attribute_5":"testing"
-}
-```
-```json
-{
-  "external_id":"customer_5678",
-  "email":"bob@example.com",
-  "attribute_1":"abcdefg",
-  "attribute_2":42,
-  "attribute_3":"2017-08-10T09:20:30+1:00",
-  "attribute_4":true,
-  "attribute_5":"testing_123"
-}
-```
+**Recurring sync, second run on July 20, 2022 at 12 pm**
 
-### Use case: First time sync and subsequent updates
+| UPDATED_AT | EXTERNAL_ID | PAYLOAD |
+| --- | --- | --- |
+| `2022-07-17 08:30:00` | `customer_1234` | {<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_1":"abcdefg",<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_2": {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"attribute_a":"example_value_2",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"attribute_b":"example_value_2"<br>&nbsp;&nbsp;&nbsp;&nbsp;},<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_3":"2019-07-16T19:20:30+1:00"<br>} |
+| `2022-07-18 11:59:23` | `customer_3456` | {<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_1":"abcdefg",<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_2":42,<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_3":"2019-07-16T19:20:30+1:00",<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_5":"testing"<br>} |
+| `2022-07-19 09:07:23` | `customer_5678` | {<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_1":"abcdefg",<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_4":true,<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_5":"testing_123"<br>} |
+| `2022-07-16 00:25:30` | `customer_9012` | {<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_1":"abcdefg",<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_4":false,<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_5":"testing_123"<br>} |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
+A row was added, but the `UPDATED_AT` value is earlier than `2022-07-19 09:07:23` (stored from the first run). As a result, none of these rows will be synced in this run. The last `UPDATED_AT` for the sync is unchanged by this run, and remains as  `2022-07-19 09:07:23`.
+
+**Recurring sync, third run on July 21, 2022 at 12 pm**
+
+| UPDATED_AT | EXTERNAL_ID | PAYLOAD |
+| --- | --- | --- |
+| `2022-07-17 08:30:00` | `customer_1234` | {<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_1":"abcdefg",<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_2": {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"attribute_a":"example_value_1",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"attribute_b":"example_value_1"<br>&nbsp;&nbsp;&nbsp;&nbsp;},<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_3":"2019-07-16T19:20:30+1:00"<br>} |
+| `2022-07-18 11:59:23` | `customer_3456` | {<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_1":"abcdefg",<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_2":42,<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_3":"2019-07-16T19:20:30+1:00",<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_5":"testing"<br>} |
+| `2022-07-19 09:07:23` | `customer_5678` | {<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_1":"abcdefg",<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_4":true,<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_5":"testing_123"<br>} |
+| `2022-07-16 00:25:30` | `customer_9012` | {<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_1":"xyz",<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_4":false,<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_5":"testing_123"<br>} |
+| `2022-07-21 08:30:00` | `customer_1234` | {<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_1":"abcdefg",<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_2": {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"attribute_a":"example_value_2",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"attribute_b":"example_value_2"<br>&nbsp;&nbsp;&nbsp;&nbsp;},<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_3”:”2019-07-20T19:20:30+1:00"<br>} |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
+In this third run, another new row was added. Now, one row has an `UPDATED_AT` value later than `2022-07-19 09:07:23`, which means only one row will sync. The last `UPDATED_AT` is now set as `2022-07-21 08:30:00`.
+
+{% alert note %}
+`UPDATED_AT` values are allowed to be even later than the run start time for a given sync. However, this is not recommended as it pushes the last `UPDATED_AT` timestamp "into the future" and subsequent syncs will not sync earlier values.
+{% endalert %}
+
+## Use a UTC timestamp for the `UPDATED_AT` column
+
+The `UPDATED_AT` column should be in UTC to prevent issues with daylight savings time. Prefer UTC-only functions, such as `SYSDATE()` instead of `CURRENT_DATE()` whenever possible.
+
+## Make sure the `UPDATED_AT` time isn’t the same time as your sync
+
+Your CDI sync might have duplicate data if any `UPDATED_AT` fields are at the exact same time as the last `UPDATED_AT` timestamp of the previous successful sync job. This is because CDI will choose an "inclusive boundary" when it identifies any row that is the same time as the previous sync, and will make the rows able to sync. CDI will re-ingest those rows and create duplicate data.
+
+Here are some suggestions to avoid duplicate data:
+
+- If you’re setting up a sync against a `VIEW`, don’t use `CURRENT_TIMESTAMP` as the default value. This will cause all data to sync every time the sync runs because the `UPDATED_AT` field will evaluate to the time our queries are run.
+- If you have very long-running pipelines or queries writing data to your source table, avoid running these concurrently with a sync, or avoid using the same timestamp for every row inserted.
+- Use a transaction to write all rows that have the same timestamp.
+
+### Example: Managing subsequent updates
 
 This example shows the general process for syncing data for the first time, then only updating changing data (deltas) in the subsequent updates. Let's say we have a table `EXAMPLE_DATA` with some user data. On day 1, it has the following values:
 
@@ -252,114 +237,13 @@ Now you need to add only the changed values into the CDI source table. These row
 
 CDI will only sync the new rows, so the next sync that runs will only sync the last five rows.
 
-### Use case: Update a field in an existing array of objects
-
-This example shows how to update a field in an existing array of objects. Let's say we have a source table with the following definition:
-
-```json 
-Create table BRAZE_CLOUD_INGESTION_DEMO.BRAZE_SCHEMA.pet_list (
-    pet_id int IDENTITY(1,1), 
-    breed VARCHAR, 
-    type VARCHAR, 
-    name VARCHAR, 
-    owner_id VARCHAR, 
-    age int
-);
-```
-
-In this example, we want to add an array of pets owned by each user, which corresponds to `owner_id`. Specifically, we want to include identification, breed, type, and name. We can use the following query to populate a table or view:
-
-```json
-SELECT 
-CURRENT_TIMESTAMP as UPDATED_AT,
-owner_id as EXTERNAL_ID,
-TO_JSON(
-    OBJECT_CONSTRUCT(
-        '_merge_objects','true',
-       'pets',
-        OBJECT_CONSTRUCT(
-           '$add', ARRAY_AGG( OBJECT_CONSTRUCT(
-                'id',
-                pet_id,
-                'breed',
-                breed,
-                'type',
-                type,
-                'name',
-                name
-                )) WITHIN GROUP (ORDER BY type ASC)    
-        )
-    )
-)
-as PAYLOAD from BRAZE_CLOUD_INGESTION_DEMO.BRAZE_SCHEMA.pet_list group by EXTERNAL_ID;
-```
-
-The expected output would look like this:
-
-```json
-UPDATED_AT	EXTERNAL_ID	PAYLOAD
-2023-10-02 19:56:17.377 +0000	03409324	{"_merge_objects":"true","pets":{"$add":[{"breed":"parakeet","id":5,"name":"Mary","type":"bird"}]}}
-2023-10-02 19:56:17.377 +0000	21231234	{"_merge_objects":"true","pets":{"$add":[{"breed":"calico","id":2,"name":"Gerald","type":"cat"},{"breed":"beagle","id":1,"name":"Gus","type":"dog"}]}}
-2023-10-02 19:56:17.377 +0000	12335345	{"_merge_objects":"true","pets":{"$add":[{"breed":"corgi","id":3,"name":"Doug","type":"dog"},{"breed":"salmon","id":4,"name":"Larry","type":"fish"}]}}
-```
-
-Next, to send an updated name field and new age field for each owner, we can use the following query to populate a table or view:
-
-```json
-SELECT 
-CURRENT_TIMESTAMP as UPDATED_AT,
-owner_id as EXTERNAL_ID,
-TO_JSON(
-    OBJECT_CONSTRUCT(
-        '_merge_objects','true',
-       'pets',
-        OBJECT_CONSTRUCT(
-           '$update', ARRAY_AGG( OBJECT_CONSTRUCT(
-                '$identifier_key','id',
-                '$identifier_value',pet_id,
-                '$new_object',OBJECT_CONSTRUCT(
-                    'name',name,
-                    'age',age
-                )
-                )) WITHIN GROUP (ORDER BY type ASC)    
-        )
-    )
-)
-as PAYLOAD from BRAZE_CLOUD_INGESTION_DEMO.BRAZE_SCHEMA.pet_list group by EXTERNAL_ID; 
-```
-
-The expected output would look like this:
-
-```json
-UPDATED_AT	EXTERNAL_ID	PAYLOAD
-2023-10-02 19:50:25.266 +0000	03409324	{"_merge_objects":"true","pets":{"$update":[{"$identifier_key":"id","$identifier_value":5,"$new_object":{"age":7,"name":"Mary"}}]}}
-2023-10-02 19:50:25.266 +0000	21231234	{"_merge_objects":"true","pets":{"$update":[{"$identifier_key":"id","$identifier_value":2,"$new_object":{"age":3,"name":"Gerald"}},{"$identifier_key":"id","$identifier_value":1,"$new_object":{"age":3,"name":"Gus"}}]}}
-2023-10-02 19:50:25.266 +0000	12335345	{"_merge_objects":"true","pets":{"$update":[{"$identifier_key":"id","$identifier_value":3,"$new_object":{"age":6,"name":"Doug"}},{"$identifier_key":"id","$identifier_value":4,"$new_object":{"age":1,"name":"Larry"}}]}}
-```
-
-## Data point usage
-
-Data point billing for Cloud Data Ingestion is equivalent to billing for updates through the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track#user-track). Refer to [Data points]({{site.baseurl}}/user_guide/data/data_points/) for more information. 
-
-{% alert important %}
-Braze Cloud Data Ingestion counts toward the available rate limit, so if you're sending data using another method, the rate limit is combined between the Braze API and Cloud Data Ingestion.
-{% endalert %}
-
-## Data setup recommendations
+## Additional tips
 
 ### Only write new or updated attributes to minimize consumption
 
 Each time a sync runs, Braze looks for rows that have not previously been synced. We check this using the `UPDATED_AT` column in your table or view. Any rows where `UPDATED_AT` is equal to or later than the last `UPDATED_AT` timestamp from the last successful sync job will be selected and pulled into Braze, regardless of whether they are the same as what's currently on the user profile. Given that, we recommend only syncing attributes you want to add or update.
 
 Data point usage is identical using CDI as for other ingestion methods like REST APIs or SDKs, so it is up to you to make sure that you're only adding new or updated attributes into your source tables.
-
-### Use a UTC timestamp for the `UPDATED_AT` column
-
-The `UPDATED_AT` column should be in UTC to prevent issues with daylight savings time. Prefer UTC-only functions, such as `SYSDATE()` instead of `CURRENT_DATE()` whenever possible.
-
-### Make sure the `UPDATED_AT` time isn't the same time as your sync
-
-Your CDI sync might have duplicate data if any `UPDATED_AT` fields are at the exact same time as the last `UPDATED_AT` timestamp of the previous successful sync job. This is because CDI will choose an "inclusive boundary" when it identifies any row that is the same time as the previous sync, and will make the rows able to sync. CDI will re-ingest those rows and create duplicate data.
 
 ### Separate `EXTERNAL_ID` from `PAYLOAD` column
 
@@ -527,6 +411,7 @@ Fields within the payload should follow the same format as the corresponding `/u
 | `attributes` | See [user attributes object]({{site.baseurl}}/api/objects_filters/user_attributes_object/) |
 | `events` | See [events object]({{site.baseurl}}/api/objects_filters/event_object/) |
 | `purchases` | See [purchases object]({{site.baseurl}}/api/objects_filters/purchase_object/) |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 Note the special requirement for [capturing dates]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/#capturing-dates-as-object-properties) in nested attributes. 
 
@@ -611,21 +496,7 @@ Note that you can only sync one purchase event per row.
 {% endtab %}
 {% endtabs %}
 
-### Avoiding timeouts for data warehouse queries
+### Avoid timeouts for data warehouse queries
 
 We recommend that queries be completed within one hour for optimal performance and to avoid potential errors. If queries exceed this timeframe, consider reviewing your data warehouse configuration. Optimizing resources allocated to your warehouse can help improve query execution speed.
 
-## Product limitations
-
-| Limitation            | Description                                                                                                                                                                        |
-| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Number of integrations | There is no limit on how many integrations you can set up. However, you will only be able to set up one integration per table or view.                                             |
-| Number of rows         | By default, each run can sync up to 500 million rows. Any syncs with more than 500 million new rows will be stopped. If you need a higher limit than this, contact your Braze customer success manager or Braze Support. |
-| Attributes per row     | Each row should contain a single user ID and a JSON object with up to 250 attributes. Each key in the JSON object counts as one attribute (that is, an array counts as one attribute). |
-| Payload size           | Each row can contain a payload of up to 1 MB. Payloads greater than 1&nbsp;MB will be rejected, and the error "Payload was greater than 1MB" will be logged to the sync log along with the associated external ID and truncated payload. |
-| Data type              | You can sync user attributes, events, and purchases through Cloud Data Ingestion.                                                                                                  |
-| Braze region           | This product is available in all Braze regions. Any Braze region can connect to any source data region.                                                                              |
-| Source region       | Braze will connect to your data warehouse or cloud environment in any region or cloud provider.                                                                                        |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-<br><br>
