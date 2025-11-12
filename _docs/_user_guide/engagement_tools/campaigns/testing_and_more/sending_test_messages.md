@@ -64,6 +64,10 @@ If you have already accepted push messages from the Braze dashboard, the push wi
 {% endtab %}
 {% tab In-App Message %}
 
+{% alert warning %}
+To send a test to either [Content Test Groups]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups) or individual users, push must be enabled on your test devices before sending.
+{% endalert %}
+
 If you have push notifications set up within your app and on your test device, you can send test in-app messages to your app to see what it looks like in real-time. 
 
 1. Draft your in-app message.
@@ -76,8 +80,27 @@ A test push message will appear at the top of your device screen.
 
 Directly clicking and opening the push message will send you to your app, where you can view your in-app message test. Note this in-app message testing feature relies on the user clicking a test push notification to trigger the in-app message. As such, the user must be eligible to receive push notifications in the relevant app for the successful delivery of the test push notification.
 
+#### Preview
+
+You can preview your in-app message as you compose it in the **Preview** tab. This should help you visualize what your final message will look like from your user's perspective. You can preview what your message will look like to a random user, a specific user, or a customized user. You can also preview messages for either mobile devices or tablets.
+
+{% alert warning %}
+In **Preview**, the view of your message might not be identical to its actual rendering on the user's device. We always recommend sending a test message to a device to ensure that your media, copy, personalization, and custom attributes generate correctly.
+{% endalert %}
+
+#### Test checklist
+
+- Do the images and media show up and act as expected?
+- Does the Liquid function as expected? Have you accounted for a [default attribute value]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#accounting-for-null-attribute-values) in the event that the Liquid returns no information?
+- Is your copy clear, concise, and correct?
+- Do your buttons direct the user where they should go?
+
 {% endtab %}
 {% tab Content Card %}
+
+{% alert warning %}
+To send a test to either [content test groups]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups) or individual users, push must be enabled on your test devices with valid push tokens registered for the test user before sending. For iOS users, you must tap the push notification sent by Braze in order to view the test Content Card. This behavior only applies to test Content Cards.
+{% endalert %}
 
 After creating your Content Card, you can send a test Content Card to your app to see what it will look like in real-time.
 
@@ -86,6 +109,50 @@ After creating your Content Card, you can send a test Content Card to your app t
 3. Select **Send Test** to send your Content Card to your app.
 
 ![Test Content Card]({% image_buster /assets/img/contentcard_test.png %})
+
+#### Preview
+
+You can preview your card as you compose it in the **Preview** tab. This should help you visualize what your final message will look like from your user's perspective.
+
+{% alert note %}
+In the **Preview** tab of your composer, the view of your message might not be identical to its actual rendering on the user's device. We recommend always sending a test message to a device to ensure that your media, copy, personalization, and custom attributes generate correctly.
+{% endalert %}
+
+#### Test checklist
+
+- Do the images and media show up and act as expected?
+- Does the Liquid function as expected? Have you accounted for a [default attribute value]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#accounting-for-null-attribute-values) in the event that the Liquid returns no information?
+- Is your copy clear, concise, and correct?
+- Do your links direct the user to where they should go?
+
+{% endtab %}
+{% tab Banners %}
+
+{% alert important %}
+Before you can test Banner messages in Braze, you'll need to create a Banner campaign in Braze. Additionally, verify that the placement you want to test is already [placed in your app or website]({{site.baseurl}}/developer_guide/banners/placements).
+{% endalert %}
+
+After creating your Banner message, you can preview your Banner or send a test message.
+
+1. Draft your Banner message.
+2. Select **Preview** to preview your Banner or send a test message.
+3. To send a test message, add either a content test group or one or more individual users as **Test Recipients**, then select **Send Test**. 
+
+You'll be able to view your test message on the device for up to 5 minutes.
+
+![Preview tab of the Banner composer.]({% image_buster /assets/img/banners/preview_banner.png %})
+
+{% alert note %}
+Keep in mind, your preview may not be identical to the final render on a user's device due to differences across hardware.
+{% endalert %}
+
+#### Test checklist
+
+- Is your Banner campaign assigned to a placement?
+- Do the images and media show up and act as expected on your targeted device types and screen sizes?
+- Do your links and buttons direct the user to where they should go?
+- Does the Liquid function as expected? Have you accounted for a default attribute value in the event that the Liquid returns no information?
+- Is your copy clear, concise, and correct?
 
 {% endtab %}
 {% tab SMS/MMS %}
