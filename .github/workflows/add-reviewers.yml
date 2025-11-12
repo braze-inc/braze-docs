@@ -143,7 +143,7 @@ jobs:
                 }
                 
                 if (reviewersToAdd.includes(legalTeam)) {
-                  commentBody += '- ⚖️ **@'+legalTeam+'** - PR diff contains privacy/legal/GDPR-related content\n';
+                  commentBody += `- ⚖️ **@${legalTeam}** - PR diff contains privacy/legal/GDPR-related content\n`;
                 }
                 
                 await github.rest.issues.createComment({
