@@ -2406,8 +2406,8 @@ async function getSearchResultByPost(subject, sid , language) {
             headers: {
                 "accept": "*/*",
                 "content-type": "application/json",
-                "origin": "http://localhost:4000",
-                "referer": "http://localhost:4000/"
+                "origin": "https://bz072508p.searchunify.com",
+                "referer": "https://bz072508p.searchunify.com"
             },
             body: JSON.stringify(payload)
         });
