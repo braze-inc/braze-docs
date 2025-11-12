@@ -18,6 +18,10 @@ EUおよび英国の一般データ保護規則（「GDPR」）、カリフォ�
 
 これらのデータ保護法は、個人データに対する「プライバシーの権利」を個人に与えている。組織は、プライバシーの権利を行使する個人からのリクエストを受け、それに応える義務があります。Braze プラットフォームは、これらのデータ保護法の下で要求される特定の行為を容易にする機能を提供することにより、お客様がこれらの法律を遵守するのを支援します。本ドキュメントでは、これらの機能を使用してプライバシー権に関するリクエストを管理するための技術的な手順について説明します。どのデータ保護法がお客様のビジネスに適用されるかを判断し、それを遵守して行動するのはお客様次第です。
 
+{% alert important %}
+The Braze recommendations on this page do not apply to BrazeAI Decisioning Studio. To manage any privacy rights requests relating to personal data in BrazeAI Decisioning Studio, contact your account manager.
+{% endalert %}
+
 ## 法的免責事項
 
 以下はいずれも、Brazeによる法的助言を意図したものではなく、またそのようにみなされるものでもない。お客様は、ご自身の特定の状況、およびデータ保護法がお客様およびお客様のBrazeサービスの使用にどのように適用されるかに関して、ご自身の弁護士の助言を求めることをお勧めする。

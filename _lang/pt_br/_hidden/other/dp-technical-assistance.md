@@ -18,6 +18,10 @@ Há uma série de leis de proteção de dados que regulam o que as organizaçõe
 
 Essas leis de proteção de dados concedem aos indivíduos "direitos de privacidade" sobre seus dados pessoais. As organizações são obrigadas a receber e responder às solicitações de indivíduos que exercem seus direitos de privacidade. A plataforma Braze pode ajudá-lo a cumprir essas Leis de Proteção de Dados, fornecendo recursos para facilitar determinadas ações exigidas por essas leis. Este documento fornece instruções técnicas para usar esses recursos para gerenciar solicitações de direitos de privacidade. Cabe a você determinar quais leis de proteção de dados se aplicam à sua empresa e agir em conformidade com elas.
 
+{% alert important %}
+The Braze recommendations on this page do not apply to BrazeAI Decisioning Studio. To manage any privacy rights requests relating to personal data in BrazeAI Decisioning Studio, contact your account manager.
+{% endalert %}
+
 ## Isenção de responsabilidade legal
 
 Nenhuma das informações a seguir tem a intenção de ser, nem deve ser considerada, uma assessoria jurídica da Braze. Recomenda-se que o usuário busque a orientação de seu próprio advogado com relação à sua situação específica e à forma como as Leis de Proteção de Dados se aplicam a ele e ao seu uso dos Serviços Braze.

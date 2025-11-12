@@ -18,6 +18,10 @@ Il existe une gamme de lois sur la protection des données qui régissent ce que
 
 Ces lois sur la protection des données accordent aux individus des « droits à la vie privée » sur leurs données personnelles. Les organisations sont tenues de recevoir et de répondre aux demandes des individus qui exercent leurs droits à la vie privée. La plateforme Braze peut vous aider à vous conformer à ces lois sur la protection des données en fournissant des fonctionnalités pour faciliter certaines actions requises par ces lois. Ce document fournit des instructions techniques pour utiliser ces fonctionnalités afin de gérer les demandes de droits de confidentialité. Il vous appartient de déterminer quelles lois sur la protection des données s'appliquent à votre entreprise et d'agir en conformité avec elles.
 
+{% alert important %}
+The Braze recommendations on this page do not apply to BrazeAI Decisioning Studio. To manage any privacy rights requests relating to personal data in BrazeAI Decisioning Studio, contact your account manager.
+{% endalert %}
+
 ## Avis juridique
 
 Aucune des informations suivantes n'est destinée à être, ni ne doit être considérée comme, un conseil juridique de la part de Braze. Il vous est conseillé de demander l’avis de votre propre conseiller juridique en ce qui concerne votre situation particulière et la manière dont les lois sur la protection des données s’appliquent à vous et à votre utilisation des services Braze.

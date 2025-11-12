@@ -18,6 +18,10 @@ EU 및 영국 일반 개인정보 보호법("GDPR"), 캘리포니아 소비자 �
 
 이러한 데이터 보호법은 개인에게 자신의 개인 데이터에 대한 '개인정보 보호 권리'를 부여합니다. 조직은 개인정보 보호 권리를 행사하는 개인으로부터 요청을 받고 이에 응답해야 합니다. Braze 플랫폼은 이러한 데이터 보호법에 따라 요구되는 특정 조치를 용이하게 하는 기능을 제공함으로써 귀하가 이러한 데이터 보호법을 준수하는 데 도움을 줄 수 있습니다. 이 문서는 이러한 기능을 사용하여 개인정보 보호 권한 요청을 관리하기 위한 기술 지침을 제공합니다. 비즈니스에 적용되는 데이터 보호법을 결정하고 이를 준수하여 행동하는 것은 전적으로 회원님의 책임입니다.
 
+{% alert important %}
+The Braze recommendations on this page do not apply to BrazeAI Decisioning Studio. To manage any privacy rights requests relating to personal data in BrazeAI Decisioning Studio, contact your account manager.
+{% endalert %}
+
 ## 법적 면책 조항
 
 다음 중 어느 것도 Braze의 법률 자문을 의도하지 않으며, 법률 자문으로 간주되지 않습니다. 귀하는 귀하의 특정 상황 및 귀하와 귀하의 Braze 서비스 이용에 대한 데이터 보호법의 적용 방식과 관련하여 자신의 변호사의 조언을 구할 것을 권고합니다.
