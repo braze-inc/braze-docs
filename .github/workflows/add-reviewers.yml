@@ -45,7 +45,7 @@ jobs:
               }
             });
             
-            const diff = diffData.toLowerCase();
+            const diff = diffData.data.toLowerCase();
             const keywords = [
               'law',
               'laws',
