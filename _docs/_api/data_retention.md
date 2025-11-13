@@ -34,7 +34,7 @@ For privacy compliance, you may need to delete all personal data pertaining to a
 A User may have multiple profiles, and you may need to delete multiple profiles to delete all data pertaining to a single User. Follow instructions on the data protection technical assistance page on how to fully delete all data regarding a User.
 {% endalert %}
 
-## Data Retention Handled by Braze for Specific Features of the Braze Services
+## Data Retention Handled by Braze for Specific Features of the Braze Services 
 
 #### Braze Database: Automatic Archiving/Deletion of Churned Users
 
