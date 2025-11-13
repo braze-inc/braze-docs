@@ -23,7 +23,7 @@ With the Braze and Yotpo integration, you can dynamically pull and display star 
 | ----------- | ----------- |
 | Yotpo account | A Yotpo account is required to take advantage of this partnership. |
 | Yotpo reviews API key | This API will be implemented within the Connected Content code snippet.<br><br>For more information, refer to [finding your Yotpo app key and secret key](https://support.yotpo.com/en/article/finding-your-yotpo-app-key-and-secret-key). |
-| Yotpo loyalty API key | This API key and GUID will be implemented within the Connected Content code snippet.<br><br>For more information, refer to [finding your loyalty & referrals API key and GUID](https://support.yotpo.com/en/article/finding-your-loyalty-referrals-api-key-and-guid)|
+| Yotpo loyalty API key | This API key and Globally Unique Identifier (GUID) will be implemented within the Connected Content code snippet.<br><br>For more information, refer to [finding your loyalty & referrals API key and GUID](https://support.yotpo.com/en/article/finding-your-loyalty-referrals-api-key-and-guid)|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Before continuing, confirm that the Yotpo product ID is the same as the `product_id` that will be pulled dynamically from Braze. This is mandatory for the integration to work. 

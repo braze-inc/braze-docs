@@ -50,7 +50,7 @@ Braze.getInstance(context).getDeviceIdAsync { deviceId ->
 
 {% tab ios %}
 {% alert important %}
-Prior to February 2023, our AppsFlyer attribution integration used the IDFV as the primary identifier to match iOS attribution data. It is not necessary for Braze customers using Objective-C to fetch the Braze `device_id` and sent to AppsFlyer upon install as there will be no disruption of service. 
+Prior to February 2023, our AppsFlyer attribution integration used the Identifier for Vendor (IDFV) as the primary identifier to match iOS attribution data. It is not necessary for Braze customers using Objective-C to fetch the Braze `device_id` and send it to AppsFlyer upon install because there is no disruption of service. 
 {% endalert%}
 
 For those using the Swift SDK v5.7.0+, if you wish to continue using IDFV as the mutual identifier, you must confirm that the `useUUIDAsDeviceId` field is set to `false` so there is no disruption of the integration. 
