@@ -154,7 +154,7 @@ A toll-free telephone number, or a freephone number, is a telephone number that 
 
 | Pros | Cons |
 | ---- | ---- | 
-| {::nomarkdown} <ul> <li> Must be registered before sending. </li> </ul> {:/} | {::nomarkdown} <ul> <li> Toll-free numbers are only the US and Canada </li><li> MMS is not enabled </li> </ul> {:/} |
+| {::nomarkdown} <ul> <li> Must be registered before sending. </li> </ul> {:/} | {::nomarkdown} <ul> <li> Toll-free numbers are only supported in the US and Canada </li><li> MMS is supported in the US and Canada  </li> </ul> {:/} |
 {: .reset-td-br-1 .reset-td-br-2} 
 
 {% endtab %} 
