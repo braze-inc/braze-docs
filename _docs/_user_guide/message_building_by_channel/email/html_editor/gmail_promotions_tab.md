@@ -95,7 +95,11 @@ We recommend uploading your product images to the media library, then copy and p
 
 ### Step 4: Generate and paste HTML code
 
-After building yur Gmail Promotion card, select **Generate HTML code**. Copy and paste the script into the `<head>` element of your email's HTML.
+After building your Gmail Promotion card, select **Generate HTML code**. Copy and paste the script into the `<head>` element of your email's HTML. 
+
+{% alert tip %}
+For the drag-and-drop editor, you can copy and paste the generated HTML code into an [HTML attribute]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/#html).
+{% endalert %}
 
 {% alert warning %}
 The Promotions script only appears if your email lands in the Gmail Promotions tab. Currently, Gmail uses algorithms to determine where your email will land. However, if a user ever marks your email as a promotion, Gmail's algorithm will be ignored, and your email will automatically land in the Promotions tab moving forward.
@@ -108,6 +112,10 @@ In general, adhere to these [best practices recommended by Gmail](https://develo
 {% alert tip %}
 While you can use Liquid within this script, we strongly suggest that you test your messaging as much as possible to avoid an error.
 {% endalert %}
+
+## Measuring Gmail Cards
+
+Gmail does not return analytics on these cards, and email service providers (ESPs) like Braze cannot insert their own link tracking on links in the header section (including promotion cards and product carousels). However, you can append UTM parameters or unique codes to the URLs during setup. These parameters allow you to track engagement using your own website analytics or conversion tracking, because the tracking is part of the URL itself—not inserted by the ESP. ESP-level click tracking is not available for these links.
 
 ### Incorporate images
 
