@@ -159,15 +159,15 @@ The snippet will look something like this:
 
 ## Frequently asked questions {#faq}
 
-#### What if I don't have a 5-star review?
+### What if I don't have a 5-star review?
 
 If you don't have any 5-star reviews (such as if the endpoint response returns NULL for the 5-star review), then no content will be displayed.
 
-#### What if I don't have an image published for a product?
+### What if I don't have an image published for a product?
 
 If you don't have any images for a product (such as if the endpoint response returns NULL for the product image), then no content will be displayed.
 
-#### Can I customize the look and feel, or pull other data fields from Yotpo?
+### Can I customize the look and feel, or pull other data fields from Yotpo?
 
 Yes! To discover other data points and customization options available, refer to [Making an API call]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/). You may need some assistance from a front-end developer to do so.
 
