@@ -1131,7 +1131,7 @@ a:hover {
                 <div class="btn-right">
 
                 <lable class='lable-gpt'>Did this resolve your issue?</lable>
-                <button type="button" class="submit-btn" onclick="window.location.href='https://bz072508p.searchunify.com/docs/'" >Yes, close this Window </button>
+                <button type="button" class="submit-btn" onclick="window.location.href='/docs/'" >Yes, close this Window </button>
                 <button type="button" class="submit-btn" id="toStep3">No, continue with ticket creation</button>
                 </div>
                 </div>
