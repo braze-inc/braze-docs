@@ -62,10 +62,6 @@ Now let’s get a little technical. Behind the scenes, there are three main part
 
 For a default implementation, you add the card content—the model—either from the dashboard or through APIs, and the view and controller are handled by what is called a view controller. A view controller is the "glue" between the overall application and the screen.
 
-## Content Cards vs Banners
-
-{% multi_lang_include content_cards_vs_banners_comparison.md %}
-
 ## Use cases
 
 Refer to this section for some common use cases for Content Cards.
@@ -172,6 +168,10 @@ Carousels display multiple pieces of content in a single space that your custome
 When a user is eligible for a card, it will appear in a carousel on whichever page of your app the carousel is added to. Users can swipe horizontally to view additional featured cards.
 
 Because this is a custom implementation, you’ll need to work with your developers to build your own views to display the Content Cards. The default classic, image only, and captioned image cards aren't supported with this implementation.
+
+## Content Cards vs Banners
+
+{% multi_lang_include content_cards_vs_banners_comparison.md %}
 
 ## Integrating Content Cards
 

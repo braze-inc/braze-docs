@@ -22,10 +22,6 @@ After Banners are integrated into an app or website, marketers can design and la
 | Sales and promotions | Highlight featured content, trending products, and ongoing brand campaigns persistently and directly on your homepage without disrupting the user experience. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-## Banners vs Content Cards
-
-{% multi_lang_include content_cards_vs_banners_comparison.md %}
-
 ## Features
 
 Features for Banners include:
@@ -73,6 +69,10 @@ Here's what you need to know about Banner dimensions and sizing:
 - While the composer allows you to preview Banners in different dimensions, that information isn't saved or sent to the SDK.
 - The HTML will take up the full width of the container it's rendered in.
 - We recommend making a fixed dimension element and testing those dimensions in composer.
+
+## Banners vs Content Cards
+
+{% multi_lang_include content_cards_vs_banners_comparison.md %}
 
 ## Limitations
 
