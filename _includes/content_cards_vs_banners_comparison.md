@@ -8,7 +8,7 @@ Content Cards and Banners are both in-product messages you can embed directly in
 | **Content updates** | Dynamic liquid becomes **static**; it is set when sent and does not change. | Dynamic content **refreshes** every time a banner is requested. |
 | **Creation** | Standard editor. | Drag-and-drop editor for easy content building. |
 | **Persistence** | Up to 30 days before expiring. | Unlimited (based on the campaign window). |
-| **Customization** | Sends a flexible data payload (JSON) to support complex, custom-built use cases. | Supports custom HTML/CSS/JavaScript within the editor. |
+| **Customization** | Sends a flexible data payload (JSON) to support complex, custom-built use cases. | Supports custom HTML/CSS/JavaScript within the editor and custom key-value pairs (JSON). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## Which should I use?
