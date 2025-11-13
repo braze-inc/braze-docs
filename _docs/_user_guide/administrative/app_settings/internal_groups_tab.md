@@ -75,10 +75,6 @@ Seed Groups are only supported for the email channel. You can add users to a See
 
 Seed Groups aren't available for API campaigns, but you can include Seed Groups using an API-triggered entry in the campaign. You can use this to measure deliverability metrics and to keep a record of your email content for historical and archival purposes. 
 
-#### Subscription behavior
-
-Users who are part of a Seed Group will receive the email message even if their own user profile is not subscribed. Seed sends are designed for internal QA and review, so they intentionally bypass subscription checks for the seeded dashboard users. This applies only to the seeded users and only when the message is configured to send seed copies to that group. A valid email address must exist on the user's account.
-
 After creating an internal group and tagging it to be used as a Seed Group, you can select it from the **Target Audiences** step of the campaign editor, or on the **Send Settings** step in a Canvas. 
 
 Seed emails will have `[SEED]` appended to the start of the email subject line. Note that seed emails **do not**:
@@ -88,6 +84,10 @@ Seed emails will have `[SEED]` appended to the start of the email subject line. 
 - Update a user profile's **Campaign Received** list.
 - Impact frequency capping.
 - Account for or impact the delivery speed rate limits.
+
+#### Subscription behavior
+
+Seed sends are designed for internal QA and review, so they intentionally bypass subscription checks for the seeded dashboard users. This means users with valid email addresses who are part of a Seed Group will receive the message even if they are not subscribed. However, the message must be configured to send seed copies to that group.
 
 {% alert tip %}
 If your Seed Group members report not seeing the message in their inbox, check that they're listed in the internal group, verify that your subject lines are different and that Gmail has not bundled the emails together, or have them check their spam folders.
