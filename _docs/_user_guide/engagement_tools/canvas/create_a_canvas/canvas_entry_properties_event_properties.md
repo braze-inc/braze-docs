@@ -48,6 +48,22 @@ You can no longer create or duplicate Canvases using the original editor. This a
 - You can't use `event_properties` in the lead Message step. Instead, you must use `canvas_entry_properties` or add an Action Paths step with the corresponding event **before** the Message step that includes `event_properties`. 
 - When an Action Path step contains a "Sent an SMS Inbound Message" or "Sent a WhatsApp Inbound Message" trigger, the subsequent Canvas steps can include an SMS or WhatsApp Liquid property. This mirrors how event properties work in Canvases. This way you can leverage your messages to save and reference first-party data on user profiles and conversational messaging.
 
+### Canvas entry deduplication
+
+When a user triggers the same Canvas entry event multiple times within one second, they will enter the Canvas only once for that second. This deduplication behavior helps prevent duplicate Canvas entries from rapid-fire events.
+
+{% alert important %}
+The timestamp used for deduplication is the processing timestamp in Braze, not solely the event timestamp as seen in logs. If a user triggers a Canvas entry event multiple times within the same second, only one entry is processed for that user in that second, regardless of how many triggers occur.
+{% endalert %}
+
+#### Best practice
+
+Place more than 1.1 seconds between events to avoid silent deduplication. This ensures that each event trigger results in a separate Canvas entry when intended.
+
+#### Example scenario
+
+If a user triggers Custom Event A at 10:00:00 and again at 10:00:00.500, only one Canvas entry is counted. However, if the user triggers Custom Event A at 10:00:01.100, a second Canvas entry is counted because more than one second has passed since the initial trigger.
+
 ### Timestamps for event properties
 
 If you're using timestamps with a [datetime type]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#custom-event-properties) from [trigger event properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties) in action-based Canvases, timestamps are normalized to UTC. Some exceptions are detailed below.
