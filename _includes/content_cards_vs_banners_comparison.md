@@ -5,7 +5,7 @@ Content Cards and Banners are both in-product messages you can embed directly in
 | **Best for** | Persistent notification centers and feeds where users can discover and revisit content at their own pace. | High-visibility, contextual messages for spotlights, promotions, and ongoing campaigns. |
 | **Delivery methods** | Scheduled, action-based, and API-triggered. | Scheduled availability window only. |
 | **Canvas support** | Yes. | No (coming in a future release). |
-| **Content updates** | Content is **static**; it is set when sent and does not change. | Content **refreshes** at each session start, including any personalization updates. |
+| **Content updates** | Dynamic liquid becomes **static**; it is set when sent and does not change. | Dynamic content **refreshes** every time a banner is requested. |
 | **Creation** | Standard editor. | Drag-and-drop editor for easy content building. |
 | **Persistence** | Up to 30 days before expiring. | Unlimited (based on the campaign window). |
 | **Customization** | Sends a flexible data payload (JSON) to support complex, custom-built use cases. | Supports custom HTML/CSS/JavaScript within the editor. |
