@@ -113,7 +113,7 @@ While you can use Liquid within this script, we strongly suggest that you test y
 
 ## Measuring Gmail Cards
 
-Gmail does not return any analytics back to sender on these cards. To track engagement, you can append a UTM parameter on the link to track clicks on a particular deal card's URL, or you can create a specific code only for Gmail Promotion Cards to track how many of your customers are converting using the card's code.
+Gmail does not return any analytics back to the sender on these cards, and ESPs like Braze cannot insert their own link tracking on links in the header section (including promotion cards and product carousels). However, you can append UTM parameters or unique codes to the URLs during setup. These parameters allow you to track engagement using your own website analytics or conversion tracking, because the tracking is part of the URL itself—not inserted by the ESP. ESP-level click tracking is not available for these links.
 
 ### Incorporate images
 
