@@ -22,6 +22,38 @@ After Banners are integrated into an app or website, marketers can design and la
 | Sales and promotions | Highlight featured content, trending products, and ongoing brand campaigns persistently and directly on your homepage without disrupting the user experience. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
+## Banners vs Content Cards
+
+Both Banners and Content Cards are part of Braze's in-product messaging suite and can be embedded directly into your app or website. However, they serve different purposes and have distinct capabilities:
+
+| Feature | Banners | Content Cards |
+| --- | --- | --- |
+| **Best for** | High-visibility, contextual messages for spotlights, promotions, and ongoing campaigns | Persistent notification centers and feeds where users can discover and revisit content at their own pace |
+| **Delivery methods** | Scheduled only | Scheduled, action-based, and API-triggered |
+| **Canvas support** | No (coming in future) | Yes |
+| **Content updates** | Refreshes at each session start, including personalization updates | Rendered at impression or send time; content doesn't change after rendering |
+| **Creation** | Drag-and-drop editor for easy content building | Standard editor with customization via key-value pairs |
+| **Persistence** | Unlimited (campaign window-based) | Up to 30 days before expiring |
+| **Customization** | Custom HTML/CSS/JavaScript available in editor | Highly flexible with custom integrations using key-value pairs |
+| **Placements** | Native placement support with prioritization | Custom placement logic via key-value pairs |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
+### Which should I use?
+
+Consider using **Banners** when you need:
+- Quick deployment with minimal development effort using the drag-and-drop editor
+- Truly persistent messaging (beyond 30 days)
+- Content that dynamically updates with each user session
+- Native placement management and prioritization
+
+Consider using **Content Cards** when you need:
+- API-triggered or action-based messaging
+- Highly customized user experiences that integrate seamlessly with your app
+- Canvas journey support
+- Fine-grained control over card behavior through key-value pairs
+
+Many customers use both Banners and Content Cards together to maximize their in-product messaging capabilities. For example, you might use Banners for homepage promotions that need to update dynamically, while using Content Cards for a notification center where users can review past offers and updates.
+
 ## Features
 
 Features for Banners include:
