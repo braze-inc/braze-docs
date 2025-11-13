@@ -3,7 +3,7 @@ Content Cards and Banners are both in-product messages you can embed directly in
 | Feature | Content Cards | Banners |
 | --- | --- | --- |
 | **Best for** | Persistent notification centers and feeds where users can discover and revisit content at their own pace. | High-visibility, contextual messages for spotlights, promotions, and ongoing campaigns. |
-| **Delivery methods** | Scheduled, action-based, and API-triggered. | Scheduled only. |
+| **Delivery methods** | Scheduled, action-based, and API-triggered. | Scheduled availability window only. |
 | **Canvas support** | Yes. | No (coming in a future release). |
 | **Content updates** | Content is **static**; it is set when sent and does not change. | Content **refreshes** at each session start, including any personalization updates. |
 | **Creation** | Standard editor. | Drag-and-drop editor for easy content building. |
