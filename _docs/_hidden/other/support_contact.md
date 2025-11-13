@@ -2509,62 +2509,62 @@ document.getElementById('toStep2').addEventListener('click', async function () {
         let articles = [];
         let articlesCollected = false;
 
-          while (true) {
-            const { done, value } = await reader.read();
-            if (done) break;
+        let partialAccumulator = '';
 
-            const chunk = decoder.decode(value);
-            const chunkParts = chunk.split('$___$__$_$');
+        while (true) {
+          const { done, value } = await reader.read();
+          if (done) break;
 
-            for (const part of chunkParts) {
-                if (!part.trim()) continue;
-                try {
-                    const data = JSON.parse(part);
+          const chunk = decoder.decode(value, { stream: true });
+          const chunkParts = chunk.split('$___$__$_$');
 
-                    // Extract streaming content
-                    if (data.data?.choices?.[0]?.delta?.content) {
-                        fullResponse += data.data.choices[0].delta.content;
-                        suggestionsBox.innerHTML = fullResponse;
-                        document.querySelector('.flex-display').style.display = 'block';
-                        document.querySelector('.gpt-text1').style.display = 'block';
-                        document.querySelector('.gpt-text').style.display = 'none';
-                    }
-                 
+          for (const part of chunkParts) {
+            if (!part.trim()) continue;
 
+            let jsonString = part;
+            try {
+              const validJson = partialAccumulator + jsonString;
+              const data = JSON.parse(validJson);
 
-                    // Collect articles only once
-                    if (!articlesCollected && data.data?.articles) {
-                        const uniqueUrls = new Set(articles.map(a => a.href));
-                        for (const article of data.data.articles) {
-                            if (!uniqueUrls.has(article.href)) {
-                                articles.push(article);
-                                uniqueUrls.add(article.href);
-                            }
-                        }
+              partialAccumulator = '';
 
-                        if (articles.length > 0) {
-                            articlesList.innerHTML = articles.map(article =>
-                                `<div class="article">
-                                    <a href="${article.href.split('_doc_doc_').pop()}" target="_blank">${article.title}</a>
-                                </div>`
-                            ).join('');
-                            articlesDiv.style.display = 'block';
-                        }
-                        articlesCollected = true;
-                    }
+              if (data.data?.choices?.[0]?.delta?.content) {
+                fullResponse += data.data.choices[0].delta.content;
+                suggestionsBox.innerHTML = fullResponse;
+                document.querySelector('.flex-display').style.display = 'block';
+                document.querySelector('.gpt-text1').style.display = 'block';
+                document.querySelector('.gpt-text').style.display = 'none';
+              }
 
-                    // Handle no_answer
-                    if (data.data?.no_answer?.length && fullResponse === '') {
-                        fullResponse = `<p>${data.data.no_answer[0]}</p>`;
-                        suggestionsBox.innerHTML = fullResponse;
-                    }
-
-                } catch (e) {
-                    console.error('Error parsing chunk:', e);
+              if (!articlesCollected && data.data?.articles) {
+                const uniqueUrls = new Set(articles.map(a => a.href));
+                for (const article of data.data.articles) {
+                  if (!uniqueUrls.has(article.href)) {
+                    articles.push(article);
+                    uniqueUrls.add(article.href);
+                  }
                 }
-            }
-        }
 
+                if (articles.length > 0) {
+                  articlesList.innerHTML = articles.map(article =>
+                    `<div class="article">
+                      <a href="${article.href.split('_doc_doc_').pop()}" target="_blank">${article.title}</a>
+                    </div>`
+                  ).join('');
+                  articlesDiv.style.display = 'block';
+                }
+                articlesCollected = true;
+              }
+
+              if (data.data?.no_answer?.length && fullResponse === '') {
+                fullResponse = `<p>${data.data.no_answer[0]}</p>`;
+                suggestionsBox.innerHTML = fullResponse;
+              }
+            } catch (e) {
+              partialAccumulator += jsonString;
+            }
+          }
+        }
 
         if (fullResponse === '' && articles.length > 0) {
             suggestionsBox.innerHTML = "<p>Here are some articles that might help:</p>";
@@ -2693,28 +2693,10 @@ document.getElementById('toStep2').addEventListener('click', async function () {
         step1.style.display = 'block';
         steps.forEach(s => s.classList.remove('active'));
         steps[0].classList.add('active');
-         document.getElementById('suggestionsBox').innerHTML = "";
+        document.getElementById('suggestionsBox').innerHTML = "";
+        window.searchEventSent = false;
     });
-
-    // Back to Step 2
-    // document.getElementById('backToStep2').addEventListener('click', function () {
-    //     step3.style.display = 'none';
-    //     step2.style.display = 'block';
-    //     steps.forEach(s => s.classList.remove('active'));
-    //     steps[1].classList.add('active');
-    //     suggestionsBox.innerHTML = "<p>Loading suggestions...</p>";
-    //     articlesDiv.style.display = 'none';
-    //     articlesList.innerHTML = '';
-    //     document.getElementById('subject').value = '';
-    //     document.getElementById('description').value = '';
-    //     document.getElementById('subject').focus();
-    //     document.getElementById('subject').select();
-    //     document.getElementById('description').focus();
-    //     document.getElementById('description').select();
-    //     document.getElementById('subject').setSelectionRange(0, 0);
-    //     document.getElementById('description').setSelectionRange(0, 0);
-    // });
-
+    
 // Optional: Add a back button to return to the 3-step form
 function addBackButton() {
     const backButton = document.createElement('button');
