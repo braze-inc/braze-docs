@@ -97,7 +97,9 @@ We recommend uploading your product images to the media library, then copy and p
 
 After building your Gmail Promotion card, select **Generate HTML code**. Copy and paste the script into the `<head>` element of your email's HTML. 
 
-For the drag-and-drop editor, you can copy and paste the generated HTML code into the `<head>` element.
+{% alert tip %}
+For the drag-and-drop editor, you can copy and paste the generated HTML code into an [HTML attribute]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/#html).
+{% endalert %}
 
 {% alert warning %}
 The Promotions script only appears if your email lands in the Gmail Promotions tab. Currently, Gmail uses algorithms to determine where your email will land. However, if a user ever marks your email as a promotion, Gmail's algorithm will be ignored, and your email will automatically land in the Promotions tab moving forward.
