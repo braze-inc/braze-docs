@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Singular
 
-> Singular is a unified marketing analytics platform that delivers attribution, cost aggregation, marketing analytics, creative reporting, and workflow automation.
+> [Singular](https://www.singular.net/) is a unified marketing analytics platform that delivers attribution, cost aggregation, marketing analytics, creative reporting, and workflow automation.
 
 _This integration is maintained by Singular._
 

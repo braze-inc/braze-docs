@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Kochava
 
-> Kochava offers mobile attribution and analytics to help you harness your data for growth. The Kochava Audience Platform enables you to plan, target, activate, measure, and optimize your app campaigns.
+> [Kochava](https://www.kochava.com/) offers mobile attribution and analytics to help you harness your data for growth. The Kochava Audience Platform enables you to plan, target, activate, measure, and optimize your app campaigns.
 
 _This integration is maintained by Kochava._
 
