@@ -76,6 +76,10 @@ When viewing a usage report, select the [**Values** tab]({{site.baseurl}}/user_g
 
 The Cloud Data Ingestion (CDI) [Sync Log dashboard]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/sync_logs/) allows you to monitor all data processed by CDI, verify whether data was synced successfully, and diagnose any issues with “incorrect” or missing data.
 
+#### Multi-rule feature flag rollouts
+
+Use [multi-rule feature flag rollouts]({{site.baseurl}}/developer_guide/feature_flags/create/#multi-rule-feature-flag-rollouts) to define a sequence of rules for evaluating users, which allows for precise segmentation and controlled feature releases. This method is ideal for deploying the same feature to diverse audiences.
+
 ### Robust channels
 
 #### Background row images 
