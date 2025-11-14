@@ -80,6 +80,10 @@ The Cloud Data Ingestion (CDI) [Sync Log dashboard]({{site.baseurl}}/user_guide/
 
 Use [multi-rule feature flag rollouts]({{site.baseurl}}/developer_guide/feature_flags/create/#multi-rule-feature-flag-rollouts) to define a sequence of rules for evaluating users, which allows for precise segmentation and controlled feature releases. This method is ideal for deploying the same feature to diverse audiences.
 
+#### Mapping to catalog fields for drag-and-drop product blocks
+
+In your catalog settings, you can select the **Product blocks** toggle to [map to specific fields]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/product_blocks/#catalog-setup) and information in your catalog. This allows you to select which fields to use as the product title, product URL, and image URL.
+
 ### Robust channels
 
 #### Background row images 
