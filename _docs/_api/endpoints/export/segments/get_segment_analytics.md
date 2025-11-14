@@ -2,7 +2,7 @@
 nav_title: "GET: Export segment analytics"
 article_title: "GET: Export Segment Analytics"
 search_tag: Endpoint
-page_order: 4
+page_order: 3
 layout: api_page
 page_type: reference
 description: "This article outlines details about the Export segment analytics Braze endpoint."
