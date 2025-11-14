@@ -2,6 +2,7 @@
 nav_title: Nachrichten von rechts nach links
 article_title: Erstellen von Nachrichten von rechts nach links
 page_order: 1
+alias: /right_to_left_messages/
 page_type: reference
 description: "Auf dieser Seite finden Sie bewährte Verfahren für die Erstellung von Nachrichten in Braze, die von rechts nach links gelesen werden."
 ---
@@ -22,7 +23,7 @@ Wenn Sie eine Nachricht von rechts nach links erstellen, sollten Sie Folgendes b
 | Standard Western Rendering | Rechts-nach-links-Rendering |
 |------------------|------------------------|
 | Zeigt das Ausrufezeichen und das Emoji am **Ende** des Satzes an. | Zeigt das Ausrufezeichen und das Emoji am **Anfang** des Satzes an. |
-| ![Ein Beispiel für eine Standardnachricht von rechts nach links.]({% image_buster /assets/img/right-to-left/standard.png %}) | ![Ein Beispiel für eine Nachricht von links nach rechts.]({% image_buster /assets/img/right-to-left/right-to-left.png %}) |
+| \![Ein Beispiel für eine Standardnachricht von rechts nach links.]({% image_buster /assets/img/right-to-left/standard.png %}) | \![Ein Beispiel für eine Nachricht von links nach rechts.]({% image_buster /assets/img/right-to-left/right-to-left.png %}) |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 
 ## Erstellen einer Nachricht von rechts nach links
@@ -32,7 +33,7 @@ So erstellen Sie Ihre Nachricht von rechts nach links in Braze:
 1. Verfassen Sie Ihre Standardnachricht im Braze-Editor.
 2. Kopieren Sie den Nachrichtentext aus Braze und verwenden Sie dann ein Lokalisierungstool, um ihn in eine Nachricht von rechts nach links umzuwandeln.
 3. Fügen Sie Ihre konvertierte Nachricht wieder in Braze ein.
-4. Überprüfen Sie die Textformatierung und -ausrichtung. Wenn Sie eine E-Mail per Drag-and-Drop oder im HTML-Format erstellen, können Sie dies mit dem Composer tun. Andernfalls müssen Sie ein separates Textverarbeitungsprogramm verwenden.<br><br>![E-Mail Drag-and-Drop-Editor Menü mit Button zum Umschalten der Textausrichtung zwischen rechts-nach-links und links-nach-rechts.]({% image_buster /assets/img/rtl_button.png %}){: style="max-width:50%;"}
+4. Überprüfen Sie die Textformatierung und -ausrichtung. Wenn Sie eine E-Mail per Drag-and-Drop oder im HTML-Format erstellen, können Sie dies mit dem Composer tun. Andernfalls müssen Sie ein separates Textverarbeitungsprogramm verwenden.<br><br>\![E-Mail Drag-and-Drop-Editor Menü mit Button zum Umschalten der Textausrichtung zwischen rechts-nach-links und links-nach-rechts.]({% image_buster /assets/img/rtl_button.png %}){: style="max-width:50%;"}
 
 ## Überlegungen
  
@@ -40,7 +41,7 @@ So erstellen Sie Ihre Nachricht von rechts nach links in Braze:
 
 Die Methode des Kopierens und Einfügens von Push-Nachrichten kann bei längeren Push-Benachrichtigungen eine Herausforderung darstellen, da längere Inhalte auf einem mobilen Gerät möglicherweise in mehreren Zeilen dargestellt werden. Wenn Sie Ihren Nachrichtentext von außerhalb von Braze kopieren (z.B. ein Word-Dokument) und direkt in Braze einfügen, können sich die Satzausrichtung und die Wortplatzierung ändern. Um dieses Szenario zu vermeiden, kopieren Sie in Raten und fügen Sie einen Zeilenumbruch ein. Kopieren Sie zum Beispiel die ersten fünf Wörter und fügen Sie einen Zeilenumbruch ein, kopieren Sie die nächsten fünf Wörter, fügen Sie einen Zeilenumbruch ein und so weiter.
 
-Die Vorschau- und Testfunktionen sind für Nachrichten von links nach rechts konzipiert. Nachrichten von rechts nach links werden daher im Bereich **Vorschau & Test** nicht korrekt dargestellt, aber auf den Nutzer:innen-Geräten korrekt, wenn deren Einstellungen dafür konfiguriert sind. Wir empfehlen Ihnen, Nachrichten an sich selbst in einer Live-Umgebung zu senden, um zu überprüfen, ob sie je nach den Einstellungen Ihres Geräts korrekt wiedergegeben werden.
+Die Vorschau- und Testfunktionen sind für Nachrichten von links nach rechts ausgelegt. Daher werden Nachrichten von rechts nach links im Bereich **Vorschau & Test** nicht korrekt dargestellt, aber auf Nutzer:innen, wenn deren Einstellungen dafür konfiguriert sind. Wir empfehlen Ihnen, Nachrichten an sich selbst in einer Live-Umgebung zu senden, um zu überprüfen, ob sie je nach den Einstellungen Ihres Geräts korrekt wiedergegeben werden.
 
 ### Bidirektionaler Text
 

@@ -1,5 +1,5 @@
 ---
-nav_title: E-Mail-Dienste
+nav_title: E-Mail Dienste
 article_title: E-Mail-Dienste
 page_order: 9
 page_type: reference

@@ -1,5 +1,5 @@
 ---
-nav_title: Qualitätsbewertung und Grenzen der Nachrichtenübermittlung
+nav_title: Qualitätsbewertung und Messaging-Limits
 article_title: Qualitätsbewertung und Grenzen der Nachrichtenübermittlung 
 description: "In diesem Referenzartikel erfahren Sie, wie Meta Ihre Qualitätsbewertung und die Messaging-Limits für den WhatsApp-Kanal beeinflusst."
 page_type: partner
