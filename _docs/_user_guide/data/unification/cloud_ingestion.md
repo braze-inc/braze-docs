@@ -9,7 +9,7 @@ toc_headers: h2
 
 # Braze Cloud Data Ingestion
 
-> Braze Cloud Data Ingestion (CDI) allows you to set up a direct connection from your data storage solution to sync relevant user data and other non-user data to Braze. This data can then be leveraged for personalization or segmentation to power your marketing use cases. Cloud Data Ingestion’s flexible integration supports complex data structures, including nested JSON and arrays of objects.
+> Braze Cloud Data Ingestion (CDI) allows you to set up a direct connection from your data storage solution to sync relevant user data and other non-user data to Braze. This data can then be used for personalization or segmentation to power your marketing use cases. Cloud Data Ingestion’s flexible integration supports complex data structures, including nested JSON and arrays of objects.
 
 ## How it works
 

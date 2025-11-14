@@ -8,7 +8,7 @@ description: "This page provides an overview of the observability features avail
 
 # Sync logs and observability
 
-> Cloud Data Ingestion (CDI) **Sync Log** dashboard allows you to monitor all data processed by CDI, verify whether data was synced successfully, and diagnose any issues with "incorrect" or missing data.
+> The Cloud Data Ingestion (CDI) **Sync Log** dashboard allows you to monitor all data processed by CDI, verify whether data was synced successfully, and diagnose any issues with "incorrect" or missing data.
 
 To access the sync logs, go to **Data Settings** > **Cloud Data Ingestion** and select the **Sync Log** tab.
 
@@ -27,7 +27,7 @@ The main **Sync Log** page provides a high-level overview of all your sync runs,
 Sync logs also provide the following details for each sync:
 
 * **Sync name:** The name of the sync configuration.  
-* **Run ID:** A unique identifier for a specific execution of the sync. Select this ID to see more details. This can also be used in the [CDI API endpoints]({{site.baseurl}}/api/endpoints/cdi), or to reference a sync run with Braze Support.   
+* **Run ID:** A unique identifier for a specific execution of the sync. Select this ID to view more details. This can also be used in the [CDI API endpoints]({{site.baseurl}}/api/endpoints/cdi), or to reference a sync run with Braze Support.   
 * **Status:** The status of the run (success, partial success, error, running).  
 * **New rows read from source:** The number of new rows pulled from your data warehouse for this run.  
 * **Results:** A breakdown of how many rows succeeded or failed within the run.  
