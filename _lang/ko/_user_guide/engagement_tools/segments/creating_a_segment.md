@@ -8,7 +8,7 @@ tool: Segments
 search_rank: 3
 ---
 
-# [\![Braze 학습 과정]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/segmentation-course){: style="float:right;width:120px;border:0;" class="noimgborder"} 세그먼트 만들기
+# [![Braze 학습 과정]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/segmentation-course){: style="float:right;width:120px;border:0;" class="noimgborder"} 세그먼트 만들기
 
 > 세그먼트를 세분화하면 인구통계학적, 행동적, 기술적 특성 및 행동에 따라 사용자를 타겟팅할 수 있습니다. 세분화와 메시징 자동화를 창의적이고 지능적으로 활용하면 사용자를 첫 접촉에서 장기 고객으로 원활하게 전환할 수 있습니다. 세그먼트는 데이터가 변경되면 실시간으로 업데이트되며, 타겟팅 및 메시징 목적에 따라 필요한 만큼 세그먼트를 생성할 수 있습니다.
 

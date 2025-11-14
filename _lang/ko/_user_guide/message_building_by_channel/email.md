@@ -76,7 +76,7 @@ guide_menu_list:
   image: /assets/img/braze_icons/annotation-question.svg
 ---
 
-## [\![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/messaging-channels-email){: style="float:right;width:120px;border:0;" class="noimgborder"} 이메일을 사용자 정의하세요
+## [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/messaging-channels-email){: style="float:right;width:120px;border:0;" class="noimgborder"} 이메일을 사용자 정의하세요
 
 다양한 방법으로 이메일 메시지를 사용자 정의할 수 있습니다. 예를 들어:
 

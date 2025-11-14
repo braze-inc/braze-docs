@@ -8,7 +8,7 @@ tool: Currents
 search_rank: 8
 ---
 
-# [\![Braze 학습 과정]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/currents-the-basics-2/){: style="float:right;width:120px;border:0;" class="noimgborder"} 커런츠 설정하기
+# [![Braze 학습 과정]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/currents-the-basics-2/){: style="float:right;width:120px;border:0;" class="noimgborder"} 커런츠 설정하기
 
 > 이 페이지에서는 Braze 커런츠 통합 및 구성에 대한 일반적인 프로세스를 간략하게 설명하고 설명합니다.
 

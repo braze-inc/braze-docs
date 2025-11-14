@@ -7,7 +7,7 @@ description: "이 페이지에서는 커스텀 속성에 대해 설명하고 다
 search_rank: 1
 ---
 
-# [\![Braze 학습 과정]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/custom-events-and-attributes){: style="float:right;width:120px;border:0;" class="noimgborder"} 커스텀 속성
+# [![Braze 학습 과정]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/custom-events-and-attributes){: style="float:right;width:120px;border:0;" class="noimgborder"} 커스텀 속성
 
 > 이 페이지에서는 사용자의 고유한 특성을 모아 놓은 커스텀 속성에 대해 설명합니다. 커스텀 속성은 사용자에 대한 속성이나 애플리케이션 내에서 기여도가 낮은 작업에 대한 정보를 저장하는 데 가장 적합합니다. 
 

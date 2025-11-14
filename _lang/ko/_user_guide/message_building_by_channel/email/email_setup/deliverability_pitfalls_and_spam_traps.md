@@ -8,7 +8,7 @@ channel: email
 
 ---
 
-# [\![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability){: style="float:right;width:120px;border:0;" class="noimgborder"}전달 가능성의 함정 및 스팸 트랩
+# [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability){: style="float:right;width:120px;border:0;" class="noimgborder"}전달 가능성의 함정 및 스팸 트랩
 
 귀하의 이메일 전달 가능성은 다음의 스팸 트랩 중 하나에 의해 영향을 받을 수 있습니다:
 

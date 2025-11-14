@@ -9,7 +9,7 @@ tool:
 description: "이 사용법 문서에서는 세그먼트 인사이트를 사용하고, 해석하고, 공유하는 방법을 안내합니다."
 ---
 
-# [\![Braze 학습 과정]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/segmentation-course){: style="float:right;width:120px;border:0;" class="noimgborder"} 세그먼트 인사이트
+# [![Braze 학습 과정]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/segmentation-course){: style="float:right;width:120px;border:0;" class="noimgborder"} 세그먼트 인사이트
 
 > 세그먼트 인사이트를 사용하고, 해석하고, 공유하는 방법에 대해 알아보세요. 
 

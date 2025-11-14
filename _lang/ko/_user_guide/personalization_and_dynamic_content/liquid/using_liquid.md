@@ -6,7 +6,7 @@ description: "이 참고 문서에서는 일반적인 Liquid 사용 사례에 �
 search_rank: 2
 ---
 
-# [\![Braze 학습 과정]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/dynamic-personalization-with-liquid){: style="float:right;width:120px;border:0;" class="noimgborder"} Liquid 사용하기
+# [![Braze 학습 과정]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/dynamic-personalization-with-liquid){: style="float:right;width:120px;border:0;" class="noimgborder"} Liquid 사용하기
 
 > 이 문서에서는 다양한 사용자 속성을 사용하여 메시징에 개인 정보를 동적으로 삽입하는 방법을 설명합니다.
 

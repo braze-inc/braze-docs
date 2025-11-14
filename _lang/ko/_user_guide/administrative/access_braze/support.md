@@ -7,7 +7,7 @@ page_type: reference
 search_rank: 7
 ---
 
-# [\![브레이즈 학습 과정]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/the-braze-support-portal/){: style="float:right;width:120px;border:0;" class="noimgborder"}브레이즈 지원
+# [![브레이즈 학습 과정]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/the-braze-support-portal/){: style="float:right;width:120px;border:0;" class="noimgborder"}브레이즈 지원
 
 ## 지원 포털에 접근하기
 

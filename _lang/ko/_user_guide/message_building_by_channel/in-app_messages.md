@@ -50,7 +50,7 @@ guide_menu_list:
   image: /assets/img/braze_icons/annotation-question.svg
 ---
 
-## [\![브레이즈 학습 과정]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/messaging-channels-in-app-in-browser){: style="float:right;width:120px;border:0;" class="noimgborder"} 잠재적 사용 사례
+## [![브레이즈 학습 과정]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/messaging-channels-in-app-in-browser){: style="float:right;width:120px;border:0;" class="noimgborder"} 잠재적 사용 사례
 
 인앱 메시지에서 제공하는 풍부한 콘텐츠 수준을 활용하여 다양한 사용 사례에 이 채널을 활용할 수 있습니다:
 

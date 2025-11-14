@@ -6,7 +6,7 @@ description: "이 문서에서는 Intelligent Timing(이전의 Intelligent Deliv
 
 ---
 
-# [\![Braze 학습 과정]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/intelligent-timing){: style="float:right;width:120px;border:0;" class="noimgborder"} Intelligent Timing
+# [![Braze 학습 과정]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/intelligent-timing){: style="float:right;width:120px;border:0;" class="noimgborder"} Intelligent Timing
 
 > Intelligent Timing을 사용하여 사용자가 참여(열기 또는 클릭)할 가능성이 가장 높은 시간, 즉 최적의 전송 시간이라고 판단되는 때에 각 사용자에게 메시지를 전달하세요. 이렇게 하면 사용자가 원하는 시간에 메시징을 보내고 있는지 쉽게 확인할 수 있어 참여도를 높일 수 있습니다.
 

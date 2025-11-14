@@ -10,7 +10,7 @@ channel:
 search_rank: 2
 ---
 
-# [\![Braze Learning 과정]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/messaging-channels-sms){: style="float:right;width:120px;border:0;" class="noimgborder"}SMS에 대하여
+# [![Braze Learning 과정]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/messaging-channels-sms){: style="float:right;width:120px;border:0;" class="noimgborder"}SMS에 대하여
 
 > 이 문서는 SMS 통합을 지원하고 고객과 효과적이고 전략적으로 소통할 수 있도록 돕는 일반적인 사용 사례, 요구 사항 및 알아야 할 용어를 공유합니다.\!["Braze에 오신 것을 환영합니다!"라는 텍스트가 포함된 SMS 메시지 여러분을 모시게 되어 기쁩니다. 시작하려면 문서를 확인하세요. https://www.braze.com/docs/ 도움을 원하시면 HELP를 입력하고 중지를 원하시면 STOP을 입력하세요."]({% image_buster /assets/img/sms/sms_about.png %}){: style="float:right;max-width:30%;margin-left:15px;margin-top:10px;border: 0;"}
 

@@ -29,7 +29,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/check-square-broken.svg
 ---
 
-## [\![Braze 학습 과정]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/understanding-webhooks){: style="float:right;width:120px;border:0;" class="noimgborder"} 사용 사례
+## [![Braze 학습 과정]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/understanding-webhooks){: style="float:right;width:120px;border:0;" class="noimgborder"} 사용 사례
 
 웹훅은 시스템을 서로 연결하는 훌륭한 방법이며, 결국 웹훅은 앱이 통신하는 방식입니다. 다음은 웹훅이 특히 유용할 수 있는 몇 가지 일반적인 시나리오입니다:
 

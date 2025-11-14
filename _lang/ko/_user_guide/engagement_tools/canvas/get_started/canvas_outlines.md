@@ -10,7 +10,7 @@ tool: Canvas
 
 # 캔버스 윤곽선
 
-[\![Braze 학습 과정]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/page/courses){: style="float:right;width:120px;border:0;" class="noimgborder"}
+[![Braze 학습 과정]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/page/courses){: style="float:right;width:120px;border:0;" class="noimgborder"}
 
 > 이 문서에서는 캔버스를 사용하여 [지연]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/) 및 [메시지]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) 단계를 조합하여 타겟팅되고 개인화된 메시징을 수행하는 방법을 보여주는 몇 가지 예시를 중점적으로 설명합니다.
 

@@ -91,7 +91,7 @@ Braze에서 발송되는 모든 이메일 메시지에 BCC 주소가 포함되�
 
 ## 추적 픽셀 열기
 
-[\![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/email-open-tracking-pixel/){: style="float:right;width:120px;border:0;" class="noimgborder"}
+[![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/email-open-tracking-pixel/){: style="float:right;width:120px;border:0;" class="noimgborder"}
 
 이메일 열기 추적 픽셀은 이메일 HTML에 자동으로 삽입되는 보이지 않는 1 x 1 px 이미지입니다. 이 픽셀은 Braze가 최종 사용자가 이메일을 열었는지 감지하는 데 도움을 줍니다. 이메일 열기 정보는 매우 유용할 수 있으며, 사용자가 해당 열기 비율을 이해하여 효과적인 마케팅 전략을 결정하는 데 도움을 줍니다.
 

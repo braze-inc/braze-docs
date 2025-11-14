@@ -61,7 +61,7 @@ guide_menu_list:
   image: /assets/img/braze_icons/annotation-question.svg
 ---
 
-## [\![브레이즈 학습 과정]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/push-fundamentals){: style="float:right;width:120px;border:0;" class="noimgborder"}사용 사례
+## [![브레이즈 학습 과정]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/push-fundamentals){: style="float:right;width:120px;border:0;" class="noimgborder"}사용 사례
 
 \![Apple 제품 간의 푸시 메시지 예시.]({% image_buster /assets/img/red-dress.gif %}){: height="400px"}  \![iPhone 홈 화면의 스톱워치에서 읽는 푸시 메시지 예시: "안녕하세요!" 이것은 iOS 푸시입니다".]({% image_buster /assets/img/ios_push.png %}){: height="400px"}
 

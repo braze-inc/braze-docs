@@ -7,7 +7,7 @@ description: "이 문서에서는 커스텀 이벤트 및 속성, 세분화, 사
 search_rank: 2
 ---
 
-# [\![Braze 학습 과정]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/custom-events-and-attributes){: style="float:right;width:120px;border:0;" class="noimgborder"} 커스텀 이벤트
+# [![Braze 학습 과정]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/custom-events-and-attributes){: style="float:right;width:120px;border:0;" class="noimgborder"} 커스텀 이벤트
 
 > 이 문서에서는 커스텀 이벤트 및 속성, 관련 세분화 필터, 캔버스 항목 속성, 관련 분석 등에 대해 설명합니다. Braze 이벤트 전반에 대해 알아보려면 [이벤트를]({{site.baseurl}}/user_guide/data/custom_data/events/) 참조하세요.
 

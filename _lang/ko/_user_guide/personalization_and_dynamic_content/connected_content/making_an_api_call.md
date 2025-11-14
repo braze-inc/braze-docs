@@ -6,7 +6,7 @@ description: "이 참조 문서에서는 연결된 콘텐츠 API 호출 방법�
 search_rank: 2
 ---
 
-# [\![Braze 학습 과정]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/connected-content){: style="float:right;width:120px;border:0;" class="noimgborder"} 연결된 콘텐츠 API 호출하기
+# [![Braze 학습 과정]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/connected-content){: style="float:right;width:120px;border:0;" class="noimgborder"} 연결된 콘텐츠 API 호출하기
 
 > 연결된 콘텐츠를 사용하여 API로 액세스할 수 있는 모든 정보를 사용자에게 보내는 메시징에 직접 삽입할 수 있습니다. 웹 서버에서 직접 콘텐츠를 가져오거나 공개적으로 액세스 가능한 API에서 콘텐츠를 가져올 수 있습니다.<br><br>이 페이지에서는 연결된 콘텐츠 API 호출 방법, 진행된 연결된 콘텐츠 사용 사례, 오류 처리 등에 대해 설명합니다.
 

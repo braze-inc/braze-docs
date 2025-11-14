@@ -61,7 +61,7 @@ guide_menu_list:
   image: /assets/img/braze_icons/annotation-question.svg
 ---
 
-## [\![Curso Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/push-fundamentals){: style="float:right;width:120px;border:0;" class="noimgborder"} Casos de uso
+## [![Curso Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/push-fundamentals){: style="float:right;width:120px;border:0;" class="noimgborder"} Casos de uso
 
 Exemplo de mensagem push em produtos Apple.]({% image_buster /assets/img/red-dress.gif %}){: height="400px"} Exemplo de mensagem push do Stopwatch em uma tela inicial do iPhone que diz: "Olá! Este é um iOS Push".]({% image_buster /assets/img/ios_push.png %}){: height="400px"}
 

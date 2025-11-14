@@ -9,7 +9,7 @@ channel:
 
 ---
 
-# [\![Braze 학습 과정]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/link-aliasing){: style="float:right;width:120px;border:0;" class="noimgborder"} 링크 별칭 지정
+# [![Braze 학습 과정]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/link-aliasing){: style="float:right;width:120px;border:0;" class="noimgborder"} 링크 별칭 지정
  
 > 링크 별칭 지정을 사용하여 인식 가능한 사용자 생성 이름을 만들어 Braze에서 이메일 메시지로 전송된 링크를 식별할 수 있습니다. 이러한 링크는 세그먼트 리타겟팅, 액션 기반 트리거 동작 및 링크 분석에 사용할 수 있습니다.
 

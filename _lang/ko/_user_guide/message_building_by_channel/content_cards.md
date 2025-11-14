@@ -31,7 +31,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/check-square-broken.svg
 ---
 
-## [\![Braze 학습 과정]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/content-cards){: style="float:right;width:120px;border:0;" class="noimgborder"} 콘텐츠 카드 사용의 이점
+## [![Braze 학습 과정]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/content-cards){: style="float:right;width:120px;border:0;" class="noimgborder"} 콘텐츠 카드 사용의 이점
 
 개발자가 앱에 콘텐츠를 구축하는 것보다 콘텐츠 카드를 사용할 때 얻을 수 있는 몇 가지 이점은 다음과 같습니다:
 

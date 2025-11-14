@@ -6,7 +6,7 @@ description: "이 문서에서는 지능형 채널 필터에 대해 다룹니다
 search_rank: 11
 ---
 
-# [\![Braze 학습 과정]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/most-engaged-channel){: style="float:right;width:120px;border:0;" class="noimgborder"}지능형 채널 필터
+# [![Braze 학습 과정]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/most-engaged-channel){: style="float:right;width:120px;border:0;" class="noimgborder"}지능형 채널 필터
 
 > `Intelligent Channel` 필터(이전의 `Most Engaged`)는 선택된 메시징 채널이 귀하의 청중에게 "가장 좋은" 채널인 경우 해당 청중의 일부를 선택합니다. 
 
