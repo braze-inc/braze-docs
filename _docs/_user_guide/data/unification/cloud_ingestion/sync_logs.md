@@ -35,7 +35,7 @@ Sync logs also provide the following details for each sync:
 * **Run start time:** When the sync job began.  
 * **Run duration:** The total time the sync job took to complete.
 
-![Details for a sync log.]({% image_buster /assets/img/cloud_ingestion/sync_logs2.png %}){: style="max-width:80%"}
+![Details for a sync log.]({% image_buster /assets/img/cloud_ingestion/sync_logs3.png %}){: style="max-width:80%"}
 
 ### Data retention
 
@@ -73,7 +73,7 @@ This table provides row-level visibility into the data processed during the sync
 
 To see the exact data sent to Braze for a specific row, select **View payload** in the **Source** payload column. This displays the raw JSON payload that was processed for that user.
 
-![Payload example for a specific row in a sync log.]({% image_buster /assets/img/cloud_ingestion/sync_logs3.png %}){: style="max-width:80%"}
+![Payload example for a specific row in a sync log.]({% image_buster /assets/img/cloud_ingestion/sync_logs2.png %}){: style="max-width:80%"}
 
 #### Exporting sync logs
 
