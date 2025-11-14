@@ -3,7 +3,7 @@ nav_title: "고급 푸시 캠페인 설정"
 article_title: 고급 푸시 캠페인 설정
 page_order: 5
 page_layout: reference
-description: "이 참조 문서에서는 우선 순위, 커스텀 URL, 전달 옵션 등과 같은 고급 푸시 캠페인 설정에 대해 다룹니다."
+description: "이 참고 문서에서는 우선순위, 커스텀 URL, 전달 옵션 등과 같은 몇 가지 고급 푸시 캠페인 설정에 대해 설명합니다."
 platform: Android
 channel:
   - push
@@ -14,165 +14,165 @@ tool:
 
 # 고급 푸시 캠페인 설정
 
-> Android 및 Fire OS 푸시 알림을 Braze 대시보드를 통해 보낼 때 사용할 수 있는 고급 설정이 많이 있습니다. 이 기사에서는 이러한 기능과 성공적으로 사용하는 방법에 대해 설명합니다.
+> Braze 대시보드를 통해 전송되는 Android 및 Fire OS 푸시 알림에 대해 다양한 고급 설정을 사용할 수 있습니다. 이 문서에서는 이러한 기능과 이를 성공적으로 사용하는 방법에 대해 설명합니다.
 
 ## 알림 ID {#notification-id}
 
-알림 ID는 메시징 서비스가 해당 ID의 최신 메시지만 존중하도록 알리는 메시지 범주의 고유 식별자입니다. 알림 ID를 설정하면 오래되고 관련 없는 메시지 더미가 아닌 최신의 관련 메시지만 보낼 수 있습니다.
+알림 ID는 선택한 메시지 카테고리에 대한 고유 식별자로, 메시징 서비스에서 해당 ID의 가장 최근 메시지만 존중하도록 알려주는 역할을 합니다. 알림 ID를 설정하면 오래되고 관련성이 없는 메시지가 쌓이는 대신 가장 최근의 관련성 있는 메시지만 보낼 수 있습니다.
 
-알림 ID를 할당하려면 ID를 추가하려는 푸시의 작성 페이지로 이동하여 **설정** 탭을 선택하세요. **알림 ID** 섹션에 정수를 입력하세요. 이 알림을 발행한 후 업데이트하려면 이전에 사용한 동일한 ID로 다른 알림을 보내세요.
+알림 ID를 할당하려면 ID를 추가하려는 푸시의 작성 페이지로 이동하여 **설정** 탭을 선택합니다. **알림 ID** 섹션에 정수를 입력합니다. 알림을 발행한 후 이 알림을 업데이트하려면 이전에 사용한 것과 동일한 ID로 다른 알림을 보내세요.
 
-![Notification ID field.]({% image_buster /assets/img_archive/notification_ids.png %}){: style="max-width:60%;" }
+\![알림 ID 필드.]({% image_buster /assets/img_archive/notification_ids.png %}){: style="max-width:60%;" }
 
-## Time to live (TTL) {#ttl}
+## 유지 시간(TTL) {#ttl}
 
-The **Time to Live** field allows you to set a custom length of time to store messages with the push messaging service. If the device remains offline beyond the TTL, the message will expire and not be delivered.
+**유지 시간** 필드에서는 푸시 메시징 서비스에 메시지를 저장할 커스텀 기간을 설정할 수 있습니다. 기기가 TTL 이후에도 오프라인 상태로 유지되면 메시징이 만료되어 전달되지 않습니다.
 
-To edit the time to live for your Android push, go to the composer and select the **Settings** tab. Find the **Time to Live** field and enter a value in days, hours, or seconds.
+Android 푸시의 유지 시간을 편집하려면 작성기로 이동하여 **설정** 탭을 선택합니다. **유지 시간** 필드를 찾아 일, 시간 또는 초 단위로 값을 입력합니다.
 
-The default values for time to live are defined by your admin on the [Push Settings]({{site.baseurl}}/user_guide/administrative/app_settings/push_settings/) page. By default, Braze sets Push TTL to the maximum value for each push messaging service. While default TTL settings apply globally, you can override them at the message level during campaign creation. This is helpful when different campaigns require varying urgency or delivery windows.
+유지 시간의 기본값은 [푸시 설정]({{site.baseurl}}/user_guide/administrative/app_settings/push_settings/) 페이지에서 관리자가 정의합니다. 기본적으로 Braze는 각 푸시 메시징 서비스에 대해 푸시 TTL을 최대값으로 설정합니다. 기본값 TTL 설정은 전역적으로 적용되지만, 캠페인을 만드는 동안 메시지 수준에서 이를 재정의할 수 있습니다. 이는 캠페인마다 긴급성이나 전달 기간이 다를 때 유용합니다.
 
-For example, let's say your app hosts a weekly trivia contest. You send a push notification an hour before it starts. By setting the TTL to 1 hour, you make sure that users who open the app after the contest starts won’t receive a notification about an event that has already begun.
+예를 들어 앱에서 매주 퀴즈 콘테스트를 개최한다고 가정해 보겠습니다. 시작 한 시간 전에 푸시 알림을 보냅니다. TTL을 1시간으로 설정하면 콘테스트가 시작된 후 앱을 여는 사용자에게는 이미 시작된 이벤트에 대한 알림을 받지 않도록 할 수 있습니다.
 
 {% details Best practices %}
 
-#### When to use shorter TTL
+#### 짧은 TTL을 사용해야 하는 경우
 
-Shorter TTLs make sure users receive timely notifications for events or promotions that quickly lose relevance. For example:
+TTL을 짧게 설정하면 관련성이 빠르게 사라지는 이벤트나 프로모션에 대한 알림을 적시에 사용자에게 전달할 수 있습니다. 예를 들어
 
-- **Retail:** Sending a push for a flash sale that ends in 2 hours (TTL: 1–2 hours)
-- **Food delivery:** Notifying users when their order is nearby (TTL: 10–15 minutes)
-- **Transportation apps:** Sharing ride arrival updates (TTL: a few minutes)
-- **Event reminders:** Notifying users when a webinar is starting soon (TTL: under 1 hour)
+- **리테일:** 2시간 후에 종료되는 반짝 세일에 대한 푸시 보내기(TTL: 1-2시간)
+- **음식 배달:** 주문이 근처에 있을 때 사용자에게 알림(TTL: 10-15분)
+- **교통 앱:** 차량 서비스 도착 업데이트 공유(TTL: 몇 분)
+- **이벤트 알림:** 웨비나가 곧 시작될 때 사용자에게 알림(TTL: 1시간 미만)
 
-#### When to avoid shorter TTL
+#### 짧은 TTL을 피해야 할 때
 
-- If your campaign’s message remains relevant for several days or weeks, such as subscription renewal reminders or ongoing promotions.
-- When maximizing reach is more important than urgency, like with app update announcements or feature promotions.
+- 구독 갱신 알림이나 진행 중인 프로모션과 같이 캠페인 메시지가 며칠 또는 몇 주 동안 관련성이 유지되는 경우.
+- 앱 업데이트 공지나 기능 프로모션과 같이 긴급성보다 도달 범위를 극대화하는 것이 더 중요한 경우.
 
 {% enddetails %}
 
-## Firebase 메시징 전달 우선순위 {#fcm-priority}
+## Firebase 메시징 전달 우선 순위 {#fcm-priority}
 
-**Firebase 메시징 전송 우선순위** 필드를 통해 푸시 전송 우선순위를 "일반" 또는 "높음"으로 설정하여 Firebase 클라우드 메시징에 전송할지 여부를 제어할 수 있습니다. This setting determines how quickly messages are delivered and how they affect device battery life.
+**Firebase 메시징 전달 우선순위** 필드를 사용하면 푸시 전송 우선순위를 "일반" 또는 "높음"으로 설정하여 Firebase 클라우드 메시징에 전송할지 여부를 제어할 수 있습니다. 이 설정은 메시징이 전달되는 속도와 메시징이 기기의 배터리 수명에 미치는 영향을 결정합니다.
 
-| 우선순위 | 설명 | Best for |
+| 우선순위 | 설명 | 최상의 대상 |
 |---------|-------------|----------|
-| Normal | Battery-optimized delivery that may be delayed to conserve battery | Non-urgent content, promotional offers, news updates |
-| 높음 | Immediate delivery with higher battery consumption | Time-sensitive notifications, critical alerts, live event updates, account alerts, breaking news, or urgent reminders |
+| 보통 | 배터리 절약을 위해 지연될 수 있는 배터리 최적화 배달 | 긴급하지 않은 콘텐츠, 프로모션 혜택, 뉴스 업데이트 |
+| 높음 | 더 높은 배터리 소비량으로 즉각적인 전달 | 시간에 민감한 알림, 중요 알림, 실시간 이벤트 업데이트, 계정 알림, 속보 또는 긴급 리마인더 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-#### Considerations
+#### 고려 사항
 
-- **Default setting**: You can set a default FCM priority for all Android campaigns in your [Push Settings]({{site.baseurl}}/user_guide/administrative/app_settings/push_settings/). This campaign-level setting will override the default if needed.
-- **Deprioritization**: If FCM detects that your app frequently sends high-priority messages that don't result in user-visible notifications or user engagement, those messages may be automatically deprioritized to normal priority.
-- **Battery impact**: High-priority messages wake sleeping devices more aggressively and consume more battery. Use this priority judiciously.
+- **기본값 설정입니다**: [푸시 설정에서]({{site.baseurl}}/user_guide/administrative/app_settings/push_settings/) 모든 Android 캠페인에 대한 기본값 FCM 우선 순위를 설정할 수 있습니다. 이 캠페인 수준 설정은 필요한 경우 기본값을 재정의합니다.
+- **우선순위** 지정: 앱에서 사용자에게 표시되는 알림이나 사용자 참여를 유도하지 않는 우선순위가 높은 메시지를 자주 보내는 것을 FCM이 감지하면 해당 메시지의 우선순위가 자동으로 일반 우선순위로 내려갈 수 있습니다.
+- **배터리 충격**: 우선순위가 높은 메시지는 절전 모드인 기기를 더 적극적으로 깨우고 배터리를 더 많이 소모합니다. 이 우선순위는 신중하게 사용하세요.
 
-For more detailed information on message handling and deprioritization, see [FCM documentation](https://firebase.google.com/docs/cloud-messaging/concept-options#setting-the-priority-of-a-message) and [Message handling and deprioritization on Android](https://firebase.google.com/docs/cloud-messaging/android/message-priority#deprioritize).
+메시지 처리 및 우선순위 지정 해제에 대한 자세한 내용은 [FCM 설명서](https://firebase.google.com/docs/cloud-messaging/concept-options#setting-the-priority-of-a-message) 및 [Android에서 메시지 처리 및 우선순위 지정](https://firebase.google.com/docs/cloud-messaging/android/message-priority#deprioritize) 해제를 참조하세요.
 
 ## 요약 텍스트
 
-The summary text allows you to set additional text in the expanded notification view. 알림에 이미지가 포함된 경우 캡션으로도 사용됩니다.
+요약 텍스트를 사용하면 확장된 알림 보기에서 추가 텍스트를 설정할 수 있습니다. 이미지가 포함된 알림의 캡션 역할도 합니다.
 
-![An Android message with the title "This is the title for the notification." and summary text "This is the summary text for the notification."]({% image_buster /assets/img/android/push/collapsed-android-notification.png %}){: style="max-width:65%;"}
+"이것은 알림의 제목입니다."라는 제목과 "이것은 알림의 요약 텍스트입니다."라는 요약 텍스트가 포함된 Android 메시지.]({% image_buster /assets/img/android/push/collapsed-android-notification.png %}){: style="max-width:65%;"}
 
-요약 텍스트는 확장된 보기에서 메시지 본문 아래에 표시됩니다. 
+요약 텍스트는 확장 보기에서 메시지 본문 아래에 표시됩니다. 
 
-![An Android message with the title "This is the title for the notification." and summary text "This is the summary text for the notification."]({% image_buster /assets/img/android/push/expanded-android-notification.png %}){: style="max-width:65%;"}
+"이것은 알림의 제목입니다."라는 제목과 "이것은 알림의 요약 텍스트입니다."라는 요약 텍스트가 포함된 Android 메시지.]({% image_buster /assets/img/android/push/expanded-android-notification.png %}){: style="max-width:65%;"}
 
-푸시 알림에 이미지가 포함된 경우, 메시지 텍스트는 축소된 보기에서 표시되며, 요약 텍스트는 알림이 확장될 때 이미지 캡션으로 표시됩니다. 
+이미지가 포함된 푸시 알림의 경우 메시지 텍스트는 축소된 보기에 표시되며, 알림을 펼치면 요약 텍스트가 이미지 캡션으로 표시됩니다. 
 
 ## 커스텀 URI
 
-**커스텀 URI** 기능을 사용하면 알림을 클릭할 때 이동할 웹 URL 또는 Android 리소스를 지정할 수 있습니다. 커스텀 URI가 지정되지 않은 경우 알림을 클릭하면 사용자가 앱으로 이동합니다. 커스텀 URI를 사용하여 앱 내부에서 딥 링크를 만들 수 있을 뿐만 아니라 앱 외부에 존재하는 리소스로 사용자를 직접 안내할 수도 있습니다. This can be specified via our [Messaging API]({{site.baseurl}}/api/endpoints/messaging/) or in the **Compose** tab of the the push composer.
+**커스텀 URI** 기능을 사용하면 알림을 클릭할 때 이동할 웹 URL 또는 Android 리소스를 지정할 수 있습니다. 커스텀 URI를 지정하지 않은 경우 알림을 클릭하면 사용자가 앱으로 이동합니다. 커스텀 URI를 사용하여 앱 내부로 딥링킹할 수 있을 뿐만 아니라 앱 외부에 존재하는 리소스로도 사용자를 안내할 수 있습니다. 이는 [메시지 API를]({{site.baseurl}}/api/endpoints/messaging/) 통해 또는 푸시 작성기의 **작성** 탭에서 지정할 수 있습니다.
 
-![Custom URI field.]({% image_buster /assets/img_archive/deep_link.png %}){: style="max-width:60%;"}
+\![커스텀 URI 필드.]({% image_buster /assets/img_archive/deep_link.png %}){: style="max-width:60%;"}
 
-## 알림 표시 우선순위
+## 알림 표시 우선 순위
 
 {% alert important %}
-알림 표시 우선순위 설정은 Android O 이상을 실행하는 기기에서는 더 이상 사용되지 않습니다. 최신 장치의 경우 [알림 채널 구성](https://developer.android.com/training/notify-user/channels#importance)을 통해 우선 순위를 설정하십시오.
+알림 표시 우선순위 설정은 더 이상 Android O 이상을 실행하는 기기에서 사용되지 않습니다. 최신 기기의 경우 [알림 채널 구성을](https://developer.android.com/training/notify-user/channels#importance) 통해 우선순위를 설정하세요.
 {% endalert %}
 
-푸시 알림의 우선순위 수준은 다른 알림에 비해 알림 트레이에 표시되는 방식에 영향을 미칩니다. 또한 우선순위가 일반 이하인 메시지는 배터리 수명을 보존하기 위해 지연 시간이 약간 더 길어지거나 일괄 발송되는 반면, 우선순위가 높은 메시지는 항상 즉시 발송되므로 전송 속도와 방식에도 영향을 줄 수 있습니다.
+푸시 알림의 우선순위 수준은 다른 알림과 비교하여 알림 트레이에 알림이 표시되는 방식에 영향을 줍니다. 또한 일반 및 우선순위가 낮은 메시지는 배터리 수명을 보존하기 위해 지연 시간이 약간 더 길거나 일괄적으로 전송되는 반면 우선순위가 높은 메시지는 항상 즉시 전송되므로 전달 속도와 방식에 영향을 줄 수 있습니다.
 
-이 기능은 메시지의 중요도나 긴급성에 따라 메시지를 구분하는 데 유용합니다. 예를 들어, 위험한 도로 상태에 대한 알림은 높은 우선순위를 받을 좋은 후보가 될 수 있지만, 진행 중인 세일에 대한 알림은 낮은 우선순위를 받아야 합니다. 사용자가 받은편지함에서 항상 최상위 자리를 차지하거나 다른 활동을 방해하는 것은 부정적인 영향을 미칠 수 있으므로, 방해 우선순위를 사용하는 것이 실제로 필요한지 여부를 고려해야 합니다.
+이 기능은 메시징이 얼마나 중요하거나 시간에 민감한지에 따라 메시지를 구분하는 데 유용합니다. 예를 들어, 위험한 도로 상황에 대한 알림은 우선순위가 높은 반면, 진행 중인 세일에 대한 알림은 우선순위가 낮아야 합니다. 사용자의 받은편지함에서 지속적으로 최상위 자리를 차지하거나 다른 활동을 방해할 경우 부정적인 영향을 미칠 수 있으므로 알림을 보내는 데 방해가 되는 우선순위를 사용하는 것이 실제로 필요한지 여부를 고려해야 합니다.
 
-Android O에서 알림 우선순위는 알림 채널의 속성이 되었습니다. 채널의 구성 중 우선순위를 정의하려면 개발자와 협력해야 하며, 알림 소리를 보낼 때 적절한 채널을 선택하려면 대시보드를 사용해야 합니다. O 이전의 Android 버전을 실행하는 기기의 경우, Braze 대시보드 및 메시징 API를 통해 Android 및 FireOS 알림의 우선순위를 지정할 수 있습니다.
+Android O에서는 알림 우선 순위가 알림 채널의 속성이 되었습니다. 개발자와 협력하여 구성 중에 채널의 우선 순위를 정의한 다음 대시보드를 사용하여 알림음을 보낼 때 적절한 채널을 선택해야 합니다. Android O 이전 버전을 실행하는 기기의 경우, Braze 대시보드 및 메시징 API를 통해 Android 및 Fire OS 알림의 우선순위를 지정할 수 있습니다.
 
-To message your full user base with a specific priority, we recommend that you indirectly specify the priority through [notification channel configuration](https://developer.android.com/training/notify-user/channels#importance) (to target O+ devices) and send the individual priority from the dashboard (to target <O devices).
+전체 사용자 기반에 특정 우선순위를 지정하여 메시지를 보내려면 [알림 채널 구성을](https://developer.android.com/training/notify-user/channels#importance) 통해 간접적으로 우선순위를 지정하고(O+ 기기 타겟팅), 대시보드에서 개별 우선순위를 전송하는 것이 좋습니다(<O 기기 타겟팅).
 
-Android 또는 Fire OS 푸시 알림에 설정할 수 있는 우선 순위 수준에 대한 다음 표를 참조하십시오:
+Android 또는 Fire OS 푸시 알림에서 설정할 수 있는 우선순위 수준은 다음 표를 참조하세요:
 
-| 우선순위 | 설명| `priority` 값 (API 메시지용) |
+| 우선순위 | 설명| `priority` 값(API 메시징의 경우) |
 |------|-----------|----------------------------|
-| 최대 | 긴급하거나 시간에 민감한 메시지. | `2` |
-| 높음 | 친구의 새 메시지와 같은 중요한 커뮤니케이션. | `1` |
-| 기본값 | 대부분의 알림. 다른 우선순위 유형 중 어느 것에도 명시적으로 해당되지 않는 경우 메시지를 사용하세요. | `0` |
-| 낮음 | 사용자가 알고 싶어하는 정보이지만 즉각적인 조치가 필요하지는 않습니다. | `-1`|
-| 최소 | 상황별 또는 배경 정보. | `-2`|
+| 최대 | 긴급하거나 시간이 촉박한 메시지. | `2` |
+| 높음 | 친구가 보낸 새 메시지와 같은 중요한 커뮤니케이션. | `1` |
+| 기본값 | 대부분의 알림. 메시징이 다른 우선순위 유형에 명시적으로 해당하지 않는 경우에 사용합니다. | `0` |
+| 낮음 | 사용자가 알기를 원하지만 즉각적인 조치가 필요하지 않은 정보입니다. | `-1`|
+| Min | 상황별 또는 배경 정보. | `-2`|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-For more information, refer to Google's documentation on [Android notifications](http://developer.android.com/design/patterns/notifications.html).
+자세한 내용은 [Android 알림에](http://developer.android.com/design/patterns/notifications.html) 대한 Google 설명서를 참조하세요.
 
 ## 푸시 카테고리
 
-Android 푸시 알림은 알림이 미리 정의된 범주에 속하는지 여부를 지정할 수 있는 옵션을 제공합니다. Android 시스템 UI는 이 범주를 사용하여 사용자 알림 트레이에서 알림을 배치할 위치에 대한 순위 지정 또는 필터링 결정을 내릴 수 있습니다.
+Android 푸시 알림은 알림이 미리 정의된 카테고리에 해당하는지 여부를 지정할 수 있는 옵션을 제공합니다. Android 시스템 UI는 이 카테고리를 사용하여 사용자의 알림 트레이에서 알림을 배치할 위치에 대한 순위 또는 필터링 결정을 내릴 수 있습니다.
 
-![Settings tab with the Category set to None, which is the default setting.]({% image_buster /assets/img_archive/braze_category.png %}){: style="max-width:60%;"}
+설정 탭에서 카테고리를 기본값인 없음으로 설정합니다.]({% image_buster /assets/img_archive/braze_category.png %}){: style="max-width:60%;"}
 
 | 카테고리 | 설명 |
 |---|-------|
-| 없음 | 기본값 옵션. |
-| 경보 | 알람 또는 타이머. |
-| 호출 | 수신 전화(음성 또는 비디오) 또는 유사한 동기식 통신 요청. |
-| 이메일 | 비동기 대량 메시지 (이메일). |
+| 없음 | 기본값 옵션입니다. |
+| 알람 | 알람 또는 타이머. |
+| 통화 | 수신 전화(음성 또는 비디오) 또는 이와 유사한 동기식 통신 요청. |
+| 이메일 | 비동기 대량 메시지(이메일). |
 | 오류 | 백그라운드 작업 또는 인증 상태에 오류가 발생했습니다. |
 | 이벤트 | 캘린더 이벤트. |
-| 메시지 | 수신된 직접 메시지 (SMS, 인스턴트 메시지 등). |
-| 진행률 | 오래 실행되는 백그라운드 작업의 진행 상황. |
-| 프로모션 | 홍보 또는 광고. |
-| 추천 | 특정하고 시기적절한 단일 항목에 대한 추천. |
-| 리마인더 | 사용자 예약 알림. |
-| 서비스 | 백그라운드 서비스 실행 표시. |
+| 메시지 | 수신 쪽지(SMS, 인스턴트 메시지 등). |
+| 진행 상황 | 장기 실행 백그라운드 작업의 진행 상황입니다. |
+| 프로모션 | 프로모션 또는 광고. |
+| 권장 사항 | 한 가지에 대한 구체적이고 시의적절한 권장 사항입니다. |
+| 알림 | 사용자가 예약한 알림. |
+| 서비스 | 실행 중인 백그라운드 서비스 표시. |
 | 소셜 | 소셜 네트워크 또는 공유 업데이트. |
-| 상태 | 기기 또는 상황별 상태에 대한 진행 중인 정보. |
-| 시스템 | 시스템 또는 기기 상태 업데이트. 시스템 사용을 위해 예약됨. |
-| 이동 | 재생을 위한 미디어 전송 제어. |
+| 상태 | 기기 또는 상황별 상태에 대한 지속적인 정보. |
+| 시스템 | 시스템 또는 기기 상태 업데이트. 시스템 사용을 위해 예약되었습니다. |
+| 운송 | 재생을 위한 미디어 전송 제어. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 푸시 가시성
 
-Android 푸시 알림은 사용자의 잠금 화면에 알림이 어떻게 나타나는지 결정하는 선택적 필드를 제공합니다. 다음 표에서 가시성 옵션 및 설명을 참조하십시오.
+Android 푸시 알림은 사용자의 잠금 화면에 알림이 표시되는 방식을 결정할 수 있는 선택적 필드를 제공합니다. 표시 여부 옵션 및 설명은 다음 표를 참조하세요.
 
 | 가시성 | 설명 |
 |---|-----|
-| 공개 | 잠금 화면에 알림이 나타납니다 |
-| 비공개 | 알림이 "내용 숨김" 메시지로 표시됩니다 |
-| 비밀 | 알림이 잠금 화면에 표시되지 않습니다 |
+| 공개 | 잠금 화면에 알림 표시 |
+| 비공개 | 알림은 "콘텐츠 숨김"이라는 메시지와 함께 표시됩니다. |
+| 비밀 | 잠금 화면에 알림이 표시되지 않음 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-또한, Android 사용자는 기기의 알림 개인 정보 설정을 변경하여 잠금 화면에 푸시 알림이 나타나는 방식을 재정의할 수 있습니다. 이 설정은 푸시 알림의 가시성을 무시합니다.
+또한 Android 사용자는 기기의 알림 개인정보 보호 설정을 변경하여 잠금 화면에 푸시 알림이 표시되는 방식을 재정의할 수 있습니다. 이 설정은 푸시 알림의 가시성을 재정의합니다.
 
-![Dashboard push priority location with Set Visibility enabled and set to Private.]({% image_buster /assets/img_archive/braze_visibility.png %}){: style="float:right;max-width:50%;margin-left:15px;"}
+공개 설정이 인에이블먼트되고 비공개로 설정된 대시보드 푸시 우선 순위 위치.]({% image_buster /assets/img_archive/braze_visibility.png %}){: style="float:right;max-width:50%;margin-left:15px;"}
 
-표시 여부와 관계없이 기기의 알림 개인 정보 설정이 **모든 콘텐츠 표시**(기본값)로 설정된 경우 모든 알림이 사용자의 잠금 화면에 표시됩니다. 마찬가지로, 알림 개인 정보가 **알림 표시 안 함**으로 설정된 경우 잠금 화면에 알림이 표시되지 않습니다. 가시성은 알림 개인 정보 보호 설정이 **민감한 콘텐츠 숨기기**로 설정된 경우에만 영향을 미칩니다.
+기기의 알림 개인정보 보호 설정이 **모든 콘텐츠 표시** (기본값)인 경우 공개 여부와 관계없이 모든 알림이 사용자의 잠금 화면에 표시됩니다. 마찬가지로 알림 개인정보 보호가 알림 **표시 안 함**으로 설정되어 있으면 잠금 화면에 알림이 표시되지 않습니다. 공개 여부는 알림 개인정보 보호가 **민감한 콘텐츠 숨기기로** 설정된 경우에만 적용됩니다.
 
-가시성은 Android Lollipop 5.0.0 이전 장치에는 영향을 미치지 않으며, 이 기기에서는 모든 알림이 표시됩니다.
+표시 여부는 Android 롤리팝 5.0.0 이전 기기에는 적용되지 않으므로 이러한 기기에는 모든 알림이 표시됩니다.
 
-Refer to our [Android documentation](https://developer.android.com/guide/topics/ui/notifiers/notifications) for more information.
+자세한 내용은 [Android 설명서를](https://developer.android.com/guide/topics/ui/notifiers/notifications) 참조하세요.
 
-## 알림음
+## 알림 소리
 
-Android O에서 알림 소리는 알림 채널의 속성이 되었습니다. 채널의 구성 중에 소리를 정의하기 위해 개발자와 협력해야 하며, 알림을 보낼 때 적절한 채널을 선택하기 위해 대시보드를 사용해야 합니다.
+Android O에서는 알림 소리가 알림 채널의 속성이 되었습니다. 개발자와 협력하여 채널을 구성하는 동안 채널의 사운드를 정의한 다음 대시보드를 사용하여 알림을 보낼 때 적절한 채널을 선택해야 합니다.
 
-Android O 이전 버전의 Android를 실행하는 기기에서는 Braze가 대시보드 컴포저를 통해 개별 푸시 메시지의 소리를 설정할 수 있도록 합니다. 기기에서 로컬 사운드 리소스를 지정하면 됩니다(예: `android.resource://com.mycompany.myapp/raw/mysound`). 
+Android O 이전 버전의 Android를 실행하는 기기의 경우, Braze에서는 대시보드 작성기를 통해 개별 푸시 메시지의 사운드를 설정할 수 있습니다. 기기에 로컬 사운드 리소스를 지정하면 됩니다(예: `android.resource://com.mycompany.myapp/raw/mysound`). 
 
-이 필드에서 **기본값**을 선택하면 기기에서 기본 알림 소리가 재생됩니다. This can be specified via our [Messaging API]({{site.baseurl}}/api/endpoints/messaging/) or in the **Settings** in the push composer.
+이 필드에서 **기본값을** 선택하면 기기에서 기본값 알림음이 재생됩니다. 이는 [메시지 API를]({{site.baseurl}}/api/endpoints/messaging/) 통해 또는 푸시 작성기의 **설정에서** 지정할 수 있습니다.
 
-![The "Sound" field.]({% image_buster /assets/img_archive/sound_android.png %}){: style="float:right;max-width:50%;margin-left:15px;"}
+'사운드' 필드입니다.]({% image_buster /assets/img_archive/sound_android.png %}){: style="float:right;max-width:50%;margin-left:15px;"}
 
-다음으로, 전체 사운드 리소스 URI(예: `android.resource://com.mycompany.myapp/raw/mysound`)를 대시보드 프롬프트에 입력하세요.
+그런 다음 대시보드 프롬프트에 전체 사운드 리소스 URI(예: `android.resource://com.mycompany.myapp/raw/mysound`)를 입력합니다.
 
-To message your full user base with a specific sound, we recommend that you indirectly specify the sound through [notification channel configuration](https://developer.android.com/training/notify-user/channels) (to target O+ devices) and send the individual sound from the dashboard (to target <O devices).
+전체 사용자 기반에 특정 사운드로 메시지를 보내려면 [알림 채널 구성을](https://developer.android.com/training/notify-user/channels) 통해 간접적으로 사운드를 지정(O+ 기기 타겟팅)하고 대시보드에서 개별 사운드를 전송(<O 기기 타겟팅)하는 것이 좋습니다.
 
