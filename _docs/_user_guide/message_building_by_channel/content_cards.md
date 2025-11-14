@@ -21,7 +21,7 @@ guide_featured_list:
   link: /docs/user_guide/message_building_by_channel/content_cards/creative_details/
   image: /assets/img/braze_icons/brush-02.svg
 - name: Testing
-  link: /docs/user_guide/message_building_by_channel/content_cards/testing/
+  link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/
   image: /assets/img/braze_icons/beaker-02.svg
 - name: Reporting
   link: /docs/user_guide/message_building_by_channel/content_cards/reporting/
