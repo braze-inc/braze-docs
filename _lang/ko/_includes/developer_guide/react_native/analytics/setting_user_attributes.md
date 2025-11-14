@@ -6,7 +6,7 @@ Braze는 사용자에게 속성을 할당하는 방법을 제공합니다. 대�
 
 ### 기본 사용자 속성
 
-Braze에서 자동으로 수집한 사용자 속성을 설정하려면 SDK와 함께 제공되는 세터 메서드를 사용할 수 있습니다.
+Braze에서 자동으로 수집한 사용자 속성을 설정하려면 소프트웨어 개발 키트와 함께 제공되는 세터 메서드를 사용할 수 있습니다.
 
 ```javascript
 Braze.setFirstName("Name");
@@ -36,7 +36,7 @@ Braze.setCustomUserAttribute("attribute_key", "attribute_value", function(){
 });
 ```
 
-#### 사용자 지정 속성 설정 해제하기
+#### 커스텀 속성 설정 해제하기
 
 ```javascript
 Braze.unsetCustomUserAttribute("attribute_key", function(){
