@@ -70,6 +70,10 @@ Here's what you need to know about Banner dimensions and sizing:
 - The HTML will take up the full width of the container it's rendered in.
 - We recommend making a fixed dimension element and testing those dimensions in composer.
 
+## Banners vs Content Cards
+
+{% multi_lang_include content_cards_vs_banners_comparison.md %}
+
 ## Limitations
 
 Each workspace can support up to 200 active Banner campaigns. If this limit is reached, you'll need to [archive or deactivate]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/about_statuses/#changing-the-status) an existing campaign before creating a new one.

@@ -169,6 +169,10 @@ When a user is eligible for a card, it will appear in a carousel on whichever pa
 
 Because this is a custom implementation, you’ll need to work with your developers to build your own views to display the Content Cards. The default classic, image only, and captioned image cards aren't supported with this implementation.
 
+## Content Cards vs Banners
+
+{% multi_lang_include content_cards_vs_banners_comparison.md %}
+
 ## Integrating Content Cards
 
 Your developers will integrate Content Cards when they integrate the Braze SDK. For more details on how to integrate with Content Cards, refer to the developer guide articles for your platform:
