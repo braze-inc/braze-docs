@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Transifex
 
-> Transifex enables robust localization across your user base, no matter the language.
+> [Transifex](https://www.transifex.com/) enables robust localization across your user base, no matter the language.
 
 _This integration is maintained by Transifex._
 
