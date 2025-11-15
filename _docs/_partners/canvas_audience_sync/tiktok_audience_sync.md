@@ -42,6 +42,10 @@ You must ensure the following items are created, completed, and/or accepted befo
 
 ### Step 1: Connect to TikTok
 
+{% alert important %}
+You must have the ["Admin" permission]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#admin) to connect TikTok to your Braze account.
+{% endalert %}
+
 In the Braze dashboard, go to **Partner Integrations** > **Technology Partners** and select **TikTok**. Under TikTok Audience Sync, select **Connect TikTok**.
 
 ![TikTok technology page in Braze includes an Overview section and TikTok Audience Sync section with the Connected TikTok button.]({% image_buster /assets/img/tiktok/tiktok1.png %}){: style="max-width:75%;"}
