@@ -103,7 +103,7 @@ The following table shows the filters available for segmenting users by custom e
 
 Braze notes the number of times custom events have occurred and the last time they were performed by each user for segmentation. View these analytics by going to **Analytics** > **Custom Events Report**.
 
-On the **Custom Events Report** page in the dashboard, you can view in aggregate how often each custom event occurs. The gray lines overlayed on the time series indicate the last time a campaign was sent, which is useful for viewing how your campaigns affected custom event activity.
+On the **Custom Events Report** page in the dashboard, you can view in aggregate how often each custom event occurs. The gray lines overlaid on the time series indicate the last time a campaign was sent, which is useful for viewing how your campaigns affected custom event activity.
 
 ![Custom event counts graph on the Custom Events page in the dashboard showing trends for a custom event]({% image_buster /assets/img_archive/custom_event_analytics_example.png %} "custom_event_analytics_example.png")
 
@@ -215,7 +215,7 @@ The event property segmentation filters include:
 - Has made any purchases with property A with value B, X times in the last Y days.
 - Adds the ability to segment within 1 to 30 days.
 
-![A filter group that has 'Abandoned Cart' with property 'number of itmes' and value 2 more than 1 time in the last 30 calendar days.]({% image_buster /assets/img/nested_object3.png %})
+![A filter group that has 'Abandoned Cart' with property 'number of items' and value 2 more than 1 time in the last 30 calendar days.]({% image_buster /assets/img/nested_object3.png %})
 
 Data is only logged for a given event property after it has been enabled by your customer success manager, and event properties are only available from that date moving forward.
 

@@ -27,7 +27,7 @@ By default, Braze will collect the following device-level properties to allow de
 - `IS_BACKGROUND_RESTRICTED`
 - `LOCALE`
 - `MODEL`
-- `NOTIFICIATION_ENABLED`
+- `NOTIFICATION_ENABLED`
 - `RESOLUTION`
 - `TIMEZONE`
 

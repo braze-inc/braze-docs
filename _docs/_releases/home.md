@@ -688,7 +688,7 @@ You can [embed videos]({{site.baseurl}}/user_guide/message_building_by_channel/w
 
 #### Stripe - eCommerce
 
-The Braze and [Stripe]({{site.baseurl}}/partners/stripe) intergation allows you to trigger messaging in Braze based on Stripe events such as trial started, subscription activated, subscription cancellation, and more.
+The Braze and [Stripe]({{site.baseurl}}/partners/stripe) integration allows you to trigger messaging in Braze based on Stripe events such as trial started, subscription activated, subscription cancellation, and more.
 
 ### SDK updates
 
