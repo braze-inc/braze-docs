@@ -195,7 +195,7 @@ Replace `OTHERLEVELS_PROJECT_KEY` with the project key supplied to you by OtherL
 3. In the next field **URL file format**, select **MP4** from the dropdown
 4. The remainder of the campaign such as the message content, schedule, target audience and conversions should be configured based on your desired preferences.
 
-![Example Asset fields for Connected Content.]({% image_buster /assets/img/OL/example_asset.png %})
+![Example Asset fields for Connected Content.]({% image_buster assets/img/otherlevels/1.png %})
 
 <!-- An optional section you can use to outline additional customization steps. It's important to be concise and only outline the minimum necessary steps. -->
 ## Customizing the GenAI Video
