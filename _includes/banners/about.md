@@ -70,9 +70,9 @@ Here's what you need to know about Banner dimensions and sizing:
 - The HTML will take up the full width of the container it's rendered in.
 - We recommend making a fixed dimension element and testing those dimensions in composer.
 
-## Banners vs Content Cards
+## When to use Banners versus Content Cards
 
-{% multi_lang_include content_cards_vs_banners_comparison.md %}
+{% multi_lang_include content_cards_banners_comparison.md %}
 
 ## Limitations
 
