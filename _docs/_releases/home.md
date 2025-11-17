@@ -14,6 +14,8 @@ page_type: reference
 For more information on any of the updates listed on this page, contact your account manager or [open a support ticket]({{site.baseurl}}/user_guide/administrative/access_braze/support/). You can also check out our [SDK Changelogs]({{site.baseurl}}/developer_guide/changelogs) for more information about our monthly SDK releases, improvements, and breaking changes.
 {% endalert %}
 
+{% details November 11, 2025 %}
+
 ## November 11, 2025
 
 ### Data flexibility
@@ -141,6 +143,10 @@ The following SDK updates have been released. Breaking updates are listed below;
 - [Braze Swift SDK 13.3.0](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md)
 - [Web SDK 6.3.0](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md)
 - [Android SDK 40.0.0-40.0.2](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md)
+
+{% enddetails %}
+
+{% details October 14, 2025 %}
 
 ## October 14, 2025 release
 
@@ -295,6 +301,9 @@ The following SDK updates have been released. Breaking updates are listed below;
 - [Unity SDK 10.0.0](https://github.com/braze-inc/braze-unity-sdk/blob/master/CHANGELOG.md)
     - Updated the native iOS bridge [from Braze Swift SDK 12.0.0 to 13.2.0](https://github.com/braze-inc/braze-swift-sdk/compare/12.0.0...13.2.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed). This includes Xcode 26 support.
 
+{% enddetails %}
+{% details September 16, 2025 %}
+
 ## September 16, 2025 release
 
 ### Data flexibility
@@ -357,6 +366,9 @@ The following SDK updates have been released. Breaking updates are listed below;
 
 - [Braze Swift SDK 7.0.0](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md#1300)
   - Updates the Braze Swift SDK bindings to require releases from the `13.0.0+` SemVer denomination. This allows compatibility with any version of the Braze SDK from `13.0.0` up to, but not including, `14.0.0`.
+
+{% enddetails %}
+{% details August 19, 2025 %}
 
 ## August 19, 2025 release
 
@@ -464,6 +476,9 @@ The following SDK updates have been released. Breaking updates are listed below;
     - Updated the internal iOS implementation of `enableSdk` method to use `setEnabled`: instead of `_requestEnableSDKOnNextAppRun`, which was deprecated in the Swift SDK.
     - Calling this method no longer requires the app to be re-launched to take effect. The SDK will now become enabled as soon as this method is executed.
     - Updated the native Android bridge from [Braze Android SDK `36.0.0` to `37.0.0`](https://github.com/braze-inc/braze-android-sdk/compare/v36.0.0...v37.0.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed).
+
+{% enddetails %}
+{% details July 22, 2025 %}
 
 ## July 22, 2025 release
 
@@ -587,6 +602,9 @@ The following SDK updates have been released. Breaking updates are listed below;
 - [Android SDK 37.0.0](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md)
 - [Swift SDK 12.0.1-12.1.0](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md)
 
+{% enddetails %}
+{% details June 24, 2025 %}
+
 ## June 24, 2025 release
 
 ### BrazeAI Decisioning Studio™
@@ -663,6 +681,9 @@ The following SDK updates have been released. Breaking updates are listed below;
     - Updated the native iOS bridge [from Braze Swift SDK 11.6.1 to 12.0.0](https://github.com/braze-inc/braze-swift-sdk/compare/11.6.1...12.0.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed).
 - [Segment Kotlin 4.0.0-4.0.1](https://github.com/braze-inc/braze-segment-kotlin/blob/4.0.0/CHANGELOG.md#400)
     - Updated Braze Android SDK [from 35.0.0 to 36.0.0](https://github.com/braze-inc/braze-android-sdk/compare/v35.0.0...v36.0.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed)
+
+{% enddetails %}
+{% details May 27, 2025 %}
 
 ## May 27, 2025 release
 
@@ -781,6 +802,9 @@ The following SDK updates have been released. Breaking updates are listed below;
     - This release reverts the increase to the minimum Android SDK version of the Braze Android SDK from API 21 to API 25 introduced in 34.0.0. This allows the SDK to once again be compiled into apps supporting as early as API 21. However, we are not reintroducing formal support for < API 25. Read more [here](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#3600).
     - Updates the native Android bridge from Braze Android SDK 35.0.0 to 36.0.0.
     - Updates the native iOS bridge from Braze Swift SDK 11.9.0 to 12.0.0.
+
+{% enddetails %}
+{% details April 29, 2025 %}
 
 ## April 29, 2025 release
 
@@ -916,3 +940,4 @@ The following SDK updates have been released. Breaking updates are listed below;
         - This allows compatibility with any version of the Braze SDK from `12.0.0` up to, but not including, `13.0.0`.
         - Refer to the changelog entry for [`12.0.0`](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md#1200) for more information on potential breaking changes.
 
+{% enddetails %}
