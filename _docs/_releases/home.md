@@ -1,58 +1,20 @@
 ---
 nav_title: Home
-article_title: Release Notes
-description: "Stay up-to-date on major product releases, ongoing product improvements, Braze partnerships, breaking SDK changes, and feature deprecations."
+article_title: What's new in Braze
+description: "Braze release notes are published monthly so you can stay up-to-date on major product releases, ongoing product improvements, Braze partnerships, breaking SDK changes, and feature deprecations."
 page_order: 0
 search_rank: 1
-page_type: landing
-layout: dev_guide
-
-guide_top_header: "Release notes"
-guide_top_text: "> Braze release notes are published monthly so you can stay up-to-date on major product releases, ongoing product improvements, Braze partnerships, breaking SDK changes, and feature deprecations."
-
-guide_featured_list:
-  - name: 2025
-    link: /docs/releases/2025/
-    image: /assets/img/braze_icons/calendar-check-02.svg
-  - name: 2024
-    link: /docs/releases/2024/
-    image: /assets/img/braze_icons/calendar-check-02.svg
-  - name: 2023
-    link: /docs/releases/2023/
-    image: /assets/img/braze_icons/calendar-check-02.svg
-  - name: 2022
-    link: /docs/releases/2022/
-    image: /assets/img/braze_icons/calendar-check-02.svg
-  - name: 2021
-    link: /docs/releases/2021/
-    image: /assets/img/braze_icons/calendar-check-02.svg
-  - name: 2020
-    link: /docs/releases/2020/
-    image: /assets/img/braze_icons/calendar-check-02.svg
-  - name: 2019
-    link: /docs/releases/2019/
-    image: /assets/img/braze_icons/calendar-check-02.svg
-  - name: 2018
-    link: /docs/releases/2018/
-    image: /assets/img/braze_icons/calendar-check-02.svg
-  - name: 2017
-    link: /docs/releases/2017/
-    image: /assets/img/braze_icons/calendar-check-02.svg
-  - name: 2016
-    link: /docs/releases/2016/
-    image: /assets/img/braze_icons/calendar-check-02.svg
-  - name: Deprecations
-    link: /docs/releases/deprecations/
-    image: /assets/img/braze_icons/calendar-minus-01.svg
-  - name: SDK Changelogs
-    link: /docs/developer_guide/changelogs/
-    image: /assets/img/braze_icons/file-code-01.svg
+page_type: reference
 
 ---
+
+# What's new in Braze
 
 {% alert tip %}
 For more information on any of the updates listed on this page, contact your account manager or [open a support ticket]({{site.baseurl}}/user_guide/administrative/access_braze/support/). You can also check out our [SDK Changelogs]({{site.baseurl}}/developer_guide/changelogs) for more information about our monthly SDK releases, improvements, and breaking changes.
 {% endalert %}
+
+## November 11, 2025
 
 ### Data flexibility
 
