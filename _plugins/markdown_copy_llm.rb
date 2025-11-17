@@ -289,7 +289,7 @@ module Jekyll
         !item.path.include?('_site/') &&
         !item.path.start_with?('_') &&
         %w[_includes _layouts _data _plugins].none? { |d| item.path.start_with?(d) } &&
-        #is_developer_guide?(item)
+
     end
 
     def self.markdown?(item, site)
