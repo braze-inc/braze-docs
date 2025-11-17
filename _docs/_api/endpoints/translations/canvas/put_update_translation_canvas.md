@@ -42,7 +42,7 @@ There are no path parameters for this endpoint.
 |`workflow_id` | Required | String | The ID of the Canvas. |
 |`step_id`| Required | String | The ID of your Canvas step. |
 |`message_variation_id`| Required | String | The ID of your message variation. |
-|`locale_id`| Required | String | The ID (uuid) of the locale. |
+|`locale_id`| Required | String | The ID (UUID) of the locale. |
 |`translation_map` | Required | Object | Object containing the new translations. | 
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 

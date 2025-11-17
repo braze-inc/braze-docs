@@ -34,7 +34,7 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 | Parameter     | Required | Data Type | Description                     |
 |---------------|----------|-----------|---------------------------------|
 | `template_id` | Required | String    | The ID for your email template. |
-| `locale_id`   | Optional | String    | The ID (uuid) of the locale.           |
+| `locale_id`   | Optional | String    | The ID (UUID) of the locale.           |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}
