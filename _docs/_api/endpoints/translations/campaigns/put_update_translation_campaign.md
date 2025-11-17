@@ -41,10 +41,13 @@ There are no path parameters for this endpoint.
 | --------- | ---------| --------- | ----------- |
 | `campaign_id` | Required | String | The ID of your campaign. |
 | `message_variation_id` | Required | String | The ID of your message variation. |
-| `locale_name` | Required | String | The name of the locale. |
+| `locale_id`| Required | String | The ID (UUID) of the locale. |
+| `translation_map` | Required | Object | Object containing the new translations. | 
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-Note all translation IDs are considered universal unique identifiers (UUIDs), which can be found in **Multi-Language Support** settings or in the GET request response.
+{% alert note %}
+All translation IDs are considered universal unique identifiers (UUIDs), which can be found in the GET endpoint's response.
+{% endalert %}
 
 ## Example request
 
@@ -52,7 +55,7 @@ Note all translation IDs are considered universal unique identifiers (UUIDs), wh
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
 {
-    "campaign_id": "e24404b3-3626-4de0-bdec-06935f3aa0ab", // CAMPAIGNS ONLY
+    "campaign_id": "e24404b3-3626-4de0-bdec-06935f3aa0ab",
     "message_variation_id": "f14404b3-3626-4de0-bdec-06935f3aa0ad",
     "locale_id": "h94404b3-3626-4de0-bdec-06935f3aa0ad",
     "translation_map": {

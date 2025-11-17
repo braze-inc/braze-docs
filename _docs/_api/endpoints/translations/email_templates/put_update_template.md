@@ -39,10 +39,12 @@ There are no path parameters for this endpoint.
 | --------- | ---------| --------- | ----------- |
 | `template_id` | Required | String | The ID of your email template. |
 | `locale_id` | Required | String | The ID of the locale. |
-| `translations` | Required | String | The map of the translations for your email template. |
+| `translations_map` | Required | String | The map of the translations for your email template. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-Note all translation IDs are considered universal unique identifiers (UUIDs), which can be found in **Multi-Language Support** settings or in the GET request response.
+{% alert note %}
+All translation IDs are considered universal unique identifiers (UUIDs), which can be found in the GET endpoint's response.
+{% endalert %}
 
 ## Example request
 
@@ -53,10 +55,10 @@ Authorization: Bearer YOUR-REST-API-KEY
     "template_id": "e24404b3-3626-4de0-bdec-06935f3aa0ab",
     "locale_id": "h94404b3-3626-4de0-bdec-06935f3aa0ad",
     "translation_map": {
-                "id_0": "¡Hola!",
-                "id_1": "Me llamo Jacky",
-                "id_2": "¿Dónde está la biblioteca?"
-            }
+        "id_0": "¡Hola!",
+        "id_1": "Me llamo Jacky",
+        "id_2": "¿Dónde está la biblioteca?"
+    }
 }
 ```
 
