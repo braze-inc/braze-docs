@@ -137,7 +137,7 @@ HTTP または HTTPS のリンクをディープリンクとして Braze で処�
 
 エディターのメッセージ・プレビュー・パネルには、メッセージに含まれるJavaScriptをレンダリングするリアルなプレビューが表示される。プレビューパネルから、ページネーションをクリックしたり、フォームやアンケートを送信したり、JavaScriptアニメーションを見たりして、カスタムメッセージをプレビューし、やりとりすることができる！
 
-\![画面をスワイプしてHTML プレビューを操作する。]({% image_buster /assets/img/iam-beta-javascript-preview.gif %})
+![画面をスワイプしてHTML プレビューを操作する。]({% image_buster /assets/img/iam-beta-javascript-preview.gif %})
 
 {% alert tip %}
 HTMLで使用している`brazeBridge` JavaScriptメソッドは、ダッシュボードでプレビューしている間はユーザー・プロフィールを更新しない。

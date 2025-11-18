@@ -31,7 +31,7 @@ Braze は、顧客インサイトおよび調査のプラットフォームで�
 
 調査プラットフォームである Typeform から調査の回答を受信するたびに、次のサンプルペイロードが送信されるとします。
 
-\![]({% image_buster /assets/img/data_transformation/data_transformation2.png %})
+![]({% image_buster /assets/img/data_transformation/data_transformation2.png %})
 
 {% tabs local %}
 {% tab Basic transformation %}

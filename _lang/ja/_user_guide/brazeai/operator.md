@@ -30,12 +30,12 @@ BrazeAI<sup>TM</sup> オペレータは現在、限定された機能を持つ�
 
 1. ユーザープロファイルの横にある**BrazeAI<sup>TM</sup>オペレータ**を選択します。
 
-\![ユーザープロファイルの横にあるBrazeAIオペレータアイコン。]({% image_buster /assets/img/operator/operator_profile.png %}){:style="max-width:60%"}
+![ユーザープロファイルの横にあるBrazeAIオペレータアイコン。]({% image_buster /assets/img/operator/operator_profile.png %}){:style="max-width:60%"}
 
 {: start="2"}
 2\.オペレータチャットパネルがスクリーンの右側に開封されます。
 
-\![オペレータ用チャットパネル。]({% image_buster /assets/img/operator/operator_panel.png %})
+![オペレータ用チャットパネル。]({% image_buster /assets/img/operator/operator_panel.png %})
 
 {% alert tip %}
 作業を続けている間は、パネルを最大化して読みやすくするか、または最小化してオペレータを使用可能にしてください。  
@@ -74,7 +74,7 @@ Operatorは、検索エンジンではなく、会話と考えてください。
 
 演算子は、**Reasoned**とラベル付けされた折りたたみ可能な部分に、その推論ステップsを表示します。ドロップダウンを選択してこれらのセクションを展開し、オペレータがどのように回答に到達したかを確認します。
 
-\![&quot のドロップダウン;Reasoned"オペレータの応答方法の詳細とともに展開されました。]({% image_buster /assets/img/operator/operator_reasoning.png %}){:style="max-width:60%"}
+![&quot のドロップダウン;Reasoned"オペレータの応答方法の詳細とともに展開されました。]({% image_buster /assets/img/operator/operator_reasoning.png %}){:style="max-width:60%"}
 
 ### 推奨アクション
 
