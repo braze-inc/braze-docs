@@ -52,8 +52,6 @@ All translation IDs are considered universal unique identifiers (UUIDs), which c
 ## Example request
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "campaign_id": "e24404b3-3626-4de0-bdec-06935f3aa0ab",
     "message_variation_id": "f14404b3-3626-4de0-bdec-06935f3aa0ad",

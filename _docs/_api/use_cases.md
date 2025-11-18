@@ -86,8 +86,6 @@ For the first task of auditing Canvases, use the [`/canvas/list` endpoint]({{sit
 
 {% details Here’s the response that the Siege Valley Health marketing team would receive. %}
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "canvases" : [
   	{
