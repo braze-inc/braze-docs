@@ -38,13 +38,21 @@ Brazeのリンク短縮サービスやクリックトラッキングサービス
 ## カスタムドメインを追加する
 
 1. Braze内の「**会社設定**」>「**SMS/RCSとメッセージングアプリのドメイン**」を開く。
+<<<<<<< HEAD
+!["SMS/RCSとメッセージングアプリのドメイン "のページには、いくつかのドメインがリストアップされている。]({% image_buster /assets/img/main_page.png %})
+=======
 \!["SMS/RCSとメッセージングアプリのドメイン "のページには、いくつかのドメインがリストアップされている。]({% image_buster /assets/img/main_page.png %})
+>>>>>>> main
 
 {: start="2"}
 2\.**Add Domainを**選択し、新しいカスタムドメインの設定を開始する。
 3\.購入したカスタムドメインをアプリ内の入力欄に入力し、既存の検証ロジックを使用して適切な書式を設定し、**次へを**選択して**送信する**。
 
+<<<<<<< HEAD
+![SMS/RCS and Messaging Apps Domains "ページの "Add Domain "ボタンをクリックする。]({% image_buster /assets/img/custom_domain_button.png %}){: style="max-width:70%;"}
+=======
 \![SMS/RCS and Messaging Apps Domains "ページの "Add Domain "ボタンをクリックする。]({% image_buster /assets/img/custom_domain_button.png %}){: style="max-width:70%;"}
+>>>>>>> main
 
 {: start="4"}
 4\.技術チーム（開発やITなど）に、表示されたCloudflare DNSレコードの詳細でDNS設定を更新してもらう。貴社のテクニカル・チームは、45日以内にこれらの詳細でDNSレコードを更新しなければならない。
@@ -52,7 +60,11 @@ Brazeのリンク短縮サービスやクリックトラッキングサービス
 
 Brazeは、およそ30分ごとにDNS設定をポーリングして更新をチェックする。
 
+<<<<<<< HEAD
+![DNSレコード」セクションで3つのステップを踏んでドメインの設定を完了する。]({% image_buster /assets/img/dns_record.png %})
+=======
 \![DNSレコード」セクションで3つのステップを踏んでドメインの設定を完了する。]({% image_buster /assets/img/dns_record.png %})
+>>>>>>> main
 
 {% alert note %}
 ドメインの進捗状況は自動的に保存される。フローを途中で終了する必要がある場合は、**SMS/RCS and Messaging Apps Domains**ページで保留中のドメインエントリを選択することで、後で再開することができる。
@@ -62,7 +74,11 @@ Brazeは、およそ30分ごとにDNS設定をポーリングして更新をチ�
 
 ドメインが認証されると、**SMS/RCSおよびメッセージングアプリのドメイン**ページのテーブルにカスタムドメインがステータスインジケータとともに表示される。複数のサブスクリプショングループ、ワークスペース、SMS、RCS、WhatsAppチャネルで、接続されたドメインをすぐに使用できる。
 
+<<<<<<< HEAD
+![カスタムドメインとステータスのリスト。]({% image_buster /assets/img/custom_domain_statuses.png %}){: style="max-width:60%;"}
+=======
 \![カスタムドメインとステータスのリスト。]({% image_buster /assets/img/custom_domain_statuses.png %}){: style="max-width:60%;"}
+>>>>>>> main
 
 ライブモニタリングにより、アクティブなドメインに問題が発生した場合、Brazeダッシュボードでアラートが表示されるため、カスタムリンクが引き続き使用できる。エラーが発生した場合は、アプリ内のエラー詳細を参照するか、Braze[サポートに]({{site.baseurl}}/braze_support/)問い合わせること。
 
@@ -70,11 +86,19 @@ Brazeは、およそ30分ごとにDNS設定をポーリングして更新をチ�
 
 カスタムドメインは設定後、1つまたは複数のSMS、RCS、WhatsAppサブスクリプショングループに割り当てることができる。
 
+<<<<<<< HEAD
+![リンク短縮ドメインを選択できるサブスクリプショングループの設定。]({% image_buster /assets/img/custom_domain.png %})
+
+リンク短縮をオンにして送信されたキャンペーンは、SMS、RCS、WhatsAppサブスクリプショングループに関連付けられた割り当てドメインを使用する。
+
+![メッセージ」ボックスのドメインとは異なる短縮リンクドメインでSMSメッセージ作成画面をプレビューする。]({% image_buster /assets/img/custom_domain2.png %})
+=======
 \![リンク短縮ドメインを選択できるサブスクリプショングループの設定。]({% image_buster /assets/img/custom_domain.png %})
 
 リンク短縮をオンにして送信されたキャンペーンは、SMS、RCS、WhatsAppサブスクリプショングループに関連付けられた割り当てドメインを使用する。
 
 \![メッセージ」ボックスのドメインとは異なる短縮リンクドメインでSMSメッセージ作成画面をプレビューする。]({% image_buster /assets/img/custom_domain2.png %})
+>>>>>>> main
 
 ## よくある質問
 

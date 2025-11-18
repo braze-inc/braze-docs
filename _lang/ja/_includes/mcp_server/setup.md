@@ -306,7 +306,7 @@ MCPクライアントを設定する際、APIキーの識別子とワークス�
 
 ### ステップ 5: テストプロンプトを送信する
 
-Braze MCPサーバーの設定が完了したら、MCPクライアントにテストプロンプトを送信してみる。その他の例やベストプラクティスについては、[Braze MCPサーバーの使用]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/usage/){% elsif.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/usage/){% endif %}.
+Braze MCPサーバーの設定が完了したら、MCPクライアントにテストプロンプトを送信してみる。その他の例やベストプラクティスについては、[Braze MCPサーバーの使用]]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/usage/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/usage/){% endif %}.
 
 {% tabs %}
 {% tab クロード %}
