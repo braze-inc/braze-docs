@@ -175,9 +175,9 @@ When segmenting with device-dependent filters (device model, device OS, and app 
 
 ### Push notifications
 
-You can specify that only one push notification is sent to each user. When [composing your message]({{ssite.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message#step-4-compose-your-push-message), select **Only send to the user’s last used device** under **Additional Settings**.
+You can specify that only one push notification is sent to each user. When [composing your message]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message#step-4-compose-your-push-message), select **Only send to the user’s last used device** under **Additional Settings**.
 
-!["Addional settings" with a checkbox for only sending to the user's last used device.]({% image_buster /assets/img_archive/send_to_last_device.png %}){: style="max-width:60%;"}
+!["Additional settings" with a checkbox for only sending to the user's last used device.]({% image_buster /assets/img_archive/send_to_last_device.png %}){: style="max-width:60%;"}
 
 ### Considerations
 

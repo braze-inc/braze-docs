@@ -17,7 +17,7 @@ toc_headers: h2
 
 ## Step 1: Choose where to build your message {#create-new-campaign-in-app}
 
-Not sure whether your message should be sent using a campaign or a Canvas? Campaigns are better for single, simple messaging campaigns, while Canvases are better for multi-step user journeys.
+Not sure whether your message should be sent using a campaign or a Canvas? Campaigns are better for single, targeted messaging campaigns, while Canvases are better for multi-step user journeys.
 
 {% tabs %}
 {% tab Campaign %}
@@ -397,7 +397,7 @@ Next, check out [In-app message reporting]({{site.baseurl}}/user_guide/message_b
 
 ### Active in-app message campaign limits
 
-Braze values reliability and speed. Just like we suggest you send only the data you need to Braze, we also recommend turning off any campaigns that are no longer adding any value to your brand.
+Braze values reliability and speed. We suggest you send only the data you need to Braze and turn off any campaigns that no longer add value to your brand.
 
 Processing action-based in-app message campaigns that are still in an active state but no longer sending messages or are no longer needed slows down the overall performance of the Braze services for you and other customers. This extra time needed to process these large numbers of idle campaigns means that any in-app messages will take longer to appear on the end-user's devices, which impacts the end user's experience.
 

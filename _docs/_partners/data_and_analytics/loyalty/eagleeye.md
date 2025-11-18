@@ -28,7 +28,7 @@ The Eagle Eye Connect is a bi-directional integration between Braze and AIR that
 
 | Requirement              | Description |
 |--------------------------|-------------|
-| Eagle Eye AIR account    | You need an active Eagle Eye AIR account to take advantage of this partnership. To get started, reach out to Eagle Eye’s Partnerships team at [partnerships@eagleeye.com](mailto:partnerships@eagleeye.com). |
+| Eagle Eye AIR account    | You need an active Eagle Eye AIR account to take advantage of this partnership. To get started, contact Eagle Eye’s Partnerships team at [partnerships@eagleeye.com](mailto:partnerships@eagleeye.com). |
 | Braze REST API key       | A Braze REST API key with `users.track` permissions. <br><br>This can be created in the Braze dashboard from **Settings > API Keys**. |
 | Braze REST endpoint      | [Your REST endpoint URL](https://www.braze.com/docs/api/basics/#endpoints). Your endpoint depends on the Braze URL for your instance. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
@@ -154,7 +154,7 @@ Also, add users to audiences and confirm rewards are issued in AIR.
 
 After testing is successful, the integration can go live to continuously send data to Braze. The same configuration steps are required for production environments in AIR and Braze
 
-Reach out to your Eagle Eye Customer Success Manager to have a resource assigned to you, to set up EE Connect.
+Contact your Eagle Eye Customer Success Manager to have a resource assigned to you, to set up EE Connect.
 
 ## Support
 

@@ -10,7 +10,7 @@ channel: push
 
 # アプリ内メッセージのプッシュプライマー
 
-\![ストリーミングアプリのプライマーアプリ内メッセージを押します。この通知は、「Movie Cannon からプッシュ通知を受け取りますか? 通知には新作映画やテレビ番組、その他のお知らせが含まれることがあり、いつでもオフにすることができます」というものです。]({% image_buster /assets/img_archive/push_primer_iam.png %}){: style="float:right;max-width:40%;margin-left:15px;border:none;"}
+![ストリーミングアプリのプライマーアプリ内メッセージを押します。この通知は、「Movie Cannon からプッシュ通知を受け取りますか? 通知には新作映画やテレビ番組、その他のお知らせが含まれることがあり、いつでもオフにすることができます」というものです。]({% image_buster /assets/img_archive/push_primer_iam.png %}){: style="float:right;max-width:40%;margin-left:15px;border:none;"}
 
 > ユーザーにプッシュ許可を求めるチャンスは一度しかないため、プッシュ登録を最適化することは、プッシュメッセージのリーチを最大化するために極めて重要である。これを実現するには、アプリ内メッセージを使って、ユーザーがオプトインを選択した場合、どのようなメッセージを受け取ることが期待できるかを、ネイティブのプッシュプロンプトを表示する前に説明すればよい。これはプッシュ・プライマーと呼ばれる。
 
@@ -107,7 +107,7 @@ Get push notifications from Movie Cannon? Notifications may include new movies, 
 - **ボタン 1:**これを「メッセージを閉じる」に設定します。これはセカンダリーボタンで「今は許可しない」オプションです。
 - **ボタン 2: **これを「プッシュ通知の権限を要求」に設定します。これはプライマリボタンで「通知を許可する」オプションです。
 
-\![2 つのボタンがあるIn-アプリ メッセージ作成画面:"Allow 通知 s"および"Not now"。]({% image_buster /assets/img_archive/push_primer_button_behavior.png %})
+![2 つのボタンがあるIn-アプリ メッセージ作成画面:"Allow 通知 s"および"Not now"。]({% image_buster /assets/img_archive/push_primer_button_behavior.png %})
 
 ## ステップ 4: 配信のスケジュール
 
@@ -115,7 +115,7 @@ Get push notifications from Movie Cannon? Notifications may include new movies, 
 
 理想的なタイミングはさまざまだが、Brazeは、ユーザーが何らかの[価値の高いアクションを](https://www.braze.com/resources/videos/mapping-high-value-actions)完了するまで待つことを提案している。これは、ユーザーがアプリやサイトに価値を見出し始めていることを示すか、プッシュ通知で対応できる切実なニーズがある場合だ（例えば、ユーザーが注文をした後で、配送追跡情報を提供したい場合など）。こうすることで、プロンプトはあなたのブランドにとってだけでなく、顧客にとっても有益なものとなる。
 
-\![アクションベースの配信設定 s は、&quot のカスタムイベントを実行したユーザーs に送信します。Watch List&quot に追加します。;。]({% image_buster /assets/img_archive/push_primer_trigger.png %})
+![アクションベースの配信設定 s は、&quot のカスタムイベントを実行したユーザーs に送信します。Watch List&quot に追加します。;。]({% image_buster /assets/img_archive/push_primer_trigger.png %})
 
 ## ステップ 5: ユーザーのターゲット設定
 

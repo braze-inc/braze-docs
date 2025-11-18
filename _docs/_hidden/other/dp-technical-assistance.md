@@ -18,6 +18,10 @@ There are a range of data protection laws that regulate what organizations can d
 
 These Data Protection Laws grant individuals ‘privacy rights’ over their personal data. Organizations are required to receive and respond to requests from individuals who exercise their privacy rights. The Braze Services can assist you in your compliance with these Data Protection Laws by providing features to facilitate certain actions required under such laws. This document provides technical instructions to use these features to manage privacy rights requests. It is up to you to determine which Data Protection Laws apply to your business, and to act in compliance with them.
 
+{% alert important %}
+The Braze recommendations on this page do not apply to BrazeAI Decisioning Studio™. To manage any privacy rights requests relating to personal data in BrazeAI Decisioning Studio™, contact your account manager.
+{% endalert %}
+
 ## Legal Disclaimer
 
 None of the following is intended to be, nor shall it be deemed to be, legal advice by Braze. You are advised to seek the advice of your own counsel with respect to your particular situation and how Data Protection Laws apply to you and your use of the Braze Services.

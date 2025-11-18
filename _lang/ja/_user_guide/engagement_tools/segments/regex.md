@@ -164,7 +164,7 @@ $( document ).ready(function() {
 
 例えば、"@braze.com" で終わるメールをフィルタリングしたいとする。メールアドレスフィルターを使用して `matches regex` に設定し、正規表現フィールドに「@braze.com」と入力します。他のメールドメインでも同様です。
 
-\![「@braze.com 」の正規表現にマッチするメールアドレスをフィルターする。]({% image_buster /assets/img/regex/regeximg1.png %})
+![「@braze.com 」の正規表現にマッチするメールアドレスをフィルターする。]({% image_buster /assets/img/regex/regeximg1.png %})
 
 #### 値 ≥x または ≤x の場合、フィルターの番号文字列はどのように使用できますか？
 
@@ -206,6 +206,6 @@ $( document ).ready(function() {
 ^1?718\d\d\d\d\d\d\d
 ```
 
-\![正規表現"^1?718ddd "にマッチする電話番号をフィルターする。]({% image_buster /assets/img/regex/regeximg3.png %})
+![正規表現"^1?718ddd "にマッチする電話番号をフィルターする。]({% image_buster /assets/img/regex/regeximg3.png %})
 
 

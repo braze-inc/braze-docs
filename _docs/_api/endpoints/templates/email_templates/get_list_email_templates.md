@@ -48,8 +48,6 @@ Templates built using the drag-and-drop editor for email are not provided in thi
 {% endalert %}
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
 {
   "count": the number of templates returned
   "templates": [template with the following properties]:
