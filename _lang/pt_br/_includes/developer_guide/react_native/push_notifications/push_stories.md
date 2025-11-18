@@ -1,4 +1,4 @@
-{% multi_lang_include desenvolvedor_guide/prerequisites/react_native.md %} Você também precisará [configurar notificações por push]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=react%20native).
+{% multi_lang_include developer_guide/prerequisites/react_native.md %} Você também precisará [configurar notificações por push]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=react%20native).
 
 ## Habilitando histórias por push
 
