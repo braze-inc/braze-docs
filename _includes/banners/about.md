@@ -6,7 +6,7 @@
 
 ## Prerequisites
 
-Banners availabilty depends on your Braze package. Reach out to your account manager or customer success manager to get started.
+Banners availability depends on your Braze package. Contact your account manager or customer success manager to get started.
 
 ## Why use Banners?
 

@@ -31,7 +31,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/check-square-broken.svg
 ---
 
-## [\![Curso Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/content-cards){: style="float:right;width:120px;border:0;" class="noimgborder"} Benefícios do uso de Cartões de Conteúdo
+## [![Curso Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/content-cards){: style="float:right;width:120px;border:0;" class="noimgborder"} Benefícios do uso de Cartões de Conteúdo
 
 Aqui estão apenas alguns benefícios do uso dos Content Cards em comparação com o fato de os desenvolvedores criarem conteúdo em seu aplicativo:
 

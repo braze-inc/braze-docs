@@ -13,7 +13,11 @@ local_redirect: #optimizations
 
 > 単一のチャネルと単一の装置を対象とするすべてのキャンペーンに対して、[多変量またはA/Bテスト]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/)を作成できます。たとえば、プッシュキャンペーンに多変量 またはA/B テストを使用する場合、同じキャンペーン内の両方のデバイスタイプではなく、iOS デバイスのみを対象にするか、デバイスのみをAndroidすることができます。
 
+<<<<<<< HEAD
 !["キャンペーン&quot を作成;ボタンを選択してドロップダウンを選択し、複数チャネルまたは単一チャネルを選択します。]({% image_buster /assets/img/ab_create_1.png %}){: style="max-width:25%;float:right;margin-left:15px;" }
+=======
+\!["キャンペーン&quot を作成;ボタンを選択してドロップダウンを選択し、複数チャネルまたは単一チャネルを選択します。]({% image_buster /assets/img/ab_create_1.png %}){: style="max-width:25%;float:right;margin-left:15px;" }
+>>>>>>> main
 
 ## ステップ 1: キャンペーンを作成
 
@@ -26,7 +30,11 @@ local_redirect: #optimizations
 
 バリアントの区別を始めるためのアイデアについては、「[さまざまなチャネル向けのヒント](#tips-different-channels)」を参照してください。
 
+<<<<<<< HEAD
 !["Add Variant"を選択すると、キャンペーンが表示されます。]({% image_buster /assets/img/ab_create_2.png %})
+=======
+\!["Add Variant"を選択すると、キャンペーンが表示されます。]({% image_buster /assets/img/ab_create_2.png %})
+>>>>>>> main
 
 ## ステップ 3: キャンペーンをスケジュールする
 
@@ -50,7 +58,11 @@ local_redirect: #optimizations
 
 結果を表示すると、バリアントのコンバージョン率をコントロールグループから提供されたベースラインコンバージョン率と比較できます。これにより、バリアントの効果と、メッセージをまったく送信しなかった場合に発生するコンバージョン率に対するバリアントの効果の両方を比較できます。
 
+<<<<<<< HEAD
 ![対照群、バリアント1、バリアント2、バリアント3のパーセンテージeの内訳を、各群25%で示したAB テストの図。]({% image_buster /assets/img/ab_create_4.png %})
+=======
+\![対照群、バリアント1、バリアント2、バリアント3のパーセンテージeの内訳を、各群25%で示したAB テストの図。]({% image_buster /assets/img/ab_create_4.png %})
+>>>>>>> main
 
 {% alert important %}
 _開封数_または_クリック数_で勝者を決定するときにコントロールグループを使用することはお勧めしません。コントロールグループはメッセージを受信しないため、これらのユーザーは開封したりクリックしたりすることはできません。したがって、そのグループのコンバージョン率は定義上0% であり、バリアントとの有意義な比較にはなりません。

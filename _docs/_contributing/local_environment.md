@@ -168,7 +168,7 @@ To verify your installation and start your local docs server on localhost `http:
 # for 'en' language:
 rake
 
-# for other langauges:
+# for other languages:
 rake es
 rake fr
 rake ja

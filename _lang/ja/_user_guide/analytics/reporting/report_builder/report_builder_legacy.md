@@ -1,5 +1,6 @@
 ---
 nav_title: レポートビルダ(レガシー)
+nav_title: レポートビルダ(レガシー)
 article_title: レポートビルダー (レガシー)
 alias: /report_builder_legacy/
 page_order: 0
@@ -74,6 +75,7 @@ tool:
 
 ![キャンペーン数値メトリック]]({% image_buster /assets/img/campaign_comparison/metric.png %}){: style="max-width:60%;"}
 
+### ステップ 4: レポートに名前を付けて保存
 ### ステップ 4: レポートに名前を付けて保存
 
 レポートを保存する前に、レポートに名前を付けます。レポートに名前を付けずに保存すると、Braze によりデフォルトの名前である「キャンペーン比較レポート」が適用されます。

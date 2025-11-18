@@ -14,7 +14,11 @@ channel: email
 
 そのためには、メールの下書きを作成し、リンクをどこに配置するかを決めます。次に、2 つのオプションを追加します。1 つは Google カレンダー用、もう 1 つは他のカレンダー (iCal や Outlook など) 用です。たとえば、「Google カレンダーに追加」や「iCal または Outlook に追加」などとします。
 
+<<<<<<< HEAD
 ![ダッシュボードにリンクを追加するときのリンクダイアログ。「リンク情報」タブが選択され、テキストが「Googleカレンダーに追加」に設定されています。]({% image_buster /assets/img_archive/calendar_1.png %}){: style="max-width:50%"}
+=======
+\![ダッシュボードにリンクを追加するときのリンクダイアログ。「リンク情報」タブが選択され、テキストが「Googleカレンダーに追加」に設定されています。]({% image_buster /assets/img_archive/calendar_1.png %}){: style="max-width:50%"}
+>>>>>>> main
 
 ## URL フォーマット
 

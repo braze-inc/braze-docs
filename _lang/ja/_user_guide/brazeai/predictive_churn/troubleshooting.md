@@ -40,7 +40,7 @@ page_order: 3
 
 ### 予測の質が悪い
 
-![]({% image_buster /assets/img/churn/churn3.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
+\![]({% image_buster /assets/img/churn/churn3.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 あなたのモデルが[予測品質]({{site.baseurl}}/user_guide/brazeai/predictive_churn/analytics/)が40%以上であれば、素晴らしい場所にいます!ただし、予測品質が39% 以下に低下する場合は、チャーンおよび予測オーディエンスの定義をより具体的に編集するか、異なる時間枠を設定する必要があります。 
 
 予測定義を構築し、予測品質が40% を超えている間にオーディエンスのサイズ要件を満たすことができない場合は、Braze に送信されるデータがこのユースケースに適していないこと、モデルを構築するためのユーザーが十分でないこと、または製品のライフサイクルが現在の60 日間のルックバックウィンドウでサポートされている期間よりも長いことを意味します。 

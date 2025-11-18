@@ -2,6 +2,9 @@
 nav_title: ユーザー リターゲティング
 article_title: ユーザーのリターゲット
 page_order: 4
+nav_title: ユーザー リターゲティング
+article_title: ユーザーのリターゲット
+page_order: 4
 description: "この参考記事では、WhatsAppのユーザーとのやり取りによってユーザーがメッセージを再ターゲットする方法を取り上げている。"
 page_type: reference
 channel:
@@ -36,6 +39,7 @@ WhatsApp キャンペーンまたはキャンバスステップを読んだ、�
 1. **Clicked/Opened Campaign**フィルターを使用してセグメントを作成する。
 2. [**WhatsApp メッセージの読み取り**] を選択します。
 3. 希望のキャンペーンを選択してください。<br>
+3. 希望のキャンペーンを選択してください。<br>
 
 ![WhatsAppを読み取ったときのフィルター。]({% image_buster /assets/img/whatsapp/whatsapp21.png %}){: style="max-width:75%"}
 
@@ -46,6 +50,7 @@ WhatsApp キャンペーンまたはキャンバスステップを読んだ、�
 
 ![WhatsApp ステップを読み取るためのフィルター。]({% image_buster /assets/img/whatsapp/whatsapp20.png %}){: style="max-width:75%"}
 
+**キャンペーンまたはキャンバスアトリビューションでフィルター**<br>
 **キャンペーンまたはキャンバスアトリビューションでフィルター**<br>
 特定の WhatsApp キャンペーン、キャンバスコンポーネント、またはタグを開封した / 読んだユーザーをフィルター処理します。
 

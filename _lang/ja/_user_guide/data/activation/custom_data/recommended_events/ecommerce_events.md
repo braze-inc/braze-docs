@@ -1174,4 +1174,8 @@ Canvasテンプレートでこれらのイベントを使用する方法につ�
 
 これらのユーザーフィールド計算は、ユーザープロファイルの [**トランザクション**] タブにも含まれています。
 
+<<<<<<< HEAD
 ![ユーザーによって計算されたフィールドを持つ "取引 "タブ。]({% image_buster /assets/img/Shopify/transactions_tab.png %}){: style="max-width:60%;"}
+=======
+\![ユーザーによって計算されたフィールドを持つ "取引 "タブ。]({% image_buster /assets/img/Shopify/transactions_tab.png %}){: style="max-width:60%;"}
+>>>>>>> main

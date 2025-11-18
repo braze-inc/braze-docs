@@ -10,7 +10,7 @@ channel: email
 
 # Email services {#email-services}
 
-> If you need additional support with your email program, Braze offers recurring and one-time services at an additional cost. For more information, reach out to your Braze account manager.
+> If you need additional support with your email program, Braze offers recurring and one-time services at an additional cost. For more information, contact your Braze account manager.
 
 ## Email deliverability services {#email-deliverability-services}
 

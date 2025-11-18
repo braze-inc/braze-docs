@@ -1,5 +1,6 @@
 ---
 nav_title: WhatsAppのセットアップ
+nav_title: WhatsAppのセットアップ
 article_title: WhatsApp設定
 alias: /partners/whatsapp/
 description: "この記事では、Braze WhatsApp チャネルを設定する方法について、前提条件や推奨される次のステップを含めて説明します。"

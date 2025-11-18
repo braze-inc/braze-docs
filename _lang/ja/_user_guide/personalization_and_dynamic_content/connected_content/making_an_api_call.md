@@ -7,6 +7,7 @@ search_rank: 2
 ---
 
 # [![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/connected-content){: style="float:right;width:120px;border:0;" class="noimgborder"} コネクテッドコンテンツAPIコールを作る
+# [![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/connected-content){: style="float:right;width:120px;border:0;" class="noimgborder"} コネクテッドコンテンツAPIコールを作る
 
 > コネクテッド・コンテンツを使えば、ユーザーに送るメッセージに、APIでアクセスできるあらゆる情報を直接挿入することができる。Web サーバーから直接、またはパブリックにアクセス可能な API からコンテンツをプルできます。<br><br>このページではコネクテッドコンテンツ API 呼び出しの方法、高度なコネクテッドコンテンツユースケース、エラー処理などについて説明します。
 
@@ -70,6 +71,7 @@ Braze は、各受信者に複数回、同じコネクテッドコンテンツ A
 ## 知っておくべきこと
 
 * BrazeはAPIコールには課金せず、データポイント使用量にはカウントしない。
+* BrazeはAPIコールには課金せず、データポイント使用量にはカウントしない。
 * コネクテッドコンテンツ応答には1 MB の制限があります。
 * コネクテッドコンテンツ呼び出しは、メッセージの送信時に行われます。ただし、アプリ内メッセージは、メッセージが表示されたときにこの呼び出しを行います。
 * コネクテッドコンテンツ呼び出しはリダイレクトに従いません。
@@ -78,6 +80,7 @@ Braze は、各受信者に複数回、同じコネクテッドコンテンツ A
 
 ### 基本認証の使用
 
+URLにBasic認証が必要な場合、BrazeはAPIコールで使用するBasic認証情報を保存することができる。**設定**＞**コネクテッドコンテンツで**、既存のベーシック認証情報を管理し、新しい認証情報を追加できる。
 URLにBasic認証が必要な場合、BrazeはAPIコールで使用するBasic認証情報を保存することができる。**設定**＞**コネクテッドコンテンツで**、既存のベーシック認証情報を管理し、新しい認証情報を追加できる。
 
 ![ダッシュボードのコネクテッドコンテンツ設定。]({% image_buster /assets/img/connected_content/basic_auth_mgmt.png %})
@@ -121,7 +124,9 @@ Braze コネクテッドコンテンツを使用する場合、特定の API で
 {% assign campaign_name="New Year Sale" %}
 {% connected_content
      https://api.endpoint.com/your_path
+     https://api.endpoint.com/your_path
      :method post
+     :auth_credentials token_credential_abc
      :auth_credentials token_credential_abc
      :body campaign={{campaign_name}}&customer={{${user_id}}}&channel=Braze
      :content_type application/json
@@ -144,7 +149,9 @@ Braze コネクテッドコンテンツを使用する場合、特定の API で
      https://your_API_access_token_endpoint_here/
      :method post
      :auth_credentials access_token_credential_abc
+     :auth_credentials access_token_credential_abc
      :headers {
+       "Content-Type": "YOUR-CONTENT-TYPE"
        "Content-Type": "YOUR-CONTENT-TYPE"
      }
      :cache_max_age 900
@@ -202,6 +209,18 @@ Braze Sender 75e404755ae1270441f07eb238f0faf25e44dfdc
 ハッシュ値は定期的に変更されることを覚えておいてほしい。`User-Agent` でトラフィックをフィルターしている場合、`Braze Sender` で始まるすべての値を許可する。
 {% endalert %}
 
+### `User-Agent` ヘッダー
+
+Brazeは、すべてのコネクテッドコンテンツとWebhookリクエストに、以下のような`User-Agent` ヘッダーを含む：
+
+```text
+Braze Sender 75e404755ae1270441f07eb238f0faf25e44dfdc
+```
+
+{% alert tip %}
+ハッシュ値は定期的に変更されることを覚えておいてほしい。`User-Agent` でトラフィックをフィルターしている場合、`Braze Sender` で始まるすべての値を許可する。
+{% endalert %}
+
 ## トラブルシューティング
 
 コネクテッドコンテンツ呼び出しのトラブルシューティングには、[Webhook.site](https://webhook.site/) を使用します。 
@@ -227,10 +246,15 @@ Braze Sender 75e404755ae1270441f07eb238f0faf25e44dfdc
 
 デフォルトでは、POSTリクエストはキャッシュしない。ただし `:cache_max_age` パラメータを追加することで、POST 呼び出しを強制的にキャッシュさせることができます。
 
+
 キャッシュは、コネクテッドコンテンツの重複コールを削減するのに役立ちます。しかし、ユーザーごとにコネクテッド・コンテンツの呼び出しが1回になるとは限らない。
 
 ### コネクテッドコンテンツHTTPのデフォルト動作とは？ 
 
 {% multi_lang_include connected_content.md section='default behavior' %}
+### コネクテッドコンテンツHTTPのデフォルト動作とは？ 
 
+{% multi_lang_include connected_content.md section='default behavior' %}
+
+{% multi_lang_include connected_content.md section='http post' %}
 {% multi_lang_include connected_content.md section='http post' %}

@@ -2,6 +2,7 @@
 nav_title: ベストプラクティス
 article_title: WhatsAppのベストプラクティス
 page_order: 9
+page_order: 9
 description: "この記事では、WhatsApp メッセージングチャネルを使用する際に推奨されるベストプラクティスの概要を示します。電話の高品質評価を維持する方法、高いブロック率とレポート率を回避する方法などがあります。"
 page_type: reference
 channel:

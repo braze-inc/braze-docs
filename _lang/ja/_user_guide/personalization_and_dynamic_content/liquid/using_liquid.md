@@ -7,6 +7,7 @@ search_rank: 2
 ---
 
 # [![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/dynamic-personalization-with-liquid){: style="float:right;width:120px;border:0;" class="noimgborder"}リキッドを使用
+# [![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/dynamic-personalization-with-liquid){: style="float:right;width:120px;border:0;" class="noimgborder"}リキッドを使用
 
 > この記事では、さまざまなユーザー属性を使用して、メッセージングにダイナミックな個人情報を挿入する方法を紹介する。
 
@@ -72,12 +73,27 @@ Liquid は特定の構造 (構文) に従います。ダイナミックなパー
 メッセージに `{{${first_name}}}` を含めると、メッセージの送信時にユーザーの名 (ユーザープロファイルから取得) に置き換えられます。他のデフォルトユーザー属性でも同じフォーマットを使うことができる。
 
 カスタム属性の値を使用する場合は、名前空間"custom_attribute" を変数に追加する必要があります。例えば、「zip code」というカスタム属性を使用するには、メッセージに `{{custom_attribute.${zip code}}}` を含めます。
+カスタム属性の値を使用する場合は、名前空間"custom_attribute" を変数に追加する必要があります。例えば、「zip code」というカスタム属性を使用するには、メッセージに `{{custom_attribute.${zip code}}}` を含めます。
 
 ### タグの挿入
 
 どのメッセージでも、`{{` を2つ入力することでタグを挿入することができる。このタグを入力すると、自動補完機能が作動し、入力した内容が更新され続ける。入力中に表示されるオプションから変数を選択することもできる。
 
 カスタムタグを使用している場合は、そのタグをコピーして好きなメッセージに貼り付けることができる。
+
+#### 二重括弧の例外
+
+`{% assign %}` や`{% if %}` など、別のリキッドタグ内でタグを使用する場合は、二重括弧または括弧なしのいずれかを使用できます。タグが独立している場合のみ、二重のブラケットで囲む必要があります。わかりやすくするために、常にダブルブラケットを使用できます。 
+
+次のタグはすべて正しいです。
+
+```liquid
+{% if custom_attribute.${Number_Game_Attended} == 1 %}
+{% if {{custom_attribute.${Number_Game_Attended}}} == 1 %}
+
+{% assign value_one = {{custom_attribute.${one}}} %}
+{% assign value_one = custom_attribute.${one} %}
+```
 
 #### 二重括弧の例外
 

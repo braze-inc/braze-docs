@@ -67,6 +67,7 @@ Query Builderの!["Variable"タブに、指定した例が表示されます。]
 
 {% tabs %}
 {% tab usage %}
+{% tab usage %}
 {% raw %}
 ```sql
 some_number_column < {{number.${custom_label}}}
@@ -80,6 +81,7 @@ some_number_column < {{number.${custom_label}}}
 繰り返される文字列値をレポート実行の合間に変更する場合に使用します。この変数を使用すると、SQL 内の値を複数回ハードコーディングする必要がなくなります。
 
 {% tabs %}
+{% tab usage %}
 {% tab usage %}
 {% raw %}
 ```sql
@@ -95,6 +97,7 @@ some_number_column < {{number.${custom_label}}}
 
 {% tabs local %}
 {% tab choose one %}
+{% tab choose one %}
 {% subtabs %}
 {% subtab usage %}
 {% raw %}
@@ -106,6 +109,7 @@ some_number_column < {{number.${custom_label}}}
 {% endsubtabs %}
 {% endtab %}
 
+{% tab choose multiple %}
 {% tab choose multiple %}
 {% subtabs %}
 {% subtab usage %}
@@ -125,6 +129,7 @@ some_number_column < {{number.${custom_label}}}
 
 {% tabs %}
 {% tab usage %}
+{% tab usage %}
 ```sql
 is_radio_button: 'true'
 ```
@@ -139,19 +144,21 @@ is_radio_button: 'true'
 
 {% tabs %}
 {% tab usage %}
+{% tab usage %}
 ```sql
 is_multi_select: 'true'
 ```
 {% endtab %}
 {% endtabs %}
 
-![Brazeでレンダリングされた複数選択リストの例。]({% image_buster /assets/img_archive/sql_variables_productname.png %}){: style="max-width:50%;"}
+\![Brazeでレンダリングされた複数選択リストの例。]({% image_buster /assets/img_archive/sql_variables_productname.png %}){: style="max-width:50%;"}
 
 #### options 
 
 選択可能なオプションのリストをラベルと値の形式で提供する場合に使用します。ラベルが表示され、オプションが選択されたときに変数が値に置き換えられます。これは単独では使用できません。[リスト](#list)と組み合わせて使用する必要があります。
 
 {% tabs %}
+{% tab usage %}
 {% tab usage %}
 ```sql
 options: '[{"label": "test", "value": "test_value"}, {"label": "test2", "value": "test_value2"}]'
@@ -166,6 +173,7 @@ options: '[{"label": "test", "value": "test_value"}, {"label": "test2", "value":
 日付を選択するカレンダーを表示するためのものです。`start_date` と `end_date` を、指定された日付の UTC での Unix タイムスタンプ (秒単位) に置き換えます (`1696517353` など)。オプションで、`start_date` または `end_date` のみを設定し、カレンダーに単一の日付のみを表示させることもできます。`start_date` と`end_date` のラベルが一致しないと、日付範囲ではなく、2つの別々の日付として扱われる。
 
 {% tabs %}
+{% tab usage %}
 {% tab usage %}
 {% raw %}
 ```
@@ -193,6 +201,7 @@ time > {{start_date.${custom_label}}} AND time < {{end_date.${custom_label}}}
 
 {% tabs local %}
 {% tab one campaign %}
+{% tab one campaign %}
 キャンペーンを 1 つ選択する場合に使用します。キャンバスと同じラベルを共有すると、**変数**タブ内にキャンバスかキャンペーンかを選択するラジオボタンが表示される。
 
 {% subtabs %}
@@ -206,6 +215,7 @@ campaign_id = '{{campaign.${custom_label}}}'
 {% endsubtabs %}
 {% endtab %}
 
+{% tab multiple campaigns %}
 {% tab multiple campaigns %}
 キャンペーンを複数選択する場合に使用します。キャンバスと同じラベルを共有すると、**変数**タブ内にキャンバスかキャンペーンのどちらかを選択するラジオボタンが表示される。
 
@@ -222,6 +232,7 @@ campaign_id IN ({{campaigns.${custom_label}}})
 {% endsubtabs %}
 {% endtab %}
 
+{% tab campaign variants %}
 {% tab campaign variants %}
 選択したキャンペーンに属するキャンペーンバリアントを選択する場合に使用します。campaign 変数または campaigns 変数と組み合わせて使用する必要があります。
 
@@ -247,6 +258,7 @@ message_variation_api_id IN ({{campaign_variants.${custom_label}}})
 
 {% tabs local %}
 {% tab one canvas %}
+{% tab one canvas %}
 キャンバスを 1 つ選択する場合に使用します。キャンペーンと同じラベルを共有すると、**変数**タブ内にキャンバスかキャンペーンのどちらかを選択するラジオボタンが表示される。
 
 - **置換する値:**キャンバスの BSON ID
@@ -262,6 +274,7 @@ canvas_id = '{{canvas.${custom_label}}}'
 {% endsubtabs %}
 {% endtab %}
 
+{% tab multiple canvases %}
 {% tab multiple canvases %}
 キャンバスを複数選択する場合に使用します。キャンペーンと同じラベルを共有すると、**変数**タブ内にキャンバスまたはキャンペーンのいずれかを選択するためのラジオボタンが表示される。
 
@@ -279,6 +292,7 @@ canvas_id IN ({{canvases.${custom_label}}})
 {% endtab %}
 
 {% tab canvas variants %}
+{% tab canvas variants %}
 選択したキャンバスに属するキャンバスバリアントを選択する場合に使用します。canvas 変数または canvases 変数と組み合わせて使用する必要があります。`api-id1, api-id2` のようなカンマ区切りの文字列として、1つ以上のキャンバスバリアントAPI ID に設定します。
 
 {% subtabs %}
@@ -293,6 +307,7 @@ canvas_variation_api_id IN ({{canvas_variants.${custom_label}}})
 {% endtab %}
 
 {% tab one canvas step %}
+{% tab one canvas step %}
 選択したキャンバスに属するキャンバスステップを 1 つ選択する場合に使用します。これは、キャンバス変数と一緒に使用する必要があります。
 
 {% subtabs %}
@@ -306,6 +321,7 @@ canvas_step_api_id = '{{canvas_step.${custom_label}}}'
 {% endsubtabs %}
 {% endtab %}
 
+{% tab multiple canvas steps %}
 {% tab multiple canvas steps %}
 選択した複数のキャンバスに属するキャンバスステップを複数選択する場合に使用します。canvas 変数または canvases 変数と組み合わせて使用する必要があります。
 
@@ -331,6 +347,7 @@ canvas_step_api_id IN ({{canvas_steps.${custom_label}}})
 
 {% tabs %}
 {% tab usage %}
+{% tab usage %}
 {% raw %}
 ```sql
 ({{products.${custom_label}}})
@@ -338,6 +355,7 @@ canvas_step_api_id IN ({{canvas_steps.${custom_label}}})
 {% endraw %}
 {% endtab %}
 
+{% tab example %}
 {% tab example %}
 {% raw %}
 ```sql
@@ -354,6 +372,7 @@ WHERE product_id IN ({{products.${Games with DLC}}});
 リストから1つ以上のカスタムイベントまたはカスタムイベントプロパティを選択する。
 
 {% tabs local %}
+{% tab event %}
 {% tab event %}
 `custom_events` は、Braze ダッシュボードから1つまたは複数のカスタムイベントを選択するために使用されます。
 
@@ -372,12 +391,14 @@ WHERE product_id IN ({{products.${Games with DLC}}});
 SELECT event_name
 FROM CUSTOM_EVENTS_TABLE
 WHERE event_name IN ({{custom_events.${Purchased Game}}}); 
+WHERE event_name IN ({{custom_events.${Purchased Game}}}); 
 ```
 {% endraw %}
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
 
+{% tab properties %}
 {% tab properties %}
 `custom_event_properties` は、現在選択されているカスタムイベントから1つ以上のプロパティを選択するために使用されます。 設定されている `custom_events` 変数が必要です。
 
@@ -399,6 +420,7 @@ name = '{{custom_event_properties.${property names)}}}'
 
 {% tabs %}
 {% tab usage %}
+{% tab usage %}
 {% raw %}
 ```sql
 workspace_id = '{{workspace.${app_group_id}}}'
@@ -413,6 +435,7 @@ workspace_id = '{{workspace.${app_group_id}}}'
 
 {% tabs local %}
 {% tab catologs %}
+{% tab catologs %}
 `catalogs` は、Braze ダッシュボードから1つまたは複数のカタログを選択するために使用されます。
 
 {% subtabs %}
@@ -426,6 +449,7 @@ catalog_id = '{{catalogs.${catalog}}}'
 {% endsubtabs %}
 {% endtab %}
 
+{% tab catolog fields %}
 {% tab catolog fields %}
 `catalog_fields` は、現在選択されているカタログから1つ以上のフィールドを設定するために使用されます。設定されている `catalogs` 変数が必要です。
 
@@ -447,6 +471,7 @@ field_name = '{{catalog_fields.${custom_label}}}'
 
 {% tabs %}
 {% tab usage %}
+{% tab usage %}
 {% raw %}
 ```sql
 {{segments.${analytics_segments}}}
@@ -460,6 +485,7 @@ field_name = '{{catalog_fields.${custom_label}}}'
 キャンペーンやキャンバスのタグを選択する場合に使用します。選択したタグに関連付けられている BSON ID を持つキャンペーンまたはキャンバスに設定します。BSON ID は一重引用符で囲み、コンマで区切ります。
 
 {% tabs %}
+{% tab usage %}
 {% tab usage %}
 {% raw %}
 ```sql
@@ -475,6 +501,7 @@ field_name = '{{catalog_fields.${custom_label}}}'
 
 {% tabs %}
 {% tab usage %}
+{% tab usage %}
 {% raw %}
 ```sql
 {{string.${my var}| is_required: 'false' | description: 'My optional string var'}}
@@ -488,6 +515,7 @@ field_name = '{{catalog_fields.${custom_label}}}'
 変数の値が入力されているかどうかを知る場合に使用します。これは、オプションの変数に値が入力されていない場合に条件を短絡評価する場合に便利です。他の変数の値に応じて、`true` または`false` に設定できます。
 
 {% tabs %}
+{% tab usage %}
 {% tab usage %}
 {% raw %}
 ```sql
@@ -513,6 +541,7 @@ field_name = '{{catalog_fields.${custom_label}}}'
 
 {% tabs %}
 {% tab usage %}
+{% tab usage %}
 ```sql
 visible: 'false'
 ```
@@ -524,6 +553,7 @@ visible: 'false'
 変数がデフォルトで必須かどうかを指定します。変数の値が空の場合、通常は正しくないクエリになります。
 
 {% tabs %}
+{% tab usage %}
 {% tab usage %}
 ```sql
 required: 'false'
@@ -537,6 +567,7 @@ required: 'false'
 
 {% tabs %}
 {% tab usage %}
+{% tab usage %}
 ```sql
 order: '1'
 ```
@@ -546,6 +577,7 @@ order: '1'
 ### 引用符を含める
 
 {% tabs local %}
+{% tab single quotes %}
 {% tab single quotes %}
 変数の値を一重引用符で囲む場合に使用します。
 
@@ -558,6 +590,7 @@ include_quotes: 'true'
 {% endsubtabs %}
 {% endtab %}
 
+{% tab double quotes %}
 {% tab double quotes %}
 変数の値を二重引用符で囲む場合に使用します。
 
@@ -577,6 +610,7 @@ include_double_quotes: 'true'
 
 {% tabs %}
 {% tab usage %}
+{% tab usage %}
 ```sql
 placeholder: 'enter some value'
 ```
@@ -588,6 +622,7 @@ placeholder: 'enter some value'
 変数の入力フィールドの下に表示される説明テキストを指定します。
 
 {% tabs %}
+{% tab usage %}
 {% tab usage %}
 ```sql
 description: 'some description'
@@ -601,6 +636,7 @@ description: 'some description'
 
 {% tabs %}
 {% tab usage %}
+{% tab usage %}
 ```sql
 default_value: '5'
 ```
@@ -612,6 +648,7 @@ default_value: '5'
 変数のラベルを非表示にします。
 
 {% tabs %}
+{% tab usage %}
 {% tab usage %}
 ```sql
 hide_label: 'true'

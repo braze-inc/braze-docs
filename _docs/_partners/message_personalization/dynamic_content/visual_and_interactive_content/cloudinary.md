@@ -9,16 +9,16 @@ search_tag: Partner
 
 # Cloudinary
 
-> [Cloudinary](https://cloudinary.com/) is an image and video platform that empowers you to manage, edit, optimize, and deliver images and video on a massive scale to any campaign across channels and customer journeys. When integrated and enabled, Cloudinary's media management will power and provide dynamic, contextual, and personalized asset delivery for your Braze campaigns and Canvases. 
+> [Cloudinary](https://cloudinary.com/) is an image and video platform used to manage, edit, optimize, and deliver images and video at scale to any campaign across channels and customer journeys. When integrated and enabled, Cloudinary's media management powers dynamic, contextual, and personalized asset delivery for your Braze campaigns and Canvases. 
 
 ## About this integration
 
-Connecting Cloudinary to Braze empowers brands to access visual media stored in Cloudinary Assets for use in Braze messaging channels. With Cloudinary’s dynamic links, you can select and customize images and videos in real time based on Braze user attributes. Together, Cloudinary and Braze make it easy to craft visually stunning, highly personalized campaigns that tell every product’s story and deliver one-of-a-kind experiences at scale.
+Connecting Cloudinary to Braze gives brands access to visual media stored in Cloudinary Assets for use in Braze messaging channels. With Cloudinary’s dynamic links, you can select and customize images and videos in real time based on Braze user attributes. Together, Cloudinary and Braze support crafting visually rich, personalized campaigns that tell each product’s story and deliver one-of-a-kind experiences at scale.
 
 This page outlines four possible, but not exhaustive, integration methods between Cloudinary and Braze. These integration methods primarily rely on modifying asset links manually copied from Cloudinary’s Media Library. 
 
 {% alert important %}
-More advanced integration methods, including leveraging [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content) to call Cloudinary’s [Admin API](https://cloudinary.com/documentation/admin_api#banner) are possible, but the approach will vary between customers. Contact your Cloudinary and Braze customer success manager for guidance.
+More advanced integration methods, including using [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content) to call Cloudinary’s [Admin API](https://cloudinary.com/documentation/admin_api#banner) are possible, but the approach will vary between customers. Contact your Cloudinary and Braze customer success manager for guidance.
 {% endalert %}
 
 ## Prerequisites
@@ -160,7 +160,7 @@ https://papish.cloudinary.us/image/list/$locale_!unknown!/$audience_!unknown!/fn
 
 ## Personalized image generation
 
-Cloudinary’s [Text Overlay Transformations](https://cloudinary.com/documentation/accessible_media_visual_audio_clarity#text_overlays_on_images_and_videos/) leverage user data from Braze directly within a Cloudinary asset. 
+Cloudinary’s [Text Overlay Transformations](https://cloudinary.com/documentation/accessible_media_visual_audio_clarity#text_overlays_on_images_and_videos/) use user data from Braze directly within a Cloudinary asset. 
 
 The following example demonstrates how the `l_text` Transformation can be used to insert a user's name onto an asset. Further customization can be achieved by leveraging Liquid tags when developing campaigns and Canvases to determine what text should populate the `l_text` parameters.
 

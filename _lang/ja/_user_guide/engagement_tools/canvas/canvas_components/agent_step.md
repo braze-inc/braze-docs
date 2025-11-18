@@ -12,7 +12,11 @@ tool: Canvas
 
 > Agent ステップを使用すると、AI を活用したデシジョンとコンテンツ生成をキャンバスワークフローに直接追加できます。詳細については、[Brazeエージェント]({{site.baseurl}}/user_guide/brazeai/agents/)を参照してください。 
 
+<<<<<<< HEAD
 ![キャンバスユーザー旅行のエージェントステップ。]({% image_buster /assets/img/ai_agent/agent_step.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
+=======
+\![キャンバスユーザー旅行のエージェントステップ。]({% image_buster /assets/img/ai_agent/agent_step.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
+>>>>>>> main
 
 ## 仕組み
 

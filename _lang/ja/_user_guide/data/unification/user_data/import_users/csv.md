@@ -28,7 +28,11 @@ CSVユーザーインポートを開封するには、**オーディエンス**>
 
 CSVを使い始めるには、属性またはイベント用のテンプレートをダウンロードしよう。
 
+<<<<<<< HEAD
 ![Brazeダッシュボードの'Import Users'ページ。]({% image_buster /assets/img/csv_import/import_users_page.png %})
+=======
+\![Brazeダッシュボードの'Import Users'ページ。]({% image_buster /assets/img/csv_import/import_users_page.png %})
+>>>>>>> main
 
 ### ステップ 2: 識別子を選ぶ {#choose-an-identifier}
 
@@ -230,7 +234,11 @@ CSVインポートのカスタム属性として使用できるデータタイ�
 BrazeはCSVを処理する前に、最初の数行のプレビューを生成するので、問題がないかチェックすることができる。プレビューを作成するには、「**アトリビューション**」または「**イベント**」を選択し、「**ファイルを参照**」を選択してCSVファイルをアップロードする。 
 
 <!-- old image -->
+<<<<<<< HEAD
 ![CSVのアップロードが完了したが、1つの列にデータ型が混在するエラーが発生した。]({% image_buster /assets/img/csv_import/upload_csv.png %}){: style="max-width:70%"}
+=======
+\![CSVのアップロードが完了したが、1つの列にデータ型が混在するエラーが発生した。]({% image_buster /assets/img/csv_import/upload_csv.png %}){: style="max-width:70%"}
+>>>>>>> main
 
 {% alert important %}
 ユーザー・インポートのプレビューで、入力ファイルのすべての行がスキャンされない。上位数行以降のエラーは捕捉されない可能性があるので、CSVファイルを完全に調べることを検討すること。
@@ -246,7 +254,11 @@ BrazeはCSVを処理する前に、最初の数行のプレビューを生成す
 | 新しいセグメンテーション | また、新しいターゲティングフィルターから新しいセグメンテーションを作成するには、**Create targeting filter を**選択**し、add to new segment**を選択する。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
+<<<<<<< HEAD
 ![更新／CSVからインポート」フィルターを持つフィルターグループには、「ハロウィーンシーズンの楽しみ」というタイトルのCSVファイルが含まれている。]({% image_buster /assets/img/csv_import/add_filter_group.png %}){: style="max-width:85%;"}
+=======
+\![更新／CSVからインポート」フィルターを持つフィルターグループには、「ハロウィーンシーズンの楽しみ」というタイトルのCSVファイルが含まれている。]({% image_buster /assets/img/csv_import/add_filter_group.png %}){: style="max-width:85%;"}
+>>>>>>> main
 
 ### ステップ6: CSVインポートを開始する
 

@@ -2,6 +2,7 @@
 nav_title: 製品メッセージ
 article_title: 製品メッセージ
 page_order: 2
+page_order: 2
 description: "このページでは、WhatsApp 製品メッセージを使用して、メタカタログから製品を表示するインタラクティブなWhatsApp メッセージを送信する方法について説明します。"
 page_type: reference
 alias: "/whatsapp_product_messages/"
@@ -39,10 +40,20 @@ channel:
 {% alert note %}
 [製品メッセージのセットアップ](#setting-up-product-messages)のステップ 4時にアクセスされる統合製品セレクターを使用して、製品メッセージエクスペリエンスを強化します。
 {% endalert %}
+## 製品メッセージタイプ
+
+{% alert note %}
+[製品メッセージのセットアップ](#setting-up-product-messages)のステップ 4時にアクセスされる統合製品セレクターを使用して、製品メッセージエクスペリエンスを強化します。
+{% endalert %}
 
 {% tabs local %}
 {% tab Catalog messages %}
+{% tabs local %}
+{% tab Catalog messages %}
 
+カタログメッセージには、製品カタログ全体が対話形式で表示されます。[テンプレートとレスポンスメッセージ](#building-a-product-message)として利用できます。
+
+[setup](#setting-up-product-messages) 中にBrazeするカタログ権限を有効にした場合、ユーザーs に表示するサムネールを選択できます。 
 カタログメッセージには、製品カタログ全体が対話形式で表示されます。[テンプレートとレスポンスメッセージ](#building-a-product-message)として利用できます。
 
 [setup](#setting-up-product-messages) 中にBrazeするカタログ権限を有効にした場合、ユーザーs に表示するサムネールを選択できます。 
@@ -56,13 +67,23 @@ channel:
 {% tab Multi-product messages %}
 
 複数製品メッセージでは、カタログ内の特定の製品が強調表示されます。メッセージあたり最大30個の項目が強調表示されます。[テンプレートとレスポンスメッセージ](#building-a-product-message)として利用できます。
+{% tab Multi-product messages %}
 
+複数製品メッセージでは、カタログ内の特定の製品が強調表示されます。メッセージあたり最大30個の項目が強調表示されます。[テンプレートとレスポンスメッセージ](#building-a-product-message)として利用できます。
+
+ID を使用して製品を手動で選択するか、[setup](#setting-up-product-messages) 中にカタログ権限を有効にした場合は、ドロップダウン製品セレクターを使用します。
 ID を使用して製品を手動で選択するか、[setup](#setting-up-product-messages) 中にカタログ権限を有効にした場合は、ドロップダウン製品セレクターを使用します。
 
 {% alert important %}
 Meta で複数製品メッセージテンプレートを使用する際のヘッダーの表示に関する既知の問題があります。Meta はこの問題を認識しており、修正に取り組んでいます。
 {% endalert %}
 
+{% endtab %}
+{% tab Single product %}
+
+単一の製品メッセージでは、製品カタログの特定の製品が強調表示されます。[response messages](#building-a-product-message)として利用できます。
+
+ID を使用して製品を手動で選択するか、[setup](#setting-up-product-messages) 中にカタログ権限を有効にした場合は、ドロップダウン製品セレクターを使用します。
 {% endtab %}
 {% tab Single product %}
 
@@ -105,10 +126,16 @@ WhatsApp テンプレートメッセージまたはレスポンスメッセー�
 {% tabs local %}
 {% tab WhatsApp message template %}
 
+WhatsApp テンプレートメッセージまたはレスポンスメッセージを使用して、製品メッセージを作成できます。
+
+{% tabs local %}
+{% tab WhatsApp message template %}
+
 1. Meta Business マネージャーで [**Message Templates**] に移動します。
 2. フォーマットとして [**Catalog**] を選択し、[**Catalog message**] (カタログ全体を表示) または [**Multi-product catalog message**] (特定の項目を強調表示) を選択します。
 3. Braze で WhatsApp キャンペーンまたはキャンバスメッセージステップを作成します。
 4. テンプレートを送信した場所に一致するサブスクリプショングループを選択します。
+5. [**WhatsApp テンプレートメッセージ**] を選択します。
 5. [**WhatsApp テンプレートメッセージ**] を選択します。
 6. 使用するテンプレートを選択します。
     - 複数製品テンプレートを選択した場合は、強調表示する製品のセクションタイトルとコンテンツID を指定します。Meta Commerce Manager からコンテンツID を直接コピーするか、統合製品セレクタの権限を有効にした場合は、アイテムを選択します。
@@ -194,6 +221,7 @@ Meta Business Manager で、**Commerce Manager**に移動し、組織を選択�
 - **総額:**すべての項目の合計
 - **通貨:**カートの通貨
 - **出典:**マーク "whats_app"
+- **出典:**マーク "whats_app"
 - **メタデータ:**カタログIDやメッセージテキストなどの追加データ
 
 その他の Braze カートイベント情報は、「[e コマースの推奨イベントのタイプ]({{site.baseurl}}/user_guide/data/custom_data/recommended_events/ecommerce_events#types-of-ecommerce-recommended-events)」にあります。
@@ -210,6 +238,8 @@ Meta Business Manager で、**Commerce Manager**に移動し、組織を選択�
 
 ### 推奨されるチェックアウト実装 
 
+{% tabs local %}
+{% tab Simple Liquid-based cart links %}
 {% tabs local %}
 {% tab Simple Liquid-based cart links %}
 
@@ -243,6 +273,7 @@ Liquid を使用して、応答メッセージにカート URL を直接作成�
 
 {% endtab %}
 {% tab Connected Content %}
+{% tab Connected Content %}
 
 e コマースシステムに対する API 呼び出しを実行し、パーソナライズされたチェックアウト URL を生成します。これは、ダイナミックなカート URL の生成または複雑な製品マッピングが必要な場合に最適です。
 
@@ -254,6 +285,7 @@ e コマースシステムに対する API 呼び出しを実行し、パーソ�
 ![Connected Content コールのチェックアウトエクスペリエンスワークフローを示す図:Metaは、注文受領メッセージをBrazeに送信します。これは、eコマースプラットフォームとの往復コールがあり、WhatsAppメッセージを送信します。]({% image_buster /assets/img/whatsapp/connected_content_checkout.png %})
 
 {% endtab %}
+{% tab Webhook and custom events %}
 {% tab Webhook and custom events %}
 
 Webhooks を使用してカートデータをシステムに送信し、カスタムイベントを使用してフォローアップメッセージをトリガーします。これは、大規模なカート処理またはマルチステップワークフローを必要とする複雑な連携に最適です。

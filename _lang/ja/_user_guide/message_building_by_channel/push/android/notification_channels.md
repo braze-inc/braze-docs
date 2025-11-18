@@ -75,11 +75,11 @@ Braze に無効なチャネル ID が提供された場合 (開発者が SDK で
 
 通知チャネルを特定のキャンペーンまたはキャンバスステップに適用すると、Android プッシュ通知の**到達可能なユーザー数**の統計 (ターゲットオーディエンスステップにあります) は変更されません。ただし、選択した通知 チャネルにサブスクライブされているユーザーのみがメッセージを表示し、このオーディエンスに基づいてキャンペーン 分析(クリックなど) が測定されます。
 
-![]({% image_buster /assets/img_archive/Click_Here.png %})
+\![]({% image_buster /assets/img_archive/Click_Here.png %})
 
 {:start="4"}
 4\.[**通知チャネルを追加**] をクリックします。
-5. 追加する通知 チャネルの名前とID を入力します。<br><br>![]({% image_buster /assets/img_archive/Enter_Channel.png %})<br><br>
+5. 追加する通知 チャネルの名前とID を入力します。<br><br>\![]({% image_buster /assets/img_archive/Enter_Channel.png %})<br><br>
 6. 追加する通知チャネルそれぞれについてステップ 4 と 5 を繰り返します。
 7. **Save** を押して変更を保存します。
 
@@ -89,7 +89,7 @@ Braze に無効なチャネル ID が提供された場合 (開発者が SDK で
 
 1. 既存のキャンペーンまたはキャンバスを開きます。
 2. Android のプッシュ通知作成画面に移動します。
-3. 通知 チャネル項目を展開した後、**管理通知 チャネルs**を選択します。<br><br>![]({% image_buster /assets/img_archive/Change_Fallback.png %}){: style="max-width:80%;"}<br><br>
+3. 通知 チャネル項目を展開した後、**管理通知 チャネルs**を選択します。<br><br>\![]({% image_buster /assets/img_archive/Change_Fallback.png %}){: style="max-width:80%;"}<br><br>
 4. チャネルをダッシュボードに追加します(まだ追加されていない場合)。
 5. フォールバック チャネルとして指定したいチャネルの横にあるラジオダイアルを選択します。
 6. 変更を保存します。変更はグローバルに適用されます。
@@ -99,6 +99,6 @@ Braze に無効なチャネル ID が提供された場合 (開発者が SDK で
 1. 任意のキャンペーンまたはキャンバスのAndroidプッシュコンポーザーに移動します。
 2. 使用するチャネルをドロップダウンから選択します。ドロップダウンがなく、次のビューがある場合は、まずチャネルを追加してからキャンペーンを選択する必要があります。
 
-![]({% image_buster /assets/img_archive/No_Select.png %})
+\![]({% image_buster /assets/img_archive/No_Select.png %})
 
 [3]: https://developer.android.com/preview/features/notification-channels.html#DeletingChannels

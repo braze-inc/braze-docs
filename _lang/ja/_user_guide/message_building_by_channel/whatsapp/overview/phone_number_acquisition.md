@@ -1,5 +1,6 @@
 ---
 nav_title: 電話番号の取得
+nav_title: 電話番号の取得
 article_title: 電話番号取得
 page_order: 3
 description: "この記事では、Twilio と Infobip から電話番号を取得する方法について説明します。"
@@ -38,6 +39,7 @@ channel:
 
 ### ステップ 2: 電話番号を設定する
 
+Twilioの指示に従って[Twilioの電話番号を設定し、Twilio Voice Only](https://www.twilio.com/docs/whatsapp/self-sign-up#verify-your-whatsapp-sender)を使用してメールで認証コードを受信します。**それ以外のステップの指示には従わないでください。この電話番号は Braze ではなく Twilio に接続する必要があります。**
 Twilioの指示に従って[Twilioの電話番号を設定し、Twilio Voice Only](https://www.twilio.com/docs/whatsapp/self-sign-up#verify-your-whatsapp-sender)を使用してメールで認証コードを受信します。**それ以外のステップの指示には従わないでください。この電話番号は Braze ではなく Twilio に接続する必要があります。**
 
 {% alert warning %}
