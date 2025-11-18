@@ -34,20 +34,20 @@ tool: Canvas
 
 1. テンプレート名の横にある**編集**を選択します。
 
-\![キャンバスの現在のタイトルと説明。]({% image_buster /assets/img/canvas_templates/preference_survey1.png %}){: style="max-width:50%;"}
+![キャンバスの現在のタイトルと説明。]({% image_buster /assets/img/canvas_templates/preference_survey1.png %}){: style="max-width:50%;"}
 
 {:start="2"}
 2\.キャンバス名を更新し、アプリを初めて使うユーザーをターゲットにしたキャンバスであることを指定します。
 3\.このキャンバスにパーソナライズされたメッセージングが含まれていることを説明する説明を更新します。
 4\.**Onboarding** というタグを追加し、キャンバスのホームページでフィルターできるようにします。
 
-\![キャンバスの新しい名前、説明、タグ。]({% image_buster /assets/img/canvas_templates/preference_survey2.png %}){: style="max-width:90%;"}
+![キャンバスの新しい名前、説明、タグ。]({% image_buster /assets/img/canvas_templates/preference_survey2.png %}){: style="max-width:90%;"}
 
 ### ステップ 2: 変換イベントの割り当て
 
 **1次コンバージョンイベント - A** を**カスタムイベントを実行**に更新します。次に、カスタムイベントに**Last Used App** を選択します。
 
-\![コンバージョンイベントのカスタムイベント名として選択された。]({% image_buster /assets/img/canvas_templates/preference_survey3.png %}){: style="max-width:90%;"}
+![コンバージョンイベントのカスタムイベント名として選択された。]({% image_buster /assets/img/canvas_templates/preference_survey3.png %}){: style="max-width:90%;"}
 
 ### ステップ 3: エントリスケジュールを調整する
 
@@ -55,19 +55,19 @@ tool: Canvas
 
 ここでは、**入力ウィンドウ**を希望の日時に調整することで、このセクションの更新を行います。
 
-\![エントリーは2025年1月30日午後12時から。]({% image_buster /assets/img/canvas_templates/preference_survey4.png %}){: style="max-width:90%;"}
+![エントリーは2025年1月30日午後12時から。]({% image_buster /assets/img/canvas_templates/preference_survey4.png %}){: style="max-width:90%;"}
 
 ### ステップ 4: ターゲットオーディエンスを選択する
 
 1日前に初めてStyleRydeアプリを使用したユーザーをターゲットにするために、ターゲット視聴者をそのまま維持します。
 
-\![エントリーオーディエンスをターゲットにするために選択された「これらのアプリを最初に使用したのが1日未満」というフィルターである。]({% image_buster /assets/img/canvas_templates/preference_survey5.png %}){: style="max-width:90%;"}
+![エントリーオーディエンスをターゲットにするために選択された「これらのアプリを最初に使用したのが1日未満」というフィルターである。]({% image_buster /assets/img/canvas_templates/preference_survey5.png %}){: style="max-width:90%;"}
 
 ### ステップ 5: 送信設定を選択する
 
 デフォルトのサブスクリプション設定を維持します。これにより、サイレント時間をオンにした状態でサブスクリプション登録したユーザーおよびメッセージまたは通知の受信を選択したユーザーのみに送信されるようになります。その他の設定 (フリークエンシーキャップ、シードグループ) は省略します。
 
-\!["送信設定 "セクションに、午前12時から午後8時までの "クワイエットアワー "がオンになっているサブスクライバーまたはオプトインしているユーザーのサブスクリプション設定を表示する。]({% image_buster /assets/img/canvas_templates/preference_survey6.png %}){: style="max-width:90%;"}
+!["送信設定 "セクションに、午前12時から午後8時までの "クワイエットアワー "がオンになっているサブスクライバーまたはオプトインしているユーザーのサブスクリプション設定を表示する。]({% image_buster /assets/img/canvas_templates/preference_survey6.png %}){: style="max-width:90%;"}
 
 ### ステップ6: キャンバスをカスタマイズする
 
@@ -79,7 +79,7 @@ tool: Canvas
 - セッションを開始したか、オンボーディングメールをクリックしたユーザー
 - セッションを開始していないユーザ、またはオンボーディングメールをクリックしていないユーザ
 
-\![アクションパスのステップは2つのパスに分割され、1つはセッションを開始したユーザー用、もう1つはそれ以外の人用である。]({% image_buster /assets/img/canvas_templates/preference_survey8.png %}){: style="max-width:50%;"}
+![アクションパスのステップは2つのパスに分割され、1つはセッションを開始したユーザー用、もう1つはそれ以外の人用である。]({% image_buster /assets/img/canvas_templates/preference_survey8.png %}){: style="max-width:50%;"}
 
 ここから、前述のグループに基づいてユーザーとメッセージングをターゲットにします。
 
@@ -91,7 +91,7 @@ tool: Canvas
 
 次に、**コンテンツの好みについての調査**メッセージステップを更新して、ユーザーが今後情報を受け取ることに関心のあるトピックを選択するように求める好みに関する調査を含めます。
 
-\![ユーザーに該当する興味をすべて選択するよう促す嗜好調査のプレビュー。]({% image_buster /assets/img/canvas_templates/preference_survey7.png %}){: style="max-width:90%;"}
+![ユーザーに該当する興味をすべて選択するよう促す嗜好調査のプレビュー。]({% image_buster /assets/img/canvas_templates/preference_survey7.png %}){: style="max-width:90%;"}
 
 #### オンボーディングを開始していないユーザーを誘導する 
 

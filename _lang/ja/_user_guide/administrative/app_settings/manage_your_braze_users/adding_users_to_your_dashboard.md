@@ -29,13 +29,13 @@ Brazeアカウントにユーザーを追加するには、管理者権限が必
 ユーザーのプロフィールに記載されている部署によって、Brazeから受け取る通信の種類が決まる。これにより、誰もがBrazeの使い方に関連したコミュニケーションやアラートだけを受け取ることができる。
 {% endalert %}
 
-\![ユーザー詳細フィールド。]({% image_buster /assets/img/add_new_user_2.png %}){: style="max-width:60%;"}
+![ユーザー詳細フィールド。]({% image_buster /assets/img/add_new_user_2.png %}){: style="max-width:60%;"}
 
 {:start="4"}
 
 4. 管理者でないユーザーについては、このユーザーに付与する会社レベルとワークスペースレベルの[権限]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#editing-a-users-permissions)を選択します。
 
-\![ワークスペースレベルの権限に、顧客の同意フィールド用のセクションを追加した。]({% image_buster /assets/img/add_new_user_3.png %})
+![ワークスペースレベルの権限に、顧客の同意フィールド用のセクションを追加した。]({% image_buster /assets/img/add_new_user_3.png %})
 
 ### 電子メールアドレスの要件
 
@@ -53,11 +53,11 @@ Brazeアカウントにユーザーを追加するには、管理者権限が必
 
 ユーザーをサスペンドするには、**Settings**> **Company Users**に移動し、ユーザー名を見つけて<i class="fa-solid fa-user-lock"></i>**Suspend**を選択します。
 
-\![ユーザーを一時停止するオプション。]({% image_buster /assets/img_archive/suspend_user.png %})
+![ユーザーを一時停止するオプション。]({% image_buster /assets/img_archive/suspend_user.png %})
 
 管理者は、リストからユーザー名を選択し、フッターの [**ユーザーを一時停止**] をクリックしてユーザーを一時停止することもできます。
 
-\![ユーザー詳細編集時にユーザーを一時停止する。]({% image_buster /assets/img_archive/suspend_user2.png %}){: style="max-width:70%;"}
+![ユーザー詳細編集時にユーザーを一時停止する。]({% image_buster /assets/img_archive/suspend_user2.png %}){: style="max-width:70%;"}
 
 ## ユーザーアクセスと責任の割り当て
 
@@ -67,7 +67,7 @@ Brazeアカウントにユーザーを追加するには、管理者権限が必
 
 ユーザーを削除するには、**「Settings（設定）**」＞「**Company Users（会社ユーザー）**」と進み、ユーザー名を見つけ、「<i class="fa fa-trash-can"></i> **Delete user（ユーザーを削除）**」を選択する。
 
-\![ユーザーを削除する]({% image_buster /assets/img_archive/delete_user_new.png %})
+![ユーザーを削除する]({% image_buster /assets/img_archive/delete_user_new.png %})
 
 ユーザが削除された後、Braze は次のアカウントデータを保持しません。
 

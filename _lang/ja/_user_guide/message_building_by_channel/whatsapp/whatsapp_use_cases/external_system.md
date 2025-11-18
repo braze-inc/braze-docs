@@ -23,7 +23,7 @@ Brazeと外部AIまたは通信システムとの統合は、双方向のスト�
 
 この通信を効率的に自動化するために、この統合では[Webhook キャンペーン s]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/) と[API-トリガー ed キャンペーン s]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/) の2 つの主要なBraze機能を使用します。
 
-\![Braze WhatsApp チャネルと外部システム間のインテグレーションのアーキテクチャ。]({% image_buster /assets/img/whatsapp/external_system_architecture.png %})
+![Braze WhatsApp チャネルと外部システム間のインテグレーションのアーキテクチャ。]({% image_buster /assets/img/whatsapp/external_system_architecture.png %})
 <sup>*Braze WhatsApp チャネルと外部システム間の統合のアーキテクチャ。*</sup>
 
 ## 前提条件
@@ -59,7 +59,7 @@ Brazeと外部AIまたは通信システムとの統合は、双方向のスト�
 {: start="5"}
 5. キャンペーン コンポーザーの**Schedule Delivery** ステップで、配信タイプに**Action-Based** を選択し、キャンペーン トリガーに**WhatsApp受信メッセージを送信します**。
 
-\![WhatsApp着信メッセージを送信するトリガーを使用したアクションベースの配信。]({% image_buster /assets/img/whatsapp/inbound_message_trigger.png %})
+![WhatsApp着信メッセージを送信するトリガーを使用したアクションベースの配信。]({% image_buster /assets/img/whatsapp/inbound_message_trigger.png %})
 
 {: start="6"}
 6. キャンペーンの作成を終了し、キャンペーンを保存して起動します。これで、メッセージを受信するたびに、Braze から外部システムにWebhookが送信されます。
@@ -71,12 +71,12 @@ Brazeと外部AIまたは通信システムとの統合は、双方向のスト�
 1. Braze で、WhatsApp キャンペーンを作成します。 
 2. メッセージ作成画面で、**WhatsApp テンプレート Message** または**Response Message** のいずれかを選択し、テンプレートまたはレスポンスメッセージレイアウトを選択します。受信メッセージが24時間WhatsAppウィンドウを開封したため、任意の応答メッセージレイアウトを選択できます。
 
-\![メッセージコンポーザーにメッセージタイプとメッセージレイアウトを選択するオプションがあります。]({% image_buster /assets/img/whatsapp/response_message_layout.png %})
+![メッセージコンポーザーにメッセージタイプとメッセージレイアウトを選択するオプションがあります。]({% image_buster /assets/img/whatsapp/response_message_layout.png %})
 
 {: start="3"}
 3\.API トリガー プロパティをメッセージ本文に追加します({% raw %}```{{api_trigger_properties.${external_system_msg+body}}}```{% endraw %} など)。これにより、AI システムは送信されるメッセージを入力できます。
 
-\![トリガーのプロパティーを含むメッセージ本文を持つメッセージコンポーザー。]({% image_buster /assets/img/whatsapp/api_trigger_properties.png %})
+![トリガーのプロパティーを含むメッセージ本文を持つメッセージコンポーザー。]({% image_buster /assets/img/whatsapp/api_trigger_properties.png %})
 
 {: start="4"}
 4\.キャンペーンコンポーザーの**Schedule Delivery**ステップで、配信種別に**Action-Based**を選択します。

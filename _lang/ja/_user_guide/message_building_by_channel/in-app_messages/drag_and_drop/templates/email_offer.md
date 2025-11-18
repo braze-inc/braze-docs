@@ -18,7 +18,7 @@ description: "このページでは、アプリ内メッセージのドラッグ
 
 ドラッグアンドドロップのアプリ内メッセージを作成する場合は、テンプレートに対して**特別なオファー**を使用した電子メールサインアップを選択し、**メッセージのビルド**を選択します。このテンプレートは、モバイルアプリとWebブラウザの両方でサポートされています。
 
-\![アプリ内メッセージエディターと特別オファー付きメール登録フォームのテンプレート。]({% image_buster /assets/img/drag_and_drop/templates/email_capture_offer.png %})
+![アプリ内メッセージエディターと特別オファー付きメール登録フォームのテンプレート。]({% image_buster /assets/img/drag_and_drop/templates/email_capture_offer.png %})
 
 ### ステップ 2: メッセージスタイルを設定する
 
@@ -30,7 +30,7 @@ description: "このページでは、アプリ内メッセージのドラッグ
 
 メールキャプチャ要素のプレースホルダーテキストとラベルテキストをカスタマイズできます。
 
-\![アプリ内メッセージエディターは、メールキャプチャエレメントをカスタマイズするためのサイドメニューを備えている。]({% image_buster /assets/img/drag_and_drop/templates/email_capture_field_offer.png %})
+![アプリ内メッセージエディターは、メールキャプチャエレメントをカスタマイズするためのサイドメニューを備えている。]({% image_buster /assets/img/drag_and_drop/templates/email_capture_field_offer.png %})
 
 #### メール検証
 

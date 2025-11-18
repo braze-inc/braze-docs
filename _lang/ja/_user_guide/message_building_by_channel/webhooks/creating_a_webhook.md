@@ -65,7 +65,7 @@ Webhookをゼロから作成するか、既存のテンプレートを使用す�
 - HTTPメソッド
 - Request body
 
-\![Webhookテンプレートの例がある "Compose "タブ。]({% image_buster /assets/img_archive/webhook_compose.png %})
+![Webhookテンプレートの例がある "Compose "タブ。]({% image_buster /assets/img_archive/webhook_compose.png %})
 
 #### 言語 {#internationalization}
 
@@ -99,7 +99,7 @@ Brazeは、標準ポート`80`（HTTP）および`443`（HTTPS）で通信する
 
 JSONキーと値のペアを使用すると、JSON形式を期待するエンドポイントへのリクエストを簡単に作成できます。JSONリクエストを期待するエンドポイントでのみ使用できる。例えば、キーが `message_body` の場合、対応する値には `Your order just arrived!` があります。キーと値のペアを入力すると、コンポーザーがリクエストをJSON構文で構成し、JSONリクエストのプレビューが自動的に表示されます。
 
-\![リクエスト・ボディはJSONのキーと値のペアに設定されている。]({% image_buster /assets/img/webhook_json_1.png %})
+![リクエスト・ボディはJSONのキーと値のペアに設定されている。]({% image_buster /assets/img/webhook_json_1.png %})
 
 Liquid を使用してキーと値のペアをパーソナライズできます (ユーザー属性、[カスタム属性]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#additional-notes-and-best-practices)、または[イベントプロパティ]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)を含めるなど)。例えば、リクエストに顧客の名とメールアドレスを含めることができます。各属性の[デフォルト値を]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=web)必ず含めること。
 
@@ -109,7 +109,7 @@ Liquid を使用してキーと値のペアをパーソナライズできます 
 
 両方の[パーソナライゼーション]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/)と[国際化]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/#campaigns-in-multiple-languages)は、Liquidを使用して生のテキストでサポートされています。
 
-\![Liquidを使った生のテキストを含むリクエストボディの例。]({% image_buster /assets/img_archive/webhook_rawtext.png %})
+![Liquidを使った生のテキストを含むリクエストボディの例。]({% image_buster /assets/img_archive/webhook_rawtext.png %})
 
 `Content-Type` [リクエストヘッダー](#request-headers-optional) を `application/x-www-form-url-encoded` に設定した場合、リクエストボディは URL エンコードされた文字列としてフォーマットする必要があります。以下に例を示します。
 
@@ -119,7 +119,7 @@ to={{custom_attribute.${example}}}&text=Your+order+just+arrived
 ```
 {% endraw %}
 
-\![URLエンコードされた文字列を含むリクエストボディ。]({% image_buster /assets/img_archive/webhook_rawtext_URL-encoded.png %})
+![URLエンコードされた文字列を含むリクエストボディ。]({% image_buster /assets/img_archive/webhook_rawtext_URL-encoded.png %})
 
 ## ステップ 3: 追加設定を構成する
 
@@ -127,7 +127,7 @@ to={{custom_attribute.${example}}}&text=Your+order+just+arrived
 
 特定のエンドポイントでは、リクエストにヘッダーを含める必要がある場合があります。作成画面の [**作成**] セクションで、ヘッダーを必要な数だけ追加できます。
 
-\![Authorization "キーと "Content-type "キーのリクエストヘッダー例。]({% image_buster /assets/img_archive/webhook_request_headers_example.png %})
+![Authorization "キーと "Content-type "キーのリクエストヘッダー例。]({% image_buster /assets/img_archive/webhook_request_headers_example.png %})
 
 一般的なリクエストヘッダーは`Content-Type`仕様 (XML や JSON など、本文に含まれるデータのタイプを示す) と、ベンダーやシステムに対する認証情報を含む認証ヘッダーです。 
 
@@ -204,7 +204,7 @@ Webhook は Braze サーバーが外部エンドポイントにリクエスト�
 
 Webhook の送信に失敗すると、エラーメッセージが[メッセージアクティビティログ]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/)に記録されます。これにはエラーのタイムスタンプ、アプリ名、エラーの詳細などが含まれます。
 
-\![現在のユーザーに関する情報を照会するには、アクティブ・アクセストークンを使用する必要があります」というメッセージのWebhookエラーが発生した。]({% image_buster /assets/img_archive/webhook-error.png %})
+![現在のユーザーに関する情報を照会するには、アクティブ・アクセストークンを使用する必要があります」というメッセージのWebhookエラーが発生した。]({% image_buster /assets/img_archive/webhook-error.png %})
 
 エラーメッセージがエラーの原因について十分に明確でない場合、使用しているAPIエンドポイントのドキュメントを確認する必要があります。これらは通常、エンドポイントが使用するエラーコードの説明と、それらが通常引き起こされる原因を提供します。
 

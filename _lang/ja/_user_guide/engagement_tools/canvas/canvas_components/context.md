@@ -20,7 +20,7 @@ tool: Canvas
 
 ## 仕組み
 
-\![キャンバスの最初のステップとしてのコンテクスト・ステップ。]({% image_buster /assets/img/context_step3.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
+![キャンバスの最初のステップとしてのコンテクスト・ステップ。]({% image_buster /assets/img/context_step3.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
 コンテキスト・ステップでは、ユーザーが特定のキャンバス内を移動する間に一時的なデータを作成し、使用することができる。このデータは、そのCanvas ジャーニー内にのみ存在し、異なるCanvase 間やセッション外では保持されません。
 
@@ -111,7 +111,7 @@ tool: Canvas
 
 ユーザーは、飛行機のチケットを購入するときにキャンバスに入ります。ラウンジアクセスの適格性を判断するために、コンテキストステップで`lounge_access_granted`というコンテキスト変数を作成し、その後のユーザージャーニーのステップでそのコンテキスト変数を参照します。
 
-\![乗客がVIPラウンジを利用できるかどうかを追跡するために設定されたコンテキスト変数である。]({% image_buster /assets/img/context_example4.png %}){: style="max-width:90%"}
+![乗客がVIPラウンジを利用できるかどうかを追跡するために設定されたコンテキスト変数である。]({% image_buster /assets/img/context_example4.png %}){: style="max-width:90%"}
 
 このコンテキストステップでは、{% raw %}`{{custom_attribute.${purchased_flight}}}`{% endraw %} を使用して、購入したフライトのタイプが`first_class` かどうかを判断します。
 
@@ -120,7 +120,7 @@ tool: Canvas
 - ファーストクラスの乗客は次のメッセージを受け取ります:「Enjoy exclusive VIP lounge access!」
 - ビジネスクラスとエコノミークラスの乗客は次のメッセージを受け取ります:「Upgrade your flight for exclusive VIP lounge access.」
 
-\![購入した航空券の種類によって、送信するメッセージが異なるメッセージステップ。]({% image_buster /assets/img/context_example3.png %}){: style="max-width:90%"}
+![購入した航空券の種類によって、送信するメッセージが異なるメッセージステップ。]({% image_buster /assets/img/context_example3.png %}){: style="max-width:90%"}
 
 {% alert tip %}
 コンテキストステップの情報を使用して、[パーソナライズされた遅延オプション]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/#personalized-delays) を追加できます。つまり、ユーザーを遅延させる変数を選択できます。
@@ -144,14 +144,14 @@ tool: Canvas
 
 以下のアクションパスは、基本プロパティ`source` を持つカスタムイベント`Account_Created` を実行したユーザーを、コンテキスト変数`app_source_variable` にソートするように設定されている。
 
-\![カスタムイベントを実行するときにコンテキスト変数を参照するアクションパスの例。]({% image_buster /assets/img/context_action_path1.png %})
+![カスタムイベントを実行するときにコンテキスト変数を参照するアクションパスの例。]({% image_buster /assets/img/context_action_path1.png %})
 
 {% endtab %}
 {% tab Make purchase %}
 
 以下のアクションパスは、特定の製品名`shoes` の基本プロパティ`brand` をコンテキスト変数`promoted_shoe_brand` にマッチさせるように設定されている。
 
-\![購入時にコンテキスト変数を参照するアクションパスの例。]({% image_buster /assets/img/context_action_path2.png %})
+![購入時にコンテキスト変数を参照するアクションパスの例。]({% image_buster /assets/img/context_action_path2.png %})
 
 {% endtab %}
 {% endtabs %}
@@ -166,7 +166,7 @@ tool: Canvas
 - 彼らはカスタムイベント**Abandon Cartを**実行する。
 - **Cartの**基本プロパティ**Itemは**、コンテキスト変数`cart_item_threshold` の文字列値と一致する。
 
-\![コンテクスト変数に基づくカスタムイベントをユーザーが実行した場合、ユーザーを終了させるための終了基準設定。]({% image_buster /assets/img/context_exit_criteria1.png %})
+![コンテクスト変数に基づくカスタムイベントをユーザーが実行した場合、ユーザーを終了させるための終了基準設定。]({% image_buster /assets/img/context_exit_criteria1.png %})
 
 {% endtab %}
 {% tab Make purchase %}
@@ -176,7 +176,7 @@ tool: Canvas
 - 彼らは「本」という商品名のために特定の購入をする。
 - その購入のネストされたプロパティ"loyalty_program" は、ユーザーのカスタム属性「VIP」と等しい。
 
-\![ユーザーが購入した場合に終了するように設定された終了基準。]({% image_buster /assets/img/context_exit_criteria2.png %})
+![ユーザーが購入した場合に終了するように設定された終了基準。]({% image_buster /assets/img/context_exit_criteria2.png %})
 
 {% endtab %}
 {% endtabs %}
@@ -191,7 +191,7 @@ tool: Canvas
 
 つまり、セグメンテーションの中で参照することはできない。オーディエンスパスのステップは複数のグループを表し、条件分岐のステップは二値決定を表す。
 
-\![条件分岐ステップの例では、コンテキスト変数でフィルターを作成することができる。]({% image_buster /assets/img/context_decision_split.png %}){: style="max-width:90%;"}
+![条件分岐ステップの例では、コンテキスト変数でフィルターを作成することができる。]({% image_buster /assets/img/context_decision_split.png %}){: style="max-width:90%;"}
 
 キャンバスのコンテキスト変数があらかじめ定義された型を持っているのと同様に、コンテキスト変数とスタティック値の比較も、[データ型が一致して]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_attributes/nested_custom_attribute_support/#supported-data-types)いなければならない。コンテキスト変数フィルターは、階層[化されたカスタム属性の]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_attributes/nested_custom_attribute_support/)比較と同様に、ブーリアン、数値、文字列、時刻、曜日について、複数のデータ型にまたがる比較を可能にする。
 
@@ -201,7 +201,7 @@ tool: Canvas
 
 以下は、コンテキスト変数`product_name` を正規表現`/braze/` と比較するコンテキスト変数フィルターの例である。
 
-\![コンテキスト変数"product_name" 、正規表現"/braze/"にマッチするようにフィルターが設定されている。]({% image_buster /assets/img/context_variable_filter1.png %}){: style="max-width:90%;"}
+![コンテキスト変数"product_name" 、正規表現"/braze/"にマッチするようにフィルターが設定されている。]({% image_buster /assets/img/context_variable_filter1.png %}){: style="max-width:90%;"}
 
 #### コンテキスト変数やカスタム属性との比較
 
@@ -214,14 +214,14 @@ tool: Canvas
 
 コンテキスト変数`re_engagement_date` は、{% raw %}`{{now | minus: 3 | append: ' days'}}`{% endraw %} と定義されている。なお、`3 days` 、ユーザーのカスタム属性として保存されることもある。つまり、`re_engagement_date` （ユーザープロファイルのカスタム属性として保存されている）が`last_login_date` （ユーザープロファイルのカスタム属性として保存されている）の後であれば、メッセージが送られる。
 
-\![カスタム属性をパーソナライゼーション・タイプとするフィルター・セットアップのコンテキスト変数"re_engagement_date" 、カスタム属性"last_login_date".]({% image_buster /assets/img/context_variable_filter2.png %}の後に続く)
+![カスタム属性をパーソナライゼーション・タイプとするフィルター・セットアップのコンテキスト変数"re_engagement_date" 、カスタム属性"last_login_date".]({% image_buster /assets/img/context_variable_filter2.png %}の後に続く)
 
 {% endtab %}
 {% tab Example 2 %}
 
 次のフィルターは、コンテキスト変数`reminder_date` がコンテキスト変数`appointment_deadline` より前にあることを比較する。これは、オーディエンスパスのステップでユーザーをグループ化し、予約締め切り前に追加リマインダーを受け取るべきかどうかを判断するのに役立つ。
 
-\![コンテキスト変数"appointment_deadline".]({% image_buster /assets/img/context_variable_filter3.png %}のパーソナライゼーションタイプ"reminder_date" としてコンテキスト変数を使ったフィルターセットアップ)
+![コンテキスト変数"appointment_deadline".]({% image_buster /assets/img/context_variable_filter3.png %}のパーソナライゼーションタイプ"reminder_date" としてコンテキスト変数を使ったフィルターセットアップ)
 
 {% endtab %}
 {% endtabs %}
@@ -259,7 +259,7 @@ tool: Canvas
 `Your appointment is scheduled for {{canvas_entry_properties.${appointment_time} | date: "%Y-%m-%d %l:%M %p"}}, we'll see you then!`
 {% endraw %}
 
-\![メッセージ・ステップを最初のステップとするコンテクスト・ジャーニー。]({% image_buster /assets/img/context_timezone_example.png %}){: style="max-width:50%"}
+![メッセージ・ステップを最初のステップとするコンテクスト・ジャーニー。]({% image_buster /assets/img/context_timezone_example.png %}){: style="max-width:50%"}
 
 ステップはまた、次のようなイベントペイロードを持つ： 
 

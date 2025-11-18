@@ -50,7 +50,7 @@ guide_featured_list:
 
 {% tabs %}{% tab Fullscreen %}
 
-\![フルスクリーンアプリ内メッセージでアプリスクリーンを引き継ぎます。フルスクリーンメッセージには、大きな"画像、ヘッダー、メッセージ本文、および2つのボタンが含まれます。]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
+![フルスクリーンアプリ内メッセージでアプリスクリーンを引き継ぎます。フルスクリーンメッセージには、大きな"画像、ヘッダー、メッセージ本文、および2つのボタンが含まれます。]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
 
 | レイアウト | アセットのサイズ | メモ |
 |--- | --- | --- |
@@ -64,7 +64,7 @@ guide_featured_list:
 {% endtab %}
 {% tab Modal %}
 
-\![アプリの中央にモーダルアプリ内メッセージ アプリが鳴り、対話形式でWeb サイトします。モーダルには、"画像、ヘッダー、メッセージ本文、および2つのボタンが含まれています。]({% image_buster /assets/img/modal-behavior.gif %}){: style="border:0px;"}
+![アプリの中央にモーダルアプリ内メッセージ アプリが鳴り、対話形式でWeb サイトします。モーダルには、"画像、ヘッダー、メッセージ本文、および2つのボタンが含まれています。]({% image_buster /assets/img/modal-behavior.gif %}){: style="border:0px;"}
 
 | レイアウト | アセットのサイズ | メモ |
 |--- | --- | ------ |
@@ -77,7 +77,7 @@ guide_featured_list:
 {% endtab %}
 {% tab Slideup %}
 
-\![スライドアップアプリ内メッセージ アプリはアプリスクリーンの底面から出ています。スライドアップには、アイコン"画像と短いメッセージが表示されます。]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
+![スライドアップアプリ内メッセージ アプリはアプリスクリーンの底面から出ています。スライドアップには、アイコン"画像と短いメッセージが表示されます。]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
 
 | レイアウト | アセットのサイズ | メモ |
 |--- | --- | --- |

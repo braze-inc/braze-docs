@@ -13,7 +13,7 @@ page_order: 1
 
 # あいまいなオプトアウト
 
-\![iOSのメッセージチャットで、"Please stopppp "というファジーなオプトアウトメッセージに対するアウトバウンドのオプトアウトメッセージが表示される。]({% image_buster /assets/img/sms/fuzzy1.jpg %}){: style="float:right;max-width:30%;margin-left:15px;"}
+![iOSのメッセージチャットで、"Please stopppp "というファジーなオプトアウトメッセージに対するアウトバウンドのオプトアウトメッセージが表示される。]({% image_buster /assets/img/sms/fuzzy1.jpg %}){: style="float:right;max-width:30%;margin-left:15px;"}
 
 > Brazeを使用してSMS、MMS、RCSを送信するユーザーは、適用される法律、規制、および定義されている業界標準を遵守しなければならない。オプトアウトでは、ユーザーのテキストが「STOP」の場合、そのメッセージングプログラムに関連する後続のすべてのメッセージングを停止することが法で定められています。Braze はこれらのメッセージを自動的に処理し、ユーザーへの配信を停止します。<br><br>[あいまいなオプトアウト]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/optin_optout/)は、インバウンドメッセージがオプトアウトキーワードと一致しなくても、オプトアウトのインテントを示している場合に、それを認識しようとします。あいまいなオプトアウトが有効になっており、インバウンドキーワード応答が「あいまい」と判断される場合、Braze は、ユーザーに対してオプトアウトするように指示する応答メッセージで自動的に応答します。
 
@@ -36,7 +36,7 @@ page_order: 1
 3. [**あいまいなオプトアウト**] をオンに切り替えて有効にします。
 4. 必要に応じて、ファジィオプトアウト応答を変更します。 
 
-\![オプトアウト・キーワードを編集するセクション。]({% image_buster /assets/img/sms/fuzzy2.png %})
+![オプトアウト・キーワードを編集するセクション。]({% image_buster /assets/img/sms/fuzzy2.png %})
 
 ## あいまいなオプトアウトメッセージのベストプラクティス
 

@@ -13,7 +13,7 @@ tool: Canvas
 
 > 遅延コンポーネントを使用して、キャンバスにスタンドアロンの遅延を追加できます。関連するメッセージを追加しなくても、キャンバスに遅延を追加することができます。 
 
-遅延によって、すっきりと整理されたキャンバスを作成できます。このコンポーネントを使えば、正確な日付まで、特定の日まで、あるいは特定の曜日まで、別のステップを遅らせることもできます。<br> \![キャンバスの最初のステップを1日遅れのディレイステップとする。]({% image_buster /assets/img/canvas_delay.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
+遅延によって、すっきりと整理されたキャンバスを作成できます。このコンポーネントを使えば、正確な日付まで、特定の日まで、あるいは特定の曜日まで、別のステップを遅らせることもできます。<br> ![キャンバスの最初のステップを1日遅れのディレイステップとする。]({% image_buster /assets/img/canvas_delay.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
 ## 遅延の作成
 
@@ -130,7 +130,7 @@ tool: Canvas
 - **データタイプ:**時刻
 - **値:** {% raw %}`{{custom_attribute.${Order_filled_time}}}`{% endraw %}
 
-"product_reminder_interval" \![、その価値は？]({% image_buster /assets/img/context_step1.png %})
+"product_reminder_interval" ![、その価値は？]({% image_buster /assets/img/context_step1.png %})
 
 次に、30日後に顧客に注意を促すため、遅延オプションとして [**特定の日まで**] を選択し、[**遅延のカスタマイズ**] を選択してコンテキストステップの情報を使用します。つまり、ユーザーは選択したコンテキスト変数まで遅延します。
 

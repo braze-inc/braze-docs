@@ -60,7 +60,7 @@ search_rank: 1
 先に進む前に、[SMSメッセージのセグメントとコピーの上限に関する]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/segments/)ガイドラインを読みましょう。SMSメッセージ・セグメントとは、電話キャリアがテキスト・メッセージを測定するために使用する文字バッチのことです。メッセージはメッセージセグメントごとに課金されるため、メッセージの分割方法のニュアンスを理解しておきましょう。
 {% endalert %}
 
-\![BrazeのSMS作成画面に「Hifirst_name, we appreciate your support！このSMSを見せれば、特別割引が適用されます。私たちからのメッセージを受け取らないようにするにはSTOPと返信すること。"]({% image_buster /assets/img/sms_campaign_compose.png %})
+![BrazeのSMS作成画面に「Hifirst_name, we appreciate your support！このSMSを見せれば、特別割引が適用されます。私たちからのメッセージを受け取らないようにするにはSTOPと返信すること。"]({% image_buster /assets/img/sms_campaign_compose.png %})
 
 ### 連絡先カードの追加
 
@@ -78,7 +78,7 @@ Liquidを使用する場合は、受信者のユーザープロファイルが�
 
 魅力的な文章を作成するためのサポートが必要な場合は、[AI コピーライティングアシスタント]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/)を使用してみてください。商品名や説明を入力すると、AIが人間のようなマーケティングコピーを生成し、メッセージングに使用します。
 
-\![SMS作成画面のメッセージフィールドにある「AIコピーライターを起動」ボタンをクリックする。]({% image_buster /assets/img/ai_copywriter/ai_copywriter_sms.png %}){: style="max-width:60%"}
+![SMS作成画面のメッセージフィールドにある「AIコピーライターを起動」ボタンをクリックする。]({% image_buster /assets/img/ai_copywriter/ai_copywriter_sms.png %}){: style="max-width:60%"}
 
 #### 右から左へのメッセージの作成
 
@@ -88,7 +88,7 @@ Liquidを使用する場合は、受信者のユーザープロファイルが�
 
 Brazeでは、送信前にメッセージをプレビューしてテストすることを常に推奨しています。**テスト**タブに切り替えて、[コンテンツテストグループ]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups)または個々のユーザーにテストSMSを送信するか、Brazeで直接ユーザーとしてメッセージをプレビューしましょう。
 
-\![コンポーザーのテストタブからSMSコピーをプレビューする。プロファイルセクションの [名] フィールドは「James」に設定されています。プレビューセクションでは、SMSに "Hi James, we appreciate your support!"と表示されるようになった。]({% image_buster /assets/img/sms_campaign_test.png %})
+![コンポーザーのテストタブからSMSコピーをプレビューする。プロファイルセクションの [名] フィールドは「James」に設定されています。プレビューセクションでは、SMSに "Hi James, we appreciate your support!"と表示されるようになった。]({% image_buster /assets/img/sms_campaign_test.png %})
 
 {% alert tip %}
 SMSがいくつのセグメントに分けられるかテストしたい場合は、[SMSセグメント計算機を使って]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#segment-calculator)コピーの長さをテストしてみましょう。

@@ -28,7 +28,7 @@ channel:
 
 次に、HTMLエディタの**Content**セクションに移動し、**Gmail Promotion**タブを選択します。**Basic Information**にフィールドを入力し、**Generate HTML Code**を選択します。これにより、**HTML コードを`<Head>`**にコピー&ペーストする、Gmail Promoタブカードのスクリプトが生成されます。
 
-\![カードの構築方法のサンプル。]({% image_buster /assets/img/create-gmail-promo.png %})
+![カードの構築方法のサンプル。]({% image_buster /assets/img/create-gmail-promo.png %})
 
 ### ステップ 3: Gmailプロモーションカードのカスタマイズ
 
@@ -45,7 +45,7 @@ channel:
 4. 次に、割引オファーの開始日時を選択します。
 5. 割引オファーが特定の時点で終了するか、終了しないかを決定します。
 
-\![割引オファーのオファー値、コード、および開始日時を指定するオプション。]({% image_buster /assets/img/gmail_promo_discount_details.png %}){: style="max-width:70%;"}
+![割引オファーのオファー値、コード、および開始日時を指定するオプション。]({% image_buster /assets/img/gmail_promo_discount_details.png %}){: style="max-width:70%;"}
 
 {% endtab %}
 {% tab Deal Cards %}
@@ -61,7 +61,7 @@ channel:
 5. (オプション) オファーの開始日を追加します。
 6. オファーを特定の時点で終了するか、終了しないかを決定します。
 
-\![ディールカードのオファー値、コード、および開始日時を指定するオプション。]({% image_buster /assets/img/gmail_promo_deal_cards.png %}){: style="max-width:70%;"}
+![ディールカードのオファー値、コード、および開始日時を指定するオプション。]({% image_buster /assets/img/gmail_promo_deal_cards.png %}){: style="max-width:70%;"}
 
 {% endtab %}
 {% tab Promotion cards %}
@@ -88,7 +88,7 @@ channel:
 | 割引値 | 元の価格から割り引かれた金額。 | 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-\![メールが&quot であるMotto という会社の製品カルーセルの例;私たちの最も売れているソックスは、3"画像のソックスとその割引価格で、セール&クォートです。]({% image_buster /assets/img_archive/product_carousel.png %}){: style="max-width:40%;"}
+![メールが&quot であるMotto という会社の製品カルーセルの例;私たちの最も売れているソックスは、3"画像のソックスとその割引価格で、セール&クォートです。]({% image_buster /assets/img_archive/product_carousel.png %}){: style="max-width:40%;"}
 
 {% endtab %}
 {% endtabs %}

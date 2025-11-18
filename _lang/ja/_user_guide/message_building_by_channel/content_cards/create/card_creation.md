@@ -28,7 +28,7 @@ SDK をアップグレードした後、モバイルユーザーはアプリを�
 
 Brazeは、スケジュール配信で新しい[コンテンツカードキャンペーンを]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/)作成する際に、**配信**ステップでカードを作成するタイミングを選択できる。
 
-\![コンテンツカードコントロールセクション]は、スケジュールされたコンテンツカードの配信を編集するときに使用します。]({% image_buster /assets/img_archive/card_creation.png %})
+![コンテンツカードコントロールセクション]は、スケジュールされたコンテンツカードの配信を編集するときに使用します。]({% image_buster /assets/img_archive/card_creation.png %})
 
 以下のオプションがあります。
 
@@ -42,7 +42,7 @@ Brazeは、スケジュール配信で新しい[コンテンツカードキャ�
 
 Brazeがカードを作成するタイミングは、[コンテンツカードメッセージステップの]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) **Messaging Channels**タブで選択できる。
 
-\![コンテンツカードコントロールセクション]は、スケジュールされたコンテンツカードの配信を編集するときに使用します。]({% image_buster /assets/img_archive/card_creation_canvas.png %})
+![コンテンツカードコントロールセクション]は、スケジュールされたコンテンツカードの配信を編集するときに使用します。]({% image_buster /assets/img_archive/card_creation_canvas.png %})
 
 以下のオプションがあります。
 
