@@ -8,7 +8,7 @@ channel: email
 
 ---
 
-# [\![Curso de Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability){: style="float:right;width:120px;border:0;" class="noimgborder"} Trampas de capacidad de entrega y correo no deseado
+# [![Curso de Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability){: style="float:right;width:120px;border:0;" class="noimgborder"} Trampas de capacidad de entrega y correo no deseado
 
 La capacidad de entrega de tu correo electrónico puede verse afectada por alguna de las siguientes trampas de correo no deseado:
 

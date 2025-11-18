@@ -31,7 +31,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/check-square-broken.svg
 ---
 
-## [\![Curso de Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/content-cards){: style="float:right;width:120px;border:0;" class="noimgborder"} Ventajas de utilizar tarjetas de contenido
+## [![Curso de Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/content-cards){: style="float:right;width:120px;border:0;" class="noimgborder"} Ventajas de utilizar tarjetas de contenido
 
 Éstas son sólo algunas de las ventajas de utilizar tarjetas de contenido frente a pedir a tus desarrolladores que incorporen contenido a tu aplicación:
 
