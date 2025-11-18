@@ -1,4 +1,4 @@
-{% multi_lang_include 開発者_guide/prerequisites/web.md %} Web SDKのプッシュ通知s を[ に設定する必要もあります。プッシュ通知 s は、[Safari v16.4](https://developer.apple.com/documentation/safari-release-notes/safari-16_4-release-notes) 以降を使用しているiOS およびiPadOS ユーザー s にのみ送信できます。
+{% multi_lang_include developer_guide/prerequisites/web.md %} Web SDKのプッシュ通知s を[ に設定する必要もあります。プッシュ通知 s は、[Safari v16.4](https://developer.apple.com/documentation/safari-release-notes/safari-16_4-release-notes) 以降を使用しているiOS およびiPadOS ユーザー s にのみ送信できます。
 
 ## モバイル用のSafari プッシュの設定
 
