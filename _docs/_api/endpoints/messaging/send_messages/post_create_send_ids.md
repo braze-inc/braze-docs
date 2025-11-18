@@ -66,8 +66,6 @@ curl --location --request POST 'https://rest.iad-01.braze.com/sends/id/create' \
 ### Example success response
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "message": "success",
   "send_id" : (string) the send identifier
