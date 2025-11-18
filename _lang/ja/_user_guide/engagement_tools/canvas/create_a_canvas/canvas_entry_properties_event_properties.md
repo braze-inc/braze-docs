@@ -67,7 +67,7 @@ tool: Canvas
 
 ## ユースケース
 
-\![ウィッシュリストにアイテムを追加したユーザーには、アクションパスのステップに続いてディレイステップとメッセージングステップがあり、それ以外のユーザーにはパスがある。]({% image_buster /assets/img_archive/canvas_entry_properties1.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
+![ウィッシュリストにアイテムを追加したユーザーには、アクションパスのステップに続いてディレイステップとメッセージングステップがあり、それ以外のユーザーにはパスがある。]({% image_buster /assets/img_archive/canvas_entry_properties1.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
 
 `canvas_entry_properties` と`event_properties` の違いをさらに理解するために、ユーザーが「ウィッシュリストにアイテムを追加」というカスタムイベントを実行すると、アクションベースのキャンバスに入るというシナリオを考えてみます。 
 

@@ -32,12 +32,12 @@ channel:
 1. Brazeで、**Partner Integrations**> **Technology Partners**> **WhatsApp** に移動します。
 2. **最適化配信で送信を最適化する**で、**アップグレード設定**を選択して、[埋め込みサインアップワークフロー]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/embedded_signup/)をトリガーします。
 
-\![WhatsApp メッセージインテグレーションセクション。最適化された配信で送信を最適化するオプションがあります。]({% image_buster /assets/img/whatsapp/whatsapp_messaging_integration.png %})
+![WhatsApp メッセージインテグレーションセクション。最適化された配信で送信を最適化するオプションがあります。]({% image_buster /assets/img/whatsapp/whatsapp_messaging_integration.png %})
 
 {: start="3"}
 3\.最適化された配信が有効になった後、** WhatsApp Business Account Management** のアカウント詳細に最適化された配信ステータスが表示されます。
 
-\![有効な番号ステータスを持つサブスクリプショングループが一覧表示されたWhatsApp 法人取引先管理セクション。]({% image_buster /assets/img/whatsapp/optimized_delivery_message.png %})
+![有効な番号ステータスを持つサブスクリプショングループが一覧表示されたWhatsApp 法人取引先管理セクション。]({% image_buster /assets/img/whatsapp/optimized_delivery_message.png %})
 
 または、最適化された配信をWhatsApp マネージャーで直接有効にしてから、Brazeでの送信を開始することもできます。
 
@@ -56,4 +56,4 @@ channel:
 2. **Delivery method**セクションでは、WhatsAppのビジネスアカウント(WABA)が有効になっている場合、**Optimized Delivery(推奨)**のチェックボックスがデフォルトによってチェックされます。その特定のメッセージに最適化配信を使用しない場合は、チェックボックスをオフにします。
 - 最適化配信を選択したが利用できない場合、メッセージは自動的にCloud API メソッドにフォールバックされます。
 
-\![最適化された配信を選択するためのチェックボックスが付いたプレビュータブ付きのメッセージコンポーザー。]({% image_buster /assets/img/whatsapp/delivery_method_settings.png %})
+![最適化された配信を選択するためのチェックボックスが付いたプレビュータブ付きのメッセージコンポーザー。]({% image_buster /assets/img/whatsapp/delivery_method_settings.png %})

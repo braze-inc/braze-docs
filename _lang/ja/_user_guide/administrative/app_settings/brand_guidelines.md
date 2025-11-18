@@ -36,7 +36,7 @@ description: "このリファレンス記事では、AI コピーライティン
 
 [**除外**] には、自社ブランドにふさわしくない言葉やスタイルを列挙します。例えば、「皮肉」「否定的な態度」「慇懃無礼」なトーンを避けることをお勧めします。
 
-\![名前、説明、パーソナライズ、除外、トーンを入力するフィールドがある。]({% image_buster /assets/img/guidelines_create.png %})
+![名前、説明、パーソナライズ、除外、トーンを入力するフィールドがある。]({% image_buster /assets/img/guidelines_create.png %})
 
 ### ステップ 4: ガイドラインのテスト
 
@@ -54,12 +54,12 @@ description: "このリファレンス記事では、AI コピーライティン
 
 ブランドガイドラインを編集するには、**ブランドガイドライン**のページで選択します。ブランドガイドラインをアーカイブして非アクティブにし、AIコピーライティングアシスタントから削除する。再び有効にして選択可能にするには、アーカイブされたブランド・ガイドラインをフィルターにかけ、アーカイブを解除すればよい。
 
-\![ブランド・ガイドライン "のページは、アーカイブされたブランド・ガイドラインをフィルターしている。]({% image_buster /assets/img/unarchive_brand_guideline.png %})
+![ブランド・ガイドライン "のページは、アーカイブされたブランド・ガイドラインをフィルターしている。]({% image_buster /assets/img/unarchive_brand_guideline.png %})
 
 ## ブランド・ガイドラインの活用
 
 メッセージを作成するときは、[AI コピーライティングアシスタント]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/)を開き、[**ブランドガイドラインを適用する**] ドロップダウンでブランドガイドラインを選択します。特定のブランド・ガイドラインをデフォルトに指定すると、ドロップダウンで自動的に選択されるが、別のガイドラインを選択することもできる。 
 
-\!["AIコピーライティングアシスタントは、ブランドガイドラインとして「重要なお知らせ！」を選択した。]({% image_buster /assets/img/guidelines_ai_assistant.png %})
+!["AIコピーライティングアシスタントは、ブランドガイドラインとして「重要なお知らせ！」を選択した。]({% image_buster /assets/img/guidelines_ai_assistant.png %})
 
 {% multi_lang_include brazeai/generative_ai/policy.md %}
