@@ -67,7 +67,6 @@ Query Builderの!["Variable"タブに、指定した例が表示されます。]
 
 {% tabs %}
 {% tab usage %}
-{% tab usage %}
 {% raw %}
 ```sql
 some_number_column < {{number.${custom_label}}}
@@ -81,7 +80,6 @@ some_number_column < {{number.${custom_label}}}
 繰り返される文字列値をレポート実行の合間に変更する場合に使用します。この変数を使用すると、SQL 内の値を複数回ハードコーディングする必要がなくなります。
 
 {% tabs %}
-{% tab usage %}
 {% tab usage %}
 {% raw %}
 ```sql
@@ -129,7 +127,6 @@ some_number_column < {{number.${custom_label}}}
 
 {% tabs %}
 {% tab usage %}
-{% tab usage %}
 ```sql
 is_radio_button: 'true'
 ```
@@ -143,7 +140,6 @@ is_radio_button: 'true'
 選択肢を持つドロップダウンで単一選択または複数選択のいずれを許可するかを指定します。これは単独では使用できません。[リスト](#list)と組み合わせて使用する必要があります。
 
 {% tabs %}
-{% tab usage %}
 {% tab usage %}
 ```sql
 is_multi_select: 'true'
@@ -159,7 +155,6 @@ is_multi_select: 'true'
 
 {% tabs %}
 {% tab usage %}
-{% tab usage %}
 ```sql
 options: '[{"label": "test", "value": "test_value"}, {"label": "test2", "value": "test_value2"}]'
 ```
@@ -173,7 +168,6 @@ options: '[{"label": "test", "value": "test_value"}, {"label": "test2", "value":
 日付を選択するカレンダーを表示するためのものです。`start_date` と `end_date` を、指定された日付の UTC での Unix タイムスタンプ (秒単位) に置き換えます (`1696517353` など)。オプションで、`start_date` または `end_date` のみを設定し、カレンダーに単一の日付のみを表示させることもできます。`start_date` と`end_date` のラベルが一致しないと、日付範囲ではなく、2つの別々の日付として扱われる。
 
 {% tabs %}
-{% tab usage %}
 {% tab usage %}
 {% raw %}
 ```
@@ -347,7 +341,6 @@ canvas_step_api_id IN ({{canvas_steps.${custom_label}}})
 
 {% tabs %}
 {% tab usage %}
-{% tab usage %}
 {% raw %}
 ```sql
 ({{products.${custom_label}}})
@@ -420,7 +413,6 @@ name = '{{custom_event_properties.${property names)}}}'
 
 {% tabs %}
 {% tab usage %}
-{% tab usage %}
 {% raw %}
 ```sql
 workspace_id = '{{workspace.${app_group_id}}}'
@@ -471,7 +463,6 @@ field_name = '{{catalog_fields.${custom_label}}}'
 
 {% tabs %}
 {% tab usage %}
-{% tab usage %}
 {% raw %}
 ```sql
 {{segments.${analytics_segments}}}
@@ -485,7 +476,6 @@ field_name = '{{catalog_fields.${custom_label}}}'
 キャンペーンやキャンバスのタグを選択する場合に使用します。選択したタグに関連付けられている BSON ID を持つキャンペーンまたはキャンバスに設定します。BSON ID は一重引用符で囲み、コンマで区切ります。
 
 {% tabs %}
-{% tab usage %}
 {% tab usage %}
 {% raw %}
 ```sql
@@ -501,7 +491,6 @@ field_name = '{{catalog_fields.${custom_label}}}'
 
 {% tabs %}
 {% tab usage %}
-{% tab usage %}
 {% raw %}
 ```sql
 {{string.${my var}| is_required: 'false' | description: 'My optional string var'}}
@@ -515,7 +504,6 @@ field_name = '{{catalog_fields.${custom_label}}}'
 変数の値が入力されているかどうかを知る場合に使用します。これは、オプションの変数に値が入力されていない場合に条件を短絡評価する場合に便利です。他の変数の値に応じて、`true` または`false` に設定できます。
 
 {% tabs %}
-{% tab usage %}
 {% tab usage %}
 {% raw %}
 ```sql
@@ -541,7 +529,6 @@ field_name = '{{catalog_fields.${custom_label}}}'
 
 {% tabs %}
 {% tab usage %}
-{% tab usage %}
 ```sql
 visible: 'false'
 ```
@@ -554,7 +541,6 @@ visible: 'false'
 
 {% tabs %}
 {% tab usage %}
-{% tab usage %}
 ```sql
 required: 'false'
 ```
@@ -566,7 +552,6 @@ required: 'false'
 [**変数**] タブでの変数の位置を選択する場合に使用します。
 
 {% tabs %}
-{% tab usage %}
 {% tab usage %}
 ```sql
 order: '1'
@@ -610,7 +595,6 @@ include_double_quotes: 'true'
 
 {% tabs %}
 {% tab usage %}
-{% tab usage %}
 ```sql
 placeholder: 'enter some value'
 ```
@@ -622,7 +606,6 @@ placeholder: 'enter some value'
 変数の入力フィールドの下に表示される説明テキストを指定します。
 
 {% tabs %}
-{% tab usage %}
 {% tab usage %}
 ```sql
 description: 'some description'
@@ -636,7 +619,6 @@ description: 'some description'
 
 {% tabs %}
 {% tab usage %}
-{% tab usage %}
 ```sql
 default_value: '5'
 ```
@@ -648,7 +630,6 @@ default_value: '5'
 変数のラベルを非表示にします。
 
 {% tabs %}
-{% tab usage %}
 {% tab usage %}
 ```sql
 hide_label: 'true'
