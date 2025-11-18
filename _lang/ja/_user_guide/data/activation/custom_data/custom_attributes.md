@@ -7,7 +7,7 @@ description: "このページでは、カスタム属性について説明し、
 search_rank: 1
 ---
 
-# [\![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/custom-events-and-attributes){: style="float:right;width:120px;border:0;" class="noimgborder"} カスタム属性
+# [![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/custom-events-and-attributes){: style="float:right;width:120px;border:0;" class="noimgborder"} カスタム属性
 
 > このページでは、ユーザの一意の特性のコレクションであるカスタム属性について説明します。カスタム属性は、ユーザーに関する属性や、アプリケーション内の価値の低いアクションに関する情報を格納するために最適です。 
 
