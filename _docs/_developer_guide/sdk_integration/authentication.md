@@ -23,7 +23,7 @@ After you enable this feature in your app, you can configure the Braze dashboard
 - Updating standard user profile attributes
 - Receiving or triggering messages
 
-Now you can prevent unauthenticated logged-in users from using your app's SDK API key to preform malicious actions, such as impersonating your other users.
+Now you can prevent unauthenticated logged-in users from using your app's SDK API key to perform malicious actions, such as impersonating your other users.
 
 ## Setting up authentication
 

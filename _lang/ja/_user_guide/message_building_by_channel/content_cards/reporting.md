@@ -14,4 +14,4 @@ tool:
 
 > この記事では、Braze ダッシュボードで提供されるさまざまなコンテンツカードレポートの指標と分析オプションの概要を説明します。
 
-{% multi_lang_include campaign_analytics.md channel="Content Card" %}
+{% multi_lang_include analytics/campaign_analytics.md channel="Content Card" %}
