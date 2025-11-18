@@ -1,4 +1,4 @@
-{% multi_lang_include desarrollador_guide/prerequisites/android.md %} También tendrás que [configurar las notificaciones push]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=android).
+{% multi_lang_include developer_guide/prerequisites/android.md %} También tendrás que [configurar las notificaciones push]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=android).
 
 ## Utilizar una devolución de llamada para eventos push {#push-callback}
 

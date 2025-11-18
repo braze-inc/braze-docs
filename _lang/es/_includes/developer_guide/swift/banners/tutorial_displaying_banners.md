@@ -6,7 +6,7 @@ Antes de empezar este tutorial, comprueba que tu SDK de Braze cumple los requisi
 
 ## Visualización de banners para el SDK de Swift
 
-{% multi_lang_include desarrollador_guide/_shared/tutorial_feedback.md tutorial="Visualización de banners Swift" %}
+{% multi_lang_include developer_guide/_shared/tutorial_feedback.md tutorial="Visualización de banners Swift" %}
 
 {% tabs %}
 {% tab UIKit %}

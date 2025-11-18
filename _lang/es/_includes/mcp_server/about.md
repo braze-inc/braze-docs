@@ -79,4 +79,4 @@ Cuando trabajes con herramientas como Cursor, puedes probar a cambiar el modelo 
 
 Si los problemas persisten, puedes enviarnos un correo electrónico a [mcp-product@braze.com](mailto:mcp-product@braze.com) para informarnos. Si es posible, incluye un video y amplía las funciones de llamada para que podamos ver qué llamadas intentó el agente.
 
-{% multi_lang_include servidor_mcp/renuncia_legal.md %}
+{% multi_lang_include mcp_server/legal_disclaimer.md %}
