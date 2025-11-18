@@ -132,6 +132,10 @@ If previewing as a custom user, enter text for various fields available for pers
 
 ![Custom user]({% image_buster /assets/img_archive/personalized_testing_custom.png %})
 
+#### Customizing an existing user
+
+You can edit individual fields from a random or existing user to help test dynamic content within your message. Select **Edit** to convert the selected user into a custom user you can modify.
+
 ### Testing campaigns personalized with custom event properties
 
 Testing campaigns personalized with [custom event properties]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#custom-event-properties) differs slightly from testing other types of campaigns outlined. 

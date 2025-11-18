@@ -15,7 +15,7 @@ To contact the Braze Support team, navigate to the Braze dashboard. In the dashb
 
 ![The "Support" dropdown with the option to get help.]({% image_buster /assets/img_archive/get_help.png %}){: style="max-width:60%;"}
 
-Depending on your Braze permissions and whether you're a designated support contact, you will be directed to either the Braze support portal, where you can submit and track cases, or our standard support form. If you're unsure if you are a Braze support contact, reach out to your company's Braze administrator, Braze success manager, or account owner.
+Depending on your Braze permissions and whether you're a designated support contact, you will be directed to either the Braze support portal, where you can submit and track cases, or our standard support form. If you're unsure if you are a Braze support contact, contact your company's Braze administrator, Braze success manager, or account owner.
 
 ## Adding designated support contacts
 

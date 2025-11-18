@@ -25,7 +25,7 @@ This feature allows brands to control what specific first-party data is shared w
 
 {% alert important %}
 **Audience Sync Pro disclaimer**<br>
-Braze Audience Sync to Pinterest is an Audience Sync Pro integration. For more information on this integration, reach out to your Braze account manager.
+Braze Audience Sync to Pinterest is an Audience Sync Pro integration. For more information on this integration, contact your Braze account manager.
 {% endalert %}
 
 ## Prerequisites 

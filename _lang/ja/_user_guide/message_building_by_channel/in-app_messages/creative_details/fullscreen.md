@@ -18,12 +18,12 @@ tool:
 {% tabs %}
 {% tab Portrait %}
 
-\![2つのフルスクリーンアプリ内メッセージは、縦向きで並べて表示され、"画像と文字の推奨事項が詳しく説明されています。詳細については、次のセクションを参照してください。]({% image_buster /assets/img/full-screen-spec.png %}){: style="max-width:801px;border:none;display:block;margin-left:auto;margin-right:auto"}
+![2つのフルスクリーンアプリ内メッセージは、縦向きで並べて表示され、"画像と文字の推奨事項が詳しく説明されています。詳細については、次のセクションを参照してください。]({% image_buster /assets/img/full-screen-spec.png %}){: style="max-width:801px;border:none;display:block;margin-left:auto;margin-right:auto"}
 
 {% endtab %}
 {% tab Landscape %}
 
-\![2 つのフルスクリーンアプリ内メッセージは横向きで並べて表示され、"画像と文字の推奨事項を詳しく説明します。詳細については、次のセクションを参照してください。]({% image_buster /assets/img/full-screen-spec-landscape.png %}){: style="max-width:801px;border:none;display:block;margin-left:auto;margin-right:auto"}
+![2 つのフルスクリーンアプリ内メッセージは横向きで並べて表示され、"画像と文字の推奨事項を詳しく説明します。詳細については、次のセクションを参照してください。]({% image_buster /assets/img/full-screen-spec-landscape.png %}){: style="max-width:801px;border:none;display:block;margin-left:auto;margin-right:auto"}
 
 {% endtab %}
 {% endtabs %}
@@ -58,7 +58,7 @@ tool:
 
 Brazeプラットフォームでフルスクリーンのアプリ内メッセージをプレビューする際、デバイス間で表示される際にトリミングから保護されるメッセージの領域に対して、イメージセーフゾーンを有効にすることができる。プレビューペインでイメージセーフゾーンをテストするだけでなく、いつも通り[メッセージをテスト]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/)することをお勧めする。
 
-\![ " Show Image Safe Zone" enabled でBrazeのアプリ内メッセージをプレビューする。"画像セーフゾーンは、"画像のどの部分がクロップから安全かを視覚化する"画像上のオーバーレイです。]({% image_buster /assets/img/image-safe-zone-full-screen-in-app-message.png %})
+![ " Show Image Safe Zone" enabled でBrazeのアプリ内メッセージをプレビューする。"画像セーフゾーンは、"画像のどの部分がクロップから安全かを視覚化する"画像上のオーバーレイです。]({% image_buster /assets/img/image-safe-zone-full-screen-in-app-message.png %})
 
 ## 大型スクリーン
 
@@ -67,12 +67,12 @@ Brazeプラットフォームでフルスクリーンのアプリ内メッセー
 {% tabs %}
 {% tab Portrait %}
 
-\![フルスクリーンは、大型スクリーンで縦向きに耳をアプリようにアプリ内メッセージします。アプリは、スクリーンの中央にある大きなモーダルのように聞こえます。]({% image_buster /assets/img/full-screen-large-viewport.png %}){: style="border:none;display:block;margin-left:auto;margin-right:auto"}
+![フルスクリーンは、大型スクリーンで縦向きに耳をアプリようにアプリ内メッセージします。アプリは、スクリーンの中央にある大きなモーダルのように聞こえます。]({% image_buster /assets/img/full-screen-large-viewport.png %}){: style="border:none;display:block;margin-left:auto;margin-right:auto"}
 
 {% endtab %}
 {% tab Landscape %}
 
-\![横向きで大画面に耳をアプリようにフルスクリーンでアプリ内メッセージします。アプリは、スクリーンの中央にある大きなモーダルのように聞こえます。]({% image_buster /assets/img/full-screen-large-viewport-landscape.png %}){: style="max-width:80%;border:none;display:block;margin-left:auto;margin-right:auto"}
+![横向きで大画面に耳をアプリようにフルスクリーンでアプリ内メッセージします。アプリは、スクリーンの中央にある大きなモーダルのように聞こえます。]({% image_buster /assets/img/full-screen-large-viewport-landscape.png %}){: style="max-width:80%;border:none;display:block;margin-left:auto;margin-right:auto"}
 
 {% endtab %}
 {% endtabs %}

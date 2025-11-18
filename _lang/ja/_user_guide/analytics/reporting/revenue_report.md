@@ -16,7 +16,7 @@ tool: Reports
 
 期間やレポート対象のアプリ、およびパラメーターを選択して、収益レポートをカスタマイズできます。
 
-\![収益」をパラメータとして設定し、「経時パフォーマンス」グラフを表示した「収益レポート」ページ。]({% image_buster /assets/img/revenue_report.png %})
+![収益」をパラメータとして設定し、「経時パフォーマンス」グラフを表示した「収益レポート」ページ。]({% image_buster /assets/img/revenue_report.png %})
 
 ### 日付とアプリを使用したフィルターの適用
 
@@ -80,6 +80,6 @@ tool: Reports
 
 選択した日付範囲内で購入された製品のリスト、各製品の購入数、および各製品で生成された収益の量については、**Product Breakdown**テーブルを参照してください。
 
-\![商品名」、「仕入高」、「売上高」の列を示す「商品内訳」表である。]({% image_buster /assets/img/revenue_report_product_breakdown.png %})
+![商品名」、「仕入高」、「売上高」の列を示す「商品内訳」表である。]({% image_buster /assets/img/revenue_report_product_breakdown.png %})
 
 

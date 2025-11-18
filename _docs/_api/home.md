@@ -262,6 +262,10 @@ glossaries:
     description: Export a list of segments, each of which will include its name, Segment API identifier, and whether it has analytics tracking enabled.
     tags:
       - Segments
+  - name: <a href='/docs/api/endpoints/export/segments/post_cancel_export/'>/export/segment/cancel</a>
+    description: Cancel exports for the provided segment ID.
+    tags:
+      - Segments   
   - name: <a href='/docs/api/endpoints/export/sessions/get_sessions_analytics/'>/sessions/data_series</a>
     description: Retrieve a series of the number of sessions for your app over a designated time period.
     tags:

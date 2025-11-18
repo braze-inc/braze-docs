@@ -96,7 +96,7 @@ collections:
     default_nav_url: home/
     page_order: 5
   releases:
-    title: Release Notes
+    title: What's New
     output: true
     default_nav_url: home/
     page_order: 6

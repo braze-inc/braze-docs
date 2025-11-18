@@ -8,15 +8,15 @@ description: "This reference article covers BrazeAI Operator, an AI-powered assi
 
 # BrazeAI<sup>TM</sup> Operator
 
-> BrazeAI<sup>TM</sup> Operator is an AI-powered assistant built into the Braze dashboard. Operator helps you find answers, troubleshoot issues, and learn best practices without leaving your workflow.
+> BrazeAI<sup>TM</sup> Operator is an AI-powered assistant built into the Braze dashboard. Operator provides answers, troubleshooting guidance, and best practices within your workflow.
 
 {% alert important %}
-BrazeAI<sup>TM</sup> Operator is currently in a private beta with limited functionality. For help getting started, contact your customer success manager.
+BrazeAI<sup>TM</sup> Operator is in a private beta with limited functionality. For help getting started, contact your customer success manager.
 {% endalert %}
 
 ## About Operator
 
-Operator is your built-in AI assistant in the Braze dashboard. It helps you move faster by answering questions, suggesting next steps, and guiding you through tasks—all without leaving your workflow.
+Operator is a built-in AI assistant in the Braze dashboard. It answers questions, suggests next steps, and guides you through tasks—all within your workflow.
 
 During the beta, Operator supports **Ask** mode only. You can:
 
@@ -26,7 +26,7 @@ During the beta, Operator supports **Ask** mode only. You can:
 
 ### Model providers as sub-processors or third-party providers
 
-Where Customer uses a uses an integration with an LLM provider provided by Braze through the Braze Services (“Braze-provided LLM”), the providers of such Braze-provided LLM will be acting as Braze Sub-processors, subject to the terms of the Data Processing Addendum (DPA) between Customer and Braze. Currently, BrazeAI Operator integrates with OpenAI.
+Where Customer uses an integration with an LLM provider provided by Braze through the Braze Services (“Braze-provided LLM”), the providers of such Braze-provided LLM act as Braze Sub-processors, subject to the terms of the Data Processing Addendum (DPA) between Customer and Braze. BrazeAI Operator integrates with OpenAI.
 
 If Customers chooses to bring their own API Key to integrate with Braze AI Operator, the provider of Customer’s own LLM subscription will be considered a Third Party Provider, as defined in the contract between Customer and Braze. 
 
@@ -84,7 +84,7 @@ You can select from these GPT models to use for different request types with Ope
 
 ### Page-aware context
 
-Operator understands the page you're currently working on in Braze and can tailor responses based on that context. For example, if you open Operator while building a Canvas, it can suggest steps or provide guidance relevant to Canvas, without you needing to explain where you are. 
+Operator understands the page you're working on in Braze and can tailor responses based on that context. For example, if you open Operator while building a Canvas, it can suggest steps or provide guidance relevant to Canvas without you needing to explain where you are. 
 
 ### Suggested prompts
 

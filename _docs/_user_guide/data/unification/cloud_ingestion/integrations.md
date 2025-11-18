@@ -256,6 +256,10 @@ You can name the project, dataset, and table as you'd like, but the column names
    phone_number varchar,
 - `PAYLOAD` - This is a JSON string of the fields you want to sync to the user in Braze.
 
+{% alert tip %}
+Braze queries your BigQuery tables in your own project (using the predefined schema) with predicates on `UPDATED_AT`. Partitioning large tables by `UPDATED_AT` with an appropriate granularity (for example, daily granularity) lets BigQuery prune partitions so only relevant data is scanned. This may help improve performance and lower cost. Refer to [BigQuery partitioning documentation](https://docs.cloud.google.com/bigquery/docs/partitioned-tables) for more information.
+{% endalert %}
+
 #### Step 1.2: Create a Service Account and grant permissions 
 
 Create a service account in GCP for Braze to use to connect and read data from your table(s). The service account should have the below permissions: 
