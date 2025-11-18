@@ -53,8 +53,6 @@ All translation IDs are considered universal unique identifiers (UUIDs), which c
 ## Example request
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "workflow_id": "a74404b3-3626-4de0-bdec-06935f3aa0ad",
     "step_id": "a74404b3-3626-4de0-bdec-06935f3aa0ac",

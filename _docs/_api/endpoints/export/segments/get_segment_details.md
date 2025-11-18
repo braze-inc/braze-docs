@@ -44,8 +44,6 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/segments/details
 ## Response
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
       "message": (required, string) the status of the export, returns 'success' when completed without errors,
       "created_at" : (string) the date created as ISO 8601 date,
