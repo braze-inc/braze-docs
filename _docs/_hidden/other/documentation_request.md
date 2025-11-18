@@ -405,7 +405,7 @@ hide_toc: true
           $('#doc_div').hide();
           $('#doc_thankyou').show();
           $('#doc_thankyou_msg').fadeTo(800,0,function(){
-              $(this).html('<h3>Thanks for your submission!</h3> Someone from our team will reach out to you if we have any questions. To view the status of your ticket or add comments, check your email for your ticket confirmation.').fadeTo(800,1);
+              $(this).html('<h3>Thanks for your submission!</h3> Someone from our team will contact you if we have any questions. To view the status of your ticket or add comments, check your email for your ticket confirmation.').fadeTo(800,1);
           });
         });
 

@@ -16,7 +16,7 @@ _This integration is maintained by Taxi for Email._
 
 ## About the integration
 
-The Braze and Taxi integration leverages Taxi's simple yet powerful syntax to create and export intelligent email templates to Braze. 
+The Braze and Taxi integration uses Taxi's simple yet powerful syntax to create and export intelligent email templates to Braze. 
 
 ## Prerequisites
 

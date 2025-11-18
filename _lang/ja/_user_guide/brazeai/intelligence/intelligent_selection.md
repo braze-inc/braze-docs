@@ -15,7 +15,7 @@ toc_headers: h2
 
 パフォーマンスが他のバリアントより優れていると見なされたバリアントは、より多くのユーザーに送信され、パフォーマンスの低いバリアントは、より少ないユーザーをターゲットにします。各調整は[統計アルゴリズム](https://en.wikipedia.org/wiki/Multi-armed_bandit)を使用して行われるため、単なる偶然ではなく実際のパフォーマンスの差に応じて調整されます。
 
-\![インテリジェントセレクションが有効なキャンペーンのAB テスト部分。]({% image_buster /assets/img/intelligent_selection1.png %})
+![インテリジェントセレクションが有効なキャンペーンのAB テスト部分。]({% image_buster /assets/img/intelligent_selection1.png %})
 
 インテリジェントセレクションは以下のことを行います。
 - パフォーマンスデータを繰り返し確認して、キャンペーンのトラフィックを段階的に勝者バリアントにシフトする。
@@ -60,11 +60,11 @@ toc_headers: h2
 {% tab Canvas %}
 キャンバスに少なくとも 1 つのコンバージョンイベントと 2 つのバリアントを追加します。次に、ビルドステップでバリアントパーセンテージの 1 つを選択します。 
 
-\![2 つのバリアントs があり、それぞれが50%のバリアント配分に設定されているキャンバス。インテリジェントセレクションを有効にできます。]({% image_buster /assets/img/intelligent_selection.png %})
+![2 つのバリアントs があり、それぞれが50%のバリアント配分に設定されているキャンバス。インテリジェントセレクションを有効にできます。]({% image_buster /assets/img/intelligent_selection.png %})
 
 これにより、バリアント分布を編集してインテリジェントセレクションをオンにすることができます。 
 
-\![キャンバスのインテリジェント選択オプションがオンになっている]({% image_buster /assets/img_archive/canvas_intelligent_selection.png %})
+![キャンバスのインテリジェント選択オプションがオンになっている]({% image_buster /assets/img_archive/canvas_intelligent_selection.png %})
 
 キャンバスにコンバージョンイベントをまだ追加していない場合、またはキャンペーンが単一のバリアントで構成されている場合は、インテリジェントセレクションを使用できません。
 {% endtab %}

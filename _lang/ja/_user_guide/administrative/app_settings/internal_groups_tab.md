@@ -35,7 +35,7 @@ description: "このリファレンス記事では、内部グループについ
 | **シードグループ**         | 送信時に、シードグループ内のすべてのユーザーにメールの複製を自動的に送信します。               |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-\!["メールテストグループ"という名前の内部グループ。]({% image_buster /assets/img_archive/internal_group.png %})
+!["メールテストグループ"という名前の内部グループ。]({% image_buster /assets/img_archive/internal_group.png %})
 
 ### テストユーザーの追加
 
@@ -51,7 +51,7 @@ description: "このリファレンス記事では、内部グループについ
 | **ユーザーを一括追加**      | メールアドレスまたは外部ID のリストをコピーして貼り付けます。ダッシュボードで既知のユーザーのみを追加できます。詳細については、[ユーザーインポート]({{site.baseurl}}/user_guide/data/user_data_collection/user_import/)を参照してください。          |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-\![新規内部グループ作成時の内部グループ設定]]({% image_buster /assets/img_archive/internal_group_add_user.png %})
+![新規内部グループ作成時の内部グループ設定]]({% image_buster /assets/img_archive/internal_group_add_user.png %})
 
 ### コンテンツテストグループ
 
@@ -67,7 +67,7 @@ description: "このリファレンス記事では、内部グループについ
 
 IP プールを使用してメールを送信する場合は、ドロップダウンからプールを選択して、メールを送信するIP プールを選択できます。
 
-\![アプリ内メッセージエディターのテストセクションで、コンテンツテストグループを選択します。]({% image_buster /assets/img_archive/content_test_preview.png %}){: style="max-width:60%" }
+![アプリ内メッセージエディターのテストセクションで、コンテンツテストグループを選択します。]({% image_buster /assets/img_archive/content_test_preview.png %}){: style="max-width:60%" }
 
 ### シードグループ
 
@@ -101,7 +101,7 @@ Seed Group メンバーが受信トレイにメッセージが表示されてい
 定期的なキャンペーンがあり、いずれかのバリアントが更新された場合は、更新されたバリアントのみまたはすべてのバリアントに再度送信するか、更新時のシードグループへの送信をオフにすることができます。
 {% endalert %}
 
-\![" メール seed test" Seed Group 選択してVariant 1 メール キャンペーンを送信します。]({% image_buster /assets/img_archive/seed_group_campaign.png %})
+![" メール seed test" Seed Group 選択してVariant 1 メール キャンペーンを送信します。]({% image_buster /assets/img_archive/seed_group_campaign.png %})
 
 #### キャンバスの場合
 

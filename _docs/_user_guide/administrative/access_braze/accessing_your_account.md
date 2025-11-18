@@ -13,7 +13,7 @@ description: "This article covers how to get your Braze account, how to log in a
 
 If you are your company's first Braze user and logging in for the first time, you will receive a welcome email from `@alerts.braze.com` asking you to confirm your email and log in on the first day of your contract.
 
-After confirming your account, you can add additional users from the [Company Users]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/adding_users_to_your_dashboard/) page of your dashboard. All users will receive an email asking them to confirm their account after they have been added.
+After confirming your account, you can add additional users from the [Company Users]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/) page of your dashboard. All users will receive an email asking them to confirm their account after they have been added.
 
 If you aren't the first user on your company's Braze account, contact your company's Braze account administrator and ask them to create your account. You will then receive a welcome email from `@alerts.braze.com` asking you to confirm your email and log in.
 
@@ -65,7 +65,7 @@ The multi-company developers feature allows sharing of a single user account acr
 
 If you have SSO and want to set up multi-company developers, you need to enable a SAML Custom Entity ID by setting up a custom SAML SSO integration. Follow the steps in [Service Provider (SP) initiated login]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up/), but apply these changes:
 - Change **Entity ID** to `braze_dashboard_<companyID>` for each dashboard integration.
-- Reach out to your customer success manager or account manager to enable the `saml_sso_custom_entity_id` feature flipper for each dashboard.
+- Contact your customer success manager or account manager to enable the `saml_sso_custom_entity_id` feature flipper for each dashboard.
 
 ### Considerations for Single Sign-On (SSO)
 

@@ -61,7 +61,7 @@ Braze は、プッシュトークンをハッシュする前にその大文字�
 2. チャネルを選択します。
 3. **変更の保存**を選択します。
 
-\![[メッセージのアーカイブ] ページには、選択できるチャネルとして、メール、プッシュ、SMS の 3 つがあります。]({% image_buster /assets/img/message_archiving_settings.png %})
+![[メッセージのアーカイブ] ページには、選択できるチャネルとして、メール、プッシュ、SMS の 3 つがあります。]({% image_buster /assets/img/message_archiving_settings.png %})
 
 {% alert note %}
 [**設定**] に [**メッセージのアーカイブ**] が表示されない場合は、会社がメッセージのアーカイブ機能を購入して有効にしていることを確認してください。
@@ -104,7 +104,7 @@ Braze は、プッシュトークンをハッシュする前にその大文字�
 
 このペイロードの `extras` フィールドは、メールの作成時に [**メールエクストラ**] フィールドに追加されたキーと値のペアを表します。Currents にデータを送り返す方法については、[メッセージエクストラ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/message_extras/)を参照してください。
 
-\![]({% image_buster /assets/img_archive/email_extras.png %}){: style="max-width:60%" }
+![]({% image_buster /assets/img_archive/email_extras.png %}){: style="max-width:60%" }
 
 {% endtab %}
 {% tab SMS/MMS %}
