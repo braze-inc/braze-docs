@@ -95,7 +95,6 @@ some_number_column < {{number.${custom_label}}}
 
 {% tabs local %}
 {% tab choose one %}
-{% tab choose one %}
 {% subtabs %}
 {% subtab usage %}
 {% raw %}
@@ -107,7 +106,6 @@ some_number_column < {{number.${custom_label}}}
 {% endsubtabs %}
 {% endtab %}
 
-{% tab choose multiple %}
 {% tab choose multiple %}
 {% subtabs %}
 {% subtab usage %}
@@ -195,7 +193,6 @@ time > {{start_date.${custom_label}}} AND time < {{end_date.${custom_label}}}
 
 {% tabs local %}
 {% tab one campaign %}
-{% tab one campaign %}
 キャンペーンを 1 つ選択する場合に使用します。キャンバスと同じラベルを共有すると、**変数**タブ内にキャンバスかキャンペーンかを選択するラジオボタンが表示される。
 
 {% subtabs %}
@@ -209,7 +206,6 @@ campaign_id = '{{campaign.${custom_label}}}'
 {% endsubtabs %}
 {% endtab %}
 
-{% tab multiple campaigns %}
 {% tab multiple campaigns %}
 キャンペーンを複数選択する場合に使用します。キャンバスと同じラベルを共有すると、**変数**タブ内にキャンバスかキャンペーンのどちらかを選択するラジオボタンが表示される。
 
@@ -226,7 +222,6 @@ campaign_id IN ({{campaigns.${custom_label}}})
 {% endsubtabs %}
 {% endtab %}
 
-{% tab campaign variants %}
 {% tab campaign variants %}
 選択したキャンペーンに属するキャンペーンバリアントを選択する場合に使用します。campaign 変数または campaigns 変数と組み合わせて使用する必要があります。
 
@@ -252,7 +247,6 @@ message_variation_api_id IN ({{campaign_variants.${custom_label}}})
 
 {% tabs local %}
 {% tab one canvas %}
-{% tab one canvas %}
 キャンバスを 1 つ選択する場合に使用します。キャンペーンと同じラベルを共有すると、**変数**タブ内にキャンバスかキャンペーンのどちらかを選択するラジオボタンが表示される。
 
 - **置換する値:**キャンバスの BSON ID
@@ -268,7 +262,6 @@ canvas_id = '{{canvas.${custom_label}}}'
 {% endsubtabs %}
 {% endtab %}
 
-{% tab multiple canvases %}
 {% tab multiple canvases %}
 キャンバスを複数選択する場合に使用します。キャンペーンと同じラベルを共有すると、**変数**タブ内にキャンバスまたはキャンペーンのいずれかを選択するためのラジオボタンが表示される。
 
@@ -286,7 +279,6 @@ canvas_id IN ({{canvases.${custom_label}}})
 {% endtab %}
 
 {% tab canvas variants %}
-{% tab canvas variants %}
 選択したキャンバスに属するキャンバスバリアントを選択する場合に使用します。canvas 変数または canvases 変数と組み合わせて使用する必要があります。`api-id1, api-id2` のようなカンマ区切りの文字列として、1つ以上のキャンバスバリアントAPI ID に設定します。
 
 {% subtabs %}
@@ -301,7 +293,6 @@ canvas_variation_api_id IN ({{canvas_variants.${custom_label}}})
 {% endtab %}
 
 {% tab one canvas step %}
-{% tab one canvas step %}
 選択したキャンバスに属するキャンバスステップを 1 つ選択する場合に使用します。これは、キャンバス変数と一緒に使用する必要があります。
 
 {% subtabs %}
@@ -315,7 +306,6 @@ canvas_step_api_id = '{{canvas_step.${custom_label}}}'
 {% endsubtabs %}
 {% endtab %}
 
-{% tab multiple canvas steps %}
 {% tab multiple canvas steps %}
 選択した複数のキャンバスに属するキャンバスステップを複数選択する場合に使用します。canvas 変数または canvases 変数と組み合わせて使用する必要があります。
 
@@ -349,7 +339,6 @@ canvas_step_api_id IN ({{canvas_steps.${custom_label}}})
 {% endtab %}
 
 {% tab example %}
-{% tab example %}
 {% raw %}
 ```sql
 SELECT product_name
@@ -365,7 +354,6 @@ WHERE product_id IN ({{products.${Games with DLC}}});
 リストから1つ以上のカスタムイベントまたはカスタムイベントプロパティを選択する。
 
 {% tabs local %}
-{% tab event %}
 {% tab event %}
 `custom_events` は、Braze ダッシュボードから1つまたは複数のカスタムイベントを選択するために使用されます。
 
@@ -391,7 +379,6 @@ WHERE event_name IN ({{custom_events.${Purchased Game}}});
 {% endsubtabs %}
 {% endtab %}
 
-{% tab properties %}
 {% tab properties %}
 `custom_event_properties` は、現在選択されているカスタムイベントから1つ以上のプロパティを選択するために使用されます。 設定されている `custom_events` 変数が必要です。
 
@@ -427,7 +414,6 @@ workspace_id = '{{workspace.${app_group_id}}}'
 
 {% tabs local %}
 {% tab catologs %}
-{% tab catologs %}
 `catalogs` は、Braze ダッシュボードから1つまたは複数のカタログを選択するために使用されます。
 
 {% subtabs %}
@@ -441,7 +427,6 @@ catalog_id = '{{catalogs.${catalog}}}'
 {% endsubtabs %}
 {% endtab %}
 
-{% tab catolog fields %}
 {% tab catolog fields %}
 `catalog_fields` は、現在選択されているカタログから1つ以上のフィールドを設定するために使用されます。設定されている `catalogs` 変数が必要です。
 
@@ -563,7 +548,6 @@ order: '1'
 
 {% tabs local %}
 {% tab single quotes %}
-{% tab single quotes %}
 変数の値を一重引用符で囲む場合に使用します。
 
 {% subtabs %}
@@ -575,7 +559,6 @@ include_quotes: 'true'
 {% endsubtabs %}
 {% endtab %}
 
-{% tab double quotes %}
 {% tab double quotes %}
 変数の値を二重引用符で囲む場合に使用します。
 

@@ -1,6 +1,5 @@
 ---
 nav_title: 流動コード
-nav_title: 流動コード
 article_title: BrazeAIでLiquidコードを生成する
 description: "この記事では、AI Liquid アシスタントの仕組みと、それを使用したメッセージング用の Liquid スニペットの生成方法について説明します。"
 page_type: reference
@@ -40,13 +39,11 @@ BrazeAI<sup>TM</sup>Liquid アシスタントを起動するには、メッセ�
 
 {% tabs local %}
 {% tab use app activity %}
-{% tab use app activity %}
 **アプリアクティビティを使用**プロンプトは、アプリが最後に使用された日時に基づいて異なるメッセージを送信するときに役立つ Liquid コードを生成します。アシスタントがより正確な結果を生成できるように、追加の質問を受けることがあります。
 
 !["アプリアクティビティ"プロンプトの出力例。]({% image_buster /assets/img/ai_liquid/use_app_activity.png %}){: style="max-width:45%;"}
 {% endtab %}
 
-{% tab add countdown %}
 {% tab add countdown %}
 このプロンプトは、イベントが開始されるまでの時間を含むメッセージを送信する Liquid コードを生成します。イベント日時の詳細を入力するように要求されます。
 
@@ -54,13 +51,11 @@ BrazeAI<sup>TM</sup>Liquid アシスタントを起動するには、メッセ�
 {% endtab %}
 
 {% tab inspire me %}
-{% tab inspire me %}
 このプロンプトは、メッセージボックスに内容がある場合に表示されます。Liquid でメッセージをパーソナライズするために選択できるオプションのリストが生成されます。 
 
 !["Inspire me"プロンプトの出力例。]({% image_buster /assets/img/ai_liquid/inspire_me.png %}){: style="max-width:45%;"}
 {% endtab %}
 
-{% tab improve my liquid %}
 {% tab improve my liquid %}
 このプロンプトは、メッセージ作成画面に内容がある場合に表示されます。アシスタントでコードをより効率的に読みやすくする場合に選択します。
 
@@ -123,12 +118,10 @@ BrazeAI<sup>TM</sup> Liquid アシスタントは追加の質問ができます�
 
 {% tabs local %}
 {% tab gaining knowledge %}
-{% tab gaining knowledge %}
 - Liquid とは何か、そしてどのようにして、Braze でのマーケティングキャンペーンのパーソナライゼーションの強化に役立ちますか?。
 - Liquid では、人口統計情報や過去の購入など、どのようなデータをマーケティングメッセージのカスタマイズに使用できますか?
 {% endtab %}
 
-{% tab personalizing dynamic content %}
 {% tab personalizing dynamic content %}
 - 顧客のロイヤルティステータスに基づいて、異なるコンテンツを表示するメッセージを作成してください。顧客のロイヤルティステータスがわからない場合は、フォールバックメッセージを送信します。
 - ユーザーのお気に入りの製品とその最終購入日を含むダイナミックなメッセージを作成してください。最後の購入がない場合は、メッセージを中止します。
@@ -140,7 +133,6 @@ BrazeAI<sup>TM</sup> Liquid アシスタントは追加の質問ができます�
 - カスタム属性“CUSTOM_ATTRIBUTE_NAME“ とその数値に基づいて別のメッセージを表示するには、リキッドを記述します。送信できるオプションは 6 種類あります。カスタム属性の値がない場合は、プレースホルダメッセージを送信します。
 {% endtab %}
 
-{% tab handling outliers %}
 {% tab handling outliers %}
 - エンゲージメント率とコンバージョン率を高めるために、マーケティングキャンペーンで Liquid がどのように使用されているか、いくつか例示できますか?
 - 放棄されたカートのリマインダーやパーソナライズされたプロモーションなど、サマーセールのテキストメッセージに含まれる Liquid の一般的なユースケースは何ですか?
