@@ -7,7 +7,7 @@ description: "この記事では、カスタムイベントとプロパティ、
 search_rank: 2
 ---
 
-# [\![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/custom-events-and-attributes){: style="float:right;width:120px;border:0;" class="noimgborder"}カスタムイベント
+# [![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/custom-events-and-attributes){: style="float:right;width:120px;border:0;" class="noimgborder"}カスタムイベント
 
 > この記事では、カスタムイベントとプロパティ、関連するセグメンテーションフィルタ、キャンバスエントリプロパティ、関連する分析などについて説明します。Braze のイベント全般については、「[イベント]({{site.baseurl}}/user_guide/data/custom_data/events/)」を参照してください。
 
