@@ -9,7 +9,7 @@ channel: push
 
 # Troubleshooting Push
 
-> This page helps you troubleshoot various issues you may experience with the Push messaging channel.
+> Use this page to troubleshoot issues with the Push messaging channel.
 
 ## Missing push notifications
 

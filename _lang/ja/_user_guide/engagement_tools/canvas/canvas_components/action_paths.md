@@ -12,7 +12,7 @@ tool: Canvas
 
 > キャンバスのアクションパスでは、ユーザーをそのアクションに基づいて並べ替えることができます。 
 
-\![キャンバスユーザーの行程での動作経路のステップ。]({% image_buster /assets/img/canvas_actionpath.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
+![キャンバスユーザーの行程での動作経路のステップ。]({% image_buster /assets/img/canvas_actionpath.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
 アクションパスを使用して、次のことを行えます。
 
@@ -29,7 +29,7 @@ tool: Canvas
 
 [**アクション設定**] で、[**ランクに基づいてユーザーを先に進める**] トグルをオンにすることで、コンポーネントのランク付けされた順序をオンにすることもできます。
 
-\![評価ウィンドウが1 日のアクション設定。]({% image_buster /assets/img/actionpath_settings.png %})
+![評価ウィンドウが1 日のアクション設定。]({% image_buster /assets/img/actionpath_settings.png %})
 
 デフォルトでは、**ランク**がオフになっています。ユーザーがアクションパスに入り、いずれかのアクショングループに付属するトリガーイベントを実行すると、即座に関連するアクショングループに進みます。ユーザーがトリガーイベントを実行しなかった場合、評価期間の終了時にデフォルトの [**その他のユーザー**] グループに進むことになります。
 
@@ -63,7 +63,7 @@ tool: Canvas
 - ジオフェンスのトリガー
 - SMSまたはWhatsApp受信メールを送信する
 
-\![ " Group 1" という名前のアクショングループ。購買を行うユーザー用。]({% image_buster /assets/img/actionpath_group.png %})
+![ " Group 1" という名前のアクショングループ。購買を行うユーザー用。]({% image_buster /assets/img/actionpath_group.png %})
 
 各アクショングループの設定の中で、[**このグループにキャンバスを終了させる**] チェックボックスを選択するオプションもあります。このグループのユーザーは、評価期間終了時にキャンバスから退出します。
 

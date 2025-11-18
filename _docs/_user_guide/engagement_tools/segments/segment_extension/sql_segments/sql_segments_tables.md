@@ -72,7 +72,7 @@ Table | Description
 [USERS_MESSAGES_PUSHNOTIFICATION_ABORT_SHARED](#USERS_MESSAGES_PUSHNOTIFICATION_ABORT_SHARED) | An originally scheduled push notification message was aborted for some reason.
 [USERS_MESSAGES_PUSHNOTIFICATION_BOUNCE_SHARED](#USERS_MESSAGES_PUSHNOTIFICATION_BOUNCE_SHARED) | When a push notification bounces
 [USERS_MESSAGES_PUSHNOTIFICATION_INFLUENCEDOPEN_SHARED](#USERS_MESSAGES_PUSHNOTIFICATION_INFLUENCEDOPEN_SHARED) | When a user opens the app after receiving a notification without clicking on the notification
-[USERS_MESSAGES_PUSHNOTIFICATION_IOSFOREGROUND_SHARED](#USERS_MESSAGES_PUSHNOTIFICATION_IOSFOREGROUND_SHARED) | When a user receives a push notification while the app is open
+[USERS_MESSAGES_PUSHNOTIFICATION_IOSFOREGROUND_SHARED](#USERS_MESSAGES_PUSHNOTIFICATION_IOSFOREGROUND_SHARED) | When a user receives a push notification while the app is open. <br><br>This event is not supported by the [Swift SDK](https://github.com/braze-inc/braze-swift-sdk) and is deprecated in the [Obj-C SDK](https://github.com/Appboy/appboy-ios-sdk).
 [USERS_MESSAGES_PUSHNOTIFICATION_OPEN_SHARED](#USERS_MESSAGES_PUSHNOTIFICATION_OPEN_SHARED) | When a user opens a push notification or clicks a push notification button (including a CLOSE button that does NOT open the app). <br><br> Push button actions have multiple outcomes. No, Decline, and Cancel actions are "clicks", and Accept actions are "opens". Both are represented in this table, but they can be distinguished in the **BUTTON_ACTION_TYPE** column. For example, a query can be used to group by a `BUTTON_ACTION_TYPE` that is not No, Decline, or Cancel.
 [USERS_MESSAGES_PUSHNOTIFICATION_SEND_SHARED](#USERS_MESSAGES_PUSHNOTIFICATION_SEND_SHARED) | When we send a push notification to a user
 [USERS_MESSAGES_SMS_ABORT_SHARED](#USERS_MESSAGES_SMS_ABORT_SHARED) | An originally scheduled SMS message was aborted for some reason.
@@ -1428,6 +1428,10 @@ Field | Type | Description
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### USERS_MESSAGES_PUSHNOTIFICATION_IOSFOREGROUND_SHARED {#USERS_MESSAGES_PUSHNOTIFICATION_IOSFOREGROUND_SHARED}
+
+{% alert important %}
+This event is not supported by the [Swift SDK](https://github.com/braze-inc/braze-swift-sdk) and is deprecated in the [Obj-C SDK](https://github.com/Appboy/appboy-ios-sdk).
+{% endalert %}
 
 Field | Type | Description
 ------|------|------------
