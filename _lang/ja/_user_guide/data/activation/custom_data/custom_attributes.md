@@ -7,7 +7,7 @@ description: "このページでは、カスタム属性について説明し、
 search_rank: 1
 ---
 
-# [\![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/custom-events-and-attributes){: style="float:right;width:120px;border:0;" class="noimgborder"} カスタム属性
+# [![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/custom-events-and-attributes){: style="float:right;width:120px;border:0;" class="noimgborder"} カスタム属性
 
 > このページでは、ユーザの一意の特性のコレクションであるカスタム属性について説明します。カスタム属性は、ユーザーに関する属性や、アプリケーション内の価値の低いアクションに関する情報を格納するために最適です。 
 
@@ -17,7 +17,7 @@ Braze に保存すると、カスタム属性を使用してオーディエン�
 
 ダッシュボードでカスタム属性の作成および管理を行うには、[**データ設定**] > [**カスタム属性**] に移動します。 
 
-\![ブーリアンである4つのカスタム属性。]({% image_buster /assets/img/export_custom_attributes.png %})
+![ブーリアンである4つのカスタム属性。]({% image_buster /assets/img/export_custom_attributes.png %})
 
 「**最終更新日**」の列には、カスタム属性が最後に編集された時間（ブロックリストやアクティブに設定された時間など）が表示されます。
 

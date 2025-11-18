@@ -76,7 +76,7 @@ Webhook作成画面にPOSTメソッドでメッセージを送る。]({% image_b
 	}
 	```
 
-\![ユーザー更新ステップにアドバンスドJSONエディターステップを追加した。]({% image_buster /assets/img/whatsapp/whatsapp_json_editor.png %}){: style="max-width:90%;"}
+![ユーザー更新ステップにアドバンスドJSONエディターステップを追加した。]({% image_buster /assets/img/whatsapp/whatsapp_json_editor.png %}){: style="max-width:90%;"}
 
 {% alert note %}
 ユーザーの購読ステータスの更新には最大 60 秒かかることがあります。

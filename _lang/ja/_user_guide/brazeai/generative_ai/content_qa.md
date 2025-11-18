@@ -32,7 +32,7 @@ description: "このリファレンス記事では、メッセージ作成画面
 2. [**AI によるコンテンツ QA**] セクションを見つけます。
 3. [**コンテンツのテスト**] をクリックします。
 
-\![Test タブのAI を使用したコンテンツQA。]]({% image_buster /assets/img/content_qa_ai.png %})
+![Test タブのAI を使用したコンテンツQA。]]({% image_buster /assets/img/content_qa_ai.png %})
 
 ## ベストプラクティス
 

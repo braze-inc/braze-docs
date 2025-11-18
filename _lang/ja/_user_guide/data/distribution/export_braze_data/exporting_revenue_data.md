@@ -35,7 +35,7 @@ tool:
     - (オプション) セグメント別 1 時間あたりの収益
 - ユーザーあたりの収益
 
-\![収益グラフ]({% image_buster /assets/img_archive/Export_revenue_graph.png %})
+![収益グラフ]({% image_buster /assets/img_archive/Export_revenue_graph.png %})
 
 ## 総収益
 

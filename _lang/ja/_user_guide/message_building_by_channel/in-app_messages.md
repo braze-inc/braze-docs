@@ -50,7 +50,7 @@ guide_menu_list:
   image: /assets/img/braze_icons/annotation-question.svg
 ---
 
-## [\![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/messaging-channels-in-app-in-browser){: style="float:right;width:120px;border:0;" class="noimgborder"} 想定されるユースケース
+## [![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/messaging-channels-in-app-in-browser){: style="float:right;width:120px;border:0;" class="noimgborder"} 想定されるユースケース
 
 アプリ内メッセージは豊富なコンテンツを提供するので、このチャネルをさまざまなユースケースに活用できます。
 
@@ -79,7 +79,7 @@ guide_menu_list:
 
 スライドアップメッセージは通常、アプリ画面の上下に表示されます (メッセージの作成時に設定可能)。これらは、新しい利用規約、Cookie、および他の情報断片についてユーザーに警告するのに適しています。
 
-\![アプリ画面下部から表示されるアプリ内メッセージ。スライドアップにはアイコン画像と簡単なメッセージが含まれる。]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
+![アプリ画面下部から表示されるアプリ内メッセージ。スライドアップにはアイコン画像と簡単なメッセージが含まれる。]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
 
 <br>
 
@@ -88,7 +88,7 @@ guide_menu_list:
 
 モーダルは、デバイスの画面の中央に表示され、アプリのバックグラウンドから目立つように画面オーバーレイが表示されます。これらは、ユーザーにセールやプレゼントを利用するようにそれとなく提案するのに最適です。
 
-\![アプリやWebサイトの中央にダイアログとして表示されるモーダルなアプリ内メッセージ。モーダルには、画像、ヘッダー、メッセージ本文、2つのボタンが含まれる。]({% image_buster /assets/img/modal-behavior.gif %}){: style="border:0px;"}
+![アプリやWebサイトの中央にダイアログとして表示されるモーダルなアプリ内メッセージ。モーダルには、画像、ヘッダー、メッセージ本文、2つのボタンが含まれる。]({% image_buster /assets/img/modal-behavior.gif %}){: style="border:0px;"}
 
 <br>
 
@@ -97,7 +97,7 @@ guide_menu_list:
 
 フルスクリーン・メッセージは、デバイスの画面全体を取り上げるという、まさに期待通りのものです。このメッセージタイプは、必須アプリのアップデートのように、ユーザーの注意が本当に必要な場合に最適だ。
 
-\![アプリ内メッセージがアプリ画面を占拠している。フルスクリーンのメッセージには、大きな画像、ヘッダー、メッセージ本文、2つのボタンが含まれる。]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
+![アプリ内メッセージがアプリ画面を占拠している。フルスクリーンのメッセージには、大きな画像、ヘッダー、メッセージ本文、2つのボタンが含まれる。]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
 
 <br>
 

@@ -126,11 +126,11 @@ Braze はデータポイントを使用して、ビジネスに最も影響を�
 
 オンライン衣料品店を運営していて、商品をカートに入れたが購入が完了していないユーザーに一連のメールを送信するメッセージングフローを設定したとします。この放棄カートフローには、最初のリマインダーメール、割引を提供するフォローアップメール、最終的なリマインダーメールが含まれる場合があります。
 
-\![]({% image_buster /assets/img/getting_started/segment_example.png %}){: style="max-width:70%" }
+![]({% image_buster /assets/img/getting_started/segment_example.png %}){: style="max-width:70%" }
 
 カスタムイベント「カートに商品を追加しました」をトリガーしたが、カスタムイベント「購入完了」をトリガーしていないユーザーのセグメントを作成できます。次に、このセグメント内で、最初のリマインダーメール (特定のメッセージとのエンゲージメント) を開封したものの、購入に至っていないユーザーをさらに特定することができます。
 
-\![]({% image_buster /assets/img/getting_started/segment_example_breakdown.png %})
+![]({% image_buster /assets/img/getting_started/segment_example_breakdown.png %})
 
 このセグメントは、これらのユーザーを購入者に転換しようとする、より積極的なキャンペーンでターゲットにすることができます。たとえば、特別オファーや、カート内の商品に基づいてパーソナライズされたレコメンデーションを送ることができます。
 

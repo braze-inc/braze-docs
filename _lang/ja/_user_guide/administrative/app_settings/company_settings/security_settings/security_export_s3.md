@@ -27,7 +27,7 @@ Braze は、Amazon S3 エクスポートを設定するための 2 つの異な�
 
 1. 新しいユーザーを作成した後、アクセスキーを生成し、アクセスキーID とシークレットアクセスキーをダウンロードします。
 
-\![「liyu-chen-test」と呼ばれる役割のまとめページ。]({% image_buster /assets/img/security_export/credentials1.png %})
+![「liyu-chen-test」と呼ばれる役割のまとめページ。]({% image_buster /assets/img/security_export/credentials1.png %})
 
 {: start="2"}
 2\.これらの認証情報は、後でBraze に入力する必要があるため、どこかにメモしておくか、認証情報ファイルをダウンロードしてください。
@@ -120,7 +120,7 @@ AWS ロール ARN メソッドは、Braze Amazon アカウントがそのロー�
 {: start="4"}
 4\.ポリシーを確認したら、[**次へ**] を選択します。
 
-\![ポリシーを確認し、任意で権限を追加できるページ。]({% image_buster /assets/img/security_export/specify_permissions.png %})
+![ポリシーを確認し、任意で権限を追加できるページ。]({% image_buster /assets/img/security_export/specify_permissions.png %})
 
 {: start="5"}
 5\.ポリシーの名前と説明を指定し、[**ポリシーの作成**] を選択します。
@@ -152,7 +152,7 @@ BrazeアカウントとBraze外部IDを入力した "Security Event Download "�
 {: start="3"}
 3\.ロールに名前と説明を指定し、[**Create Role**] を選択します。
 
-\![名前、説明、信頼ポリシー、権限、タグなどのロールの詳細を提供するフィールド。]({% image_buster /assets/img/security_export/name_review_create.png %})
+![名前、説明、信頼ポリシー、権限、タグなどのロールの詳細を提供するフィールド。]({% image_buster /assets/img/security_export/name_review_create.png %})
 
 新しく作成したロールがリストに表示されます。
 
@@ -160,12 +160,12 @@ BrazeアカウントとBraze外部IDを入力した "Security Event Download "�
 
 1. AWS コンソールで、新しく作成したロールを一覧で見つけます。名前を選択してそのロールの詳細を開き、**ARN**を書き留めます。
 
-\![「security-event-export-olaf」というロールのサマリーページ。]({% image_buster /assets/img/security_export/credentials2.png %})
+![「security-event-export-olaf」というロールのサマリーページ。]({% image_buster /assets/img/security_export/credentials2.png %})
 
 {: start="2"}
 2\.Braze で [**設定**] > [**会社の設定**] > [**管理者設定**] > [**セキュリティ設定**] に移動し、[**セキュリティイベントのダウンロード**] セクションにスクロールします。
 
-\!["セキュリティイベントダウンロード "セクションで、"AWS S3へのエクスポート "のトグルをオンにする。]({% image_buster /assets/img/security_export/security_event_download3.png %})
+!["セキュリティイベントダウンロード "セクションで、"AWS S3へのエクスポート "のトグルをオンにする。]({% image_buster /assets/img/security_export/security_event_download3.png %})
 
 {: start="3"}
 3\.**AWSロールARN**が選択されていることを確認し、指定したフィールドにロールARNとAWS S3バケット名を入力します。

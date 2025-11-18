@@ -38,7 +38,7 @@ Banner キャンペーンを起動する前に、開発チームは[ アプリ�
 - Brazeのバナーテンプレートを使用する
 - 保存したバナーテンプレートを選択
 
-\![空白のバナーまたはテンプレートを選択できます。]({% image_buster /assets/img/banners/choose_banner_composer.png %})
+![空白のバナーまたはテンプレートを選択できます。]({% image_buster /assets/img/banners/choose_banner_composer.png %})
 
 #### ステップ 3.1:バナーのスタイル設定
 
@@ -46,7 +46,7 @@ Banner キャンペーンを起動する前に、開発チームは[ アプリ�
 
 メッセージの背景プロパティ、ボーダー設定などをカスタマイズするには、**Styles** を選択します。特定のブロックまたは行のスタイルのみをカスタマイズする場合は、それを選択して変更します。
 
-\![バナー作曲者のスタイルパネル。]({% image_buster /assets/img/banners/banner_card_styles.png %})
+![バナー作曲者のスタイルパネル。]({% image_buster /assets/img/banners/banner_card_styles.png %})
 
 #### ステップ 3.2:クリック時の動作を定義する(オプション)
 
@@ -68,7 +68,7 @@ Banner キャンペーンを起動する前に、開発チームは[ アプリ�
 
 カスタムプロパティを追加するには、**Settings**> **Properties**> **プロパティを追加します。
 
-\![バナーキャンペーンに最初のカスタムプロパティを追加するオプションを示すプロパティページ。]]({% image_buster /assets/img/banners/add_property.png %})
+![バナーキャンペーンに最初のカスタムプロパティを追加するオプションを示すプロパティページ。]]({% image_buster /assets/img/banners/add_property.png %})
 
 追加するプロパティごとに、次のように入力します。
 
@@ -81,7 +81,7 @@ Banner キャンペーンを起動する前に、開発チームは[ アプリ�
 
 [**完了**] を選択します。
 
-\![文字列プロパティを持つプロパティページ。キーはカラーで、値は#FF0000 です。]({% image_buster /assets/img/banners/example_property.png %})
+![文字列プロパティを持つプロパティページ。キーはカラーで、値は#FF0000 です。]({% image_buster /assets/img/banners/example_property.png %})
 
 ### ステップ 4: キャンペーン期間の設定
 

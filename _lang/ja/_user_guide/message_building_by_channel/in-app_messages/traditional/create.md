@@ -181,7 +181,7 @@ Brazeが、あなたのコードに閉じるボタンや終了ボタンが含ま
 
 **Compose**タブでは、メッセージの内容と動作のあらゆる面を編集できる。
 
-\![新しい顧客を歓迎し、ユーザープロファイルを設定するよう促すサンプルブランドのアプリ内メッセージ。]({% image_buster /assets/img_archive/iam_compose.png %}){: style="max-width:85%" }
+![新しい顧客を歓迎し、ユーザープロファイルを設定するよう促すサンプルブランドのアプリ内メッセージ。]({% image_buster /assets/img_archive/iam_compose.png %}){: style="max-width:85%" }
 
 **Compose」**タブの内容は、前のステップで選択したメッセージ・オプションによって異なるが、以下のオプションのいずれかを含むことができる：
 
@@ -205,7 +205,7 @@ Brazeが、あなたのコードに閉じるボタンや終了ボタンが含ま
 
 魅力的な文章を作成するためのサポートが必要な場合は、[AI コピーライティングアシスタント]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/)を使用してみてください。商品名や説明を入力すると、AIが人間のようなマーケティングコピーを生成し、メッセージングに使用します。
 
-\![In-アプリ メッセージ作成画面のMessage フィールドにあるAI Copy writer ボタンを起動します。]({% image_buster /assets/img/ai_copywriter/ai_copywriter_iam.png %}){: style="max-width:60%"}
+![In-アプリ メッセージ作成画面のMessage フィールドにあるAI Copy writer ボタンを起動します。]({% image_buster /assets/img/ai_copywriter/ai_copywriter_iam.png %}){: style="max-width:60%"}
 
 ##### 右から左へのメッセージの作成
 
@@ -223,7 +223,7 @@ Brazeが、あなたのコードに閉じるボタンや終了ボタンが含ま
 
 言い換えれば、ユーザーにどちらかのボタンをより多くクリックしてもらいたいのであれば、それが右側にあることを確認する。一般に、右側のボタンはクリックされる可能性が高くなります。特に、メッセージの残りの部分とは若干対照的な色や、目立つ色を使うとその可能性が高まります。この効果は、左側のボタンの外観がメッセージにより溶け込んでいる場合にはさらに強くなります。
 
-\![アプリ内メッセージのプライマリボタンとセカンダリボタン]]({% image_buster /assets/img/primary-secondary-buttons.png %})
+![アプリ内メッセージのプライマリボタンとセカンダリボタン]]({% image_buster /assets/img/primary-secondary-buttons.png %})
 
 ### クリック時動作 {#button-actions}
 
@@ -312,7 +312,7 @@ Brazeが、あなたのコードに閉じるボタンや終了ボタンが含ま
 カスタムイベントに基づいてアプリ内メッセージをトリガーする場合は、そのカスタムイベントをSDK を使用して送信する必要があることに注意してください。
 {% endalert %}
 
-\![トリガー アクションを"Start Session"に設定したアクション ベースのキャンペーン。]({% image_buster /assets/img_archive/in_app_schedule.png %}){: style="max-width:80%"}
+![トリガー アクションを"Start Session"に設定したアクション ベースのキャンペーン。]({% image_buster /assets/img_archive/in_app_schedule.png %}){: style="max-width:80%"}
 
 アプリ内メッセージ配信は、すべて以下のアクショントリガーに基づいている：
 
@@ -347,7 +347,7 @@ Brazeが、あなたのコードに閉じるボタンや終了ボタンが含ま
 
 トリガーされたメッセージの優先順位の高、中、低オプションはバケットなので、複数のメッセージが同じ優先順位を持つ可能性があります。これらのバケツ内で優先順位を設定するには、**「正確な優先順位を設定**」をクリックし、キャンペーンをドラッグ＆ドロップして正しい優先順位で並べることができる。
 
-\![アプリ内メッセージ キャンペーンとキャンバスのプライオリティ設定の例]]({% image_buster /assets/img_archive/bucket_prioritization.png %}){: style="max-width:70%"}
+![アプリ内メッセージ キャンペーンとキャンバスのプライオリティ設定の例]]({% image_buster /assets/img_archive/bucket_prioritization.png %}){: style="max-width:70%"}
 
 #### ターゲットとするユーザーを選択する
 
@@ -361,7 +361,7 @@ Brazeが、あなたのコードに閉じるボタンや終了ボタンが含ま
 
 シナリオによっては、アプリ内メッセージの表示をトリガーとして、ユーザーの適格性を再評価したい場合がある。例えば、頻繁に変更されるカスタム属性をターゲットにしたキャンペーンや、直前のプロフィール変更を反映すべきメッセージなどがある。
 
-\![&quot のチェックボックス;キャンペーンの適格性を再評価してから" を表示します。を選択します。]({% image_buster /assets/img_archive/re-evaluate-iam-membership.png %}){:style="max-width:60%"}
+![&quot のチェックボックス;キャンペーンの適格性を再評価してから" を表示します。を選択します。]({% image_buster /assets/img_archive/re-evaluate-iam-membership.png %}){:style="max-width:60%"}
 
 **表示前にキャンペーンの適格性を再評価する**]を選択すると、送信前にユーザーがまだこのメッセージの適格者であることを確認するために、Brazeに追加のリクエストが行われる。加えて、[リキッド]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/)変数や[コネクテッドコンテンツは]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/)、メッセージが表示される前に、その時点でテンプレート化される。
 

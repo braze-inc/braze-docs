@@ -28,7 +28,7 @@ tool: Campaigns
 
 **スケジュール配信**を選択し、ユーザーの現地時間で送信するように指定しなかった場合、キャンペーンは**会社の設定**ページで指定されたタイムゾーンに従って送信されます。
 
-\![指定した時間にキャンペーンを送信するための、時間ベースのスケジュールオプション。]({% image_buster /assets/img_archive/schedule_designated.png %})
+![指定した時間にキャンペーンを送信するための、時間ベースのスケジュールオプション。]({% image_buster /assets/img_archive/schedule_designated.png %})
 
 ### ローカルタイムゾーンでのキャンペーン
 

@@ -61,7 +61,7 @@ Need a sign to update your wardrobe? We added a 15% discount code to your accoun
 ```
 {% endraw %}
 
-\![チュートリアルの完全なLiquidコードを含むプッシュ通知コンポーザー。]({% image_buster /assets/img/liquid-if-totalspend.png %}){: width="100%"}
+![チュートリアルの完全なLiquidコードを含むプッシュ通知コンポーザー。]({% image_buster /assets/img/liquid-if-totalspend.png %}){: width="100%"}
 
 {% details Full Liquid code %}
 {% raw %}
@@ -154,7 +154,7 @@ Hey! I've got a deal for you. Buy 2 of our newest releases and get 10% off!
 {% endraw %}
 {% enddetails %}
 
-\![チュートリアルの完全なLiquidコードを含むプッシュ通知コンポーザー。]({% image_buster /assets/img/liquid-if-elsif-games.png %})
+![チュートリアルの完全なLiquidコードを含むプッシュ通知コンポーザー。]({% image_buster /assets/img/liquid-if-elsif-games.png %})
 
 さて、ユーザーが最後に『*Awkward Dinner Party*』をプレイした場合、このようなメッセージが表示される：
 
@@ -216,7 +216,7 @@ Stream now!
 {% endraw %}
 {% enddetails %}
 
-\![チュートリアルの完全なLiquidコードを含むプッシュ通知コンポーザー。]({% image_buster /assets/img/abort-if.png %})
+![チュートリアルの完全なLiquidコードを含むプッシュ通知コンポーザー。]({% image_buster /assets/img/abort-if.png %})
 
 また、接続コンテンツに基づいて[メッセージ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/)をアボートすることもできます。
 

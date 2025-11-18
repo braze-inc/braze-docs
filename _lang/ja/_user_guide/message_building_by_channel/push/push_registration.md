@@ -47,7 +47,7 @@ channel:
 
 アプリや Web サイトは、1 つのデバイスにつき 1 つのプッシュ通知サブスクリプションのみを持つことができます。そのため、ユーザーがデバイスやウェブサイトからログアウトし、新しいユーザーがログインすると、プッシュトークンは新しいユーザーに再割り当てされる。これは、**Engagement**タブの**Contact Settings**セクションにあるユーザーのプロフィールに反映される：
 
-\![ユーザープロファイルの\*\*エンゲージメント**タブにプッシュトークンの変更履歴が表示される。]({% image_buster /assets/img/push_token_changelog.png %})
+![ユーザープロファイルの\*\*エンゲージメント**タブにプッシュトークンの変更履歴が表示される。]({% image_buster /assets/img/push_token_changelog.png %})
 
 プッシュ・プロバイダ（APN/FCM）には、1つのデバイス上の複数のユーザーを区別する方法がないため、最後にログインしたユーザーにプッシュ・トークンを渡し、デバイス上のどのユーザーをプッシュのターゲットにするかを決定する。
 
@@ -83,7 +83,7 @@ iOS では、アプリをインストールしてもプッシュトークンは�
 
 ### ユーザーのプッシュサブスクリプションの状態をチェックする
 
-\![John Doeのユーザープロファイルで、プッシュサブスクリプションの状態がSubscribedに設定されている。]({% image_buster /assets/img/push_example.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
+![John Doeのユーザープロファイルで、プッシュサブスクリプションの状態がSubscribedに設定されている。]({% image_buster /assets/img/push_example.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
 Brazeでユーザーのプッシュサブスクリプションの状態を確認する方法は2つある：
 
@@ -96,7 +96,7 @@ Brazeでユーザーのプッシュサブスクリプションの状態を確認
 
 デバイスエントリのアプリ名の前に `Foreground:` が付いている場合、アプリはそのデバイスでフォアグラウンドプッシュ通知 (ユーザーに表示されます) と、バックグラウンドプッシュ通知 (ユーザーに表示されません) の両方を受け取るよう承認されています。
 
-\![プッシュトークンの例を含むChangelogをプッシュする。]({% image_buster /assets/img/push_changelog.png %}){: style="float:right;max-width:40%;margin-left:15px;margin-top:10px;"}
+![プッシュトークンの例を含むChangelogをプッシュする。]({% image_buster /assets/img/push_changelog.png %}){: style="float:right;max-width:40%;margin-left:15px;margin-top:10px;"}
 
 一方、デバイスエントリのアプリ名に `Background:` という接頭辞が付いている場合、アプリは[バックグラウンドプッシュ]({{site.baseurl}}/user_guide/message_building_by_channel/push/types/#background-push-notifications)を受信する権限のみが付与され、ユーザーに表示可能な通知をそのデバイスでは表示できません。これは通常、ユーザーがそのデバイスでアプリの通知を無効にしていることを示します。
 
@@ -119,7 +119,7 @@ Brazeでユーザーのプッシュサブスクリプションの状態を確認
 
 キャンペーンを開始する場合は、プッシュプロバイダーに送信するプッシュペイロードを生成するキャンペーンを Braze で作成します。そこから、プロバイダーはユーザーのデバイスにプッシュペイロードを配信し、SDKはメッセージング状態をBrazeに渡す。
 
-\![顧客であるBrazeと、Appleプッシュ通知サービスまたはFirebase Cloud Messagingとの間の、前述のプッシュプロセスをマッピングしたフローチャートである。]({% image_buster /assets/img/push_process.png %})
+![顧客であるBrazeと、Appleプッシュ通知サービスまたはFirebase Cloud Messagingとの間の、前述のプッシュプロセスをマッピングしたフローチャートである。]({% image_buster /assets/img/push_process.png %})
 
 | 登録ステップ | メッセージングステップ |
 | ------------------ | --------------- |

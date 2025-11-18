@@ -70,7 +70,7 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 
 [**メッセージを作成**] を選択して、ドラッグ＆ドロップエディターでアプリ内メッセージのデザインを開始します。
 
-\![基本、バックグラウンド "画像、電話番号キャプチャ、または空白のテンプレートを選択できるBraze テンプレート s 欄。]({% image_buster /assets/img_archive/dnd_iam_select_template.png %})
+![基本、バックグラウンド "画像、電話番号キャプチャ、または空白のテンプレートを選択できるBraze テンプレート s 欄。]({% image_buster /assets/img_archive/dnd_iam_select_template.png %})
 
 ダッシュボードの**テンプレート**セクションからすべてのテンプレートにアクセスすることもできます。
 
@@ -78,7 +78,7 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 
 アプリ内メッセージにページを追加すると、オンボーディングフローやウェルカムジャーニーのように、ユーザーを順次のフローに案内できます。**ページ**セクションの**ビルド**タブからページを管理できます。
 
-\![3頁からなるヘルスケア企業のアプリ内メッセージ。]({% image_buster /assets/img_archive/dnd_iam_mockup.png %})
+![3頁からなるヘルスケア企業のアプリ内メッセージ。]({% image_buster /assets/img_archive/dnd_iam_mockup.png %})
 
 {% tabs %}
 {% tab Adding pages %}
@@ -122,7 +122,7 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 4. 開始ページからリンクしたいページを選択します。
 5. すべてのページがリンクされるまで続けます。
 
-\![ユーザーは、プライマリアクションを編集して、アプリ内メッセージのページ2 に移動します。]({% image_buster/assets/img_archive/dnd_iam_multipage.gif %})
+![ユーザーは、プライマリアクションを編集して、アプリ内メッセージのページ2 に移動します。]({% image_buster/assets/img_archive/dnd_iam_multipage.gif %})
 
 ページが他のページにリンクされていない場合、メッセージを起動できません。
 
@@ -176,7 +176,7 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 
 はい、メッセージ内のボタンクリックに基づいて、最大2つのボタンをセグメント化できます。そのためには、ボタンの**レポート用識別子**を「0」と「1」に設定します。これにより、それぞれ「アプリ内メッセージボタン1をクリックした」と「アプリ内メッセージボタン2をクリックした」というセグメンテーションフィルターに対応します。
 
-\!["Reporting&quot の識別子; "0"の値を持つフィールド。]({% image_buster /assets/img/identifier_for_reporting.png %}){: style="max-width:50%;"}
+!["Reporting&quot の識別子; "0"の値を持つフィールド。]({% image_buster /assets/img/identifier_for_reporting.png %}){: style="max-width:50%;"}
 
 #### カスタムHTMLやJavaScriptを使用してアプリ内メッセージをカスタマイズしたり、既存のHTMLメッセージをエディタに転送したりできますか？
 
@@ -190,6 +190,6 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 
 そうです。将来のキャンペーンやキャンバスステップで再利用したいアプリ内メッセージがある場合は、エディタを終了した後に利用可能な**テンプレートとして保存**ボタンを使用してカスタムテンプレートとして保存できます。テンプレートとして保存する前に、まずキャンペーンを開始するか、下書きとして保存する必要があります。
 
-\![商品見学のためのアプリ内メッセージのプレビュー。]({% image_buster /assets/img_archive/dnd_iam_save_as_template.png %})
+![商品見学のためのアプリ内メッセージのプレビュー。]({% image_buster /assets/img_archive/dnd_iam_save_as_template.png %})
 
 **テンプレート** > **アプリ内メッセージテンプレート** に移動して、アプリ内メッセージテンプレートを作成および保存することもできます。

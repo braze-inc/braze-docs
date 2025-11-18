@@ -117,7 +117,7 @@ User is in list of apps
 
 さらに、プッシュ通知では、プッシュトークンが API を介してインポートされた場合など、特定の状況下で Braze がプッシュ通知に添付されたデバイスを判別できないことがあります。その結果、これらのメッセージの値は `null` になります。
 
-\![プッシュ・メッセージで名変数を使用する際、デフォルト値として "there "を使用する例。]({% image_buster /assets/img_archive/personalized_firstname_.png %})
+![プッシュ・メッセージで名変数を使用する際、デフォルト値として "there "を使用する例。]({% image_buster /assets/img_archive/personalized_firstname_.png %})
 
 ### デフォルト値の代わりに条件付きロジックを使う
 
