@@ -126,6 +126,10 @@ Any changes to the IDs or locales in the CSV file will not automatically update 
 Check out our [Translation API]({{site.baseurl}}/api/endpoints/translations) to manage and update translations in your campaigns and Canvases.
 {% endalert %}
 
+### Right-to-left messages
+
+When filling in the translation file for languages that are written from right-to-left (like Arabic), wrap the translation with `span` so that it is properly formatted: ```<span dir='rtl'>MESSAGE_TRANSLATION</span>```.
+
 ## Preview your locales
 
 {% tabs %}

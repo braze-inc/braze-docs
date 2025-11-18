@@ -20,7 +20,7 @@ description: "This article outlines details about the Send transactional email m
 This endpoint is used alongside the creation of a Braze [Transactional Email campaign]({{site.baseurl}}/api/api_campaigns/transactional_campaigns) and corresponding campaign ID.
 
 {% alert important %}
-Transactional Email is currently available as part of select Braze packages. Reach out to your Braze customer success manager for more details.
+Transactional Email is currently available as part of select Braze packages. Contact your Braze customer success manager for more details.
 {% endalert %}
 
 Similar to the [Send triggered campaign endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/), this campaign type allows you to house message content inside of the Braze dashboard while dictating when and to whom a message is sent via your API. Unlike the Send triggered campaign endpoint, which accepts an audience or segment to send messages to, a request to this endpoint must specify a single user either by `external_user_id` or `user_alias`, as this campaign type is purpose-built for 1:1 messaging of alerts like order confirmations or password resets.
@@ -122,7 +122,7 @@ The endpoint may also return an error code and a human-readable message in some 
 | `You do not have permission to access this resource` | The API key used does not have permission to take this action |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Most endpoints at Braze have a rate limit implementation that will return a 429 response code if you have made too many requests. The transactional sending endpoint works differently—if you exceed your allotted rate limit, our system will continue to ingest the API calls, return success codes, and send the messages, however those messages may not be subject to the contractual SLA for the feature. Please reach out if you need more information about this functionality.
+Most endpoints at Braze have a rate limit implementation that will return a 429 response code if you have made too many requests. The transactional sending endpoint works differently—if you exceed your allotted rate limit, our system will continue to ingest the API calls, return success codes, and send the messages, however those messages may not be subject to the contractual SLA for the feature. Contact Braze Support if you need more information about this functionality.
 
 ## Transactional HTTP event postback
 

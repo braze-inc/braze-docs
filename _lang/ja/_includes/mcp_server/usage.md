@@ -1,12 +1,12 @@
 # Braze MCPサーバーを使用する
 
-> ClaudeやCursorのようなツールを使って、自然言語を通してBrazeデータと対話する方法を学ぶ。より一般的な情報については、[Braze MCP server]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/){% elsifinclude.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/){% endif %}.
+> ClaudeやCursorのようなツールを使って、自然言語を通してBrazeデータと対話する方法を学ぶ。より一般的な情報については、[Braze MCP server]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/){% endif %}.
 
 {% multi_lang_include mcp_server/beta_alert.md %}
 
 ## 前提条件
 
-この機能を使用する前に、[Braze MCPサーバーの設定]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/setup/){% elsifinclude.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/setup/){% endif %}.
+この機能を使用する前に、[Braze MCPサーバーの設定]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/setup/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/setup/){% endif %}.
 
 ## ベストプラクティス
 
@@ -20,7 +20,7 @@ ClaudeやCursorのような自然言語ツールを使ってBraze MCPサーバ�
 
 ## 使用例
 
-BrazeのMCPサーバー]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/setup/){% elsifinclude.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/setup/){% endif %}, ClaudeやCursorのようなツールを使って、自然言語を通してBrazeと対話することができる。以下はその例である：
+[BrazeのMCPサーバー]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/setup/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/setup/){% endif %}, ClaudeやCursorのようなツールを使って、自然言語を通してBrazeと対話することができる。以下はその例である：
 
 ### 私が利用できるBrazeの機能は？
 

@@ -1,4 +1,4 @@
-{% multi_lang_include 開発者_guide/prerequisites/android.md %} [アプリ内メッセージを設定する必要もあります]({{site.baseurl}}/developer_guide/in_app_messages)。
+{% multi_lang_include developer_guide/prerequisites/android.md %} [アプリ内メッセージを設定する必要もあります]({{site.baseurl}}/developer_guide/in_app_messages)。
 
 ## 個別マネージャーリスナの設定
 

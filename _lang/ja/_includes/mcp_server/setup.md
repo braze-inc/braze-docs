@@ -1,6 +1,6 @@
 # Braze MCPサーバーの設定
 
-> BrazeのMCPサーバーの設定方法を学習し、ClaudeやCursorのようなツールを使って自然言語でBrazeのデータと対話できるようにする。より一般的な情報については、[Braze MCP server]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/){% elsifinclude.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/){% endif %}.
+> BrazeのMCPサーバーの設定方法を学習し、ClaudeやCursorのようなツールを使って自然言語でBrazeのデータと対話できるようにする。より一般的な情報については、[Braze MCP server]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/){% endif %}.
 
 {% multi_lang_include mcp_server/beta_alert.md %}
 
@@ -306,7 +306,7 @@ MCPクライアントを設定する際、APIキーの識別子とワークス�
 
 ### ステップ 5: テストプロンプトを送信する
 
-Braze MCPサーバーの設定が完了したら、MCPクライアントにテストプロンプトを送信してみる。その他の例やベストプラクティスについては、[Braze MCPサーバーの使用]]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/usage/){% elsifinclude.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/usage/){% endif %}.
+Braze MCPサーバーの設定が完了したら、MCPクライアントにテストプロンプトを送信してみる。その他の例やベストプラクティスについては、[Braze MCPサーバーの使用]]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/usage/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/usage/){% endif %}.
 
 {% tabs %}
 {% tab クロード %}

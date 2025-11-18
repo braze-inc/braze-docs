@@ -18,7 +18,7 @@
 
 ## プレースメントを共有するキャンペーンでは、どちらのバナーが最初に表示されるのか？
 
-ユーザーが同じプレースメントを共有する複数のバナーキャンペーンにクオリファイした場合、最も優先順位の高いバナーが表示される。詳しくは[バナーの優先順位]({% if include.section == "user" %}{{site.baseurl}}/user_guide/message_building_by_channel/banners/#priority{% elsifinclude.section == "developer" %}{{site.baseurl}}/developer_guide/banners#priority{% endif %})を参照のこと。
+ユーザーが同じプレースメントを共有する複数のバナーキャンペーンにクオリファイした場合、最も優先順位の高いバナーが表示される。詳しくは[バナーの優先順位]({% if include.section == "user" %}{{site.baseurl}}/user_guide/message_building_by_channel/banners/#priority{% elsif include.section == "developer" %}{{site.baseurl}}/developer_guide/banners#priority{% endif %})を参照のこと。
 
 ## 既存のコンテンツカードフィードでバナーを使用できるか？
 

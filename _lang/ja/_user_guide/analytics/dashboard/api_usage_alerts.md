@@ -27,7 +27,7 @@ API使用アラートを作成する：
 2. アラートの名前を入力し、アラートさせたいREST APIエンドポイントとAPIキーを選択する。
 3. 1つまたは複数のレスポンスコードを選択し、[アラートしきい値を](#api-usage-alert-thresholds)指定することで、アラート基準を定義する。
 4. 終了したら、**イネーブルメントをオンに**切り替える。
-    \![Track usersエンドポイントが1時間以内に100%増加した場合に通知を送信するAPI使用アラートの例。]({% image_buster /assets/img/api_usage_alerts/api_usage_alerts1.png %})
+    ![Track usersエンドポイントが1時間以内に100%増加した場合に通知を送信するAPI使用アラートの例。]({% image_buster /assets/img/api_usage_alerts/api_usage_alerts1.png %})
 
 ## 警告のしきい値 {#api-usage-alert-thresholds}
 
@@ -68,7 +68,7 @@ API使用アラートを作成する：
 
 メールアラート、Webhook アラート、またはその両方を設定できます。Webhookアラートは、Slackチャネルなどの外部プラットフォームにアラートを送信するようなユースケースで非常に役立つ。例として、Slackとのアラート統合に関する[ドキュメントで](https://www.braze.com/docs/user_guide/administrative/app_settings/company_settings/notification_preferences#slack-incoming-webhook-integration)、通知設定を参照できる。
 
-\![アラートの基準に達すると、選択したEメールにメールが送信される。]({% image_buster /assets/img/api_usage_alerts/api_usage_alerts2.png %})
+![アラートの基準に達すると、選択したEメールにメールが送信される。]({% image_buster /assets/img/api_usage_alerts/api_usage_alerts2.png %})
 
 ### サンプルペイロード {#payload}
 

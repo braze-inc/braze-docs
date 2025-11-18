@@ -1,4 +1,4 @@
-{% multi_lang_include 開発者_guide/prerequisites/react_native.md %} [プッシュ通知を設定する必要もあります]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=react%20native)。
+{% multi_lang_include developer_guide/prerequisites/react_native.md %} [プッシュ通知を設定する必要もあります]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=react%20native)。
 
 ## プッシュストーリーの有効化
 

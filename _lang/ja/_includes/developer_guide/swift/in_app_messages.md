@@ -1,4 +1,4 @@
-{% multi_lang_include 開発者_guide/prerequisites/swift.md %} アプリ内メッセージs も有効にする必要があります。
+{% multi_lang_include developer_guide/prerequisites/swift.md %} アプリ内メッセージs も有効にする必要があります。
 
 ## メッセージの種類
 

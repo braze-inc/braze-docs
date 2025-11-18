@@ -120,7 +120,7 @@ Refer to the following table for details on the `Image` editor block. For dynami
 |Align| Orients the image to either the left, center or right of the block. |
 |Image with Liquid| Use [Liquid]({{site.baseurl}}/liquid/) logic to dynamically set different images within the same block of content. |
 |URL| Set an image using the address to where it's hosted. |
-|Alternate text| A short description of the image that gives users the same information that's shown in the image. This is essential for screen-reader accessability or when the image fails to load. |
+|Alternate text| A short description of the image that gives users the same information that's shown in the image. This is essential for screen-reader accessibility or when the image fails to load. |
 |Image with Rounded Corners| Render the image with rounded corners. By default, images are rendered with squared corners. |
 |Action| Triggers an action when the user clicks the image.|
 |Block Options| Sets padding around the image block. |

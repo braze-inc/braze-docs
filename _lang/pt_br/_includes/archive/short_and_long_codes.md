@@ -10,9 +10,7 @@
 
 #### remetente RCS verificado
 
-Um remetente RCS verificado é uma representação visual da sua marca que inclui um nome de marca, logotipo, legenda opcional e um selo de verificação. Isso proporciona ao remetente RCS verificado uma vantagem significativa sobre os códigos SMS em termos de estabelecer a confiança do usuário.  
-
-![Um exemplo de remetente RCS verificado em uma mensagem RCS chamada "Cat Failz Cafe".]{% image_buster /assets/img/rcs/rcs_sender.png %}{: style="max-width:60%;"}
+Um remetente RCS verificado é uma representação visual da sua marca que inclui um nome de marca, logotipo, legenda opcional e um selo de verificação. Isso proporciona ao remetente RCS verificado uma vantagem significativa sobre os códigos SMS em termos de estabelecimento de confiança do usuário.  
 
 ##### Informações
 
@@ -31,7 +29,7 @@ Um remetente RCS verificado é uma representação visual da sua marca que inclu
 
 | Contras |
 | ---- |
-| **Novidade e natureza dinâmica do mercado**<br> RCS é um protocolo relativamente novo, o que significa que a cobertura das operadoras, a entregabilidade e os preços estão evoluindo em ritmos diferentes em diferentes regiões. No entanto, o recente acordo da Apple para suportar o RCS significa que a grande maioria dos usuários de smartphones agora pode ser alcançada por este protocolo. <br><br>**Maior custo de envio de mensagens ricas**<br> As mensagens RCS que utilizam muitas capacidades de envio de mensagens ricas tendem a custar mais por mensagem do que as mensagens SMS. Isso não é surpreendente, dado os benefícios dos recursos ricos, mas pode ser importante notar para o seu orçamento de marketing. |
+| **Novidade e natureza dinâmica do mercado**<br> O RCS é um protocolo relativamente novo, o que significa que a cobertura da operadora, a entregabilidade e os preços estão evoluindo em ritmos diferentes em diferentes regiões. No entanto, o recente acordo da Apple para suportar RCS significa que a vasta maioria dos usuários de smartphones agora pode ser alcançada por este protocolo. <br><br>**Maior custo de envio de mensagens ricas**<br> As mensagens RCS que utilizam muitas capacidades de envio de mensagens ricas tendem a custar mais por mensagem do que as mensagens SMS. Isso não é surpreendente, dado os benefícios dos recursos ricos, mas pode ser importante notar para o seu orçamento de marketing. |
 {: .reset-td-br-1}
 
 {% endtab %}
@@ -140,7 +138,7 @@ Os IDs de remetente alfanuméricos permitem que você defina o nome da sua empre
 
 Para saber mais sobre o ID do Remetente Alfanumérico, entre em contato com seu gerente de sucesso do cliente.
 {% endtab %}
-{% tab Número Gratuito SMS %}
+{% tab Número Toll-Free SMS %}
 
 #### Número gratuito habilitado para SMS
 
@@ -173,7 +171,7 @@ Além dessas diferenças, saiba que uma marca geralmente terá um código curto,
 Quer saber o que são os códigos curtos compartilhados? Para saber mais sobre por que recomendamos evitar códigos curtos compartilhados, visite o tópico em nosso [FAQ de SMS]({{site.baseurl}}/sms_faq/).
 {% endalert %}
 
-## números de telefone de envio SMS
+## números de telefone para envio de SMS
 
 Códigos curtos e longos são o número de telefone de onde você envia mensagens para seus usuários ou clientes. Eles podem ser códigos curtos de 5 a 6 dígitos ou códigos longos de 10 dígitos. Cada tipo de código oferece benefícios específicos e todos os fatores devem ser considerados antes de escolher se você deseja um código curto, que tipo de código curto você pode querer, além do código longo que você já será atribuído.
 
@@ -213,15 +211,15 @@ Todos os clientes que atualmente possuem e/ou usam códigos longos dos EUA para 
 
 ### Como a taxa de transferência de mensagens RCS se compara à taxa de transferência de mensagens SMS?
 
-A taxa de transferência de mensagens RCS não é tão estritamente definida ou controlada pela operadora como é com SMS. Porque as mensagens RCS são enviadas por redes de dados em vez dos canais de sinalização celular tradicionais usados pelo SMS, o RCS não depende de limites impostos pela rede fixa como o SMS. 
+A taxa de transferência de mensagens RCS não é tão estritamente definida ou controlada pela operadora como é com SMS. Como as mensagens RCS são enviadas por redes de dados em vez dos canais de sinalização celular tradicionais usados por SMS, o RCS não depende de limites impostos pela rede fixa como o SMS. 
 
-### Os remetentes verificados pelo RCS suportam alta taxa de mensagens como um código curto?
+### Os remetentes verificados RCS suportam alta taxa de transferência de mensagens como um código curto?
 
-Não. Os remetentes verificados pelo RCS não têm a opção de uma alta taxa de mensagens separada.
+Não. Os remetentes verificados por RCS não têm a opção de um alto volume de mensagens separado.
 
-### Um remetente verificado pelo RCS pode ser compartilhado entre vários grupos de inscrições? 
+### Um remetente verificado por RCS pode ser compartilhado entre vários grupos de inscrições? 
 
-Não. Semelhante a um remetente de SMS, um remetente verificado pelo RCS só pode ser usado com um único grupo de inscrições.
+Não. Semelhante a um remetente de SMS, um remetente verificado por RCS só pode ser usado com um único grupo de inscrições.
 
 ### Um remetente de fallback de SMS pode ser compartilhado entre grupos de inscrições de SMS?
 

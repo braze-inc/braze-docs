@@ -16,7 +16,7 @@ _This integration is maintained by B.Layer._
 
 ## About the integration
 
-The Braze and B.Layer integration allows you to leverage the B.Layer in-app message builder to help you build on-brand in-app messages that can be exported as a zip file or inline HTML to Braze. This integration does not require additional developer resources, saving you time and budget.
+The Braze and B.Layer integration allows you to use the B.Layer in-app message builder to help you build on-brand in-app messages that can be exported as a zip file or inline HTML to Braze. This integration does not require additional developer resources, saving you time and budget.
 
 ![]({% image_buster /assets/img/blayer/blayer2.png %})
 

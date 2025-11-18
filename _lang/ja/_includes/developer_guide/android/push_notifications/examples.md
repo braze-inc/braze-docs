@@ -1,4 +1,4 @@
-{% multi_lang_include 開発者_guide/prerequisites/android.md %} [プッシュ通知を設定する必要もあります]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=android)。
+{% multi_lang_include developer_guide/prerequisites/android.md %} [プッシュ通知を設定する必要もあります]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=android)。
 
 ## カスタム通知レイアウト
 
