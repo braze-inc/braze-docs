@@ -13,12 +13,6 @@ page_order: 6.1
 It's unlikely that you'll need to manage these systems, but this information can be useful if you plan on creating new custom Liquid components for Braze Docs, so you can avoid breaking how other languages are translated.
 {% endalert %}
 
-## Translation lifecycle
-
-We use Phrase, a translation management system (TMS), alongside GitHub to translate Braze Docs into a variety of languages. For each language, Phrase translates the English files stored in `_docs`, and then stores the translated files within the corresponding subdirectory in `_lang`.
-
-At regular intervals, we manually trigger Phrase so new content on Braze Docs can be translated into each language. Updates are compiled into a single pull request, then reviewed by our team and merged into the `develop` branch when ready.
-
 ## About pattern-matching rules
 
 To ensure that sample code, feature names, table names, and other fixed terms are not altered during translation, we use regular expressions (regex) to skip these words. This preserves accuracy and consistency across all languages.
