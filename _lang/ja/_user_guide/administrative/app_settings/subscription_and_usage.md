@@ -41,11 +41,11 @@ search_rank: 5
 
 **アプリ別の最も使用頻度の高いイベントと属性**では、属性とカスタムイベント データポイント使用量のドライバを確認できます。 
 
-\![アプリ別の最も使用頻度の高いイベントと属性]({% image_buster /assets/img/most_used_events_attributes_time.png %})
+![アプリ別の最も使用頻度の高いイベントと属性]({% image_buster /assets/img/most_used_events_attributes_time.png %})
 
 アプリごとに、**See breakdown** を選択して、選択した期間の各特定のカスタム属性、プロファイル属性、カスタムイベントの見積もりカウント、およびその属性またはイベントによって駆動されたアプリの属性とイベントの更新の割合を表示できます。 
 
-\![アプリ別の最も使用されるイベントと属性の詳細タブ]]({% image_buster /assets/img/most_used_events_attributes_2.png %}){: style="max-width:60%"}
+![アプリ別の最も使用されるイベントと属性の詳細タブ]]({% image_buster /assets/img/most_used_events_attributes_2.png %}){: style="max-width:60%"}
 
 このようなデータの内訳は、どの特定のデータポイントが割り当ての大きな割合を占めているかを理解するときに役立ちます。データポイントを誤って、また無駄な方法で費やしていないことを確認するために、この情報を適時監視することをお勧めします。カスタマーサクセスマネージャーは、現在のプランを最大限に活用するためのガイダンスや、より柔軟性の高いオプションを提供できます。 
 
@@ -53,7 +53,7 @@ search_rank: 5
 
 **Total データポイント s Usage**タブでは、データポイント使用量を詳細に確認できます。このセクションの全データを、週単位または月単位で集計して表示できます。
 
-\![データポイントの使用状況を週単位でフィルタリングする]({% image_buster /assets/img/subscription_and_billing2.png %})
+![データポイントの使用状況を週単位でフィルタリングする]({% image_buster /assets/img/subscription_and_billing2.png %})
 
 ### 契約の詳細
 
@@ -66,7 +66,7 @@ search_rank: 5
 - **割り当てられたデータポイント:**請求期間ごとに契約で割り当てられるデータポイントの量。
 - **契約のデータポイント使用量:**契約の存続期間中に記録されたすべてのデータポイントの累積総数で、次回の請求期間では再設定されません。
 
-\![Total Data Point UsageタブのContract Detailsセクション]({% image_buster /assets/img/contract_details.png %})
+![Total Data Point UsageタブのContract Detailsセクション]({% image_buster /assets/img/contract_details.png %})
 
 ### 会社の請求データ
 
@@ -74,27 +74,27 @@ search_rank: 5
 
 このグラフには、アプリ全体でのデータポイントの使用状況が表示されます。
 
-\![アプリ残量総データポイント使用量]は、アプリごとに使用されているデータポイントを示します。]({% image_buster /assets/img/app_level_total.png %})
+![アプリ残量総データポイント使用量]は、アプリごとに使用されているデータポイントを示します。]({% image_buster /assets/img/app_level_total.png %})
 
 合計のいずれかを選択して、**Data Point Usage Over Time**テーブルを表示します。このテーブルには、各ワークスペースの週間データポイントの合計が表示されます。 空白の**App Name**列を持つ行は、アプリに関連付けられていないデータポイント(`app_id`を指定しないリクエストで使用されるデータポイントなど)を表します。
 
-\![2ワークスペースsの総週間データポイントsを示すデータポイント使用量の経時変化。]({% image_buster /assets/img/data_point_usage_time.png %})
+![2ワークスペースsの総週間データポイントsを示すデータポイント使用量の経時変化。]({% image_buster /assets/img/data_point_usage_time.png %})
 
 #### ワークスペースデータポイントの使用状況
 
 このグラフでは、会社のデータポイント使用量の合計をワークスペース別に評価できます。このグラフを使用すると、会社のデータポイント使用量における各ワークスペースの割合を評価できます。
 
-\![2つのワークスペースのワークスペースデータポイント使用量グラフ]({% image_buster /assets/img/appgroup_datapoint_usage.png %}){: style="max-width:90%;"}
+![2つのワークスペースのワークスペースデータポイント使用量グラフ]({% image_buster /assets/img/appgroup_datapoint_usage.png %}){: style="max-width:90%;"}
 
 #### イベントソース別の請求サイクルデータポイントの使用状況
 
 このグラフでは、さまざまなAPI 属性、カスタムイベント、セッションなど、さまざまなイベントソース間でデータポイントの使用状況がどのように分散されているかを表示できます。
 
-\![イベントソース別の請求サイクルデータポイント使用状況]は、イベントソース間のデータポイント割り当てを表示します。]({% image_buster /assets/img/event_source_stats.png %})
+![イベントソース別の請求サイクルデータポイント使用状況]は、イベントソース間のデータポイント割り当てを表示します。]({% image_buster /assets/img/event_source_stats.png %})
 
 #### 経時的なデータポイント使用量
 
 このグラフにより、割り当てられたデータポイントの量に対するデータポイント使用量の合計をすぐに確認できます。
 
-\![データポイント使用量の経時変化は、現在の課金周期に割り当てられたデータポイントsと実行中の合計とは対照的です]({% image_buster /assets/img/company_data_point_usage_time.png %}){: style="max-width:90%;"}
+![データポイント使用量の経時変化は、現在の課金周期に割り当てられたデータポイントsと実行中の合計とは対照的です]({% image_buster /assets/img/company_data_point_usage_time.png %}){: style="max-width:90%;"}
 

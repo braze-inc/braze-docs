@@ -17,7 +17,7 @@ description: "このページでは、クラウドデータ取り込みでユー
 
 標準のプロセスに従って、接続するデータウェアハウスの Braze ダッシュボードで[新規の連携を作成]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views)します。削除テーブルにアクセスできるロールが含まれていることを確認します。**Create import sync** ページで、**Data Type** を**Delete Users** に設定し、統合実行中に適切なアクションを実行してユーザーを削除します。
 
-\![]({% image_buster /assets/img/cloud_ingestion/deletion_1.png %})
+![]({% image_buster /assets/img/cloud_ingestion/deletion_1.png %})
 
 ## ソースデータの設定
 

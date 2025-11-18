@@ -37,7 +37,7 @@ description: "この記事では、さまざまな Braze チャネルにテス�
 3. **Test Send**タブを選択し、**個々のユーザーを追加s**フィールドにメールの住所またはユーザー IDを追加します。 
 4. **Send Test**を選択して、下書きのed メールを受信トレイに送信します。
 
-\![テストメール]]({% image_buster /assets/img_archive/testemail.png %}){: style="max-width:40%;" }
+![テストメール]]({% image_buster /assets/img_archive/testemail.png %}){: style="max-width:40%;" }
 
 {% endtab %}
 {% tab Push %}
@@ -48,7 +48,7 @@ description: "この記事では、さまざまな Braze チャネルにテス�
 2. [**設定**] タブを選択し、[**ユーザーを個別に追加**] フィールドにメールアドレスまたはユーザー ID を追加します。
 3. **Send Test**を選択して、下書きのメッセージを端末に送信します。
 
-\![テストプッシュ]]({% image_buster /assets/img_archive/testpush.png %})
+![テストプッシュ]]({% image_buster /assets/img_archive/testpush.png %})
 
 #### Web プッシュ
 
@@ -57,7 +57,7 @@ description: "この記事では、さまざまな Braze チャネルにテス�
 3. **Send Test to Myself**を選択します。
 4. **Send Test**を選択して、Web プッシュをウェブブラウザに送信します。
 
-\![試験Web プッシュ]]({% image_buster /assets/img_archive/testwebpush.png %})
+![試験Web プッシュ]]({% image_buster /assets/img_archive/testwebpush.png %})
 
 Braze ダッシュボードからのプッシュメッセージをすでに受け入れている場合、プッシュは画面の隅に表示されます。それ以外の場合は、メッセージが表示されたら [**許可**] をクリックすると、メッセージが表示されます。
 
@@ -72,7 +72,7 @@ Braze ダッシュボードからのプッシュメッセージをすでに受�
 
 テスト用プッシュメッセージがデバイス画面の上部に表示されます。
 
-\![アプリ内テスト]]({% image_buster /assets/img_archive/test-in-app.png %})
+![アプリ内テスト]]({% image_buster /assets/img_archive/test-in-app.png %})
 
 プッシュメッセージを直接クリックして開くと、アプリが開いてアプリ内メッセージのテストを確認できます。このアプリ内メッセージのテスト機能では、ユーザーがテストプッシュ通知をクリックしてアプリ内メッセージをトリガーする必要があることに注意してください。そのため、テストプッシュ通知の配信を成功させるために、ユーザーには関連アプリでプッシュ通知を受信する資格が必要です。
 
@@ -85,7 +85,7 @@ Braze ダッシュボードからのプッシュメッセージをすでに受�
 2. [**テスト**] タブを選択し、このテストメッセージを受信するコンテンツテストグループを少なくとも 1 つ、あるいは個々のユーザーを少なくとも 1 人選択します。 
 3. **Send Test**を選択して、コンテンツカードをアプリに送信します。
 
-\![コンテンツカードのテスト]]({% image_buster /assets/img/contentcard_test.png %})
+![コンテンツカードのテスト]]({% image_buster /assets/img/contentcard_test.png %})
 
 {% endtab %}
 {% tab SMS/MMS %}
@@ -96,14 +96,14 @@ SMS または MMS メッセージを作成した後、スマートフォンに�
 2. [**テスト**] タブを選択し、このテストメッセージを受信するコンテンツテストグループを少なくとも 1 つ、あるいは個々のユーザーを少なくとも 1 人選択します。 
 3. テストメッセージを送信するには、**Send Test**を選択します。
 
-\![コンテンツカードのテスト]]({% image_buster /assets/img/sms_test.png %})
+![コンテンツカードのテスト]]({% image_buster /assets/img/sms_test.png %})
 
 {% endtab %}
 {% tab Webhook %}
 
 Webhook を作成した後、テスト送信を実行して Webhook の応答を確認できます。[**テスト**] タブを選択し、[**テストを送信**] を選択して、指定された Webhook URL にテスト送信を送信します。個々のユーザーを選択して、特定のユーザーとして応答をプレビューすることもできます。 
 
-\![コンテンツカードのテスト]]({% image_buster /assets/img/webhook_test.png %})
+![コンテンツカードのテスト]]({% image_buster /assets/img/webhook_test.png %})
 
 {% endtab %}
 {% endtabs %}
@@ -118,19 +118,19 @@ Webhook を作成した後、テスト送信を実行して Webhook の応答を
 
 テストメッセージを送信するときは、必ず [**既存のユーザーを選択**] オプションか、[**カスタムユーザー**] としてプレビューするオプションを選択します。
 
-\![パーソナライズされたのテスト]({% image_buster /assets/img_archive/personalized_testing.png %}){: style="max-width:70%;" }
+![パーソナライズされたのテスト]({% image_buster /assets/img_archive/personalized_testing.png %}){: style="max-width:70%;" }
 
 #### 既存のユーザーの選択
 
 既存のユーザーを選択する場合は、検索フィールドに特定のユーザー ID またはメールを入力します。次に、ダッシュボードプレビューを使用してメッセージがそのユーザーにどのように表示されるかを確認し、そのユーザーに表示される内容を反映したテストメッセージをデバイスに送信します。
 
-\![ユーザーを選択]({% image_buster /assets/img_archive/personalized_testing_select.png %})
+![ユーザーを選択]({% image_buster /assets/img_archive/personalized_testing_select.png %})
 
 #### カスタムユーザーの選択
 
 カスタムユーザーとしてプレビューする場合は、ユーザーの名やカスタム属性など、パーソナライズできるさまざまなフィールドにテキストを入力します。繰り返しになりますが、自分のメールアドレスを入力して、デバイスにテストを送信できます。
 
-\![ユーザーユーザー]]({% image_buster /assets/img_archive/personalized_testing_custom.png %})
+![ユーザーユーザー]]({% image_buster /assets/img_archive/personalized_testing_custom.png %})
 
 ### カスタムイベントプロパティでパーソナライズされたキャンペーンのテスト
 
@@ -145,7 +145,7 @@ Webhook を作成した後、テスト送信を実行して Webhook の応答を
 
 1. イベント・プロパティを含むコピーを書き上げる。 
 
-\![プロパティを使用したテストメッセージの作成]({% image_buster /assets/img_archive/testeventproperties-compose.png %})
+![プロパティを使用したテストメッセージの作成]({% image_buster /assets/img_archive/testeventproperties-compose.png %})
 
 {: start="2"}
 2\.[アクションベースの配信]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/)を使用して、イベントの発生時にキャンペーンを配信します。
@@ -154,19 +154,19 @@ Webhook を作成した後、テスト送信を実行して Webhook の応答を
 iOS プッシュキャンペーンをテストしている場合は、iOS が現在の開封 アプリのプッシュ通知を配信しないため、自分でアプリを終了できるように遅延を1 分に設定する必要があります。他のタイプのキャンペーンは、即座に配信するように設定できます。
 {% endalert %}
 
-\![メッセージ配信テスト]]({% image_buster /assets/img_archive/testeventproperties-delivery.png %})
+![メッセージ配信テスト]]({% image_buster /assets/img_archive/testeventproperties-delivery.png %})
 
 {: start="3"}
 3. テストフィルターを使用したり、自分のメールアドレスをターゲットにしたりして、通常どおりにテスト用のユーザーをターゲットにして、キャンペーンの作成を完了します。 
 
-\![メッセージターゲットのテスト]]({% image_buster /assets/img_archive/testeventproperties-target.png %})
+![メッセージターゲットのテスト]]({% image_buster /assets/img_archive/testeventproperties-target.png %})
 
 {: start="4"}
 4. アプリを開いて、カスタムイベントを完了します。
 
 キャンペーンがトリガーされ、イベントプロパティでカスタマイズされたメッセージが表示されます。
 
-\![テストメッセージ例]]({% image_buster /assets/img_archive/testeventproperties-message2.png %})
+![テストメッセージ例]]({% image_buster /assets/img_archive/testeventproperties-message2.png %})
 
 {% endtab %}
 {% tab Test message %}
@@ -180,7 +180,7 @@ iOS プッシュキャンペーンをテストしている場合は、iOS が現
 3. ページ下部にカスタムイベント プロパティを追加し、ユーザー IDまたはメールの住所を一番上のボックスに追加します。
 4. **Send Test**を選択すると、プロパティでメッセージパーソナライズされたを受信します。
 
-\![カスタマイズユーザーによるテスト]]({% image_buster /assets/img_archive/testeventproperties-customuser.png %})
+![カスタマイズユーザーによるテスト]]({% image_buster /assets/img_archive/testeventproperties-customuser.png %})
 
 {% endtab %}
 {% tab Liquid %}

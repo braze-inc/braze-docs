@@ -54,7 +54,7 @@ channel:
 
 **テンプレートプレビュー** は、URL の前にリンクテンプレートを挿入する方法の例を示すために提供されています。
 
-\![テンプレート位置、プレペンドURL、およびテンプレートプレビューフィールドs は、リンクテンプレートの挿入処理からURL の前に適用されます。]({% image_buster /assets/img_archive/link_template_preappend.png %}){: style="max-width:90%;"}
+![テンプレート位置、プレペンドURL、およびテンプレートプレビューフィールドs は、リンクテンプレートの挿入処理からURL の前に適用されます。]({% image_buster /assets/img_archive/link_template_preappend.png %}){: style="max-width:90%;"}
 
 ### 追加: URLの後に挿入するリンクテンプレートを作成する {#append-link-template}
 
@@ -64,7 +64,7 @@ channel:
 2. **Template Position**を**After URL**に設定します。 
 3. 各URL の末尾にクエリパラメータ(`value=example`) を入力します。URLの末尾に複数のパラメーターを付加することができる。
 
-\![テンプレート位置、クエリーパラメータ、およびテンプレートプレビューフィールドs (URL の後にリンクテンプレートを挿入する場合)。]({% image_buster /assets/img_archive/link_template_postappend.png %}){: style="max-width:90%;"}
+![テンプレート位置、クエリーパラメータ、およびテンプレートプレビューフィールドs (URL の後にリンクテンプレートを挿入する場合)。]({% image_buster /assets/img_archive/link_template_postappend.png %}){: style="max-width:90%;"}
 
 ## Eメールキャンペーンでリンクテンプレートを使用する
 
@@ -78,7 +78,7 @@ channel:
 
 - **ドラッグ＆ドロップ・エディター：****コンテンツ**＞**リンク管理**タブを選択する。次に、**Add a Link Template**を選択します。ドラッグ＆ドロップ・エディターでリンクテンプレートにアクセスするには、[リンクのエイリアシングを]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/link_aliasing/)オンにしておく必要がある。
 
-\![ドラッグアンドドロップエディタのリンク管理タブ。リンクテンプレートの一覧が表示されます。]({% image_buster /assets/img_archive/link_template_messagecomposer2.png %})
+![ドラッグアンドドロップエディタのリンク管理タブ。リンクテンプレートの一覧が表示されます。]({% image_buster /assets/img_archive/link_template_messagecomposer2.png %})
 
 {% alert note %}
 リンクテンプレートはプレーンテキストには適用されません。つまり、「現在」には、リンクテンプレートのパラメータを含まないクリックが表示される場合があります。これは、これらのクリックは、電子メールのプレーンテキストバージョンから取得される可能性があるためです。

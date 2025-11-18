@@ -6,7 +6,7 @@ description: "このリファレンス記事では、一般的な Liquid のユ�
 search_rank: 2
 ---
 
-# [\![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/dynamic-personalization-with-liquid){: style="float:right;width:120px;border:0;" class="noimgborder"}リキッドを使用
+# [![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/dynamic-personalization-with-liquid){: style="float:right;width:120px;border:0;" class="noimgborder"}リキッドを使用
 
 > この記事では、さまざまなユーザー属性を使用して、メッセージングにダイナミックな個人情報を挿入する方法を紹介する。
 
@@ -108,11 +108,11 @@ Liquid は特定の構造 (構文) に従います。ダイナミックなパー
 
 テンプレート化されたテキストフィールドの付近にある**パーソナライゼーション追加**モーダルから、事前にデフォルト値でフォーマットされた変数を挿入できます。
 
-\![挿入パーソナライゼーションを選択した後に耳元にアプリする追加パーソナライゼーション モーダル。モーダルには、パーソナライゼーション型、属性、オプションのデフォルト値のフィールドsがあり、リキッド構文のプレビューが表示されます。]({% image_buster /assets/img_archive/insert_liquid_var_arrow.png %}){: style="max-width:90%;"}
+![挿入パーソナライゼーションを選択した後に耳元にアプリする追加パーソナライゼーション モーダル。モーダルには、パーソナライゼーション型、属性、オプションのデフォルト値のフィールドsがあり、リキッド構文のプレビューが表示されます。]({% image_buster /assets/img_archive/insert_liquid_var_arrow.png %}){: style="max-width:90%;"}
 
 モーダルにより、カーソルがあった位置に、指定したデフォルト値をもつ Liquid が挿入されます。挿入位置は [プレビュー] ボックスでも指定でき、挿入位置の前後のテキストが表示されます。テキストブロックがハイライトされている場合、ハイライトされたテキストは置き換えられる。
 
-\![パーソナライゼーションの追加モーダルのGIF。コンポーザー内のハイライトされたテキスト&クォート;name"をリキッドスニペットに置き換えて、ユーザーが"fellow traveler"をデフォルトとして表示します。]({% image_buster /assets/img_archive/insert_var_shot.gif %})
+![パーソナライゼーションの追加モーダルのGIF。コンポーザー内のハイライトされたテキスト&クォート;name"をリキッドスニペットに置き換えて、ユーザーが"fellow traveler"をデフォルトとして表示します。]({% image_buster /assets/img_archive/insert_var_shot.gif %})
 
 ### 変数への代入
 

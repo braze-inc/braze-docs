@@ -57,7 +57,7 @@ WHERE campaign_id = '{{campaign.${Campaign}}}'
 
 以下の例では、2025年6月の月初日と月末日の値とともに、「Summer Feature Launch」キャンペーンが値として割り当てられます。
 
-Query Builderの\!["Variable"タブに、指定した例が表示されます。]({% image_buster /assets/img/query_builder_example.png %})
+Query Builderの!["Variable"タブに、指定した例が表示されます。]({% image_buster /assets/img/query_builder_example.png %})
 
 ## 一般的な変数タイプ {#variable-types}
 
@@ -131,7 +131,7 @@ is_radio_button: 'true'
 {% endtab %}
 {% endtabs %}
 
-\![Brazeでレンダリングされたサンプルラジオボタン。]({% image_buster /assets/img_archive/sql_variables_campaigns.png %}){: style="max-width:50%;"}
+![Brazeでレンダリングされたサンプルラジオボタン。]({% image_buster /assets/img_archive/sql_variables_campaigns.png %}){: style="max-width:50%;"}
 
 #### マルチセレクト
 
@@ -145,7 +145,7 @@ is_multi_select: 'true'
 {% endtab %}
 {% endtabs %}
 
-\![Brazeでレンダリングされた複数選択リストの例。]({% image_buster /assets/img_archive/sql_variables_productname.png %}){: style="max-width:50%;"}
+![Brazeでレンダリングされた複数選択リストの例。]({% image_buster /assets/img_archive/sql_variables_productname.png %}){: style="max-width:50%;"}
 
 #### options 
 
@@ -187,7 +187,7 @@ time > {{start_date.${custom_label}}} AND time < {{end_date.${custom_label}}}
 
 指定された日付範囲内のカレンダーを表示するために Liquid が使用されます。
 
-\![Brazeでレンダリングされたサンプルカレンダ。]({% image_buster /assets/img_archive/query_builder_time_range.png %}){: style="max-width:50%;"}
+![Brazeでレンダリングされたサンプルカレンダ。]({% image_buster /assets/img_archive/query_builder_time_range.png %}){: style="max-width:50%;"}
 
 ### キャンペーン
 

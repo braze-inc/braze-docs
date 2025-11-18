@@ -28,7 +28,7 @@ channel:
 
 Braze には 3 世代のアプリ内メッセージが用意されています。どの端末がどの世代をサポートしているかによって、どの端末にメッセージを送るかを細かく設定できる。
 
-\![アプリ内メッセージのプレビュー時に世代を切り替える。]({% image_buster /assets/img/iam-generations.gif %}){: height="50%" width="50%"}
+![アプリ内メッセージのプレビュー時に世代を切り替える。]({% image_buster /assets/img/iam-generations.gif %}){: height="50%" width="50%"}
 
 ## テスト
 
@@ -40,7 +40,7 @@ Braze には 3 世代のアプリ内メッセージが用意されています�
 
 また、**Test**タブからは、あたかも自分がユーザーであるかのように、メッセージをプレビューすることができる。特定のユーザーやランダムなユーザーを選択するか、カスタムユーザーを作成できます。
 
-\![アプリ内メッセージを構築するときのテストタブ。「ユーザーとしてメッセージをプレビュー」が「カスタムユーザー」に設定され、利用可能なプロファイルのフィールドが設定可能なオプションとして表示されています。]({% image_buster /assets/img/iam-user-preview.png %})
+![アプリ内メッセージを構築するときのテストタブ。「ユーザーとしてメッセージをプレビュー」が「カスタムユーザー」に設定され、利用可能なプロファイルのフィールドが設定可能なオプションとして表示されています。]({% image_buster /assets/img/iam-user-preview.png %})
 
 {% alert important %}
 試験送信により、1つの受信者に複数のアプリ内メッセージが送信される場合があります。
@@ -57,7 +57,7 @@ Braze には 3 世代のアプリ内メッセージが用意されています�
 
 アクセシビリティのベストプラクティスを促進するために、Braze は従来のHTML エディターを使用して作成されたアプリ内メッセージのコンテンツを、アクセシビリティ標準に照らして自動的にスキャンします。このスキャナーは、Web Content Accessibility Guidelines ([WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/)) 標準を満たしていない可能性があるコンテンツを特定するのに役立ちます。WCAG は、World Wide Web Consortium (W3C) が作成し、国際的に認知された技術標準のセットで、多くの人にとってアクセスしやすい Web コンテンツを作成するためのものです。
 
-\![アクセシビリティスキャン結果]]({% image_buster /assets/img/Accessibilty_Scanner_IAM.png %})
+![アクセシビリティスキャン結果]]({% image_buster /assets/img/Accessibilty_Scanner_IAM.png %})
 
 {% alert note %}
 アプリ内メッセージアクセシビリティスキャナーは、カスタム HTML で作成されたメッセージに対してのみ実行されます。

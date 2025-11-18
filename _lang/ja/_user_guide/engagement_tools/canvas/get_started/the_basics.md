@@ -20,28 +20,28 @@ tool: Canvas
   {% tab Canvas %}
   キャンバスは、マーケティング担当者が複数のメッセージを使ったキャンペーンを作成するための統一インターフェースである。いわばビジュアルプログラミングツールのようなもので、一連のステップを使って一貫したユーザージャーニーを作成できます。
 
-  \![デシジョンを持つキャンバスのサンプルステップは、ユーザーがプッシュ有効になっているかどうかに応じて、2 つの別々のユーザージャーニーに分割されます。]({% image_buster /assets/img/canvas_intro/canvas_intro.gif %})
+  ![デシジョンを持つキャンバスのサンプルステップは、ユーザーがプッシュ有効になっているかどうかに応じて、2 つの別々のユーザージャーニーに分割されます。]({% image_buster /assets/img/canvas_intro/canvas_intro.gif %})
 
   {% endtab %}
 
   {% tab Journey %}
 
-  ジャーニー (一般にユーザージャーニーと呼ばれる) は、キャンバス内での個々のユーザーエクスペリエンスです。<br><br> \![新しいユーザーのカスタマージャーニーを含むグラフ。匿名ユーザーがアプリをインストールし、Katがアカウントを作成し、Katが1週間アプリを開封せず、プッシュ通知がKatをアプリに戻し、Katが定期的にアプリを使用します。]({% image_buster /assets/img_archive/Journey_2.png %}){: style="max-width:90%;"}
+  ジャーニー (一般にユーザージャーニーと呼ばれる) は、キャンバス内での個々のユーザーエクスペリエンスです。<br><br> ![新しいユーザーのカスタマージャーニーを含むグラフ。匿名ユーザーがアプリをインストールし、Katがアカウントを作成し、Katが1週間アプリを開封せず、プッシュ通知がKatをアプリに戻し、Katが定期的にアプリを使用します。]({% image_buster /assets/img_archive/Journey_2.png %}){: style="max-width:90%;"}
 
   {% endtab %}
 
   {% tab Canvas Builder %}
-  キャンバスビルダーは、キャンバスを作成する際の手順を示している。これには、キャンバスに名前を付けたり、チームを追加するなどの基本操作が含まれます。基本的に、キャンバスビルダーはキャンバスを作り始める前に必要な重要なセットアップです。ここでは、[エントリスケジュール]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2b-set-your-canvas-entry-schedule)、[ターゲットオーディエンス]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2c-set-your-target-entry-audience)の編集、[設定の送信]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2d-select-your-send-settings)などのオプションを使用して、ユーザーのカスタマージャーニーの開始と履行方法をコントロールできます。<br><br> \![The Canvas builder on the Basics section for a Canvas named "New Canvas".]({% image_buster /assets/img_archive/canvas_flow_entry_wizard.png %}){: style="max-width:90%;"}
+  キャンバスビルダーは、キャンバスを作成する際の手順を示している。これには、キャンバスに名前を付けたり、チームを追加するなどの基本操作が含まれます。基本的に、キャンバスビルダーはキャンバスを作り始める前に必要な重要なセットアップです。ここでは、[エントリスケジュール]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2b-set-your-canvas-entry-schedule)、[ターゲットオーディエンス]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2c-set-your-target-entry-audience)の編集、[設定の送信]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2d-select-your-send-settings)などのオプションを使用して、ユーザーのカスタマージャーニーの開始と履行方法をコントロールできます。<br><br> ![The Canvas builder on the Basics section for a Canvas named "New Canvas".]({% image_buster /assets/img_archive/canvas_flow_entry_wizard.png %}){: style="max-width:90%;"}
 
   {% endtab %}
 
   {% tab Variants %}
-  バリアントとは、各顧客がたどるジャーニーを指します。キャンバスは、コントロールグループで最大 8 つのバリアントをサポートします。各バリアントをたどるオーディエンスのセグメントを制御できます。<br><br> \!["Add Variant"ボタンを選択します。]({% image_buster /assets/img/canvas_intro/add_canvas_variant.gif %})
+  バリアントとは、各顧客がたどるジャーニーを指します。キャンバスは、コントロールグループで最大 8 つのバリアントをサポートします。各バリアントをたどるオーディエンスのセグメントを制御できます。<br><br> !["Add Variant"ボタンを選択します。]({% image_buster /assets/img/canvas_intro/add_canvas_variant.gif %})
 
   {% endtab %}
 
   {% tab Steps %}
-  キャンバスにおけるステップとは、「A の場合は B」というようなマーケティングの意思決定ポイントです。[キャンバスコンポーネント]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/#about-canvas-components)を活用してユーザージャーニーのステップを作成します。<br><br> \![キャンバスに遅延ステップを追加する例。]({% image_buster /assets/img/canvas_intro/add_canvas_step.gif %})<br><br> ユーザーがキャンバスに入ると、最初のステップから始まります。各ステップには、ユーザーが次のステップに移動できるかどうかを決定する条件があります。ステップ内で、トリガーまたはスケジュール配信の設定、フィルタの追加または例外イベントのマーク付けによるターゲット設定の絞り込み、プッシュ通知やWebhook イベントなどの異なるチャネルの指定を行うことができます。キャンバスでは、ステップはシーケンスで実行されます。つまり、最初のステップは、2 番目のステップが実行される前に実行されます。たとえば、次の手順でキャンバスを作成します。24時間の遅延がある遅延ステップA、プッシュメッセージを持つメッセージステップA、アプリ内メッセージを持つメッセージステップB。ユーザーAは24時間遅延され、24時間後にプッシュメッセージを受信し、その後アプリ内メッセージを受信します。
+  キャンバスにおけるステップとは、「A の場合は B」というようなマーケティングの意思決定ポイントです。[キャンバスコンポーネント]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/#about-canvas-components)を活用してユーザージャーニーのステップを作成します。<br><br> ![キャンバスに遅延ステップを追加する例。]({% image_buster /assets/img/canvas_intro/add_canvas_step.gif %})<br><br> ユーザーがキャンバスに入ると、最初のステップから始まります。各ステップには、ユーザーが次のステップに移動できるかどうかを決定する条件があります。ステップ内で、トリガーまたはスケジュール配信の設定、フィルタの追加または例外イベントのマーク付けによるターゲット設定の絞り込み、プッシュ通知やWebhook イベントなどの異なるチャネルの指定を行うことができます。キャンバスでは、ステップはシーケンスで実行されます。つまり、最初のステップは、2 番目のステップが実行される前に実行されます。たとえば、次の手順でキャンバスを作成します。24時間の遅延がある遅延ステップA、プッシュメッセージを持つメッセージステップA、アプリ内メッセージを持つメッセージステップB。ユーザーAは24時間遅延され、24時間後にプッシュメッセージを受信し、その後アプリ内メッセージを受信します。
 
   {% endtab %}
 {% endtabs %}

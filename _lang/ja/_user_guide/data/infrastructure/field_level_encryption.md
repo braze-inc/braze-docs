@@ -34,7 +34,7 @@ page_type: reference
     - **[暗号化/復号化](https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html#create-symmetric-cmk):****対称**キータイプを選択し、**暗号化と復号化**キー使用法を選択します。
     - **[ハッシュ](https://docs.aws.amazon.com/kms/latest/developerguide/hmac-create-key.html):**[**対称**] キータイプと **[MAC の生成と検証**] キー使用を選択します。重要なスペックは以下の通りである。 **HMAC_256**.キーを作成した後、HMAC キー ID をどこかにメモしておいてください。Braze で入力する必要があります。
 
-\![]({% image_buster /assets/img/field_level_encryption_aws_prereq.png %})
+![]({% image_buster /assets/img/field_level_encryption_aws_prereq.png %})
 
 ## ステップ 1: AWS KMS キーを接続する
 
@@ -50,7 +50,7 @@ Brazeのダッシュボードで、「**データ設定**」>「**フィール�
 
 フィールドの暗号化がオンになっている場合、暗号化解除されたフィールドに戻すことはできない。これは暗号化が永久的な設定であることを意味します。メールアドレスの暗号化を設定する際、ワークスペースにメールアドレスを持つユーザーがいないことを確認してください。これにより、ワークスペースの機能を有効にするときに、プレーンテキストのメールアドレスが Braze に保存されないようになります。
 
-\![]({% image_buster /assets/img/field_level_encryption.png %})
+![]({% image_buster /assets/img/field_level_encryption.png %})
 
 ## ステップ 3: インポートしてユーザーを更新する
 

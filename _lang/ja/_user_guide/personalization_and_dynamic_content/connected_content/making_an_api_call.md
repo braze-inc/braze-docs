@@ -6,7 +6,7 @@ description: "この記事では、コネクテッドコンテンツ API 呼び�
 search_rank: 2
 ---
 
-# [\![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/connected-content){: style="float:right;width:120px;border:0;" class="noimgborder"} コネクテッドコンテンツAPIコールを作る
+# [![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/connected-content){: style="float:right;width:120px;border:0;" class="noimgborder"} コネクテッドコンテンツAPIコールを作る
 
 > コネクテッド・コンテンツを使えば、ユーザーに送るメッセージに、APIでアクセスできるあらゆる情報を直接挿入することができる。Web サーバーから直接、またはパブリックにアクセス可能な API からコンテンツをプルできます。<br><br>このページではコネクテッドコンテンツ API 呼び出しの方法、高度なコネクテッドコンテンツユースケース、エラー処理などについて説明します。
 
@@ -80,15 +80,15 @@ Braze は、各受信者に複数回、同じコネクテッドコンテンツ A
 
 URLにBasic認証が必要な場合、BrazeはAPIコールで使用するBasic認証情報を保存することができる。**設定**＞**コネクテッドコンテンツで**、既存のベーシック認証情報を管理し、新しい認証情報を追加できる。
 
-\![ダッシュボードのコネクテッドコンテンツ設定。]({% image_buster /assets/img/connected_content/basic_auth_mgmt.png %})
+![ダッシュボードのコネクテッドコンテンツ設定。]({% image_buster /assets/img/connected_content/basic_auth_mgmt.png %})
 
 新しい認証情報を追加するには、「**Add credential（認証情報の追加**）」 > 「**Basic authentication（基本認証**）」を選択する。 
 
-\![認証情報を追加する」ドロップダウンメニューには、ベーシック認証またはトークン認証を使用するオプションがある。]({% image_buster /assets/img/connected_content/add_credential_button.png %}){: style="max-width:60%"}
+![認証情報を追加する」ドロップダウンメニューには、ベーシック認証またはトークン認証を使用するオプションがある。]({% image_buster /assets/img/connected_content/add_credential_button.png %}){: style="max-width:60%"}
 
 認証情報に名前を付け、ユーザーの名前とパスワードを入力します。
 
-\![名前、ユーザ名、およびパスワードを入力するオプションのある "Create New Credential "ウィンドウが表示される。]({% image_buster /assets/img/connected_content/basic_auth_token.png %}){: style="max-width:60%"}
+![名前、ユーザ名、およびパスワードを入力するオプションのある "Create New Credential "ウィンドウが表示される。]({% image_buster /assets/img/connected_content/basic_auth_token.png %}){: style="max-width:60%"}
 
 次に、トークンの名前を参照することで、API 呼び出しでこの基本的な認証情報を使用できます。
 
@@ -112,7 +112,7 @@ Braze コネクテッドコンテンツを使用する場合、特定の API で
 
 トークン値を保持する認証情報を追加するには、「**Add credential（認証情報の追加**）」 > 「**Token authentication（トークン認証**）」を選択する。次に、APIコールヘッダーと許可ドメインのキーと値のペアを追加する。
 
-\![トークン認証の詳細が記載された"token_credential_abc" 。]({% image_buster /assets/img/connected_content/token_auth.png %}){: style="max-width:60%"}
+![トークン認証の詳細が記載された"token_credential_abc" 。]({% image_buster /assets/img/connected_content/token_auth.png %}){: style="max-width:60%"}
 
 そして、認証情報名を参照することで、APIコールでこの認証情報を使用することができる：
 
@@ -178,7 +178,7 @@ Braze コネクテッドコンテンツを使用する場合、特定の API で
 - ベーシック認証では、ユーザー名とパスワードを更新することができる。以前に入力したパスワードは表示されないことに注意。
 - トークン認証では、ヘッダーのキーと値のペアと、許可されるドメインを更新できる。以前に設定したヘッダー値は表示されないことに注意。
 
-\![認証情報を編集するオプション。]({% image_buster /assets/img/connected_content/edit_credentials.png %}){: style="max-width:60%"}
+![認証情報を編集するオプション。]({% image_buster /assets/img/connected_content/edit_credentials.png %}){: style="max-width:60%"}
 
 ## コネクテッドコンテンツ IP の許可リスト
 

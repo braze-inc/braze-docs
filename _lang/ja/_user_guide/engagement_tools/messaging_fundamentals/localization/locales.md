@@ -30,18 +30,18 @@ description: "ここでは、ロケールを使用する方法に関するステ
 1. 翻訳タグ{% raw %}`{% translation %}` と`{% endtranslation %}`{% endraw %} を追加して、翻訳するすべてのテキストと画像、リンクURLをラップする。 
 2. 各翻訳タグに ID タグを追加します。例を挙げよう： {% raw %}`{% translation id_1 %}`{% endraw %}
 
-\![翻訳IDを持つ従来のエディタ。]({% image_buster /assets/img/multi-language_support/html_iam_editor_translation_tags.png %}){: style="max-width:60%;"}
+![翻訳IDを持つ従来のエディタ。]({% image_buster /assets/img/multi-language_support/html_iam_editor_translation_tags.png %}){: style="max-width:60%;"}
 
 {: start="3"}
 3\.タグを追加したら、メッセージを下書きとして保存する。
 4\.**言語の管理**を選択し、ドロップダウンを使用してメッセージのロケールを追加します。
 
-\!["言語とクォートを管理;1つのロケールを選択してモーダルします。]({% image_buster /assets/img/multi-language_support/manage_languages_modal.png %})
+!["言語とクォートを管理;1つのロケールを選択してモーダルします。]({% image_buster /assets/img/multi-language_support/manage_languages_modal.png %})
 
 {: start="5"}
 5\.[**テンプレートをダウンロード**] を選択して、翻訳テンプレートを CSV ファイルとしてダウンロードします。次に、CSVファイルに翻訳を記入する。
 
-\![変換CSVファイルのサンプル。]({% image_buster /assets/img/multi-language_support/translation_csv_example.png %})
+![変換CSVファイルのサンプル。]({% image_buster /assets/img/multi-language_support/translation_csv_example.png %})
 
 {: start="6"}
 6. **Upload translationsを**選択し、翻訳が完了したCSVファイルをアップロードする。
@@ -52,20 +52,20 @@ description: "ここでは、ロケールを使用する方法に関するステ
 1. 翻訳タグ{% raw %}`{% translation %}` と`{% endtranslation %}`{% endraw %} を追加して、翻訳するすべてのテキストと画像、リンクURLをラップする。 
 2. 各翻訳タグに ID タグを追加します。例を挙げよう： {% raw %}`{% translation id_1 %}`{% endraw %} 
 
-\![2つの翻訳IDを持つドラッグアンドドロップエディタ。]({% image_buster /assets/img/multi-language_support/dnd_iam_editor_translation_tags.png %}){: style="max-width:70%;"}
+![2つの翻訳IDを持つドラッグアンドドロップエディタ。]({% image_buster /assets/img/multi-language_support/dnd_iam_editor_translation_tags.png %}){: style="max-width:70%;"}
 
 {: start="3"}
 3\.タグを追加したら、メッセージを下書きとして保存してから、エディタを再度開きます。
 4\.[**作成**] パネルで [**多言語サポート**] を選択し、そのドロップダウンを使用してメッセージのロケールを追加します。
 5\.[**テンプレートをダウンロード**] を選択して、翻訳テンプレートを CSV ファイルとしてダウンロードします。 
 
-\!["多言語"ボタンを押してテンプレートを読み込むします。]({% image_buster /assets/img/multi-language_support/dnd_iam_download_template.png %}){: style="max-width:40%;"}
+!["多言語"ボタンを押してテンプレートを読み込むします。]({% image_buster /assets/img/multi-language_support/dnd_iam_download_template.png %}){: style="max-width:40%;"}
 
 {: start="6"}
 6. CSVファイルに翻訳を記入する。ステップ1から翻訳タグを直接コピー＆ペーストした場合は、CSVファイルの**翻訳タグ**欄から`<code>` 。
 7. **Upload translationsを**選択し、翻訳が完了したCSVファイルをアップロードする。
 
-\!["多言語"ボタンでテンプレートとアップロードの変換を読み込むします。]({% image_buster /assets/img/multi-language_support/dnd_iam_upload_translations.png %}){: style="max-width:40%;"}
+!["多言語"ボタンでテンプレートとアップロードの変換を読み込むします。]({% image_buster /assets/img/multi-language_support/dnd_iam_upload_translations.png %}){: style="max-width:40%;"}
 
 {% endsubtab %}
 {% endsubtabs %}
@@ -77,17 +77,17 @@ description: "ここでは、ロケールを使用する方法に関するステ
 {% subtabs %}
 {% subtab HTML editor %}
 
-1. 翻訳するテキストを強調表示します。[**翻訳タグを挿入**] を選択します。これにより、テキストが翻訳タグで囲まれます。<br>\![選択したロケールのエディタをHTMLします。]({% image_buster /assets/img/multi-language_support/html_editor_translation_tag_example.png %})
+1. 翻訳するテキストを強調表示します。[**翻訳タグを挿入**] を選択します。これにより、テキストが翻訳タグで囲まれます。<br>![選択したロケールのエディタをHTMLします。]({% image_buster /assets/img/multi-language_support/html_editor_translation_tag_example.png %})
 2. メッセージを下書きとして保存する。
 3. [**多言語サポート**] を選択し、そのドロップダウンを使用してメッセージのロケールを追加します。
-4. [**テンプレートをダウンロード**] を選択して、翻訳テンプレートを CSV ファイルとしてダウンロードします。次に、CSVファイルに翻訳を記入する。<br>\![変換CSVファイルのサンプル。]({% image_buster /assets/img/multi-language_support/translation_csv_example.png %})
+4. [**テンプレートをダウンロード**] を選択して、翻訳テンプレートを CSV ファイルとしてダウンロードします。次に、CSVファイルに翻訳を記入する。<br>![変換CSVファイルのサンプル。]({% image_buster /assets/img/multi-language_support/translation_csv_example.png %})
 5. **Upload translationsを**選択し、翻訳が完了したCSVファイルをアップロードする。
 
 {% endsubtab %}
 {% subtab Drag-and-drop editor %}
 
 1. 翻訳タグ{% raw %}`{% translation %}` と`{% endtranslation %}`{% endraw %} を追加して、翻訳するすべてのテキストと画像、リンクURLをラップする。 
-2. 各翻訳タグに ID タグを追加します。例を挙げよう： {% raw %}`{% translation id_1 %}`{% endraw %}<br>\![2つの翻訳IDを持つドラッグアンドドロップエディタ。]({% image_buster /assets/img/multi-language_support/dnd_editor_translation_example.png %})
+2. 各翻訳タグに ID タグを追加します。例を挙げよう： {% raw %}`{% translation id_1 %}`{% endraw %}<br>![2つの翻訳IDを持つドラッグアンドドロップエディタ。]({% image_buster /assets/img/multi-language_support/dnd_editor_translation_example.png %})
 3. タグを追加したら、メッセージを下書きとして保存する。
 4. [**多言語サポート**] を選択し、そのドロップダウンを使用してメッセージのロケールを追加します。
 5. [**テンプレートをダウンロード**] を選択して、翻訳テンプレートを CSV ファイルとしてダウンロードします。 
@@ -103,19 +103,19 @@ description: "ここでは、ロケールを使用する方法に関するステ
 
 1. 翻訳タグs {% raw %}`{% translation id1%}` および`{% endtranslation %}`{% endraw %} を追加して、翻訳するすべての文字、"画像、またはリンクURL をラップします。各変換ID (`id1`) は一意である必要があります。
 
-\![翻訳タグsを題名、本文フィールドsに追加した通知作曲者を押します。]({% image_buster /assets/img/multi-language_support/push_translation_tags.png %})
+![翻訳タグsを題名、本文フィールドsに追加した通知作曲者を押します。]({% image_buster /assets/img/multi-language_support/push_translation_tags.png %})
 
 {: start="2"}
 2\.メッセージを下書きとして保存します。
 3\.**言語**を選択し、ドロップダウンを使用してメッセージのロケールを追加します。
 4\.[**テンプレートをダウンロード**] を選択し、CSV テンプレート内に翻訳を入力します。
 
-\![]({% image_buster /assets/img/multi-language_support/translation_csv_example.png %})
+![]({% image_buster /assets/img/multi-language_support/translation_csv_example.png %})
 
 {: start="5"}
 5\.完成した CSV テンプレートをアップロードするには、[**翻訳をアップロード**] を選択します。 
 
-\!["多言語メッセージ"ウィンドウ。2つのロケールが選択され、テンプレートやアップロードの変換を下に読み込むします。]({% image_buster /assets/img/multi-language_support/upload_translation.png %})
+!["多言語メッセージ"ウィンドウ。2つのロケールが選択され、テンプレートやアップロードの変換を下に読み込むします。]({% image_buster /assets/img/multi-language_support/upload_translation.png %})
 
 {% endtab %}
 {% endtabs %}

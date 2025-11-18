@@ -12,7 +12,7 @@ search_rank: 11
 
 ## チャネルフィルターについて
 
-\![インテリジェント・チャンネル・フィルターには、選択可能なさまざまなチャンネルのドロップダウンがある。]({% image_buster /assets/img/intelligent_channel_filter.png %}){: style="float:right;max-width:40%;margin-left:10px;margin-top:10px;border:0"}
+![インテリジェント・チャンネル・フィルターには、選択可能なさまざまなチャンネルのドロップダウンがある。]({% image_buster /assets/img/intelligent_channel_filter.png %}){: style="float:right;max-width:40%;margin-left:10px;margin-top:10px;border:0"}
 
 この場合の最良とは、ユーザーの履歴からエンゲージメントの可能性が最も高いチャネルを意味します。メール、SMS、WhatsApp、Web プッシュ、またはモバイルプッシュ (利用可能なモバイル OS またはデバイスを含む) をチャネルとして選択できます。
 
@@ -34,7 +34,7 @@ Braze が「最良」のチャネルを判定するには、十分なデータ�
 
 例えば、プッシュメッセージを好むユーザーにプッシュを受信させ、十分なデータがないユーザーにも同じプッシュメッセージを受信させたいとします。この場合、インテリジェントチャネルフィルターを [**モバイルプッシュ**] に設定し、[**または**] を使用して、2 番目のインテリジェントチャネルフィルターを [**データ不足**] に設定します。メールを好むユーザーには、インテリジェントチャネルフィルターがメールに設定されている別のキャンペーンで対応できます。
 
-\![モバイル・プッシュのインテリジェント・チャネル・フィルター、またはデータ不足。]({% image_buster /assets/img/intelligent_example.png %}){:style="border:none"}
+![モバイル・プッシュのインテリジェント・チャネル・フィルター、またはデータ不足。]({% image_buster /assets/img/intelligent_example.png %}){:style="border:none"}
 
 {% alert note %}
 [フリークエンシーキャップ]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#delivery-rules)を無視するキャンペーンとキャンバスステップは、インテリジェントチャネルでは考慮されず、データ要件に貢献できません。

@@ -59,7 +59,7 @@ Braze で購入データを使用する方法には、いくつかがありま�
 
 各フィルターの詳細については、[セグメンテーションフィルター]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/)の用語集を参照し、「購入行動」でフィルター処理してください。
 
-\![ちょうど3回購入したユーザーをフィルターにかける]({% image_buster /assets/img/purchase_filter_example.gif %}){: style="max-width:80%;"}
+![ちょうど3回購入したユーザーをフィルターにかける]({% image_buster /assets/img/purchase_filter_example.gif %}){: style="max-width:80%;"}
 
 {% alert tip %}
 特定の購入の発生回数に基づいてセグメンテーションを行うには、その購入を個別に[増分カスタム属性]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#custom-attribute-storage)として記録します。
@@ -179,7 +179,7 @@ Braze には、ユーザーの LTV を把握するために参照できる主な
 
 **購入イベントプロパティに基づくトリガーの例:**
 
-\![HeadphoneMartと同じブランド名のヘッドホンを購入したユーザー群にキャンペーンを配信するアクション型配信設定。]({% image_buster /assets/img/purchase2.png %}){: style="max-width:80%;margin-left:15px;"}
+![HeadphoneMartと同じブランド名のヘッドホンを購入したユーザー群にキャンペーンを配信するアクション型配信設定。]({% image_buster /assets/img/purchase2.png %}){: style="max-width:80%;margin-left:15px;"}
 
 詳細については、「[購入プロパティオブジェクト]({{site.baseurl}}/api/objects_filters/purchase_object/#purchase-properties-object)」を参照してください。
 
@@ -187,7 +187,7 @@ Braze には、ユーザーの LTV を把握するために参照できる主な
 
 イベントプロパティのセグメンテーションにより、取得したカスタムイベントのみでなく、それらのイベントに関連するプロパティにも基づいて、ユーザーをターゲットにすることができます。この機能により、購入イベントとカスタムイベントをセグメント化するときのフィルターオプションが追加されます。
 
-\![]({% image_buster /assets/img/nested_object3.png %}){: style="max-width:80%;margin-left:15px;"}
+![]({% image_buster /assets/img/nested_object3.png %}){: style="max-width:80%;margin-left:15px;"}
 
 これらのセグメンテーションフィルターには次のようなものがあります。
 - 最後のY 日に、値がV X 回のプロパティY を持つカスタムイベントを実行しました
