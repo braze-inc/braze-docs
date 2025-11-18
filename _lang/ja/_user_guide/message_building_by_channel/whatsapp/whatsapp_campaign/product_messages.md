@@ -48,8 +48,6 @@ channel:
 
 {% tabs local %}
 {% tab Catalog messages %}
-{% tabs local %}
-{% tab Catalog messages %}
 
 カタログメッセージには、製品カタログ全体が対話形式で表示されます。[テンプレートとレスポンスメッセージ](#building-a-product-message)として利用できます。
 
@@ -67,9 +65,6 @@ channel:
 {% tab Multi-product messages %}
 
 複数製品メッセージでは、カタログ内の特定の製品が強調表示されます。メッセージあたり最大30個の項目が強調表示されます。[テンプレートとレスポンスメッセージ](#building-a-product-message)として利用できます。
-{% tab Multi-product messages %}
-
-複数製品メッセージでは、カタログ内の特定の製品が強調表示されます。メッセージあたり最大30個の項目が強調表示されます。[テンプレートとレスポンスメッセージ](#building-a-product-message)として利用できます。
 
 ID を使用して製品を手動で選択するか、[setup](#setting-up-product-messages) 中にカタログ権限を有効にした場合は、ドロップダウン製品セレクターを使用します。
 ID を使用して製品を手動で選択するか、[setup](#setting-up-product-messages) 中にカタログ権限を有効にした場合は、ドロップダウン製品セレクターを使用します。
@@ -78,12 +73,6 @@ ID を使用して製品を手動で選択するか、[setup](#setting-up-produc
 Meta で複数製品メッセージテンプレートを使用する際のヘッダーの表示に関する既知の問題があります。Meta はこの問題を認識しており、修正に取り組んでいます。
 {% endalert %}
 
-{% endtab %}
-{% tab Single product %}
-
-単一の製品メッセージでは、製品カタログの特定の製品が強調表示されます。[response messages](#building-a-product-message)として利用できます。
-
-ID を使用して製品を手動で選択するか、[setup](#setting-up-product-messages) 中にカタログ権限を有効にした場合は、ドロップダウン製品セレクターを使用します。
 {% endtab %}
 {% tab Single product %}
 
@@ -120,11 +109,6 @@ ID を使用して製品を手動で選択するか、[setup](#setting-up-produc
 {% endalert %}
 
 ## 製品メッセージの作成
-
-WhatsApp テンプレートメッセージまたはレスポンスメッセージを使用して、製品メッセージを作成できます。
-
-{% tabs local %}
-{% tab WhatsApp message template %}
 
 WhatsApp テンプレートメッセージまたはレスポンスメッセージを使用して、製品メッセージを作成できます。
 
@@ -240,8 +224,6 @@ Meta Business Manager で、**Commerce Manager**に移動し、組織を選択�
 
 {% tabs local %}
 {% tab Simple Liquid-based cart links %}
-{% tabs local %}
-{% tab Simple Liquid-based cart links %}
 
 Liquid を使用して、応答メッセージにカート URL を直接作成します。これは、WhatsAppとeCommerceプラットフォーム間で一貫した製品IDを持っている場合に最適です。
 
@@ -273,7 +255,6 @@ Liquid を使用して、応答メッセージにカート URL を直接作成�
 
 {% endtab %}
 {% tab Connected Content %}
-{% tab Connected Content %}
 
 e コマースシステムに対する API 呼び出しを実行し、パーソナライズされたチェックアウト URL を生成します。これは、ダイナミックなカート URL の生成または複雑な製品マッピングが必要な場合に最適です。
 
@@ -285,7 +266,6 @@ e コマースシステムに対する API 呼び出しを実行し、パーソ�
 ![Connected Content コールのチェックアウトエクスペリエンスワークフローを示す図:Metaは、注文受領メッセージをBrazeに送信します。これは、eコマースプラットフォームとの往復コールがあり、WhatsAppメッセージを送信します。]({% image_buster /assets/img/whatsapp/connected_content_checkout.png %})
 
 {% endtab %}
-{% tab Webhook and custom events %}
 {% tab Webhook and custom events %}
 
 Webhooks を使用してカートデータをシステムに送信し、カスタムイベントを使用してフォローアップメッセージをトリガーします。これは、大規模なカート処理またはマルチステップワークフローを必要とする複雑な連携に最適です。
