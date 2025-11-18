@@ -41,7 +41,6 @@ There are no path parameters for this endpoint.
 | --------- | ---------| --------- | ----------- |
 |`workflow_id` | Required | String | The ID of the Canvas. |
 |`step_id`| Required | String | The ID of your Canvas step. |
-|`message_variation_id`| Required | String | The ID of your message variation. |
 |`locale_id`| Required | String | The ID (UUID) of the locale. |
 |`translation_map` | Required | Object | Object containing the new translations. | 
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
@@ -56,7 +55,6 @@ All translation IDs are considered universal unique identifiers (UUIDs), which c
 {
     "workflow_id": "a74404b3-3626-4de0-bdec-06935f3aa0ad",
     "step_id": "a74404b3-3626-4de0-bdec-06935f3aa0ac",
-    "message_variation_id": "f14404b3-3626-4de0-bdec-06935f3aa0ad",
     "locale_id": "h94404b3-3626-4de0-bdec-06935f3aa0ad",
     "translation_map": {
         "id_3": "Ein Absatz ohne Formatierung"

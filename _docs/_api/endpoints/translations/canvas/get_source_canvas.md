@@ -1,21 +1,21 @@
 ---
-nav_title: "GET: View default source values for campaign translation tags"
-article_title: "GET: View default source values for campaign translation tags"
+nav_title: "GET: View default source values for canvas translation tags"
+article_title: "GET: View default source values for canvas translation tags"
 search_tag: Endpoint
 page_order: 3
 
 layout: api_page
 page_type: reference
-description: "This article outlines details about the campaign translation source endpoint."
+description: "This article outlines details about the canvas translation source endpoint."
 ---
 
 {% api %}
-# View default source values for a campaign's translation tags
+# View default source values for a canvas's translation tags
 {% apimethod get %}
-/campaigns/translations/source
+/canvas/translations/source
 {% endapimethod %}
 
-> Use this endpoint to view all the default translation sources for a campaign's translation tags. These are the values with the `{% translation id %} default source {% endtranslation %}`
+> Use this endpoint to view all the default translation sources for a canvas's translation tags. These are the values with the `{% translation id %} source {% endtranslation %}`
 
 {% alert important %}
 This endpoint is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
@@ -23,7 +23,7 @@ This endpoint is currently in early access. Contact your Braze account manager i
 
 ## Prerequisites
 
-To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-api-key/) with the `campaigns.translations.get` permission.
+To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-api-key/) with the `canvas.translations.get` permission.
 
 ## Rate limit
 
@@ -31,12 +31,12 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 
 ## Query parameters
 
-| Parameter | Required | Data Type | Description |
-| --------- | ---------| --------- | ----------- |
-|`campaign_id`| Required | String | The ID of your campaign. |
-|`message_variation_id`| Required | String | The ID of your message variation. |
-|`locale_id`| Optional | String | A locale UUID to filter the responses. |
-| `post_launch_draft_version`| Optional | Boolean | When `true` returns the latest draft version instead of the latest live published version. Defaults to `false` returning the latest live version.|
+| Parameter              | Required | Data Type | Description                        |
+|------------------------|----------|-----------|------------------------------------|
+| `workflow_id`          | Required | String    | The ID of the Canvas.              |
+| `step_id`              | Required | String    | The ID of your Canvas step.        |
+| `locale_id`            | Optional | String    | The ID (UUID) of the locale.              |
+| `post_launch_draft_version`| Optional | Boolean | When `true` returns the latest draft version instead of the latest live published version. Defaults to `false` returning the latest live version.
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}
@@ -46,7 +46,7 @@ All translation IDs are considered universal unique identifiers (UUIDs), which c
 ## Example request
 
 ```
-curl --location --request GET 'https://rest.iad-03.braze.com/campaigns/translations/source?campaign_id={campaign_id}&message_variation_id={message_variation_id}&locale_id={locale_uuid}&post_launch_draft_version=true' \
+curl --location --request GET 'https://rest.iad-03.braze.com/canvas/translations/source?workflow_id={workflow_id}&step_id={step_id}&locale_id={locale_uuid}&post_launch_draft_version=true' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
@@ -91,14 +91,14 @@ The following table lists possible returned errors and their associated troubles
 
 | Error message                           | Troubleshooting                                                                    |
 |-----------------------------------------|------------------------------------------------------------------------------------|
-| `INVALID_CAMPAIGN_ID`                   | Confirm the campaign ID matches the campaign you're translating.                   |
+| `INVALID_workflow_id`                   | Confirm the canvas ID matches the canvas you're translating.                   |
 | `INVALID_LOCALE_ID` | Confirm your locale ID exists in your message translation. |
-| `INVALID_MESSAGE_VARIATION_ID`          | Confirm your message ID is correct.                                                |
+| `INVALID_step_id`          | Confirm your message ID is correct.                                                |
 | `MESSAGE_NOT_FOUND`                     | Check that the message to be translated.                                           |
 | `LOCALE_NOT_FOUND` | Confirm the locale exists in your multi-language settings. |
 | `MULTI_LANGUAGE_NOT_ENABLED`            | Multi-language settings aren't turned on for your workspace.                       |
 | `MULTI_LANGUAGE_NOT_ENABLED_ON_MESSAGE` | This message does not have multi-language setup.             |
-| `UNSUPPORTED_CHANNEL`                   | Only email, push, or in-app-message campaigns or Canvas messages can be translated. |
+| `UNSUPPORTED_CHANNEL`                   | Only email, push, or in-app-message canvas or Canvas messages can be translated. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}
