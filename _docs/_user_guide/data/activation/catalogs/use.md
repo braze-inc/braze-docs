@@ -56,7 +56,7 @@ You'll receive an email to download the CSV file after initiating the export. Yo
 
 ### Multiple items
 
-You aren't limited to just one item in a single message. You can use the **Add Personalization** modal to add up to three catalog items at a time. To add more items to your message, select **Add Personalization** in the message composer and select the additional catalog items and information to display.
+You aren't limited to one item in a message. Use the **Add Personalization** modal to add up to three catalog items at a time. To add more, select **Add Personalization** again in the composer and select additional catalog items and information to display.
 
 Check out this example where we add the `id` of three games, Tales, Teslagrad, and Acaratus, for **Catalog Items** and select `title` for **Information to Display**.
 
@@ -154,12 +154,12 @@ For example, to let a user know that Tales (an item in our catalog that they've 
 {% assign wishlist = {{custom_attribute.${wishlist}}}%}
 {% catalog_items Games {{ wishlist[0] }} %}
 
-Get {{ items[0].title }} now, for just {{ items[0].price }}!
+Get {{ items[0].title }} now for {{ items[0].price }}!
 ```
 {% endraw %}
 
 Which will display as the following:
-> Get Tales now, for just 7.49!
+> Get Tales now for just 7.49!
 
 With templating, you can render a different catalog item for each user based on their individual custom attributes, event properties, or any other templatable field.
 
@@ -172,7 +172,7 @@ You can upload a CSV of new catalog items to add or catalog items to update. To 
 You can also manually piece together catalogs with Liquid logic. However, note that if you type in an ID that doesn't exist, Braze will still return an items array without objects. We recommend that you include error handling, such as checking the size of the array and using an `if` statement to account for an empty array case.
 
 {% alert note %}
-Liquid currently can't be used inside catalogs. If Liquid personalization is listed inside a cell in your catalog, the dynamic value won't render and only the actual Liquid will display.
+You cannot use Liquid inside catalogs. If Liquid personalization is listed inside a cell in your catalog, the dynamic value does not render and only the actual Liquid appears.
 {% endalert %}
 
 #### Templating catalog items including Liquid

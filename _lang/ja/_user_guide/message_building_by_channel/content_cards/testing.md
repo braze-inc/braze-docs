@@ -26,7 +26,7 @@ channel:
 
 **テスト**タブからメッセージをプレビューすることも、ユーザーとして行うことができます。特定のユーザーやランダムなユーザーを選択するか、カスタムユーザーを作成できます。
 
-\!["Test"タブのコンテンツカードプレビュー。]({% image_buster /assets/img/cc-user-preview.png %}){: style="max-width:80%;"}
+!["Test"タブのコンテンツカードプレビュー。]({% image_buster /assets/img/cc-user-preview.png %}){: style="max-width:80%;"}
 
 ### テスト・チェックリスト
 
@@ -71,7 +71,7 @@ channel:
 
 6. **キャンペーン**ページに移動し、`campaign_id`を検索します。
 
-\![キャンペーンページでcampaign_id を検索する]({% image_buster /assets/img_archive/cc_debug.png %}){: style="max-width:80%;"}
+![キャンペーンページでcampaign_id を検索する]({% image_buster /assets/img_archive/cc_debug.png %}){: style="max-width:80%;"}
 
 そこから、メッセージ設定とコンテンツを確認して、ユーザーが特定のコンテンツカードを見られない理由を詳しく調べることができます。
 

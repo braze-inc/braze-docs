@@ -12,7 +12,7 @@ search_tag: Partner
 
 {% multi_lang_include video.html id="PwGKqfwV-Ss" align="right" %}
 
-> [Branch](https://branch.io/), a mobile linking platform, helps you acquire, engage, and measure across all devices, channels, and platforms by providing a holistic view of all user touchpoints.
+> [Branch](https://branch.io/) is a mobile linking platform used to acquire, engage, and measure across devices, channels, and platforms by providing a holistic view of user touchpoints.
 
 _This integration is maintained by Branch._
 

@@ -62,7 +62,7 @@ Braze では、当社のプラットフォーム上で利用する予定の顧�
 - 過去14日間にこれらのアプリを10回以上使用したことがある
 - 50 ドル以上使っている
 
-\![アプリのパワーユーザーをターゲットにしたセグメンテーションの例。]({% image_buster /assets/img_archive/ratings_power_users.png %})
+![アプリのパワーユーザーをターゲットにしたセグメンテーションの例。]({% image_buster /assets/img_archive/ratings_power_users.png %})
 
 アプリストアへの訪問は、ユーザーの時間を消費します。余分な労力をかけてもらえる可能性を最大限にするには、ユーザーがアプリでポジティブな体験をした後に評価やレビューを依頼します。例えば、ゲームレベルを超えたり、割引コードを使って買い物をした後などに尋ねてみます。[データのオプトイン]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-states)に関する記事に、ユーザーのワークフローの期待にあなたのリクエストを確実に一致させるための詳細が掲載されています。
 

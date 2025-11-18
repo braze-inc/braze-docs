@@ -9,7 +9,7 @@ page_order: 3
 
 > ドラッグアンドドロップによる編集は、2 つのセクションに分かれています。**ビルドと** **プレビュー& テスト**。この記事では、エディタの**Build**タブ内で作業するために必要なことを説明し、すでに[アプリ内メッセージ]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/)を作成していることを前提としています。
 
-\!["メッセージスタイル "タブ。]({% image_buster /assets/img_archive/dnd_iam_message_styles.png %}){: style="float:right;max-width:25%;margin-left:15px;max-width:30%"}
+!["メッセージスタイル "タブ。]({% image_buster /assets/img_archive/dnd_iam_message_styles.png %}){: style="float:right;max-width:25%;margin-left:15px;max-width:30%"}
 
 ## メッセージレベルのスタイル
 
@@ -42,7 +42,7 @@ page_order: 3
 
 ## メッセージのコンポーネント
 
-\![アプリ内メッセージが作成されるGIF。]({% image_buster /assets/img_archive/dnd_iam_create.gif %})
+![アプリ内メッセージが作成されるGIF。]({% image_buster /assets/img_archive/dnd_iam_create.gif %})
 
 ドラッグ＆ドロップエディターは、**行**と**ブロック**の 2 つの主要コンポーネントを使用してアプリ内メッセージを作成します。すべてのブロックは行に配置する必要があります。
 
@@ -50,27 +50,27 @@ page_order: 3
 
 モーダルとフルスクリーンのアプリ内メッセージでは、メッセージの右上に<i class="fa-solid fa-xmark"></i> として表示される閉じるボタンをカスタマイズできる。カスタマイズ・オプションには、ボタンの位置、サイズ、塗りつぶし色、バックグラウンド色、ボーダー・スタイル、ボーダー半径が含まれる。
 
-\![アプリ内メッセージの閉じる×ボタンをカスタマイズするオプション（ボタンサイズ、塗りつぶし色、バックグラウンド色、ボーダースタイル、ボーダー半径など）。]({% image_buster /assets/img_archive/close_x_button.png %}){: style="max-width:40%"}
+![アプリ内メッセージの閉じる×ボタンをカスタマイズするオプション（ボタンサイズ、塗りつぶし色、バックグラウンド色、ボーダースタイル、ボーダー半径など）。]({% image_buster /assets/img_archive/close_x_button.png %}){: style="max-width:40%"}
 
 ### スパン・スタイリング
 
 アプリ内メッセージ内のテキストにスパンスタイルを追加することで、メッセージの外観のカスタマイズが強化され、異なるテキストの色、フォント、サイズの使用が可能になる。スパンのスタイリングは、ユーザーの注意を重要な情報に向けさせ、全体的なメッセージの明瞭さを向上させることで、よりエンゲージメントが高く、視覚的に魅力的な体験を提供する。
 
-\![アプリ内メッセージでテキストをハイライトする際に表示されるオプション。小さなペイントブラシのアイコンは、スタイルをスパンでラップできることを示している。]({% image_buster /assets/img_archive/span_1.png %}){: style="max-width:40%"}
+![アプリ内メッセージでテキストをハイライトする際に表示されるオプション。小さなペイントブラシのアイコンは、スタイルをスパンでラップできることを示している。]({% image_buster /assets/img_archive/span_1.png %}){: style="max-width:40%"}
 
-\![スパンプロパティ」のサイドパネルで、エンドツーエンドのユーザーがフォントファミリ、フォントウェイト、フォントサイズ、文字間隔、テキストカラーをカスタマイズできる。]({% image_buster /assets/img_archive/span_2.png %}){: style="max-width:40%"}
+![スパンプロパティ」のサイドパネルで、エンドツーエンドのユーザーがフォントファミリ、フォントウェイト、フォントサイズ、文字間隔、テキストカラーをカスタマイズできる。]({% image_buster /assets/img_archive/span_2.png %}){: style="max-width:40%"}
 
 ### \- 行
 
 行は、セルを使用してメッセージのセクションの水平方向の構成を定義する構造単位です。
 
-\![アプリ内メッセージで行を追加できる。]({% image_buster /assets/img_archive/dnd_iam_rows.png %}){: style="max-width:40%"}
+![アプリ内メッセージで行を追加できる。]({% image_buster /assets/img_archive/dnd_iam_rows.png %}){: style="max-width:40%"}
 
 行を選択すると、**Column customization**セクションから必要な列数を追加または削除して、異なるコンテンツ要素を並べて配置できます。 
 
 スライドして、既存の列のサイズを調整することもできます。
 
-\![列のカスタマイズ」から列を調整する。]({% image_buster /assets/img_archive/dnd_iam_column_customization.gif %}){: style="max-width:40%"}
+![列のカスタマイズ」から列を調整する。]({% image_buster /assets/img_archive/dnd_iam_column_customization.gif %}){: style="max-width:40%"}
 
 ベストプラクティスとして、行および列のプロパティーを書式設定してから、行内のブロックs を書式設定します。間隔や整列を調整できる場所はたくさんありますので、基礎から始めると、行きながら編集しやすくなります。
 
@@ -82,7 +82,7 @@ page_order: 3
 ブロックを追加するには、[メッセージレベルのスタイル](#set-message-level-styles)を、メッセージコンテナー、フォント、カラー、その他のカスタマイズするものに設定します。その後、必要に応じて個々のブロックをカスタマイズできます。**Close Button** はメッセージの上部に残ります。これにより、ユーザー s は常にメッセージを閉じることができます。
 {% endalert %}
 
-\![ドラッグ＆ドロップで選択できる。]({% image_buster /assets/img_archive/dnd_iam_editor_blocks.png %}){: style="max-width:40%"}
+![ドラッグ＆ドロップで選択できる。]({% image_buster /assets/img_archive/dnd_iam_editor_blocks.png %}){: style="max-width:40%"}
 
 すべてのブロックには、パディング上の粒状コントロールなどの設定s があります。右側のパネルは、選択したコンテンツ要素のスタイルパネルに自動的に切り替えるします。詳細については、[エディタのブロックプロパティー]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/drag_and_drop_editor_blocks/?sdktab=in-app%20messages#inappmessages_properties)を参照してください。
 
@@ -94,7 +94,7 @@ page_order: 3
 
 タブレットまたはデスクトップブラウザでは、フルスクリーンアプリ内メッセージがアプリスクリーンの中央に配置されます。全画面メッセージの最大幅の編集は、タブレットおよびデスクトップデバイスにのみ適用されます。 
 
-\![アプリ内メッセージの例。]({% image_buster /assets/img_archive/dnd_iam_fullscreen_example.png %}){: style="border:none"}
+![アプリ内メッセージの例。]({% image_buster /assets/img_archive/dnd_iam_fullscreen_example.png %}){: style="border:none"}
 
 ### バックグラウンド画像の追加
 
@@ -110,7 +110,7 @@ page_order: 3
 
 ### Liquid の追加
 
-\![Liquidパーソナライゼーションを追加するアイコン。]({% image_buster /assets/img_archive/dnd_iam_liquid.png %}){: style="float:right;max-width:25%;margin-left:15px"}
+![Liquidパーソナライゼーションを追加するアイコン。]({% image_buster /assets/img_archive/dnd_iam_liquid.png %}){: style="float:right;max-width:25%;margin-left:15px"}
 
 アプリ内メッセージに[Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid) を追加するには、エディタツールバーから<i class="fa-solid fa-circle-plus"></i>**Add Personalization** を選択します。ここで、デフォルト属性、デバイス属性、カスタム属性など、さまざまなパーソナライゼーションのタイプを追加できます。
 
@@ -124,13 +124,13 @@ page_order: 3
 ブロック内のテキストを強調表示してからアイコンをクリックすると、数回のクリックを保存できます。強調表示されたテキストがツールに追加され、コピーがすぐに生成されます。
 {% endalert %}
 
-\![AIコピーライターのGIF。]({% image_buster /assets/img_archive/dnd_iam_ai_copywriter.gif %})
+![AIコピーライターのGIF。]({% image_buster /assets/img_archive/dnd_iam_ai_copywriter.gif %})
 
 ### スタイルをデフォルトにリセットする
 
 デフォルトスタイルから変更したプロパティーには、橙色の点が付きます。特定のプロパティをデフォルトスタイルにリセットするには、フィールドの上にマウスポインタを合わせて [**デフォルトにリセット**] を選択します。
 
-\![テキストサイズをデフォルトサイズにリセットするオレンジのドット。]({% image_buster /assets/img_archive/dnd_iam_reset_styles.gif %}){: style="max-width:45%"}
+![テキストサイズをデフォルトサイズにリセットするオレンジのドット。]({% image_buster /assets/img_archive/dnd_iam_reset_styles.gif %}){: style="max-width:45%"}
 
 また、プロパティパネル名の横にある<i class="fas fa-paintbrush" title="スタイルボタン"></i>をコピーまたは貼り付け、**デフォルトスタイルにリセット**を選択して、選択した要素のスタイルをすべてリセットすることもできます。
 
@@ -138,7 +138,7 @@ page_order: 3
 
 要素のスタイルを変更した後、それらのスタイルをコピーして別の要素にペーストできます。スタイルを貼り付ける場合、その要素に関連するプロパティのみが適用されます。
 
-\![スタイルをコピーするオプションを持つドロップダウンメニュー。]({% image_buster /assets/img_archive/dnd_iam_copypaste_styles.png %}){: style="float:right;margin-left:15px;max-width:35%"}
+![スタイルをコピーするオプションを持つドロップダウンメニュー。]({% image_buster /assets/img_archive/dnd_iam_copypaste_styles.png %}){: style="float:right;margin-left:15px;max-width:35%"}
 
 1. 要素を選択した状態で、プロパティパネル名の横にある<i class="fas fa-paintbrush" title="スタイル"></i>をコピーまたは貼り付けます(たとえば、"Button properties"の横にボタンが選択されている場合)。
 2. **コピースタイル**をクリックし、コピーしたスタイルをアプリする要素を選択します。

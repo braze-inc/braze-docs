@@ -13,7 +13,7 @@ description: "This reference article covers how to use Braze Teams in the dashbo
 
 Teams can be set up across customer base location, language, and custom attributes so that Team members and non-Team members have different access to messaging features and customer data. Team filters and tags can be assigned across various engagement tools.
 
-Teams are not available on all Braze contracts. If you'd like to access this feature, reach out to your Braze account manager or [contact us](mailto:success@braze.com) for a consultation.
+Teams are not available on all Braze contracts. If you'd like to access this feature, contact your Braze account manager or [contact us](mailto:success@braze.com) for a consultation.
 
 ## How do Teams differ from permission sets and roles?
 

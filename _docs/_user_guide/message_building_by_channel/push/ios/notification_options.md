@@ -74,7 +74,7 @@ Then, input the summary category identifier that you set in your app.
 
 Apple allows brands the option to send quiet push notifications to their users' Notification Centers before they officially, explicitly opt-in, giving you a chance to demonstrate the value of your messages early. All you need to do is [set up provisional push notifications](#set-up-provisional-push-notifications) in your app, then any user who has a provisional push token will receive your messages.
 
-Unlike a traditional iOS push token, a provisional push token acts as a "trial pass" that allows brands to reach out to new users before they've seen and clicked Apple's native push opt-in prompt. With this feature, your push notification will be delivered directly to your new user's notification tray with the option to "Keep" or "Turn Off" future notifications. Instead of experiencing an "opt-in" journey, users will experience something more akin to an "opt-out" journey.
+Unlike a traditional iOS push token, a provisional push token acts as a "trial pass" that allows brands to reach new users before they've seen and clicked Apple's native push opt-in prompt. With this feature, your push notification will be delivered directly to your new user's notification tray with the option to "Keep" or "Turn Off" future notifications. Instead of experiencing an "opt-in" journey, users will experience something more akin to an "opt-out" journey.
 
 {% alert tip %}
 Provisional Authorization has the potential dramatically increase your opt-in rate, but only if users see value in your messages. Be sure to use our [user segmentation]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/), [location targeting]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/), and [personalization]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/) features to ensure that the appropriate users are getting these "trial" notifications at the right time. Then, you can encourage users to fully opt-in to your push notifications, knowing that they add value to your users' experience with your app.
@@ -93,7 +93,7 @@ If users choose to "Turn Off" provisional push from you, they won't see any more
 {% endalert %}
 
 {% alert important %}
-If you use additional push prompts or [in-app push primers](https://www.braze.com/resources/glossary/priming-for-push/) (an in-app message that encourages users to opt-in to push notifications), reach out to your Braze representative for additional guidance.
+If you use additional push prompts or [in-app push primers](https://www.braze.com/resources/glossary/priming-for-push/) (an in-app message that encourages users to opt-in to push notifications), contact your Braze representative for additional guidance.
 {% endalert %}
 
 #### Set up provisional push notifications
