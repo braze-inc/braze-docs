@@ -88,7 +88,7 @@ ID を使用して製品を手動で選択するか、[setup](#setting-up-produc
 1. [Meta Commerce Manager](https://business.facebook.com/business/loginpage/?next=https%3A%2F%2Fbusiness.facebook.com%2Fcommerce_manager%2F#) で、[Meta の指示](https://www.facebook.com/business/help/1275400645914358?id=725943027795860&ref=search_new_1) に従ってMeta カタログを作成します。Braze 接続のWhatsApp Business Accont が存在するのと同じMeta Business Portfolio にいることを確認します。
 2. Meta の指示に従って、[ Meta Business Manager で"Manage Catalog" パーミッションを割り当てて、Meta カタログ](https://www.facebook.com/business/help/1953352334878186?id=2042840805783715) をBraze に接続されたWhatsApp ビジネスアカウントに接続します。 
 
-![Meta " カタログ s" " " Assign partner" "sweeney_catalog".]({% image_buster /assets/img/whatsapp/meta_catalog.png %} というカタログのボタン]{: style="max-width:90%;"}
+![Meta " カタログ s" " " Assign partner" "sweeney_catalog".]({% image_buster /assets/img/whatsapp/meta_catalog.png %}){: style="max-width:90%;"}
 
 必ず、Braze Business Manager ID `332231937299182` をパートナーのビジネスID として使用してください。
 
