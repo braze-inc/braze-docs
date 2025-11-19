@@ -12,7 +12,7 @@ description: "この記事では、セグメントのリストのフィルタリ
 
 > [セグメント] セクションでは、既存のセグメントの包括的なリストを表示したり、新しいセグメントを作成したり、既存のセグメントを編集したりできます。さまざまなフィルターや列を選択してセグメントのリストを絞り込み、関連性の最も高い情報のみを表示できます。
 
-\![Segment s 部に活性Segments の一覧が表示されます。]({% image_buster /assets/img/segment/segments_page.png %})
+![Segment s 部に活性Segments の一覧が表示されます。]({% image_buster /assets/img/segment/segments_page.png %})
 
 ## ビューのカスタマイズ
 
@@ -58,7 +58,7 @@ Segmentのループが相互に参照しないようにするために、**Segme
 
 ## 特定のセグメントの管理
 
-\![オプション"Edit"、"、Duplicate"、"、Archive"、"、および"を表示するSegmentの編集メニュー。]({% image_buster /assets/img/segment/segments_page_edit_menu.png %}){: style="float:right;max-width:25%;"}
+![オプション"Edit"、"、Duplicate"、"、Archive"、"、および"を表示するSegmentの編集メニュー。]({% image_buster /assets/img/segment/segments_page_edit_menu.png %}){: style="float:right;max-width:25%;"}
 
 特定のセグメントを管理するには、そのセグメントの上にマウスポインタを置き、行の末尾にあるメニューアイコンを選択すると、次のオプションが表示されます。
 - **編集: **セグメント内のフィルターを編集します。
@@ -68,7 +68,7 @@ Segmentのループが相互に参照しないようにするために、**Segme
  
 また、複数のセグメント名の横にあるボックスをチェックすることで、一括アクション (一括アーカイブや一括タグ付け) を実行することもできます。
 
-\![ " CRM" " Tag A" ドロップダウンフィールドで選択された複数のSegments。]({% image_buster /assets/img/segment/segments_bulk_action.png %}){: style="max-width:45%;"}
+![ " CRM" " Tag A" ドロップダウンフィールドで選択された複数のSegments。]({% image_buster /assets/img/segment/segments_bulk_action.png %}){: style="max-width:45%;"}
 
 ### 最後に表示してからの変更
 
@@ -79,5 +79,5 @@ Segmentのループが相互に参照しないようにするために、**Segme
 
 このフィールドに入力したすべての語句や文字列が検索されます。例えば、「テストセグメント 1」を検索すると、名前のどこかに「テスト」、「セグメント」、または「1」が含まれるセグメントが返されます。完全に一致する文字列を検索するには、検索語を引用符で囲みます。[[“テストセグメント 1”]を検索すると、名前に「テストセグメント 1」と完全に一致する語句を含むすべてのセグメントが返されます。
 
-\![ &quot を入力するための検索結果; すべてのユーザーのS" 検索フィールドには" すべてのユーザーのS" " " " すべてのS 15" が含まれます。]({% image_buster /assets/img/segment/segments_search.png %})
+![ &quot を入力するための検索結果; すべてのユーザーのS" 検索フィールドには" すべてのユーザーのS" " " " すべてのS 15" が含まれます。]({% image_buster /assets/img/segment/segments_search.png %})
 

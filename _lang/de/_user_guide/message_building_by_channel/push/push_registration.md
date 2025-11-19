@@ -33,10 +33,10 @@ Push-Token werden verwendet, um Push-Benachrichtigungen sowohl im Vordergrund al
 | Hintergrund-Push | Kein:e        | Eine Benachrichtigung wird stillschweigend im Hintergrund zugestellt, ohne angezeigt zu werden. Wird oft für Funktionen wie Uninstall-Tracking verwendet. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-Wenn ein Nutzer:innen für Push-Benachrichtigungen für Ihre App optiert, wird er als "Push-registriert" betrachtet, d.h. er kann jetzt mit dem Segmentierungsfilter `Push enabled for App` in Braze gezielt angesprochen werden.
+Wenn ein Nutzer:innen für Push-Benachrichtigungen für Ihre App optiert, wird er als "Push-registriert" betrachtet, d.h. er kann jetzt mit dem Segmentierungsfilter `Foreground Push Enabled for App` in Braze gezielt angesprochen werden.
 
 {% alert note %}
-Dies unterscheidet sich von dem Segmentierungsfilter `Push Enabled`, der dazu dient, Nutzer:innen zu identifizieren, die sich für mindestens eine Ihrer Apps entschieden haben - nicht für eine bestimmte App. Weitere Informationen finden Sie unter [Filter für die Segmentierung]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#push-enabled).
+Dies unterscheidet sich von dem Segmentierungsfilter `Foreground Push Enabled`, der dazu dient, Nutzer:innen zu identifizieren, die sich für mindestens eine Ihrer Apps entschieden haben - nicht für eine bestimmte App. Weitere Informationen finden Sie unter [Filter für die Segmentierung]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#foreground-push-enabled).
 {% endalert %}
 
 ### Mehrere Nutzer:innen auf einem Gerät
@@ -47,7 +47,7 @@ Nehmen wir zum Beispiel an, Sie haben zwei Benutzer: Charlie und Kim. Wenn Charl
 
 Eine App oder Website kann nur ein Push-Abonnement pro Gerät haben. Wenn sich also ein Benutzer von einem Gerät oder einer Website abmeldet und sich ein neuer Benutzer anmeldet, wird das Push-Token dem neuen Benutzer neu zugewiesen. Dies wird im Profil des Benutzers im Abschnitt **Kontakteinstellungen** auf der Registerkarte **Engagement** angezeigt:
 
-![Änderungsprotokoll für Push-Token auf dem Tab \*\*Engagement** des Profils eines Nutzers, das auflistet, wann der Push-Token auf einen anderen Nutzer:in verschoben wurde und um welchen Token es sich handelt.]({% image_buster /assets/img/push_token_changelog.png %})
+Changelog des Push-Tokens auf dem Tab \*\*Engagement** des Profils eines Nutzers, der auflistet, wann der Push-Token zu einem anderen Nutzer verschoben wurde und was der Token war.]({% image_buster /assets/img/push_token_changelog.png %})
 
 Da es für Push-Anbieter (APNs/FCMs) keine Möglichkeit gibt, zwischen mehreren Benutzern auf einem Gerät zu unterscheiden, übergeben wir das Push-Token an den zuletzt eingeloggten Benutzer, um zu bestimmen, welcher Benutzer auf dem Gerät für Push angesprochen werden soll.
 
@@ -76,19 +76,19 @@ iOS erzeugt nicht automatisch Push-Tokens für eine App, wenn diese installiert 
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 {% endtab %}
 
-{% tab Internet %}
-Sie müssen das Opt-in von Nutzer:innen über das Dialogfeld für die native Browser-Berechtigung anfordern. Sie erhalten ein Token, nachdem Nutzer:innen ein Opt-in durchgeführt haben. Im Gegensatz zu iOS und Android, bei denen Ihre App die Eingabeaufforderung jederzeit anzeigen kann, zeigen einige moderne Browser die Aufforderung nur an, wenn sie durch eine "Benutzergeste" (Mausklick oder Tastendruck) ausgelöst wird. Wenn Ihre Website versucht, beim Laden der Seite die Berechtigung für Push-Benachrichtigungen anzufordern, wird dies wahrscheinlich vom Browser ignoriert oder unterdrückt.
+{% tab web %}
+Sie müssen das Opt-in von Nutzer:innen über das Dialogfeld für die native Browser-Berechtigung anfordern. Sie erhalten ein Token, nachdem Nutzer:innen ein Opt-in durchgeführt haben. Im Gegensatz zu iOS und Android, bei denen Ihre App die Eingabeaufforderung jederzeit anzeigen kann, zeigen einige moderne Browser die Aufforderung nur an, wenn sie durch eine "Benutzergeste" (Mausklick oder Tastendruck) ausgelöst wird. Wenn Ihre Website versucht, beim Laden der Seite eine Einwilligung in Push-Benachrichtigungen einzuholen, wird sie wahrscheinlich vom Browser ignoriert oder stummgeschaltet.
 {% endtab %}
 {% endtabs %}
 
 ### Überprüfung des Status des Push-Abos des Nutzers:in
 
-![Nutzerprofil für John Doe, dessen Push-Abonnement auf Abo gesetzt ist.]({% image_buster /assets/img/push_example.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
+Nutzerprofil für John Doe, dessen Push-Abonnement auf Abo eingestellt ist.]({% image_buster /assets/img/push_example.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
 Es gibt zwei Möglichkeiten, den Status des Push-Abos eines Nutzers:innen mit Braze zu überprüfen:
 
-- **Benutzerprofil**: Sie können über das Braze-Dashboard auf der Seite [Nutzersuche]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/) auf die Profile der einzelnen Nutzer:innen zugreifen. Nachdem Sie das Profil eines Benutzers gefunden haben (über E-Mail-Adresse, Telefonnummer oder externe Benutzer-ID), können Sie die Registerkarte **Engagement** auswählen, um den Abonnementstatus eines Benutzers anzuzeigen und manuell anzupassen.
-- **Rest API exportieren**: Mit den Endpunkten [Benutzer:innen nach Segmenten]({{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/) oder [Benutzer:innen nach Bezeichner]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) exportieren können Sie einzelne Nutzerprofile im JSON-Format exportieren. Braze gibt ein Push-Token-Objekt zurück, das Push-Enablement-Informationen pro Gerät enthält.
+- **Benutzerprofil**: Sie können über das Braze-Dashboard auf der Seite [Nutzersuche]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/) auf die Profile der einzelnen Nutzer:innen zugreifen. Nachdem Sie das Profil eines Benutzers gefunden haben (über E-Mail-Adresse, Telefonnummer oder externe Benutzer-ID), können Sie die Registerkarte **Engagement** auswählen, um den Abonnementstatus eines Benutzers anzuzeigen und manuell anzupassen.
+- **Rest API exportieren**: Mit den Endpunkten [Benutzer:innen nach Segmenten]({{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/) oder [Benutzer:innen nach Bezeichner]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) exportieren können Sie einzelne Nutzerprofile im JSON-Format exportieren. Braze gibt ein Push-Token-Objekt mit gerätespezifischen Push-Aktivierungsdaten zurück.
 
 ### Überprüfen des Push-Registrierungsstatus
 
@@ -96,7 +96,7 @@ Auf der Registerkarte **Engagement** im Profil eines Benutzers sehen Sie **Push 
 
 Wenn dem App-Namen des Geräteeintrags das Präfix `Foreground:` vorangestellt ist, ist die App berechtigt, auf diesem Gerät sowohl Push-Benachrichtigungen im Vordergrund (für den Benutzer sichtbar) als auch im Hintergrund (für den Benutzer nicht sichtbar) zu empfangen.
 
-![Push Changelog mit einem Beispiel für ein Push-Token.]({% image_buster /assets/img/push_changelog.png %}){: style="float:right;max-width:40%;margin-left:15px;margin-top:10px;"}
+![Push Changelog mit einem Beispiel Push-Token.]({% image_buster /assets/img/push_changelog.png %}){: style="float:right;max-width:40%;margin-left:15px;margin-top:10px;"}
 
 Wenn dem App-Namen des Geräteeintrags hingegen `Background:` vorangestellt ist, ist die App nur berechtigt, [Push-Nachrichten im Hintergrund]({{site.baseurl}}/user_guide/message_building_by_channel/push/types/#background-push-notifications) zu empfangen und kann keine für den Benutzer sichtbaren Benachrichtigungen auf diesem Gerät anzeigen. Dies bedeutet in der Regel, dass der Benutzer die Benachrichtigungen für die App auf diesem Gerät deaktiviert hat.
 
@@ -119,7 +119,7 @@ Wenn ein:e Nutzer:in eine neue Anwendung öffnet und den Push-Zugriff über eine
 
 Wenn wir eine Kampagne starten möchten, erstellen wir in Braze eine Kampagne, die eine Push-Nutzlast erzeugt, die an den Push-Anbieter gesendet wird. Von dort aus stellt der Anbieter die Push-Nutzdaten dem Gerät des Nutzers oder der Nutzerin zu und das SDK übergibt den Messaging-Status an Braze.
 
-![Ein Flussdiagramm, das den oben genannten Push-Prozess zwischen Braze, dem Kunden und dem Apple Push Notification Service oder Firebase Cloud Messaging abbildet.]({% image_buster /assets/img/push_process.png %})
+![Ein Flussdiagramm, das den oben erwähnten Push-Prozess zwischen Braze, den Kund:innen und dem Apple Push-Benachrichtigungsdienst oder Firebase Cloud Messaging abbildet.]({% image_buster /assets/img/push_process.png %})
 
 | Registrierungsschritte | Messaging-Schritte |
 | ------------------ | --------------- |

@@ -254,6 +254,11 @@
 <i>ユニーククリック率</i>とは、メッセージ内のリンクを少なくとも1回クリックした受信者の一意の数であり <a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a> によって測定されます。
 {% endif %}
 
+<!-- Pull channels like Banners that don't have a Dispatch ID-->
+{% if include.metric == "Unique Clicks No Dispatch ID" %}
+<i>ユニーククリック数とは</i>、メッセージ内のリンクを一度でもクリックした受信者の数である。
+{% endif %}
+
 {% if include.metric == "Unique Dismissals" %}
 <i>ユニーク却下数</i>は、キャンペーンからコンテンツカードを却下した受信者の一意の数です。あるユーザーがキャンペーンからコンテンツカードを複数回却下すると、ユニークな却下 1 回になります。
 {% endif %}

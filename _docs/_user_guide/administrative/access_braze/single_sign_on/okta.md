@@ -15,7 +15,7 @@ description: "This article will walk you through how to configure Braze to use O
 
 | Requirement | Details |
 | ----------- | ------- |
-| Okta turned on for your account | Reach out to your Braze account manager to have this turned on for your account. |
+| Okta turned on for your account | Contact your Braze account manager to have this turned on for your account. |
 | Okta admin privileges | Make sure you have admin privileges before setting up Okta. |
 | Braze admin privileges | Make sure you have admin privileges before setting up Okta. |
 | RelayState API key | To enable IdP login, go to **Settings** > **API Keys** and create an API key with `sso.saml.login` permissions. |

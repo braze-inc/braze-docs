@@ -70,7 +70,7 @@ Braze SDK を使用して、ユーザーの購読状態を更新します。
 
 ### メール購読状態の確認
 
-\![John Doeのユーザープロファイルで、メールサブスクリプションの状態がSubscribedに設定されている。]({% image_buster /assets/img/push_example.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
+![John Doeのユーザープロファイルで、メールサブスクリプションの状態がSubscribedに設定されている。]({% image_buster /assets/img/push_example.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
 Braze でユーザーメール購読状態を確認するには、2 つの方法があります。
 
@@ -102,7 +102,7 @@ Braze ダッシュボードの [** 購読グループ**] ページに保存し�
 
 セグメントを作成するときに、購読グループ名をフィルターとして設定します。これにより、グループにオプトインしたユーザーがメールを受信することが確認されます。これは、月刊ニュースレター、クーポン、メンバーシップ層などに最適です。
 
-\![ィングする例。]({% image_buster /assets/img/segment_sub_group.png %}){: style="max-width:90%"}
+![ィングする例。]({% image_buster /assets/img/segment_sub_group.png %}){: style="max-width:90%"}
 
 ### 購読グループのアーカイブ
 
@@ -119,7 +119,7 @@ Brazeは、アーカイブされたグループのユーザーの状態変更を
 
 [**購読グループ**] ページの [**購読グループの時系列**] グラフを参照して、一定期間のユーザー数に基づく購読グループのサイズを確認できます。これらの購読グループのサイズは、セグメントサイズの計算など、Braze の他の分野とも一致します。
 
-\![12月2日から11日までの「サブスクリプショングループの時系列」グラフの例である。グラフは、6日から7日にかけてユーザー数が1000万人近く増加したことを示しています。]({% image_buster /assets/img_archive/subscription_group_graph.png %})
+![12月2日から11日までの「サブスクリプショングループの時系列」グラフの例である。グラフは、6日から7日にかけてユーザー数が1000万人近く増加したことを示しています。]({% image_buster /assets/img_archive/subscription_group_graph.png %})
 
 #### キャンペーン分析での購読グループの表示
 
@@ -128,7 +128,7 @@ Brazeは、アーカイブされたグループのユーザーの状態変更を
 1. キャンペーンの**Campaign Analytics** ページから、**Email Message Performance** セクションまでスクロールダウンします。
 2. **Subscription Groups** の下にある矢印を選択すると、顧客が送信した状態変更の集計カウントが表示されます。
 
-\![顧客によって提出された状態変更の集計カウントを表示する "メールメッセージパフォーマンス "ページ。]({% image_buster /assets/img/campaign_analytics_sub_groups.png %})
+![顧客によって提出された状態変更の集計カウントを表示する "メールメッセージパフォーマンス "ページ。]({% image_buster /assets/img/campaign_analytics_sub_groups.png %})
 
 ### ユーザーのサブスクリプショングループを確認する
 
@@ -168,7 +168,7 @@ Brazeは、アーカイブされたグループのユーザーの状態変更を
 
 誤って購読を解除してしまった場合に備えて、ユーザーが購読を再開できるよう、ランディングページに再購読リンク（{% raw %}`{{${set_user_to_subscribed_url}}}`{% endraw %} など）を設けることをお勧めする。
 
-\![プレビュー付きのカスタム配信停止ページ "Sorry to see you go!]({% image_buster /assets/img/custom_unsubscribe.png %})
+![プレビュー付きのカスタム配信停止ページ "Sorry to see you go!]({% image_buster /assets/img/custom_unsubscribe.png %})
 
 ### カスタムオプトインページを作成する
 
@@ -184,7 +184,7 @@ Brazeは、アーカイブされたグループのユーザーの状態変更を
 Braze では、メールでのアウトリーチを支援するために、ダブルオプトインプロセスを使用することをお勧めしています。このプロセスでは、追加の確認メールが送信され、ユーザーはメール内のリンクを通じて通知設定を再度確認することになる。この時点で、ユーザーはオプトインしたとみなされます。
 {% endalert %}
 
-\![「まだ私たちからの連絡を望んでいるようで何よりです」というメッセージ付きのカスタムオプトインメール。]({% image_buster /assets/img/custom_optin.png %})
+![「まだ私たちからの連絡を望んでいるようで何よりです」というメッセージ付きのカスタムオプトインメール。]({% image_buster /assets/img/custom_optin.png %})
 
 ## 購読とキャンペーンのターゲティング{#subscriptions-and-campaign-targeting}
 
@@ -206,5 +206,5 @@ Braze は3つのターゲット状態をサポートしています。
 
 オプトインもオプトアウトもしていないユーザーをターゲットにし、Eメールやプッシュへのオプトインを明示的に促したい場合に有効だ。この場合、「メール / プッシュ購読ステータスが購読中」のフィルターを使用してセグメントを作成すると、このセグメントへのキャンペーンは購読中だがオプトインしていないユーザーに送信されます
 
-\![セグメントフィルターとして使用されるメールサブスクリプションステータス。]({% image_buster /assets/img_archive/not_optin.png %})
+![セグメントフィルターとして使用されるメールサブスクリプションステータス。]({% image_buster /assets/img_archive/not_optin.png %})
 

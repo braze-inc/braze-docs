@@ -38,7 +38,7 @@ channel:
 {: start="7"}
 7. SMS と RCS のいずれかを選択します。RCS メッセージを作成する前に、送信に使用するチャネルを選択します。RCS にはユーザーエンゲージメントの面で SMS よりも大きな利点があるため、可能な限り RCS を使用することを一般に推奨しています。ただし最大限の柔軟性とコントロールを得ることができるように、SMS で送信するオプションを常に提供しています。 
 
-\![RCSまたはSMS/MMSメッセージタイプから選択するオプション。]({% image_buster /assets/img/rcs/rcs_message_type.png %}){: style="max-width:65%;"}
+![RCSまたはSMS/MMSメッセージタイプから選択するオプション。]({% image_buster /assets/img/rcs/rcs_message_type.png %}){: style="max-width:65%;"}
 
 {% alert tip %}
 キャンペーン内のすべてのメッセージが類似しているか、同じ内容になる場合は、メッセージを作成してからバリアントを追加します。その後、[**バリアントを追加**] ドロップダウンから [**バリアントをコピー**] を選択できます。
@@ -55,7 +55,7 @@ channel:
 {: start="5"}
 5\.SMS と RCS のいずれかを選択します。RCS メッセージを作成する前に、送信に使用するチャネルを選択します。RCS にはユーザーエンゲージメントの面で SMS よりも大きな利点があるため、可能な限り RCS を使用することを一般に推奨しています。ただし最大限の柔軟性とコントロールを得ることができるように、SMS で送信するオプションを常に提供しています。 
 
-\![RCSまたはSMS/MMSメッセージタイプから選択するオプション。]({% image_buster /assets/img/rcs/rcs_message_type.png %}){: style="max-width:65%;"}
+![RCSまたはSMS/MMSメッセージタイプから選択するオプション。]({% image_buster /assets/img/rcs/rcs_message_type.png %}){: style="max-width:65%;"}
 
 {% endtab %}
 {% endtabs %}
@@ -64,7 +64,7 @@ channel:
 
 RCS メッセージタイプでは、[**テキスト**] と [**メディア**] のいずれかを選択します。
 
-\![オプションでテキストかメディアメッセージのタイプを選択する。]({% image_buster /assets/img/rcs/rcs_text_media.png %}){: style="max-width:65%;"}
+![オプションでテキストかメディアメッセージのタイプを選択する。]({% image_buster /assets/img/rcs/rcs_text_media.png %}){: style="max-width:65%;"}
 
 {% tabs %}
 {% tab Text %}
@@ -77,7 +77,7 @@ RCS テキストメッセージは、その名前の通り、メディアとし�
     - **サジェストされた返信先とは**、ユーザーがクリックし、テキスト入力にあらかじめ入力されるよう提案されたレスポンスを含むボタンのことで、制約のある選択肢を提供することで、ユーザーがレスポンスを考えなければならないという摩擦を取り除く。 
     - **おすすめのアクション**は、ユーザーのデバイス上でアクションを開始するボタンです。これらは通常、1つか2つの説明的な単語と、ユーザーがそのボタンが何をするのかを理解するのに役立つ視覚的なアイコンで構成されている。Braze は現在、OpenURL でのおすすめのアクションをサポートしています。これは URL と同じような機能で、ユーザーがボタンを選択すると、Web ページやその他の URL で特定される場所にリダイレクトされます。 
 
-\![トレンドのファッションスタイルを宣伝するRCSメッセージのための3つのアクションを提案するGIF：「おとぎ話の王族」、「エッジの効いたアカデミア」、そして「他のスタイルを見せてくれ」。]({% image_buster /assets/img/rcs/rcs_suggested_actions.gif %}){: style="max-width:70%;"}
+![トレンドのファッションスタイルを宣伝するRCSメッセージのための3つのアクションを提案するGIF：「おとぎ話の王族」、「エッジの効いたアカデミア」、そして「他のスタイルを見せてくれ」。]({% image_buster /assets/img/rcs/rcs_suggested_actions.gif %}){: style="max-width:70%;"}
 
 #### 考慮事項
 
@@ -97,7 +97,7 @@ RCS メディアメッセージでは、SMS では不可能な魅力的なメデ
 - 動画ファイル (MP4、MPEG、MV4 など) をサポートしています。動画ファイルはメッセージ作成画面で URL で直接追加できます。 
 - PDF 形式のドキュメントファイルをサポートしています。ドキュメントファイルはメッセージ作成画面で URL を使用して直接追加できます。 
 
-\![RCS composerにメディアファイルをアップロードするオプションを追加した。]({% image_buster /assets/img/rcs/rcs_media_type.png %})
+![RCS composerにメディアファイルをアップロードするオプションを追加した。]({% image_buster /assets/img/rcs/rcs_media_type.png %})
 
 #### ファイル仕様
 
@@ -179,7 +179,7 @@ Liquid を使用する場合は、使用するパーソナライゼーション�
 
 魅力的なコピーの作成でお困りですか?[AI コピーライティングアシスタント]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/)を使用してみてください。商品名や説明を入力すると、メッセージングに使用できる人間のようなマーケティングコピーが AI により生成されます。
 
-\![AIコピーライティングアシスタントを開封するアイコンが付いたメッセージ作成画面。]({% image_buster /assets/img/rcs/rcs_ai_copywriter.png %}){: style="max-width:70%;"}
+![AIコピーライティングアシスタントを開封するアイコンが付いたメッセージ作成画面。]({% image_buster /assets/img/rcs/rcs_ai_copywriter.png %}){: style="max-width:70%;"}
 
 ## よくある質問
 

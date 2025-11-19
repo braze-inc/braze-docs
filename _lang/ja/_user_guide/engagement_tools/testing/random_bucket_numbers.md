@@ -41,7 +41,7 @@ Braze でユーザープロファイルを作成すると、そのユーザー�
 
 [セグメントを作成]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/)するときに、[ランダムバケット番号] フィルターを追加します。次に、セグメンテーションに含める数値または数値範囲を指定する。
 
-\![「3000」以下のランダムなバケット番号を対象とするセグメンテーションフィルター。]({% image_buster /assets/img_archive/random_buckets_filterexample.png %})
+![「3000」以下のランダムなバケット番号を対象とするセグメンテーションフィルター。]({% image_buster /assets/img_archive/random_buckets_filterexample.png %})
 
 3つの異なるバリアントのテストを実行し、コントロールグループも含める場合は、これらのタイプのセグメントを使用することもできます。3つのバリアントとコントロールグループで同じサイズのセグメントを作成するための次のサンプルプランを考えます。
 

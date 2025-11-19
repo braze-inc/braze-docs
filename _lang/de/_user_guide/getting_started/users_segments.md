@@ -126,15 +126,13 @@ Tipps für die Arbeit mit Segmenten:
 
 Nehmen wir an, Sie betreiben ein Online-Kleidungsgeschäft und haben einen Nachrichtenfluss eingerichtet, um eine Reihe von E-Mails an Benutzer zu senden, die einen Artikel in ihren Einkaufswagen gelegt, den Kauf aber nicht abgeschlossen haben. Infrage kommen etwa eine erste Erinnerungs- oder Anknüpfungsmail mit einem Rabattangebot oder und eine abschließende Erinnerungsmail.
 
-![][1]{: style="max-width:70%" }
+![]({% image_buster /assets/img/getting_started/segment_example.png %}){: style="max-width:70%" }
 
 Sie könnten ein Segment von Benutzern erstellen, die das benutzerdefinierte Ereignis "Artikel in den Warenkorb gelegt" ausgelöst, aber nicht das benutzerdefinierte Ereignis "Kauf abgeschlossen" ausgelöst haben. Innerhalb dieses Segments können Sie dann die Nutzer bestimmen, die die erste Erinnerungsmail geöffnet aber keinen Kauf getätigt haben (Engagement mit einer bestimmten Nachricht).
 
-![][2]
+![]({% image_buster /assets/img/getting_started/segment_example_breakdown.png %})
 
 Dieses Segment könnte dann mit einer aggressiveren Kampagne angesprochen werden, um Käufe anzuregen. Sie könnten ihnen zum Beispiel ein Sonderangebot oder eine persönliche Empfehlung auf der Grundlage der Artikel in ihrem Warenkorb schicken.
 
 Dies ist nur ein Beispiel dafür, wie Sie Benutzeraktionen und -inaktionen, benutzerdefinierte Ereignisse und Engagementdaten nutzen können, um Segmente zu erstellen und Ihre Marketingstrategien in Braze anzupassen.
 
-[1]: {% image_buster /assets/img/getting_started/segment_example.png %}
-[2]: {% image_buster /assets/img/getting_started/segment_example_breakdown.png %}
