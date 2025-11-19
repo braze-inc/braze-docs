@@ -86,20 +86,4 @@ The status code `400` could return the following response body. Refer to [Troubl
 }
 ```
 
-## Troubleshooting
-
-The following table lists possible returned errors and their associated troubleshooting steps.
-
-| Error message                           | Troubleshooting                                                                    |
-|-----------------------------------------|------------------------------------------------------------------------------------|
-| `INVALID_workflow_id`                   | Confirm the canvas ID matches the canvas you're translating.                   |
-| `INVALID_LOCALE_ID` | Confirm your locale ID exists in your message translation. |
-| `INVALID_step_id`          | Confirm your message ID is correct.                                                |
-| `MESSAGE_NOT_FOUND`                     | Check that the message to be translated.                                           |
-| `LOCALE_NOT_FOUND` | Confirm the locale exists in your multi-language settings. |
-| `MULTI_LANGUAGE_NOT_ENABLED`            | Multi-language settings aren't turned on for your workspace.                       |
-| `MULTI_LANGUAGE_NOT_ENABLED_ON_MESSAGE` | This message does not have multi-language setup.             |
-| `UNSUPPORTED_CHANNEL`                   | Only email, push, or in-app-message canvas or Canvas messages can be translated. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
 {% endapi %}
