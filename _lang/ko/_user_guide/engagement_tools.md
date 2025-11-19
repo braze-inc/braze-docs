@@ -1,14 +1,14 @@
 ---
-nav_title: 참여 도구
-article_title: 참여 도구
+nav_title: 참여 툴
+article_title: 참여 툴
 page_order: 4
 layout: dev_guide
 
-guide_top_header: "참여 도구"
-guide_top_text: "Braze는 캠페인 및 캔버스 도구를 통해 고객과 사용자에게 다가갈 수 있는 다양한 방법을 제공합니다. 템플릿 및 미디어 도구를 사용하여 일관성을 위해 최적화하고 이미지 및 기타 콘텐츠를 업로드할 수도 있습니다. 여기에서 세그먼트와 지오펜스를 생성하여 위치 또는 기타 속성별로 오디언스를 타겟팅할 수 있습니다. <br> <br> 브레이즈 캔버스 및 캠페인을 사용하여 보낼 수 있는 채널을 찾고 있다면 <a href='/docs/user_guide/message_building_by_channel/'>채널별 메시지 작성</a> 섹션을 확인하세요."
+guide_top_header: "참여 툴"
+guide_top_text: "Braze는 캠페인 및 캔버스 도구를 통해 고객과 사용자에게 다가갈 수 있는 다양한 방법을 제공합니다. 템플릿 및 미디어 도구를 사용하여 일관성을 위해 최적화하고 이미지 및 기타 콘텐츠를 업로드할 수도 있습니다. 여기에서 세그먼트와 지오펜스를 생성하여 위치 또는 기타 속성에 따라 오디언스를 타겟팅할 수 있습니다. <br> <br> Braze 캔버스와 캠페인을 사용하여 보낼 수 있는 채널을 찾고 있다면 <a href='/docs/user_guide/message_building_by_channel/'>채널별 메시지 구축</a> 섹션을 확인하세요."
 description: "Braze는 캠페인, 캔버스, 세분화 툴을 통해 고객과 사용자에게 도달할 수 있는 다양한 방법을 제공합니다. 템플릿 및 미디어 도구를 사용하여 일관성을 위해 최적화할 수도 있습니다."
 
-guide_featured_title: "메시징 캠페인 구축"
+guide_featured_title: "메시징 캠페인 구축하기"
 guide_featured_list:
   - name: 캠페인
     link: /docs/user_guide/engagement_tools/campaigns/
