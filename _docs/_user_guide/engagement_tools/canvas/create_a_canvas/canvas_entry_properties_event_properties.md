@@ -50,19 +50,17 @@ You can no longer create or duplicate Canvases using the original editor. This a
 
 ### Canvas entry deduplication
 
-When a user triggers the same Canvas entry event multiple times within one second, they will enter the Canvas only once for that second. This deduplication behavior helps prevent duplicate Canvas entries from rapid-fire events.
+If a user triggers a Canvas entry event multiple times within the same second, only one entry is processed for that user in that second, regardless of how many triggers occur. This behavior helps prevent duplicate Canvas entries from events that happen in quick succession.
 
-{% alert important %}
-The timestamp used for deduplication is the processing timestamp in Braze, not solely the event timestamp as seen in logs. If a user triggers a Canvas entry event multiple times within the same second, only one entry is processed for that user in that second, regardless of how many triggers occur.
+{% alert note %}
+The timestamp used for deduplication is the processing timestamp in Braze, not the event timestamp as seen in logs. 
 {% endalert %}
 
-#### Best practice
+#### Avoiding deduplication
 
-Place more than 1.1 seconds between events to avoid silent deduplication. This ensures that each event trigger results in a separate Canvas entry when intended.
+Place at least 1.1 seconds between events to avoid silent deduplication. Each event trigger will result in a separate Canvas entry when intended.
 
-#### Example scenario
-
-If a user triggers Custom Event A at 10:00:00 and again at 10:00:00.500, only one Canvas entry is counted. However, if the user triggers Custom Event A at 10:00:01.100, a second Canvas entry is counted because more than one second has passed since the initial trigger.
+For example, if a user triggers Custom Event A at 10:00:00 and again at 10:00:00.500, only one Canvas entry is counted. However, if the user again triggers Custom Event A at 10:00:01.100, a second Canvas entry is counted because more than one second has passed since the initial trigger.
 
 ### Timestamps for event properties
 
