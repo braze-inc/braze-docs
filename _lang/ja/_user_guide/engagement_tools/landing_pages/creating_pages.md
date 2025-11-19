@@ -19,9 +19,9 @@ page_order: 0
 
 **メッセージング**> **ランディングページ**に進み、**ランディングページを作成**を選択します。既存のランディングページの名前を選択して、複製または変更することもできます。
 
-![Braze ダッシュボードのランディングページセクション。]({% image_buster /assets/img/landing_pages/landing-pages-homepage.png %})
+\![Braze ダッシュボードのランディングページセクション。]({% image_buster /assets/img/landing_pages/landing-pages-homepage.png %})
 
-### ステップ2:ページ詳細を入力
+### ステップ 2: ページ詳細を入力
 
 ランディングページを整理、ブランディング、共有するのに役立つ、社内および社外向けの詳細情報を追加します。
 
@@ -47,13 +47,18 @@ page_order: 0
 
 まだ使用していない場合は、**下書きとして保存**を選択します。ページのカスタマイズを開始するには、**ランディングページの編集**を選択します。ドラッグアンドドロップエディタには、ユースケースに合わせてカスタマイズできるデフォルトテンプレートがプリロードされます。＾ー＠＾￥「＾ー＠＾￥「
 
-![ドラッグアンドドロップエディタで作成されるランディングページの例。]({% image_buster /assets/img/landing_pages/template.png %})
+\![ドラッグアンドドロップエディタで作成されるランディングページの例。]({% image_buster /assets/img/landing_pages/template.png %})
 
-エディタでは、ランディングページ構成に[ベーシックブロック](#basic-blocks) と[フォームブロック](#form-blocks) の2 種類のコンポーネントを使用します。すべてのブロックは行に配置する必要があります。
+エディタでは、ランディングページ構成に基本ブロックs とフォームブロックs の2 種類のコンポーネントを使用します。すべてのブロックは行に配置する必要があります。
 
-![「行」と「フォームブロック」を含む「ビルド」エディターセクション。]({% image_buster /assets/img/landing_pages/dnd.png %}){: style="max-width:35%;"}
+<<<<<<< HEAD
+!['Rows' と'Form Blocks' を含む'Build' セクション。]({% image_buster /assets/img/landing_pages/dnd.png %}){: style="max-width:35%;"}
+=======
+\!['Rows' と'Form Blocks' を含む'Build' セクション。]({% image_buster /assets/img/landing_pages/dnd.png %}){: style="max-width:35%;"}
+>>>>>>> main
 
-#### 基本ブロック
+{% tabs %}
+{% tab Basic blocks %}
 
 これらのブロックを使用して、コンテンツを追加したり、ランディングページのレイアウトをカスタマイズしたりできます。
 
@@ -73,11 +78,16 @@ page_order: 0
 
 {% multi_lang_include span_text.md %}
 
-#### フォームブロック
+{% endtab %}
+{% tab Form blocks %}
 
 これらのブロックを使用して、ユーザーが送信したデータを Braze のプロファイルにリンクするフォームを作成できます。フォームブロックを使用する場合は、確認状態の追加のランディングページも作成する必要があります。
 
-![新規顧客を登録し、割引コードをメールに送信するフォームブロック。]({% image_buster /assets/img/landing_pages/form.png %}){: style="max-width:70%;"}
+<<<<<<< HEAD
+![新しい顧客を登録し、メールに割引コードを送るフォームブロック。]({% image_buster /assets/img/landing_pages/form.png %}){: style="max-width:70%;"}
+=======
+\![新しい顧客を登録し、メールに割引コードを送るフォームブロック。]({% image_buster /assets/img/landing_pages/form.png %}){: style="max-width:70%;"}
+>>>>>>> main
 
 | ブロックタイプ     | 説明 |
 |---------------|-------------|
@@ -86,11 +96,15 @@ page_order: 0
 | 入力フィールド   | 標準属性(姓、名など)または任意のカスタム属性文字列をサポートするフォームフィールド。 |
 | ドロップダウン      | ユーザーは事前定義されたリストから項目を選択できます。任意のカスタム属性文字列をリストに追加できます。 |
 | チェックボックス      | ユーザがボックスをチェックすると、ブロックの属性は`true` に設定されます。チェックを外すと、属性は`false` に設定されます。 |
+| チェックボックスグループ| ユーザは、提示された複数の選択肢から選択することができる。値は、定義された配列カスタム属性に設定または追加されます。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert important %}
-フォームを含むランディングページを作成したら、必ず[ランディングページ Liquid タグ]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/tracking_users)をメッセージに埋め込みます。このタグを使用すると、Braze はフォームを送信するときに既存のユーザープロファイルを自動的に識別して更新できます。
+フォームでランディングページを作成したら、必ずメッセージに[ランディングページLiquid tag]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/tracking_users) を埋め込みます。このタグを使用すると、Braze はフォームを送信するときに既存のユーザープロファイルを自動的に識別して更新できます。
 {% endalert %}
+
+{% endtab %}
+{% endtabs %}
 
 #### ページコンテナのスタイル
 
@@ -98,7 +112,23 @@ page_order: 0
 
 ブロックレベルでスタイルをカスタマイズする前に、ページコンテナレベルのスタイルを設定することをお勧めします。ページ全体にバックグラウンド画像を追加することもできます。
 
-![背景画像、色、境界線の詳細、コンテンツスタイルをカスタマイズするオプションを持つ'Page container' セクション。]({% image_buster /assets/img/landing_pages/page_container.png %}){: style="max-width:40%;"}
+<<<<<<< HEAD
+!['Page container'セクション。バックグラウンド "画像、カラー、ボーダーの詳細、コンテンツスタイルをカスタマイズできます。]({% image_buster /assets/img/landing_pages/page_container.png %}){: style="max-width:40%;"}
+=======
+\!['Page container'セクション。バックグラウンド "画像、カラー、ボーダーの詳細、コンテンツスタイルをカスタマイズできます。]({% image_buster /assets/img/landing_pages/page_container.png %}){: style="max-width:40%;"}
+>>>>>>> main
+
+#### ユーザー対応
+
+小さなスクリーンに縦方向に列を重ねることで、ユーザーの装置の大きさに合わせてランディングページをレスポンシブにできます。これを有効にするには、レスポンシブを作成する行に列を追加し、****カラムのカスタマイズ**セクションの小さいスクリーンに垂直に重ねます。
+
+有効にすると、列を逆スタックして、複数列の内容の縦方向の順序を小さなスクリーンにコントロールすることもできます。これにより、カスタマイズされたコードを使用せずに、モバイルでページの外観と操作性が向上します。
+
+<<<<<<< HEAD
+![" より小さな画面に垂直に重ねる" " 列をカスタマイズ" セクションで切り替えます。]({% image_buster /assets/img/landing_pages/device_responsive_toggle.png %}){: style="max-width:50%;"}
+=======
+\![" より小さな画面に垂直に重ねる" " 列をカスタマイズ" セクションで切り替えます。]({% image_buster /assets/img/landing_pages/device_responsive_toggle.png %}){: style="max-width:50%;"}
+>>>>>>> main
 
 #### オプションフィールドと必須フィールド
 
@@ -106,9 +136,13 @@ page_order: 0
 
 たとえば、フォーム送信前に同意取得を実施するには、**必須フィールド入力**をオンにして、適切な免責条項テキストで必須のチェックボックスを設定します。
 
-![[必須の入力フィールド] トグルが選択されているチェックボックスフォームフィールド。]({% image_buster /assets/img/landing_pages/lp-optional-required.png %}){: style="max-width:50%;"}
+<<<<<<< HEAD
+![チェックボックスフォームフィールドで"必須入力フィールド"選択を切り替えます。]({% image_buster /assets/img/landing_pages/lp-optional-required.png %}){: style="max-width:50%;"}
+=======
+\![チェックボックスフォームフィールドで"必須入力フィールド"選択を切り替えます。]({% image_buster /assets/img/landing_pages/lp-optional-required.png %}){: style="max-width:50%;"}
+>>>>>>> main
 
-### ステップ 4:確認ページの作成(オプション)
+### ステップ 4: 確認ページの作成(オプション)
 
 ランディングページにフォームが含まれていない場合は、次の手順に進みます。
 
@@ -120,11 +154,19 @@ page_order: 0
 
 確認ページを含めない場合、フォームが正常に送信されたことをユーザーが把握できない可能性があります。ジャーニーを完了するために、必ず確認エクスペリエンスを組み込んでください。
 
+{% alert note %}
+確認ページが新しいタブで開封された場合、元のランディングページに戻り、更新d 情報で再送信したユーザーは、以前の送信を上書きして、データの一貫性が失われる可能性があります。
+{% endalert %}
+
 ### ステップ 5: ページをプレビューする
 
 エディターの**プレビュー**タブでランディングページをプレビューできる。ランディングページを下書きとして保存した後、**ランディングページ**にアクセスして、ランディングページの横にある**URLをコピー**を選択することで、URLにアクセスできます。共同作業者とURLを共有することもできます。
 
-![メニューが開き、[URL をコピー] オプションが表示されているランディングページ。]({% image_buster /assets/img/landing_pages/copy-url.png %})
+<<<<<<< HEAD
+![メニュー開封を含むランディングページ。"URL"オプションを表示します。]({% image_buster /assets/img/landing_pages/copy-url.png %})
+=======
+\![メニュー開封を含むランディングページ。"URL"オプションを表示します。]({% image_buster /assets/img/landing_pages/copy-url.png %})
+>>>>>>> main
 
 公開する前に、次のことを確認してください。
 
@@ -142,13 +184,17 @@ page_order: 0
 
 ランディングページテンプレートは、プレビュー、アーカイブ、編集、複製できます。ランディングページを編集するときに、ランディングページをテンプレートとして保存したり、テンプレートを変更したり、ランディングページの内容を削除したりすることもできます。 
 
-![ランディングページを保存、変更、削除するオプションを含むドロップダウン。]({% image_buster /assets/img/landing_pages/manage-lp-template.png %}){: style="max-width:60%;"}
+\![ランディングページを保存、変更、削除するオプションを含むドロップダウン。]({% image_buster /assets/img/landing_pages/manage-lp-template.png %}){: style="max-width:60%;"}
 
 ## 分析を表示する
 
 ランディングページの有効性を分析するには、**Messaging**> **Landing Pages**に移動し、公開したランディングページを選択します。ここでは、ページビュー数、ページクリック数、ページ送信数、ランディングページの送信率を追跡できます。
 
-![ランディングページの分析セクション。]({% image_buster /assets/img/landing_pages/analytics.png %})
+<<<<<<< HEAD
+![ランディングページの分析部分。]({% image_buster /assets/img/landing_pages/analytics.png %})
+=======
+\![ランディングページの分析部分。]({% image_buster /assets/img/landing_pages/analytics.png %})
+>>>>>>> main
 
 ## フォーム送信エラーの処理 {#handling-form-submission-errors}
 

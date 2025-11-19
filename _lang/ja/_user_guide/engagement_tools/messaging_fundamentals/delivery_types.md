@@ -27,7 +27,7 @@ tool:
 ### 時間ベースのオプション
 
 {% tabs %}
-{% tab キャンペーン %}
+{% tab campaign %}
 スケジュール配信を使用する場合は、次のオプションから選択できます。
 
 - キャンペーン開​​始後すぐに送信
@@ -35,7 +35,7 @@ tool:
 - [インテリジェントタイミング]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/)
 {% endtab %}
 
-{% tab キャンバス %}
+{% tab canvas %}
 スケジュールされた配信では、ユーザーのエントリが時間のスケジュールに従って決まります。これは、キャンペーンをスケジュールする方法と似ています。キャンバスが開始した直後、または指定した時刻にユーザーを登録できます。
 
 #### 指定の回数
@@ -47,11 +47,11 @@ tool:
 ### アクションベースのオプション
 
 {% tabs %}
-{% tab キャンペーン %}
+{% tab campaign %}
 アクションベースの配信は、特定のアクションを実行するユーザーにキャンペーンを送信します。このアクションが発生した後、キャンペーンをいつ送信するかを決定できます。特定の時間の直後、特定の時間の後、または将来の時間のいずれかになります。
 {% endtab %}
 
-{% tab キャンバス %}
+{% tab canvas %}
 アクションベースのオプションは、キャンバスにエントリするためにユーザーが実行する必要のあるアクション (またはトリガー) と、エントリを開始できる特定の時刻を決定します。たとえば、次のアクションでユーザーを評価できます。
 
 - アプリを開く
@@ -67,11 +67,11 @@ tool:
 ### APIトリガーオプション
 
 {% tabs %}
-{% tab キャンペーン %}
+{% tab campaign %}
 配信オプションとして API トリガーを選択すると、[`/campaigns/trigger/send` エンドポイント]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/#prerequisites)で送信するキャンペーンを識別するキャンペーン ID を受け取ります。
 {% endtab %}
 
-{% tab キャンバス %}
+{% tab canvas %}
 エントリタイプとして API トリガーを選択すると、[`/canvas/trigger/send` エンドポイント]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases)で送信するキャンペーンを識別するキャンバス ID を受け取ります。
 {% endtab %}
 {% endtabs %}

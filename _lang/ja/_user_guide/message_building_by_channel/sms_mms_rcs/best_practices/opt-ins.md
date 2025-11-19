@@ -21,7 +21,7 @@ channel:
 
 ユーザーがアプリ内メッセージからSMSにオプトインできるようにするには、Brazeが提供する[電話番号キャプチャフォーム]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/phone_number_capture/)を使用して、電話番号を収集し、SMSリストを拡大するためのブランド化されたフォームを作成します。
 
-\![アプリ内メッセージ作成画面、電話番号取得用テンプレート付き。]({% image_buster /assets/img_archive/dnd_iam_phone_capture_select.png %}){: style="max-width:80%;"}
+![アプリ内メッセージ作成画面、電話番号取得用テンプレート付き。]({% image_buster /assets/img_archive/dnd_iam_phone_capture_select.png %}){: style="max-width:80%;"}
 
 Brazeは、[SMSダブルオプトイン]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/double_opt_in/)機能も使用することをお勧めします。この機能は、アプリ内メッセージの電話番号キャプチャフォームと自動的に連携し、ユーザーがフォームから電話番号を送信した後にその意志を確定するように促します。
 

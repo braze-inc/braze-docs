@@ -36,7 +36,9 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 | `template_id` | Required | String    | The ID for your email template. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-Note all translation IDs are considered universal unique identifiers (UUIDs), which can be found in **Multi-Language Support** settings or in the request response.
+{% alert note %}
+All translation IDs are considered universal unique identifiers (UUIDs), which can be found in the GET endpoint's response.
+{% endalert %}
 
 ## Example request
 
@@ -57,8 +59,6 @@ There are four status code responses for this endpoint: `200`, `400`, `404`, and
 The status code `200` could return the following response header and body.
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "translations": [
         {

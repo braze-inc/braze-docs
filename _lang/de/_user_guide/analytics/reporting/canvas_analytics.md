@@ -1,5 +1,5 @@
 ---
-nav_title: Canvas Analytics
+nav_title: Canvas-Analysen
 page_order: 4.6
 noindex: true
 layout: redirect

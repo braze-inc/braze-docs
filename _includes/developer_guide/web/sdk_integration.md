@@ -305,7 +305,7 @@ useEffect(() => {
 
 Tealium iQ offers a basic turnkey Braze integration. To configure the integration, search for Braze in the Tealium Tag Management interface, and provide the Web SDK API key from your dashboard.
 
-For more details or in-depth Tealium configuration support, check out our [integration documentation]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/#about-tealium) or reach out to your Tealium account manager.
+For more details or in-depth Tealium configuration support, check out our [integration documentation]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/#about-tealium) or contact your Tealium account manager.
 
 ### Vite {#vite}
 
@@ -319,4 +319,4 @@ optimizeDeps: {
 
 ### Other tag managers
 
-Braze may also be compatible with other tag management solutions by following our integration instructions within a custom HTML tag. Reach out to a Braze representative if you need help evaluating these solutions.
+Braze may also be compatible with other tag management solutions by following our integration instructions within a custom HTML tag. Contact a Braze representative if you need help evaluating these solutions.

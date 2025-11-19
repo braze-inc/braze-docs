@@ -1,5 +1,5 @@
 ---
-nav_title: Feature Awareness und neue App-Version
+nav_title: Bekanntheit von Funktionen und neue App-Version
 article_title: Feature Awareness und neue App-Version
 page_order: 9
 page_type: reference
@@ -20,7 +20,11 @@ Kampagnen zum Feature-Bewusstsein sind eine großartige Möglichkeit, um Nutzer:
 
 Braze SDKs verfolgen automatisch die letzte App-Version eines Benutzers. Diese Versionen können in Filtern und Segmenten verwendet werden, um zu bestimmen, welche Benutzer eine Nachricht oder Kampagne erhalten sollen.
 
-![Das Panel „Targeting-Optionen“ im Schritt „Targeting-Nutzer:innen“ im Workflow zur Kampagnenerstellung. Der Abschnitt „Zusätzliche Filter“ enthält den folgenden Filter: Neueste App-Versionsnummer für Android Stopwatch (Android) ist niedriger als 3.7.0 (134.0.0.0).][1]
+\![Das Panel Targeting-Optionen im Schritt Nutzer:innen anvisieren im Workflow zur Erstellung der Kampagne. Der Abschnitt Zusätzliche Filter enthält den folgenden Filter "Neueste App-Versionsnummer für Android Stopwatch (Android) liegt unter 3.7.0 (134.0.0.0)".]({% image_buster /assets/img_archive/new_app_version.png %}){: style="max-width:90%;"}
+
+{% alert note %}
+Es kann einige Zeit dauern, bis die aktuellen Versionen der Apps angezeigt werden. Die App-Version im Nutzerprofil wird aktualisiert, wenn die Informationen vom SDK erfasst werden, das sich darauf verlässt, wann Nutzer:innen ihre Apps öffnen. Wenn der Nutzer:innen die App nicht öffnet, wird die aktuelle Version nicht aktualisiert. <br><br> Diese Filter können auch nicht rückwirkend angewendet werden. Es ist gut, "größer als" oder "gleich" für aktuelle und zukünftige Versionen zu verwenden, aber die Verwendung von Filtern für frühere Versionen kann zu unerwartetem Verhalten führen.
+{% endalert %}
 
 ### Versionsnummer der App
 
@@ -37,7 +41,7 @@ Dieser neue Filter kann den alten Filter "Name der App-Version" ersetzen, der ei
 
 **Wichtig**
 
-* Android-Apps haben sowohl eine für den Menschen lesbare [`versionName`][7] als auch eine interne [`versionCode`][9]. Der Filter für die App-Versionsnummer verwendet `versionCode`, da diese garantiert bei jeder Veröffentlichung im App Store erhöht wird.
+* Android Apps haben sowohl eine von Menschen lesbare [`versionName`](https://developer.android.com/reference/android/content/pm/PackageInfo#versionName) als auch eine interne [`versionCode`](https://developer.android.com/reference/android/content/pm/PackageInfo.html#getLongVersionCode()). Der Filter für die App-Versionsnummer verwendet `versionCode`, da diese garantiert bei jeder Veröffentlichung im App Store erhöht wird.
 * Dies kann zu Verwirrung führen, wenn `versionName` und `versionCode` nicht mehr synchronisiert sind, insbesondere da beide Felder im Braze-Dashboard angezeigt werden können. Überprüfen Sie am besten, ob `versionName` und `versionCode` Ihrer App gemeinsam inkrementiert werden.
 * Wenn Sie stattdessen nach dem für Menschen lesbaren Feld `versionName` filtern müssen (was selten vorkommt), verwenden Sie den Filter App Version Name.
 
@@ -45,9 +49,9 @@ Dieser neue Filter kann den alten Filter "Name der App-Version" ersetzen, der ei
 
 Werte für diesen Filter werden ab Braze Android SDK v3.6.0+ und iOS SDK v3.21.0+ erfasst. Auch wenn dieser Filter SDK-Voraussetzungen hat, können Sie mit dieser Funktion auch Nutzer:innen ansprechen, die eine niedrigere (ältere) Version Ihrer App verwenden!
 
-Bei Android basiert diese Versionsnummer auf dem [Package Long Version Code][9] für die App.
+Bei Android basiert diese Versionsnummer auf dem [Package Long Version Code](https://developer.android.com/reference/android/content/pm/PackageInfo.html#getLongVersionCode()) für die App.
 
-Bei iOS basiert diese Versionsnummer auf dem [Short Version String][8] für die App.
+Bei iOS basiert diese Versionsnummer auf dem [Short Version String](https://developer.apple.com/documentation/bundleresources/information_property_list/cfbundleshortversionstring) für die App.
 
 {% alert tip %}
 Dieser Filter füllt Werte auf, nachdem Nutzer:innen ihre Apps auf die unterstützten Braze-SDK-Versionen aktualisiert haben. Bis dahin zeigt der Filter bei Auswahl keine Versionen an.
@@ -73,22 +77,14 @@ Verwenden Sie den Filter „App-Versionsname“, um Nutzer:innen nach dem „Bui
 
 Dieser Filter unterstützt den Abgleich mit "ist", "ist nicht" und regulären Ausdrücken. Sie können zum Beispiel Nutzer:innen ansprechen, die eine App haben, die nicht die Version „1.2.3-test-build“ hat.
 
-Bei Android basiert dieser Versionsname auf dem [Paketversionsnamen][7] für die App. Bei iOS basiert dieser Versionsname auf dem [Short Version String][8] für die App.
+Bei Android basiert dieser Versionsname auf dem [Paketversionsnamen](https://developer.android.com/reference/android/content/pm/PackageInfo#versionName) für die App. Bei iOS basiert dieser Versionsname auf dem [Short Version String](https://developer.apple.com/documentation/bundleresources/information_property_list/cfbundleshortversionstring) für die App.
 
 ### Habe die Funktion nicht verwendet
 
-Wenn Sie eine neue App-Version herausgeben und neue Funktionen einführen, bemerken die Benutzer die neuen Inhalte möglicherweise nicht. Eine Kampagne zur Sensibilisierung für neue Funktionen ist eine gute Möglichkeit, Benutzern neue oder noch nie genutzte Funktionen vorzustellen. Dazu müssen Sie ein [angepasstes Attribut][3] erstellen, das Nutzer:innen zugewiesen wird, die nie eine bestimmte Aktion innerhalb Ihrer App abgeschlossen haben, oder ein [angepasstes Event][4] verwenden, um eine bestimmte Aktion zu verfolgen. Sie können dieses Attribut (oder Event) verwenden, um die Nutzer:innen zu segmentieren, an die Sie die Kampagne senden möchten.
+Wenn Sie eine neue App-Version herausgeben und neue Funktionen einführen, bemerken die Benutzer die neuen Inhalte möglicherweise nicht. Eine Kampagne zur Sensibilisierung für neue Funktionen ist eine gute Möglichkeit, Benutzern neue oder noch nie genutzte Funktionen vorzustellen. Dazu müssen Sie ein [angepasstes Attribut]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#custom-data) erstellen, das Nutzern:innen zugewiesen wird, die eine bestimmte Aktion innerhalb Ihrer App nie abgeschlossen haben, oder ein [angepasstes Event]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#custom-data) verwenden, um eine bestimmte Aktion zu tracken. Sie können dieses Attribut (oder Event) verwenden, um die Nutzer:innen zu segmentieren, an die Sie die Kampagne senden möchten.
 
 {% alert tip %}
 Möchten Sie einen bestimmten Teil Ihrer Zielgruppe erneut ansprechen? Sehen Sie sich [Retargeting-Kampagnen]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/retargeting_campaigns/) an, um zu erfahren, wie Sie Kampagnen neu ausrichten können, indem Sie die früheren Aktionen Ihrer Nutzer nutzen.
 {% endalert %}
 
 
-[1]: {% image_buster /assets/img_archive/new_app_version.png %}
-[3]: {{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#custom-data
-[4]: {{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#custom-data
-[5]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/#creating-an-in-app-message
-[6]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/
-[7]: https://developer.android.com/reference/android/content/pm/PackageInfo#versionName
-[8]: https://developer.apple.com/documentation/bundleresources/information_property_list/cfbundleshortversionstring
-[9]: https://developer.android.com/reference/android/content/pm/PackageInfo.html#getLongVersionCode()

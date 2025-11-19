@@ -39,7 +39,7 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 ## Example request
 
 ```
-curl --location --request GET 'https://rest.iad-03.braze.com/templates/email/translations/source' 
+curl --location --request GET 'https://rest.iad-03.braze.com/templates/email/translations/source?template_id={template_id}' 
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 --Request Body
@@ -55,8 +55,6 @@ There are four status code responses for this endpoint: `200`, `400`, `404`, and
 The status code `200` could return the following response header and body.
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "translations": {
         "translation_map": {

@@ -1,6 +1,6 @@
 ---
-nav_title: Kampagnengrundlagen
-article_title: Kampagnengrundlagen
+nav_title: Grundlagen der Kampagne
+article_title: Grundlagen der Kampagne
 page_order: 1
 page_type: reference
 description: "Dieser Referenzartikel behandelt die Grundlagen von Kampagnen und geht auf verschiedene Fragen ein, die Sie sich beim Einrichten Ihrer ersten Kampagnen stellen sollten."

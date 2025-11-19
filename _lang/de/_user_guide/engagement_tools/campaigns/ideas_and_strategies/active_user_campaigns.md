@@ -29,7 +29,7 @@ Wenn Sie Nutzer-IDs zur Identifizierung von Nutzer:innen festlegen, werden neue 
 
 Verwenden Sie unsere Auswahl an Filtern, um ein Nutzersegment zu erstellen, das Ihrer Meinung nach Ihre loyalste, beständigste Nutzerbasis umfasst. Das folgende Beispielsegment definiert die Top-Benutzer.
 
-![][1]
+\![]({% image_buster /assets/img_archive/define_top_users.png %} "Define your top users")
 
 Außerdem müssen Sie dieses Segment nicht ständig aktualisieren, da Nutzer, die die Einschränkungen der Kampagne ein- oder überschreiten, entsprechend angesprochen oder abgewiesen werden.
 
@@ -45,11 +45,9 @@ Geben Sie Ihren Nutzern das Gefühl der Wertschätzung, indem Sie ihnen für ihr
 
 Unerwartete Belohnungen können effektiver sein, wenn es darum geht, den Nutzer zu weiteren Aktionen zu bewegen, als wenn Sie sie von Anfang an versprochen hätten!
 
-![Eine Kampagne im Schritt Verfassen mit einer iOS Rich-Benachrichtigung, die lautet: "Nochmals vielen Dank für Ihren Einkauf bei uns! Als Dankeschön schenken wir Ihnen den Versand Ihres nächsten Einkaufs".][2]
+\![Eine Kampagne im Schritt Verfassen mit einer Rich-Benachrichtigung von iOS, die lautet: "Nochmals vielen Dank für Ihren Einkauf bei uns! Als Dankeschön schenken wir Ihnen den Versand Ihres nächsten Einkaufs".]({% image_buster /assets/img/congratulations_push.jpg %})
 
 ### Behalten Sie den Überblick über Ihre Ergebnisse
 
 Verfolgen Sie die Öffnungsraten, um sicherzustellen, dass Sie die richtige Zielgruppe mit dem optimalen Nachrichtentyp ansprechen. Verfolgen Sie außerdem alle Push Opt-outs und achten Sie darauf, dass Sie diese wichtigen Nutzer:innen nicht verlieren.
 
-[1]: {% image_buster /assets/img_archive/define_top_users.png %} "Definieren Sie Ihre wichtigsten Nutzer:innen"
-[2]: {% image_buster /assets/img/congratulations_push.jpg %}

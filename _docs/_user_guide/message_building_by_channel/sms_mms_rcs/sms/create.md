@@ -18,7 +18,7 @@ search_rank: 1
 
 ## Step 1: Choose where to build your message
 
-Not sure whether your message should be sent using a campaign or a Canvas? Campaigns are better for single, simple messaging campaigns, while Canvases are better for multi-step user journeys.
+Not sure whether your message should be sent using a campaign or a Canvas? Campaigns are better for single, targeted messaging campaigns, while Canvases are better for multi-step user journeys.
 
 {% tabs %}
 {% tab Campaign %}
@@ -64,7 +64,7 @@ Before proceeding, read our guidelines for [SMS message segments and copy limits
 
 ### Adding a contact card
 
-You can add a contact card to your SMS message to make it easy for your customers to add your business and contact information to their contacts. You can assign common properties to these cards, such as your company's name, phone number, address, email, and a small photo. Check out [Contact cards]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/mms/contact_card/) to learn more.
+You can add a contact card to your SMS message so customers can add your business and contact information to their device contacts. You can assign properties such as company name, phone number, address, email, and a small photo. Refer to [Contact cards]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/mms/contact_card/) for details.
 
 ### Tips
 
