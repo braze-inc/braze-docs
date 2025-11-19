@@ -2,7 +2,7 @@
 
 > Braze MCP 서버는 특정 Braze REST API 엔드포인트에 매핑되는 읽기 전용 API 함수 집합을 노출합니다. Claude 및 Cursor와 같은 MCP 클라이언트는 이러한 함수를 호출하여 PII에 액세스하거나 작업 공간을 변경하지 않고도 데이터를 검색할 수 있습니다. 자세한 내용은 [Braze MCP 서버]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/){% elsif include.section == "개발자" %}({{site.baseurl}}/developer_guide/mcp_server/){% endif %}.
 
-{% multi_lang_include mcp_서버/베타_알럿.md %}
+{% multi_lang_include mcp_server/beta_alert.md %}
 
 ## 필수 조건
 

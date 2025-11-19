@@ -1,4 +1,4 @@
-{% multi_lang_include 개발자_guide/prerequisites/android.md %} 인앱 메시지를 활성화해야 합니다.
+{% multi_lang_include developer_guide/prerequisites/android.md %} 인앱 메시지를 활성화해야 합니다.
 
 ## 메시지 유형
 

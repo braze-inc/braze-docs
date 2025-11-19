@@ -2,7 +2,7 @@
 
 > Claude 및 Cursor와 같은 도구를 사용하여 자연어를 통해 Braze 데이터와 상호 작용할 수 있도록 Braze MCP 서버를 설정하는 방법을 알아보세요. 자세한 내용은 [Braze MCP 서버]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/){% elsif include.section == "개발자" %}({{site.baseurl}}/developer_guide/mcp_server/){% endif %}.
 
-{% multi_lang_include mcp_서버/베타_알럿.md %}
+{% multi_lang_include mcp_server/beta_alert.md %}
 
 ## 필수 조건
 

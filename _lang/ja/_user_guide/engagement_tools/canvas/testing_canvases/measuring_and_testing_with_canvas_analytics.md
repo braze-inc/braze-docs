@@ -22,7 +22,7 @@ tool:
 
 このページは、キャンバスが目標に対してどのように機能しているかをチェックするため、ハイレベルな概観を得るのに最適です。
 
-![]({% image_buster /assets/img_archive/Journey_5.png %})
+\![]({% image_buster /assets/img_archive/Journey_5.png %})
 
 ### 最後に表示してからの変更
 
@@ -54,7 +54,7 @@ tool:
 
 効果的なバリアントをすばやく推測し、適切なケイデンス、コンテンツ、トリガー、タイミングなどを特定できます。
 
-![]({% image_buster /assets/img_archive/analyze_variants.png %})
+\![]({% image_buster /assets/img_archive/analyze_variants.png %})
 
 基本的な指標には以下のようなものがあります。  
 

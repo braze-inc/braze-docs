@@ -2,7 +2,7 @@
 
 > 안전한 읽기 전용 연결로 Claude, Cursor와 같은 AI 도구가 데이터를 변경하지 않고도 질문에 답하고, 트렌드를 분석하고, 인사이트를 제공할 수 있도록 해주는 Braze MCP 서버에 대해 알아보세요.
 
-{% multi_lang_include mcp_서버/베타_알럿.md %}
+{% multi_lang_include mcp_server/beta_alert.md %}
 
 ## 모델 컨텍스트 프로토콜(MCP)이란 무엇인가요?
 

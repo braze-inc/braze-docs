@@ -96,7 +96,7 @@ Braze ダッシュボードの [** 購読グループ**] ページに保存し�
 
 すべての購読グループは自動的にユーザー設定センターに追加されます。
 
-![サブスクリプショングループを作成するフィールド。]({% image_buster /assets/img/sub_group_create.png %}){: style="max-width:75%"}
+\![サブスクリプショングループを作成するフィールド。]({% image_buster /assets/img/sub_group_create.png %}){: style="max-width:75%"}
 
 ### 購読グループによるセグメンテーション
 
