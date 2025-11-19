@@ -14,7 +14,11 @@ tool: Canvas
 
 ## このコンポーネントの仕組み
 
+<<<<<<< HEAD
+![" 更新 ロイヤルティ" 更新は属性 " Is Premium Member" to " true" という名前のユーザ更新 ステップ。]({% image_buster /assets/img_archive/canvas_user_update_step.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
+=======
 \![" 更新 ロイヤルティ" 更新は属性 " Is Premium Member" to " true" という名前のユーザ更新 ステップ。]({% image_buster /assets/img_archive/canvas_user_update_step.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
+>>>>>>> main
 
 キャンバスでこのコンポーネントを使用する場合、更新は 1 分あたり`/users/track` 件のリクエストのレート制限にはカウントされません。代わりに、Braze ではこれらの更新がバッチ処理されるので、Braze-to-Braze の Webhook よりも効率的に処理することができます。このコンポーネントは、請求不可能なデータポイントs (サブスクリプショングループ s など) を更新するために使用されている場合、[データポイント s]({{site.baseurl}}/user_guide/data/data_points/) を記録しないことに注意してください。
 
@@ -34,13 +38,21 @@ tool: Canvas
 
 カスタム属性を追加や更新するには、属性のリストから属性名を選択し、キー値を入力します。
 
+<<<<<<< HEAD
+![2 つの属性s "ロイヤルティメンバー"および"ロイヤルティプログラム" to "true"を更新するユーザ更新 ステップ。]({% image_buster /assets/img_archive/canvas_user_update_update.png %}){: style="max-width:90%;"}
+=======
 \![2 つの属性s "ロイヤルティメンバー"および"ロイヤルティプログラム" to "true"を更新するユーザ更新 ステップ。]({% image_buster /assets/img_archive/canvas_user_update_update.png %}){: style="max-width:90%;"}
+>>>>>>> main
 
 ### カスタム属性を削除する
 
 カスタム属性を削除するには、ドロップダウンを使用して属性名を選択します。[高度な JSON コンポーザー](#advanced-json-composer)に切り替えて、さらに編集することができます。 
 
+<<<<<<< HEAD
+![属性 &クォートを削除するユーザアップデートステップ;ロイヤルティメンバー&クォート;。]({% image_buster /assets/img_archive/canvas_user_update_remove.png %}){: style="max-width:90%;"}
+=======
 \![属性 &クォートを削除するユーザアップデートステップ;ロイヤルティメンバー&クォート;。]({% image_buster /assets/img_archive/canvas_user_update_remove.png %}){: style="max-width:90%;"}
+>>>>>>> main
 
 ### 増加値と減少値
 
@@ -50,7 +62,11 @@ tool: Canvas
 
 イベントを追跡するカスタム属性をインクリメントすることで、ユーザーが1週間に受講したクラス数を追跡することができる。このコンポーネントを使用すると、クラスカウントを週の始めにリセットして、再びトラッキングを開始できます。 
 
+<<<<<<< HEAD
+![属性"class_count" を1 つ増分するユーザアップデートステップ。]({% image_buster /assets/img_archive/canvas_user_update_increment.png %}){: style="max-width:90%;"}
+=======
 \![属性"class_count" を1 つ増分するユーザアップデートステップ。]({% image_buster /assets/img_archive/canvas_user_update_increment.png %}){: style="max-width:90%;"}
+>>>>>>> main
 
 ### オブジェクトの配列を更新する
 
@@ -62,7 +78,11 @@ tool: Canvas
 
 配列にアイテムを追加または削除すると、ユーザーのウィッシュリストが更新される。
 
+<<<<<<< HEAD
+![アイテム&クォート;sun ブロック" を属性"items_in_wishlist".]({% image_buster /assets/img_archive/canvas_user_update_wishlist.png %} に追加するユーザアップデートステップ]{: style="max-width:90%;"}
+=======
 \![アイテム&クォート;sun ブロック" を属性"items_in_wishlist".]({% image_buster /assets/img_archive/canvas_user_update_wishlist.png %} に追加するユーザアップデートステップ]{: style="max-width:90%;"}
+>>>>>>> main
 
 #### ユースケース:ショッピングカートの合計を計算する
 
@@ -124,7 +144,11 @@ tool: Canvas
 
 ユーザーの更新ステップを使用して、`canvas_entry_property` を永続的に保存できます。例えば、アイテムがカートに追加されたときにトリガーされるイベントがあるとします。カートに追加された最新のアイテムの ID を保存し、それをリマーケッティングキャンペーンに使用できます。パーソナライゼーション機能を使用して、キャンバスのエントリプロパティを取得し、属性に保存します。
 
+<<<<<<< HEAD
+![アイテムID で属性"most_recent_cart_item" を更新するユーザー更新 ステップ。]({% image_buster /assets/img_archive/canvas_user_update_cep.png %}){: style="max-width:90%;"}
+=======
 \![アイテムID で属性"most_recent_cart_item" を更新するユーザー更新 ステップ。]({% image_buster /assets/img_archive/canvas_user_update_cep.png %}){: style="max-width:90%;"}
+>>>>>>> main
 
 ### パーソナライゼーション
 

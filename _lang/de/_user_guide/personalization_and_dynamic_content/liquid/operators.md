@@ -8,7 +8,7 @@ description: "Auf dieser Referenzseite finden Sie die von Liquid unterstützten 
 
 # Operatoren
 
-> Liquid unterstützt viele [Operatoren][25] für bedingte Anweisungen. Auf dieser Seite finden Sie die von Liquid unterstützten Operatoren und Anwendungsbeispiele, wie Sie sie in Ihren Nachrichten verwenden können.
+> Liquid unterstützt viele [Operatoren](https://docs.shopify.com/themes/liquid/basics/operators), die Sie in Ihren bedingten Anweisungen verwenden können. Auf dieser Seite finden Sie die von Liquid unterstützten Operatoren und Anwendungsbeispiele, wie Sie sie in Ihren Nachrichten verwenden können.
 
 Diese Tabelle enthält die unterstützten Operatoren. Beachten Sie, dass Klammern in Liquid ungültig sind und verhindern, dass Tags funktionieren.
 
@@ -61,9 +61,9 @@ Need a sign to update your wardrobe? We added a 15% discount code to your accoun
 ```
 {% endraw %}
 
-![Ein Composer für Push-Benachrichtigungen mit dem vollständigen Liquid Code aus dem Tutorial.][13]{: width="100%"}
+Ein Push-Benachrichtigung Composer mit dem vollständigen Liquid Code aus dem Tutorial.]({% image_buster /assets/img/liquid-if-totalspend.png %}){: width="100%"}
 
-{% details Vollständiger Liquid-Code %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% if {{custom_attribute.${total_spend}}} >0 %}
@@ -138,7 +138,7 @@ Hey! I've got a deal for you. Buy 2 of our newest releases and get 10% off!
 ```
 {% endraw %}
 
-{% details Vollständiger Liquid-Code %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% if {{custom_attribute.${recent_game}}} == 'Awkward Dinner Party' %}
@@ -154,7 +154,7 @@ Hey! I've got a deal for you. Buy 2 of our newest releases and get 10% off!
 {% endraw %}
 {% enddetails %}
 
-![Ein Composer für Push-Benachrichtigungen mit dem vollständigen Liquid Code aus dem Tutorial.][14]
+Ein Push-Benachrichtigung Composer mit dem vollständigen Liquid Code aus dem Tutorial.]({% image_buster /assets/img/liquid-if-elsif-games.png %})
 
 Wenn ein Nutzer:innen zuletzt *Awkward Dinner Party* gespielt hat, erhält er jetzt diese Nachricht:
 
@@ -204,7 +204,7 @@ Stream now!
 ```
 {% endraw %}
 
-{% details Vollständiger Liquid-Code %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% if {{${time_zone}}} =='America/Los_Angeles' %}
@@ -216,13 +216,8 @@ Stream now!
 {% endraw %}
 {% enddetails %}
 
-![Ein Composer für Push-Benachrichtigungen mit dem vollständigen Liquid Code aus dem Tutorial.][26]
+Ein Push-Benachrichtigung Composer mit dem vollständigen Liquid Code aus dem Tutorial.]({% image_buster /assets/img/abort-if.png %})
 
-Sie können Nachrichten auch auf Grundlage verbundener Inhalte [abbrechen][1].
+Sie können Nachrichten auch auf Grundlage verbundener Inhalte [abbrechen]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/).
 
 
-[1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/
-[13]: {% image_buster /assets/img/liquid-if-totalspend.png %}
-[14]: {% image_buster /assets/img/liquid-if-elsif-games.png %}
-[25]: https://docs.shopify.com/themes/liquid/basics/operators
-[26]: {% image_buster /assets/img/abort-if.png %}

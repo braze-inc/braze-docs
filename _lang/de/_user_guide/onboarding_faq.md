@@ -159,7 +159,7 @@ Sobald Sie Ihr Segment erstellt haben, fügen Sie einen `Most Recent Location` F
 - Bei polygonalen Regionen können Sie genauer festlegen, welche Bereiche in Ihrem Segment enthalten sein sollen.
 
 {% alert tip %}
-Sind Sie daran interessiert, die Vorteile des Location Targeting mit Hilfe eines Braze-Partners zu nutzen? Dann schauen Sie sich unsere [Partner für kontextuelle Standortdaten]({{site.baseurl}}/partners/message_personalization/location) an.
+Sind Sie daran interessiert, die Vorteile des Location Targeting mit Hilfe eines Braze-Partners zu nutzen? Dann schauen Sie sich unsere [Partner für kontextuelle Standortdaten]({{site.baseurl}}/partners/message_personalization/) an.
 {% endalert %}
 
 {% endapi %}
@@ -285,7 +285,7 @@ Braze empfiehlt ausdrücklich, entsprechende Kampagnen 24 Stunden im Voraus zu p
 
 Wenn es beispielsweise 13.00 Uhr ist und Sie eine Kampagne für die Ortszeitzone für 15.00 Uhr planen, dann wird die Kampagne sofort an alle Nutzer:innen gesendet, deren Ortszeit 15.00 Uhr ist, aber nicht an Nutzer:innen, deren Ortszeit 17.00 Uhr ist. Außerdem muss die Sendezeit, die Sie für Ihre Kampagne wählen, in der Zeitzone Ihres Unternehmens noch nicht stattgefunden haben.
 
-Wenn Sie eine Kampagne in einer lokalen Zeitzone bearbeiten, die weniger als 24 Stunden im Voraus geplant wurde, wird der Zeitplan der Nachricht nicht geändert. Wenn Sie eine Kampagne in einer lokalen Zeitzone so bearbeiten, dass sie zu einem späteren Zeitpunkt versendet wird (z. B. um 19 Uhr statt um 18 Uhr), erhalten die Nutzer, die sich zum Zeitpunkt der ursprünglichen Sendezeit im Zielsegment befanden, die Nachricht weiterhin zur ursprünglichen Zeit (18 Uhr). Wenn Sie eine Zeitzone so verändern, dass z. B. um 16 Uhr statt um 17 Uhr gesendet wird, wird die Kampagne trotzdem zur ursprünglichen Uhrzeit (17 Uhr) an alle Segmentangehörigen übermittelt.
+Wenn Sie eine Kampagne in einer lokalen Zeitzone bearbeiten, die weniger als 24 Stunden im Voraus geplant wurde, wird der Zeitplan der Nachricht nicht geändert. Wenn Sie eine Kampagne in einer lokalen Zeitzone so bearbeiten, dass sie zu einem späteren Zeitpunkt versendet wird (z. B. um 19 Uhr statt um 18 Uhr), erhalten die Nutzer, die sich zum Zeitpunkt der ursprünglichen Sendezeit im Zielsegment befanden, die Nachricht weiterhin zur ursprünglichen Zeit (18 Uhr). Wenn Sie eine lokale Zeitzone bearbeiten, um zu einer früheren Zeit zu senden (z. B. 16 Uhr statt 17 Uhr), wird die Kampagne trotzdem an alle Mitglieder des Segments zur ursprünglichen Zeit (17 Uhr) gesendet.
 
 {% alert note %}
 Bei Canvas-Schritten müssen Nutzer:innen nicht 24 Stunden in dem Schritt sein, um den nächsten Schritt zur Zustellung zur Ortszeit zu erhalten.
@@ -373,9 +373,9 @@ Kampagnen
 Für die Zustellung zur Ortszeit prüft Braze die Nutzer:innen während dieser beiden Instanzen auf ihre Zugangsberechtigung:
 
 - Um Samoa-Zeit (UTC+13) des geplanten Tages
-- Zur Ortszeit am vorgesehenen Tag
+- Zur Ortszeit des geplanten Tages
 
-Um für den Entry infrage zu kommen, müssen beide Kontrollen bestanden werden. Wenn ein Canvas zum Beispiel am 7\. August 2021 um 14 Uhr Ortszeit gestartet werden soll, müssten für einen Nutzer in New York die folgenden Prüfungen durchgeführt werden, um die Berechtigung zu prüfen:
+Damit ein:e Nutzer:in für einen Entry in Frage kommt, muss er für beide Prüfungen in Frage kommen. Wenn ein Canvas zum Beispiel am 7\. August 2021 um 14 Uhr Ortszeit gestartet werden soll, müssten für einen Nutzer in New York die folgenden Prüfungen durchgeführt werden, um die Berechtigung zu prüfen:
 
 - New York am 6\. August 2021 um 9 Uhr
 - New York am 7\. August 2021 um 2 Uhr nachmittags
@@ -436,7 +436,7 @@ Wenn Sie einen Canvas anhalten, werden Nutzer:innen, die in einem Schritt warten
 Canvase
 {% endapitags %}
 
-Ausnahme-Events triggern nur, während der Nutzer:in auf die Canvas-Komponente wartet, mit der sie verknüpft ist. Bei vorgezogenen Aktionen löst das Ausnahme-Event nicht aus.
+Ausnahme-Events triggern nur, während der Nutzer:in auf die Canvas-Komponente wartet, mit der sie verknüpft ist. Wenn ein:e Nutzer:in eine Aktion durchführt, wird das Ausnahme-Event nicht ausgelöst.
 
 Wenn Sie Nutzer:innen ausschließen möchten, die ein bestimmtes Ereignis vorgebracht haben, verwenden Sie stattdessen [Filter]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/).
 
@@ -466,20 +466,20 @@ Ein Benutzer kann nur einmal pro Canvas-Eintrag konvertieren.
 
 Umrechnungen werden der letzten Nachricht zugeordnet, die der Benutzer für diesen Eintrag erhalten hat. Der Zusammenfassungsblock am Anfang eines Canvas spiegelt alle Konvertierungen wider, die von Benutzern innerhalb dieses Pfads durchgeführt wurden, unabhängig davon, ob sie eine Nachricht erhalten haben oder nicht. Bei jedem weiteren Schritt werden nur Konversionen angezeigt, die während des letzten Schrittes, den der Nutzer:innen erhalten hat, stattgefunden haben.
 
-{% details Anwendungsfälle %}
+{% details Use cases %}
 
 #### Anwendungsfall 1
 
 Es gibt einen Canvas-Pfad mit 10 Push-Benachrichtigungen und dem Konversions-Event "Sitzungsbeginn" ("Öffnet die App"):
 
-- Die App wird nach dem Eintritt, aber vor der ersten Nachricht geöffnet.
+- Nutzer:in A öffnet die App nach der Anmeldung, aber bevor er oder sie die erste Nachricht erhält.
 - Benutzer B öffnet die App nach jeder Push-Benachrichtigung.
 
 **Ergebnis:**
 Die Zusammenfassung zeigt zwei Konvertierungen an, während die einzelnen Schritte eine Konvertierung von eins für den ersten Schritt und null für alle folgenden Schritte anzeigen.
 
 {% alert note %}
-Fällt das Konversions-Event in eine Ruhezeit, gelten dieselben Regeln.
+Wenn Ruhezeiten zum Zeitpunkt des Konversions-Events aktiv sind, gelten die gleichen Regeln.
 {% endalert %}
 
 #### Anwendungsfall 2
@@ -491,7 +491,7 @@ Es gibt ein einstufiges Canvas mit Quiet Hours:
 3. Nutzer:in führt das Konversions-Event durch.
 
 **Ergebnis:**
-Die Konversion wird in der gesamten Canvas-Variante gezählt, der Schritt aber nicht, da dieser nicht empfangen wurde.
+Der Nutzer:in wird in der gesamten Canvas-Variante als konvertiert gezählt, aber nicht der Schritt, da er oder sie den Schritt nicht erhalten hat.
 
 {% enddetails %}
 
@@ -515,7 +515,7 @@ Der Segmenter ist eine genauere Statistik für eindeutige Benutzerdaten als Canv
 Canvase
 {% endapitags %}
 
-Die Anzahl der Nutzer, die ein Canvas betreten, kann von der von Ihnen erwarteten Anzahl abweichen, da die Zielgruppen und Auslöser ausgewertet werden. In Braze werden Zielgruppen vor dem Trigger ausgewertet (außer bei dem [Trigger Attributänderung]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/attribute_triggers/#change-custom-attribute-value)). Dies führt dazu, dass Nutzer, die nicht zu Ihrer ausgewählten Zielgruppe gehören, aus dem Canvas herausfallen, bevor irgendwelche Auslöseaktionen ausgewertet werden.
+Die Anzahl der Nutzer, die ein Canvas betreten, kann von der von Ihnen erwarteten Anzahl abweichen, da die Zielgruppen und Auslöser ausgewertet werden. In Braze wird eine Zielgruppe vor dem Trigger ausgewertet (es sei denn, Sie verwenden einen Trigger für [die Änderung eines Attributs]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/attribute_triggers/#change-custom-attribute-value) ). Dies führt dazu, dass Nutzer, die nicht zu Ihrer ausgewählten Zielgruppe gehören, aus dem Canvas herausfallen, bevor irgendwelche Auslöseaktionen ausgewertet werden.
 
 {% endapi %}
 {% api %}

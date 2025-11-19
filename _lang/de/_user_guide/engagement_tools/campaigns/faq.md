@@ -14,7 +14,7 @@ tool: Campaigns
 
 ### Wie erstelle ich eine Multichannel-Kampagne?
 
-Um eine Multichannel-Kampagne zu erstellen, wählen Sie **Messaging** > **Kampagnen**. Wählen Sie dann **Kampagne erstellen** > **Multichannel**. Von hier aus können Sie aus den folgenden Messaging-Kanälen auswählen: Content-Cards, E-Mail, LINE, Push-Benachrichtigungen, SMS/MMS/RCS, webhook oder WhatsApp.
+Um eine Multichannel-Kampagne zu erstellen, wählen Sie **Messaging** > **Kampagnen**. Wählen Sie dann **Kampagne erstellen** > **Multichannel**. Von hier aus können Sie aus den folgenden Messaging-Kanälen auswählen: Content-Cards, E-Mail, LINE, Push-Benachrichtigungen, SMS/MMS/RCS, Webhook, oder WhatsApp.
 
 ### Kann ich eine Kontrollgruppe zu meiner Multichannel-Kampagne hinzufügen?
 
@@ -34,7 +34,7 @@ Standardmäßig überprüfen Kampagnen die Zielgruppen-Filter bei der Eingabe. B
 
 ### Warum gibt es einen Unterschied zwischen der Anzahl der eindeutigen Empfänger und der Anzahl der Sendungen für eine bestimmte Kampagne oder ein bestimmtes Canvas?
 
-Eine mögliche Erklärung für diesen Unterschied könnte darin liegen, dass in der Kampagne oder im Canvas die erneute Qualifizierung aktiviert ist. Wenn Sie diese Option aktivieren, können Benutzer, die sich für das Segment und die Zustellungseinstellungen qualifizieren, die Nachricht mehr als einmal erhalten. Wenn die erneute Qualifizierung nicht aktiviert ist, kann die wahrscheinliche Erklärung für den Unterschied zwischen gesendeten und eindeutigen Empfänger:innenn darin liegen, dass Nutzer:innen mehrere Geräte über verschiedene Plattformen hinweg mit ihren Profilen verknüpft haben. 
+Eine mögliche Erklärung könnte sein, dass die Kampagne oder Canvas die Wiederzulassung aktiviert hat. Das bedeutet, dass Nutzer:innen, die für das Segment und die Zustellung in Frage kommen, die Nachricht mehr als einmal erhalten können. Wenn die erneute Qualifizierung nicht aktiviert ist, kann die wahrscheinliche Erklärung für den Unterschied zwischen gesendeten und eindeutigen Empfänger:innenn darin liegen, dass Nutzer:innen mehrere Geräte über verschiedene Plattformen hinweg mit ihren Profilen verknüpft haben. 
 
 Wenn Sie z.B. ein Canvas haben, das sowohl iOS- als auch Web-Push-Benachrichtigungen enthält, könnte ein bestimmter Benutzer mit einem mobilen und einem Desktop-Gerät mehr als eine Nachricht erhalten.
 
@@ -46,7 +46,7 @@ Wenn Sie eine [globale Kontrollgruppe]({{site.baseurl}}/user_guide/engagement_to
 
 Die Zustellung zur Ortszeit ermöglicht es Ihnen, Messaging-Kampagnen an ein Segment zuzustellen, das auf der individuellen Zeitzone eines Nutzers oder einer Nutzerin basiert. Ohne die Zustellung in der lokalen Zeitzone werden die Kampagnen auf der Grundlage der Zeitzoneneinstellungen Ihres Unternehmens in Braze geplant. 
 
-Wenn beispielsweise ein in London ansässiges Unternehmen eine Kampagne um 12 Uhr mittags versendet, erreicht sie die Nutzer an der amerikanischen Westküste um 4 Uhr morgens. Wenn Ihre App nur in bestimmten Ländern verfügbar ist, stellt dies möglicherweise kein Risiko für Sie dar. Andernfalls empfehlen wir Ihnen dringend, das Versenden von Push-Benachrichtigungen am frühen Morgen an Ihre Nutzer zu vermeiden!
+Wenn beispielsweise ein in London ansässiges Unternehmen eine Kampagne um 12 Uhr mittags versendet, erreicht sie die Nutzer an der amerikanischen Westküste um 4 Uhr morgens. Wenn Ihre App nur in bestimmten Ländern verfügbar ist, stellt dies möglicherweise kein Risiko für Sie dar. Andernfalls empfehlen wir Ihnen dringend, Push-Benachrichtigungen am frühen Morgen nicht an Ihre Nutzer:innen zu senden.
 
 ### Wie erkennt Braze die Zeitzone eines Benutzers?
 
@@ -68,7 +68,7 @@ Damit ein:e Nutzer:in für einen Entry in Frage kommt, muss er für beide Prüfu
 
 Beachten Sie, dass der oder die Nutzer:in 24 Stunden vor dem Start in dem Segment sein muss. Wenn der oder die Nutzer:in bei der ersten Prüfung nicht teilnahmeberechtigt ist, führt Braze die zweite Prüfung nicht durch.
 
-Wenn eine Kampagne beispielsweise um 19 Uhr UTC zugestellt werden soll, beginnen wir mit dem Versand der Kampagne in die Warteschlange, sobald eine Zeitzone (wie Samoa) zugewiesen wird. Das bedeutet, dass wir uns darauf vorbereiten, die Nachricht zu senden, nicht die Kampagne zu senden. Wenn Nutzer:innen dann bei der Prüfung der Eignung keinem Filter entsprechen, gehören sie nicht zur Zielgruppe.
+Wenn eine Kampagne beispielsweise um 19 Uhr UTC zugestellt werden soll, beginnen wir mit dem Versand der Kampagne in die Warteschlange, sobald eine Zeitzone (wie Samoa) zugewiesen wird. Das bedeutet, dass wir uns darauf vorbereiten, die Nachricht zu senden, nicht die Kampagne zu senden. Wenn Nutzer:innen bei der Eignungsprüfung keinem Filter entsprechen, gehören sie nicht zur Zielgruppe.
 
 Ein weiteres Beispiel: Sie möchten zwei Kampagnen erstellen, die am selben Tag versendet werden sollen - eine am Morgen und eine am Abend - und fügen einen Filter hinzu, damit Benutzer die zweite Kampagne nur erhalten können, wenn sie die erste bereits erhalten haben. Bei der Zustellung in einer lokalen Zeitzone kann es vorkommen, dass einige Nutzer die zweite Kampagne nicht erhalten. Das liegt daran, dass wir die Berechtigung prüfen, wenn die Zeitzone des Nutzers identifiziert wird. Wenn der Zeitplan also noch nicht in seiner Zeitzone liegt, hat er die erste Kampagne noch nicht erhalten, was bedeutet, dass er nicht für die zweite Kampagne in Frage kommt.
 
@@ -76,7 +76,7 @@ Ein weiteres Beispiel: Sie möchten zwei Kampagnen erstellen, die am selben Tag 
 
 Wählen Sie bei der Zeitplanung einer Kampagne aus, dass diese zu einer bestimmten Zeit gesendet werden soll, und wählen Sie dann **Kampagne an Nutzer:innen in ihrer Ortszeit senden**.
 
-Braze empfiehlt dringend, alle Kampagnen in der Ortszeit 24 Stunden im Voraus zu planen. Da eine solche Kampagne über einen ganzen Tag versendet werden muss, sorgt ein Zeitplan von 24 Stunden im Voraus dafür, dass Ihre Nachricht Ihr gesamtes Segment erreicht. Sie können diese Kampagnen jedoch bei Bedarf auch weniger als 24 Stunden im Voraus planen. Denken Sie daran, dass Braze keine Nachrichten an Nutzer:innen sendet, die die Sendezeit um mehr als 1 Stunde überschritten haben. 
+Braze empfiehlt dringend, alle Kampagnen in der Ortszeit 24 Stunden im Voraus zu planen. Da eine solche Kampagne über einen ganzen Tag versendet werden muss, sorgt ein Zeitplan von 24 Stunden im Voraus dafür, dass Ihre Nachricht Ihr gesamtes Segment erreicht. Sie können diese Kampagnen jedoch bei Bedarf auch weniger als 24 Stunden im Voraus planen. Denken Sie daran, dass Braze keine Nachrichten an Nutzer:innen sendet, die die Sendezeit um mehr als 1 Stunde verpasst haben. 
 
 Wenn es beispielsweise 13.00 Uhr ist und Sie eine Kampagne für die lokale Zeitzone für 15.00 Uhr planen, dann wird die Kampagne sofort an alle Nutzer:innen gesendet, deren Ortszeit zwischen 15.00 und 16.00 Uhr liegt, aber nicht an Nutzer:innen, deren Ortszeit 17.00 Uhr ist. Außerdem muss die Sendezeit, die Sie für Ihre Kampagne wählen, in der Zeitzone Ihres Unternehmens noch nicht stattgefunden haben.
 
@@ -107,29 +107,23 @@ Dies kann passieren, wenn eine Kampagne genau zu dem Zeitpunkt gestartet werden 
 
 ### Was ist die „sichere Zone“, bevor Nachrichten in einer geplanten Kampagne in die Warteschlange gestellt werden?
 
-Sie können Änderungen an Nachrichten innerhalb der folgenden Sicherheitszonen vornehmen:
+Wir empfehlen, Änderungen an Nachrichten innerhalb der folgenden Zeiten vorzunehmen:
 
-- **Einmalig geplante Kampagnen** können bis zum geplanten Sendezeitpunkt bearbeitet werden.
-- **Wiederkehrende geplante Kampagnen** können bis zur geplanten Sendezeit bearbeitet werden.
-- **Kampagnen mit lokaler Sendezeit** können bis zu 24 Stunden vor der geplanten Sendezeit bearbeitet werden.
-- **Kampagnen zur optimalen Sendezeit** können bis zu 24 Stunden vor dem Tag bearbeitet werden, an dem der Zeitplan für den Versand der Kampagne gilt.
+- **Einmalig geplante Kampagnen:** Bearbeiten Sie bis zur geplanten Sendezeit.
+- **Wiederkehrende geplante Kampagnen:** Bearbeiten Sie bis zur geplanten Sendezeit.
+- **Lokale Kampagnen zur Sendezeit:** Bearbeiten Sie bis zu 24 Stunden vor der geplanten Sendezeit.
+- **Optimale Kampagnen zur Sendezeit:** Bearbeiten Sie bis zu 24 Stunden vor dem Tag, an dem die Kampagne gesendet werden soll.
 
-### Was passiert, wenn ich die Sendezeit innerhalb der "sicheren Zone" ändere?
-
-Eine Änderung des Sendezeitpunkts von Kampagnen innerhalb dieses Zeitraums kann zum Beispiel zu unerwünschtem Verhalten führen:
+Wenn Sie außerhalb dieser Empfehlungen Änderungen an Ihrer Nachricht vornehmen, werden diese Updates möglicherweise nicht in der gesendeten Nachricht angezeigt. Wenn Sie beispielsweise die Sendezeit drei Stunden vor dem geplanten Versand einer Kampagne um 12 Uhr Ortszeit bearbeiten, kann Folgendes passieren:
 
 - Braze sendet keine Nachrichten an Benutzer, die die Sendezeit um mehr als eine Stunde überschritten haben.
 - Nachrichten, die sich in der Warteschlange befinden, werden möglicherweise immer noch zu der ursprünglich eingestellten Zeit gesendet und nicht zu der angepassten Zeit.
 
-### Was soll ich tun, wenn die "sichere Zone" bereits überschritten ist?
-
-Um sicherzustellen, dass die Kampagnen wie gewünscht funktionieren, empfehlen wir, die aktuelle Kampagne zu stoppen (dadurch werden alle Nachrichten in der Warteschlange gelöscht). Sie können dann die Kampagne duplizieren, die erforderlichen Änderungen vornehmen und die neue Kampagne starten. Möglicherweise müssen Sie Nutzer von dieser Kampagne ausschließen, die bereits die erste Kampagne erhalten haben.
-
-Stellen Sie sicher, dass Sie die Zeitpläne der Kampagnen so anpassen, dass das Senden in der Zeitzone zulässig ist.
+Wenn Sie Änderungen vornehmen müssen, empfehlen wir Ihnen, die aktuelle Kampagne zu stoppen (dadurch werden alle Nachrichten in der Warteschlange gelöscht). Sie können dann die Kampagne duplizieren, die erforderlichen Änderungen vornehmen und die neue Kampagne starten. Möglicherweise müssen Sie Nutzer von dieser Kampagne ausschließen, die bereits die erste Kampagne erhalten haben. Stellen Sie sicher, dass Sie die Zeitpläne der Kampagnen so anpassen, dass das Senden in der Zeitzone zulässig ist.
 
 ### Warum stimmt die Anzahl der Nutzer, die eine Kampagne betreten, nicht mit der erwarteten Anzahl überein?
 
-Die Anzahl der Nutzer, die eine Kampagne betreten, kann von der von Ihnen erwarteten Anzahl abweichen, da die Zielgruppen und Auslöser ausgewertet werden. In Braze wird eine Zielgruppe vor dem Trigger ausgewertet (es sei denn, Sie verwenden einen [Änderung des Attributs]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/attribute_triggers/#change-custom-attribute-value)-Trigger). Dies führt dazu, dass Nutzer:innen aus der Kampagne aussteigen, wenn sie nicht zu Ihrer ausgewählten Zielgruppe gehören, bevor irgendwelche Aktionen triggern.
+Die Anzahl der Nutzer, die eine Kampagne betreten, kann von der von Ihnen erwarteten Anzahl abweichen, da die Zielgruppen und Auslöser ausgewertet werden. In Braze wird eine Zielgruppe vor dem Trigger ausgewertet (es sei denn, Sie verwenden einen Trigger für [die Änderung eines Attributs]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/attribute_triggers/#change-custom-attribute-value) ). Dies führt dazu, dass Nutzer:innen aus der Kampagne aussteigen, wenn sie nicht zu Ihrer ausgewählten Zielgruppe gehören, bevor irgendwelche Aktionen triggern.
 
 {% alert tip %}
 Wenn Sie weitere Unterstützung bei der Fehlerbehebung in Kampagnen benötigen, wenden Sie sich bitte innerhalb von 30 Tagen nach dem Vorkommen des Problems an den Braze Support, da uns nur die Diagnoseprotokolle der letzten 30 Tage vorliegen.
@@ -147,7 +141,7 @@ Ja, verwenden Sie den Filter `api_id:YOUR_API_ID` auf der Seite **Kampagnen**, u
 
 Mit API-ausgelösten Kampagnen können Sie im Braze-Dashboard Kampagnentexte, multivariate Tests und Wiederzulassungsregeln verwalten und gleichzeitig die Zustellung dieser Inhalte von Ihren eigenen Servern und Systemen triggern. Diese Nachrichten können auch zusätzliche Daten enthalten, die als Template in die Nachrichten in Realtime eingefügt werden.
 
-API-Kampagnen dienen dem Tracking der Nachrichten, die Sie über die API versenden. Anders als bei den meisten Kampagnen geben Sie nicht die Nachricht, die Empfänger:innen oder den Zeitplan an, sondern übergeben die Bezeichner an Ihre API-Aufrufe. 
+API-Kampagnen dienen dem Tracking der Nachrichten, die über die API versendet werden. Anders als bei den meisten Kampagnen geben Sie nicht die Nachricht, die Empfänger:innen oder den Zeitplan an, sondern übergeben die Bezeichner an Ihre API-Aufrufe. 
 
 ### Was ist der Unterschied zwischen aktionsbasierten und API-gesteuerten Kampagnen?
 
@@ -173,8 +167,8 @@ Aktionsbasierte Zustellungskampagnen oder Event-gesteuerte Kampagnen sind sehr e
 
 API-getriggerte und Server-getriggerte Kampagnen sind ideal für die Abwicklung von fortschrittlicheren Transaktionen und erlauben es Ihnen, die Zustellung von Kampagneninhalten von Ihren eigenen Servern und Systemen aus zu triggern. Die API-Anfrage zum Auslösen der Nachricht kann auch zusätzliche Daten enthalten, die als Template in die Nachricht in Realtime eingefügt werden.
 
-| Profis | Nachteile | 
+| Vorteile | Überlegungen | 
 | ---- | ---- |
-| \- Verbraucht keine Datenpunkte<br><br>\- Personalisierungselemente sind in den JSON-Nutzdateneigenschaften enthalten | • Es ist nicht möglich, in den Eigenschaften der JSON-Payload ein Segment von Nutzer:innen zu erstellen, die für die Nachricht berechtigt sind<br><br>\- Eingehende JSON-Payloads können mit dem **Message Activity Log** nicht angezeigt werden|
+| \- Zeichnet keine Datenpunkte auf<br><br>\- Personalisierungselemente sind in den JSON-Nutzdateneigenschaften enthalten | • Es ist nicht möglich, in den Eigenschaften der JSON-Payload ein Segment von Nutzer:innen zu erstellen, die für die Nachricht berechtigt sind<br><br>\- Eingehende JSON-Payloads können mit dem **Message Activity Log** nicht angezeigt werden|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

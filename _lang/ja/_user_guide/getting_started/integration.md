@@ -82,6 +82,6 @@ API トリガーによる起動や Connected Content などが必要な場合は
 
 実装のゴールラインは、1度に100万件のメッセージを送信するためのゴーサインでもないことに注意してください。100万件のプッシュを送信すると、すべての顧客が同じリンクを同時にクリックした場合、アプリが破損する可能性があります。[**送信**] ボタンをクリックする前に、Braze からのリクエストを処理するための内部設定のキャパシティについて話し合うことをお勧めします。そして、それに基づいて[レート制限]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#rate-limiting)を設定できます。
 
-\![]({% image_buster/assets/img/torchie/firebrands.png %}){: style="max-width:15%;float:right;margin-left:15px;border:none;"}
+![]({% image_buster/assets/img/torchie/firebrands.png %}){: style="max-width:15%;float:right;margin-left:15px;border:none;"}
 
 Braze を使い慣れたら、Braze Firebrand になることを検討しましょう！Braze のカスタマーエンゲージメントコミュニティである Braze Firebrands では、カスタマーエクスペリエンスとマーケティングを近代化するために Braze を使用している有力者のコミュニティを構築しています。もっと詳しく知りたいですか？[今すぐ参加しましょう](https://brazefirebrands.splashthat.com/)。

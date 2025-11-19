@@ -1,5 +1,5 @@
 ---
-nav_title: Opt-Ins &amp; Opt-Outs
+nav_title: Opt-ins &amp; Opt-outs
 article_title: WhatsApp Opt-Ins und Opt-Outs
 description: "Dieser Referenzartikel behandelt die verschiedenen WhatsApp-Opt-in und Opt-out Methoden."
 page_type: partner
@@ -67,7 +67,7 @@ Dies kann als Canvas oder als Kampagne eingerichtet werden, je nachdem, ob Sie m
 2. Erstellen Sie eine Webhook-Kampagne. Ein Beispiel für einen Webhook finden Sie unter [Abonnementgruppen]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/opt-ins_and_opt-outs/#update-subscription-status).
 
 {% alert tip %}
-Beachten Sie, dass Sie im [WhatsApp-Manager](https://business.facebook.com/wa/manage/phone-numbers/) unter **Telefonnummer** > **Nachrichtenlinks** eine URL oder einen QR-Code erstellen können, um einem WhatsApp-Kanal beizutreten.<br>![Editor für QR-Codes in WhatsApp.]({% image_buster /assets/img/whatsapp/whatsapp115.png %}){: style="max-width:55%;"}
+Beachten Sie, dass Sie im [WhatsApp-Manager](https://business.facebook.com/wa/manage/phone-numbers/) unter **Telefonnummer** > **Nachrichtenlinks** eine URL oder einen QR-Code erstellen können, um einem WhatsApp-Kanal beizutreten.<br>![WhatsApp QR-Code Komponist.]({% image_buster /assets/img/whatsapp/whatsapp115.png %}){: style="max-width:55%;"}
 {% endalert %}
 
 ### Braze-gestützte Opt-in-Methoden 
@@ -98,11 +98,11 @@ Sie können eine Kampagne oder ein Canvas einrichten, das es Nutzern, die eine N
 
 #### Schritt 1: Erstellen Sie ein Canvas mit dem Auslöser "Eingehende WhatsApp-Nachricht".
  
-![Aktionsbasierter Canvas-Schritt für den Eingang von Nutzern:innen, die eine eingehende WhatsApp Nachricht senden.][6]{: style="max-width:85%;"}
+![Aktionsbasierter Canvas-Schritt für den Eingang, der Nutzer:innen erfasst, die eine eingehende WhatsApp Nachricht senden.]({% image_buster /assets/img/whatsapp/whatsapp116.png %}){: style="max-width:85%;"}
 
 Wenn Sie Schlüsselwörter als Trigger verwenden, sollten Sie auch Formulierungen wie "Stopp" oder "Keine Nachrichten" einbeziehen. Wenn Sie sich für diese Methode entscheiden, stellen Sie sicher, dass diese Begriffe auch wirklich bekannt sind. Fügen Sie z.B. nach dem ersten Opt-in eine Antwort wie "Um diese Nachrichten abzubestellen, können Sie einfach 'Stopp' senden." 
 
-![Nachrichtenschritt für den Versand einer eingehenden WhatsApp-Nachricht mit dem Wortlaut "STOPP" oder "KEINE NACHRICHTEN".][7]
+Nachrichtenschritt, um eine eingehende WhatsApp Nachricht zu senden, deren Nachrichtentext "STOP" oder "KEINE NACHRICHT" lautet.]({% image_buster /assets/img/whatsapp/whatsapp117.png %}){: style="max-width:85%;"}
 
 #### Schritt 2: Nutzerprofile aktualisieren
 
@@ -112,7 +112,7 @@ Aktualisieren Sie das Profil des Benutzers mit einer der unter [Abonnementgruppe
 
 Bei der Erstellung von Templates für WhatsApp-Nachrichten können Sie die Option "Keine Werbesendungen erhalten" einfügen. Jedes Mal, wenn Sie dies einbeziehen, stellen Sie sicher, dass die Vorlage in einem Canvas mit einem nachfolgenden Schritt für eine Abonnementgruppenänderung verwendet wird. 
 
-1. Erstellen Sie eine Nachrichtenvorlage mit der Schnellantwort "Keine Werbesendungen erhalten".<br>![Template für Nachrichten mit der Option "Keine Werbesendungen erhalten" in der Fußzeile][11]<br><br>![Abschnitt zur Konfiguration eines Buttons zur Abmeldung von Werbesendungen.][12]<br><br>
+1. Erstellen Sie eine Nachrichtenvorlage mit der Schnellantwort "Keine Werbesendungen erhalten".<br>![Template für Nachrichten mit der Option "Marketing Opt-out" in der Fußzeile]({% image_buster /assets/img/whatsapp/whatsapp121.png %})<br><br>![Abschnitt zur Konfiguration eines Marketing oopt-out Buttons.]({% image_buster /assets/img/whatsapp/whatsapp122.png %})<br><br>
 2. Erstellen Sie ein Canvas, das diese Nachrichtenvorlage verwendet.<br><br>
 3. Befolgen Sie die Schritte des vorangegangenen Beispiels, aber mit dem Triggertext "STOP PROMOTIONS".<br><br>
 4. Aktualisieren Sie den Abonnementstatus des Benutzers, indem Sie eine der unter [Abonnementgruppen]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_subscription/#update-subscription-status) beschriebenen Methoden anwenden.
@@ -136,10 +136,10 @@ Der Schritt Benutzer:innen aktualisieren vermeidet Race-Conditions, da der Nutze
 Bei "STOPP"-Nachrichten kehren Sie den Nachrichtenschritt zur Bestätigung des Opt-out und die Nutzeraktualisierung um. Wenn Sie dies nicht tun, wird der Benutzer zuerst aus der Abonnementgruppe ausgeschlossen und kann dann die Bestätigungsnachricht nicht erhalten.
 {% endalert %}
 
-![WhatsApp-Nachrichtenschritt mit dem Nachrichtentext "START".][13]{: style="max-width:70%;"}
+![Ein WhatsApp-Nachrichtenschritt, bei dem der Nachrichtentext "START" lautet.]({% image_buster /assets/img/whatsapp/whatsapp_inbound_message.png %}){: style="max-width:80%;"}
 
 {: start="2"}
-2\. Erstellen Sie im Canvas einen Schritt **Benutzeraktualisierung ein** richten und wählen Sie für **Aktion** die Option **Erweiterter JSON-Editor**. <br><br>![Nutzeraktualisierung mit der Aktion "Advanced JSON Editor".][14]<br><br>
+2\. Erstellen Sie im Canvas einen Schritt **Benutzeraktualisierung ein** richten und wählen Sie für **Aktion** die Option **Erweiterter JSON-Editor**. <br><br>Nutzer:in Update-Schritt mit einer Aktion von "Advanced JSON Editor".]({% image_buster /assets/img/whatsapp/user_update.png %})<br><br>
 3\. Füllen Sie das **Objekt der Nutzeraktualisierung** mit dem folgenden JSON-Payload und ersetzen Sie `XXXXXXXXXXX` durch die ID der Abogruppe:
 
 {% raw %}
@@ -160,7 +160,7 @@ Bei "STOPP"-Nachrichten kehren Sie den Nachrichtenschritt zur Bestätigung des O
 {% endraw %}
 
 {: start="4"}
-4\. Ergänzen Sie einen weiteren WhatsApp-Nachrichtenschritt. <br><br>![Nutzeraktualisierung im Canvas.][15]{: style="max-width:20%;"}
+4\. Ergänzen Sie einen weiteren WhatsApp-Nachrichtenschritt. <br><br>![Nutzer:in Update-Schritt in einem Canvas.]({% image_buster /assets/img/whatsapp/message_step.png %}){: style="max-width:25%;"}
 
 #### Überlegungen
 
@@ -174,10 +174,22 @@ Eine Webhook-Kampagne kann den Eintritt in eine zweite Kampagne auslösen, nachd
 Bei STOPP-Nachrichten ist dies nicht erforderlich. Die Nachricht zur Bestätigung wird gesendet, bevor der Nutzer:innen aus der Abo-Gruppe entfernt wird, so dass Sie einen der beiden anderen Schritte verwenden können.
 {% endalert %}
 
-1. Erstellen Sie eine Kampagne oder ein Canvas mit einem aktionsbasierten Schritt **Eingehende WhatsApp-Nachricht senden**. Wählen Sie **Wo der Nachrichtentext** und geben Sie "START" für **Ist** ein.<br><br>![WhatsApp-Nachrichtenschritt mit dem Nachrichtentext "START".][13]{: style="max-width:70%;"}<br><br>
-2. Erstellen Sie in der Kampagne oder im Canvas einen Schritt Webhook-Nachricht und ändern Sie den **Anfragetext** in **Rohtext**.<br><br>![Nachrichtenschritt für einen Webhook.][16]<br><br>
-3. Geben Sie die kundenspezifische [Endpunkt-URL]({{site.baseurl}}/api/basics/) gefolgt vom Endpunkt-Link in die **Webhook-URL** `campaigns/trigger/send` ein. Zum Beispiel: `https://dashboard-02.braze.eu/campaigns/trigger/send`.<br><br>![Das Feld "Webhook-URL" unter "Webhook erstellen".][19]{: style="max-width:70%;"}<br><br>
-4. Geben Sie in den Rohtext die folgende JSON-Payload ein und ersetzen Sie `XXXXXXXXXXX` durch die ID der Abogruppe. Wenn Sie die zweite Kampagne erstellt haben, müssen Sie die `campaign_id` ersetzen.
+1. Erstellen Sie eine Kampagne oder ein Canvas mit einem aktionsbasierten Schritt **Eingehende WhatsApp-Nachricht senden**. Wählen Sie **Wo der Nachrichtentext** und geben Sie "START" für **Ist** ein.
+
+![WhatsApp-Nachrichtenschritt, bei dem der Nachrichtentext "START" lautet.]({% image_buster /assets/img/whatsapp/whatsapp_inbound_message.png %}){: style="max-width:85%;"}
+
+{: start="2"}
+2\. Erstellen Sie in der Kampagne oder im Canvas einen Schritt Webhook-Nachricht und ändern Sie den **Anfragetext** in **Rohtext**.
+
+![Nachrichtenschritt für einen Webhook.]({% image_buster /assets/img/whatsapp/webhook_step.png %}){: style="max-width:85%;"}
+
+{: start="3"}
+3\. Geben Sie die kundenspezifische [Endpunkt-URL]({{site.baseurl}}/api/basics/) gefolgt vom Endpunkt-Link in die **Webhook-URL** `campaigns/trigger/send` ein. Zum Beispiel: `https://dashboard-02.braze.eu/campaigns/trigger/send`.
+
+![Feld Webhook URL unter dem Abschnitt "Webhook erstellen".]({% image_buster /assets/img/whatsapp/campaigns_webhook_url.png %}){: style="max-width:70%;"}
+
+{: start="4"}
+4\. Geben Sie in den Rohtext die folgende JSON-Payload ein und ersetzen Sie `XXXXXXXXXXX` durch die ID der Abogruppe. Wenn Sie die zweite Kampagne erstellt haben, müssen Sie die `campaign_id` ersetzen.
 
 {% raw %}
 ```json
@@ -215,26 +227,7 @@ In dieser Tabelle wird mit dem Trigger `STOP` veranschaulicht, wie Modifikatoren
 | Modifikator | Trigger | Aktion |
 | --- | --- | --- |
 | `Is` | `STOP` | Erfasst jedes ganze Wort, das "stop" enthält, unabhängig von der Groß- und Kleinschreibung. Erfasst zum Beispiel "stopp", aber nicht "bitte stoppen". |
-| `Matches regex` | `STOP` | Erfasst jede Verwendung von "STOPP". Erfasst zum Beispiel "stopp", aber nicht "BITTE STOPPEN". |
+| `Matches regex` | `STOP` | Fängt jede Verwendung von "STOP" in genau diesem Fall ab. So werden zum Beispiel "STOP" und "BITTE STOPP" erfasst, aber nicht "Stopp". |
 | `Matches regex` | `(?i)STOP(?-i)` | Erfasst jede Verwendung von "STOPP". Erfasst zum Beispiel "Stopp", "Bitte stoppen" und "Immer Nachrichten zuschicken". |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-[1]: {% image_buster /assets/img/whatsapp/whatsapp111.png %}
-[2]: {% image_buster /assets/img/whatsapp/whatsapp112.png %}
-[3]: {% image_buster /assets/img/whatsapp/whatsapp113.png %}
-[4]: {% image_buster /assets/img/whatsapp/whatsapp114.png %}
-[5]: {% image_buster /assets/img/whatsapp/whatsapp115.png %}
-[6]: {% image_buster /assets/img/whatsapp/whatsapp116.png %}
-[7]: {% image_buster /assets/img/whatsapp/whatsapp117.png %}
-[8]: {% image_buster /assets/img/whatsapp/whatsapp118.png %}
-[9]: {% image_buster /assets/img/whatsapp/whatsapp119.png %}
-[10]: {% image_buster /assets/img/whatsapp/whatsapp120.png %}
-[11]: {% image_buster /assets/img/whatsapp/whatsapp121.png %}
-[12]: {% image_buster /assets/img/whatsapp/whatsapp122.png %}
-[13]: {% image_buster /assets/img/whatsapp/whatsapp_inbound_message.png %}
-[14]: {% image_buster /assets/img/whatsapp/user_update.png %}
-[15]: {% image_buster /assets/img/whatsapp/message_step.png %}
-[16]: {% image_buster /assets/img/whatsapp/webhook_step.png %}
-[17]: {% image_buster /assets/img/whatsapp/webhook_url.png %}
-[18]: {% image_buster /assets/img/whatsapp/request_parameters.png %}
-[19]: {% image_buster /assets/img/whatsapp/campaigns_webhook_url.png %} 

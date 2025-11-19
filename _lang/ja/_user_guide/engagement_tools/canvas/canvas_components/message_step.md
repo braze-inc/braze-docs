@@ -13,7 +13,7 @@ tool: Canvas
 
 > メッセージステップでは、キャンバス内の目的の場所にスタンドアロンメッセージを追加できます。
 
-\!["Lunch promo"という名前のメッセージステップ。プッシュチャネルを使用します。]({% image_buster /assets/img/canvas_components/message_step1.png %}){: style="float:right;max-width:25%;margin-left:15px;"}
+!["Lunch promo"という名前のメッセージステップ。プッシュチャネルを使用します。]({% image_buster /assets/img/canvas_components/message_step1.png %}){: style="float:right;max-width:25%;margin-left:15px;"}
 
 ## メッセージを作成する
 
@@ -31,7 +31,7 @@ tool: Canvas
 - Webhook
 - WhatsApp
 
-\![Message ステップで選択できるメッセージング チャネルの一覧。]({% image_buster /assets/img/canvas_components/message_step2.png %})
+![Message ステップで選択できるメッセージング チャネルの一覧。]({% image_buster /assets/img/canvas_components/message_step2.png %})
 
 ### ステップ 2: 配信設定を編集する
 
@@ -47,7 +47,7 @@ tool: Canvas
 
 配信検証では、メッセージ送信時にオーディエンスが配信基準を満たしていることを確認する追加のチェックを行います。この設定は、サイレント時間、インテリジェントタイミング、レート制限のいずれかがアクティブになっている場合に推奨されます。メッセージの送信時に検証するセグメントやフィルターを追加できます。メッセージステップに設定された配信検証を満たさないユーザーは、このステップでキャンバスから退出します。
 
-\![メッセージコンポーネント設定の「配信設定」タブ。サイレント時間が有効になり、「インテリジェントタイミングを使用」チェックボックスがオンになり、最適なタイミングでメッセージが配信されます。配信検証が有効になっており、メッセージの送信時にオーディエンスが検証されます。]({% image_buster /assets/img/canvas_components/message_step4.png %}){: style="max-width:90%;"}
+![メッセージコンポーネント設定の「配信設定」タブ。サイレント時間が有効になり、「インテリジェントタイミングを使用」チェックボックスがオンになり、最適なタイミングでメッセージが配信されます。配信検証が有効になっており、メッセージの送信時にオーディエンスが検証されます。]({% image_buster /assets/img/canvas_components/message_step4.png %}){: style="max-width:90%;"}
 
 ## ユーザーの進行の仕組み
 

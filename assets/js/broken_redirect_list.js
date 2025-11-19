@@ -2675,6 +2675,8 @@ validurls['/docs/api/endpoints/translations/put_update_translation_campaign'] = 
 validurls['/docs/api/endpoints/translations/get_bulk_translations_canvases'] = '/docs/api/endpoints/translations/canvas/get_bulk_translations_canvases';
 validurls['/docs/api/endpoints/translations/get_translation_canvas'] = '/docs/api/endpoints/translations/canvas/get_translation_canvas';
 validurls['/docs/api/endpoints/translations/put_update_translation_canvas'] = '/docs/api/endpoints/translations/canvas/put_update_translation_canvas';
+validurls['/docs/api/endpoints/translations/campaigns/get_bulk_translations_campaigns'] = '/docs/api/endpoints/translations/campaigns/get_translation_campaign';
+validurls['/docs/api/endpoints/translations/canvas/get_bulk_translations_canvases'] = '/docs/api/endpoints/translations/canvas/get_translation_canvas';
 
 validurls['/docs/developer_guide/sdk_integration/initialization/'] = '/docs/developer_guide/sdk_integration/';
 
@@ -2684,7 +2686,7 @@ validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/advancement'
 validurls['/docs/user_guide/data/data_points'] = '/docs/user_guide/data/infrastructure/data_points';
 validurls['/docs/user_guide/data/report_metrics'] = '/docs/user_guide/analytics/reporting/report_metrics/';
 validurls['/docs/user_guide/data/cloud_ingestion'] = '/docs/user_guide/data/unification/cloud_ingestion';
-validurls['/docs/user_guide/data/cloud_ingestion/overview'] = '/docs/user_guide/data/unification/cloud_ingestion/overview';
+validurls['/docs/user_guide/data/cloud_ingestion/overview'] = '/docs/user_guide/data/unification/cloud_ingestion/';
 validurls['/docs/user_guide/data/cloud_ingestion/connected_sources'] = '/docs/user_guide/data/unification/cloud_ingestion/connected_sources';
 validurls['/docs/user_guide/data/cloud_ingestion/integrations'] = '/docs/user_guide/data/unification/cloud_ingestion/integrations';
 validurls['/docs/user_guide/data/cloud_ingestion/file_storage_integrations'] = '/docs/user_guide/data/unification/cloud_ingestion/file_storage_integrations';
@@ -2999,5 +3001,7 @@ validurls['/docs/partners/message_personalization/dynamic_content/cloudinary/'] 
 validurls['/docs/user_guide/message_building_by_channel/banners/testing/'] = '/docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/';
 validurls['/docs/user_guide/message_building_by_channel/content_cards/testing/'] = '/docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/';
 validurls['/docs/user_guide/message_building_by_channel/in-app_messages/testing/'] = '/docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/';
+validurls['/docs/user_guide/data/unification/cloud_ingestion/overview'] = '/docs/user_guide/data/unification/cloud_ingestion/';
+validurls['/docs/contributing/content_management/language_translations'] = '/docs/contributing/content_management';
 
 // validurls['OLD'] = 'NEW';

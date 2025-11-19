@@ -6,11 +6,11 @@ description: "Dieser Referenzartikel bietet einen Überblick über häufige Anwe
 search_rank: 2
 ---
 
-# [![Braze-Lernkurs]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/dynamic-personalization-with-liquid){: style="float:right;width:120px;border:0;" class="noimgborder"}Liquid verwenden
+# [![Braze Lernkurs]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/dynamic-personalization-with-liquid){: style="float:right;width:120px;border:0;" class="noimgborder"} Using Liquid
 
 > In diesem Artikel erfahren Sie, wie Sie eine Vielzahl von Benutzerattributen verwenden können, um persönliche Informationen dynamisch in Ihre Nachrichten einzufügen.
 
-Liquid ist eine quelloffene Template-Sprache, die von Shopify entwickelt und in Ruby geschrieben wurde. Sie können es in Braze verwenden, um Nutzerprofil-Daten in Ihre Nachrichten zu ziehen und diese Daten anzupassen. Sie können beispielsweise Liquid-Tags verwenden, um bedingte Nachrichten zu erstellen, wie z. B. das Versenden verschiedener Angebote basierend auf dem Jahrestag des Abos einer Nutzerin oder eines Nutzers . Darüber hinaus können Filter Daten bearbeiten, z. B. das Registrierungsdatum einer Nutzerin oder eines Nutzers  von einem Zeitstempel in ein besser lesbares Format umwandeln, wie z. B. "15\. Januar 2022". Weitere Einzelheiten zur Liquid-Syntax und ihren Möglichkeiten finden Sie unter [Unterstützte Personalisierungs-Tags][1].
+Liquid ist eine quelloffene Template-Sprache, die von Shopify entwickelt und in Ruby geschrieben wurde. Sie können es in Braze verwenden, um Nutzerprofil-Daten in Ihre Nachrichten zu ziehen und diese Daten anzupassen. Sie können beispielsweise Liquid-Tags verwenden, um bedingte Nachrichten zu erstellen, wie z. B. das Versenden verschiedener Angebote basierend auf dem Jahrestag des Abos einer Nutzerin oder eines Nutzers . Darüber hinaus können Filter Daten bearbeiten, z. B. das Registrierungsdatum einer Nutzerin oder eines Nutzers  von einem Zeitstempel in ein besser lesbares Format umwandeln, wie z. B. "15\. Januar 2022". Weitere Einzelheiten zur Liquid-Syntax und ihren Möglichkeiten finden Sie unter [Unterstützte Personalisierungs-Tags]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/).
 
 ## Funktionsweise
 
@@ -40,14 +40,14 @@ Hi Valued User, thanks for using the App!
 
 Die folgenden Werte können in eine Nachricht eingefügt werden, je nach ihrer Verfügbarkeit:
 
-- [Grundlegende Benutzerinformationen][1] (zum Beispiel `first_name`, `last_name`, `email_address`)
-- [Angepasste Attribute][2]
-    - [Verschachtelte benutzerdefinierte Attribute][3]
-- [Angepasste Event-Eigenschaften][11]
-- [Zuletzt verwendete Geräteinformationen][39]
-- [Targeting-Geräteinformationen][40]
+- [Grundlegende Benutzerinformationen]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/) (zum Beispiel `first_name`, `last_name`, `email_address`)
+- [Angepasste Attribute]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/)
+    - [Verschachtelte benutzerdefinierte Attribute]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/#liquid-templating)
+- [Angepasste Event-Eigenschaften]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)
+- [Zuletzt verwendete Geräteinformationen]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/#most-recently-used-device-information)
+- [Targeting-Geräteinformationen]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/#targeted-device-information)
 
-Über Braze [Connected Content][9] können Sie Inhalte auch direkt von einem Webserver abrufen.
+Über Braze [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) können Sie Inhalte auch direkt von einem Webserver abrufen.
 
 {% alert important %}
 Braze unterstützt derzeit Liquid bis einschließlich Liquid 5 von Shopify.
@@ -55,7 +55,7 @@ Braze unterstützt derzeit Liquid bis einschließlich Liquid 5 von Shopify.
 
 ## Liquid verwenden
 
-Mit [Liquid Tags][1] können Sie die Qualität Ihrer Nachrichten erhöhen, indem Sie sie mit einer persönlichen Note versehen. 
+Mit [Liquid Tags]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/) können Sie die Qualität Ihrer Nachrichten erhöhen, indem Sie sie mit einer persönlichen Note versehen. 
 
 ### Liquid-Syntax
 
@@ -71,13 +71,27 @@ Liquid folgt einer bestimmten Struktur oder Syntax, die Sie bei der dynamischen 
 
 Wenn Sie den folgenden Text in Ihre Nachricht einfügen: `{{${first_name}}}` einfügen, wird der Vorname der Nutzerin oder des Nutzers (aus dem Profil der Nutzerin oder des Nutzers) ersetzt, wenn die Nachricht gesendet wird. Sie können dasselbe Format auch für andere Standardbenutzerattribute verwenden.
 
-Wenn Sie den Wert eines angepassten Attributs verwenden möchten, müssen Sie den Namensraum "custom_attribute" zu der Variablen hinzufügen. Wenn Sie zum Beispiel ein angepasstes Attribut mit dem Namen "Postleitzahl" verwenden möchten, würden Sie `{{custom_attribute.${zip code}}}` in Ihre Nachricht aufnehmen.
+Wenn Sie den Wert eines angepassten Attributs verwenden möchten, müssen Sie den Namespace "custom_attribute" zur Variablen hinzufügen. Wenn Sie zum Beispiel ein angepasstes Attribut mit dem Namen "Postleitzahl" verwenden möchten, würden Sie `{{custom_attribute.${zip code}}}` in Ihre Nachricht aufnehmen.
 
 ### Einfügen von Tags
 
 Sie können Tags einfügen, indem Sie zwei geöffnete geschweifte Klammern `{{` in eine beliebige Nachricht eingeben. Dies triggert ein Feature zur automatischen Vervollständigung, das während der Eingabe weiter aktualisiert wird. Sie können sogar eine Variable aus den Optionen auswählen, die während der Eingabe erscheinen.
 
 Wenn Sie einen benutzerdefinierten Tag verwenden, können Sie diesen kopieren und in die gewünschte Nachricht einfügen.
+
+#### Ausnahmen für doppelte Klammern
+
+Wenn Sie einen Tag innerhalb eines anderen Liquid-Tags verwenden, wie z.B. `{% assign %}` oder `{% if %}`, können Sie entweder doppelte Klammern oder keine Klammern verwenden. Nur wenn der Tag allein steht, muss er in doppelte Klammern eingeschlossen werden. Der Einfachheit halber können Sie immer doppelte Klammern verwenden. 
+
+Die folgenden Tags sind alle korrekt:
+
+```liquid
+{% if custom_attribute.${Number_Game_Attended} == 1 %}
+{% if {{custom_attribute.${Number_Game_Attended}}} == 1 %}
+
+{% assign value_one = {{custom_attribute.${one}}} %}
+{% assign value_one = custom_attribute.${one} %}
+```
 
 {% endraw %}
 
@@ -90,19 +104,15 @@ Wenn Sie Liquid in Ihren E-Mail-Nachrichten verwenden, sollten Sie darauf achten
 
 {% endalert %}
 
-{% raw %}
-
 ### Einfügen von vorformatierten Variablen
 
-Sie können vorformatierte Variablen mit Standardwerten über das Modal **Personalisierung hinzufügen** einfügen, das sich rechts oben in jedem Textfeld mit Vorlage befindet.
+You can insert pre-formatted variables with defaults through the **Add Personalization** modal located near any templated text field.
 
-![Das Modal "Personalisierung hinzufügen", das nach dem Auswählen von "Personalisierung einfügen" erscheint. Das Modal enthält Felder für den Personalisierungstyp, das Attribut, den optionalen Standardwert und zeigt eine Vorschau der Liquid-Syntax an][44]{: style="max-width:70%;"}
+![Das Modal "Personalisierung hinzufügen", das nach dem Auswählen von "Personalisierung einfügen" erscheint. Das Modal enthält Felder für den Personalisierungstyp, das Attribut, den optionalen Standardattribut-Wert und zeigt eine Vorschau der Liquid-Syntax an.]({% image_buster /assets/img_archive/insert_liquid_var_arrow.png %}){: style="max-width:90%;"}
 
-Das Modal fügt Liquid mit dem von Ihnen angegebenen Standardwert an der Stelle ein, an der sich Ihr Cursor befand. Die Einfügemarke wird auch durch das Vorschau-Feld angegeben, das den Text vor und nach dem Einfügen enthält. Wenn ein Textblock hervorgehoben ist, wird der hervorgehobene Text ersetzt.
+The modal will insert Liquid with your specified default value at the point where your cursor was. Die Einfügemarke wird auch durch das Vorschau-Feld angegeben, das den Text vor und nach dem Einfügen enthält. Wenn ein Textblock hervorgehoben ist, wird der hervorgehobene Text ersetzt.
 
-![Ein GIF des Modals Personalisierung hinzufügen, das zeigt, wie der Nutzer:innen "Mitreisender" als Standardwert einfügt und das Modal den hervorgehobenen Text "Name" im Composer durch das Liquid Snippet ersetzt.][45]
-
-{% endraw %}
+![Ein GIF des Modals Personalisierung hinzufügen, das zeigt, wie der Nutzer:innen "Mitreisender" als Standardwert einfügt und das Modal den hervorgehobenen Text "Name" im Composer durch das Snippet von Liquid ersetzt.]({% image_buster /assets/img_archive/insert_var_shot.gif %})
 
 ### Variablen zuweisen
 
@@ -159,12 +169,3 @@ Haben Sie das Gefühl, dass Sie in jeder Nachricht die gleichen Variablen zuweis
 Solange sich der Inhaltsblock am Anfang Ihrer Nachricht befindet, wird die Variable jedes Mal, wenn sie als Objekt in Ihre Nachricht eingefügt wird, auf das von Ihnen gewählte benutzerdefinierte Attribut verweisen!
 {% endalert %}
 
-[1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/
-[2]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/
-[3]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support/#liquid-templating
-[9]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/
-[11]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/
-[39]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/#most-recently-used-device-information
-[40]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/#targeted-device-information
-[44]: {% image_buster /assets/img_archive/insert_liquid_var_arrow.png %}
-[45]: {% image_buster /assets/img_archive/insert_var_shot.gif %}

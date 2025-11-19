@@ -77,15 +77,15 @@ Sie müssen für jede Version Ihrer App auf jeder Plattform separate App-Instanz
 
 #### Teams
 
-[Teams][1] können nach Kundenstandort, Sprache und benutzerdefinierten Attributen eingerichtet werden, so dass Teammitglieder und Nicht-Teammitglieder unterschiedlichen Zugriff auf Messaging-Funktionen und Kundendaten haben.
+[Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) können nach Kundenstandort, Sprache und benutzerdefinierten Attributen eingerichtet werden, so dass Teammitglieder und Nicht-Teammitglieder unterschiedlichen Zugriff auf Messaging-Funktionen und Kundendaten haben.
 
 #### Braze Benutzerberechtigungen
 
-Arbeitsbereiche haben unabhängige Zugriffs- und Benutzerberechtigungsdefinitionen. Mit [Benutzerrechten][2] können Sie genau festlegen, worauf ein einzelner Dashboard-Benutzer oder ein Team innerhalb eines einzelnen Arbeitsbereichs Zugriff hat.
+Arbeitsbereiche haben unabhängige Zugriffs- und Benutzerberechtigungsdefinitionen. Mit [Benutzerrechten]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/) können Sie genau festlegen, worauf ein einzelner Dashboard-Benutzer oder ein Team innerhalb eines einzelnen Arbeitsbereichs Zugriff hat.
 
 #### Currents Konnektoren
 
-Das [Currents-Tool][3] ist ein Realtime-Daten-Stream zu Ihren Engagement-Events. Es ist der robusteste und zugleich granularste Export der Braze-Plattform. Currents-Konnektoren sind in bestimmten Braze-Paketen enthalten, und vielleicht haben Sie zunächst einen erhalten, der einen einzigen Workspace voraussetzt.
+Das [Currents-Tool]({{site.baseurl}}/user_guide/data/braze_currents/) ist ein Realtime-Daten-Stream zu Ihren Engagement-Events. Es ist der robusteste und zugleich granularste Export der Braze-Plattform. Currents-Konnektoren sind in bestimmten Braze-Paketen enthalten, und vielleicht haben Sie zunächst einen erhalten, der einen einzigen Workspace voraussetzt.
 
 Wenn Sie sich entscheiden, ob Sie getrennte oder kombinierte Workspaces erstellen möchten, sollten Sie die Anzahl Ihrer Currents Konnektoren berücksichtigen, da Currents Konnektoren nicht über Workspaces hinweg gemeinsam genutzt werden. 
 
@@ -93,7 +93,7 @@ Wenn Sie beispielsweise getrennte Workspaces für die Entwicklungs- und die Prod
 
 #### Benutzerprofile
 
-Alle dauerhaften Daten, die mit einem Benutzer verbunden sind, werden in seinem [Benutzerprofil][4] gespeichert. Benutzerprofile sind jedoch auch eine großartige Ressource für die Fehlersuche und das Testen, da Sie ganz einfach auf Informationen über die Engagement-Historie eines Benutzers, seine Segmentzugehörigkeit, sein Gerät und sein Betriebssystem zugreifen können.
+Alle dauerhaften Daten, die mit einem Benutzer verbunden sind, werden in seinem [Benutzerprofil]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/) gespeichert. Benutzerprofile sind jedoch auch eine großartige Ressource für die Fehlersuche und das Testen, da Sie ganz einfach auf Informationen über die Engagement-Historie eines Benutzers, seine Segmentzugehörigkeit, sein Gerät und sein Betriebssystem zugreifen können.
 
 #### Segmente, Kampagnen und Leinwände
 
@@ -178,7 +178,7 @@ Die folgende Tabelle beschreibt die Vor- und Nachteile dieser beiden Ansätze zu
         <td>Benutzerdefinierte Attribute und Ereignisse sind garantiert spezifisch für eine App-Instanz.</td>
         <td>Das Benutzerverhalten kann nicht über Arbeitsbereiche hinweg verfolgt werden.<br><br><b>Tipp:</b> Dazu können Sie mehrere Currents-Verbindungen nutzen.</td>
         <td>Kann das Benutzerverhalten über alle App-Instanzen im Arbeitsbereich verfolgen.</td>
-        <td>Benutzerdefinierte Attribute und Ereignisse würden für alle App-Instanzen gelten, wodurch es schwierig werden könnte, zu erkennen, welche Daten in einem Benutzerprofil für welche App-Instanz relevant sind. Ist zum Beispiel "Datum_des_Parkens" für App 1 oder App 2 relevant? Um dem entgegenzuwirken, sollten Sie gut strukturierte Namenskonventionen verwenden.</td>
+        <td>Benutzerdefinierte Attribute und Ereignisse würden für alle App-Instanzen gelten, wodurch es schwierig werden könnte, zu erkennen, welche Daten in einem Benutzerprofil für welche App-Instanz relevant sind. Ist "date_of_parking" zum Beispiel für App 1 oder App 2 relevant? Um dem entgegenzuwirken, sollten Sie gut strukturierte Namenskonventionen verwenden.</td>
     </tr>
     <tr>
         <td>Frequency-Capping</td>
@@ -205,7 +205,7 @@ Die folgende Tabelle beschreibt die Vor- und Nachteile dieser beiden Ansätze zu
         <td>Duplizieren von Inhalten</td>
         <td>--</td>
         <td>Sie können keine Segmente, Push- oder Content-Card-Kampagnen oder Canvase in verschiedenen Workspaces duplizieren.</td>
-        <td>Kann [Kampagnen über Workspaces hinweg duplizieren]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/copying_to_workspace/) für die folgenden unterstützten Kanäle: SMS, In-App-Nachrichten, E-Mail, E-Mail-Vorlagen und Inhaltsblöcke. <br><br>Sie können Segmente, Kampagnen und Canvases duplizieren, um Inhalte von einer App-Instanz zur anderen wiederzuverwenden.</td>
+        <td>Kann [doppelte Kampagnen über workspaces]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/copying_across_workspaces/) für die folgenden unterstützten Kanäle: SMS, In-App-Nachrichten, E-Mail, E-Mail-Vorlagen und Inhaltsblöcke. <br><br>Sie können Segmente, Kampagnen und Canvases duplizieren, um Inhalte von einer App-Instanz zur anderen wiederzuverwenden.</td>
         <td>--</td>
     </tr>
     <tr>
@@ -240,10 +240,5 @@ Sie sollten mehr als einen Braze-Benutzer mit Admin-Rechten für einen einzelnen
 
 ## Nächste Schritte
 
-Nachdem Sie Ihren Workspace-Plan festgelegt haben, ist es an der Zeit, Ihren Workspace zu erstellen und App-Instanzen hinzuzufügen. Weitere Schritte finden Sie unter [Erstellen und Verwalten von Arbeitsbereichen][5].
+Nachdem Sie Ihren Workspace-Plan festgelegt haben, ist es an der Zeit, Ihren Workspace zu erstellen und App-Instanzen hinzuzufügen. Weitere Schritte finden Sie unter [Erstellen und Verwalten von Arbeitsbereichen]({{site.baseurl}}/user_guide/administrative/app_settings/workspaces/).
 
-[1]: {{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/
-[2]: {{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/
-[3]: {{site.baseurl}}/user_guide/data_and_analytics/braze_currents
-[4]: {{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/
-[5]: {{site.baseurl}}/user_guide/administrative/app_settings/workspaces/
