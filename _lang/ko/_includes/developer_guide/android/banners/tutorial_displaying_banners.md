@@ -6,7 +6,7 @@
 
 ## Android SDK용 배너 표시
 
-{% multi_lang_include 개발자_guide/_shared/tutorial_feedback.md 튜토리얼="배너 표시 Android" %}
+{% multi_lang_include developer_guide/_shared/tutorial_feedback.md 튜토리얼="배너 표시 Android" %}
 
 {% scrolly %}
 

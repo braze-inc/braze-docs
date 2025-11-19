@@ -54,7 +54,7 @@
 
 ### 배치 요청 {#requests}
 
-{% multi_lang_include 배너/배치_요청.md %}
+{% multi_lang_include banners/placement_requests.md %}
 
 ### 메시지 전달
 
