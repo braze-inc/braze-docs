@@ -1,7 +1,7 @@
 ---
-nav_title: 製品ブロック
+nav_title: 商品ブロック
 article_title: ドラッグアンドドロッププロダクトブロック
-page_order: 7
+page_order: 7.5
 description: "このリファレンス記事では、ドラッグアンドドロップ製品ブロックについて説明します。これにより、ユーザーはカタログアイテムの動的または静的なショーケースをすばやく追加および構成できます。"
 tool:
     - Campaigns
@@ -23,7 +23,8 @@ alias: /dnd_product_blocks/
 | --- | --- |
 | e コマースの推奨イベント | [eコマース推奨イベント]({{site.baseurl}}/ecommerce_events/)は、注文の前後に発生する主要な行動イベントの標準化されたデータスキーマを提供します。これらのイベントは、最終的には従来の Braze 購入イベントを置き換えるものであり、商取引関連の行動を追跡するための標準となる予定です。<br><br> e コマースの推奨イベントは、ダイナミックな製品ブロックに必要です。<br><br> e コマースの推奨イベントは現在、早期アクセス段階です。早期アクセスに参加したい場合は、Braze カスタマーサクセスマネージャーにお問い合わせください。 |
 | eコマースキャンバスのテンプレート | e コマースの推奨イベントは、閲覧の放棄、カート放棄、注文確認などの必須ユースケース向けに設計された e コマースキャンバステンプレートを含む、事前に作成されているテンプレートをサポートしています。<br><br>[eCommerce Canvas テンプレート]({{site.baseurl}}/ecommerce_use_cases/)を使用して、これらの必須eCommerce ユースケースのいずれかを実装する場合は、提供されているCanvas テンプレートを使用するか、それに従う必要があります。 |
-| Braze カタログ | 製品ブロック設定で使用される以下のフィールドを含むBraze カタログを作成する必要があります。{::nomarkdown}<code><ul><li>product_title</li><li>product_url</li><li>variant_image_url</li></ul></code>{:/} |
+| Braze カタログ | プロダクトブロック設定で使用される次のフィールドs を含むBraze カタログを作成する必要があります。{::nomarkdown}<code><ul><li>product_title</li><li>product_url</li><li>variant_image_url</li></ul></code>{:/} |
+| カタログ選択 | スタティック製品ブロックでは、[ カタログ選択]({{site.baseurl}}/user_guide/data/activation/catalogs/selections/) を作成して、製品ブロックに含める製品を指定する必要があります。 |
 {: .reset-td-br-1 .reset-td-br-2 role=“presentation” }
 
 ## ドラッグアンドドロップ製品ブロックの種類
@@ -31,7 +32,7 @@ alias: /dnd_product_blocks/
 | 製品ブロック | 目的 | ユースケース | 可用性 |
 | --- | --- | --- | --- |
 | ダイナミック | [eCommerce 推奨イベント]({{site.baseurl}}/ecommerce_events/)および[eCommerce Canvas テンプレート]({{site.baseurl}}/ecommerce_use_cases/)内のカタログを使用して、顧客とのやり取りに基づいて製品のショーケースでメッセージをカスタマイズします。 | {::nomarkdown}<ul><li>閲覧の放棄</li><li>カート放棄</li><li>購入手続き放棄</li><li>注文確認</li></ul>{:/} | キャンバスでのみ使用できます。 |
-| 静的 | Brazeカタログまたは[カタログ選択]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/)に保存されたデータのみを使用して製品をカスタマイズします。 | 新製品の発売やカテゴリ別のオファリングを紹介するのに最適です。| |
+| 静的 | Braze カタログに保存されているデーターを使用して商品をカスタマイズします。どの商品を含めるかを指定するには、[カタログ選択]({{site.baseurl}}/user_guide/data/activation/catalogs/selections/)を使用する必要があります。 | 新製品の発売やカテゴリ別のオファリングを紹介するのに最適です。| |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role=”presentation” }
 
 ## 製品ブロックのコンテンツ設定
@@ -53,7 +54,11 @@ alias: /dnd_product_blocks/
 | 数量 | e コマースの推奨イベントのプロパティ| 
 {: .reset-td-br-1 .reset-td-br-2 role=“presentation” }
 
-![カタログデータとイベントデータ]({% image_buster /assets/img/product_blocks/dynamic_fields.png %})に分割された動的製品ブロックの製品フィールド{: style="max-width:50%;"}
+<<<<<<< HEAD
+![カタログデータとイベントデータに分かれているダイナミックな商品ブロックの商品フィールドs]({% image_buster /assets/img/product_blocks/dynamic_fields.png %}){: style="max-width:50%;"}
+=======
+\![カタログデータとイベントデータに分かれているダイナミックな商品ブロックの商品フィールドs]({% image_buster /assets/img/product_blocks/dynamic_fields.png %}){: style="max-width:50%;"}
+>>>>>>> main
 
 #### 静的製品ブロック
 
@@ -65,7 +70,11 @@ alias: /dnd_product_blocks/
 | 価格 | カタログ |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role=“presentation” }
 
-![静的製品ブロックの製品項目。これらはすべてカタログデータとして分類されます。]({% image_buster /assets/img/product_blocks/static_fields.png %}){: style="max-width:50%;"}
+<<<<<<< HEAD
+![静的製品ブロックの製品フィールドs。すべてカタログデータとして分類されます。]({% image_buster /assets/img/product_blocks/static_fields.png %}){: style="max-width:50%;"}
+=======
+\![静的製品ブロックの製品フィールドs。すべてカタログデータとして分類されます。]({% image_buster /assets/img/product_blocks/static_fields.png %}){: style="max-width:50%;"}
+>>>>>>> main
 
 ### レイアウトオプション
 
@@ -79,7 +88,7 @@ alias: /dnd_product_blocks/
 | 製品の間隔 | 製品の間隔を設定します。 |
 {: .reset-td-br-1 .reset-td-br-2 role=“presentation” }
 
-![製品の向き、配置、行あたりの最大製品数、製品間隔のレイアウトオプション。]({% image_buster /assets/img/product_blocks/layout_options.png %}){: style="max-width:50%;"}
+\![製品の向き、配置、行あたりの最大製品数、製品間隔のレイアウトオプション。]({% image_buster /assets/img/product_blocks/layout_options.png %}){: style="max-width:50%;"}
 
 ### グローバルメールスタイル設定 
 
@@ -107,7 +116,11 @@ alias: /dnd_product_blocks/
 
 必要なフィールドを含むこの[サンプル製品カタログ]({{site.baseurl}}/assets/download_file/ecommerce_product_catalog_sample.csv)を使用して、作業をすぐに開始します。 
 
-![他に加えて必要なフィールドを持つサンプルCSV ファイル。]({% image_buster /assets/img/ecommerce/sample_product_catalog.png %})
+<<<<<<< HEAD
+![他のCSVファイルに加えて、必要なフィールドs のサンプリング。]({% image_buster /assets/img/ecommerce/sample_product_catalog.png %})
+=======
+\![他のCSVファイルに加えて、必要なフィールドs のサンプリング。]({% image_buster /assets/img/ecommerce/sample_product_catalog.png %})
+>>>>>>> main
 
 ## 製品ブロックの作成
 
@@ -136,7 +149,7 @@ eCommerce Canvaseの作成に関する詳細な手順については、[eCommerc
 ### ステップ2:製品ブロックの追加
 
 {% tabs %}
-{% tab ダイナミックプロダクトブロック %}
+{% tab Dynamic product block %}
 
 メッセージステップ内で、メールを作成するか、ドラッグアンドドロップのメールコンポーザーを使用して既存のテンプレートを変更します。
 製品ブロックをメールメッセージにドラッグします。
@@ -144,45 +157,61 @@ eCommerce Canvaseの作成に関する詳細な手順については、[eCommerc
 パーソナライズに使用する製品カタログを選択します。ターゲットとするインバウンドイベントの製品と一致していることを確認します。
 
 {% endtab %}
-{% tab 静的製品ブロック %}
+{% tab Static product block %}
 
 製品ブロックをメールメッセージにドラッグして、静的ブロックタイプを選択します。
-製品ブロックに使用するカタログを選択します。カタログに選択肢がある場合は、それを選択して、製品ブロックに表示される製品をさらに絞り込む必要があります。
+製品ブロックに使用するカタログを選択します。製品ブロックに表示する製品を指定するには、カタログ選択を選択する必要があります。
 
 {% endtab %}
 {% endtabs %}
 
-![製品ブロックなどのエディターブロックがある [コンテンツ] タブ。]({% image_buster /assets/img/product_blocks/product_block.png %}){: style="max-width:40%;"}
+<<<<<<< HEAD
+!["Content"エディタブロックsを含むタブ(商品ブロックsなど)。]({% image_buster /assets/img/product_blocks/product_block.png %}){: style="max-width:40%;"}
+=======
+\!["Content"エディタブロックsを含むタブ(商品ブロックsなど)。]({% image_buster /assets/img/product_blocks/product_block.png %}){: style="max-width:40%;"}
+>>>>>>> main
 
-### ステップ 3:製品フィールドの設定
+### ステップ 3: 製品フィールドの設定
 
 製品ブロックに表示する[製品フィールド](#product-fields)を選択します。変更を行うたびに [**設定を適用**] を選択して、エディターで更新内容を確認します。 
 
 Liquid タグの前でテキストをカスタマイズすることもできます。例えば項目の価格にドル記号 ($) を付加したり、数量を示す用語を「amount」または使用したい他のラベルに更新したりできます。
 
-![商品価格の前にドル側が付加された商品ブロック。]({% image_buster /assets/img/product_blocks/liquid.png %}){: style="max-width:45%;"}
+<<<<<<< HEAD
+![商品の値段の前にドル面が付いた商品ブロック。]({% image_buster /assets/img/product_blocks/liquid.png %}){: style="max-width:45%;"}
+=======
+\![商品の値段の前にドル面が付いた商品ブロック。]({% image_buster /assets/img/product_blocks/liquid.png %}){: style="max-width:45%;"}
+>>>>>>> main
 
-### ステップ4:レイアウト設定の構成
+### ステップ 4: レイアウト設定の構成
 
 製品ブロック内の製品の表示方法を更新するには、[レイアウトオプション](#layout-options)を変更し、変更後は必ず**Apply settings**を選択してください。
 
 ### ステップ 5: メッセージをプレビューしてテストする
 
 {% tabs %}
-{% tab ダイナミックプロダクトブロック %}
+{% tab Dynamic product block %}
 
-1. [**プレビュー後にテスト**] セクションで、カスタムユーザーとしてメッセージをプレビューします。
+1. **プレビュー & Test** セクションで、カスタムユーザーとしてメッセージをプレビューします。
 2. プレビューでレンダリングする項目の数を指定します。
 3. 正しい項目数が表示され、レイアウトオプションが正しく適用されていることを確認します。表示される項目はランダムに選択されることに注意してください。
 
-![4つの項目を表示することを指定する [ダイナミック製品ブロック] ドロップダウンセクションがある [ユーザーとしてプレビュー] タブ。]({% image_buster /assets/img/product_blocks/preview_as_a_user.png %}){: style="max-width:40%;"}
+<<<<<<< HEAD
+!["ユーザー&クォートとしてプレビュー;ドロップダウンセクション"ダイナミックプロダクトブロック"4つの項目を表示するよう指定します。]({% image_buster /assets/img/product_blocks/preview_as_a_user.png %}){: style="max-width:40%;"}
+=======
+\!["ユーザー&クォートとしてプレビュー;ドロップダウンセクション"ダイナミックプロダクトブロック"4つの項目を表示するよう指定します。]({% image_buster /assets/img/product_blocks/preview_as_a_user.png %}){: style="max-width:40%;"}
+>>>>>>> main
 
 {% endtab %}
-{% tab 静的製品ブロック %}
+{% tab Static product block %}
 
 製品ブロックに変更を適用すると、ドラッグアンドドロップコンポーザー内にプレビューが生成されます。 
 
-![複数の項目タイルを含む製品生成ブロックを示すメールドラッグ＆ドロップ作成画面。]({% image_buster /assets/img/product_blocks/static_block_preview.png %})
+<<<<<<< HEAD
+![メールドラッグアンドドロップコンポーザー。さまざまなアイテムタイルを持つプロダクトブロックを生成します。]({% image_buster /assets/img/product_blocks/static_block_preview.png %})
+=======
+\![メールドラッグアンドドロップコンポーザー。さまざまなアイテムタイルを持つプロダクトブロックを生成します。]({% image_buster /assets/img/product_blocks/static_block_preview.png %})
+>>>>>>> main
 
 {% endtab %}
 {% endtabs %}

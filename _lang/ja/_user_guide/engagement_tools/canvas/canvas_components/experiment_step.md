@@ -14,7 +14,7 @@ tool: Canvas
 
 ユーザージャーニーにExperiment Pathsステップを含めると、作成した異なるパス(またはオプションのコントロールグループ)にユーザーがランダムに割り当てられます。オーディエンスの一部は、選択したパーセンテージに応じて異なるパスに割り当てられます。これにより、異なるメッセージまたはパスを互いにテストし、どのパスが最も効果的かを判断できます。 
 
-\![Path 1、Path 2、およびControl に分割されるExperiment Path ステップ。]({% image_buster /assets/img/experiment_step/experiment_step.png %}){: style="float:right;max-width:50%;margin-left:15px;"}
+![Path 1、Path 2、およびControl に分割されるExperiment Path ステップ。]({% image_buster /assets/img/experiment_step/experiment_step.png %}){: style="float:right;max-width:50%;margin-left:15px;"}
 
 ## ユースケース
 
@@ -45,7 +45,7 @@ tool: Canvas
 
 また、コントロールグループのユーザーをキャンバスで次に進めるか、**コントロールグループの動作**のコンバージョントラッキング期間の経過後に退出させるかを選択することもできます。オプションで、このテストパスで何をテストするのかを他の人に伝える説明を追加したり、役に立つ注意事項などの追加情報を含めたりできます。
 
-\![パス s を追加し、それぞれのパスでユーザー s のパーセンテージe を分配できる設定を試します。]({% image_buster /assets/img/experiment_step/exp_settings.png %})
+![パス s を追加し、それぞれのパスでユーザー s のパーセンテージe を分配できる設定を試します。]({% image_buster /assets/img/experiment_step/exp_settings.png %})
 
 {% alert note %}
 キャンバスの再適格性が有効になっている場合、キャンバスに入ってランダムに選択されたパスを進んだユーザーは、再適格となりキャンバスに再び入ると、もう一度同じパスを進みます。これにより、実験とその分析の有効性が維持されます。ステップで常にパスの割り当てをランダム化するには、[**実験パスのランダムパス**] を選択します。このオプションは、勝者パスまたはパーソナライズされたパスを用いる場合は使用できません。
@@ -59,7 +59,7 @@ tool: Canvas
 
 最後に、ダウンストリームのパスを構築する必要があります。[**完了**] を選択し、キャンバスビルダーに戻ります。各パスの下にある <i class="fas fa-plus-circle"></i> プラスボタンをクリックして、必要に応じて通常のキャンバスツールを使用してジャーニーの作成を開始し、準備ができたらキャンバスを開始します。
 
-\![Experiment パス コンポーネントから分割されたステップs をそれぞれのパスに追加する。]({% image_buster /assets/img/experiment_step/experiment_downstream_paths.gif %}){: style="max-width:75%"}
+![Experiment パス コンポーネントから分割されたステップs をそれぞれのパスに追加する。]({% image_buster /assets/img/experiment_step/experiment_downstream_paths.gif %}){: style="max-width:75%"}
 
 パスとそのダウンストリームのステップは、一度作成するとキャンバスから削除できないことに注意してください。ただし、開始後、必要に応じてパス間のオーディエンス配分を変更できます。例えば、キャンバスを開始した翌日に、分析に基づいて 1 つのパスの方が他のパスよりも優れていることがわかった場合は、そのパスを 100% に設定し、他のパスを 0% に設定することができます。あるいは、必要な場合は、引き続きユーザーを複数のパスに送り続けることもできます。
 

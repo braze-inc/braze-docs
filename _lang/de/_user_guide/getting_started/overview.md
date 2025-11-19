@@ -31,13 +31,13 @@ Stellen Sie sicher, dass Sie [Ihre Kollegen zu Braze hinzufügen]({{site.baseurl
 
 Benutzer sind Ihre Kunden - die Personen, die die Nachrichten erhalten, die Sie mit Braze versenden. Alle Daten, die Sie über einen Benutzer sammeln und in Braze aufnehmen, werden in dessen Benutzerprofil gespeichert, z. B. demografische Daten, persönliche Informationen, Vorlieben und Verhaltensweisen. Diese Informationen sind die Grundlage für Ihre Nachrichten und ermöglichen es Ihnen, Ihre Nachrichten auf den richtigen Nutzer zuzuschneiden.
 
-![][1]
+![]({% image_buster /assets/img/getting_started/user_profile.png %})
 
 Segmente unterteilen Ihren Kundenstamm in kleinere Gruppen, die Sie dann mit spezifischem Messaging ansprechen können. Sie können verschiedene Variablen verwenden, um Segmente zu erstellen. Diese reichen von Merkmalen wie Geschlecht, Standort und Alter bis hin zu Verhaltensweisen wie Interaktionsmustern mit früheren Kampagnen oder der Position auf der Customer Journey.
 
 Segmente sind dynamisch - Nutzer:innen können sich in Realtime in Segmente ein- und ausgliedern, je nachdem, wie sie sich verhalten und wo sie in Bezug auf Ihre Marke stehen. So können Sie sicherstellen, dass Ihre Kunden immer die für sie relevanten Nachrichten erhalten. Sie können so viele Segmente erstellen, wie Sie für Ihr Targeting und Messaging benötigen.
 
-![][2]
+![]({% image_buster /assets/img/getting_started/segment.png %})
 
 Mehr dazu finden Sie hier: [Erste Schritte: Benutzer und Segmente]({{site.baseurl}}/user_guide/getting_started/users_segments/).
 
@@ -68,7 +68,7 @@ Mehr dazu finden Sie hier: [Erste Schritte: Workspaces]({{site.baseurl}}/user_gu
 
 Braze ist so konzipiert, dass Sie es schnell und einfach in Betrieb nehmen können. Unsere durchschnittliche Time-to-Value beträgt sechs Wochen bei unserem Kundenstamm von Hunderten von Marken.
 
-![][3]
+![]({% image_buster /assets/img/getting_started/timetovalue.png %})
 
 Hier ist das Braze-Rahmenwerk, mit dem Sie die Dauer Ihrer Integration anhand von vier Komponenten, an denen Sie parallel arbeiten können, abschätzen können. Die typische Spanne liegt zwischen 30 und 180 Tagen, wobei die meisten Kund:innen ihre Integration innerhalb von 45 bis 60 Tagen abschließen.
 
@@ -84,6 +84,3 @@ Benötigen Sie Hilfe bei Ihrer Migration? Unsere [zertifizierten Braze-Partner](
 
 Mehr dazu finden Sie hier: [Erste Schritte: Übersicht über die Integration]({{site.baseurl}}/user_guide/getting_started/integration/).
 
-[1]: {% image_buster /assets/img/getting_started/user_profile.png %}
-[2]: {% image_buster /assets/img/getting_started/segment.png %}
-[3]: {% image_buster /assets/img/getting_started/timetovalue.png %}

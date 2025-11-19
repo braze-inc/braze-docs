@@ -1,5 +1,5 @@
 ---
-nav_title: Erstellen einer Leinwandvorlage
+nav_title: Erstellen einer Canvas-Vorlage
 article_title: Erstellen einer Leinwandvorlage
 alias: "/canvas_templates/"
 page_order: 0.5
@@ -25,7 +25,7 @@ Gehen Sie im Braze-Dashboard zu **Messaging** > **Canvas** und wählen Sie ein b
 
 Wählen Sie im Canvas-Editor die Option **Canvas bearbeiten** oder **Entwurf bearbeiten**, je nachdem, ob Ihr Canvas aktiv ist oder sich in einem Entwurf befindet. Erweitern Sie das Dropdown-Menü **Als Entwurf speichern** in der Fußzeile und wählen Sie **Als Vorlage speichern**.
 
-![][2]
+![]({% image_buster /assets/img/save_canvas_as_template.png %})
 
 ### Schritt 3: Template speichern
 
@@ -38,14 +38,14 @@ Als nächstes geben Sie Ihrer Vorlage einen Namen und fügen alle relevanten Tag
 Gehen Sie im Braze-Dashboard zu **Vorlagen** > **Canvas-Vorlagen**.
 
 {% alert note %}
-Wenn Sie die ältere Navigation verwenden, finden Sie diese Seite unter **Engagement** > **Vorlagen & Medien** > **Canvas-Vorlagen**.
+Wenn Sie die ältere Navigation verwenden, finden Sie diese Seite unter **Engagement** > **Templates & Medien** > Canvas Templates.
 {% endalert %}
 
 ### Schritt 2: Eine neue Vorlage erstellen
 
 Wählen Sie **Vorlage erstellen** und beginnen Sie mit dem Einrichten Ihrer Canvas-Details. Sie können damit beginnen, Ihrer Canvas-Vorlage einen Namen zu geben.
 
-![Eine Canvas-Template-Beispiel mit dem Namen „Canvas-Template für jährlichen Verkauf“ mit der Beschreibung „Für die jährliche Aktion im Frühjahr verwenden“.][1]
+![Eine beispielhafte Canvas-Vorlage mit dem Namen "Jährlicher Verkauf Canvas-Vorlage" mit der Beschreibung "Für die jährliche Aktion im Frühjahr verwenden".]({% image_buster /assets/img/canvas_template_example.png %})
 
 ### Schritt 3: Template anpassen
 
@@ -66,12 +66,12 @@ Es gibt zwei Möglichkeiten, Ihr Template beim Erstellen eines Canvas zu verwend
 
 Braze bietet eine Auswahl an Canvas-Templates, die Sie als Referenz und als Best Cases für häufige Anwendungsfälle verwenden können. Diese Vorlagen können zwar nicht bearbeitet werden, aber Sie können sie unter **Vorlagen** > **Lötvorlagen** anzeigen oder in Ihren Leinwänden verwenden.
 
-![Braze-Vorlagen im Bereich Canvas-Vorlagen mit sechs verfügbaren Vorlagen.][3]
+![Braze-Vorlagen im Bereich Canvas-Vorlagen mit sechs verfügbaren Templates.]({% image_buster /assets/img/braze_canvas_templates.png %})
 
 Wählen Sie eine der folgenden Vorlagen aus, die Sie als Referenz oder für Ihr Canvas verwenden können.
 
 {% tabs %}
-{% tab Aufgegebene Absicht %}
+{% tab Abandoned Intent %}
 
 Interagieren Sie mit Nutzer:innen in Realtime, um sie zum Kaufabschluss zu bewegen.
 
@@ -82,7 +82,7 @@ Beachten Sie Folgendes, wenn Sie diese Vorlage verwenden:
 - Füllen Sie die Details im Schritt „Zielgruppen-Synchronisierung“ aus.
 
 {% endtab %}
-{% tab Wieder auf Lager %}
+{% tab Back In Stock %}
 
 Treiben Sie Käufe an, indem Sie Ihre Nutzer mit personalisierten Nachrichten benachrichtigen, wenn ein Artikel wieder vorrätig ist. Beachten Sie Folgendes, wenn Sie diese Vorlage verwenden:
 
@@ -91,7 +91,7 @@ Treiben Sie Käufe an, indem Sie Ihre Nutzer mit personalisierten Nachrichten be
 - Aktualisieren Sie in den Nachrichtenschritten im Canvas das Liquid, um Ihren Katalog zu referenzieren.
 
 {% endtab %}
-{% tab Feature-Übernahme %}
+{% tab Feature Adoption %}
 
 Senden Sie rechtzeitig personalisierte Nachrichten, um die Vorteile und Nutzungstipps hervorzuheben. Beachten Sie Folgendes, wenn Sie diese Vorlage verwenden:
 
@@ -101,7 +101,7 @@ Senden Sie rechtzeitig personalisierte Nachrichten, um die Vorteile und Nutzungs
 - Richten Sie die angepassten Attribute im Schritt „Nachricht“ mit dem Namen „Feedback-Umfrage“ ein, um die Stimmung des Feedbacks zu erfassen.
 
 {% endtab %}
-{% tab Passive Nutzer:innen %}
+{% tab Lapsed User %}
 
 Bringen Sie Nutzer:innen mit Anreizen, die auf ihrem früheren Engagement basieren, zurück zu Ihrer App. Beachten Sie Folgendes, wenn Sie diese Vorlage verwenden:
 
@@ -117,7 +117,7 @@ Erstellen Sie Onboarding-Journeys, die eine starke anfängliche Akzeptanz und da
 - Im Schritt „Zielgruppenpfade“ mit dem Namen „Zielgruppen-Split“ können Sie die Schlüsselaktionen für interessierte Nutzer:innen anpassen. In dem Template lautet der Filter für das Segment „Hat auf die E-Mail für den Willkommens-E-Mail-Schritt geklickt“.
 
 {% endtab %}
-{% tab Feedback nach dem Kauf %}
+{% tab Post-Purchase Feedback %}
 
 Organisieren Sie personalisierte Erlebnisse, mit denen Sie auf Feedback reagieren und eine Beziehung zu Ihren Nutzern aufbauen können. Beachten Sie Folgendes, wenn Sie diese Vorlage verwenden:
 
@@ -162,6 +162,3 @@ Ja, Sie können unvollständige Schritte als Canvas-Vorlage speichern. Wenn die 
 
 Ja, Sie können die Einstellungen im Canvas-Builder innerhalb eines Canvas-Templates speichern. Wenn Sie beispielsweise planen, häufig eine Kombination aus Segmenten und Filtern zu verwenden, können Sie diese **Zielgruppeneinstellungen** als Teil Ihrer Canvas-Vorlage speichern.
 
-[1]: {% image_buster /assets/img/canvas_template_example.png %}
-[2]: {% image_buster /assets/img/save_canvas_as_template.png %}
-[3]: {% image_buster /assets/img/braze_canvas_templates.png %}

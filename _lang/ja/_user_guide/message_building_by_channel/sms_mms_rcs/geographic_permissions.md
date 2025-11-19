@@ -1,5 +1,5 @@
 ---
-nav_title: "地理的許可"
+nav_title: "地理的権限"
 article_title: 地理的許可
 description: "この記事では、SMS、MMS、RCSを配信できる国を選択できる、Geographic Permissionsの国別許可リストについて説明する。"
 page_order: 2
@@ -18,13 +18,17 @@ alias: /geographic_permissions/
 
 管理者は、許可リストに含まれている国を設定できます。国の許可リストは、[サブスクリプショングループ]({{site.baseurl}}/sms_rcs_subscription_groups/) レベルで設定されます。[**オーディエンス**] > [**サブスクリプション**] に移動して、SMS、MMS、または RCS サブスクリプショングループを選択すると、国の許可リストにアクセスできます。許可リストは [**地理的許可**] の下にあります。
 
-![[国許可リスト] で複数の国が選択されている管理者用の編集可能な [SMS の地理的許可] セクション。]({% image_buster /assets/img/sms/sms_geographic_permissions.png %}){: style="max-width:80%;"}
+<<<<<<< HEAD
+![「国別許可リスト」で複数の国を選択した管理者が、SMSの地理的権限セクションを編集できる。]({% image_buster /assets/img/sms/sms_geographic_permissions.png %}){: style="max-width:80%;"}
+=======
+\![「国別許可リスト」で複数の国を選択した管理者が、SMSの地理的権限セクションを編集できる。]({% image_buster /assets/img/sms/sms_geographic_permissions.png %}){: style="max-width:80%;"}
+>>>>>>> main
 
 ### 国の選定
 
 ドロップダウンを使用して、許可リストに国を追加します。最も一般的な SMS と RCSの国が上部に表示され、その他の国は下に表示されます。また、テキストフィールドに入力して国を検索することもできます。
 
-![最も一般的な国が一番上に表示される "Country allowlist "ドロップダウン。]({% image_buster /assets/img/sms/allowlist_dropdown.png %}){: style="max-width:80%;"}
+\![最も一般的な国が一番上に表示される "Country allowlist "ドロップダウン。]({% image_buster /assets/img/sms/allowlist_dropdown.png %}){: style="max-width:80%;"}
 
 以前に選択した国の隣にあるそれぞれのボックスをクリアして、その国を削除します。
 
@@ -32,13 +36,21 @@ alias: /geographic_permissions/
 
 変更は、**Save**を選択すると有効になります。許可リストから国を削除すると、すべてのSMS、MMS、RCSメッセージがそれらの国の番号に送信されなくなる。
 
-![]({% image_buster /assets/img/sms/delete_allowlist_warning.png %}) 許可リストから削除される国を確認する警告モーダル。{: style="max-width:70%;"}
+<<<<<<< HEAD
+![許可リストから削除される国を確認する警告モーダル。]({% image_buster /assets/img/sms/delete_allowlist_warning.png %}){: style="max-width:70%;"}
+=======
+\![許可リストから削除される国を確認する警告モーダル。]({% image_buster /assets/img/sms/delete_allowlist_warning.png %}){: style="max-width:70%;"}
+>>>>>>> main
 
 ## ハイリスク国
 
 一部の国では、SMS および RCS トラフィックポンピングのリスクが高くなっています。これらの国は、国ドロップダウンの**High Risk** タグで示されます。
 
-![国のドロップダウンでアゼルバイジャンに [高リスク] タグが付いている。]({% image_buster /assets/img/sms/high_risk.png %}){: style="max-width:80%;"}
+<<<<<<< HEAD
+![アゼルバイジャンは "高リスク "タグを持つ。]({% image_buster /assets/img/sms/high_risk.png %}){: style="max-width:80%;"}
+=======
+\![アゼルバイジャンは "高リスク "タグを持つ。]({% image_buster /assets/img/sms/high_risk.png %}){: style="max-width:80%;"}
+>>>>>>> main
 
 これらの国での送信を許可する場合は、まずそのリスクを認識してから許可リストに国を追加する必要があります。
 
@@ -52,5 +64,9 @@ alias: /geographic_permissions/
 
 ブロックされ送信が原因で発生した中止メッセージは、[**メッセージ中止のエラー**] として表示され、「受信者の電話番号はブロックされている国の番号です」というメッセージが表示されます。
 
-![電話番号がブロックされている国の番号であるためにブロックされた SMS 送信を示す中止ログ。]({% image_buster /assets/img/sms/abort_log.png %}){: style="max-width:80%;"}
+<<<<<<< HEAD
+![電話番号がブロックされた国にあるため、SMS送信がブロックされたことを示すログを中止する。]({% image_buster /assets/img/sms/abort_log.png %}){: style="max-width:80%;"}
+=======
+\![電話番号がブロックされた国にあるため、SMS送信がブロックされたことを示すログを中止する。]({% image_buster /assets/img/sms/abort_log.png %}){: style="max-width:80%;"}
+>>>>>>> main
 

@@ -2,7 +2,7 @@
 nav_title: Stripo
 article_title: Stripo
 alias: /partners/stripo
-description: "This reference article outlines the partnership between Braze and Stripo, a drag-and-drop email template builder that allows you to easily create sophisticated emails with interactive elements."
+description: "This reference article outlines the partnership between Braze and Stripo, a drag-and-drop email template builder for creating sophisticated emails with interactive elements."
 page_type: partner
 search_tag: Partner
 
@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Stripo
 
-> [Stripo](https://stripo.email/) is a drag-and-drop email template builder that helps you create and design responsive emails with interactive elements. Stripo users can also edit in HTML and decide which elements to display or hide on various devices through the Stripo editor.
+> [Stripo](https://stripo.email/) is a drag-and-drop email template builder for designing responsive emails with interactive elements. Stripo users can also edit in HTML and decide which elements to display or hide on various devices through the Stripo editor.
 
 _This integration is maintained by Stripo._
 

@@ -1,7 +1,7 @@
 ---
 nav_title: Digioh
 article_title: Digioh
-description: "This reference article outlines the partnership between Braze and Digioh, a survey platform that lets you easily create pop-ups, forms, surveys, and communication preference centers that drive real engagement through your Braze campaigns."
+description: "This reference article outlines the partnership between Braze and Digioh, a survey platform for creating pop-ups, forms, surveys, and communication preference centers that drive engagement through your Braze campaigns."
 alias: /partners/digioh/
 page_type: partner
 search_tag: Partner
@@ -10,13 +10,13 @@ search_tag: Partner
 
 # Digioh
 
-> [Digioh](https://www.digioh.com/) helps you grow your lists, capture first-party data, and put your data to use in your Braze campaigns.
+> [Digioh](https://www.digioh.com/) supports list growth, first-party data capture, and use of that data in Braze campaigns.
 
 _This integration is maintained by Digioh._
 
 ## About the integration
 
-The Braze and Digioh integration allows you to use their flexible drag-and-drop builder to create on-brand forms, pop-ups, performance centers, landing pages, and surveys that connect you with your customers. Digioh will aid in integration set up and help build, design, and launch your first campaign for you.
+The Braze and Digioh integration lets you use a drag-and-drop builder to create on-brand forms, pop-ups, preference centers, landing pages, and surveys that connect you with your customers. Digioh assists with integration setup and can build, design, and launch your first campaign.
 
 !["Create flexible email and communications preference centers with Digioh"]({% image_buster /assets/img/digioh/pref_pop_examples.png %}){: style="border:0"}
 

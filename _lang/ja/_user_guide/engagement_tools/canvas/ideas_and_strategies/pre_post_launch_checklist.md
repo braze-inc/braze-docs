@@ -23,7 +23,7 @@ tool: Canvas
 十分な余裕をスケジュールしていない場合は、アラートが表示されます。速やかに解決するには、送信時間を調整して、ユーザーがターゲットセグメントに該当する状態を 24 時間保つことです。
 {% endalert %}
 
-\![2025年4月30日の午前10時から現地時間でユーザーsを一度に入力するキャンバススケジュールされた。]({% image_buster /assets/img_archive/canvas_checklist1.png %}){: style="max-width:75%;"}
+![2025年4月30日の午前10時から現地時間でユーザーsを一度に入力するキャンバススケジュールされた。]({% image_buster /assets/img_archive/canvas_checklist1.png %}){: style="max-width:75%;"}
 
 ### オーディエンスフィルターには正規表現を使用することを検討する
 

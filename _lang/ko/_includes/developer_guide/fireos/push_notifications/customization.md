@@ -1,8 +1,8 @@
 {% multi_lang_include developer_guide/prerequisites/android.md %} [푸시 알림도 설정해야]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=android) 합니다.
 
-## 설정
+## Settings
 
-Braze 대시보드를 통해 전송되는 FireOS 푸시 알림에는 여러 가지 고급 설정을 사용할 수 있습니다. 이 기사에서는 이러한 기능과 성공적으로 사용하는 방법에 대해 설명합니다.
+Braze 대시보드를 통해 전송되는 FireOS 푸시 알림에 사용할 수 있는 많은 고급 설정이 있습니다. 이 기사에서는 이러한 기능과 성공적으로 사용하는 방법에 대해 설명합니다.
 
 ![]({% image_buster /assets/img_archive/android_advanced_settings.png %})
 
@@ -12,15 +12,15 @@ TTL( **Time to Live** ) 필드에서는 푸시 메시징 서비스에 메시지�
 
 ### 요약 텍스트 {#summary-text}
 
-요약 텍스트를 사용하면 확장된 알림 보기에서 추가 텍스트를 설정할 수 있습니다. 이미지가 포함된 알림의 캡션 역할도 합니다.
+요약 텍스트를 사용하면 확장된 알림 보기에서 추가 텍스트를 설정할 수 있습니다. 알림에 이미지가 포함된 경우 캡션으로도 사용됩니다.
 
-![제목이 'Greetings from Appboy!'이고 메시지가 'This is the message body! 이모티콘을 추가할 수도 있습니다." 및 요약 텍스트 "요약 텍스트입니다."]({% image_buster /assets/img_archive/summary_text.png %}){: style="max-width:65%;"}
+![An Android message with the title "This is the title for the notification." and summary text "This is the summary text for the notification."]({% image_buster /assets/img/android/push/collapsed-android-notification.png %}){: style="max-width:65%;"}
 
-요약 텍스트는 확장된 보기에서 메시지 본문 아래에 표시됩니다.
+요약 텍스트는 확장된 보기에서 메시지 본문 아래에 표시됩니다. 
+
+![An Android message with the title "This is the title for the notification." and summary text "This is the summary text for the notification."]({% image_buster /assets/img/android/push/expanded-android-notification.png %}){: style="max-width:65%;"}
 
 푸시 알림에 이미지가 포함된 경우, 메시지 텍스트는 축소된 보기에서 표시되며, 요약 텍스트는 알림이 확장될 때 이미지 캡션으로 표시됩니다. 
-
-!["앱보이!" 제목, "메시지 본문은..." 메시지 및 "요약 텍스트는..."이라는 요약 텍스트가 포함된 Android 메시지]({% image_buster /assets/img_archive/messagesummary.gif %}){: style="max-width:65%;"}
 
 ### 사용자 지정 URI {#custom-uri}
 
@@ -36,9 +36,9 @@ TTL( **Time to Live** ) 필드에서는 푸시 메시징 서비스에 메시지�
 
 푸시 알림의 우선순위 수준은 다른 알림과 비교하여 알림 트레이에 알림이 표시되는 방식에 영향을 줍니다. 또한 우선순위가 일반 이하인 메시지는 배터리 수명을 보존하기 위해 지연 시간이 약간 더 길어지거나 일괄 발송되는 반면, 우선순위가 높은 메시지는 항상 즉시 발송되므로 전송 속도와 방식에도 영향을 줄 수 있습니다.
 
-Android O에서는 알림 우선 순위가 알림 채널의 속성이 되었습니다. 채널의 구성 중 우선순위를 정의하려면 개발자와 협력해야 하며, 알림 소리를 보낼 때 적절한 채널을 선택하려면 대시보드를 사용해야 합니다. Android O 이전 버전을 실행하는 디바이스의 경우, Braze 대시보드 및 메시징 API를 통해 FireOS 알림의 우선순위를 지정할 수 있습니다. 
+Android O에서는 알림 우선 순위가 알림 채널의 속성이 되었습니다. 채널의 구성 중 우선순위를 정의하려면 개발자와 협력해야 하며, 알림 소리를 보낼 때 적절한 채널을 선택하려면 대시보드를 사용해야 합니다. Android O 이전 버전을 실행하는 기기의 경우, Braze 대시보드 및 메시징 API를 통해 FireOS 알림의 우선순위를 지정할 수 있습니다. 
 
-전체 사용자에게 특정 우선순위를 지정하여 메시지를 보내려면 [알림 채널 구성을](https://developer.android.com/training/notify-user/channels#importance) 통해 간접적으로 우선순위를 *지정하고* (O+ 디바이스 대상) 대시보드에서 개별 우선순위를 전송하는 것이 좋습니다(<O 디바이스 대상).
+전체 사용자 기반에 특정 우선순위를 지정하여 메시지를 보내려면 [알림 채널 구성을](https://developer.android.com/training/notify-user/channels#importance) 통해 간접적으로 우선순위를 *지정하고* (O+ 기기 타겟팅), 대시보드에서 개별 우선순위를 전송하는 것이 좋습니다(<O 기기 타겟팅).
 
 Fire OS 푸시 알림에서 설정할 수 있는 우선 순위 수준은 다음과 같습니다:
 
@@ -51,7 +51,7 @@ Fire OS 푸시 알림에서 설정할 수 있는 우선 순위 수준은 다음�
 | 최소      | 상황별 또는 배경 정보. | `-2` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-자세한 내용은 Google의 [Android 알림](http://developer.android.com/design/patterns/notifications.html) 문서를 참조하세요.
+자세한 내용은 Google의 [Android 알림](http://developer.android.com/design/patterns/notifications.html) 설명서를 참조하세요.
 
 ### 소리 {#sounds}
 
@@ -63,4 +63,4 @@ Android O 이전 버전을 실행하는 디바이스의 경우, Braze를 사용�
 
 대시보드 프롬프트에 전체 사운드 리소스 URI(예: `android.resource://com.mycompany.myapp/raw/mysound`)를 입력합니다.
 
-전체 사용자에게 특정 사운드로 메시지를 보내려면 [알림 채널 구성을](https://developer.android.com/training/notify-user/channels) 통해 간접적으로 사운드를 *지정하고* (O+ 디바이스 대상) 대시보드에서 개별 사운드를 전송하는 방법(<O 디바이스 대상)을 권장합니다.
+전체 사용자 기반에 특정 사운드로 메시지를 보내려면 [알림 채널 구성을](https://developer.android.com/training/notify-user/channels) 통해 간접적으로 사운드를 지정(O+ 기기 타겟팅) *하고* 대시보드에서 개별 사운드를 전송(<O 기기 타겟팅)하는 것이 좋습니다.

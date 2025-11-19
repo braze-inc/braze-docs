@@ -35,7 +35,7 @@ Wählen Sie unter dem Abschnitt **Vorlagentyp** die Option **HTML-Editor** und s
 
 ### Schritt 3: Laden Sie Ihre Vorlage hoch
 
-Klicken Sie auf **Aus Datei hochladen** und wählen Sie Ihre Vorlage von Ihrem Computer aus. Lesen Sie den Abschnitt [Voraussetzungen](#upload-requirements), um sicherzustellen, dass Ihre Template die Upload-Anforderungen erfüllt.
+Wählen Sie **Aus Datei hochladen** und wählen Sie Ihr Template von Ihrem Computer aus. Lesen Sie den Abschnitt [Voraussetzungen](#upload-requirements), um sicherzustellen, dass Ihre Template die Upload-Anforderungen erfüllt.
 
 #### Fehler beim Hochladen von Vorlagen beheben
 
@@ -54,7 +54,7 @@ Beim Hochladen einer HTML-Vorlagendatei können Sie mehrere E-Mail-Fehlermeldung
 
 ### Schritt 4: Template fertigstellen und speichern
 
-Stellen Sie sicher, dass Sie Ihre Template speichern, indem Sie auf **Template speichern** klicken. Jetzt können Sie diese Vorlage in jeder beliebigen Kampagne oder jedem beliebigen Canvas verwenden!
+Speichern Sie Ihr Template, indem Sie **Template speichern** auswählen. Jetzt können Sie diese Vorlage in jeder beliebigen Kampagne oder jedem beliebigen Canvas verwenden!
 
 {% alert note %}
 Wenn Sie Änderungen an einer bestehenden Vorlage vornehmen, werden diese Änderungen nicht in Kampagnen übernommen, die mit früheren Versionen dieser Vorlage erstellt wurden.
@@ -64,7 +64,7 @@ Wenn Sie Änderungen an einer bestehenden Vorlage vornehmen, werden diese Änder
 
 Um Ihre E-Mail für eine API-Kampagne zu verwenden, benötigen Sie die `email_template_id`, die Sie am Ende jeder in Braze erstellten E-Mail-Template finden.
 
-![API-Kennungsabschnitt einer HTML-E-Mail-Vorlage.][4]
+![API Bezeichner Abschnitt einer HTML E-Mail Vorlage.]({% image_buster /assets/img_archive/email_template_id.png %}){: style="max-width:50%;"}
 
 ## E-Mail-Vorlagen verwalten
 
@@ -72,8 +72,6 @@ Sie können E-Mail-Templates [duplizieren]({{site.baseurl}}/user_guide/engagemen
 
 ## Häufig gestellte Fragen
 
-Antworten auf häufig gestellte Fragen zu E-Mail-Vorlagen finden Sie auf unserer Seite [E-Mail- und Link-Vorlagen FAQ][10] ].
+Antworten auf häufig gestellte Fragen zu E-Mail Templates finden Sie auf unserer [FAQ-Seite zu E-Mail- und Link-Templates]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/faq/).
 
 
-[4]: {% image_buster /assets/img_archive/email_template_id.png %}
-[10]: {{site.baseurl}}/user_guide/message_building_by_channel/email/templates/faq/

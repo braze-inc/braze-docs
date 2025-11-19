@@ -21,7 +21,7 @@ By integrating Braze and Typeform, you can:
 
 | Requirement | Description |
 | ----------- | ----------- |
-| Typeform account | A Typeform account with access to webhooks is required to take advantage of this partnership. |
+| Typeform account | A Typeform account with access to webhooks are required to take advantage of this partnership. |
 | Braze Data Transformation | A [Data Transformation URL]({{site.baseurl}}/data_transformation/) is necessary to receive data from Typeform. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -45,7 +45,7 @@ Send a test event to your Data Transformation by clicking **View deliveries** an
 
 ### Step 3: Write transformation code to accept your chosen Typeform events
 
-In this step, you will transform the webhook payload that will be sent from Typeform to a JavaScript object return value.
+In this step, you transform the webhook payload that is sent from Typeform to a JavaScript object return value.
 
 1. Refresh your Data Transformation and make sure you can see the Typeform test payload in the **Webhook Details**.
 2. Update your Data Transformation code to support your chosen Typeform events.
@@ -326,7 +326,7 @@ Content-Type: application/json
 
 The following are example templates built using our [example Typeform webhook payload](#example-typeform-webhook-payload). These templates can be used as a starting point. You can start from scratch or delete specific components as you see fit.
 
-In these example templates, we are logging a custom event to the Braze profile. The title of the Typeform will be passed as the custom event name, and the Typeform results will be passed as event properties. These example templates do not account for the Calendly, File Upload, or Payment question types in Typeform.
+In these example templates, we are logging a custom event to the Braze profile. The title of the Typeform is passed as the custom event name, and the Typeform results is passed as event properties. These example templates do not account for the Calendly, File Upload, or Payment question types in Typeform.
 
 ### Use case: Email as identifier
 
@@ -614,7 +614,7 @@ return brazecall;
 
 After you have written your data transformation, click **Validate** to make your Data Transformation code is formatted correctly and will work as expected. Then, save and activate your Data Transformation.
 
-Once activated, custom event data will be logged to a user's profile when they complete your form.
+When activated, custom event data is logged to a user's profile when they complete your form.
 
 ![]({% image_buster /assets/img/typeform/typeform_custom_event.png %})
 

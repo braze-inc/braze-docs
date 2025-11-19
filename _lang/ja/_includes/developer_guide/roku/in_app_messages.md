@@ -1,4 +1,4 @@
-{% multi_lang_include 開発者_guide/prerequisites/roku.md %} さらに、アプリ内メッセージs は、サポートされている最低SDKバージョンを実行しているRoku デバイスにのみ送信されます。
+{% multi_lang_include developer_guide/prerequisites/roku.md %} さらに、アプリ内メッセージs は、サポートされている最低SDKバージョンを実行しているRoku デバイスにのみ送信されます。
 
 {% sdk_min_versions roku:0.1.2 %}
 

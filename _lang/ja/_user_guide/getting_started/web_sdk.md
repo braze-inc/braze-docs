@@ -34,7 +34,7 @@ Braze SDK はユーザーレベルで膨大な量のデータを自動的にキ�
 
 SDK を使用すると、アプリ内メッセージを簡単に作成して送信し、ユーザーと直接やり取りすることができます。キャンペーン戦略に基づいて、スライドアップ、モーダル、または全画面メッセージの送信を選択できます。アプリ内メッセージの作成の詳細については、[アプリ内メッセージの作成]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/)に関するページを参照してください。
 
-\![Webブラウザでプッシュ表示される]({% image_buster /assets/img_archive/web_push_macbook.png %}){: style="float:right;max-width:45%;margin-left:20px;border:0;"}
+![Webブラウザでプッシュ表示される]({% image_buster /assets/img_archive/web_push_macbook.png %}){: style="float:right;max-width:45%;margin-left:20px;border:0;"}
 
 ## プッシュ通知
 
@@ -48,7 +48,7 @@ Web サイトまたはアプリのユーザーは、プッシュ通知を受け�
 
 **特定のアプリからのユーザー**を**ターゲットにしたアプリと Web サイト**を設定して Ｗｅｂ ユーザーのセグメントを作成し、**特定のアプリ**の Web サイトのみを選択できます。
 
-\![Webアプリがフォーカスされたセグメンテーション詳細ページ]({% image_buster /assets/img_archive/web-users-segment.png %}){:style="max-width:60%"}
+![Webアプリがフォーカスされたセグメンテーション詳細ページ]({% image_buster /assets/img_archive/web-users-segment.png %}){:style="max-width:60%"}
 
 これにより、インテリジェントな方法でユーザーの行動に基づいてユーザーをターゲットにすることができます。Web ユーザーをターゲットにしてモバイルアプリのダウンロードを奨励したい場合は、このセグメントをターゲットユーザーとして作成します。Web メッセージではなくモバイルアプリ内メッセージを含むメッセージングキャンペーンを送信したい場合は、セグメント内の Web サイトのアイコンのチェックを外します。
 

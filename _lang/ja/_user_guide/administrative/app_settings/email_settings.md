@@ -28,7 +28,7 @@ channel: email
 
 このセクションでは、Braze からユーザーにメールを送信するときに使用できる名前とメールアドレスを追加できます。表示名とメールアドレスは、メールキャンペーンを作成するときに [**送信情報を編集**] オプションで使用できます。送信メール設定を更新しても、過去にさかのぼって既存の送信には影響しないことに注意してください。
 
-\!["送信メール設定 "セクションには、さまざまな表示名とドメインのフィールドがある。]({% image_buster /assets/img/email_settings/display_name_address.png %})
+!["送信メール設定 "セクションには、さまざまな表示名とドメインのフィールドがある。]({% image_buster /assets/img/email_settings/display_name_address.png %})
 
 #### リキッドでパーソナライズされる
 
@@ -51,7 +51,7 @@ Default to English Display Name
 
 このセクションにメールアドレスを追加すると、そのアドレスをメールキャンペーンの返信先アドレスとして選択できます。[**デフォルトにする**] を選択して、あるメールアドレスをデフォルトのメールアドレスにすることもできます。これらのメールアドレスは、メールキャンペーンを作成するときに [**送信情報を編集**] オプションで使用できます。
 
-\![複数の返信先を入力するフィールドがある。]({% image_buster /assets/img/email_settings/reply_to_address.png %}){: style="max-width:75%;" }
+![複数の返信先を入力するフィールドがある。]({% image_buster /assets/img/email_settings/reply_to_address.png %}){: style="max-width:75%;" }
 
 #### リキッドでパーソナライズされる
 
@@ -80,7 +80,7 @@ BCC アドレスを E メールメッセージに追加すると、ユーザー�
 キャンペーンまたはキャンバスにBCC アドレスを追加すると、キャンペーンまたはキャンバスコンポーネントの請求可能なメールが2 倍になります。これは、Braze が1 つのメッセージをユーザに、1 つはBCC アドレスに送信するためです。
 {% endalert %}
 
-\![メール設定]タブの[BCCアドレス]セクションをクリックする。]({% image_buster /assets/img/email_settings/bcc_address.png %}){: style="max-width:75%;" }
+![メール設定]タブの[BCCアドレス]セクションをクリックする。]({% image_buster /assets/img/email_settings/bcc_address.png %}){: style="max-width:75%;" }
 
 アドレスを追加すると、キャンペーンまたはキャンバスステップでメールを作成するときに、アドレスを選択できるようになります。新規のメールキャンペーンまたはキャンバスコンポーネントを開始するときに、このアドレスがデフォルトで選択されるように設定するには、アドレスの横にある [**デフォルトにする**] を選択します。これをメッセージレベルでオーバーライドするには、メッセージの設定時に [**BCC なし**] を選択します。
 
@@ -91,7 +91,7 @@ Braze から送信されるすべてのメールメッセージに BCC アドレ
 
 ## 開封追跡ピクセル
 
-[\![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/email-open-tracking-pixel/){: style="float:right;width:120px;border:0;" class="noimgborder"}
+[![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/email-open-tracking-pixel/){: style="float:right;width:120px;border:0;" class="noimgborder"}
 
 メールの開封追跡ピクセルは、メールの HTML に自動的に挿入される非表示の 1 x 1 ピクセルの画像です。このピクセルにより、エンドユーザーがメールを開封したどうかを Braze が検出できます。メールの開封情報は非常に便利で、対応する開封率をユーザーが理解して効果的なマーケティング戦略を決定するときに役立ちます。
 
@@ -103,7 +103,7 @@ Braze のデフォルトの動作では、メールの下部に追跡ピクセ�
 
 Braze は現在、メールサービスプロバイダー (ESP) のデフォルトの開封追跡ピクセルの位置 (メールの `<body>` の最後のタグ) をオーバーライドして `<body>` の最初のタグに移動することをサポートしています。
   
-\![SendGrid、SparkPost、またはAmazon SESのために移動するオプションを使用して["トラッキングピクセルを開封する "セクション。]({% image_buster /assets/img/open_pixel.png %}){: style="max-width:80%;" }
+![SendGrid、SparkPost、またはAmazon SESのために移動するオプションを使用して["トラッキングピクセルを開封する "セクション。]({% image_buster /assets/img/open_pixel.png %}){: style="max-width:80%;" }
 
 場所を変更するには、次の手順に従います。
 
@@ -125,7 +125,7 @@ SSLを有効にすると、追跡ピクセルのURLがHTTPではなくHTTPSで�
 
 list-unsubscribe ヘッダーを使用すると、メッセージ本文ではなくメールボックス UI 内に [**購読解除**] ボタンが表示されるため、受信者はマーケティングメールから簡単に配信停止ができます。
 
-\![]({% image_buster /assets/img_archive/list_unsub_img1.png %}){: style="float:right;max-width:60%;margin-left:15px;"}
+![]({% image_buster /assets/img_archive/list_unsub_img1.png %}){: style="float:right;max-width:60%;margin-left:15px;"}
 
 受信者が **[配信停止]**をクリックすると、メールボックスプロバイダーはメールヘッダーに定義されている宛先に配信停止リクエストを送信します。
 
@@ -155,7 +155,7 @@ _\*Yahoo と Gmail は最終的に「mailto:」ヘッダーを廃止し、ワン
 
 ### ワークスペースのメール配信停止ヘッダー
 
-\![どのユーザーに送信するか、「サブスクライバーまたはオプトインしているユーザー」を選択する。]({% image_buster /assets/img/email_settings/email_unsub_header_workspaces.png %}){: style="float:right;max-width:50%;margin-left:15px;"}
+![どのユーザーに送信するか、「サブスクライバーまたはオプトインしているユーザー」を選択する。]({% image_buster /assets/img/email_settings/email_unsub_header_workspaces.png %}){: style="float:right;max-width:50%;margin-left:15px;"}
 
 メール配信停止ヘッダー機能がオンになっている場合、この設定は会社レベルではなく、ワークスペース全体に適用されます。キャンペーンおよびキャンバスビルダーの**Target Audience** ステップで、登録またはオプトインのユーザーまたはオプトインのユーザーに送信するように設定されたキャンペーンおよびキャンバスに追加されます。
 
@@ -169,7 +169,7 @@ Gmail は、2024 年 6 月 1 日以降、送信するすべての商用および
 
 Braze の配信停止機能を使用して配信停止を直接処理するには、[**配信登録済みまたはオプトイン済みのユーザーに送信されるメールに One-Click List-Unsubscribe (mailto および HTTP) ヘッダーを含める**] を選択し、標準の Braze URL および mail-to として [**Braze のデフォルト**] を選択します。 
 
-\![サブスクライブまたはオプトインユーザーに送信されるメールに、自動的に配信停止ヘッダーを含めるオプション。]({% image_buster /assets/img/email_settings/email_unsubscribe_header.png %})
+![サブスクライブまたはオプトインユーザーに送信されるメールに、自動的に配信停止ヘッダーを含めるオプション。]({% image_buster /assets/img/email_settings/email_unsubscribe_header.png %})
 
 Braze は、次のバージョンの list-unsubscribe ヘッダーをサポートしています。
 
@@ -219,7 +219,7 @@ list-unsubscribe ヘッダー([RFC 8058](https://datatracker.ietf.org/doc/html/r
 
 この設定を調整すると、このメールでのワンクリックによるリスト購読解除のデフォルトの動作が上書きされる。
 
-\![]({% image_buster /assets/img/email_settings/one_click_list_unsubscribe_message_level.png %}){: style="max-width:70%;"}
+![]({% image_buster /assets/img/email_settings/one_click_list_unsubscribe_message_level.png %}){: style="max-width:70%;"}
 
 #### 要件
 
@@ -232,13 +232,13 @@ list-unsubscribe ヘッダー([RFC 8058](https://datatracker.ietf.org/doc/html/r
 
 [**カスタムの list-unsubscribe ヘッダー**] を選択して、独自に構成したワンクリック配信停止エンドポイントと、オプションの [mailto:] を追加します。ワンクリック配信停止 HTTP が Yahoo および Gmail の一括送信者に対する要件であるため、Braze では、カスタムの list-unsubscribe ヘッダーをサポートするために URL を入力する必要があります。
 
-\![]({% image_buster /assets/img/email_settings/email_unsubscribe_header_custom.png %}){: style="max-width:80%;"}
+![]({% image_buster /assets/img/email_settings/email_unsubscribe_header_custom.png %}){: style="max-width:80%;"}
 
 ## メールの件名行の追加
 
 テストメールとシードメールの件名行に「[TEST]」と「[SEED]」を含めるには、次のトグルを使用します。これは、テストとして送信されたメールキャンペーンの識別に役立ちます。
 
-\![]({% image_buster /assets/img/email_settings/test_and_seed_email_subject_line.png %}){: style="max-width:70%;"}
+![]({% image_buster /assets/img/email_settings/test_and_seed_email_subject_line.png %}){: style="max-width:70%;"}
 
 ## 新規メールで CSS をデフォルトでインライン化
 
@@ -250,7 +250,7 @@ CSS インライン化は、メールと新規メールの CSS スタイルを�
 
 ユーザーがメールアドレスを変更したときに、そのユーザーへの配信を自動的に再登録できます。例えば、以前に配信停止を行ったワークスペースユーザーが、自分のメールアドレスを Braze の配信停止リストにないアドレスに変更した場合、そのユーザーのサブスクリプションが自動的に再開されます。
 
-\![]({% image_buster /assets/img/email_settings/resubscribe_users.png %}){: style="max-width:90%;" }
+![]({% image_buster /assets/img/email_settings/resubscribe_users.png %}){: style="max-width:90%;" }
 
 ## サブスクリプションのページおよびフッター
 
@@ -263,7 +263,7 @@ CSS インライン化は、メールと新規メールの CSS スタイルを�
 - 配信停止 URL と物理的な郵送先住所を含める必要があります。
 - 100 KB 未満でなければなりません。
 
-\![]({% image_buster /assets/img/email_settings/custom_footer.png %})
+![]({% image_buster /assets/img/email_settings/custom_footer.png %})
 
 カスタムフッターの Liquid テンプレートの詳細については、[カスタムフッター]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#changing-email-subscriptions)に関するドキュメントを参照してください。
 
@@ -272,7 +272,7 @@ CSS インライン化は、メールと新規メールの CSS スタイルを�
 
 Braze を使用すると、独自の HTML を使用して**カスタム配信停止ページ**を設定できます。このページは、ユーザーがメールの下部から配信停止を選択した後に表示されます。このページは 750 KB 未満でなければならないことに注意してください。 
 
-\![]({% image_buster /assets/img/email_settings/custom_unsubscribe.png %})
+![]({% image_buster /assets/img/email_settings/custom_unsubscribe.png %})
 
 メールリスト管理のベストプラクティスの詳細については、「[メールサブスクリプションの管理]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/managing_email_subscriptions/#unsubscribed-email-addresses)」を参照してください。
 
@@ -281,7 +281,7 @@ Braze を使用すると、独自の HTML を使用して**カスタム配信停
 
 独自の HTML を使用してカスタムのオプトインページを作成できます。これをメールに含めると、特にユーザーのライフサイクル全体を通じてブランディングとメッセージの一貫性を維持する場合にメリットがあります。このページは 750 KB 未満でなければならないことに注意してください。 
 
-\![]({% image_buster /assets/img/email_settings/custom_opt_in.png %})
+![]({% image_buster /assets/img/email_settings/custom_opt_in.png %})
 
 メールリスト管理のベストプラクティスの詳細については、「[メールサブスクリプションの管理]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/managing_email_subscriptions/#unsubscribed-email-addresses)」を参照してください。
 

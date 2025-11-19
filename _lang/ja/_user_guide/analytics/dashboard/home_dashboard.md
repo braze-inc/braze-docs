@@ -17,7 +17,7 @@ tool:
 - [中断したところから再開](#pick-up-where-you-left-off)
 - [パフォーマンスの概要](#peformance-overview)
 
-![Braze のホームダッシュボード。]({% image_buster /assets/img_archive/home_dashboard.png %})
+![Brazeでのホームダッシュボード。]({% image_buster /assets/img_archive/home_dashboard.png %})
 
 ## 中断したところから再開
 
@@ -25,25 +25,29 @@ Braze ダッシュボードでは、最近編集または作成したファイ�
 
 最近編集または作成したキャンペーン、キャンバス、およびSegmentを再訪問することができます。それぞれのカードは、内容の種類(キャンペーン、キャンバス、Segment)とステータス(有効、下書き、アーカイブ、停止)を示すタグs とペアになっています。
 
-![[中断したところから再開] セクションのキャンバスの下書き、アクティブなセグメント、およびキャンペーンの下書き。]({% image_buster /assets/img/pick_up_where_you_left_off.png %})
+{% alert note %}
+**キャンペーン、キャンバス、またはSegmentを編集または作成した後に、** セクションアプリをオフにした場所を選択します。
+{% endalert %}
+
+![キャンバス下書き、有効なSegment、および&quot 内のキャンペーン 下書き;オフ" セクションを終了した場所を選択します。]({% image_buster /assets/img/pick_up_where_you_left_off.png %})
 
 ## パフォーマンスの概要
 
 デフォルトでは、**Performance overview** セクションには、すべてのアプリおよびサイトの過去30 日間のデータが表示されます。指標はすべて、選択した日付範囲に基づいて計算されます。
 
-![ホームダッシュボードの日付範囲とアプリフィールド。]({% image_buster /assets/img_archive/home_dashboard_select_date.png %}){: style="max-width:60%;"}
+![ホームダッシュボードの日付レンジとアプリ フィールドs。]({% image_buster /assets/img_archive/home_dashboard_select_date.png %}){: style="max-width:60%;"}
 
 パーセンテージは、*Monthly Active Users*(MAU)を除き、前の日付範囲と比較して現在の日付範囲に基づいて計算されます。この場合、範囲ではなく前の期間の最終日が使用されます。 
 
 例えば、日付範囲を [**過去 7 日間**] に設定し、[*1 日あたりのアクティブユーザー数*] に増加率が 1.8% と表示された場合、先週と比較して今週の 1 日あたりのアクティブユーザー数が 1.8% 増加したことを意味します。
 
-![]({% image_buster /assets/img_archive/home_dashboard_metric_tile.png %}){: style="max-width:60%;"}
+\![]({% image_buster /assets/img_archive/home_dashboard_metric_tile.png %}){: style="max-width:60%;"}
 
 ### 内訳の表示
 
 パフォーマンス概要統計の各行に対して**Show Breakdown**を選択し、指定された日付範囲の各統計値を表示します。
 
-![展開]({% image_buster /assets/img_archive/home_dashboard_breakdown.png %})
+\![展開]({% image_buster /assets/img_archive/home_dashboard_breakdown.png %})
 
 ## 利用可能な統計値
 
