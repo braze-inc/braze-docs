@@ -96,7 +96,7 @@ Braze でビジネスオブジェクトを作成および管理するには、�
 
 ##### マップされた取引先フィールドのテーブルの例
 
-\![請求先住所や取引先所有者など、それぞれの情報を含むSalesforce 取引先のテーブル。]({% image_buster /assets/img/b2b/sf_accounts.png %})
+![請求先住所や取引先所有者など、それぞれの情報を含むSalesforce 取引先のテーブル。]({% image_buster /assets/img/b2b/sf_accounts.png %})
 
 {% endsubtab %}
 {% subtab Opportunity catalog %}
@@ -135,7 +135,7 @@ Braze でビジネスオブジェクトを作成および管理するには、�
 
 ##### マッピングされた商談項目の例のテーブル
 
-\![請求先住所や取引先所有者など、それぞれの情報を含むSalesforce 商談のテーブル。]({% image_buster /assets/img/b2b/sf_opportunities.png %})
+![請求先住所や取引先所有者など、それぞれの情報を含むSalesforce 商談のテーブル。]({% image_buster /assets/img/b2b/sf_opportunities.png %})
 
 {% endsubtab %}
 {% endsubtabs %}

@@ -48,7 +48,11 @@ Braze Currents を使用すると、フラットファイルを使用したデ�
 
 まず、[**パートナー連携**] > [**データのエクスポート**] に移動します。Currents の [連携管理] ページが表示されます。
 
+<<<<<<< HEAD
+![Braze ダッシュボードのCurrents画面]]({% image_buster /assets/img_archive/currents-main-page.png %})
+=======
 \![Braze ダッシュボードのCurrents画面]]({% image_buster /assets/img_archive/currents-main-page.png %})
+>>>>>>> main
 
 ### ステップ 3: パートナーを追加する
 
@@ -60,7 +64,11 @@ Braze Currents を使用すると、フラットファイルを使用したデ�
 
 利用可能なオプションから、パートナーに渡すイベントのチェックボックスをオンにします。これらのイベントのリストは、[顧客行動イベント]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/)ライブラリと[メッセージエンゲージメントイベント]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/)ライブラリにあります。
 
+<<<<<<< HEAD
+![]({% image_buster /assets/img/current4.png %})
+=======
 \![]({% image_buster /assets/img/current4.png %})
+>>>>>>> main
 
 必要に応じて、イベントの詳細について「[イベント配信セマンティクス]({{site.baseurl}}/user_guide/data/braze_currents/event_delivery_semantics/)」の記事を参照してください。
 
@@ -73,7 +81,11 @@ Currents フィールド変換を使用して、文字列フィールドを削�
 
 これらのいずれかの変換を行う対象のフィールドを選択すると、そのフィールドのあるすべてのイベントにその変換が適用されます。例えば、ハッシュ化の対象として `email_address` を選択すると、メール送信数、メール開封数、メールバウンス数、サブスクリプショングループの状態の変更イベントの `email_address` フィールドがハッシュ化されます。
 
+<<<<<<< HEAD
+![フィールド変換の追加]({% image_buster /assets/img/current3.png %})
+=======
 \![フィールド変換の追加]({% image_buster /assets/img/current3.png %})
+>>>>>>> main
 
 ### ステップ6: 連携のテスト
 
@@ -87,7 +99,11 @@ Currents は、900 KB を超える過度に大きなペイロードを持つイ�
 
 連携をテストするには、[**テストイベントを送信**] を選択して、選択した各イベントタイプからこの Current に 1 つのイベントを送信します。各イベントタイプの詳細については、[顧客行動イベント]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/)ライブラリと[メッセージエンゲージメントイベント]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/)ライブラリを参照してください。
 
+<<<<<<< HEAD
+![" Currents Test" Braze ダッシュボードのページ。]({% image_buster /assets/img/currents/current_test_events.png %}){: style="max-width:70%;"}
+=======
 \![" Currents Test" Braze ダッシュボードのページ。]({% image_buster /assets/img/currents/current_test_events.png %}){: style="max-width:70%;"}
+>>>>>>> main
 
 #### 電流コネクタのテスト
 
