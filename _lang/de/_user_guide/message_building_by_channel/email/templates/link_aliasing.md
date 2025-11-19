@@ -10,6 +10,7 @@ channel:
 ---
 
 # [![Braze Lernkurs]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/link-aliasing){: style="float:right;width:120px;border:0;" class="noimgborder"} Link-Aliasing
+# [![Braze Lernkurs]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/link-aliasing){: style="float:right;width:120px;border:0;" class="noimgborder"} Link-Aliasing
  
 > Verwenden Sie Link-Aliasing, um wiedererkennbare, benutzergenerierte Namen zur Identifizierung von Links zu erstellen, die in E-Mail-Nachrichten von Braze gesendet werden. Diese Links sind für Segmentierungs-Retargeting, aktionsbasiertes Triggering und Link-Analysen verfügbar.
 

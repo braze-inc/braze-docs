@@ -76,7 +76,7 @@ guide_menu_list:
   image: /assets/img/braze_icons/annotation-question.svg
 ---
 
-## [\![Curso de Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/messaging-channels-email){: style="float:right;width:120px;border:0;" class="noimgborder"} Personaliza tus correos electrónicos
+## [![Curso de Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/messaging-channels-email){: style="float:right;width:120px;border:0;" class="noimgborder"} Personaliza tus correos electrónicos
 
 Puedes personalizar tu mensajería por correo electrónico de varias formas, entre ellas:
 
