@@ -51,4 +51,6 @@ valid_partner_list:
   url: /docs/partners/message_personalization/dynamic_content/future_anthem
 - name: SEEN
   url: /docs/partners/message_personalization/dynamic_content/seen
+- name: OtherLevels
+  url: /docs/partners/message_personalization/dynamic_content/otherlevels
 ---
