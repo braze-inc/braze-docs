@@ -29,7 +29,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/check-square-broken.svg
 ---
 
-## [\![Braze Lernkurse]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/understanding-webhooks){: style="float:right;width:120px;border:0;" class="noimgborder"} Anwendungsfälle
+## [![Braze Lernkurse]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/understanding-webhooks){: style="float:right;width:120px;border:0;" class="noimgborder"} Anwendungsfälle
 
 Webhooks sind eine hervorragende Möglichkeit, Ihre Systeme miteinander zu verbinden – schließlich kommunizieren Apps über Webhooks. Hier sind einige allgemeine Szenarien, in denen Webhooks besonders nützlich sein können:
 

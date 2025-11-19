@@ -91,7 +91,7 @@ Wenn Sie möchten, dass alle von Braze gesendeten E-Mail-Nachrichten eine BCC-Ad
 
 ## Tracking-Pixel für Öffnungsrate
 
-[\![Braze-Lernkurs]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/email-open-tracking-pixel/){: style="float:right;width:120px;border:0;" class="noimgborder"}
+[![Braze-Lernkurs]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/email-open-tracking-pixel/){: style="float:right;width:120px;border:0;" class="noimgborder"}
 
 Das Tracking-Pixel für die E-Mail-Öffnung ist ein unsichtbares 1 x 1 px großes Bild, das automatisch in den HTML-Code Ihrer E-Mail eingefügt wird. Dieses Pixel hilft Braze zu erkennen, ob die Endnutzer Ihre E-Mail geöffnet haben. Informationen über die Öffnungsrate von E-Mails können sehr nützlich sein, da sie den Nutzern helfen, effektive Marketingstrategien festzulegen, indem sie die entsprechenden Öffnungsraten verstehen.
 

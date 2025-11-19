@@ -6,7 +6,7 @@ description: "Dieser Referenzartikel bietet einen Überblick über häufige Anwe
 search_rank: 2
 ---
 
-# [\![Braze Lernkurs]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/dynamic-personalization-with-liquid){: style="float:right;width:120px;border:0;" class="noimgborder"} Using Liquid
+# [![Braze Lernkurs]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/dynamic-personalization-with-liquid){: style="float:right;width:120px;border:0;" class="noimgborder"} Using Liquid
 
 > In diesem Artikel erfahren Sie, wie Sie eine Vielzahl von Benutzerattributen verwenden können, um persönliche Informationen dynamisch in Ihre Nachrichten einzufügen.
 

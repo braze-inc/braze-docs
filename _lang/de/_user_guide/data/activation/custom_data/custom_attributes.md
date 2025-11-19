@@ -7,7 +7,7 @@ description: "Diese Seite beschreibt angepasste Attribute und erläutert die ver
 search_rank: 1
 ---
 
-# [\![Braze-Lernkurs]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/custom-events-and-attributes){: style="float:right;width:120px;border:0;" class="noimgborder"} Angepasste Attribute
+# [![Braze-Lernkurs]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/custom-events-and-attributes){: style="float:right;width:120px;border:0;" class="noimgborder"} Angepasste Attribute
 
 > Auf dieser Seite finden Sie angepasste Attribute, die eine Sammlung eindeutiger Eigenschaften Ihrer Nutzer:innen darstellen. Angepasste Attribute eignen sich am besten zum Speichern von Attributen über Ihre Nutzer:innen oder von Informationen über geringwertige Aktionen innerhalb Ihrer Anwendung. 
 

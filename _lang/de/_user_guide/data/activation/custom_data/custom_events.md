@@ -7,7 +7,7 @@ description: "Dieser Artikel beschreibt angepasste Events und Eigenschaften, Seg
 search_rank: 2
 ---
 
-# [\![Braze Lernkurse]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/custom-events-and-attributes){: style="float:right;width:120px;border:0;" class="noimgborder"} Angepasste Events
+# [![Braze Lernkurse]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/custom-events-and-attributes){: style="float:right;width:120px;border:0;" class="noimgborder"} Angepasste Events
 
 > Dieser Artikel beschreibt angepasste Events und Eigenschaften, verwandte Segmentierungsfilter, Canvas-Eingangs-Eigenschaften, relevante Analytics und mehr. Mehr über Braze-Ereignisse im Allgemeinen erfahren Sie unter [Events]({{site.baseurl}}/user_guide/data/custom_data/events/).
 

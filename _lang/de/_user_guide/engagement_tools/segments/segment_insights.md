@@ -9,7 +9,7 @@ tool:
 description: "In diesem Artikel erfahren Sie, wie Sie Segment-Insights verwenden, interpretieren und weitergeben können."
 ---
 
-# [\![Braze Lernkurse]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/segmentation-course){: style="float:right;width:120px;border:0;" class="noimgborder"} Segmente Insights
+# [![Braze Lernkurse]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/segmentation-course){: style="float:right;width:120px;border:0;" class="noimgborder"} Segmente Insights
 
 > Lernen Sie, wie Sie Segment-Insights verwenden, interpretieren und weitergeben können. 
 

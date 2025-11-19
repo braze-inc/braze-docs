@@ -6,7 +6,7 @@ description: "Dieser Artikel gibt Ihnen einen Überblick über Intelligentes Tim
 
 ---
 
-# [\![Braze Lernkurs]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/intelligent-timing){: style="float:right;width:120px;border:0;" class="noimgborder"} Intelligentes Timing
+# [![Braze Lernkurs]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/intelligent-timing){: style="float:right;width:120px;border:0;" class="noimgborder"} Intelligentes Timing
 
 > Verwenden Sie Intelligent Timing, um Ihre Nachricht zu dem Zeitpunkt zu versenden, zu dem Braze feststellt, dass der Nutzer sie am ehesten öffnen oder anklicken wird. Dies wird als optimaler Sendezeitpunkt bezeichnet. So können Sie leichter überprüfen, ob Sie Ihre Nutzer zu ihrer bevorzugten Zeit benachrichtigen, was zu einem höheren Engagement führen kann.
 

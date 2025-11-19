@@ -10,7 +10,7 @@ tool: Canvas
 
 # Leinwand Umrisse
 
-[\![Braze-Lernkurs]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/page/courses){: style="float:right;width:120px;border:0;" class="noimgborder"}
+[![Braze-Lernkurs]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/page/courses){: style="float:right;width:120px;border:0;" class="noimgborder"}
 
 > In diesem Artikel finden Sie mehrere Beispiele, die zeigen, wie Sie mit Canvas gezielte, personalisierte Nachrichten mit einer Kombination aus [Verzögerung]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/) und [Nachrichtenschritten]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) erstellen können.
 

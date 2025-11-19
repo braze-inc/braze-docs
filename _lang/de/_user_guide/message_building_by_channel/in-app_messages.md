@@ -50,7 +50,7 @@ guide_menu_list:
   image: /assets/img/braze_icons/annotation-question.svg
 ---
 
-## [\![Braze Lernkurse]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/messaging-channels-in-app-in-browser){: style="float:right;width:120px;border:0;" class="noimgborder"} Potenzielle Anwendungsfälle
+## [![Braze Lernkurse]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/messaging-channels-in-app-in-browser){: style="float:right;width:120px;border:0;" class="noimgborder"} Potenzielle Anwendungsfälle
 
 Mit dem reichhaltigen Angebot an Content, der In-App-Nachrichten bieten, können Sie diesen Kanal für eine Vielzahl von Anwendungsfällen nutzen:
 
