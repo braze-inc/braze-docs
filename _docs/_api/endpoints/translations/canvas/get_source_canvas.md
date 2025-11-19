@@ -1,6 +1,6 @@
 ---
-nav_title: "GET: View default source values for canvas translation tags"
-article_title: "GET: View default source values for canvas translation tags"
+nav_title: "GET: View default source values for Canvas translation tags"
+article_title: "GET: View default source values for Canvas translation tags"
 search_tag: Endpoint
 page_order: 3
 
