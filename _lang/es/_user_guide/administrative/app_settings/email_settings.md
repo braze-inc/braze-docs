@@ -91,7 +91,7 @@ Si necesitas que todos los mensajes de correo electrónico enviados desde Braze 
 
 ## Píxel de seguimiento abierto
 
-[\![Curso de Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/email-open-tracking-pixel/){: style="float:right;width:120px;border:0;" class="noimgborder"}
+[![Curso de Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/email-open-tracking-pixel/){: style="float:right;width:120px;border:0;" class="noimgborder"}
 
 El píxel de seguimiento de apertura de correo electrónico es una imagen invisible de 1 x 1 px que se inserta automáticamente en el HTML de tu correo electrónico. Este píxel ayuda a Braze a detectar si los usuarios finales han abierto tu correo electrónico. La información sobre la apertura del correo electrónico puede ser muy útil, ya que ayuda a los usuarios a determinar estrategias de marketing eficaces conociendo las tasas de apertura correspondientes.
 

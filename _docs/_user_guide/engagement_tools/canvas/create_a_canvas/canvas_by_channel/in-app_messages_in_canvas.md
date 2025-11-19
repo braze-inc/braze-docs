@@ -241,4 +241,4 @@ Here are some considerations when sending in-app messages in a Canvas.
 
 - If the user never restarts the app or never starts a session, the app won't be able to find out if the user is eligible for the in-app message, meaning an in-app message won't be sent.
 - When the first click occurs and there is a Canvas context variable (Canvas entry properties), and a user re-enters a Canvas five times, Braze will take the fifth entry and use that context variable in the in-app message.
-- A user can only be eligible for 10 in-app messages at a time. For example, if a user goes through different Canvas steps for 10 in-app messages, you can only have up to 10 of these steps.
+- A user can be eligible for up to 10 in-app messages within the same Canvas step. For example, if a Canvas allows re-entry and a user enters the Canvas 11 times, they will only be sent 10 in-app messages if none have expired.

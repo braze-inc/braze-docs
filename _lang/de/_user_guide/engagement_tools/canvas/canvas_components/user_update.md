@@ -1,5 +1,5 @@
 ---
-nav_title: Nutzeraktualisierung 
+nav_title: "Nutzer:in-Update"
 article_title: Nutzeraktualisierung 
 alias: "/user_update/"
 page_order: 6
@@ -10,11 +10,13 @@ tool: Canvas
 
 # Nutzeraktualisierung 
 
-![][1]{: style="float:right;max-width:45%;margin-left:15px;"}
-
 > Mit der Komponente User Update können Sie die Attribute, Events und Käufe einer Nutzerin oder eines Nutzers in einem JSON-Composer aktualisieren, so dass Sie keine sensiblen Informationen wie API-Schlüssel eingeben müssen.
 
-Bei der Benutzeraktualisierung werden die Aktualisierungen nicht auf Ihr Limit für `/users/track` Anfragen pro Minute angerechnet. Stattdessen werden diese Updates gebündelt, damit Braze sie effizienter verarbeiten kann als ein Braze-to-Braze-Webhook. Beachten Sie, dass diese Komponente keine [Datenpunkte]({{site.baseurl}}/user_guide/data/data_points/) verbraucht, wenn sie zum Update von nicht abrechenbaren Datenpunkten (wie Abo-Gruppen) verwendet wird.
+## Wie diese Komponente funktioniert
+
+![Ein Nutzer:innen-Update-Schritt namens "Loyalität aktualisieren", der ein Attribut "Ist Premium-Mitglied" auf "wahr" aktualisiert.]({% image_buster /assets/img_archive/canvas_user_update_step.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
+
+Wenn Sie diese Komponente in Ihrem Canvas verwenden, werden Updates nicht auf das Rate-Limit von `/users/track` für Anfragen pro Minute angerechnet. Stattdessen werden diese Updates gebündelt, damit Braze sie effizienter verarbeiten kann als ein Braze-to-Braze-Webhook. Beachten Sie, dass diese Komponente keine [Datenpunkte]({{site.baseurl}}/user_guide/data/data_points/) protokolliert, wenn sie zum Update nicht abrechenbarer Datenpunkte (wie Abo-Gruppen) verwendet wird.
 
 Die Benutzer gelangen erst dann zu den nächsten Canvas-Schritten, wenn die entsprechenden Benutzeraktualisierungen abgeschlossen sind. Das bedeutet, dass alle nachfolgenden Messaging-Nachrichten, die sich auf diese Nutzer:innen-Updates stützen, auf dem neuesten Stand sind, wenn der nächste Schritt ausgeführt wird.
 
@@ -32,13 +34,13 @@ Sie können die mit dieser Komponente vorgenommenen Änderungen auch testen, ind
 
 Um ein benutzerdefiniertes Attribut hinzuzufügen oder zu aktualisieren, wählen Sie einen Attributnamen aus Ihrer Attributliste und geben den Schlüsselwert ein.
 
-![][4]{: style="max-width:90%;"}
+![Nutzer:in Update-Schritt, der die beiden Attribute "Loyalitätsmitglied" und "Loyalitätsprogramm" auf "wahr" aktualisiert.]({% image_buster /assets/img_archive/canvas_user_update_update.png %}){: style="max-width:90%;"}
 
-### Entfernen von benutzerdefinierten Attributen
+### Anpassen von Attributen entfernen
 
 Um ein angepasstes Attribut zu entfernen, wählen Sie einen Attributnamen aus der Dropdown-Liste aus. Sie können zum [erweiterten JSON-Composer](#advanced-json-composer) wechseln, um ihn weiter zu bearbeiten. 
 
-![][5]{: style="max-width:90%;"}
+![Nutzer:in Update-Schritt, der ein Attribut "Loyalty Member" entfernt.]({% image_buster /assets/img_archive/canvas_user_update_remove.png %}){: style="max-width:90%;"}
 
 ### Steigende und fallende Werte
 
@@ -48,7 +50,7 @@ Der Schritt der Benutzeraktualisierung kann einen Attributwert erhöhen oder ver
 
 Indem Sie ein angepasstes Attribut erhöhen, das ein Event verfolgt, können Sie die Anzahl der Kurse verfolgen, die ein:e Nutzer:in in einer Woche belegt hat. Mit dieser Komponente können Sie die Klassenanzahl zu Beginn der Woche zurücksetzen und das Tracking neu beginnen. 
 
-![][7]{: style="max-width:90%;"}
+![Nutzer:in Update-Schritt, der das Attribut "class_count" um eins erhöht.]({% image_buster /assets/img_archive/canvas_user_update_increment.png %}){: style="max-width:90%;"}
 
 ### Aktualisieren eines Arrays von Objekten
 
@@ -60,9 +62,9 @@ Der Schritt Benutzeraktualisierung kann diesem Array von Objekten Attribute hinz
 
 Das Hinzufügen oder Entfernen eines Artikels zu einem Array aktualisiert die Wunschliste des Benutzers.
 
-![][9]{: style="max-width:90%;"}
+![Nutzer:in Update-Schritt, der einen Artikel "sunblock" zum Attribut "items_in_wishlist".]({% image_buster /assets/img_archive/canvas_user_update_wishlist.png %}){: style="max-width:90%;"}
 
-#### Anwendungsfall: Berechnen der Gesamtsumme des Warenkorbs
+#### Anwendungsfälle: Berechnen der Gesamtsumme des Warenkorbs
 
 Verfolgen Sie, wann ein Benutzer Artikel in seinem Einkaufswagen hat, wann er neue Artikel hinzufügt oder Artikel entfernt, und wie hoch der Gesamtwert des Warenkorbs ist. 
 
@@ -122,7 +124,7 @@ Das Attribut `shopping_cart` enthält die Summe vieler benutzerdefinierter Ereig
 
 Mit dem Schritt Nutzer:innen aktualisieren können Sie eine `canvas_entry_property` persistent machen. Angenommen, Sie haben ein Ereignis, das ausgelöst wird, wenn ein Artikel in den Warenkorb gelegt wird. Sie können die ID des zuletzt in den Warenkorb gelegten Artikels speichern und diese für eine Remarketing-Kampagne verwenden. Verwenden Sie die Personalisierungsfunktion, um eine Eigenschaft eines Canvas-Eintrags abzurufen und sie in einem Attribut zu speichern.
 
-![][8]{: style="max-width:90%;"}
+![Nutzer:innen Update Schritt, der das Attribut "most_recent_cart_item" mit einer Artikel ID aktualisiert.]({% image_buster /assets/img_archive/canvas_user_update_cep.png %}){: style="max-width:90%;"}
 
 ### Personalisierung
 
@@ -141,11 +143,11 @@ Wir empfehlen eine vorsichtige Verwendung der Personalisierung von Connected-Con
 
 Fügen Sie dem JSON-Composer ein Attribut, ein Event oder ein JSON-Kauf-Objekt mit bis zu 65.536 Zeichen hinzu. Der Status des [globalen Abonnements]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-states) und der [Abonnementgruppe]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-groups) eines Benutzers kann ebenfalls festgelegt werden.
 
-![][2]{: style="max-width:90%;"}
+![]({% image_buster /assets/img_archive/canvas_user_update_composer.png %}){: style="max-width:90%;"}
 
 Mit dem erweiterten Composer können Sie auch eine Vorschau anzeigen und testen, ob das Nutzerprofil mit den Änderungen aktualisiert wird, indem Sie den Tab **Vorschau und Test** verwenden. Sie können entweder einen zufälligen Nutzer auswählen oder nach einem bestimmten Nutzer:innen suchen. Nachdem Sie einen Test an eine:n Nutzer:in gesendet haben, sehen Sie sich das Nutzerprofil über den generierten Link an.
 
-![][6]{: style="max-width:90%;"}
+![]({% image_buster /assets/img_archive/canvas_user_update_test_preview.png %}){: style="max-width:90%;"}
 
 ### Überlegungen
 
@@ -243,12 +245,3 @@ Sie können mit diesem Canvas-Schritt auch Abonnementgruppen aktualisieren. Das 
 ```
 {% endraw %}
 
-[1]: {% image_buster /assets/img_archive/canvas_user_update_step.png %}
-[2]: {% image_buster /assets/img_archive/canvas_user_update_composer.png %}
-[3]: {% image_buster /assets/img_archive/canvas_user_update_example.png %}
-[4]: {% image_buster /assets/img_archive/canvas_user_update_update.png %}
-[5]: {% image_buster /assets/img_archive/canvas_user_update_remove.png %}
-[6]: {% image_buster /assets/img_archive/canvas_user_update_test_preview.png %}
-[7]: {% image_buster /assets/img_archive/canvas_user_update_increment.png %}
-[8]: {% image_buster /assets/img_archive/canvas_user_update_cep.png %}
-[9]: {% image_buster /assets/img_archive/canvas_user_update_wishlist.png %} 

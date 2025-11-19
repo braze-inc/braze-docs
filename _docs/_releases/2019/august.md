@@ -19,7 +19,7 @@ Your campaign performance report will now list your campaign's details so you do
 You can now manage ([create]({{site.baseurl}}/api/endpoints/email_templates/#create-content-block), [list available]({{site.baseurl}}/api/endpoints/email_templates/#list-available-content-blocks), [get information]({{site.baseurl}}/api/endpoints/email_templates/#see-content-block-information)) your email Content Blocks via API!
 
 {% alert update %}
-This feature is temporarily in limited availability. Reach out to your Braze account manager for more information.
+This feature is temporarily in limited availability. Contact your Braze account manager for more information.
 {% endalert %}
 
 ## Custom email unsubscribe landing page update

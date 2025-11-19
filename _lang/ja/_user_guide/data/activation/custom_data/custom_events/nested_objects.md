@@ -33,7 +33,7 @@ description: "この記事では、階層化 JSON データをカスタムイベ
 2. 階層化プロパティを持つイベントについて、[**プロパティの管理**] を選択します。
 3. スキーマを生成するには、<i class="fas fa-arrows-rotate"></i> ボタンを選択する。スキーマを表示するには、<i class="fas fa-plus"></i> プラスボタンを選択する。
 
-\![]({% image_buster /assets/img_archive/schema_generation_example.png %}){: style="max-width:80%;"}
+![]({% image_buster /assets/img_archive/schema_generation_example.png %}){: style="max-width:80%;"}
 
 今後新しいプロパティが送信される場合、それらは再生成されるまでスキーマには含まれません。スキーマは24 時間ごとに再生成できます。
 
@@ -141,7 +141,7 @@ description: "この記事では、階層化 JSON データをカスタムイベ
 
 「Created Playlist」イベントから階層化プロパティを持つキャンペーンをトリガーします。
 
-\![カスタムイベントのプロパティフィルターのためにネストされたプロパティを選択するユーザー。]({% image_buster /assets/img/nested_object2.png %})
+![カスタムイベントのプロパティフィルターのためにネストされたプロパティを選択するユーザー。]({% image_buster /assets/img/nested_object2.png %})
 
 トリガー条件 `songs[].album.yearReleased` [である] 「1968」は、1968 年にリリースされたアルバムに収録されたいずれかの曲があるイベントと一致します。配列の内部を詳しく調べるために大かっこ (`[]`) の表記を使用し、その配列内の**いずれかの**項目がイベントプロパティと一致すれば、「一致」になります。
 
@@ -154,7 +154,7 @@ description: "この記事では、階層化 JSON データをカスタムイベ
 
 「Ordered」 (注文された) イベントから階層化プロパティを持つキャンペーンをトリガーします。
 
-\![カスタムイベントのために、プロパティフィルタr_details.name を追加するユーザーがマクドナルドである。]({% image_buster /assets/img/nested_object1.png %})
+![カスタムイベントのために、プロパティフィルタr_details.name を追加するユーザーがマクドナルドである。]({% image_buster /assets/img/nested_object1.png %})
 
 `r_details.name`:"Mcdonalds"<br>
 `r_details.location.city`:"Montclair"
@@ -169,7 +169,7 @@ description: "この記事では、階層化 JSON データをカスタムイベ
 
 階層化イベントプロパティに基づいてユーザーをセグメント化するには、[セグメントエクステンション]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/)を使用する必要があります。スキーマを生成すると、階層化オブジェクトエクスプローラーが [セグメンテーション] セクションに表示されます。 
 
-\![]({% image_buster /assets/img_archive/nested_event_properties_segmentation.png %})
+![]({% image_buster /assets/img_archive/nested_event_properties_segmentation.png %})
 
 セグメンテーションでは、トリガーと同じ表記法を使用します (「[メッセージのトリガー](#message-triggering)」を参照)。
 
@@ -179,7 +179,7 @@ description: "この記事では、階層化 JSON データをカスタムイベ
 
 [**パーソナライゼーションの追加**] モーダルを使用して、[パーソナライゼーションタイプ] として [**イベントの詳細プロパティ**] を選択します。これにより、スキーマの生成後に階層化イベントプロパティを追加するオプションを使用できます。
 
-\![]({% image_buster /assets/img_archive/nested_event_properties_personalization.png %}){: style="max-width:70%;"}
+![]({% image_buster /assets/img_archive/nested_event_properties_personalization.png %}){: style="max-width:70%;"}
 
 ## よくある質問
 

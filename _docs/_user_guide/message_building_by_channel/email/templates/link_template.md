@@ -15,7 +15,7 @@ channel:
 > With link templates, you can create dynamic and reusable links for your email campaigns by appending parameters or prepending URLs. This can create consistency in the URLs across your campaigns and messages. 
 
 {% alert note %}
-Link templates are an optional feature. If **Email Link Templates** is missing from the **Templates** section, reach out to your account manager to turn on the feature.
+Link templates are an optional feature. If **Email Link Templates** is missing from the **Templates** section, contact your account manager to turn on the feature.
 {% endalert %}
 
 ## How it works

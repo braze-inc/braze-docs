@@ -291,7 +291,7 @@ Pour obtenir les définitions complètes de tous les indicateurs relatifs aux ba
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#primary-conversions">Conversions primaires</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Conversions primaires (A) ou événement de conversion principal' %}</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Primary Conversions (A) or Primary Conversion Event' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-recipients">Destinataires uniques</a></td>
@@ -299,11 +299,11 @@ Pour obtenir les définitions complètes de tous les indicateurs relatifs aux ba
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#revenue">Chiffre d'affaires</a></td>
-            <td>{% multi_lang_include metrics.md indicateurs='Chiffre d'affaires' %}</td>
+            <td>{% multi_lang_include metrics.md metric='Revenue' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#confidence">Confiance</a></td>
-            <td>{% multi_lang_include metrics.md indicateurs='Confiance' %}</td>
+            <td>{% multi_lang_include metrics.md metric='Confidence' %}</td>
         </tr>
     </tbody>
 </table>

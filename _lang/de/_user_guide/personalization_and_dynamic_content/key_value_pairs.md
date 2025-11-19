@@ -1,5 +1,5 @@
 ---
-nav_title: Schlüssel-Werte-Paare
+nav_title: Schlüssel-Wert-Paare
 article_title: Schlüssel-Werte-Paare
 page_order: 4
 description: "Dieser Artikel behandelt Schlüssel-Wert-Paare und wie man mit ihnen zusätzliche Nutzdaten an Benutzergeräte sendet."
@@ -76,7 +76,7 @@ Der Braze Nachrichten-Editor erstellt automatisch den Schlüssel **Alarm** und *
 
 Diese Werte können auf der Registerkarte **Einstellungen** eingegeben werden, wenn Sie eine Push-Nachricht erstellen. Gehen Sie auf **Hinweisoptionen** und wählen Sie einen Schlüssel aus dem Verzeichnis, der automatisch in einen neuen Schlüssel-Wert-Eintrag eingefügt werden soll.
 
-![][16]
+![]({% image_buster /assets/img_archive/keyvalue_automatickeys.png %})
 {% raw %}
 Wenn Braze eine Push-Benachrichtigung an APNs sendet, wird die Payload als JSON formatiert.
 
@@ -111,9 +111,9 @@ Wenn Braze eine Push-Benachrichtigung an APNs sendet, wird die Payload als JSON 
 
 Zusätzlich zu den Werten aus der ```aps```-Bibliothek können Sie auch benutzerdefinierte Schlüssel-Wert-Paare an das Benutzergerät senden. Die Werte in diesen Paaren sind auf primitive Typen beschränkt: Wörterbuch (Objekt), Array, String, Zahl und Boolean.
 
-![][17]
+![]({% image_buster /assets/img_archive/keyvalue_enterpairs.png %})
 
-Zu den Anwendungsfällen für angepasste Schlüssel-Wert-Paare gehören u.a. die Einhaltung interner Metriken und die Festlegung des Kontexts für die Benutzeroberfläche. Braze erlaubt es Ihnen, zusätzliche Schlüssel-Wert-Paare zusammen mit einer Push-Benachrichtigung zu senden, die von Ihrer Anwendung innerhalb des [Extras-Schlüssels][1] verwendet werden kann. Wenn Sie einen anderen Schlüssel verwenden möchten, vergewissern Sie sich, dass Ihre App mit diesem angepassten Schlüssel umgehen kann.
+Zu den Anwendungsfällen für angepasste Schlüssel-Wert-Paare gehören u.a. die Einhaltung interner Metriken und die Festlegung des Kontexts für die Benutzeroberfläche. Braze erlaubt es Ihnen, zusätzliche Schlüssel-Wert-Paare zusammen mit einer Push-Benachrichtigung zu senden, die von Ihrer Anwendung innerhalb des [Extras-Schlüssels]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/advanced_settings/#extracting-data-from-push-key-value-pairs) verwendet werden kann. Wenn Sie einen anderen Schlüssel verwenden möchten, vergewissern Sie sich, dass Ihre App mit diesem angepassten Schlüssel umgehen kann.
 
 {% alert warning %}
 Sie sollten es vermeiden, in Ihrer Anwendung einen Schlüssel oder ein Wörterbuch der obersten Ebene mit dem Namen "ab" zu verwenden.
@@ -127,7 +127,7 @@ Wenn Sie die HTTP/2-Provider-API verwenden, darf jede einzelne Nutzlast, die Sie
 
 ###### Per API ausgelöste Kampagnen
 
-Mit Braze können Sie benutzerdefinierte Paare aus Strings und Schlüsselwerten senden, die als `extras` bekannt sind. Um auf Ihre Extras in API-gestützten und planmäßigen API-gestützten Kampagnen zuzugreifen, legen Sie im Dashboard einen Schlüssel als "example_key" und einen Wert als {% raw %}`"$json:{"foo": 1, "bar": 1}"`{% endraw %} fest. Dies führt zu einer Ausgabe in der Entwicklerkonsole von `"extras": { "test": { "foo": 1, "bar": 1 }`
+Mit Braze können Sie benutzerdefinierte Paare aus Strings und Schlüsselwerten senden, die als `extras` bekannt sind. Um auf Ihre Extras in API-getriggerten und Zeitplan-getriggerten Kampagnen zuzugreifen, stellen Sie im Dashboard einen Schlüssel als "example_key", und einen Wert als {% raw %}`"$json:{"foo": 1, "bar": 1}"`{% endraw %} ein. Dies führt zu einer Ausgabe in der Entwicklerkonsole von `"extras": { "test": { "foo": 1, "bar": 1 }`
 
 ### Android
 
@@ -145,19 +145,19 @@ Das Backend Ihrer Anwendung muss in der Lage sein, benutzerdefinierte Schlüssel
 
 ###### Per API ausgelöste Kampagnen
 
-Mit Braze können Sie benutzerdefinierte Paare aus Strings und Schlüsselwerten senden, die als `extras` bekannt sind. Um auf Ihre Extras in API-gestützten und planmäßigen API-gestützten Kampagnen zuzugreifen, legen Sie im Dashboard einen Schlüssel als "example_key" und einen Wert als {% raw %}`"$json:{"foo": 1, "bar": 1}"`{% endraw %} fest. Dies führt zu einer Ausgabe in der Entwicklerkonsole von `"extras": { "test": { "foo": 1, "bar": 1 }`.
+Mit Braze können Sie benutzerdefinierte Paare aus Strings und Schlüsselwerten senden, die als `extras` bekannt sind. Um auf Ihre Extras in API-getriggerten und Zeitplan-getriggerten Kampagnen zuzugreifen, stellen Sie im Dashboard einen Schlüssel als "example_key", und einen Wert als {% raw %}`"$json:{"foo": 1, "bar": 1}"`{% endraw %} ein. Dies führt zu einer Ausgabe in der Entwicklerkonsole von `"extras": { "test": { "foo": 1, "bar": 1 }`.
 
 ##### FCM-Nachrichtenoptionen
 
-Android-Push-Benachrichtigungen können mit FCM-Nachrichtenoptionen weiter angepasst werden. Dazu gehören [Benachrichtigungspriorität][8], [Ton][10], Verzögerung, Lebensdauer und Ausblendbarkeit. Diese Werte können bei der Erstellung einer Push-Nachricht auf der Registerkarte **Einstellungen** angegeben werden. Unter [Erweiterte Einstellungen für Push-Benachrichtigungen][7] finden Sie weitere Anweisungen, wie Sie diese Optionen im Braze Message Composer einstellen können.
+Android-Push-Benachrichtigungen können mit FCM-Nachrichtenoptionen weiter angepasst werden. Dazu gehören [Benachrichtigungspriorität]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/customization/advanced_settings/#notification-priority), [Ton]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/customization/advanced_settings/#sounds), Verzögerung, Lebensdauer und Ausblendbarkeit. Diese Werte können bei der Erstellung einer Push-Nachricht auf der Registerkarte **Einstellungen** angegeben werden. Unter [Erweiterte Einstellungen für Push-Benachrichtigungen]({{site.baseurl}}/developer_guide/push_notifications/customization/?sdktab=android#android_settings) finden Sie weitere Anweisungen, wie Sie diese Optionen im Braze Message Composer einstellen können.
 
-![][18]
+![]({% image_buster /assets/img_archive/keyvalue_androidkeys.png %})
 
 ### Stille Push-Benachrichtigungen
 
-Eine stille Push-Benachrichtigung ist eine Push-Benachrichtigung, die keine Warnmeldung oder einen Ton enthält und dazu dient, die Oberfläche oder den Inhalt Ihrer App im Hintergrund zu aktualisieren. Diese Benachrichtigungen verwenden Schlüssel-Wert-Paare, um diese Aktionen der App im Hintergrund auszulösen. Stille Push-Benachrichtigungen unterstützen auch unsere [Deinstallationsüberwachung][4].
+Eine stille Push-Benachrichtigung ist eine Push-Benachrichtigung, die keine Warnmeldung oder einen Ton enthält und dazu dient, die Oberfläche oder den Inhalt Ihrer App im Hintergrund zu aktualisieren. Diese Benachrichtigungen verwenden Schlüssel-Wert-Paare, um diese Aktionen der App im Hintergrund auszulösen. Stille Push-Benachrichtigungen unterstützen auch unsere [Deinstallationsüberwachung]({{site.baseurl}}/user_guide/analytics/tracking/uninstall_tracking/).
 
-Vermarkter sollten testen, ob stille Push-Benachrichtigungen das erwartete Verhalten auslösen, bevor sie sie an die Nutzer ihrer App senden. Nachdem Sie Ihre stille Push-Benachrichtigung [für iOS][2] oder [Android][13] verfasst haben, stellen Sie sicher, dass Sie nur einen Testbenutzer ansprechen, indem Sie nach [externer Benutzer-ID][14] oder [E-Mail-Adresse][15] filtern.
+Vermarkter sollten testen, ob stille Push-Benachrichtigungen das erwartete Verhalten auslösen, bevor sie sie an die Nutzer ihrer App senden. Nachdem Sie Ihre stille Push-Benachrichtigung [für iOS]({{site.baseurl}}/developer_guide/push_notifications/silent/?sdktab=swift) oder [Android]({{site.baseurl}}/developer_guide/push_notifications/silent/?sdktab=android) verfasst haben, stellen Sie sicher, dass Sie nur einen Testbenutzer ansprechen, indem Sie nach [externer Benutzer-ID]({{site.baseurl}}/developer_guide/rest_api/messaging/#external-user-id) oder [E-Mail-Adresse]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) filtern.
 
 Bei der Einführung der Kampagne sollten Sie sich vergewissern, dass Sie keine sichtbare Push-Benachrichtigung auf Ihrem Testgerät erhalten haben.
 
@@ -169,47 +169,26 @@ Das iOS-Betriebssystem kann [Push-Benachrichtigungen]({{site.baseurl}}/developer
 
 Um einer In-App-Nachricht ein Schlüssel-Wert-Paar hinzuzufügen, wählen Sie im Nachrichten-Editor den Tab **Einstellungen**, wählen Sie **Neues Paar hinzufügen** und geben Sie Ihre Schlüssel-Wert-Paare an.
 
-![][21]
+![]({% image_buster /assets/img_archive/keyvalue_iam.png %})
 
-#### Per API ausgelöste Kampagnen
+#### Per API getriggerte Kampagnen
 
-Mit Braze können Sie benutzerdefinierte Paare aus Strings und Schlüsselwerten senden, die als `extras` bekannt sind. Um auf Ihre Extras in API-gestützten und planmäßigen API-gestützten Kampagnen zuzugreifen, legen Sie im Dashboard einen Schlüssel als "example_key" und einen Wert als {% raw %}`"$json:{"foo": 1, "bar": 1}"`{% endraw %} fest. Dies führt zu einer Ausgabe in der Entwicklerkonsole von `"extras": { "test": { "foo": 1, "bar": 1 }`.
+Mit Braze können Sie benutzerdefinierte Paare aus Strings und Schlüsselwerten senden, die als `extras` bekannt sind. Um auf Ihre Extras in API-getriggerten und Zeitplan-getriggerten Kampagnen zuzugreifen, stellen Sie im Dashboard einen Schlüssel als "example_key", und einen Wert als {% raw %}`"$json:{"foo": 1, "bar": 1}"`{% endraw %} ein. Dies führt zu einer Ausgabe in der Entwicklerkonsole von `"extras": { "test": { "foo": 1, "bar": 1 }`.
 
 ## E-Mails
 
-Sowohl SparkPost als auch SendGrid unterstützt Schlüssel-Wert-Paare in E-Mails. Wenn Sie SendGrid verwenden, werden die Schlüssel-Wert-Paare als [eindeutige Argumente][11] gesendet. SendGrid erlaubt es Ihnen, eine unbegrenzte Anzahl von Schlüssel-Wert-Paaren mit bis zu 10.000 Byte Daten anzuhängen. Diese Schlüssel-Wert-Paare können Sie in den Posts des SendGrid [Event Webhook][12] einsehen.
+Sowohl SparkPost als auch SendGrid unterstützt Schlüssel-Wert-Paare in E-Mails. Wenn Sie SendGrid verwenden, werden die Schlüssel-Wert-Paare als [eindeutige Argumente](https://docs.sendgrid.com/for-developers/sending-email/unique-arguments) gesendet. SendGrid erlaubt es Ihnen, eine unbegrenzte Anzahl von Schlüssel-Wert-Paaren mit bis zu 10.000 Byte Daten anzuhängen. Diese Schlüssel-Wert-Paare können Sie in den Posts des SendGrid [Event Webhook](https://sendgrid.com/docs/for-developers/tracking-events/event/) einsehen.
 
 {% alert note %}
 Abgewiesene E-Mails geben keine Schlüssel-Wert-Paare an SparkPost oder SendGrid weiter.
 {% endalert %}
 
-![Tab Sendeinfo des Nachrichten-Editors für E-Mails in Braze.][22]
+![Tab Sendeinfo des Nachrichten-Editors für E-Mails in Braze.]({% image_buster /assets/img_archive/keyvalue_email.png %})
 
 ## Content-Cards
 
 Um ein Schlüssel-Wert-Paar zu einer Content-Card hinzuzufügen, gehen Sie im Nachrichten-Editor von Braze auf den Tab **Einstellungen** und wählen Sie **Neues Paar hinzufügen**.
 
-![Schlüssel-Wert-Paar zur Content-Card hinzufügen][24]{: style="max-width:70%;"}
+![Schlüssel-Wert-Paar zur Content-Card hinzufügen]({% image_buster /assets/img_archive/kvp_content_cards.png %}){: style="max-width:70%;"}
 
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/advanced_settings/#extracting-data-from-push-key-value-pairs
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/silent_push_notifications/
-[4]: {{site.baseurl}}/user_guide/data_and_analytics/tracking/uninstall_tracking/
-[7]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/customization/advanced_settings/
-[8]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/customization/advanced_settings/#notification-priority
-[9]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/advanced_settings/#delivery-options
-[10]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/customization/advanced_settings/#sounds
-[11]: https://docs.sendgrid.com/for-developers/sending-email/unique-arguments
-[12]: https://sendgrid.com/docs/for-developers/tracking-events/event/
-[13]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/silent_push_notifications/
-[14]: {{site.baseurl}}/developer_guide/rest_api/messaging/#external-user-id
-[15]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/
-[16]: {% image_buster /assets/img_archive/keyvalue_automatickeys.png %}
-[17]: {% image_buster /assets/img_archive/keyvalue_enterpairs.png %}
-[18]: {% image_buster /assets/img_archive/keyvalue_androidkeys.png %}
-[19]: {% image_buster /assets/img_archive/keyvalue_android.png %}
-[20]: {% image_buster /assets/img_archive/keyvalue_web.png %}
-[21]: {% image_buster /assets/img_archive/keyvalue_iam.png %}
-[22]: {% image_buster /assets/img_archive/keyvalue_email.png %}
-[23]: {% image_buster /assets/img_archive/keyvalue_newsfeed.png %}
-[24]: {% image_buster /assets/img_archive/kvp_content_cards.png %}

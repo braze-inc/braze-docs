@@ -1,5 +1,5 @@
 ---
-nav_title: Suche nach Kampagnen
+nav_title: Suchen nach Kampagnen
 article_title: Suche nach Kampagnen
 page_order: 10
 page_type: reference
@@ -22,7 +22,7 @@ Es gibt mehrere Möglichkeiten, auf der Seite mit der Kampagnenliste nach Kampag
 
 Sie können die Suchleiste verwenden, um Schlüsselwörter und Phrasen einzugeben, die mit dem Namen Ihrer Kampagne in Verbindung stehen. Um eine exakte Suche durchzuführen, verwenden Sie Anführungszeichen (""), um Ihren Suchbegriff zu umgeben. Wenn Sie zum Beispiel speziell nach Webhook-Testkampagnen suchen möchten, geben Sie `"webhook test"` in die Suchleiste ein.
 
-![Die Seite mit der Kampagnenliste, auf der drei Kampagnen aufgelistet sind. Die Seite ist so aufgebaut, dass aktive Kampagnen angezeigt werden. Die Spalten sind „Name“, „Status“, „Stoppdatum“, „Kampagnentyp“ und „Gesendet“, um die Ansicht zu organisieren.]({% image_buster /assets/img/campaign_list_example.png %})
+\![Die Seite mit der Kampagnenliste, auf der drei Kampagnen aufgeführt sind. Die Seite ist so aufgebaut, dass aktive Kampagnen angezeigt werden. Die Spalten sind Name, Status, Stoppdatum, Kampagnentyp und Gesendet, um die Ansicht zu organisieren.]({% image_buster /assets/img/campaign_list_example.png %})
 
 ### Auswählen eines Status
 

@@ -1,5 +1,5 @@
 # http://peey.me/notes/4/custom-variables-in-jekyll-permalinks/
-# modifed from site.pages.docs.each => site.documents.each and page level permalink override
+# modified from site.pages.docs.each => site.documents.each and page level permalink override
 module Jekyll
     class PermalinkRewriter < Jekyll::Generator
         safe true

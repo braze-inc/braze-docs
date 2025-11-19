@@ -1,5 +1,5 @@
 ---
-nav_title: Mehrere Geschäftskonten 
+nav_title: Mehrere Geschäftskonten
 article_title: Mehrere WhatsApp Geschäftskonten und Telefonnummern
 page_order: 2
 description: "Dieser Referenzartikel beschreibt die Schritte zum Hinzufügen von WhatsApp Business-Konten und Telefonnummern."
@@ -18,12 +18,18 @@ Mehrere WhatsApp Business-Konten sind nützlich, wenn Sie WhatsApp-Nachrichten a
 
 Geschäftskonten, die innerhalb desselben Meta Business Manager verschachtelt sind, teilen sich auch die Verwaltung der Nutzerzugriffsrechte und Kataloge (noch nicht von Braze unterstützt).
 
+![Diagramm des Braze- und WhatsApp-Ökosystems, das zeigt, wie Workspaces und WhatsApp Business-Konten miteinander verbunden sind: Sie können eine Abo-Gruppe mit einer Telefonnummer, mehrere WhatsApp Business-Konten mit einem Workspace und einen Workspace mit mehreren Meta Business-Portfolios verbinden.]({% image_buster /assets/img/whatsapp/whatsapp_braze_ecosystem.png %}) 
+
 ### Hinzufügen eines WhatsApp Business-Kontos
 
-Sie können bis zu 10 WhatsApp Business-Konten pro Arbeitsbereich hinzufügen. Um ein Konto hinzuzufügen:
+Sie können bis zu 10 WhatsApp Business-Konten pro Arbeitsbereich hinzufügen. Die Geschäftskonten können in verschiedenen Meta Business Managern verschachtelt sein. Um ein Konto hinzuzufügen:
 
-1. Gehen Sie zu **Technologiepartner** > **WhatsApp** und wählen Sie **WhatsApp Business-Konto hinzufügen**. ![Bereich WhatsApp-Messaging-Integration mit Optionen zum Hinzufügen eines Geschäftskontos oder einer Abo-Gruppe und einer Nummer.][1]<br>
-2. Gehen Sie den Anmeldevorgang durch. Eine detaillierte Schritt-für-Schritt-Anleitung finden Sie unter [WhatsApp Embedded Signup]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/embedded_signup/).
+1. Gehen Sie zu **Technologie Partner** > **WhatsApp** und wählen Sie **WhatsApp Business-Konto hinzufügen**. 
+
+![WhatsApp Messaging Integration mit Optionen zum Hinzufügen eines Geschäftskontos oder zum Hinzufügen einer Abo-Gruppe und einer Nummer.]({% image_buster /assets/img/whatsapp/multiple_wabas.png %})
+
+{: start="2"}
+2\. Gehen Sie den Anmeldevorgang durch. Eine detaillierte Schritt-für-Schritt-Anleitung finden Sie unter [WhatsApp Embedded Signup]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/embedded_signup/).
 
 {% alert important %}
 Ihre Telefonnummer muss alle Anforderungen an eine WhatsApp-Telefonnummer erfüllen, einschließlich der, dass sie nicht für andere WhatsApp-Konten registriert ist.
@@ -43,12 +49,14 @@ Jede WhatsApp-Telefonnummer wird den Benutzern als separater WhatsApp-Chat angez
 
 Sie können bis zu 20 Abonnementgruppen (und sendende Telefonnummern) pro WhatsApp Business-Konto hinzufügen. So fügen Sie eine Abonnementgruppe und eine Rufnummer hinzu:
 
-1. Gehen Sie zu **Technologiepartner** > **WhatsApp** und wählen Sie **Abonnementgruppe und Nummer hinzufügen**.![Abschnitt WhatsApp Messaging Integration mit Optionen zum Hinzufügen eines Geschäftskontos oder zum Hinzufügen einer Abonnementgruppe und Nummer.][1]<br>
-2. Gehen Sie den Anmeldevorgang durch. <br><br> Im Schritt **Wählen Sie Ihr WhatsApp Business-Konto** wählen Sie Ihr bestehendes WhatsApp Business-Konto aus und fügen eine neue Telefonnummer hinzu. Diese Nummer muss alle Anforderungen an eine WhatsApp-Telefonnummer erfüllen, einschließlich der, dass sie nicht für andere WhatsApp-Konten registriert ist.
+1. Gehen Sie zu **Technologie Partner** > **WhatsApp** und wählen Sie **Abo-Gruppe und Nummer hinzufügen**.
+
+![WhatsApp Messaging Integration mit Optionen zum Hinzufügen eines Geschäftskontos oder zum Hinzufügen einer Abo-Gruppe und einer Nummer.]({% image_buster /assets/img/whatsapp/multiple_wabas.png %})
+
+{: start="2"}
+2\. Gehen Sie den Anmeldevorgang durch. <br><br> Im Schritt **Wählen Sie Ihr WhatsApp Business-Konto** wählen Sie Ihr bestehendes WhatsApp Business-Konto aus und fügen eine neue Telefonnummer hinzu. Diese Nummer muss alle Anforderungen an eine WhatsApp-Telefonnummer erfüllen, einschließlich der, dass sie nicht für andere WhatsApp-Konten registriert ist.
 
 ### Entfernen einer Abonnementgruppe und Rufnummer 
 
 1. Gehen Sie zu **Zielgruppe** > **Abonnements** und archivieren Sie die Abonnementgruppe.
 2. Gehen Sie zu Ihrem Meta Business Manager und löschen Sie die Rufnummer.
-
-[1]: {% image_buster /assets/img/whatsapp/multiple_wabas.png %} 

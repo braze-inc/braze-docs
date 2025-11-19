@@ -23,9 +23,9 @@ Gehen Sie zu **Vorlagen** > **E-Mail-Vorlagen**.
 
 Wählen Sie zwischen dem **Drag-and-Drop-Editor** oder dem **HTML-Editor** für Ihre Bearbeitung. 
 
-Als Nächstes können Sie aus vorgefertigten Braze-Vorlagen wählen, eine neue Vorlage erstellen oder eine vorhandene Vorlage bearbeiten (einfach oder [mobile responsive][8]).
+Als Nächstes können Sie aus vorgefertigten Braze Templates wählen, ein neues Template erstellen oder ein bestehendes Template (einfach oder [mobil responsiv]({{site.baseurl}}/help/release_notes/2018/may/#mobile-responsive-email-templates)) bearbeiten.
 
-![Eine E-Mail-Template für den Frühjahrsverkauf eines Unternehmens mit der Möglichkeit, den Drag-and-Drop-Editor oder den HTML-Editor auszuwählen oder aus Braze-Templates auszuwählen.][2]
+![Eine E-Mail-Vorlage für den Frühjahrsverkauf eines Unternehmens mit der Möglichkeit, den Drag-and-Drop-Editor oder den HTML-Editor auszuwählen oder aus Braze-Vorlagen auszuwählen.]({% image_buster /assets/img/email_templates/template2.png %})
 
 {% alert note %}
 Vorhandene benutzerdefinierte HTML-Vorlagen müssen mit dem Drag-and-Drop-Editor neu erstellt werden.
@@ -43,12 +43,12 @@ Wenn Sie bei der Gestaltung Ihrer E-Mail-Vorlage keinen Abmeldelink einfügen, w
 
 E-Mail-Fehler werden auf der Registerkarte **Verfassen** des Nachrichten-Workflows angezeigt. Fehler hindern Sie am Vorankommen. "Warnungen" sind Hinweise, die Ihnen helfen sollen, die besten Praktiken zu befolgen. Je nach Ihrem Unternehmen können Sie sie auch ignorieren.
 
-![Liste der Fehler und Warnungen aus einer Beispiel E-Mail.][1]{: style="float:right;max-width:40%;margin-left:15px;"}
+![Fehler- und Warnliste aus einer Beispiel-E-Mail.]({% image_buster /assets/img/dnd_compose_error.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
 Hier finden Sie eine Liste der Fehler, die in unserem Editor berücksichtigt werden:
 
 - Falsche Liquid-Syntax
-- [E-Mail-Textkörper größer als 400kb; es wird dringend empfohlen, dass diese weniger als 102kb groß sind][7]
+- [E-Mail-Textkörper größer als 400kb; es wird dringend empfohlen, dass sie weniger als 102kb groß sind.]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/)
 - Templates ohne Abmeldelink
 - E-Mails mit leerem **Text** oder **Betreff**
 - E-Mails ohne Abmeldelink
@@ -57,19 +57,25 @@ Hier finden Sie eine Liste der Fehler, die in unserem Editor berücksichtigt wer
 
 Nachdem Sie Ihr Template erstellt haben, können Sie es testen, bevor Sie es versenden.
 
-Klicken Sie am unteren Rand des Übersichtsbildschirms auf **Vorschau und Test**. Hier können Sie eine Vorschau darauf sehen, wie Ihre E-Mail im Posteingang eines Kunden erscheinen wird. Wenn Sie **Vorschau als Benutzer** ausgewählt haben, können Sie Ihre E-Mail als zufälliger Benutzer anzeigen lassen, einen bestimmten Benutzer auswählen oder einen benutzerdefinierten Benutzer erstellen. So können Sie testen, ob Ihre Connected-Content- und Personalisierungsaufrufe wie gewünscht funktionieren.
+Wählen Sie unten auf dem Übersichtsbildschirm **Vorschau und Test** aus. Hier können Sie eine Vorschau darauf sehen, wie Ihre E-Mail im Posteingang eines Kunden erscheinen wird. Wenn Sie **Vorschau als Benutzer** ausgewählt haben, können Sie Ihre E-Mail als zufälliger Benutzer anzeigen lassen, einen bestimmten Benutzer auswählen oder einen benutzerdefinierten Benutzer erstellen. So können Sie testen, ob Ihre Connected-Content- und Personalisierungsaufrufe wie gewünscht funktionieren. 
+
+Dann können Sie **Vorschau-Link kopieren**, um einen Vorschau-Link zu erzeugen und zu kopieren, der zeigt, wie die E-Mail für einen zufälligen Nutzer:innen aussehen wird. Der Link bleibt sieben Tage lang bestehen, bevor er erneuert werden muss.
 
 Sie können auch zwischen der Desktop-, der Mobil- und der Klartextansicht wechseln, um ein Gefühl dafür zu bekommen, wie Ihre Nachricht in verschiedenen Kontexten erscheinen wird.
 
+{% alert tip %}
+Sind Sie neugierig, wie Ihre E-Mails für Nutzer:innen im Dark Mode aussehen? Wählen Sie den Schalter für die **Vorschau im dunklen Modus** im Bereich **Vorschau und Test** (nur im Drag & Drop-Editor).
+{% endalert %}
+
 Wenn Sie für eine abschließende Prüfung bereit sind, wählen Sie **Senden testen** und senden Sie eine Testnachricht an sich selbst oder an eine Gruppe von Inhaltstestern, um sicherzustellen, dass Ihre E-Mail auf einer Vielzahl von Geräten und E-Mail-Clients korrekt angezeigt wird.
 
-![Beispiel für eine Vorschau einer E-Mail, die zu Testzwecken versendet wird.][6]
+![Beispiel für eine Vorschau einer E-Mail, die zu Testzwecken verschickt wird.]({% image_buster /assets/img_archive/newEmailTest.png %})
 
-Wenn Sie Probleme mit Ihrer Vorlage feststellen oder Änderungen vornehmen möchten, klicken Sie auf **E-Mail bearbeiten**, um zum Editor zurückzukehren.
+Wenn Sie Probleme mit Ihrer Vorlage sehen oder Änderungen vornehmen möchten, wählen Sie **E-Mail bearbeiten**, um zum Editor zurückzukehren.
 
-## Schritt 6: Speichern Sie Ihr Template
+## Schritt 6: Template speichern
 
-Stellen Sie sicher, dass Sie Ihre Template speichern, indem Sie auf **Template speichern** klicken. Jetzt können Sie diese Vorlage in jeder beliebigen Kampagne oder Canvas-Komponente verwenden. Um auf Ihre Vorlage zuzugreifen, wählen Sie die Bearbeitungsfunktion, mit der Sie sie erstellt haben, und wählen Sie sie dann aus der Liste der verfügbaren Vorlagen aus.
+Speichern Sie Ihr Template, indem Sie **Template speichern** auswählen. Jetzt können Sie diese Vorlage in jeder beliebigen Kampagne oder Canvas-Komponente verwenden. Um auf Ihre Vorlage zuzugreifen, wählen Sie die Bearbeitungsfunktion, mit der Sie sie erstellt haben, und wählen Sie sie dann aus der Liste der verfügbaren Vorlagen aus.
 
 {% alert note %}
 Wenn Sie Änderungen an einer bestehenden Vorlage vornehmen, werden diese Änderungen nicht in Kampagnen übernommen, die mit früheren Versionen dieser Vorlage erstellt wurden.
@@ -83,31 +89,21 @@ Wenn Sie weitere E-Mail Templates erstellen, können Sie die E-Mail Templates [d
 
 Um Ihre E-Mail für eine API-Kampagne zu verwenden, benötigen Sie eine `email_template_id`, die Sie am Ende jeder in Braze erstellten E-Mail-Template finden.
 
-![API Bezeichner, der sich am unteren Rand eines E-Mail Templates befindet.][5]
+![API Bezeichner, der sich am unteren Rand eines E-Mail Templates befindet.]({% image_buster /assets/img/email_templates/template5.png %})
 
 ### Kommentare zu E-Mail Templates
 
 Sie können E-Mail-Vorlagen im Drag-and-Drop-Editor gemeinsam bearbeiten und kommentieren. 
 
-1. Klicken Sie auf den Inhaltsblock oder die Zeile in der E-Mail, zu der Sie einen Kommentar abgeben möchten.
+1. Wählen Sie den Content-Block oder die Zeile in der E-Mail aus, zu der Sie einen Kommentar abgeben möchten.
 2. Wählen Sie das Symbol <i class="fas fa-comment"></i> Kommentar.
-3. Geben Sie Ihren Kommentar in der Seitenleiste ein und klicken Sie dann auf **Absenden**.
-4. Nachdem Sie Ihre Kommentare eingegeben haben, klicken Sie auf **Fertig**.
-5. Klicken Sie auf **Vorlage speichern**, um Ihre Kommentare zu speichern.
+3. Geben Sie Ihren Kommentar in der Seitenleiste ein und wählen Sie dann **Senden**.
+4. Nachdem Sie Ihre Kommentare eingegeben haben, wählen Sie **Fertig**.
+5. Wählen Sie **Template speichern**, um Ihre Kommentare zu speichern.
 
 Nachdem Ihre Vorlage gespeichert wurde, sehen die Benutzer Symbole über nicht beantworteten Kommentaren. Wählen Sie **Auflösen**, um diese Kommentare aufzulösen.
 
-![Ein Kommentar in einer E-Mail-Template, der lautet "Sieht gut aus".][10]
+![Ein Template für E-Mails mit dem Kommentar "Sieht gut aus".]({% image_buster /assets/img/email_templates/template_comment.png %})
 
-Antworten auf häufig gestellte Fragen zu E-Mail-Vorlagen finden Sie in unseren [Vorlagen FAQ][9].
+Antworten auf häufig gestellte Fragen zu E-Mail Templates finden Sie in unseren [FAQ zu Templates]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/faq/).
 
-[1]: {% image_buster /assets/img/dnd_compose_error.png %}
-[2]: {% image_buster /assets/img/email_templates/template2.png %}
-[3]: {% image_buster /assets/img/email_templates/template3.png %}
-[4]: {% image_buster /assets/img/email_templates/template4.png %}
-[5]: {% image_buster /assets/img/email_templates/template5.png %}
-[6]: {% image_buster /assets/img_archive/newEmailTest.png %}
-[7]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/
-[8]: {{site.baseurl}}/help/release_notes/2018/may/#mobile-responsive-email-templates
-[9]: {{site.baseurl}}/user_guide/message_building_by_channel/email/templates/faq/
-[10]: {% image_buster /assets/img/email_templates/template_comment.png %}

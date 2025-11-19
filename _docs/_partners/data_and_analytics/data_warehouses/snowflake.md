@@ -40,7 +40,7 @@ Before you can use this feature, you'll need to complete the following:
 
 | Requirement | Description |
 | ----------- | ----------- |
-| Braze access | To access this feature in Braze, you'll need to reach out to your Braze account or customer success manager. |
+| Braze access | To access this feature in Braze, you'll need to contact your Braze account or customer success manager. |
 | Snowflake account | A Snowflake account with `admin` permissions. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

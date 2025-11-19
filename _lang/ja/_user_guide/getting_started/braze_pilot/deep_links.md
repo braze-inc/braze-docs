@@ -199,12 +199,12 @@ th:nth-child(6), td:nth-child(6) {
 
 | アイコン | 画像 |
 | --- | --- |
-| `RUNNING_HOME` | \![ランニングシューズのアイコンだ。]({% image_buster /assets/img/braze_pilot/running_home_icon.png %}){:style="max-width:30%"} |
-| `HEART_DETAILS` | \![ハートのアイコンだ。]({% image_buster /assets/img/braze_pilot/heart_details_icon.png %}){:style="max-width:30%"} |
-| `TIMER_DETAILS` | \![ストップウォッチのアイコンだ。]({% image_buster /assets/img/braze_pilot/timer_details_icon.png %}){:style="max-width:30%"} |
-| `YOGA_HOME` | \![ヨガのポーズをとる人のアイコンだ。]({% image_buster /assets/img/braze_pilot/yoga_home_icon.png %}){:style="max-width:30%"} |
-| `BICYCLE_HOME` | \![自転車のアイコンだ。]({% image_buster /assets/img/braze_pilot/bicycle_home_icon.png %}){:style="max-width:30%"} |
-| `DUMBBELL_HOME` | \![ダンベルのアイコンだ。]({% image_buster /assets/img/braze_pilot/dumbbell_home_icon.png %}){:style="max-width:30%"} |
+| `RUNNING_HOME` | ![ランニングシューズのアイコンだ。]({% image_buster /assets/img/braze_pilot/running_home_icon.png %}){:style="max-width:30%"} |
+| `HEART_DETAILS` | ![ハートのアイコンだ。]({% image_buster /assets/img/braze_pilot/heart_details_icon.png %}){:style="max-width:30%"} |
+| `TIMER_DETAILS` | ![ストップウォッチのアイコンだ。]({% image_buster /assets/img/braze_pilot/timer_details_icon.png %}){:style="max-width:30%"} |
+| `YOGA_HOME` | ![ヨガのポーズをとる人のアイコンだ。]({% image_buster /assets/img/braze_pilot/yoga_home_icon.png %}){:style="max-width:30%"} |
+| `BICYCLE_HOME` | ![自転車のアイコンだ。]({% image_buster /assets/img/braze_pilot/bicycle_home_icon.png %}){:style="max-width:30%"} |
+| `DUMBBELL_HOME` | ![ダンベルのアイコンだ。]({% image_buster /assets/img/braze_pilot/dumbbell_home_icon.png %}){:style="max-width:30%"} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## PantsLabyrinth

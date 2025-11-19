@@ -23,13 +23,13 @@ You can check the specific time range in the Troubleshooting section of the docu
 
 The specific fields used for each partner may vary depending on the partner's requirements. 
 
-For example, when you configure an Audience Sync to Facebook, you will be able to use a wide variety of first-party fields like email, phone, first name, and last name, whereas, with Snapchat, you will only be able to select either email, phone, or mobile advertiser ID. 
+For example, when you configure an Audience Sync to Facebook, you can use a wide variety of first-party fields like email, phone, first name, and last name, whereas, with Snapchat, you only be able to select either email, phone, or mobile advertiser ID. 
 
 It is important to note that the user fields you can select to sync correlate with Braze standard attributes and the mobile advertising IDs. You must ensure you appropriately pass this data via our SDKs or APIs. 
 
 ### What happens when my data is being processed to send to each Audience Sync partner?
 
-The data you select to send to your Audience Sync destination will be normalized. Each partner may have different specifications for data normalization based on their API requirements, so please review each partner-specific endpoint for further details.
+The data you select to send to your Audience Sync destination will be normalized. Each partner may have different specifications for data normalization based on their API requirements, so review each partner-specific endpoint for further details.
 
 In addition, Braze will hash all data before syncing users with our Audience Sync partners, ensuring that all PII is hashed using SHA256.
 

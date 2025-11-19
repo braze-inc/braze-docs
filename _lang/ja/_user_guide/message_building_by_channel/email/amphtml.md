@@ -42,7 +42,7 @@ AMP メールをユーザーに送信する前に、メールクライアント�
 
 Gmailの設定に移動し、**ダイナミックなメールを有効にする**を**全般**の下で選択します。
 
-\![ダイナミックなメールを有効にする」チェックボックスを選択したGmailの設定例。]({% image_buster /assets/img/dynamic-content.png %})
+![ダイナミックなメールを有効にする」チェックボックスを選択したGmailの設定例。]({% image_buster /assets/img/dynamic-content.png %})
 
 ## API使用
 

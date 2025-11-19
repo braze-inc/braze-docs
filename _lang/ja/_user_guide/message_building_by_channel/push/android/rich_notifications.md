@@ -44,7 +44,7 @@ Android用のプッシュ通知を作成するための[キャンペーンを作
 
 通知の画像の前に表示する **要約テキスト / 画像キャプション**を追加します。
 
-\!["画像を追加したり、"画像のURLを入力したりできる拡張通知 "画像画面。]({% image_buster /assets/img_archive/android_rich_summarytext.png %})
+!["画像を追加したり、"画像のURLを入力したりできる拡張通知 "画像画面。]({% image_buster /assets/img_archive/android_rich_summarytext.png %})
 
 ### ステップ 3: メディアを追加する
 
@@ -52,7 +52,7 @@ Android用のプッシュ通知を作成するための[キャンペーンを作
 
 サポートしている画像の詳細については、「[画像の仕様]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#push)」を参照してください。
 
-\![ユーザーは、"Hi the" as the title and " the title and " ロイヤルティプログラム!" を本文として、iOSのプッシュ通知を受け取ります。]({% image_buster /assets/img_archive/android_rich_image.png %})
+![ユーザーは、"Hi the" as the title and " the title and " ロイヤルティプログラム!" を本文として、iOSのプッシュ通知を受け取ります。]({% image_buster /assets/img_archive/android_rich_image.png %})
 
 ### ステップ 4: キャンペーンの作成を続ける
 
