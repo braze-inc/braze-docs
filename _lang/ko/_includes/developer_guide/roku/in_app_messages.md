@@ -1,12 +1,12 @@
-{% multi_lang_include developer_guide/prerequisites/roku.md %} 또한 인앱 메시지는 지원되는 최소 SDK 버전을 실행하는 Roku 디바이스로만 전송됩니다:
+{% multi_lang_include developer_guide/prerequisites/roku.md %} 또한 인앱 메시지는 지원되는 최소 SDK 버전을 실행하는 Roku 기기로만 전송됩니다:
 
 {% sdk_min_versions roku:0.1.2 %}
 
 ## 메시지 유형
 
 {% tabs %}
-{% multi_lang_include developer_guide/_shared/push_notifications/message_types/android.md %}
-{% multi_lang_include developer_guide/_shared/push_notifications/message_types/swift.md %}
+{% multi_lang_include developer_guide/_shared/in_app_messages/message_types/android.md %}
+{% multi_lang_include developer_guide/_shared/in_app_messages/message_types/swift.md %}
 {% endtabs %}
 
 ## 인앱 메시지 활성화
@@ -19,7 +19,7 @@
 m.BrazeTask.observeField("BrazeInAppMessage", "onInAppMessageReceived")
 ```
 
-### 2단계: 트리거된 메시지에 액세스
+### 2단계: 트리거된 메시징에 액세스하기
 
 그런 다음, 핸들러 내에서 캠페인이 트리거하는 최상위 인앱 메시지에 액세스할 수 있습니다.
 

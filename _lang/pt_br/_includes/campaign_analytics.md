@@ -201,7 +201,7 @@ Aqui está uma análise de algumas métricas-chave que você pode ver ao revisar
     <tbody>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data/report_metrics/#messages-sent">Mensagens enviadas</a></td>
-            <td class="no-split">{% multi_lang_include análise de dados/metrics.md metric='Mensagens enviadas' %} <br><br>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Mensagens enviadas' %} <br><br>
                 Isso é calculado de forma diferente dependendo do que você selecionou para 
                 <a href="/docs/user_guide/message_building_by_channel/content_cards/create/card_creation/#differences-between-creating-cards-at-launch-or-entry-versus-at-first-impression">Criação de cartão</a><br><br>
                 <ul>
@@ -212,7 +212,7 @@ Aqui está uma análise de algumas métricas-chave que você pode ver ao revisar
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data/report_metrics/#total-impressions">Total de impressões</a></td>
-            <td class="no-split">{% multi_lang_include análise de dados/metrics.md metric='Total Impressions' %} Isso pode ser incrementado várias vezes para o mesmo usuário.</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Total Impressions' %} Isso pode ser incrementado várias vezes para o mesmo usuário.</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data/report_metrics/#unique-impressions">Impressões únicas</a></td>
@@ -220,15 +220,15 @@ Aqui está uma análise de algumas métricas-chave que você pode ver ao revisar
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data/report_metrics/#unique-recipients">Destinatários únicos</a></td>
-            <td class="no-split">{% multi_lang_include análise de dados/metrics.md metric='Unique Recipients' %} <br><br> Para os cartões de conteúdo, cada cartão só pode ser recebido uma vez, portanto, a visualização do mesmo cartão de conteúdo uma segunda vez, independentemente do dia, não incrementará essa contagem. Como um espectador pode ser um destinatário único todos os dias, você deve esperar que esse valor seja maior do que o de <i>impressões únicas</i>.</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Unique Recipients' %} <br><br> Para os cartões de conteúdo, cada cartão só pode ser recebido uma vez, portanto, a visualização do mesmo cartão de conteúdo uma segunda vez, independentemente do dia, não incrementará essa contagem. Como um espectador pode ser um destinatário único todos os dias, você deve esperar que esse valor seja maior do que o de <i>impressões únicas</i>.</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data/report_metrics/#unique-clicks">Cliques únicos projetados</a></td>
-            <td class="no-split">{% multi_lang_include análise de dados/metrics.md metric='Unique Clicks' %} Isso inclui cliques em links de cancelamento de inscrição fornecidos pelo Braze.</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Unique Clicks' %} Isso inclui cliques em links de cancelamento de inscrição fornecidos pelo Braze.</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data/report_metrics/#unique-dismissals">Descartes únicos</a></td>
-            <td>{% multi_lang_include análise de dados/metrics.md metric='Unique Dismissals' %}</td>
+            <td>{% multi_lang_include analytics/metrics.md metric='Unique Dismissals' %}</td>
         </tr>
     </tbody>
 </table>
@@ -275,11 +275,11 @@ Para obter as definições completas de todas as métricas de Banners, consulte 
     <tbody>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#total-impressions">Total de impressões</a></td>
-            <td class="no-split">{% multi_lang_include análise de dados/metrics.md metric='Total Impressions' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Total Impressions' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-impressions">Impressões únicas</a></td>
-            <td class="no-split">{% multi_lang_include análise de dados/metrics.md metric='Unique Impressions' %} <span style="white-space: nowrap">Cada usuário é contado apenas uma vez.</span></td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Unique Impressions' %} <span style="white-space: nowrap">Cada usuário é contado apenas uma vez.</span></td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#total-clicks">Total de cliques</a></td>
@@ -287,23 +287,23 @@ Para obter as definições completas de todas as métricas de Banners, consulte 
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-clicks">Cliques únicos projetados</a></td>
-            <td class="no-split">{% multi_lang_include análise de dados/metrics.md metric='Unique Clicks' %} Cada usuário é contado apenas uma vez.</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Unique Clicks' %} Cada usuário é contado apenas uma vez.</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#primary-conversions">Conversões primárias</a></td>
-            <td class="no-split">{% multi_lang_include análise de dados/metrics.md metric='Conversões primárias (A) ou Evento de conversão primária' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Conversões primárias (A) ou Evento de conversão primária' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-recipients">Destinatários únicos</a></td>
-            <td class="no-split">{% multi_lang_include análise de dados/metrics.md metric='Unique Recipients' %} <br><br> Como um espectador pode ser um destinatário único todos os dias, você deve esperar que esse valor seja maior do que o de <i>impressões únicas</i>.</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Unique Recipients' %} <br><br> Como um espectador pode ser um destinatário único todos os dias, você deve esperar que esse valor seja maior do que o de <i>impressões únicas</i>.</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#revenue">Receita</a></td>
-            <td>{% multi_lang_include análise de dados/metrics.md metric='Revenue' %}</td>
+            <td>{% multi_lang_include analytics/metrics.md metric='Revenue' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#confidence">Confiança</a></td>
-            <td>{% multi_lang_include análise de dados/metrics.md metric='Confidence' %}</td>
+            <td>{% multi_lang_include analytics/metrics.md metric='Confidence' %}</td>
         </tr>
     </tbody>
 </table>
@@ -356,45 +356,45 @@ Aqui estão algumas métricas específicas de e-mail que você não verá em out
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#click-to-open-rate">Taxa de cliques por abertura</a></td>
-            <td class="no-split">{% multi_lang_include análise de dados/metrics.md metric='Click-to-Open Rate' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Click-to-Open Rate' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#spam">Taxa de spam</a></td>
             <td class="no-split">
-                {% multi_lang_include análise de dados/metrics.md metric='Spam' %} Se essa métrica for maior que 0,08, isso pode ser um sinal de que o texto da sua mensagem é muito vendedor ou de que você deve reconsiderar seus métodos de coleta de endereços de e-mail (para confirmar que está enviando mensagens para as pessoas interessadas na sua correspondência).
+                {% multi_lang_include analytics/metrics.md metric='Spam' %} Se essa métrica for maior que 0,08, isso pode ser um sinal de que o texto da sua mensagem é muito vendedor ou de que você deve reconsiderar seus métodos de coleta de endereços de e-mail (para confirmar que está enviando mensagens para as pessoas interessadas na sua correspondência).
             </td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unsubscribers-or-unsub">Cancelamento de inscrição</a></td>
-            <td class="no-split">{% multi_lang_include análise de dados/metrics.md metric='Cancelamento de inscrição ou cancelamento de assinatura' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Cancelamento de inscrição ou cancelamento de assinatura' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#other-opens">Outras aberturas</a></td>
-            <td class="no-split">{% multi_lang_include análise de dados/metrics.md metric='Other Opens' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Other Opens' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#estimated-real-opens">Estimativa de aberturas reais</a></td>
-            <td class="no-split"> {% multi_lang_include análise de dados/metrics.md metric='Estimated Real Opens' %} Consulte a seção a seguir para obter detalhes.</td>
+            <td class="no-split"> {% multi_lang_include analytics/metrics.md metric='Estimated Real Opens' %} Consulte a seção a seguir para obter detalhes.</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#machine-opens">Aberturas por máquina</a></td>
-            <td class="no-split">{% multi_lang_include análise de dados/metrics.md metric='Machine Opens' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Machine Opens' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#bounces">Bounces</a></td>
-            <td class="no-split">{% multi_lang_include análise de dados/metrics.md metric='Bounces' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Bounces' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#hard-bounce">Hard bounce</a></td>
-            <td class="no-split">{% multi_lang_include análise de dados/metrics.md metric='Hard Bounce' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Hard Bounce' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#soft-bounce">Soft bounce</a></td>
-            <td class="no-split">{% multi_lang_include análise de dados/metrics.md metric='Soft Bounce' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Soft Bounce' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#deferral">Adiamentos</a></td>
-            <td class="no-split">{% multi_lang_include análise de dados/metrics.md metric='Deferral' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Deferral' %}</td>
         </tr>
     </tbody>
 </table>
@@ -447,39 +447,39 @@ Os relatórios para _cliques no botão 1_ e _cliques no botão 2_ só funcionam 
     <tbody>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#body-clicks">Cliques no corpo do texto</a></td>
-            <td class="no-split">{% multi_lang_include análise de dados/metrics.md metric='Body Clicks' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Body Clicks' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#button-1-clicks">Cliques no botão 1</a></td>
-            <td class="no-split">{% multi_lang_include análise de dados/metrics.md metric='Button 1 Clicks' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Button 1 Clicks' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#button-2-clicks">Cliques no botão 2</a></td>
-            <td class="no-split">{% multi_lang_include análise de dados/metrics.md metric='Button 2 Clicks' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Button 2 Clicks' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-impressions">Impressões únicas</a></td>
-            <td class="no-split">{% multi_lang_include análise de dados/metrics.md metric='Unique Impressions' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Unique Impressions' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#total-impressions">Total de impressões</a></td>
-            <td class="no-split">{% multi_lang_include análise de dados/metrics.md metric='Total Impressions' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Total Impressions' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#conversions-b-c-d">Conversões (B, C, D)</a></td>
-            <td class="no-split">{% multi_lang_include análise de dados/metrics.md metric='Conversions (B, C, D)' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Conversions (B, C, D)' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#total-conversions">Conversões totais</a></td>
-            <td class="no-split">{% multi_lang_include análise de dados/metrics.md metric='Total Conversions' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Total Conversions' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#conversion-rate">Taxa de conversão</a></td>
-            <td class="no-split">{% multi_lang_include análise de dados/metrics.md metric='Conversion Rate' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Conversion Rate' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#close-message">Fechar mensagem</a></td>
-            <td class="no-split">{% multi_lang_include análise de dados/metrics.md metric='Fechar mensagem' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Fechar mensagem' %}</td>
         </tr>
     </tbody>
 </table>
@@ -506,15 +506,15 @@ Aqui está uma análise de algumas métricas-chave que você pode ver ao revisar
     <tbody>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#bounces">Bounces</a></td>
-            <td class="no-split">{% multi_lang_include análise de dados/metrics.md metric='Bounces' %} Consulte Notificações por push devolvidas.</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Bounces' %} Consulte Notificações por push devolvidas.</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#direct-opens">Aberturas diretas</a></td>
-            <td class="no-split">{% multi_lang_include análises de dados/metrics.md metric='Direct Opens' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Direct Opens' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#opens">Aberturas</a></td>
-            <td class="no-split">{% multi_lang_include análise de dados/metrics.md metric='Opens' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Opens' %}</td>
         </tr>
     </tbody>
 </table>
@@ -586,31 +586,31 @@ Aqui está uma análise de algumas métricas-chave que você pode ver ao revisar
     <tbody>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#sent">Envios</a></td>
-            <td class="no-split">{% multi_lang_include análises de dados/metrics.md metric='Sent' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Sent' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#delivery-failures">Falhas na entrega</a></td>
-            <td class="no-split">{% multi_lang_include análise de dados/metrics.md metric='Delivery Failures' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Delivery Failures' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#confirmed-delivery">Entrega Confirmada</a></td>
-            <td class="no-split">{% multi_lang_include análise de dados/metrics.md metric='Entregas confirmadas' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Entregas confirmadas' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#rejections">Rejeições</a></td>
-            <td class="no-split">{% multi_lang_include análise de dados/metrics.md metric='Rejeições' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Rejeições' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#opt-out">Cancelamentos de inscrição</a></td>
-            <td class="no-split">{% multi_lang_include análise de dados/metrics.md metric='Opt-Out' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Opt-Out' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#help">Ajuda</a></td>
-            <td class="no-split">{% multi_lang_include análises de dados/metrics.md metric='Help' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Help' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#total-clicks">Total de cliques</a></td>
-            <td class="no-split">{% multi_lang_include análise de dados/metrics.md metric='Total Clicks' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Total Clicks' %}</td>
         </tr>
     </tbody>
 </table>
@@ -637,15 +637,15 @@ Aqui estão algumas métricas de webhook chave que você pode ver em sua anális
     <tbody>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-recipients">Destinatários únicos</a></td>
-            <td class="no-split">{% multi_lang_include análise de dados/metrics.md metric='Unique Recipients' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Unique Recipients' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#sends">Envios</a></td>
-            <td class="no-split">{% multi_lang_include análise de dados/metrics.md metric='Sends' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Sends' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#errors">Erros</a></td>
-            <td class="no-split">{% multi_lang_include análise de dados/metrics.md metric='Errors' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Errors' %}</td>
         </tr>
     </tbody>
 </table>
@@ -672,19 +672,19 @@ Aqui estão algumas métricas importantes do WhatsApp que você pode ver em sua 
     <tbody>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#sends">Envios</a></td>
-            <td class="no-split">{% multi_lang_include análise de dados/metrics.md metric='Sends' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Sends' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#deliveries">Entregas</a></td>
-            <td class="no-split">{% multi_lang_include análise de dados/metrics.md metric='Deliveries' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Deliveries' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#reads">Leituras</a></td>
-            <td class="no-split">{% multi_lang_include análise de dados/metrics.md metric='Reads' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Reads' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#failures">Falhas</a></td>
-            <td class="no-split">{% multi_lang_include análise de dados/metrics.md metric='Failures' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Failures' %}</td>
         </tr>
     </tbody>
 </table>

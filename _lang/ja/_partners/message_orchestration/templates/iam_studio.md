@@ -66,7 +66,7 @@ Braze と IAM Studio の統合により、カスタマイズ可能なアプリ�
 ![イベント/属性のロギングをカスタマイズするオプションが表示されている IAM Studio のUI。これらのオプションには、ユーザー動作ログが含まれます。]({% image_buster /assets/img/iam_studio/iam_liquid.png %})
 {% endtab %}
 {% tab ロギングとトラッキング %}
-![フォントをカスタマイズするオプションを示すIAM Studio UI。これらのオプションには、ユーザーがフォントスタイルをカスタマイズできることが含まれます。]({% image_buster /assets/img/iam_studio/iam_tracking_logging.png  %})
+![フォントをカスタマイズするオプションを示すIAM Studio UI。これらのオプションには、ユーザーがフォントスタイルをカスタマイズできることが含まれます。]({% image_buster /assets/img/iam_studio/iam_tracking_logging.png %})
 {% endtab %}
 {% endtabs %}
 

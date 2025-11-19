@@ -21,7 +21,7 @@ In diesem Abschnitt finden Sie Ihre REST API-Schlüssel für den Workspace, die 
 
 Für zusätzliche Sicherheit können Sie eine Liste von IP-Adressen und Subnetzen angeben, die REST-API-Anfragen für einen bestimmten REST-API-Schlüssel stellen dürfen. Dies wird als Allowlisting oder Whitelisting bezeichnet. Um bestimmte IP-Adressen oder Subnetze zuzulassen, fügen Sie sie bei der Erstellung eines neuen REST-API-Schlüssels dem Abschnitt **Whitelist IPs** hinzu: 
 
-![Abschnitt API IP Whitelisting bei der Erstellung eines neuen API-Schlüssels][26]
+![API IP Whitelisting Abschnitt der Erstellung eines neuen API-Schlüssels]({% image_buster /assets/img_archive/api-key-ip-whitelisting.png %})
 
 Wenn Sie nichts angeben, können Anfragen von jeder IP-Adresse gesendet werden.
 
@@ -35,13 +35,7 @@ Dieser Abschnitt enthält eine Liste von Bezeichnern, die dazu dienen, bestimmte
 
 ### Andere Identifikatoren
 
-Für die Integration mit unserer API können Sie nach den Identifikatoren für alle Segmente, Kampagnen, Content Cards und mehr suchen, auf die Sie über die externe API von Braze zugreifen möchten. Alle Nachrichten sollten in [UTF-8][12] kodiert sein. Nachdem Sie einen von ihnen ausgewählt haben, wird der Bezeichner unterhalb des Dropdown-Menüs angezeigt.
+Für die Integration mit unserer API können Sie nach den Identifikatoren für alle Segmente, Kampagnen, Content Cards und mehr suchen, auf die Sie über die externe API von Braze zugreifen möchten. Alle Nachrichten sollten in [UTF-8](https://en.wikipedia.org/wiki/UTF-8) kodiert sein. Nachdem Sie einen von ihnen ausgewählt haben, wird der Bezeichner unterhalb des Dropdown-Menüs angezeigt.
 
 Weitere Informationen finden Sie unter [API-Kennungstypen]({{site.baseurl}}/api/identifier_types/).
 
-[3]: {{site.baseurl}}/api/endpoints/user_data/
-[4]: {{site.baseurl}}/api/endpoints/messaging/
-[5]: {{site.baseurl}}/api/endpoints/email/
-[6]: {{site.baseurl}}/api/endpoints/export/
-[12]: https://en.wikipedia.org/wiki/UTF-8 "Wikipedia: UTF-8"
-[26]: {% image_buster /assets/img_archive/api-key-ip-whitelisting.png %}

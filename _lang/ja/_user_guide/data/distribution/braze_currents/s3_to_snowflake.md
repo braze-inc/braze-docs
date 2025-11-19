@@ -109,12 +109,12 @@ COPY INTO
 
 1. AWSで、新しい Snowflake ステージの対応するバケットに移動します。次に、[**プロパティ**] タブの [**イベント**] に移動します。
 
-\![AWSのプロパティタブ]]({% image_buster /assets/img/aws-properties.png %}){: height="50%" width="50%"}
+![AWSのプロパティタブ]]({% image_buster /assets/img/aws-properties.png %}){: height="50%" width="50%"}
 
 {: start="2"}
 2\.必要に応じて、Currents データの各セット ([メッセージング]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/)、[ユーザー行動]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/))、またはその両方に対して新規イベントを作成します。
 
-\![AWSでの新規行事の作成]({% image_buster /assets/img/aws-events.png %}){: height="50%" width="50%"}
+![AWSでの新規行事の作成]({% image_buster /assets/img/aws-events.png %}){: height="50%" width="50%"}
 
 {: start="3"}
 3\.オブジェクト作成通知のチェックボックスをオンにして、フォーム下部の ARN (Snowflake の通知チャンネル列) を確認します。

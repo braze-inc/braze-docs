@@ -73,8 +73,6 @@ curl --location --request POST 'https://rest.iad-01.braze.com/content_blocks/upd
 ## Response
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
 {
   "content_block_id": (string) Your newly generated block id,
   "liquid_tag": (string) The generated block tag from the Content Block name,
@@ -92,7 +90,7 @@ The following table lists possible returned errors and their associated troubles
 | `Content cannot be blank` |
 | `Content must be a string` | Make sure your content is encapsulated in quotes (`""`). |
 | `Content must be smaller than 50kb` | The content in your Content Block must be less than 50 KB total. |
-| `Content contains malformed liquid` | The Liquid provided is not valid or parsable. Try again with valid Liquid or reach out to support. |
+| `Content contains malformed liquid` | The Liquid provided is not valid or parsable. Try again with valid Liquid or contact support. |
 | `Content Block cannot be referenced within itself` |
 | `Content Block description cannot be blank` |
 | `Content Block description must be a string` | Make sure your Content Block description is encapsulated in quotes (`""`). |

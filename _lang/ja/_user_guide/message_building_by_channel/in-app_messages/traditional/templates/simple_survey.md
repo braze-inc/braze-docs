@@ -16,7 +16,7 @@ tool:
 
 たとえば、ユーザーにアプリの使い方について尋ねたり、個人的な好みについて詳しく聞いたり、特定の機能に対する満足度について尋ねたりすることができます。
 
-![通知の好み、食事の好み、および顧客満足度調査の 3 つのシンプルな調査のメッセージ。アンケートで選択されたオプションは、そのユーザーについて記録されるカスタム属性に対応します。]({% image_buster /assets/img/iam/iam-survey.png %})
+![通知の好み、食の好み、顧客の3つのシンプルな調査がアクション 調査を満たします。アンケートで選択した項目は、そのユーザーのログに記録されるカスタム属性s に対応します。]({% image_buster /assets/img/iam/iam-survey.png %})
 
 ## SDK 要件 {#supported-sdk-versions}
 
@@ -38,7 +38,7 @@ Web SDK を介して HTML アプリ内メッセージを有効にするには、
 
 調査の作成を開始するには、質問を調査の [**ヘッダー**] フィールドに追加します。必要に応じて、調査の質問の下に表示されるオプションの**本文**メッセージを追加できます。
 
-![シンプルな調査エディターの [作成] タブ。ヘッダー、オプションの本文、およびオプションのヘルパーテキストのフィールドがあります。]({% image_buster /assets/img/iam/iam-survey2.png %}){: style="max-width:90%"}
+![シンプルな調査エディタのコンポーズタブ、ヘッダーのフィールドs、オプションの本文、オプションのヘルパーテキスト。]({% image_buster /assets/img/iam/iam-survey2.png %}){: style="max-width:90%"}
 
 {% alert tip %}
 これらのフィールドには Liquid と絵文字の両方を含めることができるため、内容を工夫できます。
@@ -52,7 +52,7 @@ Web SDK を介して HTML アプリ内メッセージを有効にするには、
 
 次に、[カスタム属性を収集する](#custom-attributes)か、[応答のみをログに記録する](#no-attributes)かを決定します。
 
-![[送信時に属性をログに記録する] を選択した選択肢のドロップダウン。]({% image_buster /assets/img/iam/collect-attributes.png %}){: style="max-width:60%"}
+![&quot を含む選択ドロップダウン;送信&クォート時に属性を記録;選択。]({% image_buster /assets/img/iam/collect-attributes.png %}){: style="max-width:60%"}
 
 #### カスタム属性の収集{#custom-attributes}
 
@@ -89,11 +89,11 @@ Web SDK を介して HTML アプリ内メッセージを有効にするには、
 
 [**調査**] タブの下部にある [**送信ボタン**] セクションで、ボタンのテキストとクリック時の動作を編集します。
 
-![クリック時の動作が「回答を送信して確認ページを表示」に設定されています。]({% image_buster /assets/img/iam/confirmation-option.png %}){: style="max-width:60%"}
+![On-click 動作は"Submit responses and display confirmation page".に設定されます。]({% image_buster /assets/img/iam/confirmation-option.png %}){: style="max-width:60%"}
 
 確認ページを追加する場合は、メッセージをカスタマイズするために**確認ページ**タブに切り替える:
 
-![シンプルな調査エディターの [確認ページ] タブ。利用可能なフィールドは、ヘッダー、オプションの本文、ボタンテキスト、およびボタンのクリック動作です。]({% image_buster /assets/img/iam/confirmation-page.png %}){: style="max-width:90%"}
+![簡易調査エディタの確認画面]使用可能なフィールドは、ヘッダー、オプションの本文、ボタンテキスト、ボタンクリックビヘイビアです。]({% image_buster /assets/img/iam/confirmation-page.png %}){: style="max-width:90%"}
 
 アプリやWeb サイトの別のページにユーザーを誘導したい場合は、ボタンの**クリック時の動作**を変更してください。
 
@@ -101,7 +101,7 @@ Web SDK を介して HTML アプリ内メッセージを有効にするには、
 
 メッセージのフォントカラーとアクセントカラーは、**カラーテーマ**ピッカーを使用してカスタマイズできます。
 
-![ユーザーがカラーパレットをクリックした後、カラーテーマピッカーが展開されたシンプルな調査エディターの [作成] タブ。]({% image_buster /assets/img/iam/color-theme-picker.png %}){: style="max-width:80%"}
+![ユーザーがカラーパレットをクリックした後、カラーテーマピッカーが展開されたシンプルな調査エディターのコンポーズタブ。]({% image_buster /assets/img/iam/color-theme-picker.png %}){: style="max-width:80%"}
 
 ## 結果の分析{#analytics}
 
@@ -127,6 +127,9 @@ Web SDK を介して HTML アプリ内メッセージを有効にするには、
 
 ## ユースケース
 
+{% tabs %}
+{% tab User satisfaction %}
+
 ### ユーザー満足度
 
 **目的:**顧客満足度を測定し、低評価を残したユーザーにウィンバックキャンペーンを送信します。
@@ -144,6 +147,9 @@ Web SDK を介して HTML アプリ内メッセージを有効にするには、
 
 ユーザがアンケートを送信すると、選択した値がカスタム属性としてログに記録されます。その後、オーディエンスフィルターを使用してフォローアップキャンペーンを作成できます。たとえば、`customer_satisfaction` 属性が1 または2 のユーザーを奪還メッセージのターゲットに設定します。
 
+{% endtab %}
+{% tab Notification preferences %}
+
 ### 通知設定
 
 **目的:**ユーザーが特定のタイプの通知を選択できるようにします。
@@ -155,9 +161,12 @@ Web SDK を介して HTML アプリ内メッセージを有効にするには、
 | 製品アップデート    | `wants_product_updates`| `true` |
 | プロモーション         | `wants_promotions`     | `true` |
 | イベント招待      | `wants_event_invites`  | `true` |
-| アンケートとフィードバック | `wants_surveys`        | `true` |
-| ヒントとチュートリアル   | `wants_tips`           | `true` |
+| 調査& フィードバック | `wants_surveys`        | `true` |
+| ヒント& チュートリアル   | `wants_tips`           | `true` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
+{% endtab %}
+{% tab Identify customer goals %}
 
 ### 顧客の目的の特定
 
@@ -176,6 +185,9 @@ Web SDK を介して HTML アプリ内メッセージを有効にするには、
 
 ユーザーがアンケートを送信すると、選択した値がプロファイルのカスタム属性としてログに記録されます。その後、このデータを使用して、主な目標に基づいて将来の経験をパーソナライズしたり、ユーザーをセグメント化したりできます。
 
+{% endtab %}
+{% tab Improve conversion rates %}
+
 ### コンバージョン率を向上させる
 
 **目的:**顧客がアップグレードや購入をしない理由を理解します。
@@ -192,6 +204,9 @@ Web SDK を介して HTML アプリ内メッセージを有効にするには、
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ユーザーがアンケートを送信すると、選択した値がプロファイルに保存されます。その後、割引オファーやユーザビリティの向上など、特定の反論に合わせたキャンペーンを使用して、これらのユーザをターゲットにすることができます。
+
+{% endtab %}
+{% tab Favorite features %}
 
 ### お気に入りの機能
 
@@ -212,5 +227,5 @@ Web SDK を介して HTML アプリ内メッセージを有効にするには、
 
 このアンケートでは多岐選択が使用されているため、選択したすべての機能の値でユーザーのプロファイルが更新されます。
 
-
-
+{% endtab %}
+{% endtabs %}

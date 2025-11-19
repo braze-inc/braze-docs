@@ -15,7 +15,7 @@ API キャンペーンのトランザクションの確認、失敗したメッ�
 
 ログにアクセスするには、[**設定**] > [**メッセージアクティビティログ**] に移動します。
 
-\![メッセージアクティビティログ]({% image_buster /assets/img_archive/message_activity_log.png %})
+![メッセージアクティビティログ]({% image_buster /assets/img_archive/message_activity_log.png %})
 
 {% alert tip %}
 この記事に加えて、「[品質保証とデバッグツール](https://learning.braze.com/quality-assurance-and-debugging-tools-in-the-dashboard/)」の Braze ラーニングコースを確認することをお勧めします。このコースでは、メッセージアクティビティログを使用して独自のトラブルシューティングとデバッグを実行する方法を説明しています。

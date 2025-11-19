@@ -14,13 +14,15 @@ channel:
 
 > MMS and SMS are both tied to the Braze SMS channel. To access MMS on your account requires the purchase of SMS for those who have not yet purchased access. Existing SMS customers can access MMS after they purchase it. 
 
-MMS is currently supported for US short codes (5-6 digit numbers), US and CA long codes (10-digit numbers), and US and Canada customer numbers. Sending MMS to numbers outside of the US/Canada is possible, but MMS messages will be converted into an SMS message with a link to the media asset. To read more, refer to [Short and long codes]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/short_and_long_codes/).
+MMS is currently supported for US short codes (5-6 digit numbers), US and CA long codes (10-digit numbers), and US and Canada customer numbers. MMS is supported for toll-free numbers by certain service providers. 
+
+Sending MMS to numbers outside of the US and Canada is possible, but MMS messages will be converted into an SMS message with a link to the media asset. To read more, refer to [Short and long codes]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/short_and_long_codes/).
 
 ## MMS short codes
 
 Some users may not implement or use MMS short codes, but they will be available if needed at a later date.
 
-For users who got their short codes before Braze supported MMS, all existing customers with US short codes are eligible to instantly enable MMS. Reach out to your customer success manager if this situation applies to you and you would like MMS enabled.
+For users who got their short codes before Braze supported MMS, all existing customers with US short codes are eligible to instantly enable MMS. Contact your customer success manager if this situation applies to you and you would like MMS enabled.
 
 {% alert important %}
 When enabling MMS for short codes that previously didn't have MMS enabled, the short codes might need to be re-approved in an approval process that could take weeks. It's important to account for this timing when deciding to enable MMS.

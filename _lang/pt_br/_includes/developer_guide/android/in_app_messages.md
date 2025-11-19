@@ -1,4 +1,4 @@
-{% multi_lang_include desenvolvedor_guide/prerequisites/android.md %} Você também precisará ativar mensagens no app.
+{% multi_lang_include developer_guide/prerequisites/android.md %} Você também precisará ativar mensagens no app.
 
 ## Tipos de mensagens
 

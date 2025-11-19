@@ -14,7 +14,7 @@ description: "In diesem Artikel erfahren Sie, wie Sie Standardwerte für alle Pe
 
 ## Funktionsweise
 
-Standardwerte können hinzugefügt werden, indem Sie einen [Liquid Filter][3] mit dem Namen "default" angeben (mit `|` können Sie den Filter wie in der Abbildung inline abgrenzen). 
+Standardwerte können hinzugefügt werden, indem Sie einen [Liquid Filter](http://docs.shopify.com/themes/liquid-documentation/filters) mit dem Namen "default" angeben (mit `|` können Sie den Filter wie in der Abbildung inline abgrenzen). 
 
 ```
 | default: 'Insert Your Desired Default Here'
@@ -78,7 +78,7 @@ Hi {{${first_name} | default: 'valued user'}}, consider upgrading to premium for
 ```
 {% endraw %}
 
-{% details Vollständiger Liquid-Code %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% assign is_premium_user = {{custom_attribute.${premium_user}}} | default: false %}
@@ -144,7 +144,7 @@ State: {{custom_attribute.${address.state} | default: 'Unknown'}}
 ```
 {% endraw %}
 
-{% details Vollständiger Liquid-Code %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 Hi {{${first_name} | default: 'valued user'}}
@@ -191,7 +191,7 @@ Hello {{${first_name} | default: 'fellow traveler'}},
 ```
 {% endraw %}
 
-{% details Vollständiger Liquid-Code %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% if {{custom_attribute.${upcoming_trips}}} == blank %}
@@ -212,8 +212,6 @@ Hello {{${first_name} | default: 'fellow traveler'}},
 {% endraw %}
 {% enddetails %}
 
-[3]: http://docs.shopify.com/themes/liquid-documentation/filters
 [31]:https://docs.shopify.com/themes/liquid/tags/variable-tags
 [32]:https://docs.shopify.com/themes/liquid/tags/iteration-tags
-[34]:{% image_buster /assets/img_archive/personalized_iflogic_.png %}
-[37]:\#accounting-for-null-attribute-values
+[37]:#accounting-for-null-attribute-values

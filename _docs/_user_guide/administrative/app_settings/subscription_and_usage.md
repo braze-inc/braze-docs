@@ -23,7 +23,7 @@ The **Billing** page includes the following tabs:
 
 ## Subscriptions and Usage
 
-The **Subscriptions and Usage** tab includes usage graphs and your contract details.
+The **Subscriptions and Usage** tab includes usage graphs and your contract details. Data on this page is updated daily at 10 pm Eastern Time (ET). It does not reflect real-time activity.
 
 ### Usage graphs
 

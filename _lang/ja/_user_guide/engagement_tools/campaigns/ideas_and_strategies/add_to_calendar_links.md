@@ -14,21 +14,25 @@ channel: email
 
 そのためには、メールの下書きを作成し、リンクをどこに配置するかを決めます。次に、2 つのオプションを追加します。1 つは Google カレンダー用、もう 1 つは他のカレンダー (iCal や Outlook など) 用です。たとえば、「Google カレンダーに追加」や「iCal または Outlook に追加」などとします。
 
-![ダッシュボードにリンクを追加する際のリンクダイアログ。[リンク情報] タブが選択され、テキストが [Google カレンダーに追加] に設定されます。]({% image_buster /assets/img_archive/calendar_1.png %}){: style="max-width:50%"}
+<<<<<<< HEAD
+![ダッシュボードにリンクを追加するときのリンクダイアログ。「リンク情報」タブが選択され、テキストが「Googleカレンダーに追加」に設定されています。]({% image_buster /assets/img_archive/calendar_1.png %}){: style="max-width:50%"}
+=======
+\![ダッシュボードにリンクを追加するときのリンクダイアログ。「リンク情報」タブが選択され、テキストが「Googleカレンダーに追加」に設定されています。]({% image_buster /assets/img_archive/calendar_1.png %}){: style="max-width:50%"}
+>>>>>>> main
 
 ## URL フォーマット
 
 プレースホルダーを置き換えて、次の URL をリンクに追加します。これら 2 つの URL の唯一の違いは、Google カレンダーには `&format=gcal` パラメーターが必要な点です。
 
 {% tabs %}
-{% tab Google カレンダー %}
+{% tab Google Calendar %}
 
 ```
 https://ics.agical.io/?subject=EVENT_SUBJECT&location=EVENT_LOCATION&dtstart=START_TIME&dtend=END_TIME&description=EVENT_DESCRIPTION&format=gcal
 ```
 
 {% endtab %}
-{% tab iCalまたはOutlook %}
+{% tab iCal or Outlook %}
 
 ```
 https://ics.agical.io/?subject=EVENT_SUBJECT&location=EVENT_LOCATION&dtstart=START_TIME&dtend=END_TIME&description=EVENT_DESCRIPTION
@@ -79,19 +83,19 @@ https://ics.agical.io/?subject=Meet%20Braze&location=114%20Sansome%20Street&dtst
 
 クリックすると、Google カレンダーが新しいタブまたはウィンドウで開き、イベントの詳細が招待状に事前入力され、ユーザーが保存できるようになります。これはモバイルとデスクトップの両方で発生します。
 
-![Google カレンダーダイアログでイベントの詳細が追加され、保存できる状態になります。]({% image_buster /assets/img_archive/calendar_2.png %}){: style="max-width:75%"}
+Googleカレンダーのダイアログで、イベントを追加する。]({% image_buster /assets/img_archive/calendar_2.png %}){: style="max-width:75%"}
 
 ### iCal と Outlook
 
 デスクトップでは、クリックすると ICS ファイルがダウンロードされます。次に、ユーザーは ICS ファイルを開く必要があります。これにより iCal または Outlook が開き、カレンダーにイベントを追加するよう求められます。
 
-![iCal カレンダーに新しいイベントを追加するためのダイアログが表示され、カレンダーを選択して確認するようにユーザーに求められます。]({% image_buster /assets/img_archive/calendar_3.png %}){: style="max-width:75%"}
+iCalカレンダーに新しいイベントを追加するダイアログが表示され、ユーザーはカレンダーを選択して確定する。]({% image_buster /assets/img_archive/calendar_3.png %}){: style="max-width:75%"}
 
-![イベントが追加されたiCal カレンダー。]({% image_buster /assets/img_archive/calendar_4.png %}){: style="max-width:81%"}
+iCalカレンダーにイベントが追加された。]({% image_buster /assets/img_archive/calendar_4.png %}){: style="max-width:81%"}
 
 モバイルでは、ユーザーはリンクを長押しする必要があります。これにより、カレンダーに追加するよう求められます。
 
-![「カレンダーに追加」ボタンを含むカレンダーリンクを長押しすると iOS がポップアップを表示します。]({% image_buster /assets/img_archive/calendar_5.png %}){: style="max-width:50%"}
+カレンダーのリンクを長押しすると、iOSのポップアップが表示される。]({% image_buster /assets/img_archive/calendar_5.png %}){: style="max-width:50%"}
 
 詳細については、参照してください。
 * [Google カレンダーのイベントを作成する](https://developers.google.com/calendar/api/guides/create-events)

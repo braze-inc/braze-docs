@@ -16,9 +16,13 @@
 
 **캠페인 분석** 탭에서, 일련의 패널에서 보고서를 볼 수 있습니다. 아래 섹션에 나열된 것보다 더 많거나 적은 항목을 볼 수 있지만, 각각 유용한 목적이 있습니다.
 
+### 시간 범위
+
+기본값으로 **캠페인 분석의** 시간 범위는 현재 시간으로부터 최근 90일을 표시합니다. 즉, 캠페인이 90일 이상 전에 시작된 경우 해당 기간 동안 분석 결과가 "0"으로 표시됩니다. 이전 캠페인에 대한 모든 분석을 보려면 보고 시간 범위를 조정하세요.
+
 ### 캠페인 세부 정보
 
-**캠페인 세부정보** 패널은 전체 성능에 대한 고급 개요를 보여줍니다.
+**캠페인 분석의** 첫 번째 패널에는 전체 성능/성과에 대한 개략적인 개요가 표시됩니다.
   {% if include.channel == "banner" %}배너.
   {% elsif include.channel == "Content Card" %}콘텐츠 카드.
   {% elsif include.channel == "email" %}이메일.
@@ -38,29 +42,29 @@ WhatsApp 채널에는 읽기 비율이 포함됩니다. 이 측정기준은 읽�
 {% endif %}
 
 {% if include.channel == "Content Card" %}
-![캠페인 세부정보 패널은 캠페인 성능을 결정하는 데 사용되는 측정기준의 개요를 제공합니다.]({% image_buster /assets/img/cc-campaign-details.png %})
+![캠페인 성능/성과를 결정하는 데 사용되는 측정기준에 대한 개요가 포함된 패널.]({% image_buster /assets/img/cc-campaign-details.png %})
 
 {% elsif include.channel == "banner" %}
-![캠페인 세부정보 패널은 캠페인 성능을 결정하는 데 사용되는 측정기준의 개요를 제공합니다.]({% image_buster /assets/img/banners/campaign_details.png %})
+![캠페인 성능/성과를 결정하는 데 사용되는 측정기준에 대한 개요가 포함된 패널.]({% image_buster /assets/img/banners/campaign_details.png %})
 
 {% elsif include.channel == "email" %}
-![캠페인 세부정보 패널은 캠페인 성능을 결정하는 데 사용되는 측정기준의 개요를 제공합니다.]({% image_buster /assets/img/campaign_details_email.png %})
+![캠페인 성능/성과를 결정하는 데 사용되는 측정기준에 대한 개요가 포함된 패널.]({% image_buster /assets/img/campaign_details_email.png %})
 
 {% elsif include.channel == "push" %}
-![캠페인 세부정보 패널은 캠페인 성능을 결정하는 데 사용되는 측정기준의 개요를 제공합니다.]({% image_buster /assets/img/campaign_details_push.png %})
+![캠페인 성능/성과를 결정하는 데 사용되는 측정기준에 대한 개요가 포함된 패널.]({% image_buster /assets/img/campaign_details_push.png %})
 
 {% elsif include.channel == "SMS" %}
-![캠페인 세부정보 패널은 캠페인 성능을 결정하는 데 사용되는 측정기준의 개요를 제공합니다.]({% image_buster /assets/img/campaign_details_sms.png %})
+![캠페인 성능/성과를 결정하는 데 사용되는 측정기준에 대한 개요가 포함된 패널.]({% image_buster /assets/img/campaign_details_sms.png %})
 
 {% elsif include.channel == "in-app message" %}
-![캠페인 세부정보 패널은 캠페인 성능을 결정하는 데 사용되는 측정기준의 개요를 제공합니다.]({% image_buster /assets/img/campaign_details_iam.png %})
+![캠페인 성능/성과를 결정하는 데 사용되는 측정기준에 대한 개요가 포함된 패널.]({% image_buster /assets/img/campaign_details_iam.png %})
 
 캔버스에서, 생성한 캔버스에 매핑된 인앱 메시지 성능을 볼 수 있습니다. 페이지 상단의 제어판을 사용하여 다른 메시징 유형(채널)을 지우고 캔버스에서 인앱 메시지만 볼 수 있습니다.
 
 ![]({% image_buster /assets/img/in-app_message_canvas_reporting.png %})
 
 {% elsif include.channel == "webhook" %}
-![캠페인 세부정보 패널은 캠페인 성능을 결정하는 데 사용되는 측정기준의 개요를 제공합니다.]({% image_buster /assets/img/campaign_details_webhook.png %})
+![캠페인 성능/성과를 결정하는 데 사용되는 측정기준에 대한 개요가 포함된 패널.]({% image_buster /assets/img/campaign_details_webhook.png %})
 
 {% endif %}
 
@@ -196,8 +200,8 @@ The **Message Performance** panel outlines how well your message has performed a
     </thead>
     <tbody>
         <tr>
-            <td class="no-split"><a href="/docs/user_guide/data/report_metrics/#messages-sent">메시지 발송됨</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Messages Sent' %} <br><br>
+            <td class="no-split"><a href="/docs/user_guide/data/report_metrics/#messages-sent">Messages Sent</a></td>
+            <td class="no-split">{% multi_lang_include 분석/metrics.md 측정기준='보낸 메시지' %} <br><br>
                 이것은 사용자가 선택한 것에 따라 다르게 계산됩니다. 
                 <a href="/docs/user_guide/message_building_by_channel/content_cards/create/card_creation/#differences-between-creating-cards-at-launch-or-entry-versus-at-first-impression">카드 생성</a>:<br><br>
                 <ul>
@@ -208,23 +212,23 @@ The **Message Performance** panel outlines how well your message has performed a
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data/report_metrics/#total-impressions">총 노출 수</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Total Impressions' %} 이는 동일한 사용자에 대해 여러 번 증가할 수 있습니다.</td>
+            <td class="no-split">{% multi_lang_include 분석/metrics.md 측정기준='총 노출 횟수' %} 동일 사용자에 대해 여러 번 증가할 수 있습니다.</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data/report_metrics/#unique-impressions">고유 노출 수</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Impressions' %} <span style="white-space: nowrap">이 카운트</span>는 사용자가 콘텐츠 카드를 두 번째로 볼 때 증가하지 않습니다.</td>
+            <td class="no-split">{% multi_lang_include 분석/metrics.md 측정기준='고유 노출 횟수' %} <span style="white-space: nowrap">이 카운트는</span> 사용자가 콘텐츠 카드를 두 번째로 볼 때마다 증가하지 않습니다.</td>
         </tr>
         <tr>
-            <td class="no-split"><a href="/docs/user_guide/data/report_metrics/#unique-recipients">고유 수신자</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Recipients' %} <br><br> 콘텐츠 카드의 경우 각 콘텐츠 카드는 한 번만 수신될 수 있으므로, 같은 콘텐츠 카드를 두 번째로 보는 것은 날짜에 관계없이 이 카운트를 증가시키지 않습니다. 시청자는 매일 고유한 수신자가 될 수 있으므로, <i>고유 노출 수</i>보다 더 높을 것으로 예상해야 합니다.</td>
+            <td class="no-split"><a href="/docs/user_guide/data/report_metrics/#unique-recipients">Unique Recipients</a></td>
+            <td class="no-split">{% multi_lang_include 분석/metrics.md 측정기준='고유 수신자' %} <br><br> 콘텐츠 카드의 경우 각 콘텐츠 카드는 한 번만 수신될 수 있으므로, 같은 콘텐츠 카드를 두 번째로 보는 것은 날짜에 관계없이 이 카운트를 증가시키지 않습니다. 시청자는 매일 고유한 수신자가 될 수 있으므로, <i>고유 노출 수</i>보다 더 높을 것으로 예상해야 합니다.</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data/report_metrics/#unique-clicks">고유 클릭 수</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Clicks' %} 여기에는 Braze에서 제공하는 탈퇴 링크에 대한 클릭이 포함됩니다.</td>
+            <td class="no-split">{% multi_lang_include 분석/metrics.md 측정기준='고유 클릭 수' %} 여기에는 Braze가 제공한 탈퇴 링크에 대한 클릭이 포함됩니다.</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data/report_metrics/#unique-dismissals">고유 무시 수</a></td>
-            <td>{% multi_lang_include metrics.md metric='Unique Dismissals' %}</td>
+            <td>{% multi_lang_include 분석/metrics.md 측정기준='고유 해고' %}</td>
         </tr>
     </tbody>
 </table>
@@ -235,7 +239,7 @@ The **Message Performance** panel outlines how well your message has performed a
 
 #### 고유 수신자 대 고유 노출
 
-메시지 가시성을 다루는 몇 가지 측정기준이 있습니다. 이에는 _보낸 메시지_, _고유 수신자_, 및 _고유 노출_이 포함됩니다. 특히, _고유 수신자_와 _고유 노출_의 차이는 다소 혼란스러울 수 있습니다. 이 메트릭을 더 잘 이해하기 위해 몇 가지 예시 시나리오를 사용해 보겠습니다.
+메시지 가시성을 다루는 몇 가지 측정기준이 있습니다. 여기에는 _고유 수신자_ 및 _고유 노출 횟수가_ 포함됩니다. 이 메트릭을 더 잘 이해하기 위해 몇 가지 예시 시나리오를 사용해 보겠습니다.
 
 오늘 콘텐츠 카드를 보고, 내일 같은 캠페인에서 새로운 카드를 받고, 모레 다시 보게 된다면, _고유 수신자_으로 세 번 카운트됩니다. 그러나 단지 하나의 _고유 노출 횟수_로만 계산됩니다. 당신은 또한 _전송된 메시지 수_에 포함될 것이며, 카드가 당신의 기기에서 사용 가능했기 때문입니다.
 
@@ -264,18 +268,18 @@ _보낸 메시지_는 볼 수 있는 콘텐츠 카드와 관련이 있으며, _�
 <table>
     <thead>
         <tr>
-            <th>측정기준</th>
+            <th>Metric</th>
             <th>정의</th>
         </tr>
     </thead>
     <tbody>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#total-impressions">총 노출 수</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Total Impressions' %}</td>
+            <td class="no-split">{% multi_lang_include 분석/metrics.md 측정기준='총 노출 횟수' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-impressions">고유 노출 수</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Impressions' %} <span style="white-space: nowrap">각 사용자는 한 번만 계산됩니다.</span></td>
+            <td class="no-split">{% multi_lang_include 분석/metrics.md 측정기준='고유 노출 횟수' %} <span style="white-space: nowrap">각 사용자는 한 번만 계산됩니다.</span></td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#total-clicks">총 클릭 수</a></td>
@@ -283,40 +287,40 @@ _보낸 메시지_는 볼 수 있는 콘텐츠 카드와 관련이 있으며, _�
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-clicks">고유 클릭 수</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Clicks' %} Each user is only counted once.</td>
+            <td class="no-split">{% multi_lang_include 분석/metrics.md 측정기준='고유 클릭 수' %} 각 사용자는 한 번만 계산됩니다.</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#primary-conversions">주요 전환</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Primary Conversions (A) or Primary Conversion Event' %}</td>
+            <td class="no-split">{% multi_lang_include 분석/metrics.md 측정기준='주요 전환(A) 또는 주요 전환 이벤트' %}</td>
         </tr>
         <tr>
-            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-recipients">고유 수신자</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Recipients' %} <br><br> 시청자는 매일 고유한 수신자가 될 수 있으므로, <i>고유 노출 수</i>보다 더 높을 것으로 예상해야 합니다.</td>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-recipients">Unique Recipients</a></td>
+            <td class="no-split">{% multi_lang_include 분석/metrics.md 측정기준='고유 수신자' %} <br><br> 시청자는 매일 고유한 수신자가 될 수 있으므로, <i>고유 노출 수</i>보다 더 높을 것으로 예상해야 합니다.</td>
         </tr>
         <tr>
-            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#revenue">매출</a></td>
-            <td>{% multi_lang_include metrics.md metric='Revenue' %}</td>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#revenue">Revenue</a></td>
+            <td>{% multi_lang_include 분석/metrics.md 측정기준='매출' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#confidence">신뢰도</a></td>
-            <td>{% multi_lang_include metrics.md metric='Confidence' %}</td>
+            <td>{% multi_lang_include 분석/metrics.md 측정기준='신뢰도' %}</td>
         </tr>
     </tbody>
 </table>
 
-#### 고유 수신자 대 고유 노출
+#### 배너 측정기준 계산 예시
 
-메시지 가시성을 다루는 몇 가지 측정기준이 있습니다. 이에는 _보낸 메시지_, _고유 수신자_, 및 _고유 노출_이 포함됩니다. 특히, _고유 수신자_와 _고유 노출_의 차이는 다소 혼란스러울 수 있습니다. 이러한 측정기준을 더 잘 이해하기 위해 몇 가지 예시 시나리오를 사용해 보겠습니다.
+메시지 가시성을 다루는 몇 가지 측정기준이 있습니다. 여기에는 _고유 수신자_ 및 _고유 노출 횟수가_ 포함됩니다. 이러한 측정기준을 더 잘 이해하기 위해 몇 가지 예시 시나리오를 사용해 보겠습니다.
 
-오늘 배너를 보고, 내일 같은 배너를 보고, 모레 다시 본다고 가정해 보겠습니다. 당신은 _고유 수신자_로 세 번 계산됩니다. 그러나 단지 하나의 _고유 노출 횟수_로만 계산됩니다. 당신은 또한 _전송된 메시지 수_에 포함될 것이며, 카드가 당신의 기기에서 사용 가능했기 때문입니다.
+오늘 배너를 보고, 내일 같은 배너를 보고, 모레 다시 본다고 가정해 보겠습니다. 당신은 _고유 수신자_로 세 번 계산됩니다. 그러나 단지 하나의 _고유 노출 횟수_로만 계산됩니다.
 
-또 다른 예로, 150,000 _전송된 메시지_를 보여주는 배너 캠페인에서 다섯 개의 _고유 노출_을 본다고 가정해 보겠습니다. 이는 배너가 150,000명의 사용자에게 (백엔드에서) 제공되었지만, 오직 다섯 명의 사용자의 기기만이 그 전송이 발생한 후 다음 모든 단계를 수행했음을 의미합니다:
+다른 예로, 배너 캠페인에 5개의 _고유 노출 횟수가_ 있다고 가정해 보겠습니다. 즉, 다음 단계를 모두 수행한 사용자의 기기는 5대에 불과했습니다:
 
 1. 세션을 시작했거나 앱이 명시적으로 배너 동기화를 요청했습니다 (또는 둘 다)
 2. 배너 보기로 이동했습니다.
 3. 소프트웨어 개발 키트가 노출 횟수를 기록하고 이를 서버에 기록했습니다.
 
-당신의 _전송된 메시지_는 볼 수 있는 배너를 의미하며, _고유 수신자_는 실제로 본 배너를 의미합니다.
+_고유 수신자란_ 실제로 표시된 배너를 의미합니다.
 
 {% elsif include.channel == "email" %}
 
@@ -341,56 +345,56 @@ _보낸 메시지_는 볼 수 있는 콘텐츠 카드와 관련이 있으며, _�
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-clicks">고유 클릭 수</a></td>
             <td class="no-split">
-                {% multi_lang_include metrics.md metric='Unique Clicks' %} 이는 이메일에 대해 7일 동안 추적되며 <a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a>로 측정됩니다. 여기에는 Braze에서 제공한 탈퇴 링크를 클릭하는 것이 포함됩니다. 이 숫자는 5–10% 사이여야 합니다. 10%보다 큰 것은 예외적입니다!
+                {% multi_lang_include 분석/metrics.md 측정기준='고유 클릭 수' %} 이메일의 경우 7일 동안 추적되며 <a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'>dispatch_id로</a> 측정됩니다. This includes clicks on Braze-provided unsubscribe links. 이 숫자는 5–10% 사이여야 합니다. 10%보다 큰 것은 예외적입니다!
             </td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-opens">고유 열람</a></td>
             <td class="no-split">
-                {% multi_lang_include metrics.md metric='Unique Opens' %} 이메일의 경우, 이는 7일 동안 추적됩니다. 이 숫자는 30–40% 사이여야 합니다. 40%보다 큰 것은 예외적입니다!
+                {% multi_lang_include 분석/metrics.md 측정기준='고유 열람 횟수' %} 이메일의 경우 7일 동안 추적됩니다. 이 숫자는 30–40% 사이여야 합니다. 40%보다 큰 것은 예외적입니다!
             </td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#click-to-open-rate">클릭 후 열람률</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Click-to-Open Rate' %}</td>
+            <td class="no-split">{% multi_lang_include 분석/metrics.md 측정기준='클릭 후 열람율' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#spam">스팸율</a></td>
             <td class="no-split">
-                {% multi_lang_include metrics.md metric='Spam' %}이 측정기준이 0.08보다 크면, 이는 메시지 내용이 너무 판매적이거나, 이메일 주소 수집 방법을 재고해야 할 수 있음을 나타낼 수 있습니다(서신에 관심이 있는 사람들에게 메시징하고 있는지 확인하기 위해).
+                {% multi_lang_include 분석/metrics.md metric='스팸' %} 이 측정기준이 0.08보다 크면 메시지 카피가 너무 영업적이거나 이메일 주소 수집 방법을 재고해야 한다는 신호일 수 있습니다(관심 있는 사람들에게 메시징을 보내고 있는지 확인하기 위해).
             </td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unsubscribers-or-unsub">구독 취소 또는 구독 취소</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Unsubscribers or Unsub' %}</td>
+            <td class="no-split">{% multi_lang_include 분석/metrics.md 측정기준='구독자 또는 탈퇴' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#other-opens">기타 열람 수</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Other Opens' %}</td>
+            <td class="no-split">{% multi_lang_include 분석/metrics.md 측정기준='기타 오픈' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#estimated-real-opens">추정된 실제 열람</a></td>
-            <td class="no-split"> {% multi_lang_include metrics.md metric='Estimated Real Opens' %} 자세한 내용은 다음 섹션을 참조하세요.</td>
+            <td class="no-split"> {% multi_lang_include 분석/metrics.md 측정기준='예상 실제 오픈 수' %} 자세한 내용은 다음 섹션을 참조하세요.</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#machine-opens">기계 열람</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Machine Opens' %}</td>
+            <td class="no-split">{% multi_lang_include 분석/metrics.md 측정기준='Machine Opens' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#bounces">반송 수</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Bounces' %}</td>
+            <td class="no-split">{% multi_lang_include 분석/metrics.md 측정기준='바운스' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#hard-bounce">하드바운스</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Hard Bounce' %}</td>
+            <td class="no-split">{% multi_lang_include 분석/metrics.md 측정기준='하드 바운스' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#soft-bounce">소프트바운스</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Soft Bounce' %}</td>
+            <td class="no-split">{% multi_lang_include 분석/metrics.md 측정기준='소프트 바운스' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#deferral">연기</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Deferral' %}</td>
+            <td class="no-split">{% multi_lang_include 분석/metrics.md 측정기준='지연' %}</td>
         </tr>
     </tbody>
 </table>
@@ -405,7 +409,7 @@ _Deferrals_는 현재 Currents 또는 Braze Snowflake 기능(예: Query Builder,
 
 ##### 추정된 실제 열람율 {#estimated-real-open-rate}
 
-이 통계는 Braze에서 개발한 독점 분석 모델을 사용하여 기계 열람이 존재하지 않는 것처럼 캠페인의 고유한 열람율 추정치를 재구성합니다. 이메일 발신자로부터 *기계 열람*의 레이블을 일부 열린 이벤트에서 수신하는 동안(위 참조), 이러한 레이블은 실제 열기를 실제 열람으로 레이블할 수 있습니다. 다시 말해, *Other Opens*는 실제 사용자에 의한 실제 오픈 수를 과소 추정할 가능성이 높습니다. 대신, Braze는 각 캠페인의 클릭 데이터를 사용하여 실제 사용자가 메시지를 열어본 비율을 추론합니다. 이는 Apple의 MPP를 비롯한 다양한 기기 개방 메커니즘을 보완합니다.
+이 통계는 Braze에서 개발한 독점 분석 모델을 사용하여 기계 열람이 존재하지 않는 것처럼 캠페인의 고유한 열람율 추정치를 재구성합니다. 이메일 발신자로부터 일부 열기 이벤트에 대한 *머신 열기* 라벨을 받지만(위 참조), 이러한 라벨은 일관성이 없을 수 있으며 모든 머신 열기를 식별하지 못할 수도 있습니다. 즉, *기타 오픈* 수치는 실제 사용자의 실제 오픈 수치를 과소평가했을 가능성이 높습니다. 대신, Braze는 각 캠페인의 클릭 데이터를 사용하여 실제 사용자가 메시지를 열어본 비율을 추론합니다. 이는 Apple의 MPP를 비롯한 다양한 기기 개방 메커니즘을 보완합니다.
 
 _예상 실제 열람율_은 이메일 발송이 시작된 후 36시간이 지나면 계산되며, 그 이후 매 24시간마다 재계산됩니다. 캠페인이 반복되면, 다른 발송이 발생한 후 36시간 후에 추정치가 재계산됩니다.
 
@@ -436,46 +440,46 @@ _버튼 1 클릭_ 및 _버튼 2 클릭_에 대한 보고서는 인앱 메시지�
 <table>
     <thead>
         <tr>
-            <th>측정기준</th>
+            <th>Metric</th>
             <th>정의</th>
         </tr>
     </thead>
     <tbody>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#body-clicks">본문 클릭 수</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Body Clicks' %}</td>
+            <td class="no-split">{% multi_lang_include 분석/metrics.md 측정기준='본문 클릭' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#button-1-clicks">버튼 1 클릭 수</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Button 1 Clicks' %}</td>
+            <td class="no-split">{% multi_lang_include 분석/metrics.md 측정기준='버튼 1 클릭' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#button-2-clicks">버튼 2 클릭 수</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Button 2 Clicks' %}</td>
+            <td class="no-split">{% multi_lang_include 분석/metrics.md 측정기준='버튼 2 클릭' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-impressions">고유 노출 수</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Impressions' %}</td>
+            <td class="no-split">{% multi_lang_include 분석/metrics.md 측정기준='고유 노출 횟수' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#total-impressions">총 노출 수</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Total Impressions' %}</td>
+            <td class="no-split">{% multi_lang_include 분석/metrics.md 측정기준='총 노출 횟수' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#conversions-b-c-d">변환 (B, C, D)</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Conversions (B, C, D)' %}</td>
+            <td class="no-split">{% multi_lang_include 분석/metrics.md 측정기준='전환(B, C, D)' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#total-conversions">총 전환 수</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Total Conversions' %}</td>
+            <td class="no-split">{% multi_lang_include 분석/metrics.md 측정기준='총 전환 수' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#conversion-rate">전환율</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Conversion Rate' %}</td>
+            <td class="no-split">{% multi_lang_include 분석/metrics.md 측정기준='전환율' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#close-message">닫기 메시지</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Close Message' %}</td>
+            <td class="no-split">{% multi_lang_include 분석/metrics.md 측정기준='메시지 닫기' %}</td>
         </tr>
     </tbody>
 </table>
@@ -502,15 +506,15 @@ _버튼 1 클릭_ 및 _버튼 2 클릭_에 대한 보고서는 인앱 메시지�
     <tbody>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#bounces">반송 수</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Bounces' %} <a href="#bounced-push">반송된 푸시 알림</a>을 참고하세요.</td>
+            <td class="no-split">{% multi_lang_include 분석/metrics.md 측정기준='반송' %} <a href="#bounced-push">반송된 푸시 알림을</a> 참조하세요.</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#direct-opens">직접 열람 수</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Direct Opens' %}</td>
+            <td class="no-split">{% multi_lang_include 분석/metrics.md 측정기준='직접 열기' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#opens">열람 수</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Opens' %}</td>
+            <td class="no-split">{% multi_lang_include 분석/metrics.md 측정기준='열림' %}</td>
         </tr>
     </tbody>
 </table>
@@ -575,38 +579,38 @@ Firebase Cloud Messaging(FCM) 바운스는 세 가지 경우에 발생할 수 �
 <table>
     <thead>
         <tr>
-            <th>측정기준</th>
+            <th>Metric</th>
             <th>정의</th>
         </tr>
     </thead>
     <tbody>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#sent">발송됨</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Sent' %}</td>
+            <td class="no-split">{% multi_lang_include 분석/metrics.md 측정기준='보낸' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#delivery-failures">전달 실패 수</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Delivery Failures' %}</td>
+            <td class="no-split">{% multi_lang_include 분석/metrics.md 측정기준='전달 실패' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#confirmed-delivery">확인된 전달</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Confirmed Deliveries' %}</td>
+            <td class="no-split">{% multi_lang_include 분석/metrics.md 측정기준='확인된 전달' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#rejections">거부 수</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Rejections' %}</td>
+            <td class="no-split">{% multi_lang_include 분석/metrics.md 측정기준='거부' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#opt-out">옵트아웃</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Opt-Out' %}</td>
+            <td class="no-split">{% multi_lang_include 분석/metrics.md 측정기준='옵트아웃' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#help">도움말</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Help' %}</td>
+            <td class="no-split">{% multi_lang_include 분석/metrics.md 측정기준='도움말' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#total-clicks">총 클릭 수</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Total Clicks' %}</td>
+            <td class="no-split">{% multi_lang_include 분석/metrics.md 측정기준='총 클릭 수' %}</td>
         </tr>
     </tbody>
 </table>
@@ -632,16 +636,16 @@ Firebase Cloud Messaging(FCM) 바운스는 세 가지 경우에 발생할 수 �
     </thead>
     <tbody>
         <tr>
-            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-recipients">고유 수신자</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Recipients' %}</td>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-recipients">Unique Recipients</a></td>
+            <td class="no-split">{% multi_lang_include 분석/metrics.md 측정기준='고유 수신자' %}</td>
         </tr>
         <tr>
-            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#sends">발송 수</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Sends' %}</td>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#sends">Sends</a></td>
+            <td class="no-split">{% multi_lang_include 분석/metrics.md 측정기준='Sends' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#errors">오류</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Errors' %}</td>
+            <td class="no-split">{% multi_lang_include 분석/metrics.md 측정기준='오류' %}</td>
         </tr>
     </tbody>
 </table>
@@ -667,20 +671,20 @@ Firebase Cloud Messaging(FCM) 바운스는 세 가지 경우에 발생할 수 �
     </thead>
     <tbody>
         <tr>
-            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#sends">발송 수</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Sends' %}</td>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#sends">Sends</a></td>
+            <td class="no-split">{% multi_lang_include 분석/metrics.md 측정기준='Sends' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#deliveries">전달 수</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Deliveries' %}</td>
+            <td class="no-split">{% multi_lang_include 분석/metrics.md 측정기준='전달' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#reads">읽기 수</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Reads' %}</td>
+            <td class="no-split">{% multi_lang_include 분석/metrics.md 측정기준='읽음' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#failures">실패 수</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Failures' %}</td>
+            <td class="no-split">{% multi_lang_include 분석/metrics.md 측정기준='실패' %}</td>
         </tr>
     </tbody>
 </table>

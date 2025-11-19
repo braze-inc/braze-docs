@@ -1,4 +1,4 @@
-{% multi_lang_include desenvolvedor_guide/prerequisites/swift.md %} Você também precisará [configurar notificações por push]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift), que inclui a implementação do `UNNotification` framework.
+{% multi_lang_include developer_guide/prerequisites/swift.md %} Você também precisará [configurar notificações por push]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift), que inclui a implementação do `UNNotification` framework.
 
 A seguinte versão mínima do SDK é necessária para receber Push Stories:
 

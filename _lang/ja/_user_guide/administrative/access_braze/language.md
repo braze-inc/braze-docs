@@ -18,7 +18,7 @@ Braze ダッシュボードは、[複数言語](#supported-languages)で使用�
 1. グローバルヘッダーで、以下を選択する。 <i class="fa-solid fa-globe" aria-label="言語を選択する"></i>.
 2. リストから言語を選択します。
 
-\![ダッシュボードの言語に英語が選択されている。]({% image_buster /assets/img_archive/language_dashboard.png %}){: style="max-width:40%"}
+![ダッシュボードの言語に英語が選択されている。]({% image_buster /assets/img_archive/language_dashboard.png %}){: style="max-width:40%"}
 
 ダッシュボードが再度読み込まれるまで、少し時間のかかる場合があります。
 

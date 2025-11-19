@@ -3,7 +3,7 @@
 ## Nachrichtentypen
 
 {% tabs %}
-{% multi_lang_include developer_guide/_shared/push_notifications/message_types/android.md %}
+{% multi_lang_include developer_guide/_shared/in_app_messages/message_types/android.md %}
 {% endtabs %}
 
 ## Aktivieren von In-App-Nachrichten
@@ -14,7 +14,7 @@ Die Anzeige von In-App-Nachrichten wird von der Klasse [`BrazeInAppMessageManage
 
 {% tabs local %}
 {% tab automatisch %}
-Die [Callback-Integration für den Aktivitätslebenszyklus]({{site.baseurl}}/developer_guide/platforms/android/sdk_integration/#android_step-3-enable-user-session-tracking) verarbeitet die Registrierung von In-App-Nachrichten automatisch; eine zusätzliche Integration ist nicht erforderlich. Dies ist die empfohlene Methode für die Registrierung von In-App-Nachrichten.
+Die [Callback-Integration für den Aktivitätslebenszyklus]({{site.baseurl}}/developer_guide/sdk_integration#android_step-4-enable-user-session-tracking) verarbeitet die Registrierung von In-App-Nachrichten automatisch; eine zusätzliche Integration ist nicht erforderlich. Dies ist die empfohlene Methode für die Registrierung von In-App-Nachrichten.
 {% endtab %}
 
 {% tab manuell %}
@@ -103,7 +103,7 @@ public override fun onPause() {
 
 ### Schritt 2: Update der Blockliste des Managers (optional)
 
-In Ihrer Integration können Sie festlegen, dass bestimmte Aktivitäten in Ihrer App keine In-App-Nachrichten anzeigen sollen. Die [Integration von Callbacks in den Aktivitätslebenszyklus]({{site.baseurl}}/developer_guide/platforms/android/sdk_integration/#android_step-3-enable-user-session-tracking) bietet eine einfache Möglichkeit, dies zu erreichen.
+In Ihrer Integration können Sie festlegen, dass bestimmte Aktivitäten in Ihrer App keine In-App-Nachrichten anzeigen sollen. Die [Integration von Callbacks in den Aktivitätslebenszyklus]({{site.baseurl}}/developer_guide/sdk_integration#android_step-4-enable-user-session-tracking) bietet eine einfache Möglichkeit, dies zu erreichen.
 
 Der folgende Code fügt der Blockliste für die Registrierung von In-App-Nachrichten zwei Aktivitäten hinzu: `SplashActivity` und `SettingsActivity`:
 

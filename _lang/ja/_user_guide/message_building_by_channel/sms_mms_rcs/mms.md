@@ -10,7 +10,7 @@ channel:
 search_rank: 2  
 ---
 
-# [\![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/messaging-channels-sms){: style="float:right;width:120px;border:0;" class="noimgborder"} MMSメッセージについて
+# [![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/messaging-channels-sms){: style="float:right;width:120px;border:0;" class="noimgborder"} MMSメッセージについて
 
 > MMSはマルチメディア・メッセージ・サービスとも呼ばれ、マルチメディア資産（JPEG、GIF、PNG）を含むメッセージを携帯電話に送信するために使われる。<br><br>SMSと同様、MMSは緊急性の高いメッセージング・チャネルであり、他のチャネルではできない方法で顧客と即座にコミュニケーションをとることができる。しかし、MMSはSMSの機能を拡張し、テキストだけのSMSにメディアを加えることができる。
 

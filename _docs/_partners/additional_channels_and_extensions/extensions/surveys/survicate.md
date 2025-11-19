@@ -12,17 +12,17 @@ search_tag: Partner
 
 ![An example of what a embedded HTML survey (first question) could look like in a Braze email.]({% image_buster /assets/img/survicate/survicate_asset_1.png %}){: style="float:right;max-width:40%;border:0; margin-left:8px;"}
 
-> [Survicate](https://survicate.com/integrations/braze-survey/?utm_source=braze&utm_medium=integrations&utm_campaign=helpcenter) is a customer feedback platform that helps you collect, analyze, and act on customer insights across multiple channels and throughout the user journey.  
+> [Survicate](https://survicate.com/integrations/braze-survey/?utm_source=braze&utm_medium=integrations&utm_campaign=helpcenter) is a customer feedback platform that collects, analyzes, and acts on customer insights across multiple channels and throughout the user journey.  
 
 _This integration is maintained by Survicate._
 
 ## About the integration
 
-With the Braze and Survicate integration, you can embed surveys directly in your Braze emails to increase response rates. Survey responses sync automatically with Braze user profiles as custom attributes or events. Real-time insights make it easy to track and analyze feedback alongside customer data and create targeted follow-ups.
+With the Braze and Survicate integration, you can embed surveys directly in Braze emails to increase response rates. Survey responses sync automatically with Braze user profiles as custom attributes or events. Real-time insights enable tracking and analysis of feedback alongside customer data to create targeted follow-ups.
 
 ## Use cases
 
-Braze and Survicate work together to cover a range of feedback use cases, helping you collect actionable user insights and improve the customer experience:
+Braze and Survicate work together to cover a range of feedback use cases, collecting actionable user insights and improving the customer experience:
 
 - Measure customer satisfaction (such as CSAT, NPS, or CES)
 - Collect product feedback

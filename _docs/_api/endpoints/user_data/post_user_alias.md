@@ -81,8 +81,6 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/alias/new' \
 ## Response
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
 {
     "aliases_processed": 1,
     "message": "success"
