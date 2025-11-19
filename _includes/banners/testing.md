@@ -4,7 +4,7 @@
 
 Keep in mind, your preview may not be identical to the final render on a user's device due to differences across hardware.
 
-To send a test message, add either a content test group or one or more individual users as **Test Recipients**, then select **Send Test**. You'll be able to view your test message on the device for up to 5 minutes.
+To send a test message, add either a content test group or one or more individual users as **Test Recipients**, then select **Send Test**. You'll be able to view your test message on the device for up to 5 minutes. You can then select **Copy preview link** to generate and copy a shareable preview link that shows what the banner will look like for a random user. The link will last for seven days before it needs to be regenerated.
 
 ![Preview tab of the Banner composer.]({% image_buster /assets/img/banners/preview_banner.png %})
 
