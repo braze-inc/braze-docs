@@ -78,7 +78,7 @@ SQL を使用するエクスペリエンスを選択する場合は、[SQL Segme
 
 ![ブール・プロパティに基づくセグメンテーション。]({% image_buster /assets/img/segment/property3.png %})
 
-![日時オブジェクトに基づくセグメンテーション。]({% image_buster /assets/img/segment/property4.png %})
+\![日時オブジェクトに基づくセグメンテーション。]({% image_buster /assets/img/segment/property4.png %})
 
 [階層化イベントプロパティ]({{site.baseurl}}/user_guide/data/custom_data/custom_events/nested_objects/)に基づくセグメンテーションもサポートしています。
 

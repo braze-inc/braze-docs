@@ -17,7 +17,7 @@ local_redirect:
 
 ## フィーチャー・フラッグを作成する
 
-![ライブチャットボタン機能のフィーチャーフラグステップの例。]({% image_buster /assets/img/feature_flags/feature_flag_canvas_step.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
+\![ライブチャットボタン機能のフィーチャーフラグステップの例。]({% image_buster /assets/img/feature_flags/feature_flag_canvas_step.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
 フィーチャーフラグコンポーネントを作成するには、まずキャンバスにステップを追加します。サイドバーからコンポーネントをドラッグ＆ドロップするか、ステップの下にある <i class="fas fa-plus-circle"></i> プラスのボタンをクリックし、[**フィーチャーフラグ**] を選択します。次に、ドロップダウンからフィーチャーフラグを選択します。ここにはアーカイブされていないフィーチャーフラグが表示されます。
 
