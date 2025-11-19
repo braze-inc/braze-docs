@@ -65,6 +65,12 @@ You must decide what data the agent should receive at runtime. The following opt
 Braze will only pass the first 10 KB of content to the agent. Providing values that have a total value of more than 10 KB will result in truncation. To help save costs, Braze Agents in Canvas use short-lived caches for LLM responses for identical inputs. Including all Canvas Context increases the likelihood that cached results cannot be used, which might increase your LLM costs.
 {% endalert %}
 
+## Step 5: Test the agent
+
+After setting up your Agent step, you can test and preview the output of this step. You can use the listed Liquid strings to reference particular fields from the agent output to use in future Canvas steps.
+
+![Agent step for Body HTML Writer with an object data type output for the variable "agent_output".]( {% image_buster /assets/img/ai_agent/test_agent_step.png %} ){: style="max-width:80%;"} 
+
 ## Error handling  
 
 - If the connected model returns a rate limit error, Braze retries up to five times with exponential backoff.  
