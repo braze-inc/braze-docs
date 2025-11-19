@@ -15,7 +15,7 @@ description: "This article outlines details about the Canvas translation source 
 /canvas/translations/source
 {% endapimethod %}
 
-> Use this endpoint to view all the default translation sources for a canvas's translation tags. These are the values with the `{% translation id %} source {% endtranslation %}`
+> Use this endpoint to view all the default translation sources for a canvas's translation tags. These are the values with the {% raw %}`{% translation id %} source {% endtranslation %}`{% endraw %}
 
 {% alert important %}
 This endpoint is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
