@@ -18,7 +18,7 @@ _This integration is maintained by Radar._
 
 The Braze and Radar integration allows you to access sophisticated location-based campaign triggers and user profile enrichment with rich, first-party location data. When Radar geofence or trip tracking events are generated, custom events and user attributes are sent to Braze in real-time. These events and attributes can then be used to trigger location-based campaigns, power last-mile pickup and delivery operations, monitor fleet and shipping logistics, or build user segments based on location patterns. 
 
-Additionally, Radar Geo APIs can be leveraged to enrich or personalize your marketing campaigns through [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/). 
+Additionally, Radar Geo APIs can be used to enrich or personalize your marketing campaigns through [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/). 
 
 ## Prerequisites
 
@@ -129,7 +129,7 @@ The following code snippet is an example of what Radar will return as a JSON obj
 }
 ```
 
-To construct the Connected Content targeted and personalized Braze message, you can leverage the Braze `most_recent_location` attribute as an input for the `near` parameter in the API request's URL. The `most_recent_location` attribute is collected via the Radar event integration or directly through the Braze SDK.
+To construct the Connected Content targeted and personalized Braze message, you can use the Braze `most_recent_location` attribute as an input for the `near` parameter in the API request's URL. The `most_recent_location` attribute is collected via the Radar event integration or directly through the Braze SDK.
 
 In the following example, the Radar chain filtering is applied for Target and Walmart locations, and the search radius for nearby locations is set to 2 km.
 
@@ -180,7 +180,7 @@ near you!
 {% endraw %}
 
 {% alert tip %}
-Visit [Radar documentation](https://radar.io/documentation/api) for all the Radar APIs that can be leveraged in Connected Content.
+Visit [Radar documentation](https://radar.io/documentation/api) for all the Radar APIs that can be used in Connected Content.
 {% endalert %}
 
 

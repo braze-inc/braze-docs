@@ -16,11 +16,13 @@ description: "Auf dieser Seite erfahren Sie, wie Sie mit dem Drag-and-Drop-Edito
 
 ### Schritt 1: Template wählen
 
-Wenn Sie eine In-App-Nachricht per Drag-and-Drop erstellen, wählen Sie **E-Mail-Registrierung** für Ihr Template und dann **Nachricht erstellen** aus. Diese Vorlage wird sowohl für mobile Apps als auch für Webbrowser unterstützt.
+Wenn Sie eine In-App-Nachricht per Drag-and-Drop erstellen, wählen Sie **E-Mail-Registrierung** für Ihr Template und dann **Nachricht erstellen** aus. Dieses Template wird sowohl für mobile Apps als auch für Webbrowser unterstützt.
+
+![Der In-App-Nachricht-Editor mit dem Template für ein E-Mail-Erfassungsformular.]({% image_buster /assets/img/drag_and_drop/templates/email_capture_template1.png %})
 
 ### Schritt 2: Nachrichtenstile festlegen
 
-{% multi_lang_include drag_and_drop/templates.md section='Nachrichtenstil' %}
+{% multi_lang_include drag_and_drop/templates.md section='message style' %}
 
 ### Schritt 3: E-Mail-Registrierungskomponente anpassen
 
@@ -28,9 +30,11 @@ Um mit der Erstellung Ihres E-Mail-Registrierungsformulars zu beginnen, wählen 
 
 Sie können den Platzhaltertext und den Beschriftungstext des Elements für die E-Mail-Erfassung anpassen.
 
+![Der In-App-Nachricht-Editor mit einem Seitenmenü zum Anpassen des Elements für die E-Mail-Erfassung.]({% image_buster /assets/img/drag_and_drop/templates/email_capture_field1.png %})
+
 #### E-Mail-Validierung
 
-Wenn der oder die Nutzer:in eine E-Mail-Adresse eingibt, die nicht akzeptierte Sonderzeichen enthält, wird eine allgemeine Fehlermeldung angezeigt und das Formular kann nicht gesendet werden. Diese Fehlermeldung ist nicht anpassbar. Sie können das Fehlerverhalten auf der Registerkarte **Vorschau & Test** und auf Ihrem Testgerät sehen. Erfahren Sie mehr darüber, wie Braze E-Mail-Adressen unter [E-Mail-Validierung]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/email_validation/) formatiert.
+Wenn der oder die Nutzer:in eine E-Mail-Adresse eingibt, die nicht akzeptierte Sonderzeichen enthält, wird eine allgemeine Fehlermeldung angezeigt und das Formular kann nicht gesendet werden. Diese Fehlermeldung ist nicht anpassbar. Sie können das Fehlerverhalten in der **Vorschau & ** Tab **Test** und auf Ihrem Gerät sehen. Erfahren Sie mehr darüber, wie Braze E-Mail-Adressen unter [E-Mail-Validierung]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/email_validation/) formatiert.
 
 ### Schritt 4: Sprache für Haftungsausschluss hinzufügen (optional)
 
@@ -38,14 +42,13 @@ Wenn der oder die Nutzer:in eine E-Mail-Adresse eingibt, die nicht akzeptierte S
 
 ### Schritt 5: Nachricht gestalten
 
-Passen Sie das Aussehen Ihres Registrierungsformulars mit den [In-App-Nachrichten-Komponenten][3] per Drag-and-Drop an.
+Passen Sie das Aussehen Ihres Registrierungsformulars mit den [In-App-Nachrichten-Komponenten]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#message-components) per Drag-and-Drop an.
 
 ## Analysieren der Ergebnisse
 
-{% multi_lang_include drag_and_drop/templates.md section='Berichterstattung' %}
+{% multi_lang_include drag_and_drop/templates.md section='reporting' %}
 
 ## Bewährte Praktiken
 
 {% multi_lang_include drag_and_drop/templates.md section='email double opt-in' %}
 
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#message-components

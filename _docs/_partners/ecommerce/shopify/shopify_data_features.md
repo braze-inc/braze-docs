@@ -743,7 +743,7 @@ Shopify’s checkout completed webhook doesn't contain product URLs or image URL
 {% endraw %}
 
 {% alert note %}
-The Shopify integration currently doesn't support populating the Braze [purchase event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events#purchase-events). As a result, purchase filters, Liquid tags, action-based triggers, and analytics should use the ecommerce.order_placed event. 
+The Shopify integration currently doesn't support populating the Braze [purchase event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events#purchase-events). As a result, purchase filters, Liquid tags, action-based triggers, and analytics should use the `ecommerce.order_placed` event. 
 {% endalert %}
 
 {% endsubtab %}
@@ -787,12 +787,12 @@ The Shopify integration currently doesn't support populating the Braze [purchase
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {% alert important %}
-A known issue with Shopify's latest API version prevents the `shopify_last_order_name` user attribute from correctly populating. The impact on users is as follows:<br><br>
+A known issue with the current Shopify API version prevents the `shopify_last_order_name` user attribute from correctly populating. The impact on users is as follows:<br><br>
 
-- **Existing users:** For any user who already has a value for `shopify_last_order_name`, that value will persist. However, it will not be updated by any subsequent orders.
-- **New users:** For any new users, field will not populate and will remain empty or null.
+- **Existing users:** For any user who already has a value for `shopify_last_order_name`, that value persists but is not updated by subsequent orders.
+- **New users:** For any new users, the field does not populate and remains empty or null.
 
-We will update this page when Shopify resolves this issue.
+This page will be updated after Shopify resolves this issue.
 {% endalert %}
 
 ### Liquid personalization

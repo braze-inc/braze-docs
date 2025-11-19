@@ -1,7 +1,7 @@
 ---
 nav_title: Grouparoo
 page_order: 1
-description: "This article outlines the partnership between Braze and Grouparoo, a open-source reverse ETL tool that makes it easy to power your Marketing, Sales, and Support tools using the data in your data warehouse."
+description: "This article outlines the partnership between Braze and Grouparoo, an open-source reverse ETL tool used to power Marketing, Sales, and Support tools with data from your data warehouse."
 page_type: update
 
 ---
@@ -12,9 +12,9 @@ page_type: update
 Support for Grouparoo has been discontinued as of April 2022.
 {% endalert %}
 
-> [Grouparoo](https://www.grouparoo.com/) is an open-source reverse ETL tool that makes it easy to power your marketing, sales, and support tools using the data in your warehouse. Configuration is done in a model-centric UI, making it possible for non-technical team members to configure and schedule data syncs in support of operations.
+> [Grouparoo](https://www.grouparoo.com/) is an open-source reverse ETL tool that syncs data from your warehouse to marketing, sales, and support tools. Its model-centric UI enables non-technical team members to configure and schedule data syncs.
 
-The Braze and Grouparoo integration makes it easy to operationalize data stored in a warehouse by sending it to Braze. When you set up automatic sync schedules, you can consistently enhance customer communications with up-to-date information.
+The Braze and Grouparoo integration syncs warehouse data to Braze. Automatic sync schedules keep customer communications current with up-to-date information.
 
 ## Prerequisites
 

@@ -26,7 +26,7 @@ channel:
 
 1. [**テクノロジーパートナー**] > [**WhatsApp**] に移動して [**WhatsApp ビジネスアカウントを追加**] を選択します。 
 
-\![WhatsApp Messaging Integrationセクションでビジネスアカウントの追加、サブスクリプショングループと電話番号の追加ができる。]({% image_buster /assets/img/whatsapp/multiple_wabas.png %})
+![WhatsApp Messaging Integrationセクションでビジネスアカウントの追加、サブスクリプショングループと電話番号の追加ができる。]({% image_buster /assets/img/whatsapp/multiple_wabas.png %})
 
 {: start="2"}
 2\.サインアップのワークフローを実行します。ステップごとの詳しいガイドは、[WhatsApp 埋め込みサインアップ]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/embedded_signup/)を参照してください。
@@ -51,7 +51,7 @@ WhatsApp Business アカウントごとに最大 20 の購読グループ (お�
 
 1. [**テクノロジーパートナー**] > [**WhatsApp**] に移動して [**購読グループと番号を追加**] を選択します。
 
-\![WhatsApp Messaging Integrationセクションでビジネスアカウントの追加、サブスクリプショングループと電話番号の追加ができる。]({% image_buster /assets/img/whatsapp/multiple_wabas.png %})
+![WhatsApp Messaging Integrationセクションでビジネスアカウントの追加、サブスクリプショングループと電話番号の追加ができる。]({% image_buster /assets/img/whatsapp/multiple_wabas.png %})
 
 {: start="2"}
 2\.サインアップのワークフローを実行します。<br><br> **WhatsApp Businessアカウントを選択**"ステップで既存のWhatsApp Businessアカウントを選択し、新しい電話番号を追加する。この電話番号は、他のWhatsAppアカウントに登録されていないなど、WhatsApp電話番号の全ての条件を満たしている必要がある。

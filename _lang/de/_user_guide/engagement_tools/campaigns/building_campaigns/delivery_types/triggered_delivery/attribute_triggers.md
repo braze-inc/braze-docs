@@ -1,5 +1,5 @@
 ---
-nav_title: Attribut Auslöser
+nav_title: Attribut-Trigger
 article_title: Attribut Auslöser
 page_order: 1
 alias: /attribute_triggers/
@@ -22,7 +22,7 @@ Attributauslöser sind für die folgenden Szenarien verfügbar:
 
 Um mit der Verwendung von Attributauslösern zu beginnen, erstellen Sie eine Kampagne oder eine Canvas-Komponente und wählen Sie **Aktionsbasierte Zustellung** als Zustellungsmethode. Wählen Sie dann den Attribut-Trigger aus, den Sie verwenden möchten.
 
-![][1]
+!["Aktionsbasierte Zustellung" mit einer Dropdown-Liste zum Auswählen eines Auslösers.]({% image_buster /assets/img_archive/trigger_attribute.png %})
 
 ### Abo-Status aktualisieren
 
@@ -41,8 +41,10 @@ Verwenden Sie den Auslöser `Update Subscription Group Status`, um Nutzer:innen 
 So können Sie beispielsweise Nutzer mit einer Willkommens-SMS ansprechen, wenn sie sich für Ihr Programm anmelden. Sie können auch die Quelle der Aktualisierung angeben, um genauer zu steuern, wann eine Nachricht ausgelöst wird. 
 
 Die verfügbaren Aktualisierungsquellen variieren je nach Kanal:
+- Canvas-Schritt „Nutzeraktualisierung“
 - CSV-Import
-- Präferenzzentrum
+- List-Unsubscribe
+- Präferenz-Center
 - REST API
 - SDK
 - Shopify (E-Mail, SMS)
@@ -58,21 +60,21 @@ Bei einem Änderungsattribut wird zuerst der Trigger und dann das Zielgruppenkri
 
 Verwenden Sie den Auslöser `Change Custom Attribute Value` mit der Option `any new value`, um Nutzer:innen anzusprechen, wenn sich ein boolescher, ganzzahliger, String- oder Datumswert in einen beliebigen neuen Wert ändert.
 
-Richten Sie sich z. B. an Nutzer:innen, wenn sich die Anzahl ihrer Treuepunkte ändert, um ihnen mitzuteilen, wie viele Punkte sie jetzt haben. In diesem Beispiel nehmen wir an, dass ein Benutzer 85 Treuepunkte hat und Sie eine Kampagne eingerichtet haben, die ausgelöst wird, wenn sich das Attribut Treuepunkte auf einen neuen Wert ändert. Wenn sich der Wert des Treuepunkt-Attributs dieses Benutzers auf einen neuen Wert ändert (e.g 83, 84, 86, usw.), wird die Kampagne ausgelöst.
+Stellen Sie Nutzer:innen zum Beispiel gezielt zusammen, wenn sich die Anzahl ihrer Rewards-Punkte ändert, um ihnen mitzuteilen, wie viele Punkte sie jetzt haben. In diesem Beispiel nehmen wir an, dass ein Nutzer:innen 85 Rewardspunkte hat und Sie eine Kampagne eingerichtet haben, die triggert, wenn sich das Attribut Rewardspunkte auf einen neuen Wert ändert. Wenn sich der Wert des Attributs Rewardspunkte dieses Nutzers:innen auf einen neuen Wert ändert (z.B. 83, 84, 86, usw.), wird die Kampagne getriggert.
 
-Betrachten Sie den nächsten Anwendungsfall mit einer Benachrichtigung über ein Stufen-Update. Vielleicht möchten Sie Benutzer benachrichtigen, wenn sich ihre Treuestufe ändert. Für diesen Anwendungsfall richten Sie eine Kampagne ein, die von `Change Custom Attribute Value` ausgelöst wird, und legen fest, dass sie getriggert wird, wenn sich das angepasste Attribut „Loyalitätsstufe“ auf einen neuen Wert ändert.
+Betrachten Sie den nächsten Anwendungsfall mit einer Benachrichtigung über ein Stufen-Update. Vielleicht möchten Sie Nutzer:innen benachrichtigen, wenn sich ihre Rewards-Stufe ändert. Um diesen Anwendungsfall zu realisieren, richten Sie eine Kampagne ein, die durch `Change Custom Attribute Value` ausgelöst wird, und stellen Sie sie so ein, dass sie ausgelöst wird, wenn sich das angepasste Attribut Rewards Tier auf einen neuen Wert ändert.
 
 {% alert important %}
 Attribut-Trigger sind derzeit nicht für Array-Attribute verfügbar.
 {% endalert %}
 
-![Jeder neue Wert][2]
+![Ein Trigger "Angepassten Attribut-Wert ändern" für die "AA_current_rewards_tier", die sich auf einen beliebigen Wert ändert.]({% image_buster /assets/img_archive/any_value.png %})
 
-Sie können Liquid auch verwenden, um den Nachrichtentext mit der neuen Treuestufe des Kunden zu personalisieren und den Kunden mit weiteren Informationen über die Änderung zu versorgen.
+Sie können Liquid auch verwenden, um den Nachrichtentext mit der neuen Rewards-Stufe des Kunden anzupassen und den Kunden mit weiteren Informationen über die Änderung zu versorgen.
 
 {% raw %}
 ```liquid
-Your loyalty tier was just changed to {{custom_attribute.${loyalty_tier}}}
+Your rewards tier was just changed to {{custom_attribute.${AA_current_rewards_tier}}}
 ```
 {% endraw %}
 
@@ -80,9 +82,9 @@ Your loyalty tier was just changed to {{custom_attribute.${loyalty_tier}}}
 
 Verwenden Sie den Trigger `Change Custom Attribute Value` mit der Option `specific value`, um Nutzer:innen anzusprechen, wenn sich ein angepasstes boolesches, ganzzahliges oder String-Attribut auf einen bestimmten Wert ändert. 
 
-Zum Beispiel können Sie Nutzer:innen ansprechen, wenn ihre Treuestufe in die beste Stufe wechselt. Nehmen wir für dieses Beispiel an, dass die beste Treuestufe Super VIP ist. Sie können eine Kampagne einrichten, die ausgelöst wird, wenn sich das benutzerdefinierte Attribut der Treuestufe eines Benutzers in `Super VIP` ändert, so dass Sie dem Benutzer dazu gratulieren können, dass er ein Super-VIP geworden ist.
+Stellen Sie Nutzer:innen zum Beispiel gezielt zusammen, wenn ihre Rewards-Stufe in die beste Stufe wechselt. Für dieses Beispiel nehmen wir an, dass die beste Rewards-Stufe Super VIP ist. Sie können eine Kampagne einrichten, die triggert, wenn sich das angepasste Attribut der Rewards-Stufe eines Nutzers:innen in `Super VIP` ändert, so dass Sie dem Nutzer:innen dazu gratulieren können, dass er ein Super-VIP geworden ist.
 
-![][4]
+![Ein "Change Custom Attribute Value"-Trigger für die "AA_current_rewards_tier", der auf den spezifischen Wert "super vip" ändert.]({% image_buster /assets/img_archive/super_vip.png %})
 
 {% alert important %}
 - Attribut-Trigger für bestimmte benutzerdefinierte Attributwerte sind für benutzerdefinierte Array- und Datumsattribute nicht verfügbar.
@@ -91,6 +93,3 @@ Zum Beispiel können Sie Nutzer:innen ansprechen, wenn ihre Treuestufe in die be
 - Der Auslöser für die Änderung von benutzerdefinierten Attributwerten gilt auch für neu angelegte Benutzer.
 {% endalert %}
 
-[1]:{% image_buster /assets/img_archive/trigger_attribute.png %}
-[2]:{% image_buster /assets/img_archive/any_value.png %}
-[4]:{% image_buster /assets/img_archive/super_vip.png %}

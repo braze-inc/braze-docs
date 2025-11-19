@@ -1,12 +1,12 @@
-{% multi_lang_include developer_guide/prerequisites/cordova.md %} [ set up push notifications]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift) も必要です。これには`UNNotification` フレームワークの実装も含まれます。
+{% multi_lang_include developer_guide/prerequisites/swift.md %} [プッシュ通知の設定も]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift)必要で、これには`UNNotification` フレームワークの実装も含まれる。
 
-プッシュストーリーを受信するには、以下のSDKバージョンが必要である：
+プッシュストーリーを受信するには、以下のSDKの最低バージョンが必要である：
 
 {% sdk_min_versions swift:5.0.0 %}
 
 ## プッシュストーリーの設定
 
-### ステップ1:通知コンテンツ拡張ターゲットを追加する{#notification-content-extension}
+### ステップ 1: 通知コンテンツ拡張ターゲットを追加する{#notification-content-extension}
 
 アプリ・プロジェクトで、メニュー「**ファイル」＞「新規作成」＞「ターゲット**」と進み、新しい`Notification Content Extension` ・ターゲットを追加してアクティブにする。
 

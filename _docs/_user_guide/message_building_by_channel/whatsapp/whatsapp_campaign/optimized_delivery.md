@@ -14,7 +14,7 @@ channel:
 
 > Leverage Meta’s advanced AI systems to deliver your marketing messages to more users who are most likely to engage with them, significantly boosting deliverability and message engagement.
 
-WhatsApp messages with optimized delivery are sent using Meta's new [Marketing Messages Lite API](https://developers.facebook.com/docs/whatsapp/marketing-messages-lite-api/), which provides superior performance compared to the traditional Cloud API. This new sending pipeline helps you better reach users who value and want to receive your messages.
+WhatsApp messages with optimized delivery use Meta's [Marketing Messages Lite API](https://developers.facebook.com/docs/whatsapp/marketing-messages-lite-api/), which offers higher performance than the traditional Cloud API. This sending pipeline improves reach to users who are likely to engage.
 
 Benefits of using optimized delivery include:
 

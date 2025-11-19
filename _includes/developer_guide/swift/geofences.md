@@ -280,7 +280,7 @@ Braze has a limit of 1 geofence refresh per session to avoid unnecessary request
 
 As mentioned above, iOS allows a single app to store a maximum of 20 geofences. This storage is shared by both Braze and non-Braze geofences and is managed by [CLLocationManager](https://developer.apple.com/documentation/corelocation/cllocationmanager).
 
-For instance, if your app contains 20 non-Braze geofences, there would be no storage to track any Braze geofences (or vise versa). In order to receive new geofences, you will need to use [Apple's location APIs](https://developer.apple.com/documentation/corelocation) to stop monitoring some of the existing geofences on the device.
+For instance, if your app contains 20 non-Braze geofences, there would be no storage to track any Braze geofences (or vice versa). In order to receive new geofences, you will need to use [Apple's location APIs](https://developer.apple.com/documentation/corelocation) to stop monitoring some of the existing geofences on the device.
 
 #### Can the Geofences feature be used while a device is offline?
 

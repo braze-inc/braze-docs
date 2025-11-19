@@ -41,11 +41,11 @@ Gehen Sie in Braze zu **Partnerintegrationen** > **Technologiepartner** und such
 
 Auf der WhatsApp-Partnerseite wählen Sie **Integration beginnen**.
 
-![][1]
+![WhatsApp Partnerseite mit einem Button, um die Integration zu beginnen.]({% image_buster /assets/img/whatsapp/whatsapp1.png %}){: style="max-width:70%;"}
 
 In dem sich öffnenden Fenster wählen Sie **Weiter**, bis die Schaltfläche **Integration beginnen** erscheint. Wählen Sie den Button aus, um die Integration zu starten.
 
-![Anleitung zur Verbindung von Braze mit WhatsApp.][7]
+![Anleitung zur Verbindung von Braze mit WhatsApp.]({% image_buster /assets/img/whatsapp/instructions.png %}){: style="max-width:50%;"}
 
 ### Schritt 2: WhatsApp-Einrichtung
 
@@ -64,16 +64,18 @@ Nur genehmigte WhatsApp-Nachrichtenvorlagen können verwendet werden, um Konvers
 
 1. **Navigieren Sie zum [Template-Manager](https://business.facebook.com/wa/manage/message-templates)**<br>
 Wählen Sie im Meta Business Manager unter **Konto-Tools** die Option **Nachrichtenvorlagen**.
-Wählen Sie dann **Vorlagen erstellen**.<br><br>![][3]{: style="max-width:100%;"}<br><br>
+Wählen Sie dann **Vorlagen erstellen**.<br><br>![WhatsApp Manager:in mit einer Liste von Templates für Nachrichten.]({% image_buster /assets/img/whatsapp/whatsapp2.png %}){: style="max-width:100%;"}<br><br>
 2. **Nachrichteneinstellungen**<br>
 Wählen Sie im Composer für neue Nachrichtenvorlagen die Kategorie Ihrer Nachricht aus, benennen Sie Ihre Vorlage und wählen Sie die Sprachen, die Sie unterstützen möchten. Sie können später weitere Sprachen löschen oder hinzufügen.<br><br> 
 	Die folgenden Kategorien von Nachrichtenvorlagen sind verfügbar:
 	- Marketing: Senden Sie Werbeangebote, Produktankündigungen und mehr, um die Bekanntheit und das Engagement zu steigern.
 	- Utility: Senden Sie Updates zu Konten, Bestellungen, Warnungen und mehr, um wichtige Informationen weiterzugeben.
 	- Authentifizierung: Senden Sie Codes, mit denen Ihre Kunden auf ihre Konten zugreifen können<br><br> 
-	![][4]{: style="max-width:100%;"}<br><br>
+	![Nachrichten-Template-Editor mit Kategorien für Marketing, Nützlichkeit und Authentifizierung.]({% image_buster /assets/img/whatsapp/whatsapp3.png %}){: style="max-width:100%;"}<br><br>
 3. **Template bearbeiten**<br>
-Als nächstes werden Sie aufgefordert, eine Template für Ihre Nachrichten zu erstellen. <br><br>Hier können Sie eine Text- oder Medienüberschrift, den Textkörper, eine Fußzeile für die Nachricht sowie Buttons einfügen. Beachten Sie, dass Video- und Dokumentenkopfzeilen derzeit nicht verfügbar sind und die Kopfzeilen entweder als Text oder als Bild vorliegen müssen. Eine Vorschau Ihrer Nachricht wird auf der rechten Seite angezeigt. <br><br>Meta unterstützt zwar kein Liquid, aber Sie können eine Vorlage für Variablen erstellen, die später in Braze durch Liquid-Variablen ersetzt werden können. Wählen Sie dazu die Schaltfläche **\+ Variable hinzufügen**.<br><br>![][5]{: style="max-width:100%;"}<br><br>Sobald Sie Ihre Vorlage fertiggestellt haben, drücken Sie auf **Senden**. 
+Als nächstes erstellen Sie Ihr Template für Nachrichten. <br><br>Sie können eine Text- oder Medienüberschrift, den Textkörper, eine Fußzeile für die Nachricht und Buttons bereitstellen. Beachten Sie, dass Video- und Dokumentenkopfzeilen derzeit nicht verfügbar sind und die Kopfzeilen entweder als Text oder als Bild vorliegen müssen. Alle Medien, die Sie hinzufügen, dienen als Beispiel für den Überprüfungsprozess und **sind nicht** in der Template Nachricht enthalten. Die Medien müssen in Braze hinzugefügt werden. Eine Vorschau Ihrer Nachricht wird in einem Panel angezeigt. <br><br>Meta unterstützt zwar kein Liquid, aber Sie können eine Vorlage für Variablen erstellen, die später in Braze durch Liquid-Variablen ersetzt werden können. Wählen Sie dazu die Schaltfläche **\+ Variable hinzufügen**.<br><br>![Template composer.]({% image_buster /assets/img/whatsapp/whatsapp4.png %}){: style="max-width:100%;"}
+
+Sobald Sie Ihre Vorlage fertiggestellt haben, drücken Sie auf **Senden**. 
 
 #### Zeit für die Genehmigung einer Vorlage
 
@@ -104,10 +106,3 @@ Wir empfehlen Ihnen außerdem, sich über die [Telefonnummern der Benutzer]({{si
 
 Braze unterstützt den [lokalen Speicher der Cloud-API](https://developers.facebook.com/docs/whatsapp/cloud-api/overview/local-storage?content_id=ka6F9gESPqhQpm5) von WhatsApp. Wenn Sie diese Funktion aktivieren möchten, wenden Sie sich an Ihren Braze-Kundenbetreuer.
 
-[1]: {% image_buster /assets/img/whatsapp/whatsapp1.png %}
-[2]: {% image_buster /assets/img/whatsapp/whatsapp10.png %}
-[3]: {% image_buster /assets/img/whatsapp/whatsapp2.png %}
-[4]: {% image_buster /assets/img/whatsapp/whatsapp3.png %}
-[5]: {% image_buster /assets/img/whatsapp/whatsapp4.png %}
-[6]: {% image_buster /assets/img/whatsapp/whatsapp5.png %}
-[7]: {% image_buster /assets/img/whatsapp/instructions.png %} 

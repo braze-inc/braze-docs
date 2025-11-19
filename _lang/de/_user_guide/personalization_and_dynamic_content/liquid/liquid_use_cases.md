@@ -1,5 +1,5 @@
 ---
-nav_title: Bibliothek für Liquid-Anwendungsfälle
+nav_title: Liquid Bibliothek für Anwendungsfälle
 article_title: Bibliothek für Liquid-Anwendungsfälle
 page_order: 10
 search_rank: 2
@@ -60,7 +60,7 @@ Exactly three years ago today we met for the first time!
 ```
 {% endraw %}
 
-**Erläuterung:** Hier verwenden wir die reservierte Variable `now`, um das aktuelle Datum und die Uhrzeit im [ISO 8601ISO](http://en.wikipedia.org/wiki/ISO_8601 "8601 Time Code Wiki")-Format einzutragen. Die Filter `%B` (Monat wie „Mai“) und `%d` (Tag wie „18“) formatieren den aktuellen Monat und Tag. Anschließend verwenden wir dieselben Datums- und Zeitfilter für die Werte von `signup_date`, um sicherzustellen, dass wir die beiden Werte mithilfe von bedingten Tags und Logik vergleichen können.
+**Erläuterung:** Hier verwenden wir die reservierte Variable `now`, um das aktuelle Datum und die Uhrzeit im [ISO 8601-Format](http://en.wikipedia.org/wiki/ISO_8601) als Template einzugeben. Die Filter `%B` (Monat wie „Mai“) und `%d` (Tag wie „18“) formatieren den aktuellen Monat und Tag. Anschließend verwenden wir dieselben Datums- und Zeitfilter für die Werte von `signup_date`, um sicherzustellen, dass wir die beiden Werte mithilfe von bedingten Tags und Logik vergleichen können.
 
 Dann wiederholen wir drei weitere Variablenanweisungen, um `%B` und `%d` das `signup_date` zu erhalten, fügen aber auch `%Y` (Jahr wie „2021“) hinzu. Damit wird das Datum und die Uhrzeit von `signup_date` zu einer Jahreszahl. Wenn wir den Tag und den Monat kennen, können wir überprüfen, ob der Benutzer heute seinen Jahrestag hat, und wenn wir das Jahr kennen, wissen wir, wie viele Jahre es her ist - und damit auch, zu wie vielen Jahren wir gratulieren können!
 
@@ -544,7 +544,7 @@ Angepasstes Attribut
 
 - [Personalisieren Sie eine Nachricht auf der Grundlage passender benutzerdefinierter Attribute](#attribute-matching)
 - [Subtrahieren Sie zwei benutzerdefinierte Attribute, um die Differenz als Geldwert anzuzeigen](#attribute-monetary-difference)
-- [Auf den Vornamen eines Nutzers oder einer Nutzerin verweisen, wenn sein oder ihr vollständiger Name im Feld „first_name“ gespeichert ist](#attribute-first-name)
+- [Den Vornamen eines Nutzers:innen referenzieren, wenn der vollständige Name im Feld first_name gespeichert ist](#attribute-first-name)
 
 ### Personalisieren Sie eine Nachricht auf der Grundlage passender benutzerdefinierter Attribute {#attribute-matching}
 
@@ -579,7 +579,7 @@ You only have ${{ difference | round: 0 | number_with_delimiter }} left to raise
 ```
 {% endraw %}
 
-### Auf den Vornamen eines Nutzers oder einer Nutzerin verweisen, wenn sein oder ihr vollständiger Name im Feld „first_name“ gespeichert ist {#attribute-first-name}
+### Den Vornamen eines Nutzers:innen referenzieren, wenn der vollständige Name im Feld first_name gespeichert ist {#attribute-first-name}
 
 Dieser Anwendungsfall erfasst den Vornamen eines Benutzers (wenn sowohl Vor- als auch Nachname in einem einzigen Feld gespeichert sind) und verwendet dann diesen Vornamen, um eine Willkommensnachricht anzuzeigen.
 
@@ -1460,10 +1460,10 @@ Check out this new bar after work today. HH specials!
 
 {% api %}
 
-## Week/Day/Month
+## Woche/Tag/Monat
 
 {% apitags %}
-Week/Day/Month
+Woche/Tag/Monat
 {% endapitags %}
 
 - [Den Namen des Vormonats in eine Nachricht ziehen](#month-name)
