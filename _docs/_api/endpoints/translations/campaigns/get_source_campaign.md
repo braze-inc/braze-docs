@@ -1,21 +1,21 @@
 ---
-nav_title: "GET: View all translations for a campaign"
-article_title: "GET: View All Translations for a Campaign"
+nav_title: "GET: View default source values for campaign translation tags"
+article_title: "GET: View default source values for campaign translation tags"
 search_tag: Endpoint
-page_order: 1
+page_order: 3
 
 layout: api_page
 page_type: reference
-description: "This article outlines details about the View all translations for a campaign endpoint."
+description: "This article outlines details about the campaign translation source endpoint."
 ---
 
 {% api %}
-# View all translations for a campaign
+# View default source values for a campaign's translation tags
 {% apimethod get %}
-/campaigns/translations
+/campaigns/translations/source
 {% endapimethod %}
 
-> Use this endpoint to view all the translations for each message variant in a campaign.
+> Use this endpoint to view all the default translation sources for a campaign's translation tags. These are the values with the {% raw %}`{% translation id %} source {% endtranslation %}`{% endraw %}
 
 {% alert important %}
 This endpoint is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
@@ -36,7 +36,7 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 |`campaign_id`| Required | String | The ID of your campaign. |
 |`message_variation_id`| Required | String | The ID of your message variation. |
 |`locale_id`| Optional | String | A locale UUID to filter the responses. |
-| `post_launch_draft_version`| Optional | Boolean | When `true` returns the latest draft version instead of the latest live published version. Defaults to `false` returning the latest live version.|
+|`post_launch_draft_version`| Optional | Boolean | When `true` returns the latest draft version instead of the latest live published version. Defaults to `false` returning the latest live version.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}
@@ -46,7 +46,7 @@ All translation IDs are considered universal unique identifiers (UUIDs), which c
 ## Example request
 
 ```
-curl --location --request GET 'https://rest.iad-03.braze.com/campaigns/translations?campaign_id={campaign_id}&message_variation_id={message_variation_id}&locale_id={locale_uuid}&post_launch_draft_version=true' \
+curl --location --request GET 'https://rest.iad-03.braze.com/campaigns/translations/source?campaign_id={campaign_id}&message_variation_id={message_variation_id}&locale_id={locale_uuid}&post_launch_draft_version=true' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
@@ -61,36 +61,13 @@ The status code `200` could return the following response header and body.
 
 ```json
 {
-    "translations": [
-        {
-            "translation_map": {
-                "id_0": "¡Hola!",
-                "id_1": "Me llamo Jacky",
-                "id_2": "¿Dónde está la biblioteca?"
-            },
-            "locale": {
-                "uuid": "c7c12345-te35-1234-5678-abcdefa99r3f",
-                "name": "es-MX",
-                "country": "MX",
-                "language": "es",
-                "locale_key": "es-mx"
-            }
-        },
-        {
-            "translation_map": {
-                "id_0": "你好",
-                "id_1": "我的名字是 Jacky",
-                "id_2": "圖書館在哪裡?"
-            },
-            "locale": {
-                "uuid": "a1b12345-cd35-1234-5678-abcdefa99r3f",
-                "name": "zh-HK",
-                "country": "HK",
-                "language": "zh",
-                "locale_key": "zh-hk"
-            }
-        }
-    ]
+   "translations": {
+       "translation_map": {
+           "id_0": "Here's a Million Dollars",
+           "id_1": "Hello World!"
+       }
+   },
+   "message": "success"
 }
 ```
 
@@ -107,6 +84,5 @@ The status code `400` could return the following response body. Refer to [Troubl
 	]
 }
 ```
-
 
 {% endapi %}
