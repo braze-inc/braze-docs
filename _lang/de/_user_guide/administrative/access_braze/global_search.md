@@ -10,7 +10,7 @@ description: "Erfahren Sie mehr über die globale Suche in Braze."
 
 Sie können die Suchleiste verwenden, um Ihre Arbeit und andere Informationen in Ihrem Braze-Dashboard zu finden. Die Suchleiste befindet sich oben auf Ihrem Braze Dashboard. Klicken Sie auf die Suchleiste oder drücken Sie <kbd>Strg</kbd> + <kbd>K</kbd> unter Windows oder <kbd>⌘</kbd> + <kbd>K</kbd> auf dem Mac, um direkt zur Suchleiste zu gelangen.
 
-![Suchergebnisse für das Schlüsselwort "promo", zeigt Kampagnen und Artikel, die den Begriff promo enthalten, einschließlich der Seite Promotion Codes.][1]
+\![Suchergebnisse für das Schlüsselwort "promo", zeigt Kampagnen und Artikel, die den Begriff promo enthalten, einschließlich der Seite Aktionscodes.]({% image_buster /assets/img/navigation/global_search_new.png %})
 
 ## Wonach können Sie suchen?
 
@@ -24,7 +24,7 @@ Sie können nach den folgenden Artikeln und Aktionen suchen:
 - [Seiten innerhalb von Braze](#find-pages-that-have-been-renamed)
 
 {% alert tip %}
-Um nach genauem Text zu suchen, setzen Sie Ihren Suchbegriff in Anführungszeichen (""). Wenn Sie zum Beispiel nach ["alle Nutzer:innen"] suchen, erhalten Sie alle Artikel, die den exakten Ausdruck "alle Nutzer:innen" in ihrem Namen enthalten.
+Um nach genauem Text zu suchen, setzen Sie Ihren Suchbegriff in Anführungszeichen (""). Wenn Sie beispielsweise nach ["alle Nutzer:innen"] suchen, erhalten Sie alle Artikel, die den genauen Ausdruck "alle Nutzer:innen" in ihrem Namen enthalten.
 {% endalert %}
 
 ## Wichtigste Features
@@ -66,13 +66,13 @@ Jedes Suchergebnis ist mit Tags versehen, die den Inhaltstyp (Seite, Kampagne, C
 
 Über das Suchmenü können Sie die zuletzt aufgerufenen Inhalte erneut aufrufen. Die Suchoberfläche zeigt Ihre zuletzt geöffneten Ergebnisse unterhalb der Suchleiste an, einschließlich der Elemente, mit denen Sie auf der gesamten Braze-Plattform interagiert haben. So können Sie zu zuvor angezeigten Seiten, Kampagnen, Canvases, Segmenten oder E-Mail-Vorlagen zurückkehren und mit weniger Klicks genau dort weitermachen, wo Sie aufgehört haben.
 
-![Die Suche wurde erweitert und zeigt die zuletzt geöffneten Seiten und Braze-Inhalte für den Nutzer:innen an.][2]
+\![Suche erweitert, zeigt kürzlich geöffnete Seiten und Braze-Inhalte für den Nutzer:innen.]({% image_buster /assets/img/navigation/search_recently_opened.png %})
 
 ### Seiten finden, die umbenannt wurden
 
 Die Suche versteht Synonyme für Seiten, die in unserer [aktualisierten Navigation]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/) umbenannt worden sind. Zum Beispiel wird „Datenexport“ gefunden, wenn Sie nach „Currents“ suchen, da diese Seite umbenannt wurde.
 
-![Suchergebnisse für "Datenexport", wenn der Nutzer:innen nach "Currents" gesucht hat.][3]
+\![Suchergebnisse für "Datenexport", wenn der Nutzer:innen nach "Currents" gesucht hat.]({% image_buster /assets/img/navigation/global_search_synonym.png %})
 
 <!---
 
@@ -88,15 +88,11 @@ Search for channels to see quick create options among your top 10 results. For e
 
 Sie können aktiven Content und Entwürfe in Ihre Suchergebnisse einbeziehen, indem Sie **Nur aktiven Content und Entwürfe anzeigen** auswählen. Standardmäßig ist das Umschalten aktiviert, und der gesamte Content, einschließlich des archivierten, wird angezeigt.
 
-![Das Umschaltfläche „Nur aktiven Content und Entwürfe anzeigen“.][4]
+\![Das Umschalten von "Nur Aktive und Entwürfe anzeigen".]({% image_buster /assets/img/navigation/show_active_draft_new.png %})
 
 ### Suche nach Emojis
 
 Verwenden Sie Emojis, wenn Sie Ihre Arbeit in Braze benennen? Suchen Sie nach ihnen! Sie können Emojis als Suchanfragen verwenden. 😎
 
-[1]: {% image_buster /assets/img/navigation/global_search_new.png %}
-[2]: {% image_buster /assets/img/navigation/search_recently_opened.png %}
-[3]: {% image_buster /assets/img/navigation/global_search_synonym.png %}
-[4]: {% image_buster /assets/img/navigation/show_active_draft_new.png %}
 
 

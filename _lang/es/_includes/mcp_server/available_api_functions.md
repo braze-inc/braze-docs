@@ -160,4 +160,4 @@ Antes de poder utilizar esta característica, tendrás que [configurar el servid
 | `get_email_template_info` | [`/templates/email/info`]({{site.baseurl}}/api/endpoints/templates/email_templates/get_see_email_template_information) | Obtenga información sobre sus plantillas de correo electrónico. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 
-{% multi_lang_include servidor_mcp/renuncia_legal.md %}
+{% multi_lang_include mcp_server/legal_disclaimer.md %}

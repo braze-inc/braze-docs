@@ -1,4 +1,4 @@
-{% multi_lang_include desarrollador_guide/prerequisites/android.md %} También tendrás que [configurar los mensajes dentro de la aplicación]({{site.baseurl}}/developer_guide/in_app_messages).
+{% multi_lang_include developer_guide/prerequisites/android.md %} También tendrás que [configurar los mensajes dentro de la aplicación]({{site.baseurl}}/developer_guide/in_app_messages).
 
 ## Configuración de oyentes personalizados del administrador
 

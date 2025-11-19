@@ -24,11 +24,15 @@ SDK をアップグレードした後、モバイルユーザーはアプリを�
 ## 概要
 
 {% tabs %}
-{% tab キャンペーン %}
+{% tab Campaign %}
 
 Brazeは、スケジュール配信で新しい[コンテンツカードキャンペーンを]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/)作成する際に、**配信**ステップでカードを作成するタイミングを選択できる。
 
-![スケジュールされたコンテンツカードの配信を編集する際のコンテンツカードコントロールセクション。]({% image_buster /assets/img_archive/card_creation.png %})
+<<<<<<< HEAD
+![コンテンツカードコントロールセクション]は、スケジュールされたコンテンツカードの配信を編集するときに使用します。]({% image_buster /assets/img_archive/card_creation.png %})
+=======
+\![コンテンツカードコントロールセクション]は、スケジュールされたコンテンツカードの配信を編集するときに使用します。]({% image_buster /assets/img_archive/card_creation.png %})
+>>>>>>> main
 
 以下のオプションがあります。
 
@@ -38,11 +42,15 @@ Brazeは、スケジュール配信で新しい[コンテンツカードキャ�
 選択したオプションに関係なく、キャンペーン開始時にコンテンツカードの有効期限のカウントダウンが始まります。
 
 {% endtab %}
-{% tab キャンバス %}
+{% tab Canvas %}
 
 Brazeがカードを作成するタイミングは、[コンテンツカードメッセージステップの]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) **Messaging Channels**タブで選択できる。
 
-![スケジュールされたコンテンツカードの配信を編集する際のコンテンツカードコントロールセクション。]({% image_buster /assets/img_archive/card_creation_canvas.png %})
+<<<<<<< HEAD
+![コンテンツカードコントロールセクション]は、スケジュールされたコンテンツカードの配信を編集するときに使用します。]({% image_buster /assets/img_archive/card_creation_canvas.png %})
+=======
+\![コンテンツカードコントロールセクション]は、スケジュールされたコンテンツカードの配信を編集するときに使用します。]({% image_buster /assets/img_archive/card_creation_canvas.png %})
+>>>>>>> main
 
 以下のオプションがあります。
 
@@ -89,7 +97,7 @@ Brazeがカードを作成するタイミングは、[コンテンツカード�
   <tr>
     <td class="leftHeader">オーディエンス</td>
     <td class="tg-0pky">Brazeは、キャンペーン送信時にオーディエンスのメンバーシップを評価する。<br><br>新規または匿名のユーザーが、キャンペーン送信後にカードを閲覧しようとしても、適格性は評価されない。定期的なキャンペーンの場合、これは次回の繰り返し間隔となります。</td>
-    <td class="tg-0pky">Brazeは、ユーザーが次にアプリを開く（セッションを開始する、<a href="#campaign_note">キャンペーンのみ*）</a>ときにメンバーシップを評価する。<br><br> この設定は、新規ユーザーや匿名ユーザーがカードを閲覧しようとする際に、常に適格性が評価されるため、より多くのオーディエンスにリーチすることができる。<br><br>さらに、レート制限 (キャンペーンを受け取る人数の制限) は、最初のインプレッション発生時(<a href="#campaign_note">キャンペーンのみ</a>) に設定されている場合は適用されません。</td>
+    <td class="tg-0pky">Brazeは、ユーザーが次にアプリを開く（セッションを開始する、<a href="#campaign_note">キャンペーンのみ*）</a>ときにメンバーシップを評価する。<br><br> この設定は、新規ユーザーや匿名ユーザーがカードを閲覧しようとする際に、常に適格性が評価されるため、より多くのオーディエンスにリーチすることができる。<br><br>また、レート制限 ing (カードを受け取る人数を制限する) は、最初のインプレッションに設定するとアプリライセンスを取得できません。</td>
   </tr>
   <tr>
     <td class="leftHeader">パーソナライゼーション</td>

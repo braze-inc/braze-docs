@@ -20,7 +20,7 @@ page_order: 1.2
 
 Braze で他のフィルターを使用する場合と同様に、キャンペーン、キャンバス、またはセグメントで、可能性スコアまたはカテゴリに基づいてユーザーをターゲット設定するために、[イベント可能性スコア] フィルターと [イベント可能性カテゴリ] フィルターを使用できます。
 
-\![オーディエンスを定義するときに使用できるフィルタには、尤度カテゴリと尤度スコアが含まれます。]({% image_buster /assets/img_archive/predictive_event_filters.png %})
+![オーディエンスを定義するときに使用できるフィルタには、尤度カテゴリと尤度スコアが含まれます。]({% image_buster /assets/img_archive/predictive_event_filters.png %})
 
 ## 戦略的考慮事項 {#strategy}
 

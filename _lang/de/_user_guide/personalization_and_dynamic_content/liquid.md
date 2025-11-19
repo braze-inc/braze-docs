@@ -3,6 +3,7 @@ nav_title: Liquid
 article_title: Liquid
 page_order: 0
 layout: dev_guide
+alias: /liquid/
 search_rank: 3
 guide_top_header: "Personalisierung mit Liquid Tags"
 guide_top_text: "Braze kann automatisch Werte eines bestimmten Benutzers in Ihren Nachrichten ersetzen. Setzen Sie Ihren Ausdruck in zwei Gruppen von geschweiften Klammern, um Braze mitzuteilen, dass Sie einen interpolierten Wert verwenden. Innerhalb dieser Klammern müssen alle Benutzerwerte, die Sie ersetzen möchten, von einem zusätzlichen Satz von Klammern mit einem vorangestellten Dollarzeichen umgeben sein.<br><br>Weitere Informationen zu Liquid finden Sie im Leitfaden <b><a href='https://learning.braze.com/path/dynamic-personalization-with-liquid'>Dynamische Personalisierung mit Liquid</a></b>."
@@ -50,7 +51,7 @@ guide_featured_list:
 
 > Liquid ist eine quelloffene Maskensprache, die von Shopify entwickelt und in Ruby geschrieben wurde. Bei Braze wird Liquid verwendet, um Benutzerprofildaten in Nachrichten zu übertragen. 
 
-Sie können zum Beispiel ein benutzerdefiniertes Attribut aus einem Benutzerprofil abrufen, das einen ganzzahligen Datentyp hat, und diesen Wert auf die nächste ganze Zahl runden. Weitere Informationen zur Syntax und Verwendung von Liquid finden Sie unter [**Unterstützte Personalisierungs-Tags**][1].
+Sie können zum Beispiel ein benutzerdefiniertes Attribut aus einem Benutzerprofil abrufen, das einen ganzzahligen Datentyp hat, und diesen Wert auf die nächste ganze Zahl runden. Weitere Informationen zur Syntax und Verwendung von Liquid finden Sie unter [**Unterstützte Personalisierungs-Tags**]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/).
 
 Liquid unterstützt Objekte, Tags und Filter.
 
@@ -109,4 +110,3 @@ Diese Begriffe sind eine Neuinterpretation aus der [**Dokumentation von Shopify*
 
 <br>
 
-[1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/

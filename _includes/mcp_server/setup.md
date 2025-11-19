@@ -216,7 +216,7 @@ Braze MCP server supports 38 read-only endpoints that do not return data from Br
 Do not reuse an existing API key&#8212;create one specifically for your MCP client. Additionally, only assign read-only, non-PII permissions, as agents may try to write or delete data in Braze.
 {% endalert %}
 
-### Step 3: Get your identifer and endpoint
+### Step 3: Get your identifier and endpoint
 
 When you configure your MCP client, you'll need your API key's identifier and your workspace's REST endpoint. To get these details, go back to the **API Keys** page in the dashboard&#8212;keep this page open, so you can reference it during [the next step](#configure-client).
 

@@ -6,7 +6,7 @@ description: "Este artigo fornece uma visão geral do Intelligent Timing (anteri
 
 ---
 
-# [\![Curso de aprendizado Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/intelligent-timing){: style="float:right;width:120px;border:0;" class="noimgborder"} Intelligent Timing
+# [![Curso de aprendizado Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/intelligent-timing){: style="float:right;width:120px;border:0;" class="noimgborder"} Intelligent Timing
 
 > Use o Intelligent Timing para enviar sua mensagem a cada usuário quando o Braze determinar que ele tem maior probabilidade de se envolver (abrir ou clicar), o que é chamado de horário ideal de envio. Isso facilita a verificação de que você está enviando mensagens aos seus usuários no horário preferido deles, o que pode levar a um maior envolvimento.
 

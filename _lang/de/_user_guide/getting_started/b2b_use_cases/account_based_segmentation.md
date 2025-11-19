@@ -25,7 +25,7 @@ Um Ihnen den Einstieg zu erleichtern, haben wir grundlegende SQL-Templates für 
 
 Nehmen wir an, Sie möchten Nutzer:innen eines Targeting-Unternehmenskontos segmentieren. 
 
-1. Gehen Sie zu **Zielgruppe** > **Segmenterweiterungen** > **Neue Erweiterung erstellen** > **Mit einer Vorlage beginnen** und wählen Sie die Vorlage **Katalogsegment für Ereignisse**. <br><br> ![Modal „Template auswählen“ mit Segmentoptionen für Events oder Käufe.][1]<br><br>Der SQL-Editor wird automatisch mit einer Vorlage gefüllt, die Benutzer-Event-Daten mit Katalogdaten verknüpft, um Nutzer:innen zu segmentieren, die sich mit bestimmten Katalogartikeln beschäftigen. <br><br>![Ein SQL-Editor für eine neue Erweiterung mit einer geöffneten Registerkarte "Variablen".][2]<br><br>
+1. Gehen Sie zu **Zielgruppe** > **Segmenterweiterungen** > **Neue Erweiterung erstellen** > **Mit einer Vorlage beginnen** und wählen Sie die Vorlage **Katalogsegment für Ereignisse**. <br><br> !["Wählen Sie ein Template"-Modal mit Katalogsegmentierungsoptionen für Events oder Käufe.]({% image_buster /assets/img/b2b/select_a_template.png %})<br><br>Der SQL-Editor wird automatisch mit einer Vorlage gefüllt, die Benutzer-Event-Daten mit Katalogdaten verknüpft, um Nutzer:innen zu segmentieren, die sich mit bestimmten Katalogartikeln beschäftigen. <br><br>![Ein SQL-Editor für eine neue Erweiterung mit einem geöffneten Tab "Variablen".]({% image_buster /assets/img/b2b/enter_new_name.png %})<br><br>
 2. Verwenden Sie die Registerkarte **Variablen**, um die erforderlichen Felder für Ihre Vorlage bereitzustellen, bevor Sie Ihr Segment erstellen.<br><br>Damit Braze Nutzer:innen auf der Grundlage ihres Engagements für Katalogartikel identifizieren kann, müssen Sie Folgendes tun:
 - Wählen Sie einen Katalog, der ein Katalogfeld enthält
 - Wählen Sie ein angepasstes Event aus, das eine Event-Eigenschaft enthält
@@ -108,11 +108,9 @@ AND salesforce_opportunities.Stage = 'Closed Won'
 
 ### Option 2: Wenn Sie verbundene Quellen für Ihre Geschäftsobjekte verwenden
 
-Die Grundlagen für die Verwendung von verbundenen Quellen bei der Segmentierung finden Sie unter [CDI-Segmente]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/). Lassen Sie sich von den Vorlagen unter [Bei der Verwendung von Katalogen](#option-1-when-using-catalogs-for-your-business-objects) inspirieren, wie Sie die Quelltabellen formatieren, denn Sie können sie beliebig formatieren.
+Die Grundlagen für die Verwendung verbundener Quellen bei der Segmentierung finden Sie unter [CDI Segment-Erweiterungen]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/). Lassen Sie sich von den Vorlagen unter [Bei der Verwendung von Katalogen](#option-1-when-using-catalogs-for-your-business-objects) inspirieren, wie Sie die Quelltabellen formatieren, denn Sie können sie beliebig formatieren.
 
 ## Verwendung Ihrer kontobasierten Erweiterung in einem Segment
 
 Nachdem Sie Ihre Segmentierung auf Kontoebene in den obigen Schritten erstellt haben, können Sie diese Segmenterweiterungen direkt in Ihre Targeting-Kriterien übernehmen. Es ist auch einfach, zusätzliche demografische Kriterien für Nutzer:innen hinzuzufügen, wie z.B. die Rolle, das Engagement bei früheren Kampagnen und mehr. Weitere Informationen finden Sie unter [Verwendung Ihrer Erweiterung in einem Segment]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/#step-6-use-your-extension-in-a-segment).
 
-[1]: {% image_buster /assets/img/b2b/select_a_template.png %}
-[2]: {% image_buster /assets/img/b2b/enter_new_name.png %}

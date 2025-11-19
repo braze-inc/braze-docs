@@ -1,5 +1,5 @@
 ---
-nav_title: Canvas Komponenten
+nav_title: Canvas-Komponenten
 article_title: Canvas Komponenten
 page_order: 2
 alias: "/user_guide/engagement_tools/canvas/canvas_components/about/"
@@ -38,7 +38,7 @@ guide_featured_list:
     link: /docs/developer_guide/feature_flags/canvas/
     image: /assets/img/braze_icons/dataflow-03.svg
   - name: Canvas-Zielgruppensynchronisierung
-    link: /docs/partners/canvas_steps/
+    link: /docs/partners/canvas_audience_sync/
     image: /assets/img/braze_icons/refresh-ccw-02.svg
 ---
 
@@ -48,26 +48,19 @@ Mit Canvas-Komponenten können Sie neue Nutzer:innen ansprechen, um Ihren Prozes
 
 ### Anpassen von Customer Journeys
 
-![Beispiel einer Canvas-User-Journey mit einem Decision-Split-Schritt, gefolgt von Verzögerungsschritten und Nachrichtenschritten.]({% image_buster /assets/img/canvas_intro/canvas_intro.gif %}){: style="float:right;max-width:55%;margin-left:15px;"}
+![Beispiel einer Canvas-Benutzer:in mit einem Decision-Split-Schritt, gefolgt von Verzögerungsschritten und Nachrichten-Schritten.]({% image_buster /assets/img/canvas_intro/canvas_intro.gif %}){: style="float:right;max-width:55%;margin-left:15px;"}
 
-Verwenden Sie [Aktionspfade][1], um Ihre Nutzer:innen auf der Grundlage von Aktionen und Engagement-Events, wie z. B. einem Kauf, aufzuteilen. Wenn Sie Ihre Zielgruppen filtern und gezielt ansprechen möchten, vereinfachen [Audience Paths][2] Ihr User-Targeting, indem Sie Ihre Benutzer auf der Grundlage von Zielgruppenkriterien auf verschiedene Canvas-Pfade schicken.
+Verwenden Sie [Aktionspfade]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths), um Ihre Nutzer:innen auf der Grundlage von Aktionen und Engagement-Events, wie z. B. einem Kauf, aufzuteilen. Wenn Sie Ihre Zielgruppen filtern und gezielt ansprechen möchten, vereinfachen [Audience Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths) Ihr User-Targeting, indem Sie Ihre Benutzer auf der Grundlage von Zielgruppenkriterien auf verschiedene Canvas-Pfade schicken.
 
-[Decision Split-Komponenten][3] verwenden eine einfache "Ja oder Nein"-Logik, um zwei sich gegenseitig ausschließende Pfade für Ihre User Journeys zu erstellen, die auf einer Aktion oder einem Benutzerattribut basieren. So können Sie Ihre Benutzergruppen identifizieren und gezielt ansprechen.
+[Decision Split-Komponenten]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split) verwenden eine einfache "Ja oder Nein"-Logik, um zwei sich gegenseitig ausschließende Pfade für Ihre User Journeys zu erstellen, die auf einer Aktion oder einem Benutzerattribut basieren. So können Sie Ihre Benutzergruppen identifizieren und gezielt ansprechen.
 
-Mit [Verzögerungskomponenten][4] können Sie einen einzelnen Schritt in Ihrem Canvas verzögern. Dieser eigenständige Verzögerungsschritt in Ihrem Canvas eignet sich am besten für die Übermittlung von Nachrichten an Ihre Benutzer zu einem bestimmten Zeitpunkt. Darüber hinaus können Verzögerungskomponenten auch die Reichweite Ihrer Zielgruppe erhöhen, indem Sie ihr mehr Zeit geben, die Kriterien der Komponente zu erfüllen.
+Mit [Verzögerungskomponenten]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step) können Sie einen einzelnen Schritt in Ihrem Canvas verzögern. Dieser eigenständige Verzögerungsschritt in Ihrem Canvas eignet sich am besten für die Übermittlung von Nachrichten an Ihre Benutzer zu einem bestimmten Zeitpunkt. Darüber hinaus können Verzögerungskomponenten auch die Reichweite Ihrer Zielgruppe erhöhen, indem Sie ihr mehr Zeit geben, die Kriterien der Komponente zu erfüllen.
 
 ### Testen
 
-Bei der Erstellung Ihrer Nutzer:innen sollten Sie auch testen, welcher Canvas-Pfad am effektivsten ist. Mit [Experimentpfade][5] können Sie in jedem Schritt mehrere Canvas-Pfade testen. Sie können die Verbindungen zwischen den Schritten auch als Vorschau auf hoher Ebene verwenden. Orangefarbene Verbindungen zeigen an, dass der vorherige Schritt die Nutzer:innen sofort zum nächsten Schritt voranbringt.
+Bei der Erstellung Ihrer Nutzer:innen sollten Sie auch testen, welcher Canvas-Pfad am effektivsten ist. Mit [Experimentpfade]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step) können Sie in jedem Schritt mehrere Canvas-Pfade testen. Sie können die Verbindungen zwischen den Schritten auch als Vorschau auf hoher Ebene verwenden. Orangefarbene Verbindungen zeigen an, dass der vorherige Schritt die Nutzer:innen sofort zum nächsten Schritt voranbringt.
 
 ### Integration
 
-Möchten Sie mit den First-Party-Nutzerdaten Ihrer Marke synchronisieren? Nutzen Sie die verfügbaren Synchronisationsoptionen für [Facebook][6] und [Google][7].
+Möchten Sie mit den First-Party-Nutzerdaten Ihrer Marke synchronisieren? Nutzen Sie die verfügbaren Synchronisationsoptionen für [Facebook]({{site.baseurl}}/partners/canvas_audience_sync/facebook_audience_sync/) und [Google]({{site.baseurl}}/partners/canvas_audience_sync/google_audience_sync/).
 
-[1]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths
-[2]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths
-[3]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split
-[4]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step
-[5]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step
-[6]: {{site.baseurl}}/partners/canvas_steps/facebook_audience_sync
-[7]: {{site.baseurl}}/partners/canvas_steps/google_audience_sync

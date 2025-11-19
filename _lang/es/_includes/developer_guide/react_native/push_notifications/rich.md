@@ -1,4 +1,4 @@
-{% multi_lang_include desarrollador_guide/prerequisites/react_native.md %} También tendrás que [configurar las notificaciones push]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=react%20native).
+{% multi_lang_include developer_guide/prerequisites/react_native.md %} También tendrás que [configurar las notificaciones push]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=react%20native).
 
 ## Utilizar Expo para habilitar las notificaciones push enriquecidas
 

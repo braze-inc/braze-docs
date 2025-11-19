@@ -12,7 +12,7 @@ description: "This reference article covers message archiving, a feature that al
 
 > Message archiving lets you save a copy of messages sent to users for archival or compliance purposes to your AWS S3 bucket, Azure Blob Storage container or Google Cloud Storage bucket. <br><br> This article covers how to set up message archiving, JSON payloads references, and frequently asked questions.
 
-Message archiving is available as an add-on feature. To get started with message archiving, reach out to your Braze customer success manager.
+Message archiving is available as an add-on feature. To get started with message archiving, contact your Braze customer success manager.
 
 ## How it works
 

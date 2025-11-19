@@ -58,4 +58,4 @@ Después de [configurar el servidor Braze MCP]{% if include.section == "user" %}
 {% endtab %}
 {% endtabs %}
 
-{% multi_lang_include servidor_mcp/renuncia_legal.md %}
+{% multi_lang_include mcp_server/legal_disclaimer.md %}

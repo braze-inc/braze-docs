@@ -15,7 +15,7 @@ description: "この参考記事では、Liquidを通してBrazeのキャンペ�
 
 選択したメッセージコンポーザーで、<i class="fas fa-plus-circle"></i> プラスアイコンを選択して**パーソナライズの追加**モーダルを開き、**パーソナライズのタイプに** **カタログアイテムを**選択する。次に、**カタログ名**を選択します。先ほどの例を使って、「ゲーム」カタログを選択する。
 
-\![]({% image_buster /assets/img_archive/use_catalog_personalization.png %})
+![]({% image_buster /assets/img_archive/use_catalog_personalization.png %})
 
 以下の Liquid プレビューがすぐに表示されます。
 
@@ -60,7 +60,7 @@ Get {{ items[0].title }} for just {{ items[0].price }}!
 
 この例では、Tales、Teslagrad、Acaratus の 3 つのゲームの `id` を**カタログアイテム**に追加し、[**表示する情報**] のために `title` を選択します。
 
-\![]({% image_buster /assets/img_archive/catalog_multiple_items.png %}){: style="max-width:70%" }
+![]({% image_buster /assets/img_archive/catalog_multiple_items.png %}){: style="max-width:70%" }
 
 Liquid の周りにテキストを追加することで、メッセージをさらにパーソナライズできます。
 
@@ -116,11 +116,11 @@ Message if the venue name's size is less than 10 characters.
 ```
 {% endraw %}
 
-\!["画像 フィールドで使用するカタログリキッドタグ付きコンテンツカードコンポーザー。]({% image_buster /assets/img_archive/catalog_image_link1.png %})
+!["画像 フィールドで使用するカタログリキッドタグ付きコンテンツカードコンポーザー。]({% image_buster /assets/img_archive/catalog_image_link1.png %})
 
 Liquid がレンダリングされると、次のように表示されます。
 
-\![カタログリキッドタグ付きコンテンツカードをレンダリングしました。]({% image_buster /assets/img_archive/catalog_image_link2.png %}){: style="max-width:50%" }
+![カタログリキッドタグ付きコンテンツカードをレンダリングしました。]({% image_buster /assets/img_archive/catalog_image_link2.png %}){: style="max-width:50%" }
 
 ### カタログ項目をテンプレート化する
 
@@ -183,7 +183,7 @@ Liquid ロジック使用してカタログを手動で作成することもで�
 
 たとえば、「Messages」という名前のカタログに、この Liquid を含むアイテムがあるとします。
 
-\![]({% image_buster /assets/img_archive/catalog_liquid_templating.png %}){: style="max-width:80%;"}
+![]({% image_buster /assets/img_archive/catalog_liquid_templating.png %}){: style="max-width:80%;"}
 
 以下のリキッドコンテンツをレンダリングするには:
 

@@ -287,7 +287,7 @@ glossaries:
     tags:
       - Channel subscription behavior
   - name: Foreground-Push aktiviert
-    description: "Segmentiert Ihre Benutzer, die über eine vorläufige Push-Autorisierung verfügen oder für Push im Vordergrund aktiviert sind. Diese Zählung umfasst insbesondere:<br>1. iOS-Benutzer, die vorläufig für Push autorisiert sind. <br>2. Nutzer:innen, die für eine Ihrer Apps Push im Vordergrund aktiviert haben und deren Push-Abo-Status „Nicht abgemeldet“ ist Für diese Benutzer umfasst diese Zählung nur den Push im Vordergrund.<br><br>Bei Foreground Push Enablement werden Nutzer:innen, die sich abgemeldet haben, nicht berücksichtigt. <br><br>Nachdem Sie mit diesem Filter eine Segmentierung vorgenommen haben, können Sie im unteren Bereich mit der Bezeichnung <em>Erreichbare Nutzer</em> eine Aufschlüsselung der Mitglieder dieses Segments für Android, iOS und Web sehen."
+    description: "Segmentiert Ihre Benutzer, die über eine vorläufige Push-Autorisierung verfügen oder für Push im Vordergrund aktiviert sind. Diese Zählung umfasst insbesondere:<br>1. iOS-Benutzer, die vorläufig für Push autorisiert sind. <br>2. Nutzer:innen, die Push im Vordergrund aktiviert haben und deren Push-Abonnementstatus nicht abgemeldet ist, für jede Ihrer Apps. Für diese Benutzer umfasst diese Zählung nur den Push im Vordergrund.<br><br>Bei Foreground Push Enablement werden Nutzer:innen, die sich abgemeldet haben, nicht berücksichtigt. <br><br>Nachdem Sie mit diesem Filter eine Segmentierung vorgenommen haben, können Sie im unteren Bereich mit der Bezeichnung <em>Erreichbare Nutzer</em> eine Aufschlüsselung der Mitglieder dieses Segments für Android, iOS und Web sehen."
     tags:
       - Channel subscription behavior
   - name: Push im Vordergrund für App aktiviert
@@ -295,7 +295,7 @@ glossaries:
     tags:
       - Channel subscription behavior
   - name: Push im Hinter- oder Vordergrund aktiviert
-    description: "Segmentiert danach, ob Nutzer:innen ein Push-Token haben und sich nicht abgemeldet haben. Nutzer:innen, die im Hintergrund oder im Vordergrund Push für eine Ihrer Apps aktiviert haben"
+    description: "Segmentiert danach, ob Nutzer:innen ein Push-Token haben und sich nicht abgemeldet haben. Nutzer:innen, die im Hintergrund oder im Vordergrund Push für eine Ihrer Apps aktiviert haben."
     tags:
       - Channel subscription behavior
   - name: Datum des Push-Opt-ins
@@ -395,11 +395,11 @@ glossaries:
     tags:
       - App
   - name: Aktuellster Name der App-Version
-    description: "Segmente nach dem aktuellen Namen der App des Nutzers oder der Nutzerin.<br><br>Wenn Sie \"kleiner als\" oder \"kleiner oder gleich\" verwenden und die Hauptversion der App nicht existiert, gibt dieser Filter `true` zurück, da der Nutzer:in älter ist als die App-Version. Das heißt, wenn die letzte Hauptversion der App des Nutzers:innen nicht existiert, entspricht sie automatisch dem Filter."
+    description: "Segmente nach dem aktuellen Namen der App des Nutzers oder der Nutzerin.<br><br>Wenn Sie \"kleiner als\" oder \"kleiner oder gleich\" verwenden und die Hauptversion der App nicht existiert, gibt dieser Filter `true` zurück, weil der Nutzer:in älter ist als die App-Version. Das heißt, wenn die letzte Hauptversion der App des Nutzers:innen nicht existiert, passt sie automatisch zu dem Filter."
     tags:
       - App 
   - name: Aktuellste Nummer der App-Version
-    description: "Segmentiert nach der Versionsnummer der letzten App des Benutzers.<br><br>Wenn Sie \"kleiner als\" oder \"kleiner oder gleich\" verwenden und die Hauptversion der App nicht existiert, gibt dieser Filter `true` zurück, da der Nutzer:in älter ist als die App-Version. Das heißt, wenn die letzte Hauptversion der App des Nutzers:innen nicht existiert, entspricht sie automatisch dem Filter.<br><br>Es kann einige Zeit dauern, bis die aktuellen Versionen der Apps angezeigt werden. Die App-Version im Nutzerprofil wird aktualisiert, wenn die Informationen vom SDK erfasst werden, das sich darauf verlässt, wann Nutzer:innen ihre Apps öffnen. Wenn der Nutzer:innen die App nicht öffnet, wird die aktuelle Version nicht aktualisiert. Diese Filter können auch nicht rückwirkend angewendet werden. Es ist gut, \"größer als\" oder \"gleich\" für aktuelle und zukünftige Versionen zu verwenden, aber die Verwendung von Filtern für frühere Versionen kann zu unerwartetem Verhalten führen."
+    description: "Segmentiert nach der Versionsnummer der letzten App des Benutzers.<br><br>Wenn Sie \"kleiner als\" oder \"kleiner oder gleich\" verwenden und die Hauptversion der App nicht existiert, gibt dieser Filter `true` zurück, da der Nutzer:in älter ist als die App-Version. Das heißt, wenn die letzte Hauptversion der App des Nutzers:innen nicht existiert, passt sie automatisch zu dem Filter.<br><br>Es kann einige Zeit dauern, bis die aktuellen Versionen der Apps angezeigt werden. Die App-Version im Nutzerprofil wird aktualisiert, wenn die Informationen vom SDK erfasst werden, das sich darauf verlässt, wann Nutzer:innen ihre Apps öffnen. Wenn der Nutzer:innen die App nicht öffnet, wird die aktuelle Version nicht aktualisiert. Diese Filter können auch nicht rückwirkend angewendet werden. Es ist gut, \"größer als\" oder \"gleich\" für aktuelle und zukünftige Versionen zu verwenden, aber die Verwendung von Filtern für frühere Versionen kann zu unerwartetem Verhalten führen."
     tags:
       - App 
   - name: Deinstalliert

@@ -1,5 +1,5 @@
 ---
-nav_title: WhatsApp-Telefonnummern-Migration
+nav_title: Migration von WhatsApp-Telefonnummern
 article_title: WhatsApp-Telefonnummern-Migration
 page_order: 2
 description: "In diesem Referenzartikel erfahren Sie, wie Sie Ihre WhatsApp-Telefonnummer migrieren können."
@@ -26,7 +26,6 @@ Informationen zur Migration Ihrer WhatsApp-Telefonnummer finden Sie in der Dokum
 ## Migration Ihrer WhatsApp-Telefonnummer
 
 1. Wählen Sie im WhatsApp Manager das WhatsApp Business-Konto (WABA), das mit Ihrer Telefonnummer verknüpft ist, und gehen Sie dann zu **Konto-Tools** > **Telefonnummern**.
-2. Wählen Sie **Zwei-Schritt-Verifizierung aus** schalten und führen Sie die folgenden Schritte aus.<br><br>![WhatsApp Business Manager:in öffnete die Seite "Telefonnummern".][1]{: style="max-width:80%;"} <br><br> Wenn Sie eine Telefonnummer zu einer anderen WhatsApp Business Group migrieren und die eingebettete Anmeldung von Meta erfordert, dass der Anzeigename übereinstimmt, notieren Sie sich den bestehenden Anzeigenamen auf der Seite **Telefonnummern**. Sie werden diesen Namen im nächsten Schritt eingeben.<br><br>![Die Seite "Telefonnummern" des WhatsApp Business Managers mit dem Anzeigenamen "Braze" neben einer Telefonnummer.]({% image_buster /assets/img/whatsapp/phone_numbers.png %}){: style="max-width:80%;"}<br><br>
+2. Wählen Sie **Zwei-Schritt-Verifizierung aus** schalten und führen Sie die folgenden Schritte aus.<br><br>![WhatsApp Business Manager:in öffnete die Seite "Telefonnummern".]({% image_buster /assets/img/whatsapp/waba_manager.png %}){: style="max-width:80%;"} <br><br> Wenn Sie eine Telefonnummer zu einer anderen WhatsApp Business Group migrieren und die eingebettete Anmeldung von Meta erfordert, dass der Anzeigename übereinstimmt, notieren Sie sich den bestehenden Anzeigenamen auf der Seite **Telefonnummern**. Sie werden diesen Namen im nächsten Schritt eingeben.<br><br>![Die Seite Telefonnummern des WhatsApp Business Managers mit einem Anzeigenamen "Braze" neben einer Telefonnummer.]({% image_buster /assets/img/whatsapp/phone_numbers.png %}){: style="max-width:80%;"}<br><br>
 3. Setzen Sie den in Meta eingebetteten Anmeldevorgang bis zum Abschluss fort. 
 
-[1]: {% image_buster /assets/img/whatsapp/waba_manager.png %}

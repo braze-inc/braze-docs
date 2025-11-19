@@ -378,4 +378,4 @@ uvx --python 3.12 braze-mcp-server@latest
 2. Comprueba tu conexión de red y la configuración del cortafuegos.
 3. Asegúrate de que utilizas HTTPS en tu URL base.
 
-{% multi_lang_include servidor_mcp/renuncia_legal.md %}
+{% multi_lang_include mcp_server/legal_disclaimer.md %}

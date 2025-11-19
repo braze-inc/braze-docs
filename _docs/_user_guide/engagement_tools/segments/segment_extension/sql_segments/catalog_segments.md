@@ -141,5 +141,5 @@ Yes. In the same way SQL Segment Extensions count toward your Segment Extension 
 
 ### I have a catalog segment use case that the current template doesn't serve. How should I set that up?
 
-Reach out to your customer support manager or [Braze Support]({{site.baseurl}}/user_guide/administrative/access_braze/support/) for additional guidance.
+Contact your customer support manager or [Braze Support]({{site.baseurl}}/user_guide/administrative/access_braze/support/) for additional guidance.
 
