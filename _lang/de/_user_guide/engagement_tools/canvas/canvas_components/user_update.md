@@ -62,7 +62,7 @@ Der Schritt Benutzeraktualisierung kann diesem Array von Objekten Attribute hinz
 
 Das Hinzufügen oder Entfernen eines Artikels zu einem Array aktualisiert die Wunschliste des Benutzers.
 
-\![Nutzer:in Update-Schritt, der einen Artikel "sunblock" zum Attribut "items_in_wishlist".]({% image_buster /assets/img_archive/canvas_user_update_wishlist.png hinzufügt %}){: style="max-width:90%;"}
+\![Nutzer:in Update-Schritt, der einen Artikel "sunblock" zum Attribut "items_in_wishlist".]({% image_buster /assets/img_archive/canvas_user_update_wishlist.png %}){: style="max-width:90%;"}
 
 #### Anwendungsfälle: Berechnen der Gesamtsumme des Warenkorbs
 
