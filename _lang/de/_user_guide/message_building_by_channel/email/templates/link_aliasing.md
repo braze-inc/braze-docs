@@ -60,7 +60,7 @@ Wenn Sie die [ältere Navigation]({{site.baseurl}}/user_guide/administrative/acc
 
 Hier können Sie sortieren, suchen und das Tracking für Link-Aliase deaktivieren.
 
-![Tracking Link-Aliasing-Seite, die zwei Link-Aliase mit den Namen "TechPartners" und "Hilfe" zeigt, die mit einer Kampagne mit dem Namen "Email_Survey".]({% image_buster /assets/img/tracked_aliases.png verbunden sind %})
+![Tracking Link-Aliasing-Seite, die zwei Link-Aliase mit den Namen "TechPartners" und "Hilfe" zeigt, die mit einer Kampagne mit dem Namen "Email_Survey".]({% image_buster /assets/img/tracked_aliases.png %})
 
 {% alert tip %}
 Verwenden Sie die Endpunkte [Listenlink-Alias für Kampagnen]({{site.baseurl}}/get_campaign_link_alias/) und [Listenlink-Alias für Canvas]({{site.baseurl}}/get_canvas_link_alias/), um den Satz `alias` in jeder Nachrichtenvariante in einer Kampagne oder einer E-Mail-spezifischen Canvas-Komponente zu extrahieren.

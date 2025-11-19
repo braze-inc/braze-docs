@@ -78,7 +78,7 @@ Sie können die Produkte entweder manuell mit IDs auswählen oder, wenn Sie bei 
 1. Folgen Sie im [Meta Commerce Manager:](https://business.facebook.com/business/loginpage/?next=https%3A%2F%2Fbusiness.facebook.com%2Fcommerce_manager%2F#)in den [Anweisungen von Meta](https://www.facebook.com/business/help/1275400645914358?id=725943027795860&ref=search_new_1), um Ihren Meta-Katalog zu erstellen. Vergewissern Sie sich, dass Sie sich in demselben Meta Business Portfolio befinden, in dem sich auch Ihr mit Braze verbundener WhatsApp Business Accont befindet.
 2. Folgen Sie den Anweisungen von Meta, um [Ihren Meta-Katalog](https://www.facebook.com/business/help/1953352334878186?id=2042840805783715) mit Ihrem mit Braze verbundenen WhatsApp Business Account [zu verbinden](https://www.facebook.com/business/help/1953352334878186?id=2042840805783715), indem Sie die Berechtigung "Katalog verwalten" im Meta Business Manager zuweisen. 
 
-![Meta-Seite "Kataloge" mit einem Pfeil, der auf den Button "Partner zuweisen" für den Katalog namens "sweeney_catalog".]({% image_buster /assets/img/whatsapp/meta_catalog.png zeigt %}){: style="max-width:90%;"}
+![Meta-Seite "Kataloge" mit einem Pfeil, der auf den Button "Partner zuweisen" für den Katalog namens "sweeney_catalog".]({% image_buster /assets/img/whatsapp/meta_catalog.png %}){: style="max-width:90%;"}
 
 Stellen Sie sicher, dass Sie die Braze Business Manager:in ID, `332231937299182`, als Partner Business ID verwenden.
 
