@@ -54,7 +54,7 @@ In Braze, navigate to **Settings** > **API Keys**. Select **Create New API Key**
 
 ### Step 2: Provide information to the actionable.me team
 
-To complete the integration, you must provide your REST API key and [REST endpoint URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints) to your actionable.me operations team. actionable.me will then establish the connection and reach out to you after the setup is complete and be in touch to start sharing insights.
+To complete the integration, you must provide your REST API key and [REST endpoint URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints) to your actionable.me operations team. actionable.me will then establish the connection and contact you after the setup is complete and be in touch to start sharing insights.
 
 ![The actionable.me "add platform" page that the actionable.me operations team will configure.]({% image_buster /assets/img/actionableme/image2.png %})
 

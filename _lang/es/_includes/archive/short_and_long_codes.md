@@ -12,8 +12,6 @@
 
 Un remitente verificado por RCS es una representación visual de tu marca que incluye un nombre de marca, un logotipo, un pie de foto opcional y una señal verificada. Esto proporciona al remitente verificado por RCS una ventaja significativa sobre los códigos SMS a la hora de establecer la confianza del usuario.  
 
-![Un ejemplo de remitente verificado por RCS en un mensaje RCS llamado "Cat Failz Cafe".]{% image_buster /assets/img/rcs/rcs_sender.png %}{: style="max-width:60%;"}
-
 ##### Detalles
 
 | Componentes visuales | Acceso | Rendimiento | MMS habilitado | Unidireccional vs. Bidireccional |

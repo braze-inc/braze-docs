@@ -21,7 +21,7 @@ search_rank: 1
 メッセージは、キャンペーンとキャンバスのどちらを使用して配信すべきでしょうか。キャンペーンは単一のシンプルなメッセージングキャンペーンに適していますが、キャンバスはマルチステップのユーザーのジャーニーに適しています。
 
 {% tabs %}
-{% tab キャンペーン %}
+{% tab Campaign %}
 
 **ステップ:**
 
@@ -38,7 +38,7 @@ search_rank: 1
 {% endalert %}
 
 {% endtab %}
-{% tab キャンバス %}
+{% tab Canvas %}
 
 **ステップ:**
 
@@ -60,7 +60,11 @@ search_rank: 1
 先に進む前に、[SMSメッセージのセグメントとコピーの上限に関する]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/segments/)ガイドラインを読みましょう。SMSメッセージ・セグメントとは、電話キャリアがテキスト・メッセージを測定するために使用する文字バッチのことです。メッセージはメッセージセグメントごとに課金されるため、メッセージの分割方法のニュアンスを理解しておきましょう。
 {% endalert %}
 
-![次のメッセージを含む Braze の SMS コンポーザー: 「first_name さん、いつも応援していただきありがとうございます。このSMSを見せれば、特別割引が適用されます。メッセージの受信を中止するには STOP と返信してください。」]({% image_buster /assets/img/sms_campaign_compose.png %})
+<<<<<<< HEAD
+![BrazeのSMS作成画面に「Hifirst_name, we appreciate your support！このSMSを見せれば、特別割引が適用されます。私たちからのメッセージを受け取らないようにするにはSTOPと返信すること。"]({% image_buster /assets/img/sms_campaign_compose.png %})
+=======
+\![BrazeのSMS作成画面に「Hifirst_name, we appreciate your support！このSMSを見せれば、特別割引が適用されます。私たちからのメッセージを受け取らないようにするにはSTOPと返信すること。"]({% image_buster /assets/img/sms_campaign_compose.png %})
+>>>>>>> main
 
 ### 連絡先カードの追加
 
@@ -78,9 +82,13 @@ Liquidを使用する場合は、受信者のユーザープロファイルが�
 
 魅力的な文章を作成するためのサポートが必要な場合は、[AI コピーライティングアシスタント]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/)を使用してみてください。商品名や説明を入力すると、AIが人間のようなマーケティングコピーを生成し、メッセージングに使用します。
 
-![SMS コンポーザーのメッセージフィールドにある [AI コピーライター] ボタンをクリックします。]({% image_buster /assets/img/ai_copywriter/ai_copywriter_sms.png %}){: style="max-width:60%"}
+<<<<<<< HEAD
+![SMS作成画面のメッセージフィールドにある「AIコピーライターを起動」ボタンをクリックする。]({% image_buster /assets/img/ai_copywriter/ai_copywriter_sms.png %}){: style="max-width:60%"}
+=======
+\![SMS作成画面のメッセージフィールドにある「AIコピーライターを起動」ボタンをクリックする。]({% image_buster /assets/img/ai_copywriter/ai_copywriter_sms.png %}){: style="max-width:60%"}
+>>>>>>> main
 
-#### 右から左へのメッセージを作成する
+#### 右から左へのメッセージの作成
 
 右から左へのメッセージの最終的な出現は、サービスプロバイダがそれらをどのようにレンダリングするかに大きく依存します。右から左へのメッセージを可能な限り正確に表示するためのベストプラクティスについては、[右から左へのメッセージを作成する]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/)を参照してください。
 
@@ -88,7 +96,11 @@ Liquidを使用する場合は、受信者のユーザープロファイルが�
 
 Brazeでは、送信前にメッセージをプレビューしてテストすることを常に推奨しています。**テスト**タブに切り替えて、[コンテンツテストグループ]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups)または個々のユーザーにテストSMSを送信するか、Brazeで直接ユーザーとしてメッセージをプレビューしましょう。
 
-![コンポーザーのテストタブからの SMS コピーのプレビュー。プロファイルセクションの [名] フィールドは「James」に設定されています。プレビュー・セクションでは、SMSに "Hi James, we appreciate your support!"]({% image_buster /assets/img/sms_campaign_test.png %}) と表示されるようになりました。
+<<<<<<< HEAD
+![コンポーザーのテストタブからSMSコピーをプレビューする。プロファイルセクションの [名] フィールドは「James」に設定されています。プレビューセクションでは、SMSに "Hi James, we appreciate your support!"と表示されるようになった。]({% image_buster /assets/img/sms_campaign_test.png %})
+=======
+\![コンポーザーのテストタブからSMSコピーをプレビューする。プロファイルセクションの [名] フィールドは「James」に設定されています。プレビューセクションでは、SMSに "Hi James, we appreciate your support!"と表示されるようになった。]({% image_buster /assets/img/sms_campaign_test.png %})
+>>>>>>> main
 
 {% alert tip %}
 SMSがいくつのセグメントに分けられるかテストしたい場合は、[SMSセグメント計算機を使って]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#segment-calculator)コピーの長さをテストしてみましょう。
@@ -97,7 +109,7 @@ SMSがいくつのセグメントに分けられるかテストしたい場合�
 ## ステップ 4: キャンペーンまたはキャンバスの残りの部分を作成する
 
 {% tabs %}
-{% tab キャンペーン %}
+{% tab Campaign %}
 
 次に、キャンペーンの残りの部分を作成します。SMSメッセージの作成に最適なツールの使い方については、以下のセクションを参照してください。
 
@@ -111,7 +123,11 @@ SMS メッセージは、スケジュールされた時刻、アクション、�
 
 #### ターゲットとするユーザーを選択する
 
-次に、セグメントまたはフィルターを選択して[ユーザーをターゲットに設定]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/)し、オーディエンスを絞り込む必要があります。すでにサブスクリプショングループを選択しているため、ユーザーがブランドに対して希望しているコミュニケーションの頻度やカテゴリによって、ユーザーが絞り込まれます。このステップでは、セグメントからより多くのオーディエンスを選択し、必要であればフィルターを使ってさらにセグメントを絞り込みます。セグメントのおおよその人数について現在の状態を示すスナップショットが自動的に表示されます。正確なセグメントメンバーシップは常にメッセージが送信される直前に計算されることに注意してください。
+次に、セグメントまたはフィルターを選択して[ユーザーをターゲットに設定]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/)し、オーディエンスを絞り込む必要があります。すでにサブスクリプショングループを選択しているため、ユーザーがブランドに対して希望しているコミュニケーションの頻度やカテゴリによって、ユーザーが絞り込まれます。 
+
+{% multi_lang_include target_audiences.md %}
+
+このステップでは、セグメントからより多くのオーディエンスを選択し、必要に応じてフィルターを使用してさらにセグメントを絞り込みます。そのセグメンテーションの母集団が今どのようなものなのか、自動的にプレビューが表示される。正確なセグメントメンバーシップは常にメッセージが送信される直前に計算されることに注意してください。
 
 {% alert tip %}
 SMSリターゲティングに興味がある？詳しくはSMS[リターゲティングの記事を]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/retargeting/)ご覧いただきたい。
@@ -130,7 +146,7 @@ Braze では、キャンペーンを受信した後、ユーザーが指定の�
 
 {% endtab %}
 
-{% tab キャンバス %}
+{% tab Canvas %}
 
 キャンバスコンポーネントが完成していない場合は、残りのセクションを完成させます。キャンバスの残りの部分の構築方法、多変量テストとインテリジェントセレクションの実装方法などの詳細については、キャンバスドキュメントの「[キャンバスを構築する」]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-3-build-your-canvas)ステップを参照のこと。
 

@@ -13,7 +13,7 @@ description: "This reference page lists filters that can be used to reformat sta
 Filters are how you can modify the output of numbers, strings, variables, and objects in Liquid. You can use filters to reformat static or dynamic text, such as changing a string from lowercase to uppercase or to perform mathematical operations, like addition or division.
 
 {% alert important %}
-Braze does not support all Liquid filters from Shopify. This page attempts to outline the Liquid filters that Braze has tested, but it may not be a complete list. Always test your Liquid before sending out any messages. <br><br>If you have any questions about a filter that is not listed here, reach out to your customer success manager.
+Braze does not support all Liquid filters from Shopify. This page attempts to outline the Liquid filters that Braze has tested, but it may not be a complete list. Always test your Liquid before sending out any messages. <br><br>If you have any questions about a filter that is not listed here, contact your customer success manager.
 {% endalert %}
 
 ## Filter syntax

@@ -1,4 +1,3 @@
-
 <!---DEFAULT RATE LIMIT-->
 
 {% if include.endpoint == "default" %}
@@ -37,7 +36,7 @@ Starting on October 28th, 2024, we apply a base speed limit of 3,000 requests pe
 
 Different limits apply to customers who have purchased **Monthly Active Users - CY 24-25**. For details on these limits, see [Monthly Active Users - CY 24-25 limits]({{site.baseurl}}/api/endpoints/user_data/post_user_track/#monthly-active-users-cy-24-25).
 
-See our page on [API rate limits]({{site.baseurl}}/api/api_limits/) for details, and reach out to your customer success manager if you need your limit increased.
+See our page on [API rate limits]({{site.baseurl}}/api/api_limits/) for details, and contact your customer success manager if you need your limit increased.
 
 <!---/users/export/ids-->
 

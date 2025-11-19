@@ -36,21 +36,21 @@ Regardless of which browsers your users may be accessing your emails from, you m
 
 You can acquire an SSL certificate by using a third party, usually a Content Delivery Network (CDN). A CDN can host the SSL certificate and serve it to the browser any time one of your links is clicked. This is done by redirecting the traffic through the CDN to apply necessary certificates before sending it through to our email partners SendGrid or SparkPost.
 
-To get started with your SSL setup, reach out to your Braze customer success manager to initiate a full Braze email setup.
+To get started with your SSL setup, contact your Braze customer success manager to initiate a full Braze email setup.
 
 After Braze has initiated this setup, follow these steps:
 1. Braze will provide DNS records to add to your domain registry.
 2. Braze will verify if records have been added to your registry correctly.
 3. After this, you'll select a CDN and obtain SSL certificates from a third-party provider. 
-4. At this point, you'll set up your CDN. Note that Braze will not be able to help troubleshoot CDN configuration. Reach out to your CDN provider for any further assistance.
-5. Reach out to your customer success manager to get SSL turned on.
+4. At this point, you'll set up your CDN. Note that Braze will not be able to help troubleshoot CDN configuration. Contact your CDN provider for any further assistance.
+5. Contact your customer success manager to get SSL turned on.
 
 ### What is a CDN, and why do I need it?
 
 A content delivery network (CDN) is a platform of servers that help ensure quick load times of high-quality content across multiple mediums while also handling security certificates. 
 
 {% alert important %}
-CDN configuration always follows after getting your DNS records validated by Braze. If you have not yet initiated this step, reach out to your customer success manager for more information on how to get started.
+CDN configuration always follows after getting your DNS records validated by Braze. If you have not yet initiated this step, contact your customer success manager for more information on how to get started.
 {% endalert %}
 
 At Braze, to do click and open tracking, our delivery partners transform links using a branded subdomain, and the CDN applies the SSL certificate to those newly transformed links. Often, our delivery partners are required to present valid and trusted certificates to your email recipient's browser for links and images to display correctly. Because Braze doesn't request or manage such certificates, this must be set up on your end through a CDN. 
@@ -62,7 +62,7 @@ If you are unable to or don't wish to use the CDNs listed when setting up SSL fo
 #### Additional resources
 
 {% alert important %}
-For further assistance with troubleshooting your CDN configuration, you must reach out to your CDN provider.
+For further assistance with troubleshooting your CDN configuration, you must contact your CDN provider.
 {% endalert %}
 
 The following table includes step-by-step guides written by ESP partners on how to configure certain CDNs. While your specific CDN may not be listed, you must make sure your CDN has the ability to apply SSL certificates.
@@ -91,7 +91,7 @@ A dig command can tell you whether you are pointing your link tracking at the CD
 
 ##### CDN issues
 
-If your live email links start breaking during setup, this generally means you've pointed your DNS toward your CDN without it being properly configured. This can appear as a "wrong link" error. Reach out to your CDN provider and review their documentation to help to troubleshoot your CDN configuration.
+If your live email links start breaking during setup, this generally means you've pointed your DNS toward your CDN without it being properly configured. This can appear as a "wrong link" error. Contact your CDN provider and review their documentation to help to troubleshoot your CDN configuration.
 
 ##### SSL enablement status
 
