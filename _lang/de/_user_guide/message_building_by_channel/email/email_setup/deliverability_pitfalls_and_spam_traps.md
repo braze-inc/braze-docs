@@ -8,7 +8,7 @@ channel: email
 
 ---
 
-# [\![Braze Lernkurs]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability){: style="float:right;width:120px;border:0;" class="noimgborder"} Zustellbarkeitsfallen und Spam-Trap
+# [![Braze Lernkurs]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability){: style="float:right;width:120px;border:0;" class="noimgborder"} Zustellbarkeitsfallen und Spam-Trap
 
 Die Zustellbarkeit Ihrer E-Mails kann durch folgende Spam-Traps beeinträchtigt werden:
 

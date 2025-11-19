@@ -31,7 +31,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/check-square-broken.svg
 ---
 
-## [\![Braze-Lernkurs]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/content-cards){: style="float:right;width:120px;border:0;" class="noimgborder"} Vorteile der Verwendung von Content-Cards
+## [![Braze-Lernkurs]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/content-cards){: style="float:right;width:120px;border:0;" class="noimgborder"} Vorteile der Verwendung von Content-Cards
 
 Hier sind nur einige Vorteile der Verwendung von Content Cards gegenüber der Einbindung von Inhalten in Ihre App durch Ihre Entwickler:
 
