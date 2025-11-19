@@ -34,20 +34,20 @@ Passen wir die Canvas-Details an, um unser Ziel zu erreichen.
 
 1. Wählen Sie **Bearbeiten** neben dem Namen der Vorlage.
 
-\![Der aktuelle Titel und die Beschreibung des Canvas.]({% image_buster /assets/img/canvas_templates/back_in_stock_old_name_description.png %}){: style="max-width:45%;"}
+![Der aktuelle Titel und die Beschreibung des Canvas.]({% image_buster /assets/img/canvas_templates/back_in_stock_old_name_description.png %}){: style="max-width:45%;"}
 
 {:start="2"}
 2\. Aktualisieren Sie den Namen des Canvas, um anzugeben, dass das Canvas dafür gedacht ist, Nutzer anzusprechen, wenn unser Produkt Classic Straight Leg wieder auf Lager ist.
 3\. Aktualisieren Sie die Beschreibung, um zu erklären, dass dieses Canvas personalisierte Nachrichten enthält.
 4\. Fügen Sie das Tag **Back in Stock** hinzu, das unter dem Tag **Promotional** verschachtelt ist, damit wir auf der Startseite von Canvas danach filtern können. 
 
-\!["Canvas-Details einrichten"-Schritt mit dem Canvas-Namen "Wieder auf Lager - Klassisches gerades Bein" und einer kurzen Canvas-Beschreibung.]({% image_buster /assets/img/canvas_templates/back_in_stock_1.png %})
+!["Canvas-Details einrichten"-Schritt mit dem Canvas-Namen "Wieder auf Lager - Klassisches gerades Bein" und einer kurzen Canvas-Beschreibung.]({% image_buster /assets/img/canvas_templates/back_in_stock_1.png %})
 
 ### Schritt 2: Konversions-Events zuweisen
 
 Ändern Sie das **primäre Umrechnungsereignis - A** in **Einen bestimmten Kauf tätigen** und wählen Sie **Klassisches gerades Bein** als Produktnamen.
 
-\!["Konversions-Events zuordnen" für den Konversions-Event-Typ des Kaufs des Produkts Classic Straight Leg mit einer Konversions-Frist von 7 Tagen.]({% image_buster /assets/img/canvas_templates/back_in_stock_2.png %})
+!["Konversions-Events zuordnen" für den Konversions-Event-Typ des Kaufs des Produkts Classic Straight Leg mit einer Konversions-Frist von 7 Tagen.]({% image_buster /assets/img/canvas_templates/back_in_stock_2.png %})
 
 ### Schritt 3: Entry-Zeitplan anpassen
 
@@ -57,12 +57,12 @@ In diesem Schritt nehmen wir zwei Anpassungen vor:
 
 1. Wählen Sie den Katalog aus, der Informationen über unsere Classic Straight Leg Jeans enthält, die wir „Straight Leg Pants“ genannt haben. 
 
-\!["Zeitplan für den Eingang" Schritt für einen aktionsbasierten Canvas.]({% image_buster /assets/img/canvas_templates/back_in_stock_3.png %})
+!["Zeitplan für den Eingang" Schritt für einen aktionsbasierten Canvas.]({% image_buster /assets/img/canvas_templates/back_in_stock_3.png %})
 
 {: start="2"}
 2\. Setzen Sie die **Startzeit (erforderlich)** auf das gewünschte Startdatum und die Uhrzeit.
 
-\!["Eingangsfenster" Abschnitt mit einer Startzeit von 2\. Januar 2025 um 12 Uhr.]({% image_buster /assets/img/canvas_templates/back_in_stock_4.png %})
+!["Eingangsfenster" Abschnitt mit einer Startzeit von 2\. Januar 2025 um 12 Uhr.]({% image_buster /assets/img/canvas_templates/back_in_stock_4.png %})
 
 ### Schritt 4: Zielgruppe auswählen
 
@@ -71,23 +71,23 @@ Wir definieren unsere Zielgruppe als Nutzer, von denen wir annehmen, dass sie mi
 1. Wählen Sie unser Targeting-Segment „Zu Favoriten hinzugefügt – Classic Straight Leg Jeans“ aus, das aus Nutzer:innen besteht, die unsere Classic Straight Leg Jeans auf unserer App oder Website als Favoriten hinzugefügt haben.
 2. Wählen Sie einen Filter, um Benutzer einzuschließen, die "Jeans" mehr als "0" Mal gekauft haben.
 
-\!["Target Audience" Schritt mit dem Segment "Favorited - Classic Straight Leg Jeans".]({% image_buster /assets/img/canvas_templates/back_in_stock_5.png %})
+!["Target Audience" Schritt mit dem Segment "Favorited - Classic Straight Leg Jeans".]({% image_buster /assets/img/canvas_templates/back_in_stock_5.png %})
 
 {: start="3"}
 3\. Passen Sie die Eingangskontrollen so an, dass Nutzer:innen nach der maximalen Dauer des Canvas wieder in den Canvas eintreten können, um zu verhindern, dass sie denselben Schritt gleichzeitig triggern.
 
-\!["Eingangskontrollen" mit einem Kontrollkästchen, das es Nutzern:innen erlaubt, dieses Canvas mit einer maximalen Dauer des Canvas erneut zu betreten.]({% image_buster /assets/img/canvas_templates/back_in_stock_6.png %})
+!["Eingangskontrollen" mit einem Kontrollkästchen, das es Nutzern:innen erlaubt, dieses Canvas mit einer maximalen Dauer des Canvas erneut zu betreten.]({% image_buster /assets/img/canvas_templates/back_in_stock_6.png %})
 
 {: start="4"}
 4\. Passen Sie die Ausstiegskriterien an, um Nutzer:innen zu entfernen, die das angepasste Event der Ablehnung der Classic Straight Leg Jeans durchgeführt haben.
 
-\!["Exit Criteria" Abschnitt mit einer Ausnahme für Nutzer:innen, die das angepasste Event "Unfavorited" ausführen.]({% image_buster /assets/img/canvas_templates/back_in_stock_7.png %})
+!["Exit Criteria" Abschnitt mit einer Ausnahme für Nutzer:innen, die das angepasste Event "Unfavorited" ausführen.]({% image_buster /assets/img/canvas_templates/back_in_stock_7.png %})
 
 ### Schritt 5: Wählen Sie Ihre Sendeeinstellungen aus
 
 Wir behalten die Standardeinstellungen für Abonnements bei, d.h. wir senden nur an Benutzer, die Nachrichten oder Benachrichtigungen abonniert oder sich dafür entschieden haben, und überspringen die anderen Einstellungen (Häufigkeitsbegrenzung, ruhige Stunden und Seed-Gruppen).
 
-\!["Sendeeinstellungen" Schritt Targeting von Nutzern:in, die Abonnent:in sind oder sich angemeldet haben.]({% image_buster /assets/img/canvas_templates/back_in_stock_8.png %})
+!["Sendeeinstellungen" Schritt Targeting von Nutzern:in, die Abonnent:in sind oder sich angemeldet haben.]({% image_buster /assets/img/canvas_templates/back_in_stock_8.png %})
 
 ### Schritt 6: Canvas anpassen
 
@@ -106,7 +106,7 @@ Wir beginnen unsere Anpassung, indem wir jeden Schritt der Nachrichten durchgehe
     - Die "Push+Email Alert"-Nachrichten, die an Benutzer gesendet werden, die keinen Kauf getätigt haben
 4. Aktualisieren Sie den Schritt Aktionspfade, indem Sie die Aktionsgruppe **Einkauf** auswählen. Wählen Sie dann **Gezielt einkaufen** und wählen Sie Classic Straight Leg Jeans als Produkt.
 
-\![Mobile Push Canvas-Schritt mit einer Nachricht, die Nutzer:innen darüber informiert, dass ein Produkt wieder auf Lager ist.]({% image_buster /assets/img/canvas_templates/back_in_stock_9.png %})
+![Mobile Push Canvas-Schritt mit einer Nachricht, die Nutzer:innen darüber informiert, dass ein Produkt wieder auf Lager ist.]({% image_buster /assets/img/canvas_templates/back_in_stock_9.png %})
 
 ### Schritt 7: Testen und starten Sie Ihr Canvas
 

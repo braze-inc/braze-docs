@@ -84,7 +84,7 @@ Enjoy the weather!
 
 Wenn die API mit {%raw%}`{{localweather.consolidated_weather[0].weather_state_name}}`{%endraw%} antwortet und `Rain` zurückgibt, würde die:der Nutzer:in diesen Push erhalten.
 
-\![Push-Benachrichtigung mit der Nachricht "Es regnet! Nehmen Sie einen Regenschirm!"]({% image_buster /assets/img_archive/connected_weather_push2.png %} "Connected Content Push Usage Example"){:style="max-width:50%" }
+![Push-Benachrichtigung mit der Nachricht "Es regnet! Nehmen Sie einen Regenschirm!"]({% image_buster /assets/img_archive/connected_weather_push2.png %} "Connected Content Push Usage Example"){:style="max-width:50%" }
 
 {% multi_lang_include connected_content.md section='default behavior' %}
 

@@ -54,7 +54,7 @@ Wenn Sie entscheiden, welcher Nachrichtenkanal für Ihre Kampagnen und Canvases 
 
 Die folgende Matrix veranschaulicht die Stärken und Schwächen der wichtigsten Messaging-Kanäle in Bezug auf Inhalt und Dringlichkeit. Überlegen Sie immer, wie dringend und inhaltsreich Ihre Nachricht sein sollte, und wählen Sie dann den richtigen Kanal für Ihre Kampagne.
 
-\![Mobile/Web-Push sind einfache Inhalte, hohe Dringlichkeit; E-Mails sind reichhaltige Inhalte, hohe Dringlichkeit; In-App/Browser-Nachrichten sind einfache Inhalte, niedrige Dringlichkeit; Content Cards sind niedrige Dringlichkeit, reichhaltige Inhalte]({% image_buster /assets/img_archive/messaging_matrix.png %})
+![Mobile/Web-Push sind einfache Inhalte, hohe Dringlichkeit; E-Mails sind reichhaltige Inhalte, hohe Dringlichkeit; In-App/Browser-Nachrichten sind einfache Inhalte, niedrige Dringlichkeit; Content Cards sind niedrige Dringlichkeit, reichhaltige Inhalte]({% image_buster /assets/img_archive/messaging_matrix.png %})
 
 Wenn Sie mehr darüber erfahren möchten, wie Sie diese Matrix nutzen können, sehen Sie sich unseren Braze Learning-Kurs zum Thema " [Understanding the Messaging Matrix"](https://learning.braze.com/understand-the-messaging-matrix) an.
 

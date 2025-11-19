@@ -13,11 +13,11 @@ description: "In diesem referenzierten Artikel erfahren Sie, wie Sie Daten aus S
 
 Um Segmentdaten in eine CSV-Datei zu exportieren, wählen Sie bei der Bearbeitung eines Segments das Dropdown-Menü **Nutzerdaten** aus und wählen Sie, ob Sie die Nutzerdaten oder die E-Mail-Adressen für das Segment exportieren möchten.
 
-\![Abschnitt Segmente Details mit Nutzerdaten-Dropdown mit Exportoptionen.]({% image_buster /assets/img_archive/csvexport.png %})
+![Abschnitt Segmente Details mit Nutzerdaten-Dropdown mit Exportoptionen.]({% image_buster /assets/img_archive/csvexport.png %})
 
 Sie können einen CSV-Export auch von der Hauptseite **Segmente** aus anfragen, indem Sie das Dropdown-Menü <i class="fas fa-gear"></i> **Einstellungen** für ein Segment auswählen:
 
-\![Dropdown-Menü Einstellungen auf der Hauptseite Segmente.]({% image_buster /assets/img_archive/csvexport2.png %})
+![Dropdown-Menü Einstellungen auf der Hauptseite Segmente.]({% image_buster /assets/img_archive/csvexport2.png %})
 
 {% alert tip %}
 Um Daten aus all Ihren Nutzerprofilen zu exportieren, erstellen Sie ein Segment ohne Filter und fragen dann einen CSV-Export an.

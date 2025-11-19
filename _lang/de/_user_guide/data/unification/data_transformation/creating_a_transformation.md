@@ -24,7 +24,7 @@ Identifizieren Sie eine externe Plattform, die Sie mit Braze verbinden möchten,
 
 Im Folgenden finden Sie ein Beispiel für einen [Typeform Webhook](https://www.typeform.com/help/a/webhooks-360029573471/), der durch Anmeldung bei der Plattform konfiguriert werden kann:
 
-\![]({% image_buster /assets/img/data_transformation/data_transformation8.png %})
+![]({% image_buster /assets/img/data_transformation/data_transformation8.png %})
 
 ## Schritt 2: Erstellen Sie eine Transformation
 
@@ -43,7 +43,7 @@ Dieser Schritt ist optional, aber wir empfehlen, einen Test-Webhook von Ihrer Au
 
 So sieht es bei Typeform aus:
 
-\![Beispiel für einen Code zur Datentransformation, der den Webhook auf Braze-Nutzerprofile abbildet.]({% image_buster /assets/img/data_transformation/data_transformation11.png %})
+![Beispiel für einen Code zur Datentransformation, der den Webhook auf Braze-Nutzerprofile abbildet.]({% image_buster /assets/img/data_transformation/data_transformation11.png %})
 
 {% alert note %}
 Braze Data Transformation unterstützt möglicherweise noch keine externen Plattformen, die eine spezielle Überprüfung oder Authentifizierung für Webhooks erfordern. Wenn Sie sich für diese Art von Plattform mit Braze Data Transformation interessieren, sollten Sie ein [Feedback zu Ihrem Produkt]({{site.baseurl}}/user_guide/administrative/access_braze/portal/) abgeben.
@@ -58,7 +58,7 @@ Wenn Sie Entwickler:in sind oder über umfangreiche Erfahrung mit JavaScript Cod
 {% alert tip %}
 Braze Data Transformation verfügt über einen KI-Copiloten, der ChatGPT um Hilfe beim Schreiben Ihres Codes bittet. Um auf den KI-Kopiloten zuzugreifen, wählen Sie <i class="fa-solid fa-wand-magic-sparkles"></i> **Code für die Transformation erzeugen**. Um dies zu nutzen, muss ein Webhook an Ihre Transformation gesendet werden. Sie können auch auf die Bibliothek der Templates zugreifen, indem Sie **Code einfügen** > **Template einfügen** auswählen.
 
-\![]({% image_buster /assets/img/data_transformation/data_transformation3.png %})
+![]({% image_buster /assets/img/data_transformation/data_transformation3.png %})
 {% endalert %}
 
 {% tabs %}

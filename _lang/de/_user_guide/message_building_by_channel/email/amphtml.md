@@ -42,7 +42,7 @@ Eine vollständige Liste der unterstützten E-Mail Clients finden Sie in der [AM
 
 Gehen Sie zu Ihren Google Mail-Einstellungen und wählen Sie unter **Allgemein** die Option **Dynamische E-Mail aktivieren**.
 
-\![Ein Beispiel für die Einstellungen von Google Mail mit ausgewähltem Kontrollkästchen "Dynamische E-Mails aktivieren".]({% image_buster /assets/img/dynamic-content.png %})
+![Ein Beispiel für die Einstellungen von Google Mail mit ausgewähltem Kontrollkästchen "Dynamische E-Mails aktivieren".]({% image_buster /assets/img/dynamic-content.png %})
 
 ## API-Nutzung
 

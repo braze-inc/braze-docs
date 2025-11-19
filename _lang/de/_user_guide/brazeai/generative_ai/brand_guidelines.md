@@ -18,7 +18,7 @@ Folgen Sie diesen Schritten, um Markenrichtlinien im KI-Texterstellungsassistent
 1. Suchen Sie in Ihrem Nachrichten-Editor und wählen Sie <i class="fa-solid fa-wand-magic-sparkles" title="KI Werbetexter"></i> um [den KI-Texter-Assistenten zu öffnen]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/#access).
 2. Wählen Sie **Markenrichtlinien anwenden** und dann **Markenrichtlinien erstellen**.
 
-\![Dropdown für "Markenrichtlinien anwenden" erweitert mit dem Button "Eine Markenrichtlinie erstellen" im Fokus.]({% image_buster /assets/img/ai_copywriter/create_brand_guideline_button.png %}){:style="max-width:75%"}
+![Dropdown für "Markenrichtlinien anwenden" erweitert mit dem Button "Eine Markenrichtlinie erstellen" im Fokus.]({% image_buster /assets/img/ai_copywriter/create_brand_guideline_button.png %}){:style="max-width:75%"}
 
 {: start="3"}
 
@@ -26,7 +26,7 @@ Folgen Sie diesen Schritten, um Markenrichtlinien im KI-Texterstellungsassistent
 4. Fügen Sie bei **Wann werden Sie diese Markenrichtlinien verwenden?** Details hinzu, um Ihren Kollegen (und Ihnen in Zukunft) den Kontext für die Verwendung dieser Richtlinien zu erläutern.
 5. Wenn Sie möchten, dass dies der Standard-Markenleitfaden für den aktuellen Workspace ist, markieren Sie **Als Standard-Markenleitfaden verwenden**.
 
-\![Ansicht zur Erstellung von Markenrichtlinien.]({% image_buster /assets/img/ai_copywriter/manual_brand_guidelines.png %} "Brand Guidelines")
+![Ansicht zur Erstellung von Markenrichtlinien.]({% image_buster /assets/img/ai_copywriter/manual_brand_guidelines.png %} "Brand Guidelines")
 
 ### Schritt 2: Beschreiben Sie Ihre Markenpersönlichkeit
 
@@ -50,7 +50,7 @@ Listen Sie unter **Ausschlüsse** alle Sprachen oder Stile auf, die nicht mit Ih
 
 Testen Sie Ihre Richtlinien, um zu sehen, wie sie funktionieren. Erweitern Sie **Richtlinien testen**, um Beispieltexte zu erstellen und bei Bedarf anzupassen.
 
-\![Testen von Markenrichtlinien mit einer Aktion über einen Frühlingsausverkauf für E-Mail Betreffzeilen.]({% image_buster /assets/img/ai_copywriter/test_brand_guidelines.png %})
+![Testen von Markenrichtlinien mit einer Aktion über einen Frühlingsausverkauf für E-Mail Betreffzeilen.]({% image_buster /assets/img/ai_copywriter/test_brand_guidelines.png %})
 
 ### Schritt 5: Speichern Sie Ihre Richtlinien
 

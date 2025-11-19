@@ -14,7 +14,7 @@ tool: Reports
 
 Sie finden den **Bericht Angepasste Events** unter **Analytics**.
 
-\![Angepasste Events]({% image_buster /assets/img_archive/Export_events.png %})
+![Angepasste Events]({% image_buster /assets/img_archive/Export_events.png %})
 
 Sie können die folgenden CSV-Dateien exportieren:
 

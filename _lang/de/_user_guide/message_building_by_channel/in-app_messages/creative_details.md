@@ -50,7 +50,7 @@ Im Allgemeinen empfiehlt Braze, Bilder zu verwenden, die auf einen 16:10-Bildsch
 
 {% tabs %}{% tab Fullscreen %}
 
-\![In-App-Nachricht im Vollbildmodus, die den Bildschirm einer App einnimmt. Die Nachricht im Vollbildmodus enthält ein großes Bild, eine Kopfzeile, einen Nachrichtentext und zwei Buttons.]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
+![In-App-Nachricht im Vollbildmodus, die den Bildschirm einer App einnimmt. Die Nachricht im Vollbildmodus enthält ein großes Bild, eine Kopfzeile, einen Nachrichtentext und zwei Buttons.]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
 
 | Layout | Asset-Größe | Anmerkungen |
 |--- | --- | --- |
@@ -64,7 +64,7 @@ Im Allgemeinen empfiehlt Braze, Bilder zu verwenden, die auf einen 16:10-Bildsch
 {% endtab %}
 {% tab Modal %}
 
-\![Modale In-App-Nachricht, die in der Mitte einer App und Website als Dialog erscheint. Das Modal enthält ein Bild, eine Kopfzeile, einen Nachrichtentext und zwei Buttons.]({% image_buster /assets/img/modal-behavior.gif %}){: style="border:0px;"}
+![Modale In-App-Nachricht, die in der Mitte einer App und Website als Dialog erscheint. Das Modal enthält ein Bild, eine Kopfzeile, einen Nachrichtentext und zwei Buttons.]({% image_buster /assets/img/modal-behavior.gif %}){: style="border:0px;"}
 
 | Layout | Asset-Größe | Anmerkungen |
 |--- | --- | ------ |
@@ -77,7 +77,7 @@ Im Allgemeinen empfiehlt Braze, Bilder zu verwenden, die auf einen 16:10-Bildsch
 {% endtab %}
 {% tab Slideup %}
 
-\![Slideup In-App-Nachricht, die am unteren Rand des App-Bildschirms erscheint. Das Slideup enthält ein Symbolbild und eine kurze Nachricht.]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
+![Slideup In-App-Nachricht, die am unteren Rand des App-Bildschirms erscheint. Das Slideup enthält ein Symbolbild und eine kurze Nachricht.]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
 
 | Layout | Asset-Größe | Anmerkungen |
 |--- | --- | --- |

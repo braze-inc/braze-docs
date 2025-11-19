@@ -56,7 +56,7 @@ Die folgenden Typen von Segment-Erweiterungen verbrauchen SQL-Guthaben:
 
 Benennen Sie Ihre Segmenterweiterung, indem Sie die Art der Nutzer:innen beschreiben, nach denen Sie filtern möchten. Dadurch wird sichergestellt, dass diese Erweiterung bei der Anwendung als Filter in Ihrem Segment leicht und genau entdeckt werden kann.
 
-\![Segment-Erweiterung mit dem Namen "Online Shoppers Extension - 90 Tage".]({% image_buster /assets/img/segment/segment_extension2.png %})
+![Segment-Erweiterung mit dem Namen "Online Shoppers Extension - 90 Tage".]({% image_buster /assets/img/segment/segment_extension2.png %})
 
 ### Schritt 3: Wählen Sie Ihre Kriterien
 
@@ -64,7 +64,7 @@ Wählen Sie zwischen den Kriterien Kauf, Nachrichteninteraktion oder benutzerdef
 
 Die Segmentierung auf der Grundlage von Event-Daten aus mehr als 730 Tagen kann mit anderen Filtern unter **Segmente** vorgenommen werden. Bei der Auswahl Ihres Zeitraums können Sie einen relativen Datumsbereich angeben, um die letzten X Tage auszuwählen, ein Startdatum, ein Enddatum oder einen genauen Datumsbereich (Datum A bis Datum B).
 
-\![Segmentierungskriterien für Nutzer:innen, die im Zeitraum vom 1\. März 2025 bis zum 31\. März 2025 mehr als 2 Mal ein angepasstes Event durchgeführt haben.]({% image_buster /assets/img/segment/segment_extension1.png %})
+![Segmentierungskriterien für Nutzer:innen, die im Zeitraum vom 1\. März 2025 bis zum 31\. März 2025 mehr als 2 Mal ein angepasstes Event durchgeführt haben.]({% image_buster /assets/img/segment/segment_extension1.png %})
 
 #### Segmentierung der Eigenschaften von Ereignissen
 
@@ -72,17 +72,17 @@ Um die Targeting-Präzision zu erhöhen, wählen Sie das Kontrollkästchen **Eig
 
 Bei String-Eigenschaften können Sie mehrere Werte auf einmal eingeben. In dem folgenden Beispiel sucht dieser Filter nach Benutzern mit einem der folgenden Status: Gold, Silber oder Bronze.
 
-\![Segmentierung anhand der Eigenschaften von Strings.]({% image_buster /assets/img/segment/property5.png %})
+![Segmentierung anhand der Eigenschaften von Strings.]({% image_buster /assets/img/segment/property5.png %})
 
-\![Segmentierung auf der Grundlage numerischer Eigenschaften.]({% image_buster /assets/img/segment/property2.png %})
+![Segmentierung auf der Grundlage numerischer Eigenschaften.]({% image_buster /assets/img/segment/property2.png %})
 
-\![Segmentierung auf der Grundlage boolescher Eigenschaften.]({% image_buster /assets/img/segment/property3.png %})
+![Segmentierung auf der Grundlage boolescher Eigenschaften.]({% image_buster /assets/img/segment/property3.png %})
 
-\![Segmentierung auf der Grundlage von Datumsobjekten.]({% image_buster /assets/img/segment/property4.png %})
+![Segmentierung auf der Grundlage von Datumsobjekten.]({% image_buster /assets/img/segment/property4.png %})
 
 Wir unterstützen auch die Segmentierung auf der Grundlage [verschachtelter Event-Eigenschaften]({{site.baseurl}}/user_guide/data/custom_data/custom_events/nested_objects/).
 
-\![Segmentierung auf der Grundlage verschachtelter Event-Eigenschaften.]({% image_buster /assets/img/segment/nested_segment_extensions.png %})
+![Segmentierung auf der Grundlage verschachtelter Event-Eigenschaften.]({% image_buster /assets/img/segment/nested_segment_extensions.png %})
 
 Segmenterweiterungen beruhen auf der langfristigen Speicherung von Event-Eigenschaften und haben kein Limit für die Speicherung von zeitgestempelten Eigenschaften. Sie können auf die Event-Eigenschaften zurückblicken, die in den letzten zwei Jahren getrackt wurden. Die Verwendung von Ereigniseigenschaften innerhalb von Segment Extensions hat keinen Einfluss auf die Verwendung von Datenpunkten.
 
@@ -100,7 +100,7 @@ Nachdem Sie **Speichern** ausgewählt haben, beginnt die Verarbeitung Ihrer Segm
 
 Während Ihre Segment-Erweiterung verarbeitet wird, sehen Sie eine kleine Animation neben dem Namen der Segment-Erweiterung und das Wort "Verarbeitung" in der Spalte **"Zuletzt verarbeitet"** in der Liste Segment-Erweiterungen. Beachten Sie, dass Sie eine Segment-Erweiterung nicht bearbeiten können, während sie in Bearbeitung ist.
 
-\!["Segment-Erweiterungen" Seite mit zwei aktiven Erweiterungen.]({% image_buster /assets/img/segment/segment_extension5.png %})
+!["Segment-Erweiterungen" Seite mit zwei aktiven Erweiterungen.]({% image_buster /assets/img/segment/segment_extension5.png %})
 
 Wenn eine Segment-Erweiterung verarbeitet wird, verwendet Braze für die Segmentierung der Zielgruppe weiterhin den Versionsverlauf des Standard-Segments aus der Zeit vor Beginn der Verarbeitung. Die Verarbeitung findet bei jedem Speichern oder Aktualisieren statt und beinhaltet die Abfrage und Aktualisierung von Nutzerprofilen - mit anderen Worten: Die Mitgliedschaft in Ihrem Standard Segment wird nicht sofort aktualisiert. Das bedeutet, dass wir nicht garantieren können, dass der Nutzer:innen in die Segment-Erweiterung aufgenommen wird, sobald die Aktualisierung abgeschlossen ist, es sei denn, die Aktion des Nutzers wird ausgeführt, bevor die Verarbeitung der Aktualisierung beginnt. Umgekehrt werden Nutzer:innen, die vor der Aktualisierung in der Segment-Erweiterung waren und die Kriterien nicht mehr erfüllen, weiterhin Ihrem tauben Segment zugeordnet, bis der Aktualisierungsprozess abgeschlossen ist und die Aktualisierungen angewendet werden.
 
@@ -108,15 +108,15 @@ Wenn eine Segment-Erweiterung verarbeitet wird, verwendet Braze für die Segment
 
 Nachdem Sie eine Segment-Erweiterung erstellt haben, können Sie diese als Filter verwenden, wenn Sie ein Segment erstellen oder eine Zielgruppe für eine Kampagne oder ein Canvas definieren. Beginnen Sie mit der Auswahl von **Braze Segment Extension** aus der Filterliste unter dem Abschnitt **Benutzerattribute**.
 
-\!["Filter"-Abschnitt mit einem Filter-Dropdown, das "Braze Segment-Erweiterungen" anzeigt.]({% image_buster /assets/img/segment/segment_extension7.png %})
+!["Filter"-Abschnitt mit einem Filter-Dropdown, das "Braze Segment-Erweiterungen" anzeigt.]({% image_buster /assets/img/segment/segment_extension7.png %})
 
 Wählen Sie in der Filterliste Braze Segment-Erweiterung die Segment-Erweiterung aus, die Sie in dieses Segment ein- oder ausschließen möchten.
 
-\![Ein "Braze Segment-Erweiterungen"-Filter, der ein Segment "1 E-Mail-Klick in den letzten 56 Tagen" enthält.]({% image_buster /assets/img/segment/segment_extension6.png %})
+![Ein "Braze Segment-Erweiterungen"-Filter, der ein Segment "1 E-Mail-Klick in den letzten 56 Tagen" enthält.]({% image_buster /assets/img/segment/segment_extension6.png %})
 
 Um die Kriterien für die Segment-Erweiterung anzuzeigen, wählen Sie **Erweiterungsdetails anzeigen**, um die Details in einem neuen Fenster anzuzeigen.
 
-\![Erweiterung für "1 E-Mail-Klick in den letzten 56 Tagen".]({% image_buster /assets/img/segment/segment_extension8.png %}){: style="max-width:70%;"}
+![Erweiterung für "1 E-Mail-Klick in den letzten 56 Tagen".]({% image_buster /assets/img/segment/segment_extension8.png %}){: style="max-width:70%;"}
 
 Jetzt können Sie wie gewohnt mit der [Erstellung Ihres Segments]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) fortfahren.
 

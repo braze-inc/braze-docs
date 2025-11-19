@@ -411,7 +411,7 @@ Sie können das Warehouse, das Schema und die Tabelle oder den View beliebig ben
 #### Schritt 1.4: Warehouse Connection String abrufen 
 Sie benötigen den SQL-Endpunkt für Ihr Warehouse, damit Braze eine Verbindung herstellen kann. Um diese abzurufen, gehen Sie zum **Arbeitsbereich** in Fabric und wählen Sie in der Liste der Elemente mit dem Mauszeiger den Lagernamen aus und wählen Sie **SQL-Verbindungszeichenfolge kopieren**.
 
-\![Die Seite "Fabric Console" in Microsoft Azure, auf der Nutzer:innen den SQL Connection String abrufen sollten.]({% image_buster /assets/img/cloud_ingestion/fabric_1.png %})
+![Die Seite "Fabric Console" in Microsoft Azure, auf der Nutzer:innen den SQL Connection String abrufen sollten.]({% image_buster /assets/img/cloud_ingestion/fabric_1.png %})
 
 
 #### Schritt 1.5: Zulassen von Braze IPs in der Firewall (Optional)
@@ -435,7 +435,7 @@ Gehen Sie im Braze Dashbord zu **Dateneinstellungen** > **Cloud-Datenaufnahme**,
 
 Geben Sie die Informationen für Ihr Snowflake Data Warehouse und die Quelltabelle ein und fahren Sie dann mit dem nächsten Schritt fort.
 
-\![Die Seite "Neue Importsynchronisation erstellen" für Snowflake im Braze-Dashboard mit den in Schritt 1 eingegebenen Beispieldaten: "Verbindung einrichten".]({% image_buster /assets/img/cloud_ingestion/ingestion_1.png %})
+![Die Seite "Neue Importsynchronisation erstellen" für Snowflake im Braze-Dashboard mit den in Schritt 1 eingegebenen Beispieldaten: "Verbindung einrichten".]({% image_buster /assets/img/cloud_ingestion/ingestion_1.png %})
 
 #### Schritt 2.2: Synchronisierungsdetails konfigurieren
 
@@ -448,7 +448,7 @@ Kontakt-E-Mails erhalten nur Benachrichtigungen über globale oder Synchronisier
 - Probleme mit Berechtigungen
 - (Nur für Katalogsynchronisationen) Der Katalogträger hat keinen Platz mehr
 
-\![Die Seite "Neue Importsynchronisation erstellen" für Snowflake im Braze-Dashboard mit den in Schritt 2 hinzugefügten Beispieldaten: "Synchronisierungsdetails einrichten".]({% image_buster /assets/img/cloud_ingestion/ingestion_2.png %})
+![Die Seite "Neue Importsynchronisation erstellen" für Snowflake im Braze-Dashboard mit den in Schritt 2 hinzugefügten Beispieldaten: "Synchronisierungsdetails einrichten".]({% image_buster /assets/img/cloud_ingestion/ingestion_2.png %})
 
 Sie wählen auch den Datentyp und die Synchronisierungsfrequenz. Die Häufigkeit kann zwischen „alle 15 Minuten“ und „einmal pro Monat“ liegen. Wir verwenden die in Ihrem Braze Dashboard konfigurierte Zeitzone, um die wiederkehrende Synchronisierung zu planen. Unterstützte Datentypen sind „Angepasste Attribute“, „Angepasste Events“ und „Kauf-Events“, und der Datentyp für eine Synchronisierung kann nach der Erstellung nicht mehr geändert werden. 
 
@@ -470,7 +470,7 @@ Gehen Sie im Braze Dashbord zu **Dateneinstellungen** > **Cloud-Datenaufnahme**,
 
 Geben Sie die Informationen für Ihr Redshift Data Warehouse und die Quelltabelle ein. Wenn Sie einen privaten Netzwerktunnel verwenden, schalten Sie den Schieberegler um und geben Sie die Tunnelinformationen ein. Fahren Sie dann mit dem nächsten Schritt fort.
 
-\![Die Seite "Neue Importsynchronisation erstellen" für Redshift im Braze-Dashboard, eingestellt auf Schritt 1: "Verbindung einrichten".]({% image_buster /assets/img/cloud_ingestion/ingestion_6.png %})
+![Die Seite "Neue Importsynchronisation erstellen" für Redshift im Braze-Dashboard, eingestellt auf Schritt 1: "Verbindung einrichten".]({% image_buster /assets/img/cloud_ingestion/ingestion_6.png %})
 
 #### Schritt 2.2: Synchronisierungsdetails konfigurieren
 
@@ -483,7 +483,7 @@ Kontakt-E-Mails erhalten nur Benachrichtigungen über globale oder Synchronisier
 - Probleme mit Berechtigungen
 - (Nur für Katalogsynchronisationen) Der Katalogträger hat keinen Platz mehr
 
-\![Die Seite "Neue Importsynchronisation erstellen" für Redshift im Braze-Dashboard mit einigen Beispieldaten, die in Schritt 2 hinzugefügt wurden: "Synchronisierungsdetails einrichten".]({% image_buster /assets/img/cloud_ingestion/ingestion_7.png %})
+![Die Seite "Neue Importsynchronisation erstellen" für Redshift im Braze-Dashboard mit einigen Beispieldaten, die in Schritt 2 hinzugefügt wurden: "Synchronisierungsdetails einrichten".]({% image_buster /assets/img/cloud_ingestion/ingestion_7.png %})
 
 Sie wählen auch den Datentyp und die Synchronisierungsfrequenz. Die Häufigkeit kann zwischen „alle 15 Minuten“ und „einmal pro Monat“ liegen. Wir verwenden die in Ihrem Braze Dashboard konfigurierte Zeitzone, um die wiederkehrende Synchronisierung zu planen. Unterstützte Datentypen sind „Angepasste Attribute“, „Angepasste Events“ und „Kauf-Events“, und der Datentyp für eine Synchronisierung kann nach der Erstellung nicht mehr geändert werden.
 {% endtab %}
@@ -495,7 +495,7 @@ Gehen Sie im Braze Dashbord zu **Dateneinstellungen** > **Cloud-Datenaufnahme**,
 
 Laden Sie den JSON-Schlüssel hoch und geben Sie einen Namen für das Dienstkonto an. Geben Sie anschließend die Details Ihrer Quelltabelle ein.
 
-\![Die Seite "Neue Importsynchronisation erstellen" für BigQuery im Braze-Dashboard, eingestellt auf Schritt 1: "Verbindung einrichten".]({% image_buster /assets/img/cloud_ingestion/ingestion_11.png %})
+![Die Seite "Neue Importsynchronisation erstellen" für BigQuery im Braze-Dashboard, eingestellt auf Schritt 1: "Verbindung einrichten".]({% image_buster /assets/img/cloud_ingestion/ingestion_11.png %})
 
 #### Schritt 2.2: Synchronisierungsdetails konfigurieren
 
@@ -508,7 +508,7 @@ Kontakt-E-Mails erhalten nur Benachrichtigungen über globale oder Synchronisier
 - Probleme mit Berechtigungen
 - (Nur für Katalogsynchronisationen) Der Katalogträger hat keinen Platz mehr
 
-\![Die Seite "Neue Importsynchronisation erstellen" für BigQuery im Braze-Dashboard, eingestellt auf Schritt 2: "Synchronisierungsdetails einrichten".]({% image_buster /assets/img/cloud_ingestion/ingestion_12.png %})
+![Die Seite "Neue Importsynchronisation erstellen" für BigQuery im Braze-Dashboard, eingestellt auf Schritt 2: "Synchronisierungsdetails einrichten".]({% image_buster /assets/img/cloud_ingestion/ingestion_12.png %})
 
 Sie wählen auch den Datentyp und die Synchronisierungsfrequenz. Die Häufigkeit kann zwischen „alle 15 Minuten“ und „einmal pro Monat“ liegen. Wir verwenden die in Ihrem Braze Dashboard konfigurierte Zeitzone, um die wiederkehrende Synchronisierung zu planen. Unterstützte Datentypen sind „Angepasste Attribute“, „Angepasste Events“, „Kauf-Events“ und „Nutzer-Löschvorgänge“. Der Datentyp für eine Synchronisierung kann nach der Erstellung nicht mehr geändert werden. 
 
@@ -521,7 +521,7 @@ Gehen Sie im Braze Dashbord zu **Dateneinstellungen** > **Cloud-Datenaufnahme**,
 
 Geben Sie die Informationen für Ihr Databricks Data Warehouse und die Quelltabelle ein und fahren Sie mit dem nächsten Schritt fort.
 
-\![Die Seite "Neue Importsynchronisation erstellen" für Databricks im Braze-Dashboard, eingestellt auf Schritt 1: "Verbindung einrichten".]({% image_buster /assets/img/cloud_ingestion/ingestion_16.png %})
+![Die Seite "Neue Importsynchronisation erstellen" für Databricks im Braze-Dashboard, eingestellt auf Schritt 1: "Verbindung einrichten".]({% image_buster /assets/img/cloud_ingestion/ingestion_16.png %})
 
 #### Schritt 2.2: Synchronisierungsdetails konfigurieren
 
@@ -534,7 +534,7 @@ Kontakt-E-Mails erhalten nur Benachrichtigungen über globale oder Synchronisier
 - Probleme mit Berechtigungen
 - (Nur für Katalogsynchronisationen) Der Katalogträger hat keinen Platz mehr
 
-\![Die Seite "Neue Importsynchronisation erstellen" für Databricks im Braze-Dashboard, eingestellt auf Schritt 2: "Synchronisierungsdetails einrichten".]({% image_buster /assets/img/cloud_ingestion/ingestion_12.png %})
+![Die Seite "Neue Importsynchronisation erstellen" für Databricks im Braze-Dashboard, eingestellt auf Schritt 2: "Synchronisierungsdetails einrichten".]({% image_buster /assets/img/cloud_ingestion/ingestion_12.png %})
 
 Sie wählen auch den Datentyp und die Synchronisierungsfrequenz. Die Häufigkeit kann zwischen „alle 15 Minuten“ und „einmal pro Monat“ liegen. Wir verwenden die in Ihrem Braze Dashboard konfigurierte Zeitzone, um die wiederkehrende Synchronisierung zu planen. Unterstützte Datentypen sind „Angepasste Attribute“, „Angepasste Events“, „Kauf-Events“ und „Nutzer-Löschvorgänge“. Der Datentyp für eine Synchronisierung kann nach der Erstellung nicht mehr geändert werden. 
 
@@ -552,7 +552,7 @@ Geben Sie die Informationen für Ihre Microsoft Fabric Warehouse-Zugangsdaten un
 - „Zugangsdaten-Name“ ist eine Bezeichnung für diese Zugangsdaten in Braze, Sie können hier einen hilfreichen Wert festlegen
 - Einzelheiten zum Abrufen von Mandanten-ID, Haupt-ID, Client-Geheimschlüssel und Verbindungs-String finden Sie in Abschnitt 1.
 
-\![Die Seite "Neue Importsynchronisation erstellen" für Microsoft im Braze-Dashboard, eingestellt auf Schritt 1: "Verbindung einrichten".]({% image_buster /assets/img/cloud_ingestion/fabric_setup_1.png %})
+![Die Seite "Neue Importsynchronisation erstellen" für Microsoft im Braze-Dashboard, eingestellt auf Schritt 1: "Verbindung einrichten".]({% image_buster /assets/img/cloud_ingestion/fabric_setup_1.png %})
 
 #### Schritt 2.3: Synchronisierungsdetails konfigurieren
 
@@ -563,7 +563,7 @@ Als nächstes konfigurieren Sie die folgenden Details für Ihre Synchronisierung
 - Synchronisierungshäufigkeit - Die Häufigkeit kann zwischen alle 15 Minuten und einmal pro Monat liegen. Wir verwenden die in Ihrem Braze Dashboard konfigurierte Zeitzone, um die wiederkehrende Synchronisierung zu planen. 
   - Nicht wiederkehrende Synchronisierungen können manuell oder über die [API]({{site.baseurl}}/api/endpoints/cdi) ausgelöst werden. 
 
-\![Die Seite "Neue Importsynchronisation erstellen" für Microsoft Fabric im Braze-Dashboard, eingestellt auf Schritt 2: "Synchronisierungsdetails einrichten".]({% image_buster /assets/img/cloud_ingestion/fabric_setup_2.png %})
+![Die Seite "Neue Importsynchronisation erstellen" für Microsoft Fabric im Braze-Dashboard, eingestellt auf Schritt 2: "Synchronisierungsdetails einrichten".]({% image_buster /assets/img/cloud_ingestion/fabric_setup_2.png %})
 
 
 #### Schritt 2.4: Benachrichtigungseinstellungen konfigurieren
@@ -579,7 +579,7 @@ Kontakt-E-Mails erhalten standardmäßig nur Benachrichtigungen über globale od
 
 Sie können auch Warnungen für Probleme auf Zeilenebene konfigurieren oder sich bei jeder erfolgreichen Synchronisierung eine Warnung schicken lassen. 
 
-\![Die Seite "Neue Importsynchronisation erstellen" für Microsoft Fabric im Braze-Dashboard, eingestellt auf Schritt 3: "Benachrichtigungseinstellungen einrichten".]({% image_buster /assets/img/cloud_ingestion/fabric_setup_3.png %})
+![Die Seite "Neue Importsynchronisation erstellen" für Microsoft Fabric im Braze-Dashboard, eingestellt auf Schritt 3: "Benachrichtigungseinstellungen einrichten".]({% image_buster /assets/img/cloud_ingestion/fabric_setup_3.png %})
 
 
 {% endtab %}
@@ -593,7 +593,7 @@ Sie können auch Warnungen für Probleme auf Zeilenebene konfigurieren oder sich
 
 Kehren Sie zum Braze-Dashboard zurück und wählen Sie **Verbindung testen**. Wenn Sie erfolgreich sind, sehen Sie eine Vorschau der Daten. Wenn wir aus irgendeinem Grund keine Verbindung herstellen können, zeigen wir eine Fehlermeldung an, um Ihnen bei der Fehlersuche zu helfen.
 
-\![Die Seite "Neue Importsynchronisation erstellen" für Snowflake im Braze-Dashboard mit Schritt 3: "Testverbindung" mit Anzeige eines öffentlichen RSA-Schlüssels.]({% image_buster /assets/img/cloud_ingestion/ingestion_3.png %})
+![Die Seite "Neue Importsynchronisation erstellen" für Snowflake im Braze-Dashboard mit Schritt 3: "Testverbindung" mit Anzeige eines öffentlichen RSA-Schlüssels.]({% image_buster /assets/img/cloud_ingestion/ingestion_3.png %})
 {% endtab %}
 
 {% tab Redshift %}
@@ -601,13 +601,13 @@ Kehren Sie zum Braze-Dashboard zurück und wählen Sie **Verbindung testen**. We
 {% subtab Public Network %}
 Kehren Sie zum Braze-Dashboard zurück und wählen Sie **Verbindung testen**. Wenn Sie erfolgreich sind, sehen Sie eine Vorschau der Daten. Wenn wir aus irgendeinem Grund keine Verbindung herstellen können, zeigen wir eine Fehlermeldung an, um Ihnen bei der Fehlersuche zu helfen.
 
-\![Die Seite "Neue Importsynchronisation erstellen" für Redshift im Braze-Dashboard, eingestellt auf Schritt 3: "Verbindung testen".]({% image_buster /assets/img/cloud_ingestion/ingestion_8.png %})
+![Die Seite "Neue Importsynchronisation erstellen" für Redshift im Braze-Dashboard, eingestellt auf Schritt 3: "Verbindung testen".]({% image_buster /assets/img/cloud_ingestion/ingestion_8.png %})
 {% endsubtab %}
 
 {% subtab Private Network %}
 Kehren Sie zum Braze-Dashboard zurück und wählen Sie **Verbindung testen**. Wenn Sie erfolgreich sind, sehen Sie eine Vorschau der Daten. Wenn wir aus irgendeinem Grund keine Verbindung herstellen können, zeigen wir eine Fehlermeldung an, um Ihnen bei der Fehlersuche zu helfen.
 
-\![Die Seite "Neue Importsynchronisation erstellen" für Redshift Private Network im Braze-Dashboard, mit Schritt 4: "Testverbindung" mit Anzeige eines öffentlichen RSA-Schlüssels.]({% image_buster /assets/img/cloud_ingestion/ingestion_19.png %})
+![Die Seite "Neue Importsynchronisation erstellen" für Redshift Private Network im Braze-Dashboard, mit Schritt 4: "Testverbindung" mit Anzeige eines öffentlichen RSA-Schlüssels.]({% image_buster /assets/img/cloud_ingestion/ingestion_19.png %})
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
@@ -616,7 +616,7 @@ Kehren Sie zum Braze-Dashboard zurück und wählen Sie **Verbindung testen**. We
 
 Nachdem Sie alle Konfigurationsdetails für Ihre Synchronisierung eingegeben haben, wählen Sie **Verbindung testen**. Wenn Sie erfolgreich sind, sehen Sie eine Vorschau der Daten. Wenn wir aus irgendeinem Grund keine Verbindung herstellen können, zeigen wir eine Fehlermeldung an, um Ihnen bei der Fehlersuche zu helfen.
 
-\![Die Seite "Neue Importsynchronisation erstellen" für BigQuery im Braze-Dashboard, eingestellt auf Schritt 3: "Verbindung testen".]({% image_buster /assets/img/cloud_ingestion/ingestion_13.png %})
+![Die Seite "Neue Importsynchronisation erstellen" für BigQuery im Braze-Dashboard, eingestellt auf Schritt 3: "Verbindung testen".]({% image_buster /assets/img/cloud_ingestion/ingestion_13.png %})
 
 {% endtab %}
 
@@ -624,14 +624,14 @@ Nachdem Sie alle Konfigurationsdetails für Ihre Synchronisierung eingegeben hab
 
 Nachdem Sie alle Konfigurationsdetails für Ihre Synchronisierung eingegeben haben, wählen Sie **Verbindung testen**. Wenn Sie erfolgreich sind, sehen Sie eine Vorschau der Daten. Wenn wir aus irgendeinem Grund keine Verbindung herstellen können, zeigen wir eine Fehlermeldung an, um Ihnen bei der Fehlersuche zu helfen.
 
-\![Die Seite "Neue Importsynchronisation erstellen" für Databricks im Braze-Dashboard, eingestellt auf Schritt 3: "Verbindung testen".]({% image_buster /assets/img/cloud_ingestion/ingestion_13.png %})
+![Die Seite "Neue Importsynchronisation erstellen" für Databricks im Braze-Dashboard, eingestellt auf Schritt 3: "Verbindung testen".]({% image_buster /assets/img/cloud_ingestion/ingestion_13.png %})
 
 {% endtab %}
 {% tab Microsoft Fabric %}
 
 Nachdem Sie alle Konfigurationsdetails für Ihre Synchronisierung eingegeben haben, wählen Sie **Verbindung testen**. Wenn Sie erfolgreich sind, sehen Sie eine Vorschau der Daten. Wenn wir aus irgendeinem Grund keine Verbindung herstellen können, zeigen wir eine Fehlermeldung an, um Ihnen bei der Fehlersuche zu helfen.
 
-\![Die Seite "Neue Importsynchronisation erstellen" für Microsoft Fabric im Braze-Dashboard, eingestellt auf Schritt 4: "Verbindung testen".]({% image_buster /assets/img/cloud_ingestion/fabric_setup_4.png %})
+![Die Seite "Neue Importsynchronisation erstellen" für Microsoft Fabric im Braze-Dashboard, eingestellt auf Schritt 4: "Verbindung testen".]({% image_buster /assets/img/cloud_ingestion/fabric_setup_4.png %})
 
 {% endtab %}
 {% endtabs %}
@@ -646,14 +646,14 @@ Sie müssen eine Integration erfolgreich testen, bevor sie vom Entwurfsstatus in
 {% tab Snowflake %}
 Sie können mehrere Integrationen mit Braze einrichten, aber jede Integration sollte so konfiguriert werden, dass eine andere Tabelle synchronisiert wird. Wenn Sie zusätzliche Synchronisierungen erstellen, können Sie die vorhandenen Anmeldedaten wiederverwenden, wenn Sie sich mit dem Snowflake-Konto verbinden.
 
-\![Die Seite "Neue Importsynchronisation erstellen" für Snowflake im Braze-Dashboard, mit dem in Schritt 1 geöffneten Dropdown "Zugangsdaten auswählen": "Verbindung einrichten".]({% image_buster /assets/img/cloud_ingestion/ingestion_4.png %})
+![Die Seite "Neue Importsynchronisation erstellen" für Snowflake im Braze-Dashboard, mit dem in Schritt 1 geöffneten Dropdown "Zugangsdaten auswählen": "Verbindung einrichten".]({% image_buster /assets/img/cloud_ingestion/ingestion_4.png %})
 
 Wenn Sie denselben Benutzer und dieselbe Rolle bei verschiedenen Integrationen wiederverwenden, müssen Sie den öffentlichen Schlüssel **nicht** erneut hinzufügen.
 {% endtab %}
 {% tab Redshift %}
 Sie können mehrere Integrationen mit Braze einrichten, aber jede Integration sollte so konfiguriert werden, dass eine andere Tabelle synchronisiert wird. Wenn Sie zusätzliche Synchronisierungen erstellen, können Sie die vorhandenen Anmeldeinformationen wiederverwenden, wenn Sie sich mit demselben Snowflake- oder Redshift-Konto verbinden.
 
-\![Die Seite "Neue Importsynchronisation erstellen" für Redshift im Braze-Dashboard, mit dem in Schritt 1 geöffneten Dropdown "Zugangsdaten auswählen": "Verbindung einrichten".]({% image_buster /assets/img/cloud_ingestion/ingestion_9.png %})
+![Die Seite "Neue Importsynchronisation erstellen" für Redshift im Braze-Dashboard, mit dem in Schritt 1 geöffneten Dropdown "Zugangsdaten auswählen": "Verbindung einrichten".]({% image_buster /assets/img/cloud_ingestion/ingestion_9.png %})
 
 Wenn Sie denselben Nutzer:in verschiedenen Integrationen wiederverwenden, können Sie den Nutzer:in im Braze-Dashboard erst löschen, wenn er aus allen aktiven Synchronisierungen entfernt wurde.
 {% endtab %}
@@ -661,7 +661,7 @@ Wenn Sie denselben Nutzer:in verschiedenen Integrationen wiederverwenden, könne
 
 Sie können mehrere Integrationen mit Braze einrichten, aber jede Integration sollte so konfiguriert werden, dass eine andere Tabelle synchronisiert wird. Wenn Sie zusätzliche Synchronisierungen erstellen, können Sie die vorhandenen Anmeldeinformationen wiederverwenden, wenn Sie sich mit demselben BigQuery-Konto verbinden.
 
-\![Die Seite "Neue Importsynchronisation erstellen" für BigQuery im Braze-Dashboard, mit dem in Schritt 1 geöffneten Dropdown "Zugangsdaten auswählen": "Verbindung einrichten".]({% image_buster /assets/img/cloud_ingestion/ingestion_14.png %})
+![Die Seite "Neue Importsynchronisation erstellen" für BigQuery im Braze-Dashboard, mit dem in Schritt 1 geöffneten Dropdown "Zugangsdaten auswählen": "Verbindung einrichten".]({% image_buster /assets/img/cloud_ingestion/ingestion_14.png %})
 
 Wenn Sie denselben Nutzer:in verschiedenen Integrationen wiederverwenden, können Sie den Nutzer:in im Braze-Dashboard erst löschen, wenn er aus allen aktiven Synchronisierungen entfernt wurde.
 
@@ -670,7 +670,7 @@ Wenn Sie denselben Nutzer:in verschiedenen Integrationen wiederverwenden, könne
 
 Sie können mehrere Integrationen mit Braze einrichten, aber jede Integration sollte so konfiguriert werden, dass eine andere Tabelle synchronisiert wird. Bei der Erstellung zusätzlicher Synchronisierungen können Sie vorhandene Zugangsdaten wiederverwenden, wenn Sie sich mit demselben Databricks-Konto verbinden.
 
-\![Die Seite "Neue Importsynchronisation erstellen" für Databricks im Braze-Dashboard, mit der in Schritt 1 geöffneten Dropdown-Liste "Zugangsdaten auswählen": "Verbindung einrichten".]({% image_buster /assets/img/cloud_ingestion/ingestion_17.png %})
+![Die Seite "Neue Importsynchronisation erstellen" für Databricks im Braze-Dashboard, mit der in Schritt 1 geöffneten Dropdown-Liste "Zugangsdaten auswählen": "Verbindung einrichten".]({% image_buster /assets/img/cloud_ingestion/ingestion_17.png %})
 
 Wenn Sie denselben Nutzer:in verschiedenen Integrationen wiederverwenden, können Sie den Nutzer:in im Braze-Dashboard erst löschen, wenn er aus allen aktiven Synchronisierungen entfernt wurde.
 
@@ -690,27 +690,27 @@ Wenn Sie denselben Nutzer:in verschiedenen Integrationen wiederverwenden, könne
 {% tab Snowflake %}
 Wenn diese Funktion aktiviert ist, wird Ihre Synchronisierung nach dem bei der Einrichtung konfigurierten Zeitplan durchgeführt. Wenn Sie die Synchronisierung außerhalb des normalen Testzeitplans durchführen oder die neuesten Daten abrufen möchten, wählen Sie **Jetzt synchronisieren**. Dieser Lauf hat keine Auswirkungen auf regelmäßig geplante zukünftige Synchronisierungen.
 
-\![Die Seite "Datenimport" für Snowflake im Braze-Dashboard zeigt die Option "Jetzt synchronisieren" aus dem vertikalen Ellipsenmenü an.]({% image_buster /assets/img/cloud_ingestion/ingestion_5.png %})
+![Die Seite "Datenimport" für Snowflake im Braze-Dashboard zeigt die Option "Jetzt synchronisieren" aus dem vertikalen Ellipsenmenü an.]({% image_buster /assets/img/cloud_ingestion/ingestion_5.png %})
 
 {% endtab %}
 {% tab Redshift %}
 Wenn diese Funktion aktiviert ist, wird Ihre Synchronisierung nach dem bei der Einrichtung konfigurierten Zeitplan durchgeführt. Wenn Sie die Synchronisierung außerhalb des normalen Testzeitplans durchführen oder die neuesten Daten abrufen möchten, wählen Sie **Jetzt synchronisieren**. Dieser Lauf hat keine Auswirkungen auf regelmäßig geplante zukünftige Synchronisierungen.
 
-\![Die Seite "Datenimport" für Redshift im Braze-Dashboard zeigt die Option "Jetzt synchronisieren" aus dem vertikalen Ellipsenmenü an.]({% image_buster /assets/img/cloud_ingestion/ingestion_10.png %})
+![Die Seite "Datenimport" für Redshift im Braze-Dashboard zeigt die Option "Jetzt synchronisieren" aus dem vertikalen Ellipsenmenü an.]({% image_buster /assets/img/cloud_ingestion/ingestion_10.png %})
 
 {% endtab %}
 {% tab BigQuery %}
 
 Wenn diese Funktion aktiviert ist, wird Ihre Synchronisierung nach dem bei der Einrichtung konfigurierten Zeitplan durchgeführt. Wenn Sie die Synchronisierung außerhalb des normalen Testzeitplans durchführen oder die neuesten Daten abrufen möchten, wählen Sie **Jetzt synchronisieren**. Dieser Lauf hat keine Auswirkungen auf regelmäßig geplante zukünftige Synchronisierungen.
 
-\![Die Seite "Datenimport" für BigQuery im Braze-Dashboard zeigt die Option "Jetzt synchronisieren" aus dem vertikalen Ellipsenmenü an.]({% image_buster /assets/img/cloud_ingestion/ingestion_15.png %})
+![Die Seite "Datenimport" für BigQuery im Braze-Dashboard zeigt die Option "Jetzt synchronisieren" aus dem vertikalen Ellipsenmenü an.]({% image_buster /assets/img/cloud_ingestion/ingestion_15.png %})
 
 {% endtab %}
 {% tab Databricks %}
 
 Wenn diese Funktion aktiviert ist, wird Ihre Synchronisierung nach dem bei der Einrichtung konfigurierten Zeitplan durchgeführt. Wenn Sie die Synchronisierung außerhalb des normalen Testzeitplans durchführen oder die neuesten Daten abrufen möchten, wählen Sie **Jetzt synchronisieren**. Dieser Lauf hat keine Auswirkungen auf regelmäßig geplante zukünftige Synchronisierungen.
 
-\![Die Seite "Datenimport" für Databricks im Braze-Dashboard, die die Option "Jetzt synchronisieren" aus dem vertikalen Ellipsenmenü anzeigt.]({% image_buster /assets/img/cloud_ingestion/ingestion_18.png %})
+![Die Seite "Datenimport" für Databricks im Braze-Dashboard, die die Option "Jetzt synchronisieren" aus dem vertikalen Ellipsenmenü anzeigt.]({% image_buster /assets/img/cloud_ingestion/ingestion_18.png %})
 
 {% endtab %}
 {% tab Microsoft Fabric %}

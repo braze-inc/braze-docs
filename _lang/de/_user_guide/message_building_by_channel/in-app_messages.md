@@ -50,7 +50,7 @@ guide_menu_list:
   image: /assets/img/braze_icons/annotation-question.svg
 ---
 
-## [\![Braze Lernkurse]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/messaging-channels-in-app-in-browser){: style="float:right;width:120px;border:0;" class="noimgborder"} Potenzielle Anwendungsfälle
+## [![Braze Lernkurse]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/messaging-channels-in-app-in-browser){: style="float:right;width:120px;border:0;" class="noimgborder"} Potenzielle Anwendungsfälle
 
 Mit dem reichhaltigen Angebot an Content, der In-App-Nachrichten bieten, können Sie diesen Kanal für eine Vielzahl von Anwendungsfällen nutzen:
 
@@ -79,7 +79,7 @@ Die folgenden Registerkarten zeigen, wie es aussieht, wenn Ihre Benutzer eine un
 
 Slide-up-Nachrichten erscheinen normalerweise am oberen und unteren Rand des App-Bildschirms (Sie können dies beim Erstellen Ihrer Nachricht einstellen). Diese sind ideal, um Ihre Benutzer über neue Nutzungsbedingungen, Cookies und andere Informationen zu informieren.
 
-\![Slideup In-App-Nachricht, die am unteren Rand des App-Bildschirms erscheint. Das Slide-Up enthält ein Symbolbild und eine kurze Nachricht.]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
+![Slideup In-App-Nachricht, die am unteren Rand des App-Bildschirms erscheint. Das Slide-Up enthält ein Symbolbild und eine kurze Nachricht.]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
 
 <br>
 
@@ -88,7 +88,7 @@ Slide-up-Nachrichten erscheinen normalerweise am oberen und unteren Rand des App
 
 Modals erscheinen in der Mitte des Bildschirms des Geräts mit einem Overlay, das sie von Ihrer App im Hintergrund abhebt. Sie eignen sich perfekt, um Ihren Nutzern ganz unaufdringlich vorzuschlagen, von einem Verkauf oder einer Werbeaktion zu profitieren.
 
-\![Modale In-App-Nachricht, die in der Mitte einer App und Website als Dialog erscheint. Das Modal enthält ein Bild, eine Kopfzeile, einen Nachrichtentext und zwei Buttons.]({% image_buster /assets/img/modal-behavior.gif %}){: style="border:0px;"}
+![Modale In-App-Nachricht, die in der Mitte einer App und Website als Dialog erscheint. Das Modal enthält ein Bild, eine Kopfzeile, einen Nachrichtentext und zwei Buttons.]({% image_buster /assets/img/modal-behavior.gif %}){: style="border:0px;"}
 
 <br>
 
@@ -97,7 +97,7 @@ Modals erscheinen in der Mitte des Bildschirms des Geräts mit einem Overlay, da
 
 Vollbildnachrichten sind genau das, was Sie erwarten - sie nehmen den gesamten Bildschirm des Geräts ein! Dieser Nachrichtentyp eignet sich hervorragend, wenn Sie die Aufmerksamkeit Ihrer Nutzer wirklich benötigen, z. B. bei obligatorischen App-Updates.
 
-\![In-App-Nachricht im Vollbildmodus, die den Bildschirm einer App einnimmt. Die Nachricht im Vollbildmodus enthält ein großes Bild, eine Kopfzeile, einen Nachrichtentext und zwei Buttons.]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
+![In-App-Nachricht im Vollbildmodus, die den Bildschirm einer App einnimmt. Die Nachricht im Vollbildmodus enthält ein großes Bild, eine Kopfzeile, einen Nachrichtentext und zwei Buttons.]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
 
 <br>
 

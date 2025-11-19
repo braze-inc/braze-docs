@@ -57,7 +57,7 @@ Standardmäßig wird der Tab **Variablen** im Query Builder nicht angezeigt. Sie
 
 Im folgenden Beispiel wird die Kampagne "Summer Feature Launch" als Wert zugewiesen, zusammen mit dem ersten und letzten Tag des Juni 2025.
 
-\![Der Tab "Variable" im Query Builder mit dem angegebenen Beispiel.]({% image_buster /assets/img/query_builder_example.png %})
+![Der Tab "Variable" im Query Builder mit dem angegebenen Beispiel.]({% image_buster /assets/img/query_builder_example.png %})
 
 ## Allgemeine Variablentypen {#variable-types}
 
@@ -131,7 +131,7 @@ is_radio_button: 'true'
 {% endtab %}
 {% endtabs %}
 
-\![Ein Beispiel für einen in Braze gerenderten Radio Button.]({% image_buster /assets/img_archive/sql_variables_campaigns.png %}){: style="max-width:50%;"}
+![Ein Beispiel für einen in Braze gerenderten Radio Button.]({% image_buster /assets/img_archive/sql_variables_campaigns.png %}){: style="max-width:50%;"}
 
 #### Mehrfachauswahl
 
@@ -145,7 +145,7 @@ is_multi_select: 'true'
 {% endtab %}
 {% endtabs %}
 
-\![Ein Beispiel für eine in Braze gerenderte Mehrfachauswahlliste.]({% image_buster /assets/img_archive/sql_variables_productname.png %}){: style="max-width:50%;"}
+![Ein Beispiel für eine in Braze gerenderte Mehrfachauswahlliste.]({% image_buster /assets/img_archive/sql_variables_productname.png %}){: style="max-width:50%;"}
 
 #### Optionen 
 
@@ -187,7 +187,7 @@ Sie können den Datumsbereich auf eine der folgenden Optionen einstellen. Wenn s
 
 Ihr Liquid wird verwendet, um einen Kalender innerhalb des angegebenen Datumsbereichs anzuzeigen:
 
-\![Ein in Braze gerenderter Beispielkalender.]({% image_buster /assets/img_archive/query_builder_time_range.png %}){: style="max-width:50%;"}
+![Ein in Braze gerenderter Beispielkalender.]({% image_buster /assets/img_archive/query_builder_time_range.png %}){: style="max-width:50%;"}
 
 ### Kampagnen
 

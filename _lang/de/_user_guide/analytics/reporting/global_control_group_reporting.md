@@ -18,7 +18,7 @@ Um einen Bericht für Ihre [globale Kontrollgruppe]({{site.baseurl}}/user_guide/
 
 Wählen Sie dann den Parameter aus, mit dem Sie Ihren Bericht ausführen möchten (Sitzungen oder ein bestimmtes angepasstes Event) und wählen Sie **Bericht ausführen**.
 
-\![]({% image_buster /assets/img/control_group/control_group6.png %})
+![]({% image_buster /assets/img/control_group/control_group6.png %})
 
 ## Konfigurieren Ihres Berichts
 

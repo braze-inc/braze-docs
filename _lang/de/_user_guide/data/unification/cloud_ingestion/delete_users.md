@@ -17,7 +17,7 @@ Nutzer:innen-Löschsynchronisationen werden für alle verfügbaren Datenquellen 
 
 Folgen Sie dem Standardverfahren zur [Erstellung einer neuen Integration im Braze-Dashboard]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views) für das Data Warehouse, mit dem Sie sich verbinden möchten. Stellen Sie sicher, dass Sie eine Rolle angeben, die Zugriff auf die Löschtabelle hat. Stellen Sie auf der Seite **Import-Synchronisation erstellen** den **Datentyp** auf **Nutzer:innen löschen** ein, damit während des Integrationslaufs die richtigen Aktionen zum Löschen von Nutzer:innen durchgeführt werden.
 
-\![]({% image_buster /assets/img/cloud_ingestion/deletion_1.png %})
+![]({% image_buster /assets/img/cloud_ingestion/deletion_1.png %})
 
 ## Konfigurieren der Datenquelle
 

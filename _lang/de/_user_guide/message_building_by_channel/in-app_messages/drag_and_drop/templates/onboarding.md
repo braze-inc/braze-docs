@@ -18,7 +18,7 @@ description: "Auf dieser Seite erfahren Sie, wie Sie neue Nutzer:innen willkomme
 
 Wenn Sie eine In-App-Nachricht per Drag-and-Drop erstellen, wählen Sie für Ihr Template den **Onboarding-Fluss** und dann **Nachricht erstellen**. Dieses Template wird sowohl für mobile Apps als auch für Webbrowser unterstützt.
 
-\![Der Editor für In-App-Nachrichten mit dem Onboarding Flow Template.]({% image_buster /assets/img/drag_and_drop/templates/onboarding_editor.png %})
+![Der Editor für In-App-Nachrichten mit dem Onboarding Flow Template.]({% image_buster /assets/img/drag_and_drop/templates/onboarding_editor.png %})
 
 ### Schritt 2: Nachrichtenstile festlegen
 

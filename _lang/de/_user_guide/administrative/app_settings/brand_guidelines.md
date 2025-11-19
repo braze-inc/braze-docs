@@ -36,7 +36,7 @@ Wählen Sie auf der Seite **Markenrichtlinien** die Option **Neu erstellen** aus
 
 Listen Sie unter **Ausschlüsse** alle Sprachen oder Stile auf, die nicht mit Ihrer Marke übereinstimmen. Zum Beispiel sollten Sie „Sarkasmus“, „negative Haltungen“ oder einen „herablassenden“ Sprachstil vermeiden.
 
-\![Das Fenster "Markenrichtlinie erstellen" mit Feldern zur Eingabe des Namens, der Beschreibung, der Persönlichkeit, der Ausschlüsse und des Tons.]({% image_buster /assets/img/guidelines_create.png %})
+![Das Fenster "Markenrichtlinie erstellen" mit Feldern zur Eingabe des Namens, der Beschreibung, der Persönlichkeit, der Ausschlüsse und des Tons.]({% image_buster /assets/img/guidelines_create.png %})
 
 ### Schritt 4: Richtlinien testen
 
@@ -54,12 +54,12 @@ Sie können die Ausgabesprache ändern, unabhängig davon, in welcher Sprache Ih
 
 Sie können Markenrichtlinien bearbeiten, indem Sie sie auf der Seite **Markenrichtlinien** auswählen. Archivieren Sie eine Markenrichtlinie, um sie inaktiv zu machen und sie aus dem KI-Texterstellungsassistenten zu entfernen. Um sie wieder aktiv und auswählbar zu machen, können Sie nach archivierten Markenrichtlinien filtern und dann die Archivierung aufheben.
 
-\![Die Seite "Markenrichtlinien" wurde nach archivierten Markenrichtlinien gefiltert.]({% image_buster /assets/img/unarchive_brand_guideline.png %})
+![Die Seite "Markenrichtlinien" wurde nach archivierten Markenrichtlinien gefiltert.]({% image_buster /assets/img/unarchive_brand_guideline.png %})
 
 ## Verwendung von Markenrichtlinien
 
 Wenn Sie eine Nachricht verfassen, öffnen Sie den [KI-Texter-Assistenten]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/) und wählen Sie Ihre Markenrichtlinien im Dropdown-Menü **Markenrichtlinien anwenden** aus. Wenn Sie eine bestimmte Markenrichtlinie als Standard festlegen, wird diese automatisch in der Dropdown-Liste ausgewählt, aber Sie können auch eine andere Richtlinie wählen. 
 
-\!["KI-Textwerkstatt-Assistent mit "Important Alerts!!" als Markenleitlinie ausgewählt.]({% image_buster /assets/img/guidelines_ai_assistant.png %})
+!["KI-Textwerkstatt-Assistent mit "Important Alerts!!" als Markenleitlinie ausgewählt.]({% image_buster /assets/img/guidelines_ai_assistant.png %})
 
 {% multi_lang_include brazeai/generative_ai/policy.md %}

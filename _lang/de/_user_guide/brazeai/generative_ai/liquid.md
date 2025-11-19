@@ -32,7 +32,7 @@ Der Assistent arbeitet mit E-Mail Nachrichten und nicht mit Templates. Es funkti
 
 Um den BrazeAI<sup>TM</sup> Liquid Assistant zu starten, wählen Sie das KI-Assistenten-Symbol im Nachrichten-Editor.
 
-\![Nachrichten-Editor mit dem KI-Assistenten.]({% image_buster /assets/img/ai_liquid/ai_assistant_icon.png %}){: style="max-width:50%;"}
+![Nachrichten-Editor mit dem KI-Assistenten.]({% image_buster /assets/img/ai_liquid/ai_assistant_icon.png %}){: style="max-width:50%;"}
 
 Sie können einen der mitgelieferten Prompts auswählen oder Ihre eigenen in das Textfeld eingeben.
 
@@ -40,31 +40,31 @@ Sie können einen der mitgelieferten Prompts auswählen oder Ihre eigenen in das
 {% tab use app activity %}
 Die Aufforderung zur **Verwendung der App-Aktivität** generiert einen Flüssigkeitscode, mit dem Sie verschiedene Nachrichten senden können, je nachdem, wann Ihre App zuletzt verwendet wurde. Möglicherweise werden Ihnen auch Anschlussfragen gestellt, damit der Assistent ein besseres Ergebnis ermitteln kann.
 
-\![Beispiel für die Ausgabe der Aufforderung "App-Aktivität verwenden".]({% image_buster /assets/img/ai_liquid/use_app_activity.png %}){: style="max-width:45%;"}
+![Beispiel für die Ausgabe der Aufforderung "App-Aktivität verwenden".]({% image_buster /assets/img/ai_liquid/use_app_activity.png %}){: style="max-width:45%;"}
 {% endtab %}
 
 {% tab add countdown %}
 Dieser Prompt generiert Liquid-Code, der eine Nachricht mit der verbleibenden Zeitspanne bis zum Ereignis versendet. Sie werden aufgefordert, Angaben zu Datum und Uhrzeit des Ereignisses zu machen.
 
-\![Beispiel für die Ausgabe der Aufforderung "Countdown hinzufügen".]({% image_buster /assets/img/ai_liquid/add_countdown.png %}){: style="max-width:45%;"}
+![Beispiel für die Ausgabe der Aufforderung "Countdown hinzufügen".]({% image_buster /assets/img/ai_liquid/add_countdown.png %}){: style="max-width:45%;"}
 {% endtab %}
 
 {% tab inspire me %}
 Diese Eingabeaufforderung erscheint, wenn Ihr Nachrichtenfeld einen Inhalt enthält. Nun wird eine Liste mit Optionen generiert, mit denen Sie Ihre Nachricht mit Liquid personalisieren können. 
 
-\![Beispiel für die Ausgabe der Eingabeaufforderung "Inspire me".]({% image_buster /assets/img/ai_liquid/inspire_me.png %}){: style="max-width:45%;"}
+![Beispiel für die Ausgabe der Eingabeaufforderung "Inspire me".]({% image_buster /assets/img/ai_liquid/inspire_me.png %}){: style="max-width:45%;"}
 {% endtab %}
 
 {% tab improve my liquid %}
 Diese Eingabeaufforderung erscheint, wenn Ihr Nachrichten-Editor Inhalt enthält. Wählen Sie diese Option, wenn Sie möchten, dass der Assistent Ihren Code effizienter und leichter zu lesen macht.
 
-\![Beispiel für die Ausgabe der Aufforderung "Verbessern Sie mein Liquid".]({% image_buster /assets/img/ai_liquid/improve_my_liquid.png %}){: style="max-width:45%;"}
+![Beispiel für die Ausgabe der Aufforderung "Verbessern Sie mein Liquid".]({% image_buster /assets/img/ai_liquid/improve_my_liquid.png %}){: style="max-width:45%;"}
 {% endtab %}
 {% endtabs %}
 
 Um Ihren Liquid-Code zu generieren, wählen Sie **Editor aktualisieren**.
 
-\![KI-Assistenten-Fenster mit bereitgestellten Eingabeaufforderungen.]({% image_buster /assets/img/ai_liquid/ai_assistant_window.png %}){: style="max-width:50%;"}
+![KI-Assistenten-Fenster mit bereitgestellten Eingabeaufforderungen.]({% image_buster /assets/img/ai_liquid/ai_assistant_window.png %}){: style="max-width:50%;"}
  
 Sie können eine weitere Nachricht mit demselben Prompt erstellen, indem Sie auf **Neu generieren** gehen. Um die Nachricht zu entfernen und zur vorherigen Nachricht zurückzukehren, wählen Sie **Aktualisierung rückgängig machen**.
 

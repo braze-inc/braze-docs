@@ -18,13 +18,13 @@ tool:
 
 Die Seite **Segmente** Ihres Braze-Dashboards enthält eine Zusammenfassung aller Ihrer Segmente und erlaubt es Ihnen, detaillierte Daten für jedes einzelne Segment zu prüfen. Suchen Sie auf dieser Seite nach einem Segment und wählen Sie den Namen des Segments aus, um dessen Daten zu bearbeiten und anzuzeigen. Wie Sie ein Segment erstellen können, erfahren Sie unter [Erstellen eines Segments]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment).
 
-\![Segmente Seite]({% image_buster /assets/img_archive/segments.png %})
+![Segmente Seite]({% image_buster /assets/img_archive/segments.png %})
 
 Nachdem Sie den Namen eines Segments ausgewählt haben, können Sie Segmentstatistiken und Filter anzeigen und das Segment bearbeiten, indem Sie Filter hinzufügen oder löschen. Achten Sie darauf, alle Änderungen zu speichern!
 
 Wenn Sie das [Analytics Tracking für ein Segment]({{site.baseurl}}/user_guide/analytics/tracking/segment_analytics_tracking/) einschalten, können Sie Sitzungen, angepasste Events und Umsätze im Zeitverlauf für dieses Segment einsehen.
 
-\![Analytics Tracking für ein Segment umschalten]({% image_buster /assets/img_archive/A_Tracking_2.png %})
+![Analytics Tracking für ein Segment umschalten]({% image_buster /assets/img_archive/A_Tracking_2.png %})
 
 ### Segmente Statistik
 
@@ -88,7 +88,7 @@ Auf dieser Seite können Sie eine Reihe von angepassten Attributen einsehen, z.�
 
 Beachten Sie, dass es in Fällen, in denen Ihr Segment im Verhältnis zur Größe Ihres Workspace sehr klein ist, möglich ist, dass die Vorschau keine Nutzer:innen anzeigt. Dies bedeutet nicht zwangsläufig, dass sich in Ihrem Segment keine Nutzer:innen befinden. Führen Sie [Exakte Statistik berechnen]({{site.baseurl}}/user_guide/engagement_tools/segments/measuring_segment_size/#statistics-for-segment-size) aus, um die genaue Größe Ihres Segments zu ermitteln.
 
-\![Nutzer:in Vorschau]({% image_buster /assets/img_archive/user_preview.png %})
+![Nutzer:in Vorschau]({% image_buster /assets/img_archive/user_preview.png %})
 
 ## Anzeigen von Performance-Daten nach Segmenten
 

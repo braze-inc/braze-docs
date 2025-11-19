@@ -18,7 +18,7 @@ Um Braze Pilot nutzen zu können, müssen Sie zunächst die App entweder aus dem
 
 Akzeptieren Sie dann die Allgemeinen Geschäftsbedingungen und geben Sie Ihre E-Mail in das Formular ein. Ihre E-Mail wird nur für Analytics der App-Nutzung und nicht für Marketingzwecke verwendet.
 
-\![Braze Pilot Willkommensseite.]({% image_buster /assets/img/braze_pilot/pilot_welcome.png %}){:style="max-width:30%"}\![Option zur Eingabe Ihrer beruflichen E-Mail Adresse.]({% image_buster /assets/img/braze_pilot/pilot_signin.png %}){:style="max-width:30%"}
+![Braze Pilot Willkommensseite.]({% image_buster /assets/img/braze_pilot/pilot_welcome.png %}){:style="max-width:30%"}![Option zur Eingabe Ihrer beruflichen E-Mail Adresse.]({% image_buster /assets/img/braze_pilot/pilot_signin.png %}){:style="max-width:30%"}
 
 ## Schritt 3: Initialisieren Sie die Verbindung mit dem Braze SDK
 
@@ -35,7 +35,7 @@ Scannen Sie einen QR Code, der alle Details enthält, die zur Initialisierung de
 
 | Pilot für Android | Pilot für iOS |
 | --- | --- |
-| \![QR-Code für Android.]({% image_buster /assets/img/braze_pilot/android_qr_code.png %}){:style="max-width:60%"} | \![QR-Code für iOS.]({% image_buster /assets/img/braze_pilot/ios_qr_code.png %}){:style="max-width:60%"} |
+| ![QR-Code für Android.]({% image_buster /assets/img/braze_pilot/android_qr_code.png %}){:style="max-width:60%"} | ![QR-Code für iOS.]({% image_buster /assets/img/braze_pilot/ios_qr_code.png %}){:style="max-width:60%"} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
@@ -45,11 +45,11 @@ Scannen Sie einen QR Code, der alle Details enthält, die zur Initialisierung de
 
 Folgen Sie der Schritt-für-Schritt-Anleitung für die Initialisierung der Verbindung mit Ihrem Dashboard Workspace auf der Seite **App-Einstellungen** in Ihrem Braze-Dashboard.
 
-\![Schritt 1 des Einrichtungsassistenten für Braze Pilot.]({% image_buster /assets/img/braze_pilot/setup_wizard.png %}){:style="max-width:40%"}
+![Schritt 1 des Einrichtungsassistenten für Braze Pilot.]({% image_buster /assets/img/braze_pilot/setup_wizard.png %}){:style="max-width:40%"}
 
 Diese Verbindung ist workspace-spezifisch. Das bedeutet, dass Sie, wenn Sie die Verbindung vom Demo Workspace aus initialisieren und dann zum Live Workspace in Ihrem kostenlosen Demo Dashboard wechseln, das SDK von diesem Workspace aus neu initialisieren müssen, um alle dort gestarteten Kampagnen zu empfangen.
 
-\![Das Workspace-Dropdown im Braze-Dashboard, wobei "Demo - Braze" als aktiver Workspace ausgewählt ist.]({% image_buster /assets/img/braze_pilot/dashboard_workspace.png %}){:style="max-width:60%"}
+![Das Workspace-Dropdown im Braze-Dashboard, wobei "Demo - Braze" als aktiver Workspace ausgewählt ist.]({% image_buster /assets/img/braze_pilot/dashboard_workspace.png %}){:style="max-width:60%"}
 
 {% endtab %}
 {% endtabs %}

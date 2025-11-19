@@ -38,7 +38,7 @@ Um Ihr Banner zu verfassen, können Sie Folgendes wählen:
 - Verwenden Sie eine Braze-Banner-Vorlage
 - Eine gespeicherte Banner-Vorlage auswählen
 
-\![Option zur Auswahl eines leeren Banners oder eines Templates.]({% image_buster /assets/img/banners/choose_banner_composer.png %})
+![Option zur Auswahl eines leeren Banners oder eines Templates.]({% image_buster /assets/img/banners/choose_banner_composer.png %})
 
 #### Schritt 3.1: Gestalten Sie das Banner
 
@@ -46,7 +46,7 @@ Sie können Blöcke und Zeilen per Drag-and-Drop in den Canvas-Bereich ziehen, u
 
 Um die Eigenschaften des Hintergrunds Ihrer Nachricht, die Einstellungen für den Rahmen und mehr anzupassen, wählen Sie **Stile**. Wenn Sie nur den Stil für einen bestimmten Block oder eine bestimmte Zeile anpassen möchten, wählen Sie ihn aus, um Änderungen vorzunehmen.
 
-\![Style Panel des Banner Composers.]({% image_buster /assets/img/banners/banner_card_styles.png %})
+![Style Panel des Banner Composers.]({% image_buster /assets/img/banners/banner_card_styles.png %})
 
 #### Schritt 3.2: Definieren Sie das Verhalten bei einem Klick (optional)
 
@@ -68,7 +68,7 @@ Sie können einem Banner angepasste Eigenschaften hinzufügen, um strukturierte 
 
 Um eine angepasste Eigenschaft hinzuzufügen, wählen Sie **Einstellungen** > **Eigenschaften** > **Eigenschaft hinzufügen**.
 
-\![Die Eigenschaftsseite mit der Option, die erste angepasste Eigenschaft zu einer Banner Kampagne hinzuzufügen.]({% image_buster /assets/img/banners/add_property.png %})
+![Die Eigenschaftsseite mit der Option, die erste angepasste Eigenschaft zu einer Banner Kampagne hinzuzufügen.]({% image_buster /assets/img/banners/add_property.png %})
 
 Füllen Sie für jede Eigenschaft, die Sie hinzufügen möchten, die folgenden Felder aus:
 
@@ -81,7 +81,7 @@ Füllen Sie für jede Eigenschaft, die Sie hinzufügen möchten, die folgenden F
 
 Wenn Sie fertig sind, wählen Sie **Fertig**.
 
-\![Die Eigenschaftsseite mit einer String-Eigenschaft mit einem Schlüssel von color und einem Wert von #FF0000.]({% image_buster /assets/img/banners/example_property.png %})
+![Die Eigenschaftsseite mit einer String-Eigenschaft mit einem Schlüssel von color und einem Wert von #FF0000.]({% image_buster /assets/img/banners/example_property.png %})
 
 ### Schritt 4: Dauer der Kampagne festlegen
 

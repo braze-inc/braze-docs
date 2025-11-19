@@ -37,7 +37,7 @@ Transaktions-E-Mails unterscheiden sich von Transaktionskampagnen, mit denen Sie
 
 Um eine neue Transaktions-E-Mail-Kampagne zu erstellen, erstellen Sie eine Kampagne und wählen Sie **Transaktions-E-Mail** als Nachrichtenkanal.
 
-\![Dropdown-Menü Kampagne erstellen mit der hervorgehobenen Option für Transaktions-E-Mails.]({% image_buster /assets/img/transactional_email_campaign.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
+![Dropdown-Menü Kampagne erstellen mit der hervorgehobenen Option für Transaktions-E-Mails.]({% image_buster /assets/img/transactional_email_campaign.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
 Jetzt können Sie mit der Konfiguration Ihrer transaktionalen E-Mail-Kampagne fortfahren.
 
@@ -51,7 +51,7 @@ Daher werden Sie feststellen, dass einige Einstellungen, die Sie vielleicht von 
 - Der Schritt **Targeting Zielgruppen** wurde entfernt. Da Transaktions-E-Mails Ihre gesamte Nutzerbasis als berechtigt registrieren (einschließlich abgemeldeter Nutzer:innen), müssen Sie keine Filter oder Segmente festlegen. Wenn Sie also eine Logik dafür haben, wer diese Nachricht erhalten soll, empfehlen wir Ihnen, diese Logik anzuwenden, bevor Sie entscheiden, ob Sie die API-Anfrage an Braze stellen, um die Nachricht an einen bestimmten Nutzer:innen auszulösen.
 - Der Schritt **Conversions** wurde entfernt. Transaktions-E-Mails unterstützen zur Zeit kein Tracking von Konversions-Events.
 
-\![Workflow zum Verfassen, Zustellen und Bestätigen einer Kampagne für Transaktions-E-Mails.]({% image_buster /assets/img/transactional_campaign_compose.png %}){: style="max-width:80%;"}
+![Workflow zum Verfassen, Zustellen und Bestätigen einer Kampagne für Transaktions-E-Mails.]({% image_buster /assets/img/transactional_campaign_compose.png %}){: style="max-width:80%;"}
 
 Um Ihre Transaktions-E-Mail-Kampagne zu konfigurieren, gehen Sie folgendermaßen vor:
 

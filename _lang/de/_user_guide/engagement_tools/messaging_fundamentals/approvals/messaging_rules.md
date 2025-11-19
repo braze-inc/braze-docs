@@ -54,7 +54,7 @@ Sie können bis zu fünf Messaging-Regeln erstellen.
 5. Geben Sie eine Zahl für **maximal erreichbare Nutzer:innen** ein. Weitere Informationen finden Sie unter [Statistiken zur Zielgruppe]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users#audience-statistics).
 6. Wählen Sie **Speichern**.
 
-\![Eine beispielhafte Messaging-Regel "Regel 1" für Kampagnen mit maximal 100.000 Nutzer:innen. Es gibt einen Nutzer:innen, der das Canvas und die zu startende Kampagne genehmigen kann.]({% image_buster /assets/img/target_population_approval_example.png %}){: style="max-width:90%;"}
+![Eine beispielhafte Messaging-Regel "Regel 1" für Kampagnen mit maximal 100.000 Nutzer:innen. Es gibt einen Nutzer:innen, der das Canvas und die zu startende Kampagne genehmigen kann.]({% image_buster /assets/img/target_population_approval_example.png %}){: style="max-width:90%;"}
 
 ### Schritt 2: Start mit Genehmigung festlegen (optional)
 
@@ -65,7 +65,7 @@ Beachten Sie die folgenden Details zum Starten von Nachrichten mit Genehmigung:
 - Wenn das Maximum erreicht ist und ein Genehmigender ausgewählt wurde, kann der Nutzer:innen mit der Genehmigungsberechtigung aus dem Dropdown-Menü **Target Audience** **Approved** auswählen.
 - Wenn das Maximum erreicht ist und eine Genehmigung nicht ausgewählt wurde, wird der Start des Canvas oder der Kampagne verhindert.
 
-\![Der Schritt "Zusammenfassung" des Canvas-Workflows, der anzeigt, dass Sie eine Genehmigung zum Starten benötigen.]({% image_buster /assets/img/non_approver_banner.png %}){: style="max-width:90%;"}
+![Der Schritt "Zusammenfassung" des Canvas-Workflows, der anzeigt, dass Sie eine Genehmigung zum Starten benötigen.]({% image_buster /assets/img/non_approver_banner.png %}){: style="max-width:90%;"}
 
 ## Häufig gestellte Fragen
 

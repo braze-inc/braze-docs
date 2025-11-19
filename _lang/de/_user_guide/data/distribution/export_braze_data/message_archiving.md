@@ -61,7 +61,7 @@ So wählen Sie Kanäle aus:
 2. Wählen Sie Ihre Kanäle aus.
 3. Wählen Sie **Änderungen speichern**.
 
-\![Auf der Seite Archivierung von Nachrichten können Sie drei Kanäle auswählen: E-Mail, Push und SMS.]({% image_buster /assets/img/message_archiving_settings.png %})
+![Auf der Seite Archivierung von Nachrichten können Sie drei Kanäle auswählen: E-Mail, Push und SMS.]({% image_buster /assets/img/message_archiving_settings.png %})
 
 {% alert note %}
 Wenn Sie die **Nachrichtenarchivierung** in den **Einstellungen** nicht sehen, vergewissern Sie sich, dass Ihr Unternehmen die Nachrichtenarchivierung erworben und aktiviert hat.
@@ -104,7 +104,7 @@ Nachfolgend finden Sie Referenzen für die JSON-Nutzdaten, die Ihrem Cloud Stora
 
 Das Feld `extras`, auf das in dieser Nutzlast verwiesen wird, stammt aus den Schlüssel-Wert-Paaren, die beim Verfassen einer E-Mail in das Feld **E-Mail Extras** eingefügt werden. Wie Sie Daten an Currents zurücksenden, erfahren Sie unter [Extras für Nachrichten]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/message_extras/).
 
-\![]({% image_buster /assets/img_archive/email_extras.png %}){: style="max-width:60%" }
+![]({% image_buster /assets/img_archive/email_extras.png %}){: style="max-width:60%" }
 
 {% endtab %}
 {% tab SMS/MMS %}

@@ -87,7 +87,7 @@ Diese Schritte sind der Dokumentation für Entwickler:in von Apple entnommen. We
 2. Wählen Sie **Assoziierte Domains** aus.
 3. Klicken Sie auf **Speichern**.
 
-\![]({% image_buster /assets/img_archive/universal_links_1b.png %}){: style="max-width:75%;"}
+![]({% image_buster /assets/img_archive/universal_links_1b.png %}){: style="max-width:75%;"}
 
 #### Schritt 1c: Aktivieren Sie Assoziierte Domains in Ihrem Xcode-Projekt {#step-1c}
 
@@ -107,7 +107,7 @@ Wenn Sie die Fehlermeldung "Eine App ID mit dem Bezeichner 'your-app-id' ist nic
 
 Fügen Sie im Bereich Domains den entsprechenden Tag für die Domain hinzu. Sie müssen das Präfix `applinks:` verwenden. In diesem Fall können Sie sehen, dass wir `applinks:yourdomain.com` hinzugefügt haben.
 
-\![]({% image_buster /assets/img_archive/universal_links_1d.png %})
+![]({% image_buster /assets/img_archive/universal_links_1d.png %})
 
 #### Schritt 1e: Vergewissern Sie sich, dass die Datei mit den Berechtigungen im Build enthalten ist
 
@@ -311,7 +311,7 @@ Wählen Sie für das angepasste Attribut Folgendes aus:
 - **Name:** `data-msys-clicktrack`
 - **Wert:** `0`
 
-\![Ein angepasstes Attribut für einen Textlink.]({% image_buster /assets/img/text_click_tracking_off.png %}){: style="max-width:60%;"}
+![Ein angepasstes Attribut für einen Textlink.]({% image_buster /assets/img/text_click_tracking_off.png %}){: style="max-width:60%;"}
 
 ##### Angepasstes Attribut für einen Button oder ein Bild
 
@@ -331,7 +331,7 @@ Wählen Sie für das angepasste Attribut Folgendes aus:
 - **Wert:** `0`
 - **Typ:** Link
 
-\![Ein angepasstes Attribut für einen Button.]({% image_buster /assets/img/button_click_tracking_off.png %}){: style="max-width:60%;"}
+![Ein angepasstes Attribut für einen Button.]({% image_buster /assets/img/button_click_tracking_off.png %}){: style="max-width:60%;"}
 
 ### Fehlerbehebung bei universellen Links mit Click-Tracking
 

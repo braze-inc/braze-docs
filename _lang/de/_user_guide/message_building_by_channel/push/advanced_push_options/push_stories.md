@@ -15,7 +15,7 @@ channel:
 
 | Android Beispiel (Erweitert) | IOS Beispiel (Erweitert) |
 | :-----: | :----------: |
-| \![]({% image_buster /assets/img_archive/pushstories_android_preview.png %}) | \![]({% image_buster /assets/img_archive/pushstories_ios_preview.png %}) |
+| ![]({% image_buster /assets/img_archive/pushstories_android_preview.png %}) | ![]({% image_buster /assets/img_archive/pushstories_ios_preview.png %}) |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
@@ -31,7 +31,7 @@ Die folgenden SDK-Versionen sind für den Empfang von Push Stories erforderlich:
 
 ## Wie Sie Push Stories verwenden
 
-\![]({% image_buster /assets/img_archive/pushstories_composer_dropdown2.png %}){: style="float:right;max-width:50%;margin-left:15px;margin-bottom:15px;"}
+![]({% image_buster /assets/img_archive/pushstories_composer_dropdown2.png %}){: style="float:right;max-width:50%;margin-left:15px;margin-bottom:15px;"}
 
 Um Push-Storys zu verwenden, gehen Sie wie folgt vor:
 
@@ -44,13 +44,13 @@ Um Push-Storys zu verwenden, gehen Sie wie folgt vor:
 Um eine Seite zu erstellen, führen Sie die folgenden Schritte aus:
 
 1. Klicken Sie im Hauptcomposer auf **Seiten verwalten**.
-    <br><br>\![]({% image_buster /assets/img_archive/pushstories_add_pages.png %}){: style="max-width:70%"}<br><br>
+    <br><br>![]({% image_buster /assets/img_archive/pushstories_add_pages.png %}){: style="max-width:70%"}<br><br>
 2. Fügen Sie für jede Seite ein Bild ein, zusammen mit dem Klickverhalten für dieses Bild.
 3. Falls gewünscht, fügen Sie einen **Titel** und eine **Beschreibung** für jede Seite hinzu. Wenn Sie einen Titel und eine Beschreibung für eine Seite verwenden, müssen diese für alle Seiten eingefügt werden.
 
 Die Vorschauen werden reflektiert und sind interaktiv.
 
-\![]({% image_buster /assets/img_archive/pushstories_composer.png %}){: style="max-width:60%"}
+![]({% image_buster /assets/img_archive/pushstories_composer.png %}){: style="max-width:60%"}
 
 {% alert important %}
 Wenn Sie Bilder mit [Connected-Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/#about-connected-content) einbinden, stellen Sie sicher, dass die URL Ihres Bildes mit `https://` beginnt. Die Verwendung von `http://` führt zum Absturz Ihrer App.
@@ -89,7 +89,7 @@ Wenn Sie eine Kampagne oder ein Canvas erstellen, können Sie die Nutzer, die Si
 
 Die Analytik wird dem aktuellen Analysebereich für Push-Benachrichtigungen sehr ähnlich sein. Für die Analyse von Push Stories können Sie die Metrik **Direkte Öffnungen** öffnen, um die Klicks pro Seite zu sehen.
 
-\![iOS Push Performance-Tabelle mit Beispiel-Analytics und erweiterten Details für die Metrik Direkte Öffnungen.]({% image_buster /assets/img_archive/pushstories_analytics.png %})
+![iOS Push Performance-Tabelle mit Beispiel-Analytics und erweiterten Details für die Metrik Direkte Öffnungen.]({% image_buster /assets/img_archive/pushstories_analytics.png %})
 
 ## Fehlersuche
 

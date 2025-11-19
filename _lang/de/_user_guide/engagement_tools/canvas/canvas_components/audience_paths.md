@@ -17,7 +17,7 @@ Diese Canvas-Komponente ersetzt die Notwendigkeit, übermäßig viele zielgruppe
 
 ## Funktionsweise
 
-\![Ein Zielgruppen-Pfad mit zwei Gruppen: engagierte Nutzer:innen und alle anderen.]({% image_buster /assets/img/audience_path/audience_path.png %}){: style="float:right;max-width:45%;margin-left:15px;margin-top:15px;"}
+![Ein Zielgruppen-Pfad mit zwei Gruppen: engagierte Nutzer:innen und alle anderen.]({% image_buster /assets/img/audience_path/audience_path.png %}){: style="float:right;max-width:45%;margin-left:15px;margin-top:15px;"}
 
 Zielgruppenpfade sind vergleichbar mit Sortiertrichtern mit Ranking-Kriterien. Die Benutzer werden für jedes Kriterium in der Reihenfolge ihrer Priorität bewertet und auf den Weg des höchsten Kriteriums geschickt, das sie erfüllen. Dadurch wird die Unklarheit darüber verringert, wohin die Nutzer:innen gehen und welche Nachrichten sie erhalten werden. Beachten Sie, dass die Ranglisten [nach dem Start]({{site.baseurl}}/post-launch_edits/) nicht [mehr geändert werden können]({{site.baseurl}}/post-launch_edits/).
 
@@ -31,7 +31,7 @@ Mit Zielgruppenpfade können Sie Folgendes tun:
 
 ### Zeit für Nutzer:innen-Bewertungen zulassen
 
-\![Canvas zeigt eine 24-stündige Verzögerung nach einem Nachrichten-Schritt, gefolgt von einem Zielgruppen-Pfad.]({% image_buster /assets/img/audience_path/audience_path5.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
+![Canvas zeigt eine 24-stündige Verzögerung nach einem Nachrichten-Schritt, gefolgt von einem Zielgruppen-Pfad.]({% image_buster /assets/img/audience_path/audience_path5.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
 Nutzer:innen werden ausgewertet, sobald sie den Schritt Zielgruppen-Pfad erreichen. Nachdem sie bewertet worden sind, werden sie sofort zum nächsten Schritt übergehen. Daher ist es wichtig, ein angemessenes Zeitfenster verstreichen zu lassen, wenn der Zielgruppen-Pfad durch eine Nutzeraktion bestimmt wird.
 
@@ -56,17 +56,17 @@ Der folgende Screenshot zeigt das Layout eines erweiterten Audience Paths-Schrit
 
 Wenn Sie beispielsweise das Onboarding Messaging auf eine Gruppe von Nutzern ausrichten möchten, könnten Sie Retargeting-Filter auswählen, z. B. "Hat auf E-Mail geklickt" und "Hat auf In-App-Nachrichten geklickt".
 
-\![Ein erweiterter Zielgruppen-Pfad mit Gruppen für "Liebt die asiatische Küche", "Liebt die lateinische Küche", "Liebt die europäische Küche" und "Alle anderen".]({% image_buster /assets/img/audience_path/audience_path3.png %})
+![Ein erweiterter Zielgruppen-Pfad mit Gruppen für "Liebt die asiatische Küche", "Liebt die lateinische Küche", "Liebt die europäische Küche" und "Alle anderen".]({% image_buster /assets/img/audience_path/audience_path3.png %})
 
 Nachdem der Schritt für Zielgruppenpfade abgeschlossen ist, hat jede Zielgruppe einen eigenen Branch. Sie können mit der Verwendung von Zielgruppenpfaden fortfahren, um Ihr Publikum weiter zu filtern. Alternativ können Sie Ihre Canvas-Journey mit den Standard-Canvas-Schritten fortsetzen. 
 
-\![Zwei Zielgruppen-Pfade mit unterschiedlichen Gruppen auf der Grundlage von Engagement.]({% image_buster /assets/img/audience_path/audience_path4.png %}){: style="max-width:50%"}
+![Zwei Zielgruppen-Pfade mit unterschiedlichen Gruppen auf der Grundlage von Engagement.]({% image_buster /assets/img/audience_path/audience_path4.png %}){: style="max-width:50%"}
 
 ### Testen von Zielgruppen
 
 Nachdem Sie Ihrer Zielgruppe Segmente und Filter hinzugefügt haben, können Sie testen, ob Ihre Zielgruppen wie erwartet eingerichtet sind, indem Sie [nach einem Benutzer suchen]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/), um zu überprüfen, ob er den Zielgruppenkriterien entspricht.
 
-\![Die Rubrik "Nutzer:in".]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:70%"}
+![Die Rubrik "Nutzer:in".]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:70%"}
 
 ## Audience Paths verwenden
 
@@ -74,7 +74,7 @@ Die eigentliche Stärke von Zielgruppenpfaden liegt in der Möglichkeit, Priorit
 
 Indem Sie diesen Gruppen eine hohe Priorität zuweisen, können Sie Nutzer ansprechen, die unter bestimmte Filter und Segmente fallen, und gleichzeitig Nutzer ansprechen, die diese spezifischen Kriterien nicht erfüllen - und das alles in einem einzigen Canvas-Schritt.
 
-\![Ein Zielgruppen-Pfad mit Gruppen für "Mag große Markenschuhe", "Mag große Marken" und "Alle anderen".]({% image_buster /assets/img/audience_path/audience_path2.png %}){: style="float:right;max-width:50%;margin-left:15px;margin-bottom:15px;"}
+![Ein Zielgruppen-Pfad mit Gruppen für "Mag große Markenschuhe", "Mag große Marken" und "Alle anderen".]({% image_buster /assets/img/audience_path/audience_path2.png %}){: style="float:right;max-width:50%;margin-left:15px;margin-bottom:15px;"}
 
 Nehmen wir zum Beispiel an, Sie möchten einer Gruppe von Nutzern Anzeigen für neue Produkte schicken. Sie beginnen damit, dass Sie Filter, die unter diese Produkte fallen, auf dem Audience Path weit oben platzieren. Wenn Sie eine Marketing-Kampagne für das Unternehmen "Big Brand" erstellen und gerade eine neue Einzelhandelsmarke auf den Markt gebracht haben, könnten Sie Filter wie "Likes Big Brand Shoes" oder "Likes Big Brand Bags" auswählen und je nachdem, in welche gefilterte Gruppe diese Personen fallen, unterschiedliche Nachrichten per E-Mail versenden. 
 

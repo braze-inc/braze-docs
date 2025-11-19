@@ -64,7 +64,7 @@ Wenn alle Nachrichten in Ihrer Kampagne ähnlich sind oder den gleichen Inhalt h
 
 Schreiben Sie Ihre Nachricht nach Bedarf mit Personalisierung (z. B. Liquid oder Connected-Content). LINE lässt bis zu fünf Sprechblasen pro Nachricht zu, die in einem der verfügbaren Nachrichten-Layouts erscheinen können: Text, Bild, Rich oder Card-based.
 
-\![LINE-Editor mit einer Nachricht, die in der Vorschau angezeigt wird.]({% image_buster /assets/img/line/line_composer.png %})
+![LINE-Editor mit einer Nachricht, die in der Vorschau angezeigt wird.]({% image_buster /assets/img/line/line_composer.png %})
 
 ### Tipps
 
@@ -80,7 +80,7 @@ Wie Nachrichten von rechts nach links letztendlich aussehen, hängt weitgehend d
 
 Wechseln Sie auf die Registerkarte **Test**, um eine Test-LINE-Nachricht an Inhaltstestgruppen oder einzelne Benutzer zu senden oder eine Vorschau der Nachricht als Benutzer direkt in Braze anzuzeigen.
 
-\![Der Tab "Tests" zeigt eine Vorschau auf eine Testnachricht an.]({% image_buster /assets/img/line/test_preview.png %})
+![Der Tab "Tests" zeigt eine Vorschau auf eine Testnachricht an.]({% image_buster /assets/img/line/test_preview.png %})
 
 ## Schritt 4: Erstellen Sie den Rest Ihrer Kampagne oder Ihres Canvas
 

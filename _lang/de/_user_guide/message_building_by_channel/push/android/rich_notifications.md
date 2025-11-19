@@ -44,7 +44,7 @@ Folgen Sie den Schritten zum [Erstellen einer Kampagne]({{site.baseurl}}/user_gu
 
 Fügen Sie den **Zusammenfassungstext/Bildunterschrift** hinzu, den Sie vor dem Bild in der Benachrichtigung anzeigen möchten.
 
-\![Der Bereich Erweitertes Benachrichtigungsbild, wo Sie ein Bild hinzufügen oder eine Bild-URL eingeben können.]({% image_buster /assets/img_archive/android_rich_summarytext.png %})
+![Der Bereich Erweitertes Benachrichtigungsbild, wo Sie ein Bild hinzufügen oder eine Bild-URL eingeben können.]({% image_buster /assets/img_archive/android_rich_summarytext.png %})
 
 ### Schritt 3: Medien hinzufügen
 
@@ -52,7 +52,7 @@ Fügen Sie Ihr Bild in das Feld **Erweitertes Benachrichtigungsbild** im Compose
 
 Details zu den unterstützten Bildern finden Sie unter [Bildspezifikationen]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#push).
 
-\![Ein Nutzer:innen erhält eine Push-Benachrichtigung für iOS mit dem Titel "Hallo" und dem Text "Danke, dass Sie an unserem Kundenbindungs-Programm teilnehmen!]({% image_buster /assets/img_archive/android_rich_image.png %})
+![Ein Nutzer:innen erhält eine Push-Benachrichtigung für iOS mit dem Titel "Hallo" und dem Text "Danke, dass Sie an unserem Kundenbindungs-Programm teilnehmen!]({% image_buster /assets/img_archive/android_rich_image.png %})
 
 ### Schritt 4: Fahren Sie mit der Erstellung Ihrer Kampagne fort
 

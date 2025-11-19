@@ -21,7 +21,7 @@ Bitten Sie die Nutzer:innen, eine SMS mit „START“, „UNSTOP“, „YES“ o
 
 Um Nutzern die Möglichkeit zu geben, sich in einer In-App-Nachricht für SMS zu entscheiden, verwenden Sie das von Braze bereitgestellte [Formular zur Erfassung von Telefonnummern]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/phone_number_capture/), mit dem Sie Telefonnummern sammeln und Ihre SMS-Liste erweitern können.
 
-\![In-App-Nachricht-Editor mit einem Template für die Erfassung von Telefonnummern.]({% image_buster /assets/img_archive/dnd_iam_phone_capture_select.png %}){: style="max-width:80%;"}
+![In-App-Nachricht-Editor mit einem Template für die Erfassung von Telefonnummern.]({% image_buster /assets/img_archive/dnd_iam_phone_capture_select.png %}){: style="max-width:80%;"}
 
 Braze empfiehlt, dass Sie auch die [SMS-Double-Opt-In-Funktion]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/double_opt_in/) verwenden. Diese Funktion arbeitet automatisch mit dem In-App-Formular zur Erfassung von Telefonnummern zusammen und fordert die Nutzer:innen auf, ihre Absicht zu bestätigen, nachdem sie ihre Telefonnummer über das Formular übermittelt haben.
 

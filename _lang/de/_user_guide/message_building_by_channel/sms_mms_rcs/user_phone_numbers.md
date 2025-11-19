@@ -22,7 +22,7 @@ Wir empfehlen den Import von Telefonnummern im [`E.164`](https://en.wikipedia.or
 - **U.S. Zahlen:** Alle U.S.-Nummern müssen gültige, 10-stellige Telefonnummern mit einer gültigen Vorwahl sein. Wenn bei einer 10-stelligen Telefonnummer der Code `+` und die Landesvorwahl fehlen, bildet Braze sie als U.S ab.
 - **Internationale Nummern:** Alle internationalen Nummern beginnen mit einem `+`, gefolgt von der Landesvorwahl und dann der Telefonnummer. Zum Beispiel: `+442071838750`.
 
-\![Beispiel für eine gültige e164 internationale Rufnummer.]({% image_buster /assets/img/sms/e164.png %}){: style="max-width:50%;border: 0;"}
+![Beispiel für eine gültige e164 internationale Rufnummer.]({% image_buster /assets/img/sms/e164.png %}){: style="max-width:50%;border: 0;"}
 
 Hier ein paar Beispiele für die Unterschiede zwischen Lokalisierung und `E.164` Formatierung:
 
@@ -48,7 +48,7 @@ Nutzer:innen-Telefonnummern werden in Braze als String aus Ziffern angezeigt. We
 
 Wenn eine Telefonnummer als ungültig eingestuft wird, markiert Braze die Telefonnummer des Benutzers als ungültig und versucht nicht, weitere Mitteilungen an diese Telefonnummer zu senden. Eine ungültige Telefonnummer wird auf der **Registerkarte Engagement** eines Benutzerprofils markiert.
 
-\![Beispiel einer Fehlermeldung für ungültige Telefonnummern in Braze.]({% image_buster /assets/img/sms/invalid_banner.png %}){: style="max-width:50%;border: 0;"}
+![Beispiel einer Fehlermeldung für ungültige Telefonnummern in Braze.]({% image_buster /assets/img/sms/invalid_banner.png %}){: style="max-width:50%;border: 0;"}
 
 Eine Telefonnummer wird aus den folgenden Gründen als ungültig betrachtet:
 

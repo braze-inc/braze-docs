@@ -27,7 +27,7 @@ Um Ihre benutzerdefinierte Fußzeile zu erstellen oder zu bearbeiten, gehen Sie 
 3. Bearbeiten Sie Ihre Fußzeile im Bereich **Verfassen**.
 4. Senden Sie eine Testnachricht. 
 
-\![Ein Beispiel für eine angepasste Fußzeile.]({% image_buster /assets/img_archive/custom_footer.png %})
+![Ein Beispiel für eine angepasste Fußzeile.]({% image_buster /assets/img_archive/custom_footer.png %})
 
 Die Standard-Fußzeile verwendet das Attribut {% raw %}`{{${set_user_to_unsubscribed_url}}}`{% endraw %} und unsere physische Postanschrift. Wenn Sie diesen Standard verwenden, müssen Sie bei Protokoll die Option **<other>** für das **Protokoll**.
 
@@ -35,7 +35,7 @@ Die Standard-Fußzeile verwendet das Attribut {% raw %}`{{${set_user_to_unsubscr
 Um den CAN-SPAM-Vorschriften zu entsprechen, muss Ihre benutzerdefinierte Fußzeile {% raw %}`{{${set_user_to_unsubscribed_url}}}`{% endraw %} enthalten. Ohne dieses Attribut können Sie eine benutzerdefinierte Fußzeile nicht speichern.
 {% endalert %}
 
-\![Protokoll- und URL-Werte, die für die angepasste Fußzeile benötigt werden.]({% image_buster /assets/img_archive/email_unsub_protocol.png %}){: style="max-width:50%;"}
+![Protokoll- und URL-Werte, die für die angepasste Fußzeile benötigt werden.]({% image_buster /assets/img_archive/email_unsub_protocol.png %}){: style="max-width:50%;"}
 
 ## Fußzeilen ohne Abmeldelinks
 
@@ -43,11 +43,11 @@ Seien Sie sehr vorsichtig, wenn Sie ein Template mit der angepassten Fußzeile {
 
 Hier ist eine Warnung im E-Mail-Composer:
 
-\![Beispiel einer E-Mail, die ohne Fußzeile verfasst wurde.]({% image_buster /assets/img_archive/no_unsub_link_warning.png %})
+![Beispiel einer E-Mail, die ohne Fußzeile verfasst wurde.]({% image_buster /assets/img_archive/no_unsub_link_warning.png %})
 
 Hier ist eine Warnung im Kampagnen-Composer:
 
-\![No-footer Kampagne Zusammensetzung.]({% image_buster /assets/img_archive/no_footer_test.png %})
+![No-footer Kampagne Zusammensetzung.]({% image_buster /assets/img_archive/no_footer_test.png %})
 
 ### Hinzufügen eines angepassten Links zum Abmelden
 
@@ -89,5 +89,5 @@ Sie können auf der Registerkarte **Abonnementseiten und Fußzeilen** der Seite 
 
 Wenn Sie keine Klartext-Fußzeile einfügen, wird Braze automatisch eine aus der HTML-Fußzeile erstellen. Wenn Ihre benutzerdefinierten Fußzeilen Ihren Vorstellungen entsprechen, wählen Sie **Speichern**.
 
-\![E-Mail mit ausgewählter Option Angepasste Klartext-Fußzeile einstellen.]({% image_buster /assets/img_archive/custom_footer_save_changes.png %}){: style="max-width:70%" }
+![E-Mail mit ausgewählter Option Angepasste Klartext-Fußzeile einstellen.]({% image_buster /assets/img_archive/custom_footer_save_changes.png %}){: style="max-width:70%" }
 

@@ -19,7 +19,7 @@ Für den Zugriff auf den Landing Page Builder benötigen Sie [bestimmte Berechti
 
 Gehen Sie zu **Messaging** > **Landing Pages** und wählen Sie dann **Landing Page erstellen**. Sie können auch den Namen einer bestehenden Landing Page auswählen, um sie zu duplizieren oder zu ändern.
 
-\![Der Bereich Landing Pages im Braze-Dashboard.]({% image_buster /assets/img/landing_pages/landing-pages-homepage.png %})
+![Der Bereich Landing Pages im Braze-Dashboard.]({% image_buster /assets/img/landing_pages/landing-pages-homepage.png %})
 
 ### Schritt 2: Geben Sie die Seitendetails ein
 
@@ -47,11 +47,11 @@ Wir empfehlen Ihnen, diese bewährten Verfahren zu befolgen:
 
 Falls Sie das noch nicht getan haben, wählen Sie **Als Entwurf speichern**. Um mit der Anpassung Ihrer Seite zu beginnen, wählen Sie **Landing Page bearbeiten**. Der Drag-and-Drop-Editor wird mit einem Standard Template vorgeladen, das Sie an Ihren Anwendungsfall anpassen können.
 
-\![Ein Beispiel für eine Landing Page, die per Drag-and-Drop-Editor erstellt wird.]({% image_buster /assets/img/landing_pages/template.png %})
+![Ein Beispiel für eine Landing Page, die per Drag-and-Drop-Editor erstellt wird.]({% image_buster /assets/img/landing_pages/template.png %})
 
 Der Editor verwendet zwei Arten von Komponenten für die Gestaltung von Landing Pages: Basisblöcke und Formularblöcke. Alle Blöcke müssen in einer Reihe platziert werden.
 
-\![Der Abschnitt 'Erstellen' mit 'Zeilen' und 'Formularblöcken'.]({% image_buster /assets/img/landing_pages/dnd.png %}){: style="max-width:35%;"}
+![Der Abschnitt 'Erstellen' mit 'Zeilen' und 'Formularblöcken'.]({% image_buster /assets/img/landing_pages/dnd.png %}){: style="max-width:35%;"}
 
 {% tabs %}
 {% tab Basic blocks %}
@@ -79,7 +79,7 @@ Sie können diese Blöcke verwenden, um Inhalte hinzuzufügen und das Layout Ihr
 
 Mit diesen Blöcken können Sie ein Formular erstellen, das von Nutzern:innen übermittelte Daten mit ihrem Profil in Braze verknüpft. Denken Sie daran, dass Sie bei Verwendung von Formularblöcken auch eine zusätzliche Landing Page für den Bestätigungsstatus erstellen müssen.
 
-\![Ein Formularblock, der eine neue Kund:in registriert und einen Rabattcode an ihre E-Mail sendet.]({% image_buster /assets/img/landing_pages/form.png %}){: style="max-width:70%;"}
+![Ein Formularblock, der eine neue Kund:in registriert und einen Rabattcode an ihre E-Mail sendet.]({% image_buster /assets/img/landing_pages/form.png %}){: style="max-width:70%;"}
 
 | Block Typ     | Beschreibung |
 |---------------|-------------|
@@ -104,7 +104,7 @@ Auf dem Tab **Seitencontainer** können Sie Stile festlegen, die auf alle releva
 
 Wir empfehlen, die Stile auf der Ebene der Seitencontainer einzurichten, bevor Sie die Stile auf der Blockebene anpassen. Sie können auch ein Hintergrundbild für die gesamte Seite hinzufügen.
 
-\![Der Abschnitt 'Seitencontainer' mit Optionen zum Anpassen von Hintergrundbildern, Farben, Rahmendetails und der Gestaltung des Inhalts.]({% image_buster /assets/img/landing_pages/page_container.png %}){: style="max-width:40%;"}
+![Der Abschnitt 'Seitencontainer' mit Optionen zum Anpassen von Hintergrundbildern, Farben, Rahmendetails und der Gestaltung des Inhalts.]({% image_buster /assets/img/landing_pages/page_container.png %}){: style="max-width:40%;"}
 
 #### Responsiv auf Nutzer:innen-Geräte
 
@@ -112,7 +112,7 @@ Sie können Ihre Landing Page responsiv an die Größe des Geräts eines Nutzers
 
 Wenn dieses Enablement aktiviert ist, können Sie auch die Stapelspalten umkehren, um die vertikale Reihenfolge von mehrspaltigen Inhalten auf kleineren Bildschirmen zu steuern. Dadurch sehen die Seiten auf dem Handy besser aus und fühlen sich besser an, ohne angepassten Code.
 
-\![Das Umschalten von "Vertikal stapeln auf kleineren Bildschirmen" in der Sektion "Spalten anpassen".]({% image_buster /assets/img/landing_pages/device_responsive_toggle.png %}){: style="max-width:50%;"}
+![Das Umschalten von "Vertikal stapeln auf kleineren Bildschirmen" in der Sektion "Spalten anpassen".]({% image_buster /assets/img/landing_pages/device_responsive_toggle.png %}){: style="max-width:50%;"}
 
 #### Optionale und obligatorische Felder
 
@@ -120,7 +120,7 @@ Sie können wählen, ob ein Formularfeld erforderlich oder optional ist. Erforde
 
 Um beispielsweise die Erfassung von Einwilligungen vor dem Absenden des Formulars zu erzwingen, können Sie die Option **Erforderliche Feldeingabe** aktivieren, um ein Kontrollkästchen mit dem entsprechenden Disclaimer-Text als erforderlich zu definieren.
 
-\![Ein Formularfeld mit Kontrollkästchen, bei dem die Option "Erforderliches Eingabefeld" umgeschaltet wurde.]({% image_buster /assets/img/landing_pages/lp-optional-required.png %}){: style="max-width:50%;"}
+![Ein Formularfeld mit Kontrollkästchen, bei dem die Option "Erforderliches Eingabefeld" umgeschaltet wurde.]({% image_buster /assets/img/landing_pages/lp-optional-required.png %}){: style="max-width:50%;"}
 
 ### Schritt 4: Erstellen Sie eine Bestätigungsseite (optional)
 
@@ -142,7 +142,7 @@ Wenn Ihre Bestätigungsseite in einem neuen Tab geöffnet wird, kann ein Nutzer:
 
 Auf der Registerkarte **Vorschau** des Editors können Sie eine Vorschau Ihrer Landing Page anzeigen. Nachdem Sie Ihre Landing Page als Entwurf gespeichert haben, können Sie die URL aufrufen, indem Sie zu **Landing Pages** gehen und **URL kopieren** neben Ihrer Landing Page wählen. Sie können die URL auch mit anderen Personen teilen.
 
-\![Eine Landing Page, bei der das Menü geöffnet ist, um die Option "URL kopieren" anzuzeigen.]({% image_buster /assets/img/landing_pages/copy-url.png %})
+![Eine Landing Page, bei der das Menü geöffnet ist, um die Option "URL kopieren" anzuzeigen.]({% image_buster /assets/img/landing_pages/copy-url.png %})
 
 Vergewissern Sie sich, bevor Sie veröffentlichen:
 
@@ -160,13 +160,13 @@ Verwenden Sie Landing Page Templates, um Vorlagen für Ihre nächsten Kampagnen 
 
 Sie können Landing Page Templates in der Vorschau anzeigen, archivieren, bearbeiten oder duplizieren. Wenn Sie eine Landing Page bearbeiten, können Sie Ihre Landing Page auch als Template speichern, Änderungen an dem Template vornehmen oder den Inhalt der Landing Page löschen. 
 
-\![Ein Dropdown-Menü mit Optionen zum Speichern, Ändern und Löschen einer Landing Page.]({% image_buster /assets/img/landing_pages/manage-lp-template.png %}){: style="max-width:60%;"}
+![Ein Dropdown-Menü mit Optionen zum Speichern, Ändern und Löschen einer Landing Page.]({% image_buster /assets/img/landing_pages/manage-lp-template.png %}){: style="max-width:60%;"}
 
 ## Analytik anzeigen
 
 Um die Effektivität Ihrer Landing Page zu analysieren, gehen Sie zu **Messaging** > **Landing Pages** und wählen Sie dann eine Landing Page aus, die Sie veröffentlicht haben. Hier können Sie die Anzahl der Seitenaufrufe, Seitenklicks, Seitenübermittlungen und die Übermittlungsraten für Ihre Landing Page verfolgen.
 
-\![Der Analytics-Bereich für eine Landing Page.]({% image_buster /assets/img/landing_pages/analytics.png %})
+![Der Analytics-Bereich für eine Landing Page.]({% image_buster /assets/img/landing_pages/analytics.png %})
 
 ## Behandlung von Fehlern bei der Formularübermittlung {#handling-form-submission-errors}
 

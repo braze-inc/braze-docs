@@ -10,7 +10,7 @@ channel: push
 
 # Push Primer In-App Nachrichten
 
-\![Push Primer In-App-Nachricht für Streaming-App. Die Benachrichtigung lautet "Erhalten Sie Push-Benachrichtigungen von Movie Cannon? Die Benachrichtigungen können neue Filme, Fernsehsendungen oder andere Hinweise enthalten und können jederzeit ausgeschaltet werden."]({% image_buster /assets/img_archive/push_primer_iam.png %}){: style="float:right;max-width:40%;margin-left:15px;border:none;"}
+![Push Primer In-App-Nachricht für Streaming-App. Die Benachrichtigung lautet "Erhalten Sie Push-Benachrichtigungen von Movie Cannon? Die Benachrichtigungen können neue Filme, Fernsehsendungen oder andere Hinweise enthalten und können jederzeit ausgeschaltet werden."]({% image_buster /assets/img_archive/push_primer_iam.png %}){: style="float:right;max-width:40%;margin-left:15px;border:none;"}
 
 > Sie haben nur eine Chance, die Nutzer um ihre Zustimmung zu Push-Nachrichten zu bitten. Daher ist die Optimierung Ihrer Push-Registrierung entscheidend, um die Reichweite Ihrer Push-Nachrichten zu maximieren. Um dies zu erreichen, können Sie In-App-Nachrichten verwenden, um zu erklären, welche Art von Nachrichten Ihre Nutzer:innen erwarten können, wenn sie sich für die Teilnahme entscheiden, bevor Sie ihnen der native Push-Prompt zeigen. Dies wird als „Push Primer“ bezeichnet.
 
@@ -107,7 +107,7 @@ Nachdem Sie eine Button-Kopie hinzugefügt haben, legen Sie für jeden Button da
 - **Button 1:** Legen Sie diesen Button auf „Nachricht schließen“ fest. Dies ist Ihr zweiter Button oder die Option „Nicht jetzt“.
 - **Button 2:** Legen Sie diesen Button auf „Push-Berechtigung anfordern“ fest. Dies ist Ihr primärer Button oder die Option „Benachrichtigungen zulassen“.
 
-\![In-App-Nachricht-Editor mit zwei Buttons: "Benachrichtigungen zulassen" und "Nicht jetzt".]({% image_buster /assets/img_archive/push_primer_button_behavior.png %})
+![In-App-Nachricht-Editor mit zwei Buttons: "Benachrichtigungen zulassen" und "Nicht jetzt".]({% image_buster /assets/img_archive/push_primer_button_behavior.png %})
 
 ## Schritt 4: Zeitplan für Zustellung
 
@@ -115,7 +115,7 @@ Um Ihren Push-Primer so einzustellen, dass er zu einem bestimmten Zeitpunkt vers
 
 Auch wenn der ideale Zeitpunkt variiert, empfiehlt Braze, zu warten, bis ein Benutzer eine [hochwertige Aktion](https://www.braze.com/resources/videos/mapping-high-value-actions) durchgeführt hat, die anzeigt, dass er einen Nutzen in Ihrer App oder Website sieht, oder wenn es ein zwingendes Bedürfnis gibt, das durch Push-Benachrichtigungen erfüllt werden kann (z. B. nachdem der Benutzer eine Bestellung aufgegeben hat und Sie ihm Informationen zur Sendungsverfolgung anbieten möchten). Auf diese Weise ist die Aufforderung nicht nur für Ihre Marke, sondern auch für den Kunden von Vorteil.
 
-\![Aktionsbasierte Zustellung an Nutzer:innen, die das angepasste Event "Zur Beobachtungsliste hinzufügen" ausgeführt haben.]({% image_buster /assets/img_archive/push_primer_trigger.png %})
+![Aktionsbasierte Zustellung an Nutzer:innen, die das angepasste Event "Zur Beobachtungsliste hinzufügen" ausgeführt haben.]({% image_buster /assets/img_archive/push_primer_trigger.png %})
 
 ## Schritt 5: Zielnutzer:innen
 

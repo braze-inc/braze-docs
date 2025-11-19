@@ -18,7 +18,7 @@ WhatsApp stützt sich bei der [Bewertung der Telefonqualität](https://www.faceb
 
 Wenn Sie einem Benutzer zum ersten Mal eine Nachricht in WhatsApp senden, werden diese Optionen im Nachrichten-Thread angezeigt.
 
-\![WhatsApp Nachrichtenthread mit Optionen zum Blockieren oder Melden eines Unternehmens]({% image_buster /assets/img/whatsapp/whatsapp_block_report.png %}){: style="max-width:30%;"}
+![WhatsApp Nachrichtenthread mit Optionen zum Blockieren oder Melden eines Unternehmens]({% image_buster /assets/img/whatsapp/whatsapp_block_report.png %}){: style="max-width:30%;"}
 
 {% alert note %}
 Um Metriken zu Ihren Blöcken und Berichten zu erhalten, stellen Sie sicher, dass die [Registerkarte Einblicke](https://www.facebook.com/business/help/683499390267496) in Ihrem WhatsApp Manager aktiviert ist.
@@ -46,5 +46,5 @@ Opt-outs haben keinen Einfluss auf die Qualitätsbewertung Ihres Telefons. Daher
 
 Es empfiehlt sich, in der Fußzeile der ersten Nachricht, die Sie an Nutzer:innen senden, Anweisungen zum Opt-out zu geben. Sie könnten zum Beispiel darauf hinweisen, dass Nutzer sich von Ihrem WhatsApp-Kanal abmelden können, indem sie mit Ihrem Auslösewort für die Abmeldung antworten. Sie könnten die Opt-out-Fußzeile auch regelmäßig in zukünftige Kampagnen einbauen. Wie Sie dies einrichten können, erfahren Sie unter [Opt-in und Opt-out]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/opt-ins_and_opt-outs/).
  
-\![WhatsApp Nachricht mit einer Fußzeile, die besagt, dass Sie STOPP antworten sollen, um sich von dem Kanal abzumelden]({% image_buster /assets/img/whatsapp/whatsapp_unsubscribe.png %}){: style="max-width:35%;"}
+![WhatsApp Nachricht mit einer Fußzeile, die besagt, dass Sie STOPP antworten sollen, um sich von dem Kanal abzumelden]({% image_buster /assets/img/whatsapp/whatsapp_unsubscribe.png %}){: style="max-width:35%;"}
 

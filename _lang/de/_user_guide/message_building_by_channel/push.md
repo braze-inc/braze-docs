@@ -61,9 +61,9 @@ guide_menu_list:
   image: /assets/img/braze_icons/annotation-question.svg
 ---
 
-## [\![Braze Lernkurse]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/push-fundamentals){: style="float:right;width:120px;border:0;" class="noimgborder"} Anwendungsfälle
+## [![Braze Lernkurse]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/push-fundamentals){: style="float:right;width:120px;border:0;" class="noimgborder"} Anwendungsfälle
 
-\![Beispiel für Push-Nachrichten über Apple Produkte.]({% image_buster /assets/img/red-dress.gif %}){: height="400px"} \![Beispiel für eine Push Nachricht von Stopwatch auf dem Startbildschirm eines iPhones, die lautet: „Hallo! Dies ist ein iOS Push".]({% image_buster /assets/img/ios_push.png %}){: height="400px"}
+![Beispiel für Push-Nachrichten über Apple Produkte.]({% image_buster /assets/img/red-dress.gif %}){: height="400px"} ![Beispiel für eine Push Nachricht von Stopwatch auf dem Startbildschirm eines iPhones, die lautet: „Hallo! Dies ist ein iOS Push".]({% image_buster /assets/img/ios_push.png %}){: height="400px"}
 
 Push-Benachrichtigungen sind ein hervorragendes Tool, um neue Nutzer:innen zu gewinnen und Kampagnen zur erneuten Interaktion durchzuführen. Hier sind einige Beispiele für gängige Anwendungsfälle von Push-Nachrichten.
 

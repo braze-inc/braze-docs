@@ -23,7 +23,7 @@ Wenn Sie eine Nachricht von rechts nach links erstellen, sollten Sie Folgendes b
 | Standard Western Rendering | Rechts-nach-links-Rendering |
 |------------------|------------------------|
 | Zeigt das Ausrufezeichen und das Emoji am **Ende** des Satzes an. | Zeigt das Ausrufezeichen und das Emoji am **Anfang** des Satzes an. |
-| \![Ein Beispiel für eine Standardnachricht von rechts nach links.]({% image_buster /assets/img/right-to-left/standard.png %}) | \![Ein Beispiel für eine Nachricht von links nach rechts.]({% image_buster /assets/img/right-to-left/right-to-left.png %}) |
+| ![Ein Beispiel für eine Standardnachricht von rechts nach links.]({% image_buster /assets/img/right-to-left/standard.png %}) | ![Ein Beispiel für eine Nachricht von links nach rechts.]({% image_buster /assets/img/right-to-left/right-to-left.png %}) |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 
 ## Erstellen einer Nachricht von rechts nach links
@@ -33,7 +33,7 @@ So erstellen Sie Ihre Nachricht von rechts nach links in Braze:
 1. Verfassen Sie Ihre Standardnachricht im Braze-Editor.
 2. Kopieren Sie den Nachrichtentext aus Braze und verwenden Sie dann ein Lokalisierungstool, um ihn in eine Nachricht von rechts nach links umzuwandeln.
 3. Fügen Sie Ihre konvertierte Nachricht wieder in Braze ein.
-4. Überprüfen Sie die Textformatierung und -ausrichtung. Wenn Sie eine E-Mail per Drag-and-Drop oder im HTML-Format erstellen, können Sie dies mit dem Composer tun. Andernfalls müssen Sie ein separates Textverarbeitungsprogramm verwenden.<br><br>\![E-Mail Drag-and-Drop-Editor Menü mit Button zum Umschalten der Textausrichtung zwischen rechts-nach-links und links-nach-rechts.]({% image_buster /assets/img/rtl_button.png %}){: style="max-width:50%;"}
+4. Überprüfen Sie die Textformatierung und -ausrichtung. Wenn Sie eine E-Mail per Drag-and-Drop oder im HTML-Format erstellen, können Sie dies mit dem Composer tun. Andernfalls müssen Sie ein separates Textverarbeitungsprogramm verwenden.<br><br>![E-Mail Drag-and-Drop-Editor Menü mit Button zum Umschalten der Textausrichtung zwischen rechts-nach-links und links-nach-rechts.]({% image_buster /assets/img/rtl_button.png %}){: style="max-width:50%;"}
 
 ## Überlegungen
  

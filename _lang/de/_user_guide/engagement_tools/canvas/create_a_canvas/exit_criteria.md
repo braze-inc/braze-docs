@@ -24,7 +24,7 @@ Im Schritt **Zielgruppe** des Canvas-Erstellers können Sie Ausstiegskriterien f
 
 Das Ausstiegskriterium enthält ein Ausnahme-Event, d.h. die spezifische Aktion, die Nutzer:innen zum Verlassen des Canvas veranlassen kann.
 
-\![Die Ausstiegskriterien, die eingerichtet wurden, um Nutzer:innen, die Produkte angesehen, aber noch nicht in den Warenkorb gelegt oder eine Bestellung aufgegeben haben, wieder zu engagieren.]({% image_buster /assets/img/exit_criteria.png %}){: style="max-width:90%;"}
+![Die Ausstiegskriterien, die eingerichtet wurden, um Nutzer:innen, die Produkte angesehen, aber noch nicht in den Warenkorb gelegt oder eine Bestellung aufgegeben haben, wieder zu engagieren.]({% image_buster /assets/img/exit_criteria.png %}){: style="max-width:90%;"}
 
 ### Ausnahme-Events auswählen {#exception-events}
 
@@ -95,6 +95,6 @@ Nehmen wir an, wir wollen Nutzer:innen zusammenstellen, die noch nicht bei unser
 4. Für **Filter** wählen Sie **Kaufverhalten** > **Anzahl der Käufe** > **Gekauftes Produkt**.
 5. Setzen Sie die Filtergruppe auf `backpack-example exactly 1`. Das bedeutet, dass Nutzer:innen, die unser Produkt Rucksack gekauft haben, das Canvas verlassen würden.
 
-\![Exit-Kriterien-Einstellungen mit "Kauf-Event" als Ausnahme-Event, d.h. wenn ein Nutzer:innen einen Kauf tätigt, verlässt er diesen Canvas.]({% image_buster /assets/img_archive/exit_criteria_example.png %}){: style="max-width:80%;"}
+![Exit-Kriterien-Einstellungen mit "Kauf-Event" als Ausnahme-Event, d.h. wenn ein Nutzer:innen einen Kauf tätigt, verlässt er diesen Canvas.]({% image_buster /assets/img_archive/exit_criteria_example.png %}){: style="max-width:80%;"}
 
 

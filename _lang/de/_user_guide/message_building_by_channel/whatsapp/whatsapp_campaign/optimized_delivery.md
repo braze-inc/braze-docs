@@ -32,12 +32,12 @@ Die Verfügbarkeit und die Möglichkeiten der optimierten Zustellung hängen von
 1. Gehen Sie in Braze zu **Partnerintegrationen** > **Technologiepartner** > **WhatsApp**.
 2. Im Abschnitt **Optimieren Sie Ihren Versand mit optimierter Zustellung**, wählen Sie **Upgrade-Einstellung**, um den [eingebetteten Registrierungs-Workflow]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/embedded_signup/) zu triggern.
 
-\![Der Bereich Integration von WhatsApp Nachrichten mit einer Option zur Optimierung des Versands mit optimierter Zustellung.]({% image_buster /assets/img/whatsapp/whatsapp_messaging_integration.png %})
+![Der Bereich Integration von WhatsApp Nachrichten mit einer Option zur Optimierung des Versands mit optimierter Zustellung.]({% image_buster /assets/img/whatsapp/whatsapp_messaging_integration.png %})
 
 {: start="3"}
 3\. Nachdem die optimierte Zustellung aktiviert wurde, wird der Status der optimierten Zustellung in Ihren Kontodetails im **WhatsApp Business Account Management** angezeigt.
 
-\![WhatsApp Business Account Management Abschnitt mit einer aufgelisteten Abo-Gruppe, die den Status Aktiv hat.]({% image_buster /assets/img/whatsapp/optimized_delivery_message.png %})
+![WhatsApp Business Account Management Abschnitt mit einer aufgelisteten Abo-Gruppe, die den Status Aktiv hat.]({% image_buster /assets/img/whatsapp/optimized_delivery_message.png %})
 
 Alternativ können Sie die optimierte Zustellung auch direkt in Ihrem WhatsApp Manager aktivieren und dann mit dem Senden in Braze beginnen.
 
@@ -56,4 +56,4 @@ Die optimierte Zustellung sollte für **Marketing Nachrichten** verwendet werden
 2. Im Abschnitt **Zustellungsmethode** ist das Kontrollkästchen für **Optimierte Zustellung (empfohlen)** standardmäßig aktiviert, wenn Ihr WhatsApp Business Account (WABA) aktiviert ist. Wenn Sie die optimierte Zustellung für diese spezielle Nachricht nicht verwenden möchten, deaktivieren Sie das Kontrollkästchen.
 - Wenn Sie die optimierte Zustellung auswählen, diese aber nicht verfügbar ist, wird die Nachricht automatisch auf die Methode der Cloud API zurückgreifen.
 
-\![Nachrichten-Editor mit einem Tab für die Vorschau, der ein Kontrollkästchen zum Auswählen der optimierten Zustellung enthält.]({% image_buster /assets/img/whatsapp/delivery_method_settings.png %})
+![Nachrichten-Editor mit einem Tab für die Vorschau, der ein Kontrollkästchen zum Auswählen der optimierten Zustellung enthält.]({% image_buster /assets/img/whatsapp/delivery_method_settings.png %})

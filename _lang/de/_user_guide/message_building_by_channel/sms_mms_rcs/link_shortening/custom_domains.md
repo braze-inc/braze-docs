@@ -38,13 +38,13 @@ Wir verlangen von Ihnen, dass Sie Ihre angepasste Domain an Braze delegieren, da
 ## Hinzufügen einer angepassten Domain
 
 1. Gehen Sie in Braze zu **Unternehmenseinstellungen** > **SMS/RCS und Messaging Apps Domains**.
-\!["SMS/RCS und Messaging Apps Domains" Seite mit mehreren Domains aufgelistet.]({% image_buster /assets/img/main_page.png %})
+!["SMS/RCS und Messaging Apps Domains" Seite mit mehreren Domains aufgelistet.]({% image_buster /assets/img/main_page.png %})
 
 {: start="2"}
 2\. Wählen Sie **Domain hinzufügen**, um eine neue angepasste Domain einzurichten.
 3\. Geben Sie die angepasste Domain, die Sie erworben haben, in unsere In-App-Eingabe ein, die unsere bestehende Validierungslogik für die korrekte Formatierung verwendet, und wählen Sie dann **Weiter** und **Absenden**.
 
-\!["Domain hinzufügen" Button auf der Seite "SMS/RCS und Messaging Apps Domains".]({% image_buster /assets/img/custom_domain_button.png %}){: style="max-width:70%;"}
+!["Domain hinzufügen" Button auf der Seite "SMS/RCS und Messaging Apps Domains".]({% image_buster /assets/img/custom_domain_button.png %}){: style="max-width:70%;"}
 
 {: start="4"}
 4\. Lassen Sie Ihr technisches Team (z.B. das Entwicklerteam oder die IT-Abteilung) Ihre DNS-Konfiguration mit den angezeigten Details des Cloudflare DNS-Eintrags aktualisieren. Ihr technisches Team muss Ihre DNS-Einträge innerhalb von 45 Tagen mit diesen Angaben aktualisieren.
@@ -52,7 +52,7 @@ Wir verlangen von Ihnen, dass Sie Ihre angepasste Domain an Braze delegieren, da
 
 Braze fragt Ihre DNS-Konfiguration etwa alle 30 Minuten ab, um nach Updates zu suchen.
 
-\!["DNS-Eintrag" mit 3 Schritten, die Sie ausführen müssen, um die Einrichtung Ihrer Domain abzuschließen.]({% image_buster /assets/img/dns_record.png %})
+!["DNS-Eintrag" mit 3 Schritten, die Sie ausführen müssen, um die Einrichtung Ihrer Domain abzuschließen.]({% image_buster /assets/img/dns_record.png %})
 
 {% alert note %}
 Der Fortschritt Ihrer Domains wird automatisch gespeichert. Wenn Sie den Vorgang abbrechen müssen, können Sie ihn später wieder aufnehmen, indem Sie auf der Seite **Domains für SMS/RCS- und Messaging-Apps** den Eintrag für die ausstehende Domain auswählen.
@@ -62,7 +62,7 @@ Der Fortschritt Ihrer Domains wird automatisch gespeichert. Wenn Sie den Vorgang
 
 Nachdem Ihre Domain überprüft wurde, erscheinen Ihre angepassten Domains in der Tabelle auf der Seite **SMS/RCS und Messaging Apps Domains** mit Statusanzeigen. Sie können verbundene Domains sofort über mehrere Abo-Gruppen, Workspaces und über SMS-, RCS- und WhatsApp-Kanäle hinweg nutzen.
 
-\![Liste der angepassten Domains und Status.]({% image_buster /assets/img/custom_domain_statuses.png %}){: style="max-width:60%;"}
+![Liste der angepassten Domains und Status.]({% image_buster /assets/img/custom_domain_statuses.png %}){: style="max-width:60%;"}
 
 Die Live-Überwachung alarmiert Sie im Braze-Dashboard, wenn auf einer Ihrer aktiven Domains ein Problem auftritt, so dass Ihre angepassten Links nutzbar bleiben. Wenn Sie Probleme haben, sehen Sie sich die Fehlerdetails in der App an oder wenden Sie sich an den Braze [Support]({{site.baseurl}}/braze_support/), um Hilfe zu erhalten.
 
@@ -70,11 +70,11 @@ Die Live-Überwachung alarmiert Sie im Braze-Dashboard, wenn auf einer Ihrer akt
 
 Nach der Konfiguration können angepasste Domains einer oder mehreren SMS-, RCS- und WhatsApp Abo-Gruppen zugewiesen werden.
 
-\![Abo-Gruppen Einstellungen, die es Ihnen erlauben, eine Link-Shortening Domain auszuwählen.]({% image_buster /assets/img/custom_domain.png %})
+![Abo-Gruppen Einstellungen, die es Ihnen erlauben, eine Link-Shortening Domain auszuwählen.]({% image_buster /assets/img/custom_domain.png %})
 
 Kampagnen, die mit aktivierter Linkverkürzung versendet werden, verwenden die zugewiesene Domain, die mit Ihrer SMS-, RCS- oder WhatsApp Abo-Gruppe verbunden ist.
 
-\![SMS Nachrichten-Editor Vorschau mit einer verkürzten Link Domain, die sich von der Domain im Feld "Nachricht" unterscheidet.]({% image_buster /assets/img/custom_domain2.png %})
+![SMS Nachrichten-Editor Vorschau mit einer verkürzten Link Domain, die sich von der Domain im Feld "Nachricht" unterscheidet.]({% image_buster /assets/img/custom_domain2.png %})
 
 ## Häufig gestellte Fragen
 

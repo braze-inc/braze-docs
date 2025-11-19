@@ -71,7 +71,7 @@ Wenn ein aktionsbasiertes Canvas durch eine eingehende WhatsApp-Nachricht ausgel
 
 Wählen Sie, ob Sie eine [WhatsApp-Vorlage](#template-messages) oder eine Antwortnachricht erstellen möchten, je nach Anwendungsfall. Jede geschäftlich initiierte Konversation muss von einer genehmigten Vorlage ausgehen, wohingegen Antwortnachrichten innerhalb eines Zeitfensters von 24 Stunden als Antwort auf eingehende Nachrichten von Benutzern verwendet werden können.
 
-\![Im Bereich Nachrichten-Varianten können Sie eine Abo-Gruppe und eine von zwei Nachrichtenarten auswählen: WhatsApp-Vorlage Nachricht und Antwortnachricht.]({% image_buster /assets/img/whatsapp/whatsapp_message_variants.png %}){: style="max-width:80%;"}
+![Im Bereich Nachrichten-Varianten können Sie eine Abo-Gruppe und eine von zwei Nachrichtenarten auswählen: WhatsApp-Vorlage Nachricht und Antwortnachricht.]({% image_buster /assets/img/whatsapp/whatsapp_message_variants.png %}){: style="max-width:80%;"}
 
 {% tabs %}
 {% tab Template messages %}
@@ -85,7 +85,7 @@ Deaktivierte Textfelder (grau unterlegt) können nicht bearbeitet werden, da sie
 
 Jede Vorlage hat eine zugewiesene Sprache, so dass Sie für jede Sprache eine Kampagne oder einen Canvas-Schritt erstellen müssen, um den Benutzerabgleich korrekt einzurichten. Wenn Sie z.B. ein Canvas erstellen, das Vorlagen verwendet, die mit Indonesisch und Englisch belegt sind, müssen Sie einen Canvas-Schritt für die indonesische Vorlage und einen Canvas-Schritt für die englische Vorlage erstellen.
 
-\![Liste der Templates mit einer Vorschau ihrer Nachrichten, der ihnen zugewiesenen Sprachen und ihres Genehmigungsstatus.]({% image_buster /assets/img/whatsapp/whatsapp_templates.png %}){: style="max-width:80%;"}
+![Liste der Templates mit einer Vorschau ihrer Nachrichten, der ihnen zugewiesenen Sprachen und ihres Genehmigungsstatus.]({% image_buster /assets/img/whatsapp/whatsapp_templates.png %}){: style="max-width:80%;"}
 
 Wenn Sie Texte in einer Sprache hinzufügen, die von rechts nach links geschrieben ist, beachten Sie, dass das endgültige Aussehen von Nachrichten von rechts nach links weitgehend davon abhängt, wie die Dienste sie darstellen. Bewährte Methoden zur Erstellung von Nachrichten, die so genau wie möglich angezeigt werden, finden Sie unter [Erstellen von Nachrichten von]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/) rechts nach links.
 
@@ -101,7 +101,7 @@ Wenn Sie Liquid verwenden möchten, stellen Sie sicher, dass Sie einen Standardw
 {% endraw %}
 {% endalert %}
 
-\![Das Tool Personalisierung hinzufügen mit dem Attribut "first_name" und dem Standardwert "Sie".]({% image_buster /assets/img/whatsapp/whatsapp7.png %}){: style="max-width:80%;"}
+![Das Tool Personalisierung hinzufügen mit dem Attribut "first_name" und dem Standardwert "Sie".]({% image_buster /assets/img/whatsapp/whatsapp7.png %}){: style="max-width:80%;"}
 
 ### Dynamische Links 
 
@@ -119,7 +119,7 @@ Es gibt fünf Layouts für Nachrichten, die Sie verwenden können:
 - CTA-Button
 - Listennachricht
 
-\![Der Nachrichten-Editor für eine Antwortnachricht, die neue Nutzer:innen mit einem Rabattcode begrüßt.]({% image_buster /assets/img/whatsapp/whatsapp_response_messages.png %}){: style="max-width:80%;"}
+![Der Nachrichten-Editor für eine Antwortnachricht, die neue Nutzer:innen mit einem Rabattcode begrüßt.]({% image_buster /assets/img/whatsapp/whatsapp_response_messages.png %}){: style="max-width:80%;"}
 
 {% endtab %}
 {% endtabs %}
@@ -128,13 +128,13 @@ Es gibt fünf Layouts für Nachrichten, die Sie verwenden können:
 
 Braze empfiehlt Ihnen, Ihre Nachricht vor dem Versenden in der Vorschau anzusehen und zu testen. Wechseln Sie auf die Registerkarte **Test**, um eine Test-WhatsApp-Nachricht an [Inhaltstestgruppen]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups) oder einzelne Benutzer zu senden, oder um eine Vorschau der Nachricht als Benutzer direkt in Braze anzuzeigen.
 
-\![Eine Vorschau auf eine Nachricht für einen angepassten Nutzer:in namens Max.]({% image_buster /assets/img/whatsapp/whatsapp8.png %}){: style="max-width:80%;"}
+![Eine Vorschau auf eine Nachricht für einen angepassten Nutzer:in namens Max.]({% image_buster /assets/img/whatsapp/whatsapp8.png %}){: style="max-width:80%;"}
 
 {% alert note %}
 Ein Konversationsfenster ist erforderlich, um Antwort- und Testnachrichten zu senden. Um ein Konversationsfenster zu initiieren, senden Sie eine WhatsApp-Nachricht an die Telefonnummer, die mit der Abonnementgruppe verbunden ist, die Sie für diese Nachricht verwenden. Die zugehörige Telefonnummer wird in der Benachrichtigung auf der Registerkarte **Test** aufgeführt.
 {% endalert %}
 
-\![Eine Meldung, die besagt: "Um zu testen, öffnen Sie zunächst ein Konversationsfenster, indem Sie eine WhatsApp Nachricht an +1 217-582-9414 senden. Senden Sie dann Ihre Antwortnachricht an den Testbenutzer."]({% image_buster /assets/img/whatsapp/whatsapp_test_phone_number.png %}){: style="max-width:70%;"}
+![Eine Meldung, die besagt: "Um zu testen, öffnen Sie zunächst ein Konversationsfenster, indem Sie eine WhatsApp Nachricht an +1 217-582-9414 senden. Senden Sie dann Ihre Antwortnachricht an den Testbenutzer."]({% image_buster /assets/img/whatsapp/whatsapp_test_phone_number.png %}){: style="max-width:70%;"}
 
 ### Schritt 4: Erstellen Sie den Rest Ihrer Kampagne oder Ihres Canvas
 

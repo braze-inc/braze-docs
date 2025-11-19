@@ -22,7 +22,7 @@ Der Bereich Messaging-Analyse enthält zwei Berichte für Ihre letzten und komme
 
 Sie können die Nachrichtenanalyse für einen bestimmten Tag in einem Bericht anzeigen, indem Sie den Mauszeiger auf diesen Tag im Bericht setzen.
 
-\![Die Diagramme 'Kommende Nachrichtentypen' und 'Gesendete Nachrichten' in Messaging Analytics.]({% image_buster /assets/img/campaign_calendar/content_calendar_messaging_analytics.png %})
+![Die Diagramme 'Kommende Nachrichtentypen' und 'Gesendete Nachrichten' in Messaging Analytics.]({% image_buster /assets/img/campaign_calendar/content_calendar_messaging_analytics.png %})
 
 Um eine Kopie Ihrer Daten herunterzuladen, wählen Sie <i class="fa-solid fa-bars" style="color: #2e7487;"></i> **Diagramm Kontextmenü** und wählen Sie dann Ihr bevorzugtes Dateiformat.
 
@@ -36,7 +36,7 @@ In-App-Nachrichten sind immer aktionsbasiert. Sie werden also keine In-App-Nachr
 
 Sie können den Monat ändern, indem Sie <i class="fa-solid fa-chevron-left" style="color: #2e7487;"></i> **Siehe vorheriger Monat** oder <i class="fa-solid fa-chevron-right" style="color: #2e7487;"></i> **Siehe nächster Monat** wählen. Um zum aktuellen Monat zurückzukehren, wählen Sie **Heute**.
 
-\![Der Sendekalender, der alle geplanten Kampagnen im aktuellen Monat anzeigt.]({% image_buster /assets/img/campaign_calendar/content_calendar_sends.png %})
+![Der Sendekalender, der alle geplanten Kampagnen im aktuellen Monat anzeigt.]({% image_buster /assets/img/campaign_calendar/content_calendar_sends.png %})
 
 Jede Farbe im Kalender steht für einen anderen geplanten Kampagnentyp:
 

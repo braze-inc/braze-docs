@@ -56,7 +56,7 @@ Um UTM-Tags in Ihre Deeplinks für Push-Benachrichtigungen einzubinden, stellen 
 myapp://products/20-gift-card?utm_source=my_app&utm_medium=push&utm_campaign=spring2016giftcards&utm_content=ios_deeplink
 ```
 
-\![]({% image_buster /assets/img_archive/push_utm_tags.png %})
+![]({% image_buster /assets/img_archive/push_utm_tags.png %})
 
 #### Klicks auf In-App-Nachrichten mit UTM-Tags zuordnen
 
@@ -66,5 +66,5 @@ Um UTM Tags in die Deeplinks in Ihren In-App-Nachrichten einzubinden, verwenden 
 myapp://products/20-gift-card?utm_source=my_app&utm_medium=iam&utm_campaign=spring2021giftcards&utm_content=web_link
 ```
 
-\![]({% image_buster /assets/img_archive/iam_utm_tags.png %})
+![]({% image_buster /assets/img_archive/iam_utm_tags.png %})
 

@@ -7,7 +7,7 @@ description: "Dieser Artikel beschreibt angepasste Events und Eigenschaften, Seg
 search_rank: 2
 ---
 
-# [\![Braze Lernkurse]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/custom-events-and-attributes){: style="float:right;width:120px;border:0;" class="noimgborder"} Angepasste Events
+# [![Braze Lernkurse]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/custom-events-and-attributes){: style="float:right;width:120px;border:0;" class="noimgborder"} Angepasste Events
 
 > Dieser Artikel beschreibt angepasste Events und Eigenschaften, verwandte Segmentierungsfilter, Canvas-Eingangs-Eigenschaften, relevante Analytics und mehr. Mehr über Braze-Ereignisse im Allgemeinen erfahren Sie unter [Events]({{site.baseurl}}/user_guide/data/custom_data/events/).
 
@@ -105,11 +105,11 @@ Braze merkt sich für die Segmentierung, wie oft angepasste Events aufgetreten s
 
 Auf der Seite **Bericht über angepasste Events** im Dashboard können Sie sich ansehen, wie oft jedes angepasste Event auftritt. Die grauen Linien, die die Zeitreihe überlagern, zeigen an, wann zum letzten Mal eine Kampagne gesendet wurde. Dies ist nützlich, um zu sehen, wie sich Ihre Kampagnen auf die Aktivität angepasster Events ausgewirkt haben.
 
-\![Grafische Darstellung der Anzahl angepasster Events auf der Seite Custom Events im Dashboard, die Trends für ein angepasstes Event anzeigt]({% image_buster /assets/img_archive/custom_event_analytics_example.png %} "custom_event_analytics_example.png")
+![Grafische Darstellung der Anzahl angepasster Events auf der Seite Custom Events im Dashboard, die Trends für ein angepasstes Event anzeigt]({% image_buster /assets/img_archive/custom_event_analytics_example.png %} "custom_event_analytics_example.png")
 
 Sie können auch **Filter** verwenden, um Ihre angepassten Events nach Stunden, monatlichen durchschnittlichen Nutzern:innen, Segmenten oder KPI-Formeln aufzuschlüsseln. 
 
-\![Angepasste Event Graph Filter]({% image_buster /assets/img/custom_events_report_filters.png %}){: style="max-width:40%;"}
+![Angepasste Event Graph Filter]({% image_buster /assets/img/custom_events_report_filters.png %}){: style="max-width:40%;"}
 
 {% alert tip %}
 [Ergänzen Sie angepasste Attribute]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#integers), um Nutzeraktionen wie bei angepassten Events zu zählen. Sie können jedoch keine angepassten Attribut-Daten in einer Zeitreihe anzeigen. Nutzer:innen-Aktionen, die nicht in einer Zeitreihe analysiert werden müssen, sollten mit dieser Methode aufgezeichnet werden.
@@ -157,11 +157,11 @@ Angepasste Event-Eigenschaften können verwendet werden, um Kampagnen-Trigger zu
 
 Verwenden Sie angepasste Event-Eigenschaften, um Ihre Zielgruppe für eine bestimmte Kampagne oder ein bestimmtes Canvas weiter einzugrenzen. Wenn Sie beispielsweise eine E-Commerce-Anwendung haben und einem Benutzer eine Nachricht senden möchten, wenn er seinen Warenkorb abbricht, können Sie eine angepasste Event-Eigenschaft von `item price` hinzufügen, um Ihre Zielgruppe zu verbessern und eine stärkere Personalisierung der Kampagne zu ermöglichen.
 
-\![Angepasste Event-Eigenschaften Filter für eine aufgegebene Karte. Zwei Filter werden mit einem AND Operator kombiniert, um diese Kampagne an Nutzer:innen zu senden, die ihre Karte mit einem Artikelpreis zwischen 100 und 200 Dollar aufgegeben haben]({% image_buster /assets/img_archive/customEventProperties.png %} "customEventProperties.png")
+![Angepasste Event-Eigenschaften Filter für eine aufgegebene Karte. Zwei Filter werden mit einem AND Operator kombiniert, um diese Kampagne an Nutzer:innen zu senden, die ihre Karte mit einem Artikelpreis zwischen 100 und 200 Dollar aufgegeben haben]({% image_buster /assets/img_archive/customEventProperties.png %} "customEventProperties.png")
 
 Verschachtelte Event-Eigenschaften werden auch bei [aktionsbasierter Zustellung]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/) unterstützt.
 
-\![Angepasste Event-Eigenschaften Filter für eine aufgegebene Karte. Ein Filter wird ausgewählt, wenn ein Artikel im Warenkorb mehr als 100 Dollar kostet.]({% image_buster /assets/img_archive/customEventPropertiesNested.png %} "customEventPropertiesNested.png")
+![Angepasste Event-Eigenschaften Filter für eine aufgegebene Karte. Ein Filter wird ausgewählt, wenn ein Artikel im Warenkorb mehr als 100 Dollar kostet.]({% image_buster /assets/img_archive/customEventPropertiesNested.png %} "customEventPropertiesNested.png")
 
 #### Nachrichten personalisieren
 
@@ -215,7 +215,7 @@ Die Filter für die Segmentierung der Eigenschaften von Ereignissen umfassen:
 - Hat in den letzten Y Tagen X-mal mit Eigenschaft A mit Wert B eingekauft.
 - Fügt die Möglichkeit der Segmentierung innerhalb von 1 bis 30 Tagen hinzu.
 
-\![Eine Filtergruppe, die 'Warenkorb-Abbruch' mit der Eigenschaft 'Anzahl der Itemes' und dem Wert 2 mehr als 1 Mal in den letzten 30 Kalendertagen hat.]({% image_buster /assets/img/nested_object3.png %})
+![Eine Filtergruppe, die 'Warenkorb-Abbruch' mit der Eigenschaft 'Anzahl der Itemes' und dem Wert 2 mehr als 1 Mal in den letzten 30 Kalendertagen hat.]({% image_buster /assets/img/nested_object3.png %})
 
 Daten werden für eine bestimmte Event-Eigenschaft erst protokolliert, nachdem sie von Ihrem Customer-Success-Manager aktiviert wurde, und Event-Eigenschaften sind erst ab diesem Zeitpunkt verfügbar.
 

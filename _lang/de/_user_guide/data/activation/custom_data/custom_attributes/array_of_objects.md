@@ -527,17 +527,17 @@ Bei der Segmentierung von Nutzern:innen auf der Grundlage von Objekt-Arrays komm
 
 Erstellen Sie ein neues Segment und wählen Sie **Verschachteltes angepasstes Attribut** als Filter. Suchen Sie dann den Namen Ihres Objekt-Arrays und wählen Sie ihn aus.
 
-\![Filter nach Array von Objekten.]({% image_buster /assets/img_archive/array_of_objects_segmenting_1.gif %})
+![Filter nach Array von Objekten.]({% image_buster /assets/img_archive/array_of_objects_segmenting_1.gif %})
 
 Verwenden Sie die Punktschreibweise, um anzugeben, welches Feld im Array der Objekte Sie verwenden möchten. Beginnen Sie das Textfeld mit einem leeren Satz eckiger Klammern `[]`, um Braze mitzuteilen, dass Sie in einem Array von Objekten suchen. Fügen Sie danach einen Punkt `.` ein, gefolgt von dem Namen des Feldes, das Sie verwenden möchten.
 
 Wenn Sie beispielsweise das Objekt-Array `pets` anhand des Feldes `type` filtern möchten, geben Sie `[].type` ein und wählen aus, nach welchem Haustiertyp Sie filtern möchten, z. B. `snake`.
 
-\![Filter nach Haustierart ist gleich Schlange.]({% image_buster /assets/img_archive/array_of_objects_segmenting_3.png %})
+![Filter nach Haustierart ist gleich Schlange.]({% image_buster /assets/img_archive/array_of_objects_segmenting_3.png %})
 
 Oder Sie könnten nach Haustieren filtern, die eine `type` von `dog` haben. Hier hat ein Nutzer:innen mindestens einen Hund, so dass er sich für das Segment "alle Nutzer:innen, die mindestens ein Haustier vom Typ Hund haben" qualifiziert.
 
-\![Filter nach Haustierart ist gleich Hund.]({% image_buster /assets/img_archive/array_of_objects_segmenting_2.png %})
+![Filter nach Haustierart ist gleich Hund.]({% image_buster /assets/img_archive/array_of_objects_segmenting_2.png %})
 
 ### Ebenen der Verschachtelung
 

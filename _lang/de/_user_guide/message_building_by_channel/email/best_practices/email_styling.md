@@ -28,7 +28,7 @@ Abwesenheitsantworten können tatsächlich wertvolle Informationen liefern, die 
 
 Der Text in der Kopfzeile einer E-Mail vermittelt auf effiziente Weise das Hauptthema der Nachricht, um das Interesse des Lesers zu wecken und ihn zum Öffnen der Nachricht zu bewegen. Preheader-Text wird auch häufig von Marketern für E-Mails verwendet, um zusätzliche Informationen über den Content einer E-Mail bereitzustellen. Ein Preheader ist der Vorschautext, der unmittelbar nach einem E-Mail-Betreff angezeigt wird. Im folgenden Beispiel lautet der Preheader `- Brand. New. Lounge Shorts`.
 
-\![Preheader-Text in einem Posteingang von Google Mail mit dem Text "Marke. Neu. Lounge Shorts“.]({% image_buster /assets/img_archive/preheader_example.png %})
+![Preheader-Text in einem Posteingang von Google Mail mit dem Text "Marke. Neu. Lounge Shorts“.]({% image_buster /assets/img_archive/preheader_example.png %})
 
 Die Länge des sichtbaren Textes in der Kopfzeile hängt vom E-Mail-Client des Benutzers und von der Länge der Betreffzeile der E-Mail ab. Im Allgemeinen empfehlen wir, dass E-Mail-Preheader zwischen 50 und 100 Zeichen lang sind.
 

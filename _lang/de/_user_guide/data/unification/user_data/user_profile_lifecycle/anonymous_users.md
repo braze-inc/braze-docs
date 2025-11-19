@@ -44,7 +44,7 @@ Nehmen wir an, Sie weisen das angepasste Attribut "is_lead_profile" jedem anonym
 - **Externe Nutzer-ID ist leer**
 - "is_lead_profile" **ist wahr**
 
-\![Segmente filtern nach einer leeren externen ID eines Nutzers und einem echten "is_lead_profile" angepassten Attribut.]({% image_buster /assets/img/getting_started/anonymous_users.png %})
+![Segmente filtern nach einer leeren externen ID eines Nutzers und einem echten "is_lead_profile" angepassten Attribut.]({% image_buster /assets/img/getting_started/anonymous_users.png %})
 
 ### Erfassen von Kassendaten eines anonymen Nutzer:in
 

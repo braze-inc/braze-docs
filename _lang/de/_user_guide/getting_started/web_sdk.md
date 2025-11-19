@@ -34,7 +34,7 @@ Das Braze SDK erfasst automatisch riesige Datenmengen auf Nutzerebene, sodass Si
 
 Das SDK macht es einfach, In-App-Nachrichten zu verfassen und zu versenden, um direkt mit den Nutzer:innen in Kontakt zu treten. Sie können wählen, ob Sie Slideup-, Modal- oder Vollbildnachrichten senden möchten, je nach Ihrer Kampagnenstrategie. Weitere Informationen zum Verfassen einer In-App-Nachricht finden Sie auf unserer Seite zum [Erstellen einer In-App-Nachricht]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/).
 
-\![Push auf einem Webbrowser angezeigt]({% image_buster /assets/img_archive/web_push_macbook.png %}){: style="float:right;max-width:45%;margin-left:20px;border:0;"}
+![Push auf einem Webbrowser angezeigt]({% image_buster /assets/img_archive/web_push_macbook.png %}){: style="float:right;max-width:45%;margin-left:20px;border:0;"}
 
 ## Push-Benachrichtigungen
 
@@ -48,7 +48,7 @@ Eine Kampagne, die In-App-Nachrichten enthält, wird standardmäßig an alle Ver
 
 Sie können ein Segment Ihrer Internet-Nutzer erstellen, indem Sie **Apps und Websites mit Targeting** auf **Nutzer:innen bestimmter Apps** zusammenstellen, und dann nur Ihre Website für die **spezifischen Apps** auswählen.
 
-\![Segment Detailseite mit Web App im Fokus]({% image_buster /assets/img_archive/web-users-segment.png %}){:style="max-width:60%"}
+![Segment Detailseite mit Web App im Fokus]({% image_buster /assets/img_archive/web-users-segment.png %}){:style="max-width:60%"}
 
 Dies ermöglicht es Ihnen, Nutzer:innen auf der Grundlage ihres Verhaltens auf intelligente Weise anzusprechen. Wenn Sie Webnutzer:innen ansprechen möchten, um sie zum Herunterladen Ihrer mobilen App zu bewegen, würden Sie dieses Segment als Ihre Zielgruppe erstellen. Wenn Sie eine Nachrichtenkampagne versenden möchten, die eine mobile In-App-Nachricht, aber keine Web-Nachricht enthält, deaktivieren Sie das Symbol für Ihre Website in Ihrem Segment.
 

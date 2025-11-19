@@ -18,7 +18,7 @@ Wenn der Winning Path in einem Experimentierpfad-Schritt aktiviert ist, werden a
 
 Fügen Sie einen [Experimentierpfad]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/) zu Ihrem Canvas hinzu und aktivieren Sie dann die Option **Gewinnpfad**.
 
-\![Einstellungen im Experiment-Pfad mit dem Titel "Nachfolgende Nutzer:innen auf den Siegerpfad verteilen". Der Abschnitt enthält einen Umschalter für den Winning-Pfad und Optionen zur Konfiguration des Konversions-Events und des Experiment-Fensters.]({% image_buster /assets/img/experiment_step/experiment_winning_path_recurring.png %})
+![Einstellungen im Experiment-Pfad mit dem Titel "Nachfolgende Nutzer:innen auf den Siegerpfad verteilen". Der Abschnitt enthält einen Umschalter für den Winning-Pfad und Optionen zur Konfiguration des Konversions-Events und des Experiment-Fensters.]({% image_buster /assets/img/experiment_step/experiment_winning_path_recurring.png %})
 
 ### Schritt 2: Konfigurieren Sie die Einstellungen für den Gewinnweg
 
@@ -28,7 +28,7 @@ Wenn Sie Öffnungen oder Klicks als Konversions-Event wählen, stellen Sie siche
 
 Legen Sie als nächstes das **Experimentierfenster** fest. Das **Experiment-Fenster** gibt an, wie lange das Experiment läuft, bevor der Gewinnerpfad ermittelt wird und alle nachfolgenden Benutzer diesen Pfad entlang geschickt werden. Das Fenster beginnt, wenn der erste Nutzer:innen den Schritt betritt.
 
-\![Winning Path Settings mit dem Konversions-Event "Klicks" ausgewählt für ein 12-Stunden-Experimentierfenster.]({% image_buster /assets/img/experiment_step/experiment_winning_settings.png %})
+![Winning Path Settings mit dem Konversions-Event "Klicks" ausgewählt für ein 12-Stunden-Experimentierfenster.]({% image_buster /assets/img/experiment_step/experiment_winning_settings.png %})
 
 ### Schritt 3: Fallback bestimmen {#statistical-significance}
 
@@ -36,7 +36,7 @@ Wenn die Ergebnisse des Tests nicht ausreichen, um einen statistisch signifikant
 
 Alternativ können Sie auch auswählen, **allen zukünftigen Nutzer:innen die Mischung der Pfade weiter zu senden**. Mit dieser Option werden künftige Benutzer entsprechend den in der Pfadverteilung des Experiments angegebenen Prozentsätzen auf die verschiedenen Pfade geschickt.
 
-\!["Allen zukünftigen Nutzern weiterhin den Pfadmix senden" ausgewählt, was mit den Nutzer:innen geschehen soll, wenn das Testergebnis statistisch nicht signifikant ist.]({% image_buster /assets/img/experiment_step/experiment_winning_statistical.png %})
+!["Allen zukünftigen Nutzern weiterhin den Pfadmix senden" ausgewählt, was mit den Nutzer:innen geschehen soll, wenn das Testergebnis statistisch nicht signifikant ist.]({% image_buster /assets/img/experiment_step/experiment_winning_statistical.png %})
 
 {% alert note %}
 Eine Verzögerungsgruppe erscheint nur dann in Ihrer Pfadverteilung, wenn Ihr Canvas für eine einmalige Eingabe eingerichtet ist und Ihr Experimentschritt drei oder weniger Pfade hat. Wiederkehrende und getriggerte Canvase haben keine Verzögerungsgruppe, wenn Winning Path aktiviert ist.
@@ -63,11 +63,11 @@ Wenn Sie Winning Path aktiviert haben, ist Ihre Analyseansicht in zwei Registerk
 
 Bei der Verwendung von Gewinnwegen in einem Canvas, bei dem Nutzer:innen nur eine einmalige Eingabe vornehmen dürfen, wird automatisch eine Verzögerungsgruppe eingefügt. Während der Dauer des Experiments wird ein bestimmter Prozentsatz der Nutzer:innen in der Verzögerungsgruppe gehalten, während die übrigen Nutzer:innen Ihre Experimentpfade betreten.
 
-\![Experiment-Pfad-Schritt mit einer Verzögerungsgruppe für den Gewinnerpfad]({% image_buster /assets/img/experiment_step/experiment_one_time.png %}){: style="max-width:75%"}
+![Experiment-Pfad-Schritt mit einer Verzögerungsgruppe für den Gewinnerpfad]({% image_buster /assets/img/experiment_step/experiment_one_time.png %}){: style="max-width:75%"}
 
 Wenn der Test abgeschlossen ist und ein Siegerpfad ermittelt wurde, werden die Benutzer, die der Verzögerungsgruppe zugewiesen sind, zu dem gewählten Pfad geleitet und fahren mit dem Canvas fort.
 
-\![Experiment-Pfad-Schritt mit einer Verzögerungsgruppe, die auf den Siegerpfad geschickt wird]({% image_buster /assets/img/experiment_step/experiment_one_time_results.png %}){: style="max-width:75%"}
+![Experiment-Pfad-Schritt mit einer Verzögerungsgruppe, die auf den Siegerpfad geschickt wird]({% image_buster /assets/img/experiment_step/experiment_one_time_results.png %}){: style="max-width:75%"}
 
 ### Lieferung in Ortszeit
 

@@ -59,7 +59,7 @@ Als nächstes passen Sie Ihr Formular nach Bedarf an. Sie können die folgenden 
 - Schlüssel-Wert-Paare
 - Stil für Kopf- und Fließtext, Schaltflächen, Rahmenfarbe der Schaltflächen, Hintergrund und Overlay
 
-\![Composer für E-Mail-Erfassungsformular.]({% image_buster /assets/img/email_capture.png %})
+![Composer für E-Mail-Erfassungsformular.]({% image_buster /assets/img/email_capture.png %})
 
 Wenn Sie weitere Anpassungen vornehmen möchten, wählen Sie **Benutzerdefinierter Code** für Ihren **Nachrichtentyp**. Sie können diese [modale Vorlage für die E-Mail-Erfassung](https://github.com/braze-inc/in-app-message-templates/tree/master/braze-templates/5-email-capture-modal) aus dem GitHub-Repository [Braze Templates](https://github.com/braze-inc/in-app-message-templates/tree/master/braze-templates) als Startcode verwenden.
 

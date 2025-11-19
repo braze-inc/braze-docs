@@ -61,7 +61,7 @@ Ihr Bericht ist in drei Abschnitte unterteilt:
 
 Die Tabelle mit den Konversionsdetails zeigt immer eine Spalte für *Empfänger:innen* und eine weitere für *Konversionen* (Rate und Summe). Die beiden verbleibenden Tabellenspalten, die angezeigt werden, hängen von den Optionen ab, die Sie beim Einrichten Ihres Berichts ausgewählt haben. 
 
-\![Tabelle mit Konversionsdetails, die Berührungen als Attributionsmethode für die Spalten drei und vier anzeigt.]({% image_buster /assets/img_archive/conversions2_details.png %}){: style="border:none"}
+![Tabelle mit Konversionsdetails, die Berührungen als Attributionsmethode für die Spalten drei und vier anzeigt.]({% image_buster /assets/img_archive/conversions2_details.png %}){: style="border:none"}
 
 Die folgende Tabelle beschreibt mögliche Metriken.
 
@@ -87,7 +87,7 @@ Wählen Sie eine Download-Option aus, um die Zeitreihendaten herunterzuladen: PN
 Dieses Diagramm zeigt jeweils nur Daten für einen einzelnen Kanal an. Verwenden Sie das Dropdown-Menü **Kanal** auf dem Chart, um einen einzelnen Kanal auszuwählen.
 {% endalert %}
 
-\![Funnel-Balkendiagramm für Konversionen für zwei Kampagnen, die ähnliche Ergebnisse für zugestellte E-Mails, geöffnete E-Mails, angeklickte E-Mails und Konversionen zeigen.]({% image_buster /assets/img_archive/conversions2_funnel.png %})
+![Funnel-Balkendiagramm für Konversionen für zwei Kampagnen, die ähnliche Ergebnisse für zugestellte E-Mails, geöffnete E-Mails, angeklickte E-Mails und Konversionen zeigen.]({% image_buster /assets/img_archive/conversions2_funnel.png %})
 
 ### Konversionen im Zeitverlauf
 
@@ -95,7 +95,7 @@ Dieses Zeitreihendiagramm enthält eine Darstellung der Konversionen pro Kampagn
 
 Um die Zeitreihendaten herunterzuladen, wählen Sie <i class="fas fa-bars"></i> und dann die gewünschte Download-Option aus. Die verfügbaren Optionen sind PNG, JPEG, PDF, SVG oder CSV.
 
-\![Zeitreihengrafik der Konversionen für zwei E-Mail Kampagnen, die die Konversionen nach Tagen anzeigt.]({% image_buster /assets/img_archive/conversions2_over_time.png %})
+![Zeitreihengrafik der Konversionen für zwei E-Mail Kampagnen, die die Konversionen nach Tagen anzeigt.]({% image_buster /assets/img_archive/conversions2_over_time.png %})
 
 ### Attributionsmethoden
 

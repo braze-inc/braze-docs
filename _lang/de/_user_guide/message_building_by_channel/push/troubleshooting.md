@@ -28,7 +28,7 @@ Haben Sie Probleme bei der Zustellung von Push-Benachrichtigungen? Es gibt eine 
 
 Pushes können nur an abonnierte oder Opt-in Nutzer:innen gesendet werden. Überprüfen Sie Ihr Nutzerprofil auf dem Tab [Engagement]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/#engagement-tab) im Abschnitt **Benutzerprofil**, um zu sehen, ob Sie aktiv für Push für den Workspace, den Sie testen, registriert sind. Wenn Sie für mehrere Apps registriert sind, finden Sie diese im Feld **Push registriert für** aufgelistet:
 
-\![Push registriert für]({% image_buster /assets/img_archive/trouble1.png %})
+![Push registriert für]({% image_buster /assets/img_archive/trouble1.png %})
 
 Sie können die Nutzerprofile auch über Braze Export-Endpunkte exportieren:
 - [Nutzer:innen nach Bezeichner]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier)
@@ -40,11 +40,11 @@ Beide Endpunkte geben ein Push-Token-Objekt zurück, das Push Enablement-Informa
 
 Vergewissern Sie sich, dass Sie in das Segment fallen, auf das Sie Targeting betreiben (wenn es sich um eine Live-Kampagne und nicht um einen Test handelt). Im **Nutzerprofil** sehen Sie eine Liste der Segmente, in die der Nutzer:innen derzeit fällt. Denken Sie daran, dass es sich hierbei um eine sich ständig ändernde Variable handelt, da die Segmentierung in Realtime aktualisiert wird.
 
-\![Liste der Segmente]({% image_buster /assets/img_archive/trouble2.png %})
+![Liste der Segmente]({% image_buster /assets/img_archive/trouble2.png %})
 
 Sie können auch bestätigen, dass der Nutzer:innen Teil des Segments ist, indem Sie bei der Erstellung eines Segments die **Benutzersuche** verwenden.
 
-\![Abschnitt Nutzer:in mit einem Suchfeld.]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:80%;"}
+![Abschnitt Nutzer:in mit einem Suchfeld.]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:80%;"}
 
 #### Push-Benachrichtigungen Kappen
 
@@ -52,7 +52,7 @@ Prüfen Sie die globalen Frequenz-Caps. Es ist möglich, dass Sie die Push-Benac
 
 Sie können dies tun, indem Sie das [globale Frequency-Capping]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#freq-cap-feat-over) im Dashboard aktivieren. Wenn die Kampagne so eingestellt ist, dass sie den Frequency-Capping-Regeln unterliegt, sind einige Nutzer:innen von diesen Einstellungen betroffen.
 
-\![Details zur Kampagne]({% image_buster /assets/img_archive/trouble3.png %})
+![Details zur Kampagne]({% image_buster /assets/img_archive/trouble3.png %})
 
 #### Rate-Limits
 
@@ -86,7 +86,7 @@ Wenn Sie Probleme damit haben, dass Links in Push-Benachrichtigungen unerwartet 
 
 Überprüfen Sie in Ihrer Kampagne oder im Canvas-Schritt, dass die Option **Internet-URL innerhalb der mobilen App öffnen** nicht ausgewählt ist. Ist dies der Fall, löschen Sie die Auswahl und starten Sie erneut. 
 
-\!["Verhalten bei Klick" bei der Konfiguration eines Push auf "Internet-URL öffnen" gesetzt und "Internet-URL innerhalb der mobilen App öffnen" nicht markiert.]({% image_buster /assets/img/push_on_click.png %})
+!["Verhalten bei Klick" bei der Konfiguration eines Push auf "Internet-URL öffnen" gesetzt und "Internet-URL innerhalb der mobilen App öffnen" nicht markiert.]({% image_buster /assets/img/push_on_click.png %})
 
 Die Standard-Interaktion für das Klickverhalten "Internet-URL öffnen" unterscheidet sich je nach SDK-Version. Bei den SDK-Versionen iOS 2.29.0 und Android 2.0.0 und höher ist diese Option standardmäßig ausgewählt und die Internet-URLs werden in einer Webansicht innerhalb der App geöffnet. Vor diesen Versionen ist diese Option standardmäßig deaktiviert und Internet-URLs werden im Standard Webbrowser des Geräts geöffnet.
 

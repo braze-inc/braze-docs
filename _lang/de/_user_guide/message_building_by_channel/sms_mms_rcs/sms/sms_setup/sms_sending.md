@@ -44,7 +44,7 @@ Einige Marken möchten vielleicht an eine Gruppe von Nutzern senden, die Telefon
 
 Um diese Einschränkung zu überwinden, können Sie bei der [Einrichtung von]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/#setup-process) Abo-Gruppen Gruppen einrichten, die Lang- und Shortcodes aus mehreren verschiedenen Ländern enthalten. Wenn Sie diese Option aktiviert haben, werden beim Start einer Kampagne automatisch Telefonnummern mit der gleichen Landesvorwahl wie die Telefonnummer des Zielbenutzers verwendet. Sie müssen keine separaten Kampagnen für Nutzer mit Telefonnummern mit unterschiedlichen Ländervorwahlen erstellen, sondern können eine einzige Kampagne starten oder eine einzige Canvas-Komponente verwenden, um relevante Nutzer anzusprechen.
 
-\![SMS-Payloads werden unter Verwendung desselben Codes wie die Telefonnummer des Nutzers:innen der Zielgruppe versendet]({% image_buster /assets/img/sms/multi_country_subgroups.png %})
+![SMS-Payloads werden unter Verwendung desselben Codes wie die Telefonnummer des Nutzers:innen der Zielgruppe versendet]({% image_buster /assets/img/sms/multi_country_subgroups.png %})
 
 #### Bewährte Praktiken
 

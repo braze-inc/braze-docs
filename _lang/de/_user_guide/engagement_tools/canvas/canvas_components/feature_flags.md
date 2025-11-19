@@ -17,7 +17,7 @@ Suchen Sie nach weiteren Informationen über Feature-Flags und wie sie in Braze 
 
 ## Erstellen eines Feature-Flags
 
-\![Ein Beispiel für einen Feature-Flag-Schritt für das Feature Live Chat Button.]({% image_buster /assets/img/feature_flags/feature_flag_canvas_step.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
+![Ein Beispiel für einen Feature-Flag-Schritt für das Feature Live Chat Button.]({% image_buster /assets/img/feature_flags/feature_flag_canvas_step.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
 Um eine Feature-Flag Komponente zu erstellen, fügen Sie zunächst einen Schritt zu Ihrem Canvas hinzu. Ziehen Sie die Komponente per Drag & Drop aus der Seitenleiste oder klicken Sie auf die Plus-Schaltfläche <i class="fas fa-plus-circle"></i> am unteren Rand eines Schritts und wählen Sie **Feature Flag**. Als Nächstes wählen Sie das Feature-Flag aus der Dropdown-Liste aus, die alle Feature-Flags enthält, die nicht archiviert sind.
 
@@ -31,7 +31,7 @@ Eigenschaften in einem Canvas-Schritt können nach dem Start geändert werden, u
 
 Bei der Erstellung eines Feature-Flags legen Sie Standard-Eigenschaften fest. Beim Einrichten eines Funktionskennzeichen-Leinwandschritts können Sie entweder die Standardwerte beibehalten oder die Werte für Benutzer, die diesen Schritt eingeben, überschreiben.
 
-\![Ein Feature-Flag "Preference Center" mit "String" als Eigenschaft, "url" als Schlüssel der Eigenschaft und einem Wert.]({% image_buster /assets/img/feature_flags/feature_flags_canvas_details.png %}){: style="max-width:90%"}
+![Ein Feature-Flag "Preference Center" mit "String" als Eigenschaft, "url" als Schlüssel der Eigenschaft und einem Wert.]({% image_buster /assets/img/feature_flags/feature_flags_canvas_details.png %}){: style="max-width:90%"}
 
 Gehen Sie zu **Messaging** > **Feature Flags**, um zusätzliche Eigenschaften zu bearbeiten, hinzuzufügen oder zu entfernen.
 

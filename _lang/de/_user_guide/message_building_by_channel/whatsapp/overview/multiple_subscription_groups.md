@@ -18,7 +18,7 @@ Mehrere WhatsApp Business-Konten sind nützlich, wenn Sie WhatsApp-Nachrichten a
 
 Geschäftskonten, die innerhalb desselben Meta Business Manager verschachtelt sind, teilen sich auch die Verwaltung der Nutzerzugriffsrechte und Kataloge (noch nicht von Braze unterstützt).
 
-\![Diagramm des Braze- und WhatsApp-Ökosystems, das zeigt, wie Workspaces und WhatsApp Business-Konten miteinander verbunden sind: Sie können eine Abo-Gruppe mit einer Telefonnummer, mehrere WhatsApp Business-Konten mit einem Workspace und einen Workspace mit mehreren Meta Business-Portfolios verbinden.]({% image_buster /assets/img/whatsapp/whatsapp_braze_ecosystem.png %}) 
+![Diagramm des Braze- und WhatsApp-Ökosystems, das zeigt, wie Workspaces und WhatsApp Business-Konten miteinander verbunden sind: Sie können eine Abo-Gruppe mit einer Telefonnummer, mehrere WhatsApp Business-Konten mit einem Workspace und einen Workspace mit mehreren Meta Business-Portfolios verbinden.]({% image_buster /assets/img/whatsapp/whatsapp_braze_ecosystem.png %}) 
 
 ### Hinzufügen eines WhatsApp Business-Kontos
 
@@ -26,7 +26,7 @@ Sie können bis zu 10 WhatsApp Business-Konten pro Arbeitsbereich hinzufügen. D
 
 1. Gehen Sie zu **Technologie Partner** > **WhatsApp** und wählen Sie **WhatsApp Business-Konto hinzufügen**. 
 
-\![WhatsApp Messaging Integration mit Optionen zum Hinzufügen eines Geschäftskontos oder zum Hinzufügen einer Abo-Gruppe und einer Nummer.]({% image_buster /assets/img/whatsapp/multiple_wabas.png %})
+![WhatsApp Messaging Integration mit Optionen zum Hinzufügen eines Geschäftskontos oder zum Hinzufügen einer Abo-Gruppe und einer Nummer.]({% image_buster /assets/img/whatsapp/multiple_wabas.png %})
 
 {: start="2"}
 2\. Gehen Sie den Anmeldevorgang durch. Eine detaillierte Schritt-für-Schritt-Anleitung finden Sie unter [WhatsApp Embedded Signup]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/embedded_signup/).
@@ -51,7 +51,7 @@ Sie können bis zu 20 Abonnementgruppen (und sendende Telefonnummern) pro WhatsA
 
 1. Gehen Sie zu **Technologie Partner** > **WhatsApp** und wählen Sie **Abo-Gruppe und Nummer hinzufügen**.
 
-\![WhatsApp Messaging Integration mit Optionen zum Hinzufügen eines Geschäftskontos oder zum Hinzufügen einer Abo-Gruppe und einer Nummer.]({% image_buster /assets/img/whatsapp/multiple_wabas.png %})
+![WhatsApp Messaging Integration mit Optionen zum Hinzufügen eines Geschäftskontos oder zum Hinzufügen einer Abo-Gruppe und einer Nummer.]({% image_buster /assets/img/whatsapp/multiple_wabas.png %})
 
 {: start="2"}
 2\. Gehen Sie den Anmeldevorgang durch. <br><br> Im Schritt **Wählen Sie Ihr WhatsApp Business-Konto** wählen Sie Ihr bestehendes WhatsApp Business-Konto aus und fügen eine neue Telefonnummer hinzu. Diese Nummer muss alle Anforderungen an eine WhatsApp-Telefonnummer erfüllen, einschließlich der, dass sie nicht für andere WhatsApp-Konten registriert ist.

@@ -24,7 +24,7 @@ Führen Sie diese Schritte aus, um eine Benachrichtigung über einen nicht vorr�
 1. Gehen Sie zu Ihrem Katalog und wählen Sie die Registerkarte **Einstellungen**.
 2. Wählen Sie den Schalter **Wieder vorrätig** aus.
 3. Wenn die globalen „Wieder verfügbar“-Einstellungen nicht konfiguriert wurden, werden Sie aufgefordert, die angepassten Events und Eigenschaften einzurichten, die zum Auslösen von „Wieder verfügbar“-Benachrichtigungen verwendet werden sollen:
-    <br> \![Schublade für Katalogeinstellungen.]({% image_buster /assets/img/catalog_settings_drawer.png %}){: style="max-width:70%;"}
+    <br> ![Schublade für Katalogeinstellungen.]({% image_buster /assets/img/catalog_settings_drawer.png %}){: style="max-width:70%;"}
     - **Fallback-Katalog** Dies ist der Katalog, der für das „Wieder verfügbar“-Abo verwendet wird, wenn die Eigenschaft `catalog_name` für das angepasste Event nicht vorhanden ist.
     - **Angepasstes Event für Abonnements** ist das angepasste Event von Braze, mit dem ein Nutzer:in für „Wieder verfügbar“-Benachrichtigungen abonniert wird. Wenn dieses Event eintritt, erhält der oder die Nutzer:in, der oder die das Event ausgeführt hat, ein Abonnement.
     - **Angepasstes Event für die Abmeldung** ist das angepasste Event von Braze, mit dem ein Nutzer:in von den „Wieder verfügbar“-Benachrichtigungen abgemeldet wird. Dieses Ereignis ist optional. Führt der Nutzer:in dieses Ereignis nicht aus, wird er nach 90 Tagen abgemeldet oder wenn das Back-in-Stock-Ereignis triggert, je nachdem, was zuerst eintritt.
@@ -59,7 +59,7 @@ Back-in-Stock- und Price-Drop-Trigger verwenden dasselbe Ereignis, um den Nutzer
 6\. Legen Sie das **Feld Inventar im Katalog** fest. Dieses Katalogfeld wird verwendet, um festzustellen, ob der Artikel nicht mehr vorrätig ist. Das Feld muss vom Typ Zahl sein.
 7\. Wählen Sie **Einstellungen speichern**.
 
-\![Katalogeinstellungen, in denen das Feature "Auf Lager" aktiviert ist. Die Benachrichtigungsregeln sehen vor, dass alle zehn Minuten tausend Nutzer:innen benachrichtigt werden.]({% image_buster /assets/img/back_in_stock_settings.png %})
+![Katalogeinstellungen, in denen das Feature "Auf Lager" aktiviert ist. Die Benachrichtigungsregeln sehen vor, dass alle zehn Minuten tausend Nutzer:innen benachrichtigt werden.]({% image_buster /assets/img/back_in_stock_settings.png %})
 
 {% alert important %}
 Die Benachrichtigungsregeln in diesen Einstellungen ersetzen nicht die Canvas-Benachrichtigungseinstellungen, wie z.B. Stille Stunden.

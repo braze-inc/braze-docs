@@ -28,7 +28,7 @@ Nach dem SDK-Upgrade muss auch ein Upgrade der Nutzer-App durchgeführt werden. 
 
 Sie können wählen, wann Braze eine Karte im Schritt **Zustellung** erstellt, wenn Sie eine neue [Content Card Kampagne]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/) mit geplanter Zustellung erstellen.
 
-\![Abschnitt Content-Card-Steuerung bei der Bearbeitung der Zustellung einer geplanten Content-Card.]({% image_buster /assets/img_archive/card_creation.png %})
+![Abschnitt Content-Card-Steuerung bei der Bearbeitung der Zustellung einer geplanten Content-Card.]({% image_buster /assets/img_archive/card_creation.png %})
 
 Die folgenden Optionen sind verfügbar:
 
@@ -42,7 +42,7 @@ Unabhängig von der von Ihnen gewählten Option beginnt der Countdown für das A
 
 Sie können wählen, wann Braze eine Karte auf der Registerkarte **Nachrichtenkanäle** eines [Inhaltskarten-Nachrichtenschritts]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) erstellt.
 
-\![Abschnitt Content-Card-Steuerung bei der Bearbeitung der Zustellung einer geplanten Content-Card.]({% image_buster /assets/img_archive/card_creation_canvas.png %})
+![Abschnitt Content-Card-Steuerung bei der Bearbeitung der Zustellung einer geplanten Content-Card.]({% image_buster /assets/img_archive/card_creation_canvas.png %})
 
 Die folgenden Optionen sind verfügbar:
 

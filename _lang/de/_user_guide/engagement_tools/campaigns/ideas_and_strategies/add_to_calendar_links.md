@@ -14,7 +14,7 @@ channel: email
 
 Entwerfen Sie dazu Ihre E-Mail und legen Sie fest, wo Sie Ihre Links platzieren möchten. Fügen Sie dann zwei Optionen hinzu: eine für Google Kalender und eine für andere Kalender (wie iCal oder Outlook). Zum Beispiel "Zum Google Kalender hinzufügen" und "Zu iCal oder Outlook hinzufügen".
 
-\![Link-Dialog beim Hinzufügen eines Links im Dashboard. Die Registerkarte „Link-Info“ ist ausgewählt und der Text ist auf „Zum Google-Kalender hinzufügen“ eingestellt.]({% image_buster /assets/img_archive/calendar_1.png %}){: style="max-width:50%"}
+![Link-Dialog beim Hinzufügen eines Links im Dashboard. Die Registerkarte „Link-Info“ ist ausgewählt und der Text ist auf „Zum Google-Kalender hinzufügen“ eingestellt.]({% image_buster /assets/img_archive/calendar_1.png %}){: style="max-width:50%"}
 
 ## URL-Format
 
@@ -79,19 +79,19 @@ Wenn Sie beispielsweise den Link „Zum Google Kalender hinzufügen“ öffnen u
 
 Wenn Sie darauf klicken, öffnet sich der Google-Kalender in einer neuen Registerkarte oder einem neuen Fenster mit den Details des Termins, die in der Einladung bereits ausgefüllt sind und die der Nutzer speichern kann. Dies geschieht sowohl auf dem Handy als auch auf dem Desktop.
 
-\![Google Kalender-Dialog zum Hinzufügen eines Termins mit den hinzugefügten und speicherbereiten Details.]({% image_buster /assets/img_archive/calendar_2.png %}){: style="max-width:75%"}
+![Google Kalender-Dialog zum Hinzufügen eines Termins mit den hinzugefügten und speicherbereiten Details.]({% image_buster /assets/img_archive/calendar_2.png %}){: style="max-width:75%"}
 
 ### iCal oder Outlook
 
 Wenn Sie auf den Desktop klicken, wird eine ICS-Datei heruntergeladen. Der Benutzer muss dann die ICS-Datei öffnen, wodurch iCal oder Outlook geöffnet wird und der Benutzer aufgefordert wird, das Ereignis zu seinem Kalender hinzuzufügen.
 
-\![iCal-Kalender mit einem Dialog zum Hinzufügen eines neuen Termins, der den Nutzer:innen auffordert, einen Kalender auszuwählen und zu bestätigen.]({% image_buster /assets/img_archive/calendar_3.png %}){: style="max-width:75%"}
+![iCal-Kalender mit einem Dialog zum Hinzufügen eines neuen Termins, der den Nutzer:innen auffordert, einen Kalender auszuwählen und zu bestätigen.]({% image_buster /assets/img_archive/calendar_3.png %}){: style="max-width:75%"}
 
-\![iCal-Kalender mit dem hinzugefügten Ereignis.]({% image_buster /assets/img_archive/calendar_4.png %}){: style="max-width:81%"}
+![iCal-Kalender mit dem hinzugefügten Ereignis.]({% image_buster /assets/img_archive/calendar_4.png %}){: style="max-width:81%"}
 
 Auf dem Handy müssen Sie den Link gedrückt halten und werden dann aufgefordert, ihn zu Ihrem Kalender hinzuzufügen.
 
-\![iOS-Popup-Fenster, wenn Sie auf einen Kalender-Link drücken und ihn gedrückt halten, das einen Button "Zum Kalender hinzufügen" enthält.]({% image_buster /assets/img_archive/calendar_5.png %}){: style="max-width:50%"}
+![iOS-Popup-Fenster, wenn Sie auf einen Kalender-Link drücken und ihn gedrückt halten, das einen Button "Zum Kalender hinzufügen" enthält.]({% image_buster /assets/img_archive/calendar_5.png %}){: style="max-width:50%"}
 
 Weitere Informationen finden Sie unter:
 * [Events für Google Kalender erstellen](https://developers.google.com/calendar/api/guides/create-events)

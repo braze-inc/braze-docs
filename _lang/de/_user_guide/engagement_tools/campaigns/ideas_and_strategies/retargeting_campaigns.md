@@ -17,7 +17,7 @@ Braze unterstützt das Retargeting von Nutzern auf Grundlage des Nachrichtenempf
 
 Jeder Retargeting-Filter bietet nach dem Hinzufügen mehrere Optionen. Wenn Sie mehr über das Targeting von Benutzern erfahren möchten, besuchen Sie unseren [Braze Learning-Kurs](https://learning.braze.com/campaign-setup-delivery-targeting-conversions) zur Einrichtung von Kampagnen!
 
-\![Abschnitt Segmente Details mit dem Dropdown-Menü für die verfügbaren Filter.]({% image_buster /assets/img_archive/retarget.png %}){: style="max-width:80%;"}
+![Abschnitt Segmente Details mit dem Dropdown-Menü für die verfügbaren Filter.]({% image_buster /assets/img_archive/retarget.png %}){: style="max-width:80%;"}
 
 ## Retargeting-Filter
 
@@ -33,7 +33,7 @@ Mit diesem Filter können Sie Benutzer finden, die Folgendes getan oder nicht ge
 - E-Mail geöffnet
 - In-App-Nachricht angesehen
 
-\![]({% image_buster /assets/img_archive/clickedopened.png %})
+![]({% image_buster /assets/img_archive/clickedopened.png %})
 
 Dies kann weiter eingegrenzt werden, indem Sie die Kampagne auswählen, die Sie erneut ausführen möchten.
 
@@ -47,7 +47,7 @@ Verwenden Sie diesen Filter, um Nutzer zu finden, die mit Kampagnen oder Canvase
 - E-Mail geöffnet
 - In-App-Nachricht angesehen
 
-\![]({% image_buster /assets/img_archive/retarget_tag_filter.png %})
+![]({% image_buster /assets/img_archive/retarget_tag_filter.png %})
 
 ### Von Kampagne konvertiert 
 
@@ -55,7 +55,7 @@ Verwenden Sie diesen Filter, um Nutzer zu finden, die in Ihrer Zielkampagne konv
 
 Bei wiederkehrenden Kampagnen bezieht sich dieser Filter darauf, ob Nutzer auf die letzte Nachricht der Kampagne konvertiert haben.
 
-\![]({% image_buster /assets/img_archive/converted_from_campaign.png %})
+![]({% image_buster /assets/img_archive/converted_from_campaign.png %})
 
 ### Von Canvas konvertiert 
 
@@ -63,43 +63,43 @@ Verwenden Sie diesen Filter, um Nutzer zu finden, die in Ihrem Ziel-Canvas konve
 
 Bei regelmäßigen Canvases bezieht sich dieser Filter darauf, ob Benutzer jemals etwas gekauft haben, nachdem sie das Canvas durchlaufen haben.
 
-\![]({% image_buster /assets/img_archive/converted_from_canvas.png %})
+![]({% image_buster /assets/img_archive/converted_from_canvas.png %})
 
 ### In Kampagnen-Kontrollgruppe 
 
 Verwenden Sie diesen Filter, um Nutzer zu finden, die in der Kontrollgruppe Ihrer Zielkampagne vorkommen bzw. nicht vorkommen.
 
-\![]({% image_buster /assets/img_archive/campaign_control_group.png %})
+![]({% image_buster /assets/img_archive/campaign_control_group.png %})
 
 ### In Canvas-Kontrollgruppe 
 
 Verwenden Sie diesen Filter, um Benutzer zu finden, die in der Kontrollgruppe Ihres Ziel-Canvas vorkommen bzw. nicht vorkommen. Ihre Auswahl können Sie im Dropdown-Menü treffen.
 
-\![]({% image_buster /assets/img_archive/canvas_control_group.png %})
+![]({% image_buster /assets/img_archive/canvas_control_group.png %})
 
 ### Zuletzt empfangene Nachricht von einer bestimmten Kampagne 
 
 Verwenden Sie diesen Filter, um Benutzer zu finden, die eine bestimmte Kampagne zuletzt vor oder nach einem bestimmten Datum oder einer bestimmten Anzahl von Tagen erhalten haben. Dieser Filter berücksichtigt nicht, wann Benutzer andere Kampagnen erhalten haben.
 
-\![]({% image_buster /assets/img_archive/last_received_specific_campaign.png %})
+![]({% image_buster /assets/img_archive/last_received_specific_campaign.png %})
 
 ### Zuletzt empfangene Nachricht von einer bestimmten Kampagne oder Canvas mit Tag 
 
 Verwenden Sie diesen Filter, um Benutzer zu finden, die zuletzt eine bestimmte Kampagne oder ein Canvas mit einem bestimmten Tag vor oder nach einem bestimmten Datum oder einer bestimmten Anzahl von Tagen erhalten haben. Dieser Filter berücksichtigt nicht, wenn Benutzer andere Kampagnen oder Canvases erhalten haben.
 
-\![]({% image_buster /assets/img_archive/last_received_campaign_with_tag.png %})
+![]({% image_buster /assets/img_archive/last_received_campaign_with_tag.png %})
 
 ### Empfangene Nachricht der Kampagne 
 
 Verwenden Sie diesen Filter, um Nutzer zu finden, die Ihre Zielkampagne erhalten bzw. nicht erhalten haben.
 
-\![]({% image_buster /assets/img_archive/receivedcamp.png %})
+![]({% image_buster /assets/img_archive/receivedcamp.png %})
 
 ### Empfangene Nachricht von Kampagne oder Canvas mit Tag 
 
 Verwenden Sie diesen Filter, um Nutzer zu finden, die eine Kampagne oder ein Canvas mit Ihrem Ziel-Tag erhalten oder nicht erhalten haben.
 
-\![]({% image_buster /assets/img_archive/received_campaign_with_tag.png %})
+![]({% image_buster /assets/img_archive/received_campaign_with_tag.png %})
 
 ## Vorteile von Retargeting-Kampagnen
 

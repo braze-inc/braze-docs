@@ -27,7 +27,7 @@ Im Folgenden finden Sie einige Beispiele für die Arten von Verhaltensmustern, d
 
 Auf die Formeln können Sie in den Statistik-Panels auf den Seiten [Home]({{site.baseurl}}/user_guide/analytics/dashboard/home_dashboard/), [Umsatzbericht]({{site.baseurl}}/user_guide/data/export_braze_data/exporting_revenue_data/) und [Bericht über angepasste Events]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) im Dashboard zugreifen. Um dieses Panel anzuzeigen, gehen Sie zum Chart **Performance im Zeitverlauf**, ändern Sie die Dropdown-Liste **Statistik für** in **KPI-Formeln** und wählen Sie dann mindestens eine KPI-Formel aus, um das Chart zu füllen.
 
-\![Statistik für KPI-Formeln im Braze-Dashboard anzeigen]({% image_buster /assets/img_archive/kpi_forms.png %})
+![Statistik für KPI-Formeln im Braze-Dashboard anzeigen]({% image_buster /assets/img_archive/kpi_forms.png %})
 
 So erstellen Sie eine neue Formel:
 

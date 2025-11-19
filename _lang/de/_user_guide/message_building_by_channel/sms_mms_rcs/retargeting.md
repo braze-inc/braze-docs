@@ -37,13 +37,13 @@ Segmentierungsfilter Letzte empfangene SMS nach dem 8\. Dezember 2020.]({% image
 
 **Filter nach empfangenen Nachrichten aus SMS/MMS/RCS-Kampagnen**<br>
 Filtert Nutzer:innen, die eine Nachricht aus einer bestimmten Kampagne erhalten haben. Mit diesem Filter haben Sie auch die Möglichkeit, diejenigen herauszufiltern, die keine Nachrichten aus einer Kampagne erhalten haben. <br>
-\![Segmentierungs-Filter Hat Nachricht von Kampagne "SMS Retargeting" erhalten.]({% image_buster /assets/img/sms/filter1.png %})
+![Segmentierungs-Filter Hat Nachricht von Kampagne "SMS Retargeting" erhalten.]({% image_buster /assets/img/sms/filter1.png %})
 
 ### Triggern Sie Nachrichten, wenn Nutzer:innen SMS, MMS oder RCS erhalten. {#trigger-messages}
 
 Um Nachrichten auszulösen, wenn Nutzer:innen SMS-, MMS- oder RCS-Nachrichten aus einer bestimmten Kampagne erhalten, wählen Sie als Aktion triggern für eine aktionsbasierte Kampagne **Interaktion mit Kampagne** aus. Wählen Sie anschließend **SMS empfangen** und die gewünschte SMS-, MMS- oder RCS-Kampagne aus.
 
-\![]({% image_buster /assets/img/sms/trigger.png %})
+![]({% image_buster /assets/img/sms/trigger.png %})
 
 ### Nach Links für erweitertes Tracking filtern
 
@@ -55,14 +55,14 @@ Nur Kampagnen, bei denen das erweiterte Tracking aktiviert ist, erscheinen in de
 2. Wählen Sie **den angeklickten verkürzten SMS-Link** aus.
 3. Wählen Sie die gewünschte Kampagne.
 
-\![]({% image_buster /assets/img/sms/retargeting5.png %})
+![]({% image_buster /assets/img/sms/retargeting5.png %})
 
 **Retargeting von Nutzer:innen, die auf einen bestimmten Canvas-Schritt geklickt haben**
 1. Erstellen Sie ein Segment mit dem Filter **Geklickter/geöffneter Schritt**.
 2. Wählen Sie **den angeklickten verkürzten SMS-Link** aus.
 3. Wählen Sie die gewünschte Leinwand und Leinwandstufe.
 
-\![]({% image_buster /assets/img/keyword_example1.jpg %})
+![]({% image_buster /assets/img/keyword_example1.jpg %})
 
 ## Keyword-spezifisches Retargeting
 
@@ -72,20 +72,20 @@ Zusätzlich zu den drei Standard-Keyword-Kategorien (Opt-in, Opt-out und Hilfe) 
 
 Filtern Sie nach der Häufigkeit, mit der ein Nutzer:innen auf Ihre SMS, MMS oder RCS antwortet. Dieser Filter wertet das letzte Datum aus, an dem ein Nutzer:in eine eingehende Nachricht gesendet hat, die in eine der Schlüsselwortkategorien fällt. 
 
-\![Segmentierungsfilter Letzte gesendete SMS an Abo-Gruppe "Marketing SMS" mit dem Schlüsselwort "Opt-in" nach dem 11\. August 2020.]({% image_buster /assets/img/sms/retargeting1.png %})
+![Segmentierungsfilter Letzte gesendete SMS an Abo-Gruppe "Marketing SMS" mit dem Schlüsselwort "Opt-in" nach dem 11\. August 2020.]({% image_buster /assets/img/sms/retargeting1.png %})
 
 ### Nach Kampagne oder Canvas-Attribution filtern
 
 Filter für Nutzer:innen, die auf eine bestimmte SMS-, MMS- oder RCS-Kampagne oder Canvas-Komponente, Schlüsselwortkategorie oder Tag geantwortet haben.
 
 **Filter nach Antworten auf eine bestimmte Kampagne mit Stichwortkategorie**<br>
-\![Kampagne mit dem Filter "Hat auf SMS geantwortet" für Kampagne "SMS-283" "Aktion". Unter dem Filter wird die Funktion erwähnt: „Dieser Filter läuft 25 Monate nach dem Versand der letzten Nachricht von „Aktion“ ab, wenn er nicht in einer aktiven Kampagne verwendet wird.“]({% image_buster /assets/img/sms/clicked_opened_campaign.png %})
+![Kampagne mit dem Filter "Hat auf SMS geantwortet" für Kampagne "SMS-283" "Aktion". Unter dem Filter wird die Funktion erwähnt: „Dieser Filter läuft 25 Monate nach dem Versand der letzten Nachricht von „Aktion“ ab, wenn er nicht in einer aktiven Kampagne verwendet wird.“]({% image_buster /assets/img/sms/clicked_opened_campaign.png %})
 
 **Nach Beantwortung einer Kampagne oder eines Canvas mit einem bestimmten Tag filtern**
-\![Kampagne mit dem Filter "Hat auf SMS geantwortet" für Kampagne oder Canvas mit Tag "Curbside Messaging Service C".]({% image_buster /assets/img/sms/clicked_opened_campaign_canvas_tag.png %})
+![Kampagne mit dem Filter "Hat auf SMS geantwortet" für Kampagne oder Canvas mit Tag "Curbside Messaging Service C".]({% image_buster /assets/img/sms/clicked_opened_campaign_canvas_tag.png %})
 
 **Nach der Antwort auf einen bestimmten Schritt filtern**
-\![Kampagne mit dem Filter "Hat auf SMS geantwortet" für Schritt "SMS Double Opt" "Schritt - Hilfe".]({% image_buster /assets/img/sms/clicked_opened_step.png %})
+![Kampagne mit dem Filter "Hat auf SMS geantwortet" für Schritt "SMS Double Opt" "Schritt - Hilfe".]({% image_buster /assets/img/sms/clicked_opened_step.png %})
 
 ### Nachrichten nach Keyword triggern
 
@@ -98,11 +98,11 @@ Wenn ein aktionsbasiertes Canvas durch eine eingehende SMS- oder MMS-Nachricht a
 {% endalert %}
 
 **Nach Kategorie der eingehenden Keywords triggern**<br>
-\![Aktionsbasierte SMS-Kampagne mit dem Segmentierungsfilter Gesendetes Schlüsselwort "Opt-in" an Abo-Gruppe "Marketing SMS".]({% image_buster /assets/img/sms/retargeting2.png %}){: style="margin-top:10px;"}
+![Aktionsbasierte SMS-Kampagne mit dem Segmentierungsfilter Gesendetes Schlüsselwort "Opt-in" an Abo-Gruppe "Marketing SMS".]({% image_buster /assets/img/sms/retargeting2.png %}){: style="margin-top:10px;"}
 
 **Nach beliebigen Keywords triggern**<br>
 Beachten Sie, dass Sie beim Triggern einer Nachricht auf eine „Sonstige“-Keyword-Antwort die Möglichkeit haben, den Keyword-Text auf eine exakte Textübereinstimmung zu überprüfen. Für dieses Spiel gelten die gleichen Regeln wie oben beschrieben: Es wird nur die **exakte Ein-Wort-Nachricht** verarbeitet (Groß- und Kleinschreibung _wird nicht berücksichtigt_). Ein Keyword, das von `Hello Braze!` gesendet wird, würde die Kriterien im folgenden Beispiel nicht erfüllen.
-\![Aktionsbasierte SMS-Kampagne mit der Schlüsselwortkategorie "Sonstige", bei der die Nachricht genau "Hallo" oder "Hey" lautet.]({% image_buster /assets/img/sms/retargeting3.png %}){: style="margin-top:10px;"}
+![Aktionsbasierte SMS-Kampagne mit der Schlüsselwortkategorie "Sonstige", bei der die Nachricht genau "Hallo" oder "Hey" lautet.]({% image_buster /assets/img/sms/retargeting3.png %}){: style="margin-top:10px;"}
 
 **Template-Keywords**<br>
 Wenn Sie eine Kampagne oder eine Canvas-Komponente bei einer eingehenden SMS oder MMS triggern, können Sie optional die Text- oder Medienanhänge, die Ihr:e Nutzer:in gesendet hat, in den Textkörper Ihrer Kampagne oder Ihres Canvas mit Liquid einfügen. Auf diese Weise können Sie auf die Antwort des Benutzers zugreifen, die Sie dann in Ihre Antwort einfügen, eine bedingte Logik darauf anwenden oder alles andere tun können, was Sie mit Liquid tun können. 

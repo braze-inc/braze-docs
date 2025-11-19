@@ -13,7 +13,7 @@ local_redirect: #optimizations
 
 > Sie können für jede Kampagne, die auf einen einzelnen Kanal und ein einzelnes Gerät abzielt, einen [multivariaten oder A/B-Test]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) erstellen. Wenn Sie zum Beispiel multivariate oder A/B-Tests für eine Push-Kampagne verwenden möchten, können Sie nur iOS-Geräte oder nur Android-Geräte als Targeting verwenden - nicht beide Gerätetypen in derselben Kampagne.
 
-\![Das Dropdown-Menü beim Auswählen des Buttons "Kampagne erstellen", um entweder Multichannel oder Single Channel zu wählen.]({% image_buster /assets/img/ab_create_1.png %}){: style="max-width:25%;float:right;margin-left:15px;" }
+![Das Dropdown-Menü beim Auswählen des Buttons "Kampagne erstellen", um entweder Multichannel oder Single Channel zu wählen.]({% image_buster /assets/img/ab_create_1.png %}){: style="max-width:25%;float:right;margin-left:15px;" }
 
 ## Schritt 1: Kampagne erstellen
 
@@ -26,7 +26,7 @@ Sie können bis zu acht Varianten Ihrer Nachricht erstellen, die sich durch Tite
 
 Einige Ideen, wie Sie mit der Differenzierung Ihrer Varianten beginnen können, finden Sie unter [Tipps für verschiedene Kanäle](#tips-different-channels).
 
-\![Auswählen von "Variante hinzufügen" für eine Kampagne.]({% image_buster /assets/img/ab_create_2.png %})
+![Auswählen von "Variante hinzufügen" für eine Kampagne.]({% image_buster /assets/img/ab_create_2.png %})
 
 ## Schritt 3: Zeitplan für Ihre Kampagne
 
@@ -50,7 +50,7 @@ Sie können einen Prozentsatz Ihrer Zielgruppe für eine randomisierte Kontrollg
 
 Wenn Sie Ihre Ergebnisse betrachten, können Sie die Konversionsraten Ihrer Varianten mit einer von Ihrer Kontrollgruppe bereitgestellten Basis-Konversionsrate vergleichen. So können Sie sowohl die Auswirkungen Ihrer Varianten als auch die Auswirkungen Ihrer Varianten mit der Konversionsrate vergleichen, die sich ergeben würde, wenn Sie überhaupt keine Nachricht senden würden.
 
-\![A/B-Tests Panel, das die prozentuale Aufschlüsselung der Kontrollgruppe, Variante 1, Variante 2 und Variante 3 mit 25% für jede Gruppe anzeigt.]({% image_buster /assets/img/ab_create_4.png %})
+![A/B-Tests Panel, das die prozentuale Aufschlüsselung der Kontrollgruppe, Variante 1, Variante 2 und Variante 3 mit 25% für jede Gruppe anzeigt.]({% image_buster /assets/img/ab_create_4.png %})
 
 {% alert important %}
 Die Verwendung einer Kontrollgruppe bei der Ermittlung eines Gewinners durch _Öffnungen_ oder _Klicks_ wird nicht empfohlen. Da die Kontrollgruppe die Nachricht nicht erhält, können diese Benutzer keine Öffnungen oder Klicks vornehmen. Daher ist die Konversionsrate dieser Gruppe per Definition 0 % und stellt keinen sinnvollen Vergleich zu den Varianten dar.

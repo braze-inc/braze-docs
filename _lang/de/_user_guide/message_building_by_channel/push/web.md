@@ -26,7 +26,7 @@ Web-Push-Benachrichtigungen liefern dringende, umsetzbare Updates, die zu schnel
 
 Web-Push funktioniert genauso wie die Push-Benachrichtigungen von Apps auf Ihrem Telefon. Weitere Informationen zum Verfassen einer Web-Push-Nachricht finden Sie unter [Erstellen einer Push-Benachrichtigung]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message).
 
-\![Web-Push-Beispiel mit der gleichen Push Nachricht, die auf einem Laptop und einem Telefon angezeigt wird.]({% image_buster /assets/img_archive/Macbook_Push.png %}){: style="border:none"}
+![Web-Push-Beispiel mit der gleichen Push Nachricht, die auf einem Laptop und einem Telefon angezeigt wird.]({% image_buster /assets/img_archive/Macbook_Push.png %}){: style="border:none"}
 
 ## Potenzielle Anwendungsfälle
 

@@ -117,7 +117,7 @@ Da es eine so große Bandbreite an Geräteträgern, Modellnamen und Betriebssyst
 
 Darüber hinaus ist es möglich, dass Braze bei Push-Benachrichtigungen unter bestimmten Umständen nicht in der Lage ist, das mit der Push-Benachrichtigung verbundene Gerät zu erkennen, z.B. wenn das Push-Token über die API importiert wurde, was dazu führt, dass die Werte für diese Nachrichten `null` sind.
 
-\![Beispiel für die Verwendung des Standardwerts "there" bei Verwendung einer Variable für den Vornamen in einer Push Nachricht.]({% image_buster /assets/img_archive/personalized_firstname_.png %})
+![Beispiel für die Verwendung des Standardwerts "there" bei Verwendung einer Variable für den Vornamen in einer Push Nachricht.]({% image_buster /assets/img_archive/personalized_firstname_.png %})
 
 ### Verwendung einer bedingten Logik anstelle eines Standardwerts
 

@@ -24,7 +24,7 @@ Dies unterscheidet sich von der Einstellung der Öffnung einer App als Konversio
 
 Beeinflusste Öffnungen werden zu den direkten Öffnungen einer Kampagne addiert, um die Gesamtzahl der Öffnungen zu ermitteln. Dies wird auf der Seite **Campaign Analytics** einer Push-Kampagne angezeigt. Die Gesamtzahl der Öffnungen und die direkten Öffnungen werden in den Abschnitten Performance der Nachrichten und **Historische Performance** angezeigt. Beeinflusste Öffnungen sind der Unterschied zwischen den beiden Maßnahmen.
 
-\![Beeinflusst öffnet die Statistiken auf der Seite Kampagnendetails für eine Kampagne]({% image_buster /assets/img_archive/Influenced_Opens2.png %})
+![Beeinflusst öffnet die Statistiken auf der Seite Kampagnendetails für eine Kampagne]({% image_buster /assets/img_archive/Influenced_Opens2.png %})
 
 Weitere Informationen zum Tracking von Öffnungen finden Sie im Abschnitt über das Konversions-Tracking in unseren [Best Practices für Push]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/).
 

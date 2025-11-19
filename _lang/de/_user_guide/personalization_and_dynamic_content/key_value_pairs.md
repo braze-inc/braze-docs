@@ -76,7 +76,7 @@ Der Braze Nachrichten-Editor erstellt automatisch den Schlüssel **Alarm** und *
 
 Diese Werte können auf der Registerkarte **Einstellungen** eingegeben werden, wenn Sie eine Push-Nachricht erstellen. Gehen Sie auf **Hinweisoptionen** und wählen Sie einen Schlüssel aus dem Verzeichnis, der automatisch in einen neuen Schlüssel-Wert-Eintrag eingefügt werden soll.
 
-\![]({% image_buster /assets/img_archive/keyvalue_automatickeys.png %})
+![]({% image_buster /assets/img_archive/keyvalue_automatickeys.png %})
 {% raw %}
 Wenn Braze eine Push-Benachrichtigung an APNs sendet, wird die Payload als JSON formatiert.
 
@@ -111,7 +111,7 @@ Wenn Braze eine Push-Benachrichtigung an APNs sendet, wird die Payload als JSON 
 
 Zusätzlich zu den Werten aus der ```aps```-Bibliothek können Sie auch benutzerdefinierte Schlüssel-Wert-Paare an das Benutzergerät senden. Die Werte in diesen Paaren sind auf primitive Typen beschränkt: Wörterbuch (Objekt), Array, String, Zahl und Boolean.
 
-\![]({% image_buster /assets/img_archive/keyvalue_enterpairs.png %})
+![]({% image_buster /assets/img_archive/keyvalue_enterpairs.png %})
 
 Zu den Anwendungsfällen für angepasste Schlüssel-Wert-Paare gehören u.a. die Einhaltung interner Metriken und die Festlegung des Kontexts für die Benutzeroberfläche. Braze erlaubt es Ihnen, zusätzliche Schlüssel-Wert-Paare zusammen mit einer Push-Benachrichtigung zu senden, die von Ihrer Anwendung innerhalb des [Extras-Schlüssels]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/advanced_settings/#extracting-data-from-push-key-value-pairs) verwendet werden kann. Wenn Sie einen anderen Schlüssel verwenden möchten, vergewissern Sie sich, dass Ihre App mit diesem angepassten Schlüssel umgehen kann.
 
@@ -151,7 +151,7 @@ Mit Braze können Sie benutzerdefinierte Paare aus Strings und Schlüsselwerten 
 
 Android-Push-Benachrichtigungen können mit FCM-Nachrichtenoptionen weiter angepasst werden. Dazu gehören [Benachrichtigungspriorität]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/customization/advanced_settings/#notification-priority), [Ton]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/customization/advanced_settings/#sounds), Verzögerung, Lebensdauer und Ausblendbarkeit. Diese Werte können bei der Erstellung einer Push-Nachricht auf der Registerkarte **Einstellungen** angegeben werden. Unter [Erweiterte Einstellungen für Push-Benachrichtigungen]({{site.baseurl}}/developer_guide/push_notifications/customization/?sdktab=android#android_settings) finden Sie weitere Anweisungen, wie Sie diese Optionen im Braze Message Composer einstellen können.
 
-\![]({% image_buster /assets/img_archive/keyvalue_androidkeys.png %})
+![]({% image_buster /assets/img_archive/keyvalue_androidkeys.png %})
 
 ### Stille Push-Benachrichtigungen
 
@@ -169,7 +169,7 @@ Das iOS-Betriebssystem kann [Push-Benachrichtigungen]({{site.baseurl}}/developer
 
 Um einer In-App-Nachricht ein Schlüssel-Wert-Paar hinzuzufügen, wählen Sie im Nachrichten-Editor den Tab **Einstellungen**, wählen Sie **Neues Paar hinzufügen** und geben Sie Ihre Schlüssel-Wert-Paare an.
 
-\![]({% image_buster /assets/img_archive/keyvalue_iam.png %})
+![]({% image_buster /assets/img_archive/keyvalue_iam.png %})
 
 #### Per API getriggerte Kampagnen
 
@@ -183,12 +183,12 @@ Sowohl SparkPost als auch SendGrid unterstützt Schlüssel-Wert-Paare in E-Mails
 Abgewiesene E-Mails geben keine Schlüssel-Wert-Paare an SparkPost oder SendGrid weiter.
 {% endalert %}
 
-\![Tab Sendeinfo des Nachrichten-Editors für E-Mails in Braze.]({% image_buster /assets/img_archive/keyvalue_email.png %})
+![Tab Sendeinfo des Nachrichten-Editors für E-Mails in Braze.]({% image_buster /assets/img_archive/keyvalue_email.png %})
 
 ## Content-Cards
 
 Um ein Schlüssel-Wert-Paar zu einer Content-Card hinzuzufügen, gehen Sie im Nachrichten-Editor von Braze auf den Tab **Einstellungen** und wählen Sie **Neues Paar hinzufügen**.
 
-\![Schlüssel-Wert-Paar zur Content-Card hinzufügen]({% image_buster /assets/img_archive/kvp_content_cards.png %}){: style="max-width:70%;"}
+![Schlüssel-Wert-Paar zur Content-Card hinzufügen]({% image_buster /assets/img_archive/kvp_content_cards.png %}){: style="max-width:70%;"}
 
 

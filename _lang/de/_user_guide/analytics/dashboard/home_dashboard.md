@@ -17,7 +17,7 @@ Die **Startseite** hat zwei Hauptbereiche:
 - [Machen Sie dort weiter, wo Sie aufgehört haben.](#pick-up-where-you-left-off)
 - [Performance-Übersicht](#peformance-overview)
 
-\![Home-Dashboard in Braze.]({% image_buster /assets/img_archive/home_dashboard.png %})
+![Home-Dashboard in Braze.]({% image_buster /assets/img_archive/home_dashboard.png %})
 
 ## Machen Sie dort weiter, wo Sie aufgehört haben.
 
@@ -29,25 +29,25 @@ Sie können die zuletzt bearbeiteten oder erstellten Kampagnen, Canvase und Segm
 Der Abschnitt **Weitermachen, wo Sie aufgehört haben** erscheint, nachdem Sie eine Kampagne, ein Canvas oder ein Segment erstellt oder bearbeitet haben.
 {% endalert %}
 
-\![Ein Canvas-Entwurf, ein aktives Segment und ein Entwurf für eine Kampagne im Abschnitt "Weitermachen, wo Sie aufgehört haben".]({% image_buster /assets/img/pick_up_where_you_left_off.png %})
+![Ein Canvas-Entwurf, ein aktives Segment und ein Entwurf für eine Kampagne im Abschnitt "Weitermachen, wo Sie aufgehört haben".]({% image_buster /assets/img/pick_up_where_you_left_off.png %})
 
 ## Performance-Übersicht
 
 Standardmäßig zeigt die **Übersicht über die Performance** die Daten der letzten 30 Tage für alle Apps und Websites. Ihre Metriken werden alle auf der Grundlage des ausgewählten Datumsbereichs berechnet.
 
-\![Datumsbereich und App-Felder auf dem Home Dashboard.]({% image_buster /assets/img_archive/home_dashboard_select_date.png %}){: style="max-width:60%;"}
+![Datumsbereich und App-Felder auf dem Home Dashboard.]({% image_buster /assets/img_archive/home_dashboard_select_date.png %}){: style="max-width:60%;"}
 
 Die Prozentsätze werden auf der Grundlage des aktuellen Datumsbereichs im Vergleich zum vorherigen Datumsbereich berechnet, mit Ausnahme der *monatlich aktiven Nutzer*:in (MAU), die den letzten Tag des vorherigen Zeitraums anstelle eines Bereichs verwenden. 
 
 Wenn Sie beispielsweise den Datumsbereich auf **Letzte 7 Tage** einstellen und Ihre *täglich aktiven Nutzer:innen* einen prozentualen Anstieg von 1,8% aufweisen, bedeutet dies, dass Sie in dieser Woche 1,8% mehr täglich aktive:r Nutzer:innen hatten als in der vergangenen Woche.
 
-\![]({% image_buster /assets/img_archive/home_dashboard_metric_tile.png %}){: style="max-width:60%;"}
+![]({% image_buster /assets/img_archive/home_dashboard_metric_tile.png %}){: style="max-width:60%;"}
 
 ### Aufschlüsselung anzeigen
 
 Wählen Sie **Aufschlüsselung anzeigen** für jede Zeile der Performance-Übersichtsstatistik aus, um den Wert jeder Statistik pro Tag für den angegebenen Datumsbereich anzuzeigen.
 
-\![Erweitern]({% image_buster /assets/img_archive/home_dashboard_breakdown.png %})
+![Erweitern]({% image_buster /assets/img_archive/home_dashboard_breakdown.png %})
 
 ## Verfügbare Statistiken
 

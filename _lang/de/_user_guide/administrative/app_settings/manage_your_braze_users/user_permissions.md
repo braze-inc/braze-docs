@@ -82,7 +82,7 @@ Es ist nicht möglich, Nutzer:innen von einem Dashboard-Benutzer zu einem andere
 
 Um die aktuellen Admin-, Unternehmens- oder Workspace-Berechtigungen eines Nutzers zu bearbeiten, gehen Sie zu **Einstellungen** > **Unternehmensnutzer:innen** und wählen Sie dann den Namen des Nutzers aus.
 
-\![Die Seite "Benutzer des Unternehmens" in Braze mit einem Nutzer:innen in der Ergebnisliste.]({% image_buster /assets/img/braze_permissions/selecting_a_user.png %}){: style="max-width:80%;"}
+![Die Seite "Benutzer des Unternehmens" in Braze mit einem Nutzer:innen in der Ergebnisliste.]({% image_buster /assets/img/braze_permissions/selecting_a_user.png %}){: style="max-width:80%;"}
 
 {% tabs local %}
 {% tab Admin %}
@@ -97,7 +97,7 @@ Admins haben Zugriff auf alle Features und können alle Unternehmenseinstellunge
 
 Um Admin-Rechte zu gewähren oder zu entfernen, wählen Sie **Dieser Benutzer ist ein Admin** und dann **Benutzer aktualisieren**.
 
-\![Die Details des ausgewählten Nutzer:innen mit dem Kontrollkästchen admin im Fokus.]({% image_buster /assets/img/braze_permissions/admin_level_permissions.png %}){: style="max-width:40%;"}
+![Die Details des ausgewählten Nutzer:innen mit dem Kontrollkästchen admin im Fokus.]({% image_buster /assets/img/braze_permissions/admin_level_permissions.png %}){: style="max-width:40%;"}
 
 {% alert warning %}
 Wenn Sie einem Benutzer die Administratorrechte entziehen, kann er erst wieder auf Braze zugreifen, wenn Sie ihm mindestens eine Berechtigung [auf Unternehmens-](#company) oder [Arbeitsbereichsebene](#workspace) zuweisen.
@@ -132,7 +132,7 @@ Wählen Sie unter **Arbeitsbereiche** einen oder mehrere Arbeitsbereiche aus der
 
 Wenn Sie fertig sind, wählen Sie **Benutzer aktualisieren**.
 
-\![Berechtigungen auf Workspace-Ebene werden in Braze manuell ausgewählt.]({% image_buster /assets/img/braze_permissions/workspace_level_permissions_individual.png %})
+![Berechtigungen auf Workspace-Ebene werden in Braze manuell ausgewählt.]({% image_buster /assets/img/braze_permissions/workspace_level_permissions_individual.png %})
 
 {% endsubtab %}
 {% subtab Assign permission set %}
@@ -141,7 +141,7 @@ Wählen Sie unter **Arbeitsbereiche** einen oder mehrere Arbeitsbereiche aus der
 
 Wenn Sie fertig sind, wählen Sie **Benutzer aktualisieren**.
 
-\![Berechtigungen auf Workspace-Ebene werden über eine Berechtigungsgruppe in Braze zugewiesen.]({% image_buster /assets/img/braze_permissions/workspace_level_permissions_set.png %})
+![Berechtigungen auf Workspace-Ebene werden über eine Berechtigungsgruppe in Braze zugewiesen.]({% image_buster /assets/img/braze_permissions/workspace_level_permissions_set.png %})
 
 {% endsubtab %}
 {% endsubtabs %}
@@ -152,7 +152,7 @@ Wenn Sie fertig sind, wählen Sie **Benutzer aktualisieren**.
 
 Um eine Liste Ihrer Nutzer:innen und deren Berechtigungen herunterzuladen, gehen Sie zu **Einstellungen** > **Firmennutzer:innen** und wählen Sie dann **Nutzer:innen exportieren**. Eine CSV-Datei wird in Kürze an Ihre E-Mail-Adresse gesendet.
 
-\![Die Seite "Unternehmen Nutzer:innen" in Braze mit der Option "Nutzer:innen exportieren" im Fokus.]({% image_buster /assets/img/braze_permissions/exporting_user_permissions.png %})
+![Die Seite "Unternehmen Nutzer:innen" in Braze mit der Option "Nutzer:innen exportieren" im Fokus.]({% image_buster /assets/img/braze_permissions/exporting_user_permissions.png %})
 
 ## Liste der Berechtigungen
 

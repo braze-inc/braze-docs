@@ -36,7 +36,7 @@ Um Ihre Kopie weiter anzupassen, können Sie:
 
 Wenn Sie fertig sind, wählen Sie **Generieren**. Wir verwenden die von Ihnen bereitgestellten Informationen, um GPT zu veranlassen, Texte für Sie zu schreiben. Die Antwort wird von OpenAI abgerufen und Ihnen zur Verfügung gestellt. Weitere Informationen finden Sie unter [Wie werden meine Daten verwendet und an OpenAI gesendet?](#ai-policy)
 
-\![KI-Texterassistent Modal mit verschiedenen Features"]({% image_buster /assets/img/ai_copywriter/gpt3.png %} "GPT3"){: style="max-width:70%;"}
+![KI-Texterassistent Modal mit verschiedenen Features"]({% image_buster /assets/img/ai_copywriter/gpt3.png %} "GPT3"){: style="max-width:70%;"}
 
 {% alert important %}
 Wir filtern Antworten auf anstößige Inhalte heraus, die gegen die [Content-Richtlinie](https://beta.openai.com/docs/usage-guidelines/content-policy) von OpenAI verstoßen.

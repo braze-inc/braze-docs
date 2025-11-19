@@ -21,7 +21,7 @@ In diesem Abschnitt finden Sie Ihre REST API-Schlüssel für den Workspace, die 
 
 Für zusätzliche Sicherheit können Sie eine Liste von IP-Adressen und Subnetzen angeben, die REST-API-Anfragen für einen bestimmten REST-API-Schlüssel stellen dürfen. Dies wird als Allowlisting oder Whitelisting bezeichnet. Um bestimmte IP-Adressen oder Subnetze zuzulassen, fügen Sie sie bei der Erstellung eines neuen REST-API-Schlüssels dem Abschnitt **Whitelist IPs** hinzu: 
 
-\![API IP Whitelisting Abschnitt der Erstellung eines neuen API-Schlüssels]({% image_buster /assets/img_archive/api-key-ip-whitelisting.png %})
+![API IP Whitelisting Abschnitt der Erstellung eines neuen API-Schlüssels]({% image_buster /assets/img_archive/api-key-ip-whitelisting.png %})
 
 Wenn Sie nichts angeben, können Anfragen von jeder IP-Adresse gesendet werden.
 

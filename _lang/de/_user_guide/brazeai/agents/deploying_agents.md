@@ -47,7 +47,7 @@ Sie können einen Agenten auf Katalogfelder anwenden, so dass er automatisch Wer
 
 ### Schritte
 
-\![Ein Agent-Schritt in einem Katalogfeld.]({% image_buster /assets/img/ai_agent/agent_in_catalog.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
+![Ein Agent-Schritt in einem Katalogfeld.]({% image_buster /assets/img/ai_agent/agent_in_catalog.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
 
 Um einen Agenten zu Ihrem Katalogfeld hinzuzufügen:
 

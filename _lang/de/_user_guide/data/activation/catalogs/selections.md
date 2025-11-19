@@ -11,7 +11,7 @@ description: "In diesem Referenzartikel erfahren Sie, wie Sie Auswahlen mit Ihre
 
 Nachdem Sie einen [Katalog]({{site.baseurl}}/user_guide/data/activation/catalogs/) erstellt haben, können Sie Ihre Katalogdaten weiter referenzieren, indem Sie Auswahlen in Ihre Kampagnen oder Empfehlungen von Braze einbauen.
 
-\![Der Abschnitt Selektionen in einem Beispielkatalog.]({% image_buster /assets/img_archive/catalog_selections1.png %})
+![Der Abschnitt Selektionen in einem Beispielkatalog.]({% image_buster /assets/img_archive/catalog_selections1.png %})
 
 ## Was Sie wissen sollten
 
@@ -44,7 +44,7 @@ Die Verwendung von Liquid in Katalogen, wie z.B. benutzerdefinierte Attribute un
 Connected Content Liquid wird in diesen Filter-Einstellungen nicht unterstützt.
 {% endalert %}
 
-\![Filtereinstellungen für die Katalogauswahl, bei denen das Attribut auf ein angepasstes Liquid Attribut gesetzt ist.]({% image_buster /assets/img_archive/catalog_selections7.png %})
+![Filtereinstellungen für die Katalogauswahl, bei denen das Attribut auf ein angepasstes Liquid Attribut gesetzt ist.]({% image_buster /assets/img_archive/catalog_selections7.png %})
 
 ## Auswählen von Nachrichten im Messaging
 
@@ -58,7 +58,7 @@ Nachdem Sie Ihre Auswahl getroffen haben, personalisieren Sie Ihre Nachrichten m
 5. Wählen Sie unter **Anzuzeigende Informationen**, welche Felder aus dem Katalog für jeden Artikel angezeigt werden sollen.
 6. Wählen Sie das Symbol **Kopieren** und fügen Sie die Flüssigkeit an der Stelle ein, an der sie in Ihrer Nachricht erscheinen soll.
 
-\![Das Modal "Personalisierung hinzufügen" mit den folgenden Auswahlmöglichkeiten: "Katalogartikel" für "Personalisierungstyp", "Spiele" für "Katalogname", "Auswahlen" für "Auswahltyp", "game_selection" für "Auswahl" und "Titel" und "description_en" für "Anzuzeigende Informationen".]({% image_buster /assets/img_archive/catalog_selections6.png %}){: style="max-width:70%;"}
+![Das Modal "Personalisierung hinzufügen" mit den folgenden Auswahlmöglichkeiten: "Katalogartikel" für "Personalisierungstyp", "Spiele" für "Katalogname", "Auswahlen" für "Auswahltyp", "game_selection" für "Auswahl" und "Titel" und "description_en" für "Anzuzeigende Informationen".]({% image_buster /assets/img_archive/catalog_selections6.png %}){: style="max-width:70%;"}
 
 ## Anwendungsfall
 
@@ -66,18 +66,18 @@ Nehmen wir an, Sie besitzen einen Essenslieferdienst und möchten Ihren Nutzern,
 
 Mithilfe eines Katalogs mit den Informationen Ihres Essenslieferdienstes zu Name, Preis, Bild und Kategorie der Mahlzeit können Sie eine Auswahl erstellen, um drei Mahlzeiten auf der Grundlage der zuletzt angesehenen Kategorie eines Benutzers zu empfehlen.
 
-\![Ein Beispiel für die Auswahl eines Dienstes für die Zustellung von Mahlzeiten mit zwei Filtern: einer, der einen Produkttyp als Mahlzeit auswählt, und einer, der die Kategorie als die zuletzt angesehene identifiziert. Die Auswahl ist so eingestellt, dass die Reihenfolge, in der die drei Ergebnisse zurückgegeben werden, zufällig ist.]({% image_buster /assets/img_archive/catalog_selections2.png %}){: style="max-width:90%;"}
+![Ein Beispiel für die Auswahl eines Dienstes für die Zustellung von Mahlzeiten mit zwei Filtern: einer, der einen Produkttyp als Mahlzeit auswählt, und einer, der die Kategorie als die zuletzt angesehene identifiziert. Die Auswahl ist so eingestellt, dass die Reihenfolge, in der die drei Ergebnisse zurückgegeben werden, zufällig ist.]({% image_buster /assets/img_archive/catalog_selections2.png %}){: style="max-width:90%;"}
 
 Um diesen Katalog und die Auswahl in einer Kampagne zu verwenden, verwenden Sie das Modal **Personalisierung hinzufügen** im Abschnitt Nachrichtenzusammenstellung beim Erstellen einer Kampagne. In diesem Beispiel haben wir den Katalog mit den Informationen Ihres Essenslieferdienstes und die Auswahl für Essensempfehlungen basierend auf der zuletzt angesehenen Kategorie ausgewählt. So können wir den Namen und den Preis der Mahlzeit anzeigen. Um Ihre Nachricht weiter auszubauen, können Sie die Auswahl nutzen, um auch ein Bild der ersten empfohlenen Mahlzeit hinzuzufügen.
 
-\![Eine Content-Card mit der Überschrift "Sie werden diese hoch bewerteten Mahlzeiten LIEBEN!" mit der Auswahl "recommendations_be_recent_category" im Bereich Nachrichtengestaltung.]({% image_buster /assets/img_archive/catalog_selections3.png %}){: style="max-width:90%;"}
+![Eine Content-Card mit der Überschrift "Sie werden diese hoch bewerteten Mahlzeiten LIEBEN!" mit der Auswahl "recommendations_be_recent_category" im Bereich Nachrichtengestaltung.]({% image_buster /assets/img_archive/catalog_selections3.png %}){: style="max-width:90%;"}
 
 Nehmen wir an, Sie haben eine:n Nutzer:in, deren:dessen zuletzt angesehene Kategorie "Huhn" ist. Mit der eingestellten Personalisierung und einer Content Card-Kampagne können Sie diesem Nutzer drei Essensempfehlungen mit Huhn schicken.
 
-\![Eine Content-Card mit einem Bild von gegrilltem Zitronenhähnchen und einer Liste von drei Essensempfehlungen, die Hähnchen enthalten, basierend auf der zuletzt angesehenen Kategorie des Nutzers:innen.]({% image_buster /assets/img_archive/catalog_selections4.png %}){: style="max-width:90%;"}
+![Eine Content-Card mit einem Bild von gegrilltem Zitronenhähnchen und einer Liste von drei Essensempfehlungen, die Hähnchen enthalten, basierend auf der zuletzt angesehenen Kategorie des Nutzers:innen.]({% image_buster /assets/img_archive/catalog_selections4.png %}){: style="max-width:90%;"}
 
 Mit der gleichen Personalisierung können Sie auch drei Essensempfehlungen an einen Nutzer senden, dessen zuletzt angesehene Kategorie "Rindfleisch" ist.
 
-\![Eine Content-Card mit einem Bild von Beef Stroganoff und einer Liste von zwei Essensempfehlungen, die Rindfleisch enthalten, basierend auf der zuletzt angesehenen Kategorie des Nutzers:innen.]({% image_buster /assets/img_archive/catalog_selections5.png %}){: style="max-width:90%;"}
+![Eine Content-Card mit einem Bild von Beef Stroganoff und einer Liste von zwei Essensempfehlungen, die Rindfleisch enthalten, basierend auf der zuletzt angesehenen Kategorie des Nutzers:innen.]({% image_buster /assets/img_archive/catalog_selections5.png %}){: style="max-width:90%;"}
 
 

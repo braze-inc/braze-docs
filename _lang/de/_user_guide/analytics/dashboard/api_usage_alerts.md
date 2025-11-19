@@ -27,7 +27,7 @@ So erstellen Sie einen API-Nutzungsalarm:
 2. Geben Sie einen Namen für Ihre Benachrichtigung ein und wählen Sie die REST API Endpunkte und API-Schlüssel, für die Sie eine Benachrichtigung erhalten möchten.
 3. Definieren Sie Ihre Alarmkriterien, indem Sie einen oder mehrere Response Codes auswählen und die [Alarmschwellenwerte](#api-usage-alert-thresholds) festlegen.
 4. Wenn Sie fertig sind, schalten Sie **Alert** um.
-    \![Ein Beispiel für einen API-Nutzungsalarm, der Benachrichtigungen sendet, wenn der Endpunkt Tracking Nutzer:innen innerhalb einer Stunde um 100 Prozent steigt.]({% image_buster /assets/img/api_usage_alerts/api_usage_alerts1.png %})
+    ![Ein Beispiel für einen API-Nutzungsalarm, der Benachrichtigungen sendet, wenn der Endpunkt Tracking Nutzer:innen innerhalb einer Stunde um 100 Prozent steigt.]({% image_buster /assets/img/api_usage_alerts/api_usage_alerts1.png %})
 
 ## Schwellenwerte für Alarme {#api-usage-alert-thresholds}
 
@@ -68,7 +68,7 @@ Wenn Sie Ihre Alarmkriterien definieren, können Sie die folgenden Schwellenwert
 
 Sie können eine E-Mail-Benachrichtigung, eine Webhook-Benachrichtigung oder beides einrichten. Webhook-Benachrichtigungen können für Anwendungsfälle wie das Senden einer Benachrichtigung an externe Plattformen, z. B. an einen Slack-Kanal, sehr nützlich sein. Ein Beispiel finden Sie in unserer [Dokumentation](https://www.braze.com/docs/user_guide/administrative/app_settings/company_settings/notification_preferences#slack-incoming-webhook-integration) über die Integration von Benachrichtigungen mit Slack für unsere Benachrichtigungseinstellungen.
 
-\![Es wird eine E-Mail an die ausgewählte E-Mail gesendet, wenn das Kriterium für den Alarm erreicht ist.]({% image_buster /assets/img/api_usage_alerts/api_usage_alerts2.png %})
+![Es wird eine E-Mail an die ausgewählte E-Mail gesendet, wenn das Kriterium für den Alarm erreicht ist.]({% image_buster /assets/img/api_usage_alerts/api_usage_alerts2.png %})
 
 ### Probe-Nutzlast {#payload}
 

@@ -21,7 +21,7 @@ Nachdem das Prognosemodell erstellt wurde, wird den Nutzern:innen der Zielgruppe
 
 Die Aktualisierung der Risikobewertungen für die Zielgruppe der Prognosen kann in einem [von Ihnen gewählten Rhythmus]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_churn/creating_a_churn_prediction/#step-4-choose-the-update-frequency-for-churn-predictions) erfolgen. Auf diese Weise können Sie Nutzer, bei denen das Risiko besteht, dass sie abwandern, erreichen, bevor sie es tatsächlich tun, und verhindern, dass es überhaupt dazu kommt. Mithilfe von bis zu drei aktiven Prognosen können Sie Predictive Churn nutzen, um individuelle Modelle zu erstellen, mit denen Sie die Abwanderung in bestimmten Segmenten Ihrer Nutzer:innen verhindern können, die Sie als besonders wertvoll erachten.
 
-\![Eine Übersicht über die Abwanderung, die eine Zielgruppe für Prognosen in der Vergangenheit mit Training mit historischen Daten umfasst. Dies trägt zur Vorhersage des Risikos zukünftiger Abwanderung bei, indem die heutige prognostizierte Zielgruppe mit einem Abwanderungs-Risiko-Score gemessen wird.]({% image_buster /assets/img/churn/churn_overview.png %})
+![Eine Übersicht über die Abwanderung, die eine Zielgruppe für Prognosen in der Vergangenheit mit Training mit historischen Daten umfasst. Dies trägt zur Vorhersage des Risikos zukünftiger Abwanderung bei, indem die heutige prognostizierte Zielgruppe mit einem Abwanderungs-Risiko-Score gemessen wird.]({% image_buster /assets/img/churn/churn_overview.png %})
 
 ## Zugriff auf voraussichtliche Abwanderung
 

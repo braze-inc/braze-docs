@@ -8,7 +8,7 @@ tool: Segments
 search_rank: 3
 ---
 
-# [\![Braze-Lernkurs]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/segmentation-course){: style="float:right;width:120px;border:0;" class="noimgborder"} Segmentierung erstellen
+# [![Braze-Lernkurs]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/segmentation-course){: style="float:right;width:120px;border:0;" class="noimgborder"} Segmentierung erstellen
 
 > Die Segmentierung ermöglicht es Ihnen, Benutzer auf der Grundlage ihrer demografischen, verhaltensbezogenen oder technischen Merkmale und Aktionen anzusprechen. Durch den kreativen und intelligenten Einsatz von Segmentierung und Nachrichtenautomatisierung können Sie Ihre Nutzer nahtlos vom Erstkontakt zum langfristigen Kunden machen. Segmente werden in Echtzeit aktualisiert, wenn sich Daten ändern. Sie können so viele Segmente erstellen, wie Sie für Ihre Targeting- und Messaging-Zwecke benötigen.
 
@@ -25,7 +25,7 @@ Optional können Sie auch Folgendes tun:
 - Fügen Sie ein [Team]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) zu Ihrem Segment hinzu.
 - Fügen Sie Ihrem Segment zur weiteren Organisation [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) hinzu.
 
-\![Modal zum Erstellen von Segmenten, in dem das Segment den Namen "Verfallene Nutzer:innen" trägt, mit der Segmentbeschreibung "Dies ist unser Hauptsegment für verfallene Nutzer:innen, um Nicht-Aktive innerhalb der letzten vierzehn Tage zu targetieren." und zwei Buttons: „Abbrechen“ und „Segment erstellen“.]({% image_buster /assets/img_archive/segment_app_selection.png %}){: style="max-width:80%;"}
+![Modal zum Erstellen von Segmenten, in dem das Segment den Namen "Verfallene Nutzer:innen" trägt, mit der Segmentbeschreibung "Dies ist unser Hauptsegment für verfallene Nutzer:innen, um Nicht-Aktive innerhalb der letzten vierzehn Tage zu targetieren." und zwei Buttons: „Abbrechen“ und „Segment erstellen“.]({% image_buster /assets/img_archive/segment_app_selection.png %}){: style="max-width:80%;"}
 
 ## Schritt 3: Wählen Sie Ihre App oder Plattform
 
@@ -33,7 +33,7 @@ Wählen Sie, welche Apps oder Plattformen Sie anvisieren möchten, indem Sie **B
 
 Wenn Sie zum Beispiel eine In-App-Nachricht nur an iOS-Geräte senden möchten, wählen Sie Ihre iOS-App aus. So wird sichergestellt, dass Benutzer, die sowohl ein iOS- als auch ein Android-Gerät verwenden, die Nachricht nur auf ihrem iOS-Gerät erhalten. In der Liste der spezifischen Apps können Sie mit der Option **Nutzer:innen ohne** Sitzungen und ohne App-Daten (die in der Regel durch Nutzerimport oder REST API erstellt wurden) aufnehmen.
 
-\![Segment Details Panel mit der ausgewählten Option "Nutzer:innen aus allen Apps" im Abschnitt Verwendete Apps.]({% image_buster /assets/img_archive/Segment2.png %}){: style="max-width:80%;"}
+![Segment Details Panel mit der ausgewählten Option "Nutzer:innen aus allen Apps" im Abschnitt Verwendete Apps.]({% image_buster /assets/img_archive/Segment2.png %}){: style="max-width:80%;"}
 
 ## Schritt 4: Filter zu Ihrem Segment hinzufügen
 
@@ -47,7 +47,7 @@ Braze erstellt erst dann Profile für Benutzer, wenn diese die App zum ersten Ma
 
 Filter sind in Filtergruppen organisiert. Jeder Filter muss Teil einer Filtergruppe sein, die aus mindestens einem Filter besteht. Ein Segment kann mehrere Filtergruppen haben. Um eine hinzuzufügen, wählen Sie **Filtergruppe hinzufügen**. Bearbeiten Sie den Namen der Filtergruppe, indem Sie auf das Symbol klicken, das erscheint, wenn Sie den Mauszeiger daneben halten.
 
-\![Filtergruppe mit einem Bearbeitungssymbol neben ihrem Namen.]({% image_buster /assets/img_archive/edit_filter_group_name.png %})
+![Filtergruppe mit einem Bearbeitungssymbol neben ihrem Namen.]({% image_buster /assets/img_archive/edit_filter_group_name.png %})
 
 Wählen Sie die Symbole neben den einzelnen Filtern aus, um den Filter-Editor auszublenden oder einzelne Filter zu duplizieren. Nachdem Sie einen Filter dupliziert haben, können Sie seine Werte in jedem Dropdown-Menü anpassen.
 
@@ -67,7 +67,7 @@ Wenn Sie „ODER“ für Filter auswählen, die einen negativen Filter enthalten
 
 Es kann Situationen des Nutzer:in Targeting geben, in denen die Verwendung des Operators `OR` vermieden werden sollte. Der `OR` Operator erstellt eine Aussage, die als wahr ausgewertet wird, wenn ein Nutzer:innen die Kriterien für einen oder mehrere der Filter in einer Aussage erfüllt. Wenn Sie zum Beispiel ein Segment von Nutzern:in erstellen möchten, die zu den "Foodies" gehören, aber weder zu den "Non-Foodies" noch zu den "Candy-lovers", dann können Sie den `OR` Operator verwenden.
 
-\![Filtergruppe für Nutzer:innen im Segment "Feinschmecker" und nicht in den Segmenten "Nicht-Feinschmecker" oder "Süßigkeiten-Liebhaber".]({% image_buster /assets/img_archive/or_operator_segment.png %})
+![Filtergruppe für Nutzer:innen im Segment "Feinschmecker" und nicht in den Segmenten "Nicht-Feinschmecker" oder "Süßigkeiten-Liebhaber".]({% image_buster /assets/img_archive/or_operator_segment.png %})
 
 Wenn Sie jedoch Nutzer:in segmentieren möchten, die zum Segment "Feinschmecker" gehören und nicht zu den Segmenten "Nicht-Feinschmecker" und "Süßigkeiten-Liebhaber" gehören, dann verwenden Sie den Operator `AND`. Auf diese Weise befinden sich Nutzer:innen, die die Kampagne oder das Canvas erhalten, in dem beabsichtigten Segment ("Foodies") und nicht gleichzeitig in den anderen Segmenten ("Nicht-Foodies" und "Candy-lovers"). 
 
@@ -90,7 +90,7 @@ Je nach dem von Ihnen gewählten Filter stehen Ihnen verschiedene Operatoren zur
 Braze erstellt erst dann Profile für Benutzer, wenn diese die App zum ersten Mal verwendet haben. Sie können also keine Benutzer ansprechen, die Ihre App noch nicht geöffnet haben.
 {% endalert %}
 
-\![Segmente filtern Gruppen mit dem Operator AND.]({% image_buster /assets/img_archive/segmenter_filter_groups.png %})
+![Segmente filtern Gruppen mit dem Operator AND.]({% image_buster /assets/img_archive/segmenter_filter_groups.png %})
 
 {% alert important %}
 Segmente, die bereits den Filter **Segmentzugehörigkeit** verwenden, können nicht weiter einbezogen oder in andere Segmente verschachtelt werden. Dadurch wird ein Zyklus verhindert, bei dem Segment A Segment B einschließt, das dann wiederum versucht, Segment A einzuschließen. In diesem Fall würde das Segment immer wieder auf sich selbst verweisen, so dass es unmöglich wäre, zu berechnen, wer tatsächlich dazugehört.
@@ -108,7 +108,7 @@ Erstellen Sie eine Ausschlussgruppe, indem Sie Filter hinzufügen, wie Sie es be
 
 Ausgeschlossene Benutzer werden nicht als Teil der Statistik der _insgesamt erreichbaren Benutzer_ Ihres Segments gezählt.
 
-\![Eine Ausschlussgruppe mit zwei Filtern.]({% image_buster /assets/img_archive/segmenter_exclusion_groups.png %})
+![Eine Ausschlussgruppe mit zwei Filtern.]({% image_buster /assets/img_archive/segmenter_exclusion_groups.png %})
 
 #### Anzeigen der Funnel-Statistiken
 
@@ -116,7 +116,7 @@ Wählen Sie **Trichterstatistiken anzeigen** aus, um die Statistiken für diese 
 
 Beachten Sie, dass die Funnel-Statistiken sinken, wenn Sie AND zwischen Ihren Filtern verwenden. Wenn Sie OR zwischen Ihren Filtern verwenden, steigen die Funnel-Statistiken.
 
-\![Zwei Filter mit Segment Funnel Statistiken.]({% image_buster /assets/img_archive/segment_funnel_statistics.png %})
+![Zwei Filter mit Segment Funnel Statistiken.]({% image_buster /assets/img_archive/segment_funnel_statistics.png %})
 
 Durch das Hinzufügen von Filtern, die Ihren Nutzerfluss dokumentieren, können Sie die Punkte erkennen, an denen Nutzer:innen abspringen. Wenn Sie zum Beispiel eine App für soziale Netzwerke betreiben und sehen möchten, wo Sie während des Onboarding-Prozesses Nutzer:innen verlieren, können Sie angepasste Datenfilter für die Registrierung, das Hinzufügen von Freunden und das Senden der ersten Nachricht hinzufügen. Wenn Sie feststellen, dass 85 % der Nutzer:innen sich registrieren und Freunde hinzufügen, aber nur 45 % die erste Nachricht gesendet haben, dann wissen Sie, dass Sie sich darauf konzentrieren sollten, mehr Nachrichten während Ihrer Onboarding- und Marketing-Kampagnen zu senden.
 
@@ -124,7 +124,7 @@ Durch das Hinzufügen von Filtern, die Ihren Nutzerfluss dokumentieren, können 
 
 Nachdem Sie Ihrem Segment Apps und Filter hinzugefügt haben, können Sie testen, ob Ihr Segment wie erwartet eingerichtet ist, indem Sie nach einem Benutzer suchen, um zu überprüfen, ob er den Segmentkriterien entspricht. Suchen Sie dazu in der **Benutzersuche** nach dem Namen eines Benutzers `external_id` oder `braze_id`. Beachten Sie, dass Sie in der **Benutzer:innen-Suche** nicht nach E-Mail-Adressen suchen können.
 
-\![Abschnitt Nutzer:in mit einem Suchfeld.]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:70%;"}
+![Abschnitt Nutzer:in mit einem Suchfeld.]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:70%;"}
 
 Die Benutzersuche ist verfügbar, wenn:
 - Ein Segment erstellen
@@ -133,11 +133,11 @@ Die Benutzersuche ist verfügbar, wenn:
 
 Wenn ein:e Nutzer:in den Segment-, Filter- und App-Kriterien entspricht, wird dies in einer Benachrichtigung angezeigt.
 
-\![Eine Nutzer:in-Suche nach "testuser" triggert einen Alarm mit der Meldung "testuser stimmt mit allen Segmenten, Filtern und Apps überein.]({% image_buster /assets/img_archive/user_lookup_match.png %})
+![Eine Nutzer:in-Suche nach "testuser" triggert einen Alarm mit der Meldung "testuser stimmt mit allen Segmenten, Filtern und Apps überein.]({% image_buster /assets/img_archive/user_lookup_match.png %})
 
 Wenn ein Benutzer die Segment-, Filter- oder App-Kriterien ganz oder teilweise nicht erfüllt, werden die fehlenden Kriterien zur Fehlerbehebung aufgelistet.
 
-\![Eine Nutzer:innen-Suche mit der Meldung "test1 stimmt nicht mit den folgenden Targeting-Kriterien überein:" und zeigt fehlende Kriterien an.]({% image_buster /assets/img_archive/user_lookup_nomatch.png %})
+![Eine Nutzer:innen-Suche mit der Meldung "test1 stimmt nicht mit den folgenden Targeting-Kriterien überein:" und zeigt fehlende Kriterien an.]({% image_buster /assets/img_archive/user_lookup_nomatch.png %})
 
 #### Segmente für Einzelbenutzer
 
@@ -177,7 +177,7 @@ Wenn Sie mit geräteabhängigen Filtern segmentieren (Gerätemodell, Betriebssys
 
 Sie können festlegen, dass an jede:n Nutzer:in nur eine Push-Benachrichtigung gesendet wird. Wenn [Sie Ihre Nachricht verfassen]({{ssite.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message#step-4-compose-your-push-message), wählen Sie unter **Weitere Einstellungen** die Option **Nur an das zuletzt verwendete Gerät des Benutzers senden**.
 
-\!["Zusätzliche Einstellungen" mit einem Kontrollkästchen, um nur an das zuletzt benutzte Gerät des Nutzer:innen zu senden.]({% image_buster /assets/img_archive/send_to_last_device.png %}){: style="max-width:60%;"}
+!["Zusätzliche Einstellungen" mit einem Kontrollkästchen, um nur an das zuletzt benutzte Gerät des Nutzer:innen zu senden.]({% image_buster /assets/img_archive/send_to_last_device.png %}){: style="max-width:60%;"}
 
 ### Überlegungen
 

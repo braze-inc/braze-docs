@@ -19,7 +19,7 @@ Wenn Sie das Analytics Tracking für ein Segment nicht einschalten, können Sie 
 
 Schalten Sie auf der Seite **Segment Details** eines Segments **Analytics Tracking** ein.
 
-\![Analytics Tracking für ein Segment umschalten]({% image_buster /assets/img_archive/A_Tracking_2.png %})
+![Analytics Tracking für ein Segment umschalten]({% image_buster /assets/img_archive/A_Tracking_2.png %})
 
 In einer App kann das Tracking für bis zu 25 Segmente aktiviert werden. Braze empfiehlt das Tracking von Segmenten, die für Sie wichtig sind, um die Auswirkungen Ihrer Kampagnen auf Sitzungen, Umsätze und Käufe zu analysieren.
 
@@ -27,19 +27,19 @@ In einer App kann das Tracking für bis zu 25 Segmente aktiviert werden. Braze e
 
 Gehen Sie zu **Analytics** > **Umsatzbericht**, um Daten zu [Umsatz und Käufen im Zeitverlauf für dieses Segment]({{site.baseurl}}/user_guide/data/export_braze_data/exporting_revenue_data/) anzuzeigen.
 
-\![Umsatzdaten nach Segmenten]({% image_buster /assets/img_archive/Revenue.png %})
+![Umsatzdaten nach Segmenten]({% image_buster /assets/img_archive/Revenue.png %})
 
 Um die Daten der Segmente für jeden angepassten Zeitraum visuell zu vergleichen, fügen Sie dem Diagramm Segmente hinzu oder entfernen sie. Wählen Sie in der Dropdown-Liste **Aufschlüsselung** die Option **Nach Segmenten** und wählen Sie dann Ihre Segmente in **Aufschlüsselung Werte** aus.
 
 Wählen Sie einen beliebigen Segmentnamen oberhalb des Diagramms aus, um die Sichtbarkeit der Metriken für dieses Segment ein- oder auszuschalten.
 
-\![Umsätze für mehrere Segmente]({% image_buster /assets/img_archive/segment_revenue_multiple.png %})
+![Umsätze für mehrere Segmente]({% image_buster /assets/img_archive/segment_revenue_multiple.png %})
 
 ## Sitzungen im Laufe der Zeit
 
 Auf ähnliche Weise finden Sie auf der **Startseite** Daten über [Sitzungen im Zeitverlauf für dieses bestimmte Segment]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_app_usage_data/#exporting-app-usage-data).
 
-\![Sitzungsdaten nach Segmenten]({% image_buster /assets/img_archive/events_over_time2.png %})
+![Sitzungsdaten nach Segmenten]({% image_buster /assets/img_archive/events_over_time2.png %})
 
 ## Angepasste Events im Zeitverlauf anzeigen
 

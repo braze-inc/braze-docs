@@ -8,7 +8,7 @@ tool: Currents
 search_rank: 8
 ---
 
-# [\![Braze-Lernkurs]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/currents-the-basics-2/){: style="float:right;width:120px;border:0;" class="noimgborder"} Einrichten von Currents
+# [![Braze-Lernkurs]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/currents-the-basics-2/){: style="float:right;width:120px;border:0;" class="noimgborder"} Einrichten von Currents
 
 > Auf dieser Seite wird der allgemeine Prozess zur Integration und Konfiguration von Braze-Currents beschrieben.
 
@@ -48,7 +48,7 @@ Bevor Sie mit der Integration beginnen, sollten Sie entscheiden, welche Integrat
 
 Gehen Sie zu **Partnerintegrationen** > **Datenexport**, um zu beginnen. Sie gelangen auf die Seite zur Verwaltung der Currents-Integration.
 
-\![Currents-Seite im Braze-Dashboard]({% image_buster /assets/img_archive/currents-main-page.png %})
+![Currents-Seite im Braze-Dashboard]({% image_buster /assets/img_archive/currents-main-page.png %})
 
 ### Schritt 3: Ihren Partner hinzufügen
 
@@ -60,7 +60,7 @@ Für jeden Partner sind andere Konfigurationsschritte erforderlich. Um die einze
 
 Wählen Sie die Ereignisse, die Sie an diesen Partner weitergeben möchten, indem Sie eine der verfügbaren Optionen ankreuzen. Eine Auflistung dieser Events finden Sie in unseren Bibliotheken [Kundenverhalten-Events]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/) und [Messaging-Engagement-Events]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/).
 
-\![]({% image_buster /assets/img/current4.png %})
+![]({% image_buster /assets/img/current4.png %})
 
 Bei Bedarf erfahren Sie mehr über unsere Events in unserem Artikel [Semantik der Zustellung von Events]({{site.baseurl}}/user_guide/data/braze_currents/event_delivery_semantics/).
 
@@ -73,7 +73,7 @@ Sie können Transformationen des Feldes „Currents“ verwenden, um ein Zeichen
 
 Wenn Sie ein Feld für eine dieser Transformationen auswählen, wird diese Transformation auf alle Ereignisse angewendet, in denen dieses Feld vorkommt. Wenn Sie zum Beispiel `email_address` für die Hash-Funktion auswählen, wird das Feld `email_address` in den Ereignissen E-Mail-Versand, E-Mail-Öffnung, E-Mail-Bounce und Statusänderung der Abo-Gruppe gehasht.
 
-\![Hinzufügen von Feldtransformationen]({% image_buster /assets/img/current3.png %})
+![Hinzufügen von Feldtransformationen]({% image_buster /assets/img/current3.png %})
 
 ### Schritt 6: Testen Sie Ihre Integration
 
@@ -87,7 +87,7 @@ Bevor Sie testen, sollten Sie sich unsere [Currents-Beispieldaten auf GitHub](ht
 
 Um Ihre Integration zu testen, können Sie **Test-Ereignisse** auswählen, um je ein Ereignis aus jedem der von Ihnen ausgewählten Ereignistypen an diesen Current zu senden. Ausführliche Informationen zu den einzelnen Ereignistypen finden Sie in unseren Bibliotheken [Kundenverhalten-Events]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/) und [Messaging-Engagement-Events]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/).
 
-\![Die Seite "Currents Test" auf dem Braze-Dashboard.]({% image_buster /assets/img/currents/current_test_events.png %}){: style="max-width:70%;"}
+![Die Seite "Currents Test" auf dem Braze-Dashboard.]({% image_buster /assets/img/currents/current_test_events.png %}){: style="max-width:70%;"}
 
 #### Testen von Currents-Konnektoren
 

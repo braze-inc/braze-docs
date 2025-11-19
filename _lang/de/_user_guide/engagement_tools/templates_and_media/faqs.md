@@ -32,11 +32,11 @@ Nein, die Mediathek unterstützt das Zuschneiden von GIF-Bildern nicht.
 
 Sie können ein vorhandenes Bild zuschneiden, indem Sie das Bild aus der Bibliothek auswählen und auf **Zuschneiden & Neues Bild speichern** klicken. 
 
-\![Vorschau auf das Bild der Mediathek.]({% image_buster /assets/img_archive/media_library_crop1.png %}){: height="75%" width="75%"}
+![Vorschau auf das Bild der Mediathek.]({% image_buster /assets/img_archive/media_library_crop1.png %}){: height="75%" width="75%"}
 
 Sie werden dann zu einem Zuschneide-Composer weitergeleitet, in dem Sie den Verhältnis-Typ auswählen und den Namen des neuen Bildes bearbeiten können. Wenn Sie **Speichern** auswählen, kann Ihr neues Bild verwendet werden.
 
-\![Fenster zum Zuschneiden und Speichern des Bildes der Medienbibliothek.]({% image_buster /assets/img_archive/media_library_crop2.png %}){: height="75%" width="75%"}
+![Fenster zum Zuschneiden und Speichern des Bildes der Medienbibliothek.]({% image_buster /assets/img_archive/media_library_crop2.png %}){: height="75%" width="75%"}
 
 ### Mein Bild wird beim Hochladen immer wieder unterbrochen. Was kann ich dagegen tun?
 

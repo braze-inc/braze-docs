@@ -28,7 +28,7 @@ Der Short Messaging Service (SMS) ist ein standardisiertes Kommunikationsprotoko
 
 Wenn Sie eine SMS-Kampagne oder ein Canvas mit Braze erstellen, sind die Nachrichten, die Sie im Editor erstellen, zwar repräsentativ für das, was Ihre Nutzer:innen sehen, wenn die Nachricht ihrem Telefon zugestellt wird, aber **sie geben keinen Hinweis darauf, wie Ihre Nachricht in Segmente aufgeteilt wird und wie Sie letztendlich abgerechnet werden**. Es liegt in Ihrer Verantwortung, zu verstehen, wie viele Segmente gesendet werden, und sich der potenziellen Überschreitungen bewusst zu sein, die auftreten können. Wir stellen jedoch einige Ressourcen zur Verfügung, um Ihnen dies zu erleichtern. Sehen Sie sich unseren internen [Segmentrechner](#segment-calculator) an.
 
-\![]({% image_buster /assets/img/sms_segment_pic.png %}){: style="border:0;"}
+![]({% image_buster /assets/img/sms_segment_pic.png %}){: style="border:0;"}
 
 #### Segmentierung
 

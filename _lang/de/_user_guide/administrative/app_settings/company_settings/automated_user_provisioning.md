@@ -29,13 +29,13 @@ Geben Sie eine durch Komma getrennte Liste oder einen Bereich von IP-Adressen ei
 Dieser SCIM-Endpunkt lässt sich nicht direkt mit Identitätsanbietern integrieren.
 {% endalert %}
 
-\![SCIM-Provisioning-Einstellungsformular mit drei Feldern: Standard Workspace, Herkunft des Dienstes und optionale IP-Zulassungsliste. Der Button "SCIM-Token generieren" ist deaktiviert.]({% image_buster /assets/img/scim_unfilled.png %})
+![SCIM-Provisioning-Einstellungsformular mit drei Feldern: Standard Workspace, Herkunft des Dienstes und optionale IP-Zulassungsliste. Der Button "SCIM-Token generieren" ist deaktiviert.]({% image_buster /assets/img/scim_unfilled.png %})
 
 ## Schritt 3: Holen Sie sich Ihr SCIM-Token und Ihren Endpunkt
 
 Nachdem Sie die erforderlichen Felder ausgefüllt haben, klicken Sie auf **SCIM-Token generieren**, um ein SCIM-Token zu generieren und Ihren SCIM API Endpunkt anzuzeigen. Stellen Sie sicher, dass Sie das SCIM Token kopieren, bevor Sie weg navigieren. **Dieser Token wird nur einmal vorgelegt.** 
 
-\![SCIM API Endpunkt und SCIM Token Felder werden mit maskierten Werten und Kopierbuttons angezeigt. Unterhalb des Token-Feldes befindet sich ein Button "Token zurücksetzen".]({% image_buster /assets/img/scim.png %})
+![SCIM API Endpunkt und SCIM Token Felder werden mit maskierten Werten und Kopierbuttons angezeigt. Unterhalb des Token-Feldes befindet sich ein Button "Token zurücksetzen".]({% image_buster /assets/img/scim.png %})
 
 Braze erwartet, dass alle SCIM-Anfragen das SCIM API-Inhaber-Token enthalten, das über einen HTTP `Authorization` -Header angehängt wird.
 

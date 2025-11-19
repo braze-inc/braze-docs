@@ -18,7 +18,7 @@ description: "Auf dieser Seite erfahren Sie, wie Sie mit dem Drag-and-Drop-Edito
 
 Wenn Sie eine In-App-Nachricht per Drag-and-Drop erstellen, wählen Sie **E-Mail-Registrierung** für Ihr Template und dann **Nachricht erstellen** aus. Dieses Template wird sowohl für mobile Apps als auch für Webbrowser unterstützt.
 
-\![Der In-App-Nachricht-Editor mit dem Template für ein E-Mail-Erfassungsformular.]({% image_buster /assets/img/drag_and_drop/templates/email_capture_template1.png %})
+![Der In-App-Nachricht-Editor mit dem Template für ein E-Mail-Erfassungsformular.]({% image_buster /assets/img/drag_and_drop/templates/email_capture_template1.png %})
 
 ### Schritt 2: Nachrichtenstile festlegen
 
@@ -30,7 +30,7 @@ Um mit der Erstellung Ihres E-Mail-Registrierungsformulars zu beginnen, wählen 
 
 Sie können den Platzhaltertext und den Beschriftungstext des Elements für die E-Mail-Erfassung anpassen.
 
-\![Der In-App-Nachricht-Editor mit einem Seitenmenü zum Anpassen des Elements für die E-Mail-Erfassung.]({% image_buster /assets/img/drag_and_drop/templates/email_capture_field1.png %})
+![Der In-App-Nachricht-Editor mit einem Seitenmenü zum Anpassen des Elements für die E-Mail-Erfassung.]({% image_buster /assets/img/drag_and_drop/templates/email_capture_field1.png %})
 
 #### E-Mail-Validierung
 

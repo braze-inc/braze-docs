@@ -36,7 +36,7 @@ Um einen anderen Standard einzustellen Push TTL:
 2. Legen Sie für jede Android-Plattform einen Standardwert für die Lebensdauer fest. Für eine genauere Kontrolle können Sie kleinere Schritte wie Stunden oder Sekunden einstellen.
 3. Wählen Sie **Speichern**, um Ihre Änderungen zu übernehmen.
 
-\![Push TTL-Einstellungen für Firebase-, Internet-, Kindle- und Huawei-Geräte.]({% image_buster /assets/img/push_ttl.png %})
+![Push TTL-Einstellungen für Firebase-, Internet-, Kindle- und Huawei-Geräte.]({% image_buster /assets/img/push_ttl.png %})
 
 ## Standard FCM Priorität für Android Kampagnen
 
@@ -56,7 +56,7 @@ So legen Sie die Standard FCM Priorität fest:
 2. Wählen Sie im Bereich FCM-Priorität entweder "Normal" oder "Hoch" als Standardeinstellung aus.
 3. Wählen Sie **Speichern**, um Ihre Änderungen zu übernehmen.
 
-\![Android-Einstellungen für die Zustellung.]({% image_buster /assets/img/push_fcm_priority_settings.png %})
+![Android-Einstellungen für die Zustellung.]({% image_buster /assets/img/push_fcm_priority_settings.png %})
 
 Diese Einstellung gilt global für alle neuen Android Push Kampagnen, es sei denn, Sie wählen bei der Erstellung einer bestimmten Kampagne eine andere Priorität aus. 
 

@@ -59,7 +59,7 @@ Sie können die triggernden Events auch über die [angepassten Event-Eigenschaft
 
 Nehmen wir zum Beispiel an, wir haben eine Kampagne mit einem angepassten Event für einen Warenkorb-Abbruch, das durch den Filter für die Eigenschaft "Warenkorb-Wert" weiter adressiert wird. Diese Kampagne erreicht nur Nutzer:innen, die Waren im Wert von $100 bis $200 in ihrem Warenkorb liegen haben. 
 
-\![]({% image_buster /assets/img_archive/customEventProperties.png %})
+![]({% image_buster /assets/img_archive/customEventProperties.png %})
 
 {% alert note %}
 Das Trigger-Ereignis "Sitzung starten" kann das allererste Öffnen der App durch den Nutzer sein, wenn das Segment Ihrer Kampagne für neue Nutzer gilt. (zum Beispiel, wenn Ihr Segment aus Nutzern ohne Sitzungen besteht).
@@ -74,7 +74,7 @@ Für das Trigger-Event, wenn ein:e Nutzer:in seinem Profil eine E-Mail-Adresse h
 
 Darüber hinaus unterliegen ausgelöste In-App-Nachrichten weiterhin den Regeln für die Zustellung von In-App-Nachrichten und erscheinen zu Beginn einer App-Sitzung.
 
-\![]({% image_buster /assets/img_archive/schedule_triggered1.png %})
+![]({% image_buster /assets/img_archive/schedule_triggered1.png %})
 
 ### Schritt 2: Verzögerungsdauer auswählen
 
@@ -82,18 +82,18 @@ Wählen Sie aus, wie lange gewartet werden soll, bevor die Kampagne gesendet wir
 
 Außerdem erhalten Nutzer, die das Trigger-Ereignis nach dem Start Ihrer Kampagne abschließen, die Nachricht als erste, nachdem die Verzögerung verstrichen ist. Nutzer:innen, die das Trigger-Event vor dem Start der Kampagne abgeschlossen haben, sind nicht für die Kampagne qualifiziert.
 
-\![]({% image_buster /assets/img_archive/schedule_triggered22.png %})
+![]({% image_buster /assets/img_archive/schedule_triggered22.png %})
 
 Sie können die Kampagne auch entweder an einem bestimmten Wochentag (indem Sie "am nächsten" wählen und dann einen Tag auswählen) oder an einer bestimmten Anzahl von Tagen (indem Sie "in" auswählen) in der Zukunft versenden. Alternativ können Sie Ihre Nachricht auch mit der Funktion [Intelligentes Timing]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/) versenden, anstatt manuell eine Zustellzeit auszuwählen.
 
-\![]({% image_buster /assets/img_archive/schedule_triggered7.png %})
-\![]({% image_buster /assets/img_archive/schedule_triggered8.png %})
+![]({% image_buster /assets/img_archive/schedule_triggered7.png %})
+![]({% image_buster /assets/img_archive/schedule_triggered8.png %})
 
 ### Schritt 3: Ausnahme-Events auswählen
 
 Wählen Sie ein Ausnahme-Event aus, durch das Nutzer:innen von dieser Kampagne ausgeschlossen werden. Sie können dies nur tun, wenn Ihre getriggerte Nachricht zeitverzögert gesendet wird. [Ausnahme-Events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria/#exception-events) können ein Kauf, der Beginn einer Sitzung, die Durchführung eines der in einer Kampagne vorgesehenen [Konversions-Events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#conversion-events) oder die Durchführung eines angepassten Events sein. Wenn ein:e Nutzer:in das Trigger-Event ausführt, dann aber aufgrund der Zeitverzögerung Ihr Ausnahme-Event ausführt, bevor die Nachricht gesendet wird, erhält er die Kampagne nicht. Nutzer:innen, die die Kampagne aufgrund des Ausnahme-Events nicht erhalten haben, sind automatisch berechtigt, sie in der Zukunft zu erhalten, wenn sie das nächste Mal das triggernde Event abschließen, auch wenn Sie nicht festlegen, dass Nutzer:innen [erneut berechtigt sind]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/reeligibility/).
 
-\![]({% image_buster /assets/img_archive/schedule_triggered32.png %})
+![]({% image_buster /assets/img_archive/schedule_triggered32.png %})
 
 Mehr über den Einsatz von Ausnahme-Events erfahren Sie in unserem Abschnitt über [Anwendungsfälle]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/#use-cases).
 
@@ -107,7 +107,7 @@ Sie können einen "Sitzungsstart" nicht gleichzeitig zum Trigger-Event und zum A
 
 Legen Sie die Dauer der Kampagne fest, indem Sie eine Startzeit und optional eine Endzeit angeben.
 
-\![]({% image_buster /assets/img_archive/schedule_triggered43.png %})
+![]({% image_buster /assets/img_archive/schedule_triggered43.png %})
 
 Wenn ein Benutzer ein Trigger-Ereignis innerhalb des angegebenen Zeitrahmens ausführt, sich aber aufgrund einer geplanten Verzögerung außerhalb des Zeitrahmens für die Nachricht qualifiziert, erhält er die Kampagne nicht. Wenn Sie also eine Zeitverzögerung einstellen, die länger als der Zeitrahmen der Nachricht ist, werden keine Nutzer:innen Ihre Kampagne erhalten. Außerdem können Sie wählen, ob die Nachricht in den [Ortszeiten]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/scheduled_delivery/#local-time-zone-campaigns) der Nutzer:innen gesendet werden soll.
 
@@ -115,11 +115,11 @@ Wenn ein Benutzer ein Trigger-Ereignis innerhalb des angegebenen Zeitrahmens aus
 
 Wählen Sie aus, ob die:der Nutzer:in die Kampagne während eines bestimmten Teils des Tages erhalten soll. Wenn Sie der Nachricht einen Zeitrahmen geben und der Benutzer entweder das auslösende Ereignis außerhalb des Zeitrahmens abschließt oder die Verzögerung der Nachricht dazu führt, dass er den Zeitrahmen verpasst, wird der Benutzer Ihre Nachricht standardmäßig nicht erhalten.
 
-\![]({% image_buster /assets/img_archive/schedule_triggered5.png %})
+![]({% image_buster /assets/img_archive/schedule_triggered5.png %})
 
 Für den Fall, dass ein Benutzer das auslösende Ereignis innerhalb des Zeitrahmens abschließt, aber durch die Verzögerung der Nachricht aus dem Zeitrahmen fällt, können Sie das folgende Kästchen markieren, damit diese Benutzer die Kampagne trotzdem erhalten.
 
-\![]({% image_buster /assets/img_archive/schedule_triggered_next_available.png %})
+![]({% image_buster /assets/img_archive/schedule_triggered_next_available.png %})
 
 Wenn ein:e Nutzer:in die Nachricht nicht erhält, weil er den Zeitrahmen verpasst hat, ist er dennoch qualifiziert, sie zu erhalten, wenn er das nächste Mal das Trigger-Event abschließt, auch wenn Sie nicht gewählt haben, dass Nutzer:innen [erneut qualifiziert]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/reeligibility/) werden. Wenn Sie sich dafür entscheiden, dass Nutzer:innen erneut teilnahmeberechtigt werden, können sie die Kampagne jedes Mal erhalten, wenn sie das Trigger-Event abschließen, vorausgesetzt, sie qualifizieren sich innerhalb des festgelegten Zeitraums.
 
@@ -129,7 +129,7 @@ Wenn Sie der Kampagne auch eine bestimmte Dauer zugewiesen haben, muss sich ein 
 
 Bestimmen Sie, ob Nutzer:innen für die Kampagne [wieder wählbar]({% image_buster /assets/img_archive/ReEligible.png %}) werden können. Wenn Sie zulassen, dass Nutzer:innen wieder teilnahmeberechtigt werden, können Sie eine Zeitverzögerung festlegen, bevor die Nutzer:innen die Kampagne erneut erhalten können. So verhindern Sie, dass Ihre getriggerten Kampagnen "spammy" werden.
 
-\![]({% image_buster /assets/img_archive/schedule_triggered6.png %})
+![]({% image_buster /assets/img_archive/schedule_triggered6.png %})
 
 ## Anwendungsfälle
 
@@ -165,7 +165,7 @@ Wenn Ihre Kampagne durch ein bestimmtes benutzerdefiniertes Ereignis ausgelöst 
 
 Wir empfehlen, entweder die Zielgruppe so zu ändern, dass sie alle Nutzer:innen umfasst, oder zu überprüfen, ob die Nutzer:innen, die das Event ausführen sollen, bereits zur Zielgruppe der Kampagne gehören, damit die Nachricht getriggert werden kann.
 
-\![]({% image_buster /assets/img_archive/reevaluate_segment_membership.png %})
+![]({% image_buster /assets/img_archive/reevaluate_segment_membership.png %})
 
 ### Fehlerbehebung bei angepassten Events
 

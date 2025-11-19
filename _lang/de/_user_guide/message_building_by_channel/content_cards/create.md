@@ -57,16 +57,16 @@ Wenn Sie mehr über das erwartete Verhalten und das Aussehen der einzelnen Typen
 
 | Nachrichtentyp | Beispiel | Beschreibung |
 |---|---|---|
-|[Klassisch]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#classic)| \![Eine klassische Content-Card mit einem kleinen Symbol und Text, um Sie zur Buchung eines Trainingskurses anzuregen.]({% image_buster/assets/img_archive/cc_steppington_classic.png %}) |Die Classic Card hat ein einfaches Layout mit einem fettgedruckten Titel, einem Nachrichtentext und einem optionalen Bild, das links neben dem Titel und dem Text platziert wird. Für die Classic Card verwenden Sie am besten ein quadratisches Bild oder Symbol. |
-|[Bild mit Bildunterschrift]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#captioned-image)| \![Eine Content-Card mit einem Bild eines Gewichthebers und einem Text, der zur Buchung eines Trainingskurses anregt.]({% image_buster/assets/img_archive/cc_steppington_captioned.png %}) | Die hervorgehobene Image-Card präsentiert Ihren Inhalt mit Text und einem aufmerksamkeitsstarken Bild. |
-|[Nur Bild]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#banner)| \![Eine Content-Card nur mit Bild und nur mit Text.]({% image_buster/assets/img_archive/cc_steppington_banner.png %}) | Die Karte mit reinem Bildinhalt bietet Platz für Bilder, GIFs und andere kreative Nicht-Text-Inhalte. |
+|[Klassisch]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#classic)| ![Eine klassische Content-Card mit einem kleinen Symbol und Text, um Sie zur Buchung eines Trainingskurses anzuregen.]({% image_buster/assets/img_archive/cc_steppington_classic.png %}) |Die Classic Card hat ein einfaches Layout mit einem fettgedruckten Titel, einem Nachrichtentext und einem optionalen Bild, das links neben dem Titel und dem Text platziert wird. Für die Classic Card verwenden Sie am besten ein quadratisches Bild oder Symbol. |
+|[Bild mit Bildunterschrift]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#captioned-image)| ![Eine Content-Card mit einem Bild eines Gewichthebers und einem Text, der zur Buchung eines Trainingskurses anregt.]({% image_buster/assets/img_archive/cc_steppington_captioned.png %}) | Die hervorgehobene Image-Card präsentiert Ihren Inhalt mit Text und einem aufmerksamkeitsstarken Bild. |
+|[Nur Bild]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#banner)| ![Eine Content-Card nur mit Bild und nur mit Text.]({% image_buster/assets/img_archive/cc_steppington_banner.png %}) | Die Karte mit reinem Bildinhalt bietet Platz für Bilder, GIFs und andere kreative Nicht-Text-Inhalte. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## Schritt 3: Content-Card zusammenstellen
 
 Auf der Registerkarte **Verfassen** des Nachrichteneditors können Sie alle Aspekte des Inhalts und Verhaltens Ihrer Nachricht bearbeiten.
 
-\![Beispiel Content-Card Details im Tab Verfassen des Nachrichten-Editors.]({% image_buster /assets/img/content_card_compose.png %})
+![Beispiel Content-Card Details im Tab Verfassen des Nachrichten-Editors.]({% image_buster /assets/img/content_card_compose.png %})
 
 Der Inhalt variiert je nach dem im vorherigen Schritt gewählten **Kartentyp**, kann aber eine der folgenden Optionen enthalten:
 
@@ -74,7 +74,7 @@ Der Inhalt variiert je nach dem im vorherigen Schritt gewählten **Kartentyp**, 
 
 Wählen Sie **Sprachen hinzufügen**, um die gewünschten Sprachen aus der vorgegebenen Liste hinzuzufügen. Dadurch wird [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#conditional-logic) in Ihre Nachricht eingefügt. Wählen Sie die Sprachen am besten aus, bevor Sie den Content verfassen, damit Sie den Text dort einfügen können, wo er im Liquid hingehört. Eine vollständige Liste der Sprachen, die Sie verwenden können, finden Sie unter [Unterstützte Sprachen]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported).
 
-\![Ein Fenster, in dem Englisch, Spanisch und Französisch als Sprachen ausgewählt sind und Titel, Beschreibung und Linktext als zu internationalisierende Felder ausgewählt sind.]({% image_buster /assets/img/add_languages.png %}){: style="max-width:70%;"}
+![Ein Fenster, in dem Englisch, Spanisch und Französisch als Sprachen ausgewählt sind und Titel, Beschreibung und Linktext als zu internationalisierende Felder ausgewählt sind.]({% image_buster /assets/img/add_languages.png %}){: style="max-width:70%;"}
 
 ##### Erstellen von Nachrichten von rechts nach links
 
@@ -92,7 +92,7 @@ Fügen Sie ein Bild zu Ihrer Inhaltskarte hinzu, indem Sie **Bild hinzufügen** 
 
 Eine angeheftete Karte wird oben im Feed eines Benutzers angezeigt und kann vom Benutzer nicht abgewählt werden. Wenn mehr als eine Karte im Feed eines Benutzers angeheftet ist, werden die angehefteten Karten in chronologischer Reihenfolge angezeigt. Nachdem eine Karte versendet wurde, können Sie die angeheftete Option nicht mehr rückwirkend aktualisieren. Wenn Sie diese Option nach dem Versand einer Kampagne ändern, wirkt sich dies nur auf zukünftige Sendungen aus.
 
-\![Seite an Seite der Vorschau der Content-Cards in Braze for Mobile und Internet mit der ausgewählten Option "Diese Karte an den Anfang des Feeds heften".]({% image_buster /assets/img/cc_pin_to_top.png %}){:style="border:none"}
+![Seite an Seite der Vorschau der Content-Cards in Braze for Mobile und Internet mit der ausgewählten Option "Diese Karte an den Anfang des Feeds heften".]({% image_buster /assets/img/cc_pin_to_top.png %}){:style="border:none"}
 
 #### On-Click-Verhalten
 
@@ -190,7 +190,7 @@ Wenn Sie alte Karten entfernen möchten, müssen Sie zunächst die Kampagne been
 
 Wenn Sie die Content Card aus den Feeds Ihrer Benutzer entfernen möchten, wählen Sie **Karte aus Feed entfernen**. Die Karte wird dann bei der nächsten Synchronisierung vom SDK versteckt.
 
-\![Dialog zum Bestätigen der Deaktivierung von Content-Cards]({% image_buster /assets/img/cc_remove.png %}){: style="max-width:75%" }
+![Dialog zum Bestätigen der Deaktivierung von Content-Cards]({% image_buster /assets/img/cc_remove.png %}){: style="max-width:75%" }
 
 {% alert tip %}
 Möchten Sie, dass Ihre Inhalte länger als 30 Tage verfügbar sind? Versuchen Sie es mit [Bannern]({{site.baseurl}}/user_guide/message_building_by_channel/banners).
@@ -208,7 +208,7 @@ Die Karten werden bei nachfolgenden Aktualisierungen entfernt, nachdem Braze das
 Sie können mehrere benutzerdefinierte Ereignisse und Käufe angeben, die eine Karte aus dem Feed eines Benutzers entfernen sollen. Wenn der Benutzer **eine** dieser Aktionen durchführt, werden alle vorhandenen Karten, die von den Karten der Kampagne gesendet wurden, entfernt. Alle zukünftigen Karten, die in Frage kommen, werden weiterhin gemäß dem Zeitplan der Nachricht verschickt.
 {% endalert %}
 
-\![Content-Card-Entfernungsbedingungen Panel mit der Option Content-Card-Entfernungsereignis.]({% image_buster /assets/img/content_cards/content_card_removal_event.png %})
+![Content-Card-Entfernungsbedingungen Panel mit der Option Content-Card-Entfernungsereignis.]({% image_buster /assets/img/content_cards/content_card_removal_event.png %})
 
 ### Aktualisieren der gestarteten Karten
 

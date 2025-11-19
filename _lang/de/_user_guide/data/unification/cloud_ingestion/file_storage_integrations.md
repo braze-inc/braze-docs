@@ -68,7 +68,7 @@ Stellen Sie sicher, dass Sie diese SQS in der gleichen Region anlegen, in der Si
 
 Notieren Sie sich unbedingt den ARN und die URL der SQS, da Sie sie während dieser Konfiguration häufig verwenden werden.
 
-\![Auswählen von "Erweitert" mit einem JSON-Beispielobjekt, um festzulegen, wer auf eine Warteschlange zugreifen darf.]({% image_buster /assets/img/cloud_ingestion/s3_ARN.png %})
+![Auswählen von "Erweitert" mit einem JSON-Beispielobjekt, um festzulegen, wer auf eine Warteschlange zugreifen darf.]({% image_buster /assets/img/cloud_ingestion/s3_ARN.png %})
 
 ### Schritt 3: Zugriffsrichtlinie einrichten
 
@@ -110,7 +110,7 @@ Wenn Sie Ihre Dateien in den Stammordner eines S3-Buckets hochladen und dann ein
 
 Erstellen Sie eine IAM Richtlinie, um Braze die Interaktion mit Ihrem Source Bucket zu erlauben. Um loszulegen, melden Sie sich bei der AWS Verwaltungskonsole als Account Administrator an. 
 
-1. Gehen Sie zum Abschnitt IAM der AWS Konsole, wählen Sie in der Navigationsleiste **Richtlinien** aus und wählen Sie dann **Richtlinie erstellen**.<br><br>\![Der Button "Richtlinie erstellen" in der AWS-Konsole.]({% image_buster /assets/img/create_policy_1_list.png %})<br><br>
+1. Gehen Sie zum Abschnitt IAM der AWS Konsole, wählen Sie in der Navigationsleiste **Richtlinien** aus und wählen Sie dann **Richtlinie erstellen**.<br><br>![Der Button "Richtlinie erstellen" in der AWS-Konsole.]({% image_buster /assets/img/create_policy_1_list.png %})<br><br>
 
 2. Öffnen Sie den Tab **JSON** und geben Sie den folgenden Code-Snippet in den Abschnitt **Policy Document** ein. Achten Sie darauf, `YOUR-BUCKET-NAME-HERE` durch Ihren Bucket-Namen und `YOUR-SQS-ARN-HERE` durch den Namen Ihrer SQS Warteschlange zu ersetzen: 
 
@@ -148,9 +148,9 @@ Erstellen Sie eine IAM Richtlinie, um Braze die Interaktion mit Ihrem Source Buc
 
 4. Geben Sie der Richtlinie einen Namen und eine Beschreibung und wählen Sie dann **Richtlinie erstellen**.  
 
-\![Eine Beispielrichtlinie mit dem Namen "new-policy-name".]({% image_buster /assets/img/create_policy_3_name.png %})
+![Eine Beispielrichtlinie mit dem Namen "new-policy-name".]({% image_buster /assets/img/create_policy_3_name.png %})
 
-\![Das Beschreibungsfeld für die Richtlinie.]({% image_buster /assets/img/create_policy_4_created.png %})
+![Das Beschreibungsfeld für die Richtlinie.]({% image_buster /assets/img/create_policy_4_created.png %})
 
 ### Schritt 6: Eine IAM-Rolle erstellen
 
@@ -158,23 +158,23 @@ Um die Einrichtung auf AWS abzuschließen, erstellen Sie eine IAM-Rolle und füg
 
 1. Gehen Sie in demselben IAM-Bereich der Konsole, in dem Sie die IAM-Richtlinie erstellt haben, zu **Rollen** > **Rolle erstellen**. 
 
-<br><br>\![Der Button "Rolle erstellen".]({% image_buster /assets/img/create_role_1_list.png %})<br><br>
+<br><br>![Der Button "Rolle erstellen".]({% image_buster /assets/img/create_role_1_list.png %})<br><br>
 
 {: start="2"}
 2\. Kopieren Sie die ID des Braze-Kontos für AWS von Ihrem Braze-Dashboard. Gehen Sie zu **Cloud Datenaufnahme**, wählen Sie **Neue Datensynchronisation erstellen** und wählen Sie **S3 Import**.
 
 3. Wählen Sie in AWS **ein anderes AWS-Konto** als SELEKTOR-Typ für vertrauenswürdige Entitäten aus. Geben Sie Ihre Braze-Konto ID an. Wählen Sie das Kontrollkästchen **Externe ID erforderlich** aus, und geben Sie eine externe ID ein, die Braze verwenden soll. Dies ist die externe ID, die beim Erstellen einer S3-Currents-Verbindung im Abschnitt **Zugangsdaten** Ihrer Currents-Verbindung im Braze-Dashboard generiert wurde. Wählen Sie nach Abschluss **Weiter** aus. 
 
-<br><br> \![Die S3-Seite "Rolle erstellen". Diese Seite enthält Felder für den Rollennamen, die Rollenbeschreibung, vertrauenswürdige Entitäten, Richtlinien und die Berechtigungsgrenze.]({% image_buster /assets/img/create_role_2_another.png %})<br><br>
+<br><br> ![Die S3-Seite "Rolle erstellen". Diese Seite enthält Felder für den Rollennamen, die Rollenbeschreibung, vertrauenswürdige Entitäten, Richtlinien und die Berechtigungsgrenze.]({% image_buster /assets/img/create_role_2_another.png %})<br><br>
 
 {: start="4"}
 4\. Hängen Sie die in Schritt 4 erstellte Richtlinie an die Rolle an. Suchen Sie die Richtlinie in der Suchleiste, und wählen Sie ein Häkchen neben der Richtlinie aus, um sie anzuhängen. Wählen Sie nach Abschluss **Weiter** aus.
 
-<br><br>\![Rollen-ARN mit dem ausgewählten new-policy-name.]({% image_buster /assets/img/create_role_3_attach.png %})<br><br>
+<br><br>![Rollen-ARN mit dem ausgewählten new-policy-name.]({% image_buster /assets/img/create_role_3_attach.png %})<br><br>
 
 Geben Sie der Rolle einen Namen und eine Beschreibung, und wählen Sie **Rolle erstellen**.
 
-<br><br>\![Eine Beispielrolle mit dem Namen "new-role-name".]({% image_buster /assets/img/create_role_4_name.png %})<br><br>
+<br><br>![Eine Beispielrolle mit dem Namen "new-role-name".]({% image_buster /assets/img/create_role_4_name.png %})<br><br>
 
 {: start="5"}
 5\. Notieren Sie sich den ARN der soeben erstellten Rolle und die externe ID, die Sie generiert haben, da Sie diese zum Erstellen der Integration für die Datenaufnahme in der Cloud verwenden werden.
@@ -191,22 +191,22 @@ Geben Sie der Rolle einen Namen und eine Beschreibung, und wählen Sie **Rolle e
   - Ordnerpfad (optional, muss bei allen Synchronisierungen in einem Workspace eindeutig sein)
   - Region
 
-\![Beispiel für die Zugangsdaten, wie sie in S3 angezeigt werden, um eine neue Importsynchronisation zu erstellen.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_1.png %})
+![Beispiel für die Zugangsdaten, wie sie in S3 angezeigt werden, um eine neue Importsynchronisation zu erstellen.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_1.png %})
 
 {: start="3"}
 3\. Benennen Sie Ihre Integration und wählen Sie den Datentyp für diese Integration aus. 
 
-<br><br>\![Einrichten der Synchronisationsdetails für "cdi-s3-als-Quelle-Integration" mit Nutzer:in-Attributen als Datentyp.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_2.png %})<br><br>
+<br><br>![Einrichten der Synchronisationsdetails für "cdi-s3-als-Quelle-Integration" mit Nutzer:in-Attributen als Datentyp.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_2.png %})<br><br>
 
 {: start="4"}
 4\. Fügen Sie eine E-Mail für Benachrichtigungen hinzu, wenn die Synchronisierung aufgrund von Zugriffs- oder Berechtigungsproblemen unterbrochen wird. Schalten Sie optional Benachrichtigungen für Fehler auf Nutzer:innen-Ebene und erfolgreiche Synchronisierungen ein. 
 
-<br><br> \![Einrichten von Benachrichtigungseinstellungen für Synchronisationsfehler-Benachrichtigungen.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_3.png %})<br><br>
+<br><br> ![Einrichten von Benachrichtigungseinstellungen für Synchronisationsfehler-Benachrichtigungen.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_3.png %})<br><br>
 
 {: start="5"}
 5\. Testen Sie schließlich die Verbindung und speichern Sie die Synchronisierung. 
 
-<br><br>\![Eine Option zum Testen der Verbindung mit einer Vorschau der Daten.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_4.png %})
+<br><br>![Eine Option zum Testen der Verbindung mit einer Vorschau der Daten.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_4.png %})
 
 ## Erforderliche Dateiformate
 

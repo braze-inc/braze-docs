@@ -33,7 +33,7 @@ Führen Sie diese Schritte aus, um Benachrichtigungen über Preissenkungen in ei
 
 1. Gehen Sie zu Ihrem Katalog und wählen Sie die Registerkarte **Einstellungen**.
 2. Wählen Sie den Schalter **Preissenkung**.
-3. Wenn die globalen Einstellungen des Katalogs nicht konfiguriert wurden, werden Sie aufgefordert, die angepassten Events und Eigenschaften einzurichten, die zum Auslösen von Benachrichtigungen verwendet werden. <br><br> \![Schublade für Katalogeinstellungen.]({% image_buster /assets/img/catalog_settings_drawer.png %}){: style="max-width:70%;"}
+3. Wenn die globalen Einstellungen des Katalogs nicht konfiguriert wurden, werden Sie aufgefordert, die angepassten Events und Eigenschaften einzurichten, die zum Auslösen von Benachrichtigungen verwendet werden. <br><br> ![Schublade für Katalogeinstellungen.]({% image_buster /assets/img/catalog_settings_drawer.png %}){: style="max-width:70%;"}
 
 | Feld | Beschreibung |
 | --- | --- |
@@ -77,7 +77,7 @@ Hier ist ein Beispiel für ein angepasstes Event:
 3. Legen Sie die **Preissenkungsregel** fest. Diese Logik bestimmt, ob eine Benachrichtigung gesendet werden soll. Eine Preissenkung kann als prozentuale Preisänderung oder durch die Änderung des Wertes für das Preisfeld konfiguriert werden.
 4. Wählen Sie **Einstellungen speichern**.
 
-\![Katalogeinstellungen, die das Feature der Preissenkung aktiviert zeigen. Die Preissenkungsregel ist eine Änderung von drei Prozent des ursprünglichen Preises.]({% image_buster /assets/img/price_drop_notifications.png %})
+![Katalogeinstellungen, die das Feature der Preissenkung aktiviert zeigen. Die Preissenkungsregel ist eine Änderung von drei Prozent des ursprünglichen Preises.]({% image_buster /assets/img/price_drop_notifications.png %})
 
 {% alert important %}
 Die Benachrichtigungsregeln in diesen Einstellungen ersetzen nicht die Canvas-Benachrichtigungseinstellungen, wie z.B. Stille Stunden.

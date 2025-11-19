@@ -57,13 +57,13 @@ Verfassen Sie die Nachrichten, die Sie an Ihre Benutzer senden möchten. Je nach
 2. Wählen Sie die auslösende Interaktion. 
 3. Als Nächstes wählen Sie die aktive Kampagne aus, die Sie als Targeting verwenden möchten.
 
-\![]({% image_buster /assets/img_archive/Campaign_Connector1.png %})
+![]({% image_buster /assets/img_archive/Campaign_Connector1.png %})
 
 ### Schritt 3: Zeitplanverzögerung einstellen und Ausnahmen hinzufügen (optional)
 
 Wenn Sie sich für eine Zeitplanverzögerung entscheiden, können Sie der Aktion triggern eine Ausnahme hinzufügen. Sie könnten zum Beispiel eine E-Mail-Kampagne erneut an Benutzer senden, die die ursprüngliche E-Mail nicht geöffnet haben.  In diesem Szenario können Sie "Empfangene E-Mail" als Trigger wählen und eine Zeitplanverzögerung von einer Woche festlegen. Dann können Sie "E-Mail öffnen" als Ausnahme hinzufügen. Jetzt senden Sie die E-Mail erneut an Benutzer, die die ursprüngliche E-Mail nicht innerhalb einer Woche nach Erhalt geöffnet haben.
 
-\![]({% image_buster /assets/img_archive/Campaign_Connector3.png %})
+![]({% image_buster /assets/img_archive/Campaign_Connector3.png %})
 
 Ausnahme-Events werden nur ausgelöst, wenn ein:e Nutzer:in auf den Empfang der Nachricht wartet, mit der sie verbunden sind. Wenn ein:e Nutzer:in die Aktion ausführt, bevor er auf die Nachricht wartet, wird das Ausnahme-Event nicht ausgelöst.
 

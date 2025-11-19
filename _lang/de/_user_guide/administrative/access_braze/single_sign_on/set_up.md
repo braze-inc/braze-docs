@@ -65,20 +65,20 @@ Achten Sie darauf, dass Ihr `x.509`-Zertifikat diesem Format entspricht, wenn Si
 -----END CERTIFICATE-----
 ```
 
-\![SAML SSO Einstellungen mit dem ausgewählten Umschalter.]({% image_buster /assets/img/samlsso.png %})
+![SAML SSO Einstellungen mit dem ausgewählten Umschalter.]({% image_buster /assets/img/samlsso.png %})
 
 ### Schritt 3: Bei Braze anmelden
 
 Speichern Sie Ihre Sicherheitseinstellungen und melden Sie sich ab. Melden Sie sich dann wieder bei Ihrem Identitätsanbieter an.
 
-\![Dashboard Anmeldebildschirm mit SSO Enablement]({% image_buster /assets/img/sso1.png %}){: style="max-width:60%;"}
+![Dashboard Anmeldebildschirm mit SSO Enablement]({% image_buster /assets/img/sso1.png %}){: style="max-width:60%;"}
 
 ## Einrichten Ihres RelayState
 
 1. Gehen Sie in Braze zu **Einstellungen** > **APIs und Bezeichner**.
 2. Wählen Sie auf dem Tab **API-Schlüssel** den Button **API-Schlüssel erstellen** aus.
 3. Geben Sie in das Feld **Name des API-Schlüssels** einen Namen für Ihren Schlüssel ein.
-4. Erweitern Sie das Dropdown-Menü **SSO** unter **Berechtigungen** und markieren Sie **sso.saml.login**.<br><br>\![Der Abschnitt "Berechtigungen" mit sso.saml.login markiert.]({% image_buster /assets/img/relaystate_troubleshoot.png %}){: style="max-width:70%;"}<br><br>
+4. Erweitern Sie das Dropdown-Menü **SSO** unter **Berechtigungen** und markieren Sie **sso.saml.login**.<br><br>![Der Abschnitt "Berechtigungen" mit sso.saml.login markiert.]({% image_buster /assets/img/relaystate_troubleshoot.png %}){: style="max-width:70%;"}<br><br>
 5. Wählen Sie **API-Schlüssel erstellen**.
 6. Kopieren Sie auf dem Tab **API-Schlüssel** den Bezeichner neben dem API-Schlüssel, den Sie erstellt haben.
 7. Fügen Sie den RelayState API-Schlüssel in den RelayState Ihres IdP ein (je nach IdP kann er auch als "Relay State" oder "Default Relay State" erscheinen).
@@ -91,7 +91,7 @@ Personen, die SSO nutzen, können nicht mehr wie bisher ihr Passwort verwenden. 
 
 Sie können die Angehörigen Ihrer Organisation auf eine Anmeldung per Google SSO oder SAML SSO beschränken. Um die Einschränkungen zu aktivieren, öffnen Sie die **Sicherheitseinstellungen** und wählen Sie entweder **Anmeldung nur per Google SSO** oder **Anmeldung nur mit angepasstem SAML SSO**.
 
-\![Beispiel für die Einrichtung des Bereichs "Authentifizierungsregeln" mit einer Mindestlänge des Passworts von 8 Zeichen und einer 3-fachen Wiederverwendbarkeit des Passworts. Die Passwörter laufen nach 180 Tagen ab, und die Nutzer:innen werden nach 1.440 Minuten Inaktivität abgemeldet.]({% image_buster /assets/img/sso3.png %})
+![Beispiel für die Einrichtung des Bereichs "Authentifizierungsregeln" mit einer Mindestlänge des Passworts von 8 Zeichen und einer 3-fachen Wiederverwendbarkeit des Passworts. Die Passwörter laufen nach 180 Tagen ab, und die Nutzer:innen werden nach 1.440 Minuten Inaktivität abgemeldet.]({% image_buster /assets/img/sso3.png %})
 
 Wenn Sie die Einschränkungen aktivieren, können sich die Braze-Benutzer Ihres Unternehmens nicht mehr mit einem Passwort anmelden, selbst wenn sie sich zuvor mit einem Passwort angemeldet haben.
 
@@ -110,7 +110,7 @@ Um eine SAML-Ablaufverfolgung abzurufen, benötigen Sie einen SAML-Tracer. Hier 
 
 Wählen Sie den SAML-Tracer in der Navigationsleiste Ihres Browsers aus. Vergewissern Sie sich, dass **Pause** nicht ausgewählt ist, da der SAML-Tracer ansonsten nicht erfassen kann, was in den SAML-Anfragen gesendet wird. Wenn der SAML-Tracer geöffnet ist, sehen Sie, wie die Ablaufverfolgung ausgefüllt wird.
 
-\![SAML-Tracer für Google Chrome.]({% image_buster /assets/img/saml_tracer_example.png %})
+![SAML-Tracer für Google Chrome.]({% image_buster /assets/img/saml_tracer_example.png %})
 
 ### Schritt 2: SSO-Anmeldung bei Braze
 
@@ -120,7 +120,7 @@ Wählen Sie den SAML-Tracer in der Navigationsleiste Ihres Browsers aus. Vergewi
 
 Wählen Sie **Exportieren**. Für **Cookie-Filter-Profil auswählen** wählen Sie **Keine**. Wählen Sie dann **Exportieren**. Nun wird eine JSON-Datei generiert, die Sie zur weiteren Fehlerbehebung an den Braze-Support senden können.
 
-\!["SAML-Trace-Einstellungen exportieren" mit der ausgewählten Option "Keine".]({% image_buster /assets/img/export_saml_trace_preferences.png %})
+!["SAML-Trace-Einstellungen exportieren" mit der ausgewählten Option "Keine".]({% image_buster /assets/img/export_saml_trace_preferences.png %})
 
 ## Fehlersuche
 

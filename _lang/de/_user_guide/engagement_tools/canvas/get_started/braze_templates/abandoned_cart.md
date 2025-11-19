@@ -34,14 +34,14 @@ Passen wir die Canvas-Details an, um unser Ziel zu erreichen.
 
 1. Wählen Sie **Bearbeiten** neben dem Namen der Vorlage.
 
-\![Der aktuelle Titel und die Beschreibung des Canvas.]({% image_buster /assets/img/canvas_templates/abandoned_intent_old_name_description.png %}){: style="max-width:60%;"}
+![Der aktuelle Titel und die Beschreibung des Canvas.]({% image_buster /assets/img/canvas_templates/abandoned_intent_old_name_description.png %}){: style="max-width:60%;"}
 
 {:start="2"}
 2\. Aktualisieren Sie den Namen des Canvas, um anzugeben, dass das Canvas für das Targeting von Nutzer:innen mit abgebrochenen Warenkörben bestimmt ist.
 3\. Aktualisieren Sie die Beschreibung, um zu verdeutlichen, dass das Canvas dazu dient, Nutzer zum Kauf der neuesten saisonalen Küchenartikel zu animieren.
 4\. Fügen Sie den Tag **Warenkorb-Abbruch** hinzu, damit wir auf der Canvas-Startseite danach filtern können.
 
-\![Der neue Name, die Beschreibung und der Tag für das Canvas.]({% image_buster /assets/img/canvas_templates/abandoned_intent_new_name_description.png %}){: style="max-width:60%;"}
+![Der neue Name, die Beschreibung und der Tag für das Canvas.]({% image_buster /assets/img/canvas_templates/abandoned_intent_new_name_description.png %}){: style="max-width:60%;"}
 
 ### Schritt 2: Konversions-Events zuweisen
 
@@ -51,7 +51,7 @@ Als nächstes weisen wir unser Konvertierungsereignis zu. Da wir uns auf unser P
 2. Wählen Sie **Einen bestimmten Kauf tätigen**. So können wir einen bestimmten Produktnamen auswählen.
 3. Wählen Sie **Enorm großer Pappteller**.
 
-\![Primäres Konversions-Event - A mit dem Konversionstyp "Macht Kauf" mit dem Produktnamen "Riesiger Pappteller". Es gibt eine Frist von 3 Tagen für die Konversion.]({% image_buster /assets/img/canvas_templates/abandoned_intent1.png %})
+![Primäres Konversions-Event - A mit dem Konversionstyp "Macht Kauf" mit dem Produktnamen "Riesiger Pappteller". Es gibt eine Frist von 3 Tagen für die Konversion.]({% image_buster /assets/img/canvas_templates/abandoned_intent1.png %})
 
 ### Schritt 3: Entry-Zeitplan festlegen
 
@@ -62,19 +62,19 @@ Der Zeitplan für den Eintrag dieser Vorlage ist zwar auf **API-gesteuert** eing
 3. Wählen Sie für das Entry-Fenster das Datum der Startzeit aus.
 4. Wählen Sie die Option aus, die es Nutzern:innen erlaubt, ihre Ortszeit einzugeben. Dies kann die Relevanz unserer Nachrichten aufrechterhalten und zu einem höheren Engagement führen, wenn die Nachrichten zum optimalen Zeitpunkt gesendet werden.
 
-\![Ein aktionsbasiertes Canvas, das auf Nutzer:innen abzielt, die ihren Warenkorb abgebrochen haben, mit dem Eingangsfenster 15\. Oktober 2024 15:20 Uhr in der Ortszeit der Nutzer:innen.]({% image_buster /assets/img/canvas_templates/abandoned_intent2.png %})
+![Ein aktionsbasiertes Canvas, das auf Nutzer:innen abzielt, die ihren Warenkorb abgebrochen haben, mit dem Eingangsfenster 15\. Oktober 2024 15:20 Uhr in der Ortszeit der Nutzer:innen.]({% image_buster /assets/img/canvas_templates/abandoned_intent2.png %})
 
 ### Schritt 4: Festlegen, wer das Canvas aufruft
 
 Als nächstes definieren wir unsere Zielgruppe als Nutzer, die in den letzten 90 Tagen ausschließlich online bei uns eingekauft haben. So können wir unser Publikum auf die Nutzer eingrenzen, von denen wir wissen, dass sie sich für unsere Produkte interessieren. 
 
-\!["Online Shoppers Segment - 90 Tage" als Segment der Nutzer:innen für das Targeting in diesem Canvas.]({% image_buster /assets/img/canvas_templates/abandoned_intent3.png %})
+!["Online Shoppers Segment - 90 Tage" als Segment der Nutzer:innen für das Targeting in diesem Canvas.]({% image_buster /assets/img/canvas_templates/abandoned_intent3.png %})
 
 Wir belassen die Eingangskontrollen so, wie sie sind, so dass Nutzer:innen diesen Canvas nicht erneut betreten dürfen und die Anzahl der Personen, die diesen Canvas betreten können, nicht begrenzt ist.
 
 Als Ausstiegskriterium werden Nutzer:innen den Canvas verlassen, wenn sie den "Riesigen Pappteller" gekauft haben. Auf diese Weise erhalten sie keine weiteren Nachrichten zu einem Artikel, den sie bereits gekauft haben.
 
-\![Exit-Kriterium, das festlegt, dass Nutzer:innen, die einen bestimmten Kauf für den riesigen Pappteller tätigen, den Canvas verlassen.]({% image_buster /assets/img/canvas_templates/abandoned_intent4.png %})
+![Exit-Kriterium, das festlegt, dass Nutzer:innen, die einen bestimmten Kauf für den riesigen Pappteller tätigen, den Canvas verlassen.]({% image_buster /assets/img/canvas_templates/abandoned_intent4.png %})
 
 ### Schritt 5: Wählen Sie Ihre Sendeeinstellungen aus
 
@@ -87,14 +87,14 @@ Jetzt bauen wir unser Canvas auf, indem wir die in der Vorlage enthaltenen Schri
 1. Wählen Sie den Schritt „Aktionspfade“ und dann den Namen der Aktionsgruppe **Kauf erfolgt** aus.
 2. Wählen Sie für **Kauf tätigen** die Option **Einen bestimmten Kauf tätigen** und wählen Sie als Produkt **Enormes Pappteller**. Ähnlich wie bei den Ausstiegskriterien werden Nutzer:innen, die dieses Produkt kaufen, den Canvas verlassen.
 
-\!["Made purchase" Aktionsgruppe, die das Canvas verlässt, wenn der Nutzer:in den riesigen Pappteller kauft.]({% image_buster /assets/img/canvas_templates/abandoned_intent5.png %})
+!["Made purchase" Aktionsgruppe, die das Canvas verlässt, wenn der Nutzer:in den riesigen Pappteller kauft.]({% image_buster /assets/img/canvas_templates/abandoned_intent5.png %})
 
 {: start="3"}
 3\. Für den Schritt Nachricht wählen Sie **Nachricht bearbeiten**, um die E-Mail anzupassen, die an unsere Benutzer gesendet wird, um sie über die Artikel in ihrem abgebrochenen Warenkorb zu informieren.
 4\. Lassen Sie den Schritt „Delay“ unverändert.
 5\. In den Schritten für die Nachrichten, die sich an den Schritt für den Zielgruppenpfad anschließen, passen wir die E-Mail- und SMS-Nachrichten an, die unsere Nutzer erhalten werden. Hier möchten wir unsere Nutzer mit personalisierten Nachrichten zum Kauf von Produkten anregen.
 
-\![Eine Vorschau auf die SMS Nachricht, die Nutzer:innen erhalten werden: "Hallo, Sie haben den riesigen Pappteller in Ihrem Einkaufswagen vergessen! Schließen Sie Ihren Kauf jetzt ab und verbessern Sie Ihre Hosting-Fähigkeiten. Verwenden Sie den Code MYPLATE beim Checkout, um 20 % Rabatt auf Ihre Bestellung zu erhalten!“]({% image_buster /assets/img/canvas_templates/abandoned_intent6.png %})
+![Eine Vorschau auf die SMS Nachricht, die Nutzer:innen erhalten werden: "Hallo, Sie haben den riesigen Pappteller in Ihrem Einkaufswagen vergessen! Schließen Sie Ihren Kauf jetzt ab und verbessern Sie Ihre Hosting-Fähigkeiten. Verwenden Sie den Code MYPLATE beim Checkout, um 20 % Rabatt auf Ihre Bestellung zu erhalten!“]({% image_buster /assets/img/canvas_templates/abandoned_intent6.png %})
 
 {: start="6"}
 6\. Im nächsten Schritt Aktions-Pfade wählen Sie die Aktionsgruppe **Gekauft aus**. Wählen Sie dann **Gezielt einkaufen** und wählen Sie **Enormous Paper Plate** als Produkt aus. Dieser Schritt spiegelt den ersten Schritt von Action Paths wider, indem er Benutzer, die unser Produkt gekauft haben, ausschließt, damit sie keine weiteren Nachrichten erhalten.

@@ -59,7 +59,7 @@ Next, you can add geofences to your geofence set.
 Wir empfehlen, Geofences mit einem Radius von mindestens 200 Metern zu erstellen, um eine optimale Funktionalität zu gewährleisten. For more information on configurable options, refer to [Mobile integrations](#mobile-integrations).
 {% endalert %}
 
-\![Ein Geofence-Set mit zwei Geofences "EastCoastGreaterNY" und "WesternRegion" mit zwei Kreisen auf der Karte.]({% image_buster /assets/img/geofence_example.png %})
+![Ein Geofence-Set mit zwei Geofences "EastCoastGreaterNY" und "WesternRegion" mit zwei Kreisen auf der Karte.]({% image_buster /assets/img/geofence_example.png %})
 
 ## Bulk upload geofences {#creating-geofence-sets-via-bulk-upload}
 
@@ -114,7 +114,7 @@ After geofences have been configured, you can use them to enhance and enrich how
 
 Um Geofence-Daten als Teil von Kampagnen- und Canvas-Triggern zu verwenden, wählen Sie für die Zustellung die Option **Aktionsbasierte Zustellung**. Als Nächstes fügen Sie eine Aktion triggern von `Trigger a Geofence` hinzu. Wählen Sie schließlich den Geofence-Satz und die Geofence-Übergangs-Event-Typen für Ihre Nachricht. Sie können Nutzer:innen auch mit Geofence-Events durch ein Canvas voranbringen.
 
-\![Eine aktionsbasierte Kampagne mit einem Geofence, der ausgelöst wird, wenn ein Nutzer:innen einen deutschen Flughafen betritt.]({% image_buster /assets/img_archive/action_based_geofence_trigger.png %})
+![Eine aktionsbasierte Kampagne mit einem Geofence, der ausgelöst wird, wenn ein Nutzer:innen einen deutschen Flughafen betritt.]({% image_buster /assets/img_archive/action_based_geofence_trigger.png %})
 
 ### Personalizing messages
 

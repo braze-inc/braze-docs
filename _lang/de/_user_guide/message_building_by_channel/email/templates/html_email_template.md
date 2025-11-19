@@ -64,7 +64,7 @@ Wenn Sie Änderungen an einer bestehenden Vorlage vornehmen, werden diese Änder
 
 Um Ihre E-Mail für eine API-Kampagne zu verwenden, benötigen Sie die `email_template_id`, die Sie am Ende jeder in Braze erstellten E-Mail-Template finden.
 
-\![API Bezeichner Abschnitt einer HTML E-Mail Vorlage.]({% image_buster /assets/img_archive/email_template_id.png %}){: style="max-width:50%;"}
+![API Bezeichner Abschnitt einer HTML E-Mail Vorlage.]({% image_buster /assets/img_archive/email_template_id.png %}){: style="max-width:50%;"}
 
 ## E-Mail-Vorlagen verwalten
 

@@ -11,7 +11,7 @@ channel:
 
 # Push-Action-Buttons
 
-\![Eine iOS Push-Benachrichtigung mit zwei Push-Action-Buttons: Akzeptieren und Ablehnen.]({% image_buster /assets/img_archive/push_action_example.png %}){: style="float:right;max-width:40%;margin-left:15px;border:none;"}
+![Eine iOS Push-Benachrichtigung mit zwei Push-Action-Buttons: Akzeptieren und Ablehnen.]({% image_buster /assets/img_archive/push_action_example.png %}){: style="float:right;max-width:40%;margin-left:15px;border:none;"}
 
 > Mit Push-Aktionsschaltflächen können Sie Inhalte und Aktionen für Schaltflächen festlegen, wenn Sie Braze iOS- und Android-Push-Benachrichtigungen verwenden. Mit Aktionsschaltflächen können Ihre Nutzer direkt von einer Benachrichtigung aus mit Ihrer App interagieren, ohne dass sie in eine App-Erfahrung klicken müssen.
 
@@ -36,7 +36,7 @@ Um Action-Buttons in Ihren iOS Push-Nachrichten zu verwenden, gehen Sie wie folg
  - Mehr
  - Vorregistrierte benutzerdefinierte iOS-Kategorie
 
-\![iOS Benachrichtigungskategorie Dropdown-Menü.]({% image_buster /assets/img_archive/push_action_buttons_ios.png %}){: style="max-width:70%"}
+![iOS Benachrichtigungskategorie Dropdown-Menü.]({% image_buster /assets/img_archive/push_action_buttons_ios.png %}){: style="max-width:70%"}
 
 {% alert note %}
 Aufgrund der Handhabung von Schaltflächen durch iOS müssen Sie bei der Einrichtung von Push-Aktionsschaltflächen zusätzliche Integrationsschritte durchführen, die in unserer [Entwicklerdokumentation]({{site.baseurl}}/developer_guide/push_notifications/customization/?sdktab=swift#swift_customizing-push-categories) beschrieben werden. Insbesondere müssen Sie entweder iOS-Kategorien konfigurieren oder aus bestimmten Standard-Schaltflächenoptionen auswählen. Bei Android-Integrationen funktionieren diese Schaltflächen automatisch.
@@ -53,7 +53,7 @@ Um Aktionsschaltflächen in Ihren Android-Push-Nachrichten zu verwenden, gehen S
   - Weiterleitung zu Web-URL
   - [Deeplink]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/) zur Anwendung
 
-\![Auswählen von "App öffnen" als Klickverhalten für einen Benachrichtigungs-Button.]({% image_buster /assets/img_archive/push_action_buttons_android.png %}){: style="max-width:70%"}
+![Auswählen von "App öffnen" als Klickverhalten für einen Benachrichtigungs-Button.]({% image_buster /assets/img_archive/push_action_buttons_android.png %}){: style="max-width:70%"}
 
 Sie können bis zu drei Tasten in Ihrem Push hinzufügen.
 
@@ -61,7 +61,7 @@ Sie können bis zu drei Tasten in Ihrem Push hinzufügen.
 
 Im Gegensatz zu den iOS-Tasten, die gestapelt sind, werden die Android-Tasten nebeneinander in einer Reihe angezeigt. Das heißt, je mehr Buttons Sie hinzufügen (bis zu drei), desto weniger Platz haben Sie für die Kopie der Buttons. 
 
-\![Android Push-Action-Buttons mit verkürztem Text.]({% image_buster /assets/img_archive/push_action_truncated.png %}){: style="max-width:50%"}
+![Android Push-Action-Buttons mit verkürztem Text.]({% image_buster /assets/img_archive/push_action_truncated.png %}){: style="max-width:50%"}
 
 In der folgenden Tabelle sehen Sie, wie viele Zeichen Sie hinzufügen können, bevor Ihre Button-Kopie abgeschnitten wird, je nachdem, wie viele Buttons Sie haben:
 

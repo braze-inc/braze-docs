@@ -37,7 +37,7 @@ Die Schritte zum Senden von Testnachrichten finden Sie im folgenden Abschnitt f�
 3. Wählen Sie den Tab **Test senden** und fügen Sie Ihre E-Mail Adresse oder Nutzer:innen in das Feld **Einzelne Nutzer:innen hinzufügen** ein. 
 4. Wählen Sie **Test senden**, um Ihre entworfene E-Mail an Ihren Posteingang zu senden.
 
-\![Test E-Mail]({% image_buster /assets/img_archive/testemail.png %}){: style="max-width:40%;" }
+![Test E-Mail]({% image_buster /assets/img_archive/testemail.png %}){: style="max-width:40%;" }
 
 {% endtab %}
 {% tab Push %}
@@ -48,7 +48,7 @@ Die Schritte zum Senden von Testnachrichten finden Sie im folgenden Abschnitt f�
 2. Wählen Sie die Registerkarte **Einstellungen** und fügen Sie Ihre E-Mail-Adresse oder Benutzer-ID in das Feld **Einzelne Benutzer hinzufügen** ein.
 3. Wählen Sie **Test senden**, um Ihre entworfene Nachricht an Ihr Gerät zu senden.
 
-\![Test Push]({% image_buster /assets/img_archive/testpush.png %})
+![Test Push]({% image_buster /assets/img_archive/testpush.png %})
 
 #### Web-Push
 
@@ -57,7 +57,7 @@ Die Schritte zum Senden von Testnachrichten finden Sie im folgenden Abschnitt f�
 3. Wählen Sie **Test an mich selbst senden**.
 4. Wählen Sie **Test senden**, um Ihren Web-Push an Ihren Webbrowser zu senden.
 
-\![Test Web-Push]({% image_buster /assets/img_archive/testwebpush.png %})
+![Test Web-Push]({% image_buster /assets/img_archive/testwebpush.png %})
 
 Wenn Sie bereits Push-Nachrichten aus dem Braze Dashboard akzeptiert haben, wird der Push in der Ecke Ihres Bildschirms angezeigt. Andernfalls klicken Sie auf **Zulassen**, wenn Sie dazu aufgefordert werden, und die Meldung wird angezeigt.
 
@@ -72,7 +72,7 @@ Wenn Sie in Ihrer App und auf Ihrem Testgerät Push-Benachrichtigungen eingerich
 
 Am oberen Rand des Bildschirms Ihres Geräts erscheint eine Push-Nachricht zum Test.
 
-\![Test in der App]({% image_buster /assets/img_archive/test-in-app.png %})
+![Test in der App]({% image_buster /assets/img_archive/test-in-app.png %})
 
 Wenn Sie direkt auf die Push-Nachricht klicken und sie öffnen, werden Sie zu Ihrer App weitergeleitet, wo Sie Ihren In-App-Nachrichtentest sehen können. Beachten Sie, dass dieses Feature zum Testen von In-App-Nachricht darauf beruht, dass der oder die Nutzer:in auf eine Push-Benachrichtigung zum Testen klickt, um die In-App Nachricht zu triggern. Für die erfolgreiche Zustellung der Push-Benachrichtigung muss der oder die Nutzer:in in der entsprechenden App zum Empfang von Push-Benachrichtigungen berechtigt sein.
 
@@ -85,7 +85,7 @@ Nachdem Sie Ihre Content-Card erstellt haben, können Sie eine Test-Content-Card
 2. Wählen Sie die Registerkarte **Test** und wählen Sie mindestens eine Inhaltstestgruppe oder einen einzelnen Benutzer, der diese Testnachricht erhalten soll. 
 3. Wählen Sie **Test senden**, um Ihre Content-Card an Ihre App zu senden.
 
-\![Test Content-Card]({% image_buster /assets/img/contentcard_test.png %})
+![Test Content-Card]({% image_buster /assets/img/contentcard_test.png %})
 
 {% endtab %}
 {% tab SMS/MMS %}
@@ -96,14 +96,14 @@ Nachdem Sie Ihre SMS- oder MMS-Nachricht erstellt haben, können Sie eine Testna
 2. Wählen Sie die Registerkarte **Test** und wählen Sie mindestens eine Inhaltstestgruppe oder einen einzelnen Benutzer, der diese Testnachricht erhalten soll. 
 3. Wählen Sie **Test senden**, um Ihre Testnachricht zu versenden.
 
-\![Test Content-Card]({% image_buster /assets/img/sms_test.png %})
+![Test Content-Card]({% image_buster /assets/img/sms_test.png %})
 
 {% endtab %}
 {% tab Webhook %}
 
 Nachdem Sie Ihren Webhook erstellt haben, können Sie einen Testversand durchführen, um die Antwort des Webhooks zu überprüfen. Wählen Sie die Registerkarte **Test** und wählen Sie **Test senden**, um eine Testübertragung an die angegebene Webhook-URL zu senden. Sie können auch eine:n einzelne:n Nutzer:in auswählen, um eine Vorschau der Antwort zu erhalten. 
 
-\![Test Content-Card]({% image_buster /assets/img/webhook_test.png %})
+![Test Content-Card]({% image_buster /assets/img/webhook_test.png %})
 
 {% endtab %}
 {% endtabs %}
@@ -118,19 +118,19 @@ Wenn Sie die [Personalisierung]({{site.baseurl}}/user_guide/personalization_and_
 
 Wenn Sie eine Testnachricht senden, wählen Sie entweder die Option **Vorhandene:n Nutzer:in auswählen** oder die Vorschau-Option **Angepassten Nutzer:innen** aus.
 
-\![Testen einer personalisierten Nachricht]({% image_buster /assets/img_archive/personalized_testing.png %}){: style="max-width:70%;" }
+![Testen einer personalisierten Nachricht]({% image_buster /assets/img_archive/personalized_testing.png %}){: style="max-width:70%;" }
 
 #### Einen bestehenden Benutzer auswählen
 
 Wenn Sie eine:n bestehende:n Nutzer:in auswählen, geben Sie die ID oder E-Mail des Nutzers oder der Nutzerin in das Suchfeld ein. Verwenden Sie dann die Dashboard-Vorschau, um zu sehen, wie Ihre Nachricht für diesen Benutzer aussehen würde, und senden Sie eine Testnachricht an Ihr Gerät, die widerspiegelt, was dieser Benutzer sehen würde.
 
-\![Einen Nutzer:in auswählen]({% image_buster /assets/img_archive/personalized_testing_select.png %})
+![Einen Nutzer:in auswählen]({% image_buster /assets/img_archive/personalized_testing_select.png %})
 
 #### Einen angepassten Nutzer:innen auswählen
 
 Wenn Sie eine Vorschau als angepasste:r Nutzer:in anzeigen, geben Sie den Text für die verschiedenen Felder ein, die für die Personalisierung zur Verfügung stehen, z. B. den Vornamen des Nutzers oder der Nutzerin und alle angepassten Attribute. Auch hier können Sie Ihre eigene E-Mail-Adresse eingeben, um einen Test an Ihr Gerät zu senden.
 
-\![Angepasste Nutzer:in]({% image_buster /assets/img_archive/personalized_testing_custom.png %})
+![Angepasste Nutzer:in]({% image_buster /assets/img_archive/personalized_testing_custom.png %})
 
 ### Personalisierte Kampagnen mit benutzerdefinierten Ereigniseigenschaften testen
 
@@ -145,7 +145,7 @@ Sie können die Kampagne selbst triggern, um Kampagnen zu testen, die mit angepa
 
 1. Schreiben Sie die Kopie mit den Eigenschaften des Events auf. 
 
-\![Testnachricht mit Eigenschaften zusammenstellen]({% image_buster /assets/img_archive/testeventproperties-compose.png %})
+![Testnachricht mit Eigenschaften zusammenstellen]({% image_buster /assets/img_archive/testeventproperties-compose.png %})
 
 {: start="2"}
 2\. Verwenden Sie die [aktionsbasierte Zustellung]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/), um die Kampagne zuzustellen, wenn das Ereignis eintritt.
@@ -154,19 +154,19 @@ Sie können die Kampagne selbst triggern, um Kampagnen zu testen, die mit angepa
 Wenn Sie eine Kampagne für iOS testen, müssen Sie die Verzögerung auf eine Minute einstellen, damit Sie Zeit haben, die App zu verlassen, denn iOS stellt keine Push-Benachrichtigungen für die aktuell geöffnete App zu. Andere Arten von Kampagnen können so eingestellt werden, dass sie sofort geliefert werden.
 {% endalert %}
 
-\![Test Zustellung von Nachrichten]({% image_buster /assets/img_archive/testeventproperties-delivery.png %})
+![Test Zustellung von Nachrichten]({% image_buster /assets/img_archive/testeventproperties-delivery.png %})
 
 {: start="3"}
 3\. Stellen Sie die Nutzer:innen wie zu Testzwecken zusammen, indem Sie einen Testfilter verwenden oder Ihre eigene E-Mail Adresse als Targeting verwenden, und schließen Sie die Erstellung der Kampagne ab. 
 
-\![Test Message Targeting]({% image_buster /assets/img_archive/testeventproperties-target.png %})
+![Test Message Targeting]({% image_buster /assets/img_archive/testeventproperties-target.png %})
 
 {: start="4"}
 4\. Gehen Sie in Ihre App und schließen Sie das angepasste Event ab.
 
 Die Kampagne wird getriggert und zeigt die mit der Eigenschaft Event angepasste Nachricht an.
 
-\![Beispiel für eine Testnachricht]({% image_buster /assets/img_archive/testeventproperties-message2.png %})
+![Beispiel für eine Testnachricht]({% image_buster /assets/img_archive/testeventproperties-message2.png %})
 
 {% endtab %}
 {% tab Test message %}
@@ -180,7 +180,7 @@ Wenn Sie angepasste Nutzer:innen-IDs speichern, können Sie die Kampagne auch te
 3. Fügen Sie die angepasste Event-Eigenschaft unten auf der Seite hinzu, und fügen Sie Ihre Nutzer:in oder Ihre E-Mail Adresse in das obere Feld ein.
 4. Wählen Sie **Test senden**, um eine mit der Eigenschaft personalisierte Nachricht zu erhalten.
 
-\![Testen unter Verwendung angepasster Nutzer:innen]({% image_buster /assets/img_archive/testeventproperties-customuser.png %})
+![Testen unter Verwendung angepasster Nutzer:innen]({% image_buster /assets/img_archive/testeventproperties-customuser.png %})
 
 {% endtab %}
 {% tab Liquid %}

@@ -38,7 +38,7 @@ Kontaktkarten (manchmal auch als vCard oder Virtual Contact Files (vcf) bezeichn
 
 Um eine MMS-Nachricht zu erstellen, muss Ihre Abo-Gruppe für den MMS-Versand konfiguriert sein. Sie erkennen dies daran, dass beim Auswählen einer Abo-Gruppe der MMS-Tag angezeigt wird. Wenn Sie eine MMS-aktivierte Abo-Gruppe auswählen, haben Sie die Möglichkeit, ein Bild hochzuladen, eine Bild-URL zu referenzieren oder eine Kontaktkarte einzufügen.
 
-\![Der Tab "Verfassen" zum Schreiben Ihrer Nachricht.]({% image_buster /assets/img/sms/mms_composer.png %}){: style="max-width:80%;"}
+![Der Tab "Verfassen" zum Schreiben Ihrer Nachricht.]({% image_buster /assets/img/sms/mms_composer.png %}){: style="max-width:80%;"}
 
 ### Bild-Spezifikationen
 
@@ -56,4 +56,4 @@ Braze bietet im Panel **Vorschau** des Nachrichten-Editors eine Vorschau des von
 Die Reihenfolge der SMS/MMS-Assets ist nicht anpassbar. Die Bestellung ist abhängig von dem Telefon, das diese Nachricht empfängt.
 {% endalert %}
 
-\![Ein Beispiel für eine Nachricht "Bereit für das Fitnessstudio... zu Hause?". Die Vorschau zeigt die Nachricht und das Bild, die als Text gesendet werden.]({% image_buster /assets/img/sms/mms_preview.png %})
+![Ein Beispiel für eine Nachricht "Bereit für das Fitnessstudio... zu Hause?". Die Vorschau zeigt die Nachricht und das Bild, die als Text gesendet werden.]({% image_buster /assets/img/sms/mms_preview.png %})

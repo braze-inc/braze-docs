@@ -137,7 +137,7 @@ Wenn Sie angepasste In-App-Nachrichten im HTML-Format erstellen, können Sie ein
 
 Das Nachrichtenvorschaufenster des Editors zeigt eine realistische Vorschau, die das in Ihrer Nachricht enthaltene JavaScript wiedergibt. Sie können Ihre benutzerdefinierten Nachrichten im Vorschaufenster ansehen und mit ihnen interagieren, indem Sie sich durch die Paginierung klicken, Formulare oder Umfragen absenden, JavaScript-Animationen ansehen und vieles mehr!
 
-\![Interaktion mit der HTML-Vorschau durch Wischen durch die Seiten.]({% image_buster /assets/img/iam-beta-javascript-preview.gif %})
+![Interaktion mit der HTML-Vorschau durch Wischen durch die Seiten.]({% image_buster /assets/img/iam-beta-javascript-preview.gif %})
 
 {% alert tip %}
 Alle `brazeBridge`-JavaScript-Methoden, die Sie in Ihrem HTML-Code verwenden, werden die Nutzerprofile während der Vorschau im Dashboard nicht aktualisieren.

@@ -10,7 +10,7 @@ tool:
   
 ---
 
-# [\![Braze-Lernkurs]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/regular-expression-basics-for-braze){: style="float:right;width:120px;border:0;" class="noimgborder"} Reguläre Ausdrücke
+# [![Braze-Lernkurs]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/regular-expression-basics-for-braze){: style="float:right;width:120px;border:0;" class="noimgborder"} Reguläre Ausdrücke
 
 <!--{% multi_lang_include video.html id="3h5Xbhl-TxE" align="right" %}-->
 
@@ -164,7 +164,7 @@ Wir können diese Regex in die folgenden drei Teile zerlegen:
 
 Angenommen, Sie möchten nach E-Mails filtern, die mit "@braze.com" enden. Sie würden den Filter für E-Mail-Adressen verwenden, ihn auf `matches regex` einstellen und „@braze.com“ in das Regex-Feld eingeben. Dasselbe gilt für jede andere E-Mail-Domäne.
 
-\![Filter für eine E-Mail Adresse, die dem Regex von "@braze.com" entspricht.]({% image_buster /assets/img/regex/regeximg1.png %})
+![Filter für eine E-Mail Adresse, die dem Regex von "@braze.com" entspricht.]({% image_buster /assets/img/regex/regeximg1.png %})
 
 #### Wie kann ich Filterzahlen-Strings für Werte ≥ x oder ≤ x verwenden?
 
@@ -190,7 +190,7 @@ Verwenden Sie das Caret-Symbol (`^`), um zu kennzeichnen, womit der String begin
 
 Wenn Sie beispielsweise versuchen, Nutzer:innen zusammenzustellen, die in Städten leben, die mit „San“ beginnen, würde Ihre Regex `^San \w` lauten. Mit dieser Regex würden Sie erfolgreich Nutzer:innen aus Städten wie San Francisco, San Diego, San Jose usw. zusammenstellen.
 
-\![Filter für einen Ort, der der Regex von "^San \\w" entspricht.]({% image_buster /assets/img/regex/regeximg2.png %})
+![Filter für einen Ort, der der Regex von "^San \\w" entspricht.]({% image_buster /assets/img/regex/regeximg2.png %})
 
 #### Wie kann ich nach bestimmten Telefonnummern filtern?
 
@@ -206,6 +206,6 @@ Nehmen wir zum Beispiel an, Sie möchten Nutzer:innen nach Telefonnummer für ei
 ^1?718\d\d\d\d\d\d\d
 ```
 
-\![Filter für eine Telefonnummer, die mit der Regex von "^1?718\\d\\d\\d\\d\\d\\d\\d" übereinstimmt.]({% image_buster /assets/img/regex/regeximg3.png %})
+![Filter für eine Telefonnummer, die mit der Regex von "^1?718\\d\\d\\d\\d\\d\\d\\d" übereinstimmt.]({% image_buster /assets/img/regex/regeximg3.png %})
 
 

@@ -28,7 +28,7 @@ Um den CSV-Nutzerimport zu öffnen, gehen Sie zu **Zielgruppen** > Nutzer:innen 
 
 Um mit Ihrer CSV zu beginnen, laden Sie ein Template für Attribute oder Ereignisse herunter.
 
-\![Die Seite 'Nutzer:innen importieren' im Braze-Dashboard.]({% image_buster /assets/img/csv_import/import_users_page.png %})
+![Die Seite 'Nutzer:innen importieren' im Braze-Dashboard.]({% image_buster /assets/img/csv_import/import_users_page.png %})
 
 ### Schritt 2: Wählen Sie einen Bezeichner {#choose-an-identifier}
 
@@ -230,7 +230,7 @@ Das angepasste Event `trip_booked` kann zum Beispiel die Eigenschaften `destinat
 Bevor Braze Ihre CSV-Datei verarbeitet, generiert es eine Vorschau der ersten Zeilen, damit Sie diese auf eventuelle Probleme überprüfen können. Um Ihre Vorschau zu erstellen, wählen Sie **Attribute** oder **Ereignisse**, dann wählen Sie **Dateien durchsuchen** und laden Ihre CSV-Datei hoch. 
 
 <!-- old image -->
-\![CSV-Upload abgeschlossen mit Fehlern bei gemischten Datentypen in einer einzelnen Spalte]({% image_buster /assets/img/csv_import/upload_csv.png %}){: style="max-width:70%"}
+![CSV-Upload abgeschlossen mit Fehlern bei gemischten Datentypen in einer einzelnen Spalte]({% image_buster /assets/img/csv_import/upload_csv.png %}){: style="max-width:70%"}
 
 {% alert important %}
 Die Vorschau des Nutzerimports scannt nicht jede Zeile der Eingabedatei. Fehler nach den ersten paar Zeilen werden möglicherweise nicht erkannt, daher sollten Sie die CSV-Datei vollständig überprüfen.
@@ -246,7 +246,7 @@ Sie können auch zwischen den folgenden Targeting-Einstellungen wählen. Wenn Si
 | Neue Segmente | Um auch ein neues Segment aus Ihrem neuen Targeting Filter zu erstellen, wählen Sie **Targeting Filter erstellen und zu neuem Segment hinzufügen**. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
-\![Eine Filtergruppe mit dem Filter "Aktualisiert/Importiert aus CSV", die eine CSV-Datei mit dem Titel "Halloween-Saisonspaß" enthält.]({% image_buster /assets/img/csv_import/add_filter_group.png %}){: style="max-width:85%;"}
+![Eine Filtergruppe mit dem Filter "Aktualisiert/Importiert aus CSV", die eine CSV-Datei mit dem Titel "Halloween-Saisonspaß" enthält.]({% image_buster /assets/img/csv_import/add_filter_group.png %}){: style="max-width:85%;"}
 
 ### Schritt 6: Starten Sie Ihren CSV-Import
 

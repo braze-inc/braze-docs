@@ -25,7 +25,7 @@ Gehen Sie im Braze-Dashboard zu **Messaging** > **Canvas** und wählen Sie ein b
 
 Wählen Sie im Canvas-Editor die Option **Canvas bearbeiten** oder **Entwurf bearbeiten**, je nachdem, ob Ihr Canvas aktiv ist oder sich in einem Entwurf befindet. Erweitern Sie das Dropdown-Menü **Als Entwurf speichern** in der Fußzeile und wählen Sie **Als Vorlage speichern**.
 
-\![]({% image_buster /assets/img/save_canvas_as_template.png %})
+![]({% image_buster /assets/img/save_canvas_as_template.png %})
 
 ### Schritt 3: Template speichern
 
@@ -45,7 +45,7 @@ Wenn Sie die ältere Navigation verwenden, finden Sie diese Seite unter **Engage
 
 Wählen Sie **Vorlage erstellen** und beginnen Sie mit dem Einrichten Ihrer Canvas-Details. Sie können damit beginnen, Ihrer Canvas-Vorlage einen Namen zu geben.
 
-\![Eine beispielhafte Canvas-Vorlage mit dem Namen "Jährlicher Verkauf Canvas-Vorlage" mit der Beschreibung "Für die jährliche Aktion im Frühjahr verwenden".]({% image_buster /assets/img/canvas_template_example.png %})
+![Eine beispielhafte Canvas-Vorlage mit dem Namen "Jährlicher Verkauf Canvas-Vorlage" mit der Beschreibung "Für die jährliche Aktion im Frühjahr verwenden".]({% image_buster /assets/img/canvas_template_example.png %})
 
 ### Schritt 3: Template anpassen
 
@@ -66,7 +66,7 @@ Es gibt zwei Möglichkeiten, Ihr Template beim Erstellen eines Canvas zu verwend
 
 Braze bietet eine Auswahl an Canvas-Templates, die Sie als Referenz und als Best Cases für häufige Anwendungsfälle verwenden können. Diese Vorlagen können zwar nicht bearbeitet werden, aber Sie können sie unter **Vorlagen** > **Lötvorlagen** anzeigen oder in Ihren Leinwänden verwenden.
 
-\![Braze-Vorlagen im Bereich Canvas-Vorlagen mit sechs verfügbaren Templates.]({% image_buster /assets/img/braze_canvas_templates.png %})
+![Braze-Vorlagen im Bereich Canvas-Vorlagen mit sechs verfügbaren Templates.]({% image_buster /assets/img/braze_canvas_templates.png %})
 
 Wählen Sie eine der folgenden Vorlagen aus, die Sie als Referenz oder für Ihr Canvas verwenden können.
 

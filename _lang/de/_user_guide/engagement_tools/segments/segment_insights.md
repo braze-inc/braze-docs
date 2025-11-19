@@ -9,7 +9,7 @@ tool:
 description: "In diesem Artikel erfahren Sie, wie Sie Segment-Insights verwenden, interpretieren und weitergeben können."
 ---
 
-# [\![Braze Lernkurse]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/segmentation-course){: style="float:right;width:120px;border:0;" class="noimgborder"} Segmente Insights
+# [![Braze Lernkurse]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/segmentation-course){: style="float:right;width:120px;border:0;" class="noimgborder"} Segmente Insights
 
 > Lernen Sie, wie Sie Segment-Insights verwenden, interpretieren und weitergeben können. 
 
@@ -19,7 +19,7 @@ Segment Insights zeigt Ihnen, wie sich ein Segment im Vergleich zu einem anderen
 
 Gehen Sie auf die Seite **Segment-Insights** auf Ihrem Dashboard unter **Analytics**, um bis zu 10 verschiedene Segmente im Vergleich zu einer Baseline zu sehen.
 
-\![Segment-Insights Dashboard, das die drei Segmente "Nutzer:innen aus Großbritannien", "Nutzer:innen aus Frankreich" und "Nutzer:innen aus Kanada" mit einem Basissegment "Alle Nutzer:innen" vergleicht.]({% image_buster /assets/img_archive/segment_insights.png %})
+![Segment-Insights Dashboard, das die drei Segmente "Nutzer:innen aus Großbritannien", "Nutzer:innen aus Frankreich" und "Nutzer:innen aus Kanada" mit einem Basissegment "Alle Nutzer:innen" vergleicht.]({% image_buster /assets/img_archive/segment_insights.png %})
 
 Das Basissegment kann entweder ein bestimmtes Segment sein, das Sie auswählen, oder ein Segment, das alle Ihre Nutzer enthält. Sie können die folgenden Statistiken mit Segment Insights vergleichen:
 
@@ -35,13 +35,13 @@ Das Basissegment kann entweder ein bestimmtes Segment sein, das Sie auswählen, 
 
 Über die eindeutige URL der Seite können Sie bestimmte Vergleiche ganz einfach mit Ihren Teamkollegen teilen. Außerdem können Sie das Augensymbol neben jedem Segment auswählen, um weitere Informationen über dieses Segment zu erhalten. Diese Vergleiche werden zurückgesetzt, wenn Sie zwischen Workspaces wechseln.
 
-\![Details für das Segment "Premium Nutzer:innen (iOS VideoApp)" mit einem Diagramm, das die historischen Mitgliederzahlen anzeigt, und einem Chart, das die geschätzte Größe für verschiedene Messaging-Kanäle aufschlüsselt.]({% image_buster /assets/img_archive/Segment_Insights_Info.png %}){: style="max-width:50%;"}
+![Details für das Segment "Premium Nutzer:innen (iOS VideoApp)" mit einem Diagramm, das die historischen Mitgliederzahlen anzeigt, und einem Chart, das die geschätzte Größe für verschiedene Messaging-Kanäle aufschlüsselt.]({% image_buster /assets/img_archive/Segment_Insights_Info.png %}){: style="max-width:50%;"}
 
 ## Segment Details Seite
 
 Die Segmenteinblicke wurden auch direkt in die Ansicht **Segmentdetails** integriert. Wenn Sie sich ein bestimmtes Segment ansehen, das Sie zuvor eingerichtet haben, finden Sie dieselben sechs Statistiken, die im dynamischen, grauen Feld Segmentstatistik aufgeführt sind. Von hier aus können Sie schnell das Tool Segment Insights starten, um dieses bestimmte Segment mit allen anderen zu vergleichen, die Sie zuvor eingerichtet haben. Beachten Sie jedoch, dass dadurch alle Segmente überschrieben werden, die Sie zuvor im Tool Segment Insights ausgewählt haben.
 
-\![]({% image_buster /assets/img_archive/Segment_Segment_Insights.png %})
+![]({% image_buster /assets/img_archive/Segment_Segment_Insights.png %})
 
 ## Anwendungsfälle {#insights-use-cases}
 
@@ -56,7 +56,7 @@ Einer der besten Einsatzbereiche von Segment-Insights ist die Beantwortung von F
 
 Segment-Insights können helfen, Unterschiede zwischen Nutzer:innen aufzudecken. Das folgende Beispiel zeigt einen Vergleich der Nutzerbasis einer App nach Sprache. Es veranschaulicht, dass Englischsprachige tendenziell einen höheren LTV und ein höheres Aktivitätsniveau haben als Sprecher anderer Sprachen.
 
-\![Segment-Insights Aufschlüsselung für die Segmente Englisch, Deutsch, Französisch und Spanisch.]({% image_buster /assets/img_archive/Segment_Language_Insights.png %})
+![Segment-Insights Aufschlüsselung für die Segmente Englisch, Deutsch, Französisch und Spanisch.]({% image_buster /assets/img_archive/Segment_Language_Insights.png %})
 
 In diesem Beispiel haben sich die deutschsprachigen Nutzer im Durchschnitt vor längerer Zeit angemeldet, was erklären könnte, warum sie nicht mehr so aktiv sind. Dies könnte auf eine Vielzahl von Faktoren zurückzuführen sein. Zum Beispiel, wenn die App zuerst in Europa eingeführt wurde, aber jetzt in den USA beliebter ist, wo die meisten Menschen Englisch oder Spanisch sprechen. Um solidere Ergebnisse zu erhalten, ist es sinnvoll, bei der Analyse von KPIs nach demografischen Gesichtspunkten die Ergebnisse einer allgemeinen Studie über demografische Merkmale zu testen (z. B. ob sich die Sprache bei allen Nutzern auf den LTV auswirkt), indem man eine kleinere, ähnlichere Population betrachtet und prüft, ob die Ergebnisse bestehen bleiben.
 

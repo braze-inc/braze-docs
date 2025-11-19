@@ -10,7 +10,7 @@ description: "Auf dieser Seite erfahren Sie, wie Sie mit dem Drag-and-Drop-Edito
 
 > Die Formulare für die SMS-, RCS- und WhatsApp-Registrierung sind Templates, die im Drag-and-Drop-Editor für In-App-Nachrichten zur Verfügung stehen. Verwenden Sie diese Templates, um die Telefonnummern der Nutzer:innen zu sammeln und Ihre Abo-Gruppen für SMS, MMS, RCS und WhatsApp zu vergrößern.
 
-\![Drei Beispiele für In-App-Nachrichten, die mit dem Template des Formulars für die Registrierung auf dem Telefon erstellt wurden.]({% image_buster /assets/img_archive/dnd_iam_phone_capture_example2.png %})
+![Drei Beispiele für In-App-Nachrichten, die mit dem Template des Formulars für die Registrierung auf dem Telefon erstellt wurden.]({% image_buster /assets/img_archive/dnd_iam_phone_capture_example2.png %})
 
 {% multi_lang_include drag_and_drop/templates.md section='SDK requirements' %}
 
@@ -26,21 +26,21 @@ Modal zum Auswählen der SMS-Registrierung oder der WhatsApp-Registrierung als T
 
 {% multi_lang_include drag_and_drop/templates.md section='message style' %}
 
-\![Arbeitsablauf beim Hochladen und Auswählen einer angepassten Schriftart.]({% image_buster /assets/img_archive/dnd_iam_phone_capture_custom_font.gif %})
+![Arbeitsablauf beim Hochladen und Auswählen einer angepassten Schriftart.]({% image_buster /assets/img_archive/dnd_iam_phone_capture_custom_font.gif %})
 
 ### Schritt 3: Komponente zur Eingabe von Telefonnummern anpassen
 
 Um mit der Erstellung Ihres Anmeldeformulars zu beginnen, wählen Sie im Editor die Komponente zur Eingabe der Telefonnummer.
 
-\![Vorschaubereich bei der Erstellung eines Registrierungsformulars mit ausgewählter Komponente für die Eingabe der Telefonnummer.]({% image_buster /assets/img_archive/dnd_iam_phone_capture_select.png %}){: style="max-width:80%"}
+![Vorschaubereich bei der Erstellung eines Registrierungsformulars mit ausgewählter Komponente für die Eingabe der Telefonnummer.]({% image_buster /assets/img_archive/dnd_iam_phone_capture_select.png %}){: style="max-width:80%"}
 
 Geben Sie im Seitenmenü an, für welche Abonnementgruppe diese Vorlage Telefonnummern sammeln soll. Um die bewährten Praktiken für die Compliance einzuhalten, können Sie nur die Zustimmung zu einer Abo-Gruppe pro Registrierungsformular für Telefonnummern einholen. Falls gewünscht, können Sie jedoch mehrere Formulare verwenden, um die Zustimmung für andere Abo-Gruppen einzuholen.
 
-\![Abo-Gruppe Dropdown mit einer ausgewählten Abo-Gruppe.]({% image_buster /assets/img_archive/dnd_iam_phone_capture_subscription.png %}){: style="max-width:40%"}
+![Abo-Gruppe Dropdown mit einer ausgewählten Abo-Gruppe.]({% image_buster /assets/img_archive/dnd_iam_phone_capture_subscription.png %}){: style="max-width:40%"}
 
 Standardmäßig sammeln wir Nummern weltweit, aber Sie können die Anzahl der Länder, aus denen Nummern gesammelt werden sollen, einschränken. Dies ist hilfreich, wenn Sie nur Nutzer mit Telefonnummern in bestimmten Ländern benachrichtigen möchten, und kann zur Sauberkeit der Liste beitragen. Deaktivieren Sie dazu die Option **Nummern aus allen Ländern erfassen** und wählen Sie über die Dropdown-Liste bestimmte Länder aus. Ihre Benutzer können nur die Länder auswählen, die Sie ausdrücklich hinzugefügt haben.
 
-\![Länder-Dropdown, um die Länder auszuwählen, aus denen Sie Nummern sammeln möchten.]({% image_buster /assets/img_archive/dnd_iam_phone_capture_countries.png %}){: style="max-width:40%"}
+![Länder-Dropdown, um die Länder auszuwählen, aus denen Sie Nummern sammeln möchten.]({% image_buster /assets/img_archive/dnd_iam_phone_capture_countries.png %}){: style="max-width:40%"}
 
 #### Ungültige Telefonnummern
 
@@ -72,6 +72,6 @@ Passen Sie das Aussehen Ihrer Nachricht mit den [In-App-Nachricht-Komponenten]({
 
 {% multi_lang_include drag_and_drop/templates.md section='reporting' %}
 
-\![In-App-Nachricht Performance-Panel, das die Klicks für jeden Link in der In-App-Nachricht anzeigt.]({% image_buster /assets/img_archive/dnd_iam_phone_capture_analytics.png %})
+![In-App-Nachricht Performance-Panel, das die Klicks für jeden Link in der In-App-Nachricht anzeigt.]({% image_buster /assets/img_archive/dnd_iam_phone_capture_analytics.png %})
 
 

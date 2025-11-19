@@ -181,7 +181,7 @@ Wenn Braze feststellt, dass Ihr Code keine Schaltfläche zum Schließen oder Ver
 
 Auf der Registerkarte **Verfassen** können Sie alle Aspekte des Inhalts und Verhaltens Ihrer Nachricht bearbeiten.
 
-\![Eine beispielhafte In-App-Nachricht einer Marke, um neue Kunden zu begrüßen und sie aufzufordern, ein Nutzerprofil einzurichten.]({% image_buster /assets/img_archive/iam_compose.png %}){: style="max-width:85%" }
+![Eine beispielhafte In-App-Nachricht einer Marke, um neue Kunden zu begrüßen und sie aufzufordern, ein Nutzerprofil einzurichten.]({% image_buster /assets/img_archive/iam_compose.png %}){: style="max-width:85%" }
 
 Der Inhalt der Registerkarte **Verfassen** hängt von den im vorherigen Schritt gewählten Nachrichtenoptionen ab, kann aber eine der folgenden Optionen enthalten:
 
@@ -205,7 +205,7 @@ Einige Nachrichtentypen benötigen keine Kopfzeilen und fragen daher auch nicht 
 
 Benötigen Sie Hilfe bei der Erstellung überzeugender Texte? Versuchen Sie es mit dem [KI-Textwerkstatt-Assistenten]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/). Geben Sie einen Produktnamen oder eine Beschreibung ein und die KI generiert menschenähnliche Marketingtexte für Ihre Werbebotschaften.
 
-\![KI Copywriter Button starten, der sich im Nachrichten-Feld des In-App-Nachricht-Editors befindet.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_iam.png %}){: style="max-width:60%"}
+![KI Copywriter Button starten, der sich im Nachrichten-Feld des In-App-Nachricht-Editors befindet.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_iam.png %}){: style="max-width:60%"}
 
 ##### Erstellen von Nachrichten von rechts nach links
 
@@ -223,7 +223,7 @@ Wenn Sie sich dafür entscheiden, diese Schaltflächen mit Ihren eigenen Farben 
 
 Mit anderen Worten: Wenn Sie möchten, dass Ihr Benutzer mehr auf eine Schaltfläche klickt als auf eine andere, stellen Sie sicher, dass sie sich auf der rechten Seite befindet. Die rechte Schaltfläche hat oft ein größeres Potenzial, angeklickt zu werden, insbesondere wenn sie sich farblich vom Rest der Nachricht abhebt oder anderweitig hervorsticht. Dies gilt umso mehr, wenn der Button auf der linken Seite optisch stark mit der Nachricht harmoniert.
 
-\![Primäre und sekundäre Buttons in einer In-App-Nachricht]({% image_buster /assets/img/primary-secondary-buttons.png %})
+![Primäre und sekundäre Buttons in einer In-App-Nachricht]({% image_buster /assets/img/primary-secondary-buttons.png %})
 
 ### Anklickverhalten {#button-actions}
 
@@ -312,7 +312,7 @@ Wählen Sie die Aktion, bei der Sie Ihre Nachricht auslösen möchten, sowie die
 Beachten Sie, dass das angepasste Event über das SDK gesendet werden muss, wenn Sie Ihre In-App-Nachricht durch ein angepasstes Event triggern möchten.
 {% endalert %}
 
-\![Aktionsbasierte Kampagne, bei der die Aktion triggern auf "Sitzung starten" eingestellt ist.]({% image_buster /assets/img_archive/in_app_schedule.png %}){: style="max-width:80%"}
+![Aktionsbasierte Kampagne, bei der die Aktion triggern auf "Sitzung starten" eingestellt ist.]({% image_buster /assets/img_archive/in_app_schedule.png %}){: style="max-width:80%"}
 
 Die Zustellung von In-App-Nachrichten basiert ausschließlich auf den folgenden Aktionsauslösern:
 
@@ -347,7 +347,7 @@ Sie können zwischen den folgenden Nachrichtenprioritäten wählen:
 
 Die hohe, mittlere und niedrige Nachrichtenpriorität sind als Buckets zu verstehen, sodass mehrere Nachrichten dieselbe Priorität haben können. Um die Prioritäten innerhalb dieser Bereiche festzulegen, klicken Sie auf **Genaue Priorität festlegen** und Sie können die Kampagnen per Drag & Drop nach der richtigen Priorität ordnen.
 
-\![Ein Beispiel für die Prioritätensetzung bei einer In-App-Nachricht-Kampagne und Canvas.]({% image_buster /assets/img_archive/bucket_prioritization.png %}){: style="max-width:70%"}
+![Ein Beispiel für die Prioritätensetzung bei einer In-App-Nachricht-Kampagne und Canvas.]({% image_buster /assets/img_archive/bucket_prioritization.png %}){: style="max-width:70%"}
 
 #### Zielgruppe auswählen
 
@@ -361,7 +361,7 @@ Wenn es bei der In-App-Nachricht zu einer Verzögerung kommt, wird die Segmentie
 
 In einigen Szenarien möchten Sie vielleicht die Berechtigung eines Nutzers neu bewerten, wenn er eine In-App-Nachricht triggert, die angezeigt werden soll. Beispiele hierfür sind Kampagnen, die auf ein benutzerdefiniertes Attribut abzielen, das sich häufig ändert, oder Nachrichten, die kurzfristige Profiländerungen widerspiegeln sollen.
 
-\![Kontrollkästchen für "Eignung der Kampagne vor der Anzeige neu bewerten" ausgewählt.]({% image_buster /assets/img_archive/re-evaluate-iam-membership.png %}){:style="max-width:60%"}
+![Kontrollkästchen für "Eignung der Kampagne vor der Anzeige neu bewerten" ausgewählt.]({% image_buster /assets/img_archive/re-evaluate-iam-membership.png %}){:style="max-width:60%"}
 
 Wenn Sie die Option **Kampagnenberechtigung vor der Anzeige neu bewerten** auswählen, wird eine zusätzliche Anfrage an Braze gestellt, um zu bestätigen, dass der Benutzer vor dem Versand noch für diese Nachricht berechtigt ist. Außerdem werden alle [Liquid-Variablen]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) oder [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) in diesem Moment vor der Anzeige der Nachricht als Vorlage verwendet.
 

@@ -31,7 +31,7 @@ Camila beginnt mit der Modellierung des Ergebnisses, das sie vermeiden möchte: 
 3. Um die Abwanderung zu definieren, wählt sie `do not` und das angepasste Event `stream_started`, das aktives Engagement anzeigt.
 4. Sie setzt das Prognose-Fenster auf 14 Tage - das heißt, das Modell wird Nutzer:innen identifizieren, die wahrscheinlich 14 Tage lang keinen neuen Stream starten.
 
-\![Churn-Definition, die zeigt, dass ein Nutzer:in den letzten 14 Tagen kein angepasstes Event "stream_started" durchgeführt hat.]({% image_buster /assets/img/ai_use_cases/churn_definition.png %})
+![Churn-Definition, die zeigt, dass ein Nutzer:in den letzten 14 Tagen kein angepasstes Event "stream_started" durchgeführt hat.]({% image_buster /assets/img/ai_use_cases/churn_definition.png %})
 
 {:start="5"}
 5\. Sie wählt eine Zielgruppe für Prognosen aus, die alle Nutzer:innen umfasst, die in den letzten 30 Tagen relevante Ereignisse getriggert haben, so dass das Modell aus dem jüngsten Verhalten lernen kann.

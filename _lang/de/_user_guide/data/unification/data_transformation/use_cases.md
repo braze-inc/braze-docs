@@ -31,7 +31,7 @@ Braze verfügt über eine Integration mit [Iterate]({{site.baseurl}}/partners/ad
 
 Sehen Sie sich diese Beispiel-Payload von Typeform an, einer Plattform für Umfragen, die immer dann gesendet wird, wenn eine Antwort auf eine Umfrage eingegangen ist.
 
-\![]({% image_buster /assets/img/data_transformation/data_transformation2.png %})
+![]({% image_buster /assets/img/data_transformation/data_transformation2.png %})
 
 {% tabs local %}
 {% tab Basic transformation %}

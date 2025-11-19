@@ -37,13 +37,13 @@ Braze verwendet die URL Ihrer Landing Page, um seinen eindeutigen Liquid-Tag zu 
 Wenn Sie die URL der Seite nach dem Versenden Ihrer Nachricht ändern, wird jeder Nutzer:innen, der versucht, Ihre Landing Page mit der alten URL zu besuchen, auf die Seite `404` weitergeleitet.
 {% endalert %}
 
-\![Eine Beispielseiten-URL für eine Landing Page in Braze.]({% image_buster /assets/img/landing_pages/url-handle-example.png %}){: style="max-width:80%;"}
+![Eine Beispielseiten-URL für eine Landing Page in Braze.]({% image_buster /assets/img/landing_pages/url-handle-example.png %}){: style="max-width:80%;"}
 
 ### Schritt 2: Erzeugen Sie den Liquid-Tag
 
 Gehen Sie zu **Messaging** > **Kampagnen** und wählen Sie dann eine Kampagne aus. Wählen Sie in Ihrem Nachrichten-Editor die **Personalisierung** aus.
 
-\![Der Button 'Personalisierung hinzufügen' im Drag-and-Drop-Editor.]({% image_buster /assets/img/landing_pages/select-personalization.png %}){: style="max-width:75%;"}
+![Der Button 'Personalisierung hinzufügen' im Drag-and-Drop-Editor.]({% image_buster /assets/img/landing_pages/select-personalization.png %}){: style="max-width:75%;"}
 
 Braze generiert automatisch einen Liquid-Tag mit der [URL Ihrer Landing Page](#page-url). Beziehen Sie sich auf die folgende Tabelle, um Ihren Tag zu erstellen:
 
@@ -53,7 +53,7 @@ Braze generiert automatisch einen Liquid-Tag mit der [URL Ihrer Landing Page](#p
 
 Um den Liquid-Tag zu Ihrer Nachricht hinzuzufügen, können Sie entweder **Einfügen** auswählen oder das Snippet in die Zwischenablage kopieren und es manuell hinzufügen.
 
-\![Ein automatisch generierter Liquid-Tag für die ausgewählte Landing Page.]({% image_buster /assets/img/landing_pages/get-snippet.png %}){: style="max-width:40%;"}
+![Ein automatisch generierter Liquid-Tag für die ausgewählte Landing Page.]({% image_buster /assets/img/landing_pages/get-snippet.png %}){: style="max-width:40%;"}
 
 Ihr Snippet wird in etwa so aussehen wie das folgende:
 

@@ -12,7 +12,7 @@ tool: Canvas
 
 > Mit dem Agent-Schritt können Sie KI-gestützte Entscheidungsfindung und Inhaltserstellung direkt in Ihren Canvas-Workflow integrieren. Weitere allgemeine Informationen finden Sie unter [Braze-Agenten]({{site.baseurl}}/user_guide/brazeai/agents/). 
 
-\![Ein Agent-Schritt in einer Canvas Nutzer:innen-Reise.]({% image_buster /assets/img/ai_agent/agent_step.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
+![Ein Agent-Schritt in einer Canvas Nutzer:innen-Reise.]({% image_buster /assets/img/ai_agent/agent_step.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
 
 ## Funktionsweise
 

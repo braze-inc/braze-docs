@@ -18,13 +18,13 @@ So exportieren Sie CSVs von Daten von dieser Seite:
 
 1. Legen Sie den Zeitspanne und die Apps fest, für die Sie Daten anzeigen möchten. Standardmäßig zeigt das Dashboard die Daten der letzten 30 Tage für alle Apps an.
 
-\![Zeitspanne und App-Felder auf dem Home Dashboard.]({% image_buster /assets/img_archive/home_dashboard_select_date.png %}){: style="max-width:60%;"}
+![Zeitspanne und App-Felder auf dem Home Dashboard.]({% image_buster /assets/img_archive/home_dashboard_select_date.png %}){: style="max-width:60%;"}
 
 {:start="2"}
 2\. Scrollen Sie nach unten zum Diagramm **Performance über Zeit**.
 3\. Wählen Sie die Daten, die Sie exportieren möchten, im Feld **Statistik für** aus. Sehen Sie die [verfügbaren Daten](#available-data), die Sie exportieren können.
 
-\![Grafik Performance im Zeitverlauf auf dem Home Dashboard.]({% image_buster /assets/img_archive/home_dashboard_export.png %})
+![Grafik Performance im Zeitverlauf auf dem Home Dashboard.]({% image_buster /assets/img_archive/home_dashboard_export.png %})
 
 {:start="4"}
 4\. Wählen Sie <i class="fas fa-bars" title="Diagramm-Kontextmenü"></i> und dann eine Exportoption.

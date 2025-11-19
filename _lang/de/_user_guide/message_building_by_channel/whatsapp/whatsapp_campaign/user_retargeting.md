@@ -23,11 +23,11 @@ Beim Aufbau von Zielgruppen mit dem Retargeting von Nutzer:innen möchten Sie m�
 Benutzer können danach gefiltert werden, wann sie zuletzt eine WhatsApp erhalten haben oder ob sie eine WhatsApp von einer bestimmten WhatsApp-Kampagne erhalten haben. Filter können im Schritt Zielbenutzer des Kampagnenerstellers festgelegt werden.
 
 **Nach zuletzt erhaltener WhatsApp filtern**<br>
-\![Filter für den letzten Empfang einer WhatsApp Nachricht am 22\. April 2025.]({% image_buster /assets/img/whatsapp/whatsapp23.png %}){: style="max-width:75%"}
+![Filter für den letzten Empfang einer WhatsApp Nachricht am 22\. April 2025.]({% image_buster /assets/img/whatsapp/whatsapp23.png %}){: style="max-width:75%"}
 
 **Filter nach empfangenen Nachrichten aus der WhatsApp-Kampagne**<br>
 Filtert Benutzer, die eine Nachricht von einer bestimmten WhatsApp-Kampagne erhalten haben. Mit diesem Filter haben Sie auch die Möglichkeit, diejenigen herauszufiltern, die keine Nachrichten aus einer WhatsApp-Kampagne erhalten haben.<br>
-\![Filter für den Empfang einer WhatsApp Kampagne.]({% image_buster /assets/img/whatsapp/whatsapp22.png %}){: style="max-width:75%"}
+![Filter für den Empfang einer WhatsApp Kampagne.]({% image_buster /assets/img/whatsapp/whatsapp22.png %}){: style="max-width:75%"}
 
 ### Nach Engagement filtern
 Rufen Sie Nutzer:innen erneut auf, die eine WhatsApp-Kampagne oder einen Canvas-Schritt gelesen oder nicht gelesen haben. 
@@ -37,17 +37,17 @@ Rufen Sie Nutzer:innen erneut auf, die eine WhatsApp-Kampagne oder einen Canvas-
 2. Wählen Sie **WhatsApp-Nachricht lesen**.
 3. Wählen Sie die gewünschte Kampagne.<br>
 
-\![Filter für das Lesen einer WhatsApp Nachricht.]({% image_buster /assets/img/whatsapp/whatsapp21.png %}){: style="max-width:75%"}
+![Filter für das Lesen einer WhatsApp Nachricht.]({% image_buster /assets/img/whatsapp/whatsapp21.png %}){: style="max-width:75%"}
 
 **Retargeting von Nutzer:innen, die einen bestimmten Canvas-Schritt geöffnet/gelesen haben**
 1. Erstellen Sie ein Segment mit dem Filter **Geklickter/geöffneter Schritt**.
 2. Wählen Sie **WhatsApp-Nachricht lesen**.
 3. Wählen Sie den gewünschten Canvas und die Canvas-Schritte.<br>
 
-\![Filter zum Lesen eines WhatsApp-Schrittes.]({% image_buster /assets/img/whatsapp/whatsapp20.png %}){: style="max-width:75%"}
+![Filter zum Lesen eines WhatsApp-Schrittes.]({% image_buster /assets/img/whatsapp/whatsapp20.png %}){: style="max-width:75%"}
 
 **Nach Kampagne oder Canvas-Attribution filtern**<br>
 Filtern Sie nach Nutzern, die eine bestimmte WhatsApp-Kampagne oder Canvas-Komponente oder -Tag geöffnet/gelesen haben.
 
-\![Filter zum Öffnen einer bestimmten WhatsApp Nachricht.]({% image_buster /assets/img/whatsapp/whatsapp19.png %}){: style="max-width:75%"}
+![Filter zum Öffnen einer bestimmten WhatsApp Nachricht.]({% image_buster /assets/img/whatsapp/whatsapp19.png %}){: style="max-width:75%"}
 

@@ -18,7 +18,7 @@ Erstellen Sie ein Präferenzzentrum, indem Sie zu **Zielgruppe** > **E-Mail-Prä
 
 Hier wird eine Liste der benutzerdefinierten Einstellungszentren angezeigt. Wählen Sie **Neu erstellen**, um ein neues Einstellungszentrum zu erstellen, oder wählen Sie den Namen eines bestehenden, um Änderungen vorzunehmen.
 
-\![Eine Liste der angepassten Einstellungszentren mit Name, Beschreibung, Typ, Status, Datum der letzten Bearbeitung und erstellt von Nutzer:in.]({% image_buster /assets/img/preference_center/preference_center1.png %})
+![Eine Liste der angepassten Einstellungszentren mit Name, Beschreibung, Typ, Status, Datum der letzten Bearbeitung und erstellt von Nutzer:in.]({% image_buster /assets/img/preference_center/preference_center1.png %})
 
 ## Schritt 2: Präferenzzentrum benennen
 
@@ -26,7 +26,7 @@ Die Namen der Präferenzzentren dürfen nur alphanumerische Zeichen, Bindestrich
 
 Dieses Liquid-Tag kann in alle ausgehenden E-Mail-Kampagnen oder Canvas-Schritte eingefügt werden und leitet Benutzer zum Einstellungscenter.
 
-\![Ein Beispiel für Liquid für ein Präferenzzentrum.]({% image_buster /assets/img/preference_center/preference_center2.png %})
+![Ein Beispiel für Liquid für ein Präferenzzentrum.]({% image_buster /assets/img/preference_center/preference_center2.png %})
 
 ## Schritt 3: Hinzufügen von Abonnementgruppen zum Präferenzcenter
 
@@ -43,7 +43,7 @@ Sie können die ausgewählten Abo-Gruppen weiter konfigurieren, wenn Sie den Sma
 - Fügen Sie ein Kontrollkästchen **Alle abonnieren** hinzu oder entfernen Sie es, um den Benutzer für alle in diesem Block angezeigten Abonnementgruppen zu registrieren.
 - Fügen Sie ein Kontrollkästchen **Von allen abmelden** hinzu oder entfernen Sie es. Dadurch wird der Benutzer von allen in diesem Block angezeigten Abonnementgruppen abgemeldet.
 
-\![Ein Beispiel für ein Einstellungscenter mit den Optionen, alle Nachrichten, Marketing, Newsletter und wöchentliche E-Mails zu abonnieren oder sich von allen abzumelden.]({% image_buster /assets/img/preference_center/preference_center3.png %}){: style="max-width:38%;"}\![]({% image_buster /assets/img/preference_center/preference_center4.png %}){: style="max-width:45%;"}
+![Ein Beispiel für ein Einstellungscenter mit den Optionen, alle Nachrichten, Marketing, Newsletter und wöchentliche E-Mails zu abonnieren oder sich von allen abzumelden.]({% image_buster /assets/img/preference_center/preference_center3.png %}){: style="max-width:38%;"}![]({% image_buster /assets/img/preference_center/preference_center4.png %}){: style="max-width:45%;"}
 
 Der Button **Von allen abmelden** unten kann nicht entfernt werden und bewirkt, dass man [von allen Nachrichten abgemeldet wird]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-states).
 
@@ -53,7 +53,7 @@ Der Button **Von allen abmelden** unten kann nicht entfernt werden und bewirkt, 
 
 Auf der Registerkarte **Gemeinsame Stile** können Sie festlegen, dass bestimmte Stile auf alle relevanten Blöcke in Ihrem Einstellungscenter angewendet werden sollen. Die hier festgelegten Stile werden auf die gesamte Nachricht angewendet, außer wenn Sie sie bei einem bestimmten Block außer Kraft setzen. Um die Gestaltung zu vereinfachen, können Sie die Stile auf Seitenebene einrichten, bevor Sie sie auf Blockebene anpassen.
 
-\![Ein Beispiel für gängige Stileinstellungen für Text, Buttons und Links.]({% image_buster /assets/img/preference_center/preference_center5.png %}){: style="max-width:45%;"}
+![Ein Beispiel für gängige Stileinstellungen für Text, Buttons und Links.]({% image_buster /assets/img/preference_center/preference_center5.png %}){: style="max-width:45%;"}
 
 {% alert tip %}
 Um zu den gemeinsamen Stilen zurückzukehren, klicken Sie bei den Blockeigenschaften auf das "X". Nun wählen Sie den Nachrichtencontainer, den "X"-Button oder den Hintergrund aus.
@@ -68,7 +68,7 @@ Der Drag-and-Drop-Editor vereinfacht die Erstellung von Präferenzzentren mit Ze
 
 Zeilen sind Struktureinheiten, die den horizontalen Aufbau eines Abschnitts der Nachricht mit Hilfe von Zellen definieren.
 
-\![Option, um die Art der Zeile in Ihrer Nachricht auszuwählen.]({% image_buster /assets/img/preference_center/preference_center6.png %}){: style="max-width:45%;"}
+![Option, um die Art der Zeile in Ihrer Nachricht auszuwählen.]({% image_buster /assets/img/preference_center/preference_center6.png %}){: style="max-width:45%;"}
 
 Wenn eine Zeile ausgewählt ist, können Sie im Bereich Spaltenanpassung die gewünschte Anzahl von Spalten hinzufügen oder entfernen, um verschiedene Inhaltselemente nebeneinander anzuordnen. Die Größe der Spalten können Sie mit dem Schieberegler anpassen.
 
@@ -81,7 +81,7 @@ Formatieren Sie die Zeilen- und Spalteneigenschaften, bevor Sie die Blöcke in d
 
 Blöcke stehen für verschiedene Arten von Nachrichteninhalten. Ziehen Sie eine Zeile in ein bestehendes Zeilensegment, das sich automatisch an die Zellenbreite anpasst.
 
-\![Option zum Auswählen von Blöcken, einschließlich Titel, Absatz, Button, Bild und Abstandhalter.]({% image_buster /assets/img/preference_center/preference_center8.png %}){: style="max-width:45%;"}
+![Option zum Auswählen von Blöcken, einschließlich Titel, Absatz, Button, Bild und Abstandhalter.]({% image_buster /assets/img/preference_center/preference_center8.png %}){: style="max-width:45%;"}
 
 Jeder Block hat eigene Einstellungen etwa zum Padding. Das Bedienfeld auf der rechten Seite wechselt automatisch zu einem Styling-Bedienfeld für das ausgewählte Inhaltselement. Weitere Informationen finden Sie unter [Editor-Blockeigenschaften]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/editor_blocks/).
 
@@ -94,7 +94,7 @@ Wenn Sie den Block Benutzerdefinierter Code in Ihrem Einstellungscenter verwende
 
 Vergessen Sie nicht, die Bestätigungsseite anzupassen! Sie können diese Seite bearbeiten, indem Sie oben im Fenster des Drag-and-Drop-Editors **Bestätigungsseite** wählen. Diese Seite wird den Benutzern angezeigt, nachdem sie ihre Einstellungen über das Einstellungscenter aktualisiert haben. Die oben genannten Gestaltungsmöglichkeiten gelten auch für diese Seite.
 
-\![Ein Beispiel für eine Bestätigungsseite, um mitzuteilen, dass die Nutzer:innen aktualisiert worden sind.]({% image_buster /assets/img/preference_center/preference_center9.png %}){: style="max-width:65%;"}
+![Ein Beispiel für eine Bestätigungsseite, um mitzuteilen, dass die Nutzer:innen aktualisiert worden sind.]({% image_buster /assets/img/preference_center/preference_center9.png %}){: style="max-width:65%;"}
 
 ## Schritt 6: Präferenzzentrum prüfen und einführen
 
@@ -110,7 +110,7 @@ Wenn Sie das Präferenzzentrum starten, müssen Sie seinen Namen bestätigen, da
 
 Um einen Link zum Einstellungscenter in Ihren E-Mails zu platzieren, kopieren Sie das Liquid-Tag des gewünschten Einstellungscenters, indem Sie auf das Symbol **Liquid kopieren** klicken.
 
-\![Die Option Liquid kopieren in der Zeile eines Einstellungscenters.]({% image_buster /assets/img/preference_center/preference_center10.png %}){: style="max-width:75%;"}
+![Die Option Liquid kopieren in der Zeile eines Einstellungscenters.]({% image_buster /assets/img/preference_center/preference_center10.png %}){: style="max-width:75%;"}
 
 Fügen Sie das Liquid-Tag an der gewünschten Stelle in Ihrer E-Mail ein, ähnlich wie die [Abmelde-URLs]({{site.baseurl}}/user_guide/message_building_by_channel/email/custom_email_footer/#adding-a-custom-unsubscribe-link) eingefügt werden.
 
@@ -118,5 +118,5 @@ Fügen Sie das Liquid-Tag an der gewünschten Stelle in Ihrer E-Mail ein, ähnli
 
 Tritt ein Fehler auf, wenn ein Benutzer in einem Einstellungscenter die Option **Speichern** wählt, wird ihm die folgende Standardfehlermeldung angezeigt, die im Editor nicht angepasst oder gestaltet werden kann. Fehlermeldungen können auf diesen Seiten aber weiterhin lokalisiert werden. 
 
-\![Ein Fehler mit dem Hinweis "Beim Speichern Ihrer Einstellungen ist ein Problem aufgetreten. Bitte versuchen Sie es erneut."]({% image_buster /assets/img/preference_center/preference_center11.png %}){: style="max-width:55%;"}
+![Ein Fehler mit dem Hinweis "Beim Speichern Ihrer Einstellungen ist ein Problem aufgetreten. Bitte versuchen Sie es erneut."]({% image_buster /assets/img/preference_center/preference_center11.png %}){: style="max-width:55%;"}
 

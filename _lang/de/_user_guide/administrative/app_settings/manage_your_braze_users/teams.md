@@ -23,7 +23,7 @@ Teams sind nicht für alle Braze-Verträge verfügbar. Wenn Sie diese Funktion n
 
 Gehen Sie zu **Einstellungen** > **Interne Teams** und wählen Sie <i class="fas fa-plus"></i> **Team hinzufügen**.
 
-\![Fenster zum Hinzufügen eines neuen Teams.]({% image_buster /assets/img_archive/adding_a_team.png %}){: style="max-width:70%;"}
+![Fenster zum Hinzufügen eines neuen Teams.]({% image_buster /assets/img_archive/adding_a_team.png %}){: style="max-width:70%;"}
 
 Geben Sie den **Teamnamen** ein. Falls gewünscht, wählen Sie im Feld **Team definieren** ein angepasstes Attribut, einen Standort oder eine Sprache aus, um weiter zu definieren, auf welche Nutzerdaten das Team Zugriff hat. Ein möglicher Anwendungsfall ist z.B. das [Testen mit Teams](#testing-with-Teams), indem Sie ein Entwicklungsteam erstellen, das nur Zugriff auf Testnutzer:in hat, die durch ein angepasstes Attribut gekennzeichnet sind. Ein weiterer Anwendungsfall ist die Einschränkung der Benutzerkommunikation nach Produkt.
 
@@ -39,13 +39,13 @@ Führen Sie dann die folgenden Schritte aus:
 
 1. Fügen Sie im Abschnitt **Berechtigungen auf Workspace-Ebene** den Nutzer:innen dem entsprechenden Workspace hinzu, wenn er nicht bereits enthalten ist.
 
-\![Ein Berechtigungssatz für den Workspace "Swifty & Droidboy".]({% image_buster /assets/img/team_level_permissions.png %})
+![Ein Berechtigungssatz für den Workspace "Swifty & Droidboy".]({% image_buster /assets/img/team_level_permissions.png %})
 
 {: start="2"}
 2\. Wählen Sie **\+ Berechtigungen auf Teamebene hinzufügen** und wählen Sie dann das **Team** aus, dem Sie diesen Nutzer:innen hinzufügen möchten.
 3\. Weisen Sie bestimmte Berechtigungen aus der Spalte **Team-Berechtigungen** zu.
 
-\![Ein Bereich zum Auswählen von Berechtigungen für das Team "Kundensupport".]({% image_buster /assets/img/teams.png %})
+![Ein Bereich zum Auswählen von Berechtigungen für das Team "Kundensupport".]({% image_buster /assets/img/teams.png %})
 
 ### Verfügbare Berechtigungen auf Team-Ebene
 
@@ -74,7 +74,7 @@ Eine Beschreibung, was die einzelnen Benutzerrechte beinhalten und wie Sie sie v
 
 Mit dem Filter **Team hinzufügen** können Sie Canvase, Kampagnen, Karten, Segmenten, E-Mail Templates und Medien Bibliothek Assets ein Team zuweisen.
  
-\![Hinzufügen eines Team Tags zu einer Kampagne.]({% image_buster /assets/img/teams1.png %}){: style="max-width:70%;"}
+![Hinzufügen eines Team Tags zu einer Kampagne.]({% image_buster /assets/img/teams1.png %}){: style="max-width:70%;"}
 
 - Basierend auf den bei der Erstellung des Teams angewendeten *Definitionen* wird die Zielgruppe dieses Engagement-Tools bei Zuweisung eines Team-Filters auf Nutzer:innen-Profile beschränkt, die der Definition entsprechen.
 - Basierend auf den zugewiesenen *Berechtigungen* ist es Teammitgliedern nur zulässig, auf die Dashboard Engagement-Tools zuzugreifen, für die ihr Team-Filter gesetzt ist. Wenn sie nur über eingeschränkte oder gar keine Rechte für den Workspace verfügen, müssen sie bestimmten Objekten einen Team Filter hinzufügen, bevor sie diese speichern oder starten können. Teammitglieder können außerdem Canvase, Kampagnen, Karten und Segmente nach Teams filtern, um für sie relevante Inhalte zu identifizieren.
@@ -88,22 +88,22 @@ Zwei Beispiele mit einem Braze-Marketer namens Michelle. Michelle ist Mitglied e
 
 In diesem Szenario ist Michelle ein eingeschränkter Nutzer:in, der keine Berechtigungen auf Workspace-Ebene hat. Ihre Berechtigungen sehen in etwa so aus:
 
-\![Angepasste Berechtigungen ohne Berechtigungen auf Workspace-Ebene und 16 teambasierte Berechtigungen.]({% image_buster /assets/img_archive/scenario1.png %})
+![Angepasste Berechtigungen ohne Berechtigungen auf Workspace-Ebene und 16 teambasierte Berechtigungen.]({% image_buster /assets/img_archive/scenario1.png %})
 
 Aufgrund der Michelle zugewiesenen Berechtigungen kann sie, wenn sie eine Kampagne erstellt, dieser Kampagne nur das Team "Entwicklung" zuweisen. Sie kann die Kampagne nur starten, wenn das Team zugewiesen ist, und sie kann keine anderen Tags des Teams sehen oder darauf zugreifen.
 
-\![Dropdown-Menü für Kampagnenteams, das nur das Tag "Entwicklungsteam" anzeigt.]({% image_buster /assets/img_archive/team_permissions_scenario1.gif %})
+![Dropdown-Menü für Kampagnenteams, das nur das Tag "Entwicklungsteam" anzeigt.]({% image_buster /assets/img_archive/team_permissions_scenario1.gif %})
 
 {% endtab %}
 {% tab Scenario 2 - Team permissions and workspace permissions %}
 
 In diesem Szenario ist Michelle immer noch Mitglied des Entwicklungsteams, aber sie hat eine zusätzliche Berechtigung auf Workspace-Ebene.
 
-\![Angepasste Berechtigungen mit einer Berechtigung auf Workspace-Ebene und 15 teambasierten Berechtigungen.]({% image_buster /assets/img_archive/scenario2.png %})
+![Angepasste Berechtigungen mit einer Berechtigung auf Workspace-Ebene und 15 teambasierten Berechtigungen.]({% image_buster /assets/img_archive/scenario2.png %})
 
 Da Michelle auf Workspace-Ebene die Berechtigung "Zugriff auf Kampagnen, Canvase, Karten, Content-Blöcke, Feature-Flags, Segmente, Mediathek und Präferenzzentren" hat, kann sie andere Team-Filter für die von ihr erstellte Kampagne anzeigen und zuweisen.
 
-\![Kampagnen Team Tag Dropdown mit mehreren Team Tags]({% image_buster /assets/img_archive/team_permissions_scenario2.gif %})
+![Kampagnen Team Tag Dropdown mit mehreren Team Tags]({% image_buster /assets/img_archive/team_permissions_scenario2.gif %})
 
 Ähnlich wie im ersten Szenario muss Michelle der Kampagne den Tag Entwicklungsteam hinzufügen, bevor sie sie einführen kann.
 
@@ -134,7 +134,7 @@ Sie können Teams über die Seite **Interne Teams** archivieren.
 
 Wählen Sie ein oder mehrere Teams zum Archivieren aus. Wenn das Team mit keinem Objekt in Braze verknüpft ist, wird das Team sofort archiviert. Wenn das Team mit einem Objekt verknüpft ist, haben Sie die Möglichkeit, das Team nach dem Archivierungsprozess zu entfernen oder das Team zu ersetzen.
 
-\![Archivierung eines Teams, das mit einem Objekt in Braze verbunden ist]({% image_buster /assets/img_archive/archive_a_team.png %}){: style="max-width:70%;"}
+![Archivierung eines Teams, das mit einem Objekt in Braze verbunden ist]({% image_buster /assets/img_archive/archive_a_team.png %}){: style="max-width:70%;"}
 
 Braze-Administratoren können die Archivierung eines Teams aufheben, indem sie das archivierte Team auswählen und **Unarchive** wählen.
 

@@ -23,7 +23,7 @@ Wenn personalisierte Pfade in einem Experimentpfad-Schritt aktiviert sind, ist d
 
 Fügen Sie einen [Experimentierpfad]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/) zu Ihrem Canvas hinzu und aktivieren Sie dann **Personalisierte Pfade**.
 
-\![]({% image_buster /assets/img/experiment_step/experiment_personalized_path.png %})
+![]({% image_buster /assets/img/experiment_step/experiment_personalized_path.png %})
 
 ### Schritt 2: Konfigurieren Sie die Einstellungen für personalisierte Pfade
 
@@ -33,7 +33,7 @@ Wenn Sie Öffnungen oder Klicks als Konversions-Event wählen, stellen Sie siche
 
 Legen Sie dann das **Experimentierfenster** fest. Das **Experimentierfenster** bestimmt, wie lange die Benutzer über alle Pfade geschickt werden, bevor der beste Pfad für jeden Benutzer in der Verzögerungsgruppe ausgewählt wird. Das Fenster beginnt, wenn der erste Nutzer:innen den Schritt betritt.
 
-\![]({% image_buster /assets/img/experiment_step/experiment_personalized_settings.png %})
+![]({% image_buster /assets/img/experiment_step/experiment_personalized_settings.png %})
 
 ### Schritt 3: Fallback festlegen
 
@@ -41,11 +41,11 @@ Wenn die Ergebnisse des Tests nicht ausreichen, um einen statistisch signifikant
 
 Alternativ können Sie auch auswählen, **allen zukünftigen Nutzer:innen die Mischung der Pfade weiter zu senden**.
 
-\![]({% image_buster /assets/img/experiment_step/experiment_winning_statistical.png %})
+![]({% image_buster /assets/img/experiment_step/experiment_winning_statistical.png %})
 
 Mit dieser Option werden künftige Benutzer entsprechend den in der Pfadverteilung des Experiments angegebenen Prozentsätzen auf die verschiedenen Pfade geschickt.
 
-\![]({% image_buster /assets/img/experiment_step/experiment_personalized_percentages.png %})
+![]({% image_buster /assets/img/experiment_step/experiment_personalized_percentages.png %})
 
 ### Schritt 4: Fügen Sie Ihre Pfade hinzu und starten Sie den Canvas
 
@@ -56,11 +56,11 @@ Eine einzelne Experimentpfad-Komponente kann bis zu vier Pfade enthalten. Allerd
 
 Richten Sie Ihr Canvas nach Bedarf ein und starten Sie es dann. Wenn der erste Nutzer:innen das Experiment betreten hat, können Sie im Canvas die Analytics sehen und [die Performance Ihres Experiments tracken.]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/#tracking-performance)
 
-\![]({% image_buster /assets/img/experiment_step/experiment_personalized_delay_group_pending.png %}){: style="max-width:75%;" }
+![]({% image_buster /assets/img/experiment_step/experiment_personalized_delay_group_pending.png %}){: style="max-width:75%;" }
 
 Wenn das Experiment-Fenster verstrichen und das Experiment abgeschlossen ist, schickt Braze die Nutzer:innen der Verzögerungsgruppe auf die Pfade mit der höchsten personalisierten Wahrscheinlichkeit für eine Konversion, basierend auf der Empfehlung des Vorhersagemodells.
 
-\![]({% image_buster /assets/img/experiment_step/experiment_personalized_delay_group_complete.png %}){: style="max-width:75%;" }
+![]({% image_buster /assets/img/experiment_step/experiment_personalized_delay_group_complete.png %}){: style="max-width:75%;" }
 
 {% endtab %}
 {% tab Recurring or action-triggered or API-triggered Canvas %}
@@ -71,7 +71,7 @@ Wenn der erste Nutzer:innen das Experiment betreten hat, können Sie im Canvas d
 
 Wenn das Experiment-Fenster verstrichen und das Experiment abgeschlossen ist, werden alle nachfolgenden Nutzer:innen des Canvas auf den Weg geschickt, der für sie am ehesten zu einer Konversion führt.
 
-\![]({% image_buster /assets/img/experiment_step/experiment_personalized_recurring_analytics.png %}){: style="max-width:75%;" }
+![]({% image_buster /assets/img/experiment_step/experiment_personalized_recurring_analytics.png %}){: style="max-width:75%;" }
 
 {% endtab %}
 {% endtabs %}
@@ -85,13 +85,13 @@ Wenn Personalisierte Pfade aktiviert wurde, ist Ihre Analytics-Ansicht in zwei T
 
 Die Registerkarte **Erstes Experiment** zeigt die Metriken für jeden Pfad während des Experimentierfensters. Sie können eine Zusammenfassung der Leistung aller Pfade für die angegebenen Konvertierungsereignisse sehen.
 
-\![Ergebnisse eines anfänglichen Experiments zur Ermittlung des besten Performance-Pfads für jeden Nutzer:innen. Eine Tabelle zeigt die Performance der einzelnen Pfade auf der Grundlage verschiedener Metriken für den Targeting-Kanal.]({% image_buster /assets/img/experiment_step/experiment_personalized_analytics_tab1.png %})
+![Ergebnisse eines anfänglichen Experiments zur Ermittlung des besten Performance-Pfads für jeden Nutzer:innen. Eine Tabelle zeigt die Performance der einzelnen Pfade auf der Grundlage verschiedener Metriken für den Targeting-Kanal.]({% image_buster /assets/img/experiment_step/experiment_personalized_analytics_tab1.png %})
 
 Standardmäßig sucht der Test nach Assoziationen zwischen angepassten Events des Nutzers und seinen Pfadpräferenzen oder der Variante von Nachrichten, auf die ein Nutzer:innen am besten reagiert. Diese Analyse stellt fest, ob angepasste Events die Wahrscheinlichkeit erhöhen oder verringern, auf einen bestimmten Pfad zu reagieren. Diese Beziehungen werden dann verwendet, um zu bestimmen, welchen Nutzer:innen welcher Pfad zugewiesen wird, nachdem das Experiment-Fenster vorüber ist.
 
 Die Beziehungen zwischen angepassten Events und Pfadpräferenzen werden in der Tabelle auf dem Tab **Initial Experiment** angezeigt.
 
-\![]({% image_buster /assets/img_archive/experiment_personalized_analytics_custom_data.png %})
+![]({% image_buster /assets/img_archive/experiment_personalized_analytics_custom_data.png %})
 
 Wenn der Test keine sinnvolle Beziehung zwischen angepassten Events und Pfadpräferenzen finden kann, greift der Test auf eine sitzungsbasierte Analysemethode zurück.
 
@@ -106,7 +106,7 @@ Diese Merkmale sind:
 - **Frequenz:** Wie oft sie Sitzungen abhalten
 - **Amtszeit:** Wie lange sie bereits Nutzer:in sind
 
-\![Die Tabelle mit den Nutzereigenschaften, die zeigt, welche Nutzer:innen aufgrund der drei Buckets für Häufigkeit, Häufigkeit und Dauer der Nutzung prognostiziert werden, Pfad 1 und Pfad 2 zu bevorzugen.]({% image_buster /assets/img/experiment_step/experiment_personalized_analytics_tab1_2.png %})
+![Die Tabelle mit den Nutzereigenschaften, die zeigt, welche Nutzer:innen aufgrund der drei Buckets für Häufigkeit, Häufigkeit und Dauer der Nutzung prognostiziert werden, Pfad 1 und Pfad 2 zu bevorzugen.]({% image_buster /assets/img/experiment_step/experiment_personalized_analytics_tab1_2.png %})
 
 Denken Sie an die Aktualität, d.h. wie lange die letzte Interaktion mit Ihnen zurückliegt, an die Häufigkeit, d.h. wie oft sie sich engagieren, und an die Dauer, d.h. wie lange sie sich insgesamt mit Ihnen engagieren. Wir gruppieren die Benutzer anhand dieser drei Dinge (wie in der Tabelle mit **den Benutzereigenschaften** erläutert) in "Bereiche" und sehen dann, welcher Bereich welchen Pfad am meisten mag. Es ist, als würden Sie die Benutzer in Hunderte von verschiedenen Listen sortieren, je nachdem, wann sie zuletzt bei Ihnen eingekauft haben, wie oft sie einkaufen und wie lange sie schon Kunden sind.
 
@@ -136,7 +136,7 @@ Die drei Karten auf dieser Seite zeigen Ihren voraussichtlichen Auftrieb, die Ge
 - **Gesamtergebnisse:** Die Ergebnisse des zweiten Sendevorgangs basierend auf Ihrem Konversions-Event.
 - **Prognostizierte Ergebnisse:** Die voraussichtlichen Ergebnisse des zweiten Versands auf der Grundlage der von Ihnen gewählten Optimierungsmetrik, wenn Sie stattdessen nur die Gewinnvariante versendet hätten.
 
-\![Tab Personalisierte Pfade für ein Canvas. Die Karten zeigen den prognostizierten Lift, die Gesamtkonversionen (mit personalisierten Pfaden) und die prognostizierten eindeutigen Öffnungen (mit Gewinnpfad).]({% image_buster /assets/img/experiment_step/experiment_personalized_analytics_tab2.png %})
+![Tab Personalisierte Pfade für ein Canvas. Die Karten zeigen den prognostizierten Lift, die Gesamtkonversionen (mit personalisierten Pfaden) und die prognostizierten eindeutigen Öffnungen (mit Gewinnpfad).]({% image_buster /assets/img/experiment_step/experiment_personalized_analytics_tab2.png %})
 
 {% endtab %}
 {% endtabs %}

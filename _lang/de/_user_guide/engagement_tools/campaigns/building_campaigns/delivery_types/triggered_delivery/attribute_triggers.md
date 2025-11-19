@@ -22,7 +22,7 @@ Attributauslöser sind für die folgenden Szenarien verfügbar:
 
 Um mit der Verwendung von Attributauslösern zu beginnen, erstellen Sie eine Kampagne oder eine Canvas-Komponente und wählen Sie **Aktionsbasierte Zustellung** als Zustellungsmethode. Wählen Sie dann den Attribut-Trigger aus, den Sie verwenden möchten.
 
-\!["Aktionsbasierte Zustellung" mit einer Dropdown-Liste zum Auswählen eines Auslösers.]({% image_buster /assets/img_archive/trigger_attribute.png %})
+!["Aktionsbasierte Zustellung" mit einer Dropdown-Liste zum Auswählen eines Auslösers.]({% image_buster /assets/img_archive/trigger_attribute.png %})
 
 ### Abo-Status aktualisieren
 
@@ -68,7 +68,7 @@ Betrachten Sie den nächsten Anwendungsfall mit einer Benachrichtigung über ein
 Attribut-Trigger sind derzeit nicht für Array-Attribute verfügbar.
 {% endalert %}
 
-\![Ein Trigger "Angepassten Attribut-Wert ändern" für die "AA_current_rewards_tier", die sich auf einen beliebigen Wert ändert.]({% image_buster /assets/img_archive/any_value.png %})
+![Ein Trigger "Angepassten Attribut-Wert ändern" für die "AA_current_rewards_tier", die sich auf einen beliebigen Wert ändert.]({% image_buster /assets/img_archive/any_value.png %})
 
 Sie können Liquid auch verwenden, um den Nachrichtentext mit der neuen Rewards-Stufe des Kunden anzupassen und den Kunden mit weiteren Informationen über die Änderung zu versorgen.
 
@@ -84,7 +84,7 @@ Verwenden Sie den Trigger `Change Custom Attribute Value` mit der Option `specif
 
 Stellen Sie Nutzer:innen zum Beispiel gezielt zusammen, wenn ihre Rewards-Stufe in die beste Stufe wechselt. Für dieses Beispiel nehmen wir an, dass die beste Rewards-Stufe Super VIP ist. Sie können eine Kampagne einrichten, die triggert, wenn sich das angepasste Attribut der Rewards-Stufe eines Nutzers:innen in `Super VIP` ändert, so dass Sie dem Nutzer:innen dazu gratulieren können, dass er ein Super-VIP geworden ist.
 
-\![Ein "Change Custom Attribute Value"-Trigger für die "AA_current_rewards_tier", der auf den spezifischen Wert "super vip" ändert.]({% image_buster /assets/img_archive/super_vip.png %})
+![Ein "Change Custom Attribute Value"-Trigger für die "AA_current_rewards_tier", der auf den spezifischen Wert "super vip" ändert.]({% image_buster /assets/img_archive/super_vip.png %})
 
 {% alert important %}
 - Attribut-Trigger für bestimmte benutzerdefinierte Attributwerte sind für benutzerdefinierte Array- und Datumsattribute nicht verfügbar.

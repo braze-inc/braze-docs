@@ -41,7 +41,7 @@ Der Filter **Deinstalliert** wählt Nutzer:innen aus, die Ihre App innerhalb ein
 
 Tägliche Statistiken über Deinstallationen finden Sie auf der **Startseite**. 
 
-\![Segmente deinstallieren.]({% image_buster /assets/img_archive/Uninstall_Segment.png %} "Uninstall Segment")
+![Segmente deinstallieren.]({% image_buster /assets/img_archive/Uninstall_Segment.png %} "Uninstall Segment")
 
 Das Diagramm kann nach App und Segmenten aufgeschlüsselt werden, ähnlich wie andere Statistiken, die Braze bereitstellt. Wählen Sie in der **Übersicht über die Performance** Ihren Datumsbereich und, falls gewünscht, eine App aus. Blättern Sie dann zum Diagramm **Performance im Zeitverlauf** und gehen Sie wie folgt vor:
 
@@ -59,7 +59,7 @@ Das Uninstall-Tracking für Kampagnen zeigt die Anzahl der Nutzer:innen, die ein
 
 Die Deinstallationsstatistiken für Kampagnen befinden sich auf der Seite **Campaign Analytics** für eine bestimmte Kampagne. Bei Multichannel- und multivariaten Kampagnen können die Uninstall-Vorgänge nach Kanal bzw. Variante aufgeschlüsselt werden.
 
-\![Deinstallation auf Kampagnen-Ebene.]({% image_buster /assets/img_archive/campaign_level_uninstall_tracking.png %})
+![Deinstallation auf Kampagnen-Ebene.]({% image_buster /assets/img_archive/campaign_level_uninstall_tracking.png %})
 
 ### Funktionsweise
 

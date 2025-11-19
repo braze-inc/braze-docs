@@ -75,11 +75,11 @@ Um das erwartete Verhalten der Kanäle besser zu verstehen, sehen Sie sich die f
 
 Wenn Sie einen Benachrichtigungskanal auf eine bestimmte Kampagne oder einen Canvas-Schritt anwenden, scheint sich die Anzahl der **erreichbaren Benutzer** (im Schritt Zielgruppe) für Android Push nicht zu ändern. Allerdings sehen nur Benutzer, die den ausgewählten Benachrichtigungskanal abonniert haben, die Nachricht, und Ihre Kampagnenanalyse (z. B. Klicks) wird auf der Grundlage dieser Zielgruppe gemessen.
 
-\![]({% image_buster /assets/img_archive/Click_Here.png %})
+![]({% image_buster /assets/img_archive/Click_Here.png %})
 
 {:start="4"}
 4\. Klicken Sie auf **Benachrichtigungskanal hinzufügen**.
-5\. Geben Sie den Namen und die ID des Benachrichtigungskanals ein, den Sie hinzufügen möchten.<br><br>\![]({% image_buster /assets/img_archive/Enter_Channel.png %})<br><br>
+5\. Geben Sie den Namen und die ID des Benachrichtigungskanals ein, den Sie hinzufügen möchten.<br><br>![]({% image_buster /assets/img_archive/Enter_Channel.png %})<br><br>
 6\. Wiederholen Sie die Schritte 4 und 5 für jeden Benachrichtigungskanal, den Sie hinzufügen möchten.
 7\. Drücken Sie **Speichern**, um Ihre Änderungen zu speichern.
 
@@ -89,7 +89,7 @@ Ihr Fallback-Kanal ist der Kanal, über den Braze versucht, Ihre Android-Nachric
 
 1. Öffnen Sie eine bestehende Kampagne oder ein Canvas.
 2. Navigieren Sie zum Android Push Composer.
-3. Wählen Sie **Benachrichtigungskanäle verwalten**, nachdem Sie die Optionen für den Benachrichtigungskanal erweitert haben. <br><br>\![]({% image_buster /assets/img_archive/Change_Fallback.png %}){: style="max-width:80%;"}<br><br>
+3. Wählen Sie **Benachrichtigungskanäle verwalten**, nachdem Sie die Optionen für den Benachrichtigungskanal erweitert haben. <br><br>![]({% image_buster /assets/img_archive/Change_Fallback.png %}){: style="max-width:80%;"}<br><br>
 4. Fügen Sie den Kanal zum Dashboard hinzu (falls er nicht bereits hinzugefügt wurde).
 5. Wählen Sie das Optionsfeld neben dem Kanal, den Sie als Ausweichkanal festlegen möchten.
 6. Speichern Sie Ihre Änderungen. Ihre Änderungen werden global übernommen.
@@ -99,6 +99,6 @@ Ihr Fallback-Kanal ist der Kanal, über den Braze versucht, Ihre Android-Nachric
 1. Navigieren Sie auf einer beliebigen Kampagne oder einem Canvas zum Android Push Composer.
 2. Wählen Sie den gewünschten Kanal aus der Dropdown-Liste. Wenn Sie kein Dropdown haben, sondern die folgende Ansicht verwenden, müssen Sie Kanäle hinzufügen, bevor Sie sie für Kampagnen auswählen.
 
-\![]({% image_buster /assets/img_archive/No_Select.png %})
+![]({% image_buster /assets/img_archive/No_Select.png %})
 
 [3]: https://developer.android.com/preview/features/notification-channels.html#DeletingChannels

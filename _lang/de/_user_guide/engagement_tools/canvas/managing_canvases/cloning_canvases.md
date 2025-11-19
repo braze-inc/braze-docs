@@ -21,12 +21,12 @@ Um Ihr Canvas zu klonen, gehen Sie wie folgt vor:
 2. Identifizieren Sie das Canvas, von dem Sie eine Kopie erstellen möchten, im Canvas Flow-Workflow. Sie können Canvase mit den Status **Entwurf**, **Aktiv** oder **Angehalten** klonen. 
 3. Klicken Sie auf <i class="fas fa-ellipsis-vertical"></i> **Weitere Aktionen** und wählen Sie **In Canvas Flow klonen**.
 
-\![]({% image_buster /assets/img_archive/clone_to_v2_workflow.png %}){: style="max-width:25%;"}
+![]({% image_buster /assets/img_archive/clone_to_v2_workflow.png %}){: style="max-width:25%;"}
 
 {: start="4"}
 4\. Geben Sie den Namen Ihres neuen Canvas ein und klicken Sie auf **In Canvas Flow klonen**. 
 
-\![]({% image_buster /assets/img_archive/clone_to_v2_modal.png %}){: style="max-width:70%;"}
+![]({% image_buster /assets/img_archive/clone_to_v2_modal.png %}){: style="max-width:70%;"}
 
 Jetzt haben Sie zwei Versionen Ihres Canvas: das ursprüngliche Canvas und die Canvas Flow-Version. Ihr ursprüngliches Canvas hat immer noch seinen ursprünglichen Status, und das geklonte Canvas hat den Status **Entwurf**. Sie können immer noch auf das ursprüngliche Canvas zugreifen, aber Braze empfiehlt, den Canvas-Flow-Workflow zu verwenden, um Ihre Canvases weiter aufzubauen.
 
@@ -36,7 +36,7 @@ Zuvor konnten einige Leinwände mit Verzweigungen nicht geklont werden. Jetzt k�
 Wenn Sie ein aktives Canvas klonen, sendet Braze die Nutzer:innen weiterhin über das ursprüngliche Canvas. Wir empfehlen, ein Canvas vor dem Klonen zu stoppen, um zu vermeiden, dass doppelte Nachrichten an Nutzer:innen von beiden Canvas gesendet werden.
 {% endalert %}
 
-\![Canvas Dashboard mit zwei Canvase aufgelistet: V2 Kopie von Canvas V1 und Canvas V1. Die V2-Kopie von Canvas V1 hat ein Symbol, das anzeigt, dass der Canvas Flow-Workflow verwendetk wird.]({% image_buster /assets/img_archive/clone_to_v2_dashboard.png %})
+![Canvas Dashboard mit zwei Canvase aufgelistet: V2 Kopie von Canvas V1 und Canvas V1. Die V2-Kopie von Canvas V1 hat ein Symbol, das anzeigt, dass der Canvas Flow-Workflow verwendetk wird.]({% image_buster /assets/img_archive/clone_to_v2_dashboard.png %})
 
 Sie haben das Klonen Ihres Canvas in den Canvas Flow-Workflow abgeschlossen. Jetzt können Sie Ihre Canvase in dieser aktualisierten Umgebung weiter gestalten!
 

@@ -21,7 +21,7 @@ So verwenden Sie eine Canvas-Vorlage:
 1. Gehen Sie zu **Messaging** > **Canvas**.
 2. Wählen Sie **Canvas erstellen** > **Eine Canvas-Vorlage verwenden**.
 3. Suchen Sie auf dem Tab **Braze-Vorlagen** nach der gewünschten Vorlage. Sie können eine Vorschau eines Templates anzeigen, indem Sie seinen Namen auswählen.
-4. Wählen Sie **Vorlage anwenden** für die Vorlage, die Sie verwenden möchten.<br><br>\!["Canvas-Vorlagen" öffnete den Tab "Braze-Vorlagen" und zeigt eine Liste der zuletzt verwendeten Templates und der auswählbaren Braze-Vorlagen.]({% image_buster /assets/img_archive/apply_template.png %}){: style="max-width:80%;"}
+4. Wählen Sie **Vorlage anwenden** für die Vorlage, die Sie verwenden möchten.<br><br>!["Canvas-Vorlagen" öffnete den Tab "Braze-Vorlagen" und zeigt eine Liste der zuletzt verwendeten Templates und der auswählbaren Braze-Vorlagen.]({% image_buster /assets/img_archive/apply_template.png %}){: style="max-width:80%;"}
 
 ## E-Commerce Templates
 
@@ -34,7 +34,7 @@ So verwenden Sie eine Canvas-Vorlage:
 
 Verwenden Sie das Template **Abgebrochenes Stöbern**, um Nutzer:innen zu engagieren, die sich Produkte angesehen, aber nicht in den Warenkorb gelegt oder eine Bestellung aufgegeben haben.
 
-\![Ein angewandtes "Abandoned Browse" Canvas Template mit erweiterten "Eingangsregeln".]({% image_buster /assets/img_archive/abandoned_browse.png %})
+![Ein angewandtes "Abandoned Browse" Canvas Template mit erweiterten "Eingangsregeln".]({% image_buster /assets/img_archive/abandoned_browse.png %})
 
 ### Einrichtung
 
@@ -49,7 +49,7 @@ Die folgenden Einstellungen sind in Ihrem Canvas vorkonfiguriert:
         - Frist für die Konversion: 3 Tage 
 - Entry-Zeitplan 
     - Aktionsbasiert, wenn ein Nutzer:innen das Ereignis `ecommerce.product_viewed` ausführt
-    - Startzeitpunkt ist der Zeitpunkt, an dem Sie die Canvas-Vorlage erstellen<br><br>\!["Aktionsbasierte Optionen" für den Canvas.]({% image_buster /assets/img/ecommerce/abandoned_browse_entry.png %})<br><br> 
+    - Startzeitpunkt ist der Zeitpunkt, an dem Sie die Canvas-Vorlage erstellen<br><br>!["Aktionsbasierte Optionen" für den Canvas.]({% image_buster /assets/img/ecommerce/abandoned_browse_entry.png %})<br><br> 
 - Zielgruppen 
     - Entry-Zielgruppe 
         - E-Mail **ist nicht leer**
@@ -57,7 +57,7 @@ Die folgenden Einstellungen sind in Ihrem Canvas vorkonfiguriert:
     - Eingangskontrollen
         - Nutzer:innen sind berechtigt, diesen Canvas nach Ablauf der gesamten Dauer des Canvas erneut zu betreten.
     - Ausstiegskriterien 
-        - Führt `ecommerce.cart_updated`, `ecommerce.checkout_started`, oder `ecommerce.order_placed`<br><br>\![Eingangskontrollen und Ausgangskriterien für den Canvas.]({% image_buster /assets/img/ecommerce/abandoned_browse_entry_exit.png %})<br><br> 
+        - Führt `ecommerce.cart_updated`, `ecommerce.checkout_started`, oder `ecommerce.order_placed`<br><br>![Eingangskontrollen und Ausgangskriterien für den Canvas.]({% image_buster /assets/img/ecommerce/abandoned_browse_entry_exit.png %})<br><br> 
 - Einstellungen senden 
     - Nutzer:innen, die Abonnent:in sind oder ein Opt-in haben 
 - Verzögerungsstufe
@@ -97,7 +97,7 @@ Hier sehen Sie ein Beispiel dafür, wie Sie einen HTML-Produktblock für Ihre E-
 
 Verwenden Sie das Template **Abgebrochener Warenkorb-Abbruch**, um potenzielle entgangene Umsätze von Kunden zu decken, die Produkte in ihren Warenkorb gelegt haben, aber nicht zur Kasse gegangen sind oder eine Bestellung aufgegeben haben. 
 
-\![Ein angewandtes "Warenkorb-Abbruch" Canvas Template mit erweiterten "Eingangsregeln".]({% image_buster /assets/img_archive/abandoned_cart.png %})
+![Ein angewandtes "Warenkorb-Abbruch" Canvas Template mit erweiterten "Eingangsregeln".]({% image_buster /assets/img_archive/abandoned_cart.png %})
 
 ### Einrichtung
 
@@ -112,7 +112,7 @@ Die folgenden Einstellungen sind in Ihrem Canvas vorkonfiguriert:
         - Frist für die Konversion: 3 Tage 
 - Entry-Zeitplan 
     - Aktionsbasierter Auslöser, wenn ein Nutzer:innen das **Ereignis Warenkorb aktualisiert ausführen** auslöst (im Dropdown-Menü)
-    - Startzeitpunkt ist der Zeitpunkt, an dem Sie die Canvas-Vorlage erstellen<br><br>\!["Aktionsbasierte Optionen" für den Canvas.]({% image_buster /assets/img/ecommerce/abandoned_cart_entry.png %})<br><br> 
+    - Startzeitpunkt ist der Zeitpunkt, an dem Sie die Canvas-Vorlage erstellen<br><br>!["Aktionsbasierte Optionen" für den Canvas.]({% image_buster /assets/img/ecommerce/abandoned_cart_entry.png %})<br><br> 
 - Zielgruppe 
     - Entry-Zielgruppe 
         - Hat diese Apps **mehr als 0** Mal benutzt 
@@ -120,7 +120,7 @@ Die folgenden Einstellungen sind in Ihrem Canvas vorkonfiguriert:
     - Eingangskontrollen
         - Nutzer:innen sind sofort wieder für den Eingang in Canvas zugelassen.
     - Ausstiegskriterien 
-        - Führt `ecommerce.cart_updated`, `ecommerce.checkout_started`, oder `ecommerce.order_placed`<br><br>\![Eingangskontrollen und Ausgangskriterien für den Canvas.]({% image_buster /assets/img/ecommerce/abandoned_cart_entry_exit.png %})<br><br> 
+        - Führt `ecommerce.cart_updated`, `ecommerce.checkout_started`, oder `ecommerce.order_placed`<br><br>![Eingangskontrollen und Ausgangskriterien für den Canvas.]({% image_buster /assets/img/ecommerce/abandoned_cart_entry_exit.png %})<br><br> 
 - Einstellungen senden 
     - Nutzer:innen, die Abonnent:in sind oder ein Opt-in haben 
 - Verzögerungsstufe
@@ -184,7 +184,7 @@ Wenn Sie Shopify verwenden, erstellen Sie die URL Ihres Warenkorbs mit Hilfe die
 
 Verwenden Sie das **Abandoned Checkout** Template, um Kunden:in anzusprechen, die den Checkout-Prozess begonnen, aber vor dem Abschicken der Bestellung verlassen haben. 
 
-\![Eine angewandte "Abgebrochene Kasse"-Canvas-Vorlage mit erweiterten "Eingangsregeln".]({% image_buster /assets/img_archive/abandoned_checkout.png %})
+![Eine angewandte "Abgebrochene Kasse"-Canvas-Vorlage mit erweiterten "Eingangsregeln".]({% image_buster /assets/img_archive/abandoned_checkout.png %})
 
 ### Einrichtung
 
@@ -200,7 +200,7 @@ Die folgenden Einstellungen sind in Ihrem Canvas vorkonfiguriert:
         - Frist für die Konversion: 3 Tage 
 - Entry-Zeitplan 
     - Aktionsbasierter Trigger, wenn ein Nutzer:innen das Ereignis `ecommerce.checkout_started` ausführt
-    - Startzeitpunkt ist der Zeitpunkt, an dem Sie die Canvas-Vorlage erstellen<br><br>\!["Aktionsbasierte Optionen" für den Canvas.]({% image_buster /assets/img/ecommerce/abandoned_checkout_entry.png %})
+    - Startzeitpunkt ist der Zeitpunkt, an dem Sie die Canvas-Vorlage erstellen<br><br>!["Aktionsbasierte Optionen" für den Canvas.]({% image_buster /assets/img/ecommerce/abandoned_checkout_entry.png %})
 - Zielgruppen 
     - Entry-Zielgruppe 
         - Hat diese Apps **mehr als 0** Mal benutzt 
@@ -208,7 +208,7 @@ Die folgenden Einstellungen sind in Ihrem Canvas vorkonfiguriert:
     - Eingangskontrollen
         - Nutzer:innen sind sofort wieder für den Eingang in Canvas zugelassen.
         - Ausstiegskriterien 
-            - Führt die Ereignisse `ecommerce.order_placed` aus.<br><br>\![Eingangskontrollen und Ausgangskriterien für den Canvas.]({% image_buster /assets/img/ecommerce/abandoned_checkout_entry_exit.png %})<br><br>
+            - Führt die Ereignisse `ecommerce.order_placed` aus.<br><br>![Eingangskontrollen und Ausgangskriterien für den Canvas.]({% image_buster /assets/img/ecommerce/abandoned_checkout_entry_exit.png %})<br><br>
 - Einstellungen senden 
     - Nutzer:innen, die Abonnent:in sind oder ein Opt-in haben 
 - Verzögerungsstufe
@@ -257,7 +257,7 @@ Hier sehen Sie ein Beispiel dafür, wie Sie mit Ihrem `shopping_cart` Liquid-Tag
 
 Verwenden Sie die Vorlage für die **Feedback-Umfrage zur Bestellbestätigung & **, um erfolgreiche Bestellungen zu bestätigen und die Kundenzufriedenheit zu erhöhen.
 
-\![Eine angewandte "Auftragsbestätigung" Canvas-Vorlage mit erweiterten "Eingangsregeln".]({% image_buster /assets/img_archive/order_confirmation_feedback.png %})
+![Eine angewandte "Auftragsbestätigung" Canvas-Vorlage mit erweiterten "Eingangsregeln".]({% image_buster /assets/img_archive/order_confirmation_feedback.png %})
 
 ### Einrichtung
 
@@ -273,7 +273,7 @@ Die folgenden Einstellungen sind in Ihrem Canvas vorkonfiguriert:
         - Frist für die Konversion: 10 Tage 
 - Entry-Zeitplan 
     - Aktionsbasierter Trigger, wenn ein Nutzer:innen das Ereignis `ecommerce.cart_updated` ausführt
-    - Startzeitpunkt ist der Zeitpunkt, an dem Sie die Canvas-Vorlage erstellen<br><br>\!["Aktionsbasierte Optionen" für den Canvas.]({% image_buster /assets/img/ecommerce/feedback_entry.png %})<br><br>
+    - Startzeitpunkt ist der Zeitpunkt, an dem Sie die Canvas-Vorlage erstellen<br><br>!["Aktionsbasierte Optionen" für den Canvas.]({% image_buster /assets/img/ecommerce/feedback_entry.png %})<br><br>
 - Zielgruppen 
     - Entry-Zielgruppe 
         - Hat diese Apps **mehr als 0** Mal benutzt 
@@ -281,7 +281,7 @@ Die folgenden Einstellungen sind in Ihrem Canvas vorkonfiguriert:
     - Eingangskontrollen
         - Nutzer:innen sind sofort wieder für den Eingang in Canvas zugelassen.
     - Ausstiegskriterien 
-        - --<br><br>\![Zusätzliche Filter und Eingangskontrollen für den Canvas.]({% image_buster /assets/img/ecommerce/feedback_entry_exit.png %})<br><br>
+        - --<br><br>![Zusätzliche Filter und Eingangskontrollen für den Canvas.]({% image_buster /assets/img/ecommerce/feedback_entry_exit.png %})<br><br>
 - Einstellungen senden 
     - Nutzer:innen, die Abonnent:in sind oder ein Opt-in haben 
 - Nachrichtenschritt 
@@ -351,7 +351,7 @@ Da es sich bei den empfohlenen Events um angepasste Events handelt, können Sie 
 
 Segmentieren Sie Ihre Nutzer:innen mit E-Commerce-Filtern, wie z.B. **E-Commerce-Quelle** und **Gesamtumsatz**, indem Sie den Abschnitt **E-Commerce** im Segmentierer aufrufen.
 
-\![Segmente Filter Dropdown mit "E-Commerce" Filter.]({% image_buster /assets/img_archive/ecommerce_filters.png %}){: style="max-width:80%"}
+![Segmente Filter Dropdown mit "E-Commerce" Filter.]({% image_buster /assets/img_archive/ecommerce_filters.png %}){: style="max-width:80%"}
 
 {% alert important %}
 Das Kauf-Event wird in Zukunft veraltet sein und durch die [im E-Commerce empfohlenen Events]({{site.baseurl}}/user_guide/data/custom_data/recommended_events/) ersetzt werden. In diesem Fall werden die Filter für die Segmente nicht mehr unter Kaufverhalten angezeigt. Eine vollständige Liste der Kauf-Events finden Sie unter [Kauf-Events protokollieren]({{site.baseurl}}/user_guide/data/custom_data/purchase_events/#logging-purchase-events).

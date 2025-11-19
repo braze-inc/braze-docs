@@ -28,7 +28,7 @@ Wenn Sie Ihre Zielgruppe für die Vorhersage erstellen, um die Art der Nutzung, 
 
 "Nicht genug Abgewanderte in der Vergangenheit, um eine zuverlässige Prognose zu erstellen"
 
-\![Prognose Daten Anforderungen zeigen 31 Abgewanderte in der Vergangenheit (erfüllt die Anforderung) und 0 Nicht-Abgewanderte in der Vergangenheit (unter dem Minimum). Eine Nachricht mit einer Warnung weist darauf hin, dass nicht genügend Abgewanderte die Prognose erstellen.]({% image_buster /assets/img/churn/audience_size_error.png %})
+![Prognose Daten Anforderungen zeigen 31 Abgewanderte in der Vergangenheit (erfüllt die Anforderung) und 0 Nicht-Abgewanderte in der Vergangenheit (unter dem Minimum). Eine Nachricht mit einer Warnung weist darauf hin, dass nicht genügend Abgewanderte die Prognose erstellen.]({% image_buster /assets/img/churn/audience_size_error.png %})
 
 Wenn Ihre Definition der Zielgruppe für die Vorhersage zu eng gefasst ist, können Sie möglicherweise nicht mit einem ausreichend großen Pool an historischen und aktiven Nutzern arbeiten. Um dies zu beheben, müssen Sie entweder die Anzahl der Tage und die Art der Attribute ändern, die in dieser Definition verwendet werden, oder die Aktionen ändern, die die Abwanderung definieren, oder beides. 
 
@@ -40,7 +40,7 @@ Die Definition einer Prognose-Zielgruppe darf 100 Millionen Nutzer:innen nicht �
 
 ### Vorhersage hat schlechte Qualität
 
-\![]({% image_buster /assets/img/churn/churn3.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
+![]({% image_buster /assets/img/churn/churn3.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 Wenn Ihr Modell eine [Vorhersagequalität]({{site.baseurl}}/user_guide/brazeai/predictive_churn/analytics/) von 40% oder mehr hat, sind Sie auf einem guten Weg! Wenn Ihre Vorhersagequalität jedoch auf 39% oder weniger sinkt, müssen Sie Ihre Definitionen für die Abwanderung und die Vorhersagezielgruppe möglicherweise so ändern, dass sie spezifischer sind oder andere Zeitfenster haben. 
 
 Wenn Sie bei der Erstellung Ihrer Prognosedefinitionen nicht in der Lage sind, sowohl die Anforderungen an die Größe der Zielgruppe zu erfüllen als auch eine Prognosequalität von mehr als 40% zu erreichen, bedeutet dies wahrscheinlich, dass die an Braze gesendeten Daten für diesen Anwendungsfall nicht ideal sind, dass es nicht genügend Benutzer gibt, anhand derer ein Modell erstellt werden kann, oder dass Ihr Produktlebenszyklus länger ist, als unser aktuelles 60-Tage-Rückblickfenster unterstützt. 

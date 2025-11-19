@@ -59,7 +59,7 @@ Die Anzahl der Nutzer:innen in Ihrer globalen Kontrollgruppe wird nach der Erste
 
 Richtlinien für den Prozentsatz finden Sie unter [Bewährte Testverfahren](#percentage-guidelines).
 
-\![Die globalen Kontrollgruppen-Einstellungen mit den Zielgruppen-Einstellungen, die auf "Weisen Sie fünf Prozent aller Nutzer:innen der globalen Kontrollgruppe zu" eingestellt sind.]({% image_buster /assets/img/control_group/control_group4.png %})
+![Die globalen Kontrollgruppen-Einstellungen mit den Zielgruppen-Einstellungen, die auf "Weisen Sie fünf Prozent aller Nutzer:innen der globalen Kontrollgruppe zu" eingestellt sind.]({% image_buster /assets/img/control_group/control_group4.png %})
 
 ### Schritt 3: Ausschlusseinstellungen zuweisen
 
@@ -69,7 +69,7 @@ Mit Tags können Sie Ausschlusskriterien zu der globalen Kontrollgruppe hinzufü
 Wenn Sie transaktionsbezogene Nachrichten haben, die an alle Nutzer:innen gesendet werden sollen, möchten Sie vielleicht Ausschlusseinstellungen hinzufügen.
 {% endalert %}
 
-\![Der Bereich zum Hinzufügen oder Bearbeiten von Ausschlusseinstellungen für Ihre globale Kontrollgruppe.]({% image_buster /assets/img/control_group/control_group5.png %})
+![Der Bereich zum Hinzufügen oder Bearbeiten von Ausschlusseinstellungen für Ihre globale Kontrollgruppe.]({% image_buster /assets/img/control_group/control_group5.png %})
 
 ### Schritt 4: Speichern Sie Ihre Kontrollgruppe
 
@@ -85,7 +85,7 @@ Bevor Sie Ihre Kontrollgruppe deaktivieren, empfehlen wir Ihnen, eine CSV-Datei 
 
 Wenn Sie die Kontrollgruppe deaktiviert haben, können Sie eine neue Gruppe speichern. Wenn Sie einen Prozentsatz eingeben und speichern, erzeugt Braze eine neue, zufällig ausgewählte Gruppe von Benutzern. Wenn Sie den gleichen Prozentsatz wie zuvor eingeben, erstellt Braze trotzdem eine neue Gruppe von Benutzern für Ihre Kontroll- und Behandlungsgruppen.
 
-\![Ein Dialogfenster mit der Überschrift "Sie nehmen Änderungen an den globalen Messaging-Einstellungen vor" mit einer Warnung, dass Ihre globale Kontrollgruppe nach der Deaktivierung nicht mehr von neuen oder aktiven Kampagnen oder Canvase ausgeschlossen werden kann.]({% image_buster /assets/img/control_group/control_group2.png %}){: style="max-width:60%" }
+![Ein Dialogfenster mit der Überschrift "Sie nehmen Änderungen an den globalen Messaging-Einstellungen vor" mit einer Warnung, dass Ihre globale Kontrollgruppe nach der Deaktivierung nicht mehr von neuen oder aktiven Kampagnen oder Canvase ausgeschlossen werden kann.]({% image_buster /assets/img/control_group/control_group2.png %}){: style="max-width:60%" }
 
 ## Exportieren Sie Ihre Kontrollgruppenmitglieder {#export-group-members}
 
@@ -101,7 +101,7 @@ Historische Kontrollgruppen bleiben nicht erhalten, Sie können also nur die Mit
 
 Sie können die Zugehörigkeit zu einer globalen Kontrollgruppe prüfen, wenn Sie im jeweiligen Nutzerprofil unter **Engagement** den Abschnitt **Verschiedenes** aufrufen.
 
-\![Ein Abschnitt "Verschiedenes", der meldet, dass der Nutzer:in eine zufällige Bucket-Nummer von 6356 hat und nicht in der globalen Kontrollgruppe ist.]({% image_buster /assets/img/control_group/control_group1.png %}){: style="max-width:50%;"}
+![Ein Abschnitt "Verschiedenes", der meldet, dass der Nutzer:in eine zufällige Bucket-Nummer von 6356 hat und nicht in der globalen Kontrollgruppe ist.]({% image_buster /assets/img/control_group/control_group1.png %}){: style="max-width:50%;"}
 
 ## Berichterstattung
 

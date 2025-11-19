@@ -40,7 +40,7 @@ Nachdem die Prognosen erstellt wurden und die Nutzer:innen Bewertungen erhalten 
 
 Hier ein Beispiel für eine einfache Definition auf der Grundlage der verstrichenen Sitzungen der letzten 7 Tage.
 
-\![Churn Definition, bei der ein Nutzer:innen als abgewandert gilt, wenn er innerhalb von 7 Tagen keine Sitzung beginnt]({% image_buster /assets/img/churn/churn1.png %})
+![Churn Definition, bei der ein Nutzer:innen als abgewandert gilt, wenn er innerhalb von 7 Tagen keine Sitzung beginnt]({% image_buster /assets/img/churn/churn1.png %})
 
 Für diesen Fall wählen wir `do not` und `start a session` aus. Sie können andere Filter mit `AND` und `OR` nach Belieben kombinieren, um die von Ihnen gewünschte Definition zu erstellen. Interessieren Sie sich für einige mögliche Definitionen des Abwanderns, die Sie berücksichtigen sollten? Im folgenden Abschnitt über die [Definition von Abwanderung](#sample-definitions) finden Sie einige Anregungen.
 
@@ -70,7 +70,7 @@ Um sofort eine neue Prognose erstellen zu können, wird nur eine Teilmenge der S
 
 Eine Beispielliste mit Definitionen für die Vorhersagezielgruppe finden Sie im folgenden Abschnitt über [Beispieldefinitionen für Abwanderung](#sample-definitions).
 
-\![]({% image_buster /assets/img/churn/churn5.png %})
+![]({% image_buster /assets/img/churn/churn5.png %})
 
 Genau wie auf der vorherigen Seite sehen Sie im unteren Bereich die geschätzte Anzahl der historischen Nutzer, die sich aus der Definition der Abwanderung und der Definition der Vorhersagezielgruppe ergibt. Diese Schätzungen müssen die angegebenen Mindestanforderungen erfüllen, um eine Prognose erstellen zu können.
 
@@ -80,7 +80,7 @@ Das Modell des maschinellen Lernens generiert Ereigniswahrscheinlichkeitsbewertu
 
 Wählen Sie die **maximale Häufigkeit der Aktualisierungen**, die Sie für sinnvoll halten. Wenn Sie z. B. eine wöchentliche Werbeaktion versenden möchten, um zu verhindern, dass Benutzer abwandern, stellen Sie die Aktualisierungshäufigkeit auf **Wöchentlich** an einem Tag und zu einer Uhrzeit Ihrer Wahl ein. 
 
-\![Zeitplan für das Update der Prognosen auf täglich um 17 Uhr eingestellt.]({% image_buster /assets/img/churn/churn2.png %})
+![Zeitplan für das Update der Prognosen auf täglich um 17 Uhr eingestellt.]({% image_buster /assets/img/churn/churn2.png %})
 
 {% alert note %}
 Die Vorschau und die Demo-Prognose werden das Abwanderungsrisiko der Nutzer:innen niemals aktualisieren. Darüber hinaus erfordern tägliche Updates für Vorhersagen einen zusätzlichen Kauf im Vergleich zu wöchentlichen oder monatlichen Updates mit Predictive Churn. Um diese Funktionalität zu erwerben, wenden Sie sich an Ihren Account Manager.

@@ -77,7 +77,7 @@ Wenn Sie Single Sign-on (SSO) verwenden, sollten Sie sich darüber im Klaren sei
 
 Um Ihr Passwort zurückzusetzen, wählen Sie den Link **Passwort vergessen?** auf der Dashboard-Anmeldeseite. Sie werden aufgefordert, Ihre E-Mail einzugeben, um einen Link zum Zurücksetzen Ihres Passworts zu erhalten.
 
-\![Dashboard Anmeldung mit der Aufforderung "Haben Sie Ihr Passwort vergessen?".]({% image_buster /assets/img_archive/enable_reset.png %}){: style="max-width:60%"}
+![Dashboard Anmeldung mit der Aufforderung "Haben Sie Ihr Passwort vergessen?".]({% image_buster /assets/img_archive/enable_reset.png %}){: style="max-width:60%"}
 
 ### Löschen des Cache und der Cookies Ihres Browsers
 

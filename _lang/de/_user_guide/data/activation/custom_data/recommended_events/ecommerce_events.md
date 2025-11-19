@@ -1174,4 +1174,4 @@ Wir verwenden standardisierte Nutzer:innen Feldberechnungen für die folgenden F
 
 Diese Benutzerfeldberechnungen sind auch auf dem Tab **Transaktionen** der Nutzerprofile enthalten.
 
-\![Der Tab "Transaktionen" mit von Nutzer:innen berechneten Feldern.]({% image_buster /assets/img/Shopify/transactions_tab.png %}){: style="max-width:60%;"}
+![Der Tab "Transaktionen" mit von Nutzer:innen berechneten Feldern.]({% image_buster /assets/img/Shopify/transactions_tab.png %}){: style="max-width:60%;"}

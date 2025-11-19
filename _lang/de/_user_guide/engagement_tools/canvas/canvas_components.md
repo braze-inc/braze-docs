@@ -48,7 +48,7 @@ Mit Canvas-Komponenten können Sie neue Nutzer:innen ansprechen, um Ihren Prozes
 
 ### Anpassen von Customer Journeys
 
-\![Beispiel einer Canvas-Benutzer:in mit einem Decision-Split-Schritt, gefolgt von Verzögerungsschritten und Nachrichten-Schritten.]({% image_buster /assets/img/canvas_intro/canvas_intro.gif %}){: style="float:right;max-width:55%;margin-left:15px;"}
+![Beispiel einer Canvas-Benutzer:in mit einem Decision-Split-Schritt, gefolgt von Verzögerungsschritten und Nachrichten-Schritten.]({% image_buster /assets/img/canvas_intro/canvas_intro.gif %}){: style="float:right;max-width:55%;margin-left:15px;"}
 
 Verwenden Sie [Aktionspfade]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths), um Ihre Nutzer:innen auf der Grundlage von Aktionen und Engagement-Events, wie z. B. einem Kauf, aufzuteilen. Wenn Sie Ihre Zielgruppen filtern und gezielt ansprechen möchten, vereinfachen [Audience Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths) Ihr User-Targeting, indem Sie Ihre Benutzer auf der Grundlage von Zielgruppenkriterien auf verschiedene Canvas-Pfade schicken.
 

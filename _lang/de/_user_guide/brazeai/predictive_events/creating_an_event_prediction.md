@@ -25,7 +25,7 @@ Es gibt ein Limit von fünf gleichzeitig aktiven Vorhersagen. Vor dem Kauf von p
 {: start="2"}
 2\. Geben Sie Ihrer Vorhersage einen eindeutigen Namen. Sie können auch eine Beschreibung eingeben, um relevante Notizen zu speichern.
 
-\![]({% image_buster /assets/img/purchasePrediction/purchases_step1.png %})
+![]({% image_buster /assets/img/purchasePrediction/purchases_step1.png %})
 
 {: start="3"}
 3\. Klicken Sie auf **Weiter**, um zum nächsten Schritt zu gelangen. <br><br>Optional können Sie auf **Jetzt erstellen** klicken, um alle Standardeinstellungen zu verwenden und zum letzten Schritt der Erstellung überzugehen. Sie haben die Möglichkeit, die Einstellungen zu überprüfen, bevor Sie mit dem Erstellungsprozess beginnen. Außerdem können Sie später zu jedem Schritt zurückkehren, indem Sie ihn in der oberen Leiste anklicken.

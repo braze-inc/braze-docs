@@ -54,7 +54,7 @@ Um eine SMS- oder RCS-Kampagne über Braze einzuführen, wählen Sie eine Abo-Gr
 In Übereinstimmung mit den internationalen [Telekommunikationsvorschriften und -richtlinien]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/laws_and_regulations/) wird Braze niemals SMS oder RCS an Nutzer:in senden, die nicht die ausgewählte Abo-Gruppe abonniert haben.  
 {% endalert %}
 
-\![SMS-Editor mit geöffnetem Abo-Gruppen-Dropdown und der Markierung "Messaging Dienst A für SMS" durch den Nutzer:innen.]({% image_buster /assets/img/sms/sms_subgroup_select.png %})
+![SMS-Editor mit geöffnetem Abo-Gruppen-Dropdown und der Markierung "Messaging Dienst A für SMS" durch den Nutzer:innen.]({% image_buster /assets/img/sms/sms_subgroup_select.png %})
 
 ## Enablement von Abo-Gruppen
 
@@ -68,7 +68,7 @@ Während Ihres SMS-Onboarding-Prozesses wird ein Braze Onboarding-Manager Abonne
 {% tab MMS %}
 Um eine MMS-Nachricht senden zu können, muss mindestens eine Nummer in Ihrer Abonnementgruppe für den Versand von MMS aktiviert sein. Dies wird durch einen Tag angezeigt, der sich neben der Abo-Gruppe befindet. 
 
-\![Abo-Gruppe mit hervorgehobenem "Messaging Dienst A für SMS" in der Auswahlliste. Dem Entry ist der Tag „MMS“ vorangestellt.]({% image_buster /assets/img/sms/mms_sub_group_tag.png %}){: style="max-width:40%"}
+![Abo-Gruppe mit hervorgehobenem "Messaging Dienst A für SMS" in der Auswahlliste. Dem Entry ist der Tag „MMS“ vorangestellt.]({% image_buster /assets/img/sms/mms_sub_group_tag.png %}){: style="max-width:40%"}
 {% endtab %}
 
 {% tab RCS %}
@@ -126,7 +126,7 @@ Fügen Sie einen Nutzer:innen-Update-Schritt zu Ihrem Canvas hinzu. Im Schritt �
 ```
 {% endraw %}
 
-\!["User Update Object", das den zuvor angegebenen JSON Code enthält.]({% image_buster /assets/img/sms/user_update_object.png %})
+!["User Update Object", das den zuvor angegebenen JSON Code enthält.]({% image_buster /assets/img/sms/user_update_object.png %})
 
 ### Schritt 4: Testen Sie das Canvas
 

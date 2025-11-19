@@ -31,7 +31,7 @@ Das Herzstück von Braze Pilot ist seine Bibliothek mit App-Simulationen. Jede A
 
 Steppington ist eine Fitness App mit Workouts, Trainingszielen und einem Steppington+ Premium Dienst. Es bietet mehrere Stellen zur Demonstration von [Content-Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards), einen Bereich, der mit [Feature-Flags]({{site.baseurl}}/developer_guide/feature_flags) aufgedeckt werden kann, und eine robuste Bibliothek mit angepassten Event-Protokollen, die es ermöglichen, viele Customer Journeys für diese Branche zu illustrieren.
 
-\![Die Homepage von Steppington mit Symbolen für Marathontraining, Yoga, Radfahren und Gewichte.]({% image_buster /assets/img/braze_pilot/steppington_app.png %}){:style="max-width:50%"}
+![Die Homepage von Steppington mit Symbolen für Marathontraining, Yoga, Radfahren und Gewichte.]({% image_buster /assets/img/braze_pilot/steppington_app.png %}){:style="max-width:50%"}
 
 {% endtab %}
 {% tab eCommerce %}
@@ -40,7 +40,7 @@ Steppington ist eine Fitness App mit Workouts, Trainingszielen und einem Steppin
 
 PantsLabyrinth ist eine E-Commerce App, die (Sie haben es erraten) Hosen verkauft! Die PantsLabyrinth App enthält eine vollständige Warenkorb-Kassenfunktion, eine optionale Wunschliste, die mit einem Feature-Flag aktiviert werden kann, und viele Opportunitäten für schlaue Witze mit Freunden aus Großbritannien.
 
-\![Eine Produktseite für PantsLabyrinth mit Optionen, um Jeans in den Warenkorb zu legen.]({% image_buster /assets/img/braze_pilot/pantslabyrinth_app.png %}){:style="max-width:50%"}
+![Eine Produktseite für PantsLabyrinth mit Optionen, um Jeans in den Warenkorb zu legen.]({% image_buster /assets/img/braze_pilot/pantslabyrinth_app.png %}){:style="max-width:50%"}
 
 {% endtab %}
 {% tab Streaming %}
@@ -49,7 +49,7 @@ PantsLabyrinth ist eine E-Commerce App, die (Sie haben es erraten) Hosen verkauf
 
 MovieCanon ist ein Dienst zum Streamen, der perfekt zur Veranschaulichung gängiger Braze Anwendungsfälle rund um das Engagement für Inhalte geeignet ist. 
 
-\![Die MovieCanon App mit verschiedenen Thrillern zum Anschauen.]({% image_buster /assets/img/braze_pilot/moviecanon_app.png %}){:style="max-width:50%"}
+![Die MovieCanon App mit verschiedenen Thrillern zum Anschauen.]({% image_buster /assets/img/braze_pilot/moviecanon_app.png %}){:style="max-width:50%"}
 
 {% endtab %}
 {% endtabs %}
@@ -58,7 +58,7 @@ MovieCanon ist ein Dienst zum Streamen, der perfekt zur Veranschaulichung gängi
 
 Das Braze SDK ist ein Code-Paket, das Daten von Ihren Nutzern:innen sammelt, sobald es in Ihre App oder Website integriert ist. Wenn Sie Pilot mit Ihrem Dashboard verbinden, initialisieren Sie diese Verbindung zwischen der Pilot-App auf Ihrem Telefon und dem Braze SDK und stellen eine eindeutige Verbindung mit Ihrer Braze-Instanz her, indem Sie Pilot Ihren API-Schlüssel als Bezeichner für Ihr Dashboard übergeben.
 
-\![Der erste Schritt zur Einrichtung von Pilot.]({% image_buster /assets/img/braze_pilot/setup_wizard.png %}){:style="max-width:40%"}
+![Der erste Schritt zur Einrichtung von Pilot.]({% image_buster /assets/img/braze_pilot/setup_wizard.png %}){:style="max-width:40%"}
 
 Nachdem Pilot eine Verbindung zu Ihrem Braze-Dashboard hergestellt hat, funktioniert das Braze SDK in der App genauso wie bei der Integration des SDK in Ihre eigene App oder Website. Das heißt, Braze wird:
 
@@ -68,7 +68,7 @@ Nachdem Pilot eine Verbindung zu Ihrem Braze-Dashboard hergestellt hat, funktion
 
 Mehr über das Braze SDK finden Sie unter [Integration]({{site.baseurl}}/user_guide/getting_started/integration).
 
-\![Der Customer-Engagement-Stack von Braze, der Integrationen, APIs, SDKs für Datenaufnahme, Klassifizierung, Orchestrierung, Personalisierung und Aktionen mit Messaging-Kanälen für eine interaktive Feedback-Schleife mit Ihren Kunden umfasst.]({% image_buster /assets/img/braze_pilot/braze_sdk_diagram.png %}){:style="max-width:70%"}
+![Der Customer-Engagement-Stack von Braze, der Integrationen, APIs, SDKs für Datenaufnahme, Klassifizierung, Orchestrierung, Personalisierung und Aktionen mit Messaging-Kanälen für eine interaktive Feedback-Schleife mit Ihren Kunden umfasst.]({% image_buster /assets/img/braze_pilot/braze_sdk_diagram.png %}){:style="max-width:70%"}
 
 ## Nutzerprofile in Braze
 
@@ -82,7 +82,7 @@ Dieser Verbindungsstatus repräsentiert die Erfahrung eines Gastes Ihrer App ode
 
 Dieser Verbindungsstatus bedeutet, dass Braze Ihr Nutzerprofil anhand eines eindeutigen Bezeichners erkennt, der Ihnen zugewiesen wurde und als externer Bezeichner bezeichnet wird. Sie können auf der Seite **Benutzersuche** Ihres Dashboards nach diesem externen Bezeichner suchen, um Ihr Nutzerprofil zu finden, in dem alle Attribute und Ereignisse gespeichert sind, die von Pilot auf der Grundlage Ihrer Aktivitäten in der App protokolliert wurden.
 
-\![Ein Beispiel für ein Braze Nutzerprofil für Nutzer:in "torchie-208117".]({% image_buster /assets/img/braze_pilot/user_profile.png %})
+![Ein Beispiel für ein Braze Nutzerprofil für Nutzer:in "torchie-208117".]({% image_buster /assets/img/braze_pilot/user_profile.png %})
 
 ### Verbindungstyp
 
@@ -138,4 +138,4 @@ Mit Kampagnen und Canvases senden Sie Nachrichten an Ihre Nutzer.
 
 Braze Pilot unterstützt derzeit [In-App-Nachrichten]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about), die in Ihrer App erscheinen und zeitnahe Nachrichten zustellen, während sich der Nutzer:in aktiv engagiert.
 
-\![Eine In-App-Nachricht in der MovieCanon App "Gefällt Ihnen MovieCanon? Empfehlen Sie Ihre Freunde!" mit der Möglichkeit, Ihre E-Mail Adresse einzugeben, um eine Empfehlung zu senden.]({% image_buster /assets/img/braze_pilot/moviecanon_iam.png %}){:style="max-width:40%"}
+![Eine In-App-Nachricht in der MovieCanon App "Gefällt Ihnen MovieCanon? Empfehlen Sie Ihre Freunde!" mit der Möglichkeit, Ihre E-Mail Adresse einzugeben, um eine Empfehlung zu senden.]({% image_buster /assets/img/braze_pilot/moviecanon_iam.png %}){:style="max-width:40%"}

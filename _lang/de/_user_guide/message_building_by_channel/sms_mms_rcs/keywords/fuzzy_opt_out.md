@@ -13,7 +13,7 @@ page_order: 1
 
 # Fuzzy-Opt-out
 
-\![iOS Messaging-Chat, der ausgehende Opt-in-Nachrichten als Antwort auf die eingehende unscharfe Opt-in-Nachricht "Bitte stoppen" anzeigt.]({% image_buster /assets/img/sms/fuzzy1.jpg %}){: style="float:right;max-width:30%;margin-left:15px;"}
+![iOS Messaging-Chat, der ausgehende Opt-in-Nachrichten als Antwort auf die eingehende unscharfe Opt-in-Nachricht "Bitte stoppen" anzeigt.]({% image_buster /assets/img/sms/fuzzy1.jpg %}){: style="float:right;max-width:30%;margin-left:15px;"}
 
 > Nutzer:innen, die SMS, MMS und RCS mit Braze versenden, müssen sich an die geltenden Gesetze, Vorschriften und Branchenstandards halten, die definiert sind. Beim Opt-out schreiben die Gesetze vor, dass alle nachfolgenden Nachrichten im Zusammenhang mit diesem Messaging-Programm gestoppt werden, wenn ein:e Nutzer:in "STOP" schreibt. Braze verarbeitet diese Nachrichten automatisch und meldet den Benutzer ab.<br><br>Fuzzy Opt-Out versucht zu erkennen, wenn eine eingehende Nachricht nicht mit einem [Opt-Out-Schlüsselwort]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/optin_optout/) übereinstimmt, aber eine Opt-Out-Absicht erkennen lässt. Wenn Fuzzy Opt-out aktiviert ist und eine eingehende Keyword-Antwort als "unscharf" eingestuft wird, antwortet Braze automatisch mit einer Nachricht, die die Nutzer:innen auffordert, sich abzumelden.
 
@@ -36,7 +36,7 @@ Um das Fuzzy-Opt-out zu konfigurieren, navigieren Sie zur Seite Abo-Gruppen Schl
 3. Aktivieren Sie **Fuzzy Opt-Out**, indem Sie die Option einschalten.
 4. Ändern Sie die Fuzzy-Opt-in-Antwort wie gewünscht. 
 
-\![Abschnitt zur Bearbeitung von Opt-in-Schlüsselwörtern.]({% image_buster /assets/img/sms/fuzzy2.png %})
+![Abschnitt zur Bearbeitung von Opt-in-Schlüsselwörtern.]({% image_buster /assets/img/sms/fuzzy2.png %})
 
 ## Bewährte Verfahren für unscharfe Opt-out Nachrichten
 

@@ -30,7 +30,7 @@ Sie können auch Nutzerdaten für alle Teilnehmer eines Canvas als CSV-Datei exp
 
 Canvas-Ergebnisse können auf Basis einzelner Komponenten für den ursprünglichen Canvas-Workflow exportiert werden. Wählen Sie dazu die entsprechende Komponente aus und wählen Sie dann das Dropdown-Menü **Nutzerdaten** auf der Seite **Canvas-Schritt-Details**. 
 
-\![Dropdown-Menü Nutzerdaten auf der Seite Canvas Details.]({% image_buster /assets/img/canvas_csv_export.png %})
+![Dropdown-Menü Nutzerdaten auf der Seite Canvas Details.]({% image_buster /assets/img/canvas_csv_export.png %})
 
 {% alert tip %}
 Hilfe bei CSV- und API-Exporten finden Sie in unserem Artikel zur [Fehlerbehebung bei Exporten]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/).

@@ -60,7 +60,7 @@ Schreiben Sie Ihre Nachricht in der gewünschten Sprache und mit der gewünschte
 Bevor Sie fortfahren, lesen Sie unsere Richtlinien für [SMS-Nachrichtensegmente und Kopier-Limits]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/segments/). SMS-Nachrichtensegmente sind die Zeichenpakete, die die Telefongesellschaften zur Messung von Textnachrichten verwenden. Nachrichten werden pro Nachrichtensegment abgerechnet. Es ist also eine gute Idee, die Feinheiten der Aufteilung von Nachrichten zu verstehen.
 {% endalert %}
 
-\![SMS-Komponist in Braze mit der Nachricht "Hallo first_name, wir schätzen Ihre Unterstützung! Warum kommen Sie nicht in eine unserer Filialen und zeigen diese SMS vor, um einen exklusiven Rabatt zu erhalten? Antworten Sie STOP, um keine Nachrichten mehr von uns zu erhalten."]({% image_buster /assets/img/sms_campaign_compose.png %})
+![SMS-Komponist in Braze mit der Nachricht "Hallo first_name, wir schätzen Ihre Unterstützung! Warum kommen Sie nicht in eine unserer Filialen und zeigen diese SMS vor, um einen exklusiven Rabatt zu erhalten? Antworten Sie STOP, um keine Nachrichten mehr von uns zu erhalten."]({% image_buster /assets/img/sms_campaign_compose.png %})
 
 ### Hinzufügen einer Kontaktkarte
 
@@ -78,7 +78,7 @@ Wenn Sie Liquid verwenden möchten, stellen Sie sicher, dass Sie einen Standardw
 
 Benötigen Sie Hilfe bei der Erstellung überzeugender Texte? Versuchen Sie es mit dem [KI-Textwerkstatt-Assistenten]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/). Geben Sie einen Produktnamen oder eine Beschreibung ein und die KI generiert menschenähnliche Marketingtexte für Ihre Werbebotschaften.
 
-\![KI Copywriter Button starten, der sich im Nachrichten-Feld des SMS-Editors befindet.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_sms.png %}){: style="max-width:60%"}
+![KI Copywriter Button starten, der sich im Nachrichten-Feld des SMS-Editors befindet.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_sms.png %}){: style="max-width:60%"}
 
 #### Erstellen von Nachrichten von rechts nach links
 

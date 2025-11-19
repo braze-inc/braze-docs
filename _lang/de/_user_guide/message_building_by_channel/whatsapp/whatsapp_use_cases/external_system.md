@@ -23,7 +23,7 @@ Der Integrations-Workflow kann in zwei Hauptabläufe unterteilt werden:
 
 Um diese Kommunikation effizient zu automatisieren, nutzt diese Integration zwei wichtige Features von Braze: [Webhook-Kampagnen]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/) und [API-getriggerte Kampagnen]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/).
 
-\![Architektur der Integration zwischen dem Braze WhatsApp-Kanal und einem externen System.]({% image_buster /assets/img/whatsapp/external_system_architecture.png %})
+![Architektur der Integration zwischen dem Braze WhatsApp-Kanal und einem externen System.]({% image_buster /assets/img/whatsapp/external_system_architecture.png %})
 <sup>*Architektur der Integration zwischen dem Braze WhatsApp-Kanal und einem externen System.*</sup>
 
 ## Voraussetzungen
@@ -59,7 +59,7 @@ Erstellen Sie zunächst eine Webhook-Kampagne, um eine Möglichkeit zu schaffen,
 {: start="5"}
 5\. Wählen Sie im Schritt **Zustellung planen** Ihres Kampagnen-Editors für die Art der Zustellung die Option **Aktionsbasiert** und für den Auslöser der Kampagne die Option **Eingehende WhatsApp Nachricht senden**.
 
-\![Aktionsbasierte Zustellung mit einem Trigger für das Senden einer eingehenden WhatsApp Nachricht.]({% image_buster /assets/img/whatsapp/inbound_message_trigger.png %})
+![Aktionsbasierte Zustellung mit einem Trigger für das Senden einer eingehenden WhatsApp Nachricht.]({% image_buster /assets/img/whatsapp/inbound_message_trigger.png %})
 
 {: start="6"}
 6\. Stellen Sie Ihre Kampagne fertig, speichern Sie sie und starten Sie sie. Jetzt sendet Braze jedes Mal, wenn eine Nachricht eingeht, einen Webhook an Ihr externes System.
@@ -71,12 +71,12 @@ Als nächstes erstellen Sie eine API-getriggerte Kampagne, mit der Ihr externes 
 1. Erstellen Sie in Braze eine WhatsApp Kampagne. 
 2. Wählen Sie im Nachrichten-Editor entweder die **WhatsApp-Vorlage Nachricht** oder die **Antwort Nachricht** aus und wählen Sie dann das Layout der Vorlage oder der Antwort Nachricht aus. Sie können ein beliebiges Layout für Antwortnachrichten auswählen, da die eingehende Nachricht das 24-Stunden-WhatsApp-Fenster geöffnet hat.
 
-\![Nachrichten-Editor mit Optionen zum Auswählen des Nachrichtentyps und des Nachrichtenlayouts.]({% image_buster /assets/img/whatsapp/response_message_layout.png %})
+![Nachrichten-Editor mit Optionen zum Auswählen des Nachrichtentyps und des Nachrichtenlayouts.]({% image_buster /assets/img/whatsapp/response_message_layout.png %})
 
 {: start="3"}
 3\. Fügen Sie die Eigenschaft API-Trigger in den Nachrichtentext ein, z.B. {% raw %}```{{api_trigger_properties.${external_system_msg+body}}}```{% endraw %}. Dies erlaubt es Ihrem KI-System, die zu versendende Nachricht zu füllen.
 
-\![Nachrichten-Editor mit Nachrichtenkörper, der triggernde Eigenschaften enthält.]({% image_buster /assets/img/whatsapp/api_trigger_properties.png %})
+![Nachrichten-Editor mit Nachrichtenkörper, der triggernde Eigenschaften enthält.]({% image_buster /assets/img/whatsapp/api_trigger_properties.png %})
 
 {: start="4"}
 4\. Wählen Sie im Schritt **Zeitplan Zustellung** Ihres Kampagnen-Composers als Zustellungsart **Aktionsbasiert** aus.

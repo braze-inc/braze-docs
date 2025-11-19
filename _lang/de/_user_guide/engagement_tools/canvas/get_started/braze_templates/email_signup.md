@@ -33,20 +33,20 @@ Passen wir die Canvas-Details an, um unser Ziel zu erreichen.
 
 1. Wählen Sie **Bearbeiten** neben dem Namen der Vorlage.
 
-\![Der aktuelle Titel und die Beschreibung des Canvas.]({% image_buster /assets/img/canvas_templates/email_signup1.png %}){: style="max-width:50%;"}
+![Der aktuelle Titel und die Beschreibung des Canvas.]({% image_buster /assets/img/canvas_templates/email_signup1.png %}){: style="max-width:50%;"}
 
 {:start="2"}
 2\. Aktualisieren Sie den Canvas-Namen, um anzugeben, dass das Canvas für das Targeting neuer Nutzer:innen bei der ersten Verwendung der App gedacht ist.
 3\. Aktualisieren Sie die Beschreibung, um zu erklären, dass dieses Canvas personalisierte Nachrichten für Nutzer:innen zum doppelten Opt-in enthält.
 4\. Fügen Sie das Tag **E-Mail** hinzu, damit wir auf der Canvas-Startseite danach filtern können.
 
-\![Der neue Name, die Beschreibung und der Tag für das Canvas.]({% image_buster /assets/img/canvas_templates/email_signup2.png %}){: style="max-width:90%;"}
+![Der neue Name, die Beschreibung und der Tag für das Canvas.]({% image_buster /assets/img/canvas_templates/email_signup2.png %}){: style="max-width:90%;"}
 
 ### Schritt 2: Konversions-Events zuweisen
 
 Lassen Sie uns nun unsere Konversions-Events zuweisen. Konversions-Events sind eine Art Metrik, mit der Sie den Erfolg des Canvas messen können. Für den **Ereignistyp Konversion** wählen Sie **Angepasstes Event durchführen**. Wählen Sie dann **email_opt_in** für den **Namen des angepassten Events**.
 
-\!["Konversions-Events zuweisen" für den Konversions-Event-Typ des Opt-in für E-Mail.]({% image_buster /assets/img/canvas_templates/email_signup3.png %}){: style="max-width:90%;"}
+!["Konversions-Events zuweisen" für den Konversions-Event-Typ des Opt-in für E-Mail.]({% image_buster /assets/img/canvas_templates/email_signup3.png %}){: style="max-width:90%;"}
 
 Wir behalten die Frist für die Konversion des Templates von drei Tagen bei, da wir unsere jüngsten Nutzer:innen ansprechen wollen.
 
@@ -56,23 +56,23 @@ Behalten wir den Zeitplan für den Eingang als **aktionsbasiert** bei, damit die
 
 Wir werden auch die **aktionsbasierten Optionen** beibehalten, so dass Nutzer:innen den Canvas nur betreten, wenn sie eine Sitzung starten.
 
-\![Ein aktionsbasierter Zeitplan für den Eingang von Nutzer:innen, die eine beliebige Sitzung beginnen, in den Canvas.]({% image_buster /assets/img/canvas_templates/email_signup4.png %}){: style="max-width:90%;"}
+![Ein aktionsbasierter Zeitplan für den Eingang von Nutzer:innen, die eine beliebige Sitzung beginnen, in den Canvas.]({% image_buster /assets/img/canvas_templates/email_signup4.png %}){: style="max-width:90%;"}
 
 Für das **Fenster Eingang** aktualisieren wir die **Startzeit (erforderlich)** auf das gewünschte Datum und die Uhrzeit.
 
-\![Ein Eingangsfenster mit der Startzeit 16\. Januar 2025 um 12:30 Uhr. Nutzer:innen werden diese Nachricht in ihrer Ortszeit eingeben.]({% image_buster /assets/img/canvas_templates/email_signup5.png %}){: style="max-width:90%;"}
+![Ein Eingangsfenster mit der Startzeit 16\. Januar 2025 um 12:30 Uhr. Nutzer:innen werden diese Nachricht in ihrer Ortszeit eingeben.]({% image_buster /assets/img/canvas_templates/email_signup5.png %}){: style="max-width:90%;"}
 
 ### Schritt 4: Wählen Sie die Zielgruppe aus
 
 Wir definieren unsere Zielgruppe als Nutzer:innen von Steppington, die keine E-Mail Adresse in ihrem Nutzerprofil haben. Dazu behalten wir den Standard Filter für die Segmentierung des Templates `Email Available is false` bei.
 
-\![Eingang Zielgruppe mit dem Filter "E-Mail verfügbar ist falsch".]({% image_buster /assets/img/canvas_templates/email_signup6.png %}){: style="max-width:90%;"}
+![Eingang Zielgruppe mit dem Filter "E-Mail verfügbar ist falsch".]({% image_buster /assets/img/canvas_templates/email_signup6.png %}){: style="max-width:90%;"}
 
 ### Schritt 5: Wählen Sie Ihre Sendeeinstellungen aus
 
 Wir behalten die Standardeinstellungen für Abonnements bei, d.h. wir senden nur an Benutzer, die Nachrichten oder Benachrichtigungen abonniert oder sich dafür entschieden haben, und überspringen die anderen Einstellungen (Häufigkeitsbegrenzung, ruhige Stunden und Seed-Gruppen).
 
-\![Standard-Sendeoptionen, um nur an Nutzer:in zu senden, die ein Abonnent:in sind oder ein Opt-in haben.]({% image_buster /assets/img/canvas_templates/email_signup7.png %}){: style="max-width:90%;"}
+![Standard-Sendeoptionen, um nur an Nutzer:in zu senden, die ein Abonnent:in sind oder ein Opt-in haben.]({% image_buster /assets/img/canvas_templates/email_signup7.png %}){: style="max-width:90%;"}
 
 ### Schritt 6: Canvas anpassen
 
@@ -83,7 +83,7 @@ Jetzt bauen wir unser Canvas auf, indem wir die Kanäle und Inhalte anpassen, di
 - Seite 1 wird die E-Mails erfassen.
 - Auf Seite 2 wird eine Nachricht zur Bestätigung angezeigt.
 
-\![Zwei Seiten einer In-App-Nachricht, um die E-Mails der Nutzer:innen zu erfassen und eine Erfolgsmeldung anzuzeigen.]({% image_buster /assets/img/canvas_templates/email_signup8.png %}){: style="max-width:90%;"}
+![Zwei Seiten einer In-App-Nachricht, um die E-Mails der Nutzer:innen zu erfassen und eine Erfolgsmeldung anzuzeigen.]({% image_buster /assets/img/canvas_templates/email_signup8.png %}){: style="max-width:90%;"}
 
 {:start="2"}
 2\. Ab hier behalten wir den Schritt **Abonnent**:in Aktions-Pfad unverändert bei. Bei diesem Schritt werden unsere Nutzer:innen innerhalb eines Tagesfensters in zwei Gruppen aufgeteilt:

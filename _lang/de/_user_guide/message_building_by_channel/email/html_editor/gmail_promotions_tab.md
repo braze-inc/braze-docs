@@ -28,7 +28,7 @@ Befolgen Sie diese Anleitung, um eine Gmail-Aktionskarte für eine E-Mail-Kampag
 
 Gehen Sie als nächstes in den Bereich **Inhalt** des HTML-Editors und wählen Sie den Tab **Google Mail Aktion**. Füllen Sie die Felder unter **Grundlegende Informationen** aus und wählen Sie dann **HTML-Code generieren**. Dies wird Ihnen helfen, das Skript für Ihre Gmail Promo-Tab-Karte unter dem Abschnitt **Kopieren und Einfügen des HTML-Codes in `<Head>`** zu erstellen.
 
-\![Ein Beispiel dafür, wie man eine Karte erstellt.]({% image_buster /assets/img/create-gmail-promo.png %})
+![Ein Beispiel dafür, wie man eine Karte erstellt.]({% image_buster /assets/img/create-gmail-promo.png %})
 
 ### Schritt 3: Passen Sie Ihre Gmail-Aktion-Karte an
 
@@ -88,7 +88,7 @@ Wir empfehlen Ihnen, Ihre Produktbilder in die Mediathek hochzuladen und dann di
 | Rabattwert | Der vom ursprünglichen Preis abgezogene Betrag. | 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-\![Ein Beispiel für ein Produktkarussell eines Unternehmens namens Motto mit der E-Mail-Überschrift "Unsere meistverkauften Socken sind im Angebot", mit drei Bildern von Socken und ihren reduzierten Preisen.]({% image_buster /assets/img_archive/product_carousel.png %}){: style="max-width:40%;"}
+![Ein Beispiel für ein Produktkarussell eines Unternehmens namens Motto mit der E-Mail-Überschrift "Unsere meistverkauften Socken sind im Angebot", mit drei Bildern von Socken und ihren reduzierten Preisen.]({% image_buster /assets/img_archive/product_carousel.png %}){: style="max-width:40%;"}
 
 {% endtab %}
 {% endtabs %}

@@ -85,9 +85,9 @@ In dieser Anfrage ist der globale Wert für "Lebensmittelallergien" "keine". Fü
 
 Wenn Sie ein Canvas haben, das ausgelöst wird, wenn ein Nutzer:in einen Artikel auf Ihrer E-Commerce-Website stöbert, ihn aber nicht in den Warenkorb legt, könnte der erste Schritt des Canvas eine Push-Benachrichtigung sein, in der er gefragt wird, ob er den Artikel kaufen möchte. Sie können den Namen des Produkts referenzieren, indem Sie {% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %}
 
-\![]({% image_buster /assets/img/persistent_entry_properties/PEP1.png %}){: style="border:0;margin-left:15px;"}
+![]({% image_buster /assets/img/persistent_entry_properties/PEP1.png %}){: style="border:0;margin-left:15px;"}
 
 Im zweiten Schritt kann eine weitere Push-Benachrichtigung gesendet werden, die den Benutzer zur Kasse bittet, wenn er den Artikel in den Warenkorb gelegt, aber noch nicht gekauft hat. Sie können weiterhin die Eigenschaft des Entrys `product_name` referenzieren, indem Sie {% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %} verwenden.
 
-\![]({% image_buster /assets/img/persistent_entry_properties/PEP12.png %}){: style="border:0;margin-left:15px;"}
+![]({% image_buster /assets/img/persistent_entry_properties/PEP12.png %}){: style="border:0;margin-left:15px;"}
 

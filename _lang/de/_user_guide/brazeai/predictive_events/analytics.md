@@ -25,7 +25,7 @@ Die Verteilung der Likelihood-Scores für die gesamte Prognosegruppe wird oben a
 
 Wenn Sie die Griffe des Schiebereglers in verschiedene Positionen bewegen, informiert Sie der Balken in der linken Hälfte des Fensters darüber, wie viele Nutzer aus der gesamten Vorhersagezielgruppe mit dem von Ihnen ausgewählten Teil der Bevölkerung angesprochen werden würden.
 
-\![]({% image_buster /assets/img/purchasePrediction/purchaseTargeting.png %}){: style="max-width:90%"} 
+![]({% image_buster /assets/img/purchasePrediction/purchaseTargeting.png %}){: style="max-width:90%"} 
 
 ## Wahrscheinlichkeitswert {#purchase_score}
 
@@ -43,7 +43,7 @@ Die Punktzahlen und die entsprechenden Kategorien werden entsprechend dem Zeitpl
 
 In der rechten Hälfte der Leiste unterhalb des Diagramms wird die voraussichtliche Ansprachegenauigkeit des ausgewählten Teils der Prognosezielgruppe auf zwei Weisen angezeigt: wie viele ausgewählte Nutzer das Ereignis voraussichtlich ausführen und wie viele nicht.
 
-\![Die ausgewählte Zielgruppe und die geschätzte Genauigkeit werden auf dem Braze-Dashboard angezeigt.]({% image_buster /assets/img/purchasePrediction/purchaseEstimatedResults.png %})
+![Die ausgewählte Zielgruppe und die geschätzte Genauigkeit werden auf dem Braze-Dashboard angezeigt.]({% image_buster /assets/img/purchasePrediction/purchaseEstimatedResults.png %})
 
 ### Erwartete Performance
 

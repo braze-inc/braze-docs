@@ -21,13 +21,13 @@ Wenn Sie Ihre Nachrichten kategorisieren und im Benachrichtigungsfeld Ihres Benu
 
 Erstellen Sie Ihre iOS Push-Kampagne, gehen Sie dann zum Tab **Einstellungen** und öffnen Sie die Dropdown-Liste **Benachrichtigungsgruppe**.
 
-\![Der Tab "Einstellungen" mit einem Dropdown-Menü "Benachrichtigungsgruppe", das den Wert "Gutscheine" ausgewählt hat.]({% image_buster /assets/img_archive/notification_group_dropdown.png %}){: style="max-width:50%;" }
+![Der Tab "Einstellungen" mit einem Dropdown-Menü "Benachrichtigungsgruppe", das den Wert "Gutscheine" ausgewählt hat.]({% image_buster /assets/img_archive/notification_group_dropdown.png %}){: style="max-width:50%;" }
 
 Wählen Sie Ihre Benachrichtigungsgruppen aus der Dropdown-Liste. Wenn Ihre Einstellungen für die Benachrichtigungsgruppe nicht korrekt sind oder Sie **Keine** aus der Dropdown-Liste auswählen, wird die Nachricht automatisch wie gewohnt an alle definierten Benutzer im Arbeitsbereich gesendet.
 
 Wenn hier keine Benachrichtigungsgruppen aufgeführt sind, können Sie eine mit Hilfe der iOS Thread ID hinzufügen. Sie benötigen eine iOS-Thread-ID für jede Benachrichtigungsgruppe, die Sie hinzufügen möchten. Fügen Sie sie dann zu Ihren Benachrichtigungsgruppen hinzu, indem Sie in der Dropdown-Liste auf **Benachrichtigungsgruppen verwalten** klicken und die erforderlichen Felder im Fenster **iOS Push-Benachrichtigungsgruppen verwalten** ausfüllen, das dann erscheint.
 
-\![Fenster zur Verwaltung von iOS Push-Benachrichtigungsgruppen.]({% image_buster /assets/img_archive/managenotgroups.png %}){: style="max-width:70%;" }
+![Fenster zur Verwaltung von iOS Push-Benachrichtigungsgruppen.]({% image_buster /assets/img_archive/managenotgroups.png %}){: style="max-width:70%;" }
 
 Erstellen Sie Ihre iOS-Push-Kampagne, und sehen Sie sich dann den oberen Teil des Editors an. Dort sehen Sie ein Dropdown-Menü mit der Bezeichnung **Benachrichtigungsgruppen**.
 
@@ -82,11 +82,11 @@ Die vorläufige Autorisierung hat das Potenzial, Ihre Opt-in-Rate drastisch zu e
 
 Je nachdem, für welche Option sich der Benutzer entscheidet, wird der entsprechende Token- oder [Abonnementstatus]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/) zu seinen [Kontakteinstellungen]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/#engagement-tab) auf der Registerkarte **Engagement** in seinem Benutzerprofil hinzugefügt.
 
-\![Kontakteinstellungen mit einem Push-abonnierten Status.]({% image_buster /assets/img/profile-push-prov-auth.png %}){: width="50%"}
+![Kontakteinstellungen mit einem Push-abonnierten Status.]({% image_buster /assets/img/profile-push-prov-auth.png %}){: width="50%"}
 
 Mit unseren [Segmentierungsfiltern]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) können Sie Ihre Benutzer gezielt ansprechen, je nachdem, ob sie vorläufig autorisiert sind oder nicht.
 
-\![Segment Details Panel mit dem Beispiel Segment Filter "Vorläufig autorisiert auf iOS Stoppuhr (iOS) ist wahr", um Nutzer:innen zu targetieren.]({% image_buster /assets/img/segment-push-prov-auth.png %})
+![Segment Details Panel mit dem Beispiel Segment Filter "Vorläufig autorisiert auf iOS Stoppuhr (iOS) ist wahr", um Nutzer:innen zu targetieren.]({% image_buster /assets/img/segment-push-prov-auth.png %})
 
 {% alert tip %}
 Wenn Nutzer:innen sich dafür entscheiden, den vorläufigen Push von Ihnen zu deaktivieren, werden sie keine vorläufigen Push-Nachrichten mehr von Ihnen sehen. Achten Sie auf den Inhalt und die Kadenz der Nachrichten, die Sie mit dieser Funktion versenden!
@@ -140,7 +140,7 @@ Apps können jetzt festlegen, welche Stufe der Unterbrechung eine Benachrichtigu
 
 Um die Unterbrechungsstufe für eine iOS-Push-Benachrichtigung zu ändern, wählen Sie die Registerkarte **Einstellungen** und wählen Sie die gewünschte Stufe aus dem Dropdown-Menü **Unterbrechungsstufe**.
 
-\![Dropdown zum Auswählen der Unterbrechungsstufe.]({% image_buster /assets/img/ios/interruption_level.png %}){: style="max-width:50%"}
+![Dropdown zum Auswählen der Unterbrechungsstufe.]({% image_buster /assets/img/ios/interruption_level.png %}){: style="max-width:50%"}
 
 Für diese Funktion gibt es keine Mindestanforderungen an die SDK-Version, sie gilt jedoch nur für Geräte mit iOS 15+.
 
@@ -158,7 +158,7 @@ In der folgenden Tabelle finden Sie die Unterbrechungsstufen und ihre Beschreibu
 
 ### Bewertung der Relevanz (iOS 15+) {#relevance-score}
 
-\![Eine Benachrichtigungsübersicht für iOS mit dem Titel "Ihre Abendübersicht" mit drei Benachrichtigungen.]({% image_buster /assets/img/ios/ios15-notification-summary.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0"}
+![Eine Benachrichtigungsübersicht für iOS mit dem Titel "Ihre Abendübersicht" mit drei Benachrichtigungen.]({% image_buster /assets/img/ios/ios15-notification-summary.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0"}
 
 iOS 15 bietet Nutzern:innen außerdem die Möglichkeit, einen Zeitplan für die Zusammenfassung mehrerer Benachrichtigungen zu bestimmten Zeiten im Laufe des Tages zu erstellen. Dies geschieht, um zu verhindern, dass Sie den ganzen Tag über ständig von Benachrichtigungen unterbrochen werden, die keine sofortige Aufmerksamkeit erfordern.
 
@@ -168,7 +168,7 @@ Alle Benachrichtigungen werden weiterhin im Benachrichtigungszentrum des Benutze
 
 Um den Relevanzwert einer iOS-Benachrichtigung festzulegen, geben Sie auf der Registerkarte **Einstellungen** einen Wert zwischen `0.0` und `1.0` ein. Die wichtigste Nachricht sollte beispielsweise mit `1.0` gesendet werden, während eine Nachricht von mittlerer Wichtigkeit mit `0.5` gesendet werden kann.
 
-\![Relevanzwert von "0.5".]({% image_buster /assets/img/ios/relevance-score.png %}){: style="max-width:80%;"}
+![Relevanzwert von "0.5".]({% image_buster /assets/img/ios/relevance-score.png %}){: style="max-width:80%;"}
 
 Für diese Funktion gibt es keine Mindestanforderungen an die SDK-Version, sie gilt jedoch nur für Geräte mit iOS 15+.
 

@@ -70,7 +70,7 @@ Um einen Entwurf zu erstellen, gehen Sie wie folgt vor:
 2. Nehmen Sie Ihre Änderungen vor.
 3. Wählen Sie **Als Entwurf speichern**. Beachten Sie, dass Sie nach dem Erstellen eines Entwurfs die aktive Kampagne erst bearbeiten können, wenn Sie die Kampagne entweder starten oder den Entwurf verwerfen.
 
-\![Ein Entwurf einer aktiven Kampagne mit einer Option zum Anzeigen der aktiven Kampagne.]({% image_buster /assets/img/campaign_draft.png %})
+![Ein Entwurf einer aktiven Kampagne mit einer Option zum Anzeigen der aktiven Kampagne.]({% image_buster /assets/img/campaign_draft.png %})
 
 Wenn Sie den Entwurf bearbeiten, können Sie die aktive Kampagne auch in der Kopfzeile des Kampagnenentwurfs oder in der Fußzeile der Kampagnen Analytics referenzieren. 
 

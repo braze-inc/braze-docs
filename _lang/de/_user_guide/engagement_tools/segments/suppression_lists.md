@@ -31,7 +31,7 @@ Sie können Ausnahme-Tags verwenden, so dass Nutzer:innen der Unterdrückungslis
 Unterdrückungslisten werden auf API Kampagnen angewendet, die im Braze-Dashboard mit einem `campaign_id` erstellt werden. Unterdrückungslisten gelten nicht für Nachrichten, die über [Messaging-Endpunkte von Braze]({{site.baseurl}}/api/endpoints/messaging/) ohne einen zugehörigen `campaign_id` gesendet werden.
 {% endalert %}
 
-\![Der Abschnitt "Ausnahmeeinstellungen" mit einem Kontrollkästchen, um die Unterdrückungsliste nicht auf API-getriggerte Kampagnen und Canvase anzuwenden.]({% image_buster /assets/img/suppression_list_checkbox.png %}){: style="max-width:70%;"}
+![Der Abschnitt "Ausnahmeeinstellungen" mit einem Kontrollkästchen, um die Unterdrückungsliste nicht auf API-getriggerte Kampagnen und Canvase anzuwenden.]({% image_buster /assets/img/suppression_list_checkbox.png %}){: style="max-width:70%;"}
 
 ## Unterdrückungslisten einrichten {#setup}
 
@@ -39,18 +39,18 @@ Unterdrückungslisten werden auf API Kampagnen angewendet, die im Braze-Dashboar
 Alle Nutzer:innen können Unterdrückungslisten einsehen, aber nur Nutzer:innen mit [Admin-Rechten]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/?tab=admin#list-of-permissions) können Unterdrückungslisten erstellen und verwalten.
 {% endalert %}
 
-1. Gehen Sie zu **Zielgruppe** > **Unterdrückungslisten**.<br><br>\![Die Seite "Unterdrückungslisten" mit einer Liste von drei Unterdrückungslisten.]({% image_buster /assets/img/suppression_lists_home.png %})<br><br>
-2. Wählen Sie **Unterdrückungsliste erstellen** und fügen Sie einen Namen hinzu.<br><br>\![Ein Fenster namens "Unterdrückungsliste erstellen" mit einem Feld zur Eingabe eines Namens.]({% image_buster /assets/img/create_suppression_list.png %}){: style="max-width:80%;"}<br><br>
+1. Gehen Sie zu **Zielgruppe** > **Unterdrückungslisten**.<br><br>![Die Seite "Unterdrückungslisten" mit einer Liste von drei Unterdrückungslisten.]({% image_buster /assets/img/suppression_lists_home.png %})<br><br>
+2. Wählen Sie **Unterdrückungsliste erstellen** und fügen Sie einen Namen hinzu.<br><br>![Ein Fenster namens "Unterdrückungsliste erstellen" mit einem Feld zur Eingabe eines Namens.]({% image_buster /assets/img/create_suppression_list.png %}){: style="max-width:80%;"}<br><br>
 3. Verwenden Sie Segmente-Filter, um die Nutzer:innen in Ihren Unterdrückungslisten zu identifizieren. Sie müssen mindestens eine auswählen.
 
 {% alert important %}
 Obwohl der Einrichtungsprozess ähnlich wie bei der [Erstellung von Segmenten]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) aussieht, ist eine Unterdrückungsliste eine Gruppe von Nutzern:innen, an die Sie **keine** Nachrichten senden möchten, unabhängig von der Mitgliedschaft in einem Segment.
 {% endalert %}
 
-\![Ein Unterdrückungslisten-Builder mit einem Filter für Nutzer:innen, die zuletzt vor mehr als 90 Tagen eine E-Mail geöffnet haben.]({% image_buster /assets/img/suppression_list_filters.png %})
+![Ein Unterdrückungslisten-Builder mit einem Filter für Nutzer:innen, die zuletzt vor mehr als 90 Tagen eine E-Mail geöffnet haben.]({% image_buster /assets/img/suppression_list_filters.png %})
 
 {: start="4"}
-4\. Legen Sie fest, ob Sie Ausnahmen auf der Grundlage von Tags haben möchten, indem Sie das Kästchen unter dem Namen Ihres Segments markieren (weitere Informationen finden Sie unter [Warum Unterdrückungslisten?](#why-use-suppression-lists) ). Fügen Sie dann die Tags von Kampagnen oder Canvase hinzu, die Nutzer:innen in dieser Unterdrückungsliste noch erhalten sollen. <br><br>Mit anderen Worten: Wenn Sie den Ausnahme-Tag "Versandbestätigung" hinzufügen, werden Nutzer:innen von allen Nachrichten ausgeschlossen, die nicht den Tag "Versandbestätigung" verwenden.<br><br>\![Der Abschnitt "Versandlistendetails" mit dem Tag "Versandbestätigung", der eine Ausnahme darstellt.]({% image_buster /assets/img/exception_tags.png %})<br><br>
+4\. Legen Sie fest, ob Sie Ausnahmen auf der Grundlage von Tags haben möchten, indem Sie das Kästchen unter dem Namen Ihres Segments markieren (weitere Informationen finden Sie unter [Warum Unterdrückungslisten?](#why-use-suppression-lists) ). Fügen Sie dann die Tags von Kampagnen oder Canvase hinzu, die Nutzer:innen in dieser Unterdrückungsliste noch erhalten sollen. <br><br>Mit anderen Worten: Wenn Sie den Ausnahme-Tag "Versandbestätigung" hinzufügen, werden Nutzer:innen von allen Nachrichten ausgeschlossen, die nicht den Tag "Versandbestätigung" verwenden.<br><br>![Der Abschnitt "Versandlistendetails" mit dem Tag "Versandbestätigung", der eine Ausnahme darstellt.]({% image_buster /assets/img/exception_tags.png %})<br><br>
 5\. Speichern oder aktivieren Sie Ihre Unterdrückungsliste.
 - Wenn Sie speichern, wird Ihre Unterdrückungsliste zwar gespeichert, aber nicht aktiviert, d.h. sie wird nicht in Kraft treten. Ihre Unterdrückungsliste bleibt inaktiv, bis Sie sie aktivieren, und inaktive Unterdrückungslisten haben keine Auswirkungen auf das Messaging (Nutzer:innen werden nicht von Nachrichten ausgeschlossen).
 - Wenn Sie diese Funktion aktivieren, wird Ihre Unterdrückungsliste gespeichert und tritt sofort in Kraft. Das bedeutet, dass Nutzer:in Ihrer Unterdrückungsliste sofort von Kampagnen oder Canvase ausgeschlossen werden (mit Ausnahme von Kampagnen, die einen Ausnahme-Tag enthalten).
@@ -67,7 +67,7 @@ Sie können Unterdrückungslisten deaktivieren oder archivieren, wenn Sie sie ni
 
 Um zu überprüfen, ob Ihre Unterdrückungsliste verhindert hat, dass ein Nutzer:innen eine Nachricht erhält, verwenden Sie **User Lookup** im Schritt **Target Audience** innerhalb Ihrer Kampagne oder Canvas. Hier können Sie sehen, zu welcher Unterdrückungsliste sie gehören.
 
-\!["User Lookup"-Fenster, das anzeigt, dass ein Nutzer:innen in einer Unterdrückungsliste steht.]({% image_buster /assets/img/suppression_list_user_lookup.png %}){: style="max-width:70%;"}
+!["User Lookup"-Fenster, das anzeigt, dass ein Nutzer:innen in einer Unterdrückungsliste steht.]({% image_buster /assets/img/suppression_list_user_lookup.png %}){: style="max-width:70%;"}
 
 {% alert tip %}
 Sie können die angewandten Unterdrückungslisten auch im Schritt **Zusammenfassung** finden.
@@ -75,13 +75,13 @@ Sie können die angewandten Unterdrückungslisten auch im Schritt **Zusammenfass
 
 Verwenden Sie bei der Erstellung einer Kampagne oder eines Canvas die **Benutzersuche** im Schritt **Target Audience**, um nach einem Nutzer:innen zu suchen, und wenn dieser nicht zur Zielgruppe gehört, können Sie die Unterdrückungsliste sehen, zu der er gehört. 
 
-\!["User Lookup"-Fenster, das anzeigt, dass ein Nutzer:innen in einer Unterdrückungsliste steht.]({% image_buster /assets/img/suppression_list_user_lookup.png %}){: style="max-width:70%;"}
+!["User Lookup"-Fenster, das anzeigt, dass ein Nutzer:innen in einer Unterdrückungsliste steht.]({% image_buster /assets/img/suppression_list_user_lookup.png %}){: style="max-width:70%;"}
 
 ### Kampagne 
 
 Wenn ein Nutzer:innen in einer Unterdrückungsliste steht, erhält er keine Kampagne, für die diese Unterdrückungsliste gilt. Siehe [Nachrichtentypen und Kanäle, die von Unterdrückungslisten betroffen sind](#message-types-and-channels-affected-by-suppression-lists), für Fälle, in denen eine Unterdrückungsliste nicht gilt.
 
-\![Der Abschnitt "Unterdrückungslisten" mit einer aktiven Unterdrückungsliste namens "Niedrige Marketing-Gesundheitswerte".]({% image_buster /assets/img/active_suppression_list.png %})
+![Der Abschnitt "Unterdrückungslisten" mit einer aktiven Unterdrückungsliste namens "Niedrige Marketing-Gesundheitswerte".]({% image_buster /assets/img/active_suppression_list.png %})
 
 ### Canvas 
 

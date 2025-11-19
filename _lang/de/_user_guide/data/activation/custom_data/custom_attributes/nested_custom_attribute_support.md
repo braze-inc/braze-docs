@@ -263,7 +263,7 @@ Verwenden Sie den Tag für die Personalisierung `custom_attribute` und die Punkt
 <br> `{{custom_attribute.${most_played_song}[0].play_analytics.count}}` - "1000"
 {% endraw %}
 
-\![Mit Liquid können Sie ein Template für den Namen eines Liedes und die Anzahl, wie oft ein Hörer dieses Lied gespielt hat, in eine Nachricht einfügen]({% image_buster /assets/img_archive/nca_liquid_2.png %})
+![Mit Liquid können Sie ein Template für den Namen eines Liedes und die Anzahl, wie oft ein Hörer dieses Lied gespielt hat, in eine Nachricht einfügen]({% image_buster /assets/img_archive/nca_liquid_2.png %})
 
 ## Segmentierung
 
@@ -275,11 +275,11 @@ Filter basierend auf einem angepassten Attribut für den meistgespielten Titel, 
 
 Um mit verschachtelten angepassten Attributen zu segmentieren, wählen Sie den Filter **Verschachtelte angepasste Attribute**, um ein Dropdown-Menü anzuzeigen, aus dem Sie ein bestimmtes verschachteltes angepasstes Attribut auswählen können.
 
-\![]({% image_buster /assets/img_archive/nested_custom_attributes.png %}){: style="max-width:70%;"}
+![]({% image_buster /assets/img_archive/nested_custom_attributes.png %}){: style="max-width:70%;"}
 
 Bei der Segmentierung mit verschachtelten angepassten Attributen haben Sie Zugriff auf einen neuen Vergleicher, der nach Datentyp gruppiert ist. Da `play_analytics.count` zum Beispiel eine Zahl ist, können Sie einen Komparator unter der Kategorie **Zahl** auswählen.
 
-\![Ein Nutzer:innen wählt einen Operator auf der Grundlage des Datentyps für das verschachtelte angepasste Attribut]({% image_buster /assets/img_archive/nca_comparator.png %})
+![Ein Nutzer:innen wählt einen Operator auf der Grundlage des Datentyps für das verschachtelte angepasste Attribut]({% image_buster /assets/img_archive/nca_comparator.png %})
 
 ### Filter für Zeitdatenarten
 
@@ -293,7 +293,7 @@ Verwenden Sie die **Segmentierung nach mehreren Kriterien**, um ein Segment zu e
 
 Sie können auch das Feature **Liquid für Segmente kopieren** verwenden, um einen Liquid Code für dieses Segment zu erzeugen und diesen in einer Nachricht zu verwenden. Nehmen wir zum Beispiel an, Sie haben ein Array von Kontoobjekten und ein Segment, das auf Kund:innen mit aktiven steuerpflichtigen Konten abzielt. Wenn Sie Ihre Kund:in dazu bringen möchten, einen Beitrag zu einem ihrer aktiven und steuerpflichtigen Konten zu leisten, müssen Sie eine Nachricht erstellen, um sie anzustacheln. 
 
-\![Ein Beispielsegment mit ausgewähltem Kontrollkästchen für die Multikriterien-Segmentierung.]({% image_buster /assets/img_archive/nca_multi_criteria.png %})
+![Ein Beispielsegment mit ausgewähltem Kontrollkästchen für die Multikriterien-Segmentierung.]({% image_buster /assets/img_archive/nca_multi_criteria.png %})
 
 Wenn Sie **Liquid für Segmente** auswählen, generiert Braze automatisch Liquid-Code, der ein Objekt-Array zurückgibt, das nur aktive und steuerpflichtige Konten enthält.
 
@@ -342,7 +342,7 @@ Gehen Sie im Braze-Dashboard zu **Dateneinstellungen** > Angepasste Attribute.
 
 Suchen Sie nach Ihrem Objekt oder Objekt-Array. Wählen Sie in der Spalte **Attributname** die Option **Schema generieren** aus.
 
-\![]({% image_buster /assets/img_archive/nca_generate_schema.png %})
+![]({% image_buster /assets/img_archive/nca_generate_schema.png %})
 
 {% alert tip %}
 Je nachdem, wie viele Daten Sie uns geschickt haben, kann es ein paar Minuten dauern, bis Ihr Schema erstellt ist.
@@ -358,7 +358,7 @@ Für unser Objekt-Array `accounts` können Sie sehen, dass es innerhalb des Obje
 - Ein Zahlentyp mit dem Schlüssel `balance` (Saldobetrag auf dem Konto)
 - Ein String-Typ mit einem Schlüssel von `type` (nicht steuerpflichtiges oder steuerpflichtiges Konto)
 
-\![]({% image_buster /assets/img_archive/nca_schema.png %}){: style="max-width:50%" }
+![]({% image_buster /assets/img_archive/nca_schema.png %}){: style="max-width:50%" }
 
 Nachdem wir nun die Daten analysiert und eine Darstellung erstellt haben, können wir ein Segment erstellen.
 
@@ -368,15 +368,15 @@ Lassen Sie uns Kunden:in ansprechen, die einen Kontostand von weniger als 100 ha
 
 Erstellen Sie ein Segment und fügen Sie den Filter `Nested Custom Attribute` hinzu. Suchen Sie dann nach Ihrem Objekt oder Objekt-Array und wählen Sie es aus. Hier haben wir das Objekt-Array `accounts` hinzugefügt. 
 
-\![]({% image_buster /assets/img_archive/nca_segment_schema.png %})
+![]({% image_buster /assets/img_archive/nca_segment_schema.png %})
 
 Wählen Sie den <i class="fas fa-plus"></i> plus Button im Pfadfeld aus. Daraufhin wird eine Darstellung Ihres Objekts oder Objekt-Arrays angezeigt. Sie können jeden der aufgelisteten Artikel auswählen und Braze fügt sie für Sie in das Pfadfeld ein. In diesem Beispiel müssen wir den Saldo ermitteln. Wählen Sie die Waage aus und der Pfad (in diesem Fall `[].balance`) wird automatisch in das Pfadfeld eingefügt.
 
-\![]({% image_buster /assets/img_archive/nca_segment_schema2.png %}){: style="max-width:70%" }
+![]({% image_buster /assets/img_archive/nca_segment_schema2.png %}){: style="max-width:70%" }
 
 Sie können **Validieren** auswählen, um zu überprüfen, ob der Inhalt des Pfadfelds gültig ist, und dann den Rest des Filters nach Bedarf erstellen. Hier haben wir festgelegt, dass der Saldo weniger als 100 betragen soll.
 
-\![]({% image_buster /assets/img_archive/nca_segment_schema_3.png %})
+![]({% image_buster /assets/img_archive/nca_segment_schema_3.png %})
 
 Das war's! Sie haben soeben ein Segment mit einem verschachtelten angepassten Attribut erstellt, ohne dass Sie wissen müssen, wie die Daten strukturiert sind. Der verschachtelte Objekt-Explorer in Braze generierte eine visuelle Darstellung Ihrer Daten und ließ Sie genau das auswählen, was Sie für die Erstellung eines Segments benötigten.
 
@@ -384,11 +384,11 @@ Das war's! Sie haben soeben ein Segment mit einem verschachtelten angepassten At
 
 Sie können triggern, wenn sich ein verschachteltes Objekt mit angepassten Attributen ändert. Diese Option ist für Änderungen an Objekt-Arrays nicht verfügbar. Wenn Sie keine Option zum Anzeigen des Pfad-Explorers sehen, überprüfen Sie, ob Sie ein Schema erstellt haben. 
 
-\![]({% image_buster /assets/img_archive/nca_triggered_changes2.png %})
+![]({% image_buster /assets/img_archive/nca_triggered_changes2.png %})
 
 In der folgenden aktionsbasierten Kampagne können Sie beispielsweise eine neue Aktion für **Angepasste Attribute ändern** hinzufügen, um Nutzer:innen zu triggern, die ihre Präferenzen für die Vertretung in der Nachbarschaft geändert haben. 
 
-\![]({% image_buster /assets/img_archive/nca_triggered_changes.png %})
+![]({% image_buster /assets/img_archive/nca_triggered_changes.png %})
 
 ### Personalisierung
 
@@ -396,7 +396,7 @@ Mit dem Modal **Personalisierung hinzufügen** können Sie auch verschachtelte a
 
 In dem untenstehenden Modal zur Personalisierung wird beispielsweise das angepasste Attribut einer lokalen Vertretung in der Nachbarschaft auf der Grundlage der Präferenzen eines Nutzers eingefügt.
 
-\![]({% image_buster /assets/img_archive/nca_personalization.png %}){: style="max-width:70%" }
+![]({% image_buster /assets/img_archive/nca_personalization.png %}){: style="max-width:70%" }
 
 {% alert tip %}
 Prüfen Sie, ob ein Schema generiert wurde, wenn Sie die Option zum Einfügen verschachtelter angepasster Attribute nicht sehen.

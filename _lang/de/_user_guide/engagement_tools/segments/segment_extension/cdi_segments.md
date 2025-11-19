@@ -32,17 +32,17 @@ Bevor Sie Ihre erste CDI Segment-Erweiterung erstellen, richten Sie eine neue ve
 
 Erstellen Sie zunächst eine neue [Segmenterweiterung]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/) und wählen Sie dann **Vollständige Aktualisierung**.
 
-\![]({% image_buster /assets/img/segment/segment_extension_modal.png %}){: style="max-width:60%;"}
+![]({% image_buster /assets/img/segment/segment_extension_modal.png %}){: style="max-width:60%;"}
 
 Wählen Sie für Ihre Datenquelle **CDI-Datentabellen**.
 
-\![]({% image_buster /assets/img/segment/cdi_data_tables.png %}){: style="max-width:60%;"}
+![]({% image_buster /assets/img/segment/cdi_data_tables.png %}){: style="max-width:60%;"}
 
 Als Teil Ihrer CDI-Einrichtung können Sie aus verschiedenen Verbindungen auswählen, die Sie in CDI Segment-Erweiterungen verwenden möchten. Jede Verbindung hat einen bestimmten Satz von Datentabellen. Ihr Entwicklungsteam kann Ihre Verbindungen und Datentabellen während der CDI-Einrichtung konfigurieren.
 
 Um die verfügbaren Datentabellen einschließlich ihres Schemas und aller verfügbaren Beschreibungen anzuzeigen, wählen Sie **Referenzieren**. Wenn Sie bereit sind, wählen Sie eine Verbindung aus.
 
-\![]({% image_buster /assets/img/segment/connection_schema_with_descriptions.png %}){: style="max-width:100%;"}
+![]({% image_buster /assets/img/segment/connection_schema_with_descriptions.png %}){: style="max-width:100%;"}
 
 Als Nächstes schreiben Sie das SQL für Ihr Segment mit [der Braze SQL-Syntax]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/#writing-sql).
 

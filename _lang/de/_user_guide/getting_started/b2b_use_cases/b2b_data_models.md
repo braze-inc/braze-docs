@@ -96,7 +96,7 @@ In diesem Anwendungsfall ist Salesforce das Beispiel-CRM-System. Sie können jed
 
 ##### Beispieltabelle der zugeordneten Kontofelder
 
-\![Tabelle der Salesforce-Konten mit den entsprechenden Informationen, wie Rechnungsadresse und Kontoinhaber.]({% image_buster /assets/img/b2b/sf_accounts.png %})
+![Tabelle der Salesforce-Konten mit den entsprechenden Informationen, wie Rechnungsadresse und Kontoinhaber.]({% image_buster /assets/img/b2b/sf_accounts.png %})
 
 {% endsubtab %}
 {% subtab Opportunity catalog %}
@@ -135,7 +135,7 @@ In diesem Anwendungsfall ist Salesforce das Beispiel-CRM-System. Sie können jed
 
 ##### Beispieltabelle der zugeordneten Opportunity-Felder
 
-\![Tabelle der Salesforce Opportunities mit den entsprechenden Informationen wie Rechnungsadresse und Kontoinhaber.]({% image_buster /assets/img/b2b/sf_opportunities.png %})
+![Tabelle der Salesforce Opportunities mit den entsprechenden Informationen wie Rechnungsadresse und Kontoinhaber.]({% image_buster /assets/img/b2b/sf_opportunities.png %})
 
 {% endsubtab %}
 {% endsubtabs %}

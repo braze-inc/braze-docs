@@ -57,7 +57,7 @@ Wenn alle Nachrichten in Ihrer Kampagne ähnlich sind oder den gleichen Inhalt h
 
 Braze bietet zwei Bearbeitungsmöglichkeiten für die Erstellung einer E-Mail-Kampagne: unseren [Drag-and-Drop-Editor]({{site.baseurl}}/dnd/) und unseren Standard-HTML-Editor. Wählen Sie die passende Kachel für die gewünschte Bearbeitungsumgebung aus. 
 
-\![Sie haben die Wahl zwischen dem Drag-and-Drop-Editor, dem HTML-Editor oder Templates für die Bearbeitung Ihrer E-Mails.]({% image_buster /assets/img_archive/choose_email_creation.png %}){: style="max-width:75%" }
+![Sie haben die Wahl zwischen dem Drag-and-Drop-Editor, dem HTML-Editor oder Templates für die Bearbeitung Ihrer E-Mails.]({% image_buster /assets/img_archive/choose_email_creation.png %}){: style="max-width:75%" }
 
 Dann können Sie entweder eine vorhandene [E-Mail-Vorlage]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/#creating-an-email-template) auswählen, eine Vorlage aus einer Datei [hochladen]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/html_email_template/) (nur HTML-Editor) oder eine leere Vorlage verwenden. 
 
@@ -69,7 +69,7 @@ Wir empfehlen, pro E-Mail Kampagne eine Bearbeitungsumgebung auszuwählen. Wähl
 
 Nachdem Sie Ihre Vorlage ausgewählt haben, sehen Sie eine Übersicht über Ihre E-Mail, in der Sie direkt zum Vollbild-Editor wechseln können, um Ihre E-Mail zu verfassen, Ihre Versandinformationen zu ändern und Warnungen zur Zustellbarkeit oder zur Einhaltung von Gesetzen anzuzeigen. Sie können zwischen HTML-, klassischen, Klartext- und [AMP-Tabs]({{site.baseurl}}/user_guide/message_building_by_channel/email/amphtml/) wechseln, während Sie schreiben. 
 
-\![Der Button "Aus HTML neu generieren".]({% image_buster /assets/img_archive/regenerate_from_html.png %}){: style="max-width:30%;float:right;margin-left:15px;border:none;" }
+![Der Button "Aus HTML neu generieren".]({% image_buster /assets/img_archive/regenerate_from_html.png %}){: style="max-width:30%;float:right;margin-left:15px;border:none;" }
 
 Die Klartextversion Ihrer E-Mail wird immer automatisch von der HTML-Version aktualisiert, bis eine Änderung an der Klartextversion erkannt wird. Wenn eine Bearbeitung erkannt wird, wird Braze den Klartext nicht mehr aktualisieren, da wir davon ausgehen, dass Sie absichtlich Änderungen vorgenommen haben, die nicht überschrieben werden sollten. Sie können auf dem Tab **Klartext** zur automatischen Synchronisierung zurückkehren, indem Sie das Symbol **Aus HTML neu generieren** auswählen, das nur erscheint, wenn der Klartext nicht synchronisiert wird.
 
@@ -77,7 +77,7 @@ Die Klartextversion Ihrer E-Mail wird immer automatisch von der HTML-Version akt
 Zur Erstellung von E-Mails mit Bewegungselementen und einer genauen Vorschau sollten Sie GIFs anstelle von Elementen verwenden, die JavaScript erfordern, da die meisten Posteingänge JavaScript nicht unterstützen.
 {% endalert %}
 
-\![Panel für E-Mail-Varianten zum Verfassen Ihrer E-Mail.]({% image_buster /assets/img/email.png %}){: style="max-width:75%" }
+![Panel für E-Mail-Varianten zum Verfassen Ihrer E-Mail.]({% image_buster /assets/img/email.png %}){: style="max-width:75%" }
 
 {% alert important %}
 Braze entfernt automatisch HTML-Event-Handler, die als Attribute referenziert werden. Dadurch wird der HTML-Code geändert. Es empfiehlt sich daher, die E-Mail nach der Fertigstellung erneut zu überprüfen. Erfahren Sie mehr über [HTML-Handler](https://www.w3schools.com/tags/ref_eventattributes.asp).
@@ -86,7 +86,7 @@ Braze entfernt automatisch HTML-Event-Handler, die als Attribute referenziert we
 {% alert tip %}
 Benötigen Sie Hilfe bei der Erstellung überzeugender Texte? Versuchen Sie es mit dem [KI-Textwerkstatt-Assistenten]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/). Geben Sie einen Produktnamen oder eine Beschreibung ein und die KI generiert menschenähnliche Marketingtexte für Ihre Werbebotschaften.
 
-\![KI Copywriter Button starten, der sich auf dem Tab Body des E-Mail Composers befindet.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_email.png %}){: style="max-width:80%"}
+![KI Copywriter Button starten, der sich auf dem Tab Body des E-Mail Composers befindet.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_email.png %}){: style="max-width:80%"}
 {% endalert %}
 
 Benötigen Sie Hilfe bei der Erstellung von Nachrichten von rechts nach links für Sprachen wie Arabisch und Hebräisch? Lesen Sie den Abschnitt [Erstellen von Nachrichten von rechts nach links]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/) für bewährte Verfahren.
@@ -188,7 +188,7 @@ Sind Sie neugierig, wie Ihre E-Mails für Nutzer:innen im Dark Mode aussehen? W�
 
 Wenn Sie für eine abschließende Prüfung bereit sind, wählen Sie **Senden testen** und senden Sie eine Testnachricht an sich selbst oder an eine Gruppe von Inhaltstestern, um sicherzustellen, dass Ihre E-Mail auf einer Vielzahl von Geräten und E-Mail-Clients korrekt angezeigt wird.
 
-\![Test-Sendeoption und Vorschau einer Beispiel-E-Mail beim Verfassen Ihrer E-Mail.]({% image_buster /assets/img_archive/newEmailTest.png %})
+![Test-Sendeoption und Vorschau einer Beispiel-E-Mail beim Verfassen Ihrer E-Mail.]({% image_buster /assets/img_archive/newEmailTest.png %})
 
 Wenn Sie Probleme mit Ihrer E-Mail sehen oder Änderungen vornehmen möchten, wählen Sie **E-Mail bearbeiten**, um zum Editor zurückzukehren.
 

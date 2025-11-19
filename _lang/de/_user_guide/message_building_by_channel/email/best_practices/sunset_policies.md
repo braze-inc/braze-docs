@@ -30,7 +30,7 @@ To set up these segments, choose the `Has Marked You As Spam` and `Last Engaged 
 
 Wenn Sie den Filter `Last Engaged With Message` anwenden, geben Sie die Art des Messagings (Push, E-Mail oder In-App-Benachrichtigung) an, mit dem die:der Nutzer:in interagiert hat bzw. nicht interagiert hat, sowie die Anzahl der Tage, die seit der letzten Interaktion der Nutzerin oder des Nutzers vergangen sind. Nachdem Sie ein Segment erstellt haben, können Sie dieses Segment mit einem beliebigen [Messaging-Kanal]({{site.baseurl}}/user_guide/message_building_by_channel/) adressieren.
 
-\![Segment-Detailseite mit ausgewähltem Filter "Zuletzt mit Nachricht engagiert".]({% image_buster /assets/img_archive/email_sunset_policies_new.png %})
+![Segment-Detailseite mit ausgewähltem Filter "Zuletzt mit Nachricht engagiert".]({% image_buster /assets/img_archive/email_sunset_policies_new.png %})
 
 Während Braze den Versand von E-Mails an Benutzer, die Sie als Spam markiert haben, automatisch stoppt, können Sie mit dem Filter `Has Marked You As Spam` diesen Benutzern auch gezielte Push-Nachrichten und In-App-Benachrichtigungen senden. This filter is useful for [retargeting campaigns]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/retargeting_campaigns/#retargeting-campaigns). Sie können beispielsweise ungebundenen Nutzer:innen Nachrichten schicken, die sie an die Features und Angebote erinnern, die sie verpassen, wenn sie Ihre E-Mails nicht öffnen.
 

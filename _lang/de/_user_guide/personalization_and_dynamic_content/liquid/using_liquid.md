@@ -6,7 +6,7 @@ description: "Dieser Referenzartikel bietet einen Überblick über häufige Anwe
 search_rank: 2
 ---
 
-# [\![Braze Lernkurs]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/dynamic-personalization-with-liquid){: style="float:right;width:120px;border:0;" class="noimgborder"} Using Liquid
+# [![Braze Lernkurs]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/dynamic-personalization-with-liquid){: style="float:right;width:120px;border:0;" class="noimgborder"} Using Liquid
 
 > In diesem Artikel erfahren Sie, wie Sie eine Vielzahl von Benutzerattributen verwenden können, um persönliche Informationen dynamisch in Ihre Nachrichten einzufügen.
 
@@ -108,11 +108,11 @@ Wenn Sie Liquid in Ihren E-Mail-Nachrichten verwenden, sollten Sie darauf achten
 
 You can insert pre-formatted variables with defaults through the **Add Personalization** modal located near any templated text field.
 
-\![Das Modal "Personalisierung hinzufügen", das nach dem Auswählen von "Personalisierung einfügen" erscheint. Das Modal enthält Felder für den Personalisierungstyp, das Attribut, den optionalen Standardattribut-Wert und zeigt eine Vorschau der Liquid-Syntax an.]({% image_buster /assets/img_archive/insert_liquid_var_arrow.png %}){: style="max-width:90%;"}
+![Das Modal "Personalisierung hinzufügen", das nach dem Auswählen von "Personalisierung einfügen" erscheint. Das Modal enthält Felder für den Personalisierungstyp, das Attribut, den optionalen Standardattribut-Wert und zeigt eine Vorschau der Liquid-Syntax an.]({% image_buster /assets/img_archive/insert_liquid_var_arrow.png %}){: style="max-width:90%;"}
 
 The modal will insert Liquid with your specified default value at the point where your cursor was. Die Einfügemarke wird auch durch das Vorschau-Feld angegeben, das den Text vor und nach dem Einfügen enthält. Wenn ein Textblock hervorgehoben ist, wird der hervorgehobene Text ersetzt.
 
-\![Ein GIF des Modals Personalisierung hinzufügen, das zeigt, wie der Nutzer:innen "Mitreisender" als Standardwert einfügt und das Modal den hervorgehobenen Text "Name" im Composer durch das Snippet von Liquid ersetzt.]({% image_buster /assets/img_archive/insert_var_shot.gif %})
+![Ein GIF des Modals Personalisierung hinzufügen, das zeigt, wie der Nutzer:innen "Mitreisender" als Standardwert einfügt und das Modal den hervorgehobenen Text "Name" im Composer durch das Snippet von Liquid ersetzt.]({% image_buster /assets/img_archive/insert_var_shot.gif %})
 
 ### Variablen zuweisen
 

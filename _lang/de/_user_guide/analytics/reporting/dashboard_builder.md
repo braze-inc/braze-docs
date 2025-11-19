@@ -21,7 +21,7 @@ Mit Dashboard Builder können Sie angepasste analytische Dashboards von Grund au
 2. Wählen Sie **Dashboard erstellen**.
 3. Wählen Sie aus, welche Datenquelle für Ihre Berichte verwendet werden soll:
 - **Berichte**, die mit Report Builder erstellt wurden
-- **Angepasste Abfragen**, die in Query Builder erstellt wurden<br><br>\![Fenster zum Auswählen der Datenquelle für Ihr Dashboard.]({% image_buster /assets/img/select_data_source.png %})<br><br>
+- **Angepasste Abfragen**, die in Query Builder erstellt wurden<br><br>![Fenster zum Auswählen der Datenquelle für Ihr Dashboard.]({% image_buster /assets/img/select_data_source.png %})<br><br>
 
 Führen Sie nun die entsprechenden Schritte für Ihre Datenquelle aus:
 
@@ -31,7 +31,7 @@ Führen Sie nun die entsprechenden Schritte für Ihre Datenquelle aus:
 {: start="4"}
 4\. Wählen Sie **\+ Kachel hinzufügen** und wählen Sie dann einen der Berichte aus, die Sie in [Report Builder (Neu)]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/) erstellt haben.
 5\. Wählen Sie das Bleistiftsymbol aus, um die Anzeige des Titels und des Chart-Typs in der Kachel zu ändern.
-    \- Sie können zwischen verschiedenen Chart-Typen unterhalb der Standard-Darstellung umschalten. Zu den aktuellen Optionen gehören Balkendiagramme (horizontal oder vertikal) und Liniendiagramme (nur verfügbar, wenn Sie bei der Einrichtung des Berichts-Builders das **Datum** als Drilldown-Option ausgewählt haben).<br><br>\![Umschalter für verschiedene Chart-Typen.]({% image_buster /assets/img/report_builder_types.png %})<br><br>
+    \- Sie können zwischen verschiedenen Chart-Typen unterhalb der Standard-Darstellung umschalten. Zu den aktuellen Optionen gehören Balkendiagramme (horizontal oder vertikal) und Liniendiagramme (nur verfügbar, wenn Sie bei der Einrichtung des Berichts-Builders das **Datum** als Drilldown-Option ausgewählt haben).<br><br>![Umschalter für verschiedene Chart-Typen.]({% image_buster /assets/img/report_builder_types.png %})<br><br>
     \- Verwenden Sie das Dropdown-Menü Metriken, um die Metriken auszuwählen, die Sie in Ihre Visualisierung aufnehmen möchten. Standardmäßig wird in der ersten Spalte des Berichts die Standard-Metrik angezeigt.
 6\. Wählen Sie **Speichern**, nachdem Sie die Visualisierung nach Ihren Wünschen geändert haben.
 7\. Fügen Sie einen Namen, eine Beschreibung und einen Tag hinzu, damit Sie Ihr Dashboard später leichter wiederfinden können.
@@ -40,9 +40,9 @@ Führen Sie nun die entsprechenden Schritte für Ihre Datenquelle aus:
 {: start="4"}
 4\. Wählen Sie **\+ Kachel hinzufügen** und wählen Sie dann eine Abfrage aus, die Sie in Query Builder ausgeführt haben.
 5\. Um zu bearbeiten, wie die Abfrageergebnisse in der Kachel angezeigt werden, wählen Sie das Stiftsymbol aus, um den Titel und den Chart-Typ zu ändern.
-    \- Sie können zwischen verschiedenen Chart-Typen unterhalb der Standard-Darstellung umschalten. Zu den Currents-Optionen gehören Tabellen, Balkendiagramme (horizontal oder vertikal) und Liniendiagramme.<br><br>\![Umschalter für verschiedene Chart-Typen.]({% image_buster /assets/img/query_builder_types.png %})<br><br>
+    \- Sie können zwischen verschiedenen Chart-Typen unterhalb der Standard-Darstellung umschalten. Zu den Currents-Optionen gehören Tabellen, Balkendiagramme (horizontal oder vertikal) und Liniendiagramme.<br><br>![Umschalter für verschiedene Chart-Typen.]({% image_buster /assets/img/query_builder_types.png %})<br><br>
         \- Wenn Sie eine der Chart-Optionen wählen, verwenden Sie das Dropdown-Menü **X-Achse**, um eine einzelne Spalte aus Ihren Abfrageergebnissen auszuwählen, die Sie als X-Achse verwenden möchten.
-        \- Verwenden Sie das Dropdown-Menü der **Y-Achse**, um auszuwählen, welche Metriken Sie in Ihre Visualisierung aufnehmen möchten. Standardmäßig werden alle Spalten aus Ihren Abfrageergebnissen angezeigt. Deaktivieren Sie also die Spalten, die Sie nicht anzeigen möchten.<br><br>\![Umschalter für verschiedene Chart-Typen.]({% image_buster /assets/img/query_builder_axis.png %})<br><br>
+        \- Verwenden Sie das Dropdown-Menü der **Y-Achse**, um auszuwählen, welche Metriken Sie in Ihre Visualisierung aufnehmen möchten. Standardmäßig werden alle Spalten aus Ihren Abfrageergebnissen angezeigt. Deaktivieren Sie also die Spalten, die Sie nicht anzeigen möchten.<br><br>![Umschalter für verschiedene Chart-Typen.]({% image_buster /assets/img/query_builder_axis.png %})<br><br>
         \- (Optional) Sie können die Dropdown-Liste **Gruppierung** verwenden, um Ihre Abfrageergebnisse zu gruppieren. Wenn Sie zum Beispiel die ID einer Kampagne als Spaltenergebnis haben und alle Zeilen mit diesem Wert addieren möchten, verwenden Sie das Dropdown-Menü **Gruppierung**.  
         \- (Optional) Um die angezeigten Daten zu bearbeiten, wählen Sie die Abfrage aus, die mit dem Bildmaterial verknüpft ist, und nehmen Sie Ihre Änderungen im [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/) vor.
 6\. Wählen Sie **Speichern**, nachdem Sie die Visualisierung nach Ihren Wünschen geändert haben.

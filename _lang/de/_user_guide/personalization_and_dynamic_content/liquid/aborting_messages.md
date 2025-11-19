@@ -59,7 +59,7 @@ Sie können die abgebrochene Nachricht auch in Ihrem Nachrichten-Aktivitätsprot
 ```
 {% endraw %}
 
-\![Nachrichten-Fehlerprotokoll in der Entwickler:in der Entwicklungskonsole mit der Abbruchnachricht "language was nil".]({% image_buster /assets/img_archive/developer_console.png %})
+![Nachrichten-Fehlerprotokoll in der Entwickler:in der Entwicklungskonsole mit der Abbruchnachricht "language was nil".]({% image_buster /assets/img_archive/developer_console.png %})
 
 ## Abfrage für abgebrochene Nachrichten
 

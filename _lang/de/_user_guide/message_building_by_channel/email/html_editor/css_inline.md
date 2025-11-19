@@ -18,11 +18,11 @@ Bei einigen E-Mail-Clients kann das CSS-Inlining die Darstellung von E-Mails ver
 
 Mit dem **Enablement CSS inline** umschalten auf dem Tab **Sendeinfo** des HTML-Editors können Sie festlegen, ob das CSS-Inlining für jede E-Mail Nachricht ein- oder ausgeschaltet wird.
 
-\![Kontrollkästchen zur Verwaltung des CSS-Inlinings im HTML Composer.]({% image_buster /assets/img_archive/css-inline2.png %}){: style="max-width:40%;"}
+![Kontrollkästchen zur Verwaltung des CSS-Inlinings im HTML Composer.]({% image_buster /assets/img_archive/css-inline2.png %}){: style="max-width:40%;"}
 
 ### Standard-Inlining-Status
 
 Sie können unter **Einstellungen** > **E-Mail-Einstellungen** einen Standardstatus für die Aktivierung oder Deaktivierung festlegen. Suchen Sie die Einstellung für **CSS Inlining**. Diese Einstellung legt den gewünschten Standardwert fest, mit dem alle neuen E-Mail-Nachrichten beginnen. Beachten Sie, dass eine Änderung dieser Einstellung keine Auswirkungen auf Ihre bestehenden E-Mail-Nachrichten hat. Sie können diesen Standard auch jederzeit beim Verfassen von E-Mails außer Kraft setzen.
 
-\![Inline CSS auf neuen E-Mails als Standard-Option in den E-Mail-Einstellungen.]({% image_buster /assets/img_archive/css-inline1.png %})
+![Inline CSS auf neuen E-Mails als Standard-Option in den E-Mail-Einstellungen.]({% image_buster /assets/img_archive/css-inline1.png %})
 

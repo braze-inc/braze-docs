@@ -202,7 +202,7 @@ ${{custom_attribute.${account_balance} | money}}
 
 | MIT DEM GELDFILTER                       | OHNE DEN GELDFILTER                    |
 | :------------------------------------------ | :------------------------------------------ |
-| \![Mit Geldfilter]({% image_buster /assets/img/with_money_filter.png %})                     | \![Ohne Geldfilter]({% image_buster /assets/img/without_money_filter.png %})                  |
+| ![Mit Geldfilter]({% image_buster /assets/img/with_money_filter.png %})                     | ![Ohne Geldfilter]({% image_buster /assets/img/without_money_filter.png %})                  |
 | Dabei ist `account_balance` die Eingabe auf `17.8`. | Dabei ist `account_balance` die Eingabe auf `17.8`. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

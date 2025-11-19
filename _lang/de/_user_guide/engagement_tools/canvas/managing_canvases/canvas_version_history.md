@@ -16,7 +16,7 @@ Ein Verweis auf Ihren Canvas-Versionsverlauf kann besonders hilfreich sein, um d
 
 ## Versionen verwalten
 
-\![]({% image_buster /assets/img_archive/canvas_version_history.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
+![]({% image_buster /assets/img_archive/canvas_version_history.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
 Um eine neue Version zu erstellen, klicken Sie auf **Canvas aktualisieren**. So können Sie Änderungen vornehmen, ohne die vorherige Einstellung des Canvas zu überschreiben. Wenn eine neue Canvas-Version erstellt wird, durchlaufen die Benutzer, die sich bereits im Canvas befinden, den Workflow der neuen Version. Nutzer:innen, die den Canvas betreten, werden auch die neue Version eingeben. 
 
@@ -32,7 +32,7 @@ Beachten Sie, dass, wenn Sie zwischen dem Starten eines Canvas und dem Erstellen
 
 Wenn die Anzahl der Versionen im Verlauf zunimmt, können Sie jede Version in der Seitenleiste umbenennen, um die Übersicht zu behalten. Standardmäßig werden die Versionsnamen als Zahl generiert, die sich danach richtet, wie viele Versionen zuvor generiert wurden. Wenn Sie eine Version umbenennen, während sie nicht mehr aktiv ist, erscheint dies zwar im Changelog von Canvas, nicht aber im Changelog der Version im Verlauf der Version.
 
-\![Changelog-Beispiel für Canvas, das zeigt, dass zwei neue Canvas-Versionen erstellt worden sind.]({% image_buster /assets/img_archive/canvas_version_history_changelog.png %}){: style="max-width:85%" }
+![Changelog-Beispiel für Canvas, das zeigt, dass zwei neue Canvas-Versionen erstellt worden sind.]({% image_buster /assets/img_archive/canvas_version_history_changelog.png %}){: style="max-width:85%" }
 
 ### Versionen verwerfen
 

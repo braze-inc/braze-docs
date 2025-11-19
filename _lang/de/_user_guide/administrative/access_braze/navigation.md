@@ -19,17 +19,17 @@ Dieses Update vereinfacht Ihr Erlebnis, indem es alle Nutzer:innen auf eine einh
 
 Dank der vertikalen Menüstruktur sind die von Ihnen am häufigsten verwendeten Tools nur einen Tastendruck entfernt. Wählen Sie einen Artikel des Hauptmenüs aus, um seine Optionen in einem gestapelten vertikalen Layout anzuzeigen. 
 
-\![Nutzer:in wählt die Seite "Einstellungen" aus, um das Untermenü als gestapeltes vertikales Menü nach rechts zu öffnen.]({% image_buster /assets/img/navigation/vertical_menu.gif %})
+![Nutzer:in wählt die Seite "Einstellungen" aus, um das Untermenü als gestapeltes vertikales Menü nach rechts zu öffnen.]({% image_buster /assets/img/navigation/vertical_menu.gif %})
 
 ## Globale Suche
 
 Die globale Suche in der Kopfzeile ist der schnellste Weg, um etwas in Braze zu finden. Wählen Sie die Suchleiste aus oder drücken Sie Strg + K unter Windows oder ⌘ + K auf dem Mac, um direkt dorthin zu springen. 
 
-\![Globale Suche ohne Eingabe von Suchbegriffen geöffnet, zeigt zuletzt geöffnete Seiten an.]({% image_buster /assets/img/navigation/search_recently_opened.png %})
+![Globale Suche ohne Eingabe von Suchbegriffen geöffnet, zeigt zuletzt geöffnete Seiten an.]({% image_buster /assets/img/navigation/search_recently_opened.png %})
 
 Die Suche versteht Synonyme für Seiten, die in unserer aktualisierten Navigation umbenannt worden sind. Zum Beispiel findet es "Datenexport", wenn Sie nach "Currents" suchen, da diese Seite umbenannt wurde.
 
-\![Ergebnisse für die Suche nach "currents" werden angezeigt: "Daten exportieren". Zuvor 'Currents'."]({% image_buster /assets/img/navigation/global_search_synonym.png %})
+![Ergebnisse für die Suche nach "currents" werden angezeigt: "Daten exportieren". Zuvor 'Currents'."]({% image_buster /assets/img/navigation/global_search_synonym.png %})
 
 ## Minimierung der Seitennavigation
 
@@ -39,17 +39,17 @@ Nutzer:in erweitert und reduziert das Navigationsmenü auf der linken Seite in B
 
 Selbst im minimierten Zustand können Sie mit dem Mauszeiger über die Symbole fahren, um Tooltips mit den Namen der Artikel für den schnellen Zugriff anzuzeigen.
 
-\![Braze-Navigation minimiert, zeigt einen Tooltip für "Zielgruppe" an, wenn der Fokus auf den Artikel "Zielgruppe" gesetzt wird.]({% image_buster /assets/img/navigation/minimized_menu_tooltip.png %}){:style="max-width:50%"}
+![Braze-Navigation minimiert, zeigt einen Tooltip für "Zielgruppe" an, wenn der Fokus auf den Artikel "Zielgruppe" gesetzt wird.]({% image_buster /assets/img/navigation/minimized_menu_tooltip.png %}){:style="max-width:50%"}
 
 ## Responsive Navigation
 
 Die Navigation passt sich nahtlos an alle Gerätegrößen an. Auf kleineren Bildschirmen wird die Seitennavigation automatisch eingeklappt. Drücken Sie <i class="fa-solid fa-bars" aria-label="Navigationsmenü öffnen"></i> um das Menü bei Bedarf zu öffnen. 
 
-\![Auf kleineren Bildschirmen wird die Seitennavigation automatisch eingeklappt. Das Tippen auf das Menüsymbol öffnet die Navigationsoptionen.]({% image_buster /assets/img/navigation/navigation_small_screens.png %})
+![Auf kleineren Bildschirmen wird die Seitennavigation automatisch eingeklappt. Das Tippen auf das Menüsymbol öffnet die Navigationsoptionen.]({% image_buster /assets/img/navigation/navigation_small_screens.png %})
 
 ## Feedback teilen
 
 Sie können Ihr Feedback zu Themen wie Navigation, Benutzerfreundlichkeit, Zugänglichkeit, visuelle Attraktivität oder zu allem anderen, was Ihnen wichtig ist, abgeben. Öffnen Sie das Menü **Support** in der globalen Kopfzeile und wählen Sie **Share feedback**, um uns Ihre Meinung mitzuteilen. Ihr Beitrag hilft uns, Braze zu verbessern, und wir freuen uns, von Ihnen zu hören!
 
-\![Das Support-Menü öffnet sich und zeigt die Optionen für Braze Dokumentation, Braze Lernangebote, Feedback austauschen und Hilfe holen.]({% image_buster /assets/img/navigation/share_feedback.png %}){:style="max-width:50%"}
+![Das Support-Menü öffnet sich und zeigt die Optionen für Braze Dokumentation, Braze Lernangebote, Feedback austauschen und Hilfe holen.]({% image_buster /assets/img/navigation/share_feedback.png %}){:style="max-width:50%"}
 

@@ -40,7 +40,7 @@ Wenn Sie beabsichtigen, mehrere Geräte und Plattformen anzusprechen, z. B. eine
 
 Bevor Sie eine Multichannel- oder Push-Kampagne erstellen, beachten Sie auf diesen Chart:
 
-\!["Flussdiagramm zum Auswählen des Kampagnentyps. Entscheiden Sie zunächst, ob Sie mehrere Geräte und Plattformen ansprechen wollen. Falls nicht, gehen Sie auf "Push-Benachrichtigung auswählen". Falls ja, wird die Frage "Welche Art von Push-Benachrichtigung?" gestellt. Die Optionen sind "Standard-Push" und die Frage "Gerätespezifische Einstellungen verwenden?". Falls nicht, erscheint die Meldung "Push-Benachrichtigung auswählen und Quick-Push verwenden". Falls ja, gehen Sie zu "Multichannel auswählen". Zurück zu 'Welche Art von Push-Nachricht?', wenn die Antwort 'Push-Storys oder Inline-Bild' lautet, wird auf 'Multichannel auswählen' verwiesen.]({% image_buster /assets/img_archive/flowchart_quickpush.png %})
+!["Flussdiagramm zum Auswählen des Kampagnentyps. Entscheiden Sie zunächst, ob Sie mehrere Geräte und Plattformen ansprechen wollen. Falls nicht, gehen Sie auf "Push-Benachrichtigung auswählen". Falls ja, wird die Frage "Welche Art von Push-Benachrichtigung?" gestellt. Die Optionen sind "Standard-Push" und die Frage "Gerätespezifische Einstellungen verwenden?". Falls nicht, erscheint die Meldung "Push-Benachrichtigung auswählen und Quick-Push verwenden". Falls ja, gehen Sie zu "Multichannel auswählen". Zurück zu 'Welche Art von Push-Nachricht?', wenn die Antwort 'Push-Storys oder Inline-Bild' lautet, wird auf 'Multichannel auswählen' verwiesen.]({% image_buster /assets/img_archive/flowchart_quickpush.png %})
 
 Wenn Sie **Push-Benachrichtigung** auswählen und mehrere Geräte und Plattformen als Ziel wählen, erstellen Sie automatisch eine schnelle Push-Kampagne. Bei Quick Push sind bestimmte gerätespezifische Einstellungen nicht verfügbar:
 
@@ -87,7 +87,7 @@ Es gibt verschiedene Möglichkeiten, dies zu tun, je nachdem, was Sie zuvor ausg
 
 Wenn Sie eine Quick Push-Kampagne erstellen, ist der Benachrichtigungstyp automatisch auf **Standard Push** eingestellt und kann nicht geändert werden.
 
-\![Benachrichtigungstyp mit ausgewähltem Standard-Push als Beispiel.]({% image_buster /assets/img_archive/push_2.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
+![Benachrichtigungstyp mit ausgewähltem Standard-Push als Beispiel.]({% image_buster /assets/img_archive/push_2.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
 Andernfalls wählen Sie für iOS und Android Ihre Benachrichtigungsart aus:
 
@@ -101,7 +101,7 @@ Wenn Sie Bilder in Ihre Push-Kampagne einbinden möchten, lesen Sie die folgende
 
 Jetzt ist es an der Zeit, Ihre Push-Nachricht zu schreiben! Auf der Registerkarte **Verfassen** können Sie alle Aspekte des Inhalts und Verhaltens Ihrer Nachricht bearbeiten.
 
-\![Tab zum Verfassen einer Push-Benachrichtigung.]({% image_buster /assets/img_archive/push_compose.png %})
+![Tab zum Verfassen einer Push-Benachrichtigung.]({% image_buster /assets/img_archive/push_compose.png %})
 
 Der Inhalt der Registerkarte **Verfassen** hängt von der Art der Benachrichtigung ab, die Sie im vorherigen Schritt ausgewählt haben, kann aber eine der folgenden Optionen enthalten:
 
@@ -138,7 +138,7 @@ Sie **können** eine Android-Push-Nachricht **nicht** ohne Titel versenden. Sie 
 {% alert tip %}
 Benötigen Sie Hilfe bei der Erstellung überzeugender Texte? Versuchen Sie es mit dem [KI-Textwerkstatt-Assistenten]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/). Geben Sie einen Produktnamen oder eine Beschreibung ein und die KI generiert menschenähnliche Marketingtexte für Ihre Werbebotschaften.
 
-\![Launch KI Copywriter Button, der sich im Body Feld des Push Composers befindet.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_push.png %}){: style="max-width:60%"}
+![Launch KI Copywriter Button, der sich im Body Feld des Push Composers befindet.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_push.png %}){: style="max-width:60%"}
 {% endalert %}
 
 #### Bild
@@ -165,7 +165,7 @@ Hier können Sie auch Button-Aufforderungen innerhalb Ihrer Push-Benachrichtigun
 
 Wenn ein Benutzer Ihre App auf mehreren Geräten installiert hat, wird Ihre Push-Nachricht standardmäßig an alle Geräte gesendet, denen ein gültiges Push-Token zugewiesen wurde. Falls gewünscht, können Sie das **zuletzt verwendete Gerät** auswählen.
 
-\![Geräte-Optionen-Kontrollkästchen, um diesen Push nur an das zuletzt verwendete Gerät des Nutzer:innen zu senden.]({% image_buster /assets/img_archive/push_recent_device.png %}){: style="max-width:70%;" }
+![Geräte-Optionen-Kontrollkästchen, um diesen Push nur an das zuletzt verwendete Gerät des Nutzer:innen zu senden.]({% image_buster /assets/img_archive/push_recent_device.png %}){: style="max-width:70%;" }
 
 Für diese Einstellung gibt es einige Nuancen. Wenn Sie diese Option auswählen, schränkt Braze Mehrfachsendungen ein, sofern die Kampagne nicht auf mehrere Plattformen abzielt, also z. B. sowohl auf iOS als auch auf Android. Wenn der Nutzer:innen Ihre App sowohl auf einem iOS- als auch auf einem Android-Gerät hat, erhält er einen Push für beide Plattformen. Wenn das zuletzt verwendete Gerät eines Benutzers nicht [Push-fähig]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/#foreground-push-enabled) ist, wird die Nachricht nicht gesendet.
 
@@ -202,7 +202,7 @@ Wenn Sie die Gesamtzahl der erreichbaren Nutzer für Ihre gefilterte Zielgruppe 
 
 {% enddetails %}
 
-\![Tabelle mit detaillierten Zielgruppen-Statistiken für Nutzer:innen, die erreichbar sind.]({% image_buster /assets/img_archive/multi_channel_footer.png %})
+![Tabelle mit detaillierten Zielgruppen-Statistiken für Nutzer:innen, die erreichbar sind.]({% image_buster /assets/img_archive/multi_channel_footer.png %})
 
 Denken Sie daran, dass die genaue Segmentzugehörigkeit immer erst kurz vor dem Versand der Nachricht berechnet wird.
 

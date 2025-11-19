@@ -95,7 +95,7 @@ Nachdem Sie Ihre Vorlage ausgewählt haben, sehen Sie unter **E-Mail-Varianten**
 
 Wählen Sie dann **E-Mail-Text bearbeiten**, um mit der Gestaltung der E-Mail-Struktur im Drag-and-Drop-Editor zu beginnen. 
 
-\![Der Abschnitt "E-Mail-Varianten" mit einem Beispiel für den Textkörper einer E-Mail.]({% image_buster /assets/img/dnd/dnd_emailvariant.png %})
+![Der Abschnitt "E-Mail-Varianten" mit einem Beispiel für den Textkörper einer E-Mail.]({% image_buster /assets/img/dnd/dnd_emailvariant.png %})
 
 ### Schritt 2: E-Mail erstellen
 
@@ -117,7 +117,7 @@ Während Sie Ihre E-Mail erstellen, können Sie zwischen einer Desktop- und eine
 {% alert tip %}
 Benötigen Sie Hilfe bei der Erstellung überzeugender Texte? Versuchen Sie es mit dem [KI-Textwerkstatt-Assistenten]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/). Geben Sie einen Produktnamen oder eine Beschreibung ein, und die KI generiert menschenähnliche Marketingtexte für Ihr Messaging.
 
-\![Copywriter Button, der sich im Content Panel neben den Style Settings im Drag-and-Drop-Editor befindet.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_dnd.png %})
+![Copywriter Button, der sich im Content Panel neben den Style Settings im Drag-and-Drop-Editor befindet.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_dnd.png %})
 {% endalert %}
 
 ### Schritt 3: Sendeinformationen hinzufügen
@@ -169,7 +169,7 @@ Sie können auch **Vorschau-Link** auswählen, um einen Vorschau-Link zu erstell
 
 Beachten Sie, dass Änderungen an einer E-Mail-Vorlage sich nicht in einem zuvor erstellten Link widerspiegeln. Sie müssen eine neue Vorschau des Links erstellen, um die Änderungen zu sehen.
 
-\![E-Mail Vorschau mit einem Button zu "Vorschau-Link kopieren" und kopieren Sie den generierten Link.]({% image_buster /assets/img/dnd_email_link_preview.png %})
+![E-Mail Vorschau mit einem Button zu "Vorschau-Link kopieren" und kopieren Sie den generierten Link.]({% image_buster /assets/img/dnd_email_link_preview.png %})
 
 #### Verwenden Sie Inbox Vision
 
@@ -205,17 +205,17 @@ Sie können ein benutzerdefiniertes Design für Ihren Drag&Drop-Editor erstellen
 
 Bilder, die Sie in Ihre E-Mail aufnehmen, werden automatisch auf **automatische Breite** gesetzt. Um diese Einstellung zu ändern, deaktivieren Sie die Option **Automatische Breite** und passen Sie die prozentuale Breite nach Bedarf an.
 
-\![Option Automatische Breite im Tab Inhalt des Drag-and-Drop-Editors.]({% image_buster /assets/img/dnd/dnd1.png %})
+![Option Automatische Breite im Tab Inhalt des Drag-and-Drop-Editors.]({% image_buster /assets/img/dnd/dnd1.png %})
 
 ### Farbschichtung
 
 Mit Hilfe von Farbüberlagerungen können Sie die Farbe des E-Mail-Hintergrunds, des Inhaltsbereichs und verschiedener Inhaltskomponenten ändern. Die Reihenfolge der Farben von vorne nach hinten ist: Farbe der Inhaltskomponente, Hintergrundfarbe des Inhaltsbereichs und Hintergrundfarbe.
 
-\![Beispiel für die Farbschichtung im Drag-and-Drop-Editor.]({% image_buster /assets/img/dnd/dnd2.png %})
+![Beispiel für die Farbschichtung im Drag-and-Drop-Editor.]({% image_buster /assets/img/dnd/dnd2.png %})
 
 ### Content-Padding
 
-\![Block Optionen für den Drag-and-Drop-Editor.]({% image_buster /assets/img/dnd/dnd3.png %}){: style="float:right;max-width:25%;margin-left:15px;"}
+![Block Optionen für den Drag-and-Drop-Editor.]({% image_buster /assets/img/dnd/dnd3.png %}){: style="float:right;max-width:25%;margin-left:15px;"}
 
 Um die Auffüllung anzupassen, blättern Sie nach unten zu **Blockoptionen** und wählen Sie **Weitere Optionen**. Sie können Ihr Padding fein abstimmen, damit Ihre E-Mail genau richtig aussieht.
 
@@ -227,11 +227,11 @@ Sie können ein Hintergrundbild zu Ihrer Zeilenkonfiguration hinzufügen, um meh
 
 Sie können das Attribut Sprache festlegen, indem Sie auf den Tab **Einstellungen** gehen und die gewünschte Sprache auswählen. Sie können auch das Attribut {%raw%} `{{${language}}}` {%endraw%} targeting, wenn die Nachricht für Nutzer:innen mit dynamischen Sprachwerten bestimmt ist.
 
-\![Einstellung des Wertes "Sprache" für eine E-Mail.]({% image_buster /assets/img/dnd/language_setting_dnd.png %}){: style="max-width:70%;"}
+![Einstellung des Wertes "Sprache" für eine E-Mail.]({% image_buster /assets/img/dnd/language_setting_dnd.png %}){: style="max-width:70%;"}
 
 ### Personalisierung
 
-\![Optionen zur Personalisierung des Drag-and-Drop-Editors.]({% image_buster /assets/img/dnd/dnd4.png %}){: style="float:right;max-width:25%;margin-left:15px;"}
+![Optionen zur Personalisierung des Drag-and-Drop-Editors.]({% image_buster /assets/img/dnd/dnd4.png %}){: style="float:right;max-width:25%;margin-left:15px;"}
 
 Basic Liquid wird im Drag-and-Drop-E-Mail-Editor unterstützt. So fügen Sie Ihrer E-Mail eine Personalisierung hinzu:
 
@@ -250,7 +250,7 @@ Sie können dynamische Bilder in Ihr E-Mail-Messaging aufnehmen, indem Sie Liqui
 
 Wenn Sie Ihre Nachricht verfassen, können Sie die Textrichtung zwischen links-nach-rechts und rechts-nach-links umschalten, indem Sie den entsprechenden Button **Textrichtung** auswählen. Sie können diese Option verwenden, wenn Sie Nachrichten in Sprachen wie Arabisch oder Hebräisch erstellen.
 
-\![E-Mail Drag-and-Drop-Editor Menü mit Button zum Umschalten der Textausrichtung zwischen rechts-nach-links und links-nach-rechts.]({% image_buster /assets/img/dnd/dnd_template1.png %}){: style="max-width:50%;"}
+![E-Mail Drag-and-Drop-Editor Menü mit Button zum Umschalten der Textausrichtung zwischen rechts-nach-links und links-nach-rechts.]({% image_buster /assets/img/dnd/dnd_template1.png %}){: style="max-width:50%;"}
 
 Wie Nachrichten von rechts nach links letztendlich aussehen, hängt weitgehend davon ab, wie die Diensteanbieter sie darstellen. Bewährte Methoden zur Erstellung von Nachrichten, die so genau wie möglich angezeigt werden, finden Sie unter [Erstellen von Nachrichten von]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/) rechts nach links.
 
@@ -258,7 +258,7 @@ Wie Nachrichten von rechts nach links letztendlich aussehen, hängt weitgehend d
 
 #### HTML-Attribute für Links
 
-\![Der Abschnitt "Attribute" mit dem deaktivierten Attribut "clicktracking" für einen Link.]({% image_buster /assets/img/dnd_custom_attributes.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
+![Der Abschnitt "Attribute" mit dem deaktivierten Attribut "clicktracking" für einen Link.]({% image_buster /assets/img/dnd_custom_attributes.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
 Wenn Sie Links, Schaltflächen, Bilder und Videos im Drag&Drop-Editor verwenden, wählen Sie unter **Attribute** im Abschnitt **Inhalt** die Option **Neues Attribut hinzufügen**, um zusätzliche Informationen an HTML-Tags in E-Mails anzuhängen. Dies kann insbesondere für die Personalisierung, Segmentierung und Aufmachung Ihrer Nachrichten nützlich sein.
 

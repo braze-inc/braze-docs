@@ -64,7 +64,7 @@ Optionen zum Auswählen eines RCS- oder SMS/MMS-Nachrichtentyps.]({% image_buste
 
 Wählen Sie für Ihren RCS Nachrichtentyp zwischen **Text** und **Medien**.
 
-\![Optionen zum Auswählen eines Text- oder Medientyps für Nachrichten.]({% image_buster /assets/img/rcs/rcs_text_media.png %}){: style="max-width:65%;"}
+![Optionen zum Auswählen eines Text- oder Medientyps für Nachrichten.]({% image_buster /assets/img/rcs/rcs_text_media.png %}){: style="max-width:65%;"}
 
 {% tabs %}
 {% tab Text %}
@@ -77,7 +77,7 @@ Wie der Name schon sagt, liegt der Schwerpunkt von RCS Messaging auf Text als Me
     - **Suggested Replies** sind Buttons mit Antwortvorschlägen, auf die Nutzer:innen klicken und die sie in ihre Texteingabe einfügen können. So müssen sie nicht mehr selbst an eine Antwort denken, sondern haben eine begrenzte Auswahl. 
     - **Vorgeschlagene Aktionen** sind Buttons, die eine Aktion auf dem Nutzer:innen Gerät auslösen. Sie bestehen in der Regel aus einem oder zwei beschreibenden Wörtern und einem visuellen Symbol, damit der Nutzer:in versteht, was der Button bewirkt. Braze unterstützt derzeit OpenURL Suggested Actions. Dies funktioniert ähnlich wie eine URL, bei der Nutzer:innen, die den Button auswählen, zu einer Webseite oder einem anderen URL-identifizierten Standort weitergeleitet werden. 
 
-\![Ein GIF mit drei vorgeschlagenen Aktionen für eine RCS Nachricht, die für aktuelle Modetrends wirbt: "Märchenhaftes Königtum", "Edgy Academia" und "Zeigen Sie mir Ihre anderen Stile".]({% image_buster /assets/img/rcs/rcs_suggested_actions.gif %}){: style="max-width:70%;"}
+![Ein GIF mit drei vorgeschlagenen Aktionen für eine RCS Nachricht, die für aktuelle Modetrends wirbt: "Märchenhaftes Königtum", "Edgy Academia" und "Zeigen Sie mir Ihre anderen Stile".]({% image_buster /assets/img/rcs/rcs_suggested_actions.gif %}){: style="max-width:70%;"}
 
 #### Überlegungen
 
@@ -97,7 +97,7 @@ RCS Nachrichten erlauben Ihnen die Verwendung von Medienformaten, die mit SMS ni
 - Unterstützt Videodateien, einschließlich MP4-, MPEG- und MV4-Dateiformate. Videodateien können per URL direkt im Nachrichten-Editor hinzugefügt werden. 
 - Unterstützt Dokumentdateien im PDF-Format. Dokumentendateien können über die URL direkt im Nachrichten-Editor hinzugefügt werden. 
 
-\![RCS Composer mit einer Option zum Hochladen einer Mediendatei.]({% image_buster /assets/img/rcs/rcs_media_type.png %})
+![RCS Composer mit einer Option zum Hochladen einer Mediendatei.]({% image_buster /assets/img/rcs/rcs_media_type.png %})
 
 #### Datei-Spezifikationen
 
@@ -179,7 +179,7 @@ Wenn Sie Liquid verwenden möchten, stellen Sie sicher, dass Sie einen Standardw
 
 Benötigen Sie Hilfe bei der Erstellung ansprechender Texte? Versuchen Sie es mit dem [KI-Textwerkstatt-Assistenten]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/). Geben Sie einen Produktnamen oder eine Beschreibung ein, und die KI generiert menschenähnliche Marketingtexte für Ihr Messaging.
 
-\![Nachrichten-Editor mit einem Symbol zum Öffnen des KI-Texter-Assistenten.]({% image_buster /assets/img/rcs/rcs_ai_copywriter.png %}){: style="max-width:70%;"}
+![Nachrichten-Editor mit einem Symbol zum Öffnen des KI-Texter-Assistenten.]({% image_buster /assets/img/rcs/rcs_ai_copywriter.png %}){: style="max-width:70%;"}
 
 ## Häufig gestellte Fragen
 

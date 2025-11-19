@@ -48,7 +48,7 @@ Je nach verwendeter Opt-in- bzw. Opt-out-Methode können Sie den nutzerspezifisc
 
 - Erstellen Sie einen [Braze-to-Braze-Webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/braze_to_braze_webhooks/#things-to-know), der den Abo-Status per REST API aktualisiert:
 
-\![Webhook-Composer mit einer Nachricht über die POST-Methode.]({% image_buster /assets/img/whatsapp/whatsapp118.png %}){: style="max-width:90%;"}
+![Webhook-Composer mit einer Nachricht über die POST-Methode.]({% image_buster /assets/img/whatsapp/whatsapp118.png %}){: style="max-width:90%;"}
 
 Um Wettlaufsituationen zu vermeiden, sollten alle auf den Webhook folgenden Nachrichten in einem zweiten Canvas enthalten sein, der durch Ergebnisse aus dem ersten Canvas getriggert wird (etwa wenn jemand eine Canvas-Variante eingegeben hat und einer Abo-Gruppe in WhatsApp angehört).
 

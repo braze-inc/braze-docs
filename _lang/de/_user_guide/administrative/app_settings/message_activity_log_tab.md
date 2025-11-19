@@ -15,7 +15,7 @@ Sie können API-Kampagnentransaktionen einsehen, Details zu fehlgeschlagenen Nac
 
 Um auf das Protokoll zuzugreifen, gehen Sie zu **Einstellungen** > **Nachrichtenaktivitätsprotokoll**.
 
-\![Nachrichten-Aktivitätsprotokoll]({% image_buster /assets/img_archive/message_activity_log.png %})
+![Nachrichten-Aktivitätsprotokoll]({% image_buster /assets/img_archive/message_activity_log.png %})
 
 {% alert tip %}
 Zusätzlich zu diesem Artikel empfehlen wir Ihnen auch unseren Braze Learning-Kurs [Qualitätssicherung und Debugging-Tools](https://learning.braze.com/quality-assurance-and-debugging-tools-in-the-dashboard/), in dem Sie lernen, wie Sie das Message Activity Log für Ihre eigene Fehlersuche und -behebung nutzen können.

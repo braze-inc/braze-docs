@@ -66,7 +66,7 @@ Wählen Sie zunächst den allgemeinen Ereignistyp aus, den Sie verwenden möchte
 
 Setzen Sie sich eine Konversionsfrist. Das ist die maximale Zeitspanne, die bis zur Konversion vergehen darf. Sie haben die Möglichkeit, ein Zeitfenster von bis zu 30 Tagen einzuräumen, in dem es als Konversion zählt, wenn der Benutzer die angegebene Aktion durchführt.
 
-\![Der Konversions-Event-Typ "Tätigt einen Kauf" als Beispiel für die Aufzeichnung von Konversionen für Nutzer:innen, die einen Kauf tätigen. Die Frist beträgt 12 Stunden.]({% image_buster /assets/img_archive/conversion_event_selection.png %})
+![Der Konversions-Event-Typ "Tätigt einen Kauf" als Beispiel für die Aufzeichnung von Konversionen für Nutzer:innen, die einen Kauf tätigen. Die Frist beträgt 12 Stunden.]({% image_buster /assets/img_archive/conversion_event_selection.png %})
 
 Nachdem Sie Ihre Konversions-Events ausgewählt haben, fahren Sie mit der Kampagnenerstellung fort und beginnen mit dem Versand Ihrer Kampagne.
 
@@ -80,6 +80,6 @@ Wenn bei der Erstellung der Kampagne keine Konversionsereignisse ausgewählt wer
 
 Bei Nachrichten mit mehreren Varianten können Sie außerdem die Anzahl und relative Häufigkeit der Konversionsereignisse für Ihre Kontrollgruppe und die einzelnen Varianten einsehen.
 
-\![Vier Konversions-Events, die Konversionen tracken, basierend darauf, wann ein Kauf innerhalb von drei Stunden getätigt wurde, ein Kauf innerhalb von zwei Stunden getätigt wurde, eine Sitzung innerhalb von 30 Minuten begonnen wurde und eine Sitzung innerhalb von 25 Minuten begonnen wurde.]({% image_buster /assets/img_archive/conversion_event_details.png %})
+![Vier Konversions-Events, die Konversionen tracken, basierend darauf, wann ein Kauf innerhalb von drei Stunden getätigt wurde, ein Kauf innerhalb von zwei Stunden getätigt wurde, eine Sitzung innerhalb von 30 Minuten begonnen wurde und eine Sitzung innerhalb von 25 Minuten begonnen wurde.]({% image_buster /assets/img_archive/conversion_event_details.png %})
 
 

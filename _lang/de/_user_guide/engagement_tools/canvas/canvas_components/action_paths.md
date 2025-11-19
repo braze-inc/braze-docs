@@ -12,7 +12,7 @@ tool: Canvas
 
 > Mit den Aktionspfaden in Canvas können Sie Ihre Benutzer auf der Grundlage ihrer Aktionen sortieren. 
 
-\![Ein Aktions-Pfad-Schritt in einer Canvas-Nutzer:innen-Reise.]({% image_buster /assets/img/canvas_actionpath.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
+![Ein Aktions-Pfad-Schritt in einer Canvas-Nutzer:innen-Reise.]({% image_buster /assets/img/canvas_actionpath.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
 Mit Aktionspfaden können Sie:
 
@@ -29,7 +29,7 @@ Legen Sie in den **Aktionseinstellungen** das **Bewertungsfenster** fest, um zu 
 
 In den **Aktionseinstellungen** können Sie auch die Rangfolge für Ihre Komponenten aktivieren, indem Sie den Schalter **Benutzer in Rangfolge vorziehen** einschalten.
 
-\![Die Aktionseinstellungen mit einem Bewertungsfenster von 1 Tag.]({% image_buster /assets/img/actionpath_settings.png %})
+![Die Aktionseinstellungen mit einem Bewertungsfenster von 1 Tag.]({% image_buster /assets/img/actionpath_settings.png %})
 
 In der Standardeinstellung ist **Ranking** ausgeschaltet. Wenn ein:e Nutzer:in den Aktionspfad aufruft und das mit einer Aktionsgruppe verbundene Trigger-Event ausführt, wird er sofort durch die entsprechende Aktionsgruppe geführt. Wenn ein Benutzer kein Trigger-Ereignis auslöst, rückt er am Ende des Bewertungszeitraums in die Standardgruppe **Alle anderen** vor.
 
@@ -63,7 +63,7 @@ Fügen Sie einen oder mehrere Trigger hinzu, um Ihre Aktionsgruppen zu definiere
 - Ein Geofence triggern
 - Eine eingehende SMS oder WhatsApp-Nachricht senden
 
-\![Eine Aktionsgruppe namens "Gruppe 1" für Nutzer:innen, die einen Kauf tätigen.]({% image_buster /assets/img/actionpath_group.png %})
+![Eine Aktionsgruppe namens "Gruppe 1" für Nutzer:innen, die einen Kauf tätigen.]({% image_buster /assets/img/actionpath_group.png %})
 
 In jeder Aktionsgruppeneinstellung haben Sie außerdem die Möglichkeit, das Kontrollkästchen **Ich möchte, dass diese Gruppe den Canvas verlässt** auszuwählen. Das bedeutet, dass die Nutzer:innen dieser Gruppe den Canvas am Ende des Bewertungszeitraums verlassen.
 

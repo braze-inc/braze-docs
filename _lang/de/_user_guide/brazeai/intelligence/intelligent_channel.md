@@ -6,13 +6,13 @@ description: "Dieser Artikel behandelt den Intelligenten Kanalfilter, einen Filt
 search_rank: 11
 ---
 
-# [\![Braze Lernkurse]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/most-engaged-channel){: style="float:right;width:120px;border:0;" class="noimgborder"} Intelligenter Kanal Filter
+# [![Braze Lernkurse]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/most-engaged-channel){: style="float:right;width:120px;border:0;" class="noimgborder"} Intelligenter Kanal Filter
 
 > Der Filter `Intelligent Channel` (zuvor `Most Engaged`) wählt den Teil Ihrer Zielgruppe aus, für den der ausgewählte Messaging-Kanal der "beste" Kanal ist. 
 
 ## Über den Kanal Filter
 
-\![Der Filter für intelligente Kanäle mit einem Dropdown-Menü für die verschiedenen Kanäle, die Sie auswählen können.]({% image_buster /assets/img/intelligent_channel_filter.png %}){: style="float:right;max-width:40%;margin-left:10px;margin-top:10px;border:0"}
+![Der Filter für intelligente Kanäle mit einem Dropdown-Menü für die verschiedenen Kanäle, die Sie auswählen können.]({% image_buster /assets/img/intelligent_channel_filter.png %}){: style="float:right;max-width:40%;margin-left:10px;margin-top:10px;border:0"}
 
 In diesem Fall bedeutet "am besten" den Kanal, der angesichts des Verlaufs der Nutzerin oder des Nutzers die höchste Wahrscheinlichkeit für ein Engagement aufweist. Sie können E-Mail, SMS, WhatsApp, Web-Push oder Mobile-Push (einschließlich aller verfügbaren mobilen Betriebssysteme oder Geräte) als Kanal auswählen.
 
@@ -34,7 +34,7 @@ Wenn Benutzer nicht genügend Nachrichten über die Kanäle erhalten haben, fall
 
 Nehmen wir an, Sie möchten, dass Benutzer, die Push-Nachrichten bevorzugen, eine Push-Nachricht erhalten und Benutzer, die nicht über genügend Daten verfügen, dieselbe Push-Nachricht erhalten. In diesem Fall könnten Sie den Intelligenten Kanalfilter auf **Mobile Push** einstellen und mit **ODER** einen zweiten Intelligenten Kanalfilter hinzufügen, der auf **Nicht genügend Daten** eingestellt ist. Mit einer separaten Kampagne, bei der der Filter für den intelligenten Kanal auf E-Mail eingestellt ist, können Sie Nutzer ansprechen, die E-Mail bevorzugen.
 
-\![Intelligenter Kanal Filter für mobilen Push oder nicht genügend Daten.]({% image_buster /assets/img/intelligent_example.png %}){:style="border:none"}
+![Intelligenter Kanal Filter für mobilen Push oder nicht genügend Daten.]({% image_buster /assets/img/intelligent_example.png %}){:style="border:none"}
 
 {% alert note %}
 Kampagnen und Canvas-Schritte, die die [Frequenzbegrenzung]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#delivery-rules) ignorieren, werden von Intelligent Channel nicht berücksichtigt und können nicht zu den Datenanforderungen beitragen.

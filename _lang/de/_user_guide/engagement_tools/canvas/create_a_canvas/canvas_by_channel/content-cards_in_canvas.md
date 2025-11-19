@@ -15,7 +15,7 @@ channel: content cards
 
 Wie bei anderen Canvas-Messaging-Kanälen werden Content Cards an das Gerät eines Nutzers gesendet, wenn dieser die für die jeweilige Stufe festgelegten Zielgruppen- und Targeting-Kriterien erfüllt. Nachdem die Content Card versendet wurde, ist sie im Feed jedes berechtigten Nutzers verfügbar, wenn dessen Karten-Feed das nächste Mal aktualisiert wird.
 
-\![Content-Cards als Messaging-Kanal für einen Nachrichten-Schritt ausgewählt.]({% image_buster /assets/img_archive/content-cards-in-canvas.png %})
+![Content-Cards als Messaging-Kanal für einen Nachrichten-Schritt ausgewählt.]({% image_buster /assets/img_archive/content-cards-in-canvas.png %})
 
 Zwei Optionen, die die Interaktion des Content-Card-Schrittes mit Canvas verändern, sind sein [Ablauf](#content-card-expiration) und seine [Entfernung](#removal).
 
@@ -23,7 +23,7 @@ Zwei Optionen, die die Interaktion des Content-Card-Schrittes mit Canvas veränd
 
 Wenn Sie eine neue Content-Card erstellen, können Sie anhand der Sendezeit festlegen, wann diese aus dem Feed des Nutzers oder der Nutzerin ablaufen soll. Der Countdown für den Ablauf einer Content-Card beginnt, wenn der oder die Nutzer:in den Nachrichtenschritt im Canvas erreicht, in dem die Karte gesendet wird. Die Karte ist ab diesem Zeitpunkt im Feed des Nutzers der Nutzerin aktiv, bis sie abläuft. Eine Karte kann bis zu 30 Tage lang im Feed eines Benutzers vorhanden sein. 
 
-\![Ablaufeinstellungen für eine Content-Card für einen Nachrichtenschritt, die nach drei Stunden im Feed eines Nutzers:innen entfernt wird.]({% image_buster /assets/img_archive/content-cards-in-canvas-expiration.png %})
+![Ablaufeinstellungen für eine Content-Card für einen Nachrichtenschritt, die nach drei Stunden im Feed eines Nutzers:innen entfernt wird.]({% image_buster /assets/img_archive/content-cards-in-canvas-expiration.png %})
 
 ### Arten des Verfalls
 
@@ -51,13 +51,13 @@ Nachdem eine Content Card abgelaufen ist, wird sie bei der nächsten Aktualisier
 
 Content-Cards können entfernt werden, wenn Nutzer:innen einen Kauf abschließen oder ein angepasstes Event durchführen. Sie können eines der folgenden Ereignisse als Entfernungsereignis auswählen: **Passen Sie ein angepasstes Event an** und **tätigen Sie einen Kauf**. Wählen Sie dann **Ereignis hinzufügen**.
 
-\!["Karten entfernen, wenn Nutzer:innen einen Kauf abschließen oder ein angepasstes Event durchführen." ausgewählt mit dem Trigger, um Karten für Nutzer:innen zu entfernen, die einen bestimmten Kauf für "Armband" tätigen.]({% image_buster /assets/img_archive/content-cards-in-canvas-removal-event.png %})
+!["Karten entfernen, wenn Nutzer:innen einen Kauf abschließen oder ein angepasstes Event durchführen." ausgewählt mit dem Trigger, um Karten für Nutzer:innen zu entfernen, die einen bestimmten Kauf für "Armband" tätigen.]({% image_buster /assets/img_archive/content-cards-in-canvas-removal-event.png %})
 
 ## Berichte und Analysen
 
 Nachdem Sie einen Content-Cards-Schritt in Canvas gestartet haben, können Sie damit beginnen, verschiedene Metriken für diesen Schritt zu analysieren. Zu diesen Metriken gehören die Anzahl der versendeten Nachrichten, eindeutige Empfänger, Konversionsraten, Gesamtumsatz und mehr.
 
-\![Analytics für einen Nachrichtenschritt mit der Content-Card Nachricht Performance.]({% image_buster /assets/img_archive/content-cards-in-canvas-analytics.png %})
+![Analytics für einen Nachrichtenschritt mit der Content-Card Nachricht Performance.]({% image_buster /assets/img_archive/content-cards-in-canvas-analytics.png %})
 
 Weitere Informationen über die verfügbaren Metriken und ihre Definitionen finden Sie in unserem [Glossar der Berichtsmetriken]({{site.baseurl}}/user_guide/data/report_metrics/).
 

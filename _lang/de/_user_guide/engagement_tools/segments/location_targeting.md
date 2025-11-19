@@ -18,13 +18,13 @@ description: "In diesem Artikel erfahren Sie, wie Sie das Location Targeting ein
 
 Navigieren Sie zur Seite **Segmente** unter **Zielgruppe**, um alle Ihre aktuellen Benutzersegmente anzuzeigen. Auf dieser Seite können Sie neue Segmente erstellen und benennen. Um zu beginnen, wählen Sie **Segment erstellen** und geben Sie Ihrem Segment einen Namen.
 
-\![Modal zum Erstellen eines Segments.]({% image_buster /assets/img_archive/createsegment2.png %}){: style="max-width:70%;"}
+![Modal zum Erstellen eines Segments.]({% image_buster /assets/img_archive/createsegment2.png %}){: style="max-width:70%;"}
 
 ## Schritt 2: Standort anpassen
 
 Nachdem Sie Ihr Segment erstellt haben, fügen Sie einen Filter für **den letzten Standort** hinzu, um Nutzer:innen nach dem letzten Ort zu targetieren, an dem sie Ihre App verwendet haben. Sie haben die Möglichkeit, Nutzer:innen innerhalb oder außerhalb eines kreisförmigen Standardbereichs oder eines anpassbaren polygonalen Bereichs zu markieren.
 
-\![Filter für den letzten Standort innerhalb eines Kreises.]({% image_buster /assets/img_archive/filter_recent_location.png %})
+![Filter für den letzten Standort innerhalb eines Kreises.]({% image_buster /assets/img_archive/filter_recent_location.png %})
 
 {% tabs %}
 {% tab Circular %}
@@ -33,7 +33,7 @@ Nachdem Sie Ihr Segment erstellt haben, fügen Sie einen Filter für **den letzt
 
 Bei kreisförmigen Regionen können Sie den Ursprung verschieben und den Positionsradius für Ihre Segmentierung anpassen.
 
-\![Ein kreisförmiger Umriss der Städte zwischen New Jersey und New York.]({% image_buster /assets/img_archive/location_circle.png %}){: style="max-width:70%;"}
+![Ein kreisförmiger Umriss der Städte zwischen New Jersey und New York.]({% image_buster /assets/img_archive/location_circle.png %}){: style="max-width:70%;"}
 
 {% endtab %}
 {% tab Polygonal %}
@@ -42,7 +42,7 @@ Bei kreisförmigen Regionen können Sie den Ursprung verschieben und den Positio
 
 Bei polygonalen Regionen können Sie genauer festlegen, welche Bereiche in Ihrem Segment enthalten sein sollen.
 
-\![Ein Umriss des Staates New York als ausgewählte polygonale Region.]({% image_buster /assets/img_archive/create_polygon.png %}){: style="max-width:70%;"}
+![Ein Umriss des Staates New York als ausgewählte polygonale Region.]({% image_buster /assets/img_archive/create_polygon.png %}){: style="max-width:70%;"}
 
 {% endtab %}
 {% endtabs %}

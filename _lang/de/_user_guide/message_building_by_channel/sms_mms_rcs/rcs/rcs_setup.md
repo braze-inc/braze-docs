@@ -38,7 +38,7 @@ Um für den Versand von RCS mit Braze in Frage zu kommen, muss Ihr Unternehmen i
 
 Bevor Sie RCS-Nachrichten versenden können, müssen Sie einen RCS-verifizierten Sender registrieren. Dies ist die Darstellung Ihrer Marke, die Nutzer:innen auf ihren mobilen Geräten sehen werden. Sie enthält den Namen Ihrer Marke, das Logo, ein Verifizierungs-Badge und optional einen Slogan. Der RCS-verifizierte Sender stärkt das Vertrauen der Kund:in und bestätigt, dass Ihre Nachrichten von einer authentifizierten Quelle stammen. 
 
-\![Ein Beispiel für einen RCS-überprüften Sender in einer RCS Nachricht namens "Cat Failz Cafe".]({% image_buster /assets/img/rcs/rcs_sender.png %}){: style="max-width:60%;"}
+![Ein Beispiel für einen RCS-überprüften Sender in einer RCS Nachricht namens "Cat Failz Cafe".]({% image_buster /assets/img/rcs/rcs_sender.png %}){: style="max-width:60%;"}
 
 Nachdem Sie die RCS SKU(s) zu Ihrem Bestellformular hinzugefügt haben, wird Braze benachrichtigt und setzt sich mit Ihnen in Verbindung, um Ihnen Informationen zur Registrierung von RCS-Sendern zu geben. Das Format dieser Nachrichten hängt von den Ländern ab, an die Sie RCS Nachrichten senden möchten. 
 

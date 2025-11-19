@@ -37,11 +37,11 @@ Wenn Sie den <sup>BrazeAITM</sup> [Intelligent Channel Filter]({{site.baseurl}}/
 
 Um die Linkverkürzung zu verwenden, stellen Sie sicher, dass der Umschalter zur Linkverkürzung im Nachrichten-Editor aktiviert ist. Wählen Sie dann entweder einfaches oder erweitertes Tracking.
 
-\![Nachrichten-Editor mit einem Umschalter für die Linkverkürzung.]({% image_buster /assets/img/link_shortening/shortening1.png %})
+![Nachrichten-Editor mit einem Umschalter für die Linkverkürzung.]({% image_buster /assets/img/link_shortening/shortening1.png %})
 
 Braze erkennt nur URLs, die mit `http://` oder `https://` beginnen. Wenn eine URL erkannt wird, wird der Bereich **Vorschau** mit einer Platzhalter-URL aktualisiert. Braze schätzt die Länge der URL nach dem Kürzen, aber eine Warnung fordert Sie auf, einen Testbenutzer auszuwählen und die Nachricht als Entwurf zu speichern, um eine genauere Schätzung zu erhalten.
 
-\![Nachrichten-Editor mit einer langen URL im Feld "Nachricht" und einem generierten verkürzten Link in der Vorschau.]({% image_buster /assets/img/link_shortening/shortening3.png %})
+![Nachrichten-Editor mit einer langen URL im Feld "Nachricht" und einem generierten verkürzten Link in der Vorschau.]({% image_buster /assets/img/link_shortening/shortening3.png %})
 
 ### Hinzufügen von UTM-Parametern
 
@@ -100,7 +100,7 @@ Stellen Sie sicher, dass Sie die Kampagne oder das Canvas speichern, bevor Sie e
 Wenn ein Entwurf innerhalb eines aktiven Canvas erstellt wird, wird keine verkürzte URL generiert. Dies geschieht erst dann, wenn der Canvas-Entwurf aktiviert wird.
 {% endalert %}
 
-\![Tab "Test" mit Feldern zum Auswählen von Testempfängern.]({% image_buster /assets/img/link_shortening/shortening2.png %})
+![Tab "Test" mit Feldern zum Auswählen von Testempfängern.]({% image_buster /assets/img/link_shortening/shortening2.png %})
 
 {% alert note %}
 Die Flüssigpersonalisierung und die verkürzten URLs werden auf der Registerkarte **Test** nach der Auswahl eines Benutzers als Vorlage verwendet. Überprüfen Sie die Nutzerauswahl, um eine genaue Zeichenzahl zu erhalten.
@@ -110,7 +110,7 @@ Die Flüssigpersonalisierung und die verkürzten URLs werden auf der Registerkar
 
 Wenn die Linkverkürzung aktiviert ist, enthält die Tabelle **SMS/MMS/RCS Performance** eine Spalte mit dem Titel **Gesamtklicks**, in der die Anzahl der Klick-Ereignisse pro Variante und die zugehörige Klickrate angezeigt werden. Weitere Einzelheiten zu den Metriken finden Sie unter [Performance von Nachrichten]({{site.baseurl}}/sms_mms_rcs_reporting/).
 
-\![SMS und MMS Performance Metriken Tabelle.]({% image_buster /assets/img/link_shortening/shortening4.png %})
+![SMS und MMS Performance Metriken Tabelle.]({% image_buster /assets/img/link_shortening/shortening4.png %})
 
 Die Tabellen **Historische Performance** und **SMS/MMS/RCS Performance** enthalten auch eine Option für **Gesamtklicks** und zeigen eine tägliche Zeitreihe von Klick-Ereignissen. Klicks werden bei einer Weiterleitung erhöht (z.B. wenn ein Benutzer einen Link besucht) und können mehr als einmal pro Benutzer erhöht werden.
 

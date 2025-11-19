@@ -25,7 +25,7 @@ Um diese Berichte auszuführen, gehen Sie wie folgt vor:
 - Käufe und Umsatz für Varianten oder Schritte nach Segment
 - Push-Performance nach Segment
 
-\![Die Seite Segmentaufschlüsselung enthält einen SQL-Editor, ein seitliches Panel mit Tabs für Variablen, verfügbare Datentabellen, Abfrageverlauf und den KI Query Builder sowie einen Ergebnisbereich.]({% image_buster /assets/img_archive/segment_breakdown.png %})
+![Die Seite Segmentaufschlüsselung enthält einen SQL-Editor, ein seitliches Panel mit Tabs für Variablen, verfügbare Datentabellen, Abfrageverlauf und den KI Query Builder sowie einen Ergebnisbereich.]({% image_buster /assets/img_archive/segment_breakdown.png %})
 
 ## Vorlagen für Berichte
 

@@ -92,9 +92,9 @@ Da die Entscheidung eines Nutzers endgültig ist und Sie ihn nicht noch einmal f
 
 |Plattform|Bildschirmfoto|Beschreibung|
 |--|--|--|
-|iOS| \![Eine iOS-eigene Push-Aufforderung mit der Frage "Meine App möchte Ihnen Benachrichtigungen senden" mit zwei Buttons "Nicht zulassen" und "Zulassen" am unteren Rand der Nachricht.]({% image_buster /assets/img/push_implementation_guide/ios-push-prompt.png %}){: style="max-width:410px;"} | Dies gilt nicht für die Beantragung einer [vorläufigen Push-Erlaubnis](#provisional-push).|
-|Android| \![Eine Android Push-Nachricht mit der Frage "Erlauben Sie Kitchenerie, Ihnen Benachrichtigungen zu senden?" mit zwei Buttons "Erlauben" und "Nicht erlauben" am unteren Rand der Nachricht.]({% image_buster /assets/img/push_implementation_guide/android-push-prompt.png %}){: style="max-width:410px;"} | Diese Push-Erlaubnis wurde in Android 13 eingeführt. Vor Android 13 war eine Genehmigung zum Senden von Push-Nachrichten nicht erforderlich.|
-|Internet| \![Die systemeigene Push-Eingabeaufforderung eines Webbrowsers mit der Frage "Braze.com möchte eine Benachrichtigung anzeigen" mit zwei Buttons "Blockieren" und "Zulassen" am unteren Rand der Nachricht.]({% image_buster /assets/img/push_implementation_guide/web-push-prompt.png %}){: style="max-width:410px;"} | |
+|iOS| ![Eine iOS-eigene Push-Aufforderung mit der Frage "Meine App möchte Ihnen Benachrichtigungen senden" mit zwei Buttons "Nicht zulassen" und "Zulassen" am unteren Rand der Nachricht.]({% image_buster /assets/img/push_implementation_guide/ios-push-prompt.png %}){: style="max-width:410px;"} | Dies gilt nicht für die Beantragung einer [vorläufigen Push-Erlaubnis](#provisional-push).|
+|Android| ![Eine Android Push-Nachricht mit der Frage "Erlauben Sie Kitchenerie, Ihnen Benachrichtigungen zu senden?" mit zwei Buttons "Erlauben" und "Nicht erlauben" am unteren Rand der Nachricht.]({% image_buster /assets/img/push_implementation_guide/android-push-prompt.png %}){: style="max-width:410px;"} | Diese Push-Erlaubnis wurde in Android 13 eingeführt. Vor Android 13 war eine Genehmigung zum Senden von Push-Nachrichten nicht erforderlich.|
+|Internet| ![Die systemeigene Push-Eingabeaufforderung eines Webbrowsers mit der Frage "Braze.com möchte eine Benachrichtigung anzeigen" mit zwei Buttons "Blockieren" und "Zulassen" am unteren Rand der Nachricht.]({% image_buster /assets/img/push_implementation_guide/web-push-prompt.png %}){: style="max-width:410px;"} | |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### Android
@@ -105,7 +105,7 @@ Ab [Android 13]({{site.baseurl}}/developer_guide/platforms/android/android_13/) 
 
 ### iOS
 
-\![Eine Benachrichtigung im Systembenachrichtigungscenter mit einer Nachricht am unteren Rand, die fragt: "Erhalten Sie weiterhin Benachrichtigungen von der Yachtr App?" mit zwei Buttons darunter für "Behalten" oder "Ausschalten".]({% image_buster /assets/img/push_implementation_guide/ios-provisional-push.png %}){: style="float:right;max-width:430px;width:40%;margin-left:15px;border:0"}
+![Eine Benachrichtigung im Systembenachrichtigungscenter mit einer Nachricht am unteren Rand, die fragt: "Erhalten Sie weiterhin Benachrichtigungen von der Yachtr App?" mit zwei Buttons darunter für "Behalten" oder "Ausschalten".]({% image_buster /assets/img/push_implementation_guide/ios-provisional-push.png %}){: style="float:right;max-width:430px;width:40%;margin-left:15px;border:0"}
 
 Ihre App kann provisorischen Push oder autorisierten Push anfordern. 
 
@@ -164,7 +164,7 @@ Der Filter `Foreground Push Enabled` berücksichtigt Folgendes:
 - Die Möglichkeit für Braze, eine Push-Benachrichtigung zu senden (Foreground Push Token)
 - Die allgemeine Präferenz des Benutzers, Push-Nachrichten auf jedem seiner Geräte zu empfangen (Push-Abonnementstatus)
 
-\![Ein Screenshot des Dashboards, der zeigt, dass ein Nutzer:innen "Push für Marketing (iOS) registriert" ist]({% image_buster /assets/img/push_enablement.png %}){: style="float:right;max-width:50%;margin-left:15px;"}
+![Ein Screenshot des Dashboards, der zeigt, dass ein Nutzer:innen "Push für Marketing (iOS) registriert" ist]({% image_buster /assets/img/push_enablement.png %}){: style="float:right;max-width:50%;margin-left:15px;"}
 
 Nutzerprofile gelten als "Push-aktiviert" oder "Push-registriert", wenn sie ein aktives Push-Token für eine App in Ihrem Workspace aufweisen. Der Push-Aktivierungsstatus ist also App-spezifisch. 
 

@@ -16,7 +16,7 @@ tool:
 
 Fragen Sie die Nutzer zum Beispiel, wie sie Ihre App verwenden möchten, erfahren Sie mehr über ihre persönlichen Vorlieben oder fragen Sie sie nach ihrer Zufriedenheit mit einer bestimmten Funktion.
 
-\![Drei einfache Nachrichten: Benachrichtigungspräferenzen, Ernährungspräferenzen und eine Umfrage zur Kundenzufriedenheit. Die ausgewählten Optionen in den Umfragen entsprechen den angepassten Attributen, die für diese Nutzer:innen protokolliert werden.]({% image_buster /assets/img/iam/iam-survey.png %})
+![Drei einfache Nachrichten: Benachrichtigungspräferenzen, Ernährungspräferenzen und eine Umfrage zur Kundenzufriedenheit. Die ausgewählten Optionen in den Umfragen entsprechen den angepassten Attributen, die für diese Nutzer:innen protokolliert werden.]({% image_buster /assets/img/iam/iam-survey.png %})
 
 ## SDK-Anforderungen {#supported-sdk-versions}
 
@@ -38,7 +38,7 @@ Diese Umfragevorlage wird sowohl für mobile Apps als auch für Webbrowser unter
 
 Um mit der Erstellung Ihrer Umfrage zu beginnen, fügen Sie Ihre Frage in das Feld **Überschrift der** Umfrage ein. Falls gewünscht, können Sie eine optionale **Nachricht** hinzufügen, die unter der Frage Ihrer Umfrage erscheint.
 
-\![Tab des einfachen Editors für Umfragen, mit Feldern für eine Überschrift, einen optionalen Hauptteil und einen optionalen Hilfstext.]({% image_buster /assets/img/iam/iam-survey2.png %}){: style="max-width:90%"}
+![Tab des einfachen Editors für Umfragen, mit Feldern für eine Überschrift, einen optionalen Hauptteil und einen optionalen Hilfstext.]({% image_buster /assets/img/iam/iam-survey2.png %}){: style="max-width:90%"}
 
 {% alert tip %}
 Diese Felder können sowohl Liquid als auch Emojis enthalten, also lassen Sie sich etwas einfallen!
@@ -52,7 +52,7 @@ Wählen Sie entweder **Single-Choice-Auswahl** oder **Multiple-Choice-Auswahl**.
 
 Legen Sie dann fest, ob Sie [angepasste Attribute](#custom-attributes) oder [nur Protokollantworten](#no-attributes) sammeln wollen.
 
-\![Dropdown-Menü mit ausgewählter Option "Attribute bei Übermittlung protokollieren".]({% image_buster /assets/img/iam/collect-attributes.png %}){: style="max-width:60%"}
+![Dropdown-Menü mit ausgewählter Option "Attribute bei Übermittlung protokollieren".]({% image_buster /assets/img/iam/collect-attributes.png %}){: style="max-width:60%"}
 
 #### Angepasste Attribute sammeln {#custom-attributes}
 
@@ -89,11 +89,11 @@ Eine Bestätigungsseite ist ein guter Ort, um sich bei den Nutzern für ihre Zei
 
 Bearbeiten Sie den Text der Schaltfläche und das On-Click-Verhalten im Abschnitt **Schaltfläche einreichen** unten auf der Registerkarte **Umfrage**:
 
-\![Verhalten bei Klick auf "Antworten senden und Bestätigungsseite anzeigen" eingestellt.]({% image_buster /assets/img/iam/confirmation-option.png %}){: style="max-width:60%"}
+![Verhalten bei Klick auf "Antworten senden und Bestätigungsseite anzeigen" eingestellt.]({% image_buster /assets/img/iam/confirmation-option.png %}){: style="max-width:60%"}
 
 Wenn Sie eine Bestätigungsseite hinzufügen möchten, wechseln Sie zur Registerkarte **Bestätigungsseite**, um Ihre Nachricht anzupassen:
 
-\![Tab Bestätigungsseite des einfachen Editors für Umfragen. Die verfügbaren Felder sind Überschrift, optionaler Textkörper, Button-Text und das Verhalten des Buttons beim Klick.]({% image_buster /assets/img/iam/confirmation-page.png %}){: style="max-width:90%"}
+![Tab Bestätigungsseite des einfachen Editors für Umfragen. Die verfügbaren Felder sind Überschrift, optionaler Textkörper, Button-Text und das Verhalten des Buttons beim Klick.]({% image_buster /assets/img/iam/confirmation-page.png %}){: style="max-width:90%"}
 
 Wenn Sie Benutzer auf eine andere Seite Ihrer App oder Website leiten möchten, ändern Sie das **On-Click-Verhalten** des Buttons.
 
@@ -101,7 +101,7 @@ Wenn Sie Benutzer auf eine andere Seite Ihrer App oder Website leiten möchten, 
 
 Sie können die Schriftfarbe und die Akzentfarbe der Nachricht mit dem **Farbthema-Picker** anpassen.
 
-\![Tab des einfachen Editors für Umfragen mit der erweiterten Farbauswahl, nachdem ein Nutzer:innen auf die Farbpalette geklickt hat.]({% image_buster /assets/img/iam/color-theme-picker.png %}){: style="max-width:80%"}
+![Tab des einfachen Editors für Umfragen mit der erweiterten Farbauswahl, nachdem ein Nutzer:innen auf die Farbpalette geklickt hat.]({% image_buster /assets/img/iam/color-theme-picker.png %}){: style="max-width:80%"}
 
 ## Analysieren Sie die Ergebnisse {#analytics}
 

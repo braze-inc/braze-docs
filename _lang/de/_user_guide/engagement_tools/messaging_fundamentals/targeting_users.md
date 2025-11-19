@@ -31,13 +31,13 @@ Um Benutzer anzusprechen, die in mehrere zuvor erstellte Segmente fallen, fügen
 {% tab multiple filters %}
 Um Nutzer:innen zusammenzustellen, ohne ein Segment hinzuzufügen, können Sie eine Reihe von Filtern verwenden. Dies ist eine improvisierte Zielgruppe bei der Erstellung von Nachrichten und erlaubt es Ihnen, die Segmentierung zu überspringen, wenn Sie an einmalige Zielgruppen senden.
 
-\![Zusätzliche Filter für eine Nachricht, die auf Nutzer:innen abzielt, die eine App zuletzt innerhalb eines Tages geöffnet haben, die noch nie eine Kampagne oder einen Canvas-Schritt erhalten haben und die vor weniger als 30 Tagen einen Kauf getätigt haben.]({% image_buster /assets/img_archive/additional_filters.png %}){: style="max-width:90%;"}
+![Zusätzliche Filter für eine Nachricht, die auf Nutzer:innen abzielt, die eine App zuletzt innerhalb eines Tages geöffnet haben, die noch nie eine Kampagne oder einen Canvas-Schritt erhalten haben und die vor weniger als 30 Tagen einen Kauf getätigt haben.]({% image_buster /assets/img_archive/additional_filters.png %}){: style="max-width:90%;"}
 {% endtab %}
 
 {% tab segments & filters %}
 Sie können auch Nutzer:innen aus einem oder mehreren zuvor erstellten Segmenten zusammenstellen, die ebenfalls unter zusätzliche Filter fallen. Nachdem Sie zunächst Ihre Segmente ausgewählt haben, können Sie Ihre Zielgruppe im Abschnitt **Zusätzliche Filter** weiter verfeinern. Dies wird im folgenden Screenshot veranschaulicht. Das Targeting zielt auf Nutzer:innen ab, die im Segment "Täglich aktive:r Nutzer:in" sind, im Segment "Niemals geöffnete E-Mail" und vor mehr als 30 Tagen einen Kauf getätigt haben.
 
-\![Targeting-Optionen für eine Nachricht, die zwei Segmente umfassen und einen zusätzlichen Filter für einen letzten Kauf, der weniger als 30 Tage zurückliegt, haben.]({% image_buster /assets/img_archive/target_segmenter.png %}){: style="max-width:90%;"}
+![Targeting-Optionen für eine Nachricht, die zwei Segmente umfassen und einen zusätzlichen Filter für einen letzten Kauf, der weniger als 30 Tage zurückliegt, haben.]({% image_buster /assets/img_archive/target_segmenter.png %}){: style="max-width:90%;"}
 {% endtab %}
 
 {% tab Specific apps %}
@@ -46,18 +46,18 @@ Sie können eine Kampagnen-Nachricht oder einen Canvas-Schritt an bestimmte Apps
 
 Denken Sie jedoch daran, dass ein Nutzer:innen mehrere Apps verwenden kann. Der Filter "Hat App" identifiziert alle Nutzer:in, die die ausgewählte App haben, steuert aber nicht, welche Nutzer:innen Nachrichten erhalten. Wenn Sie zum Beispiel einen Segment-Filter anwenden, bei dem "Hat App" auf Android eingestellt ist, erhalten alle Nutzer:innen, die auch die iOS-App haben, die Nachricht auch auf ihrer iOS-App.
 
-\![Ein Filter für Nutzer:innen, die die App "Hello, World (Android)" haben.]({% image_buster /assets/img_archive/has_app_hello_world.png %}){: style="max-width:60%;"}
+![Ein Filter für Nutzer:innen, die die App "Hello, World (Android)" haben.]({% image_buster /assets/img_archive/has_app_hello_world.png %}){: style="max-width:60%;"}
 
 Nehmen wir an, Sie möchten eine In-App-Nachricht nur an Android-Apps senden.
 
 1. Erstellen Sie ein Segment und legen Sie **Apps und Websites** fest, die auf **Nutzer:innen bestimmter Apps** abzielen, und wählen Sie dann Ihre Android-App aus.
 
-\![Ein Segment, das Nutzer:innen aus einer bestimmten App zusammenstellt, "Test_Android".]({% image_buster /assets/img_archive/app_test_android.png %}){: style="max-width:60%;"}
+![Ein Segment, das Nutzer:innen aus einer bestimmten App zusammenstellt, "Test_Android".]({% image_buster /assets/img_archive/app_test_android.png %}){: style="max-width:60%;"}
 
 {: start="2"}
 2\. Gehen Sie in Ihrer Kampagne oder in Canvas zum Schritt **Zielgruppen** und bestätigen Sie, dass Ihr Segment im Abschnitt **Nutzer:innen nach Segmenten** zusammengestellt ist. 
 
-\![Der Schritt "Targeting Zielgruppen" mit einem ausgewählten Beispielsegment.]({% image_buster /assets/img_archive/target_users_by_segment_example.png %})
+![Der Schritt "Targeting Zielgruppen" mit einem ausgewählten Beispielsegment.]({% image_buster /assets/img_archive/target_users_by_segment_example.png %})
 
 {% alert note %}
 Dies funktioniert nicht, wenn Sie Ihr Segment im Abschnitt **Zusätzliche Filter** über einen Filter für die Segmentzugehörigkeit hinzufügen. Sie müssen Ihr Segment in **Target Users By Segment** direkt referenzieren, um Ihre Nachricht nur an diese App zuzustellen.
@@ -74,13 +74,13 @@ Für E-Mail-Kampagnen können Sie Seed-Gruppen unter dem Abschnitt **Seed-Gruppe
 
 Nachdem Sie Ihrer Zielgruppe Segmente und Filter hinzugefügt haben, können Sie testen, ob Ihre Zielgruppe wie erwartet eingerichtet ist, indem Sie [nach einem Benutzer suchen]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/), um zu überprüfen, ob er den Kriterien der Zielgruppe entspricht.
 
-\![Der Bereich "Nutzer:innen" mit einem Button "Nutzer:innen suchen".]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:70%"}
+![Der Bereich "Nutzer:innen" mit einem Button "Nutzer:innen suchen".]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:70%"}
 
 #### Zusammenfassung der Zielgruppe
 
 Die **Zielgruppenübersicht** gibt Ihnen eine Übersicht über die Personen, die zu Ihrer Zielgruppe gehören. Hier können Sie Ihre Zielgruppe weiter einschränken, indem Sie eine maximale Nutzer:innen-Begrenzung oder eine [Rate-Limiting-Zustellung]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/) festlegen.
 
-\![Der Abschnitt "Zusammenfassung der Zielgruppe" mit Optionen zum Festlegen einer maximalen Nutzer:innen-Obergrenze oder Rate-Limits für die Zustellung.]({% image_buster /assets/img_archive/audience_summary.png %})
+![Der Abschnitt "Zusammenfassung der Zielgruppe" mit Optionen zum Festlegen einer maximalen Nutzer:innen-Obergrenze oder Rate-Limits für die Zustellung.]({% image_buster /assets/img_archive/audience_summary.png %})
 
 #### A/B-Tests
 
@@ -99,7 +99,7 @@ Braze bietet in der Fußzeile detaillierte Statistiken zu den Zielgruppen der Ka
 
 {% multi_lang_include segments.md section='Differing audience size' %}
 
-\![Der Abschnitt "Gesamtbevölkerung" mit geschätzten Zählungen für erreichbare Nutzer:innen in jedem Targeting-Kanal.]({% image_buster /assets/img_archive/multi_channel_footer.png %})
+![Der Abschnitt "Gesamtbevölkerung" mit geschätzten Zählungen für erreichbare Nutzer:innen in jedem Targeting-Kanal.]({% image_buster /assets/img_archive/multi_channel_footer.png %})
 
 {% alert note %}
 Die Berechnung der genauen Statistiken kann einige Minuten in Anspruch nehmen. Diese Funktion berechnet die genauen Statistiken nur auf Segmentebene, nicht auf Filter- oder Filtergruppenebene.<br><br>

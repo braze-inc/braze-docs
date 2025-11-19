@@ -31,11 +31,11 @@ In der Bibliothek sehen Sie den Asset-Typ, die Größe, die Abmessungen, die URL
 * Ziehen Sie die hochzuladenden Bilder oder Ordner per Drag & Drop.
 * Bilder löschen
 
-\![Seite der Mediathek, die einen Bereich "In die Bibliothek hochladen" enthält, in den Sie Dateien per Drag-and-Drop ziehen oder hochladen können. Es gibt auch eine Liste der hochgeladenen Inhalte in der Medienbibliothek.]({% image_buster /assets/img_archive/media_library_main.png %})
+![Seite der Mediathek, die einen Bereich "In die Bibliothek hochladen" enthält, in den Sie Dateien per Drag-and-Drop ziehen oder hochladen können. Es gibt auch eine Liste der hochgeladenen Inhalte in der Medienbibliothek.]({% image_buster /assets/img_archive/media_library_main.png %})
 
 Later when drafting a message in Braze, you can pull in your images from the media library.
 
-\![Je nach Nachrichten-Editor gibt es zwei gängige Möglichkeiten, auf die Bibliothek zuzugreifen. Eine zeigt den E-Mail-Drag-and-Drop-Editor mit dem Titel "Bilder und GIFs" und einem Button "Aus der Medien-Bibliothek hinzufügen". Die andere zeigt die Standard-Editoren, wie Push- und In-App-Nachrichten, mit dem Titel "Medien" und einem Button "Bild hinzufügen".]({% image_buster /assets/img_archive/media_library_composers.png %}){: style="border:none"}
+![Je nach Nachrichten-Editor gibt es zwei gängige Möglichkeiten, auf die Bibliothek zuzugreifen. Eine zeigt den E-Mail-Drag-and-Drop-Editor mit dem Titel "Bilder und GIFs" und einem Button "Aus der Medien-Bibliothek hinzufügen". Die andere zeigt die Standard-Editoren, wie Push- und In-App-Nachrichten, mit dem Titel "Medien" und einem Button "Bild hinzufügen".]({% image_buster /assets/img_archive/media_library_composers.png %}){: style="border:none"}
 
 {% alert tip %} Weitere Hilfe zur Bibliothek finden Sie in unseren [Templates & Medien FAQ]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/faqs). {% endalert %}
 

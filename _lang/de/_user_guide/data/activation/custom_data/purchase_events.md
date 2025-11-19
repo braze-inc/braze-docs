@@ -59,7 +59,7 @@ Beim Targeting von Nutzer:innen stehen Ihnen die folgenden Filter zur Segmentier
 
 Einzelheiten zu den einzelnen Filtern finden Sie im Glossar der [Segmentierungsfilter]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) und in der Filterung nach "Kaufverhalten".
 
-\![Filtern nach Nutzer:innen, die genau drei Käufe getätigt haben]({% image_buster /assets/img/purchase_filter_example.gif %}){: style="max-width:80%;"}
+![Filtern nach Nutzer:innen, die genau drei Käufe getätigt haben]({% image_buster /assets/img/purchase_filter_example.gif %}){: style="max-width:80%;"}
 
 {% alert tip %}
 Wenn Sie nach der Häufigkeit eines bestimmten Kaufs segmentieren möchten, erfassen Sie diesen Kauf einzeln als [inkrementelles angepasstes Attribut]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#custom-attribute-storage).
@@ -179,7 +179,7 @@ Wenn Sie beispielsweise eine E-Commerce-Anwendung haben und einem Nutzer nach ei
 
 **Beispiel für das Triggern auf der Basis von Kauf-Event-Eigenschaften:**
 
-\![Aktionsbasierte Zustellung, um eine Kampagne an Nutzer:innen zu senden, die Kopfhörer mit einem Markennamen wie HeadphoneMart kaufen]({% image_buster /assets/img/purchase2.png %}){: style="max-width:80%;margin-left:15px;"}
+![Aktionsbasierte Zustellung, um eine Kampagne an Nutzer:innen zu senden, die Kopfhörer mit einem Markennamen wie HeadphoneMart kaufen]({% image_buster /assets/img/purchase2.png %}){: style="max-width:80%;margin-left:15px;"}
 
 Weitere Informationen finden Sie unter [Kauf-Details-Objekt]({{site.baseurl}}/api/objects_filters/purchase_object/#purchase-properties-object).
 
@@ -187,7 +187,7 @@ Weitere Informationen finden Sie unter [Kauf-Details-Objekt]({{site.baseurl}}/ap
 
 Die Segmentierung von Event-Eigenschaften ermöglicht Ihnen das Targeting von Nutzer:innen nicht nur auf der Grundlage angepasster Events, sondern auch auf der Grundlage der Eigenschaften, die mit diesen Events verbunden sind. Dieses Feature bietet zusätzliche Filteroptionen bei der Segmentierung von Kauf-Events und angepassten Events.
 
-\![]({% image_buster /assets/img/nested_object3.png %}){: style="max-width:80%;margin-left:15px;"}
+![]({% image_buster /assets/img/nested_object3.png %}){: style="max-width:80%;margin-left:15px;"}
 
 Diese Filter für die Segmentierung umfassen:
 - Hat das angepasste Event mit der Eigenschaft Y mit dem Wert V X-mal in den letzten Y Tagen durchgeführt

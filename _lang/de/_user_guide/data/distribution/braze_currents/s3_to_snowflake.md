@@ -109,12 +109,12 @@ COPY INTO
 
 1. Navigieren Sie in AWS zu dem entsprechenden Bucket der neuen Snowflake-Stufe. Gehen Sie dann auf der Registerkarte **Eigenschaften** auf **Ereignisse**.
 
-\![AWS Eigenschaften Tab]({% image_buster /assets/img/aws-properties.png %}){: height="50%" width="50%"}
+![AWS Eigenschaften Tab]({% image_buster /assets/img/aws-properties.png %}){: height="50%" width="50%"}
 
 {: start="2"}
 2\. Erstellen Sie je nach Bedarf neue Ereignisse für jeden Satz von Currents-Daten[(Messaging]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/), [Nutzer:innen]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/)) oder für beide.
 
-\![Erstellen eines neuen Ereignisses in AWS]({% image_buster /assets/img/aws-events.png %}){: height="50%" width="50%"}
+![Erstellen eines neuen Ereignisses in AWS]({% image_buster /assets/img/aws-events.png %}){: height="50%" width="50%"}
 
 {: start="3"}
 3\. Markieren Sie das entsprechende Kästchen für das Objekt, das die Benachrichtigungen erstellen soll, sowie den ARN am unteren Rand des Formulars (aus der Spalte Benachrichtigungskanal in Snowflake).

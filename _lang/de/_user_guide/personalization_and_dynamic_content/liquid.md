@@ -83,13 +83,13 @@ Siehe [Filter]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/l
 
 Jedes Liquid-Element entspricht einer Farbe, sodass Sie im Liquid-Editor sofort den Überblick haben.
 
-\![]({% image_buster /assets/img/liquid_color_code.png %})
+![]({% image_buster /assets/img/liquid_color_code.png %})
 
 #### Vorausschauende Liquids
 
 Sie können auch vorausschauende Liquids für benutzerdefinierte Attribute, Attributnamen etc. nutzen, wenn Sie personalisierte Nachrichten erstellen.
 
-\![]({% image_buster /assets/img/liquid_auto_complete.gif %}){: style="max-width:70%;"}
+![]({% image_buster /assets/img/liquid_auto_complete.gif %}){: style="max-width:70%;"}
 
 ## Begriffe, die Sie kennen sollten
 

@@ -40,7 +40,7 @@ Bei Canvas-Schritten mit einem durch eine Aktion getriggerter Entry können Nutz
 
 Sie können wählen, wann die In-App-Nachricht abläuft. Während dieser Zeit bleibt die In-App-Nachricht stehen und wartet darauf, angesehen zu werden, bis sie das Ablaufdatum erreicht hat. Nachdem die In-App-Nachricht gesendet wurde, kann sie einmalig angesehen werden.
 
-\![Der Abschnitt Message Controls eines Nachrichtenschritts für eine In-App-Nachricht. Die In-App-Nachricht läuft drei Tage nach der Verfügbarkeit des Schritts ab.]({% image_buster /assets/img_archive/canvas_expiration2.png %}){: style="max-width:90%"}
+![Der Abschnitt Message Controls eines Nachrichtenschritts für eine In-App-Nachricht. Die In-App-Nachricht läuft drei Tage nach der Verfügbarkeit des Schritts ab.]({% image_buster /assets/img_archive/canvas_expiration2.png %}){: style="max-width:90%"}
 
 | Option | Beschreibung | Beispiel |
 |---|---|---|
@@ -167,7 +167,7 @@ Ein Nutzer:innen kann in Ihrem Canvas zwei In-App-Nachrichten gleichzeitig trigg
 
 Wählen Sie **Exakte Priorität festlegen** und ziehen Sie verschiedene Canvas-Schritte, um ihre Priorität für den Canvas neu zu ordnen. Standardmäßig werden frühere Schritte in einer Canvas-Variante vor späteren Schritten angezeigt. Nachdem Ihre Schritte in der von Ihnen gewünschten Reihenfolge angeordnet sind, wählen Sie **Sortierung anwenden**.
 
-\![Der Prioritätssortierer mit zwei Schritten "Willkommen IAM" und "Followup IAM".]({% image_buster /assets/img_archive/canvas_priority2.png %}){: style="max-width:85%"}
+![Der Prioritätssortierer mit zwei Schritten "Willkommen IAM" und "Followup IAM".]({% image_buster /assets/img_archive/canvas_priority2.png %}){: style="max-width:85%"}
 
 ### Änderungen an Entwürfen von aktiven Canvase vornehmen
 
@@ -221,7 +221,7 @@ Sie können aus den folgenden Aktionen triggern, um Ihre Nutzer:innen zu targeti
 
 Ein Nutzer:innen muss den Canvas-Schritt eingeben, eine Sitzung starten und dann den Trigger ausführen, um eine In-App-Nachricht zu erhalten. Das bedeutet, dass Updates mitten in der Sitzung nicht unterstützt werden. Wenn der Auslöser zum Beispiel der Start einer Sitzung ist, muss der Nutzer:innen nur den Canvas-Schritt betreten und eine Sitzung starten, um die In-App-Nachricht zu erhalten. Wenn der Auslöser nicht der Start einer Sitzung ist, muss der Nutzer:innen den Canvas-Schritt betreten, eine Sitzung starten und dann den Trigger ausführen, um die In-App-Nachricht zu erhalten.
 
-\!["Einen bestimmten Kauf tätigen" als triggernde Aktion ausgewählt.]({% image_buster /assets/img_archive/canvas_trigger_actions.png %}){: style="max-width:90%"}
+!["Einen bestimmten Kauf tätigen" als triggernde Aktion ausgewählt.]({% image_buster /assets/img_archive/canvas_trigger_actions.png %}){: style="max-width:90%"}
 
 Die folgenden Canvas Features sind bei In-App-Nachrichten nicht verfügbar. Sie werden also nicht auf Ihre In-App-Nachrichten angewendet, selbst wenn sie aktiviert sind.
 

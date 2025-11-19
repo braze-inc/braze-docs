@@ -34,20 +34,20 @@ Passen wir die Canvas-Details an, um unser Ziel zu erreichen.
 
 1. Wählen Sie **Bearbeiten** neben dem Namen der Vorlage.
 
-\![Der aktuelle Titel und die Beschreibung des Canvas.]({% image_buster /assets/img/canvas_templates/preference_survey1.png %}){: style="max-width:50%;"}
+![Der aktuelle Titel und die Beschreibung des Canvas.]({% image_buster /assets/img/canvas_templates/preference_survey1.png %}){: style="max-width:50%;"}
 
 {:start="2"}
 2\. Aktualisieren Sie den Canvas-Namen, um anzugeben, dass das Canvas für das Targeting neuer Nutzer:innen bei der ersten Verwendung der App gedacht ist.
 3\. Aktualisieren Sie die Beschreibung, um zu erklären, dass dieses Canvas personalisierte Nachrichten enthält.
 4\. Fügen Sie das Tag **Onboarding** hinzu, damit wir auf der Canvas-Startseite danach filtern können.
 
-\![Der neue Name, die Beschreibung und der Tag für das Canvas.]({% image_buster /assets/img/canvas_templates/preference_survey2.png %}){: style="max-width:90%;"}
+![Der neue Name, die Beschreibung und der Tag für das Canvas.]({% image_buster /assets/img/canvas_templates/preference_survey2.png %}){: style="max-width:90%;"}
 
 ### Schritt 2: Konversions-Events zuweisen
 
 Aktualisieren Sie das **primäre Konversions-Event - A** auf **Performs Custom Event**. Wählen Sie dann die **zuletzt verwendete App** für das angepasste Event aus.
 
-\![Zuletzt verwendete App als ausgewählter angepasster Event-Name für das Konversions-Event.]({% image_buster /assets/img/canvas_templates/preference_survey3.png %}){: style="max-width:90%;"}
+![Zuletzt verwendete App als ausgewählter angepasster Event-Name für das Konversions-Event.]({% image_buster /assets/img/canvas_templates/preference_survey3.png %}){: style="max-width:90%;"}
 
 ### Schritt 3: Entry-Zeitplan anpassen
 
@@ -55,19 +55,19 @@ Behalten wir den Zeitplan für den Eingang als **aktionsbasiert** bei, damit die
 
 Wir nehmen ein Update in diesem Abschnitt vor, indem wir das **Fenster Eingang** auf das gewünschte Datum und die Uhrzeit anpassen.
 
-\!["Eingangsfenster" Abschnitt mit der Startzeit 30\. Januar 2025 um 12 Uhr.]({% image_buster /assets/img/canvas_templates/preference_survey4.png %}){: style="max-width:90%;"}
+!["Eingangsfenster" Abschnitt mit der Startzeit 30\. Januar 2025 um 12 Uhr.]({% image_buster /assets/img/canvas_templates/preference_survey4.png %}){: style="max-width:90%;"}
 
 ### Schritt 4: Wählen Sie die Zielgruppe aus
 
 Wir werden die Zielgruppe unverändert beibehalten, um unsere Nutzer:innen anzusprechen, die die StyleRyde App vor weniger als einem Tag zum ersten Mal genutzt haben.
 
-\![Der Filter "Diese Apps wurden vor weniger als 1 Tag zum ersten Mal verwendet" wurde ausgewählt, um die Zielgruppe für den Eingang anzusprechen.]({% image_buster /assets/img/canvas_templates/preference_survey5.png %}){: style="max-width:90%;"}
+![Der Filter "Diese Apps wurden vor weniger als 1 Tag zum ersten Mal verwendet" wurde ausgewählt, um die Zielgruppe für den Eingang anzusprechen.]({% image_buster /assets/img/canvas_templates/preference_survey5.png %}){: style="max-width:90%;"}
 
 ### Schritt 5: Wählen Sie Ihre Sendeeinstellungen aus
 
 Wir behalten die Standard Abo-Einstellungen bei, d.h. wir senden nur an Nutzer:innen, die Nachrichten oder Benachrichtigungen mit aktivierten Ruhezeiten abonniert oder sich dafür entschieden haben, und überspringen die anderen Einstellungen (Frequency-Capping und Seed-Gruppen).
 
-\!["Sendeeinstellungen" mit den Abo-Einstellungen für Nutzer:in, die ein Abonnement oder Opt-in mit eingeschalteten Ruhezeiten zwischen 12 und 20 Uhr haben.]({% image_buster /assets/img/canvas_templates/preference_survey6.png %}){: style="max-width:90%;"}
+!["Sendeeinstellungen" mit den Abo-Einstellungen für Nutzer:in, die ein Abonnement oder Opt-in mit eingeschalteten Ruhezeiten zwischen 12 und 20 Uhr haben.]({% image_buster /assets/img/canvas_templates/preference_survey6.png %}){: style="max-width:90%;"}
 
 ### Schritt 6: Canvas anpassen
 
@@ -79,7 +79,7 @@ Jetzt bauen wir unser Canvas auf, indem wir die Inhalte anpassen, die an die Nut
 - Nutzer:innen, die eine Sitzung begonnen oder auf die Onboarding E-Mail geklickt haben
 - Nutzer:innen, die keine Sitzung begonnen oder auf die Onboarding E-Mail geklickt haben
 
-\![Ein Aktions-Pfad-Schritt, der in zwei Pfade aufgeteilt ist, einen für Nutzer:innen, die eine Sitzung begonnen haben, und einen für alle anderen.]({% image_buster /assets/img/canvas_templates/preference_survey8.png %}){: style="max-width:50%;"}
+![Ein Aktions-Pfad-Schritt, der in zwei Pfade aufgeteilt ist, einen für Nutzer:innen, die eine Sitzung begonnen haben, und einen für alle anderen.]({% image_buster /assets/img/canvas_templates/preference_survey8.png %}){: style="max-width:50%;"}
 
 Von hier aus werden wir unsere Nutzer:innen und Nachrichten auf der Grundlage der oben genannten Gruppen zusammenstellen.
 
@@ -91,7 +91,7 @@ Nachdem ein Nutzer:innen sein Onboarding abgeschlossen hat, verlässt er den Can
 
 Als Nächstes aktualisieren Sie den Schritt Nachricht **über die Umfrage zu den Inhaltspräferenzen**, um unsere Umfrage zu den Präferenzen einzubeziehen, bei der unsere Nutzer:innen auswählen können, zu welchen Themen sie in Zukunft Informationen erhalten möchten.
 
-\![Eine Vorschau auf die Umfrage zu den Präferenzen, in der die Nutzer:innen aufgefordert werden, alle zutreffenden Interessen auszuwählen.]({% image_buster /assets/img/canvas_templates/preference_survey7.png %}){: style="max-width:90%;"}
+![Eine Vorschau auf die Umfrage zu den Präferenzen, in der die Nutzer:innen aufgefordert werden, alle zutreffenden Interessen auszuwählen.]({% image_buster /assets/img/canvas_templates/preference_survey7.png %}){: style="max-width:90%;"}
 
 #### Nutzer:innen anstupsen, die noch nicht mit dem Onboarding begonnen haben 
 

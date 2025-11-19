@@ -33,7 +33,7 @@ Sie können auf die verschachtelten Daten in Ihrem angepassten Event zugreifen, 
 2. Wählen Sie **Eigenschaften verwalten** für die Ereignisse mit verschachtelten Eigenschaften.
 3. Wählen Sie den Button <i class="fas fa-arrows-rotate"></i>, um das Schema zu erstellen. Um das Schema anzuzeigen, wählen Sie den Button <i class="fas fa-plus"></i> plus.
 
-\![]({% image_buster /assets/img_archive/schema_generation_example.png %}){: style="max-width:80%;"}
+![]({% image_buster /assets/img_archive/schema_generation_example.png %}){: style="max-width:80%;"}
 
 Wenn in Zukunft neue Eigenschaften gesendet werden, sind sie erst dann im Schema enthalten, wenn es neu generiert wird. Schemas können alle 24 Stunden neu generiert werden.
 
@@ -141,7 +141,7 @@ Um diese Eigenschaften zum Triggern einer Kampagne zu verwenden, wählen Sie Ihr
 
 Auslösen einer Kampagne mit verschachtelten Eigenschaften durch das Ereignis "Erstellte Wiedergabeliste":
 
-\![Ein Nutzer:in wählt eine verschachtelte Eigenschaft für Eigenschaftsfilter auf einem angepassten Event.]({% image_buster /assets/img/nested_object2.png %})
+![Ein Nutzer:in wählt eine verschachtelte Eigenschaft für Eigenschaftsfilter auf einem angepassten Event.]({% image_buster /assets/img/nested_object2.png %})
 
 Die triggernde Bedingung `songs[].album.yearReleased` "ist" "1968" passt auf ein Ereignis, bei dem einer der Titel ein Album hat, das 1968 veröffentlicht wurde. Wir verwenden die Klammerschreibweise `[]` für das Durchlaufen von Arrays und stimmen überein, wenn **ein** Element in dem durchlaufenen Array mit der Ereigniseigenschaft übereinstimmt.
 
@@ -154,7 +154,7 @@ Der Filter " **Nicht gleich"** passt nur, wenn keine der Eigenschaften in Ihrem 
 
 Auslösen einer Kampagne mit verschachtelten Eigenschaften aus dem Ereignis "Bestellt":
 
-\![Ein Nutzer:in, der die Eigenschaft Filter r_details.name hinzufügt, ist McDonalds für ein angepasstes Event.]({% image_buster /assets/img/nested_object1.png %})
+![Ein Nutzer:in, der die Eigenschaft Filter r_details.name hinzufügt, ist McDonalds für ein angepasstes Event.]({% image_buster /assets/img/nested_object1.png %})
 
 `r_details.name`: "Mcdonalds"<br>
 `r_details.location.city`: "Montclair"
@@ -169,7 +169,7 @@ Wenn Ihre Eigenschaft die Zeichen `[]` oder `.` enthält, müssen Sie diese in d
 
 Um Nutzer:innen auf der Grundlage verschachtelter Event-Eigenschaften zu segmentieren, müssen Sie [Segment-Erweiterungen]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/) verwenden. Nachdem Sie ein Schema erstellt haben, wird der Explorer für verschachtelte Objekte im Bereich Segmentierung angezeigt. 
 
-\![]({% image_buster /assets/img_archive/nested_event_properties_segmentation.png %})
+![]({% image_buster /assets/img_archive/nested_event_properties_segmentation.png %})
 
 Die Segmentierung verwendet die gleiche Notation wie die Triggerung (siehe [Triggerung von Nachrichten](#message-triggering)).
 
@@ -179,7 +179,7 @@ Um Segment-Erweiterungen zu bearbeiten oder zu erstellen, benötigen Sie die Ber
 
 Wählen Sie im Modal " **Personalisierung hinzufügen"** als Personalisierungstyp **"Erweiterte Event-Eigenschaften** " aus. Dies lässt die Möglichkeit zu, verschachtelte Event-Eigenschaften hinzuzufügen, nachdem ein Schema erstellt wurde.
 
-\![]({% image_buster /assets/img_archive/nested_event_properties_personalization.png %}){: style="max-width:70%;"}
+![]({% image_buster /assets/img_archive/nested_event_properties_personalization.png %}){: style="max-width:70%;"}
 
 ## Häufig gestellte Fragen
 

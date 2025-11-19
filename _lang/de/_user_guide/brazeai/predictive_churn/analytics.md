@@ -25,7 +25,7 @@ Die Verteilung der Punktzahlen für die gesamte Prognosegruppe wird oben auf der
 
 Wenn Sie den Schieberegler verschieben, informiert Sie der Balken in der linken Hälfte des unteren Bereichs darüber, wie viele Nutzer aus der gesamten Vorhersagezielgruppe angesprochen werden sollen.
 
-\![]({% image_buster /assets/img/churn/churnTargeting.gif %})
+![]({% image_buster /assets/img/churn/churnTargeting.gif %})
 
 ## Churn Score und Kategorie {#churn_score}
 
@@ -43,7 +43,7 @@ Die Bewertungen und die entsprechenden Kategorien werden nach dem Zeitplan aktua
 
 In der rechten Hälfte der Tabelle unterhalb des Diagramms zeigen wir Schätzungen der erwarteten Genauigkeit bei der Ansprache dieses Teils der Zielgruppe. Auf der Grundlage von Daten über Nutzer in der Vorhersagezielgruppe in der Vergangenheit und der offensichtlichen Genauigkeit des Modells bei der Unterscheidung zwischen abwandernden und nicht abwandernden Nutzern auf der Grundlage dieser Daten aus der Vergangenheit schätzen diese Fortschrittsbalken eine zukünftige potenzielle Nachricht unter Verwendung der mit dem Schieberegler hervorgehobenen Zielgruppe:
 
-\![]({% image_buster /assets/img/churn/churnEstimatedResults.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
+![]({% image_buster /assets/img/churn/churnEstimatedResults.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
 - Anzahl der ausgewählten Nutzer:innen, die voraussichtlich abwandern werden
 - Wie viele ausgewählte Nutzer:innen werden voraussichtlich **nicht** abwandern

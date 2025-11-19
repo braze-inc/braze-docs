@@ -47,7 +47,7 @@ Sie können auch eine Empfehlung direkt aus einem einzelnen Katalog erstellen. W
 
 Geben Sie Ihrer Empfehlung einen Namen und eine optionale Beschreibung.
 
-\!["Empfehlungsdetails" Schritt mit den Feldern Name und Beschreibung.]({% image_buster /assets/img/item_recs_1.png %})
+!["Empfehlungsdetails" Schritt mit den Feldern Name und Beschreibung.]({% image_buster /assets/img/item_recs_1.png %})
 
 ### Schritt 3: Definieren Sie Ihre Empfehlung {#recommendation-type}
 
@@ -61,7 +61,7 @@ Wenn Sie die Option **Neueste** oder **KI personalisiert** verwenden, erhalten B
 
 Um zu vermeiden, dass Artikel vorgeschlagen werden, die ein Benutzer bereits gekauft oder mit denen er interagiert hat, wählen Sie **Keine Artikel empfehlen, mit denen Benutzer zuvor interagiert** haben. Diese Option ist nur verfügbar, wenn der **Empfehlungstyp** auf **AI personalisiert** eingestellt ist.
 
-\!["Definieren Sie Ihre Empfehlung" mit "KI Personalisiert" als Typ und der ausgewählten Option "Keine Artikel empfehlen, mit denen Nutzer:innen zuvor interagiert haben".]({% image_buster /assets/img/item_recs_2-3.png %})
+!["Definieren Sie Ihre Empfehlung" mit "KI Personalisiert" als Typ und der ausgewählten Option "Keine Artikel empfehlen, mit denen Nutzer:innen zuvor interagiert haben".]({% image_buster /assets/img/item_recs_2-3.png %})
 
 Diese Einstellung verhindert, dass Nachrichten die Artikel wiederverwenden, die ein Benutzer bereits gekauft oder mit denen er interagiert hat, vorausgesetzt, die Empfehlung wurde kürzlich aktualisiert. Artikel, die Sie zwischen den Empfehlungsaktualisierungen gekauft haben oder mit denen Sie interagiert haben, können weiterhin angezeigt werden. Für die kostenlose Version der Artikel-Empfehlungen werden wöchentlich Aktualisierungen vorgenommen. In der Pro-Version erfolgt die Aktualisierung der KI-Artikelempfehlungen alle 24 Stunden.
 
@@ -75,7 +75,7 @@ Falls noch nicht ausgefüllt, wählen Sie den [Katalog]({{site.baseurl}}/user_gu
 
 Wenn Sie mehr Kontrolle über Ihre Empfehlung wünschen, wählen Sie eine [Auswahl]({{site.baseurl}}/user_guide/data/activation/catalogs/selections/), um benutzerdefinierte Filter anzuwenden. Mit Auswahlen können Empfehlungen nach bestimmten Spalten im Katalog wie Marke, Größe oder Standort gefiltert werden. Auswahlen, die Liquid enthalten, können nicht in Ihrer Empfehlung verwendet werden.
 
-\![Ein Beispiel für die für die Empfehlung ausgewählte "vorrätige" Auswahl.]({% image_buster /assets/img/item_recs_2-2.png %})
+![Ein Beispiel für die für die Empfehlung ausgewählte "vorrätige" Auswahl.]({% image_buster /assets/img/item_recs_2-2.png %})
 
 {% alert tip %}
 Wenn Sie keine Auswahl finden können, vergewissern Sie sich zunächst, dass sie im Katalog eingerichtet ist.
@@ -93,7 +93,7 @@ Möglich sind:
 
 Unter **Benutzerdefiniertes Ereignis** können Sie ein Ereignis aus der Liste auswählen.
 
-\![Das angepasste Event "Abgeschlossener Kauf" ausgewählt, wie die Events derzeit getrackt werden.]({% image_buster /assets/img/item_recs_3.png %})
+![Das angepasste Event "Abgeschlossener Kauf" ausgewählt, wie die Events derzeit getrackt werden.]({% image_buster /assets/img/item_recs_3.png %})
 
 ### Schritt 5: Wählen Sie den entsprechenden Eigenschaftsnamen {#property-name}
 
@@ -103,7 +103,7 @@ Wählen Sie dieses Feld für den **Eigenschaftsnamen**.
 
 Das Feld **Eigenschaftsname** wird mit einer Liste von Feldern vorausgefüllt, die über das SDK an Braze gesendet werden. Wenn genügend Daten zur Verfügung gestellt werden, werden diese Eigenschaften auch in der Reihenfolge der Wahrscheinlichkeit, dass es sich um die richtige Eigenschaft handelt, eingeordnet. Wählen Sie daraus das aus, das zu dem Katalogfeld `id` passt.
 
-\![Der Name der Eigenschaft "purchase_item" wurde ausgewählt, die den IDs der Artikel im Katalog entspricht.]({% image_buster /assets/img/item_recs_4.png %})
+![Der Name der Eigenschaft "purchase_item" wurde ausgewählt, die den IDs der Artikel im Katalog entspricht.]({% image_buster /assets/img/item_recs_4.png %})
 
 #### Anforderungen {#requirements}
 

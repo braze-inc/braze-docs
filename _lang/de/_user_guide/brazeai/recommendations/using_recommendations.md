@@ -25,7 +25,7 @@ Nachdem Ihre Empfehlung trainiert wurde, können Sie Ihre Nachrichten mit Liquid
 
 {% tabs local %}
 {% tab pre-formatted code %}
-\!["Modal "Personalisierung hinzufügen" mit Artikel-Empfehlung als Personalisierungstyp.]({% image_buster /assets/img/add_personalization.png %}){: style="max-width:30%;float:right;margin-left:15px;"}
+!["Modal "Personalisierung hinzufügen" mit Artikel-Empfehlung als Personalisierungstyp.]({% image_buster /assets/img/add_personalization.png %}){: style="max-width:30%;float:right;margin-left:15px;"}
 
 Sie können Liquid über den Abschnitt **Personalisierung hinzufügen** in Ihrem Nachrichten-Editor erstellen:
 
@@ -94,7 +94,7 @@ Wenn der Katalog Ihrer Empfehlung Bildlinks enthält, können Sie diese in Ihrer
 {% tab Drag-and-drop%}
 Fügen Sie im E-Mail Drag-and-Drop-Editor einen Bildblock zu Ihrer E-Mail hinzu und wählen Sie dann den Bildblock aus, um die **Eigenschaften des Bildes** zu öffnen.
 
-\![Panel für Bildeigenschaften im Drag-and-Drop-Editor]({% image_buster /assets/img/image_with_liquid.png %}){: style="max-width:45%"}
+![Panel für Bildeigenschaften im Drag-and-Drop-Editor]({% image_buster /assets/img/image_with_liquid.png %}){: style="max-width:45%"}
 
 Schalten Sie **Bild mit Liquid** um, und fügen Sie dann im Feld **Dynamische URL** Folgendes hinzu:
 

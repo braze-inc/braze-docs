@@ -37,7 +37,7 @@ Um Ihren angepassten Agenten zu erstellen:
 3. Geben Sie einen Namen und eine Beschreibung ein, damit Ihr Team seinen Zweck versteht.  
 4. Wählen Sie das [Modell](#models), das Ihr Agent verwenden wird.  
 
-\![Schnittstelle der Agentenkonsole zur Erstellung eines angepassten Agenten in Braze. Der Bildschirm enthält Felder zur Eingabe des Agentennamens und der Beschreibung sowie zum Auswählen eines Modells.]( {% image_buster /assets/img/ai_agent/create_custom_agent.png %} )
+![Schnittstelle der Agentenkonsole zur Erstellung eines angepassten Agenten in Braze. Der Bildschirm enthält Felder zur Eingabe des Agentennamens und der Beschreibung sowie zum Auswählen eines Modells.]( {% image_buster /assets/img/ai_agent/create_custom_agent.png %} )
 
 5. Geben Sie dem Agenten Anweisungen. Lesen Sie dazu die [Anleitung zum Schreiben](#writing-instructions).
 6. [Testen Sie die](#testing-your-agent) Ausgabe des [Agenten](#testing-your-agent) und passen Sie die Anweisungen nach Bedarf an.
@@ -158,7 +158,7 @@ Example Output:
 
 Das **Live-Vorschau-Fenster** ist eine Instanz des Agenten, die in der Konfigurationsumgebung als Panel nebeneinander angezeigt wird. Damit können Sie den Agenten testen, während Sie ihn erstellen oder Updates vornehmen, um ihn ähnlich wie die Nutzer:innen zu erleben. Dieser Schritt hilft Ihnen zu bestätigen, dass sich das System so verhält, wie Sie es erwarten, und gibt Ihnen die Möglichkeit, Feinabstimmungen vorzunehmen, bevor es live geht.
 
-\![Agentenkonsole mit dem Live-Vorschaufenster zum Testen eines angepassten Agenten. Die Schnittstelle zeigt ein Beispieleingabefeld mit beispielhaften Kundendaten, einen Button Test ausführen und einen Antwortbereich, in dem die Ausgabe des Agenten erscheint.]( {% image_buster /assets/img/ai_agent/custom_agent_test.png %} )
+![Agentenkonsole mit dem Live-Vorschaufenster zum Testen eines angepassten Agenten. Die Schnittstelle zeigt ein Beispieleingabefeld mit beispielhaften Kundendaten, einen Button Test ausführen und einen Antwortbereich, in dem die Ausgabe des Agenten erscheint.]( {% image_buster /assets/img/ai_agent/custom_agent_test.png %} )
 
 1. In das Feld **Beispieleingaben** können Sie Beispieldaten oder Kunden:in eingeben - alles, was reale Szenarien widerspiegelt, die Ihr Agent bearbeiten wird. 
 2. Wählen Sie **Test ausführen**. Der Agent wird auf der Grundlage Ihrer Konfiguration ausgeführt und zeigt seine Antwort an. Testläufe werden auf Ihr Tages- und Gesamtaufruflimit angerechnet.

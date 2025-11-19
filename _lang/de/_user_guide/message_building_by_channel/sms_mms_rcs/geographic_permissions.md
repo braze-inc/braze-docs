@@ -18,13 +18,13 @@ alias: /geographic_permissions/
 
 Als Administrator:in können Sie die Länder konfigurieren, die auf der Allowlist stehen. Die Länder-Allowlist wird auf der Ebene der [Abo-Gruppe]({{site.baseurl}}/sms_rcs_subscription_groups/) konfiguriert. Sie können darauf zugreifen, indem Sie auf **Zielgruppe** > **Abonnements** gehen und eine SMS-, MMS- oder RCS-Abo-Gruppe auswählen. Die Zulassen-Liste finden Sie unter **Geografische Berechtigungen**.
 
-\![Der bearbeitbare Abschnitt SMS Geografische Berechtigungen für einen Administrator, der mehrere Länder in der "Länderzulassungsliste" ausgewählt hat.]({% image_buster /assets/img/sms/sms_geographic_permissions.png %}){: style="max-width:80%;"}
+![Der bearbeitbare Abschnitt SMS Geografische Berechtigungen für einen Administrator, der mehrere Länder in der "Länderzulassungsliste" ausgewählt hat.]({% image_buster /assets/img/sms/sms_geographic_permissions.png %}){: style="max-width:80%;"}
 
 ### Länder auswählen
 
 Fügen Sie über das Dropdown-Menü Länder zur Liste der zulässigen Länder hinzu. Die gebräuchlichsten SMS- und RCS-Länder werden oben angezeigt, andere darunter. Sie können auch nach Ländern suchen, indem Sie in das Textfeld tippen.
 
-\![Das Dropdown-Menü "Länderliste" mit den gängigsten Ländern wird oben angezeigt.]({% image_buster /assets/img/sms/allowlist_dropdown.png %}){: style="max-width:80%;"}
+![Das Dropdown-Menü "Länderliste" mit den gängigsten Ländern wird oben angezeigt.]({% image_buster /assets/img/sms/allowlist_dropdown.png %}){: style="max-width:80%;"}
 
 Entfernen Sie zuvor ausgewählte Länder, indem Sie die entsprechenden Kontrollkästchen neben den Ländern deaktivieren.
 
@@ -38,7 +38,7 @@ Modal mit einer Warnung über die Länder, die aus der Liste der zulässigen Lä
 
 In bestimmten Ländern besteht ein höheres Risiko, dass SMS- und RCS-Datenverkehr gepumpt wird. Diese Länder sind in der Dropdown-Liste mit einem **hohen Risiko** gekennzeichnet.
 
-\![Das Länder-Dropdown mit Aserbaidschan mit dem Tag "Hohes Risiko".]({% image_buster /assets/img/sms/high_risk.png %}){: style="max-width:80%;"}
+![Das Länder-Dropdown mit Aserbaidschan mit dem Tag "Hohes Risiko".]({% image_buster /assets/img/sms/high_risk.png %}){: style="max-width:80%;"}
 
 Wenn Sie den Versand in diese Länder zulassen, müssen Sie zunächst das damit verbundene Risiko anerkennen, bevor das Land in Ihre Zulassungsliste aufgenommen wird.
 
@@ -52,5 +52,5 @@ Sendeversuche an Länder, die nicht auf Ihrer Allowlist stehen, werden abgebroch
 
 Abgebrochene Nachrichten, die durch blockierte Sendungen verursacht wurden, werden als **Fehler bei abgebrochenen Nachrichten** angezeigt und enthalten die Nachricht "Die Telefonnummer des Empfängers befindet sich in einem blockierten Land".
 
-\![Abbruchprotokoll mit mehreren SMS-Sendungen, die blockiert wurden, weil sich die Telefonnummer in einem blockierten Land befindet.]({% image_buster /assets/img/sms/abort_log.png %}){: style="max-width:80%;"}
+![Abbruchprotokoll mit mehreren SMS-Sendungen, die blockiert wurden, weil sich die Telefonnummer in einem blockierten Land befindet.]({% image_buster /assets/img/sms/abort_log.png %}){: style="max-width:80%;"}
 

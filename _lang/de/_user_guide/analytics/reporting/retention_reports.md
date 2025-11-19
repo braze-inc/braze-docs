@@ -19,7 +19,7 @@ Berichte zur Bindung sind für API-getriggerte Kampagnen nicht verfügbar.
 
 ### Schritt 1: Wählen Sie einen Datumsbereich aus
 
-\![Berichtsdatum]({% image_buster /assets/img/date_select_retention.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
+![Berichtsdatum]({% image_buster /assets/img/date_select_retention.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
 
 Beginnen Sie, indem Sie eine beliebige Kampagne oder ein Canvas in Ihrem Braze-Dashboard besuchen und einen Datumsbereich für Ihren Bericht auswählen. Die Auswahl eines geeigneten Datumsbereichs ist von entscheidender Bedeutung, da er sich auf die Bindungsberichte auswirkt. 
 
@@ -42,13 +42,13 @@ Als nächstes wählen Sie **Varianten analysieren**. Von hier aus können Sie Ih
 {% endtab %}
 {% endtabs %}
 
-\![Wählen Sie ein Ereignis der Bindung aus]({% image_buster /assets/img/retention_1.png %}){: style="max-width:80%"}
+![Wählen Sie ein Ereignis der Bindung aus]({% image_buster /assets/img/retention_1.png %}){: style="max-width:80%"}
 
 ### Schritt 3: Bericht erzeugen
 
 Nachdem Sie ein Ereignis für die Bindung ausgewählt haben, wählen Sie **Bericht ausführen**, um die Abfrage zu starten.
 
-\![Bericht ausführen]({% image_buster /assets/img/retention_2.png %}){: style="max-width:80%"}
+![Bericht ausführen]({% image_buster /assets/img/retention_2.png %}){: style="max-width:80%"}
 
 Die Ausführung dieser Abfrage kann einige Minuten dauern, je nachdem, wie viele Daten abgerufen werden müssen, um die Ergebnisse zu generieren. Wenn es zu lange dauert, erhalten Sie eine Benachrichtigung, die Sie auffordert, das Laden des Berichts zu wiederholen. Es kann sein, dass Sie bis zu fünf Minuten warten müssen, bevor der Bericht geladen wird.
 
@@ -59,12 +59,12 @@ Der Bericht listet nur die Tage auf, an denen die Kampagne oder der Canvas Nachr
 {% tabs %}
 {% tab Campaign %}
 
-\![Vollständiger Bericht]({% image_buster /assets/img/campaign_retention3.png %})
+![Vollständiger Bericht]({% image_buster /assets/img/campaign_retention3.png %})
 
 {% endtab %}
 {% tab Canvas %}
 
-\![Vollständiger Bericht]({% image_buster /assets/img/canvas_retention_report.png %}){: style="max-width:70%"}
+![Vollständiger Bericht]({% image_buster /assets/img/canvas_retention_report.png %}){: style="max-width:70%"}
 
 {% endtab %}
 {% endtabs %}
@@ -83,7 +83,7 @@ Ein:e Nutzer:in, der oder die das Event innerhalb eines Zeitfensters von 30+ Tag
 
 Das Chart des Berichts über die Bindung für die Spalte Tag drei würde wie folgt aussehen: Y% oder Y Anzahl der Nutzer:innen (basierend auf den gewählten Einheiten) haben das Ereignis drei oder mehr Tage nach Erhalt der Kampagne an Tag Z durchgeführt.
 
-\![Rolling Report]({% image_buster /assets/img/campaign_retention3.png %})
+![Rolling Report]({% image_buster /assets/img/campaign_retention3.png %})
 
 Ein weiteres Beispiel ist die Tabelle in der vorangehenden Abbildung. Am 25\. März haben insgesamt 38 Nutzer:innen die Bindung durchgeführt. Die Bindung am Tag Null lag bei 68,42%, was bedeutet, dass 68,42% der Nutzer:innen das Bindeereignis null oder mehr Tage (am Tag Null oder später) nach Erhalt der Kampagne durchgeführt haben. Die Bindung am siebten Tag lag bei 57,89%, d.h. 57,89% der Nutzer:innen haben das Ereignis sieben oder mehr Tage (am siebten Tag oder später) nach Erhalt der Kampagne durchgeführt.
 
@@ -97,7 +97,7 @@ Die Bindung an den Bereich misst, wie viele Nutzer:innen innerhalb der oben im B
 
 Bereichsberichte gehören zu den am intuitivsten zu lesenden Berichten. Sie geben eindeutig an, welcher Prozentsatz aller Nutzer:innen in einer Kohorte das Bindungs-Event innerhalb eines bestimmten Zeitraums durchgeführt hat. In der folgenden Abbildung, die sich auf die Kohorte „Alle Nutzer:innen“ bezieht, haben beispielsweise 35,71 % der Kohorte im Datumsbereich „Tag 0 (0–24 Std.)“ den Bericht über die Speicherung durchgeführt. Wenn ein:e Nutzer:in mehrere Bindungs-Events innerhalb mehrerer Datumsbereiche durchführt, werden sie für jeden Bereich als gebunden gezählt.
 
-\![Bericht zur Bindung]({% image_buster /assets/img/range_retention.png %})
+![Bericht zur Bindung]({% image_buster /assets/img/range_retention.png %})
 
 ### Komponenten des Bindungsberichts
 
@@ -123,12 +123,12 @@ Einige Anwendungsfälle für die Darstellung der Performance nach Varianten:
 {% tabs %}
 {% tab Campaign %}
 
-\![Ansicht nach Variante]({% image_buster /assets/img/variant_view.png %})
+![Ansicht nach Variante]({% image_buster /assets/img/variant_view.png %})
 
 {% endtab %}
 {% tab Canvas %}
 
-\![Ansicht nach Variante]({% image_buster /assets/img/variant_view_canvas.png %})
+![Ansicht nach Variante]({% image_buster /assets/img/variant_view_canvas.png %})
 
 {% endtab %}
 {% endtabs %}

@@ -34,7 +34,7 @@ Führen Sie diese Schritte aus, um Ihre AWS Secret Key-Authentifizierungsmethode
     - **[Verschlüsseln/Entschlüsseln](https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html#create-symmetric-cmk):** Wählen Sie den Typ des **symmetrischen** Schlüssels und die Verwendung des Schlüssels **zum Ver- und Entschlüsseln** aus.
     - **[Hash](https://docs.aws.amazon.com/kms/latest/developerguide/hmac-create-key.html):** Wählen Sie den Typ **Symmetrischer** Schlüssel und **Generieren und überprüfen Sie die** Verwendung des **MAC-Schlüssels**. Die Schlüsselspezifikation sollte lauten **HMAC_256**. Notieren Sie sich nach der Erstellung des Schlüssels irgendwo die HMAC-Schlüssel-ID, da Sie diese in Braze eingeben müssen.
 
-\![]({% image_buster /assets/img/field_level_encryption_aws_prereq.png %})
+![]({% image_buster /assets/img/field_level_encryption_aws_prereq.png %})
 
 ## Schritt 1: Verbinden Sie Ihre AWS KMS-Schlüssel
 
@@ -50,7 +50,7 @@ Wählen Sie anschließend **E-Mail Adresse**, um das Feld zu verschlüsseln.
 
 Wenn die Verschlüsselung für ein Feld aktiviert ist, kann es nicht wieder in ein entschlüsseltes Feld umgewandelt werden. Das bedeutet, dass die Verschlüsselung eine dauerhafte Einstellung ist. Vergewissern Sie sich beim Einrichten der Verschlüsselung für E-Mail-Adressen, dass keine Nutzer:innen über E-Mail-Adressen im Workspace verfügen. Dadurch wird sichergestellt, dass keine E-Mail-Adressen im Klartext in Braze gespeichert werden, wenn Sie das Feature für den Workspace aktivieren.
 
-\![]({% image_buster /assets/img/field_level_encryption.png %})
+![]({% image_buster /assets/img/field_level_encryption.png %})
 
 ## Schritt 3: Nutzer:innen importieren und aktualisieren
 

@@ -96,7 +96,7 @@ Auf der Registerkarte **Engagement** im Profil eines Benutzers sehen Sie **Push 
 
 Wenn dem App-Namen des Geräteeintrags das Präfix `Foreground:` vorangestellt ist, ist die App berechtigt, auf diesem Gerät sowohl Push-Benachrichtigungen im Vordergrund (für den Benutzer sichtbar) als auch im Hintergrund (für den Benutzer nicht sichtbar) zu empfangen.
 
-\![Push Changelog mit einem Beispiel Push-Token.]({% image_buster /assets/img/push_changelog.png %}){: style="float:right;max-width:40%;margin-left:15px;margin-top:10px;"}
+![Push Changelog mit einem Beispiel Push-Token.]({% image_buster /assets/img/push_changelog.png %}){: style="float:right;max-width:40%;margin-left:15px;margin-top:10px;"}
 
 Wenn dem App-Namen des Geräteeintrags hingegen `Background:` vorangestellt ist, ist die App nur berechtigt, [Push-Nachrichten im Hintergrund]({{site.baseurl}}/user_guide/message_building_by_channel/push/types/#background-push-notifications) zu empfangen und kann keine für den Benutzer sichtbaren Benachrichtigungen auf diesem Gerät anzeigen. Dies bedeutet in der Regel, dass der Benutzer die Benachrichtigungen für die App auf diesem Gerät deaktiviert hat.
 
@@ -119,7 +119,7 @@ Wenn ein:e Nutzer:in eine neue Anwendung öffnet und den Push-Zugriff über eine
 
 Wenn wir eine Kampagne starten möchten, erstellen wir in Braze eine Kampagne, die eine Push-Nutzlast erzeugt, die an den Push-Anbieter gesendet wird. Von dort aus stellt der Anbieter die Push-Nutzdaten dem Gerät des Nutzers oder der Nutzerin zu und das SDK übergibt den Messaging-Status an Braze.
 
-\![Ein Flussdiagramm, das den oben erwähnten Push-Prozess zwischen Braze, den Kund:innen und dem Apple Push-Benachrichtigungsdienst oder Firebase Cloud Messaging abbildet.]({% image_buster /assets/img/push_process.png %})
+![Ein Flussdiagramm, das den oben erwähnten Push-Prozess zwischen Braze, den Kund:innen und dem Apple Push-Benachrichtigungsdienst oder Firebase Cloud Messaging abbildet.]({% image_buster /assets/img/push_process.png %})
 
 | Registrierungsschritte | Messaging-Schritte |
 | ------------------ | --------------- |

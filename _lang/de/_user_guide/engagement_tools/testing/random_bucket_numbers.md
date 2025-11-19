@@ -41,7 +41,7 @@ Wenn Sie Benutzer für Tests innerhalb einer einzelnen Kampagne oder eines einze
 
 Fügen Sie beim [Erstellen eines Segments]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) den Filter "Random Bucket #" hinzu. Geben Sie dann eine Zahl oder einen Zahlenbereich an, den Sie in Ihr Segment aufnehmen möchten.
 
-\![Ein Filter für Segmente, der für zufällige Bucket-Nummern nicht mehr als "3000" ist.]({% image_buster /assets/img_archive/random_buckets_filterexample.png %})
+![Ein Filter für Segmente, der für zufällige Bucket-Nummern nicht mehr als "3000" ist.]({% image_buster /assets/img_archive/random_buckets_filterexample.png %})
 
 Sie können diese Art von Segmenten verwenden, wenn Sie einen Test mit drei verschiedenen Varianten durchführen und auch eine Kontrollgruppe einbeziehen möchten. Betrachten Sie den folgenden Beispielplan für die Erstellung von Segmenten gleicher Größe für drei Varianten und eine Kontrollgruppe:
 

@@ -20,7 +20,7 @@ tool: Media
 
 Die klassische Karte eignet sich hervorragend für Standardnachrichten und Benachrichtigungen oder sogar für die visuelle Kategorisierung von Nachrichten mit Symbolen. Das Bild ist optional, aber es muss im Verhältnis 1:1 sein.
 
-\![Bild einer klassischen Karte mit empfohlenen Details und einem Beispiel für eine klassische Karte]({% image_buster /assets/img/content_card_classic.png %}){: style="max-width:45%;border:0;"}
+![Bild einer klassischen Karte mit empfohlenen Details und einem Beispiel für eine klassische Karte]({% image_buster /assets/img/content_card_classic.png %}){: style="max-width:45%;border:0;"}
 
 | Kartenkapazität | Details |
 | --- | ---|
@@ -35,7 +35,7 @@ Die klassische Karte eignet sich hervorragend für Standardnachrichten und Benac
 
 Die Karte mit Bildunterschrift ist eine großartige Möglichkeit, um wichtige Inhalte, wie z. B. einen großen Verkauf oder eine neue App-Funktion, zu präsentieren und die Aufmerksamkeit darauf zu lenken.
 
-\![Bild einer Bildunterschriftenkarte mit empfohlenen Details und einem Beispiel für eine Bildunterschriftenkarte]({% image_buster /assets/img/content_card_captioned.png %}){: style="max-width:90%;border:0;"}
+![Bild einer Bildunterschriftenkarte mit empfohlenen Details und einem Beispiel für eine Bildunterschriftenkarte]({% image_buster /assets/img/content_card_captioned.png %}){: style="max-width:90%;border:0;"}
 
 | Kartenkapazität | Details |
 | --- | ---|
@@ -50,7 +50,7 @@ Die Karte mit Bildunterschrift ist eine großartige Möglichkeit, um wichtige In
 
 Wenn Sie mehr kreative Kontrolle wünschen, ist die reine Bildkarte das Richtige für Sie. Erstellen Sie Ihr Bild mit einem beliebigen Tool und laden Sie das Bild auf diesen Kartentyp hoch.
 
-\![Bild einer reinen Content-Card mit empfohlenen Details und einem reinen Bildbeispiel]({% image_buster /assets/img/content_card_banner.png %}){: style="max-width:45%;border:0;"}
+![Bild einer reinen Content-Card mit empfohlenen Details und einem reinen Bildbeispiel]({% image_buster /assets/img/content_card_banner.png %}){: style="max-width:45%;border:0;"}
 
 | Kartenkapazität | Details |
 | --- | ---|
@@ -69,11 +69,11 @@ Content Cards verfügen von Anfang an über eine großartige Funktionalität. De
 
 Um eine Karte abzulegen, kann der Benutzer sie auf dem Handy entweder wegwischen oder die Funktion `close X` verwenden, wie im folgenden Screenshot gezeigt. `x` wird nur für das Web-SDK angezeigt, wenn Sie den Mauszeiger darüber bewegen.
 
-\![Bild, das das Verhalten beim Durchziehen oder Schließen einer Karte zeigt]({% image_buster /assets/img/dismissal-cc.png %})
+![Bild, das das Verhalten beim Durchziehen oder Schließen einer Karte zeigt]({% image_buster /assets/img/dismissal-cc.png %})
 
 Wenn ein Benutzer alle seine Karten verworfen hat oder Sie keine neuen Aktualisierungen veröffentlicht haben, sieht der Feed des Benutzers in der Regel etwa so aus:
 
-\![Bild eines leeren Content-Card-Feeds]({% image_buster /assets/img/empty-cc.png %}){: style="max-width:45%"}
+![Bild eines leeren Content-Card-Feeds]({% image_buster /assets/img/empty-cc.png %}){: style="max-width:45%"}
 
 {% alert tip %}
 Sorgen Sie dafür, dass Content-Cards relevant bleiben, indem Sie sie ausblenden, wenn ein:e Nutzer:in entsprechende Aktionen durchführt. Legen Sie z.B. fest, dass Content-Cards für Werbezwecke ausgeblendet werden, sobald Nutzer:innen einen Kauf tätigen, damit sie nicht weiterhin ein Angebot für etwas sehen, das sie bereits gekauft haben.

@@ -18,10 +18,10 @@ Um angepasste Events und Attribute vorzubelegen, gehen Sie wie folgt vor:
 
 1. Gehen Sie zu **Dateneinstellungen** > Angepasste Events oder Angepasste Attribute oder Produkte.
 
-\![Navigieren Sie zu Angepasste Attribute oder Angepasste Events oder Produkte.]({% image_buster /assets/img_archive/prepopulate_page.png %}){: style="max-width:90%;" }
+![Navigieren Sie zu Angepasste Attribute oder Angepasste Events oder Produkte.]({% image_buster /assets/img_archive/prepopulate_page.png %}){: style="max-width:90%;" }
 
 {: start="2"}
-2\. Um ein angepasstes Attribut, Event oder Produkt hinzuzufügen, gehen Sie auf die entsprechende Seite und wählen Sie **Angepasste Attribute hinzufügen** oder **Angepasste Events hinzufügen** oder **Produkte hinzufügen**.<br><br>Für angepasste Attribute wählen Sie einen [Datentyp]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types) für dieses Attribut aus (z.B. boolesch oder String). Der Datentyp eines Attributs bestimmt die Filter für die Segmentierung, die für dieses Attribut verfügbar sind. <br><br>\![Neues Attribut oder Ereignis hinzufügen]({% image_buster /assets/img_archive/prepopulate_add.png %}){: style="max-width:80%;" }
+2\. Um ein angepasstes Attribut, Event oder Produkt hinzuzufügen, gehen Sie auf die entsprechende Seite und wählen Sie **Angepasste Attribute hinzufügen** oder **Angepasste Events hinzufügen** oder **Produkte hinzufügen**.<br><br>Für angepasste Attribute wählen Sie einen [Datentyp]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types) für dieses Attribut aus (z.B. boolesch oder String). Der Datentyp eines Attributs bestimmt die Filter für die Segmentierung, die für dieses Attribut verfügbar sind. <br><br>![Neues Attribut oder Ereignis hinzufügen]({% image_buster /assets/img_archive/prepopulate_add.png %}){: style="max-width:80%;" }
 3\. Wählen Sie **Speichern**.
 
 ### Benennung angepasster Events und angepasster Attribute
@@ -32,7 +32,7 @@ Bei angepassten Events und angepassten Attributen wird zwischen Groß- und Klein
 
 Nachdem Sie ein angepasstes Event oder Produkt erstellt haben, wählen Sie **Eigenschaften** für dieses Event oder Produkt **verwalten** aus, um neue Eigenschaften hinzuzufügen, vorhandene Eigenschaften zu blockieren und zu sehen, welche Kampagnen oder Canvase diese Eigenschaft in einem [triggernden Event]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/) verwenden.
 
-\![Angepasste Eigenschaften für ein angepasstes Event.]({% image_buster /assets/img_archive/manageproperties1.png %}){: style="max-width:80%"}
+![Angepasste Eigenschaften für ein angepasstes Event.]({% image_buster /assets/img_archive/manageproperties1.png %}){: style="max-width:80%"}
 
 Um diese hinzugefügten angepassten Attribute, Events, Produkte oder Event-Eigenschaften nachvollziehbar zu machen, müssen Sie Ihr Entwickler:in Team bitten, sie im SDK unter demselben Namen zu erstellen, unter dem Sie sie zuvor hinzugefügt haben. Oder Sie können die Braze [API]({{site.baseurl}}/api/basics/) verwenden, um Daten zu diesem Attribut zu importieren. Danach kann das angepasste Attribut, Event oder anderes auf Ihre Nutzer:innen angewendet werden.
 
@@ -64,7 +64,7 @@ Um das Tracking eines bestimmten angepassten Attributs, Ereignisses oder Produkt
 2. Wählen Sie das angepasste Attribut, das Event oder das Produkt aus. Für angepasste Attribute und Events können Sie jeweils bis zu 100 auswählen, um sie zu blockieren.
 3. Wählen Sie **Blockliste**.
 
-\![Mehrere ausgewählte angepasste Attribute, die auf der Seite Angepasste Attribute in einer Blockliste aufgeführt sind.]({% image_buster /assets/img_archive/blocklist_custom_attr.png %})
+![Mehrere ausgewählte angepasste Attribute, die auf der Seite Angepasste Attribute in einer Blockliste aufgeführt sind.]({% image_buster /assets/img_archive/blocklist_custom_attr.png %})
 
 Sie können bis zu 300 angepasste Attribute und 300 angepasste Events in eine Blockliste aufnehmen. Um die Erfassung bestimmter Attribute von Geräten zu verhindern, lesen Sie unseren [SDK-Leitfaden]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_primer/#blocking-data-collection). 
 
@@ -131,7 +131,7 @@ Braze erkennt automatisch die Datentypen für Attribut-Daten, die an uns gesende
 Das Erzwingen von Datentypen gilt nicht für Event-Eigenschaften oder Kauf-Details.
 {% endalert %}
 
-\![Angepasste Attribute Datentyp Dropdown]({% image_buster /assets/img_archive/custom_events_view_data_type_dropdown.png %})
+![Angepasste Attribute Datentyp Dropdown]({% image_buster /assets/img_archive/custom_events_view_data_type_dropdown.png %})
 
 {% alert warning %}
 Wenn Sie den Datentyp für ein Attribut erzwingen möchten, werden alle Daten, die nicht dem angegebenen Typ entsprechen, in diesen Typ gezwungen. Wenn eine solche Umwandlung nicht möglich ist (z.B. wenn ein String mit Buchstaben in eine Zahl umgewandelt wird), werden die Daten ignoriert. Alle Daten, die vor der Änderung des Typs aufgenommen wurden, werden weiterhin als der alte Typ gespeichert (und können daher möglicherweise nicht segmentiert werden), und in den Profilen der betroffenen Nutzer:innen wird neben dem Attribut eine Warnung angezeigt.

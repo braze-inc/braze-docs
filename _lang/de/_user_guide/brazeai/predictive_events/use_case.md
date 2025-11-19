@@ -27,7 +27,7 @@ Jordan beginnt mit der Definition des Ergebnisses, das für seine upgraden Strat
 3. Als Targeting Event wählt er sein angepasstes Event: `upgraded_to_pro`.
 4. Jordan setzt das Prognosefenster auf 7 Tage, legt einen Zeitplan für das Update fest und erstellt die Prognose.
 
-\![Prognose-Einstellungen mit Definition, Fenster, Zielgruppe und Zeitplan für das Update der Prognose.]({% image_buster /assets/img/ai_use_cases/prediction_settings.png %})
+![Prognose-Einstellungen mit Definition, Fenster, Zielgruppe und Zeitplan für das Update der Prognose.]({% image_buster /assets/img/ai_use_cases/prediction_settings.png %})
 
 ## Schritt 2: Segmentierung der Nutzer:innen auf der Grundlage der Wahrscheinlichkeit eines Upgrades
 
@@ -42,7 +42,7 @@ Nachdem das Training abgeschlossen ist, vergibt Braze für jede in Frage kommend
 Prognostische Filter können mit beliebigen anderen Nutzer:innen-Attributen oder Verhaltensweisen kombiniert werden. Jordan plant, diese Segmente auf der Grundlage von Nutzerinteressen weiter zu verfeinern, z.B. indem er Nutzern:innen, die häufig Fitness Tracking Features verwenden, Priorität einräumt. Damit hat er vier Untergruppen, die er genauer ansprechen kann, was es zulässig macht, Inhalte und Nachrichten auf die Bedürfnisse der einzelnen Nutzer:innen abzustimmen.
 {% endalert %}
 
-\![Segmentierung mit zwei Filtern für die Ereigniswahrscheinlichkeitsbewertung.]({% image_buster /assets/img/ai_use_cases/event_likelihood_score.png %})
+![Segmentierung mit zwei Filtern für die Ereigniswahrscheinlichkeitsbewertung.]({% image_buster /assets/img/ai_use_cases/event_likelihood_score.png %})
 
 ## Schritt 3: Personalisieren Sie Messaging nach Absicht
 
@@ -57,7 +57,7 @@ Jordan [erstellt ein Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas
 - Nutzer:innen mit geringer Absicht, die sich auf Fitness konzentrieren
 - Geringe Absicht, andere Nutzer:innen
 
-\![Canvas Zielgruppen-Pfad mit vier Pfaden für jede Absichtsart.]({% image_buster /assets/img/ai_use_cases/canvas_paths_by_intent.png %})
+![Canvas Zielgruppen-Pfad mit vier Pfaden für jede Absichtsart.]({% image_buster /assets/img/ai_use_cases/canvas_paths_by_intent.png %})
 
 Außerdem setzt er das Canvas-Konversions-Event auf das angepasste Event `upgraded_to_pro`, so dass Braze die upgraden Konversionen automatisch verfolgt, wenn die Nutzer:innen den Fluss durchlaufen.
 

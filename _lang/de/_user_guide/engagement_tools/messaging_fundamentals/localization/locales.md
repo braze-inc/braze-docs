@@ -30,18 +30,18 @@ Um Lokalisierungen in Ihren Messaging-Nachrichten zu verwenden, erstellen Sie ei
 1. Fügen Sie die Übersetzungs-Tags {% raw %}`{% translation %}` und `{% endtranslation %}`{% endraw %} hinzu, um alle zu übersetzenden Texte, Bilder und Links einzufassen. 
 2. Fügen Sie zu jedem Übersetzungs-Tag ein ID-Tag hinzu. Ein Beispiel ist: {% raw %}`{% translation id_1 %}`{% endraw %}
 
-\![Traditioneller Editor mit Übersetzungs-IDs.]({% image_buster /assets/img/multi-language_support/html_iam_editor_translation_tags.png %}){: style="max-width:60%;"}
+![Traditioneller Editor mit Übersetzungs-IDs.]({% image_buster /assets/img/multi-language_support/html_iam_editor_translation_tags.png %}){: style="max-width:60%;"}
 
 {: start="3"}
 3\. Wenn Sie die Tags hinzugefügt haben, speichern Sie Ihre Nachricht als Entwurf.
 4\. Wählen Sie **Sprachen verwalten** und fügen Sie über das Dropdown-Menü Ihre Lokalisierungen für die Nachricht hinzu.
 
-\!["Sprachen verwalten"-Modal mit einer ausgewählten Lokalisierung.]({% image_buster /assets/img/multi-language_support/manage_languages_modal.png %})
+!["Sprachen verwalten"-Modal mit einer ausgewählten Lokalisierung.]({% image_buster /assets/img/multi-language_support/manage_languages_modal.png %})
 
 {: start="5"}
 5\. Gehen Sie auf **Template herunterladen**, um die Übersetzungsvorlage als CSV-Datei herunterzuladen. Tragen Sie dann die Übersetzungen in die CSV-Datei ein.
 
-\![Ein Beispiel für eine CSV-Datei zur Übersetzung.]({% image_buster /assets/img/multi-language_support/translation_csv_example.png %})
+![Ein Beispiel für eine CSV-Datei zur Übersetzung.]({% image_buster /assets/img/multi-language_support/translation_csv_example.png %})
 
 {: start="6"}
 6\. Wählen Sie **Übersetzungen hochladen**, um die CSV-Datei mit den fertigen Übersetzungen hochzuladen.
@@ -52,20 +52,20 @@ Um Lokalisierungen in Ihren Messaging-Nachrichten zu verwenden, erstellen Sie ei
 1. Fügen Sie die Übersetzungs-Tags {% raw %}`{% translation %}` und `{% endtranslation %}`{% endraw %} hinzu, um alle zu übersetzenden Texte, Bilder und Links einzufassen. 
 2. Fügen Sie zu jedem Übersetzungs-Tag ein ID-Tag hinzu. Ein Beispiel ist: {% raw %}`{% translation id_1 %}`{% endraw %} 
 
-\![Drag-and-Drop-Editor mit zwei Übersetzungs-IDs.]({% image_buster /assets/img/multi-language_support/dnd_iam_editor_translation_tags.png %}){: style="max-width:70%;"}
+![Drag-and-Drop-Editor mit zwei Übersetzungs-IDs.]({% image_buster /assets/img/multi-language_support/dnd_iam_editor_translation_tags.png %}){: style="max-width:70%;"}
 
 {: start="3"}
 3\. Nachdem Sie die Tags hinzugefügt haben, speichern Sie Ihre Nachricht als Entwurf, und öffnen Sie den Editor erneut.
 4\. Wählen Sie im Panel **Aufbauen** die Option **Mehrsprachig** aus und fügen Sie über das Dropdown-Menü Ihre Lokalisierungen für die Nachricht hinzu.
 5\. Gehen Sie auf **Template herunterladen**, um die Übersetzungsvorlage als CSV-Datei herunterzuladen. 
 
-\!["Mehrsprachiges" Panel mit Button zum Herunterladen des Templates.]({% image_buster /assets/img/multi-language_support/dnd_iam_download_template.png %}){: style="max-width:40%;"}
+!["Mehrsprachiges" Panel mit Button zum Herunterladen des Templates.]({% image_buster /assets/img/multi-language_support/dnd_iam_download_template.png %}){: style="max-width:40%;"}
 
 {: start="6"}
 6\. Füllen Sie die Übersetzungen in der CSV-Datei aus. Wenn Sie die Übersetzungstags direkt aus Schritt 1 kopiert und eingefügt haben, müssen Sie eventuell `<code>` aus der Spalte **Übersetzungstags** der CSV-Datei entfernen.
 7\. Wählen Sie **Übersetzungen hochladen**, um die CSV-Datei mit den fertigen Übersetzungen hochzuladen.
 
-\!["Mehrsprachiges" Panel mit Buttons zum Herunterladen des Templates und Hochladen von Übersetzungen.]({% image_buster /assets/img/multi-language_support/dnd_iam_upload_translations.png %}){: style="max-width:40%;"}
+!["Mehrsprachiges" Panel mit Buttons zum Herunterladen des Templates und Hochladen von Übersetzungen.]({% image_buster /assets/img/multi-language_support/dnd_iam_upload_translations.png %}){: style="max-width:40%;"}
 
 {% endsubtab %}
 {% endsubtabs %}
@@ -77,17 +77,17 @@ Um Gebietsschemata in Ihren Nachrichten zu verwenden, erstellen Sie eine E-Mail-
 {% subtabs %}
 {% subtab HTML editor %}
 
-1. Markieren Sie den Text, den Sie übersetzen möchten. Wählen Sie **Übersetzungs-Tag einfügen**. Nun wird Ihr Text mit Übersetzungs-Tags eingefasst. <br>\![HTML-Editor mit einer ausgewählten Lokalisierung.]({% image_buster /assets/img/multi-language_support/html_editor_translation_tag_example.png %})
+1. Markieren Sie den Text, den Sie übersetzen möchten. Wählen Sie **Übersetzungs-Tag einfügen**. Nun wird Ihr Text mit Übersetzungs-Tags eingefasst. <br>![HTML-Editor mit einer ausgewählten Lokalisierung.]({% image_buster /assets/img/multi-language_support/html_editor_translation_tag_example.png %})
 2. Speichern Sie die Nachricht als Entwurf.
 3. Wählen Sie **Mehrsprachig** und fügen Sie über das Dropdown-Menü Ihre Gebietsschemata für die Nachricht hinzu.
-4. Gehen Sie auf **Template herunterladen**, um die Übersetzungsvorlage als CSV-Datei herunterzuladen. Tragen Sie dann die Übersetzungen in die CSV-Datei ein. <br>\![Ein Beispiel für eine CSV-Datei zur Übersetzung.]({% image_buster /assets/img/multi-language_support/translation_csv_example.png %})
+4. Gehen Sie auf **Template herunterladen**, um die Übersetzungsvorlage als CSV-Datei herunterzuladen. Tragen Sie dann die Übersetzungen in die CSV-Datei ein. <br>![Ein Beispiel für eine CSV-Datei zur Übersetzung.]({% image_buster /assets/img/multi-language_support/translation_csv_example.png %})
 5. Wählen Sie **Übersetzungen hochladen**, um die CSV-Datei mit den fertigen Übersetzungen hochzuladen.
 
 {% endsubtab %}
 {% subtab Drag-and-drop editor %}
 
 1. Fügen Sie die Übersetzungs-Tags {% raw %}`{% translation %}` und `{% endtranslation %}`{% endraw %} hinzu, um alle zu übersetzenden Texte, Bilder und Links einzufassen. 
-2. Fügen Sie zu jedem Übersetzungs-Tag ein ID-Tag hinzu. Ein Beispiel ist: {% raw %}`{% translation id_1 %}`{% endraw %} <br>\![Drag-and-Drop-Editor mit zwei Übersetzungs-IDs.]({% image_buster /assets/img/multi-language_support/dnd_editor_translation_example.png %})
+2. Fügen Sie zu jedem Übersetzungs-Tag ein ID-Tag hinzu. Ein Beispiel ist: {% raw %}`{% translation id_1 %}`{% endraw %} <br>![Drag-and-Drop-Editor mit zwei Übersetzungs-IDs.]({% image_buster /assets/img/multi-language_support/dnd_editor_translation_example.png %})
 3. Wenn Sie die Tags hinzugefügt haben, speichern Sie Ihre Nachricht als Entwurf.
 4. Wählen Sie **Mehrsprachig** und fügen Sie über das Dropdown-Menü Ihre Gebietsschemata für die Nachricht hinzu.
 5. Gehen Sie auf **Template herunterladen**, um die Übersetzungsvorlage als CSV-Datei herunterzuladen. 
@@ -103,19 +103,19 @@ Um Lokalisierungen in Ihren Messaging-Nachrichten zu verwenden, erstellen Sie ei
 
 1. Fügen Sie die Übersetzungstags {% raw %}`{% translation id1%}` und `{% endtranslation %}`{% endraw %} hinzu, um alle zu übersetzenden Text-, Bild- oder Link-URLs einzuschließen. Jede Übersetzungs-ID (`id1`) muss eindeutig sein.
 
-\![Push-Benachrichtigung-Editor mit Übersetzungs-Tags in den Feldern für Titel und Nachrichten.]({% image_buster /assets/img/multi-language_support/push_translation_tags.png %})
+![Push-Benachrichtigung-Editor mit Übersetzungs-Tags in den Feldern für Titel und Nachrichten.]({% image_buster /assets/img/multi-language_support/push_translation_tags.png %})
 
 {: start="2"}
 2\. Speichern Sie Ihre Nachricht als Entwurf.
 3\. Wählen Sie **Sprache verwalten** und fügen Sie über das Dropdown-Menü Ihre Lokalisierungen für die Nachricht hinzu.
 4\. Wählen Sie **Template herunterladen** aus und geben Sie die Übersetzungen in das CSV Template ein.
 
-\![]({% image_buster /assets/img/multi-language_support/translation_csv_example.png %})
+![]({% image_buster /assets/img/multi-language_support/translation_csv_example.png %})
 
 {: start="5"}
 5\. Um die fertige CSV-Vorlage hochzuladen, wählen Sie **Übersetzungen hochladen**. 
 
-\![Das Fenster "Mehrsprachige Nachrichten" mit zwei ausgewählten Lokalisierungen und Buttons zum Herunterladen eines Templates oder Hochladen von Übersetzungen.]({% image_buster /assets/img/multi-language_support/upload_translation.png %})
+![Das Fenster "Mehrsprachige Nachrichten" mit zwei ausgewählten Lokalisierungen und Buttons zum Herunterladen eines Templates oder Hochladen von Übersetzungen.]({% image_buster /assets/img/multi-language_support/upload_translation.png %})
 
 {% endtab %}
 {% endtabs %}

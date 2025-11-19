@@ -61,7 +61,7 @@ Die meisten ISPs speichern Reputationsdaten nur für 30 Tage. Wenn Sie einen Mon
 
 Unsere integrierte Funktion zur Nutzereinschränkung ist ein nützliches Hilfsmittel, um Ihnen beim Warming Ihrer IP-Adresse zu helfen. Nachdem Sie bei der Kampagnenerstellung die gewünschten Nachrichtensegmente ausgewählt haben, wählen Sie im Schritt [Zielbenutzer]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/#step-4-build-the-remainder-of-your-campaign-or-canvas) das Dropdown-Menü **Erweiterte Optionen**, um Ihre Benutzer einzuschränken. Mit fortschreitendem Warming können Sie dieses Limit schrittweise erhöhen, um das Volumen der von Ihnen gesendeten E-Mails zu steigern.
 
-\![]({% image_buster /assets/img_archive/email_ip_warming_sends_limit_new.png %})
+![]({% image_buster /assets/img_archive/email_ip_warming_sends_limit_new.png %})
 
 ## Segmentierung von Subdomains
 

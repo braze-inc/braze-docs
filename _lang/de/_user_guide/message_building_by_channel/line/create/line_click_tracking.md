@@ -32,7 +32,7 @@ So richten Sie das Tracking von Klicks für eine Textnachricht ein:
 
 1. Ziehen Sie eine **Textnachricht** in den Composer und fügen Sie eine URL in das Textfeld ein.
 
-\![LINE Nachrichten-Editor mit einer Textnachricht, die eine lange URL enthält: https://braze.com/docs/user_guide/message_building_by_channel/line/create/]({% image_buster /assets/img/line/click_tracking_text_message.png %})
+![LINE Nachrichten-Editor mit einer Textnachricht, die eine lange URL enthält: https://braze.com/docs/user_guide/message_building_by_channel/line/create/]({% image_buster /assets/img/line/click_tracking_text_message.png %})
 
 {: start="2"}
 2\. Gehen Sie auf den Tab **Einstellungen** und bestätigen Sie, dass **Click Tracking** aktiviert ist. Das Tracking von Klicks ist standardmäßig für alle neuen Nachrichten aktiviert.
@@ -41,7 +41,7 @@ So richten Sie das Tracking von Klicks für eine Textnachricht ein:
 Auf dem Tab **Einstellungen** oder **Vorschau & Test** können Sie eine Vorschau des verkürzten Links sehen. Der vollständige Link wird im Composer angezeigt, während Sie Ihre Nachricht erstellen.
 {% endalert %}
 
-\![LINE Nachrichten-Editor Tab "Einstellungen" mit " mit eingeschaltetem "Click Tracking" und einer Vorschau Textnachricht mit einer verkürzten URL: https://olaf.brz.ai/p/9rcfdqdD]({% image_buster /assets/img/line/click_tracking_settings.png %})
+![LINE Nachrichten-Editor Tab "Einstellungen" mit " mit eingeschaltetem "Click Tracking" und einer Vorschau Textnachricht mit einer verkürzten URL: https://olaf.brz.ai/p/9rcfdqdD]({% image_buster /assets/img/line/click_tracking_settings.png %})
 
 ### Rich-Nachrichten
 
@@ -51,7 +51,7 @@ So richten Sie das Click Tracking für eine Rich Message ein:
 2. Wählen Sie die **URI** für das **Klickverhalten** für den entsprechenden antippbaren Bereich aus.
 3. Geben Sie eine URL in das Feld **URL öffnen** ein.
 
-\![LINE Nachrichten-Editor mit einer Rich Nachricht mit zwei antippbaren Bereichen, die jeweils eine URL haben.]({% image_buster /assets/img/line/rich_message_click_tracking.png %})
+![LINE Nachrichten-Editor mit einer Rich Nachricht mit zwei antippbaren Bereichen, die jeweils eine URL haben.]({% image_buster /assets/img/line/rich_message_click_tracking.png %})
 
 {: start="4"}
 4\. Gehen Sie auf den Tab **Einstellungen** und bestätigen Sie, dass **Click Tracking** aktiviert ist. Das Tracking von Klicks ist standardmäßig für alle neuen Nachrichten aktiviert.
@@ -63,7 +63,7 @@ So richten Sie das Tracking von Klicks für eine kartenbasierte Nachricht ein:
 1. Ziehen Sie eine **kartenbasierte Nachricht** in den Composer.
 2. Wählen Sie die **URI** für das **Klickverhalten** für die entsprechenden Karten- oder Button-Bereiche aus.
 
-\![LINE Nachrichten-Editor mit einer kartenbasierten Nachricht mit zwei Buttons, die jeweils eine URL enthalten.]({% image_buster /assets/img/line/card_based_message_click_tracking.png %})
+![LINE Nachrichten-Editor mit einer kartenbasierten Nachricht mit zwei Buttons, die jeweils eine URL enthalten.]({% image_buster /assets/img/line/card_based_message_click_tracking.png %})
 
 {: start="3"}
 3\. Gehen Sie auf den Tab **Einstellungen** und bestätigen Sie, dass **Click Tracking** aktiviert ist. Das Tracking von Klicks ist standardmäßig für alle neuen Nachrichten aktiviert.
@@ -114,11 +114,11 @@ Wenn ein Entwurf innerhalb eines aktiven Canvas erstellt wird, wird keine verkü
 
 Die Tabelle LINE Performance enthält die Spalte **Gesamtklicks**, die die Anzahl der Klickereignisse pro Variante und die zugehörige Klickrate anzeigt. Weitere Einzelheiten zu den LINE Metriken finden Sie unter [LINE Nachrichten Performance]({{site.baseurl}}/user_guide/message_building_by_channel/line/reporting).
 
-\![Performance für einen LINE Canvas-Schritt.]({% image_buster /assets/img/line/line_step_performance.png %}){: style="max-width:30%;"}
+![Performance für einen LINE Canvas-Schritt.]({% image_buster /assets/img/line/line_step_performance.png %}){: style="max-width:30%;"}
 
 Die Daten der Klicks werden automatisch im Analytics Dashboard angezeigt. 
 
-\![LINE performance analytics Dashboard.]({% image_buster /assets/img/line/line_performance.png %})
+![LINE performance analytics Dashboard.]({% image_buster /assets/img/line/line_performance.png %})
 
 ## Nutzer-Retargeting
 
@@ -128,14 +128,14 @@ Sie können Nutzer:innen, die auf eine URL in einer LINE Nachricht geklickt habe
     - mit Kampagne interagieren
     - Interagieren Sie mit Step
 
-\![LINE aktionsbasierte Zustellung triggern.]({% image_buster /assets/img/line/line_action_based.png %})
+![LINE aktionsbasierte Zustellung triggern.]({% image_buster /assets/img/line/line_action_based.png %})
 
 - Segmentierungsfilter
     - Kampagne angeklickt/geöffnet
     - Geklickte/geöffnete Kampagne oder Canvas mit Tag 
     - Schritt angeklickt/geöffnet
 
-\![Filtergruppe, die alle drei Segmentierungsfilter anzeigt: "Angeklickte/geöffnete Kampagne", "Angeklickte/geöffnete Kampagne oder Canvas mit Tag" und "Angeklickter/geöffneter Schritt".]({% image_buster /assets/img/line/line_segmentation_filters.png %})
+![Filtergruppe, die alle drei Segmentierungsfilter anzeigt: "Angeklickte/geöffnete Kampagne", "Angeklickte/geöffnete Kampagne oder Canvas mit Tag" und "Angeklickter/geöffneter Schritt".]({% image_buster /assets/img/line/line_segmentation_filters.png %})
 
 ## Häufig gestellte Fragen
 

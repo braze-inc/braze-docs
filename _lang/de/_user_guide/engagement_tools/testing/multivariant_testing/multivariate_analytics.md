@@ -20,7 +20,7 @@ Ihre Analyseansicht variiert, je nachdem, ob Sie bei der Ersteinrichtung eine [O
 
 Wenn Sie beim Einrichten Ihrer Kampagne die Option **Keine Optimierung** gewählt haben, bleibt Ihre Analyseansicht unverändert. Auf der Seite **Kampagnenanalyse** Ihrer Kampagne sehen Sie die Leistung Ihrer Varianten im Vergleich zu Ihrer Kontrollgruppe, falls Sie eine enthalten haben.
 
-\![Abschnitt Performance der Campaign Analytics für eine E-Mail-Kampagne mit mehreren Varianten. In der Tabelle sind verschiedene Metriken zur Performance für jede Variante aufgeführt, z.B. Empfänger:in, Bounces, Klicks und Konversionen.]({% image_buster /assets/img_archive/ab_analytics_no_optimization.png %})
+![Abschnitt Performance der Campaign Analytics für eine E-Mail-Kampagne mit mehreren Varianten. In der Tabelle sind verschiedene Metriken zur Performance für jede Variante aufgeführt, z.B. Empfänger:in, Bounces, Klicks und Konversionen.]({% image_buster /assets/img_archive/ab_analytics_no_optimization.png %})
 
 Weitere Einzelheiten finden Sie in dem Artikel [Campaign Analytics]({{site.baseurl}}/user_guide/analytics/reporting/campaign_analytics/) für Ihren Messaging-Kanal.
 
@@ -39,7 +39,7 @@ Wenn eine Variante alle anderen mit mehr als 95%iger [Sicherheit]({{site.baseurl
 
 Wenn keine Variante alle anderen mit 95%iger Sicherheit schlägt und Sie sich trotzdem dafür entscheiden, die leistungsstärkste Variante zu versenden, wird die leistungsstärkste Variante trotzdem versandt und mit der Bezeichnung "Gewinner" versehen.
 
-\![Ergebnisse eines ersten Tests zur Ermittlung der Winning Variant, bei dem keine Variante mit ausreichender Sicherheit besser als die anderen abgeschnitten hat, um die 95-Prozent-Konfidenzschwelle für statistische Signifikanz zu erreichen.]({% image_buster /assets/img_archive/ab_analytics_wv_insufficient_confidence.png %})
+![Ergebnisse eines ersten Tests zur Ermittlung der Winning Variant, bei dem keine Variante mit ausreichender Sicherheit besser als die anderen abgeschnitten hat, um die 95-Prozent-Konfidenzschwelle für statistische Signifikanz zu erreichen.]({% image_buster /assets/img_archive/ab_analytics_wv_insufficient_confidence.png %})
 
 #### Wie die Gewinnvariante ausgewählt wird
 
@@ -54,7 +54,7 @@ Eine Variante kann besser abschneiden als die Kontrollgruppe, aber der Chi-Quadr
 
 Die Registerkarte **Gewinnende Variante** zeigt die Ergebnisse des zweiten Versands, bei dem jedem verbleibenden Benutzer die Variante mit der besten Leistung aus dem ersten Test zugesandt wurde. **Zielgruppe %** entspricht dem Prozentsatz des Zielsegments, das Sie für die Gruppe der Gewinnvariante reserviert haben.
 
-\![Ergebnisse der Gewinner-Variante an die Gruppe der Gewinner-Varianten gesendet.]({% image_buster /assets/img_archive/ab_analytics_wv_1.png %})
+![Ergebnisse der Gewinner-Variante an die Gruppe der Gewinner-Varianten gesendet.]({% image_buster /assets/img_archive/ab_analytics_wv_1.png %})
 
 {% endtab %}
 {% endtabs %}
@@ -70,13 +70,13 @@ Wenn Sie bei der Einrichtung Ihrer Kampagne die Option **Personalisierte Variant
 
 Die Registerkarte **Erster Test** zeigt die Metriken für jede Variante des ersten A/B-Tests, der an einen Teil Ihres Zielsegments gesendet wurde.
 
-\![Ergebnisse eines ersten Tests zur Ermittlung der performantesten Variante für jeden Nutzer:in. Eine Tabelle zeigt die Performance der einzelnen Varianten auf der Grundlage verschiedener Metriken für den Targeting-Kanal.]({% image_buster /assets/img_archive/ab_analytics_pv_initial_test_1.png %})
+![Ergebnisse eines ersten Tests zur Ermittlung der performantesten Variante für jeden Nutzer:in. Eine Tabelle zeigt die Performance der einzelnen Varianten auf der Grundlage verschiedener Metriken für den Targeting-Kanal.]({% image_buster /assets/img_archive/ab_analytics_pv_initial_test_1.png %})
 
 Standardmäßig sucht der Test nach Assoziationen zwischen den benutzerdefinierten Ereignissen des Benutzers und seinen Einstellungen für die Nachrichtenvariante. Diese Analyse stellt fest, ob benutzerdefinierte Ereignisse die Wahrscheinlichkeit, auf eine bestimmte Nachrichtenvariante zu reagieren, erhöhen oder verringern. Diese Beziehungen werden dann verwendet, um zu bestimmen, welche Nutzer:innen welche Variante der Nachricht in der endgültigen Sendung erhalten.
 
 Die Beziehungen zwischen benutzerdefinierten Ereignissen und Nachrichteneinstellungen werden in der Tabelle auf der Registerkarte **Erstes Senden** angezeigt.
 
-\![]({% image_buster /assets/img_archive/ab_analytics_pv_3.png %})
+![]({% image_buster /assets/img_archive/ab_analytics_pv_3.png %})
 
 Wenn der Test keine sinnvolle Beziehung zwischen angepassten Events und Variantenpräferenzen finden kann, greift er auf eine sitzungsbasierte Analysemethode zurück.
 
@@ -93,7 +93,7 @@ Diese Merkmale sind:
 
 Der Test könnte beispielsweise ergeben, dass die meisten Benutzer Variante A bevorzugen, aber Benutzer, die vor 3-12 Tagen eine Sitzung hatten, zwischen 1-12 Tagen zwischen den Sitzungen liegen und in den letzten 67-577 Tagen erstellt wurden, bevorzugen eher Variante B. Daher erhielten die Benutzer in dieser Teilpopulation beim zweiten Senden Variante B, während der Rest Variante A erhielt.
 
-\![Die Tabelle mit den Nutzereigenschaften, die zeigt, welche Nutzer:innen auf der Grundlage der drei Buckets für Häufigkeit, Häufigkeit und Dauer der Nutzung prognostiziert werden, Variante A und Variante B zu bevorzugen.]({% image_buster /assets/img_archive/ab_analytics_pv_initial_test_2.png %})
+![Die Tabelle mit den Nutzereigenschaften, die zeigt, welche Nutzer:innen auf der Grundlage der drei Buckets für Häufigkeit, Häufigkeit und Dauer der Nutzung prognostiziert werden, Variante A und Variante B zu bevorzugen.]({% image_buster /assets/img_archive/ab_analytics_pv_initial_test_2.png %})
 
 **Wie personalisierte Varianten ausgewählt werden**<br>
 Bei dieser Methode ist die empfohlene Nachricht eines einzelnen Nutzers oder einer einzelnen Nutzerin die Summe der Effekte seiner spezifischen Häufigkeit, Häufigkeit und Dauer. Häufigkeit, Häufigkeit und Dauer der Nutzung werden in Buckets unterteilt, wie in der Tabelle **Nutzer:innen zu** sehen ist. Der Zeitbereich der einzelnen Buckets wird durch die Daten der Nutzer in jeder einzelnen Kampagne bestimmt und ändert sich von Kampagne zu Kampagne. 
@@ -113,11 +113,11 @@ Die drei Karten auf dieser Seite zeigen Ihren voraussichtlichen Gewinn, das Gesa
 - **Gesamtergebnisse:** Die Ergebnisse des zweiten Versands auf der Grundlage der von Ihnen gewählten Optimierungsmetrik*(Unique Opens*, *Unique Clicks* oder *Primary Conversion Event*).
 - **Prognostizierte Ergebnisse:** Die voraussichtlichen Ergebnisse des zweiten Versands auf der Grundlage der von Ihnen gewählten Optimierungsmetrik, wenn Sie stattdessen nur die Gewinnvariante versendet hätten. 
 
-\![Tab der personalisierten Variante für eine Kampagne, die für eindeutige Öffnungen optimiert ist. Die Karten zeigen den hochgerechneten Aufzug, die eindeutigen Öffnungen insgesamt (mit personalisierter Variante) und die hochgerechneten eindeutigen Öffnungen (mit Gewinnvariante).]({% image_buster /assets/img_archive/ab_analytics_pv_1.png %})
+![Tab der personalisierten Variante für eine Kampagne, die für eindeutige Öffnungen optimiert ist. Die Karten zeigen den hochgerechneten Aufzug, die eindeutigen Öffnungen insgesamt (mit personalisierter Variante) und die hochgerechneten eindeutigen Öffnungen (mit Gewinnvariante).]({% image_buster /assets/img_archive/ab_analytics_pv_1.png %})
 
 Die Tabelle auf dieser Seite zeigt die Metriken für jede Variante aus dem personalisierten Variantenversand. **Zielgruppe %** entspricht dem Prozentsatz des Zielsegments, das Sie für die Gruppe der personalisierten Varianten reserviert haben.
 
-\![]({% image_buster /assets/img_archive/ab_analytics_pv_2.png %})
+![]({% image_buster /assets/img_archive/ab_analytics_pv_2.png %})
 
 {% endtab %}
 {% endtabs %}

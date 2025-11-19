@@ -13,7 +13,7 @@ tool: Canvas
 
 > Mit Delay-Komponenten können Sie einem Canvas eine eigenständige Verzögerung hinzufügen. Sie können eine Verzögerung zu Ihrem Canvas hinzufügen, ohne dass Sie eine zugehörige Nachricht hinzufügen müssen. 
 
-Verzögerungen können Ihr Canvas sauberer aussehen lassen. Sie können diese Komponente auch verwenden, um einen anderen Schritt bis zu einem genauen Datum, bis zu einem bestimmten Tag oder bis zu einem bestimmten Wochentag zu verschieben. <br> \![Ein Verzögerungsschritt mit einer 1-tägigen Verzögerung als erster Schritt eines Canvas.]({% image_buster /assets/img/canvas_delay.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
+Verzögerungen können Ihr Canvas sauberer aussehen lassen. Sie können diese Komponente auch verwenden, um einen anderen Schritt bis zu einem genauen Datum, bis zu einem bestimmten Tag oder bis zu einem bestimmten Wochentag zu verschieben. <br> ![Ein Verzögerungsschritt mit einer 1-tägigen Verzögerung als erster Schritt eines Canvas.]({% image_buster /assets/img/canvas_delay.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
 ## Erstellen einer Verzögerung
 
@@ -130,7 +130,7 @@ Nehmen wir an, Sie möchten Ihre Kund:innen daran erinnern, in 30 Tagen Zahnpast
 - **Daten-Typ:** Uhrzeit
 - **Wert:** {% raw %}`{{custom_attribute.${Order_filled_time}}}`{% endraw %}
 
-\![Die "product_reminder_interval" und ihr Wert.]({% image_buster /assets/img/context_step1.png %})
+![Die "product_reminder_interval" und ihr Wert.]({% image_buster /assets/img/context_step1.png %})
 
 Da Sie Ihre Kund:in in 30 Tagen erinnern möchten, wählen Sie als nächstes **Bis zu einem bestimmten Tag** als Verzögerungsoption aus und wählen **Verzögerung personalisieren**, um die Informationen aus Ihrem Schritt Kontext zu verwenden. Das bedeutet, dass Ihre Nutzer:in so lange verzögert werden, bis die ausgewählte Kontextvariable ausgewählt ist.
 

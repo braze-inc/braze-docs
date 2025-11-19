@@ -68,7 +68,7 @@ Gehen Sie zu **Einstellungen** > **E-Mail-Voreinstellungen**. Wählen Sie dann *
 
 Alle mutmaßlichen Bot-Klicks werden erst entfernt, nachdem die Einstellung aktiviert wurde, und gelten nicht rückwirkend für Metriken in Ihrem Workspace.
 
-\![Bot-Filter für E-Mails in den E-Mail-Einstellungen aktiviert.]({% image_buster /assets/img/bot_tracking_email.png %})
+![Bot-Filter für E-Mails in den E-Mail-Einstellungen aktiviert.]({% image_buster /assets/img/bot_tracking_email.png %})
 
 {% alert important %}
 Wenn Sie diese Einstellung aktivieren und später wieder deaktivieren, kann Braze keine zuvor entfernten Bot-Aktivitäten in Ihrem Analytics wiederherstellen.

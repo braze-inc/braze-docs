@@ -53,7 +53,7 @@ Benötigen Sie mehr Platz für Ihre CSV-Dateien? Wenden Sie sich an Ihren Accoun
 
 Ziehen Sie Ihre Datei per Drag-and-Drop in die Upload-Zone, oder wählen Sie **CSV hochladen** und wählen Sie Ihre Datei aus.
 
-\![]({% image_buster /assets/img_archive/catalog_CSV_upload.png %}){: style="max-width:80%;"}
+![]({% image_buster /assets/img_archive/catalog_CSV_upload.png %}){: style="max-width:80%;"}
 
 Wählen Sie für jede Spalte einen Datentyp aus.
 
@@ -61,7 +61,7 @@ Wählen Sie für jede Spalte einen Datentyp aus.
 Dieser Datentyp kann nicht mehr bearbeitet werden, nachdem Sie Ihren Katalog eingerichtet haben. Auch ein `NULL`-Wert wird beim CSV-Upload nicht unterstützt und wird als String behandelt.
 {% endalert %}
 
-\![]({% image_buster /assets/img_archive/catalog_data_type.png %}){: style="max-width:80%;"}
+![]({% image_buster /assets/img_archive/catalog_data_type.png %}){: style="max-width:80%;"}
 
 Geben Sie einen Namen und eine optionale Beschreibung für Ihren Katalog ein. Beachten Sie die folgenden Anforderungen, wenn Sie Ihren Katalog benennen:
 
@@ -73,7 +73,7 @@ Geben Sie einen Namen und eine optionale Beschreibung für Ihren Katalog ein. Be
 Sie können auch [Templates in einem Katalognamen verwenden](#template-catalog-names), mit denen Sie dynamisch Katalognamen auf der Grundlage von Variablen wie Sprache oder Kampagne erzeugen können.
 {% endalert %}
 
-\![Ein Katalog namens "my_catalog".]({% image_buster /assets/img_archive/in_browser_catalog.png %}){: style="max-width:80%;"}
+![Ein Katalog namens "my_catalog".]({% image_buster /assets/img_archive/in_browser_catalog.png %}){: style="max-width:80%;"}
 
 Wählen Sie **Prozesskatalog**, um den Katalog zu erstellen.
 
@@ -121,11 +121,11 @@ Der Katalog wird erstellt, wenn man eine CSV-Datei hochlädt. Die Datentypen fü
 Dieser Datentyp kann nicht mehr bearbeitet werden, nachdem Sie Ihren Katalog eingerichtet haben.
 {% endalert %}
 
-\![Vier Katalogspaltennamen: "ID", "Titel", "Preis", "image_link".]({% image_buster /assets/img_archive/catalog_data_type.png %}){: style="max-width:85%;"}
+![Vier Katalogspaltennamen: "ID", "Titel", "Preis", "image_link".]({% image_buster /assets/img_archive/catalog_data_type.png %}){: style="max-width:85%;"}
 
 Als nächstes geben wir diesem Katalog den Namen "games_catalog" und wählen den Button **Katalog verarbeiten**. Dann prüft Braze den Katalog vor der Katalogerstellung auf eventuelle Fehler.
 
-\![Ein Katalog namens "games_catalog".]({% image_buster /assets/img_archive/catalog_new_name.png %}){: style="max-width:85%;"}
+![Ein Katalog namens "games_catalog".]({% image_buster /assets/img_archive/catalog_new_name.png %}){: style="max-width:85%;"}
 
 Beachten Sie, dass Sie diesen Namen nicht mehr ändern können, wenn der Katalog bereits erstellt worden ist. Sie können einen Katalog löschen und eine aktualisierte Version unter demselben Katalognamen erneut hochladen.
 
@@ -149,17 +149,17 @@ Geben Sie einen Namen und eine optionale Beschreibung für Ihren Katalog ein. Be
 Sie können auch [Templates in einem Katalognamen verwenden](#template-catalog-names), mit denen Sie dynamisch Katalognamen auf der Grundlage von Variablen wie Sprache oder Kampagne erzeugen können.
 {% endalert %}
 
-\![Ein Katalog namens "my_catalog".]({% image_buster /assets/img_archive/in_browser_catalog.png %}){: style="max-width:80%;"}
+![Ein Katalog namens "my_catalog".]({% image_buster /assets/img_archive/in_browser_catalog.png %}){: style="max-width:80%;"}
 
 ### Schritt 2: Erstellen Sie Ihren Katalog
 
 Wählen Sie Ihren Katalog aus der Liste aus und wählen Sie dann **Katalog aktualisieren** > **Felder hinzufügen**. Geben Sie den **Feldnamen** ein und wählen Sie über das Dropdown-Menü den Datentyp aus. Wiederholen Sie den Vorgang nach Bedarf.
 
-\![Zwei Beispielfelder "Bewertung" und "Name".]({% image_buster /assets/img_archive/add_catalog_fields.png %}){: style="max-width:50%;"}
+![Zwei Beispielfelder "Bewertung" und "Name".]({% image_buster /assets/img_archive/add_catalog_fields.png %}){: style="max-width:50%;"}
 
 Wählen Sie **Katalog aktualisieren** > **Artikel hinzufügen**, um einen Artikel zu Ihrem Katalog hinzuzufügen, indem Sie die Informationen auf der Grundlage der Felder eingeben, die Sie zuvor hinzugefügt haben. Wählen Sie dann **Artikel speichern** oder **Speichern und weiteren hinzufügen**, um mit dem Hinzufügen Ihrer Artikel fortzufahren.
 
-\![Fügen Sie einen Katalogartikel hinzu.]({% image_buster /assets/img_archive/add_catalog_items.png %}){: style="max-width:50%;"}
+![Fügen Sie einen Katalogartikel hinzu.]({% image_buster /assets/img_archive/add_catalog_items.png %}){: style="max-width:50%;"}
 
 {% alert note %}
 Braze verarbeitet Zeitwerte basierend auf dem Zeitstempel des Dashboards. Wenn eine Spalte z. B. den Wert "13.03.2024" aufweist und Sie die pazifische Zeitzone verwenden, wird in Braze "12\. März 2024, 17:00 Uhr" importiert.

@@ -35,7 +35,7 @@ Die folgenden Daten können im Diagramm **Performance im Zeitverlauf** angezeigt
     - (Fakultativ) Umsatz pro Stunde nach Segmenten
 - Umsatz pro Nutzer:in
 
-\![Einkommensdiagramm]({% image_buster /assets/img_archive/Export_revenue_graph.png %})
+![Einkommensdiagramm]({% image_buster /assets/img_archive/Export_revenue_graph.png %})
 
 ## Umsatz gesamt
 

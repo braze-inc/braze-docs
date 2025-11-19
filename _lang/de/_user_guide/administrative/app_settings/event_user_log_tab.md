@@ -34,11 +34,11 @@ Jedes Protokoll ist in mehrere Abschnitte unterteilt, die Folgendes enthalten k�
 
 Wählen Sie das Symbol **Daten erweitern** aus, um die JSON-Rohdaten für dieses bestimmte Protokoll anzuzeigen.
 
-\![Das Symbol "Daten erweitern" neben einem bestimmten Protokoll.]({% image_buster /assets/img_archive/expand_data.png %})
+![Das Symbol "Daten erweitern" neben einem bestimmten Protokoll.]({% image_buster /assets/img_archive/expand_data.png %})
 
 Event-Nutzerprotokolle bleiben 30 Tage lang im Dashboard, nachdem sie protokolliert wurden.
 
-\![Rohprotokolle für Ereignisse]({% image_buster /assets/img_archive/rawlogs.png %}){: style="max-width:60%;"}
+![Rohprotokolle für Ereignisse]({% image_buster /assets/img_archive/rawlogs.png %}){: style="max-width:60%;"}
 
 ## Fehlersuche
 

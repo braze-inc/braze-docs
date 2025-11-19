@@ -14,7 +14,7 @@ tool: Canvas
 
 Wenn Sie einen Experimentpfad-Schritt in Ihre User Journey einfügen, werden die Nutzer:innen nach dem Zufallsprinzip verschiedenen Pfaden (oder einer optionalen Kontrollgruppe) zugewiesen, die Sie erstellen. Teile des Publikums werden je nach den von Ihnen gewählten Prozentsätzen verschiedenen Pfaden zugewiesen, so dass Sie verschiedene Botschaften oder Pfade gegeneinander testen und feststellen können, welcher am effektivsten ist. 
 
-\![Ein Experiment-Pfad-Schritt, der sich in Pfad 1, Pfad 2 und Kontrolle aufteilt.]({% image_buster /assets/img/experiment_step/experiment_step.png %}){: style="float:right;max-width:50%;margin-left:15px;"}
+![Ein Experiment-Pfad-Schritt, der sich in Pfad 1, Pfad 2 und Kontrolle aufteilt.]({% image_buster /assets/img/experiment_step/experiment_step.png %}){: style="float:right;max-width:50%;margin-left:15px;"}
 
 ## Anwendungsfälle
 
@@ -45,7 +45,7 @@ Sie können bis zu vier Pfade hinzufügen, indem Sie auf **Pfad hinzufügen** kl
 
 Sie können auch wählen, ob die Benutzer in der Kontrollgruppe den Canvas weiter durchlaufen oder nach dem Conversion-Tracking-Fenster für das **Verhalten der Kontrollgruppe** verlassen sollen. Optional können Sie eine Beschreibung hinzufügen, um anderen zu erklären, was mit diesem Experimentpfad getestet werden soll, oder um zusätzliche Informationen zu notieren, die hilfreich sein könnten.
 
-\![Experiment-Einstellungen, wo Sie Pfade hinzufügen und den Prozentsatz der Nutzer:innen in jedem Pfad verteilen können.]({% image_buster /assets/img/experiment_step/exp_settings.png %})
+![Experiment-Einstellungen, wo Sie Pfade hinzufügen und den Prozentsatz der Nutzer:innen in jedem Pfad verteilen können.]({% image_buster /assets/img/experiment_step/exp_settings.png %})
 
 {% alert note %}
 Wenn die erneute Qualifizierung für den Canvas wieder aktiviert ist, werden Nutzer:innen, die den Canvas aufrufen und einen zufällig gewählten Pfad durchlaufen, denselben Pfad erneut durchlaufen, wenn sie wieder teilnahmeberechtigt werden und den Canvas erneut aufrufen. Dadurch bleibt die Gültigkeit des Experiments und der damit verbundenen Analysen erhalten. Wenn Sie möchten, dass der Schritt immer eine zufällige Pfadzuweisung vornimmt, wählen Sie **Zufällige Pfade in Experimentpfade**. Diese Option ist nicht verfügbar, wenn Sie entweder den Gewinnerpfad oder personalisierte Pfade verwenden.
@@ -59,7 +59,7 @@ Sie können Ihr Experiment optimieren, indem Sie den [Gewinnerpfad]({{site.baseu
 
 Und schließlich müssen Sie Ihre nachgelagerten Pfade erstellen. Wählen Sie **Fertig** und kehren Sie zum Canvas-Builder zurück. Klicken Sie auf den <i class="fas fa-plus-circle"></i> Plus-Button unter jedem Pfad, um mit der Erstellung von Journeys zu beginnen und die üblichen Canvas-Tools nach Belieben zu verwenden.
 
-\![Hinzufügen von Schritten zu jedem Pfad, der sich von einer Experiment-Pfad-Komponente abspaltet.]({% image_buster /assets/img/experiment_step/experiment_downstream_paths.gif %}){: style="max-width:75%"}
+![Hinzufügen von Schritten zu jedem Pfad, der sich von einer Experiment-Pfad-Komponente abspaltet.]({% image_buster /assets/img/experiment_step/experiment_downstream_paths.gif %}){: style="max-width:75%"}
 
 Denken Sie daran, dass Pfade und ihre nachgelagerten Schritte nicht mehr aus einem Canvas entfernt werden können, nachdem sie erstellt wurden. Nach dem Start können Sie jedoch die Verteilung der Zielgruppe auf die Pfade nach Belieben ändern. Wenn Sie beispielsweise einen Tag nach dem Start eines Canvas zu dem Schluss kommen, dass ein Pfad aufgrund der Analysen besser ist als die anderen, können Sie diesen Pfad auf 100 % und die anderen auf 0 % festlegen. Je nach Bedarf können Sie die Nutzer:innen auch weiterhin auf mehrere Pfade schicken.
 

@@ -20,7 +20,7 @@ Context Steps befindet sich derzeit im Early Access. Wenden Sie sich an Ihren Br
 
 ## Funktionsweise
 
-\![Ein Context-Schritt als erster Schritt eines Canvas.]({% image_buster /assets/img/context_step3.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
+![Ein Context-Schritt als erster Schritt eines Canvas.]({% image_buster /assets/img/context_step3.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
 Mit Kontextschritten können Sie temporäre Daten während der Reise eines Nutzers:innen durch einen bestimmten Canvas erstellen und verwenden. Diese Daten existieren nur innerhalb dieser Canvas-Reise und bleiben nicht über verschiedene Canvase oder außerhalb der Sitzung bestehen.
 
@@ -120,7 +120,7 @@ Als Nächstes erstellen wir einen Schritt "Nachricht", um Nutzer:innen zu target
 - Passagiere der ersten Klasse erhalten ein Ticketing: "Genießen Sie exklusiven Zugang zur VIP-Lounge!"
 - Passagiere von Business- und Economy-Tickets erhalten: "Upgraden Sie Ihren Flug für exklusiven Zugang zur VIP-Lounge."
 
-\![Ein Nachrichtenschritt mit verschiedenen Nachrichten, die Sie je nach Art des gekauften Flugtickets versenden können.]({% image_buster /assets/img/context_example3.png %}){: style="max-width:90%"}
+![Ein Nachrichtenschritt mit verschiedenen Nachrichten, die Sie je nach Art des gekauften Flugtickets versenden können.]({% image_buster /assets/img/context_example3.png %}){: style="max-width:90%"}
 
 {% alert tip %}
 Sie können [personalisierte Verzögerungsoptionen]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/#personalized-delays) mit den Informationen aus dem Schritt Kontext hinzufügen, d.h. Sie können die Variable auswählen, die Nutzer:innen verzögert.
@@ -144,14 +144,14 @@ Für angepasste Attribut-Vergleiche verwenden wir den Wert des angepassten Attri
 
 Der folgende Aktions-Pfad ist so eingerichtet, dass Nutzer:innen, die das angepasste Event `Account_Created` mit der grundlegenden Eigenschaft `source` ausgeführt haben, nach der Kontextvariablen `app_source_variable` sortiert werden.
 
-\![Ein Beispiel für einen Aktions-Pfad, der eine Kontextvariable referenziert, wenn ein angepasstes Event ausgeführt wird.]({% image_buster /assets/img/context_action_path1.png %})
+![Ein Beispiel für einen Aktions-Pfad, der eine Kontextvariable referenziert, wenn ein angepasstes Event ausgeführt wird.]({% image_buster /assets/img/context_action_path1.png %})
 
 {% endtab %}
 {% tab Make purchase %}
 
 Der folgende Aktions-Pfad wurde eingerichtet, um die grundlegende Eigenschaft `brand` für den spezifischen Produktnamen `shoes` mit einer Kontextvariablen `promoted_shoe_brand` abzugleichen.
 
-\![Ein Beispiel für einen Aktions-Pfad, der eine Kontextvariable referenziert, wenn Sie einen Kauf tätigen.]({% image_buster /assets/img/context_action_path2.png %})
+![Ein Beispiel für einen Aktions-Pfad, der eine Kontextvariable referenziert, wenn Sie einen Kauf tätigen.]({% image_buster /assets/img/context_action_path2.png %})
 
 {% endtab %}
 {% endtabs %}
@@ -166,7 +166,7 @@ Die Ausstiegskriterien besagen, dass ein Nutzer:in den Canvas einsteigen kann, w
 - Sie führen das angepasste Event **Warenkorb-Abbruch** durch, und
 - Die grundlegende Eigenschaft **Artikel im Warenkorb** entspricht dem String-Wert der Kontextvariablen `cart_item_threshold`.
 
-\![Beendigungskriterien, die so eingerichtet sind, dass ein Nutzer:in beendet wird, wenn er ein angepasstes Event auf der Grundlage der Kontextvariablen ausführt.]({% image_buster /assets/img/context_exit_criteria1.png %})
+![Beendigungskriterien, die so eingerichtet sind, dass ein Nutzer:in beendet wird, wenn er ein angepasstes Event auf der Grundlage der Kontextvariablen ausführt.]({% image_buster /assets/img/context_exit_criteria1.png %})
 
 {% endtab %}
 {% tab Make purchase %}
@@ -176,7 +176,7 @@ Die Ausstiegskriterien besagen, dass ein Nutzer:in den Canvas einsteigen kann, w
 - Sie kaufen gezielt den Produktnamen "Buch", und
 - Die verschachtelte Eigenschaft "loyalty_program" dieses Kaufs ist gleich dem angepassten Attribut "VIP" des Nutzers:in.
 
-\![Exit-Kriterien eingerichtet, um Nutzer:innen zu verlassen, wenn sie einen Kauf tätigen.]({% image_buster /assets/img/context_exit_criteria2.png %})
+![Exit-Kriterien eingerichtet, um Nutzer:innen zu verlassen, wenn sie einen Kauf tätigen.]({% image_buster /assets/img/context_exit_criteria2.png %})
 
 {% endtab %}
 {% endtabs %}
@@ -191,7 +191,7 @@ Kontextvariable Filter sind nur für Zielgruppen-Pfade und Decision-Split-Schrit
 
 Kontextvariablen werden deklariert und sind nur im Bereich eines Canvas zugänglich, d.h. sie können nicht in Segmenten referenziert werden. Kontextvariable Filter funktionieren in Zielgruppen-Pfaden und Decision-Split-Schritten ähnlich - Zielgruppen-Pfade repräsentieren mehrere Gruppen, während Decision-Split-Schritte binäre Entscheidungen darstellen.
 
-\![Beispiel für einen Decision-Split-Schritt mit der Option, einen Filter mit einer Kontextvariablen zu erstellen.]({% image_buster /assets/img/context_decision_split.png %}){: style="max-width:90%;"}
+![Beispiel für einen Decision-Split-Schritt mit der Option, einen Filter mit einer Kontextvariablen zu erstellen.]({% image_buster /assets/img/context_decision_split.png %}){: style="max-width:90%;"}
 
 Ähnlich wie Canvas-Kontextvariablen vordefinierte Typen haben, müssen die Vergleiche zwischen Kontextvariablen und statischen Werten [übereinstimmende Datentypen]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_attributes/nested_custom_attribute_support/#supported-data-types) haben. Der Filter für Kontextvariablen lässt Vergleiche über mehrere Datentypen für Boolesche Werte, Zahlen, Strings, Zeit und Tag des Jahres zu, ähnlich wie bei den Vergleichen für [verschachtelte angepasste Attribute]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_attributes/nested_custom_attribute_support/).
 
@@ -201,7 +201,7 @@ Verwenden Sie für Ihre Kontextvariable und den Vergleich denselben Datentyp. We
 
 Hier ist ein Beispiel für einen Filter für Kontextvariablen, der die Kontextvariable `product_name` mit der Regex `/braze/` vergleicht.
 
-\![Ein Filter, der für die Kontextvariable "product_name" eingerichtet wurde, um mit der Regex "/braze/" übereinzustimmen.]({% image_buster /assets/img/context_variable_filter1.png %}){: style="max-width:90%;"}
+![Ein Filter, der für die Kontextvariable "product_name" eingerichtet wurde, um mit der Regex "/braze/" übereinzustimmen.]({% image_buster /assets/img/context_variable_filter1.png %}){: style="max-width:90%;"}
 
 #### Abgleich mit Kontextvariablen oder angepassten Attributen
 
@@ -214,14 +214,14 @@ Nehmen wir an, Sie möchten Nutzern:innen nach einer dynamischen Inaktivitätspe
 
 Sie haben eine Kontextvariable `re_engagement_date`, die als {% raw %}`{{now | minus: 3 | append: ' days'}}`{% endraw %} definiert ist. Beachten Sie, dass `3 days` ein variabler Betrag sein kann, der auch als angepasstes Attribut eines Nutzers:innen gespeichert wird. Wenn also die `re_engagement_date` nach der `last_login_date` steht (die als angepasstes Attribut im Nutzerprofil gespeichert ist), wird ihnen eine Nachricht geschickt.
 
-\![Eine Filtereinrichtung mit angepassten Attributen als Personalisierungstyp für die Kontextvariable "re_engagement_date" nach dem angepassten Attribut "last_login_date".]({% image_buster /assets/img/context_variable_filter2.png %})
+![Eine Filtereinrichtung mit angepassten Attributen als Personalisierungstyp für die Kontextvariable "re_engagement_date" nach dem angepassten Attribut "last_login_date".]({% image_buster /assets/img/context_variable_filter2.png %})
 
 {% endtab %}
 {% tab Example 2 %}
 
 Der folgende Filter vergleicht, ob die Kontextvariable `reminder_date` vor der Kontextvariablen `appointment_deadline` liegt. Auf diese Weise können Sie Nutzer:innen in einem Zielgruppen-Pfad gruppieren, um festzustellen, ob sie vor ihrem Termin zusätzliche Erinnerungen erhalten sollen.
 
-\![Eine Filtereinrichtung mit Kontextvariablen als Personalisierungstyp für die Kontextvariable "reminder_date" auf der Kontextvariable "appointment_deadline".]({% image_buster /assets/img/context_variable_filter3.png %})
+![Eine Filtereinrichtung mit Kontextvariablen als Personalisierungstyp für die Kontextvariable "reminder_date" auf der Kontextvariable "appointment_deadline".]({% image_buster /assets/img/context_variable_filter3.png %})
 
 {% endtab %}
 {% endtabs %}
@@ -259,7 +259,7 @@ Betrachten Sie dieses Beispiel, wie sich diese Änderung auf einen Zeitstempel i
 `Your appointment is scheduled for {{canvas_entry_properties.${appointment_time} | date: "%Y-%m-%d %l:%M %p"}}, we'll see you then!`
 {% endraw %}
 
-\![Kontextreise mit einer Nachricht als erstem Schritt.]({% image_buster /assets/img/context_timezone_example.png %}){: style="max-width:50%"}
+![Kontextreise mit einer Nachricht als erstem Schritt.]({% image_buster /assets/img/context_timezone_example.png %}){: style="max-width:50%"}
 
 Der Schritt hat auch eine Ereignis-Nutzlast wie: 
 

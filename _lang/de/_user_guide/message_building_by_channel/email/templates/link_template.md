@@ -54,7 +54,7 @@ Um einen String oder eine URL vor den Links in Ihrer E-Mail-Nachricht einzufüge
 
 Die **Vorschau des Templates** dient dazu, Ihnen ein Beispiel dafür zu geben, wie das Link-Template vor einer URL eingefügt wird.
 
-\![Felder Template Position, Prepend URL und Template Preview für das Einfügen von Link Templates vor einer URL.]({% image_buster /assets/img_archive/link_template_preappend.png %}){: style="max-width:90%;"}
+![Felder Template Position, Prepend URL und Template Preview für das Einfügen von Link Templates vor einer URL.]({% image_buster /assets/img_archive/link_template_preappend.png %}){: style="max-width:90%;"}
 
 ### Anhängen: Eine Link-Template erstellen, die nach einer URL eingefügt wird {#append-link-template}
 
@@ -64,7 +64,7 @@ Wenn Sie Abfrageparameter nach einer URL in Ihrer E-Mail-Nachricht hinzufügen m
 2. Setzen Sie die **Template-Position** auf **Nach URL**. 
 3. Geben Sie die Abfrageparameter (`value=example`) am Ende jeder URL an. Sie können mehrere Parameter an das Ende einer URL anhängen.
 
-\![Template-Position, Abfrageparameter und Template-Vorschau-Felder für den Prozess des Einfügens von Link-Templates nach einer URL.]({% image_buster /assets/img_archive/link_template_postappend.png %}){: style="max-width:90%;"}
+![Template-Position, Abfrageparameter und Template-Vorschau-Felder für den Prozess des Einfügens von Link-Templates nach einer URL.]({% image_buster /assets/img_archive/link_template_postappend.png %}){: style="max-width:90%;"}
 
 ## Linkvorlagen in E-Mail-Kampagnen verwenden
 
@@ -78,7 +78,7 @@ Um auf die Registerkarte **Linkverwaltung** im aktualisierten HTML-E-Mail-Editor
 
 - **Drag-and-Drop-Editor:** Wählen Sie **Inhalt** > Registerkarte **Linkverwaltung**. Wählen Sie dann **Linkvorlage hinzufügen**. Um im Drag&Drop-Editor auf Linkvorlagen zugreifen zu können, müssen Sie das [Link-Aliasing]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/link_aliasing/) aktiviert haben.
 
-\![Link Management Tab im Drag-and-Drop-Editor mit einer Beispielliste von Link-Templates.]({% image_buster /assets/img_archive/link_template_messagecomposer2.png %})
+![Link Management Tab im Drag-and-Drop-Editor mit einer Beispielliste von Link-Templates.]({% image_buster /assets/img_archive/link_template_messagecomposer2.png %})
 
 {% alert note %}
 Linkvorlagen werden nicht auf reinen Text angewendet. Das bedeutet, dass Currents möglicherweise Klicks anzeigt, die nicht die Parameter aus den Linkvorlagen enthalten, da diese Klicks möglicherweise aus der reinen Textversion der E-Mail stammen.

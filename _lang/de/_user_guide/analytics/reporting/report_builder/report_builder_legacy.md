@@ -14,7 +14,7 @@ tool:
 
 > Der Report-Builder erlaubt es Ihnen, die Ergebnisse mehrerer Kampagnen oder Canvase in einer einzigen Ansicht zu vergleichen, so dass Sie leicht feststellen können, welche Engagement-Strategien Ihre wichtigsten Metriken am meisten beeinflusst haben. Sowohl für Kampagnen als auch für Canvase können Sie Ihre Daten exportieren und Ihren Bericht speichern, um ihn in Zukunft einzusehen.<br><br>Eine beschreibende Liste der Metriken, die Sie in Ihren Berichten finden, finden Sie im [Glossar der Berichtsmetriken]({{site.baseurl}}/user_guide/data/report_metrics/).
 
-\![Beispiel für einen Kampagnenvergleich]({% image_buster /assets/img/campaign_comparison/campaign_main.png %}){: style="max-width:80%;"}
+![Beispiel für einen Kampagnenvergleich]({% image_buster /assets/img/campaign_comparison/campaign_main.png %}){: style="max-width:80%;"}
 
 Nutzen Sie diesen Bericht, um wichtige Fragen zum Engagement zu beantworten, zum Beispiel:
 
@@ -41,7 +41,7 @@ Wählen Sie **Neuen Bericht erstellen** und wählen Sie entweder einen Kampagnen
 
 Wenn Sie einen Bericht über Kampagnen ausführen möchten, können Sie zwischen einem **manuellen** und einem **automatisierten** Bericht auswählen. Berichte können entweder Kampagnen oder Canvases enthalten, aber nicht beides. Alle Kampagnen und Canvase, die innerhalb der letzten 12 Monate zuletzt Nachrichten gesendet haben, kommen für einen Bericht in Frage.
 
-\![Dashboard der Kampagne]({% image_buster /assets/img/campaign_comparison/create_report.png %}){: style="max-width:80%;"}
+![Dashboard der Kampagne]({% image_buster /assets/img/campaign_comparison/create_report.png %}){: style="max-width:80%;"}
 
 Im Folgenden finden Sie die Unterschiede zwischen diesen beiden Optionen:
 
@@ -62,7 +62,7 @@ Canvas-Berichte funktionieren ähnlich wie ein manueller Kampagnenbericht, da di
 
 Nachdem Sie Ihren Bericht erstellt haben, finden Sie in jeder Zeile eine leere Tabelle mit Kampagnen. Die Tabelle füllt sich, nachdem Sie **Spalten bearbeiten** ausgewählt und die Metriken ausgewählt haben, die Sie hinzufügen möchten.
 
-\![Kampagnen Optionen]({% image_buster /assets/img/campaign_comparison/campaign_comparison_columns.png %}){: style="max-width:80%;"}
+![Kampagnen Optionen]({% image_buster /assets/img/campaign_comparison/campaign_comparison_columns.png %}){: style="max-width:80%;"}
 
 Ihre Tabelle wird mit den von Ihnen gewählten Metriken aufgefüllt. Definitionen zu diesen Metriken finden Sie im [Glossar der Berichtsmetriken]({{site.baseurl}}/user_guide/data/report_metrics/). Einige Metriken sind nur für Kampagnen-Vergleichsberichte verfügbar.
 
@@ -72,13 +72,13 @@ Sie können auch die Berechnungen für den **Durchschnitt** einer beliebigen Rat
 
 Sie können einen bestimmten Zeitraum auswählen, für den Berichtsdaten angezeigt werden sollen. Wenn für eine bestimmte Kampagne, ein Canvas, eine Canvas-Variante oder eine Canvas-Komponente keine Daten für den von Ihnen ausgewählten Zeitraum vorliegen, sind die Ergebnisse für diese Zeile leer. 
 
-\![Numerische Metrik der Kampagne]({% image_buster /assets/img/campaign_comparison/metric.png %}){: style="max-width:60%;"}
+![Numerische Metrik der Kampagne]({% image_buster /assets/img/campaign_comparison/metric.png %}){: style="max-width:60%;"}
 
 ### Schritt 4: Benennen und speichern Sie Ihren Bericht
 
 Benennen Sie Ihren Bericht, bevor Sie ihn speichern. Wenn ein Bericht ohne Namen gespeichert wird, verwendet Braze den Standardnamen "Kampagnenvergleichsbericht".
 
-\![Notiz zur Kampagne]({% image_buster /assets/img/campaign_comparison/comparison_name.png %}){: style="max-width:60%;"}
+![Notiz zur Kampagne]({% image_buster /assets/img/campaign_comparison/comparison_name.png %}){: style="max-width:60%;"}
 
 Wenn Sie fertig sind, wählen Sie **Speichern**. Gespeicherte Berichte können zu einem späteren Zeitpunkt auf der Seite **Berichts-Builder** angezeigt werden.
 
@@ -86,7 +86,7 @@ Wenn Sie fertig sind, wählen Sie **Speichern**. Gespeicherte Berichte können z
 
 Bei allen multivariaten Kampagnen können Sie diese Metriken nach Varianten und Kontrollgruppen aufgeschlüsselt anzeigen, indem Sie auf den Pfeil neben dem Namen der Kampagne klicken. Die Zeilen mit Ihren Varianten enthalten die Performance-Ergebnisse für diese Variante, und die Zeile mit Ihrer Kontrolle enthält nur die Ergebnisse für Ihre Konversions-Events. 
 
-\![Notiz zur Kampagne]({% image_buster /assets/img/campaign_comparison/compare_note.png %}){: style="float:right;max-width:15%;margin-left:15px;"}
+![Notiz zur Kampagne]({% image_buster /assets/img/campaign_comparison/compare_note.png %}){: style="float:right;max-width:15%;margin-left:15px;"}
 
 Die Metriken, die die Zeile für Ihre gesamte Kampagne auffüllen, spiegeln die Performance der Varianten wider, enthalten aber nicht die Performance der Kontrolle. Zum Beispiel ist das primäre Konversions-Event A für Ihre gesamte Kampagne die Summe des primären Konversions-Events A für Ihre Varianten, und dies beinhaltet nicht das primäre Konversions-Event A für Ihre Kontrolle.
 
@@ -102,19 +102,19 @@ Innerhalb eines Canvas-Berichts können Sie Ihre Canvase nach Varianten, Schritt
 
 Wenn Sie die **Aufschlüsselung nach Variante** auswählen, können Sie die Statistiken für Ihre Canvase insgesamt sowie die Statistiken für die einzelnen Varianten einsehen, die durch Auswählen des Pfeils neben dem Namen des Canvas erweitert werden können.
 
-\![Varianten]({% image_buster /assets/img/campaign_comparison/campaign_comparison1.png %}){: style="max-width:90%;"}
+![Varianten]({% image_buster /assets/img/campaign_comparison/campaign_comparison1.png %}){: style="max-width:90%;"}
 
 ### Schritte 
 
 Wenn Sie die **Aufschlüsselung nach Schritten** auswählen, können Sie Metriken auf Schrittebene anzeigen, wobei jede Zeile des Berichts die Zeile eines Schritts enthält.
 
-\![Steps]({% image_buster /assets/img/campaign_comparison/campaign_comparison2.png %}){: style="max-width:90%;"}
+![Steps]({% image_buster /assets/img/campaign_comparison/campaign_comparison2.png %}){: style="max-width:90%;"}
 
 ### Nachricht
 
 Ähnlich wie bei der Aufschlüsselung auf Schrittebene zeigt das **Auswählen** der **Aufschlüsselung nach Nachrichten** die Namen der Schritte in jeder Zeile an. Innerhalb der **Bearbeitungsspalten** haben Sie jedoch Zugriff auf Metriken auf Nachrichtenebene, wie z.B. kanalspezifische Statistiken wie E-Mail-Klicks und Push-Öffnungen.
 
-\![Bericht]({% image_buster /assets/img/campaign_comparison/campaign_comparison3.png %}){: style="max-width:90%;"}
+![Bericht]({% image_buster /assets/img/campaign_comparison/campaign_comparison3.png %}){: style="max-width:90%;"}
 
 Beachten Sie, dass Sie im Braze-Dashboard eine Vorschau der ersten 50 Zeilen Ihres Canvas-Berichts sehen können. Sie können auf den vollständigen Bericht zugreifen, wenn Sie eine CSV-Datei exportieren.
 
@@ -141,7 +141,7 @@ Wenn Ihr Bericht Kampagnen mit mehreren Varianten enthält, enthält der Export 
 
 Die Datei mit den Metriken für die einzelnen Varianten enthält `variant_` am Anfang des Dateinamens. Wenn Sie zum ersten Mal einen automatisierten Bericht exportieren, erscheint ein Popup-Fenster, in dem Sie aufgefordert werden, das Herunterladen mehrerer Dateien zuzulassen - klicken Sie auf **Zulassen**.
 
-\![Kampagne Download]({% image_buster /assets/img/campaign_comparison/download.png %}){: style="max-width:60%;"}
+![Kampagne Download]({% image_buster /assets/img/campaign_comparison/download.png %}){: style="max-width:60%;"}
 
 ### Canvas-Vergleichsberichte exportieren
 
@@ -156,7 +156,7 @@ Wenn Sie einen Canvas-Bericht zur Aufschlüsselung von Varianten herunterladen, 
 
 Verwenden Sie Diagramme, um eine ausgewählte Kennzahl in Ihrem Bericht zu visualisieren. Diagramme sind für Berichte zu Kampagnen verfügbar, wenn die Spalten mindestens eine Kennzahl enthalten.
 
-\![Kampagnen Performance Chart mit ausgewählter Metrik Gesendete Nachrichten]({% image_buster /assets/img/campaign_comparison/report_builder_charts.png %})
+![Kampagnen Performance Chart mit ausgewählter Metrik Gesendete Nachrichten]({% image_buster /assets/img/campaign_comparison/report_builder_charts.png %})
 
 Standardmäßig zeigt das Chart in jedem Bericht die Metrik in der ersten Spalte des Berichts an. Weitere Kennzahlen für die Grafik finden Sie im Dropdown-Menü. Jede Metrik in Ihrer Berichtstabelle kann in Ihrem Chart angezeigt werden.
 

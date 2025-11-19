@@ -32,13 +32,13 @@ Das Tag `message_extras` wird für alle Nachrichtentypen mit Sendeereignis und f
 
 1. Geben Sie in den Nachrichtentext für den Kanal das Liquid-Tag `message_extras` ein. Oder Sie verwenden das Modal **Personalisierung hinzufügen** und wählen die Option **Nachrichten-Extras** als Personalisierungstyp aus. 
 
-\![Das Modal "Personalisierung hinzufügen" mit ausgewählten Nachrichten-Extras als Personalisierungstyp.]({% image_buster /assets/img_archive/message_extras1.png %}){: style="max-width:35%;"}
+![Das Modal "Personalisierung hinzufügen" mit ausgewählten Nachrichten-Extras als Personalisierungstyp.]({% image_buster /assets/img_archive/message_extras1.png %}){: style="max-width:35%;"}
 
 {: start="2"}
 
 2. Geben Sie das [Schlüssel-Wert-Paar]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/) für jedes `message_extras`-Tag ein. 
 
-\![Ein Beispiel für Schlüssel-Wert-Paare für das Tag Nachrichten-Extras. Das Titelfeld lautet "Ihre neuen Favoriten". Die Nachricht enthält Schlüssel-Wert-Paare für das Tag Nachrichten-Extras und den folgenden Satz: "Wir freuen uns, Ihnen eine Auswahl an neuen und spannenden Produkten anbieten zu können, die mit Sicherheit zu Ihren neuen Lieblingsprodukten werden."]({% image_buster /assets/img_archive/message_extras2.png %}){: style="max-width:70%;"}
+![Ein Beispiel für Schlüssel-Wert-Paare für das Tag Nachrichten-Extras. Das Titelfeld lautet "Ihre neuen Favoriten". Die Nachricht enthält Schlüssel-Wert-Paare für das Tag Nachrichten-Extras und den folgenden Satz: "Wir freuen uns, Ihnen eine Auswahl an neuen und spannenden Produkten anbieten zu können, die mit Sicherheit zu Ihren neuen Lieblingsprodukten werden."]({% image_buster /assets/img_archive/message_extras2.png %}){: style="max-width:70%;"}
 
 {: start="3"}
 
