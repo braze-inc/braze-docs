@@ -1,5 +1,5 @@
 ---
-nav_title: Migration von Daten-Feeds zu Promotion-Codes
+nav_title: Migration von Daten-Feeds zu Aktionscodes
 article_title: Migration von Daten-Feeds zu Promotion-Codes
 page_order: 0
 description: "Dieser referenzierte Artikel enthält eine Anleitung zur Migration von Daten-Feeds zu Aktionscodes."

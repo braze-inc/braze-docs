@@ -1,5 +1,5 @@
 ---
-nav_title: Formular zur E-Mail-Erfassung
+nav_title: Formular zur Erfassung von E-Mails
 article_title: Formular zur E-Mail-Erfassung
 page_order: 3
 page_type: reference
@@ -28,7 +28,7 @@ Wenn ein Endbenutzer seine E-Mail-Adresse in dieses Formular eingibt, wird die E
         - `example@gnail.com` (mit einem Tippfehler)
     - Weitere Informationen zur E-Mail-Validierung in Braze finden Sie in den [technischen Richtlinien und Hinweisen zu E-Mails]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/email_validation/).
 
-{% details Mehr über identifizierte versus anonyme Benutzer %}
+{% details More on identified versus anonymous users %}
 
 Im Allgemeinen ist die Logik hinter dem Formular zur E-Mail-Erfassung ganz einfach. Damit wird die E-Mail-Adresse im Benutzerprofil in Braze für den derzeit aktiven Benutzer festgelegt. Das bedeutet jedoch, dass sich das Verhalten unterscheidet, je nachdem, ob der oder die Nutzer:in identifiziert ist (angemeldet, über `changeUser` aufgerufen) oder nicht.
 
@@ -42,12 +42,10 @@ Weitere Informationen finden Sie im [Lebenszyklus des Benutzerprofils]({{site.ba
 
 ## Schritt 1: In-App-Kampagne erstellen
 
-Um zu dieser Option zu navigieren, müssen Sie eine In-App-Messaging-Kampagne erstellen. Stellen Sie dort je nach Anwendungsfall **Senden an** auf **Webbrowser**, **Mobile Apps** oder **Mobile Apps und Webbrowser** und wählen Sie dann **E-Mail-Erfassungsformular** als **Nachrichtentyp**.
-
-![][4]
+Um zu dieser Option zu navigieren, müssen Sie eine In-App-Messaging-Kampagne erstellen. Stellen Sie dort je nach Anwendungsfall **Senden an** entweder **Webbrowser**, **Mobile Apps** oder **Beide Mobile Apps & Webbrowser** ein und wählen Sie dann als **Nachrichtentyp** **E-Mail-Erfassungsformular** aus.
 
 {% alert note %}
-Um HTML in In-App-Nachrichten über das Web-SDK zu aktivieren, müssen Sie Braze die Initialisierungsoption `allowUserSuppliedJavascript` zur Verfügung stellen, zum Beispiel `braze.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. Dies dient der Sicherheit, da HTML-In-App-Nachrichten JavaScript ausführen können. Daher muss ein Website-Administrator sie aktivieren.
+**Targeting von Nutzer:innen im Internet?** <br>Um HTML in In-App-Nachrichten über das Web-SDK zu aktivieren, müssen Sie Braze die Initialisierungsoption `allowUserSuppliedJavascript` zur Verfügung stellen, zum Beispiel `braze.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. Dies dient der Sicherheit, da HTML-In-App-Nachrichten JavaScript ausführen können. Daher muss ein Website-Administrator sie aktivieren.
 {% endalert %}
 
 ## Schritt 2: Formular anpassen {#customizable-features}
@@ -61,32 +59,24 @@ Als nächstes passen Sie Ihr Formular nach Bedarf an. Sie können die folgenden 
 - Schlüssel-Wert-Paare
 - Stil für Kopf- und Fließtext, Schaltflächen, Rahmenfarbe der Schaltflächen, Hintergrund und Overlay
 
-![Composer für Formulare zur E-Mail-Erfassung.][5]
+![Composer für E-Mail-Erfassungsformular.]({% image_buster /assets/img/email_capture.png %})
 
 Wenn Sie weitere Anpassungen vornehmen möchten, wählen Sie **Benutzerdefinierter Code** für Ihren **Nachrichtentyp**. Sie können diese [modale Vorlage für die E-Mail-Erfassung](https://github.com/braze-inc/in-app-message-templates/tree/master/braze-templates/5-email-capture-modal) aus dem GitHub-Repository [Braze Templates](https://github.com/braze-inc/in-app-message-templates/tree/master/braze-templates) als Startcode verwenden.
 
 ## Schritt 3: Entry-Zielgruppe festlegen
 
-Wenn Sie dieses Formular nur an Nutzer:innen ohne bestehende E-Mail-Adressen senden möchten, verwenden Sie den Filter `Email Available is false`.
+Wenn Sie eine In-App-Nachricht verwenden, um die E-Mails der Nutzer zu erfassen, sollten Sie die Zielgruppe auf Nutzer:innen beschränken, die diese Informationen noch nicht angegeben haben.
 
-![Filter nach „E-Mail-Adresse verfügbar“ ist falsch][10]{: style="max-width:50%"}
+- **Um Nutzer:innen ohne E-Mail Adresse zusammenzustellen:** Verwenden Sie den Filter `Email Available` ist `false`. Dadurch wird das Formular nur Nutzern:in angezeigt, die keine E-Mail hinterlegt haben. So vermeiden Sie überflüssige Abfragen für bekannte Nutzer:innen.
+- **Um anonyme Nutzer:innen ohne externe IDs zusammenzustellen:** Verwenden Sie den Filter `External User ID` `is blank`. Dies ist nützlich, wenn Sie Nutzer:innen identifizieren möchten, die noch nicht authentifiziert oder registriert sind.
 
-Wenn Sie dieses Formular nur an Nutzer:innen ohne externe IDs (anonyme Nutzer:innen) senden möchten, verwenden Sie den Filter `External User ID is blank`.
-
-![Filter nach externer Benutzer-ID ist leer][11]{: style="max-width:50%"}
-
-Sie können die beiden Filter auch mit der Logik von `AND` kombinieren, falls gewünscht.
+Sie können die beiden Filter auch mit der Logik von `AND` kombinieren, falls gewünscht. Dadurch wird das Formular nur Nutzern:innen angezeigt, denen sowohl eine E-Mail Adresse als auch eine externe ID fehlt - ideal für die Erfassung neuer Leads oder die Aufforderung zur Kontoerstellung.
 
 ## Schritt 4: Zielbenutzer, die das Formular ausgefüllt haben (optional)
 
-Nachdem Sie das Formular zur E-Mail-Erfassung gestartet und E-Mail-Adressen von Ihren Nutzer:innen gesammelt haben, können Sie diese Nutzer:innen mit dem Filter `Clicked/Opened Campaign` ansprechen. 
+Nachdem Sie das E-Mail-Erfassungsformular gestartet und die E-Mail-Adressen Ihrer Nutzer:innen gesammelt haben, können Sie die Nutzer:innen, die das Formular ausgefüllt haben, als Zielgruppe zusammenstellen.
 
-Setzen Sie den Filter auf `Has clicked in-app message button 1` für die Kampagne `<CAMPAIGN_NAME>`. Ersetzen Sie `<CAMPAIGN_NAME>` durch den Namen Ihrer E-Mail-Capture-Formular-Kampagne.
+1. Wählen Sie in jedem Segmente-Filter in Braze den Filter `Clicked/Opened Campaign` aus. 
+2. Wählen Sie aus der Dropdown-Liste `clicked in-app message button 1`
+3. Wählen Sie Ihre E-Mail-Erfassungsformular-Kampagne aus.
 
-![Filter für die In-App-Nachrichten-Button 1 für Ihre Web-Kampagne „Formular zur E-Mail-Erfassung“][12]
-
-[4]: {% image_buster /assets/img/email_capture_config.png %}
-[5]: {% image_buster /assets/img/email_capture.png %}
-[10]: {% image_buster /assets/img_archive/web_email_filter_1.png %}
-[11]: {% image_buster /assets/img_archive/web_email_filter_2.png %}
-[12]: {% image_buster /assets/img_archive/web_email_filter_3.png %}

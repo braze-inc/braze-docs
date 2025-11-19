@@ -16,13 +16,13 @@ tool:
 
 Um Ihre Kampagnen oder Canvase nach Status zu filtern, wählen Sie **Alle Status** und dann einen Status aus.
 
-![Das Dropdown-Menü "Alle Status" im Braze-Dashboard.]({% image_buster /assets/img/messaging_fundamentals/filter-by-status.png %}){: style="max-width:70%;"}
+\![Das Dropdown-Menü 'Alle Status' im Braze-Dashboard.]({% image_buster /assets/img/messaging_fundamentals/filter-by-status.png %}){: style="max-width:70%;"}
 
 ## Ändern des Status
 
 Um den Status einer Kampagne oder eines Canvas zu ändern, wählen Sie das Menü <i class="fas fa-ellipsis-vertical"></i> und dann einen Status aus.
 
-![Eine Liste der Canvase im Braze-Dashboard, wobei das Menü für einen der Canvase geöffnet ist.]({% image_buster /assets/img/messaging_fundamentals/change-status.png %})
+\![Eine Liste der Canvase im Braze-Dashboard, wobei das Menü für eine der Canvase geöffnet ist.]({% image_buster /assets/img/messaging_fundamentals/change-status.png %})
 
 ## Verfügbare Stati
 

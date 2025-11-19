@@ -27,6 +27,10 @@ Braze testet alle Varianten gegeneinander mit Pearson's Chi-Quadrat-Tests, die m
 
 Dies ist ein anderer Test als der Konfidenzwert, der nur die Leistung einer Variante im Vergleich zur Kontrolle mit einem numerischen Wert zwischen 0 und 100% beschreibt. Konkret bedeutet dies, dass wir darauf vertrauen, dass der standardisierte Unterschied in der Konversionsrate zwischen der Variante und der Kontrolle signifikant größer als der Zufall ist.
 
+### Warum ist die Verteilung der Varianten nicht gleichmäßig?
+
+{% multi_lang_include multivariant_testing.md section='Variant distribution' %}
+
 ## Tests durchführen und abschließen
 
 ### Wann ist der erste Test beendet?
