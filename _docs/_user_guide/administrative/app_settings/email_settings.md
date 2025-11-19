@@ -26,7 +26,7 @@ When configuring your email settings, your outbound email settings identify whic
 {% tabs local %}
 {% tab Display Name Address %}
 
-In this section, you can add the names and email addresses that can be used when Braze sends emails to your users. The display names and email addresses will be available in the **Edit Sending Info** options as you compose your email campaign. Note that updates made to the outbound email settings do not retroactively affect existing sends.
+In this section, you can add the names and email addresses you can use when Braze sends emails to your users. The display names and email addresses are available in the **Edit Sending Info** options as you compose your email campaign. Note that updates made to the outbound email settings do not retroactively affect existing sends.
 
 !["Outbound Email Settings" section with fields for different display names and domains.]({% image_buster /assets/img/email_settings/display_name_address.png %})
 
@@ -72,7 +72,7 @@ global-support@company.com
 {% endtab %}
 {% tab BCC Address %}
 
-This section allows you to add and manage BCC addresses that can be appended to outbound email messages sent from Braze. BCC addresses are available for SendGrid and SparkPost only. As an alternative to BCC addresses, we recommend using [messaging archiving]({{site.baseurl}}/user_guide/data/export_braze_data/message_archiving/) to save a copy of messages sent to users for archival or compliance purposes.
+This section allows you to add and manage BCC addresses you can append to outbound email messages sent from Braze. BCC addresses are available for SendGrid and SparkPost only. As an alternative to BCC addresses, we recommend using [messaging archiving]({{site.baseurl}}/user_guide/data/export_braze_data/message_archiving/) to save a copy of messages sent to users for archival or compliance purposes.
 
 Appending a BCC address to an email message will send an identical copy of the message that your user receives to your BCC inbox. This is a useful tool to retain copies of messages you sent to your users for compliance requirements or customer support issues. BCC emails are not included in email reporting and analytics.
 
@@ -203,7 +203,7 @@ In your email editor, go to **Sending Settings** > **Sending Info**. Select from
 
 - **Use workspace default**: Uses the **Email Unsubscribe Header** settings set in **Email Preferences**. Any changes made to this setting will apply to all messages.
 - **Unsubscribe globally from all emails**: Uses the Braze default one-click unsubscribe header. Users who click the unsubscribe button will have their global email subscription state set to "Unsubscribed".
-- **Unsubscribe from specific subscription group**: Uses the specified subscription group. Users who click the unsubscribe button will be unsubscribed from the selected subscription group.
+- **Unsubscribe from specific subscription group**: Uses the specified subscription group. Braze unsubscribes users who click the unsubscribe button from the selected subscription group.
     - When selecting a subscription group, add the **Subscription Group** filter in **Target Audiences** to only target users who are subscribed to this specific group. The subscription group selected for one-click unsubscribe must match the subscription group you’re targeting. If there is a mismatch in the subscription group, you may risk sending to a user who is trying to unsubscribe from a subscription group they're already unsubscribed from.
 
 {% alert important %}
@@ -319,7 +319,7 @@ If you're adding conditional logic, avoid having output values that add whitespa
 ### Message-level one-click list-unsubscribe
 
 {% details If I add the email headers for one-click manually, and I have the email unsubscribe header turned on, what is the expected behavior? %}
-The email headers added for one-click list-unsubscribe will be applied to all future sends of this campaign.
+The email headers added for one-click list-unsubscribe apply to all future sends of this campaign.
 {% enddetails %}
 
 {% details Why do subscription groups have to match across message variants in order to launch? %}

@@ -9,13 +9,13 @@ description: "This page provides an overview of Cloud Data Ingestion, best pract
 
 # Braze Cloud Data Ingestion overview
 
-> Braze Cloud Data Ingestion allows you to set up a direct connection from your data warehouse or file storage system to Braze to sync relevant user or catalog data. When synced to Braze, this data can be leveraged for use cases such as personalization, triggering, or segmentation. 
+> Braze Cloud Data Ingestion allows you to set up a direct connection from your data warehouse or file storage system to Braze to sync relevant user or catalog data. When you sync this data to Braze, you can leverage it for use cases such as personalization, triggering, or segmentation. 
 
 ## How it works
 
 With Braze Cloud Data Ingestion (CDI), you set up an integration between your data warehouse instance and Braze workspace to sync data on a recurring basis. This sync runs on a schedule you set, and each integration can have a different schedule. Syncs can run as frequently as every 15 minutes or as infrequently as once per month. If you need syncs to occur more frequently than 15 minutes, contact your customer success manager or consider using REST API calls for real-time data ingestion.
 
-When a sync runs, Braze directly connects to your data warehouse instance, retrieves all new data from the specified table, and updates the corresponding data on your Braze dashboard. Each time the sync runs, any updated data will be reflected in Braze.
+When a sync runs, Braze directly connects to your data warehouse instance, retrieves all new data from the specified table, and updates the corresponding data on your Braze dashboard. Each time the sync runs, Braze reflects any updated data.
 
 ## Supported data sources
 
@@ -43,11 +43,11 @@ Cloud Data Ingestion supports the following data types:
 - Catalog items
 - User delete requests
 
-User data can be updated by external ID, user alias, Braze ID, email, or phone number. Users can be deleted by external ID, user alias, or Braze ID. 
+You can update user data by external ID, user alias, Braze ID, email, or phone number. You can delete users by external ID, user alias, or Braze ID. 
 
 ## What gets synced
 
-Each time a sync runs, Braze looks for rows that have not previously been synced. We check this using the `UPDATED_AT` column in your table or view. Any rows where `UPDATED_AT` is equal to or later than the last `UPDATED_AT` timestamp from the last successful sync job will be selected and pulled into Braze.
+Each time a sync runs, Braze looks for rows that have not previously been synced. We check this using the `UPDATED_AT` column in your table or view. Braze selects and imports any rows where `UPDATED_AT` is equal to or later than the last `UPDATED_AT` timestamp from the last successful sync job.
 
 In your data warehouse, add the following users and attributes to your table, setting the `UPDATED_AT` time to the time you add this data:
 
@@ -57,7 +57,7 @@ In your data warehouse, add the following users and attributes to your table, se
 | `2022-07-19 09:07:23` | `customer_3456` | {<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_1":"abcdefg",<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_2":42,<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_3":"2019-07-16T19:20:30+1:00",<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_5":"testing"<br>} |
 | `2022-07-19 09:07:23` | `customer_5678` | {<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_1":"abcdefg",<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_4":true,<br>&nbsp;&nbsp;&nbsp;&nbsp;"attribute_5":"testing_123"<br>} |
 
-During the next scheduled sync, all rows with a `UPDATED_AT` timestamp equal to or later than the most recent timestamp will be synced to the Braze user profiles. Fields will be updated or added, so you do not need to sync the full user profile each time. After the sync, users will reflect the new updates:
+During the next scheduled sync, Braze syncs all rows with a `UPDATED_AT` timestamp equal to or later than the most recent timestamp to user profiles. Braze updates or adds fields, so you do not need to sync the full user profile each time. After the sync, user profiles reflect the new updates:
 
 ```json
 {
@@ -349,7 +349,7 @@ Braze Cloud Data Ingestion counts toward the available rate limit, so if you're 
 
 ### Only write new or updated attributes to minimize consumption
 
-Each time a sync runs, Braze looks for rows that have not previously been synced. We check this using the `UPDATED_AT` column in your table or view. Any rows where `UPDATED_AT` is equal to or later than the last `UPDATED_AT` timestamp from the last successful sync job will be selected and pulled into Braze, regardless of whether they are the same as what's currently on the user profile. Given that, we recommend only syncing attributes you want to add or update.
+Each time a sync runs, Braze looks for rows that have not previously been synced. We check this using the `UPDATED_AT` column in your table or view. Braze selects and imports any rows where `UPDATED_AT` is equal to or later than the last `UPDATED_AT` timestamp from the last successful sync job, regardless of whether they are the same as what's currently on the user profile. Given that, we recommend only syncing attributes you want to add or update.
 
 Data point usage is identical using CDI as for other ingestion methods like REST APIs or SDKs, so it is up to you to make sure that you're only adding new or updated attributes into your source tables.
 
@@ -551,7 +551,7 @@ You may include nested custom attributes in the payload column for a custom attr
 
 {% endtab %}
 {% tab Event %}
-To sync events, an event name is required. The `time` field should be formatted as an ISO 8601 string or in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format. If the `time` field is not present, the `UPDATED_AT` column value is used as the event time. Other fields including `app_id` and `properties` are optional. 
+To sync events, an event name is required. Format the `time` field as an ISO 8601 string or in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format. If the `time` field is not present, Braze uses the `UPDATED_AT` column value as the event time. Other fields including `app_id` and `properties` are optional. 
 
 Note that you can only sync one event per row.
 
@@ -569,7 +569,7 @@ Note that you can only sync one event per row.
 
 {% endtab %}
 {% tab Purchase %}
-To sync purchase events, `product_id`, `currency`, and `price` are required. The `time` field, which is optional, should be formatted as an ISO 8601 string or in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format. If the `time` field is not present, the `UPDATED_AT` column value is used as the event time. Other fields, including `app_id`, `quantity` and `properties` are optional.
+To sync purchase events, `product_id`, `currency`, and `price` are required. Format the `time` field, which is optional, as an ISO 8601 string or in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format. If the `time` field is not present, Braze uses the `UPDATED_AT` column value as the event time. Other fields, including `app_id`, `quantity` and `properties` are optional.
 
 Note that you can only sync one purchase event per row.
 
@@ -620,9 +620,9 @@ We recommend that queries be completed within one hour for optimal performance a
 | Limitation            | Description                                                                                                                                                                        |
 | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Number of integrations | There is no limit on how many integrations you can set up. However, you will only be able to set up one integration per table or view.                                             |
-| Number of rows         | By default, each run can sync up to 500 million rows. Any syncs with more than 500 million new rows will be stopped. If you need a higher limit than this, contact your Braze customer success manager or Braze Support. |
+| Number of rows         | By default, each run can sync up to 500 million rows. Braze stops any syncs with more than 500 million new rows. If you need a higher limit than this, contact your Braze customer success manager or Braze Support. |
 | Attributes per row     | Each row should contain a single user ID and a JSON object with up to 250 attributes. Each key in the JSON object counts as one attribute (that is, an array counts as one attribute). |
-| Payload size           | Each row can contain a payload of up to 1 MB. Payloads greater than 1&nbsp;MB will be rejected, and the error "Payload was greater than 1MB" will be logged to the sync log along with the associated external ID and truncated payload. |
+| Payload size           | Each row can contain a payload of up to 1 MB. Braze rejects payloads greater than 1&nbsp;MB and logs the error "Payload was greater than 1MB" to the sync log along with the associated external ID and truncated payload. |
 | Data type              | You can sync user attributes, events, and purchases through Cloud Data Ingestion.                                                                                                  |
 | Braze region           | This product is available in all Braze regions. Any Braze region can connect to any source data region.                                                                              |
 | Source region       | Braze will connect to your data warehouse or cloud environment in any region or cloud provider.                                                                                        |
