@@ -181,7 +181,8 @@ A common use case is trying to debug why a user can't see a particular Content C
       }
     ]
     ```
-
+    
+{: start="5"}
 5. Use a decoding tool like [Base64 Decode and Encode](https://www.base64decode.org/) to decode the `id` from Base64 format and find the associated `campaign_id`. In our example, this results in the following:
 
     ```
