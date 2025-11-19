@@ -76,7 +76,7 @@ guide_menu_list:
   image: /assets/img/braze_icons/annotation-question.svg
 ---
 
-## [\![Braze Lernkurse]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/messaging-channels-email){: style="float:right;width:120px;border:0;" class="noimgborder"} Passen Sie Ihre E-Mails an
+## [![Braze Lernkurse]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/messaging-channels-email){: style="float:right;width:120px;border:0;" class="noimgborder"} Passen Sie Ihre E-Mails an
 
 Sie können Ihr E-Mail Messaging auf vielfältige Weise anpassen, zum Beispiel:
 
