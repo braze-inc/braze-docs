@@ -29,8 +29,6 @@ Replace the following:
 | Placeholder | Description |
 |-------------|-------------|
 | `OrganizationName` | The name of your organization formatted in Pascal case. |
-| `ProductName` | The name of your product formatted in Pascal case. |
-| `ProductVersion` | The version number of your product. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Examples
