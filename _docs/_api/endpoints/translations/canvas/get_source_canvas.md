@@ -35,6 +35,7 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 |------------------------|----------|-----------|------------------------------------|
 | `workflow_id`          | Required | String    | The ID of the Canvas.              |
 | `step_id`              | Required | String    | The ID of your Canvas step.        |
+|`message_variation_id`| Required | String | The ID of your message variation. |
 | `locale_id`            | Optional | String    | The ID (UUID) of the locale.              |
 | `post_launch_draft_version`| Optional | Boolean | When `true` returns the latest draft version instead of the latest live published version. Defaults to `false` returning the latest live version.
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
@@ -46,7 +47,7 @@ All translation IDs are considered universal unique identifiers (UUIDs), which c
 ## Example request
 
 ```
-curl --location --request GET 'https://rest.iad-03.braze.com/canvas/translations/source?workflow_id={workflow_id}&step_id={step_id}&locale_id={locale_uuid}&post_launch_draft_version=true' \
+curl --location --request GET 'https://rest.iad-03.braze.com/canvas/translations/source?workflow_id={workflow_id}&step_id={step_id}&message_variation_id={message_variation_id}&locale_id={locale_uuid}&post_launch_draft_version=true' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
