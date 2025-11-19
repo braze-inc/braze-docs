@@ -299,7 +299,7 @@ Pour obtenir les définitions complètes de tous les indicateurs relatifs aux ba
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#revenue">Chiffre d'affaires</a></td>
-            <td>{% multi_lang_include metrics.md indicateurs='Chiffre d'affaires' %}</td>
+            <td>{% multi_lang_include metrics.md indicateurs="Chiffre d'affaires" %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#confidence">Confiance</a></td>
