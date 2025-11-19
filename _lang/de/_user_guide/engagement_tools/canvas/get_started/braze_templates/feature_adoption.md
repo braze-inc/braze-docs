@@ -86,14 +86,14 @@ Als Nächstes erstellen wir den ersten Aktions-Pfad, der anzeigen soll, ob unser
 
 1. Da die Funktion Cruise Control erst verfügbar ist, nachdem eine Bestellung in den Warenkorb gelegt wurde, nennen wir die erste Aktionsgruppe **In den Warenkorb gelegt** und wählen `added_to_cart` für das benutzerdefinierte Ereignis.
 
-\![Der Name der Aktionsgruppe wurde auf "In den Warenkorb gelegt" und das "Angepasste Event durchführen" auf "added_to_cart".]({% image_buster /assets/img/canvas_templates/feature_adoption/action_path_added_to_cart.png gesetzt %}){: style="max-width:60%;"}
+\![Der Name der Aktionsgruppe wurde auf "In den Warenkorb gelegt" und das "Angepasste Event durchführen" auf "added_to_cart".]({% image_buster /assets/img/canvas_templates/feature_adoption/action_path_added_to_cart.png %}){: style="max-width:60%;"}
 
 {: start="2"}
 2\. Behalten Sie die zweite App-Gruppe **Taken Tour** bei, da wir auswerten möchten, ob Nutzer:innen eine Tour durch die App gemacht haben. Wenn ja, werden sie zum zweiten Aktions-Pfad vorgebracht.
 3\. Für den nachfolgenden Aktionspfad mit dem Namen **Nutzung bewerten** ersetzen Sie **Genutzte Funktion >3x** durch **Gesehene Tempomateinstellungen**.
 4\. Wählen Sie das Dropdown-Menü **Angepasstes Event durchführen** und dann `scheduled_delivery` für das angepasste Event aus.
 
-\![Der Name der Aktionsgruppe wurde auf 'Verwendetes Feature >3x' und das Feld 'Angepasstes Event durchführen' auf 'scheduled_delivery'.]({% image_buster /assets/img/canvas_templates/feature_adoption/action_path_assess_usage.png gesetzt %}){: style="max-width:60%;"}
+\![Der Name der Aktionsgruppe wurde auf 'Verwendetes Feature >3x' und das Feld 'Angepasstes Event durchführen' auf 'scheduled_delivery'.]({% image_buster /assets/img/canvas_templates/feature_adoption/action_path_assess_usage.png %}){: style="max-width:60%;"}
 
 #### Feedback-Umfrage einrichten
 
