@@ -87,7 +87,7 @@ Directly clicking and opening the push message will send you to your app, where 
 
 You can preview your in-app message as you compose it in the **Preview** tab. This should help you visualize what your final message will look like from your user's perspective. You can preview what your message will look like to a random user, a specific user, or a customized user. You can also preview messages for either mobile devices or tablets.
 
-![Compose tab when building an in-app message showing the preview of what the message will look like. A user is not selected, so the Liquid added in the body section displays as is.]({%image_buster /assets/img/in-app-message-preview.png %})
+![Compose tab when building an in-app message showing the preview of what the message will look like. A user is not selected, so the Liquid added in the body section displays as is.]({% image_buster /assets/img/in-app-message-preview.png %})
 
 Braze has three generations of in-app messages available. You can fine-tune to which devices your messages should be sent, based on which Generation they support.
 
@@ -100,7 +100,7 @@ In **Preview**, the view of your message might not be identical to its actual re
 ### Test checklist
 
 - Do the images and media show up and act as expected?
-- Does the Liquid function as expected? Have you accounted for a [default attribute value]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#accounting-for-null-attribute-values) in the event that the Liquid returns no information?
+- Does the Liquid function as expected? Have you accounted for a [default attribute value]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#accounting-for-null-attribute-values) if the Liquid returns no information?
 - Is your copy clear, concise, and correct?
 - Do your buttons direct the user where they should go?
 
@@ -152,7 +152,7 @@ In the **Preview** tab of your composer, the view of your message might not be i
 ### Test checklist
 
 - Do the images and media show up and act as expected?
-- Does the Liquid function as expected? Have you accounted for a [default attribute value]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#accounting-for-null-attribute-values) in the event that the Liquid returns no information?
+- Does the Liquid function as expected? Have you accounted for a [default attribute value]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#accounting-for-null-attribute-values) if the Liquid returns no information?
 - Is your copy clear, concise, and correct?
 - Do your links direct the user to where they should go?
 
