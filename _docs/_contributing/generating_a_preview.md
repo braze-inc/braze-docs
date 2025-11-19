@@ -37,7 +37,7 @@ When you start a local server, the files in your [current branch](#step-1-checko
 # for 'en' language:
 rake
 
-# for other langauges:
+# for other languages:
 rake es
 rake fr
 rake ja

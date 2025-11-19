@@ -9,7 +9,7 @@ tool:
 description: "Este artículo te explicará cómo utilizar, interpretar y compartir la información del segmento."
 ---
 
-# [\![Curso de Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/segmentation-course){: style="float:right;width:120px;border:0;" class="noimgborder"} Información del segmento
+# [![Curso de Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/segmentation-course){: style="float:right;width:120px;border:0;" class="noimgborder"} Información del segmento
 
 > Aprende a utilizar, interpretar y compartir la Información del segmento. 
 

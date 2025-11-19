@@ -30,7 +30,7 @@ description: "In diesem Referenzartikel finden Sie eine Liste mit erweiterten Fi
 | Filtername | Filterbeschreibung | Beispieleingabe | Beispiel-Ausgabe |
 |---|---|---|---|
 | `url_escape` | Erkennt alle Zeichen in einer Zeichenfolge, die in URLs nicht zulässig sind, und ersetzt die Zeichen durch ihre Escape-Varianten. | `{{'hey<>hi' | url_escape}}` | hey%3C%3Ehi |
-| `url_param_escape` | Ersetzt alle Zeichen in einer Zeichenfolge, die in URLs nicht zulässig sind, durch ihre maskierten Varianten, einschließlich des kaufmännischen Und-Zeichens (&) | `{{'hey<&>hi' | url_param_escape}` | hey%3C%26%3Ehi |
+| `url_param_escape` | Ersetzt alle Zeichen in einem String, die in URLs nicht zulässig sind, durch ihre escapeten Varianten, einschließlich des kaufmännischen Und-Zeichens (&) | `{{'hey<&>hi' | url_param_escape}` | hey%3C%26%3Ehi |
 | `url_encode` | Kodiert eine URL-freundliche Zeichenkette | `{{ 'google search' | url_encode }}` | Google+Suche |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -72,20 +72,68 @@ Es gibt keine Möglichkeit, einen Hash als Variable (z. B. als Ausdruck) in Liq
 | Filtername | Filterbeschreibung | Beispieleingabe | Beispiel-Ausgabe |
 |---|---|---|---|
 | `number_with_delimiter` | Formatiert eine Zahl mit Kommas | `{{ 123456 | number_with_delimiter }}` | 123,456 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## JSON-Escape/Zeichenfolgen-Escape-Filter
 
 | Filtername | Filterbeschreibung |
-|---|---|---|---|
+|---|---|
 | `json_escape` | Entfernt alle Sonderzeichen in einer Zeichenkette (z.B. doppelte Anführungszeichen `""` und Backslash ''). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Dieser Filter sollte immer verwendet werden, wenn Sie eine Zeichenkette in einem JSON-Dictionary personalisieren. Er ist insbesondere für Webhooks nützlich.
+
+## JSON-formatierende Filter
+
+| Filtername | Filterbeschreibung |
+|---|---|
+| `json_parse` | Konvertiert einen JSON String in eine entsprechende Datenstruktur, wie z.B. ein Objekt oder Array. | 
+| `as_json_string` | Konvertiert eine Datenstruktur, wie z.B. ein Objekt oder ein Array, in einen entsprechenden JSON String. | 
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
 {% endraw %}
 
+{% details json_parse example input and output %}
+
+### Eingabe 
+
+{% raw %}
+```liquid
+{% assign my_data_string = '[{"id":"1","store_name":"demo-store"}]'  %}
+{% assign my_data = my_data_string | json_parse %}
+```
+
+### Ausgabe
+
+```liquid
+{% for item in my_data %}
+Item ID: {{ item.id }}
+Item Name: {{ item.store_name }}
+{% endfor %}
+```
+{% endraw %}
+
+{% enddetails %}
+
+{% details as_json_string example input and output %}
+
+### Eingabe
+
+{% raw %}
+```liquid
+{% assign my_data_string = '[{"id":"1","store_name":"demo-store"}]'  %}
+{% assign my_data = my_data_string | json_parse %}
+{% assign json_string = my_data | as_json_string %}
+```
+
+### Ausgabe
+
+```liquid
+{{json_string}}
+```
+{% endraw %}
+{% enddetails %}
 
 [31]:https://docs.shopify.com/themes/liquid/tags/variable-tags
 [32]:https://docs.shopify.com/themes/liquid/tags/iteration-tags
-[34]:{% image_buster /assets/img_archive/personalized_iflogic_.png %}
-[37]:\#accounting-for-null-attribute-values
+[37]:#accounting-for-null-attribute-values

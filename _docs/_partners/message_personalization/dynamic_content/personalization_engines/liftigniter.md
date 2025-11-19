@@ -16,7 +16,7 @@ _This integration is maintained by Liftigniter._
 
 ## About the integration
 
-The LiftIgniter and Braze integration leverage Connected Content to allow you to recommend interesting topics such as news articles, clothing, and other retail items and videos.
+The LiftIgniter and Braze integration uses Connected Content to allow you to recommend interesting topics such as news articles, clothing, and other retail items and videos.
 
 ## Prerequisites
 

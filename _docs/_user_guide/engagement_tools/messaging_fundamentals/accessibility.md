@@ -10,7 +10,7 @@ description: "This reference article explains why accessibility is important to 
 
 > Understand why accessibility is important to consider in your marketing content, and how you can build accessible messages in Braze. For more guidance, check out our [Accessible Messaging Foundations](https://learning.braze.com/accessible-messaging-foundations) course on Braze Learning.
 
-Marketing content that excludes people with disabilities, even unintentionally, can prevent millions of people from interacting with your brand. Accessibility in marketing is about making it easy for everyone to experience your marketing, receive and understand your communication, and have the opportunity to invest in or become a fan of your product, service, or brand. 
+Marketing content that excludes people with disabilities, even unintentionally, can prevent millions of people from interacting with your brand. Accessibility in marketing is about enabling everyone to experience your marketing, understand your communication, and have the opportunity to invest in or become a fan of your product, service, or brand. 
 
 When designing your messaging, take the extra time to consider how you can make your designs accessible to all your customers.
 
@@ -241,7 +241,7 @@ Touch targets are any part of your message that users tap to take action, like b
 When touch targets are too small or too close together, it can be frustrating or impossible for users with mobility or dexterity challenges to interact with your message. Improving this can help reduce errors and create a smoother experience for everyone.
 
 Here’s what to keep in mind:
-- **Make it easy to tap.** Aim for a minimum touch target size of 44 x 44 pixels. This aligns with WCAG 2.2 guidelines for [touch targets](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html) and common mobile usability standards.
+- **Use adequate touch target size.** Aim for a minimum touch target size of 44 x 44 pixels. This aligns with WCAG 2.2 guidelines for [touch targets](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html) and common mobile usability standards.
 - **Give each target breathing room.** If tap targets are too close together—like stacked links or tightly grouped buttons—it can be easy to miss or tap the wrong one. Add spacing or padding between elements to prevent that.
 - **Don’t rely on visuals alone.** Even small icons can be made more usable with extra padding, allowing them to meet minimum size requirements without altering the layout.
 - **Preview on mobile.** Test your message on different screen sizes and make sure interactive elements are easy to use.
