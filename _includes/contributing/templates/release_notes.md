@@ -11,63 +11,63 @@ page_type: reference
 <!-- The title should include the date the release note is made live. For example, "February 21, 2024 release". -->
 # MONTH DAY, YEAR release
 
-<!-- Fill out the following four sections ("Data flexibility," "Unlocking creativity," "Robust channels," and "AI and ML automation") using the example section under the next HTML comment. -->
-## Data flexibility
+<!-- Fill out the following six sections ("Data & Reporting," "BrazeAI<sup>TM</sup>" "Orchestration," "Channels & Touchpoints", “Partnerships”, and “SDK”) using the example section under the next HTML comment. -->
+## Data & Reporting
 
-CONTENT.
+<!-- An example release note title specific to the “Data & Reporting” section. -->
+### RELEASE_NOTE_TITLE
 
-## Unlocking creativity
-
-CONTENT.
-
-## Robust channels
-
-CONTENT.
-
-## AI and ML automation
-
-CONTENT.
-
-<!-- An example section containing "Release type" includes for each section. You may add addtional sections, subsections, includes, images, and links as needed. -->
-## SECTION_TITLE
-
-CONTENT.
-
-### SUBSECTION_TITLE
-
+<!-- An “Early access” label for this release note. Add labels for “Early access”, “General availability”, and “Beta” beneath release note titles where relevant. -->
 {% multi_lang_include release_type.md release="Early access" %}
 
+<!-- You may add includes, images, and links as needed. -->
 CONTENT.
 
-### SUBSECTION_TITLE
+### RELEASE_NOTE_TITLE
 
 {% multi_lang_include release_type.md release="General availability" %}
 
 CONTENT.
 
-### SUBSECTION_TITLE
+### RELEASE_NOTE_TITLE
 
 {% multi_lang_include release_type.md release="Beta" %}
 
-CONTENT.
+## BrazeAI<sup>TM</sup>
 
-### SUBSECTION_TITLE
-
-CONTENT.
-
-<!-- Use this section to highlight new Braze parternships by including an overview of each integration and a link to the related partner page on Braze Docs. -->
-## New Braze partnerships
-
-### PARTNER_NAME
+### RELEASE_NOTE_TITLE
 
 CONTENT.
 
-### PARTNER_NAME
+## Orchestration
+
+### RELEASE_NOTE_TITLE
 
 CONTENT.
 
-<!-- Use this section list any new SDKs or SDK updates that are already released. -->
-## SDK updates
+## Channels & Touchpoints
+
+### RELEASE_NOTE_TITLE
+
+CONTENT.
+
+<!-- Use this section to highlight new Braze partnerships by including an overview of each integration and a link to the related partner page on Braze Docs. -->
+## Partnerships
+
+### PARTNER_NAME - PARTNER_CATEGORY
+
+CONTENT.
+
+### PARTNER_NAME - PARTNER_CATEGORY
+
+CONTENT.
+
+<!-- Use this section to list any new SDKs or SDK updates that are already released. -->
+## SDK
+
+CONTENT.
+
+### SDK breaking updates
 
 The following SDK updates have been released. Breaking updates are listed below; all other updates can be found by checking the corresponding SDK changelogs.
 
@@ -75,6 +75,7 @@ The following SDK updates have been released. Breaking updates are listed below;
     - OPTIONAL_CONTEXT.
 - [SDK_NAME](LINK_TO_GITHUB_CHANGELOG)
 - [SDK_NAME](LINK_TO_GITHUB_CHANGELOG)
+
 `````
 {% endraw %}
 {% enddetails %}
