@@ -3,7 +3,7 @@
 ## Tipos de mensajes
 
 {% tabs %}
-{% multi_lang_include developer_guide/_shared/push_notifications/message_types/swift.md %}
+{% multi_lang_include developer_guide/_shared/in_app_messages/message_types/swift.md %}
 {% endtabs %}
 
 ## Habilitación de mensajes dentro de la aplicación
@@ -32,4 +32,4 @@ AppDelegate.braze.inAppMessagePresenter = [[BrazeInAppMessageUI alloc] init];
 
 ### Paso 2: No desencadenar ninguna coincidencia
 
-Implementa [`BrazeDelegate.(_:noMatchingTriggerForEvent)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazedelegate/braze(_:nomatchingtriggerforevent:)-8rt7y/) dentro de la clase `BrazeDelegate` correspondiente. Cuando Braze no encuentre un desencadenante coincidente para un evento concreto, llamará a este método automáticamente.
+Implementa [`BrazeDelegate.(_:noMatchingTriggerForEvent)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazedelegate/braze(_:nomatchingtriggerforevent:)-8rt7y/) dentro de la clase `BrazeDelegate` correspondiente. Cuando Braze no encuentre un desencadenante que coincida con un evento concreto, llamará a este método automáticamente.

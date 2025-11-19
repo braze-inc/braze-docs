@@ -24,7 +24,11 @@ Android 10 以降または iOS 13 以降のバージョンを使用している�
 
 この新しい [ダークモード] オプションは、[アプリ内メッセージの作成]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/)画面の [スタイル] タブにあり、デバイスをダークモードにしているユーザー向けに代替のカラーテーマを簡単に追加できます。
 
+<<<<<<< HEAD
+![アプリ内メッセージ作成時のスタイルタブのライトモードスタイルとダークモードスタイルの間のユーザー切り替える]]({% image_buster /assets/img_archive/iam-dark-mode.gif %})
+=======
 \![アプリ内メッセージ作成時のスタイルタブのライトモードスタイルとダークモードスタイルの間のユーザー切り替える]]({% image_buster /assets/img_archive/iam-dark-mode.gif %})
+>>>>>>> main
 
 このオプションを有効にすると、カラーピッカーを使用してアプリ内メッセージのダークテーマの色を選択するか、既存の[カラープロファイル]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#color-profile)を選択して既存のダークまたはライトテーマを再利用できます。
 

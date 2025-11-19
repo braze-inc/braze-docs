@@ -22,7 +22,7 @@ tool:
 
 属性トリガーの使用を開始するには、キャンペーンまたはキャンバスコンポーネントを作成し、配信方法として**アクションベースの配信**を選択します。次に、使用したい属性トリガーを選択します。
 
-\![トリガーを選択するためのドロップダウンがある。]({% image_buster /assets/img_archive/trigger_attribute.png %})
+![トリガーを選択するためのドロップダウンがある。]({% image_buster /assets/img_archive/trigger_attribute.png %})
 
 ### サブスクリプションのステータスを更新する
 
@@ -68,7 +68,7 @@ tool:
 属性トリガーは現在、配列属性では使用できません。
 {% endalert %}
 
-\!["AA_current_rewards_tier" 、任意の値に変更するための "カスタム属性値の変更 "トリガー。]({% image_buster /assets/img_archive/any_value.png %})
+!["AA_current_rewards_tier" 、任意の値に変更するための "カスタム属性値の変更 "トリガー。]({% image_buster /assets/img_archive/any_value.png %})
 
 また、Liquidを使用して、顧客の新しい報酬ランクをメッセージ本文にパーソナライズし、変更に関する詳細情報を顧客に提供することもできる。
 
@@ -84,7 +84,7 @@ Your rewards tier was just changed to {{custom_attribute.${AA_current_rewards_ti
 
 例えば、報酬ランクがベストランクに変わったユーザーをターゲットにする。この例では、最高の報酬ランクがスーパーVIPだとする。ユーザーの報酬レベルカスタム属性が`Super VIP` に変更されたときにトリガーするキャンペーンを設定することで、スーパーVIPになったユーザーを祝福することができる。
 
-\!["AA_current_rewards_tier" 、"super vip "という特定の値に変更するための "カスタム属性値の変更 "トリガー。]({% image_buster /assets/img_archive/super_vip.png %})
+!["AA_current_rewards_tier" 、"super vip "という特定の値に変更するための "カスタム属性値の変更 "トリガー。]({% image_buster /assets/img_archive/super_vip.png %})
 
 {% alert important %}
 - 配列および日付カスタム属性には、特定のカスタム属性値の属性トリガーは使用できません。

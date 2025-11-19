@@ -7,11 +7,17 @@ page_order: 2
 
 # Tracking von Nutzer:innen über ein Formular
 
-> Lernen Sie, wie Sie Nutzer:innen verfolgen können, die ein Formular über Ihre Landing Page abschicken, indem Sie Ihren Nachrichten einen {% raw %}`{% landing_page_url %}`{% endraw %} Liquid-Tag hinzufügen. Dieser Liquid-Tag wird von allen Messaging-Kanälen von Braze unterstützt, einschließlich E-Mail, SMS, In-App-Nachrichten und mehr. Weitere Informationen über Tracking-Daten finden Sie unter [Über Tracking-Daten für Landing Pages]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/about_tracking_data).
+> Lernen Sie, wie Sie Nutzer:innen verfolgen können, die ein Formular über Ihre Landing Page abschicken, indem Sie Ihren Nachrichten einen Liquid-Tag hinzufügen. Dieser Liquid-Tag wird von allen Messaging-Kanälen von Braze unterstützt, einschließlich E-Mail, SMS, In-App-Nachrichten und mehr. Weitere Informationen über Tracking-Daten finden Sie unter [Über Tracking-Daten für Landing Pages]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/about_tracking_data).
 
 ## Funktionsweise
 
-Sie können eine Landing Page Liquid-Tag zu jeder Ihrer Nachrichten mit einem oder mehreren Kanälen in Braze hinzufügen. Wenn ein Nutzer:innen diese Landing Page besucht und das Formular absendet, verknüpft Braze diese Daten automatisch mit seinem bestehenden Profil, anstatt ein neues Profil für diesen Nutzer:innen zu erstellen.
+Sie können einen {% raw %}`{% landing_page_url %}`{% endraw %} Liquid-Tag zu jeder Ihrer Nachrichten mit einem oder mehreren Kanälen in Braze hinzufügen. Wenn ein Nutzer:innen diese Landing Page besucht und das Formular absendet, verknüpft Braze diese Daten automatisch mit seinem bestehenden Profil, anstatt ein neues Profil für diesen Nutzer:innen zu erstellen. Im folgenden Beispiel wird ein Liquid-Tag auf der Landing Page verwendet, um Kunden:in mit einer Umfrage zu verbinden:
+
+{% raw %}
+```html
+<a href=" {% landing_page_url customer-survey %}" class="button">Take the Survey!</a>
+```
+{% endraw %}
 
 {% alert tip %}
 Sie können Landing Pages auch zur Lead-Generierung nutzen, indem Sie die URL der Seite in Ihre externen Kanäle einbetten. Nachdem Sie eine Landing Page erstellt haben, gehen Sie zu **Landing Page Details**, um die eindeutige URL für Ihre Landing Page zu erhalten.
@@ -53,10 +59,18 @@ Ihr Snippet wird in etwa so aussehen wie das folgende:
 
 {% raw %}
 ```ruby
-{% landing_page_url my-custom-url-handle %}
+{% landing_page_url custom-url-handle %}
 ```
 {% endraw %}
 
 ### Schritt 3: Nachricht fertigstellen und versenden
 
-Betten Sie das Snippet von Liquid in Ihre Nachricht ein und stellen Sie dann den Rest Ihrer Nachricht fertig. Wenn Sie bereit sind, können Sie die Nachricht senden, um das Tracking der Nutzer:innen auf Ihrer Landing Page zu starten.
+Betten Sie das Snippet von Liquid in Ihre Nachricht ein und stellen Sie dann den Rest Ihrer Nachricht fertig. Zum Beispiel:
+
+{% raw %}
+```html
+<a href=" {% landing_page_url customer-survey %}" class="button">Take the Survey!</a>
+```
+{% endraw %}
+
+Wenn Sie bereit sind, können Sie die Nachricht senden, um das Tracking der Nutzer:innen auf Ihrer Landing Page zu starten.

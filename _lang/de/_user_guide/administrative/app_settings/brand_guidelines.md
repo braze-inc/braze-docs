@@ -3,14 +3,14 @@ nav_title: Markenrichtlinien
 article_title: Markenrichtlinien
 page_order: 1
 page_type: reference
-description: "Dieser referenzierte Artikel beschreibt, wie Sie mit dem KI-Texterstellungsassistenten Marken-Buidelines erstellen, verwalten und verwenden, die Sie auf Ihre Nachrichten anwenden können."
+description: "Dieser referenzierte Artikel beschreibt, wie Sie Markenrichtlinien erstellen, verwalten und verwenden, die Sie mit dem KI Copywriting Assistant auf Ihre Nachrichten anwenden können."
 ---
 
 # Markenrichtlinien
 
 > Passen Sie den Stil Ihrer von der KI generierten Texte mit personalisierten Markenrichtlinien an die Stimme, den Ton und die Persönlichkeit Ihrer Marke an.
 
-Sie können Ihre Markenrichtlinien erstellen und verwalten, indem Sie zu **Einstellungen** > **Markenrichtlinien** gehen. Sie können sie auch mit dem [KI-Texterstellungsassistenten]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/brand_guidelines/) erstellen.
+Sie können Ihre Markenrichtlinien erstellen und verwalten, indem Sie zu **Einstellungen** > **Markenrichtlinien** gehen. Sie können sie auch mit dem [KI-Texterstellungsassistenten]({{site.baseurl}}/user_guide/brazeai/generative_ai/brand_guidelines/) erstellen.
 
 ## Erstellen von Markenrichtlinien
 
@@ -36,7 +36,7 @@ Wählen Sie auf der Seite **Markenrichtlinien** die Option **Neu erstellen** aus
 
 Listen Sie unter **Ausschlüsse** alle Sprachen oder Stile auf, die nicht mit Ihrer Marke übereinstimmen. Zum Beispiel sollten Sie „Sarkasmus“, „negative Haltungen“ oder einen „herablassenden“ Sprachstil vermeiden.
 
-![Das Fenster "Markenrichtlinie erstellen" mit Feldern zur Eingabe des Namens, der Beschreibung, der Persönlichkeit, der Ausschlüsse und des Tons.][1]
+![Das Fenster "Markenrichtlinie erstellen" mit Feldern zur Eingabe des Namens, der Beschreibung, der Persönlichkeit, der Ausschlüsse und des Tons.]({% image_buster /assets/img/guidelines_create.png %})
 
 ### Schritt 4: Richtlinien testen
 
@@ -54,18 +54,12 @@ Sie können die Ausgabesprache ändern, unabhängig davon, in welcher Sprache Ih
 
 Sie können Markenrichtlinien bearbeiten, indem Sie sie auf der Seite **Markenrichtlinien** auswählen. Archivieren Sie eine Markenrichtlinie, um sie inaktiv zu machen und sie aus dem KI-Texterstellungsassistenten zu entfernen. Um sie wieder aktiv und auswählbar zu machen, können Sie nach archivierten Markenrichtlinien filtern und dann die Archivierung aufheben.
 
-![Die Seite "Markenrichtlinien" wurde nach archivierten Markenrichtlinien gefiltert.][4]
+![Die Seite "Markenrichtlinien" wurde nach archivierten Markenrichtlinien gefiltert.]({% image_buster /assets/img/unarchive_brand_guideline.png %})
 
 ## Verwendung von Markenrichtlinien
 
-Wenn Sie eine Nachricht verfassen, öffnen Sie den [KI-Texter-Assistenten]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/) und wählen Sie Ihre Markenrichtlinien im Dropdown-Menü **Markenrichtlinien anwenden** aus. Wenn Sie eine bestimmte Markenrichtlinie als Standard festlegen, wird diese automatisch in der Dropdown-Liste ausgewählt, aber Sie können auch eine andere Richtlinie wählen. 
+Wenn Sie eine Nachricht verfassen, öffnen Sie den [KI-Texter-Assistenten]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/) und wählen Sie Ihre Markenrichtlinien im Dropdown-Menü **Markenrichtlinien anwenden** aus. Wenn Sie eine bestimmte Markenrichtlinie als Standard festlegen, wird diese automatisch in der Dropdown-Liste ausgewählt, aber Sie können auch eine andere Richtlinie wählen. 
 
-!["KI-Textwerkstatt-Assistent mit "Important Alerts!!" als Markenleitlinie ausgewählt.][2]
+!["KI-Textwerkstatt-Assistent mit "Important Alerts!!" als Markenleitlinie ausgewählt.]({% image_buster /assets/img/guidelines_ai_assistant.png %})
 
-## Wie werden meine Daten verwendet und an OpenAI gesendet?
-
-Um Texte anhand einer Markenrichtlinie zu erstellen, sendet Braze Ihre Anfrage mit dem Inhalt Ihrer Richtlinie an OpenAI. Alle Abfragen, die von Braze an OpenAI gesendet werden, sind anonymisiert. Das bedeutet, dass OpenAI nicht in der Lage ist, festzustellen, von wem die Abfrage gesendet wurde, es sei denn, Sie geben eindeutig identifizierbare Informationen in den von Ihnen bereitgestellten Eingaben oder in Ihren früheren Kampagnendaten an, wenn Sie die Option "Frühere Kampagnendaten referenzieren" aktivieren. Gemäß [der Richtlinie von OpenAI](https://openai.com/policies/api-data-usage-policies) werden Daten, die über Braze an die API von OpenAI gesendet werden, nicht zum Trainieren oder Verbessern ihrer Modelle verwendet und nach 30 Tagen gelöscht. Zwischen Ihnen und Braze ist jeder mit GPT erstellte Inhalt Ihr geistiges Eigentum. Braze erhebt keine Ansprüche auf das Urheberrecht an solchen Inhalten und übernimmt keinerlei Garantie für KI-generierte Inhalte.
-
-[1]: {% image_buster /assets/img/guidelines_create.png %}
-[2]: {% image_buster /assets/img/guidelines_ai_assistant.png %}
-[4]: {% image_buster /assets/img/unarchive_brand_guideline.png %}
+{% multi_lang_include brazeai/generative_ai/policy.md %}

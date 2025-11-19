@@ -27,7 +27,7 @@ guide_featured_list:
     link: /docs/user_guide/administrative/app_settings/internal_groups_tab/
     image: /assets/img/braze_icons/users-01.svg
   - name: Verschlüsselung auf Bezeichner-Feldebene
-    link: /docs/user_guide/analytics/field_level_encryption/
+    link: /docs/user_guide/data/field_level_encryption/
     image: /assets/img/braze_icons/mail-01.svg
 
 guide_menu_title: "Workspace settings"
@@ -38,8 +38,8 @@ guide_menu_list:
   - name: E-Mail-Präferenzen
     link: /docs/user_guide/administrative/app_settings/email_settings/
     image: /assets/img/braze_icons/mail-01.svg
-  - name: Push TTL-Einstellungen
-    link: /docs/user_guide/administrative/app_settings/push_ttl_settings/
+  - name: Push-Einstellungen
+    link: /docs/user_guide/administrative/app_settings/push_settings/
     image: /assets/img/braze_icons/settings-01.svg
   - name: Mehrsprachige Einstellungen
     link: /docs/multi_language_support/
@@ -62,7 +62,7 @@ guide_menu_list2:
     
 guide_menu_title3: "Data settings"
 guide_menu_list3:
-  - name: Benutzerdefinierte Daten
+  - name: Angepasste Daten
     link: /docs/user_guide/data/custom_data/managing_custom_data/
     image: /assets/img/braze_icons/database-01.svg
   - name: Exportprotokolle

@@ -40,7 +40,11 @@ Canvas ビルダーで、[Message]({{site.baseurl}}/user_guide/engagement_tools/
 
 アプリ内メッセージの有効期限を選択できます。この間、アプリ内メッセージは有効期限が切れるまで表示されるのを待機します。アプリ内メッセージは送信後に一度だけ表示できます。
 
+<<<<<<< HEAD
+![アプリ内メッセージのメッセージステップのメッセージ制御部。アプリ内メッセージの有効期限は、ステップが使用可能になってから3 日間です。]({% image_buster /assets/img_archive/canvas_expiration2.png %}){: style="max-width:90%"}
+=======
 \![アプリ内メッセージのメッセージステップのメッセージ制御部。アプリ内メッセージの有効期限は、ステップが使用可能になってから3 日間です。]({% image_buster /assets/img_archive/canvas_expiration2.png %}){: style="max-width:90%"}
+>>>>>>> main
 
 | オプション | 説明 | 例 |
 |---|---|---|
@@ -167,7 +171,11 @@ Canvas ビルダーで、[Message]({{site.baseurl}}/user_guide/engagement_tools/
 
 **正確な優先度を設定**を選択し、異なるキャンバスのステップをドラッグしてキャンバスの優先順位を並べ替える。デフォルトでは、キャンバスバリアントの前のステップから順に表示されます。優先順位付けの優先順位付けが完了したら、**Apply sort**を選択します。
 
+<<<<<<< HEAD
+![2 つのステップs "Welcome IAM"および"Followup IAM"を持つプライオリティソーター。]({% image_buster /assets/img_archive/canvas_priority2.png %}){: style="max-width:85%"}
+=======
 \![2 つのステップs "Welcome IAM"および"Followup IAM"を持つプライオリティソーター。]({% image_buster /assets/img_archive/canvas_priority2.png %}){: style="max-width:85%"}
+>>>>>>> main
 
 ### アクティブなキャンバスのドラフトの変更
 
@@ -221,7 +229,11 @@ Canvas ビルダーで、[Message]({{site.baseurl}}/user_guide/engagement_tools/
 
 ユーザは、キャンバスステップを入力し、セッションを開始してから、アプリ内メッセージを受信するためのトリガを実行する必要があります。つまり、セッション中の更新はサポートされません。たとえば、トリガーがセッションの開始である場合、ユーザーが行う必要がある動作は、キャンバスステップにエントリし、アプリ内メッセージを受信するセッションを開始するだけです。トリガーがセッションを開始しない場合、ユーザはキャンバスステップを入力し、セッションを開始してから、アプリ内メッセージを受信するトリガーを実行する必要があります。
 
+<<<<<<< HEAD
+!["特定の購入&クォートを作成します。トリガー アクションとして選択します。]({% image_buster /assets/img_archive/canvas_trigger_actions.png %}){: style="max-width:90%"}
+=======
 \!["特定の購入&クォートを作成します。トリガー アクションとして選択します。]({% image_buster /assets/img_archive/canvas_trigger_actions.png %}){: style="max-width:90%"}
+>>>>>>> main
 
 以下のキャンバス機能はアプリ内メッセージでは使用できないため、オンになっていてもアプリ内メッセージには適用されません。
 

@@ -16,11 +16,6 @@ public class CustomDeeplinkHandler implements IBrazeDeeplinkHandler {
   private static final String TAG = BrazeLogger.getBrazeLogTag(CustomDeeplinkHandler.class);
 
   @Override
-  public void gotoNewsFeed(Context context, NewsfeedAction newsfeedAction) {
-    newsfeedAction.execute(context);
-  }
-
-  @Override
   public void gotoUri(Context context, UriAction uriAction) {
     String uri = uriAction.getUri().toString();
     // Open YouTube URLs in the YouTube app and not our app
@@ -57,10 +52,6 @@ public class CustomDeeplinkHandler implements IBrazeDeeplinkHandler {
 
 ```kotlin
 class CustomDeeplinkHandler : IBrazeDeeplinkHandler {
-
-  override fun gotoNewsFeed(context: Context, newsfeedAction: NewsfeedAction) {
-    newsfeedAction.execute(context)
-  }
 
   override fun gotoUri(context: Context, uriAction: UriAction) {
     val uri = uriAction.uri.toString()
@@ -121,9 +112,6 @@ BrazeDeeplinkHandler.setBrazeDeeplinkHandler(new IBrazeDeeplinkHandler() {
       context.startActivity(intent);
     }
   }
-
-  @Override
-  public void gotoNewsFeed(Context context, NewsfeedAction newsfeedAction) {}
 });
 ```
 
@@ -148,34 +136,24 @@ BrazeDeeplinkHandler.setBrazeDeeplinkHandler(object : IBrazeDeeplinkHandler {
       context.startActivity(intent)
     }
   }
-
-  override fun gotoNewsFeed(context: Context, newsfeedAction: NewsfeedAction) {}
 })
 ```
 
 {% endtab %}
 {% endtabs %}
 
-## Establecimiento de vínculos profundos con el canal de noticias {#Android_Deep_Advance}
-
-{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
-
-Para establecer un vínculo profundo con el canal de noticias de Braze desde una notificación push, [crea un vínculo profundo personalizado]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#step-4-add-deep-links) para tu actividad en el canal de noticias.
-
-A continuación, cuando configures tu campaña de notificaciones push (ya sea a través del [panel]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message) o de [la API]({{site.baseurl}}/api/endpoints/messaging/)), configura la notificación para que navegue hasta el vínculo profundo de tu fuente de noticias.
-
 ## Personalizar la actividad WebView {#Custom_Webview_Activity}
 
 De forma predeterminada, cuando Braze abre vínculos profundos a sitios web dentro de la aplicación, los gestiona [`BrazeWebViewActivity`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui/-braze-web-view-activity/index.html). Para cambiar esto:
 
-1. Crea una nueva Actividad que maneje la URL de destino de `Intent.getExtras()` con la clave `com.braze.Constants.BRAZE_WEBVIEW_URL_EXTRA`. Para ver un ejemplo, consulta [`BrazeWebViewActivity.java`](https://github.com/braze-inc/braze-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/BrazeWebViewActivity.kt).
+1. Crea una nueva Actividad que maneje la URL de destino de `Intent.getExtras()` con la clave `com.braze.Constants.BRAZE_WEBVIEW_URL_EXTRA`. Para ver un ejemplo, consulta [`BrazeWebViewActivity.kt`](https://github.com/braze-inc/braze-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/BrazeWebViewActivity.kt).
 2. Añade esa actividad a `AndroidManifest.xml` y establece `exported` en `false`.
     ```xml
     <activity
         android:name=".MyCustomWebViewActivity"
         android:exported="false" />
     ```
-3. Configura tu Actividad personalizada en un [objeto constructor de](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-custom-web-view-activity-class.html) `BrazeConfig`. Construye el constructor y pásalo a [`Braze.configure()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/index.html#-1864418529%2FFunctions%2F-1725759721) en tu [`Application.onCreate()`](https://developer.android.com/reference/android/app/Application.html#onCreate()).
+3. Configura tu Actividad personalizada en un [objeto constructor de](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-custom-web-view-activity-class.html) `BrazeConfig`. Construye el constructor y pásalo a [`Braze.configure()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/configure.html) en tu [`Application.onCreate()`](https://developer.android.com/reference/android/app/Application.html#onCreate()).
 {% tabs %}
 {% tab JAVA %}
 

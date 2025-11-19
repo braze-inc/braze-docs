@@ -7,6 +7,7 @@ search_rank: 2
 ---
 
 # [![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/connected-content){: style="float:right;width:120px;border:0;" class="noimgborder"} コネクテッドコンテンツAPIコールを作る
+# [![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/connected-content){: style="float:right;width:120px;border:0;" class="noimgborder"} コネクテッドコンテンツAPIコールを作る
 
 > コネクテッド・コンテンツを使えば、ユーザーに送るメッセージに、APIでアクセスできるあらゆる情報を直接挿入することができる。Web サーバーから直接、またはパブリックにアクセス可能な API からコンテンツをプルできます。<br><br>このページではコネクテッドコンテンツ API 呼び出しの方法、高度なコネクテッドコンテンツユースケース、エラー処理などについて説明します。
 
@@ -70,6 +71,7 @@ Braze は、各受信者に複数回、同じコネクテッドコンテンツ A
 ## 知っておくべきこと
 
 * BrazeはAPIコールには課金せず、データポイント使用量にはカウントしない。
+* BrazeはAPIコールには課金せず、データポイント使用量にはカウントしない。
 * コネクテッドコンテンツ応答には1 MB の制限があります。
 * コネクテッドコンテンツ呼び出しは、メッセージの送信時に行われます。ただし、アプリ内メッセージは、メッセージが表示されたときにこの呼び出しを行います。
 * コネクテッドコンテンツ呼び出しはリダイレクトに従いません。
@@ -79,16 +81,17 @@ Braze は、各受信者に複数回、同じコネクテッドコンテンツ A
 ### 基本認証の使用
 
 URLにBasic認証が必要な場合、BrazeはAPIコールで使用するBasic認証情報を保存することができる。**設定**＞**コネクテッドコンテンツで**、既存のベーシック認証情報を管理し、新しい認証情報を追加できる。
+URLにBasic認証が必要な場合、BrazeはAPIコールで使用するBasic認証情報を保存することができる。**設定**＞**コネクテッドコンテンツで**、既存のベーシック認証情報を管理し、新しい認証情報を追加できる。
 
-\![ダッシュボードのコネクテッドコンテンツ設定。]({% image_buster /assets/img/connected_content/basic_auth_mgmt.png %})
+![ダッシュボードのコネクテッドコンテンツ設定。]({% image_buster /assets/img/connected_content/basic_auth_mgmt.png %})
 
 新しい認証情報を追加するには、「**Add credential（認証情報の追加**）」 > 「**Basic authentication（基本認証**）」を選択する。 
 
-\![認証情報を追加する」ドロップダウンメニューには、ベーシック認証またはトークン認証を使用するオプションがある。]({% image_buster /assets/img/connected_content/add_credential_button.png %}){: style="max-width:60%"}
+![認証情報を追加する」ドロップダウンメニューには、ベーシック認証またはトークン認証を使用するオプションがある。]({% image_buster /assets/img/connected_content/add_credential_button.png %}){: style="max-width:60%"}
 
 認証情報に名前を付け、ユーザーの名前とパスワードを入力します。
 
-\![名前、ユーザ名、およびパスワードを入力するオプションのある "Create New Credential "ウィンドウが表示される。]({% image_buster /assets/img/connected_content/basic_auth_token.png %}){: style="max-width:60%"}
+![名前、ユーザ名、およびパスワードを入力するオプションのある "Create New Credential "ウィンドウが表示される。]({% image_buster /assets/img/connected_content/basic_auth_token.png %}){: style="max-width:60%"}
 
 次に、トークンの名前を参照することで、API 呼び出しでこの基本的な認証情報を使用できます。
 
@@ -112,7 +115,7 @@ Braze コネクテッドコンテンツを使用する場合、特定の API で
 
 トークン値を保持する認証情報を追加するには、「**Add credential（認証情報の追加**）」 > 「**Token authentication（トークン認証**）」を選択する。次に、APIコールヘッダーと許可ドメインのキーと値のペアを追加する。
 
-\![トークン認証の詳細が記載された"token_credential_abc" 。]({% image_buster /assets/img/connected_content/token_auth.png %}){: style="max-width:60%"}
+![トークン認証の詳細が記載された"token_credential_abc" 。]({% image_buster /assets/img/connected_content/token_auth.png %}){: style="max-width:60%"}
 
 そして、認証情報名を参照することで、APIコールでこの認証情報を使用することができる：
 
@@ -121,7 +124,9 @@ Braze コネクテッドコンテンツを使用する場合、特定の API で
 {% assign campaign_name="New Year Sale" %}
 {% connected_content
      https://api.endpoint.com/your_path
+     https://api.endpoint.com/your_path
      :method post
+     :auth_credentials token_credential_abc
      :auth_credentials token_credential_abc
      :body campaign={{campaign_name}}&customer={{${user_id}}}&channel=Braze
      :content_type application/json
@@ -144,7 +149,9 @@ Braze コネクテッドコンテンツを使用する場合、特定の API で
      https://your_API_access_token_endpoint_here/
      :method post
      :auth_credentials access_token_credential_abc
+     :auth_credentials access_token_credential_abc
      :headers {
+       "Content-Type": "YOUR-CONTENT-TYPE"
        "Content-Type": "YOUR-CONTENT-TYPE"
      }
      :cache_max_age 900
@@ -178,7 +185,7 @@ Braze コネクテッドコンテンツを使用する場合、特定の API で
 - ベーシック認証では、ユーザー名とパスワードを更新することができる。以前に入力したパスワードは表示されないことに注意。
 - トークン認証では、ヘッダーのキーと値のペアと、許可されるドメインを更新できる。以前に設定したヘッダー値は表示されないことに注意。
 
-\![認証情報を編集するオプション。]({% image_buster /assets/img/connected_content/edit_credentials.png %}){: style="max-width:60%"}
+![認証情報を編集するオプション。]({% image_buster /assets/img/connected_content/edit_credentials.png %}){: style="max-width:60%"}
 
 ## コネクテッドコンテンツ IP の許可リスト
 
@@ -189,6 +196,18 @@ Braze は、次のIP 範囲から接続コンテンツリクエストを送信�
 Braze には、すべてのサービスに使用される一連の予約済み IP があります。これらの ＩＰ はすべて一度にアクティブになるわけではありません。これは、Braze が別のデータセンターから送信したり、保守を行ったりするために、顧客に影響を与えないように設計されています。Braze は、コネクテッドコンテンツリクエストを作成するときに、以下の IP のいずれか 1 つ、サブセット、またはすべてを使用できます。
 
 {% multi_lang_include data_centers.md datacenters='ips' %}
+
+### `User-Agent` ヘッダー
+
+Brazeは、すべてのコネクテッドコンテンツとWebhookリクエストに、以下のような`User-Agent` ヘッダーを含む：
+
+```text
+Braze Sender 75e404755ae1270441f07eb238f0faf25e44dfdc
+```
+
+{% alert tip %}
+ハッシュ値は定期的に変更されることを覚えておいてほしい。`User-Agent` でトラフィックをフィルターしている場合、`Braze Sender` で始まるすべての値を許可する。
+{% endalert %}
 
 ### `User-Agent` ヘッダー
 
@@ -227,10 +246,15 @@ Braze Sender 75e404755ae1270441f07eb238f0faf25e44dfdc
 
 デフォルトでは、POSTリクエストはキャッシュしない。ただし `:cache_max_age` パラメータを追加することで、POST 呼び出しを強制的にキャッシュさせることができます。
 
+
 キャッシュは、コネクテッドコンテンツの重複コールを削減するのに役立ちます。しかし、ユーザーごとにコネクテッド・コンテンツの呼び出しが1回になるとは限らない。
 
 ### コネクテッドコンテンツHTTPのデフォルト動作とは？ 
 
 {% multi_lang_include connected_content.md section='default behavior' %}
+### コネクテッドコンテンツHTTPのデフォルト動作とは？ 
 
+{% multi_lang_include connected_content.md section='default behavior' %}
+
+{% multi_lang_include connected_content.md section='http post' %}
 {% multi_lang_include connected_content.md section='http post' %}

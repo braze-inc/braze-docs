@@ -54,7 +54,11 @@ alias: /dnd_product_blocks/
 | 数量 | e コマースの推奨イベントのプロパティ| 
 {: .reset-td-br-1 .reset-td-br-2 role=“presentation” }
 
+<<<<<<< HEAD
+![カタログデータとイベントデータに分かれているダイナミックな商品ブロックの商品フィールドs]({% image_buster /assets/img/product_blocks/dynamic_fields.png %}){: style="max-width:50%;"}
+=======
 \![カタログデータとイベントデータに分かれているダイナミックな商品ブロックの商品フィールドs]({% image_buster /assets/img/product_blocks/dynamic_fields.png %}){: style="max-width:50%;"}
+>>>>>>> main
 
 #### 静的製品ブロック
 
@@ -66,7 +70,11 @@ alias: /dnd_product_blocks/
 | 価格 | カタログ |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role=“presentation” }
 
+<<<<<<< HEAD
+![静的製品ブロックの製品フィールドs。すべてカタログデータとして分類されます。]({% image_buster /assets/img/product_blocks/static_fields.png %}){: style="max-width:50%;"}
+=======
 \![静的製品ブロックの製品フィールドs。すべてカタログデータとして分類されます。]({% image_buster /assets/img/product_blocks/static_fields.png %}){: style="max-width:50%;"}
+>>>>>>> main
 
 ### レイアウトオプション
 
@@ -108,7 +116,11 @@ alias: /dnd_product_blocks/
 
 必要なフィールドを含むこの[サンプル製品カタログ]({{site.baseurl}}/assets/download_file/ecommerce_product_catalog_sample.csv)を使用して、作業をすぐに開始します。 
 
+<<<<<<< HEAD
+![他のCSVファイルに加えて、必要なフィールドs のサンプリング。]({% image_buster /assets/img/ecommerce/sample_product_catalog.png %})
+=======
 \![他のCSVファイルに加えて、必要なフィールドs のサンプリング。]({% image_buster /assets/img/ecommerce/sample_product_catalog.png %})
+>>>>>>> main
 
 ## 製品ブロックの作成
 
@@ -153,7 +165,11 @@ eCommerce Canvaseの作成に関する詳細な手順については、[eCommerc
 {% endtab %}
 {% endtabs %}
 
+<<<<<<< HEAD
+!["Content"エディタブロックsを含むタブ(商品ブロックsなど)。]({% image_buster /assets/img/product_blocks/product_block.png %}){: style="max-width:40%;"}
+=======
 \!["Content"エディタブロックsを含むタブ(商品ブロックsなど)。]({% image_buster /assets/img/product_blocks/product_block.png %}){: style="max-width:40%;"}
+>>>>>>> main
 
 ### ステップ 3: 製品フィールドの設定
 
@@ -161,7 +177,11 @@ eCommerce Canvaseの作成に関する詳細な手順については、[eCommerc
 
 Liquid タグの前でテキストをカスタマイズすることもできます。例えば項目の価格にドル記号 ($) を付加したり、数量を示す用語を「amount」または使用したい他のラベルに更新したりできます。
 
+<<<<<<< HEAD
+![商品の値段の前にドル面が付いた商品ブロック。]({% image_buster /assets/img/product_blocks/liquid.png %}){: style="max-width:45%;"}
+=======
 \![商品の値段の前にドル面が付いた商品ブロック。]({% image_buster /assets/img/product_blocks/liquid.png %}){: style="max-width:45%;"}
+>>>>>>> main
 
 ### ステップ 4: レイアウト設定の構成
 
@@ -176,14 +196,22 @@ Liquid タグの前でテキストをカスタマイズすることもできま�
 2. プレビューでレンダリングする項目の数を指定します。
 3. 正しい項目数が表示され、レイアウトオプションが正しく適用されていることを確認します。表示される項目はランダムに選択されることに注意してください。
 
+<<<<<<< HEAD
+!["ユーザー&クォートとしてプレビュー;ドロップダウンセクション"ダイナミックプロダクトブロック"4つの項目を表示するよう指定します。]({% image_buster /assets/img/product_blocks/preview_as_a_user.png %}){: style="max-width:40%;"}
+=======
 \!["ユーザー&クォートとしてプレビュー;ドロップダウンセクション"ダイナミックプロダクトブロック"4つの項目を表示するよう指定します。]({% image_buster /assets/img/product_blocks/preview_as_a_user.png %}){: style="max-width:40%;"}
+>>>>>>> main
 
 {% endtab %}
 {% tab Static product block %}
 
 製品ブロックに変更を適用すると、ドラッグアンドドロップコンポーザー内にプレビューが生成されます。 
 
+<<<<<<< HEAD
+![メールドラッグアンドドロップコンポーザー。さまざまなアイテムタイルを持つプロダクトブロックを生成します。]({% image_buster /assets/img/product_blocks/static_block_preview.png %})
+=======
 \![メールドラッグアンドドロップコンポーザー。さまざまなアイテムタイルを持つプロダクトブロックを生成します。]({% image_buster /assets/img/product_blocks/static_block_preview.png %})
+>>>>>>> main
 
 {% endtab %}
 {% endtabs %}

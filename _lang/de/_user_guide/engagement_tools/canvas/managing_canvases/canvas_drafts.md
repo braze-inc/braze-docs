@@ -1,5 +1,5 @@
 ---
-nav_title: Entwürfe für Canvas speichern
+nav_title: Speichern von Entwürfen für Canvas
 article_title: Entwürfe für Canvas speichern
 alias: "/save_as_draft/"
 page_order: 1
@@ -16,7 +16,7 @@ Wenn Sie ein aktives Canvas haben, das umfangreiche Änderungen erfordert, könn
 
 Wie bei jedem Canvas kann jeweils nur ein Benutzer einen Entwurf bearbeiten, und ein Canvas kann jeweils nur einen Entwurf haben. Für diese Entwürfe gibt es noch keine Analysen, da die Entwurfsänderungen noch nicht eingeführt wurden.
 
-![Ein Beispiel für einen Canvas-Entwurf mit einem Banner, das den Nutzer:innen anzeigt, dass sie einen Canvas-Entwurf bearbeiten und die Möglichkeit haben, den aktiven Canvas anzuzeigen. In der Fußzeile haben Sie die Möglichkeit, zur Analyseansicht zurückzukehren, als Entwurf zu speichern oder den Entwurf zu starten.][1]
+\![Ein Beispiel für einen Canvas-Entwurf mit einem Banner, das den Nutzer:innen anzeigt, dass sie einen Canvas-Entwurf bearbeiten und die Möglichkeit haben, den aktiven Canvas anzuzeigen. In der Fußzeile haben Sie die Möglichkeit, zur Analyseansicht zurückzukehren, als Entwurf zu speichern oder den Entwurf zu starten.]({% image_buster /assets/img_archive/canvas_draft1.png %})
 
 ## Einen Entwurf erstellen
 
@@ -43,4 +43,3 @@ Bei Entwürfen eines aktiven Canvas wird die Priorität der In-App-Nachricht im 
 
 Änderungen an der Priorität von In-App-Nachrichten auf Schrittebene werden jedoch als Entwurf gespeichert und bei einem Update des Canvas übernommen. In einem Nachrichtenschritt wird beispielsweise die Prioritätssortierung aktualisiert, wenn ein:e Nutzer:in den Entwurf startet, da die Schritteinstellungen auf Schrittebene gelten.
 
-[1]: {% image_buster /assets/img_archive/canvas_draft1.png %}

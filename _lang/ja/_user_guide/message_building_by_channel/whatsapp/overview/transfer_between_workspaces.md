@@ -27,7 +27,7 @@ WhatsApp サブスクリプショングループをアーカイブするには�
 2. **オーディエンス**>**サブスクリプショングループ管理で**移動したいWhatsApp電話番号に関連するサブスクリプショングループを見つける。
 3. サブスクリプショングループのステータスにカーソルを合わせ、<i class="fa-solid fa-box-archive"></i> **Archiveを**選択すると、サブスクリプショングループは非アクティブとしてマークされるが、削除はされない。
 
-\![サブスクリプショングループの "アクティブ "ステータスにカーソルを合わせると、"アーカイブ "ボタンが表示される。]({% image_buster /assets/img/whatsapp/archive_subscription_group.png %}){: style="max-width:70%;"}
+![サブスクリプショングループの "アクティブ "ステータスにカーソルを合わせると、"アーカイブ "ボタンが表示される。]({% image_buster /assets/img/whatsapp/archive_subscription_group.png %}){: style="max-width:70%;"}
 
 ### ステップ 2: WhatsAppの電話番号を新しいワークスペースに統合する
 

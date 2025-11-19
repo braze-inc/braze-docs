@@ -12,7 +12,7 @@ tool: Canvas
 
 > キャンバスのコメントは、マーケティングチームがキャンバスの詳細について確認し、議論し、検討するための素晴らしいコラボレーションツールとして利用できます。キャンバスを作成する際、同僚から追加のフィードバックが必要な箇所を特定するために、コメントを作成して管理することができます。
 
-\![]({% image_buster /assets/img_archive/canvas_comments.png %}){: style="float:right;max-width:70%;margin-left:15px;"}
+![]({% image_buster /assets/img_archive/canvas_comments.png %}){: style="float:right;max-width:70%;margin-left:15px;"}
 
 ## メリット
 
@@ -48,7 +48,7 @@ tool: Canvas
 
 ## 通知の管理
 
-\![]({% image_buster /assets/img_archive/canvas_notifications.png %}){: style="float:right;max-width:70%;margin-left:15px;"}
+![]({% image_buster /assets/img_archive/canvas_notifications.png %}){: style="float:right;max-width:70%;margin-left:15px;"}
 
 キャンバスのメール通知を管理するには、サイドバーを開き、<i class="fa-solid fa-bell"></i> [**通知**] をクリックします。ここで、通知の設定を選択できます。
 

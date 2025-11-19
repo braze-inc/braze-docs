@@ -18,7 +18,7 @@ description: "このページでは、アプリ内メッセージドラッグア
 
 ドラッグ＆ドロップのアプリ内メッセージを作成するときには、テンプレートとして [**背景画像付きのメールサインアップ**] を選択し、その後 [**メッセージを作成**] を選択します。このテンプレートは、モバイルアプリとWebブラウザの両方でサポートされています。
 
-\![バックグラウンド "画像付きのメールサインアップフォームのテンプレートを持つアプリ内メッセージエディタ。]({% image_buster /assets/img/drag_and_drop/templates/email_capture_image.png %})
+![バックグラウンド "画像付きのメールサインアップフォームのテンプレートを持つアプリ内メッセージエディタ。]({% image_buster /assets/img/drag_and_drop/templates/email_capture_image.png %})
 
 ### ステップ 2: メッセージスタイルを設定する
 
@@ -30,7 +30,7 @@ description: "このページでは、アプリ内メッセージドラッグア
 
 メールキャプチャ要素のプレースホルダーテキストとラベルテキストをカスタマイズできます。
 
-\![メールキャプチャ要素をカスタマイズするためのサイドメニューを持つアプリ内メッセージエディタ。]({% image_buster /assets/img/drag_and_drop/templates/email_capture_field_image.png %})
+![メールキャプチャ要素をカスタマイズするためのサイドメニューを持つアプリ内メッセージエディタ。]({% image_buster /assets/img/drag_and_drop/templates/email_capture_field_image.png %})
 
 #### メール検証
 
