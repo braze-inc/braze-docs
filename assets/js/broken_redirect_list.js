@@ -2999,5 +2999,6 @@ validurls['/docs/user_guide/administrative/app_settings/manage_your_braze_users/
 validurls['/docs/partners/message_personalization/dynamic_content/cloudinary/'] = '/docs/partners/cloudinary/';
 
 validurls['/docs/user_guide/data/unification/cloud_ingestion/overview'] = '/docs/user_guide/data/unification/cloud_ingestion/';
+validurls['/docs/contributing/content_management/language_translations'] = '/docs/contributing/content_management';
 
 // validurls['OLD'] = 'NEW';
