@@ -1,10 +1,10 @@
 ---
-nav_title: 지오펜스 생성
-article_title: 지오펜스 생성
+nav_title: 지오펜싱 만들기
+article_title: 지오펜스 만들기
 page_order: 1
 page_type: reference
 toc_headers: h2
-description: "이 참조 문서에서는 지오펜스가 무엇인지, 지오펜스 이벤트를 생성하고 구성하는 방법을 다룹니다."
+description: "이 참조 문서에서는 지오펜스의 정의와 지오펜스 이벤트를 만들고 구성하는 방법에 대해 설명합니다."
 tool: 
   - Location
 search_rank: 9
@@ -12,69 +12,69 @@ search_rank: 9
 
 # 지오펜스
 
-> 실시간 위치 제공의 핵심은 지오펜스 개념입니다. 지오펜스는 특정 글로벌 위치를 중심으로 반경을 결합한 위도와 경도로 표현되는 가상 지리적 영역입니다. 지오펜스는 건물 크기에서 전체 도시 크기까지 다양할 수 있습니다.
+> 실시간 위치 서비스의 핵심은 지오펜스라는 개념입니다. 지오펜스는 위도와 경도를 반경과 결합하여 특정 글로벌 위치를 중심으로 원을 형성하는 가상 지리적 영역으로, 담당자가 지정할 수 있습니다. 지오펜스는 건물 규모부터 도시 전체 규모까지 다양하게 구축할 수 있습니다.
 
-## How it works
+## 작동 방식
 
-Geofences can be used to trigger campaigns in real-time as users enter and exit their borders, or send follow-up campaigns hours or days later. 지오펜스에 들어오거나 나가는 사용자는 세분화 및 리타겟팅에 사용할 수 있는 새로운 사용자 데이터 레이어를 추가합니다.
+지오펜스를 사용하면 사용자가 경계에 들어오고 나갈 때 실시간으로 캠페인을 트리거하거나 몇 시간 또는 며칠 후에 후속 캠페인을 보낼 수 있습니다. 지오펜스에 들어오고 나가는 사용자는 세분화 및 리타겟팅에 사용할 수 있는 새로운 사용자 데이터 레이어를 추가합니다.
 
-지오펜스는 지오펜스 세트로 구성됩니다. 지오펜스 세트는 플랫폼 전반에서 사용자를 세그먼트하거나 참여시키는 데 사용할 수 있는 지오펜스 그룹입니다. 각 지오펜스 세트는 최대 10,000개의 지오펜스를 보유할 수 있습니다.
+지오펜스는 플랫폼 전체에서 사용자를 세그먼트화하거나 참여시키는 데 사용할 수 있는 지오펜스 그룹인 지오펜스 세트로 구성됩니다. 각 지오펜스 세트에는 최대 10,000개의 지오펜스를 저장할 수 있습니다.
 
-You can create or upload an unlimited number of geofences.
+지오펜스를 무제한으로 만들거나 업로드할 수 있습니다.
 
-- Android 앱은 한 번에 최대 100개의 지오펜스를 로컬에 저장할 수 있습니다. Braze는 앱당 로컬에 최대 20개의 지오펜스만 저장하도록 구성됩니다.
-- iOS 기기는 앱당 한 번에 최대 20개의 지오펜스를 모니터링할 수 있습니다. Braze는 공간이 허용되는 경우 최대 20개의 위치를 모니터링합니다. 
-- If the user is eligible to receive more than 20 geofences, Braze will download the maximum amount of locations based on proximity to the user at the point of session start.
-- 지오펜스가 올바르게 작동하려면 앱이 사용 가능한 모든 지오펜스 위치를 사용하지 않도록 해야 합니다.
+- Android 앱은 한 번에 최대 100개의 지오펜스만 로컬에 저장할 수 있습니다. Braze는 앱당 최대 20개의 지오펜스만 로컬에 저장하도록 설정되어 있습니다.
+- iOS 기기는 앱당 한 번에 최대 20개의 지오펜스를 모니터링할 수 있습니다. Braze는 여유 공간이 있는 경우 최대 20개 위치를 모니터링합니다. 
+- 사용자가 20개 이상의 지오펜스를 수신할 자격이 있는 경우, Braze는 세션 시작 시점에 사용자와의 근접성을 기준으로 최대 위치 수를 다운로드합니다.
+- 지오펜스가 제대로 작동하려면 앱이 사용 가능한 모든 지오펜스 지점을 사용하고 있지 않은지 확인해야 합니다.
 
-Refer to the following table for common geofence terms and their descriptions.
+일반적인 지오펜싱 용어와 그 설명은 다음 표를 참조하세요.
 
-| Term | Description |
+| 기간 | 설명 |
 |---|---|
-| Latitude and longitude | The geographic center of the geofence. |
-| Radius | The radius of the geofence in meters, measured from the geographic center. We recommend setting a minimum radius of 100–150 meters for all geofences. |
-| Cooldown | Users receive geofence-triggered notifications after performing enter or exit transitions on individual geofences. After a transition occurs, there is a pre-defined time during which that user may not perform the same transition on that individual geofence again. This time is called the "cooldown" and is pre-defined by Braze, and its main purpose is to prevent unnecessary network requests. |
+| 위도 및 경도 | 지오펜싱의 지리적 중심입니다. |
+| 반경 | 지오펜스의 반경(미터)으로, 지리적 중심을 기준으로 측정합니다. 모든 지오펜스에 대해 최소 반경 100~150미터를 설정하는 것이 좋습니다. |
+| 쿨다운 | 사용자는 개별 지오펜스에서 진입 또는 퇴장 전환을 수행한 후 지오펜스 트리거 알림을 받습니다. 전환이 발생한 후에는 해당 사용자가 해당 개별 지오펜스에서 동일한 전환을 다시 수행할 수 없는 사전 정의된 시간이 있습니다. 이 시간을 "쿨다운"이라고 하며 Braze에서 미리 정의하며, 주요 목적은 불필요한 네트워크 요청을 방지하는 것입니다. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-## Manually create geofences
+## 수동으로 지오펜스 만들기
 
-### Step 1: Create a geofence set
+### 1단계: 지오펜스 세트 만들기
 
-To create a geofence, you'll need to create a geofence set first.
+지오펜스를 만들려면 먼저 지오펜스 세트를 만들어야 합니다.
 
-1. Go to **Audience** > **Locations** in the Braze dashboard.
-2. Select **Create Geofence Set**.
-3. For **Set name**, enter a name for your geofence set.
-4. (Optional) Add tags to filter your set.
+1. Braze 대시보드에서 **오디언스** > **위치로** 이동합니다.
+2. **지오펜스 세트 생성을** 선택합니다.
+3. **세트 이름에** 지오펜스 세트의 이름을 입력합니다.
+4. (선택 사항) 태그를 추가하여 세트를 필터링합니다.
 
-### Step 2: Add the geofences
+### 2단계: 지오펜스 추가하기
 
-Next, you can add geofences to your geofence set.
+다음으로 지오펜스 세트에 지오펜스를 추가할 수 있습니다.
 
-1. Select **Draw Geofence** to click and drag the circle on the map. Repeat to add more geofences to your set as needed.
-2. (Optional) You can select **Edit** and replace the geofence description with a name.
-3. Select **Save Geofence Set** to save.
+1. **지오펜스 그리기를** 선택하여 지도에서 원을 클릭하고 드래그합니다. 필요에 따라 세트에 지오펜스를 더 추가하려면 이 과정을 반복합니다.
+2. (선택 사항) **편집을** 선택하고 지오펜스 설명을 이름으로 바꿀 수 있습니다.
+3. **지오펜스 세트 저** 장을 선택하여 저장합니다.
 
 {% alert tip %}
-최적의 기능을 위해 반경 최소 200미터의 지오펜스를 만드는 것을 권장합니다. For more information on configurable options, refer to [Mobile integrations](#mobile-integrations).
+최적의 기능을 위해 반경 200미터 이상의 지오펜스를 만드는 것이 좋습니다. 구성 가능한 옵션에 대한 자세한 내용은 [모바일 통합을](#mobile-integrations) 참조하세요.
 {% endalert %}
 
-![A geofence set with two geofences "EastCoastGreaterNY" and "WesternRegion" with two circles on the map.]({% image_buster /assets/img/geofence_example.png %})
+지도 위에 두 개의 원이 있는 두 개의 지오펜스 "EastCoastGreaterNY"와 "WesternRegion"으로 설정된 지오펜스입니다.]({% image_buster /assets/img/geofence_example.png %})
 
-## Bulk upload geofences {#creating-geofence-sets-via-bulk-upload}
+## 대량 업로드 지오펜싱 {#creating-geofence-sets-via-bulk-upload}
 
-지오펜스는 `FeatureCollection` 유형의 GeoJSON 객체로 일괄 업로드할 수 있습니다. Each geofence is a `Point` geometry type in the feature collection. The properties for each feature require a `radius` key, and an optional `name` key for each geofence. 
+지오펜싱은 `FeatureCollection` 유형의 GeoJSON 객체로 일괄 업로드할 수 있습니다. 각 지오펜스는 기능 컬렉션의 `Point` 지오메트리 유형입니다. 각 기능의 속성에는 `radius` 키와 각 지오펜스에 대한 선택적 `name` 키가 필요합니다. 
 
-To upload your GeoJSON, select **More** > **Upload GeoJSON**.
+GeoJSON을 업로드하려면 **자세히** > **GeoJSON 업로드를** 선택합니다.
 
-When creating your geofences, consider the following details:
+지오펜스를 만들 때 다음 세부 사항을 고려하세요:
 
-- The `coordinates` value in the GeoJSON is formatted as `[Longitude, Latitude]`.
-- The maximum geofence radius that may be uploaded is 10,000 meters (about 100 kilometers or 62 miles).
+- GeoJSON의 `coordinates` 값은 `[Longitude, Latitude]` 으로 형식이 지정됩니다.
+- 업로드할 수 있는 최대 지오펜스 반경은 10,000미터(약 10킬로미터 또는 6.2마일)입니다.
 
-### Example
+### 예
 
-The following example represents the correct GeoJSON for specifying two geofences: one for Braze headquarters in NYC, and one for the Statue of Liberty south of Manhattan.
+다음 예는 뉴욕의 Braze 본사와 맨해튼 남쪽의 자유의 여신상이라는 두 개의 지오펜스를 지정하는 데 올바른 GeoJSON을 보여주는 담당자의 예입니다.
 
 ```
 {
@@ -108,15 +108,15 @@ The following example represents the correct GeoJSON for specifying two geofence
 
 ## 지오펜스 이벤트 사용
 
-After geofences have been configured, you can use them to enhance and enrich how you communicate with your users.
+지오펜싱을 구성한 후에는 이를 사용하여 사용자와의 커뮤니케이션 방식을 개선하고 풍부하게 만들 수 있습니다.
 
-### Triggering campaigns and Canvases
+### 캠페인 및 캔버스 트리거하기
 
-캠페인 및 캔버스 트리거의 일부로 지오펜스 데이터를 사용하려면 전달 방법으로 **실행 기반 전달**을 선택하세요. 다음으로, `Trigger a Geofence`의 트리거 동작을 추가합니다. 마지막으로, 메시지에 대한 지오펜스 세트 및 지오펜스 전환 이벤트 유형을 선택하세요. 지오펜스 이벤트를 사용하여 캔버스를 통해 사용자들을 진전시킬 수도 있습니다.
+캠페인 및 캔버스 트리거의 일부로 지오펜스 데이터를 사용하려면 전달 방법으로 **실행 기반 전달을** 선택합니다. 다음으로 `Trigger a Geofence` 의 트리거 동작을 추가합니다. 마지막으로 메시징에 대한 지오펜스 세트 및 지오펜스 전환 이벤트 유형을 선택합니다. 지오펜스 이벤트를 사용하여 캔버스를 통해 사용자를 진행할 수도 있습니다.
 
-![An action-based campaign with a geofence that will trigger when a user enters German airports.]({% image_buster /assets/img_archive/action_based_geofence_trigger.png %})
+사용자가 독일 공항에 들어올 때 트리거되는 지오펜스가 있는 액션 기반 캠페인입니다.]({% image_buster /assets/img_archive/action_based_geofence_trigger.png %})
 
-### Personalizing messages
+### 메시지 개인화하기
 
 지오펜스 데이터를 사용하여 메시지를 개인화하려면 다음 Liquid 개인화 구문을 사용할 수 있습니다:
 
@@ -125,65 +125,65 @@ After geofences have been configured, you can use them to enhance and enrich how
 * `{{event_properties.${geofence_set_name}}}`
 {% endraw %}
 
-## 지오펜스 세트 업데이트
+## 지오펜스 세트 업데이트하기
 
-활성 사용자에게 Braze 소프트웨어 개발 키트는 세션 시작 시 하루에 한 번만 지오펜스를 요청합니다. 즉, 세션이 시작된 후 지오펜스 세트에 변경이 발생하면 세트가 처음 내려받아진 시점부터 24시간이 지나야 업데이트된 세트를 받을 수 있습니다.
+활성 사용자의 경우, Braze 소프트웨어 개발 키트는 세션 시작 시 하루에 한 번만 지오펜스를 요청합니다. 즉, 세션 시작 후 지오펜스 세트가 변경된 경우 업데이트된 세트를 받으려면 세트가 처음 풀다운된 시점부터 24시간을 기다려야 합니다.
 
 {% alert note %}
-지오펜스가 기기에 로드되지 않으면 사용자가 해당 지역에 들어가도 지오펜스를 트리거할 수 없습니다.
+지오펜스가 기기에 로컬로 로드되지 않은 경우 사용자가 해당 지역에 들어가더라도 지오펜스를 트리거할 수 없습니다.
 {% endalert %}
 
-## Mobile integrations {#mobile-integrations}
+## 모바일 통합 {#mobile-integrations}
 
-### Cross-platform requirements
+### 크로스 플랫폼 요구 사항
 
-Geofence-triggered campaigns are available on iOS and Android. To support geofences, the following must be in place:
+지오펜스 트리거 캠페인은 iOS와 Android에서 사용할 수 있습니다. 지오펜스를 지원하려면 다음 사항이 갖추어져 있어야 합니다:
 
-1. Your integration must support background push notifications.
-2. Braze geofences or location collection must be enabled.
-3. For devices on iOS version 11 and up, the user must allow location access always for geofencing to work.
+1. 통합은 백그라운드 푸시 알림을 지원해야 합니다.
+2. Braze 지오펜스 또는 위치 수집을 인에이블먼트해야 합니다.
+3. iOS 버전 11 이상 기기의 경우, 지오펜싱이 작동하려면 사용자가 항상 위치 액세스를 허용해야 합니다.
 
 {% alert important %}
-Starting with Braze SDK version 3.6.0, Braze location collection is disabled by default. To verify that it's enabled on Android, confirm that `com_braze_enable_location_collection` is set to `true` in your `braze.xml`.
+Braze 소프트웨어 개발 키트 버전 3.6.0부터는 기본값으로 위치 수집이 비활성화되어 있습니다. Android에서 인에이블먼트가 활성화되었는지 확인하려면 `braze.xml` 에서 `com_braze_enable_location_collection` 이 `true` 으로 설정되어 있는지 확인하세요.
 {% endalert %}
 
-Refer to [Android](https://developer.android.com/develop/sensors-and-location/location/geofencing#choose-the-optimal-radius-for-your-geofence) or [iOS](https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/LocationAwarenessPG/RegionMonitoring/RegionMonitoring.html#//apple_ref/doc/uid/TP40009497-CH9-SW5) documentation for more guidance based on your platform.
+플랫폼에 따른 자세한 안내는 [Android](https://developer.android.com/develop/sensors-and-location/location/geofencing#choose-the-optimal-radius-for-your-geofence) 또는 [iOS](https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/LocationAwarenessPG/RegionMonitoring/RegionMonitoring.html#//apple_ref/doc/uid/TP40009497-CH9-SW5) 설명서를 참조하세요.
 
 {% alert tip %}
-You can also leverage geofences with our Technology Partners, such as [Radar]({{site.baseurl}}/partners/message_personalization/location/radar/) and [Foursquare]({{site.baseurl}}/partners/message_personalization/location/foursquare/)
+또한 다음과 같은 기술 파트너와 함께 지오펜스를 활용할 수 있습니다: [Radar]({{site.baseurl}}/partners/message_personalization/location/radar/) 및 [Foursquare]({{site.baseurl}}/partners/message_personalization/location/foursquare/)
 {% endalert %}
 
 ## 자주 묻는 질문
 
-### What's the difference between geofences and location tracking?
+### 지오펜스와 위치 추적의 차이점은 무엇인가요?
 
-In Braze, a geofence is a different concept from location tracking. Geofences are used as triggers for certain actions. A geofence is a virtual boundary set up around a geographical location. When a user enters or exits this boundary, it can trigger a specific action, such as sending a message.
+Braze에서 지오펜스는 위치 추적과는 다른 개념입니다. 지오펜스는 특정 동작의 트리거로 사용됩니다. 지오펜스는 지리적 위치를 중심으로 설정된 가상의 경계입니다. 사용자가 이 경계에 들어오거나 나가면 메시지 전송과 같은 특정 동작을 트리거할 수 있습니다.
 
-Location tracking is used to collect and store a user's most recent location data. This data can be used to segment users based on the `Most Recent Location` filter. For example, you could use the `Most Recent Location` filter to target a specific region of your audience, such as sending a message to users located in New York.
+위치 추적은 사용자의 가장 최근 위치 데이터를 수집하고 저장하는 데 사용됩니다. 이 데이터는 `Most Recent Location` 필터를 기반으로 사용자를 세그먼트화하는 데 사용할 수 있습니다. 예를 들어 `Most Recent Location` 필터를 사용하여 뉴욕에 있는 사용자에게 메시지를 보내는 등 특정 지역을 타겟팅할 수 있습니다.
 
-### How accurate are Braze geofences?
+### Braze 지오펜싱은 얼마나 정확하나요?
 
-Braze geofences use a combination of all location providers available to a device to triangulate the user's location. These include Wi-Fi, GPS, and cellular towers.
+Braze 지오펜스는 기기가 사용할 수 있는 모든 위치 제공업체의 조합을 사용하여 사용자의 위치를 삼각 측량합니다. 여기에는 Wi-Fi, GPS, 셀룰러 타워가 포함됩니다.
 
-Typical accuracy is in 20–50m range and best-case accuracy will be in the 5-10m range. In rural areas, accuracy may degrade significantly, potentially going up to several kilometers. Braze recommends creating geofences with larger radii in rural locations.
+일반적인 정확도는 20~50m 범위이며, 최상의 정확도는 5~10m 범위입니다. 시골 지역에서는 정확도가 크게 저하되어 몇 킬로미터까지 올라갈 수 있습니다. Braze는 시골 지역에서는 반경이 더 넓은 지오펜스를 만들 것을 권장합니다.
 
-For more information on the accuracy of geofences, refer to [Android](https://developer.android.com/develop/sensors-and-location/location/geofencing) and [iOS](https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/LocationAwarenessPG/RegionMonitoring/RegionMonitoring.html#//apple_ref/doc/uid/TP40009497-CH9-SW1) documentation.
+지오펜싱의 정확도에 대한 자세한 내용은 [Android](https://developer.android.com/develop/sensors-and-location/location/geofencing) 및 [iOS](https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/LocationAwarenessPG/RegionMonitoring/RegionMonitoring.html#//apple_ref/doc/uid/TP40009497-CH9-SW1) 설명서를 참조하세요.
 
-### How do geofences affect battery life?
+### 지오펜싱은 배터리 수명에 어떤 영향을 미치나요?
 
-Our geofencing solution uses the native geofence system service on iOS and Android and is tuned to intelligently trade off accuracy and power, saving battery life and improving performance as the underlying service improves.
+저희 지오펜싱 솔루션은 iOS 및 Android의 기본 지오펜스 시스템 서비스를 사용하며 정확도와 전력을 지능적으로 절충하여 배터리 수명을 저장하고 기본 서비스가 개선됨에 따라 성능/성과를 향상하도록 조정됩니다.
 
-### When are geofences active?
+### 지오펜스는 언제 활성화되나요?
 
-Braze geofences work at all hours of the day, even when your app is closed. They become active as soon as they are defined and uploaded to the Braze dashboard. However, geofences can't function if a user has disabled location tracking.
+Braze 지오펜스는 앱이 종료된 시간에도 하루 종일 작동합니다. 정의되고 Braze 대시보드에 업로드되는 즉시 활성화됩니다. 그러나 사용자가 위치 추적을 비활성화하면 지오펜스가 작동하지 않습니다.
 
-For geofences to work, users must have location services enabled on their device and must have granted your app permission to access their location. If a user has disabled location tracking, your app won't be able to detect when they enter or exit a geofence.
+지오펜스가 작동하려면 사용자가 기기에 위치 서비스를 인에이블먼트하고 앱에 자신의 위치에 액세스할 수 있는 권한을 부여해야 합니다. 사용자가 위치 추적을 비활성화하면 앱에서 사용자가 지오펜스에 들어오고 나갈 때를 감지할 수 없습니다.
 
-### Is geofence data stored in user profiles?
+### 지오펜스 데이터가 사용자 프로필에 저장되나요?
 
-No, Braze doesn't store geofence data on user profiles. Geofences are monitored by Apple and Google location services, and Braze only gets notified when a user triggers a geofence. At that point, we process any associated trigger campaigns.
+아니요, Braze는 사용자 프로필에 지오펜스 데이터를 저장하지 않습니다. 지오펜스는 Apple 및 Google 위치 서비스에 의해 모니터링되며, 사용자가 지오펜스를 트리거할 때만 Braze가 알림을 받습니다. 이 시점에서 관련된 모든 트리거 캠페인을 처리합니다.
 
-### Can I set up a geofence within a geofence?
+### 지오펜스 내에 지오펜싱을 설정할 수 있나요?
 
-As a best practice, avoid setting up geofences inside each other as this may cause issues with triggering notifications.
+알림 트리거에 문제가 발생할 수 있으므로 서로 겹치는 지오펜스는 설정하지 않는 것이 좋습니다.
 

@@ -22,4 +22,4 @@ Um Rich-Push-Benachrichtigungen unter iOS mit Expo zu aktivieren, legen Sie die 
 }
 ```
 
-Fügen Sie dann den Bundle-Bezeichner für diese App-Erweiterung zur Konfiguration der Zugangsdaten Ihres Projekts hinzu: `<your-app-bundle-id>.BrazeExpoRichPush`.
+Fügen Sie dann den Bundle-Bezeichner für diese App-Erweiterung zur Konfiguration der Zugangsdaten Ihres Projekts hinzu: `<your-app-bundle-id>.BrazeExpoRichPush`. Weitere Einzelheiten zu diesem Vorgang finden Sie unter [Verwendung von App-Erweiterungen mit Expo Application Services]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=react%20native#reactnative_app-extensions).

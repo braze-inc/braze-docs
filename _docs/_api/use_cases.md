@@ -86,8 +86,6 @@ For the first task of auditing Canvases, use the [`/canvas/list` endpoint]({{sit
 
 {% details Here’s the response that the Siege Valley Health marketing team would receive. %}
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "canvases" : [
   	{
@@ -222,8 +220,6 @@ In this scenario, WorkFriends has historically used a singular HTML template wit
 {% details Here’s the response that the WorkFriends team would receive. %}
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
 {
   "email_template_id": "WorkFriends_Email_Template_ID",
   "template_name": "Promo template",

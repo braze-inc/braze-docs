@@ -29,7 +29,7 @@ The **Message Credits Usage over Contract** graph shows your usage over the sele
 
 ## SMS, MMS, and RCS
 
-**SMS/MMS/RCS Credits Usage** shows the usage breakdown for the SMS, MMS, and RCS channel. The columns in the data table generally require you to have purchased Message Credits (though Braze still supports older billing models temporarily), and the **Credit ratio** and **Credits** columns indicate the respective country rate and consumed credits. Additionally, high-level tiles will indicate the total SMS and, when relevent, MMS consumption across the selected date range.
+**SMS/MMS/RCS Credits Usage** shows the usage breakdown for the SMS, MMS, and RCS channel. The columns in the data table generally require you to have purchased Message Credits (though Braze still supports older billing models temporarily), and the **Credit ratio** and **Credits** columns indicate the respective country rate and consumed credits. Additionally, high-level tiles will indicate the total SMS and, when relevant, MMS consumption across the selected date range.
 
 Filters are available allowing you to filter by **Country** or SMS and RCS type.
 

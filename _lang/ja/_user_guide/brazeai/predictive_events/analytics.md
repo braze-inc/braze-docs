@@ -25,7 +25,7 @@ page_order: 1.3
 
 スライダーのハンドルをさまざまな位置に動かすと、パネルの左半分にあるバーが、選択したターゲット層を使って予測対象ユーザー全体のうち何人のユーザーをターゲットにするかを知らせてくれる。
 
-\![]({% image_buster /assets/img/purchasePrediction/purchaseTargeting.png %}){: style="max-width:90%"} 
+![]({% image_buster /assets/img/purchasePrediction/purchaseTargeting.png %}){: style="max-width:90%"} 
 
 ## 可能性スコア {#purchase_score}
 
@@ -43,7 +43,7 @@ page_order: 1.3
 
 チャートの下にあるパネルの右半分には、選択した予測対象ユーザーのうち、イベントを実行すると予想されるユーザー数と、実行しないと予想されるユーザー数という2つの方法で、選択した部分をターゲットにした場合の予想精度を示している。
 
-\![Brazeダッシュボードに表示される、選択されたオーディエンスと推定精度。]({% image_buster /assets/img/purchasePrediction/purchaseEstimatedResults.png %})
+![Brazeダッシュボードに表示される、選択されたオーディエンスと推定精度。]({% image_buster /assets/img/purchasePrediction/purchaseEstimatedResults.png %})
 
 ### 実施予定
 

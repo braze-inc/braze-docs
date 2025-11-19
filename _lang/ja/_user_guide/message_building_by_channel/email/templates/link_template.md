@@ -54,7 +54,11 @@ channel:
 
 **テンプレートプレビュー** は、URL の前にリンクテンプレートを挿入する方法の例を示すために提供されています。
 
-![URLの前にリンクテンプレートを挿入する際の「テンプレートの位置」、「URLのプリペンド」、「テンプレートのプレビュー」フィールド。]({% image_buster /assets/img_archive/link_template_preappend.png %}){: style="max-width:90%;"}
+<<<<<<< HEAD
+![テンプレート位置、プレペンドURL、およびテンプレートプレビューフィールドs は、リンクテンプレートの挿入処理からURL の前に適用されます。]({% image_buster /assets/img_archive/link_template_preappend.png %}){: style="max-width:90%;"}
+=======
+\![テンプレート位置、プレペンドURL、およびテンプレートプレビューフィールドs は、リンクテンプレートの挿入処理からURL の前に適用されます。]({% image_buster /assets/img_archive/link_template_preappend.png %}){: style="max-width:90%;"}
+>>>>>>> main
 
 ### 追加: URLの後に挿入するリンクテンプレートを作成する {#append-link-template}
 
@@ -64,7 +68,11 @@ channel:
 2. **Template Position**を**After URL**に設定します。 
 3. 各URL の末尾にクエリパラメータ(`value=example`) を入力します。URLの末尾に複数のパラメーターを付加することができる。
 
-![URL後のリンクテンプレート挿入処理における、テンプレート位置、クエリパラメータ、テンプレートプレビューフィールド。]({% image_buster /assets/img_archive/link_template_postappend.png %}){: style="max-width:90%;"}
+<<<<<<< HEAD
+![テンプレート位置、クエリーパラメータ、およびテンプレートプレビューフィールドs (URL の後にリンクテンプレートを挿入する場合)。]({% image_buster /assets/img_archive/link_template_postappend.png %}){: style="max-width:90%;"}
+=======
+\![テンプレート位置、クエリーパラメータ、およびテンプレートプレビューフィールドs (URL の後にリンクテンプレートを挿入する場合)。]({% image_buster /assets/img_archive/link_template_postappend.png %}){: style="max-width:90%;"}
+>>>>>>> main
 
 ## Eメールキャンペーンでリンクテンプレートを使用する
 
@@ -78,7 +86,11 @@ channel:
 
 - **ドラッグ＆ドロップ・エディター：****コンテンツ**＞**リンク管理**タブを選択する。次に、**Add a Link Template**を選択します。ドラッグ＆ドロップ・エディターでリンクテンプレートにアクセスするには、[リンクのエイリアシングを]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/link_aliasing/)オンにしておく必要がある。
 
-![ドラッグ＆ドロップエディターの「リンク管理」タブにリンクテンプレートの例がリストアップされている。]({% image_buster /assets/img_archive/link_template_messagecomposer2.png %})
+<<<<<<< HEAD
+![ドラッグアンドドロップエディタのリンク管理タブ。リンクテンプレートの一覧が表示されます。]({% image_buster /assets/img_archive/link_template_messagecomposer2.png %})
+=======
+\![ドラッグアンドドロップエディタのリンク管理タブ。リンクテンプレートの一覧が表示されます。]({% image_buster /assets/img_archive/link_template_messagecomposer2.png %})
+>>>>>>> main
 
 {% alert note %}
 リンクテンプレートはプレーンテキストには適用されません。つまり、「現在」には、リンクテンプレートのパラメータを含まないクリックが表示される場合があります。これは、これらのクリックは、電子メールのプレーンテキストバージョンから取得される可能性があるためです。
@@ -88,7 +100,7 @@ channel:
 
 ## リンクテンプレートを管理する
 
-リンクテンプレートを[複製する]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/)こともできる。テンプレートとクリエイティブ・コンテンツの作成と管理については、「[テンプレートとメディア]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/)」をご覧ください。
+リンクテンプレートを[複製する]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/)こともできる。[ テンプレート s & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/) で、テンプレート s とクリエイティブコンテンツの作成と管理について詳しく説明します。
 
 {% alert important %}
 テンプレートのアーカイブは、現在リンクテンプレートでは利用できません。

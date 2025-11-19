@@ -7,7 +7,7 @@ description: "この記事では、カスタムイベントとプロパティ、
 search_rank: 2
 ---
 
-# [\![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/custom-events-and-attributes){: style="float:right;width:120px;border:0;" class="noimgborder"}カスタムイベント
+# [![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/custom-events-and-attributes){: style="float:right;width:120px;border:0;" class="noimgborder"}カスタムイベント
 
 > この記事では、カスタムイベントとプロパティ、関連するセグメンテーションフィルタ、キャンバスエントリプロパティ、関連する分析などについて説明します。Braze のイベント全般については、「[イベント]({{site.baseurl}}/user_guide/data/custom_data/events/)」を参照してください。
 
@@ -105,11 +105,11 @@ Braze はセグメンテーション用として、カスタムイベントが�
 
 ダッシュボードの**Custom Events Report** ページで、各カスタムイベントの発生頻度を集約して表示できます。時系列にオーバーレイされた灰色の線は、キャンペーンが最後に送信された時刻を示します。これは、キャンペーンがカスタムイベントアクティビティにどのような影響を与えたかを表示するのに役立ちます。
 
-\![カスタムイベントはカスタムイベントのトレンドを示すダッシュボードの s ページのグラフを数えます]({% image_buster /assets/img_archive/custom_event_analytics_example.png %} "custom_event_analytics_example.png")
+![カスタムイベントはカスタムイベントのトレンドを示すダッシュボードの s ページのグラフを数えます]({% image_buster /assets/img_archive/custom_event_analytics_example.png %} "custom_event_analytics_example.png")
 
 **フィルター**を使用して、カスタムイベントを時間、月間平均ユーザー数 (MAU)、セグメント、または KPI 式別に分類することもできます。 
 
-\![カスタムイベントグラフフィルターs]({% image_buster /assets/img/custom_events_report_filters.png %}){: style="max-width:40%;"}
+![カスタムイベントグラフフィルターs]({% image_buster /assets/img/custom_events_report_filters.png %}){: style="max-width:40%;"}
 
 {% alert tip %}
 [カスタム属性]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#integers) をインクリメントして、カスタムイベントに似たユーザアクションのカウンタを保持します。ただし、カスタム属性データを時系列で表示することはできません。時系列で分析する必要のないユーザーアクションは、この方法を使用して記録する必要があります。
@@ -157,11 +157,11 @@ Braze はセグメンテーション用として、カスタムイベントが�
 
 カスタムイベントプロパティを使用して、特定のキャンペーンまたはキャンバスの対象をさらに絞り込むことができます。例えば、eコマース・アプリケーションを持っていて、ユーザーがカートを放棄したときにメッセージを送りたい場合、`item price` のカスタムイベントプロパティを追加することで、ターゲットオーディエンスを改善し、キャンペーンのパーソナライゼーションを高めることができる。
 
-\![放棄されたカードのカスタムイベントプロパティフィルター。2 つのフィルターs をAND 演算子と組み合わせて、このキャンペーンを100 ～200 ドルのアイテム価格でカードを放棄したユーザーに送信します]({% image_buster /assets/img_archive/customEventProperties.png %} "customEventProperties.png")
+![放棄されたカードのカスタムイベントプロパティフィルター。2 つのフィルターs をAND 演算子と組み合わせて、このキャンペーンを100 ～200 ドルのアイテム価格でカードを放棄したユーザーに送信します]({% image_buster /assets/img_archive/customEventProperties.png %} "customEventProperties.png")
 
 階層化されたカスタムイベントプロパティは[アクションベースの配信]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/)でもサポートされています。
 
-\![放棄されたカードのカスタムイベントプロパティフィルター。カート内のいずれかの商品価格が 100 ドルを超える場合は、1 つのフィルターが選択されます。]({% image_buster /assets/img_archive/customEventPropertiesNested.png %} "customEventPropertiesNested.png")
+![放棄されたカードのカスタムイベントプロパティフィルター。カート内のいずれかの商品価格が 100 ドルを超える場合は、1 つのフィルターが選択されます。]({% image_buster /assets/img_archive/customEventPropertiesNested.png %} "customEventPropertiesNested.png")
 
 #### メッセージのパーソナライゼーション
 
@@ -215,7 +215,7 @@ Well done, hero! Talk to villagers for tips on how to beat levels faster and unl
 - 過去 Y 日間に、値 B のプロパティ A を持ついずれかの購入を行った。
 - 1～30日以内のセグメンテーション機能を追加。
 
-\![Abandoned Cart' があり、プロパティが「itmes の数」で、過去30 暦日の1 回より2 回以上の値が設定されているフィルター群。]({% image_buster /assets/img/nested_object3.png %})
+![Abandoned Cart' があり、プロパティが「itmes の数」で、過去30 暦日の1 回より2 回以上の値が設定されているフィルター群。]({% image_buster /assets/img/nested_object3.png %})
 
 特定のイベントプロパティのデータは、カスタマーサクセスマネージャーによって有効にされた後にのみ記録されます。イベントプロパティは、その日付以降にのみ利用可能です。
 

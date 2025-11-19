@@ -59,7 +59,7 @@ tool: Campaigns
 
 たとえば、「カート値」プロパティフィルターによってさらにターゲット設定された、放棄カートのカスタムイベントを含むキャンペーンがあるとします。このキャンペーンは、カートに 100 ドルから 200 ドル相当の商品を残したユーザーのみを対象としています。 
 
-![]({% image_buster /assets/img_archive/customEventProperties.png %})
+\![]({% image_buster /assets/img_archive/customEventProperties.png %})
 
 {% alert note %}
 キャンペーンのセグメントが新規ユーザーに適用される場合は、トリガーイベントの「セッション開始」がユーザーの最初のアプリ起動になることがあります。(たとえば、セグメントにセッションのないユーザーが含まれている場合など)。
@@ -74,7 +74,7 @@ tool: Campaigns
 
 さらに、トリガーされたアプリ内メッセージは引き続きアプリ内メッセージ配信ルールに従い、アプリセッションの開始時に表示されます。
 
-![]({% image_buster /assets/img_archive/schedule_triggered1.png %})
+\![]({% image_buster /assets/img_archive/schedule_triggered1.png %})
 
 ### ステップ 2: 遅延時間の長さを選択する
 
@@ -82,18 +82,18 @@ tool: Campaigns
 
 さらに、キャンペーンの開始後にトリガーイベントを完了したユーザーは、遅延時間が過ぎると最初にメッセージの受信を開始します。キャンペーン開始前にトリガーイベントを完了したユーザーは、キャンペーンを受け取る資格がありません。
 
-![]({% image_buster /assets/img_archive/schedule_triggered22.png %})
+\![]({% image_buster /assets/img_archive/schedule_triggered22.png %})
 
 また、特定の曜日 (「次」を選択して日を選択) にキャンペーンを送信するか、将来の特定の日数 (「日後」を選択) にキャンペーンを送信することもできます。または、手動で配信時間を選択する代わりに、[インテリジェントタイミング]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/)機能を使用してメッセージを送信することもできます。
 
-![]({% image_buster /assets/img_archive/schedule_triggered7.png %})
-![]({% image_buster /assets/img_archive/schedule_triggered8.png %})
+\![]({% image_buster /assets/img_archive/schedule_triggered7.png %})
+\![]({% image_buster /assets/img_archive/schedule_triggered8.png %})
 
 ### ステップ 3: 例外イベントを選択する
 
 ユーザーがこのキャンペーンを受け取らないようにする例外イベントを選択します。これを実行できるのは、トリガーされたメッセージが一定時間遅れて送信される場合だけです。[例外イベント]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria/#exception-events) は、購入、セッションの開始、キャンペーンの指定された[変換イベント]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#conversion-events) のいずれかの実行、またはカスタムイベントの実行を行うことができます。ユーザーがトリガーイベントを完了したが、遅延時間によりメッセージが送信される前に例外イベントを完了した場合、そのユーザーはキャンペーンを受け取りません。例外イベントが原因でキャンペーンを受け取れなかったユーザーは、[再有効化]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/reeligibility/)するよう設定しなくても、次回にトリガーイベントを完了したときに自動的にキャンペーンの受け取りが可能になります。
 
-![]({% image_buster /assets/img_archive/schedule_triggered32.png %})
+\![]({% image_buster /assets/img_archive/schedule_triggered32.png %})
 
 例外イベントの使用方法の詳細については、[ユースケース]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/#use-cases)のセクションをご覧ください。
 
@@ -107,7 +107,7 @@ tool: Campaigns
 
 開始時間と必要に応じて終了時間を指定して、キャンペーンの期間を割り当てます。
 
-![]({% image_buster /assets/img_archive/schedule_triggered43.png %})
+\![]({% image_buster /assets/img_archive/schedule_triggered43.png %})
 
 ユーザーが指定された時間枠内にトリガーイベントを完了したが、スケジュールされた遅延により時間枠外にメッセージを受け取る資格を得た場合、そのユーザーはキャンペーンを受け取りません。そのため、メッセージの時間枠よりも長い時間遅延を設定すると、キャンペーンを受け取るユーザーはなくなります。さらに、ユーザーの[ローカルタイムゾーン]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/scheduled_delivery/#local-time-zone-campaigns)でメッセージを送信するように選択できます。
 
@@ -115,11 +115,11 @@ tool: Campaigns
 
 ユーザーがその日の特定の時間帯にキャンペーンを受け取るかどうかを選択します。メッセージに時間枠を指定し、ユーザーが時間枠外にトリガーイベントを完了するか、メッセージの遅延により時間枠を逃した場合、デフォルトではユーザーはメッセージを受け取りません。
 
-![]({% image_buster /assets/img_archive/schedule_triggered5.png %})
+\![]({% image_buster /assets/img_archive/schedule_triggered5.png %})
 
 ユーザーが時間枠内にトリガーイベントを完了したが、メッセージの遅延によりユーザーが時間枠から外れる場合は、次のチェックボックスをオンにして、これらのユーザーが引き続きキャンペーンを受信できるようにすることができます。
 
-![]({% image_buster /assets/img_archive/schedule_triggered_next_available.png %})
+\![]({% image_buster /assets/img_archive/schedule_triggered_next_available.png %})
 
 期間を逃したためにユーザーがメッセージを受信しなかった場合、[再有効化]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/reeligibility/)するよう設定していなくても、次回にトリガーイベントを完了したときにキャンペーンの受け取りが可能になります。ユーザーを再有効化するよう選択した場合、ユーザーは指定された期間内に条件を満たしていれば、トリガーイベントを完了するたびにキャンペーンを受け取ることができます。
 
@@ -127,9 +127,9 @@ tool: Campaigns
 
 ### ステップ 6: 再有効化を判断する
 
-ユーザーがキャンペーンに対して[再有効化]({% image_buster /assets/img_archive/ReEligible.png %})されるかどうかを判断します。ユーザーを再有効化する場合、ユーザーがキャンペーンを再度受け取れるようになるまでの時間を指定できます。これにより、トリガーされたキャンペーンが「スパム」になるのを防ぐことができます。
+ユーザーがキャンペーンに [再適格]({% image_buster /assets/img_archive/ReEligible.png %}) になるかどうかを判断します。ユーザーを再有効化する場合、ユーザーがキャンペーンを再度受け取れるようになるまでの時間を指定できます。これにより、トリガーされたキャンペーンが「スパム」になるのを防ぐことができます。
 
-![]({% image_buster /assets/img_archive/schedule_triggered6.png %})
+\![]({% image_buster /assets/img_archive/schedule_triggered6.png %})
 
 ## ユースケース
 
@@ -165,13 +165,13 @@ tool: Campaigns
 
 すべてのユーザーを含むようにターゲットオーディエンスを変更するか、イベントを実行すると予想されるユーザーが、メッセージをトリガーするキャンペーンのオーディエンスに含まれることを確認することをお勧めします。
 
-![]({% image_buster /assets/img_archive/reevaluate_segment_membership.png %})
+\![]({% image_buster /assets/img_archive/reevaluate_segment_membership.png %})
 
 ### カスタムイベントのトラブルシューティング
 
-まず、カスタムイベントがBraze に渡されていることを確認します。**Analytics**> **カスタムイベントレポート**に移動し、それぞれのカスタムイベントと日付範囲を選択します。イベントが表示されない場合は、イベントが正しく設定されていること、およびユーザーが正しいアクションを実行したことを確認します。
+まず、カスタムイベントがBraze に渡されていることを確認します。**Analytics**> **カスタムイベントレポート**に移動し、それぞれのカスタムイベントと日付範囲を選択します。イベントが表示されない場合は、正しく設定されているか、ユーザーが正しいアクションを行ったかを確認する。
 
-カスタムイベントが表示された場合は、次の手順を実行して、さらにトラブルシューティングを行います。
+カスタムイベントが表示される場合は、さらに以下の方法でトラブルシューティングを行う：
 
 - ユーザープロファイルのダウンロードをチェックして、イベントがトリガーされたことと、イベントがいつトリガーされたかを確認します。イベントがトリガーされている場合は、イベントがトリガーされた時点のタイムスタンプを、キャンペーンが有効になった時点と比較します。キャンペーンが有効になる前にイベントがトリガーされた可能性があります。
 - ターゲット設定で使用されているキャンペーンおよびセグメントの変更ログを確認して、ユーザがカスタムイベントがトリガされたときにセグメントに含まれていたかどうかを確認します。ユーザーがセグメントに含まれていなかった場合、キャンペーンを受信していません。

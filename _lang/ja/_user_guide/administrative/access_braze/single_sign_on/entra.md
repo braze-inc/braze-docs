@@ -13,11 +13,10 @@ description: "この記事では、Braze を使用して Microsoft Entra のシ�
 
 ## 要件
 
-設定時に、サインオン URL と Assertion Consumer Service (ACS) の URL を指定するように求められます。  
+セットアップ時に、アサーション・コンシューマー・サービス（ACS）URLの入力を求められる。  
 
 | 必要条件 | 詳細 |
 |---|---|
-| サインオンURL | `https://<SUBDOMAIN>.braze.com/sign_in`<br><br> サブドメインの場合は、[Braze インスタンス の URL]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/) にリストされている調整サブドメインを使用します。例えば、インスタンスが `US-01` の場合、URL は `https://dashboard-01.braze.com` です。つまり、サブドメインが `dashboard-01` になります。 |
 | アサーションコンシューマーサービス (ACS) の URL | `https://<SUBDOMAIN>.braze.com/auth/saml/callback`<br> ID プロバイダーによっては、これを応答 URL、オーディエンス URL、またはオーディエンス URI と呼ぶこともあります。 |
 | エンティティ ID | `braze_dashboard`|
 | RelayState APIキー | IDプロバイダー・ログインを有効にするには、**「Settings（設定）**」＞「**API Keys（APIキー）**」と進み、`sso.saml.login` 権限を持つAPIキーを作成する。 |
@@ -37,11 +36,16 @@ description: "この記事では、Braze を使用して Microsoft Entra のシ�
 3. **Set up Single Sign-On with SAML** ページで、**Basic SAML Configuration** の編集アイコンを選択します。
 4. [Braze インスタンス]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/#braze-instances)とパターン `https://<SUBDOMAIN>.braze.com/auth/saml/callback` を組み合わせた**応答 URL** を入力して、IdP 開始モードでアプリケーションを構成します。
 5. 必要に応じて、[**リレー状態**] (オプション) フィールドにリレー状態生成 API キーを入力して、RelayState を設定します。
-6. アプリケーションをサービスプロバイダー開始モードで設定する場合は、[**追加の URL を設定します**] をクリックし、[Braze インスタンス]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/#braze-instances)とパターン `https://<SUBDOMAIN>.braze.com/sign_in` を組み合わせたサインオン URL を入力します。
-7. Braze の要求する特定の形式で SAML アサーションをフォーマットします。ユーザー属性とユーザークレームのフォーマット方法については、それらの属性と値に関する次のタブを参照してください。
+
+{% alert important %}
+**Sign-On URL**フィールドを設定**しない**。IdP が開始する SAML SSO で問題が発生しないように、このフィールドは空白のままにする。
+{% endalert %}
+
+{: start="6"}
+6. Braze の要求する特定の形式で SAML アサーションをフォーマットします。ユーザー属性とユーザークレームのフォーマット方法については、それらの属性と値に関する次のタブを参照してください。
 
 {% tabs %}
-{% tab ユーザー属性 %}
+{% tab User Attributes %}
 これらの属性の値は、[**アプリケーション連携**] ページの [**ユーザー属性**] セクションから管理できます。
 
 次の属性のペアを使用します。
@@ -60,7 +64,7 @@ description: "この記事では、Braze を使用して Microsoft Entra のシ�
 {% endalert %}
 
 {% endtab %}
-{% tab ユーザークレーム %}
+{% tab User Claims %}
 
 **Set up Single Sign-On with SAML」**ページで、「**Edit**」を選択して「**User Attributes」**ダイアログを開く。次に、適切な形式に従ってユーザークレームを編集します。
 

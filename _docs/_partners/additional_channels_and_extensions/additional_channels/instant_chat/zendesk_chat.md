@@ -18,7 +18,7 @@ search_tag: Partner
 | Prerequisite | Description |
 |---|---|
 | A Zendesk account | A Zendesk account is required to take advantage of this partnership.|
-| A Zendesk Basic Authorization Token | A Zendesk Basic Authorization Token will be used to make an outbound webhook request from Braze to Zendesk.|
+| A Zendesk Basic Authorization Token | A Zendesk Basic Authorization Token is used to make an outbound webhook request from Braze to Zendesk.|
 | A Braze REST API Key  | A Braze REST API key with `campaigns.trigger.send` permissions. This can be created in the Braze dashboard from **Settings** > **API Keys**.|
 
 ## Use cases
@@ -70,7 +70,7 @@ Feel free to respond directly to this number!
 
 #### Step 2.2: Schedule the delivery
 
-For the delivery type, select **API-Triggered delivery**, then copy the Campaign ID which will be used in the next steps.
+For the delivery type, select **API-Triggered delivery**, then copy the campaign ID, which is used in the next steps.
 
 ![API Triggered delivery]({% image_buster /assets/img/zendesk/instant_chat/chat4.png %}){: style="max-width:70%;"}
 
@@ -86,7 +86,7 @@ Go to **Objects and rules** > **Business rules** > **Triggers**.
 2. Create a new **trigger** (for example, **Respond via SMS Braze**).
 3. Under **Conditions**, select:
 - **Ticket>Comment** is **Present and requester can see comment** so that the message is triggered whenever a new public comment is included in a ticket update
-- **Ticket>Update** *is not* **Web service (API)** so that when a user sends a message from Braze, it isn't forwarded back to their cell phone. Only messages coming from Zendesk will be forwarded.
+- **Ticket>Update** *is not* **Web service (API)** so that when a user sends a message from Braze, it isn't forwarded back to their cell phone. Only messages coming from Zendesk are forwarded.
 
 ![Respond via SMS Braze.]({% image_buster /assets/img/zendesk/instant_chat/chat6.png %}){: style="max-width:70%;"}
 
@@ -175,7 +175,7 @@ In the Braze dashboard, go to **Audience**, choose your **SMS subscription group
 |------------------|---------------------------------------------------------------------------------------------------------------------------|
 | Keyword Category | The name of your keyword category, such as `ZendeskSMS1`.                                                                 |
 | Keywords         | Your custom keywords, such as `SUPPORT`.                                                                                  |
-| Reply Message    | The message that will be sent when a keyword is detected, such as "A customer service rep will reach out to you shortly." |
+| Reply Message    | The message that is sent when a keyword is detected, such as "A customer service rep will contact you shortly." |
 {: .reset-td-br-1 .reset-td-br-2 }
 
 ![An example SMS keyword category in Braze.]({% image_buster /assets/img/zendesk/instant_chat/chat11.png %}){: style="max-width:70%;"}

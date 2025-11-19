@@ -22,7 +22,7 @@ tool:
 
 分析するために十分な過去のインタラクションがないユーザーには、フォールバック時刻 (ユーザー全体でアプリが使用される最も一般的な時間) を指定します。
 
-\![メッセージステップのインテリジェントタイミング配信設定。]({% image_buster /assets/img/intelligence_suite1.png %})
+![メッセージステップのインテリジェントタイミング配信設定。]({% image_buster /assets/img/intelligence_suite1.png %})
 
 ### ステップ 2: インテリジェントセレクションによるプロモーションの選択
 
@@ -30,7 +30,7 @@ tool:
 
 インテリジェントセレクションは、十分なデータを収集して最もパフォーマンスの高いメッセージを決定した後、送信するメッセージの 100% にそのメッセージを使用します。
 
-\![インテリジェントセレクションを有効にしたキャンバスのABテストセクション。]({% image_buster /assets/img_archive/canvas_intelligent_selection.png %})
+![インテリジェントセレクションを有効にしたキャンバスのABテストセクション。]({% image_buster /assets/img_archive/canvas_intelligent_selection.png %})
 
 ### ステップ 3: キャンバスの開始
 

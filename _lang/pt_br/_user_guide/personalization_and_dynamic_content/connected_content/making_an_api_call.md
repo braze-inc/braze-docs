@@ -6,7 +6,7 @@ description: "Este artigo de referência cobre como fazer uma chamada de API de 
 search_rank: 2
 ---
 
-# [\![Curso de Aprendizado Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/connected-content){: style="float:right;width:120px;border:0;" class="noimgborder"}Fazendo uma Chamada de API de Conteúdo Conectado
+# [![Curso de Aprendizado Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/connected-content){: style="float:right;width:120px;border:0;" class="noimgborder"}Fazendo uma Chamada de API de Conteúdo Conectado
 
 > Use o Conteúdo Conectado para inserir qualquer informação acessível por API diretamente nas mensagens que você envia aos usuários. Você pode puxar conteúdo diretamente do seu servidor web ou de APIs publicamente acessíveis.<br><br>Esta página cobre como fazer chamadas de API de Conteúdo Conectado, casos de uso avançados de Conteúdo Conectado, tratamento de erros e mais.
 

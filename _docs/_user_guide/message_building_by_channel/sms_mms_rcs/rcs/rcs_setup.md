@@ -40,7 +40,7 @@ Before you can send RCS messages, you must register an RCS-verified sender. This
 
 ![An example RCS-verified sender in an RCS message called "Cat Failz Cafe".]({% image_buster /assets/img/rcs/rcs_sender.png %}){: style="max-width:60%;"}
 
-After you have added the RCS SKU(s) to your order form, Braze will be notified and will reach out to you with RCS sender registration information. The format of these will depend on the countries you wish to send RCS messages to. 
+After you have added the RCS SKU(s) to your order form, Braze will be notified and will contact you with RCS sender registration information. The format of these will depend on the countries you wish to send RCS messages to. 
 
 When you've submitted your completed forms to Braze, we will complete the registration process on your behalf. 
 

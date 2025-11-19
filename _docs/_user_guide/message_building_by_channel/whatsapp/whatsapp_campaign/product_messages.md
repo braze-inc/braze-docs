@@ -20,7 +20,7 @@ When you send a WhatsApp product message to a user, the user goes on the followi
 1. The user receives your product or catalog message in WhatsApp.
 2. The user adds products to their cart directly from WhatsApp.
 3. The user taps **Place order** in WhatsApp.
-4. Your website or app recieves the cart data from Braze and generates a checkout link.
+4. Your website or app receives the cart data from Braze and generates a checkout link.
 5. The user is directed to your website or app to complete their checkout.
 
 When users add items to their cart through catalog messages, Braze receives webhook data for follow-up actions.

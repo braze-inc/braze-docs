@@ -1,14 +1,41 @@
 
-# Envoyer des numéros de téléphone
+# Expéditeurs de SMS et de RCS
 
-Les codes courts et longs correspondent au numéro de téléphone depuis lequel vous envoyez des messages à vos utilisateurs ou clients. Ce peut être des codes courts à 5 ou 6 chiffres ou des codes longs à 10 chiffres. Chaque type de code offre des avantages spécifiques et vous devez prendre en compte tous les facteurs avant de choisir si vous souhaitez un code court, quel type de code court, en plus du code long qui vous a déjà été attribué.
+> Le présent article vous guidera à travers des concepts importants concernant l’envoi de numéros de téléphone avec Braze.
 
-## Types de numéros d’envoi
+## Types d'expéditeurs de SMS et de RCS
 
 {% tabs %}
-{% tab Codes courts %}
+{% tab RCS-Expéditeur vérifié %}
 
-#### Codes courts
+#### Expéditeur vérifié par le RCS
+
+Un expéditeur vérifié par RCS est une représentation visuelle de votre marque qui comprend un nom de marque, un logo, une légende facultative et un badge vérifié. L'expéditeur vérifié par RCS bénéficie ainsi d'un avantage significatif par rapport aux codes SMS en termes d'établissement de la confiance de l'utilisateur.  
+
+##### Détails
+
+| Composants visuels | Accès | Débit | MMS activé | Unidirectionnel ou Bidirectionnel |
+| --- | --- | --- | --- | --- |
+| \- Nom de marque<br>\- logo<br>\- légende facultative<br> \- badge vérifié | 4-6 semaines pour une demande (peut varier) | Environ 100 messages par expéditeur et par seconde. Les débits réels peuvent varier en fonction du fournisseur, des conditions du réseau et des détails spécifiques de la mise en œuvre. | Non | Bidirectionnel |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
+
+##### Avantages et inconvénients
+
+| Avantages |
+| ---- |
+| **Établir la confiance**<br> Les expéditeurs vérifiés par RCS sont beaucoup plus efficaces pour établir la confiance des utilisateurs que les codes SMS, étant donné leur nature très visuelle ainsi que leur vérification explicite par l'opérateur. 
+<br><br>**Fonctionnalités d'envoi de messages riches**<br>Les expéditeurs vérifiés par RCS permettent d'envoyer des messages avec des fonctionnalités plus riches que celles des SMS, y compris le média enrichi, comme les fichiers images et les boutons interactifs. |
+{: .reset-td-br-1}
+
+| Inconvénients |
+| ---- |
+| **Nouveauté et dynamisme du marché**<br> RCS est un protocole relativement nouveau, ce qui signifie que la couverture des opérateurs, la livrabilité et la tarification évoluent à des rythmes différents selon les régions. Cependant, l'accord récent d'Apple sur la prise en charge du RCS signifie que la grande majorité des utilisateurs de smartphones sont désormais joignables par ce protocole. <br><br>**Coût plus élevé de l'envoi de messages enrichis**<br> Les messages RCS qui utilisent beaucoup de fonctionnalités d'envoi de messages enrichis ont tendance à coûter plus cher par message que les messages SMS. Cela n'est pas surprenant étant donné les avantages des fonctionnalités riches, mais il peut être important de le noter pour votre budget marketing. |
+{: .reset-td-br-1}
+
+{% endtab %}
+{% tab Short Codes SMS %}
+
+#### Codes courts SMS
 
 Un code court est une séquence mémorable de 5 à 6 chiffres qui permet aux expéditeurs d'envoyer des messages à des taux plus élevés que les codes longs. Les codes courts sont ainsi parfaitement adaptés à l’envoi sensible au temps de volumes élevés.
 
@@ -23,7 +50,7 @@ Un code court est une séquence mémorable de 5 à 6 chiffres qui permet aux ex
 
 | Avantages |
 | ---- |
-| **Vitesse et évolutivité**<br> Les codes courts offrent vitesse et évolutivité avec des taux d’envoi de 100 segments par seconde, 6 000 segments par minute, 360 000 segments par heure et 1 million de segments par 2 heures. Les codes courts peuvent atteindre ces taux élevés en raison de la vérification requise pendant le processus de demande de code court.<br><br>**MMS activé pour certains codes courts**<br>Certains codes courts peuvent prendre en charge les MMS, également connus (ou Multimedia Message Service), ce qui vous permet d'envoyer des messages contenant des ressources multimédias (JPEG, GIF, PNG) vers des téléphones mobiles. Pour plus d'informations sur les MMS dans Braze, reportez-vous à la section [À propos des MMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/about_mms/). |
+| **Vitesse et évolutivité**<br> Les codes courts offrent vitesse et évolutivité avec des taux d’envoi de 100 segments par seconde, 6 000 segments par minute, 360 000 segments par heure et 1 million de segments par 2 heures. Les codes courts peuvent atteindre ces taux élevés en raison de la vérification requise pendant le processus de demande de code court.<br><br>**MMS activé pour certains codes courts**<br>Certains codes courts peuvent prendre en charge les MMS, également connus (ou Multimedia Message Service), ce qui vous permet d'envoyer des messages contenant des ressources multimédias (JPEG, GIF, PNG) vers des téléphones mobiles. Pour plus d'informations sur les MMS dans Braze, reportez-vous à la section [À propos des MMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/mms/about_mms/). |
 {: .reset-td-br-1}
 
 | Inconvénients |
@@ -32,9 +59,9 @@ Un code court est une séquence mémorable de 5 à 6 chiffres qui permet aux ex
 {: .reset-td-br-1}
 
 {% endtab %}
-{% tab Codes longs %}
+{% tab Codes longs SMS %}
 
-#### Codes longs
+#### Codes longs des SMS
 
 Un code long est un numéro de téléphone standard utilisé pour envoyer et recevoir des appels vocaux et des messages SMS. Les numéros de téléphone sont généralement appelés des « codes longs » (numéros à 10 chiffres dans de nombreux pays) si vous les comparez avec des codes courts SMS (numéros à 5 ou 6 chiffres).
 
@@ -49,7 +76,7 @@ Un code long est un numéro de téléphone standard utilisé pour envoyer et rec
 
 | Avantages |
 | ---- |
-| **Peut être utilisé immédiatement pour envoyer des messages (pour certains pays)**<br>Les codes longs offrent une expérience client localisée et personnalisée lors de l'envoi de messages pour les cas d'utilisation de personne à personne. Contrairement aux codes courts SMS, l'acquisition d'un code long est un processus assez rapide pour certains pays. (Pour les autres pays, le délai est aussi long, voire plus long, que celui d'un code court). Les codes longs peuvent également être définis comme un numéro de secours en cas d’échec d’un code court.<br><br>**Une plus grande disponibilité dans le monde entier**<br>Les codes longs sont disponibles dans plus de 100 grands pays du monde. Veuillez contacter votre gestionnaire du succès des clients ou l’[assistance]({{site.baseurl}}/braze_support/) de Braze pour obtenir une liste des pays disponibles.<br><br>**MMS activé pour certains pays**<br>Prend en charge les MMS (ou Multimedia Message Service), qui vous permettent d’envoyer des messages contenant des ressources multimédias (JPEG, GIF, PNG) vers des téléphones mobiles. Pour plus d'informations sur les MMS dans Braze, consultez notre documentation [ici]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/about_mms/).|
+| **Peut être utilisé immédiatement pour envoyer des messages (pour certains pays)**<br>Les codes longs offrent une expérience client localisée et personnalisée lors de l'envoi de messages pour les cas d'utilisation de personne à personne. Contrairement aux codes courts SMS, l'acquisition d'un code long est un processus assez rapide pour certains pays. (Pour les autres pays, le délai est aussi long, voire plus long, que celui d'un code court). Les codes longs peuvent également être définis comme un numéro de secours en cas d’échec d’un code court.<br><br>**Une plus grande disponibilité dans le monde entier**<br>Les codes longs sont disponibles dans plus de 100 grands pays du monde. Veuillez contacter votre gestionnaire du succès des clients ou l’[assistance]({{site.baseurl}}/braze_support/) de Braze pour obtenir une liste des pays disponibles.<br><br>**MMS activé pour certains pays**<br>Prend en charge les MMS (ou Multimedia Message Service), qui vous permettent d’envoyer des messages contenant des ressources multimédias (JPEG, GIF, PNG) vers des téléphones mobiles. Pour plus d'informations sur les MMS dans Braze, consultez notre documentation [ici]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/mms/about_mms/).|
 {: .reset-td-br-1}
 
 | Inconvénients |
@@ -58,9 +85,9 @@ Un code long est un numéro de téléphone standard utilisé pour envoyer et rec
 {: .reset-td-br-1}
 
 {% endtab %}
-{% tab Code court Vanity %}
+{% tab SMS Vanity Short Code %}
 
-#### Codes courts Vanity
+#### Codes courts de vanité pour les SMS
 
 Un code court à 5 à 6 chiffres est spécifiquement sélectionné par une marque. Les codes courts Vanity sont liés à une marque et sont plus faciles à retenir pour les consommateurs, mais ils sont généralement plus chers. Par exemple :
 - Le service de santé de New York dispose d’un code court Vanity `692-692` qui affiche NYC-NYC sur un clavier de téléphone.
@@ -78,7 +105,7 @@ Un code court à 5 à 6 chiffres est spécifiquement sélectionné par une mar
 
 | Avantages |
 | ---- |
-| **Vitesse et évolutivité**<br> Les codes courts offrent vitesse et évolutivité avec des taux d’envoi de 100 segments par seconde, 6 000 segments par minute, 360 000 segments par heure et 1 million de segments par 2 heures. Les codes courts peuvent atteindre ces taux élevés en raison de la vérification requise pendant le processus de demande de code court.<br><br>**MMS activé**<br>Prend en charge les MMS (ou Multimedia Message Service), qui vous permettent d’envoyer des messages contenant des ressources multimédias (JPEG, GIF, PNG) vers des téléphones mobiles. Pour plus d'informations sur les MMS dans Braze, reportez-vous à la section [À propos des MMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/about_mms/). |
+| **Vitesse et évolutivité**<br> Les codes courts offrent vitesse et évolutivité avec des taux d’envoi de 100 segments par seconde, 6 000 segments par minute, 360 000 segments par heure et 1 million de segments par 2 heures. Les codes courts peuvent atteindre ces taux élevés en raison de la vérification requise pendant le processus de demande de code court.<br><br>**MMS activé**<br>Prend en charge les MMS (ou Multimedia Message Service), qui vous permettent d’envoyer des messages contenant des ressources multimédias (JPEG, GIF, PNG) vers des téléphones mobiles. Pour plus d'informations sur les MMS dans Braze, reportez-vous à la section [À propos des MMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/mms/about_mms/). |
 {: .reset-td-br-1}
 
 | Inconvénients |
@@ -87,9 +114,9 @@ Un code court à 5 à 6 chiffres est spécifiquement sélectionné par une mar
 {: .reset-td-br-1}
 
 {% endtab %}
-{% tab ID d’expéditeur alphanumérique %}
+{% tab SMS Alphanumérique ID de l'expéditeur %}
 
-#### ID d’expéditeur alphanumérique
+#### ID alphanumérique de l'expéditeur du SMS
 
 Les ID d’expéditeur sont les codes courts ou longs qui apparaissent en haut d’un message SMS indiquant qui a envoyé le message. Si un utilisateur n’est pas familier avec un ID d’expéditeur, il peut choisir d’ignorer complètement ces messages. Grâce à l'utilisation d'ID d'expéditeur alphanumériques, les utilisateurs sont en mesure d'identifier rapidement l'auteur des messages qu'ils reçoivent, ce qui augmente le taux d'ouverture. 
 
@@ -111,7 +138,7 @@ Les ID d'expéditeur alphanumériques vous permettent de définir le nom de votr
 
 Pour plus d’informations sur les ID d’expéditeur alphanumériques, veuillez contacter votre gestionnaire du succès des clients.
 {% endtab %}
-{% tab Numéro gratuit %}
+{% tab Numéro gratuit SMS %}
 
 #### Numéro gratuit par SMS
 
@@ -141,10 +168,14 @@ Si le débit est dépassé, certains messages peuvent échouer.
 En plus de ces différences, sachez qu’une marque aura généralement un code court, mais plusieurs codes longs de secours, selon le nombre de destinataires auxquels elle envisage d’envoyer des messages par SMS.
 
 {% alert important %}
-Vous vous demandez ce qu’on appelle des codes courts partagés ? Pour en savoir plus sur les raisons pour lesquelles nous vous recommandons d'éviter les codes courts partagés, consultez la rubrique de notre [FAQ SMS.]({{site.baseurl}}/user_guide/message_building_by_channel/sms/faqs/)
+Vous vous demandez ce qu’on appelle des codes courts partagés ? Pour en savoir plus sur les raisons pour lesquelles nous vous recommandons d'éviter les codes courts partagés, consultez la rubrique de notre [FAQ SMS.]({{site.baseurl}}/sms_faq/)
 {% endalert %}
 
-## Comment obtenir un code court ?
+## Envoi de SMS numéros de téléphone
+
+Les codes courts et longs correspondent au numéro de téléphone depuis lequel vous envoyez des messages à vos utilisateurs ou clients. Ce peut être des codes courts à 5 ou 6 chiffres ou des codes longs à 10 chiffres. Chaque type de code offre des avantages spécifiques et vous devez prendre en compte tous les facteurs avant de choisir si vous souhaitez un code court, quel type de code court, en plus du code long qui vous a déjà été attribué.
+
+## Comment obtenir un code court pour les SMS ?
 
 Le processus de demande de code court peut être un processus long. Il peut, toutefois, en valoir la peine. Si vous souhaitez un code court, contactez votre gestionnaire d’onboarding ou un autre conseiller Braze et informez-le de vos besoins. Ensuite, ils feront une demande pour vous - ils vous demanderont quelques informations de base qui vous aideront à remplir les conditions requises. Ensuite, il ne vous reste plus qu’à attendre.
 
@@ -152,7 +183,7 @@ Le processus de demande de code court peut être un processus long. Il peut, tou
 
 Bien que Braze soit responsable de la demande effective de code court, nous avons besoin de quelques informations. Nous vous recommandons d’examiner ces questions avant de contacter Braze. 
 
-Les réglementations exigent qu’il y ait des réponses à toutes les questions sur l’abonnement, le désabonnement, l’aide/les informations et les réponses à des mots-clés. Vous devrez nous indiquer les flux de messages spécifiques (les réponses que vous souhaitez envoyer aux utilisateurs après qu'ils ont envoyé un [mot-clé]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/optin_optout/)) que vous souhaitez pour les situations suivantes.
+Les réglementations exigent qu’il y ait des réponses à toutes les questions sur l’abonnement, le désabonnement, l’aide/les informations et les réponses à des mots-clés. Vous devrez nous indiquer les flux de messages spécifiques (les réponses que vous souhaitez envoyer aux utilisateurs après qu'ils ont envoyé un [mot-clé]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/optin_optout/)) que vous souhaitez pour les situations suivantes.
 
 | Flux nécessaire | Type | Exemple |
 | ----------- | ---- | ------- |
@@ -170,11 +201,28 @@ Vous devez également nous informer, quel que soit le numéro que vous utilisez,
 Si vous avez votre propre code court, contactez votre gestionnaire du succès des clients au cours du processus d’onboarding pour discuter de la migration ou du transfert de votre code court. Les codes courts doivent être configurés par votre gestionnaire du succès des clients.
 {% endalert %}
 
-## Codes longs à 10 chiffres application à personne (A2P 10DLC)
+## SMS Application-to-Person 10-Digit Long Codes (A2P 10DLC)
 
 A2P 10DLC fait référence à un système aux États-Unis qui permet aux entreprises d’envoyer des communications de type Application à personne (A2P) via un numéro de téléphone standard à 10 chiffres en code long (10DLC). Les codes longs à 10 chiffres sont traditionnellement conçus pour le trafic de personne à personne (P2P), ce qui limite le débit des entreprises et renforce le filtrage. Ce service aide à atténuer ces problèmes, améliorant la livrabilité globale des messages. Les marques peuvent ainsi envoyer des messages à grande échelle, y compris des liens et des appels à l’action, et les consommateurs sont davantage protégés contre les messages indésirables. 
 
-Tous les clients qui ont et/ou utilisent actuellement des codes longs américains pour envoyer des messages à des clients américains doivent obligatoirement enregistrer leurs codes longs pour 10DLC. Ce processus de candidature prend 4 à 6 semaines. Pour en savoir plus sur les spécificités du 10DLC et les raisons pour lesquelles il est nécessaire, consultez notre article dédié au [10DLC]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/10dlc/).
+Tous les clients qui ont et/ou utilisent actuellement des codes longs américains pour envoyer des messages à des clients américains doivent obligatoirement enregistrer leurs codes longs pour 10DLC. Ce processus de candidature prend 4 à 6 semaines. Pour en savoir plus sur les spécificités du 10DLC et les raisons pour lesquelles il est nécessaire, consultez notre article dédié au [10DLC]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/user_phone_numbers/10dlc/).
+
+## Foire aux questions
+
+### Comment le débit des messages RCS se compare-t-il à celui des messages SMS ?
+
+Le débit des messages RCS n'est pas aussi strictement défini ou contrôlé par l'opérateur qu'il ne l'est pour les SMS. Comme les messages RCS sont envoyés sur des réseaux de données plutôt que sur les canaux de communication cellulaires traditionnels utilisés par les SMS, le RCS ne dépend pas de limites fixes imposées par le réseau, comme c'est le cas pour les SMS. 
+
+### Les expéditeurs vérifiés par le RCS supportent-ils un débit de messages élevé comme un code court ?
+
+Non. Les expéditeurs vérifiés par le RCS n'ont pas la possibilité de bénéficier d'un débit de messages élevé distinct.
+
+### Un expéditeur vérifié par le RCS peut-il être partagé entre plusieurs groupes d'abonnement ? 
+
+Non. Comme pour un expéditeur de SMS, un expéditeur vérifié par RCS ne peut être utilisé qu'avec un seul groupe d'abonnement.
+
+### Un expéditeur de SMS de secours peut-il être partagé entre plusieurs groupes d'abonnement ?
+
+Non. Les expéditeurs de SMS de secours ne peuvent être utilisés qu'avec un seul groupe d'abonnement.
 
 
-[1]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/
