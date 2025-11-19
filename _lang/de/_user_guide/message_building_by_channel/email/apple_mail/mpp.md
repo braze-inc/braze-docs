@@ -25,7 +25,7 @@ Jeder Empfänger:in, der die native Apple Mail App verwendet:
 - macOS Monterey
 - watchOS 8
 
-Dies gilt für alle Nutzer:innen, die ihr E-Mail-Konto mit der Apple Mail App verbunden haben und sich für das Sicherheits-Feature entschieden haben, unabhängig vom E-Mail-Dienst (Gmail, Outlook, Yahoo, AOL usw.). Diese Auswirkung ist nicht auf Abonnent:innen beschränkt, die E-Mails unter Apple/iCloud/me.com erhalten.
+Dies gilt für alle Nutzer:innen, die ihr E-Mail-Konto mit der Apple Mail App verbunden haben und sich für das Sicherheits-Feature entschieden haben, unabhängig vom E-Mail-Dienst (Gmail, Outlook, Yahoo, AOL usw.). Diese Auswirkung ist nicht auf Abonnent:innen beschränkt, die E-Mails an Apple/iCloud/me.com E-Mail-Adressen erhalten.
 
 {% alert important %}
 Obwohl diese Updates für die Zustellbarkeit von E-Mails von großer Bedeutung sind, ändert MPP keine der Regeln, die für E-Mails und deren Zustellbarkeit gelten, grundlegend. Stattdessen wird es sich darauf auswirken, wie wir den Erfolg messen und welche E-Mail-Tools und -Funktionen in Zukunft genutzt werden können.
