@@ -1,4 +1,4 @@
-{% multi_lang_include desarrollador_guide/prerequisites/swift.md %} También tendrás que habilitar los mensajes dentro de la aplicación.
+{% multi_lang_include developer_guide/prerequisites/swift.md %} También tendrás que habilitar los mensajes dentro de la aplicación.
 
 ## Tipos de mensajes
 
