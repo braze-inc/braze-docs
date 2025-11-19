@@ -1334,7 +1334,7 @@ SMS
 
 ### Respond with different messages based on inbound SMS keyword {#sms-keyword-response}
 
-This use case shows how to use dynamic SMS keyword processing to respond to specific inbound messages with different message copy. For example, responding differently when someone texts "START" versus "JOIN".
+This use case incorporates dynamic SMS keyword processing to respond to specific inbound messages with different message copy. For example, a different response would send when someone texts "START" versus "JOIN".
 
 {% raw %}
 ```liquid
@@ -1351,8 +1351,6 @@ Thanks for joining our SMS program!
 {% endif %}
 ```
 {% endraw %}
-
-**Explanation:** Here, we assign the inbound SMS message body to a variable and normalize it by converting to lowercase and stripping whitespace. We then check if the message contains specific keywords ('start' or 'join') and respond with tailored messaging. If neither keyword is found, a default message is sent. This allows for personalized responses based on how users choose to opt in to your SMS program.
 
 {% endapi %}
 
