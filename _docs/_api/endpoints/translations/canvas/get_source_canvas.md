@@ -6,7 +6,7 @@ page_order: 3
 
 layout: api_page
 page_type: reference
-description: "This article outlines details about the canvas translation source endpoint."
+description: "This article outlines details about the Canvas translation source endpoint."
 ---
 
 {% api %}
