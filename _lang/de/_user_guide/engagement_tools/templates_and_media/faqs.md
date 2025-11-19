@@ -30,17 +30,17 @@ Nein, die Mediathek unterstützt das Zuschneiden von GIF-Bildern nicht.
 
 ### Wie kann ich ein vorhandenes Bild zuschneiden?
 
-Sie können ein vorhandenes Bild zuschneiden, indem Sie das Bild in der Mediathek auswählen und auf **Neues Bild zuschneiden & speichern** klicken. 
+Sie können ein vorhandenes Bild zuschneiden, indem Sie das Bild aus der Bibliothek auswählen und auf **Zuschneiden & Neues Bild speichern** klicken. 
 
-![][2]{: height="75%" width="75%"}
+![Vorschau auf das Bild der Mediathek.]({% image_buster /assets/img_archive/media_library_crop1.png %}){: height="75%" width="75%"}
 
-Sie werden dann zu einem Zuschneide-Composer weitergeleitet, in dem Sie den Verhältnis-Typ auswählen und den Namen des neuen Bildes bearbeiten können. Wenn Sie auf **Speichern** klicken, kann Ihr neues Bild verwendet werden.
+Sie werden dann zu einem Zuschneide-Composer weitergeleitet, in dem Sie den Verhältnis-Typ auswählen und den Namen des neuen Bildes bearbeiten können. Wenn Sie **Speichern** auswählen, kann Ihr neues Bild verwendet werden.
 
-![][3]{: height="75%" width="75%"}
+![Fenster zum Zuschneiden und Speichern des Bildes der Medienbibliothek.]({% image_buster /assets/img_archive/media_library_crop2.png %}){: height="75%" width="75%"}
 
 ### Mein Bild wird beim Hochladen immer wieder unterbrochen. Was kann ich dagegen tun?
 
-Das kann aus verschiedenen Gründen passieren, aber eine gängige Lösung ist, dass Sie sicherstellen, dass Ihr Bild optimiert ist, bevor Sie es hochladen. Das bedeutet, dass Sie Ihr Bild durch einen Bildoptimierer wie [ImageOptim][5] laufen lassen.
+Das kann aus verschiedenen Gründen passieren, aber eine gängige Lösung ist, dass Sie sicherstellen, dass Ihr Bild optimiert ist, bevor Sie es hochladen. Das bedeutet, dass Sie Ihr Bild durch einen Bildoptimierer wie [ImageOptim](https://imageoptim.com/mac) laufen lassen.
 
 Wenn Ihr Bild in Photoshop (oder einer ähnlichen Software) erstellt wurde und viele Ebenen hat, kann das Zusammenführen und Reduzieren der Anzahl der Ebenen ebenfalls helfen.
 
@@ -48,6 +48,3 @@ Wenn Ihr Bild in Photoshop (oder einer ähnlichen Software) erstellt wurde und v
 
 Das liegt daran, dass die meisten Composer Beschränkungen für die zulässige Größe des Bildverhältnisses haben.
 
-[2]: {% image_buster /assets/img_archive/media_library_crop1.png %}
-[3]: {% image_buster /assets/img_archive/media_library_crop2.png %}
-[5]: https://imageoptim.com/mac

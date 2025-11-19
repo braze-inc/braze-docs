@@ -33,17 +33,17 @@ Wenn das Uninstall-Tracking für eine App aktiviert ist, werden nachts im Hinter
 
 ### Konfiguration
 
-Um das Uninstall-Tracking für Ihre iOS-Anwendung zu konfigurieren, verwenden Sie eine [Utility-Methode][iOS-Dokumentation]. Verwenden Sie für Ihre Android-Anwendung [`isUninstallTrackingPush()`][8]. Wenn Braze ein Uninstall feststellt, sei es durch Uninstall-Tracking oder durch die normale Zustellung von Push-Kampagnen, erfassen wir den besten geschätzten Zeitpunkt des Uninstall-Vorgangs beim Nutzer oder bei der Nutzerin. Diese Zeit wird im Nutzerprofil als Standardattribut gespeichert und kann zur Definition eines Segments von Nutzer:innen für Rückgewinnungskampagnen verwendet werden.
+Um das Uninstall-Tracking für Ihre iOS-Anwendung zu konfigurieren, verwenden Sie eine [Utility-Methode]({{site.baseurl}}/developer_guide/analytics/tracking_uninstalls/?sdktab=swift). Verwenden Sie für Ihre Android-Anwendung [`isUninstallTrackingPush()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.push/-braze-notification-payload/is-uninstall-tracking-push.html). Wenn Braze ein Uninstall feststellt, sei es durch Uninstall-Tracking oder durch die normale Zustellung von Push-Kampagnen, erfassen wir den besten geschätzten Zeitpunkt des Uninstall-Vorgangs beim Nutzer oder bei der Nutzerin. Diese Zeit wird im Nutzerprofil als Standardattribut gespeichert und kann zur Definition eines Segments von Nutzer:innen für Rückgewinnungskampagnen verwendet werden.
 
 ## Segmente nach Deinstallationen filtern
 
-Der Filter **Uninstalled** auf der Seite **Segmente** wählt Nutzer:innen aus, die Ihre App innerhalb eines bestimmten Zeitraums deinstalliert haben. Da es schwierig ist, den genauen Zeitpunkt einer Deinstallation zu bestimmen, empfehlen wir, dass Deinstallationsfilter breitere Zeitspannen haben, um sicherzustellen, dass jeder, der deinstalliert, irgendwann in das Segment fällt.
+Der Filter **Deinstalliert** wählt Nutzer:innen aus, die Ihre App innerhalb eines bestimmten Zeitraums deinstalliert haben. Da es schwierig ist, den genauen Zeitpunkt einer Deinstallation zu bestimmen, empfehlen wir, dass Deinstallationsfilter breitere Zeitspannen haben, um sicherzustellen, dass jeder, der deinstalliert, irgendwann in das Segment fällt.
 
-![Segmentierung deinstallieren.][5]
+Tägliche Statistiken über Deinstallationen finden Sie auf der **Startseite**. 
 
-### Analyse auf App-Ebene
+![Segmente deinstallieren.]({% image_buster /assets/img_archive/Uninstall_Segment.png %} "Uninstall Segment")
 
-Tägliche Statistiken über Deinstallationen finden Sie auf der **Startseite**. Das Diagramm kann nach App und Segmenten aufgeschlüsselt werden, ähnlich wie andere Statistiken, die Braze bereitstellt. Wählen Sie in der **Übersicht über die Performance** Ihren Datumsbereich und, falls gewünscht, eine App aus. Blättern Sie dann zum Diagramm **Performance im Zeitverlauf** und gehen Sie wie folgt vor:
+Das Diagramm kann nach App und Segmenten aufgeschlüsselt werden, ähnlich wie andere Statistiken, die Braze bereitstellt. Wählen Sie in der **Übersicht über die Performance** Ihren Datumsbereich und, falls gewünscht, eine App aus. Blättern Sie dann zum Diagramm **Performance im Zeitverlauf** und gehen Sie wie folgt vor:
 
 1. Wählen Sie in der Dropdown-Liste **Statistik für** **Deinstallationen** aus.
 2. In der Dropdown-Liste **Aufschlüsselung** wählen Sie **Nach Segmenten**.
@@ -53,15 +53,13 @@ Tägliche Statistiken über Deinstallationen finden Sie auf der **Startseite**. 
 Apps ohne Enablement des Uninstall-Trackings melden Deinstallationen nur von einer Teilmenge ihrer Nutzer:innen (denjenigen, die mit Push-Benachrichtigungen Targeting betrieben haben), so dass die tägliche Gesamtzahl der Deinstallationen höher sein kann als die angezeigte.
 {% endalert %}
 
-![Grafikauswahl deinstallieren.][2]
-
 ## Uninstall-Tracking für Kampagnen 
 
 Das Uninstall-Tracking für Kampagnen zeigt die Anzahl der Nutzer:innen, die eine bestimmte Kampagne erhalten und anschließend Ihre App innerhalb des ausgewählten Zeitraums deinstalliert haben. Dieses Tool gibt Insights darüber, wie Kampagnen unbeabsichtigtes negatives Nutzer:innen-Verhalten fördern können und hilft dabei, die Gesamtwirksamkeit von Kampagnen zu messen.
 
 Die Deinstallationsstatistiken für Kampagnen befinden sich auf der Seite **Campaign Analytics** für eine bestimmte Kampagne. Bei Multichannel- und multivariaten Kampagnen können die Uninstall-Vorgänge nach Kanal bzw. Variante aufgeschlüsselt werden.
 
-![Uninstall-Vorgang auf Kampagnen-Ebene.][6]
+![Deinstallation auf Kampagnen-Ebene.]({% image_buster /assets/img_archive/campaign_level_uninstall_tracking.png %})
 
 ### Funktionsweise
 
@@ -73,7 +71,7 @@ Braze verfolgt Deinstallationen, indem es beobachtet, wenn Push-Nachrichten, die
 
 Das Uninstall-Tracking unterliegt den Beschränkungen, die FCM und APNs für diese Informationen festlegen. Braze erhöht die Anzahl der Deinstallationen nur, wenn FCM oder APNs uns mitteilen, dass ein Nutzer:innen deinstalliert hat. Diese Drittsysteme behalten sich jedoch das Recht vor, uns jederzeit über Deinstallationen zu informieren. Daher sollte das Uninstall-Tracking eher zur Erkennung von Tendenzen als zur Erstellung präziser Statistiken verwendet werden.
 
-Weitere Informationen zur Verwendung des Uninstall-Trackings finden Sie in unserem Blogbeitrag [Uninstall-Tracking: Ein Blick auf die Stärken und Grenzen der Branche][7].
+Weitere Informationen zur Verwendung des Uninstall-Trackings finden Sie in unserem Blogbeitrag [Uninstall-Tracking: Ein Blick auf die Stärken und Grenzen der Branche](https://www.braze.com/blog/uninstall-tracking-an-industry-look-at-its-strengths-and-limitations/).
 
 ## Fehlerbehebung
 
@@ -81,15 +79,13 @@ Weitere Informationen zur Verwendung des Uninstall-Trackings finden Sie in unser
 
 Wenn die Deinstallation von Apps sprunghaft ansteigt, kann das daran liegen, dass Firebase Cloud Messaging (FCM) und der Apple Push Notification Service (APNS) alte Token in unterschiedlicher Häufigkeit widerrufen.
 
-### Warum unterscheidet sich die Anzahl der Deinstallationen von Apps von den Angaben in den APNs?
+{% alert note %}
+Aus Datenschutzgründen können die Push-Anbieter von Braze Token in unregelmäßigen Abständen widerrufen, was bedeutet, dass die Anzahl der Deinstallationen in einem bestimmten Zeitraum manchmal sprunghaft ansteigen kann.<br><br>Um diese Änderungen zu validieren, überwachen Sie das Tracking von Deinstallationen zusammen mit einer Metrik für Nutzer:innen, wie z.B. der Öffnungsrate von direkten Pushs. Wenn die Deinstallationen stark zunehmen, die direkten Öffnungen per Push aber stabil bleiben, spiegelt der Anstieg wahrscheinlich eher einen Partner wider, der alte Token widerruft, als das tatsächliche Verhalten der Nutzer:innen.
+{% endalert %}
 
-Der Unterschied ist zu erwarten. APNs werden für diese Token nach einem ungenauen Zeitplan den Status 410 zurückgeben.
+### Warum unterscheidet sich die Anzahl der App-Deinstallationen von den Angaben in den APNs?
 
-[1]: {% image_buster /assets/img_archive/Uninstall_Tracking2.png %} „Uninstall-Tracking Kontrollkästchen“
-[2]: {% image_buster /assets/img_archive/Uninstall_Tracking_App2.png %} „Grafikauswahl deinstallieren“
-[4]: {% image_buster /assets/img_archive/User_Profile.png %} „Attribut deinstallieren“
-[5]: {% image_buster /assets/img_archive/Uninstall_Segment.png %} "Segmentierung deinstallieren"
-[6]: {% image_buster /assets/img_archive/campaign_level_uninstall_tracking.png %}
-[7]: https://www.braze.com/blog/uninstall-tracking-an-industry-look-at-its-strengths-and-limitations/
-[iOS docs]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/uninstall_tracking/
-[8]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.push/-braze-notification-payload/is-uninstall-tracking-push.html
+Der Unterschied ist zu erwarten. 
+
+Apple verwendet einen zufälligen Zeitplan, um die Meldung zu verzögern, wenn ein Push-Token ungültig wird. Das bedeutet, dass APNs auch nach der Deinstallation einer App noch für eine gewisse Zeit erfolgreich auf Push-Benachrichtigungen antworten können. Diese Verzögerung ist beabsichtigt und dient dem Schutz der Privatsphäre der Nutzer:innen. Es wird kein Bounce oder Misserfolg gemeldet, bis APNs einen `410` Status für ein ungültiges Token zurückgibt.
+

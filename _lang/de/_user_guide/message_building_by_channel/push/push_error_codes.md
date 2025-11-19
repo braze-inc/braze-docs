@@ -1,5 +1,5 @@
 ---
-nav_title: Allgemeine Push-Fehlermeldungen
+nav_title: Übliche Push-Fehlermeldungen
 article_title: Allgemeine Push-Fehlermeldungen
 page_order: 22
 page_type: reference

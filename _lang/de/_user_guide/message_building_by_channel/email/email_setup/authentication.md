@@ -30,7 +30,7 @@ Ihr DKIM-Eintrag wird eingerichtet, wenn Braze Ihre IPs und Domains konfiguriert
 
 ### Domänenbasierte Nachrichtenauthentifizierung, Berichterstattung und Konformität (DMARC)
 
-[Domain-based Message Authentication, Reporting & Conformance (DMARC)](https://dmarc.org/) ist ein E-Mail-Authentifizierungsprotokoll, mit dem E-Mail-Absender die Legitimität ihrer E-Mails nachweisen können, was das Vertrauen der Mailbox-Empfänger stärkt und die Annahme von E-Mails fördert. Mit DMARC können E-Mail-Absender festlegen, wie mit E-Mails verfahren werden soll, die nicht per Sender Policy Framework (SPF) oder Domain Keys Identified Mail (DKIM) authentifiziert worden sind. Dabei wird überprüft, ob sowohl die SPF- als auch die DKIM-Prüfung bestanden worden sind. 
+[Domain-based Message Authentication, Reporting & Conformance (DMARC)](https://dmarc.org/) ist ein E-Mail-Authentifizierungsprotokoll, mit dem Absender die Legitimität ihrer Nachrichten nachweisen können, was das Vertrauen der Mailbox-Empfänger stärkt und die Annahme von Nachrichten fördert. Mit DMARC können E-Mail-Absender festlegen, wie mit E-Mails verfahren werden soll, die nicht per Sender Policy Framework (SPF) oder Domain Keys Identified Mail (DKIM) authentifiziert worden sind. Dabei wird überprüft, ob sowohl die SPF- als auch die DKIM-Prüfung bestanden worden sind. 
 
 Absender können Postfachanbieter anweisen, wie sie mit E-Mails verfahren sollen, die ihre Signatur- oder Authentifizierungsprüfung nicht bestanden haben. Fehlversuche können darauf hindeuten, dass Dritte versuchen, Sie oder Ihre E-Mail zu imitieren. Absender können Mailbox-Anbieter anweisen, Mails abzulehnen oder in Quarantäne zu stellen, und sogar automatische Berichte über Mails senden, die nicht geprüft wurden. Auf diese Weise können Mailbox-Anbieter Spammer besser identifizieren und verhindern, dass böswillige E-Mails in die Postfächer eindringen. Gleichzeitig werden falsch-positive Ergebnisse minimiert und bessere Authentifizierungsberichte für mehr Transparenz auf dem Markt bereitgestellt.
 
@@ -63,5 +63,5 @@ Wenn Sie zum Beispiel Google Mail verwenden, gehen Sie folgendermaßen vor:
 2. Wählen Sie **Original anzeigen**.
 3. Prüfen Sie, ob der **DMARC**-Status auf "PASS" lautet.
 
-![E-Mail mit dem DMARC-Wert "PASS".]({% image_buster /assets/img_archive/dmarc_example.png %})
+![Eine E-Mail, die den DMARC-Wert "PASS" enthält.]({% image_buster /assets/img_archive/dmarc_example.png %})
 

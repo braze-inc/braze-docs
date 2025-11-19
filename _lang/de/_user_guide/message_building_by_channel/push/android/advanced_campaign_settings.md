@@ -22,7 +22,7 @@ Eine Benachrichtigungs-ID ist eine eindeutige Kennung für eine von Ihnen gewäh
 
 Um eine Benachrichtigungs-ID zuzuweisen, navigieren Sie zur Kompositionsseite des Push, dem Sie die ID hinzufügen möchten, und wählen Sie die Registerkarte **Einstellungen**. Geben Sie eine ganze Zahl in den Abschnitt **Benachrichtigungs-ID** ein. Um diese Benachrichtigung zu aktualisieren, nachdem Sie sie herausgegeben haben, senden Sie eine weitere Benachrichtigung mit der gleichen ID, die Sie zuvor verwendet haben.
 
-![]({% image_buster /assets/img_archive/notification_ids.png %}){: style="max-width:80%;" }
+![Feld ID der Benachrichtigung.]({% image_buster /assets/img_archive/notification_ids.png %}){: style="max-width:60%;" }
 
 ## Lebenserwartung (TTL) {#ttl}
 
@@ -30,11 +30,11 @@ Mit dem Feld **Time-to-Live** können Sie eine angepasste Zeitspanne für das Sp
 
 Um die Time-to-Live für Ihren Android Push zu bearbeiten, gehen Sie zum Composer und wählen Sie den Tab **Einstellungen**. Suchen Sie das Feld **Time to Live** und geben Sie einen Wert in Tagen, Stunden oder Sekunden ein.
 
-Die Standardwerte für die Time-to-Live werden von Ihrem Administrator auf der Seite [Push TTL-Einstellungen]({{site.baseurl}}/user_guide/administrative/app_settings/push_ttl_settings/) festgelegt. Standardmäßig setzt Braze Push TTL auf den maximalen Wert für jeden Push Messaging Dienst. Die Standard TTL-Einstellungen gelten zwar global, aber Sie können sie bei der Erstellung der Kampagne auf der Ebene der Nachrichten außer Kraft setzen. Dies ist hilfreich, wenn verschiedene Kampagnen unterschiedliche Dringlichkeiten oder Zustellungszeiträume erfordern.
+Die Standardwerte für Time-to-Live werden von Ihrem Administrator auf der Seite [Push-Einstellungen]({{site.baseurl}}/user_guide/administrative/app_settings/push_settings/) festgelegt. Standardmäßig setzt Braze Push TTL auf den maximalen Wert für jeden Push Messaging Dienst. Die Standard TTL-Einstellungen gelten zwar global, aber Sie können sie bei der Erstellung der Kampagne auf der Ebene der Nachrichten außer Kraft setzen. Dies ist hilfreich, wenn verschiedene Kampagnen unterschiedliche Dringlichkeiten oder Zustellungszeiträume erfordern.
 
 Nehmen wir zum Beispiel an, Ihre App veranstaltet einen wöchentlichen Quiz-Wettbewerb. Sie senden eine Push-Benachrichtigung eine Stunde vor Beginn der Veranstaltung. Indem Sie die TTL auf 1 Stunde einstellen, stellen Sie sicher, dass Nutzer:innen, die die App erst nach Beginn des Wettbewerbs öffnen, keine Benachrichtigung über ein Ereignis erhalten, das bereits begonnen hat.
 
-{% details Bewährte Praktiken %}
+{% details Best practices %}
 
 #### Wann Sie kürzere TTL verwenden sollten
 
@@ -54,23 +54,39 @@ Kürzere TTLs sorgen dafür, dass Nutzer:innen rechtzeitig über Ereignisse oder
 
 ## Priorität der Firebase-Nachrichtenzustellung {#fcm-priority}
 
-Mit dem Feld **Priorität der Firebase-Nachrichtenzustellung** können Sie festlegen, ob ein Push mit „normaler“ oder „hoher“ Priorität an Firebase Cloud Messaging gesendet wird. Lesen Sie die [FCM Dokumentation](https://firebase.google.com/docs/cloud-messaging/concept-options#setting-the-priority-of-a-message), um mehr zu erfahren.
+Mit dem Feld **Priorität der Firebase-Nachrichtenzustellung** können Sie festlegen, ob ein Push mit "normaler" oder "hoher" Priorität an Firebase Cloud Messaging gesendet wird. Diese Einstellung bestimmt, wie schnell Nachrichten zugestellt werden und wie sie sich auf die Akkulaufzeit des Geräts auswirken.
+
+| Priorität | Beschreibung | Am besten für |
+|---------|-------------|----------|
+| Normal | Batterie-optimierte Zustellung, die verzögert werden kann, um die Batterie zu schonen | Nicht dringende Inhalte, Aktionen, Updates von Nachrichten |
+| Hoch | Sofortige Zustellung mit höherem Batterieverbrauch | Zeitkritische Benachrichtigungen, kritische Alarme, Updates zu Live-Events, Kontowarnungen, aktuelle Nachrichten oder dringende Erinnerungen |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
+#### Überlegungen
+
+- **Standardeinstellung**: Sie können in Ihren [Push-Einstellungen]({{site.baseurl}}/user_guide/administrative/app_settings/push_settings/) eine Standard FCM-Priorität für alle Android Kampagnen festlegen. Diese Einstellung auf Kampagnenebene setzt den Standard bei Bedarf außer Kraft.
+- **Depriorisierung**: Wenn FCM feststellt, dass Ihre App häufig Nachrichten mit hoher Priorität versendet, die nicht zu für den Nutzer sichtbaren Benachrichtigungen oder Engagement führen, können diese Nachrichten automatisch auf normale Priorität zurückgestuft werden.
+- **Auswirkungen der Batterie**: Nachrichten mit hoher Priorität wecken schlafende Geräte aggressiver auf und verbrauchen mehr Akku. Setzen Sie diese Priorität mit Bedacht ein.
+
+Ausführlichere Informationen zur Behandlung von Nachrichten und zur Depriorisierung finden Sie in der [FCM Dokumentation](https://firebase.google.com/docs/cloud-messaging/concept-options#setting-the-priority-of-a-message) und unter [Nachrichtenbehandlung und Depriorisierung unter Android](https://firebase.google.com/docs/cloud-messaging/android/message-priority#deprioritize).
 
 ## Textzusammenfassung
 
-Mit dem Zusammenfassungstext können Sie zusätzlichen Text in der **erweiterten Benachrichtigungsansicht** einstellen. Der Zusammenfassungstext wird in der erweiterten Ansicht unter dem Text der Nachricht angezeigt. Es dient auch als Beschriftung für Benachrichtigungen mit Bildern.
+Mit dem Zusammenfassungstext können Sie zusätzlichen Text in der erweiterten Benachrichtigungsansicht einstellen. Es dient auch als Beschriftung für Benachrichtigungen mit Bildern.
 
-![][9]
+![Eine Android Nachricht mit dem Titel "Dies ist der Titel der Benachrichtigung." und dem Zusammenfassungstext "Dies ist der Zusammenfassungstext der Benachrichtigung."]({% image_buster /assets/img/android/push/collapsed-android-notification.png %}){: style="max-width:65%;"}
 
-Bei Push-Benachrichtigungen, die Bilder enthalten, wird der Nachrichtentext in der eingeklappten Ansicht angezeigt, während der Zusammenfassungstext als Bildunterschrift angezeigt wird, wenn die Benachrichtigung erweitert wird. Sehen Sie sich die folgende Animation an, um ein Beispiel für dieses Verhalten zu sehen.
+Der Zusammenfassungstext wird in der erweiterten Ansicht unter dem Text der Nachricht angezeigt. 
 
-![Zusammenfassung Text Verhalten][15]
+![Eine Android Nachricht mit dem Titel "Dies ist der Titel der Benachrichtigung." und dem Zusammenfassungstext "Dies ist der Zusammenfassungstext der Benachrichtigung."]({% image_buster /assets/img/android/push/expanded-android-notification.png %}){: style="max-width:65%;"}
+
+Bei Push-Benachrichtigungen, die Bilder enthalten, wird der Nachrichtentext in der eingeklappten Ansicht angezeigt, während der Zusammenfassungstext als Bildunterschrift angezeigt wird, wenn die Benachrichtigung erweitert wird. 
 
 ## Benutzerdefinierte URIs
 
-Mit der Funktion **Benutzerdefinierte URI** können Sie eine Web-URL oder eine Android-Ressource angeben, zu der navigiert werden soll, wenn die Benachrichtigung angeklickt wird. Wenn kein benutzerdefinierter URI angegeben ist, gelangen Benutzer durch Klicken auf die Benachrichtigung zu Ihrer App. Sie können die angepasste URI verwenden, um Deeplinks innerhalb Ihrer App zu setzen und Nutzer:innen auf Ressourcen zu verweisen, die auch außerhalb Ihrer App existieren. Dies kann über unsere [Messaging API][13] oder in den **Einstellungen** im Push Composer festgelegt werden.
+Mit der Funktion **Benutzerdefinierte URI** können Sie eine Web-URL oder eine Android-Ressource angeben, zu der navigiert werden soll, wenn die Benachrichtigung angeklickt wird. Wenn kein benutzerdefinierter URI angegeben ist, gelangen Benutzer durch Klicken auf die Benachrichtigung zu Ihrer App. Sie können die angepasste URI verwenden, um Deeplinks innerhalb Ihrer App zu setzen und Nutzer:innen auf Ressourcen zu verweisen, die auch außerhalb Ihrer App existieren. Dies kann über unsere [Messaging API]({{site.baseurl}}/api/endpoints/messaging/) oder im Tab **Compose** des Push-Editors festgelegt werden.
 
-![Benutzerdefinierte URI][12]
+![Angepasstes URI-Feld.]({% image_buster /assets/img_archive/deep_link.png %}){: style="max-width:60%;"}
 
 ## Benachrichtigungs-Anzeigepriorität
 
@@ -84,7 +100,7 @@ Dieses Feature ist nützlich, um Ihre Nachrichten danach zu unterscheiden, wie k
 
 In Android O wurde die Benachrichtigungspriorität eine Eigenschaft der Benachrichtigungskanäle. Sie müssen mit Ihrem Entwickler zusammenarbeiten, um die Priorität für einen Kanal während seiner Konfiguration festzulegen und dann das Dashboard verwenden, um den richtigen Kanal auszuwählen, wenn Sie Ihre Benachrichtigungstöne senden. Für Geräte mit Android-Versionen vor O können Sie über das Braze Dashboard und die Messaging API eine Prioritätsstufe für Android- und Fire OS-Benachrichtigungen festlegen.
 
-Um Ihre gesamte Nutzerbasis mit einer bestimmten Priorität zu benachrichtigen, empfehlen wir Ihnen, die Priorität indirekt über die [Konfiguration des Benachrichtigungskanals][17] ] festzulegen (um O+-Geräte anzusprechen) und die individuelle Priorität über das Dashboard zu senden (um <O-Geräte anzusprechen).
+Um Ihrer gesamten Nutzerbasis Nachrichten mit einer bestimmten Priorität zukommen zu lassen, empfehlen wir Ihnen, die Priorität indirekt über die [Konfiguration des Messaging-Kanals](https://developer.android.com/training/notify-user/channels#importance) festzulegen (um O+ Geräte zu targetieren) und die individuelle Priorität über das Dashboard zu senden (um <O Geräte zu targetieren).
 
 In der folgenden Tabelle finden Sie die Prioritätsstufen, die Sie für Android- oder Fire OS-Push-Benachrichtigungen festlegen können:
 
@@ -97,13 +113,13 @@ In der folgenden Tabelle finden Sie die Prioritätsstufen, die Sie für Android-
 | Min. | Kontextuelle oder Hintergrundinformationen. | `-2`|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-Weitere Informationen finden Sie in der Dokumentation von Google zu [Android-Benachrichtigungen][2].
+Weitere Informationen finden Sie in der Dokumentation von Google zu [Android-Benachrichtigungen](http://developer.android.com/design/patterns/notifications.html).
 
 ## Kategorie Push
 
 Android-Push-Benachrichtigungen bieten die Möglichkeit, anzugeben, ob Ihre Benachrichtigung in eine vordefinierte Kategorie fällt. Die Android-Benutzeroberfläche kann diese Kategorie verwenden, um zu entscheiden, wo die Benachrichtigung in der Benachrichtigungsleiste des Benutzers platziert werden soll.
 
-![Tab „Einstellungen“, wobei die Kategorie auf „Keine“ eingestellt ist, was der Standardeinstellung entspricht.][52]
+![Tab Einstellungen, wobei die Kategorie auf Keine eingestellt ist, was der Standardeinstellung entspricht.]({% image_buster /assets/img_archive/braze_category.png %}){: style="max-width:60%;"}
 
 | Kategorie | Beschreibung |
 |---|-------|
@@ -138,13 +154,13 @@ Android-Push-Benachrichtigungen bieten ein optionales Feld, mit dem Sie festlege
 
 Außerdem können Android-Nutzer die Anzeige von Push-Benachrichtigungen auf dem Sperrbildschirm deaktivieren, indem sie die Datenschutzeinstellungen für Benachrichtigungen auf ihrem Gerät ändern. Diese Einstellung setzt die Sichtbarkeit der Push-Benachrichtigung außer Kraft.
 
-![Dashboard Push-Prioritätsort mit aktivierter Sichtbarkeit und der Einstellung Privat.][53]{: style="float:right;max-width:60%;margin-left:15px;"}
+![Dashboard Push-Prioritätsstandort mit Enablement der Sichtbarkeit und Einstellung auf Privat.]({% image_buster /assets/img_archive/braze_visibility.png %}){: style="float:right;max-width:50%;margin-left:15px;"}
 
 Unabhängig von der Sichtbarkeit werden alle Benachrichtigungen auf dem Sperrbildschirm des Benutzers angezeigt, wenn die Datenschutzeinstellung für Benachrichtigungen auf dem Gerät **Alle Inhalte anzeigen** lautet (Standardeinstellung). Ebenso werden Benachrichtigungen nicht auf dem Sperrbildschirm angezeigt, wenn der Datenschutz für Benachrichtigungen auf **Nicht anzeigen** eingestellt ist. Die Sichtbarkeit wirkt sich nur aus, wenn der Datenschutz für Ihre Benachrichtigungen auf **Sensible Inhalte ausblenden** eingestellt ist.
 
 Die Sichtbarkeit hat keine Auswirkungen auf Geräte vor Android Lollipop 5.0.0, d.h. alle Benachrichtigungen werden auf diesen Geräten angezeigt.
 
-Weitere Informationen finden Sie in unserer [Android-Dokumentation][51] ].
+Weitere Informationen finden Sie in unserer [Android Dokumentation](https://developer.android.com/guide/topics/ui/notifiers/notifications).
 
 ## Benachrichtigungstöne
 
@@ -152,22 +168,11 @@ In Android O wurden die Benachrichtigungstöne eine Eigenschaft der Benachrichti
 
 Für Geräte mit Android-Versionen vor Android O können Sie mit Braze den Ton einer einzelnen Push-Nachricht über den Dashboard Composer einstellen. Hierzu können Sie eine lokale Tonressource auf dem Gerät angeben (z. B. `android.resource://com.mycompany.myapp/raw/mysound`). 
 
-Wenn Sie in diesem Feld **Standard** wählen, wird der Standard-Benachrichtigungston auf dem Gerät abgespielt. Dies kann über unsere [Messaging API][13] oder in den **Einstellungen** im Push Composer festgelegt werden.
+Wenn Sie in diesem Feld **Standard** wählen, wird der Standard-Benachrichtigungston auf dem Gerät abgespielt. Dies kann über unsere [Messaging API]({{site.baseurl}}/api/endpoints/messaging/) oder in den **Einstellungen** im Push-Editor festgelegt werden.
 
-![][11]
+![Das Feld "Ton".]({% image_buster /assets/img_archive/sound_android.png %}){: style="float:right;max-width:50%;margin-left:15px;"}
 
 Als nächstes geben Sie die vollständige URI der Ton-Ressource (z. B. `android.resource://com.mycompany.myapp/raw/mysound`) in das Dashboard-Prompt ein.
 
-Wenn Sie Ihre gesamte Nutzerbasis mit einem bestimmten Ton benachrichtigen möchten, empfehlen wir Ihnen, den Ton indirekt über die [Konfiguration des Benachrichtigungskanals][16] festzulegen (um O+ Geräte zu adressieren) und den individuellen Ton über das Dashboard zu senden (um <O Geräte zu adressieren).
+Um Ihre gesamte Nutzerbasis mit einem bestimmten Ton zu benachrichtigen, empfehlen wir Ihnen, den Ton indirekt über die [Konfiguration des Benachrichtigungskanals](https://developer.android.com/training/notify-user/channels) festzulegen (um O+ Geräte zu targetieren) und den individuellen Ton über das Dashboard zu senden (um <O Geräte zu targetieren).
 
-[2]: http://developer.android.com/design/patterns/notifications.html
-[9]: {% image_buster /assets/img_archive/summary_text.png %}
-[11]: {% image_buster /assets/img_archive/sound_android.png %}
-[12]: {% image_buster /assets/img_archive/deep_link.png %}
-[13]: {{site.baseurl}}/api/endpoints/messaging/
-[15]: {% image_buster /assets/img_archive/messagesummary.gif %}
-[17]: https://developer.android.com/training/notify-user/channels#importance
-[16]: https://developer.android.com/training/notify-user/channels
-[51]: https://developer.android.com/guide/topics/ui/notifiers/notifications
-[52]: {% image_buster /assets/img_archive/braze_category.png %}
-[53]: {% image_buster /assets/img_archive/braze_visibility.png %}
