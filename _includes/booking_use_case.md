@@ -256,7 +256,7 @@ If the user in this use case updated their Sydney trip, you’d use the `/users/
 
 #### Cancelled booking
 
-If the user in this use case cancelled their Syndey trip, you’d send the following call to the `/users/track` endpoint:
+If the user in this use case cancelled their Sydney trip, you'd send the following call to the `/users/track` endpoint:
 
 {% raw %}
 ```json
