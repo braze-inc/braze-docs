@@ -368,4 +368,6 @@ valid_partner_list:
   url: /docs/partners/stackadapt/
 - name: Oppizi
   url: /docs/partners/oppizi/
+- name: OtherLevels
+  url: /docs/partners/otherlevels/
 ---
