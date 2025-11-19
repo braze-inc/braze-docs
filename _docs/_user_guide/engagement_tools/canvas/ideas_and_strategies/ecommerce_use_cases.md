@@ -176,7 +176,7 @@ If you use Shopify, add your catalog name to get the variant image URL.
 
 #### HTML cart URL
 
-If you want to direct users back to their cart, you can add a nested event property under the medata object, such as:
+If you want to direct users back to their cart, you can add a nested event property under the metadata object, such as:
 
 {% raw %}
 ```liquid

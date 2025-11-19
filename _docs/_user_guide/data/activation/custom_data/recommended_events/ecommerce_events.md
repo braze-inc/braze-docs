@@ -551,7 +551,7 @@ You can use the order placed event to trigger when a customer successfully compl
 | `order_number` | No | String | (Shopify only) Unique order number for the order placed. |
 | `tags` | No | Array | (Shopify only) Order tags
 | `referring_site` | No | String | (Shopify only) The site the order originated from (such as Meta). |
-| `payment_gateway_names` | No | Array | (Shopify only) Payement system source (such as point of sale or mobile). |
+| `payment_gateway_names` | No | Array | (Shopify only) Payment system source (such as point of sale or mobile). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 #### Example objects
@@ -1174,4 +1174,4 @@ We use standardized user field calculations for the following fields:
 
 These user field calculations are also included on the **Transactions** tab of user profiles.
 
-![The "Transactions" tab with user calcuated fields.]({% image_buster /assets/img/Shopify/transactions_tab.png %}){: style="max-width:60%;"}
+![The "Transactions" tab with user calculated fields.]({% image_buster /assets/img/Shopify/transactions_tab.png %}){: style="max-width:60%;"}
