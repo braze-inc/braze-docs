@@ -6,7 +6,7 @@
 
 ## Prerequisites
 
-Banners are available as part of your Message Credits entitlements. If you're not on our flexible Message Credits model, Banners are available as an add-on feature. Reach out to your Braze customer success manager for more information.
+Banners availability depends on your Braze package. Contact your account manager or customer success manager to get started.
 
 ## Why use Banners?
 

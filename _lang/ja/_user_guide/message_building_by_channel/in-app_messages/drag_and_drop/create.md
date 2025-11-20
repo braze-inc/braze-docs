@@ -1,5 +1,5 @@
 ---
-nav_title: アプリ内メッセージの作成
+nav_title: アプリ内メッセージを作成する
 article_title: "ドラッグアンドドロップでアプリ内メッセージを作成する"
 description: "このリファレンス記事では、ドラッグアンドドロップエディタを使用してアプリ内メッセージを作成する方法、前提条件、クリエイティブの詳細などについて説明します。"
 alias: "/create_dnd_iam/"
@@ -15,6 +15,9 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 
 > ドラッグ＆ドロップエディタを使用すると、キャンペーンやキャンバスのいずれかでドラッグ＆ドロップ編集体験を使用して、完全にカスタムおよびパーソナライズされたアプリ内メッセージを作成できます。
 
+
+{% multi_lang_include video.html id="j94omgo73o" align="right" source="wistia" %}
+
 既存のカスタムHTMLテンプレートやサードパーティが作成したテンプレートを使用したい場合は、ドラッグアンドドロップエディタで再作成する必要があります。
 
 アプリ内メッセージはキャンペーンを使用して送信するべきか[キャンバス]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas/)を使用するべきか分からない場合は？キャンペーンは単一のシンプルなメッセージングキャンペーンに適していますが、キャンバスはマルチステップのユーザーのジャーニーに適しています。メッセージを作成する場所を選択したら、次のステップに進み、ドラッグ＆ドロップでアプリ内メッセージを作成します。
@@ -28,7 +31,7 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 | {::nomarkdown}{% sdk_min_versions swift:5.0.0 android:8.0.0 web:2.5.0 %}{:/} | {::nomarkdown}{% sdk_min_versions swift:6.5.0 android:26.0.0 web:4.8.1 %}{:/} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-{% details 最小 SDK に関する詳細情報 %}
+{% details More information on minimum SDKs %}
 
 ドラッグアンドドロップエディタを使用して作成されたメッセージは、最小SDKバージョンのユーザーにのみ送信できます（上記の表を参照）。ユーザーがアプリケーションを更新していない場合（つまり、古いSDKバージョンを使用している場合）、アプリ内メッセージを受信しません。
 
@@ -67,7 +70,7 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 
 [**メッセージを作成**] を選択して、ドラッグ＆ドロップエディターでアプリ内メッセージのデザインを開始します。
 
-![「基本」、「背景画像」、「電話番号キャプチャ」、「空白」の各テンプレートを選択できる「Braze テンプレート」セクション。]({% image_buster /assets/img_archive/dnd_iam_select_template.png %})
+![基本、バックグラウンド "画像、電話番号キャプチャ、または空白のテンプレートを選択できるBraze テンプレート s 欄。]({% image_buster /assets/img_archive/dnd_iam_select_template.png %})
 
 ダッシュボードの**テンプレート**セクションからすべてのテンプレートにアクセスすることもできます。
 
@@ -75,10 +78,10 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 
 アプリ内メッセージにページを追加すると、オンボーディングフローやウェルカムジャーニーのように、ユーザーを順次のフローに案内できます。**ページ**セクションの**ビルド**タブからページを管理できます。
 
-![]({% image_buster /assets/img_archive/dnd_iam_mockup.png %}) 3ページで構成されるヘルスケア企業のアプリ内メッセージ。
+![3頁からなるヘルスケア企業のアプリ内メッセージ。]({% image_buster /assets/img_archive/dnd_iam_mockup.png %})
 
 {% tabs %}
-{% tab ページの追加 %}
+{% tab Adding pages %}
 
 アプリ内メッセージはデフォルトで1ページから始まります。新しいページを追加するには:
 
@@ -97,7 +100,7 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 3. ページに意味のある名前を付けてください。これは、ページをつなぐときに役立ちます。
 
 {% endtab %}
-{% tab ページの削除または名前の変更 %}
+{% tab Deleting or renaming pages %}
 
 ページを削除または名前を変更するには:
 
@@ -119,7 +122,7 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 4. 開始ページからリンクしたいページを選択します。
 5. すべてのページがリンクされるまで続けます。
 
-![ユーザーがアプリ内メッセージの2ページ目に移動するための1次的なアクションボタンを編集している。]({% image_buster/assets/img_archive/dnd_iam_multipage.gif %})
+![ユーザーは、プライマリアクションを編集して、アプリ内メッセージのページ2 に移動します。]({% image_buster/assets/img_archive/dnd_iam_multipage.gif %})
 
 ページが他のページにリンクされていない場合、メッセージを起動できません。
 
@@ -137,7 +140,7 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 
 ## ステップ 5: アプリ内メッセージをテストする
 
-**プレビュー & テスト**セクションでは、さまざまなデバイスでアプリ内メッセージをプレビューし、テストメッセージをデバイスに送信できます。ここでは、ドラッグアンドドロップのアプリ内メッセージキャンペーンの詳細がすべてのプラットフォームで一致していることを確認できます。 
+**プレビュー & Test** セクションでは、さまざまなデバイス間でアプリ内メッセージをプレビューし、テストメッセージをデバイスに送信できます。ここでは、ドラッグアンドドロップのアプリ内メッセージキャンペーンの詳細がすべてのプラットフォームで一致していることを確認できます。 
 
 キャンペーンを送る前に必ずアプリ内メッセージをテストし、ユーザー目線で最終的なメッセージがどのように見えるかをイメージすることが重要だ。
 
@@ -147,7 +150,7 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 テストをコンテンツテストグループまたは個々のユーザーに送信するには、送信前にテストデバイスでプッシュを有効にする必要があります。
 {% endalert %}
 
-**プレビュー & テスト** タブからメッセージをプレビューすることができ、ユーザーのように表示されます。特定のユーザー、ランダムなユーザー、またはカスタムユーザーを選択できます。
+** プレビュー & Test** タブからユーザーのようにプレビューできます。特定のユーザー、ランダムなユーザー、またはカスタムユーザーを選択できます。
 
 - **ランダムユーザー:**Brazeはデータベースからユーザーをランダムに選択し、属性やイベント情報に基づいてアプリ内メッセージをプレビューします。
 - **ユーザーの選択:**メールアドレスや`external_id` に基づいて特定のユーザーを選択することができる。アプリ内メッセージは、そのユーザーの属性とイベント情報に基づいてプレビューされます。
@@ -173,7 +176,7 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 
 はい、メッセージ内のボタンクリックに基づいて、最大2つのボタンをセグメント化できます。そのためには、ボタンの**レポート用識別子**を「0」と「1」に設定します。これにより、それぞれ「アプリ内メッセージボタン1をクリックした」と「アプリ内メッセージボタン2をクリックした」というセグメンテーションフィルターに対応します。
 
-![値が「0」の [レポート用の識別子] フィールド。]({% image_buster /assets/img/identifier_for_reporting.png %}){: style="max-width:50%;"}
+!["Reporting&quot の識別子; "0"の値を持つフィールド。]({% image_buster /assets/img/identifier_for_reporting.png %}){: style="max-width:50%;"}
 
 #### カスタムHTMLやJavaScriptを使用してアプリ内メッセージをカスタマイズしたり、既存のHTMLメッセージをエディタに転送したりできますか？
 
@@ -187,6 +190,6 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 
 そうです。将来のキャンペーンやキャンバスステップで再利用したいアプリ内メッセージがある場合は、エディタを終了した後に利用可能な**テンプレートとして保存**ボタンを使用してカスタムテンプレートとして保存できます。テンプレートとして保存する前に、まずキャンペーンを開始するか、下書きとして保存する必要があります。
 
-![製品ツアーのアプリ内メッセージのプレビュー。]({% image_buster /assets/img_archive/dnd_iam_save_as_template.png %})
+![商品見学のためのアプリ内メッセージのプレビュー。]({% image_buster /assets/img_archive/dnd_iam_save_as_template.png %})
 
 **テンプレート** > **アプリ内メッセージテンプレート** に移動して、アプリ内メッセージテンプレートを作成および保存することもできます。

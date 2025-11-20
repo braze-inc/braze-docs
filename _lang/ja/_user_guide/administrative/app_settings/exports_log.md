@@ -18,7 +18,7 @@ description: "このページでは、エクスポート・ログについて説
 
 **Exports Log**ページから直接保留中のエクスポートをキャンセルするには、<i class="fas fa-ellipsis-vertical"></i>メニューを選択し、次に**Cancel Export**を選択するか、**Export ID**を選択して、エクスポートのページで**Cancel Export**を選択します。
 
-![保留中のエクスポートと [エクスポートのキャンセル] オプションを示すエクスポートログ。]({% image_buster /assets/img/export_logs_cancel.png %})
+![保留中のエクスポートと"Cancel Export" オプションを示すエクスポージャーログ。]({% image_buster /assets/img/export_logs_cancel.png %})
 
 ## 特定のエクスポートログの共有
 

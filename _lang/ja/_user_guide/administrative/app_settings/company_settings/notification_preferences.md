@@ -13,7 +13,7 @@ description: "このリファレンス記事では、会社アカウントでの
 
 [**通知設定**] ページでは、会社に関する通知を受信するユーザー (存在する場合) を設定できます。キャンペーンの配信や技術的なエラーに関する通知を受信するユーザーを設定できます。週次分析レポートの受信者も指定できます。ほとんどの通知について、Braze はメールと Webhook チャネルをサポートしています。
 
-![通知設定ページ（Brazeのダッシュボード内）]({% image_buster /assets/img_archive/notification_preferences.png %})
+![ダッシュボードの通知設定ページ]({% image_buster /assets/img_archive/notification_preferences.png %})
 
 このページにアクセスするには、[**設定**] > [**管理者設定**] > [**通知設定**] に移動します。
 
@@ -43,20 +43,20 @@ Braze はオプションで、毎週月曜日の午前 5 時 (東部標準時) �
 
 週次レポートに含めるイベントを 5 つまで選択できます。
 
-![分析レポートに含めるイベントの選択]({% image_buster /assets/img_archive/company_analytics_report_new.png %})
+![分析レポートに含めるイベントを選択する。]({% image_buster /assets/img_archive/company_analytics_report_new.png %})
 
 ## Slack の受信 Webhook 連携
 
 Slack には外部ソースから Slack にメッセージを投稿できる[受信 Webhook アプリ](https://my.slack.com/services/new/incoming-webhook/)があります。始めるには、受信 Webhook アプリを開きます。
 
 1. 通知の送信先の Slack チャネルを選択し、［**受信 Webhook 連携の追加**］ をクリックします。<br><br>
-    ![Slack での受信 Webhook 連携の追加]({% image_buster /assets/img_archive/slack_f.png %})<br><br>
+    ![Slackに着信Webhookの統合を追加する。]({% image_buster /assets/img_archive/slack_f.png %})<br><br>
   Slack により URL が生成されます。受信しようとする通知について、この URL を Braze に入力する必要があります。<br><br>
 2. **Webhook の URL** をコピーします。<br><br>
-    ![Webhook の URL をコピー]({% image_buster /assets/img_archive/copy_url.png %})<br><br>
+    ![WebhookのURLをコピーする。]({% image_buster /assets/img_archive/copy_url.png %})<br><br>
 3. [**会社の設定**] > [**通知設定**] タブに移動します。<br><br>
 4. Slack で有効にする通知を選択します。この Slack チャネルに送信する通知が複数ある場合は、［**一括追加**］ を使用して複数の通知に Webhook を追加します。<br><br>
-    ![有効にする Slack 通知を選択]({% image_buster /assets/img_archive/click_edit_f.png %}){: style="max-width:60%;"}<br><br>
+    ![Slackの通知をイネーブルメントにする。]({% image_buster /assets/img_archive/click_edit_f.png %}){: style="max-width:60%;"}<br><br>
 5. Slack により生成された URL を入力します。
 
 操作完了です。この Slack チャネルに会社に関する通知が届くようになるはずです。また、このトピックに関する Slack のヘルプ記事もご確認いただけます。[受信 Webhook を使用してメッセージを送信する](https://api.slack.com/incoming-webhooks)。

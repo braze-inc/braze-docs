@@ -2675,6 +2675,8 @@ validurls['/docs/api/endpoints/translations/put_update_translation_campaign'] = 
 validurls['/docs/api/endpoints/translations/get_bulk_translations_canvases'] = '/docs/api/endpoints/translations/canvas/get_bulk_translations_canvases';
 validurls['/docs/api/endpoints/translations/get_translation_canvas'] = '/docs/api/endpoints/translations/canvas/get_translation_canvas';
 validurls['/docs/api/endpoints/translations/put_update_translation_canvas'] = '/docs/api/endpoints/translations/canvas/put_update_translation_canvas';
+validurls['/docs/api/endpoints/translations/campaigns/get_bulk_translations_campaigns'] = '/docs/api/endpoints/translations/campaigns/get_translation_campaign';
+validurls['/docs/api/endpoints/translations/canvas/get_bulk_translations_canvases'] = '/docs/api/endpoints/translations/canvas/get_translation_canvas';
 
 validurls['/docs/developer_guide/sdk_integration/initialization/'] = '/docs/developer_guide/sdk_integration/';
 
@@ -2684,7 +2686,7 @@ validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/advancement'
 validurls['/docs/user_guide/data/data_points'] = '/docs/user_guide/data/infrastructure/data_points';
 validurls['/docs/user_guide/data/report_metrics'] = '/docs/user_guide/analytics/reporting/report_metrics/';
 validurls['/docs/user_guide/data/cloud_ingestion'] = '/docs/user_guide/data/unification/cloud_ingestion';
-validurls['/docs/user_guide/data/cloud_ingestion/overview'] = '/docs/user_guide/data/unification/cloud_ingestion/overview';
+validurls['/docs/user_guide/data/cloud_ingestion/overview'] = '/docs/user_guide/data/unification/cloud_ingestion/';
 validurls['/docs/user_guide/data/cloud_ingestion/connected_sources'] = '/docs/user_guide/data/unification/cloud_ingestion/connected_sources';
 validurls['/docs/user_guide/data/cloud_ingestion/integrations'] = '/docs/user_guide/data/unification/cloud_ingestion/integrations';
 validurls['/docs/user_guide/data/cloud_ingestion/file_storage_integrations'] = '/docs/user_guide/data/unification/cloud_ingestion/file_storage_integrations';
@@ -2974,7 +2976,12 @@ validurls['/docs/help/help_articles/segments/search_exact_text/'] = '/docs/user_
 validurls['/docs/help/help_articles/docs/'] = '/docs/user_guide/';
 validurls['/docs/help/help_articles/docs/scroll_bar_overlap/'] = '/docs/user_guide/';
 validurls['/docs/help/faqs/'] = '/docs/';
-
+validurls['/docs/help/help_articles/campaigns_and_canvas/'] = '/docs/user_guide/engagement_tools/';
+validurls['/docs/help/help_articles/campaigns_and_canvas/canvas_not_sending/'] = '/docs/user_guide/engagement_tools/canvas/troubleshooting/';
+validurls['/docs/help/help_articles/campaigns_and_canvas/locations_data_in_campaigns/'] = '/docs/user_guide/engagement_tools/locations_and_geofences/location_tracking/';
+validurls['/docs/help/help_articles/campaigns_and_canvas/more_people_in_control_group/'] = '/docs/user_guide/engagement_tools/canvas/troubleshooting/';
+validurls['/docs/help/help_articles/campaigns_and_canvas/using_custom_event_properties/'] = '/docs/developer_guide/analytics/logging_events/';
+validurls['/docs/help/help_articles/campaigns_and_canvas/conversions_low/'] = '/docs/user_guide/analytics/dashboard/conversions_dashboard/#troubleshooting';
 validurls['/docs/help/help_articles/push/'] = '/docs/user_guide/message_building_by_channel/push/';
 validurls['/docs/api/objects_filters/user_attributes_object/'] = '/docs/help/help_articles/push/push_token_migration/';
 validurls['/docs/help/help_articles/push/push_enablement/'] = '/docs/user_guide/message_building_by_channel/push/users_and_subscriptions/';
@@ -2986,5 +2993,17 @@ validurls['/docs/user_guide/offerfit/integration'] = '/docs/user_guide/brazeai/d
 validurls['/docs/user_guide/offerfit/building_use_cases'] = '/docs/user_guide/brazeai/decisioning_studio/building_use_cases';
 validurls['/docs/partners/ecommerce/shopify_legacy/getting_started_shopify/'] = '/docs/shopify_overview/';
 validurls['/docs/editor_blocks_dnd_iam/'] = '/docs/user_guide/engagement_tools/messaging_fundamentals/drag_and_drop_editor_blocks/?sdktab=in-app%20messages';
+
+validurls['/docs/partners/additional_channels_and_extensions/calendar/rokt_calendar/'] = '/docs/partners/additional_channels_and_extensions/';
+validurls['/docs/partners/rokt_calendar/'] = '/docs/partners/additional_channels_and_extensions/';
+
+validurls['/docs/help/help_articles/push/push_token_migration/'] = '/docs/api/objects_filters/user_attributes_object/#migrating-push-tokens';
+validurls['/docs/api/objects_filters/context_object/'] = '/docs/user_guide/engagement_tools/canvas/canvas_components/context/';
+validurls['/docs/user_guide/administrative/app_settings/manage_your_braze_users/adding_users_to_your_dashboard/'] = '/docs/user_guide/administrative/app_settings/manage_your_braze_users/';
+
+validurls['/docs/partners/message_personalization/dynamic_content/cloudinary/'] = '/docs/partners/cloudinary/';
+
+validurls['/docs/user_guide/data/unification/cloud_ingestion/overview'] = '/docs/user_guide/data/unification/cloud_ingestion/';
+validurls['/docs/contributing/content_management/language_translations'] = '/docs/contributing/content_management';
 
 // validurls['OLD'] = 'NEW';

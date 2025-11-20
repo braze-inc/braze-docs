@@ -53,6 +53,10 @@ page_order: 2.0
 {% sdktab xamarin %}
 {% multi_lang_include developer_guide/xamarin/sdk_integration.md %}
 {% endsdktab %}
+
+{% sdktab chatgpt apps %}
+{% multi_lang_include developer_guide/chatgpt_apps/sdk_integration.md %}
+{% endsdktab %}
 {% endsdktabs %}
 
 {% alert note %}

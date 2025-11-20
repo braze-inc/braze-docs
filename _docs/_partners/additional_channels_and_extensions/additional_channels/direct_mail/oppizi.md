@@ -51,7 +51,7 @@ Next, create a webhook template for Oppizi in Braze to use in future campaigns o
 
 In your webhook template, fill out the following fields:
 
-- **Webhook URL:** ```https://webhook.oppizi.com/events```
+- **Webhook URL:** ```https://webhooks.oppizi.com/events```
 - **Request body:** **Raw Text**
 
 For request method and headers, Oppizi requires an HTTP method along with the following HTTP headers to be included in the template. Fill out the following fields:
@@ -78,8 +78,9 @@ The following is an example request body:
 {
     "event" : "workflow.addRecipient",
     "oppiziWorkflowID" : "<oppiziWorkflowID>",
+    "requestType" : "live",
     "recipient" : {
-        "brazeID" : "{{${braze_id}}}",
+        "recipientID" : "{{${braze_id}}}",
         "firstName" : "{{${first_name}}}",
         "lastName" : "{{${last_name}}}",
         "address1" : "{{custom_attribute.${address1}}}",
@@ -101,4 +102,8 @@ The following is an example request body:
 
 ### Step 4: Preview and test your request in Braze
 
-After adding your request body with Oppizi’s workflow ID, preview the request and run a test to confirm your setup is working as expected. Now, you're ready to go with your automated direct mail campaigns.
+After adding your request body with Oppizi’s workflow ID, run a test to confirm your setup is working as expected.
+
+To run the test, update `requestType` from `live` to `test` in the request body. Note this step is crucial to prevent adding test recipients to your direct mail audience.
+
+After you finish testing, update `requestType` back to `live` and save your Canvas. Now, you’re ready to launch your automated direct mail campaigns.

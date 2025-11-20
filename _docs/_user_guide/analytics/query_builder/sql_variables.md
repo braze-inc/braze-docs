@@ -371,7 +371,7 @@ Select one or more custom events or custom event properties from a list.
 ```sql
 SELECT event_name
 FROM CUSTOM_EVENTS_TABLE
-WHERE event_name = '{{custom_events.${Purchased Game}}}';
+WHERE event_name IN ({{custom_events.${Purchased Game}}}); 
 ```
 {% endraw %}
 {% endsubtab %}
@@ -409,11 +409,11 @@ workspace_id = '{{workspace.${app_group_id}}}'
 
 ### Catalogs
 
-Select one or more catologs or catolog fields from a list.
+Select one or more catalogs or catalog fields from a list.
 
 {% tabs local %}
-{% tab catologs %}
-`catalogs` is used to select one or more catologs from the Braze dashboard.
+{% tab catalogs %}
+`catalogs` is used to select one or more catalogs from the Braze dashboard.
 
 {% subtabs %}
 {% subtab usage %}
@@ -426,7 +426,7 @@ catalog_id = '{{catalogs.${catalog}}}'
 {% endsubtabs %}
 {% endtab %}
 
-{% tab catolog fields %}
+{% tab catalog fields %}
 `catalog_fields` is used to set one or more fields from the currently-selected catalog. Requires a set `catalogs` variable.
 
 {% subtabs %}

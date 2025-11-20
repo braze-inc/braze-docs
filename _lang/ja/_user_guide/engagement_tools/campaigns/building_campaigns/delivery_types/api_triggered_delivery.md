@@ -30,7 +30,7 @@ API を利用したキャンペーンは、[API キャンペーン]({{site.baseu
 メッセージのトリガーに加えて、API リクエストを含むコンテンツを`trigger_properties`オブジェクト内にテンプレート化することもできます。この内容はメッセージの本文で参照できます。たとえば、次のものを含めることができます。
 ``{% raw %} {{ api_trigger_properties.${ some_value_included_with_request }}} {% endraw %}``。追加のコンテキストについては、次のソーシャル通知の例を参照してください。
 
-![前述のトリガープロパティは、ユーザーの名前を自動入力し、「あなたの写真が気に入りました！」というテキストを続けてメッセージに含めました。彼らが何をしていたかを見るにはここをクリック」]({% image_buster /assets/img_archive/api_triggered_photo_social_example_1.png %}){: style="max-width:70%;"}
+![前述のトリガープロパティは、メッセージに含まれ、ユーザーの名前と次のテキストを自動入力します。「あなたの写真にいいねしました。彼らが何をしていたかを見るにはここをクリック」]({% image_buster /assets/img_archive/api_triggered_photo_social_example_1.png %}){: style="max-width:70%;"}
 
 ## API トリガーキャンペーンで再利用可能
 

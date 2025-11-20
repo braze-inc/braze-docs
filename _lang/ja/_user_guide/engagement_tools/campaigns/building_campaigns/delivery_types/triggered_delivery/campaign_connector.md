@@ -1,5 +1,5 @@
 ---
-nav_title: キャンペーンコネクター
+nav_title: キャンペーンコネクタ
 article_title: キャンペーンコネクター
 page_order: 2
 tool: Campaigns

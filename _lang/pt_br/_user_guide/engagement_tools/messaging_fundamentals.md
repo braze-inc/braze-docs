@@ -1,15 +1,15 @@
 ---
-nav_title: Fundamentos de mensagens (Messaging Fundamentals)
-article_title: Fundamentos de mensagens (Messaging Fundamentals)
+nav_title: Fundamentos de mensagens
+article_title: Fundamentos de mensagens
 layout: dev_guide
 page_order: 0
-guide_top_header: "Fundamentos de mensagens (Messaging Fundamentals)"
-guide_top_text: "> No Braze, você pode criar, enviar e gerenciar suas mensagens usando <a href='/docs/user_guide/getting_started/campaigns_canvases'>uma campanha ou um Canvas</a>. Para esses dois métodos de envio de mensagens, há alguns fundamentos de envio de mensagens compartilhados para composição (configuração da mensagem) e gerenciamento (tratamento administrativo da mensagem)."
+guide_top_header: "Fundamentos de mensagens"
+guide_top_text: "> No Braze, você pode compor, enviar e gerenciar suas mensagens usando <a href='/docs/user_guide/getting_started/campaigns_canvases'>uma campanha ou um Canvas</a>. Para esses dois métodos de mensagens, há alguns fundamentos de mensagens compartilhados para composição (configuração da mensagem) e gerenciamento (tratamento administrativo da mensagem)."
 page_type: landing
 tool: 
     - Campaigns
     - Canvas
-description: "Esta landing page contém artigos sobre os fundamentos do envio de mensagens com campanhas e Canvas. Aqui, você encontrará recursos sobre como usar estrategicamente os eventos de conversão e determinar o tipo de entrega ao criar suas mensagens, além de usar o fluxo de trabalho de aprovação e entender os status ao gerenciar suas mensagens."
+description: "Esta página de aterrissagem contém artigos sobre os fundamentos das mensagens com campanhas e Canvases. Aqui, você encontrará recursos sobre como usar estrategicamente os eventos de conversão e determinar o tipo de entrega ao compor suas mensagens, além de usar o fluxo de trabalho de aprovação e entender os status ao gerenciar suas mensagens."
 
 guide_featured_title: "Composição"
 guide_featured_description: |
@@ -30,13 +30,16 @@ guide_featured_list:
   - name: Tipos de entrega
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/delivery_types/
     image: /assets/img/braze_icons/beaker-02.svg
+  - name: Blocos do editor
+    link: /docs/dnd/editor_blocks/
+    image: /assets/img/braze_icons/align-left.svg
   - name: Localização
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/localization/
     image: /assets/img/braze_icons/globe-02.svg
   - name: Reelegibilidade
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/reeligibility/
     image: /assets/img/braze_icons/users-01.svg
-  - name: Direcionamento de usuários
+  - name: Segmentação de usuários
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/targeting_users/
     image: /assets/img/braze_icons/target-04.svg
 
@@ -51,7 +54,7 @@ guide_menu_description: |
 
   ### Related articles
 guide_menu_list:
-  - name: Fluxo de aprovação
+  - name: Fluxo de trabalho de aprovação
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/approvals/
     image: /assets/img/braze_icons/brush-02.svg
   - name: Arquivamento de mensagens
@@ -63,7 +66,7 @@ guide_menu_list:
   - name: Duplicação de mensagens
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/duplicating/
     image: /assets/img/braze_icons/copy-04.svg
-  - name: Status de envio de mensagens
+  - name: Status de mensagens
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/about_statuses/
     image: /assets/img/braze_icons/book-closed.svg
   - name: Saiba antes de enviar

@@ -210,7 +210,7 @@ This event is not fired when the user actually uninstalls the app, as that's imp
 Subscription
 {% endapitags %}
 
-This event occurs when Braze receives a request to update the global subscription state of the user, even if the request doesn't alter the current subscription state for the user.
+This event occurs when Braze receives a request to update the global subscription state of the user.
 
 {% tabs %}
 {% tab Amplitude %}
@@ -436,7 +436,7 @@ Subscription
 This event occurs when the subscription state of a user in a subscription group changes.
 
 {% alert important %}
-Subscription groups are only available for email, SMS, and WhatsApp channels at this time.
+Subscription groups are only available for email, SMS, RCS, and WhatsApp channels at this time.
 {% endalert %}
 
 {% tabs %}
@@ -4551,7 +4551,7 @@ This event occurs when an Internet Service Provider does not immediately deliver
     "ip_pool" : "(optional, string) IP pool from which the email send was made",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "recipient_domain" : "(optional, string) Receipient's email domain",
+    "recipient_domain" : "(optional, string) Recipient's email domain",
     "send_id" : "(optional, string) Message send ID this message belongs to",
     "timezone" : "(optional, string) Time zone of the user"
   },
@@ -4592,7 +4592,7 @@ This event occurs when an Internet Service Provider does not immediately deliver
     "ip_pool" : "(optional, string) IP pool from which the email send was made",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "recipient_domain" : "(optional, string) Receipient's email domain",
+    "recipient_domain" : "(optional, string) Recipient's email domain",
     "send_id" : "(optional, string) Message send ID this message belongs to",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
@@ -4629,7 +4629,7 @@ This event occurs when an Internet Service Provider does not immediately deliver
           "ip_pool" : "(optional, string) IP pool from which the email send was made",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
-          "recipient_domain" : "(optional, string) Receipient's email domain",
+          "recipient_domain" : "(optional, string) Recipient's email domain",
           "send_id" : "(optional, string) Message send ID this message belongs to",
           "source_request_id" : "(required, string) Globally unique ID for this event"
         },
@@ -4683,7 +4683,7 @@ This event occurs when an Internet Service Provider does not immediately deliver
     "ip_pool" : "(optional, string) IP pool from which the email send was made",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "recipient_domain" : "(optional, string) Receipient's email domain",
+    "recipient_domain" : "(optional, string) Recipient's email domain",
     "send_id" : "(optional, string) Message send ID this message belongs to"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
@@ -4719,7 +4719,7 @@ This event occurs when an Internet Service Provider does not immediately deliver
   "ip_pool" : "(optional, string) IP pool from which the email send was made",
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
-  "recipient_domain" : "(optional, string) Receipient's email domain",
+  "recipient_domain" : "(optional, string) Recipient's email domain",
   "send_id" : "(optional, string) Message send ID this message belongs to",
   "sending_ip" : "(optional, string) IP address from which the email send was made",
   "time" : "(required, int) UNIX timestamp at which the event happened",
@@ -6029,7 +6029,7 @@ The `Unsubscribe` event is actually a specialized click event that is fired when
 Feature Flags, Impressions
 {% endapitags %}
 
-This event occures whenever a user has had an opportunity to interact with your feature, or when they could have interacted if the feature is disabled (in the case of a control group in an A/B test).
+This event occurs whenever a user has had an opportunity to interact with your feature, or when they could have interacted if the feature is disabled (in the case of a control group in an A/B test).
 
 Feature flag impressions are only logged once per session.
 
@@ -6956,7 +6956,7 @@ This event occurs when a user views an in-app message.
 {% endapi %}
 
 {% api %}
-## Abort events {#abort-events}
+## LINE Abort events {#line-abort-events}
 
 {% apitags %}
 LINE, Abort
@@ -7156,7 +7156,7 @@ This event occurs when a scheduled LINE message cannot be delivered, before send
 {% endapi %}
 
 {% api %}
-## Click events {#click-events}
+## LINE Click events {#line-click-events}
 
 {% apitags %}
 LINE, Clicks
@@ -7565,7 +7565,7 @@ This event occurs when a LINE message is received from a user.
 {% endapi %}
 
 {% api %}
-## Send events {#send-events}
+## LINE Send events {#line-send-events}
 
 {% apitags %}
 LINE, Sends
@@ -8470,7 +8470,7 @@ This event occurs when an error is received from either Apple Push Notification 
 
 #### Property details
 
-- If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) data, reach out to your customer success manager or account manager to enable the feature flipper for sending `ad_id`.
+- If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) data, contact your customer success manager or account manager to enable the feature flipper for sending `ad_id`.
 {% endapi %}
 
 {% api %}
@@ -9104,7 +9104,7 @@ This event occurs when Braze processes a push message for a user, communicating 
 {% endapi %}
 
 {% api %}
-## Abort  events {#abort--events}
+## RCS Abort events {#rcs-abort-events}
 
 {% apitags %}
 RCS, Abort
@@ -9280,7 +9280,7 @@ This event is created when an RCS send is interrupted due to an error detected w
 {% endapi %}
 
 {% api %}
-## Click events {#click-events}
+## RCS Click events {#rcs-click-events}
 
 {% apitags %}
 RCS, Clicks
@@ -9498,7 +9498,7 @@ An event that is created when the user interacts with an RCS message in a way th
 {% endapi %}
 
 {% api %}
-## Delivery events {#delivery-events}
+## RCS Delivery events {#rcs-delivery-events}
 
 {% apitags %}
 RCS, Delivery
@@ -9693,7 +9693,7 @@ This event is created when an RCS message is successfully delivered to a user's 
 {% endapi %}
 
 {% api %}
-## Inbound Receive events {#inbound-receive-events}
+## RCS Inbound Received events {#rcs-inbound-received-events}
 
 {% apitags %}
 RCS, Inbound Received
@@ -9885,7 +9885,7 @@ This event is created when Braze receives an RCS message that originates from th
 {% endapi %}
 
 {% api %}
-## Read events {#read-events}
+## RCS Read events {#rcs-read-events}
 
 {% apitags %}
 RCS, Read
@@ -10053,7 +10053,7 @@ This event is created when a user opens an RCS message on their device, indicati
 {% endapi %}
 
 {% api %}
-## Rejection events {#rejection-events}
+## RCS Rejection events {#rcs-rejection-events}
 
 {% apitags %}
 RCS, Rejection
@@ -10262,7 +10262,7 @@ An event that is created when an RCS message fails to be delivered to a user's m
 {% endapi %}
 
 {% api %}
-## Send events {#send-events}
+## RCS Send events {#rcs-send-events}
 
 {% apitags %}
 RCS, Sends

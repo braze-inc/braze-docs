@@ -1,5 +1,5 @@
 ---
-nav_title: "Webプッシュ"
+nav_title: "Web プッシュ"
 article_title: Webプッシュ通知
 page_order: 8.5
 page_type: reference
@@ -26,7 +26,7 @@ Web プッシュ通知は、迅速なコンバージョンを促進する緊急�
 
 Web プッシュは、スマートフォンでのアプリのプッシュ通知と同様に機能します。Web プッシュの作成の詳細については、[プッシュ通知の作成]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message)を参照してください。
 
-![ノートパソコンと電話機に同じプッシュメッセージが表示されるWeb プッシュ例。]({% image_buster /assets/img_archive/Macbook_Push.png %}){: style="border:none"}
+![Webプッシュの例。ノートパソコンと携帯電話に同じプッシュメッセージが表示される。]({% image_buster /assets/img_archive/Macbook_Push.png %}){: style="border:none"}
 
 ## 潜在ユースケースs
 

@@ -1,5 +1,5 @@
 ---
-nav_title: ダブルオプトインによるメールサインアップ
+nav_title: ダブルオプトインによるメール登録
 article_title: ダブルオプトインによるメールサインアップ
 page_order: 2
 page_type: reference
@@ -33,7 +33,7 @@ tool: Canvas
 
 1. テンプレート名の横にある**編集**を選択します。
 
-![]({% image_buster /assets/img/canvas_templates/email_signup1.png %}) キャンバスの現在のタイトルと説明。{: style="max-width:50%;"}
+![キャンバスの現在のタイトルと説明。]({% image_buster /assets/img/canvas_templates/email_signup1.png %}){: style="max-width:50%;"}
 
 {:start="2"}
 2\.キャンバス名を更新し、アプリを初めて使うユーザーをターゲットにしたキャンバスであることを指定します。
@@ -42,11 +42,11 @@ tool: Canvas
 
 ![キャンバスの新しい名前、説明、タグ。]({% image_buster /assets/img/canvas_templates/email_signup2.png %}){: style="max-width:90%;"}
 
-### ステップ2:コンバージョンイベントを割り当てる
+### ステップ 2: コンバージョンイベントを割り当てる
 
-次に、コンバージョンイベントを割り当てよう。コンバージョンイベントは、キャンバスの成功を測定するための指標の一種である。[**コンバージョンイベントのタイプ**] には、「**カスタムイベントを実行**」を選択します。次に、[**カスタムイベント名**] に「**email_opt_in**」を選択します。
+次に、コンバージョンイベントを割り当てよう。コンバージョンイベントは、キャンバスの成功を測定するための指標の一種である。[**コンバージョンイベントのタイプ**] には、「**カスタムイベントを実行**」を選択します。次に、カスタム・イベント名に **email_opt_in**を選択する**。**
 
-!["Assign Conversion Events"（コンバージョンイベントの割り当て）のセクションで、コンバージョンイベントのタイプをメール受信のオプトインとする。]({% image_buster /assets/img/canvas_templates/email_signup3.png %}){: style="max-width:90%;"}
+!["コンバージョンイベントを割り当てる "セクションで、コンバージョンイベントのタイプをオプトインのメールにする。]({% image_buster /assets/img/canvas_templates/email_signup3.png %}){: style="max-width:90%;"}
 
 テンプレートのコンバージョン期限を3日にしておくのは、直近のユーザーをターゲットにしたいからだ。
 
@@ -56,23 +56,23 @@ tool: Canvas
 
 また、ユーザーがセッションを開始したときだけキャンバスに入るように、**アクションベースオプション**もそのままにしておいてください。
 
-![]({% image_buster /assets/img/canvas_templates/email_signup4.png %}) 任意のセッションを開始したユーザーをキャンバスに入力するアクションベースのエントリスケジュール。{: style="max-width:90%;"}
+![セッションを開始したユーザーをキャンバスにエントリーするアクションベースのエントリースケジュール。]({% image_buster /assets/img/canvas_templates/email_signup4.png %}){: style="max-width:90%;"}
 
 **エントリ・ウィンドウでは**、**開始時間（必須**）を希望の日時に更新する。
 
-![2025年1月16日12時30分開始のエントリー枠。ユーザーはこのメッセージをローカルタイムゾーンで入力する。]({% image_buster /assets/img/canvas_templates/email_signup5.png %}){: style="max-width:90%;"}
+![2025年1月16日午後12時30分開始のエントリーとなる。ユーザーはこのメッセージをローカルタイムゾーンで入力する。]({% image_buster /assets/img/canvas_templates/email_signup5.png %}){: style="max-width:90%;"}
 
-### ステップ 4:ターゲットオーディエンスを選択する
+### ステップ 4: ターゲットオーディエンスを選択する
 
 ターゲットオーディエンスを、ユーザープロファイルにメールアドレスを持っていない Steppington ユーザーと定義します。テンプレートのデフォルトの[セグメンテーションフィルター]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters) `Email Available is false` を維持することでこれを行う。
 
-![]({% image_buster /assets/img/canvas_templates/email_signup6.png %}) "Email Available is false" フィルターを使用したエントリオーディエンス。{: style="max-width:90%;"}
+!["利用可能なメールは偽です "フィルターを使用したエントリオーディエンス。]({% image_buster /assets/img/canvas_templates/email_signup6.png %}){: style="max-width:90%;"}
 
 ### ステップ 5: 送信設定を選択する
 
 デフォルトのサブスクリプション設定を維持します。これにより、サブスクリプション登録したユーザーおよびメッセージまたは通知の受信を選択したユーザーのみに送信されるようになります。その他の設定 (フリークエンシーキャップ、サイレント時間、シードグループ) は省略します。
 
-![]({% image_buster /assets/img/canvas_templates/email_signup7.png %}購読またはオプトインしたユーザーにのみ送信するデフォルトの送信オプション。{: style="max-width:90%;"}
+![デフォルトの送信オプションで、サブスクライバーまたはオプトインしているユーザーにのみ送信する。]({% image_buster /assets/img/canvas_templates/email_signup7.png %}){: style="max-width:90%;"}
 
 ### ステップ6: キャンバスをカスタマイズする
 
@@ -83,7 +83,7 @@ tool: Canvas
 - 1ページ目では、メールがキャプチャされます。
 - 2ページ目には確認メッセージが表示されます。
 
-![ユーザーのメールを取り込み、成功メッセージを表示するアプリ内メッセージの2ページ。]({% image_buster /assets/img/canvas_templates/email_signup8.png %}){: style="max-width:90%;"}
+![アプリ内メッセージ2ページでユーザーのメールを取得し、成功メッセージを表示する。]({% image_buster /assets/img/canvas_templates/email_signup8.png %}){: style="max-width:90%;"}
 
 {:start="2"}
 2\.これ以降は、「**購読中**」アクションパスステップはそのままにしておきます。このステップでは、ユーザーを1日のうちに2つのグループに分ける：

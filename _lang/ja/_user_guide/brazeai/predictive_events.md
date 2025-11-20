@@ -17,7 +17,7 @@ search_rank: 1
 
 予測イベントの本当の価値は、予測結果を使ってセグメンテーションやキャンペーンを行うことにある。マーケターは、**Prediction** ページで直接ターゲットを絞ったキャンペーンを構築して、すぐに収益を上げる結果を得たり、将来のキャンペーンやキャンバスのセグメントを保存したりできます。最初にどのユーザーをターゲットに設定すべきかがわからない場合は、[戦略的考慮事項]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_events/messaging_users/#strategy)を読み、可能性スコアに基づくユーザーのメッセージングについて学んでください。
 
-![How Predictive Events Works（予測イベントの仕組み）」と題されたグラフィックは、ユーザーデータが機械学習モデルに取り込まれる様子を示している。ラベルは「Train with historical data, compare the behavior of users who did perform the event in a certain period with those who didn't.」です。機械学習の結果が表示されます。ここでは、ユーザーがイベントを実行する可能性が最も低いものから昇順にランク付けされています。ラベルは「Predict likelihood of future events, assign a likelihood score to users for accurate, convenient targeting.」です。]({% image_buster /assets/img/how_predictive_events_works.png %})
+![予測イベントの仕組み」と題されたグラフィックは、ユーザーデータが機械学習モデルに取り込まれる様子を示している。ラベルは「Train with historical data, compare the behavior of users who did perform the event in a certain period with those who didn't.」です。機械学習の結果が表示されます。ここでは、ユーザーがイベントを実行する可能性が最も低いものから昇順にランク付けされています。ラベルは「Predict likelihood of future events, assign a likelihood score to users for accurate, convenient targeting.」です。]({% image_buster /assets/img/how_predictive_events_works.png %})
 
 ## 予測イベントへのアクセス
 

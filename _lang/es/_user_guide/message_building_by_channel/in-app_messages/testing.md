@@ -1,59 +1,63 @@
 ---
-nav_title: Pruebas
-article_title: Prueba de los mensajes en la aplicación
+nav_title: Prueba
+article_title: Prueba de mensajes dentro de la aplicación
 page_order: 4.5
-description: "Este artículo de referencia explica el valor de probar tus mensajes in-app, cómo probarlos, así como una lista de cosas a tener en cuenta antes de enviarlos."
+description: "Este artículo de referencia explica el valor de probar tus mensajes dentro de la aplicación, cómo probarlos, así como una lista de cosas a tener en cuenta antes de enviarlos."
 channel:
   - in-app messages
   
 ---
 
-# Pruebas de mensajes en la aplicación
+# Prueba de mensajes dentro de la aplicación
 
-> Es muy importante probar siempre los mensajes in-app antes de enviar las campañas. Nuestras funciones de vista previa y prueba ofrecen dos maneras de echar un vistazo a tus mensajes in-app. Puedes previsualizar tu mensaje, para ayudarte a visualizarlo mientras lo redactas, así como enviar un mensaje de prueba a tu dispositivo o al de un usuario concreto. Le recomendamos que aproveche ambas.
+> Es extremadamente importante probar siempre tus mensajes dentro de la aplicación antes de enviar tus campañas. Nuestras capacidades de vista previa y de prueba ofrecen dos formas de echar un vistazo a tus mensajes dentro de la aplicación. Puedes previsualizar tu mensaje, para ayudarte a visualizarlo mientras lo redactas, así como enviar un mensaje de prueba a tu dispositivo o al de un usuario concreto. Te recomendamos que aproveches ambas.
 
 ## Vista previa
 
-Puedes previsualizar tu mensaje en la aplicación mientras lo redactas. Esto le ayudará a visualizar el mensaje final desde la perspectiva del usuario.
+Puedes obtener una vista previa de tu mensaje dentro de la aplicación mientras lo redactas. Esto debería ayudarte a visualizar cómo será tu mensaje final desde la perspectiva de tu usuario.
 
 {% alert warning %}
-En **Vista Previa**, la vista de tu mensaje puede no ser idéntica a su representación real en el dispositivo del usuario. Siempre recomendamos enviar un mensaje de prueba a un dispositivo para asegurarse de que los medios, la copia, la personalización y los atributos personalizados se generan correctamente.
+En la **vista previa**, la visualización de tu mensaje puede no ser idéntica a su representación real en el dispositivo del usuario. Siempre recomendamos enviar un mensaje de prueba a un dispositivo para asegurarte de que tus medios, copia, personalización y atributos personalizados se generan correctamente.
 {% endalert %}
 
-### Vista previa de la generación de mensajes en la aplicación
+### Vista previa de la generación de mensajes dentro de la aplicación
 
-Previsualice el aspecto que tendrá su mensaje para un usuario aleatorio, un usuario específico o un usuario personalizado; estos dos últimos son especialmente útiles si su mensaje contiene personalización o varios idiomas. También puedes previsualizar los mensajes para dispositivos móviles o tabletas para hacerte una mejor idea de lo que experimentarán los usuarios.
+Obtén una vista previa del aspecto que tendrá tu mensaje para un usuario aleatorio, un usuario específico o un usuario personalizado; estos dos últimos son especialmente útiles si tu mensaje contiene personalización o varios idiomas. También puedes obtener una vista previa de los mensajes para dispositivos móviles o tabletas para hacerte una mejor idea de lo que experimentarán los usuarios.
 
-![La pestaña Redactar al crear un mensaje dentro de la aplicación muestra una vista previa del aspecto que tendrá el mensaje. No se ha seleccionado un usuario, por lo que el Liquid añadido en la sección del cuerpo se muestra tal cual.]({%image_buster /assets/img/in-app-message-preview.png %})
+\![Pestaña Redactar al crear un mensaje dentro de la aplicación que muestra la vista previa del aspecto que tendrá el mensaje. No se selecciona un usuario, por lo que el Liquid añadido en la sección del cuerpo se muestra como is.]({%image_buster /assets/img/in-app-message-preview.png %})
 
-Braze dispone de tres generaciones de mensajes in-app. Puede ajustar con precisión a qué dispositivos deben enviarse sus mensajes, en función de la generación que admitan.
+Braze dispone de tres generaciones de mensajes dentro de la aplicación. Puedes ajustar con precisión a qué dispositivos deben enviarse tus mensajes, en función de la Generación que admitan.
 
-![Cambio entre generaciones al previsualizar un mensaje dentro de la aplicación.]({% image_buster /assets/img/iam-generations.gif %}){: height="50%" width="50%"}
+Cambio entre generaciones al previsualizar un mensaje dentro de la aplicación.]({% image_buster /assets/img/iam-generations.gif %}){: height="50%" width="50%"}
 
-## Probar
+## Prueba
 
 {% alert warning %}
-Para enviar una prueba a [grupos de prueba de contenido]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups) o a usuarios individuales, debe activarse la función push en los dispositivos de prueba antes de enviarla. <br><br>Por ejemplo, debe tener activada la función push en su dispositivo iOS para poder tocar la notificación antes de que aparezca el mensaje de prueba.
+Para enviar una prueba a [Grupos de Prueba de Contenidos]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups) o a usuarios individuales, antes de enviarla debe habilitarse la función push en tus dispositivos de prueba. <br><br>Por ejemplo, debes tener habilitada la función push en tu dispositivo iOS para poder tocar la notificación antes de que aparezca el mensaje de prueba.
 {% endalert %}
 
 ### Vista previa del mensaje como usuario
 
-También puedes previsualizar los mensajes desde la pestaña **Prueba**, como si fueras un usuario. Puede seleccionar un usuario específico, un usuario aleatorio o crear un usuario personalizado.
+También puedes obtener una vista previa de los mensajes desde la pestaña **de Prueba**, como si fueras un usuario. Puedes seleccionar un usuario concreto, un usuario aleatorio o crear un usuario personalizado.
 
-![Pestaña de prueba al crear un mensaje dentro de la aplicación. "Vista previa del mensaje como usuario" está configurado como "Usuario personalizado" y los campos de perfil disponibles aparecen como opciones configurables.]({% image_buster /assets/img/iam-user-preview.png %})
+\![Pestaña de prueba al crear un mensaje dentro de la aplicación. "Vista previa del mensaje como usuario" se establece en "Usuario personalizado", y los campos de perfil disponibles aparecen como opciones configurables.]({% image_buster /assets/img/iam-user-preview.png %})
 
-### Lista de comprobación
+{% alert important %}
+Los envíos de prueba pueden hacer que se envíe más de un mensaje dentro de la aplicación a cada destinatario.
+{% endalert %}
 
-- ¿Aparecen las imágenes y los medios de comunicación y actúan como se esperaba?
-- ¿Funciona el Líquido como se esperaba? ¿Ha previsto un [valor de atributo por defecto]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#accounting-for-null-attribute-values) en caso de que Liquid no devuelva ninguna información?
-- ¿Es su texto claro, conciso y correcto?
-- ¿Sus botones dirigen al usuario hacia dónde debe ir?
+### Lista de control
+
+- ¿Aparecen las imágenes y los medios y actúan como se espera de ellos?
+- ¿Funciona el Liquid como se esperaba? ¿Has previsto un [valor de atributo predeterminado]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#accounting-for-null-attribute-values) para el caso de que Liquid no devuelva información?
+- ¿Es tu texto claro, conciso y correcto?
+- ¿Tus botones dirigen al usuario a dónde debe ir?
 
 ## Escáner de accesibilidad
 
 Para respaldar las mejores prácticas de accesibilidad, Braze analiza automáticamente el contenido de los mensajes dentro de la aplicación creados con el editor HTML tradicional, comparándolo con las normas de accesibilidad. Este escáner ayuda a identificar el contenido que puede no cumplir las Normas de Accesibilidad al Contenido en la Web[(WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/)). Las WCAG son un conjunto de normas técnicas reconocidas internacionalmente y desarrolladas por el Consorcio de la World Wide Web (W3C) para que los contenidos Web sean más accesibles a las personas con discapacidad.
 
-![Resultados del escaneo de accesibilidad]({% image_buster /assets/img/Accessibilty_Scanner_IAM.png %})
+Resultados de la exploración de accesibilidad]({% image_buster /assets/img/Accessibilty_Scanner_IAM.png %})
 
 {% alert note %}
 El escáner de accesibilidad de mensajes dentro de la aplicación sólo funciona con mensajes creados con HTML personalizado.

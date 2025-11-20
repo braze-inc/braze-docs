@@ -13,6 +13,10 @@ alias: /landing_pages/
 
 Use landing pages to grow your audience, capture user data, promote special offers, and support multichannel campaigns.
 
+{% alert note %}
+Landing page and custom domain availability depends on your Braze package. Contact your account manager or customer success manager to get started.
+{% endalert %}
+
 {% multi_lang_include video.html id="eg4r7agod1" source="wistia" %}
 
 ## Prerequisites
@@ -24,16 +28,6 @@ Before you can access, create, and publish landing pages, you either need admini
 - Publish Landing Pages
 
 {% multi_lang_include drag_and_drop/drag_and_drop_access.md variable_name='dnd editors' %}
-
-## Plan tiers
-
-The number of published landing pages and custom domains you can use depends on your plan type: free or paid (incremental).
-
-| Feature                                                                                                   | Free tier     | Paid tier (incremental)     |
-| :---------------------------------------------------------------------------------------------------------------- | :--------------- | ----------------- |
-| Published landing pages                                                                 | Five per company | 20 additional |
-| Custom domains          | One per company | Five additional |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 
 ## Frequently asked questions
 

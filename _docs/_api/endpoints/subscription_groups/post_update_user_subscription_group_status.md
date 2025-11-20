@@ -29,6 +29,10 @@ If you want to see examples or test this endpoint for **SMS and RCS Subscription
 
 To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-api-key/) with the `subscription.status.set` permission.
 
+{% alert note %}
+If you're interested in using this endpoint with [LINE subscription groups]({{site.baseurl}}/user_guide/message_building_by_channel/line/line_users/subscription_groups/), contact your customer success manager.
+{% endalert %}
+
 ## Rate limit
 
 {% multi_lang_include rate_limits.md endpoint='subscription status set' %}

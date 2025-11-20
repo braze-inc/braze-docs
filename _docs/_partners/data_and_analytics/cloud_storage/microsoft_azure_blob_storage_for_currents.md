@@ -14,7 +14,7 @@ search_tag: Partner
 > [Microsoft Azure Blob Storage](https://azure.microsoft.com/en-us/services/storage/blobs/) is a massively scalable object storage for unstructured data offered by Microsoft as part of the Azure product suite.
 
 {% alert important %}
-If you're switching between cloud storage providers, reach out to your Braze customer success manager for further assistance on setting up and validating your new integration.
+If you're switching between cloud storage providers, contact your Braze customer success manager for further assistance on setting up and validating your new integration.
 {% endalert %}
 
 The Braze and Microsoft Azure Blob Storage integration allows you to export data back to Azure and stream Currents data. Later, you can use an ETL process (Extract, Transform, Load) to transfer your data to other locations.
@@ -91,4 +91,4 @@ It's important to keep your connection string up to date; if your connector's cr
 Users that have integrated a cloud data storage solution, and are trying to export APIs, dashboard reports, or CSV reports will experience the following:
 
 - All API exports will not return a download URL in the response body and must be retrieved through data storage.
-- All dashboard reports and CSV reports will be sent to the user's email for download (no storage permissions required) and backed up on data storage. 
+- All dashboard reports and CSV reports will be sent to the user's email for download (no storage permissions required) and backed up on data storage.

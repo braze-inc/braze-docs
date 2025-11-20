@@ -1,5 +1,5 @@
 ---
-nav_title: IPとドメインを設定する
+nav_title: IPとドメインの設定
 article_title: IPとドメインを設定する
 page_order: 0
 page_type: tutorial

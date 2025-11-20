@@ -1,5 +1,5 @@
 ---
-nav_title: メッセージタイプ
+nav_title: メッセージの種類
 article_title: LINE メッセージタイプ
 page_order: 0
 description: "この記事では、さまざまなタイプのLINE メッセージについて説明します。"
@@ -17,7 +17,7 @@ alias: /line/create/message_types/
 
 LINEメッセージを作成するときに、メッセージタイプをコンポーザーにドラッグアンドドロップしてカスタマイズできます。
 
-![テキスト、画像、リッチメッセージ、カードベースのメッセージなど、コンポーザーエディタにドラッグするメッセージタイプパネル。]({% image_buster /assets/img/line/line_message_types.png %}){: style="max-width:40%;"}
+![メッセージタイプパネル。テキスト、"画像、リッチメッセージ、カードベースのメッセージなど、コンポーザーエディタにドラッグするメッセージタイプが含まれます。]({% image_buster /assets/img/line/line_message_types.png %}){: style="max-width:40%;"}
 
 ## テキスト
 
@@ -28,7 +28,7 @@ LINEテキストメッセージには、最大5000文字を含めることがで
 - 個性的なプロモーションカードでパーソナライズされた誕生日挨拶を送る
 - 今後のイベントに関するクイックアップデートを共有する
 
-![ブラックフライデーパーティについて忘れず、深夜12時までに最大80%を節約できる可能性があることをユーザーに知らせるテキストメッセージ。]({% image_buster /assets/img/line/line_text_message.png %}){: style="max-width:40%;"}
+![ブラックフライデーパーティーのことを忘れず、深夜までに最大80%節約できる可能性があることをユーザーに知らせるテキストメッセージ。]({% image_buster /assets/img/line/line_text_message.png %}){: style="max-width:40%;"}
 
 ## 画像
 
@@ -39,14 +39,14 @@ LINE イメージメッセージは、[メディアライブラリ]({{site.baseu
 - 来年の冬服を素晴らしい取引で仕入れることをユーザーに奨励するために、シーズン末のプロモーションを強調する
 - 店頭での年間販売に視覚的なカウントダウンを開始
 
-![トースターセールを宣伝する画像メッセージ。]({% image_buster /assets/img/line/line_image_message.png %}){: style="max-width:40%;"}
+![トースターセールを宣伝する"画像の伝言。]({% image_buster /assets/img/line/line_image_message.png %}){: style="max-width:40%;"}
 
 ### URL画像
 
 以下を組み込んだユースケースにURL イメージを使用します。
 - イメージソース属性に「Liquid」を含めることで、ダイナミックイメージをリキッド化します。たとえば、イメージURL として{% raw %} `https://example.com/images/?imageBanner={{first_name}}` {% endraw %} を挿入して、イメージにユーザーの名を含めることができます
 - [Web サーバーまたはパブリックにアクセス可能なAPI から直接イメージをプルすることで、接続されたコンテンツ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/)
-- [インポートされたCSV ファイルおよびAPI エンドポイントからのイメージへのアクセスによるカタログのブライズ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/)
+- [インポートされたCSV ファイルおよびAPI エンドポイントからのイメージへのアクセスによるカタログのブライズ]({{site.baseurl}}/user_guide/data/activation/catalogs/)
 
 | **仕様** | **推奨プロパティ** |
 |--------------------------|----------------------------|
@@ -64,7 +64,7 @@ LINEリッチメッセージは、イメージ上の特定の領域を選択し�
 - 項目を選択してコンボオーダーを開始するインタラクティブメニューを表示する
 - グリッドスクエアを選択して、ユーザが選択できる複数のプロモーションをレイアウトします
 
-![ユーザーがタップしてランダムオファーを受け取ることができる白黒のグリッドの写真を含む6 平方のリッチメッセージ。]({% image_buster /assets/img/line/line_rich_message.png %})
+![ユーザー s がランダムオファーを受け取ることができる白黒のグリッドの写真付きの6 平方のリッチメッセージ。]({% image_buster /assets/img/line/line_rich_message.png %})
 
 ### イメージマップ 
 
@@ -97,7 +97,7 @@ LINEカードベースのメッセージを使用すると、カルーセルな�
 - 今シーズンのベストセラージャケットをハイライト
 - キットに含まれている調理器具や機器のサンプリングを提示する
 
-![作成画面のエディターでサンドイッチを宣伝する2つ以上のカードを含むカードベースのメッセージ。]({% image_buster /assets/img/line/line_card_message.png %})
+![作曲者エディタでサンドイッチを促進する、少なくとも2つのカードsを持つカードベースの伝言。]({% image_buster /assets/img/line/line_card_message.png %})
 
 ### メッセージ
 
