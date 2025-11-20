@@ -16,10 +16,11 @@ search_tag: Partner
 If you're switching between cloud storage providers, contact your Braze customer success manager for further assistance on setting up and validating your new integration.
 {% endalert %}
 
-The Braze and Amazon S3 integration features two integration strategies:
+The Braze and Amazon S3 integration features multiple integration strategies:
 
 - Leverage [Currents]({{site.baseurl}}/user_guide/data/braze_currents/), enabling you to store data there until you want to connect it to other platforms, tools, and locations.
 - Use dashboard data exports (such as CSV exports and engagement reports).
+- Use message archiving to save a copy of messages sent to users.
 
 ## Prerequisites
 
@@ -27,7 +28,7 @@ The Braze and Amazon S3 integration features two integration strategies:
 | ----------- | ----------- |
 | Amazon S3 account | An Amazon S3 account is required to take advantage of this partnership. |
 | Dedicated S3 bucket | Before integrating with Amazon S3, you must create an S3 bucket for your app.<br><br>If you already have an S3 bucket, we still recommend creating a new bucket specifically for Braze so you can limit permissions. Refer to the following instructions on how to create a new bucket. |
-| Currents | In order to export data back into Amazon S3, you need to have [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) set up for your account. |
+| Currents | Currents is only required if you want to stream Currents data. To export data using Currents, you need to have [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) set up for your account. Currents is not required for dashboard data exports or message archiving. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 #### Creating a new S3 bucket

@@ -17,14 +17,18 @@ search_tag: Partner
 If you're switching between cloud storage providers, contact your Braze customer success manager for further assistance on setting up and validating your new integration.
 {% endalert %}
 
-The Braze and Google Cloud Storage integration allows you to stream Currents data to Google Cloud Storage. You can later use an ETL process (Extract, Transform, Load) to transfer your data to other locations, such as Google BigQuery.
+The Braze and Google Cloud Storage integration allows you to:
+
+- Stream Currents data to Google Cloud Storage. You can later use an ETL process (Extract, Transform, Load) to transfer your data to other locations, such as Google BigQuery.
+- Export dashboard data exports (such as CSV exports and engagement reports).
+- Use message archiving to save a copy of messages sent to users.
 
 ## Prerequisites
 
 | Requirement | Description |
 | ----------- | ----------- |
 | Google Cloud Storage account | A Google Cloud Storage account is required to take advantage of this partnership. |
-| Currents | In order to export data back into Google Cloud Storage, you need to have [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) set up for your account. |
+| Currents | Currents is only required if you want to stream Currents data. To export data using Currents, you need to have [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) set up for your account. Currents is not required for dashboard data exports or message archiving. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration

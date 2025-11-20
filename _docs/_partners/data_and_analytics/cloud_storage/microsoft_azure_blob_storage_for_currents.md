@@ -17,14 +17,18 @@ search_tag: Partner
 If you're switching between cloud storage providers, contact your Braze customer success manager for further assistance on setting up and validating your new integration.
 {% endalert %}
 
-The Braze and Microsoft Azure Blob Storage integration allows you to export data back to Azure and stream Currents data. Later, you can use an ETL process (Extract, Transform, Load) to transfer your data to other locations.
+The Braze and Microsoft Azure Blob Storage integration allows you to:
+
+- Stream Currents data to Azure. Later, you can use an ETL process (Extract, Transform, Load) to transfer your data to other locations.
+- Export dashboard data exports (such as CSV exports and engagement reports).
+- Use message archiving to save a copy of messages sent to users.
 
 ## Prerequisites
 
 | Requirement | Description |
 | ----------- | ----------- |
 | Microsoft Azure and Azure storage account | A Microsoft Azure and Azure storage account are required to take advantage of this partnership. |
-| Currents | To export data to Currents, you must have [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) set up for your account. |
+| Currents | Currents is only required if you want to stream Currents data. To export data using Currents, you must have [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) set up for your account. Currents is not required for dashboard data exports or message archiving. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration
