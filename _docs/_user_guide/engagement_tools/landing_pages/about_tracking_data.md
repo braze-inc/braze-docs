@@ -30,3 +30,14 @@ Before a user submits a form, the data tracked on a landing page consists only o
 
 Because this data isn't linked to identifiable users, it can't be used to retarget or track individual user behavior.
 
+## User profile merging
+
+Braze doesn't automatically merge users based on attributes such as email or phone when a landing page form is submitted. If a user submits a landing page form with an email or phone number that matches an existing user profile, a separate user profile will be created.
+
+To handle duplicate user profiles, you can:
+
+- Trigger the [`/users/merge`]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/) endpoint when a landing page form is submitted to merge the new profile with an existing profile
+- Schedule [bulk merging]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users#bulk-merging) to periodically merge duplicate profiles based on matching identifiers
+
+For more information on managing duplicate users, see [Duplicate users]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users).
+
