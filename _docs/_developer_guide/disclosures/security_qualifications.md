@@ -37,7 +37,7 @@ Braze has successfully completed the Type 2 SOC 2 examination for _Security_ and
 
 ## TISAX assessment
 
-![TISAX graphic.]({% image_buster /assets/img/SOC2.png %}){: height="25%" width="25%" style="border:0px;"}
+![TISAX graphic.]({% image_buster /assets/img/tisax.png %}){: height="25%" width="25%" style="border:0px;"}
 
 Braze is committed to maintaining the highest standards of information security and data protection and has successfully completed a TISAX Assessment Level 3 (AL3). These assessment results and issuance of corresponding labels reflect our dedication to maintaining the highest level of information security and data protection assurance. Current TISAX participants can verify our assessment results for the following assessment objectives and location through the ENX Association portal using the following credentials:
 
