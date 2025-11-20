@@ -14,7 +14,7 @@ description: "Braze の Webhook を使用して、Salesforce sobjects/Lead エ�
 これはコミュニティから提出された統合であり、Braze は直接サポートしていません。Brazeでは、Braze が提供する公式の Webhook テンプレートのみをサポートします。
 {% endalert %}
 
-## CDI の仕組み
+## 仕組み
 
 Braze と Salesforce Sales Cloud の統合は、 Braze の Webhook を使用して、Salesforce [sobjects/Lead](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_lead.html) エンドポイントを通して Salesforce Sales Cloud でリードを作成および更新します。
 

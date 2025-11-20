@@ -302,6 +302,10 @@ Highlight items that your users have recently liked with increased frequency. Fo
 
 The previous three types all involve setting up and training a recommendation model in Braze. While you can use selections in those models as well, you can also accomplish some recommendation use cases with just catalog selections and Liquid personalization.
 
+{% alert note %}
+If you use selections, the sorting field and any limits won't be used with AI item recommendations. This means if you create a selection with a specific sort field and limit the number of items returned, those constraints won't be used when AI item recommendations are processed.
+{% endalert %}
+
 #### Use cases
 
 Based on the interaction data being tracked, use cases for this model could include recommending:

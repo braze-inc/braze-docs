@@ -291,7 +291,7 @@ This change is part of a broader effort to create a more predictable and consist
 #### When is this change taking effect?
 
 - If you're participating in the Canvas Context early access, this change has already been applied. 
-- If you're not participatig in the Canvas Context early access, this change will apply when you join the early access or when Canvas Context becomes generally available.
+- If you're not participating in the Canvas Context early access, this change will apply when you join the early access or when Canvas Context becomes generally available.
 
 #### Are API-triggered or scheduled Canvases impacted by this change?
 
