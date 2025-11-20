@@ -1,7 +1,7 @@
 ---
 nav_title: SalesWings
 article_title: SalesWings
-description: "This reference article outlines the partnership between Braze and SalesWings, a sales and marketing operations solution for Braze, that helps you qualify leads and accounts, provides sales insights and alerts inside CRM like Salesforce as well as B2B attribution reporting."
+description: "This reference article outlines the partnership between Braze and SalesWings, a sales and marketing operations solution for Braze, that helps you qualify leads and accounts, provides sales insights and alerts inside CRM like Salesforce as well as B2B attribution reporting. The interests and engagements can be leveraged inside Braze for personalization in Canvas and segmentation. SalesWings also provides a way to generate leads from a website, similar to Digioh."
 alias: /partners/saleswings/
 page_type: partner
 search_tag: Partner
@@ -10,13 +10,13 @@ search_tag: Partner
 
 # SalesWings
 
-> [SalesWings](https://www.saleswingsapp.com/?utm_source=braze&utm_campaign=technicaldocs) is a B2B SaaS sales and marketing operations solution, which helps manage lead and account qualification through holistic lead scoring and grading, provides sales insights and alerts, B2B attribution reporting, along with a tight Salesforce CRM integration.
+> [SalesWings](https://www.saleswingsapp.com/?utm_source=braze&utm_campaign=technicaldocs) is a B2B SaaS sales and marketing operations solution, which helps manage lead and account qualification through holistic lead scoring and grading, provides sales insights and alerts, B2B attribution reporting, along with a tight Salesforce CRM integration.  A website engagement add-on, similar to Digioh, allows to generate leads on the website. The interests and engagements can be leveraged inside Braze for personalization in Canvas and segmentation.
 
 _This integration is maintained by SalesWings._
 
 ## About the integration
 
-SalesWings allows marketing teams and marketing operations managers to qualify leads and accounts for their sales teams, essential for sales and marketing alignment and operational efficiency. Furthermore, SalesWings, together with Braze, can surface a lead’s and account’s full customer journey and Braze marketing campaign engagement data to sales reps, allowing you to increase lead qualification rates through more educated conversations. SalesWings identifies needs and interests along with other signals, allowing to hand-off qualified buyers to sales teams inside your CRM in an automated manner.
+SalesWings allows marketing teams and marketing operations managers to qualify leads and accounts for their sales teams, essential for sales and marketing alignment and operational efficiency. Furthermore, SalesWings, together with Braze, can surface a lead’s and account’s full customer journey and Braze marketing campaign engagement data to sales reps, allowing you to increase lead qualification rates through more educated conversations. SalesWings identifies needs and interests along with other signals, allowing to hand-off qualified buyers to sales teams inside your CRM in an automated manner. The identified needs, interests and sales-readiness can be used as Braze user attributes for personalization and segmentation.
 
 ## Prerequisites
  
@@ -155,13 +155,13 @@ If you enable SalesWings insights push to Braze, SalesWings will update your Bra
 | `sw_lead_link_open` | string | The link to access lead profile in SalesWings (without a SalesWings dashboard account) |
 | `sw_lead_link_protected` | string | The link to access lead profile in SalesWings (with a SalesWings dashboard account) |
 | `sw_lead_owner` | string | The owner set for the lead in SalesWings or Salesforce CRM |
-| `sw_lead_score` | float | The value of the main SalesWings lead score configured in the [Rule Engine](https://helium.saleswings.pro/falcon) |
+| `sw_lead_score` | float | The value of the main SalesWings lead score configured in the SalesWings [Rule Engine](https://helium.saleswings.pro/falcon) |
 | `sw_predictive_score` | string | The value of SalesWings [predictive score](https://support.saleswingsapp.com/en/articles/581795-the-predictive-lead-score) that assesses the lead's engagement based on the number and recency of tracked activities. The value could be `HOT`, `WARM`, `NORMAL`, `COLD` or `FROZEN` |
 | `sw_salesforce_record_id` | string | ID of the Lead or Contact record in Salesforce CRM |
 | `sw_salesforce_record_url` | string | URL of the Lead or Contact record in Salesforce CRM |
 | `sw_session_count` | integer | Number of tracked sessions on your website for this lead |
-| `sw_tags` | array of string | The names of SalesWings tags configured in the [Rule Engine](https://helium.saleswings.pro/falcon) that apply to this lead |
-| Additional lead score attributes | float | One Custom Attribute for every additional lead score configured in the [Rule Engine](https://helium.saleswings.pro/falcon). The attribute name is derived from the SalesWings score name, for example, a score named `Likeliness to meet` will be sent as Custom Attribute `sw_likeliness_to_meet`. If a score is renamed after it's created, it will be still synced with the initial Custom Attribute name. |
+| `sw_tags` | array of string | The needs and interest identified by SalesWings, represented as “tags”. The names of SalesWings tags configured in the SalesWings [Rule Engine](https://helium.saleswings.pro/falcon) that apply to this lead |
+| Additional lead score attributes | float | One Custom Attribute for every additional lead score configured in the SalesWings [Rule Engine](https://helium.saleswings.pro/falcon). The attribute name is derived from the SalesWings score name, for example, a score named `Likeliness to meet` will be sent as Custom Attribute `sw_likeliness_to_meet`. If a score is renamed after it's created, it will be still synced with the initial Custom Attribute name. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 When the push is enabled, SalesWings immediately starts sending Custom Attributes to Braze as soon as underlying data points change in SalesWings lead profiles, and eventually syncs all the existing leads even if they don't have new updates.
