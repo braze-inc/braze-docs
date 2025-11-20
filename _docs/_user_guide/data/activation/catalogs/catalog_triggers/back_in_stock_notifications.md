@@ -30,23 +30,25 @@ Follow these steps to set up back-in-stock notifications in a specific catalog.
     - **Custom event for unsubscribing** is the Braze custom event that will be used to unsubscribe a user from back-in-stock notifications. This event is optional. If the user doesn't perform this event, they'll be unsubscribed after 90 days or when the back-in-stock event triggers, whichever occurs first.
     - **Item ID event property** is the property on the above custom event that will be used to determine the item for a back-in-stock subscription or unsubscription. This property on the custom event should contain an item ID (`id`) that is present in a catalog. The item ID must be sent as a string so that it matches the `id` data type stored in the target catalog. The custom event should also contain a `catalog_name` property to specify which catalog this item is in.
     
-    - A sample custom event would look like
-    ```json
-    {
-        "events": [
-            {
-                "external_id": "<external_id>",
-                "name": "subscription",
-                "time": "2024-04-15T19:22:28Z",
-                "properties": {
-                    "id": "shirt-xl",
-                    "catalog_name": "on_sale_products",
-                    "type": ["back_in_stock"]
-                }
+    - A sample custom event would look like:
+    
+```json
+{
+    "events": [
+        {
+            "external_id": "<external_id>",
+            "name": "subscription",
+            "time": "2024-04-15T19:22:28Z",
+            "properties": {
+                "id": "shirt-xl",
+                "catalog_name": "on_sale_products",
+                "type": ["back_in_stock"]
             }
-        ]
-    }
-    ```
+        }
+    ]
+}
+```
+
 {% alert note %}
 Back-in-stock and price-drop triggers use the same event to subscribe the user to the notification, so you can use the `type` property to set both price-drop and back-in-stock notifications in the same event. Note that the `type` property must be an array.
 {% endalert %}
