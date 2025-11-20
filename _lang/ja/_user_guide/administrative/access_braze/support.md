@@ -1,5 +1,5 @@
 ---
-nav_title: Braze支援
+nav_title: Brazeサポート
 article_title: サポート
 description: "このページでは、Braze製品のフィードバックを提出するためのBrazeサポートポータルを見つけるのに役立つ。このページは Braze のお客様のみがアクセスできます。"
 alias: /braze_support/
@@ -7,15 +7,15 @@ page_type: reference
 search_rank: 7
 ---
 
-# [![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/the-braze-support-portal/){: style="float:right;width:120px;border:0;" class="noimgborder"}Brazeサポート
+# [Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/the-braze-support-portal/){: style="float:right;width:120px;border:0;" class="noimgborder"} Brazeサポート
 
 ## サポートポータルにアクセスする
 
 Brazeサポートチームに連絡するには、Brazeダッシュボードに移動する。ダッシュボードで [**サポート**] > [**問い合わせ**] を選択します。
 
-![問い合わせのオプションがある [サポート] ドロップダウン。]({% image_buster /assets/img_archive/get_help.png %}){: style="max-width:60%;"}
+サポート "ドロップダウンにヘルプを得るためのオプションがある。]({% image_buster /assets/img_archive/get_help.png %}){: style="max-width:60%;"}
 
-Brazeのパーミッションに応じて、また、指定されたサポート担当者(プレミアム)であれば、Brazeサポートポータルに移動し、ケースを提出して追跡するか、当社の標準サポートフォームに移動します。自分が Braze サポート連絡先であるかどうかわからない場合は、貴社の Braze 管理者、Braze サクセスマネージャー、またはアカウントオーナーにお問い合わせください。
+お客様のBraze権限と指定サポート連絡先かどうかに応じて、ケースの提出と追跡ができるBrazeサポートポータルか、標準サポートフォームのいずれかに誘導される。自分が Braze サポート連絡先であるかどうかわからない場合は、貴社の Braze 管理者、Braze サクセスマネージャー、またはアカウントオーナーにお問い合わせください。
 
 ## 指定されたサポート連絡先の追加
 
@@ -26,9 +26,7 @@ Brazeのパーミッションに応じて、また、指定されたサポート
 3. メニューで [**編集**] を選択します。[**ユーザーを編集**] ページにリダイレクトされます。
 4. **このユーザーを、Braze Support Portalの指定されたサポート窓口として設定します**のチェックボックスをオンにします。
 
-![指定したサポート担当者としてユーザを設定するチェックボックス。]({% image_buster /assets/img_archive/designated_support_contact.png %}){: style="max-width:70%;"}
-
-指定されたサポート連絡先の数を設定できるかどうかは、連絡先の制限によって異なります。詳細については、カスタマーサクセスマネージャーにお問い合わせください。
+ユーザーをサポート窓口として設定するためのチェックボックス。]({% image_buster /assets/img_archive/designated_support_contact.png %}){: style="max-width:70%;"}
 
 ### アクセスの取得
 
@@ -70,7 +68,7 @@ Brazeのパーミッションに応じて、また、指定されたサポート
 
 1. 開発者ツールを開きます。Chrome を使用している場合は、キーボードショートカット`option` + `⌘` + `J` (macOS の場合) を使用してこれを実行できます。Windows またはLinux を使用している場合は、ショートカット`shift` + `CTRL` + `J` を使用してこれを実行できます。
 2. **Network**> **Fetch/XHR**または**XHR**を選択します。
-3. 要素の**名前**、**ステータス**、**サイズ**、**時刻**を示すスクリーンショットまたはスクリーン録画をキャプチャします。<br><br>![Chrome ブラウザの"Fetch/XHR" タブ。]({% image_buster /assets/img/network_xhr.png %}){: style="max-width:60%;"}
+3. 要素の**名前**、**ステータス**、**サイズ**、**時刻**を示すスクリーンショットまたはスクリーン録画をキャプチャします。<br><br>Chromeブラウザの "Fetch/XHR "タブ。]({% image_buster /assets/img/network_xhr.png %}){: style="max-width:60%;"}
 
 次に、ユーザーの録画またはスクリーンショットをサポートチケットに添付します。この情報は、サポートによる調査に役立ちます。
 
@@ -90,3 +88,6 @@ Brazeのパーミッションに応じて、また、指定されたサポート
 問題を [重大] としてマークした場合、稼働中のインスタンスがダウンし、Braze 内のすべての機能が停止していることを意味します。
 {% endalert %}
 
+## アクセスのトラブルシューティング
+
+Brazeサポートポータルにログインする際に、`Check your entry` などのエラーが表示された場合は、ウェルカムメールのリンクに従ってポータルのパスワードを設定したことを確認すること。ポータルにログインできた場合は、サポートチケットを作成する。

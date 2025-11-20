@@ -113,6 +113,7 @@ There are some requirements for selecting your property:
 - **If you selected Purchase Object:** Must be the `product_id` or a field of your interaction event's `properties`.
 - **If you selected Custom Event:** Must be a field of your custom event's `properties`.
 - Nested fields must be typed into the **Property Name** dropdown in dot notation with the format of `event_property.nested_property`. For example, if selecting the nested property `district_name` within the event property `location`, you would enter `location.district_name`.
+- **If using [eCommerce events]({{site.baseurl}}/user_guide/data/activation/custom_data/recommended_events/ecommerce_events/) to train item recommendations:** Add `products.product_id` to access the product ID from events.
 - The field can be inside an array of products, or end with an array of IDs. In either case, each product ID will be treated as a separate, sequential event with the same timestamp.
 
 #### Example mappings

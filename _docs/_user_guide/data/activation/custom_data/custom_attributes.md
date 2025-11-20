@@ -62,7 +62,7 @@ You can view up to 100 usage reports at a time by selecting the checkboxes next 
 
 ### Values tab
 
-When viewing a usage report, select the **Values** tab to view the top values of the selected custom attributes based on a sample of approxmiately 250,000 users. Note that because the results are sampled from a subset of users, the sample won't include all existing values. This means the **Values** tab shouldn't be used for troubleshooting or for use cases that require incorporating data from all users.
+When viewing a usage report, select the **Values** tab to view the top values of the selected custom attributes based on a sample of approximately 250,000 users. Note that because the results are sampled from a subset of users, the sample won't include all existing values. This means the **Values** tab shouldn't be used for troubleshooting or for use cases that require incorporating data from all users.
 
 ![Usage report for selected custom attributes with an opened "Values" tab showing a pie chart of country attribute values, such as "US" and "PR".]({% image_buster /assets/img/usage_report_values.png %}){: style="max-width:80%;"}
 

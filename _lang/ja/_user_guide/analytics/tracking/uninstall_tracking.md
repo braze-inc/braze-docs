@@ -41,7 +41,7 @@ iOS アプリケーションのアンインストール追跡を構成するに�
 
 アンインストールに関する日次統計は [**ホーム**] ページに表示されます。 
 
-\![Segmentのアンインストール]]({% image_buster /assets/img_archive/Uninstall_Segment.png %} "Uninstall Segment")
+![Segmentのアンインストール]]({% image_buster /assets/img_archive/Uninstall_Segment.png %} "Uninstall Segment")
 
 このグラフは、Brazeが提供する他の統計と同様に、アプリやセグメントごとに分類することができる。**パフォーマンス概要**セクションで、日付範囲と、必要であればアプリを選択する。次に、**Performance Over Time**グラフまでスクロールダウンし、以下を実行します。
 
@@ -59,7 +59,7 @@ iOS アプリケーションのアンインストール追跡を構成するに�
 
 キャンペーンのアンインストール統計は、特定のキャンペーンの**キャンペーン分析**ページにある。マルチチャネルキャンペーンと多変量分析キャンペーンの場合、アンインストール数はそれぞれチャネル別とバリアント別の内訳で表示できます。
 
-\![キャンペーンレベルでのアンインストール]]({% image_buster /assets/img_archive/campaign_level_uninstall_tracking.png %})
+![キャンペーンレベルでのアンインストール]]({% image_buster /assets/img_archive/campaign_level_uninstall_tracking.png %})
 
 ### 仕組み
 

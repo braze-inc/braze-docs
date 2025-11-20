@@ -1,5 +1,5 @@
 ---
-nav_title: "Benachrichtigungsoptionen"
+nav_title: "Optionen für Benachrichtigungen"
 article_title: Android-Benachrichtigungsoptionen
 page_order: 2
 page_type: reference
@@ -25,7 +25,7 @@ Wenn Sie Ihre Nachrichten kategorisieren und in der Benachrichtigungsleiste Ihre
 
 Erstellen Sie zunächst Ihre Android-Push-Kampagne und suchen Sie dann oben auf der Registerkarte **Verfassen** nach dem Dropdown-Menü **Benachrichtigungskanal**.
 
-![][28]{: style="max-width:60%;" }
+![]({% image_buster /assets/img_archive/notification_channel_dropdown.png %}){: style="max-width:60%;"}
 
 Wählen Sie Ihren Benachrichtigungskanal aus der Dropdown-Liste. Sie müssen auch einen Fallback-Kanal auswählen, für den Fall, dass Ihre Einstellungen für den Benachrichtigungskanal nicht funktionieren.
 
@@ -33,8 +33,6 @@ Wenn hier keine [Benachrichtigungskanäle]({{site.baseurl}}/user_guide/message_b
 
 Um eine Benachrichtigungs-ID zu Ihrem Benachrichtigungskanal hinzuzufügen, klicken Sie im Dropdown-Menü des **Benachrichtigungskanals** auf **Benachrichtigungskanal verwalten** und füllen Sie die erforderlichen Felder aus. Benachrichtigungskanäle müssen in der App definiert werden, bevor sie in der Braze-Plattform verwendet werden können.
 
-![][29]{: style="max-width:80%;" }
+![]({% image_buster /assets/img_archive/notification_channels.png %}){: style="max-width:80%;" }
 
 
-[28]: {% image_buster /assets/img_archive/notification_channel_dropdown.png %}
-[29]: {% image_buster /assets/img_archive/notification_channels.png %}

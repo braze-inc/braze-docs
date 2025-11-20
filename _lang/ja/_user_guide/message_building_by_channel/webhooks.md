@@ -57,7 +57,7 @@ Webhookを構成する要素を以下に示します。
 | Request body | Webhookのこの部分には、エンドポイントに伝える情報が含まれている。リクエスト本文には、JSON キーと値のペア、または生のテキストを使用できます。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-\![HTTPメソッド、HTTP URL、リクエストボディを持つWebhookの例。]({% image_buster /assets/img_archive/webhook_anatomy.png %})
+![HTTPメソッド、HTTP URL、リクエストボディを持つWebhookの例。]({% image_buster /assets/img_archive/webhook_anatomy.png %})
 
 ### HTTPメソッド {#methods}
 

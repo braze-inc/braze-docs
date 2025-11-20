@@ -17,7 +17,7 @@ Die Verarbeitung Ihres Segments beginnt immer nach dem ersten Speichern. Jedes M
 
 #### Einrichten einer wiederkehrenden Aktualisierung
 
-Um einen wiederkehrenden Zeitplan einzurichten, indem Sie Aktualisierungseinstellungen festlegen, wählen Sie **Enablement der Aktualisierung**. Die Option zur Festlegung von Aktualisierungseinstellungen ist für alle Arten von Segmenterweiterungen verfügbar, einschließlich SQL-Segmente, CDI-Segmente und einfache formularbasierte Segmenterweiterungen.
+Um einen wiederkehrenden Zeitplan einzurichten, indem Sie Aktualisierungseinstellungen festlegen, wählen Sie **Enablement der Aktualisierung**. Die Option zur Festlegung von Aktualisierungseinstellungen ist für alle Arten von Segment-Erweiterungen verfügbar, einschließlich SQL-Segmente, CDI-Segment-Erweiterungen und einfache formularbasierte Segment-Erweiterungen.
 
 {% alert important %}
 Um Ihre Datenverwaltung zu optimieren, werden die Aktualisierungseinstellungen für nicht verwendete Segment-Erweiterungen automatisch deaktiviert. Segment-Erweiterungen werden als ungenutzt betrachtet, wenn sie sind:
@@ -43,7 +43,7 @@ Die Möglichkeit, einen stündlichen Zeitplan für die Aktualisierung festzulege
 
 #### Kreditverbrauch und zusätzliche Kosten
 
-Da bei Aktualisierungen die Abfrage Ihres Segments erneut ausgeführt wird, verbraucht jede Aktualisierung für SQL-Segmente SQL-Segmentguthaben, und jede Aktualisierung für CDI-Segmente verursacht Kosten in Ihren Drittanbieter-Data-Warehouse.
+Da bei Aktualisierungen die Abfrage Ihres Segments erneut ausgeführt wird, verbraucht jede Aktualisierung für SQL-Segmente SQL-Segmentguthaben, und jede Aktualisierung für CDI Segment-Erweiterungen verursacht Kosten innerhalb Ihrer Drittanbieter-Daten im Data Warehouse.
 
 {% alert note %}
 Segmente können aufgrund von Datenverarbeitungszeiten bis zu 60 Minuten für die Aktualisierung benötigen. Segmente, die gerade aktualisiert werden, haben in Ihrer Liste Segmenterweiterungen den Status "In Bearbeitung". Dies hat einige Auswirkungen:

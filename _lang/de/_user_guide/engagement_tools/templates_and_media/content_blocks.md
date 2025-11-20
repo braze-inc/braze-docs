@@ -23,10 +23,10 @@ Mit Content-Blöcken haben Sie folgende Möglichkeiten:
 
 ## Content-Block erstellen
 
-Es gibt zwei Arten von Editoren, mit denen Sie einen Inhaltsblock erstellen können: klassisch und per Drag&Drop. Diese beiden Typen von Editoren entsprechen dem Typ des Content-Blocks: HTML und Drag-and-Drop. Sie können auch Ihre Content-Blöcke erstellen und verwalten [mit der API][5].
+Es gibt zwei Arten von Editoren, mit denen Sie einen Inhaltsblock erstellen können: klassisch und per Drag&Drop. Diese beiden Typen von Editoren entsprechen dem Typ des Content-Blocks: HTML und Drag-and-Drop. Sie können Ihre Content-Blöcke auch [über die API]({{site.baseurl}}/api/endpoints/templates/) erstellen und verwalten.
 
 {% tabs %}
-{% tab Ziehen und Ablegen %}
+{% tab Drag-and-drop %}
 
 {% multi_lang_include create_content_block.md location="dnd" %}
 
@@ -80,7 +80,7 @@ Wenn Sie einen Inhaltsblock für eine einzelne Nachricht aktualisieren oder eine
 
 Nachdem Sie Änderungen an einem Content-Block vorgenommen haben, können Sie den aktualisierten Content-Block speichern und starten, indem Sie **Content-Block starten** auswählen. Oder Sie können **Mehr** > **Duplizieren** wählen, um ein Duplikat Ihres Inhaltsblocks zu erstellen.
 
-![Ein Content-Block mit dem Text "Willkommen zu unserem Newsletter".][2]
+\![Ein Content-Block mit der Aufschrift "Willkommen zu unserem Newsletter".]({% image_buster /assets/img/copy-content-block.png %})
 
 Sie können einen Content-Block auch [duplizieren]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/). Dadurch wird eine Entwurfskopie des Inhaltsblocks erstellt.
 
@@ -90,7 +90,7 @@ Nachdem Sie einen Inhaltsblock in einer aktiven Kampagne oder einem Canvas hinzu
 
 Diese Vorschau enthält Informationen zum Content-Block, z. B. wer ihn erstellt hat, Tags, Erstellungsdatum, Datum der letzten Bearbeitung, Beschreibung, Editor-Typ, Anzahl der Einschlüsse mit Details und eine aktuelle Vorschau des Content-Blocks.
 
-![Eine Vorschau auf einen Content-Block "Workout_Promo" für Radfahren und Tanzen, der sechs Einschlüsse hat.][7]{: style="max-width:60%;"} 
+\![Eine Vorschau auf einen Content-Block "Workout_Promo" für Radfahren und Tanzen, der sechs Einschlüsse hat.]({% image_buster /assets/img/preview_tab_content_block.png %}){: style="max-width:60%;"} 
 
 ### Verschachtelte Content-Blöcke
 
@@ -104,9 +104,9 @@ Außerdem können Inhaltsblöcke nicht innerhalb einer E-Mail-Fußzeile verwende
 
 ### Inhaltsblöcke archivieren
 
-![Erweitertes Dropdown-Menü Einstellungen, das drei Optionen anzeigt: Archivieren, Duplizieren und In Arbeitsbereich kopieren.][3]{: style="max-width:20%;float:right;margin-left:15px;" }
+\![Erweitertes Dropdown-Menü Einstellungen, das drei Optionen anzeigt: Archivieren, Duplizieren und In Arbeitsbereich kopieren.]({% image_buster /assets/img/template_archive_cog.png %}){: style="max-width:20%;float:right;margin-left:15px;" }
 
-Wenn Sie die Verwendung eines Inhaltsblocks beendet haben, können Sie ihn auf der Seite [Vorlagen & Medien]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) archivieren. Archivierte Content-Blöcke sind schreibgeschützt. Dearchivieren Sie also den Content-Block, bevor Sie ihn bearbeiten. Content-Blöcke können nicht archiviert werden, wenn sie in Nachrichten verwendet werden.
+Wenn Sie die Verwendung eines Content-Blocks beendet haben, können Sie ihn auf der Seite [Templates & Medien]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) archivieren. Archivierte Content-Blöcke sind schreibgeschützt. Dearchivieren Sie also den Content-Block, bevor Sie ihn bearbeiten. Content-Blöcke können nicht archiviert werden, wenn sie in Nachrichten verwendet werden.
 
 #### Bewährte Praktiken
 
@@ -115,11 +115,5 @@ Wenn Sie die Verwendung eines Inhaltsblocks beendet haben, können Sie ihn auf d
 - Wenn Ihr Block in mehr Nachrichten verwendet wird, als Sie mit dem ersten Vorschlag in dieser Liste vernünftig verwalten können, empfehlen wir, alle Inhalte aus dem Block zu entfernen und ihn zu archivieren. So stellen Sie sicher, dass keine veralteten Informationen in neu versendeten E-Mails enthalten sind.
 - Wenn Sie versehentlich einen Content-Block archiviert haben, können Sie die Archivierung aufheben.
 
-![Panel „Gespeicherte Content-Blöcke“, in dem das Dropdown-Menü für „Test_32“ erweitert wird und drei Optionen anzeigt: Entarchivieren, Duplizieren und Kopieren in den Arbeitsbereich][4]
+\![Panel für gespeicherte Content-Blöcke, in dem das Dropdown-Menü für die Einstellungen für "Test_32" erweitert wird und drei Optionen anzeigt: Entarchivieren, Duplizieren und Kopieren in den Arbeitsbereich]({% image_buster /assets/img/unarchive-content-block.png %})
 
-[2]: {% image_buster /assets/img/copy-content-block.png %}
-[3]: {% image_buster /assets/img/template_archive_cog.png %}
-[4]: {% image_buster /assets/img/unarchive-content-block.png %}
-[5]: {{site.baseurl}}/api/endpoints/templates/
-[6]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/
-[7]: {% image_buster /assets/img/preview_tab_content_block.png %}

@@ -11,7 +11,7 @@ A versão mínima do SDK a seguir é compatível com todos os apps que usam [a n
 A partir da versão 6.0.0 do SDK, o Braze usa um React Native Turbo Module, que é compatível com a Nova Arquitetura e com a arquitetura de ponte herdada, o que significa que não é necessária nenhuma configuração adicional.
 
 {% alert warning %}
-Se o seu app para iOS estiver em conformidade com `RCTAppDelegate` e seguir nossa configuração anterior `AppDelegate`, revise os exemplos na [configuração nativa completa](#reactnative_step-2-complete-native-setup) para evitar a ocorrência de falhas ao assinar eventos no Turbo Module.
+Se o seu app para iOS estiver em conformidade com `RCTAppDelegate` e seguir nossa configuração anterior `AppDelegate`, revise os exemplos em [Configuração nativa completa](#reactnative_step-2-complete-native-setup) para evitar a ocorrência de falhas ao assinar eventos no Turbo Module.
 {% endalert %}
 
 ## Integração do SDK do React Native
@@ -48,7 +48,7 @@ Confira se sua versão do SDK da Braze para React Native seja, no mínimo, 1.37.
 Para instalar o plug-in Braze Expo, execute o seguinte comando:
 
 ```bash
-expo install @braze/expo-plugin
+npx expo install @braze/expo-plugin
 ```
 
 #### Etapa 2.2: Adicione o plug-in ao seu app.json
@@ -125,7 +125,7 @@ Exemplo de configuração:
 A pré-construção de seu aplicativo gerará os arquivos nativos necessários para o funcionamento do plug-in Braze Expo.
 
 ```bash
-expo prebuild
+npx expo prebuild
 ```
 
 Execute seu aplicativo conforme especificado nos [documentos da Expo](https://docs.expo.dev/workflow/customizing/). Lembre-se de que, se você fizer alguma alteração nas opções de configuração, será necessário fazer o pré-compilamento e executar o aplicativo novamente.
@@ -156,8 +156,8 @@ Para se conectar aos servidores da Braze, crie um arquivo `braze.xml` na pasta `
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<string name="com_braze_api_key">YOU_APP_IDENTIFIER_API_KEY</string>
-<string translatable="false" name="com_braze_custom_endpoint">YOUR_CUSTOM_ENDPOINT_OR_CLUSTER</string>
+  <string translatable="false" name="com_braze_api_key">YOU_APP_IDENTIFIER_API_KEY</string>
+  <string translatable="false" name="com_braze_custom_endpoint">YOUR_CUSTOM_ENDPOINT_OR_CLUSTER</string>
 </resources>
 ```
 
@@ -249,10 +249,10 @@ Na pasta raiz do projeto:
 
 ```bash
 # To install using the React Native New Architecture
-cd ios && RCT_NEW_ARCH_ENABLED=1 pod install
+cd ios && pod install
 
 # To install using the React Native legacy architecture
-cd ios && pod install
+cd ios && RCT_NEW_ARCH_ENABLED=0 pod install
 ```
 
 #### Etapa 2.3: Configurar o SDK do Braze
@@ -351,7 +351,7 @@ static Braze *_braze = nil;
 
 ### Etapa 3: Importar a biblioteca
 
-Em seguida, `import` a biblioteca em seu código do React Native. Para obter mais detalhes, confira nosso [projeto de exemplo](https://github.com/braze-inc/braze-react-native-sdk/tree/master/BrazeProject). 
+Em seguida, `import` a biblioteca em seu código do React Native. Para obter mais detalhes, confira nosso [projeto de amostra](https://github.com/braze-inc/braze-react-native-sdk/tree/master/BrazeProject). 
 
 ```javascript
 import Braze from "@braze/react-native-sdk";

@@ -22,10 +22,11 @@ It is your responsibility to make sure that your custom footer meets the aforeme
 
 To create or edit your custom footer, do the following:
 
-1. Go to **Settings** > **Email Preferences**.
-2. Go to the **Custom Footer** section and turn on custom footers.
-3. Edit your footer in the **Compose** section.
-4. Send a test message. 
+1. Go to **Settings** > **Email Preferences** > **Subscription Pages and Footers**.
+2. Go to the **Custom footer** section and turn on custom footers.
+3. Select **Edit** then edit your footer in the **Compose** section.
+4. Select **Preview** to preview how your email footer will appear in a customer’s inbox. You can optionally select **Copy preview link** to generate and copy a shareable preview link that shows what the email will look like for a random user. The link will last for seven days before it needs to be regenerated.
+5. Send a test message. 
 
 ![An example of a custom footer.]({% image_buster /assets/img_archive/custom_footer.png %})
 

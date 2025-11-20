@@ -79,56 +79,7 @@ Braze.getInstance(context).subscribeToPushNotificationEvents { event ->
 `Application.onCreate` 에서 푸시 알림 리스너를 생성하여 최종 사용자가 앱이 종료된 상태에서 알림을 탭하면 리스너가 트리거되도록 하세요.
 {% endalert %}
 
-## 글꼴 사용자 지정
-
-### 1단계: 글꼴 패밀리 만들기
-
-다음은 [글꼴 패밀리 가이드를](https://developer.android.com/guide/topics/ui/look-and-feel/fonts-in-xml.html#font-family) 사용한 사용자 정의 글꼴 패밀리 정의 예시입니다. 이 예제에서는 [Bungee Shade 글꼴](https://fonts.google.com/specimen/Bungee+Shade)을 사용합니다.
-
-```html
-<?xml version="1.0" encoding="utf-8"?>
-<font-family xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:app="http://schemas.android.com/apk/res-auto">
-
-  <!--Note: You must declare both sets of attributes
-      so that your fonts load on devices running Android 8.0 (API level 26) or lower.
-      See https://developer.android.com/guide/topics/ui/look-and-feel/fonts-in-xml.html -->
-
-  <font android:fontStyle="normal"
-        android:fontWeight="400"
-        android:font="@font/bungeeshade"
-
-        app:fontStyle="normal"
-        app:fontWeight="400"
-        app:font="@font/bungeeshade"/>
-</font-family>
-```
-
-글꼴 패밀리 정의를 `/res/font/bungee_font_family.xml`에 저장한 후 XML에서 `@font/bungee_font_family`로 참조할 수 있습니다.
-
-### 2단계: 글꼴 패밀리 참조
-
-이제 글꼴 패밀리가 생성되었으므로 `styles.xml` 에서 Braze 스타일 기본값을 재정의하여 글꼴 패밀리에 대한 참조를 포함할 수 있습니다.
-
-예를 들어, 다음 스타일 재정의는 모든 Braze 인앱 메시지에 대해 `bungee` 글꼴 패밀리를 사용합니다.
-
-```html
-<style name="Braze.InAppMessage">
-  <item name="android:fontFamily">@font/bungee_font_family</item>
-  <item name="fontFamily">@font/bungee_font_family</item>
-</style>
-
-<style name="Braze.Cards">
-  <item name="android:fontFamily">@font/another_custom_font_family</item>
-  <item name="fontFamily">@font/another_custom_font_family</item>
-</style>
-```
-
-{% alert warning %}
-모든 SDK 버전에서 호환성을 유지하려면 `android:fontFamily` 및 `fontFamily` 스타일 속성을 모두 설정해야 합니다.
-{% endalert %}
-
-## 알림 표시 사용자 지정하기 {#customization-display}
+## 알림 표시 커스텀하기 {#customization-display}
 
 ### 1단계: 사용자 지정 알림 팩토리 만들기
 
@@ -224,9 +175,9 @@ setCustomBrazeNotificationFactory(null)
 {% endtab %}
 {% endtabs %}
 
-## 승수 텍스트 렌더링
+## 멀티컬러 텍스트 렌더링
 
-Braze SDK 버전 3.1.1에서 HTML을 기기로 보내 푸시 알림에서 승수 텍스트를 렌더링할 수 있습니다.
+Braze 소프트웨어 개발 키트 3.1.1 버전에서는 푸시 알림에 여러 가지 색상의 텍스트를 렌더링하기 위해 기기에 HTML을 전송할 수 있습니다.
 
 ![글자가 서로 다른 색상으로 이탤릭체로 표시되고 배경색이 지정된 Android 푸시 메시지 '멀티컬러 푸시 테스트 메시지'입니다.]({% image_buster /assets/img/multicolor_android_push.png %}){: style="max-width:40%;"}
 
@@ -238,13 +189,13 @@ Braze SDK 버전 3.1.1에서 HTML을 기기로 보내 푸시 알림에서 승수
 <p><em>test</em> <span style="text-decoration: underline; background-color: #ff6600;"><strong>message</strong></span></p>
 ```
 
-Android는 푸시 알림에 유효한 HTML 요소와 태그를 제한한다는 점에 유의하세요. 예를 들어, `marquee`는 허용되지 않습니다.
+Android에서는 푸시 알림에 사용할 수 있는 HTML 요소와 태그가 제한되어 있다는 점에 유의하세요. 예를 들어, `marquee`는 허용되지 않습니다.
 
 {% alert important %}
 멀티컬러 텍스트 렌더링은 기기별로 다르며 Android 기기 또는 버전에 따라 표시되지 않을 수 있습니다.
 {% endalert %}
 
-푸시 알림에 여러 색상의 텍스트를 렌더링하려면 `braze.xml` 또는 `BrazeConfig` 을 업데이트하면 됩니다:
+푸시 알림에 멀티컬러 텍스트를 렌더링하려면 `braze.xml` 또는 `BrazeConfig` 을 업데이트하면 됩니다:
 
 {% tabs local %}
 {% tab braze.xml %}
@@ -284,7 +235,7 @@ Braze.configure(this, brazeConfig)
 
 ### 지원되는 HTML 태그
 
-현재 Google은 Android용 지원 HTML 태그를 문서에 직접 나열하지 않으며, 이 정보는 [Git 저장소의 `Html.java` 파일에서만](https://android.googlesource.com/platform/frameworks/base/+/master/core/java/android/text/Html.java) 확인할 수 있습니다. 이 정보는 이 파일에서 가져온 것이며 지원되는 HTML 태그는 변경될 수 있으므로 다음 표를 참조할 때 이 점을 염두에 두세요.
+현재 Google은 설명서에 Android에 대해 지원되는 HTML 태그를 직접 나열하지 않으며, 이 정보는 [Git 저장소의 `Html.java` 파일에서만](https://android.googlesource.com/platform/frameworks/base/+/master/core/java/android/text/Html.java) 찾을 수 있습니다. 이 정보는 이 파일에서 가져온 것이며 지원되는 HTML 태그는 변경될 수 있으므로 다음 표를 참조할 때 이 점을 염두에 두세요.
 
 <table>
   <thead>
@@ -379,7 +330,7 @@ Braze.configure(this, brazeConfig)
 
 ## 인라인 이미지 렌더링
 
-### How it works
+### 작동 방식
 
 인라인 이미지 푸시를 사용하여 Android 푸시 알림에 더 큰 이미지를 표시할 수 있습니다. 이 디자인을 사용하면 사용자가 이미지를 확대하기 위해 수동으로 푸시를 확장할 필요가 없습니다. 일반 Android 푸시 알림과 달리 인라인 이미지 푸시 이미지는 3:2 화면 비율로 제공됩니다.
 
@@ -387,7 +338,7 @@ Braze.configure(this, brazeConfig)
 
 ### 호환성
 
-모든 디바이스에 인라인 이미지를 보낼 수 있지만, 최소 버전을 충족하지 않는 디바이스 및 SDK에는 표준 이미지가 대신 표시됩니다. 인라인 이미지가 제대로 표시되려면 Android Braze SDK v10.0.0+와 Android M+를 실행하는 디바이스가 모두 필요합니다.
+모든 기기에 인라인 이미지를 보낼 수 있지만, 최소 버전을 충족하지 않는 기기 및 SDK에는 표준 이미지가 대신 표시됩니다. 인라인 이미지가 제대로 표시되려면 Android 소프트웨어 개발 키트 v10.0.0+와 Android M+를 실행하는 기기가 모두 필요합니다. 이미지를 렌더링하려면 소프트웨어 개발 키트도 인에이블먼트해야 합니다.
 
 {% alert note %}
 Android 12를 실행하는 기기는 커스텀 푸시 알림 스타일의 변경으로 인해 다르게 렌더링됩니다.
@@ -399,7 +350,7 @@ Android 푸시 메시지를 작성할 때 **알림 유형** 드롭다운에서 �
 
 ![푸시 캠페인 에디터에서 '알림 유형' 드롭다운의 위치(표준 푸시 미리보기 위)를 표시합니다.]({% image_buster /assets/img/android/push/android_inline_image_notification_type.png %})
 
-## 설정
+## Settings
 
 Braze 대시보드를 통해 전송되는 Android 푸시 알림에는 다양한 고급 설정을 사용할 수 있습니다. 이 기사에서는 이러한 기능과 성공적으로 사용하는 방법에 대해 설명합니다.
 
@@ -419,15 +370,15 @@ TTL( **Time to Live** ) 필드에서는 푸시 메시징 서비스에 메시지�
 
 ### 요약 텍스트 {#summary-text}
 
-요약 텍스트를 사용하면 확장된 알림 보기에서 추가 텍스트를 설정할 수 있습니다. 이미지가 포함된 알림의 캡션 역할도 합니다.
+요약 텍스트를 사용하면 확장된 알림 보기에서 추가 텍스트를 설정할 수 있습니다. 알림에 이미지가 포함된 경우 캡션으로도 사용됩니다.
 
-![제목이 'Greetings from Appboy!'이고 메시지가 'This is the message body! 이모티콘을 추가할 수도 있습니다." 및 요약 텍스트 "요약 텍스트입니다."]({% image_buster /assets/img_archive/summary_text.png %}){: style="max-width:65%;"}
+![An Android message with the title "This is the title for the notification." and summary text "This is the summary text for the notification."]({% image_buster /assets/img/android/push/collapsed-android-notification.png %}){: style="max-width:65%;"}
 
-요약 텍스트는 확장된 보기에서 메시지 본문 아래에 표시됩니다.
+요약 텍스트는 확장된 보기에서 메시지 본문 아래에 표시됩니다. 
+
+![An Android message with the title "This is the title for the notification." and summary text "This is the summary text for the notification."]({% image_buster /assets/img/android/push/expanded-android-notification.png %}){: style="max-width:65%;"}
 
 푸시 알림에 이미지가 포함된 경우, 메시지 텍스트는 축소된 보기에서 표시되며, 요약 텍스트는 알림이 확장될 때 이미지 캡션으로 표시됩니다. 
-
-!["앱보이!" 제목, "메시지 본문은..." 메시지 및 "요약 텍스트는..."이라는 요약 텍스트가 포함된 Android 메시지]({% image_buster /assets/img_archive/messagesummary.gif %}){: style="max-width:65%;"}
 
 ### 사용자 지정 URI {#custom-uri}
 
@@ -443,9 +394,9 @@ TTL( **Time to Live** ) 필드에서는 푸시 메시징 서비스에 메시지�
 
 푸시 알림의 우선순위 수준은 다른 알림에 비해 알림 트레이에 표시되는 방식에 영향을 미칩니다. 또한 우선순위가 일반 이하인 메시지는 배터리 수명을 보존하기 위해 지연 시간이 약간 더 길어지거나 일괄 발송되는 반면, 우선순위가 높은 메시지는 항상 즉시 발송되므로 전송 속도와 방식에도 영향을 줄 수 있습니다.
 
-Android O에서는 알림 우선 순위가 알림 채널의 속성이 되었습니다. 채널의 구성 중 우선순위를 정의하려면 개발자와 협력해야 하며, 알림 소리를 보낼 때 적절한 채널을 선택하려면 대시보드를 사용해야 합니다. Android O 이전 버전을 실행하는 디바이스의 경우, Braze 대시보드 및 메시징 API를 통해 Android 알림의 우선순위를 지정할 수 있습니다. 
+Android O에서는 알림 우선 순위가 알림 채널의 속성이 되었습니다. 채널의 구성 중 우선순위를 정의하려면 개발자와 협력해야 하며, 알림 소리를 보낼 때 적절한 채널을 선택하려면 대시보드를 사용해야 합니다. Android O 이전 버전을 실행하는 기기의 경우, Braze 대시보드 및 메시징 API를 통해 Android 알림의 우선순위를 지정할 수 있습니다. 
 
-전체 사용자에게 특정 우선순위를 지정하여 메시지를 보내려면 [알림 채널 구성을](https://developer.android.com/training/notify-user/channels#importance) 통해 간접적으로 우선순위를 *지정하고* (O+ 디바이스 대상) 대시보드에서 개별 우선순위를 전송하는 것이 좋습니다(<O 디바이스 대상).
+전체 사용자 기반에 특정 우선순위를 지정하여 메시지를 보내려면 [알림 채널 구성을](https://developer.android.com/training/notify-user/channels#importance) 통해 간접적으로 우선순위를 *지정하고* (O+ 기기 타겟팅), 대시보드에서 개별 우선순위를 전송하는 것이 좋습니다(<O 기기 타겟팅).
 
 Android 또는 Fire OS 푸시 알림에서 설정할 수 있는 우선 순위 수준은 다음과 같습니다:
 
@@ -458,7 +409,7 @@ Android 또는 Fire OS 푸시 알림에서 설정할 수 있는 우선 순위 �
 | 최소      | 상황별 또는 배경 정보. | `-2` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-자세한 내용은 Google의 [Android 알림](http://developer.android.com/design/patterns/notifications.html) 문서를 참조하세요.
+자세한 내용은 Google의 [Android 알림](http://developer.android.com/design/patterns/notifications.html) 설명서를 참조하세요.
 
 ### 소리 {#sounds}
 
@@ -470,4 +421,4 @@ Android O 이전 버전을 실행하는 디바이스의 경우, Braze를 사용�
 
 대시보드 프롬프트에 전체 사운드 리소스 URI(예: `android.resource://com.mycompany.myapp/raw/mysound`)를 입력합니다.
 
-전체 사용자에게 특정 사운드로 메시지를 보내려면 [알림 채널 구성을](https://developer.android.com/training/notify-user/channels) 통해 간접적으로 사운드를 *지정하고* (O+ 디바이스 대상) 대시보드에서 개별 사운드를 전송하는 방법(<O 디바이스 대상)을 권장합니다.
+전체 사용자 기반에 특정 사운드로 메시지를 보내려면 [알림 채널 구성을](https://developer.android.com/training/notify-user/channels) 통해 간접적으로 사운드를 지정(O+ 기기 타겟팅) *하고* 대시보드에서 개별 사운드를 전송(<O 기기 타겟팅)하는 것이 좋습니다.

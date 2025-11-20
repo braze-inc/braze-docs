@@ -288,6 +288,10 @@ Learn more about best practices for email list management in [Managing email sub
 {% endtab %}
 {% endtabs %}
 
+{% alert tip %}
+When in the **Preview** section for a subscription page or footer, select **Copy preview link** to generate and copy a shareable preview link that shows what the email footer, unsubscribe page, or opt-in page will look like for a random user. The link will last for seven days before it needs to be regenerated.
+{% endalert %}
+
 ## Frequently asked questions
 
 ### One-click unsubscribe
