@@ -125,6 +125,10 @@ After creating a new policy, go to **Users** and select into your specific user.
 
 ### Step 5: Link Braze to AWS {#secret-key-5}
 
+{% alert note %}
+If you're only setting up message archiving, follow the steps in the **Dashboard Data Export** tab. 
+{% endalert %}
+
 {% tabs %}
 {% tab Braze Currents %}
 
