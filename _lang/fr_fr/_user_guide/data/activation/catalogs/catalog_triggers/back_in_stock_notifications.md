@@ -88,5 +88,5 @@ Utilisez cette étiquette Liquid {%raw%}``{% catalog_items <name_of_your_catalog
 
 - Les utilisateurs ne sont abonnés que pour 90 jours. Si l'article n'est pas de nouveau en stock dans les 90 jours, l'utilisateur est désabonné.
 - Lorsque vous utilisez la règle de notification **Notifier tous les utilisateurs abonnés**, Braze notifie 100 000 utilisateurs en 10 minutes.
-- Braze traitera au maximum 10 mises à jour d'éléments en une minute. Si vous mettez à jour 11 articles en une minute, seuls les 10 premiers peuvent déclencher une notification de rupture de stock.
+- Braze traitera 10 demandes de mise à jour d'éléments de catalogue par minute. Les endpoints de mise à jour permettent de mettre à jour 50 articles par demande, ce qui permet de mettre à jour jusqu'à 500 articles par minute et de déclencher des notifications de rupture de stock.
 

@@ -88,5 +88,5 @@ Use esta tag Liquid {%raw%}``{% catalog_items <name_of_your_catalog> {{canvas_en
 
 - Os usuários estão inscritos por apenas 90 dias. Se o item não voltar ao estoque em 90 dias, o usuário será desinscrito.
 - Ao usar a regra de notificação **Notificar todos os usuários inscritos**, a Braze notificará 100.000 em 10 minutos.
-- A Braze processará no máximo 10 atualizações de itens em um minuto. Se você atualizar 11 itens em um minuto, apenas os primeiros 10 podem acionar uma notificação de volta ao estoque.
+- O Braze processará 10 solicitações de atualização de itens do catálogo por minuto. Os endpoints de atualização permitem 50 atualizações de itens por solicitação, suportando até 500 atualizações de itens por minuto que podem acionar notificações de falta de estoque
 
