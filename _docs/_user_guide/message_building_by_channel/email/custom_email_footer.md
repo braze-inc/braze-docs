@@ -12,7 +12,7 @@ channel:
 
 > You can set a workspace-wide custom email footer which you can template into every email using the {% raw %}`{{${email_footer}}}`{% endraw %} Liquid attribute.
 
-By using custom email footers, you no longer have to create a new footer for every email template or email campaign you use. Changes you make to your custom footer will be reflected in all new and existing email campaigns. Remember that compliance with the [CAN-SPAM Act of 2003](https://www.ftc.gov/tips-advice/business-center/guidance/can-spam-act-compliance-guide-business) requires you to include a physical address for your company and an unsubscribe link in your emails.
+By using custom email footers, you no longer have to create a new footer for every email template or email campaign you use. All new and existing email campaigns reflect changes you make to your custom footer. Remember that compliance with the [CAN-SPAM Act of 2003](https://www.ftc.gov/tips-advice/business-center/guidance/can-spam-act-compliance-guide-business) requires you to include a physical address for your company and an unsubscribe link in your emails.
 
 {% alert warning %}
 It is your responsibility to make sure that your custom footer meets the aforementioned requirements.
