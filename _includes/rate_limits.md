@@ -112,7 +112,7 @@ Braze Transactional Emails are not subject to a rate limit. Depending on your ch
 <!---/sends/id/create-->
 
 {% elsif include.endpoint == "sends id create" %}
-You can create a maximum of 100 custom send identifiers per day via this endpoint for a given workspace. Each `send_id` and `campaign_id` combination that you create will count toward your daily limit. The response headers for any valid request include the current rate limit status, see [API rate limits]({{site.baseurl}}/api/api_limits/) for details.
+You can create up to 100 custom send identifiers per day using this endpoint for a given workspace. Each `send_id` and `campaign_id` combination that you create will count toward your daily limit. The response headers for any valid request include the current rate limit status. See [API rate limits]({{site.baseurl}}/api/api_limits/) for details.
 
 <!---/subscription/status/set-->
 {% elsif include.endpoint == "subscription status set" %}
