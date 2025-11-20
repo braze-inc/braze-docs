@@ -41,6 +41,10 @@ You must ensure that you have the following items created and/or completed prior
 
 ### Step 1: Connect to Criteo
 
+{% alert important %}
+You must have the ["Admin" permission]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#admin) to connect Criteo to your Braze account.
+{% endalert %}
+
 In the Braze dashboard, go to **Partner Integrations** > **Technology Partners** and select **Criteo**. Under Criteo Audience Export, select **Connect Criteo**.
 
 ![Criteo technology page in Braze that includes an Overview section and Criteo section with the Connected Criteo button.]({% image_buster /assets/img/criteo/criteo5.png %}){: style="max-width:80%;"}
