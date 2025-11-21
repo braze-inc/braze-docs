@@ -1,7 +1,7 @@
 ---
 nav_title: SalesWings
 article_title: SalesWings
-description: "This reference article outlines the partnership between Braze and SalesWings, a sales and marketing operations solution for Braze, that helps you qualify leads and accounts, provides sales insights and alerts inside CRM like Salesforce as well as B2B attribution reporting."
+description: "This reference article outlines the partnership between Braze and SalesWings, a sales and marketing operations solution for Braze, that helps you qualify leads and accounts, provides sales insights and alerts inside CRM like Salesforce as well as B2B attribution reporting. The interests and engagements can be leveraged inside Braze for personalization in Canvas and segmentation. SalesWings also provides a way to generate leads from a website, similar to Digioh."
 alias: /partners/saleswings/
 page_type: partner
 search_tag: Partner
@@ -10,20 +10,20 @@ search_tag: Partner
 
 # SalesWings
 
-> [SalesWings](https://www.saleswingsapp.com/?utm_source=braze&utm_campaign=technicaldocs) is a B2B SaaS sales and marketing operations solution, which helps manage lead and account qualification through holistic lead scoring and grading, provides sales insights and alerts, B2B attribution reporting, along with a tight Salesforce CRM integration.
+> [SalesWings](https://www.saleswingsapp.com/?utm_source=braze&utm_campaign=technicaldocs) is a B2B SaaS sales and marketing operations solution, which helps manage lead and account qualification through holistic lead scoring and grading, provides sales insights and alerts, B2B attribution reporting, along with a tight Salesforce CRM integration.  A website engagement add-on, similar to Digioh, allows to generate leads on the website. The interests and engagements can be leveraged inside Braze for personalization in Canvas and segmentation.
 
 _This integration is maintained by SalesWings._
 
 ## About the integration
 
-SalesWings allows marketing teams and marketing operations managers to qualify leads and accounts for their sales teams, essential for sales and marketing alignment and operational efficiency. Furthermore, SalesWings, together with Braze, can surface a lead’s and account’s full customer journey and Braze marketing campaign engagement data to sales reps, allowing you to increase lead qualification rates through more educated conversations. SalesWings identifies needs and interests along with other signals, allowing to hand-off qualified buyers to sales teams inside your CRM in an automated manner.
+SalesWings allows marketing teams and marketing operations managers to qualify leads and accounts for their sales teams, essential for sales and marketing alignment and operational efficiency. Furthermore, SalesWings, together with Braze, can surface a lead’s and account’s full customer journey and Braze marketing campaign engagement data to sales reps, allowing you to increase lead qualification rates through more educated conversations. SalesWings identifies needs and interests along with other signals, allowing to hand-off qualified buyers to sales teams inside your CRM in an automated manner. The identified needs, interests and sales-readiness can be used as Braze user attributes for personalization and segmentation.
 
 ## Prerequisites
  
 | Requirement | Description |
 | ----------- | ----------- |
 | SalesWings account | A [SalesWings](https://www.saleswingsapp.com/?utm_source=braze&utm_campaign=technicaldocs) account is required to take advantage of this partnership. |
-| Braze REST API key | A Braze REST API key with `users.export.ids` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
+| Braze REST API key | A Braze REST API key with `users.export.ids` permissions (and `users.track` if using the SalesWings insights push feature). <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | Braze REST endpoint | [Your REST endpoint URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). Your endpoint will depend on the Braze URL for your instance. |
 | Segment.com account (optional) | If you are a Segment.com user, you can send all lead engagement and profile data and identify events via Segment.com for lead profiling. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -102,7 +102,13 @@ Add your Braze API endpoint as described in [API and SDK endpoints article]({{si
 
 Then, select **Save**.
 
-### Step 4: Set up a custom Currents export to SalesWings (optional)
+### Step 4: Enable SalesWings insights push to Braze (optional)
+
+If you want to make SalesWings insights available on your Braze user profiles for segmentation, personalization, or Canvas journey orchestration, go to the [**SalesWings Integrations** page](https://helium.saleswings.pro/integrations) and expand the **Braze Integration** section.
+
+Click **Start data push** under **SalesWings-to-Braze insights data push**.
+
+### Step 5: Set up a custom Currents export to SalesWings (optional)
 
 If you want to use [user behavior]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events) and [message engagement]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events) events for behavioral intelligence, lead and account scoring, produce sales insights, or generate reports in your CRM, go to the [**SalesWings Integrations** page](https://helium.saleswings.pro/integrations) and expand the **Braze Integration** section.
 
@@ -112,7 +118,7 @@ Then, [create a new Current]({{site.baseurl}}/user_guide/data/braze_currents/set
 
 In the **Credentials** section of the Current creation form, enter the API token you have generated on the [**SalesWings Integrations** page](https://helium.saleswings.pro/integrations) for **Bearer Token**, and `https://helium.saleswings.pro/api/braze/currents/events` for **Endpoint**.
 
-### Step 5: Configuring SalesWings lead and account scoring for Braze, CRM integration, and more
+### Step 6: Configuring SalesWings lead and account scoring for Braze, CRM integration, and more
 
 Consult the SalesWings services team for full onboarding support via the [website](https://www.saleswingsapp.com/?utm_source=braze&utm_campaign=technicaldocs).
 
@@ -137,6 +143,30 @@ You can identify users automatically when they click on a trackable URL (for exa
   - **Link example:** {% raw %}`https://www.client-website.com?br_user_id={{${user_id}}}`{% endraw %}
 
 The `braze_id` variable is set to an identifier of the user-generated by Braze and is always available. The `br_user_id` variable is set to the user's identifier in your system and may be missing in certain scenarios (for example, for anonymous users created by the Braze SDK). If both `braze_id` and `br_user_id` are used in a link, SalesWings will only consider the `braze_id` parameter.
+
+### Pushing SalesWings insights to Braze
+
+If you enable SalesWings insights push to Braze, SalesWings will update your Braze user profiles with the following [Custom Attributes]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_attributes):
+
+| Custom Attribute | Type | Description |
+| ----------- | ----------- | ----------- |
+| `sw_favorite` | boolean | Whether the lead was marked as favorite in SalesWings or Salesforce CRM |
+| `sw_last_active_at` | date | The moment of lead's last activity on your website |
+| `sw_lead_link_open` | string | The link to access lead profile in SalesWings (without a SalesWings dashboard account) |
+| `sw_lead_link_protected` | string | The link to access lead profile in SalesWings (with a SalesWings dashboard account) |
+| `sw_lead_owner` | string | The owner set for the lead in SalesWings or Salesforce CRM |
+| `sw_lead_score` | float | The value of the main SalesWings lead score configured in the SalesWings [Rule Engine](https://helium.saleswings.pro/falcon) |
+| `sw_predictive_score` | string | The value of SalesWings [predictive score](https://support.saleswingsapp.com/en/articles/581795-the-predictive-lead-score) that assesses the lead's engagement based on the number and recency of tracked activities. The value could be `HOT`, `WARM`, `NORMAL`, `COLD` or `FROZEN` |
+| `sw_salesforce_record_id` | string | ID of the Lead or Contact record in Salesforce CRM |
+| `sw_salesforce_record_url` | string | URL of the Lead or Contact record in Salesforce CRM |
+| `sw_session_count` | integer | Number of tracked sessions on your website for this lead |
+| `sw_tags` | array of string | The needs and interest identified by SalesWings, represented as “tags”. The names of SalesWings tags configured in the SalesWings [Rule Engine](https://helium.saleswings.pro/falcon) that apply to this lead |
+| Additional lead score attributes | float | One Custom Attribute for every additional lead score configured in the SalesWings [Rule Engine](https://helium.saleswings.pro/falcon). The attribute name is derived from the SalesWings score name, for example, a score named `Likeliness to meet` will be sent as Custom Attribute `sw_likeliness_to_meet`. If a score is renamed after it's created, it will be still synced with the initial Custom Attribute name. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
+When the push is enabled, SalesWings immediately starts sending Custom Attributes to Braze as soon as underlying data points change in SalesWings lead profiles, and eventually syncs all the existing leads even if they don't have new updates.
+
+SalesWings updates every Braze user with an email that matches the SalesWings lead profile email address. If there are no matching users in Braze, SalesWings does not create a new one. 
 
 ### Using Braze Currents events in your CRM
 
