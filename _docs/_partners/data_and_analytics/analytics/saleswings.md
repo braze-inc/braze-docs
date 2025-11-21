@@ -1,7 +1,7 @@
 ---
 nav_title: SalesWings
 article_title: SalesWings
-description: "This reference article outlines the partnership between Braze and SalesWings, a sales and marketing operations solution for Braze, that helps you qualify leads and accounts, provides sales insights and alerts inside CRM like Salesforce as well as B2B attribution reporting. The interests and engagements can be leveraged inside Braze for personalization in Canvas and segmentation. SalesWings also provides a way to generate leads from a website, similar to Digioh."
+description: "This reference article outlines the partnership between Braze and SalesWings. SalesWings is a sales and marketing operations solution for Braze that helps you qualify leads and accounts, and provides sales insights and alerts inside CRM like Salesforce, as well as B2B attribution reporting. You can leverage interests and engagements inside Braze for personalization in Canvas and segmentation. SalesWings also provides a way to generate leads from a website, similar to Digioh."
 alias: /partners/saleswings/
 page_type: partner
 search_tag: Partner
