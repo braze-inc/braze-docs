@@ -99,7 +99,7 @@ The `message` field will return `success` for any valid request. More specific e
 ## Frequently asked questions
 
 ### Does this impact MAU?
-No, since the number of users will stay the same, they'll just have a new `external_id`.
+No, because the number of users stays the same, they have a new `external_id`.
 
 ### Does user behavior change historically?
 No, since the user is still the same, and all their historical behavior is still connected to them.

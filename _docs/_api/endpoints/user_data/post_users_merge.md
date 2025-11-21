@@ -165,7 +165,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 
 ### Merging unidentified user
 
-The following request would merge the most recently updated unidentified user with email address `john.smith@braze.com` into the user with an external ID `john`. In this example, using `most_recently_updated` will filter the query to just one unidentified user. So, if there were two unidentified users with this email address, only one would get merged into the user who has an external ID `john`.
+The following request would merge the most recently updated unidentified user with email address `john.smith@braze.com` into the user with an external ID `john`. In this example, using `most_recently_updated` filters the query to one unidentified user. So, if there were two unidentified users with this email address, only one would get merged into the user who has an external ID `john`.
 
 ```json
 curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
@@ -191,7 +191,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 
 This next example merges the most recently updated unidentified user with email address `john.smith@braze.com` into the most recently updated identified user with email address `john.smith@braze.com`.
 
-Using `most_recently_updated` will filter the queries to just one user (one unidentified user for `identifier_to_merge`, and one identified user for the `identifier_to_keep`).
+Using `most_recently_updated` filters the queries to one user (one unidentified user for `identifier_to_merge`, and one identified user for the `identifier_to_keep`).
 
 ```json
 curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \

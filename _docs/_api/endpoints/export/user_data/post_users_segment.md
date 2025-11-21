@@ -165,7 +165,7 @@ The following is a list of valid `fields_to_export`. Using `fields_to_export` to
 ## Important reminders
 
 - The fields for `custom_events`, `purchases`, `campaigns_received`, and `canvases_received` will contain only data from the last 90 days.
-- Both `custom_events` and `purchases` contain fields for `first` and `count`. Both of these fields will reflect information from all time, and will not be limited to just data from the last 90 days. For example, if a particular user first did the event 90 days ago, this will be accurately reflected in the `first` field, and the `count` field will take into account events that occurred prior to the last 90 days as well.
+- Both `custom_events` and `purchases` contain fields for `first` and `count`. Both of these fields will reflect information from all time, and will not be limited to data from the last 90 days. For example, if a particular user first did the event 90 days ago, this will be accurately reflected in the `first` field, and the `count` field will take into account events that occurred prior to the last 90 days as well.
 - The number of concurrent segment exports a company can run at the endpoint level is capped at 100. Attempts that surpass this limit will result in an error.
 - Attempting to export a segment a second time while the first export job is still running will result in a 429 error.
 
