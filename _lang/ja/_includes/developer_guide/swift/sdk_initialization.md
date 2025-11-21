@@ -1,4 +1,4 @@
-guide/prerequisites/swift.md developer_ %}
+{% multi_lang_include developer_guide/prerequisites/swift.md %}
 
 ## 遅延初期化の使用
 

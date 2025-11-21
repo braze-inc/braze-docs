@@ -1,5 +1,5 @@
 ---
-nav_title: Drag-And-Drop Email Preference Center
+nav_title: Drag-and-drop email preference center
 article_title: Drag-And-Drop Email Preference Center
 alias: "/dnd_preference_center/"
 description: "This reference page covers how to create an email preference center with the drag-and-drop editor."
@@ -14,7 +14,7 @@ page_order: 2
 
 ## Step 1: Create an email preference center
 
-Create a preference center by navigating to **Audience** > **Subscriptions** > **Email Preference Center**.
+Create a preference center by navigating to **Audience** > **Email Preference Centers**.
 
 Here, a list of custom preference centers will be displayed. Select **Create New** to create a new preference center, or select the name of an existing one to make changes.
 

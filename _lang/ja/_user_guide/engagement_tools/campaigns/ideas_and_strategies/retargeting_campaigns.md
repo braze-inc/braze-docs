@@ -17,7 +17,7 @@ Braze は、受信したメッセージに基づいたユーザーのリター�
 
 これらのリターゲティングフィルターを追加すると、それぞれオプションが提供されます。ユーザーのターゲティングの詳細については、キャンペーンの設定に関する [Braze ラーニングコース](https://learning.braze.com/campaign-setup-delivery-targeting-conversions)をぜひご覧ください。
 
-![[セグメントの詳細] セクションと使用可能なフィルターのドロップダウンメニュー。]({% image_buster /assets/img_archive/retarget.png %}){: style="max-width:80%;"}
+![使用可能なフィルターのドロップダウンメニューを含むセグメント詳細セクション。]({% image_buster /assets/img_archive/retarget.png %}){: style="max-width:80%;"}
 
 ## リターゲティングのフィルター
 

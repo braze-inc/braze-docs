@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Identify Users"
+nav_title: "POST: Identify users"
 article_title: "POST: Identify Users"
 search_tag: Endpoint
 page_order: 3
@@ -166,8 +166,6 @@ For more information on `alias_name` and `alias_label`, check out our [user alia
 ## Response
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
 {
     "aliases_processed": 1,
     "message": "success"

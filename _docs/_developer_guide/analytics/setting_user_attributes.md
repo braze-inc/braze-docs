@@ -1,5 +1,5 @@
 ---
-nav_title: Setting User Attributes
+nav_title: Setting user attributes
 article_title: Setting user attributes through the Braze SDK
 page_order: 1.2
 description: "Learn how to set user attributes through the Braze SDK."
@@ -14,16 +14,16 @@ For wrapper SDKs not listed, use the relevant native Android or Swift method ins
 {% endalert %}
 
 {% sdktabs %}
+{% sdktab web %}
+{% multi_lang_include developer_guide/web/analytics/setting_user_attributes.md %}
+{% endsdktab %}
+
 {% sdktab android %}
 {% multi_lang_include developer_guide/android/analytics/setting_user_attributes.md %}
 {% endsdktab %}
 
 {% sdktab swift %}
 {% multi_lang_include developer_guide/swift/analytics/setting_user_attributes.md %}
-{% endsdktab %}
-
-{% sdktab web %}
-{% multi_lang_include developer_guide/web/analytics/setting_user_attributes.md %}
 {% endsdktab %}
 
 {% sdktab flutter %}

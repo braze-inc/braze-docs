@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Remove Invalid Phone Numbers"
+nav_title: "POST: Remove invalid phone numbers"
 article_title: "POST: Remove Invalid Phone Numbers"
 search_tag: Endpoint
 page_order: 2

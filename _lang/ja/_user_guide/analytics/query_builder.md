@@ -9,7 +9,7 @@ alias: /query_builder/
 
 # クエリビルダー
 
-> クエリービルダーは、SnowflakeでBrazeデータを使用してレポートsを生成します。クエリビルダーには、事前組み込みの SQL [クエリテンプレート]({{site.baseurl}}/user_guide/analytics/query_builder/query_templates/)が付属しているので、すぐに始めることができます。また、独自のカスタム SQL クエリを作成して、より多くのインサイトを得ることもできます。
+> クエリービルダーは、SnowflakeでBrazeデータを使用してレポートを生成します。クエリビルダーには、事前組み込みの SQL [クエリテンプレート]({{site.baseurl}}/user_guide/analytics/query_builder/query_templates/)が付属しているので、すぐに始めることができます。また、独自のカスタム SQL クエリを作成して、より多くのインサイトを得ることもできます。
 
 クエリビルダーでは一部の顧客データに直接アクセスできるため、「PII を表示」[権限]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/)がある場合にのみ、クエリビルダーにアクセスできます。
 
@@ -25,7 +25,7 @@ alias: /query_builder/
 6. クエリを保存します。
 7. レポートのCSV を読み込むするには、**エクスポート** を選択します。
 
-![テンプレート化されたクエリ「過去 30 日間のチャネルエンゲージメントと収益」の結果が表示されたクエリビルダー。]({% image_buster /assets/img_archive/query_builder.png %})
+![クエリビルダー。テンプレートの結果を表示します。d クエリ&クォート。過去 30 日間のチャネルエンゲージメントと収益。]({% image_buster /assets/img_archive/query_builder.png %})
 
 各レポートの結果は、1 日に 1 回生成できます。同じレポートを 1 日に複数回実行すると、それらのレポートに同じ結果が表示されます。
 
@@ -65,6 +65,12 @@ ORDER BY
 send_date_sydney;
 ```
 {% endraw %}
+
+### クエリ履歴
+
+Query Builderの**Query history**セクションには、以前に実行したクエリが表示され、作業の追跡と再利用に役立ちます。クエリ履歴は7 日間保持されます。つまり、7 日より古いクエリは自動的に削除されます。
+
+クエリの使用状況を長期間監査する必要がある場合や、7 日を超えてレコードを維持する必要がある場合は、重要なクエリ結果をエクスポートまたは保存してから期限切れにすることをお勧めします。
 
 ## AI Query Builderを使用したSQLの生成
 

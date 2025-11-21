@@ -1,5 +1,5 @@
 ---
-nav_title: "User Phone Numbers"
+nav_title: "User phone numbers"
 article_title: SMS User Phone Numbers
 page_order: 7
 description: "This reference article covers SMS phone number formatting, how to importing phone numbers, as well as how to add users to SMS subscription groups."

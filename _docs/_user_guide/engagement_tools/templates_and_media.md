@@ -1,5 +1,5 @@
 ---
-nav_title: "Templates and Media"
+nav_title: "Templates and media"
 article_title: Templates and Media
 page_order: 5
 layout: dev_guide

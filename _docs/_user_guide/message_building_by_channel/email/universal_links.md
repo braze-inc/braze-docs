@@ -1,5 +1,5 @@
 ---
-nav_title: Universal Links and App Links
+nav_title: Universal links and app links
 article_title: Universal Links and App Links
 page_order: 6.4
 page_type: reference
@@ -216,7 +216,7 @@ Finally, you can test your deep links. Sending yourself a link through a messagi
 ## Universal links, App Links, and click-tracking
 
 {% alert note %}
-Click-tracking links are typically set up as part of your onboarding for email. If this was not completed during customer onboarding, reach out to your account manager for help.
+Click-tracking links are typically set up as part of your onboarding for email. If this was not completed during customer onboarding, contact your account manager for help.
 {% endalert %}
 
 Our email sending partners, SendGrid and SparkPost, use click-tracking domains to wrap all links and include URL parameters for click-tracking in Braze emails.

@@ -25,7 +25,7 @@ This feature allows users to control what specific first-party data is shared wi
 
 {% alert important %}
 **Audience Sync Pro disclaimer**<br>
-Braze Audience Sync to Snapchat is an Audience Sync Pro integration. For more information on this integration, reach out to your Braze account manager.
+Braze Audience Sync to Snapchat is an Audience Sync Pro integration. For more information on this integration, contact your Braze account manager.
 {% endalert %}
 
 ## Prerequisites 
@@ -42,6 +42,10 @@ You must ensure the following items are created, completed and/or accepted befor
 ## Integration 
 
 ### Step 1: Connect to Snapchat
+
+{% alert important %}
+You must have the ["Admin" permission]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#admin) to connect Snapchat to your Braze account.
+{% endalert %}
 
 In the Braze dashboard, go to **Partner Integrations** > **Technology Partners** and select **Snapchat**. Under Snapchat Audience Sync, select **Connect Snapchat**.
 

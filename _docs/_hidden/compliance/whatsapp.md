@@ -1,6 +1,6 @@
 ---
-nav_title: Compliance Documentation for WhatsApp Services
-article: Compliance Documentation for WhatsApp Services
+nav_title: Compliance documentation for WhatsApp services
+article_title: Compliance Documentation for WhatsApp Services
 permalink: /compliance_documentation_whatsapp/
 description: "Compliance documentation relating to the WhatsApp channel."
 page_order: 4

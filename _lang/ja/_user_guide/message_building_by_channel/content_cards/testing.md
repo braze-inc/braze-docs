@@ -26,9 +26,9 @@ channel:
 
 **テスト**タブからメッセージをプレビューすることも、ユーザーとして行うことができます。特定のユーザーやランダムなユーザーを選択するか、カスタムユーザーを作成できます。
 
-![[テスト] タブのコンテンツカードプレビュー]({% image_buster /assets/img/cc-user-preview.png %}){: style="max-width:80%;"}
+!["Test"タブのコンテンツカードプレビュー。]({% image_buster /assets/img/cc-user-preview.png %}){: style="max-width:80%;"}
 
-### テストチェックリスト
+### テスト・チェックリスト
 
 - 画像やメディアは期待通りに表示され、機能しているか？
 - リキッドは期待通りに機能しているか？Liquid が情報を返さない場合、[デフォルトの属性値]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#accounting-for-null-attribute-values)を考慮したか?
@@ -71,7 +71,7 @@ channel:
 
 6. **キャンペーン**ページに移動し、`campaign_id`を検索します。
 
-![[キャンペーン] ページでの campaign_id の検索]({% image_buster /assets/img_archive/cc_debug.png %}){: style="max-width:80%;"}
+![キャンペーンページでcampaign_id を検索する]({% image_buster /assets/img_archive/cc_debug.png %}){: style="max-width:80%;"}
 
 そこから、メッセージ設定とコンテンツを確認して、ユーザーが特定のコンテンツカードを見られない理由を詳しく調べることができます。
 

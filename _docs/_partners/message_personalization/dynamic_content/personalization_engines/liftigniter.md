@@ -10,13 +10,13 @@ search_tag: Partner
 
 # Liftigniter
 
-> LiftIgniter is a leading personalization platform helping enterprises transform their customer experiences through real-time personalization across every touchpoint.
+> [LiftIgniter](https://www.liftigniter.com/) is a leading personalization platform helping enterprises transform their customer experiences through real-time personalization across every touchpoint.
 
 _This integration is maintained by Liftigniter._
 
 ## About the integration
 
-The LiftIgniter and Braze integration leverage Connected Content to allow you to recommend interesting topics such as news articles, clothing, and other retail items and videos.
+The LiftIgniter and Braze integration uses Connected Content to allow you to recommend interesting topics such as news articles, clothing, and other retail items and videos.
 
 ## Prerequisites
 

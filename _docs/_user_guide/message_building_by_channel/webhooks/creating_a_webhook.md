@@ -1,5 +1,5 @@
 ---
-nav_title: Creating a Webhook
+nav_title: Creating a webhook
 article_title: Creating a Webhook
 page_order: 1
 channel:
@@ -20,7 +20,7 @@ To learn more about what webhooks are and how you can use them in Braze, check o
 
 ## Step 1: Choose where to build your message
 
-Not sure whether your message should be sent using a campaign or a Canvas? Campaigns are better for single, simple messaging campaigns, while Canvases are better for multi-step user journeys.
+Not sure whether your message should be sent using a campaign or a Canvas? Campaigns are better for single, targeted messaging campaigns, while Canvases are better for multi-step user journeys.
 
 {% tabs %}
 {% tab Campaign %}

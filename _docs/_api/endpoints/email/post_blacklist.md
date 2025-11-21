@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Blacklist Emails"
+nav_title: "POST: Blacklist emails"
 article_title: "POST: Blacklist Emails"
 search_tag: Endpoint
 page_order: 10

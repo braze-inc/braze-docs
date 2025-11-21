@@ -14,5 +14,5 @@ channel:
 
 > Dieser Artikel befasst sich mit den verschiedenen Komponenten Ihrer E-Mail-Berichterstattung und damit, wo diese im Dashboard zu finden sind.
 
-{% multi_lang_include campaign_analytics.md channel="email" %}
+{% multi_lang_include analytics/campaign_analytics.md channel="email" %}
 

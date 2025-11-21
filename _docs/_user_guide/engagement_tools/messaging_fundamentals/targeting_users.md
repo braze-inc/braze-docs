@@ -1,5 +1,5 @@
 ---
-nav_title: Targeting Users
+nav_title: Targeting users
 article_title: Targeting Users
 page_order: 9
 page_type: reference

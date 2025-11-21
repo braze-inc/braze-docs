@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Update User's Subscription Group Status"
+nav_title: "POST: Update users subscription group status"
 article_title: "POST: Update User's Subscription Group Status"
 search_tag: Endpoint
 page_order: 4
@@ -28,6 +28,10 @@ If you want to see examples or test this endpoint for **SMS and RCS Subscription
 ## Prerequisites
 
 To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-api-key/) with the `subscription.status.set` permission.
+
+{% alert note %}
+If you're interested in using this endpoint with [LINE subscription groups]({{site.baseurl}}/user_guide/message_building_by_channel/line/line_users/subscription_groups/), contact your customer success manager.
+{% endalert %}
 
 ## Rate limit
 

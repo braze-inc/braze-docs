@@ -121,7 +121,7 @@ This is a message from Braze! This is going to go to anyone who did not match th
 
 {% endraw %}
 
-{% details 完全な Liquid コード %}
+{% details Full Liquid code %}
 
 {% raw %}
 ```liquid
@@ -165,7 +165,7 @@ NULLまたはnil値は、カスタム属性の値が設定されていない場�
 ```
 {% endraw %} 
 
-![ヌルの'first name' 属性を使用した、Braze ダッシュボードのメッセージ例。]({% image_buster /assets/img/value_null.png %}){: style="max-width:60%;"}
+![Brazeダッシュボードで、nullの'名'属性を使ったメッセージの例。]({% image_buster /assets/img/value_null.png %}){: style="max-width:60%;"}
 
 {% raw %}
 ```liquid
@@ -200,7 +200,7 @@ NULL の属性値は、値型と厳密には関連付けられていないこと
 
 条件付きロジックを使用する場合、正しい構文を使用していることを確認するために、カスタム属性のデータ型を知っておく必要がある。ダッシュボードの**カスタム属性**ページから、カスタム属性に関連するデータタイプを探し、各データタイプに記載されている以下の例を参照する。
 
-![カスタム属性のデータ型を選択する。この例では、Favorite_Category属性のデータ型が文字列であることを示している。]({% image_buster /assets/img_archive/custom_attribute_data_type.png %}){: style="max-width:80%;"}
+![カスタム属性のデータ型を選択する。この例では、Favorite_Category 、データ型がstringの属性を示している。]({% image_buster /assets/img_archive/custom_attribute_data_type.png %}){: style="max-width:80%;"}
 
 {% alert tip %}
 文字列と配列には一重引用符が必要ですが、ブール値と整数には必要ありません。
@@ -230,7 +230,7 @@ NULL の属性値は、値型と厳密には関連付けられていないこと
 
 {% endraw %}
 
-また、整数に対しては、小なり（<）や大なり（>）といった[基本的な演算子も](https://shopify.dev/docs/themes/liquid/reference/basics/operators)使える：
+また、整数にはless than（(<) ）やgreater than（>）といった[基本的な演算子も](https://shopify.dev/docs/themes/liquid/reference/basics/operators)使える：
 
 {% raw %}
 

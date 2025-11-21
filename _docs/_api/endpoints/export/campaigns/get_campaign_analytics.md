@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: Export Campaign Analytics"
+nav_title: "GET: Export campaign analytics"
 article_title: "GET: Export Campaign Analytics"
 search_tag: Endpoint
 page_order: 4
@@ -51,8 +51,6 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/data_s
 ### Multichannel response
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "data" : [
@@ -154,8 +152,6 @@ Authorization: Bearer YOUR-REST-API-KEY
 ### Multivariate response
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "data" : [
         {

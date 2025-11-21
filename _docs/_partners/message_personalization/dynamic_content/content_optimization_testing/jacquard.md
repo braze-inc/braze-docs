@@ -3,7 +3,7 @@ nav_title: Jacquard
 article_title: Jacquard
 alias: /partners/jacquard/
 page_order: 1
-description: "This reference article outlines the partnership between Braze and Jacquard Dynamic Optimisation that leverages Braze Currents and Connected Content to collect click tracking information from your subscribers through webhooks. Jacquard then ties those events back to your language variants for real-time language optimization."
+description: "This reference article outlines the partnership between Braze and Jacquard Dynamic Optimisation that uses Braze Currents and Connected Content to collect click tracking information from your subscribers through webhooks. Jacquard then ties those events back to your language variants for real-time language optimization."
 page_type: partner
 search_tag: Partner
 ---
@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [Jacquard](https://www.jacquard.com/) brings together artificial intelligence, computational linguistics, and a spirit of customer-centricity to help deploy brand language, at scale, across channels that are customized to your brand voice.
 
-Dynamic Optimisation, powered by Jacquard X, leverages Braze Currents and Connected Content to collect click tracking information from your subscribers through webhooks. Jacquard then ties those events back to your language variants for real-time language optimization. 
+Dynamic Optimisation, powered by Jacquard X, uses Braze Currents and Connected Content to collect click tracking information from your subscribers through webhooks. Jacquard then ties those events back to your language variants for real-time language optimization. 
 
 ## Prerequisites
 
@@ -27,7 +27,7 @@ Dynamic Optimisation, powered by Jacquard X, leverages Braze Currents and Connec
 
 ### Step 1: Request Jacquard Amazon S3 credentials
 
-You'll need Jacquard to set up a dedicated Amazon S3 bucket to receive your click tracking events from Braze. Reach out to your Jacquard customer success manager to start this process. When the bucket is created, you will be provided unique credentials to create your Current. 
+You'll need Jacquard to set up a dedicated Amazon S3 bucket to receive your click tracking events from Braze. Contact your Jacquard customer success manager to start this process. When the bucket is created, you will be provided unique credentials to create your Current. 
 
 ### Step 2: Create Current
 
@@ -40,14 +40,14 @@ You'll need Jacquard to set up a dedicated Amazon S3 bucket to receive your clic
 
 ### Step 3: Request to remove personally identifiable information (PII).
 
-Next, reach out to your Braze account team to ensure no personally identifiable information is transmitted to Jacquard.
+Next, contact your Braze account team to ensure no personally identifiable information is transmitted to Jacquard.
 
 By default, the Current will include certain PII attributes like email and address. Jacquard cannot and will not receive PII, so it's critical you make a request to your Braze account team to turn this off for any event data passed along to Jacquard.
 
 ### Step 4: Jacquard X code snippets 
 
-Reach out to your Jacquard account team for the required code snippets.
+Contact your Jacquard account team for the required code snippets.
 
-These snippets leverage [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content) and, after they're placed in your emails, will dynamically pull in language and a tracking pixel so Jacquard can optimize your language in real-time using Jacquard X.
+These snippets use [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content) and, after they're placed in your emails, will dynamically pull in language and a tracking pixel so Jacquard can optimize your language in real-time using Jacquard X.
 
 

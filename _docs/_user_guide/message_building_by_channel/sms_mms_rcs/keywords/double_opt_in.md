@@ -1,5 +1,5 @@
 ---
-nav_title: Double Opt-In
+nav_title: Double opt-in
 article_title: Double Opt-In
 description: "This reference article covers the double opt-in feature, and explains how to enable the feature, select opt-in keywords and reply messages, and enter users into the double opt-in workflow through subscription updates that occur in REST API, SDK, and preference center updates."
 page_type: reference
@@ -12,7 +12,7 @@ channel:
 
 # Double opt-in
 
-> The double opt-in feature allows you to require users to explicitly confirm their opt-in intent before they can receive SMS, MMS, or RCS messages. This helps you tailor your focus to users who are likely to be engaged or are engaged with the channel, and follow compliance best practices.
+> The double opt-in feature requires users to explicitly confirm their opt-in intent before they can receive SMS, MMS, or RCS messages. This focuses messaging on engaged users and supports compliance best practices.
 
 When double opt-in is turned on, users are sent a message that asks for their explicit consent before they can be messaged by your campaigns or Canvases. 
 

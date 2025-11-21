@@ -1,5 +1,5 @@
 ---
-nav_title: Segment Data
+nav_title: Segment data
 article_title: Viewing and Understanding Segment Data
 page_order: 4
 page_type: reference

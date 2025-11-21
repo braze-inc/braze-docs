@@ -1,5 +1,5 @@
 ---
-nav_title: "SMS Message Sending"
+nav_title: "SMS message sending"
 article_title: SMS Message Sending Overview
 page_order: 4
 alias: /sms_message_sending/

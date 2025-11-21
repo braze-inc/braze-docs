@@ -1,5 +1,5 @@
 ---
-nav_title: "リッチプッシュ通知の作成"
+nav_title: "リッチプッシュ通知を作成する"
 article_title: "iOSのリッチプッシュ通知の作成"
 page_order: 3
 page_type: tutorial
@@ -59,7 +59,7 @@ Braze はベストプラクティスとして、モバイルプッシュ通知�
 </table>
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 }
 
-![ロック画面に表示されるプッシュ通知の例。展開した場合と、デバイスがアクティブな場合。]({% image_buster /assets/img_archive/push_ios_notification_states.png %})
+![ロック画面、展開時、デバイスがアクティブなときに表示されるプッシュ通知の例。]({% image_buster /assets/img_archive/push_ios_notification_states.png %})
 
 {% alert note %}
 プッシュ通知の拡大には2:1のアスペクト比を推奨しているが、ほぼすべてのアスペクト比に対応している。画像は常に通知の幅いっぱいに表示され、高さはそれに応じて調整される。
@@ -70,43 +70,43 @@ Braze はベストプラクティスとして、モバイルプッシュ通知�
 コンテンツを作成する際には、テキストの表示量に影響する可能性のある以下のシナリオを考慮すること。
 
 {% tabs %}
-{% tab タイミング %}
+{% tab Timing %}
 
 ユーザーがプッシュ通知に反応したタイミングに応じて、タイムスタンプではタイトルテキストを短くすることができます。
 
-![タイムスタンプ "now"、タイトル文字数35のプッシュ通知例]({% image_buster/assets/img_archive/push_ios_timing_35.png %})
+![タイムスタンプ "now"、タイトル文字数35のプッシュ通知例。]({% image_buster/assets/img_archive/push_ios_timing_35.png %})
 <br>タイトルの文字数：**35**
 
-![タイムスタンプが "3h ago"、タイトル文字数が33のプッシュ通知例]({% image_buster/assets/img_archive/push_ios_timing_33.png %})
+![タイムスタンプが "3h ago"、タイトル文字数が33のプッシュ通知例。]({% image_buster/assets/img_archive/push_ios_timing_33.png %})
 <br>タイトルの文字数：**33**
 
-![タイムスタンプが "Yesterday, 8:37 AM"、タイトル文字数が22のプッシュ通知例]({% image_buster/assets/img_archive/push_ios_timing_22.png %})
+![タイムスタンプが "Yesterday, 8:37 AM"、タイトル文字数が22のプッシュ通知例。]({% image_buster/assets/img_archive/push_ios_timing_22.png %})
 <br>タイトルの文字数：**22**
 
 {% endtab %}
-{% tab 画像 %}
+{% tab Images %}
 
 画像がある場合、本文は1行につき約10文字短くなる。
 
-![画像なし、本文文字数179のプッシュ通知例]({% image_buster/assets/img_archive/push_ios_images_179.png %})
+![画像なし、本文文字数179のプッシュ通知例。]({% image_buster/assets/img_archive/push_ios_images_179.png %})
 <br>本文の文字数: **179**
 
-![画像と本文の文字数が154のプッシュ通知例]({% image_buster/assets/img_archive/push_ios_images_154.png %})
+![画像、本文文字数154のプッシュ通知例。]({% image_buster/assets/img_archive/push_ios_images_154.png %})
 <br>本文の文字数: **154**
 
 {% endtab %}
-{% tab 中断レベル %}
+{% tab Interruption level %}
 
 iOS15では、Time Sensitive とCritical の表記は、タイトルをタイムスタンプのない新しい行に押し下げ、少しスペースを与える。
 
-![]({% image_buster/assets/img_archive/push_ios_interruption_level_35.png %}) 「Time Sensitive」または「Critical」の表記がなく、タイトル文字数が35のプッシュ通知例。
+![タイトルの文字数は35である。]({% image_buster/assets/img_archive/push_ios_interruption_level_35.png %})
 <br>タイトルの文字数：**35**
 
-![「Time Sensitive」の表記があり、タイトル文字数が 39 のプッシュ通知例。]({% image_buster/assets/img_archive/push_ios_interruption_level_39.png %})
+![プッシュ通知例：「Time Sensitive」、タイトル文字数39。]({% image_buster/assets/img_archive/push_ios_interruption_level_39.png %})
 <br>タイトルの文字数：**39**
 
 {% endtab %}
-{% tab もっと見る %}
+{% tab More %}
 
 以下の詳細は、テキストの切り捨てにも影響します。
 
@@ -127,17 +127,17 @@ iOS15では、Time Sensitive とCritical の表記は、タイトルをタイム
 
 メッセージのコンポーザーにある**Rich Notification Media**フィールドに画像、GIF、オーディオ、ビデオファイルを追加する。コンテンツファイルを追加する方法については、「[要件](#requirements)」を参照してください。
 
-![プッシュ通知のサマリーテキストの例。]({% image_buster /assets/img_archive/rich_notification_add_image.png %}){: style="max-width:70%;" }
+![プッシュ通知の要約文の例。]({% image_buster /assets/img_archive/rich_notification_add_image.png %}){: style="max-width:70%;" }
 
 このメッセージは、iOS 10を搭載したデバイスを持っているユーザーだけに送信するよう制限することもできる。iOS10にアップグレードしていないユーザーの場合、「**リッチ通知をサポートするデバイスにのみ送信**」のチェックを外しておくと、リッチコンテンツを含まないテキストのみの通知として表示される。
 
-![画像を追加したり、画像URLを入力したりできる拡張通知画像セクション。]({% image_buster /assets/img_archive/rich_notification_ios10_select.png %}){: style="max-width:70%;" }
+![画像を追加したり、画像のURLを入力したりできる。]({% image_buster /assets/img_archive/rich_notification_ios10_select.png %}){: style="max-width:70%;" }
 
-### ステップ 3:キャンペーンの作成を続ける
+### ステップ 3: キャンペーンの作成を続ける
 
 リッチ通知コンテンツがダッシュボードにアップロードされたら、[キャンペーンのスケジュールを続行できます]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#schedule-push-campaign)。
 
 プッシュ通知を受信したユーザーは、プッシュメッセージを長押しして画像を拡大できます。
 
-![プッシュ通知を受信したユーザーがメッセージを長押しすると、「Hello!」という拡大画像が表示されます。]({% image_buster /assets/img_archive/rich_notification_ios.gif %}){: style="max-width:50%;" }
+![プッシュ通知を受け取ったユーザーがメッセージを強く押すと、"Hello!"と書かれた拡大画像が表示される。]({% image_buster /assets/img_archive/rich_notification_ios.gif %}){: style="max-width:50%;" }
 

@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: Export KPIs for Daily App Uninstalls by Date"
+nav_title: "GET: Export KPIs for daily app uninstalls by date"
 article_title: "GET: Export KPIs for Daily App Uninstalls by Date"
 search_tag: Endpoint
 page_order: 4
@@ -46,8 +46,6 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/kpi/uninstalls/d
 ## Response
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "data" : [

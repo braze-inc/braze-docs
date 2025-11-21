@@ -98,7 +98,7 @@ Before you can use event property segmentation, you'll need it enabled in Braze.
 
 ### Braze data points
 
-The custom event sent from VWO to Braze&#8212;including any event properties enabled for segmentation&#8212;will consume data points in your Braze instance.
+The custom event sent from VWO to Braze&#8212;including any event properties enabled for segmentation&#8212;will log data points in your Braze instance.
 
 ### Limitations
 

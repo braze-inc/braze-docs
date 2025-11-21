@@ -1,5 +1,5 @@
 ---
-nav_title: Bot Filtering for Emails
+nav_title: Bot filtering for emails
 article_title: Bot Filtering for Emails
 page_type: reference
 page_order: 1
@@ -21,6 +21,10 @@ Starting July 9, 2025, all new workspaces created will have the bot filtering se
 Braze has a detection system that employs multiple inputs to identify suspected bot clicks, also referred to as non-human interactions (NHI). Bot clicks can distort your email engagement metrics by artificially inflating click rates. This approach allows us to differentiate between genuine human interactions and suspected bot activity to maintain the integrity of click engagement metrics and insights.
 
 ## Metrics affected by bot clicks
+
+{% alert note %}
+Bot filtering actively blocks suspected automated clicks to improve the accuracy of your engagement metrics. However, scanners and bots continually evolve over time, so Braze can't guarantee the removal of all non-human interactions.
+{% endalert %}
 
 The following Braze metrics can be affected by bot clicks:
 

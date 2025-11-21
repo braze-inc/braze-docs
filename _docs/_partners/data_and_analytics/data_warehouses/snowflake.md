@@ -40,7 +40,7 @@ Before you can use this feature, you'll need to complete the following:
 
 | Requirement | Description |
 | ----------- | ----------- |
-| Braze access | To access this feature in Braze, you'll need to reach out to your Braze account or customer success manager. |
+| Braze access | To access this feature in Braze, you'll need to contact your Braze account or customer success manager. |
 | Snowflake account | A Snowflake account with `admin` permissions. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -115,7 +115,7 @@ When possible, breaking changes will be preceded by an announcement and a migrat
 
 ### Snowflake regions
 
-Braze currently hosts all user-level data in the Snowflake AWS US East-1 and EU-Central (Frankfurt) regions. For users outside of those regions, Braze can provide data sharing to joint customers who are hosting their Snowflake infrastructure across any AWS, Azure, or GCP region.
+Braze currently hosts all user-level data in the Snowflake AWS US East-1, EU-Central (Frankfurt), AP-Southeast-2 (Sydney) and AP-Southeast-3 (Jakarta) regions. For users outside of those regions, Braze can provide data sharing to joint customers who are hosting their Snowflake infrastructure across any AWS, Azure, or GCP region.
 
 ### Data retention
 

@@ -1,6 +1,6 @@
 ---
-nav_title: e コマースのユースケース
-article_title: e コマースのユースケース
+nav_title: eコマースのユースケース
+article_title: eコマースのユースケース
 alias: /ecommerce_use_cases/
 page_order: 4
 description: "このリファレンス記事では、e コマースのマーケター向けにカスタマイズされた、事前構築済みのさまざまな Braze テンプレートについて説明し、必要な戦略を簡単に実施できるようにします。"
@@ -21,7 +21,7 @@ toc_headers: h2
 1. [**メッセージング**] > [**キャンバス**] に進みます。
 2. [**キャンバスを作成** > [**キャンバステンプレートを使用**] を選択します。
 3. 使用するテンプレートの [**Braze テンプレート**] タブを参照します。テンプレートの名前を選択すると、テンプレートをプレビューできます。
-4. 使用するテンプレートの [**テンプレートを適用**] を選択します。<br><br>![[Braze テンプレート] タブが開いており、最近使用したテンプレートと選択可能な Braze テンプレートのリストが表示されている [キャンバステンプレート] ページ。]({% image_buster /assets/img_archive/apply_template.png %}){: style="max-width:80%;"}
+4. 使用するテンプレートの [**テンプレートを適用**] を選択します。<br><br>!["Canvas テンプレート s" page 開封は" s" tab で、最近使用したテンプレートと選択可能なBraze テンプレートの一覧を表示します。]({% image_buster /assets/img_archive/apply_template.png %}){: style="max-width:80%;"}
 
 ## eコマーステンプレート
 
@@ -34,7 +34,7 @@ toc_headers: h2
 
 製品を閲覧したが、カートへの追加や注文を行わなかったユーザーにエンゲージするには、**閲覧の放棄**テンプレートを使用します。
 
-![適用された「閲覧の放棄」キャンバステンプレートで [エントリルール] が展開されている。]({% image_buster /assets/img_archive/abandoned_browse.png %})
+![アプリが"Abandoned Browse"拡張された"Entry Rules"を含むキャンバステンプレート。]({% image_buster /assets/img_archive/abandoned_browse.png %})
 
 ### 設定
 
@@ -49,7 +49,7 @@ toc_headers: h2
         - コンバージョンの期限:3日間 
 - エントリスケジュール 
     - ユーザーが `ecommerce.product_viewed` イベントを実行する場合はアクションベース
-    - 開始時刻は、キャンバステンプレートを作成するときです<br><br>![キャンバスの [アクションベースのオプション]。]({% image_buster /assets/img/ecommerce/abandoned_browse_entry.png %})<br><br> 
+    - 開始時刻は、キャンバステンプレートを作成するときです<br><br>!["アクションベースのオプションとクォート;キャンバス用。]({% image_buster /assets/img/ecommerce/abandoned_browse_entry.png %})<br><br> 
 - ターゲットオーディエンス 
     - エントリオーディエンス 
         - メールが**空白ではない**
@@ -57,7 +57,7 @@ toc_headers: h2
     - 入力コントロール
         - キャンバスの完全な期間が完了した後で、ユーザーはこのキャンバスに再エントリできます。
     - 終了条件 
-        - `ecommerce.cart_updated`、`ecommerce.checkout_started`、または `ecommerce.order_placed` を実行する<br><br>![キャンバスのエントリコントロールと終了条件。]({% image_buster /assets/img/ecommerce/abandoned_browse_entry_exit.png %})<br><br> 
+        - `ecommerce.cart_updated`、`ecommerce.checkout_started`、または `ecommerce.order_placed` を実行する<br><br>![キャンバスの入力コントロールs と終了基準。]({% image_buster /assets/img/ecommerce/abandoned_browse_entry_exit.png %})<br><br> 
 - 送信設定 
     - 登録済みまたはオプトイン済みのユーザー 
 - 遅延ステップ
@@ -97,7 +97,7 @@ toc_headers: h2
 
 カートに製品を追加したが、購入手続きまたは注文に進まなかった顧客からの潜在的な売上の損失に対応するには、**カート放棄**テンプレートを使用します。 
 
-![適用された「カート放棄」キャンバステンプレートで [エントリルール] が展開されている。]({% image_buster /assets/img_archive/abandoned_cart.png %})
+![アプリが"Abandoned Cart"拡張された"Entry Rules"を含むキャンバステンプレート。]({% image_buster /assets/img_archive/abandoned_cart.png %})
 
 ### 設定
 
@@ -112,7 +112,7 @@ toc_headers: h2
         - コンバージョンの期限:3日間 
 - エントリスケジュール 
     - ユーザーが (ドロップダウンにある) [**カート更新済みイベントの実行**] をトリガーしたときのアクションベースのトリガー
-    - 開始時刻は、キャンバステンプレートを作成するときです<br><br>![キャンバスの [アクションベースのオプション]。]({% image_buster /assets/img/ecommerce/abandoned_cart_entry.png %})<br><br> 
+    - 開始時刻は、キャンバステンプレートを作成するときです<br><br>!["アクションベースのオプションとクォート;キャンバス用。]({% image_buster /assets/img/ecommerce/abandoned_cart_entry.png %})<br><br> 
 - ターゲットオーディエンス 
     - エントリオーディエンス 
         - これらのアプリを**1回以上**使用したことがある 
@@ -120,7 +120,7 @@ toc_headers: h2
     - 入力コントロール
         - ユーザーのキャンバスへのエントリが即時に可能になります。
     - 終了条件 
-        - `ecommerce.cart_updated`、`ecommerce.checkout_started`、または `ecommerce.order_placed` を実行する<br><br>![キャンバスのエントリコントロールと終了条件。]({% image_buster /assets/img/ecommerce/abandoned_cart_entry_exit.png %})<br><br> 
+        - `ecommerce.cart_updated`、`ecommerce.checkout_started`、または `ecommerce.order_placed` を実行する<br><br>![キャンバスの入力コントロールs と終了基準。]({% image_buster /assets/img/ecommerce/abandoned_cart_entry_exit.png %})<br><br> 
 - 送信設定 
     - 登録済みまたはオプトイン済みのユーザー 
 - 遅延ステップ
@@ -176,7 +176,7 @@ Shopifyを使用する場合は、次のLiquidテンプレートを使用して�
 
 {% raw %}
 ```liquid
-{{context.source}}/checkouts/cn/{{context.cart_id}}
+{{context.${source}}}/checkouts/cn/{{context.${cart_id}}} 
 ```
 {% endraw %}
 
@@ -184,7 +184,7 @@ Shopifyを使用する場合は、次のLiquidテンプレートを使用して�
 
 **購入手続き放棄**テンプレートを使用して、購入手続きプロセスを開始したが発注前に離脱した顧客をターゲットにします。 
 
-![適用された「購入手続き放棄」キャンバステンプレートで [エントリルール] が展開されている。]({% image_buster /assets/img_archive/abandoned_checkout.png %})
+![アプリが"放棄されたCheckout"拡張された"Entry Rules"を含むキャンバステンプレート。]({% image_buster /assets/img_archive/abandoned_checkout.png %})
 
 ### 設定
 
@@ -200,7 +200,7 @@ Shopifyを使用する場合は、次のLiquidテンプレートを使用して�
         - コンバージョンの期限:3日間 
 - エントリスケジュール 
     - ユーザが`ecommerce.checkout_started` イベントを実行したときのアクションベースのトリガ
-    - 開始時刻は、キャンバステンプレートを作成するときです<br><br>![キャンバスの [アクションベースのオプション]。]({% image_buster /assets/img/ecommerce/abandoned_checkout_entry.png %})
+    - 開始時刻は、キャンバステンプレートを作成するときです<br><br>!["アクションベースのオプションとクォート;キャンバス用。]({% image_buster /assets/img/ecommerce/abandoned_checkout_entry.png %})
 - ターゲットオーディエンス 
     - エントリオーディエンス 
         - これらのアプリを**1回以上**使用したことがある 
@@ -208,7 +208,7 @@ Shopifyを使用する場合は、次のLiquidテンプレートを使用して�
     - 入力コントロール
         - ユーザーのキャンバスへのエントリが即時に可能になります。
         - 終了条件 
-            - `ecommerce.order_placed` イベントを実行します<br><br>![キャンバスのエントリコントロールと終了条件。]({% image_buster /assets/img/ecommerce/abandoned_checkout_entry_exit.png %})<br><br>
+            - `ecommerce.order_placed` イベントを実行します<br><br>![キャンバスの入力コントロールs と終了基準。]({% image_buster /assets/img/ecommerce/abandoned_checkout_entry_exit.png %})<br><br>
 - 送信設定 
     - 登録済みまたはオプトイン済みのユーザー 
 - 遅延ステップ
@@ -255,13 +255,13 @@ Shopifyを使用する場合は、次のLiquidテンプレートを使用して�
 
 ## 注文確認とフィードバック調査
 
-注文の成功を確認し、顧客満足度を高めるには、**注文確認とフィードバック調査**テンプレートを使用します。
+**注文確認&フィードバック 調査**テンプレートを使用して、注文の成功を確認し、顧客がアクションを満たすようにします。
 
-![適用された「注文確認」キャンバステンプレートで [エントリルール] が展開されている。]({% image_buster /assets/img_archive/order_confirmation_feedback.png %})
+![アプリは"Order confirm"Canvas テンプレートは、expanded "Entry Rules"です。]({% image_buster /assets/img_archive/order_confirmation_feedback.png %})
 
 ### 設定
 
-キャンバスページで [**キャンバステンプレートを使用**] > [**Braze テンプレート**] を選択し、**注文確認とフィードバック調査**テンプレートを適用します。 
+キャンバスページで、**キャンバステンプレートを使用**>**Braze テンプレートs**を選択し、**オーダーコンファメーション&フィードバック 調査**をアプリします。 
 
 #### デフォルト設定
 
@@ -273,7 +273,7 @@ Shopifyを使用する場合は、次のLiquidテンプレートを使用して�
         - コンバージョンの期限:10日間 
 - エントリスケジュール 
     - ユーザが`ecommerce.cart_updated` イベントを実行したときのアクションベースのトリガ
-    - 開始時刻は、キャンバステンプレートを作成するときです<br><br>![キャンバスの [アクションベースのオプション]。]({% image_buster /assets/img/ecommerce/feedback_entry.png %})<br><br>
+    - 開始時刻は、キャンバステンプレートを作成するときです<br><br>!["アクションベースのオプションとクォート;キャンバス用。]({% image_buster /assets/img/ecommerce/feedback_entry.png %})<br><br>
 - ターゲットオーディエンス 
     - エントリオーディエンス 
         - これらのアプリを**1回以上**使用したことがある 
@@ -281,7 +281,7 @@ Shopifyを使用する場合は、次のLiquidテンプレートを使用して�
     - 入力コントロール
         - ユーザーのキャンバスへのエントリが即時に可能になります。
     - 終了条件 
-        - 該当しない<br><br>![キャンバスの追加のフィルターとエントリコントロール。]({% image_buster /assets/img/ecommerce/feedback_entry_exit.png %})<br><br>
+        - 該当しない<br><br>![キャンバスの追加フィルターsとエントリ コントロールs。]({% image_buster /assets/img/ecommerce/feedback_entry_exit.png %})<br><br>
 - 送信設定 
     - 登録済みまたはオプトイン済みのユーザー 
 - メッセージステップ 
@@ -351,7 +351,7 @@ e コマースイベントは、[推奨イベント]({{site.baseurl}}/recommende
 
 **Ecommerce Source** および**Total Revenue** などのeCommerce フィルタを使用して、セグメンテータ内の**Ecommerce** セクションに移動して、ユーザをeCommerce フィルタでセグメント化します。
 
-![「e コマース」フィルターを示すセグメントフィルターのドロップダウン。]({% image_buster /assets/img_archive/ecommerce_filters.png %}){: style="max-width:80%"}
+![セグメントフィルターは"Ecommerce"フィルター sでドロップダウンします。]({% image_buster /assets/img_archive/ecommerce_filters.png %}){: style="max-width:80%"}
 
 {% alert important %}
 購入イベントは最終的に非推奨になり、[eCommerce 推奨イベント]({{site.baseurl}}/user_guide/data/custom_data/recommended_events/) に置き換えられます。この置き換えが行われると、セグメントフィルターでは、購入動作でデータが入力されることがなくなります。購入イベントの完全なリストについては、[購入イベントの記録]({{site.baseurl}}/user_guide/data/custom_data/purchase_events/#logging-purchase-events)を参照してください。
@@ -364,7 +364,7 @@ e コマースイベントは、[推奨イベント]({{site.baseurl}}/recommende
 ## 分析
 
 {% alert note %}
-現時点では、Shopify 統合は、Braze [購入イベント]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events#purchase-events) の入力をサポートしていません。その結果、購入フィルタ、Liquid タグ、アクションベースのトリガ、およびアナリティクスでは、ecommerce.order_placed イベントを使用する必要があります。
+現時点では、Shopify 統合は、Braze [購入イベント]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events#purchase-events) の入力をサポートしていません。そのため、購入フィルターs、液体タグs、アクションベースのトリガーed、および分析はecommerce.order_placedイベントを使用する必要があります。
 {% endalert %}
 
 統合でサポートされているイベントを誰が実行したかに基づいて[カスタムイベントレポート]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events#analytics) を作成するには、特定の[イベント名]({{site.baseurl}}/shopify_data_features/) を指定します。

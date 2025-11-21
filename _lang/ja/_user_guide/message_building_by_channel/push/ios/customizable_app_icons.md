@@ -1,5 +1,5 @@
 ---
-nav_title: "カスタムアプリアイコン機能 (iOS)"
+nav_title: "カスタムアプリアイコン機能(iOS)"
 article_title: カスタムアプリアイコン機能
 page_order: 7
 page_type: reference

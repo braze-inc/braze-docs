@@ -19,7 +19,7 @@ tool:
 
 ### 個別テンプレート
 
-![[複製] オプションを含むドロップダウンメニュー。]({% image_buster /assets/img/template_duplicate_cog.png %}){: style="float:right;max-width:15%;margin-left:15px;"}
+![重複オプションを含むドロップダウンメニュー。]({% image_buster /assets/img/template_duplicate_cog.png %}){: style="float:right;max-width:15%;margin-left:15px;"}
 
 個々のテンプレートを複製するには、個々のテンプレートの歯車アイコン <i class="fas fa-cog"></i> をクリックし、ドロップダウンメニューから [**複製**] を選択します。
 <br><br>
@@ -38,11 +38,11 @@ tool:
 
 {% endraw %}
 
-![テンプレートの最終編集時刻でソートされた 3 つのテンプレート。リストの先頭にコピーされたテンプレートが表示されている。]({% image_buster /assets/img/duplicate_multiple_template.gif %})
+![テンプレートsが最後に編集された時刻でソートされ、コピーされたテンプレートが一覧の一番上に表示されます。]({% image_buster /assets/img/duplicate_multiple_template.gif %})
 
 ## テンプレートのアーカイブ
 
-![設定ドロップダウンメニューが拡張され、3つのオプションが表示される：[アーカイブ]、[複製]、[ワークスペースにコピー]。[アーカイブ] オプションがハイライトされている。]({% image_buster /assets/img/template_archive_cog.png %}){: style="float:right;max-width:20%;margin-left:15px;"}
+![拡張設定] ドロップダウンメニューには次の3つのオプションが表示されます。" Archive" " Duplicate" および" Copy to ワークスペース" with " Archive" オプションが強調表示されています。]({% image_buster /assets/img/template_archive_cog.png %}){: style="float:right;max-width:20%;margin-left:15px;"}
 
 個々のテンプレートをアーカイブするには、テンプレートグリッド画面の設定アイコンを選択し、[**アーカイブ**] を選択します。テンプレートがアーカイブされるとき、以下の異なるシナリオに注意すること：
 
@@ -52,7 +52,7 @@ tool:
 
 複数のテンプレートをアーカイブするには、アーカイブする各テンプレートの横にあるチェックボックスを選択します。複数のテンプレートを選択したら、[**アーカイブ**] を選択します。テンプレートグリッドの [**表示**] で [**アーカイブ済み**] を選択すると、アーカイブされたテンプレートを見つけることができます。
 
-![2 つのテンプレートが選択されており、アーカイブのオプションを含むツールバーがある [保存されたドラッグ＆ドロップメールテンプレート] セクション。]({% image_buster /assets/img/archive_multiple_template.png %}){: style="max-width:60%;"}
+![保存されたドロップ& 2 つの選択されたテンプレートとアーカイブオプションを含むツールバーを示す、電子メールテンプレートのドロップセクション。]({% image_buster /assets/img/archive_multiple_template.png %}){: style="max-width:60%;"}
 
 {% alert important %}
 現在、[リンクテンプレート]({{site.baseurl}}/user_guide/message_building_by_channel/email/link_templates/#link-templates)をアーカイブすることはできません。

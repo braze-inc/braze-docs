@@ -1,5 +1,5 @@
 ---
-nav_title: "Custom App Icon Feature (iOS)"
+nav_title: "Custom app icon feature (iOS)"
 article_title: Custom App Icon Feature
 page_order: 7
 page_type: reference

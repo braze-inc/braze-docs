@@ -1,5 +1,5 @@
 ---
-nav_title: "API Overview"
+nav_title: "API overview"
 article_title: API Overview
 page_order: 2.1
 description: "This reference article covers the API basics including what a REST API is, the terminology, and an overview of API keys."
@@ -147,7 +147,7 @@ API key permissions are permissions you can assign a user or group to limit thei
 | `sends.id.create` | [`/sends/id/create`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_create_send_ids/) | Create send ID for message blast tracking. |
 | `campaigns.url_info.details` | [`/campaigns/url_info/details`]({{site.baseurl}}) | Query for URL details of a specific message variation within a campaign. |
 | `transactional.send` | [`/transactional/v1/campaigns/{campaign_id}/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_transactional_message/) | Allows for ability to send transactional messaging using the Transactional messaging endpoint. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% endtab %}
 {% tab Canvas %}
@@ -326,7 +326,7 @@ To view the details of an API key, hover over the key and select <i class="fa-so
 
 ![The list of API key permissions in the Braze dashboard.]({% image_buster /assets/img_archive/view-api-key.png %})
 
-Note when [deleting a user]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/adding_users_to_your_dashboard/), the associated API keys a user created won't be deleted. To delete a key, hover over the key and select <i class="fa-solid fa-trash-can" alt="Delete"></i> **Delete**.
+Note when [deleting a user]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/), the associated API keys a user created won't be deleted. To delete a key, hover over the key and select <i class="fa-solid fa-trash-can" alt="Delete"></i> **Delete**.
 
 ![An API key named 'Last Seen' with the trash icon highlighted, showing 'Delete'.]({% image_buster /assets/img_archive/api-key-options.png %}){: style="max-width:30%;"}
 

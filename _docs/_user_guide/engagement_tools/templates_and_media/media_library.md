@@ -69,10 +69,6 @@ For additional resources, see [Push image and text specifications]({{site.baseur
 
 Videos that are uploaded to the media library can only be used in WhatsApp messages for now. For more information, refer to [Creating a Whatsapp Message]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create/#outbound-messages).
 
-{% alert important %}
-Adding videos to WhatsApp messages is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
-{% endalert %}
-
 ## Generating images with BrazeAI<sup>TM</sup> {#generate-ai}
 
 {% multi_lang_include brazeai/generative_ai/about_images.md %}

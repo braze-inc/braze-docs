@@ -1,5 +1,5 @@
 ---
-nav_title: "Email Object"
+nav_title: "Email object"
 article_title: Email Messaging Object
 page_order: 5
 page_type: reference

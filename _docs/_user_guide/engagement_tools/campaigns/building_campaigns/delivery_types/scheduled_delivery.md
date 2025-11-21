@@ -1,5 +1,5 @@
 ---
-nav_title: Scheduled Delivery
+nav_title: Scheduled delivery
 article_title: Scheduled Delivery
 page_order: 0
 page_type: reference

@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: Query Hard Bounced Emails"
+nav_title: "GET: Query hard bounced emails"
 article_title: "GET: Query Hard Bounced Emails"
 search_tag: Endpoint
 page_order: 1
@@ -53,8 +53,6 @@ curl --location --request GET 'https://rest.iad-01.braze.com/email/hard_bounces?
 Entries are listed in descending order.
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "emails": [
     {

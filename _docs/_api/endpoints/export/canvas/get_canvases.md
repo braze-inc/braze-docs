@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: Export Canvas List"
+nav_title: "GET: Export Canvas list"
 article_title: "GET: Export Canvas List"
 search_tag: Endpoint
 page_order: 4
@@ -50,8 +50,6 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/list?page
 ## Response
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "canvases" : [
   	{

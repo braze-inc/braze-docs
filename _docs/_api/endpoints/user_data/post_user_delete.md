@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Delete Users"
+nav_title: "POST: Delete users"
 article_title: "POST: Delete Users"
 search_tag: Endpoint
 page_order: 5
@@ -105,8 +105,6 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/delete' \
 ## Response
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
 {
   "deleted" : (required, integer) number of user IDs queued for deletion
 }

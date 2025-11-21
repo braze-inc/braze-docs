@@ -14,7 +14,7 @@ Tool:
 
 > Using the Braze Audience Sync to Facebook, you can elect to add your own users' data from your Braze integration to Facebook custom audiences to deliver advertisements based on behavioral triggers, segmentation, and more.
 
-Any criteria you'd typically use to trigger a message (push, email, SMS, or webhook) in a Braze Canvas based on your user data can now be used to trigger an ad to that user in Facebook using custom audiences. For example, when you configure an Audience Sync to Facebook, you will be able to use a wide variety of first-party fields like email, phone, first name, and last name.
+Any criteria you'd typically use to trigger a message (push, email, SMS, or webhook) in a Braze Canvas based on your user data can now be used to trigger an ad to that user in Facebook using custom audiences. For example, when you configure an Audience Sync to Facebook, you are able to use a wide variety of first-party fields like email, phone, first name, and last name.
 
 **Common use cases for syncing custom audiences include**:
 
@@ -46,11 +46,15 @@ You'll need to confirm that you have the following items created and completed b
 
 ### Step 1: Connect to Facebook
 
+{% alert important %}
+You must have the ["Admin" permission]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#admin) to connect Facebook to your Braze account.
+{% endalert %}
+
 In the Braze dashboard, go to **Partner Integrations** > **Technology Partners** and select **Facebook**. Under Facebook Audience Export, select **Connect Facebook**.
 
 ![Facebook technology page in Braze that includes an Overview section and Facebook Audience Export section with the Connected Facebook button.]({% image_buster /assets/img/fb/afb_1.png %}){: style="max-width:85%;"}
 
-A Facebook oAuth dialog window will appear to authorize Braze to create Custom Audiences into your Facebook ad accounts.
+A Facebook oAuth dialog window appears to authorize Braze to create Custom Audiences into your Facebook ad accounts.
 
 ![The first facebook dialogue box prompting to "Connect as X", where X is your Facebook username.]({% image_buster /assets/img/fb/afb_3.png %}){: style="max-width:30%;"}  ![The second Facebook dialogue box prompting for permission to manage ads for your ad accounts.]({% image_buster /assets/img/fb/afb_2.png %}){: style="max-width:40%;"}
 
@@ -61,7 +65,7 @@ After linking Braze to your Facebook account, select the ad accounts you would l
 Your Facebook connection is applied at the Braze workspace level. If your Facebook admin removes you from your Facebook Business Manager or access to the connected Facebook accounts, Braze will detect an invalid token. As a result, your active Canvases using Facebook Audience components will show errors, and Braze will not be able to sync users. 
 
 {% alert important %}
-For customers who have previously undergone the Facebook App Review process for [Ads Management](https://developers.facebook.com/docs/facebook-login/permissions/#reference-ads_management) and [Ads Management Standard Access](https://developers.facebook.com/docs/marketing-api/access#standard), your System User Token will still be valid for the Facebook Audience component. You will not be able to edit or revoke the Facebook System User Token through the Facebook partner page. Instead, you can connect your Facebook account to replace your Facebook System User Token within your Braze workspace. 
+For customers who have previously undergone the Facebook App Review process for [Ads Management](https://developers.facebook.com/docs/facebook-login/permissions/#reference-ads_management) and [Ads Management Standard Access](https://developers.facebook.com/docs/marketing-api/access#standard), your System User Token will still be valid for the Facebook Audience component. You won't be able to edit or revoke the Facebook System User Token through the Facebook partner page. Instead, you can connect your Facebook account to replace your Facebook System User Token within your Braze workspace. 
 
 <br><br>The Facebook oAuth configuration will also apply to [Facebook exports using Segments]({{site.baseurl}}/partners/message_orchestration/additional_channels/retargeting/facebook/#prerequisites). 
 {% endalert %}
@@ -117,7 +121,7 @@ Braze offers the ability to either add or remove users from existing Facebook cu
 ![Audience sync setup to remove the email, phone, first name, and last name information.]({% image_buster /assets/img/audience_sync/fb_sync3.png %})
 
 {% alert important %}
-Facebook prohibits removing users from custom audiences where the audience sizes are too low (typically fewer than 1,000 users). As a result, Braze will be unable to sync users for a removal from the Audience Sync step until the audience reaches the appropriate audience size.
+Facebook prohibits removing users from custom audiences where the audience sizes are too low (typically fewer than 1,000 users). As a result, Braze is unable to sync users for a removal from the Audience Sync step until the audience reaches the appropriate audience size.
 {% endalert %}
 
 {% endtab %}
@@ -125,9 +129,9 @@ Facebook prohibits removing users from custom audiences where the audience sizes
 
 ### Step 5: Launch Canvas
 
-After configuring your Facebook Audience component, it's time to launch the Canvas! The new custom audience will be created, and users who flow through the Facebook Audience step will be passed into this custom audience on Facebook. If your Canvas contains subsequent steps, your users will then advance to the next step in their user journey.
+After configuring your Facebook Audience component, it's time to launch the Canvas! The new custom audience is created, and users who flow through the Facebook Audience step is passed into this custom audience on Facebook. If your Canvas contains subsequent steps, your users will then advance to the next step in their user journey.
 
-The **History** tab of the custom audience in the Facebook Audience Manager will reflect the number of users sent to the audience from Braze. If a user re-enters the step, they will be sent to Facebook again.
+The **History** tab of the custom audience in the Facebook Audience Manager will reflect the number of users sent to the audience from Braze. If a user re-enters the step, they are sent to Facebook again.
 
 ![Audience details and the History tab for a given Facebook audience that includes an Audience History table with columns for the activity, activity details, items changed, and the date and time.]({% image_buster /assets/img/fb_audience_sync/audience_history.png %}){: style="max-width:80%;"}
 
@@ -147,7 +151,7 @@ The following table includes metrics and descriptions to help you better underst
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert important %}
-There will be a delay in reporting for users synced and users errored metrics due to internal processing.
+There is a delay in reporting for users synced and users errored metrics due to internal processing.
 {% endalert %}
 
 ## Frequently asked questions
@@ -200,10 +204,10 @@ At this time, value-based lookalike custom audiences are not supported by Braze.
 
 ### I’ve received an email related to Facebook custom audience terms of service. What should I do to resolve this?
 
-To use Audience Sync to Facebook, you need to accept these terms of service agreement. 
+To use Audience Sync to Facebook, you must accept these terms of service agreement. 
 
 - If your ad account is directly associated with your personal Facebook account, you can accept the terms of service from in your personal account here: `https://www.facebook.com/ads/manage/customaudiences/tos.php?act=<ACCOUNT_ID>`.
-- If your ad account is tied to your company's Business Manager account, you need to accept the terms of service in your Facebook Business Manager account here: `https://business.facebook.com/customaudiences/value_based/tos.php?act=<ACCOUNT_ID>&business_id=<BUSINESS_ID>`.
+- If your ad account is tied to your company's Business Manager account, you must accept the terms of service in your Facebook Business Manager account here: `https://business.facebook.com/customaudiences/value_based/tos.php?act=<ACCOUNT_ID>&business_id=<BUSINESS_ID>`.
 
 After you have accepted your Facebook custom audience terms of service, do the following:
 
@@ -271,7 +275,7 @@ table td {
     </tr>
     <tr>
       <td><b>Failed to create audience</b></td>
-      <td>On the Facebook Technology Partner page, you are seeing “Connected”, but there’s an error on the Facebook Audience Sync step when syncing an audience, “Failed to create audience 'audience name'". Authorization of your Facebook account failed. Please visit the Technology Partners page to reconnect your account.</td>
+      <td>On the Facebook Technology Partner page, you are seeing “Connected”, but there’s an error on the Facebook Audience Sync step when syncing an audience, “Failed to create audience 'audience name'". Authorization of your Facebook account failed. Visit the Technology Partners page to reconnect your account.</td>
       <td>Follow the steps in <a href='/docs/partners/canvas_steps/facebook_audience_sync/#audit-your-facebook-account'>this troubleshooting section</a> to check your account for any issues.
       </td>
     </tr>

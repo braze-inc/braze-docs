@@ -27,7 +27,7 @@ During your Braze implementation, be sure to discuss marketing goals with your t
 
 ## Automatically collected data
 
-Certain user data is collected automatically by our SDK—for example, First Used App, Last Used App, Total Session Count, Device OS, etc. If you follow our integration guides to implement our SDKs, you will be able to take advantage of this [default data collection]({{site.baseurl}}/user_guide/data/user_data_collection/sdk_data_collection/). Checking this list can help you avoid storing the same information about users more than once. With the exception of session start and end, all other automatically tracked data does not count toward your data point allotment.
+Certain user data is collected automatically by our SDK—for example, First Used App, Last Used App, Total Session Count, Device OS, etc. If you follow our integration guides to implement our SDKs, you will be able to take advantage of this [default data collection]({{site.baseurl}}/user_guide/data/user_data_collection/sdk_data_collection/). Checking this list can help you avoid storing the same information about users more than once. With the exception of session start and end, all other automatically tracked data does not count toward your data point usage.
 
 See our [SDK primer]({{site.baseurl}}/developer_guide/getting_started/sdk_overview/) article to allowlist processes that block the default collection of certain data items.
 
@@ -74,7 +74,7 @@ Custom event properties can also be used for personalization within the messagin
 {% raw %}
 ```liquid
 {% if {{event_properties.${time_spent}}} < 600 %}
-Congratulations on beating that level so fast! Check out our online portal where you can play against top players fromm around the world!
+Congratulations on beating that level so fast! Check out our online portal where you can play against top players from around the world!
 {% elsif {{event_properties.${time_spent}}} < 1800 %}
 Don't forget to visit the town store between levels to upgrade your tools.
 {% else %}
@@ -83,7 +83,7 @@ Talk to villagers for essential tips on how to beat levels!
 ```
 {% endraw %}
 
-Custom event properties are designed to help you personalize your messaging or build granular action-based delivery campaigns. If you would like to create segments based on event property recency and frequency, reach out to your customer success manager or our Support team.
+Custom event properties are designed to help you personalize your messaging or build granular action-based delivery campaigns. If you would like to create segments based on event property recency and frequency, contact your customer success manager or our Support team.
 
 ## Custom attributes
 
@@ -143,7 +143,7 @@ abUser.addToCustomAttributeArray('favorite_foods', 'pizza'); // => ['wings', 'pa
 abUser.addToCustomAttributeArray('favorite_foods', 'ice cream'); // => ['pasta', 'fries', 'pizza', 'ice cream']
 ```
 
-The maximum number of elements in custom attribute arrays defaults to 25. The maximum for individual arrays can be increased to up to 100 in the Braze dashboard, under **Data Settings** > **Custom Attributes**. If you would like this maximum increased, reach out to your customer service manager. Arrays exceeding the maximum number of elements will be truncated to contain the maximum number of elements.
+The maximum number of elements in custom attribute arrays defaults to 25. The maximum for individual arrays can be increased to up to 100 in the Braze dashboard, under **Data Settings** > **Custom Attributes**. If you would like this maximum increased, contact your customer service manager. Arrays exceeding the maximum number of elements will be truncated to contain the maximum number of elements.
 
 The following table describes available segmentation options for array attributes.
 

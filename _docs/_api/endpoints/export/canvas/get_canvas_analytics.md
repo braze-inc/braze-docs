@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: Export Canvas Data Series Analytics"
+nav_title: "GET: Export Canvas data series analytics"
 article_title: "GET: Export Canvas Data Series Analytics"
 search_tag: Endpoint
 page_order: 4
@@ -51,8 +51,6 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/data_seri
 ## Response
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "data": {
     "name": (string) the Canvas name,

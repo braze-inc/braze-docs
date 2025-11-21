@@ -1,5 +1,5 @@
 ---
-nav_title: Tracking Users
+nav_title: Tracking users
 article_title: Tracking users through a form
 description: "Learn how to identify users who submit a form through your landing page by adding a Liquid tag to your messages."
 page_order: 2
@@ -15,7 +15,7 @@ You can add a {% raw %}`{% landing_page_url %}`{% endraw %} Liquid tag to any of
 
 {% raw %}
 ```html
-<a href=" {% landing_page_url customer-survey %}" class="button">Take the Survey!</a>
+<a href="{% landing_page_url customer-survey %}" class="button">Take the Survey!</a>
 ```
 {% endraw %}
 

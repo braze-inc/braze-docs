@@ -5,7 +5,7 @@ description: "This reference article covers how to connect with a Shopify Hydrog
 page_type: partner
 search_tag: Partner
 alias: /shopify_custom_integration/
-page_order: 2
+page_order: 3
 ---
 
 # Shopify custom integration setup
@@ -662,7 +662,11 @@ Using an email address or a hashed email address as your Braze external ID can h
 
 By default, Braze automatically converts emails from Shopify to lowercase before using them as the external ID. If you’re using email or hashed email as your external ID, confirm that your email addresses are also converted to lowercase before you assign them as your external ID or before hashing them from other data sources. This helps prevent discrepancies in external IDs and avoid creating duplicate user profiles in Braze.
 
-If you selected a custom external ID type, proceed to steps 6.1—6.3. Otherwise, continue to step 6.4.
+{% alert note %}
+The next steps depend on your external ID selection:<br><br>
+- **If you selected a custom external ID type:** Complete steps 6.1—6.3 to set up your custom external ID configuration.
+- **If you selected Shopify customer ID, email, or hashed email:** Skip steps 6.1—6.3 and continue directly to step 6.4.
+{% endalert %}
 
 #### Step 6.1: Create the `braze.external_id` metafield
 

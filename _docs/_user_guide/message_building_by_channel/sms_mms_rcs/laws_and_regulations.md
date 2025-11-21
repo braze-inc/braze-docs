@@ -1,5 +1,5 @@
 ---
-nav_title: "Laws & Regulations"
+nav_title: "Laws & regulations"
 article_title: Laws & Regulations for SMS, MMS, and RCS
 page_order: 0
 description: "This reference article covers laws and regulations surrounding SMS, MMS, and RCS."

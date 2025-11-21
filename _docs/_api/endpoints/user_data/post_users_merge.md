@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Merge Users"
+nav_title: "POST: Merge users"
 article_title: "POST: Merge Users"
 search_tag: Endpoint
 page_order: 6
@@ -216,7 +216,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 
 ### Merging an unidentified user without including the most_recently_updated prioritization
 
-If there are two unidentified users with ethe mail address `john.smith@braze.com`, this example request doesn't merge any users since there are two unidentified users with that email address. This request only works if there is only one unidentified user with the email address `john.smith@braze.com`.
+If there are two unidentified users with the mail address `john.smith@braze.com`, this example request doesn't merge any users since there are two unidentified users with that email address. This request only works if there is only one unidentified user with the email address `john.smith@braze.com`.
 
 ```json
 curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \

@@ -1,5 +1,5 @@
 ---
-nav_title: Creating an Email
+nav_title: Creating an email
 article_title: Creating an Email with Custom HTML
 page_order: 1
 description: "This reference article covers how to create an email using the Braze platform. Included are best practices on how to compose your messages, preview your content, and schedule your campaign or Canvas."
@@ -24,7 +24,7 @@ If this is your first time creating an email campaign, we highly recommend check
 
 ## Step 1: Choose where to build your message
 
-Not sure whether your message should be sent using a campaign or a Canvas? Campaigns are better for single, simple messaging campaigns, while Canvases are better for multi-step user journeys.
+Not sure whether your message should be sent using a campaign or a Canvas? Campaigns are better for single, targeted messaging campaigns, while Canvases are better for multi-step user journeys.
 
 {% tabs %}
 {% tab Campaign %}

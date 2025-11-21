@@ -1,5 +1,5 @@
 ---
-nav_title: Ignoring Internal Push
+nav_title: Ignoring internal push
 article_title: Ignoring Braze Internal Push Notifications for iOS
 platform: iOS
 page_order: 4

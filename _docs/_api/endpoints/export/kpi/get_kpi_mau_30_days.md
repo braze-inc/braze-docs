@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: Export Monthly Active Users for Last 30 Days"
+nav_title: "GET: Export monthly active users for last 30 days"
 article_title: "GET: Export Monthly Active Users for Last 30 Days"
 search_tag: Endpoint
 page_order: 4
@@ -46,8 +46,6 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/kpi/mau/data_ser
 ## Response
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "data" : [

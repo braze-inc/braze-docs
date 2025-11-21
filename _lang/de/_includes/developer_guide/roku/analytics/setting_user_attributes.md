@@ -2,7 +2,9 @@
 
 ## Standard-Nutzerattribute
 
-Die Attribute der Nutzer:innen werden dem gerade aktiven Nutzer zugewiesen. Die folgenden Standardfelder können eingestellt werden:
+### Vordefinierte Methoden
+
+Braze bietet vordefinierte Methoden, um die folgenden Nutzer:innen-Attribute mit Hilfe des `m.Braze` Objekts einzustellen.
 
 - `FirstName`
 - `LastName`
@@ -14,11 +16,57 @@ Die Attribute der Nutzer:innen werden dem gerade aktiven Nutzer zugewiesen. Die 
 - `HomeCity`
 - `PhoneNumber`
 
-Sie können einen Vornamen zum Beispiel wie folgt einrichten:
+### Einstellung von Standardattributen
 
+Um ein Standardattribut festzulegen, rufen Sie die entsprechende Methode für das Objekt `m.Braze` auf.
+
+{% tabs local %}
+{% tab Vorname %}
 ```brightscript
 m.Braze.setFirstName("Alex")
 ```
+{% endtab %}
+{% tab Nachname %}
+```brightscript
+m.Braze.setLastName("Smith")
+```
+{% endtab %}
+{% tab E-Mail %}
+```brightscript
+m.Braze.setEmail("alex@example.com")
+```
+{% endtab %}
+{% tab Geschlecht %}
+```brightscript
+m.Braze.setGender("m") ' Accepts: "m", "f", "o", "n", "u", "p"
+```
+{% endtab %}
+{% tab Geburtsdatum %}
+```brightscript
+m.Braze.setDateOfBirth(1990, 5, 15) ' Year, month, day
+```
+{% endtab %}
+{% tab Land %}
+```brightscript
+m.Braze.setCountry("United States")
+```
+{% endtab %}
+{% tab Sprache %}
+```brightscript
+m.Braze.setLanguage("en")
+```
+{% endtab %}
+{% tab Heimatstadt %}
+```brightscript
+m.Braze.setHomeCity("New York")
+```
+{% endtab %}
+{% tab Rufnummer %}
+```brightscript
+m.Braze.setPhoneNumber("+1234567890")
+```
+{% endtab %}
+{% endtabs %}
 
 ## Angepasste Nutzerattribute
 
@@ -96,7 +144,7 @@ m.Braze.incrementCustomUserAttribute("intAttribute", 3)
 
 ### Angepasste Attribute nicht anpassen
 
-Benutzerdefinierte Attribute können auch mit der folgenden Methode deaktiviert werden:
+Um ein angepasstes Attribut wieder freizugeben, übergeben Sie den entsprechenden Attributschlüssel an die Methode `unsetCustomAttribute`.
 
 ```brightscript
 m.Braze.unsetCustomAttribute("attributeName")

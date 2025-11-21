@@ -15,13 +15,13 @@ Dieser Artikel führt Sie durch einen Anwendungsfall für die Vorlage **Lapsed U
 
 ## Voraussetzungen
 
-Um die Vorlage für abgelaufene Benutzer erfolgreich zu nutzen, müssen Sie [Braze Audience Sync]({{site.baseurl}}/partners/canvas_steps) mit den von Ihnen verwendeten Partnern und Zielgruppen konfigurieren.
+Um die Vorlage für abgelaufene Benutzer erfolgreich zu nutzen, müssen Sie [Braze Audience Sync]({{site.baseurl}}/partners/canvas_audience_sync/) mit den von Ihnen verwendeten Partnern und Zielgruppen konfigurieren.
 
 ## Anpassen des Templates an Ihre Bedürfnisse
 
 Nehmen wir an, wir arbeiten für MovieCanon, einen Streaming-Dienst, der exklusive Inhalte für Filme und Serien anbietet. Wir können die Vorlage für abgelaufene Benutzer verwenden, um Vergünstigungen und Premium-Inhalte für Benutzer zu bewerben, die unsere App seit 30 Tagen nicht mehr besucht haben.
 
-Bevor wir das Canvas erstellen, richten wir die [Braze Audience Sync to Google-Integration]({{site.baseurl}}/partners/canvas_steps/google_audience_sync/) ein, damit wir Nutzerdaten von Braze zu Google Audiences hinzufügen können, um Werbung auf der Grundlage von verhaltensbezogenen Auslösern, Segmentierung und mehr zu senden.
+Bevor wir das Canvas erstellen, richten wir die [Braze Audience Sync to Google-Integration]({{site.baseurl}}/partners/canvas_audience_sync/google_audience_sync/) ein, damit wir Nutzerdaten von Braze zu Google Audiences hinzufügen können, um Werbung auf der Grundlage von verhaltensbezogenen Auslösern, Segmentierung und mehr zu senden.
 
 Um auf die Vorlage für verfallende Benutzer zuzugreifen, wählen Sie beim Erstellen eines neuen Canvas die Option **Eine Canvas-Vorlage verwenden** > **Lötvorlagen**. Wählen Sie dann neben **Lapsing User** die Option **Vorlage anwenden**. Jetzt können wir das Template durchgehen, um es an unsere Bedürfnisse anzupassen.
 
@@ -38,13 +38,13 @@ Passen wir die Canvas-Details an, um unser Ziel zu erreichen.
 3\. Aktualisieren Sie die Beschreibung, um zu erklären, dass dieser Canvas Vergünstigungen und Aktionen enthält.
 4\. Fügen Sie das Tag **Passivität/Bindung** hinzu, damit wir auf der Canvas-Startseite nach diesem Canvas filtern können.
 
-![Schritt "Canvas-Details einrichten" mit dem Canvas-Namen "Lapsed User - Visit App" und einer kurzen Canvas-Beschreibung][1]
+!["Canvas-Details einrichten"-Schritt mit dem Canvas-Namen "Verfallene Nutzer:innen - App besuchen" und einer kurzen Canvas-Beschreibung]({% image_buster /assets/img/canvas_templates/lapsing_user_1.png %})
 
 ### Schritt 2: Konversions-Events zuweisen
 
 Aktualisieren Sie das **primäre Konversions-Event - A**, um Nutzer:innen aus unserer App (MovieCanon) zusammenzustellen, und belassen Sie das **primäre Konversions-Event - B** als Standard, wenn Sie einen Kauf tätigen.
 
-![Abschnitt „Konversions-Events zuweisen mit einem primären Konversions-Event eines Nutzers oder einer Nutzerin, der oder die eine Sitzung in einer bestimmten App beginnt.][2]
+!["Konversions-Events zuweisen" mit einem primären Konversions-Event eines Nutzers:in, der eine Sitzung in einer bestimmten App beginnt.]({% image_buster /assets/img/canvas_templates/lapsing_user_2.png %})
 
 ### Schritt 3: Entry-Zeitplan anpassen
 
@@ -55,13 +55,13 @@ In diesem Schritt nehmen wir zwei Anpassungen vor:
 1. Wählen Sie ein Startdatum und eine Startzeit aus.
 2. Wählen Sie die Endparameter **An einem bestimmten Datum** und ein Datum in zwei Monaten. Nehmen wir an, wir haben einen weiteren passiven Nutzer-Canvas, den wir nach diesem starten möchten.
 
-![Schritt „Entry-Zeitplan“ für eine geplante Canvas, der Nutzer:innen zu einem festgelegten Zeitpunkt aufnimmt.][3]
+!["Eingang Zeitplan"-Schritt für einen geplanten Canvas, der Nutzer:innen zu einer bestimmten Zeit einlässt.]({% image_buster /assets/img/canvas_templates/lapsing_user_3.png %})
 
 ### Schritt 4: Zielgruppe auswählen
 
 Wir behalten die Standardeinstellungen für das Einstiegspublikum bei, das auf Benutzer eingestellt ist, die unsere App seit mehr als 30 Tagen nicht mehr verwendet haben. Wir behalten auch die Standard-Entry-Kontrollen bei, sodass Nutzer:innen den Canvas nach vier Wochen erneut aufrufen können. Das bedeutet, dass jedes Mal, wenn ein Benutzer unsere App mehr als 30 Tage lang nicht besucht hat, er in den Canvas aufgenommen wird.
 
-![Der Schritt „Zielgruppe“ für Nutzer:innen, die die Apps zuletzt vor 30 Tagen genutzt haben.][4]
+!["Zielgruppe" Schritt Targeting der Nutzer:innen, die die Apps zuletzt vor 30 Tagen genutzt haben.]({% image_buster /assets/img/canvas_templates/lapsing_user_4.png %})
 
 ### Schritt 5: Wählen Sie Ihre Sendeeinstellungen aus
 
@@ -73,7 +73,7 @@ Wir behalten die meisten Standardeinstellungen für Abonnements bei:
 
 Die einzige Einstellung, die wir ändern werden, ist, was zu tun ist, wenn eine Nachricht während der Ruhezeiten ausgelöst wird. Anstatt die Nachricht abzubrechen, wählen Sie **Senden zum nächstmöglichen Zeitpunkt**, damit unsere Nutzer keine Werbeaktion verpassen.
 
-![Abschnitt "Ruhige Stunden" mit einer Startzeit von 12 Uhr und einer Endzeit von 8 Uhr.][5]
+!["Ruhezeiten"-Abschnitt mit einer Startzeit von 12 Uhr und einer Endzeit von 8 Uhr.]({% image_buster /assets/img/canvas_templates/lapsing_user_5.png %})
 
 ### Schritt 6: Canvas anpassen
 
@@ -81,12 +81,12 @@ Jetzt bauen wir unser Canvas auf, indem wir die in der Vorlage enthaltenen Schri
 
 1. Passen Sie die erste E-Mail an, die an alle Benutzer gesendet wird, die unsere App seit mehr als 30 Tagen nicht mehr besucht haben. Für unseren Anwendungsfall passen wir eine E-Mail an, die den Benutzern mitteilt, dass sie neue Vergünstigungen erhalten, wenn sie heute unsere App besuchen. 
 
-![Canvas Message Schritt für eine E-Mail, in der Benutzer aufgefordert werden, neue Vergünstigungen freizuschalten, wenn sie uns heute besuchen.][6]
+![Canvas Nachrichten-Schritt für eine E-Mail, die Nutzer:innen darauf hinweist, neue Vergünstigungen freizuschalten, wenn sie heute kommen.]({% image_buster /assets/img/canvas_templates/lapsing_user_6.png %})
 
 {: start="2"}
 2\. Passen Sie die Aktionsffad-Komponente mit der Bezeichnung „Sitzung starten?“ an, indem Sie unsere App für den Pfad **Gestartete Sitzung** auswählen. 
 
-![Aktionspfad für Sitzungen, die in einer bestimmten App gestartet werden.][7]
+![Aktions-Pfad für Sitzungen, die in einer bestimmten App gestartet werden.]({% image_buster /assets/img/canvas_templates/lapsing_user_7.png %})
 
 {: start="3"}
 3\. Behalten Sie die Standardeinstellung für den Decision-Split-Schritt mit dem Namen „Sitzungen?“ bei, die die Gruppe „>1 Sitzung“ als Nutzer:innen definiert, die unsere App am letzten Kalendertag mehr als einmal verwendet haben.
@@ -95,7 +95,7 @@ Jetzt bauen wir unser Canvas auf, indem wir die in der Vorlage enthaltenen Schri
 6\. Behalten Sie den Standard für die Komponente [Experimentpfad]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step#experiment-paths) namens „A/B-Test“ bei. Dadurch wird zufällig eine von zwei Aktionen (die wir im nächsten Schritt anpassen) an Nutzer:innen gesendet, die weniger als zwei Sitzungen hatten.
 7\. Passen Sie die beiden Aktionen an, die im Rahmen des Experimentpfads an Nutzer:innen gesendet werden. In unserem Anwendungsfall machen wir aus einem eine 20 %-Aktion für ein dreimonatiges Abo und aus dem anderen eine 10 %-Aktion für ein einmonatiges Abo.
 
-![Canvas-Schritte mit Branch-Pfaden, die darauf basieren, wie viele Nutzer:innen Sitzungen hatten.][8]{: style="max-width:70%;"}
+![Canvas-Schritte mit Verzweigungspfaden basierend auf der Anzahl der Sitzungen eines Nutzer:innen.]({% image_buster /assets/img/canvas_templates/lapsing_user_8.png %}){: style="max-width:70%;"}
 
 ### Schritt 7: Testen und starten Sie den Canvas
 
@@ -105,11 +105,3 @@ Nachdem wir unser Canvas getestet und überprüft haben, um sicherzustellen, das
 In unserer [Checkliste für die Zeit vor und nach dem Start eines]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/pre_post_launch_checklist/#things-to-consider-before-launch) Canvas finden Sie die Dinge, die Sie beachten sollten, bevor und nachdem Sie ein Canvas starten.
 {% endalert %}
 
-[1]: {% image_buster /assets/img/canvas_templates/lapsing_user_1.png %}
-[2]: {% image_buster /assets/img/canvas_templates/lapsing_user_2.png %}
-[3]: {% image_buster /assets/img/canvas_templates/lapsing_user_3.png %}
-[4]: {% image_buster /assets/img/canvas_templates/lapsing_user_4.png %}
-[5]: {% image_buster /assets/img/canvas_templates/lapsing_user_5.png %}
-[6]: {% image_buster /assets/img/canvas_templates/lapsing_user_6.png %}
-[7]: {% image_buster /assets/img/canvas_templates/lapsing_user_7.png %}
-[8]: {% image_buster /assets/img/canvas_templates/lapsing_user_8.png %}

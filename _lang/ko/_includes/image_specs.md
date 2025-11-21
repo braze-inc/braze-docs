@@ -61,7 +61,7 @@ Modal 인앱 메시지는 선택한 이미지 또는 문구의 크기와 비율�
 
 | 유형 | 종횡비 | 이미지 품질 | 참고 |
 | --- | --- | --- | --- |
-| Modal(이미지만 해당) | 1:1 | 고해상도 1200 x 2000 픽셀 <br> 최소 해상도 600 x 600 픽셀 | 메시지는 대부분의 가로 세로 비율에 맞게 이미지 크기를 조정합니다. |
+| Modal(이미지만 해당) | 1:1 | 최대 권장 해상도: 1200 x 2000 픽셀 <br> 최소 해상도: 600 x 600 픽셀 | 메시지는 대부분의 가로 세로 비율에 맞게 이미지 크기를 조정합니다. 권장되는 최대 해상도는 종횡비 3:5로, 최적의 결과를 제공하지 못할 수 있습니다. 이미지가 크면 사용할 수 있지만 로드 시간이 길어질 수 있습니다. <br> 이미지의 이상적인 종횡비는 1:1이며, 이 비율을 충족하지 않으면 업로드 중에 경고가 트리거될 수 있습니다. 이 경고는 최상의 결과를 위한 제안이며 큰 이미지의 업로드를 막는 것은 아닙니다. |
 | 텍스트가 있는 모달 | 29:10 | 고해상도 1450 x 500 픽셀 <br> 최소 해상도 600 x 205 픽셀 | 긴 이미지는 축소되어 가로로 가운데에 배치됩니다. 넓은 이미지는 왼쪽과 오른쪽 가장자리가 잘립니다. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 }
 
@@ -90,47 +90,52 @@ table td {
 </style>
 
 <table>
-  <tr>
-    <th>이미지 유형</th>
-    <th>종횡비</th>
-    <th>이미지 품질</th>
-    <th>최대 이미지 크기</th>
-    <th>파일 유형</th>
-    <th>참고</th>
-  </tr>
-  <tr>
-    <td>iOS</td>
-    <td>2:1(권장)</td>
-    <td>최대 1038 x 1038 픽셀</td>
-    <td>5 MB</td>
-    <td>PNG, JPEG, GIF</td>
-    <td>2020년 1월부터 iOS 리치 푸시 알림은 1038 x 1038 픽셀의 이미지가 10MB 미만인 경우 처리할 수 있지만, 가능한 한 작은 파일 크기를 사용하는 것이 좋습니다. 실제로 대용량 파일을 전송하면 불필요한 네트워크 스트레스가 발생하고 다운로드 시간 초과가 더 자주 발생할 수 있습니다.<br><br>자세한 내용은 <a href="{{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/">iOS 리치 알림</a>을 참조하세요.</td>
-  </tr>
-  <tr>
-    <td>Android 푸시 아이콘</td>
-    <td>1:1</td>
-    <td>N/A</td>
-    <td>500 KB</td>
-    <td>PNG, JPEG</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Android 확장 알림 이미지</td>
-    <td>2:1</td>
-    <td>작음: 512 x 256 픽셀<br>중간: 1024 x 512 픽셀<br>큼: 2048 x 1024 픽셀</td>
-    <td>500 KB</td>
-    <td>PNG, JPEG</td>
-    <td><a href="{{site.baseurl}}/user_guide/message_building_by_channel/push/android/rich_notifications/">Android 리치 알림에</a> 사용됩니다.</td>
-  </tr>
-  <tr>
-    <td>안드로이드 경사 이미지</td>
-    <td>3:2</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>PNG, JPEG</td>
-    <td>자세한 내용은 <a href="{{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/inline_image_push/">Android 인라인 이미지 푸시</a>를 참조하세요.</td>
-  </tr>
+  <thead>
+    <tr>
+      <th>이미지 유형</th>
+      <th>종횡비</th>
+      <th>최대 픽셀</th>
+      <th>최대 이미지 크기</th>
+      <th>파일 유형</th>
+      <th>참고</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>iOS</td>
+      <td>2:1(권장)</td>
+      <td>1038 x 1038</td>
+      <td>5 MB</td>
+      <td>PNG, JPEG, GIF</td>
+      <td>2020년 1월부터 iOS 리치 푸시 알림은 1038 x 1038 픽셀의 이미지가 10MB 미만인 경우 처리할 수 있지만, 가능한 한 작은 파일 크기를 사용하는 것이 좋습니다. 실제로 대용량 파일을 전송하면 불필요한 네트워크 스트레스가 발생하고 다운로드 시간 초과가 더 자주 발생할 수 있습니다.<br><br>자세한 내용은 <a href="{{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/">iOS 리치 알림</a>을 참조하세요.</td>
+    </tr>
+    <tr>
+      <td>Android 푸시 아이콘</td>
+      <td>1:1</td>
+      <td>N/A</td>
+      <td>500 KB</td>
+      <td>PNG, JPEG</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Android 확장 알림 이미지</td>
+      <td>2:1</td>
+      <td><b>작음:</b><br>512 x 256<br><br><b>중간:</b><br>1024 x 512<br><br><b>큼:</b><br>2048 x 1024</td>
+      <td>500 KB</td>
+      <td>PNG, JPEG</td>
+      <td><a href="{{site.baseurl}}/user_guide/message_building_by_channel/push/android/rich_notifications/">Android 리치 알림에</a> 사용됩니다.</td>
+    </tr>
+    <tr>
+      <td>안드로이드 경사 이미지</td>
+      <td>3:2</td>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>PNG, JPEG</td>
+      <td>자세한 내용은 <a href="{{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/inline_image_push/">Android 인라인 이미지 푸시</a>를 참조하세요.</td>
+    </tr>
+  </tbody>
 </table>
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4  .reset-td-br-5 .reset-td-br-6 role="presentation"}
 
 {% endif %}
 

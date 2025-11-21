@@ -1,5 +1,5 @@
 ---
-nav_title: "SCIM API Objects and Appendix"
+nav_title: "SCIM API objects and appendix"
 article_title: SCIM API Objects and Appendix
 page_order: 8
 page_type: reference

@@ -1,4 +1,4 @@
-guide/prerequisites/web.md developer_ %}
+{% multi_lang_include developer_guide/prerequisites/web.md %}
 
 ## メッセージトリガー
 

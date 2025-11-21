@@ -16,10 +16,9 @@ channel: push
 
 백그라운드 푸시 사용은 푸시가 활성화되어 있지만 포그라운드 푸시 알림을 비활성화한 사용자를 의미합니다. 이 경우 Braze는 해당 기기에 사용자가 볼 수 있는 알림을 표시할 수 없습니다. 그러나 백그라운드 푸시를 사용하여 제거 추적, 무음 푸시 알림 사용, 지오펜싱을 사용할 수 있습니다.  
 
-자세한 내용은 [푸시 알림에 대한][1] 도움말 문서를 참조하세요.
+자세한 내용은 [푸시 알림에 대한]({{site.baseurl}}/user_guide/message_building_by_channel/push/about) 도움말 문서를 참조하세요.
 
 아직도 도움이 필요하신가요? [지원 티켓]({{site.baseurl}}/braze_support/)을 여세요.
 
 _마지막 업데이트: 2021년 1월 24일_
 
-[1]: {{site.baseurl}}/user_guide/message_building_by_channel/push/about

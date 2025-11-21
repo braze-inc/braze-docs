@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Airbridge
 
-> [Airbridge](https://www.airbridge.io/) is a unified mobile measurement platform that helps you discover true sources of growth through mobile attribution, incrementalist measurement, and marketing mix modeling.
+> [Airbridge](https://www.airbridge.io/) is a unified mobile measurement platform for discovering sources of growth through mobile attribution, incremental measurement, and marketing mix modeling.
 
 _This integration is maintained by Airbridge._
 
@@ -194,7 +194,7 @@ AirbridgeUnity.StartTracking()
 
 In Braze, navigate to **Partner Integrations** > **Technology Partners** and select **Airbridge**.
 
-Here, you will find the REST endpoint and generate your Braze data import key. After the key is generated generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in Airbridge's dashboard.
+Here, you will find the REST endpoint and generate your Braze data import key. After the key is generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in Airbridge's dashboard.
 
 ![]({% image_buster /assets/img/airbridge/airbridge_integration_step_1.png %})
 
@@ -239,7 +239,7 @@ Attribution data for Meta Business campaigns is not available through our partne
 
 ## Airbridge click tracking URLs in Braze (optional)
 
-Using click tracking links in your Braze campaigns will allow you to easily see which campaigns are driving app installs and re-engagement. As a result, you'll be able to measure your marketing efforts more effectively and make data-driven decisions on where to invest more resources for the maximum ROI.
+Using click tracking links in your Braze campaigns shows which campaigns drive app installs and re-engagement. Use the results to measure marketing performance and decide where to invest resources for stronger ROI.
 
 To get started with Airbridge click tracking links, visit [Airbridge](https://help.airbridge.io/en/guides/creating-a-new-tracking-link). After set up is completed, you can directly insert the Airbridge click tracking links into your Braze campaigns. Airbridge will then use its [probabilistic attribution methodologies](https://help.airbridge.io/en/guides/identity-matching) to attribute the user that has clicked on the link. We recommend appending your Airbridge tracking links with a device identifier to improve the accuracy of attributions from your Braze campaigns. This will deterministically attribute the user that has clicked on the link.
 

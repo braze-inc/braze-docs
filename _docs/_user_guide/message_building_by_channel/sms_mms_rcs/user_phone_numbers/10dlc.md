@@ -122,4 +122,4 @@ Visit the Twilio 10DLC article to check out updated [throughput estimates](https
 
 ## Next steps
 
-Customers who have not yet registered for 10DLC must work with their customer success manager to register their long codes. **If customers fail to register their long codes, starting October 1, 2021, any A2P sender using long codes will experience heavy filtering of all messages.** Reach out to your customer success manager to get started on your 10DLC registration. 
+Customers who have not yet registered for 10DLC must work with their customer success manager to register their long codes. **If customers fail to register their long codes, starting October 1, 2021, any A2P sender using long codes will experience heavy filtering of all messages.** Contact your customer success manager to get started on your 10DLC registration.

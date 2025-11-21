@@ -1,5 +1,5 @@
 ---
-nav_title: Setting Custom Attributes
+nav_title: Setting custom attributes
 article_title: Setting Custom Attributes for Windows Universal
 platform: Windows Universal
 page_order: 3

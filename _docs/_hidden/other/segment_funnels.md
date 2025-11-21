@@ -1,5 +1,5 @@
 ---
-nav_title: Segment Funnels
+nav_title: Segment funnels
 permalink: /segment_funnels/
 hidden: true
 page_type: reference

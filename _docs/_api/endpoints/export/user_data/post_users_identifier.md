@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Export User Profile by Identifier"
+nav_title: "POST: Export user profile by identifier"
 article_title: "POST: Export User Profile by Identifier"
 search_tag: Endpoint
 page_order: 4
@@ -132,8 +132,6 @@ Depending on the data requested, this API endpoint may not be sufficient to meet
 ## Response
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "users" : (array of object) the data for each of the exported users, may be empty if no users are found,

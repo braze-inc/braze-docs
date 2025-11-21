@@ -127,7 +127,7 @@ Content Blocks can also be utilized as a translation management process where co
 {% endtab %}
 
 {% tab Catalogs %}
-[Catalogs]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/) allow you to access data from imported JSON objects via API and CSV files to enrich your messages, similar to custom attributes or custom event properties through Liquid. For example:
+[Catalogs]({{site.baseurl}}/user_guide/data/activation/catalogs/) allow you to access data from imported JSON objects via API and CSV files to enrich your messages, similar to custom attributes or custom event properties through Liquid. For example:
 
 {% subtabs local %}
 {% subtab API %}
@@ -222,7 +222,7 @@ Create a CSV in the following format:
 {% endsubtab %}
 {% endsubtabs %}
 
-These catalog items can them be referenced using [personalization]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog/#using-catalogs-in-a-message), shown below, or [selections]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections) that allow you to create groups of data. 
+These catalog items can them be referenced using [personalization]({{site.baseurl}}/user_guide/data/activation/catalogs/catalog/#using-catalogs-in-a-message), shown below, or [selections]({{site.baseurl}}/user_guide/data/activation/catalogs/selections) that allow you to create groups of data. 
 
 {% raw %}
 ```liquid

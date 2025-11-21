@@ -16,7 +16,7 @@ _This integration is maintained by Lokalise._
 
 ## About the integration
 
-The Braze and Lokalise integration leverages Connected Content to allow you to easily insert translated content into your Braze campaigns based on user language settings.
+The Braze and Lokalise integration uses Connected Content to allow you to easily insert translated content into your Braze campaigns based on user language settings.
 
 ## Prerequisites
 
@@ -114,16 +114,20 @@ Lastly, save the email template and preview it. You should see your translation 
 
 ## Frequently asked questions
 
-**What happens if I accidentally delete a key from Lokalise?**<br>
+### What happens if I accidentally delete a key from Lokalise?
+
 The corresponding string on Braze won't have a translation anymore.
 
-**If I have an `en` locale but override it with `en-US` on Lokalise, will Braze read it as `en-US`?**<br>
+### If I have an `en` locale but override it with `en-US` on Lokalise, will Braze read it as `en-US`?
+
 No, locale ISO codes must match on Braze and Lokalise.
 
-**Can we use the `:rerender` flag when connecting Lokalise content?**<br>
+### Can we use the `:rerender` flag when connecting Lokalise content?
+
 Yes, sure. You can consult Braze docs to learn how to add this flag.
 
-**After refreshing the translation file on Lokalise, Why can't I see any changes in the translated content on Braze**<br>
+### After refreshing the translation file on Lokalise, why can't I see any changes in the translated content on Braze?
+
 Braze caches translated content, which can take a few minutes to refresh. If you're testing your campaigns and need to see the results of translations immediately, you can use the `:cache_max_age` parameter as explained in this reference article.
 
 

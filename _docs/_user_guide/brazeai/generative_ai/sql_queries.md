@@ -1,5 +1,5 @@
 ---
-nav_title: SQL Queries
+nav_title: SQL queries
 article_title: Using the Query Builder
 page_order: 0.2
 page_type: reference

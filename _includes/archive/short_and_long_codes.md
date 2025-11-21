@@ -1,4 +1,3 @@
-
 # SMS and RCS senders
 
 > This article will walk you through important concepts involved in sending phone numbers with Braze.
@@ -11,8 +10,6 @@
 #### RCS-verified sender
 
 An RCS-verified sender is a visual representation of your brand that includes a brand name, logo, optional caption, and verified badge. This provides the RCS-verified sender a significant advantage over SMS codes in terms of establishing user trust.  
-
-![An example RCS-verified sender in an RCS message called "Cat Failz Cafe".]{% image_buster /assets/img/rcs/rcs_sender.png %}{: style="max-width:60%;"}
 
 ##### Details
 
@@ -78,7 +75,7 @@ A long code is a standard phone number used to send and receive voice calls and 
 
 | Pros |
 | ---- |
-| **Can be used immediately to send messages (for certain countries)**<br>Long codes provide a localized and personal customer experience when sending messages for person-to-person use cases. Unlike SMS short codes, acquiring a long code is a fairly quick process for some countries. (For other countries, it takes as long as or longer than a short code.). Long codes can also be set as a fallback number if a short code fails.<br><br>**Greater availability worldwide**<br>Long codes are available in over 100 major countries worldwide. Please reach out to your Customer Success Manager or Braze [support]({{site.baseurl}}/braze_support/) for a list of available countries.<br><br>**MMS enabled for certain countries**<br>Supports MMS, also known as Multimedia Message Service, allowing you to send messages containing multimedia assets (JPEG, GIF, PNG) to mobile phones. For more information on MMS at Braze, check out our documentation [here]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/mms/about_mms/).|
+| **Can be used immediately to send messages (for certain countries)**<br>Long codes provide a localized and personal customer experience when sending messages for person-to-person use cases. Unlike SMS short codes, acquiring a long code is a fairly quick process for some countries. (For other countries, it takes as long as or longer than a short code.). Long codes can also be set as a fallback number if a short code fails.<br><br>**Greater availability worldwide**<br>Long codes are available in over 100 major countries worldwide. Contact your Customer Success Manager or Braze [support]({{site.baseurl}}/braze_support/) for a list of available countries.<br><br>**MMS enabled for certain countries**<br>Supports MMS, also known as Multimedia Message Service, allowing you to send messages containing multimedia assets (JPEG, GIF, PNG) to mobile phones. For more information on MMS at Braze, check out our documentation [here]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/mms/about_mms/).|
 {: .reset-td-br-1}
 
 | Cons |
@@ -138,7 +135,7 @@ Alphanumeric Sender IDs allow you to set your company name or brand (such as "Ki
 | {::nomarkdown} <ul> <li> No additional charge to implement </li> <li> Improves brand awareness </li> <li> Increases SMS open rates </li> <li> Matches sending speed of phone numbers inside the subscription group </li> <li> Available immediately if pre-registration is not required </li> </ul> {:/} | {::nomarkdown} <ul> <li> <a href='/docs/user_guide/message_building_by_channel/sms/keywords/#two-way-messaging-custom-keyword-responses/'>Two-way messaging</a> is not supported </li> <li> Not all countries support this feature </li> <li> Some countries require an additional approval processes </li> <li> MMS is not enabled </li> </ul> {:/} |
 {: .reset-td-br-1 .reset-td-br-2}
 
-For more information on Alphanumeric Sender ID, please reach out to your customer success manager. 
+For more information on Alphanumeric Sender ID, contact your customer success manager. 
 {% endtab %}
 {% tab SMS Toll-Free Number %}
 
@@ -157,7 +154,7 @@ A toll-free telephone number, or a freephone number, is a telephone number that 
 
 | Pros | Cons |
 | ---- | ---- | 
-| {::nomarkdown} <ul> <li> Must be registered before sending. </li> </ul> {:/} | {::nomarkdown} <ul> <li> Toll-free numbers are only the US and Canada </li><li> MMS is not enabled </li> </ul> {:/} |
+| {::nomarkdown} <ul> <li> Must be registered before sending. </li> </ul> {:/} | {::nomarkdown} <ul> <li> Toll-free numbers are only supported in the US and Canada </li><li> MMS is supported in the US and Canada  </li> </ul> {:/} |
 {: .reset-td-br-1 .reset-td-br-2} 
 
 {% endtab %} 
@@ -179,11 +176,11 @@ Short and long codes are the phone number from which you send messages to your u
 
 ## How do I get an SMS short code?
 
-Going through the short code application process can be a long process. However, it can be a worthwhile one! If you'd like a short code, reach out to your onboarding manager or other Braze representative and let them know. After you do, they'll apply for you—they'll ask for some basic information that will help you qualify. Then, all there is to do is wait!
+Going through the short code application process can be a long process. However, it can be a worthwhile one! If you'd like a short code, contact your onboarding manager or other Braze representative and let them know. After you do, they'll apply for you—they'll ask for some basic information that will help you qualify. Then, all there is to do is wait!
 
 ### Short code application
 
-While Braze is responsible for actually applying for the short code, there is some information that we need from you. We recommend reviewing these questions before you reach out to Braze. 
+While Braze is responsible for actually applying for the short code, there is some information that we need from you. We recommend reviewing these questions before you contact Braze. 
 
 Regulations require that there are responses to all opt-in, opt-out, and help/info keyword responses. You will need to let us know the specific message flows (the responses you want to send to users after they send a [keyword]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/optin_optout/)) that you want for the following situations.
 
@@ -200,7 +197,7 @@ Depending on your situation, you may need to provide more or fewer flows like th
 You also must inform us, regardless of which number you use, of how many messages per month you plan to send.
 
 {% alert important %}
-If you have your own short code, reach out to your Customer Success Manager during the onboarding process to discuss migrating or transferring your short code. Short codes must be set up by your Customer Success Manager. 
+If you have your own short code, contact your Customer Success Manager during the onboarding process to discuss migrating or transferring your short code. Short codes must be set up by your Customer Success Manager. 
 {% endalert %}
 
 ## SMS Application-to-Person 10-Digit Long Codes (A2P 10DLC)

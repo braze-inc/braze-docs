@@ -11,9 +11,7 @@ tool: Canvas
 
 > この記事では、`canvas_entry_properties` と `event_properties` について、それぞれのプロパティを使用するタイミングや動作の違いなどを説明します。<br><br> カスタムイベントプロパティ全般については、[「カスタムイベントプロパティ」]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties)を参照してください。
 
-{% alert important %}
-[コンテキストコンポーネントのアーリーアクセス]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context) に参加している場合、Canvas エントリプロパティはCanvas コンテキスト変数の一部です。これは、`canvas_entry_properties` が`context` として参照されることを意味します。各`context` 変数には、名前、データ型、およびLiquid を含めることができる値が含まれます。
-{% endalert %}
+{% multi_lang_include alerts/important_alerts.md alert='context variable' %}
 
 キャンバスエントリのプロパティとイベントプロパティは、キャンバスワークフロー内では機能が異なります。ユーザーがキャンバスに入るトリガーとなるイベントや API 呼び出しのプロパティは、`canvas_entry_properties` と呼ばれます。ユーザーがキャンバスジャーニー内を移動する際に発生するイベントのプロパティは、`event_properties` と呼ばれます。ここでの重要な違いは、`canvas_entry_properties` は、API でトリガーされるキャンバスのエントリペイロードのプロパティにもアクセスすることにより、イベント以上のものに焦点を当てていることです。
 
@@ -22,11 +20,11 @@ tool: Canvas
 | | キャンバスエントリのプロパティ | イベントプロパティ
 |----|----|----|
 | **Liquid** | `canvas_entry_properties` | `event_properties` |
-| **永続性** | キャンバスフローを使用して構築されたキャンバスの期間中、すべての[メッセージ]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/)ステップから参照できる。 | \- 1回のみ参照できます。<br> \- 後続のメッセージステップからは参照できません。 |
+| **永続性** | キャンバスを使用して構築されたキャンバスの期間中、すべての[メッセージ]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/)ステップから参照される。 | \- 1回のみ参照できます。<br> \- 後続のメッセージステップからは参照できません。 |
 | **キャンバスの動作** | キャンバスのどのステップでも`canvas_entry_properties` を参照できる。起動後の動作については、[起動後のキャンバスの編集]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/#canvas-entry-properties)を参照してください。 | \- 行われたアクションがカスタムイベントまたは購入イベントである場合、[アクションパス]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/)ステップの**後**の最初のメッセージステップで `event_properties` を参照できます。<br> \- アクションパスステップの「その他のユーザー」パスの後に置くことはできません。<br> \- アクションパスとメッセージステップの間に、他の非メッセージコンポーネントを含めることができます。これらのメッセージ以外のコンポーネントの 1 つがアクションパスのステップである場合、ユーザーはそのアクションパスの「その他のユーザー」パスをたどることができます。 | 
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-{% details 元のCanvas エディタの詳細 %}
+{% details Original Canvas editor details %}
 
 元のエディターを使用したキャンバスの作成や複製はできなくなりました。この記事は、前のキャンバスワークフローでキャンバスエントリプロパティとイベントプロパティを使用する場合に参考にできます。
 
@@ -36,7 +34,7 @@ tool: Canvas
 
 **エントリプロパティ:**
 - キャンバスでアクションベースの配信を使用する任意のフルステップで `event_properties` を参照できます。
-- アクションベースのキャンバスの最初の完全なステップ以外のスケジュールされた完全なステップでは使用できません。ただし、ユーザーが[キャンバスコンポーネント]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/)を使用している場合、動作は `event_properties` のキャンバスフロールールに従います。
+- アクションベースのキャンバスの最初の完全なステップ以外のスケジュールされた完全なステップでは使用できません。しかし、ユーザーが[キャンバスコンポーネントを]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/)使用している場合、動作は`event_properties` の現在のキャンバスワークフロールールに従う。
 
 **イベントプロパティ:**
 - リードメッセージステップで`event_properties` を使用できません。代わりに、`canvas_entry_properties` を使用するか、`event_properties` を含むメッセージステップの**前に**、対応するイベントを持つアクションパスステップを追加する必要があります。
@@ -52,7 +50,9 @@ tool: Canvas
 
 ### イベントプロパティのタイムスタンプ
 
-キャンバスで`event_properties` を使用している場合、タイムスタンプはUTC に正規化されます。ただし、以下で説明するいくつかの例外があります。この動作を考慮して、Braze は、メッセージが [ preferred timezone]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/#time-zone-filter) とともに送信されることを保証するために、次の例のような Liquid タイムゾーンフィルタを使用することを強くお勧めします。
+アクションベースのキャンバスで[トリガーイベントプロパティから]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties) [datetimeタイプの]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#custom-event-properties)タイムスタンプを使用している場合、タイムスタンプはUTCに正規化される。いくつかの例外を以下に詳述する。
+
+この動作を考慮して、Braze は、メッセージが [ preferred timezone]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/#time-zone-filter) とともに送信されることを保証するために、次の例のような Liquid タイムゾーンフィルタを使用することを強くお勧めします。
 
 {% raw %}
 ```liquid
@@ -67,11 +67,11 @@ tool: Canvas
 
 ## ユースケース
 
-![アクションパスステップの後に、希望リストに項目を追加したユーザーの遅延ステップとメッセージステップ、および他のすべてのユーザーのパス。]({% image_buster /assets/img_archive/canvas_entry_properties1.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
+![ウィッシュリストにアイテムを追加したユーザーには、アクションパスのステップに続いてディレイステップとメッセージングステップがあり、それ以外のユーザーにはパスがある。]({% image_buster /assets/img_archive/canvas_entry_properties1.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
 
 `canvas_entry_properties` と`event_properties` の違いをさらに理解するために、ユーザーが「ウィッシュリストにアイテムを追加」というカスタムイベントを実行すると、アクションベースのキャンバスに入るというシナリオを考えてみます。 
 
-`canvas_entry_properties` は、キャンバスの作成時に[エントリスケジュール]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas#step-2b-set-your-canvas-entry-schedule)ステップで設定され、ユーザーがキャンバスに入るタイミングに対応します。キャンバスフローは永続的なエントリプロパティをサポートしているため、これらの `canvas_entry_properties` は、キャンバスフローのどのメッセージステップでも参照できます。 
+`canvas_entry_properties` は、キャンバスの作成時に[エントリスケジュール]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas#step-2b-set-your-canvas-entry-schedule)ステップで設定され、ユーザーがキャンバスに入るタイミングに対応します。これらの`canvas_entry_properties` は、どのメッセージステップでも参照できる。
 
 このキャンバスには、ユーザーがウィッシュリストにアイテムを追加したかどうかを判断するアクションパスのステップから始まるユーザージャーニーがあります。ここから、ユーザーがアイテムを追加した場合、メッセージステップから「ウィッシュリストに新しいアイテムを追加しました」というメッセージを受け取る前に、遅延が発生します。 
 

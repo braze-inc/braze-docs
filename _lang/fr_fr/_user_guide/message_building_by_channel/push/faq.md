@@ -8,7 +8,7 @@ channel:
   - Push
 ---
 
-# Foire aux questions
+# Questions fréquemment posées
 
 > Cet article répond aux questions les plus fréquemment posées sur le canal push.
 
@@ -18,7 +18,7 @@ Lorsqu'un utilisateur se déconnecte d'un appareil ou d'un site web, il reste jo
 
 Lorsqu'un jeton de poussée est réattribué, la modification est reflétée dans le **journal des modifications de** la **poussée** du profil utilisateur. Vous pouvez le trouver en allant dans l'onglet **Engagement** dans le profil utilisateur.
 
-![Le "Push Changelog" dans la section "Contact Settings".][1]{: style="max-width:50%;"}
+!Le "Journal des modifications" dans la section "Paramètres de contact".]({% image_buster /assets/img/push_changelog_faq.png %}){: style="max-width:50%;"}
 
 ### Pourquoi un utilisateur bénéficiant d'un abonnement n'a-t-il pas de jeton de poussée ?
 
@@ -34,4 +34,3 @@ Si vous souhaitez que le jeton de poussée soit réattribué à l'utilisateur d'
 1. Demandez à l'utilisateur d'origine de se connecter au profil avec le jeton de poussée manquant.
 2. Déclencher un nouvel envoi push. Le jeton sera alors redirigé vers le compte si l'option "push" est toujours activée au niveau de l'appareil.
 
-[1]: {% image_buster /assets/img/push_changelog_faq.png %}

@@ -111,14 +111,14 @@ Braze는 iOS 앱, Android 앱, 웹 앱 등을 지원합니다. React Native 또�
 
 ### CDP 통합 파트너
 
-많은 고객이 통합 파트너로 고객 데이터 플랫폼(CDP)과도 통합할 수 있는 기회로 활용하고자 Braze 온보딩을 사용합니다. Braze는 데이터 추적 및 분석을 제공하며, CDP는 추가적인 데이터 라우팅 및 오케스트레이션을 제공할 수 있습니다. Braze는 [엠파티클]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/mParticle/mparticle/), [세그먼트]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment/) 등 다양한 CDP와 원활하게 통합할 수 있습니다. 
+많은 고객이 통합 파트너로 고객 데이터 플랫폼(CDP)과도 통합할 수 있는 기회로 활용하고자 Braze 온보딩을 사용합니다. Braze는 데이터 추적 및 분석을 제공하며, CDP는 추가적인 데이터 라우팅 및 오케스트레이션을 제공할 수 있습니다. Braze는 [엠파티클]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/mparticle/mparticle/), [세그먼트]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/segment/segment/) 등 다양한 CDP와 원활하게 통합할 수 있습니다. 
 
 CDP와 병렬 통합을 수행하는 경우, CDP의 SDK에서 Braze SDK로 호출을 매핑합니다. 특히 다음을 수행합니다.
 * `changeUser`([Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/change-user.html), [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/changeuser(userid:sdkauthsignature:fileid:line:)/), [웹](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser))에 식별 호출을 매핑하고 속성을 설정합니다.
 * `requestImmediateDataFlush`([Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/request-immediate-data-flush.html?query=abstract%20fun%20requestImmediateDataFlush()), [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/requestimmediatedataflush()), [웹](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestimmediatedataflush))에 데이터 플러시 호출을 매핑합니다.
 * 사용자 지정 이벤트 또는 구매를 기록합니다.
 
-선택한 플랫폼에 따라 Braze SDK와 선택한 CDP 간의 통합 예제를 사용할 수 있습니다. 자세한 내용은 [CDP 기술 파트너 목록을]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform) 참조하세요. 
+선택한 플랫폼에 따라 Braze SDK와 선택한 CDP 간의 통합 예제를 사용할 수 있습니다. 자세한 내용은 [CDP 기술 파트너 목록을]({{site.baseurl}}/partners/data_and_analytics/) 참조하세요. 
 
 ### Braze SDK 통합
 

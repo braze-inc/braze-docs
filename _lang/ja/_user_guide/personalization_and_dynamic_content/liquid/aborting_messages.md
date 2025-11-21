@@ -59,7 +59,7 @@ Send this message in English!
 ```
 {% endraw %}
 
-![「language was nil」という中止メッセージが表示されている開発者コンソールのメッセージエラーログ]({% image_buster /assets/img_archive/developer_console.png %})
+![Message エラー は、"language のアボートメッセージで開発者コンソールにログインします。nil" でした。]({% image_buster /assets/img_archive/developer_console.png %})
 
 ## アボートメッセージのクエリ
 

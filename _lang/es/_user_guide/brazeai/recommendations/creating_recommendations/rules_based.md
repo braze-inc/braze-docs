@@ -11,7 +11,7 @@ page_order: 2
 
 ## Acerca de las recomendaciones de artículos basadas en reglas
 
-Una herramienta de recomendaciones basada en reglas utiliza datos de usuario e información sobre productos para sugerir a los usuarios elementos relevantes dentro de los mensajes. Utiliza [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) y [los catálogos]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/) Braze o [el Contenido conectado]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) para personalizar dinámicamente el contenido en función del comportamiento y los atributos del usuario.
+Una herramienta de recomendaciones basada en reglas utiliza datos de usuario e información sobre productos para sugerir a los usuarios elementos relevantes dentro de los mensajes. Utiliza [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) y [los catálogos]({{site.baseurl}}/user_guide/data/activation/catalogs/) Braze o [el Contenido conectado]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) para personalizar dinámicamente el contenido en función del comportamiento y los atributos del usuario.
 
 {% alert important %}
 Las recomendaciones basadas en reglas se basan en una lógica fija que debes establecer manualmente. Esto significa que tus recomendaciones no se ajustarán al historial de compras y gustos de un usuario a menos que actualices la lógica.<br><br>Para crear recomendaciones de IA personalizadas que se ajusten automáticamente al historial del usuario, consulta [Recomendaciones de artículos de IA]({{site.baseurl}}/user_guide/brazeai/recommendations/creating_recommendations/ai/).
@@ -25,7 +25,7 @@ Cuando decidas qué herramienta de recomendaciones se adapta a tus recursos disp
   <thead>
     <tr>
       <th>Motor de recomendaciones</th>
-      <th>No se han consumido puntos de datos</th>
+      <th>No hay puntos de datos registrados</th>
       <th>Solución sin código</th>
       <th>Sin avances Liquid</th>
       <th>Actualiza automáticamente la fuente de productos</th>
@@ -79,11 +79,11 @@ Cuando decidas qué herramienta de recomendaciones se adapta a tus recursos disp
 Crea tu herramienta de recomendaciones utilizando un catálogo o Contenidos Conectados:
 
 {% tabs local %}
-{% tab utilizando un catálogo %}
+{% tab using a catalog %}
 Para crear tu herramienta de recomendaciones utilizando un catálogo:
 
-1. [Crea un catálogo]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog/) de productos.
-2. Para cada producto, añade una lista de productos recomendados como una cadena separada por un delimitador (como una tubería `|`) en una columna llamada "recomendaciones_productos".
+1. [Crea un catálogo]({{site.baseurl}}/user_guide/data/activation/catalogs/create/) de productos.
+2. Para cada producto, añade una lista de productos recomendados como una cadena separada por un delimitador (como una tubería `|`) en una columna llamada “product_recommendations”.
 3. Pasa al catálogo el ID del producto para el que quieres encontrar recomendaciones.
 4. Obtén el valor `product_recommendations` de ese artículo del catálogo y divídelo por el delimitador con un filtro de división Liquid.
 5. Vuelve a pasar uno o varios de esos ID al catálogo para recoger los demás detalles del producto.
@@ -98,12 +98,12 @@ Supongamos que tienes una aplicación de comida sana y quieres crear una campañ
 | **tipo** | La categoría de la receta, como `comfort`, `fresh`, y otras. |
 | **título** | El título de la tarjeta de contenido que se enviará para cada ID, como "Prepárate para comer esta semana" o "Hagamos un taco al respecto". |
 | **enlace** | El enlace al artículo de la receta. |
-| **URL_imagen** | La imagen que corresponde a la receta. |
+| **image_url** | La imagen que corresponde a la receta. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Una vez cargado el catálogo en Braze, comprueba la vista previa de un número selecto de elementos del catálogo para confirmar que la información importada es correcta. Los elementos pueden ser aleatorios en la vista previa, pero esto no afectará al resultado de la herramienta de recomendaciones.
 
-![Ejemplo de catálogo en Braze.]({% image_buster /assets/img/recs/catalog_items.png %})
+\![Ejemplo de catálogo en Braze.]({% image_buster /assets/img/recs/catalog_items.png %})
 
 Crea una campaña de tarjeta de contenido. En el compositor, introduce la lógica Liquid para determinar qué usuarios deben recibir la campaña, y qué receta e imagen deben mostrarse. En este caso de uso, Braze obtendrá el `start_date` (o fecha de registro) del usuario y lo comparará con la fecha actual. La diferencia de días determinará qué tarjeta de contenido se envía.
 
@@ -154,7 +154,7 @@ Crea una campaña de tarjeta de contenido. En el compositor, introduce la lógic
 
 Por ejemplo:
 
-![Un ejemplo de creador de mensajes de una campaña de tarjeta de contenido.]({% image_buster /assets/img/recs/content_card_preview.png %})
+\![Un ejemplo de creador de mensajes de una campaña de tarjeta de contenido.]({% image_buster /assets/img/recs/content_card_preview.png %})
 
 En la sección **Comportamiento al hacer clic**, introduce la lógica Liquid para saber a dónde deben ser redirigidos los usuarios cuando hacen clic en la tarjeta de contenido en dispositivos iOS, Android y Web. 
 
@@ -171,14 +171,14 @@ En la sección **Comportamiento al hacer clic**, introduce la lógica Liquid par
 
 Por ejemplo:
 
-![Un ejemplo de bloque de comportamiento al hacer clic en el compositor.]({% image_buster /assets/img/recs/on_click_behavior.png %}){: style="max-width:60%;"}<br><br>
+\![Un ejemplo de bloque de comportamiento al hacer clic en el compositor.]({% image_buster /assets/img/recs/on_click_behavior.png %}){: style="max-width:60%;"}<br><br>
 
 Ve a la pestaña de **Prueba** y selecciona **Usuario personalizado** en **Vista previa del mensaje como usuario**. Introduce una fecha en el campo **Atributo personalizado** para obtener una vista previa de la tarjeta de contenido que se enviaría a un usuario que se hubiera registrado en esa fecha. <br><br>
 
-![Un ejemplo de atributo personalizado llamado 'fecha_inicio'.]({% image_buster /assets/img/recs/custom_attributes_test.png %})
+\![Un ejemplo de atributo personalizado llamado 'start_date'.]({% image_buster /assets/img/recs/custom_attributes_test.png %})
 {% endtab %}
 
-{% tab utilizando Contenido conectado %}
+{% tab using Connected Content %}
 Para crear tu herramienta de recomendaciones utilizando contenido conectado, crea primero un nuevo punto final utilizando uno de los siguientes métodos:
 
 |Opción|Descripción|
@@ -328,6 +328,6 @@ Good places
 
 Mira la siguiente captura de pantalla para ver un ejemplo de cómo se muestra la respuesta en el dispositivo de un usuario.
 
-![Representación de una lista de restaurantes generada por la llamada final del ejemplo.]({% image_buster /assets/img/recs/sample_response.png %}){: style="max-width:30%;"}
+Representación de una lista de restaurantes generada por la llamada final del ejemplo.]({% image_buster /assets/img/recs/sample_response.png %}){: style="max-width:30%;"}
 {% endtab %}
 {% endtabs %}

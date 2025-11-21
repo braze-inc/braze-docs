@@ -13,7 +13,7 @@ description: "This reference article covers how to use Braze Teams in the dashbo
 
 Teams can be set up across customer base location, language, and custom attributes so that Team members and non-Team members have different access to messaging features and customer data. Team filters and tags can be assigned across various engagement tools.
 
-Teams are not available on all Braze contracts. If you'd like to access this feature, reach out to your Braze account manager or [contact us](mailto:success@braze.com) for a consultation.
+Teams are not available on all Braze contracts. If you'd like to access this feature, contact your Braze account manager or [contact us](mailto:success@braze.com) for a consultation.
 
 ## How do Teams differ from permission sets and roles?
 
@@ -132,7 +132,7 @@ For changes to active campaigns:
 
 You can archive Teams from the **Internal Teams** page.
 
-Select one or many Teams to archive. If the Team is not associated with any object within Braze, the Team will be archived immediately. If the Team is associated with an object, you will be presented with an option to remove the Team after the archive process or replace the Team.
+Select one or many Teams to archive. If the Team is not associated with any object within Braze, Braze archives the Team immediately. If the Team is associated with an object, Braze presents you with an option to remove the Team after the archive process or replace the Team.
 
 ![Archiving a Team that is associated with an object in Braze]({% image_buster /assets/img_archive/archive_a_team.png %}){: style="max-width:70%;"}
 

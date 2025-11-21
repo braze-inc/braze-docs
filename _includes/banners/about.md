@@ -6,7 +6,7 @@
 
 ## Prerequisites
 
-Banners are available as part of your Message Credits entitlements. If you're not on our flexible Message Credits model, Banners are available as an add-on feature. Reach out to your Braze customer success manager for more information.
+Banners availability depends on your Braze package. Contact your account manager or customer success manager to get started.
 
 ## Why use Banners?
 
@@ -36,11 +36,11 @@ Features for Banners include:
 
 ### Placement IDs {#placement-id}
 
-Banner placements are specific locations in your app or website [you create with the Braze SDK]({{site.baseurl}}/developer_guide/banners/creating_placements/) that designate where Banners can appear.
+Banner placements are specific locations in your app or website [you create with the Braze SDK]({{site.baseurl}}/developer_guide/banners/placements/) that designate where Banners can appear.
 
 Common locations include the top of your homepage, product detail pages, and checkout flows. After placements are created, Banners can be [assigned in your Banner campaign]({{site.baseurl}}/user_guide/message_building_by_channel/banners/creating_campaigns/).
 
-Additionally, Banner placements are unique to each workspace and can only be used across 10 campaigns within a single workspace. Placements within each workspace must be given a unique ID, which you'll assign when creating a placement in Braze.
+There is no fixed limit on the number of placements you can create per workspace, and you can create as many placement IDs as your experience requires. Each placement must be unique within a workspace. A single placement ID can be referenced by up to 10 active campaigns at the same time.
 
 {% alert important %}
 Avoid modifying placement IDs after launching a Banner campaign.
@@ -81,7 +81,7 @@ Additionally, Banner messages do not support the following features:
 - Connected Content
 - Promotional codes
 - User-controlled dismissals
-- `catalog_items` using the [`:rerender` tag]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/using_catalogs/#using-liquid)
+- `catalog_items` using the [`:rerender` tag]({{site.baseurl}}/user_guide/data/activation/catalogs/using_catalogs/#using-liquid)
 
 {% alert tip %}
 Want to help prioritize what's next? Contact [banners-feedback@braze.com](mailto:banners-feedback@braze.com).
@@ -91,6 +91,6 @@ Want to help prioritize what's next? Contact [banners-feedback@braze.com](mailto
 
 Now that you know about Banners, you're ready for the next steps:
 
-1. [Creating Banner placements in your app or website]({{site.baseurl}}/developer_guide/banners/creating_placements/)
+1. [Creating Banner placements in your app or website]({{site.baseurl}}/developer_guide/banners/placements/)
 2. [Creating Banner campaigns in Braze]({{site.baseurl}}/user_guide/message_building_by_channel/banners/creating_campaigns/)
 3. [Tutorial: Displaying a Banner by Placement ID]({{site.baseurl}}/developer_guide/banners/tutorial_displaying_banners)

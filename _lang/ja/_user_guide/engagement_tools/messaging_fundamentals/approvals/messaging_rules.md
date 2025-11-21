@@ -54,9 +54,9 @@ description: "このページでは、送信ボリュームが大きいキャン
 5. [**リーチ可能な最大ユーザー数**] に数値を入力します。詳細については、[オーディエンス統計]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users#audience-statistics)を参照してください。
 6. [**保存**] を選択します。
 
-![最大ユーザー数が100,000人に設定されているキャンペーンのメッセージングルール「Rule 1」の例。キャンバスとキャンペーンの起動を承認できる1人のユーザーが設定されている。]({% image_buster /assets/img/target_population_approval_example.png %}){: style="max-width:90%;"}
+![10万ユーザーを最大とするキャンペーンのメッセージングルール「ルール1」の例。キャンバスとキャンペーンを承認できるユーザーは1人だ。]({% image_buster /assets/img/target_population_approval_example.png %}){: style="max-width:90%;"}
 
-### ステップ2:承認による起動を決定する (オプション)
+### ステップ 2: 承認による起動を決定する (オプション)
 
 [**承認による起動を許可する**] を選択します。次に [**承認元**] で、最大数に達した場合にキャンバスまたはキャンペーンを承認する権限を持つ承認者を選択します。
 
@@ -65,7 +65,7 @@ description: "このページでは、送信ボリュームが大きいキャン
 - 最大値を満たし、承認者が選択されている場合、承認権限を持つ Braze ユーザーは、[**ターゲットオーディエンス**] の承認ドロップダウンから [**承認済み**] を選択できます。
 - 最大数を満たす場合、承認が選択されていないと、キャンバスまたはキャンペーンは起動できません。
 
-![開始のための承認が必要であることを示すキャンバスワークフローの [要約] ステップ。]({% image_buster /assets/img/non_approver_banner.png %}){: style="max-width:90%;"}
+![キャンバスワークフローの "Summary "ステップ。]({% image_buster /assets/img/non_approver_banner.png %}){: style="max-width:90%;"}
 
 ## よくある質問
 

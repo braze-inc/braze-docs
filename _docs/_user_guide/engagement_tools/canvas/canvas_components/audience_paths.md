@@ -1,5 +1,5 @@
 ---
-nav_title: Audience Paths 
+nav_title: Audience paths
 article_title: Audience Paths 
 alias: /audience_paths/
 page_order: 1

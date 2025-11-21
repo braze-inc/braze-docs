@@ -1,5 +1,5 @@
 ---
-nav_title: Email Sign-Up with Double Opt-In
+nav_title: Email sign-up with double opt-in
 article_title: Email Sign-Up with Double Opt-In
 page_order: 2
 page_type: reference

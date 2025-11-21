@@ -14,4 +14,4 @@ tool:
 
 > Brazeダッシュボードで提供されるさまざまなWebhookレポートメトリクスと分析オプションについて学ぶ。
 
-{% multi_lang_include campaign_analytics.md channel="webhook" %}
+{% multi_lang_include analytics/campaign_analytics.md channel="webhook" %}

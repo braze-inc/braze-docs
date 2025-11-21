@@ -1,5 +1,5 @@
 ---
-nav_title: Read & Unread Indicators
+nav_title: Read & unread indicators
 article_title: Content Card Read & Unread Indicators for iOS
 platform: iOS
 page_order: 4

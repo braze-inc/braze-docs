@@ -28,6 +28,8 @@ export RLINKS="$PROJECT_ROOT/scripts/remove_unused_reference_links.rb"
 export ULINKS="$PROJECT_ROOT/scripts/update_old_links.py"
 export MREDIRECTS="$PROJECT_ROOT/scripts/make_redirects.py"
 export LREDIRECTS="$PROJECT_ROOT/scripts/list_new_redirect_urls.sh"
+export CLANGS="$PROJECT_ROOT/scripts/clean_orphaned_translations.py"
+export RAKE="$PROJECT_ROOT/scripts/print_rake_params.sh"
 export SYNTAX="$PROJECT_ROOT/scripts/print_unique_syntax.sh"
 
 # Utility scripts that are not directly used in bdocs:
@@ -49,8 +51,10 @@ OPTIONS:
   rlinks         Remove unused reference links on 1 or more pages
   ulinks         Update old links using newest redirect on 1 or more pages
   mredirects     Make redirects for all renamed files in this branch
-  fblinks        Finds broken links throughout the docs site
   lredirects     Test new redirects by listing old URLs in this branch
+  fblinks        Finds broken links throughout the docs site
+  clangs         Clean language directories by deleting orphaned files
+  rake           Print all supported parameters for 'rake'
   syntax         Print all unique Markdown syntax supported by Braze Docs
   help           Display this help message and exit
 
@@ -206,11 +210,6 @@ case $1 in
     mredirects)
         "$MREDIRECTS"
         ;;
-    fblinks)
-        # require_git_fetch
-        require_yarn
-        npx ts-node ./scripts/find_broken_links.ts
-        ;;
     lredirects)
         require_git_fetch
         if [[ $# -eq 2 ]]; then
@@ -218,6 +217,17 @@ case $1 in
         else
             "$LREDIRECTS"
         fi
+        ;;
+    fblinks)
+        # require_git_fetch
+        require_yarn
+        npx ts-node ./scripts/find_broken_links.ts
+        ;;
+    clangs)
+        "$CLANGS"
+        ;;
+    rake)
+        "$RAKE"
         ;;
     syntax)
         "$SYNTAX"

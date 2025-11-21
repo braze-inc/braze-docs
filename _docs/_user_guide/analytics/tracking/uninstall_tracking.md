@@ -1,5 +1,5 @@
 ---
-nav_title: Uninstall Tracking
+nav_title: Uninstall tracking
 article_title: Uninstall Tracking
 page_order: 6
 page_type: reference

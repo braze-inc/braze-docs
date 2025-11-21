@@ -1,6 +1,6 @@
 ---
 page_order: 2
-nav_title: Segmentation Filters
+nav_title: Segmentation filters
 article_title: Segmentation Filters
 layout: glossary_page
 glossary_top_header: "Segmentation Filters"
@@ -47,7 +47,7 @@ glossaries:
     tags:
       - Segment or CSV membership
   - name: Custom Attributes
-    description: Determines whether or not a user matches a custom recorded attribute value. (24-hour period) <br><br>Time zone:<br>Company's Time Zone
+    description: Determines whether or not a user matches a custom recorded attribute value. <br><br>Time zone:<br>Company's Time Zone
     tags:
       - Custom attributes
   - name: Created At
@@ -59,11 +59,11 @@ glossaries:
     tags:
       - Custom attributes
   - name: Day of Recurring Event
-    description: This filter looks at the month and day of custom attribute with the data type of "date", but does not look at the year. This filter is useful for annual events.<br><br>Time zone&#58;<br>This filter adjusts for whatever time zones the user is in.
+    description: This filter looks at the month and day of custom attribute with the data type of "date", but does not look at the year. This filter is useful for annual events.<br><br>Time zone&#58;<br>This filter adjusts for whatever time zones the user is in, so long as the message sends using the local time scheduling option; otherwise, this filter uses your company time zone.
     tags:
       - Custom attributes
   - name: Custom Event
-    description: Determines whether or not a user has performed a specially recorded event.<br><br> Example:<br>Activity completed with property activty_name.<br><br>Time zone:<br>UTC - Calendar Day = 1 calendar day will look at 24-48 hours of user history
+    description: Determines whether or not a user has performed a specially recorded event.<br><br> Example:<br>Activity completed with property activity_name.<br><br>Time zone:<br>UTC - Calendar Day = 1 calendar day will look at 24-48 hours of user history
     tags:
       - Custom events
   - name: First Did Custom Event
@@ -182,6 +182,10 @@ glossaries:
     description: Segments your users by the last time that they received a WhatsApp message. This is when the last message API request is sent to WhatsApp, not when the message is delivered to the user's device. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
     tags:
       - Retargeting
+  - name: Live Activities Push to Start Registered for App
+    description: Segments your users by whether they are registered to start a Live Activity through iOS push notifications for a specific app.
+    tags:
+      - Devices
   - name: Clicked/Opened Campaign
     description: Filter by interaction with a specific campaign. For email messaging, the open event includes both machine opens and non-machine opens.<br><br> For email, this also includes the option to filter by "opened any email (machine opens)" and "opened any email (other opens)". If multiple users share the same email address:<br>- When the email is opened or clicked, all other users with that same email address also have their profiles updated. <br>- If the original user changes their email address after the message is sent and before the open or click, the open or click gets applied to all remaining users with that email address instead of the original user.<br><br>For SMS, an interaction is defined as:<br>- The user last sent a reply SMS matching a given keyword category. This is attributed to the most recent campaign received by all users with this phone number. The campaign must have been received in the last four hours.<br>- The user last selected any shortened link in an SMS message that has user click tracking turned on, from a given campaign.
     tags:

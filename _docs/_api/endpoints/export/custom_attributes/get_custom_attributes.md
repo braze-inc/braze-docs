@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: Export Custom Attributes"
+nav_title: "GET: Export custom attributes"
 article_title: "GET: Export Custom Attributes"
 search_tag: Endpoint
 page_order: 4
@@ -54,8 +54,6 @@ curl --location --request GET 'https://rest.iad-03.braze.com/custom_attributes?c
 ## Response
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "attributes" : [

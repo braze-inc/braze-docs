@@ -24,7 +24,7 @@ Braze アカウントに接続できるカスタムドメインの数は、[プ�
 3. **TXT** および**CNAME** レコードをコピーして、ドメインプロバイダーのDNS 設定に貼り付けます。
 4. Braze ダッシュボードに戻り、接続を確認します。
 
-![ランディングページ設定ページで、1 つのTXT と2 つのCNAME レコードがそれぞれの名前と値とともにリストされています。]({% image_buster /assets/img/landing_pages/connect_subdomain.png %})
+![ランディングページ設定ページには、1つのTXTレコードと2つのCNAMEレコードがそれぞれの名前と値とともに記載されている。]({% image_buster /assets/img/landing_pages/connect_subdomain.png %})
 
 {% alert note %}
 ドメインプロバイダーによっては、接続に最大48時間かかることがあります。プロセスが完了したら、Braze ダッシュボードのランディングページでカスタムドメインの使用を開始します。

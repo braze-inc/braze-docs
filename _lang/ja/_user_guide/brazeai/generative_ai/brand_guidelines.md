@@ -1,5 +1,5 @@
 ---
-nav_title: ブランドガイドライン
+nav_title: ブランド・ガイドライン
 article_title: AIが生成するブランド・ガイドライン
 page_order: 2.2
 description: "このリファレンス記事では、AI コピーライティングアシスタントのブランドガイドラインについて説明します。この機能を使用すると、AI コピーライティングアシスタントが生成するコピーのスタイルを、ブランドのボイスやスタイルに合わせて調整できます。"
@@ -18,7 +18,7 @@ AI コピーライティングアシスタントのブランドガイドライ�
 1. メッセージ作成画面で [<i class="fa-solid fa-wand-magic-sparkles" title="AI コピーライター"></i>]を選択して、[AIコピーライティングアシスタントを開きます]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/#access)。
 2. [**ブランドガイドラインを適用**] を選択し、次に [**ブランドガイドラインを作成**] を選択します。
 
-![ブランドガイドラインを適用する」のドロップダウンが、「ブランドガイドラインを作成する」ボタンにフォーカスした状態で展開された。]({% image_buster /assets/img/ai_copywriter/create_brand_guideline_button.png %}){:style="max-width:75%"}
+![ブランドガイドラインを適用する」のドロップダウンが展開され、「ブランドガイドラインを作成する」ボタンがフォーカスされた。]({% image_buster /assets/img/ai_copywriter/create_brand_guideline_button.png %}){:style="max-width:75%"}
 
 {: start="3"}
 
@@ -26,9 +26,9 @@ AI コピーライティングアシスタントのブランドガイドライ�
 4. [**これらのブランドガイドラインはいつ使用しますか?**] には、同僚 (そして将来のあなた) がこのガイドラインを使用する状況を理解できるように詳細を追加します。
 5. これを現在のワークスペースのデフォルトのブランドガイドラインにしたい場合は、「**Use as default brand guideline**」をチェックする。
 
-![ブランドガイドライン作成画面。]({% image_buster /assets/img/ai_copywriter/manual_brand_guidelines.png %} "Brand Guidelines")
+![ブランド・ガイドライン作成の視点。]({% image_buster /assets/img/ai_copywriter/manual_brand_guidelines.png %} "Brand Guidelines")
 
-### ステップ2: ブランドのパーソナリティの説明
+### ステップ 2: ブランドのパーソナリティの説明
 
 **ブランドパーソナリティ**では、自社ブランドをユニークなものにしている要素について考えます。自社ブランドを定義する特徴、価値観、ボイス、およびあらゆる原型を含めます。以下に、考慮すべきいくつかの特徴を示します。
 
@@ -50,7 +50,7 @@ AI コピーライティングアシスタントのブランドガイドライ�
 
 ガイドラインをテストして、そのパフォーマンスを確認します。[**ガイドラインをテスト**] を展開し、コピー例を作成して、必要に応じて調整します。
 
-![]({% image_buster /assets/img/ai_copywriter/test_brand_guidelines.png %}) メールの件名について、春のセールに関するプロモーションでブランドガイドラインをテストしている。
+![メールの件名について、春のセールに関するプロモーションでブランドガイドラインをテストする。]({% image_buster /assets/img/ai_copywriter/test_brand_guidelines.png %})
 
 ### ステップ 5: ガイドラインの保存
 

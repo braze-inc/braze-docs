@@ -1,5 +1,5 @@
 ---
-nav_title: Completing the Integration
+nav_title: Completing the integration
 article_title: Completing the iOS SDK Integration
 platform: iOS
 description: "This reference article shows how to finish integrating the Braze SDK after installing it via one of the integration options."
@@ -108,7 +108,7 @@ If you wish to customize Braze on startup, you can instead use the Braze initial
 In your `AppDelegate.m` file, within your `application:didFinishLaunchingWithOptions:` method, add the following Braze method:
 
 ```objc
-[Appboy startWithApiKey:@"YOUR-APP-IDENTIFER-API-KEY"
+[Appboy startWithApiKey:@"YOUR-APP-IDENTIFIER-API-KEY"
           inApplication:application
       withLaunchOptions:launchOptions
       withAppboyOptions:appboyOptions];

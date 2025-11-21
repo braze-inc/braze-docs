@@ -1,5 +1,5 @@
 ---
-nav_title: Copying Across Workspaces
+nav_title: Copying across workspaces
 article_title: Copying Across Workspaces
 page_order: 4.5
 alias: "/copying_to_workspaces/"

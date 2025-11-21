@@ -1,5 +1,5 @@
 ---
-nav_title: Custom Keyword Handling
+nav_title: Custom keyword handling
 article_title: Custom Keyword Handling
 page_order: 3
 description: "This reference article covers how Braze deals with two-way SMS, MMS, and RCS messaging and auto-responses. This includes explanations on how keyword triggering works as well as custom keyword categories and multi-language support."
@@ -75,7 +75,7 @@ If an action-based Canvas is triggered by an inbound SMS, MMS, or RCS message, y
 
 ## Multi-language support
 
-When sending to certain countries, a sender may be required to support inbound keywords and outbound replies with a local language. To support this, Braze allows you to create a language-specific keyword setting. 
+When sending to certain countries, a sender may be required to support inbound keywords and outbound replies with a local language. To support this, Braze allows you to create a language-specific keyword setting. When created, langauage-specific keyword settings will apply to all sending numbers within the subscription group. 
 ![Dropdown displaying languages to add as a keyword setting.]({% image_buster /assets/img/sms/multi-language.png %}){: style="float:right;max-width:50%;margin-left:10px;"}
 
 ### Creating language-specific keywords

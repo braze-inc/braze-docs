@@ -19,18 +19,18 @@ Para SDKs de wrapper não listados, use o método nativo relevante do Android ou
 {% endsdktab %}
 
 {% sdktab swift %}
-guide/swift/analytics/setting_user_attributes.md developer_ %}
+{% multi_lang_include developer_guide/swift/analytics/setting_user_attributes.md %}
 {% endsdktab %}
 
 {% sdktab web %}
-guide/web/analytics/setting_user_attributes.md developer_ %}
+{% multi_lang_include developer_guide/web/analytics/setting_user_attributes.md %}
 {% endsdktab %}
 
 {% sdktab unity %}
-guide/unity/analytics/setting_user_attributes.md developer_ %}
+{% multi_lang_include developer_guide/unity/analytics/setting_user_attributes.md %}
 {% endsdktab %}
 
 {% sdktab unreal engine %}
-guide/unreal_engine/analytics/setting_user_attributes.md developer_ %}
+{% multi_lang_include developer_guide/unreal_engine/analytics/setting_user_attributes.md %}
 {% endsdktab %}
 {% endsdktabs %}

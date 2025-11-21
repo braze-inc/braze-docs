@@ -1,5 +1,5 @@
 ---
-nav_title: "Schedule Object"
+nav_title: "Schedule object"
 article_title: API Schedule Object
 page_order: 12
 page_type: reference
@@ -32,8 +32,6 @@ Insert this object as needed to schedule your messages.
 You will receive a `schedule_id` for the scheduled message you created.
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "schedule_id" : (required, string) identifier for the scheduled message that was created
 }

@@ -1,5 +1,5 @@
 ---
-nav_title: API Use Cases
+nav_title: API use cases
 article_title: API Use Cases
 description: "Whether you’re a proficient developer or a marketer with minimal developer resources, this reference article is designed to help you understand how to leverage the power of the Braze REST API to accomplish various tasks and enhance your customer engagement strategy."
 page_type: reference
@@ -86,8 +86,6 @@ For the first task of auditing Canvases, use the [`/canvas/list` endpoint]({{sit
 
 {% details Here’s the response that the Siege Valley Health marketing team would receive. %}
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "canvases" : [
   	{
@@ -222,8 +220,6 @@ In this scenario, WorkFriends has historically used a singular HTML template wit
 {% details Here’s the response that the WorkFriends team would receive. %}
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
 {
   "email_template_id": "WorkFriends_Email_Template_ID",
   "template_name": "Promo template",

@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: List Users' Subscription Group Status"
+nav_title: "GET: List users' subscription group status"
 article_title: "GET: List User's Subscription Group Status"
 search_tag: Endpoint
 page_order: 4
@@ -87,8 +87,6 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/sta
 All successful responses will return `Subscribed`, `Unsubscribed`, or `Unknown` depending on status and user history with the subscription group.
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "status": {
     "1": "Unsubscribed",

@@ -1,5 +1,5 @@
 ---
-nav_title: User Retargeting
+nav_title: User retargeting
 article_title: User Retargeting
 description: "This reference article covers how users can retarget their messages by a user's SMS and RCS interactions."
 page_type: reference

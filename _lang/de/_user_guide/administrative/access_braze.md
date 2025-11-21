@@ -11,7 +11,7 @@ description: "Auf dieser Landing Page finden Sie Artikel über den Zugriff auf I
 
 guide_featured_title: "Abschnittsartikel"
 guide_featured_list:
-- name: Navigation
+- name: Navigieren in Braze
   link: /docs/user_guide/administrative/access_braze/navigation/
   image: /assets/img/braze_icons/list.svg
 - name: Ihr Dashboard durchsuchen
@@ -31,35 +31,13 @@ guide_featured_list:
   image: /assets/img/braze_icons/log-in-01.svg
 - name: Produkt-Portal
   link: /docs/user_guide/administrative/access_braze/portal/
+  image: /assets/img/braze_icons/target-05.svg
+- name: Fehlersuche
+  link: /docs/user_guide/administrative/access_braze/troubleshooting/
   image: /assets/img/braze_icons/annotation-question.svg
 - name: Braze-Support
   link: /docs/user_guide/administrative/access_braze/support/
   image: /assets/img/braze_icons/mail-01.svg
 ---
-
-## Unterstützte Browser
-
-Das Braze Dashboard unterstützt die folgenden Browser:
-- Chrome (Version 87 oder neuer)
-- Firefox (Version 85 oder neuer)
-- Safari (Version 15.4 oder neuer)
-- Edge (Version 87 oder neuer)
-
-Wenn Ihr Braze-Dashboard einen unerwarteten Fehler meldet und Ihr Browser-Konsolentool den Fehler `ReferenceError: structuredClone is not defined` anzeigt, ist Ihr Browser veraltet. Wenn dieser Fehler immer wieder auftritt, deinstallieren Sie Ihren Browser und installieren Sie ihn neu.
-
-### Browser-Cache und Cookies
-
-Wenn Sie Probleme mit der Performance des Dashboards haben, z.B. wenn Ihre Performance-Liste des Dashboards oder der Segmente nicht geladen wird, versuchen Sie, Ihren Browser-Cache und Ihre Cookies zu löschen, indem Sie die Schritte für Ihren jeweiligen Browser befolgen.
-
-{% alert important %}
-Wenn Sie Cookies löschen, werden Sie abgemeldet, so dass ungespeicherte Arbeit verloren geht.
-{% endalert %}
-
-- [Cache und Cookies in Chrome löschen](https://support.google.com/accounts/answer/32050?hl=en&co=GENIE.Platform%3DDesktop)
-- [Cookies in Safari auf dem Mac löschen](https://support.apple.com/en-gb/guide/safari/sfri11471/16.1/mac/13.0)
-- [Cookies und Daten der Website in Firefox löschen](https://support.mozilla.org/en-US/kb/clear-cookies-and-site-data-firefox)
-- [Alle Cookies in Microsoft Edge löschen](https://support.microsoft.com/en-us/windows/manage-cookies-in-microsoft-edge-view-allow-block-delete-and-use-168dab11-0753-043d-7c16-ede5947fc64d#bkmk_deleteallcookies)
-
-Wenn das Löschen Ihres Browser-Caches und Ihrer Cookies Ihre Probleme nicht löst, wenden Sie sich an den [Support]({{site.baseurl}}/support_contact/).
 
 <br><br>

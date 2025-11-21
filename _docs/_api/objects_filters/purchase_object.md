@@ -1,5 +1,5 @@
 ---
-nav_title: "Purchase Object"
+nav_title: "Purchase object"
 article_title: API Purchase Object
 page_order: 8
 page_type: reference
@@ -10,6 +10,8 @@ description: "This reference article explains the different components of a purc
 # Purchase object
 
 > This article explains the different components of a purchase object, how to use it correctly, best practices, and examples to draw from.
+
+{% multi_lang_include alerts/important_alerts.md alert='Purchase event deprecation' %}
 
 ## What is a purchase object?
 

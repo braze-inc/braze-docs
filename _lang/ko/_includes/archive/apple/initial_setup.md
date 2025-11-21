@@ -1,12 +1,12 @@
 Braze SDK를 설치하면 기본 분석 기능({% if include.platform == 'iOS' %})과 함께 사용자를 참여시킬 수 있는 인앱 메시지({% endif %})가 제공됩니다.
 
-Objective-C 및 Swift 프로젝트의 종속성 관리자인 [CocoaPods][apple_initial_setup_1]를 사용하여 {{include.platform}} Braze SDK를 설치하거나 업데이트해야 합니다. CocoaPods를 사용하면 통합과 업데이트가 더욱 간편해집니다.
+Objective-C 및 Swift 프로젝트의 종속성 관리자인 [CocoaPods](http://cocoapods.org/)를 사용하여 {{include.platform}} Braze SDK를 설치하거나 업데이트해야 합니다. CocoaPods를 사용하면 통합과 업데이트가 더욱 간편해집니다.
 
 ## {{include.platform}} SDK CocoaPods 통합
 
 ### 1단계: CocoaPods 설치
 
-{{include.platform}} [CocoaPods][apple_initial_setup_1]을 통해 SDK를 설치하면 대부분의 설치 과정이 자동화됩니다. 이 프로세스를 시작하기 전에 [Ruby 버전 2.0.0][apple_initial_setup_2] 이상을 사용하고 있는지 확인하세요. 루비 구문에 대한 지식이 없어도 이 SDK를 설치할 수 있습니다.
+{{include.platform}} [CocoaPods](http://cocoapods.org/)을 통해 SDK를 설치하면 대부분의 설치 과정이 자동화됩니다. 이 프로세스를 시작하기 전에 [Ruby 버전 2.0.0](https://www.ruby-lang.org/en/installation/) 이상을 사용하고 있는지 확인하세요. 루비 구문에 대한 지식이 없어도 이 SDK를 설치할 수 있습니다.
 
 시작하려면 다음 명령을 실행하기만 하면 됩니다.
 
@@ -14,9 +14,9 @@ Objective-C 및 Swift 프로젝트의 종속성 관리자인 [CocoaPods][apple_i
 $ sudo gem install cocoapods
 ```
 
-**참고**: `rake` 실행 파일을 덮어쓰라는 메시지가 표시되는 경우 [CocoaPods.org에서 시작하기 지침][apple_initial_setup_3]에서 자세한 내용을 확인하세요.
+**참고**: `rake` 실행 파일을 덮어쓰라는 메시지가 표시되면 자세한 내용은 [시작하기 지침CocoaPods.org](http://guides.cocoapods.org/using/getting-started.html)을 참조하세요.
 
-**참고**: 코코아팟과 관련된 문제가 있는 경우 [코코아팟 문제 해결 가이드][apple_initial_setup_25]]를 참조하세요.
+**참고**: 코코아팟과 관련된 문제가 있는 경우 [코코아팟 문제 해결 가이드를](http://guides.cocoapods.org/using/troubleshooting.html) 참조하세요.
 
 ### 2단계: 포드파일 구성하기
 
@@ -43,7 +43,7 @@ pod install
 
 이 시점에서 CocoaPods에서 생성한 새 Xcode 프로젝트 작업 공간을 열 수 있어야 합니다. Xcode 프로젝트 대신 이 Xcode 워크스페이스를 사용해야 합니다. 
 
-![새 워크스페이스][apple_initial_setup_15]
+![새 워크스페이스]({% image_buster /assets/img_archive/podsworkspace.png %})
 
 ### 4단계: 앱 위임 업데이트
 
@@ -173,25 +173,10 @@ Appboy.start(withApiKey: "YOUR-API-KEY",
 - `launchOptions` - 다음에서 제공되는 옵션 `NSDictionary`  `application:didFinishLaunchingWithOptions:`
 - `appboyOptions` - Braze에 대한 시작 구성 값이 포함된 선택 사항`NSDictionary`
 
-Braze 시작 키 목록은 [Appboy.h][apple_initial_setup_5]를 참조하세요.
+Braze 시작 키 목록은 [Appboy.h](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h)를 참조하세요.
 
 ## Appboy.sharedInstance() 및 Swift 널 지정 가능
 일반적인 관행과는 다소 다르게 `Appboy.sharedInstance()` 싱글톤은 선택 사항입니다. `startWithApiKey:` 호출 전에 `sharedInstance`가 `nil`이고, 표준은 아니지만, 지연된 초기화를 사용할 수 있는 유효한 구현이 일부 있기 때문입니다.
 
 Appboy의 `sharedInstance`(표준 구현)에 액세스하기 전에 `didFinishLaunchingWithOptions:` 위임에서 `startWithApiKey:`를 호출하면 `Appboy.sharedInstance()?.changeUser("testUser")`와 같은 선택적 체인을 사용하여 번거로운 확인 작업을 피할 수 있습니다. null이 아닌 `sharedInstance`를 가정하는 Objective-C 구현과 동등합니다.
 
-[apple_initial_setup_1]: http://cocoapods.org/
-[apple_initial_setup_2]: https://www.ruby-lang.org/en/installation/
-[apple_initial_setup_3]: http://guides.cocoapods.org/using/getting-started.html "CocoaPods 설치 지침"
-[apple_initial_setup_4]: http://guides.cocoapods.org/syntax/podfile.html
-[apple_initial_setup_5]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h
-[apple_initial_setup_8]: #manual-sdk-integration
-[apple_initial_setup_12]: #appboy-podfiles-for-non-64-bit-apps
-[apple_initial_setup_15]: {% image_buster /assets/img_archive/podsworkspace.png %}
-[apple_initial_setup_17]: http://guides.cocoapods.org/using/getting-started.html#updating-cocoapods
-[apple_initial_setup_19]: https://developer.apple.com/library/ios/documentation/swift/conceptual/buildingcocoaapps/MixandMatch.html
-[apple_initial_setup_21]: {{ site.baseurl }}/partner_integrations/#attribution-integration
-[apple_initial_setup_25]: http://guides.cocoapods.org/using/troubleshooting.html 'CocoaPods 문제 해결 가이드'
-[apple_initial_setup_27]: https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md "iOS 변경 로그"
-[apple_initial_setup_31]: {{ site.baseurl }}/developer_guide/rest_api/basics/#endpoints
-[apple_initial_setup_32]: {{ site.baseurl }}/support_contact/

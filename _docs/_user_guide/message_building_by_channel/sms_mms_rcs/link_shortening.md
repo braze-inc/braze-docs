@@ -1,5 +1,5 @@
 ---
-nav_title: Link Shortening
+nav_title: Link shortening
 article_title: Link Shortening
 page_order: 3
 description: "This reference article covers how to turn on link shortening in your SMS messages and some frequently asked questions."
