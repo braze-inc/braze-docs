@@ -9,7 +9,7 @@ search_tag: Partner
 
 # Cloudinary
 
-> [Cloudinary](https://www.cloudinary.com?utm_source=braze+partner+page) is an image and video platform used to manage, edit, optimize, and deliver images and video at scale to any campaign across channels and customer journeys. When integrated and enabled, Cloudinary's media management powers dynamic, contextual, and personalized asset delivery for your Braze campaigns and Canvases. 
+> [Cloudinary](https://www.cloudinary.com?utm_source=braze_partner_page) is an image and video platform used to manage, edit, optimize, and deliver images and video at scale to any campaign across channels and customer journeys. When integrated and enabled, Cloudinary's media management powers dynamic, contextual, and personalized asset delivery for your Braze campaigns and Canvases. 
 
 ## About this integration
 
