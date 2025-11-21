@@ -149,4 +149,4 @@ Gmail determines when and who to display the card to, so there isn't a guarantee
 
 Annotations aren't supported for Google Workspace. To preview annotations, you can create a personal email address with Gmail.
 
-Note that annotations don't render in the **Primary** tab or in any other tab in the Gmail mobile app. After a user opens an email, the annotations won't display. Annotations won't display after a user opens an email, and if you're using the `DiscountOffer` annotation type and the time and date have already expired.
+Note that annotations don't render in the **Primary** tab or in any other tab in the Gmail mobile app. Annotations won't display after a user opens an email or if you're using the `DiscountOffer` annotation type and the time and date have already expired.
