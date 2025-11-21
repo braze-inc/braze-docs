@@ -102,7 +102,7 @@ The `message` field will return `success` for any valid request. More specific e
 No, because the number of users stays the same, they have a new `external_id`.
 
 ### Does user behavior change historically?
-No, since the user is still the same, and all their historical behavior is still connected to them.
+No, because the user is still the same, and all their historical behavior is still connected to them.
 
 ### Can it be run on development or staging workspaces?
 Yes. In fact, we highly recommend running a test migration on a staging or development workspace, and ensuring everything has gone smoothly before executing on production data.
