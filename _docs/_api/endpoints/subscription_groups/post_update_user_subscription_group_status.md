@@ -55,7 +55,7 @@ Authorization: Bearer YOUR-REST-API-KEY
    // SMS and RCS subscription group - you must include one of external_id or phone
  }
 ```
-\* SMS and RCS subscription groups: Only `external_id` or `phone` is accepted.
+\* SMS and RCS subscription groups: Braze accepts only `external_id` or `phone`.
 
 {% endtab %}
 {% tab Email %}
@@ -71,7 +71,7 @@ Authorization: Bearer YOUR-REST-API-KEY
    "external_id": (required*, array of strings) the external ID of the user or users, may include up to 50 IDs,
    "email": (required*, array of strings) the email address of the user (must include at least one email and at most 50 emails),
    // Email subscription group - you must include one of external_id or email
-   // Note that sending an email address that is linked to multiple profiles will update all relevant profiles
+   // Note that sending an email address that is linked to multiple profiles updates all relevant profiles
  }
 ```
 \* Email subscription groups: You must include either `email` or `external_id`.
@@ -91,8 +91,8 @@ When creating new users using the [/users/track]({{site.baseurl}}/api/endpoints/
 | [`subscription_group_id`]({{site.baseurl}}/api/identifier_types/?tab=subscription%20group%20ids) | Required | String | The `id` of your subscription group. |
 | `subscription_state` | Required | String | Available values are `unsubscribed` (not in subscription group) or `subscribed` (in subscription group). |
 | `external_id` | Required* | Array of strings | The `external_id` of the user or users, may include up to 50 `id`s. |
-| `email` | Required* | String or array of strings | The email address of the user, can be passed as an array of strings. Must include at least one email address (with a maximum of 50). <br><br>If multiple users (`external_id`) in the same workspace share the same email address, then all users that share the email address are updated with the subscription group changes. |
-| `phone` | Required* | String in [E.164](https://en.wikipedia.org/wiki/E.164) format | The phone number of the user, can be passed as an array of strings. Must include at least one phone number (up to 50). <br><br>If multiple users (`external_id`) in the same workspace share the same phone number, then all users that share the phone number are updated with the same subscription group changes. |
+| `email` | Required* | String or array of strings | The email address of the user, can be passed as an array of strings. Must include at least one email address (with a maximum of 50). <br><br>If multiple users (`external_id`) in the same workspace share the same email address, then Braze updates all users that share the email address with the subscription group changes. |
+| `phone` | Required* | String in [E.164](https://en.wikipedia.org/wiki/E.164) format | The phone number of the user, can be passed as an array of strings. Must include at least one phone number (up to 50). <br><br>If multiple users (`external_id`) in the same workspace share the same phone number, then Braze updates all users that share the phone number with the same subscription group changes. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Example requests
@@ -138,7 +138,7 @@ The status code `201` could return the following response body.
 ```
 
 {% alert important %}
-The endpoint only accepts the `email` or `phone` value, not both. If given both, you will receive this response: `{"message":"Either an email address or a phone number should be provided, but not both."}`
+The endpoint accepts only the `email` or `phone` value, not both. If you provide both, you receive this response: `{"message":"Either an email address or a phone number should be provided, but not both."}`
 {% endalert %}
 
 {% endapi %}

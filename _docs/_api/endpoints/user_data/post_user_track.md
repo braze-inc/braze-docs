@@ -198,7 +198,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 
 ### Example request to create an alias-only user
 
-You can use the `/users/track` endpoint to create a new alias-only user by setting the `_update_existing_only` key with a value of `false` in the body of the request. If this value is omitted, the alias-only user profile will not be created. Using an alias-only user guarantees that one profile with that alias will exist. This is especially helpful when building a new integration as it prevents the creation of duplicate user profiles.
+You can use the `/users/track` endpoint to create a new alias-only user by setting the `_update_existing_only` key with a value of `false` in the body of the request. If you omit this value, Braze does not create the alias-only user profile. Using an alias-only user guarantees that one profile with that alias exists. This is especially helpful when building a new integration as it prevents Braze from creating duplicate user profiles.
 
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
@@ -231,9 +231,9 @@ Successful messages will be met with the following response:
 ```json
 {
   "message": "success",
-  "attributes_processed": (optional, integer), if attributes are included in the request, this will return an integer of the number of external_ids with attributes that were queued to be processed,
-  "events_processed": (optional, integer), if events are included in the request, this will return an integer of the number of events that were queued to be processed,
-  "purchases_processed": (optional, integer), if purchases are included in the request, this will return an integer of the number of purchases that were queued to be processed,
+  "attributes_processed": (optional, integer), if attributes are included in the request, this returns an integer of the number of external_ids with attributes that Braze queued for processing,
+  "events_processed": (optional, integer), if events are included in the request, this returns an integer of the number of events that Braze queued for processing,
+  "purchases_processed": (optional, integer), if purchases are included in the request, this returns an integer of the number of purchases that Braze queued for processing,
 }
 ```
 
@@ -252,7 +252,7 @@ If your message is successful but has non-fatal errors, such as one invalid even
 }
 ```
 
-For success messages, any data not affected by an error in the `errors` array will still be processed.
+For success messages, Braze still processes any data not affected by an error in the `errors` array.
 
 ### Message with fatal errors
 
@@ -271,7 +271,7 @@ If your message has a fatal error, you will receive the following response:
 
 ### Fatal error response codes
 
-For status codes and associated error messages that will be returned if your request encounters a fatal error, reference [Fatal errors & responses]({{site.baseurl}}/api/errors/#fatal-errors).
+For status codes and associated error messages that Braze returns if your request encounters a fatal error, reference [Fatal errors & responses]({{site.baseurl}}/api/errors/#fatal-errors).
 
 If you receive the error "provided external_id is blacklisted and disallowed", your request may have included a "dummy user." For more information, refer to [Spam blocking]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_archival/#spam-blocking).
 
@@ -280,10 +280,10 @@ If you receive the error "provided external_id is blacklisted and disallowed", y
 {% multi_lang_include alerts/important_alerts.md alert='Email via SMS' %}
 
 ### What happens when multiple profiles with the same email address are found?
-If the `external_id` exists, the most recently updated profile with an external ID will be prioritized for updates. If the `external_id` doesn't exist, the most recently updated profile will be prioritized for updates.
+If the `external_id` exists, Braze prioritizes the most recently updated profile with an external ID for updates. If the `external_id` doesn't exist, Braze prioritizes the most recently updated profile for updates.
 
 ### What happens if no profile with the email address currently exists?
-A new profile will be created, and an email-only user will be created. An alias will not be created. The email field will be set to test@braze.com, as noted in the example request for updating a user profile by email address.
+Braze creates a new profile and an email-only user. Braze does not create an alias. Braze sets the email field to test@braze.com, as noted in the example request for updating a user profile by email address.
 
 ### How do you use `/users/track` to import legacy user data?
 You may submit data through the Braze API for a user who has not yet used your mobile app to generate a user profile. If the user subsequently uses the application all information following their identification using the SDK will be merged with the existing user profile you created using the API call. Any user behavior recorded anonymously by the SDK before identification will be lost upon merging with the existing API-generated user profile.
@@ -296,7 +296,7 @@ Each event object in the events array represents a single occurrence of a custom
 
 ### How does `/users/track` handle invalid nested custom attributes?
 
-When a nested custom attribute contains any invalid values (such as invalid time formats or null values), all nested custom attribute updates in the request will be dropped from processing. This applies to all nested structures within that specific attribute. To ensure successful processing, verify that all values within nested custom attributes are valid before sending.
+When a nested custom attribute contains any invalid values (such as invalid time formats or null values), Braze drops all nested custom attribute updates in the request from processing. This applies to all nested structures within that specific attribute. To ensure successful processing, verify that all values within nested custom attributes are valid before sending.
 
 ## Monthly Active Users CY 24-25
 For customers who have purchased Monthly Active Users - CY 24-25, Braze manages different rate limits on its `/users/track` endpoint:

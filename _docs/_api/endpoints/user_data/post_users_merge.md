@@ -72,7 +72,7 @@ This endpoint will merge the following fields if they're not found on the target
 - Session count (the sum of sessions from both profiles)
 - Date of first session (Braze will pick the earlier date of the two dates)
 - Date of last session (Braze will pick the later date of the two dates)
-- Custom attributes (existing custom attributes on the target profile are retained and will include custom attributes that didn't exist on the target profile)
+- Custom attributes (Braze retains existing custom attributes on the target profile and includes custom attributes that didn't exist on the target profile)
 - Custom event and purchase event data
 - Custom event and purchase event properties for "X times in Y days" segmentation (where X<=50 and Y<=30)
 - Segmentable custom events summary
@@ -88,7 +88,7 @@ This endpoint will merge the following fields if they're not found on the target
 - Campaign interaction data (Braze will pick the most recent date fields)
 - Workflow summaries (Braze will pick the most recent date fields)
 - Message and message engagement history
-- Session data will only be merged if the app exists on both user profiles.
+- Braze merges session data only if the app exists on both user profiles.
 
 {% alert note %}
 When merging users, using the `/users/merge` endpoint works the same way as using the [`changeUser()` method](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser).

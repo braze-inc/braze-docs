@@ -31,7 +31,7 @@ The recipients object allows you to combine the [user alias object]({{site.baseu
 }]
 ```
 
-When `send_to_existing_only` is `true`, Braze will only send the message to existing users. However, this flag can't be used with user aliases. When `send_to_existing_only` is `false`, an attribute must be included. Braze will create a user with the `id` and attributes before sending the message.
+When `send_to_existing_only` is `true`, Braze only sends the message to existing users. However, you cannot use this flag with user aliases. When `send_to_existing_only` is `false`, you must include an attribute. Braze creates a user with the `id` and attributes before sending the message.
 
 - [Braze ID]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/)
 - [User aliases]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases)
@@ -41,9 +41,9 @@ When `send_to_existing_only` is `true`, Braze will only send the message to exis
 
 ## Recipient object deduping
 
-When making an API call with the recipient object, **if there exists a duplicated recipient targeting the same address (that is, email, push), the user will be deduped**, meaning identical users will be removed, leaving one.
+When making an API call with the recipient object, **if there exists a duplicated recipient targeting the same address (that is, email, push), Braze dedupes the user**, meaning Braze removes identical users, leaving one.
 
-For example, if the same `external_user_id` is used, then only one message will be received. Consider making multiple API calls if you need a workaround for this behavior.
+For example, if you use the same `external_user_id`, then the user receives only one message. Consider making multiple API calls if you need a workaround for this behavior.
 
 ```json
 {"campaign_id":"#####","recipients":[

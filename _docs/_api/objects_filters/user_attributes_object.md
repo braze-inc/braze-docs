@@ -52,7 +52,7 @@ To remove a profile attribute, set it to `null`. Some fields, such as `external_
 If you wish to update only existing user profiles in Braze, you should pass the `_update_existing_only` key with a value of `true` within the body of your request. If this value is omitted, Braze will create a new user profile if the `external_id` does not already exist.
 
 {% alert note %}
-If you are creating an alias-only user profile through the `/users/track` endpoint, `_update_existing_only` must be set to `false`. If this value is omitted, the alias-only profile will not be created.
+If you are creating an alias-only user profile through the `/users/track` endpoint, you must set `_update_existing_only` to `false`. If you omit this value, Braze does not create the alias-only profile.
 {% endalert %}
 
 #### Push token import
@@ -128,7 +128,7 @@ The following user profile fields are case sensitive, so be sure to reference th
 | email_subscribe | (string) Available values are "opted_in" (explicitly registered to receive email messages), "unsubscribed" (explicitly opted out of email messages), and "subscribed" (neither opted in nor out).  |
 | email_open_tracking_disabled |(boolean) `true` or `false` accepted. Set to `true` to disable the open tracking pixel from being added to all future emails sent to this user. Available for SparkPost and SendGrid only.|
 | email_click_tracking_disabled |(boolean) `true` or `false` accepted. Set to `true` to disable the click tracking for all links within a future email, sent to this user. Available for SparkPost and SendGrid only.|
-| external_id | (string) A unique identifier for a user profile. After assigned an `external_id`, the user profile is identified across a user's devices. On the first instance of assigning an external_id to an unknown user profile, all existing user profile data will be migrated to the new user profile. |
+| external_id | (string) A unique identifier for a user profile. After you assign an `external_id`, Braze identifies the user profile across a user's devices. On the first instance of assigning an external_id to an unknown user profile, Braze migrates all existing user profile data to the new user profile. |
 | facebook | hash containing any of `id` (string), `likes` (array of strings), `num_friends` (integer). |
 | first_name | (string) |
 | gender | (string) "M", "F", "O" (other), "N" (not applicable), "P" (prefer not to say) or nil (unknown). |

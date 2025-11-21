@@ -74,14 +74,14 @@ When using this endpoint's [request parameters](#request-parameters), you should
 
 ### Successful message
 
-Successful messages will return the following response, which includes information about the user profile data that was updated.
+Successful messages return the following response, which includes information about the user profile data that Braze updated.
 
 ```json
 {
     "users": (optional, object), the identifier of the user in the request. May be empty if no users are found and _update_existing_only key is set to true,
-        "custom_attributes": (optional, object), the custom attributes as a result of the request. Only custom attributes from the request will be listed,
-        "custom_events": (optional, object), the custom events as a result of the request. Only custom events from the request will be listed,
-        "purchase_events": (optional, object), the purchase events as a result of the request. Only purchase events from the request will be listed,
+        "custom_attributes": (optional, object), the custom attributes as a result of the request. Braze lists only custom attributes from the request,
+        "custom_events": (optional, object), the custom events as a result of the request. Braze lists only custom events from the request,
+        "purchase_events": (optional, object), the purchase events as a result of the request. Braze lists only purchase events from the request,
     },
     "message": "success"
 ```
@@ -275,7 +275,7 @@ For most profile updates, the `/users/track` endpoint will work best because of 
 
 ### Does the response time differ from the `/users/track` endpoint?
 
-With a synchronous call, the API waits until the request is completed to return a response. As a result, synchronous requests will take longer on average than asynchronous requests to `/users/track`. For the majority of requests, you can expect a response within seconds.
+With a synchronous call, the API waits until Braze completes the request to return a response. As a result, synchronous requests take longer on average than asynchronous requests to `/users/track`. For the majority of requests, you can expect a response within seconds.
 
 ### Can I send multiple requests at the same time?
 
