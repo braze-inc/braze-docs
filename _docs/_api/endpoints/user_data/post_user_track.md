@@ -10,14 +10,14 @@ description: "This article outlines details about the Track user Braze endpoint.
 ---
 {% api %}
 # Track users
-{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /users/track
 {% endapimethod %}
 
 > Use this endpoint to record custom events and purchases and update user profile attributes.
 
 {% alert note %}
-Braze processes the data passed through API at face value, and customers should only pass deltas (changing data) to minimize unnecessary data point logging. To read more, refer to [Data points]({{site.baseurl}}/user_guide/data/data_points/). 
+Braze processes the data passed through API at face value, and customers should only pass deltas (changing data) to minimize unnecessary data point logging. To read more, refer to [Data points]({{site.baseurl}}/user_guide/data/data_points/).
 {% endalert %}
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4cf57ea9-9b37-4e99-a02e-4373c9a4ee59 {% endapiref %}
@@ -50,7 +50,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 ### Request parameters
 
 {% alert important %}
-For each request component listed in the following table, one of `external_id`, `user_alias`, `braze_id`, `email`, or `phone` is required.
+For each request component listed in the following table, you must include one of `external_id`, `user_alias`, `braze_id`, `email`, or `phone`.
 {% endalert %}
 
 | Parameter | Required | Data Type | Description |
@@ -64,7 +64,7 @@ For each request component listed in the following table, one of `external_id`, 
 
 ### Update a user profile by email address
 
-You can update a user profile by email address using the `/users/track` endpoint. 
+You can update a user profile by email address using the `/users/track` endpoint.
 
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
@@ -164,7 +164,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 ```
 ### Set subscription groups
 
-This example shows how to create a user and set their subscription group within the user attributes object. 
+This example shows how to create a user and set their subscription group within the user attributes object.
 
 Updating the subscription status with this endpoint will update the user specified by their `external_id` (such as User1) and update the subscription status of any users with the same email as that user (User1).
 
@@ -252,7 +252,7 @@ If your message is successful but has non-fatal errors, such as one invalid even
 }
 ```
 
-For success messages, any data not affected by an error in the `errors` array will still be processed. 
+For success messages, any data not affected by an error in the `errors` array will still be processed.
 
 ### Message with fatal errors
 
@@ -273,7 +273,7 @@ If your message has a fatal error, you will receive the following response:
 
 For status codes and associated error messages that will be returned if your request encounters a fatal error, reference [Fatal errors & responses]({{site.baseurl}}/api/errors/#fatal-errors).
 
-If you receive the error "provided external_id is blacklisted and disallowed", your request may have included a "dummy user." For more information, refer to [Spam blocking]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_archival/#spam-blocking). 
+If you receive the error "provided external_id is blacklisted and disallowed", your request may have included a "dummy user." For more information, refer to [Spam blocking]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_archival/#spam-blocking).
 
 ## Frequently asked questions
 

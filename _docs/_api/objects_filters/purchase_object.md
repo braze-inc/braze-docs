@@ -92,7 +92,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## Purchase properties object
 
-Custom events and purchases may have event properties. The "properties" values should be an object where the keys are the property names and the values are the property values. Property names must be non-empty strings less than or equal to 255 characters, with no leading dollar signs. 
+Custom events and purchases may have event properties. The "properties" values should be an object where the keys are the property names and the values are the property values. Property names must be non-empty strings less than or equal to 255 characters, with no leading dollar signs.
 
 Property values can be any of the following data types:
 

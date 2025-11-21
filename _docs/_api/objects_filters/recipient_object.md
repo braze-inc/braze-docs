@@ -11,7 +11,7 @@ description: "This reference article explains the different components of the Br
 
 > The recipients object allows you to request or write information in our endpoints.
 
-Either `external_user_id`, `user_alias`, `braze_id`, or `email` is required in this object. **Requests must specify only one.**
+You must include one of `external_user_id`, `user_alias`, `braze_id`, or `email` in this object. **Requests must specify only one.**
 
 The recipients object allows you to combine the [user alias object]({{site.baseurl}}/api/objects_filters/user_alias_object/), the [trigger properties object]({{site.baseurl}}/api/objects_filters/trigger_properties_object/), the [Canvas entry properties object]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/), and the [user attributes object]({{site.baseurl}}/api/objects_filters/user_attributes_object/).
 
@@ -41,13 +41,13 @@ When `send_to_existing_only` is `true`, Braze will only send the message to exis
 
 ## Recipient object deduping
 
-When making an API call with the recipient object, **if there exists a duplicated recipient targeting the same address (that is, email, push), the user will be deduped**, meaning identical users will be removed, leaving one. 
+When making an API call with the recipient object, **if there exists a duplicated recipient targeting the same address (that is, email, push), the user will be deduped**, meaning identical users will be removed, leaving one.
 
 For example, if the same `external_user_id` is used, then only one message will be received. Consider making multiple API calls if you need a workaround for this behavior.
 
 ```json
 {"campaign_id":"#####","recipients":[
 {"external_user_id":"userid1","trigger_properties":{"name":"Beth Test 1"}},
-{"external_user_id":"userid1","trigger_properties":{"name":"Beth Test 2"}} 
+{"external_user_id":"userid1","trigger_properties":{"name":"Beth Test 2"}}
 ]}
 ```

@@ -9,7 +9,7 @@ description: "This article explains the different components of the connected au
 
 # Connected audience object
 
-> A connected audience object is a selector that identifies the audience to send the message to. 
+> A connected audience object is a selector that identifies the audience to send the message to.
 
 This object is composed of either a single connected audience filter or several connected audience filters in a logical expression using either `AND` or `OR` operators.
 
@@ -61,7 +61,7 @@ The custom attribute's data type determines the comparisons that are valid for a
 | Array | `includes_value`, `does_not_include_value`, `exists`, `does_not_exist` |
 | Numeric | `equals`, `not_equal`, `greater_than`, `greater_than_or_equal_to`, `less_than`, `less_than_or_equal_to`, `exists`, `does_not_exist` |
 | Boolean | `equals`, `does_not_equal`, `exists`, `does_not_exist` |
-| Time | `less_than_x_days_ago`, `greater_than_x_days_ago`, `less_than_x_days_in_the_future`, `greater_than_x_days_in_the_future`, `after`, `before`, `exists`, `does_not_exist` | 
+| Time | `less_than_x_days_ago`, `greater_than_x_days_ago`, `less_than_x_days_in_the_future`, `greater_than_x_days_in_the_future`, `after`, `before`, `exists`, `does_not_exist` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 #### Attribute comparison caveats

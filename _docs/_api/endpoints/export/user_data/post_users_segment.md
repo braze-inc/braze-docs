@@ -14,7 +14,7 @@ description: "This article outlines details about the Export users by segment Br
 /users/export/segment
 {% endapimethod %}
 
-> Use this endpoint to export all the users within a segment. 
+> Use this endpoint to export all the users within a segment.
 
 {% alert important %}
 When using this endpoint, note the following:<br><br>1. The `fields_to_export` field in this API request is **required**.<br>2. The fields for `custom_events`, `purchases`, `campaigns_received`, and `canvases_received` only contain data from the last 90 days.
@@ -22,7 +22,7 @@ When using this endpoint, note the following:<br><br>1. The `fields_to_export` f
 
 User data is exported as multiple files of user JSON objects separated by new lines (such as one JSON object per line). Data is exported to an automatically generated URL or to an S3 bucket if this integration is already set up.
 
-Note that a company may run at most one export per segment using this endpoint at a given time. Wait for your export to complete before trying again. 
+Note that a company may run at most one export per segment using this endpoint at a given time. Wait for your export to complete before trying again.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#cfa6fa98-632c-4f25-8789-6c3f220b9457 {% endapiref %}
 
@@ -58,7 +58,7 @@ If you have added your [S3][1], [Azure][2], or [Google Cloud Storage][3] credent
 
 {% enddetails %}
 
-We strongly suggest setting up your own S3 or Azure credentials when using this endpoint to enforce your own bucket policies on the export. If you do not have your cloud storage credentials, the response to the request provides the URL where a ZIP file containing all the user files can be downloaded. The URL will only become a valid location after the export is ready. 
+We strongly suggest setting up your own S3 or Azure credentials when using this endpoint to enforce your own bucket policies on the export. If you do not have your cloud storage credentials, the response to the request provides the URL where a ZIP file containing all the user files can be downloaded. The URL will only become a valid location after the export is ready.
 
 Be aware that if you do not provide your cloud storage credentials, there is a limitation on the amount of data you can export from this endpoint. Depending on the fields you're exporting and the number of users, the file transfer may fail if it is too large. A best practice is to specify which fields you want to export using `fields_to_export` and specify only the fields you need to keep the size of the transfer lower. If you are getting errors generating the file, consider breaking your user base into more segments based on a random bucket number (for example, create a segment where a random bucket number is less than 1,000 or between 1,000 and 2,000).
 
@@ -276,7 +276,7 @@ User export object (we will include the least data possible - if a field is miss
       {
         "name" : (string),
         "last_received" : (string) date,
-        "engaged" : 
+        "engaged" :
          {
            "opened_email" : (boolean),
            "opened_push" : (boolean),
@@ -360,10 +360,10 @@ User export object (we will include the least data possible - if a field is miss
     "attributed_source" : "braze_test_source_072219",
     "attributed_adgroup" : "braze_test_adgroup_072219",
     "attributed_ad" : "braze_test_ad_072219",
-    "push_subscribe" : "opted_in", 
+    "push_subscribe" : "opted_in",
     "push_opted_in_at": "2020-01-26T22:45:53.953Z",
     "email_subscribe" : "subscribed",
-    "custom_attributes": 
+    "custom_attributes":
     {
       "loyaltyId": "37c98b9d-9a7f-4b2f-a125-d873c5152856",
       "loyaltyPoints": "321",
@@ -423,12 +423,12 @@ User export object (we will include the least data possible - if a field is miss
         "name": "Email Unsubscribe",
         "api_campaign_id": "d72fdc84-ddda-44f1-a0d5-0e79f47ef942",
         "last_received": "2022-06-02T03:07:38.105Z",
-        "engaged": 
+        "engaged":
         {
            "opened_email": true
         },
         "converted": true,
-        "multiple_converted": 
+        "multiple_converted":
         {
           "Primary Conversion Event - A": true
         },
@@ -458,7 +458,7 @@ User export object (we will include the least data possible - if a field is miss
         ]
       }
       ...
-    ],    
+    ],
     "cards_clicked" : [
       {
         "name" : "Loyalty Promo"

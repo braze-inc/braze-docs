@@ -14,7 +14,7 @@ description: "This article outlines details about the Merge users Braze endpoint
 /users/merge
 {% endapimethod %}
 
-> Use this endpoint to merge one user into another user. 
+> Use this endpoint to merge one user into another user.
 
 Up to 50 merges may be specified per request. This endpoint is asynchronous.
 
@@ -100,7 +100,7 @@ These merged fields will update "for X events in Y days" filters. For purchase e
 
 ### Merging users by email or phone number
 
-If an `email` or `phone` is specified as an identifier, an additional `prioritization` value is required in the identifier. The `prioritization` should be an ordered array specifying which user to merge if multiple users are found. This means if more than one user matches from a prioritization, then merging will not occur.
+If an `email` or `phone` is specified as an identifier, you must include an additional `prioritization` value in the identifier. The `prioritization` should be an ordered array specifying which user to merge if multiple users are found. This means if more than one user matches from a prioritization, then merging will not occur.
 
 The allowed values for the array are:
 
@@ -189,7 +189,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 
 ### Merging unidentified user into identified user
 
-This next example merges the most recently updated unidentified user with email address `john.smith@braze.com` into the most recently updated identified user with email address `john.smith@braze.com`. 
+This next example merges the most recently updated unidentified user with email address `john.smith@braze.com` into the most recently updated identified user with email address `john.smith@braze.com`.
 
 Using `most_recently_updated` will filter the queries to just one user (one unidentified user for `identifier_to_merge`, and one identified user for the `identifier_to_keep`).
 

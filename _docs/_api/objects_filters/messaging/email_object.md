@@ -47,7 +47,7 @@ Valid attachment types include: `txt`, `csv`, `log`, `css`, `ics`, `jpg`, `jpe`,
 
 An `email_template_id` can be retrieved from the bottom of any email template created with the HTML editor. The following shows an example of what this ID looks like:
 
-![API Identifier section of an HTML email template.]({% image_buster /assets/img_archive/email_template_id.png %}){: style="max-width:70%;"} 
+![API Identifier section of an HTML email template.]({% image_buster /assets/img_archive/email_template_id.png %}){: style="max-width:70%;"}
 
 ## Example email object with attachment
 

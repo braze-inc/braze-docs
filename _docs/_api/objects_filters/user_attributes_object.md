@@ -9,7 +9,7 @@ description: "This reference article explains the different components of the us
 
 # User attributes object
 
-> An API request with any fields in the attributes object will create or update an attribute of that name with the given value on the specified user profile. 
+> An API request with any fields in the attributes object will create or update an attribute of that name with the given value on the specified user profile.
 
 Use Braze user profile field names (listed as follows or any listed in the section for [Braze user profile fields](#braze-user-profile-fields)) to update those special values on the user profile in the dashboard or add your own custom attribute data to the user.
 
@@ -59,7 +59,7 @@ If you are creating an alias-only user profile through the `/users/track` endpoi
 
 Before you import push tokens to Braze, double check if you need to. When the Braze SDKs are put in place, they handle push tokens automatically with no need to upload them through the API.
 
-If you do find you need to upload them through the API, they can either be uploaded for identified users or anonymous users. This means that either an `external_id` needs to present, or the anonymous users must have the `push_token_import` flag set to `true`. 
+If you do find you need to upload them through the API, they can either be uploaded for identified users or anonymous users. This means that either an `external_id` needs to present, or the anonymous users must have the `push_token_import` flag set to `true`.
 
 {% alert note %}
 When importing push tokens from other systems, an `external_id` is not always available. To maintain communication with these users during your transition to Braze, you can import the legacy tokens for anonymous users without providing `external_id` by specifying `push_token_import` as `true`.
@@ -97,7 +97,7 @@ The following data types can be stored as a custom attribute:
 For information on when you should use a custom event versus a custom attribute, see our respective documentation on [custom events]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) and [custom attributes]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/).
 {% endalert %}
 
-##### Array of objects example 
+##### Array of objects example
 
 This array of objects allows you to create segments based on specific criteria within the stays, and personalize your messages using the data from each stay with Liquid templates.
 
@@ -110,7 +110,7 @@ This array of objects allows you to create segments based on specific criteria w
 
 #### Braze user profile fields {#braze-user-profile-fields}
 
-{% alert important %} 
+{% alert important %}
 The following user profile fields are case sensitive, so be sure to reference these fields in lower case.
 {% endalert %}
 
@@ -118,7 +118,7 @@ The following user profile fields are case sensitive, so be sure to reference th
 | ---| --- |
 | alias_name | (string) |
 | alias_label | (string) |
-| braze_id | (string, optional) When a user profile is recognized by the SDK, an anonymous user profile is created with an associated `braze_id`. The `braze_id` is automatically assigned by Braze, cannot be edited, and is device-specific. | 
+| braze_id | (string, optional) When a user profile is recognized by the SDK, an anonymous user profile is created with an associated `braze_id`. The `braze_id` is automatically assigned by Braze, cannot be edited, and is device-specific. |
 | country | (string) We require that country codes be passed to Braze in the [ISO-3166-1 alpha-2 standard](http://en.wikipedia.org/wiki/ISO_3166-1). Our API will make a best effort to map countries received in different formats. For example, "Australia" may map to "AU". However, if the input doesn't match a given [ISO-3166-1 alpha-2 standard](http://en.wikipedia.org/wiki/ISO_3166-1), the country value will be set to `NULL`. <br><br>Setting `country` on a user by CSV import or API will prevent Braze from automatically capturing this information through the SDK. |
 | current_location | (object) Of the form {"longitude": -73.991443, "latitude": 40.753824} |
 | date_of_first_session | (date at which the user first used the app) String in ISO 8601 format or in any of the following formats: <br>- `yyyy-MM-ddTHH:mm:ss:SSSZ` <br>- `yyyy-MM-ddTHH:mm:ss` <br>- `yyyy-MM-dd HH:mm:ss` <br>- `yyyy-MM-dd` <br>- `MM/dd/yyyy` <br>- `ddd MM dd HH:mm:ss.TZD YYYY` |
@@ -212,7 +212,7 @@ Programmatically migrate iOS (APNs) and Android (FCM) tokens to your platform by
 Specify your app's `app_id` during push token migration to associate the appropriate push token with the appropriate app. Each app (iOS, Android, etc.) has its own `app_id`, which can be found in the **Identification** section of the [API Keys]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) page. Be sure to use the correct platform's `app_id`.
 
 {% alert important %}
-It is not possible to migrate web push tokens through the API. This is because web push tokens do not conform to the same schema as other platforms. 
+It is not possible to migrate web push tokens through the API. This is because web push tokens do not conform to the same schema as other platforms.
 
 <br>If you are attempting to migrate web push tokens programmatically, you might see an error like the following: `Received '400: Invalid subscription auth' sending to 'https://fcm.googleapis.com/fcm/send`
 
@@ -222,7 +222,7 @@ As an alternative to API migration, we recommend that you integrate the SDK and 
 
 {% tabs local %}
 {% tab External ID present %}
-For identified users, set the `push_token_import` flag to `false` (or omit the parameter) and specify the `external_id`, `app_id`, and `token` values in the user `attributes` object. 
+For identified users, set the `push_token_import` flag to `false` (or omit the parameter) and specify the `external_id`, `app_id`, and `token` values in the user `attributes` object.
 
 For example:
 
@@ -257,7 +257,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE' \
 --data-raw '{
-  "attributes": [ 
+  "attributes": [
     {
       "push_token_import" : true,
       "email": "braze.test1@testbraze.com",
@@ -268,7 +268,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
         {"app_id": "APP_ID_OF_OS", "token": "PUSH_TOKEN_STRING", "device_id": "DEVICE_ID"}
       ]
     },
-      
+
     {
       "push_token_import" : true,
       "email": "braze.test2@testbraze.com",
@@ -277,7 +277,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
       "YOUR_CUSTOM_ATTRIBUTE_1": "YOUR_VALUE",
       "YOUR_CUSTOM_ATTRIBUTE_2": "YOUR_VALUE",
       "push_tokens": [
-        {"app_id": "APP_ID_OF_OS", "token": "PUSH_TOKEN_STRING", "device_id": "DEVICE_ID"}  
+        {"app_id": "APP_ID_OF_OS", "token": "PUSH_TOKEN_STRING", "device_id": "DEVICE_ID"}
       ]
     }
   ]
@@ -296,7 +296,7 @@ Braze will check once a month to find any anonymous profile with the `push_token
 The following consideration only applies for Android apps. iOS apps will not require these steps because that platform has only one framework for displaying push, and push notifications will render immediately as long as Braze has the necessary push tokens and certificates.
 {% endalert %}
 
-If you must send Android push notifications to your users before the Braze SDK integration is complete, use key-value pairs to validate push notifications. 
+If you must send Android push notifications to your users before the Braze SDK integration is complete, use key-value pairs to validate push notifications.
 
 You must have a receiver to handle and display push payloads. To notify the receiver of the push payload, add the necessary key-value pairs to the push campaign. The values of these pairs are contingent on the specific push partner you used before Braze.
 

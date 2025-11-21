@@ -9,11 +9,11 @@ description: "This article outlines details about the Update user's subscription
 ---
 {% api %}
 # Update user's subscription group status
-{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /subscription/status/set
 {% endapimethod %}
 
-> Use this endpoint to batch update the subscription state of up to 50 users on the Braze dashboard. 
+> Use this endpoint to batch update the subscription state of up to 50 users on the Braze dashboard.
 
 You can access a subscription group's `subscription_group_id` by navigating to the **Subscription Group** page.
 
@@ -52,7 +52,7 @@ Authorization: Bearer YOUR-REST-API-KEY
    "subscription_state": (required, string) available values are "unsubscribed" (not in subscription group) or "subscribed" (in subscription group),
    "external_id": (required*, array of strings) the external ID of the user or users, may include up to 50 IDs,
    "phone": (required*, array of strings in E.164 format) The phone number of the user (must include at least one phone number and at most 50 phone numbers),
-   // SMS and RCS subscription group - one of external_id or phone is required
+   // SMS and RCS subscription group - you must include one of external_id or phone
  }
 ```
 \* SMS and RCS subscription groups: Only `external_id` or `phone` is accepted.
@@ -70,11 +70,11 @@ Authorization: Bearer YOUR-REST-API-KEY
    "subscription_state": (required, string) available values are "unsubscribed" (not in subscription group) or "subscribed" (in subscription group),
    "external_id": (required*, array of strings) the external ID of the user or users, may include up to 50 IDs,
    "email": (required*, array of strings) the email address of the user (must include at least one email and at most 50 emails),
-   // Email subscription group - one of external_id or email is required
+   // Email subscription group - you must include one of external_id or email
    // Note that sending an email address that is linked to multiple profiles will update all relevant profiles
  }
 ```
-\* Email subscription groups: Either `email` or `external_id` is required.
+\* Email subscription groups: You must include either `email` or `external_id`.
 {% endtab %}
 {% endtabs %}
 

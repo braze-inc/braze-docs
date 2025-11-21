@@ -416,7 +416,7 @@ User export object (we will include the least data possible - if a field is miss
         ]
       }
       ...
-    ],    
+    ],
     "cards_clicked" : [
       {
         "name" : "Loyalty Promo"
