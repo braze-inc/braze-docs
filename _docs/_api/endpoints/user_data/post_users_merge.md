@@ -70,23 +70,23 @@ This endpoint will merge the following fields if they're not found on the target
 - Language
 - Device information
 - Session count (the sum of sessions from both profiles)
-- Date of first session (Braze will pick the earlier date of the two dates)
-- Date of last session (Braze will pick the later date of the two dates)
+- Date of first session (Braze picks the earlier date of the two dates)
+- Date of last session (Braze picks the later date of the two dates)
 - Custom attributes (Braze retains existing custom attributes on the target profile and includes custom attributes that didn't exist on the target profile)
 - Custom event and purchase event data
 - Custom event and purchase event properties for "X times in Y days" segmentation (where X<=50 and Y<=30)
 - Segmentable custom events summary
   - Event count (the sum from both profiles)
-  - Event first occurred (Braze will pick the earlier date of the two dates)
-  - Event last occurred (Braze will pick the later date of the two dates)
+  - Event first occurred (Braze picks the earlier date of the two dates)
+  - Event last occurred (Braze picks the later date of the two dates)
 - In-app purchase total in cents (the sum from both profiles)
 - Total number of purchases (the sum from both profiles)
-- Date of first purchase (Braze will pick the earlier date of the two dates)
-- Date of last purchase (Braze will pick the later date of the two dates)
+- Date of first purchase (Braze picks the earlier date of the two dates)
+- Date of last purchase (Braze picks the later date of the two dates)
 - App summaries
-- Last_X_at fields (Braze will update the fields if the orphaned profile fields are more recent)
-- Campaign interaction data (Braze will pick the most recent date fields)
-- Workflow summaries (Braze will pick the most recent date fields)
+- Last_X_at fields (Braze updates the fields if the orphaned profile fields are more recent)
+- Campaign interaction data (Braze picks the most recent date fields)
+- Workflow summaries (Braze picks the most recent date fields)
 - Message and message engagement history
 - Braze merges session data only if the app exists on both user profiles.
 

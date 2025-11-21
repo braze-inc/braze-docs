@@ -103,7 +103,7 @@ Property values can be any of the following data types:
 | Datetimes | Formatted as strings in [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) or `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format. Not supported within arrays. |
 | Strings | 255 characters or fewer. |
 | Arrays | Arrays cannot include datetimes. |
-| Objects | Objects will be ingested as strings. |
+| Objects | Objects are ingested as strings. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Event property objects that contain array or object values can have an event property payload of up to 50&nbsp;KB.
@@ -116,10 +116,10 @@ Event property objects that contain array or object values can have an event pro
 
 It's important to note that this feature is turned on **per product**, not per purchase. For example, if a you have a high volume of distinct products, but each has the same properties, segmenting may be more unnecessary.
 
-In this instance, we recommend using product names at a "group-level" instead of something granular when setting data structures. For example, a train ticket company should have products for "single trip", "return trip", "multi-city", and not specific transactions such as "transaction 123" or "transaction 046". As another example, with the purchase event "food", properties would be best set as "cake" and "sandwich".
+In this instance, we recommend using product names at a "group-level" instead of granular transaction-level identifiers when setting data structures. For example, a train ticket company should have products for "single trip", "return trip", "multi-city", and not specific transactions such as "transaction 123" or "transaction 046". As another example, with the purchase event "food", properties would be best set as "cake" and "sandwich".
 
 {% alert important %}
-Note that products can be added through the Braze REST API. For example, if you send a call to the `/users/track` endpoint and include a new purchase ID, a product will automatically be created in the **Data Settings** > **Products** section of the dashboard.
+Note that products can be added through the Braze REST API. For example, if you send a call to the `/users/track` endpoint and include a new purchase ID, Braze automatically creates a product in the **Data Settings** > **Products** section of the dashboard.
 {% endalert %}
 
 ### Example purchase object

@@ -23,4 +23,4 @@ description: "This reference article outlines the Braze webhook object."
 }
 ```
 
-As a best practice, Braze recommends providing an explicit value for `Content-Type` in the `request_headers` field for consistent and predictable behavior, as senders and servers may change over time. If a value is not specified for the `Content-Type` header, one will be inferred from the request body.
+As a best practice, Braze recommends providing an explicit value for `Content-Type` in the `request_headers` field for consistent and predictable behavior, as senders and servers may change over time. If you don't specify a value for the `Content-Type` header, the system infers a value from the request body.

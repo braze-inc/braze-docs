@@ -36,7 +36,7 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 
 ## Credentials-based response details
 
-If you have added your [S3][1], [Azure][2], or [Google Cloud Storage][3] credentials to Braze, then each file will be uploaded in your bucket as a ZIP file with the key format that looks like `segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip`. If using Azure, make sure that you have the **Make this the default data export destination** box checked in the Azure partner overview page in Braze. Generally, we will create 1 file per 5,000 users to optimize processing. Exporting smaller segments within a large workspace may result in multiple files. You can then extract the files and concatenate all of the `json` files to a single file if needed. If you specify an `output_format` of `gzip`, then the file extension will be `.gz` instead of `.zip`.
+If you have added your [S3][1], [Azure][2], or [Google Cloud Storage][3] credentials to Braze, then each file is uploaded to your bucket as a ZIP file with the key format that looks like `segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip`. If using Azure, make sure that you have the **Make this the default data export destination** box checked in the Azure partner overview page in Braze. Generally, Braze creates 1 file per 5,000 users to optimize processing. Exporting smaller segments within a large workspace may result in multiple files. You can then extract the files and concatenate all of the `json` files to a single file if needed. If you specify an `output_format` of `gzip`, then the file extension is `.gz` instead of `.zip`.
 
 {% details Export pathing breakdown for ZIP %}
 **ZIP format:**
@@ -62,7 +62,7 @@ We strongly suggest setting up your own S3 or Azure credentials when using this 
 
 Be aware that if you do not provide your cloud storage credentials, there is a limitation on the amount of data you can export from this endpoint. Depending on the fields you're exporting and the number of users, the file transfer may fail if it is too large. A best practice is to specify which fields you want to export using `fields_to_export` and specify only the fields you need to keep the size of the transfer lower. If you are getting errors generating the file, consider breaking your user base into more segments based on a random bucket number (for example, create a segment where a random bucket number is less than 1,000 or between 1,000 and 2,000).
 
-In either scenario, you may optionally provide a `callback_endpoint` to be notified when the export is ready. If the `callback_endpoint` is provided, we will make a post request to the provided address when the download is ready. The body of the post will be "success":true. If you have not added S3 credentials to Braze, then the body of the post will additionally have the attribute `url` with the download URL as the value.
+In either scenario, you may optionally provide a `callback_endpoint` to be notified when the export is ready. If the `callback_endpoint` is provided, Braze makes a post request to the provided address when the download is ready. The body of the post is "success":true. If you have not added S3 credentials to Braze, then the body of the post additionally has the attribute `url` with the download URL as the value.
 
 Larger user bases will result in longer export times. For example, an app with 20 million users could take an hour or more.
 
@@ -164,9 +164,9 @@ The following is a list of valid `fields_to_export`. Using `fields_to_export` to
 
 ## Important reminders
 
-- The fields for `custom_events`, `purchases`, `campaigns_received`, and `canvases_received` will contain only data from the last 90 days.
-- Both `custom_events` and `purchases` contain fields for `first` and `count`. Both of these fields will reflect information from all time, and will not be limited to data from the last 90 days. For example, if a particular user first did the event 90 days ago, this will be accurately reflected in the `first` field, and the `count` field will take into account events that occurred prior to the last 90 days as well.
-- The number of concurrent segment exports a company can run at the endpoint level is capped at 100. Attempts that surpass this limit will result in an error.
+- The fields for `custom_events`, `purchases`, `campaigns_received`, and `canvases_received` contain only data from the last 90 days.
+- Both `custom_events` and `purchases` contain fields for `first` and `count`. Both of these fields reflect information from all time, and are not limited to data from the last 90 days. For example, if a particular user first did the event 90 days ago, this is accurately reflected in the `first` field, and the `count` field takes into account events that occurred prior to the last 90 days as well.
+- The number of concurrent segment exports a company can run at the endpoint level is capped at 100. Attempts that surpass this limit result in an error.
 - Attempting to export a segment a second time while the first export job is still running will result in a 429 error.
 
 ## Response
@@ -174,18 +174,18 @@ The following is a list of valid `fields_to_export`. Using `fields_to_export` to
 ```json
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
-    "object_prefix": (required, string) the filename prefix that will be used for the JSON file produced by this export, for example, 'bb8e2a91-c4aa-478b-b3f2-a4ee91731ad1-1464728599',
+    "object_prefix": (required, string) the filename prefix that is used for the JSON file produced by this export, for example, 'bb8e2a91-c4aa-478b-b3f2-a4ee91731ad1-1464728599',
     "url" : (optional, string) the URL where the segment export data can be downloaded if you do not have your own S3 credentials
 }
 ```
 
-After the URL is made available, it will only be valid for a few hours. As such, we highly recommend that you add your own S3 credentials to Braze.
+After the URL is made available, it is only valid for a few hours. As such, we highly recommend that you add your own S3 credentials to Braze.
 
 If you see `object_prefix` in your API response and no URL to download the data, this means you have an Amazon S3 bucket already set up for this endpoint. Any data exported using this endpoint will go directly to your S3 bucket.
 
 ## Example user export file output
 
-User export object (we will include the least data possible - if a field is missing from the object it should be assumed to be null or empty):
+User export object (Braze includes the least data possible - if a field is missing from the object it should be assumed to be null or empty):
 
 {% tabs %}
 {% tab All fields %}

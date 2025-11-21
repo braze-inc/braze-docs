@@ -140,7 +140,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 You can update a user profile by phone number using the `/users/track` endpoint. This endpoint only works if you include a valid phone number.
 
 {% alert important %}
-If you include a request with both `email` and `phone`, Braze will use the email as the identifier.
+If you include a request with both `email` and `phone`, Braze uses the email as the identifier.
 {% endalert %}
 
 ```
@@ -226,7 +226,7 @@ When using any of the aforementioned API requests, you should receive one of the
 
 ### Successful message
 
-Successful messages will be met with the following response:
+Successful messages are met with the following response:
 
 ```json
 {
@@ -286,9 +286,9 @@ If the `external_id` exists, Braze prioritizes the most recently updated profile
 Braze creates a new profile and an email-only user. Braze does not create an alias. Braze sets the email field to test@braze.com, as noted in the example request for updating a user profile by email address.
 
 ### How do you use `/users/track` to import legacy user data?
-You may submit data through the Braze API for a user who has not yet used your mobile app to generate a user profile. If the user subsequently uses the application all information following their identification using the SDK will be merged with the existing user profile you created using the API call. Any user behavior recorded anonymously by the SDK before identification will be lost upon merging with the existing API-generated user profile.
+You may submit data through the Braze API for a user who has not yet used your mobile app to generate a user profile. If the user subsequently uses the application, all information following their identification using the SDK is merged with the existing user profile you created using the API call. Any user behavior recorded anonymously by the SDK before identification is lost upon merging with the existing API-generated user profile.
 
-The segmentation tool will include these users regardless of whether they have engaged with the app. If you want to exclude users uploaded using the User API who have not yet engaged with the app, add the `Session Count > 0` filter.
+The segmentation tool includes these users regardless of whether they have engaged with the app. If you want to exclude users uploaded using the User API who have not yet engaged with the app, add the `Session Count > 0` filter.
 
 ### How does `/users/track` handle duplicate events?
 
