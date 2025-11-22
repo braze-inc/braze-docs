@@ -145,7 +145,7 @@ Braze or any other ESPs are not able to insert link tracking on links in the hea
 
 Gmail determines when and who to display the card to, so there isn't a guarantee that every recipient will see the product carousel.
 
-### Why am I not seeing annotations in my Gmail Promotions tab?
+### Why don't I see annotations in my Gmail Promotions tab?
 
 Annotations aren't supported for Google Workspace. To preview annotations, you can create a personal email address with Gmail.
 
