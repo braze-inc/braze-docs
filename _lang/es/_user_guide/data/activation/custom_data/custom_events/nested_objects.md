@@ -23,7 +23,7 @@ Puedes utilizar objetos anidados -objetos que están dentro de otro objeto- para
 
 Las siguientes versiones del SDK admiten objetos anidados:
 
-{% sdk_min_versions swift:5.0.0 android:20.0.0 web:3.3.0 %}
+{% sdk_min_versions swift:5.0.0 android:1.0.0 web:3.3.0 %}
 
 ## Paso 1: Generar un esquema
 

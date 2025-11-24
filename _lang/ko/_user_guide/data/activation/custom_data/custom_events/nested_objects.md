@@ -23,7 +23,7 @@ description: "이 문서에서는 중첩된 JSON 데이터를 커스텀 이벤�
 
 다음 소프트웨어 개발 키트 버전은 중첩 개체를 지원합니다:
 
-{% sdk_min_versions swift:5.0.0 android:20.0.0 web:3.3.0 %}
+{% sdk_min_versions swift:5.0.0 android:1.0.0 web:3.3.0 %}
 
 ## 1단계: 스키마 생성
 

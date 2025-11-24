@@ -23,7 +23,7 @@ Vous pouvez utiliser des objets imbriqués - des objets qui se trouvent à l'int
 
 Les versions suivantes du SDK prennent en charge les objets imbriqués :
 
-{% sdk_min_versions swift:5.0.0 android:20.0.0 web:3.3.0 %}
+{% sdk_min_versions swift:5.0.0 android:1.0.0 web:3.3.0 %}
 
 ## Étape 1 : Générer un schéma
 
