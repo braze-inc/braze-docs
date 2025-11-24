@@ -23,7 +23,7 @@ Você pode usar objetos aninhados - objetos que estão dentro de outro objeto - 
 
 As seguintes versões do SDK oferecem suporte a objetos aninhados:
 
-{% sdk_min_versions swift:5.0.0 android:1.0.0 web:3.3.0 %}
+{% sdk_min_versions swift:5.0.0 android:20.0.0 web:3.3.0 %}
 
 ## Etapa 1: Gerar um esquema
 

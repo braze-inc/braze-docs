@@ -23,7 +23,7 @@ description: "この記事では、階層化 JSON データをカスタムイベ
 
 次の SDK バージョンでは、階層化オブジェクトがサポートされています。
 
-{% sdk_min_versions swift:5.0.0 android:1.0.0 web:3.3.0 %}
+{% sdk_min_versions swift:5.0.0 android:20.0.0 web:3.3.0 %}
 
 ## ステップ 1: スキーマの生成
 

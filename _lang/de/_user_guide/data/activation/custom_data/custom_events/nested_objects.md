@@ -23,7 +23,7 @@ Sie können verschachtelte Objekte - Objekte, die sich innerhalb eines anderen O
 
 Die folgenden SDK-Versionen unterstützen verschachtelte Objekte:
 
-{% sdk_min_versions swift:5.0.0 android:1.0.0 web:3.3.0 %}
+{% sdk_min_versions swift:5.0.0 android:20.0.0 web:3.3.0 %}
 
 ## Schritt 1: Ein Schema generieren
 
