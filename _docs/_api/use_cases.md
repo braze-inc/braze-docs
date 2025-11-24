@@ -139,7 +139,7 @@ This endpoint will return the list of upcoming campaigns and Canvases. From here
 
 ## Viewing an older preference center
 
-PoliterWeekly is a digital magazine whose subscribers are reachable through email. In an effort to better understand its subscribers' user journey, the marketing team wants to review the details for PoliterWeekly's preference center to check when you created it and when it was last updated.
+PoliterWeekly is a digital magazine whose subscribers are reachable through email. In an effort to better understand its subscribers' user journey, the marketing team wants to review the details for PoliterWeekly's preference center to check when it was created and last updated.
 
 Using the [`/preference_center/v1/{preferenceCenterExternalID}` endpoint]({{site.baseurl}}/api/endpoints/preference_center/get_view_details_preference_center/), the marketing team only needs to insert the preference center external ID as the path parameter, which would look like this:
 
@@ -167,7 +167,7 @@ curl --location -g --request GET https://rest.iad-01.braze.com/preference_center
 }
 ```
 
-From this response, the marketing team can see you created the preference center 3 years before its most recent update. With this information in mind, the marketing team could create and launch a new preference center.
+From this response, the marketing team can see the preference center was created 3 years before its most recent update. With this information in mind, the marketing team could create and launch a new preference center.
 
 {% enddetails %}
 

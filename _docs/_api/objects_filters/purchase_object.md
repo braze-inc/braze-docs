@@ -59,7 +59,7 @@ Within the purchase object, the `product_id` is an identifier for the purchase (
 
 At Braze, we offer some general naming conventions for the purchase object `product_id`. When choosing `product_id`, Braze suggests using simplistic names such as the product name or product category (instead of SKUs) with the intention of grouping all logged items by this `product_id`.
 
-This helps make products straightforward to identify for segmentation and triggering.
+This helps make products easier to identify for segmentation and triggering.
 
 ### Log purchases at the order level
 
@@ -116,7 +116,7 @@ Event property objects that contain array or object values can have an event pro
 
 It's important to note that this feature is turned on **per product**, not per purchase. For example, if a you have a high volume of distinct products, but each has the same properties, segmenting may be more unnecessary.
 
-In this instance, we recommend using product names at a "group-level" instead of granular transaction-level identifiers when setting data structures. For example, a train ticket company should have products for "single trip", "return trip", "multi-city", and not specific transactions such as "transaction 123" or "transaction 046". As another example, with the purchase event "food", properties would be best set as "cake" and "sandwich".
+In this instance, we recommend using product names at a "group-level" instead of transaction-level identifiers when setting data structures. For example, a train ticket company should have products for "single trip", "return trip", "multi-city", and not specific transactions such as "transaction 123" or "transaction 046". As another example, with the purchase event "food", properties would be best set as "cake" and "sandwich".
 
 {% alert important %}
 Note that products can be added through the Braze REST API. For example, if you send a call to the `/users/track` endpoint and include a new purchase ID, Braze automatically creates a product in the **Data Settings** > **Products** section of the dashboard.
