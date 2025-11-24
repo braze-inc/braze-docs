@@ -347,7 +347,7 @@ glossaries:
     tags:
       - Preference Center
   - name: <a href='/docs/api/endpoints/preference_center/get_view_details_preference_center'>/preference_center/v1/{preferenceCenterExternalId}</a>
-    description: View the details for your preference centers, including when you created it and when it was updated.
+    description: View the details for your preference center, including when it was created and updated.
     tags:
       - Preference Center
   - name: <a href='/docs/api/endpoints/preference_center/post_create_preference_center'>/preference_center/v1</a>

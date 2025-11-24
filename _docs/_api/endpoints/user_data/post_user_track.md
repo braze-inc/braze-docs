@@ -198,7 +198,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 
 ### Example request to create an alias-only user
 
-You can use the `/users/track` endpoint to create a new alias-only user by setting the `_update_existing_only` key with a value of `false` in the body of the request. If you omit this value, Braze does not create the alias-only user profile. Using an alias-only user guarantees that one profile with that alias exists. This is especially helpful when building a new integration as it prevents Braze from creating duplicate user profiles.
+You can use the `/users/track` endpoint to create a new alias-only user by setting the `_update_existing_only` key with a value of `false` in the body of the request. If you omit this value, Braze does not create the alias-only user profile. Using an alias-only user guarantees that one profile with that alias will exist. This is especially helpful when building a new integration as it prevents Braze from creating duplicate user profiles.
 
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
@@ -283,7 +283,7 @@ If you receive the error "provided external_id is blacklisted and disallowed", y
 If the `external_id` exists, Braze prioritizes the most recently updated profile with an external ID for updates. If the `external_id` doesn't exist, Braze prioritizes the most recently updated profile for updates.
 
 ### What happens if no profile with the email address currently exists?
-Braze creates a new profile and an email-only user. Braze does not create an alias. Braze sets the email field to test@braze.com, as noted in the example request for updating a user profile by email address.
+Braze creates a new profile and an email-only user, and sets the email field to test@braze.com, as noted in the example request for updating a user profile by email address. Braze does not create an alias.
 
 ### How do you use `/users/track` to import legacy user data?
 You may submit data through the Braze API for a user who has not yet used your mobile app to generate a user profile. If the user subsequently uses the application, all information following their identification using the SDK is merged with the existing user profile you created using the API call. Any user behavior recorded anonymously by the SDK before identification is lost upon merging with the existing API-generated user profile.

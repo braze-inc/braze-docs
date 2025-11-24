@@ -14,7 +14,7 @@ description: "This article outlines details about the Update scheduled API-trigg
 /canvas/trigger/schedule/update
 {% endapimethod %}
 
-> Use this endpoint to update scheduled API-triggered Canvases you created in the dashboard.
+> Use this endpoint to update scheduled API-triggered Canvases that were created in the dashboard.
 
 This allows you to decide what action triggers the message to send. You can pass in `trigger_properties` that Braze templates into the message itself.
 
