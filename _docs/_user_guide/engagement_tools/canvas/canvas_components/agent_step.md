@@ -54,6 +54,10 @@ When defined, you can use an output variable throughout the Canvas by using the 
 
 To use a specific property from an object output variable, use dot notation to access that property using Liquid: {% raw %}`{{context.${response_variable_name}.field_name}}`{% endraw %}
 
+You can use the listed Liquid strings to reference particular fields from the agent output to use in future Canvas steps.
+
+![Agent step for Body HTML Writer with an object data type output for the variable "agent_output".]( {% image_buster /assets/img/ai_agent/test_agent_step.png %} ){: style="max-width:80%;"} 
+
 ### Step 4: Decide what context to provide the agent  
 
 You must decide what data the agent should receive at runtime. The following options are available:  
@@ -67,9 +71,7 @@ Braze will only pass the first 10 KB of content to the agent. Providing values t
 
 ## Step 5: Test the agent
 
-After setting up your Agent step, you can test and preview the output of this step. You can use the listed Liquid strings to reference particular fields from the agent output to use in future Canvas steps.
-
-![Agent step for Body HTML Writer with an object data type output for the variable "agent_output".]( {% image_buster /assets/img/ai_agent/test_agent_step.png %} ){: style="max-width:80%;"} 
+After setting up your Agent step, you can test and preview the output of this step.
 
 ## Error handling  
 
