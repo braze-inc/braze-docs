@@ -14,7 +14,7 @@ description: "This article explains the Braze Canvas entry properties object."
 > When using one of the endpoints for triggering or scheduling a Canvas through the API, you may provide a map of keys and values to customize messages sent by the first steps of your Canvas, in the `canvas_entry_properties` namespace.
 
 {% alert note %}
-The Canvas entry properties object has a maximum size limit of 50 KB. 
+The Canvas entry properties object has a maximum size limit of 50 KB.
 {% endalert %}
 
 ## Object body

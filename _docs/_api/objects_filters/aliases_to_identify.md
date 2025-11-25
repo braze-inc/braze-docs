@@ -9,7 +9,7 @@ description: "This article explains aliases to identify object specification."
 
 # Aliases to identify object
 
-An API request with any fields in the attributes object will create or update an attribute of that name with the given value on the specified user profile. 
+An API request with any fields in the attributes object will create or update an attribute of that name with the given value on the specified user profile.
 
 Use Braze user profile field names (listed as follows or any listed in the section for [Braze user profile fields]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields)) to update those special values on the user profile in the dashboard or add your own custom attribute data to the user.
 
