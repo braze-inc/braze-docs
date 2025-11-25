@@ -1334,7 +1334,7 @@ SMS
 
 ### Respond with different messages based on inbound SMS keyword {#sms-keyword-response}
 
-This use case incorporates dynamic SMS keyword processing to respond to specific inbound messages with different message copy. For example, a different response would send when someone texts "START" versus "JOIN".
+This use case incorporates dynamic SMS keyword processing to respond to specific inbound messages with different message copy. For example, you can send different responses when someone texts "START" versus "JOIN".
 
 {% raw %}
 ```liquid
