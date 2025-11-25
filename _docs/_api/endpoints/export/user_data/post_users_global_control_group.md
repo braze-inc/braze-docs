@@ -16,7 +16,7 @@ description: "This article outlines details about the Export users in Global Con
 
 > Use this endpoint to export all users within a Global Control Group.
 
-User data is exported as multiple files of user JSON objects separated by new lines (such as one JSON object per line). All users in a Global Control Group are included each time the files are generated. Braze doesn't store a history of when users are added and removed from a Global Control Group. 
+User data is exported as multiple files of user JSON objects separated by new lines (such as one JSON object per line). All users in a Global Control Group are included each time the files are generated. Braze doesn't store a history of when users are added and removed from a Global Control Group.
 
 To locate the segment identifier of your Global Control Group, refer to [API identifier types]({{site.baseurl}}/api/identifier_types/?tab=segments#segment-identifier).
 
@@ -32,7 +32,7 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 
 ## Credentials-based response details
 
-If you have added your [S3]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/amazon_s3) or [Azure]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/microsoft_azure_blob_storage_for_currents/) credentials to Braze through the respective **Technology Partners** page, then each file will be uploaded in your bucket as a ZIP file with the key format that looks like `segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip`. If using Azure, make sure that you have the **Make this the default data export destination** box checked in the Azure partner overview page in Braze. 
+If you have added your [S3]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/amazon_s3) or [Azure]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/microsoft_azure_blob_storage_for_currents/) credentials to Braze through the respective **Technology Partners** page, then each file will be uploaded in your bucket as a ZIP file with the key format that looks like `segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip`. If using Azure, make sure that you have the **Make this the default data export destination** box checked in the Azure partner overview page in Braze.
 
 Generally, we will create one file per 5,000 users to optimize processing. Exporting smaller segments within a large workspace may result in multiple files. You can then extract the files and concatenate all of the `json` files to a single file if needed. If you specify an `output_format` of `gzip`, then the file extension will be `.gz` instead of `.zip`.
 
@@ -56,7 +56,7 @@ Generally, we will create one file per 5,000 users to optimize processing. Expor
 
 {% enddetails %}
 
-We strongly suggest setting up your own S3 or Azure credentials (by going to **Partner Integrations** > **Technology Partners** > partner page) when using this endpoint to enforce your own bucket policies on the export. 
+We strongly suggest setting up your own S3 or Azure credentials (by going to **Partner Integrations** > **Technology Partners** > partner page) when using this endpoint to enforce your own bucket policies on the export.
 
 ![The Technology Partners page for Azure, with a tab for Amazon S3.]({% image_buster /assets/img/technology_partners_page.png %})
 
