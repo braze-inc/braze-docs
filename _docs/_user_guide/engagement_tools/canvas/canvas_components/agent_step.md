@@ -69,7 +69,7 @@ You must decide what data the agent should receive at runtime. The following opt
 Braze will only pass the first 10 KB of content to the agent. Providing values that have a total value of more than 10 KB will result in truncation. To help save costs, Braze Agents in Canvas use short-lived caches for LLM responses for identical inputs. Including all Canvas Context increases the likelihood that cached results cannot be used, which might increase your LLM costs.
 {% endalert %}
 
-## Step 5: Test the agent
+### Step 5: Test the agent
 
 After setting up your Agent step, you can test and preview the output of this step.
 
