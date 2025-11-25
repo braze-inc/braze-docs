@@ -70,7 +70,7 @@ After launching, the agent will run and evaluate each row, taking the selected c
 
 You can refresh and edit the fields in your catalog that use agents. To remove an agent from a column, unselect **Apply AI agent**. This reverts the column to a non-agentic column, and the fields retain the latest values the agent applied the last time it ran on the catalog.
 
-![The option to select "Apply AI agent" for a catalog field.]( {% image_buster /assets/img/ai_agent/edit_agent_column.png %} ){: style="max-width:80%;"} 
+![The option to select "Apply AI agent" for a catalog field.]({% image_buster /assets/img/ai_agent/edit_agent_column.png %}){: style="max-width:80%;"}
 
 {% alert note %}
 During the beta period, catalog agents are limited to processing input values up to 10 KB per row, and will update only the first 10,000 rows in a catalog.
