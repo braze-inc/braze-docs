@@ -12,7 +12,7 @@ search_rank: 2
 
 # [![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/messaging-channels-sms){: style="float:right;width:120px;border:0;" class="noimgborder"}SMSについて
 
-> \![この記事では、SMSの統合を支援し、顧客 s.と効果的かつ戦略的に通信できることを知るために、いくつかの一般的なユースケースを共有しています。["Brazeへようこそ!]弊社の製品をご利用いただきありがとうございます。開始するには、ドキュメントを参照してください。https://www.braze.com/docs/ ヘルプのためのテキストヘルプと停止するための停止。"]({% image_buster /assets/img/sms/sms_about.png %}){: style="float:right;max-width:30%;margin-left:15px;margin-top:10px;border: 0;"}
+> ![この記事では、SMSの統合を支援し、顧客 s.と効果的かつ戦略的に通信できることを知るために、いくつかの一般的なユースケースを共有しています。["Brazeへようこそ!]弊社の製品をご利用いただきありがとうございます。開始するには、ドキュメントを参照してください。https://www.braze.com/docs/ ヘルプのためのテキストヘルプと停止するための停止。"]({% image_buster /assets/img/sms/sms_about.png %}){: style="float:right;max-width:30%;margin-left:15px;margin-top:10px;border: 0;"}
 
 <br>
 ショートメッセージサービスとも呼ばれるSMSは、携帯電話にテキストメッセージを送信するために使用されます。現在、世界中で毎日230億通以上のテキストメッセージが送信されており、SMSはユーザーsや顧客sに到達する最も直接的な方法です。このように幅広く利用され、実証された価値があることから、中小企業はあらゆる規模の企業にとって効果的なマーケティング手段となっている。

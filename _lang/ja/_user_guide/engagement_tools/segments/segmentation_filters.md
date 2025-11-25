@@ -24,7 +24,7 @@ glossary_tags:
   - name: 購買行動
   - name: 人口統計属性
   - name: アプリ
-  - name: Uninstall
+  - name: アンインストール
   - name: デバイス
   - name: ロケーション
   - name: コホート会員

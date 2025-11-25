@@ -63,7 +63,7 @@ glossaries:
     tags:
       - Custom attributes
   - name: Custom Event
-    description: Determines whether or not a user has performed a specially recorded event.<br><br> Example:<br>Activity completed with property activty_name.<br><br>Time zone:<br>UTC - Calendar Day = 1 calendar day will look at 24-48 hours of user history
+    description: Determines whether or not a user has performed a specially recorded event.<br><br> Example:<br>Activity completed with property activity_name.<br><br>Time zone:<br>UTC - Calendar Day = 1 calendar day will look at 24-48 hours of user history
     tags:
       - Custom events
   - name: First Did Custom Event
@@ -182,7 +182,7 @@ glossaries:
     description: Segments your users by the last time that they received a WhatsApp message. This is when the last message API request is sent to WhatsApp, not when the message is delivered to the user's device. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
     tags:
       - Retargeting
-  - name: Live Activites Push to Start Registered for App
+  - name: Live Activities Push to Start Registered for App
     description: Segments your users by whether they are registered to start a Live Activity through iOS push notifications for a specific app.
     tags:
       - Devices

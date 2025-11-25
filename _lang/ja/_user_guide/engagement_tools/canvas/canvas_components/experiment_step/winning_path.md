@@ -18,7 +18,11 @@ tool: Canvas
 
 キャンバスに[実験パス]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/)を追加し、[**勝者パス**] をオンにします。
 
+<<<<<<< HEAD
+![「後続ユーザーを勝者パスに分配」というタイトルの実験パスの設定。このセクションには、勝者パスのトグルと、コンバージョンイベントと実験期間を設定するオプションがあります。]({% image_buster /assets/img/experiment_step/experiment_winning_path_recurring.png %})
+=======
 \![「後続ユーザーを勝者パスに分配」というタイトルの実験パスの設定。このセクションには、勝者パスのトグルと、コンバージョンイベントと実験期間を設定するオプションがあります。]({% image_buster /assets/img/experiment_step/experiment_winning_path_recurring.png %})
+>>>>>>> main
 
 ### ステップ2:勝者パスを設定する
 
@@ -28,7 +32,11 @@ tool: Canvas
 
 次に、**実験期間**を設定します。**実験期間**では、勝者パスが決定され、その後のすべてのユーザーがそのパスに送られる前に、実験を行う時間を指定します。最初のユーザーがステップに入ると、期間が開始されます。
 
+<<<<<<< HEAD
+![コンバージョンイベント "Clicks&quot でパス設定を勝ち取る;12 時間の実験ウィンドウで選択。]({% image_buster /assets/img/experiment_step/experiment_winning_settings.png %})
+=======
 \![コンバージョンイベント "Clicks&quot でパス設定を勝ち取る;12 時間の実験ウィンドウで選択。]({% image_buster /assets/img/experiment_step/experiment_winning_settings.png %})
+>>>>>>> main
 
 ### ステップ 3: フォールバックを決定する {#statistical-significance}
 
@@ -36,7 +44,11 @@ tool: Canvas
 
 または、**すべての将来のユーザーにパスの組み合わせの送信を続行**するよう指定することもできます。このオプションは、実験パスの配分で指定されたパーセンテージに従って、将来のユーザーにパスの組み合わせを送信します。
 
+<<<<<<< HEAD
+!["検査結果が統計的に有意でない場合、ユーザー sにパス s&quot の組み合わせを送信し続けます。h がアプリするものとして選択されます。]({% image_buster /assets/img/experiment_step/experiment_winning_statistical.png %})
+=======
 \!["検査結果が統計的に有意でない場合、ユーザー sにパス s&quot の組み合わせを送信し続けます。h がアプリするものとして選択されます。]({% image_buster /assets/img/experiment_step/experiment_winning_statistical.png %})
+>>>>>>> main
 
 {% alert note %}
 遅延グループがパス配分に表示されるのは、キャンバスが 1 回限りの入力に設定されていて、実験ステップのパスが 3 つ以下の場合のみです。勝者パスがオンになっている場合、繰り返し発生するキャンバスやトリガーされたキャンバスには遅延グループが表示されません。
@@ -63,11 +75,19 @@ tool: Canvas
 
 ユーザーのエントリが 1 回に限定されているキャンバスで勝者パスを使用する場合、遅延グループが自動的に含められます。実験期間中、一部のユーザーが遅延グループに保持され、残りのユーザーは実験パスに入ります。
 
+<<<<<<< HEAD
+![入賞経路のための遅延グループを用いた実験ステップ]({% image_buster /assets/img/experiment_step/experiment_one_time.png %}){: style="max-width:75%"}
+
+テストが完了して勝者パスが決まると、遅延グループに割り当てられたユーザーは選択されたパスに誘導され、キャンバスを進みます。
+
+![Delay Group を使用した実験ステップは、Winning Path を送信しました]({% image_buster /assets/img/experiment_step/experiment_one_time_results.png %}){: style="max-width:75%"}
+=======
 \![入賞経路のための遅延グループを用いた実験ステップ]({% image_buster /assets/img/experiment_step/experiment_one_time.png %}){: style="max-width:75%"}
 
 テストが完了して勝者パスが決まると、遅延グループに割り当てられたユーザーは選択されたパスに誘導され、キャンバスを進みます。
 
 \![Delay Group を使用した実験ステップは、Winning Path を送信しました]({% image_buster /assets/img/experiment_step/experiment_one_time_results.png %}){: style="max-width:75%"}
+>>>>>>> main
 
 ### ローカルタイム配信
 

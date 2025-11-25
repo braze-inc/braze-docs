@@ -11,16 +11,16 @@ channel:
 > Learn how to troubleshoot push notifications for the Braze SDK.
 
 {% sdktabs %}
+{% sdktab web %}
+{% multi_lang_include developer_guide/web/push_notifications/troubleshooting.md %}
+{% endsdktab %}
+
 {% sdktab android %}
 {% multi_lang_include developer_guide/android/push_notifications/troubleshooting.md %}
 {% endsdktab %}
 
 {% sdktab swift %}
 {% multi_lang_include developer_guide/swift/push_notifications/troubleshooting.md %}
-{% endsdktab %}
-
-{% sdktab web %}
-{% multi_lang_include developer_guide/web/push_notifications/troubleshooting.md %}
 {% endsdktab %}
 
 {% sdktab fireos %}

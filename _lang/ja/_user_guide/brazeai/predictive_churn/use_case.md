@@ -31,7 +31,7 @@ page_type: tutorial
 3. 解約を定義するために、彼女は`do not` 、アクティブ・エンゲージメントを示すカスタムイベント`stream_started` を選択する。
 4. 彼女は予測ウィンドウを14日間に設定している。つまり、モデルは新しいストリームを開始せずに14日間を過ごす可能性が高いユーザーを識別する。
 
-\![過去14日間にカスタムイベント（"stream_started" ）を実行しなかったユーザーとして定義された解約を示す解約定義。]({% image_buster /assets/img/ai_use_cases/churn_definition.png %})
+![過去14日間にカスタムイベント（"stream_started" ）を実行しなかったユーザーとして定義された解約を示す解約定義。]({% image_buster /assets/img/ai_use_cases/churn_definition.png %})
 
 {:start="5"}
 5. 彼女は、過去30日間に関連するイベントをトリガーしたすべてのユーザーを含む予測対象ユーザーを選択し、モデルが学習するのに十分な最近の行動を与える。
@@ -50,7 +50,7 @@ page_type: tutorial
 2. 彼女は[解約リスクスコアフィルターを使って]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#churn-risk-score) [セグメンテーションを]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/)作成し、作成した解約予測を選択する：
    - **解約する可能性が高い：**70点以上
 
-\![解約リスクスコアが70以上のユーザーをセグメンテーションする。]({% image_buster /assets/img/ai_use_cases/churn_risk_score.png %})
+![解約リスクスコアが70以上のユーザーをセグメンテーションする。]({% image_buster /assets/img/ai_use_cases/churn_risk_score.png %})
 
 ## ステップ 3: リスクのあるユーザーを対象に、定期的にリエンゲージメントコンテンツを提供する。
 

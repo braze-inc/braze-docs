@@ -128,7 +128,7 @@ If you need to give a user different permissions for different workspaces, repea
 {% subtabs %}
 {% subtab Select manually %}
 
-Under **Workspaces**, choose one or more workspaces from the dropdown. Then, under **Permissions**, choose one or more permissions from the dropdown. They will be assigned these permissions only for the workspaces you have selected. Optionally, you can select **Enable Admin Access** if you'd like to give them full permissions for this workspace instead.
+Under **Workspaces**, choose one or more workspaces from the dropdown. Then, under **Permissions**, choose one or more permissions from the dropdown. Braze assigns these permissions only for the workspaces you have selected. Optionally, you can select **Enable Admin Access** if you'd like to give them full permissions for this workspace instead.
 
 When you're finished, select **Update user**.
 
@@ -137,7 +137,7 @@ When you're finished, select **Update user**.
 {% endsubtab %}
 {% subtab Assign permission set %}
 
-Under **Workspaces**, choose one or more workspaces from the dropdown. Then, under **Permission Sets**, choose one permission set. They will be assigned these permissions only for the workspaces you have selected.
+Under **Workspaces**, choose one or more workspaces from the dropdown. Then, under **Permission Sets**, choose one permission set. Braze assigns these permissions only for the workspaces you have selected.
 
 When you're finished, select **Update user**.
 

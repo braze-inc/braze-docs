@@ -17,7 +17,7 @@ page_order: 4
 
 ドラッグアンドドロップエディターでは、エディターと右側のパネルのページまたはブロック 設定s の両方に、リキッドパーソナライゼーションを挿入できます。Liquid の実装方法については、専用の[Liquid ドキュメント]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#using-liquid-1) をご覧ください。
 
-\![リキッドパーソナライゼーションを追加したランディングページエディタ。]({% image_buster /assets/img/landing_pages/lp_liquid_.png %})
+![リキッドパーソナライゼーションを追加したランディングページエディタ。]({% image_buster /assets/img/landing_pages/lp_liquid_.png %})
 
 ## プレビューとテスト
 

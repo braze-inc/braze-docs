@@ -105,8 +105,6 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/delete' \
 ## Response
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
 {
   "deleted" : (required, integer) number of user IDs queued for deletion
 }

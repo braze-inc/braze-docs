@@ -15,7 +15,7 @@ page_type: tutorial
 
 カミラは、[AIアイテム・レコメンデーションを使って]({{site.baseurl}}/user_guide/brazeai/recommendations/creating_recommendations/ai/)、ユーザーが映画やエピソードを見終わった直後に、各視聴者の視聴履歴に基づいて新しい作品を自動的に推薦するシステムを設定している。ユーザーが次に実際に見たくなるコンテンツを発見し、プラットフォームとのエンゲージメントを維持するための、よりスマートでパーソナライズされた方法だ。
 
-\![アプリ内メッセージ「次は、あなたのために。画像、タイトル名、説明文、「今すぐ見る」または「スキップ」して次のレコメンデーションを表示するCTAがある。]({% image_buster /assets/img/ai_use_cases/recommendation_rendered.png %})
+![アプリ内メッセージ「次は、あなたのために。画像、タイトル名、説明文、「今すぐ見る」または「スキップ」して次のレコメンデーションを表示するCTAがある。]({% image_buster /assets/img/ai_use_cases/recommendation_rendered.png %})
 
 このチュートリアルでは、カミラの使い方を説明する：
 
@@ -42,13 +42,13 @@ page_type: tutorial
 2. 彼女はトリガーをカスタムイベント`Watched Content` に設定する。
 3. 彼女は、タイトル画像、名前、「今すぐ見る」CTAを含む複数ページのアプリ内メッセージをデザインする。
 
-\![パーソナライゼーションのタイプとして「アイテム推薦」を選択し、Brazeエディターで「パーソナライゼーションを追加」モーダルを開封する。]({% image_buster /assets/img/ai_use_cases/recommendation_add_personalization.png %})
+![パーソナライゼーションのタイプとして「アイテム推薦」を選択し、Brazeエディターで「パーソナライゼーションを追加」モーダルを開封する。]({% image_buster /assets/img/ai_use_cases/recommendation_add_personalization.png %})
 
 {: start="4"}
 
 4. メッセージ本文で、カミラは[パーソナライゼーションの追加モーダルを]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#inserting-pre-formatted-variables)使い、カタログからダイナミックなコンテンツを入力するLiquidを使って、おすすめタイトルの名前、説明、サムネイルなどの変数を追加する。彼女は`Last Watched Movie` のカスタム属性をテンプレート化し、このレコメンデーションがユーザーの視聴履歴に基づくものであることをユーザーに知らせた。 
 
-\![アプリ内メッセージエディターで、カタログアイテムから特定のフィールドをテンプレート化できる。]({% image_buster /assets/img/ai_use_cases/recommendation_liquid.png %})
+![アプリ内メッセージエディターで、カタログアイテムから特定のフィールドをテンプレート化できる。]({% image_buster /assets/img/ai_use_cases/recommendation_liquid.png %})
 
 {% details Show Liquid used in image %}
 

@@ -1,5 +1,5 @@
 ---
-nav_title: Zielgruppenpfade 
+nav_title: Zielgruppen-Pfade
 article_title: Zielgruppenpfade 
 alias: /audience_paths/
 page_order: 1
@@ -15,9 +15,9 @@ tool: Canvas
 
 Diese Canvas-Komponente ersetzt die Notwendigkeit, übermäßig viele zielgruppenbasierte vollständige Schritte zu erstellen, sodass Sie acht vollständige Komponenten in einer einzigen kombinieren können. So können Sie die Benutzeransprache vereinfachen und gleichzeitig Ihre Canvases von unnötiger Unordnung und Komplexität befreien. 
 
-![Ein Zielgruppen-Pfad mit fünf Gruppen.][0]{: style="float:right;max-width:13%;margin-left:15px;margin-top:15px;"}
-
 ## Funktionsweise
+
+![Ein Zielgruppen-Pfad mit zwei Gruppen: engagierte Nutzer:innen und alle anderen.]({% image_buster /assets/img/audience_path/audience_path.png %}){: style="float:right;max-width:45%;margin-left:15px;margin-top:15px;"}
 
 Zielgruppenpfade sind vergleichbar mit Sortiertrichtern mit Ranking-Kriterien. Die Benutzer werden für jedes Kriterium in der Reihenfolge ihrer Priorität bewertet und auf den Weg des höchsten Kriteriums geschickt, das sie erfüllen. Dadurch wird die Unklarheit darüber verringert, wohin die Nutzer:innen gehen und welche Nachrichten sie erhalten werden. Beachten Sie, dass die Ranglisten [nach dem Start]({{site.baseurl}}/post-launch_edits/) nicht [mehr geändert werden können]({{site.baseurl}}/post-launch_edits/).
 
@@ -31,17 +31,17 @@ Mit Zielgruppenpfade können Sie Folgendes tun:
 
 ### Zeit für Nutzer:innen-Bewertungen zulassen
 
-Nutzer:innen werden ausgewertet, sobald sie den Schritt Zielgruppen-Pfad erreichen. Nachdem sie bewertet worden sind, werden sie sofort zum nächsten Schritt übergehen. Daher ist es wichtig, ein angemessenes Zeitfenster verstreichen zu lassen, wenn der Zielgruppen-Pfad durch eine Nutzeraktion bestimmt wird.
+![Canvas zeigt eine 24-stündige Verzögerung nach einem Nachrichten-Schritt, gefolgt von einem Zielgruppen-Pfad.]({% image_buster /assets/img/audience_path/audience_path5.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
-![Canvas zeigt eine 24-stündige Verzögerung nach einem Nachrichten-Schritt, gefolgt von einem Zielgruppen-Pfad.][5]{: style="float:right;max-width:40%;margin-left:15px;"}
+Nutzer:innen werden ausgewertet, sobald sie den Schritt Zielgruppen-Pfad erreichen. Nachdem sie bewertet worden sind, werden sie sofort zum nächsten Schritt übergehen. Daher ist es wichtig, ein angemessenes Zeitfenster verstreichen zu lassen, wenn der Zielgruppen-Pfad durch eine Nutzeraktion bestimmt wird.
 
 Wenn Nutzern beispielsweise Nachricht A gesendet wird und der nächste Schritt ein Zielgruppen-Pfad ist, der auswertet, ob sie mit dieser Nachricht interagiert haben, gelangen alle Nutzer:innen zu dem Schritt für diejenigen, die nicht mit dieser Nachricht interagiert haben. Das liegt daran, dass die Nutzer:innen sofort zum Schritt Zielgruppen-Pfad übergegangen sind, ohne Zeit für eine Interaktion mit der Nachricht zu haben. Mit anderen Worten: Nutzer:innen werden fast unmittelbar nach dem Versand der Nachricht auf eine Interaktion mit der Nachricht geprüft.
 
 Um Nutzern:innen Zeit zu geben, mit einer gesendeten Nachricht zu interagieren, muss zwischen dem Schritt Nachricht und Zielgruppen-Pfad eine Verzögerung liegen. Eine Verzögerung von 24 Stunden würde den Nutzer:innen beispielsweise 24 Stunden nach dem Versand der Nachricht Zeit geben, mit Nachricht A zu interagieren, bevor sie bewertet wird.
 
-## Erstellen eines Zielgruppenpfads
+Beachten Sie, dass Nutzer:innen auf der Grundlage der ersten Aktion, die sie nach der Eingabe des Schritts Zielgruppen-Pfad innerhalb des Bewertungsfensters durchgeführt haben, zum nächsten Schritt vorbringen. Das bedeutet, dass ein Nutzer:in, wenn er ein zweites angepasstes Event durchführt, nicht die Zielgruppe wechselt.
 
-![Ein Zielgruppen-Pfad mit zwei Gruppen.][1]{: style="float:right;max-width:20%;margin-left:15px;"}
+## Erstellen eines Zielgruppenpfads
 
 Um einen Schritt für einen Zielgruppenpfad hinzuzufügen, gehen Sie wie folgt vor: 
 
@@ -54,19 +54,19 @@ Die Standardkomponente für Zielgruppenpfade enthält zwei Standardzielgruppen, 
 
 Der folgende Screenshot zeigt das Layout eines erweiterten Audience Paths-Schrittes. Hier können Sie bis zu acht Hörergruppen definieren (eine voreingestellte und sieben anpassbare). Um eine Zielgruppe zu definieren, wählen Sie den Gruppennamen im Editor „Zielgruppenpfade“ aus. Sie können Ihre Zielgruppengruppe umbenennen, die Filter und Segmente auswählen, die für Ihre Gruppe gelten, und Gruppen hinzufügen oder löschen.
 
-Wenn Sie z.B. einer Gruppe von Nutzern hilfreiche Essensempfehlungen senden möchten, könnten Sie bereits erstellte Attributfilter wie "Liebt die asiatische Küche", "Liebt die lateinische Küche" und "Liebt die europäische Küche" auswählen. 
+Wenn Sie beispielsweise das Onboarding Messaging auf eine Gruppe von Nutzern ausrichten möchten, könnten Sie Retargeting-Filter auswählen, z. B. "Hat auf E-Mail geklickt" und "Hat auf In-App-Nachrichten geklickt".
 
-![Ein erweiterter Zielgruppen-Pfad mit Gruppen für "Liebt die asiatische Küche", "Liebt die lateinische Küche", "Liebt die europäische Küche" und "Alle anderen".][3]{: style="max-width:90%;margin-left:15px;"}
+![Ein erweiterter Zielgruppen-Pfad mit Gruppen für "Liebt die asiatische Küche", "Liebt die lateinische Küche", "Liebt die europäische Küche" und "Alle anderen".]({% image_buster /assets/img/audience_path/audience_path3.png %})
 
 Nachdem der Schritt für Zielgruppenpfade abgeschlossen ist, hat jede Zielgruppe einen eigenen Branch. Sie können mit der Verwendung von Zielgruppenpfaden fortfahren, um Ihr Publikum weiter zu filtern. Alternativ können Sie Ihre Canvas-Journey mit den Standard-Canvas-Schritten fortsetzen. 
 
-![Zwei Zielgruppen-Pfade mit unterschiedlichen Gruppen für verschiedene Küchen.][4]{: style="max-width:90%;margin-left:15px;"}
+![Zwei Zielgruppen-Pfade mit unterschiedlichen Gruppen auf der Grundlage von Engagement.]({% image_buster /assets/img/audience_path/audience_path4.png %}){: style="max-width:50%"}
 
 ### Testen von Zielgruppen
 
-![Der Bereich "Nutzer:innen".]({% image_buster /assets/img_archive/user_lookup.png %}){: style="float:right;max-width:40%;margin-left:15px;margin-bottom:15px;"}
+Nachdem Sie Ihrer Zielgruppe Segmente und Filter hinzugefügt haben, können Sie testen, ob Ihre Zielgruppen wie erwartet eingerichtet sind, indem Sie [nach einem Benutzer suchen]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/), um zu überprüfen, ob er den Zielgruppenkriterien entspricht.
 
-Nachdem Sie Ihrer Zielgruppe Segmente und Filter hinzugefügt haben, können Sie testen, ob Ihre Zielgruppen wie erwartet eingerichtet sind, indem Sie [nach einem Benutzer suchen]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/), um zu überprüfen, ob er den Zielgruppenkriterien entspricht. 
+![Die Rubrik "Nutzer:in".]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:70%"}
 
 ## Audience Paths verwenden
 
@@ -74,11 +74,11 @@ Die eigentliche Stärke von Zielgruppenpfaden liegt in der Möglichkeit, Priorit
 
 Indem Sie diesen Gruppen eine hohe Priorität zuweisen, können Sie Nutzer ansprechen, die unter bestimmte Filter und Segmente fallen, und gleichzeitig Nutzer ansprechen, die diese spezifischen Kriterien nicht erfüllen - und das alles in einem einzigen Canvas-Schritt.
 
-![Ein Zielgruppen-Pfad mit Gruppen für "Mag große Markenschuhe", "Mag große Marken" und "Alle anderen".][2]{: style="float:right;max-width:40%;margin-left:15px;margin-bottom:15px;"}
+![Ein Zielgruppen-Pfad mit Gruppen für "Mag große Markenschuhe", "Mag große Marken" und "Alle anderen".]({% image_buster /assets/img/audience_path/audience_path2.png %}){: style="float:right;max-width:50%;margin-left:15px;margin-bottom:15px;"}
 
-Nehmen wir zum Beispiel an, Sie möchten einer Gruppe von Nutzern Anzeigen für neue Produkte schicken. Sie beginnen damit, dass Sie Filter, die unter diese Produkte fallen, auf dem Audience Path weit oben platzieren. Wenn Sie eine Marketingkampagne für das Unternehmen „Big Brand“ erstellen und eine neue Schuhmarke gerade auf den Markt gekommen ist, könnten Sie Filter wie „Likt Big Brand-Schuhe“ oder „Likt Big Brand“ auswählen und je nach gefilterter Gruppe unterschiedliche E-Mail-Nachrichten senden. 
+Nehmen wir zum Beispiel an, Sie möchten einer Gruppe von Nutzern Anzeigen für neue Produkte schicken. Sie beginnen damit, dass Sie Filter, die unter diese Produkte fallen, auf dem Audience Path weit oben platzieren. Wenn Sie eine Marketing-Kampagne für das Unternehmen "Big Brand" erstellen und gerade eine neue Einzelhandelsmarke auf den Markt gebracht haben, könnten Sie Filter wie "Likes Big Brand Shoes" oder "Likes Big Brand Bags" auswählen und je nachdem, in welche gefilterte Gruppe diese Personen fallen, unterschiedliche Nachrichten per E-Mail versenden. 
 
-Wenn Nutzer:innen diese Zielgruppenpfad-Komponente aufrufen, wird zunächst geprüft, ob sie unter die am höchsten eingestufte Zielgruppe fallen: Zielgruppe A „Mag Big Brand-Schuhe“. Wenn ja, fahren Sie mit der nächsten in Ihrem Canvas definierten Komponente fort. Wenn sie „Big Brand-Schuhe“ nicht „liken“, werden sie für die nächste Zielgruppe, Zielgruppe B „Likt Big Brand“, ausgewertet und gelangen zur nächsten Canvas-Komponente, wenn die Kriterien erfüllt sind. Nutzer:innen, die nicht in die vorhergehenden Gruppen fallen, fallen in die Gruppe **Alle anderen** und fahren mit der nächsten Canvas-Komponente fort, die Sie für diesen Pfad definieren.
+Wenn Nutzer:innen diese Komponente Zielgruppen-Pfade betreten, wird zunächst geprüft, ob sie unter die höchstrangige Zielgruppe fallen: Zielgruppe 1 "Mag große Markenschuhe". Wenn ja, fahren sie mit der nächsten in Ihrem Canvas definierten Komponente fort. Wenn sie "Big Brand Shoes" nicht mögen, werden sie für die nächste Zielgruppe bewertet, Zielgruppe 2 "Likes Big Brand Bags", und fahren mit dem nächsten Schritt fort, wenn die Kriterien erfüllt sind. Nutzer:innen, die nicht in die vorherigen Gruppen fallen, fallen in die Gruppe "Alle anderen" und gehen ebenfalls zum nächsten Canvas-Schritt, den Sie für diesen Pfad definieren.
 
 Sie können die Leistung dieses Schrittes auch mit [Canvas Analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/#performance-visualization) sehen.
 
@@ -99,10 +99,3 @@ In einem Zielgruppenpfad-Schritt können Sie zum Beispiel drei Zielgruppen erste
 {% alert tip %}
 In unseren [Braze-Canvas-Templates]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/braze_templates) finden Sie Beispiele dafür, wie Sie diese vorgefertigten Templates zu Ihrem Vorteil anpassen können.
 {% endalert %}
-
-[0]: {% image_buster /assets/img/audience_path/audience_path.png %}
-[1]: {% image_buster /assets/img/audience_path/audience_path1.png %}
-[2]: {% image_buster /assets/img/audience_path/audience_path2.png %}
-[3]: {% image_buster /assets/img/audience_path/audience_path3.png %}
-[4]: {% image_buster /assets/img/audience_path/audience_path4.png %}
-[5]: {% image_buster /assets/img/audience_path/audience_path5.png %}

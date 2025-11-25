@@ -433,7 +433,7 @@ Depending on the configuration of your Microsoft Fabric account, you may need to
 {% tabs %}
 {% tab Snowflake %}
 
-In the Braze Dashbord, go to **Data Settings** > **Cloud Data Ingestion**, select **Create New Data Sync**, and then select **Snowflake Import**.
+In the Braze Dashboard, go to **Data Settings** > **Cloud Data Ingestion**, select **Create New Data Sync**, and then select **Snowflake Import**.
 
 #### Step 2.1: Add Snowflake connection information and source table
 
@@ -468,7 +468,7 @@ ALTER USER BRAZE_INGESTION_USER SET rsa_public_key='Braze12345...';
 {% endtab %}
 {% tab Redshift %}
 
-In the Braze Dashbord, go to **Data Settings** > **Cloud Data Ingestion**, select **Create New Data Sync**, and then select **Amazon Redshift Import**.
+In the Braze Dashboard, go to **Data Settings** > **Cloud Data Ingestion**, select **Create New Data Sync**, and then select **Amazon Redshift Import**.
 
 #### Step 2.1: Add Redshift connection information and source table
 
@@ -493,7 +493,7 @@ You will also choose the data type and sync frequency. Frequency can be anywhere
 {% endtab %}
 {% tab BigQuery %}
 
-In the Braze Dashbord, go to **Data Settings** > **Cloud Data Ingestion**, select **Create New Data Sync**, and then select **Google BigQuery Import**.
+In the Braze Dashboard, go to **Data Settings** > **Cloud Data Ingestion**, select **Create New Data Sync**, and then select **Google BigQuery Import**.
 
 #### Step 2.1: Add BigQuery connection information and source table
 
@@ -519,7 +519,7 @@ You will also choose the data type and sync frequency. Frequency can be anywhere
 {% endtab %}
 {% tab Databricks %}
 
-In the Braze Dashbord, go to **Data Settings** > **Cloud Data Ingestion**, select **Create New Data Sync**, and then select **Databricks Import**.
+In the Braze Dashboard, go to **Data Settings** > **Cloud Data Ingestion**, select **Create New Data Sync**, and then select **Databricks Import**.
 
 #### Step 2.1: Add Databricks connection information and source table
 
@@ -547,7 +547,7 @@ You will also choose the data type and sync frequency. Frequency can be anywhere
 
 #### Step 2.1: Set up a Cloud Data Ingestion sync
 
-You will create a new data sync for Microsoft Fabric. In the Braze dashbord, go to **Data Settings** > **Cloud Data Ingestion**, select **Create New Data Sync**, and then select **Microsoft Fabric Import**.
+You will create a new data sync for Microsoft Fabric. In the Braze dashboard, go to **Data Settings** > **Cloud Data Ingestion**, select **Create New Data Sync**, and then select **Microsoft Fabric Import**.
 
 #### Step 2.2: Add Microsoft Fabric connection information and source table
 
