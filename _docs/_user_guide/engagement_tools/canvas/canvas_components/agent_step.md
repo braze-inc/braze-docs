@@ -54,7 +54,7 @@ When defined, you can use an output variable throughout the Canvas by using the 
 
 To use a specific property from an object output variable, use dot notation to access that property using Liquid: {% raw %}`{{context.${response_variable_name}.field_name}}`{% endraw %}
 
-You can use the listed Liquid strings to reference particular fields from the agent output to use in future Canvas steps.
+Use the Liquid syntax patterns shown above to reference particular fields from the agent output in future Canvas steps.
 
 ![Agent step for Body HTML Writer with an object data type output for the variable "agent_output".]( {% image_buster /assets/img/ai_agent/test_agent_step.png %} ){: style="max-width:80%;"} 
 
