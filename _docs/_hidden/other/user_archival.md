@@ -19,11 +19,7 @@ This process is intended to help Braze provide accurate statistics regarding cam
 That is, personal data processed and stored should be kept for no longer than is necessary, and personal data should only be processed for legitimate business purposes. Archived users will also have their unsubscribe status deleted in compliance with GDPR.
 
 {% alert important %}
-Archived users will be permanently deleted. Contact your customer success manager to discuss changes to archiving rules.
-{% endalert %}
-
-{% alert note %} 
-Customers have full control over whether a user is inactive or dormant. Braze Canvas offers the ability to do this automatically, allowing you to effectively turn off this functionality for some or all of your inactive or dormant users. 
+Archived users will be permanently deleted. You can [customize your user archival policy](#customizing-your-user-archival-policy) using Braze Canvas. Customers have full control over whether a user is inactive or dormant. Canvas offers the ability to do this automatically, allowing you to effectively turn off this functionality for some or all of your inactive or dormant users.
 {% endalert %}
 
 ## User archival definitions
