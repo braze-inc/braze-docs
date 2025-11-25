@@ -33,7 +33,7 @@ The preheader text in an email communicates the main point of the message effici
 The amount of visible preheader text is dependent on the user's email client and the length of the email's subject line. Generally, we suggest email preheaders to be between 50 and 100 characters.
 
 {% alert note %}
-Preheader can reference Liquid in the email body, and the email body can reference Liquid in the preheader. This is because the preheader text is part of the email body when messages are sent to recipients.
+The preheader can reference Liquid in the email body, and the email body can reference Liquid in the preheader. This is because the preheader text is part of the email body when you send messages to recipients.
 {% endalert %}
 
 Here are some best practices to keep in mind when writing your preheaders:
