@@ -1338,7 +1338,7 @@ This use case incorporates dynamic SMS keyword processing to respond to specific
 
 {% raw %}
 ```liquid
-{% assign inbound_message = sms.${inbound_message_body} | downcase | strip %}
+{% assign inbound_message = {{sms.${inbound_message_body}}} | downcase | strip %}
 {% if inbound_message contains 'start' %}
 Thanks for joining our SMS program! Make sure your account is up to date for the best deals!
 
