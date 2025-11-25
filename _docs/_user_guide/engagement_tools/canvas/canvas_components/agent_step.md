@@ -56,7 +56,7 @@ To use a specific property from an object output variable, use dot notation to a
 
 Use the Liquid syntax patterns shown above to reference particular fields from the agent output in future Canvas steps.
 
-![Agent step for Body HTML Writer with an object data type output for the variable "agent_output".]( {% image_buster /assets/img/ai_agent/test_agent_step.png %} ){: style="max-width:80%;"} 
+![Agent step for Body HTML Writer with an object data type output for the variable "agent_output".]({% image_buster /assets/img/ai_agent/test_agent_step.png %}){: style="max-width:80%;"} 
 
 ### Step 4: Decide what context to provide the agent  
 
