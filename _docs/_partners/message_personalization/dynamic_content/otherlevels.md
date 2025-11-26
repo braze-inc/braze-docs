@@ -233,7 +233,7 @@ Video Overlay Options can be specified within the `image_video_overlay` key.
 
 ### Talent and script
 
-As part of provisioning, OtherLevels will work with you to generate one or multiple talents (sometimes referring to as avatars) for use in your videos. Depending on your use case and brand, this may be made in the form of one of your existing brand ambassadors or a unique creation.
+As part of provisioning, OtherLevels will work with you to generate one or multiple talents (sometimes referred to as avatars) for use in your videos. Depending on your use case and brand, this may be made in the form of one of your existing brand ambassadors or a unique creation.
 
 After these are created, you will be provided with usable `TALENT_TEMPLATE` and `TALENT_MODEL` IDs to use with our API. 
 
