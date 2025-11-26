@@ -54,6 +54,10 @@ When defined, you can use an output variable throughout the Canvas by using the 
 
 To use a specific property from an object output variable, use dot notation to access that property using Liquid: {% raw %}`{{context.${response_variable_name}.field_name}}`{% endraw %}
 
+![Agent step for Body HTML Writer with an object data type output for the variable "agent_output".]({% image_buster /assets/img/ai_agent/test_agent_step.png %}){: style="max-width:80%;"}
+
+Use the Liquid syntax patterns shown above to reference particular fields from the agent output in future Canvas steps.
+
 ### Step 4: Decide what context to provide the agent  
 
 You must decide what data the agent should receive at runtime. The following options are available:  
@@ -64,6 +68,10 @@ You must decide what data the agent should receive at runtime. The following opt
 {% alert note %}
 Braze will only pass the first 10 KB of content to the agent. Providing values that have a total value of more than 10 KB will result in truncation. To help save costs, Braze Agents in Canvas use short-lived caches for LLM responses for identical inputs. Including all Canvas Context increases the likelihood that cached results cannot be used, which might increase your LLM costs.
 {% endalert %}
+
+### Step 5: Test the agent
+
+After setting up your Agent step, you can test and preview the output of this step.
 
 ## Error handling  
 
