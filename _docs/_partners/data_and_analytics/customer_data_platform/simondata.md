@@ -92,6 +92,6 @@ After Contact Traits is activated by your account manager:
 [6]: https://docs.simondata.com
 [7]: https://docs.simondata.com/docs/support-center
 [8]: {% image_buster /assets/img/simon_data/ConnecttoBraze.png %}  
-[9]: {% image_buster /assets/img/simon_data/BrazeActions.png %}  
+[9]: {% image_buster /assets/img/simon_data/BrazeActions.png %}
 [10]: {% image_buster /assets/img/simon_data/BrazeTraitSyncing.png %}
 
