@@ -31,14 +31,14 @@ To get started, you need to authenticate your Braze account within your SimonAI 
 - Sync Traits and Contact Properties
 
 {% alert note %}  
-When using the Simon and Braze integration, Simon only sends deltas on each sync to Braze avoiding costs for irrelevant data. See [Sync Traits and Contact Properties](#sync-traits-and-contact-properties) for more.
+When using the SimonAI and Braze integration, SimonAI only sends deltas on each sync to Braze avoiding costs for irrelevant data. See [Sync Traits and Contact Properties](#sync-traits-and-contact-properties) for more.
 {% endalert %}
 
 ## Integration
 
 ### Authenticate your Braze account in SimonAI
 
-To use the Braze integration, first authenticate your Braze account in Simon:
+To use the Braze integration, first authenticate your Braze account in SimonAI:
 
 1. From the left navigation, click **Integrations** then scroll to Braze.
 2. Enter your Braze [REST API key][2] and your [dashboard URL][3].
@@ -54,9 +54,9 @@ After you've authenticated your Braze account in SimonAI you can add Braze actio
 
 Three actions are available:
 
-- **Sync Simon segment attribute**: Sync your segment details with a new or existing custom attribute in Braze.
-- **Trigger a Braze Canvas**: Trigger a Braze Canvas that leverages your Simon segment data.
-- **Send a Braze campaign**: Launch an entire Braze campaign from Simon.
+- **Sync SimonAI segment attribute**: Sync your segment details with a new or existing custom attribute in Braze.
+- **Trigger a Braze Canvas**: Trigger a Braze Canvas that leverages your SimonAI segment data.
+- **Send a Braze campaign**: Launch an entire Braze campaign from SimonAI.
 
 ![Dropdown showing list of available Braze actions in SimonAI.][9]{: style="max-width:60%"}
 
@@ -67,17 +67,17 @@ Some actions are only available for specific Flow types or Journeys alone. Learn
 To minimize data consumption, you can choose specific traits to sync by default, rather than updating every field for all customers in a segment.
 
 {% alert note %}
-To get started with trait syncing, submit a request in the [Simon Support Center](https://docs.simondata.com/docs/support-center). Your account manager will let you know when you can proceed with the following steps.
+To get started with trait syncing, submit a request in the [SimonAI Support Center](https://docs.simondata.com/docs/support-center). Your account manager will let you know when you can proceed with the following steps.
 {% endalert %}
 
 After Contact Traits is activated by your account manager:
 
-1. In Simon, expand **Admin Center** in the left navigation and select **Sync Contact Traits**.
+1. In SimonAI, expand **Admin Center** in the left navigation and select **Sync Contact Traits**.
 2. Choose **Braze**. Contact properties are displayed here, nested by dataset.
-3. Select any fields you want synced when you use the Simon and Braze integration:
+3. Select any fields you want synced when you use the SimonAI and Braze integration:
    1. **Number or traits** indicates how many traits are available to choose from in that dataset. You can choose all or expand the row to select individual fields.
    2. Edit the **Downstream name** if you want the field names to appear differently when they arrive in Braze.
-   3. If this is your first time integrating with Braze from Simon, click **Backfill all contacts**. Backfilling sends all the data points to Braze the first time you use an action in a flow or journey to be sure all your data is fully in sync. Then on subsequent syncs, only the traits you choose in this screen are sent to Braze. This helps to make sure you're only charged for the data you need.
+   3. If this is your first time integrating with Braze from SimonAI, click **Backfill all contacts**. Backfilling sends all the data points to Braze the first time you use an action in a flow or journey to be sure all your data is fully in sync. Then on subsequent syncs, only the traits you choose in this screen are sent to Braze. This helps to make sure you're only charged for the data you need.
 
 ![Selecting sync traits in SimonAI.][10]
 
