@@ -79,7 +79,7 @@ If your custom domain shows all DNS records as "Connected" but the domain status
 
 #### CAA records
 
-CAA records restrict which certificate authorities can issue SSL certificates for your domain. If your CAA records don't include LetsEncrypt, Braze (via Cloudflare) can't issue the required SSL certificate.
+CAA records restrict which certificate authorities can issue SSL certificates for your domain. If your CAA records don't include LetsEncrypt, Braze (through Cloudflare) can't issue the required SSL certificate.
 
 To resolve this, ask your IT team to add a CAA record to your subdomain with the following values:
 - **Record type:** CAA
