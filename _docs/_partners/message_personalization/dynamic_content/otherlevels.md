@@ -50,7 +50,7 @@ The first step of the integration involves calling the OtherLevels Experience Pl
 The following request uses cURL. For more efficient API request management, we recommend using an API client like Postman.
 {% endalert %}
 
-Refer to the following example for how to structure your API call. For more information about customising the video specifics and structuring your API call, refer to [Customizing the GenAI video](#customizing-the-genai-video).
+Refer to the following example for how to structure your API call. For more information about customizing the video specifics and structuring your API call, refer to [Customizing the GenAI video](#customizing-the-genai-video).
 
 {% raw %}
 ```bash
