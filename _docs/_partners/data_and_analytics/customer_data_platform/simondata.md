@@ -9,7 +9,7 @@ search_tag: Partner
 
 # SimonAI
 
-> The [SimonAI][1] Agentic Marketing Platform helps marketing teams achieve true 1:1 personalization. It combines a composable CDP with AI agents that operate directly in the Snowflake AI Data Cloud to act as a marketer’s data and execution team.
+> The [SimonAI][1] Agentic Marketing Platform helps marketing teams achieve true one-to-one personalization. It combines a composable CDP with AI agents that operate directly in the Snowflake AI Data Cloud to act as a marketer's data and execution team.
 
 Use the Braze and SimonAI integration to build and sync advanced audiences to Braze for real-time, no-code orchestration. With this integration, you can tap into SimonAI’s identity resolution, customer data unification, and AI-driven segmentation to power more personalized and impactful Braze campaigns downstream.
 
@@ -80,6 +80,8 @@ After Contact Traits is activated by your account manager:
    3. If this is your first time integrating with Braze from Simon, click **Backfill all contacts**. Backfilling sends all the data points to Braze the first time you use an action in a flow or journey to be sure all your data is fully in sync. Then on subsequent syncs, only the traits you choose in this screen are sent to Braze. This helps to make sure you're only charged for the data you need.
 
 ![Selecting sync traits in SimonAI.][10]
+
+[1]: https://www.simondata.com
 
 
 
