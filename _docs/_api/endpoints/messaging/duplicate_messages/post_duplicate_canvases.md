@@ -10,7 +10,7 @@ description: "This article outlines details about the Duplicate Canvases endpoin
 
 {% api %}
 # Duplicate Canvases using the API
-{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /canvas/duplicate
 {% endapimethod %}
 
