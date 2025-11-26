@@ -18,7 +18,7 @@ search_tag: OtherLevels
 
 The Braze and OtherLevels integration allows you to create custom GenAI videos through API calls to the OtherLevels Experience Platform, and then send these videos to your users as iOS push videos through [Braze Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/).
 
-Give your users a better experience with OtherLevels AI-powered experiences. Transform existing and third-party content into highly-scalable video and rich media for audiences that already consume content differently and respond strongly to contextually personalised experiences.
+Give your users a better experience with OtherLevels AI-powered experiences. Transform existing and third-party content into highly-scalable video and rich media for audiences that already consume content differently and respond strongly to contextually personalized experiences.
 
 ## Prerequisites
 
