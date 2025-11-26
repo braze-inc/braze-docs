@@ -59,5 +59,5 @@ Because MM API for WhatsApp doesn’t offer 100% deliverability, it's important 
 
 To retarget users, we recommend building a segment of users who didn’t receive a specific message. To do this, filter by the error code `131049`, which indicates that a marketing template message was not sent due to WhatsApp’s per-user marketing template limit enforcement. You can do this by using Braze Currents or SQL Segment Extensions:
 
-- **Braze Currents:** Export message failure events using Braze Currents. This data can then be used to update a custom attribute on the user profile (such as `whatsapp_failed_last_msg: true`), which you can use as a filter for your retargeting campaign.
+- **Braze Currents:** Export message failure events using Braze Currents. You can then use this data to update a custom attribute on the user profile (such as `whatsapp_failed_last_msg: true`), which you can use as a filter for your retargeting campaign.
 - **SQL Segment Extensions:** If you have access to this feature, you can use SQL to query the message failure logs and create a segment of those users, then target that segment on a different channel.
