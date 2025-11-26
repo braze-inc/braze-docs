@@ -2976,7 +2976,12 @@ validurls['/docs/help/help_articles/segments/search_exact_text/'] = '/docs/user_
 validurls['/docs/help/help_articles/docs/'] = '/docs/user_guide/';
 validurls['/docs/help/help_articles/docs/scroll_bar_overlap/'] = '/docs/user_guide/';
 validurls['/docs/help/faqs/'] = '/docs/';
-
+validurls['/docs/help/help_articles/campaigns_and_canvas/'] = '/docs/user_guide/engagement_tools/';
+validurls['/docs/help/help_articles/campaigns_and_canvas/canvas_not_sending/'] = '/docs/user_guide/engagement_tools/canvas/troubleshooting/';
+validurls['/docs/help/help_articles/campaigns_and_canvas/locations_data_in_campaigns/'] = '/docs/user_guide/engagement_tools/locations_and_geofences/location_tracking/';
+validurls['/docs/help/help_articles/campaigns_and_canvas/more_people_in_control_group/'] = '/docs/user_guide/engagement_tools/canvas/troubleshooting/';
+validurls['/docs/help/help_articles/campaigns_and_canvas/using_custom_event_properties/'] = '/docs/developer_guide/analytics/logging_events/';
+validurls['/docs/help/help_articles/campaigns_and_canvas/conversions_low/'] = '/docs/user_guide/analytics/dashboard/conversions_dashboard/#troubleshooting';
 validurls['/docs/help/help_articles/push/'] = '/docs/user_guide/message_building_by_channel/push/';
 validurls['/docs/api/objects_filters/user_attributes_object/'] = '/docs/help/help_articles/push/push_token_migration/';
 validurls['/docs/help/help_articles/push/push_enablement/'] = '/docs/user_guide/message_building_by_channel/push/users_and_subscriptions/';
@@ -2998,6 +3003,9 @@ validurls['/docs/user_guide/administrative/app_settings/manage_your_braze_users/
 
 validurls['/docs/partners/message_personalization/dynamic_content/cloudinary/'] = '/docs/partners/cloudinary/';
 
+validurls['/docs/user_guide/message_building_by_channel/banners/testing/'] = '/docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/';
+validurls['/docs/user_guide/message_building_by_channel/content_cards/testing/'] = '/docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/';
+validurls['/docs/user_guide/message_building_by_channel/in-app_messages/testing/'] = '/docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/';
 validurls['/docs/user_guide/data/unification/cloud_ingestion/overview'] = '/docs/user_guide/data/unification/cloud_ingestion/';
 validurls['/docs/contributing/content_management/language_translations'] = '/docs/contributing/content_management';
 

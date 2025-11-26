@@ -285,7 +285,7 @@ The content of the **Style** tab varies based on your chosen message options in 
 |Chevron or other Close Message Option | HEX color code. | Your desired HEX color will display. You will also be able to choose the opacity of the color. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-Always [preview and test]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) your message before sending.
+Always [preview and test]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/) your message before sending.
 
 {% alert important %}
 Some in-app message types do not have the option for styling beyond uploading custom HTML (or CSS or JavaScript) and assets using a ZIP file. [Web Modal with CSS]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#web-modal-css) allows you to upload or write custom CSS to create beautiful, all-around custom-styled messaging.
@@ -389,7 +389,7 @@ For information on Canvas-specific in-app messaging options, refer to [In-app me
 
 ## Step 8: Review and deploy
 
-After you've finished building the last of your campaign or Canvas, review its details, [test it]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/), then send it!
+After you've finished building the last of your campaign or Canvas, review its details, [test it]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/), then send it!
 
 Next, check out [In-app message reporting]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/reporting/) to learn how you can access the results of your messaging campaigns.
 

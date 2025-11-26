@@ -87,7 +87,7 @@ Refer to the following table for more details about this report:
 {% endtab %}
 
 {% tab shaps %}
-The **SHAPs** report uses the SHapley Additive exPlanations (SHAP) model to help you quantify how each feature or variable contributes to your recommendation model. Each point on the chart represents one SHAP and the distribution of the points represent a general sense of a feature's directional impact.
+The **SHAPs** report uses the Shapley Additive exPlanations (SHAP) model to help you quantify how each feature or variable contributes to your recommendation model. Each point on the chart represents one SHAP and the distribution of the points represent a general sense of a feature's directional impact.
 
 ![SHAPs report chart displaying a horizontal bar graph with multiple colored bars representing different features or variables. Each bar shows the impact of a feature on the recommendation model, with the x-axis labeled SHAP value and the y-axis listing feature names such as Recency, Frequency, and Channel. The chart visualizes how each feature contributes positively or negatively to the model's predictions.]({% image_buster /assets/img/decisioning_studio/reporting_insights_shaps.png %})
 

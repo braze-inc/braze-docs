@@ -219,7 +219,7 @@ The `messages` response will contain information about each message. The followi
 
 ### Conversion behaviors
 
-The `conversion_behaviors` array will contain information about each conversion event behavior set for the campaign. These behaviors are in order as set by the campaign. For example, Conversion Event A will be the first item in the array, Conversion Event B will be second, etc. The following lists example conversion event behavior responses:
+The `conversion_behaviors` array contains information about each conversion event behavior set for the campaign. These behaviors are in order as set by the campaign. For example, Conversion Event A is the first item in the array, Conversion Event B is the second, and so on. The following lists example conversion event behavior responses:
 
 #### Clicks email
 

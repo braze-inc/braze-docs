@@ -60,7 +60,7 @@ Authorization: Bearer YOUR-REST-API-KEY
   ],
   "attachments": (optional, array) array of JSON objects that define the files you need attached, defined by "file_name" and "url",
     [
-      {  
+      {
        "file_name": (required, string) the name of the file you want to attach to your email, excluding the extension (for example, ".pdf"). Attach files up to 2 MB. This is required if you use "attachments",
        "url": (required, string) the corresponding URL of the file you want to attach to your email. The file name's extension will be detected automatically from the URL defined, which should return the appropriate "Content-Type" as a response header. This is required if you use "attachments",
       }

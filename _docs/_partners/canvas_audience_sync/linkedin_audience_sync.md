@@ -39,6 +39,10 @@ You must make sure that you have the following items created, completed, or acce
 
 ### Step 1: Connect to LinkedIn
 
+{% alert important %}
+You must have the ["Admin" permission]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#admin) to connect LinkedIn to your Braze account.
+{% endalert %}
+
 In the Braze dashboard, go to **Technology Partners** and select **LinkedIn**. In the **LinkedIn Audience Sync** section, select **Connect LinkedIn**.
 
 ![LinkedIn technology page in Braze includes an Overview section and LinkedIn Audience Sync section with the Connected LinkedIn button.]({% image_buster /assets/img/linkedin/linkedin3.png %}){: style="max-width:75%;"}

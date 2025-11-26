@@ -21,12 +21,12 @@ description: "This article outlines details about the Identify users Braze endpo
 
 ## How it works
 
-Calling `/users/identify` combines a user profile that is identified by an alias (alias-only profile), email address (email-only profile), or phone number (phone number-only profile) with a user profile that has an `external_id` (identified profile), then removes the alias-only profile. 
+Calling `/users/identify` combines a user profile that is identified by an alias (alias-only profile), email address (email-only profile), or phone number (phone number-only profile) with a user profile that has an `external_id` (identified profile), then removes the alias-only profile.
 
 Identifying a user requires an `external_id` to be included in the following objects:
 
 - `aliases_to_identify`
-- `emails_to_identify` 
+- `emails_to_identify`
 - `phone_numbers_to_identify`
 
 If there isn't a user with that `external_id`, the `external_id` will be added to the aliased user's record, and the user will be considered identified. Users can only have one alias for a specific label. If a user already exists with the `external_id` and has an existing alias with the same label as the alias-only profile, then the user profiles will not be combined.
@@ -69,7 +69,7 @@ By default, this endpoint will merge the following list of fields found **exclus
 - Campaign summaries (Braze will pick the most recent date fields)
 - Workflow summaries (Braze will pick the most recent date fields)
 - Message and message engagement history
-- Custom event and purchase event count and first date and last date timestamps 
+- Custom event and purchase event count and first date and last date timestamps
   - These merged fields will update "for X events in Y days" filters. For purchase events, these filters include "number of purchases in Y days" and "money spent in last Y days".
 - Session data if the app exists on both user profiles
   - For example, if our target user doesn't have an app summary for "ABCApp" but our original user does, the target user will have the "ABCApp" app summary on their profile after the merge.

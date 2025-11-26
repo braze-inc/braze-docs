@@ -13,7 +13,7 @@ description: "This reference article covers how to use catalogs to reference non
 
 ### Step 1: Add personalization type {#step-one-personalization}
 
-In the message composer of your choice, select the <i class="fas fa-plus-circle"></i> plus icon to open the **Add Personalization** modal and select **Catalogs Items** for the **Personalization Type**. Then, select your **Catalog Name**. Using our previous example, we'll select the "Games" catalog.
+In the message composer of your choice, select the <i class="fas fa-plus-circle"></i> plus icon to open the **Add Personalization** modal and select **Catalog Items** for the **Personalization type**. Then, select your catalog name. Using our previous example, we'll select the "Games" catalog.
 
 ![]({% image_buster /assets/img_archive/use_catalog_personalization.png %})
 
@@ -170,10 +170,6 @@ You can upload a CSV of new catalog items to add or catalog items to update. To 
 ### Using Liquid
 
 You can also manually piece together catalogs with Liquid logic. However, note that if you type in an ID that doesn't exist, Braze will still return an items array without objects. We recommend that you include error handling, such as checking the size of the array and using an `if` statement to account for an empty array case.
-
-{% alert note %}
-You cannot use Liquid inside catalogs. If Liquid personalization is listed inside a cell in your catalog, the dynamic value does not render and only the actual Liquid appears.
-{% endalert %}
 
 #### Templating catalog items including Liquid
 
