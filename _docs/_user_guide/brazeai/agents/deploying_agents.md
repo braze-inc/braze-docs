@@ -79,5 +79,5 @@ During the beta period, catalog agents are limited to processing input values up
 ### Error handling in catalogs  
 
 - Failed catalog invocations do not retry.
-- If the API call to the foundational model provider returns any error, such as an invalid API key error or a rate limit error, the field value will not be updated.
+- If the API call to the foundational model provider returns any error, such as an invalid API key error or a rate limit error, the field value does not update.
 - You can review the agent's logs for details on failed runs.
