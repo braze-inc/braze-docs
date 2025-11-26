@@ -48,7 +48,7 @@ A successful connection displays **Connected** in the window.
 
 ![Integration screen in SimonAI][8]{: style="max-width:70%"}
 
-### Add Braze actions to Flows or Journeys in Simon
+### Add Braze actions to Flows or Journeys in SimonAI
 
 After you've authenticated your Braze account in Simon you can add Braze actions to [Flows][4] and [Journeys][5].
 
