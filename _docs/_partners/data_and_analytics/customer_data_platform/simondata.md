@@ -9,7 +9,7 @@ search_tag: Partner
 
 # Simon Data
 
-> [Simon Data](https://www.simondata.com) is a customer data platform (CDP) friendly to marketers and trusted by data teams. By transforming your data warehouse into a marketing powerhouse, Simon drives business results and a superior customer experience.
+> The [SimonAI][1] Agentic Marketing Platform helps marketing teams achieve true one-to-one personalization. It combines a composable CDP with AI agents that operate directly in the Snowflake AI Data Cloud to act as a marketer's data and execution team.
 
 Use the Braze and Simon Data integration to create and sync sophisticated audiences to Braze for orchestration, in real-time and without code. With this integration you can leverage the best of Simon's campaign prioritization and Identity matching capabilities, complex aggregate support, and more to elevate your Braze campaigns downstream.
 
@@ -80,6 +80,8 @@ After Contact Traits is activated by your account manager:
    3. If this is your first time integrating with Braze from Simon, click **Backfill all contacts**. Backfilling sends all the data points to Braze the first time you use an action in a flow or journey to be sure all your data is fully in sync. Then on subsequent syncs, only the traits you choose in this screen are sent to Braze. This helps to make sure you're only charged for the data you need.
 
 ![Selecting sync traits in Simon Data.]({% image_buster /assets/img/simon_data/BrazeTraitSyncing.png %})
+
+[1]: https://www.simondata.com
 
 
 
