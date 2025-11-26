@@ -50,7 +50,7 @@ A successful connection displays **Connected** in the window.
 
 ### Add Braze actions to Flows or Journeys in SimonAI
 
-After you've authenticated your Braze account in Simon you can add Braze actions to [Flows][4] and [Journeys][5].
+After you've authenticated your Braze account in SimonAI you can add Braze actions to [Flows][4] and [Journeys][5].
 
 Three actions are available:
 
