@@ -14,7 +14,7 @@ channel:
 
 > Boost deliverability and engagement by reaching more of the right customers on WhatsApp with dynamic, engagement-based delivery.
 
-WhatsApp messages with optimized delivery are sent using Meta’s new [Marketing Messages API for WhatsApp](https://developers.facebook.com/docs/whatsapp/marketing-messages-api-for-whatsapp) (MM API for WhatsApp), which offers dynamic, engagement-based delivery, so your high engagement messages (for example, those more likely to be read and clicked) can reach more users likely to engage with them. WhatsApp considers your messages to be high engagement if they are expected, relevant, and timely and therefore more likely to be read and clicked. 
+WhatsApp messages with optimized delivery are sent using Meta’s new [Marketing Messages API for WhatsApp](https://developers.facebook.com/docs/whatsapp/marketing-messages-api-for-whatsapp) (MM API for WhatsApp), which offers dynamic, engagement-based delivery. This means your high engagement messages (for example, those more likely to be read and clicked) can reach more users likely to engage with them. WhatsApp considers your messages to be high engagement if they are expected, relevant, and timely and therefore more likely to be read and clicked. 
 
 Brands can expect equal or greater deliverability with MM API for WhatsApp, compared to Cloud API. In India, high engagement marketing messages saw up to 9% more messages delivered compared to Cloud API, according to Meta. Note that MM API for WhatsApp still does not guarantee 100% deliverability.
 
