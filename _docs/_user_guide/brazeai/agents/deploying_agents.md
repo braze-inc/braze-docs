@@ -66,7 +66,11 @@ To add an agent to your catalog field:
 
 ### How catalog agents run  
 
-After launching, the agent will run and evaluate each row, taking the selected columns into its context to produce an output. Agents run on all new rows added after the agent is deployed. If you selected **Recalculate when catalog rows update**, all values for this field will update if existing source fields change.  
+After launching, the agent runs and evaluates each row, taking the selected columns into its context to produce an output. Agents run on all new rows added after you deploy the agent. If you selected **Recalculate when catalog rows update**, all values for this field update if existing source fields change.
+
+You can refresh and edit the fields in your catalog that use agents. To remove an agent from a column, unselect **Apply AI agent**. This reverts the column to a non-agentic column, and the fields retain the latest values the agent applied the last time it ran on the catalog.
+
+![The option to select "Apply AI agent" for a catalog field.]({% image_buster /assets/img/ai_agent/edit_agent_column.png %}){: style="max-width:80%;"}
 
 {% alert note %}
 During the beta period, catalog agents are limited to processing input values up to 10 KB per row, and will update only the first 10,000 rows in a catalog.
@@ -75,5 +79,5 @@ During the beta period, catalog agents are limited to processing input values up
 ### Error handling in catalogs  
 
 - Failed catalog invocations do not retry.
-- If the API call to the foundational model provider returns any error, such as an invalid API key error or a rate limit error, the field value will not be updated.   
-- You can review the agent's logs for details on failed runs.  
+- If the API call to the foundational model provider returns any error, such as an invalid API key error or a rate limit error, the field value does not update.
+- You can review the agent's logs for details on failed runs.
