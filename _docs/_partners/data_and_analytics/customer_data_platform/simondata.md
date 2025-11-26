@@ -11,7 +11,7 @@ search_tag: Partner
 
 > The [SimonAI][1] Agentic Marketing Platform helps marketing teams achieve true 1:1 personalization. It combines a composable CDP with AI agents that operate directly in the Snowflake AI Data Cloud to act as a marketer’s data and execution team.
 
-Use the Braze and Simon AI integration to build and sync advanced audiences to Braze for real-time, no-code orchestration. With this integration, you can tap into Simon AI’s identity resolution, customer data unification, and AI-driven segmentation to power more personalized and impactful Braze campaigns downstream.
+Use the Braze and SimonAI integration to build and sync advanced audiences to Braze for real-time, no-code orchestration. With this integration, you can tap into SimonAI’s identity resolution, customer data unification, and AI-driven segmentation to power more personalized and impactful Braze campaigns downstream.
 
 ## Prerequisites
 
