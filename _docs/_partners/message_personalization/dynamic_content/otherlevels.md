@@ -182,7 +182,7 @@ Replace the following:
 
 ### Step 3: Sending through Braze Connected Content
 
-To send the GenAI videos as iOS push messages to your users. 
+To send the GenAI videos as iOS push messages to your users, follow these steps:
 
 1. Create a Braze iOS push notification campaign.
 2. While composing your campaign, go to the **Assets** section and paste the following Connected Content syntax into the **Add from URL** field.
