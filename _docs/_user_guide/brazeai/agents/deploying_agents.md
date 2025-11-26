@@ -66,7 +66,7 @@ To add an agent to your catalog field:
 
 ### How catalog agents run  
 
-After launching, the agent will run and evaluate each row, taking the selected columns into its context to produce an output. Agents run on all new rows added after the agent is deployed. If you selected **Recalculate when catalog rows update**, all values for this field will update if existing source fields change.
+After launching, the agent runs and evaluates each row, taking the selected columns into its context to produce an output. Agents run on all new rows added after you deploy the agent. If you selected **Recalculate when catalog rows update**, all values for this field update if existing source fields change.
 
 You can refresh and edit the fields in your catalog that use agents. To remove an agent from a column, unselect **Apply AI agent**. This reverts the column to a non-agentic column, and the fields retain the latest values the agent applied the last time it ran on the catalog.
 
