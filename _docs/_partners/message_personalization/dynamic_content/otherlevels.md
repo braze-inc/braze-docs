@@ -246,5 +246,5 @@ The voice model used to process input scripts works best when providing a natura
 
 ## Additional considerations
 
-- Currently, only the iOS push notification platform natively supports video media. Android push notifications do not natively support videos, so this integration can only be used with your iOS audience.
+- Only the iOS push notification platform natively supports video media. Android push notifications do not natively support videos, so this integration can only be used with your iOS audience.
 - When receiving video push notifications on iOS devices, users need to press and hold the push notification for the video to load and play. This is standard behaviour on the iOS platform and cannot be customized.
