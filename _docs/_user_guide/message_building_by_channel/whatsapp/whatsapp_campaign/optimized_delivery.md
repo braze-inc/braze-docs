@@ -12,16 +12,11 @@ channel:
 
 # WhatsApp messages with optimized delivery
 
-> Leverage Meta’s advanced AI systems to deliver your marketing messages to more users who are most likely to engage with them, significantly boosting deliverability and message engagement.
+> Boost deliverability and engagement by reaching more of the right users on WhatsApp with dynamic, engagement-based delivery.
 
-WhatsApp messages with optimized delivery use Meta's [Marketing Messages Lite API](https://developers.facebook.com/docs/whatsapp/marketing-messages-lite-api/), which offers higher performance than the traditional Cloud API. This sending pipeline improves reach to users who are likely to engage.
+WhatsApp messages with optimized delivery are sent using Meta’s [Marketing Messages API for WhatsApp](https://developers.facebook.com/docs/whatsapp/marketing-messages-api-for-whatsapp) (MM API for WhatsApp), which offers dynamic, engagement-based delivery. This means your high-engagement messages (for example, those more likely to be read and clicked) can reach more users who are likely to engage with them. WhatsApp considers your messages to be high engagement if they are expected, relevant, and timely and therefore more likely to be read and clicked. 
 
-Benefits of using optimized delivery include:
-
-- **Dynamic messaging limits:** The new API offers more dynamic per-user messaging limits, allowing high-engagement marketing messages (those more likely to be read or clicked) to reach more users.
-- **Optimized deliverability:** You can expect lower delivery rates but higher engagement rates for the delivered messages, as Meta’s advanced AI will optimize for users that it expects to value and engage with the message. 
-- **Proven results:** In India, messages identified as more likely to be read or clicked had up to 9% more messages delivered compared to sending through Cloud API.
-- **Targeted delivery:** Meta’s advanced AI identifies high-engagement messages and delivers them to more users, allowing you to deliver the right message to more of the right people on WhatsApp.
+Brands can expect equal or greater deliverability with MM API for WhatsApp, compared to Cloud API. In India, high engagement marketing messages saw up to 9% more messages delivered compared to Cloud API, according to Meta. Note that MM API for WhatsApp still does not guarantee 100% deliverability.
 
 ### Regional availability
 
@@ -57,3 +52,12 @@ Optimized delivery should be used for **marketing messages**. Braze will automat
 - If you select optimized delivery but it isn’t available, the message will automatically fall back to the Cloud API method.
 
 ![Message composer with a preview tab that has a checkbox to select optimized delivery.]({% image_buster /assets/img/whatsapp/delivery_method_settings.png %})
+
+### Retargeting users on other Braze channels 
+
+Because MM API for WhatsApp doesn’t offer 100% deliverability, it's important to understand how to retarget users who may not have received your message on other channels. 
+
+To retarget users, we recommend building a segment of users who didn’t receive a specific message. To do this, filter by the error code `131049`, which indicates that a marketing template message was not sent due to WhatsApp’s per-user marketing template limit enforcement. You can do this by using Braze Currents or SQL Segment Extensions:
+
+- **Braze Currents:** Export message failure events using Braze Currents. You can then use this data to update a custom attribute on the user profile (such as `whatsapp_failed_last_msg: true`), which you can use as a filter for your retargeting campaign.
+- **SQL Segment Extensions:** If you have access to this feature, you can use SQL to query the message failure logs and create a segment of those users, then target that segment on a different channel.
