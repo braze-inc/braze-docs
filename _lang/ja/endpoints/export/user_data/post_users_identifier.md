@@ -132,8 +132,6 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/export/ids' 
 ## 応答
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "users" : (array of object) the data for each of the exported users, may be empty if no users are found,
@@ -418,7 +416,7 @@ Authorization: Bearer YOUR-REST-API-KEY
         ]
       }
       ...
-    ],    
+    ],
     "cards_clicked" : [
       {
         "name" : "Loyalty Promo"
