@@ -1,5 +1,5 @@
 ---
-nav_title: "取得:メール テンプレートのすべての変換とロケールを表示する"
+nav_title: "取得:メールテンプレートのすべての翻訳とロケールを表示"
 article_title: "取得:メールテンプレートのすべての翻訳とロケールを表示"
 search_tag: Endpoint
 page_order: 3
@@ -36,9 +36,11 @@ description: "この記事では、「メールテンプレートのすべての
 | `template_id` | 必須 | string    | メールテンプレートの ID。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-すべての翻訳IDは、ユニバーサルユニーク識別子（UUID）とみなされ、**多言語サポート**設定またはリクエストレスポンスで見つけることができる。
+{% alert note %}
+すべての変換ID は汎用一意識別子(UUID) と見なされ、GET エンドポイントのレスポンスにあります。
+{% endalert %}
 
-## リクエスト例
+## 例のリクエスト
 
 ```
 curl --location --request GET 'https://rest.iad-03.braze.com/templates/email/translations/' \
@@ -57,8 +59,6 @@ curl --location --request GET 'https://rest.iad-03.braze.com/templates/email/tra
 ステータスコード `200` は、次の応答ヘッダーと本文を返す可能性があります。
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "translations": [
         {
@@ -106,15 +106,5 @@ Authorization: Bearer YOUR-REST-API-KEY
     ]
 }
 ```
-
-## トラブルシューティング
-
-以下の表は、返される可能性のあるエラーと、それに関連するトラブルシューティングの手順を示したものである。
-
-| エラーメッセージ                           | トラブルシューティング                                                                    |
-|-----------------------------------------|------------------------------------------------------------------------------------|
-| `MULTI_LANGUAGE_NOT_ENABLED`            | ワークスペースの多言語設定がオンになっていない。                       |
-| `MULTI_LANGUAGE_NOT_ENABLED_ON_MESSAGE` | 翻訳できるのは、メールテンプレートとメール、プッシュ、アプリ内メッセージキャンペーン、またはメール付きキャンバスメッセージのみです。             |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}
