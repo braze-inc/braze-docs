@@ -14,15 +14,15 @@ description: "この記事では、「セグメントごとにユーザーをエ
 /users/export/segment
 {% endapimethod %}
 
-> このエンドポイントを使用して、Segment内のすべてのユーザーs をエクスポートします。 
+> このエンドポイントを使用して、Segment内のすべてのユーザーs をエクスポートします。
 
 {% alert important %}
 このエンドポイントを使用する場合は、次の点に注意してください。<br><br>1\.このAPI リクエストの`fields_to_export` フィールドは**required** です。<br>2\.`custom_events`、`purchases`、`campaigns_received`、`canvases_received` のフィールドには、過去 90 日間のデータのみが含まれます。
 {% endalert %}
 
-ユーザーデータは、新しい行で区切られたユーザーのJSONオブジェクトの複数のファイルとしてエクスポートされます(1行に1つのJSONオブジェクトなど)。データは自動的に生成されたURLか、この統合がすでに設定されている場合はS3バケットにエクスポートされる。
+ユーザーデータは、新しい行で区切られたユーザーのJSONオブジェクトの複数のファイルとしてエクスポートされます(1行に1つのJSONオブジェクトなど)。データは、自動生成されたURL にエクスポートされるか、この統合がすでに設定されている場合は、S3 バケットにエクスポートされます。
 
-企業は、このエンドポイントを使用するセグメントごとに、特定の時刻に最大 1 つのエクスポートを実行できます。エクスポートが完了するのを待ってから、再試行してください。 
+企業は、このエンドポイントを使用するセグメントごとに、特定の時刻に最大 1 つのエクスポートを実行できます。エクスポートが完了するのを待ってから、再試行してください。
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#cfa6fa98-632c-4f25-8789-6c3f220b9457 {% endapiref %}
 
@@ -36,7 +36,7 @@ description: "この記事では、「セグメントごとにユーザーをエ
 
 ## 認証情報ベースの応答の詳細
 
-[S3][1]、[Azure][2]、または [Google Cloud Storage][3] の認証情報を Braze に追加した場合、各ファイルは `segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip` のようなキー形式の ZIP ファイルとしてバケットにアップロードされます。Azure を使用している場合は、Braze の Azure パートナーの概要ページで、[**これをデフォルトのデータエクスポート先にする**] チェックボックスがオンになっていることを確認します。通常、処理を最適化するため、5,000 人のユーザーにつき 1 ファイルを作成します。大きなワークスペース内で小さなセグメントをエクスポートすると、複数のファイルが生成される場合があります。その後、ファイルを抽出し、必要に応じてすべての`json` ファイルを1 つのファイルに連結できます。`output_format` に `gzip` を指定すると、ファイル拡張子は `.gz` ではなく `.zip` になります。
+[S3][1]、[Azure][2]、または[Google Cloud Storage][3] 認証情報 s をBraze に追加した場合、各ファイルは`segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip` のようなキー形式でZIP ファイルとしてバケットにアップロードされます。Azure を使用している場合は、Braze の Azure パートナーの概要ページで、[**これをデフォルトのデータエクスポート先にする**] チェックボックスがオンになっていることを確認します。通常、Braze は5000 ユーザー 秒あたり1 つのファイルを作成し、プロセッシングを最適化します。大きなワークスペース内で小さなセグメントをエクスポートすると、複数のファイルが生成される場合があります。その後、ファイルを抽出し、必要に応じてすべての`json` ファイルを1 つのファイルに連結できます。`output_format` の`gzip` を指定すると、ファイル拡張子は`.zip` ではなく`.gz` になります。
 
 {% details Export pathing breakdown for ZIP %}
 **ZIP 形式:**
@@ -58,11 +58,11 @@ description: "この記事では、「セグメントごとにユーザーをエ
 
 {% enddetails %}
 
-このエンドポイントを使用してエクスポートに独自のバケットポリシーを適用する場合は、独自の S3 または Azure 資格情報を設定することを強くお勧めします。クラウドストレージの認証情報がない場合は、リクエストへの応答で、すべてのユーザーファイルを含む ZIP ファイルをダウンロードできる URL が提供されます。URL は、エクスポートの準備ができた後でのみ有効な場所になります。 
+このエンドポイントを使用してエクスポートに独自のバケットポリシーを適用する場合は、独自の S3 または Azure 資格情報を設定することを強くお勧めします。クラウドストレージの認証情報がない場合は、リクエストへの応答で、すべてのユーザーファイルを含む ZIP ファイルをダウンロードできる URL が提供されます。URL は、エクスポートの準備ができた後でのみ有効な場所になります。
 
 クラウドストレージ認証情報s を提供しない場合は、このエンドポイントからエクスポートできるデータ量に制限があることに注意してください。エクスポートするフィールドやユーザーの個数によっては、大きすぎるとファイル転送が失敗することがあります。ベストプラクティスは、`fields_to_export` を使用してエクスポートするフィールドを指定し、転送のサイズを低く保つために必要なフィールドs のみを指定することです。ファイルを生成するエラーを取得する場合は、乱数バケット番号に基づいてユーザー群をより多くのSegments に分割することを検討します(たとえば、乱数バケット番号が1000 未満、または1000 から2000 の間のSegmentを作成します)。
 
-どちらのシナリオでも、オプションで`callback_endpoint` を指定して、エクスポートの準備が整ったときに通知することができます。`callback_endpoint` が指定されている場合は、ダウンロードの準備ができたときに指定されたアドレスに POST リクエストを送信します。投稿の本文は"success":true になります。Braze に S3 認証情報を追加していない場合、投稿の本文にはダウンロード URL を値として持つ属性 `url` が追加されます。
+どちらのシナリオでも、オプションで`callback_endpoint` を指定して、エクスポートの準備が整ったときに通知することができます。`callback_endpoint` が指定されている場合、Braze は、ダウン読み込むの準備ができたときに、指定された住所に投稿リクエストを行います。投稿の本文は"success":true です。S3 認証情報 s をBraze に追加していない場合、投稿の本文には、下の読み込むURL を値として持つ属性`url` が追加されます。
 
 ユーザー群s を大きくすると、エクスポート時間が長くなります。例えば、2,000 万人のユーザーを持つアプリの場合、1 時間以上かかることもあります。
 
@@ -164,30 +164,28 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/export/segme
 
 ## 重要なお知らせ
 
-- `custom_events` 、`purchases` 、`campaigns_received` 、`canvases_received` のフィールドには、過去90日間のデータのみが含まれる。
-- `custom_events` と`purchases` の両方に、`first` と`count` のフィールドs が含まれています。これら両方のフィールドには、過去 90 日間のデータだけに限定されず、すべての期間の情報が反映されます。たとえば、特定のユーザーが 90 日前に初回のイベントを実行した場合、これは `first` フィールドに正確に反映され、`count` フィールドでは過去 90 日より前に発生したイベントも考慮されます。
-- 企業がエンドポイント レベルで実行できる同時セグメント エクスポートの数は 100 に制限されています。この制限を超える試みはエラーになります。
+- `custom_events`、`purchases`、`campaigns_received`、および`canvases_received` のフィールドs には、過去90 日間のデータのみが含まれます。
+- `custom_events` と`purchases` の両方に、`first` と`count` のフィールドs が含まれています。これらのフィールドは両方とも常に情報を反映しており、過去90日間のデータに限定されません。たとえば、特定のユーザーが90 日前にイベントを最初に実行した場合、これは`first` フィールドにac キュレート ly が反映され、`count` フィールドは過去90 日前に発生したイベントも考慮します。
+- 企業がエンドポイント レベルで実行できる同時セグメント エクスポートの数は 100 に制限されています。この制限を超えると、エラーが発生します。
 - 初回のエクスポートジョブがまだ実行されている間にセグメントを 2 回目にエクスポートしようとすると、429 エラーが発生します。
 
 ## 応答
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
-    "object_prefix": (required, string) the filename prefix that will be used for the JSON file produced by this export, for example, 'bb8e2a91-c4aa-478b-b3f2-a4ee91731ad1-1464728599',
+    "object_prefix": (required, string) the filename prefix that is used for the JSON file produced by this export, for example, 'bb8e2a91-c4aa-478b-b3f2-a4ee91731ad1-1464728599',
     "url" : (optional, string) the URL where the segment export data can be downloaded if you do not have your own S3 credentials
 }
 ```
 
-URL が使用可能になった後、数時間のみ有効になります。そのため、独自のS3 認証情報をBraze に追加することを強くお勧めします。
+URL が使用可能になった後、数時間のみ有効です。そのため、独自のS3 認証情報をBraze に追加することを強くお勧めします。
 
-APIレスポンスに`object_prefix` 、データをダウンロードするURLが表示されない場合、このエンドポイントにAmazon S3バケットがすでに設定されていることを意味する。このエンドポイントを使用してエクスポートされたデータは、S3バケットに直接送られる。
+API レスポンスに `object_prefix` が表示され、データを読み込むする URL がない場合、このエンドポイント用に Amazon S3 バケットがすでに設定されていることを意味します。このエンドポイントを使用してエクスポートされたデータは、S3 バケットに直接送信されます。
 
 ## サンプルユーザーのエクスポートファイルアウトプット
 
-ユーザーエクスポートオブジェクト (できるだけ少ないデータを含めます。オブジェクトにフィールドがない場合は、null または空であると見なされます):
+ユーザエクスポートオブジェクト(Braze には最小限のデータが含まれます。オブジェクトにフィールドがない場合は、null または空であると見なされます)。
 
 {% tabs %}
 {% tab All fields %}
@@ -278,7 +276,7 @@ APIレスポンスに`object_prefix` 、データをダウンロードするURL�
       {
         "name" : (string),
         "last_received" : (string) date,
-        "engaged" : 
+        "engaged" :
          {
            "opened_email" : (boolean),
            "opened_push" : (boolean),
@@ -362,10 +360,10 @@ APIレスポンスに`object_prefix` 、データをダウンロードするURL�
     "attributed_source" : "braze_test_source_072219",
     "attributed_adgroup" : "braze_test_adgroup_072219",
     "attributed_ad" : "braze_test_ad_072219",
-    "push_subscribe" : "opted_in", 
+    "push_subscribe" : "opted_in",
     "push_opted_in_at": "2020-01-26T22:45:53.953Z",
     "email_subscribe" : "subscribed",
-    "custom_attributes": 
+    "custom_attributes":
     {
       "loyaltyId": "37c98b9d-9a7f-4b2f-a125-d873c5152856",
       "loyaltyPoints": "321",
@@ -425,12 +423,12 @@ APIレスポンスに`object_prefix` 、データをダウンロードするURL�
         "name": "Email Unsubscribe",
         "api_campaign_id": "d72fdc84-ddda-44f1-a0d5-0e79f47ef942",
         "last_received": "2022-06-02T03:07:38.105Z",
-        "engaged": 
+        "engaged":
         {
            "opened_email": true
         },
         "converted": true,
-        "multiple_converted": 
+        "multiple_converted":
         {
           "Primary Conversion Event - A": true
         },
@@ -460,7 +458,7 @@ APIレスポンスに`object_prefix` 、データをダウンロードするURL�
         ]
       }
       ...
-    ],    
+    ],
     "cards_clicked" : [
       {
         "name" : "Loyalty Promo"
