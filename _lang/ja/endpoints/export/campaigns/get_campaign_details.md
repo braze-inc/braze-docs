@@ -47,8 +47,6 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/detail
 ## 回答
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "created_at" : (string) the date created as ISO 8601 date,
@@ -221,7 +219,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ### 変換動作
 
-`conversion_behaviors` 配列には、キャンペーンに設定されたコンバージョンイベントの動作に関する情報が含まれます。これらの動作は、キャンペーンによって設定された順序で行われます。たとえば、変換イベントA は配列の最初の項目、変換イベントB は2 番目の項目などです。以下に、コンバージョンイベント ビヘイビアのレスポンスの例を示します。
+`conversion_behaviors` 配列はキャンペーンに設定された各コンバージョンイベントビヘイビアに関する情報を含む。これらの動作は、キャンペーンによって設定された順序で行われます。例えば、コンバージョンイベントAは配列の最初の項目であり、コンバージョンイベントBは2番目の項目、といった具合である。以下に、コンバージョンイベント ビヘイビアのレスポンスの例を示します。
 
 #### メールをクリック
 
