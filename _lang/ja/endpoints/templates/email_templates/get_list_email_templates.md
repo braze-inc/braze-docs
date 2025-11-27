@@ -41,15 +41,13 @@ curl --location --request GET 'https://rest.iad-01.braze.com/templates/email/lis
 --header 'Authorization: Bearer YOUR_REST_API_KEY'
 ```
 
-## 応答 
+## 応答
 
 {% alert important %}
 電子メール用のドラッグアンドドロップエディタを使用して作成されたテンプレートは、この回答では提供されない。
 {% endalert %}
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
 {
   "count": the number of templates returned
   "templates": [template with the following properties]:
