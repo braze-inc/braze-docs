@@ -1,5 +1,5 @@
 ---
-nav_title: メッセージオブジェクト
+nav_title: メッセージ・オブジェクト
 config_only: true
 noindex: true
 ---
