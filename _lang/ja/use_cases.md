@@ -35,7 +35,7 @@ curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/dishwar
 }'
 ```
 
-このペイロードを送信した後、以下の応答で3つのコレクションが Kitchenerie の食器カタログから正常に削除されたことが確認できます。
+この有料読み込むを送った後、レスポンスは、Brazeがキチネリーの食器カタログから3つのコレクションをうまく削除したことを確認します。
 
 ```json
 {
@@ -68,7 +68,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-このペイロードの送信に成功した後、このレスポンスでメールがMovieCanonのスパムリストから削除されたことが確認できます。
+この有料読み込むを正常に送信した後、このレスポンスは、Brazeがムービーキャノンのスパム一覧からメールを削除したことを確認します。
 
 ```json
 {
@@ -86,8 +86,6 @@ Siege Valley Healthが、Brazeのダッシュボードでフィルタリング�
 
 {% details Here’s the response that the Siege Valley Health marketing team would receive. %}
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "canvases" : [
   	{
@@ -115,7 +113,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 Siege Valley Health のキャンバスリストから最初のキャンバスの分析サマリーを確認するという次のタスクに移りましょう。そのためには、以下のリクエストパラメーターで [`/canvas/data_summary` エンドポイント]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_analytics_summary/)を使用します。
 
-* `canvas_id`: "canvas_identifier_2"
+* `canvas_id`
 * `ending_at`:2023-07-10T23:59:59
 * `starting_at`:2020-07-10T23:59:59
 
@@ -128,7 +126,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/data_summ
 
 ## 今後スケジュールされているキャンペーンとキャンバスをチェックする
 
-一番忙しいのは、衣料品や美容品をネット販売し、店頭で販売する小売 (店)ブランド「Flash&Thread」のアプリがすばやい。同社のマーケティングチームは、2024年3月31日午後12時までに、Braze のダッシュボードから今後のキャンペーンとキャンバスをチェックしたいと考えています。これは、[`/messages/scheduled_broadcasts` エンドポイント]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/get_messages_scheduled/)を使って実現できます。 
+オンラインと店舗で衣料品と美容製品を販売する小売ブランド、Flash & Thread にとって、一年で最も忙しい時期が間近に迫っています。同社のマーケティングチームは、2024年3月31日午後12時までに、Braze のダッシュボードから今後のキャンペーンとキャンバスをチェックしたいと考えています。これは、[`/messages/scheduled_broadcasts` エンドポイント]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/get_messages_scheduled/)を使って実現できます。
 
 これがリクエストの例です：
 
@@ -160,7 +158,7 @@ curl --location -g --request GET https://rest.iad-01.braze.com/preference_center
   "updated_at": "2024-08-15T15:00:00",
   "preference_center_title": "Manage Your PoliterWeekly Notification Preferences",
   "preference_center_page_html": "<!DOCTYPE html><html><head><title>Your PoliterWeekly Newsletter Preferences</title><style>body { font-family: Arial, sans-serif; margin: 0; padding: 20px; }.container { max-width: 600px; margin: auto; }h1 { color: #333; }.preference { margin-bottom: 20px; }.preference label { font-size: 16px; }.preference input[type=\"checkbox\"] { margin-right: 10px; }.submit-btn { background-color: #007bff; color: white; padding: 10px 20px; border: none; cursor: pointer; }</style></head><body><div class=\"container\"><h1>Manage your notification preferences</h1><p>Select the types of updates you wish to receive from us:</p><form id=\"preferencesForm\"><div class=\"preference\"><label><input type=\"checkbox\" name=\"newsUpdates\" checked> News Updates</label></div><div class=\"preference\"><label><input type=\"checkbox\" name=\"editorialPicks\"> Editorial Picks</label></div><div class=\"preference\"><label><input type=\"checkbox\" name=\"events\"> Events & Webinars</label></div><div class=\"preference\"><label><input type=\"checkbox\" name=\"specialOffers\"> Special Offers & Promotions</label></div><button type=\"submit\" class=\"submit-btn\">Save Preferences</button></form></div><script>document.getElementById('preferencesForm').addEventListener('submit', function(e) {e.preventDefault();alert('Your preferences have been saved!');});</script></body></html>",
-  "confirmation_page_html": "<!DOCTYPE html><html><head><title>PoliterWeekly Preferences Updated</title></head><body><h1>You're good to go!</h1><p>Your preferences have been updated successfully.</p></body></html>",
+  "confirmation_page_html": "<!DOCTYPE html><html><head><title>PoliterWeekly Preferences Updated</title></head><body><h1>You're good to go!</h1><p>Braze updated your preferences successfully.</p></body></html>",
   "redirect_page_html": null,
   "preference_center_options": {
     "meta-viewport-content": "width=device-width, initial-scale=1"
@@ -192,7 +190,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-このペイロードを送信すると、次の応答によって、CashBlastr の無効な電話番号が Braze の無効リストから削除されたことが確認されます。
+この有料読み込むを送信した後、レスポンスは、BrazeがBraze不正リストからCashBlastrから不正な電話番号を削除したことを確認します。
 
 ```json
 {
@@ -211,7 +209,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/sta
 ```
 {% endraw %}
 
-このエンドポイントは、メールのユーザーのサブスクリプショングループのステータスも一覧表示し、複数のユーザーのサブスクリプショングループのステータスを確認するために使用できます。
+このエンドポイントでは、メールのユーザーのサブスクリプショングループ ステータスも一覧表示します。マルチユーザーs のサブスクリプショングループ ステータスを表示するには、このボタンを使用します。
 
 ## メールメッセージ用のHTMLテンプレートをチェックする
 
@@ -222,8 +220,6 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/sta
 {% details Here’s the response that the WorkFriends team would receive. %}
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
 {
   "email_template_id": "WorkFriends_Email_Template_ID",
   "template_name": "Promo template",
