@@ -9,7 +9,7 @@ description: "この記事では、接続オーディエンスオブジェクト
 
 # 接続されたオーディエンスオブジェクト
 
-> 接続されたオーディエンス・オブジェクトは、メッセージを送信するオーディエンスを特定するセレクタである。 
+> 接続されたオーディエンス・オブジェクトは、メッセージを送信するオーディエンスを特定するセレクタである。
 
 このオブジェクトは、`AND` または `OR` 演算子を使用した論理式で、1つの接続オーディエンスフィルター、または複数の接続オーディエンスフィルターで構成されます。
 
@@ -61,7 +61,7 @@ description: "この記事では、接続オーディエンスオブジェクト
 | 配列 | `includes_value``does_not_include_value`,`exists` 、 `does_not_exist` |
 | 数値 | `equals``not_equal`,`greater_than`,`greater_than_or_equal_to`,`less_than`,`less_than_or_equal_to`,`exists` 、 `does_not_exist` |
 | ブール値 | `equals``does_not_equal`,`exists` 、 `does_not_exist` |
-| 時刻 | `less_than_x_days_ago``greater_than_x_days_ago`,`less_than_x_days_in_the_future`,`greater_than_x_days_in_the_future`,`after`,`before`,`exists` 、 `does_not_exist` | 
+| 時刻 | `less_than_x_days_ago``greater_than_x_days_ago`,`less_than_x_days_in_the_future`,`greater_than_x_days_in_the_future`,`after`,`before`,`exists` 、 `does_not_exist` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 #### 属性比較の注意点
