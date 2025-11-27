@@ -15,7 +15,7 @@ description: "この記事では、BrazeのEメールテンプレート作成エ
 
 > BrazeダッシュボードでEメールテンプレートを作成するには、このエンドポイントを使用する。
 
-これらのテンプレートは、**テンプレート& メディア**ページで利用できるようになる。このエンドポイントからの応答には`email_template_id`のフィールドが含まれており、後続のAPI呼び出しでテンプレートを更新するために使用できます。
+これらのテンプレートは、**「テンプレート＆メディア**」ページで利用できるようになる。このエンドポイントからの応答には`email_template_id`のフィールドが含まれており、後続のAPI呼び出しでテンプレートを更新するために使用できます。
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5eb1fe0d-2795-474d-aaf2-c4e2977dc94b {% endapiref %}
 
@@ -77,8 +77,6 @@ curl --location --request POST 'https://rest.iad-01.braze.com/templates/email/cr
 ## 回答例
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
 {
   "email_template_id": "232b6d29-7e41-4106-a0ab-1c4fe915d701",
   "message": "success"
