@@ -2,7 +2,7 @@
 nav_title: "取得:輸出セグメント分析"
 article_title: "取得:セグメント分析のエクスポート"
 search_tag: Endpoint
-page_order: 4
+page_order: 3
 layout: api_page
 page_type: reference
 description: "この記事では、エクスポートセグメント分析Brazeエンドポイントについての詳細を概説する。"
@@ -46,8 +46,6 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/segments/data_se
 ## 応答
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "data" : [
