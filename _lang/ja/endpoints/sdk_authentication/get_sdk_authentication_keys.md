@@ -1,5 +1,5 @@
 ---
-nav_title: "取得:SDK認証キーをリストアップする。"
+nav_title: "取得:SDK 認証キーを一覧表示"
 article_title: "取得:SDK 認証キーを一覧表示"
 search_tag: Endpoint
 page_order: 1
