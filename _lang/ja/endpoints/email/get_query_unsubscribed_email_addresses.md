@@ -57,8 +57,6 @@ curl --location --request GET 'https://rest.iad-01.braze.com/email/unsubscribes?
 エントリは降順で表示されます。
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "emails": [
     {
