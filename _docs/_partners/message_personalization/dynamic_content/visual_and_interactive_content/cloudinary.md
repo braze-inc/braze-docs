@@ -117,6 +117,10 @@ If an exact match isn’t found, the function automatically selects a fallback o
 Refer to Cloudinary's [`braze-personalization` GitHub repo](https://github.com/cloudinary-devs/braze-personalization) for instructions on creating and applying custom functions, and an example custom function for asset selection and fallback options for a given campaign. For more guidance, contact your Cloudinary support team.
 {% endalert %}
 
+### Prerequisites
+
+- Unrestrict the list delivery type: Open the Security Settings in your Cloudinary Console, and clear the Resource list item under Restricted image types.
+
 ### Dynamic selection setup
 
 1. Set up the tag and the metadata for assets in Cloudinary.
