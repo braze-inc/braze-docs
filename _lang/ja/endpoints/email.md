@@ -1,5 +1,5 @@
 ---
-nav_title: "メールリスト＆アドレス"
+nav_title: "電子メールリストとアドレス"
 article_title: 電子メールリストとアドレス エンドポイント
 search_tag: Endpoint
 page_order: 1
@@ -33,5 +33,5 @@ guide_featured_list:
     image: /assets/img/braze_icons/mail-04.svg
 ---
 {% comment %}
-からリダイレクトする。 email_sync.md
+リダイレクト元 email_sync.md
 {% endcomment %}
