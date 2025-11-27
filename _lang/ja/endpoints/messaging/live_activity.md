@@ -1,5 +1,5 @@
 ---
-nav_title: 活発な活動
+nav_title: ライブアクティビティ
 config_only: true
 noindex: true
 ---
