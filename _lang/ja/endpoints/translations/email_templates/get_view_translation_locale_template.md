@@ -1,5 +1,5 @@
 ---
-nav_title: "取得:メールテンプレートの特定の翻訳とロケールを表示する"
+nav_title: "取得:メールテンプレートの特定の翻訳とロケールを表示"
 article_title: "取得:メールテンプレートの特定の翻訳とロケールを表示"
 search_tag: Endpoint
 page_order: 2
@@ -12,7 +12,7 @@ description: "この記事では、「メールテンプレートの特定の翻
 {% api %}
 # 「メールテンプレートの特定の翻訳とロケールを表示」エンドポイント
 {% apimethod get %}
-/templates/translations/email?locale_id={locale_uuid}&template_id={template_id}
+/テンプレート/翻訳/メール
 {% endapimethod %}
 
 > [メールテンプレートの]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates)特定の翻訳とローカライゼーションを表示するには、このエンドポイントを使用する。
@@ -34,15 +34,17 @@ description: "この記事では、「メールテンプレートの特定の翻
 | パラメータ     | required | データ型 | 説明                     |
 |---------------|----------|-----------|---------------------------------|
 | `template_id` | 必須 | string    | メールテンプレートの ID。 |
-| `locale_id`   | 必須 | 文字列    | ロケールのID。           |
+| `locale_id`   | オプション | string    | ロケールのID（UUID）。           |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-すべての翻訳IDは、ユニバーサルユニーク識別子（UUID）とみなされ、**多言語サポート**設定またはリクエストレスポンスで見つけることができる。
+{% alert note %}
+すべての翻訳IDは、ユニバーサルユニーク識別子（UUID）とみなされ、GETエンドポイントのレスポンスで見つけることができる。
+{% endalert %}
 
-## リクエスト例
+## 例のリクエスト
 
 ```
-curl --location --request GET 'https://rest.iad-03.braze.com/templates/translations/email?locale_id={locale_uuid}&template_id={template_id}/' \
+curl --location --request GET 'https://rest.iad-03.braze.com/templates/translations/email?locale_id={locale_uuid}&template_id={template_id}' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
@@ -56,8 +58,6 @@ curl --location --request GET 'https://rest.iad-03.braze.com/templates/translati
 ステータスコード `200` は、次の応答ヘッダーと本文を返す可能性があります。
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "translations": [
         {
@@ -91,17 +91,5 @@ Authorization: Bearer YOUR-REST-API-KEY
     ]
 }
 ```
-
-## トラブルシューティング
-
-以下の表は、返される可能性のあるエラーと、それに関連するトラブルシューティングの手順を示したものである。
-
-| エラーメッセージ                           | トラブルシューティング                                                                    |
-|-----------------------------------------|------------------------------------------------------------------------------------|
-| `INVALID_LOCALE_ID`                     | メッセージ翻訳にロケール ID が存在することを確認します。                         |
-| `LOCALE_NOT_FOUND`                      | 多言語設定にロケールが存在することを確認します。                         |
-| `MULTI_LANGUAGE_NOT_ENABLED`            | ワークスペースの多言語設定がオンになっていない。                       |
-| `MULTI_LANGUAGE_NOT_ENABLED_ON_MESSAGE` | 翻訳できるのは、メールテンプレートとメール、プッシュ、アプリ内メッセージキャンペーン、またはメール付きキャンバスメッセージのみです。             |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}
