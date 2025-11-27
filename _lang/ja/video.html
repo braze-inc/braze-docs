@@ -1,0 +1,5 @@
+{%- if include.source == "loom" -%} とする。{%- assign embed_base_url = "https://www.loom.com/embed" -%}.{%- assign embed_params = "" -%}.include.source == "wistia" -%} {%- elsif include.source == "wistia" -%}.{%- assign embed_base_url = "https://fast.wistia.net/embed/iframe" -%} -%} {%- assign embed_params = "" -%}{%- assign embed_params = "?utm_source=docs" -%} {%- else -%} {%- elif include.source == "wistia" -%}{%- else -%} とする。{%- assign embed_base_url = "https://www.youtube.com/embed" -%} {%- assign embed_params = "?{%- assign embed_params = "" -%} {%- endif -%} {%- assign embed_params = "" -%}{%- endif -%}{もしinclude.type == "static" %}なら。
+<div class="fixed_video">
+<iframe src="{{ embed_base_url }}/{{ include.id }}{{ embed_params }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="media_embed {{ include.align }}"></iframe>
+</div>
+{%- else -%}} {% endif %} <iframe width="560" height="315" src="{{ embed_base_url }}/{{ include.id }}{{ embed_params }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="media_embed {{ include.align }}"></iframe> {endif %}
