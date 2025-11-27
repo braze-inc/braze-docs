@@ -1,5 +1,5 @@
 ---
-nav_title: "取得:利用可能なコンテンツブロックをリストアップする"
+nav_title: "取得:利用可能なコンテンツブロックのリスト"
 article_title: "取得:利用可能なコンテンツブロックのリスト"
 search_tag: Endpoint
 page_order: 4
@@ -44,8 +44,6 @@ curl --location --request GET 'https://rest.iad-01.braze.com/content_blocks/list
 ## 応答
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
 {
   "count": "integer",
   "content_blocks": [
