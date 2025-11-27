@@ -12,7 +12,7 @@ description: "この記事では、「キャンバスの翻訳を表示する」
 {% api %}
 # キャンバスの翻訳を表示する
 {% apimethod get %}
-/canvas/translations/?locale_id={locale_id}
+/canvas/translations
 {% endapimethod %}
 
 > このエンドポイントを使用して、キャンバスの翻訳されたメッセージをプレビューします。
@@ -35,16 +35,19 @@ description: "この記事では、「キャンバスの翻訳を表示する」
 |------------------------|----------|-----------|------------------------------------|
 | `workflow_id`          | 必須 | string    | キャンバスの ID。              |
 | `step_id`              | 必須 | 文字列    | キャンバスのステップのID。        |
-| `message_variation_id` | 必須 | 文字列    | メッセージバリエーションのID。 |
-| `locale_id`            | 必須 | 文字列    | ロケールのID。              |
+|`message_variation_id`| 必須 | string | メッセージバリエーションの ID。 |
+| `locale_id`            | オプション | string    | ロケールのID（UUID）。       |
+| `post_launch_draft_version`| オプション | ブール値 | `true` 、最新のライブ公開バージョンではなく、最新の下書きバージョンを返す。デフォルトは`false` 、最新のライブバージョンを返す。
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-すべての翻訳IDは、ユニバーサルユニーク識別子（UUID）とみなされ、**多言語サポート**設定またはリクエストレスポンスで見つけることができる。
+{% alert note %}
+すべての翻訳IDは、ユニバーサルユニーク識別子（UUID）とみなされ、GETエンドポイントのレスポンスで見つけることができる。
+{% endalert %}
 
-## リクエスト例
+## 例のリクエスト
 
 ```
-curl --location --request GET 'https://rest.iad-03.braze.com/canvas/translations/?locale_id={locale_uuid}' \
+curl --location --request GET 'https://rest.iad-03.braze.com/canvas/translations/?workflow_id={workflow_id}&step_id={step_id}&message_variation_id={message_variation_id}&locale_id={locale_uuid}&post_launch_draft_version=true' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
@@ -58,8 +61,6 @@ curl --location --request GET 'https://rest.iad-03.braze.com/canvas/translations
 ステータスコード `200` は、次の応答ヘッダーと本文を返す可能性があります。
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "translations": [
         {
@@ -93,21 +94,5 @@ Authorization: Bearer YOUR-REST-API-KEY
 	]
 }
 ```
-
-## トラブルシューティング
-
-以下の表は、返される可能性のあるエラーと、それに関連するトラブルシューティングの手順を示したものである。
-
-| エラーメッセージ                           | トラブルシューティング                                                                    |
-|-----------------------------------------|------------------------------------------------------------------------------------|
-| `INVALID_CAMPAIGN_ID`                   | キャンペーン ID が翻訳するキャンペーンと一致していることを確認します。                   |
-| `INVALID_LOCALE_ID`                     | メッセージ翻訳にロケール ID が存在することを確認します。                         |
-| `INVALID_MESSAGE_VARIATION_ID`          | メッセージIDが正しいことを確認する。                                                |
-| `MESSAGE_NOT_FOUND`                     | メッセージが翻訳されていることを確認します。                                           |
-| `LOCALE_NOT_FOUND`                      | 多言語設定にロケールが存在することを確認します。                         |
-| `MULTI_LANGUAGE_NOT_ENABLED`            | ワークスペースの多言語設定がオンになっていない。                       |
-| `MULTI_LANGUAGE_NOT_ENABLED_ON_MESSAGE` | メール、プッシュ、アプリ内メッセージキャンペーン、またはメールを含むキャンバスメッセージのみを翻訳できます。             |
-| `UNSUPPORTED_CHANNEL`                   | メール、プッシュ、またはアプリ内メッセージキャンペーンまたはキャンバスメッセージのみを翻訳できます。 |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}
