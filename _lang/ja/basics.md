@@ -51,13 +51,13 @@ SDK 統合には、REST エンドポイントではなく [SDKエンドポイン
 ### ユーザー ID
 
 - **External user ID**:`external_id` は、データの送信対象となる一意のユーザー識別子として機能します。この識別子は、同じユーザーに複数のプロファイルが作成されるのを避けるため、Braze SDK で設定したものと同じでなければなりません。
-- **BrazeユーザーID**：`braze_id` は、Brazeが設定する固有のユーザー識別子の役割を果たします。この識別子は、REST APIを通じてユーザーを削除する際に、次のように使用することができる。 external_ids.
+- **BrazeユーザーID**：`braze_id` Brazeが設定する固有のユーザー識別子となる。この識別子を使用して、REST APIを通じてユーザーを削除することができる。 external_ids.
 
 詳細については、[iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/)、[Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/)、[Webの]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/)各プラットフォームに応じた以下の記事を参照してください。
 
 ## REST APIキーについて
 
-REST Application Programming Interface キー （REST APIキー） は、API 呼び出しを認証し、呼び出し元のアプリケーションまたはユーザーを識別するために API に渡される一意のコードです。APIアクセスは、御社のREST APIエンドポイントへのHTTPSウェブリクエストを使って行われます。Brazeでは、REST APIキーをApp Identifierキーと組み合わせて使用し、データの追跡、アクセス、送信、エクスポート、分析を行い、お客様とBrazeの両エンドですべてがスムーズに進むようサポートする。
+REST API キー（REST API key）とは、API 呼び出しを認証し、呼び出し元のアプリケーションまたはユーザーを識別子として識別するために API に渡す一意のコードである。自社のREST APIエンドポイントへのHTTPS Webリクエストを使ってAPIにアクセスする。Brazeでは、REST APIキーをApp Identifierキーと組み合わせて使用し、データの追跡、アクセス、送信、エクスポート、分析を行い、お客様とBrazeの両エンドですべてがスムーズに進むようサポートする。
 
 ワークスペースとAPIキーはBrazeでは密接な関係にあります。ワークスペースは、複数のプラットフォームにまたがる同じアプリケーションのバージョンを収容するように設計されている。また、多くの顧客はワークスペースを使用して、無料版とプレミアム版のアプリケーションを同じプラットフォーム上に格納しています。お気づきかもしれませんが、これらのワークスペースも REST API を利用しており、独自の REST API キーが存在します。これらのキーは、API上の特定のエンドポイントへのアクセスを含むように、個別にスコープすることができます。API の各呼び出しには、エンドポイントヒットへのアクセス権を持つキーを含める必要があります。
 
@@ -309,7 +309,7 @@ APIキーのパーミッションは、特定のAPIコールへのアクセス�
 
 ### REST API キーを管理する
 
-**設定**＞**APIと識別子**＞**APIキー**タブから、既存のREST APIキーの詳細を見たり、削除したりできる。REST API キーは、作成後に編集できないことに注意してください。
+**設定**＞**APIと識別子**＞**APIキー**タブから、既存のREST APIキーの詳細を見たり、削除したりできる。REST APIキーは、作成後に編集することはできない。
 
 **APIキー]**タブには、各キーについて以下の情報が含まれている：
 
@@ -326,7 +326,7 @@ API キーの詳細を表示するには、キーにカーソルを合わせて 
 
 ![Braze ダッシュボードの API キー権限のリスト。]({% image_buster /assets/img_archive/view-api-key.png %})
 
-[ユーザーを削除]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/adding_users_to_your_dashboard/)する場合、そのユーザーが作成した関連 API キーは削除されません。キーを削除するには、キーにカーソルを合わせ、[<i class="fa-solid fa-trash-can" alt="Delete"></i> **削除**] を選択します。
+[ユーザーを削除しても]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/)、そのユーザーが作成したAPIキーは削除されない。キーを削除するには、キーにカーソルを合わせ、[<i class="fa-solid fa-trash-can" alt="Delete"></i> **削除**] を選択します。
 
 ![ゴミ箱のアイコンが強調表示され、「削除」を示す「最終閲覧日」という API キー。]({% image_buster /assets/img_archive/api-key-options.png %}){: style="max-width:30%;"}
 
@@ -342,7 +342,7 @@ REST API キーによって潜在的に機密性の高い REST API エンドポ�
 REST APIキーは、潜在的にセンシティブなREST APIエンドポイントへのアクセスを可能にするものであることを考慮し、それらが安全に保管され、使用されることを確認してください。例えば、このキーを使ってウェブサイトからAJAXコールを行ったり、その他の一般的な方法で公開してはいけません。
 {% endalert %}
 
-キーが誤って公開された場合は、開発者コンソールから削除できます。このプロセスに関するヘルプについては、[[サポートチケット]({{site.baseurl}}/braze_support/)] を開きます。
+誤ってキーを公開してしまった場合は、開発者コンソールから削除することができる。このプロセスに関するヘルプについては、[[サポートチケット]({{site.baseurl}}/braze_support/)] を開きます。
 
 ### API IP の許可リスト
 
@@ -365,6 +365,6 @@ Ruby を使用してBrazeを実装している場合は、[Ruby クライアン�
 Ruby クライアントライブラリは、[ユーザーエンドポイント]({{site.baseurl}}/api/endpoints/user_data)をサポートしています。
 
 {% alert important %}
-このクライアントライブラリは現在ベータ版です。このライブラリをより良いものにするために協力してくれませんか?ご意見、ご感想は[smb-product@braze.com](mailto:smb-product@braze.com) まで。
+このクライアント・ライブラリーはベータ版である。このライブラリをより良いものにするために協力してくれませんか?ご意見、ご感想は[smb-product@braze.com](mailto:smb-product@braze.com) まで。
 {% endalert %}
 
