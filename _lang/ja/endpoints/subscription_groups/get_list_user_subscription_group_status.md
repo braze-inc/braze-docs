@@ -1,5 +1,5 @@
 ---
-nav_title: "取得:ユーザーのサブスクリプショングループステータスを一覧表示する。"
+nav_title: "取得:ユーザのサブスクリプショングループステータスの一覧表示"
 article_title: "取得:ユーザーのサブスクリプション・グループ・ステータスをリストする"
 search_tag: Endpoint
 page_order: 4
@@ -54,7 +54,7 @@ description: "本稿では、List ユーザー のサブスクリプショング
 - SMS およびWhatsApp サブスクリプショングループ s の場合、`external_id` または`phone` のいずれかが必要です。 両方が送信されると、`external_id` のみがクエリに使用され、電話番号はそのユーザーに適用されます。
 - メール サブスクリプショングループs の場合、`external_id` または`email` のいずれかが必要です。 両方が送信されると、`external_id` のみがクエリに使用され、メールアドレスはそのユーザーに適用されます。
 
-## リクエスト例 
+## リクエスト例
 
 {% tabs %}
 {% tab Multiple Users %}
@@ -87,8 +87,6 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/sta
 すべての成功したレスポンスは、サブスクリプショングループのステータスとユーザー履歴に応じて、`Subscribed`、`Unsubscribed`、または`Unknown` を返します。
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "status": {
     "1": "Unsubscribed",
