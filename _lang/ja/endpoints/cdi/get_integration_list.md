@@ -97,6 +97,6 @@ Link: </cdi/integrations?cursor=c2tpcDow>; rel="prev",</cdi/integrations?cursor=
 | `400 Invalid cursor` | `cursor` が有効であることを確認します。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-その他のステータスコードと関連するエラーメッセージについては、[致命的エラー& レスポンスを]({{site.baseurl}}/api/errors/#fatal-errors)参照のこと。
+その他のステータスコードと関連するエラーメッセージについては、[致命的なエラーとレスポンス]({{site.baseurl}}/api/errors/#fatal-errors)を参照してください。
 
 {% endapi %}
