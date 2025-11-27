@@ -54,8 +54,6 @@ curl --location --request GET 'https://rest.iad-03.braze.com/custom_attributes?c
 ## 応答
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "attributes" : [
