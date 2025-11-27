@@ -1,5 +1,5 @@
 ---
-nav_title: "取得:サブスクリプションの状態をEメールアドレスまたは電話番号でリストする"
+nav_title: "取得:メールアドレスまたは電話番号でサブスクリプションの状態をリストする"
 article_title: "取得:メールアドレスまたは電話番号でサブスクリプションの状態をリストする"
 search_tag: Endpoint
 page_order: 2
@@ -36,8 +36,6 @@ curl --location --request GET 'https://rest.iad-01.braze.com/users/subscriptions
 エントリは降順で表示されます。
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "emails": [
     {
