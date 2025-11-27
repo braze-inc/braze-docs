@@ -1,5 +1,5 @@
 ---
-nav_title: "SDK認証"
+nav_title: "SDK 認証"
 article_title: SDK 認証エンドポイント
 search_tag: Endpoint
 page_order: 5.5
