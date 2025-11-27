@@ -1,5 +1,5 @@
 ---
-nav_title: "POST:ライブ活動を開始する"
+nav_title: "POST:ライブアクティビティを開始"
 article_title: "POST:ライブアクティビティを開始"
 search_tag: Endpoint
 page_order: 1
@@ -19,7 +19,7 @@ description: "この記事では、「ライブアクティビティを開始」
 
 ライブアクティビティを作成した後、任意のセグメントのアクティビティをリモートで開始するためにPOSTリクエストを送信できます。詳細については、Appleのライブアクティビティについては、[ActivityKitプッシュ通知でライブアクティビティを開始および更新する](https://developer.apple.com/documentation/activitykit/starting-and-updating-live-activities-with-activitykit-push-notifications)を参照してください。
 
-`content-available` が設定されていない場合、デフォルトのAppleプッシュ通知サービス（APN）の優先順位は10である。`content-available` が設定されている場合、この優先順位は5となる。詳しくは[Apple push objectを]({{site.baseurl}}/api/objects_filters/messaging/apple_object)参照のこと。 
+`content-available` が設定されていない場合、デフォルトのAppleプッシュ通知サービス（APN）の優先順位は10である。`content-available` が設定されている場合、この優先順位は5となる。詳しくは[Apple push objectを]({{site.baseurl}}/api/objects_filters/messaging/apple_object)参照のこと。
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#2300226e-f26a-4154-9bcc-5883f1f294cd {% endapiref %}
 
@@ -123,7 +123,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/live_acti
 
 ステータスコードの`4XX`クラスはクライアントエラーを示します。エラーに関する詳細は、[APIエラーと応答の記事]({{site.baseurl}}/api/errors/)を参照してください。
 
-ステータスコード `400` は、次の応答本文を返す可能性があります。 
+ステータスコード `400` は、次の応答本文を返す可能性があります。
 
 ```json
 {
