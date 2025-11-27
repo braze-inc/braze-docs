@@ -42,8 +42,6 @@ curl --location --request GET 'https://rest.iad-01.braze.com/events/list?page=3'
 ## 応答
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "events" : [
@@ -57,7 +55,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ### 致命的なエラーの応答コード {#fatal-export}
 
-リクエストが致命的なエラーに遭遇した場合に返されるステータスコードと関連するエラーメッセージについては、[致命的なエラー& レスポンスを]({{site.baseurl}}/api/errors/#fatal-errors)参照のこと。
+ステータスコードおよび関連するエラーメッセージについては、リクエストが致命的なエラーに遭遇した場合に返される[致命的なエラーと応答]({{site.baseurl}}/api/errors/#fatal-errors)を参照してください。
 
 {% alert tip %}
 CSV および API のエクスポートに関するヘルプについては、「[エクスポートのトラブルシューティング]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/)」を参照してください。
