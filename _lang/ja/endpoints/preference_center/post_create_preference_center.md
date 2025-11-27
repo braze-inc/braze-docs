@@ -52,7 +52,7 @@ Authorization: Bearer YOUR-REST-API-KEY
       }
     ]
   }
-} 
+}
 ```
 
 ## リクエストパラメーター
@@ -81,7 +81,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Liquid | 説明 |
 | --------- | ---------|
-|`{{subscribed_state.${email_global}}}`| ユーザーのグローバルメール購読状態を取得する（"opted_in", "購読済み"、または "配信停止 "など）。 |
+|`{{subscribed_state.${email_global}}}`| ユーザーのグローバルメールサブスクライブステートを取得します("opted_in", " subscribed" または" 配信停止 d" など)。 |
 |`{{subscribed_state.${<subscription_group_id>}}}`| ユーザーの指定されたサブスクリプショングループのサブスクリプション状態を取得します ("subscribed" や "unsubscribed" など)。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -89,7 +89,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Liquid | 説明 |
 | --------- | ---------|
-|`{% form_field_name :email_global_state %}`| 特定のフォーム入力要素が、ユーザーのグローバルメール購読状態に対応することを示します。グローバルメール購読状態の選択データでフォームが送信されたとき、ユーザーの選択状態は"opted_in", 「購読中」または「配信停止」になるべきである。チェックボックスの場合、ユーザーは"opted_in" 、もしくは「配信停止」となる。非表示入力の場合、"subscribed"state も有効になります。 |
+|`{% form_field_name :email_global_state %}`| 特定のフォーム入力要素が、ユーザーのグローバルメール購読状態に対応することを示します。ユーザーの選択ステートは、"opted_in", " subscribed" または" 配信停止 d" である必要があります。フォームがグローバルメールサブスクライブステートの選択データとともに送信される場合です。チェックボックスの場合、ユーザーは"opted_in" または" 配信停止 d" のいずれかになります。非表示入力の場合、"subscribed"state も有効になります。 |
 |`{% form_field_name :subscription_group <subscription_group_id> %}`| 指定したフォーム入力要素が指定したサブスクリプショングループに対応することを示します。ユーザーの選択状態は、特定のサブスクリプショングループの選択データとともにフォームが送信されるときに、"subscribed" または "unsubscribed" のいずれかでなければなりません。 |
 |`{{preference_center_submit_url}}`| フォーム送信用のURL を生成します。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
