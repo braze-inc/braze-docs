@@ -15,7 +15,7 @@ description: "この記事では、EメールBrazeエンドポイントによる
 scim/v2/Users?filter=userName%20eq%20 "user%40test.com"
 {% endapimethod %}
 
-> このエンドポイントを使用して、フィルタークエリーパラメーターにメールを指定して、既存のダッシュボードユーザーアカウントを検索します。 
+> このエンドポイントを使用して、フィルタークエリーパラメーターにメールを指定して、既存のダッシュボードユーザーアカウントを検索します。
 
 クエリーパラメーターがURLエンコードされている場合、次のようになることに注意：
 
@@ -79,11 +79,11 @@ curl --location --request GET \ 'https://rest.iad-01.braze.com/scim/v2/Users?fil
                         "team": [
                             {
                                 "teamId": "241adcd25789fabcded",
-                                "teamName": "Test Team",                  
+                                "teamName": "Test Team",
                                 "teamPermissions": ["admin"]
                             }
                         ]
-                    } 
+                    }
                 ]
             }
         }
