@@ -16,7 +16,7 @@ description: "この記事では、「プロダクト ID のエクスポート�
 
 > 製品IDのページ分割されたリストを返すには、このエンドポイントを使用する。
 
-{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#dff4ed40-81f5-451d-9d44-accc0e932285{% endapiref %}とする。
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#dff4ed40-81f5-451d-9d44-accc0e932285{% endapiref
 
 ## 前提条件
 
@@ -44,8 +44,6 @@ https://rest.iad-01.braze.com/purchases/product_list?page=1
 ## 応答
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "products": [
     "product_name" (string), the name of the product
