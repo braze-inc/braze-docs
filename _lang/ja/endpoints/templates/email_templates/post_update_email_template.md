@@ -16,7 +16,7 @@ description: "この記事では、「メールテンプレートの更新」Bra
 
 > このエンドポイントを使用して、BrazeダッシュボードのEメールテンプレートを更新する。
 
-メールテンプレートの`email_template_id` 、**Templates& Media**ページからアクセスできる。[「メールテンプレートを作成」エンドポイント]({{site.baseurl}}/api/endpoints/templates/email_templates/post_create_email_template/)も `email_template_id` 参照を返します。
+メールテンプレートの`email_template_id` 、「**テンプレート＆メディア**」ページからアクセスできる。[「メールテンプレートを作成」エンドポイント]({{site.baseurl}}/api/endpoints/templates/email_templates/post_create_email_template/)も `email_template_id` 参照を返します。
 
 `email_template_id` 以外のフィールドはすべて任意指定ですが、更新するフィールドを少なくとも1つ指定しなければなりません。
 
