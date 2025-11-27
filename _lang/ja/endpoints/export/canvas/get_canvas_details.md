@@ -50,8 +50,6 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/details?c
 {% endalert %}
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "created_at": (string) the date created as ISO 8601 date,
   "updated_at": (string) the date updated as ISO 8601 date,
