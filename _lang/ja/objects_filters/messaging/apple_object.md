@@ -93,13 +93,13 @@ AppleプッシュオブジェクトにiOSプッシュアクションボタンを
 
 | カテゴリ識別子   | ボタンテキスト | ボタン アクション 識別子 | 許可されたアクション         |
 |-----------------------|-------------|--------------------------|-------------------------|
-| `ab_cat_accept_decline` | 受け入れる      | `ab_pb_accept`             | OPEN_APP, URI または DEEP_LINK |
+| `ab_cat_accept_decline` | 受け入れる      | `ab_pb_accept`             | OPEN_APP, URI、または DEEP_LINK |
 | `ab_cat_accept_decline` | 辞退する     | `ab_pb_decline`            | 閉じる                   |
-| `ab_cat_yes_no`         | はい         | `ab_pb_yes`                | OPEN_APP, URI または DEEP_LINK |
+| `ab_cat_yes_no`         | はい         | `ab_pb_yes`                | OPEN_APP, URI、または DEEP_LINK |
 | `ab_cat_yes_no`         | いいえ          | `ab_pb_no`                 | 閉じる                   |
-| `ab_cat_confirm_cancel` | 確認     | `ab_pb_confirm`            | OPEN_APP, URI または DEEP_LINK |
+| `ab_cat_confirm_cancel` | 確認     | `ab_pb_confirm`            | OPEN_APP, URI、または DEEP_LINK |
 | `ab_cat_confirm_cancel` | キャンセル      | `ab_pb_cancel`             | 閉じる                   |
-| `ab_cat_more`           | もっと        | `ab_pb_more`               | OPEN_APP, URI または DEEP_LINK |
+| `ab_cat_more`           | もっと        | `ab_pb_more`               | OPEN_APP, URI、または DEEP_LINK |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ```json
