@@ -1,5 +1,5 @@
 ---
-nav_title: 目次ブロックs テンプレートs
+nav_title: コンテンツブロックテンプレート
 config_only: true
 noindex: true
 ---
