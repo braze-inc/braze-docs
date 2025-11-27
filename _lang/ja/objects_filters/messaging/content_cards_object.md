@@ -1,5 +1,5 @@
 ---
-nav_title: "コンテンツカードオブジェクト"
+nav_title: "コンテンツ・カード・オブジェクト"
 article_title: コンテンツ・カード メッセージング・オブジェクト
 page_order: 4
 page_type: reference
