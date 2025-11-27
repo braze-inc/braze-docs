@@ -1,5 +1,5 @@
 ---
-nav_title: オブジェクト&amp;アンプ; フィルターs
+nav_title: オブジェクトとフィルター
 article_title: オブジェクトとフィルター
 page_order: 1.5
 description: "このランディングページには、Braze APIオブジェクトとBraze APIコールで使用されるフィルターが一覧表示されます。"
@@ -13,7 +13,7 @@ description: "このランディングページには、Braze APIオブジェク
 ## オブジェクトとフィルター
 
 - [キャンバスエントリのプロパティオブジェクト]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object)
-- [接続オーディエンス フィルター&]({{site.baseurl}}/api/objects_filters/connected_audience/)
+- [接続オーディエンスフィルターとオブジェクト]({{site.baseurl}}/api/objects_filters/connected_audience/)
 - [イベント・オブジェクト]({{site.baseurl}}/api/objects_filters/event_object/)
 - [購入対象]({{site.baseurl}}/api/objects_filters/purchase_object/)
 - [受信者オブジェクト]({{site.baseurl}}/api/objects_filters/recipient_object/)
