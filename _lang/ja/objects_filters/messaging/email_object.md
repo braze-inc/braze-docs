@@ -24,14 +24,14 @@ description: "この参考記事では、Braze メールオブジェクトのさ
   "body": (required unless email_template_id is given, valid HTML),
   "plaintext_body": (optional, valid plaintext, defaults to autogenerating plaintext from "body" when this is not set),
   "preheader": (optional*, string) recommended length 50-100 characters,
-  "email_template_id": (optional, string) if provided, we will use the subject/body/should_inline_css values from the given email template UNLESS they are specified here, in which case we will override the provided template,
+  "email_template_id": (optional, string) if provided, Braze uses the subject/body/should_inline_css values from the given email template UNLESS they are specified here, in which case Braze overrides the provided template,
   "message_variation_id": (optional, string) used when providing a campaign_id to specify which message variation this message should be tracked under,
-  "extras": (optional, valid Key-Value Hash) extra hash - for SendGrid users, this will be passed to SendGrid as Unique Arguments,
+  "extras": (optional, valid Key-Value Hash) extra hash - for SendGrid users, this is passed to SendGrid as Unique Arguments,
   "headers": (optional, valid Key-Value Hash) hash of custom extensions headers (available for SparkPost, SendGrid, or Amazon SES),
   "should_inline_css": (optional, boolean) whether to inline CSS on the body. If not provided, falls back to the default CSS inlining value for the workspace,
   "attachments": (optional, array) array of JSON objects that define the files you need attached, defined by "file_name" and "url",
     "file_name": (required, string) the name of the file you want to attach to your email, excluding the extension (for example, ".pdf"). Attach files up to 2 MB. This is required if you use "attachments",
-    "url": (required, string) the corresponding URL of the file you want to attach to your email. The file name's extension will be detected automatically from the URL defined, which should return the appropriate "Content-Type" as a response header. This is required if you use "attachments",
+    "url": (required, string) the corresponding URL of the file you want to attach to your email. The file name's extension is detected automatically from the URL defined, which should return the appropriate "Content-Type" as a response header. This is required if you use "attachments",
 }
 ```
 
@@ -47,7 +47,7 @@ Braze では、添付ファイルの `url` に Google Drive のリンクを使�
 
 `email_template_id` は、HTML エディターで作成されたメールテンプレートの下部から取得できます。以下は、このIDがどのように見えるかの例である：
 
-![HTML メール テンプレートのAPI ID セクション。]({% image_buster /assets/img_archive/email_template_id.png %}){: style="max-width:70%;"} 
+![HTMLメールテンプレートのAPI識別子セクション]({% image_buster /assets/img_archive/email_template_id.png %})({: style="max-width:70%;"})
 
 ## 添付ファイル付き電子メールオブジェクトの例
 
