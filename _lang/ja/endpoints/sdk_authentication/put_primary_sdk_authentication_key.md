@@ -1,5 +1,5 @@
 ---
-nav_title: "PUT:プライマリSDK認証キーを設定する。"
+nav_title: "PUT:プライマリ SDK 認証キーを設定"
 article_title: "PUT:プライマリ SDK 認証キーを設定"
 search_tag: Endpoint
 page_order: 2
