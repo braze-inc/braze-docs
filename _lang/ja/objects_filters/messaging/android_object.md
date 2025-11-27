@@ -1,5 +1,5 @@
 ---
-nav_title: "Androidオブジェクト"
+nav_title: "Android のオブジェクト"
 article_title: Android メッセージングオブジェクト
 page_order: 0
 page_type: reference
