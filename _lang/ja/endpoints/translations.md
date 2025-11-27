@@ -16,28 +16,28 @@ guide_featured_list:
   - name: "取得:キャンペーンの翻訳を表示"
     link: /docs/api/endpoints/translations/campaigns/get_translation_campaign/
     image: /assets/img/braze_icons/message-plus-square.svg
-  - name: "取得:キャンペーンのすべての翻訳を表示"
-    link: /docs/api/endpoints/translations/campaigns/get_bulk_translations_campaigns/
-    image: /assets/img/braze_icons/message-plus-square.svg
   - name: "PUT:キャンペーン内の翻訳を更新"
     link: /docs/api/endpoints/translations/campaigns/put_update_translation_campaign/
     image: /assets/img/braze_icons/target-04.svg
+  - name: "取得:キャンペーンデフォルトのソース翻訳を表示する"
+    link: /docs/api/endpoints/translations/campaigns/get_source_campaign/
+    image: /assets/img/braze_icons/message-plus-square.svg
 
 guide_menu_title: "Canvas endpoints"
 guide_menu_list:
   - name: "取得:キャンバスの翻訳を表示"
     link: /docs/api/endpoints/translations/canvas/get_translation_canvas/
     image: /assets/img/braze_icons/message-plus-square.svg
-  - name: "取得:キャンバスのすべての翻訳を表示"
-    link: /docs/api/endpoints/translations/canvas/get_bulk_translations_canvases/
-    image: /assets/img/braze_icons/message-plus-square.svg
   - name: "PUT:キャンバス内の翻訳を更新"
     link: /docs/api/endpoints/translations/canvas/put_update_translation_canvas/
     image: /assets/img/braze_icons/target-04.svg
-  
+  - name: "取得:キャンバスのデフォルトソース翻訳を表示する"
+    link: /docs/api/endpoints/translations/canvas/get_source_canvas/
+    image: /assets/img/braze_icons/message-plus-square.svg
+
 guide_menu_title2: "Email template endpoints"
 guide_menu_list2:
-  - name: "取得:ソース翻訳を表示"
+  - name: "取得:メールテンプレートのデフォルトソースの翻訳を表示する"
     link: /docs/api/endpoints/translations/email_templates/get_view_source_template/
     image: /assets/img/braze_icons/message-plus-square.svg
   - name: "取得:特定の翻訳とロケールを表示"
