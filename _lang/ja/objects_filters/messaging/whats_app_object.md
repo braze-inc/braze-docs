@@ -254,7 +254,7 @@ description: "この参考記事では、Braze WhatsApp オブジェクトのさ
 
 #### flow_response_message
 
-`flow_response_message` 型では、フローベースのメッセージをWhatsAppで送信できます。このメッセージタイプには、受信者が完了できる対話式フローが含まれています。
+`flow_response_message` 、WhatsAppでフローベースのメッセージを送信できる。このメッセージ・タイプには、受信者が完了できるインタラクティブなフローが含まれている。
 
 ```json
 {
@@ -268,7 +268,7 @@ description: "この参考記事では、Braze WhatsApp オブジェクトのさ
 }
 ```
 
-##### フローボタンオブジェクト
+##### フロー・ボタン・オブジェクト
 
 ```json
 {
@@ -279,9 +279,9 @@ description: "この参考記事では、Braze WhatsApp オブジェクトのさ
 
 ##### 制約
 
-- **flow_button**:caption と`flow_id` の両方を含める必要があります。
-- **キャプション**:最大20 文字。
-- **flow_id**:発行済みの有効なフローID である必要があります。
+- **flow_button**:キャプションと`flow_id` 。
+- キャプション最大20文字。
+- **flow_id**:有効な公開フローIDでなければならない。
 
 ##### 例
 
