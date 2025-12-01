@@ -37,7 +37,7 @@ You can also pass your AppsFlyer audiences (cohorts) directly to Braze with the 
 {% tab Android %}
 If you have an Android app, you must pass a unique Braze device ID to AppsFlyer. 
 
-Ensure the following lines of code are inserted at the correct place#8212after the Braze SDK is launched and before the initialization code for the AppsFlyer SDK. See the AppsFlyer [Android SDK integration guide](https://dev.appsflyer.com/hc/docs/integrate-android-sdk#initializing-the-android-sdk) for more information.
+Ensure the following lines of code are inserted at the correct place—after the Braze SDK is launched and before the initialization code for the AppsFlyer SDK. See the AppsFlyer [Android SDK integration guide](https://dev.appsflyer.com/hc/docs/integrate-android-sdk#initializing-the-android-sdk) for more information.
 
 ```kotlin
 val customData = HashMap<String, Any>()
