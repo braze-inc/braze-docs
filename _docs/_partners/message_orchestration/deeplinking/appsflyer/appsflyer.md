@@ -188,7 +188,7 @@ This validates that the click-tracking domain points to the endpoint you entered
 
 ![Appsflyer UI highlighting where customers should add their click tracking domain and associated details.]({% image_buster /assets/img/attribution/appsflyer/5.png %})
 
-By “Braze Endpoint”, Appsflyer is asking for the details provided by Braze in Step 1 of this guide, specifically the new CTD. 
+By “Braze Endpoint”, AppsFlyer is asking for the details provided by Braze in Step 1 of this guide, specifically the new CTD. 
 
 Then click **Validate connection**, which validates that the click-tracking domain points to the endpoint you entered.
 When done, click **Next**.
