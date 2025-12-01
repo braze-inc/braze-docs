@@ -152,7 +152,7 @@ Appsflyer provides a [service](https://support.appsflyer.com/hc/en-us/articles/2
 
 Following the initial elements of [Braze’s Email set-up guidance]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ssl/#acquiring-an-ssl-certificate), create an email sending domain and a click tracking domain. For support, you can raise a ticket via the Braze Dashboard to initiate setup for the new CTD with the Braze Email team.
 
-![Braze UI showing the “Get Help” button, found under the “Support” button on the rop right corner]({% image_buster /assets/img/attribution/appsflyer/1.png %})
+![Braze UI showing the “Get Help” button, found under the “Support” button on the top right corner]({% image_buster /assets/img/attribution/appsflyer/1.png %})
 
 Creating a new CTD is mandatory, even if you already use an existing one. This ensures that there is no impact on the traffic of current live email campaigns. 
 
