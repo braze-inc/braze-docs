@@ -201,7 +201,7 @@ Your administrator must reroute your email campaign traffic from the ESP servers
 
 As a result, every time a link is clicked, the click is redirected to AppsFlyer, which in turn redirects it to the ESP endpoint.
 
-![Diagram illustrating how click data passed from your domain, to appsflyer, to your esp endpoint]({% image_buster /assets/img/attribution/appsflyer/6.png %})
+![Diagram illustrating how click data passed from your domain, to AppsFlyer, to your esp endpoint]({% image_buster /assets/img/attribution/appsflyer/6.png %})
 
 #### b. After copying and sending the instructions, click Done.
 Your Braze integration has been created.
