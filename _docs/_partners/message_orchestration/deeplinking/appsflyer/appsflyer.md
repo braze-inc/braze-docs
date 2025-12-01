@@ -146,7 +146,7 @@ Deep links&#8212;links that direct users toward a specific page or place within 
 
 While widely used, issues can arise when using emailed deep links with click tracking#8212another important feature used in collecting user data. These issues are due to Email Service Providers (ESPs) wrapping deep links in a click-recording domain, breaking the original link. As such, supporting deep links requires additional setup.
 
-Appsflyer provides a [service](https://support.appsflyer.com/hc/en-us/articles/26967438815377-Set-up-your-ESP-integration-with-AppsFlyer) that avoids these issues, enabling AppsFlyer to serve as an intermediary between the ESP server and your domain name. Its role as a proxy enables the provision of association files (AASA/asset links), which facilitates deep linking. 
+Appsflyer provides a [service](https://support.appsflyer.com/hc/en-us/articles/26967438815377-Set-up-your-ESP-integration-with-AppsFlyer) that avoids these issues, enabling AppsFlyer to serve as an intermediary between the ESP server and your domain name.  Its role as a proxy enables the provision of association files (AASA/asset links), which facilitates deep linking. 
 
 ## Step 1 - Create a Click Tracking Domain 
 
