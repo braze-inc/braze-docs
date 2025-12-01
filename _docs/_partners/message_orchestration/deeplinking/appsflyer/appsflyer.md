@@ -160,7 +160,7 @@ Creating a new CTD is mandatory, even if you already use an existing one. This e
 AppsFlyers creates the SSL certificate. At this stage, email links are likely not secured, meaning the URL prefix is HTTP instead of HTTPS. This is resolved in later steps.	
 {%endalert%}
 
-## Step 2 - Create a OneLink Template in Appsflyer
+## Step 2 - Create a OneLink Template in AppsFlyer
 Create a [OneLink template](https://support.appsflyer.com/hc/en-us/articles/207032246-Create-a-OneLink-template#procedures) and configure Universal Links/App Links under "When app is installed". This template is used later to create OneLink links for your email campaigns.
 
 {% alert note%} If you already have an existing OneLink template configured that enables Universal Links/App Links, you can use it.
