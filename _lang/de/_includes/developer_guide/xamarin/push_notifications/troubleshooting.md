@@ -2,7 +2,7 @@
 
 ### Eine Push-Benachrichtigung wird nicht angezeigt, nachdem die App über den Task Switcher geschlossen wurde
 
-Wenn Sie feststellen, dass Push-Benachrichtigungen nicht mehr erscheinen, nachdem Sie die App über den Task Switcher geschlossen haben, befindet sich Ihre App wahrscheinlich im Debug-Modus. Xamarin fügt im Debug-Modus ein Scaffolding  hinzu, das verhindert, dass Apps Push erhalten, nachdem der zugehörige Prozess beendet wurde. Wenn Sie die App im Release-Modus ausführen, sollten Sie die Push-Nachricht auch sehen, wenn die App über den Task Switcher geschlossen wurde.
+Wenn Sie feststellen, dass Push-Benachrichtigungen nicht mehr erscheinen, nachdem Sie die App über den Task Switcher geschlossen haben, befindet sich Ihre App wahrscheinlich im Debug-Modus. .NET MAUI fügt im Debug-Modus ein Scaffolding  hinzu, das verhindert, dass Apps Push erhalten, nachdem der zugehörige Prozess beendet wurde. Wenn Sie die App im Release-Modus ausführen, sollten Sie die Push-Nachricht auch sehen, wenn die App über den Task Switcher geschlossen wurde.
 
 ### Angepasste Benachrichtigungs-Factory ist nicht korrekt eingestellt
 
