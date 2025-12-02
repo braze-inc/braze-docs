@@ -1,12 +1,12 @@
 ## .NET MAUI 콘텐츠 카드 정보
 
-브레이즈 자마린 SDK에는 콘텐츠 카드를 시작할 수 있는 기본 카드 피드가 포함되어 있습니다. 기본 카드 피드는 Braze SDK에 포함되어 있으며 모든 분석 추적, 해제 및 사용자의 콘텐츠 카드 렌더링을 처리합니다.
+브레이즈 .NET MAUI SDK에는 콘텐츠 카드를 시작할 수 있는 기본 카드 피드가 포함되어 있습니다. 기본 카드 피드는 Braze SDK에 포함되어 있으며 모든 분석 추적, 해제 및 사용자의 콘텐츠 카드 렌더링을 처리합니다.
 
 {% multi_lang_include developer_guide/prerequisites/xamarin.md %}
 
 ## 카드 유형 및 속성
 
-브레이즈 자마린 SDK에는 기본 모델을 공유하는 세 가지 고유한 콘텐츠 카드 유형이 있습니다: [배너](#xamarin_banner), [캡션 이미지](#xamarin_captioned-image) 및 [클래식](#xamarin_classic). 각 유형은 기본 모델에서 공통 속성을 상속하며 다음과 같은 추가 속성이 있습니다.
+브레이즈 .NET MAUI SDK에는 기본 모델을 공유하는 세 가지 고유한 콘텐츠 카드 유형이 있습니다: [배너](#xamarin_banner), [캡션 이미지](#xamarin_captioned-image) 및 [클래식](#xamarin_classic). 각 유형은 기본 모델에서 공통 속성을 상속하며 다음과 같은 추가 속성이 있습니다.
 
 ### 기본 카드 모델
 
