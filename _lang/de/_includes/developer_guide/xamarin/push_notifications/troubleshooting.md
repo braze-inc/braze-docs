@@ -6,4 +6,4 @@ Wenn Sie feststellen, dass Push-Benachrichtigungen nicht mehr erscheinen, nachde
 
 ### Angepasste Benachrichtigungs-Factory ist nicht korrekt eingestellt
 
-Die angepasste Benachrichtigungs-Factory (und alle Delegaten) müssen [`Java.Lang.Object`](https://developer.xamarin.com/api/type/Android.Runtime.IJavaObject/) erweitern, damit sie über die Grenzen von C# und Java hinweg korrekt funktionieren. Weitere Informationen finden Sie unter [Xamarin](https://developer.xamarin.com/guides/android/advanced_topics/java_integration_overview/working_with_jni/#Implementing_Interfaces) zur Implementierung von Java-Schnittstellen.
+Die angepasste Benachrichtigungs-Factory (und alle Delegaten) müssen [`Java.Lang.Object`](https://developer.xamarin.com/api/type/Android.Runtime.IJavaObject/) erweitern, damit sie über die Grenzen von C# und Java hinweg korrekt funktionieren. Weitere Informationen finden Sie unter [.NET MAUI](https://developer.xamarin.com/guides/android/advanced_topics/java_integration_overview/working_with_jni/#Implementing_Interfaces) zur Implementierung von Java-Schnittstellen.

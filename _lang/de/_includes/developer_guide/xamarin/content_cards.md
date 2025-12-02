@@ -1,12 +1,12 @@
-## Über Xamarin Content-Cards
+## Über .NET MAUI Content-Cards
 
-Das Braze Xamarin SDK enthält einen Standard-Card-Feed, um Ihnen den Einstieg in Content-Cards zu erleichtern. Der im Braze SDK enthaltene Standard-Kartenfeed verarbeitet das gesamte Analytics-Tracking, Ausblendungen und die Darstellung der Content-Cards.
+Das Braze .NET MAUI SDK enthält einen Standard-Card-Feed, um Ihnen den Einstieg in Content-Cards zu erleichtern. Der im Braze SDK enthaltene Standard-Kartenfeed verarbeitet das gesamte Analytics-Tracking, Ausblendungen und die Darstellung der Content-Cards.
 
 {% multi_lang_include developer_guide/prerequisites/xamarin.md %}
 
 ## Kartentypen und Eigenschaften
 
-Das Braze Xamarin SDK verfügt über drei eindeutige Content-Cards-Kartentypen, die sich ein Basismodell teilen: [Banner](#xamarin_banner), [Bildunterschrift](#xamarin_captioned-image) und [Klassisch](#xamarin_classic). Jeder Typ erbt gemeinsame Eigenschaften von einem Basismodell und hat die folgenden zusätzlichen Eigenschaften.
+Das Braze .NET MAUI SDK verfügt über drei eindeutige Content-Cards-Kartentypen, die sich ein Basismodell teilen: [Banner](#xamarin_banner), [Bildunterschrift](#xamarin_captioned-image) und [Klassisch](#xamarin_classic). Jeder Typ erbt gemeinsame Eigenschaften von einem Basismodell und hat die folgenden zusätzlichen Eigenschaften.
 
 ### Basis-Kartenmodell
 

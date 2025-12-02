@@ -13,7 +13,7 @@ platform:
   - Roku
   - Unity
   - Unreal Engine
-  - Xamarin
+  - .NET MAUI
 ---
 
 # Registros de cambios del SDK de Braze
@@ -95,7 +95,7 @@ También puedes encontrar una copia del [registro de cambios del SDK Braze de Un
 
 {% sdktab xamarin %}
 {% alert tip %}
-También puedes encontrar una copia del [registro de cambios del SDK de Xamarin Braze en GitHub](https://github.com/braze-inc/braze-xamarin-sdk/blob/master/CHANGELOG.md).
+También puedes encontrar una copia del [registro de cambios del SDK de .NET MAUI Braze en GitHub](https://github.com/braze-inc/braze-xamarin-sdk/blob/master/CHANGELOG.md).
 {% endalert %}
 
 {% markdown_embed https://raw.githubusercontent.com/braze-inc/braze-xamarin-sdk/master/CHANGELOG.md %}

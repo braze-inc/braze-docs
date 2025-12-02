@@ -1,12 +1,12 @@
-## À propos des cartes de contenu Xamarin
+## À propos des cartes de contenu .NET MAUI
 
-Le SDK Xamarin de Braze inclut un flux de cartes par défaut pour vous permettre de démarrer avec les cartes de contenu. Le flux de cartes par défaut inclus avec le SDK Braze traitera tous les suivis d’analyse, les rejets et le rendu des cartes de contenu d’un utilisateur.
+Le SDK .NET MAUI de Braze inclut un flux de cartes par défaut pour vous permettre de démarrer avec les cartes de contenu. Le flux de cartes par défaut inclus avec le SDK Braze traitera tous les suivis d’analyse, les rejets et le rendu des cartes de contenu d’un utilisateur.
 
 {% multi_lang_include developer_guide/prerequisites/xamarin.md %}
 
 ## Types de cartes et propriétés
 
-Le SDK Xamarin de Braze dispose de trois types de cartes de contenu uniques qui partagent un modèle de base : [Bannière](#xamarin_banner), [Image légendée](#xamarin_captioned-image) et [Classique](#xamarin_classic). Chaque type hérite des propriétés communes d’un modèle de base et possède les propriétés supplémentaires suivantes.
+Le SDK .NET MAUI de Braze dispose de trois types de cartes de contenu uniques qui partagent un modèle de base : [Bannière](#xamarin_banner), [Image légendée](#xamarin_captioned-image) et [Classique](#xamarin_classic). Chaque type hérite des propriétés communes d’un modèle de base et possède les propriétés supplémentaires suivantes.
 
 ### Modèle de carte de base
 

@@ -14,7 +14,7 @@ platform:
   - Roku
   - Unity
   - Unreal Engine
-  - Xamarin
+  - .NET MAUI
 ---
 
 # Análise de dados

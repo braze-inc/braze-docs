@@ -13,7 +13,7 @@ hidden: true
 
 Braze SDK は、分析、セグメンテーション、エンゲージメントで使用される情報をレポートするための API と、プッシュ通知と通知の受信用にユーザーを登録する機能を提供します。
 
->  Windows Universal SDK は、Xamarin Windows アプリとも互換性があります。
+>  Windows Universal SDK は、.NET MAUI Windows アプリとも互換性があります。
 
 ## ステップ1:NuGet パッケージマネージャーを使用したSDKのインストール
 

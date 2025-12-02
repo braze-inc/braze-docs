@@ -1,6 +1,6 @@
-## Sobre os cartões de conteúdo do Xamarin
+## Sobre os cartões de conteúdo do .NET MAUI
 
-O SDK do Braze Xamarin inclui um feed de cartão padrão para que você comece a usar os cartões de conteúdo. O feed de cartão padrão incluído com o SDK da Braze lidará com toda a análise de dados, rastreamento, dispensas e renderização para os Cartões de Conteúdo de um usuário.
+O SDK do Braze .NET MAUI inclui um feed de cartão padrão para que você comece a usar os cartões de conteúdo. O feed de cartão padrão incluído com o SDK da Braze lidará com toda a análise de dados, rastreamento, dispensas e renderização para os Cartões de Conteúdo de um usuário.
 
 {% multi_lang_include developer_guide/prerequisites/xamarin.md %}
 
