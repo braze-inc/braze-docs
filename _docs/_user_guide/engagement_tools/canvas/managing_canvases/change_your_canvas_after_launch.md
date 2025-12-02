@@ -25,15 +25,13 @@ You can edit your Canvases after launch by:
 Control variant distribution may only be decreased after launch.
 {% endalert %}
 
-Keep in mind the following permissible post-launch Canvas edits, depending on which workflow your Canvas was created with. If your Canvas uses the original Canvas workflow, you'll need to clone to Canvas Flow first in order to perform post-launch edits.
-
 You can delete any of the following in your user journey:
 
 - [Canvas steps]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/)
 - Canvas variants 
 - Connections between Canvas steps
 
-If you want to edit or add more steps to your Canvas user journey, the following details will apply:
+If you want to edit or add more steps to your Canvas user journey, the following details apply:
 
 - Users who haven't entered the Canvas yet are eligible for any newly created steps. 
 - If your Canvas entry settings allow users to re-enter steps, users who have already passed newly created steps are eligible to re-enter.
@@ -46,6 +44,8 @@ Note that when you launch a Canvas initially, Braze enqueues the users for the M
 See the [Best practices](#best-practices) section for specific editing use cases. In general, it's best practice to avoid editing live Canvases as there may be unexpected behavior.
 
 {% details Expand for original Canvas editor details %}
+
+Keep in mind the following permissible post-launch Canvas edits, depending on which workflow your Canvas was created with. If your Canvas uses the original Canvas workflow, you'll need to clone it to Canvas Flow first to perform post-launch edits.
 
 You can't edit or delete existing connections, and you can't insert a step between existing connected steps. If you want to edit or add more steps to your Canvas user journey, the following details will apply:
 
@@ -64,7 +64,7 @@ Stopping a Canvas will not exit users who are waiting to receive a message. If y
 
 ## Canvas details
 
-You can edit the following Canvas settings and information after a Canvas launches:
+You can edit the following Canvas settings and information:
 
 * Canvas name and description
 * Teams and tags
@@ -109,11 +109,13 @@ Control groups remain consistent if the variant percentage is unchanged. If a co
 
 ### Local send time
 
-Canvases scheduled to launch at a local send time can be edited up to 24 hours prior to the scheduled send time. This window is called the "safe zone". 
+Canvases scheduled to launch at a local send time can be edited up to 24 hours before the scheduled send time. This window is called the "safe zone". 
 
 {% alert tip %}
 If you intend to make larger edits that lead to creating a new Canvas copy entirely, remember to exclude users who received the first Canvas and re-adjust the Canvas schedule times to allow for time zone sending.
 {% endalert %}
+
+When an entry schedule is set to enter users as soon as it's launched, the Canvas is launched at the closest time in increments of 5 minutes. For example, if you updated a Canvas to send immediately at 8:31 am PST, this will be reflected as 8:30 am PST and in the company's time zone. 
 
 ### Deleting variants
 
@@ -125,7 +127,7 @@ When variants are deleted from a Canvas, the following occurs:
 
 ### Canvas entry properties
 
-Canvas entry properties aren't templated into steps when sent. This means when Canvas entry properties are edited after a Canvas has launched, these changes will only apply to new users who enter the Canvas. If your Canvas allows users to re-enter the Canvas, any users who re-enter will be determined by the updated Canvas entry properties.
+Canvas entry properties aren't templated into steps when sent. This means that when Canvas entry properties are edited after a Canvas has launched, these changes will only apply to new users who enter the Canvas. If your Canvas allows users to re-enter the Canvas, any users who re-enter will be determined by the updated Canvas entry properties.
 
 ## Best practices
 
@@ -141,19 +143,19 @@ You can launch your Canvas with disconnected steps and also save these Canvases 
 
 Let's say a user is in a disconnected step of your Canvas workflow. This user will advance to the subsequent step if there is one. The step's settings will dictate how the user should advance. 
 
-By creating or editing disconnected steps, you can make changes to these independent steps without having to directly connect them to the rest of your Canvas. This helps with testing your steps prior to going launching your Canvas again. 
+By creating or editing disconnected steps, you can make changes to these independent steps without having to directly connect them to the rest of your Canvas. This helps with testing your steps prior to launching your Canvas again. 
 
 ### Experiment Path step
 
-If your Canvas has an active or in-progress Winning Path or Personalized Path experiment and you update the active Canvas, regardless if you update the Experiment Path step itself, the in-progress experiment will end and the experiment step will not determine a winning path or personalized paths. To restart the experiment, you can disconnect the existing Experiment Path and launch a new one, or duplicate the Canvas and launch a new Canvas. Otherwise, users will flow through the experiment path as if no optimization method was selected.
+If your Canvas has an active or in-progress Winning Path or Personalized Path experiment and you update the active Canvas (regardless of whether you update the Experiment Path step itself), the in-progress experiment will end, and the Experiment Paths step will not determine a winning path or personalized paths. To restart the experiment, you can disconnect the existing Experiment Path and launch a new one, or duplicate the Canvas and launch a new Canvas. Otherwise, users will flow through the experiment path as if no optimization method was selected.
 
 ### Time delays
 
 Editing Canvases with time delays can be a bit tricky! So, keep in mind the following details as you make edits to your Canvases.
 
-If you update the delay in a Delay step or evaluation window in the Action Paths step, only new users entering the Canvas and users that haven't been queued for that step will receive the message at the updated time delay.
+If you update the delay in a Delay step or evaluation window in the Action Paths step, only new users entering the Canvas and users who haven't been queued for that step will receive the message at the updated time delay.
 
-If you delete a step with a time delay (such as Delay or Action Paths) and decide to redirect those users into another Canvas step, the users will only be redirected after the step's time delay has completed. For example, let's say you delete a Delay step with a one day delay and redirect those users to a Message step. In this case, the users will only be redirected after the one day delay has been completed.
+If you delete a step with a time delay (such as Delay or Action Paths) and decide to redirect those users into another Canvas step, the users will only be redirected after the step's time delay has completed. For example, let's say you delete a Delay step with a one-day delay and redirect those users to a Message step. In this case, the users will only be redirected after the one-day delay has been completed.
 
 If your Canvas has one or more Experiment Paths steps, deleting steps could invalidate the results of this step.
 
@@ -161,7 +163,7 @@ If your Canvas has one or more Experiment Paths steps, deleting steps could inva
 
 Stopping a Canvas won't exit users who are waiting in a step. If you re-enable the Canvas and the users are still waiting, they will complete the step and move to the next step. However, if the time that the user should've progressed to the next step has passed, they will instead exit the Canvas. 
 
-For example, let's say you have a Canvas created using the Canvas Flow workflow set to launch at 2 pm with one variant with two steps: a Delay step with a one hour delay that goes into a Message step. 
+For example, let's say you have a Canvas created using the Canvas Flow workflow set to launch at 2 pm with one variant with two steps: a Delay step with a one-hour delay that goes into a Message step. 
 
 A user enters this Canvas at 2:01 pm and enters the Delay step at the same time. This means the user will be scheduled to move on to the next step of the user journey (the Message step) at 3:01 pm. If you stop the Canvas at 2:30 pm and re-enable the Canvas at 3:30 pm, the user will exit the Canvas since it's after 3:01 pm. However, if you re-enable the Canvas at 2:40 pm, the user will move on to the Message step as expected at 3:01 pm.
 
@@ -170,7 +172,7 @@ A user enters this Canvas at 2:01 pm and enters the Delay step at the same time.
 The following common issues can be triggered by editing or adding more components to any other component in a Canvas after launching. 
 
 {% alert important %}
-These following issues are avoidable. If you need to make edits to a Canvas after it's been launched, we recommend first confirming that all the users who have already entered the Canvas have completed their user journey. Additionally, we suggest that you don't delete steps that have already processed at least one user.
+The following issues are avoidable. If you need to make edits to a Canvas after it's been launched, we recommend first confirming that all the users who have already entered the Canvas have completed their user journey. Additionally, we suggest that you don't delete steps that have already been processed by at least one user.
 {% endalert %}
 
 - Missing reporting data (when message variants are deleted and re-added)
@@ -178,5 +180,5 @@ These following issues are avoidable. If you need to make edits to a Canvas afte
 - Messages are sent at unexpected times
 - The edits do not overwrite Currents data, so you may notice discrepancies between Canvas steps (such as `canvas_step_ids` that don't exist in the Canvas due to deletion)
 - Users can receive the same message twice
-- Users are aborted from receiving messages due to the existing rate limit
+- Users won't receive messages due to the existing rate limit
   - When users are dispatched into a Canvas, the rate limit applied to the Canvas when a user is dispatched is applied to the user. After the Canvas is sent, the rate limit cannot be edited for that user, so increasing or decreasing the rate limit post-launch won't affect users who are already dispatched.
