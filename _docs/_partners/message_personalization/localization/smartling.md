@@ -15,46 +15,58 @@ _This integration is maintained by Smartling._
 
 ## About the integration
 
-The Braze Connector supports the translation of HTML email templates, Content Blocks, Canvases, and campaign email messages. Translations are requested from Smartling, and translated content is automatically sent to Braze.
+The Braze Connector supports translations for Campaigns and Canvases ([Email](https://www.braze.com/docs/user_guide/message_building_by_channel/email/using_locales/#prerequisites), [Push](https://www.braze.com/docs/user_guide/message_building_by_channel/push/using_locales/#prerequisites), and [IAM](https://www.braze.com/docs/user_guide/message_building_by_channel/in-app_messages/using_locales)), Email Templates, and Content Blocks. Translations are supported in both HTML and Drag-and-Drop editors where supported. 
+
+{% alert note %}
+Depending on your use case, you can manage translations for Content Blocks or Email Templates using either the legacy translation workflow or the updated one. In the updated workflow, using Braze's multi-language support and locales in messages, translation tags are added to the Content Block or Email Template. However, Smartling executes translations at the message level. The content is translated only once it’s included in a Campaign or Canvas and the target locale is set. Please see the **Managing translations for Content Blocks and Email Templates** section for more information.
+{% endalert %}
 
 ## Prerequisites
 
-| Requirement | Description |
-| ----------- | ----------- |
-| Smartling account | A [Smartling account](https://dashboard.smartling.com/) is required to take advantage of this partnership. |
+| Requirement                   | Description                                                                                                                                                         |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Smartling account             | A [Smartling account](https://dashboard.smartling.com/) is required to take advantage of this partnership.                                                          |
 | Smartling translation project | To connect your Braze account with Smartling, you must first sign in and [create a translation project](https://help.smartling.com/hc/en-us/articles/115003074093). |
-| Braze REST API key | A Braze REST API key with all templates and Content Blocks permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
-| Braze REST endpoint | [Your REST endpoint URL]({{site.baseurl}}/api/basics/#endpoints). Your endpoint will depend on the Braze URL for your instance. |
+| Braze REST API key            | A Braze REST API key with the following permissions: <br>- campaigns.translations.get<br>- campaigns.translations.update<br>- campaigns.list<br>- campaigns.details<br>- canvas.translations.get<br>- canvas.translations.update<br>- campaigns.list<br>- campaigns.list<br>- campaigns.details<br>- templates.email.create<br>- templates.email.update<br>- templates.email.list<br>- templates.email.info<br>- templates.translations.get<br>- templates.translations.update<br>- content_blocks.info<br>- content_blocks.list<br>- content_blocks.create<br>- content_blocks.update<br><br> This can be created in the Braze dashboard from **Settings > API Keys**. |
+| Braze REST endpoint           | [Your REST endpoint URL](https://www.braze.com/docs/api/basics/#endpoints). Your endpoint will depend on the Braze URL for your instance.             |
+| Braze Multi Language Settings | [Complete Multi Language Settings in Braze](https://www.braze.com/docs/user_guide/administrative/app_settings/multi_language_settings/#prerequisites) |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-The Smartling Braze integration allows you to translate HTML email templates, Content Blocks, Canvases, and campaign email messages. Note the following details depending on what you're translating:
-
-**Email templates**
-* Only HTML email templates are supported.
-* You will need to decide on how your translated emails are delivered to Braze by the connector:
-  * **One Email for All Languages:** The connector delivers all languages in the same email as the source.
-  * **One Email per Language:** The connector creates a new email for each language in Braze.
-
-**Content Blocks**
-* All Content Blocks are supported.
-* The Content Blocks contain both the original and translated versions.
-* Liquid script determines the correct language for display based on the recipient's language preference.
-
-**Campaigns and Canvases**
-* Make sure you've added your target languages under **Multi-Language Support** settings in Braze.
-* Refer to [Smartling documentation](https://help.smartling.com/hc/en-us/articles/13248549217435) for details on connector configuration.
 
 ## Integration
 
-### Step 1: Set up the Braze project in Smartling TMS
+### Step 1: Set up multi-language settings in Braze
 
-#### Connecting Braze to Smartling
+Refer to the [instructions](https://www.braze.com/docs/user_guide/administrative/app_settings/multi_language_settings/#prerequisites) for setting up locales in Braze.
+
+### Step 2: Set up the Braze project in Smartling TMS
+
+Refer to Smartling [documentation](https://help.smartling.com/hc/en-us/articles/13248549217435) for details on connector configuration.
+
+### Connecting Braze to Smartling
 
 1. In [Smartling](https://dashboard.smartling.com/), create a [Braze Connector](https://help.smartling.com/hc/en-us/articles/115003074093) project type in your Smartling account.
-  - Make sure all required target languages are added to the project.
+
+![Braze connection in Smartling.]({% image_buster /assets/img/smartling/image1_Connecting_Braze_to_Smartling.png %})
+
+{: start="2"}
 2. In this project, select **Settings** > **Braze Settings** > **Connect to Braze**.
-3. Enter your Braze API URL and Braze API key.
-4. Select **Save**.
+3. Enter the required fields like API URL and API Key. If the Test Connection is successful, save Connection. If the test is not successful, double check you’ve inputted the correct API URL and API Key.
+
+![Braze connection in Smartling API settings.]({% image_buster /assets/img/smartling/image2_API.png %})
+
+{: start="4"}
+4. Add additional project languages.
+
+![Braze connection in Smartling Project Languages.]({% image_buster /assets/img/smartling/image3_project_languages.png %}) assets/img/smartling/image3_project_languages.png
+
+{: start="5"}
+5. In Braze Settings, verify that the values in the Target Language (Braze) column match the locales configured in Braze multi-language settings. The locale naming convention must match exactly.
+
+
+
+
+
+
 
 #### Complete Braze connector configuration
 
