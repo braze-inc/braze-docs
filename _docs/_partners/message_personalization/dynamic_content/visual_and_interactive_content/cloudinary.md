@@ -119,6 +119,7 @@ Refer to Cloudinary's [`braze-personalization` GitHub repo](https://github.com/c
 
 ### Prerequisites
 
+To enable dynamic asset selection, Cloudinary must be able to return a set of assets based on tags and metadata. If the list delivery type is restricted, Cloudinary cannot provide the dynamic list needed for personalized asset selection in Braze campaigns.
 - Unrestrict the list delivery type: Open the Security Settings in your Cloudinary Console, and clear the Resource list item under Restricted image types.
 
 ### Dynamic selection setup
