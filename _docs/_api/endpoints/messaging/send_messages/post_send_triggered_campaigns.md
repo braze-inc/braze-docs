@@ -82,8 +82,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 - The recipients array may contain up to 50 objects, with each object containing a single `external_user_id` string and a `trigger_properties` object.
-- When `send_to_existing_only` is `true`, Braze will only send the message to existing users. However, this flag can't be used with user aliases.
-- When `send_to_existing_only` is `false`, an attribute must be included. Braze will create a user with the `id` and attributes before sending the message.
+- When `send_to_existing_only` is `true` (the default), Braze will only send the message to existing users. When set to `false` and an attributes object is provided, Braze will create a new user if one doesn't exist. Note that setting `send_to_existing_only` to `false` is not supported for user aliases&#8212;new alias-only users cannot be created through this endpoint. To send to an alias-only user, the user must already exist in Braze
 
 A user's subscription group status can be updated using the inclusion of a `subscription_groups` parameter within the `attributes` object. For more details, refer to [User attributes object]({{site.baseurl}}/api/objects_filters/user_attributes_object).
 
