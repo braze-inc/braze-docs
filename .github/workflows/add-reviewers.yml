@@ -35,6 +35,7 @@ jobs:
             }
             
             // Rule 2: If PR diff contains privacy/legal/GDPR keywords, add legal team
+            // 'ats-91' is the GitHub team identifier for the legal team
             const legalTeam = 'ats-91';
             const diffData = await github.rest.pulls.get({
               owner: context.repo.owner,
