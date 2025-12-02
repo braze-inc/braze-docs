@@ -156,7 +156,7 @@ jobs:
                 
               } catch (error) {
                 console.error('Error adding reviewers:', error);
-                core.setFailed(`Failed to add reviewers: ${error.message}`);
+                throw new Error(`Failed to add reviewers: ${error.message}`);
               }
             } else {
               console.log('No new reviewers to add');
