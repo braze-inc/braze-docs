@@ -129,7 +129,7 @@ Translation tags belong on the Content Block or email template. However, Smartli
 
 ### Considerations
 
-- Translation tags have to be manually added to the Content Block for both HTML and drag-and-drp0[] Content Block editors.
+- Translation tags have to be manually added to the Content Block for both HTML and drag-and-drop Content Block editors.
 - Locales are selected at the message level, not on the Content Blocks themselves.
 - For Canvas, we recommend using rows to insert Content Blocks into your message instead of manually adding them with a Liquid tag. Note that dragging a Content Block from the preview into an email makes a local copy; any changes to the "parent" Content Block will not propagate to other campaigns using that block.
 - If you do use a Content Block Liquid tag, be sure to include at least one translation tag directly in the email body. Manually adding the translation tag will allow you to select the locales from the multi-language dropdown. Smartling will pick up the translation tags for the Content Block. You can add a `comment` tag so the text is not visible to the user.
