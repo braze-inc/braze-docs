@@ -88,7 +88,7 @@ Now you can use your context variable anywhere you use Liquid, such as in Messag
 Context variables that are created or updated in the step can be assigned the following data types.
 
 {% alert note %}
-Context variables have the same expected formats for data types as [custom events]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#expected-format). <br><br>For nested objects and array of objects, use the [`as_json_string` Liquid filter](#converting-connected-content-strings-to-json). If you're creating the same object in a Context step, you'll need to render the object using `as_json_string`, such as {%raw%}```{{context.${object_array} | as_json_string }}```{%endraw%}
+Context variables have the same expected formats for data types as [custom events]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#expected-format). <br><br>For nested objects and array of objects, use the [`as_json_string` Liquid filter](#converting-connected-content-strings-to-json). If you're creating the same object in a Context step, you'll need to render the object using `as_json_string`, such as {%raw%}```{{context.${object_array} | as_json_string }}```{%endraw%}<br><br>When using the array data type, Braze attempts to parse the value as JSON. If the value is valid JSON, arrays of objects will be successfully created. If the objects inside your arrays are not valid JSON, only a simple array will be created. Use `as_json_string` to properly format the elements of the array.
 {% endalert %}
 
 | Data type | Example variable name | Example value |
@@ -96,7 +96,7 @@ Context variables have the same expected formats for data types as [custom event
 |Boolean| loyalty_program |{% raw %}<code>true</code>{% endraw %}| 
 |Number| credit_score |{% raw %}<code>740{% endraw %}|
 |String| product_name |{% raw %}<code>green_tea</code>{% endraw %} |
-|Array| favorite_products|{% raw %}<code>["wireless_headphones", "smart_homehub", "fitness_tracker_swatch"]</code>{% endraw %}|
+|Array| favorite_products|{% raw %}<code>["wireless_headphones", "smart_homehub", "fitness_tracker_swatch"]</code>{% endraw %}<br>Arrays can also contain objects if the value is valid JSON, such as {% raw %}<code>[{"id": 1, "name": "Product A"}, {"id": 2, "name": "Product B"}]</code>{% endraw %}|
 |Time (in UTC) | last_purchase_date|{% raw %}<code>2025-12-25T08:15:30:250-0800</code>{% endraw %}|
 |Object (flattened) | user_profile|{% raw %}<code>{<br>&emsp;"first_name": "{{user.first_name}}",<br>&emsp;"last_name": "{{user.last_name}}",<br>&emsp;"email": "{{user.email}}",<br>&emsp;"loyalty_points": {{user.loyalty_points}},<br>&emsp;"preferred_categories": {{user.preferred_categories}}<br>}</code>{% endraw %} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
