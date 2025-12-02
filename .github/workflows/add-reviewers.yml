@@ -1,0 +1,162 @@
+name: Add Reviewers
+
+on:
+  pull_request:
+    types: [opened, edited, ready_for_review]
+
+jobs:
+  add-reviewers:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
+      - name: Check assignees and PR diff
+        id: check
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const pr = context.payload.pull_request;
+            const prNumber = pr.number;
+            const prBody = (pr.body || '').toLowerCase();
+            const assignees = pr.assignees.map(a => a.login.toLowerCase());
+            
+            console.log('PR Number:', prNumber);
+            console.log('Assignees:', assignees);
+            console.log('PR Body:', prBody);
+            
+            let reviewersToAdd = [];
+            let teamsToAdd = [];
+            
+            // Rule 1: If Copilot is assigned, add docs-team
+            if (assignees.includes('github-copilot[bot]')) {
+              console.log('Copilot is assigned - adding docs-team');
+              teamsToAdd.push('docs-team');
+            }
+            
+            // Rule 2: If PR diff contains privacy/legal/GDPR keywords, add legal team
+            const legalTeam = 'ats-91';
+            const diffData = await github.rest.pulls.get({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: prNumber,
+              mediaType: {
+                format: 'diff'
+              }
+            });
+            
+            const diff = diffData.data.toLowerCase();
+            const keywords = [
+              'law',
+              'laws',
+              'regulation',
+              'regulations',
+              'privacy',
+              'personal data',
+              'personally identifiable information',
+              'pii',
+              'legal',
+              'contract',
+              'msa',
+              'data processing addendum',
+              'dpa',
+              'gdpr',
+              'ccpa',
+              'tcpa',
+              'hipaa',
+              'coppa',
+              'compliance',
+              'comply',
+              'compliant',
+              'jurisdiction',
+              'confidentiality',
+              'cookie',
+              'consent',
+              'personal information',
+              'phi',
+              'opt-in',
+              'opt in',
+              'opt-out',
+              'opt out',
+              'spam',
+              'can-spam',
+              'casl',
+              'liability',
+              'liable',
+              'tracking',
+              'governance',
+              'agreement',
+              'notice',
+              'policy',
+              'subscribe',
+              'subscription',
+              'subscribed',
+              'directive',
+              'directives',
+              'act'];
+            const containsKeyword = keywords.some(keyword => diff.includes(keyword));
+            
+            if (containsKeyword) {
+              console.log('Found privacy/legal/GDPR keyword in diff - adding legal team');
+              console.log('Diff: ', diff);
+              reviewersToAdd.push(legalTeam);
+            }
+            
+            // Get current reviewers to avoid duplicates
+            const { data: currentReviewers } = await github.rest.pulls.listRequestedReviewers({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: prNumber
+            });
+            
+            const existingReviewers = currentReviewers.users.map(u => u.login);
+            const existingTeams = currentReviewers.teams.map(t => t.slug);
+            
+            console.log('Existing reviewers:', existingReviewers);
+            console.log('Existing teams:', existingTeams);
+            
+            // Filter out already-added reviewers and teams
+            reviewersToAdd = reviewersToAdd.filter(r => !existingReviewers.includes(r));
+            teamsToAdd = teamsToAdd.filter(t => !existingTeams.includes(t));
+            
+            console.log('Reviewers to add:', reviewersToAdd);
+            console.log('Teams to add:', teamsToAdd);
+            
+            // Add reviewers if any
+            if (reviewersToAdd.length > 0 || teamsToAdd.length > 0) {
+              try {
+                await github.rest.pulls.requestReviewers({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  pull_number: prNumber,
+                  reviewers: reviewersToAdd,
+                  team_reviewers: teamsToAdd
+                });
+                
+                console.log('Successfully added reviewers');
+                
+                // Add a comment explaining why reviewers were added
+                let commentBody = '🤖 **Automated Reviewer Assignment**: I\'ve automatically added reviewers based on the following:\n\n';
+                
+                if (teamsToAdd.includes('docs-team')) {
+                  commentBody += '- 📝 **@braze-inc/docs-team** - Copilot is assigned to this PR\n';
+                }
+                
+                if (reviewersToAdd.includes(legalTeam)) {
+                  commentBody += `- ⚖️ **@${legalTeam}** - PR diff contains privacy/legal/GDPR-related content\n`;
+                }
+                
+                await github.rest.issues.createComment({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: prNumber,
+                  body: commentBody
+                });
+                
+              } catch (error) {
+                console.error('Error adding reviewers:', error);
+                core.setFailed(`Failed to add reviewers: ${error.message}`);
+              }
+            } else {
+              console.log('No new reviewers to add');
+            }
