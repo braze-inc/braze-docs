@@ -41,7 +41,7 @@ To turn on re-eligibility for a Canvas, select **Allow users to re-enter this Ca
 
 Re-eligibility for Canvas variants is tied to Canvas entry rather than message receipt. Users who enter a Canvas and don't receive any messages will not be able to re-enter the Canvas unless re-eligibility is turned on.
 
-Note that a user doesn't need to exit a Canvas first before re-entering if re-eligibility is set to zero seconds, meaning a user can enter the same Canvas again. As another example, if the Canvas duration is set to 7 days and the re-eligibility period is set to 3 days, a user can re-enter the Canvas before completing their first journey through it. 
+Note that a user doesn't need to exit a Canvas first before re-entering if re-eligibility is set to zero seconds, meaning a user can enter the same Canvas again. As another example, if the Canvas duration is set to 7 days and the re-eligibility period is set to 3 days, a user can re-enter the Canvas before completing their first journey through it.
 
 You can add additional filters to prevent users from receiving the same step or message multiple times. However, when a user re-enters a Canvas for the second time, the steps previously received during their first time in the Canvas aren't visible to the user. This means the user may still receive the same message again. To prevent this, you can configure the Canvas to prevent re-entry or set the re-eligibility for the maximum duration of the Canvas.
 
