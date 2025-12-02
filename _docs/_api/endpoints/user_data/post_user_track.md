@@ -298,15 +298,15 @@ Each event object in the events array represents a single occurrence of a custom
 
 When a nested custom attribute contains any invalid values (such as invalid time formats or null values), Braze drops all nested custom attribute updates in the request from processing. This applies to all nested structures within that specific attribute. To ensure successful processing, verify that all values within nested custom attributes are valid before sending.
 
-## Monthly Active Users CY 24-25
-For customers who have purchased Monthly Active Users - CY 24-25, Braze manages different rate limits on its `/users/track` endpoint:
+## Monthly Active Users CY 24-25, Universal MAU, Web MAU, and Mobile MAU  
+For customers who have purchased Monthly Active Users CY 24-25, Universal MAU, Web MAU, or Mobile MAU, Braze manages different rate limits on its `/users/track` endpoint:
 - Hourly rate limits are set according to the expected data ingestion activity on your account, which may correspond to the number of monthly active users you have purchased, industry, seasonality, or other factors.
 - In addition to the hourly limit, Braze enforces a burst limit on the number of requests that can be sent every three seconds.
-- Each request may batch up to 50 updates combined across attribute, event, or purchase objects.
+- Each request may batch up to 75 updates combined across attribute, event, or purchase objects.
 
 Current limits based on expected ingestion can be found in the dashboard under **Settings** > **APIs and Identifiers** > **API Usage Dashboard**. We may modify rate limits to protect system stability or allow for increased data throughput on your account. Please contact Braze Support or your customer success manager for questions or concerns regarding hourly or per-second request limit and the needs of your business.
 
-### Rate limit headers for Monthly Active Users CY 24-25
+### Rate limit headers for Monthly Active Users CY 24-25, Universal MAU, Web MAU, and Mobile MAU
 
 All non-rate-limited (such as non-`429`) responses will contain the following HTTP response headers that indicate the state of the hourly rate limit window to the client. We recommend using these headers to manage your request rate:
 
