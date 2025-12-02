@@ -13,7 +13,7 @@ platform:
   - Roku
   - Unity
   - Unreal Engine
-  - .NET MAUI
+  - Xamarin
 ---
 
 # Braze SDK 변경 로그
@@ -95,7 +95,7 @@ platform:
 
 {% sdktab xamarin %}
 {% alert tip %}
-[GitHub에서 .NET MAUI Braze SDK 변경 로그](https://github.com/braze-inc/braze-xamarin-sdk/blob/master/CHANGELOG.md) 사본을 찾을 수도 있습니다.
+[GitHub에서 Xamarin Braze SDK 변경 로그](https://github.com/braze-inc/braze-xamarin-sdk/blob/master/CHANGELOG.md) 사본을 찾을 수도 있습니다.
 {% endalert %}
 
 {% markdown_embed https://raw.githubusercontent.com/braze-inc/braze-xamarin-sdk/master/CHANGELOG.md %}

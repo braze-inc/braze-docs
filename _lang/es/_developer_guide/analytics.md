@@ -14,7 +14,7 @@ platform:
   - Roku
   - Unity
   - Unreal Engine
-  - .NET MAUI
+  - Xamarin
 ---
 
 # Análisis

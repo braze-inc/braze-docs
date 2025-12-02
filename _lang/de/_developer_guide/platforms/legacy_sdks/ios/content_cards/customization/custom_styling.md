@@ -27,7 +27,7 @@ Braze ermöglicht es Kunden, vorhandene Standardbilder durch eigene angepasste B
 Da Content-Cards eine maximale Größe von 2 KB für Inhalte haben, die Sie im Dashboard eingeben haben (einschließlich Nachrichtentext, Bild-URLs, Links und aller Schlüssel-Wert-Paare), sollten Sie die Größe vor dem Senden überprüfen. Wenn Sie diesen Betrag überschreiten, kann die Karte nicht gesendet werden.
 
 {% alert important %}
-Das Überschreiben von Standardbildern wird in unserer .NET MAUI iOS-Integration derzeit nicht unterstützt.
+Das Überschreiben von Standardbildern wird in unserer Xamarin iOS-Integration derzeit nicht unterstützt.
 {% endalert %}
 
 ## Deaktivieren des dunklen Modus

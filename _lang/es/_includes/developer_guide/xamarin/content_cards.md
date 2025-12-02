@@ -1,12 +1,12 @@
-## Acerca de las tarjetas de contenido de .NET MAUI
+## Acerca de las tarjetas de contenido de Xamarin
 
-El SDK de .NET MAUI de Braze incluye una fuente de tarjetas predeterminada para que empieces a utilizar las tarjetas de contenido. La fuente predeterminada de tarjetas incluida en el SDK de Braze gestionará todos los análisis de seguimiento, descarte de tarjetas y representación de las tarjetas de contenido de un usuario.
+El SDK de Xamarin de Braze incluye una fuente de tarjetas predeterminada para que empieces a utilizar las tarjetas de contenido. La fuente predeterminada de tarjetas incluida en el SDK de Braze gestionará todos los análisis de seguimiento, descarte de tarjetas y representación de las tarjetas de contenido de un usuario.
 
 {% multi_lang_include developer_guide/prerequisites/xamarin.md %}
 
 ## Tipos de tarjeta y propiedades
 
-El SDK de .NET MAUI de Braze tiene tres tipos únicos de tarjetas de contenido que comparten un modelo base: [Banner](#xamarin_banner), [Imagen subtitulada](#xamarin_captioned-image) y [Clásico](#xamarin_classic). Cada tipo hereda propiedades comunes de un modelo base y tiene las siguientes propiedades adicionales.
+El SDK de Xamarin de Braze tiene tres tipos únicos de tarjetas de contenido que comparten un modelo base: [Banner](#xamarin_banner), [Imagen subtitulada](#xamarin_captioned-image) y [Clásico](#xamarin_classic). Cada tipo hereda propiedades comunes de un modelo base y tiene las siguientes propiedades adicionales.
 
 ### Modelo de tarjeta base
 

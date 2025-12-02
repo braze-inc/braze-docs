@@ -1,19 +1,19 @@
-## Integration des .NET MAUI SDK
+## Integration des Xamarin SDK
 
-Durch die Integration des Braze .NET MAUI SDK erhalten Sie grundlegende Analytics-Funktionen sowie funktionierende In-App-Nachrichten, mit denen Sie Ihre Nutzer:innen einbinden können. 
+Durch die Integration des Braze Xamarin SDK erhalten Sie grundlegende Analytics-Funktionen sowie funktionierende In-App-Nachrichten, mit denen Sie Ihre Nutzer:innen einbinden können. 
 
 ### Voraussetzungen
 
-Bevor Sie das .NET MAUI Braze SDK integrieren können, müssen Sie sicherstellen, dass Sie die folgenden Anforderungen erfüllen:
+Bevor Sie das Xamarin Braze SDK integrieren können, müssen Sie sicherstellen, dass Sie die folgenden Anforderungen erfüllen:
 
 - Ab `version 3.0.0` erfordert dieses SDK die Verwendung von .NET 6+ und entfernt die Unterstützung für Projekte, die das Xamarin-Framework verwenden.
 - Ab `version 4.0.0` hat dieses SDK die Unterstützung für Xamarin und Xamarin.Forms eingestellt und Unterstützung für .NET MAUI hinzugefügt. Siehe [Microsofts Richtlinie](https://dotnet.microsoft.com/en-us/platform/support/policy/xamarin) über das Supportende für Xamarin.
 
-### Schritt 1: .NET MAUI-Binding
+### Schritt 1: Xamarin-Binding
 
 {% tabs %}
 {% tab android %}
-Ein .NET MAUI-Binding ist eine Möglichkeit, native Bibliotheken in .NET MAUI-Apps zu verwenden. Die Implementierung des Bindings besteht darin, eine C#-Schnittstelle zur Bibliothek zu erstellen und diese Schnittstelle dann in Ihrer Anwendung zu verwenden.  Siehe die [Xamarin-Dokumentation](http://developer.xamarin.com/guides/android/advanced_topics/java_integration_overview/binding_a_java_library_%28.jar%29/). Es gibt zwei Möglichkeiten, das Braze SDK Binding einzuschließen: mit NuGet oder durch Kompilieren aus der Quelle.
+Ein Xamarin-Binding ist eine Möglichkeit, native Bibliotheken in Xamarin-Apps zu verwenden. Die Implementierung des Bindings besteht darin, eine C#-Schnittstelle zur Bibliothek zu erstellen und diese Schnittstelle dann in Ihrer Anwendung zu verwenden.  Siehe die [Xamarin-Dokumentation](http://developer.xamarin.com/guides/android/advanced_topics/java_integration_overview/binding_a_java_library_%28.jar%29/). Es gibt zwei Möglichkeiten, das Braze SDK Binding einzuschließen: mit NuGet oder durch Kompilieren aus der Quelle.
 
 {% subtabs local %}
 {% subtab NuGet %}
@@ -28,14 +28,14 @@ Die zweite Methode besteht darin, die [Binding-Quelle](https://github.com/braze-
 
 {% tab ios %}
 {% alert important %}
-Die iOS-Bindings für .NET MAUI SDK Version 4.0.0 und höher verwenden das [Braze Swift SDK](https://github.com/braze-inc/braze-swift-sdk/), frühere Versionen hingegen das [ältere AppboyKit SDK](https://github.com/Appboy/Appboy-ios-sdk).
+Die iOS-Bindings für Xamarin SDK Version 4.0.0 und höher verwenden das [Braze Swift SDK](https://github.com/braze-inc/braze-swift-sdk/), frühere Versionen hingegen das [ältere AppboyKit SDK](https://github.com/Appboy/Appboy-ios-sdk).
 {% endalert %}
 
-Ein .NET MAUI-Binding ist eine Möglichkeit, native Bibliotheken in .NET MAUI-Apps zu verwenden.  Die Implementierung eines Bindings besteht darin, eine C#-Schnittstelle zur Bibliothek zu erstellen und diese Schnittstelle dann in Ihrer Anwendung zu verwenden. Es gibt zwei Möglichkeiten, das Braze SDK Binding einzuschließen: mit NuGet oder durch Kompilieren aus der Quelle.
+Ein Xamarin-Binding ist eine Möglichkeit, native Bibliotheken in Xamarin-Apps zu verwenden.  Die Implementierung eines Bindings besteht darin, eine C#-Schnittstelle zur Bibliothek zu erstellen und diese Schnittstelle dann in Ihrer Anwendung zu verwenden. Es gibt zwei Möglichkeiten, das Braze SDK Binding einzuschließen: mit NuGet oder durch Kompilieren aus der Quelle.
 
 {% subtabs local %}
 {% subtab NuGet %}
-Die einfachste Methode der Integration besteht darin, sich das Braze SDK aus dem zentralen [NuGet.org](https://www.nuget.org/)-Repository zu holen. Klicken Sie in der Seitenleiste von Visual Studio mit der rechten Maustaste auf den Ordner `Packages` und dann auf `Add Packages...`.  Suchen Sie nach 'Braze' und installieren Sie die neuesten .NET MAUI iOS NuGet Pakete: [Braze.iOS.BrazeKit](https://www.nuget.org/packages/Braze.iOS.BrazeKit), [Braze.iOS.BrazeUI](https://www.nuget.org/packages/Braze.iOS.BrazeUI) und [Braze.iOS.BrazeLocation](https://www.nuget.org/packages/Braze.iOS.BrazeLocation) in Ihr Projekt.
+Die einfachste Methode der Integration besteht darin, sich das Braze SDK aus dem zentralen [NuGet.org](https://www.nuget.org/)-Repository zu holen. Klicken Sie in der Seitenleiste von Visual Studio mit der rechten Maustaste auf den Ordner `Packages` und dann auf `Add Packages...`.  Suchen Sie nach 'Braze' und installieren Sie die neuesten Xamarin iOS NuGet Pakete: [Braze.iOS.BrazeKit](https://www.nuget.org/packages/Braze.iOS.BrazeKit), [Braze.iOS.BrazeUI](https://www.nuget.org/packages/Braze.iOS.BrazeUI) und [Braze.iOS.BrazeLocation](https://www.nuget.org/packages/Braze.iOS.BrazeLocation) in Ihr Projekt.
 
 Wir stellen auch die Pakete der kompatiblen Bibliotheken – [Braze.iOS.BrazeKitCompat](https://www.nuget.org/packages/Braze.iOS.BrazeKitCompat) und [Braze.iOS.BrazeUICompat](https://www.nuget.org/packages/Braze.iOS.BrazeUICompat) – zur Verfügung, um Ihnen die Migration zu .NET MAUI zu erleichtern.
 {% endsubtab %}
@@ -126,7 +126,7 @@ Jetzt können Sie Ihre Anwendung starten und sehen, wie die Sitzungen im Braze-D
 Jetzt können Sie Ihre Anwendung starten und sehen, wie die Sitzungen im Braze-Dashboard protokolliert werden. Eine ausführlichere Diskussion der besten Praktiken für die grundlegende SDK-Integration finden Sie in der [Anleitung zur iOS-Integration]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=swift).
 
 {% alert important %}
-Unser aktuelles öffentliches .NET MAUI-Binding für das iOS SDK stellt keine Verbindung zum iOS Facebook SDK her (Verknüpfung von Social-Daten) und beinhaltet nicht das Senden des IDFA an Braze.
+Unser aktuelles öffentliches Xamarin-Binding für das iOS SDK stellt keine Verbindung zum iOS Facebook SDK her (Verknüpfung von Social-Daten) und beinhaltet nicht das Senden des IDFA an Braze.
 {% endalert %}
 {% endtab %}
 {% endtabs %}

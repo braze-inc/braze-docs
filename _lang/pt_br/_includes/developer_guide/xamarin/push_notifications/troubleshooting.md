@@ -2,7 +2,7 @@
 
 ### O push não aparece depois que o app é fechado no alternador de tarefas
 
-Se observar que as notificações por push não aparecem mais depois que o aplicativo é fechado no alternador de tarefas, é provável que seu app esteja no modo de depuração. .NET MAUI adiciona estruturações no modo de depuração que impedem que os apps recebam push depois que seu processo é encerrado. Se você executar seu app no modo de lançamento, deverá ver o push mesmo depois que o app for fechado no alternador de tarefas.
+Se observar que as notificações por push não aparecem mais depois que o aplicativo é fechado no alternador de tarefas, é provável que seu app esteja no modo de depuração. O Xamarin adiciona estruturações no modo de depuração que impedem que os apps recebam push depois que seu processo é encerrado. Se você executar seu app no modo de lançamento, deverá ver o push mesmo depois que o app for fechado no alternador de tarefas.
 
 ### A fábrica de notificações personalizadas não está sendo definida corretamente
 

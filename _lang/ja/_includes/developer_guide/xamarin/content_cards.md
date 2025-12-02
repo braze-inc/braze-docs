@@ -1,12 +1,12 @@
-## .NET MAUI Contentカードについて
+## Xamarin Contentカードについて
 
-Braze .NET MAUI SDK には、コンテンツカードの使用を開始するためのデフォルトのカードフィードが含まれています。Braze SDKに含まれるデフォルトのカードフィードは、ユーザーのコンテンツカードのすべてのアナリティクスのトラッキング、却下、レンダリングを処理する。
+Braze Xamarin SDK には、コンテンツカードの使用を開始するためのデフォルトのカードフィードが含まれています。Braze SDKに含まれるデフォルトのカードフィードは、ユーザーのコンテンツカードのすべてのアナリティクスのトラッキング、却下、レンダリングを処理する。
 
 {% multi_lang_include developer_guide/prerequisites/xamarin.md %}
 
 ## カードの種類とプロパティ
 
-Braze .NET MAUI SDK には、基本モデルを共有する3 つの独自のコンテンツカードタイプがあります。[バナー](#xamarin_banner)、[キャプションイメージ](#xamarin_captioned-image)、および[クラシック](#xamarin_classic)。各タイプはベースモデルから共通のプロパティを継承し、次の追加プロパティを持ちます。
+Braze Xamarin SDK には、基本モデルを共有する3 つの独自のコンテンツカードタイプがあります。[バナー](#xamarin_banner)、[キャプションイメージ](#xamarin_captioned-image)、および[クラシック](#xamarin_classic)。各タイプはベースモデルから共通のプロパティを継承し、次の追加プロパティを持ちます。
 
 ### ベースカードモデル
 
