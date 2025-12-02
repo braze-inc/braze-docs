@@ -174,7 +174,7 @@ If your request encounters a fatal error, refer to [Errors and responses]({{site
 
 ## Attributes object for campaigns
 
-Braze has a messaging object called `attributes` that let you add, create, or update attributes and values for a user before you send them an API-triggered campaign. Using the `campaign/trigger/send` endpoint as this API call processes the user attributes object before it processes and sends the campaign. This helps minimize the risk of there being issues caused by [race conditions]({{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions/).
+Braze has a messaging object called `attributes` that lets you add, create, or update attributes and values for a user before you send them an API-triggered campaign. Using the `campaign/trigger/send` endpoint as this API call processes the user attributes object before it processes and sends the campaign. This helps minimize the risk of there being issues caused by [race conditions]({{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions/).
 
 {% alert tip %}
 Looking for the Canvas version of this endpoint? Check out [Sending Canvas messages using API-triggered delivery]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/#create-send-endpoint).
