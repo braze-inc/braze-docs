@@ -115,7 +115,7 @@ Canvases scheduled to launch at a local send time can be edited up to 24 hours b
 If you intend to make larger edits that lead to creating a new Canvas copy entirely, remember to exclude users who received the first Canvas and re-adjust the Canvas schedule times to allow for time zone sending.
 {% endalert %}
 
-When an entry schedule is set to enter users as soon as it's launched, the Canvas is launched at the closest time in increments of 5 minutes. For example, if you updated a Canvas to send immediately at 8:31 am PST, this will be reflected as 8:30 am PST and in the company's time zone. 
+When an entry schedule is set to enter users immediately upon launch, the Canvas launches at the closest time in increments of 5 minutes. For example, if you update a Canvas to enter users immediately at 8:31 am PST, the launch time is set to 8:30 am PST and in the company's time zone.
 
 ### Deleting variants
 
