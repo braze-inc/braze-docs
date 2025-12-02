@@ -64,7 +64,7 @@ Stopping a Canvas will not exit users who are waiting to receive a message. If y
 
 ## Canvas details
 
-You can edit the following Canvas settings and information:
+You can edit the following settings and details after launching a Canvas:
 
 * Canvas name and description
 * Teams and tags
