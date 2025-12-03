@@ -23,7 +23,7 @@ Link shortening and click tracking can be turned on at the [message variant-leve
 
 The length of the URL is determined by the type of tracking that is turned on:
 - **Basic tracking** enables campaign-level click tracking. Static URLs will have a length of 20 characters, and personalized URLs will have a length of 25 characters.
-- **Advanced tracking** enables campaign-level and user-level click tracking, and enables use of segmentation and retargeting capabilities which rely on clicks. Clicks will also generate an [SMS click event]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) sent through Currents. Static URLs with advanced tracking will have a length of 27–28 characters, allowing you to create segments of users who have clicked on URLs. For personalized URLs, they will have a length of 32–33 characters.
+- **Advanced tracking** enables campaign-level and user-level click tracking, and enables the use of segmentation and retargeting capabilities that rely on clicks. Clicks will also generate an [SMS click event]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) sent through Currents. Static URLs with advanced tracking will have a length of 27–28 characters, allowing you to create segments of users who have clicked on URLs. For personalized URLs, they will have a length of 32–33 characters.
 
 Links will be shortened using our shared short domain (`brz.ai`). An example URL may look something like this: `https://brz.ai/8jshX` (basic, static) or `https://brz.ai/p/8jshX/2dj8d` (advanced, personalized). Refer to [Testing](#testing) for more information.
 
@@ -76,7 +76,7 @@ https://example.com/{{url_var}}
 
 We shorten URLs that are rendered by Liquid, even those included in API-trigger properties. For example, if {% raw %}`{{api_trigger_properties.${url_value}}}`{% endraw %} represents a valid URL, we will shorten and track that URL before sending out the message. 
 
-### Shorten URLs in /messages/send endpoint
+### Shorten URLs in `/messages/send` endpoint
 
 Link shortening is also turned on for API-only messages through the [`/messages/send` endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/). To also turn on basic or advanced tracking, use the `link_shortening_enabled` or `user_click_tracking_enabled` request parameters.
 
@@ -92,12 +92,14 @@ For a full list of request parameters, go to [request parameters]({{site.baseurl
 
 Before launching your campaign or Canvas, it's best practice to preview and test your message first. To do so, go to the **Test** tab to preview and send an SMS or RCS message to [content test groups]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab#content-test-groups) or an individual user. 
 
-This preview will update with relevant personalization and the shortened URL. The number of characters and [billable segments]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/segments/) will also update to reflect the rendered personalization and the shortened URL. 
+This preview will update with relevant personalization and the shortened URL. The number of characters and [billable segments]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/segments/) will also update to reflect the rendered personalization and the shortened URL.
 
 Make sure to save the campaign or Canvas before sending a test message to receive a representation of the shortened URL that will be dispatched in your message. If the campaign or Canvas isn't saved before a test send, the test send will include a placeholder URL.
 
+For Canvases to appear in the "Clicked shortened SMS link" filter, the Canvas step containing the short link must also be enabled with advanced tracking, which allows user-level click tracking. If the short link is configured with basic tracking, SMS short link click events can't be filtered.
+
 {% alert important %}
-If a draft is created within an active Canvas, a shortened URL won't be generated. The actual shortened URL generates when the Canvas draft is made active.
+If a draft is created within an active Canvas, a shortened URL won't be generated. The actual shortened URL is generated when the Canvas draft is made active.
 {% endalert %}
 
 ![Message "Test" tab with fields for selecting test recipients.]({% image_buster /assets/img/link_shortening/shortening2.png %})
@@ -127,7 +129,7 @@ For guidance on retargeting, visit [Retargeting]({{site.baseurl}}/user_guide/mes
 Yes. When **Advanced Tracking** is turned on, you can retarget users who have clicked URLs by leveraging the [SMS retargeting filters]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/retargeting/) or the SMS click events (`users.messages.sms.ShortLinkClick`) sent by Currents.
 
 {% alert note %}
-At this time, RCS Click events are not available through Currents.
+At this time, RCS click events are not available through Currents.
 {% endalert %}
 
 ### Does link shortening work with deep links or universal links?
