@@ -29,11 +29,11 @@ Before you can access, create, and publish landing pages, you either need admini
 
 {% multi_lang_include drag_and_drop/drag_and_drop_access.md variable_name='dnd editors' %}
 
-## Adding Google Analytics or Google Tag Manager to a landing page
+## Adding Google Tag Manager to a landing page
 
-To add Google Analytics or Google Tag Manager tracking to your landing pages, you must create a data layer before implementing the tracking code, such as in the following snippet.
+To add Google Tag Manager to your landing pages, add a **Custom Code** block in the drag-and-drop editor, then insert the Tag Manager code into your landing page. Make sure to add a data layer before the Tag Manager code, such as in this example:
 
-```json
+```
 <script>
 window.dataLayer = window.dataLayer || [];
 </script>
@@ -46,7 +46,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 ```
 
-For more information about installation, refer to [Google's documentation](https://developers.google.com/tag-platform/tag-manager/datalayer#installation).
+For details on implementing Google Tag Manager, refer to [Google's documentation](https://developers.google.com/tag-platform/tag-manager/datalayer#installation).
 
 ## Frequently asked questions
 
