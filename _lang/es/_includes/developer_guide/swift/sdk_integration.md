@@ -360,7 +360,7 @@ El nivel de registro predeterminado para el SDK de Braze Swift es `.error`-tambi
 
 | Swift       | Objective-C              | Descripción                                                  |
 | ----------- | ------------------------ | ------------------------------------------------------------ |
-| `.debug`    | `BRZLoggerLevelDebug`    | Registrar información de depuración + `.info` + `.error`.              |
+| `.debug`    | `BRZLoggerLevelDebug`    | (predeterminado) Registrar información de depuración + `.info` + `.error`.    |
 | `.info`     | `BRZLoggerLevelInfo`     | Registra la información general del SDK (cambios de usuario, etc.) + `.error`. |
 | `.error`    | `BRZLoggerLevelError`    | Errores de registro.                                                  |
 | `.disabled` | `BRZLoggerLevelDisabled` | No se produce ningún registro.                                           |
