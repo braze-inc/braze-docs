@@ -31,7 +31,7 @@ Before you can access, create, and publish landing pages, you either need admini
 
 ## Adding Google Analytics or Google Tag Manager to a landing page
 
-To add Google Analytics or Google Tag Manager tracking to your landing pages, you must create a data layer before implementing the following tracking code.
+To add Google Analytics or Google Tag Manager tracking to your landing pages, you must create a data layer before implementing the tracking code, such as in the following snippet.
 
 ```json
 <script>
