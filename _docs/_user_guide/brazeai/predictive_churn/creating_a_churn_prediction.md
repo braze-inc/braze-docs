@@ -64,7 +64,7 @@ The prediction audience cannot exceed 100 million users.
 
 When the prediction window is 14 days or less, the time window for filters that begin with "Last...", like "Last Used App" and "Last Made Purchase" **cannot exceed the Churn Window specified** in the churn definition. For example, if your churn definition has a window of 14 days, the time window for the "Last..." filters cannot exceed 14 days. 
 
-The churn window is evaluated going back the number of days from the day the model was last run, so if the churn window is 15 days and the model was last run on December 1, the model is analyzing November 16 to November 30 to understand user activity for audience eligibility and training.
+The churn window is evaluated by looking back at the number of days from the day the model last ran, so if the churn window is 15 days and the model last ran on December 1, the model analyzes November 16 to November 30 to understand user activity for audience eligibility and training.
 
 #### Full Filter Mode
 
