@@ -35,7 +35,7 @@ Purchase events must be enabled to use RFM SQL segments because the monetary val
 ![Modal with the option to create a catalog segment for events, purchases, or RFM segments.]({% image_buster /assets/img/segment/select_rfm_segment.png %}){: style="max-width:80%" }
 
 {: start="3"}
-3. In the **Variables** panel, select your **Time Range** to specify the time period of purchase data to analyze. The time range you select will be the time range that user behavior data gets pulled from and depends on your campaign goals. Note that the longest time window for this feature is the past 60 days. 
+3. In the **Variables** panel, select your **Time Range** to specify the time period of purchase data to analyze. You can specify up to the past 60 days. The time range you select will be the time range that user behavior data gets pulled from and depends on your campaign goals.  
 
 | Time range field | Description | Use case |
 | --- | --- | --- |
