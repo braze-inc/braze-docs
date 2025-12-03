@@ -75,7 +75,7 @@ No, you can't use subdomains that are already in use. While these subdomains are
 
 ### Why is my custom domain stuck on "Connecting" despite valid DNS records?
 
-If your custom domain shows all DNS records as "Connected" but the domain status remains on "Connecting" for more than 4 hours, your organization may be using CAA (Certificate Authority Authorization) records or Cloudflare zone holds that prevent Braze from securing your page.
+If your custom domain shows all DNS records as "Connected" but the domain status remains on "Connecting" for more than four hours, your organization may be using CAA (Certificate Authority Authorization) records or Cloudflare zone holds that prevent Braze from securing your page.
 
 #### CAA records
 
@@ -85,13 +85,13 @@ To resolve this, ask your IT team to add a CAA record to your subdomain with the
 - **Record type:** CAA
 - **Value:** `0 issue "letsencrypt.org"`
 
-For more information, see [LetsEncrypt's CAA documentation](https://letsencrypt.org/docs/caa/).
+For more information, refer to [LetsEncrypt's CAA documentation](https://letsencrypt.org/docs/caa/).
 
 #### Cloudflare zone holds
 
 If your organization uses Cloudflare, a zone hold security feature may be preventing Braze from creating your custom domain.
 
-To resolve this, ask your IT team to temporarily release the zone hold. For more information, see [Cloudflare's zone hold documentation](https://developers.cloudflare.com/fundamentals/account/account-security/zone-holds/#release-zone-holds).
+To resolve this, ask your IT team to temporarily release the zone hold. For more information, refer to [Cloudflare's zone hold documentation](https://developers.cloudflare.com/fundamentals/account/account-security/zone-holds/#release-zone-holds).
 
 #### Restarting the validation process
 
