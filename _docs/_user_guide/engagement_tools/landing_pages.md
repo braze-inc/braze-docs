@@ -31,7 +31,7 @@ Before you can access, create, and publish landing pages, you either need admini
 
 ## Adding Google Tag Manager to a landing page
 
-To add Google Tag Manager to your landing pages, add a **Custom Code** block in the drag-and-drop editor, then insert the Tag Manager code into your landing page. Make sure to add a data layer before the Tag Manager code, such as in this example:
+To add Google Tag Manager to your landing pages, add a **Custom Code** block to your landing page in the drag-and-drop editor, then insert the Tag Manager code into the block. Make sure to add a data layer before the Tag Manager code, such as in this example:
 
 ```
 <script>
