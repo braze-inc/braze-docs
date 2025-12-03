@@ -59,7 +59,7 @@ If you are using the [older navigation]({{site.baseurl}}/user_guide/administrati
 
 Here, you can sort, search, and turn off tracking for link aliases.
 
-![Tracked Link Aliases page that shows two link aliases named "TechPartners" and "Help" that are associated with a campaign named "Email_Survey".]({% image_buster /assets/img/tracked_aliases.png %})
+![Tracked Link Aliases page that shows active and inactive link aliases associated with various campaigns.]({% image_buster /assets/img/tracked_aliases.png %})
 
 {% alert tip %}
 Use the [List link alias for campaign]({{site.baseurl}}/get_campaign_link_alias/) and [List link alias for Canvas]({{site.baseurl}}/get_canvas_link_alias/) endpoints to extract the `alias` set in each message variant in a campaign or an email-specific Canvas component.
@@ -128,18 +128,7 @@ To track link engagement metrics, make sure your link precedes with either HTTP 
 
 Braze allows you to select unlimited links to track, though you may only retarget users on the most recent links they have opened. User profiles include their 100 most recently clicked links. For example, if you track 500 links and a user clicks on all 500 of them, you can retarget or create segments based on the 100 most recently clicked links.
 
-{% tabs local %}
-{% tab Drag-And-Drop Editor %}
-
-![Link Management tab of the Drag-and-Drop email editor.]({% image_buster /assets/img/link_management_dnd.png %})
-
-{% endtab %}
-{% tab HTML editor %}
-
-![Link Management tab of the HTML email editor.]({% image_buster /assets/img/link_management_html.png %})
-
-{% endtab %}
-{% endtabs %}
+![The Link Management tab with two selected links.]({% image_buster /assets/img/link_management_dnd.png %})
 
 {% alert note %}
 Braze only tracks up to the last 100 clicked link aliases at the profile level. 
@@ -167,7 +156,9 @@ Untracking a link won't reallocate existing segments with the filter to the untr
 
 Links in archived messages are automatically untracked. However, if archived messages are unarchived, the links will need to be tracked again. When link aliases are tracked, link reporting is indexed by the alias instead of top-level domains or full URLs.
 
-![Campaign Analytics tab that displays three link aliases and their total clicks.]({% image_buster /assets/img/link_aliasing_click_table.png %})
+To view all of the links in your email campaign and their respective total clicks, go to **Message Analytics** > **Email Performance** > **Preview & Heatmap**, and select the **Show Heatmap** toggle.
+
+![Link Table by Total Clicks panel with link aliases and their total clicks.]({% image_buster /assets/img/link_alias_total_clicks.png %}){: style="max-width:60%;"}
 
 ### Email clicks event
 
