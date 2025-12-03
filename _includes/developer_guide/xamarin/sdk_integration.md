@@ -6,14 +6,14 @@ Integrating the Braze .NET MAUI SDK will provide you with basic analytics functi
 
 Before you can integrate the .NET MAUI Braze SDK, be sure you meet the following requirements:
 
-- Starting in `version 3.0.0`, this SDK requires using .NET 6+ and removes support for projects using the Xamarin framework.
+- Starting in `version 3.0.0`, this SDK requires using .NET 6+ and removes support for projects using the Xarmin framework.
 - Starting in `version 4.0.0`, this SDK dropped support for Xamarin & Xamarin.Forms and added support for .NET MAUI. See [Microsoft's policy](https://dotnet.microsoft.com/en-us/platform/support/policy/xamarin) around the end of support for Xamarin.
 
 ### Step 1: Get the .NET MAUI binding
 
 {% tabs %}
 {% tab android %}
-A .NET MAUI binding is a way to use native libraries in .NET MAUI apps. The implementation of a binding consists of building a C# interface to the library, and then using that interface in your application.  See the [Xamarin documentation](http://developer.xamarin.com/guides/android/advanced_topics/java_integration_overview/binding_a_java_library_%28.jar%29/). There are two ways to include the Braze SDK binding: using NuGet or compiling from source.
+A .NET MAUI binding is a way to use native libraries in .NET MAUI apps. The implementation of a binding consists of building a C# interface to the library, and then using that interface in your application.  See the [.NET MAUI documentation](http://developer.xamarin.com/guides/android/advanced_topics/java_integration_overview/binding_a_java_library_%28.jar%29/). There are two ways to include the Braze SDK binding: using NuGet or compiling from source.
 
 {% subtabs local %}
 {% subtab NuGet %}

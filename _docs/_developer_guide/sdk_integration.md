@@ -50,7 +50,7 @@ page_order: 2.0
 {% multi_lang_include developer_guide/unreal_engine/sdk_integration.md %}
 {% endsdktab %}
 
-{% sdktab xamarin %}
+{% sdktab .NET MAUI %}
 {% multi_lang_include developer_guide/xamarin/sdk_integration.md %}
 {% endsdktab %}
 

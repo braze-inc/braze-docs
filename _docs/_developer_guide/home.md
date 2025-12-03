@@ -52,7 +52,7 @@ guide_menu_list:
     image: /assets/img/unreal.png
     nav_link: unreal_engine
   - name: .NET MAUI
-    link: /docs/developer_guide/sdk_integration/?sdktab=xamarin
+    link: /docs/developer_guide/sdk_integration/?sdktab=.net%20maui
     image: /assets/img/xamarin.png
     nav_link: xamarin
   - name: TV & OTT

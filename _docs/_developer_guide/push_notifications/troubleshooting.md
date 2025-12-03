@@ -27,7 +27,7 @@ channel:
 {% multi_lang_include developer_guide/android/push_notifications/troubleshooting.md %}
 {% endsdktab %}
 
-{% sdktab xamarin %}
+{% sdktab .NET MAUI %}
 {% multi_lang_include developer_guide/xamarin/push_notifications/troubleshooting.md %}
 {% endsdktab %}
 {% endsdktabs %}
