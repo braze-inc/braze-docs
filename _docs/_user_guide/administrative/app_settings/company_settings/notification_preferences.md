@@ -18,7 +18,7 @@ The **Notification Preferences** page is where you can configure who (if anyone)
 To access this page, go to **Settings** > **Admin Settings** > **Notification Preferences**.
 
 {% alert tip %}
-You can also integrate with Slack to allow messages to be posted from external sources into Slack. For steps, refer to Slack's help article on this topic: [Sending messages using incoming webhooks](https://api.slack.com/incoming-webhooks).
+You can also integrate with Slack to receive notifications. For steps, refer to Slack's help article: [Sending messages using incoming webhooks](https://api.slack.com/incoming-webhooks).
 {% endalert %}
 
 ## Available notifications
