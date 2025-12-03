@@ -132,7 +132,7 @@ When a recipient selects **Unsubscribe**, the mailbox provider sends the unsubsc
 
 Enabling list-unsubscribe is a deliverability best practice and a requirement at some of the premier mailbox providers. It encourages end users to safely remove themselves from unwanted messages, versus hitting the spam button in an email client, the latter of which is detrimental to sending reputation and email deliverability.
 
-Note that [Gmail's Manage Subscription hub](https://support.google.com/mail/answer/15621070?sjid=2292320204527911296-NC) can also pull in the unsubscribe link from the body of the message, but prioritizes the list-unsubscribe if it's present in the header. 
+Note that [managing your subscriptions in Gmail](https://support.google.com/mail/answer/15621070?sjid=2292320204527911296-NC) can also pull in the unsubscribe link from the body of the message, but prioritizes the list-unsubscribe if it's present in the header. 
 
 ### Mailbox provider support
 
