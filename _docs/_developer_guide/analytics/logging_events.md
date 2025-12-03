@@ -120,7 +120,7 @@ UBraze->LogCustomEvent(TEXT("YOUR_EVENT_NAME"));
 
 ## Adding metadata properties
 
-When you log a custom event, you have the option to add metadata about that custom events by passing a properties object with the event. Properties are defined as key-value pairs. Keys are strings and values can be `string`, `numeric`, `boolean`, or [`Date`](http://www.w3schools.com/jsref/jsref_obj_date.asp) objects.
+When you log a custom event, you have the option to add metadata about that custom event by passing a properties object with the event. Properties are defined as key-value pairs. Keys are strings and values can be `string`, `numeric`, `boolean`, [`Date`](http://www.w3schools.com/jsref/jsref_obj_date.asp) objects, arrays, or nested JSON objects.
 
 To add metadata properties, use the following event-logging method.
 
