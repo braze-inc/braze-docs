@@ -6,6 +6,7 @@ page_order: 14
 description: "This reference article covers email preferences in the Braze dashboard, including sending configurations, open tracking pixels, subscription page and footers, and more."
 tool: Dashboard
 channel: email
+toc_headers: h2
 
 ---
 
@@ -111,7 +112,7 @@ To change the location:
 2. Select from the following options: **Move for SendGrid**, **Move for SparkPost**, or **Move for Amazon SES**
 3. Select **Save**.
 
-Once saved, Braze will send special instructions to the ESP in order to place the open tracking pixel at the top of all HTML emails.
+Once saved, Braze will send special instructions to the ESP to place the open tracking pixel at the top of all HTML emails.
   
 {% alert important %} 
 SSL enablement will wrap the URL of the tracking pixel with HTTPS instead of HTTP. If your SSL is misconfigured, it may affect the efficacy of the tracking pixel. 
@@ -127,9 +128,11 @@ Using a list-unsubscribe header allows your recipients to unsubscribe easily fro
 
 ![]({% image_buster /assets/img_archive/list_unsub_img1.png %}){: style="float:right;max-width:60%;margin-left:15px;"}
 
-When a recipient clicks **Unsubscribe**, the mailbox provider sends the unsubscribe request to the destination defined in the email header.
+When a recipient selects **Unsubscribe**, the mailbox provider sends the unsubscribe request to the destination defined in the email header.
 
-Enabling list-unsubscribe is a deliverability best practice and a requirement at some of the premier mailbox providers. It encourages end users to safely remove themselves from unwanted messages versus hitting the spam button in an email client, the latter of which is detrimental to sending reputation and email deliverability.
+Enabling list-unsubscribe is a deliverability best practice and a requirement at some of the premier mailbox providers. It encourages end users to safely remove themselves from unwanted messages, versus hitting the spam button in an email client, the latter of which is detrimental to sending reputation and email deliverability.
+
+Note that [Gmail's Manage Subscription hub](https://support.google.com/mail/answer/15621070?sjid=2292320204527911296-NC) can also pull in the unsubscribe link from the body of the message, but prioritizes the list-unsubscribe if it's present in the header. 
 
 ### Mailbox provider support
 
