@@ -93,7 +93,7 @@ You can also find a copy of the [Unreal Engine Braze SDK changelog on GitHub](ht
 {% markdown_embed https://raw.githubusercontent.com/braze-inc/braze-unreal-sdk/master/CHANGELOG.md %}
 {% endsdktab %}
 
-{% sdktab .NET MAUI %}
+{% sdktab .NET MAUI (Xamarin) %}
 {% alert tip %}
 You can also find a copy of the [.NET MAUI Braze SDK changelog on GitHub](https://github.com/braze-inc/braze-xamarin-sdk/blob/master/CHANGELOG.md).
 {% endalert %}

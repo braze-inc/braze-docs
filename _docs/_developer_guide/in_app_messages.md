@@ -55,7 +55,7 @@ description: "Learn about in-app messages and how to set them up for the Braze S
 {% multi_lang_include developer_guide/unity/in_app_messages.md %}
 {% endsdktab %}
 
-{% sdktab .NET MAUI %}
+{% sdktab .NET MAUI (Xamarin) %}
 {% multi_lang_include developer_guide/xamarin/in_app_messages.md %}
 {% endsdktab %}
 {% endsdktabs %}

@@ -1,6 +1,6 @@
 ## Integrating the .NET MAUI SDK
 
-Integrating the Braze .NET MAUI SDK will provide you with basic analytics functionality as well as working in-app messages with which you can engage your users. 
+Integrating the Braze .NET MAUI (formerly Xamarin) SDK will provide you with basic analytics functionality as well as working in-app messages with which you can engage your users. 
 
 ### Prerequisites
 

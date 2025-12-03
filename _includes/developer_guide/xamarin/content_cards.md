@@ -1,6 +1,6 @@
 ## About .NET MAUI Content Cards
 
-The Braze .NET MAUI SDK includes a default card feed to get you started with Content Cards. The default card feed included with the Braze SDK will handle all analytics tracking, dismissals, and rendering for a user’s Content Cards.
+The Braze .NET MAUI (formerly Xamarin) SDK includes a default card feed to get you started with Content Cards. The default card feed included with the Braze SDK will handle all analytics tracking, dismissals, and rendering for a user’s Content Cards.
 
 {% multi_lang_include developer_guide/prerequisites/xamarin.md %}
 

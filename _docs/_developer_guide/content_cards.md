@@ -50,7 +50,7 @@ platform:
 {% multi_lang_include developer_guide/unity/content_cards.md %}
 {% endsdktab %}
 
-{% sdktab .NET MAUI %}
+{% sdktab .NET MAUI (Xamarin) %}
 {% multi_lang_include developer_guide/xamarin/content_cards.md %}
 {% endsdktab %}
 {% endsdktabs %}
