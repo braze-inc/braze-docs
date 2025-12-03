@@ -156,7 +156,7 @@ Untracking a link won't reallocate existing segments with the filter to the untr
 
 Links in archived messages are automatically untracked. However, if archived messages are unarchived, the links will need to be tracked again. When link aliases are tracked, link reporting is indexed by the alias instead of top-level domains or full URLs.
 
-To view all of the links in your email campaign and their respective total clicks, go to **Message Analytics** > **Email Performance** > **Preview & Heatmap**, and then select the **Show Heatmap** toggle.
+To view all of the links in your email campaign and their respective total clicks, go to **Message Analytics** > **Email Performance** > **Preview & Heatmap**, and select the **Show Heatmap** toggle.
 
 ![Link Table by Total Clicks panel with link aliases and their total clicks.]({% image_buster /assets/img/link_alias_total_clicks.png %}){: style="max-width:60%;"}
 
