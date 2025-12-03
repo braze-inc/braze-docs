@@ -56,6 +56,10 @@ This authentication method generates a secret key and an access key ID that enab
 
 ### Step 1: Create user {#secret-key-1}
 
+{% alert note %}
+If you're only setting up message archiving, follow the steps in the **Dashboard Data Export** tab. 
+{% endalert %}
+
 To retrieve your access key ID and secret access key, you'll need to [create an IAM user and administrators group in AWS](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-admin-group.html).
 
 ### Step 2: Get credentials {#secret-key-2}
@@ -75,6 +79,10 @@ Different policies are required for Currents and Dashboard Data Export. `s3:GetO
 {% endalert %}
 
 Specify a policy name of your choice, and input the following code snippet into the **Policy Document** section. Be sure to replace `INSERTBUCKETNAME` with your bucket name. Without these permissions the integration will fail a credentials check and not be created.
+
+{% alert note %}
+If you're only setting up message archiving, use the code snippet within the **Dashboard Data Export** tab. 
+{% endalert %}
 
 {% tabs %}
 {% tab Braze Currents %}
@@ -187,6 +195,10 @@ Different policies are required for Currents and Dashboard Data Export. `s3:GetO
 
 Open the **JSON** tab and input the following code snippet into the **Policy Document** section. Be sure to replace `INSERTBUCKETNAME` with your bucket name. Select **Review Policy** when you're finished.
 
+{% alert note %}
+If you're only setting up message archiving, use the code snippet in the **Dashboard Data Export** tab. 
+{% endalert %}
+
 {% tabs %}
 {% tab Braze Currents %}
 
@@ -246,7 +258,7 @@ Within the same IAM section of the console, select **Roles** > **Create Role**.
 
 Retrieve your Braze account ID and external ID from your Braze account:
 - **Currents**: In Braze, go to **Partner Integrations** > **Data Export**. Next, select **Create Current** then **Amazon S3 Data Export**. Here you will find the identifiers needed to create your role.
-- **Dashboard data export**: In Braze, go to **Partner Integrations** > **Technology Partners** and select **Amazon S3**. Here you'll find the identifiers needed to create your role.
+- **Dashboard data export**: In Braze, go to **Partner Integrations** > **Technology Partners** and select **Amazon S3**. Here you'll find the identifiers needed to create your role. (Create your roles here if you're only setting up message archiving.)
 
 Back on the AWS Console, select **Another AWS Account** as the trusted entity selector type. Provide your Braze account ID, check the **Require external ID** box, and enter the Braze external ID. Select **Next** when complete.
 
@@ -275,6 +287,10 @@ Take note of the **Role ARN** at the top of the Role summary page.
 ![]({{site.baseurl}}/assets/img/create_role_6_summary.png)
 
 Return to your Braze account and copy the role ARN into the field provided.
+
+{% alert note %}
+If you're only setting up message archiving, follow the steps in the **Dashboard Data Export** tab. 
+{% endalert %}
 
 {% tabs %}
 {% tab Braze Currents %}
