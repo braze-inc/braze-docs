@@ -88,7 +88,7 @@ Now you can use your context variable anywhere you use Liquid, such as in Messag
 Context variables that are created or updated in the step can be assigned the following data types.
 
 {% alert note %}
-Context variables have the same expected formats for data types as [custom events]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#expected-format). <br><br>When the array type is used, the system attempts to parse the value as JSON, which allows arrays of objects to be successfully created. If the objects inside of your arrays are not valid JSON, the result will be a simple array of strings. For nested objects and array of objects, use the [`as_json_string` Liquid filter](#converting-connected-content-strings-to-json). If you're creating the same object in a Context step, you'll need to render the object using `as_json_string`, such as {%raw%}```{{context.${object_array} | as_json_string }}```{%endraw%}
+Context variables have the same expected formats for data types as [custom events]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#expected-format). <br><br>When the array type is used, the system attempts to parse the value as JSON, which allows arrays of objects to be successfully created. If the objects inside of your arrays are not valid JSON, the result will be a simple array of strings.  <br><br>For nested objects and array of objects, use the [`as_json_string` Liquid filter](#converting-connected-content-strings-to-json). If you're creating the same object in a Context step, you'll need to render the object using `as_json_string`, such as {%raw%}```{{context.${object_array} | as_json_string }}```{%endraw%}
 {% endalert %}
 
 | Data type | Example variable name | Example value |
@@ -97,7 +97,7 @@ Context variables have the same expected formats for data types as [custom event
 |Number| credit_score |{% raw %}<code>740{% endraw %}|
 |String| product_name |{% raw %}<code>green_tea</code>{% endraw %} |
 |Array| favorite_products|{% raw %}<code>["wireless_headphones", "smart_homehub", "fitness_tracker_swatch"]</code>{% endraw %}|
-|Array| recent_orders|{% raw %}<code>[{"order_id": 1, "order_datetime": "2025-04-13T08:30:00Z", "total": 53}, {"order_id": 2, "order_datetime": "2025-09-13T08:30:00Z", "total": 48}]</code>{% endraw %}|
+|Array (of objects)| order_history|{% raw %}<code>[{"order_id": 1, "order_datetime": "2025-04-13T08:30:00Z", "total": 53}, {"order_id": 2, "order_datetime": "2025-09-13T08:30:00Z", "total": 48}]</code>{% endraw %}|
 |Time (in UTC) | last_purchase_date|{% raw %}<code>2025-12-25T08:15:30:250-0800</code>{% endraw %}|
 |Object (flattened) | user_profile|{% raw %}<code>{<br>&emsp;"first_name": "{{user.first_name}}",<br>&emsp;"last_name": "{{user.last_name}}",<br>&emsp;"email": "{{user.email}}",<br>&emsp;"loyalty_points": {{user.loyalty_points}},<br>&emsp;"preferred_categories": {{user.preferred_categories}}<br>}</code>{% endraw %} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
