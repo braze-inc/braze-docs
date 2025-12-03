@@ -97,9 +97,14 @@ Context variables have the same expected formats for data types as [custom event
 |Number| credit_score |{% raw %}<code>740{% endraw %}|
 |String| product_name |{% raw %}<code>green_tea</code>{% endraw %} |
 |Array| favorite_products|{% raw %}<code>["wireless_headphones", "smart_homehub", "fitness_tracker_swatch"]</code>{% endraw %}|
+|Array of objects| pets|{% raw %}<code>[{"id": 1, "type": "dog", "breed": "beagle", "name": "Gus"}, {"id": 2, "type": "cat", "breed": "calico", "name": "Gerald"}]</code>{% endraw %}|
 |Time (in UTC) | last_purchase_date|{% raw %}<code>2025-12-25T08:15:30:250-0800</code>{% endraw %}|
 |Object (flattened) | user_profile|{% raw %}<code>{<br>&emsp;"first_name": "{{user.first_name}}",<br>&emsp;"last_name": "{{user.last_name}}",<br>&emsp;"email": "{{user.email}}",<br>&emsp;"loyalty_points": {{user.loyalty_points}},<br>&emsp;"preferred_categories": {{user.preferred_categories}}<br>}</code>{% endraw %} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+### Arrays and arrays of objects
+
+When the array type is used, the system attempts to parse the value as JSON, which allows arrays of objects to be successfully created. If the objects inside of your arrays are not valid JSON, the result will be a simple array of strings. Use `as_json_string` to produce the elements of the array when needed.
 
 By default, the time data type is in UTC. If you use a string data type to store a time value, you can define the time as a different time zone like PST. 
 
