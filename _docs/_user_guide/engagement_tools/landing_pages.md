@@ -29,6 +29,25 @@ Before you can access, create, and publish landing pages, you either need admini
 
 {% multi_lang_include drag_and_drop/drag_and_drop_access.md variable_name='dnd editors' %}
 
+## Adding Google Analytics or Google Tag Manager to a landing page
+
+To add Google Analytics or Google Tag Manager tracking to your landing pages, you must create a data layer before implementing the following tracking code.
+
+```json
+<script>
+window.dataLayer = window.dataLayer || [];
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-XXXXXX');</script>
+<!-- End Google Tag Manager -->
+```
+
+For more information about installation, refer to [Google's documentation](https://developers.google.com/tag-platform/tag-manager/datalayer#installation).
+
 ## Frequently asked questions
 
 ### What's the maximum size for landing pages?
@@ -46,18 +65,3 @@ Yes. Use the **Custom Code** block in the drag-and-drop editor to add or edit HT
 ### Can I create a webhook inside a landing page?
 
 No, this isn't currently supported.
-
-### How can I add Google Analytics or Google Tag Manager to a landing page?
-
-You can add Google Analytics or Google Tag Manager tracking to your landing pages by using the **Custom Code** block in the drag-and-drop editor. The location of the Custom Code block in your page determines where the tracking code is inserted in the HTML.
-
-For Tag Manager web page installations, you must create a data layer before implementing the tracking code. For more information, refer to Google's documentation on [the data layer and installation](https://developers.google.com/tag-platform/tag-manager/datalayer#installation).
-
-To add tracking code:
-
-1. When creating or editing a landing page, drag a **Custom Code** block to your page. For Google Analytics or Tag Manager scripts, place the block near the top of your page to ensure the tracking code loads early.
-2. Paste your Google Analytics or Google Tag Manager tracking code into the block.
-3. If using Google Tag Manager, make sure your code includes the data layer initialization (typically `dataLayer = [];`) before the Tag Manager script.
-
-The **Custom Code** block supports HTML, CSS, and JavaScript, allowing you to implement tracking pixels and other analytics tools.
-
