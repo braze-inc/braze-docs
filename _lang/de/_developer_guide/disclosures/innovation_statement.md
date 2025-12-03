@@ -2,6 +2,7 @@
 nav_title: Innovationserklärung
 article_title: Innovationserklärung
 description: "In diesem Referenzartikel finden Sie die Innovationserklärung von Braze."
+alias: /innovation_statement/
 noindex: true
 layout: redirect
 redirect_to: https://www.braze.com/docs/developer_guide/disclosures/innovation_statement
