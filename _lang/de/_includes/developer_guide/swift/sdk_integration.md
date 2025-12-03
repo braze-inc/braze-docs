@@ -360,7 +360,7 @@ Die Standard-Protokollebene für das Braze Swift SDK ist `.error`- dies ist auch
 
 | Schnell       | Objective-C              | Beschreibung                                                  |
 | ----------- | ------------------------ | ------------------------------------------------------------ |
-| `.debug`    | `BRZLoggerLevelDebug`    | (Standard) Debugging-Informationen protokollieren + `.info` + `.error`.    |
+| `.debug`    | `BRZLoggerLevelDebug`    | Debugging-Informationen protokollieren + `.info` + `.error`.              |
 | `.info`     | `BRZLoggerLevelInfo`     | Allgemeine SDK-Informationen protokollieren (Nutzer:innen-Änderungen, etc.) + `.error`. |
 | `.error`    | `BRZLoggerLevelError`    | Fehler protokollieren.                                                  |
 | `.disabled` | `BRZLoggerLevelDisabled` | Es erfolgt keine Protokollierung.                                           |

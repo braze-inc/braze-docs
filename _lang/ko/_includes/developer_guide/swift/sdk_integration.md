@@ -360,7 +360,7 @@ Braze Swift 소프트웨어 개발 키트의 기본값 로그 수준은 `.error`
 
 | Swift       | Objective-C              | 설명                                                  |
 | ----------- | ------------------------ | ------------------------------------------------------------ |
-| `.debug`    | `BRZLoggerLevelDebug`    | (기본값) 로그 디버깅 정보 + `.info` + `.error`.    |
+| `.debug`    | `BRZLoggerLevelDebug`    | 로그 디버깅 정보 + `.info` + `.error`.                      |
 | `.info`     | `BRZLoggerLevelInfo`     | 일반 SDK 정보(사용자 변경 사항 등) + `.error`를 기록합니다. |
 | `.error`    | `BRZLoggerLevelError`    | 로그 오류.                                                  |
 | `.disabled` | `BRZLoggerLevelDisabled` | 로깅이 발생하지 않습니다.                                           |

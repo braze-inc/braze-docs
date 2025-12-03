@@ -360,7 +360,7 @@ Le niveau de journalisation par défaut pour le SDK Braze Swift est `.error`- c'
 
 | Swift       | Objectif-C              | Description                                                  |
 | ----------- | ------------------------ | ------------------------------------------------------------ |
-| `.debug`    | `BRZLoggerLevelDebug`    | (Par défaut) Enregistre les informations de débogage + `.info` + `.error`.    |
+| `.debug`    | `BRZLoggerLevelDebug`    | Enregistre les informations de débogage + `.info` + `.error`.              |
 | `.info`     | `BRZLoggerLevelInfo`     | Enregistrer des informations générales sur le SDK (changements au niveau des utilisateurs, etc.) + `.error`. |
 | `.error`    | `BRZLoggerLevelError`    | Erreurs de journalisation.                                                  |
 | `.disabled` | `BRZLoggerLevelDisabled` | Aucun enregistrement n'a lieu.                                           |
