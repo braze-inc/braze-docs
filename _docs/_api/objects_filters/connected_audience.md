@@ -34,7 +34,7 @@ This object is composed of either a single connected audience filter or several 
 
 ## Connected audience filters
 
-Combining multiple custom attribute filters creates a connected audience filter when combined with `AND` and `OR` operators.
+Combining multiple custom attribute filters with `AND` and `OR` operators creates a connected audience filter.
 
 ### Custom attribute filter
 
