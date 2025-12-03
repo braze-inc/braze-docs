@@ -47,3 +47,17 @@ Yes. Use the **Custom Code** block in the drag-and-drop editor to add or edit HT
 
 No, this isn't currently supported.
 
+### How can I add Google Analytics or Google Tag Manager to a landing page?
+
+You can add Google Analytics or Google Tag Manager tracking to your landing pages by using the **Custom Code** block in the drag-and-drop editor. Add the tracking code within the `<head>` or `<body>` section of your landing page.
+
+For Tag Manager web page installations, you must create a data layer. For more information, refer to Google's documentation on [the data layer and installation](https://developers.google.com/tag-platform/tag-manager/datalayer#installation).
+
+To add tracking code:
+
+1. When creating or editing a landing page, drag a **Custom Code** block to your page.
+2. Paste your Google Analytics or Google Tag Manager tracking code into the block.
+3. Make sure your tracking code includes the necessary data layer initialization if using Google Tag Manager.
+
+The **Custom Code** block supports HTML, CSS, and JavaScript, allowing you to implement tracking pixels and other analytics tools.
+
