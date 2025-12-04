@@ -39,7 +39,7 @@ If the test overlaps with a step type that isn't listed above, the unsupported s
 
 ### Canvas step details
 
-To view more details for entrance criteria, select **See more**. Steps with segmentation will show the met or unmet criteria. Messages will also show this for delivery validations and channel eligibility. Message steps will show which channels were sent versus not sent.
+To view more details for the entrance criteria, select **See more**. Steps with segmentation will show the met or unmet criteria. Messages will also show this for delivery validations and channel eligibility. Message steps will show which channels were sent versus not sent.
 
 ### Liquid
 
@@ -49,11 +49,13 @@ If your preview sends the last step of your user journey instead of aborting, th
 
 ## Previews for timing
 
-For scheduled Canvases, the test user will enter at the next scheduled entrance time. For action-based Canvases with start dates, the test user will enter on the start date and time. 
+For scheduled Canvases, the test user will enter at the next scheduled entrance time. For action-based Canvases with start dates, the test user will enter at the start date and time. 
 
-While the default starts times still apply, the entrance time is configurable in all instances, meaning you can simulate a date in the past or future. However, you can't test before the start date or after end date for the Canvas.
+While the default start times still apply, the entrance time is configurable in all instances, meaning you can simulate a date in the past or future. However, you can't test before the start date or after the end date for the Canvas.
 
 Message and Delay steps show the time at which a user would progress or receive the message without needing to reconfigure the delays. Note that while the steps will indicate whether Intelligent Timing is used, this preview of the user path does not calculate an estimate for a test user.
+
+For Canvases with an action trigger like "change in custom attribute value," Braze will attempt to simulate the change by temporarily setting the user's attribute in the trigger to be blank **only for the test run of the Canvas** (this doesn't affect the user profile). This is meant to test that the attribute changes from its current value.
 
 ## When users enter and exit
 
@@ -63,7 +65,7 @@ Events, API triggers, custom attributes, and Canvas entry properties are applied
 
 ### Consideration
 
-If you test an Action Path with actions that correspond to exit criteria (including event properties), the exit criteria will be triggered and the test run will end. If you test a Message step that corresponds to exit criteria, the exit criteria will be triggered and the test run will end. 
+If you test an Action Path with actions that correspond to exit criteria (including event properties), the exit criteria will be triggered, and the test run will end. If you test a Message step that corresponds to exit criteria, the exit criteria will be triggered, and the test run will end. 
 
 At this point, you can't select a specific event or property within an action path to trigger exit criteria (only the path as a whole). If a user could potentially meet multiple exit criteria, the first one that is processed and that they meet is shown as the result.
 
@@ -99,11 +101,11 @@ Webhooks will execute when test messages are sent, but not during the test run. 
 
 ## Use case
 
-In this scenario, the Canvas is set up to target users who haven't had a session in an app. This journey includes a Message step with a welcome email, a Delay step set for one day, and an Audience Paths step that splits into two paths: users with at least one session, and everyone else. Depending on which audience path a user falls in, the subsequent Message step will be sent.
+In this scenario, the Canvas is set up to target users who haven't had a session in an app. This journey includes a Message step with a welcome email, a Delay step set for one day, and an Audience Paths step that splits into two paths: users with at least one session, and everyone else. Depending on which audience path a user falls into, the subsequent Message step will be sent.
 
 ![An example of a Canvas with a Message step, Delay step, Audience Paths step, and two Message steps.]({% image_buster /assets/img/preview_user_path_example.png %}){:style="max-width:70%"}
 
 Because our test user meets the Canvas entry criteria, they can enter the Canvas and go through the user journey. However, because our test user hasn't opened the app in the last calendar day, they will continue down the "Everyone else" path and receive a push notification that reads: "Last chance! Complete your first task for an exclusive bonus."
 
-![The "Test Results" section that shows the test user has met the entry criteria and provides a summary of their journey, including which steps they were sent.]({% image_buster /assets/img/preview_user_path_results_example.png %})
+![The "Test Results" section shows that the test user has met the entry criteria and provides a summary of their journey, including which steps they were sent.]({% image_buster /assets/img/preview_user_path_results_example.png %})
 
