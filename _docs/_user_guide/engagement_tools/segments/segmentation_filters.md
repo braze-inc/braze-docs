@@ -22,6 +22,7 @@ glossary_tags:
   - name: Retargeting
   - name: Channel subscription behavior
   - name: Purchase behavior
+  - name: eCommerce
   - name: Demographic attributes
   - name: App
   - name: Uninstall
@@ -358,6 +359,46 @@ glossaries:
     description: Segments your users by the amount of money that they have spent in your app in the last specified number of calendar days between 1 and 30. This amount will only include the sum of the last 50 purchases. <br> <a href="/docs/x-in-y-behavior/">Learn more about X-in-Y behavior here.</a>
     tags:
       - Purchase behavior
+  - name: Last order placed (last 730 days)
+    description: <b>BETA:</b> Date of the user's last placed order, based on the <a href="/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events">ecommerce recommended event</a> for order placed (workspaces not tracking eCommerce events will not have data for this filter). Users are evaluated for this filter once per day, and the maximum lookback window is the past 2 years.
+    tags:
+      - eCommerce
+  - name: Total orders count (last 730 days)
+    description: <b>BETA:</b> Net total count of a user's orders within the last 2 years, based on the <a href="/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events">ecommerce recommended event</a> for order placed (workspaces not tracking eCommerce events will not have data for this filter). This count excludes any canceled orders, which must be tracked using the <a href="/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events">ecommerce recommended event</a> for order canceled. Users are evaluated for this filter once per day.
+    tags:
+      - eCommerce
+  - name: Total orders count
+    description: <b>BETA:</b> Net total count of a user's orders across their lifetime, based on the <a href="/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events">ecommerce recommended event</a> for order placed (workspaces not tracking eCommerce events will not have data for this filter). This count excludes any canceled orders, which must be tracked using the <a href="/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events">ecommerce recommended event</a> for order canceled. Users are evaluated for this filter in real time.
+    tags:
+      - eCommerce
+  - name: Total cancelled orders count (last 730 days)
+    description: <b>BETA:</b> Total count of orders a user cancelled within the last 2 years, based on the <a href="/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events">ecommerce recommended event</a> for order placed (workspaces not tracking eCommerce events will not have data for this filter). Users are evaluated for this filter once per day.
+    tags:
+      - eCommerce
+  - name: Customer lifetime value (last 730 days)
+    description: <b>BETA:</b> CLTV is calculated by the total revenue a customer is expected to generate over their purchasing history with your brand. It is calculated by looking at the past 730 days and taking the Average Order Value (AOV), multiplying it by the total number of orders placed, and factoring in the customer's active purchasing duration (the time span between their very first and their most recent order). This filter uses data tracked in <a href="/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events">ecommerce recommended event</a>s (workspaces not tracking eCommerce events will not have data for this filter). Users are evaluated for this filter once per day.
+    tags:
+      - eCommerce
+  - name: Total refund value (last 730 days)
+    description: <b>BETA:</b> Total value of refunds granted to user over the last 2 years, based on the <a href="/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events">ecommerce recommended event</a> for order refunded (workspaces not tracking eCommerce events will not have data for this filter). Users are evaluated for this filter once per day.
+    tags:
+      - eCommerce
+  - name: Total refund value
+    description: <b>BETA:</b> Total value of refunds granted to user across their lifetime, based on the <a href="/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events">ecommerce recommended event</a> for order refunded (workspaces not tracking eCommerce events will not have data for this filter). Users are evaluated for this filter in realtime.
+    tags:
+      - eCommerce
+  - name: Total revenue (last 730 days)
+    description: <b>BETA:</b> Total revenue generated from a user's orders over the last 2 years, calculated based on subtracting the revenue associated with the <a href="/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events">ecommerce recommended event</a> for order refunded from the revenue associated with the eCommerce event for order placed (workspaces not tracking eCommerce events will not have data for this filter). Users are evaluated for this filter once per day.
+    tags:
+      - eCommerce
+  - name: Total revenue
+    description: <b>BETA:</b> Total revenue generated from a user's orders across the user's lifetime, calculated based on subtracting the revenue associated with the <a href="/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events">ecommerce recommended event</a> for order refunded from the revenue associated with the eCommerce event for order placed (workspaces not tracking eCommerce events will not have data for this filter). Users are evaluated for this filter in realtime.
+    tags:
+      - eCommerce
+  - name: Average order value (last 730 days)
+    description: <b>BETA:</b> The average (mean) value of a user's orders over the last 2 years, based on the <a href="/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events">ecommerce recommended event</a> for order placed (workspaces not tracking eCommerce events will not have data for this filter). Users are evaluated for this filter once per day.
+    tags:
+      - eCommerce
   - name: Country
     description: Segments your users by their last indicated country location.
     tags:
