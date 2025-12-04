@@ -177,7 +177,7 @@ As of April 2024, to create or update promotion code lists, Braze users need the
 |Workspace|Launch Preference Centers|Allows users to launch [preference centers]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/overview/).|
 |Workspace|Manage Apps|Allows users to edit **App Settings**.|
 |Workspace|Manage Catalogs Dashboard Permission|Allows users to create and manage catalogs.|
-|Workspace|Manage Dashboard Users| Allows non-admins the ability to view, edit, and manage the **Company Users** page, and manage the dashboard users in their workspace by modifying the permissions of any user, including themselves. Users with this permission can’t delete users (only administrators can delete users).|
+|Workspace|Manage Dashboard Users| Allows non-admins the ability to view, edit, and manage the **Company Users** page, and manage the dashboard users in their workspace by modifying the permissions of any user, including themselves. Users with this permission can’t delete users (only administrators can delete users).<br><br>This corresponds to the legacy permission `MANAGE_DEVELOPERS_AND_PERMISSIONS`.|
 |Workspace|Manage Email Settings|Allows users to save email configuration changes (**Settings** > **Email Preferences**).|
 |Workspace|Manage Events, Attributes, Purchases|Allows users to edit custom attributes (users without this capability can still view custom attributes), edit and view properties of custom events, and edit and view properties of products under **Data Settings**.|
 |Workspace|Manage External Integrations|Allows access to all tabs under **Technology Partners**, ability to sync Braze with other platforms, and access to manage [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/cloud_ingestion/).|
@@ -185,7 +185,7 @@ As of April 2024, to create or update promotion code lists, Braze users need the
 |Workspace|Manage Media Library Assets|Allows users to add, edit, and delete media library assets.|
 |Workspace|Manage Subscription Groups|Allows users to create and manage subscription groups.|
 |Workspace|Manage Tags|Allows users to edit or delete tags (under **Tag Management**). You do not need this permission to add tags to campaigns or segments.|
-|Workspace|Manage Teams|Allows users to manage **Internal Teams**. The ability to select this permission depends on your contract with Braze.|
+|Workspace|Manage Teams|Allows users to manage **Internal Teams**. The ability to select this permission depends on your contract with Braze.<br><br>This corresponds to the legacy permission `MANAGE_TERRITORIES`.|
 |Workspace|Manage Transformations|Allows users to create and manage Data Transformations.|
 |Workspace|Send Campaigns, Canvases|Allows users to edit, archive, and stop campaigns and Canvases, create campaigns, and launch Canvases. |
 |Workspace|View Billing Details|Allows users to view subscriptions and billing.|
