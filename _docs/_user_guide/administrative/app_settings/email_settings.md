@@ -121,7 +121,7 @@ SSL enablement wraps the URL of the tracking pixel with HTTPS instead of HTTP. I
 ## List-unsubscribe header {#list-unsubscribe}
 
 {% alert note %}
-Beginning on February 15, 2024, new companies will have the list-unsubscribe header (with one-click unsubscribe) enabled by default.
+Since February 15, 2024, new companies have the list-unsubscribe header (with one-click unsubscribe) enabled by default.
 {% endalert %}
 
 Using a list-unsubscribe header allows your recipients to unsubscribe easily from marketing emails by displaying an **Unsubscribe** button within the mailbox UI, and not the message body.
