@@ -32,7 +32,7 @@ Because this data isn't linked to identifiable users, it can't be used to retarg
 
 ## Merging duplicate user profiles
 
-Braze doesn't automatically merge users based on attributes such as email or phone when a landing page form is submitted. If a form is submitted with an email or phone number that matches an existing user profile, a separate user profile will be created.
+Braze doesn't automatically merge users based on attributes, such as email or phone, when a landing page form is submitted. If a form is submitted with an email or phone number that matches an existing user profile, Braze creates a separate user profile.
 
 To merge duplicate user profiles, you can:
 
