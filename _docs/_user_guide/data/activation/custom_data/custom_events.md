@@ -217,7 +217,7 @@ The event property segmentation filters include:
 
 ![A filter group that has 'Abandoned Cart' with property 'number of items' and value 2 more than 1 time in the last 30 calendar days.]({% image_buster /assets/img/nested_object3.png %})
 
-Data is only logged for a given event property after it has been enabled by your customer success manager, and event properties are only available from that date moving forward.
+Data is only logged for a given event property after it has been enabled, and event properties are only available from that date moving forward.
 
 ##### Data points
 
@@ -242,7 +242,7 @@ Custom event properties are designed to help you increase targeting precision an
 
 You can segment based on the values of event properties in two ways:
 
-1. **Within 30 days:** Braze support personnel can enable event property segmentation based on the frequency and recency of specific event property values within Braze segments. If you'd like to leverage event properties within segments, contact your Braze account executive or customer success manager. This option will impact data usage.<br><br>
+1. **Within 30 days:** You can use event property segmentation based on the frequency and recency of specific event property values within Braze segments. This option will impact data usage.<br><br>
 2. **Within and beyond 30 days:** To cover both short-term and long-term event property segmentation, you can use [Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/). This feature segments users based on custom events and event properties tracked within the past two years. This option won't impact data usage.
 
 Contact your Braze customer success manager for recommendations on the best approach depending on your specific needs.
