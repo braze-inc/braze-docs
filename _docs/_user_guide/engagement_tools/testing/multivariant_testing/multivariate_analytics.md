@@ -78,7 +78,7 @@ The relationships between custom events and message preferences are displayed in
 
 ![]({% image_buster /assets/img_archive/ab_analytics_pv_3.png %})
 
-If the test can't find a meaningful relationship between custom events and variant preferences, the test will fall back to a session-based analysis method.
+If the test can't find a meaningful relationship between custom events and path preferences, the test falls back to a session-based analysis method, and no custom event data tables are shown.
 
 {% details Fallback analysis method %}
 
