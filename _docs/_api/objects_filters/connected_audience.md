@@ -9,7 +9,7 @@ description: "This article explains the different components of the connected au
 
 # Connected audience object
 
-> A connected audience object is a selector that identifies the audience to send the message to.
+> A connected audience object identifies the audience of your message. For example, if you use custom attribute arrays to track every category and TV show that a user has favorited, you can use connected audiences to automatically send a push notification or email to anyone who has favorited a show whenever a new episode is released—without needing to set up a segment for each show.
 
 This object is composed of either a single connected audience filter or several connected audience filters in a logical expression using either `AND` or `OR` operators.
 
@@ -34,7 +34,7 @@ This object is composed of either a single connected audience filter or several 
 
 ## Connected audience filters
 
-Combining multiple custom attribute filters will create a connected audience filter, which will create a connected audience filter when combined with `AND` and `OR` operators.
+Combining multiple custom attribute filters with `AND` and `OR` operators creates a connected audience filter.
 
 ### Custom attribute filter
 
@@ -142,7 +142,7 @@ This filter allows you to segment based on a user's email subscription status.
 
 ### Last used app filter
 
-This filter allows you to segment based on when was the last time the user used the App. These filters contain two fields:
+This filter allows you to segment based on when the user last used the app. These filters contain two fields:
 
 #### Filter body
 ```json
