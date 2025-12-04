@@ -46,7 +46,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 ```
 
-For details on implementing Google Tag Manager, refer to [Google's documentation](https://developers.google.com/tag-platform/tag-manager/datalayer#installation).
+For details on implementing Google Tag Manager, see [Google's documentation](https://developers.google.com/tag-platform/tag-manager/datalayer#installation).
 
 ## Frequently asked questions
 
