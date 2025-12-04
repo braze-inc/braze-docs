@@ -23,6 +23,10 @@ The following table describes how you can use each editor block type.
 | Checkbox Group| Users can select from multiple choices presented. Values are either set or added to a defined array custom attribute. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
+{% alert note %}
+When using a radio button to save a value as a custom attribute, the custom attribute must be a string. Custom attributes with other data types (such as a number for an NPS survey) do not save to the user profile.
+{% endalert %}
+
 ## Properties
 
 Details for each editor block's properties are provided in the following tables.
