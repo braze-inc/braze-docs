@@ -185,7 +185,7 @@ If you see `object_prefix` in your API response and no URL to download the data,
 
 ## Example user export file output
 
-User export object (Braze includes the least data possible-if a field is missing from the object, it should be assumed to be null or empty):
+User export object (Braze includes the least data possible&#8212;if a field is missing from the object, it should be assumed to be null or empty):
 
 {% tabs %}
 {% tab All fields %}
