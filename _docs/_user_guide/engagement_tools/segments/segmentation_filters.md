@@ -371,8 +371,8 @@ glossaries:
     description: <b>BETA:</b> Net total count of a user's orders across their lifetime, based on the <a href="/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events">ecommerce recommended event</a> for order placed (workspaces not tracking eCommerce events will not have data for this filter). This count excludes any canceled orders, which must be tracked using the <a href="/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events">ecommerce recommended event</a> for order canceled. Users are evaluated for this filter in real time.
     tags:
       - eCommerce
-  - name: Total cancelled orders count (last 730 days)
-    description: <b>BETA:</b> Total count of orders a user cancelled within the last 2 years, based on the <a href="/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events">ecommerce recommended event</a> for order placed (workspaces not tracking eCommerce events will not have data for this filter). Users are evaluated for this filter once per day.
+  - name: Total canceled orders count (last 730 days)
+    description: <b>BETA:</b> Total count of orders a user canceled within the last 2 years, based on the <a href="/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events">ecommerce recommended event</a> for order placed (workspaces not tracking eCommerce events will not have data for this filter). Users are evaluated for this filter once per day.
     tags:
       - eCommerce
   - name: Customer lifetime value (last 730 days)
@@ -384,7 +384,7 @@ glossaries:
     tags:
       - eCommerce
   - name: Total refund value
-    description: <b>BETA:</b> Total value of refunds granted to user across their lifetime, based on the <a href="/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events">ecommerce recommended event</a> for order refunded (workspaces not tracking eCommerce events will not have data for this filter). Users are evaluated for this filter in realtime.
+    description: <b>BETA:</b> Total value of refunds granted to user across their lifetime, based on the <a href="/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events">ecommerce recommended event</a> for order refunded (workspaces not tracking eCommerce events will not have data for this filter). Users are evaluated for this filter in real time.
     tags:
       - eCommerce
   - name: Total revenue (last 730 days)
@@ -392,7 +392,7 @@ glossaries:
     tags:
       - eCommerce
   - name: Total revenue
-    description: <b>BETA:</b> Total revenue generated from a user's orders across the user's lifetime, calculated based on subtracting the revenue associated with the <a href="/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events">ecommerce recommended event</a> for order refunded from the revenue associated with the eCommerce event for order placed (workspaces not tracking eCommerce events will not have data for this filter). Users are evaluated for this filter in realtime.
+    description: <b>BETA:</b> Total revenue generated from a user's orders across the user's lifetime, calculated based on subtracting the revenue associated with the <a href="/docs/user_guide/data/activation/custom_data/recommended_events/ecommerce_events">ecommerce recommended event</a> for order refunded from the revenue associated with the eCommerce event for order placed (workspaces not tracking eCommerce events will not have data for this filter). Users are evaluated for this filter in real time.
     tags:
       - eCommerce
   - name: Average order value (last 730 days)
