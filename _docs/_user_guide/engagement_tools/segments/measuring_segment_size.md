@@ -28,6 +28,13 @@ For a user to be listed as reachable through a certain channel, the user must ha
 * A valid email address or push token associated with their profile; and
 * Opted in or subscribed to your app.
 
+The following filters are applied for each channel when determining reachable users:
+
+* **Email:** Email Available = True
+* **iOS Push:** Foreground Push Enabled iOS = True
+* **Android Push:** Foreground Push Enabled Android = True
+* **Web Push:** Foreground Push Enabled Web = True
+
 A single user may belong to different reachable user groups. For example, a user might have both a valid email address and valid Android push token and be opted in to both, but have no associated iOS push token. The gap between the total reachable users and the sum of the different channels are the number of users who qualified for the segment but they are not reachable through those communication channels.
 
 ## Statistics for segment size
@@ -74,6 +81,13 @@ In cases where the _Total_ is higher than the sum of the channels, the gap repre
 For a user to be listed as reachable through a certain channel, the user must have:
 - A valid email address or push token associated with their profile, and
 - Opted-in or subscribed to your app.
+
+The following filters are applied for each channel when determining reachable users:
+
+- **Email:** Email Available = True
+- **iOS Push:** Foreground Push Enabled iOS = True
+- **Android Push:** Foreground Push Enabled Android = True
+- **Web Push:** Foreground Push Enabled Web = True
 
 ## Calculating exact statistics 
 
