@@ -84,9 +84,9 @@ The following filters are applied for each channel when determining reachable us
 | Email | **Email Available** is true |
 | iOS Push | **Foreground Push Enabled** for iOS is true |
 | Android Push | **Foreground Push Enabled** for Android is true |
-| Web Push | **Foreground Push Enabled** for web is true |
+| Web Push | **Foreground Push Enabled** for Web is true |
 | SMS | **Subscription Group** is any SMS subscription group |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation }
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Calculating exact statistics 
 
