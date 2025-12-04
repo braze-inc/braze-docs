@@ -64,3 +64,27 @@ No, you currently can only connect one subdomain to a workspace.
 
 No, you can't use subdomains that are already in use. While these subdomains are valid, they can't be used for landing pages if they are already assigned to other purposes or have DNS records that conflict with the required CNAME records.
 
+### Why is my custom domain stuck on "Connecting" despite valid DNS records?
+
+If your custom domain shows all DNS records as "Connected" but the domain status remains on "Connecting" for more than four hours, your organization may be using CAA (Certificate Authority Authorization) records or Cloudflare zone holds that prevent Braze from securing your page.
+
+#### CAA records
+
+CAA records restrict which certificate authorities can issue SSL certificates for your domain. If your CAA records don't include LetsEncrypt, Braze (through Cloudflare) can't issue the required SSL certificate.
+
+To resolve this, ask your IT team to add a CAA record to your subdomain with the following values:
+- **Record type:** CAA
+- **Value:** `0 issue "letsencrypt.org"`
+
+For more information, refer to [LetsEncrypt's CAA documentation](https://letsencrypt.org/docs/caa/).
+
+#### Cloudflare zone holds
+
+If your organization uses Cloudflare, a zone hold security feature may be preventing Braze from creating your custom domain.
+
+To resolve this, ask your IT team to temporarily release the zone hold. For more information, refer to [Cloudflare's zone hold documentation](https://developers.cloudflare.com/fundamentals/account/account-security/zone-holds/#release-zone-holds).
+
+#### Restarting the validation process
+
+After resolving either issue, delete and recreate your custom domain in the Braze dashboard to restart the validation process.
+
