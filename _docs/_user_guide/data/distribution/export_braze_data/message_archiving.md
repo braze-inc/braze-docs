@@ -52,7 +52,7 @@ This section guides you through setting up message archiving for your workspace.
 If you haven't done so already, connect a cloud storage bucket to Braze. For steps, refer to our partner documentation on [Amazon S3]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/amazon_s3/), [Azure Blob Storage]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/microsoft_azure_blob_storage_for_currents/) or [Google Cloud Storage]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/google_cloud_storage_for_currents/).
 
 {% alert note %}
-You don't need to set up Currents for message archiving, so you can skip that preqrequisite in the partner documentation.
+You don't need to set up Currents for message archiving, so you can skip that prerequisite in the partner documentation.
 {% endalert %}
 
 ### Step 2: Select channels for message archiving

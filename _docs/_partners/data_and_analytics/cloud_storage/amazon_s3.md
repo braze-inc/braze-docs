@@ -81,7 +81,7 @@ Different policies are required for Currents and Dashboard Data Export. `s3:GetO
 Specify a policy name of your choice, and input the following code snippet into the **Policy Document** section. Be sure to replace `INSERTBUCKETNAME` with your bucket name. Without these permissions the integration will fail a credentials check and not be created.
 
 {% alert note %}
-If you're only setting up message archiving, use the code snippet within the **Dashboard Data Export** tab. 
+If you're only setting up message archiving, use the code snippet in the **Dashboard Data Export** tab. 
 {% endalert %}
 
 {% tabs %}
