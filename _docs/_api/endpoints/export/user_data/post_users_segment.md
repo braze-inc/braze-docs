@@ -22,7 +22,7 @@ When using this endpoint, note the following:<br><br>1. The `fields_to_export` f
 
 User data is exported as multiple files of user JSON objects separated by new lines (such as one JSON object per line). Data is exported to an automatically generated URL or to an S3 bucket if this integration is already set up. If the export is successful, you'll receive a .txt file, which contains a compressed archive ZIP or GZIP file. If the export fails, you'll receive an email notification.
 
-Note that a company may run at most one export per segment using this endpoint at a given time. Wait for your export to complete before trying again. 
+Note that a company may run at most one export per segment using this endpoint at a given time. Wait for your export to complete before trying again.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#cfa6fa98-632c-4f25-8789-6c3f220b9457 {% endapiref %}
 
