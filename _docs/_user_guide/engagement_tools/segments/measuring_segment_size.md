@@ -25,15 +25,8 @@ It is possible that the number of total users is different than the number of us
 ![A table displaying total reachable users broken down by users reachable by email, iOS push, Android push, web push, and Kindle push.]({% image_buster /assets/img_archive/segmenter_reachable_users.png %})
 
 For a user to be listed as reachable through a certain channel, the user must have both:
-* A valid email address or push token associated with their profile; and
-* Opted in or subscribed to your app.
-
-The following filters are applied for each channel when determining reachable users:
-
-* **Email:** Email Available = True
-* **iOS Push:** Foreground Push Enabled iOS = True
-* **Android Push:** Foreground Push Enabled Android = True
-* **Web Push:** Foreground Push Enabled Web = True
+* A valid email address or push token associated with their profile, and
+* Opted-in or subscribed to your app.
 
 A single user may belong to different reachable user groups. For example, a user might have both a valid email address and valid Android push token and be opted in to both, but have no associated iOS push token. The gap between the total reachable users and the sum of the different channels are the number of users who qualified for the segment but they are not reachable through those communication channels.
 
@@ -82,12 +75,18 @@ For a user to be listed as reachable through a certain channel, the user must ha
 - A valid email address or push token associated with their profile, and
 - Opted-in or subscribed to your app.
 
-The following filters are applied for each channel when determining reachable users:
+#### Applied filters for channel-specific reachable users
 
-- **Email:** Email Available = True
-- **iOS Push:** Foreground Push Enabled iOS = True
-- **Android Push:** Foreground Push Enabled Android = True
-- **Web Push:** Foreground Push Enabled Web = True
+The following filters are applied for each channel when determining reachable users.
+
+| Channel | Filter |
+| --- | --- |
+| Email | **Email Available** is true |
+| iOS Push | **Foreground Push Enabled** for iOS is true |
+| Android Push | **Foreground Push Enabled** for Android is true |
+| Web Push | **Foreground Push Enabled** for web is true |
+| SMS | **Subscription Group** is any SMS subscription group |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation }
 
 ## Calculating exact statistics 
 
