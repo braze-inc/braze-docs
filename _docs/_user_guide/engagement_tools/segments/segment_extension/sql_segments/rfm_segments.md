@@ -35,7 +35,7 @@ Purchase events must be enabled to use RFM SQL segments because the monetary val
 ![Modal with the option to create a catalog segment for events, purchases, or RFM segments.]({% image_buster /assets/img/segment/select_rfm_segment.png %}){: style="max-width:80%" }
 
 {: start="3"}
-3. In the **Variables** panel, select your **Time Range** to specify the time period of purchase data to analyze. You can specify up to the past 60 days. The time range you select will be the time range that user behavior data gets pulled from and depends on your campaign goals.
+3. In the **Variables** panel, select your **Time Range** to specify the time period of purchase data to analyze. You can specify up to the past 60 days. The time range you select is the time range that user behavior data gets pulled from and depends on your campaign goals.
 
 | Time range field | Description | Use case |
 | --- | --- | --- |
@@ -46,7 +46,7 @@ Purchase events must be enabled to use RFM SQL segments because the monetary val
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 
 {: start="4"}
-4. Select the generated [RFM groups](#rfm-groups) to include in your segment. If you select multiple groups, your segment will include users who are part of any of the selected groups.
+4. Select the generated [RFM groups](#rfm-groups) to include in your segment. If you select multiple groups, your segment includes users who are part of any of the selected groups.
 
 ![Variables panel with the "Champions" and "Loyal Users" RFM groups selected.]({% image_buster /assets/img/segment/rfm_groups.png %})
 
