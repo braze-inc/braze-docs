@@ -16,7 +16,7 @@ glossary_filter_text: "Select a category to narrow the glossary:"
 # channel to icon/fa or image mapping
 glossary_tags:
   - name: Segment or CSV membership
-  - name: Custom attributes
+  - name: Custom attribute
   - name: Custom events
   - name: Sessions
   - name: Retargeting
@@ -50,7 +50,7 @@ glossaries:
   - name: Custom Attributes
     description: Determines whether or not a user matches a custom recorded attribute value. <br><br>Time zone:<br>Company's Time Zone
     tags:
-      - Custom attributes
+      - Custom attribute
   - name: Created At
     description: Segments users by when their user profile was created. If a user was added by CSV or API, then this filter reflects the date they were added. If the user isn't added by CSV or API and has their first session tracked by the SDK, then this filter reflects the date of that first session.
     tags:
@@ -58,11 +58,11 @@ glossaries:
   - name: Nested Custom Attributes
     description: Attributes that are the properties of custom attributes.<br><br>When filtering a nested time custom attribute, you can choose to filter based on "Day of Year" or "Time". "Day of Year" checks only the month and day for comparison. "Time" compares the full timestamp, including the year.
     tags:
-      - Custom attributes
+      - Custom attribute
   - name: Day of Recurring Event
     description: This filter looks at the month and day of custom attribute with the data type of "date", but does not look at the year. This filter is useful for annual events.<br><br>Time zone&#58;<br>This filter adjusts for whatever time zones the user is in, so long as the message sends using the local time scheduling option; otherwise, this filter uses your company time zone.
     tags:
-      - Custom attributes
+      - Custom attribute
   - name: Custom Event
     description: Determines whether or not a user has performed a specially recorded event.<br><br> Example:<br>Activity completed with property activity_name.<br><br>Time zone:<br>UTC - Calendar Day = 1 calendar day looks at 24-48 hours of user history
     tags:
