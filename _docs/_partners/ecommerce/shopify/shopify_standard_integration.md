@@ -164,9 +164,9 @@ The next steps depend on your external ID selection:<br><br>
 
 ### Step 4.1: Create the `braze.external_id` metafield
 
-1. In your Shopify admin panel, go to **Settings** > **Metafields**.
+1. In your Shopify admin panel, go to **Settings** > **Metafields and metaobjects**.
 2. Select **Customers** > **Add definition**.
-3. For **Namespace and key**, enter `braze.external_id`.
+3. For **Name**, enter `braze.external_id`. Then, click on the auto-generated namespace and key (such as `custom.braze_external_id`) to edit it and change it to `braze.external_id`.
 4. For **Type**, select **ID Type**.
 
 After the metafield is created, populate it for your customers. We recommend the following approaches:
