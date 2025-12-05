@@ -35,7 +35,7 @@ By default, **Ranking** is off. When a user enters the action path and performs 
 
 When **Advanced users based on ranked order** is turned on, this means **Ranking** is on. So, all users will be held until the end of the evaluation window. At the end of the evaluation period, users will advance through the highest priority action group that they are eligible for at the end of the evaluation window. Users who do not perform any of the actions during the evaluation window will advance through the default **Everyone Else** group.
 
-Note that you can trigger an action path when a nested custom attribute object changes, but not for changes to object array data types.
+Note that you can trigger an action path when a nested custom attribute object changes, but not for arrays of nested custom attributes or changes to object array data types.
 
 #### In-app messages
 
