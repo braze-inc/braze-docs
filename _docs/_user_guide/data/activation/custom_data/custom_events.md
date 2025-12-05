@@ -217,7 +217,7 @@ The event property segmentation filters include:
 
 ![A filter group that has 'Abandoned Cart' with property 'number of items' and value 2 more than 1 time in the last 30 calendar days.]({% image_buster /assets/img/nested_object3.png %})
 
-Data is only logged for a given event property after it has been enabled, and event properties are only available from that date moving forward.
+Data is logged only for a given event property after you enable it, and event properties are available only from that date moving forward.
 
 ##### Data points
 
