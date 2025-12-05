@@ -16,7 +16,7 @@ toc_headers: h2
 
 > Use the Global Control Group to specify a percentage of all users who shouldn't receive any campaigns or Canvases, allowing you to analyze the overall impact of your messaging efforts over time. 
 
-By comparing the behavior of users who receive messaging with those who don't, you can better understand how your marketing campaigns and Canvases contribute to uplifted sessions and custom events.
+By comparing the behavior of users who receive messaging with those who don't, you can better understand how your marketing campaigns and Canvases contribute to an uplift in sessions and custom events.
 
 ## How the Global Control Group works
 
