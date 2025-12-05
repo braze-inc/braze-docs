@@ -48,7 +48,7 @@ You can also add this delay in the [Braze SDK]({{site.baseurl}}/developer_guide/
 ## Scenario 2: Using multiple API endpoints
 
 {% alert important %}
-We use asynchronous processing to maximize speed and flexibility. This means that when API calls are sent to us separately, we cannot guarantee that they will be processed in the order that was sent.
+We use asynchronous processing to maximize speed and flexibility. This means that when API calls are sent to us separately, we cannot guarantee that they will be processed in the order they were sent.
 {% endalert %}
 
 There are a few scenarios where multiple API endpoints can also result in this race condition, such as when:
