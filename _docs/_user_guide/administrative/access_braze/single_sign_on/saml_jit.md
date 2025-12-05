@@ -31,7 +31,7 @@ Have a Braze administrator do the following:
 4. Select the default permission set to assign to that new dashboard user. To learn how to create a permission set, see [Setting user permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/).
 6. Select **Save changes** at the bottom of the page
 7. In your SSO provider’s settings, add all users that need Braze access to your SSO provider's directory.
-8. Now users can sign up or log in.
+8. Instruct new users to access Braze through your IdP portal for their first login. This creates their account in Braze. After the initial IdP-initiated login, users will see the SAML single sign-on button when accessing the Braze dashboard directly.
 
 ## Frequently asked questions
 
@@ -41,6 +41,8 @@ After setting up JITP, you must [contact Support]({{site.baseurl}}/braze_support
 
 ## Troubleshooting
 
-### Single sign-button doesn't appear with Microsoft Entra ID
+### Single sign-on button doesn't appear for first-time users
 
-The **Sign-On URL** field in Microsoft Entra's **Basic SAML Configuration** form for Braze may cause users to only see a password option, not an SSO button, with IdP-initiated login. To prevent this issue, leave the **Sign-On URL** field blank when configuring Braze in your Microsoft Entra admin center.
+For first-time users with JITP enabled, the SAML single sign-on button will not appear on the Braze login page until after their initial login through the IdP portal. New users must first access Braze through your IdP portal (IdP-initiated login) to create their account. After this initial access, the single sign-on button will appear when they access the Braze dashboard directly.
+
+This requirement applies to all SAML providers. For Microsoft Entra ID specifically, the **Sign-On URL** field in the **Basic SAML Configuration** form for Braze may also cause users to only see a password option. To prevent this issue, leave the **Sign-On URL** field blank when configuring Braze in your Microsoft Entra admin center.
