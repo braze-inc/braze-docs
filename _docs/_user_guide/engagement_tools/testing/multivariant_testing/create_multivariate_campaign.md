@@ -40,7 +40,7 @@ To use an [optimization]({{site.baseurl}}/user_guide/engagement_tools/testing/mu
 
 ## Step 4: Choose a segment and distribute your users across variants
 
-Select segments to target, then distribute its members across your selected variants and the optional [control group](#including-a-control-group). For best practices around choosing a segment to test with, see [Choosing a segment](#choosing-a-segment).
+Select segments to target, then distribute the members across your selected variants and the optional [control group](#including-a-control-group). For best practices around choosing a segment to test with, see [Choosing a segment](#choosing-a-segment).
 
 For push, email, and webhook campaigns scheduled to send once, you can also use an [optimization]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/). This will reserve a portion of your target audience from the A/B test and hold them for a second optimized send based on the results from the first test.
 
@@ -98,7 +98,7 @@ When running A/B tests, don't forget to generate [funnel reports]({{site.baseurl
 
 In addition, the ideal length of your test may also vary depending on the channel. Keep in mind the average amount of time most users may need to engage with each channel.
 
-For instance, if you're testing a push, you may achieve significant results faster than when testing email since users see pushes immediately, but it may be days before they see or open an email. If you're testing in-app messages, keep in mind that users must open the app to see the campaign, so you should wait longer to collect results from both your most active app openers as well as your more typical users.
+For instance, if you're testing a push, you may achieve significant results faster than when testing email, since users see pushes immediately, but it may be days before they see or open an email. If you're testing in-app messages, keep in mind that users must open the app to see the campaign, so you should wait longer to collect results from both your most active app openers as well as your more typical users.
 
 If you're unsure how long your test should run for, the [Intelligent Selection]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/) feature can be useful for finding a Winning Variant efficiently.
 
@@ -124,7 +124,9 @@ Users are assigned to message variants, Canvas variants, or their respective con
 
 There are some common mistakes to avoid creating the appearance of differences based on the messaging channel if audiences are not filtered correctly.
 
-For example, if you send a push message to a wide audience with a control, the test group will only send messages to users with a push token. However, the control group will include both users who do have a push token and users who don't. In this case, your initial audience for the campaign or Canvas must filter for having a push token (`Foreground Push Enabled` is `true`). The same must be done for eligibility to receive messages on other channels: opted in, has a push token, subscribed, etc.
+For example, if you send a push message to a wide audience with a control, the test group will only send messages to users with a push token. However, the control group will include both users who do have a push token and users who don't. In this case, your initial audience for the campaign or Canvas must filter for having a push token (`Foreground Push Enabled` is `true`). The same must be done for eligibility to receive messages on other channels: opted in, has a push token, or subscribed.
+
+Note that if a control variant doesn't consist of any Canvas steps, exit criteria events aren't logged for users in the control variant.
 
 {% alert note %}
 If you manually use random bucket numbers for control groups, check out [things to watch for]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/#things-to-watch-for) in your control groups.
