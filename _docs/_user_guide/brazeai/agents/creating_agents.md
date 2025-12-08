@@ -28,6 +28,15 @@ Before you start, you'll need the following:
 
 When you create an agent, you define its purpose and set guardrails for how it should behave. After it's live, the agent can be deployed in Braze to generate personalized copy, make real-time decisions, or update catalog fields. You can pause or update an agent anytime from the dashboard.
 
+The following use cases showcase a few ways to leverage custom agents.
+
+| Use case | Description |
+| --- | --- |
+| Customer feedback handling | Pass customer comments to an agent to analyze sentiment and generate empathetic follow-up messages. For high-value users, the agent might escalate the response or include perks. |
+| Localize content | Translate catalog text into another language for global campaigns, or adjust tone and length for region-specific channels. For example, translate “Classic Clubmaster Sunglasses” into Spanish as “Gafas de sol Classic Clubmaster,” or shorten descriptions for SMS campaigns. |
+| Summarize reviews or feedback | Summarize sentiment or feedback into a new field, such as assigning sentiment scores like Positive, Neutral, or Negative, or creating a short text summary like “Most customers mention great fit, but note slow shipping.” |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
 ## Create an agent
 
 To create your custom agent:  
@@ -43,17 +52,13 @@ To create your custom agent:
 6. [Test the agent](#testing-your-agent) output and adjust the instructions as needed.
 7. When you’re ready, select **Create Agent** to activate the agent. 
 
-## Next step
-
 Your agent is now ready to use! For details, see [Deploying agents]({{site.baseurl}}/user_guide/brazeai/agents/deploying_agents/). 
 
-## Reference
-
-### Models
+## Models
 
 When you set up an agent, you'll choose the model it uses to generate responses. You have two options:
 
-#### Option 1: Use a Braze-powered model
+### Option 1: Use a Braze-powered model
 
 This is the simplest option, with no extra setup required. Braze provides access to large language models (LLM) directly. To use this option, select **Auto**.
 
@@ -61,7 +66,7 @@ This is the simplest option, with no extra setup required. Braze provides access
 If you use the Braze-powered LLM, you will not incur any cost during the Beta period. Invocation is limited to 50,000 runs per day and 500,000 runs in total. See [Limitations]({{site.baseurl}}/user_guide/brazeai/agents/#limitations) for details.
 {% endalert %}
 
-#### Option 2: Bring your own API key
+### Option 2: Bring your own API key
 
 With this option, you can connect your Braze account with providers like OpenAI, Anthropic, AWS Bedrock, or Google Gemini. If you bring your own API key from an LLM provider, costs are billed directly through your provider, not from Braze.
 
@@ -72,7 +77,7 @@ To set this up:
 
 Then, you can return to your agent and select your model.
 
-### Writing instructions
+## Writing instructions
 
 Instructions are the rules or guidelines you give the agent (system prompt). They define how the agent should behave each time it runs. System instructions can be up to 10 KB.
 
@@ -153,11 +158,11 @@ Example Output:
 {% endtab %}
 {% endtabs %}
 
-### Brand guidelines
+## Brand guidelines
 
 You can select [brand guidelines]({{site.baseurl}}/user_guide/administrative/app_settings/brand_guidelines) for your agent to adhere to in its responses. For example, if you want your agent to generate SMS copy to encourage users to sign up for a gym membership, you can use this field to reference your predefined bold, motivational guideline.
 
-### Temperature
+## Temperature
 
 If your goal is to use an agent to generate copy to encourage users to log into your mobile app, you can set a higher temperature for your agent to be more creative and use the nuances of the context variables. If you're using an agent to generate copy for user sentiment analysis, it may be ideal to set a lower temperature to avoid any agent speculation on negative survey responses. We recommend testing this setting and reviewing the agent's generated copy to fit your scenario.
 
@@ -165,7 +170,7 @@ If your goal is to use an agent to generate copy to encourage users to log into 
 Temperatures aren't currently supported for use with OpenAI.
 {% endalert %}
 
-### Catalogs
+## Catalogs
 
 Select from a list of catalogs for your agent to reference and further personalize your message.
 
@@ -173,11 +178,26 @@ Select from a list of catalogs for your agent to reference and further personali
 Currently, for an agent to be able to reference a desired column of a catalog, that column must exist in at least one [selection]({{site.baseurl}}/user_guide/data/activation/catalogs/selections) of the catalog.
 {% endalert %}
 
-### Output format
+## Output format
 
-Use the **Output format** field to organize and define the agent's output by manually structuring fields or using JSON. 
+Use the **Output Format** field to organize and define the agent's output by manually structuring fields or using JSON.
 
-Let's say you want to collect user feedback for their most recent dining experience at your restaurant chain. You could select **JSON Schema** as the output format and insert the following JSON to return a data object that includes a sentiment variable and reasoning variable.
+### Fields
+
+Let's say you want to format responses to a simple feedback survey to determine how likely they would recommend your restaurant's newest ice cream flavor. You can set up the following fields to structure the output format:
+
+| Field name | Value
+| --- | --- |
+| **likelihood_score** | Number |
+| **explanation** | Text |
+| **confidence_score** | Text |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+![Agent Console showing three output fields for likelihood score, explanation, and confidence score.]( {% image_buster /assets/img/ai_agent/output_format_fields.png %} )
+
+### JSON schema
+
+Let's say you want to collect user feedback for their most recent dining experience at your restaurant chain. You can select **JSON Schema** as the output format and insert the following JSON to return a data object that includes a sentiment variable and reasoning variable.
 
 ```json
 {
@@ -201,7 +221,7 @@ Let's say you want to collect user feedback for their most recent dining experie
 Output formats aren't currently supported by Claude AI. If you're using an Anthropic key, we recommend manually adding the structure to the agent prompt.
 {% endalert %}
 
-#### Testing your agent  
+## Test your agent
 
 The **Live preview** pane is an instance of the agent that shows up as a side-by-side panel within the configuration experience. You can use it to test the agent while you're creating or making updates to it to experience it in a similar way to end users. This step helps you confirm that it’s behaving the way you expect, and gives you a chance to fine-tune before it goes live.
 
@@ -218,7 +238,7 @@ Review the output with a critical eye. Consider the following questions:
 
 If something feels off, update the agent’s configuration and test again. Run a few different inputs to see how the agent adapts across scenarios, especially edge cases like no data or invalid responses.
 
-#### Monitoring your agent
+### Monitor your agent
 
 In the **Logs** tab of your agent, you can monitor actual agent calls that occur in your Canvases and catalogs. This includes information such as the timestamp, calling location, duration, and token count. Select **View** for a specific agent call to see the input, output, and user ID.
 
