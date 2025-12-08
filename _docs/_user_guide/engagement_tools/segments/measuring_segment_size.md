@@ -82,7 +82,7 @@ The following filters are applied for each channel when determining reachable us
 | Channel | Filter |
 | --- | --- |
 | Email | **Email Available** is true. |
-| Push | **Foreground Push Enabled** is true and at there is at least one valid push token for the specific platform.<br><br>If a user's push subscription status isn't specified, **Push Subscription Status** is "Opted In" or "Subscribed". If their push subscription status is only opted-in, **Push Subscription Status** is "Opted In".<br><br>For non-silent push, **Foreground Push Enabled** is true. For silent push, **Foreground Push Enabled** is false. |
+| Push | **Foreground Push Enabled** is true. |
 | SMS | **Subscription Group** is any SMS subscription group. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
