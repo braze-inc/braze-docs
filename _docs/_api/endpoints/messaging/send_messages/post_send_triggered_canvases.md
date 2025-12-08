@@ -162,7 +162,7 @@ The status code `201` could return the following response body. If the Canvas is
 
 ```
 {
-  "notice": "The Canvas is paused. Resume the Canvas to ensure trigger requests take effect.",
+  "notice": "The Canvas is paused. Resume the Canvas to ensure trigger requests will take effect.",
   "dispatch_id": "example_dispatch_id",
   "message": "success"
 }
