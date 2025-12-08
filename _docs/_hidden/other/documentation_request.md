@@ -194,6 +194,10 @@ hide_toc: true
     textarea {
       border-radius: 0 !important;
     }
+    #doc_release_notes_label {
+      font-size: 12pt !important;
+      font-family: Sailec W00 Regular,Arial,sans-serif;
+    }
     #doc_verify_label {
       font-size: 12pt !important;
       font-family: Sailec W00 Regular,Arial,sans-serif;
@@ -369,11 +373,17 @@ hide_toc: true
         var selectedValue = $('#doc_urgent').val();
         if (selectedValue === 'suggestion') {
             $('[id^="disclosure"]').show();
+            $('#doc_release_notes_group').hide();
             $('[id^="resource_urls"]').hide();
+            $('#doc_verify_div').show();
         } else if (selectedValue === 'feature') {
-            $('[id^="disclosure"]').hide();
-            $('[id^="resource_urls"]').show();
+            $('#disclosure-warning').hide();
+            $('#resource_urls').show();
+            $('#doc_verify_div').hide();
+            $('#doc_release_notes_group').show();
         } else {
+            $('#doc_release_notes_group').hide();
+            $('#doc_verify_div').show();
             $('[id^="disclosure"]').hide();
             $('[id^="resource_urls"]').hide();
         }
@@ -509,6 +519,14 @@ hide_toc: true
               </label>
               </div>
               </div>
+              <div class="form-group" id="doc_release_notes_group">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Y" id="doc_release_notes" name="ReleaseNotes">
+                <label class="form-check-label" for="doc_release_notes" id="doc_release_notes_label">
+                  <span></span> Include in release notes
+                </label>
+              </div>
+              </div>              
               <div class="inline_text">
               Please wait up to ten seconds after submitting for your request to process.
               </div>
