@@ -111,7 +111,7 @@ glossaries:
     tags:
       - Send Messages
   - name: <a href='/docs/api/endpoints/messaging/send_messages/post_create_send_ids/'>/sends/id/create</a>
-    description: Create send IDs that can be used to send messages and track message performance programmatically, without campaign creation for each send.
+    description: Create send IDs to use for sending messages and tracking message performance programmatically, without campaign creation for each send.
     tags:
       - Send Messages
   - name: <a href='/docs/api/endpoints/messaging/send_messages/post_send_transactional_message/'>/transactional/v1/campaigns/{CAMPAIGN_ID}/send</a>
@@ -151,7 +151,7 @@ glossaries:
     tags:
       - Schedule Messages
   - name: <a href='/docs/api/endpoints/messaging/schedule_messages/post_update_scheduled_triggered_canvases/'>/canvas/trigger/schedule/update</a>
-    description: Update scheduled API-triggered Canvases that were created in the dashboard.
+    description: Update scheduled API-triggered Canvases you created in the dashboard.
     tags:
       - Schedule Messages
   - name: <a href='/docs/api/endpoints/messaging/schedule_messages/get_messages_scheduled/'>/messages/scheduled_broadcasts</a>
@@ -265,7 +265,7 @@ glossaries:
   - name: <a href='/docs/api/endpoints/export/segments/post_cancel_export/'>/export/segment/cancel</a>
     description: Cancel exports for the provided segment ID.
     tags:
-      - Segments   
+      - Segments
   - name: <a href='/docs/api/endpoints/export/sessions/get_sessions_analytics/'>/sessions/data_series</a>
     description: Retrieve a series of the number of sessions for your app over a designated time period.
     tags:
@@ -283,7 +283,7 @@ glossaries:
     tags:
       - Custom Events
   - name: <a href='/docs/api/endpoints/export/custom_events/get_custom_events/'>/events/list</a>
-    description: Export a list of names of custom events that have been recorded for your app.
+    description: Export a list of names of custom events recorded for your app.
     tags:
       - Custom Events
   - name: <a href='/docs/api/endpoints/templates/content_blocks_templates/post_create_email_content_block/'>/content_blocks/create</a>
@@ -319,11 +319,11 @@ glossaries:
     tags:
       - KPI
   - name: <a href='/docs/api/endpoints/sms/post_remove_invalid_numbers/'>/sms/invalid_phone_numbers/remove</a>
-    description: Remove "invalid" phone numbers from the invalid list in Braze. This can be used to re-validate phone numbers after they have been marked as invalid.
+    description: Remove "invalid" phone numbers from the invalid list in Braze. Use this to re-validate phone numbers after Braze marks them as invalid.
     tags:
       - SMS
   - name: <a href='/docs/api/endpoints/sms/get_query_invalid_numbers/'>/sms/invalid_phone_numbers</a>
-    description: Pull a list of phone numbers that have been deemed "invalid" within a certain time frame.
+    description: Pull a list of phone numbers that Braze marked as "invalid" within a certain time frame.
     tags:
       - SMS
   - name: <a href='/docs/api/endpoints/export/purchases/get_list_product_id/'>/purchases/product_list</a>
@@ -337,7 +337,7 @@ glossaries:
   - name: <a href='/docs/api/endpoints/export/purchases/get_revenue_series/'>/purchases/revenue_series</a>
     description: Return the total money spent in your app over a time range.
     tags:
-      - Purchases    
+      - Purchases
   - name: <a href='/docs/api/endpoints/preference_center/get_create_url_preference_center'>/preference_center/v1/{preferenceCenterExternalId}/url/{userId}</a>
     description: Create a URL for a preference center.
     tags:
@@ -347,7 +347,7 @@ glossaries:
     tags:
       - Preference Center
   - name: <a href='/docs/api/endpoints/preference_center/get_view_details_preference_center'>/preference_center/v1/{preferenceCenterExternalId}</a>
-    description: View the details for your preference centers, including when it was created and updated.
+    description: View the details for your preference center, including when it was created and updated.
     tags:
       - Preference Center
   - name: <a href='/docs/api/endpoints/preference_center/post_create_preference_center'>/preference_center/v1</a>
@@ -473,5 +473,5 @@ glossaries:
   - name: <a href='/docs/api/endpoints/sdk_authentication/delete_sdk_authentication_key/'>/app_group/sdk_authentication/delete</a>
     description: Delete an SDK Authentication key for your app.
     tags:
-      - SDK Authentication  
+      - SDK Authentication
 ---

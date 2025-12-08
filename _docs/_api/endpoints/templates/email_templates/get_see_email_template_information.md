@@ -44,7 +44,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/templates/email/
 ```
 {% endraw %}
 
-## Response 
+## Response
 
 ```json
 {

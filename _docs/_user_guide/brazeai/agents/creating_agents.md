@@ -175,7 +175,9 @@ Currently, for an agent to be able to reference a desired column of a catalog, t
 
 ### Output format
 
-Use the **Output format** field to structure the agent's output by providing how to organize and define the output using JSON. Let's say you want to collect user feedback for their most recent dining experience at your restaurant chain. You can insert the following JSON to return a data object that includes a sentiment variable and reasoning variable.
+Use the **Output format** field to organize and define the agent's output by manually structuring fields or using JSON. 
+
+Let's say you want to collect user feedback for their most recent dining experience at your restaurant chain. You could select **JSON Schema** as the output format and insert the following JSON to return a data object that includes a sentiment variable and reasoning variable.
 
 ```json
 {

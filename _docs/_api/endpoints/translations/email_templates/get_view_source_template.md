@@ -39,7 +39,7 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 ## Example request
 
 ```
-curl --location --request GET 'https://rest.iad-03.braze.com/templates/email/translations/source?template_id={template_id}' 
+curl --location --request GET 'https://rest.iad-03.braze.com/templates/email/translations/source?template_id={template_id}'
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 --Request Body

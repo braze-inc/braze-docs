@@ -23,7 +23,7 @@ You can use nested objects—objects that are inside of another object—to send
 
 The following SDK versions support nested objects:
 
-{% sdk_min_versions swift:5.0.0 android:1.0.0 web:3.3.0 %}
+{% sdk_min_versions swift:5.0.0 android:20.0.0 web:3.3.0 %}
 
 ## Step 1: Generate a schema
 

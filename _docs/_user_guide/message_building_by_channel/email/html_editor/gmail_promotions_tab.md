@@ -5,7 +5,7 @@ page_order: 8
 description: "This reference article covers how to use Braze to help you build the Gmail mobile promotions card from your email campaign."
 channel:
   - email
-
+toc_headers: h2
 ---
 
 # Gmail Promotion setup
@@ -26,7 +26,7 @@ First, [create your email campaign]({{site.baseurl}}/user_guide/message_building
 
 ### Step 2: Add details to Gmail Promotion card
 
-Next, go to the **Content** section of the HTML editor, and select the **Gmail Promotion** tab. Fill out the fields under **Basic Information**, then select **Generate HTML Code**. This will help generate the script for your Gmail Promo Tab card under the **Copy and Paste HTML code into `<Head>`** section.
+Next, go to the **Content** section of the HTML editor and select the **Gmail Promotion** tab. Fill out the fields under **Basic Information**, then select **Generate HTML Code**. This will help generate the script for your Gmail Promo Tab card under the **Copy and Paste HTML code into `<Head>`** section.
 
 ![An example of how to build a card.]({% image_buster /assets/img/create-gmail-promo.png %})
 
@@ -50,7 +50,7 @@ Setting up a discount offer allows you to specify the valid dates for a discount
 {% endtab %}
 {% tab Deal Cards %}
 
-Use Deal Cards to provide key deal information directly at the top of email bodies. This allows recipients to quickly understand the offer details and take action. For example, you can use Deal Cards to promote limited time offers and reduce the need for users to search for details within emails.
+Use Deal Cards to provide key deal information directly at the top of email bodies. This allows recipients to quickly understand the offer details and take action. For example, you can use Deal Cards to promote limited-time offers and reduce the need for users to search for details within emails.
 
 1. Select the **Deal Card** toggle.
 2. For **Offer**, enter a short summary for the discount. An example is "20% off all shoes".
@@ -74,7 +74,7 @@ Promotion cards in your product carousel are helpful to provide images to your o
 4. For **Target URL**, add the link for your promotion.
 
 {% alert tip %}
-We recommend uploading your product images to the media library, then copy and pasting the URLs into the appropriate fields. Only static image formats (PNG and JPEG), are accepted. Some image formats (GIF) will upload but not display as expected.
+We recommend uploading your product images to the media library, then copying and pasting the URLs into the appropriate fields. Only static image formats (PNG and JPEG) are accepted. Some image formats (GIF) will upload but not display as expected.
 {% endalert %}
 
 {: start="5"}
@@ -88,7 +88,7 @@ We recommend uploading your product images to the media library, then copy and p
 | Discount Value | The amount discounted from the original price. | 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-![An example of a product carousel from a company named Motto with the email heading "Our best selling socks are on sale", with three images of socks and their discounted prices.]({% image_buster /assets/img_archive/product_carousel.png %}){: style="max-width:40%;"}
+![An example of a product carousel from a company named Motto with the email heading "Our best-selling socks are on sale", with three images of socks and their discounted prices.]({% image_buster /assets/img_archive/product_carousel.png %}){: style="max-width:40%;"}
 
 {% endtab %}
 {% endtabs %}
@@ -129,13 +129,13 @@ Gmail does not suggest using sentences or phrases, such as "You Can Buy 1 Get 1 
 
 ### Why is my promotional message not displaying the promotion card or product carousel in the end user's inbox?
 
-There are many factors that determine whether product carousel will be shown in the Gmail Promotion tab.
+There are many factors that determine whether the product carousel will be shown in the Gmail Promotions tab.
 
-All images in the annotation still have to pass a quality filter. In order for product carousel to populate, it's crucial that all images in the annotation are in the recommended image aspect ratio, high quality or high resolution close-up product images. The images should contain little to no text (preferable). The quality filter also filters inappropriate content, so the images must be family, user, and child-friendly.
+All images in the annotation still have to pass a quality filter. In order for the product carousel to populate, all images in the annotation must be in the recommended image aspect ratio and be high-quality, high-resolution close-up product images. The images should contain little to no text. The quality filter also filters inappropriate content, so the images must be family, user, and child-friendly.
 
-Furthermore, Gmail has a density cap on how many product carousels appear in a user’s Gmail Promotion tab. For instance, if a user subscribes to a lot of brands that use product carousel in their promotion email, Gmail eventually puts a cap on how many product carousels are shown.
+Furthermore, Gmail has a density cap on how many product carousels appear in a user’s Gmail Promotions tab. For instance, if a user subscribes to a lot of brands that use product carousels in their promotion email, Gmail eventually puts a cap on how many product carousels are shown.
 
-Due to Google's privacy and safety regulations, emails with annotations must be widely sent for the annotation to work. It's recommend to launch a campaign and send it to at least 100 recipients for Google's system to detect it as a "mass send." Image URLs may not vary across recipients.
+Due to Google's privacy and safety regulations, emails with annotations must be widely sent for the annotation to work. It's recommended to launch a campaign and send it to at least 100 recipients for Google's system to detect it as a "mass send." Image URLs may not vary across recipients.
 
 ### How are clicks on a promotion card or product carousel tracked?
 
@@ -145,3 +145,8 @@ Braze or any other ESPs are not able to insert link tracking on links in the hea
 
 Gmail determines when and who to display the card to, so there isn't a guarantee that every recipient will see the product carousel.
 
+### Why don't I see annotations in my Gmail Promotions tab?
+
+Annotations aren't supported for Google Workspace. To preview annotations, you can create a personal email address with Gmail.
+
+Note that annotations don't render in the **Primary** tab or in any other tab in the Gmail mobile app. Annotations won't display after a user opens an email or if you're using the `DiscountOffer` annotation type and the time and date have already expired.

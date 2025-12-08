@@ -34,7 +34,7 @@ guide_menu_list:
   - name: "GET: View Canvas Default Source Translations"
     link: /docs/api/endpoints/translations/canvas/get_source_canvas/
     image: /assets/img/braze_icons/message-plus-square.svg
-  
+
 guide_menu_title2: "Email template endpoints"
 guide_menu_list2:
   - name: "GET: View Email Template Default Source Translations"

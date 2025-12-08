@@ -54,7 +54,7 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 - For SMS and WhatsApp subscription groups, either `external_id` or `phone` is required.  When both are submitted, only the `external_id` is used for querying and the phone number is applied to that user.
 - For email subscription groups, either `external_id` or `email` is required.  When both are submitted, only the `external_id` is used for the query and the email address is applied to that user.
 
-## Example request 
+## Example request
 
 {% tabs %}
 {% tab Multiple Users %}

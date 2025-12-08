@@ -41,7 +41,7 @@ curl --location --request GET 'https://rest.iad-01.braze.com/templates/email/lis
 --header 'Authorization: Bearer YOUR_REST_API_KEY'
 ```
 
-## Response 
+## Response
 
 {% alert important %}
 Templates built using the drag-and-drop editor for email are not provided in this response.
