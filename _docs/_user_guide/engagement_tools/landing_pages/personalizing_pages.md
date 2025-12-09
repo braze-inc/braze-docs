@@ -29,7 +29,7 @@ However, when previewing the landing page from the data table or the **Landing P
 
 To maintain optimal performance with personalized landing pages, note the following size limits:
 
--  **Saving a landing page:** If the size exceeds 500&nbsp;KB, you may receive a warning message indicating that the page has exceeded our size limits, which may prevent it from being published.
+- **Saving a landing page:** If the size exceeds 500&nbsp;KB, you may receive a warning message indicating that the page has exceeded our size limits, which may prevent it from being published.
 - **Rendering with Liquid personalization:** The total size must not exceed 1&nbsp;MB. Otherwise, the page may be automatically unpublished by Braze.
 
 ### Avoid unpublishing landing pages
