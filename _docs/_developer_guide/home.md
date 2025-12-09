@@ -47,10 +47,6 @@ guide_menu_list:
     link: /docs/developer_guide/sdk_integration/?sdktab=unity
     image: /assets/img/unity.png
     nav_link: unity
-  - name: Unreal Engine
-    link: /docs/developer_guide/sdk_integration/?sdktab=unreal%20engine
-    image: /assets/img/unreal.png
-    nav_link: unreal_engine
   - name: .NET MAUI (Xamarin)
     link: /docs/developer_guide/sdk_integration/?sdktab=.net%20maui%20(xamarin)
     image: /assets/img/xamarin.png

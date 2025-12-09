@@ -38,7 +38,4 @@ For wrapper SDKs not listed, use the relevant native Android or Swift method ins
 {% multi_lang_include developer_guide/unity/analytics/setting_user_attributes.md %}
 {% endsdktab %}
 
-{% sdktab unreal engine %}
-{% multi_lang_include developer_guide/unreal_engine/analytics/setting_user_attributes.md %}
-{% endsdktab %}
 {% endsdktabs %}
