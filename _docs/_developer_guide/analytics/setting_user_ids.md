@@ -86,12 +86,6 @@ m.Braze.setUserId(YOUR_USER_ID_STRING)
 AppboyBinding.ChangeUser("YOUR_USER_ID_STRING");
 ```
 {% endtab %}
-
-{% tab UNREAL ENGINE %}
-```cpp
-UBraze->ChangeUser(TEXT("YOUR_USER_ID_STRING"));
-```
-{% endtab %}
 {% endtabs %}
 
 {% alert warning %}

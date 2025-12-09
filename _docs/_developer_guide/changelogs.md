@@ -12,7 +12,6 @@ platform:
   - React Native
   - Roku
   - Unity
-  - Unreal Engine
   - .NET MAUI
 ---
 
@@ -83,14 +82,6 @@ You can also find a copy of the [Unity Braze SDK changelog on GitHub](https://gi
 {% endalert %}
 
 {% markdown_embed https://raw.githubusercontent.com/Appboy/appboy-unity-sdk/master/CHANGELOG.md %}
-{% endsdktab %}
-
-{% sdktab unreal engine %}
-{% alert tip %}
-You can also find a copy of the [Unreal Engine Braze SDK changelog on GitHub](https://github.com/braze-inc/braze-unreal-sdk/blob/master/CHANGELOG.md).
-{% endalert %}
-
-{% markdown_embed https://raw.githubusercontent.com/braze-inc/braze-unreal-sdk/master/CHANGELOG.md %}
 {% endsdktab %}
 
 {% sdktab .NET MAUI (Xamarin) %}
