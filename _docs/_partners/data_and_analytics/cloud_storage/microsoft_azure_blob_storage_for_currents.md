@@ -24,7 +24,7 @@ The Braze and Microsoft Azure Blob Storage integration allows you to export data
 | Requirement | Description |
 | ----------- | ----------- |
 | Microsoft Azure and Azure storage account | A Microsoft Azure and Azure storage account are required to take advantage of this partnership. |
-| Currents | To export data to Currents, you must have [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) set up for your account. |
+| Currents | To export data to Currents, you must have [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) set up for your account. Currents isn't required if you're only setting up message archiving. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration
