@@ -62,4 +62,4 @@ override func application(
 {% endtab %}
 {% endtabs %}
 
-To customize your implementation further, refer to [Logging in-app message data]({{site.baseurl}}/in_app_messages/logging_message_data?sdktab=flutter).
+To customize your implementation further, refer to [Logging in-app message data]({{site.baseurl}}/developer_guide/in_app_messages/logging_message_data?sdktab=flutter).
