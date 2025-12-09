@@ -53,7 +53,7 @@ At MovieCanon, a streaming services company, the developer team is responsible f
 - delilah.york@example.com
 - evergreen.rebecca@example.com
 
-To accomplish this task, the developer team will need an API key with the `email.spam.remove` permission to use the `/email/spam/remove` endpoint. This endpoint removes email addresses from the Braze spam list and the spam list maintained by MovieCanon’s email provider.
+To accomplish this task, the developer team needs an API key with the `email.spam.remove` permission to use the `/email/spam/remove` endpoint. This endpoint removes email addresses from the Braze spam list and the spam list maintained by MovieCanon's email provider.
 
 To send this request, include either a string email address or an array of up to 50 email addresses to modify. Since the list of emails to remove is under 50, MovieCanon can accomplish this task with the following request body:
 
@@ -135,7 +135,7 @@ curl --location --request GET 'https://rest.iad-01.braze.com/messages/scheduled_
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 
-This endpoint will return the list of upcoming campaigns and Canvases. From here, the marketing team can confirm its list of messages by referencing the `name` field for the campaigns and Canvases in the response.
+This endpoint returns the list of upcoming campaigns and Canvases. From here, the marketing team can confirm its list of messages by referencing the `name` field for the campaigns and Canvases in the response.
 
 ## Viewing an older preference center
 
@@ -235,4 +235,4 @@ In this scenario, WorkFriends has historically used a singular HTML template wit
 
 {% enddetails %}
 
-After reviewing this template information, WorkFriends can also use the [`/templates/email/update` endpoint]({{site.baseurl}}/api/endpoints/templates/email_templates/post_update_email_template/) to update the email template through the API. The email template in the Braze dashboard will reflect these edits.
+After reviewing this template information, WorkFriends can also use the [`/templates/email/update` endpoint]({{site.baseurl}}/api/endpoints/templates/email_templates/post_update_email_template/) to update the email template through the API. The email template in the Braze dashboard reflects these edits.

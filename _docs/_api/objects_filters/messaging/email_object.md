@@ -20,7 +20,7 @@ description: "This reference article explains the different components of the Br
   "subject": (optional, string),
   "from": (required, valid email address in the format "Display Name <email@address.com>"),
   "reply_to": (optional, valid email address in the format "email@address.com" - defaults to your workspace's default reply to if not set) - use "NO_REPLY_TO" to set reply-to address to null,
-  "bcc": (optional, one of the BCC addresses defined in your workspace's email settings) if provided and the BCC feature is enabled for your account, this address will get added to your outbound message as a BCC address,
+  "bcc": (optional, one of the BCC addresses defined in your workspace's email settings) if provided and the BCC feature is enabled for your account, this address gets added to your outbound message as a BCC address,
   "body": (required unless email_template_id is given, valid HTML),
   "plaintext_body": (optional, valid plaintext, defaults to autogenerating plaintext from "body" when this is not set),
   "preheader": (optional*, string) recommended length 50-100 characters,
@@ -36,7 +36,7 @@ description: "This reference article explains the different components of the Br
 ```
 
 - [App identifier]({{site.baseurl}}/api/identifier_types/)
-  - Any valid `app_id` from an app configured in your workspace will work for all users in your workspace, regardless of whether the user has the specific app on their profile or not.
+  - Any valid `app_id` from an app configured in your workspace works for all users in your workspace, regardless of whether the user has the specific app on their profile or not.
 - For more information and best practices on preheaders, see our help article on [email body styling]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/guidelines_and_tips/#body-styling).
 
 {% alert warning %}
