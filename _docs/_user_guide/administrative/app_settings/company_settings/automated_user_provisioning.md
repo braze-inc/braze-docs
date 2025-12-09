@@ -27,60 +27,75 @@ alias: /scim/automated_user_provisioning/
 
 ## Step 1: Setup SCIM provisioning
 
-1. Enable SCIM:
-    1.1. Go to your Braze app in Okta.
-    1.2. Select the **General** tab.
-    1.3. In the **App Settings** section, click **Edit**.
-    1.4. In the **Provisioning** field, select **SCIM**, and then click **Save**.
-2. Setup SCIM integration:
-    2.1. Select the **Provisioning** tab.
-    2.2. In **Settings** > **Integration** > **SCIM Connection** click **Edit** and fill in the field values that populate within the table in Braze.
-3. Test the API credentials by selecting **Test API Credentials**. A verification message will appear if the integration is successful and you can save.
-4. Enable provisioning to app
-    4.1. In **Provisioning** > **Settings** > **To App** > **Provisioning to App**, click **Edit**.
-    4.2. Enable the following:
-        - Create Users
-        - Update Users Attributes
-        - Deactivate Users
-    4.3. Review and configure the **Attribute Mapping** section with the mappings that populate within the table in Braze.
+### Step 1.1: Enable SCIM
+
+1. Go to your Braze app in Okta.
+2. Select the **General** tab.
+3. In the **App Settings** section, select **Edit**.
+4. In the **Provisioning** field, select **SCIM**, and then select **Save**.
+
+### Step 1.2: Set up SCIM integration
+
+1. Select the **Provisioning** tab.
+2. In **Settings** > **Integration** > **SCIM Connection** select **Edit** and fill in the field values that populate within the table on the **Setup SCIM provisioning** page.
+
+### Step 1.3: Test the API credentials
+
+Select **Test API Credentials**. A verification message will appear if the integration is successful and you can save.
+
+### Step 1.4: Enable provisioning to app
+
+1. In **Provisioning** > **Settings** > **To App** > **Provisioning to App**, select **Edit**.
+2. Enable the following:
+    - Create Users
+    - Update Users Attributes
+    - Deactivate Users
+3. Review and configure the **Attribute Mapping** section with the mappings that populate within the table on the **Setup SCIM provisioning** page.
 
 ## Step 2: Assign users to the app
 
 1. Select the **Assignment** tab.
-2. Click **Assign** and select an option.
+2. Select **Assign** and select an option.
 3. Assign the app to the people that should have access to Braze.
-4. Click **Done** when you’ve completed the assignment.
+4. Select **Done** when you’ve completed the assignment.
 
 ![SCIM provisioning setup for the Okta Braze app.]({% image_buster /assets/img_archive/okta_braze_app.png %}){: style="max-width:50%;"}
 
 {% endtab %}
 {% tab Okta - Custom app integration %}
 
-## Step 1: Setup SCIM provisioning
+## Step 1: Set up SCIM provisioning
 
-1. Enable SCIM:
-    1.1. Go to your Braze app in Okta.
-    1.2. Select the **General** tab.
-    1.3. In the **App Settings** section, click **Edit**.
-    1.4. In the **Provisioning** field, select **SCIM**, and then click **Save**.
-2. Setup SCIM integration:
-    2.1. Select the **Provisioning** tab.
-    2.2. In **Settings** > **Integration** > **SCIM Connection** click **Edit** and fill in the field values that populate within the table in Braze.
-3. Test the API credentials by selecting **Test API Credentials**. A verification message will appear if the integration is successful and you can save.
-4. Enable provisioning to app
-    4.1. In **Provisioning** > **Settings** > **To App** > **Provisioning to App**, click **Edit**.
-    4.2. Enable the following:
-        - Create Users
-        - Update Users Attributes
-        - Deactivate Users
-    4.3. Review and configure the **Attribute Mapping** section with the mappings that populate within the table in Braze.
+### Step 1.1: Enable SCIM
+
+1. In Okta, go to your Braze app.
+2. Select the **General** tab.
+3. In the **App Settings** section, select **Edit**.
+4. In the **Provisioning** field, select **SCIM**.
+5. Select **Save**.
+
+### Step 1.2: Set up SCIM integration
+
+1. Select the **Provisioning** tab.
+2. In **Settings** > **Integration** > **SCIM Connection**, select **Edit**, and fill in the field values that populate within the table on the **Setup SCIM provisioning** page.
+3. Test the API credentials by selecting **Test API Credentials**.
+4. Select **Save**.
+
+### Step 1.3: Enable provisioning to app
+
+1. In **Provisioning** > **Settings** > **To App** > **Provisioning to App**, select **Edit**.
+2. Enable the following:
+    - Create Users
+    - Update Users Attributes
+    - Deactivate Users
+3. Review and configure the **Attribute Mapping** section with the mappings that populate within the table on the **Setup SCIM provisioning** page.
 
 ## Step 2: Assign users to the app
 
 1. Select the **Assignment** tab.
-2. Click **Assign** and select an option.
-3. Assign the app to the people that should have access to Braze.
-4. Click **Done** when you’ve completed the assignment.
+2. Select **Assign** and select an option.
+3. Assign the app to the people who should have access to Braze.
+4. Select **Done**.
 
 ![SCIM provisioning setup for the Okta Braze custom integration.]({% image_buster /assets/img_archive/braze_okta_custom.png %}){: style="max-width:50%;"}
 
@@ -90,28 +105,34 @@ alias: /scim/automated_user_provisioning/
 ## Step 1: Setup SCIM provisioning app
 
 1. Log into your Microsoft Entra admin center.
-2. Create and setup your SCIM app:
-    2.1. In the left menu, go to **Entra ID** > **Enterprise apps**.
-    2.2. Select **New application**.
-    2.3. Select **Create your own application**.
-    2.4. In the right panel, input a name for your app.
-    2.5. In the **What are you looking to do with your application?** section, select **Integrate application you don't find in the gallery (Non-gallery)**.
-    2.6. Click **Create**.
-3. Setup SCIM integration:
-    3.1. Go to the **Manage** > **Provisioning** section of your SCIM application.
-    3.2. Select **Connect** your application or **New configuration** and fill in the following field values that populate within the table in Braze.
-4. Enable provisioning to app:
-    4.1. Go to the **Manage** > **Attribute mapping (Preview)** section of your SCIM application.
-    4.2. Select **Provision Microsoft Entra ID Users**.
-    4.3. Review and configure the **Attribute Mapping** section to match the attributes that populate within the table in Braze.
-    4.4. Close the **Attribute Mapping** page when you are done.
+
+### Step 1.2. Create and set up your SCIM app
+
+1. In the navigation menu, go to **Entra ID** > **Enterprise apps**.
+2. Select **New application**.
+3. Select **Create your own application**.
+4. In the panel, input a name for your app.
+5. In the **What are you looking to do with your application?** section, select **Integrate application you don't find in the gallery (Non-gallery)**.
+6. Select **Create**.
+
+### Step 1.3. Set up SCIM integration
+
+1. Go to the **Manage** > **Provisioning** section of your SCIM application.
+2. Select **Connect your application** or **New configuration** and fill in the field values that populate within the table on the **Setup SCIM provisioning** page.
+
+### Step 1.4. Enable provisioning to app
+
+1. Go to the **Manage** > **Attribute mapping (Preview)** section of your SCIM application.
+2. Select **Provision Microsoft Entra ID Users**.
+3. Review and configure the **Attribute Mapping** section to match the attributes that populate within the table on the **Setup SCIM provisioning** page.
+4. Close the **Attribute Mapping** page.
 
 ## Step 2: Assign users to the app
 
 1. Go to **Manage** > **Users and Groups**.
-2. Click **Add user/group**.
-3. Click **None Selected** to assign users to the app.
-4. Click **Select** to confirm assignment.
+2. Select **Add user/group**.
+3. Select **None Selected** to assign users to the app.
+4. Select the **Select** button to confirm assignment.
 
 ![SCIM provisioning setup for the Entra integration.]({% image_buster /assets/img_archive/entra_scim.png %}){: style="max-width:50%;"}
 
