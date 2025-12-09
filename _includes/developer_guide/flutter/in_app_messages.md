@@ -9,7 +9,9 @@
 
 ## Enabling in-app messages
 
-The default implementation for in-app messages is already set up on Android.
+{% alert note %}
+This step is for iOS only. The default implementation for in-app messages is already set up on Android.
+{% endalert %}
 
 To set up the default presenter for in-app messages on iOS, create an implementation of the `BrazeInAppMessagePresenter` protocol and assign it to the optional `inAppMessagePresenter` on your Braze instance. You can also use the default Braze UI presenter by instantiating a `BrazeInAppMessageUI` object.
 
@@ -48,6 +50,8 @@ override func application(
   ...
 
   Braze *braze = [BrazePlugin initBraze:configuration];
+
+  // Initialize and assign the default `BrazeInAppMessageUI` class to the in-app message presenter.
   braze.inAppMessagePresenter = [[BrazeInAppMessageUI alloc] init];
   AppDelegate.braze = braze;
 
