@@ -18,7 +18,7 @@ _This integration is maintained by Smartling._
 The Braze Connector supports translations for messages in campaigns and Canvases (email, push, and in-app messages), email templates, and Content Blocks. Please refer to the table below to learn about the supported channels and features when determining to use the new connector with multi-language support or legacy workflow.
 
 | Channel/Feature | Traditional Editor (ex. HTML) | Drag-and-Drop Editor |
-| ----- | -------------------------------- |---------------- |
+| --------------- | ----------------------------- | -------------------- |
 | [Email]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/?tab=email) | ✅ | ✅ |
 | [IAM]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/?tab=in-app%20message) | ✅ | ✅ |
 | [Push]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/?tab=push) | ✅ | n/a |
