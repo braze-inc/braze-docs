@@ -31,7 +31,7 @@ The second integration method is to include the [binding source](https://github.
 The iOS bindings for .NET MAUI SDK version 4.0.0 and later use the [Braze Swift SDK](https://github.com/braze-inc/braze-swift-sdk/), while previous versions use the [legacy AppboyKit SDK](https://github.com/Appboy/Appboy-ios-sdk).
 {% endalert %}
 
-A .NET MAUI binding is a way to use native libraries in .NET MAUI apps.  The implementation of a binding consists of building a C# interface to the library and then using that interface in your application. There are two ways to include the Braze SDK binding: using NuGet or compiling from source.
+A .NET MAUI binding is a way to use native libraries in .NET MAUI apps. The implementation of a binding consists of building a C# interface to the library and then using that interface in your application. There are two ways to include the Braze SDK binding: using NuGet or compiling from source.
 
 {% subtabs local %}
 {% subtab NuGet %}
