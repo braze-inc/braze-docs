@@ -29,7 +29,7 @@ The Braze Connector supports translations for messages in campaigns and Canvases
 
 ### Legacy workflow
 
-Depending on your use case, you can manage translations for Content Blocks using either the legacy translation workflow or the updated workflow. 
+Depending on your use case, manage translations for Content Blocks using either the legacy translation workflow or the updated workflow. 
 
 In the updated workflow, using Braze multi-language support and locales in messages, translation tags are added to the Content Block. However, Smartling executes translations at the message level. The content is translated only when the content is included in a Campaign or Canvas and the target locale is set. To learn more, see [Managing translations for Content Blocks](#managing-translations-for-content-blocks).
 
@@ -94,14 +94,14 @@ You must save the message as a draft before you can select locales.
 
 ### Step 4: Manage translations in Smartling
 
-After you connect and set up the Braze connector, you can find Braze content in the Braze tab in your Smartling project. For more information, see the [Smartling documentation](https://help.smartling.com/hc/en-us/articles/13248577069979).
+After you connect and set up the Braze connector, find Braze content in the Braze tab in your Smartling project. For more information, see the [Smartling documentation](https://help.smartling.com/hc/en-us/articles/13248577069979).
 
 Smartling provides advanced features to search and select content by:
 - Keyword search
 - Braze content type
 - Braze tagging
 
-1. In this example, you can see the New Year promotion email campaign that was created in [Step 3](#step-3-add-translation-tags-to-your-braze-message).
+1. In this example, the New Year promotion email campaign was created in [Step 3](#step-3-add-translation-tags-to-your-braze-message).
 
 ![Braze email with translation tags.]({% image_buster /assets/img/smartling/image6_ny_promotion.png %})
 
@@ -158,4 +158,4 @@ For the drag-and-drop editor (email, Content Block, in-app message), you must ma
 
 ### How do you translate text within a Liquid tag?
 
-Smartling recognizes Liquid tags and makes them uneditable variables in the composer. Any other text within the Liquid tag, such as default text or filters like join, also become uneditable in Smartling. However, you can remove the Liquid tag in Smartling and recreate the Liquid tag with the translated default text. A warning appears when saving the translation.
+Smartling recognizes Liquid tags and makes them uneditable variables in the composer. Any other text within the Liquid tag, such as default text or filters like join, also become uneditable in Smartling. However, remove the Liquid tag in Smartling and recreate the Liquid tag with the translated default text. A warning appears when saving the translation.
