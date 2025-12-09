@@ -40,7 +40,7 @@ description: "Learn how to set up and integrate BrazeAI Decisioning Studio<sup>T
 2. Search for the user by their external user ID, user alias, email, phone number, or push token.
 3. Copy the user ID to reference in your setup.
 
-![Example user profile from locating a user with their ID.]({% image_buster /assets/img/go/user_id.png %})
+![Example user profile from locating a user with their ID.]({% image_buster /assets/img/decisioning_studio_go/user_id.png %})
 
 ### Finding your Braze URL
 

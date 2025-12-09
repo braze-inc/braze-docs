@@ -16,18 +16,18 @@ description: "Learn how to set up and integrate BrazeAI Decisioning Studio<sup>T
 3. For your campaign type, select **API campaign**.
 4. Enter a name for your campaign. An example is "Decisioning Studio Go Email".
 
-![An API campaign named "Decisioning Studio Go Email".]({% image_buster /assets/img/go/api_campaign_name.png %})
+![An API campaign named "Decisioning Studio Go Email".]({% image_buster /assets/img/decisioning_studio_go/api_campaign_name.png %})
 
 {: start="5"}
 5. For your messaging channel, select **Email**.
 
-![Option to select your messaging channel for API campaign.]({% image_buster /assets/img/go/select_api_campaign.png %})
+![Option to select your messaging channel for API campaign.]({% image_buster /assets/img/decisioning_studio_go/select_api_campaign.png %})
 
 {: start="6"}
 6. In **Additional Options**, select the **Allow users to become re-eligible to receive campaign** checkbox.
 7. For the time to become re-eligible, enter **1** and select **Hours** from the dropdown.
 
-![Re-eligibility for the API campaign selected.]({% image_buster /assets/img/go/additional_options.png %})
+![Re-eligibility for the API campaign selected.]({% image_buster /assets/img/decisioning_studio_go/additional_options.png %})
 
 {: start="8"}
 8. Select **Save Campaign**.
@@ -36,7 +36,7 @@ description: "Learn how to set up and integrate BrazeAI Decisioning Studio<sup>T
 
 In your API campaign, copy the **Campaign ID**. Then, go to the BrazeAI Decisioning Studio™ Go portal and paste the **Campaign ID**.
 
-![An example message variation ID to be copy and pasted.]({% image_buster /assets/img/go/campaign_id.png %})
+![An example message variation ID to be copy and pasted.]({% image_buster /assets/img/decisioning_studio_go/campaign_id.png %})
 
 ## Step 3: Copy and paste your message variation ID
 
