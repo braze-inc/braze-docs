@@ -6,7 +6,7 @@ Integrating the Braze .NET MAUI (formerly Xamarin) SDK will provide you with bas
 
 Before you can integrate the .NET MAUI Braze SDK, be sure you meet the following requirements:
 
-- Starting in `version 3.0.0`, this SDK requires using .NET 6+ and removes support for projects using the Xarmin framework.
+- Starting in `version 3.0.0`, this SDK requires using .NET 6+ and removes support for projects using the Xamarin framework.
 - Starting in `version 4.0.0`, this SDK dropped support for Xamarin & Xamarin.Forms and added support for .NET MAUI. See [Microsoft's policy](https://dotnet.microsoft.com/en-us/platform/support/policy/xamarin) around the end of support for Xamarin.
 
 ### Step 1: Get the .NET MAUI binding
