@@ -15,13 +15,25 @@ _This integration is maintained by Smartling._
 
 ## About the integration
 
-The Braze Connector supports translations for campaigns and Canvases ([email]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/?tab=email), [push]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/?tab=push), and [in-app messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/?tab=in-app%20message)), email templates, and Content Blocks. Translations are supported in both HTML and drag-and-drop editors where supported. 
+The Braze Connector supports translations for messages in campaigns and Canvases (email, push, and in-app messages), email templates, and Content Blocks. Please refer to the table below to learn about the supported channels and features when determining to use the new connector with multi-language support or legacy workflow.
+
+| Channel/Feature | Traditional Editor (ex. HTML) | Drag-and-Drop Editor |
+| ----- | -------------------------------- |---------------- |
+| [Email]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/?tab=email) | ✅ | ✅ |
+| [IAM]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/?tab=in-app%20message) | ✅ | ✅ |
+| [Push]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/?tab=push) | ✅ | n/a |
+| Email Template | Legacy workflow | Legacy workflow|
+| Content Blocks |  ✅* |  ✅* |
+
+*Refer to [Managing translations for Content Blocks](#managing-translations-for-content-blocks) for more information.
 
 ### Legacy workflow
 
-Depending on your use case, you can manage translations for Content Blocks or email templates using either the legacy translation workflow or the updated one. 
+Depending on your use case, you can manage translations for Content Blocks using either the legacy translation workflow or the updated one. 
 
-In the updated workflow, using Braze multi-language support and locales in messages, translation tags are added to the Content Block or email template. However, Smartling executes translations at the message level. The content is translated only once it’s included in a campaign or Canvas and the target locale is set. Refer to [Managing translations for Content Blocks and email templates](#managing-translations-for-content-blocks-and-email-templates) for more information.
+In the updated workflow, using Braze multi-language support and locales in messages, translation tags are added to the Content Block. However, Smartling executes translations at the message level. The content is translated only once it’s included in a Campaign or Canvas and the target locale is set. Refer to [Managing translations for Content Blocks](#managing-translations-for-content-blocks) for more information.
+
+For email templates, only the legacy workflow is currently supported. Refer to [Managing translations using the legacy workflow](#managing-translations-using-the-legacy-workflow) for more information.
 
 ## Prerequisites
 
@@ -119,13 +131,13 @@ In Braze, preview your campaign as a multi-language user to confirm that the tra
 
 ![Multi-language user preview.]({% image_buster /assets/img/smartling/image11_preview.png %})
 
-## Managing translations for Content Blocks and email templates
+## Managing translations for Content Blocks
 
-Content Blocks and email templates are managed under the **Templates & Media** section in Braze.
+Content Blocks are managed under the **Templates & Media** section in Braze.
 
 ### Translation stored as part of the message component
 
-Translation tags belong on the Content Block or email template. However, Smartling executes translations at the message level; the content is translated only once it’s included in a campaign or Canvas and the target locale is set.
+Translation tags belong on the Content Block. However, Smartling executes translations at the message level; the content is translated only once it’s included in a campaign or Canvas and the target locale is set.
 
 ### Considerations
 
@@ -134,7 +146,7 @@ Translation tags belong on the Content Block or email template. However, Smartli
 - For Canvas, we recommend using rows to insert Content Blocks into your message instead of manually adding them with a Liquid tag. Note that dragging a Content Block from the preview into an email makes a local copy; any changes to the "parent" Content Block will not propagate to other campaigns using that block.
 - If you do use a Content Block Liquid tag, be sure to include at least one translation tag directly in the email body. Manually adding the translation tag will allow you to select the locales from the multi-language dropdown. Smartling will pick up the translation tags for the Content Block. You can add a `comment` tag so the text is not visible to the user.
 
-### Translations embedded as part of a Content Block or email templates
+## Managing translations using the legacy workflow
 
 If you prefer to manage translations directly within a Content Block or email template, refer to the legacy instructions in [Smartling's documentation](https://help.smartling.com/hc/en-us/articles/13248577069979-Translating-with-the-Braze-Connector). This method uses a language attribute and Liquid if/else logic to display text in different languages.
 
