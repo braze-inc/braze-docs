@@ -91,9 +91,9 @@ Pour les différentes étapes du canvas, vous pouvez modifier les détails suiva
 * Déclencheurs
 * L'audience
 * Événements d'exception
-* Retards (pour les étapes de retard uniquement)
+* Retards
 
-Cependant, le type de planification et les pourcentages de contrôle de l'étape ne sont pas modifiables après le lancement. Pour les parcours d'action et les parcours d'audience, les classements et les fenêtres d'évaluation ne sont pas modifiables après le lancement.
+Cependant, le type de planification et les pourcentages de contrôle de l'étape ne sont pas modifiables après le lancement. Pour les parcours d'action et les parcours d'audience, les classements ne sont pas modifiables après le lancement.
 
 ### Pourcentages de variante du canvas
 
@@ -151,7 +151,7 @@ Si votre Canvas comporte une expérience de chemin gagnant ou de chemin personna
 
 Modifier des toiles avec des délais peut s'avérer un peu délicat ! Gardez donc à l'esprit les détails suivants lorsque vous modifiez vos toiles.
 
-Si vous mettez à jour le délai dans une étape Délai, seuls les nouveaux utilisateurs entrant dans le Canvas et les utilisateurs qui n'ont pas été mis en file d'attente pour cette étape recevront le message au délai mis à jour.
+Si vous mettez à jour le délai dans une étape ou une fenêtre d'évaluation de l'étape Chemins d'action, seuls les nouveaux utilisateurs entrant dans le Canvas et les utilisateurs qui n'ont pas été mis en file d'attente pour cette étape recevront le message au délai mis à jour.
 
 Si vous supprimez une étape dotée d'un délai (telle que Délai ou Parcours d'action) et que vous décidez de rediriger ces utilisateurs vers une autre étape du canvas, les utilisateurs ne seront redirigés qu'une fois le délai de l'étape écoulé. Par exemple, supposons que vous supprimiez une étape Délai avec un délai d'un jour et que vous redirigiez ces utilisateurs vers une étape Message. Dans ce cas, les utilisateurs ne seront redirigés qu'après un délai d'un jour.
 
