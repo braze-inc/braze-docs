@@ -46,7 +46,7 @@ To prevent your page from exceeding size limits or experiencing slow load times,
 Liquid can customize the landing page experience for both identified and anonymous visitors.
 
 - **Identified users:** Link to the landing page from a Braze message and include the [landing page Liquid tag]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/tracking_users/#using-landing-page-liquid-tags). This associates the user with their Braze profile and personalizes the page experience.
-- **Anonymous visitors:** Use Liquid for contextual, non–profile-based content, such as a random number or a time-of-day greeting.
+- **Anonymous visitors:** Use Liquid for contextual, non-profile-based content, such as a random number or a time-of-day greeting.
 
 ## Fallback pages
 
