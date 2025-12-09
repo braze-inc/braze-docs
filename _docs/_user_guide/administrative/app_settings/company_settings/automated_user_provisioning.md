@@ -25,7 +25,11 @@ alias: /scim/automated_user_provisioning/
 {% tabs %}
 {% tab Okta - Braze app %}
 
-## Step 1: Setup SCIM provisioning
+{% alert important %}
+The Okta integration is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
+{% endalert %}
+
+## Step 1: Set up SCIM provisioning
 
 ### Step 1.1: Enable SCIM
 
@@ -63,6 +67,10 @@ Select **Test API Credentials**. A verification message will appear if the integ
 
 {% endtab %}
 {% tab Okta - Custom app integration %}
+
+{% alert important %}
+The Okta integration is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
+{% endalert %}
 
 ## Step 1: Set up SCIM provisioning
 
@@ -102,9 +110,13 @@ Select **Test API Credentials**. A verification message will appear if the integ
 {% endtab %}
 {% tab Entra ID %}
 
-## Step 1: Setup SCIM provisioning app
+{% alert important %}
+The Entra ID integration is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
+{% endalert %}
 
-1. Log into your Microsoft Entra admin center.
+## Step 1: Set up SCIM provisioning app
+
+Log into your Microsoft Entra admin center.
 
 ### Step 1.2. Create and set up your SCIM app
 
