@@ -98,7 +98,7 @@ We recommend uploading your product images to the media library, then copying an
 After building your Gmail Promotion card, select **Generate HTML code**. Copy and paste the script into the `<head>` element of your email's HTML. 
 
 {% alert tip %}
-For the drag-and-drop editor, you can copy and paste the generated HTML code into an [HTML attribute]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/#html).
+For the drag-and-drop editor, copy and paste the generated HTML code into the [custom head tags]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/#custom-head-tags) section under **Sending Settings**.
 {% endalert %}
 
 {% alert warning %}

@@ -14,7 +14,7 @@ page_order: 2.3
 
 ## Server responses
 
-If your POST payload was accepted by our servers, then successful messages will be met with the following response:
+If your POST payload was accepted by our servers, then successful messages are met with the following response:
 
 ```json
 {
@@ -24,7 +24,7 @@ If your POST payload was accepted by our servers, then successful messages will 
 
 Note that success only means that the RESTful API payload was correctly formed and passed onto our push notification or email or other messaging services. It does not mean that the messages were actually delivered, as additional factors could prevent the message from being delivered (for example, a device could be offline, the push token could be rejected by Apple's servers, you may have provided an unknown user ID).
 
-If your message is successful but has non-fatal errors you will receive the following response:
+If your message is successful but has non-fatal errors, you receive the following response:
 
 ```json
 {
@@ -32,7 +32,7 @@ If your message is successful but has non-fatal errors you will receive the foll
 }
 ```
 
-In the case of a success, any messages that were not affected by an error in the `errors` array will still be delivered. If your message has a fatal error you will receive the following response:
+In the case of a success, any messages that were not affected by an error in the `errors` array are still delivered. If your message has a fatal error you receive the following response:
 
 ```json
 {
@@ -42,7 +42,7 @@ In the case of a success, any messages that were not affected by an error in the
 
 ## Responses for tracked send IDs
 
-Analytics are always available for campaigns. In addition, analytics are available for a specific campaign send instance when the campaign is sent as a broadcast. When tracking is available for a specific campaign send instance, you will receive the following response:
+Analytics are always available for campaigns. In addition, analytics are available for a specific campaign send instance when the campaign is sent as a broadcast. When tracking is available for a specific campaign send instance, you receive the following response:
 
 ```json
 {
@@ -58,18 +58,18 @@ The status code element of a server response is a 3-digit number where the first
 
 - The **2XX class** of status code (non-fatal) indicates that **your request** was successfully received, understood, and accepted.
 - The **4XX class** of status code (fatal) indicates a **client error**. Refer to the fatal errors chart for a full list of 4XX error codes and descriptions.
-- The **5XX class** of status code (fatal) indicates a **server error**. There are several potential causes, for example, the server you're trying to access is unable to execute the request, the server is undergoing maintenance making it unable to execute the request, or the server is experiencing high levels of traffic. When this happens, we recommend you retry your request with exponential backoff. In the event of an incident or outage, Braze is not able to replay any REST API call that failed during the incident window. You will need to retry any calls that failed during the incident window.
+- The **5XX class** of status code (fatal) indicates a **server error**. There are several potential causes, for example, the server you're trying to access is unable to execute the request, the server is undergoing maintenance making it unable to execute the request, or the server is experiencing high levels of traffic. When this happens, we recommend you retry your request with exponential backoff. In the event of an incident or outage, Braze is not able to replay any REST API call that failed during the incident window. You must retry any calls that failed during the incident window.
   - A **502 error** is a failure before it reaches the destination server.
   - A **503 error** means that the request made it to the destination server, but we can't complete the request because there isn't enough capacity, or there is a network issue, or similar.
   - A **504 error** indicates a server didn't receive a response from another server upstream.
 
 ### Fatal errors
 
-The following status codes and associated error messages will be returned if your request encounters a fatal error.
+The following status codes and associated error messages are returned if your request encounters a fatal error.
 
 {% endraw %}
 {% alert warning %}
-All of the following error codes indicate that no messages will be sent.
+All of the following error codes indicate that no messages are sent.
 {% endalert %}
 {% raw %}
 

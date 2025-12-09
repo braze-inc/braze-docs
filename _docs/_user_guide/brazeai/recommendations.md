@@ -20,7 +20,7 @@ Before you can create or use item recommendations in Braze, you'll need to [crea
 
 As part of the [AI item recommendations]({{site.baseurl}}/user_guide/brazeai/recommendations/creating_recommendations/ai/) feature, AI Personalized recommendations take advantage of deep learning to predict what your users are most likely to be interested in next based on what they’ve shown interest in in the past. This method provides a dynamic and tailored recommendation system that adapts to user behavior.
 
-AI Personalized recommendations use the last 6 months of item interaction data, like purchases or custom events, to build the recommendation model. For users without enough data for a personalized list, the most popular items serve as a fallback so your users are still getting relevant suggestions.
+AI Personalized recommendations use the last 6 months of item interaction data, like purchases or custom events, to build the recommendation model. For users without enough data for a personalized list, the most popular items serve as a fallback, so your users are still getting relevant suggestions.
 
 With AI item recommendations, you can also further filter the items available with 
 [selections]({{site.baseurl}}/user_guide/data/activation/catalogs/selections/). However, selections with Liquid cannot be used in AI recommendations, so keep that in mind when building your catalog selections.
@@ -43,7 +43,7 @@ Predict and recommend the items a user is most likely to purchase next, based on
 {% details Requirements %}
 - AI item recommendations
 - Catalog of relevant items
-- A method for tracking purchases, either a purchase object or custom event
+- A method for tracking purchases, either a purchase object or a custom event
 {% enddetails %}
 
 {% details Setting it up %}
@@ -261,7 +261,7 @@ Highlight items that your users have recently purchased with increased frequency
 {% details Requirements %}
 - AI item recommendations
 - Catalog of relevant items
-- A method for tracking purchases (either a purchase object or custom event)
+- A method for tracking purchases (either a purchase object or a custom event)
 {% enddetails %}
 
 {% details Setting it up %}
@@ -353,7 +353,7 @@ For example, an online bookstore could offer a "Surprise Me" feature, recommendi
 
 A [rules-based recommendation]({{site.baseurl}}/rules_based_recommendations/) engine uses user data and product information to suggest relevant items to users within messages. It uses Liquid and either Braze catalogs or Connected Content to dynamically personalize content based on user behavior and attributes.
 
-Rules-based recommendations are based on fixed logic that you must manually set. This means your recommendations won’t adjust to a user's individual purchase history and tastes unless you update the logic, therefore this method is best for recommendations that don’t need frequent updates.
+Rules-based recommendations are based on fixed logic that you must manually set. This means your recommendations won’t adjust to a user's individual purchase history and tastes unless you update the logic; therefore, this method is best for recommendations that don’t need frequent updates.
 
 #### Use cases
 
@@ -377,6 +377,8 @@ This happens under a few specific conditions:
 - The model finds fewer than 30 items that match your criteria.
 - Relevant items are no longer available or in stock.
 - Items don’t meet the current selection criteria, perhaps due to a change in stock or user preferences.
+
+Note that recommendations operate independently and don’t have any knowledge of what the other models are recommending. This means each section can have duplicate items already displayed in other AI recommendation sections in the same email.
 
 ### Do existing recommendations train weekly after upgrading to Item Recommendations Pro?
 

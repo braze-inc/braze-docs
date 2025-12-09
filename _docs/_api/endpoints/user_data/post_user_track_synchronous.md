@@ -22,9 +22,9 @@ This endpoint is currently in beta. Contact your Braze account manager if you’
 
 ## Synchronous and asynchronous API calls
 
-In an asynchronous call, the API will return the status code `201`, indicating that your request was successfully received, understood, and accepted. However, this does not mean that your request has been fully completed.
+In an asynchronous call, the API returns the status code `201`, indicating that your request was successfully received, understood, and accepted. However, this does not mean that your request has been fully completed.
 
-In a synchronous call, the API will return a status code `201`, indicating that your request was successfully received, understood, accepted, and completed. The call response will show select user profile fields as a result of the operation.
+In a synchronous call, the API returns a status code `201`, indicating that your request was successfully received, understood, accepted, and completed. The call response shows select user profile fields as a result of the operation.
 
 This endpoint has a lower rate limit than the `/users/track` endpoint (see [rate limit](#rate-limit) below). Each `/users/track/sync` request can contain only  one event object, one attribute object, **or** one purchase object. This endpoint should be reserved for user profile updates where a synchronous call is needed. For a healthy implementation, we recommend using `/users/track/sync` and `/users/track` together.
 
@@ -271,7 +271,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track/sync' 
 
 ### Should I use the asynchronous or synchronous endpoint?
 
-For most profile updates, the `/users/track` endpoint will work best because of its higher rate limit and flexibility to let you batch requests. However, the `/users/track/sync` endpoint is useful if you're experiencing race conditions due to rapid, consecutive requests for the same user.
+For most profile updates, the `/users/track` endpoint works best because of its higher rate limit and flexibility to let you batch requests. However, the `/users/track/sync` endpoint is useful if you're experiencing race conditions due to rapid, consecutive requests for the same user.
 
 ### Does the response time differ from the `/users/track` endpoint?
 
