@@ -54,7 +54,7 @@ description: "This landing page is home to all things push notifications."
 {% multi_lang_include developer_guide/unreal_engine/push_notifications.md %}
 {% endsdktab %}
 
-{% sdktab xamarin %}
+{% sdktab .NET MAUI (Xamarin)%}
 {% multi_lang_include developer_guide/xamarin/push_notifications.md %}
 {% endsdktab %}
 {% endsdktabs %}
