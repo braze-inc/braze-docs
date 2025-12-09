@@ -52,7 +52,7 @@ To retarget users, we recommend building a segment of users who didn’t receive
 
 #### OtherLevels - Dynamic content
 
-[OtherLevels]({{site.baseurl}}/partners/otherlevels/) is an experience platform that uses generative AI to transform how sports brands, publishers, and operators connect with their customers by transforming traditional content into on-brand personalised video and rich media experiences at scale.
+[OtherLevels]({{site.baseurl}}/partners/otherlevels/) is an experience platform that uses generative AI to transform how sports brands, publishers, and operators connect with their customers by transforming traditional content into on-brand personalized video and rich media experiences at scale.
 
 ### SDK
 
