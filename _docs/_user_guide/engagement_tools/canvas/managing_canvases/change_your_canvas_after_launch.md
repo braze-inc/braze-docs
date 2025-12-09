@@ -91,9 +91,9 @@ For individual Canvas steps, you can edit the following details after launch:
 * Triggers
 * Audience
 * Exception events
-* Delays
+* Delays (for Delay steps only)
 
-However, the step's schedule type and control percentages are not editable after launch. For Action Paths and Audience Paths steps, the rankings aren't editable after launch.
+However, the step's schedule type and control percentages are not editable after launch. For Action Paths and Audience Paths steps, the rankings and evaluation windows aren't editable after launch.
 
 ### Canvas variant percentages
 
@@ -153,7 +153,7 @@ If your Canvas has an active or in-progress Winning Path or Personalized Path ex
 
 Editing Canvases with time delays can be a bit tricky! So, keep in mind the following details as you make edits to your Canvases.
 
-If you update the delay in a Delay step or evaluation window in the Action Paths step, only new users entering the Canvas and users who haven't been queued for that step will receive the message at the updated time delay.
+If you update the delay in a Delay step, only new users entering the Canvas and users who haven't been queued for that step will receive the message at the updated time delay.
 
 If you delete a step with a time delay (such as Delay or Action Paths) and decide to redirect those users into another Canvas step, the users will only be redirected after the step's time delay has completed. For example, let's say you delete a Delay step with a one-day delay and redirect those users to a Message step. In this case, the users will only be redirected after the one-day delay has been completed.
 

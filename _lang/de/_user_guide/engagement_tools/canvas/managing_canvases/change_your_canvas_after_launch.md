@@ -91,9 +91,9 @@ Für einzelne Canvas-Schritte können Sie nach dem Start die folgenden Details b
 * Trigger
 * Zielgruppe
 * Ausnahme-Events
-* Verspätungen
+* Verspätungen (nur für Verzögerungsschritte)
 
-Der Zeitplantyp und die Kontrollprozentsätze des Schritts können jedoch nach dem Start nicht mehr bearbeitet werden. Bei den Schritten Aktionspfade und Publikumspfade sind die Ranglisten nach dem Start nicht mehr bearbeitbar.
+Der Zeitplantyp und die Kontrollprozentsätze des Schritts können jedoch nach dem Start nicht mehr bearbeitet werden. Bei den Schritten Aktionspfade und Publikumspfade sind die Ranglisten und Bewertungsfenster nach dem Start nicht mehr bearbeitbar.
 
 ### Prozentuale Anteile der Leinwandvariante
 
@@ -151,7 +151,7 @@ Wenn Ihr Canvas ein aktives oder laufendes Winning Path- oder Personalized Path-
 
 Die Bearbeitung von Leinwänden mit Zeitverzögerungen kann ein wenig knifflig sein! Beachten Sie also die folgenden Details, wenn Sie Ihre Canvases bearbeiten.
 
-Wenn Sie die Verzögerung in einem Verzögerungsschritt oder einem Bewertungsfenster im Schritt Aktionspfade aktualisieren, erhalten nur neue Benutzer, die den Canvas betreten, und Benutzer, die nicht für diesen Schritt in die Warteschlange gestellt wurden, die Nachricht mit der aktualisierten Verzögerung.
+Wenn Sie die Verzögerung in einem Verzögerungsschritt aktualisieren, erhalten nur neue Benutzer, die den Canvas betreten, und Benutzer, die nicht für diesen Schritt in die Warteschlange gestellt wurden, die Nachricht mit der aktualisierten Verzögerung.
 
 Wenn Sie einen Schritt mit einer Zeitverzögerung (z. B. Verzögerung oder Aktionspfade) löschen und beschließen, diese Benutzer in einen anderen Canvas-Schritt umzuleiten, werden die Benutzer erst umgeleitet, wenn die Zeitverzögerung des Schritts abgelaufen ist. Nehmen wir an, Sie löschen einen Verzögerungsschritt mit einer eintägigen Verzögerung und leiten diese Nutzer:innen auf einen Schritt für Nachrichten um. In diesem Fall werden die Nutzer:innen erst dann weitergeleitet, wenn die eintägige Frist abgelaufen ist.
 

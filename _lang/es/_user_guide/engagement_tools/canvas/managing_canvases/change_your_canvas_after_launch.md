@@ -91,9 +91,9 @@ Para los pasos en Canvas individuales, puedes editar los siguientes detalles des
 * Desencadenantes
 * Audiencia
 * Eventos de excepción
-* Retrasos
+* Retrasos (sólo para pasos de Retraso)
 
-Sin embargo, el tipo de programación y los porcentajes de control del paso no son editables tras el lanzamiento. Para los pasos de rutas de acción y rutas de audiencia, las clasificaciones no son editables tras el lanzamiento.
+Sin embargo, el tipo de programación y los porcentajes de control del paso no son editables tras el lanzamiento. Para los pasos de rutas de acción y rutas de audiencia, las clasificaciones y las ventanas de evaluación no son editables tras el lanzamiento.
 
 ### Porcentajes de variantes en Canvas
 
@@ -151,7 +151,7 @@ Si tu Canvas tiene un experimento de ruta ganadora o de ruta personalizada activ
 
 ¡Editar Lienzos con retrasos puede ser un poco complicado! Por tanto, ten en cuenta los siguientes detalles cuando edites tus Lienzos.
 
-Si actualizas el retraso en un paso de Retraso o ventana de evaluación en el paso Rutas de acción, sólo los nuevos usuarios que entren en el Canvas y los usuarios que no hayan estado en cola para ese paso recibirán el mensaje con el retraso actualizado.
+Si actualizas el retraso en un paso de Retraso, sólo los nuevos usuarios que entren en el Canvas y los usuarios que no hayan estado en cola para ese paso recibirán el mensaje con el retraso actualizado.
 
 Si eliminas un paso con una demora de tiempo (como Retraso o Rutas de acción) y decides redirigir a esos usuarios a otro paso en Canvas, los usuarios sólo serán redirigidos una vez que se haya completado la demora de tiempo del paso. Por ejemplo, supongamos que eliminas un paso Retraso con un retraso de un día y rediriges a esos usuarios a un paso Mensaje. En este caso, los usuarios sólo serán redirigidos una vez transcurrido el plazo de un día.
 

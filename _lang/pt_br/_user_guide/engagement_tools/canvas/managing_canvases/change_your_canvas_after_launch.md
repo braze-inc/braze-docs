@@ -91,9 +91,9 @@ Para etapas individuais do Canvas, você pode editar os seguintes detalhes após
 * Gatilhos
 * Público
 * Eventos de exceção
-* Atrasos
+* Atrasos (somente para etapas de Atraso)
 
-No entanto, o tipo de cronograma e as porcentagens de controle da etapa não são editáveis após o lançamento. Para as etapas de Caminhos de ação e Caminhos de público-alvo, as classificações não são editáveis após o lançamento.
+No entanto, o tipo de cronograma e as porcentagens de controle da etapa não são editáveis após o lançamento. Para as etapas de Caminhos de ação e Caminhos de público-alvo, as classificações e as janelas de avaliação não são editáveis após o lançamento.
 
 ### Porcentagens de variantes de tela
 
@@ -151,7 +151,7 @@ Se o seu Canvas tiver um experimento de Caminho vencedor ou Caminho personalizad
 
 A edição de telas com atrasos de tempo pode ser um pouco complicada! Portanto, tenha em mente os detalhes a seguir ao fazer edições em seus Canvases.
 
-Se você atualizar o atraso em uma etapa de Atraso ou janela de avaliação na etapa Caminhos de ação, somente os novos usuários que entrarem no Canvas e os usuários que não estiverem na fila para essa etapa receberão a mensagem com o atraso atualizado.
+Se você atualizar o atraso em uma etapa de Atraso, somente os novos usuários que entrarem no Canvas e os usuários que não estiverem na fila para essa etapa receberão a mensagem com o atraso atualizado.
 
 Se você excluir uma etapa com um atraso de tempo (como Atraso ou Caminhos de ação) e decidir redirecionar esses usuários para outra etapa do Canvas, os usuários só serão redirecionados após a conclusão do atraso de tempo da etapa. Por exemplo, digamos que você exclua uma etapa de Atraso com um dia de atraso e redirecione esses usuários para uma etapa de Mensagem. Nesse caso, os usuários só serão redirecionados após o término do prazo de um dia.
 
