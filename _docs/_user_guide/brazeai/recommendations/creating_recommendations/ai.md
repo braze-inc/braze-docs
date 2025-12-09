@@ -96,7 +96,7 @@ If you choose **Custom Event**, select your event from the list.
 ![The "Completed Purchase" custom event selected as how events are currently tracked.]({% image_buster /assets/img/item_recs_3.png %})
 
 {% alert note %}
-Custom events must have sufficient data before they appear in the event list. If your custom event doesn’t appear, it may be because the Braze backend hasn’t yet processed it or it lacks enough data for model training. AI Recommendations rely on historical data to generate insights, so newly created or rarely triggered events won’t be available until more data is collected.
+Custom events must have sufficient data before they appear in the event list. If your custom event doesn’t appear, it may be because the Braze backend hasn’t yet processed it or it lacks enough data for model training. AI recommendations rely on historical data to generate insights, so newly created or rarely triggered events won’t be available until more data is collected.
 {% endalert %}
 
 ### Step 5: Choose the corresponding property name {#property-name}
