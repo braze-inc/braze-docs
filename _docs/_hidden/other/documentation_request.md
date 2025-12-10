@@ -379,7 +379,7 @@ hide_toc: true
         } else if (selectedValue === 'feature') {
             $('#disclosure-warning').hide();
             $('#resource_urls').show();
-            $('#doc_verify_div').hide();
+            $('#doc_verify_div').show();
             $('#doc_release_notes_group').show();
         } else {
             $('#doc_release_notes_group').hide();
@@ -521,7 +521,7 @@ hide_toc: true
               </div>
               <div class="form-group" id="doc_release_notes_group">
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="Y" id="doc_release_notes" name="ReleaseNotes">
+                <input class="form-check-input" type="checkbox" value="Y" id="doc_release_notes" name="Release Notes">
                 <label class="form-check-label" for="doc_release_notes" id="doc_release_notes_label">
                   <span></span> Include in release notes
                 </label>
