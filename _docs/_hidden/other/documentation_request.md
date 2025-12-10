@@ -521,7 +521,7 @@ hide_toc: true
               </div>
               <div class="form-group" id="doc_release_notes_group">
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="Y" id="doc_release_notes" name="Release Notes">
+                <input class="form-check-input" type="checkbox" value="Y" id="doc_release_notes" name="Release_Notes">
                 <label class="form-check-label" for="doc_release_notes" id="doc_release_notes_label">
                   <span></span> Include in release notes
                 </label>
