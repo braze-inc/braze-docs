@@ -15,7 +15,7 @@ This step is for iOS only. The default implementation for in-app messages is alr
 
 To set up the default presenter for in-app messages on iOS, create an implementation of the `BrazeInAppMessagePresenter` protocol and assign it to the optional `inAppMessagePresenter` on your Braze instance. You can also use the default Braze UI presenter by instantiating a `BrazeInAppMessageUI` object.
 
-You will need to import the `BrazeUI` library to access the `BrazeInAppMessageUI` class.
+You must import the `BrazeUI` library to access the `BrazeInAppMessageUI` class.
 
 {% tabs %}
 {% tab swift %}
