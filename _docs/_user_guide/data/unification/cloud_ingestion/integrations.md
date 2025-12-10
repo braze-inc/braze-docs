@@ -134,7 +134,11 @@ When connecting different workspaces to the same Snowflake account, you must cre
 
 #### Step 1.5: Allow Braze IPs in Snowflake network policy (optional)
 
-Depending on the configuration of your Snowflake account, you may need to allow the following IP addresses in your Snowflake network policy. For more information on enabling this, see the relevant Snowflake documentation on [modifying a network policy](https://docs.snowflake.com/en/user-guide/network-policies.html#modifying-network-policies).
+If your Snowflake account is configured to restrict traffic using a network policy, you'll need to allow the following Braze IP addresses in your Snowflake network policy. For more information on enabling this, see the relevant Snowflake documentation on [modifying a network policy](https://docs.snowflake.com/en/user-guide/network-policies.html#modifying-network-policies).
+
+{% alert note %}
+Connecting via AWS PrivateLink is not supported. Customers who need to connect through PrivateLink should follow Snowflake’s guidance on allowlisting IP addresses instead. If your team needs help with that process, Snowflake Support can assist you.
+{% endalert %}
 
 {% multi_lang_include data_centers.md datacenters='ips' %}
 
