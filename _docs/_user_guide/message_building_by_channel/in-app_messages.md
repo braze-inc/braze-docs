@@ -65,15 +65,32 @@ Fullscreen messages are exactly what you'd expect—they take up the whole scree
 
 In addition to these default message templates, you can also further customize your messaging using custom HTML in-app messages, web modals with CSS, or web email capture forms. For more information, refer to [Customization]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/).
 
+## Templated in-app messages
+
+In-app messages will be delivered as templated in-app messages when **Re-evaluate campaign eligibility before displaying** is selected or if any of the following Liquid tags exist in the message:
+
+- `canvas_entry_properties`
+- `connected_content`
+- SMS variables such as {% raw %}`{sms.${*}}`{% endraw %}
+- `catalog_items`
+- `catalog_selection_items`
+- `event_properties`
+
+This means during session start, the device will receive the trigger of that in-app message instead of the entire message. When the user triggers the in-app message, the user's device will make a network request to fetch the actual message.
+
+{% alert note %}
+The message will not deliver if the device doesn't have access to the internet. The message might not deliver if the Liquid logic takes too long to resolve.
+{% endalert %}
+
 ## Abort behavior
 
 At Braze, an abort occurs when a user takes an action that makes them eligible to receive a message, but they don't receive the message because its Liquid logic marks them as ineligible. For example:
 
 1. Sam performs an action which should trigger an email campaign.
-2. Inside the email’s body, there is Liquid logic that says if a custom attribute score is less than 50, do not send this email.
+2. The email’s body contains Liquid logic that says if a custom attribute score is less than 50, do not send this email.
 3. Sam's custom attribute score is 20.
 4. Braze recognizes that Sam shouldn’t receive this email, and the email is aborted.
-5. An abort event is logged that describes the conditions of why the abort occurred.
+5. An abort event is logged.
 
 However, because in-app messages are a pull channel, aborts work a little differently for them.
 
@@ -85,12 +102,32 @@ In other words, the logic that determines if we should abort an in-app message o
 
 1. Sam starts a session by launching a Braze-powered app on their phone.
 2. Based on the audience criteria of the active campaigns in the workspace, Sam could be eligible for five different campaigns. All five are pulled into their phone and cached.
-3. Sam **has not** performed any actions that would trigger these messages, but he could receive those messages in the session.
+3. Sam **has not** performed any actions that would trigger these messages, but they could receive those messages in the session.
 4. The Liquid in two of the in-app messages has rules that exclude Sam from receiving the message (such as their score custom attribute not being high enough).
 5. Sam is not sent the two in-app messages that exclude them, but they are sent the other three messages.
 6. No abort events are logged.
 
 Braze doesn't log any abort events in Sam's case because this doesn't fulfill our definition of an abort; Sam **did not** perform any actions that would trigger the messages. In other words, when it comes to in-app messages, users never actually perform the trigger before Braze determines they shouldn’t see the message.
+
+#### Templated in-app message abort behavior
+
+[Templated in-app messages](#templated-in-app-messages) force the SDK to reevaluate if a message should display when the trigger event occurs. This has a different abort behavior. To demonstrate, let's consider this example:
+
+1. Sam starts a Braze session by launching a Braze-powered app on their phone.
+2. The audience criteria of the active campaigns says Sam could be eligible for a templated in-app message, so the trigger information is sent to their device without the message payload.
+3. Sam selects a button that logs a custom event, triggering the templated in-app message.
+4. Sam's device makes a network request to fetch the in-app message.
+5. The message's Liquid logic leads to an abort, so Braze logs this as an abort; Sam performed the trigger action prior to this evaluation.
+
+##### Comparing in-app message abort behavior
+
+This table compares the in-app message flows that Sam experienced:
+
+| Type of in-app message | Abort behavior |
+| --- | --- |
+| Non-templated | An abort event was not logged because Sam didn't perform any actions that would trigger a message.|
+| Templated | An abort event was logged because Sam performed the trigger action to trigger the templated in-app message but received an abort in the Liquid templating. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## More resources
 
