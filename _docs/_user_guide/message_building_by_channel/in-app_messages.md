@@ -123,10 +123,10 @@ Braze doesn't log any abort events in Sam's case because this doesn't fulfill ou
 
 This table compares the in-app message flows that Sam experienced:
 
-| Type of in-app message | Abort behavior |
+| In-app message | Abort behavior |
 | --- | --- |
-| Non-templated | An abort event was not logged because Sam didn't perform any actions that would trigger a message.|
-| Templated | An abort event was logged because Sam performed the trigger action to trigger the templated in-app message but received an abort in the Liquid templating. |
+| Standard | An abort event was not logged because Sam didn't perform any actions that would trigger a message.<br><br>Standard in-app messages don’t log aborts because the definition of an abort is “didn’t see the message despite performing the trigger action.” Because in-app messages are delivered to the device before the trigger actions occur, it doesn’t make sense to consider in-app messages omitted because of Liquid logic. |
+| Templated | An abort event was logged because Sam performed the trigger action to trigger the templated in-app message but received an abort in the Liquid templating. <br><br>Templated in-app messages log aborts because the Liquid evaluation occurs after the trigger action has been performed. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## More resources
