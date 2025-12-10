@@ -23,7 +23,7 @@ The LILT Braze integration automates and accelerates the translation process, en
 **Global Campaign Launch Acceleration**: Launch marketing campaigns across multiple regions simultaneously without delays from manual translation handoffs.
 - *Scenario*: Your company is launching a new product across 10 countries.
 - *Solution*: Your marketing team finalizes the English email template in Braze, tags it with `LILT: Ready`, and the LILT Connector automatically pulls the content. Domain-specific linguists review the AI translation prompts in the LILT platform for quality assurance, and the Connector pushes the translated versions back into Braze.
-- *Benefit*: Reduces the time-to-market for your global campaigns from days to hours, ensuring all customers receive the new product announcement at the optimal time.
+- *Benefit*: Reduces the time-to-market for your global campaigns from days to hours, so all customers can receive the new product announcement at the optimal time.
 
 **Instant, Brand-Aligned Localization**: Use LILT's AI for immediate, on-brand translations for time-sensitive communications.
 - *Scenario*: You must immediately deploy emails for a flash sale, limited-time offer, or urgent service interruption in five geographic markets.
