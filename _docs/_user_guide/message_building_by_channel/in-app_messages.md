@@ -3,54 +3,19 @@ nav_title: "In-app messages"
 article_title: In-App Messages
 page_order: 2
 alias: /in-app_messages/
-layout: dev_guide
-guide_top_header: "In-App Messages"
-guide_top_text: "In-app messages help you get content to your user without interrupting their day with a push notification, as these messages don't deliver outside of the user's app and won't intrude on their home screen. <br><br>Customized and tailored in-app messages enhance the user experience and help your audience get the most value out of your app. With a variety of layouts and customization tools to choose from, in-app messages engage your users more than ever before. They come with context, have lower urgency, and are delivered when the user is active within your app. For examples of in-app messages, check out our <a href='https://www.braze.com/customers'>customer stories</a>."
 description: "This landing page is home to all things in-app message. Here, you can find articles on how to create in-app messages, the drag-and-drop editor, how to customize your messages, reporting, and more."
 channel:
   - in-app messages
 search_rank: 5
-guide_featured_title: "Popular articles"
-guide_featured_list:
-- name: "Drag-And-Drop Editor"
-  link: /docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/
-  image: /assets/img/braze_icons/phone-02.svg
-- name: "Traditional Editor"
-  link: /docs/user_guide/message_building_by_channel/in-app_messages/traditional/
-  image: /assets/img/braze_icons/phone-02.svg
-- name: "Creative Details"
-  link: /docs/user_guide/message_building_by_channel/in-app_messages/creative_details/
-  image: /assets/img/braze_icons/brush-02.svg
-
-guide_menu_title: "More articles"
-guide_menu_list:
-- name: "Testing"
-  link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/
-  image: /assets/img/braze_icons/beaker-02.svg
-- name: "Reporting"
-  link: /docs/user_guide/message_building_by_channel/in-app_messages/reporting/
-  image: /assets/img/braze_icons/bar-chart-01.svg
-- name: "Dark Mode"
-  link: /docs/user_guide/message_building_by_channel/in-app_messages/traditional/dark-mode/
-  image: /assets/img/braze_icons/phone-02.svg
-- name: "App Store Rating Prompt"
-  link: /docs/user_guide/message_building_by_channel/in-app_messages/ios_app_rating_prompt/
-  image: /assets/img/braze_icons/star-01.svg
-- name: "Simple survey"
-  link: /docs/user_guide/message_building_by_channel/in-app_messages/traditional/templates/simple_survey/
-  image: /assets/img/braze_icons/bar-chart-07.svg
-- name: "Locales in Messages"
-  link: /docs/locales_in_messages/
-  image: /assets/img/braze_icons/translate-01.svg
-- name: "Best Practices"
-  link: /docs/user_guide/message_building_by_channel/in-app_messages/best_practices
-  image: /assets/img/braze_icons/check-square-broken.svg
-- name: "FAQ"
-  link: /docs/user_guide/message_building_by_channel/in-app_messages/faq/
-  image: /assets/img/braze_icons/annotation-question.svg
 ---
 
-## [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/messaging-channels-in-app-in-browser){: style="float:right;width:120px;border:0;" class="noimgborder"} Potential use cases
+# [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/messaging-channels-in-app-in-browser){: style="float:right;width:120px;border:0;" class="noimgborder"} In-app messages
+
+> In-app messages help you get content to your user without interrupting their day with a push notification, as these messages don't deliver outside of the user's app and won't intrude on their home screen. 
+
+Customized and tailored in-app messages enhance the user experience and help your audience get the most value out of your app. With a variety of layouts and customization tools to choose from, in-app messages engage your users more than ever before. They come with context, have lower urgency, and are delivered when the user is active within your app. For examples of in-app messages, check out our [customer stories](https://www.braze.com/customers/).
+
+## Potential use cases
 
 With the rich level of content offered by in-app messages, you can leverage this channel for a variety of use cases:
 
@@ -81,16 +46,12 @@ Slide-up messages typically appear at the top and bottom of the app screen (you 
 
 ![Slideup in-app message appearing from the bottom of the app screen. The slide-up includes an icon image and a brief message.]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
 
-<br>
-
 {% endtab %}
 {% tab Modal %}
 
 Modals appear in the center of the device's screen with a screen overlay that helps it stand out from your app in the background. These are perfect for not-so-subtly suggesting that your user take advantage of a sale or giveaway.
 
 ![Modal in-app message appearing in the center of an app and website as a dialog. The modal includes an image, header, message body, and two buttons.]({% image_buster /assets/img/modal-behavior.gif %}){: style="border:0px;"}
-
-<br>
 
 {% endtab %}
 {% tab Fullscreen %}
@@ -99,12 +60,37 @@ Fullscreen messages are exactly what you'd expect—they take up the whole scree
 
 ![Fullscreen in-app message taking over an app screen. The fullscreen message includes a large image, header, message body, and two buttons.]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
 
-<br>
-
 {% endtab %}
 {% endtabs %}
 
 In addition to these default message templates, you can also further customize your messaging using custom HTML in-app messages, web modals with CSS, or web email capture forms. For more information, refer to [Customization]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/).
+
+## Abort behavior
+
+At Braze, an abort occurs when a user takes an action that makes them eligible to receive a message, but they don't receive the message because its Liquid logic marks them as ineligible. For example:
+
+1. Sam performs an action which should trigger an email campaign.
+2. Inside the email’s body, there is Liquid logic that says if a custom attribute score is less than 50, do not send this email.
+3. Sam's custom attribute score is 20.
+4. Braze recognizes that Sam shouldn’t receive this email, and the email is aborted.
+5. An abort event is logged that describes the conditions of why the abort occurred.
+
+However, because in-app messages are a pull channel, aborts work a little differently for them.
+
+### In-app message abort behavior
+
+In-app messages are pulled in by the device at session start and cached on the device, so regardless of Internet connection quality, the message can be delivered instantly to the user. For example, if a user receives five in-app messages within his session, they will receive all five on session start. The messages will be cached locally and appear when their defined trigger events occur (session start, user clicks a button which logs a custom event, or other).
+
+In other words, the logic that determines if we should abort an in-app message occurs **before** the trigger has occurred. To demonstrate this, let's say Sam from the email example is subscribed to push notifications.
+
+1. Sam starts a session by launching a Braze-powered app on their phone.
+2. Based on the audience criteria of the active campaigns in the workspace, Sam could be eligible for five different campaigns. All five are pulled into their phone and cached.
+3. Sam **has not** performed any actions that would trigger these messages, but he could receive those messages in the session.
+4. The Liquid in two of the in-app messages has rules that exclude Sam from receiving the message (such as their score custom attribute not being high enough).
+5. Sam is not sent the two in-app messages that exclude them, but they are sent the other three messages.
+6. No abort events are logged.
+
+Braze doesn't log any abort events in Sam's case because this doesn't fulfill our definition of an abort; Sam **did not** perform any actions that would trigger the messages. In other words, when it comes to in-app messages, users never actually perform the trigger before Braze determines they shouldn’t see the message.
 
 ## More resources
 
