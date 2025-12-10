@@ -27,7 +27,7 @@ The LILT Braze integration automates and accelerates the translation process, en
 
 **Instant, Brand-Aligned Localization**: Use LILT's AI for immediate, on-brand translations for time-sensitive communications.
 - *Scenario*: You must deploy a flash sale, limited-time offer, or urgent service interruption email needs in five geographic markets immediately.
-- *Solution*: You tag the email template with `LILT: Instant`. LILT uses its AI and linguistic assets specific to your company (for example, terminology, style guides) to generate a high-quality, brand-consistent translation within minutes.
+- *Solution*: You tag the email template with `LILT: Instant`. LILT uses its AI and linguistic assets specific to your company (such as terminology and style guides) to generate a high-quality, brand-consistent translation within minutes.
 - *Benefit*: Allows for hyper-responsive, real-time communications without sacrificing brand voice or quality, which is critical for time-sensitive marketing.
 
 ## Prerequisites
