@@ -29,7 +29,7 @@ In your Braze SDK integration, find and remove any calls to `automaticallyShowIn
 
 ### Step 3: Update integration
 
-Finally, replace the removed call with the following snippet:
+Finally, replace the removed call with the following snippet. Make sure to call `subscribeToInAppMessage()` before calling `openSession()`. This ensures your in-app message listener is registered in time to receive the push primer message.
 
 ```javascript
 import * as braze from "@braze/web-sdk";
