@@ -175,7 +175,7 @@ The <i>Failed Delivery Rate</i> is the percentage of sends that failed because t
 {% endif %}
 
 {% if include.metric == "Primary Conversions (A) or Primary Conversion Event" %}
-<i>Primary Conversions (A)</i> or <i>Primary Conversion Event</i> is the number of times a user performs a defined event after receiving or viewing a message from a Braze campaign. This event is selected by you when setting up the campaign and is used as the primary success metric for reporting and optimization.
+<i>Primary Conversions (A)</i> or <i>Primary Conversion Event</i> is the number of unique users who perform a defined event after receiving or viewing a message from a Braze campaign. This event is selected by you when setting up the campaign and is used as the primary success metric for reporting and optimization.
 {% endif %}
 
 {% if include.metric == "Reads" %}
