@@ -41,6 +41,13 @@ To prevent your page from exceeding size limits or experiencing slow load times,
 - Doesn't continuously loops through or references large data sets.
 - Doesn't rely on extensive mathematical or conditional logic within the Liquid block.
 
+### Use Liquid for identified and anonymous users 
+
+Liquid can customize the landing page experience for both identified and anonymous visitors.
+
+- **Identified users:** Link to the landing page from a Braze message and include the [landing page Liquid tag]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/tracking_users/#using-landing-page-liquid-tags). This associates the user with their Braze profile and personalizes the page experience.
+- **Anonymous visitors:** Use Liquid for contextual, non-profile-based content, such as a random number or a time-of-day greeting.
+
 ## Fallback pages
 
 If your users attempt to access a page that has been unpublished, they'll see a message indicating that the page cannot currently be loaded. Reasons that a page has been unpublished include:

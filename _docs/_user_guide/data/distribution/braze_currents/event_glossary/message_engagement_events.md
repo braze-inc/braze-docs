@@ -4296,7 +4296,7 @@ This event occurs when a user clicks an email. Multiple events may be generated 
     "send_id" : "(optional, string) Message send ID this message belongs to",
     "suspected_bot_click_reason" : "(optional, array of string) Reason(s) why this is a suspected bot click. Will always populate even if Bot Filtering setting is disabled.",
     "url" : "(optional, string) URL that the user clicked on",
-    "user_agent" : "(optional, string) User agent on which the spam report occurred"
+    "user_agent" : "(optional, string) User agent on which the click occurred"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
@@ -4348,7 +4348,7 @@ This event occurs when a user clicks an email. Multiple events may be generated 
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token",
     "url" : "(optional, string) URL that the user clicked on",
-    "user_agent" : "(optional, string) User agent on which the spam report occurred"
+    "user_agent" : "(optional, string) User agent on which the click occurred"
   }
 }
 ```
@@ -4395,7 +4395,7 @@ This event occurs when a user clicks an email. Multiple events may be generated 
           "send_id" : "(optional, string) Message send ID this message belongs to",
           "source_request_id" : "(required, string) Globally unique ID for this event",
           "url" : "(optional, string) URL that the user clicked on",
-          "user_agent" : "(optional, string) User agent on which the spam report occurred"
+          "user_agent" : "(optional, string) User agent on which the click occurred"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
@@ -4459,7 +4459,7 @@ This event occurs when a user clicks an email. Multiple events may be generated 
     "message_variation_name" : "(optional, string) Name of the message variation",
     "send_id" : "(optional, string) Message send ID this message belongs to",
     "suspected_bot_click_reason" : "(optional, array of string) Reason(s) why this is a suspected bot click. Will always populate even if Bot Filtering setting is disabled.",
-    "user_agent" : "(optional, string) User agent on which the spam report occurred"
+    "user_agent" : "(optional, string) User agent on which the click occurred"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
@@ -4505,7 +4505,7 @@ This event occurs when a user clicks an email. Multiple events may be generated 
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "url" : "(optional, string) URL that the user clicked on",
-  "user_agent" : "(optional, string) User agent on which the spam report occurred",
+  "user_agent" : "(optional, string) User agent on which the click occurred",
   "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
@@ -5198,7 +5198,7 @@ It's known behavior that the email open event fields `device_model` and `mailbox
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "send_id" : "(optional, string) Message send ID this message belongs to",
-    "user_agent" : "(optional, string) User agent on which the spam report occurred"
+    "user_agent" : "(optional, string) User agent on which the open occurred"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
@@ -5246,7 +5246,7 @@ It's known behavior that the email open event fields `device_model` and `mailbox
     "send_id" : "(optional, string) Message send ID this message belongs to",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token",
-    "user_agent" : "(optional, string) User agent on which the spam report occurred"
+    "user_agent" : "(optional, string) User agent on which the open occurred"
   }
 }
 ```
@@ -5290,7 +5290,7 @@ It's known behavior that the email open event fields `device_model` and `mailbox
           "message_variation_name" : "(optional, string) Name of the message variation",
           "send_id" : "(optional, string) Message send ID this message belongs to",
           "source_request_id" : "(required, string) Globally unique ID for this event",
-          "user_agent" : "(optional, string) User agent on which the spam report occurred"
+          "user_agent" : "(optional, string) User agent on which the open occurred"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
@@ -5350,7 +5350,7 @@ It's known behavior that the email open event fields `device_model` and `mailbox
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "send_id" : "(optional, string) Message send ID this message belongs to",
-    "user_agent" : "(optional, string) User agent on which the spam report occurred"
+    "user_agent" : "(optional, string) User agent on which the open occurred"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
@@ -5392,7 +5392,7 @@ It's known behavior that the email open event fields `device_model` and `mailbox
   "send_id" : "(optional, string) Message send ID this message belongs to",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_agent" : "(optional, string) User agent on which the spam report occurred",
+  "user_agent" : "(optional, string) User agent on which the open occurred",
   "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
@@ -7190,7 +7190,7 @@ This event occurs when a user clicks a link in a LINE message where the link's d
     "subscription_group_id" : "(optional, string) Subscription group API ID",
     "timezone" : "(optional, string) Time zone of the user",
     "url" : "(optional, string) URL that the user clicked on",
-    "user_agent" : "(optional, string) User agent on which the spam report occurred"
+    "user_agent" : "(optional, string) User agent on which the click occurred"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
@@ -7231,7 +7231,7 @@ This event occurs when a user clicks a link in a LINE message where the link's d
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token",
     "url" : "(optional, string) URL that the user clicked on",
-    "user_agent" : "(optional, string) User agent on which the spam report occurred"
+    "user_agent" : "(optional, string) User agent on which the click occurred"
   }
 }
 ```
@@ -7269,7 +7269,7 @@ This event occurs when a user clicks a link in a LINE message where the link's d
           "source_request_id" : "(required, string) Globally unique ID for this event",
           "subscription_group_id" : "(optional, string) Subscription group API ID",
           "url" : "(optional, string) URL that the user clicked on",
-          "user_agent" : "(optional, string) User agent on which the spam report occurred"
+          "user_agent" : "(optional, string) User agent on which the click occurred"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
@@ -7318,7 +7318,7 @@ This event occurs when a user clicks a link in a LINE message where the link's d
     "send_id" : "(optional, string) Message send ID this message belongs to",
     "short_url" : "(required, string) Shortened url that was clicked",
     "subscription_group_id" : "(optional, string) Subscription group API ID",
-    "user_agent" : "(optional, string) User agent on which the spam report occurred"
+    "user_agent" : "(optional, string) User agent on which the click occurred"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
@@ -7355,7 +7355,7 @@ This event occurs when a user clicks a link in a LINE message where the link's d
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "url" : "(required, string) URL that the user clicked on",
-  "user_agent" : "(optional, string) User agent on which the spam report occurred",
+  "user_agent" : "(optional, string) User agent on which the click occurred",
   "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
@@ -11917,7 +11917,7 @@ This event occurs when a user clicks an SMS short link.
     "short_url" : "(required, string) Shortened url that was clicked",
     "suspected_bot_click_reason" : "(optional, array of string) Why this event was classified as a bot",
     "url" : "(optional, string) URL that the user clicked on",
-    "user_agent" : "(optional, string) User agent on which the spam report occurred",
+    "user_agent" : "(optional, string) User agent on which the click occurred",
     "user_phone_number" : "(optional, string) [PII] The user's phone number from which the message was received"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
@@ -11957,7 +11957,7 @@ This event occurs when a user clicks an SMS short link.
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token",
     "url" : "(optional, string) URL that the user clicked on",
-    "user_agent" : "(optional, string) User agent on which the spam report occurred",
+    "user_agent" : "(optional, string) User agent on which the click occurred",
     "user_phone_number" : "(optional, string) [PII] The user's phone number from which the message was received"
   }
 }
@@ -11993,7 +11993,7 @@ This event occurs when a user clicks an SMS short link.
           "short_url" : "(required, string) Shortened url that was clicked",
           "source_request_id" : "(required, string) Globally unique ID for this event",
           "url" : "(optional, string) URL that the user clicked on",
-          "user_agent" : "(optional, string) User agent on which the spam report occurred"
+          "user_agent" : "(optional, string) User agent on which the click occurred"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
@@ -12045,7 +12045,7 @@ This event occurs when a user clicks an SMS short link.
     "short_url" : "(required, string) Shortened url that was clicked",
     "suspected_bot_click_reason" : "(optional, array of string) Why this event was classified as a bot",
     "url" : "(optional, string) URL that the user clicked on",
-    "user_agent" : "(optional, string) User agent on which the spam report occurred"
+    "user_agent" : "(optional, string) User agent on which the click occurred"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
@@ -12078,7 +12078,7 @@ This event occurs when a user clicks an SMS short link.
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "url" : "(required, string) URL that the user clicked on",
-  "user_agent" : "(optional, string) User agent on which the spam report occurred",
+  "user_agent" : "(optional, string) User agent on which the click occurred",
   "user_id" : "(required, string) Braze user ID of the user who performed this event",
   "user_phone_number" : "(optional, string) [PII] The user's phone number from which the message was received"
 }
@@ -12930,7 +12930,7 @@ This event occurs when a user clicks a link or button in a WhatsApp message wher
     "short_url" : "(required, string) Shortened url that was clicked",
     "timezone" : "(optional, string) Time zone of the user",
     "url" : "(optional, string) URL that the user clicked on",
-    "user_agent" : "(optional, string) User agent on which the spam report occurred",
+    "user_agent" : "(optional, string) User agent on which the click occurred",
     "user_phone_number" : "(optional, string) [PII] The user's phone number from which the message was received"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
@@ -12968,7 +12968,7 @@ This event occurs when a user clicks a link or button in a WhatsApp message wher
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token",
     "url" : "(optional, string) URL that the user clicked on",
-    "user_agent" : "(optional, string) User agent on which the spam report occurred",
+    "user_agent" : "(optional, string) User agent on which the click occurred",
     "user_phone_number" : "(optional, string) [PII] The user's phone number from which the message was received"
   }
 }
@@ -13003,7 +13003,7 @@ This event occurs when a user clicks a link or button in a WhatsApp message wher
           "short_url" : "(required, string) Shortened url that was clicked",
           "source_request_id" : "(required, string) Globally unique ID for this event",
           "url" : "(optional, string) URL that the user clicked on",
-          "user_agent" : "(optional, string) User agent on which the spam report occurred"
+          "user_agent" : "(optional, string) User agent on which the click occurred"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
@@ -13052,7 +13052,7 @@ This event occurs when a user clicks a link or button in a WhatsApp message wher
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "short_url" : "(required, string) Shortened url that was clicked",
-    "user_agent" : "(optional, string) User agent on which the spam report occurred"
+    "user_agent" : "(optional, string) User agent on which the click occurred"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
@@ -13085,7 +13085,7 @@ This event occurs when a user clicks a link or button in a WhatsApp message wher
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "url" : "(required, string) URL that the user clicked on",
-  "user_agent" : "(optional, string) User agent on which the spam report occurred",
+  "user_agent" : "(optional, string) User agent on which the click occurred",
   "user_id" : "(required, string) Braze user ID of the user who performed this event",
   "user_phone_number" : "(optional, string) [PII] The user's phone number from which the message was received"
 }

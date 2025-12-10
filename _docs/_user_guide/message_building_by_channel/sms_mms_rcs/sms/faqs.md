@@ -102,6 +102,8 @@ If you receive a "START" or "STOP" keyword from the shared phone number, all use
 If you stagger your users into a Canvas and have different schedule times for each Canvas component, you can send a user with the same email or phone duplicate messages. 
 {% endalert %}
 
+To prevent unnecessarily large updates, Braze will update a maximum of 100 user profiles that share an identifier when a subscription update is made. If more than 100 user profiles share the same phone number, not all profiles will be updated.
+
 ### Will SMS event properties capture keywords in a sentence?
 
 For a keyword to be recognized within a sentence, (for example, "please stop texting me"), you'll need to use a Liquid statement in the message to recognize the specific word. Event properties have a character limit of 256; otherwise, there is no character limit.
