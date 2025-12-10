@@ -19,7 +19,7 @@ description: "This reference article covers using nested custom attributes as a 
 
 - Nested custom attributes are intended for custom attributes sent through the Braze SDK or API. 
 - Objects have a maximum size of 100&nbsp;KB.
-- Key names and string values have a size limit of 255 characters.
+- Key names and string values have a size capacity of 255 characters.
 - Key names cannot contain spaces.
 - Periods (`.`) and dollar signs (`$`) aren't supported characters in an API payload if you're attempting to send a nested custom attribute to a user profile.
 - Not all Braze Partners support nested custom attributes. Refer to the [Partner documentation]({{site.baseurl}}/partners/home) to confirm if specific partner integrations support this feature.

@@ -186,7 +186,7 @@ To increase targeting precision, you can select **Add Property Filters** and seg
 
 We also support segmentation based on [nested event properties]({{site.baseurl}}/user_guide/data/custom_data/custom_events/nested_objects/).
 
-Segment Extensions rely on long term storage of event properties and don't have the 30-day custom event property storage limit. This means you can look back on event properties tracked within the past year, and tracking doesn't wait until the extension has been set up first.
+Segment Extensions rely on long term storage of event properties and don't have the 30-day custom event property storage capacity. This means you can look back on event properties tracked within the past year, and tracking doesn't wait until the extension has been set up first.
 
 {% alert note %}
 Using event properties within Segment Extensions does not impact data point usage.

@@ -235,7 +235,7 @@ Appboy.sharedInstance()?.user.incrementCustomUserAttribute("your_attribute_key",
 
 You can also use our REST API to set user attributes. Refer to the [User API documentation]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data) for details.
 
-### Custom attribute value limits
+### Custom attribute value capacity
 
 Custom attribute values have a maximum length of 255 characters; longer values will be truncated.
 

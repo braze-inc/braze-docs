@@ -189,5 +189,5 @@ There is no change in how we log data points as a result of adding this capabili
 
 ### How much nested data can be sent?
 
-If one or more of the event's properties contains nested data, the maximum payload for all combined properties on an event is 100 KB. Any request over that size limit will be rejected.
+If one or more of the event's properties contains nested data, the maximum payload for all combined properties on an event is 100 KB. Any request over that size capacity will be rejected.
 

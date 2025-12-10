@@ -199,10 +199,10 @@ If there are two carts, add both to the merged user. Re-enqueue the Canvas if it
 | `product_url` | No | String | URL to the product page for more details. |
 | `quantity` | Yes | Integer | Number of units of the product in the cart. |
 | `price` | Yes | Float | The variant unit price of the product at the time of viewing. |
-| `metadata` | No | Object | Additional metadata field about the product that the customer wants to add for their use cases. For Shopify, we will add SKU. <br> This will have a limit based on our general event properties limit of 50kb. |
+| `metadata` | No | Object | Additional metadata field about the product that the customer wants to add for their use cases. For Shopify, we will add SKU. <br> This will have a capacity based on our general event properties capacity of 50kb. |
 | `sku` | No | String | (Shopify only) Shopify SKU. This can be configured as the catalog ID field. |
 | `source` | Yes | String | Source the event is derived from. (For Shopify, this is storefront). |
-| `metadata` | No | Object | Additional metadata field about the product that the customer wants to add for their use cases. For Shopify, we will add SKU. <br> This will have a limit based on our general event properties limit of 50kb. |
+| `metadata` | No | Object | Additional metadata field about the product that the customer wants to add for their use cases. For Shopify, we will add SKU. <br> This will have a capacity based on our general event properties capacity of 50kb. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 #### Example objects
@@ -375,7 +375,7 @@ Similar to the `ecommerce.cart_updated` event, this event allows you to leverage
 | `product_url` | No | String | URL to the product page for more details. |
 | `quantity` | Yes | Integer | Number of units of the product in the cart. |
 | `price` | Yes | Float | The variant unit price of the product at the time of viewing. |
-| `metadata` | No | Object | Additional metadata field about the product that the customer wants to add for their use cases. For Shopify, we will add SKU. <br> This will have a limit based on our general event properties limit of 50kb. |
+| `metadata` | No | Object | Additional metadata field about the product that the customer wants to add for their use cases. For Shopify, we will add SKU. <br> This will have a capacity based on our general event properties capacity of 50kb. |
 | `sku` | No | String | (Shopify only) Shopify SKU. This can be configured as the catalog ID field. |
 | `source` | Yes | String | Source the event is derived from. (For Shopify, this is storefront). |
 | `metadata` | No | Object |  |
@@ -543,7 +543,7 @@ You can use the order placed event to trigger when a customer successfully compl
 | `product_url` | No | String | URL to the product page for more details. |
 | `quantity` | Yes | Integer | Number of units of the product in the cart. |
 | `price` | Yes | Float | The variant unit price of the product at the time of viewing. |
-| `metadata` | No | Object | Additional metadata field about the product that the customer wants to add for their use cases. For Shopify, we will add SKU. <br> This will have a limit based on our general event properties limit of 50kb. |
+| `metadata` | No | Object | Additional metadata field about the product that the customer wants to add for their use cases. For Shopify, we will add SKU. <br> This will have a capacity based on our general event properties capacity of 50kb. |
 | `sku` | No | String | (Shopify only) Shopify SKU. This can be configured as the catalog ID field. |
 | `source` | Yes | String | Source the event is derived from. (For Shopify, this is storefront). |
 | `metadata` | No | Object |  |
@@ -760,7 +760,7 @@ You can use the order refunded event to trigger when an order is partially or en
 | `product_url`      | No       | String    | URL to the product page for more details.  |
 | `quantity`         | Yes      | Integer   | Number of units of the product in the cart.   |
 | `price`            | Yes      | Float     | The variant unit price of the product at the time of viewing.  |
-| `metadata`         | No       | Object    | Additional metadata field about the product that the customer wants to add for their use cases. For Shopify, we will add SKU. This will have a limit based on our general event properties limit of 50kb. |
+| `metadata`         | No       | Object    | Additional metadata field about the product that the customer wants to add for their use cases. For Shopify, we will add SKU. This will have a capacity based on our general event properties capacity of 50kb. |
 | `sku`            | No       | String    | (Shopify only) Shopify SKU. This can be configured as the catalog ID field.  |
 | `source`              | Yes      | String    | Source the event is derived from. (For Shopify, this is storefront).    |
 | `metadata`            | No       | Object    |                |
@@ -969,7 +969,7 @@ You can use the order cancelled event to trigger when a customer cancels an orde
 | `product_url`         | No       | String    | URL to the product page for more details.                                                                     |
 | `quantity`            | Yes      | Integer   | Number of units of the product in the cart.        |
 | `price`               | Yes      | Float     | The variant unit price of the product at the time of viewing.     |
-| `metadata`            | No       | Object    | Additional metadata field about the product that the customer wants to add for their use cases. For Shopify, we will add SKU. This will have a limit based on our general event properties limit of 50kb. |
+| `metadata`            | No       | Object    | Additional metadata field about the product that the customer wants to add for their use cases. For Shopify, we will add SKU. This will have a capacity based on our general event properties capacity of 50kb. |
 | `sku`                 | No       | String    | (Shopify only) Shopify SKU. This can be configured as the catalog ID field.        |
 | `source`              | Yes      | String    | Source the event is derived from. (For Shopify, this is storefront).    |
 | `metadata`            | No       | Object    |       |
