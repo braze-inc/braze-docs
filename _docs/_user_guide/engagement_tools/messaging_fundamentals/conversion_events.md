@@ -38,6 +38,8 @@ The primary conversion event is the first event added during the campaign or Can
 - Determine the window when revenue is calculated for the campaign or Canvas.
 - Adjust message distributions for campaigns and Canvases using [Intelligent Selection]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/).
 
+The primary conversion event count is calculated by dividing the number of users who performed the primary conversion action by the number of unique recipients. A user is considered a recipient once they are sent or shown the message, depending on the channel. For example, in push or email, a user becomes a recipient after the message is sent. For in-app messages or Content Cards, the user must view the message to be considered a recipient.
+
 {% alert note %}
 If messages are aborted using the Liquid `abort` tag, only the users who go through variants are potentially aborted. This means the messages to users who go through the control group won't be aborted, which may lead to skewed conversion percentages across variants and control groups. As a workaround, use [segmentation]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment) to target your users at campaign and Canvas entry.
 {% endalert %}
