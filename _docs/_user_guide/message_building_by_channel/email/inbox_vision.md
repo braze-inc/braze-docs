@@ -17,7 +17,7 @@ channel:
 To use Inbox Vision, your email must include a subject line. Consider how your email can render differently on the desktop versus on mobile devices. As you review these previews, you can check that your email displays as intended.
 
 {% alert important %}
-Every company has 750 previews per calendar month shared across all workspaces. Each preview shows how your email appears in a particular email client and device combination. For example, “Gmail.com Chrome | Windows 10” is counted as one preview.  When the preview capacity is reached, you must wait until the following month for your preview capacity to reset. Contact your account manager if you have any questions about this capacity.
+Every company has 750 previews per calendar month shared across all workspaces. Each preview shows how your email appears in a particular email client and device combination. For example, `Gmail.com Chrome | Windows 10` is counted as one preview. When the preview capacity is reached, you must wait until the following month for your preview capacity to reset. Contact your account manager if you have any questions about this capacity.
 {% endalert %}
 
 ## Considerations
@@ -35,8 +35,16 @@ To test your email message in Inbox Vision, do the following:
 1. Go to your drag-and-drop editor or HTML email editor.
 2. In your editor, select **Preview & Test**.
 3. Select **Inbox Vision**.
-4. In the **Preview settings** section, you can select the email clients to render your preview and save this group for future runs by enabling “Remember Selection”. Otherwise, Braze defaults to the top 20 most popular previews. These previews are grouped by clients. 
+4. In the **Preview settings** section, you can select the email clients to render your preview and save this group for future runs by enabling “Remember Selection”. Otherwise, Braze defaults to the top 20 most popular previews. These previews are grouped by clients.
+
+![The option to select email clients to preview.]({% image_buster /assets/img/select_email_preview_inbox_vision.png %}){: style="max-width:85%;"}
+
+{:start="5"}
 5. Select **Run Inbox Vision**. This may take between two to ten minutes to complete.
+
+![Email previews for mobile clients on Gmail and iOS.]({% image_buster /assets/img/inbox_vision_previews.png %})
+
+{:start="6"}
 6. Make changes to a template, if necessary.
 7. Select **Re-run Test** to see the updated previews.
 
