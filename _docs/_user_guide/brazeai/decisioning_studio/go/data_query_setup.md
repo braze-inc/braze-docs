@@ -1,11 +1,11 @@
 ---
-nav_title: Setting up SFMC data query automation
-article_title: Setting up SFMC data query automation for BrazeAI Decisioning Studio
+nav_title: Setting up data query automation in Salesforce Marketing Cloud
+article_title: Setting up data query automation for BrazeAI Decisioning Studio
 page_order: 4
 description: "Learn how to set up and integrate BrazeAI Decisioning Studio<sup>TM</sup> Go into Braze."
 ---
 
-# Setting up SFMC data query automation for BrazeAI Decisioning Studio™ Go
+# Setting up data query automation for BrazeAI Decisioning Studio™ Go
 
 > Set up your data query automation in Salesforce Marketing Cloud and integrate with BrazeAI Decisioning Studio™ Go.
 
