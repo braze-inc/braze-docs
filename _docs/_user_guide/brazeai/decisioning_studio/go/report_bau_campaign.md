@@ -17,7 +17,7 @@ The primary benefit of setting up BAU reporting is the application of BrazeAI De
 
 ## Requirements
 
-Before setting up BAU reporting, first ensure that there is an apples to apples comparison between the BAU treatment group and the BrazeAI Decisioning Studio™ Go and random control group. This includes checking that:
+Before setting up BAU reporting, first ensure that there is an apples-to-apples comparison between the BAU treatment group, the BrazeAI Decisioning Studio™ Go, and the random control group. This includes checking that:
 
 - No recipient can belong to more than one group (for the entire duration of the experiment).
 - Recipients are randomly assigned to the groups, such as no bias in the group assignments.
