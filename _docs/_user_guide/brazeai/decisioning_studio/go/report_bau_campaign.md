@@ -21,7 +21,7 @@ Before setting up BAU reporting, first ensure that there is an apples-to-apples 
 
 - No recipient can belong to more than one group (for the entire duration of the experiment).
 - Recipients are randomly assigned to the groups, such as no bias in the group assignments.
-- Any options available to the BAU group (creative, frequency, time, incentive or offer) are available to the BrazeAI Decisioning Studio™ Go and the random control group
+- Any options available to the BAU group (creative, frequency, time, incentive, or offer) are available to the BrazeAI Decisioning Studio™ Go and the random control group
 
 Without an "apples to apples" experiment design, BAU reporting can be confusing or misleading.
 
