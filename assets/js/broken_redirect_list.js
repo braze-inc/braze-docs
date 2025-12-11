@@ -2999,5 +2999,6 @@ validurls['/docs/user_guide/data/unification/cloud_ingestion/overview'] = '/docs
 validurls['/docs/contributing/content_management/language_translations'] = '/docs/contributing/content_management';
 
 validurls['/docs/developer_guide/sdk_integration/?sdktab=xamarin'] = '/docs/developer_guide/sdk_integration/?sdktab=.net%20maui';
+validurls['/docs/help/help_articles/campaigns_and_canvas/not_triggering/'] = '/docs/user_guide/engagement_tools/canvas/troubleshooting/#why-did-a-user-not-receive-a-triggered-canvas-step';
 
 // validurls['OLD'] = 'NEW';
