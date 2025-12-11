@@ -1,12 +1,12 @@
 ---
-nav_title: Creating a Journey in Salesforce Marketing Cloud
-article_title: Creating a Journey in Salesforce Marketing Cloud for BrazeAI Decisioning Studio
+nav_title: Configure with Salesforce Marketing Cloud
+article_title: Configure with Salesforce Marketing Cloud for BrazeAI Decisioning Studio Go
 page_order: 5
-description: "Learn how to set up and integrate BrazeAI Decisioning Studio<sup>TM</sup> Go into Braze."
+description: "Learn how to set up a data query automation and Journey in Salesforce Marketing Cloud for use with BrazeAI Decisioning Studio<sup>TM</sup> Go."
 toc_headers: h2
 ---
 
-# Creating a Journey in Salesforce Marketing Cloud for BrazeAI Decisioning Studio
+# Configure with Salesforce Marketing Cloud for BrazeAI Decisioning Studio™ Go
 
 > Set up a Journey in Salesforce Marketing Cloud (SFMC) to begin triggering sends through BrazeAI Decisioning Studio™ Go.
 
