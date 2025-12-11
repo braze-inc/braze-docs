@@ -1,11 +1,11 @@
 ---
-nav_title: Report on BAU campaign
-article_title: Report on BAU campaign
+nav_title: Reporting on BAU campaign
+article_title: Reporting on BAU campaign
 page_order: 10
 description: "This article provides answers to frequently asked questions about reporting on a Business as Usual (BAU) campaign in the BrazeAI Decisioning Studio Go portal."
 ---
 
-# Report on Business as Usual campaign
+# Reporting on Business as Usual campaign
 
 > This article provides answers to frequently asked questions about reporting on a Business as Usual (BAU) campaign in the BrazeAI Decisioning Studio™ Go portal.
 

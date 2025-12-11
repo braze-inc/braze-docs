@@ -108,27 +108,26 @@ To use Salesforce Marketing Cloud for BrazeAI Decisioning Studio™ Go, you must
 7. For the **Component Type**, select **API Integration**. Then, select **Next**.
 8. For the **Integration Type**, select **Server-to-server**. Then, select **Next**.
 9. Then, select the following recommended scopes for your app package only:
-
-- Channels > Email > Read, Write, Send
-- Channels > OTT > Read
-- Channels > Push > Read
-- Channels > SMS > Read
-- Channels > Social > Read
-- Channels > Web > Read
-- Assets > Documents and Images > Read, Write
-- Assets > Saved Content > Read, Write
-- Automation > Automations > Read, Write, Execute
-- Automation > Journeys > Read, Write, Execute, Activate/Stop/Pause/Send/Schedule
-- Contacts > Audiences > Read
-- Contacts > List and Subscribers > Read, Write
-- Cross Cloud Platform > Market Audience > View
-- Cross Cloud Platform > Market Audience Member > View
-- Cross Cloud Platform > Marketing Cloud Connect > Read
-- Data > Data Extensions > Read, Write
-- Data > File Locations > Read
-- Data > Tracking Events > Read, Write
-- Event notifications > Callbacks > Read
-- Event notifications > Subscriptions > Read
+    - Channels > Email > Read, Write, Send
+    - Channels > OTT > Read
+    - Channels > Push > Read
+    - Channels > SMS > Read
+    - Channels > Social > Read
+    - Channels > Web > Read
+    - Assets > Documents and Images > Read, Write
+    - Assets > Saved Content > Read, Write
+    - Automation > Automations > Read, Write, Execute
+    - Automation > Journeys > Read, Write, Execute, Activate/Stop/Pause/Send/Schedule
+    - Contacts > Audiences > Read
+    - Contacts > List and Subscribers > Read, Write
+    - Cross Cloud Platform > Market Audience > View
+    - Cross Cloud Platform > Market Audience Member > View
+    - Cross Cloud Platform > Marketing Cloud Connect > Read
+    - Data > Data Extensions > Read, Write
+    - Data > File Locations > Read
+    - Data > Tracking Events > Read, Write
+    - Event notifications > Callbacks > Read
+    - Event notifications > Subscriptions > Read
 
 {% details Show image of recommended scopes %}
 

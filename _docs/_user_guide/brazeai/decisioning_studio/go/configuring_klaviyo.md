@@ -1,12 +1,12 @@
 ---
-nav_title: Configure with Klaviyo
-article_title: Configure with Klaviyo for BrazeAI Decisioning Studio
+nav_title: Configuring with Klaviyo
+article_title: Configuring with Klaviyo for BrazeAI Decisioning Studio
 page_order: 3
 description: "Learn how to set up a Klaviyo Flow for use with BrazeAI Decisioning Studio<sup>TM</sup> Go."
 toc_headers: h2
 ---
 
-# Configure with Klaviyo for BrazeAI Decisioning Studio™ Go
+# Configuring with Klaviyo for BrazeAI Decisioning Studio™ Go
 
 > Set up a placeholder template and a flow in Klaviyo to trigger activations through BrazeAI Decisioning Studio™ Go.
 
@@ -66,13 +66,13 @@ In the BrazeAI Decisioning Studio™ Go portal, your templates should be selecta
 2. Select **Build your own**.
 3. For **Name**, enter the flow name from your BrazeAI Decisioning Studio™ Go portal. Then, select **Create manually**.
 
-![]({% image_buster /assets/img/decisioning_studio_go/flow1.png %})
+![The option "Create manually" selected for an example flow.]({% image_buster /assets/img/decisioning_studio_go/flow1.png %}){: style="max-width:60%;"}
 
 {: start="4"}
 4. Select the trigger.
 5. Match the metric name to the trigger event name from your BrazeAI Decisioning Studio™ Go portal.
 
-![]({% image_buster /assets/img/decisioning_studio_go/flow2.png %})
+![An example metric name that matches the trigger event name "OFE_TEST_CASE_API_EVENT_TRIGGER".]({% image_buster /assets/img/decisioning_studio_go/flow2.png %})
 
 {: start="6"}
 6. Select **Save**.
@@ -86,26 +86,26 @@ If your Experimenter has one base template, proceed to the following steps. If y
 1. Drag and drop an **Email** node after the **Trigger** node.
 2. In the **Email details**, select **Select template**.
 
-![]({% image_buster /assets/img/decisioning_studio_go/flow3.png %})
+!["Select template" option in the "Email details" section.]({% image_buster /assets/img/decisioning_studio_go/flow3.png %})
 
 {: start="3"}
 3. Find and select your base template. You can search for your template by the template name in the **Resources to use** section of the BrazeAI Decisioning Studio™ Go portal.
 
-![]({% image_buster /assets/img/decisioning_studio_go/flow4.png %})
+![An example base template in Klaviyo.]({% image_buster /assets/img/decisioning_studio_go/flow4.png %})
 
 {: start="4"}
 4. Select **Use template** > **Save**.
 5. For the **Subject line**,  enter {% raw %}`{{event.SubjectLine}}`{% endraw %}.
 6. For **Sender name** and **Sender email address**, enter the details you'd like to use.
 
-![]({% image_buster /assets/img/decisioning_studio_go/flow5.png %})
+![An example subject line, sender name, and sender email address for "Email 1".]({% image_buster /assets/img/decisioning_studio_go/flow5.png %})
 
 {: start="7"}
 7. Select **Done**.
 8. Unselect the **Skip recently emailed profiles** checkbox, then select **Save**.
 9. In the email node, update the mode from **Draft** to **Live**.
 
-![]({% image_buster /assets/img/decisioning_studio_go/flow6.png %})
+![The Klaviyo flow editor showing a Trigger node connected to an Email node.]({% image_buster /assets/img/decisioning_studio_go/flow6.png %})
 
 You're all set! You can now trigger activations through BrazeAI Decisioning Studio™ Go. 
 
@@ -114,14 +114,14 @@ You're all set! You can now trigger activations through BrazeAI Decisioning Stud
 1. Drag and drop a **Trigger split** node after the **Trigger node**.
 2. Select the **Trigger split** node and set the **Dimension** to **EmailTemplateID**.
 
-![]({% image_buster /assets/img/decisioning_studio_go/flow7.png %})
+![Klaviyo flow diagram showing a Trigger node feeding a Trigger split configured with Dimension EmailTemplateID.]({% image_buster /assets/img/decisioning_studio_go/flow7.png %})
 
 #### Step 3.1: Add your email template
 
 1. In the BrazeAI Decisioning Studio™ Go portal, find the **Email Template ID** for your first template under the **Resources to use** section. Enter the **Email Template ID** for the **Dimension** field, then select **Save**.
 2. Drag and drop an **Email** node to the **Yes** branch of the **Trigger split**. 
 
-![]({% image_buster /assets/img/decisioning_studio_go/flow8.png %})
+![A Klaviyo flow with a Trigger split node, which has a Yes branch leading to an Email node and a No branch connecting to another Trigger split.]({% image_buster /assets/img/decisioning_studio_go/flow8.png %})
 
 {: start="3"}
 3. In the **Email details**, select **Select template**.
@@ -130,7 +130,7 @@ You're all set! You can now trigger activations through BrazeAI Decisioning Stud
 6. For the **Subject line**,  enter {% raw %}`{{event.SubjectLine}}`{% endraw %}.
 7. For **Sender name** and **Sender email address**, enter the details you'd like to use.
 
-![]({% image_buster /assets/img/decisioning_studio_go/flow5.png %})
+![A selected email template and fields for the subject line, sender name, and sender email address.]({% image_buster /assets/img/decisioning_studio_go/flow5.png %})
 
 {: start="8"}
 8. Select **Done**.
@@ -153,11 +153,11 @@ Next, create a new **Trigger split** and **Email** node for each additional base
 5. Set the **Subject line** to {% raw %}`{{event.SubjectLine}}`{% endraw %}, and uncheck the **Skip recently emailed profiles** checkbox.
 6. Repeat this process until you have one **Trigger split** node and one **Email** node for each base template your Experimenter is using. Your last Trigger split should have nothing in the "No" branch.
 
-![]({% image_buster /assets/img/decisioning_studio_go/flow10.png %})
+![A Klaviyo flow with multiple Trigger split nodes that branch to multiple Email nodes.]({% image_buster /assets/img/decisioning_studio_go/flow10.png %})
 
 {: start="7"}
 7. In each of your **Email** nodes, update the mode from **Draft** to **Live**.
 
-![]({% image_buster /assets/img/decisioning_studio_go/flow11.png %})
+![The option to update the node status to "Live".]({% image_buster /assets/img/decisioning_studio_go/flow11.png %})
 
 You're all set! You can now trigger activations through BrazeAI Decisioning Studio™ Go. 
