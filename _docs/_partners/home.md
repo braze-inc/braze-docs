@@ -371,5 +371,5 @@ valid_partner_list:
 - name: Cloudinary
   url: /docs/partners/message_personalization/dynamic_content/visual_and_interactive_content/cloudinary/
 - name: LILT
-  url: /docs/partners/message_personalization/localization/lilt/
+  url: /docs/partners/lilt/
 ---
