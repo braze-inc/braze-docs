@@ -1,11 +1,11 @@
 ---
-nav_title: Berichte anzeigen
-article_title: Decisioning Studio-Berichte anzeigen
+nav_title: Berichte und Insights
+article_title: Berichte und Insights
 page_order: 3
 description: "Erfahren Sie, wie Sie Berichte aus dem BrazeAI Decisioning Studio™ in Braze anzeigen können, damit Sie verstehen, wie KI-gestützte Entscheidungen Ihre Kampagnen beeinflussen."
 ---
 
-# Decisioning Studio-Berichte anzeigen
+# Berichte und Insights
 
 > Erfahren Sie, wie Sie Berichte aus dem BrazeAI Decisioning Studio™ in Braze anzeigen können, damit Sie verstehen, wie KI-gestützte Entscheidungen Ihre Kampagnen beeinflussen. Von Metriken, Performance und Datenintegrität bis hin zu Systemänderungen – diese Berichte helfen Ihnen, Ergebnisse zu verstehen, Fehler zu beheben und zuversichtlich gut informierte Entscheidungen zu treffen.
 

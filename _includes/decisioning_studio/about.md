@@ -8,7 +8,9 @@
 
 BrazeAI™ decisioning agents automatically discover the optimal action for every customer. Using your first-party data, BrazeAI™ can maximize any business KPI for a wide range of use cases, including cross-sell, upsell, repurchase, retention, renewal, referral, winback, and more.
 
-The AI Expert Services team will tailor BrazeAI Decisioning Studio™ to the specific needs of your business. While the decisioning studio works best with Braze, a variety of other platforms are already supported. To learn more, [book a call](https://www.braze.com/get-started/) with Braze.
+The AI Decisioning Services team will tailor BrazeAI Decisioning Studio™ to the specific needs of your business. While the decisioning studio works best with Braze, a variety of other platforms are already supported. Read the documentation to understand detailed integration steps, including supported platforms.
+
+To learn more, [book a call](https://www.braze.com/get-started/) with Braze.
 
 ## Key features
 
@@ -32,7 +34,7 @@ Building a good agent consists of:
 - Defining which dimensions to test, such as offer, subject line, creative, channel, or send time.
 - Selecting the options for each dimension, such as email versus SMS, or daily versus weekly frequency.
 
-### Sample agents
+### Sample use cases for Decisioning Studio agents
 
 Here are some examples of agents that you can build with BrazeAI Decisioning Studio™. Your AI decisioning agents will learn from every customer interaction and apply those insights to the next day's actions.
 
@@ -54,3 +56,5 @@ Now that you know more about BrazeAI Decisioning Studio™, you're ready for the
 
 1. [Integrating decisioning studio]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/integration/)
 2. [Building agents]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/building_agents/)
+3. [Setting up Decisioning Studio Pro agents]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_pro/)
+4. [Viewing reports and insights]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/reporting/)

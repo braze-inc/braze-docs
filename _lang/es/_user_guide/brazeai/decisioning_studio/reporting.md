@@ -1,11 +1,11 @@
 ---
-nav_title: Ver informes
-article_title: Visualización de los informes del estudio de toma de decisiones
+nav_title: Informes e Insights
+article_title: Informes e Insights
 page_order: 3
 description: "Aprende a ver los informes de BrazeAI Decisioning Studio™ en Braze, para que puedas entender cómo afectan a tus campañas las decisiones basadas en IA."
 ---
 
-# Visualización de los informes del estudio de decisión
+# Informes e Insights
 
 > Aprende a ver los informes de BrazeAI Decisioning Studio™ en Braze, para que puedas entender cómo afectan a tus campañas las decisiones basadas en IA. Desde las métricas de rendimiento hasta el estado de los datos y los cambios del sistema, estos informes te ayudan a comprender los resultados, solucionar problemas y tomar decisiones informadas con confianza.
 

@@ -1,11 +1,11 @@
 ---
-nav_title: Viewing reports
-article_title: Viewing decisioning studio reporting
+nav_title: Reports and Insights
+article_title: Reports and Insights
 page_order: 3
 description: "Learn how to view BrazeAI Decisioning Studio™ reports in Braze, so you can understand how AI-powered decisions impact your campaigns."
 ---
 
-# Viewing decisioning studio reports
+# Reports and Insights
 
 > Learn how to view BrazeAI Decisioning Studio™ reports in Braze, so you can understand how AI-powered decisions impact your campaigns. From performance metrics to data health and system changes, these reports help you understand results, troubleshoot issues, and make informed decisions with confidence.
 
