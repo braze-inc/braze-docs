@@ -208,6 +208,7 @@ The BrazeAI Decisioning Studio™ Go portal shows you the SFMC automation it pro
 
 ![Recommendations listed in the Validation Rules section.]({% image_buster /assets/img/decisioning_studio_go/activate1.png %}){: style="max-width:60%;"}
 
+{: start="6"}
 6. In the **Activate Journey** summary, select **Activate** again.
 
 ![Summary for the Journey.]({% image_buster /assets/img/decisioning_studio_go/activate2.png %}){: style="max-width:85%;"}
