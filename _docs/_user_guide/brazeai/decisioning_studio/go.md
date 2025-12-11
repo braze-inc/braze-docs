@@ -25,6 +25,7 @@ To create a new REST API key:
     - **Canvas:** select all listed permissions
     - **Segments:** select all listed permissions
     - **Templates:** select all listed permissions
+
 {: start="5"}
 5. Select **Create API key**.
 6. Then, copy the API key and paste it into your BrazeAI Decisioning Studio™ Go portal.
