@@ -7,7 +7,7 @@ description: "Learn how to set up and integrate BrazeAI Decisioning Studio<sup>T
 
 # BrazeAI Decisioning Studio™ Go
 
-> Learn how to locate key information in Braze to begin integrating with BrazeAI Decisioning Studio™ Go. 
+> Locate key information in Braze to begin integrating with BrazeAI Decisioning Studio™ Go.
 
 ## Essentials
 
@@ -106,7 +106,7 @@ To use Salesforce Marketing Cloud for BrazeAI Decisioning Studio™ Go, you must
 {: start="6"}
 6. Select **Add Component**.
 7. For the **Component Type**, select **API Integration**. Then, select **Next**.
-8. For the **Integration Type**, select **Server-to_server**. Then, select **Next**.
+8. For the **Integration Type**, select **Server-to-server**. Then, select **Next**.
 9. Then, select the following recommended scopes for your app package only:
 
 - Channels > Email > Read, Write, Send

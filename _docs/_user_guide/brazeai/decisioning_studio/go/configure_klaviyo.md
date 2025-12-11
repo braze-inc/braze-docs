@@ -8,7 +8,7 @@ toc_headers: h2
 
 # Configure with Klaviyo for BrazeAI Decisioning Studio
 
-> Learn how to set up a placeholder template and a flow in Klaviyo to trigger activations through BrazeAI Decisioning Studio™ Go.
+> Set up a placeholder template and a flow in Klaviyo to trigger activations through BrazeAI Decisioning Studio™ Go.
 
 {% alert important %}
 You must create a new flow in Klaviyo for every new experimenter you set up. If you previously created a placeholder flow to import your templates, you must create a new flow and cannot reuse the previous placeholder flow.
@@ -58,7 +58,7 @@ In the BrazeAI Decisioning Studio™ Go portal, your templates should be selecta
 
 ![An example of a placeholder Klaviyo template in the Decisioning Studio Go portal.]({% image_buster /assets/img/decisioning_studio_go/placeholder_flow.png %})
 
-## Creating up a flow in Klaviyo
+## Creating a flow in Klaviyo
 
 ### Step 1: Set up the flow
 
@@ -95,7 +95,7 @@ If your Experimenter has one base template, proceed to the following steps. If y
 
 {: start="4"}
 4. Select **Use template** > **Save**.
-5. For the **Subject line**,  enter {% raw %}`{{event.SubjectLine}}`{% endraw %}
+5. For the **Subject line**,  enter {% raw %}`{{event.SubjectLine}}`{% endraw %}.
 6. For **Sender name** and **Sender email address**, enter the details you'd like to use.
 
 ![]({% image_buster /assets/img/decisioning_studio_go/flow5.png %})
@@ -127,7 +127,7 @@ You're all set! You can now trigger activations through BrazeAI Decisioning Stud
 3. In the **Email details**, select **Select template**.
 4. Find and select your base template. You can search for your template by the base template name in the **Resources to use** section of the BrazeAI Decisioning Studio™ Go portal.
 5. Select **Use template** > **Save**.
-6. For the **Subject line**,  enter {% raw %}**{{event.SubjectLine}}**{% endraw %}.
+6. For the **Subject line**,  enter {% raw %}`{{event.SubjectLine}}`{% endraw %}.
 7. For **Sender name** and **Sender email address**, enter the details you'd like to use.
 
 ![]({% image_buster /assets/img/decisioning_studio_go/flow5.png %})
@@ -150,7 +150,7 @@ Next, create a new **Trigger split** and **Email** node for each additional base
 {: start="4"}
 4. Drag and drop an **Email** node in the **Yes** branch of your new trigger split.
 5. Repeat steps 1-5 in [Step 3.1](#step-31-add-your-email-template) to select the corresponding template.
-5. Set the **Subject line** to {% raw %}**{{event.SubjectLine}}**{% endraw %}, and uncheck the **Uncheck Skip recently emailed profiles** checkbox.
+5. Set the **Subject line** to {% raw %}`{{event.SubjectLine}}`{% endraw %}, and uncheck the **Skip recently emailed profiles** checkbox.
 6. Repeat this process until you have one **Trigger split** node and one **Email** node for each base template your Experimenter is using. Your last Trigger split should have nothing in the "No" branch.
 
 ![]({% image_buster /assets/img/decisioning_studio_go/flow10.png %})
