@@ -26,7 +26,7 @@ BrazeAI Decisioning Studio™ Go imports templates that are associated with exis
 ### Step 1: Set up your flow
 
 {% alert note %}
-The purpose of this placeholder flows is to import your desired content into BrazeAI Decisioning Studio™ Go. You must create a separate flow at a later step, which BrazeAI Decisioning Studio™ Go uses to trigger activations once your Experimenter is live.
+The purpose of this placeholder flows is to import your desired content into BrazeAI Decisioning Studio™ Go. You must create a separate flow at a later step, which BrazeAI Decisioning Studio™ Go uses to trigger activations once your experimenter is live.
 {% endalert %}
 
 1. In Klaviyo, select **Flows**. 
@@ -78,7 +78,7 @@ In the BrazeAI Decisioning Studio™ Go portal, your templates should be selecta
 6. Select **Save**.
 
 {% alert note %}
-If your Experimenter has one base template, proceed to the following steps. If your Experimenter has two or more base templates, skip to [Step 3: Add a trigger split to your flow](#step-3-add-a-trigger-split-to-your-flow).
+If your experimenter has one base template, proceed to the following steps. If your experimenter has two or more base templates, skip to [Step 3: Add a trigger split to your flow](#step-3-add-a-trigger-split-to-your-flow).
 {% endalert %}
 
 ### Step 2: Add an email to your flow 
@@ -139,7 +139,7 @@ You're all set! You can now trigger activations through BrazeAI Decisioning Stud
 
 #### Step 3.2: Add a new trigger split
 
-Next, create a new **Trigger split** and **Email** node for each additional base template your Experimenter will use. 
+Next, create a new **Trigger split** and **Email** node for each additional base template your experimenter will use. 
 
 1. Drag and drop another **Trigger split** node into the **No** branch of the previous **Trigger split** node.
 2. Set the **Dimension** to **EmailTemplateID** and fill in the **Dimension** value with the **Email Template ID** of the base template you're setting up.
@@ -151,7 +151,7 @@ Next, create a new **Trigger split** and **Email** node for each additional base
 4. Drag and drop an **Email** node in the **Yes** branch of your new trigger split.
 5. Repeat steps 1-5 in [Step 3.1](#step-31-add-your-email-template) to select the corresponding template.
 5. Set the **Subject line** to {% raw %}`{{event.SubjectLine}}`{% endraw %}, and uncheck the **Skip recently emailed profiles** checkbox.
-6. Repeat this process until you have one **Trigger split** node and one **Email** node for each base template your Experimenter is using. Your last Trigger split should have nothing in the "No" branch.
+6. Repeat this process until you have one **Trigger split** node and one **Email** node for each base template your experimenter is using. Your last Trigger split should have nothing in the "No" branch.
 
 ![A Klaviyo flow with multiple Trigger split nodes that branch to multiple Email nodes.]({% image_buster /assets/img/decisioning_studio_go/flow10.png %})
 
