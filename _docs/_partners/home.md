@@ -370,4 +370,6 @@ valid_partner_list:
   url: /docs/partners/oppizi/
 - name: Cloudinary
   url: /docs/partners/message_personalization/dynamic_content/visual_and_interactive_content/cloudinary/
+- name: LILT
+  url: /docs/partners/lilt/
 ---
