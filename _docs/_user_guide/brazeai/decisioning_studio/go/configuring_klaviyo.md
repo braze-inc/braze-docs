@@ -145,7 +145,7 @@ Next, create a new **Trigger split** and **Email** node for each additional base
 2. Set the **Dimension** to **EmailTemplateID** and fill in the **Dimension** value with the **Email Template ID** of the base template you're setting up.
 3. Select **Save**.
 
-![]({% image_buster /assets/img/decisioning_studio_go/flow9.png %})
+![Diagram of a Klaviyo flow editor showing a Trigger node leading into a Trigger split. The Trigger split has a Yes branch that leads to an Email node and a No branch that connects to another Trigger split which leads to additional Email nodes.]({% image_buster /assets/img/decisioning_studio_go/flow9.png %})
 
 {: start="4"}
 4. Drag and drop an **Email** node in the **Yes** branch of your new trigger split.

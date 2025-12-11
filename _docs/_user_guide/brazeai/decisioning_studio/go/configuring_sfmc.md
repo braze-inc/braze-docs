@@ -10,7 +10,7 @@ toc_headers: h2
 
 > Set up a Journey in Salesforce Marketing Cloud (SFMC) to begin triggering sends through BrazeAI Decisioning Studio™ Go.
 
-## Setting up data query automation for BrazeAI Decisioning Studio™ Go
+## Setting up a data query automation
 
 ### Step 1: Create a new automation
 
@@ -122,7 +122,7 @@ The target data extension name is also provided in your BrazeAI Decisioning Stud
 
 Now, you can check to make sure the automation is running successfully. Contact Braze Support for further assistance if your automation isn't running as expected.
 
-## Creating your SFMC Journey for BrazeAI Decisioning Studio™ Go
+## Creating your SFMC Journey
 
 ### Step 1: Set up the Journey
 
