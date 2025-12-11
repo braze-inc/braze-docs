@@ -50,6 +50,7 @@ Next, we'll create 2 SQL queries: a subscribers query and an engagement query. T
 7. Copy and paste the query into the text box and select **Next**.
 8. Locate and select the target Data Extension for the Engagement Query specified in your BrazeAI Decisioning Studio™ Go portal. 
 9. Select **Overwrite** then **Next**.
+
 {% endtab %}
 {% endtabs %}
 
