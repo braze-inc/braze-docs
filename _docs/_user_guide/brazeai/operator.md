@@ -77,9 +77,8 @@ Operator includes the following features during beta:
 You can select from these GPT models to use for different request types with Operator:
 
 - [GPT-5 nano](https://platform.openai.com/docs/models/gpt-5-nano)
-- [GPT-5 mini](https://platform.openai.com/docs/models/gpt-5-mini)
+- [GPT-5 mini](https://platform.openai.com/docs/models/gpt-5-mini) (default)
 - [GPT-5](https://platform.openai.com/docs/models/gpt-5)
-- [GPT-5.1](https://platform.openai.com/docs/models/gpt-5.1) (default)
 
 ![Dropdown for different GPT models to choose.]({% image_buster /assets/img/operator/operator_model.png %}){:style="max-width:70%"}
 
