@@ -22,8 +22,4 @@ description: "Aprende a gestionar la recopilación de datos para el SDK de Braze
 {% sdktab web %}
 {% multi_lang_include developer_guide/web/analytics/managing_data_collection.md %}
 {% endsdktab %}
-
-{% sdktab unreal engine %}
-{% multi_lang_include developer_guide/unreal_engine/analytics/managing_data_collection.md %}
-{% endsdktab %}
 {% endsdktabs %}
