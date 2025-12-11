@@ -66,7 +66,7 @@ In the BrazeAI Decisioning Studio™ Go portal, your templates should be selecta
 2. Select **Build your own**.
 3. For **Name**, enter the flow name from your BrazeAI Decisioning Studio™ Go portal. Then, select **Create manually**.
 
-![The option "Create manually" selected for an example flow.]({% image_buster /assets/img/decisioning_studio_go/flow1.png %}){: style="max-width:60%;"}
+![The option "Create manually" selected for an example flow.]({% image_buster /assets/img/decisioning_studio_go/flow1.png %}){: style="max-width:50%;"}
 
 {: start="4"}
 4. Select the trigger.
