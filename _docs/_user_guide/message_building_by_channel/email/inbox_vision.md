@@ -24,7 +24,7 @@ Every company has 750 previews per calendar month shared across all workspaces. 
 
 In general, your email won’t work with Inbox Vision if your email content relies on templating information, such as user profile information. This is because Braze templates an empty user when we send emails using this feature.
 
-You can resolve this by adding default values or any values to the Liquid in your email message before you run Inbox Vision. When you finish testing in Inbox Vision, revert to the original email message. If no values are provided, the test may fail to render the previews successfully.
+You can resolve this by adding default values or any values to the Liquid in your email message before you run Inbox Vision. When you finish testing in Inbox Vision, the original email message displays. If no values are provided, the test may fail to render the previews successfully.
 
 Your company has a limit on how many emails you can preview with Inbox Vision. You can monitor this in the **Email Previews** tab of Inbox Vision.
 
