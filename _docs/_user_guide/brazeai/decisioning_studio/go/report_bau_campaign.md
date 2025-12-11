@@ -27,7 +27,7 @@ Without an "apples to apples" experiment design, BAU reporting can be confusing 
 
 After you have validated your experiment design, the following details are required to set up BAU reporting:
 - One or more campaign IDs from your integrated activation platform (Braze, Salesforce Marketing Cloud, or Klaviyo) where all communications in the campaign are BAU communications
-    - For Braze, Campaigns and Canvases are accepted
+    - For Braze, campaigns and Canvases are accepted
     - For Salesforce Marketing Cloud, only Journeys are accepted
     - For Klaviyo, only Flows are accepted
 - One audience ID from your integrated activation platform that tracks the recipients that are in the BAU audience each day
