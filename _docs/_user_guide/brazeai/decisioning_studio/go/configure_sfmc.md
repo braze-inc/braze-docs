@@ -178,7 +178,7 @@ Now, you can check to make sure the automation is running successfully. Contact 
 
 #### Step 2.3: Add an Email for each Decision Split
 
-1. Drag an **Email** node into each path of of the **Decision Split**.
+1. Drag an **Email** node into each path of the **Decision Split**.
 2. Select **Email**, then select the appropriate template that should go in each Path (meaning the template with the ID value should match the logic in your Decision Split).
 
 ![]({% image_buster /assets/img/decisioning_studio_go/journey9.png %})

@@ -7,7 +7,7 @@ description: "Learn how to set up and integrate BrazeAI Decisioning Studio<sup>T
 
 # Configure with Braze
 
-> Learn how to create an API campaign in Braze designed for BrazeAI Decisioning Studio™ Go.
+> Create an API campaign in Braze designed for BrazeAI Decisioning Studio™ Go.
 
 ## Step 1: Create your campaign 
 
