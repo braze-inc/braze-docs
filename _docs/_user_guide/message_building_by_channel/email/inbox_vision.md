@@ -14,7 +14,7 @@ channel:
 
 > In Inbox Vision, you can customize which email clients are included in your preview. Choose from our list of popular clients, like Gmail and Yahoo, or build your own list tailored to your audience.
 
-To use Inbox Vision, your email must include a subject line. Consider how your email can render differently on the desktop versus on mobile devices. As you review these previews, you can check that your email displays as intended.
+To use Inbox Vision, your email must include a subject line. Consider how your email can render differently on the desktop versus on mobile devices. As you review these previews, you can check that your email appears as intended.
 
 {% alert important %}
 Every company has 750 previews per calendar month shared across all workspaces. Each preview shows how your email appears in a particular email client and device combination. For example, `Gmail.com Chrome | Windows 10` is counted as one preview. When the preview capacity is reached, you must wait until the following month for your preview capacity to reset. Contact your account manager if you have any questions about this capacity.
@@ -24,7 +24,7 @@ Every company has 750 previews per calendar month shared across all workspaces. 
 
 In general, your email won’t work with Inbox Vision if your email content relies on templating information, such as user profile information. This is because Braze templates an empty user when we send emails using this feature.
 
-You can resolve this by adding default values or any values to the Liquid in your email message before you run Inbox Vision. When you finish testing in Inbox Vision, the original email message displays. If no values are provided, the test may fail to render the previews successfully.
+You can resolve this by adding default values or any values to the Liquid in your email message before you run Inbox Vision. When you finish testing in Inbox Vision, the original email message appears. If no values are provided, the test may fail to render the previews successfully.
 
 Your company has a limit on how many emails you can preview with Inbox Vision. You can monitor this in the **Email Previews** tab of Inbox Vision.
 
@@ -80,7 +80,7 @@ Accessibility Testing may be used to support Customer's compliance efforts of re
 
 ### Viewing accessibility testing results
 
-Accessibility testing will generate results for each rule as passed, failed, or needs review in the **Accessibility Testing** tab. Each rule is categorized using POUR (Perceivable, Operable, Understandable, Robust), which are the four main principles behind WCAG.
+Accessibility testing generates results for each rule as passed, failed, or needs review in the **Accessibility Testing** tab. Each rule is categorized using POUR (Perceivable, Operable, Understandable, Robust), which are the four main principles behind WCAG.
 
 #### POUR categories
 
@@ -104,12 +104,12 @@ Inbox Vision classifies accessibility issues by severity to help you prioritize 
 | Serious | Issues that can cause significant barriers but may not completely block access. These should be addressed promptly. |
 | Moderate | Issues that may cause some difficulty for users with disabilities, but are less likely to block access entirely. |
 | Minor | Issues that have a relatively low impact on accessibility and may cause only minor inconvenience. |
-| Needs review | Unable to detect if there might be an issue or not. This can occur when we are unable to determine the contrast ratio as the text is placed on a background image. This will need to be manually reviewed because it cannot be automatically determined. |
+| Needs review | Unable to detect if there might be an issue or not. This can occur when we are unable to determine the contrast ratio as the text is placed on a background image. You must manually review because it cannot be automatically determined. |
 | Passed | Passed WCAG A, AA, or accessibility best practice. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert important %}
-The email drag-and-drop editor currently does not support setting a document `<title>` element. As a result, the accessibility scanner will always fail this check.<br><br>
+The email drag-and-drop editor currently does not support setting a document `<title>` element. As a result, the accessibility scanner always fails this check.<br><br>
 We're tracking this limitation for future improvements. If this affects your workflows or your users, [share your feedback]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/#sharing-feedback) so we can prioritize the most impactful fixes.
 {% endalert %}
 
@@ -133,7 +133,7 @@ When making fixes that affect specific previews, be sure to select only the impa
 
 ### Run Inbox Vision on the final email version
 
-We suggest running Inbox Vision when the email message is production-ready or close to it. This allows you to reduce the number of generated previews, as the email will go through multiple iterations before it’s finalized and ready to be sent to users.
+We suggest running Inbox Vision when the email message is production-ready or close to it. This allows you to reduce the number of generated previews, as the email goes through multiple iterations before it’s finalized and ready to be sent to users.
 
 Running Inbox Vision every time you make a single edit or change can quickly consume previews. We suggest making all the necessary changes to the email first, and then running Inbox Vision to preview how all your changes can affect the rendering of your email across environments.
 
