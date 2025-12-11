@@ -137,7 +137,7 @@ jobs:
                 console.log('Successfully added reviewers');
                 
                 // Add a comment explaining why reviewers were added
-                let commentBody = '🤖 **Automated Reviewer Assignment**: I've automatically added reviewers based on the following:\n\n';
+                let commentBody = '🤖 **Automated Reviewer Assignment**: I have automatically added reviewers based on the following:\n\n';
                 
                 if (teamsToAdd.includes('docs-team')) {
                   commentBody += '- 📝 **@braze-inc/docs-team** - Copilot is assigned to this PR\n';
