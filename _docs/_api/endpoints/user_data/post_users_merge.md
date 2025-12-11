@@ -56,7 +56,7 @@ The behavior documented below is true for all Braze features that **are not** po
 The endpoint does not guarantee the sequence of `merge_updates` objects being updated.
 {% endalert %}
 
-This endpoint will merge the following fields if they're not found on the target user.
+This endpoint merges the following fields if they're not found on the target user.
 
 - First name
 - Last name
@@ -96,11 +96,11 @@ When merging users, using the `/users/merge` endpoint works the same way as usin
 
 #### Custom event date and purchase event date behavior
 
-These merged fields will update "for X events in Y days" filters. For purchase events, these filters include "number of purchases in Y days" and "money spent in last Y days".
+These merged fields update "for X events in Y days" filters. For purchase events, these filters include "number of purchases in Y days" and "money spent in last Y days".
 
 ### Merging users by email or phone number
 
-If an `email` or `phone` is specified as an identifier, you must include an additional `prioritization` value in the identifier. The `prioritization` should be an ordered array specifying which user to merge if multiple users are found. This means if more than one user matches from a prioritization, then merging will not occur.
+If an `email` or `phone` is specified as an identifier, you must include an additional `prioritization` value in the identifier. The `prioritization` should be an ordered array specifying which user to merge if multiple users are found. This means if more than one user matches from a prioritization, then merging does not occur.
 
 The allowed values for the array are:
 

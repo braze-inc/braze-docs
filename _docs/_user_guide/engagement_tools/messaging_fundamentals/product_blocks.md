@@ -114,6 +114,10 @@ Get a jumpstart by working off this [sample Product Catalog]({{site.baseurl}}/as
 
 In the **Settings** tab of your catalog, you can select the **Product blocks** toggle to map to specific fields and information in your catalog. This allows you to select which fields to use as the product title, product URL, and image URL. Note that Shopify catalog fields are mapped by default and can't be changed.
 
+{% alert note %}
+If you aren't using Shopify, you can contact your account manager to turn on field mapping, which allows you to connect any catalog to product blocks and map its fields to the `product_title`, `product_url`, and `variant_image_url`.
+{% endalert %}
+
 ## Creating product blocks
 
 This guide will walk you through the steps to create, test, and ensure the functionality of a dynamic or static product block using our email drag-and-drop editor.

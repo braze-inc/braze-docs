@@ -110,17 +110,11 @@ m.Braze.logEvent("YOUR_EVENT_NAME")
 AppboyBinding.LogCustomEvent("YOUR_EVENT_NAME");
 ```
 {% endtab %}
-
-{% tab unreal engine %}
-```cpp
-UBraze->LogCustomEvent(TEXT("YOUR_EVENT_NAME"));
-```
-{% endtab %}
 {% endtabs %}
 
 ## Adding metadata properties
 
-When you log a custom event, you have the option to add metadata about that custom events by passing a properties object with the event. Properties are defined as key-value pairs. Keys are strings and values can be `string`, `numeric`, `boolean`, or [`Date`](http://www.w3schools.com/jsref/jsref_obj_date.asp) objects.
+When you log a custom event, you have the option to add metadata about that custom event by passing a properties object with the event. Properties are defined as key-value pairs. Keys are strings and values can be `string`, `numeric`, `boolean`, [`Date`](http://www.w3schools.com/jsref/jsref_obj_date.asp) objects, arrays, or nested JSON objects.
 
 To add metadata properties, use the following event-logging method.
 
@@ -251,20 +245,6 @@ m.Braze.logEvent("YOUR_EVENT_NAME", {"stringPropKey" : "stringPropValue", "intPr
 {% tab unity %}
 ```csharp
 AppboyBinding.LogCustomEvent("event name", properties(Dictionary<string, object>));
-```
-{% endtab %}
-
-{% tab unreal engine %}
-```cpp
-TMap<FString, FString> Properties;
-Properties.Add(TEXT("you"), TEXT("can"));
-Properties.Add(TEXT("pass"), TEXT("false"));
-Properties.Add(TEXT("orNumbers"), FString::FromInt(42));
-Properties.Add(TEXT("orDates"), FDateTime::Now().ToString());
-Properties.Add(TEXT("or"), TEXT("any,array,here")); // Arrays are stored as comma-separated strings
-Properties.Add(TEXT("andEven"), TEXT("deeply:nested,json"));
-
-UBraze->LogCustomEventWithProperties(TEXT("YOUR_EVENT_NAME"), Properties);
 ```
 {% endtab %}
 {% endtabs %}

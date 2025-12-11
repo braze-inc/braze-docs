@@ -9,7 +9,7 @@ description: "This reference article explains the different components of the us
 
 # User attributes object
 
-> An API request with any fields in the attributes object will create or update an attribute of that name with the given value on the specified user profile.
+> An API request with any fields in the attributes object creates or updates an attribute of that name with the given value on the specified user profile.
 
 Use Braze user profile field names (listed as follows or any listed in the section for [Braze user profile fields](#braze-user-profile-fields)) to update those special values on the user profile in the dashboard or add your own custom attribute data to the user.
 
@@ -23,7 +23,7 @@ Use Braze user profile field names (listed as follows or any listed in the secti
   "braze_id" : (optional, string) Braze user identifier,
   "email": (optional, string) User email address,
   "phone": (optional, string) User phone number,
-  // Setting this flag to true will put the API in "Update Only" mode.
+  // Setting this flag to true puts the API in "Update Only" mode.
   // When using a "user_alias", "Update Only" defaults to true.
   "_update_existing_only" : (optional, boolean),
   // See note regarding anonymous push token imports
@@ -83,7 +83,7 @@ The following data types can be stored as a custom attribute:
 
 | Data Type | Notes |
 | --- | --- |
-| Arrays | Custom attribute arrays are supported. Adding an element to a custom attribute array appends the element to the end of the array, unless it's already present, in which case it gets moved from its current position to the end of the array.<br><br>For example, if an array `['hotdog','hotdog','hotdog','pizza']` were imported, it will show in the array attribute as `['hotdog', 'pizza']` because only unique values are supported.<br><br>In addition to setting the values of an array by saying something like `"my_array_custom_attribute":[ "Value1", "Value2" ]` you may add to existing arrays by doing something like `"my_array_custom_attribute" : { "add" : ["Value3"] },` or remove values from an array by doing something like `"my_array_custom_attribute" : { "remove" : [ "Value1" ]}`<br><br>The maximum number of elements in custom attribute arrays defaults to 25, but can be increased up to 100 for an individual array. For more information, see [Arrays]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays). |
+| Arrays | Custom attribute arrays are supported. Adding an element to a custom attribute array appends the element to the end of the array, unless it's already present, in which case it gets moved from its current position to the end of the array.<br><br>For example, if the array `['hotdog','hotdog','hotdog','pizza']` were imported, it shows in the array attribute as `['hotdog', 'pizza']` because only unique values are supported.<br><br>In addition to setting the values of an array by saying something like `"my_array_custom_attribute":[ "Value1", "Value2" ]`, you may add to existing arrays by doing something like `"my_array_custom_attribute" : { "add" : ["Value3"] },` or remove values from an array by doing something like `"my_array_custom_attribute" : { "remove" : [ "Value1" ]}`<br><br>The maximum number of elements in custom attribute arrays defaults to 25, but can be increased up to 100 for an individual array. For more information, see [Arrays]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays). |
 | Array of objects | Array of objects allows you to define a list of objects where each object contains a set of attributes. This can be useful if you need to store multiple sets of related data for a user, such as hotel stays, purchase history, or preferences. <br><br> For example, you can define a custom attribute on a user profile named `hotel_stays`. This custom attribute can be defined as an array where each object represents a separate stay, with attributes such as `hotel_name`, `check_in_date`, `nights_stayed`. For more details, see [this example](#array-of-objects-example). |
 | Booleans | `true` or `false` |
 | Dates | Must be stored in the [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) format or in any of the following formats: <br>- `yyyy-MM-ddTHH:mm:ss:SSSZ` <br>- `yyyy-MM-ddTHH:mm:ss` <br>- `yyyy-MM-dd HH:mm:ss` <br>- `yyyy-MM-dd` <br>- `MM/dd/yyyy` <br>- `ddd MM dd HH:mm:ss.TZD YYYY` <br><br>Note that "T" is a time designator, not a placeholder, and should not be changed or removed. <br><br>Time attributes without a time zone default to Midnight UTC (and are formatted on the dashboard as the equivalent of Midnight UTC in the company's time zone). <br><br> Events with timestamps in the future default to the current time. <br><br> For regular custom attributes, if the year is less than 0 or greater than 3000, Braze stores these values as strings on the user. |
@@ -133,7 +133,7 @@ The following user profile fields are case sensitive, so be sure to reference th
 | first_name | (string) |
 | gender | (string) "M", "F", "O" (other), "N" (not applicable), "P" (prefer not to say) or nil (unknown). |
 | home_city | (string) |
-| language | (string) we require that language be passed to Braze in the [ISO-639-1 standard](http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes). For supported languages, see our [list of accepted languages]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/language_codes/).<br><br>Setting `language` on a user by CSV import or API will prevent Braze from automatically capturing this information through the SDK. |
+| language | (string) we require that language be passed to Braze in the [ISO-639-1 standard](http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes). For supported languages, see our [list of accepted languages]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/language_codes/).<br><br>Setting `language` on a user by CSV import or API prevents Braze from automatically capturing this information through the SDK. |
 | last_name | (string) |
 | marked_email_as_spam_at | (string) Date at which the user's email was marked as spam. Appears in ISO 8601 format or in any of the following formats: <br>- `yyyy-MM-ddTHH:mm:ss:SSSZ` <br>- `yyyy-MM-ddTHH:mm:ss` <br>- `yyyy-MM-dd HH:mm:ss` <br>- `yyyy-MM-dd` <br>- `MM/dd/yyyy` <br>- `ddd MM dd HH:mm:ss.TZD YYYY` |
 | phone | (string) We recommend providing phone numbers in the [E.164](https://en.wikipedia.org/wiki/E.164) format. For details, refer to [User phone numbers]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/#formatting).|
@@ -144,7 +144,7 @@ The following user profile fields are case sensitive, so be sure to reference th
 | twitter | Hash containing any of `id` (integer), `screen_name` (string, X (formerly Twitter) handle), `followers_count` (integer), `friends_count` (integer), `statuses_count` (integer). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Language values that are explicitly set through this API will take precedence over the locale information Braze automatically receives from the device.
+Language values that are explicitly set through this API take precedence over the locale information Braze automatically receives from the device.
 
 ####  User attribute example request
 
@@ -199,8 +199,8 @@ Due to the nature of web push tokens, be sure you consider the following when im
 
 |Consideration|Details|
 |----------------------|------------|
-| **Service workers**  | By default, the Web SDK will look for a service worker at `./service-worker` unless another option is specified, such as `manageServiceWorkerExternally` or `serviceWorkerLocation`. If your service worker isn't set up properly, it may lead to expired push tokens for your users. |
-| **Expired tokens**   | If a user hasn't started a web session within 60 days, their push token will expire. Since Braze can't migrate expired push tokens, you'll need to send a [push primer]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages) to re-engage them. |
+| **Service workers**  | By default, the Web SDK looks for a service worker at `./service-worker` unless another option is specified, such as `manageServiceWorkerExternally` or `serviceWorkerLocation`. If your service worker isn't set up properly, it may lead to expired push tokens for your users. |
+| **Expired tokens**   | If a user hasn't started a web session within 60 days, their push token expires. Because Braze can't migrate expired push tokens, you must send a [push primer]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages) to re-engage them. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 ### Manual migration through API
@@ -293,7 +293,7 @@ Braze checks once a month to find any anonymous profile with the `push_token_imp
 ### Importing Android push tokens
 
 {% alert important %}
-The following consideration only applies for Android apps. iOS apps will not require these steps because that platform has only one framework for displaying push, and push notifications will render immediately as long as Braze has the necessary push tokens and certificates.
+The following consideration applies only for Android apps. iOS apps do not require these steps because that platform has only one framework for displaying push, and push notifications render immediately as long as Braze has the necessary push tokens and certificates.
 {% endalert %}
 
 If you must send Android push notifications to your users before the Braze SDK integration is complete, use key-value pairs to validate push notifications.

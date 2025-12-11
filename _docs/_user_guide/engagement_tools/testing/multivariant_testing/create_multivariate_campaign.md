@@ -32,7 +32,7 @@ For some ideas on how to get started differentiating your variants, refer to [Ti
 
 Scheduling your multivariate campaign works the same as scheduling any other Braze campaign. All standard [delivery types]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/) are available.
 
-Once a multivariate test begins, you can't make changes to the campaign. If you change the parameters, such as the subject line or HTML body, Braze will consider the experiment compromised and will immediately disable the experiment.
+After a multivariate test begins, you can't make changes to the campaign. If you change the parameters, such as the subject line or HTML body, Braze considers the experiment compromised and immediately disables the experiment.
 
 {% alert important %}
 To use an [optimization]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/) (available for select channels), schedule your campaign to deliver once. Optimizations aren't available for campaigns that repeat or have re-eligibility turned on.
@@ -40,9 +40,9 @@ To use an [optimization]({{site.baseurl}}/user_guide/engagement_tools/testing/mu
 
 ## Step 4: Choose a segment and distribute your users across variants
 
-Select segments to target, then distribute its members across your selected variants and the optional [control group](#including-a-control-group). For best practices around choosing a segment to test with, see [Choosing a segment](#choosing-a-segment).
+Select segments to target, then distribute the members across your selected variants and the optional [control group](#including-a-control-group). For best practices around choosing a segment to test with, see [Choosing a segment](#choosing-a-segment).
 
-For push, email, and webhook campaigns scheduled to send once, you can also use an [optimization]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/). This will reserve a portion of your target audience from the A/B test and hold them for a second optimized send based on the results from the first test.
+For push, email, and webhook campaigns scheduled to send once, you can also use an [optimization]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/). An optimization reserves a portion of your target audience from the A/B test and holds them for a second optimized send based on the results from the first test.
 
 ### Control group {#including-a-control-group}
 
@@ -76,10 +76,10 @@ On the confirmation page, review the details of your multivariate campaign and l
 
 ## Things to know
 
-If your experiment has already started sending and you edit the message, the experiment will be invalidated, and any experiment results will be removed.
+If your experiment has already started sending and you edit the message, the experiment becomes invalidated, and any experiment results are removed.
 
 - To prevent any interference with the expected experiment behavior, we recommend avoiding message edits within an hour of the experiment campaign launch.
-- If your experiment is completed and you edit the message post-send, the experiment results will remain available in your dashboard analytics. However, if you relaunch the campaign, the experiment results will be removed.
+- If your experiment is completed and you edit the message post-send, the experiment results remain available in your dashboard analytics. However, if you relaunch the campaign, the experiment results are removed.
 
 ### Tips for different channels {#tips-different-channels}
 
@@ -98,7 +98,7 @@ When running A/B tests, don't forget to generate [funnel reports]({{site.baseurl
 
 In addition, the ideal length of your test may also vary depending on the channel. Keep in mind the average amount of time most users may need to engage with each channel.
 
-For instance, if you're testing a push, you may achieve significant results faster than when testing email since users see pushes immediately, but it may be days before they see or open an email. If you're testing in-app messages, keep in mind that users must open the app to see the campaign, so you should wait longer to collect results from both your most active app openers as well as your more typical users.
+For instance, if you're testing a push, you may achieve significant results faster than when testing email, since users see pushes immediately, but it may be days before they see or open an email. If you're testing in-app messages, keep in mind that users must open the app to see the campaign, so you should wait longer to collect results from both your most active app openers as well as your more typical users.
 
 If you're unsure how long your test should run for, the [Intelligent Selection]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/) feature can be useful for finding a Winning Variant efficiently.
 
@@ -108,7 +108,7 @@ Since different segments of your users may respond differently to messaging, the
 
 For instance, while active users may have equal response rates to "This deal expires tomorrow!" and "This deal expires in 24 hours!", users who haven't opened the app for a week may be more responsive toward the latter wording since it creates a greater sense of urgency.
 
-Additionally, when choosing which segment to run your test on, be sure to consider whether the size of that segment will be large enough for your test. In general, multivariate and A/B tests with more variants require a larger test group to achieve statistically significant results. This is because more variants will result in fewer users seeing each individual variant.
+Additionally, when choosing which segment to run your test on, be sure to consider whether the size of that segment is large enough for your test. In general, multivariate and A/B tests with more variants require a larger test group to achieve statistically significant results. This is because more variants result in fewer users seeing each individual variant.
 
 {% alert tip %}
 As a guide, you likely need around 15,000 users per variant (including the control) to achieve 95% confidence in your test results. However, the exact number of users you need could be higher or lower than that, depending on your particular case. For more exact guidance on variant sample sizes, consider referring to a [sample size calculator](https://www.calculator.net/sample-size-calculator.html).
@@ -124,9 +124,10 @@ Users are assigned to message variants, Canvas variants, or their respective con
 
 There are some common mistakes to avoid creating the appearance of differences based on the messaging channel if audiences are not filtered correctly.
 
-For example, if you send a push message to a wide audience with a control, the test group will only send messages to users with a push token. However, the control group will include both users who do have a push token and users who don't. In this case, your initial audience for the campaign or Canvas must filter for having a push token (`Foreground Push Enabled` is `true`). The same must be done for eligibility to receive messages on other channels: opted in, has a push token, subscribed, etc.
+For example, if you send a push message to a wide audience with a control, the test group sends messages only to users with a push token. However, the control group includes both users who do have a push token and users who don't. In this case, your initial audience for the campaign or Canvas must filter for having a push token (`Foreground Push Enabled` is `true`). The same must be done for eligibility to receive messages on other channels: opted in, has a push token, or subscribed.
+
+Note that if a control variant doesn't consist of any Canvas steps, exit criteria events aren't logged for users in the control variant.
 
 {% alert note %}
 If you manually use random bucket numbers for control groups, check out [things to watch for]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/#things-to-watch-for) in your control groups.
 {% endalert %}
-
