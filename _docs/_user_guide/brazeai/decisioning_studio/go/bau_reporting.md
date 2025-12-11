@@ -1,7 +1,7 @@
 ---
-nav_title: Reporting on a Business as Usual (BAU) group FAQs
-article_title: Reporting on a Business as Usual (BAU) group FAQs
-page_order: 6
+nav_title: Reporting on a Business as Usual group FAQs
+article_title: Reporting on a Business as Usual group FAQs
+page_order: 10
 description: "This article provides answers to frequently asked questions about reporting on a Business as Usual (BAU) group in the BrazeAI Decisioning Studio Go portal."
 ---
 
@@ -26,13 +26,13 @@ Before setting up BAU reporting, first ensure that there is an apples to apples 
 Without an "apples to apples" experiment design, BAU reporting can be confusing or misleading.
 
 After you have validated your experiment design, the following details are required to set up BAU reporting:
-- One or more campaign IDs from your integrated activation platform (Braze, SFMC, or Klaviyo) where all communications in the campaign are BAU communications
+- One or more campaign IDs from your integrated activation platform (Braze, Salesforce Marketing Cloud, or Klaviyo) where all communications in the campaign are BAU communications
     - For Braze, Campaigns and Canvases are accepted
-    - For SFMC, only Journeys are accepted
+    - For Salesforce Marketing Cloud, only Journeys are accepted
     - For Klaviyo, only Flows are accepted
 - One audience ID from your integrated activation platform that tracks the recipients that are in the BAU audience each day
     - For Braze, only segments are accepted
-    - For SFMC, only data extensions are accepted
+    - For Salesforce Marketing Cloud, only data extensions are accepted
     - For Klaviyo, only segments are accepted
 
 If you don't have an existing audience that tracks your BAU audience, you must create one.

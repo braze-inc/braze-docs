@@ -1,7 +1,7 @@
 ---
 nav_title: Creating a Klaviyo Flow
 article_title: Creating a Klaviyo Flow for BrazeAI Decisioning Studio
-page_order: 2
+page_order: 3
 description: "Learn how to set up a Klaviyo Flow for use with BrazeAI Decisioning Studio<sup>TM</sup> Go."
 ---
 

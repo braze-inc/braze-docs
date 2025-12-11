@@ -1,7 +1,7 @@
 ---
 nav_title: Setting up SFMC data query automation
 article_title: Setting up SFMC data query automation for BrazeAI Decisioning Studio
-page_order: 2
+page_order: 4
 description: "Learn how to set up and integrate BrazeAI Decisioning Studio<sup>TM</sup> Go into Braze."
 ---
 

@@ -1,7 +1,7 @@
 ---
 nav_title: Creating a placeholder Klaviyo Flow 
 article_title: Creating a placeholder Klaviyo Flow for BrazeAI Decisioning Studio Go
-page_order: 3
+page_order: 2
 description: "."
 ---
 
