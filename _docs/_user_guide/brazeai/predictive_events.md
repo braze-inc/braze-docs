@@ -1,7 +1,7 @@
 ---
 nav_title: Predictive Events
 article_title: Predictive Events
-description: "This article covers Predictive Events (previously Predictive Purchases), a Predictive Suite tool that gives marketers the ability to identify and message users based on their likelihood to perform an event."
+description: "This article covers Predictive Events (previously Predictive Purchases), a tool in the Braze Predictive Suite that gives marketers the ability to identify and message users based on their likelihood to perform an event."
 page_order: 2.1
 alias: /predictive_purchases/
 search_rank: 1
