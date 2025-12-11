@@ -63,7 +63,7 @@ Spam testing attempts to predict whether your email will land in spam folders or
 To check your spam test results, do the following:
 
 1. Select the **Spam Testing** tab in the **Inbox Vision** section. The **Spam Test Result** table lists the spam filter name, status, and type.
-2. Review these results and making any adjustments to your email campaign.
+2. Review these results and make any adjustments to your email campaign.
 3. Select **Re-run Test** to reload your spam test results.
 
 ## Accessibility testing
