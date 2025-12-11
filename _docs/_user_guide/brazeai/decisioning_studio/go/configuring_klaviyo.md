@@ -23,7 +23,7 @@ Before creating a flow in Klaviyo, you must have the following details from your
 
 BrazeAI Decisioning Studio™ Go imports templates that are associated with existing flows in your Klaviyo account. To use a template that isn't associated with any flows, you can create a placeholder flow containing the templates you'd like to use. The flow can be left as a draft; it doesn't need to be live.
 
-## Step 1: Set up your flow
+### Step 1: Set up your flow
 
 {% alert note %}
 The purpose of this placeholder flows is to import your desired content into BrazeAI Decisioning Studio™ Go. You must create a separate flow at a later step, which BrazeAI Decisioning Studio™ Go uses to trigger activations once your Experimenter is live.
@@ -39,7 +39,7 @@ The purpose of this placeholder flows is to import your desired content into Bra
 4. Select any trigger, then save the flow. 
 5. Select **Confirm and save**. 
 
-## Step 2: Create the placeholder template
+### Step 2: Create the placeholder template
 
 Next, create the placeholder template: 
 
