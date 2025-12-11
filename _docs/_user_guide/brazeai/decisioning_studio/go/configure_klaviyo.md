@@ -6,7 +6,7 @@ description: "Learn how to set up a Klaviyo Flow for use with BrazeAI Decisionin
 toc_headers: h2
 ---
 
-# Configure with Klaviyo for BrazeAI Decisioning Studio
+# Configure with Klaviyo for BrazeAI Decisioning Studio™ Go
 
 > Set up a placeholder template and a flow in Klaviyo to trigger activations through BrazeAI Decisioning Studio™ Go.
 
