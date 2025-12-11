@@ -1,13 +1,14 @@
 ---
-nav_title: Creating a Klaviyo Flow
-article_title: Creating a Klaviyo Flow for BrazeAI Decisioning Studio
+nav_title: Configure with Klaviyo
+article_title: Configure with Klaviyo for BrazeAI Decisioning Studio
 page_order: 3
 description: "Learn how to set up a Klaviyo Flow for use with BrazeAI Decisioning Studio<sup>TM</sup> Go."
+toc_headers: h2
 ---
 
-# Creating a Klaviyo Flow for BrazeAI Decisioning Studio
+# Configure with Klaviyo for BrazeAI Decisioning Studio
 
-> Set up a flow in Klaviyo to to trigger activations through BrazeAI Decisioning Studio™ Go.
+> Learn how to set up a placeholder template and a flow in Klaviyo to trigger activations through BrazeAI Decisioning Studio™ Go.
 
 {% alert important %}
 You must create a new flow in Klaviyo for every new experimenter you set up. If you previously created a placeholder flow to import your templates, you must create a new flow and cannot reuse the previous placeholder flow.
@@ -18,7 +19,48 @@ Before creating a flow in Klaviyo, you must have the following details from your
 - Flow name
 - Trigger event name
 
-## Step 1: Set up the flow
+## Creating a placeholder template in Klaviyo
+
+BrazeAI Decisioning Studio™ Go imports templates that are associated with existing flows in your Klaviyo account. To use a template that isn't associated with any flows, you can create a placeholder flow containing the templates you'd like to use. The flow can be left as a draft; it doesn't need to be live.
+
+## Step 1: Set up your flow
+
+{% alert note %}
+The purpose of this placeholder flows is to import your desired content into BrazeAI Decisioning Studio™ Go. You must create a separate flow at a later step, which BrazeAI Decisioning Studio™ Go uses to trigger activations once your Experimenter is live.
+{% endalert %}
+
+1. In Klaviyo, select **Flows**. 
+2. Select **Create flow** > **Create From Scratch**.
+3. Give the placeholder Flow a name you'll recognize, then select **Create Flow**.
+
+![A Flow named "OFE Placeholder Flow".]({% image_buster /assets/img/decisioning_studio_go/create_flow.png %})
+
+{: start="4"}
+4. Select any trigger, then save the flow. 
+5. Select **Confirm and save**. 
+
+## Step 2: Create the placeholder template
+
+Next, create the placeholder template: 
+
+1. Drag and drop an **Email** node after the **Trigger**.
+
+![A Flow with a Trigger node followed by an Email node.]({% image_buster /assets/img/decisioning_studio_go/set_up_email_node.png %})
+
+{: start="2"}
+2. In the **Email** node, select **Select template**.
+3. Then, choose the template to use and select **Use template**.
+4. Select **Save** > **Done**.
+5. (Optional) To add more templates to be used in BrazeAI Decisioning Studio™ Go, add another **Email** node and repeat steps 2–4. 
+6. Leave all emails in **Draft** mode and exit the Flow.
+
+In the BrazeAI Decisioning Studio™ Go portal, your templates should be selectable under your placeholder flow.
+
+![An example of a placeholder Klaviyo template in the Decisioning Studio Go portal.]({% image_buster /assets/img/decisioning_studio_go/placeholder_flow.png %})
+
+## Creating up a flow in Klaviyo
+
+### Step 1: Set up the flow
 
 1. In Klaviyo, select **Flows** > **Create flow**.
 2. Select **Build your own**.
@@ -39,7 +81,7 @@ Before creating a flow in Klaviyo, you must have the following details from your
 If your Experimenter has one base template, proceed to the following steps. If your Experimenter has two or more base templates, skip to [Step 3: Add a trigger split to your flow](#step-3-add-a-trigger-split-to-your-flow).
 {% endalert %}
 
-## Step 2: Add an email to your flow 
+### Step 2: Add an email to your flow 
 
 1. Drag and drop an **Email** node after the **Trigger** node.
 2. In the **Email details**, select **Select template**.
@@ -67,14 +109,14 @@ If your Experimenter has one base template, proceed to the following steps. If y
 
 You're all set! You can now trigger activations through BrazeAI Decisioning Studio™ Go. 
 
-## Step 3: Add a trigger split to your flow 
+### Step 3: Add a trigger split to your flow 
 
 1. Drag and drop a **Trigger split** node after the **Trigger node**.
 2. Select the **Trigger split** node and set the **Dimension** to **EmailTemplateID**.
 
 ![]({% image_buster /assets/img/decisioning_studio_go/flow7.png %})
 
-### Step 3.1: Add your email template
+#### Step 3.1: Add your email template
 
 1. In the BrazeAI Decisioning Studio™ Go portal, find the **Email Template ID** for your first template under the **Resources to use** section. Enter the **Email Template ID** for the **Dimension** field, then select **Save**.
 2. Drag and drop an **Email** node to the **Yes** branch of the **Trigger split**. 
@@ -95,7 +137,7 @@ You're all set! You can now trigger activations through BrazeAI Decisioning Stud
 9. Unselect the **Skip recently emailed profiles** checkbox, then select **Save**.
 10. In the email node, update the mode from **Draft** to **Live**.
 
-### Step 3.2: Add a new trigger split
+#### Step 3.2: Add a new trigger split
 
 Next, create a new **Trigger split** and **Email** node for each additional base template your Experimenter will use. 
 

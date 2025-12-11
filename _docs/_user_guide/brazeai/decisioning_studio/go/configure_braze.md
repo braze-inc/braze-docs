@@ -1,11 +1,11 @@
 ---
-nav_title: Creating an API campaign
-article_title: Creating an API campaign for BrazeAI Decisioning Studio
+nav_title: Configure with Braze
+article_title: Configure with Braze
 page_order: 1
 description: "Learn how to set up and integrate BrazeAI Decisioning Studio<sup>TM</sup> Go into Braze."
 ---
 
-# Creating an API campaign for BrazeAI Decisioning Studio™ Go
+# Configure with Braze
 
 > Learn how to create an API campaign in Braze designed for BrazeAI Decisioning Studio™ Go.
 
