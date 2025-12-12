@@ -18,13 +18,31 @@ description: "This article outlines details about the Delete users Braze endpoin
 
 Up to 50 `external_ids`, `user_aliases`, `braze_ids`, `email_addresses`, or `phone_numbers` can be included in a single request. Only one of `external_ids`, `user_aliases`, `braze_ids`, `email_addresses`, or `phone_numbers` can be included in a single request.
 
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#22e91d00-d178-4b4f-a3df-0073ecfcc992 {% endapiref %}
+
 If you have a use case that can't be solved with bulk user deletion through the API, contact the [Braze Support team]({{site.baseurl}}/user_guide/administrative/access_braze/support/) for assistance.
 
+## What data is deleted (nulled) {#data-deleted}
+
 {% alert warning %}
-Deleting user profiles cannot be undone. It will permanently remove users which may cause discrepancies in your data. Learn more about what happens when you [delete a user profile using the API]({{site.baseurl}}/help/help_articles/api/delete_user/) in our Help documentation.
+Deleting user profiles cannot be undone. It will permanently remove users which may cause discrepancies in your data.
 {% endalert %}
 
-{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#22e91d00-d178-4b4f-a3df-0073ecfcc992 {% endapiref %}
+When you use this endpoint to remove a user, the following data is deleted (nulled):
+
+- Any attributes that the user had
+- Email address
+- Phone number
+- External user ID
+- Gender
+- Country
+- Language
+
+The following events will also occur:
+
+- The user profile is deleted (nulled).
+- The Lifetime Users count will be updated to account for the newly removed users.
+- The removed user will still count toward the aggregated conversion percentage. Custom event counts and purchase counts will not be updated for removed users.
 
 ## Prerequisites
 

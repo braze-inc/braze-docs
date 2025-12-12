@@ -3001,4 +3001,10 @@ validurls['/docs/contributing/content_management/language_translations'] = '/doc
 validurls['/docs/developer_guide/sdk_integration/?sdktab=xamarin'] = '/docs/developer_guide/sdk_integration/?sdktab=.net%20maui';
 validurls['/docs/help/help_articles/campaigns_and_canvas/not_triggering/'] = '/docs/user_guide/engagement_tools/canvas/troubleshooting/#why-did-a-user-not-receive-a-triggered-canvas-step';
 
+validurls['/docs/help/help_articles/api/delete_user/'] = '/docs/api/endpoints/user_data/post_user_delete/#data-deleted';
+validurls['/docs/help/help_articles/api/attribute_name_id_across_sources/'] = '/docs/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/#supported-attributes';
+validurls['/docs/help/help_articles/data/change_custom_data_type/'] = '/docs/user_guide/data/activation/custom_data/custom_attributes/#changing-data-types';
+validurls['/docs/help/help_articles/data/blocklisting_deletion'] = '/docs/user_guide/data/activation/custom_data/custom_attributes/#blocklisting';
+
+
 // validurls['OLD'] = 'NEW';

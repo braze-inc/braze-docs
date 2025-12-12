@@ -29,7 +29,20 @@ From this page, you can view, manage, create, or blocklist existing custom attri
 
 ### Blocklisting
 
-Custom attributes can be blocklisted individually in the actions menu, or up to 100 attributes can be selected and blocklisted in bulk. If you block a custom attribute, no data will be collected regarding that attribute, existing data will be unavailable unless reactivated, and blocklisted attributes will not show up in filters or graphs. Additionally, if the attribute is currently referenced by filters or triggers in other areas of the Braze dashboard, a warning modal will appear explaining that all instances of the filters or triggers that reference it will be removed and archived.
+Custom attributes can be blocklisted individually in the actions menu, or up to 100 attributes can be selected and blocklisted in bulk. 
+
+If you block a custom attribute, no data will be collected regarding that attribute, existing data will be unavailable unless reactivated, and blocklisted attributes will not show up in filters or graphs. Additionally, if the attribute is currently referenced by filters or triggers in other areas of the Braze dashboard, a warning modal will appear explaining that all instances of the filters or triggers that reference it will be removed and archived.
+
+#### Differences between blocklisting and deleting
+
+To understand the difference between blocklisting an deleting attributes in Braze, consider the results of each action:
+
+- **Blocklisting:** If custom attributes, events, or purchases are blocklisted, they will remain on the user profile, but no new requests for the attribute will be processed.
+- **Deleting:** If custom attributes, events, or purchases are deleted, the data will be removed. However, Braze will still accept new incoming requests for that attribute if it's still tracked via the SDK or uploaded through API or CSV.
+
+To accomplish blocklisting, Braze will have to send the blocklisting information down to each user's device, and it will be a data-intensive operation, which we ideally try to avoid. Also, if the list is too large (more than 100 attributes, events, or purchases), your app can begin to slow down.
+
+If you aren’t planning to send attributes to Braze anymore, the deletion route would be the recommended approach. Regardless of your route, the custom attributes, events, and purchases you wish to remove will no longer appear on the **Manage Workspace** page, which removes them as segment filters. User-level data will remain on the profiles.
 
 ### Marking as personally identifiable information (PII)
 
@@ -253,6 +266,25 @@ We've consolidated the list of operators available to use in attribute filters, 
 | Array | doesn't include value | includes none of | At least 1 value |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
+## Changing data types
+
+To change the data type of a custom attribute, do the following:
+
+1. Go to **Data Settings** and select **Custom Attributes**. 
+2. Select **Edit** next to the custom attribute.
+3. Choose the new data type from the **Data Type** dropdown.
+4. Select **Save**.
+
+Note the following impacts of changing data types (for example, changing a data type from `time` to `string`):
+
+- Relevant filters in segments, campaigns, Canvases, or other locations using the changed attribute or event are not automatically updated. Before you can modify attributes, you must stop any campaigns or Canvases using the attributes in segments or filters, and remove the attributes from filters that reference them.
+- User data will not be retroactively updated. If the changed attribute was on a user profile before the data type change, that value will still be the old data type. This can cause users to fall out of the segments that contain the changed attribute. The filter will actively look for the new data type, but if a profile still has the previous data type, that user will now be excluded from the segment. These users must be updated to fall back into the proper segments. You can do this with the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track).
+- New data won't be accepted if it's not the new data type. For example, an API call to the `/users/track` endpoint that contains the previous data type for a changed attribute will not be accepted. You must call the new data type.
+
+{% alert note %}
+If you're interested in the ability to prevent automatic detection from updating the custom attribute data type, contact your customer success manager to enable this feature.
+{% endalert %}
+
 ## Purchase and revenue tracking {#purchase-revenue-tracking}
 
 Using our purchase methods to record in-app purchases establishes the Lifetime Value (LTV) for each individual user profile. This data is viewable within our revenue page in time-series.
@@ -274,6 +306,4 @@ Using our purchase methods to record in-app purchases establishes the Lifetime V
 {% alert tip %}
 If you would like to segment on the number of times a specific purchase has occurred, you should also record that purchase individually as an [incrementing custom attribute]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_custom_attributes/#incrementingdecrementing-custom-attributes).
 {% endalert %}
-
-You can change the data type of your custom attribute, but you should be aware of the impacts of [changing data types]({{site.baseurl}}/help/help_articles/data/change_custom_data_type/).
 
