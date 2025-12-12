@@ -14,7 +14,7 @@ To learn more, [book a call](https://www.braze.com/get-started/) with Braze.
 
 ## Key features
 
-- **Keep your tech stack, but add a brain:** BrazeAI™ plugs in as a decisioning layer between your data systems and your marketing automation platform.
+- **Keep your tech stack, but add a brain:** BrazeAI™ plugs in as a decisioning layer between your data systems and your customer engagement platform
 - **Pick winners for people, not segments:** Use all your first-party data to make the optimal 1:1 decision for each individual.
 - **Personalize everything:** AI decisioning agents find the best message, product, incentive, channel, timing, and frequency for each individual customer
 - **Maximize any metric:** Clicks aren’t dollars. Use BrazeAI™ to pick the offers or incentives that maximize revenue, profit, CLV, or any other business KPI.
@@ -28,9 +28,9 @@ An agent is a custom configuration for BrazeAI Decisioning Studio™ that's tail
 
 For example, you could build a repeat purchase agent to increase follow-up conversions after an initial sale. You define the audience and message in Braze, while the decisioning studio runs daily experiments, automatically testing different combinations of product offers, message timing, and frequency for each customer. Over time, BrazeAI™ learns what works best and orchestrates personalized sends through Braze to maximize repurchase rates.
 
-Building a good agent consists of:
+Designing a good agent consists of:
 
-- Choosing a success metric for BrazeAI™ to optimize for, such as revenue, conversions, or ARPU.
+- Choosing a success metric for BrazeAI™ to optimize for, such as revenue, conversions, or ARPU
 - Defining which dimensions to test, such as offer, subject line, creative, channel, or send time.
 - Selecting the options for each dimension, such as email versus SMS, or daily versus weekly frequency.
 
@@ -39,22 +39,5 @@ Building a good agent consists of:
 Here are some examples of agents that you can build with BrazeAI Decisioning Studio™. Your AI decisioning agents will learn from every customer interaction and apply those insights to the next day's actions.
 
 {% multi_lang_include decisioning_studio/sample_agents.md %}
-
-## About API key permissions
-
-During your BrazeAI Decisioning Studio™ integration, you'll create a Braze API key with specific permissions that will define your integration's capabilities. Refer to the following table to learn more about each permission.
-
-{% alert tip %}
-This information can also be found on the [BrazeAI Decisioning Studio™ integration]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/integration) page.
-{% endalert %}
-
-{% multi_lang_include decisioning_studio/api_key_permissions.md %}
-
-## Next steps
-
-Now that you know more about BrazeAI Decisioning Studio™, you're ready for the next steps:
-
-1. [Integrating decisioning studio]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/integration/)
-2. [Building agents]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/building_agents/)
 3. [Setting up Decisioning Studio Pro agents]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_pro/)
 4. [Viewing reports and insights]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/reporting/)
