@@ -12,6 +12,10 @@ search_tag: Partner
 
 > Crowdin은 로컬라이제이션 관리를 위한 클라우드 기반 소프트웨어입니다. Crowdin을 사용하면 Android 및 iOS 앱, 웹사이트, 스토어 스크린샷 및 기타 콘텐츠를 번역할 수 있습니다. 번역은 사내 팀, 번역 에이전시 또는 기계 번역 엔진을 통해 수행할 수 있습니다.
 
+_This integration is maintained by Crowdin._
+
+## 통합 정보
+
 Braze와 Crowdin의 통합을 통해 이메일 템플릿과 콘텐츠 블록을 번역할 수 있습니다. 또한 Braze 계정의 콘텐츠를 Crowdin 프로젝트에 동기화하고 번역을 다시 Braze에 추가할 수 있습니다.
 
 ## 필수 조건
@@ -56,14 +60,12 @@ Braze 자격 증명을 제공하면 두 개의 패널이 표시됩니다. Braze 
 
 Crowdin의 편집기 모드로 설정하고 Braze 계정에서 동기화된 콘텐츠를 번역자에게 문자열 목록 또는 파일 미리 보기로 표시할 수 있습니다.
 
-![몇 가지 기본 번역이 추가된 Crowdin 편집기 이메일 작성기의 이미지.][2]
+![An image of what the Crowdin Editor email composer looks like with some basic translations added.]({% image_buster /assets/img/crowdin/crowdin_editor_email_preview.png %})
 
 ### 3단계: Braze에 번역 추가하기
 
 번역이 완료되면 Crowdin에서 Braze 앱을 열고 왼쪽 패널에서 번역된 파일(각 파일에 대해 모든 대상 언어 또는 특정 언어만 선택할 수 있음)을 선택한 후 **Braze에 동기화를** 클릭합니다.
 
-![사용자가 번역 파일을 선택하고 Braze에 동기화하는 이미지입니다.][3]
+![An image of a user selecting their translation files and syncing them to Braze.]({% image_buster /assets/img/crowdin/sync_translations.png %})
 
-[1]: {% image_buster /assets/img/crowdin/copy_api_key_identifier.png %}
-[2]: {% image_buster /assets/img/crowdin/crowdin_editor_email_preview.png %}
-[3]: {% image_buster /assets/img/crowdin/sync_translations.png %}
+

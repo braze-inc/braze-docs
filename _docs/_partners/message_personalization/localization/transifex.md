@@ -10,13 +10,13 @@ search_tag: Partner
 
 # Transifex
 
-> Transifex enables robust localization across your user base, no matter the language.
+> [Transifex](https://www.transifex.com/) enables robust localization across your user base, no matter the language.
 
 _This integration is maintained by Transifex._
 
 ## About the integration
 
-The Braze and Transifex integration leverages Connected Content to allow you to pull a resource string collection and include relevant translations in your messages instead of lines of language-based conditional formatting. This automates translation and frees up your teams to focus on delivering brilliant customer experiences.
+The Braze and Transifex integration uses Connected Content to allow you to pull a resource string collection and include relevant translations in your messages instead of lines of language-based conditional formatting. This automates translation and frees up your teams to focus on delivering brilliant customer experiences.
 
 {% alert important %}
 As of April 7, 2022, Transifex has deprecated their API versions 2 and 2.5 to make way for version 3. v2 and v2.5 are no longer operational, and relevant requests will fail. <br><br>The following integration instructions reflect the version 3 update. Update your Connected Content calls accordingly.

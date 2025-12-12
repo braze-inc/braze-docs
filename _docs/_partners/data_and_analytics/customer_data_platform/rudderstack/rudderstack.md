@@ -59,7 +59,7 @@ Set up the mappings to the RudderStack SDK for your platform on the Braze GitHub
 - [Android](https://github.com/rudderlabs/rudder-integration-braze-android)
 - [iOS](https://github.com/rudderlabs/rudder-integration-braze-ios/tree/master)
 - [Swift](https://github.com/rudderlabs/rudder-integration-braze-swift)
-- [Web](https://github.com/rudderlabs/rudder-sdk-js/tree/production/src/integrations/Braze)
+- [Web](https://github.com/rudderlabs/rudder-sdk-js/tree/develop/packages/analytics-js-integrations/src/integrations/Braze)
 - [React Native](https://github.com/rudderlabs/rudder-sdk-react-native/tree/develop/libs/rudder-integration-braze-react-native)
 - [Flutter](https://github.com/rudderlabs/rudder-sdk-flutter/tree/develop/packages/integrations/rudder_integration_braze_flutter)
 

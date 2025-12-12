@@ -29,8 +29,4 @@ Für Wrapper-SDKs, die nicht aufgeführt sind, verwenden Sie stattdessen die ent
 {% sdktab unity %}
 {% multi_lang_include developer_guide/unity/analytics/setting_user_attributes.md %}
 {% endsdktab %}
-
-{% sdktab unreal engine %}
-{% multi_lang_include developer_guide/unreal_engine/analytics/setting_user_attributes.md %}
-{% endsdktab %}
 {% endsdktabs %}

@@ -1,0 +1,17 @@
+{%- if include.source == "loom" -%}
+{%- assign embed_base_url = "https://www.loom.com/embed" -%}
+{%- assign embed_params = "" -%}
+{%- elsif include.source == "wistia" -%}
+{%- assign embed_base_url = "https://fast.wistia.net/embed/iframe" -%}
+{%- assign embed_params = "?utm_source=docs" -%}
+{%- else -%}
+{%- assign embed_base_url = "https://www.youtube.com/embed" -%}
+{%- assign embed_params = "" -%}
+{%- endif -%}
+{% if include.type == "static" %}
+<div class="fixed_video">
+<iframe src="{{ embed_base_url }}/{{ include.id }}{{ embed_params }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="media_embed {{ include.align }}"></iframe>
+</div>
+{%- else -%}
+<iframe width="560" height="315" src="{{ embed_base_url }}/{{ include.id }}{{ embed_params }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="media_embed {{ include.align }}"></iframe>
+{% endif %}

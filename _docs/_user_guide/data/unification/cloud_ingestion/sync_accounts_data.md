@@ -12,7 +12,7 @@ description: "Learn how to sync your Braze account data using CDI."
 > Learn how to sync your Braze account data using CDI.
 
 {% alert important %}
-[Account objects](https://braze.com/unlisted_docs/account_opportunity_object/) are currently in beta, which is required to use this feature. Contact your Braze account manager if you’re interested in participating in the beta.
+[Account objects](https://braze.com/unlisted_docs/account_opportunity_object/) are in beta and are required to use this feature. Contact your Braze account manager if you’re interested in participating in the beta.
 {% endalert %}
 
 ## Prerequisites
@@ -58,7 +58,7 @@ To integrate your data source with your data warehouse:
          DELETED BOOLEAN
     );
     ```
-2. Create a role, warehouse, and user, and grant permissions. If you already have credentials from another sync, you can reuse them—just make sure they have access to the accounts table.
+2. Create a role, warehouse, and user, and grant permissions. If you already have credentials from another sync, you can reuse them—make sure they have access to the accounts table.
     ```json
     CREATE ROLE BRAZE_INGESTION_ROLE;
 
@@ -100,7 +100,7 @@ To integrate your data source with your data warehouse:
        deleted boolean
     )
     ```
-2. Create a user and grant permissions. If you already have credentials from another sync, you can reuse them—just make sure they have access to the accounts table.
+2. Create a user and grant permissions. If you already have credentials from another sync, you can reuse them—make sure they have access to the accounts table.
     {% raw %}
     ```json 
     CREATE USER braze_user PASSWORD '{password}';
@@ -216,7 +216,7 @@ To integrate your data source with your data warehouse:
     ```
 
 {:start="2"}
-2. Create a service principal and grant permissions. If you already have credentials from another sync, you can reuse them—just make sure they have access to the accounts table.
+2. Create a service principal and grant permissions. If you already have credentials from another sync, you can reuse them—make sure they have access to the accounts table.
 
 {:start="3"}
 3. If you use network policies, allow Braze IPs to access your Microsoft Fabric instance. For the list of IPs, see [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).

@@ -46,6 +46,9 @@ There are two methods to create and manage your business objects in Braze, catal
 | [Connected sources]({{site.baseurl}}/user_guide/data/cloud_ingestion/connected_sources/) | These allow Braze to directly query your data warehouse. You're likely already syncing your lead, contact, opportunity, and account objects to your data warehouse on a regular basis, so you can point Braze segmentation directly to that warehouse and activate it in a zero-copy environment. |
 {: .reset-td-br-1 .reset-td-br-2 }
 
+{% tabs %}
+{% tab Catalogs %}
+
 ### Option 1: Use catalogs for accounts and opportunities
 
 Catalogs are data tables that are hosted and managed in Braze. While account and opportunity data originates from your sales CRM system of choice, you would be duplicating these in Braze to be used for marketing purposes: account-based segmentation, account-based marketing, lead management, and more.
@@ -56,8 +59,8 @@ For this option, we recommend creating one catalog for your accounts and one for
 
 The tables below include a few examples of fields you can map over from your CRM’s account and opportunity objects.
 
-{% tabs %}
-{% tab Account catalog %}
+{% subtabs %}
+{% subtab Account catalog %}
 
 In this use case, Salesforce is the example CRM system. You can map over any field that is included in your CRM's objects.
 
@@ -95,8 +98,8 @@ In this use case, Salesforce is the example CRM system. You can map over any fie
 
 ![Table of Salesforce accounts with respective information, such as billing address and account owner.]({% image_buster /assets/img/b2b/sf_accounts.png %})
 
-{% endtab %}
-{% tab Opportunity catalog %}
+{% endsubtab %}
+{% subtab Opportunity catalog %}
 
 In this use case, Salesforce is the example CRM system. You can map over any field that is included in your CRM's objects.
 
@@ -134,14 +137,19 @@ In this use case, Salesforce is the example CRM system. You can map over any fie
 
 ![Table of Salesforce opportunities with respective information, such as billing address and account owner.]({% image_buster /assets/img/b2b/sf_opportunities.png %})
 
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
-{% endtabs %}
+{% tab Connected sources %}
 
 ### Option 2: Use connected sources for accounts and opportunities
 
 Connected sources are data tables that are hosted by you in your own data warehouse and queried by Braze [CDI Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/). Unlike catalogs, instead of duplicating your business objects (accounts and opportunities) in Braze, you’d be keeping them in your data warehouse and using your warehouse as the source of truth.
 
 To set up connected sources, refer to [Integrating connected sources]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/connected_sources#integrating-connected-sources).
+
+{% endtab %}
+{% endtabs %}
 
 ## Step 2: Relate your business objects to user profiles
 
@@ -169,7 +177,10 @@ After you have your IDs in sync, you need to relate your Braze user profiles wit
 
 ### Step 2.2: Create a relationship between user profiles and your business objects
 
-#### Option 1: When using catalogs for business objects
+{% tabs %}
+{% tab Catalogs %}
+
+#### Option 1: When using catalogs
 
 Now that your opportunity and account details are accounted for as Braze catalogs, you need to create a relationship between those catalogs and the user profiles you want to send messages to. Currently, this requires two steps:
 
@@ -201,8 +212,14 @@ Now that your opportunity and account details are accounted for as Braze catalog
 }
 ```
 
+{% endtab %}
+{% tab Connected sources %}
+
 #### Option 2: When using connected sources
 
 One of your connected source’s tables should include a `user_id` that matches the `external_user_id` set in Braze for your users. The user profile setup above uses your lead and `contact_ids` as your `external_id`, so you should ensure your lead/contact tables include these IDs.
 
 In addition to ensuring the IDs match, we recommend writing basic account-level data such as `account_id`, `opportunity_id`, and even common firmographic attributes such as `industry` to the user profiles for efficient segmentation and personalization.
+
+{% endtab %}
+{% endtabs %}

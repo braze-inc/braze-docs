@@ -1,0 +1,86 @@
+[
+  {
+    "order": 1,
+    "name": "fenced_code_blocks",
+    "description": "Match fenced code blocks ```...``` or ~~~...~~~",
+    "type": "markdown",
+    "regex": "(?:^|\\n)[ \\t]*([`~]{3,})[^\\n]*\\n[\\s\\S]*?\\n(?:^|\\n)[ \\t]*\\1[ \\t]*(?=\\n|$)"
+  },
+  {
+    "order": 2,
+    "name": "inline_code",
+    "description": "Match inline code enclosed in backticks `...`",
+    "type": "markdown",
+    "regex": "(?<!\\\\)(`+)[^\\r\\n]*?\\1"
+  },
+  {
+    "order": 3,
+    "name": "markdown_attribute_blocks",
+    "description": "Match generic markdown attribute blocks {:...}",
+    "type": "markdown",
+    "regex": "\\{:[^}]+\\}"
+  },
+  {
+    "order": 4,
+    "name": "html_tags",
+    "description": "Match all HTML tags <...>",
+    "type": "html",
+    "regex": "<[^>]+>"
+  },
+  {
+    "order": 5,
+    "name": "hex_colors",
+    "description": "Match hex color codes like #FFFFFF",
+    "type": "markdown",
+    "regex": "#(?:[A-Fa-f0-9]{6})"
+  },
+  {
+    "order": 6,
+    "name": "dotted_identifiers",
+    "description": "Match dotted identifiers like Braze.iOS.BrazeLocation",
+    "type": "markdown",
+    "regex": "\\b[A-Za-z]++(?:\\.[A-Za-z0-9]++)++\\b"
+  },
+  {
+    "order": 7,
+    "name": "markdown_image_open",
+    "description": "Match only the opening of a Markdown image syntax: `![`",
+    "type": "markdown",
+    "regex": "!\\["
+  },
+  {
+    "order": 8,
+    "name": "markdown_link_target",
+    "description": "Match the target URL portion of markdown links ](...)",
+    "type": "markdown",
+    "regex": "\\]\\([^)]*\\)"
+  },
+  {
+    "order": 9,
+    "name": "curly_comment_blocks",
+    "description": "Match curly comment markers of the form {#...}",
+    "type": "markdown",
+    "regex": "\\{#[^}]*\\}"
+  },
+  {
+    "order": 10,
+    "name": "liquid_tags",
+    "description": "Match Liquid tags {%...%} including optional trim hyphens",
+    "type": "liquid",
+    "regex": "\\{%-?\\s*[\\w-]+(?:%(?!})|[^%])*?-?%}"
+  },
+  {
+    "order": 11,
+    "name": "liquid_outputs",
+    "description": "Match Liquid outputs {{...}} including optional trim hyphens",
+    "type": "liquid",
+    "regex": "\\{\\{-?\\s*[^}]*?-?}}"
+  },
+  {
+    "order": 12,
+    "name": "underscore_tokens",
+    "description": "Match any contiguous token that contains at least one underscore and no spaces",
+    "type": "text",
+    "regex": "(?<!\\S)\\S*_\\S*(?!\\S)"
+  }
+]

@@ -31,22 +31,34 @@ tool: Canvas
 
 1. テンプレート名の横にある**編集**を選択します。
 
-![]({% image_buster /assets/img/canvas_templates/lapsed_user_old_name_description.png %}) キャンバスの現在のタイトルと説明。{: style="max-width:45%;"}
+<<<<<<< HEAD
+![キャンバスの現在のタイトルと説明。]({% image_buster /assets/img/canvas_templates/lapsed_user_old_name_description.png %}){: style="max-width:45%;"}
+=======
+\![キャンバスの現在のタイトルと説明。]({% image_buster /assets/img/canvas_templates/lapsed_user_old_name_description.png %}){: style="max-width:45%;"}
+>>>>>>> main
 
 {:start="2"}
 2\.キャンバス名を更新し、このキャンバスはプロモーションを使用してユーザーにメッセージを送信し、セッションを開始するユーザーに対してオーディエンス同期を実行することを示すようにします。
 3\.このキャンバスにパークとプロモーションが含まれていることを説明する説明を更新します。
 4. **Lapsing/Retention** というタグを追加して、キャンバスのホームページでこのキャンバスをフィルターできるようにします。
 
-![キャンバス名が「Lapsed User - Visit App」で簡単なキャンバスの説明がある [キャンバスの詳細を設定] ステップ]({% image_buster /assets/img/canvas_templates/lapsing_user_1.png %})
+<<<<<<< HEAD
+!["Canvas Details&quot の設定;Canvas 名が&quot のステップ;Lapsed User - App&quot にアクセス;Canvas の簡単な説明]({% image_buster /assets/img/canvas_templates/lapsing_user_1.png %})
+=======
+\!["Canvas Details&quot の設定;Canvas 名が&quot のステップ;Lapsed User - App&quot にアクセス;Canvas の簡単な説明]({% image_buster /assets/img/canvas_templates/lapsing_user_1.png %})
+>>>>>>> main
 
-### ステップ2:コンバージョンイベントを割り当てる
+### ステップ 2: コンバージョンイベントを割り当てる
 
 [**1次コンバージョンイベント - A**] を更新してアプリ (MovieCanon) のユーザーをターゲットに設定し、[**1次コンバージョンイベント - B**] はデフォルトの購入のままにしておきます。
 
-![特定のアプリでセッションを開始するユーザーの1次コンバージョンイベントが示されている [コンバージョンイベントを割り当てる] セクション。]({% image_buster /assets/img/canvas_templates/lapsing_user_2.png %})
+<<<<<<< HEAD
+!["コンバージョン Events" を割り当てます。指定したアプリでセッションを開始するユーザーの1次コンバージョンが偶数の部分です。]({% image_buster /assets/img/canvas_templates/lapsing_user_2.png %})
+=======
+\!["コンバージョン Events" を割り当てます。指定したアプリでセッションを開始するユーザーの1次コンバージョンが偶数の部分です。]({% image_buster /assets/img/canvas_templates/lapsing_user_2.png %})
+>>>>>>> main
 
-### ステップ 3:エントリスケジュールを調整する
+### ステップ 3: エントリスケジュールを調整する
 
 エントリスケジュールを ［**スケジュール済み**] のままにし、デフォルトの時間ベースのオプションのままにします。これにより、キャンバスは離脱ユーザーを毎日チェックします。
 
@@ -55,13 +67,21 @@ tool: Canvas
 1. 開始日時を選択する。
 2. [**特定の日**] の終了パラメーターと、2か月後の日付を選択します。このキャンバスの後に開始する別の離脱ユーザーキャンバスがあるとします。
 
-![指定した時刻にユーザーをエントリさせるスケジュールされたキャンバスの [エントリスケジュール] ステップ。]({% image_buster /assets/img/canvas_templates/lapsing_user_3.png %})
+<<<<<<< HEAD
+!["入力スケジュール"指定した時刻にユーザーに入るスケジュールされたキャンバスのステップ。]({% image_buster /assets/img/canvas_templates/lapsing_user_3.png %})
+=======
+\!["入力スケジュール"指定した時刻にユーザーに入るスケジュールされたキャンバスのステップ。]({% image_buster /assets/img/canvas_templates/lapsing_user_3.png %})
+>>>>>>> main
 
-### ステップ4:ターゲットオーディエンスを選択する
+### ステップ 4: ターゲットオーディエンスを選択する
 
 エントリーオーディエンスのデフォルト設定は、30 日以上アプリを使用していないユーザーに設定されています。また、4週間後にユーザーがキャンバスに再びエントリできるように、デフォルトのエントリコントロールを保持します。これは、ユーザーが30 日以上連続してアプリにアクセスしないたびに、キャンバスに入力されることを意味します。
 
-![アプリを最後に使用した時点が30日以内のユーザーをターゲット設定する [ターゲットオーディエンス] ステップ。]({% image_buster /assets/img/canvas_templates/lapsing_user_4.png %})
+<<<<<<< HEAD
+!["Target Audience" 30日間でアプリを最後に使用したユーザーをターゲットとするステップ。]({% image_buster /assets/img/canvas_templates/lapsing_user_4.png %})
+=======
+\!["Target Audience" 30日間でアプリを最後に使用したユーザーをターゲットとするステップ。]({% image_buster /assets/img/canvas_templates/lapsing_user_4.png %})
+>>>>>>> main
 
 ### ステップ 5: 送信設定を選択する
 
@@ -73,20 +93,32 @@ tool: Canvas
 
 ここで変更する唯一の設定は、静かな時間帯にメッセージがトリガーされたときに行うことです。メッセージをキャンセルする代わりに、**次回利用可能時間に送信**を選択して、ユーザーがプロモーションを見逃さないようにします。
 
-![開始時刻が午前12時で終了時刻が午前8時の[サイレント時間] セクション。]({% image_buster /assets/img/canvas_templates/lapsing_user_5.png %})
+<<<<<<< HEAD
+!["Quiet Hours"開始時刻が午前12時で終了時刻が午前8時のセクション。]({% image_buster /assets/img/canvas_templates/lapsing_user_5.png %})
+=======
+\!["Quiet Hours"開始時刻が午前12時で終了時刻が午前8時のセクション。]({% image_buster /assets/img/canvas_templates/lapsing_user_5.png %})
+>>>>>>> main
 
-### ステップ 6:キャンバスをカスタマイズする
+### ステップ6: キャンバスをカスタマイズする
 
 ここでは、テンプレート化されたステップをカスタマイズして、Canvas を構築します。
 
 1. 30日間以上アプリを訪問していないすべてのユーザーに送信する最初のメールをカスタマイズします。このユースケースでは、本日アプリにアクセスしたときに新しい特典のロックを解除するようにユーザーに伝えるメールをカスタマイズします。 
 
-![ユーザーが今日訪問すると、新しい特典のロックが解除されることを伝えるメールのキャンバスメッセージステップ。]({% image_buster /assets/img/canvas_templates/lapsing_user_6.png %})
+<<<<<<< HEAD
+![Canvas Message ステップ (キャンバスメッセージ) は、本日訪問したときに新しい特典のロックを解除するようにユーザーに指示するメールのためのものです。]({% image_buster /assets/img/canvas_templates/lapsing_user_6.png %})
+=======
+\![Canvas Message ステップ (キャンバスメッセージ) は、本日訪問したときに新しい特典のロックを解除するようにユーザーに指示するメールのためのものです。]({% image_buster /assets/img/canvas_templates/lapsing_user_6.png %})
+>>>>>>> main
 
 {: start="2"}
 2\.**Started Session**パスのアプリを選択して、"Start Session?"というアクションパスコンポーネントをカスタマイズします。 
 
-![特定のアプリで開始されたセッションのアクションパス。]({% image_buster /assets/img/canvas_templates/lapsing_user_7.png %})
+<<<<<<< HEAD
+![指定したアプリで起動されるセッションsの動作パス]]({% image_buster /assets/img/canvas_templates/lapsing_user_7.png %})
+=======
+\![指定したアプリで起動されるセッションsの動作パス]]({% image_buster /assets/img/canvas_templates/lapsing_user_7.png %})
+>>>>>>> main
 
 {: start="3"}
 3\.「Sessions?」と呼ばれるDecision Splitステップのデフォルトを維持します。このステップでは、「>1 Session」グループを、最後のカレンダー日にアプリを複数回使用したユーザーとして定義します。
@@ -95,7 +127,11 @@ tool: Canvas
 6. [Experiment Path]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step#experiment-paths)コンポーネントのデフォルトを"A/B Test"のままにします。これにより、2つのプロモーションのうちの1つ(次のステップでカスタマイズします)が、セッション数が2つ未満のユーザーにランダムに送信されます。
 7. 実験パスの一部としてユーザーに送信する2つのプロモーションをカスタマイズします。ユースケースでは、1つは3ヶ月のサブスクリプションで20%のプロモーションを行い、もう1つは1ヶ月のサブスクリプションで10%のプロモーションを行います。
 
-![ユーザーが行ったセッションの数に基づく分岐パスがあるキャンバスステップ。]({% image_buster /assets/img/canvas_templates/lapsing_user_8.png %}){: style="max-width:70%;"}
+<<<<<<< HEAD
+![Canvas ステップ s は、1 ユーザーのセッション数に基づいてパスs を分岐します。]({% image_buster /assets/img/canvas_templates/lapsing_user_8.png %}){: style="max-width:70%;"}
+=======
+\![Canvas ステップ s は、1 ユーザーのセッション数に基づいてパスs を分岐します。]({% image_buster /assets/img/canvas_templates/lapsing_user_8.png %}){: style="max-width:70%;"}
+>>>>>>> main
 
 ### ステップ 7:キャンバスをテストして起動する
 

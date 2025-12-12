@@ -7,16 +7,354 @@ hide_toc: true
 ---
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
 
+
 <style type="text/css">
+  .legal-disclaimer{
+     font-size: 14px;
+    word-wrap: normal;
+    color: #101828;
+  }
+
+.su-tooltip {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 8px 10px;
+  max-width: 280px;
+  font-size: 13px;
+  line-height: 1.4;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.su-tooltip strong {
+  font-size: 14px;
+  display: block;
+  margin-bottom: 4px;
+}
+
+lable.lable-gpt {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: black;
+    vertical-align: middle;
+    margin-top: 15px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container-fluid {
+        width: 910px !important;
+    }
+    .main-border {
+        width: 950px !important;
+    }
+    .svg-hr svg {
+        width: 945px !important;
+    }
+    input#subject {
+        width: 910px !important;
+    }
+    textarea#description {
+        width: 910px !important;
+    }
+    .svg1 svg {
+    width: 910px !important;;
+}
+ .svg2 svg {
+    width: 910px !important;;
+}
+
+#basic_page {
+    min-height: calc(68vh - 186px) !important;
+  }
+}
+
+  @media (max-width: 600px) {
+    .btn-right {
+    display: flex;
+    flex-direction: column;
+}
+
+
+    .container-fluid {
+        width: 354px;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+        min-height: calc(100vh - 700px) !important;
+    }
+    .svg-hr svg {
+    width: 417px !important;
+    }
+    .svg1 svg {
+      width: 300px !important;;
+    } 
+    .svg2 svg {
+      width: 300px !important;;
+    }
+
+    .gpt-res-buttons {
+        flex-direction: column;
+    }
+
+    .steps {
+        display: none !important;
+    }
+
+    .main-border {
+        border-radius: 14px;
+        border: 2px solid #D0D5DD;
+        background: #FFF;
+        width: 407px !important;
+        box-shadow: 0 4px 27px 0 rgba(0, 0, 0, 0.02);
+    }
+
+    input#subject {
+        width: 367px !important;
+    }
+
+    textarea#description {
+        width: 367px !important;
+    }
+
+    .step:before {
+        padding-left: 13px;
+    }
+
+    .step {
+        margin-bottom: 2px;
+        text-align: left;
+        display: flex;
+        align-items: center;
+    }
+
+    .submit-btn {
+        width: 262px;
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+}
+
+
+ .svg-dot path {
+  stroke: gray; /* default */
+}
+
+.svg-dot.active path {
+  stroke: #5711E5; /* when active */
+}
+
+  body{
+     font-family: "Aribau Grotesk Regular", "Aribau Grotesk", "Aribau Grotesk Regular", Arial, Helvetica, sans-serif;
+  }
+div#ticket_thankyou {
+    margin-top: 5rem;
+    margin-bottom: 155px;
+    display: flex;
+    justify-content: center;
+}
+
+  button#ticket_submit_button {
+    padding: 12px !important;
+    background: #4411D6 !important;
+    border-radius: var(--inner, 8px) !important;
+    border: 2px solid #4411D6 !important;
+}
+   button#ticket_submit_button {
+    border-radius: var(--inner, 8px);
+    background: #4411D6;
+    color:white;
+}
+  .flex-display{
+    display:none;
+  }
+  .gpt-res-buttons {
+  display: flex;
+  justify-content: space-between; /* Back on left, rest on right */
+  align-items: center;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.btn-right {
+  display: flex;
+  gap: 10px; /* space between the two right buttons */
+}
+  .gpt-text1{
+    display:none;
+  }
+
+
+  button#backToStep1 {
+    border-radius: var(--inner, 8px);
+    background-color: #4411D6 !important;
+    height: 40px;
+    padding-top: -12px;
+    padding: 6px var(--lg, 16px);
+    color:white;
+}
+
+button.submit-btn {
+    border-radius: var(--inner, 8px);
+    border: 1px solid #0103C5;
+    background: var(--neutral-background-default, #FFF);
+    color: #4411D6;
+    text-align: center;
+    leading-trim: both;
+    text-edge: cap;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+}
+
+.for-line {
+    margin-top: -29px;
+    line-height: 21px;
+    margin-left: -11px;
+    height: 300px;
+}
+
+   
+.svg2 svg path {
+  stroke-dasharray: 1250;   /* total path length */
+  stroke-dashoffset: 1250;  /* initially hidden */
+  animation: progressAnim 3s linear forwards;
+}
+
+@keyframes progressAnim {
+  from {
+    stroke-dashoffset: 1250;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+  .svg1{
+     fill: linear-gradient(90deg, rgba(201, 196, 255, 0.40) 21.38%, rgba(128, 30, 215, 0.40) 42.75%, rgba(255, 165, 36, 0.40) 64.13%);
+  }
+  .svg2{
+     fill: linear-gradient(90deg, rgba(201, 196, 255, 0.40) 50.12%, rgba(128, 30, 215, 0.40) 71.5%, rgba(255, 165, 36, 0.40) 92.87%);
+  }
+  .steps svg {
+    margin-top: 14px;
+   
+}
+  div#suggestionsBox h1 {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  div#suggestionsBox p {
+      font-size: 14px;
+  }
+
+  div#suggestionsBox h2, div#suggestionsBox h3 {
+      font-size: 18px;
+      font-weight: bold;
+  }
+
+  div#suggestionsBox li {
+      font-size: 14px;
+  }
+  
+   .gpt-text {
+    margin-top: 2px;
+   }
+
+   .gpt-heading{
+      color: #5711E5;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 20.8px; /* 115.556% */
+   }
+
+  .gpt-responce {
+    display: inline-flex;
+    gap:9px;
+    color: #212123;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    padding: 9px;
+  }
+
+  textarea#description {
+    border-radius: var(--inner, 8px);
+    border: 1px solid #7D7D83;
+    background: var(--neutral-background-default, #FFF);
+    display: flex;
+    width: 1250px;
+    height: 154px;
+    padding-left: var(--md, 12px);
+    justify-content: space-between;
+    align-items: center;
+   
+}
+  input#subject {
+    border-radius: var(--inner, 8px);
+    border: 1px solid #7D7D83;
+    background: var(--neutral-background-default, #FFF);
+    display: flex;
+    width: 1250px;
+    height: var(--Field-height-Regular, 40px);
+    padding-left: var(--md, 12px);
+    justify-content: space-between;
+    align-items: center;
+}
+
+  button#toStep2 {
+    border-radius: var(--inner, 8px);
+    border: 1px solid #0103C5;
+    background: var(--neutral-background-default, #FFF);
+    color: #4411D6;
+    text-align: center;
+    leading-trim: both;
+    text-edge: cap;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px; /* 142.857% */
+}
+
+  .main-form{
+    margin-bottom: 29px;
+  }
+
+  .main-border {
+    border-radius: 14px;
+    border: 2px solid #D0D5DD;
+    background: #FFF;
+    width:1314px;
+    box-shadow: 0 4px 27px 0 rgba(0, 0, 0, 0.02);
+}
+
+  div#articles {
+    display: none !important;
+}
+
+div#ticket_resources {
+    display: none;
+}
 
 #main-container {
   margin-top: 20px;
   margin-bottom: 50px;
-  min-height: 800px;
+  min-height: 600px;
+  margin-left:-4rem;
 }
 #main-container label {
   font-weight: bold;
-  font-size: 18px;
+  
+  color: #101828;
+leading-trim: both;
+text-edge: cap;
+ font-family: "Aribau Grotesk Regular", "Aribau Grotesk", "Aribau Grotesk Regular", Arial, Helvetica, sans-serif;
+font-size: 13px;
+font-style: normal;
+font-weight: 700;
+line-height: 18px; /* 138.462% */
 }
 
 .container {
@@ -269,7 +607,7 @@ a:hover {
   z-index: -2;
   height: 100%;
   width: 100%;
-  background-color: #212123;
+  background-color: #4411D6 !important;
 }
 
 #ticket_form button[type=submit]:focus, #ticket_form button[type=submit]:hover {
@@ -317,10 +655,657 @@ a:hover {
 #support-search-div .aa-Form button {
   padding-top: 10px;
 }
+.hidden {
+              display: none !important;
+            }
+        h1 {
+            color: #2c3e50;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Divider Line */
+        hr {
+            border: 0;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #3498db, transparent);
+            margin: 30px 0;
+        }
+
+        /* Step Indicators */
+        .steps {
+            display: flex;
+            justify-content: space-between;
+            margin: 30px 41px !important;
+            counter-reset: step;
+            margin-bottom: -11px !important;
+        }
+
+        .step {
+            position: relative;
+            flex: 1;
+            text-align: center;
+            color: #7f8c8d;
+        }
+
+        .step:before {
+            counter-increment: step;
+            content: counter(step);
+            display: inline-block;
+            width: 37px;
+            height: 37px;
+            margin: 0  10px;
+            line-height: 35px;
+            margin-bottom: 24px;
+            background-color: #bdc3c7;
+            color: white;
+            border-radius: 50%;
+            font-weight: bold;
+        }
+
+        .step.active {
+            color: #2c3e50;
+            font-weight: bold;
+        }
+
+        .step.active:before {
+            background-color: #5711E5;
+        }
+
+        /* Form Styles */
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .form-group input[type="text"],
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input[type="text"]:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: #3498db;
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        /* Required Field Indicator */
+        .required::before  {
+            content: " *";
+            color: #e74c3c;
+        }
+
+        /* Button Styles */
+        .submit-btn {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-right: 10px;
+        }
+
+       
+
+        /* Support Link */
+        .support-link {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .support-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Form Container */
+        .form-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: none !important;
+        }
+
+        /* Attachment Styles */
+        .attachment-container {
+            margin-top: 20px;
+        }
+
+        .attachment-label {
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #2c3e50;
+        }
+
+        /* Button Container */
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 600px) {
+            .steps {
+                flex-direction: column;
+            }
+            
+            .step {
+                margin-bottom: 20px;
+                text-align: left;
+                display: flex;
+                align-items: center;
+            }
+            
+            .step:before {
+                margin: 0 15px 0 0;
+            }
+            
+            .button-container {
+                flex-direction: column;
+            }
+            
+            .submit-btn {
+                width: 100%;
+                margin-bottom: 10px;
+                margin-right: 0;
+            }
+        }
+
+        /* Popover Styles */
+        .popover {
+            max-width: 400px;
+        }
+        
+        /* Header Styles */
+        h1 {
+            color: #2c3e50;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Divider Line */
+        hr {
+            border: 0;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #3498db, transparent);
+            margin: 30px 0;
+        }
+
+        /* Step Indicators */
+        .steps {
+            display: flex;
+            justify-content: space-between;
+            margin: 30px 0;
+            counter-reset: step;
+        }
+
+        .step {
+            position: relative;
+            flex: 1;
+            text-align: center;
+            color: #7f8c8d;
+        }
+
+
+        .step.active {
+            color: #2c3e50;
+            font-weight: bold;
+        }
+
+        .step.active:before {
+            background-color:#5711E5 ;
+        }
+
+        /* Form Styles */
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .form-group input[type="text"],
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input[type="text"]:focus,
+        .form-group textarea:focus {
+            border-color: #3498db;
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        /* Required Field Indicator */
+        .required::before {
+            content: " *";
+            color: #e74c3c;
+        }
+
+        /* Button Styles */
+        .submit-btn {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        /* Support Link */
+        .support-link {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .support-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Form Container */
+        .form-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Response Styles */
+        #suggestionsBox {
+            padding: 15px;
+            border-radius: 4px;
+        }
+
+        #articles {
+            margin-top: 20px;
+            display: none;
+        }
+
+        .article {
+            margin-bottom: 10px;
+        }
+
+        .article a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .article a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 600px) {
+            .steps {
+                flex-direction: column;
+            }
+            
+            .step {
+                margin-bottom: 20px;
+                text-align: left;
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        #suggestionsBox {
+            padding: 15px;
+            border-radius: 4px;
+            line-height: 26px;
+        }
+        
+        #suggestionsBox h1, #suggestionsBox h2, #suggestionsBox h3 {
+            color: #2c3e50;
+            margin-top: 0;
+        }
+        
+        #suggestionsBox ul { padding-left: 20px; }        
+        #suggestionsBox li { margin-bottom: 8px; }
+        span.highlight { color: black !important; }
+        
+        .su_citation {
+          border: none;
+          color: #081A59;
+          font-family: "Aribau Grotesk TRIAL";
+          font-size: 13px;
+          line-height: 160%;
+          border-radius: 2px;
+          background: rgba(87, 17, 229, 0.12);
+          margin-right: 11px;
+          cursor: pointer;
+          margin-left: 6px;
+      }
+
+
+      .gptGradientContainer{
+          background: linear-gradient(342.01deg, rgba(212, 239, 243, 0.2) 17.09%, rgba(253, 163, 161, 0.3) 113.99%, #FBA9F8 280.75%);
+          margin-bottom:24px;
+          border-radius:8px;
+          padding:12px;
+      }
+
 </style>
 
+<div>
+    <div class="container-fluid" id="main-container">
+      <div class="row main-form">
+          <div class="col" >
+              <h1 class="h1">Need Help? </h1>
+              <div class="gradient-line"></div>
+          </div>
+   </div>
+        <div class="main-border">
+        <div class="steps">
+            <div class="step active">Basic Details</div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="282" height="2" viewBox="0 0 282 2" fill="none">
+  <path d="M0 1L282 1.00002" stroke="#5711E5" stroke-dasharray="3 3"/>
+</svg>
+            <div class="step">Suggested Content</div>
+            <div class="svg-dot">
+            <svg xmlns="http://www.w3.org/2000/svg" width="282" height="2" viewBox="0 0 282 2" >
+  <path d="M0 1L282 1.00002"  stroke-dasharray="3 3"/>
+</svg>
+</div>
+            <div class="step">Submit the Case</div>
+        </div>
+
+        <div class='svg-hr'>
+        <svg xmlns="http://www.w3.org/2000/svg" width="1310" height="2" viewBox="0 0 1310 2" fill="none">
+  <path d="M0 1H1310" stroke="#D0D5DD" stroke-width="2"/>
+</svg>
+        </div>
+
+<div class="form-container">
+        <form id="supportForm">
+            <!-- Step 1 -->
+            <div id="step1">
+                <div class="form-group">
+                    <label for="subject" class="required">Subject</label>
+                    <input type="text" id="subject" name="subject"  required>
+                </div>
+
+                <div class="form-group">
+                    <label for="description" class="required">Description</label>
+                    <textarea id="description" name="description" required></textarea>
+                </div>
+
+                <button type="button" class="submit-btn" id="toStep2" >Continue to Suggested Content</button>
+            </div>
+
+            <!-- Step 2 -->
+            <div id="step2" style="display:none;">
+                <h2 class='gpt-heading'></h2>
+                 <h2 class='gpt-heading'></h2>
+                <div class="gptGradientContainer">
+                 <div class='gpt-responce'>
+                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+  <path d="M16.1 14.5812L15.305 16.3662L13.544 17.1722C13.456 17.2137 13.3816 17.2793 13.3295 17.3615C13.2774 17.4436 13.2498 17.5389 13.2498 17.6362C13.2498 17.7335 13.2774 17.8287 13.3295 17.9109C13.3816 17.9931 13.456 18.0587 13.544 18.1002L15.305 18.9062L16.1 20.7062C16.1389 20.7952 16.203 20.8709 16.2844 20.9241C16.3657 20.9773 16.4608 21.0056 16.558 21.0056C16.6551 21.0056 16.7502 20.9773 16.8315 20.9241C16.9129 20.8709 16.977 20.7952 17.016 20.7062L17.811 18.9212L19.582 18.1152C19.6699 18.0737 19.7443 18.0081 19.7964 17.9259C19.8485 17.8437 19.8762 17.7485 19.8762 17.6512C19.8762 17.5539 19.8485 17.4586 19.7964 17.3765C19.7443 17.2943 19.6699 17.2287 19.582 17.1872L17.821 16.3812L17.026 14.5812C16.9857 14.4921 16.9206 14.4165 16.8385 14.3635C16.7564 14.3104 16.6607 14.2822 16.563 14.2822C16.4652 14.2822 16.3695 14.3104 16.2874 14.3635C16.2053 14.4165 16.1402 14.4921 16.1 14.5812Z" fill="#91186E"/>
+  <path d="M9.14095 7.94993L7.54095 4.37893C7.46284 4.20119 7.33468 4.05003 7.17211 3.9439C7.00954 3.83776 6.81959 3.78125 6.62545 3.78125C6.4313 3.78125 6.24135 3.83776 6.07878 3.9439C5.91621 4.05003 5.78806 4.20119 5.70995 4.37893L4.10995 7.94993L0.584947 9.57193C0.408701 9.6548 0.259678 9.78611 0.155296 9.95053C0.0509136 10.1149 -0.0045166 10.3057 -0.0045166 10.5004C-0.0045166 10.6952 0.0509136 10.8859 0.155296 11.0503C0.259678 11.2148 0.408701 11.3461 0.584947 11.4289L4.10695 13.0509L5.70695 16.6219C5.78506 16.7997 5.91321 16.9508 6.07578 17.057C6.23835 17.1631 6.4283 17.2196 6.62245 17.2196C6.81659 17.2196 7.00654 17.1631 7.16911 17.057C7.33168 16.9508 7.45984 16.7997 7.53795 16.6219L9.13795 13.0509L12.6599 11.4289C12.8362 11.3461 12.9852 11.2148 13.0896 11.0503C13.194 10.8859 13.2494 10.6952 13.2494 10.5004C13.2494 10.3057 13.194 10.1149 13.0896 9.95053C12.9852 9.78611 12.8362 9.6548 12.6599 9.57193L9.14095 7.94993Z" fill="#801ED7"/>
+  <path d="M17.0259 6.41957L17.8209 4.63457L19.5819 3.82857C19.6699 3.78709 19.7443 3.72143 19.7964 3.63928C19.8485 3.55712 19.8761 3.46185 19.8761 3.36457C19.8761 3.2673 19.8485 3.17203 19.7964 3.08987C19.7443 3.00772 19.6699 2.94206 19.5819 2.90057L17.8209 2.09257L17.0259 0.292575C16.9869 0.203559 16.9229 0.127833 16.8415 0.074658C16.7602 0.0214831 16.6651 -0.00683594 16.5679 -0.00683594C16.4708 -0.00683594 16.3757 0.0214831 16.2943 0.074658C16.213 0.127833 16.1489 0.203559 16.1099 0.292575L15.3149 2.07757L13.5449 2.89257C13.4569 2.93406 13.3826 2.99972 13.3305 3.08187C13.2784 3.16403 13.2507 3.2593 13.2507 3.35658C13.2507 3.45385 13.2784 3.54912 13.3305 3.63128C13.3826 3.71343 13.4569 3.77909 13.5449 3.82057L15.3059 4.62657L16.1009 6.42657C16.142 6.51509 16.2076 6.58992 16.29 6.64212C16.3724 6.69433 16.4681 6.7217 16.5657 6.72096C16.6632 6.72022 16.7585 6.69141 16.8401 6.63796C16.9218 6.58452 16.9863 6.5087 17.0259 6.41957Z" fill="#E9371F"/>
+</svg>
+<div class='gpt-text'>Generating... </div>
+<div class='gpt-text1'>Generated answer for you </div>
+                 </div>
+
+                <div id="suggestionsBox">
+                <div class= "for-line">
+                
+                <div class="svg1"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="9" viewBox="0 0 1250 9" fill="none">
+  <path d="M1246.26 0H3.74224C1.67546 0 0 2.01472 0 4.5C0 6.98528 1.67546 9 3.74224 9H1246.26C1248.32 9 1250 6.98528 1250 4.5C1250 2.01472 1248.32 0 1246.26 0Z" fill="url(#paint0_linear_45139_47694)" fill-opacity="0.4"/>
+  <defs>
+    <linearGradient id="paint0_linear_45139_47694" x1="0" y1="4.5" x2="890.654" y2="4.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0.3" stop-color="#C9C4FF"/>
+      <stop offset="0.6" stop-color="#801ED7"/>
+      <stop offset="0.9" stop-color="#FFA524"/>
+    </linearGradient>
+  </defs>
+</svg></div>
+                <div class="svg2"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="9" viewBox="0 0 1250 9" fill="none">
+  <path d="M3.74231 0H1246.26C1248.32 0 1250 2.01472 1250 4.5C1250 6.98528 1248.32 9 1246.26 9H3.74231C1.67554 9 0 6.98528 0 4.5C0 2.01472 1.67554 0 3.74231 0Z" fill="url(#paint0_linear_45139_47693)" fill-opacity="0.4"/>
+  <defs>
+    <linearGradient id="paint0_linear_45139_47693" x1="890.652" y1="4.5" x2="-0.00114137" y2="4.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0.3" stop-color="#C9C4FF"/>
+      <stop offset="0.6" stop-color="#801ED7"/>
+      <stop offset="0.9" stop-color="#FFA524"/>
+    </linearGradient>
+  </defs>
+</svg></div>
+</div>
+                </div>
+             
+
+
+
+
+                <div id="articles">
+                    <h3>Related Articles:</h3>
+                    <div id="articles-list"></div>
+                </div>
+                </div>
+
+                <div class="flex-display">
+                <div class= "legal-disclaimer">
+                  <em>Disclaimer: This reply was generated by AI and is for information only. Please confirm the linked sources in the Braze Documentation.</em>
+                </div>
+                <div class="gpt-res-buttons">
+                <button type="button" class="submit-btn" id="backToStep1" style="background-color:grey;">Back</button>
+                <div class="btn-right">
+
+                <lable class='lable-gpt'>Did this resolve your issue?</lable>
+                <button type="button" class="submit-btn" onclick="window.location.href='/docs/'" >Yes, close this Window </button>
+                <button type="button" class="submit-btn" id="toStep3">No, continue with ticket creation</button>
+                </div>
+                </div>
+                </div>
+
+            </div>
+
+
+        </form>
+    </div>
+
+<div class="form-container1"  style="display:none;">
+ <div id="step3" >
+<div id="firefox_warning" style="display:none;">For Firefox users, allowlist this site or check your <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Privacy/Tracking_Protection?utm_source=mozilla&utm_medium=firefox-console-errors&utm_campaign=default" target="_blank">Tracking Protection Settings</a>, or your ticket might not be submitted.</div>
+
+<div id="ticket_mainform" class="container">
+    <form  id="ticket_form">
+      <div id="step3">
+        <h2>Not finding what you need? Contact our Support team.</h2>
+        <!-- Row 1 -->
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="ticket_topic" class="required">What can we help you with? </label>
+              <select id="ticket_topic" name="00N0V000009G0MG" class="form-control"></select>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="ticket_category" class="required">Category </label>
+              <select id="ticket_category" name="00N0V000009G0MB" class="form-control"></select>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Row 2 -->
+        <div class="row">
+          <div class="col-md-6" id="subcategory_div" style="display:none;">
+            <div class="form-group">
+              <label for="ticket_subcategory" class="required">My question is about... </label>
+              <select id="ticket_subcategory" name="00N0V000009G0ML" class="form-control"></select>
+            </div>
+          </div>
+          <!-- <div class="col-md-6">
+            <div class="form-group">
+              <label for="ticket_type">Platform *</label>
+              <select id="ticket_type" name="00N0V000009G0MQ" class="form-control"></select>
+            </div>
+          </div> -->
+        </div>
+  
+        <!-- <h2>Not finding what you need? Contact our Support team.</h2> -->
+  
+        <!-- Row 3 -->
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="ticket_name" class="required">Name</label>
+              <input type="text" id="ticket_name" name="Name" placeholder="Enter your name" class="form-control" required>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="ticket_email" class="required">Email address </label>
+              <input type="email" id="ticket_email" name="Email" placeholder="Enter email" class="form-control" required>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Row 4 -->
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="ticket_ccemail">CC Email address</label>
+              <input type="email" id="ticket_ccemail" name="CCEmail" placeholder="Enter CC email" class="form-control">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="ticket_priority" class="required">Issue severity </label>
+              <select id="ticket_priority" name="priority" class="form-control">
+                <option value="Critical">Critical: System is down or severe data integrity issues</option>
+                <option value="High">High: Severe loss of functionality or a campaign will not send</option>
+                <option value="Medium">Medium: Degraded performance or issue causing significant business impact</option>
+                <option value="Low" selected>Low: Question about Braze functionality or analytics</option>
+              </select>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Subject (Full width) -->
+        <div class="form-group">
+          <label for="ticket_subject" class="required">Subject </label>
+          <input type="text" id="ticket_subject" name="Subject" placeholder="What's your question about?" class="form-control" required>
+        </div>
+  
+        <!-- Question (Full width) -->
+        <div class="form-group">
+          <label for="ticket_issue" class="required">Question </label>
+          <textarea id="ticket_issue" name="ticket_issue" rows="7" class="form-control" placeholder="Include details such as platform, SDK version, REST API endpoints, steps to reproduce..."></textarea>
+        </div>
+  
+        <!-- Info text -->
+        <div class="form-group small-text">
+          <p>In order to provide you with technical support or address service or technical problems, be aware that Braze may need to access your dashboard and data. Braze technical support operates during standard business hours across multiple time zones to serve our global customer base. For specific support hours in your region or for issues logged outside of business hours, please refer to the support handbook. Response times may vary based on when your request is submitted, your support tier, and the severity of the issue.</p>
+        </div>
+  
+        <!-- Submit button -->
+        <div class="form-group text-right">
+          <button type="submit" name="Submit" value="Submit" class="btn btn-black" id="ticket_submit_button" role="button"> SUBMIT </button>
+        </div>
+  
+      </div>
+    </form>
+  </div>
+       <div id="ticket_thankyou" style="display:none;"><div class="row"><div class="col" id="ticket_thankyou_msg"></div></div></div>
+</div>
+</div>
+</div>
+
+
+</div>
+ 
+
+
+</div>
+<script type="text/javascript" src="https://d3afgxkm1vz2tp.cloudfront.net/217433e2c4c2797776e373f19d94feff/search-clients/63590d8d-65fd-11f0-ada3-0242ac120007/an.js"></script>
 
 <script type="text/javascript">
+
+   let citationClicked = false;
+   const steps = document.querySelectorAll('.step');
+    const step1 = document.getElementById('step1');
+    const step2 = document.getElementById('step2');
+    const step3 = document.getElementById('step3');
+   const subjectInput = document.getElementById('subject');
+const descriptionInput = document.getElementById('description');
+const nextButton = document.getElementById('toStep2');
+
+// Step 1: Enter in Subject → focus Description
+subjectInput.addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+        e.preventDefault();
+        descriptionInput.focus();
+    }
+});
+
+
+
+nextButton.addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+        e.preventDefault();
+        nextButton.click();
+    }
+});
+
+
+
+    const caseId = "CASE-" + Date.now() + "-" + Math.floor(Math.random() * 1000);
+    const caseNumber = Math.floor(100000 + Math.random() * 900000);
+
+     function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
+        return null;
+      }
+       const sid = getCookie('_gz_sid');  
+       const taid = getCookie('_gz_taid');
+
+
+
+  document.addEventListener('DOMContentLoaded', function() {
+    
 function support_doc_submit(){
   window.location = base_url + '/search/?query=' + encodeURIComponent($('#support-search-form .aa-Form .aa-Input').val());
   return false;
@@ -1000,35 +1985,46 @@ $( document ).ready(function() {
     showlinks(subtype_options);
   }
 
-  function category_change(e) {
-    reset_page(2);
+ function category_change(e) {
+  reset_page(2);
 
-    var topic_selected =  $('#ticket_topic option:selected').val();
-    var type_selected = this.value;
-    var type_options = ticket_options[topic_selected]['SelectOption'][type_selected];
-    //type_menu.empty();
+  var topic_selected =  $('#ticket_topic option:selected').val();
+  var type_selected = this.value;
+  var type_options = ticket_options[topic_selected]['SelectOption'][type_selected];
 
-    if (type_selected && 'SelectOption' in type_options) {
-      hide_page(3);
-      if ('SelectDefault' in type_options) {
-        type_menu.append($('<option>',{value: ''}).html(type_options['SelectDefault']));
-      }
-      else {
-        type_menu.append($('<option>',{value: ''}).html('Select a subcategory...'));
-      }
-      $.each(type_options['SelectOption'],function(type, val)  {
-        type_menu.append($('<option>',{value: type}).html(val.SelText || type));
-      });
+  // default hide
+  $('#subcategory_div').hide();
 
+  if (type_selected && 'SelectOption' in type_options) {
+    hide_page(3);
+
+    // show only if subcategories exist
+    if (Object.keys(type_options['SelectOption']).length > 0) {
+      $('#subcategory_div').show();
+    }
+
+    if ('SelectDefault' in type_options) {
+      type_menu.append($('<option>',{value: ''}).html(type_options['SelectDefault']));
     }
     else {
-      hide_page(2);
+      type_menu.append($('<option>',{value: ''}).html('Select a subcategory...'));
     }
-    showlinks(type_options);
+
+    $.each(type_options['SelectOption'],function(type, val)  {
+      type_menu.append($('<option>',{value: type}).html(val.SelText || type));
+    });
   }
+  else {
+    hide_page(2);
+  }
+  showlinks(type_options);
+}
+
 
   function topic_change(e) {
     reset_page(1);
+
+    $('#subcategory_div').hide(); 
     var topic_selected = this.value;
     var category_options = ticket_options[topic_selected];
     if (topic_selected && 'SelectOption' in category_options ) {
@@ -1330,158 +2326,503 @@ $( document ).ready(function() {
    ff_div.insertBefore($('#basic_page')).show();
  }
 });
+
+
+const suggestionsBox = document.getElementById('suggestionsBox');
+const articlesDiv = document.getElementById('articles');
+const articlesList = document.getElementById('articles-list');
+const formContainer = document.querySelector(".form-container");
+const formContainer1 = document.querySelector(".form-container1");
+
+const langSelect = document.getElementById('lang_select');
+console.log("language ==>", langSelect);
+
+let selectedLanguage = 'en'; 
+
+const languageMap = {
+  'en': 'English',
+  'de': 'German',
+  'es': 'Spanish',
+  'fr': 'French',
+  'ja': 'Japanese',
+  'ko': 'Korean',
+  'pt-br': 'Portuguese'
+};
+
+langSelect.addEventListener('change', (e) => {
+  const langCode = e.target.value;
+  selectedLanguage = langCode; 
+  console.log('Language changed to:', langCode, '(', languageMap[langCode] || 'English', ')');
+
+  if (window.currentSubject && window.currentSid) {
+    getSearchResultByPost(window.currentSubject, window.currentSid, selectedLanguage);
+  }
+});
+
+async function getSearchResultByPost(subject, sid , language) {
+  const langCode = language || langSelect.value || 'en'; 
+  console.log('Resolved language code:', langCode);
+    const payload = {
+        langAttr: "en",
+        react: 1,
+        isRecommendationsWidget: false,
+        searchString: subject,
+        from: 0,
+        sortby: "_score",
+        orderBy: "desc",
+        pageNo: 1,
+        aggregations: [
+        {
+          type: "language",
+          filter: [langCode] 
+        }
+      ],
+        clonedAggregations: [],
+        uid: "63590d8d-65fd-11f0-ada3-0242ac120007",
+        resultsPerPage: 10,
+        exactPhrase: "",
+        withOneOrMore: "",
+        withoutTheWords: "",
+        pageSize: 10,
+        sid: sid,
+        language: "en",
+        mergeSources: false,
+        versionResults: false,
+        suCaseCreate: false,
+        visitedtitle: "",
+        paginationClicked: false,
+        email: "",
+        storeContext: true,
+        searchUid: "a13d1e1d-31d8-4208-bed2-6993ab758b0c",
+        accessToken: "9ad5ad4164aea64521fd3c00a19b76c8",
+        getAutoTunedResult: true,
+        getSimilarSearches: true,
+        smartFacets: false
+    };
+
+    try {
+        const response = await fetch("https://bz072508p.searchunify.com/search/searchResultByPost", {
+            method: "POST",
+            headers: {
+                "accept": "*/*",
+                "content-type": "application/json",
+                "origin": "https://bz072508p.searchunify.com",
+                "referer": "https://bz072508p.searchunify.com"
+            },
+            body: JSON.stringify(payload)
+        });
+
+        if (!response.ok) throw new Error(`Search API error: ${response.status}`);
+        const data = await response.json();
+        const results = data.result?.hits || data.hits || data.results || [];
+        console.log('resss==>', results);
+
+        return {
+            llmContextId: data.llmContextId || data.context?.llmContextId || data.response?.llmContextId || "fallback-llm-context",
+            results: results
+        };
+
+    } catch (err) {
+        console.error("Error fetching searchResultByPost:", err);
+        return { llmContextId: "fallback-llm-context", results: [] };
+    }
+}
+
+document.getElementById('toStep2').addEventListener('click', async function () {
+    const subject = document.getElementById('subject').value.trim();
+    const description = document.getElementById('description').value.trim();
+    if (!subject || !description) {
+        alert('Please fill in all required fields');
+        return;
+    }
+
+    step1.style.display = 'none';
+    step2.style.display = 'block';
+    steps[1].classList.add('active');
+    articlesDiv.style.display = 'none';
+    articlesList.innerHTML = '';
+    document.querySelector('.gpt-heading').textContent = subject;
+    const susResponse = await getSearchResultByPost(subject, sid);
+    const llmContextId = susResponse.llmContextId;
+    const results = susResponse.results;
+
+    // --- Build a map of article metadata for hover tooltip ---
+    const articleMetaMap = {};
+    results.forEach(result => {
+        const url = result.href || result.Id || "";
+        articleMetaMap[url] = {
+            title: result.highlight?.TitleToDisplay?.[0] || result.highlight?.TitleToDisplayString?.[0] || result.objLabel || "Untitled",
+            summary: result.highlight?.SummaryToDisplay?.[0] ||
+                     (result.autosuggestData?.find(d => d.key === "Summary")?.value?.[0]) ||
+                     "No summary available"
+        };
+    });
+
+    // --- Streaming / GPT Suggestions ---
+    try {
+        const requestBody = {
+            query: subject,
+            streaming: true,
+            llm: true,
+            separator: "$___$__$_$",
+            searchBody: {
+                react: 1,
+                searchString: subject,
+                uid: "63590d8d-65fd-11f0-ada3-0242ac120007",
+                language: "en",
+                searchUid: "22d6676b-80b1-4145-af19-6a422417e5d0",
+                accessToken: "9ad5ad4164aea64521fd3c00a19b76c8",
+                getAutoTunedResult: true,
+                getSimilarSearches: true,
+                smartFacets: false,
+                showMoreSummary: false,
+                minSummaryLength: 100,
+                showContentTag: true,
+                "sid-session": sid,
+                "taid-device": taid
+            },
+            llmContextId: llmContextId
+        };
+
+        const response = await fetch("https://bz072508p.searchunify.com/mlService/su-gpt", {
+            method: "POST",
+            headers: {
+                "accept": "*/*",
+                "content-type": "application/json",
+                "origin": "https://d3afgxkm1vz2tp.cloudfront.net",
+                "referer": "https://d3afgxkm1vz2tp.cloudfront.net/",
+                "search-client-type": "6",
+                "search-id": "22d6676b-80b1-4145-af19-6a422417e5d0",
+                "sid-session": sid,
+                "taid-device": taid,
+                "token": "9ad5ad4164aea64521fd3c00a19b76c8",
+                "uid": "63590d8d-65fd-11f0-ada3-0242ac120007"
+            },
+            body: JSON.stringify(requestBody)
+        });
+
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+
+        const reader = response.body.getReader();
+        const decoder = new TextDecoder();
+        let fullResponse = '';
+        let articles = [];
+        let articlesCollected = false;
+
+        let partialAccumulator = '';
+
+        while (true) {
+          const { done, value } = await reader.read();
+          if (done) break;
+
+          const chunk = decoder.decode(value, { stream: true });
+          const chunkParts = chunk.split('$___$__$_$');
+
+          for (const part of chunkParts) {
+            if (!part.trim()) continue;
+
+            let jsonString = part;
+            try {
+              const validJson = partialAccumulator + jsonString;
+              const data = JSON.parse(validJson);
+
+              partialAccumulator = '';
+
+              if (data.data?.choices?.[0]?.delta?.content) {
+                fullResponse += data.data.choices[0].delta.content;
+                suggestionsBox.innerHTML = fullResponse;
+                document.querySelector('.flex-display').style.display = 'block';
+                document.querySelector('.gpt-text1').style.display = 'block';
+                document.querySelector('.gpt-text').style.display = 'none';
+              }
+
+              if (!articlesCollected && data.data?.articles) {
+                const uniqueUrls = new Set(articles.map(a => a.href));
+                for (const article of data.data.articles) {
+                  if (!uniqueUrls.has(article.href)) {
+                    articles.push(article);
+                    uniqueUrls.add(article.href);
+                  }
+                }
+
+                if (articles.length > 0) {
+                  articlesList.innerHTML = articles.map(article =>
+                    `<div class="article">
+                      <a href="${article.href.split('_doc_doc_').pop()}" target="_blank">${article.title}</a>
+                    </div>`
+                  ).join('');
+                  articlesDiv.style.display = 'block';
+                }
+                articlesCollected = true;
+              }
+
+              if (data.data?.no_answer?.length && fullResponse === '') {
+                fullResponse = `<p>${data.data.no_answer[0]}</p>`;
+                suggestionsBox.innerHTML = fullResponse;
+              }
+            } catch (e) {
+              partialAccumulator += jsonString;
+            }
+          }
+        }
+
+        if (fullResponse === '' && articles.length > 0) {
+            suggestionsBox.innerHTML = "<p>Here are some articles that might help:</p>";
+        } else if (fullResponse === '') {
+            suggestionsBox.innerHTML = "<p>No suggestions found.</p>";
+        }
+
+        // --- Citation hover tooltip ---
+        const trackedCitations = new Set();
+        document.querySelectorAll('.su_citation').forEach(button => {
+            button.addEventListener('mouseenter', function () {
+                const url = this.getAttribute('data-url')?.split('_doc_doc_').pop() || '';
+                const meta = articleMetaMap[url];
+                if (meta) {
+                    let tooltip = document.createElement('div');
+                    tooltip.className = 'su-tooltip';
+                    tooltip.innerHTML = `<strong>${meta.title}</strong><small>${meta.summary}</small>`;
+                    document.body.appendChild(tooltip);
+
+                    const rect = this.getBoundingClientRect();
+                    tooltip.style.position = 'absolute';
+                    tooltip.style.top = `${rect.bottom + window.scrollY + 5}px`;
+                    tooltip.style.left = `${rect.left + window.scrollX}px`;
+                    tooltip.style.zIndex = 10000;
+
+                    this._tooltip = tooltip;
+                }
+            });
+
+            button.addEventListener('mouseleave', function () {
+                if (this._tooltip) {
+                    this._tooltip.remove();
+                    delete this._tooltip;
+                }
+            });
+
+            button.addEventListener('click', function () {
+                const url = this.getAttribute('data-url')?.split('_doc_doc_').pop() || '';
+                citationClicked = true;
+
+                 if (!window.searchEventSent) {
+                    const searchPayload = {
+                      event: "search",
+                      id: crypto.randomUUID(),
+                      searchString: subject,
+                      result_count: 0,
+                      page_no: 1,
+                      uid: "63590d8d-65fd-11f0-ada3-0242ac120007",
+                      filter: {},
+                      sid_session: sid || "",
+                      taid_device: taid || "",
+                      analyticsId: window._gza_analytics_id || crypto.randomUUID(),
+                      referrer: document.referrer || "",
+                      url: window.location.href
+                    };
+
+                    try {
+                      navigator.sendBeacon(
+                        "https://bz072508p.searchunify.com/analytics/suanlytics.png",
+                        new Blob([JSON.stringify(searchPayload)], { type: "application/json" })
+                      );
+                      console.log("[Analytics] Search event sent on citation click");
+                      window.searchEventSent = true; 
+                    } catch (err) {
+                      console.error("[Analytics] Error sending search event:", err);
+                    }
+                  }
+
+                // Conversion analytics (once per citation)
+                if (!trackedCitations.has(url)) {
+                    const citationPayload = {
+                        event: "conversion",
+                        id: crypto.randomUUID(),
+                        convUrl: url,
+                        convSub: articleMetaMap[url]?.title
+                        ? articleMetaMap[url].title.replace(/<[^>]+>/g, '').trim()
+                        : '',
+
+                        index: "1_12_doc",
+                        type: "doc",
+                        relevance_score: "7.0017533",
+                        searchString: subject,
+                        rank: 53510,
+                        analyticsId: window._gza_analytics_id || crypto.randomUUID(),
+                        url: window.location.href,
+                        referrer: document.referrer,
+                        uid: "63590d8d-65fd-11f0-ada3-0242ac120007",
+                        sid_session: sid || "",
+                        taid_device: taid || ""
+                    };
+
+                    try {
+                        const data = JSON.stringify(citationPayload);
+                        const sent = navigator.sendBeacon(
+                            'https://bz072508p.searchunify.com/analytics/suanlytics.png',
+                            new Blob([data], { type: 'application/json' })
+                        );
+                        if (!sent) {
+                            fetch('https://bz072508p.searchunify.com/analytics/suanlytics.png', {
+                                method: 'POST',
+                                headers: { 'Content-Type': 'application/json' },
+                                body: data
+                            }).catch(console.error);
+                        }
+                    } catch (err) {
+                        console.error('[Analytics] Error sending conversion payload', err);
+                    }
+
+                    trackedCitations.add(url);
+                }
+
+                setTimeout(() => window.open(url, '_blank'), 200);
+            });
+        });
+
+    } catch (err) {
+        suggestionsBox.innerHTML = `<p>Error: ${err.message}</p>`;
+        console.error(err);
+    }
+});
+
+
+    // Back to Step 1
+    document.getElementById('backToStep1').addEventListener('click', function () {
+        step2.style.display = 'none';
+        step1.style.display = 'block';
+        steps.forEach(s => s.classList.remove('active'));
+        steps[0].classList.add('active');
+        document.getElementById('suggestionsBox').innerHTML = "";
+        window.searchEventSent = false;
+    });
+    
+// Optional: Add a back button to return to the 3-step form
+function addBackButton() {
+    const backButton = document.createElement('button');
+    backButton.textContent = 'Back to Suggestions';
+    backButton.className = 'submit-btn';
+    backButton.style.backgroundColor = 'grey';
+    backButton.style.marginTop = '20px';
+    backButton.onclick = function() {
+        document.querySelector('.form-container1').style.display = 'none';
+        document.querySelector('.form-container').style.display = 'block';
+    };
+    
+    // Add the back button to the support form
+    const ticketMainForm = document.getElementById('ticket_mainform');
+    if (ticketMainForm) {
+        ticketMainForm.appendChild(backButton);
+    }
+}
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    addBackButton();
+});
+
+
+});
+function initCaseForm() {
+    function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
+        return null;
+    }
+
+    function createNewSid() {
+        return Date.now().toString() + Math.floor(1000 + Math.random() * 9000);
+    }
+
+    function sendSearchEvent(searchString, sid) {
+        const searchPayload = {
+            event: "search",
+            id: crypto.randomUUID(),
+            searchString: searchString,
+            result_count: 0,
+            page_no: 1,
+            uid: "63590d8d-65fd-11f0-ada3-0242ac120007",
+            filter: {},
+            sid_session: sid,
+            taid_device: taid || "",
+            analyticsId: window._gza_analytics_id || crypto.randomUUID(),
+            referrer: document.referrer || "",
+            url: window.location.href
+        };
+
+        fetch("https://bz072508p.searchunify.com/analytics/suanlytics.png", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(searchPayload)
+        })
+        .catch(err => console.error("API Error (search):", err));
+    }
+
+
+
+    document.getElementById('toStep3').addEventListener('click', function () {
+        document.querySelector(".form-container").classList.add("hidden");
+        document.querySelector(".form-container1").style.display = "block";
+        steps[2].classList.add('active'); 
+        document.getElementById('ticket_subject').value = document.getElementById('subject').value;
+        document.getElementById('ticket_issue').value = document.getElementById('description').value;
+        step2.style.display = 'none';
+        step3.style.display = 'block';
+
+        document.querySelector(".svg-dot").classList.add("active");
+
+        //  Submit Case Created Event
+        document.getElementById('ticket_form').addEventListener('submit', function(e) {
+            e.preventDefault(); 
+
+            const subject = document.getElementById('ticket_subject').value;
+            const caseId = "CASE-" + Date.now() + "-" + Math.floor(Math.random() * 1000);
+            const caseNumber = Math.floor(100000 + Math.random() * 900000);
+            const prioritySelect = document.getElementById('ticket_priority');
+            const issueSeverity = prioritySelect.options[prioritySelect.selectedIndex].text;
+
+            let sid = getCookie("_gz_sid");
+            if (!sid) {
+                sid = createNewSid();
+                document.cookie = `_gz_sid=${sid}; path=/; SameSite=None; Secure`;
+                sendSearchEvent(subject, sid); 
+            }
+
+            if (!citationClicked) {
+            const subject = document.getElementById('subject').value;
+           sendSearchEvent(subject, sid);
+           }
+
+            fetch('https://bz072508p.searchunify.com/analytics/suanlytics.png', {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json; charset=UTF-8',
+                },
+                body: JSON.stringify({
+                    "subject": subject,
+                    "uid": "63590d8d-65fd-11f0-ada3-0242ac120007",
+                    "event": "caseCreated",
+                    "caseId": caseId,         
+                    "caseNumber": caseNumber,
+                    "Issue_Severity__c": issueSeverity,
+                    "isFreshSearch": !citationClicked,
+                    "searchUid": "76a357a5-3804-449f-aa1e-211ed865a48b",
+                    "referrer": document.referrer || "",
+                    "e": "caseCreated",
+                    "t": "Contact Us | What can we help you with today? | Bluebeam Technical",
+                    "r": 60691,
+                    "sid_session": sid, 
+                    "taid_device": taid || "",
+                    "internal": ""
+                })
+            })
+            .catch(error => console.error("API Error (caseCreated):", error));
+        });
+    });
+}
+
+initCaseForm();
+
+
 </script>
-<div id="firefox_warning" style="display:none;">For Firefox users, allowlist this site or check your <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Privacy/Tracking_Protection?utm_source=mozilla&utm_medium=firefox-console-errors&utm_campaign=default" target="_blank">Tracking Protection Settings</a>, or your ticket might not be submitted.</div>
-
-<div class="container-fluid" id="main-container">
-      <div class="row">
-          <div class="col" >
-              <h1 class="h1">Need Help? </h1>
-              <div class="gradient-line"></div>
-          </div>
-      </div>
-        <div id="ticket_mainform" class="row">
-        <div class="col-sm-7" id="ticket_leftmain">
-          <form id="ticket_form">
-
-
-                <div class="row">
-                    <div class="col">
-                        <div class="form-group" id="ticket_topic_div">
-                          <label for="ticket_topic" id="ticket_topic_label"> What can we help you with? *</label>
-                          <select id="ticket_topic" name="00N0V000009G0MG"  class="form-control" ></select>
-
-                        </div>
-                        <div class="form-group" id="ticket_category_div">
-                          <label for="ticket_category" id="ticket_category_label">Category * </label>
-                          <select id="ticket_category" name="00N0V000009G0MB"  class="form-control" ></select>
-                        </div>
-                        <div class="form-group" id="ticket_subcategory_div">
-                          <label for="ticket_subcategory" id="ticket_subcategory_label">My question is about... * </label>
-                          <select id="ticket_subcategory" name="00N0V000009G0ML"  class="form-control" ></select>
-                        </div>
-                        <div class="form-group" id="ticket_type_div">
-                          <label for="ticket_type" id="ticket_type_label">Platform * </label>
-                          <select id="ticket_type" name="00N0V000009G0MQ"  class="form-control" ></select>
-                        </div>
-                        <div class="form-group">
-                          <label id="ticket_message"></label>
-                          <div id="ticket_reference"></div>
-                        </div>
-                    </div>
-
-                </div>
-                <!-- div class="row">
-                  <div class="col">
-                    <label for="submit_ticket" class="checkbox-inline">
-
-                    <input type="checkbox" value="submit_ticket" name="submit_ticket" id="submit_ticket"  />
-                    Submit a ticket.</label>
-                  </div>
-                </div -->
-
-                <div class="row">
-
-                  <div class="col">
-                    <div id="ticket_submit_option">
-                      <h2>Not finding what you need? Contact our Support team.</h2>
-                      <div class="form-group" >
-                          <label for="ticket_name" id="ticket_name_label">  Name *</label>
-                          <input type="text" name="Name" id="ticket_name"  maxlength="80" required="required" value="" placeholder="Enter your name" class="form-control" />
-                      </div>
-                      <div class="form-group" >
-
-                        <label for="ticket_email" id="ticket_email_label"> Email address *</label>
-                        <div class="input-group">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon1">@</span>
-                          </div>
-                          <input type="email" class="form-control" id="ticket_email"  maxlength="80" name="Email" placeholder="Enter email" required="required" value="" /></div>
-                      </div>
-                      <div class="form-group" >
-                        <label for="ticket_email" id="ticket_ccemail_label"> CC Email address </label>
-                        <div class="input-group">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon1">@</span>
-                          </div>
-                          <input type="email" class="form-control" id="ticket_ccemail"  maxlength="80" name="CCEmail" placeholder="Enter CC email"  value="" /></div>
-                      </div>
-                      <div class="form-group" >
-                          <label for="ticket_subject" id="ticket_subject_label">   Subject *</label>
-                          <input type="text" class="form-control" id="ticket_subject"  maxlength="80" name="Subject" placeholder="What's your question about?" required="required" value="" />
-                      </div>
-
-                      <div class="form-group" id="ticket_priority_div">
-                        <label for="ticket_priority" id="ticket_priority_label">Issue severity * </label>
-                        <a id="ticket_priority_info" title="Issue Severity Description"
-                          data-toggle="popover" data-placement="top" data-trigger="click"
-                          data-content="A <b>Critical severity</b> issue has a critical business impact on use of the Braze services that impact all Users. Examples include complete system unavailability or data integrity issues, with no workaround available at the time the issue is logged with Braze Technical Support.<br />
-                          A <b>High severity</b> issue is causing a significant loss or reductions of functionality to the customer’s use of the platform causing a serious impact to the customer’s operational activities.<br />
-                          A <b>Medium severity</b> issue causes a material loss or reduction of functionality which has an impact on the customer’s normal use of the platform.<br />
-                          A <b>Low severity</b> issue is any question about the use of Braze services and analytics or a minor loss or disruption of normal platform functionality."><span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-question-circle" ></span></a>
-                        <select id="ticket_priority" name="priority"  class="form-control" >
-                          <option value="Critical">Critical: System is down or severe data integrity issues</option>
-                          <option value="High">High: Severe loss of functionality or a campaign will not send</option>
-                          <option value="Medium">Medium: Degraded performance or issue causing significant business impact</option>
-                          <option value="Low" selected="selected">Low: Question about Braze functionality or analytics</option>
-                        </select>
-                      </div>
-
-                      <div class="form-group" >
-
-                          <label for="ticket_issue" id="ticket_issue_label">     Question * </label>
-
-                          <textarea name="ticket_issue" class="form-control" id="ticket_issue"  required="required" data-toggle="popover" data-trigger="focus" data-placement="top"
-                          data-content="Include information helpful for investigation and troubleshooting, such as your platform, SDK version, REST API endpoints, links to segments or campaigns, relevant user IDs, and steps to reproduce your issue.   "
-                          placeholder="Include information helpful for investigation and troubleshooting, such as your:
-- Platform
-- SDK version
-- REST API endpoints,
-- Links to segments or campaigns
-- Relevant user IDs
-- SDK Debugger Session ID
-- Steps to reproduce your issue  " rows="7"></textarea>
-                      </div>
-                      <!-- div class="form-group" >
-
-                          <label for="ticket_comment"  id="ticket_comment_label">     Additional comments and screenshots  </label>
-
-                          <textarea name="Issue_Steps" class="form-control" id="ticket_comment" data-toggle="popover" data-trigger="focus" data-placement="top"
-                          data-content="Add any other comments and link to any relevant screenshots or screencasts."
-                          placeholder="Add any other comments and link to any relevant screenshots or screencasts." rows="7"></textarea>
-                      </div -->
-                      <div class="form-group">
-                          <label style="font-size: 12px;">
-                         In order to provide you with technical support or address service or technical problems, be aware that Braze may need to access your dashboard and data.
-                          </label>
-                          <label style="font-size: 12px;">
-                          Braze technical support operates during standard business hours across multiple time zones to serve our global customer base. For specific support hours in your region or for issues logged outside of business hours, please refer to the support handbook. Response times may vary based on when your request is submitted, your support tier, and the severity of the issue.
-                          </label>
-                      </div>
-                      <button type="submit" name="Submit Ticket" value="Submit" class="btn btn-black" id="ticket_submit_button" role="button"> SUBMIT TICKET </button>
-                      </div>
-                  </div>
-              </div>
-              </form>
-        </div>
-        <div class="col-sm-5" id="ticket_resources">
-        <div id="support-search-div">
-         </div>
-
-           <div id="support-search-panel"></div>
-
-            <legend>Useful Resources</legend>
-
-            <div id="ticket_usefulresources">
-              <a target="" href="{{site.baseurl}}/user_guide/introduction/">User Guide</a><br />
-              <a target="" href="{{site.baseurl}}/developer_guide/platform_wide/platform_features/">Developer Guide</a><br />
-              <a target="" href="{{site.baseurl}}/help/home/">Help & Troubleshooting Guides</a><br />
-              <a target="" href="{{site.baseurl}}/help/faqs/">Frequently Asked Questions</a><br />
-              <a target="" href="https://learning.braze.com/">Braze Learning</a><br />
-              <a target="" href="https://dashboard.braze.com/">Braze Dashboard</a><br />
-            </div>
-
-        </div>
-    </div>
-    <div id="ticket_thankyou" style="display:none;"><div class="row"><div class="col" id="ticket_thankyou_msg"></div></div></div>
-</div>

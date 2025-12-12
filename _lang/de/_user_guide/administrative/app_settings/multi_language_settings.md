@@ -14,22 +14,26 @@ description: "Dieser Artikel bietet eine Übersicht über die mehrsprachigen Ein
 
 Um die Unterstützung für mehrere Sprachen zu bearbeiten und zu verwalten, benötigen Sie die Nutzerberechtigung „Einstellungen für mehrere Sprachen verwalten verwalten“. Um das Gebietsschema einer Nachricht einzustellen, benötigen Sie eine Berechtigung zur Bearbeitung von Kampagnen.
 
+{% alert important %}
+Die Unterstützung mehrerer Sprachen befindet sich derzeit im Early Access. Wenden Sie sich an Ihren Braze Account Manager, wenn Sie an der Early-Access-Phase teilnehmen möchten.
+{% endalert %}
+
 ## Gebietsschema hinzufügen
 
 1. Gehen Sie zu **Einstellungen** > **Mehrsprachige Unterstützung** unter **Arbeitsbereichseinstellungen**.
-2. Wählen Sie **Gebietsschema hinzufügen** und wählen Sie dann **Standardgebietsschema** oder **Benutzerdefinierte Attribute**.<br><br>![Das Dropdown-Menü „Gebietsschema hinzufügen“ mit Optionen zur Auswahl des Standard-Gebietsschemas oder angepasster Attribute.][1]{: style="max-width:40%;"}
+2. Wählen Sie **Gebietsschema hinzufügen** und wählen Sie dann **Standardgebietsschema** oder **Benutzerdefinierte Attribute**.<br><br>![Das Dropdown-Menü "Gebietsschema hinzufügen" mit Optionen zur Auswahl des Standardgebietsschemas oder angepasster Attribute.]({% image_buster /assets/img/multi-language_support/add_locale_options.png %}){: style="max-width:40%;"}
 3. Geben Sie einen Namen für das Gebietsschema ein.
 4. Wählen Sie die entsprechenden Nutzerattribute für die von Ihnen gewählte Gebietsschema-Option aus.
 
 {% tabs %}
-{% tab Standard-Gebietsschema %}
+{% tab Default locale %}
 
-Verwenden Sie für **Standard-Gebietsschema** die Dropdown-Listen, um die hinzuzufügende Sprache und optional das Land, das mit der Sprache verknüpft werden soll, auszuwählen.<br><br>![Ein Fenster namens „Gebietsschema hinzufügen – Standardsprache und -land“, um die Sprache und das Land festzulegen.]({% image_buster /assets/img/multi-language_support/default_option.png %}){: style="max-width:80%;"}
+Verwenden Sie für **Standard-Gebietsschema** die Dropdown-Listen, um die hinzuzufügende Sprache und optional das Land, das mit der Sprache verknüpft werden soll, auszuwählen.<br><br>![Ein Fenster mit der Bezeichnung "Gebietsschema hinzufügen - Standardsprache und Land", um die Sprache und das Land anzugeben.]({% image_buster /assets/img/multi-language_support/default_option.png %}){: style="max-width:80%;"}
 
 {% endtab %}
-{% tab Benutzerdefinierte Attribute %}
+{% tab Custom attributes %}
 
-Für **benutzerdefinierte Attribute** wählen Sie aus der Dropdown-Liste das entsprechende benutzerdefinierte Attribut aus und geben in das Textfeld den Wert ein.<br><br>![Ein Fenster namens „Gebietsschema hinzufügen – angepasste Attribute“, um das angepasste Attribut und den Wert festzulegen.]({% image_buster /assets/img/multi-language_support/custom_attributes_option.png %}){: style="max-width:80%;"}
+Für **benutzerdefinierte Attribute** wählen Sie aus der Dropdown-Liste das entsprechende benutzerdefinierte Attribut aus und geben in das Textfeld den Wert ein.<br><br>![Ein Fenster namens "Gebietsschema hinzufügen - Angepasste Attribute", um das angepasste Attribut und den Wert festzulegen.]({% image_buster /assets/img/multi-language_support/custom_attributes_option.png %}){: style="max-width:80%;"}
 
 {% endtab %}
 {% endtabs %}
@@ -67,4 +71,3 @@ Die Übersetzungsdateien werden auf Kampagnen-Ebene gespeichert, d. h. für jed
 
 Nein. Sie können Ihre bevorzugte Benennungskonvention verwenden. Der Name des Gebietsschemas wird bei der Auswahl des Gebietsschemas im Editor verwendet und erscheint in den Überschriften der Datei, die Sie mit den Übersetzungs-IDs herunterladen.
 
-[1]: {% image_buster /assets/img/multi-language_support/add_locale_options.png %}

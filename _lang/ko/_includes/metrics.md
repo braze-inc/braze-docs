@@ -254,6 +254,11 @@
 <i>고유 클릭</i> 수는 메시지 내의 링크를 한 번 이상 클릭한 수신자의 고유한 수이며 <a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'>dispatch_id로</a> 측정됩니다.
 {% endif %}
 
+<!-- Pull channels like Banners that don't have a Dispatch ID-->
+{% if include.metric == "Unique Clicks No Dispatch ID" %}
+<i>고유 클릭</i>는 메시지 내의 링크를 최소한 한 번 클릭한 수신자의 고유한 수입니다.
+{% endif %}
+
 {% if include.metric == "Unique Dismissals" %}
 <i>고유 해지</i> 횟수는 캠페인에서 콘텐츠 카드를 해지한 고유 수신자 수입니다. 사용자가 캠페인에서 콘텐츠 카드를 여러 번 해제하는 것은 하나의 고유한 해제를 나타냅니다.
 {% endif %}

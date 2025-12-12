@@ -16,7 +16,7 @@ channel:
 /v2/subscription/status/set
 {% endapimethod %}
 
-> Use this endpoint to batch update the subscription state of up to 50 users on the Braze dashboard. 
+> Use this endpoint to batch update the subscription state of up to 50 users on the Braze dashboard.
 
 You can access a subscription group's `subscription_group_id` by navigating to the **Subscriptions Group** page.
 
@@ -35,6 +35,10 @@ If you want to see examples or test this endpoint for **WhatsApp Groups**:
 ## Prerequisites
 
 To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-api-key/) with the `subscription.status.set` permission.
+
+{% alert note %}
+If you're interested in using this endpoint with [LINE subscription groups]({{site.baseurl}}/user_guide/message_building_by_channel/line/line_users/subscription_groups/), contact your customer success manager.
+{% endalert %}
 
 ## Rate limit
 

@@ -32,7 +32,13 @@ Before you can launch your Banner campaign, your development team will need to [
 
 ### Step 3: Compose a Banner {#compose-a-banner}
 
-To compose your Banner, select **Edit message**. Here, you can create the Banner and define on-click behavior. 
+To compose your Banner, you can choose to:
+
+- Start with a blank template
+- Use a Braze banner template
+- Select a saved banner template
+
+![Option to choose a blank Banner or a template.]({% image_buster /assets/img/banners/choose_banner_composer.png %})
 
 #### Step 3.1: Style the Banner
 
@@ -54,11 +60,7 @@ On-click behavior can be overridden if a specific element (such as a button, lin
 
 #### Step 3.3: Add custom properties (optional) {#custom-properties}
 
-{% alert important %}
-Custom properties for Banners are currently in early access. Contact your Braze account manager if you're interested in participating
-{% endalert %}
-
-You can add custom properties to a Banner to attach structured metadata, such as strings or JSON objects. These properties don’t affect how the Banner is displayed but can be [accessed through the Braze SDK]({{site.baseurl}}/developer_guide/banners/managing_placements/#accessing-properties) to modify your app’s behavior or appearance. For example, you could:
+You can add custom properties to a Banner to attach structured metadata, such as strings or JSON objects. These properties don’t affect how the Banner is displayed but can be [accessed through the Braze SDK]({{site.baseurl}}/developer_guide/banners/placements/) to modify your app’s behavior or appearance. For example, you could:
 
 - Send metadata for your third-party analytics or integrations.
 - Use metadata such as a `timestamp` or JSON object to trigger conditional logic.

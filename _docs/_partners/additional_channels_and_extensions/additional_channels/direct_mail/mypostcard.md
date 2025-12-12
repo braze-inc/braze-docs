@@ -22,7 +22,7 @@ Use the MyPostcard and Braze integration to effortlessly send your customers pri
 | MyPostcard B2B account           | Registering with MyPostcard is required to take advantage of this integration.                                          |
 | B2B API key and credentials        | You can find your API Key and the credentials in the MyPostcard B2B Admin Tool.                                         |
 | Approved MyPostcard B2B campaign | To take advantage of this integration, you need to set up a print mailing campaign in the MyPostcard B2B tool. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Use cases
 

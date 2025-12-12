@@ -44,6 +44,15 @@ Weitere Informationen finden Sie auf unserer Seite über [API-Ratenbegrenzungen]
 {% elsif include.endpoint == "users export ids" %}
 Wenn Sie Braze am oder nach dem 22\. August 2024 aktiviert haben, gilt für diesen Endpunkt ein Rate-Limit von 250 Anfragen pro Minute, wie unter [API-Rate-Limits]({{site.baseurl}}/api/api_limits/) beschrieben.
 
+Sie können das Rate-Limits dieses Endpunkts auch auf 40 Anfragen pro Sekunde erhöhen, wenn Sie die folgenden Voraussetzungen erfüllen:
+
+- In Ihrem Workspace ist das Standard Rate-Limiting (250 Anfragen pro Minute) aktiviert. Wenden Sie sich an Ihren Braze-Konto Manager:in, um weitere Unterstützung bei der Aufhebung eines bereits bestehenden Rate-Limits zu erhalten.
+- Ihre Anfrage enthält den Parameter `fields_to_export`, um alle Felder aufzulisten, die Sie erhalten möchten.
+
+{% alert important %}
+Wenn Sie `canvases_received` oder `campaigns_received` in den Parameter `fields_to_export` eingeben, kommt Ihre Anfrage nicht für das schnellere Rate-Limit in Frage. Wir empfehlen, diese nur dann in Ihre Anfrage aufzunehmen, wenn Sie einen speziellen Anwendungsfall dafür haben.
+{% endalert %}
+
 <!---/users/delete-->
 
 {% elsif include.endpoint == "users delete" %}
@@ -134,6 +143,15 @@ Braze-Endpunkte unterstützen das [Stapeln von API-Anfragen]({{site.baseurl}}/ap
 
 - Bis zu 50 spezifische `external_ids`, jeweils mit individuellen Nachrichtenparametern
 - Ein im Braze-Dashboard erstelltes Segment beliebiger Größe, das durch seine `segment_id` angegeben wird
+- Ein Zielgruppensegment beliebiger Größe, das in der Anfrage als [verbundenes Zielgruppenobjekt]({{site.baseurl}}/api/objects_filters/connected_audience/) definiert ist
+
+{% endif %}
+
+{% if include.category == "send messages endpoints" %}
+
+Braze-Endpunkte unterstützen das [Stapeln von API-Anfragen]({{site.baseurl}}/api/api_limits/#batching-api-requests). Eine einzelne Anfrage an die Messaging-Endpunkte kann eines der folgenden Ziele erreichen:
+
+- Bis zu 50 spezifische `external_ids`, jeweils mit individuellen Nachrichtenparametern
 - Ein Zielgruppensegment beliebiger Größe, das in der Anfrage als [verbundenes Zielgruppenobjekt]({{site.baseurl}}/api/objects_filters/connected_audience/) definiert ist
 
 {% endif %}

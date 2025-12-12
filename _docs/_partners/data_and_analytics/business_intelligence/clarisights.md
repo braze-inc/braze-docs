@@ -61,7 +61,7 @@ To sync Braze data to Clarisights, you must build a Braze connector and connect 
 
 To include Braze as a data source in your Clarisights reports, navigate to **Create New Report**. Name your report and select **Braze** as a data source in the prompt that appears. You can also choose the metrics and dimensions to include in the report. When completed, select **Create Report**. 
 
-The data from Braze will start flowing from the time of the next scheduled data import. Reach out to your Clarisights customer success manager to request backfills for longer durations. 
+The data from Braze will start flowing from the time of the next scheduled data import. Contact your Clarisights customer success manager to request backfills for longer durations. 
 
 ![Clarisight report settings showing fields for name and data source. For this example, "Braze" is selected as the data source.]({{site.baseurl}}/assets/img/clarisights/braze_report.png)
 

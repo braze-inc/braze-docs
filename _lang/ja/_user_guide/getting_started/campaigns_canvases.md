@@ -9,10 +9,10 @@ description: "この記事では、Braze でメッセージを送信するさま
 
 # 開始:キャンペーンとキャンバス
 
-Braze では、[キャンペーン](#campaigns)または[キャンバス](#canvas-flow)を介してメッセージを送信できます。
+Braze では、[キャンペーン](#campaigns)または[キャンバス](#canvas)を介してメッセージを送信できます。
 
 - ターゲットを絞った1つのメッセージをユーザーのグループに送信するには、キャンペーンを選択します。キャンペーンは、さまざまなメッセージングチャネルでユーザーとつながるための単一のメッセージステップです。
-- 包括的なカスタマージャーニーで一連の継続的なメッセージを送信するには、キャンバスフローを選択してください。キャンバスフローは当社のジャーニーオーケストレーションツールです。キャンペーンはシンプルでターゲットを絞ったメッセージを送信するのに適していますが、キャンバスは顧客との関係を次のレベルに引き上げる場所です。
+- 進行中の一連のメッセージを包括的なカスタマージャーニーで送信するには、ジャーニーオーケストレーションツールの「キャンバス」を選択します。キャンペーンはシンプルでターゲットを絞ったメッセージを送信するのに適していますが、キャンバスは顧客との関係を次のレベルに引き上げる場所です。
 
 ## キャンペーン
 
@@ -38,11 +38,11 @@ Braze のキャンペーンの詳細については、以下の追加リソー�
 - [キャンペーンを作成する]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/creating_campaign)
 - [アイデアと戦略]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies)
 
-## キャンバスフロー
+## キャンバス
 
 キャンバスを使うと、複数のキャンペーンで散発的にメッセージを送るのではなく、ユーザーとの継続的なスムーズな会話を生み出すことができます。これは、ユーザーがキャンバスを利用するジャーニーが、ブランドに対するアクション (または非アクション) に応じて異なるパスに分割されるため、特定のフローをリアルタイムで自動的に進めることができるからです。
 
-![]({% image_buster /assets/img/getting_started/canvas_flow.png %})
+\![]({% image_buster /assets/img/getting_started/canvas_flow.png %})
 
 このように、キャンバスはネットを張ってコンバージョンへの道から外れたユーザーを獲得し、最も効果的なアウトリーチ活動に参加してもらうのに最適です。
 
@@ -50,7 +50,7 @@ Braze のキャンペーンの詳細については、以下の追加リソー�
 
 キャンバスには、[messages]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/)、[delays]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/)、[experiments]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/)などを自由に組み合わせることができます。サポートされているすべてのメッセージングチャネルで送信でき、Facebook、Google、TikTok などの[ソーシャルプラットフォームや広告プラットフォームと統合する]({{site.baseurl}}/partners/canvas_audience_sync/overview/)こともできます。
 
-キャンバスフローの詳細については、以下の追加リソースをご覧ください。
+キャンバスの詳細については、次の追加リソースを参照してください。
 
 - Braze Learning: [キャンバスフローによるジャーニーオーケストレーション](https://learning.braze.com/path/journey-orchestration-with-canvas-flow)
 - [キャンバスを作成する]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/)
@@ -60,7 +60,7 @@ Braze のキャンペーンの詳細については、以下の追加リソー�
 
 メッセージングチャネルは、顧客と交流し、ターゲットを絞ったメッセージを配信するためのさまざまなコミュニケーションチャネルです。 
 
-![]({% image_buster /assets/img/getting_started/channels.png %})
+\![]({% image_buster /assets/img/getting_started/channels.png %})
 
 次の表は、サポートされているチャネルの概要です。
 

@@ -1,5 +1,5 @@
 ---
-nav_title: 条件分岐 
+nav_title: 条件分岐
 article_title: 条件分岐 
 alias: /decision_split/
 page_order: 2
@@ -13,7 +13,7 @@ tool: Canvas
 
 > キャンバスの条件分岐コンポーネントを使用すると、パーソナライズされたリアルタイムのエクスペリエンスをユーザーに提供できます。
 
-![プッシュが有効になっていないユーザーと、プッシュが有効になっているユーザーを分ける「Push enabled?」という名前の条件分岐ステップ。]({% image_buster /assets/img/decision-split-1.png %}){: style="float:right;max-width:40%;margin-left:15px;margin-top:15px;margin-bottom:15px;"}
+!["Push enabled?"という名前のディシジョン分割ステップ。プッシュが有効になっていないユーザーおよびプッシュが有効になっているユーザーの場合。]({% image_buster /assets/img/decision-split-1.png %}){: style="float:right;max-width:40%;margin-left:15px;margin-top:15px;margin-bottom:15px;"}
 
 このコンポーネントを使用して、ユーザーがクエリに一致するかどうかに基づいてキャンバスブランチを作成することができます。
 
@@ -25,7 +25,7 @@ tool: Canvas
 
 ユーザーの分岐方法を決めます。[セグメント]({{site.baseurl}}/user_guide/engagement_tools/segments/)とフィルターを使用して線を描画できます。基本的には、ユーザーを評価し、絞り込んで次のステップに送る `true` / `false` のクエリを作成します。少なくとも 1 つのセグメントまたは 1 つのフィルターを使用する必要があります。セグメントとフィルターの両方を使用する必要はありません。
 
-![「Push Enabled is true」フィルターが選択されている条件分岐ステップ。]({% image_buster /assets/img/define-split-2.png %}){: style="max-width:90%;"}
+![フィルター &quot を使用したディシジョン分割ステップ。フォアグラウンドプッシュ有効はtrue" が選択されています。]({% image_buster /assets/img/define-split-2.png %})
 
 {% alert note %}
 デフォルトでは、遅延を追加しない限り、条件分岐ステップのセグメントとフィルターは前のステップを受信した直後にチェックされます。
@@ -39,7 +39,7 @@ tool: Canvas
 
 パスに後続のステップがない場合、そのパスをたどるユーザーはキャンバスから退出します。 
 
-![プッシュが有効になっていないユーザーと、プッシュが有効になっているユーザーを分ける「Push enabled?」という名前の条件分岐ステップ。プッシュが有効になっていないユーザーの場合、3 日間の遅延が発生し、その後メールメッセージが送信される。プッシュが有効になっているユーザーの場合、1 日間の遅延が発生し、プッシュ通知を受け取る。その後2 日間の遅延が発生し、プッシュが有効になっていないユーザーと同じメールメッセージを受け取る。]({% image_buster /assets/img/use-split-onboarding-3.png %}){: style="max-width:60%"}
+!["Push enabled?"という名前のディシジョン分割ステップ。プッシュが有効になっていないユーザーと、その人の場合。プッシュが有効になっていないユーザーの場合、3 日間の遅延が発生し、その後メールメッセージが送信される。プッシュが有効になっているユーザーでは、1 日間の遅延が発生し、プッシュ通知を受信してから2 日間の遅延が発生した後、プッシュが有効になっていないユーザーと同じメールメッセージが受信されます。]({% image_buster /assets/img/use-split-onboarding-3.png %}){: style="max-width:60%"}
 
 ## 分析
 

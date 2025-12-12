@@ -33,46 +33,46 @@ Vamos a ajustar los detalles del Canvas para reflejar nuestro objetivo.
 
 1. Selecciona **Editar** junto al nombre de la plantilla.
 
-![El título actual y la descripción del Canvas.]({% image_buster /assets/img/canvas_templates/email_signup1.png %}){: style="max-width:50%;"}
+\![El título actual y la descripción del Canvas.]({% image_buster /assets/img/canvas_templates/email_signup1.png %}){: style="max-width:50%;"}
 
 {:start="2"}
 2\. Actualiza el nombre del Canvas para especificar que es para dirigirse a nuevos usuarios cuando utilizan la aplicación por primera vez.
 3\. Actualiza la descripción para explicar que este Canvas contiene mensajería personalizada para que los usuarios realicen una doble adhesión voluntaria.
 4\. Añade la etiqueta **Correo electrónico** para que podamos filtrarlo en la página de inicio de Canvas.
 
-![El nuevo nombre, descripción y etiqueta para el Canvas.]({% image_buster /assets/img/canvas_templates/email_signup2.png %}){: style="max-width:90%;"}
+\![El nuevo nombre, descripción y etiqueta del Canvas.]({% image_buster /assets/img/canvas_templates/email_signup2.png %}){: style="max-width:90%;"}
 
-### Paso 2: Asignar eventos de conversión
+### Paso 2: Asignar eventos de conversión
 
 A continuación, vamos a asignar nuestros eventos de conversión. Los eventos de conversión son un tipo de métrica que puede utilizarse para medir el éxito del Canvas. Para el **tipo de evento de conversión**, selecciona **Realiza evento personalizado**. A continuación, selecciona **email_opt_in** para el **nombre del evento personalizado**.
 
-!["Asignar eventos de conversión" para el tipo de evento de conversión de adhesión por correo electrónico.]({% image_buster /assets/img/canvas_templates/email_signup3.png %}){: style="max-width:90%;"}
+\!["Asignar eventos de conversión" sección para el tipo de evento de conversión de adhesión voluntaria por correo electrónico.]({% image_buster /assets/img/canvas_templates/email_signup3.png %}){: style="max-width:90%;"}
 
 Mantendremos el plazo de conversión de la plantilla en tres días porque queremos dirigirnos a nuestros usuarios más recientes.
 
-### Paso 3: Adapta el horario de entrada
+### Paso 3: Adapta el horario de entrada
 
 Mantengamos el horario de entrada como **Basado en acciones** para que los usuarios entren en nuestro Canvas cuando inicien una sesión en la aplicación. De este modo, podemos empezar a establecer relaciones con una interacción oportuna.
 
 También mantendremos las **Opciones basadas en la acción** tal como están, para que los usuarios sólo entren en el Canvas cuando inicien una sesión.
 
-![Un programa de entrada basado en acciones para introducir en el Canvas a los usuarios que inician cualquier sesión.]({% image_buster /assets/img/canvas_templates/email_signup4.png %}){: style="max-width:90%;"}
+\![Un programa de entrada basado en acciones para introducir en el Canvas a los usuarios que inician cualquier sesión.]({% image_buster /assets/img/canvas_templates/email_signup4.png %}){: style="max-width:90%;"}
 
 Para la **Ventana de entrada**, actualizaremos la **Hora de inicio (Obligatorio** ) a la fecha y hora que deseemos.
 
-![Una ventana de entrada con hora de inicio el 16 de enero de 2025 a las 12:30 h. Los usuarios introducirán este mensaje en su zona horaria local.]({% image_buster /assets/img/canvas_templates/email_signup5.png %}){: style="max-width:90%;"}
+Una ventana de entrada con hora de inicio el 16 de enero de 2025 a las 12:30 h. Los usuarios introducirán este mensaje en su zona horaria local.]({% image_buster /assets/img/canvas_templates/email_signup5.png %}){: style="max-width:90%;"}
 
 ### Paso 4: Selecciona la audiencia objetivo
 
 Definiremos nuestra audiencia objetivo como usuarios de Steppington que no tienen una dirección de correo electrónico en su perfil de usuario. Lo haremos manteniendo el [filtro de segmentación]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters) predeterminado de la plantilla `Email Available is false`.
 
-![Audiencia de entrada con el filtro "El correo electrónico disponible es falso".]({% image_buster /assets/img/canvas_templates/email_signup6.png %}){: style="max-width:90%;"}
+\![Audiencia de entrada con el filtro "Correo electrónico disponible es falso".]({% image_buster /assets/img/canvas_templates/email_signup6.png %}){: style="max-width:90%;"}
 
 ### Paso 5: Selecciona tu configuración de envío
 
 Mantendremos la configuración predeterminada de la suscripción, de modo que sólo enviemos a los usuarios que se hayan suscrito o hayan optado por recibir mensajes o notificaciones, y omitiremos las demás configuraciones (limitación de frecuencia, horas tranquilas y grupos de semilla).
 
-![Opciones de envío predeterminadas para enviar sólo a usuarios suscritos o con adhesión voluntaria.]({% image_buster /assets/img/canvas_templates/email_signup7.png %}){: style="max-width:90%;"}
+\![Opciones de envío predeterminadas para enviar sólo a usuarios suscritos o con adhesión voluntaria.]({% image_buster /assets/img/canvas_templates/email_signup7.png %}){: style="max-width:90%;"}
 
 ### Paso 6: Personaliza tu Canvas
 
@@ -83,7 +83,7 @@ Ahora, construiremos nuestro Canvas personalizando los canales y el contenido qu
 - La página 1 capturará los correos electrónicos.
 - La página 2 mostrará un mensaje de confirmación.
 
-![Dos páginas de un mensaje dentro de la aplicación para capturar correos electrónicos de usuarios y mostrar un mensaje de éxito.]({% image_buster /assets/img/canvas_templates/email_signup8.png %}){: style="max-width:90%;"}
+Dos páginas de un mensaje dentro de la aplicación para capturar correos electrónicos de usuarios y mostrar un mensaje de éxito.]({% image_buster /assets/img/canvas_templates/email_signup8.png %}){: style="max-width:90%;"}
 
 {:start="2"}
 2\. A partir de aquí, mantendremos el paso Ruta de acción **suscrita** tal como está. Este paso divide a nuestros usuarios en dos grupos en una ventana de un día:
@@ -92,7 +92,7 @@ Ahora, construiremos nuestro Canvas personalizando los canales y el contenido qu
 - Usuarios que no se han suscrito a Steppington con su correo electrónico
 
 {:start="3"}
-3\. A continuación, sustituye el cuerpo del correo electrónico por nuestro correo electrónico de confirmación de marca para el paso **Verificar mensaje de correo electrónico**. Esto enviará un correo electrónico a nuestros usuarios suscritos y les pedirá que confirmen su dirección de correo electrónico y que se suscriban a nuestra mensajería.
+3\. A continuación, sustituye el cuerpo del correo electrónico por nuestro correo electrónico de confirmación de marca para el paso **Verificar** mensaje de **correo** electrónico. Esto enviará un correo electrónico a nuestros usuarios suscritos y les pedirá que confirmen su dirección de correo electrónico y que se suscriban a nuestra mensajería.
 4\. Mantén el paso **Confirmar** ruta de acción de suscripción como está. Este paso divide aún más a nuestros usuarios entre los que han confirmado su correo electrónico y los que no lo han hecho, con un plazo de una semana.
 5\. Por último, actualiza el paso Mensaje de **bienvenida + descuento** con nuestro correo electrónico de confirmación que incluye un código promocional exclusivo.  
 

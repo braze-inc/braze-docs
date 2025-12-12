@@ -46,7 +46,7 @@ NSDictionary *brazeInfo = @{
 
 In Braze, navigate to **Partner Integrations** > **Technology Partners** and select **AppsFlyer**. 
 
-Here, you will find the REST endpoint and generate your Braze data import key. After the key is generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in AppsFlyer's dashboard.<br><br>![The "Data Import Using Cohort Import" box on the AppsFlyer technology page. In this box, you are shown the data import key and the REST endpoint.]({% image_buster /assets/img/appsflyer_audiences/appsflyer_data_import_key.png %}){: style="max-width:90%;"}
+Here, you can find the REST endpoint and generate your Braze data import key. After the key is generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in AppsFlyer's dashboard.<br><br>![The "Data Import Using Cohort Import" box on the AppsFlyer technology page. In this box, you are shown the data import key and the REST endpoint.]({% image_buster /assets/img/appsflyer_audiences/appsflyer_data_import_key.png %}){: style="max-width:90%;"}
 
 ### Step 3: Configure a Braze connection in AppsFlyer Audiences
 

@@ -1,5 +1,5 @@
 ---
-nav_title: Utilisation des recommandations
+nav_title: Utiliser les recommandations
 article_title: "Utiliser les recommandations d'articles dans vos messages"
 description: "Cet article explique comment utiliser les recommandations d'articles dans votre message."
 page_order: 1.2
@@ -19,25 +19,25 @@ Avant de pouvoir utiliser des recommandations dans vos messages, vous devrez [cr
 
 ## Utiliser des recommandations dans vos messages
 
-### Étape 1 : Ajouter le code Liquid
+### Étape 1 : Ajouter le code Liquid
 
 Une fois la formation de votre recommandation terminée, vous pouvez personnaliser vos messages avec Liquid pour y insérer les produits les plus populaires de ce catalogue.
 
 {% tabs local %}
-{% tab code préformaté %}
-![Modale "Ajouter une personnalisation" avec la recommandation d'articles comme type de personnalisation.]({% image_buster /assets/img/add_personalization.png %}){: style="max-width:30%;float:right;margin-left:15px;"}
+{% tab pre-formatted code %}
+\!["Ajouter une personnalisation" modale avec la recommandation d'article comme type de personnalisation.]({% image_buster /assets/img/add_personalization.png %}){: style="max-width:30%;float:right;margin-left:15px;"}
 
 Vous pouvez générer du liquide à partir de la section **Ajouter une personnalisation** dans votre compositeur de messages :
 
 1. Dans tous les compositeurs de messages qui prennent en charge la personnalisation, sélectionnez <i class="fa-solid fa-circle-plus" style="color: #12aec5;" title="Ajouter une personnalisation"></i> pour ouvrir la fenêtre de personnalisation.
-2. Pour le **type de personnalisation**, sélectionnez **Recommandation produit**.
+2. Pour le **type de personnalisation**, sélectionnez **Recommandation d'article.**
 3. Pour **Nom de la recommandation de l'élément**, sélectionnez la recommandation que vous venez de créer.
-4. Pour **Nombre de produits prédits**, indiquez le nombre de meilleurs produits que vous souhaitez insérer. Par exemple, vous pouvez afficher les trois produits les plus achetés.
+4. Dans la zone **Nombre d'articles prédits**, indiquez le nombre de produits supérieurs que vous souhaitez voir insérés. Par exemple, vous pouvez afficher les trois articles les plus achetés.
 5. Pour les **informations à afficher**, sélectionnez les champs du catalogue à inclure pour chaque article. Les valeurs de ces champs pour chaque article seront tirées du catalogue associé à cette recommandation.
 6. Sélectionnez l'icône **Copier** et collez le liquide à l'endroit voulu dans votre message.
 {% endtab %}
 
-{% tab code personnalisé %}
+{% tab custom code %}
 Vous pouvez écrire un code Liquid personnalisé en faisant référence à l'objet `product_recommendation` d'un catalogue. Il contient toutes les données de recommandation de produits générées dynamiquement pour ce catalogue, structurées sous la forme d'un tableau d'objets, où chaque objet représente un article recommandé.
 
 |Spécifications|Détails|
@@ -54,7 +54,7 @@ Utilisez l'étiquette `assign` pour récupérer les données de `product_recomme
 ```
 {% endraw %}
 
-Remplacez les éléments suivants :
+Remplacez les éléments suivants :
 
 |Marque substitutive|Description|
 |-----------|-----------|
@@ -86,15 +86,15 @@ Les recommandations de l'intelligence artificielle renvoient plusieurs produits 
 {% endtab %}
 {% endtabs %}
 
-### Étape 2 : Référencez une image (facultatif)
+### Étape 2 : Référencez une image (facultatif)
 
 Si le catalogue que vous recommandez comporte des liens vers des images, vous pouvez y faire référence dans votre message. 
 
 {% tabs %}
-{% tab Glisser-déposer%}
+{% tab Drag-and-drop%}
 Dans l'éditeur par glisser-déposer de l'e-mail, ajoutez un bloc d'image à votre e-mail, puis sélectionnez le bloc d'image pour ouvrir les **propriétés de l'image.**
 
-![Panneau des propriétés de l'image dans l'éditeur par glisser-déposer]({% image_buster /assets/img/image_with_liquid.png %}){: style="max-width:45%"}
+\![Panneau des propriétés de l'image dans l'éditeur par glisser-déposer]({% image_buster /assets/img/image_with_liquid.png %}){: style="max-width:45%"}
 
 Basculez sur **Image with Liquid**, puis ajoutez ce qui suit au champ **Dynamic URL :** 
 
@@ -105,7 +105,7 @@ Basculez sur **Image with Liquid**, puis ajoutez ce qui suit au champ **Dynamic 
 ```
 {% endraw %}
 
-Remplacez les éléments suivants :
+Remplacez les éléments suivants :
 
 |Marque substitutive|Description|
 |-----------|-----------|
@@ -126,7 +126,7 @@ Pour les références d'images HTML, définissez l'attribut image `src` sur le c
 ```
 {% endraw %}
 
-Remplacez les éléments suivants :
+Remplacez les éléments suivants :
 
 |Marque substitutive|Description|
 |-----------|-----------|

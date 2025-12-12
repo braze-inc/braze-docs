@@ -12,20 +12,20 @@ search_rank: 1
 
 > この記事では、キャンバスの作成、維持、およびテストに必要な手順について説明します。このガイドに従うか、[キャンバスの Braze ラーニングコース](https://learning.braze.com/quick-overview-canvas-setup)をご覧ください。
 
-{% details オリジナルのキャンバスエディター %}
-元のキャンバスエクスペリエンスを使用して、キャンバスを作成または複製することはできなくなりました。[キャンバスからキャンバスフローへ複製]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/)することをお勧めします。
+{% details Original Canvas editor %}
+元のキャンバスエクスペリエンスを使用して、キャンバスを作成または複製することはできなくなりました。Braze では、[ キャンバス]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/) を最新のエディタに複製することをお勧めします。
 {% enddetails %}
 
 ## キャンバスの作成
 
-### ステップ 1:新しいキャンバスを設定する 
+### ステップ 1: 新しいキャンバスを設定する 
 
 まず、**メッセージング**> **キャンバス**に移動し、次に**キャンバスの作成**を選択します。
 
 キャンバスビルダーは、命名からコンバージョンイベントを設定して適切なユーザーをカスタマージャーニーに導くまでのキャンバスの設定プロセスを、ステップごとに順を追って案内します。以下の各タブをクリックして、ビルダーの各ステップで調整できる設定を確認してください。
 
-{% tabs ローカル %}
-  {% tab 基本情報 %}
+{% tabs local %}
+  {% tab Basics %}
     ここでは、キャンバスの基本情報を設定します。
     \- キャンバスに名前を付ける
     \- チームを追加する
@@ -34,15 +34,15 @@ search_rank: 1
 
     Learn more about the [Basics step](#step-2a-set-up-your-canvas-basics).
   {% endtab %}
-  {% tab エントリースケジュール %}
-    ここでは、ユーザーがどのようにキャンバスに入るかを決定します。
+  {% tab Entry Schedule %}
+    ここでは、ユーザーs がキャンバスに入る方法と時期を決定します。
     \- スケジュール: これは時間ベースのキャンバスエントリです。
     \- アクションベース: ユーザーは定義されたアクションを実行した後、キャンバスに入ります。
     \- API トリガー: API リクエストを使用してキャンバスにユーザーを入れます。
 
     Learn more about the [Entry Schedule step](#step-2b-determine-your-canvas-entry-schedule).
   {% endtab %}
-  {% tab ターゲットオーディエンス %}
+  {% tab Target Audience %}
     ここでは、ターゲットオーディエンスを選択します。
     \- セグメントとフィルターを追加してオーディエンスを作成する
     \- キャンバスの再エントリとエントリ制限を微調整する
@@ -50,7 +50,7 @@ search_rank: 1
 
     Learn more about the [Target Audience step](#step-2c-set-your-target-entry-audience).
   {% endtab %}
-  {% tab 送信設定 %}
+  {% tab Send Settings %}
     ここでは、キャンバスの送信設定を選択します。
     \- サブスクリプションの設定を選択する
     \- キャンバスメッセージの送信レート制限を設定する
@@ -58,12 +58,12 @@ search_rank: 1
 
     Learn more about the [Send Settings step](#step-2d-select-your-send-settings).
   {% endtab %}
-  {% tab キャンバスを作成 %}
+  {% tab Build Canvas %}
     ここでは、キャンバスを作成します。
 
     Learn how to [build your Canvas](#step-3-build-your-canvas) using the Canvas builder.
   {% endtab %}
-  {% tab まとめ %}
+  {% tab Summary %}
     ここでは、キャンバスの詳細のまとめが表示されます。[キャンバスの承認ワークフロー]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/approvals/)をオンにしている場合は、一覧されたキャンバスの詳細を承認してからキャンバスを開始することができます。
 
   {% endtab %}
@@ -77,13 +77,13 @@ search_rank: 1
 キャンバスにタグを付けることで、検索とレポートの作成が簡単に行えるようになります。例えば、[レポートビルダー]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/)を使用する場合、特定のタグでフィルタリングできます。
 {% endalert %}
 
-![キャンバスの詳細ページ。キャンバス名、説明、場所、タグのフィールドがあります。]({% image_buster /assets/img/canvas_details.png %}){: style="max-width:70%;"}
+![キャンバスの詳細ページ。キャンバスの名前、説明、場所、およびタグs のフィールドが表示されます。]({% image_buster /assets/img/canvas_details.png %}){: style="max-width:70%;"}
 
 ##### コンバージョンイベントを選択する
 
 コンバージョンイベントのタイプを選択し、記録するコンバージョンを選択します。これらの[コンバージョンイベント]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/)によって、キャンバスの効果を測定します。 
 
-![「購入」のイベントタイプを持つ1次コンバージョンイベント A。3日間のコンバージョン期限内に何かを購入したユーザーとの会話を記録します。]({% image_buster /assets/img/add_canvas_conversions.png %})
+![Make Purchase コンバージョンイベント 型のプライマリコンバージョンイベント A は、3 日間のコンバージョン期限内に購買を行ったユーザーの対話を記録します。]({% image_buster /assets/img/add_canvas_conversions.png %})
 
 キャンバスに複数のバリアントやコントロールグループがある場合、Braze はこのコンバージョンイベントを使用して、このコンバージョン目標を達成するための最適なバリアントを決定します。同じロジックを使用して、複数のコンバージョンイベントを作成できます。
 
@@ -93,15 +93,15 @@ search_rank: 1
 
 ##### エントリスケジュールのタイプ
 
-{% tabs ローカル %}
-  {% tab スケジュール配信 %}
+{% tabs local %}
+  {% tab Scheduled Delivery %}
     スケジュールされた配信では、ユーザーのエントリが時間のスケジュールに従って決まります。これは、キャンペーンをスケジュールする方法と似ています。キャンバスを開始してすぐにユーザーを登録し、将来のある時点でジャーニーにエントリさせたり、定期的に (毎日、毎週、毎月など) エントリさせたりできます。 
 
     In this example, based on the time-based options, users will enter this Canvas every Tuesday at 12 pm in their local time zone every week, beginning November 14, 2025 until December 31, 2025.
 
     ![The "Entry Schedule" page with the type set to "Scheduled". Due to the selection, time-based options are shown, including frequency, start time, recurrence, days, and more.]({% image_buster /assets/img_archive/Canvas_Scheduled_Delivery.png %})
   {% endtab %}
-  {% tab アクション・ベース・デリバリー %}
+  {% tab Action-Based Delivery %}
     アクションベースの配信では、ユーザーはキャンバスに入り、アプリを開いたり、購入したり、カスタムイベントをトリガーしたりといった特定のアクションを行った後、メッセージを受け取り始めます。
 
     You can control other aspects of the Canvas behavior from the **Entry Audience** window, including rules for re-eligibility and frequency capping settings. Note that action-based delivery is unavailable for Canvas components with in-app messages.
@@ -109,7 +109,7 @@ search_rank: 1
     ![An example of action-based delivery. Users will enter the Canvas if they make a purchase with an entry window beginning at 1:30 pm on June 10, 2025.]({% image_buster /assets/img_archive/Canvas_Action_Based_Delivery.png %})
 
   {% endtab %}
-  {% tab API トリガー配信 %}
+  {% tab API-Triggered Delivery %}
     API トリガー配信では、ユーザーがキャンバスに入り、API 経由で [`/canvas/trigger/send` エンドポイント]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/)を使用してメッセージが追加されると、メッセージを受け取り始めます。ダッシュボードには、これを行い、[キャンバスエントリのプロパティオブジェクト]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/)を使用してオプションの [`canvas_entry_properties`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) も割り当てる、cURL リクエストの例があります。 
 
     ![An example of API-triggered delivery with a Canvas ID and an example of a cURL request.]({% image_buster /assets/img_archive/Canvas_API_Triggered_Delivery.png %})
@@ -124,7 +124,7 @@ search_rank: 1
 
 配信方法を選択したら、ユースケースに合わせて設定を調整し、続いてターゲットオーディエンスを設定します。
 
-{% details オリジナル・エディターを使用したキャンバスの重複排除動作 %}
+{% details Deduplicate behavior for Canvases using the original editor %}
 再適格性の期間がキャンバスの最大継続時間よりも短い場合、ユーザーに再エントリが許可され、複数のコンポーネントメッセージを受信することが可能です。ユーザーの再エントリが前のエントリと同じコンポーネントに到達したエッジケースでは、Braze がそのコンポーネントのメッセージの重複を除外します。 
 
 キャンバスに再エントリし、前回のエントリと同じコンポーネントに到達したユーザーに、エントリごとにアプリ内メッセージを受け取る資格がある場合、セッションを 2 回再開封すれば、ユーザーは (アプリ内メッセージの優先度に応じて) メッセージを 2 回受け取る可能性があります。
@@ -132,19 +132,19 @@ search_rank: 1
 
 #### ステップ1.3：エントリのターゲットオーディエンスを設定する
 
-**ターゲットオーディエンス**ステップでキャンバスのターゲットオーディエンスを設定できます。ジャーニーに参加できるのは、定義した条件に一致するユーザーだけです。つまり、Braze は、ユーザーがキャンバスジャーニーに入る前に、まずターゲットオーディエンスの適格性を評価します。例えば、新規ユーザーをターゲットにしたい場合、初めてアプリを使用したのが1週間以内のユーザーをセグメントとして選択することができる。
+定義された条件に一致するユーザーのみが、**Target オーディエンス** ステップにジャーニーを入力できます。つまり、最初に**の対象オーディエンスを評価してから** ユーザーがキャンバスのジャーニーに入ります。例えば、新規ユーザーをターゲットにしたい場合、初めてアプリを使用したのが1週間以内のユーザーをセグメントとして選択することができる。
 
-[**エントリコントロール**] では、キャンバスの実行がスケジュールされるたびに、ユーザーの数を制限できます。APIトリガーベースおよびアクションベースのキャンバスでは、この制限はUTC時間ごとに発生する。 
+**入力制御**では、キャンバスの実行がスケジュールされたになるたびにユーザーの回数を制限できます。APIトリガーベースおよびアクションベースのキャンバスでは、この制限はUTC時間ごとに発生する。 
 
-{% alert warning %}
-オーディエンスフィルターと同じトリガー (属性の変更やカスタムイベントの実行など) でアクションベースのキャンペーンやキャンバスを設定しないでください。ユーザーがトリガーイベントを行った時点でオーディエンスに含まれないという競合状態が発生する可能性があり、そうするとユーザーはキャンペーンを受け取れず、キャンバスにも入ることができません。  
+{% alert important %}
+オーディエンスフィルターと同じトリガー (属性の変更やカスタムイベントの実行など) でアクションベースのキャンペーンやキャンバスを設定しないでください。[競合]({{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions) は、ユーザーがトリガーを実行した時点でオーディエンスにない場合に発生することがあります。つまり、キャンペーンを受信したりキャンバスに入ったりすることはありません。
 {% endalert %}
 
 ##### オーディエンスのテスト
 
 ターゲットオーディエンスにセグメントとフィルターを追加した後、[ユーザーを検索]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/)してオーディエンス基準に一致しているかを確認することで、オーディエンスが期待どおりに設定されているかどうかをテストできます。
 
-![[ユーザー検索] フィールド。外部ユーザー ID または Braze ID で検索できます。]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:100%;"}{: style="max-width:80%;"}
+![" ユーザー Lookup" フィールド。外部ユーザー ID またはBraze ID で検索できます。]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:100%;"}{: style="max-width:80%;"}
 
 ##### エントリコントロールの選択
 
@@ -152,7 +152,7 @@ search_rank: 1
 
 たとえば、**Limit entrance volume**を選択し、**Maximum entries**フィールドを、制限ケイデンスとして**Daily**を持つユーザー5000人に設定した場合、キャンバスは1日に5000人のユーザーにのみ送信します。
 
-![[エントリーコントロール] ページに [ユーザーがこのキャンバスに再エントリできるようにする] および [エントリ数の制限] のチェックボックスが表示されます。後者では、最大エントリ数を設定し、毎日、キャンバスの存続時間、またはキャンバスがスケジュールされるたびに制限するかどうかを設定できます。]({% image_buster /assets/img_archive/entry_controls.png %})
+!["Entry Controls" &quot のチェックボックスを表示するページ;ユーザーがCanvas&quot を再入力できるようにする; " Limit entrance volume"後者では、最大限のエントリーを設定し、毎日、キャンバスの存続時間、またはキャンバスがスケジュールされたになるたびに制限するかどうかを設定できます。]({% image_buster /assets/img_archive/entry_controls.png %})
 
 {% alert tip %}
 Braze では、IP ウォームアップの目的で [**キャンバスがスケジュールされるごと**] 機能を使用することを推奨していません。これにより、送信量が増加する可能性があるためです。
@@ -173,7 +173,7 @@ Braze では、IP ウォームアップの目的で [**キャンバスがスケ�
 
 ターゲットユーザーの平均生涯収益などの追加統計を表示するには、「**追加統計を表示**」を選択する。
 
-![ターゲット層の内訳 (正確な統計情報を表示するオプション付き)。]({% image_buster /assets/img_archive/canvas_exact_stats.png %})
+![正確な統計を計算するオプション付きのターゲット人口の内訳。]({% image_buster /assets/img_archive/canvas_exact_stats.png %})
 
 ##### ターゲットオーディエンスの数が到達可能なユーザーの数と異なる理由
 
@@ -194,14 +194,14 @@ Braze では、IP ウォームアップの目的で [**キャンバスがスケ�
 これらのサブスクリプション設定はステップごとに適用されるため、エントリオーディエンスへの影響はありません。したがって、この設定は、ユーザーがキャンバスの各ステップを受け取るための適格性を評価するために使用されます。
 
 {% alert important %}
-この設定では、**ターゲットオーディエンス**ステップに、オーディエンスを 1 つのチャネルに制限するフィルターを含めないでください (`Push Enabled = True` や `Email Subscription = Opted-In` など)。
+この設定では、**ターゲットオーディエンス**ステップに、オーディエンスを 1 つのチャネルに制限するフィルターを含めないでください (`Foreground Push Enabled = True` や `Email Subscription = Opted-In` など)。
 {% endalert %}
 
 必要に応じて、キャンバスにサイレント時間 (メッセージを送信しない時間帯) を指定します。[**送信設定**] で [**サイレント時間を有効にする**] をオンにします。次に、ユーザーの現地時間でサイレント時間を選択し、そのサイレント時間内にメッセージがトリガーされた場合の後続のアクションを選択します。
 
-![[サイレント時間] サイレント時間を有効にするチェックボックスを表示するページ。有効にすると、開始時刻、終了時刻、およびフォールバック動作を設定できます。]({% image_buster /assets/img/quiet_hours.png %})
+!["Quiet Hours" 静かな時間を有効にするチェックボックスを表示するページ。有効にすると、開始時刻、終了時刻、およびフォールバックの動作を設定できます。]({% image_buster /assets/img/quiet_hours.png %})
 
-### ステップ2:キャンバスを作成する
+### ステップ 2: キャンバスを作成する
 
 {% alert tip %}
 [Braze キャンバステンプレート]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_templates/#available-braze-templates)を使用することで、キャンバスの作成にかかるに時間を短縮し、効率化できます。事前に作成されたテンプレートのライブラリーから、あなたのユースケースに合ったテンプレートを見つけ、特定のニーズに合わせてカスタマイズしよう。
@@ -209,24 +209,24 @@ Braze では、IP ウォームアップの目的で [**キャンバスがスケ�
 
 #### ステップ 2.1:バリアントを追加する
 
-![[バリアントを追加] ボタンを選択すると、[バリアントを追加] オプションを含むコンテキストメニューが表示されます。]({% image_buster /assets/img_archive/canvas_add_variant.gif %}){: style="float:right;max-width:40%;margin-left:15px;"}
+!["Add Variant"ボタンを選択すると、"Add Variant"オプションを含むコンテキストメニューが表示されます。]({% image_buster /assets/img_archive/canvas_add_variant.gif %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
 [**バリアントを追加**] を選択し、キャンバスに新しいバリアントを追加します。バリアントはユーザーがたどるジャーニーを表し、複数のステップや分岐を含めることができます。
 
 <i class="fas fa-plus-circle"></i> プラスボタンを選択して、さらにバリアントを追加できます。新しいバリアントを追加すると、ユーザーの配分方法を調整できるため、さまざまなエンゲージメント戦略の効果を相互比較して分析できます。
 
-![Braze キャンバスの2つのバリアントの例。]({% image_buster /assets/img_archive/Canvas_Multiple_Variants.png %})
+![2つのサンプルバリアントはBrazeキャンバス内にあります。]({% image_buster /assets/img_archive/Canvas_Multiple_Variants.png %})
 
 {% alert tip %}
 デフォルトでは、ユーザーがキャンバスに入るときにキャンバスバリアントの割り当てがロックされます。つまり、ユーザーが最初にバリアントに入った場合、キャンバスに再エントリするたびにそのバリアントが使用されます。ただし、この動作を回避する方法があります。<br><br>これを行うには、Liquid を使用して乱数ジェネレーターを作成します。これを各ユーザーのキャンバスエントリの先頭で実行し、値をカスタム属性として保存してから、その属性を使用してユーザーをランダムに分けることができます。
 
-{% details 展開して手順を表示 %}
+{% details Expand for steps %}
 
-1. 乱数を保存するカスタム属性を作成します。「lottery_number」や「random_assignment」など、見つけやすい名前を付けます。属性は[ダッシュボードで]({{site.baseurl}}/user_guide/data/custom_data/managing_custom_data/)作成するか、[`/users/track` エンドポイント]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)への API 呼び出しを通じて作成できます。<br><br>
+1. 乱数を保存するカスタム属性を作成します。"lottery_number" または"random_assignment". 属性は、ダッシュボード で[ を作成するか、[`/users/track` エンドポイント]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) のAPI 呼び出しを使用して作成できます。<br><br>
 2. キャンバスの始めに Webhook キャンペーンを作成します。このキャンペーンは、そこに乱数を作成し、カスタム属性として保存する媒体となります。詳細は、「[Webhook の作成]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#step-1-set-up-a-webhook)」を参照してください。URL を `/users/track` エンドポイントに設定します。<br><br>
 3. 乱数ジェネレーターを作成します。これは、[ここに概説されているコード](https://community.shopify.com/c/technical-q-a/is-there-any-way-to-generate-random-number-with-liquid-shopify/m-p/1595486)を使用して行うことができます。このコードは、各ユーザの一意の入力時間を利用して乱数を作成します。Webhook キャンペーン内で、結果の数値を Liquid 変数として設定します。<br><br>
 4. Webhook キャンペーンの `/users/track` 呼び出しをフォーマットして、ステップ 1 で作成したカスタム属性を、現在のユーザーのプロファイルで生成した乱数に設定します。このステップを実行すると、ユーザーがキャンペーンに入るたびに変化する乱数を作成することができます。<br><br>
-5. キャンバスの分岐を調整して、ランダムに選んだバリアントで分けるのではなく、オーディエンスルールに基づいて分けるように設定します。各分岐のオーディエンスルールで、カスタム属性に応じてオーディエンスフィルターを設定します。<br><br>例えば、ある分岐でオーディエンスフィルターを「lottery_number が 3 未満」に設定し、別の分岐では「lottery_number が 3 以上 6 未満」に設定します。
+5. キャンバスの分岐を調整して、ランダムに選んだバリアントで分けるのではなく、オーディエンスルールに基づいて分けるように設定します。各分岐のオーディエンスルールで、カスタム属性に応じてオーディエンスフィルターを設定します。<br><br>たとえば、あるブランチでは"lottery_number が3&quot より小さい場合があります。オーディエンス フィルターとして、別のブランチでは"lottery_number が3 より大きく6" より小さい場合があります。
 
 {% enddetails %}
 {% endalert %}
@@ -239,10 +239,10 @@ Braze では、IP ウォームアップの目的で [**キャンバスがスケ�
 ステップを追加し始めると、ズームレベルを切り替えて、詳細にフォーカスしたり、ユーザージャーニー全体を表示したりできます。<kbd>Shift</kbd> + <kbd>+</kbd> でズームイン、<kbd>Shift</kbd> + <kbd>-</kbd> でズームアウトします。
 {% endalert %}
 
-![Braze キャンバスに遅延ステップを追加するコンポーネント検索ウィンドウ。]({% image_buster /assets/img_archive/add_components_flow.png %}){: style="max-width:80%;"}
+![Brazeキャンバスに遅延ステップを追加するコンポーネント検索ウィンドウ。]({% image_buster /assets/img_archive/add_components_flow.png %}){: style="max-width:80%;"}
 
-{% alert warning %}
-キャンバスフローを使用して構築されたキャンバスには、最大 200 ステップを含めることができます。キャンバスが 200 ステップを超えると読み込みに問題が発生します。
+{% alert important %}
+キャンバスには最大200 個のステップを追加できます。キャンバスが200 ステップ s を超えると、読み込むリングの問題が発生することがあります。
 {% endalert %}
 
 ##### 最大期間
@@ -253,13 +253,13 @@ Braze では、IP ウォームアップの目的で [**キャンバスがスケ�
 
 ユーザージャーニーのステップを編集したいことがあります。キャンバスのワークフローに応じた方法を以下で確認してください。
 
-コンポーネントのいずれかを選択することで、キャンバスフローワークフローの任意のステップを編集できます。例えば、ワークフローの最初のステップである[遅延]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/)コンポーネントを特定の日に変更したいとします。ステップを選択して設定を表示し、3月1日までの遅延を調整する。すると、ユーザーは 3 月 1 日にキャンバスの次のステップに移行します。
+キャンバスワークフロー内の任意のステップを編集するには、任意のコンポーネントを選択します。例えば、ワークフローの最初のステップである[遅延]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/)コンポーネントを特定の日に変更したいとします。ステップを選択して設定を表示し、3月1日までの遅延を調整する。すると、ユーザーは 3 月 1 日にキャンバスの次のステップに移行します。
 
-![遅延が [特定の日付まで] に設定された「遅延」ステップの例。]({% image_buster /assets/img_archive/edit_delay_flow.png %})の例
+![例 "Delay" 遅延が &quot に設定されたステップ;特定の日まで。"]({% image_buster /assets/img_archive/edit_delay_flow.png %})
 
 または、[アクションパス]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/)ステップの [**アクション設定**] の編集および調整を迅速に行って、ユーザーを一定の期間留めておくこともできます。これは、この評価期間中のアクションに基づいて、次のパスに優先順位を付けます。
 
-![評価ウィンドウが1日に設定された、キャンバスの2番目のステップアクション設定」。]({% image_buster /assets/img_archive/action_paths_flow.png %})
+![キャンバスの"Action Settings" の2 番目のステップ。評価ウィンドウが1 日に設定されています。]({% image_buster /assets/img_archive/action_paths_flow.png %})
 
 キャンバスの軽量コンポーネントによってシンプルな編集が可能になり、キャンバスの細かい調整を簡単に行うことができます。 
 
@@ -274,12 +274,12 @@ Braze では、IP ウォームアップの目的で [**キャンバスがスケ�
 
 メッセージコンポーネントは、ユーザーに送信されるメッセージを管理します。[**メッセージングチャネル**] を選択し、[**配信設定**] を調整してキャンバスメッセージングを最適化できます。このコンポーネントの詳細については、「[メッセージ]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/)」を参照してください。
 
-![Android のプッシュ、コンテンツカード、メールなど、使用可能なメッセージングチャネルの一覧を表示する [メッセージングチャネル] が選択された [メッセージの設定] ステップ。]({% image_buster /assets/img_archive/message_setup_settings_flow.png %})
+!["Messages"ステップを"メッセージング チャネル s&quotで設定;androidプッシュ、コンテンツカード s、メールなど、使用可能なメッセージング チャネルの一覧を表示する選択。]({% image_buster /assets/img_archive/message_setup_settings_flow.png %})
 
 キャンバスコンポーネントの設定が完了したら、[**完了**] をクリックします。
 
-{% tabs ローカル %}
-{% tab キャンバスエントリのプロパティ %}
+{% tabs local %}
+{% tab Canvas Entry Properties %}
 
 `canvas_entry_properties` はキャンバスの作成のエントリスケジュールステップで設定され、キャンバスにユーザーを入れるトリガーを指定します。これらのプロパティは、API トリガーキャンバスのエントリペイロードのプロパティにもアクセスできます。`canvas_entry_properties` オブジェクトは最大50KB まで可能であることに注意してください。 
 
@@ -291,10 +291,10 @@ Braze では、IP ウォームアップの目的で [**キャンバスがスケ�
 
 {% endtab %}
 
-{% tab イベントのプロパティ %}
+{% tab Event Properties %}
 イベントプロパティは、カスタムイベントや購入イベントの発生時に設定できるプロパティです。これらの `event_properties` は、アクションベースの配信を伴うキャンペーンおよびキャンバスで使用できます。 
 
-キャンバスフローでは、アクションパスステップに続く任意のメッセージステップで、カスタムイベントと購入イベントのプロパティを Liquid で使用できます。これらの `event_properties` を参照する場合は、{% raw %} ``{{event_properties.${property_name}}}``{% endraw %} という Liquid を使用します。メッセージコンポーネントでこのように使用するには、これらのイベントがカスタムイベントまたは購入イベントである必要があります。
+キャンバスでは、カスタムイベントおよび購入イベントプロパティは、アクションパスステップに続く任意のメッセージステップのリキッドで使用できます。これらの `event_properties` を参照する場合は、{% raw %} ``{{event_properties.${property_name}}}``{% endraw %} という Liquid を使用します。メッセージコンポーネントでこのように使用するには、これらのイベントがカスタムイベントまたは購入イベントである必要があります。
 
 アクションパスに続く最初のメッセージステップでは、そのアクションパスで参照されるイベントに関連する `event_properties` を使用できます。このアクションパスステップとメッセージステップの間に、他のステップ (別のアクションパスやメッセージステップではない) があってもかまいません。なお、`event_properties` にアクセスできるのは、メッセージステップが、アクションパスステップの「その他のユーザー」以外のパスに遡ることができる場合のみです。
 
@@ -305,7 +305,7 @@ Braze では、IP ウォームアップの目的で [**キャンバスがスケ�
 
 ステップ間で接続を移動するには、2 つのコンポーネントを接続する矢印を選択し、別のコンポーネントを選択します。接続を削除するには、キャンバスのコンポーザーのフッターで、矢印の後に続く「**接続をキャンセル**」を選択する。
 
-### ステップ 3:コントロールグループの追加
+### ステップ 3: コントロールグループの追加
 
 キャンバスにコントロールグループを追加するには、<i class="fas fa-plus-circle"></i> プラスボタンを選択して、新しいバリアントを追加する。 
 
@@ -315,7 +315,7 @@ Braze は、コントロールグループに含まれるユーザーのコン�
 
 この例では、キャンバスを 2 つのバリアントに分割しています。1 つ目のバリアントには、ユーザーの 70% が含まれています。2 つ目のバリアントは、残りの 30% のユーザーが含まれるコントロールグループです。
 
-![Braze Canvas のバリアントの例。70% は"Variant 1" に移動します。これは、最初のステップで1 日間遅延し、2 番目のステップでメッセージを送信します。残りの30% は、フォローアップ手順のない「コントロール」に送られます。]({% image_buster /assets/img_archive/Canvas_Multivariate_Flow.png %})
+![たとえば、70% が" バリアント 1" に移動するBraze キャンバスのバリアント。これは、最初のステップで1 日間遅延し、2 番目のステップでメッセージを送信します。残りの30%は"Control&quotに進み、フォローアップステップはありません。]({% image_buster /assets/img_archive/Canvas_Multivariate_Flow.png %})
 
 #### キャンバスのインテリジェントセレクション
 
@@ -323,19 +323,19 @@ Braze は、コントロールグループに含まれるユーザーのコン�
 
 多変量キャンバスを使用すると、コピーだけでなく、タイミングやチャネルもテストできることに留意してください。インテリジェントセレクションにより、キャンバスをより効率的にテストでき、ユーザーを可能な限り最適なキャンバスジャーニーに送ることができるようになります。
 
-![[バリアント分布を編集] ページで [インテリジェントセレクション] オプションが有効になります。キャンバスを分析して最適化すると、ページ全体に横向きのバーが表示されます。このバーは複数のセクションに分割され、それぞれ色とサイズが異なります。これは視覚的な表現にすぎず、特定の分析には相関しません。]({% image_buster /assets/img_archive/canvas_intelligent_selection.png %})
+!["Intelligent Selection"オプションは、"Edit Variant Distribution"ページで有効になります。キャンバスを分析して最適化すると、ページ全体に横向きのバーが表示されます。このバーは複数のセクションに分割され、それぞれ色とサイズが異なります。これは視覚的な表現に過ぎず、具体的な分析とは相関しません。]({% image_buster /assets/img_archive/canvas_intelligent_selection.png %})
 
 キャンバスのインテリジェントセレクションは、並べ替えで各バリアントに分けられるユーザーの分布を段階的にリアルタイムで調整することで、キャンバスの結果を最適化します。統計アルゴリズムがバリアントの中で決定的な勝者を決定すると、パフォーマンスの低いバリアントを除外し、キャンバスのすべての将来の適格な受信者を勝者バリアントに割り当てます。 
 
 このため、新規ユーザーが頻繁に入るキャンバスではインテリジェントセレクションが最適です。
 
-### ステップ 4:保存して開始
+### ステップ 4: 保存して開始
 
 キャンバスの作成が完了したら、「**キャンバスを起動**」を選択してキャンバスを保存し、起動する。キャンバスを開始した後、[**キャンバスの詳細**] ページで、ジャーニーの分析結果をリアルタイムで確認できるようになります。 
 
 後で見直す必要がある場合は、キャンバスを下書きとして保存することもできます。
 
-![Braze のキャンバスの例。]({% image_buster /assets/img_archive/Canvas_Analytics.png %})
+![Brazeのサンプルキャンバス。]({% image_buster /assets/img_archive/Canvas_Analytics.png %})
 
 {% alert tip %}
 キャンバスを開始した後で変更したい場合もあります。その場合には編集が可能です。詳細は、「[開始後にキャンバスを編集する]({{site.baseurl}}/post-launch_edits/)」を参照してください。

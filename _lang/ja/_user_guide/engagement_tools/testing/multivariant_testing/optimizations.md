@@ -10,7 +10,7 @@ description: "多変量テストと AB テストを作成する際に、勝者�
 
 1回送信するようにスケジュールされたメール、プッシュ、Webhook、SMS、WhatsApp キャンペーンの [AB テストを作成する]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/)際に、最適化を選択できます。最適化には2つのオプションがあります。**勝利バリアント**と**パーソナライズされたバリアント**。
 
-![目的のオーディエンスを選択するときに、AB テストの項に記載されている最適化オプション。次の3 つのオプションが表示されます。最適化なし、勝利バリアント、および個人用バリアント。パーソナライズされたバリアントが選択されています。]({% image_buster /assets/img_archive/ab_personalized_variant.png %})
+![AB テストの項に記載されている最適化オプションは、目的のオーディエンスを選択する際に使用します。次の3 つのオプションが表示されます。最適化なし、勝利バリアント、および個人用バリアント。Personalized Variant が選択されます。]({% image_buster /assets/img_archive/ab_personalized_variant.png %})
 
 どちらのオプションも、ターゲットセグメントの一定の割合に初期テストを送信することで機能します。テスト終了後、オーディエンスの残りのユーザーには、最もパフォーマンスの高いバリアント (勝者バリアント) またはエンゲージメントの可能性が最も高いバリアント (パーソナライズされたバリアント) のいずれかが送信されます。
 

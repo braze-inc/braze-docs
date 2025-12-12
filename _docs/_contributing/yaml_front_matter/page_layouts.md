@@ -1,6 +1,6 @@
 ---
 nav_title: Page layouts
-article: Page layouts
+article_title: Page layouts
 description: "These are the page layouts that can be assigned to the `page_layout` key in a page's YAML front matter."
 page_order: 2
 noindex: true
@@ -56,7 +56,7 @@ layout: dev_guide
 
 ### `featured`
 
-The `featured` layout is used to apply the featured page format. In the following example, this format is applied to the [Predictive Events]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_events) page.
+The `featured` layout is used to apply the featured page format. In the following example, this format is applied to the [Predictive Events]({{site.baseurl}}/user_guide/brazeai/predictive_events/) page.
 
 ```markdown
 ---
@@ -134,7 +134,7 @@ In the following example, `_docs/_contributing/content_management/images.md` is 
 
 ```markdown
 nav_title: Images
-article: Managing Images
+article_title: Managing Images
 description: "Learn how to add, modify, and remove images on Braze Docs."
 page_order: 1
 

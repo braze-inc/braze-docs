@@ -1,42 +1,42 @@
 ---
-nav_title: Directrices de correo electrónico
-article_title: Directrices de correo electrónico
+nav_title: Directrices para el correo electrónico
+article_title: Directrices para el correo electrónico
 page_order: 1
 page_type: reference
-description: "En este artículo se incluyen consejos y trucos generales que debe tener en cuenta a la hora de crear campañas de correo electrónico para distintos casos de uso y temas."
+description: "Este artículo trata de consejos y trucos generales que debes tener en cuenta a la hora de crear campañas de correo electrónico para diversos casos de uso y temas."
 channel: email
 
 ---
 
-# Directrices de correo electrónico
+# Directrices para el correo electrónico
 
-> A la hora de crear una campaña de correo electrónico, es importante tener en cuenta cómo se reciben los mensajes en los distintos usuarios y proveedores de servicios de correo electrónico (ESP). 
+> Al crear tu campaña de correo electrónico, es importante que tengas en cuenta cómo se reciben tus mensajes de mensajería entre tus distintos usuarios y proveedores de servicios de correo electrónico (ESP). 
 
-Estos son algunos consejos rápidos que debes tener en cuenta al elaborar tu contenido:
+He aquí algunos consejos rápidos que debes tener en cuenta al elaborar tu contenido:
 
 - Cuando formatees tu correo electrónico, utiliza hojas de estilo en línea como CSS.
-- Para utilizar una plantilla de correo electrónico para las versiones móvil y de escritorio, mantenga la anchura por debajo de 500 píxeles.
+- Para utilizar una plantilla de correo electrónico tanto para la versión móvil como para la de escritorio, mantén la anchura por debajo de 500 píxeles.
 - Las imágenes cargadas en la plantilla de correo electrónico deben ocupar menos de 5 MB. Los formatos admitidos son PNG, JPEG y GIF.
 - No establezcas alturas y anchuras para las imágenes, ya que esto provocará espacios en blanco innecesarios en un correo electrónico degradado.
-- No se deberían usar etiquetas `div` ya que la mayoría de los clientes de correo electrónico no admiten su uso. En su lugar, utilice tablas anidadas.
+- `div` ya que la mayoría de los clientes de correo electrónico no admiten su uso. En su lugar, utiliza tablas anidadas.
 - Evita utilizar JavaScript porque no funciona con ningún ESP.
 - Braze mejora los tiempos de carga utilizando una CDN global para alojar todas las imágenes de correo electrónico.
 
 ### Implementar texto alternativo
 
-Dado que los filtros de spam buscan tanto una versión HTML como una versión en texto plano de un mensaje, utilizar alternativas en texto plano es una buena forma de reducir la puntuación de spam. Además, el texto alternativo `(alt="")` puede servir para complementar y, en algunos casos, sustituir a las imágenes incluidas en el cuerpo del mensaje que hayan sido filtradas por el proveedor de correo electrónico del usuario. Los lectores de pantalla anuncian el texto alternativo para explicar las imágenes, por lo que se trata de una oportunidad para utilizar el lenguaje llano para proporcionar información clave sobre una imagen.
+Dado que los filtros de correo no deseado buscan tanto la versión HTML como la de texto sin formato de un mensaje, utilizar alternativas de texto sin formato es una forma estupenda de reducir tu puntuación de correo no deseado. Además, el texto alternativo `(alt="")` puede servir para complementar y, en algunos casos, sustituir a las imágenes incluidas en el cuerpo de tu correo electrónico que puedan haber sido filtradas por el proveedor de correo electrónico del usuario. Los lectores de pantalla anuncian el texto alternativo para explicar las imágenes, por lo que ésta es una oportunidad para utilizar el lenguaje llano para proporcionar información clave sobre una imagen.
 
 ### Validación del correo electrónico
 
 {% alert important %}
-La validación se utiliza para las direcciones de correo electrónico del panel de control, las direcciones de correo electrónico de los usuarios finales (sus clientes) y las direcciones de remitente y destinatario de respuesta de un mensaje de correo electrónico.
+La validación se utiliza para las direcciones de correo electrónico del panel de control, las direcciones de correo electrónico del usuario final (tus clientes) y las direcciones de origen y de respuesta a de un mensaje de mensajería.
 {% endalert %}
 
-La validación del correo electrónico se realiza cuando la dirección de correo electrónico de un usuario se ha actualizado o se está importando en Braze a través de la API, la carga CSV, el SDK o se ha modificado en el panel de control. Tenga en cuenta que sus direcciones de correo electrónico no pueden incluir espacios en blanco, y si se envían utilizando la API, los espacios en blanco darán lugar a un error 400.
+La validación del correo electrónico se realiza cuando se ha actualizado la dirección de correo electrónico de un usuario o se está importando a Braze mediante API, carga CSV, SDK o modificando en el panel. Ten en cuenta que tus direcciones de correo electrónico no pueden incluir espacios en blanco, y si se envían utilizando la API, los espacios en blanco provocarán un error 400.
 
-Las direcciones de correo electrónico dirigidas a través de los servidores Braze deben ser validadas según las normas [RFC 2822](https://datatracker.ietf.org/doc/html/rfc2822), Braze no acepta ciertos caracteres y los reconoce como no válidos. Si un correo electrónico es rebotado, Braze marca el correo electrónico como no válido y el estado de la suscripción no se modifica. 
+Las direcciones de correo electrónico dirigidas a través de los servidores Braze deben validarse según las normas [RFC 2822](https://datatracker.ietf.org/doc/html/rfc2822), Braze no acepta determinados caracteres y los reconoce como no válidos. Si un correo electrónico es rebotado, Braze marca el correo electrónico como no válido y el estado de la suscripción no se modifica. 
 
-{% details Caracteres no aceptados fuera de las normas RFC %}
+{% details Unaccepted characters outside of RFC standards %}
 - *
 - /
 - ?
@@ -56,20 +56,20 @@ Las direcciones de correo electrónico dirigidas a través de los servidores Bra
 - ,
 {% enddetails %}
 
-### Establecer direcciones de origen y de respuesta
+### Configuración de las direcciones de origen y de respuesta a
 
-Cuando configure sus direcciones "de", asegúrese de que su dominio de correo electrónico "de" coincide con su dominio de envío (como `marketing.yourdomain.com`). Si no lo hace, puede producirse una desalineación entre SPF y DKIM. Todos los correos electrónicos de respuesta se pueden configurar en tu dominio raíz.
+Cuando configures tus direcciones "de", asegúrate de que tu dominio de correo electrónico "de" coincide con tu dominio de envío (como `marketing.yourdomain.com`). Si no lo haces, puede producirse una desalineación entre SPF y DKIM. Todos los correos electrónicos de respuesta se pueden configurar en tu dominio raíz.
 
 {% alert note %}
 No se admite la codificación Unicode en las direcciones "de".
 {% endalert %}
 
-### Comprobación de los detalles HTML
+### Comprobar detalles HTML
 
-Tenga en cuenta que algunas etiquetas y atributos HTML no están permitidos, ya que pueden permitir la ejecución de código malicioso en el navegador.
+Ten en cuenta que algunas etiquetas y atributos HTML no están permitidos, ya que podrían permitir la ejecución de código malicioso en el navegador.
 
-Consulte las siguientes listas de etiquetas y atributos HTML que no están permitidos en sus mensajes de correo electrónico:
-{% details Ampliar para etiquetas HTML no permitidas %}
+Consulta las siguientes listas de etiquetas y atributos HTML que no están permitidos en tus correos electrónicos:
+{% details Expand for disallowed HTML tags %}
 - `<!doctype>`
 - `<applet>`
 - `<bgsound>`
@@ -87,7 +87,7 @@ Consulte las siguientes listas de etiquetas y atributos HTML que no están permi
 - `<svg>`
 {% enddetails %}
 
-{% details Ampliar para atributos HTML no permitidos %}
+{% details Expand for disallowed HTML attributes %}
 - `<animationend>`
 - `<animationiteration>`
 - `<animationstart>`

@@ -1,20 +1,20 @@
 ---
-nav_title: Modification de votre campagne après le lancement
-article_title: Modification de votre campagne après le lancement
+nav_title: Modifier votre campagne après son lancement
+article_title: Modifier votre campagne après son lancement
 page_order: 1
 tool: Campaigns
 page_type: reference
-description: "Le présent article de référence donne un aperçu du résultat de la modification de certains aspects d’une campagne après son lancement."
+description: "Cet article de référence donne un aperçu du résultat de la modification de certains aspects d'une campagne après son lancement."
 
 ---
 
-# Modification de votre campagne après le lancement
+# Modifier votre campagne après son lancement
 
-> Le présent article donne un aperçu du résultat de la modification de certains aspects d’une campagne après son lancement.
+> Cet article donne un aperçu des résultats obtenus en modifiant certains aspects d'une campagne après son lancement.
 
 ## Arrêter votre campagne
 
-Pour arrêter une campagne, ouvrez la page des **détails de votre campagne** et sélectionnez **Arrêter la campagne**. Lorsqu’une campagne est arrêtée :
+Pour arrêter une campagne, ouvrez la page des **détails de** votre **campagne** et sélectionnez **Arrêter la campagne**. Lorsqu'une campagne est arrêtée :
 
 - Les messages dont l'envoi est planifié sont annulés.
 - Les tests A/B dont le test initial a déjà été envoyé seront définitivement annulés.
@@ -30,7 +30,7 @@ Si ces campagnes ont été déclenchées mais n'ont pas encore été envoyées (
 
 ### Campagnes planifiées
 
-Si vous devez apporter des modifications à une campagne après son lancement, prenez note des éléments suivants lors de la modification de votre campagne pour vérifier que vos modifications ont les effets souhaités.
+Si vous devez apporter des modifications à une campagne après son lancement, prenez note des éléments suivants lorsque vous modifiez votre campagne afin de vérifier que vos changements ont les effets escomptés.
 
 ### Contenu du message
 
@@ -38,22 +38,22 @@ Toute modification du contenu des messages (y compris les titres, les corps et l
 
 ### Planification et audience
 
-Si vous modifiez l’heure d’envoi planifiée de votre campagne ou son audience, ces changements sont reflétés immédiatement dans la campagne réelle.
+Si vous modifiez l'heure d'envoi prévue de votre campagne ou son audience, ces changements sont immédiatement répercutés dans la campagne elle-même.
 
-### Taux d’envoi
+### Taux d'envoi
 
-Lorsque vous utilisez une limitation du taux d’envoi, Braze « planifie » vos messages dans des créneaux horaires avec une granularité à l’échelle de la minute, donc si vous souhaitez modifier le débit d’envoi des messages, respectez le processus suivant pour effectuer des changements immédiats.
+Lorsque vous utilisez une limite de débit, Braze "planifie" vos messages dans des créneaux horaires de l'ordre de la minute. Par conséquent, si vous souhaitez modifier la vitesse d'envoi des messages, suivez la procédure suivante pour effectuer des changements immédiats.
 
 ## Apporter des changements immédiats
 
-Si vous avez besoin que les modifications prennent effet immédiatement, procédez comme suit :
+Si vous souhaitez que les modifications prennent effet immédiatement, procédez comme suit :
 
 1. Arrêtez la campagne affectée.
 2. Dupliquez la campagne.
-3. Effectuez des modifications sur la campagne dupliquée.
+3. Modifiez la campagne en double.
 
 {% alert important %}
-Cela réinitialise l’admissibilité des personnes qui ont déjà reçu la campagne originale, vous devrez donc peut-être filtrer la campagne dupliquée aux personnes qui n’ont pas reçu l’original.
+Cette opération réinitialise l'éligibilité des personnes qui ont déjà reçu la campagne originale. Il se peut donc que vous deviez filtrer la campagne dupliquée pour les personnes qui n'ont pas reçu la campagne originale.
 {% endalert %}
 
 ## Enregistrer les brouillons des campagnes actives {#campaign-drafts}
@@ -70,7 +70,7 @@ Pour créer un brouillon, procédez comme suit :
 2. Effectuez vos modifications.
 3. Sélectionnez **Enregistrer comme brouillon**. Notez qu'après avoir créé un brouillon, vous ne pouvez pas modifier la campagne active tant que vous n'avez pas lancé ou abandonné votre brouillon.
 
-![Un projet de campagne active avec une option pour visualiser la campagne active.]({% image_buster /assets/img/campaign_draft.png %})
+Une ébauche d'une campagne active avec une option permettant de visualiser la campagne active.]({% image_buster /assets/img/campaign_draft.png %})
 
 Lorsque vous modifiez le projet, vous pouvez également faire référence à la campagne active dans l'en-tête du projet de campagne ou dans le pied de page de l'analyse/analytique de la campagne. 
 

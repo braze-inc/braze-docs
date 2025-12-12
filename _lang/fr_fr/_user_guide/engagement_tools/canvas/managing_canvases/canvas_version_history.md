@@ -3,44 +3,44 @@ nav_title: Historique des versions de Canvas
 article_title: Historique des versions de Canvas
 alias: "/canvas_version_history/"
 page_order: 2
-description: "Cet article de référence explique comment gérer l'historique des versions de votre Canvas."
+description: "Cet article de référence explique comment gérer l'historique des versions de Canvas."
 page_type: reference
 tool: Canvas
 ---
 
 # Historique des versions de Canvas
 
-> L’historique des versions vous permet d’afficher et d’accéder aux analyses Canvas et aux parcours utilisateur de toutes les versions précédentes de votre Canvas. 
+> L'historique des versions vous permet de visualiser et d'accéder aux analyses/analytiques de Canvas et aux parcours des utilisateurs pour toute version antérieure de votre Canvas. 
 
-Se référer à l'historique des versions de votre Canvas peut être particulièrement utile pour maintenir un enregistrement de l'évolution d'un Canvas. Par exemple, si vous effectuez un changement à grande échelle, vous pouvez vous référer aux versions précédentes de Canvas pour mieux comprendre comment vos flux de travail ont progressé.
+Consulter l'historique des versions de votre Canvas peut s'avérer particulièrement utile pour conserver une trace de l'évolution d'un Canvas. Par exemple, si vous effectuez une modification à grande échelle, vous pouvez faire référence aux versions précédentes de Canvas pour mieux comprendre l'évolution de vos flux de travail.
 
 ## Gestion des versions
 
-![]({% image_buster /assets/img_archive/canvas_version_history.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
+\![]({% image_buster /assets/img_archive/canvas_version_history.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
-Pour créer une nouvelle version, cliquez sur **Mettre à jour Canvas**. Cela vous permet d’effectuer des modifications sans écraser la configuration précédente de Canvas. Lorsqu’une nouvelle version de Canvas est créée, les utilisateurs déjà dans Canvas progressent dans le flux de travail de la nouvelle version. Les utilisateurs qui entrent dans Canvas entreront également dans la nouvelle version. 
+Pour créer une nouvelle version, cliquez sur **Mettre à jour le canvas.** Cela vous permet d'apporter des modifications sans écraser la configuration précédente du Canvas. Lorsqu'une nouvelle version du Canvas est créée, les utilisateurs déjà présents dans le Canvas progresseront dans le flux de travail de la nouvelle version. Les utilisateurs qui entrent dans le Canvas entreront également dans la nouvelle version. 
 
-Pour accéder à l'historique des versions, accédez aux détails de votre Canvas en haut de votre Canvas et sélectionnez **\# Versions**. Ici, vous avez accès à la barre latérale **Historique des versions**. Sélectionnez l’une des versions du Canvas dans la barre latérale pour afficher et comparer les détails de celui-ci. Pour basculer entre les analyses de Canvas et la configuration de Canvas, cliquez sur **Voir les analyses** ou **Voir Canvas** dans la barre d'outils en bas.
+Pour accéder à l'historique des versions, naviguez vers vos détails Canvas en haut de votre Canvas et sélectionnez **\# Versions**. Ici, vous avez accès à la barre latérale de l'**historique des versions.**  Sélectionnez l'une des versions de Canvas dans la barre latérale pour afficher et comparer les détails de Canvas. Pour basculer entre l'analyse/analytique du canvas et la configuration du canvas, cliquez sur **View Analytics** ou **View Canvas** dans la barre d'outils inférieure.
 
 {% alert note %}
-Les toiles répertoriées sous **Historique des versions** sont en mode lecture seule.
+Les toiles listées sous **Historique des versions** sont en consultation seulement.
 {% endalert %}
 
-Pour afficher la liste des modifications apportées à une version pendant qu'elle était active, sélectionnez **Afficher les modifications** dans la barre latérale de l'historique des versions. Vous pouvez également afficher toutes les modifications associées à une version dans le journal des modifications Canvas. 
+Pour afficher une liste des modifications apportées à une version pendant qu'elle était active, sélectionnez **Voir les modifications** dans la barre latérale de l'historique des versions. Vous pouvez également consulter toutes les modifications associées à une version dans le journal des modifications de Canvas. 
 
-Notez que si vous n'avez apporté aucune modification entre le lancement d'un Canvas et la création d'une deuxième version, aucun changement n'apparaîtra dans **Voir les modifications** pour la première version du Canvas.
+Notez que si vous n'avez effectué aucune modification entre le lancement d'un canvas et la création d'une deuxième version, aucun changement n'apparaîtra dans **Voir les modifications** pour la première version du canvas.
 
-Au fur et à mesure que votre historique de versions augmente, vous pouvez également renommer chaque version dans la barre latérale pour rester organisé. Par défaut, les noms de version sont générés sous forme de nombre en fonction du nombre de versions précédemment créées. Si vous renommez une version alors qu’elle n’est plus active, elle apparaîtra dans le journal des modifications Canvas, mais pas dans le journal des modifications de la version dans l’affichage de l’historique des versions.
+Au fur et à mesure que l'historique des versions augmente, vous pouvez également renommer chaque version dans la barre latérale pour rester organisé. Par défaut, les noms de version sont générés sous la forme d'un nombre basé sur le nombre de versions créées précédemment. Si vous renommez une version alors qu'elle n'est plus active, cela apparaîtra dans le journal des modifications de Canvas, mais pas dans le journal des modifications de la version dans la vue de l'historique des versions.
 
-![Exemple de journal des modifications de Canvas montrant que deux nouvelles versions de Canvas ont été créées.]({% image_buster /assets/img_archive/canvas_version_history_changelog.png %}){: style="max-width:85%" }
+!exemple de journal des modifications de Canvas montrant que deux nouvelles versions de Canvas ont été créées.]({% image_buster /assets/img_archive/canvas_version_history_changelog.png %}){: style="max-width:85%" }
 
-### Suppression des versions
+### Abandon des versions
 
-Vous pouvez créer jusqu’à 10 versions par Canvas. Si vous atteignez cette limite, vous pouvez supprimer une version pour faire de la place pour une nouvelle. Notez que les versions sont supprimées lorsque vous cliquez sur **Supprimer**, et non lorsque vous mettez à jour le canvas. La suppression d’une version est reflétée dans le journal des modifications global de Canvas, et non dans le journal des modifications d’une version spécifique.
+Vous pouvez créer jusqu'à 10 versions par Canvas. Si vous atteignez cette limite, vous pouvez supprimer une version pour faire de la place à une nouvelle. Notez que les versions sont supprimées lorsque vous cliquez sur **Supprimer**, et non lorsque vous mettez à jour le canvas. L'abandon d'une version est reflété dans le journal des modifications de Canvas, et non dans le journal des modifications d'une version spécifique.
 
-Si vous rejetez une version, la configuration Canvas sera immédiatement perdue, mais les analyses associées à la version supprimée seront conservées. 
+Si vous abandonnez une version, la configuration de Canvas sera immédiatement perdue, mais les analyses/analytiques associées à la version abandonnée seront conservées. 
 
-## Afficher les analyses
+## Visualisation de l'analyse/analytique (si utilisée anjective)
 
-Dans l’historique des versions, vous pouvez afficher l’analyse au niveau du Canvas et de ses étapes. Dans l’affichage de la version Canvas, les données seront renseignées pour toute la plage de dates, pas seulement pour la plage de dates de cette version. Cependant, au niveau de l’étape, l’analyse ne sera affichée que pour les étapes qui existaient alors que cette version était active. Ces analyses se rempliront en utilisant les jours du calendrier qui correspondent au fuseau horaire de votre entreprise, de sorte que les analyses ne seront pas spécifiques à l'heure exacte de la journée où la version a été créée.
+Dans l'historique des versions, vous pouvez consulter des analyses au niveau du canvas et des étapes. Dans la vue de la version Canvas, les données s'affichent pour l'ensemble de la plage de dates, et pas seulement pour la plage de dates de cette version. Cependant, au niveau des étapes, l'analyse/analytique ne sera affichée que pour les étapes qui existaient lorsque cette version était active. Ces analyses seront alimentées par des jours calendaires correspondant au fuseau horaire de votre entreprise, de sorte que les analyses ne seront pas spécifiques à l'heure exacte de la journée à laquelle la version a été créée.
 

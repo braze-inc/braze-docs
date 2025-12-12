@@ -1,8 +1,8 @@
-{% multi_lang_include developer_guide/prerequisites/android.md %} [プッシュ通知の設定]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=android)も必要です。
+{% multi_lang_include developer_guide/prerequisites/android.md %} [プッシュ通知の設定も]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=android)必要だ。
 
 ## 設定
 
-Braze ダッシュボード経由で送信されるFireOS プッシュ通知には、利用可能な高度な設定が多数あります。この記事では、これらの機能とそれらを効果的に使用する方法について説明します。
+Brazeダッシュボードから送信されるFireOSプッシュ通知には、多くの詳細設定が用意されている。この記事では、これらの機能とそれらを効果的に使用する方法について説明します。
 
 ![]({% image_buster /assets/img_archive/android_advanced_settings.png %})
 
@@ -14,13 +14,13 @@ Braze ダッシュボード経由で送信されるFireOS プッシュ通知に�
 
 要約テキストを使用すると、拡張通知ビューに追加のテキストを設定できます。画像付きの通知のキャプションとしても機能します。
 
-![Androidのメッセージで、タイトルが"Greetings from Appboy!"、メッセージ"これはメッセージ本文です!emojis." およびsummary text "これは要約テキストです。"]({% image_buster /assets/img_archive/summary_text.png %}){: style="max-width:65%;"}
+![タイトルが「This is the title for the notification.」、要約テキストが「This is the summary text for the notification.」の Android メッセージ。]({% image_buster /assets/img/android/push/collapsed-android-notification.png %}){: style="max-width:65%;"}
 
-要約テキストは、展開されたビューのメッセージ本文の下に表示されます。
+要約テキストは、展開されたビューのメッセージ本文の下に表示されます。 
+
+![タイトルが「This is the title for the notification.」、要約テキストが「This is the summary text for the notification.」の Android メッセージ。]({% image_buster /assets/img/android/push/expanded-android-notification.png %}){: style="max-width:65%;"}
 
 画像を含むプッシュ通知の場合、折りたたまれたビューにはメッセージテキストが表示され、通知が展開されると、要約テキストが画像のキャプションとして表示されます。 
-
-!["Appboy!"というタイトルのAndroidメッセージ、メッセージ"これはメッセージ本文。。"および要約テキスト"これはSummary Text."]({% image_buster /assets/img_archive/messagesummary.gif %}){: style="max-width:65%;"}
 
 ### カスタム URI {#custom-uri}
 
@@ -36,11 +36,11 @@ Braze ダッシュボード経由で送信されるFireOS プッシュ通知に�
 
 プッシュ通知の優先度レベルは、通知トレイ内で他の通知と比較して通知がどのように表示されるかに影響します。また、通常のメッセージや優先度の低いメッセージは、バッテリー寿命を延ばすために遅延がわずかに長くなったり、バッチ処理で送信されたりするのに対し、優先度の高いメッセージは常に即座に送信されるため、配信の速度と方法にも影響する可能性があります。
 
-Android O では、通知の優先度が通知チャネルのプロパティになりました。開発者と協力して設定中にチャネルの優先度を定義し、ダッシュボードを使用して通知音を送信するときに適切なチャネルを選択する必要があります。O より前のバージョンのAndroid を実行しているデバイスでは、FireOS 通知の優先順位レベルをBraze ダッシュボードとメッセージングAPI で指定できます。 
+Android O では、通知の優先度が通知チャネルのプロパティになりました。開発者と協力して設定中にチャネルの優先度を定義し、ダッシュボードを使用して通知音を送信するときに適切なチャネルを選択する必要があります。AndroidのバージョンがOより前の端末では、ダッシュボードとメッセージングAPIを使ってFireOS通知の優先度を指定することができる。 
 
-特定の優先度でフルユーザーベースにメッセージを送信するには、[通知チャネル設定](https://developer.android.com/training/notify-user/channels#importance) (ターゲットO+ デバイスへ) *および* によって優先度を間接的に指定し、個々の優先度をダッシュボード(<O デバイスへ) から送信することをお勧めします。
+全ユーザー群に特定の優先順位をメッセージングするには、[通知チャネル設定から](https://developer.android.com/training/notify-user/channels#importance)優先順位を間接的に指定し（O+デバイスをターゲットにする）*、*ダッシュボードから個々の優先順位を送信する（<Oデバイスをターゲットにする）ことを推奨する。
 
-Fire OS プッシュ通知で設定できる優先順位は次のとおりです。
+Fire OSのプッシュ通知で設定できる優先度は以下の通りだ：
 
 | 優先順位 | 説明／使用目的 | `priority` 値 (API メッセージ用) |
 |----------|--------------------------|-------------------------------------|
@@ -51,7 +51,7 @@ Fire OS プッシュ通知で設定できる優先順位は次のとおりです
 | 最小      | コンテキストまたは背景情報 | `-2` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-詳細については、Googleの[Android通知](http://developer.android.com/design/patterns/notifications.html)ドキュメントを参照してください。
+詳細については、Googleの[Android通知](http://developer.android.com/design/patterns/notifications.html)ドキュメントを参照のこと。
 
 ### サウンド {#sounds}
 
@@ -63,4 +63,4 @@ Android O より前のバージョンを実行しているデバイスの場合�
 
 完全なサウンドリソース URI (例: `android.resource://com.mycompany.myapp/raw/mysound`) をダッシュ​​ボードプロンプトに入力します。
 
-特定のサウンドでフルユーザーベースをメッセージするには、[通知チャネル設定](https://developer.android.com/training/notify-user/channels) (ターゲットO+ デバイスへ) *および* によってサウンドを間接的に指定し、ダッシュボードから個別のサウンド(ターゲット<O デバイスへ)を送信することをお勧めします。
+特定のサウンドを全ユーザー群にメッセージングするには、[通知チャネル](https://developer.android.com/training/notify-user/channels)設定で間接的にサウンドを指定し（O+デバイスをターゲットにする）*、*ダッシュボードから個々のサウンドを送信する（<Oデバイスをターゲットにする）ことを推奨する。

@@ -28,7 +28,7 @@ SMS メッセージはセグメント単位で請求されます。請求を理�
 
 Braze を使用して SMS のキャンペーンやキャンバスを作成するときに作成画面で作成したメッセージは、ユーザーの携帯電話にメッセージが配信されたときに表示される代表的なものですが、**メッセージがどのようにセグメントに分割され、最終的にどのように課金されるかを示すものではありません**。送信されるセグメント数を理解し、発生する可能性のある超過料金を認識することはお客様の責任ですが、当社では理解を容易にするためのいくつかのリソースを提供しています。当社独自の[セグメント計算ツール](#segment-calculator)を確認してください。
 
-![]({% image_buster /assets/img/sms_segment_pic.png %}){: style="border:0;"}
+\![]({% image_buster /assets/img/sms_segment_pic.png %}){: style="border:0;"}
 
 #### セグメントの内訳
 
@@ -43,7 +43,7 @@ Braze を使用して SMS のキャンペーンやキャンバスを作成する
 エンコーディングの種類に関係なく、Brazeから送信される各SMSメッセージは最大10セグメントまでで、[Liquidテンプレート]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/)、[コネクテッドコンテンツ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/)、絵文字、リンクに対応している。
 
 {% tabs %}
-{% tab GSM-7エンコーディング %}
+{% tab GSM-7 encoding %}
 | 文字数｜セグメント数|
 | -------------------- | ----------------- |
 | 0 ～ 160 文字 | 1 セグメント
@@ -58,7 +58,7 @@ Braze を使用して SMS のキャンペーンやキャンバスを作成する
 | 1378～1530文字｜10セグメント｜英語
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
-{% tab UCS-2エンコーディング %}
+{% tab UCS-2 encoding %}
 | 文字数｜セグメント数|
 | -------------------- | ----------------- |
 | 0～70文字｜1セグメント
@@ -410,68 +410,109 @@ function countLength(type, s) {
 }
 
 function updateSMSSplit(){
-    var sms_text = $('#sms_message_split').val();
-    var sms_type = $('#sms_split input[name=sms_type]:checked').val();
-    var unicodeinput = smsutil.unicodeCharacters(sms_text);
-    var encodedChars = encoder[sms_type](sms_text);
-    var smsSegments = segmenter[sms_type](unicodeinput);
+    varsms_text = $('#sms_message_split').val();
+    varsms_type = $('#sms_split input[name=sms_type]:checked').val();
+    var unicodeinput = 以下のようになる。 smsutil.unicodeCharacters(sms_text);
+    var encodedChars = エンコーダー[sms_type](sms_text);
+    var smsSegments = セグメンテーション[sms_type](unicodeinput);
     $('#sms_length').html(countLength(sms_type, sms_text));
     $('#sms_segments').html(smsSegments.length);
     const segmentColors = (i) =>`segment_color_${i > 3 ? i%3 : i}` ；
-    const segmentsHtml = smsSegments.map((segment,segment_index) =>  segment.bytes.map((byte, i) => `<div id='sms_segments_data_${segment_index}-${i}' class='segment ${segmentColors(segment_index)}'>${byte.map(b => smsutil.hexEncode(b)).join(" ")}</div>`).join(""));
-    const messageOutput = smsSegments.map((segment,segment_index) =>  segment.text.map((ch, i) => `<div id='message_output_data_${segment_index}-${i}' class='message_output_char ${segmentColors(segment_index)}'>${ch !== " " ? ch : "&nbsp;"}</div>`).join(""));
+    const segmentsHtml =smsSegments.map((segment,segment_index) =>segment.bytes.map((byte, i) =>`<div id='sms_segments_data_${segment_index}-${i}' class='segment ${segmentColors(segment_index)}'>${byte.map(b => smsutil.hexEncode(b)).join(" ")}</div>`).join(""))；
+    const messageOutput =smsSegments.map((segment,segment_index) =>segment.text.map((ch, i) =>`<div id='message_output_data_${segment_index}-${i}' class='message_output_char ${segmentColors(segment_index)}'>${ch !== " " ? ch : "&nbsp;"}</div>`).join(""))；
     $('#sms_output').html(messageOutput);
     $('#sms_segments_data').html(segmentsHtml);
     $('#segment_section').click(function() {
-if($(this).is(":checked")) {
-$("#sms_segments_data").show();
-}
+      if($(this).is(":checked")){
+        $("#sms_segments_data").show();
+      }
       else {
         $("#sms_segments_data").hide();
       }
-      })
-        }
-      const implementHover = (hover_id, input_id_prefix, output_id_prefix) => {
-    $(hover_id).mouseover(function(e){
-var input_id = e.target.id;
-var index = input_id.split(input_id_prefix)[1];
-  if(!index) {
-    return;
+    })
+}
+const implementHover =(hover_id, input_id_prefix, output_id_prefix) => {.
+  $(hover_id).mouseover(function(e){
+    varinput_id =e.target.id ；
+    var インデックス = input_id.split(input_id_prefix)[1];
+    if(!index) {
+      return;
     }
-    var output_id = `#${output_id_prefix}${index}`;
-      $(`${output_id}, #${input_id}`).addClass("hover_segment");
+    varoutput_id =`#${output_id_prefix}${index}` ；
+    $(`${output_id}, #${input_id}`).addClass("hover_segment");
     $(`#${input_id}`).mouseleave(function() {)
     $(`${output_id}, #${input_id}`).removeClass("hover_segment");
-    });
-    });
-    };
-  //メッセージ出力にセグメントをハイライトする
+  });
+});
+};
+//メッセージ出力にセグメントをハイライトする
 implementHover("#sms_segments_data", "sms_segments_data_", "message_output_data_");
 // セグメントに出力されるメッセージを強調表示する
 implementHover("#sms_output", "message_output_data_", "sms_segments_data_");
 $('#sms_message_split').on("input", function(e){
-$('#auto_encoding').html("");
-updateSMSSplit();
-});
-  $('#sms_split input[name=sms_type]').change(function(e){
   $('#auto_encoding').html("");
-updateSMSSplit();
+  updateSMSSplit();
 });
-    </script>
+$('#sms_split input[name=sms_type]').change(function(e){
+    $('#auto_encoding').html("");
+    updateSMSSplit();
+});
+</script>
 
 {% endalert %}
 
-## RCS メッセージの計算
+## RCSメッセージング
 
-RCS メッセージは、メッセージ単位で請求されます。請求を理解するには、請求対象となる RCS メッセージの種類を理解しておくことが重要です。
+RCSメッセージは、その内容とメッセージが配信された国に基づいて課金される。コストを正確に見積もるには、さまざまなメッセージの種類とその請求方法を理解することが不可欠だ。
 
-### RCS請求可能メッセージタイプ
+### RCSの請求タイプ
 
-RCS メッセージはいくつかの方法で請求されます。Braze で現在サポートされている2種類の請求方法は、ベーシック RCS とシングル RCS です。 
+当社のプラットフォームは、グローバルモデルと米国モデルの2つの主要な課金モデルをサポートしている。
 
-- **基本的なRCSメッセージ**：160文字以内のテキストのみのメッセージング。 
-- **シングル RCS メッセージ:**160文字を超えるテキストのみのメッセージ、またはリッチエレメントを含むメッセージ。リッチ要素には、画像やボタン（返信先提案やアクション提案など）が含まれる。
+#### グローバルモデル（米国以外のマーケット）
 
-対応する請求タイプは、RCS メッセージ作成画面で、次の2つの値のいずれかを持つラベルとして表示されます。**テキストのみのRCS**（ベーシックRCS）と**RCS**（シングルRCS）。
+メッセージングはメッセージごとに課金され、ベーシックまたはシングルに分類される。
 
-RCS課金タイプのデータは、[メッセージ使用状況ダッシュボードに]({{site.baseurl}}/message_usage_dashboard/)入力され、クレジット比率と使用メッセージクレジット数を指定することで、メッセージクレジットの消費量が表示される。 
+{% tabs local %}
+{% tab Basic %}
+
+基本RCSメッセージは160文字までのテキストのみのメッセージで、1通のメッセージとして課金される。
+
+{% alert note %}
+ボタンやリッチエレメントを追加すると、メッセージタイプはSingle RCSメッセージに変更される。
+{% endalert %}
+
+{% endtab %}
+{% tab Single %}
+
+シングルRCSメッセージとは、160文字を超えるメッセージ、またはボタンやメディアなどのリッチ要素を含むメッセージのことである。これらはメッセージの長さに関係なく、1つのメッセージとして請求される。
+
+{% alert note %}
+テキスト・メッセージと別のメディア・ファイルを送信しても、2つの異なるメッセージとして請求される。
+{% endalert %}
+
+{% endtab %}
+{% endtabs %}
+
+#### 米国モデル
+
+メッセージングはリッチとリッチメディアのどちらかに分類される。
+
+{% tabs local %}
+{% tab Rich messages %}
+
+リッチメッセージとは、ボタンの有無にかかわらず、テキストのみのメッセージのことである。セグメンテーションごとに課金され、**各セグメンテーションは**160UTF-8バイトに制限されている。160文字のプレーンな英語のメッセージは1セグメンテーションだが、長いテキストや絵文字を含むメッセージは複数のセグメンテーションになる可能性がある。
+
+{% endtab %}
+{% tab Rich media messages %}
+
+リッチメディアメッセージには、メディアファイル（画像、動画）またはリッチカードが含まれ、1つのメッセージとして課金される。
+
+{% endtab %}
+{% endtabs %}
+
+### メッセージ作成画面とメッセージ使用状況ダッシュボード
+
+メッセージ作成画面では、ラベル（ベーシックRCS、シングルRCS、リッチ、リッチメディア）により課金タイプがリアルタイムで表示されるため、送信前にコストを把握することができる。
+
+[メッセージ使用状況ダッシュボードには]({{site.baseurl}}/message_usage_dashboard/)、これらの課金タイプが反映され、米国のメッセージに使用されたセグメンテーション数が表示される。

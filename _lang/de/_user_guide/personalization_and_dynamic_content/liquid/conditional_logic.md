@@ -8,7 +8,7 @@ description: "In diesem Referenzartikel erfahren Sie, wie Tags in Ihren Kampagne
 
 # Logik für bedingtes Messaging
 
-> [Mit den Tags][7] können Sie Programmierlogik in Ihre Messaging-Kampagnen integrieren. Tags können für die Ausführung von bedingten Anweisungen sowie für fortgeschrittene Anwendungsfälle, wie die Zuweisung von Variablen oder die Iteration durch einen Codeblock, verwendet werden. <br><br>Auf dieser Seite erfahren Sie, wie Tags verwendet werden können und sollten, z. B. wie Sie null, nil und leere Attributwerte berücksichtigen und wie Sie auf benutzerdefinierte Attribute verweisen.
+> [Tags](https://docs.shopify.com/themes/liquid-documentation/tags) erlauben es Ihnen, Programmierlogik in Ihre Messaging-Kampagnen einzubauen. Tags können für die Ausführung von bedingten Anweisungen sowie für fortgeschrittene Anwendungsfälle, wie die Zuweisung von Variablen oder die Iteration durch einen Codeblock, verwendet werden. <br><br>Auf dieser Seite erfahren Sie, wie Tags verwendet werden können und sollten, z. B. wie Sie null, nil und leere Attributwerte berücksichtigen und wie Sie auf benutzerdefinierte Attribute verweisen.
 
 ## Formatieren von Tags
 
@@ -42,7 +42,7 @@ Buy now! Would 5% off convince you?
 
 ## Bedingte Logik
 
-Sie können viele Arten von [intelligenter Logik in Nachrichten einfügen][1], wie z. B. eine bedingte Anweisung. Das folgende Beispiel verwendet [conditionals][8] ], um eine Kampagne zu internationalisieren:
+Sie können viele Arten von [intelligenter Logik in Nachrichten](http://docs.shopify.com/themes/liquid-documentation/basics) einfügen, z.B. eine bedingte Anweisung. Das folgende Beispiel verwendet [Konditionalitäten](http://docs.shopify.com/themes/liquid-documentation/tags/control-flow-tags), um eine Kampagne zu internationalisieren:
 {% raw %}
 
 ```liquid
@@ -121,7 +121,7 @@ Wenn Sie mit diesem Tutorial fertig sind, werden Sie in der Lage sein, Tags mit 
 
 {% endraw %}
 
-{% details Vollständiger Liquid-Code %}
+{% details Full Liquid code %}
 
 {% raw %}
 ```liquid
@@ -165,7 +165,7 @@ Mit dem folgenden Tag können Sie eine Nachricht für Nutzer:innen mit einem Att
 ```
 {% endraw %} 
 
-![Eine Beispielnachricht im Braze-Dashboard, die das Attribut „Vorname“ mit Null belegt.][36]{: style="max-width:60%;"}
+![Eine Beispielnachricht im Braze-Dashboard, die das Attribut 'Vorname' mit Null belegt.]({% image_buster /assets/img/value_null.png %}){: style="max-width:60%;"}
 
 {% raw %}
 ```liquid
@@ -196,11 +196,11 @@ Mit dem folgenden Tag können Sie eine Nachricht für Nutzer:innen angeben, die 
 
 ## Verweis auf angepasste Attribute
 
-Nachdem Sie [angepasste Attribute][2] erstellt haben, können Sie diese angepassten Attribute in Ihrem Liquid-Messaging referenzieren.
+Nachdem Sie [angepasste Attribute erstellt]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#managing-custom-attributes) haben, können Sie diese angepassten Attribute in Ihrem Liquid Messaging referenzieren.
 
 Wenn Sie eine bedingte Logik verwenden, müssen Sie den Datentyp des angepassten Attributs kennen, um sicherzustellen, dass Sie die richtige Syntax verwenden. Suchen Sie auf der Seite **Benutzerdefinierte Attribute** im Dashboard nach dem Datentyp, der mit Ihrem benutzerdefinierten Attribut verknüpft ist, und verweisen Sie dann auf die folgenden Beispiele, die für jeden Datentyp aufgeführt sind.
 
-![Auswählen eines Datentyps für ein benutzerdefiniertes Attribut. Das angegebene Beispiel zeigt ein Favorite_Category-Attribut mit dem Datentyp String.][20]{: style="max-width:80%;"}
+![Auswahl eines Datentyps für ein angepasstes Attribut. Das Beispiel zeigt ein Attribut von Favorite_Category mit dem Datentyp String.]({% image_buster /assets/img_archive/custom_attribute_data_type.png %}){: style="max-width:80%;"}
 
 {% alert tip %}
 Bei Strings und Arrays sind gerade Apostrophe erforderlich, während Boolesche und ganze Zahlen niemals Apostrophe haben.
@@ -208,7 +208,7 @@ Bei Strings und Arrays sind gerade Apostrophe erforderlich, während Boolesche u
 
 #### Boolesch
 
-[Die Booleschen Werte][9] sind Binärwerte und können entweder auf `true` oder `false` festgelegt werden, z. B. `registration_complete: true`. Boolesche Werte haben keine Apostrophe um sie herum.
+[Boolesche]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#booleans) Werte sind binäre Werte und können entweder auf `true` oder `false` gesetzt werden, wie z.B. `registration_complete: true`. Boolesche Werte haben keine Apostrophe um sie herum.
 
 {% raw %}
 
@@ -220,7 +220,7 @@ Bei Strings und Arrays sind gerade Apostrophe erforderlich, während Boolesche u
 
 #### Zahl
 
-[Zahlen][10] sind numerische Werte, bei denen es sich um ganze Zahlen oder Gleitkommazahlen handeln kann. Ein:e Nutzer:in kann zum Beispiel `shoe_size: 10` oder `levels_completed: 287` haben. Zahlenwerte haben keine Apostrophe um sie herum.
+[Zahlen]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#numbers) sind numerische Werte, die ganze Zahlen oder Gleitkommazahlen sein können. Ein:e Nutzer:in kann zum Beispiel `shoe_size: 10` oder `levels_completed: 287` haben. Zahlenwerte haben keine Apostrophe um sie herum.
 
 {% raw %}
 
@@ -242,7 +242,7 @@ Sie können auch andere [grundlegende Operatoren](https://shopify.dev/docs/theme
 
 #### String
 
-Ein [String][11] besteht aus alphanumerischen Zeichen und speichert Daten über Ihre Nutzer:innen. Sie können zum Beispiel `favorite_color: red` oder `phone_number: 3025981329` haben. String-Werte müssen mit Apostrophen versehen werden.
+Ein [String]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#strings) besteht aus alphanumerischen Zeichen und speichert Daten über Ihre Nutzer:innen. Sie können zum Beispiel `favorite_color: red` oder `phone_number: 3025981329` haben. String-Werte müssen mit Apostrophen versehen werden.
 
 {% raw %}
 
@@ -256,7 +256,7 @@ Für Strings können Sie sowohl „==“ als auch „contains“ in Ihrem Liquid
 
 #### Array
 
-Ein [Array][12] ist eine Liste mit Informationen über Ihren Benutzer. Ein Benutzer kann zum Beispiel `last_viewed_shows: stranger things, planet earth, westworld` haben. Array-Werte müssen mit Hochkommata versehen werden.
+Ein [Array]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#arrays) ist eine Liste mit Informationen über Ihre Nutzer:innen. Ein Benutzer kann zum Beispiel `last_viewed_shows: stranger things, planet earth, westworld` haben. Array-Werte müssen mit Hochkommata versehen werden.
 
 {% raw %}
 
@@ -270,7 +270,7 @@ Für Arrays müssen Sie „contains“ verwenden und können nicht „==“ verw
 
 #### Uhrzeit
 
-Ein Zeitstempel, der angibt, wann ein Event stattgefunden hat. [Die Werte von][13] müssen mit einem [mathematischen Filter][5] versehen sein, damit sie in der bedingten Logik verwendet werden können.
+Ein Zeitstempel, wann ein Ereignis stattgefunden hat. [Zeitwerte]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#time) müssen mit einem [mathematischen Filter]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/#math-filters) versehen sein, damit sie in der bedingten Logik verwendet werden können.
 
 {% raw %}
 
@@ -281,15 +281,3 @@ Ein Zeitstempel, der angibt, wann ein Event stattgefunden hat. [Die Werte von][1
 {% endraw %}
 
 
-[36]:{% image_buster /assets/img/value_null.png %}
-[1]: http://docs.shopify.com/themes/liquid-documentation/basics
-[2]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#managing-custom-attributes
-[5]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/#math-filters
-[7]: https://docs.shopify.com/themes/liquid-documentation/tags
-[8]: http://docs.shopify.com/themes/liquid-documentation/tags/control-flow-tags "Control Flow Tags"
-[9]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#booleans
-[10]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#numbers
-[11]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#strings
-[12]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#arrays
-[13]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#time
-[20]: {% image_buster /assets/img_archive/custom_attribute_data_type.png %}

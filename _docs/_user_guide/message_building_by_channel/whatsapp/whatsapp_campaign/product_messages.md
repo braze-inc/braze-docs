@@ -15,16 +15,12 @@ channel:
 
 > Product messages empower you to send interactive WhatsApp messages that showcase products directly from your Meta catalog.
 
-{% alert important %}
-WhatsApp product messages are currently in early access and are planned to have rolling updates through the early access duration. Contact your Braze account manager if you're interested in participating in the early access.
-{% endalert %}
-
 When you send a WhatsApp product message to a user, the user goes on the following customer journey:
 
 1. The user receives your product or catalog message in WhatsApp.
 2. The user adds products to their cart directly from WhatsApp.
 3. The user taps **Place order** in WhatsApp.
-4. Your website or app recieves the cart data from Braze and generates a checkout link.
+4. Your website or app receives the cart data from Braze and generates a checkout link.
 5. The user is directed to your website or app to complete their checkout.
 
 When users add items to their cart through catalog messages, Braze receives webhook data for follow-up actions.
@@ -38,12 +34,16 @@ When users add items to their cart through catalog messages, Braze receives webh
 | Term compliance | Comply with the [Meta Commerce Terms and Policies](https://www.facebook.com/policies_center/commerce). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-## Product message templates
+## Product message types
 
-{% tabs %}
+{% alert note %}
+Enhance your product message experience with the integrated product selector, which is accessed during step 4 of [Setting up product messages](#setting-up-product-messages).
+{% endalert %}
+
+{% tabs local %}
 {% tab Catalog messages %}
 
-Catalog messages display your entire product catalog in an interactive format. 
+Catalog messages display your entire product catalog in an interactive format. They are available as [template and response messages](#building-a-product-message).
 
 If you've enabled catalog permissions to Braze during [setup](#setting-up-product-messages), you can select which thumbnail is visible to users. 
 
@@ -55,7 +55,7 @@ You don't need to make additional product selections in Braze, as the catalog co
 {% endtab %}
 {% tab Multi-product messages %}
 
-Multi-product messages highlight specific products from your catalog, with up to 30 highlighted items per message. 
+Multi-product messages highlight specific products from your catalog, with up to 30 highlighted items per message. They are available as [template and response messages](#building-a-product-message).
 
 You can either select the products manually with IDs or, if you’ve enabled catalog permissions during [setup](#setting-up-product-messages), use the dropdown product selector.
 
@@ -63,13 +63,19 @@ You can either select the products manually with IDs or, if you’ve enabled cat
 There’s a known header display issue with multi-product message templates on Meta. Meta is aware of the issue and working on a fix.
 {% endalert %}
 
+{% endtab %}
+{% tab Single product %}
+
+Single product messages highlight one specific product from your product catalog. They are available as [response messages](#building-a-product-message).
+
+You can either select the products manually with IDs or, if you’ve enabled catalog permissions during [setup](#setting-up-product-messages), use the dropdown product selector.
 
 {% endtab %}
 {% endtabs %}
 
 ## Setting up product messages
 
-1. In the [Meta Commerce Manager](https://business.facebook.com/business/loginpage/?next=https%3A%2F%2Fbusiness.facebook.com%2Fcommerce_manager%2F#), follow [Meta's instructions](https://www.facebook.com/business/help/1275400645914358?id=725943027795860&ref=search_new_1) to create your Meta catalog. Make sure you’re in the same Meta Business Portfolio where your Braze-connected WhatsApp Business Accont resides.
+1. In the [Meta Commerce Manager](https://business.facebook.com/business/loginpage/?next=https%3A%2F%2Fbusiness.facebook.com%2Fcommerce_manager%2F#), follow [Meta's instructions](https://www.facebook.com/business/help/1275400645914358?id=725943027795860&ref=search_new_1) to create your Meta catalog. Make sure you’re in the same Meta Business Portfolio where your Braze-connected WhatsApp Business Account resides.
 2. Follow Meta's instructions to [connect your Meta catalog](https://www.facebook.com/business/help/1953352334878186?id=2042840805783715) to your Braze-connected WhatsApp Business Account by assigning the "Manage Catalog" permission in Meta Business Manager. 
 
 ![Meta "Catalogs" page with an arrow pointing at the "Assign partner" button for the catalog called "sweeney_catalog".]({% image_buster /assets/img/whatsapp/meta_catalog.png %}){: style="max-width:90%;"}
@@ -94,11 +100,16 @@ For best practices to follow when creating Meta catalogs, refer to [Tips for bui
 
 ## Building a product message
 
+You can build a product message by using a WhatsApp template message or response message.
+
+{% tabs local %}
+{% tab WhatsApp message template %}
+
 1. In your Meta Business manager, go to **Message Templates**.
 2. Select **Catalog** as a format, and then choose between **Catalog message** (displays full catalog) and **Multi-product catalog message** (highlights specific items).
 3. In Braze, create a WhatsApp campaign or Canvas Message step.
 4. Select the subscription group that matches where you submitted the template.
-5. Select **WhatsApp Template Message**. (Product and catalog messages aren't available yet in response messages.)
+5. Select **WhatsApp Template Message**.
 6. Select the template you’d like to use.
     - If you select a multi-product template, provide the section title and content IDs for the products to highlight. You can either copy the Content ID directly from your Meta Commerce Manager or, if you enabled the permissions for the integrated product selector, select the items.
 
@@ -108,6 +119,29 @@ For best practices to follow when creating Meta catalogs, refer to [Tips for bui
 
 {: start="7"}
 7. Continue building your message.
+
+{% endtab %}
+{% tab Response message %}
+
+1. In Braze, create a WhatsApp campaign or Canvas Message step.
+2. Select a subscription group.
+3. Select **Response Message**.
+4. Select **Meta Product Messages**.
+
+![Options to select a message type and response message layout, with "Response Message" and "Meta Product Messages" highlighted.]({% image_buster /assets/img/whatsapp/response_message_layouts.png %}){: style="max-width:90%;"}
+
+{: start="5"}
+5. Select the [message type](#product-message-types) you'd like to use.
+
+![Mesage layout selection of "Multi-product".]({% image_buster /assets/img/whatsapp/multi-product_message_layout.png %}){: style="max-width:90%;"}
+
+{: start="6"}
+6. Continue building your message.
+
+![Example Meta product message with filled out information for products.]({% image_buster /assets/img/whatsapp/example_response_message.png %}){: style="max-width:90%;"}
+
+{% endtab %}
+{% endtabs %}
 
 ## Managing products
 
@@ -176,7 +210,7 @@ You can find additional Braze cart event information in [Types of eCommerce reco
 
 ### Recommended checkout implementations 
 
-{% tabs %}
+{% tabs local %}
 {% tab Simple Liquid-based cart links %}
 
 Use Liquid to build cart URLs directly in your response message. This is best if you have consistent product IDs between WhatsApp and your eCommerce platform.

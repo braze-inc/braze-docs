@@ -1,5 +1,5 @@
 ---
-nav_title: Preguntas frecuentes
+nav_title: PREGUNTAS FRECUENTES
 article_title: "Pancartas: Preguntas frecuentes"
 page_order: 10
 description: "Éstas son las respuestas a las preguntas más frecuentes sobre los Banners en Braze."

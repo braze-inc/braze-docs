@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Quikly
 
-> [Quikly](https://www.quikly.com), an urgency marketing platform, leverages psychology to motivate consumers, so brands can immediately increase response around their key marketing initiatives.
+> [Quikly](https://www.quikly.com), an urgency marketing platform, uses psychology to motivate consumers, so brands can immediately increase response around their key marketing initiatives.
 
 _This integration is maintained by Quikly._
 
@@ -175,6 +175,6 @@ Remember to save your template before leaving the page! <br>Updated webhook temp
 {% endtabs %}
 
 ## Support
-Reach out to your client success manager at Quikly with any questions.
+Contact your client success manager at Quikly with any questions.
 
 

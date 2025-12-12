@@ -6,7 +6,7 @@
 
 ## Voraussetzungen
 
-Banner sind als Teil Ihrer Message Credits verfügbar. Wenn Sie nicht über unser flexibles Modell für Nachrichten-Credits verfügen, sind Banner als zusätzliches Feature erhältlich. Wenden Sie sich an Ihren Customer-Success-Manager:in von Braze, um weitere Informationen zu erhalten.
+Die Verfügbarkeit von Bannern hängt von Ihrem Braze-Paket ab. Wenden Sie sich an Ihren Account Manager oder Customer-Success-Manager:in, um loszulegen.
 
 ## Warum Banner verwenden?
 
@@ -40,7 +40,7 @@ Bannerplatzierungen sind bestimmte Standorte in Ihrer App oder Website, [die Sie
 
 Zu den üblichen Standorten gehören der obere Teil Ihrer Homepage, die Produktdetailseiten und die Kassenabläufe. Nachdem die Platzierungen erstellt wurden, können die Banner [in Ihrer Kampagne zugewiesen]({{site.baseurl}}/user_guide/message_building_by_channel/banners/creating_campaigns/) werden.
 
-Außerdem sind Bannerplatzierungen für jeden Workspace eindeutig und können nur für 10 Kampagnen innerhalb eines Workspace verwendet werden. Platzierungen in jedem Workspace müssen eine eindeutige ID erhalten, die Sie bei der Erstellung einer Platzierung in Braze zuweisen.
+Es gibt keine feste Grenze für die Anzahl der Vermittlungen, die Sie pro Workspace erstellen können, und Sie können so viele Vermittlungs-IDs erstellen, wie Ihre Erfahrung erfordert. Jede Platzierung muss innerhalb eines Workspace eindeutig sein. Eine einzige Platzierungs-ID kann von bis zu 10 aktiven Kampagnen gleichzeitig referenziert werden.
 
 {% alert important %}
 Vermeiden Sie die Änderung von Platzierungs-IDs nach dem Starten einer Kampagne.
@@ -60,7 +60,7 @@ Wenn mehrere Banner die gleiche Priorität haben, wird das neueste Banner, für 
 
 Bannernachrichten werden Ihrer App oder Website als HTML-Inhalt zugestellt, der in der Regel innerhalb eines iframe gerendert wird. Dies stellt sicher, dass Ihre Banner auf allen Geräten einheitlich dargestellt werden, und hilft Ihnen, ihre Stile und Skripte vom Rest Ihres Codes zu trennen.
 
-iframes ermöglichen dynamische und personalisierte Updates von Inhalten, die keine Änderungen an Ihrer Codebasis erfordern. Jeder iframe ruft den HTML-Code für jede Nutzer:innen-Sitzung ab und zeigt ihn mit Hilfe der Logik für das Targeting und die Personalisierung der Kampagne an.
+Iframes ermöglichen dynamische und personalisierte Updates von Inhalten, die keine Änderungen an Ihrer Codebasis erfordern. Jeder iframe ruft den HTML-Code für jede Nutzer:innen-Sitzung ab und zeigt ihn mit Hilfe der Logik für das Targeting und die Personalisierung der Kampagne an.
 
 ### Abmessungen und Größenangaben
 
@@ -72,17 +72,16 @@ Hier erfahren Sie, was Sie über die Abmessungen und die Größe von Bannern wis
 
 ## Beschränkungen
 
-Jeder Workspace kann bis zu 100 aktive Banner-Kampagnen unterstützen. Wenn dieses Limit erreicht ist, müssen Sie eine bestehende Kampagne [archivieren oder deaktivieren]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/about_statuses/#changing-the-status), bevor Sie eine neue Kampagne erstellen können.
+Jeder Workspace kann bis zu 200 aktive Banner-Kampagnen unterstützen. Wenn dieses Limit erreicht ist, müssen Sie eine bestehende Kampagne [archivieren oder deaktivieren]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/about_statuses/#changing-the-status), bevor Sie eine neue Kampagne erstellen können.
 
 Außerdem unterstützen Banner Nachrichten die folgenden Features nicht:
 
 - Canvas-Integration
 - API-ausgelöste und aktionsbasierte Kampagnen
-- Currents
 - Connected-Content
 - Aktionscodes
 - Nutzer:innen-gesteuerte Entlassungen
-- `catalog_items` unter Verwendung des [Tags`:rerender` ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/using_catalogs/#using-liquid)
+- `catalog_items` unter Verwendung des [Tags`:rerender` ]({{site.baseurl}}/user_guide/data/activation/catalogs/using_catalogs/#using-liquid)
 
 {% alert tip %}
 Möchten Sie bei der Festlegung der nächsten Prioritäten helfen? Kontaktieren Sie [banners-feedback@braze.com](mailto:banners-feedback@braze.com).
@@ -94,3 +93,4 @@ Da Sie nun über Banner Bescheid wissen, sind Sie bereit für die nächsten Schr
 
 1. [Erstellen von Bannerplatzierungen in Ihrer App oder Website]({{site.baseurl}}/developer_guide/banners/placements/)
 2. [Erstellen von Bannerkampagnen in Braze]({{site.baseurl}}/user_guide/message_building_by_channel/banners/creating_campaigns/)
+3. [Tutorial: Anzeige eines Banners nach Platzierungs-ID]({{site.baseurl}}/developer_guide/banners/tutorial_displaying_banners)

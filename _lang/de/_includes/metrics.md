@@ -254,6 +254,11 @@ Der <i>Umsatz</i> ist der Gesamtumsatz in Dollar von Kampagnenempfängern innerh
 <i>Eindeutige Klicks</i> ist die eindeutige Anzahl von Empfängern, die mindestens einmal auf einen Link in einer Nachricht geklickt haben und wird durch <a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a> gemessen.
 {% endif %}
 
+<!-- Pull channels like Banners that don't have a Dispatch ID-->
+{% if include.metric == "Unique Clicks No Dispatch ID" %}
+<i>Eindeutige Klicks</i> ist die eindeutige Anzahl von Empfängern, die mindestens einmal auf einen Link innerhalb einer Nachricht geklickt haben.
+{% endif %}
+
 {% if include.metric == "Unique Dismissals" %}
 <i>Unique Dismissals</i> ist die Anzahl der eindeutigen Empfänger:innen, die eine Content-Card aus einer Kampagne entlassen haben. Ein Benutzer, der eine Content-Card aus einer Kampagne mehrmals ausblendet, stellt eine eindeutige Ausblendung dar.
 {% endif %}

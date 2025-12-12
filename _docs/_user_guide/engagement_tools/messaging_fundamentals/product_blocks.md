@@ -1,7 +1,7 @@
 ---
 nav_title: Product blocks
 article_title: Drag-and-Drop Product Blocks
-page_order: 7
+page_order: 7.5
 description: "This reference article covers drag-and-drop product blocks, which allow users to quickly add and configure dynamic or static showcases of catalog items."
 tool:
     - Campaigns
@@ -23,7 +23,8 @@ The drag-and-drop product block feature is in early access and is currently only
 | --- | --- |
 | eCommerce recommended events | [eCommerce recommended events]({{site.baseurl}}/ecommerce_events/) provide standardized data schemas for key behavioral events that occur before and after an order is placed. These events will eventually replace the legacy Braze purchase event and will become the standard for tracking commerce-related behavior. <br><br> eCommerce recommended events are required for dynamic product blocks.<br><br> eCommerce recommended events are currently in early access. Contact your Braze customer success manager if you’re interested in participating in this early access. |
 | eCommerce Canvas templates | The eCommerce recommended events support pre-built templates, including eCommerce Canvas templates designed for essential use cases such as abandoned browsing, abandoned carts, and order confirmations. <br><br>If you plan to implement any of these essential eCommerce use cases using the [eCommerce Canvas templates]({{site.baseurl}}/ecommerce_use_cases/), you must use or follow the provided Canvas template. |
-| Braze catalog | You need to create a Braze catalog that includes the following fields, which will be used in your product block configuration:{::nomarkdown}<code><ul><li>product_title</li><li>product_url</li><li>variant_image_url</li></ul></code>{:/} |
+| Braze catalog | You must create a Braze catalog that includes the following fields, which you use in your product block configuration:{::nomarkdown}<code><ul><li>product_title</li><li>product_url</li><li>variant_image_url</li></ul></code>{:/} |
+| Catalog selection | For static product blocks, you must create a [catalog selection]({{site.baseurl}}/user_guide/data/activation/catalogs/selections/) to specify which products to include in your product block. |
 {: .reset-td-br-1 .reset-td-br-2 role=“presentation” }
 
 ## Types of drag-and-drop product blocks
@@ -31,7 +32,7 @@ The drag-and-drop product block feature is in early access and is currently only
 | Product block | Purpose | Use cases | Availability |
 | --- | --- | --- | --- |
 | Dynamic | Personalize your messaging with a showcase of products based on customer interactions by using [eCommerce recommended events]({{site.baseurl}}/ecommerce_events/) and catalogs within our [eCommerce Canvas templates]({{site.baseurl}}/ecommerce_use_cases/). | {::nomarkdown}<ul><li>Abandoned browse</li><li>Abandoned cart</li><li>Abandoned checkout</li><li>Order confirmations</li></ul>{:/} | Available in Canvas only. |
-| Static | Personalize products using only the data stored in a Braze catalog or [catalog selection]({{site.baseurl}}/user_guide/data/activation/catalogs/selections/). | Perfect for showcasing new product launches or category-specific offerings.| |
+| Static | Personalize products using data stored in a Braze catalog. You must use a [catalog selection]({{site.baseurl}}/user_guide/data/activation/catalogs/selections/) to specify which products to include. | Perfect for showcasing new product launches or category-specific offerings.| |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role=”presentation” }
 
 ## Product block content configuration
@@ -87,7 +88,7 @@ Use layout options to customize how your products display within your product bl
 
 #### How global email style settings work with product blocks
 
-Existing styles for paragraphs and buttons will automatically apply to the text and button elements within the product block. This means that any formatting you have set for paragraphs and buttons will be used consistently in your product block, maintaining a cohesive look throughout your email.
+Existing styles for paragraphs and buttons automatically apply to the text and button elements within the product block. This means that your product block consistently uses any formatting you have set for paragraphs and buttons, maintaining a cohesive look throughout your email.
 
 ## Setting up product blocks
 
@@ -97,7 +98,7 @@ Existing styles for paragraphs and buttons will automatically apply to the text 
 If you’re using the Braze and Shopify integration for [product syncing]({{site.baseurl}}/shopify_catalogs/), you don’t need to take any additional steps to use drag-and-drop product blocks.<br><br> If you don’t have product variant information, you need to duplicate their top-level product information in both the product and the product variant fields within the event payloads and catalogs. This means you need to provide the same product details for both identifiers to maintain consistency for the product block to work properly.
 {% endalert %}
 
-To use drag-and-drop product blocks, you need to set up a Braze catalog that includes specific field values. These fields will be used in your product block configuration. Make sure your catalog includes the following fields:
+To use drag-and-drop product blocks, you need to set up a Braze catalog that includes specific field values. You use these fields in your product block configuration. Make sure your catalog includes the following fields:
 
 | Field | Description |
 | --- | --- |
@@ -108,6 +109,14 @@ To use drag-and-drop product blocks, you need to set up a Braze catalog that inc
 Get a jumpstart by working off this [sample Product Catalog]({{site.baseurl}}/assets/download_file/ecommerce_product_catalog_sample.csv), which includes the required fields. 
 
 ![A sample CSV file with the required fields in addition to others.]({% image_buster /assets/img/ecommerce/sample_product_catalog.png %})
+
+#### Mapping to catalog fields
+
+In the **Settings** tab of your catalog, you can select the **Product blocks** toggle to map to specific fields and information in your catalog. This allows you to select which fields to use as the product title, product URL, and image URL. Note that Shopify catalog fields are mapped by default and can't be changed.
+
+{% alert note %}
+If you aren't using Shopify, you can contact your account manager to turn on field mapping, which allows you to connect any catalog to product blocks and map its fields to the `product_title`, `product_url`, and `variant_image_url`.
+{% endalert %}
 
 ## Creating product blocks
 
@@ -147,7 +156,7 @@ Select the product catalog you want to use for personalization. Make sure it ali
 {% tab Static product block %}
 
 Drag a product block into your email message and select the static block type. 
-Select the catalog you want to use for your product block. If your catalog has a selection, you must select it to further narrow the products that display in your product block.
+Select the catalog you want to use for your product block. You must select a catalog selection to specify which products display in your product block.
 
 {% endtab %}
 {% endtabs %}

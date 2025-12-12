@@ -1,7 +1,10 @@
 ---
-nav_title: ユーザ・リターゲティング
-article_title: ユーザ・リターゲティング
-page_order: 3
+nav_title: ユーザー リターゲティング
+article_title: ユーザーのリターゲット
+page_order: 4
+nav_title: ユーザー リターゲティング
+article_title: ユーザーのリターゲット
+page_order: 4
 description: "この参考記事では、WhatsAppのユーザーとのやり取りによってユーザーがメッセージを再ターゲットする方法を取り上げている。"
 page_type: reference
 channel:
@@ -23,11 +26,11 @@ channel:
 最後にWhatsAppを受信した日、または特定のWhatsAppキャンペーンからWhatsAppを受信したかでユーザーをフィルタリングできる。フィルターはキャンペーンビルダーのターゲットユーザーステップで設定できる。
 
 **最後に受信した WhatsApp によるフィルター処理する**<br>
-![WhatsApp メッセージを最後に受信した日付が 2025 年 4 月 22 日であるという条件のフィルター]({% image_buster /assets/img/whatsapp/whatsapp23.png %}){: style="max-width:75%"}
+![2025年4月22日に最後にWhatsAppを受信したときのフィルタリング。]({% image_buster /assets/img/whatsapp/whatsapp23.png %}){: style="max-width:75%"}
 
 **WhatsAppキャンペーンからの受信メッセージでフィルタする**<br>
 特定のWhatsAppキャンペーンからのメッセージを受信したユーザーをフィルターする。このフィルターを使えば、WhatsAppキャンペーンからのメッセージを受信していないユーザーを除外することもできる。<br>
-![WhatsApp キャンペーンを受信したことを条件とするフィルター]({% image_buster /assets/img/whatsapp/whatsapp22.png %}){: style="max-width:75%"}
+![WhatsApp キャンペーンを受信するためのフィルター。]({% image_buster /assets/img/whatsapp/whatsapp22.png %}){: style="max-width:75%"}
 
 ### エンゲージメントで絞り込む
 WhatsApp キャンペーンまたはキャンバスステップを読んだ、あるいは読んでいないユーザーをリターゲティングします。 
@@ -35,19 +38,21 @@ WhatsApp キャンペーンまたはキャンバスステップを読んだ、�
 **特定のWhatsAppキャンペーンを開封/閲覧したユーザーを再ターゲットする**
 1. **Clicked/Opened Campaign**フィルターを使用してセグメントを作成する。
 2. [**WhatsApp メッセージの読み取り**] を選択します。
-3. 希望のキャンペーンを選択する。<br>
+3. 希望のキャンペーンを選択してください。<br>
+3. 希望のキャンペーンを選択してください。<br>
 
-![WhatsApp メッセージを読み取ったことをを条件とするフィルター]({% image_buster /assets/img/whatsapp/whatsapp21.png %}){: style="max-width:75%"}
+![WhatsAppを読み取ったときのフィルター。]({% image_buster /assets/img/whatsapp/whatsapp21.png %}){: style="max-width:75%"}
 
 **特定のキャンバスステップを開いた / 読んだユーザーのリターゲティング**
 1. **クリックされた／開かれたステップ**フィルターを使用してセグメントを作成する。
 2. [**WhatsApp メッセージの読み取り**] を選択します。
 3. 目的のキャンバスとキャンバスステップを選択します。<br>
 
-![WhatsApp ステップを読み取ったことを条件とするフィルター]({% image_buster /assets/img/whatsapp/whatsapp20.png %}){: style="max-width:75%"}
+![WhatsApp ステップを読み取るためのフィルター。]({% image_buster /assets/img/whatsapp/whatsapp20.png %}){: style="max-width:75%"}
 
-**キャンペーンまたはキャンバスのアトリビューションによるフィルター処理**<br>
+**キャンペーンまたはキャンバスアトリビューションでフィルター**<br>
+**キャンペーンまたはキャンバスアトリビューションでフィルター**<br>
 特定の WhatsApp キャンペーン、キャンバスコンポーネント、またはタグを開封した / 読んだユーザーをフィルター処理します。
 
-![特定の WhatsApp メッセージを開封したことを条件とするフィルター]({% image_buster /assets/img/whatsapp/whatsapp19.png %}){: style="max-width:75%"}
+![指定したWhatsAppを開封するためのフィルタリング。]({% image_buster /assets/img/whatsapp/whatsapp19.png %}){: style="max-width:75%"}
 

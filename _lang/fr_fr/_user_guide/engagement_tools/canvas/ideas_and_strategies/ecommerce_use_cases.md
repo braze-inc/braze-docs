@@ -18,23 +18,23 @@ Les [événements recommandés pour le commerce électronique]({{site.baseurl}}/
 ## Utilisation d'un modèle Canvas
 
 Pour utiliser un modèle Canvas :
-1. Allez dans **Messagerie** > **Canvas.**
+1. Allez dans **Messagerie** > **Canvas**.
 2. Sélectionnez **Créer un canvas** > **Utiliser un modèle de canvas**.
 3. Recherchez dans l'onglet **Modèles de Braze** le modèle que vous souhaitez utiliser. Vous pouvez prévisualiser un modèle en sélectionnant son nom.
-4. Sélectionnez **Appliquer** le modèle pour le modèle que vous souhaitez utiliser.<br><br>![La page "Canvas templates" s'ouvre sur l'onglet "Braze templates" et affiche une liste des modèles récemment utilisés et des modèles Braze sélectionnables.]({% image_buster /assets/img_archive/apply_template.png %}){: style="max-width:80%;"}
+4. Sélectionnez **Appliquer** le modèle pour le modèle que vous souhaitez utiliser.<br><br>La page "Canvas templates" s'ouvre sur l'onglet "Braze templates" et affiche une liste des modèles récemment utilisés et des modèles de Braze sélectionnables.]({% image_buster /assets/img_archive/apply_template.png %}){: style="max-width:80%;"}
 
 ## Modèles eCommerce
 
 - [Parcourir Abandonné](#abandoned-browse)
-- [Panier abandonné](#abandoned-cart)
-- [Paiement abandonné](#abandoned-checkout)
+- [Abandon de panier](#abandoned-cart)
+- [Caisse abandonnée](#abandoned-checkout)
 - [Confirmation de la commande et enquête de satisfaction](#order-confirmation--feedback-survey)
 
 ## Parcourir Abandonné
 
-Utilisez le modèle **Abandon de navigation** pour engager les utilisateurs qui ont parcouru des produits mais ne les ont pas ajoutés à leur panier ou n'ont pas passé de commande.
+Utilisez le modèle **Abandon** de **navigation** pour engager les utilisateurs qui ont parcouru des produits mais ne les ont pas ajoutés à leur panier ou n'ont pas passé de commande.
 
-![Un modèle de canvas "Abandoned Browse" appliqué avec des "règles d'entrée" étendues.]({% image_buster /assets/img_archive/abandoned_browse.png %})
+Un modèle de canvas "Abandoned Browse" appliqué avec des "règles d'entrée" étendues.]({% image_buster /assets/img_archive/abandoned_browse.png %})
 
 ### Configuration
 
@@ -43,21 +43,21 @@ Sur la page Canvas, sélectionnez **Utiliser un modèle de canvas** > **Modèles
 #### Paramètres par défaut
 
 Les paramètres suivants sont préconfigurés dans votre Canvas :
-- Bases 
+- Principes de base 
     - Nom de la toile : **Parcourir Abandonné**
     - Événement de conversion : `ecommerce.order placed`
         - Date limite de conversion : 3 jours 
-- Planification d’entrée 
+- Planification de l'entrée 
     - Basé sur l'action lorsqu'un utilisateur effectue l'événement `ecommerce.product_viewed` 
-    - L'heure de début est l'heure à laquelle vous créez le modèle Canvas.<br><br>!["Options basées sur l'action" pour la toile.]({% image_buster /assets/img/ecommerce/abandoned_browse_entry.png %})<br><br> 
-- Audience cible 
-    - Audience entrant 
+    - L'heure de début est l'heure à laquelle vous créez le modèle Canvas.<br><br>\!["Options basées sur l'action" pour le Canvas.]({% image_buster /assets/img/ecommerce/abandoned_browse_entry.png %})<br><br> 
+- L'audience ciblée 
+    - Audience d'entrée 
         - L'e-mail **n'est pas vide**
         - Vous pouvez également modifier les critères de l'audience d'entrée pour répondre aux besoins de votre entreprise
     - Contrôles d'entrée
-        - Les utilisateurs sont autorisés à se réinscrire à ce Canvas une fois que la durée totale de ce dernier est terminée
-    - Critère de sortie 
-        - Effectue les opérations suivantes : `ecommerce.cart_updated`, `ecommerce.checkout_started`, ou `ecommerce.order_placed`<br><br>![Contrôles d'entrée et critères de sortie pour la toile.]({% image_buster /assets/img/ecommerce/abandoned_browse_entry_exit.png %})<br><br> 
+        - Les utilisateurs sont autorisés à se réinscrire à ce Canvas une fois que la durée totale de celui-ci est terminée
+    - Critères de sortie 
+        - Effectue les opérations suivantes : `ecommerce.cart_updated`, `ecommerce.checkout_started`, ou `ecommerce.order_placed`<br><br>Contrôles d'entrée et critères de sortie de la toile.]({% image_buster /assets/img/ecommerce/abandoned_browse_entry_exit.png %})<br><br> 
 - Paramètres d'envoi 
     - Utilisateurs abonnés ou opt-in 
 - Pas de retard
@@ -93,11 +93,11 @@ Voici un exemple de la manière dont vous pouvez ajouter un bloc de produit HTML
 ```
 {% endraw %}    
 
-## Panier abandonné
+## Abandon de panier
 
 Utilisez le modèle de **panier abandonné** pour couvrir les ventes potentielles perdues par les clients qui ont ajouté des produits à leur panier mais n'ont pas continué à passer à la caisse ou n'ont pas passé de commande. 
 
-![Un modèle de canvas "Abandon de panier" appliqué avec des "règles d'entrée" étendues.]({% image_buster /assets/img_archive/abandoned_cart.png %})
+Un modèle de canvas "panier abandonné" appliqué avec des "règles d'entrée" étendues.]({% image_buster /assets/img_archive/abandoned_cart.png %})
 
 ### Configuration
 
@@ -106,21 +106,21 @@ Sur la page Canvas, sélectionnez **Utiliser un modèle de canvas** > **Modèles
 #### Paramètres par défaut
 
 Les paramètres suivants sont préconfigurés dans votre Canvas :
-- Bases 
-    - Nom de la toile : **Panier abandonné**
+- Principes de base 
+    - Nom de la toile : **Abandon de panier**
     - Événement de conversion : `ecommerce.order_placed`
         - Date limite de conversion : 3 jours 
-- Planification d’entrée 
+- Planification de l'entrée 
     - Déclencheur basé sur une action lorsqu'un utilisateur déclenche l'**événement Perform Cart Updated** (situé dans la liste déroulante).
-    - L'heure de début est l'heure à laquelle vous créez le modèle Canvas.<br><br>!["Options basées sur l'action" pour la toile.]({% image_buster /assets/img/ecommerce/abandoned_cart_entry.png %})<br><br> 
-- Audience cible 
-    - Audience entrant 
+    - L'heure de début est l'heure à laquelle vous créez le modèle Canvas.<br><br>\!["Options basées sur l'action" pour le Canvas.]({% image_buster /assets/img/ecommerce/abandoned_cart_entry.png %})<br><br> 
+- L'audience ciblée 
+    - Audience d'entrée 
         - A utilisé ces applications **plus de 0** fois 
         - L'e-mail **n'est pas vide**
     - Contrôles d'entrée
         - Les utilisateurs sont immédiatement rééligibles pour la participation à Canvas.
-    - Critère de sortie 
-        - Effectue les opérations suivantes : `ecommerce.cart_updated`, `ecommerce.checkout_started`, ou `ecommerce.order_placed`<br><br>![Contrôles d'entrée et critères de sortie pour la toile.]({% image_buster /assets/img/ecommerce/abandoned_cart_entry_exit.png %})<br><br> 
+    - Critères de sortie 
+        - Effectue les opérations suivantes : `ecommerce.cart_updated`, `ecommerce.checkout_started`, ou `ecommerce.order_placed`<br><br>Contrôles d'entrée et critères de sortie de la toile.]({% image_buster /assets/img/ecommerce/abandoned_cart_entry_exit.png %})<br><br> 
 - Paramètres d'envoi 
     - Utilisateurs abonnés ou opt-in 
 - Pas de retard
@@ -176,15 +176,15 @@ Si vous utilisez Shopify, créez l'URL de votre panier en utilisant ce modèle L
 
 {% raw %}
 ```liquid
-{{context.source}}/checkouts/cn/{{context.cart_id}}
+{{context.${source}}}/checkouts/cn/{{context.${cart_id}}} 
 ```
 {% endraw %}
 
-## Paiement abandonné
+## Caisse abandonnée
 
 Utilisez le modèle **Abandoned checkout** pour cibler les clients qui ont commencé le processus de paiement mais qui sont partis avant de passer leur commande. 
 
-![Un modèle de canvas "Abandoned Checkout" appliqué avec des "règles d'entrée" étendues.]({% image_buster /assets/img_archive/abandoned_checkout.png %})
+Un modèle de canvas "Abandoned Checkout" appliqué avec des "règles d'entrée" étendues.]({% image_buster /assets/img_archive/abandoned_checkout.png %})
 
 ### Configuration
 
@@ -194,21 +194,21 @@ Sur la page Canvas, sélectionnez **Utiliser un modèle de canevas** > **Modèle
 
 Les paramètres suivants sont préconfigurés dans votre Canvas :
 
-- Bases 
-    - Nom de la toile : **Paiement abandonné**
+- Principes de base 
+    - Nom de la toile : **Caisse abandonnée**
     - Événement de conversion : `ecommerce.order_placed`
         - Date limite de conversion : 3 jours 
-- Planification d’entrée 
+- Planification de l'entrée 
     - Déclencheur basé sur une action lorsqu'un utilisateur effectue l'événement `ecommerce.checkout_started` 
-    - L'heure de début est l'heure à laquelle vous créez le modèle Canvas.<br><br>!["Options basées sur l'action" pour la toile.]({% image_buster /assets/img/ecommerce/abandoned_checkout_entry.png %})
-- Audience cible 
-    - Audience entrant 
+    - L'heure de début est l'heure à laquelle vous créez le modèle Canvas.<br><br>\!["Options basées sur l'action" pour le Canvas.]({% image_buster /assets/img/ecommerce/abandoned_checkout_entry.png %})
+- L'audience ciblée 
+    - Audience d'entrée 
         - A utilisé ces applications **plus de 0** fois 
         - L'e-mail **n'est pas vide**
     - Contrôles d'entrée
         - Les utilisateurs sont immédiatement rééligibles pour la participation à Canvas.
-        - Critère de sortie 
-            - Effectue les événements `ecommerce.order_placed` <br><br>![Contrôles d'entrée et critères de sortie pour la toile.]({% image_buster /assets/img/ecommerce/abandoned_checkout_entry_exit.png %})<br><br>
+        - Critères de sortie 
+            - Effectue les événements `ecommerce.order_placed` <br><br>Contrôles d'entrée et critères de sortie de la toile.]({% image_buster /assets/img/ecommerce/abandoned_checkout_entry_exit.png %})<br><br>
 - Paramètres d'envoi 
     - Utilisateurs abonnés ou opt-in 
 - Pas de retard
@@ -255,33 +255,33 @@ Voici un exemple de la façon dont vous ajouteriez un bloc HTML avec votre étiq
 
 ## Confirmation de la commande et enquête de satisfaction
 
-Utilisez le modèle de **confirmation de commande et d'enquête de feedback** pour confirmer les commandes réussies et améliorer la satisfaction des clients.
+Utilisez le modèle d'**enquête de confirmation de commande & ** pour confirmer les commandes réussies et améliorer la satisfaction des clients.
 
-![Un modèle Canvas de "confirmation de commande" appliqué avec des "règles d'entrée" étendues.]({% image_buster /assets/img_archive/order_confirmation_feedback.png %})
+Un modèle de canvas de "confirmation de commande" appliqué avec des "règles d'entrée" étendues.]({% image_buster /assets/img_archive/order_confirmation_feedback.png %})
 
 ### Configuration
 
-Sur la page Canvas, sélectionnez **Utiliser un modèle de canvas** > **Modèles de Braze**, puis appliquez le modèle **Confirmation de commande et enquête de feedback.**  
+Sur la page Canvas, sélectionnez **Utiliser un modèle Canvas** > **Modèles de Braze**, puis appliquez le modèle d'**enquête de confirmation de commande & feedback.**  
 
 #### Paramètres par défaut
 
 Les paramètres suivants sont préconfigurés dans votre Canvas :
 
-- Bases 
+- Principes de base 
     - Nom de la toile : **Confirmation de commande avec enquête de satisfaction**
     - Événement de conversion : `ecommerce.session_start`
         - Date limite de conversion : 10 jours 
-- Planification d’entrée 
+- Planification de l'entrée 
     - Déclencheur basé sur une action lorsqu'un utilisateur effectue l'événement `ecommerce.cart_updated` 
-    - L'heure de début est l'heure à laquelle vous créez le modèle Canvas.<br><br>!["Options basées sur l'action" pour la toile.]({% image_buster /assets/img/ecommerce/feedback_entry.png %})<br><br>
-- Audience cible 
-    - Audience entrant 
+    - L'heure de début est l'heure à laquelle vous créez le modèle Canvas.<br><br>\!["Options basées sur l'action" pour le Canvas.]({% image_buster /assets/img/ecommerce/feedback_entry.png %})<br><br>
+- L'audience ciblée 
+    - Audience d'entrée 
         - A utilisé ces applications **plus de 0** fois 
         - L'e-mail **n'est pas vide**
     - Contrôles d'entrée
         - Les utilisateurs sont immédiatement rééligibles pour la participation à Canvas.
-    - Critère de sortie 
-        - Sans objet<br><br>![Filtres et contrôles d'entrée supplémentaires pour le canvas.]({% image_buster /assets/img/ecommerce/feedback_entry_exit.png %})<br><br>
+    - Critères de sortie 
+        - Non applicable<br><br>\![Filtres et contrôles d'entrée supplémentaires pour le Canvas.]({% image_buster /assets/img/ecommerce/feedback_entry_exit.png %})<br><br>
 - Paramètres d'envoi 
     - Utilisateurs abonnés ou opt-in 
 - Étape du message 
@@ -323,9 +323,9 @@ Voici un exemple de la manière dont vous pouvez ajouter un bloc HTML de produit
 
 [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) est un puissant langage de templating utilisé par Braze qui vous permet de créer un contenu dynamique et personnalisé pour vos clients. En utilisant les étiquettes Liquid, vous pouvez personnaliser les messages en fonction des données des clients, des informations sur les produits et d'autres variables, ce qui améliore l'expérience d'achat et favorise l'engagement.
 
-### Principales fonctionnalités de Liquid
+### Principales fonctionnalités du Liquid
 
-- **Contenu dynamique :** Insérez dans vos messages des informations spécifiques au client, telles que son nom, les détails de sa commande et ses préférences.
+- **Contenu dynamique :** Insérez dans vos messages des informations spécifiques au client, telles que son nom, les détails de sa commande et ses préférences.
 - **Logique conditionnelle :** Utilisez les instructions if/else pour afficher un contenu différent en fonction d'emplacements spécifiques (tels que l'emplacement/localisation du client et l'historique des achats).
 - **Boucles :** Iteratez sur des collections de produits ou de données personnalisées pour afficher des listes ou des grilles d'éléments.
 
@@ -334,7 +334,7 @@ Voici un exemple de la manière dont vous pouvez ajouter un bloc HTML de produit
 Pour commencer à personnaliser vos messages à l'aide des étiquettes Liquid, vous pouvez consulter les ressources suivantes :
 
 - Référence de [données Shopify]({{site.baseurl}}/shopify_features/#shopify-data) avec des étiquettes Liquid prédéfinies.
-- [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/)
+- [Liquide]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/)
 
 ## Segmentation
 
@@ -351,7 +351,7 @@ Parce que les événements recommandés sont des événements personnalisés plu
 
 Segmentez vos utilisateurs avec des filtres de commerce électronique, comme la **source de commerce électronique** et le **chiffre d'affaires total**, en allant à la section **Commerce électronique** dans le segmenteur.
 
-![Segmenter la liste déroulante des filtres avec des filtres "Ecommerce".]({% image_buster /assets/img_archive/ecommerce_filters.png %}){: style="max-width:80%"}
+!Segmenter la liste déroulante des filtres avec les filtres "Ecommerce".]({% image_buster /assets/img_archive/ecommerce_filters.png %}){: style="max-width:80%"}
 
 {% alert important %}
 L'événement d'achat sera finalement abandonné et remplacé par des [événements recommandés par le commerce électronique.]({{site.baseurl}}/user_guide/data/custom_data/recommended_events/) Dans ce cas, les filtres de segmentation ne s'afficheront plus sous le comportement d'achat. Pour obtenir une liste complète des événements d'achat, reportez-vous à la section [Enregistrement des événements d'achat]({{site.baseurl}}/user_guide/data/custom_data/purchase_events/#logging-purchase-events).
@@ -361,13 +361,13 @@ L'événement d'achat sera finalement abandonné et remplacé par des [événeme
 
 Pour segmenter par propriétés d'événement imbriquées, vous pouvez utiliser les [extensions segments.]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/#why-use-segment-extensions) Par exemple, vous pouvez utiliser les extensions de segments pour savoir qui a acheté le produit "SKU-123" au cours des 90 derniers jours.
 
-## Analyse
+## Analyse/analytique (si utilisé comme adjectif)
 
 {% alert note %}
-Pour l'instant, l'intégration de Shopify ne permet pas de renseigner l'[événement d'achat de]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events#purchase-events) Braze. Par conséquent, les filtres d'achat, les étiquettes Liquid, les déclencheurs basés sur l'action et les analyses doivent utiliser l'événement order_placed de ecommerce..
+Pour l'instant, l'intégration de Shopify ne permet pas de renseigner l'[événement d'achat de]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events#purchase-events) Braze. Par conséquent, les filtres d'achat, les étiquettes Liquid, les déclenchements basés sur l'action et les analyses doivent utiliser l'événement ecommerce.order_placed.
 {% endalert %}
 
-Pour créer un [rapport sur les événements personnalisés]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events#analytics) en fonction des personnes qui ont effectué un événement pris en charge par l'intégration, vous pouvez spécifier le [nom de l'événement]({{site.baseurl}}/shopify_data_features/) spécifique.
+Pour créer un [rapport sur les événements personnalisés]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events#analytics) en fonction des personnes qui ont effectué un événement pris en charge par l'intégration, vous pouvez spécifier le [nom de]({{site.baseurl}}/shopify_data_features/) l'[événement]({{site.baseurl}}/shopify_data_features/) spécifique.
 
 Pour obtenir des informations sur les tendances liées aux commandes passées à partir de vos Canevas lancés, vous devrez configurer un [tableau de bord des conversions]({{site.baseurl}}/user_guide/data_and_analytics/analytics/conversions_dashboard#conversions-dashboard) et spécifier vos Canevas.
 

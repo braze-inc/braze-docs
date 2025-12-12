@@ -25,7 +25,7 @@ tool:
 次の翻訳管理方法を検討してください。
 
 {% tabs local %}
-{% tab キャンペーン %}
+{% tab campaign %}
 ### すべてに対して1つのテンプレート
 
 このアプローチでは、[Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid) を使用して Braze が1つのテンプレートにローカライゼーションが適用されます。送信後、ダッシュボードは集計されたキャンペーン分析を提供する。ユーザーレベルのエンゲージメントは、例えば**国**と**受信キャンペーン**のフィルターを組み合わせるなど、カスタムのセグメントファネルを使用して測定できます。
@@ -50,7 +50,7 @@ tool:
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
 
-{% tab キャンバス %}
+{% tab canvas %}
 ### 1つのジャーニーですべてに対応
 
 このアプローチでは、ローカライズは[Canvas Journeys]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/the_basics/#building-the-customer-journey)およびLiquid内で処理され、各ユーザのメッセージングを定義します。 
@@ -85,7 +85,7 @@ tool:
 ユーザの言語またはロケールに基づいてパーソナライズされたメッセージを送信するには、次のいずれかの方法を使用します。
 
 {% tabs local %}
-{% tab 手動 %}
+{% tab Manually %}
 メッセージの本文にコンテンツを手動で貼り付け、[Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/)を使用して[条件付きで]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#conditional-logic)正しい言語を受信者に表示できます。これを行う方法:
 
 1. メッセージを作成し、[**言語**] を選択して、選択した言語ごとに Liquid の条件付きロジックを生成します。
@@ -113,7 +113,7 @@ tool:
 {% endalert %}
 {% endtab %}
 
-{% tab コンテンツブロック %}
+{% tab Content Blocks %}
 Braze の[コンテンツブロック]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/#content-blocks)は再利用が可能なコンテンツのブロックです。ブロックが変更されると、そのブロックへの参照もすべて変更される。たとえば、メールヘッダーまたはフッターの更新は、すべてのメールまたは翻訳に反映されます。これらのブロックは REST API を使用して[作成]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/post_create_email_content_block/#create-content-block)および[更新]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/post_update_content_block/)することもでき、ユーザーはプログラムを使って翻訳をアップロードできます。 
 
 ダッシュボードでキャンペーンを作成する際、{% raw %}`{{content_blocks.${name_of_content_block}}}`{% endraw %} タグを使用してコンテンツブロックを参照できます。これらのブロックは、オプション1に示すように、各言語の条件ロジック内にすべての翻訳を格納することもできるし、各言語ごとに独立したブロックを使用することもできる。
@@ -126,8 +126,8 @@ Braze の[コンテンツブロック]({{site.baseurl}}/user_guide/engagement_to
 5. サービスは [`/content_block/update` エンドポイント]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/post_update_content_block/)にアクセスして翻訳されたコンテンツを更新し、タグを「翻訳完了」に更新します。
 {% endtab %}
 
-{% tab カタログ %}
-[カタログ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/)を使用すると、Liquid のカスタム属性やカスタムイベントプロパティと同様に、インポートされた JSON オブジェクトのデータに API や CSV ファイルを介してアクセスし、メッセージを充実させることができます。例えば次のようにします。
+{% tab Catalogs %}
+[カタログ]({{site.baseurl}}/user_guide/data/activation/catalogs/)を使用すると、Liquid のカスタム属性やカスタムイベントプロパティと同様に、インポートされた JSON オブジェクトのデータに API や CSV ファイルを介してアクセスし、メッセージを充実させることができます。例えば次のようにします。
 
 {% subtabs local %}
 {% subtab API %}
@@ -222,7 +222,7 @@ curl --location --request POST 'https://your_api_endpoint/catalogs/translations/
 {% endsubtab %}
 {% endsubtabs %}
 
-これらのカタログアイテムは、以下に示すように[パーソナライゼーション]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog/#using-catalogs-in-a-message)を使用して参照したり、[セレクション]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections)を使用してデータのグループを作成したりできます。 
+これらのカタログアイテムは、以下に示すように[パーソナライゼーション]({{site.baseurl}}/user_guide/data/activation/catalogs/catalog/#using-catalogs-in-a-message)を使用して参照したり、[セレクション]({{site.baseurl}}/user_guide/data/activation/catalogs/selections)を使用してデータのグループを作成したりできます。 
 
 {% raw %}
 ```liquid
@@ -233,7 +233,7 @@ curl --location --request POST 'https://your_api_endpoint/catalogs/translations/
 {% endraw %}
 {% endtab %}
 
-{% tab ロケールメッセージ %}
+{% tab Locale messages %}
 メッセージにロケールを追加して使用することで、メールキャンペーンやプッシュチャネルのキャンバスまたは1つのキャンペーン内で異なる言語のユーザーをターゲットにすることができます。詳細なウォークスルーについては、[メールメッセージのロケール]({{site.baseurl}}/user_guide/message_building_by_channel/email/using_locales/)または[プッシュメッセージのロケール]({{site.baseurl}}/user_guide/message_building_by_channel/push/using_locales/)を参照してください。
 
 {% alert important %}
@@ -241,7 +241,7 @@ curl --location --request POST 'https://your_api_endpoint/catalogs/translations/
 {% endalert %}
 {% endtab %}
 
-{% tab Braze のパートナー %}
+{% tab Braze partners %}
 [Transifex]({{site.baseurl}}/partners/message_personalization/localization/transifex/#about-transifex) や [Crowdin](https://crowdin.com/) など、多くの Braze パートナーがローカライゼーションソリューションを提供しています。通常、ユーザーは社内チームや翻訳業者と一緒にプラットフォームを使用します。これらの翻訳はそこにアップロードされ、REST API 経由でアクセスできるようになります。これらのサービスでは多くの場合、[コネクテッドコンテンツ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/)を活用して、ユーザーが API 経由で翻訳を取得できるようにしています。
 
 例えば、次のコネクテッドコンテンツの呼び出しでは、Transifex と Crowdin を呼び出して翻訳を取得し、{% raw %}`{{${language}}}`{% endraw %} を利用して特定のユーザー用に正しい翻訳を特定します。その後、この翻訳が JSON ブロックの「文字列」に保存され、参照されます。
@@ -266,7 +266,7 @@ curl --location --request POST 'https://your_api_endpoint/catalogs/translations/
 {% endsubtabs %}
 {% endtab %}
 
-{% tab スプレッドシート %}
+{% tab Spreadsheets %}
 スプレッドシートで翻訳をホストし、次のいずれかの方法を使用して、該当する言語でメッセージを送信します。
 
 {% subtabs local %}

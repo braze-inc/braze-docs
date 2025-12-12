@@ -1,7 +1,7 @@
 ---
-nav_title: クリック追跡
+nav_title: クリックトラッキング
 article_title: クリック追跡
-page_order: 2
+page_order: 3
 description: "このリファレンス記事では、WhatsAppメッセージのクリックトラッキングをオンにする方法、短縮リンクをテストする方法、トラッキングリンクでカスタムドメインを使用する方法などについて説明します。"
 page_type: reference
 alias: "/whatsapp_click_tracking/"
@@ -19,7 +19,11 @@ channel:
 
 応答メッセージとテンプレートメッセージの両方で、クリックトラッキングをオンにできます。ボタンと本文テキストのリンクで動作し、パーソナライズされたURL とカスタムドメインをサポートします。オンにすると、WhatsAppのパフォーマンスレポートにクリックデータが表示され、誰が何をクリックしたかに基づいてユーザーをセグメンテーションできます。
 
-## CDI の仕組み
+{% alert note %}
+クリック追跡は、ディープリンクでは機能しません。BranchやAppsFlyerなどのプロバイダーからユニバーサルリンクを短縮することはできるが、Brazeでは、その際に発生する可能性のある問題（アトリビューションが壊れる、リダイレクトが発生するなど）のトラブルシューティングはできない。
+{% endalert %}
+
+## 仕組み
 
 ### 応答メッセージ 
 
@@ -31,7 +35,7 @@ channel:
 
 `http://` または`https://` で始まる静的URLはすべて短縮される。流動的なパーソナライゼーション(ユーザーレベルのトラッキングターゲットなど) を含む短縮URL は、2 か月間有効です。
 
-![コンテンツ本文とボタンがある WhatsApp メッセージ作成画面。]({% image_buster /assets/img/whatsapp/click_tracking/message_composer.png %})
+![内容本文とボタン付きのWhatsApp メッセージ作成画面。]({% image_buster /assets/img/whatsapp/click_tracking/message_composer.png %})
 
 ### テンプレートメッセージ 
 
@@ -43,13 +47,13 @@ channel:
 2. テンプレートに含まれるリンクがクリックトラッキングと互換性があることを確認します。
 3. Braze でキャンペーンとして設定された後にテンプレート変数を変更しないでください。下流の変更は組み込めません。
 4. CTA ボタンリンクの場合は、**Dynamic** を選択し、ベースURL (`brz.ai` またはカスタムドメイン) を指定します。<br><br>![アクションの呼び出しを作成するセクション。]({% image_buster /assets/img/whatsapp/click_tracking/create_cta.png %})<br><br>
-5. 本文テキストのリンクの場合、WhatsApp Manager でテンプレートを記述するときに、追跡する本文に含まれているリンクの挿入済みスペースをすべて削除します。<br><br>![アクションを呼び出すためのコンテンツボディを入力するテキストボックス。]({% image_buster /assets/img/whatsapp/click_tracking/cta_textbox.png %})
+5. 本文テキストのリンクの場合、WhatsApp Manager でテンプレートを記述するときに、追跡する本文に含まれているリンクの挿入済みスペースをすべて削除します。<br><br>![テキストボックス] は、アクション への呼び出しの内容ボディを入力します。]({% image_buster /assets/img/whatsapp/click_tracking/cta_textbox.png %})
 
-#### ステップ2: Braze でテンプレートを完成させる
+#### ステップ 2: Braze でテンプレートを完成させる
 
 作成時に、Braze は、本文とCTA ボタンの両方でサポート可能なURL ドメインを持つテンプレートを自動的に検出します。ステータスはテンプレートの下部に表示されます。 
 
-![クリック追跡のアクティブステータスを示す [リンクステータス] セクション。]({% image_buster /assets/img/whatsapp/click_tracking/link_status.png %}){: style="max-width:70%;"}
+!["Link ステータス"クリック"トラッキングの有効なステータスを示す節。]({% image_buster /assets/img/whatsapp/click_tracking/link_status.png %}){: style="max-width:70%;"}
 
 - **対応リンク:**一致するベースURL を使用して送信されたリンクでは、クリックトラッキングが有効になります。
 - **部分的にサポートされるリンク:**テンプレート内の一部のリンクが完全な URL として送信される場合、これらのリンクにはクリック追跡が適用**されません**。
@@ -57,9 +61,9 @@ channel:
 
 宛先URL は、`brz.ai` またはカスタムドメインのいずれかに一致するベースURL を持つリンクに指定する必要があります。 
 
-![ボタン名、Web サイト URL、クリック追跡 URL のフィールドを含む [ボタン] セクション。]({% image_buster /assets/img/whatsapp/click_tracking/buttons.png %}){: style="max-width:70%;"}
+!["Buttons"ボタンの名前、Web サイト URL、および"トラッキング URL のフィールドがs のセクション。]({% image_buster /assets/img/whatsapp/click_tracking/buttons.png %}){: style="max-width:70%;"}
 
-{% multi_lang_include click_tracking.md section='Custom Domains' %}
+{% multi_lang_include analytics/click_tracking.md section='Custom Domains' %}
 
 ## URL での Liquid パーソナライゼーション
 
@@ -99,27 +103,23 @@ Liquid によってレンダリングされる URL は、API トリガーのプ�
 
 クリックトラッキングが有効になっているか、サポートされているテンプレートで使用されている場合、WhatsAppパフォーマンステーブルには、バリアントごとのクリックイベント数と関連するクリック率を示す列**Total Clicks**が含まれます。WhatsAppメトリクスの詳細については、[WhatsAppメッセージのパフォーマンス]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign_analytics)を参照してください。
 
-![WhatsApp メッセージキャンバスステップ。]({% image_buster /assets/img/whatsapp/click_tracking/canvas_step.png %}){: style="max-width:30%;"}
+![WhatsAppメッセージキャンバスステップ。]({% image_buster /assets/img/whatsapp/click_tracking/canvas_step.png %}){: style="max-width:30%;"}
 
 クリックデータは、分析ダッシュボードに自動的に報告されます。
 
-![WhatsApp メッセージパフォーマンステーブル。]({% image_buster /assets/img/whatsapp/click_tracking/message_performance.png %})
+![WhatsApp電文パフォーマンステーブル。]({% image_buster /assets/img/whatsapp/click_tracking/message_performance.png %})
 
 ## ユーザーのリターゲティング 
 
 `Clicked/Opened Step` フィルタと`clicked tracked WhatsApp link` インタラクションを使用して、リンクとのインタラクションに基づいてユーザーをセグメント化できます。
 
-![「clicked tracked WhatsApp link」のフィルターを含むフィルターグループ。]({% image_buster /assets/img/whatsapp/click_tracking/filter_group.png %})
+![ のフィルターを持つフィルターグループ;クリックされたトラッキングされたWhatsAppリンクとクォート;。]({% image_buster /assets/img/whatsapp/click_tracking/filter_group.png %})
 
-{% multi_lang_include click_tracking.md section='Frequently Asked Questions' %}
+{% multi_lang_include analytics/click_tracking.md section='Frequently Asked Questions' %}
 
 ### URL をクリックしている個々のユーザーを特定することはできますか?
 
 はい。クリック追跡が有効になっている(またはテンプレート設定に基づいて有効になっている) 場合は、WhatsApp のターゲット変更フィルタ、またはCurrents によって送信されたWhatsApp クリックイベント(`users.messages.whatsapp.Click`) を利用して、URL をクリックしたユーザーを再ターゲットできます。
-
-### クリックトラッキングは、ディープリンクまたはユニバーサルリンクで機能しますか?
-
-クリック追跡は、ディープリンクでは機能しません。BranchやAppsFlyerなどのプロバイダーからユニバーサルリンクを短縮することはできるが、Brazeでは、その際に発生する可能性のある問題（アトリビューションが壊れる、リダイレクトが発生するなど）のトラブルシューティングはできない。
 
 ### WhatsAppデバイスのプレビューはクリック数としてカウントされますか? 
 

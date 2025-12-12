@@ -15,15 +15,15 @@ description: "Este artículo de referencia cubre el asistente de redacción de I
 
 En tu creador de mensajes, selecciona <i class="fa-solid fa-wand-magic-sparkles"></i> **Lanzar AI Copywriter**.
 
-En el editor de arrastrar y soltar para mensajes dentro de la aplicación, selecciona un bloque de texto y elige <i class="fa-solid fa-wand-magic-sparkles" title="Redactor AI"></i> en la barra de herramientas del bloque.
+En el editor de arrastrar y soltar para mensajes dentro de la aplicación, selecciona un bloque de texto y selecciona <i class="fa-solid fa-wand-magic-sparkles" title="Redactor AI"></i> en la barra de herramientas del bloque.
 
-### Paso 2: Introduce los datos
+### Paso 2: Introduce los datos
 
-Introduce el nombre o la descripción de un producto en el campo de entrada y, a continuación, selecciona una longitud de salida aproximada.
+Introduce el nombre o la descripción del producto en el campo de entrada y, a continuación, selecciona una longitud de salida aproximada.
 
 Puedes elegir un canal específico para una longitud de salida basada en las mejores prácticas específicas del canal o seleccionar entre corto (1 frase), medio (2-3 frases) o largo (1 párrafo).
 
-### Paso 3: Personalízalo más (opcional)
+### Paso 3: Personalízalo más (opcional)
 
 Para personalizar aún más tu copia, puedes:
 
@@ -36,7 +36,7 @@ Para personalizar aún más tu copia, puedes:
 
 Cuando hayas terminado, selecciona **Generar**. Utilizaremos la información que nos proporciones para pedir a GPT que escriba un texto para ti. La respuesta se obtendrá de OpenAI y se te proporcionará. Para más información, consulta [¿Cómo se utilizan y envían mis datos a OpenAI?](#ai-policy)
 
-![AI copywriting assistant modal showing various features available"]({% image_buster /assets/img/ai_copywriter/gpt3.png %} "GPT3"){: style="max-width:70%;"}
+\![Asistente de redacción AI modal que muestra varias características disponibles"]({% image_buster /assets/img/ai_copywriter/gpt3.png %} "GPT3"){: style="max-width:70%;"}
 
 {% alert important %}
 Filtramos las respuestas de contenido ofensivo que infringe la [política de contenidos](https://beta.openai.com/docs/usage-guidelines/content-policy) de OpenAI.
@@ -44,7 +44,7 @@ Filtramos las respuestas de contenido ofensivo que infringe la [política de con
 
 ## Acerca de los datos de campañas anteriores {#past-campaign-data}
 
-Cuando utilices push como longitud de salida, si seleccionas **Datos de campañas anteriores de referencia**, se enviarán a OpenAI campañas móviles push anteriores seleccionadas al azar para que GPT pueda utilizarlas como base para su generación de copias. Deja esta casilla sin marcar si no quieres aprovechar esta capacidad. Consulta las secciones siguientes para obtener más información sobre cómo utilizan tus datos Braze y OpenAI. 
+Cuando utilices push como longitud de salida, si seleccionas **Datos de campañas anteriores de referencia**, se enviarán a OpenAI campañas push móviles anteriores seleccionadas al azar para que GPT pueda utilizarlas como base para su generación de copias. Actualmente, el redactor de IA enviará campañas push a OpenAI que no tengan sintaxis Liquid. Deja esta casilla sin marcar si no quieres aprovechar esta capacidad. Consulta las secciones siguientes para obtener más información sobre cómo utilizan tus datos Braze y OpenAI. 
 
 Si se utiliza junto con una directriz de [marca]({{site.baseurl}}/user_guide/brazeai/generative_ai//brand_guidelines/), tanto la directriz de marca como los datos de la campaña anterior se incorporarán al resultado final.
 

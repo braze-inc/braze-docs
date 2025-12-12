@@ -16,14 +16,14 @@ tool:
 > フルスクリーンのメッセージは端末の画面全体を占める！このメッセージタイプは、必須アプリのアップデートのように、ユーザーの注意が本当に必要な場合に最適だ。
 
 {% tabs %}
-{% tab ポートレート %}
+{% tab Portrait %}
 
-![フルスクリーンのアプリ内メッセージを縦向きで2つ並べて表示し、おすすめの画像とテキストを詳しく説明する。詳細は以下のセクションを参照のこと。]({% image_buster /assets/img/full-screen-spec.png %}){: style="max-width:801px;border:none;display:block;margin-left:auto;margin-right:auto"}
+![2つのフルスクリーンアプリ内メッセージは、縦向きで並べて表示され、"画像と文字の推奨事項が詳しく説明されています。詳細については、次のセクションを参照してください。]({% image_buster /assets/img/full-screen-spec.png %}){: style="max-width:801px;border:none;display:block;margin-left:auto;margin-right:auto"}
 
 {% endtab %}
-{% tab 景観 %}
+{% tab Landscape %}
 
-![横向きで2つのフルスクリーンのアプリ内メッセージを横に並べ、おすすめの画像とテキストを詳しく説明する。詳細は以下のセクションを参照のこと。]({% image_buster /assets/img/full-screen-spec-landscape.png %}){: style="max-width:801px;border:none;display:block;margin-left:auto;margin-right:auto"}
+![2 つのフルスクリーンアプリ内メッセージは横向きで並べて表示され、"画像と文字の推奨事項を詳しく説明します。詳細については、次のセクションを参照してください。]({% image_buster /assets/img/full-screen-spec-landscape.png %}){: style="max-width:801px;border:none;display:block;margin-left:auto;margin-right:auto"}
 
 {% endtab %}
 {% endtabs %}
@@ -36,7 +36,7 @@ tool:
 - ファイル形式はPNG、JPEG、[GIFのみ]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/gifs#gifs)受け付ける。
 - 画像は500KBを推奨する。
 
-{% alert tip %} 自信を持ってアセットを創造しましょう！当社のアプリ内メッセージ画像テンプレートとセーフゾーンオーバーレイは、あらゆるサイズのデバイスでうまく動作するように設計されている。[デザインテンプレートのダウンロード ZIP]({% image_buster /assets/download_file/Braze-In-App-Message-Design-Templates.zip %}) {% endalert %}
+{% alert tip %} 自信を持ってアセットを創造しましょう！アプリ内メッセージ "画像 テンプレート sとセーフゾーンオーバーレイは、すべてのサイズの機器でうまく動作するように設計されています。[Down 読み込む Design テンプレート s ZIP]({% image_buster /assets/download_file/Braze-In-App-Message-Design-Templates.zip %}) {% endalert %}
 
 ### ポートレート
 
@@ -58,21 +58,21 @@ tool:
 
 Brazeプラットフォームでフルスクリーンのアプリ内メッセージをプレビューする際、デバイス間で表示される際にトリミングから保護されるメッセージの領域に対して、イメージセーフゾーンを有効にすることができる。プレビューペインでイメージセーフゾーンをテストするだけでなく、いつも通り[メッセージをテスト]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/)することをお勧めする。
 
-![「画像セーフゾーンを表示」を有効にした Braze で、アプリ内メッセージをプレビュー。画像のセーフゾーンは、画像のどの部分が切り抜きから保護されるかを視覚化する画像上のオーバーレイである。]({% image_buster /assets/img/image-safe-zone-full-screen-in-app-message.png %})
+![ " Show Image Safe Zone" enabled でBrazeのアプリ内メッセージをプレビューする。"画像セーフゾーンは、"画像のどの部分がクロップから安全かを視覚化する"画像上のオーバーレイです。]({% image_buster /assets/img/image-safe-zone-full-screen-in-app-message.png %})
 
 ## 大型スクリーン
 
 タブレットやデスクトップ・ブラウザでは、以下のスクリーンショットのように、フルスクリーンのアプリ内メッセージがアプリ画面の中央に表示される。
 
 {% tabs %}
-{% tab ポートレート %}
+{% tab Portrait %}
 
-![縦向きの大画面で表示されるフルスクリーンのアプリ内メッセージ。メッセージは、画面中央に配置される大きなモーダルとして表示されます。]({% image_buster /assets/img/full-screen-large-viewport.png %}){: style="border:none;display:block;margin-left:auto;margin-right:auto"}
+![フルスクリーンは、大型スクリーンで縦向きに耳をアプリようにアプリ内メッセージします。アプリは、スクリーンの中央にある大きなモーダルのように聞こえます。]({% image_buster /assets/img/full-screen-large-viewport.png %}){: style="border:none;display:block;margin-left:auto;margin-right:auto"}
 
 {% endtab %}
-{% tab 景観 %}
+{% tab Landscape %}
 
-![横向きの大画面で表示されるフルスクリーンのアプリ内メッセージ。メッセージは、画面中央に配置される大きなモーダルとして表示されます。]({% image_buster /assets/img/full-screen-large-viewport-landscape.png %}){: style="max-width:80%;border:none;display:block;margin-left:auto;margin-right:auto"}
+![横向きで大画面に耳をアプリようにフルスクリーンでアプリ内メッセージします。アプリは、スクリーンの中央にある大きなモーダルのように聞こえます。]({% image_buster /assets/img/full-screen-large-viewport-landscape.png %}){: style="max-width:80%;border:none;display:block;margin-left:auto;margin-right:auto"}
 
 {% endtab %}
 {% endtabs %}

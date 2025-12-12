@@ -1,5 +1,5 @@
 ---
-nav_title: ユーザーの追跡
+nav_title: トラッキング、ユーザー追跡
 article_title: フォームを使用したユーザーの追跡
 description: "メッセージにLiquidタグを追加して、ランディングページからフォームを送信するユーザーを識別する方法を学習します。"
 page_order: 2
@@ -31,29 +31,41 @@ Braze では、{% raw %}`{% landing_page_url %}`{% endraw %} Liquid タグを任
 
 ### ステップ1:ページ URL を確認する {#page-url}
 
-Braze はランディングページのURL を使用して、独自のLiquid タグを生成します。現在のページ URL を変更する場合は、[**メッセージング**] > [**ランディングページ**] に移動し、ランディングページを開きます。**ページURL**で、新しいページURLを入力できます。
+Braze はランディングページのURL を使用して、独自のLiquid タグを生成します。現在のページURL を変更する場合は、**Messaging**> **Landing Pages** に移動し、ランディングページを開きます。**ページURL**で、新しいページURLを入力できます。
 
 {% alert warning %}
-メッセージ送信後にページ URL を変更すると、古い URL を使用してランディングページにアクセスしようとするユーザーは `404` ページに送信されます。
+メッセージの送信後にページURL を変更すると、古いURL を使用してランディングページにアクセスしようとするユーザは、`404` ページに送信されます。
 {% endalert %}
 
-![Braze でのランディングページのページ URL の例。]({% image_buster /assets/img/landing_pages/url-handle-example.png %}){: style="max-width:80%;"}
+<<<<<<< HEAD
+![BrazeのランディングページのURLの例。]({% image_buster /assets/img/landing_pages/url-handle-example.png %}){: style="max-width:80%;"}
+=======
+\![BrazeのランディングページのURLの例。]({% image_buster /assets/img/landing_pages/url-handle-example.png %}){: style="max-width:80%;"}
+>>>>>>> main
 
-### ステップ2: Liquid タグの生成
+### ステップ 2: Liquid タグの生成
 
 **Messaging**> **Campaigns**に移動し、キャンペーンを選択します。メッセージエディタで、**Personalization** を選択します。
 
-![ドラッグ＆ドロップエディターの [パーソナライズを追加する] ボタン。]({% image_buster /assets/img/landing_pages/select-personalization.png %}){: style="max-width:75%;"}
+<<<<<<< HEAD
+![ドラッグ＆ドロップ・エディターの「パーソナライゼーションを追加」ボタンだ。]({% image_buster /assets/img/landing_pages/select-personalization.png %}){: style="max-width:75%;"}
+=======
+\![ドラッグ＆ドロップ・エディターの「パーソナライゼーションを追加」ボタンだ。]({% image_buster /assets/img/landing_pages/select-personalization.png %}){: style="max-width:75%;"}
+>>>>>>> main
 
 Braze は、[ランディングページURL](#page-url) を使用して自動的にLiquid タグを生成します。タグを生成するには、次の表を参照してください。
 
-\|**パーソナライゼーションタイプ**| [**ランディングページ**] を選択します。|
-\|**ランディングページ**| [以前に作成した](#prerequisites)ランディングページを選択します。|
+\|**カスタマイズタイプ**| **ランディングページ**.|を選択します。
+\|**ランディングページ**|ランディングページを選択[以前に作成した](#prerequisites).|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 メッセージにLiquid タグを追加するには、**Insert** を選択するか、スニペットをクリップボードにコピーして手動で追加します。
 
-![選択したランディングページの自動生成されたLiquid タグ。]({% image_buster /assets/img/landing_pages/get-snippet.png %}){: style="max-width:40%;"}
+<<<<<<< HEAD
+![選択されたランディングページのために自動生成されたLiquidタグ。]({% image_buster /assets/img/landing_pages/get-snippet.png %}){: style="max-width:40%;"}
+=======
+\![選択されたランディングページのために自動生成されたLiquidタグ。]({% image_buster /assets/img/landing_pages/get-snippet.png %}){: style="max-width:40%;"}
+>>>>>>> main
 
 スニペットは次のようになります。
 

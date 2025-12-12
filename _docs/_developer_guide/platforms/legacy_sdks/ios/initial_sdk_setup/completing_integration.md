@@ -108,7 +108,7 @@ If you wish to customize Braze on startup, you can instead use the Braze initial
 In your `AppDelegate.m` file, within your `application:didFinishLaunchingWithOptions:` method, add the following Braze method:
 
 ```objc
-[Appboy startWithApiKey:@"YOUR-APP-IDENTIFER-API-KEY"
+[Appboy startWithApiKey:@"YOUR-APP-IDENTIFIER-API-KEY"
           inApplication:application
       withLaunchOptions:launchOptions
       withAppboyOptions:appboyOptions];

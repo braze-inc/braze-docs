@@ -37,15 +37,23 @@ BrazeAI<sup>TM</sup>[インテリジェント・チャネル・フィルタ]({{s
 
 リンク短縮を使用するには、メッセージコンポーザーのリンク短縮トグルがオンになっていることを確認します。次に、ベーシックトラッキングまたはアドバンストトラッキングを使用することを選択します。
 
-![リンク短縮のトグルがあるメッセージ作成画面。]({% image_buster /assets/img/link_shortening/shortening1.png %})
+<<<<<<< HEAD
+![メッセージ作成画面にリンク短縮のトグルが追加された。]({% image_buster /assets/img/link_shortening/shortening1.png %})
 
 Braze は、`http://` または`https://` で始まるURL のみを認識します。URL が認識されると、**プレビュー** セクションがプレースホルダURL で更新されます。BrazeはURLを短縮した後の長さを見積もりますが、警告が表示され、テストユーザーを選択してメッセージを下書きとして保存するよう促され、より正確な見積もりが得られます。
 
-![[メッセージ] ボックスに長い URL が表示され、プレビューに短縮リンクが生成されたメッセージ作成画面。]({% image_buster /assets/img/link_shortening/shortening3.png %})
+![メッセージ作成画面では、"メッセージ "ボックスに長いURLを入力し、プレビューで短縮リンクを生成する。]({% image_buster /assets/img/link_shortening/shortening3.png %})
+=======
+\![メッセージ作成画面にリンク短縮のトグルが追加された。]({% image_buster /assets/img/link_shortening/shortening1.png %})
+
+Braze は、`http://` または`https://` で始まるURL のみを認識します。URL が認識されると、**プレビュー** セクションがプレースホルダURL で更新されます。BrazeはURLを短縮した後の長さを見積もりますが、警告が表示され、テストユーザーを選択してメッセージを下書きとして保存するよう促され、より正確な見積もりが得られます。
+
+\![メッセージ作成画面では、"メッセージ "ボックスに長いURLを入力し、プレビューで短縮リンクを生成する。]({% image_buster /assets/img/link_shortening/shortening3.png %})
+>>>>>>> main
 
 ### UTMパラメータの追加
 
-{% multi_lang_include click_tracking.md section='UTM parameters' %}
+{% multi_lang_include analytics/click_tracking.md section='UTM parameters' %}
 
 ## URL での Liquid パーソナライゼーション
 
@@ -100,7 +108,11 @@ LiquidによってレンダリングされるURLは、APIトリガーのプロ�
 アクティブなキャンバス内にドラフトが作成された場合、短縮されたURL は生成されません。キャンバスドラフトがアクティブになると、実際の短縮URL が生成されます。
 {% endalert %}
 
-![テスト受信者を選択するためのフィールドがあるメッセージの [テスト] タブ。]({% image_buster /assets/img/link_shortening/shortening2.png %})
+<<<<<<< HEAD
+![メッセージ "テスト "タブには、テスト受信者を選択するためのフィールドがある。]({% image_buster /assets/img/link_shortening/shortening2.png %})
+=======
+\![メッセージ "テスト "タブには、テスト受信者を選択するためのフィールドがある。]({% image_buster /assets/img/link_shortening/shortening2.png %})
+>>>>>>> main
 
 {% alert note %}
 Liquidパーソナライゼーションと短縮URLは、ユーザーが選択された後、**テスト**タブにテンプレート化されます。ユーザーが選択されていることを確認して、正確な文字数を取得してください。
@@ -108,19 +120,23 @@ Liquidパーソナライゼーションと短縮URLは、ユーザーが選択�
 
 ## クリックトラッキング
 
-リンク短縮がオンになっている場合、[**SMS/MMS/RCS のパフォーマンス**] テーブルには、バリアントごとのクリックイベントの数と関連するクリック率を示す**総クリック数**というタイトルの列が含まれます。メトリックの詳細については、[メッセージパフォーマンス]({{site.baseurl}}/sms_mms_rcs_reporting/)を参照してください。
+リンク短縮がオンになっている場合、**SMS/MMS/RCSパフォーマンス**テーブルには、バリアントごとのクリックイベントのカウントと関連するクリック率を示す**Total Clicksという**カラムが含まれる。メトリックの詳細については、[メッセージパフォーマンス]({{site.baseurl}}/sms_mms_rcs_reporting/)を参照してください。
 
-![SMS およびMMS パフォーマンスメトリックテーブル。]({% image_buster /assets/img/link_shortening/shortening4.png %})
+<<<<<<< HEAD
+![SMSとMMSのパフォーマンスメトリクスの表。]({% image_buster /assets/img/link_shortening/shortening4.png %})
+=======
+\![SMSとMMSのパフォーマンスメトリクスの表。]({% image_buster /assets/img/link_shortening/shortening4.png %})
+>>>>>>> main
 
-[**過去のパフォーマンス**] と [**SMS/MMS/RCS のス**] テーブルには、**総クリック数**のオプションも含まれており、クリックイベントの日次時系列が表示されます。クリック数はリダイレクト時（例えば、ユーザーがリンクを訪問したとき）に増加し、ユーザーごとに複数回増加することがあります。
+**ヒストリカル・パフォーマンスと** **SMS/MMS/RCSパフォーマンス・**テーブルには、**総クリック数の**オプションもあり、クリック・イベントの日次時系列を表示する。クリック数はリダイレクト時（例えば、ユーザーがリンクを訪問したとき）に増加し、ユーザーごとに複数回増加することがあります。
 
 ## ユーザーのリターゲティング
 
 リターゲットのガイダンスについては、[リターゲット]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/#filter-by-advanced-tracking-links)を参照してください。
 
-{% multi_lang_include click_tracking.md section='Custom Domains' %}
+{% multi_lang_include analytics/click_tracking.md section='Custom Domains' %}
 
-{% multi_lang_include click_tracking.md section='Frequently Asked Questions' %}
+{% multi_lang_include analytics/click_tracking.md section='Frequently Asked Questions' %}
 
 ### URL をクリックしている個々のユーザーを特定することはできますか?
 
@@ -132,7 +148,11 @@ Liquidパーソナライゼーションと短縮URLは、ユーザーが選択�
 
 ### リンク短縮作業は、ディープリンクやユニバーサルリンクと連携していますか?
 
-リンク短縮はディープリンクでは機能しない。BranchやAppsFlyerなどのプロバイダーからユニバーサルリンクを短縮することはできるが、Brazeでは、その際に発生する可能性のある問題（アトリビューションが壊れる、リダイレクトが発生するなど）のトラブルシューティングはできない。
+リンク短縮はディープリンクでは機能しない。あるいは、BranchやAppsFlyerなどのサードパーティプロバイダーからユニバーサルリンクを短縮することもできるが、ユーザーは短時間のリダイレクトや「ちらつき」効果を経験するかもしれない。これは、短縮リンクがアプリ開封をサポートするユニバーサルリンクに解決する前に、まずWebを経由するために起こる。さらにBrazeでは、ユニバーサルリンクの短縮時に発生する可能性のある問題（アトリビューションが壊れる、予期せぬリダイレクトが発生する等）のトラブルシューティングはできない。
+
+{% alert note %}
+ユニバーサルリンクによるリンク短縮を導入する前にユーザー体験をテストし、期待に沿うものであることを確認する。
+{% endalert %}
 
 ### `send_ids` はSMS クリックイベントに関連付けられていますか?
 

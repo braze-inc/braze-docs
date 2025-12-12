@@ -1,5 +1,5 @@
 ---
-nav_title: "Vorlagen und Medien"
+nav_title: "Templates und Medien"
 article_title: Vorlagen und Medien
 page_order: 5
 layout: dev_guide
@@ -35,17 +35,11 @@ guide_featured_list:
 
 Im Bereich **Vorlagen** können Sie Vorlagen und kreative Inhalte für die folgenden Funktionen verwenden und verwalten:
 
-- **[E-Mail Templates][2]**
-- **[Content-Blöcke][7]**
-- **[Webhook Templates][3]**
-- **[Link-Templates][6]**
-- **[Farbprofile für In-App-Nachrichten und CSS-Vorlagen][4]**
-- **[Assets in der Medienbibliothek verwalten][5]**
+- **[E-Mail Templates]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/#creating-an-email-template)**
+- **[Content-Blöcke]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/)**
+- **[Webhook Templates]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/webhook_template/#creating-a-webhook-template)**
+- **[Link-Templates]({{site.baseurl}}/user_guide/message_building_by_channel/email/link_templates/#link-templates)**
+- **[Farbprofile für In-App-Nachrichten und CSS-Vorlagen]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#color-profile)**
+- **[Assets in der Medienbibliothek verwalten]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#media-library)**
 <br><br><br>
 
-[2]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/#creating-an-email-template
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/webhooks/webhook_template/#creating-a-webhook-template
-[4]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#color-profile
-[5]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#media-library
-[6]: {{site.baseurl}}/user_guide/message_building_by_channel/email/link_templates/#link-templates
-[7]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/

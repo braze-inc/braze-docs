@@ -4,14 +4,14 @@ article_title: Campanhas
 page_order: 2
 layout: dev_guide
 guide_top_header: "Campanhas"
-guide_top_text: "Se quiser se engajar com seus usuários com uma única etapa de mensagem, poderá enviar a eles uma campanha usando qualquer <a href='/docs/user_guide/message_building_by_channel/'>canal de envio de mensagens</a> compatível. A maioria das jornadas de usuário com várias etapas é melhor criada como <a href='/docs/user_guide/engagement_tools/canvas/'>Canvas</a>.<br> <br>Selecione qualquer um dos tópicos a seguir para ver artigos que possam lhe interessar."
+guide_top_text: "Se quiser interagir com seus usuários com uma única etapa de mensagem, você pode enviar uma campanha usando qualquer <a href='/docs/user_guide/message_building_by_channel/'>canal de mensagens</a> compatível. A maioria das jornadas de usuário de várias etapas é melhor criada como <a href='/docs/user_guide/engagement_tools/canvas/'>Canvases</a>.<br> <br>Selecione qualquer um dos tópicos a seguir para ver artigos que possam lhe interessar."
 tool: Campaigns
 page_type: landing
-description: "Essa landing page abriga as campanhas do dashboard do Braze. Aqui, você pode encontrar recursos para criar sua campanha, gerenciar e testar campanhas, além de ideias e estratégias úteis."
+description: "Essa página de destino abriga as campanhas do painel de controle do Braze. Aqui, você pode encontrar recursos sobre como criar sua campanha, gerenciar e testar campanhas, além de ideias e estratégias úteis."
 search_rank: 3
 guide_featured_title: "Seções"
 guide_featured_list:
-  - name: Como começar
+  - name: Primeiros passos
     link: /docs/user_guide/engagement_tools/campaigns/getting_started/
     image: /assets/img/braze_icons/book-closed.svg
   - name: Criação de campanhas

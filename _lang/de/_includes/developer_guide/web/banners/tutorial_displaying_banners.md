@@ -6,7 +6,7 @@ Bevor Sie mit diesem Tutorial beginnen, überprüfen Sie, ob Ihr Braze SDK die M
 
 ## Anzeige von Bannern für das Internet SDK
 
-{% multi_lang_include developer_guide/_shared/tutorial_feedback.md %}
+{% multi_lang_include developer_guide/_shared/tutorial_feedback.md tutorial="Anzeigen von Bannern im Internet" %}
 
 {% scrolly %}
 

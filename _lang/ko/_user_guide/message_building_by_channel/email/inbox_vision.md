@@ -1,8 +1,8 @@
 ---
-nav_title: Inbox Vision
-article_title: Inbox Vision
+nav_title: 받은편지함 비전
+article_title: 받은편지함 비전
 page_order: 9
-description: "이 페이지는 마케터가 다양한 이메일 클라이언트와 모바일 장치의 관점에서 이메일을 볼 수 있도록 하는 기능인 받은편지함 비전을 설정하는 방법을 다룹니다."
+description: "이 페이지에서는 마케터가 다양한 이메일 클라이언트와 모바일 기기의 관점에서 이메일을 볼 수 있는 기능인 받은편지함 비전을 설정하는 방법에 대해 설명합니다."
 tool:
   - Dashboard
 channel:
@@ -10,39 +10,39 @@ channel:
 
 ---
 
-# Inbox Vision
+# 받은편지함 비전
 
-> 받은편지함 비전을 사용하면 다양한 이메일 클라이언트 및 모바일 기기의 관점에서 이메일을 볼 수 있습니다. 예를 들어, Inbox Vision을 사용하여 어두운 모드와 밝은 모드 간의 차이를 테스트하여 이메일이 정확하게 설정되었는지 확인할 수 있습니다.
+> 받은편지함 비전을 사용하면 다양한 이메일 클라이언트와 모바일 기기의 관점에서 이메일을 볼 수 있습니다. 예를 들어 받은편지함 비전을 사용하여 다크 모드와 라이트 모드의 차이를 테스트하여 이메일이 제대로 수신되었는지 확인할 수 있습니다.
 
 {% alert important %}
-일반적으로, 귀하의 이메일은 사용자 프로필 정보와 같은 템플릿 정보를 기반으로 하는 경우 Inbox Vision과 함께 작동하지 않습니다. 이 기능을 사용하여 이메일을 보낼 때 Braze은 빈 사용자로 템플릿을 작성하기 때문입니다.<br><br>Make sure you've added default values to any Liquid in your email message. If no default values are provided, you may receive a false positive or the test may fail to run.
+일반적으로 이메일 콘텐츠가 고객 프로필 정보와 같은 템플릿 정보에 의존하는 경우 받은편지함 비전에서 이메일이 작동하지 않습니다. 이 기능을 사용하여 이메일을 보낼 때 빈 사용자로 Braze 템플릿을 사용하기 때문입니다.<br><br>이메일 메시지의 모든 Liquid에 기본값을 추가했는지 확인하세요. 기본값을 제공하지 않으면 오탐이 발생하거나 테스트가 실행되지 않을 수 있습니다.
 {% endalert %}
 
-## Inbox Vision에서 이메일 테스트
+## 받은편지함 비전에서 이메일 테스트하기
 
 이러한 미리 보기를 보려면 이메일에 제목란과 유효한 발신 도메인이 포함되어야 합니다. 이메일이 데스크톱과 모바일 기기에서 어떻게 다르게 렌더링되는지 염두에 두세요. 이러한 미리 보기를 보면서 콘텐츠를 검토하고 이메일이 의도한 대로 표시되는지 확인할 수 있습니다.
 
-받은편지함 비전에서 이메일 메시지를 테스트하려면 다음과 같이 하세요.
+받은편지함에서 이메일 메시지를 테스트하려면 다음과 같이 하세요:
 
-1. 끌어서 놓기 편집기 또는 HTML 이메일 편집기로 이동합니다.
-2. 편집기에서 **미리보기 및 테스트**를 선택하십시오.
-3. **받은편지함 비전** 선택.
-4. **실행 받은편지함 비전**. 이 작업은 완료하는 데 2분에서 10분 정도 걸릴 수 있습니다.
-5. 다음으로, 미리보기를 더 자세히 보기 위해 타일을 선택하세요. 이 미리보기는 다음 섹션으로 그룹화됩니다: **웹 클라이언트**, **애플리케이션 클라이언트** 및 **모바일 클라이언트**.
+1. 드래그 앤 드롭 편집기 또는 HTML 이메일 편집기로 이동합니다.
+2. 편집기에서 **미리보기 & 테스트를** 선택합니다.
+3. **받은편지함 비전을** 선택합니다.
+4. **받은편지함 비전 실행을** 선택합니다. 완료하는 데 2분에서 10분 정도 소요될 수 있습니다.
+5. 다음으로 타일을 선택하여 미리 보기를 더 자세히 확인합니다. 이러한 미리보기는 다음 섹션으로 그룹화됩니다: **웹 클라이언트**, **애플리케이션 클라이언트**, **모바일 클라이언트**.
 
-![Overview of Inbox Vision for the HTML editor.]({% image_buster /assets/img_archive/inboxvision1.png %})
+\![HTML 편집기용 받은편지함 비전 개요.]({% image_buster /assets/img_archive/inboxvision1.png %})
 
 {: start="6"}
-6\. 템플릿에 필요한 경우 변경하십시오.
-7\. **테스트를 다시 실행**하여 업데이트된 미리보기를 확인하십시오.
+6\. 필요한 경우 템플릿을 변경합니다.
+7\. **테스트 다시 실행을** 선택하여 업데이트된 미리 보기를 확인합니다.
 
 {% alert note %}
-Inbox Vision isn't supported if your email message includes [abort logic]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages) as these emails are rendered as static content.
+받은편지함 비전은 이메일 메시지에 [중단 로직이]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages) 포함된 경우 이러한 이메일이 정적 콘텐츠로 렌더링되므로 지원되지 않습니다.
 {% endalert %}
 
-### 사용자로 미리보기
+### 사용자로 미리 보기
 
-무작위 사용자로 이메일을 미리 보기할 때, 사용자와 관련된 특정 설정이나 속성(예: 이름이나 선호도)은 현재 또는 미래의 미리 보기를 위해 저장되지 않습니다. When you select a custom user, the preview shown in Inbox Vision may differ from the message preview elsewhere since this option uses specific user data to create the preview
+이메일을 임의의 사용자로 미리 볼 때 이름이나 기본 설정 등 사용자와 관련된 특정 설정이나 속성은 현재 또는 향후 미리 보기에 저장되지 않습니다. 커스텀 사용자를 선택하면 이 옵션은 특정 사용자 데이터를 사용하여 미리 보기를 만들기 때문에 받은편지함 비전에 표시되는 미리 보기가 다른 곳의 메시지 미리 보기와 다를 수 있습니다.
 
 ## 코드 분석
 
@@ -50,81 +50,81 @@ Inbox Vision isn't supported if your email message includes [abort logic]({{site
 
 ### 코드 분석 정보 보기
 
-이 정보는 **Inbox Vision** 탭에서 <i class="fas fa-list"></i> **목록 보기**를 선택하면 확인할 수 있습니다. 이 목록 보기는 HTML 이메일 템플릿에서만 사용할 수 있습니다. 끌어서 놓기 이메일 템플릿을 사용하는 경우에는 미리 보기를 확인하여 가능한 문제를 해결하세요.
+이 정보는 **받은편지함 비전** 탭에서 <i class="fas fa-list"></i> **목록 보기를** 선택하면 확인할 수 있습니다. 이 목록 보기는 HTML 이메일 템플릿에서만 사용할 수 있습니다. 드래그 앤 드롭 이메일 템플릿을 사용하는 경우 미리 보기를 확인하여 가능한 문제를 해결하세요.
 
-![Example code analysis on the Inbox Vision preview.]({% image_buster /assets/img_archive/inboxvision2.png %})
+받은편지함 비전 미리보기의 코드 분석 예시.]({% image_buster /assets/img_archive/inboxvision2.png %})
 
 {% alert note %}
-특정 이메일 클라이언트의 미리보기보다 코드 분석이 더 빨리 표시되는 경우가 있습니다. 이는 Braze가 이메일이 받은 편지함에 도착할 때까지 기다렸다가 스크린샷을 찍기 때문입니다.
+특정 이메일 클라이언트의 경우 코드 분석이 미리보기보다 빠르게 표시되는 경우가 있습니다. Braze는 이메일이 받은편지함에 도착할 때까지 기다렸다가 스크린샷을 찍기 때문입니다.
 {% endalert %}
 
 ## 스팸 테스트
 
-스팸 테스트는 이메일이 스팸 폴더에 도착할지 고객의 받은 편지함에 도착할지 예측합니다. 스팸 테스트는 Gmail.com 및 Outlook.com과 같은 주요 인터넷 서비스 제공업체(ISP) 필터뿐만 아니라 IronPort, SpamAssassin, Barracuda 와 같은 주요 스팸 필터에서 실행됩니다 .
+스팸 테스트는 이메일이 스팸 폴더에 도착할지, 고객의 받은편지함에 도착할지 예측합니다. 스팸 테스트는 IronPort, 스팸어쌔신, 바라쿠다와 같은 주요 스팸 필터와 Gmail.com 및 Outlook.com 과 같은 주요 인터넷 서비스 공급자(ISP) 필터에서 실행됩니다.
 
 ### 스팸 테스트 결과 보기
 
-스팸 테스트 결과를 확인하려면 다음을 수행하십시오:
+스팸 테스트 결과를 확인하려면 다음과 같이 하세요:
 
-1. **받은편지함 비전** 섹션에서 **스팸 테스트** 탭을 선택하세요. **스팸 테스트 결과** 표에는 스팸 필터 이름, 상태 및 유형이 나열됩니다.
+1. **받은편지함 비전** 섹션에서 **스팸 테스트** 탭을 선택합니다. **스팸 테스트 결과** 표에는 스팸 필터 이름, 상태 및 유형이 나열됩니다.
 
-![세 개의 열이 있는 스팸 테스트 결과 표입니다: 이름, 상태 및 유형. There is a list of spam filters and ISP filters that have passed spam testing, indicating that the email campaign will not land in the spam folder.]({% image_buster /assets/img_archive/email_spam_testing.png %})
+세 개의 열이 있는 스팸 테스트 결과 표입니다: 이름, 상태 및 유형. 스팸 테스트를 통과한 스팸 필터 및 ISP 필터 목록이 표시되며, 이는 이메일 캠페인이 스팸 폴더에 들어가지 않음을 나타냅니다.]({% image_buster /assets/img_archive/email_spam_testing.png %})
 
 {: start="2"}
-2\. 이 결과를 검토하고 이메일 캠페인에 대한 조정을 합니다.
-3\. 스팸 테스트 결과를 새로 고치려면 **테스트 다시 실행**을 선택하세요.
+2\. 이러한 결과를 검토하고 이메일 캠페인을 조정할 수 있습니다.
+3\. **테스트 다시 실행을** 선택하여 스팸 테스트 결과를 다시 로드합니다.
 
-## Accessibility testing
+## 접근성 테스트
 
-Accessibility testing in Inbox Vision highlights accessibility issues that may exist with your email to provide insight into which elements are not meeting accessibility standards. It analyzes your email content against some Web Content Accessibility Guidelines ([WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/)). WCAG is a set of internationally recognized technical standards developed by the World Wide Web Consortium (W3C) to make web content more accessible to people with disabilities. 
+받은편지함 비전의 접근성 테스트는 이메일에 존재할 수 있는 접근성 문제를 강조 표시하여 접근성 표준을 충족하지 못하는 요소에 대한 인사이트를 제공합니다. 이메일 콘텐츠를 일부 웹 콘텐츠 접근성 지침[(WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/)에 따라 분석합니다. WCAG는 장애인의 웹 콘텐츠 접근성을 높이기 위해 월드와이드웹 컨소시엄(W3C)에서 개발한 국제적으로 인정된 기술 표준입니다. 
 
-### How it works
+### 작동 방식
 
-When you run an Inbox Vision test, the tool automatically checks for common email accessibility issues in the [WCAG 2.2 AA rule set](https://www.w3.org/WAI/WCAG22/quickref/?versions=2.2&currentsidebar=%23col_customize&levels=aaa), such as missing alt text, insufficient color contrast, and improper heading structure, then categorizes the severity of each issue to help you prioritize fixes. 
-
-{% alert important %}
-Accessibility Testing may be used to support Customer's compliance efforts of regulations or laws such as the [European Accessibility Act](https://www.braze.com/resources/articles/european-accessibility-at-what-it-means-for-marketers), however Customer acknowledges that Braze makes no representations or warranties with respect to whether or not use of Accessibility Testing satisfies Customer's compliance obligations, and disclaims all liability in relation thereto.
-{% endalert %}
-
-### Viewing accessibility testing results
-
-Accessibility testing will generate results for each rule as passed, failed, or needs review in the **Accessibility Testing** tab. Each rule is categorized using POUR (Perceivable, Operable, Understandable, Robust), which are the four main principles behind WCAG.
-
-#### POUR categories
-
-Issues are categorized under the four foundational [POUR principles](https://www.w3.org/WAI/WCAG22/Understanding/intro#understanding-the-four-principles-of-accessibility): Perceivable, Operable, Understandable, and Robust. Each principle addresses a different aspect of accessible design.
-
-| Principle | Definition |
-| --- | --- |
-| Perceivable | Information and user interface components must be presentable to users in ways they can perceive.<br><br>Users must be able to perceive the information being presented (it can't be invisible to all of their senses). |
-| Operable | User interface components and navigation must be operable.<br><br>Users must be able to operate the interface (the interface cannot require interaction that a user cannot perform). |
-| Understandable | Information and the operation of the user interface must be understandable.<br><br>Users must be able to understand the information as well as the operation of the user interface (the content or operation cannot be beyond their understanding). |
-| Robust | Content must be robust enough that it can be interpreted reliably by a wide variety of user agents, including assistive technologies.<br><br>Users must be able to access the content as technologies advance (as technologies and user agents evolve, the content should remain accessible). |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-#### Severity levels
-
-Inbox Vision classifies accessibility issues by severity to help you prioritize remediation efforts.
-
-| Status | Definition |
-| --- | --- |
-| Critical | Issues that can block access to content or functionality for users with disabilities. These are the most severe and should be prioritized for fixing. |
-| Serious | Issues that can cause significant barriers but may not completely block access. These should be addressed promptly. |
-| Moderate | Issues that may cause some difficulty for users with disabilities, but are less likely to block access entirely. |
-| Minor | Issues that have a relatively low impact on accessibility and may cause only minor inconvenience. |
-| Needs review | Unable to detect if there might be an issue or not. This can occur when we are unable to determine the contrast ratio as the text is placed on a background image. This will need to be manually reviewed because it cannot be automatically determined. |
-| Passed | Passed WCAG A, AA, or accessibility best practice. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+받은편지함 비전 테스트를 실행하면 이 도구는 대체 텍스트 누락, 색상 대비 부족, 부적절한 제목 구조 등 [WCAG 2.2 AA 규칙 세트의](https://www.w3.org/WAI/WCAG22/quickref/?versions=2.2&currentsidebar=%23col_customize&levels=aaa) 일반적인 이메일 접근성 문제를 자동으로 검사한 다음 각 문제의 심각도를 분류하여 수정 우선순위를 정할 수 있도록 도와줍니다. 
 
 {% alert important %}
-The email drag-and-drop editor currently does not support setting a document `<title>` element. As a result, the accessibility scanner will always fail this check.<br><br>
-We're tracking this limitation for future improvements. If this affects your workflows or your users, [share your feedback]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/#sharing-feedback) so we can prioritize the most impactful fixes.
+접근성 테스트는 [유럽 접근성 법과](https://www.braze.com/resources/articles/european-accessibility-at-what-it-means-for-marketers) 같은 규정 또는 법률에 대한 고객의 준수 노력을 지원하기 위해 사용될 수 있지만, 고객은 접근성 테스트의 사용이 고객의 준수 의무를 충족하는지 여부와 관련하여 Braze가 어떠한 진술이나 보증을 하지 않으며 이와 관련한 모든 책임을 부인함을 인정합니다.
 {% endalert %}
 
-### Understanding automated accessibility testing
+### 접근성 테스트 결과 보기
+
+접근성 테스트는 **접근성 테스트** 탭에서 각 규칙에 대해 합격, 불합격 또는 검토 필요라는 결과를 생성합니다. 각 규칙은 WCAG의 네 가지 주요 원칙인 POUR(인식 가능, 조작 가능, 이해 가능, 강건성)를 사용하여 분류됩니다.
+
+#### POUR 카테고리
+
+이슈는 네 가지 기본 [POUR 원칙에](https://www.w3.org/WAI/WCAG22/Understanding/intro#understanding-the-four-principles-of-accessibility) 따라 분류됩니다: 인식 가능, 조작 가능, 이해 가능, 견고함. 각 원칙은 접근성 디자인의 다른 측면을 다룹니다.
+
+| 원칙 | 정의 |
+| --- | --- |
+| 인식 가능 | 정보 및 사용자 인터페이스 구성 요소는 사용자가 인식할 수 있는 방식으로 표시되어야 합니다.<br><br>사용자는 제시되는 정보를 인지할 수 있어야 합니다(모든 감각에 보이지 않을 수는 없습니다). |
+| 작동 가능 | 사용자 인터페이스 구성 요소와 탐색은 작동 가능해야 합니다.<br><br>사용자가 인터페이스를 조작할 수 있어야 합니다(사용자가 수행할 수 없는 상호작용을 인터페이스에 요구해서는 안 됩니다). |
+| 이해 가능 | 정보 및 사용자 인터페이스의 작동을 이해할 수 있어야 합니다.<br><br>사용자는 정보뿐만 아니라 사용자 인터페이스의 작동을 이해할 수 있어야 합니다(내용이나 작동이 사용자의 이해를 벗어날 수 없어야 함). |
+| 견고함 | 콘텐츠는 보조 기술을 포함한 다양한 사용자 에이전트가 안정적으로 해석할 수 있을 만큼 견고해야 합니다.<br><br>사용자는 기술이 진행됨에 따라 콘텐츠에 액세스할 수 있어야 합니다(기술 및 사용자 에이전트가 발전하더라도 콘텐츠는 계속 액세스할 수 있어야 합니다). |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+#### 심각도 수준
+
+받은편지함 비전은 접근성 문제를 심각도별로 분류하여 해결 노력의 우선순위를 정할 수 있도록 도와줍니다.
+
+| 상태 | 정의 |
+| --- | --- |
+| 중요 | 장애가 있는 사용자의 콘텐츠 또는 기능에 대한 액세스를 차단할 수 있는 문제입니다. 가장 심각한 문제이므로 우선적으로 해결해야 하는 문제입니다. |
+| 진지한 | 심각한 장애를 유발할 수 있지만 액세스를 완전히 차단하지는 않을 수 있는 문제입니다. 이러한 문제는 즉시 해결해야 합니다. |
+| 보통 | 장애가 있는 사용자에게 약간의 어려움을 야기할 수 있지만 액세스를 완전히 차단할 가능성은 낮은 문제입니다. |
+| 미성년자 | 접근성에 미치는 영향이 상대적으로 낮고 사소한 불편을 초래할 수 있는 문제입니다. |
+| 검토 필요 | 문제가 있는지 여부를 감지할 수 없습니다. 텍스트가 배경 이미지에 배치되어 대비 비율을 결정할 수 없을 때 이러한 문제가 발생할 수 있습니다. 자동으로 결정할 수 없으므로 수동으로 검토해야 합니다. |
+| 합격 | WCAG A, AA 또는 접근성 모범 사례를 통과했습니다. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+{% alert important %}
+이메일 드래그 앤 드롭 편집기는 현재 문서 `<title>` 요소 설정을 지원하지 않습니다. 결과적으로 접근성 스캐너는 항상 이 검사에 불합격합니다.<br><br>
+향후 개선을 위해 이 제한 사항을 추적하고 있습니다. 워크플로 또는 사용자에 영향을 미치는 경우 가장 영향력 있는 수정의 우선순위를 정할 수 있도록 [피드백을 공유해]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/#sharing-feedback) 주세요.
+{% endalert %}
+
+### 자동화 접근성 테스트 이해하기
 
 {% multi_lang_include accessibility/automated_testing.md %}
 
 ## 테스트 정확도
 
-모든 테스트는 실제 이메일 클라이언트를 통해 실행됩니다. Braze는 모든 렌더링이 가능한 한 정확한지 확인하기 위해 열심히 노력합니다. 이메일 클라이언트에서 지속적으로 문제가 발생하면 [지원 티켓을]({{site.baseurl}}/braze_support/) 개설하세요.
+모든 테스트는 실제 이메일 클라이언트를 통해 실행됩니다. Braze는 모든 렌더링이 가능한 한 정확한지 확인하기 위해 열심히 노력합니다. 이메일 클라이언트에 지속적으로 문제가 발생하면 [지원 티켓을]({{site.baseurl}}/braze_support/) 개설하세요.

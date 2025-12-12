@@ -43,7 +43,7 @@ page_order: 1.3
 
 チャートの下にあるパネルの右半分には、選択した予測対象ユーザーのうち、イベントを実行すると予想されるユーザー数と、実行しないと予想されるユーザー数という2つの方法で、選択した部分をターゲットにした場合の予想精度を示している。
 
-![選択した視聴者と推定精度は、Braze ダッシュボードに表示されます。]({% image_buster /assets/img/purchasePrediction/purchaseEstimatedResults.png %})
+![Brazeダッシュボードに表示される、選択されたオーディエンスと推定精度。]({% image_buster /assets/img/purchasePrediction/purchaseEstimatedResults.png %})
 
 ### 実施予定
 

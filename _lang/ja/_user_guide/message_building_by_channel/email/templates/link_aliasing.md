@@ -27,6 +27,8 @@ channel:
 
 Brazeは、`lid` （リンク識別子とも呼ばれる）と呼ばれる追加パラメータをすべてのリンクURLに付加することで、メール内のリンクを一意に識別する。この`lid` の値により、Brazeは、URLパラメータの残りの部分が異なっていても、リンクに対するユーザーインタラクションを追跡、監視、集計することができる。これにより、ユーザーがメールキャンペーンのコンテンツに対するユーザーのエンゲージメントに関するインサイトを提供できるようになります。
 
+リンク識別子s は、メール キャンペーン、キャンバス、メールメッセージ、またはコンテンツブロックが複製されている場合にも更新されます。
+
 ## リンクエイリアスを作成する
 
 リンクエイリアスを作成するには、以下の手順に従う： 
@@ -38,7 +40,11 @@ Brazeは、`lid` （リンク識別子とも呼ばれる）と呼ばれる追加
 
 また、レポーティングやセグメンテーションを行う際に、特定のリンクを参照するためのエイリアスを設定することもできます。 
 
-![4つのリンクエイリアスを持つリンクマネージメントページ]({% image_buster /assets/img/link_aliasing_composer.png %})
+<<<<<<< HEAD
+![リンク管理ページに4つのリンクエイリアスがあります。]({% image_buster /assets/img/link_aliasing_composer.png %})
+=======
+\![リンク管理ページに4つのリンクエイリアスがあります。]({% image_buster /assets/img/link_aliasing_composer.png %})
+>>>>>>> main
 
 {% alert note %}
 リンクのエイリアシングは、クエリーパラメーターを付加しても安全なHTMLアンカータグ内の`href` 属性でのみサポートされている。Brazeが簡単に`lid` の値を追加できるように、リンクの最後にクエスチョンマーク(?)を付けるのがベストプラクティスだ。`lid` 。この値を追加しないと、Brazeはリンクエイリアス用のURLを認識しない。
@@ -57,7 +63,11 @@ Brazeは、`lid` （リンク識別子とも呼ばれる）と呼ばれる追加
 
 ここでは、並べ替え、検索、リンクエイリアスのトラッキング追跡をオフにすることができる。
 
-![Eメール_アンケート "という名前のキャンペーンに関連付けられている "TechPartners "と "Help "という名前の2つのリンクエイリアスを示すトラッキング追跡リンクエイリアスページ。]({% image_buster /assets/img/tracked_aliases.png %})
+<<<<<<< HEAD
+![Tracked Link Aliases ページ。"TechPartners"および"Help"という2 つのリンクエイリアスが表示されます。"Email_Survey".]({% image_buster /assets/img/tracked_aliases.png %} という名前のキャンペーンに関連付けられています。]
+=======
+\![Tracked Link Aliases ページ。"TechPartners"および"Help"という2 つのリンクエイリアスが表示されます。"Email_Survey".]({% image_buster /assets/img/tracked_aliases.png %} という名前のキャンペーンに関連付けられています。]
+>>>>>>> main
 
 {% alert tip %}
 [List link alias for campaign]({{site.baseurl}}/get_campaign_link_alias/)および[List link alias for Canvas]({{site.baseurl}}/get_canvas_link_alias/)エンドポイントを使用して、キャンペーンまたはメール固有のキャンバスコンポーネントの各メッセージバリアントに設定された`alias` を抽出する。
@@ -127,14 +137,22 @@ Brazeは、メール内のリンクを評価し、リンクテンプレートを
 Brazeでは、追跡するリンクを無制限に選択することができるが、ユーザーが開いた直近のリンクに限ってリターゲティングすることができる。ユーザープロファイルには、最近クリックした 100 個のリンクが含まれています。例えば、500のリンクを追跡し、ユーザーが500のリンクをすべてクリックした場合、最近クリックされた100のリンクに基づいてリターゲティングやセグメントを作成することができる。
 
 {% tabs local %}
-{% tab ドラッグ・アンド・ドロップ・エディター %}
+{% tab Drag-And-Drop Editor %}
 
-![ドラッグ＆ドロップ・メール・エディタのリンク管理タブ]({% image_buster /assets/img/link_management_dnd.png %})
+<<<<<<< HEAD
+![ドラッグアンドドロップメールエディタのリンクマネジメントタブ]]({% image_buster /assets/img/link_management_dnd.png %})
+=======
+\![ドラッグアンドドロップメールエディタのリンクマネジメントタブ]]({% image_buster /assets/img/link_management_dnd.png %})
+>>>>>>> main
 
 {% endtab %}
-{% tab HTMLエディタ %}
+{% tab HTML editor %}
 
-![HTMLメールエディターのリンク管理タブ]({% image_buster /assets/img/link_management_html.png %})
+<<<<<<< HEAD
+![HTML メールエディタのリンクマネジメントタブ]]({% image_buster /assets/img/link_management_html.png %})
+=======
+\![HTML メールエディタのリンクマネジメントタブ]]({% image_buster /assets/img/link_management_html.png %})
+>>>>>>> main
 
 {% endtab %}
 {% endtabs %}
@@ -147,7 +165,11 @@ Brazeは、プロフィールレベルで、過去100回クリックされたリ
  
 あらゆるリンク（トラッキング済み、未トラッキング）をターゲットにアクションベースのメッセージを作成したり、あらゆるメールキャンペーンやキャンバスコンポーネントのエイリアスをクリックしたかどうかに基づいてユーザーをリターゲティングすることができる。
 
-![キャンバスコンポーネントのエイリアスをクリックしたユーザーやキャンペーンに参加したユーザーをターゲットにするアクションベースオプション。]({% image_buster /assets/img/link_aliasing_action_based_filters.png %})
+<<<<<<< HEAD
+![アクションベースのオプション] キャンバスコンポーネントで別名をクリックしたか、キャンペーンと対話したユーザーを対象にします。]({% image_buster /assets/img/link_aliasing_action_based_filters.png %})
+=======
+\![アクションベースのオプション] キャンバスコンポーネントで別名をクリックしたか、キャンペーンと対話したユーザーを対象にします。]({% image_buster /assets/img/link_aliasing_action_based_filters.png %})
+>>>>>>> main
 
 ### セグメンテーションフィルター
 
@@ -165,7 +187,11 @@ Brazeでは、メールにリンクエイリアスを設定し、ユーザーが
 
 アーカイブされたメッセージのリンクは自動的に追跡解除される。しかし、アーカイブされたメッセージがアーカイブされない場合、リンクを再度追跡する必要がある。リンクエイリアスが追跡される場合、リンクレポートはトップレベルドメインや完全なURLではなく、エイリアスによってインデックスされる。
 
-![3つのリンクエイリアスとその合計クリック数を表示するキャンペーン分析タブ。]({% image_buster /assets/img/link_aliasing_click_table.png %})
+<<<<<<< HEAD
+![Campaign Analytics] タブには、3 つのリンクエイリアスとその総クリック数が表示されます。]({% image_buster /assets/img/link_aliasing_click_table.png %})
+=======
+\![Campaign Analytics] タブには、3 つのリンクエイリアスとその総クリック数が表示されます。]({% image_buster /assets/img/link_aliasing_click_table.png %})
+>>>>>>> main
 
 ### 電子メールのクリック・イベント
 

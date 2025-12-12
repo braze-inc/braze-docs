@@ -3,12 +3,12 @@ nav_title: Ideas y estrategias
 article_title: Ideas y estrategias
 layout: dev_guide
 guide_top_header: "Ideas y estrategias"
-guide_top_text: "Obtenga más información sobre cómo crear su campaña ideal con estos casos de uso y otras ideas."
+guide_top_text: "Obtén más información sobre cómo construir tu campaña ideal con estos casos de uso y otras ideas."
 page_order: 5
 
 tool: Campaigns
 page_type: landing
-description: "Esta página de inicio contiene ideas y estrategias para campañas. Aquí encontrarás artículos sobre temas como localización, reorientación, buenas prácticas y mucho más."
+description: "En esta página encontrarás ideas y estrategias de campaña. Aquí encontrarás artículos sobre temas como localización, reorientación, buenas prácticas y mucho más."
 
 guide_featured_title: "Artículos de sección"
 guide_featured_list:
@@ -27,10 +27,10 @@ guide_featured_list:
   - name: Campaña de atribución de instalación
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/install_attribution/
     image: /assets/img/braze_icons/pie-chart-01.svg
-  - name: Conocimiento de las funciones y nueva versión de la aplicación
+  - name: Conocimiento de las características y nueva versión de la aplicación
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/
     image: /assets/img/braze_icons/phone-02.svg
-  - name: Reorientación de campañas
+  - name: Campañas de reorientación
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/retargeting_campaigns/
     image: /assets/img/braze_icons/target-04.svg
   - name: Automatizar el registro de Zoom

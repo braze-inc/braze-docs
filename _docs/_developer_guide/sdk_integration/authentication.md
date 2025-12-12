@@ -23,7 +23,7 @@ After you enable this feature in your app, you can configure the Braze dashboard
 - Updating standard user profile attributes
 - Receiving or triggering messages
 
-Now you can prevent unauthenticated logged-in users from using your app's SDK API key to preform malicious actions, such as impersonating your other users.
+Now you can prevent unauthenticated logged-in users from using your app's SDK API key to perform malicious actions, such as impersonating your other users.
 
 ## Setting up authentication
 
@@ -400,19 +400,19 @@ Data is available in real-time, and you can hover over points in the chart to se
 
 ## Error codes {#error-codes}
 
-| Error Code| Error Reason | Description |
-| --------  | ------------ | ---------  |
-| 10 | `EXPIRATION_REQUIRED` | Expiration is a required field for Braze usage.|
-| 20 | `DECODING_ERROR` | Non-matching public key or a general uncaught error.|
-| 21 | `SUBJECT_MISMATCH` | The expected and actual subjects are not the same.|
-| 22 | `EXPIRED` | The token provided has expired.|
-| 23 | `INVALID_PAYLOAD` | The token payload is invalid.|
-| 24 | `INCORRECT_ALGORITHM` | The algorithm of the token is not supported.|
-| 25 | `PUBLIC_KEY_ERROR` | The public key could not be converted into the proper format.|
-| 26 | `MISSING_TOKEN` | No token was provided in the request.|
-| 27 | `NO_MATCHING_PUBLIC_KEYS` | No public keys matched the provided token.|
-| 28 | `PAYLOAD_USER_ID_MISMATCH` | Not all user ids in the request payload match as is required.|
-{: .reset-td-br-1 .reset-td-br-2, .reset-td-br-3 role="presentation" }
+| Error code| Error reason | Description | Steps to resolve |
+| --------  | ------------ | ---------  | ---------  |
+| 10 | `EXPIRATION_REQUIRED` | Expiration is a required field for Braze usage.| Add an `exp` or expiration field to your JWT creation logic. |
+| 20 | `DECODING_ERROR` | Non-matching public key or a general uncaught error.| Copy your JWT into a JWT testing tool to diagnose why your JWT is an invalid format. |
+| 21 | `SUBJECT_MISMATCH` | The expected and actual subjects are not the same.| The `sub` field should be the same user ID passed to the `changeUser` SDK method. |
+| 22 | `EXPIRED` | The token provided has expired.| Extend your expiration or periodically refresh tokens before they expire. |
+| 23 | `INVALID_PAYLOAD` | The token payload is invalid.| Copy your JWT into a JWT testing tool to diagnose why your JWT is an invalid format. |
+| 24 | `INCORRECT_ALGORITHM` | The algorithm of the token is not supported.| Change your JWT to use `RS256` encryption. Other types are not supported. |
+| 25 | `PUBLIC_KEY_ERROR` | The public key could not be converted into the proper format.| Copy your JWT into a JWT testing tool to diagnose why your JWT is an invalid format. |
+| 26 | `MISSING_TOKEN` | No token was provided in the request.| Make sure you are passing a token when calling `changeUser(id, token)` and that your token is not blank.|
+| 27 | `NO_MATCHING_PUBLIC_KEYS` | No public keys matched the provided token.| The private key used in the JWT does not match any public keys configured for your app. Confirm that you added the public keys to the correct app in your workspace that matches this API Key.|
+| 28 | `PAYLOAD_USER_ID_MISMATCH` | Not all user IDs in the request payload match as is required.| This is unexpected and can result in a malformed payload. Open a support ticket for assistance. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Frequently Asked Questions (FAQ) {#faq}
 

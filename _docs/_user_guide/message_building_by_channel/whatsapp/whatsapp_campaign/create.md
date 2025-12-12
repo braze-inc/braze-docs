@@ -30,7 +30,7 @@ Before you can create WhatsApp messages, you need to review and complete the fol
 WhatsApp creates different [message templates](#template-messages) for each language. Either create a campaign for each language with segmentation to serve the correct template to users, or use Canvas. 
 {% endalert %}
 
-Not sure whether your message should be sent using a campaign or a Canvas? Campaigns are better for single, simple messaging campaigns, while Canvases are better for multi-step user journeys.
+Not sure whether your message should be sent using a campaign or a Canvas? Campaigns are better for single, targeted messaging campaigns, while Canvases are better for multi-step user journeys.
 
 {% tabs %}
 {% tab Campaign %}
@@ -73,14 +73,15 @@ Select if you’d like to create a WhatsApp [template message](#template-message
 
 ![The Message Variants section lets you select a subscription group and one of two message types: WhatsApp Template Message and Response Message.]({% image_buster /assets/img/whatsapp/whatsapp_message_variants.png %}){: style="max-width:80%;"}
 
-#### Template messages
+{% tabs %}
+{% tab Template messages %}
 
 You can use [approved WhatsApp template messages]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/#step-3-create-whatsapp-templates
 ) to initiate conversations with your users on WhatsApp. These messages are submitted in advance to WhatsApp for content approval, which can take up to 24 hours to approve. Any edits you make to copy needs to be edited and resubmitted to WhatsApp.
 
 Disabled text fields (highlighted gray) cannot be edited as they are part of the approved WhatsApp template. To make updates to the disabled text, you must edit your template and get it reapproved.
 
-##### Languages
+#### Languages
 
 Each template has an assigned language, so you need to create a campaign or Canvas step for each language to correctly set up user matching. For example, if you're building a Canvas that uses templates assigned with Indonesian and English, you need to create a Canvas step for the Indonesian template and a Canvas step for the English template.
 
@@ -88,7 +89,7 @@ Each template has an assigned language, so you need to create a campaign or Canv
 
 If you're adding copy in a language that is written right-to-left, note that the final appearance of right-to-left messages depends largely on how service providers render them. For best practices on crafting right-to-left messages that display as accurately as possible, refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/).
 
-##### Variables
+#### Variables
 
 If you added variables while creating the WhatsApp template in the Meta Business Manager, those variables will show up as blank spaces in the message composer. Replace these blank spaces with Liquid or plain text. To use plain text, use the format "text here" encased by double braces. If you opted to include images when building your template, you can upload or add images from the media library or by referencing an image URL.
 
@@ -102,11 +103,12 @@ If you plan to use Liquid, be sure to include a default value for your chosen pe
 
 ![The Add Personalization tool with the attribute "first_name" and the default value "you".]({% image_buster /assets/img/whatsapp/whatsapp7.png %}){: style="max-width:80%;"}
 
-#### Dynamic links 
+### Dynamic links 
 
-Call-to-action URLs may contain variables, though Meta requires them to be at the end of the URL, such as `{% raw %}https://example.com/{{variable}}{% endraw %}`, where the variable can then be replaced in Braze with Liquid. Links can also be included as the body text as part of the template. At this time, neither of these links can be shortened. 
+Call-to-action URLs may contain variables, though Meta requires them to be at the end of the URL, such as `{% raw %}https://example.com/{{variable}}{% endraw %}`, where the variable can then be replaced in Braze with Liquid. Links can also be included as the body text as part of the template. Both of these links can be shortened and tracked using [click tracking]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/click_tracking/).
 
-#### Response messages
+{% endtab %}
+{% tab Response messages %}
 
 You can use response messages to reply to inbound messages from your users. These messages are built in-app on Braze during your composition experience and can be edited at any time. You can use Liquid to match the response message language to the appropriate users.
 
@@ -118,6 +120,9 @@ There are five response message layouts you can use:
 - List Message
 
 ![The response message composer for a Reply Message that welcomes new users with a discount code.]({% image_buster /assets/img/whatsapp/whatsapp_response_messages.png %}){: style="max-width:80%;"}
+
+{% endtab %}
+{% endtabs %}
 
 ### Step 3: Preview and test your message
 
@@ -192,6 +197,10 @@ The following features are supported for outbound WhatsApp messages you send thr
 | Videos | Videos can be embedded within body text. Files must be hosted through URL or in the [Braze media library]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library). | < 16 MB | `.3gp`, `.mp4` |
 | Audio | Audio is only supported through response messaging. Files must be hosted through URL. | < 16 MB | `.aac`, `.amr`, `.mp3`, `.mp4`, `.ogg` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
+
+{% alert important %}
+Meta has a known issue that can prevent some MP4 videos from playing on Android devices due to specific encoding or container settings. Until a permanent fix is available, reformatting the MP4 file resolves the issue for most senders. Test all videos on Android devices to confirm correct deliverability. <br><br>You can reformat the MP4 file by MP4 using a web tool, such as [CloudConvert](https://cloudconvert.com/mp4-converter). Upload your MP4 file into the tool, convert it to MP4 again, and then download the converted file.
+{% endalert %}
 
 ### Inbound messages
 

@@ -1,5 +1,5 @@
 ---
-nav_title: メール用AMP
+nav_title: メール用 AMP
 article_title: メール用AMP
 alias: /amphtml/
 page_order: 11
@@ -42,7 +42,7 @@ AMP メールをユーザーに送信する前に、メールクライアント�
 
 Gmailの設定に移動し、**ダイナミックなメールを有効にする**を**全般**の下で選択します。
 
-![「Enable dynamic email (動的メールを有効にする)」チェックボックスが選択されているGmail 設定の例。]({% image_buster /assets/img/dynamic-content.png %})
+![ダイナミックなメールを有効にする」チェックボックスを選択したGmailの設定例。]({% image_buster /assets/img/dynamic-content.png %})
 
 ## API使用
 
@@ -90,7 +90,7 @@ AMPメールを作成する際には、AMPコードをHTMLエディタに追加�
 AMP 要素を作成する際には、エンジニアリングチームに連絡し、さらに洗練させるためのデザインリソースと要素を含めることをお勧めします。
 
 {% tabs %}
-  {% tab 必要なもの %}
+  {% tab Essentials %}
 
 これらの要素はすべて、AMPメールの本文に必要です。
 
@@ -102,7 +102,7 @@ AMP 要素を作成する際には、エンジニアリングチームに連絡�
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
   {% endtab %}
-  {% tab ダイナミック %}
+  {% tab Dynamic %}
 
 これらのコンポーネントを使用して、メールにダイナミックなレイアウトと動作を作成します。
 
@@ -116,7 +116,7 @@ AMP 要素を作成する際には、エンジニアリングチームに連絡�
 ユーザーの認証を必要とするコンポーネントは、[Google アクセス トークン](https://developers.google.com/gmail/ampemail/authenticating-requests#access_tokens)または[プロキシアサーショントークン](https://developers.google.com/gmail/ampemail/authenticating-requests#proxy_assertion_tokens)を使用する必要があります。
 {% endalert %}
   {% endtab %}
-  {% tab クリエイティブ %}
+  {% tab Creative %}
 
   お客様のメールをオーディエンスに届けるのに役立つ AMP のクリエイティブなコンポーネントの使用をお勧めします。
 
@@ -132,11 +132,11 @@ AMP 要素を作成する際には、エンジニアリングチームに連絡�
 {% endalert %}
 
   {% endtab %}
-  {% tab その他 %}
+  {% tab Other %}
 
 | コンポーネント | 説明 |
 |---------|--------------|
-| [データバインディングと式](https://amp.dev/documentation/components/amp-anim?format=email)<br><br> `amp-bind`| データバインディングと JavaScript 風の式を介して、AMP ページにカスタムのステートフルなインタラクティビティを追加します。 |
+| [データバインディング& 式](https://amp.dev/documentation/components/amp-anim?format=email)<br><br> `amp-bind`| データバインディングと JavaScript 風の式を介して、AMP ページにカスタムのステートフルなインタラクティビティを追加します。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
@@ -151,7 +151,7 @@ AMP コンポーネントの完全なリストについては、[AMP のドキ�
 ### ユースケース
 
 {% tabs local %}
-{% tab インタラクティブアンケート %}
+{% tab Interactive Surveys %}
 
 `<amp-form>` コンポーネントを使用すると、メール受信トレイを離れずに行えるインタラクティブなアンケートを作成できます。これは、`<amp-form>` を使用して調査の回答を送信し、その後バックエンドがこの集計データを提供することによって行うことができます。 
 
@@ -163,20 +163,20 @@ AMP コンポーネントの完全なリストについては、[AMP のドキ�
 このコンポーネントを使用すると、ユーザーはフィールド値を送信したりクリアしたりできます。また、メールの設定によっては、アンケートの送信が成功したかどうかなど、ユーザーに追加のプロンプトを表示したり、アンケート結果を示すユーザーからのレスポンスをレンダリングしたりすることもできる（投票キャンペーンなど）。
 
 {% endtab %}
-{% tab 折りたたみ可能なコンテンツ %}
+{% tab Collapsable Content %}
 
 `<amp-accordion>` コンポーネントを使用してコンテンツのセクションを展開表示します。このコンポーネントを使用すると、折りたたみと展開が可能なコンテンツセクションを表示でき、オーディエンスはコンテンツの概要を一目で確認し、任意のセクションにジャンプできるようになります。 
 
 長い教育記事やパーソナライズされたおすすめを送る傾向がある場合、これにより視聴者はコンテンツの概要を一目で確認し、任意のセクションや特定の製品のおすすめにジャンプして詳細を得ることができます。これは、セクションに数行を入力するだけでもスクロールが必要なモバイルユーザーにとって特に便利です。
 {% endtab %}
-{% tab 画像の多いメール %}
+{% tab Image Heavy Emails %}
 
 小売（店）ブランドのようにプロフェッショナルな写真を多用したメールを送信する傾向がある場合は、`<amp-image-lightbox>` 、ユーザーが魅力的な画像にエンゲージメントできるコンポーネントを利用できる。ユーザーが画像をクリックすると、このコンポーネントはメッセージの中央に画像を表示し、ライトボックス効果を作成します。 
 
 さらに、`<amp-image-lightbox>` コンポーネントを使用すると、ユーザーは画像の詳細な説明を表示できます。同じコンポーネントを複数の画像に使用することができます。例えば、メールに複数の画像が含まれている場合、ユーザーがどちらかの画像をクリックすると、画像がライトボックスに表示されます。
 
 {% endtab %}
-{% tab フォント駆動のメール %}
+{% tab Font Driven Emails %}
 
 主にテキストコピーに依存するメールの場合、`<amp-fit-text>` コンポーネントを使用すると、指定した領域内のテキストのサイズとフィットを管理できます。
 
@@ -213,26 +213,26 @@ Liquidと同様に、AMPはより高度なユースケースのためのスク�
     <tbody>
         <tr>
             <td class="no-split">開封数の合計</td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Total Opens' %} AMPメールの HTML およびプレーンテキストバージョンの開封数の合計。</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Total Opens' %} AMPメールの場合、これはHTML版とプレーンテキスト版の合計開封数となる。</td>
         </tr>
         <tr>
             <td class="no-split">クリック数の合計</td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Total Clicks' %} AMPメールの場合、HTML版とプレーンテキスト版の合計クリック数となる。</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Total Clicks' %} AMPメールの場合は、HTML版とプレーンテキスト版の合計クリック数となる。</td>
         </tr>
         <tr>
             <td class="no-split">AMPが開く</td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='AMP Opens' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='AMP Opens' %}</td>
         </tr>
         <tr>
             <td class="no-split">AMP クリック数</td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='AMP Clicks' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='AMP Clicks' %}</td>
         </tr>
     </tbody>
 </table>
 
 ## テストとトラブルシューティング
 
-総クリック数とユニーククリック数には、AMPメッセージから発生するクリックは含まれません（HTMLおよびプレーンテキストのみ）。AMP固有のクリックは*amp_click*メトリックに帰属します。
+総クリック数とユニーククリック数には、AMPメッセージから発生するクリックは含まれません（HTMLおよびプレーンテキストのみ）。AMP特有のクリックはアトリビューションに属性される。 *amp_click*メトリックに起因する。
 
 送信する前に、AMPメールをこれらの[Gmailガイドライン](https://developers.google.com/gmail/ampemail/testing-dynamic-email)に従ってテストすることをお勧めします。
 

@@ -127,7 +127,7 @@ HTTP/2プロバイダーAPIを使用している場合、APNに送信する個�
 
 ###### API トリガーキャンペーン
 
-Braze では、`extras` として知られるカスタム定義の文字列キーと値のペアを送信できます。API トリガーおよびスケジュールされた API トリガー キャンペーンから extras にアクセスするには、ダッシュボードでキーを「example_key」に設定し、値を {% raw %}`"$json:{"foo": 1, "bar": 1}"`{% endraw %} に設定します。これにより、開発者コンソールに `"extras": { "test": { "foo": 1, "bar": 1 }` が出力されます。
+Braze では、`extras` として知られるカスタム定義の文字列キーと値のペアを送信できます。APIトリガーおよびスケジュールされたAPIトリガーキャンペーンでエクストラにアクセスするには、ダッシュボードでキーを"example_key", に、値を{% raw %}`"$json:{"foo": 1, "bar": 1}"`{% endraw %} に設定する。これにより、開発者コンソールに `"extras": { "test": { "foo": 1, "bar": 1 }` が出力されます。
 
 ### Android
 
@@ -145,7 +145,7 @@ iOSのプッシュと同様に、カスタムのキーと値のペアをユー�
 
 ###### API トリガーキャンペーン
 
-Braze では、`extras` として知られるカスタム定義の文字列キーと値のペアを送信できます。API トリガーおよびスケジュールされた API トリガー キャンペーンから extras にアクセスするには、ダッシュボードでキーを「example_key」に設定し、値を {% raw %}`"$json:{"foo": 1, "bar": 1}"`{% endraw %} に設定します。これにより、開発者コンソールに `"extras": { "test": { "foo": 1, "bar": 1 }` が出力されます。
+Braze では、`extras` として知られるカスタム定義の文字列キーと値のペアを送信できます。APIトリガーおよびスケジュールされたAPIトリガーキャンペーンでエクストラにアクセスするには、ダッシュボードでキーを"example_key", に、値を{% raw %}`"$json:{"foo": 1, "bar": 1}"`{% endraw %} に設定する。これにより、開発者コンソールに `"extras": { "test": { "foo": 1, "bar": 1 }` が出力されます。
 
 ##### FCMメッセージング・オプション
 
@@ -173,7 +173,7 @@ iOSオペレーティングシステムは、一部の機能（アンインス�
 
 #### API トリガーキャンペーン
 
-Braze では、`extras` として知られるカスタム定義の文字列キーと値のペアを送信できます。API トリガーおよびスケジュールされた API トリガー キャンペーンから extras にアクセスするには、ダッシュボードでキーを「example_key」に設定し、値を {% raw %}`"$json:{"foo": 1, "bar": 1}"`{% endraw %} に設定します。これにより、開発者コンソールに `"extras": { "test": { "foo": 1, "bar": 1 }` が出力されます。
+Braze では、`extras` として知られるカスタム定義の文字列キーと値のペアを送信できます。APIトリガーおよびスケジュールされたAPIトリガーキャンペーンでエクストラにアクセスするには、ダッシュボードでキーを"example_key", に、値を{% raw %}`"$json:{"foo": 1, "bar": 1}"`{% endraw %} に設定する。これにより、開発者コンソールに `"extras": { "test": { "foo": 1, "bar": 1 }` が出力されます。
 
 ## メール
 
@@ -183,12 +183,12 @@ SparkPostとSendGridの両方が、電子メールのキーと値のペアをサ
 メールがバウンスされた場合、SparkPost または SendGrid にキーと値のペアは配信されません。
 {% endalert %}
 
-![Brazeのメールメッセージ作成画面の [送信情報] タブ。]({% image_buster /assets/img_archive/keyvalue_email.png %})
+![Brazeのメッセージ作成画面の送信情報タブ。]({% image_buster /assets/img_archive/keyvalue_email.png %})
 
-## コンテンツカード
+## コンテンツカードによって促進された
 
 コンテンツカードにキーと値のペアを追加するには、Braze のメッセージ作成画面の [**設定**] タブに移動し、[**新しいペアを追加**] を選択します。
 
-![コンテンツカードにキーと値のペアを追加]({% image_buster /assets/img_archive/kvp_content_cards.png %}){: style="max-width:70%;"}
+![コンテンツカードにキーと値のペアを追加する。]({% image_buster /assets/img_archive/kvp_content_cards.png %}){: style="max-width:70%;"}
 
 

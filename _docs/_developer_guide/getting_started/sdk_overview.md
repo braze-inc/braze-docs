@@ -25,7 +25,7 @@ The Braze SDKs have a very small footprint. We automatically change the rate tha
 
 ## SDK compatibility
 
-The Braze SDK is designed to be very well-behaved, and not interfere with other SDKs present in your app. If you are experiencing any issues you think might be due to incompatibility with another SDK, reach out to Braze Support.
+The Braze SDK is designed to be very well-behaved, and not interfere with other SDKs present in your app. If you are experiencing any issues you think might be due to incompatibility with another SDK, contact Braze Support.
 
 ## Default analytics and session handling
 

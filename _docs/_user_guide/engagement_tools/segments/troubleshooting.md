@@ -10,6 +10,50 @@ description: "This reference article covers troubleshooting steps and considerat
 
 # Troubleshooting segments
 
+## Errors
+
+### Target audience is too complex to launch
+
+This rare error occurs if your target audience contains too many regex values, excessively long regex values, excessively detailed filters (such as "is any of 30,000 zip codes"), or too many filters. This includes all filters in a campaign or Canvas audience, whether the filters are located within the referenced segments or added as filters in the **Target Audience** step.
+
+![Error for a target audience that hits the complexity threshold.]({% image_buster /assets/img/segment/target_audience_too_complex_error.png %})
+
+When you add segment filters to a campaign or Canvas, those filters are translated into queries in Braze (the character count of these queries is not 1:1 to the number of characters a dashboard user sees). When Braze sends a campaign or Canvas, we run a query that combines all filters in the targeted audience. We apply a threshold limiting the number of characters in the resulting query for a target audience. For a given campaign or Canvas, we sum up the character count across all segments referenced, including all additional filters. For a given segment, we sum up the character count across all filters and filter values.
+
+Your dashboard will display an error when a campaign, Canvas, or segment exceeds the threshold and can't be launched. If you receive this error, simplify your target audience before launching again, including:
+
+- If your audience references multiple segments, make sure the segments don't have redundancies, such as the same filters appearing in multiple segments.
+- Make sure you aren't referencing outdated data in segment filters. For example, an outdated filter might look for users who haven't received a certain Canvas step in the past week, even though the Canvas has been stopped for months.
+- Segments that are just lists of user IDs or emails (which often use a regex filter) can be converted to a [CSV import]({{site.baseurl}}/user_guide/data/unification/user_data/import_users/csv/) and be simplified into a single CSV filter.
+- If you have CDI, you may be able to create a CDI segment that pulls the group directly from your data warehouse.
+
+You can also [contact Support]({{site.baseurl}}/braze_support/) for further assistance with filter optimization.
+
+{% alert note %}
+We began limiting character counts in April 2025. Campaigns and Canvases that launched before April 2025 were grandfathered, which means they can continue exceeding the limit, whereas newly created campaigns and Canvases can't exceed the limit. If you edit or clone a grandfathered campaign or Canvas, you **will not** be able to launch it until the audience is updated to be below the limit.
+{% endalert %}
+
+### X active or stopped campaigns or Canvases exceed the audience complexity threshold
+
+This banner displays at the top of a campaign or Canvas list whenever active or stopped campaigns or Canvases have audiences that exceed the audience complexity threshold. Select the banner to filter the list to just the campaigns or Canvases exceeding the threshold, then follow the troubleshooting steps in [Target audience is too complex to launch](#target-audience-is-too-complex-to-launch).
+
+![Error banner that says 4 active or stopped Canvases exceed the audience complexity threshold.]({% image_buster /assets/img/segment/audience_complexity_threshold_banner.png %})
+
+### Filter exceeds 10,000 bytes or is too long to save
+
+Braze limits individual segment filters to a maximum of 10,000 bytes, which is equivalent to 10,000 English characters or 3,333 Japanese characters. A warning appears whenever an individual filter exceeds 10,000 bytes, whether the filter is within a segment or added directly to campaign or Canvas. 
+
+![Error banner for a filter that has a value that exceeds 10,000 characters.]({% image_buster /assets/img/segment/filter_error.png %})
+
+![Error for a custom attribute filter, `menu_item`, which has an attribute value that exceeds 10,000 characters.]({% image_buster /assets/img/segment/segment_filter_error.png %})
+
+
+This error occurs very rarely, but when it does occur, it’s typically with regex filters that target a list of user IDs or email addresses. In that case, you can follow these steps to convert the filters to a CSV:
+
+1. Export the users from the affected segment or the specific regex filter. 
+2. Clean the CSV as needed. You need either Braze ID or Appboy ID, but you can remove all other columns if they aren't needed. We also recommend reviewing your data to confirm it’s recent (for example, remove users who you're no longer trying to target).
+3. [Import]({{site.baseurl}}/user_guide/data/unification/user_data/import_users/csv/) the CSV file again, which automatically groups the users into a single, highly efficient CSV-based filter.
+
 ## User behavior
 
 ### User is no longer in a segment
@@ -19,6 +63,16 @@ If a user isn’t available while creating a segment, their user data that deter
 ### Info displays for users of other apps when I filter for a specific app
 
 Users can have multiple apps, so selecting a specific app in the **Apps Used** section of the segmentation page will yield results for users who at least have that app. The filter does not yield results for the users who exclusively have that app.
+
+## Filtering
+
+### Filter options changed
+
+Your filter options are related to the format (data type) that you're passing to Braze for your custom attribute. To review the data type that Braze is recognizing for your custom attributes, navigate to **Data Settings** > **Custom Attributes**.
+
+If your filter options have changed, this is an indication that your data is being passed to Braze in a different format (data type) than before. For detailed descriptions of different data types and their filtering options, refer to [custom attribute data types]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_attributes#custom-attribute-data-types).
+
+Keep in mind that changing the data type of a custom attribute in the dashboard will reject data that is sent to Braze in a different format.
 
 ## Analytics and reporting
 
@@ -66,15 +120,3 @@ The second scenario is if the `app_id` field is populated when using the `/users
   }
 ]
 ```
-## Errors
-
-### Target audience is too complex to launch
-
-This rare error occurs if your target audience contains too many regex values, excessively long regex values, or too many filters. This includes all filters in a campaign or Canvas audience, whether the filters are located within the referenced segments or added as filters in the **Target Audience** step.
-
-If you receive this error, simplify your target audience before launching again, including:
-
-- If your audience references multiple segments, make sure the segments don't have redundancies, such as the same filters appearing in multiple segments.
-- Make sure you aren't referencing outdated data in segment filters. For example, an outdated filter might look for users who haven't received a certain Canvas step in the past week, even though the Canvas has been stopped for months.
-
-You can also [contact Support]({{site.baseurl}}/braze_support/) for further assistance with filter optimization.

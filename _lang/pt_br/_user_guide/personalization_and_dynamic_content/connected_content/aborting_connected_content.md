@@ -1,15 +1,15 @@
 ---
-nav_title: Abortando Conteúdo Conectado
-article_title: Abortando Conteúdo Conectado
+nav_title: Abortar conteúdo conectado
+article_title: Abortar conteúdo conectado
 page_order: 2
-description: "Este artigo de referência cobre algumas das melhores práticas de interrupção de mensagens para conteúdo conectado."
+description: "Este artigo de referência aborda algumas práticas recomendadas de interrupção de mensagens para o Connected Content."
 ---
 
-# Abortando conteúdo conectado {#aborting-connected-content}
+# Abortar conteúdo conectado {#aborting-connected-content}
 
 > Ao usar o modelo Liquid, você tem a opção de abortar mensagens com lógica condicional. Esta página aborda as práticas recomendadas para fazer isso.
 
-No exemplo a seguir, os condicionais `connected.recommendations.size < 5` e `connected.foo.bar == nil` especificam situações que causariam a interrupção da mensagem.
+No exemplo a seguir, as condicionais `connected.recommendations.size < 5` e `connected.foo.bar == nil` especificam situações que fariam com que a mensagem fosse abortada.
 
 {% raw %}
 ```
@@ -22,12 +22,12 @@ No exemplo a seguir, os condicionais `connected.recommendations.size < 5` e `con
 
 ## Especificar um motivo para abortar
 
-Você também pode especificar um motivo de aborto, que será salvo no [Registro de Atividade de Mensagens]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/). Este motivo de aborto deve ser uma string e não pode conter Liquid.
+Também é possível especificar um motivo de cancelamento, que será salvo no [Registro de atividades de mensagens]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/). Esse motivo de abortamento deve ser uma cadeia de caracteres e não pode conter Liquid.
 
 {% raw %}
 `{% abort_message('Could not get enough recommendations') %}`
 {% endraw %}
 
 {% alert important %}
-O Braze não conta as mensagens abortadas para a contagem de envios em sua conta Braze ou no Currents.
+O Braze não conta as mensagens abortadas para a contagem de envios em sua conta do Braze ou no Currents.
 {% endalert %}

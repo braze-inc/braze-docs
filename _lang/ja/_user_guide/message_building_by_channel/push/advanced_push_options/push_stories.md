@@ -61,7 +61,7 @@ iOS SDKバージョン3.13.0以降では、SDKの画像ダウンロード方法�
 以下の画像とテキストの仕様は、プッシュストーリーズのフォトカルーセル部分に適用される。ユーザーがプッシュストーリーを起動させるために操作する基本的なプッシュについては、[プッシュのテキストガイドラインを]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/#native-mobile-push-notifications)参照のこと。
 
 {% tabs %}
-{% tab 画像 %}
+{% tab Images %}
 
 - **画像比:**2:1（必須）
 - **推奨画像サイズ**500 KB
@@ -69,7 +69,7 @@ iOS SDKバージョン3.13.0以降では、SDKの画像ダウンロード方法�
 - **ファイルの種類:**PNG、JPEG
 
 {% endtab %}
-{% tab テキスト %}
+{% tab Text %}
 
 - **Title:**30文字（推奨）
 - **説明:**30文字（推奨）
@@ -89,7 +89,7 @@ iOS SDKバージョン3.13.0以降では、SDKの画像ダウンロード方法�
 
 分析は、プッシュ通知の現行の分析セクションとよく似ています。Push Stories分析では、**Direct Opens**指標を開いてページごとのクリック数を見ることができる。
 
-![iOS のプッシュパフォーマンス表には、分析サンプルと直接開封数指標の詳細が表示されます。]({% image_buster /assets/img_archive/pushstories_analytics.png %})
+![iOS Push Performance table with sample 分析と、Direct Opens メトリクスの詳細を展開。]({% image_buster /assets/img_archive/pushstories_analytics.png %})
 
 ## トラブルシューティング
 

@@ -1,5 +1,5 @@
 ---
-nav_title: コンテンツカードを作成する
+nav_title: コンテンツカードの作成
 article_title: コンテンツカードを作成する
 page_order: 0
 description: "この参考記事では、Braze のキャンペーンとキャンバスを使用してコンテンツカードを作成、構成、設定、送信する方法について説明します。"
@@ -21,7 +21,7 @@ search_rank: 3.9
 あなたのメッセージがキャンペーンと一緒に送られるべきかキャンバスと一緒に送られるべきか分からない?キャンペーンは、単一のシンプルなメッセージングキャンペーン(単一のメッセージで新しい製品についてユーザに通知するなど)に適していますが、キャンバスはマルチステップのユーザジャーニー(ユーザの経時的な行動に基づいたカスタマイズされた製品提案の送信など)に適しています。
 
 {% tabs %}
-{% tab キャンペーン %}
+{% tab Campaign %}
 
 1. [**メッセージング**] > [**キャンペーン**] の順に進み、[**キャンペーンを作成**] を選択します。
 2. **Content Cards**を選択するか、複数のチャネルをターゲットとするキャンペーンの場合は、**Multichannel**を選択します。
@@ -35,7 +35,7 @@ search_rank: 3.9
 {% endalert %}
 
 {% endtab %}
-{% tab キャンバス %}
+{% tab Canvas %}
 
 1. キャンバス作成ツールを使用して [[キャンバスを作成]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/)] します。
 2. キャンバスを設定したら、キャンバスビルダーでメッセージステップを追加します。ステップに、明確で意味のある名前を付けます。
@@ -57,8 +57,8 @@ search_rank: 3.9
 
 | メッセージの種類 | 例 | 説明 |
 |---|---|---|
-|[クラシック]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#classic)| ![ワークアウトクラスの予約を促す小さなアイコンとテキストを持つクラシックコンテンツカード。]({% image_buster/assets/img_archive/cc_steppington_classic.png %}) |クラシック・カードはシンプルなレイアウトで、太字のタイトル、メッセージ・テキスト、そしてタイトルとテキストの左にオプションの画像が配置されている。クラシックカードには正方形の画像やアイコンを使うことがいます。 |
-|[キャプション付き画像]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#captioned-image)| ![ワークアウトクラスを予約することを奨励するための、ウェイトリフターとテキストのイメージを含むキャプション付きコンテンツカード。]({% image_buster/assets/img_archive/cc_steppington_captioned.png %}) | キャプション付き画像カードでは、コピーと注目を集める画像でコンテンツを紹介できます。 |
+|[クラシック]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#classic)| ![小さなアイコンとテキストを持つクラシックコンテンツカードで、ワークアウトクラスの予約を促します。]({% image_buster/assets/img_archive/cc_steppington_classic.png %}) |クラシック・カードはシンプルなレイアウトで、太字のタイトル、メッセージ・テキスト、そしてタイトルとテキストの左にオプションの画像が配置されている。クラシックカードには正方形の画像やアイコンを使うことがいます。 |
+|[キャプション付き画像]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#captioned-image)| ![ワークアウト授業の予約を奨励するための、重さリフターとテキストの"画像付きのキャプション付きコンテンツカード。]({% image_buster/assets/img_archive/cc_steppington_captioned.png %}) | キャプション付き画像カードでは、コピーと注目を集める画像でコンテンツを紹介できます。 |
 |[画像のみ]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#banner)| ![テキストのみの画像専用コンテンツカード。]({% image_buster/assets/img_archive/cc_steppington_banner.png %}) | 画像のみのカードは、画像、GIF、およびその他のクリエイティブな非テキストコンテンツ用のスペースで注目を引きます。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -66,7 +66,7 @@ search_rank: 3.9
 
 メッセージエディターの**Compose**タブで、メッセージの内容と動作のあらゆる面を編集できる。
 
-![メッセージエディタのCompose タブにあるサンプルコンテンツカードの詳細。]({% image_buster /assets/img/content_card_compose.png %})
+![メッセージエディターのコンポーズタブのサンプルコンテンツカードの詳細]]({% image_buster /assets/img/content_card_compose.png %})
 
 ここでの内容は、前のステップで選択した**カード・タイプによって**異なるが、以下のオプションのいずれかを含むことができる：
 
@@ -74,9 +74,9 @@ search_rank: 3.9
 
 **Add Languages**を選択して、表示されたリストから目的の言語を追加します。これで、[Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#conditional-logic) がメッセージに挿入されます。コンテンツを記述する前に言語を選択することをお勧めします。これにより、Liquid 内の適切な場所にテキストを入力することができます。使用可能な言語の完全なリストについては、[サポートされている言語]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported)を参照してください。
 
-![言語に選択された英語、スペイン語、フランス語のウィンドウ、および選択されたフィールドのタイトル、説明、リンクテキストを国際化するために使用するウィンドウ。]({% image_buster /assets/img/add_languages.png %}){: style="max-width:70%;"}
+![言語に英語、スペイン語、フランス語が選択されたウィンドウ、およびフィールドが国際化するために選択されたタイトル、説明、リンクテキスト。]({% image_buster /assets/img/add_languages.png %}){: style="max-width:70%;"}
 
-##### 右から左へのメッセージを作成する
+##### 右から左へのメッセージの作成
 
 右から左へのメッセージの最終的な出現は、サービスプロバイダがそれらをどのようにレンダリングするかに大きく依存します。右から左へのメッセージを可能な限り正確に表示するためのベストプラクティスについては、[右から左へのメッセージを作成する]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/)を参照してください。
 
@@ -92,7 +92,7 @@ search_rank: 3.9
 
 ピン留めされたカードはユーザーのフィードの上部に表示され、ユーザーが閉じることはできません。ユーザーのフィードに複数のカードがピン留めされている場合、ピン留めされたカードは時系列で表示される。カードが送信された後は、その固定オプションを遡及的に更新することはできません。キャンペーン送信後にこのオプションを変更すると、今後の送信にのみ影響します。
 
-![「このカードをフィードの一番上に固定する」オプションを選択した、モバイルおよび Web 用 Braze のコンテンツカードプレビューを並べて表示。]({% image_buster /assets/img/cc_pin_to_top.png %}){:style="border:none"}
+![モバイルおよびWeb向けBrazeのコンテンツカード プレビューの横に並んでいます。オプション"このカードをフィード"の一番上に固定します。]({% image_buster /assets/img/cc_pin_to_top.png %}){:style="border:none"}
 
 #### オン・クリック動作
 
@@ -121,7 +121,7 @@ search_rank: 3.9
 ## ステップ 5: キャンペーンまたはキャンバスの残りの部分を作成する
 
 {% tabs %}
-{% tab キャンペーン %}
+{% tab Campaign %}
 
 キャンペーンの残りの部分を作成します。コンテンツカードを構築するためにツールを最適に使用する方法の詳細については、次のセクションに進みます。
 
@@ -141,7 +141,9 @@ search_rank: 3.9
 
 #### ターゲットとするユーザーを選択する
 
-次にセグメントまたはフィルターを選択して[ユーザーをターゲットに設定]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/)し、オーディエンスを絞り込みます。セグメントのおおよその人数について現在の状態を示すスナップショットが自動的に表示されます。正確なセグメントメンバーシップは常にメッセージが送信される直前に計算されることに注意してください。
+次にセグメントまたはフィルターを選択して[ユーザーをターゲットに設定]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/)し、オーディエンスを絞り込みます。そのアプリの近接Segment集団が現在どのように見えるかのプレビューが自動的に与えられます。正確なセグメントメンバーシップは常にメッセージが送信される直前に計算されることに注意してください。
+
+{% multi_lang_include target_audiences.md %}
 
 #### コンバージョンイベントを選択する
 
@@ -149,7 +151,7 @@ Braze では、キャンペーンを受信した後、ユーザーが指定の�
 
 {% endtab %}
 
-{% tab キャンバス %}
+{% tab Canvas %}
 
 キャンバスコンポーネントが完成していない場合は、残りのセクションを完成させます。キャンバスの残りの部分の構築方法の詳細については、[多変量検定]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/)と[インテリジェントセレクション]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/)を実装してください。その他については、キャンバスのドキュメントの[キャンバスの構築]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-3-build-your-canvas)ステップを参照してください。
 
@@ -168,12 +170,12 @@ Braze では、キャンペーンを受信した後、ユーザーが指定の�
 
 ## 知っておくべきこと
 
-### メッセージフィールドサイズ
+### コンテンツカードのサイズ制限
 
-コンテンツカードのメッセージフィールドの合計サイズは2 KB に制限されています。これは、次のフィールドのバイトサイズの長さを加算することによって計算されます。**タイトル**、**メッセージ**、**イメージURL**、**リンクテキスト**、**リンクURL(s)**、**キーと値のペア**(名前と値)。2KBを超えるメッセージは送信されません。このサイズには画像のサイズではなく、画像URLの長さが含まれます。
+コンテンツカードの有料読み込むの容量は、リキッドレンダリング後に最大2KB です。これには、**タイトル**、**メッセージ**、**イメージURL**、**リンクテキスト**、**リンクURL(s)**、および**キーと値のペア**(名前と値)が含まれます。ただし、この制限には"画像のサイズ("画像の長さのみ)は含まれません。
 
 {% alert important %}
-テスト送信では、2 KB を超えるコンテンツカードを配信し、正しく表示できます。
+2Kバイトを超えるメールは送信されません。テスト送信時に、2KBを超えるコンテンツカードを配信し、正しく表示することができます。
 {% endalert %}
 
 ### フィードのカードの枚数
@@ -188,14 +190,10 @@ Braze では、キャンペーンを受信した後、ユーザーが指定の�
 
 ユーザのフィードからコンテンツカードを削除する場合は、**Remove card from feed**を選択します。カードは次回の同期時に、SDK によって非表示になります。
 
-![コンテンツカードの無効化の確認ダイアログ]({% image_buster /assets/img/cc_remove.png %}){: style="max-width:75%" }
+![コンテンツカード無効確認画面]]({% image_buster /assets/img/cc_remove.png %}){: style="max-width:75%" }
 
 {% alert tip %}
-コンテンツカードが最大期間の30日よりも長く維持されているように見せたいですか。このための1つの方法として、以下の方法があります。<br><br>
-
-1. コンテンツカードの有効期間を 30 日に設定します。
-2. キャンペーンの再適格性を 30 日に設定します。
-3. キャンペーンが "セッション開始 "にトリガーされるように設定する。
+あなたのコンテンツは30日以上持ちますか？[バナー]({{site.baseurl}}/user_guide/message_building_by_channel/banners)を試します。
 {% endalert %}
 
 ### カード削除イベント{#action-based-card-removal}
@@ -210,7 +208,7 @@ Braze が指定されたイベントを処理した後、以降のリフレッ�
 ユーザーのフィードからカードを削除するカスタムイベントや購入を複数指定できる。ユーザーがこれらのアクションの**いずれか**を実行すると、キャンペーンのカードによって送信された既存のカードがすべて削除されます。今後、対象となるカードは、メッセージのスケジュールに従って送信され続ける。
 {% endalert %}
 
-![コンテンツカード削除条件パネル(コンテンツカード削除イベントオプション付き)]({% image_buster /assets/img/content_cards/content_card_removal_event.png %})
+![コンテンツカード削除条件パネル(コンテンツカード削除イベントオプション付き)]]({% image_buster /assets/img/content_cards/content_card_removal_event.png %})
 
 ### 開始済みのカードの更新
 

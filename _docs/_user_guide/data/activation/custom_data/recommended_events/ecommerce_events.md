@@ -11,14 +11,17 @@ description: "This reference article describes eCommerce recommended events and 
 
 > This page covers eCommerce recommended events and properties. These events are created to capture key shopping behaviors that marketers need to trigger effective messaging, such as targeting abandoned carts.
 
-Braze recognizes that data planning takes time. We encourage our customers to familiarize their development teams and begin sending these events now. While some features may not be available immediately with the eCommerce recommended events, you can look forward to the introduction of new products throughout 2025 that will enhance your eCommerce capabilities.
-
 {% alert important %}
-eCommerce recommended events are currently in early access. Contact your Braze customer success manager if you’re interested in participating in this early access. <br><br>If you're leveraging the new [Shopify connector]({{site.baseurl}}/partners/ecommerce/shopify/multiple_stores/?tab=shopify%20connector), these recommended events will be automatically available through the integration.
+eCommerce recommended events are currently in early access. Contact your Braze customer success manager if you’re interested in participating in this early access. <br><br>If you're using the new [Shopify connector]({{site.baseurl}}/partners/ecommerce/shopify/multiple_stores/?tab=shopify%20connector), these recommended events will be automatically available through the integration.
 {% endalert %}
 
+Braze recognizes that data planning takes time. We encourage our customers to familiarize their development teams and begin sending these events now. While some features may not be available immediately with the eCommerce recommended events, you can look forward to the introduction of new products throughout 2025 that will enhance your eCommerce capabilities.
 
 ## Types of eCommerce recommended events
+
+{% multi_lang_include alerts/important_alerts.md alert='Purchase event deprecation' %}
+
+Any non-USD currency reported will display in Braze in USD based on the exchange rate on the date it was reported. To prevent currency conversion, hardcode the currency to USD.
 
 {% tabs %}
 {% tab ecommerce.product_viewed %}
@@ -548,7 +551,7 @@ You can use the order placed event to trigger when a customer successfully compl
 | `order_number` | No | String | (Shopify only) Unique order number for the order placed. |
 | `tags` | No | Array | (Shopify only) Order tags
 | `referring_site` | No | String | (Shopify only) The site the order originated from (such as Meta). |
-| `payment_gateway_names` | No | Array | (Shopify only) Payement system source (such as point of sale or mobile). |
+| `payment_gateway_names` | No | Array | (Shopify only) Payment system source (such as point of sale or mobile). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 #### Example objects
@@ -1171,8 +1174,4 @@ We use standardized user field calculations for the following fields:
 
 These user field calculations are also included on the **Transactions** tab of user profiles.
 
-![The "Transactions" tab with user calcuated fields.]({% image_buster /assets/img/Shopify/transactions_tab.png %}){: style="max-width:60%;"}
-
-{% alert important %}
-The plans to phase out the purchase event will be announced in late 2025. In the long run, the purchase event will be replaced by new [eCommerce recommended events]({{site.baseurl}}/user_guide/data/custom_data/recommended_events/ecommerce_events/), which will come with enhanced features for segmentation, reporting, analytics, and more. However, the new eCommerce events will not support existing features related to the purchase event, such as Lifetime Value (LTV) or revenue reporting in Canvases or campaigns. For a complete list of features related to purchase events, please refer to the section on [Logging purchase events]({{site.baseurl}}/user_guide/data/custom_data/purchase_events/#logging-purchase-events).
-{% endalert %}
+![The "Transactions" tab with user calculated fields.]({% image_buster /assets/img/Shopify/transactions_tab.png %}){: style="max-width:60%;"}

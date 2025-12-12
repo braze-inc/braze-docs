@@ -21,7 +21,7 @@ search_rank: 2
 
 予測対象ユーザーのリスクスコアの更新は、[選択した頻度]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_churn/creating_a_churn_prediction/#step-4-choose-the-update-frequency-for-churn-predictions)で実行できます。これにより、実際に解約される前に、解約リスクのあるユーザーにリーチして解約を未然に防ぐことができます。最大 3 つのアクティブな予測を使用することで、解約予測を活用して個々のモデルをカスタマイズし、最も価値があると思われるユーザーからなる特定のセグメントでの解約防止に役立てることができます。
 
-![解約の概要。過去の予測オーディエンスと、履歴データによるトレーニングを含みます。これは、現在の予測対象オーディエンスの解約リスクスコアを測定することにより、将来の解約リスクを予測するために役立ちます。]({% image_buster /assets/img/churn/churn_overview.png %})
+![過去のデータでトレーニングした過去の予測対象ユーザーを含む解約予測の概要。これは、現在の予測対象オーディエンスの解約リスクスコアを測定することにより、将来の解約リスクを予測するために役立ちます。]({% image_buster /assets/img/churn/churn_overview.png %})
 
 ## 解約予測へのアクセス
 

@@ -36,6 +36,21 @@ To dynamically show up-to-date Content Cards without manually refreshing, select
 To manually refresh the feed at a specific time:
 
 {% tabs %}
+{% tab web %}
+
+Request a manual refresh of Braze Content Cards from the Web SDK at any time by calling [`requestContentCardsRefresh()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestcontentcardsrefresh). 
+
+You can also call [`getCachedContentCards`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#getcachedcontentcards) to get all currently available cards from the last Content Cards refresh. 
+
+```javascript
+import * as braze from "@braze/web-sdk";
+
+function refresh() {
+  braze.requestContentCardsRefresh();    
+}
+```
+
+{% endtab %}
 {% tab android %}
 
 Request a manual refresh of Braze Content Cards from the Android SDK at any time by calling [`requestContentCardsRefresh`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/request-content-cards-refresh.html). 
@@ -91,21 +106,6 @@ let contentCards = await AppDelegate.braze?.contentCards.requestRefresh()
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab web %}
-
-Request a manual refresh of Braze Content Cards from the Web SDK at any time by calling [`requestContentCardsRefresh()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestcontentcardsrefresh). 
-
-You can also call [`getCachedContentCards`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#getcachedcontentcards) to get all currently available cards from the last Content Cards refresh. 
-
-```javascript
-import * as braze from "@braze/web-sdk";
-
-function refresh() {
-  braze.requestContentCardsRefresh();    
-}
-```
-
-{% endtab %}
 {% endtabs %}
 
 ### Rate limit
@@ -117,7 +117,7 @@ Braze uses a token bucket algorithm to enforce the following rate limits:
 - `subscribeToContentCards()` will still return cached cards even when rate-limited
 
 {% alert important %}
-The global SDK network limit is 30 requests per 30 seconds. Keep this in mind when you run automated test or perform manual QA.
+The Braze SDK also applies rate limits for performance and reliability. Keep this in mind when running automated tests or performing manual QA. See [Braze SDK rate limits]({{site.baseurl}}/developer_guide/sdk_integration/rate_limits/) for more information. 
 {% endalert %}
 
 ## Customizing displayed card order
@@ -125,6 +125,17 @@ The global SDK network limit is 30 requests per 30 seconds. Keep this in mind wh
 You can change the order in which your Content Cards are displayed. This allows you to fine tune the user experience by prioritizing certain types of content, such as time-sensitive promotions.
 
 {% tabs %}
+{% tab web %}
+
+Customize the display order of Content Cards in your feed by using the [`filterFunction`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showcontentcards) param of `showContentCards():`. For example:
+
+```javascript
+braze.showContentCards(null, (cards) => {
+  return sortBrazeCards(cards); // Where sortBrazeCards is your sorting function that returns the sorted card array
+});
+```
+
+{% endtab %}
 {% tab android %}
 {% subtabs %}
 {% subtab android view controller %}
@@ -327,17 +338,6 @@ Customization via `BrazeContentCardUI.ViewController.Attributes` is not availabl
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab web %}
-
-Customize the display order of Content Cards in your feed by using the [`filterFunction`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showcontentcards) param of `showContentCards():`. For example:
-
-```javascript
-braze.showContentCards(null, (cards) => {
-  return sortBrazeCards(cards); // Where sortBrazeCards is your sorting function that returns the sorted card array
-});
-```
-
-{% endtab %}
 {% endtabs %}
 
 ## Customizing "empty feed" message
@@ -347,6 +347,11 @@ When a user does not qualify for any Content Cards, the SDK displays an "empty f
 ![An empty feed error message that reads "This is a custom empty state message."]({% image_buster/assets/img/content_cards/content-card-customization-empty.png %})
 
 {% tabs %}
+{% tab web %}
+
+The Web SDK does not support replacing the "empty feed" language programmatically. You can opt to replace it each time the feed is shown, but this is not recommended because the feed may take some time to refresh and the empty feed text won't display immediately. 
+
+{% endtab %}
 {% tab android %}
 {% subtabs %}
 {% subtab android view system %}
@@ -423,11 +428,6 @@ If you want to update this message in different locale languages, find the corre
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab web %}
-
-The Web SDK does not support replacing the "empty feed" language programmatically. You can opt to replace it each time the feed is shown, but this is not recommended because the feed may take some time to refresh and the empty feed text won't display immediately. 
-
-{% endtab %}
 {% endtabs %}
 
 ## Implementing multiple feeds
@@ -445,6 +445,34 @@ For this example, we'll set a key-value pair with the key `feed_type` that will 
 Once key-value pairs have been assigned, create a feed with logic that will display the cards you wish to display and filter cards of other types. In this example, we will only display cards with a matching key-value pair of `feed_type: "Transactional"`.
 
 {% tabs %}
+{% tab web %}
+
+The following example will show the Content Cards feed for `Transactional` type cards:
+
+```javascript
+
+/**
+ * @param {String} feed_type - value of the "feed_type" KVP to filter
+ */
+function showCardsByFeedType(feed_type) {
+  braze.showContentCards(null, function(cards) {
+    return cards.filter((card) => card.extras["feed_type"] === feed_type);
+  });
+}
+```
+
+Then, you can set up a toggle for your custom feed:
+
+```javascript
+// show the "Transactional" feed when this button is clicked
+document.getElementById("show-transactional-feed").onclick = function() {
+  showCardsByFeedType("Transactional"); 
+};
+```
+
+For more information, see the [SDK method documentation](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showcontentcards).
+
+{% endtab %}
 {% tab android %}
 {% subtabs %}
 {% subtab android view system %}
@@ -609,33 +637,5 @@ for (BRZContentCardRaw *card in AppDelegate.braze.contentCards.cards) {
 
 {% endsubtab %}
 {% endsubtabs %}
-{% endtab %}
-{% tab web %}
-
-The following example will show the Content Cards feed for `Transactional` type cards:
-
-```javascript
-
-/**
- * @param {String} feed_type - value of the "feed_type" KVP to filter
- */
-function showCardsByFeedType(feed_type) {
-  braze.showContentCards(null, function(cards) {
-    return cards.filter((card) => card.extras["feed_type"] === feed_type);
-  });
-}
-```
-
-Then, you can set up a toggle for your custom feed:
-
-```javascript
-// show the "Transactional" feed when this button is clicked
-document.getElementById("show-transactional-feed").onclick = function() {
-  showCardsByFeedType("Transactional"); 
-};
-```
-
-For more information, see the [SDK method documentation](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showcontentcards).
-
 {% endtab %}
 {% endtabs %}

@@ -1,5 +1,5 @@
 ---
-nav_title: キャンペーンのスケジュール設定
+nav_title: キャンペーンのスケジュール
 article_title: キャンペーンのスケジュール設定
 layout: dev_guide
 page_order: 3

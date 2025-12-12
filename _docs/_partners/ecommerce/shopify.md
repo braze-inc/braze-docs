@@ -15,6 +15,9 @@ guide_featured_list:
 - name: Shopify Standard Integration Setup
   link: /docs/shopify_standard_integration/
   image: /assets/img/braze_icons/shopping-cart-03.svg
+- name: Shopify Standard Integration with Third-Party Tagging
+  link: /docs/shopify_standard_integration_third_party_tagging/
+  image: /assets/img/braze_icons/shopping-cart-03.svg
 - name: Shopify Custom Integration Setup
   link: /docs/shopify_custom_integration/
   image: /assets/img/braze_icons/shopping-cart-03.svg
@@ -37,16 +40,3 @@ guide_menu_list:
   link: /docs/ecommerce_use_cases/
   image: /assets/img/braze_icons/users-01.svg
 ---
-<br><br>
-
-## New Shopify integration
-
-This is a new version of the Shopify integration that will be released in phases starting in April 2025. The phases will be based on the type of Shopify store and the external ID used to set up the initial integration. 
-
-**The older version of the integration will be deprecated on August 28, 2025. You must update to the newer version of the integration before August 28, 2025.**
-
-**New Braze customers:** Starting April 2025, Braze will be gradually rolling out the new Shopify connector for new onboardings and upgrading existing customers. To learn more about the new standard integration, refer to [Shopify standard integration]({{site.baseurl}}/shopify_standard_integration/).
-
-**Existing Braze customers:** Starting in February 2025, we will contact you with an upgrade guide to help you transition to the newer Shopify integration.  We will organize customers into groups (cohorts) based on your Shopify store and how you use Braze external IDs to facilitate a smooth and personalized upgrade experience. You will be notified when your cohort is ready to upgrade.
-
-**Upgrading to this newer version will cause breaking changes.** You will be guided through a review process on the Braze dashboard to help you and your development team address these changes before you upgrade.

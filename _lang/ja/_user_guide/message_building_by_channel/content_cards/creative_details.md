@@ -16,11 +16,15 @@ tool: Media
 ## コンテンツカードのタイプ
 
 {% tabs %}
-{% tab クラシック %}
+{% tab Classic %}
 
 クラシックカードは、標準的なメッセージングや通知、あるいはアイコンを使ってメッセージを視覚的に分類するのに適しています。画像は任意だが、1:1の比率でなければならない。
 
-![推奨されるディテールとクラシックカードのサンプルを持つ、クラシックなカードの画像]({% image_buster /assets/img/content_card_classic.png %}){: style="max-width:45%;border:0;"}
+<<<<<<< HEAD
+![おすすめのディテールと古典的なカード事例を掲載した古典的なカードのイメージ]({% image_buster /assets/img/content_card_classic.png %}){: style="max-width:45%;border:0;"}
+=======
+\![おすすめのディテールと古典的なカード事例を掲載した古典的なカードのイメージ]({% image_buster /assets/img/content_card_classic.png %}){: style="max-width:45%;border:0;"}
+>>>>>>> main
 
 | カード機能 | 詳細 |
 | --- | ---|
@@ -31,11 +35,15 @@ tool: Media
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% endtab %}
-{% tab キャプション付き画像 %}
+{% tab Captioned Image %}
 
 キャプション付き画像カードは、ビッグセールやアプリの新機能など、重要なコンテンツをアピールし、注目を集めるのに最適な方法だ。
 
-![推奨されるディテールとキャプション付き画像カードのサンプルを持つ、キャプション付き画像カードの画像]({% image_buster /assets/img/content_card_captioned.png %}){: style="max-width:90%;border:0;"}
+<<<<<<< HEAD
+![推奨内容のキャプション付き画像カードの画像とキャプション付き画像カードの例]({% image_buster /assets/img/content_card_captioned.png %}){: style="max-width:90%;border:0;"}
+=======
+\![推奨内容のキャプション付き画像カードの画像とキャプション付き画像カードの例]({% image_buster /assets/img/content_card_captioned.png %}){: style="max-width:90%;border:0;"}
+>>>>>>> main
 
 | カード機能 | 詳細 |
 | --- | ---|
@@ -46,11 +54,15 @@ tool: Media
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
-{% tab 画像のみ %}
+{% tab Image-only %}
 
 よりクリエイティブなコントロールが必要な場合は、画像のみのカードを使用します。任意のツールを使用して画像を作成し、このカードタイプに画像をアップロードします。
 
-![推奨される内容の詳細と画像のみの例を含むコンテンツカードの画像]({% image_buster /assets/img/content_card_banner.png %})){: style="max-width:45%;border:0;"}
+<<<<<<< HEAD
+![おすすめ内容の"画像専用コンテンツカードと"画像専用サンプルの"画像]({% image_buster /assets/img/content_card_banner.png %}){: style="max-width:45%;border:0;"}
+=======
+\![おすすめ内容の"画像専用コンテンツカードと"画像専用サンプルの"画像]({% image_buster /assets/img/content_card_banner.png %}){: style="max-width:45%;border:0;"}
+>>>>>>> main
 
 | カード機能 | 詳細 |
 | --- | ---|
@@ -69,11 +81,19 @@ tool: Media
 
 ユーザーがカードを破棄するには、次のスクリーンショットのようにモバイルでスワイプするか、`close X` 機能を使用します。Web SDK のみ、カーソルを合わせると `x` が表示されます。
 
-![カードのスワイプまたはクローズ解除の動作を示す画像]({% image_buster /assets/img/dismissal-cc.png %})
+<<<<<<< HEAD
+![カードのスワイプ/クローズ動作を示すイメージ]({% image_buster /assets/img/dismissal-cc.png %})
 
 もしユーザーがすべてのカードを退会していたり、新しいアップデートをプッシュしていない場合、そのユーザーのフィードは通常このようになる：
 
-![空のコンテンツカードフィードの画像]({% image_buster /assets/img/empty-cc.png %}){: style="max-width:45%"}
+![空のコンテンツカードフィードのイメージ]({% image_buster /assets/img/empty-cc.png %}){: style="max-width:45%"}
+=======
+\![カードのスワイプ/クローズ動作を示すイメージ]({% image_buster /assets/img/dismissal-cc.png %})
+
+もしユーザーがすべてのカードを退会していたり、新しいアップデートをプッシュしていない場合、そのユーザーのフィードは通常このようになる：
+
+\![空のコンテンツカードフィードのイメージ]({% image_buster /assets/img/empty-cc.png %}){: style="max-width:45%"}
+>>>>>>> main
 
 {% alert tip %}
 コンテンツカードの関連性を維持できるよう、ユーザーが関連するアクションを起こしたときに破棄されるように設定します。例えば、プロモーション用のコンテンツカードは、ユーザーが購入するとすぐに破棄されるように設定し、すでに購入した商品のオファーが表示され続けないようにします。

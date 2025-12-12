@@ -48,7 +48,7 @@ As your customer engagement platform, Braze can generate new leads based on user
 
 ### Step 2: Set up your webhook template
 
-Use templates to quickly re-use this webhook across the Braze platform. 
+Use templates to quickly reuse this webhook across the Braze platform. 
 
 1. In Braze, go to **Templates**, select **Webhook Templates**, then select **+ Create Webhook Template**.
 2. Provide a name for the template, such as “Salesforce Sales Cloud > Create Lead”.

@@ -1,7 +1,7 @@
 ---
 nav_title: Mensajes de producto
 article_title: Mensajes de producto
-page_order: 1
+page_order: 2
 description: "En esta página se explica cómo utilizar los mensajes de producto de WhatsApp para enviar mensajes de WhatsApp interactivos que muestren productos de tu catálogo de Meta."
 page_type: reference
 alias: "/whatsapp_product_messages/"
@@ -14,10 +14,6 @@ channel:
 # Mensajes de producto
 
 > Los mensajes de producto te permiten enviar mensajes de WhatsApp interactivos que muestran productos directamente desde tu catálogo Meta.
-
-{% alert important %}
-Los mensajes de producto de WhatsApp se encuentran actualmente en acceso anticipado y está previsto que tengan actualizaciones continuas durante la duración del acceso anticipado. Ponte en contacto con tu director de cuentas de Braze si estás interesado en participar en el acceso anticipado.
-{% endalert %}
 
 Cuando envías un mensaje de WhatsApp sobre un producto a un usuario, éste realiza el siguiente recorrido del cliente:
 
@@ -33,17 +29,23 @@ Cuando los usuarios añaden artículos a su cesta a través de mensajes de catá
 
 | Requisito | Descripción |
 | --- | --- |
-| Cuenta de WhatsApp Business | Para utilizar los mensajes de producto de WhatsApp, debes tener una cuenta de WhatsApp Business conectada con Braze. |
+| Cuenta WhatsApp Business | Para utilizar los mensajes de productos de WhatsApp, debes tener una cuenta de WhatsApp Business conectada con Braze. |
 | Metacatálogo | Tienes que configurar un Metacatálogo en tu administrador de comercio. |
 | Cumplimiento del plazo | Cumplir las [Condiciones y Políticas de Meta Commerce](https://www.facebook.com/policies_center/commerce). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-## Plantillas de mensajes de productos
+## Tipos de mensajes de producto
 
-{% tabs %}
-{% tab Mensajes del catálogo %}
+{% alert note %}
+Mejora tu experiencia de mensajería de producto con el selector de producto integrado, al que se accede durante el paso 4 de [Configurar mensajes de producto](#setting-up-product-messages).
+{% endalert %}
 
-Los mensajes de catálogo muestran todo tu catálogo de productos en un formato interactivo.
+{% tabs local %}
+{% tab Catalog messages %}
+
+Los mensajes de catálogo muestran todo tu catálogo de productos en un formato interactivo. Están disponibles como [plantilla y como mensajes de respuesta](#building-a-product-message).
+
+Si has habilitado los permisos de catálogo para Braze durante [la configuración](#setting-up-product-messages), puedes seleccionar qué miniatura es visible para los usuarios. 
 
 {% alert note %}
 No necesitas hacer selecciones adicionales de productos en Braze, ya que la conexión del catálogo la gestiona Meta y, por tanto, se hereda en tu catálogo de productos.
@@ -51,14 +53,22 @@ No necesitas hacer selecciones adicionales de productos en Braze, ya que la cone
 
 
 {% endtab %}
-{% tab Mensajes multiproducto %}
+{% tab Multi-product messages %}
 
-Los mensajes multiproducto destacan productos específicos de tu catálogo, con hasta 30 elementos destacados por mensaje. Actualmente, no hay un selector de productos integrado, por lo que debes consultar manualmente tu Metacatálogo para obtener las SKU de los productos.
+Los mensajes multiproducto destacan productos específicos de tu catálogo, con hasta 30 elementos destacados por mensaje. Están disponibles como [plantilla y como mensajes de respuesta](#building-a-product-message).
+
+Puedes seleccionar los productos manualmente con ID o, si has habilitado los permisos de catálogo durante [la configuración](#setting-up-product-messages), utilizar el selector desplegable de productos.
 
 {% alert important %}
 Hay un problema conocido de visualización de cabeceras con plantillas de mensajes multiproducto en Meta. Meta es consciente del problema y está trabajando en una solución.
 {% endalert %}
 
+{% endtab %}
+{% tab Single product %}
+
+Los mensajes de un solo producto destacan un producto específico de tu catálogo de productos. Están disponibles como [mensajes de respuesta](#building-a-product-message).
+
+Puedes seleccionar los productos manualmente con ID o, si has habilitado los permisos de catálogo durante [la configuración](#setting-up-product-messages), utilizar el selector desplegable de productos.
 
 {% endtab %}
 {% endtabs %}
@@ -68,19 +78,21 @@ Hay un problema conocido de visualización de cabeceras con plantillas de mensaj
 1. En el [administrador de comercio de Meta](https://business.facebook.com/business/loginpage/?next=https%3A%2F%2Fbusiness.facebook.com%2Fcommerce_manager%2F#), sigue [las instrucciones de Meta](https://www.facebook.com/business/help/1275400645914358?id=725943027795860&ref=search_new_1) para crear tu catálogo Meta. Asegúrate de que estás en la misma Meta Cartera de Negocios donde reside tu cuenta de WhatsApp Business conectada a Braze.
 2. Sigue las instrucciones de Meta para [conectar tu catálogo Meta](https://www.facebook.com/business/help/1953352334878186?id=2042840805783715) a tu cuenta WhatsApp Business conectada a Braze, asignando el permiso "Gestionar catálogo" en Meta Business Manager. 
 
-![Meta "Catálogos" página con una flecha apuntando al botón "Asignar socio" para el catálogo llamado "sweeney_catalog".]({% image_buster /assets/img/whatsapp/meta_catalog.png %}){: style="max-width:80%;"}
+\![Meta "Catálogos" página con una flecha apuntando al botón "Asignar socio" para el catálogo llamado "sweeney_catalog".]({% image_buster /assets/img/whatsapp/meta_catalog.png %}){: style="max-width:90%;"}
 
 Asegúrate de utilizar el ID del administrador de empresas de Braze, `332231937299182`, como ID de la empresa asociada.
 
-![Ventana para compartir un catálogo con un socio que contiene campos para introducir un ID de empresa del socio y asignar el permiso "Gestionar catálogo".]({% image_buster /assets/img/whatsapp/share_meta_catalog.png %}){: style="max-width:60%;"}
+\![Ventana para compartir un catálogo con un socio que contiene campos para introducir un ID de empresa del socio y asignar el permiso "Gestionar catálogo".]({% image_buster /assets/img/whatsapp/share_meta_catalog.png %}){: style="max-width:70%;"}
 
 {: start="3"}
 3\. Selecciona la configuración de tu Metacatálogo. Debes seleccionar **Mostrar icono de catálogo en la cabecera del chat** para enviar mensajes de catálogo.
 
-![Página de configuración del administrador de WhatsApp para el catálogo "Catálogo_productos".]({% image_buster /assets/img/whatsapp/meta_catalog_settings.png %}){: style="max-width:80%;"}
+Página de configuración del administrador de WhatsApp para el catálogo "Catalog_products".]({% image_buster /assets/img/whatsapp/meta_catalog_settings.png %}){: style="max-width:90%;"}
 
 {: start="4"}
-4\. En Braze, sigue el proceso de [registro integrado]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/embedded_signup/) para proporcionar permisos. Esto desbloqueará el selector de productos integrado Braze.
+4\. En Braze, sigue el proceso de [registro integrado]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/embedded_signup/) para proporcionar permisos. Asegúrate de seleccionar **todos los** catálogos a los que quieras dar permisos. Esto desbloqueará el selector de productos integrado Braze.
+
+\![La ventana con cinco catálogos seleccionados proporciona permisos.]({% image_buster /assets/img/whatsapp/select_catalogs.png %}){: style="max-width:50%;"}
 
 {% alert tip %}
 Para conocer las mejores prácticas a seguir al crear metacatálogos, consulta [Consejos para crear un catálogo de alta calidad en el Administrador de comercio](https://www.facebook.com/business/help/2086567618225367?id=725943027795860).
@@ -88,18 +100,48 @@ Para conocer las mejores prácticas a seguir al crear metacatálogos, consulta [
 
 ## Crear un mensaje de producto
 
+Puedes crear un mensaje de producto utilizando una plantilla de mensaje de WhatsApp o un mensaje de respuesta.
+
+{% tabs local %}
+{% tab WhatsApp message template %}
+
 1. En tu administrador de Meta Business, ve a **Plantillas de mensajes**.
 2. Selecciona **Catálogo** como formato y, a continuación, elige entre **Mensaje de catálogo** (muestra el catálogo completo) y **Mensaje de catálogo multiproducto** (destaca artículos concretos).
 3. En Braze, crea una campaña de WhatsApp o un paso en Canvas de mensajes.
 4. Selecciona el grupo de suscripción que coincida con el lugar donde enviaste la plantilla.
-5. Selecciona **la plantilla de mensaje de WhatsApp**. (Los mensajes sobre productos y catálogos aún no están disponibles en los mensajes de respuesta).
+5. Selecciona **la plantilla de mensaje de WhatsApp**.
 6. Selecciona la plantilla que quieras utilizar.
-    - Si seleccionas una plantilla multiproducto, proporciona el título de la sección y los ID de contenido de los productos a destacar.
+    - Si seleccionas una plantilla multiproducto, proporciona el título de la sección y los ID de contenido de los productos a destacar. Puedes copiar el ID de contenido directamente de tu Meta Commerce Manager o, si has habilitado los permisos para el selector de productos integrado, seleccionar los elementos.
 
-![Lista de elementos con campos para introducir los títulos de tus secciones y el ID del contenido.]({% image_buster /assets/img/whatsapp/multi_product_template.png %}){: style="max-width:60%;"}
+\![Lista de elementos con campos para introducir los títulos de tus secciones y el ID del contenido.]({% image_buster /assets/img/whatsapp/multi_product_template.png %}){: style="max-width:60%;"}
+
+\![Lista de elementos con desplegable de elementos para seleccionar.]({% image_buster /assets/img/whatsapp/content_id_items.png %}){: style="max-width:60%;"}
 
 {: start="7"}
 7\. Sigue construyendo tu mensaje.
+
+{% endtab %}
+{% tab Response message %}
+
+1. En Braze, crea una campaña de WhatsApp o un paso en Canvas de mensajes.
+2. Selecciona un grupo de suscripción.
+3. Selecciona **Mensaje de respuesta**.
+4. Selecciona **Mensajes de meta producto**.
+
+\![Opciones para seleccionar un tipo de mensaje y un diseño de mensaje de respuesta, con "Mensaje de respuesta" y "Mensajes de meta producto" resaltados.]({% image_buster /assets/img/whatsapp/response_message_layouts.png %}){: style="max-width:90%;"}
+
+{: start="5"}
+5\. Selecciona el [tipo de mensaje](#product-message-types) que deseas utilizar.
+
+Selección de diseño de "Multiproducto".]({% image_buster /assets/img/whatsapp/multi-product_message_layout.png %}){: style="max-width:90%;"}
+
+{: start="6"}
+6\. Sigue construyendo tu mensaje.
+
+\![Ejemplo de meta mensaje de producto con información rellenada para los productos.]({% image_buster /assets/img/whatsapp/example_response_message.png %}){: style="max-width:90%;"}
+
+{% endtab %}
+{% endtabs %}
 
 ## Administrador de productos
 
@@ -107,13 +149,21 @@ Para conocer las mejores prácticas a seguir al crear metacatálogos, consulta [
 
 En tu Meta Administrador de Empresas, ve a **Administrador de Comercio** y selecciona tu organización. Aquí puedes gestionar los activos de tu catálogo, por ejemplo
 - Crear nuevos catálogos
-- Añadir productos a catálogos existentes
+- Añadir productos a los catálogos existentes
 - Actualizar la información del producto
 - Eliminar artículos descatalogados
 
 {% alert important %}
 Si eliminas los productos referenciados de tu catálogo, los mensajes asociados no se enviarán.
 {% endalert %}
+
+## Recepción de preguntas sobre productos 
+
+Los usuarios pueden responder a tu mensaje de producto o catálogo con preguntas sobre el producto. Éstos llegan como mensajes entrantes, que pueden clasificarse con una [Ruta de acción]({{site.baseurl}}/action_paths/). 
+
+Además, Braze extrae el ID de producto y el ID de catálogo de estas preguntas, de modo que si deseas automatizar las respuestas o enviar preguntas a otro equipo (como el de atención al cliente), puedes incluir esos datos. Por ejemplo, podrías personalizar las respuestas con las propiedades de WhatsApp de `inbound_product_id` o `inbound_catalog_id`.
+
+\!["Añadir personalización" ventana con un tipo de personalización de "Propiedades de WhatsApp" y un atributo resaltado de "inbound_product_id".]({% image_buster /assets/img/whatsapp/inbound_product_questions.png %}){: style="max-width:60%;"}
 
 ## Pasar por caja: Procesamiento de carritos y webhooks
 
@@ -153,15 +203,15 @@ Puedes encontrar información adicional sobre los eventos del carrito de Braze e
 1. Crea un desencadenador de eventos personalizado para `ecommerce.cart_updated`.
 2. Añade un filtro de propiedad para `source = "whats_app"`.
 
-![Paso en Canvas para desencadenar un evento personalizado `ecommerce.cart_updated` con la propiedad básica "fuente" igual a `whats_app`.]({% image_buster /assets/img/whatsapp/product_message_canvas_step.png %})
+\![Paso en Canvas para desencadenar un evento personalizado de `ecommerce.cart_updated` con la propiedad básica "fuente" igual a `whats_app`.]({% image_buster /assets/img/whatsapp/product_message_canvas_step.png %})
 
 {: start="3"}
 3\. Configura acciones de seguimiento basadas en los datos del carrito.
 
 ### Implementaciones de pago recomendadas 
 
-{% tabs %}
-{% tab Enlaces sencillos para carritos basados en Liquid %}
+{% tabs local %}
+{% tab Simple Liquid-based cart links %}
 
 Utiliza Liquid para crear URL de carrito directamente en tu mensaje de respuesta. Esto es mejor si tienes ID de producto consistentes entre WhatsApp y tu plataforma de comercio electrónico.
 
@@ -189,10 +239,10 @@ Utiliza Liquid para crear URL de carrito directamente en tu mensaje de respuesta
 2. Crea un mensaje posterior con la URL del carrito.
 3. Construye la URL de tu carrito con Liquid. Si utilizas Shopify, puedes [crear un carrito permalink](https://shopify.dev/docs/apps/build/checkout/create-cart-permalinks) con el ejemplo anterior Liquid.
 
-![Diagrama que muestra el flujo de trabajo de la experiencia de pago para un carro generado por Liquid: Meta envía un mensaje de pedido recibido a Braze, que desencadena una acción basada en el desencadenante y luego crea un mensaje con un enlace al carrito, que a su vez envía un mensaje de WhatsApp.]({% image_buster /assets/img/whatsapp/liquid_generated_cart_link_checkout.png %})
+\![Diagrama que muestra el flujo de trabajo de la experiencia de pago para un carro generado por Liquid: Meta envía un mensaje de pedido recibido a Braze, que desencadena un desencadenante basado en una acción y, a continuación, crea un mensaje con un enlace al carrito, que luego envía un mensaje de WhatsApp.]({% image_buster /assets/img/whatsapp/liquid_generated_cart_link_checkout.png %})
 
 {% endtab %}
-{% tab Contenido conectado %}
+{% tab Connected Content %}
 
 Haz una llamada API a tu sistema de comercio electrónico para generar una URL de pago personalizada. Es lo mejor si necesitas una generación dinámica de URL de carrito o un mapeado complejo de productos.
 
@@ -201,10 +251,10 @@ Haz una llamada API a tu sistema de comercio electrónico para generar una URL d
 1. Crea una campaña webhook o un paso en Canvas desencadenado por el evento de [`ecommerce.cart_update`]({{site.baseurl}}/user_guide/data/custom_data/recommended_events/ecommerce_events/?tab=ecommerce.cart_updated) que enviará los datos del carrito a tu sistema de comercio electrónico.
 2. Crea una campaña de WhatsApp o un paso en Canvas de Mensajes desencadenado por el mismo evento de eCommerce para enviar un mensaje de respuesta de WhatsApp con la URL del carrito al usuario. Sigue las instrucciones del mensaje de respuesta posterior para utilizar [Contenido conectado]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content).
 
-![Diagrama que muestra el flujo de trabajo de la experiencia de pago para una llamada de Contenido conectado: Meta envía un mensaje de pedido recibido a Braze, que tiene llamadas de ida y vuelta con una plataforma de comercio electrónico, y luego envía un mensaje de WhatsApp.]({% image_buster /assets/img/whatsapp/connected_content_checkout.png %})
+\![Diagrama que muestra el flujo de trabajo de la experiencia de pago para una llamada de Contenido conectado: Meta envía un mensaje de pedido recibido a Braze, que tiene llamadas de ida y vuelta con una plataforma de comercio electrónico, y luego envía un mensaje de WhatsApp.]({% image_buster /assets/img/whatsapp/connected_content_checkout.png %})
 
 {% endtab %}
-{% tab Webhook y eventos personalizados %}
+{% tab Webhook and custom events %}
 
 Utiliza webhooks para enviar los datos del carrito a tu sistema y, a continuación, desencadenar mensajes de seguimiento a través de eventos personalizados. Es la mejor opción para integraciones complejas que requieran un amplio procesamiento de carritos o flujos de trabajo de varios pasos.
 
@@ -216,7 +266,7 @@ Crea una campaña webhook o un paso en Canvas desencadenado por el evento de com
 3. Generar la URL de pago
 4. Envía un evento `checkout_started` a Braze, desencadenando el envío de tu mensaje de WhatsApp con el enlace de pago
 
-![Diagrama que muestra el flujo de trabajo de la experiencia de pago para webhooks y eventos personalizados: Meta envía un mensaje de pedido recibido a Braze, que tiene llamadas de ida y vuelta con una plataforma de comercio electrónico, y luego envía un mensaje de WhatsApp con la URL del carrito.]({% image_buster /assets/img/whatsapp/webhooks_custom_events_checkout.png %})
+\![Diagrama que muestra el flujo de trabajo de la experiencia de pago para webhooks y eventos personalizados: Meta envía un mensaje de pedido recibido a Braze, que tiene llamadas de ida y vuelta con una plataforma de comercio electrónico, y luego envía un mensaje de WhatsApp con la URL del carrito.]({% image_buster /assets/img/whatsapp/webhooks_custom_events_checkout.png %})
 
 {% endtab %}
 {% endtabs %}

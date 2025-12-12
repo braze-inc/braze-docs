@@ -1502,7 +1502,6 @@ validurls['/docs/user_guide/data_and_analytics/user_data_collection/user_profile
 validurls['/docs/developer_guide/platform_integration_guides/xamarin/inapp_messages'] = '/docs/developer_guide/platform_integration_guides/xamarin/in_app_messages';
 validurls['/docs/developer_guide/platform_integration_guides/xamarin/initial_sdk_setup'] = '/docs/developer_guide/platform_integration_guides/xamarin/sdk_integration';
 
-validurls['/docs/developer_guide/platform_integration_guides/unreal_engine/initial_sdk_setup/'] = '/docs/developer_guide/platform_integration_guides/unreal_engine/sdk_integration/';
 
 validurls['/docs/developer_guide/platform_integration_guides/android'] = '/docs/developer_guide/platforms/android';
 validurls['/docs/developer_guide/platform_integration_guides/android/analytics'] = '/docs/developer_guide/platforms/android/analytics';
@@ -1524,6 +1523,7 @@ validurls['/docs/developer_guide/platform_integration_guides/android/content_car
 validurls['/docs/developer_guide/platforms/android/content_cards/example'] = '/docs/developer_guide/content_cards?sdktab=android';
 validurls['/docs/developer_guide/platform_integration_guides/android/content_cards/gif'] = '/docs/developer_guide/platforms/android/content_cards/gif';
 validurls['/docs/developer_guide/platform_integration_guides/android/content_cards/jetpack_compose'] = '/docs/developer_guide/platforms/android/content_cards/jetpack_compose';
+validurls['/docs/developer_guide/platforms/android/content_cards/jetpack_compose'] = '/docs/developer_guide/content_cards/customizing_cards/feed/';
 validurls['/docs/developer_guide/platform_integration_guides/android/geofences'] = '/docs/developer_guide/platforms/android/geofences';
 validurls['/docs/developer_guide/platform_integration_guides/android/google_play_privacy'] = '/docs/developer_guide/platforms/android/google_play_privacy';
 validurls['/docs/developer_guide/platform_integration_guides/android/in_app_messages'] = '/docs/developer_guide/platforms/android/in_app_messages';
@@ -1833,11 +1833,6 @@ validurls['/docs/developer_guide/platform_integration_guides/unity/in_app_messag
 validurls['/docs/developer_guide/platform_integration_guides/unity/news_feed'] = '/docs/developer_guide/platforms/unity/news_feed';
 validurls['/docs/developer_guide/platform_integration_guides/unity/push_notifications'] = '/docs/developer_guide/platforms/unity/push_notifications';
 validurls['/docs/developer_guide/platform_integration_guides/unity/sdk_integration'] = '/docs/developer_guide/platforms/unity/sdk_integration';
-validurls['/docs/developer_guide/platform_integration_guides/unreal_engine'] = '/docs/developer_guide/platforms/unreal_engine';
-validurls['/docs/developer_guide/platform_integration_guides/unreal_engine/analytics'] = '/docs/developer_guide/platforms/unreal_engine/analytics';
-validurls['/docs/developer_guide/platform_integration_guides/unreal_engine/initialization'] = '/docs/developer_guide/platforms/unreal_engine/initialization';
-validurls['/docs/developer_guide/platform_integration_guides/unreal_engine/push_notifications'] = '/docs/developer_guide/platforms/unreal_engine/push_notifications';
-validurls['/docs/developer_guide/platform_integration_guides/unreal_engine/sdk_integration'] = '/docs/developer_guide/platforms/unreal_engine/sdk_integration';
 validurls['/docs/developer_guide/platform_integration_guides/web'] = '/docs/developer_guide/platforms/web';
 validurls['/docs/developer_guide/platform_integration_guides/web/analytics'] = '/docs/developer_guide/platforms/web/analytics';
 validurls['/docs/developer_guide/platform_integration_guides/web/analytics/disabling_tracking'] = '/docs/developer_guide/platforms/web/analytics/disabling_tracking';
@@ -1901,7 +1896,6 @@ validurls['/docs/developer_guide/platforms/react_native/sdk_integration/'] = '/d
 validurls['/docs/developer_guide/platforms/unity/sdk_integration/'] = '/docs/developer_guide/sdk_integration/?sdktab=unity';
 validurls['/docs/developer_guide/platforms/xamarin/sdk_integration/'] = '/docs/developer_guide/sdk_integration/?sdktab=xamarin';
 validurls['/docs/developer_guide/platforms/roku/sdk_integration/'] = '/docs/developer_guide/sdk_integration/?sdktab=roku';
-validurls['/docs/developer_guide/platforms/unreal_engine/sdk_integration/'] = '/docs/developer_guide/sdk_integration/?sdktab=unreal%20engine';
 
 validurls['/docs/user_guide/engagement_tools/landing_pages/drag_and_drop/'] = '/docs/user_guide/engagement_tools/landing_pages/creating_pages/';
 validurls['/docs/user_guide/engagement_tools/landing_pages/connect_domain'] = '/docs/user_guide/engagement_tools/landing_pages/customizing_urls/';
@@ -1937,7 +1931,6 @@ validurls['/docs/developer_guide/platforms/fireos/initialization/runtime_configu
 validurls['/docs/developer_guide/platforms/fireos/initialization/google_tag_manager'] = '/docs/developer_guide/sdk_initalization/?sdktab=android';
 validurls['/docs/developer_guide/platforms/swift/initialization/google_tag_manager'] = '/docs/developer_guide/sdk_initalization/?sdktab=swift';
 validurls['/docs/developer_guide/platforms/swift/initialization/delayed_initialization'] = '/docs/developer_guide/sdk_initalization/?sdktab=swift';
-validurls['/docs/developer_guide/platforms/unreal_engine/initialization/'] = '/docs/developer_guide/sdk_initalization/?sdktab=unreal%20engine';
 
 validurls['/docs/developer_guide/sdk_initalization/'] = '/docs/developer_guide/sdk_initialization/';
 
@@ -2083,7 +2076,6 @@ validurls['/docs/developer_guide/platforms/unity/analytics/logging_custom_events
 validurls['/docs/developer_guide/platforms/unity/analytics/setting_custom_attributes/'] = '/docs/developer_guide/analytics/setting_user_attributes/?sdktab=unity';
 validurls['/docs/developer_guide/platforms/unity/analytics/logging_purchases/'] = '/docs/developer_guide/analytics/logging_purchases/?tab=unity';
 
-validurls['/docs/developer_guide/platforms/unreal_engine/analytics/'] = '/docs/developer_guide/analytics/';
 validurls['/docs/developer_guide/platforms/android/news_feed/'] = '/docs/developer_guide/content_cards/';
 validurls['/docs/developer_guide/platforms/android/news_feed/creating_a_custom_feed/'] = '/docs/developer_guide/content_cards/';
 validurls['/docs/developer_guide/platforms/android/news_feed/customization/'] = '/docs/developer_guide/content_cards/';
@@ -2177,7 +2169,6 @@ validurls['/docs/developer_guide/platforms/unity/push_notifications/'] = '/docs/
 validurls['/docs/developer_guide/platforms/xamarin/push_notifications/'] = '/docs/developer_guide/push_notifications/?sdktab=xamarin';
 validurls['/docs/developer_guide/platforms/xamarin/troubleshooting'] = '/docs/developer_guide/push_notifications/troubleshooting/?sdktab=xamarin';
 
-validurls['/docs/developer_guide/platforms/unreal_engine/push_notifications/'] = '/docs/developer_guide/push_notifications/?sdktab=unreal%20engine';
 validurls['/docs/navigation/'] = '/docs/user_guide/administrative/access_braze/navigation/';
 
 validurls['/docs/developer_guide/android/live_notifications/'] = '/docs/developer_guide/push_notifications/live_notifications/?sdktab=android';
@@ -2198,7 +2189,6 @@ validurls['/docs/developer_guide/platforms/react_native/changelog'] = '/docs/dev
 validurls['/docs/developer_guide/platforms/roku/changelog'] = '/docs/developer_guide/changelogs/?sdktab=roku';
 validurls['/docs/developer_guide/platforms/swift/changelog'] = '/docs/developer_guide/changelogs/?sdktab=swift';
 validurls['/docs/developer_guide/platforms/unity/changelog'] = '/docs/developer_guide/changelogs/?sdktab=unity';
-validurls['/docs/developer_guide/platforms/unreal_engine/changelog'] = '/docs/developer_guide/changelogs/?sdktab=unreal%20engine';
 validurls['/docs/developer_guide/platforms/web/changelog'] = '/docs/developer_guide/changelogs/?sdktab=web';
 validurls['/docs/developer_guide/platforms/xamarin/changelog'] = '/docs/developer_guide/changelogs/?sdktab=xamarin';
 
@@ -2330,7 +2320,9 @@ validurls['/docs/partners/data_and_infrastructure_agility/analytics/saleswings']
 validurls['/docs/partners/data_and_infrastructure_agility/analytics/clarisights'] = '/docs/partners/data_and_analytics/business_intelligence/clarisights';
 validurls['/docs/partners/data_and_infrastructure_agility/analytics/datadog'] = '/docs/partners/data_and_analytics/business_intelligence/datadog';
 validurls['/docs/partners/data_and_infrastructure_agility/analytics/looker'] = '/docs/partners/data_and_analytics/business_intelligence/looker';
-validurls['/docs/partners/data_and_infrastructure_agility/analytics/scuba'] = '/docs/partners/data_and_analytics/business_intelligence/scuba';
+validurls['/docs/partners/data_and_infrastructure_agility/analytics/scuba'] = '/docs/partners/data_and_analytics';
+validurls['/docs/partners/data_and_analytics/business_intelligence/scuba'] = '/docs/partners/data_and_analytics';
+validurls['/docs/partners/scuba/'] = '/docs/partners/data_and_analytics';
 validurls['/docs/partners/data_and_infrastructure_agility/business_intelligence/sisu_data'] = '/docs/partners/data_and_analytics/business_intelligence/sisu_data';
 validurls['/docs/partners/data_and_infrastructure_agility/analytics/tellius'] = '/docs/partners/data_and_analytics/business_intelligence/tellius';
 validurls['/docs/partners/data_and_infrastructure_agility/analytics/thoughtspot'] = '/docs/partners/data_and_analytics/business_intelligence/thoughtspot';
@@ -2510,6 +2502,7 @@ validurls['/docs/partners/message_personalization/dynamic_content/dynamic_yield'
 validurls['/docs/partners/message_personalization/dynamic_content/sheetlabs'] = '/partners/sheetlabs/sheetlabs/';
 
 validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_overview'] = '/docs/partners/shopify/';
+validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/'] = '/docs/partners/shopify/';
 
 validurls['/docs/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/'] = '/docs/user_guide/message_building_by_channel/content_cards';
 validurls['/docs/user_guide/engagement_tools/news_feed/'] = '/docs/user_guide/engagement_tools/content_cards/';
@@ -2671,6 +2664,8 @@ validurls['/docs/api/endpoints/translations/put_update_translation_campaign'] = 
 validurls['/docs/api/endpoints/translations/get_bulk_translations_canvases'] = '/docs/api/endpoints/translations/canvas/get_bulk_translations_canvases';
 validurls['/docs/api/endpoints/translations/get_translation_canvas'] = '/docs/api/endpoints/translations/canvas/get_translation_canvas';
 validurls['/docs/api/endpoints/translations/put_update_translation_canvas'] = '/docs/api/endpoints/translations/canvas/put_update_translation_canvas';
+validurls['/docs/api/endpoints/translations/campaigns/get_bulk_translations_campaigns'] = '/docs/api/endpoints/translations/campaigns/get_translation_campaign';
+validurls['/docs/api/endpoints/translations/canvas/get_bulk_translations_canvases'] = '/docs/api/endpoints/translations/canvas/get_translation_canvas';
 
 validurls['/docs/developer_guide/sdk_integration/initialization/'] = '/docs/developer_guide/sdk_integration/';
 
@@ -2680,7 +2675,7 @@ validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/advancement'
 validurls['/docs/user_guide/data/data_points'] = '/docs/user_guide/data/infrastructure/data_points';
 validurls['/docs/user_guide/data/report_metrics'] = '/docs/user_guide/analytics/reporting/report_metrics/';
 validurls['/docs/user_guide/data/cloud_ingestion'] = '/docs/user_guide/data/unification/cloud_ingestion';
-validurls['/docs/user_guide/data/cloud_ingestion/overview'] = '/docs/user_guide/data/unification/cloud_ingestion/overview';
+validurls['/docs/user_guide/data/cloud_ingestion/overview'] = '/docs/user_guide/data/unification/cloud_ingestion/';
 validurls['/docs/user_guide/data/cloud_ingestion/connected_sources'] = '/docs/user_guide/data/unification/cloud_ingestion/connected_sources';
 validurls['/docs/user_guide/data/cloud_ingestion/integrations'] = '/docs/user_guide/data/unification/cloud_ingestion/integrations';
 validurls['/docs/user_guide/data/cloud_ingestion/file_storage_integrations'] = '/docs/user_guide/data/unification/cloud_ingestion/file_storage_integrations';
@@ -2752,16 +2747,258 @@ validurls['/docs/developer_guide/banners/creating_placements/'] = '/docs/develop
 
 validurls['/docs/partners/data_and_analytics/business_intelligence/sisu_data/'] = '/docs/partners/';
 
-validurls['/docs/user_guide/personalization_and_dynamic_content/catalogs'] = '/docs/user_guide/data/activation/catalogs/catalog/';
+validurls['/docs/user_guide/personalization_and_dynamic_content/catalogs'] = '/docs/user_guide/data/activation/catalogs/';
 validurls['/docs/user_guide/personalization_and_dynamic_content/catalogs/catalog_triggers/back_in_stock_notifications'] = '/docs/user_guide/data/activation/catalogs/catalog_triggers/back_in_stock_notifications';
 validurls['/docs/user_guide/personalization_and_dynamic_content/catalogs/catalog_triggers/price_drop_notifications'] = '/docs/user_guide/data/activation/catalogs/catalog_triggers/price_drop_notifications';
 validurls['/docs/user_guide/personalization_and_dynamic_content/catalogs/selections'] = '/docs/user_guide/data/activation/catalogs/selections';
-validurls['/docs/user_guide/analytics/catalogs/'] = '/docs/user_guide/data/activation/catalogs/catalog/';
+validurls['/docs/user_guide/analytics/catalogs/'] = '/docs/user_guide/data/activation/catalogs/';
 validurls['/docs/user_guide/data/activation/report_metrics'] = '/docs/user_guide/analytics/reporting/report_metrics';
-validurls['/docs/user_guide/personalization_and_dynamic_content/catalogs'] = '/docs/user_guide/data/activation/catalogs';
 validurls['/docs/user_guide/personalization_and_dynamic_content/catalogs/catalog_triggers'] = '/docs/user_guide/data/activation/catalogs/catalog_triggers';
 validurls['/docs/user_guide/personalization_and_dynamic_content/catalogs/product_blocks'] = '/docs/user_guide/data/activation/catalogs/product_blocks';
 validurls['/docs/user_guide/personalization_and_dynamic_content/catalogs/catalog'] = '/docs/user_guide/data/activation/catalogs/create';
 validurls['/docs/user_guide/personalization_and_dynamic_content/catalogs/using_catalogs'] = '/docs/user_guide/data/activation/catalogs/use';
+
+validurls['/docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_backfill'] = '/docs/partners/ecommerce/shopify_legacy/shopify_features/shopify_backfill';
+validurls['/docs/user_guide/data/activation/catalogs/back_in_stock_notifications'] = '/docs/user_guide/data/activation/catalogs/catalog_triggers/back_in_stock_notifications';
+validurls['/docs/user_guide/data/activation/catalogs/catalog'] = '/docs/user_guide/data/activation/catalogs/create';
+validurls['/docs/user_guide/data/activation/catalogs/using_catalogs'] = '/docs/user_guide/data/activation/catalogs/use';
+validurls['/docs/developer_guide/banners/managing_placements'] = '/docs/developer_guide/banners/placements';
+validurls['/docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/editor_blocks/'] = '/docs/dnd/editor_blocks/';
+validurls['/docs/user_guide/message_building_by_channel/email/drag_and_drop/dnd_editor_blocks/'] = '/docs/dnd/editor_blocks/';
+validurls['/docs/handbooks/'] = '/docs/';
+
+validurls['/docs/user_guide/getting_started/braze_pilot/overview/'] = '/docs/user_guide/getting_started/braze_pilot/';
+validurls['/docs/user_guide/analytics/reporting/reports_overview/'] = '/docs/user_guide/analytics/reporting';
+validurls['/docs/user_guide/data/unification/data_transformation/overview/'] = '/docs/user_guide/data/unification/data_transformation/';
+validurls['/docs/user_guide/message_building_by_channel/content_cards/about/'] = '/docs/user_guide/message_building_by_channel/content_cards';
+validurls['/docs/user_guide/message_building_by_channel/email/about/'] = '/docs/user_guide/message_building_by_channel/email/';
+validurls['/docs/user_guide/message_building_by_channel/email/preference_center/overview/'] = '/docs/user_guide/message_building_by_channel/email/preference_center/api_preference_center/';
+validurls['/docs/user_guide/message_building_by_channel/in-app_messages/about/'] = '/docs/in-app_messages/';
+validurls['/docs/user_guide/message_building_by_channel/push/about/'] = '/docs/user_guide/message_building_by_channel/push';
+validurls['/docs/user_guide/message_building_by_channel/sms_mms_rcs/sms/about_sms/'] = '/docs/about_sms/';
+validurls['/docs/user_guide/message_building_by_channel/sms_mms_rcs/sms/about_mms/'] = '/docs/about_mms';
+validurls['/docs/user_guide/message_building_by_channel/sms_mms_rcs/mms/about_rcs/'] = '/docs/about_rcs';
+validurls['/docs/user_guide/message_building_by_channel/webhooks/understanding_webhooks/'] = '/docs/about_webhooks/';
+
+validurls['/docs/assets/download_file/braze_success_and_support_services_handbook_21.pdf'] = 'https://braze.com/unlisted_docs/assets/download_file/Braze_Success_and_Support_Services_Handbook_21.pdf';
+validurls['/docs/assets/download_file/braze_success_and_support_services_handbook_22.pdf'] = 'https://braze.com/unlisted_docs/assets/download_file/Braze_Success_and_Support_Services_Handbook_22.pdf';
+validurls['/docs/assets/download_file/braze_success_and_support_services_handbook_23v17.pdf'] = 'https://braze.com/unlisted_docs/assets/download_file/Braze_Success_and_Support_Services_Handbook_23v17.pdf';
+validurls['/docs/assets/download_file/braze_success_and_support_services_handbook_24_2.pdf'] = 'https://braze.com/unlisted_docs/assets/download_file/Braze_Success_and_Support_Services_Handbook_24_2.pdf';
+validurls['/docs/assets/download_file/braze_entitlements_handbook_25.pdf'] = 'https://braze.com/unlisted_docs/assets/download_file/Braze_Entitlements_Handbook_25.pdf';
+validurls['/docs/handbooks/'] = 'https://braze.com/unlisted_docs/handbooks/';
+
+validurls['/docs/user_guide/data/unification/user_data_collection'] = '/docs/user_guide/data/unification/user_data';
+validurls['/docs/user_guide/data/unification/user_data_collection/best_practices'] = '/docs/user_guide/data/unification/user_data/best_practices';
+validurls['/docs/user_guide/data/unification/user_data_collection/collection_use_case'] = '/docs/user_guide/data/unification/user_data/collection_use_case';
+validurls['/docs/user_guide/data/unification/user_data_collection/user_import'] = '/docs/user_guide/data/unification/user_data/import_users';
+validurls['/docs/user_guide/data/unification/user_data_collection/user_import/csv_import'] = '/docs/user_guide/data/unification/user_data/import_users/csv';
+validurls['/docs/user_guide/data/unification/user_data_collection/language_codes'] = '/docs/user_guide/data/unification/user_data/language_codes';
+validurls['/docs/user_guide/data/unification/user_data_collection/sdk_data_collection'] = '/docs/user_guide/data/unification/user_data/sdk_data_collection';
+validurls['/docs/user_guide/data/unification/user_data_collection/user_profile_lifecycle'] = '/docs/user_guide/data/unification/user_data/user_profile_lifecycle';
+validurls['/docs/user_guide/data/unification/user_data_collection/user_profile_lifecycle/anonymous_users'] = '/docs/user_guide/data/unification/user_data/user_profile_lifecycle/anonymous_users';
+validurls['/docs/user_guide/message_building_by_channel/in-app_messages/using_locales/'] = '/docs/locales_in_messages/';
+validurls['/docs/user_guide/message_building_by_channel/push/using_locales/'] = '/docs/locales_in_messages/';
+validurls['/docs/user_guide/message_building_by_channel/email/using_locales/'] = '/docs/locales_in_messages/';
+validurls['/docs/partners/shopify_legacy/'] = '/docs/partners/shopify/';
+validurls['/docs/partners/ecommerce/shopify_legacy/'] = '/docs/partners/shopify/';
+validurls['/docs/shopify_historical_backfill_legacy/'] = '/docs/partners/ecommerce/shopify/shopify_data_features/#historical-backfill';
+validurls['/docs/partners/ecommerce/shopify_legacy/shopify_features/shopify_backfill/'] = '/docs/partners/ecommerce/shopify/shopify_data_features/#historical-backfill';
+validurls['/docs/shopify_user_identity/'] = '/docs/shopify_overview/';
+validurls['/docs/partners/ecommerce/shopify_legacy/shopify_features/shopify_user_identity/'] = '/docs/shopify_overview/';
+validurls['/docs/shopify_data_legacy/'] = '/docs/shopify_data_features/';
+validurls['/docs/partners/ecommerce/shopify_legacy/using_shopify/shopify_data_in_braze/'] = '/docs/shopify_data_features/';
+validurls['/docs/shopify_use_cases_legacy/'] = '/docs/shopify_overview/';
+validurls['/docs/shopify_overview_legacy/'] = '/docs/shopify_overview/';
+validurls['/docs/partners/ecommerce/shopify_legacy/shopify_overview/'] = '/docs/shopify_overview/';
+validurls['/docs/setting_up_shopify_legacy/'] = '/docs/shopify_overview/';
+validurls['/docs/partners/ecommerce/shopify_legacy/setting_up_shopify/'] = '/docs/shopify_overview/';
+validurls['/docs/help/release_notes/2016'] = '/docs/releases/2016';
+validurls['/docs/help/release_notes/2016/august'] = '/docs/releases/2016/august';
+validurls['/docs/help/release_notes/2016/december'] = '/docs/releases/2016/december';
+validurls['/docs/help/release_notes/2016/jantomay'] = '/docs/releases/2016/jantomay';
+validurls['/docs/help/release_notes/2016/july'] = '/docs/releases/2016/july';
+validurls['/docs/help/release_notes/2016/june'] = '/docs/releases/2016/june';
+validurls['/docs/help/release_notes/2016/november'] = '/docs/releases/2016/november';
+validurls['/docs/help/release_notes/2016/october'] = '/docs/releases/2016/october';
+validurls['/docs/help/release_notes/2016/september'] = '/docs/releases/2016/september';
+validurls['/docs/help/release_notes/2017'] = '/docs/releases/2017';
+validurls['/docs/help/release_notes/2017/april'] = '/docs/releases/2017/april';
+validurls['/docs/help/release_notes/2017/august'] = '/docs/releases/2017/august';
+validurls['/docs/help/release_notes/2017/december'] = '/docs/releases/2017/december';
+validurls['/docs/help/release_notes/2017/february'] = '/docs/releases/2017/february';
+validurls['/docs/help/release_notes/2017/january'] = '/docs/releases/2017/january';
+validurls['/docs/help/release_notes/2017/july'] = '/docs/releases/2017/july';
+validurls['/docs/help/release_notes/2017/june'] = '/docs/releases/2017/june';
+validurls['/docs/help/release_notes/2017/march'] = '/docs/releases/2017/march';
+validurls['/docs/help/release_notes/2017/may'] = '/docs/releases/2017/may';
+validurls['/docs/help/release_notes/2017/november'] = '/docs/releases/2017/november';
+validurls['/docs/help/release_notes/2017/october'] = '/docs/releases/2017/october';
+validurls['/docs/help/release_notes/2017/september'] = '/docs/releases/2017/september';
+validurls['/docs/help/release_notes/2018'] = '/docs/releases/2018';
+validurls['/docs/help/release_notes/2018/april'] = '/docs/releases/2018/april';
+validurls['/docs/help/release_notes/2018/august'] = '/docs/releases/2018/august';
+validurls['/docs/help/release_notes/2018/december'] = '/docs/releases/2018/december';
+validurls['/docs/help/release_notes/2018/february'] = '/docs/releases/2018/february';
+validurls['/docs/help/release_notes/2018/january'] = '/docs/releases/2018/january';
+validurls['/docs/help/release_notes/2018/july'] = '/docs/releases/2018/july';
+validurls['/docs/help/release_notes/2018/june'] = '/docs/releases/2018/june';
+validurls['/docs/help/release_notes/2018/march'] = '/docs/releases/2018/march';
+validurls['/docs/help/release_notes/2018/may'] = '/docs/releases/2018/may';
+validurls['/docs/help/release_notes/2018/november'] = '/docs/releases/2018/november';
+validurls['/docs/help/release_notes/2018/october'] = '/docs/releases/2018/october';
+validurls['/docs/help/release_notes/2018/september'] = '/docs/releases/2018/september';
+validurls['/docs/help/release_notes/2019'] = '/docs/releases/2019';
+validurls['/docs/help/release_notes/2019/april'] = '/docs/releases/2019/april';
+validurls['/docs/help/release_notes/2019/august'] = '/docs/releases/2019/august';
+validurls['/docs/help/release_notes/2019/december'] = '/docs/releases/2019/december';
+validurls['/docs/help/release_notes/2019/february'] = '/docs/releases/2019/february';
+validurls['/docs/help/release_notes/2019/january'] = '/docs/releases/2019/january';
+validurls['/docs/help/release_notes/2019/july'] = '/docs/releases/2019/july';
+validurls['/docs/help/release_notes/2019/june'] = '/docs/releases/2019/june';
+validurls['/docs/help/release_notes/2019/march'] = '/docs/releases/2019/march';
+validurls['/docs/help/release_notes/2019/may'] = '/docs/releases/2019/may';
+validurls['/docs/help/release_notes/2019/november'] = '/docs/releases/2019/november';
+validurls['/docs/help/release_notes/2019/october'] = '/docs/releases/2019/october';
+validurls['/docs/help/release_notes/2019/september'] = '/docs/releases/2019/september';
+validurls['/docs/help/release_notes/2020'] = '/docs/releases/2020';
+validurls['/docs/help/release_notes/2020/april'] = '/docs/releases/2020/april';
+validurls['/docs/help/release_notes/2020/august'] = '/docs/releases/2020/august';
+validurls['/docs/help/release_notes/2020/december'] = '/docs/releases/2020/december';
+validurls['/docs/help/release_notes/2020/february'] = '/docs/releases/2020/february';
+validurls['/docs/help/release_notes/2020/january'] = '/docs/releases/2020/january';
+validurls['/docs/help/release_notes/2020/july'] = '/docs/releases/2020/july';
+validurls['/docs/help/release_notes/2020/june'] = '/docs/releases/2020/june';
+validurls['/docs/help/release_notes/2020/march'] = '/docs/releases/2020/march';
+validurls['/docs/help/release_notes/2020/may'] = '/docs/releases/2020/may';
+validurls['/docs/help/release_notes/2020/november'] = '/docs/releases/2020/november';
+validurls['/docs/help/release_notes/2020/october'] = '/docs/releases/2020/october';
+validurls['/docs/help/release_notes/2020/september'] = '/docs/releases/2020/september';
+validurls['/docs/help/release_notes/2021'] = '/docs/releases/2021';
+validurls['/docs/help/release_notes/2021/april'] = '/docs/releases/2021/april';
+validurls['/docs/help/release_notes/2021/august'] = '/docs/releases/2021/august';
+validurls['/docs/help/release_notes/2021/december'] = '/docs/releases/2021/december';
+validurls['/docs/help/release_notes/2021/february'] = '/docs/releases/2021/february';
+validurls['/docs/help/release_notes/2021/january'] = '/docs/releases/2021/january';
+validurls['/docs/help/release_notes/2021/july'] = '/docs/releases/2021/july';
+validurls['/docs/help/release_notes/2021/june'] = '/docs/releases/2021/june';
+validurls['/docs/help/release_notes/2021/march'] = '/docs/releases/2021/march';
+validurls['/docs/help/release_notes/2021/may'] = '/docs/releases/2021/may';
+validurls['/docs/help/release_notes/2021/november'] = '/docs/releases/2021/november';
+validurls['/docs/help/release_notes/2021/october'] = '/docs/releases/2021/october';
+validurls['/docs/help/release_notes/2021/september'] = '/docs/releases/2021/september';
+validurls['/docs/help/release_notes/2022'] = '/docs/releases/2022';
+validurls['/docs/help/release_notes/2022/10_18_22'] = '/docs/releases/2022/10_18_22';
+validurls['/docs/help/release_notes/2022/11_15_22'] = '/docs/releases/2022/11_15_22';
+validurls['/docs/help/release_notes/2022/12_13_22'] = '/docs/releases/2022/12_13_22';
+validurls['/docs/help/release_notes/2022/1_11_22'] = '/docs/releases/2022/1_11_22';
+validurls['/docs/help/release_notes/2022/2_8_22'] = '/docs/releases/2022/2_8_22';
+validurls['/docs/help/release_notes/2022/3_8_22'] = '/docs/releases/2022/3_8_22';
+validurls['/docs/help/release_notes/2022/4_5_22'] = '/docs/releases/2022/4_5_22';
+validurls['/docs/help/release_notes/2022/5_31_22'] = '/docs/releases/2022/5_31_22';
+validurls['/docs/help/release_notes/2022/5_3_22'] = '/docs/releases/2022/5_3_22';
+validurls['/docs/help/release_notes/2022/6_28_22'] = '/docs/releases/2022/6_28_22';
+validurls['/docs/help/release_notes/2022/7_26_22'] = '/docs/releases/2022/7_26_22';
+validurls['/docs/help/release_notes/2022/8_23_22'] = '/docs/releases/2022/8_23_22';
+validurls['/docs/help/release_notes/2022/9_20_22'] = '/docs/releases/2022/9_20_22';
+validurls['/docs/help/release_notes/2023'] = '/docs/releases/2023';
+validurls['/docs/help/release_notes/2023/10_17_23'] = '/docs/releases/2023/10_17_23';
+validurls['/docs/help/release_notes/2023/11_14_23'] = '/docs/releases/2023/11_14_23';
+validurls['/docs/help/release_notes/2023/12_12_23'] = '/docs/releases/2023/12_12_23';
+validurls['/docs/help/release_notes/2023/1_10_23'] = '/docs/releases/2023/1_10_23';
+validurls['/docs/help/release_notes/2023/2_7_23'] = '/docs/releases/2023/2_7_23';
+validurls['/docs/help/release_notes/2023/3_7_23'] = '/docs/releases/2023/3_7_23';
+validurls['/docs/help/release_notes/2023/4_4_23'] = '/docs/releases/2023/4_4_23';
+validurls['/docs/help/release_notes/2023/5_2_23'] = '/docs/releases/2023/5_2_23';
+validurls['/docs/help/release_notes/2023/5_30_23'] = '/docs/releases/2023/5_30_23';
+validurls['/docs/help/release_notes/2023/6_27_23'] = '/docs/releases/2023/6_27_23';
+validurls['/docs/help/release_notes/2023/7_25_23'] = '/docs/releases/2023/7_25_23';
+validurls['/docs/help/release_notes/2023/8_22_23'] = '/docs/releases/2023/8_22_23';
+validurls['/docs/help/release_notes/2023/9_19_23'] = '/docs/releases/2023/9_19_23';
+validurls['/docs/help/release_notes/2024'] = '/docs/releases/2024';
+validurls['/docs/help/release_notes/2024/10_15_24'] = '/docs/releases/2024/10_15_24';
+validurls['/docs/help/release_notes/2024/11_12_24'] = '/docs/releases/2024/11_12_24';
+validurls['/docs/help/release_notes/2024/12_10_24'] = '/docs/releases/2024/12_10_24';
+validurls['/docs/help/release_notes/2024/1_9_24'] = '/docs/releases/2024/1_9_24';
+validurls['/docs/help/release_notes/2024/2_6_24'] = '/docs/releases/2024/2_6_24';
+validurls['/docs/help/release_notes/2024/3_5_24'] = '/docs/releases/2024/3_5_24';
+validurls['/docs/help/release_notes/2024/4_2_24'] = '/docs/releases/2024/4_2_24';
+validurls['/docs/help/release_notes/2024/4_30_24'] = '/docs/releases/2024/4_30_24';
+validurls['/docs/help/release_notes/2024/5_28_24'] = '/docs/releases/2024/5_28_24';
+validurls['/docs/help/release_notes/2024/6_25_24'] = '/docs/releases/2024/6_25_24';
+validurls['/docs/help/release_notes/2024/7_23_24'] = '/docs/releases/2024/7_23_24';
+validurls['/docs/help/release_notes/2024/8_20_24'] = '/docs/releases/2024/8_20_24';
+validurls['/docs/help/release_notes/2024/9_17_24'] = '/docs/releases/2024/9_17_24';
+validurls['/docs/help/release_notes/2025'] = '/docs/releases/2025';
+validurls['/docs/help/release_notes/2025/1_7_25'] = '/docs/releases/2025/1_7_25';
+validurls['/docs/help/release_notes/2025/2_4_25'] = '/docs/releases/2025/2_4_25';
+validurls['/docs/help/release_notes/2025/3_4_25'] = '/docs/releases/2025/3_4_25';
+validurls['/docs/help/release_notes/2025/4_1_25'] = '/docs/releases/2025/4_1_25';
+validurls['/docs/help/release_notes/2025/4_29_25'] = '/docs/releases/2025/4_29_25';
+validurls['/docs/help/release_notes/2025/5_27_25'] = '/docs/releases/2025/5_27_25';
+validurls['/docs/help/release_notes/2025/6_24_25'] = '/docs/releases/2025/6_24_25';
+validurls['/docs/help/release_notes/2025/7_22_25'] = '/docs/releases/2025/7_22_25';
+validurls['/docs/help/release_notes/2025/8_19_25'] = '/docs/releases/2025/8_19_25';
+validurls['/docs/help/release_notes/2025/9_16_25'] = '/docs/releases/2025/9_16_25';
+validurls['/docs/help/release_notes/deprecations'] = '/docs/releases/deprecations';
+validurls['/docs/help/release_notes/deprecations/apptimize'] = '/docs/releases/deprecations/apptimize';
+validurls['/docs/help/release_notes/deprecations/custom_broadcast_receiver'] = '/docs/releases/deprecations/custom_broadcast_receiver';
+validurls['/docs/help/release_notes/deprecations/eclipse_setup_deprecated'] = '/docs/releases/deprecations/eclipse_setup_deprecated';
+validurls['/docs/help/release_notes/deprecations/grouparoo'] = '/docs/releases/deprecations/grouparoo';
+validurls['/docs/help/release_notes/deprecations/shopify_checkout'] = '/docs/releases/deprecations/shopify_checkout';
+validurls['/docs/help/release_notes/deprecations/tls_deprecation'] = '/docs/releases/deprecations/tls_deprecation';
+validurls['/docs/help/release_notes/deprecations/twilio'] = '/docs/releases/deprecations/twilio';
+validurls['/docs/help/release_notes'] = '/docs/releases/release_notes';
+validurls['/docs/help/release_notes/sdk_changelogs'] = '/docs/releases/sdk_changelogs';
+
+validurls['/docs/help/release_notes/'] = '/docs/releases/home';
+validurls['/docs/help/help_articles/content_cards/'] = '/docs/user_guide/message_building_by_channel/content_cards/';
+validurls['/docs/help/help_articles/content_cards/empty_content_card_feed/'] = '/docs/user_guide/message_building_by_channel/content_cards/';
+validurls['/docs/help/help_articles/email/'] = '/docs/user_guide/message_building_by_channel/email/';
+validurls['/docs/help/help_articles/email/open_rates/'] = '/docs/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/';
+validurls['/docs/help/help_articles/email/html_looks_strange/'] = '/docs/user_guide/message_building_by_channel/email/html_editor/troubleshooting/';
+validurls['/docs/help/help_articles/segments/'] = '/docs/user_guide/engagement_tools/segments/';
+validurls['/docs/help/help_articles/segments/my_filter_options_have_changed/'] = '/docs/user_guide/engagement_tools/segments/troubleshooting/';
+validurls['/docs/help/help_articles/segments/segment_showing_0_users/'] = '/docs/user_guide/engagement_tools/segments/measuring_segment_size/';
+validurls['/docs/help/help_articles/segments/segmentation_logic_with_and_or/'] = '/docs/user_guide/engagement_tools/segments/creating_a_segment/#segmentation-logic-using-and-and-or';
+validurls['/docs/help/help_articles/segments/exporting_large_segments/'] = '/docs/user_guide/data/distribution/export_braze_data/segment_data_to_csv#exporting-segment-data-to-csv';
+validurls['/docs/help/help_articles/segments/search_exact_text/'] = '/docs/user_guide/engagement_tools/segments/managing_segments/#searching-for-segments';
+validurls['/docs/help/help_articles/docs/'] = '/docs/user_guide/';
+validurls['/docs/help/help_articles/docs/scroll_bar_overlap/'] = '/docs/user_guide/';
+validurls['/docs/help/faqs/'] = '/docs/';
+validurls['/docs/help/help_articles/campaigns_and_canvas/'] = '/docs/user_guide/engagement_tools/';
+validurls['/docs/help/help_articles/campaigns_and_canvas/canvas_not_sending/'] = '/docs/user_guide/engagement_tools/canvas/troubleshooting/';
+validurls['/docs/help/help_articles/campaigns_and_canvas/locations_data_in_campaigns/'] = '/docs/user_guide/engagement_tools/locations_and_geofences/location_tracking/';
+validurls['/docs/help/help_articles/campaigns_and_canvas/more_people_in_control_group/'] = '/docs/user_guide/engagement_tools/canvas/troubleshooting/';
+validurls['/docs/help/help_articles/campaigns_and_canvas/using_custom_event_properties/'] = '/docs/developer_guide/analytics/logging_events/';
+validurls['/docs/help/help_articles/campaigns_and_canvas/conversions_low/'] = '/docs/user_guide/analytics/dashboard/conversions_dashboard/#troubleshooting';
+validurls['/docs/help/help_articles/push/'] = '/docs/user_guide/message_building_by_channel/push/';
+validurls['/docs/api/objects_filters/user_attributes_object/'] = '/docs/help/help_articles/push/push_token_migration/';
+validurls['/docs/help/help_articles/push/push_enablement/'] = '/docs/user_guide/message_building_by_channel/push/users_and_subscriptions/';
+validurls['/docs/help/help_articles/push/push_clicks_unexpectedly_open_in_app/'] = '/docs/user_guide/message_building_by_channel/push/troubleshooting/';
+validurls['/docs/help/help_articles/push/push_unsubscribes/'] = '/docs/user_guide/message_building_by_channel/push/push_reporting#push-performance';
+validurls['/docs/help/help_articles/push/reducing_payload_size/'] = '/docs/user_guide/message_building_by_channel/push/best_practices/';
+validurls['/docs/help/help_articles/push/resetting_push_permissions/'] = '/docs/user_guide/message_building_by_channel/push/troubleshooting/';
+validurls['/docs/user_guide/offerfit/integration'] = '/docs/user_guide/brazeai/decisioning_studio/integration';
+validurls['/docs/user_guide/offerfit/building_use_cases'] = '/docs/user_guide/brazeai/decisioning_studio/building_use_cases';
+validurls['/docs/partners/ecommerce/shopify_legacy/getting_started_shopify/'] = '/docs/shopify_overview/';
+validurls['/docs/editor_blocks_dnd_iam/'] = '/docs/user_guide/engagement_tools/messaging_fundamentals/drag_and_drop_editor_blocks/?sdktab=in-app%20messages';
+
+validurls['/docs/partners/additional_channels_and_extensions/calendar/rokt_calendar/'] = '/docs/partners/additional_channels_and_extensions/';
+validurls['/docs/partners/rokt_calendar/'] = '/docs/partners/additional_channels_and_extensions/';
+
+validurls['/docs/help/help_articles/push/push_token_migration/'] = '/docs/api/objects_filters/user_attributes_object/#migrating-push-tokens';
+validurls['/docs/api/objects_filters/context_object/'] = '/docs/user_guide/engagement_tools/canvas/canvas_components/context/';
+validurls['/docs/user_guide/administrative/app_settings/manage_your_braze_users/adding_users_to_your_dashboard/'] = '/docs/user_guide/administrative/app_settings/manage_your_braze_users/';
+
+validurls['/docs/partners/message_personalization/dynamic_content/cloudinary/'] = '/docs/partners/cloudinary/';
+
+validurls['/docs/user_guide/message_building_by_channel/banners/testing/'] = '/docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/';
+validurls['/docs/user_guide/message_building_by_channel/content_cards/testing/'] = '/docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/';
+validurls['/docs/user_guide/message_building_by_channel/in-app_messages/testing/'] = '/docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/';
+validurls['/docs/user_guide/data/unification/cloud_ingestion/overview'] = '/docs/user_guide/data/unification/cloud_ingestion/';
+validurls['/docs/contributing/content_management/language_translations'] = '/docs/contributing/content_management';
+
+validurls['/docs/developer_guide/sdk_integration/?sdktab=xamarin'] = '/docs/developer_guide/sdk_integration/?sdktab=.net%20maui';
+validurls['/docs/help/help_articles/campaigns_and_canvas/not_triggering/'] = '/docs/user_guide/engagement_tools/canvas/troubleshooting/#why-did-a-user-not-receive-a-triggered-canvas-step';
 
 // validurls['OLD'] = 'NEW';

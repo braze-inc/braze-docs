@@ -43,7 +43,7 @@ glossaries:
   - name: カスタムイベント
     description: "<a href=\"https://www.braze.com/docs/user_guide/data/custom_data/custom_events\">カスタムイベント</a>はユーザーによって行われるアクションであり、アプリケーションに対する価値の高いユーザーインタラクションをトラッキングするのに適しています。"
   - name: データポイント
-    description: "データポイントは以下の場合にカウントされます。<a href=\"https://www.braze.com/docs/user_guide/data/custom_data/custom_attributes/\">カスタム属性が</a>設定または更新されたとき (同じ値で更新している場合でも)、<a href=\"https://www.braze.com/docs/user_guide/data/custom_data/custom_events\">カスタムイベント</a>や購入イベントがログに記録されたとき、標準データ （たとえば、<code>email</code>、<code>first_name</code>、<code>last_name</code>、<code>country</code>、あるいは <code>home_city</code>) が記録されるとき、セッションが開始されるとき、セッションが終了するとき。"
+    description: "データポイントは、<a href=\"https://www.braze.com/docs/user_guide/data/custom_data/custom_attributes/\">カスタム属性が</a>設定または更新されたとき（同じ値で更新している場合でも）、<a href=\"https://www.braze.com/docs/user_guide/data/custom_data/custom_events\">カスタムイベントや</a>購入イベントが記録されたとき、標準データ（たとえば、<code>メール</code>、<code>姓名</code>、<code>国名</code>、<code>出身地</code>）が記録されたとき、セッションが開始されたとき、セッションが終了したときにカウントされる。"
   - name: ディープリンク
     description: "<a href=\"https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/\">ディープリンク</a>は、顧客を次のアクションやエンゲージメントに導くために使われます。ディープリンクを使えば、Web サイトまたはモバイルアプリ内のターゲットコンテンツとメッセージを接続できます。"
   - name: 休眠ユーザー

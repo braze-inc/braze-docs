@@ -1,5 +1,5 @@
 ---
-nav_title: Webhookの作成
+nav_title: Webhookを作成する
 article_title: Webhookを作成する
 page_order: 1
 channel:
@@ -23,7 +23,7 @@ Webhookとは何か、Brazeでどのように使えるかについては、先�
 メッセージは、キャンペーンとキャンバスのどちらを使用して配信すべきでしょうか。キャンペーンは単一のシンプルなメッセージングキャンペーンに適していますが、キャンバスはマルチステップのユーザーのジャーニーに適しています。
 
 {% tabs %}
-{% tab キャンペーン %}
+{% tab Campaign %}
 
 **ステップ:**
 
@@ -40,7 +40,7 @@ Webhookとは何か、Brazeでどのように使えるかについては、先�
 {% endalert %}
 
 {% endtab %}
-{% tab キャンバス %}
+{% tab Canvas %}
 
 **ステップ:**
 
@@ -65,13 +65,13 @@ Webhookをゼロから作成するか、既存のテンプレートを使用す�
 - HTTPメソッド
 - Request body
 
-![Webhook テンプレートの例が表示されている [作成] タブ。]({% image_buster /assets/img_archive/webhook_compose.png %})
+![Webhookテンプレートの例がある "Compose "タブ。]({% image_buster /assets/img_archive/webhook_compose.png %})
 
 #### 言語 {#internationalization}
 
 [国際化]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/#campaigns-in-multiple-languages)は、URLおよびリクエストボディでサポートされています。メッセージを複数言語で送信するには、[**言語を追加**] をクリックして、必須フィールドに入力します。 
 
-コンテンツを記述する前に言語を選択することをお勧めします。これにより、Liquid 内の適切な場所にテキストを入力することができます。利用可能なすべての言語のリストについては、[サポートされている言語]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported)を参照してください。
+コンテンツを記述する前に言語を選択することをお勧めします。これにより、Liquid 内の適切な場所にテキストを入力することができます。使用可能な言語の完全なリストについては、[サポートされている言語]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported)を参照してください。
 
 右から左に書かれた言語でコピーを追加する場合、右から左に書かれたメッセージの最終的な見た目は、サービスプロバイダーがどのようにそれらをレンダリングするかに大きく左右されることに注意してください。右から左へのメッセージを可能な限り正確に表示するためのベストプラクティスについては、[右から左へのメッセージを作成する]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/)を参照してください。
 
@@ -99,7 +99,7 @@ Brazeは、標準ポート`80`（HTTP）および`443`（HTTPS）で通信する
 
 JSONキーと値のペアを使用すると、JSON形式を期待するエンドポイントへのリクエストを簡単に作成できます。JSONリクエストを期待するエンドポイントでのみ使用できる。例えば、キーが `message_body` の場合、対応する値には `Your order just arrived!` があります。キーと値のペアを入力すると、コンポーザーがリクエストをJSON構文で構成し、JSONリクエストのプレビューが自動的に表示されます。
 
-![JSON キーと値のペアに設定されたリクエスト本文。]({% image_buster /assets/img/webhook_json_1.png %})
+![リクエスト・ボディはJSONのキーと値のペアに設定されている。]({% image_buster /assets/img/webhook_json_1.png %})
 
 Liquid を使用してキーと値のペアをパーソナライズできます (ユーザー属性、[カスタム属性]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#additional-notes-and-best-practices)、または[イベントプロパティ]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)を含めるなど)。例えば、リクエストに顧客の名とメールアドレスを含めることができます。各属性の[デフォルト値を]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=web)必ず含めること。
 
@@ -109,7 +109,7 @@ Liquid を使用してキーと値のペアをパーソナライズできます 
 
 両方の[パーソナライゼーション]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/)と[国際化]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/#campaigns-in-multiple-languages)は、Liquidを使用して生のテキストでサポートされています。
 
-![Liquid を使用した生のテキストを含むリクエスト本文の例。]({% image_buster /assets/img_archive/webhook_rawtext.png %})
+![Liquidを使った生のテキストを含むリクエストボディの例。]({% image_buster /assets/img_archive/webhook_rawtext.png %})
 
 `Content-Type` [リクエストヘッダー](#request-headers-optional) を `application/x-www-form-url-encoded` に設定した場合、リクエストボディは URL エンコードされた文字列としてフォーマットする必要があります。以下に例を示します。
 
@@ -119,15 +119,15 @@ to={{custom_attribute.${example}}}&text=Your+order+just+arrived
 ```
 {% endraw %}
 
-![URL エンコードされた文字列を含むリクエスト本文。]({% image_buster /assets/img_archive/webhook_rawtext_URL-encoded.png %})
+![URLエンコードされた文字列を含むリクエストボディ。]({% image_buster /assets/img_archive/webhook_rawtext_URL-encoded.png %})
 
-## ステップ 3:追加設定を構成する
+## ステップ 3: 追加設定を構成する
 
 #### リクエストヘッダー (オプション)
 
 特定のエンドポイントでは、リクエストにヘッダーを含める必要がある場合があります。作成画面の [**作成**] セクションで、ヘッダーを必要な数だけ追加できます。
 
-![リクエストヘッダーの「許可」キーと「コンテンツタイプ」キーの例]({% image_buster /assets/img_archive/webhook_request_headers_example.png %})
+![Authorization "キーと "Content-type "キーのリクエストヘッダー例。]({% image_buster /assets/img_archive/webhook_request_headers_example.png %})
 
 一般的なリクエストヘッダーは`Content-Type`仕様 (XML や JSON など、本文に含まれるデータのタイプを示す) と、ベンダーやシステムに対する認証情報を含む認証ヘッダーです。 
 
@@ -158,9 +158,9 @@ to={{custom_attribute.${example}}}&text=Your+order+just+arrived
 ## ステップ 5: キャンペーンまたはキャンバスの残りの部分を作成する
 
 {% tabs %}
-{% tab キャンペーン %}
+{% tab Campaign %}
 
-次に、キャンペーンの残りの部分を構築します。Webhook を作成するためにツールを活用する方法の詳細については、以下のセクションを参照してください。
+次に、キャンペーンの残りの部分を作成します。Webhook を作成するためにツールを活用する方法の詳細については、以下のセクションを参照してください。
 
 #### 配信スケジュールまたはトリガーを選択する
 
@@ -172,7 +172,9 @@ Webhook は、スケジュールされた時刻、アクション、または AP
 
 #### ターゲットとするユーザーを選択する
 
-次に、セグメントやフィルターを選択して[ターゲットユーザー]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/)を絞り込み、オーディエンスを絞り込む必要があります。このステップでは、セグメントからより多くのオーディエンスを選択し、必要に応じてフィルターを使用してさらにセグメントを絞り込みます。セグメントのおおよその人数について現在の状態を示すスナップショットが自動的に表示されます。正確なセグメントメンバーシップは常にメッセージが送信される直前に計算されることに注意してください。
+次に、セグメントやフィルターを選択して[ターゲットユーザー]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/)を絞り込み、オーディエンスを絞り込む必要があります。このステップでは、セグメントからより多くのオーディエンスを選択し、必要に応じてフィルターを使用してさらにセグメントを絞り込みます。そのセグメンテーションの母集団が今どのようなものなのか、自動的にプレビューが表示される。正確なセグメントメンバーシップは常にメッセージが送信される直前に計算されることに注意してください。
+
+{% multi_lang_include target_audiences.md %}
 
 #### コンバージョンイベントを選択する
 
@@ -180,7 +182,7 @@ Braze では、キャンペーンを受信した後、ユーザーが指定の�
 
 {% endtab %}
 
-{% tab キャンバス %}
+{% tab Canvas %}
 
 キャンバスコンポーネントが完成していない場合は、残りのセクションを完成させます。詳細については、キャンバスの残りの部分を構築する方法、多変量テストとインテリジェントセレクションを実装する方法などについては、キャンバスドキュメントの[キャンバスを構築する]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-3-build-your-canvas)ステップを参照してください。
 
@@ -202,7 +204,7 @@ Webhook は Braze サーバーが外部エンドポイントにリクエスト�
 
 Webhook の送信に失敗すると、エラーメッセージが[メッセージアクティビティログ]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/)に記録されます。これにはエラーのタイムスタンプ、アプリ名、エラーの詳細などが含まれます。
 
-![Webhook エラーとメッセージ「現在のユーザーに関する情報を照会するには、アクティブなアクセストークンを使用する必要があります」。]({% image_buster /assets/img_archive/webhook-error.png %})
+![現在のユーザーに関する情報を照会するには、アクティブ・アクセストークンを使用する必要があります」というメッセージのWebhookエラーが発生した。]({% image_buster /assets/img_archive/webhook-error.png %})
 
 エラーメッセージがエラーの原因について十分に明確でない場合、使用しているAPIエンドポイントのドキュメントを確認する必要があります。これらは通常、エンドポイントが使用するエラーコードの説明と、それらが通常引き起こされる原因を提供します。
 

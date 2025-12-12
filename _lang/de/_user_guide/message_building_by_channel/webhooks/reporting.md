@@ -14,4 +14,4 @@ tool:
 
 > Lernen Sie die verschiedenen Metriken und Analytics-Optionen für die Webhook-Berichterstattung kennen, die im Braze-Dashboard zur Verfügung stehen.
 
-{% multi_lang_include campaign_analytics.md channel="webhook" %}
+{% multi_lang_include analytics/campaign_analytics.md channel="webhook" %}

@@ -1,5 +1,5 @@
 ---
-nav_title: 分析ダッシュボード
+nav_title: あなたの分析 ダッシュボード
 article_title: 分析ダッシュボード
 page_order: 6.5
 layout: dev_guide

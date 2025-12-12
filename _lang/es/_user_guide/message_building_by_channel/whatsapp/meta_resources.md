@@ -1,7 +1,7 @@
 ---
-nav_title: Meta Recursos
+nav_title: Meta recursos
 article_title: Meta Recursos
-page_order: 81
+page_order: 11
 description: "Este artículo proporciona documentación, información y recursos útiles de Meta para mejorar tu comprensión de la integración de WhatsApp."
 page_type: reference
 channel:
@@ -11,22 +11,38 @@ channel:
 
 # Meta recursos
 
-## Metadocumentación
+## Meta documentación
 
-Revisa la siguiente documentación de Meta para obtener orientación sobre nombres para mostrar, números de teléfono, etc.
+Revisa la siguiente documentación de Meta para obtener orientación sobre los nombres para mostrar, los números de teléfono, etc.
 
-- [Orientación sobre el nombre para mostrar](https://www.facebook.com/business/help/757569725593362) 
+- [Orientación sobre el nombre de la pantalla](https://www.facebook.com/business/help/757569725593362) 
 - [Habilitación de Meta Insights](https://www.facebook.com/business/help/218116047387456)
 - [Requisitos del número de teléfono](https://developers.facebook.com/docs/whatsapp/cloud-api/phone-numbers)
 - [Límites de mensajería](https://developers.facebook.com/docs/whatsapp/messaging-limits)
-- [Puntuación de calidad](https://www.facebook.com/business/help/896873687365001)
+- [Tasa de calidad](https://www.facebook.com/business/help/896873687365001)
 
 ## Actualizaciones de productos de WhatsApp
+
+### Abril de 2025: Pausa de mensajes de mensajería a números de teléfono de EE.UU.
+*Última actualización agosto 2025*
+
+Meta detendrá la entrega de todos los mensajes de plantillas de marketing a los usuarios de WhatsApp que tengan un número de teléfono de Estados Unidos (un número compuesto por un código de marcación `+1` y un código de área de Estados Unidos). Actualmente no hay fecha prevista para el levantamiento de esta pausa. 
+
+Cualquier intento de enviar una plantilla a un usuario de WhatsApp con un número de teléfono de EE.UU. dará lugar al error `131049`.
+
+### Marzo de 2025: Límites de la plantilla de mensajes de marketing por usuario
+*Última actualización agosto 2025*
+
+Meta limitará el número de mensajes de plantillas de marketing que un usuario puede recibir en todas las empresas en un periodo de tiempo determinado, empezando por los mensajes que tienen menos probabilidades de ser leídos. 
+
+Una excepción es que, si una persona responde a un mensaje de marketing, se iniciará una ventana de servicio al cliente de 24 horas. Los mensajes de mensajería enviados dentro de esta ventana no contarán para el límite de una persona.
+
+El límite específico varía según el usuario, dependiendo de su nivel de interacción. Más información sobre los límites de la plantilla de mensajes de marketing por usuario de WhatsApp [aquí](https://developers.facebook.com/docs/whatsapp/cloud-api/guides/send-message-templates#per-user-marketing-template-message-limits). 
 
 ### Enero de 2025: WhatsApp pausa el envío de mensajes de marketing a usuarios de EE.UU. a partir del 1 de abril
 *Última actualización Enero 2025*
 
-WhatsApp interrumpirá el envío de mensajes de marketing a usuarios estadounidenses (personas con números de teléfono estadounidenses) a partir del 1 de abril de 2025. [Los mensajes de utilidad, servicio, autenticación](https://developers.facebook.com/docs/whatsapp/pricing/) y [respuesta]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create#response-messages) seguirán estando permitidos en EEUU. 
+WhatsApp interrumpirá el envío de mensajes de marketing a usuarios estadounidenses (personas con números de teléfono estadounidenses) a partir del 1 de abril de 2025. [Los mensajes de]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create#response-messages) [utilidad, servicio, autenticación](https://developers.facebook.com/docs/whatsapp/pricing/) y [respuesta]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create#response-messages) seguirán estando permitidos en EEUU. 
 
 El envío de mensajes de marketing (además de todos los demás tipos de mensajes) a todos los demás países o regiones sigue estando permitido y no se verá afectado.
 
@@ -76,7 +92,7 @@ Si la tasa de lectura de la cuenta es extremadamente baja, se tomarán las sigui
 
 #### Cómo estar al día de estas advertencias y ejecuciones
 
-De forma similar a la aplicación existente en la plataforma, las empresas recibirán una notificación sobre estas acciones y podrán reconocerlas utilizando la página Calidad de la cuenta en el administrador de negocios de WhatsApp. Confirma que tienes los datos de contacto correctos en la lista de WhatsApp Business Manager para todos los administradores necesarios, ya que los correos electrónicos de notificación de ejecución se enviarán basándose en esa información.
+De forma similar a la aplicación existente en la plataforma, las empresas recibirán una notificación sobre estas acciones y podrán reconocerlas utilizando la página Calidad de la cuenta en el administrador de negocios de WhatsApp. Confirma que tienes los datos de contacto correctos en la lista de WhatsApp Business Manager de todos los administradores necesarios, ya que los correos electrónicos de notificación de ejecución se enviarán basándose en esa información.
 
 Las notificaciones sobre infracciones graves de correo no deseado serán:
 
@@ -84,95 +100,95 @@ Las notificaciones sobre infracciones graves de correo no deseado serán:
 - Se muestra en un banner en el administrador de WhatsApp
 - Enviado como un correo electrónico a todos los administradores configurados en el WhatsApp Business Manager
 
-### Mayo de 2024: Lanzamiento en vivo de Cloud API en Turquía
-*Última actualización: mayo de 2024*
+### Mayo de 2024: API en la nube en vivo en Turquía
+*Última actualización Mayo 2024*
 
-Meta proporciona ahora a las empresas de Cloud API acceso a Turquía para mensajería empresarial. Anteriormente, las empresas turcas podían utilizar WhatsApp Cloud API, pero los usuarios de WhatsApp con números turcos no podían enviar ni recibir mensajes enviados a través de Cloud API. 
+Meta ofrece ahora a las empresas la API en la nube para acceder a Türkiye para la mensajería empresarial. Anteriormente, WhatsApp Cloud API estaba disponible para que lo utilizaran las empresas de Turquía, pero los usuarios de WhatsApp con números turcos no podían enviar ni recibir mensajes enviados a través de Cloud API. 
 
-Meta siempre deja claro a los usuarios cuándo están chateando con un negocio alojado en Meta, y se requiere que todos los usuarios acepten los Términos de Servicio y la Política de Privacidad de WhatsApp correspondientes para proceder con la mensajería de negocios. La actualización de 2021 de las condiciones de servicio y la política de privacidad en Turquía se había suspendido, pero ya está en marcha. Esto no cambia el compromiso de Meta con la privacidad: las conversaciones personales siguen estando protegidas por cifrado de extremo a extremo, lo que significa que sólo tú y el destinatario pueden verlas. La actualización permite a los usuarios turcos acceder a funciones opcionales para empresas si así lo desean y ofrece más transparencia sobre el funcionamiento de WhatsApp.  
+Meta siempre deja claro a los usuarios cuándo están chateando con una empresa alojada en Meta, y todos los usuarios deben aceptar las Condiciones de servicio y la Política de privacidad de WhatsApp correspondientes para proceder a la mensajería empresarial. La actualización de las Condiciones de servicio y la Política de privacidad de 2021 en Turquía se había interrumpido, pero ya se está aplicando. Esto no cambia el compromiso de Meta con la privacidad: las conversaciones personales siguen estando protegidas por una encriptación de extremo a extremo, lo que significa que sólo tú y el destinatario podéis verlas. La actualización habilita a los usuarios turcos a acceder a características empresariales opcionales si así lo desean y proporciona más transparencia sobre el funcionamiento de WhatsApp.  
  
-Las empresas de la API en la nube ya pueden iniciar conversaciones con usuarios de WhatsApp con números turcos, que ahora devolverán un webhook como conversación "enviada", en lugar del código de error 131026 actual.
+Las empresas de la API en la nube ya pueden iniciar conversaciones con usuarios de WhatsApp con números turcos, que ahora devolverán un webhook como conversación "enviada", en lugar del actual código de error 131026.
 
-Para que un mensaje comercial sea "entregado" o "leído" es necesario que el usuario acepte las condiciones de WhatsApp. No se cobrará a las empresas a menos que se entregue el mensaje.
+Para que un mensaje comercial sea "entregado" o "leído" es necesario que el usuario acepte las condiciones de WhatsApp. No se cobrará a menos que se entregue el mensaje.
 
-Los usuarios que reciban o intenten enviar un mensaje a un negocio de Cloud API recibirán una notificación dentro de la aplicación sobre la actualización de los términos que aclara que no pueden enviar mensajes a un negocio de Cloud API hasta que hayan aceptado la actualización de WhatsApp. Además, a los usuarios que registren o vuelvan a registrar la aplicación en su teléfono, se les pedirá que acepten la actualización de WhatsApp.
+A los usuarios que reciban o intenten enviar un mensaje a un negocio de la API de la Nube se les mostrará una notificación dentro de la aplicación sobre la actualización de las condiciones que aclara que no pueden enviar mensajes a un negocio de la API de la Nube hasta que hayan aceptado la actualización de WhatsApp. Además, se pedirá a los usuarios que registren o vuelvan a registrar la aplicación en su teléfono que acepten la actualización de WhatsApp.
 
-Cuando un usuario acepte la actualización, verá el aviso de mensaje del sistema Cloud API existente cuando chatee con un Cloud API Business.
+Cuando un usuario acepte la actualización, verá el aviso de mensaje existente en el sistema de la API de la Nube cuando chatee con un Negocio de la API de la Nube.
 
-### Mayo de 2024: Límites de mensajes de plantillas de marketing por usuario
-*Última actualización: mayo de 2024*
+### Mayo de 2024: Límites de la plantilla de mensajes de marketing por usuario
+*Última actualización Mayo 2024*
 
-Meta está desplegando nuevos enfoques para mantener experiencias de usuario de alta calidad y maximizar el compromiso de los mensajes de las plantillas de marketing en la plataforma WhatsApp. A partir del 23 de mayo de 2024, limitarán el número de mensajes de plantillas de marketing que cada usuario individual puede recibir de todas las empresas con las que interactúa durante un periodo de tiempo determinado, empezando por un pequeño número de conversaciones que tienen menos probabilidades de ser leídas. Tenga en cuenta que el límite se determina en función del número de mensajes de plantillas de marketing que esa persona ya ha recibido de cualquier empresa, y no está relacionado específicamente con su marca. Sin embargo, esto puede afectar a la capacidad de entrega de sus mensajes de plantillas de marketing.
+Meta está desplegando nuevos enfoques para mantener experiencias de usuario de alta calidad y maximizar la interacción con los mensajes de la plantilla de marketing en la plataforma WhatsApp. A partir del 23 de mayo de 2024, limitarán el número de mensajes de plantillas de marketing que cada usuario individual puede recibir de todas las empresas con las que interactúa durante un periodo de tiempo determinado, empezando con un pequeño número de conversaciones que tienen menos probabilidades de ser leídas. Ten en cuenta que el límite se determina en función del número de mensajes de plantillas de marketing que esa persona ya ha recibido de cualquier empresa, y no está relacionado específicamente con tu marca. Sin embargo, esto puede afectar a la capacidad de entrega de los mensajes de tu plantilla de marketing.
 
-El límite sólo se aplica a los mensajes de plantillas de marketing que normalmente abrirían una nueva conversación de marketing. Si ya hay una conversación de marketing abierta entre su marca y un usuario de WhatsApp, los mensajes de plantillas de marketing enviados al usuario no se verán afectados.
+El límite sólo se aplica a los mensajes de plantillas de marketing que normalmente abrirían una nueva conversación de marketing. Si ya hay una conversación de marketing abierta entre tu marca y un usuario de WhatsApp, los mensajes de la plantilla de marketing enviados al usuario no se verán afectados.
 
-Si un mensaje de plantilla de marketing no se entrega a un usuario determinado debido al límite, Cloud API devolverá el código de error 131026. Tenga en cuenta, sin embargo, que estos códigos de error cubren una amplia gama de problemas que pueden resultar en la no entrega de un mensaje, y por razones de privacidad, Meta no revelará si de hecho el mensaje no fue entregado debido al límite. Consulta [el documento Solución de problemas](https://developers.facebook.com/docs/whatsapp/cloud-api/support#troubleshooting) de Cloud API para obtener descripciones de los motivos de no entrega y lo que puedes hacer para determinar su causa subyacente.
+Si no se entrega un mensaje de plantilla de marketing a un usuario determinado debido al límite, Cloud API devolverá el código de error 131026. Sin embargo, ten en cuenta que estos códigos de error abarcan una amplia gama de problemas que pueden provocar que no se entregue un mensaje y, por motivos de privacidad, Meta no revelará si, de hecho, el mensaje no se entregó debido al límite. Consulta [el documento Solución de problemas](https://developers.facebook.com/docs/whatsapp/cloud-api/support#troubleshooting) de la API Nube para ver descripciones de los motivos de no entrega y lo que puedes hacer para determinar su causa subyacente.
 
-Si recibe uno de estos códigos de error y sospecha que se debe al límite, evite reenviar inmediatamente el mensaje de plantilla, ya que sólo dará lugar a otra respuesta de error. 
+Si recibes uno de estos códigos de error y sospechas que se debe al límite, evita reenviar inmediatamente el mensaje de la plantilla, ya que sólo conseguirás otra respuesta de error. 
 
-Para obtener más información sobre esta actualización de la capacidad de entrega, incluidos los detalles sobre la supervisión de la capacidad de entrega y otras prácticas recomendadas para la mensajería de marketing en WhatsApp, consulte nuestra reciente [publicación en el blog](https://www.braze.com/resources/articles/meta-introduces-deliverability-updates-for-whatsapp?utm_campaign=fy25-q2-global-customer-customer-meta-deliverability-updates-for-whatsapp&utm_medium=email-cdb&utm_source=braze&utm_content=blog-meta-deliverability-updates-for-wa-blog).
+Para obtener más información sobre esta actualización de la capacidad de entrega, incluidos detalles sobre la supervisión de tu capacidad de entrega y otras prácticas recomendadas para la mensajería de marketing en WhatsApp, consulta nuestra reciente [publicación en el blog](https://www.braze.com/resources/articles/meta-introduces-deliverability-updates-for-whatsapp?utm_campaign=fy25-q2-global-customer-customer-meta-deliverability-updates-for-whatsapp&utm_medium=email-cdb&utm_source=braze&utm_content=blog-meta-deliverability-updates-for-wa-blog).
 
-### Abril de 2024: Plantillas de servicios públicos
-*Última actualización: abril de 2024*
+### Abril de 2024: Paso de plantillas para plantillas de utilidades
+*Última actualización abril 2024*
 
-El año pasado, WhatsApp introdujo el ritmo de plantillas para los mensajes de marketing como una nueva forma de ayudar a las empresas a mejorar el compromiso de sus plantillas y crear experiencias de usuario valiosas. A partir del 30 de abril, ampliarán el ritmo de las plantillas a los mensajes de servicios públicos. Si una plantilla de servicios públicos de una cuenta se pone en pausa debido a los comentarios de los usuarios, seguirán el ritmo de las nuevas plantillas de servicios públicos que se creen durante los siete días siguientes.
+El año pasado, WhatsApp introdujo el ritmo de plantillas para mensajes de marketing como una nueva forma de ayudar a las empresas a mejorar la interacción de sus plantillas y crear experiencias de usuario valiosas. A partir del 30 de abril, ampliarán el ritmo de plantillas a los mensajes de utilidad. Si una plantilla de utilidades de una cuenta se pone en pausa debido a la opinión de los usuarios, seguirán el ritmo de las nuevas plantillas de utilidades que se creen durante los siete días siguientes.
 
-### Abril de 2024: Los índices de lectura afectarán a la calificación de calidad de las plantillas de marketing 
-*Última actualización: marzo de 2024*
+### Abril de 2024: Las tasas de lectura afectarán a la tasa de calidad de las plantillas de marketing 
+*Última actualización marzo 2024*
 
-WhatsApp está probando nuevos enfoques, empezando con los consumidores en la India, para crear experiencias más valiosas y maximizar el compromiso con las conversaciones de marketing de las empresas. Esto puede incluir limitar el número de conversaciones de marketing que una persona recibe de cualquier empresa en un periodo determinado, empezando por un pequeño número de conversaciones que tengan menos probabilidades de ser leídas. Braze obtendrá un código de error si no se entrega un mensaje.
+WhatsApp está probando nuevos enfoques, empezando por los consumidores de la India, para crear experiencias más valiosas y maximizar la interacción con las conversaciones de marketing de las empresas. Esto puede incluir limitar el número de conversaciones de marketing que una persona recibe de cualquier empresa en un periodo determinado, empezando con un pequeño número de conversaciones que tengan menos probabilidades de ser leídas. Braze obtendrá un código de error si no se entrega un mensaje.
 
-WhatsApp empezará a considerar las tasas de lectura como parte de nuestra calificación de calidad para las plantillas de marketing, junto con las métricas tradicionales como los bloques y los informes. WhatsApp puede pausar temporalmente las campañas de mensajes de marketing con bajas tasas de lectura, dando tiempo a las empresas para iterar sobre las plantillas con el compromiso más bajo antes de escalar el volumen a partir del 1 de abril de 2024. 
+WhatsApp empezará a tener en cuenta las tasas de lectura como parte de nuestra calificación de calidad de las plantillas de marketing, junto con métricas tradicionales como los bloques y los informes. WhatsApp podría pausar temporalmente las campañas de mensajería con tasas de lectura bajas, dando tiempo a las empresas para iterar sobre las plantillas con menor interacción antes de escalar el volumen a partir del 1 de abril de 2024. 
 
-### Febrero de 2024: Experimentación sobre conversaciones de marketing
-*Última actualización: febrero de 2024*
+### Febrero de 2024: Conversaciones de marketing Experimentación
+*Última actualización febrero 2024*
 
-A partir del 6 de febrero de 2024, WhatsApp está probando nuevos enfoques, comenzando con los consumidores de la India, para crear experiencias más valiosas y maximizar el compromiso de los clientes con las conversaciones de marketing de su marca. Esto puede incluir limitar el número de conversaciones de marketing que un usuario recibe de su marca en un periodo determinado, empezando por un número reducido de conversaciones que tengan menos probabilidades de ser leídas.
+A partir del 6 de febrero de 2024, WhatsApp está probando nuevos enfoques, empezando por los consumidores de la India, para crear experiencias más valiosas y maximizar la interacción con los clientes en las conversaciones de marketing de tu marca. Esto puede incluir limitar el número de conversaciones de marketing que un usuario recibe de tu marca en un periodo determinado, empezando con un pequeño número de conversaciones que tengan menos probabilidades de ser leídas.
 
-### Octubre de 2023: Ritmo de plantillas 
-*Última actualización: octubre de 2023*
+### Octubre de 2023: Plantilla Pacing 
+*Última actualización octubre 2023*
 
-A partir del 12 de octubre de 2023, WhatsApp introducirá un concepto llamado "ritmo de plantillas" para los mensajes de marketing. En lugar de enviar el mensaje a toda la audiencia de la campaña simultáneamente, el "ritmo de plantillas" envía inicialmente el mensaje a un subconjunto más pequeño de usuarios para recopilar comentarios en tiempo real de los destinatarios de la campaña antes de enviar el resto de mensajes. 
+A partir del 12 de octubre de 2023, WhatsApp va a introducir un concepto llamado "ritmo de plantillas" para los mensajes de mensajería. En lugar de enviar tu mensaje a toda la audiencia de tu campaña simultáneamente, el "ritmo de plantillas" entrega inicialmente el mensaje a un subconjunto más pequeño de usuarios para recopilar información en tiempo real de los destinatarios de la campaña antes de enviar el resto de mensajes. 
 
-El "límite de ritmo" (el subconjunto inicial de mensajes enviados) es variable en función de la plantilla. Tras el envío inicial, WhatsApp retendrá los mensajes restantes durante un máximo de 30 minutos. Durante este periodo de espera, evalúan la calidad de la plantilla basándose en los comentarios de los clientes. Si la respuesta es positiva, indicativa de una plantilla de alta calidad, se entregarán los mensajes restantes. Si la respuesta es negativa, eliminan el resto de mensajes no entregados, lo que evita que una mayor parte de sus clientes sigan haciendo comentarios negativos y le ayuda a evitar posibles problemas de aplicación de la calidad (como impactos en la calificación de la calidad del número de teléfono). 
+El "límite de ritmo" (el subconjunto inicial de mensajes enviados) es variable en función de la plantilla. Tras el envío inicial, WhatsApp retendrá los mensajes restantes durante un máximo de 30 minutos. Durante este periodo de espera, evalúan la calidad de la plantilla basándose en las opiniones de los clientes. Si la respuesta es positiva, indicativa de una plantilla de alta calidad, entregan los mensajes restantes. Si la respuesta es negativa, eliminan el resto de mensajes no entregados, lo que evita que una mayor parte de tus clientes sigan haciendo comentarios negativos y te ayuda a evitar posibles problemas de aplicación de la calidad (como impactos en la valoración de la calidad del número de teléfono). 
 
-Tenga en cuenta que WhatsApp utiliza el mismo sistema para evaluar la calidad de la plantilla en el ritmo de la plantilla que para la pausa de la plantilla. Así, los mensajes no entregados durante la pausa de plantillas (debido a plantillas de baja calidad) son los mismos que se habrían pausado a mayor escala. 
+Ten en cuenta que WhatsApp utiliza el mismo sistema para evaluar la calidad de la plantilla en el ritmo de plantillas que en la pausa de plantillas. Así, los mensajes no entregados durante la pausa de plantillas (debido a plantillas de baja calidad) son los mismos que se habrían pausado a mayor escala. 
 
-En última instancia, esta actualización le proporciona un bucle de retroalimentación más rápido (30 minutos frente a horas o días con la pausa de la plantilla), para que pueda ajustar sus plantillas y ofrecer una mejor experiencia al cliente.
+En última instancia, esta actualización te proporciona un bucle de retroalimentación más rápido (30 minutos frente a horas o días con la pausa de la plantilla), para que puedas ajustar tus plantillas y ofrecer una mejor experiencia del cliente.
 
-**Si tienes más preguntas sobre esta actualización, ponte en contacto con tu representante de Meta.**
+**Si tienes más preguntas sobre esta actualización, ponte en contacto con tu representante socio de Meta.**
 
-### Junio de 2023: Experimentación con mensajes 
+### Junio de 2023: Experimentación con mensajería 
 *Última actualización: junio de 2023*
 
-A partir del 14 de junio de 2023, Meta introducirá nuevas prácticas de experimentación en la plataforma WhatsApp con el fin de evaluar el impacto de los mensajes de marketing en la experiencia y el compromiso de los consumidores. Este experimento puede afectar a tus mensajes de marketing enviados en la API de WhatsApp Business con Braze.
+A partir del 14 de junio de 2023, Meta está introduciendo nuevas prácticas de experimentación en la plataforma WhatsApp para evaluar cómo influyen los mensajes de mensajería en la experiencia y la interacción de los consumidores. Este experimento puede afectar a tus mensajes de marketing enviados en la API de WhatsApp Business con Braze.
 
-Meta tiene la intención de seguir experimentando con la plataforma WhatsApp. Consulta [la documentación de Meta](https://developers.facebook.com/docs/whatsapp/on-premises/guides/experiments?content_id=86oue5PtwEgcBJl) para obtener más información.
+Meta tiene la intención de continuar esta experimentación en la plataforma WhatsApp. Para más información, consulta [la documentación de Meta](https://developers.facebook.com/docs/whatsapp/on-premises/guides/experiments?content_id=86oue5PtwEgcBJl).
 
-**La experimentación de WhatsApp sólo afecta a los mensajes de marketing.** Este experimento puede influir en la difusión de los mensajes de las plantillas de marketing. Las plantillas de utilidades y autenticación seguirán suministrándose sin impacto en la experimentación.
+**La experimentación de WhatsApp sólo afecta a los mensajes de marketing.** Este experimento puede influir en la entrega de mensajes de plantillas de marketing. Las plantillas de utilidad y autenticación seguirán entregándose sin ningún impacto de experimentación.
 
-En el experimento, Meta elige aleatoriamente a aproximadamente el 1% de los consumidores de WhatsApp como participantes. Si se selecciona, Meta no entregará plantillas de mensajes de marketing a estos consumidores a menos que se cumpla una de las siguientes condiciones:
+En el experimento, Meta elige aleatoriamente como participantes a aproximadamente el 1% de los consumidores de WhatsApp. Si se elige, Meta no entregará plantillas de mensajes de marketing a estos consumidores a menos que se cumpla una de las siguientes condiciones:
 
-- Si un consumidor le ha respondido en las últimas 24 horas;
-- Si está abierta una conversación de marketing; o
+- Si un consumidor te ha respondido en las últimas 24 horas;
+- Si está abierta una conversación de marketing existente; o bien
 - Si el consumidor ha hecho clic en un anuncio de WhatsApp en las últimas 72 horas.
 
 ## Preguntas más frecuentes {#faq}
 
 ### ¿Cómo sabré si mi mensaje de marketing se ha visto afectado por el experimento de Meta?
 
-Si un mensaje no se entrega debido al experimento, aparecerá un código de error específico en Registro de actividad y dentro de Corrientes. El mensaje también se contabilizará como un fallo y se incorporará a sus métricas de Fallos de WhatsApp en todos los informes del panel Braze. No se le cobrará por estos mensajes.
+Si no se entrega un mensaje debido al experimento, aparecerá un código de error específico en el Registro de actividades y en Currents. El mensaje también se contará como un fallo y se incorporará a tus métricas de Fallos de WhatsApp en todos los informes del panel Braze. No se te cobrará por estos mensajes.
 
-Este código de error 130472 dirá "El número del usuario es parte de un experimento". Consulta [la documentación de Meta](https://developers.facebook.com/docs/whatsapp/cloud-api/support/error-codes?content_id=8SJRLBEjYGvXO9k) para obtener más información sobre los códigos de error de la API de WhatsApp Cloud.
+Este código de error 130472 dirá "El número del usuario forma parte de un experimento". Consulta [la documentación de Meta](https://developers.facebook.com/docs/whatsapp/cloud-api/support/error-codes?content_id=8SJRLBEjYGvXO9k) para obtener más información sobre los códigos de error de la API de WhatsApp Cloud.
 
 ### ¿Puedo excluirme del experimento de Meta?
 
-No, Meta no permite la exclusión voluntaria de ningún experimento. Todos los proveedores y usuarios de la API de WhatsApp Business están sujetos a este Meta experimento.
+No, Meta no permite ninguna adhesión voluntaria al experimento. Todos los proveedores y usuarios de la API de WhatsApp Business están sujetos a este Meta experimento.
 
 ### ¿Puedo intentar reenviar una plantilla más tarde?
 
-No hay una hora fija para este experimento. De este modo, el consumidor puede seguir sujeto del experimento.
+No hay un tiempo fijo para este experimento. Como tal, un consumidor puede seguir estando sujeto al experimento.
 
-### ¿Qué puedo hacer si mis mensajes de marketing no llegan debido al experimento de Meta?
+### ¿Qué puedo hacer si mis mensajes de marketing no se entregan debido al experimento de Meta?
 
-Recomendamos utilizar otros canales Braze, como el correo electrónico, los SMS, las notificaciones push o los mensajes in-app para enviar un mensaje con contenido similar a los usuarios a los que va dirigido.
+Te recomendamos que utilices otros canales de Braze, como el correo electrónico, los SMS, las notificaciones push o los mensajes dentro de la aplicación para enviar un mensaje con un contenido similar a tus usuarios previstos.

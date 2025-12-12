@@ -18,7 +18,7 @@ search_rank: 3.9
 
 ## Step 1: Choose where to build your message
 
-Not sure whether your message should be sent with a campaign or a Canvas? Campaigns are better for single, simple messaging campaigns (such as informing users about a new product with a single message), while Canvases are better for multi-step user journeys (such as sending tailored product suggestions based on user behavior over time).
+Not sure whether your message should be sent with a campaign or a Canvas? Campaigns are better for single, targeted messaging campaigns (such as informing users about a new product with a single message), while Canvases are better for multi-step user journeys (such as sending tailored product suggestions based on user behavior over time).
 
 {% tabs %}
 {% tab Campaign %}
@@ -57,7 +57,7 @@ To learn more about the expected behavior and look of each type, refer to [Creat
 
 | Message Type | Example | Description |
 |---|---|---|
-|[Classic]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#classic)| ![A Classic Content Card with a small icon and text to encourage booking a workout class.]({% image_buster/assets/img_archive/cc_steppington_classic.png %}) |The Classic Card has a simple layout with a bolded title, message text, and an optional image that sits to the left of the title and text. It's best to use a square image or icon with the Classic Card. |
+|[Classic]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#classic)| ![A Classic Content Card with a small icon and text to encourage booking a workout class.]({% image_buster/assets/img_archive/cc_steppington_classic.png %}) |The Classic Card has a straightforward layout with a bolded title, message text, and an optional image that sits to the left of the title and text. It's best to use a square image or icon with the Classic Card. |
 |[Captioned Image]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#captioned-image)| ![A Captioned Content Card with a image of a weightlifter and text to encourage booking a workout class.]({% image_buster/assets/img_archive/cc_steppington_captioned.png %}) | The Captioned Image Card showcases your content with copy and an attention-grabbing image. |
 |[Image Only]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#banner)| ![An Image Only Content Card with text only.]({% image_buster/assets/img_archive/cc_steppington_banner.png %}) | The Image Only Card commands attention with space for images, GIFs, and other creative non-text content. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
@@ -160,7 +160,7 @@ If you haven't done so already, complete the remaining sections of your Canvas c
 
 ## Step 6: Review and deploy
 
-After you've finished building the last of your campaign or Canvas, review its details, [test it]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/testing/), then send it when you're ready.
+After you've finished building the last of your campaign or Canvas, review its details, [test it]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/), then send it when you're ready.
 
 {% alert warning %}
 After a Content Card is launched, it can't be edited. It can only be stopped from sending to new users and removed from users' feeds. Refer to [Updating sent cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/#updating-launched-cards) to understand how you can approach this scenario.
@@ -193,11 +193,7 @@ If you want to remove the Content Card from your users' feeds, select **Remove c
 ![Dialog for confirming Content Card deactivation]({% image_buster /assets/img/cc_remove.png %}){: style="max-width:75%" }
 
 {% alert tip %}
-Do you want your Content Cards to seem like they're lasting longer than the 30-day max? One way to accomplish this is to do the following:<br><br>
-
-1. Set the duration of the Content Card for 30 days.
-2. Set the campaign re-eligibility to 30 days.
-3. Set the campaign to trigger on "Session Start."
+Do you want your content to last longer than 30 days? Try [Banners]({{site.baseurl}}/user_guide/message_building_by_channel/banners).
 {% endalert %}
 
 ### Card removal events {#action-based-card-removal}

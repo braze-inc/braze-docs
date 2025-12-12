@@ -4,6 +4,8 @@ article_title: WhatsApp サブスクリプショングループ
 page_order: 1
 description: "この記事では、WhatsAppのサブスクリプショングループの概要、提供されるサブスクリプションの状態、サブスクリプショングループの設定方法について説明する。"
 page_type: reference
+alias: /whatsapp_subscription_groups/
+alias: /whatsapp_subscription_groups/
 channel:
   - WhatsApp
  
@@ -47,7 +49,8 @@ WhatsApp のユーザーには、`subscribed` と `unsubscribed` の 2 つの購
 
 - 次の例のように、REST API を介して購読ステータスを更新する [Braze-to-Braze Webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/braze_to_braze_webhooks/#things-to-know) を作成します。
 
-![POST メソッドを使用したメッセージが表示されている Webhook 作成画面。]({% image_buster /assets/img/whatsapp/whatsapp118.png %}){: style="max-width:90%;"}
+Webhook作成画面にPOSTメソッドでメッセージを送る。]({% image_buster /assets/img/whatsapp/whatsapp118.png %}){: style="max-width:90%;"}
+Webhook作成画面にPOSTメソッドでメッセージを送る。]({% image_buster /assets/img/whatsapp/whatsapp118.png %}){: style="max-width:90%;"}
 
 競合を回避するため、Webhook の後のフォローアップメッセージングは、最初のキャンバスの結果 (ユーザーがキャンバスのバリエーションに入って、現在 WhatsApp の購読グループに属している、など) によってトリガーされる 2 番目のキャンバスに含める必要があります。
 
@@ -75,7 +78,7 @@ WhatsApp のユーザーには、`subscribed` と `unsubscribed` の 2 つの購
 	}
 	```
 
-![「高度なJSONエディター」ステップが選択されているユーザー更新ステップ。]({% image_buster /assets/img/whatsapp/whatsapp_json_editor.png %}){: style="max-width:90%;"}
+![ユーザー更新ステップにアドバンスドJSONエディターステップを追加した。]({% image_buster /assets/img/whatsapp/whatsapp_json_editor.png %}){: style="max-width:90%;"}
 
 {% alert note %}
 ユーザーの購読ステータスの更新には最大 60 秒かかることがあります。

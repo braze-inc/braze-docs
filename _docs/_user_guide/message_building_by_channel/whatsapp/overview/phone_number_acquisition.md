@@ -62,7 +62,7 @@ If you follow the next steps in Twilio's instructions, you'll connect your phone
 
 4. Select the available offer, then proceed through the rest of the steps and wait for your request to be processed. You can check the status by going to **Numbers** > **My Request**. <br><br>![An offer with information including fees and coverage.]({% image_buster /assets/img/whatsapp/infoblip_offer.png %}){: style="max-width:70%;"}<br><br>
 
-5. Depending on your selected country, wait for the Infobip team to reach out for registration details (such as for 10DLC in the US).<br><br>
+5. Depending on your selected country, wait for the Infobip team to contact you for registration details (such as for 10DLC in the US).<br><br>
 
 6. When your phone number is ready in Infobip, go to your Braze dashboard > **Technology Partners** > **WhatsApp** and select **Begin integration** or **Add WhatsApp Business Account**, whichever shows up, to trigger the [embedded sign up workflow]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/embedded_signup/).<br><br> In the **Add a phone number for WhatsApp** step, select **Text message** for how you'd like to verify your phone number.<br><br>![Section with the options to verify your phone number through text message or a phone call.]({% image_buster /assets/img/whatsapp/infoblip_verify.png %})<br><br>
 

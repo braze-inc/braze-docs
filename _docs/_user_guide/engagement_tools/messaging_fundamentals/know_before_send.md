@@ -20,7 +20,7 @@ While we provide an extensive list of resources to reference pre-send, each chan
 ## General
 
 #### Things to check
-- [**API rate limits**](https://braze.com/resources/articles/whats-rate-limiting): Review the Braze API [rate limits]({{site.baseurl}}/api/api_limits/) for your workspaces to avoid running into errors. If you are looking to increase your rate limits (and are already batching requests), reach out to your customer success manager. Keep in mind that this process requires lead-time, so plan accordingly.
+- [**API rate limits**](https://braze.com/resources/articles/whats-rate-limiting): Review the Braze API [rate limits]({{site.baseurl}}/api/api_limits/) for your workspaces to avoid running into errors. If you are looking to increase your rate limits (and are already batching requests), contact your customer success manager. Keep in mind that this process requires lead-time, so plan accordingly.
 - [**Necessary frequency capping overrides**]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping): There are some campaigns, like transactional messages, that you will want to always reach the user, even if you have already reached their frequency cap (for example, a delivery notification). If you want a particular campaign to override frequency capping rules, you can set this up in the Braze dashboard when scheduling that campaign's delivery by toggling frequency capping off.
 
 #### Things to know
@@ -46,7 +46,7 @@ For further assistance with Canvas and campaign troubleshooting, be sure to cont
 - **Sending volume factors**: Some factors that determine the capable sending volumes for an IP include:
   - Mailboxes: Large email providers can likely handle millions per day from a single IP, whereas a smaller regional mailbox provider or one with a smaller infrastructure might not be able to handle that amount.
   - Sender reputation: You may be able to send a larger volume per day from a single IP if the sender is ramped up to that volume and if their sender reputation is strong enough at each mailbox or domain they are sending to.
-- **Best practices**: Review Braze [email best practices]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices) and reach out to your Braze Account Team if you would like to learn more about deliverability services.
+- **Best practices**: Review Braze [email best practices]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices) and contact your Braze Account Team if you would like to learn more about deliverability services.
 
 ## Push
 
@@ -83,13 +83,13 @@ For further assistance with Canvas and campaign troubleshooting, be sure to cont
 - **Priority:** If you’re launching multiple Banners, you can manually set the priority for how each banner is displayed.
 
 #### Things to know
-- **Liquid personalization:** Liquid personalization refreshes at every session start.
+- **Liquid personalization:** Liquid personalization refreshes every refresh request.
 - **Placement and Banner ratio:** Each Banner placement can be used in up to 10 campaigns in a workspace.  
 - **Clicks and impressions:** Clicks and impressions for Banners are tracked automatically with the SDK.
 - **Limitations:**  Currently, the following features aren't supported: Canvas integration, API-triggered and action-based campaigns, Connected Content, promotion codes, user-controlled dismissals, and `catalog_items` using the [`:rerender` tag]({{site.baseurl}}/user_guide/data/activation/catalogs/using_catalogs/#using-liquid).
 - **Testing:** To display the test Banner, the device you’re using must be able to receive foreground push notifications.
 - **Custom HTML:** Leverage [JS bridge]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/#javascript-bridge) to log clicks when using custom HTML to define click actions, like links and buttons. Click actions are only logged automatically when using the pre-built components in the drag-and-drop editor.
-- **Requesting Placements:** Up to 10 placements can be returned to the SDK once per session. Each placement will include the highest priority Banner a user is eligible for.
+- **Requesting Placements:** Up to 10 placements can be returned to the SDK in a single refresh request. Each placement will include the highest priority Banner a user is eligible for.
 
 ## Content Cards
 

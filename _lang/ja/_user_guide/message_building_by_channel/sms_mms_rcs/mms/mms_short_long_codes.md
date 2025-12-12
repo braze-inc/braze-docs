@@ -1,5 +1,5 @@
 ---
-nav_title: "MMS ショートコードとロングコード"
+nav_title: "MMSの短・長コード"
 article_title: MMS ショートコードとロングコード
 page_order: 1
 description: "このリファレンス記事では、SMS と MMS のショートコードとロングコードの違いについて説明します。"

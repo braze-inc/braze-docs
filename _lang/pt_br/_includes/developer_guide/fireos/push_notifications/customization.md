@@ -2,7 +2,7 @@
 
 ## Configurações
 
-Há muitas configurações avançadas disponíveis para as notificações por push do FireOS enviadas pelo dashboard do Braze. Este artigo descreverá esses recursos e como usá-los com sucesso.
+Existem muitas configurações avançadas disponíveis para notificações por push do FireOS enviadas através do dashboard da Braze. Este artigo descreverá esses recursos e como usá-los com sucesso.
 
 ![]({% image_buster /assets/img_archive/android_advanced_settings.png %})
 
@@ -12,15 +12,15 @@ O campo **TTL** permite que você defina um tempo personalizado para armazenar m
 
 ### Texto resumido {#summary-text}
 
-O texto de resumo permite que você defina texto adicional na visualização expandida da notificação. Também serve como uma legenda para notificações com imagens.
+O texto de resumo permite que você defina texto adicional na visualização expandida da notificação. Ele também serve como legenda para notificações com imagens.
 
-![Uma mensagem do Android com o título "Saudações do Appboy!", a mensagem "Este é o corpo da mensagem!" Você pode até adicionar emojis." e texto de resumo "Este é o texto de resumo."]({% image_buster /assets/img_archive/summary_text.png %}){: style="max-width:65%;"}
+![Uma mensagem Android com o título "Este é o título da notificação." e texto resumo "Este é o texto resumo da notificação."]({% image_buster /assets/img/android/push/collapsed-android-notification.png %}){: style="max-width:65%;"}
 
-O texto do resumo será exibido sob o corpo da mensagem na exibição expandida.
+O texto do resumo será exibido sob o corpo da mensagem na exibição expandida. 
+
+![Uma mensagem Android com o título "Este é o título da notificação." e texto resumo "Este é o texto resumo da notificação."]({% image_buster /assets/img/android/push/expanded-android-notification.png %}){: style="max-width:65%;"}
 
 Para notificações por push que incluem imagens, o texto da mensagem será mostrado na exibição recolhida, enquanto o texto do resumo será exibido como a legenda da imagem quando a notificação for expandida. 
-
-![Uma mensagem do Android com o título "Appboy!", a mensagem "Este é o corpo da mensagem..." e o texto de resumo "E este é o texto de resumo."]({% image_buster /assets/img_archive/messagesummary.gif %}){: style="max-width:65%;"}
 
 ### URIs personalizados {#custom-uri}
 
@@ -36,11 +36,11 @@ A configuração Prioridade de exibição de notificação não é mais usada em
 
 O nível de prioridade de uma notificação por push afeta como sua notificação é exibida na bandeja de notificações em relação a outras notificações. Também pode afetar a velocidade e a maneira de entrega, pois mensagens normais e de baixa prioridade podem ser enviadas com uma latência ligeiramente maior ou agrupadas para preservar a vida útil da bateria, enquanto mensagens de alta prioridade são sempre enviadas imediatamente.
 
-No Android O, a prioridade de notificação se tornou uma propriedade dos canais de notificação. Você precisará trabalhar com seu desenvolvedor para definir a prioridade de um canal durante sua configuração e, em seguida, usar o dashboard para selecionar o canal adequado ao enviar seus sons de notificação. Para dispositivos que executam versões do Android anteriores ao O, é possível especificar um nível de prioridade para as notificações do FireOS por meio do dashboard do Braze e da API de envio de mensagens. 
+No Android O, a prioridade de notificação se tornou uma propriedade dos canais de notificação. Você precisará trabalhar com seu desenvolvedor para definir a prioridade de um canal durante sua configuração e, em seguida, usar o dashboard para selecionar o canal adequado ao enviar seus sons de notificação. Para dispositivos que executam versões do Android anteriores ao O, especificar um nível de prioridade para notificações do FireOS é possível através do dashboard da Braze e da API de envio de mensagens. 
 
-Para enviar mensagens para toda a sua base de usuários com uma prioridade específica, recomendamos especificar indiretamente a prioridade por meio da [configuração do canal de envio de](https://developer.android.com/training/notify-user/channels#importance) mensagens (para direcionar dispositivos O+) *e* enviar a prioridade individual a partir do dashboard (para direcionar dispositivos <O).
+Para enviar mensagens para toda a sua base de usuários com uma prioridade específica, recomendamos que você especifique indiretamente a prioridade através da [configuração do canal de notificação](https://developer.android.com/training/notify-user/channels#importance) (para direcionar dispositivos O+) *e* envie a prioridade individual a partir do dashboard (para direcionar dispositivos <O).
 
-Os níveis de prioridade que você pode definir nas notificações por push do Fire OS são
+Os níveis de prioridade que você pode definir nas notificações por push do Fire OS são:
 
 | Prioridade | Descrição/Utilização Pretendida | `priority` valor (para mensagens de API) |
 |----------|--------------------------|-------------------------------------|
@@ -51,7 +51,7 @@ Os níveis de prioridade que você pode definir nas notificações por push do F
 | Mín.      | Informações contextuais ou de fundo. | `-2` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-Para saber mais, consulte a documentação [de notificação](http://developer.android.com/design/patterns/notifications.html) do [Android](http://developer.android.com/design/patterns/notifications.html) do Google.
+Para saber mais, consulte a documentação de [notificação do Android](http://developer.android.com/design/patterns/notifications.html) do Google.
 
 ### Sons {#sounds}
 
@@ -63,4 +63,4 @@ Para dispositivos executando versões do Android anteriores ao O, o Braze permit
 
 Digite o URI completo do recurso de som (por exemplo, `android.resource://com.mycompany.myapp/raw/mysound`) no prompt do dashboard.
 
-Para enviar mensagens para toda a sua base de usuários com um som específico, recomendamos que especifique indiretamente o som por meio da [configuração do canal de envio de mensagens](https://developer.android.com/training/notify-user/channels) (para direcionar dispositivos O+) *e* envie o som individual a partir do dashboard (para direcionar dispositivos <O).
+Para enviar mensagens para toda a sua base de usuários com um som específico, recomendamos que você especifique indiretamente o som através da [configuração do canal de notificação](https://developer.android.com/training/notify-user/channels) (para direcionar dispositivos O+) *e* envie o som individual a partir do dashboard (para direcionar dispositivos <O).

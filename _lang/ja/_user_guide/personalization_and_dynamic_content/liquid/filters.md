@@ -24,15 +24,15 @@ BrazeはShopifyのすべてのリキッドフィルターをサポートして�
 
 {% endraw %}
 
-{% tabs ローカル %}
-{% tab インプット %}
+{% tabs local %}
+{% tab Input %}
 {% raw %}
 ```liquid
 {{"Big Sale" | upcase}}
 ```
 {% endraw %}
 {% endtab %}
-{% tab 出力 %}
+{% tab Output %}
 {% raw %}
 ```liquid
 BIG SALE
@@ -48,14 +48,14 @@ BIG SALE
 1つの出力に複数のフィルターを使うことができる。左から右に適用される。
 
 {% tabs local %}
-{% tab インプット %}
+{% tab Input %}
 {% raw %}
 ```liquid
  {{ "Big Sale" | upcase | remove: "BIG" }}
 ```
 {% endraw %}
 {% endtab %}
-{% tab 出力 %}
+{% tab Output %}
 {% raw %}
 ```liquid
 SALE
@@ -70,19 +70,19 @@ SALE
 
 | フィルター               | 定義                                                                                                         | サポート |
 | :------------------- | :----------------------------------------------------------------------------------------------------------------- | :-------- |
-| [join](https://shopify.dev/api/liquid/filters/array-filters#join)          | 配列の要素を、パラメータとして渡された文字で結合する。結果は単一の文字列である。          | はい   |
-| [first](https://shopify.dev/api/liquid/filters/array-filters#first)         | 配列の最初の要素を返す。カスタム属性配列では、これは最も古く追加された値である。                | はい   |
-| [last](https://shopify.dev/api/liquid/filters/array-filters#last)          | 配列の最後の要素を返す。カスタム属性配列では、これは最近追加された値である。          | はい   |
-| [compact](https://shopify.dev/api/liquid/filters#compact)       | 配列から `nil` の項目を削除する。                                                                             | はい   |
-| [concat](https://shopify.dev/api/liquid/filters/array-filters#concat)        | 配列を別の配列と結合する。                                                                              | はい   |
-| [index](https://shopify.dev/api/liquid/filters/array-filters#index)         | 配列の指定されたインデックスの位置にある項目を返す。配列の最初の項目は`[0]` で参照される。 | はい   |
-| [map](https://shopify.dev/api/liquid/filters/array-filters#map)           | 配列要素の属性をパラメーターとして受け取り、各配列要素の値から配列を作成する。        | はい   |
-| [reverse](https://shopify.dev/api/liquid/filters/array-filters#reverse)       | 配列の項目の順序を逆にする。                                                                       | はい   |
-| [size](https://shopify.dev/api/liquid/filters/array-filters#size)          | 文字列のサイズ（文字数）または配列のサイズ（要素数）を返す。                      | はい   |
-| [sort](https://shopify.dev/api/liquid/filters/array-filters#sort)         | 配列の要素を、その配列の要素の指定された属性でソートする。                                    | はい   |
-| [sort_natural](https://shopify.dev/api/liquid/filters#sort_natural) | 大文字小文字を区別せずにアルファベット順に配列の項目をソートする。                                                | はい   |
-| [uniq](https://shopify.dev/api/liquid/filters/array-filters#uniq)         | 配列内の要素の重複したインスタンスを削除する。                                                           | はい   |
-| [where](https://shopify.dev/api/liquid/filters#where)        | 特定のプロパティ値を持つ項目のみを含むように配列をフィルタリングする。                                             | はい   |
+| [join](https://shopify.dev/docs/api/liquid/filters/join)          | 配列の要素を、パラメータとして渡された文字で結合する。結果は単一の文字列である。          | はい   |
+| [first](https://shopify.dev/docs/api/liquid/filters/first)         | 配列の最初の要素を返す。カスタム属性配列では、これは最も古く追加された値である。                | はい   |
+| [last](https://shopify.dev/docs/api/liquid/filters/last)          | 配列の最後の要素を返す。カスタム属性配列では、これは最近追加された値である。          | はい   |
+| [compact](https://shopify.dev/api/liquid/filters/compact)       | 配列から `nil` の項目を削除する。                                                                             | はい   |
+| [concat](https://shopify.dev/api/liquid/filters/concat)        | 配列を別の配列と結合する。                                                                              | はい   |
+| [find_index](https://shopify.dev/docs/api/liquid/filters/find_index)         | 配列の指定されたインデックスの位置にある項目を返す。配列の最初の項目は`[0]` で参照される。 | いいえ   |
+| [map](https://shopify.dev/api/liquid/filters/map)           | 配列要素の属性をパラメーターとして受け取り、各配列要素の値から配列を作成する。        | はい   |
+| [reverse](https://shopify.dev/api/liquid/filters/reverse)       | 配列の項目の順序を逆にする。                                                                       | はい   |
+| [size](https://shopify.dev/api/liquid/filters/size)          | 文字列のサイズ（文字数）または配列のサイズ（要素数）を返す。                      | はい   |
+| [sort](https://shopify.dev/api/liquid/filters/sort)         | 配列の要素を、その配列の要素の指定された属性でソートする。                                    | はい   |
+| [sort_natural](https://shopify.dev/api/liquid/sort_natural) | 大文字小文字を区別せずにアルファベット順に配列の項目をソートする。                                                | はい   |
+| [uniq](https://shopify.dev/api/liquid/filters/uniq)         | 配列内の要素の重複したインスタンスを削除する。                                                           | はい   |
+| [where](https://shopify.dev/api/liquid/where)        | 特定のプロパティ値を持つ項目のみを含むように配列をフィルタリングする。                                             | はい   |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## カラーフィルター
@@ -99,17 +99,17 @@ SALE
 
 | フィルター  | 定義      | サポート |
 | :------ |:----------------| :-------- |
-| [abs](https://shopify.dev/api/liquid/filters/math-filters#abs)        | 数値の絶対値を返す。     | はい   |
-| [at_most](https://shopify.dev/api/liquid/filters/math-filters#at_most)    | 数値を最大値に制限する。   | はい   |
-| [at_least](https://shopify.dev/api/liquid/filters/math-filters#at_least)   | 数値を最小値に制限する。   | はい   |
-| [ceil](https://shopify.dev/api/liquid/filters/math-filters#ceil)       | 出力を最も近い整数に丸める。  | はい   |
-| [divided_by](https://shopify.dev/api/liquid/filters/math-filters#divided_by) | 出力を数値で割る。出力は最も近い整数に切り捨てられる。四捨五入を防ぐために、以下のヒントをチェックしよう。 | はい   |
-| [floor](https://shopify.dev/api/liquid/filters/math-filters#floor)      | 出力を最も近い整数に丸める。        | はい   |
-| [minus](https://shopify.dev/api/liquid/filters/math-filters#minus)      | 出力から数値を引く。          | はい   |
-| [plus](https://shopify.dev/api/liquid/filters/math-filters#plus)       | 出力に数値を追加する。     | はい   |
-| [round](https://shopify.dev/api/liquid/filters/math-filters#round)      | 出力を最も近い整数または指定した小数点以下の桁数に丸める。  | はい   |
-| [回](https://shopify.dev/api/liquid/filters/math-filters#times)     | 出力に数値を掛ける。       | はい   |
-| [modulo](https://shopify.dev/api/liquid/filters/math-filters#modulo)    | 出力を数値で割り、余りを返す。   | はい   |
+| [abs](https://shopify.dev/api/liquid/filters/abs)        | 数値の絶対値を返す。     | はい   |
+| [at_most](https://shopify.dev/api/liquid/filters/at_most)    | 数値を最大値に制限する。   | はい   |
+| [at_least](https://shopify.dev/api/liquid/filters/at_least)   | 数値を最小値に制限する。   | はい   |
+| [ceil](https://shopify.dev/api/liquid/filters/ceil)       | 出力を最も近い整数に丸める。  | はい   |
+| [divided_by](https://shopify.dev/api/liquid/filters/divided_by) | 出力を数値で割る。出力は最も近い整数に切り捨てられる。四捨五入を防ぐために、以下のヒントをチェックしよう。 | はい   |
+| [floor](https://shopify.dev/api/liquid/filters/floor)      | 出力を最も近い整数に丸める。        | はい   |
+| [minus](https://shopify.dev/api/liquid/filters/minus)      | 出力から数値を引く。          | はい   |
+| [plus](https://shopify.dev/api/liquid/filters/plus)       | 出力に数値を追加する。     | はい   |
+| [round](https://shopify.dev/api/liquid/filters/round)      | 出力を最も近い整数または指定した小数点以下の桁数に丸める。  | はい   |
+| [回](https://shopify.dev/api/liquid/filters/times)     | 出力に数値を掛ける。       | はい   |
+| [modulo](https://shopify.dev/api/liquid/filters/modulo)    | 出力を数値で割り、余りを返す。   | はい   |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert tip %}
@@ -147,8 +147,8 @@ Liquid の 1 行で複数のカスタム属性を参照することはできな�
 {: start="2"}
 2\.`plus` フィルターを使用して、各ユーザーのギフトカード残高と、`{{balance}}` オブジェクトで示される報酬残高を加算します。
 {% endraw %}
-{% tabs ローカル %}
-{% tab インプット %}
+{% tabs local %}
+{% tab Input %}
 {% raw %}
 ```liquid
 {% assign balance = {{custom_attribute.${current_rewards_balance}}} %}
@@ -156,7 +156,7 @@ You have ${{custom_attribute.${giftcard_balance} | plus: {{balance}}}} to spend!
 ```
 {% endraw %}
 {% endtab %}
-{% tab 出力 %}
+{% tab Output %}
 {% raw %}
 ```liquid
 You have $35 to spend!
@@ -171,9 +171,9 @@ You have $35 to spend!
 
 | フィルター         | 定義          | サポート |
 | :--------------- | :--------------- | :-------- |
-| [money](https://shopify.dev/api/liquid/filters/money-filters#money)      | すべての数値について、確実に小数が正しく配置され、末尾にあるゼロが欠落しないように数値をフォーマットする。   | はい   |
-| [money_with_currency](https://shopify.dev/api/liquid/filters/money-filters#money_with_currency)    | 数字を通貨記号で表示する。     | いいえ    |
-| [money_without_currency](https://shopify.dev/api/liquid/filters/money-filters#money_without_currency)     | 通貨記号を除いた数値をフォーマットする。      | いいえ    |
+| [money](https://shopify.dev/api/liquid/filters/money)      | すべての数値について、確実に小数が正しく配置され、末尾にあるゼロが欠落しないように数値をフォーマットする。   | はい   |
+| [money_with_currency](https://shopify.dev/api/liquid/filters/money_with_currency)    | 数字を通貨記号で表示する。     | いいえ    |
+| [money_without_currency](https://shopify.dev/api/liquid/filters/money_without_currency)     | 通貨記号を除いた数値をフォーマットする。      | いいえ    |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert important %}
@@ -202,21 +202,21 @@ ${{custom_attribute.${account_balance} | money}}
 
 | マネーフィルター付き                       | マネーフィルターなし                    |
 | :------------------------------------------ | :------------------------------------------ |
-| ![マネーフィルタあり]({% image_buster /assets/img/with_money_filter.png %})                     | ![マネーフィルタなし]({% image_buster /assets/img/without_money_filter.png %})                  |
+| マネーフィルター付き]({% image_buster /assets/img/with_money_filter.png %})                     | お金フィルターなし]({% image_buster /assets/img/without_money_filter.png %})                  |
 | ここで、`account_balance` は`17.8` で入力される。 | ここで、`account_balance` は`17.8` で入力される。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Brazeの`money` フィルターがShopifyと異なるのは、プリセット設定に従って自動的に小数点を適用しない点である。例えば、`rewards_redeemed` に`145` という値が含まれている場合を考えてみよう：
 
 {% tabs local %}
-{% tab インプット %}
+{% tab Input %}
 {% raw %}
 ```liquid
 ${{event_properties.${rewards_redeemed} | money }}
 ```
 {% endraw %}
 {% endtab %}
-{% tab 出力 %}
+{% tab Output %}
 {% raw %}
 ```liquid
 $145.00
@@ -225,17 +225,17 @@ $145.00
 {% endtab %}
 {% endtabs %}
 
-Shopifyの[マネー](https://shopify.dev/api/liquid/filters/money-filters#money)フィルターによると、これは`$1.45` の出力となるはずだが、Brazeでは`$145.00` の出力となる。回避策として、マネーフィルターを適用する前に、`divided_by` フィルターを使用して数値を小数に変換することができます。
+Shopifyの[マネー](https://shopify.dev/api/liquid/filters/money)フィルターによると、これは`$1.45` の出力となるはずだが、Brazeでは`$145.00` の出力となる。回避策として、マネーフィルターを適用する前に、`divided_by` フィルターを使用して数値を小数に変換することができます。
 
 {% tabs local %}
-{% tab インプット %}
+{% tab Input %}
 {% raw %}
 ```liquid
 ${{event_properties.${rewards_redeemed} | divided_by: 100.00 | money }}
 ```
 {% endraw %}
 {% endtab %}
-{% tab 出力 %}
+{% tab Output %}
 {% raw %}
 ```liquid
 $1.45
@@ -254,34 +254,34 @@ Liquidでは、ストレートクォートとカーリークォートは異な�
 
 | フィルター          | 説明     | サポート |
 | :--------------- | ------------- | --------- |
-| [append](https://shopify.dev/api/liquid/filters/string-filters#append)     | 文字列に文字を追加する。           | はい   |
-| [camelcase](https://shopify.dev/api/liquid/filters/string-filters#camelcase)     | 文字列をキャメルケースに変換する。             | いいえ    |
-| [capitalize](https://shopify.dev/api/liquid/filters/string-filters#capitalize)     | 文字列の最初の単語を大文字にし、残りの文字を小文字にする。         | はい   |
-| [downcase](https://shopify.dev/api/liquid/filters/string-filters#downcase)      | 文字列を小文字に変換する。         | はい   |
-| [escape](https://shopify.dev/api/liquid/filters/string-filters#escape)    | 文字列をエスケープする。             | はい   |
-| [handle / handleize](https://shopify.dev/api/liquid/filters/string-filters#handle-handleize)        | 文字列をハンドルにフォーマットする。        | いいえ    |
-| [MD5](https://shopify.dev/api/liquid/filters/string-filters#md5)    | 文字列をMD5ハッシュに変換する。詳細については、[エンコーディングフィルタ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/#encoding-filters)を参照してください。   | はい   |
-| [sha1](https://shopify.dev/api/liquid/filters/string-filters#sha1)    | 文字列をSHA-1ハッシュに変換する。詳細については、[エンコーディングフィルタ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/#encoding-filters)を参照してください。  | はい   |
-| hmac_sha1_hex<br>(previously [hmac_sha_1](https://shopify.dev/api/liquid/filters/string-filters#hmac_sha1)) | ハッシュメッセージ認証コード（HMAC）を使って文字列をSHA-1ハッシュに変換する。メッセージの秘密鍵をフィルターにパラメータとして渡す。詳細については、[エンコーディングフィルタ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/#encoding-filters)を参照してください。 | はい   |
-| [hmac_sha256](https://shopify.dev/api/liquid/filters/string-filters#hmac_sha256)    | ハッシュメッセージ認証コード（HMAC）を使用して、文字列をSHA-256ハッシュに変換する。メッセージの秘密鍵をフィルターにパラメータとして渡す。       | はい   |
+| [append](https://shopify.dev/api/liquid/filters/append)     | 文字列に文字を追加する。           | はい   |
+| [キャメライズ](https://shopify.dev/docs/api/liquid/filters/camelize)     | 文字列をキャメルケースに変換する。             | いいえ    |
+| [capitalize](https://shopify.dev/api/liquid/filters/capitalize)     | 文字列の最初の単語を大文字にし、残りの文字を小文字にする。         | はい   |
+| [downcase](https://shopify.dev/api/liquid/filters/downcase)      | 文字列を小文字に変換する。         | はい   |
+| [escape](https://shopify.dev/api/liquid/filters/escape)    | 文字列をエスケープする。             | はい   |
+| [ハンドルを握る](https://shopify.dev/api/liquid/filters/handleize)        | 文字列をハンドルにフォーマットする。        | いいえ    |
+| [MD5](https://shopify.dev/api/liquid/filters/md5)    | 文字列をMD5ハッシュに変換する。詳細については、[エンコーディングフィルタ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/#encoding-filters)を参照してください。   | はい   |
+| [sha1](https://shopify.dev/api/liquid/filters/sha1)    | 文字列をSHA-1ハッシュに変換する。詳細については、[エンコーディングフィルタ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/#encoding-filters)を参照してください。  | はい   |
+| hmac_sha1_hex<br>(以前は [hmac_sha_1](https://shopify.dev/api/liquid/filters/string-filters#hmac_sha1)) | ハッシュメッセージ認証コード（HMAC）を使って文字列をSHA-1ハッシュに変換する。メッセージの秘密鍵をフィルターにパラメータとして渡す。詳細については、[エンコーディングフィルタ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/#encoding-filters)を参照してください。 | はい   |
+| [hmac_sha256](https://shopify.dev/api/liquid/filters/hmac_sha256)    | ハッシュメッセージ認証コード（HMAC）を使用して、文字列をSHA-256ハッシュに変換する。メッセージの秘密鍵をフィルターにパラメータとして渡す。       | はい   |
 | hmac_sha512 | ハッシュメッセージ認証コード（HMAC）を使って文字列をSHA-512ハッシュに変換する。メッセージの秘密鍵をフィルターにパラメータとして渡す。 | はい  |
-| [newline_to_br](https://shopify.dev/api/liquid/filters/string-filters#newline_to_br)     | 文字列内の各改行の前に改行 HTML タグ `<br>` を挿入する。        | はい   |
-| [pluralize](https://shopify.dev/api/liquid/filters/string-filters#pluralize)   | 数字の値に基づいて、英語の文字列の単数形または複数形を出力する。      | いいえ    |
-| [prepend](https://shopify.dev/api/liquid/filters/string-filters#prepend)     | 文字列の先頭に文字 (複数可) を追加する。      | はい   |
-| [remove](https://shopify.dev/api/liquid/filters/string-filters#remove)      | 文字列から部分文字列をすべて削除する。       | はい   |
-| [remove_first](https://shopify.dev/api/liquid/filters/string-filters#remove_first)    | 文字列から、最初に出現した部分文字列のみを削除する。      | はい   |
-| [replace](https://shopify.dev/api/liquid/filters/string-filters#replace)        | 文字列のすべての出現回数を部分文字列で置き換える。   | はい   |
-| [replace_first](https://shopify.dev/api/liquid/filters/string-filters#replace_first)        | 文字列の最初に現れる部分を部分文字列で置き換える。      | はい   |
-| [slice](https://shopify.dev/api/liquid/filters/string-filters#slice)       | スライスフィルターは、指定されたインデックスから始まる部分文字列を返す。       | はい   |
-| [split](https://shopify.dev/api/liquid/filters/string-filters#split)  | スプリット・フィルターは部分文字列をパラメーターとして受け取る。部分文字列は、文字列を配列に分割する際の区切り文字として使われる。            | はい   |
-| [strip](https://shopify.dev/api/liquid/filters/string-filters#strip)   | 文字列の左右からタブ、スペース、改行（すべての空白）を取り除く。                                                                                                    | はい   |
-| [lstrip](https://shopify.dev/api/liquid/filters/string-filters#lstrip)     | 文字列の左側からタブ、スペース、改行（すべての空白）を取り除く。    | いいえ    |
-| [rstrip](https://shopify.dev/api/liquid/filters/string-filters#rstrip)             | 文字列の右側からタブ、スペース、改行（すべての空白）を取り除く。          | いいえ    |
-| [strip_html](https://shopify.dev/api/liquid/filters/string-filters#strip_html)         | 文字列からすべてのHTMLタグを取り除く。        | はい   |
-| [strip_newlines](https://shopify.dev/api/liquid/filters/string-filters#strip_newlines)  | 文字列から改行/改段を削除する。        | はい   |
-| [truncate](https://shopify.dev/api/liquid/filters/string-filters#truncate)    | 文字列を、最初のパラメータとして渡された文字数まで切り詰める。省略記号（...）は切り捨てられた文字列に付加され、文字数に含まれる。    | はい   |
-| [truncatewords](https://shopify.dev/api/liquid/filters/string-filters#truncatewords)   | 文字列を、最初のパラメータとして渡された語数まで切り詰める。切り詰められた文字列の末尾に省略記号 (...) を付加する。    | はい   |
-| [upcase](https://shopify.dev/api/liquid/filters/string-filters#upcase)   | 文字列を大文字に変換する。      | はい   |
+| [newline_to_br](https://shopify.dev/api/liquid/filters/newline_to_br)     | 文字列内の各改行の前に改行 HTML タグ `<br>` を挿入する。        | はい   |
+| [pluralize](https://shopify.dev/api/liquid/filters/pluralize)   | 数字の値に基づいて、英語の文字列の単数形または複数形を出力する。      | いいえ    |
+| [prepend](https://shopify.dev/api/liquid/filters/prepend)     | 文字列の先頭に文字 (複数可) を追加する。      | はい   |
+| [remove](https://shopify.dev/api/liquid/filters/remove)      | 文字列から部分文字列をすべて削除する。       | はい   |
+| [remove_first](https://shopify.dev/api/liquid/filters/remove_first)    | 文字列から、最初に出現した部分文字列のみを削除する。      | はい   |
+| [replace](https://shopify.dev/api/liquid/filters/replace)        | 文字列のすべての出現回数を部分文字列で置き換える。   | はい   |
+| [replace_first](https://shopify.dev/api/liquid/filters/replace_first)        | 文字列の最初に現れる部分を部分文字列で置き換える。      | はい   |
+| [slice](https://shopify.dev/api/liquid/filters/slice)       | スライスフィルターは、指定されたインデックスから始まる部分文字列を返す。       | はい   |
+| [split](https://shopify.dev/api/liquid/filters/split)  | スプリット・フィルターは部分文字列をパラメーターとして受け取る。部分文字列は、文字列を配列に分割する際の区切り文字として使われる。            | はい   |
+| [strip](https://shopify.dev/api/liquid/filters/strip)   | 文字列の左右からタブ、スペース、改行（すべての空白）を取り除く。                                                                                                    | はい   |
+| [lstrip](https://shopify.dev/api/liquid/filters/lstrip)     | 文字列の左側からタブ、スペース、改行（すべての空白）を取り除く。    | いいえ    |
+| [rstrip](https://shopify.dev/api/liquid/filters/rstrip)             | 文字列の右側からタブ、スペース、改行（すべての空白）を取り除く。          | いいえ    |
+| [strip_html](https://shopify.dev/api/liquid/filters/strip_html)         | 文字列からすべてのHTMLタグを取り除く。        | はい   |
+| [strip_newlines](https://shopify.dev/api/liquid/filters/strip_newlines)  | 文字列から改行/改段を削除する。        | はい   |
+| [truncate](https://shopify.dev/api/liquid/filters/truncate)    | 文字列を、最初のパラメータとして渡された文字数まで切り詰める。省略記号（...）は切り捨てられた文字列に付加され、文字数に含まれる。    | はい   |
+| [truncatewords](https://shopify.dev/api/liquid/filters/truncatewords)   | 文字列を、最初のパラメータとして渡された語数まで切り詰める。切り詰められた文字列の末尾に省略記号 (...) を付加する。    | はい   |
+| [upcase](https://shopify.dev/api/liquid/filters/upcase)   | 文字列を大文字に変換する。      | はい   |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## 追加フィルター
@@ -290,11 +290,10 @@ Liquidでは、ストレートクォートとカーリークォートは異な�
 
 | フィルター                | 説明                                                                                                                      | サポート |
 | --------------------- | -------------------------------------------------------------------------------------------------------------------------------- | :-------- |
-| [date](https://shopify.dev/api/liquid/filters/additional-filters#date)           | タイムスタンプを別の日付フォーマットに変換する。詳細については、[日付フィルター](#date-filter)を参照。         | はい   |
-| [default](https://shopify.dev/api/liquid/filters/additional-filters#default)        | 値が割り当てられていない変数にデフォルト値を設定する。文字列、配列、ハッシュで使用できる。      | はい   |
-| [format_address](https://shopify.dev/api/liquid/filters/additional-filters#format_address) | 住所のロケールに応じた順序で住所の要素をフォーマットして、住所を出力する。        | いいえ    |
-| [highlight](https://shopify.dev/api/liquid/filters/additional-filters#highlight)      | 送信された検索語に一致する場合、検索結果内の語を highlight クラスの HTML タグ `<strong>` で囲む。 | いいえ    |
-| `time_zone`             | 「[タイムゾーンフィルター](#time-zone-filter)」を参照してください。     | はい   |
+| [date](https://shopify.dev/api/liquid/filters/date)           | タイムスタンプを別の日付フォーマットに変換する。詳細については、[日付フィルター](#date-filter)を参照。         | はい   |
+| [default](https://shopify.dev/api/liquid/filters/default)        | 値が割り当てられていない変数にデフォルト値を設定する。文字列、配列、ハッシュで使用できる。      | はい   |
+| [format_address](https://shopify.dev/api/liquid/filters/format_address) | 住所のロケールに応じた順序で住所の要素をフォーマットして、住所を出力する。        | いいえ    |
+| [highlight](https://shopify.dev/api/liquid/filters/highlight)      | 送信された検索語に一致する場合、検索結果内の語を highlight クラスの HTML タグ `<strong>` で囲む。 | いいえ    |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 エンコーディングやURLフィルターなど、サポートされているフィルターについては、[アドバンス・フィルターの]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/)ページで確認できる。
@@ -306,14 +305,14 @@ Liquidでは、ストレートクォートとカーリークォートは異な�
 例えば、`date_attribute` の値がタイムスタンプ `2021-06-03 17:13:41 UTC` だとします。
 
 {% tabs local %}
-{% tab インプット %}
+{% tab Input %}
 {% raw %}
 ```liquid
 {{custom_attribute.${date_attribute} | date: '%b %d'}}
 ```
 {% endraw %}
 {% endtab %}
-{% tab 出力 %}
+{% tab Output %}
 {% raw %}
 ```liquid
 03 June
@@ -325,14 +324,14 @@ Liquidでは、ストレートクォートとカーリークォートは異な�
 `strftime` フォーマットオプションに加えて、Brazeは`%s` 日付フィルタを使ったタイムスタンプのUnix時間への変換もサポートしている。例えば、`date_attribute` を Unix 時間で取得するには、次のコードを記述します。
 
 {% tabs local %}
-{% tab インプット %}
+{% tab Input %}
 {% raw %}
 ```liquid
 {{custom_attribute.${date_attribute} | date: '%s' }}
 ```
 {% endraw %}
 {% endtab %}
-{% tab 出力 %}
+{% tab Output %}
 {% raw %}
 ```liquid
 1433351621
@@ -340,56 +339,3 @@ Liquidでは、ストレートクォートとカーリークォートは異な�
 {% endraw %}
 {% endtab %}
 {% endtabs %}
-
-### タイムゾーンフィルター {#time-zone-filter}
-
-{% raw %}
-Shopifyのドキュメントに記載されているフィルターに加えて、Brazeは`time_zone` フィルターもサポートしている。
-
-`time_zone` フィルターは、時刻、タイムゾーン、日付形式を受け取り、そのタイムゾーンの時刻を指定された日付形式で返します。例えば、`{{custom_attribute.$date_attribute}}}` の値が`2021-08-04 9:00:00 UTC` だとしよう：
-{% endraw %}
-
-{% tabs ローカル %}
-{% tab インプット %}
-{% raw %}
-```liquid
-{{custom_attribute.${date_attribute} | time_zone: 'America/Los_Angeles' | date: '%a %b %e %T' }}
-```
-{% endraw %}
-{% endtab %}
-{% tab 出力 %}
-{% raw %}
-```liquid
-Wed August 4 2:00:00
-```
-{% endraw %}
-{% endtab %}
-{% endtabs %}
-
-予約変数 `now` を使用して、操作用に現在の日付と時刻にアクセスすることもできます。
-
-{% tabs local %}
-{% tab インプット %}
-{% raw %}
-```liquid
-{{ 'now' | date: '%Y-%m-%d %H:%M:%S' }}
-```
-{% endraw %}
-{% endtab %}
-{% tab 出力 %}
-{% raw %}
-```liquid
-2021-08-04 18:13:13
-```
-{% endraw %}
-{% endtab %}
-{% endtabs %}
-
-
-
-
-
-
-
-
-

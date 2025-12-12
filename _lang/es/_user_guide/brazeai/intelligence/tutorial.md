@@ -22,16 +22,16 @@ Utilizaremos Intelligent Timing para analizar las interacciones pasadas de nuest
 
 Proporcionaremos una hora alternativa para los usuarios que no tengan suficientes interacciones pasadas para analizar: la hora más popular de uso de la aplicación entre todos los usuarios.
 
-![Configuración de entrega de Intelligent Timing para un paso de Mensaje.]({% image_buster /assets/img/intelligence_suite1.png %})
+\![Configuración de entrega de Intelligent Timing para un paso de Mensaje.]({% image_buster /assets/img/intelligence_suite1.png %})
 
-### Paso 2: Utiliza la Selección Inteligente para seleccionar la promoción
+### Paso 2: Utiliza la Selección Inteligente para seleccionar la promoción
 
 Para los mensajes promocionales propiamente dichos, utilizaremos Intelligent Selection para probar tres mensajes diferentes (notificación push, correo electrónico y SMS) para el Asado Real. Intelligent Selection analizará el rendimiento de todos nuestros mensajes promocionales dos veces al día y, a continuación, enviará gradualmente más mensajes de los que obtengan mejores resultados y menos de los demás.
 
 Después de que Intelligent Selection reúna suficientes datos para determinar el mensaje con mejor rendimiento, utilizará ese mensaje en el 100% de los envíos futuros.
 
-![Sección de pruebas A/B de un Canvas con Intelligent Selection habilitada.]({% image_buster /assets/img_archive/canvas_intelligent_selection.png %})
+\![Sección de pruebas A/B de un Canvas con Intelligent Selection habilitada.]({% image_buster /assets/img_archive/canvas_intelligent_selection.png %})
 
-### Paso 3: Iniciar el Canvas
+### Paso 3: Iniciar el Canvas
 
 Tanto con Intelligent Timing como con Intelligent Selection, hemos configurado nuestras promociones de Royal Roast para optimizar el tiempo y la mensajería. Podemos lanzar nuestro Canvas y ver cómo nuestros envíos cambian para adaptarse a las preferencias de los usuarios.

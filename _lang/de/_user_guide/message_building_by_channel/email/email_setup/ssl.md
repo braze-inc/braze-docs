@@ -65,11 +65,21 @@ Wenn Sie die aufgelisteten CDNs bei der Einrichtung von SSL für die Verfolgung 
 Für weitere Hilfe bei der Fehlerbehebung Ihrer CDN-Konfiguration müssen Sie sich an Ihren CDN-Anbieter wenden.
 {% endalert %}
 
-In der folgenden Tabelle finden Sie Schritt-für-Schritt-Anleitungen von SendGrid und SparkPost, wie Sie bestimmte CDNs konfigurieren können. Auch wenn Ihr spezielles CDN nicht aufgeführt ist, müssen Sie sicherstellen, dass Ihr CDN die Möglichkeit hat, SSL-Zertifikate anzuwenden.
+Die folgende Tabelle enthält Schritt-für-Schritt-Anleitungen von ESP Partnern zur Konfiguration bestimmter CDNs. Auch wenn Ihr spezielles CDN nicht aufgeführt ist, müssen Sie sicherstellen, dass Ihr CDN die Möglichkeit hat, SSL-Zertifikate anzuwenden.
 
 | SendGrid | SparkPost |
 | -------- | --------- |
-| [AWS Cloudfront](https://support.sendgrid.com/hc/en-us/articles/4412701748891-How-to-configure-SSL-for-click-tracking-using-CloudFront)<br>[CloudFlare](https://sendgrid.com/docs/ui/sending-email/content-delivery-networks/#using-cloudflare)<br>[Fastly](https://sendgrid.com/docs/ui/sending-email/content-delivery-networks/#using-fastly)<br>[KeyCDN](https://sendgrid.com/docs/ui/sending-email/content-delivery-networks/#using-keycdn) | [AWS Cloudfront](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-aws-cloudfront)<br>[CloudFlare](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-cloudflare)<br>[Cloudfront](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/)<br>[Fastly](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-fastly)<br>[Google Cloud-Plattform](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-google-cloud-platform)<br>[Microsoft Azure](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-microsoft-azure) |
+| [AWS Cloudfront](https://support.sendgrid.com/hc/en-us/articles/4412701748891-How-to-configure-SSL-for-click-tracking-using-CloudFront)<br>[CloudFlare](https://sendgrid.com/docs/ui/sending-email/content-delivery-networks/#using-cloudflare)<br>[Fastly](https://sendgrid.com/docs/ui/sending-email/content-delivery-networks/#using-fastly)<br>[KeyCDN](https://sendgrid.com/docs/ui/sending-email/content-delivery-networks/#using-keycdn) | [AWS Cloudfront](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-aws-cloudfront)<br>[CloudFlare](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-cloudflare)<br>[Fastly](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-fastly)<br>[Google Cloud-Plattform](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-google-cloud-platform)<br>[Microsoft Azure](https://support.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-microsoft-azure) |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+Für Amazon SES, siehe [Option 2: Konfiguration einer HTTPS-Domain](https://docs.aws.amazon.com/ses/latest/dg/configure-custom-open-click-domains.html) und Angabe der AWS Tracking Domain nach Ihrer Region auf der Grundlage Ihres Braze-Clusters:
+
+- **Braze US-Cluster:** `r.us-east-1.awstrack.me`
+- **Braze EU-Cluster:** `r.eu-central-1.awstrack.me`
+
+{% alert important %}
+Wenn Sie die Click-Tracking Domain Ihres CDN konfigurieren, stellen Sie sicher, dass Sie den `X-Forwarded-Host` Header aktivieren. Dies dient dazu, potenzielle Sicherheitsprobleme, wie z.B. Host-Header-Angriffe, zu verhindern. Informieren Sie sich in der Dokumentation des CDN oder bei Ihrem Team über die Vorgehensweise, da diese je nach CDN unterschiedlich ist.
+{% endalert %}
 
 #### Fehlersuche
 

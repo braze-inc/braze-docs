@@ -3,13 +3,13 @@ nav_title: 개인 정보 보호
 article_title: 개인 정보 보호
 page_order: 100
 layout: dev_guide
-description: "여기에서 관련 데이터 보호 법률 및 규정을 준수하며 Braze를 사용하는 데 도움이 될 수 있는 문서 모음을 확인할 수 있습니다."
+description: "여기에서 관련 데이터 보호 법률 및 규정을 준수하여 Braze를 사용하는 데 도움이 될 수 있는 문서 모음을 확인할 수 있습니다."
 
 guide_top_header: "개인 정보 보호"
-guide_top_text: "여기에서 관련 데이터 보호 법률 및 규정을 준수하며 Braze를 사용하는 데 도움이 될 수 있는 문서 모음을 확인할 수 있습니다."
+guide_top_text: "여기에서 관련 데이터 보호 법률 및 규정을 준수하여 Braze를 사용하는 데 도움이 될 수 있는 문서 모음을 확인할 수 있습니다."
 page_type: reference
 
-guide_featured_title: "문서"
+guide_featured_title: "기사"
 guide_featured_list:
 - name: 데이터 보호 기술 지원
   link: /docs/dp-technical-assistance

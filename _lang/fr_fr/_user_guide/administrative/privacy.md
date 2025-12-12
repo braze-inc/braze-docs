@@ -1,11 +1,11 @@
 ---
-nav_title: Confidentialité des données
-article_title: Confidentialité des données
+nav_title: Vie privée
+article_title: Vie privée
 page_order: 100
 layout: dev_guide
 description: "Vous trouverez ici un ensemble d'articles susceptibles de vous aider dans votre utilisation de Braze en conformité avec les lois et réglementations applicables en matière de protection des données."
 
-guide_top_header: "Confidentialité des données"
+guide_top_header: "Vie privée"
 guide_top_text: "Vous trouverez ici un ensemble d'articles susceptibles de vous aider dans votre utilisation de Braze en conformité avec les lois et réglementations applicables en matière de protection des données."
 page_type: reference
 
@@ -14,7 +14,7 @@ guide_featured_list:
 - name: Assistance technique en matière de protection des données
   link: /docs/dp-technical-assistance
   image: /assets/img/braze_icons/database-01.svg
-- name: Réglementations relatives aux courriers indésirables
+- name: Règlement sur le pollupostage
   link: /docs/user_guide/administrative/privacy/spam_regulations
   image: /assets/img/braze_icons/message-check-circle.svg
 - name: Lois et règlements sur le SMS
@@ -25,8 +25,8 @@ guide_featured_list:
   image: /assets/img/braze_icons/user-square.svg
 ---
 
-## Avis juridique
+## Avis de non-responsabilité
 
-Les informations fournies ici le sont à des fins éducatives uniquement et ne doivent pas être interprétées comme des conseils juridiques. Braze encourage tous ses personnalisés à demander un conseil juridique sur leur utilisation de Braze en conformité avec les lois et règlements sur la protection des données.
+Les informations fournies ici le sont à des fins éducatives uniquement et ne doivent pas être interprétées comme des conseils juridiques. Braze encourage tous ses personnalisés à demander des conseils juridiques sur leur utilisation de Braze en conformité avec les lois et règlements sur la protection des données.
 
 <br><br>

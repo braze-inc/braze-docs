@@ -16,13 +16,13 @@ tool:
 
 キャンペーンまたはキャンバスをステータスでフィルタリングするには、**すべてのステータス**を選択し、ステータスを選択します。
 
-![Braze ダッシュボードの「すべてのステータス」ドロップダウン。]({% image_buster /assets/img/messaging_fundamentals/filter-by-status.png %}){: style="max-width:70%;"}
+![Braze ダッシュボードの「すべての状況」ドロップダウン。]({% image_buster /assets/img/messaging_fundamentals/filter-by-status.png %}){: style="max-width:70%;"}
 
 ## ステータスの変更
 
 キャンペーンまたはキャンバスのステータスを変更するには、<i class="fas fa-ellipsis-vertical"></i> メニューを選択し、ステータスを選択します。
 
-![「キャンバス」ダッシュボードのキャンバスのリスト。いずれかのキャンバスに対してメニューが開きます。]({% image_buster /assets/img/messaging_fundamentals/change-status.png %})
+![Braze ダッシュボードのキャンバスの一覧。いずれかのキャンバスのメニュー開封が表示されます。]({% image_buster /assets/img/messaging_fundamentals/change-status.png %})
 
 ## 使用可能なステータス
 

@@ -58,7 +58,11 @@ Promotion codes are currently supported for email, mobile push, web push, Conten
 
 ### Do test and seed sends count towards usage?
 
-By default, test sends and seed group email sends will use promotion codes per user, per test send. However, you can reach out to your Braze account manager to update this behavior to not use promotion codes during testing.
+By default, test sends and seed group email sends will use promotion codes per user, per test send. However, you can contact your Braze account manager to update this behavior to not use promotion codes during testing.
+
+### What happens when multiple messaging channels use the same promotion code snippet?
+
+If a particular user is eligible to receive a code through multiple channels, they will receive the same code through each channel. Only one promo code will be used regardless of the channels received.
 
 ### Can I use multiple Liquid snippets to reference the same promotion code list in one message?
 

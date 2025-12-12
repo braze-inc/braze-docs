@@ -2,7 +2,7 @@
 nav_title: Stensul
 article_title: Stensul
 alias: /partners/stensul
-description: "This reference article outlines the partnership between Braze and Stensul, an enterprise email platform that allows you to easily create mobile-responsive email templates across channels."
+description: "This reference article outlines the partnership between Braze and Stensul, an enterprise email platform for creating mobile-responsive email templates across channels."
 page_type: partner
 search_tag: Partner
 
@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Stensul
 
-> [Stensul](https://stensul.com/) empowers email marketers to easily build mobile-responsive, on-brand emails in Stensul before sending them downstream to Braze, in real-time, for campaign creation.
+> [Stensul](https://stensul.com/) provides email marketers tools to build mobile-responsive, on-brand emails in Stensul before sending them downstream to Braze in real time for campaign creation.
 
 _This integration is maintained by Stensul._
 

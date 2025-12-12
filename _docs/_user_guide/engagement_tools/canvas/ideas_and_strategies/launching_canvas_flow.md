@@ -88,7 +88,7 @@ After reviewing the finer details of your Canvas, check out [Sending test Canvas
 ### Check user availability
 
 - Make sure your users meet your segmentation criteria.
-- Confirm their subscription state is “subscribed” or “opted-in” and their Push token existws. If you added these as Canvas entry rules, it’s possible that the users were unsubscribed between entering your Canvas and receiving the Message step.
+- Confirm their subscription state is “subscribed” or “opted-in” and their Push token exists. If you added these as Canvas entry rules, it’s possible that the users were unsubscribed between entering your Canvas and receiving the Message step.
 - Confirm they match your Canvas send settings. (If users are “subscribed” but the settings are “Opted-in”, users won’t be enabled for the channel.)
 - If global frequency capping is enabled for your Canvas, check if your rules are limiting how many times each user can receive a message from a specific channel.
 - If Quiet Hours are enabled, your message send time could be affected, meaning that your message may be sent at the next available time (when the Quiet Hours end) or cancelled entirely.

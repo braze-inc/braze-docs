@@ -2,7 +2,7 @@
 nav_title: Unique Discount Codes 
 article_title: Sending Unique Discount Codes
 alias: /shopify_discount_codes/
-page_order: 6
+page_order: 7
 description: "This reference article covers a community-submitted use case of using Braze promotion codes with the Shopify Bulk Discount Code Bot to send unique discount codes through your campaigns and Canvases."
 ---
 
@@ -56,7 +56,7 @@ Paste the Liquid snippet into a campaign or Canvas step.
 
 ![A GIF showing the Liquid snippet being added to a Canvas step.][5]
 
-If you want users to recieve a single unique discount code no matter how many times the discount code is referenced in campaigns or Canvases, create a [User Update]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update/) step directly before the first Message step that assigns the discount code to a custom attribute, like "Promo Code".
+If you want users to receive a single unique discount code no matter how many times the discount code is referenced in campaigns or Canvases, create a [User Update]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update/) step directly before the first Message step that assigns the discount code to a custom attribute, like "Promo Code".
 
 {% alert tip %}
 You can also [create a custom attribute]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/) by going to **Data Settings** > **Custom Attributes**.

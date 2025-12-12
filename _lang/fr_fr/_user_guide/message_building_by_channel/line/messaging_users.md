@@ -1,5 +1,5 @@
 ---
-nav_title: Écrire aux utilisateurs
+nav_title: "Utilisateurs de l'envoi de messages"
 article_title: Envoi de messages aux utilisateurs LINE
 page_order: 2
 description: "Cet article de référence explique comment chatter avec les utilisateurs en utilisant des campagnes modélisées et des Canvases."
@@ -19,23 +19,23 @@ Il existe plusieurs méthodes pour converser avec les utilisateurs par le biais 
 
 Vous pouvez créer des campagnes et des canevas qui démarrent, se ramifient et sont modifiés en cours de route lorsque vous recevez un message LINE entrant (un message envoyé par un utilisateur) qui contient un mot déclencheur. Veillez à choisir des mots déclencheurs qui correspondent à ce que vous attendez des utilisateurs.
 
-### Campagne arrêtée
+### Campagne
 
 Définissez vos mots déclencheurs lors de la planification d'une campagne de réception/distribution basée sur des actions.
 
-![Déclencheur basé sur l'action "Envoyer cette campagne aux utilisateurs qui ont envoyé un message entrant LINE au groupe d'abonnement dans lequel se trouve le corps du message" et un champ vide.]({% image_buster /assets/img/line/trigger_word_campaign.png %})
+\![Déclencheur basé sur l'action "Envoyer cette campagne aux utilisateurs qui ont envoyé une LINE entrante au groupe d'abonnement où se trouve le corps du message" et un champ vide.]({% image_buster /assets/img/line/trigger_word_campaign.png %})
 
-### Canvas
+### Canevas
 
-Placez vos mots déclencheurs dans les [parcours d'action]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths) de votre canvas.
+Placez vos mots déclencheurs dans les [parcours d'action de]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths) votre Canvas.
 
-![Parcours d'action dont le déclencheur est "Envoyer cette campagne aux utilisateurs qui ont envoyé un message LINE au groupe d'abonnement où se trouve le corps du message" et dont le champ est vide.]({% image_buster /assets/img/line/trigger_word_canvas.png %})
+\![Parcours d'action avec un déclencheur de "Envoyer cette campagne aux utilisateurs qui ont envoyé une LINE entrante au groupe d'abonnement où se trouve le corps du message" et un champ vide.]({% image_buster /assets/img/line/trigger_word_canvas.png %})
 
-### Conditions
+### Exigences
 
 Chaque lettre de votre mot déclencheur doit être mise en majuscule lorsque vous créez votre campagne ou votre Canvas, même si Braze n'exige pas que les mots déclencheurs entrants soient mis en majuscules. Par exemple, si votre mot déclencheur est "JOIN2023", un message entrant de "jOin2023" déclenchera toujours le Canvas ou la campagne.
 
-Si aucun mot déclencheur n'est spécifié, la campagne ou le canvas sera exécuté pour *tous les* messages LINE entrants. Il s'agit notamment des messages comportant des expressions correspondantes dans des campagnes et des canvas actifs, auquel cas l'utilisateur recevra deux messages LINE.
+Si aucun mot déclencheur n'est spécifié, la campagne ou le canvas sera exécuté pour *tous les* messages LINE entrants. Il s'agit notamment des messages dont les phrases correspondent à celles des campagnes et des Phrasese actives, auquel cas l'utilisateur recevra deux messages LINE.
 
 ## Réponses non reconnues
 

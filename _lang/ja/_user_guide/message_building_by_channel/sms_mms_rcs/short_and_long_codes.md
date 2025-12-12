@@ -1,5 +1,5 @@
 ---
-nav_title: "SMSとRCSの送信者"
+nav_title: "SMS / RCS 送信者"
 article_title: SMSとRCSの送信者
 noindex: true
 page_order: 9

@@ -61,7 +61,7 @@ tool:
 
 コンバージョンの詳細の表には、常に*受信者*列と*コンバージョン*列 (比率と合計) が1列ずつ表示されます。表示される残りの 2 列は、レポートの設定時に選択したオプションによって異なります。 
 
-![タッチを 3 列目と 4 列目のアトリビューション方法として示す [コンバージョンの詳細] テーブル。]({% image_buster /assets/img_archive/conversions2_details.png %}){: style="border:none"}
+![コンバージョン詳細表では、3列目と4列目のアトリビューションはタッチとなっている。]({% image_buster /assets/img_archive/conversions2_details.png %}){: style="border:none"}
 
 次の表で、表示される指標について説明します。
 
@@ -87,7 +87,7 @@ tool:
 このグラフには、一度に 1 チャネルのデータのみが表示されます。グラフの [**チャネル**] ドロップダウンを使用して、そのチャネルを選択します。
 {% endalert %}
 
-![2 件のメールキャンペーンの [コンバージョンの分布] 棒グラフ。[配信されたメール]、[開封されたメール]、[クリックされたメール]、[コンバージョン] の類似する結果を示している。]({% image_buster /assets/img_archive/conversions2_funnel.png %})
+![2つのメールキャンペーンで、メール配信、メール開封、メールクリック、コンバージョンが同様の結果を示している。]({% image_buster /assets/img_archive/conversions2_funnel.png %})
 
 ### 経時的なコンバージョン
 
@@ -95,7 +95,7 @@ tool:
 
 時系列データをダウンロードするには、<i class="fas fa-bars"></i> を選択し、ダウンロードオプションを選択する。使用できるオプションは PNG、JPEG、PDF、SVG、または CSV です。
 
-![2 件のメールキャンペーンの経時的なコンバージョンの時系列グラフ。日別のコンバージョンを示している。]({% image_buster /assets/img_archive/conversions2_over_time.png %})
+![2つのメールキャンペーンにおけるコンバージョンの時系列グラフ。]({% image_buster /assets/img_archive/conversions2_over_time.png %})
 
 ### アトリビューション方法
 

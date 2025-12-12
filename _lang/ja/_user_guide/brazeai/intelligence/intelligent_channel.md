@@ -6,13 +6,14 @@ description: "この記事では、インテリジェントチャネルフィル
 search_rank: 11
 ---
 
-# [![Braze ラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/most-engaged-channel){: style="float:right;width:120px;border:0;" class="noimgborder"}インテリジェントチャネルフィルター
+# [Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/most-engaged-channel){: style="float:right;width:120px;border:0;" class="noimgborder"} インテリジェントチャンネルフィルター
+# [Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/most-engaged-channel){: style="float:right;width:120px;border:0;" class="noimgborder"} インテリジェントチャンネルフィルター
 
 > `Intelligent Channel` フィルター (旧称 `Most Engaged`) は、選択されたメッセージングチャネルが「最適な」チャネルであるオーディエンスの一部を選択します。 
 
 ## チャネルフィルターについて
 
-![選択できる各種チャネルのドロップダウンが表示されているインテリジェントチャネルフィルター。]({% image_buster /assets/img/intelligent_channel_filter.png %}){: style="float:right;max-width:40%;margin-left:10px;margin-top:10px;border:0"}
+![インテリジェント・チャンネル・フィルターには、選択可能なさまざまなチャンネルのドロップダウンがある。]({% image_buster /assets/img/intelligent_channel_filter.png %}){: style="float:right;max-width:40%;margin-left:10px;margin-top:10px;border:0"}
 
 この場合の最良とは、ユーザーの履歴からエンゲージメントの可能性が最も高いチャネルを意味します。メール、SMS、WhatsApp、Web プッシュ、またはモバイルプッシュ (利用可能なモバイル OS またはデバイスを含む) をチャネルとして選択できます。
 
@@ -28,13 +29,14 @@ SMS チャネルのエンゲージメント率を計算するには、高度な�
 
 ## 「データ不足」オプション
 
-Braze が「最良」のチャネルを判定するには、十分なデータが必要です。つまり、あるユーザーは、使用可能な 3 つのチャネルのうち少なくとも 2 つを介して 3 件以上のメッセージを受信している必要があります。メッセージは必ずしも開封されている必要はありません。 
+Braze が「最良」のチャネルを判定するには、十分なデータが必要です。つまり、ユーザーは利用可能な3つのチャネルのうち、少なくとも2つのチャネルで、チャネルごとに少なくとも3つ以上のメッセージを受信していなければならない。メッセージは必ずしも開封されている必要はありません。 
+Braze が「最良」のチャネルを判定するには、十分なデータが必要です。つまり、ユーザーは利用可能な3つのチャネルのうち、少なくとも2つのチャネルで、チャネルごとに少なくとも3つ以上のメッセージを受信していなければならない。メッセージは必ずしも開封されている必要はありません。 
 
 ユーザーがこれらのチャネルにわたって十分なメッセージを受信していない場合、それらのユーザーはこのフィルターの [データ不足] オプションに該当します。これにより、3 つの使用可能なメッセージングチャネルのいずれかを使用して、これらのユーザーをターゲットにすることができます。
 
 例えば、プッシュメッセージを好むユーザーにプッシュを受信させ、十分なデータがないユーザーにも同じプッシュメッセージを受信させたいとします。この場合、インテリジェントチャネルフィルターを [**モバイルプッシュ**] に設定し、[**または**] を使用して、2 番目のインテリジェントチャネルフィルターを [**データ不足**] に設定します。メールを好むユーザーには、インテリジェントチャネルフィルターがメールに設定されている別のキャンペーンで対応できます。
 
-![[モバイルプッシュ] または [データ不足] のインテリジェントチャネルフィルター。]({% image_buster /assets/img/intelligent_example.png %}){:style="border:none"}
+![モバイル・プッシュのインテリジェント・チャネル・フィルター、またはデータ不足。]({% image_buster /assets/img/intelligent_example.png %}){:style="border:none"}
 
 {% alert note %}
 [フリークエンシーキャップ]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#delivery-rules)を無視するキャンペーンとキャンバスステップは、インテリジェントチャネルでは考慮されず、データ要件に貢献できません。

@@ -26,6 +26,6 @@ WhatsAppの電話番号の移行に関する情報については、Metaの[埋�
 ## WhatsApp電話番号の移行
 
 1. WhatsAppマネージャーで、電話番号に関連付けられているWhatsAppビジネスアカウント（WABA）を選択し、**アカウントツール** > **電話番号**に移動します。
-2. **二段階認証をオフにする**を選択し、続くステップを完了します。<br><br>![WhatsApp ビジネスマネージャーで [電話番号] ページが開いている。]({% image_buster /assets/img/whatsapp/waba_manager.png %}){: style="max-width:80%;"}<br><br> 電話番号を別のWhatsAppビジネスグループに移行していて、Metaの埋め込みサインアップで表示名が一致する必要がある場合は、**電話番号**ページに既存の表示名をメモしてください。次のステップでその名前を入力します。<br><br>![WhatsAppビジネスマネージャーの電話番号ページに、電話番号の横に「Braze」という表示名が記載されています。]({% image_buster /assets/img/whatsapp/phone_numbers.png %}){: style="max-width:80%;"}<br><br>
+2. **二段階認証をオフにする**を選択し、続くステップを完了します。<br><br>![WhatsApp ビジネスマネージャーが「電話番号」ページを開封した。]({% image_buster /assets/img/whatsapp/waba_manager.png %}){: style="max-width:80%;"}<br><br> 電話番号を別のWhatsAppビジネスグループに移行していて、Metaの埋め込みサインアップで表示名が一致する必要がある場合は、**電話番号**ページに既存の表示名をメモしてください。次のステップでその名前を入力します。<br><br>![WhatsApp ビジネスマネージャーの電話番号ページで、電話番号の横に "Braze "と表示されている。]({% image_buster /assets/img/whatsapp/phone_numbers.png %}){: style="max-width:80%;"}<br><br>
 3. Metaの埋め込みサインアップワークフローを完了まで続けます。 
 

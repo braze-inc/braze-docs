@@ -1,12 +1,12 @@
 ---
-nav_title: Operadores
+nav_title: Operarios
 article_title: Operadores de Liquid
 page_order: 2
 description: "En esta página de referencia se anotan los operadores que admite Liquid, así como ejemplos relevantes."
 
 ---
 
-# Operadores
+# Operarios
 
 > Liquid admite muchos [operadores](https://docs.shopify.com/themes/liquid/basics/operators) que puedes utilizar en tus sentencias condicionales. Esta página cubre los operadores que admite Liquid y proporciona casos de uso de cómo puedes utilizarlos en tus mensajes.
 
@@ -14,12 +14,12 @@ Esta tabla enumera los operadores compatibles. Ten en cuenta que los paréntesis
 
 |   Sintaxis| Descripción del operador|
 |---------|-----------|
-| ==  | equivale a        |
-| !=  | no equivale a|
+| ==  | es igual a        |
+| !=  | no es igual a|
 |  >  | superior a  |
 | <   | menos de     |
 | >=| mayor o igual que|
-| <= | inferior o igual a |
+| <= | menor o igual que |
 | o | condición A o condición B|
 | y | condición A y condición B|
 | contiene | comprueba si una cadena o matriz de cadenas contiene una cadena|
@@ -61,9 +61,9 @@ Need a sign to update your wardrobe? We added a 15% discount code to your accoun
 ```
 {% endraw %}
 
-![Un compositor de notificaciones push con el código completo de Liquid del tutorial.]({% image_buster /assets/img/liquid-if-totalspend.png %}){: width="100%"}
+Un compositor de notificaciones push con el código completo de Liquid del tutorial.]({% image_buster /assets/img/liquid-if-totalspend.png %}){: width="100%"}
 
-{% details Código completo de Liquid %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% if {{custom_attribute.${total_spend}}} >0 %}
@@ -138,7 +138,7 @@ Hey! I've got a deal for you. Buy 2 of our newest releases and get 10% off!
 ```
 {% endraw %}
 
-{% details Código completo de Liquid %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% if {{custom_attribute.${recent_game}}} == 'Awkward Dinner Party' %}
@@ -154,7 +154,7 @@ Hey! I've got a deal for you. Buy 2 of our newest releases and get 10% off!
 {% endraw %}
 {% enddetails %}
 
-![Un compositor de notificaciones push con el código completo de Liquid del tutorial.]({% image_buster /assets/img/liquid-if-elsif-games.png %})
+Un compositor de notificaciones push con el código completo de Liquid del tutorial.]({% image_buster /assets/img/liquid-if-elsif-games.png %})
 
 Ahora, si un usuario ha jugado por última vez *a Awkward Dinner Party*, recibirá este mensaje:
 
@@ -204,7 +204,7 @@ Stream now!
 ```
 {% endraw %}
 
-{% details Código completo de Liquid %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% if {{${time_zone}}} =='America/Los_Angeles' %}
@@ -216,8 +216,8 @@ Stream now!
 {% endraw %}
 {% enddetails %}
 
-![Un compositor de notificaciones push con el código completo de Liquid del tutorial.]({% image_buster /assets/img/abort-if.png %})
+Un compositor de notificaciones push con el código completo de Liquid del tutorial.]({% image_buster /assets/img/abort-if.png %})
 
-También puede [abortar mensajes]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/) basados en Contenido conectado.
+También puedes [abortar mensajes]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/) basados en Contenido conectado.
 
 

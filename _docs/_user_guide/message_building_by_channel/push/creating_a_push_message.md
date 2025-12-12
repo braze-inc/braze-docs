@@ -17,7 +17,7 @@ tool:
 ## Step 1: Choose where to build your message {#create-new-campaign-push}
 
 {% alert tip %}
-Not sure whether to use a campaign or a Canvas? Campaigns are better for simple, single messaging campaigns, while Canvases are better for multi-step user journeys.
+Not sure whether to use a campaign or a Canvas? Campaigns are better for single, targeted messaging campaigns, while Canvases are better for multi-step user journeys.
 {% endalert %}
 
 {% tabs %}
@@ -239,7 +239,7 @@ If you haven't done so already, complete the remaining sections of your Canvas c
 
 ## Step 7: Review and deploy {#review-and-deploy-push}
 
-After you've finished building the last of your campaign or Canvas, review its details. For campaigns, the final page will give you a summary of the campaign you've just designed. Confirm all the relevant details, make sure you've tested your message, then send it and watch the data roll in!
+After you've finished building the last of your campaign or Canvas, review its details. For campaigns, the final page gives you a summary of the campaign you designed. Confirm all the relevant details, make sure you've tested your message, then send it and watch the data roll in!
 
 Next, check out [Push reporting]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_reporting/) to learn how you can access the results of your push campaign. For push notifications, you'll be able to view statistics for the number of messages sent, delivered, bounced, opened, and directly opened.
 

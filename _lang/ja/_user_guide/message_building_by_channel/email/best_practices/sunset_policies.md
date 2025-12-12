@@ -1,5 +1,5 @@
 ---
-nav_title: サンセット・ポリシー
+nav_title: サンセットポリシー
 article_title: メールのサンセットポリシー
 page_order: 8
 page_type: reference
@@ -30,7 +30,7 @@ Eメールの場合、送信IPはエンゲージメント、スパム報告、�
 
 `Last Engaged With Message` フィルターを適用する場合は、ユーザーが最後に対話してから経過した日数だけでなく、対話した、または対話していないメッセージングのタイプ (プッシュ通知、メール、またはアプリ内通知) を指定します。セグメントを作成したら、このセグメントを選択して任意の[メッセージングチャネル]({{site.baseurl}}/user_guide/message_building_by_channel/)のターゲットにします。
 
-![「最後にエンゲージしたメッセージ」フィルターが選択されている [セグメントの詳細] ページ]({% image_buster /assets/img_archive/email_sunset_policies_new.png %})
+![セグメンテーションの詳細ページ。"Last Engaged with Message "というフィルターが選択されている。]({% image_buster /assets/img_archive/email_sunset_policies_new.png %})
 
 Brazeは、スパムとしてマークしたユーザーへのメール送信を自動的に停止するが、`Has Marked You As Spam` フィルタを使えば、これらのユーザーにもターゲットを絞ったプッシュメッセージやアプリ内通知を送ることができる。このフィルターは、[リターゲティングキャンペーン]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/retargeting_campaigns/#retargeting-campaigns)で便利です。例えば、メールを開封していないユーザーに対して、彼らが見逃している機能やお得な情報を思い出させるメッセージを送ることができる。
 

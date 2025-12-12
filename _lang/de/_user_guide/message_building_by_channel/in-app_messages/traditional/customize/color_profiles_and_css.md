@@ -1,5 +1,5 @@
 ---
-nav_title: Farbprofile und CSS-Vorlagen
+nav_title: Farbprofile und CSS-Templates
 article_title: Farbprofile und CSS-Vorlagen für In-App-Nachrichten
 page_order: 4
 page_type: reference
@@ -24,7 +24,7 @@ Klicken Sie auf **Farbprofil speichern**, wenn Sie fertig sind.
 
 ### Farbprofile verwalten
 
-Sie können Vorlagen auch [duplizieren][6] und [archivieren][7]! Erfahren Sie mehr über die Erstellung und Verwaltung von Vorlagen und kreativen Inhalten in [Vorlagen & Medien][8].
+Sie können Vorlagen auch [duplizieren]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) und [archivieren]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/)! Erfahren Sie mehr über die Erstellung und Verwaltung von Templates und kreativen Inhalten in [Templates & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
 
 ## CSS-Template {#in-app-message-templates}
 
@@ -84,7 +84,7 @@ Wie Sie sehen, können Sie alles bearbeiten, von der Hintergrundfarbe bis zu Sch
 
 ### CSS-Vorlagen verwalten
 
-Sie können Vorlagen auch [duplizieren][6] und [archivieren][7]! Erfahren Sie mehr über die Erstellung und Verwaltung von Vorlagen und kreativen Inhalten in [Vorlagen & Medien][8].
+Sie können Vorlagen auch [duplizieren]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) und [archivieren]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/)! Erfahren Sie mehr über die Erstellung und Verwaltung von Templates und kreativen Inhalten in [Templates & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
 
 ## Modal mit CSS (nur Web) {#web-modal-css}
 
@@ -93,6 +93,3 @@ Wenn Sie sich für ein reines Web-Modal mit CSS-Meldung entscheiden, können Sie
 Wenn Sie Ihre eigene Vorlage verwenden möchten, klicken Sie auf **Vorlage anwenden** und wählen Sie aus der Galerie der In-App-Nachrichtenvorlagen. Wenn Sie keine Optionen haben, können Sie eine [CSS-Vorlage]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/color_profiles_and_css/#in-app-message-templates) mit dem CSS-Vorlagenersteller hochladen.
 
 
-[6]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/
-[7]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/
-[8]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/

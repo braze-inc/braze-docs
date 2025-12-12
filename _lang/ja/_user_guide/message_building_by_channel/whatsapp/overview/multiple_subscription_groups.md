@@ -1,5 +1,5 @@
 ---
-nav_title: 複数のビジネスアカウント 
+nav_title: 複数のビジネスアカウント
 article_title: 複数のWhatsAppビジネスアカウントと電話番号
 page_order: 2
 description: "この参考記事ではWhatsApp Businessアカウントと電話番号を追加する手順を説明する。"
@@ -18,7 +18,7 @@ channel:
 
 同じ Meta Business Manager 内にネストされているビジネスアカウントは、ユーザーアクセス権限管理とカタログも共有します (Brazeではまだサポートされていません)。
 
-![ワークスペースとWhatsApp Businessアカウントの相互接続を示す、Braze と WhatsApp のエコシステム図: 1 つの購読グループを 1 つの電話番号に、複数の WhatsApp Business アカウントを 1 つのワークスペースに、1 つのワークスペースを複数の Meta Business ポートフォリオに接続できる。]({% image_buster /assets/img/whatsapp/whatsapp_braze_ecosystem.png %}) 
+]({% image_buster /assets/img/whatsapp/whatsapp_braze_ecosystem.png %})ワークスペースとWhatsApp Businessアカウントの相互接続を示す、Braze と WhatsApp のエコシステム図: 1 つの購読グループを 1 つの電話番号に、複数の WhatsApp Business アカウントを 1 つのワークスペースに、1 つのワークスペースを複数の Meta Business ポートフォリオに接続できる。 
 
 ### WhatsApp Businessアカウントを追加する
 
@@ -26,7 +26,7 @@ channel:
 
 1. [**テクノロジーパートナー**] > [**WhatsApp**] に移動して [**WhatsApp ビジネスアカウントを追加**] を選択します。 
 
-![WhatsAppメッセージングインテグレーションセクションでは、ビジネスアカウントの追加、購読グループと番号の追加ができる。]({% image_buster /assets/img/whatsapp/multiple_wabas.png %})
+![WhatsApp Messaging Integrationセクションでビジネスアカウントの追加、サブスクリプショングループと電話番号の追加ができる。]({% image_buster /assets/img/whatsapp/multiple_wabas.png %})
 
 {: start="2"}
 2\.サインアップのワークフローを実行します。ステップごとの詳しいガイドは、[WhatsApp 埋め込みサインアップ]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/embedded_signup/)を参照してください。
@@ -51,7 +51,7 @@ WhatsApp Business アカウントごとに最大 20 の購読グループ (お�
 
 1. [**テクノロジーパートナー**] > [**WhatsApp**] に移動して [**購読グループと番号を追加**] を選択します。
 
-![WhatsAppメッセージングインテグレーションセクションでは、ビジネスアカウントの追加、購読グループと番号の追加ができる。]({% image_buster /assets/img/whatsapp/multiple_wabas.png %})
+![WhatsApp Messaging Integrationセクションでビジネスアカウントの追加、サブスクリプショングループと電話番号の追加ができる。]({% image_buster /assets/img/whatsapp/multiple_wabas.png %})
 
 {: start="2"}
 2\.サインアップのワークフローを実行します。<br><br> **WhatsApp Businessアカウントを選択**"ステップで既存のWhatsApp Businessアカウントを選択し、新しい電話番号を追加する。この電話番号は、他のWhatsAppアカウントに登録されていないなど、WhatsApp電話番号の全ての条件を満たしている必要がある。

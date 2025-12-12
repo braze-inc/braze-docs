@@ -20,7 +20,7 @@ toc_headers: h2
 メッセージは、キャンペーンとキャンバスのどちらを使用して配信すべきでしょうか。キャンペーンは単一のシンプルなメッセージングキャンペーンに適していますが、キャンバスはマルチステップのユーザーのジャーニーに適しています。
 
 {% tabs %}
-{% tab キャンペーン %}
+{% tab Campaign %}
 
 1. [**メッセージング**] > [**キャンペーン**] の順に進み、[**キャンペーンを作成**] を選択します。
 2. [**アプリ内メッセージ**] を選択します。なお、アプリ内メッセージはマルチチャネルキャンペーンでは利用できない。
@@ -34,7 +34,7 @@ toc_headers: h2
 {% endalert %}
 
 {% endtab %}
-{% tab キャンバス %}
+{% tab Canvas %}
 
 1. キャンバス作成ツールを使用して [[キャンバスを作成]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/)] します。
 2. キャンバスを設定したら、キャンバスビルダーにステップを追加します。ステップに、明確で意味のある名前を付けます。
@@ -58,9 +58,9 @@ toc_headers: h2
 
 | プラットフォーム                        | メッセージの配信        |
 |---------------------------------|-------------------------|
-| モバイルアプリ                     | iOS & Android SDK      |
+| モバイルアプリ                     | iOS & Android SDKs      |
 | ウェブブラウザ                    | ウェブSDK                 |
-| モバイルアプリとウェブブラウザの両方 | iOS、Android、Web SDK |
+| 両方のモバイルアプリ& Webブラウザ | iOS, Android & Web SDKs |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## ステップ 3:メッセージの種類を指定する
@@ -147,15 +147,15 @@ toc_headers: h2
   <tr>
     <td><a href='/docs/user_guide/message_building_by_channel/in-app_messages/customize/#custom-html-messages'>カスタムHTMLメッセージ</a></td>
     <td>カスタムコード（HTML、CSS、JavaScript）で定義された通りに実行されるカスタムメッセージ。</td>
-    <td>該当なし</td>
-    <td><span style="white-space: nowrap"><code>allowUserSuppliedJavascript</code></span> 初期化オプションを設定して <code>true</code> アプリ内メッセージを有効にする。</td>
+    <td>N/A</td>
+    <td>アプリ内メッセージを動作させるには、<span style="white-space: nowrap"><code>allowUserSuppliedJavascript</code></span>初期化オプションを<code>true</code>に設定する必要があります。</td>
     <td>これは、IAM のすべての利点が必要であり、さらに追加の機能が必要な場合や、ブランドに沿った外観を維持したい場合に適したオプションです。フォント、色、形、サイズ、ボタンなど、メッセージの細部まで変更できる。<br><br>使用例としては、ユーザーにアプリのフィードバックを求める場合、電子メールのキャプチャフォーム、ページ分割されたメッセージなどがある。</td>
   </tr>
   <tr>
     <td><a href='/docs/user_guide/message_building_by_channel/in-app_messages/customize/#email-capture-form'>メールキャプチャフォーム</a></td>
     <td>通常、視聴者の電子メールをキャプチャするために使用される。</td>
-    <td>該当なし</td>
-    <td><span style="white-space: nowrap"><code>allowUserSuppliedJavascript</code></span> 初期化オプションを設定して <code>true</code> アプリ内メッセージを有効にする。</td>
+    <td>N/A</td>
+    <td>アプリ内メッセージを動作させるには、<span style="white-space: nowrap"><code>allowUserSuppliedJavascript</code></span>初期化オプションを<code>true</code>に設定する必要があります。</td>
     <td>ユーザーにメールアドレスの送信を促す場合。</td>
   </tr>
   <tr>
@@ -181,7 +181,11 @@ Brazeが、あなたのコードに閉じるボタンや終了ボタンが含ま
 
 **Compose**タブでは、メッセージの内容と動作のあらゆる面を編集できる。
 
-![新しい顧客を歓迎し、ユーザープロファイルを設定するように促す、サンプルブランドのアプリ内メッセージ。]({% image_buster /assets/img_archive/iam_compose.png %}){: style="max-width:85%" }
+<<<<<<< HEAD
+![新しい顧客を歓迎し、ユーザープロファイルを設定するよう促すサンプルブランドのアプリ内メッセージ。]({% image_buster /assets/img_archive/iam_compose.png %}){: style="max-width:85%" }
+=======
+\![新しい顧客を歓迎し、ユーザープロファイルを設定するよう促すサンプルブランドのアプリ内メッセージ。]({% image_buster /assets/img_archive/iam_compose.png %}){: style="max-width:85%" }
+>>>>>>> main
 
 **Compose」**タブの内容は、前のステップで選択したメッセージ・オプションによって異なるが、以下のオプションのいずれかを含むことができる：
 
@@ -203,11 +207,15 @@ Brazeが、あなたのコードに閉じるボタンや終了ボタンが含ま
 
 ##### AI コピーの生成
 
-魅力的な文章を作成するためのサポートが必要な場合は、[AI コピーライティングアシスタント]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/)を使用してみてください。商品名や説明を入力すると、AIが人間のようなマーケティングコピーを生成し、メッセージングに使用する。
+魅力的な文章を作成するためのサポートが必要な場合は、[AI コピーライティングアシスタント]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/)を使用してみてください。商品名や説明を入力すると、AIが人間のようなマーケティングコピーを生成し、メッセージングに使用します。
 
-![アプリ内メッセージ作成画面のメッセージフィールドにある [AI コピーライター] ボタンをクリックします。]({% image_buster /assets/img/ai_copywriter/ai_copywriter_iam.png %}){: style="max-width:60%"}
+<<<<<<< HEAD
+![In-アプリ メッセージ作成画面のMessage フィールドにあるAI Copy writer ボタンを起動します。]({% image_buster /assets/img/ai_copywriter/ai_copywriter_iam.png %}){: style="max-width:60%"}
+=======
+\![In-アプリ メッセージ作成画面のMessage フィールドにあるAI Copy writer ボタンを起動します。]({% image_buster /assets/img/ai_copywriter/ai_copywriter_iam.png %}){: style="max-width:60%"}
+>>>>>>> main
 
-##### 右から左へのメッセージを作成する
+##### 右から左へのメッセージの作成
 
 アラビア語やヘブライ語などの右から左へのメッセージ作成にお困りですか？ベストプラクティスについては、[右から左へのメッセージを作成するを]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/)参照のこと。
 
@@ -223,7 +231,11 @@ Brazeが、あなたのコードに閉じるボタンや終了ボタンが含ま
 
 言い換えれば、ユーザーにどちらかのボタンをより多くクリックしてもらいたいのであれば、それが右側にあることを確認する。一般に、右側のボタンはクリックされる可能性が高くなります。特に、メッセージの残りの部分とは若干対照的な色や、目立つ色を使うとその可能性が高まります。この効果は、左側のボタンの外観がメッセージにより溶け込んでいる場合にはさらに強くなります。
 
-![アプリ内メッセージのプライマリボタンとセカンダリボタン]({% image_buster /assets/img/primary-secondary-buttons.png %})
+<<<<<<< HEAD
+![アプリ内メッセージのプライマリボタンとセカンダリボタン]]({% image_buster /assets/img/primary-secondary-buttons.png %})
+=======
+\![アプリ内メッセージのプライマリボタンとセカンダリボタン]]({% image_buster /assets/img/primary-secondary-buttons.png %})
+>>>>>>> main
 
 ### クリック時動作 {#button-actions}
 
@@ -300,7 +312,7 @@ Brazeが、あなたのコードに閉じるボタンや終了ボタンが含ま
 ## ステップ 7:キャンペーンまたはキャンバスの残りの部分を作成する
 
 {% tabs %}
-{% tab キャンペーン %}
+{% tab Campaign %}
 
 キャンペーンの残りの部分を作成します。アプリ内メッセージを作成するためのツールの最適な使用方法については、以下のセクションを参照してください。
 
@@ -312,7 +324,11 @@ Brazeが、あなたのコードに閉じるボタンや終了ボタンが含ま
 カスタムイベントに基づいてアプリ内メッセージをトリガーする場合は、そのカスタムイベントをSDK を使用して送信する必要があることに注意してください。
 {% endalert %}
 
-![トリガーアクションが「セッション開始」に設定されたアクションベースのキャンペーン。]({% image_buster /assets/img_archive/in_app_schedule.png %}){: style="max-width:80%"}
+<<<<<<< HEAD
+![トリガー アクションを"Start Session"に設定したアクション ベースのキャンペーン。]({% image_buster /assets/img_archive/in_app_schedule.png %}){: style="max-width:80%"}
+=======
+\![トリガー アクションを"Start Session"に設定したアクション ベースのキャンペーン。]({% image_buster /assets/img_archive/in_app_schedule.png %}){: style="max-width:80%"}
+>>>>>>> main
 
 アプリ内メッセージ配信は、すべて以下のアクショントリガーに基づいている：
 
@@ -347,7 +363,11 @@ Brazeが、あなたのコードに閉じるボタンや終了ボタンが含ま
 
 トリガーされたメッセージの優先順位の高、中、低オプションはバケットなので、複数のメッセージが同じ優先順位を持つ可能性があります。これらのバケツ内で優先順位を設定するには、**「正確な優先順位を設定**」をクリックし、キャンペーンをドラッグ＆ドロップして正しい優先順位で並べることができる。
 
-![アプリ内メッセージキャンペーンとキャンバスの優先順位の設定例。]({% image_buster /assets/img_archive/bucket_prioritization.png %}){: style="max-width:70%"}
+<<<<<<< HEAD
+![アプリ内メッセージ キャンペーンとキャンバスのプライオリティ設定の例]]({% image_buster /assets/img_archive/bucket_prioritization.png %}){: style="max-width:70%"}
+=======
+\![アプリ内メッセージ キャンペーンとキャンバスのプライオリティ設定の例]]({% image_buster /assets/img_archive/bucket_prioritization.png %}){: style="max-width:70%"}
+>>>>>>> main
 
 #### ターゲットとするユーザーを選択する
 
@@ -361,14 +381,18 @@ Brazeが、あなたのコードに閉じるボタンや終了ボタンが含ま
 
 シナリオによっては、アプリ内メッセージの表示をトリガーとして、ユーザーの適格性を再評価したい場合がある。例えば、頻繁に変更されるカスタム属性をターゲットにしたキャンペーンや、直前のプロフィール変更を反映すべきメッセージなどがある。
 
-![[表示する前にキャンペーンの適格性を再評価する] チェックボックスが選択されている。]({% image_buster /assets/img_archive/re-evaluate-iam-membership.png %}){:style="max-width:60%"}
+<<<<<<< HEAD
+![&quot のチェックボックス;キャンペーンの適格性を再評価してから" を表示します。を選択します。]({% image_buster /assets/img_archive/re-evaluate-iam-membership.png %}){:style="max-width:60%"}
+=======
+\![&quot のチェックボックス;キャンペーンの適格性を再評価してから" を表示します。を選択します。]({% image_buster /assets/img_archive/re-evaluate-iam-membership.png %}){:style="max-width:60%"}
+>>>>>>> main
 
 **表示前にキャンペーンの適格性を再評価する**]を選択すると、送信前にユーザーがまだこのメッセージの適格者であることを確認するために、Brazeに追加のリクエストが行われる。加えて、[リキッド]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/)変数や[コネクテッドコンテンツは]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/)、メッセージが表示される前に、その時点でテンプレート化される。
 
 これにより、期限切れまたはアーカイブされたキャンペーン内のユーザーにアプリ内メッセージが送信されるのを防ぐことができる。ユーザーの適格性を再評価しない場合、キャンペーンが期限切れになった後、あるいはメッセージが SDK にありユーザーがこれをトリガーするのを待機しているためにアーカイブされた後でも、ユーザーはアプリ内メッセージを受信します。
 
 {% alert note %}
-このオプションを有効にすると、ユーザーがアプリ内メッセージをトリガーしてからメッセージが表示されるまでの間に、追加された適格性とテンプレート化リクエストのためにわずかな遅延（100ミリ秒未満）が生じる。
+このオプションを有効にすると、ユーザー トリガーがアプリ内メッセージしたときと、追加された適格性とテンプレートリクエストのためにメッセージが表示されたときの間に、わずかな遅延(< 100ms) が発生します。
 <br><br>
 このオプションは、ユーザーがオフラインの間、または適格性評価と液 体再評価が必要でないときにトリガーされるメッセージには使用しないこと。
 {% endalert %}
@@ -378,7 +402,7 @@ Brazeが、あなたのコードに閉じるボタンや終了ボタンが含ま
 Braze では、キャンペーンを受信した後、ユーザーが指定のアクションや[コンバージョンイベント]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/)を実行する頻度を追跡できます。ユーザーが指定したアクションを実行した場合にコンバージョンがカウントされる期間は、最大 30 日間まで設定できます。
 
 {% endtab %}
-{% tab キャンバス %}
+{% tab Canvas %}
 
 キャンバスコンポーネントが完成していない場合は、残りのセクションを完成させます。キャンバスの残りの部分の構築方法、多変量テストとインテリジェントセレクションの実装方法などの詳細については、キャンバスドキュメントの「[キャンバスを構築する」]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-3-build-your-canvas)ステップを参照のこと。
 

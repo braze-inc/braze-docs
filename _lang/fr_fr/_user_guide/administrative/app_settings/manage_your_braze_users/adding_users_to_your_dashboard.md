@@ -29,13 +29,13 @@ Pour ajouter un nouvel utilisateur :
 Le service indiqué dans le profil d'un utilisateur détermine les types de communications qu'il reçoit de Braze. Ainsi, chacun ne reçoit que les communications et les alertes qui correspondent à la manière dont il utilise Braze.
 {% endalert %}
 
-![Champs de détails de l'utilisateur.]({% image_buster /assets/img/add_new_user_2.png %}){: style="max-width:60%;"}
+\![Champs de détails de l'utilisateur.]({% image_buster /assets/img/add_new_user_2.png %}){: style="max-width:60%;"}
 
 {:start="4"}
 
 4. Pour les utilisateurs qui ne sont pas des administrateurs, sélectionnez les [autorisations]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#editing-a-users-permissions) au niveau de l'entreprise et de l'espace de travail dont vous souhaitez que cet utilisateur dispose.
 
-![Autorisations au niveau de l'espace de travail avec une section pour les champs d'autorisations personnalisés.]({% image_buster /assets/img/add_new_user_3.png %})
+Autorisations au niveau de l'espace de travail avec une section pour les champs d'autorisations personnalisés.]({% image_buster /assets/img/add_new_user_3.png %})
 
 ### Exigences en matière d'adresse e-mail
 
@@ -53,11 +53,11 @@ La suspension d'un utilisateur met son compte dans un état inactif, où l'utili
 
 Pour suspendre un utilisateur, allez dans **Paramètres** > **Utilisateurs de l'entreprise**, recherchez son nom d'utilisateur et sélectionnez <i class="fa-solid fa-user-lock"></i> **Suspendre**.
 
-![Option de suspension d'un utilisateur.]({% image_buster /assets/img_archive/suspend_user.png %})
+\![Option permettant de suspendre un utilisateur.]({% image_buster /assets/img_archive/suspend_user.png %})
 
 Les administrateurs peuvent également suspendre un utilisateur en sélectionnant son nom dans la liste et en cliquant sur **Suspendre l'utilisateur** dans le pied de page.
 
-![Suspendez un utilisateur lorsque vous modifiez ses coordonnées.]({% image_buster /assets/img_archive/suspend_user2.png %}){: style="max-width:70%;"}
+Suspendez un utilisateur lorsque vous modifiez ses coordonnées.]({% image_buster /assets/img_archive/suspend_user2.png %}){: style="max-width:70%;"}
 
 ## Attribution de l'accès et des responsabilités des utilisateurs
 
@@ -67,23 +67,29 @@ Les administrateurs peuvent également suspendre un utilisateur en sélectionnan
 
 Pour supprimer un utilisateur, allez dans **Paramètres** > **Utilisateurs de l'entreprise**, recherchez son nom d'utilisateur et sélectionnez <i class="fa fa-trash-can"></i> **Supprimer l'utilisateur**.
 
-![Supprimer un utilisateur]({% image_buster /assets/img_archive/delete_user_new.png %})
+\![Supprimer un utilisateur]({% image_buster /assets/img_archive/delete_user_new.png %})
 
-Après la suppression d’un utilisateur, Braze ne conserve aucune des données de compt suivantes :
+Après la suppression d'un utilisateur, Braze ne conserve aucune des données de compte suivantes :
 
-- Tous les attributs de l’utilisateur
+- Tous les attributs que l'utilisateur avait
 - Adresse e-mail
 - Numéro de téléphone
-- ID utilisateur externe
+- ID externe
 - Genre
 - Pays
 - Langue
-- D’autres données similaires
+- Autres données similaires
 
 Braze conservera les données de compte suivantes :
 
 - Attributs personnalisés ou données de test associés à leur compte
-- Les campagnes ou les toiles qu'ils ont créées (mais le nom de l'utilisateur n'y apparaîtra pas, par exemple dans la colonne **Dernière modification par** ).
+- les campagnes ou les toiles qu'ils ont créées (mais le nom de l'utilisateur n'y apparaîtra pas, par exemple dans la colonne **Dernière modification par** ).
+
+### Impact de la suppression d'un utilisateur du tableau de bord
+
+Lorsqu'un utilisateur de tableau de bord est supprimé, il n'y aura pas d'impact significatif sur les ressources qu'il a créées dans le tableau de bord, telles que les campagnes, les segments et les Canevas. Toutefois, il est important de noter que le champ **Created By (Créé par)** de ces ressources affichera une valeur "null" au lieu de l'adresse e-mail de l'utilisateur supprimé.
+
+Si un nouvel utilisateur du tableau de bord est créé par la suite avec la même adresse e-mail que l'utilisateur supprimé, Braze ne réassociera pas les ressources créées par l'utilisateur supprimé au nouvel utilisateur. Le nouvel utilisateur du tableau de bord fera table rase du passé et ne sera pas crédité en tant que créateur des ressources existantes dans le tableau de bord.
 
 ## Résolution des problèmes
 

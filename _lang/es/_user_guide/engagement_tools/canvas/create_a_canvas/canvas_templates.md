@@ -1,5 +1,5 @@
 ---
-nav_title: Crear una plantilla de Canvas
+nav_title: Crear una plantilla Canvas
 article_title: Crear una plantilla de Canvas
 alias: "/canvas_templates/"
 page_order: 0.5
@@ -12,7 +12,7 @@ page_type: reference
 > Este artículo de referencia explica cómo crear y administrar plantillas para Canvas. El uso de plantillas puede perfeccionar tu mensajería creando un marco coherente que puede personalizarse fácilmente para ajustarse a tus objetivos específicos en todos tus Lienzos.
 
 {% alert tip %}
-¡Ahorra tiempo y agiliza tu creación de Canvas utilizando [las plantillas de Braze](#available-braze-templates) Canvas! Navega por nuestra biblioteca de plantillas prediseñadas para encontrar una que se adapte a tu caso de uso y personalízala para satisfacer tus necesidades específicas.
+¡Ahorra tiempo y agiliza tu creación de Canvas utilizando [las plantillas Braze Canvas](#available-braze-templates)! Navega por nuestra biblioteca de plantillas prediseñadas para encontrar una que se adapte a tu caso de uso y personalízala para satisfacer tus necesidades específicas.
 {% endalert %}
 
 ## Método 1: Crear a partir de un Canvas existente
@@ -21,13 +21,13 @@ page_type: reference
 
 En el panel de Braze, ve a **Mensajería** > **Canvas** y selecciona un Canvas existente que quieras utilizar como plantilla.
 
-### Paso 2: Crea tu plantilla
+### Paso 2: Crea tu plantilla
 
 En el editor de Canvas, selecciona **Editar Canvas** o **Editar borrador**, dependiendo de si tu Canvas está activo o en borrador. Despliega el desplegable **Guardar como borrador** en el pie de página y selecciona **Guardar como plantilla**.
 
-![]({% image_buster /assets/img/save_canvas_as_template.png %})
+\![]({% image_buster /assets/img/save_canvas_as_template.png %})
 
-### Paso 3: Guarda tu plantilla
+### Paso 3: Guarda tu plantilla
 
 A continuación, da un nombre a tu plantilla y añade las etiquetas pertinentes. A continuación, selecciona **Guardar**. Tu plantilla ya está lista para utilizarla para crear un Canvas, lo que te da una ventaja con la configuración básica y los pasos ya establecidos.
 
@@ -38,16 +38,16 @@ A continuación, da un nombre a tu plantilla y añade las etiquetas pertinentes.
 En el panel de Braze, ve a **Plantillas** > **Plantillas Canvas**.
 
 {% alert note %}
-Si utilizas la navegación antigua, puedes encontrar esta página en **Interacción** > **plantillas y medios** > **plantillas Canvas**.
+Si utilizas la navegación antigua, puedes encontrar esta página en **Interacción** > **Plantillas & Medios** > Plantillas Canvas.
 {% endalert %}
 
-### Paso 2: Crear una plantilla nueva
+### Paso 2: Crear una plantilla nueva
 
 Selecciona **Crear plantilla** y comienza a configurar los detalles de tu Canvas. Puedes empezar dando un nombre a tu plantilla Canvas.
 
-![Una plantilla Canvas de ejemplo llamada "Plantilla Canvas de venta anual" con la descripción "Utilizar para la promoción anual de primavera".]({% image_buster /assets/img/canvas_template_example.png %})
+\![Una plantilla Canvas de ejemplo llamada "Plantilla Canvas de venta anual" con la descripción "Utilizar para la promoción anual de primavera".]({% image_buster /assets/img/canvas_template_example.png %})
 
-### Paso 3: Personaliza tu plantilla
+### Paso 3: Personaliza tu plantilla
 
 A continuación, personaliza tu plantilla [configurando tu Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2-set-up-your-canvas). Puedes decidir cuándo deben entrar los usuarios en el Canvas, determinar qué usuarios pueden entrar en este Canvas, ajustar tu configuración de envío y construir tu recorrido de usuario para la plantilla.
 
@@ -66,12 +66,12 @@ Hay dos formas de utilizar tu plantilla al componer un Canvas:
 
 Braze dispone de una selección de plantillas de Canvas que puedes consultar y utilizar como mejores prácticas para casos de uso comunes. Aunque estas plantillas no se pueden editar, puedes verlas en **Plantillas** > **Plantillas Braze** o utilizarlas en tus Lienzos.
 
-![Plantillas Braze en la sección de plantillas Canvas con seis plantillas disponibles.]({% image_buster /assets/img/braze_canvas_templates.png %})
+\![Plantillas Braze en la sección de plantillas Canvas con seis plantillas disponibles.]({% image_buster /assets/img/braze_canvas_templates.png %})
 
 Selecciona una de las siguientes plantillas disponibles para utilizarla como referencia o como Canvas.
 
 {% tabs %}
-{% tab Intención abandonada %}
+{% tab Abandoned Intent %}
 
 Interactúa con los usuarios en tiempo real para animarles a completar sus compras.
 
@@ -82,7 +82,7 @@ Ten en cuenta lo siguiente cuando utilices esta plantilla:
 - Rellena los datos en el paso Sincronizar audiencia.
 
 {% endtab %}
-{% tab De nuevo en stock %}
+{% tab Back In Stock %}
 
 Impulsa las compras notificando a tus usuarios cuando un artículo vuelve a estar disponible con mensajes personalizados. Ten en cuenta lo siguiente cuando utilices esta plantilla:
 
@@ -91,7 +91,7 @@ Impulsa las compras notificando a tus usuarios cuando un artículo vuelve a esta
 - En los pasos de Mensaje en todo el Canvas, actualiza el Liquid para hacer referencia a tu catálogo.
 
 {% endtab %}
-{% tab Adopción de características %}
+{% tab Feature Adoption %}
 
 Entrega oportunamente mensajes personalizados para destacar las ventajas y consejos de uso. Ten en cuenta lo siguiente cuando utilices esta plantilla:
 
@@ -101,7 +101,7 @@ Entrega oportunamente mensajes personalizados para destacar las ventajas y conse
 - Configura los atributos personalizados en el paso Mensaje llamado "Encuesta de opinión" para captar el sentimiento de la opinión.
 
 {% endtab %}
-{% tab Usuario caducado %}
+{% tab Lapsed User %}
 
 Haz que los usuarios vuelvan a tu aplicación con incentivos basados en sus interacciones anteriores. Ten en cuenta lo siguiente cuando utilices esta plantilla:
 
@@ -110,14 +110,14 @@ Haz que los usuarios vuelvan a tu aplicación con incentivos basados en sus inte
 - Configura el paso Sincronización de audiencias con los socios y audiencias para tu caso de uso.
 
 {% endtab %}
-{% tab Incorporación %}
+{% tab Onboarding %}
 
 Crea trayectos de incorporación que promuevan una fuerte adopción inicial y fomenten relaciones duraderas con tus usuarios. Ten en cuenta lo siguiente cuando utilices esta plantilla:
 
 - En el paso Rutas de audiencia denominado "División de la audiencia", considera la posibilidad de personalizar las acciones clave para los usuarios comprometidos. En la plantilla, el filtro de segmento es "Ha hecho clic en el correo electrónico para el paso Correo electrónico de bienvenida".
 
 {% endtab %}
-{% tab Comentarios posteriores a la compra %}
+{% tab Post-Purchase Feedback %}
 
 Orquesta experiencias personalizadas que te permitan responder a los comentarios y establecer relaciones con tus usuarios. Ten en cuenta lo siguiente cuando utilices esta plantilla:
 
@@ -156,9 +156,9 @@ Si se conceden permisos tanto a nivel de espacio de trabajo como de equipo, se d
 
 ### ¿Puedo guardar un paso incompleto en una plantilla Canvas?
 
-Sí, puedes guardar pasos incompletos como plantilla de Canvas. Sin embargo, cuando se utilice la plantilla, habrá un error en el botón **Guardar plantilla** que indica lo que se necesita para lanzar el Canvas.
+Sí, puedes guardar pasos incompletos como plantilla de Canvas. Sin embargo, cuando se utilice la plantilla, aparecerá un error en el botón **Guardar plantilla** que indica lo que se necesita para lanzar el Canvas.
 
-### ¿Puedo guardar la configuración de mi constructor de Canvas como una plantilla o sólo puedo guardar los pasos? 
+### ¿Puedo guardar la configuración de mi constructor de Canvas como una plantilla, o sólo puedo guardar los pasos? 
 
-Sí, puedes guardar configuraciones en el constructor de Canvas dentro de una plantilla de Canvas. Por ejemplo, si piensas utilizar a menudo una combinación de segmentos y filtros, puedes guardar esta configuración de **audiencia objetivo** como parte de tu plantilla de Canvas.
+Sí, puedes guardar la configuración en el constructor de Canvas dentro de una plantilla de Canvas. Por ejemplo, si piensas utilizar a menudo una combinación de segmentos y filtros, puedes guardar esta configuración de **audiencia objetivo** como parte de tu plantilla de Canvas.
 

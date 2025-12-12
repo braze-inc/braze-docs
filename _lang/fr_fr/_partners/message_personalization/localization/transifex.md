@@ -76,4 +76,3 @@ Cet extrait de code utilise l'API de traduction des ressources Transifex et l'at
 
 
 [16]: [success@braze.com](mailto:success@braze.com)
-[31]: https://docs.transifex.com/api/translation-strings

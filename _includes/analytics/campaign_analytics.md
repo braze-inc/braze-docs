@@ -239,7 +239,7 @@ Regarding how impressions are logged, there are some nuances between web, Androi
 
 #### Unique Recipients versus Unique Impressions
 
-There are a few metrics available that cover the visibility of your message. This includes _Messages Sent_, _Unique Recipients_, and _Unique Impressions_. In particular, the difference between _Unique Recipients_ and _Unique Impressions_ can be a bit confusing. Let's use a few example scenarios to understand these metrics better.
+There are a few metrics available that cover the visibility of your message. This includes _Unique Recipients_ and _Unique Impressions_. Let's use a few example scenarios to understand these metrics better.
 
 Let’s say you view a Content Card today, then receive a new card from the same campaign tomorrow, and again the day after tomorrow—you will be counted as a _Unique Recipient_ three times. However, you will only be counted for one _Unique Impression_. You’ll also be included in the number of _Messages Sent_, as the card was available on your device.
 
@@ -287,7 +287,7 @@ For the full definitions of all Banners metrics, refer to the [Report Metrics Gl
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-clicks">Unique Clicks</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Clicks' %} Each user is only counted once.</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Clicks No Dispatch ID' %} Each user is only counted once.</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#primary-conversions">Primary Conversions</a></td>
@@ -308,19 +308,19 @@ For the full definitions of all Banners metrics, refer to the [Report Metrics Gl
     </tbody>
 </table>
 
-#### Unique Recipients versus Unique Impressions
+#### Banner metrics calculation examples
 
-There are a few metrics available that cover the visibility of your message. This includes _Messages Sent_, _Unique Recipients_, and _Unique Impressions_. In particular, the difference between _Unique Recipients_ and _Unique Impressions_ can be a bit confusing. Let’s use a few example scenarios to understand these metrics better.
+There are a few metrics available that cover the visibility of your message. This includes _Unique Recipients_ and _Unique Impressions_. Let’s use a few example scenarios to understand these metrics better.
 
-Let’s say you view a Banner today, then view the same Banner tomorrow, and again the day after tomorrow—you will be counted as a _Unique Recipient_ three times. However, you will only be counted for one _Unique Impression_. You’ll also be included in the number of _Messages Sent_, as the card was available on your device.
+Let's say you view a Banner today, then view the same Banner tomorrow, and again the day after tomorrow—you will be counted as a _Unique Recipient_ three times. However, you will only be counted for one _Unique Impression_.
 
-As another example, suppose you see five _Unique Impressions_ on a Banner campaign showing 150,000 _Messages Sent_. This means the Banner was made available (on the backend) to an audience of 150,000 users, but only five users’ devices performed all of the following steps after that send occurred:
+As another example, suppose you see five _Unique Impressions_ on a Banner campaign. This means only five users' devices performed all of the following steps:
 
 1. Started a session or the app explicitly requested a Banner sync (or both)
 2. Navigated to the Banners view
 3. SDK recorded an impression and logged it to the server
 
-Your _Messages Sent_ refers to the Banners available to be seen, while _Unique Recipients_ refers to the Banners that were actually seen.
+_Unique Recipients_ refers to the Banners that were actually seen.
 
 {% elsif include.channel == "email" %}
 
@@ -409,7 +409,7 @@ Note that _Deferrals_ are currently only available using Currents or Braze Snowf
 
 ##### Estimated real open rate {#estimated-real-open-rate}
 
-This statistic uses a proprietary analytical model created by Braze to reconstruct an estimate of the campaign's unique open rate as if machine opens did not exist. While we receive labels of *Machine Opens* on some open events from email senders (see above), these labels can often label actual opens as real opens. In other words, the *Other Opens* are likely an underestimate of real opens (by actual users). Instead, Braze uses click data from each campaign to infer the rate at which actual humans opened the message. This compensates for various machine opening mechanisms, including Apple’s MPP.
+This statistic uses a proprietary analytical model created by Braze to reconstruct an estimate of the campaign's unique open rate as if machine opens did not exist. While we receive labels of *Machine Opens* on some open events from email senders (see above), these labels can often label actual opens as machine opens. In other words, the *Other Opens* are likely an underestimate of real opens (by actual users). Instead, Braze uses click data from each campaign to infer the rate at which actual humans opened the message. This compensates for various machine opening mechanisms, including Apple’s MPP.
 
 _Estimated Real Open Rate_ is calculated 36 hours after email sending has begun and is recalculated every 24 hours thereafter. If a campaign recurs, the estimate is recalculated 36 hours after another send occurs.
 
@@ -418,6 +418,21 @@ Typically around 10,000 delivered emails are required for the statistic to be co
 ###### Limitations
 
 Estimated Real Open Rate is only available in campaigns, and is not reported in Current events. This metric is only retroactively calculated for active campaigns launched before November 14, 2023.
+
+##### Handling increases in click rates
+
+Open rates can be an insightful metric to track for your email campaigns. However, these open rates aren't necessarily accurate indicators of human engagement with email campaigns. An open event, by definition, occurs when a user opens an email, meaning a transparent open tracking pixel was successfully downloaded. 
+
+Additionally, use of security scanning tools can inflate open rates. Some of these tools protect their users by scanning incoming emails for malicious content by clicking links to verify their legitimacy. These clicks are often referred to as "bot clicks" or "non-human interaction" (NHI). 
+
+Ultimately, after an email leaves our servers, we have limited visibility into what happens next, but here are recommendations for managing NHI affecting your results:
+
+1. Be aware that this can happen to any sender and nearly any recipient. Clicks, like opens, are not entirely reliable indicators of human interaction with your messages, meaning NHI is not preventable.
+2. Higher positive engagement tends to correlate with lower NHI, so it's important to follow email messaging [best practices]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices). This includes getting explicit permission from your users to send email and sunsetting unengaged subscribers on a regular cadence. 
+3. Use HTTPS links in your emails when possible. NHI is less common for senders using secure links.
+4. If you use a single-click unsubscribe process, consider creating a [preference center]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/overview) that takes users to a page to edit and manage their notification preferences. This can be helpful because NHI can inadvertently unsubscribe users.
+5. Consider using [other metrics]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/#email-performance) to measure your email marketing success, such as conversions, app sessions, or site visits.
+6. Add a hidden link in your email campaigns. This link would be something that a human wouldn't notice like white-on-white text or a punctuation mark. Bots tend to click all links, so you can conclude that users generating click events on the invisible link are actually the result of NHI, so the open or click doesn't necessarily indicate positive engagement.
 
 {% elsif include.channel == "in-app message" %}
 
@@ -523,7 +538,33 @@ Here is a breakdown of some key metrics you may see while reviewing your message
 
 ##### Tracking unsubscribes
 
-Push unsubscribes are not included as a metric in campaign analytics. Refer to [Tracking push unsubscribes]({{site.baseurl}}/help/help_articles/push/push_unsubscribes) for steps on how to manually track this metric.
+Push unsubscribes aren't included as a metric in campaign analytics, and depend on updates to a user’s push status from providers like Apple or Google. These updates can be infrequent and unpredictable. As a result, push unsubscribes are not included as a metric in push campaign analytics. 
+
+However, manually tracking push unsubscribes can still provide valuable insights into user responses to your notification frequency and content relevance. Here are two options for tracking push unsubscribes: Using segment filters or custom filters.
+
+{% tabs local %}
+{% tab Segment filters %}
+
+You can create a segment to identify users who aren't push enabled, meaning they're not subscribed or opted-in and don't have a [foreground push token]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/#push-tokens). For example, to see the number of unsubscribes in your app, you would use an "OR" combination of the following segments: 
+
+- `Background or Foreground Push Enabled is false`
+- `Has Uninstalled`
+
+![The Segment Builder section with the filter "Background or Foreground Push Enabled for App" for an app is false, and the filter "Has Uninstalled" are selected.]({% image_buster /assets/img/push_unsub_segment_example.png %})
+
+Note the segmentation filters are approximate and can't be specifically tied to a date and campaign.
+
+{% endtab %}
+{% tab Custom filters %}
+
+{% alert important %}
+Logging a custom event for subscription change will log [data points]({{site.baseurl}}/user_guide/data_and_analytics/data_points#consumption-count). Alternatively, use segment filters to identify and target users who aren't push enabled.
+{% endalert %}
+
+For a different workaround, we also recommend creating a custom event for push unsubscribes based on whether a user's push enabled status is `true` or `false` in order to track this metric.
+
+{% endtab %}
+{% endtabs %}
 
 ##### Understanding opens
 

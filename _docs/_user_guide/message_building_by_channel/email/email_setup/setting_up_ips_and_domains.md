@@ -32,6 +32,8 @@ After receiving your email, we'll get to work configuring your IPs, domains and 
 
 After your IPs, domains, subdomains, and IP pools are configured, we'll send you a list of DNS records. Ask your engineers and developers to add these DNS records where needed, and after they have been added, let the Braze Onboarding team know.
 
+{% multi_lang_include dns_records.md %}
+
 ### Next steps
 
 We'll check your setup and validate all information in our internal systems. The Braze Onboarding team will let you know when you're ready to go, or if there are issues with your DNS records that you must address with your engineering team.

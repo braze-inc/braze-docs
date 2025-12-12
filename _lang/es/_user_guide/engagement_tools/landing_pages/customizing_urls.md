@@ -13,6 +13,8 @@ page_order: 1
 
 Cuando [conectes tu dominio a Braze](#connecting-your-domain-to-braze), se utilizará como dominio predeterminado para todas las páginas de destino. Por ejemplo, si conectas el subdominio `forms.example.com`, las URL de tu página de destino serían ahora `forms.example.com/holiday-sale`.
 
+El número de dominios personalizados que puedes conectar a tu cuenta Braze depende [del nivel de]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/#plan-tiers) tu [plan]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/#plan-tiers). Para aumentar tu límite, ponte en contacto con tu director de cuentas Braze.
+
 ## Conectar tu dominio a Braze
 
 Para conectar un dominio a tu cuenta Braze, haz que un administrador siga los pasos que se indican a continuación.
@@ -22,7 +24,7 @@ Para conectar un dominio a tu cuenta Braze, haz que un administrador siga los pa
 3. Copia y pega los registros **TXT** y **CNAME** en la configuración de DNS de tu proveedor de dominios.
 4. Vuelve al panel de Braze para verificar la conexión.
 
-![Página de configuración de la página de destino con un registro TXT y dos CNAME listados con sus respectivos nombres y valores.][1]
+\![Página de configuración de la página de destino con un registro TXT y dos CNAME listados con sus respectivos nombres y valores.]({% image_buster /assets/img/landing_pages/connect_subdomain.png %})
 
 {% alert note %}
 Dependiendo de tu proveedor de dominios, la conexión puede tardar hasta 48 horas. Una vez completado el proceso, empezaremos a utilizar tu dominio personalizado para tus páginas de destino en el panel de Braze.
@@ -35,7 +37,7 @@ Si eres administrador de Braze, puedes eliminar un dominio previamente configura
 1. Ve a **Configuración** > **Configuración de la página de destino**.
 2. Selecciona **Eliminar dominio personalizado**
 3. Confirma la eliminación del dominio.
-4. Elimina los registros de DNS listados de la configuración de tu dominio.
+4. Elimina los registros de DNS enumerados de la configuración de tu dominio.
 
 {% alert important %}
 Cuando elimines un dominio personalizado, esa URL dejará de ser válida. Todas las páginas de destino que estaban utilizando este dominio volverán automáticamente al dominio predeterminado establecido por Braze.
@@ -71,4 +73,3 @@ No, actualmente sólo puedes conectar un subdominio a un espacio de trabajo.
 
 No, no puedes utilizar subdominios que ya estén en uso. Aunque estos subdominios son válidos, no pueden utilizarse para páginas de destino si ya están asignados a otros fines o tienen registros de DNS que entran en conflicto con los registros CNAME requeridos.
 
-[1]: {% image_buster /assets/img/landing_pages/connect_subdomain.png %}

@@ -1,26 +1,26 @@
 ---
-nav_title: Novas tentativas de conteúdo conectado
-article_title: Novas tentativas de conteúdo conectado
+nav_title: Tentativas de Conteúdo Conectado
+article_title: Tentativas de Conteúdo Conectado
 page_order: 5
-description: "Este artigo de referência aborda como lidar com as novas tentativas do recurso conteúdo conectado."
+description: "Este artigo de referência cobre como lidar com as tentativas de Conteúdo Conectado."
 
 ---
 
-# Uso da lógica de repetição para o Connected Content
+# Usando lógica de tentativa para Conteúdo Conectado
 
-> Esta página aborda como adicionar novas tentativas às suas chamadas de Connected Content.
+> Esta página cobre como adicionar tentativas às suas chamadas de Conteúdo Conectado.
 
-## Como funcionam as novas tentativas 
+## Como as tentativas funcionam 
 
-Como o Connected Content depende do recebimento de dados de APIs, uma API pode estar intermitentemente indisponível enquanto o Braze faz a chamada. Nesse caso, a Braze oferece suporte à lógica de tentar novamente para tentar novamente a solicitação usando o backoff exponencial.
+Como o Conteúdo Conectado depende de receber dados de APIs, uma API pode estar intermitentemente indisponível enquanto a Braze faz a chamada. Nesse caso, a Braze suporta lógica de tentativa para re-tentar a solicitação usando retrocesso exponencial.
 
 {% alert note %}
-O recurso de conteúdo conectado `:retry` não está disponível para mensagens no app.
+Conteúdo Conectado `:retry` não está disponível para mensagens no aplicativo.
 {% endalert %}
 
-## Uso da lógica de repetição
+## Usando lógica de tentativa
 
-Para usar a lógica de repetição, adicione a tag `:retry` à chamada do Connected Content, conforme mostrado no seguinte trecho de código:
+Para usar a lógica de tentativa, adicione a tag `:retry` à chamada de Conteúdo Conectado, conforme mostrado no seguinte trecho de código:
 
 {% raw %}
 ```
@@ -29,16 +29,16 @@ Para usar a lógica de repetição, adicione a tag `:retry` à chamada do Connec
 ```
 {% endraw %}
 
-Quando uma tag `:retry` for incluída na chamada de Connected Content, o Braze tentará repetir a chamada até cinco vezes.
+Quando uma tag `:retry` é incluída na chamada de Conteúdo Conectado, a Braze tentará re-tentar a chamada até cinco vezes.
 
-### Resultados de novas tentativas
+### Resultados das tentativas
 
-#### Quando uma nova tentativa for bem-sucedida
+#### Quando uma tentativa de re-tentativa é bem-sucedida
 
-Se uma nova tentativa for bem-sucedida, a mensagem será enviada e nenhuma outra tentativa será feita para essa mensagem.
+Se uma tentativa re-tentada for bem-sucedida, a mensagem é enviada e nenhuma nova tentativa é feita para essa mensagem.
 
-#### Quando a chamada à API falhar e as novas tentativas estiverem ativadas
+#### Quando a chamada da API falha e as tentativas estão habilitadas
 
-Se a chamada API falhar e isso estiver ativado, o Braze tentará novamente a chamada, respeitando o [limite de frequência]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#delivery-speed-rate-limiting) que você definiu para cada reenvio. O Braze moverá todas as mensagens com falha para o final da fila e adicionará minutos adicionais, se necessário, ao total de minutos necessários para enviar sua mensagem.
+Se a chamada da API falhar e isso estiver habilitado, a Braze tentará re-tentar a chamada respeitando o [limite de taxa]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#delivery-speed-rate-limiting) que você definiu para cada reenvio. A Braze moverá quaisquer mensagens falhadas para o final da fila e adicionará minutos adicionais, se necessário, ao total de minutos que levaria para enviar sua mensagem.
 
-Se a chamada do Connected Content apresentar erros mais de cinco vezes, a mensagem será abortada, de forma semelhante à maneira como uma [tag de mensagem abortada]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/) é disparada.
+Se a chamada de Conteúdo Conectado falhar mais de cinco vezes, a mensagem é abortada, semelhante a como um [tag de mensagem abortada]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/) é acionada.

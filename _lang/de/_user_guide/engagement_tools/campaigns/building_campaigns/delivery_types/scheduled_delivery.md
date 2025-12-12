@@ -16,7 +16,7 @@ tool: Campaigns
 
 Wenn Sie sich dafür entscheiden, eine Nachricht zu versenden, sobald sie gestartet wurde, beginnt der Versand Ihrer Nachricht, sobald Sie die Erstellung Ihrer Kampagne abgeschlossen haben.
 
-![Der Abschnitt "Zustellung" mit ausgewähltem "Zeitplan" und der Option, den Versand zeitlich zu planen, sobald die Kampagne gestartet wird][10]
+![Der Abschnitt "Zustellung" mit ausgewählter Option "Geplant" und dem Zeitplan für den Versand, sobald die Kampagne gestartet ist.]({% image_buster /assets/img_archive/schedule_immediately.png %})
 
 Diese Art von Zeitplan ist für einmalige Kampagnen gedacht, die Sie sofort versenden möchten, wie z. B. Nachrichten über ein aktuelles Event. Eine Sport-App kann mit dieser Option zum Beispiel Push-Benachrichtigungen über Spielstandsaktualisierungen planen. Außerdem können Sie mit dieser Option Testnachrichten, die nur an Sie selbst oder Ihr Team gerichtet sind, sofort versenden. 
 
@@ -28,11 +28,11 @@ Wenn Sie eine Kampagne für einen bestimmten Zeitraum planen, können Sie die Ta
 
 Wenn Sie die Option **Geplante Zustellung** wählen und sich nicht für den Versand zur Ortszeit des Benutzers entscheiden, wird Ihre Kampagne gemäß der Zeitzone versendet, die Sie auf der Seite **Unternehmenseinstellungen** angegeben haben.
 
-![Die Zeitplan-Optionen für den Versand einer Kampagne zu einer bestimmten Zeit.][9]
+![Die Zeitplan-Optionen für den Versand einer Kampagne zu einer bestimmten Zeit.]({% image_buster /assets/img_archive/schedule_designated.png %})
 
 ### Kampagnen für die lokale Zeitzone
 
-Sie können die Nachricht in den lokalen Zeitzonen der Nutzer übermitteln, damit die Mitglieder Ihres internationalen Publikums keine Benachrichtigung zu ungünstigen Zeiten erhalten. Kampagnen für die Ortszeit müssen 24 Stunden vorher in den Zeitplan eingebracht werden, um sicherzustellen, dass Nutzer:innen aus allen Zeitzonen sie erhalten können. Lesen Sie die [Kampagnen-FAQ][25] ], um zu verstehen, wie Kampagnen zur Ortszeit funktionieren und welche Regeln für die Zustellung gelten.
+Sie können die Nachricht in den lokalen Zeitzonen der Nutzer übermitteln, damit die Mitglieder Ihres internationalen Publikums keine Benachrichtigung zu ungünstigen Zeiten erhalten. Kampagnen für die Ortszeit müssen 24 Stunden vorher in den Zeitplan eingebracht werden, um sicherzustellen, dass Nutzer:innen aus allen Zeitzonen sie erhalten können. Lesen Sie die [FAQ zu Kampagnen]({{site.baseurl}}/user_guide/engagement_tools/campaigns/faq/#how-do-i-schedule-a-local-time-zone-campaign/), um zu verstehen, wie Kampagnen zur Ortszeit funktionieren und welche Regeln für die Zustellung gelten.
 
 Segmente, die mit Kampagnen für Ortszeiten angesprochen werden, sollten mindestens ein 2-Tage-Fenster enthalten, um Nutzer:innen aus allen Zeitzonen einzubeziehen. Wenn Ihre Kampagne beispielsweise für den Versand am Abend geplant ist, aber nur ein Zeitfenster von 1 Tag hat, könnten einige Nutzer:innen aus dem Segment herausfallen, wenn ihre Zeitzone erreicht wird. Beispiele für Filter, die ein 2-Tage-Fenster erzeugen, sind "zuletzt verwendet vor mehr als 1 Tag" und "zuletzt verwendet vor weniger als 3 Tagen" oder "zuerst gekauft vor mehr als 7 Tagen" und "zuerst gekauft vor weniger als 9 Tagen".
 
@@ -42,9 +42,9 @@ Festgelegte Zeitpläne eignen sich am besten für im Voraus geplante Nachrichten
 
 ## Option 3: Intelligentes Timing
 
-[Intelligentes Timing][8] ermöglicht es Ihnen, jedem Nutzer:innen eine Kampagne zu einem anderen Zeitpunkt zuzustellen. Braze berechnet die Zeit jedes einzelnen Nutzers auf der Grundlage der Zeit, in der dieser Nutzer typischerweise mit Ihrer App und ihren Benachrichtigungen interagiert. Sie können optional festlegen, dass Kampagnen mit intelligentem Timing nur während eines bestimmten Teils des Tages gesendet werden. Wenn Sie beispielsweise Nutzer:innen über eine Aktion benachrichtigen, die um Mitternacht endet, möchten Sie vielleicht, dass Ihre Nachrichten bis spätestens 22 Uhr versendet werden.
+[Intelligentes Timing]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/) ermöglicht es Ihnen, jedem Nutzer:innen eine Kampagne zu einer anderen Zeit zuzustellen. Braze berechnet die Zeit jedes einzelnen Nutzers auf der Grundlage der Zeit, in der dieser Nutzer typischerweise mit Ihrer App und ihren Benachrichtigungen interagiert. Sie können optional festlegen, dass Kampagnen mit intelligentem Timing nur während eines bestimmten Teils des Tages gesendet werden. Wenn Sie beispielsweise Nutzer:innen über eine Aktion benachrichtigen, die um Mitternacht endet, möchten Sie vielleicht, dass Ihre Nachrichten bis spätestens 22 Uhr versendet werden.
 
-![Die zeitbasierten Planungsoptionen für die Verwendung von intelligentem Timing, um eine Kampagne zu der bei allen Nutzer:innen beliebtesten Zeit für die Nutzung der App zu versenden.][14]
+![Die zeitbasierten Planungsoptionen für die Verwendung von Intelligent Timing, um eine Kampagne zu der bei allen Nutzer:innen beliebtesten Zeit für die Nutzung der App zu versenden.]({% image_buster /assets/img_archive/schedule_intelligent.png %})
 
 ### Regeln für die Zustellung
 
@@ -56,10 +56,3 @@ Wenn das Profil eines Benutzers nicht über genügend Daten verfügt, um eine op
 
 Kampagnen mit intelligentem Timing eignen sich am besten für einmalige und wiederkehrende Nachrichten, bei denen eine gewisse Flexibilität in Bezug auf die Zustellung gegeben ist, z. B. wenn sie sich nicht gut für Eilmeldungen oder zeitlich begrenzte Ankündigungen eignen.
 
-[3]: {% image_buster /assets/img_archive/time_based.png %}
-[8]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/
-[9]: {% image_buster /assets/img_archive/schedule_designated.png %}
-[10]: {% image_buster /assets/img_archive/schedule_immediately.png %}
-[14]: {% image_buster /assets/img_archive/schedule_intelligent.png %}
-[25]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/faq/#how-do-i-schedule-a-local-time-zone-campaign/
-[34]: {% image_buster /assets/img_archive/customEventProperties.png %}

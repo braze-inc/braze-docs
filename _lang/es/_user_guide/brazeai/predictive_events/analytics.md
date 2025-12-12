@@ -25,7 +25,7 @@ La distribución de las puntuaciones de probabilidad de toda la audiencia de pre
 
 A medida que muevas los controles deslizantes a diferentes posiciones, la barra de la mitad izquierda del panel te informará de cuántos usuarios de toda la audiencia de predicción se dirigirían utilizando la parte de la población que hayas seleccionado.
 
-![]({% image_buster /assets/img/purchasePrediction/purchaseTargeting.png %}){: style="max-width:90%"} 
+\![]({% image_buster /assets/img/purchasePrediction/purchaseTargeting.png %}){: style="max-width:90%"} 
 
 ## Puntuación de probabilidad {#purchase_score}
 
@@ -43,7 +43,7 @@ Las puntuaciones y las categorías correspondientes se actualizarán según el c
 
 En la mitad derecha del panel, debajo del gráfico, mostramos estimaciones de la precisión esperada de dirigirte a la parte de la audiencia de predicción que seleccionaste de dos formas: cuántos usuarios seleccionados se espera que realicen el evento y cuántos se espera que no lo hagan.
 
-![La audiencia seleccionada y la precisión estimada se muestran en el panel de Braze.]({% image_buster /assets/img/purchasePrediction/purchaseEstimatedResults.png %})
+La audiencia seleccionada y la precisión estimada se muestran en el panel de Braze.]({% image_buster /assets/img/purchasePrediction/purchaseEstimatedResults.png %})
 
 ### Rendimiento esperado
 
@@ -57,7 +57,7 @@ Puedes utilizar la precisión estimada para comprobar cuántos usuarios seleccio
 
 Todos los modelos de aprendizaje automático cometen errores. Puede haber usuarios en tu selección que tengan una puntuación de probabilidad alta, pero que no acaben realizando realmente el evento. No realizarían el acto si no hicieras nada. Serán objetivo de todos modos, por lo que se trata de un error o "falso positivo". La anchura total de esta segunda barra de progreso representa el número previsto de usuarios que no realizarán el evento, y la parte rellena es la de aquellos a los que se dirigirá incorrectamente utilizando la posición actual del deslizador.
 
-Utilizando esta información, te animamos a que decidas cuántos de los verdaderos positivos quieres capturar, cuántos falsos positivos puedes aceptar que sean objetivo, y cuál es el coste de los errores para tu empresa. Si estás enviando una promoción valiosa, quizá quieras dirigirte sólo a los no compradores (falsos positivos) favoreciendo el lado izquierdo del gráfico. O puede que quieras animar a los compradores que compran a menudo (verdaderos positivos) a que vuelvan a hacerlo seleccionando una sección de usuarios que favorezca el lado derecho del gráfico.
+Utilizando esta información, te animamos a que decidas cuántos de los verdaderos positivos quieres capturar, cuántos falsos positivos puedes aceptar que sean objetivo, y cuál es el coste de los errores para tu empresa. Si envías una promoción valiosa, quizá quieras dirigirte sólo a los no compradores (falsos positivos) favoreciendo el lado izquierdo del gráfico. O puede que quieras animar a los compradores que compran a menudo (verdaderos positivos) a que vuelvan a hacerlo seleccionando una sección de usuarios que favorezca el lado derecho del gráfico.
 
 ## Calidad de la predicción {#prediction_quality}
 
@@ -65,7 +65,7 @@ Utilizando esta información, te animamos a que decidas cuántos de los verdader
 
 ## Tabla de correlación de sucesos {#correlation_table}
 
-Este análisis muestra los atributos o comportamientos de los usuarios que están correlacionados con los sucesos de la audiencia de predicción. Los atributos evaluados son Edad, País, Sexo e Idioma. Los comportamientos que se analizan incluyen sesiones, compras, total de dólares gastados, eventos personalizados y campañas y pasos en Canvas recibidos en los últimos 30 días.
+Este análisis muestra los atributos o comportamientos de los usuarios que están correlacionados con los acontecimientos de la audiencia de predicción. Los atributos evaluados son Edad, País, Sexo e Idioma. Los comportamientos que se analizan incluyen sesiones, compras, total de dólares gastados, eventos personalizados y campañas y pasos en Canvas recibidos en los últimos 30 días.
 
 Las tablas se dividen en izquierda y derecha para los más y los menos propensos a realizar el evento, respectivamente. Para cada fila, en la columna de la derecha se muestra la proporción en la que los usuarios con el comportamiento o atributo de la columna de la izquierda tienen más o menos probabilidades de realizar el evento. Este número es el cociente de las puntuaciones de probabilidad de los usuarios con este comportamiento o atributo dividido por la probabilidad de realizar el evento de toda la audiencia de predicción.
 

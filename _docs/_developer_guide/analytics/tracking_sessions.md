@@ -23,6 +23,10 @@ For wrapper SDKs not listed, use the relevant native Android or Swift method ins
 To subscribe to session updates, use the `subscribeToSessionUpdates()` method.
 
 {% tabs %}
+{% tab web %}
+At this time, subscribing to  session updates are not supported for the Web Braze SDK.
+{% endtab %}
+
 {% tab android %}
 {% subtabs %}
 {% subtab java %}
@@ -107,10 +111,6 @@ BRZCancellable *cancellable = [AppDelegate.braze subscribeToSessionUpdates:^(BRZ
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-
-{% tab web %}
-At this time, subscribing to  session updates are not supported for the Web Braze SDK.
-{% endtab %}
 {% endtabs %}
 
 ### Step 2: Test session tracking (optional)
@@ -128,6 +128,15 @@ App-specific details are only shown for users who have used more than one app.
 You can change the length of time that passes before a session automatically times out.
 
 {% tabs %}
+{% tab web %}
+By default, the session timeout is set to `30` minutes. To change this, pass the `sessionTimeoutInSeconds` option to your [`initialize`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize) function. It can be set to any integer greater than or equal to `1`. 
+
+```js
+// Sets the session timeout to 15 minutes instead of the default 30
+braze.initialize('YOUR-API-KEY-HERE', { sessionTimeoutInSeconds: 900 });
+```
+{% endtab %}
+
 {% tab android %}
 By default, the session timeout is set to `10` seconds. To change this, open your `braze.xml` file and add the `com_braze_session_timeout` parameter. It can be set to any integer greater than or equal to `1`.
 
@@ -167,15 +176,6 @@ AppDelegate.braze = braze;
 
 {% endsubtab %}
 {% endsubtabs %}
-{% endtab %}
-
-{% tab web %}
-By default, the session timeout is set to `30` minutes. To change this, pass the `sessionTimeoutInSeconds` option to your [`initialize`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize) function. It can be set to any integer greater than or equal to `1`. 
-
-```js
-// Sets the session timeout to 15 minutes instead of the default 30
-braze.initialize('YOUR-API-KEY-HERE', { sessionTimeoutInSeconds: 900 });
-```
 {% endtab %}
 {% endtabs %}
 

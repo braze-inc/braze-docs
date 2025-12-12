@@ -1,0 +1,546 @@
+event_documentation:
+  users.behaviors.CustomEvent:
+    description: This event occurs when a specific custom event is triggered. Use this to track when users perform custom events in your application.
+    api_tags:
+      - Custom Events
+    property_details:
+      - For Custom Events, the payload will also be populated with any [custom event properties]({{site.baseurl}}/user_guide/data/custom_data/custom_events#custom-event-properties) that are associated with the event.
+      - "For `ad_id`, `ad_id_type`, and `ad_tracking_enabled`, you need to explicitly collect the iOS IDFA and Android Google ad ID through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift), [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id)."
+      - "If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) data, reach out to your customer success manager or account manager to enable the feature flipper for sending `ad_id`."
+  users.behaviors.Purchase:
+    description: This event occurs when a user makes a purchase. Use this data to track when users purchase something in the application.
+    alert_tip: Purchases are special custom events and come with a JSON encoded string of custom event properties the same way custom events do.
+    api_tags:
+      - Purchases
+    property_details:
+      - For Purchase events, the payload will also be populated with any [purchase event properties]({{site.baseurl}}/user_guide/data/custom_data/purchase_events/#purchase-properties) that are associated with the event.
+      - "For `ad_id`, `ad_id_type`, and `ad_tracking_enabled`, you need to explicitly collect the iOS IDFA and Android Google ad ID through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift), [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id)."
+      - "If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) data, reach out to your customer success manager or account manager to enable the feature flipper for sending `ad_id`."
+  users.behaviors.app.FirstSession:
+    description: This event occurs when a user starts their first session in your application. Use this data to track when users start sessions.
+    alert_tip: When a user starts their first session, both a `FirstSession` and a `SessionStart` event are fired.
+    api_tags:
+      - Sessions
+  users.behaviors.app.SessionStart:
+    description: This event occurs when a user starts a session. Use this data to track when users start sessions.
+    alert_tip: When a user starts their first session, both a `FirstSession` and a `SessionStart` event are fired.
+    api_tags:
+      - Sessions
+  users.behaviors.app.SessionEnd:
+    description: This occurs when a user exits your application, therefore ending their current session. Use this data to track when sessions end, and along with the appropriate session start event, calculate the duration of their time in a session.
+    api_tags:
+      - Sessions
+  users.behaviors.Location:
+    description: This event is triggered when a user visits a specified location. Use this to track users triggering location events in your app.
+    api_tags:
+      - Locations
+    property_details:
+      - "For `ad_id`, `ad_id_type`, and `ad_tracking_enabled`, you need to explicitly collect the iOS IDFA and Android Google ad ID through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift), [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id)."
+      - "If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) data, reach out to your customer success manager or account manager to enable the feature flipper for sending `ad_id`."
+  users.behaviors.liveactivity.UpdateTokenChange:
+    description: This event occurs when Braze syncs Live Activity update token with the user
+    api_tags:
+      - Live Activity
+      - Update Token
+  users.behaviors.liveactivity.PushToStartTokenChange:
+    description: This event occurs when Braze syncs Live Activity push to start token with the user
+    api_tags:
+      - Live Activity
+      - Push To Start Token
+  users.behaviors.InstallAttribution:
+    description: This event occurs when an app installation is attributed to a source. Use this to track where your app installs are coming from.
+    api_tags:
+      - Attribution
+  users.behaviors.pushnotification.TokenStateChange:
+    description: This event occurs when a push token is inserted, updated or removed. Use this to track the states of push tokens.
+    api_tags:
+      - Push
+      - Token State Change
+    property_details:
+      -
+        - "The `push_token_foreground_push_disabled` field indicates whether the push token can receive foreground or background push."
+        - "If the user explicitly allowed push notification permission on their device, this will be `false`, and the token is able to receive foreground push notifications."
+        - "If the user explicitly denied push notification permission on their device, this will be `true`, and the token is only allowed with background push notifications."
+        - "If the push permission is unknown, this will be empty. By default, Braze will attempt to send foreground push notifications to the token."
+      -  
+        - "The `push_token_provisionally_opted_in` field only applies to iOS push tokens."
+        - "If you have [Provisional Authorization]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#provisional-push) set up, provisional tokens will have this field set to `true`. All other push tokens will be `false`."
+      - 
+        - "Whenever a push token enters Braze, its lifecycle events are recorded. There are three types of token change events (\"add\", \"update\", and \"remove\") recorded in the `push_token_state_change_type` field. Note the following details:"
+        - "For a new token that hasn't existed before, this ingests one \"add\" event."
+        - "For updating the token with the same token string on the same user (gateway or `foreground_push_disabled` or other \"secondary\" fields changed), this will ingest one \"update\" event on the same token."
+        - "If a token moved from one user to another user, this will ingest one \"remove\" event for the old user and one \"add\" event for the new user."
+        - "If the same user or device generates a new token, this will ingest one \"remove\" event for the old token and one \"add\" event for the new token."
+        - "If Braze is removing a token (for reasons like an uninstall or invalid token), this will ingest one \"remove\" event for the token."
+    
+  users.RandomBucketNumberUpdate:
+    description: This user event occurs every time a new user is created within their workspace. During this event, each new user gets assigned a random bucket number that you can then use to create uniformly-distributed segments of random users. Use this to group together a range of random bucket number values and compare performance across your campaigns and campaign variants.
+    api_tags:
+      - Random Bucket Number
+    alert_important: |
+      This Currents event is only available for customers that have purchased an "all events connector" and is only available for storage event connectors (such as Amazon S3, Microsoft Azure, and Google Cloud Storage).
+      <br><br>To enable this event and schedule the backfill for existing users' random bucket numbers in your workspace, contact your customer success manager.
+  users.messages.liveactivity.Send:
+    description: This event occurs when Braze backend makes a request to its provider regarding Live Activity
+    api_tags:
+      - Live Activity
+      - Sends
+  users.messages.liveactivity.Outcome:
+    description: This event occurs when Braze receives a response from a third party provider (e.g. APNs) after the Live Activity send
+    api_tags:
+      - Live Activity
+      - Outcome
+  users.messages.whatsapp.Click:
+    description: This event occurs when a user clicks a link or button in a WhatsApp message where the link's domain matches the click tracking domain.
+    api_tags:
+      - WhatsApp
+      - Clicks
+  users.messages.whatsapp.Read:
+    description: This event occurs when an WhatsApp message is read by the user.
+    api_tags:
+      - WhatsApp
+      - Read
+  users.messages.whatsapp.Delivery:
+    description: This event occurs when an WhatsApp message sent made it successfully to the user's device.
+    api_tags:
+      - WhatsApp
+      - Delivery
+  users.messages.whatsapp.Failure:
+    description: This event occurs when WhatsApp cannot deliver the message to the user. A hard bounce signifies a permanent deliverability failure.
+    api_tags:
+      - WhatsApp
+      - Failure
+  users.messages.whatsapp.Send:
+    description: This event occurs when a send request was successfully communicated between Braze and WhatsApp. Though, this does not mean the message was received by the user.
+    api_tags:
+      - WhatsApp
+      - Sends
+  users.messages.whatsapp.Abort:
+    description: This event occurs if a WhatsApp message was aborted based on Liquid aborts, etc.
+    api_tags:
+      - WhatsApp
+      - Abort
+  users.messages.whatsapp.InboundReceive:
+    description: This event occurs when one of your users sends a WhatsApp message to a phone number in one of your Braze WhatsApp subscription groups.
+    api_tags:
+      - WhatsApp
+      - Inbound Received
+  users.messages.contentcard.Abort:
+    description: This event occurs if a Content Card message was aborted based on Liquid aborts, etc.
+    api_tags:
+      - Abort
+      - Content Cards
+  users.messages.email.Abort:
+    description: This event occurs if an email message was aborted based on Liquid aborts, etc.
+    api_tags:
+      - Abort
+      - Email
+  users.messages.pushnotification.Abort:
+    description: This event occurs if a push notification message was aborted based on Liquid aborts, etc.
+    api_tags:
+      - Abort
+      - Push
+  users.messages.sms.Abort:
+    description: This event occurs if an SMS message was aborted based on Liquid aborts, etc.
+    api_tags:
+      - Abort
+      - SMS
+  users.messages.webhook.Abort:
+    description: This event occurs if a webhook message was aborted based on Liquid aborts, etc.
+    api_tags:
+      - Abort
+      - Webhooks
+  users.messages.webhook.Failure:
+    description: This event occurs if a webhook message was delivered but failed with an error response from the endpoint.
+    api_tags:
+      - Failure
+      - Webhooks
+  users.canvas.exit.PerformedEvent:
+    description: This event occurs when a user has exited a Canvas by performing an event.
+    api_tags:
+      - Exit
+      - Canvas
+  users.canvas.exit.MatchedAudience:
+    description: This event occurs when a user has exited a Canvas by matching an audience.
+    api_tags:
+      - Exit
+      - Canvas
+  users.canvas.experimentstep.SplitEntry:
+    description: This event occurs when a user enters a Canvas experiment step path.
+    api_tags:
+      - Canvas
+  users.canvas.experimentstep.Conversion:
+    description: This event occurs when a user convert for a Canvas experiment step.
+    api_tags:
+      - Canvas
+  users.messages.pushnotification.Send:
+    description: This event occurs when Braze processes a push message for a user, communicating this to Apple Push Notification Service or Fire Cloud Messaging. This does not mean the push was delivered to the device, just that a message was sent.
+    api_tags:
+      - Push
+      - Sends
+    property_details:
+      - For `ad_id`, `ad_id_type`, and `ad_tracking_enabled`, you need to explicitly collect the iOS IDFA and Android Google advertising ID through the native SDKs. Learn more about this setup for [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift) and [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
+      - If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) data, contact your customer success manager to enable sending `ad_id`.
+      - "`message_extras` allow you to annotate your send events with dynamic data from Connected Content, custom attributes (such as language, country), and Canvas entry properties. Refer to [Message extras]({{site.baseurl}}/message_extras_tag/) to learn more."
+  users.messages.pushnotification.Open:
+    description: This event occurs when a user directly clicks on the Push notification to open the application. Currently, Push Open Events refer specifically to "Direct Opens" rather than "Total Opens". This does not include statistics shown at the campaign level of "influenced opens" as these are not attributed at the user level.
+    api_tags:
+      - Push
+      - Opens
+    alert_note: |
+      In rare cases, a push open may appear before the corresponding push send event in Currents data because of the following:
+      - Your SDK has an incorrect clock.
+      - High batch write latency. The recorded send time can lag behind early deliveries, so very quick opens may be logged before the batch's final send timestamp is written. Large sends are dispatched and recorded in batches.
+    property_details:
+      - For `ad_id`, `ad_id_type`, and `ad_tracking_enabled`, you need to explicitly collect the iOS IDFA and Android Google advertising ID through the native SDKs. Learn more about this setup for [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift) and [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
+      - If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) data, contact your customer success manager to enable sending `ad_id`.
+  users.messages.pushnotification.IosForeground:
+    description: This event is not supported by our [Swift SDK](https://github.com/braze-inc/braze-swift-sdk) and is now deprecated using our [Obj-C SDK](https://github.com/Appboy/appboy-ios-sdk).
+    api_tags:
+      - Push
+      - iOS
+      - Sends
+    property_details:
+      - For `ad_id`, `ad_id_type`, and `ad_tracking_enabled`, you need to explicitly collect the iOS IDFA and Android Google advertising ID through the native SDKs. Learn more about this setup for [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift) and [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
+      - If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) data, contact your customer success manager to enable sending `ad_id`.
+  users.messages.pushnotification.Bounce:
+    description: This event occurs when an error is received from either Apple Push Notification Service or Fire Cloud Messaging. This means that the push message was bounced, and therefore not delivered to the user's device.
+    api_tags:
+      - Push
+      - Sends
+      - Bounce
+    property_details:
+      - If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) data, reach out to your customer success manager or account manager to enable the feature flipper for sending `ad_id`.
+  users.messages.email.Send:
+    description: This event occurs when an email send request was successfully communicated between Braze and SendGrid. Though, this does not mean the email was received in the user's inbox.
+    api_tags:
+      - Email
+      - Sends
+    property_details:
+      - The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for entry steps, which can be scheduled) as triggered events, even when they are scheduled. Learn more about [dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+      - "`message_extras` allow you to annotate your send events with dynamic data from Connected Content, custom attributes (such as language, country), and Canvas entry properties. Refer to [Message extras]({{site.baseurl}}/message_extras_tag/) to learn more."
+  users.messages.email.Delivery:
+    description: This event occurs when an email sent made it successfully to the end-users inbox.
+    api_tags:
+      - Email
+      - Delivery
+    property_details:
+      - The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for entry steps, which can be scheduled) as triggered events, even when they are scheduled. Learn more about [dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+  users.messages.email.Open:
+    description: This event occurs when a user opens an email. Multiple events may be generated for the same campaign if a user opens the email multiple times.
+    alert_important: It's known behavior that the email open event fields `device_model` and `mailbox_provider` are empty. You can ignore these for now.
+    api_tags:
+      - Email
+      - Opens
+    property_details:
+      - The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for entry steps, which can be scheduled) as triggered events, even when they are scheduled. Learn more about [dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+  users.messages.email.Click:
+    description: This event occurs when a user clicks an email. Multiple events may be generated for the same campaign if a user clicks multiple times or clicks different links within the email.
+    api_tags:
+      - Email
+      - Clicks
+    property_details:
+      - The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for entry steps, which can be scheduled) as triggered events, even when they are scheduled. Learn more about [dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+  users.messages.email.Bounce:
+    description: This event occurs when an Internet Service Provider returns a hard bounce. A hard bounce signifies a permanent deliverability failure.
+    api_tags:
+      - Email
+      - Bounce
+    property_details:
+      - The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for entry steps, which can be scheduled) as triggered events, even when they are scheduled. Learn more about [dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+  users.messages.email.SoftBounce:
+    description: This event occurs when an Internet Service Provider returns a soft bounce. A soft bounce signifies that an email could not be delivered because of a temporary deliverability failure.
+    api_tags:
+      - Email
+      - Bounce
+    property_details:
+      - The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for entry steps, which can be scheduled) as triggered events, even when they are scheduled. Learn more about [dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+  users.messages.email.Deferral:
+    description: This event occurs when an Internet Service Provider does not immediately deliver the email to a non-hard bounced email address and Braze retries the email for up to 72 hours. Typical reasons for deferrals include reputation-based email volume rate-limiting from the inbox provider, temporary connectivity issues, recipient's mailbox is full, or DNS errors.
+    api_tags:
+      - Email
+      - Deferral
+    property_details:
+      - The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for entry steps, which can be scheduled) as triggered events, even when they are scheduled. Learn more about [dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+  users.messages.email.MarkAsSpam:
+    description: This event occurs when the end-user hits the "spam" button on the email. Note that this does not represent the fact the email went into the spam folder as Braze does not track this.
+    api_tags:
+      - Email
+      - Spam
+    property_details:
+      - The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for entry steps, which can be scheduled) as triggered events, even when they are scheduled. Learn more about [dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+  users.messages.email.Unsubscribe:
+    description: This event occurs when the end-user has clicked "unsubscribe" from the email.
+    alert_important: The `Unsubscribe` event is actually a specialized click event that is fired when your user clicks on the unsubscribe link in the email (either a normal unsubscribe link within the email body or footer, or using the [list-unsubscribe header]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/email_settings#include-a-list-unsubscribe-header)), not when the user changes state to unsubscribed. If subscription state change is sent through the API, or via custom (non-Braze) unsubscription link, it will not trigger an event on Currents.
+    api_tags:
+      - Email
+      - Subscription
+    property_details:
+      - The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for entry steps, which can be scheduled) as triggered events, even when they are scheduled. Learn more about [dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+  users.messages.inappmessage.Impression:
+    description: This event occurs when a user views an in-app message.
+    alert_note: "`dispatch_id` is deprecated and will be removed in the next Currents release."
+    api_tags:
+      - In-App Messages
+      - Impressions
+    property_details:
+      - For `ad_id`, `ad_id_type`, and `ad_tracking_enabled`, you need to explicitly collect the iOS IDFA and Android Google advertising ID through the native SDKs. Learn more about this setup for [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift) and [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
+      - If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) data, contact your customer success manager to enable sending `ad_id`.
+  users.messages.inappmessage.Abort:
+    description: This event occurs when an originally scheduled in-app message was aborted.
+    api_tags:
+      - In-App Messages
+      - Abort
+  users.messages.inappmessage.Click:
+    description: This event occurs when a user clicks on an in-app message.
+    alert_note: "`dispatch_id` is deprecated and will be removed in the next Currents release."
+    api_tags:
+      - In-App Messages
+      - Clicks
+    property_details:
+      - For `ad_id`, `ad_id_type`, and `ad_tracking_enabled`, you need to explicitly collect the iOS IDFA and Android Google advertising ID through the native SDKs. Learn more about this setup for [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift) and [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
+      - If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) data, contact your customer success manager to enable sending `ad_id`.
+  users.messages.webhook.Send:
+    description: This event occurs when a webhook was processed and sent to the third party specified in that webhook. Note that this does not signify whether or not the request was received.
+    api_tags:
+      - Webhooks
+      - Sends
+    property_details:
+      - "`message_extras` allow you to annotate your send events with dynamic data from Connected Content, custom attributes (such as language or country), and Canvas entry properties. Refer to [Message extras]({{site.baseurl}}/message_extras_tag/) to learn more."
+  users.messages.contentcard.Send:
+    description: This event occurs when a Content Card gets sent to a user.
+    alert_note: "`dispatch_id` is deprecated and will be removed in the next Currents release."
+    api_tags:
+      - Content Cards
+      - Sends
+    property_details:
+      - "`message_extras` allow you to annotate your send events with dynamic data from Connected Content, custom attributes (such as language or country), and Canvas entry properties. Refer to [Message extras]({{site.baseurl}}/message_extras_tag/) to learn more."
+  users.messages.contentcard.Impression:
+    description: This event occurs when a user views a Content Card.
+    alert_note: "`dispatch_id` is deprecated and will be removed in the next Currents release."
+    api_tags:
+      - Content Cards
+      - Impressions
+    property_details:
+      - For `ad_id`, `ad_id_type`, and `ad_tracking_enabled`, you need to explicitly collect the iOS IDFA and Android Google advertising ID through the native SDKs. Learn more about this setup for [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift) and [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
+      - If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) data, contact your customer success manager to enable sending `ad_id`.
+  users.messages.contentcard.Click:
+    description: This event occurs when a user clicks a Content Card.
+    alert_note: "`dispatch_id` is deprecated and will be removed in the next Currents release."
+    api_tags:
+      - Content Cards
+      - Clicks
+    property_details:
+      - For `ad_id`, `ad_id_type`, and `ad_tracking_enabled`, you need to explicitly collect the iOS IDFA and Android Google advertising ID through the native SDKs. Learn more about this setup for [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift) and [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
+      - If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) data, contact your customer success manager to enable sending `ad_id`.
+  users.messages.contentcard.Dismiss:
+    description: This event occurs when a user dismisses a Content Card.
+    alert_note: "`dispatch_id` is deprecated and will be removed in the next Currents release."
+    api_tags:
+      - Content Cards
+      - Dismissal
+    property_details:
+      - For `ad_id`, `ad_id_type`, and `ad_tracking_enabled`, you need to explicitly collect the iOS IDFA and Android Google advertising ID through the native SDKs. Learn more about this setup for [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift) and [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
+      - If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) data, contact your customer success manager to enable sending `ad_id`.
+  users.messages.sms.ShortLinkClick:
+    description: This event occurs when a user clicks an SMS short link.
+    api_tags:
+      - SMS
+      - Clicks
+  users.messages.sms.Send:
+    description: This event occurs when a user sends an SMS.
+    api_tags:
+      - SMS
+      - Sends
+    property_details:
+      - "`message_extras` allow you to annotate your send events with dynamic data from Connected Content, custom attributes (such as language, country), and Canvas entry properties. Refer to [Message extras]({{site.baseurl}}/message_extras_tag/) to learn more."
+  users.messages.sms.CarrierSend:
+    description: This event occurs when an SMS is sent to the carrier.
+    alert_important: "`CarrierSend` is supported only for users on legacy infrastructure."
+    api_tags:
+      - SMS
+      - Sends
+  users.messages.sms.Delivery:
+    description: This event occurs when an SMS was successfully delivered to the user's mobile phone.
+    api_tags:
+      - SMS
+      - Delivery
+  users.messages.sms.Rejection:
+    description: This event occurs when an SMS send gets rejected by the carrier, this can happen for several reasons. Use this event and the provided error codes to help troubleshoot issues with SMS delivery.
+    api_tags:
+      - SMS
+      - Rejection
+  users.messages.sms.DeliveryFailure:
+    description: This event occurs when an SMS experiences delivery failure. Use this event and the provided error codes to help troubleshoot issues with SMS delivery.
+    api_tags:
+      - SMS
+      - Delivery
+  users.messages.sms.InboundReceive:
+    description: |
+      This event occurs when one of your users sends an SMS to a phone number in one of your Braze SMS subscription groups.
+
+      When Braze receives an inbound SMS, we attribute that inbound message to any user that shares that phone number. As a result, you may receive multiple events per inbound message if multiple users in your Braze instance share the same phone number. If you require attribution of specific user IDs based on previous messages sent to that user, you can use the SMS Delivered event to attribute Inbound Received events to the user ID who most recently received a message from your Braze number.
+
+      If we detect that this inbound message is a reply to an outbound campaign or Canvas component sent from Braze, we will also include the campaign or Canvas metadata with the event. Braze defines a reply as an inbound message coming within four hours of an outbound message. However, there is a one-minute cache for the attributed campaign information of the last outbound SMS received.
+    api_tags:
+      - SMS
+      - Inbound Received
+  users.messages.featureflag.Impression:
+    description: |
+      This event occures whenever a user has had an opportunity to interact with your feature, or when they could have interacted if the feature is disabled (in the case of a control group in an A/B test).
+
+      Feature flag impressions are only logged once per session.
+    api_tags:
+      - Feature Flags
+      - Impressions
+  users.campaigns.Conversion:
+    description: This event occurs when a user does an action that has been set as a conversion event in a campaign.
+    alert_important: Note that the conversion event is encoded in the `conversion_behavior` field, which includes the type of conversion event, the window (timeframe), and additional information depending on the conversion event type. The `conversion_behavior_index` field represents which conversion event, such as 0 = A, 1 = B, 2 = C, 3 = D.
+    alert_note: "`dispatch_id` is deprecated and will be removed in the next Currents release."
+    api_tags:
+      - Campaign
+      - Conversion
+  users.canvas.Conversion:
+    description: This event occurs when a user does an action that has been set as a conversion event in Canvas.
+    alert_important: Note that the conversion event is encoded in the `conversion_behavior` field, which includes the type of conversion event, the window (timeframe), and additional information depending on the conversion event type. The `conversion_behavior_index` field represents which conversion event, such as 0 = A, 1 = B, 2 = C, 3 = D.
+    api_tags:
+      - Canvas
+      - Conversion
+  users.canvas.Entry:
+    description: This event occurs when a user enters into the Canvas. This event tells you which variant the user entered into.
+    api_tags:
+      - Canvas
+      - Entry
+  users.canvasstep.Progression:
+    description: This event occurs when a user progresses through a step in a Canvas with some outcome. Note that this event doesn't occur when steps are entered or exited. Currently, only split steps (Audience Paths, Decision Split, Action Paths, Experiment) and advance outcomes generate step progression events.
+    api_tags:
+      - Canvas
+      - Progression
+  users.campaigns.EnrollInControl:
+    description: This event occurs when a user is enrolled in a control variant set on a multi-variant campaign. This event is generated as there will be no channel send event for this user.
+    alert_note: "`dispatch_id` is deprecated and will be removed in the next Currents release."
+    api_tags:
+      - Campaign
+      - Entry
+  users.behaviors.subscriptiongroup.StateChange:
+    description: This event occurs when the subscription state of a user in a subscription group changes.
+    alert_important: Subscription groups are only available for email, SMS, and WhatsApp channels at this time.
+    api_tags:
+      - Subscription
+    property_details:
+      - |
+        `state_change_source` will return a string of the full source name. For example, the source CSV import will return the string `CSV Import`. Available sources are listed below:
+
+        | Source | Description |
+        | --- | --- |
+        | SDK | SDK endpoints |
+        | Dashboard | When a user's subscription state is updated from the User Profile page in Dashboard |
+        | Subscription Page | When a user unsubscribes through an email link that is not the preference center |
+        | REST API | REST API endpoints |
+        | CSV import | CSV user import |
+        | Preference Center | When a user is updated from the preference center |
+        | Inbound Message | When a user is updated by inbound messages from end-users through channels such as SMS |
+        | Migration | When a user is updated by internal migrations or maintenance scripts |
+        | User Merge | When a user is updated by the user merge process |
+        | Canvas User Update Step | When a user is updated by the Canvas user update step |
+        {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+  users.behaviors.subscription.GlobalStateChange:
+    description: This event occurs when Braze receives a request to update the global subscription state of the user.
+    api_tags:
+    - Subscription
+    property_details:
+      - |
+        `state_change_source` will return a string of the full source name. For example, the source CSV import will return the string `CSV Import`. Available sources are listed below:
+
+        | Source | Description |
+        | --- | --- |
+        | SDK | SDK endpoints |
+        | Dashboard | When a user's subscription state is updated from the **User Profile** page in the dashboard |
+        | Subscription Page | When a user unsubscribes through an email link that is not the preference center |
+        | REST API | REST API endpoints |
+        | CSV import | CSV user import |
+        | Preference Center | When a user is updated from the preference center |
+        | Inbound Message | When a user is updated by inbound messages from end-users through channels, such as SMS |
+        | Migration | When a user is updated by internal migrations or maintenance scripts |
+        | User Merge | When a user is updated by the merging users process |
+        | Canvas User Update Step | When a user is updated by the Canvas User Update step |
+        | Push Token Registration | When a user is updated by the token registration process |
+        | List-Unsubscribe | When a user unsubscribes via Braze mailto or one-click list-unsubscribe header |
+        | Other | Includes any other sources, such as demo or provider sync jobs, or SMS and Whatsapp event callbacks |
+        {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+  users.behaviors.Uninstall:
+    description: This event occurs when a user uninstalls an app. Use this data to track when users uninstall an app. While this is currently a message engagement event, this will be changed to a user behavior event in the future.
+    alert_important: This event is not fired when the user actually uninstalls the app, as that's impossible to track exactly. Braze sends a daily silent push to determine if the app still exists on your user's device, and if we get an error on that silent push, it is assumed the app has been uninstalled.
+    api_tags:
+      - Uninstall
+  users.messages.banner.Impression:
+    description: This event occurs when a user views a banner.
+    api_tags:
+      - Banner
+      - Impressions
+  users.messages.banner.Abort:
+    description: This event occurs when an originally scheduled banner message was aborted for some reason.
+    api_tags:
+      - Banner
+      - Abort
+  users.messages.banner.Click:
+    description: This event occurs when a user clicks a banner.
+    api_tags:
+      - Banner
+      - Clicks
+  users.messages.rcs.Click:
+    description: An event that is created when the user interacts with an RCS message in a way that involves tapping or clicking on a UI element.
+    api_tags:
+      - RCS
+      - Clicks
+  users.messages.rcs.Rejection:
+    description: An event that is created when an RCS message fails to be delivered to a user's mobile device due to intervention by the carrier.
+    api_tags:
+      - RCS
+      - Rejection
+  users.messages.line.Abort:
+    description: This event occurs when a scheduled LINE message cannot be delivered, before sending to LINE.
+    api_tags:
+      - LINE
+      - Abort
+  users.messages.line.Send:
+    description: This event occurs when a LINE message is sent to LINE.
+    api_tags:
+      - LINE
+      - Sends
+  users.messages.line.InboundReceive:
+    description: This event occurs when a LINE message is received from a user.
+    api_tags:
+      - LINE
+      - Inbound Received
+  users.messages.line.Click:
+    description: This event occurs when a user clicks a link in a LINE message where the link's domain matches the click tracking domain.
+    api_tags:
+      - LINE
+      - Clicks
+  users.messages.rcs.Delivery:
+    description: This event is created when an RCS message is successfully delivered to a user's mobile device.
+    api_tags:
+      - RCS
+      - Delivery
+  users.messages.rcs.InboundReceive:
+    description: This event is created when Braze receives an RCS message that originates from the user.
+    api_tags:
+      - RCS
+      - Inbound Received
+  users.messages.rcs.Read:
+    description: This event is created when a user opens an RCS message on their device, indicating that they have seen or read the message content.
+    api_tags:
+      - RCS
+      - Read
+  users.messages.rcs.Send:
+    description: This event is created when an RCS messages is sent out of Braze to our last-mile delivery partners.
+    api_tags:
+      - RCS
+      - Sends
+  users.messages.rcs.Abort:
+    description: This event is created when an RCS send is interrupted due to an error detected within Braze, and the message is dropped.
+    api_tags:
+      - RCS
+      - Abort
+

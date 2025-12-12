@@ -1,22 +1,22 @@
 ---
 nav_title: Operadores
-article_title: Operadores Liquid
+article_title: Operadores de líquidos
 page_order: 2
-description: "Esta página de referência nota os operadores que o Liquid suporta, bem como exemplos relevantes."
+description: "Esta página de referência indica os operadores que o Liquid suporta, bem como exemplos relevantes."
 
 ---
 
 # Operadores
 
-> O Liquid suporta muitos [operadores](https://docs.shopify.com/themes/liquid/basics/operators) que podem ser usados em suas declarações condicionais. Esta página cobre os operadores que Liquid suporta e fornece casos de uso de como você pode usá-los em suas mensagens.
+> O Liquid oferece suporte a muitos [operadores](https://docs.shopify.com/themes/liquid/basics/operators) que podem ser usados em suas instruções condicionais. Esta página aborda os operadores compatíveis com o Liquid e fornece casos de uso de como você pode usá-los em suas mensagens.
 
-Esta tabela lista os operadores que são suportados. Nota que parênteses são caracteres inválidos em Liquid e impedem que suas tags funcionem.
+Esta tabela lista os operadores compatíveis. Observe que os parênteses são caracteres inválidos no Liquid e impedem que suas tags funcionem.
 
 |   Sintaxe| Descrição do operador|
 |---------|-----------|
-| ==  | é igual a        |
+| ==  | iguais        |
 | !=  | não é igual a|
-|  >  | é maior que  |
+|  >  | maior que  |
 | <   | menos de     |
 | >=| maior ou igual a|
 | <= | menor ou igual a |
@@ -27,13 +27,13 @@ Esta tabela lista os operadores que são suportados. Nota que parênteses são c
 
 ## Tutoriais
 
-Vamos passar por alguns tutoriais para aprender como usar esses operadores em suas campanhas de marketing:
+Vamos examinar alguns tutoriais para saber como usar esses operadores em suas campanhas de marketing:
 
-### Escolha a mensagem com um atributo personalizado inteiro
+### Selecionar mensagem com um atributo personalizado inteiro
 
-Vamos enviar notificações por push com descontos promocionais personalizados para usuários que fizeram ou não fizeram compras. A notificação por push usará um atributo personalizado inteiro chamado `total_spend` para verificar o total gasto por um usuário.
+Vamos enviar notificações push com descontos promocionais personalizados para usuários que fizeram ou não fizeram compras. A notificação por push usará um atributo personalizado inteiro chamado `total_spend` para verificar o total de gastos de um usuário.
 
-1. Escreva uma declaração condicional usando o operador maior que (`>`) para verificar se o total gasto por um usuário é maior que `0`, indicando que ele fez uma compra. Em seguida, crie uma mensagem para enviar a esses usuários.
+1. Escreva uma instrução condicional usando o operador greater than (`>`) para verificar se o total de gastos de um usuário é maior que `0`, indicando que ele fez uma compra. Em seguida, crie uma mensagem para enviar a esses usuários.
 
 {% raw %}
 ```liquid
@@ -43,7 +43,7 @@ Surprise! We added a 15% discount code to your account that automatically applie
 {% endraw %}
 
 {: start="2"}
-2\. Adicione a tag {% raw %}`{% else %}`{% endraw %} para capturar usuários cujo total gasto é igual a `0` ou não existe. Em seguida, crie uma mensagem para enviar a esses usuários.
+2\. Adicione a tag {% raw %}`{% else %}`{% endraw %} para capturar usuários cujo total de despesas seja igual a `0` ou não exista. Em seguida, crie uma mensagem para enviar a esses usuários.
 
 {% raw %}
 ```liquid
@@ -61,9 +61,9 @@ Need a sign to update your wardrobe? We added a 15% discount code to your accoun
 ```
 {% endraw %}
 
-![Um criador de notificações por push com o código Liquid completo do tutorial.]({% image_buster /assets/img/liquid-if-totalspend.png %}){: width="100%"}
+Um compositor de notificação por push com o código Liquid completo do tutorial.]({% image_buster /assets/img/liquid-if-totalspend.png %}){: width="100%"}
 
-{% details Código Liquid completo %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% if {{custom_attribute.${total_spend}}} >0 %}
@@ -75,22 +75,22 @@ Need a sign to update your wardrobe? We added a 15% discount code to your accoun
 {% endraw %}
 {% enddetails %}
 
-Agora, se o atributo personalizado "Total Gasto" de um usuário for maior que `0`, eles receberão a mensagem:
+Agora, se o atributo personalizado "Total Spend" de um usuário for maior que `0`, ele receberá a mensagem:
 
 ```
 Surprise! We added a 15% discount code to your account that automatically applies to your next order.
 ```
-Se o atributo personalizado "Total Gasto" de um usuário não existir ou for igual a `0`, eles receberão a seguinte mensagem:
+Se o atributo personalizado "Total Spend" de um usuário não existir ou for igual a `0`, ele receberá a seguinte mensagem:
 
 ```
 Need a sign to update your wardrobe? We added a 15% discount code to your account that will automatically apply to your first order.
 ```
 
-### Escolha a mensagem com um atributo personalizado de string
+### Selecionar mensagem com um atributo personalizado de string
 
-Vamos enviar notificações por push para usuários e personalizar a mensagem com base no jogo mais recentemente jogado por cada usuário. Isso usará um atributo personalizado string chamado `recent_game` para verificar qual jogo um usuário jogou por último.
+Vamos enviar notificações por push aos usuários e personalizar a mensagem com base no jogo jogado mais recentemente por cada usuário. Isso usará um atributo personalizado de string chamado `recent_game` para verificar qual foi o último jogo jogado pelo usuário.
 
-1. Escreva uma declaração condicional usando o operador igual a (`==`) para verificar se o jogo mais recente de um usuário é *Awkward Dinner Party*. Em seguida, crie uma mensagem para enviar a esses usuários.
+1. Escreva uma instrução condicional usando o operador igual (`==`) para verificar se o jogo mais recente de um usuário é *Awkward Dinner Party*. Em seguida, crie uma mensagem para enviar a esses usuários.
 
 {% raw %}
 ```liquid
@@ -100,7 +100,7 @@ You are formally invited to our next dinner party. Log on next week for another 
 {% endraw %}
 
 {: start="2"}
-2\. Use a tag `elsif` com o operador igual a (`==`) para verificar se o jogo mais recente de um usuário é *Proxy War 3: War of Thirst*. Em seguida, crie uma mensagem para enviar a esses usuários.
+2\. Use a tag `elsif` com o operador equals (`==`) para verificar se o jogo mais recente do usuário é *Proxy War 3: War of Thirst*. Em seguida, crie uma mensagem para enviar a esses usuários.
 
 {% raw %}
 ```liquid
@@ -110,7 +110,7 @@ Your fleet awaits your next orders. Log on when you're ready to rejoin the war f
 {% endraw %}
 
 {: start="3"}
-3\. Use a tag `elsif` com os operadores diferente de (`!=`) e "e" (`&&`) para verificar se o usuário tem um jogo recente (significa que o valor não está em branco) e que o jogo não é *Awkward Dinner Party* ou *Proxy War 3: War of Thirst*. Em seguida, crie uma mensagem para enviar a esses usuários.
+3\. Use a tag `elsif` com os operadores does not equal (`!=`) e "and" (`&&`) para verificar se o usuário tem um jogo recente (ou seja, se o valor não está em branco) e se o jogo não é *Awkward Dinner Party* ou *Proxy War 3: War of Thirst*. Em seguida, crie uma mensagem para enviar a esses usuários.
 
 {% raw %}
 ```liquid
@@ -120,7 +120,7 @@ Limited Time Deal! Get 15% off our best-selling classics!
 {% endraw %}
 
 {: start="4"}
-4\. Adicione a tag {% raw %}`{% else %}`{% endraw %} para capturar usuários que não têm um jogo recente. Em seguida, crie uma mensagem para enviar a esses usuários.
+4\. Adicione a tag {% raw %}`{% else %}`{% endraw %} para capturar usuários que não tenham um jogo recente. Em seguida, crie uma mensagem para enviar a esses usuários.
 
 {% raw %}
 ```liquid
@@ -138,7 +138,7 @@ Hey! I've got a deal for you. Buy 2 of our newest releases and get 10% off!
 ```
 {% endraw %}
 
-{% details Código Liquid completo %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% if {{custom_attribute.${recent_game}}} == 'Awkward Dinner Party' %}
@@ -154,9 +154,9 @@ Hey! I've got a deal for you. Buy 2 of our newest releases and get 10% off!
 {% endraw %}
 {% enddetails %}
 
-![Um criador de notificações por push com o código Liquid completo do tutorial.]({% image_buster /assets/img/liquid-if-elsif-games.png %})
+Um compositor de notificação por push com o código Liquid completo do tutorial.]({% image_buster /assets/img/liquid-if-elsif-games.png %})
 
-Agora, se um usuário jogou por último *Awkward Dinner Party*, ele receberá esta mensagem:
+Agora, se um usuário jogou *Awkward Dinner Party* pela última vez, ele receberá esta mensagem:
 
 ```
 You are formally invited to our next dinner party. Log on next week for another round of delectable dishes and curious conversations.
@@ -168,23 +168,23 @@ Se o jogo mais recente de um usuário for *Proxy War 3: War of Thirst*, eles rec
 Your fleet awaits your next orders. Log on when you're ready to rejoin the war for hydration.
 ```
 
-Se um usuário jogou recentemente um jogo que não foi *Awkward Dinner Party* ou *Proxy War 3: War of Thirst*, ele receberá esta mensagem:
+Se um usuário tiver jogado recentemente um jogo que não tenha sido *Awkward Dinner Party* ou *Proxy War 3: War of Thirst*, eles receberão essa mensagem:
 
 ```
 Limited Time Deal! Get 15% off our best-selling classics!
 ```
 
-Se um usuário não jogou nenhum jogo ou se esse atributo personalizado não existe em seu perfil, eles receberão esta mensagem:
+Se um usuário não tiver jogado nenhum jogo ou se esse atributo personalizado não existir em seu perfil, ele receberá esta mensagem:
 
 ```
 Hey! I've got a deal for you. Buy 2 of our newest releases and get 10% off!
 ```
 
-### Mensagem de cancelamento com base no local
+### Mensagem de cancelamento com base na localização
 
-Você pode abortar uma mensagem com base em praticamente qualquer coisa. Vamos abortar uma mensagem se um usuário não estiver baseado em uma área especificada, pois eles podem não se qualificar para a promoção, show ou entrega.
+Você pode abortar uma mensagem com base em praticamente qualquer coisa. Vamos abortar uma mensagem se um usuário não estiver localizado em uma área especificada, pois ele pode não se qualificar para a promoção, o show ou a entrega.
 
-1. Escreva uma declaração condicional usando o operador de igualdade (`==`) para verificar se o fuso horário do usuário é `America/Los_Angeles`, então crie uma mensagem para enviar a esses usuários. 
+1. Escreva uma instrução condicional usando o operador igual (`==`) para verificar se o fuso horário do usuário é `America/Los_Angeles` e, em seguida, crie uma mensagem para enviar a esses usuários. 
 
 {% raw %}
 ```liquid
@@ -194,7 +194,7 @@ Stream now!
 {% endraw %}
 
 {: start="2"}
-2\. Para evitar enviar mensagens a usuários fora do fuso horário `America/Los_Angeles`, envolva as tags {% raw %}`{% else %}`{% endraw %} e {% raw %}`{% endif %}`{% endraw %} em torno de uma tag {% raw %}`{% abort_message () %}`{% endraw %}.
+2\. Para evitar o envio de mensagens a usuários fora do fuso horário `America/Los_Angeles`, envolva as tags {% raw %}`{% else %}`{% endraw %} e {% raw %}`{% endif %}`{% endraw %} em uma tag {% raw %}`{% abort_message () %}`{% endraw %}.
 
 {% raw %}
 ```liquid
@@ -204,7 +204,7 @@ Stream now!
 ```
 {% endraw %}
 
-{% details Código Liquid completo %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% if {{${time_zone}}} =='America/Los_Angeles' %}
@@ -216,7 +216,7 @@ Stream now!
 {% endraw %}
 {% enddetails %}
 
-![Um criador de notificações por push com o código Liquid completo do tutorial.]({% image_buster /assets/img/abort-if.png %})
+Um compositor de notificação por push com o código Liquid completo do tutorial.]({% image_buster /assets/img/abort-if.png %})
 
 Você também pode [abortar mensagens]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/) com base no Connected Content.
 

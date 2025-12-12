@@ -19,7 +19,7 @@ description: "このページでは、特定のキャンペーンまたはキャ
 
 ### ステップ1:期間の選択
 
-![レポート日付]({% image_buster /assets/img/date_select_retention.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
+![報告日]]({% image_buster /assets/img/date_select_retention.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
 
 まず、Braze ダッシュボードのキャンペーンまたはキャンバスにアクセスし、レポートの期間を選択します。適切な期間を選択することは非常に重要です。リテンションレポートに影響を及ぼすためです。 
 
@@ -30,25 +30,25 @@ description: "このページでは、特定のキャンペーンまたはキャ
 ### ステップ2:リテンションイベントの選択
 
 {% tabs %}
-{% tab キャンペーン %}
+{% tab Campaign %}
 
 次に、[**キャンペーンリテンション**] セクションに移動します。キャンペーンリテンションは、この特定のキャンペーンを受信したユーザーのうち、受信時点から 30 日間にリテンションイベント (リテンションレポートで指定) を実行した割合を示します。
 
 {% endtab %}
-{% tab キャンバス %}
+{% tab Canvas %}
 
 次に、**Analyze Variants**を選択します。ここから、バリアントの分析、目標到達プロセスレポートの表示、およびリテンションレポートの表示ができます。キャンバスリテンションは、この特定のキャンバスを受信したユーザーのうち、受信時点から 30 日間にリテンションイベント (リテンションレポートで指定) を実行した割合を示します。
 
 {% endtab %}
 {% endtabs %}
 
-![リテンションイベントの選択]({% image_buster /assets/img/retention_1.png %}){: style="max-width:80%"}
+![保存イベントを選択]]({% image_buster /assets/img/retention_1.png %}){: style="max-width:80%"}
 
-### ステップ 3:レポートの生成
+### ステップ 3: レポートの生成
 
 リテンションイベントを選択したら、[**レポートを実行**] を選択してクエリを開始します。
 
-![レポートを実行]({% image_buster /assets/img/retention_2.png %}){: style="max-width:80%"}
+![実行レポート]]({% image_buster /assets/img/retention_2.png %}){: style="max-width:80%"}
 
 結果を生成するために取得する必要のあるデータの量に応じて、このクエリの実行には数分かかることがあります。時間がかかりすぎる場合、レポートの読み込みを再試行するように求める通知が表示されます。レポートが読み込まれるまで最大 5 分かかる場合があります。
 
@@ -57,14 +57,14 @@ description: "このページでは、特定のキャンペーンまたはキャ
 レポートには、キャンペーンまたはキャンバスがメッセージを送信した日のみがリストされます。キャンペーンやキャンバスでメッセージが 1 回のみ送信された場合、レポートにはその日 1 日分しか表示されません。メッセージが定期的か、トリガーされている場合は、テーブルに複数の日が表示されることがあります。
 
 {% tabs %}
-{% tab キャンペーン %}
+{% tab Campaign %}
 
-![フルレポート]({% image_buster /assets/img/campaign_retention3.png %})
+![フルレポート]]({% image_buster /assets/img/campaign_retention3.png %})
 
 {% endtab %}
-{% tab キャンバス %}
+{% tab Canvas %}
 
-![フルレポート]({% image_buster /assets/img/canvas_retention_report.png %}){: style="max-width:70%"}
+![フルレポート]]({% image_buster /assets/img/canvas_retention_report.png %}){: style="max-width:70%"}
 
 {% endtab %}
 {% endtabs %}
@@ -83,7 +83,7 @@ description: "このページでは、特定のキャンペーンまたはキャ
 
 リテンションレポートのチャートの3日目の列の値は、Z 日目にキャンペーンを受信して​​から3日以上イベントを実行したユーザーの Y% または Y 人になります (選択した単位に基づく)。
 
-![ローリングレポート]({% image_buster /assets/img/campaign_retention3.png %})
+![ローリングレポート]]({% image_buster /assets/img/campaign_retention3.png %})
 
 別の例として、上の画像のテーブルを参照すると、3 月 25 日に合計 38 人のユーザーがリテンションイベントを実行しました。0日目のリテンションは68.42%でした。これは、ユーザーの68.42%がキャンペーンの受信後0日以上後 (0 日目以降) にリテンションイベントを実行したことを意味します。7日目のリテンションは57.89%でした。これは、57.89%のユーザーがキャンペーン受信後7日以上後 (7日目以降) にイベントを実行したことを意味します。
 
@@ -97,7 +97,7 @@ description: "このページでは、特定のキャンペーンまたはキャ
 
 日付範囲のリテンションレポートは、最も直感的にわかりやすいレポートの 1 つです。これらは、コホート内のすべてのユーザーのうち、指定された日付範囲内にリテンションイベントを実行したユーザーの割合を明確に示します。例えば、以下の画像では、すべてのユーザーのコホートを参照しており、日付範囲「0 日目 (0 ～ 24 時間)」で、コホートの 35.71% がリテンションレポートを実行しました。あるユーザーが複数の日付範囲内で複数のリテンションイベントを実行した場合、それらはそれぞれの範囲で保持されたものとしてカウントされます。
 
-![リテンションレポート]({% image_buster /assets/img/range_retention.png %})
+![保管報告書]]({% image_buster /assets/img/range_retention.png %})
 
 ### リテンションレポートの構成要素
 
@@ -121,14 +121,14 @@ description: "このページでは、特定のキャンペーンまたはキャ
 - コントロールグループのリテンションデータを詳しく調べて、メッセージを送信しなかった場合のリテンションがどのようになるかを確認します。
 
 {% tabs %}
-{% tab キャンペーン %}
+{% tab Campaign %}
 
-![Variant による表示]({% image_buster /assets/img/variant_view.png %})
+![バリエーション別表示]]({% image_buster /assets/img/variant_view.png %})
 
 {% endtab %}
-{% tab キャンバス %}
+{% tab Canvas %}
 
-![Variant による表示]({% image_buster /assets/img/variant_view_canvas.png %})
+![バリエーション別表示]]({% image_buster /assets/img/variant_view_canvas.png %})
 
 {% endtab %}
 {% endtabs %}
@@ -138,7 +138,7 @@ description: "このページでは、特定のキャンペーンまたはキャ
 - **期間**: キャンペーンまたはキャンバスの [**詳細**] ページで設定される期間には、この期間中にキャンペーンまたはキャンバスを受信したすべてのユーザーが含まれ、それらのユーザーのうち、期間中にリテンションイベントを実行したユーザーのデータがレポートに表示されます。毎日、リテンション率、コントロールグループからの変化率、および信頼度が測定されます。
 - **リテンション率**: バリアント別のリテンション率を示します。リテンション率は、リテンションイベントを実行したユーザーの数を、キャンペーンまたはキャンバスを受信したユーザーの総数で除算した値です。
 - **コントロールからの変化率**: バリアントあたりのコントロールグループからの変化率です。
-- **信頼度**: {% multi_lang_include metrics.md metric='Confidence' %} Braze は、各バリアントの換算レートをコントロールの換算レートと比較し、[信頼度]({{site.baseurl}}/user_guide/intelligence/multivariate_testing/#understanding-confidence) パーセンテージを計算するZ Test と呼ばれる統計プロシージャを使用します。
+- **信頼度**: {% multi_lang_include analytics/metrics.md metric='Confidence' %} Brazeは、各バリアントのコンバージョン率とコントロールのコンバージョン率をZ検定と呼ばれる統計的手法と比較して、[confidence]({{site.baseurl}}/user_guide/intelligence/multivariate_testing/#understanding-confidence)パーセンタグeを計算します。
 - **単位**: チャートの右上隅で、ユーザーの割合とユーザー数の単位を切り替えることができます。キャンペーンやキャンバスの影響を判断するときに、特定の単位がより重要である場合があります。
 - **バリアントグラフ**: このグラフは、選択した期間についてバリアント別の結果をまとめたものです。
 

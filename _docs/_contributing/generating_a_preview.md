@@ -1,6 +1,6 @@
 ---
 nav_title: Generating a preview
-article: Generating a preview
+article_title: Generating a preview
 description: "Learn how to generate a local site preview, so you can see how your work would look on Braze Docs."
 page_order: 5 
 noindex: true
@@ -37,7 +37,7 @@ When you start a local server, the files in your [current branch](#step-1-checko
 # for 'en' language:
 rake
 
-# for other langauges:
+# for other languages:
 rake es
 rake fr
 rake ja
