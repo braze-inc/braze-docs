@@ -138,7 +138,7 @@ You can [edit individual fields from a random or existing user]({{site.baseurl}}
 
 #### BrazeAI Decisioning Studio™ Go
 
-You can now set up your integration with [BrazeAI Decisioning Studio™ Go] by referencing these configuration articles for:
+You can now set up your integration with [BrazeAI Decisioning Studio™ Go]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/go) by referencing these configuration articles for:
 
 - [Braze]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/go/configuring_braze)
 - [Klaviyo]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/go/configuring_klaviyo)
