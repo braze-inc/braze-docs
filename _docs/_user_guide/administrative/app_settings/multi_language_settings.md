@@ -8,15 +8,9 @@ description: "This article provides an overview of multi-language settings in th
 
 # Multi-language settings
 
-> By adjusting multi-language settings, you can target users in different languages and locations with different messages all within a single email message.
+> The Multi-language feature allows you to use [translation tags]({{ site.baseurl }}/user_guide/engagement_tools/messaging_fundamentals/localization/locales) to target users in different languages and locations all within a single message.
 
-## Prerequisites
-
-To edit and manage multi-language support, you must have the "Manage Multi-Language Settings" user permission. To add the locale to a message, you'll need permissions for editing campaigns.
-
-{% alert important %}
-Multi-language support is currently in early access. Contact your Braze account manager if you’re interested in participating in this early access.
-{% endalert %}
+{% multi_lang_include locales.md section="Prerequisites" %}
 
 ## Add a locale
 
