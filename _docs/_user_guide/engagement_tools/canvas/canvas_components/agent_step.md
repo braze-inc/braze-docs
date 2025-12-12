@@ -95,7 +95,7 @@ Refer to the following metrics to track how your Agent steps perform:
 
 ### When should I use an Agent step?
 
-In general, we recommend using an Agent step when you want to process information using AI based on your prompt for later use in your Canvas.
+In general, we recommend using an Agent step when you want to process information using AI based on your instructions for later use in your Canvas.
 
 Let's say you're sending a personalized message to recommend a new ice cream flavor to a user who previously ordered chocolate and strawberry. Here's the difference between using an Agent step versus AI item recommendations:
 
