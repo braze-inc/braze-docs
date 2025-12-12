@@ -310,7 +310,7 @@ mkdir -p ~/.gemini
 nano ~/.gemini/settings.json
 ```
 
-Next, replace `yourname` with the exact string before `@BZXXXXXXXX` in your terminal prompt. Then, replace`key-identifier` and `rest-endpoint` with the corresponding values from the **API Keys** page in Braze. 
+Next, replace `yourname` with the exact string before `@BZXXXXXXXX` in your terminal prompt. Then, replace `key-identifier` and `rest-endpoint` with the corresponding values from the **API Keys** page in Braze. 
 
 Your configuration should be similar to the following:
 
