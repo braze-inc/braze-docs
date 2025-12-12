@@ -357,7 +357,7 @@ Now that you've set up the Braze MCP server, try sending a test prompt to your M
 {% endtab %}
 
 {% tab Gemini CLI %}
-!['What are my available Braze functions' being asked and answered in Gemini CLI.]({% image_buster /assets/img/mcp_server/gemini_cli/what_are_my_available_braze_functions.png %})
+![What are my available Braze functions? being asked and answered in Gemini CLI.]({% image_buster /assets/img/mcp_server/gemini_cli/what_are_my_available_braze_functions.png %})
 {% endtab %}
 {% endtabs %}
 
