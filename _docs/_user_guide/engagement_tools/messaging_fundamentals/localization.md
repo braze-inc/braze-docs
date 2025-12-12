@@ -14,10 +14,10 @@ tool:
 
 ## How it works
 
-After you [integrate the Braze SDK]({{site.baseurl}}/developer_guide/sdk_integration/), locale information from user devices is automatically collected. The locale contains the language and a region identifier. This information is available in the Braze segmentation tool under **Country** and **Language**.
+Locale information is stored on a user's profile based on data you collect using a [Braze SDK]({{site.baseurl}}/developer_guide/sdk_integration/) (automatically), or [REST API]({{ site.baseurl }}/api/endpoints/user_data/post_user_track). The locale contains the language and a region identifier. This information is available in the Braze segmentation tool under **Country** and **Language**.
 
 {% alert tip %}
-For for technical details on how locale is received, refer to the official [iOS](https://developer.apple.com/library/ios/documentation/MacOSX/Conceptual/BPInternational/LanguageandLocaleIDs/LanguageandLocaleIDs.html) and [Android](http://developer.android.com/reference/java/util/Locale.html) documentation.
+For for technical details on how locale is collected by our SDKs, refer to the official [iOS](https://developer.apple.com/library/ios/documentation/MacOSX/Conceptual/BPInternational/LanguageandLocaleIDs/LanguageandLocaleIDs.html), [Android](http://developer.android.com/reference/java/util/Locale.html), and [Web](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/language) documentation.
 {% endalert %}
 
 ## Translation management
@@ -233,12 +233,12 @@ These catalog items can them be referenced using [personalization]({{site.baseur
 {% endraw %}
 {% endtab %}
 
-{% tab Locale messages %}
-Add and use locales in your message to target users in different languages all within a single campaign or Canvas for the email or push channels. For a full walkthrough, refer to [Locales in email messages]({{site.baseurl}}/user_guide/message_building_by_channel/email/using_locales/) or [Locales in push messages]({{site.baseurl}}/user_guide/message_building_by_channel/push/using_locales/).
+{% tab Locale Translation Tags %}
+Add and use locale translation tags in your message to target users in different languages all within a single campaign or Canvas for the email or push channels. For a full walkthrough, refer to [Locales in email messages]({{site.baseurl}}/user_guide/message_building_by_channel/email/using_locales/) or [Locales in push messages]({{site.baseurl}}/user_guide/message_building_by_channel/push/using_locales/).
 
-{% alert important %}
-This feature is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
-{% endalert %}
+
+{% include }
+
 {% endtab %}
 
 {% tab Braze partners %}
