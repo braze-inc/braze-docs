@@ -34,7 +34,7 @@ After [setting up the Braze MCP server]{% if include.section == "user" %}({{site
 {% endtab %}
 {% endtabs %}
 
-### Get details about a canvas ID
+### Get details about a Canvas ID
 
 {% tabs %}
 {% tab Claude %}
@@ -46,7 +46,7 @@ After [setting up the Braze MCP server]{% if include.section == "user" %}({{site
 {% endtab %}
 {% endtabs %}
 
-### Show me my recent canvases
+### Show me my recent Canvases
 
 {% tabs %}
 {% tab Claude %}
