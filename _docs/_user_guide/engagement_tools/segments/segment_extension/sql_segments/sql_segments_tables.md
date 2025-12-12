@@ -20,6 +20,8 @@ This page is a reference of tables and columns available to be queried in the [Q
 
 ## Table of contents
 
+{% multi_lang_include deprecations/braze_sdk/news_feed.md status="Deprecated" %}
+
 Table | Description
 ------|------------
 [USERS_BEHAVIORS_CUSTOMEVENT_SHARED](#USERS_BEHAVIORS_CUSTOMEVENT_SHARED) | When a user performs a custom event

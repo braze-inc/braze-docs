@@ -1,3 +1,5 @@
+{% multi_lang_include deprecations/braze_sdk/news_feed.md status="Deprecated" %}
+
 ## Relationship diagram
 
 ```mermaid
