@@ -82,10 +82,18 @@ Once sent, the dashboard provides dynamic analytics per country and within user-
 
 ## Sending translated messages
 
-To send personalized messages based on a user’s language or locale, use one of the following methods:
+To send personalized messages based on a user’s language or locale, use one of the following methods
+
+### Translation Liquid Tags (Recommended) {#translation-liquid-tag}
+
+Braze supports a {% raw %}`{% translation salutation %}Hello!{% endtranslation %}`{% endraw %} liquid tag to easily target users in different languages using a single message. 
+
+For a full walkthrough, refer to the [guide on using translation tags]({{ site.baseurl }}/user_guide/engagement_tools/messaging_fundamentals/localization/locales).
+  
+### Alternative Approaches
 
 {% tabs local %}
-{% tab Manually %}
+{% tab Custom Liquid %}
 You can manually paste your content into the body of your message and use [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/) to [conditionally]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#conditional-logic) display the correct language to the recipient. To do this:
 
 1. Compose your message, then select **Language** to generate Liquid conditional logic for each of your selected languages.
@@ -233,14 +241,6 @@ These catalog items can them be referenced using [personalization]({{site.baseur
 {% endraw %}
 {% endtab %}
 
-{% tab Locale Translation Tags %}
-Add and use locale translation tags in your message to target users in different languages all within a single campaign or Canvas for the email or push channels. For a full walkthrough, refer to [Locales in email messages]({{site.baseurl}}/user_guide/message_building_by_channel/email/using_locales/) or [Locales in push messages]({{site.baseurl}}/user_guide/message_building_by_channel/push/using_locales/).
-
-
-{% include }
-
-{% endtab %}
-
 {% tab Braze partners %}
 Many Braze partners offer localization solutions, including [Transifex]({{site.baseurl}}/partners/message_personalization/localization/transifex/#about-transifex) and [Crowdin](https://crowdin.com/). Typically users use the platform alongside an internal team and translation agency. These translations are then uploaded there and are then accessible via REST API. These services also often leverage [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/), allowing users to fetch the translations via API.
 
@@ -283,7 +283,7 @@ This option provides an alternative method of transforming Google Sheets into JS
 
 The spreadsheet structure follows the steps in option 4, but SheetDB also provides [additional filters](https://docs.sheetdb.io/#sheetdb-api) to query the objects.
 
-Some users may prefer to implement SheetDB with fewer Liquid and Connected Block dependencies by implementing SheetDB’s [search method](https://docs.sheetdb.io/#get-search-in-document) in GET request calls to filter the JSON objects based on {% raw %}`{{${language}}}`{% endraw %} Liquid tag to automatically return the results for a single language rather than building large conditional blocks.
+Some users may prefer to implement SheetDB with fewer Liquid and Connected Block dependencies by implementing SheetDB's [search method](https://docs.sheetdb.io/#get-search-in-document) in GET request calls to filter the JSON objects based on {% raw %}`{{${language}}}`{% endraw %} Liquid tag to automatically return the results for a single language rather than building large conditional blocks.
 
 #### Step 1: Format the Google sheet
 
