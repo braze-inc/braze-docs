@@ -95,7 +95,7 @@ If you want to report on Canvas variants or steps, select **Canvases** for rows 
 
 ### Deleted message variations
 
-Statistics for deleted message variations are not displayed when you break down your report by campaigns or Canvases. However, channel-level totals include all stats regardless of whether the variant was deleted. For example, email _Sends_ includes all email sends, but if you break down those stats by campaign, the numbers may be lower because sends for deleted message variations are filtered out.
+Statistics for deleted message variations are not displayed when you break down your report by campaigns or Canvases. However, channel-level totals include all statistics regardless of whether the variant was deleted. For example, email _Sends_ includes all email sends, but if you break down those stats by campaign, the numbers may be lower because sends for deleted message variations are filtered out.
 
 ## Viewing a report
 
