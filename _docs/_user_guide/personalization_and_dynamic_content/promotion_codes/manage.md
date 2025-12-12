@@ -40,15 +40,15 @@ If no promotion codes are available, test or live messages that rely on codes wi
 
 ### In-app message campaigns {#promotion-codes-iam-campaigns}
 
-{% alert important %}
-Using promotion codes in in-app message campaigns is currently in early access. Contact your Braze account manager if you're interested in participating in this early access.
-{% endalert %}
-
 After creating an [in-app message campaign]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages), you can insert a [promotion code list snippet]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes#creating-a-promotion-code-list) into your in-app message message body. Promotion codes in in-app messages will be deducted and used only when a user triggers the display of the in-app message.
 
 ### Test messages
 
 Test sends and seed group email sends will use up promotion codes unless requested otherwise. Contact your Braze account manager to update this feature behavior so promotion codes aren't used during test sends and seed group email sends.
+
+### With message extras for Currents
+
+{% multi_lang_include shopify.md section='Liquid promotion codes with Currents' %}
 
 ## Saving promotion codes to user profiles {#save-to-profile}
 
@@ -71,3 +71,34 @@ You can find the remaining code count in the **Remaining** column of the promoti
 This code count can also be found when revisiting a pre-existing promotion code list page. You can also export unused codes as a CSV file. 
 
 ![A promotion code named "Black Friday Sale" with 992 remaining codes.]({% image_buster /assets/img/promocodes/promocode12.png %}){: style="max-width:70%"}
+
+## Multichannel and single-channel sends
+
+For multichannel and single-send campaigns and Canvases, all promotion codes referenced in a message’s Liquid are deducted to be used **before** the message is sent to make sure the following occurs:
+
+- The same promotion codes are used across channels in a multichannel message.
+- Extra promotion codes are not used if a message fails or aborts.
+
+If a user has two promotion code lists referenced in one message that is split by a Liquid conditional logic tag, all promotion codes will still be deducted, regardless of which conditional flow the user follows.
+
+If a user enters a new Canvas step or re-enters a Canvas, and the promotion code Liquid snippet is applied again for a message to that user, a new promotion code will be used.
+
+### Example
+
+In the following example, both promotion code lists `vip-deal` and `regular-deal` will be deducted. Here's the Liquid:
+
+{% raw %}
+```
+{% if user.is_vip %}
+  {% promotion('vip-deal') %}
+{% else %}
+  {% promotion('regular-deal') %}
+{% endif %} 
+```
+{% endraw %}
+
+Braze recommends uploading more promotion codes than what you estimate will be used. If a promotion code list expires or runs out of promotion codes, the subsequent messages will be aborted.
+
+{% alert tip %}
+**Here's an analogy for how promotion codes are used up in Braze.** <br><br>Imagine that sending your message is like sending a letter at the post office. You give the letter to a clerk, and they see that your letter should include a coupon. The clerk pulls the first coupon from the stack and adds it to the envelope. The clerk sends the letter, but for some reason, the letter gets lost in the mail (and the coupon is also now lost). <br><br>In this scenario, Braze is the postal clerk, and your promotion code is the coupon. We cannot retrieve it after it has been pulled from the stack of promotion codes, regardless of the webhook result.
+{% endalert %}

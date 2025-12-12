@@ -42,6 +42,10 @@ For example, in the following conditional Liquid, codes from both lists (`vip-de
 {% endtab %}
 {% endtabs %}
 
+{% alert important %}
+Promotion codes can’t be sent in in-app messages in Canvas.
+{% endalert %}
+
 ## Next steps
 
 Looking for next steps? Start here:
