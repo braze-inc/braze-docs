@@ -545,7 +545,7 @@ However, manually tracking push unsubscribes can still provide valuable insights
 {% tabs local %}
 {% tab Segment filters %}
 
-You can create a segment to identify users who aren't push enabled, meaning they're not subscribed or opted-in and don't have a [foreground push token]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/#push-tokens). For example, to see the number of unsubscribes in your app, you would use the combination of the following segments: 
+You can create a segment to identify users who aren't push enabled, meaning they're not subscribed or opted-in and don't have a [foreground push token]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/#push-tokens). For example, to see the number of unsubscribes in your app, you would use an "OR" combination of the following segments: 
 
 - `Background or Foreground Push Enabled is false`
 - `Has Uninstalled`
