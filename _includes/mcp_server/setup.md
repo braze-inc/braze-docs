@@ -329,7 +329,7 @@ Your configuration should be similar to the following:
 }
 ```
 
-When you're finished, save the configuration and restart Gemini CLI. Then, verify the following from Gemini
+When you're finished, save the configuration and restart Gemini CLI. Then, in Gemini, run the following commands to verify that the Braze MCP server is listed and that the tools and schema are available for use:
 
 ```powershell
 gemini
