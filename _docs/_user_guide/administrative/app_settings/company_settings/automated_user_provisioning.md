@@ -63,8 +63,6 @@ Select **Test API Credentials**. A verification message will appear if the integ
 3. Assign the app to the people that should have access to Braze.
 4. Select **Done** when you’ve completed the assignment.
 
-![SCIM provisioning setup for the Okta Braze app.]({% image_buster /assets/img_archive/okta_braze_app.png %}){: style="max-width:50%;"}
-
 {% endtab %}
 {% tab Okta - Custom app integration %}
 
@@ -105,8 +103,6 @@ The Okta integration is currently in early access. Contact your Braze account ma
 3. Assign the app to the people who should have access to Braze.
 4. Select **Done**.
 
-![SCIM provisioning setup for the Okta Braze custom integration.]({% image_buster /assets/img_archive/braze_okta_custom.png %}){: style="max-width:50%;"}
-
 {% endtab %}
 {% tab Entra ID %}
 
@@ -145,8 +141,6 @@ Log into your Microsoft Entra admin center.
 2. Select **Add user/group**.
 3. Select **None Selected** to assign users to the app.
 4. Select the **Select** button to confirm assignment.
-
-![SCIM provisioning setup for the Entra integration.]({% image_buster /assets/img_archive/entra_scim.png %}){: style="max-width:50%;"}
 
 {% endtab %}
 {% tab Custom %}
