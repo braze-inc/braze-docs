@@ -3000,5 +3000,6 @@ validurls['/docs/contributing/content_management/language_translations'] = '/doc
 
 validurls['/docs/developer_guide/sdk_integration/?sdktab=xamarin'] = '/docs/developer_guide/sdk_integration/?sdktab=.net%20maui';
 validurls['/docs/user_guide/message_building_by_channel/in-app_messages/faq/#what-are-templated-in-app-messages'] = '/docs/user_guide/message_building_by_channel/in-app_messages/#in-app-message-abort-behavior';
+validurls['/docs/help/help_articles/campaigns_and_canvas/not_triggering/'] = '/docs/user_guide/engagement_tools/canvas/troubleshooting/#why-did-a-user-not-receive-a-triggered-canvas-step';
 
 // validurls['OLD'] = 'NEW';
