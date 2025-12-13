@@ -37,8 +37,9 @@ To create your custom agent:
 3. Enter a name and description to help your team understand its purpose.  
 4. Choose the [model](#models) your agent will use.  
 
-![Agent Console interface for creating a custom agent in Braze. The screen displays fields for entering the agent name and description, and selecting a model.]( {% image_buster /assets/img/ai_agent/create_custom_agent.png %} )
+![Agent Console interface for creating a custom agent in Braze. The screen displays fields for entering the agent name and description, and selecting a model.]({% image_buster /assets/img/ai_agent/create_custom_agent.png %}){: style="max-width:85%;"}
 
+{:start="5"}
 5. Give the agent instructions. Refer to [Writing instructions](#writing-instructions) for guidance.
 6. [Test the agent](#testing-your-agent) output and adjust the instructions as needed.
 7. When you’re ready, select **Create Agent** to activate the agent. 
@@ -55,11 +56,7 @@ When you set up an agent, you'll choose the model it uses to generate responses.
 
 #### Option 1: Use a Braze-powered model
 
-This is the simplest option, with no extra setup required. Braze provides access to large language models (LLM) directly. To use this option, select **Auto**.
-
-{% alert note %}
-If you use the Braze-powered LLM, you will not incur any cost during the Beta period. Invocation is limited to 50,000 runs per day and 500,000 runs in total. See [Limitations]({{site.baseurl}}/user_guide/brazeai/agents/#limitations) for details.
-{% endalert %}
+This is the simplest option, with no extra setup required. Braze provides access to large language models (LLM) directly. To use this option, select **Auto**, which uses Gemini models.
 
 #### Option 2: Bring your own API key
 
@@ -74,10 +71,9 @@ Then, you can return to your agent and select your model.
 
 ### Writing instructions
 
-Instructions are the rules or guidelines you give the agent (system prompt). They define how the agent should behave each time it runs. System instructions can be up to 10 KB.
+Instructions are the rules or guidelines you give the agent (system prompt). They define how the agent should behave each time it runs. System instructions can be up to 25 KB.
 
-{% tabs %}
-{% tab Best practices %}
+#### Best practices
 
 Here are some general best practices to get you started with prompting:
 
@@ -92,17 +88,14 @@ Here are some general best practices to get you started with prompting:
 9. Handle the edge cases, add guardrails, and add refusal instructions.
 10. Measure and document what works internally for reuse and scaling.
 
-For more details on prompting best practices, refer to guides from the following model providers:
+We recommend also including a default as a catch-all response if the agent receives a response that can't be parsed. This error handling allows the agent to inform you of an unknown outcome variable.
 
-- [OpenAI](https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-the-openai-api)
-- [Anthropic](https://docs.claude.com/en/docs/build-with-claude/prompt-engineering/overview)
-- [Gemini](https://support.google.com/a/users/answer/14200040?hl=en)
+#### Examples
 
-{% endtab %}
-{% tab Examples %}
+Here are examples of prompts with different levels of complexity: 
 
-{% details Simple prompt %}
-
+{% tabs %}
+{% tab Simple prompt %}
 This example prompt takes a survey input and outputs a simple sentiment analysis:
 
 ```
@@ -114,10 +107,8 @@ If sentiment across categories is mixed, return Neutral.
 Example Input: “The product works great, but shipping took forever and the cost felt too high.”
 Example Output: Neutral
 ```
-
-{% enddetails %}
-
-{% details Complex prompt %}
+{% endtab %}
+{% tab Complex prompt %}
 
 This example prompt takes a survey input from a user and classifies it into a single sentiment label. The result can then be used to route users down different Canvas paths (such as positive versus negative feedback) or store the sentiment as a custom attribute on their profile for future targeting.
 
@@ -148,14 +139,31 @@ Example Output:
 }  
 ```
 {% endraw %}
-{% enddetails %}
-
 {% endtab %}
 {% endtabs %}
+
+For more details on prompting best practices, refer to guides from the following model providers:
+
+- [OpenAI](https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-the-openai-api)
+- [Anthropic](https://docs.claude.com/en/docs/build-with-claude/prompt-engineering/overview)
+- [Gemini](https://support.google.com/a/users/answer/14200040?hl=en)
 
 ### Brand guidelines
 
 You can select [brand guidelines]({{site.baseurl}}/user_guide/administrative/app_settings/brand_guidelines) for your agent to adhere to in its responses. For example, if you want your agent to generate SMS copy to encourage users to sign up for a gym membership, you can use this field to reference your predefined bold, motivational guideline.
+
+### Catalogs
+
+Choose specific catalogs or columns in a catalog for an agent to reference and to further personalize your message.
+
+![The "restaurants" catalog and "Loyalty_Program" column selected for the agent to search.]({% image_buster /assets/img/ai_agent/search_catalog.png %}){: style="max-width:85%;"}
+
+### Segment membership context
+
+You can select up to three segments for the agent to have membership access to when the agent is used in a Canvas. Let's say your agent has segment membership selected for a "Loyalty Users" segment, and the agent is used in a Canvas. When users enter an Agent step, the agent can interpret the user's input with the context of whether the user is in the selected segment or not.
+
+![The "Loyalty Users" segment selected for agent membership access.]({% image_buster /assets/img/ai_agent/segment_membership_context.png %}){: style="max-width:85%;"}
+search_catalog
 
 ### Temperature
 
@@ -165,17 +173,11 @@ If your goal is to use an agent to generate copy to encourage users to log into 
 Temperatures aren't currently supported for use with OpenAI.
 {% endalert %}
 
-### Catalogs
-
-Select from a list of catalogs for your agent to reference and further personalize your message.
-
-{% alert note %}
-Currently, for an agent to be able to reference a desired column of a catalog, that column must exist in at least one [selection]({{site.baseurl}}/user_guide/data/activation/catalogs/selections) of the catalog.
-{% endalert %}
-
 ### Output format
 
 Use the **Output format** field to organize and define the agent's output by manually structuring fields or using JSON. 
+
+Note that if you try to use an agent with a JSON output in a catalog, it will not follow your schema. Instead, consider using the defined output fields.
 
 Let's say you want to collect user feedback for their most recent dining experience at your restaurant chain. You could select **JSON Schema** as the output format and insert the following JSON to return a data object that includes a sentiment variable and reasoning variable.
 
@@ -208,7 +210,7 @@ The **Live preview** pane is an instance of the agent that shows up as a side-by
 ![Agent Console showing the Live preview pane for testing a custom agent. The interface displays a Sample inputs field with example customer data, a Run test button, and a response area where the agent output appears.]( {% image_buster /assets/img/ai_agent/custom_agent_test.png %} )
 
 1. In the **Sample inputs** field, enter example customer data or customer responses—anything that reflects real scenarios your agent will handle. 
-2. Select **Run test**. The agent will execute based on your configuration and display its response. Test runs count toward your daily and total invocation limit.
+2. Select **Run test**. The agent will execute based on your configuration and display its response. Test runs count toward your daily and total daily execution limit.
 
 Review the output with a critical eye. Consider the following questions:
 

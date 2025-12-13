@@ -73,8 +73,12 @@ You can refresh and edit the fields in your catalog that use agents. To remove a
 ![The option to select "Apply AI agent" for a catalog field.]({% image_buster /assets/img/ai_agent/edit_agent_column.png %}){: style="max-width:80%;"}
 
 {% alert note %}
-During the beta period, catalog agents are limited to processing input values up to 10 KB per row, and will update only the first 10,000 rows in a catalog.
+During the beta period, catalog agents are limited to processing input values up to 25 KB per row.
 {% endalert %}
+
+#### Choose defined output fields
+
+For agentic catalog columns, you can manually override any values. To revert the value back to the agent output, select the specific cell to in-line refresh. 
 
 ### Error handling in catalogs  
 
