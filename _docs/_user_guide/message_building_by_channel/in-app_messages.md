@@ -96,7 +96,7 @@ However, because in-app messages are a pull channel, aborts work a little differ
 
 ### In-app message abort behavior
 
-In-app messages are pulled in by the device at session start and cached on the device, so regardless of Internet connection quality, the message can be delivered instantly to the user. For example, if a user receives five in-app messages within his session, they will receive all five on session start. The messages will be cached locally and appear when their defined trigger events occur (session start, user clicks a button which logs a custom event, or other).
+In-app messages are pulled in by the device at session start and cached on the device, so regardless of Internet connection quality, the message can be delivered instantly to the user. For example, if a user receives five in-app messages within their session, they will receive all five on session start. The messages will be cached locally and appear when their defined trigger events occur (session start, user clicks a button which logs a custom event, or other).
 
 In other words, the logic that determines if we should abort an in-app message occurs **before** the trigger has occurred. To demonstrate this, let's say Sam from the email example is subscribed to push notifications.
 
@@ -114,7 +114,7 @@ Braze doesn't log any abort events in Sam's case because this doesn't fulfill ou
 [Templated in-app messages](#templated-in-app-messages) force the SDK to reevaluate if a message should display when the trigger event occurs. This has a different abort behavior. To demonstrate, let's consider this example:
 
 1. Sam starts a Braze session by launching a Braze-powered app on their phone.
-2. The audience criteria of the active campaigns says Sam could be eligible for a templated in-app message, so the trigger information is sent to their device without the message payload.
+2. The audience criteria of the active campaigns say Sam could be eligible for a templated in-app message, so the trigger information is sent to their device without the message payload.
 3. Sam selects a button that logs a custom event, triggering the templated in-app message.
 4. Sam's device makes a network request to fetch the in-app message.
 5. The message's Liquid logic leads to an abort, so Braze logs this as an abort; Sam performed the trigger action prior to this evaluation.
