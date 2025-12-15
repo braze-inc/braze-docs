@@ -7,8 +7,6 @@ description: "Learn how to configure orchestration for Decisioning Studio Pro ag
 
 # Configure Orchestration
 
-> Decisioning agents need some means to orchestrate communications once they have ingested customer data and personalized at a 1:1 level.
-
 Decisioning agents need some means to orchestrate communications once they have ingested customer data and personalized at a 1:1 level.
 
 While Decisioning Studio integrates most smoothly with Braze's orchestration capabilities, Decisioning Studio also supports native (code-free) integrations Salesforce Marketing Cloud (SFMC) and Klaviyo. Custom integrations can also be configured with any other customer engagement platform (CEP).
