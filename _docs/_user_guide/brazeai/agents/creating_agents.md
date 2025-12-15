@@ -230,7 +230,7 @@ The **Live preview** pane is an instance of the agent that shows up as a side-by
 ![Agent Console showing the Live preview pane for testing a custom agent. The interface displays a Sample inputs field with example customer data, a Run test button, and a response area where the agent output appears.]( {% image_buster /assets/img/ai_agent/custom_agent_test.png %} )
 
 1. In the **Sample inputs** field, enter example customer data or customer responses—anything that reflects real scenarios your agent will handle. 
-2. Select **Run test**. The agent will execute based on your configuration and display its response. Test runs count toward your daily and total daily execution limit.
+2. Select **Run test**. The agent will execute based on your configuration and display its response. Test runs count toward your daily execution limit.
 
 Review the output with a critical eye. Consider the following questions:
 
