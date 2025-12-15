@@ -10,6 +10,8 @@ BrazeAI™ decisioning agents automatically discover the optimal action for ever
 
 The AI Decisioning Services team will tailor BrazeAI Decisioning Studio™ to the specific needs of your business. While the decisioning studio works best with Braze, a variety of other platforms are already supported. Read the documentation to understand detailed integration steps, including supported platforms.
 
+![Example diagram of a decisioning studio agent for referral emails.]({% image_buster /assets/img/offerfit/example_use_cases_referral_email.png %})
+
 To learn more, [book a call](https://www.braze.com/get-started/) with Braze.
 
 ## Key features
