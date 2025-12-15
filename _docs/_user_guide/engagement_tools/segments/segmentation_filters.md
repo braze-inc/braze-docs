@@ -140,11 +140,11 @@ glossaries:
     tags:
       - Retargeting
   - name: Last Received Message from Specific Canvas Step
-    description: Segments your users by when they received a specific Canvas component. This filter only captures users who were explicitly sent the message, and not other users with the same email or phone number who received duplicate messages. To capture duplicate users, use <a href="/docs/user_guide/engagement_tools/segments/segmentation_filters/#received-message-from-campaign-or-canvas-with-tag">Received Message from Campaign or Canvas with Tag</a>. This filter doesn't consider when users received other Canvas components.
+    description: Segments your users by when they received a specific Canvas component. This filter only captures users who were explicitly sent the message, and not other users with the same email or phone number who received duplicate messages; to capture duplicate users, use <a href="/docs/user_guide/engagement_tools/segments/segmentation_filters/#received-message-from-campaign-or-canvas-with-tag">Received Message from Campaign or Canvas with Tag</a>. This filter doesn't consider when users received other Canvas components.
     tags:
       - Retargeting
   - name: Last Received Message from Specific Campaign
-    description: Segments your users by whether or not they have received a specific campaign. This filter only captures users who were explicitly sent the message, and not other users with the same email or phone number who received duplicate messages. To capture duplicate users, use <a href="/docs/user_guide/engagement_tools/segments/segmentation_filters/#received-message-from-campaign-or-canvas-with-tag">Received Message from Campaign or Canvas with Tag</a>. This filter doesn't consider when users received other campaigns.
+    description: Segments your users by whether or not they have received a specific campaign. This filter only captures users who were explicitly sent the message, and not other users with the same email or phone number who received duplicate messages; to capture duplicate users, use <a href="/docs/user_guide/engagement_tools/segments/segmentation_filters/#received-message-from-campaign-or-canvas-with-tag">Received Message from Campaign or Canvas with Tag</a>. This filter doesn't consider when users received other campaigns.
     tags:
       - Retargeting
   - name: Received Message from Campaign or Canvas with Tag
