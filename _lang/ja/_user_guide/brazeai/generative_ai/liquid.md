@@ -1,5 +1,5 @@
 ---
-nav_title: 流動コード
+nav_title: リキッドコード
 article_title: BrazeAIでLiquidコードを生成する
 description: "この記事では、AI Liquid アシスタントの仕組みと、それを使用したメッセージング用の Liquid スニペットの生成方法について説明します。"
 page_type: reference
@@ -14,8 +14,7 @@ page_order: 0.0
 
 BrazeAI<sup>TM</sup> Liquid アシスタントは、お客様のマーケティングニーズに合わせた効果的な Liquid コードの作成を支援するように設計されています。当社の AI は、Liquid の構文、およびマーケターによるメッセージでの Liquid の活用法についてトレーニングされているので、パーソナライズされたコンテンツの作成における微妙な違いを理解しています。
 
-さらに、BrazeAI<sup>TM</sup> Liquid Assistant を提供することで、カスタム属性の名前(“favourite_color”) やデータタイプ(ブール値やストリングなど) を指定します。このBrazeAI<sup>TM</sup> Liquid Assistant は、メッセージが正確にターゲット設定され、目標と整合性がとれていることを確認します。さらに、ブランドガイドラインを作成する場合、BrazeAI<sup>TM</sup> Liquid アシスタントはブランドガイドラインを使用して、生成された出力をより適切にカスタマイズたり、コンテンツを自社のブランドボイスにカスタマイズしたりできます。お客様が作成したブランドガイドラインは、お客様自身が使用してコンテンツをパーソナライズするためにのみ使用されます。
-さらに、BrazeAI<sup>TM</sup> Liquid Assistant を提供することで、カスタム属性の名前(“favourite_color”) やデータタイプ(ブール値やストリングなど) を指定します。このBrazeAI<sup>TM</sup> Liquid Assistant は、メッセージが正確にターゲット設定され、目標と整合性がとれていることを確認します。さらに、ブランドガイドラインを作成する場合、BrazeAI<sup>TM</sup> Liquid アシスタントはブランドガイドラインを使用して、生成された出力をより適切にカスタマイズたり、コンテンツを自社のブランドボイスにカスタマイズしたりできます。お客様が作成したブランドガイドラインは、お客様自身が使用してコンテンツをパーソナライズするためにのみ使用されます。
+さらに、<sup>BrazeAITM</sup>Liquid Assistantにカスタム属性名(“favourite_color”) など)やデータ型(booleanやstringなど)を提供することで、<sup>BrazeAITM</sup>Liquid Assistantは、あなたのメッセージが正確にターゲット化され、目標に沿ったものであることを保証する。さらに、ブランドガイドラインを作成する場合、BrazeAI<sup>TM</sup> Liquid アシスタントはブランドガイドラインを使用して、生成された出力をより適切にカスタマイズたり、コンテンツを自社のブランドボイスにカスタマイズしたりできます。お客様が作成したブランドガイドラインは、お客様自身が使用してコンテンツをパーソナライズするためにのみ使用されます。
 
 ## サポートされているチャンネル
 
@@ -33,7 +32,7 @@ BrazeAI<sup>TM</sup> Liquid Assistant を使用して以下を作成できます
 
 BrazeAI<sup>TM</sup>Liquid アシスタントを起動するには、メッセージ作成画面で AI アシスタントアイコンを選択します。
 
-![AI アシスタント付きメッセージコンポーザー。]({% image_buster /assets/img/ai_liquid/ai_assistant_icon.png %}){: style="max-width:50%;"}
+![AI アシスタントを持つメッセージ作成画面。]({% image_buster /assets/img/ai_liquid/ai_assistant_icon.png %}){: style="max-width:50%;"}
 
 含まれているプロンプトを1つ選択するか、テキストボックスに独自のプロンプトを入力することができます。
 
@@ -41,31 +40,31 @@ BrazeAI<sup>TM</sup>Liquid アシスタントを起動するには、メッセ�
 {% tab use app activity %}
 **アプリアクティビティを使用**プロンプトは、アプリが最後に使用された日時に基づいて異なるメッセージを送信するときに役立つ Liquid コードを生成します。アシスタントがより正確な結果を生成できるように、追加の質問を受けることがあります。
 
-!["アプリアクティビティ"プロンプトの出力例。]({% image_buster /assets/img/ai_liquid/use_app_activity.png %}){: style="max-width:45%;"}
+![「アプリアクティビティの使用」プロンプトの出力例。]({% image_buster /assets/img/ai_liquid/use_app_activity.png %}){: style="max-width:45%;"}
 {% endtab %}
 
 {% tab add countdown %}
 このプロンプトは、イベントが開始されるまでの時間を含むメッセージを送信する Liquid コードを生成します。イベント日時の詳細を入力するように要求されます。
 
-!["Add countdown"プロンプトの出力例。]({% image_buster /assets/img/ai_liquid/add_countdown.png %}){: style="max-width:45%;"}
+![「カウントダウンの追加」プロンプトの出力例。]({% image_buster /assets/img/ai_liquid/add_countdown.png %}){: style="max-width:45%;"}
 {% endtab %}
 
 {% tab inspire me %}
 このプロンプトは、メッセージボックスに内容がある場合に表示されます。Liquid でメッセージをパーソナライズするために選択できるオプションのリストが生成されます。 
 
-!["Inspire me"プロンプトの出力例。]({% image_buster /assets/img/ai_liquid/inspire_me.png %}){: style="max-width:45%;"}
+![「インスピレーションの指定」プロンプトの出力例。]({% image_buster /assets/img/ai_liquid/inspire_me.png %}){: style="max-width:45%;"}
 {% endtab %}
 
 {% tab improve my liquid %}
 このプロンプトは、メッセージ作成画面に内容がある場合に表示されます。アシスタントでコードをより効率的に読みやすくする場合に選択します。
 
-![ &quot の出力例; 私のLiquid" prompt を改善します。]({% image_buster /assets/img/ai_liquid/improve_my_liquid.png %}){: style="max-width:45%;"}
+![「Liquid を改善」プロンプトの出力例。]({% image_buster /assets/img/ai_liquid/improve_my_liquid.png %}){: style="max-width:45%;"}
 {% endtab %}
 {% endtabs %}
 
 Liquid コードを生成するには、[**作成ツールを更新**] を選択します。
 
-![AI アシスタントウィンドウ。プロンプトが表示されます。]({% image_buster /assets/img/ai_liquid/ai_assistant_window.png %}){: style="max-width:50%;"}
+![プロンプトが表示された AI アシスタントウィンドウ。]({% image_buster /assets/img/ai_liquid/ai_assistant_window.png %}){: style="max-width:50%;"}
  
 同じプロンプトを使用して別のメッセージを生成するには、[**再生成**] を選択します。メッセージを削除して前のメッセージに戻すには、[**更新を元に戻す**] を選択します。
 
@@ -73,12 +72,12 @@ Liquid コードを生成するには、[**作成ツールを更新**] を選択
 
 以下の属性は現在 BrazeAI<sup>TM</sup> Liquid アシスタントのベータ版です。
 
-| 条件 | ナレッジタイプ |
-| - | - |
-| Liquid (`for` ループ、`if` ステートメント、数学演算、その他を含む) | コーディング |
-| デフォルトおよび標準ユーザー属性 | 属性 |
-| 以下のいずれかのデータ型を持つカスタム属性: {::nomarkdown}<ul><li>ブール値</li><li>数値</li><li>文字列</li><li>配列</li><li>時刻</li></ul>{:/} | 属性 |
-| コネクテッドコンテンツ | コーディング |
+| 基準 | 知識タイプ | 
+| - | - | 
+| Liquid (`for` ループ、`if` ステートメント、数学、その他を含む) | コード |
+| デフォルトおよび標準ユーザー属性項目 | 属性 |
+| これらのデータ型のいずれかを持つカスタム属性： {::nomarkdown}<ul><li>ブール値</li><li>数値</li><li>文字列</li><li>配列</li><li>時刻</li></ul>{:/} | 属性 |
+| コネクテッドコンテンツ | コード |
 {: .reset-td-br-1 .reset-td-br-2 }
 
 ## ベストプラクティス
@@ -129,8 +128,7 @@ BrazeAI<sup>TM</sup> Liquid アシスタントは追加の質問ができます�
 - ユーザーが戻ってきて、カートにアイテムが残っているか場合はチェックアウトするように促すメッセージを書くのを手伝ってください。
 - 顧客の国に基づいてメッセージをパーソナライズするための Liquid を記述してください。メッセージに国名を記載したいです。いずれもない場合は、リンクをクリックしてプロファイルを更新するように提案します。
 - ユーザーの名を使用してウェルカムメッセージをパーソナライズし、ユーザーの性別に基づいて異なるコピーを書くにはどうすればよいですか?
-- カスタム属性“CUSTOM_ATTRIBUTE_NAME“ とその数値に基づいて別のメッセージを表示するには、リキッドを記述します。送信できるオプションは 6 種類あります。カスタム属性の値がない場合は、プレースホルダメッセージを送信します。
-- カスタム属性“CUSTOM_ATTRIBUTE_NAME“ とその数値に基づいて別のメッセージを表示するには、リキッドを記述します。送信できるオプションは 6 種類あります。カスタム属性の値がない場合は、プレースホルダメッセージを送信します。
+- カスタム属性、“CUSTOM_ATTRIBUTE_NAME“ とその値に基づいて異なるメッセージを表示する Liquid を書く。送信できるオプションは 6 種類あります。カスタム属性の値がない場合は、プレースホルダメッセージを送信します。
 {% endtab %}
 
 {% tab handling outliers %}

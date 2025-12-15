@@ -10,7 +10,7 @@ description: "この記事では、「ユーザーの削除」Braze エンドポ
 ---
 {% api %}
 # ユーザーを削除する
-{% apimethod postcore_endpoint|https://www.braze.com/docs/core_endpoints %}。
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}。
 /users/delete
 {% endapimethod %}
 

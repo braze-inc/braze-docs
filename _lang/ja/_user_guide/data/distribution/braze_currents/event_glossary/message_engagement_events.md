@@ -20,7 +20,7 @@ search_rank: 6
 
 このイベントの内訳は、メッセージエンゲージメントイベントに一般的に含まれる情報のタイプを示します。開発者とビジネスインテリジェンス戦略チームは、情報の構成要素をしっかり理解したうえで、受信した Currents イベントデータを使用して、データドリブン型のレポートやグラフを作成したり、その他の貴重なデータ指標を活用したりすることができます。
 
-![ユーザー固有のプロパティー、キャンペーンまたはキャンバス"トラッキングのプロパティー、およびイベント固有のプロパティーによってグループ化されたリストされたプロパティーを持つメール 配信停止イベントを示すメッセージエンゲージメントイベントの内訳]]({% image_buster /assets/img/message_engagement_event.png %})
+![ユーザー固有のプロパティ、キャンペーンまたはキャンバスのトラッキングプロパティ、およびイベント固有のプロパティによってグループ化されたリストされたプロパティを持つメール配信停止イベントを示すメッセージエンゲージメントイベントの内訳]({% image_buster /assets/img/message_engagement_event.png %})
 
 メッセージエンゲージメントイベントは、**ユーザー固有**のプロパティ、**キャンペーン / キャンバス追跡**プロパティ、 および**イベント固有**のプロパティで構成されます。
 
@@ -210,7 +210,7 @@ Currents は、900 KB を超える過度に大きなペイロードを持つイ�
 Subscription
 {% endapitags %}
 
-このイベントは、Brazeが、リクエストがユーザーの現行のサブスクリプションステートを変更しない場合でも、ユーザーのグローバルサブスクリプションステートを更新するリクエストを受信したときに発生します。
+このイベントは、Brazeがユーザーのグローバルサブスクリプション状態を更新するリクエストを受信したときに発生する。
 
 {% tabs %}
 {% tab Amplitude %}
@@ -427,7 +427,7 @@ Subscription
 {% endapi %}
 
 {% api %}
-## サブスクリプショングループの状態変更イベント {#subscription-group-state-change-events}
+## サブスクリプショングループ状態変更イベント {#subscription-group-state-change-events}
 
 {% apitags %}
 Subscription
@@ -436,7 +436,7 @@ Subscription
 このイベントは、サブスクリプショングループ内のユーザーのサブスクリプション状態が変化したときに発生します。
 
 {% alert important %}
-現在、サブスクリプショングループは、メール、SMS、WhatsApp チャネルでのみ使用できます。
+サブスクリプショングループは、現時点ではメール、SMS、RCS、WhatsAppチャネルでのみ利用できる。
 {% endalert %}
 
 {% tabs %}
@@ -669,7 +669,7 @@ Subscription
 {% endapi %}
 
 {% api %}
-## キャンペーンコンバージョンイベント {#campaign-conversion-events}
+## キャンペーン コンバージョンイベント {#campaign-conversion-events}
 
 {% apitags %}
 キャンペーン、コンバージョン
@@ -842,7 +842,7 @@ Subscription
 {% endapi %}
 
 {% api %}
-## キャンペーンコントロールグループ登録イベント {#campaign-control-group-enrollment-events}
+## キャンペーンコントロールグループ 登録イベント {#campaign-control-group-enrollment-events}
 
 {% apitags %}
 キャンペーン、エントリー
@@ -1001,7 +1001,7 @@ Subscription
 {% endapi %}
 
 {% api %}
-## キャンバス変換イベント {#canvas-conversion-events}
+## キャンバス・コンバージョンイベント {#canvas-conversion-events}
 
 {% apitags %}
 キャンバス、変換
@@ -1171,7 +1171,7 @@ Subscription
 {% endapi %}
 
 {% api %}
-## キャンバスエントリイベント {#canvas-entry-events}
+## キャンバスエントリーイベント {#canvas-entry-events}
 
 {% apitags %}
 キャンバス、エントリ
@@ -1328,7 +1328,7 @@ Subscription
 {% endapi %}
 
 {% api %}
-## マッチオーディエンスイベントの終了 {#exit-match-audience-events}
+## 退場マッチ オーディエンス・イベント {#exit-match-audience-events}
 
 {% apitags %}
 出口、キャンバス
@@ -1477,7 +1477,7 @@ Subscription
 {% endapi %}
 
 {% api %}
-## Exit Perform イベントイベント {#exit-perform-event-events}
+## イベントを終了する {#exit-perform-event-events}
 
 {% apitags %}
 出口、キャンバス
@@ -1626,10 +1626,10 @@ Subscription
 {% endapi %}
 
 {% api %}
-## 実験ステップ変換イベント {#experiment-step-conversion-events}
+## 実験ステップ コンバージョンイベント {#experiment-step-conversion-events}
 
 {% apitags %}
-Canvas
+キャンバス
 {% endapitags %}
 
 このイベントは、キャンバスの実験ステップでユーザーのコンバージョンが起きたときに発生します。
@@ -1795,10 +1795,10 @@ Canvas
 {% endapi %}
 
 {% api %}
-## Experiment 分割エントリイベント {#experiment-split-entry-events}
+## 実験分割エントリーのイベント {#experiment-split-entry-events}
 
 {% apitags %}
-Canvas
+キャンバス
 {% endapitags %}
 
 このイベントは、ユーザーがキャンバスの実験ステップパスに入ったときに発生します。
@@ -1955,10 +1955,10 @@ Canvas
 {% endapi %}
 
 {% api %}
-## キャンバスのStep Progression イベント {#canvas-step-progression-events}
+## キャンバスステップ進行イベント {#canvas-step-progression-events}
 
 {% apitags %}
-キャンバス、プログレッション
+キャンバス, プログレッション
 {% endapitags %}
 
 このイベントは、ユーザーがキャンバスのステップを進み、何らかの結果を得たときに発生する。このイベントは、ステップの開始または終了時には発生しないことに注意してください。現在、分岐ステップ (オーディエンスパス、条件分岐、アクションパス、実験) と（オーディエンスパス、条件分岐、アクションパス、エクスペリメント）と Advance の結果のみがステップの進行イベントを生成します。
@@ -2132,7 +2132,7 @@ Canvas
 {% endapi %}
 
 {% api %}
-## バナーアボートイベント {#banner-abort-events}
+## バナー中止イベント {#banner-abort-events}
 
 {% apitags %}
 Banner, Abort
@@ -2342,7 +2342,7 @@ Banner, Abort
 ## バナークリックイベント {#banner-click-events}
 
 {% apitags %}
-バナー、クリック
+バナー, クリック
 {% endapitags %}
 
 このイベントは、ユーザーがバナーをクリックしたときに発生します。
@@ -2541,7 +2541,7 @@ Banner, Abort
 {% endapi %}
 
 {% api %}
-## バナーインプレッションイベント {#banner-impression-events}
+## バナー・インプレッション・イベント {#banner-impression-events}
 
 {% apitags %}
 Banner, Impressions
@@ -2738,7 +2738,7 @@ Banner, Impressions
 {% endapi %}
 
 {% api %}
-## コンテンツカードアボートイベント {#content-card-abort-events}
+## コンテンツカード中止イベント {#content-card-abort-events}
 
 {% apitags %}
 Abort, Content Cards
@@ -2932,7 +2932,7 @@ Abort, Content Cards
 {% endapi %}
 
 {% api %}
-## コンテンツカードのクリックイベント {#content-card-click-events}
+## コンテンツカードクリックイベント {#content-card-click-events}
 
 {% apitags %}
 コンテンツカード、クリック
@@ -3165,7 +3165,7 @@ Abort, Content Cards
 {% endapi %}
 
 {% api %}
-## コンテンツカード却下イベント {#content-card-dismiss-events}
+## コンテンツカード イベントを却下する {#content-card-dismiss-events}
 
 {% apitags %}
 コンテンツカード、解雇
@@ -3398,7 +3398,7 @@ Abort, Content Cards
 {% endapi %}
 
 {% api %}
-## コンテンツカードインプレッションイベント {#content-card-impression-events}
+## コンテンツカード インプレッションイベント {#content-card-impression-events}
 
 {% apitags %}
 コンテンツカード、インプレッション
@@ -3631,7 +3631,7 @@ Abort, Content Cards
 {% endapi %}
 
 {% api %}
-## コンテンツカード送信イベント {#content-card-send-events}
+## コンテンツカード イベントを送る {#content-card-send-events}
 
 {% apitags %}
 コンテンツカード、送信
@@ -3830,7 +3830,7 @@ Abort, Content Cards
 {% endapi %}
 
 {% api %}
-## メールアボートイベント {#email-abort-events}
+## イベントを中止するメール {#email-abort-events}
 
 {% apitags %}
 Abort, Email
@@ -4035,7 +4035,7 @@ Abort, Email
 {% endapi %}
 
 {% api %}
-## メールバウンスイベント {#email-bounce-events}
+## メールのバウンスイベント {#email-bounce-events}
 
 {% apitags %}
 メール、バウンス
@@ -4252,7 +4252,7 @@ Abort, Email
 {% endapi %}
 
 {% api %}
-## Eメールクリックイベント {#email-click-events}
+## クリックイベントのメール {#email-click-events}
 
 {% apitags %}
 電子メール、クリック
@@ -4296,7 +4296,7 @@ Abort, Email
     "send_id" : "(optional, string) Message send ID this message belongs to",
     "suspected_bot_click_reason" : "(optional, array of string) Reason(s) why this is a suspected bot click. Will always populate even if Bot Filtering setting is disabled.",
     "url" : "(optional, string) URL that the user clicked on",
-    "user_agent" : "(optional, string) User agent on which the spam report occurred"
+    "user_agent" : "(optional, string) User agent on which the click occurred"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
@@ -4348,7 +4348,7 @@ Abort, Email
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token",
     "url" : "(optional, string) URL that the user clicked on",
-    "user_agent" : "(optional, string) User agent on which the spam report occurred"
+    "user_agent" : "(optional, string) User agent on which the click occurred"
   }
 }
 ```
@@ -4395,7 +4395,7 @@ Abort, Email
           "send_id" : "(optional, string) Message send ID this message belongs to",
           "source_request_id" : "(required, string) Globally unique ID for this event",
           "url" : "(optional, string) URL that the user clicked on",
-          "user_agent" : "(optional, string) User agent on which the spam report occurred"
+          "user_agent" : "(optional, string) User agent on which the click occurred"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
@@ -4459,7 +4459,7 @@ Abort, Email
     "message_variation_name" : "(optional, string) Name of the message variation",
     "send_id" : "(optional, string) Message send ID this message belongs to",
     "suspected_bot_click_reason" : "(optional, array of string) Reason(s) why this is a suspected bot click. Will always populate even if Bot Filtering setting is disabled.",
-    "user_agent" : "(optional, string) User agent on which the spam report occurred"
+    "user_agent" : "(optional, string) User agent on which the click occurred"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
@@ -4505,7 +4505,7 @@ Abort, Email
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "url" : "(optional, string) URL that the user clicked on",
-  "user_agent" : "(optional, string) User agent on which the spam report occurred",
+  "user_agent" : "(optional, string) User agent on which the click occurred",
   "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
@@ -4518,7 +4518,7 @@ Abort, Email
 {% endapi %}
 
 {% api %}
-## メール遅延イベント {#email-deferral-events}
+## メール延期イベント {#email-deferral-events}
 
 {% apitags %}
 電子メール、延期
@@ -4551,7 +4551,7 @@ Abort, Email
     "ip_pool" : "(optional, string) IP pool from which the email send was made",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "recipient_domain" : "(optional, string) Receipient's email domain",
+    "recipient_domain" : "(optional, string) Recipient's email domain",
     "send_id" : "(optional, string) Message send ID this message belongs to",
     "timezone" : "(optional, string) Time zone of the user"
   },
@@ -4592,7 +4592,7 @@ Abort, Email
     "ip_pool" : "(optional, string) IP pool from which the email send was made",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "recipient_domain" : "(optional, string) Receipient's email domain",
+    "recipient_domain" : "(optional, string) Recipient's email domain",
     "send_id" : "(optional, string) Message send ID this message belongs to",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token"
@@ -4629,7 +4629,7 @@ Abort, Email
           "ip_pool" : "(optional, string) IP pool from which the email send was made",
           "message_variation_id" : "(optional, string) API ID of the message variation this user received",
           "message_variation_name" : "(optional, string) Name of the message variation",
-          "recipient_domain" : "(optional, string) Receipient's email domain",
+          "recipient_domain" : "(optional, string) Recipient's email domain",
           "send_id" : "(optional, string) Message send ID this message belongs to",
           "source_request_id" : "(required, string) Globally unique ID for this event"
         },
@@ -4683,7 +4683,7 @@ Abort, Email
     "ip_pool" : "(optional, string) IP pool from which the email send was made",
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
-    "recipient_domain" : "(optional, string) Receipient's email domain",
+    "recipient_domain" : "(optional, string) Recipient's email domain",
     "send_id" : "(optional, string) Message send ID this message belongs to"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
@@ -4719,7 +4719,7 @@ Abort, Email
   "ip_pool" : "(optional, string) IP pool from which the email send was made",
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
-  "recipient_domain" : "(optional, string) Receipient's email domain",
+  "recipient_domain" : "(optional, string) Recipient's email domain",
   "send_id" : "(optional, string) Message send ID this message belongs to",
   "sending_ip" : "(optional, string) IP address from which the email send was made",
   "time" : "(required, int) UNIX timestamp at which the event happened",
@@ -4943,7 +4943,7 @@ Abort, Email
 {% endapi %}
 
 {% api %}
-## スパムメールとしてマークするイベント {#email-mark-as-spam-events}
+## スパムとしてマークするメールイベント {#email-mark-as-spam-events}
 
 {% apitags %}
 電子メール、スパム
@@ -5154,7 +5154,7 @@ Abort, Email
 {% endapi %}
 
 {% api %}
-## メールオープンイベント {#email-open-events}
+## メール開封イベント {#email-open-events}
 
 {% apitags %}
 メール、オープン
@@ -5198,7 +5198,7 @@ Abort, Email
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "send_id" : "(optional, string) Message send ID this message belongs to",
-    "user_agent" : "(optional, string) User agent on which the spam report occurred"
+    "user_agent" : "(optional, string) User agent on which the open occurred"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
@@ -5246,7 +5246,7 @@ Abort, Email
     "send_id" : "(optional, string) Message send ID this message belongs to",
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token",
-    "user_agent" : "(optional, string) User agent on which the spam report occurred"
+    "user_agent" : "(optional, string) User agent on which the open occurred"
   }
 }
 ```
@@ -5290,7 +5290,7 @@ Abort, Email
           "message_variation_name" : "(optional, string) Name of the message variation",
           "send_id" : "(optional, string) Message send ID this message belongs to",
           "source_request_id" : "(required, string) Globally unique ID for this event",
-          "user_agent" : "(optional, string) User agent on which the spam report occurred"
+          "user_agent" : "(optional, string) User agent on which the open occurred"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
@@ -5350,7 +5350,7 @@ Abort, Email
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "send_id" : "(optional, string) Message send ID this message belongs to",
-    "user_agent" : "(optional, string) User agent on which the spam report occurred"
+    "user_agent" : "(optional, string) User agent on which the open occurred"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
@@ -5392,7 +5392,7 @@ Abort, Email
   "send_id" : "(optional, string) Message send ID this message belongs to",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
-  "user_agent" : "(optional, string) User agent on which the spam report occurred",
+  "user_agent" : "(optional, string) User agent on which the open occurred",
   "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
@@ -5411,7 +5411,7 @@ Abort, Email
 メール、送信
 {% endapitags %}
 
-このイベントは、Braze と SendGrid の間でメール送信リクエストが正常に通信されたときに発生します。ただし、これはメールがユーザーの受信トレイで受信されたことを意味するわけではありません。
+このイベントは、Braze と SendGrid の間でメール送信リクエストが正常に通信されたときに発生します。ただし、これはメールがユーザーの受信トレイに届いたという意味ではない。
 
 {% tabs %}
 {% tab Amplitude %}
@@ -5611,7 +5611,7 @@ Abort, Email
 {% endapi %}
 
 {% api %}
-## メールソフトバウンスイベント {#email-soft-bounce-events}
+## メール ソフトバウンス イベント {#email-soft-bounce-events}
 
 {% apitags %}
 メール、バウンス
@@ -5823,7 +5823,7 @@ Abort, Email
 {% endapi %}
 
 {% api %}
-## メールアンサブスクライブイベント {#email-unsubscribe-events}
+## 配信停止イベント {#email-unsubscribe-events}
 
 {% apitags %}
 メール、サブスクリプション
@@ -6023,13 +6023,13 @@ Abort, Email
 {% endapi %}
 
 {% api %}
-## 特徴フラグ実験印象事象 {#feature-flag-experiment-impression-events}
+## フィーチャーフラグ 実験 インプレッション イベント {#feature-flag-experiment-impression-events}
 
 {% apitags %}
-機能フラグ、印象
+フィーチャーフラッグ、インプレッション
 {% endapitags %}
 
-ユーザーが機能を操作する機会があった場合、または機能が無効になっているとき (AB テストのコントロールグループの場合) にユーザーが操作した可能性がある場合には、常にこのイベントが発生します。
+このイベントは、ユーザーがあなたの機能とインタラクションする機会があったとき、または機能が無効になっている場合（A/Bテストのコントロールグループの場合）にインタラクションできたときに発生する。
 
 フィーチャーフラグのインプレッションは、1セッションにつき1回のみ記録されます。
 
@@ -6236,7 +6236,7 @@ Abort, Email
 {% endapi %}
 
 {% api %}
-## アプリ内メッセージアボートイベント {#in-app-message-abort-events}
+## アプリ内メッセージ中止イベント {#in-app-message-abort-events}
 
 {% apitags %}
 In-App Messages, Abort
@@ -6713,7 +6713,7 @@ In-App Messages, Abort
 {% endapi %}
 
 {% api %}
-## アプリ内メッセージ印象イベント {#in-app-message-impression-events}
+## アプリ内メッセージのインプレッションイベント {#in-app-message-impression-events}
 
 {% apitags %}
 アプリ内メッセージ、印象
@@ -6956,13 +6956,13 @@ In-App Messages, Abort
 {% endapi %}
 
 {% api %}
-## アボートイベント {#abort-events}
+## LINE 中止イベント {#line-abort-events}
 
 {% apitags %}
-LINE、Abort
+LINE、中止
 {% endapitags %}
 
-この事象は、スケジュールされた行メッセージがLINEに送信されるまでに配信されない場合に発生します。
+このイベントは、スケジュールされたLINEメッセージが配信できない場合に、LINEに送信する前に発生する。
 
 {% tabs %}
 {% tab Amplitude %}
@@ -7156,13 +7156,13 @@ LINE、Abort
 {% endapi %}
 
 {% api %}
-## クリックイベント {#click-events}
+## LINEクリックイベント {#line-click-events}
 
 {% apitags %}
-ライン、クリック
+LINE、クリック数
 {% endapitags %}
 
-この事象は、ユーザーが、リンクのドメインがクリック"トラッキングのドメインと一致するLINEメッセージのリンクをクリックしたときに発生します。
+このイベントは、ユーザーがLINEメッセージ内のリンクをクリックし、そのリンクのドメインがクリックトラッキングのドメインと一致したときに発生する。
 
 {% tabs %}
 {% tab Amplitude %}
@@ -7190,7 +7190,7 @@ LINE、Abort
     "subscription_group_id" : "(optional, string) Subscription group API ID",
     "timezone" : "(optional, string) Time zone of the user",
     "url" : "(optional, string) URL that the user clicked on",
-    "user_agent" : "(optional, string) User agent on which the spam report occurred"
+    "user_agent" : "(optional, string) User agent on which the click occurred"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
   "insert_id" : "(required, string) Globally unique ID for this event",
@@ -7231,7 +7231,7 @@ LINE、Abort
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token",
     "url" : "(optional, string) URL that the user clicked on",
-    "user_agent" : "(optional, string) User agent on which the spam report occurred"
+    "user_agent" : "(optional, string) User agent on which the click occurred"
   }
 }
 ```
@@ -7269,7 +7269,7 @@ LINE、Abort
           "source_request_id" : "(required, string) Globally unique ID for this event",
           "subscription_group_id" : "(optional, string) Subscription group API ID",
           "url" : "(optional, string) URL that the user clicked on",
-          "user_agent" : "(optional, string) User agent on which the spam report occurred"
+          "user_agent" : "(optional, string) User agent on which the click occurred"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
@@ -7318,7 +7318,7 @@ LINE、Abort
     "send_id" : "(optional, string) Message send ID this message belongs to",
     "short_url" : "(required, string) Shortened url that was clicked",
     "subscription_group_id" : "(optional, string) Subscription group API ID",
-    "user_agent" : "(optional, string) User agent on which the spam report occurred"
+    "user_agent" : "(optional, string) User agent on which the click occurred"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
@@ -7355,7 +7355,7 @@ LINE、Abort
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "url" : "(required, string) URL that the user clicked on",
-  "user_agent" : "(optional, string) User agent on which the spam report occurred",
+  "user_agent" : "(optional, string) User agent on which the click occurred",
   "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
@@ -7365,13 +7365,13 @@ LINE、Abort
 {% endapi %}
 
 {% api %}
-## LINEインバウンド受信イベント {#line-inbound-receive-events}
+## LINE 受信イベント {#line-inbound-receive-events}
 
 {% apitags %}
-LINE、受信
+LINE、インバウンド受信
 {% endapitags %}
 
-ユーザーからLINEメッセージを受信したときに発生します。
+このイベントは、ユーザーからLINEメッセージを受信したときに発生する。
 
 {% tabs %}
 {% tab Amplitude %}
@@ -7565,13 +7565,13 @@ LINE、受信
 {% endapi %}
 
 {% api %}
-## イベントの送信 {#send-events}
+## LINE イベントを送信する {#line-send-events}
 
 {% apitags %}
-LINE、センド
+LINE、送信
 {% endapitags %}
 
-このイベントは、LINE メッセージがLINE に送信されたときに発生します。
+このイベントはLINEにLINEメッセージが送信されたときに発生する。
 
 {% tabs %}
 {% tab Amplitude %}
@@ -7760,7 +7760,7 @@ LINE、センド
 {% endapi %}
 
 {% api %}
-## Live Activityアウトカムイベント {#live-activity-outcome-events}
+## ライブ活動の成果イベント {#live-activity-outcome-events}
 
 {% apitags %}
 ライブアクティビティ、結果
@@ -7910,7 +7910,7 @@ LINE、センド
 {% endapi %}
 
 {% api %}
-## ライブアクティビティ送信イベント {#live-activity-send-events}
+## ライブ活動 イベントを送る {#live-activity-send-events}
 
 {% apitags %}
 ライブアクティビティ、センド
@@ -8055,7 +8055,7 @@ LINE、センド
 {% endapi %}
 
 {% api %}
-## プッシュ通知アボートイベント {#push-notification-abort-events}
+## プッシュ通知中止イベント {#push-notification-abort-events}
 
 {% apitags %}
 Abort, Push
@@ -8259,7 +8259,7 @@ Abort, Push
 {% endapi %}
 
 {% api %}
-## プッシュ通知バウンスイベント {#push-notification-bounce-events}
+## プッシュ通知のバウンスイベント {#push-notification-bounce-events}
 
 {% apitags %}
 プッシュ、送信、バウンス
@@ -8470,11 +8470,11 @@ Abort, Push
 
 #### プロパティの詳細
 
-- Kafka を使用して [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) データを取り込む場合は、`ad_id` 送信用のフィーチャーフリッパーを有効にするように、カスタマーサクセスマネージャーまたはアカウントマネージャーに依頼してください。
+- Kafkaを使用して[Currents]({{site.baseurl}}/user_guide/data/braze_currents/)データをインジェストしている場合は、カスタマーサクセスマネージャーまたはアカウントマネージャーに連絡して、`ad_id` を送信するための機能フリッパーをイネーブルメントしてもらう。
 {% endapi %}
 
 {% api %}
-## プッシュ通知iOS フォアグラウンドオープンイベント {#push-notification-ios-foreground-open-events}
+## プッシュ通知 iOSのフォアグラウンド開封イベント {#push-notification-ios-foreground-open-events}
 
 {% apitags %}
 プッシュ、iOS、送信
@@ -8643,7 +8643,7 @@ Abort, Push
 {% endapi %}
 
 {% api %}
-## プッシュ通知オープンイベント {#push-notification-open-events}
+## プッシュ通知開封イベント {#push-notification-open-events}
 
 {% apitags %}
 プッシュ、オープン
@@ -8652,9 +8652,9 @@ Abort, Push
 このイベントは、ユーザーがプッシュ通知を直接クリックしてアプリケーションを開いたときに発生します。現在、プッシュオープンイベントは、厳密に言うと「オープン数の合計」ではなく「直接オープン数」を指します。キャンペーンレベルの「誘発された開封数」に表示される統計情報は、ユーザーレベルで寄与していないため、これに含まれません。
 
 {% alert note %}
-まれに、プッシュ開封は、次の理由により、対応するプッシュ送信イベントよりも先にCurrentsデーターでイヤーをアプリすることがあります。
-- SDKの時計が間違っている。
-- バッチ書き込み遅延が大きい。記録された送信時刻は、早期配信に遅れる可能性があるため、バッチの最終送信タイムスタンプが書き込まれるまでに、非常に迅速な開封が記録される可能性があります。大規模な送信は一括で送信され、記録されます。
+まれに、以下の理由により、Currentsデータの対応するプッシュ送信イベントの前にプッシュ開封が表示されることがある：
+- SDKのクロックが正しくない。
+- バッチライトレイテンシが高い。記録された送信時刻は、早期の配送に遅れることがあるため、バッチの最終的な送信タイムスタンプが書き込まれる前に、非常に迅速な開封が記録されることがある。大量に送られたものは一括して発送され、記録される。
 {% endalert %}
 
 {% tabs %}
@@ -8877,7 +8877,7 @@ Abort, Push
 {% endapi %}
 
 {% api %}
-## プッシュ通知送信イベント {#push-notification-send-events}
+## プッシュ通知 送信イベント {#push-notification-send-events}
 
 {% apitags %}
 プッシュ、送信
@@ -9104,13 +9104,13 @@ Abort, Push
 {% endapi %}
 
 {% api %}
-## アボートイベント {#abort--events}
+## RCS中止イベント {#rcs-abort-events}
 
 {% apitags %}
-RCS、中止
+RCS、アボート
 {% endapitags %}
 
-このイベントは、Braze 内で検出されたエラーが原因でRCS 送信が中断され、メッセージがドロップされたときに作成されます。
+このイベントは、RCS送信がBraze内で検出されたエラーのために中断され、メッセージがドロップされたときに作成される。
 
 {% tabs %}
 {% tab Amplitude %}
@@ -9280,13 +9280,13 @@ RCS、中止
 {% endapi %}
 
 {% api %}
-## クリックイベント {#click-events}
+## RCSクリックイベント {#rcs-click-events}
 
 {% apitags %}
-RCS、クリックス
+RCS、クリック数
 {% endapitags %}
 
-ユーザーが、UI 要素をアプリまたはクリックする方法でRCS メッセージと対話するときに作成されるイベント。
+ユーザーがUIエレメントをタップまたはクリックするような方法でRCSメッセージと相互作用したときに生成されるイベント。
 
 {% tabs %}
 {% tab Amplitude %}
@@ -9498,13 +9498,13 @@ RCS、クリックス
 {% endapi %}
 
 {% api %}
-## デリバリーイベント {#delivery-events}
+## RCS配信イベント {#rcs-delivery-events}
 
 {% apitags %}
 RCS、デリバリー
 {% endapitags %}
 
-このイベントは、RCSメッセージがユーザーのモバイルデバイスに正常に配信されたときに作成されます。
+このイベントは、RCSメッセージがユーザーのモバイルデバイスに正常に配信されたときに生成される。
 
 {% tabs %}
 {% tab Amplitude %}
@@ -9693,13 +9693,13 @@ RCS、デリバリー
 {% endapi %}
 
 {% api %}
-## 受信受信イベント {#inbound-receive-events}
+## RCS受信イベント {#rcs-inbound-received-events}
 
 {% apitags %}
-RCS、受信
+RCS、インバウンド受信
 {% endapitags %}
 
-このイベントは、Braze がユーザーからRCS メッセージを受信したときに作成されます。
+このイベントは、ユーザーOriginのRCSメッセージをBrazeが受信したときに作成される。
 
 {% tabs %}
 {% tab Amplitude %}
@@ -9885,13 +9885,13 @@ RCS、受信
 {% endapi %}
 
 {% api %}
-## 読み取りイベント {#read-events}
+## RCS読み取りイベント {#rcs-read-events}
 
 {% apitags %}
-RCS, Read
+RCS、リード
 {% endapitags %}
 
-このイベントは、ユーザー 開封がデバイス上でRCSメッセージを送信したときに作成され、メッセージの内容を確認または読み取ったことを示します。
+このイベントは、ユーザーが自分のデバイスでRCSメッセージを開封したときに生成され、メッセージの内容を見た、または読んだことを示す。
 
 {% tabs %}
 {% tab Amplitude %}
@@ -10053,13 +10053,13 @@ RCS, Read
 {% endapi %}
 
 {% api %}
-## 拒否イベント {#rejection-events}
+## RCS不合格イベント {#rcs-rejection-events}
 
 {% apitags %}
-RCS、拒否
+RCS、不合格
 {% endapitags %}
 
-通信事業者の介入により、RCSメッセージがユーザーのモバイルデバイスに配信されない場合に作成されるイベント。
+キャリアの介入により、RCSメッセージがユーザーのモバイルデバイスに配信されなかった場合に作成されるイベント。
 
 {% tabs %}
 {% tab Amplitude %}
@@ -10262,13 +10262,13 @@ RCS、拒否
 {% endapi %}
 
 {% api %}
-## イベントの送信 {#send-events}
+## RCS 送信イベント {#rcs-send-events}
 
 {% apitags %}
-RCS、センド
+RCS、送信
 {% endapitags %}
 
-この事象は、RCSメッセージがBrazeから弊社のラストマイル配送業者に送信されたときに作成されます。
+このイベントは、RCSメッセージがBrazeからラストマイル配送パートナーに送信されたときに作成される。
 
 {% tabs %}
 {% tab Amplitude %}
@@ -10467,7 +10467,7 @@ RCS、センド
 {% endapi %}
 
 {% api %}
-## SMSアボートイベント {#sms-abort-events}
+## SMS中止イベント {#sms-abort-events}
 
 {% apitags %}
 中止、SMS
@@ -10851,7 +10851,7 @@ SMS、送信
 {% endapi %}
 
 {% api %}
-## SMS送達通知 {#sms-delivery-events}
+## SMS配信イベント {#sms-delivery-events}
 
 {% apitags %}
 SMS、配信
@@ -11267,7 +11267,7 @@ SMS、配信
 ## SMS受信イベント {#sms-inbound-received-events}
 
 {% apitags %}
-SMS、受信メール
+SMS、インバウンド受信
 {% endapitags %}
 
 このイベントは、ユーザーの 1 人が Braze SMS サブスクリプショングループの 1 つの電話番号に SMS を送信したときに発生します。
@@ -11886,7 +11886,7 @@ SMS、送信
 {% endapi %}
 
 {% api %}
-## SMS ショートリンククリックイベント {#sms-short-link-click-events}
+## SMSショートリンククリックイベント {#sms-short-link-click-events}
 
 {% apitags %}
 SMS、クリック
@@ -11917,7 +11917,7 @@ SMS、クリック
     "short_url" : "(required, string) Shortened url that was clicked",
     "suspected_bot_click_reason" : "(optional, array of string) Why this event was classified as a bot",
     "url" : "(optional, string) URL that the user clicked on",
-    "user_agent" : "(optional, string) User agent on which the spam report occurred",
+    "user_agent" : "(optional, string) User agent on which the click occurred",
     "user_phone_number" : "(optional, string) [PII] The user's phone number from which the message was received"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
@@ -11957,7 +11957,7 @@ SMS、クリック
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token",
     "url" : "(optional, string) URL that the user clicked on",
-    "user_agent" : "(optional, string) User agent on which the spam report occurred",
+    "user_agent" : "(optional, string) User agent on which the click occurred",
     "user_phone_number" : "(optional, string) [PII] The user's phone number from which the message was received"
   }
 }
@@ -11993,7 +11993,7 @@ SMS、クリック
           "short_url" : "(required, string) Shortened url that was clicked",
           "source_request_id" : "(required, string) Globally unique ID for this event",
           "url" : "(optional, string) URL that the user clicked on",
-          "user_agent" : "(optional, string) User agent on which the spam report occurred"
+          "user_agent" : "(optional, string) User agent on which the click occurred"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
@@ -12045,7 +12045,7 @@ SMS、クリック
     "short_url" : "(required, string) Shortened url that was clicked",
     "suspected_bot_click_reason" : "(optional, array of string) Why this event was classified as a bot",
     "url" : "(optional, string) URL that the user clicked on",
-    "user_agent" : "(optional, string) User agent on which the spam report occurred"
+    "user_agent" : "(optional, string) User agent on which the click occurred"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
@@ -12078,7 +12078,7 @@ SMS、クリック
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "url" : "(required, string) URL that the user clicked on",
-  "user_agent" : "(optional, string) User agent on which the spam report occurred",
+  "user_agent" : "(optional, string) User agent on which the click occurred",
   "user_id" : "(required, string) Braze user ID of the user who performed this event",
   "user_phone_number" : "(optional, string) [PII] The user's phone number from which the message was received"
 }
@@ -12089,7 +12089,7 @@ SMS、クリック
 {% endapi %}
 
 {% api %}
-## Webフックアボートイベント {#webhook-abort-events}
+## Webhook中止イベント {#webhook-abort-events}
 
 {% apitags %}
 中止、Webhook
@@ -12283,7 +12283,7 @@ SMS、クリック
 {% endapi %}
 
 {% api %}
-## Webフック障害事象 {#webhook-failure-events}
+## Webhook 失敗イベント {#webhook-failure-events}
 
 {% apitags %}
 Failure, Webhooks
@@ -12509,7 +12509,7 @@ Failure, Webhooks
 {% endapi %}
 
 {% api %}
-## Webフック送信イベント {#webhook-send-events}
+## Webhook 送信イベント {#webhook-send-events}
 
 {% apitags %}
 Webhook、送信
@@ -12699,7 +12699,7 @@ Webhook、送信
 {% endapi %}
 
 {% api %}
-## WhatsAppアボートイベント {#whatsapp-abort-events}
+## WhatsApp 中止イベント {#whatsapp-abort-events}
 
 {% apitags %}
 WhatsApp、中止
@@ -12900,10 +12900,10 @@ WhatsApp、中止
 {% endapi %}
 
 {% api %}
-## WhatsAppトラッキングリンククリックイベント {#whatsapp-tracked-link-click-events}
+## WhatsApp トラッキングリンククリックイベント {#whatsapp-tracked-link-click-events}
 
 {% apitags %}
-WhatsApp、クリックス
+WhatsApp, クリック数
 {% endapitags %}
 
 このイベントは、ユーザがリンクのドメインがクリック追跡ドメインに一致するWhatsAppメッセージのリンクまたはボタンをクリックしたときに発生します。
@@ -12930,7 +12930,7 @@ WhatsApp、クリックス
     "short_url" : "(required, string) Shortened url that was clicked",
     "timezone" : "(optional, string) Time zone of the user",
     "url" : "(optional, string) URL that the user clicked on",
-    "user_agent" : "(optional, string) User agent on which the spam report occurred",
+    "user_agent" : "(optional, string) User agent on which the click occurred",
     "user_phone_number" : "(optional, string) [PII] The user's phone number from which the message was received"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
@@ -12968,7 +12968,7 @@ WhatsApp、クリックス
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token",
     "url" : "(optional, string) URL that the user clicked on",
-    "user_agent" : "(optional, string) User agent on which the spam report occurred",
+    "user_agent" : "(optional, string) User agent on which the click occurred",
     "user_phone_number" : "(optional, string) [PII] The user's phone number from which the message was received"
   }
 }
@@ -13003,7 +13003,7 @@ WhatsApp、クリックス
           "short_url" : "(required, string) Shortened url that was clicked",
           "source_request_id" : "(required, string) Globally unique ID for this event",
           "url" : "(optional, string) URL that the user clicked on",
-          "user_agent" : "(optional, string) User agent on which the spam report occurred"
+          "user_agent" : "(optional, string) User agent on which the click occurred"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
@@ -13052,7 +13052,7 @@ WhatsApp、クリックス
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "short_url" : "(required, string) Shortened url that was clicked",
-    "user_agent" : "(optional, string) User agent on which the spam report occurred"
+    "user_agent" : "(optional, string) User agent on which the click occurred"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
@@ -13085,7 +13085,7 @@ WhatsApp、クリックス
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "url" : "(required, string) URL that the user clicked on",
-  "user_agent" : "(optional, string) User agent on which the spam report occurred",
+  "user_agent" : "(optional, string) User agent on which the click occurred",
   "user_id" : "(required, string) Braze user ID of the user who performed this event",
   "user_phone_number" : "(optional, string) [PII] The user's phone number from which the message was received"
 }
@@ -13096,13 +13096,13 @@ WhatsApp、クリックス
 {% endapi %}
 
 {% api %}
-## WhatsAppデリバリーイベント {#whatsapp-delivery-events}
+## WhatsApp 配信イベント {#whatsapp-delivery-events}
 
 {% apitags %}
 WhatsApp、配信
 {% endapitags %}
 
-この事象は、送信されたWhatsApp がユーザーの機器に正常に送信したときに発生します。
+このイベントは、WhatsAppメッセージがユーザーの端末に正常に届いた場合に発生する。
 
 {% tabs %}
 {% tab Amplitude %}
@@ -13312,7 +13312,7 @@ WhatsApp、配信
 {% endapi %}
 
 {% api %}
-## WhatsApp障害事象 {#whatsapp-failure-events}
+## WhatsApp 障害イベント {#whatsapp-failure-events}
 
 {% apitags %}
 WhatsApp、失敗
@@ -13538,10 +13538,10 @@ WhatsApp、失敗
 {% endapi %}
 
 {% api %}
-## 受信イベントのWhatsApp {#whatsapp-inbound-received-events}
+## WhatsApp 受信イベント {#whatsapp-inbound-received-events}
 
 {% apitags %}
-WhatsApp、受信
+WhatsApp, インバウンド受信
 {% endapitags %}
 
 このイベントは、ユーザーの 1 人が Braze WhatsApp サブスクリプショングループのいずれかの電話番号に WhatsApp メッセージを送信したときに発生します。
@@ -13778,13 +13778,13 @@ WhatsApp、受信
 {% endapi %}
 
 {% api %}
-## WhatsAppリードイベント {#whatsapp-read-events}
+## WhatsApp イベントを読む {#whatsapp-read-events}
 
 {% apitags %}
 WhatsApp、既読
 {% endapitags %}
 
-この事象は、WhatsApp メッセージがユーザーによって読み出されたときに発生します。
+このイベントは WhatsApp メッセージがユーザーに読まれた際に発生する。
 
 {% tabs %}
 {% tab Amplitude %}
@@ -13994,13 +13994,13 @@ WhatsApp、既読
 {% endapi %}
 
 {% api %}
-## WhatsAppセンドイベント {#whatsapp-send-events}
+## WhatsApp 送信イベント {#whatsapp-send-events}
 
 {% apitags %}
 WhatsApp、送信
 {% endapitags %}
 
-このイベントは、Braze と WhatsApp の間で送信リクエストが正常に通信されたときに発生します。ただし、これはユーザーがメッセージを受信したことを意味するものではありません。
+このイベントは、Braze と WhatsApp の間で送信リクエストが正常に通信されたときに発生します。しかし、これはメッセージがユーザーに届いたことを意味しない。
 
 {% tabs %}
 {% tab Amplitude %}

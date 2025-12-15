@@ -65,7 +65,7 @@ pod install
 ```
 
 {% endtab %}
-{% tab SWIFT %}
+{% tab swift %}
 
 Braze SDK を CocoaPods または Carthage と統合する場合は、次のコード行を `AppDelegate.swift` ファイルに追加します。
 
@@ -101,7 +101,7 @@ Appboy.start(withApiKey: "YOUR-API-KEY", in:application, withLaunchOptions:launc
 なお、2019年12月現在、カスタムエンドポイントの配布は終了しているが、既存のカスタムエンドポイントを持っている場合は、引き続き使用することができる。詳細については、<a href="{{site.baseurl}}/api/basics/#endpoints">利用可能なエンドポイントのリスト</a>を参照してください。
 {% endalert %}
 
-Braze 担当者は、[正しいエンドポイント]({{ site.baseurl }}/user_guide/administrative/access_braze/sdk_endpoints/).についてすでに通知しているはずです。
+Brazeの担当者は、すでに[正しいエンドポイント]({{ site.baseurl }}/user_guide/administrative/access_braze/sdk_endpoints/) 。
 
 #### コンパイル時のエンドポイント構成 (推奨)
 既存のカスタムエンドポイントが指定されている場合...
@@ -117,7 +117,7 @@ Braze 担当者は、[正しいエンドポイント]({{ site.baseurl }}/user_gu
 {% endalert %}
 
 {% alert important %}
-具体的なクラスターについては、カスタマーサクセスマネージャーにお尋ねいただくか、サポートチームにお問い合わせください。
+具体的なクラスタについては、カスタマーサクセスチームにお問い合わせいただくか、カスタマーサクセスマネージャーにお尋ねいただきたい。
 {% endalert %}
 
 ### SDK 統合の完了
@@ -148,7 +148,7 @@ pod update
 ```
 
 {% endtab %}
-{% tab SWIFT %}
+{% tab swift %}
 
 `AppDelegate.swift` の `application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool` メソッド内に、次の Braze メソッドを追加します。
 

@@ -13,7 +13,7 @@
 3. キーを `FlutterDeepLinkingEnabled` に設定します。
 4. タイプを`Boolean`に設定します。
 5. 値を`YES`に設定します。
-    ![追加されたキーと値のペアを持つサンプルプロジェクトの `Info.plist` ファイル]({% image_buster /assets/img/flutter/flutter-ios-deep-link-info-plist.png %}「Xcode プロジェクト Info.plist ファイル」)
+    ![キーと値のペアが追加されたサンプル・プロジェクトの \`Info.plist\` ファイル。]({% image_buster /assets/img/flutter/flutter-ios-deep-link-info-plist.png %} "Xcode Project Info.plist File")
 {% endtab %}
 
 {% tab Android %}

@@ -1,7 +1,7 @@
 ---
 nav_title: "カタログセグメント"
 article_title: カタログセグメント
-page_order: 1
+page_order: 0
 page_type: reference
 alias: "/catalog_segments/"
 description: "この記事では、SQL セグメントエクステンションでカタログデータを使用してユーザーのオーディエンスを構築するカタログセグメントを作成する方法について説明します。"
@@ -20,17 +20,10 @@ tool: Segments
 
 ## カタログセグメントの作成
 
-<<<<<<< HEAD
-1. [**セグメントエクステンション**] > [**エクステンションを新規作成**] > [**テンプレートで開始**] に移動し、テンプレートを選択します。<br>![イベントまたは購入のカタログ Segmentを作成するためのオプション付きのモーダル。]({% image_buster /assets/img/catalog-segments-template.png %}){: style="max-width:80%" }
+1. [**セグメントエクステンション**] > [**エクステンションを新規作成**] > [**テンプレートで開始**] に移動し、テンプレートを選択します。<br>![行動、購買、またはRFM Segmentのカタログ Segmentを作成するためのオプションを持つモダル。]({% image_buster /assets/img/catalog-segments-template.png %}){: style="max-width:80%" }
 
 {: start="2"}
 2\.SQL エディターにテンプレートが自動的に入力されます。<br>![事前生成されたテンプレートを持つSQL エディタ。]({% image_buster /assets/img/catalog-segments-editor.png %}){: style="max-width:80%" }<br>このテンプレートでは、ユーザーイベントデータをカタログデータと結合して、特定のカタログ項目を使用したユーザーをセグメント化します。
-=======
-1. [**セグメントエクステンション**] > [**エクステンションを新規作成**] > [**テンプレートで開始**] に移動し、テンプレートを選択します。<br>\![イベントまたは購入のカタログ Segmentを作成するためのオプション付きのモーダル。]({% image_buster /assets/img/catalog-segments-template.png %}){: style="max-width:80%" }
-
-{: start="2"}
-2\.SQL エディターにテンプレートが自動的に入力されます。<br>\![事前生成されたテンプレートを持つSQL エディタ。]({% image_buster /assets/img/catalog-segments-editor.png %}){: style="max-width:80%" }<br>このテンプレートでは、ユーザーイベントデータをカタログデータと結合して、特定のカタログ項目を使用したユーザーをセグメント化します。
->>>>>>> main
 
 3. [**変数**] タブを使用して、セグメントを生成する前にテンプレートに必要なフィールドを指定します。<br>Braze がカタログアイテムへのエンゲージメントに基づいてユーザーを識別するには、次のことを行う必要があります。<br> \- カタログフィールドを含むカタログを選択します <br> \- イベントプロパティを含むカスタムイベントを選択します <br> \- カタログフィールドとイベントプロパティの値を一致させる
 
@@ -67,11 +60,7 @@ LIMIT 10
 
 たとえば、購入数が3 つ未満のユーザーを対象にするには、まずクエリーを作成して、購入数が3 つ以上のユーザーを選択します。次に、**Invert SQL** を選択して、購入数が3 未満のユーザー(購入数が0 のものを含む) を対象にします。
 
-<<<<<<< HEAD
-![&quot という名前のセグメント拡張子;直近30 日間で1 ～4 メール s をクリックし、SQL を反転するオプションを選択します。]({% image_buster /assets/img_archive/sql_segment_invert_sql.png %}){: style="max-width:70%;"}
-=======
-\![&quot という名前のセグメント拡張子;直近30 日間で1 ～4 メール s をクリックし、SQL を反転するオプションを選択します。]({% image_buster /assets/img_archive/sql_segment_invert_sql.png %}){: style="max-width:70%;"}
->>>>>>> main
+![&quot という名前のセグメント拡張;直近30 日間で1 ～4 メール s をクリックして、SQL を反転するオプションを選択します。]({% image_buster /assets/img_archive/sql_segment_invert_sql.png %}){: style="max-width:70%;"}
 
 {% alert important %}
 0 個のイベントを持つユーザーを特に対象にする場合を除き、SQL を反転する必要はありません。**Invert SQL**が選択されている場合は、機能が必要であり、Segmentが目的のオーディエンスと一致していることを確認します。例えば、照会が少なくとも1 つのイベントを持つユーザーs を対象とする場合、逆にすると、0 のイベントを持つユーザーs のみを対象とします。
@@ -152,5 +141,5 @@ LIMIT 10
 
 ### カタログセグメントのユースケースがありますが、現在のテンプレートには対応していません。どのように設定すればよいですか?
 
-追加のガイダンスについては、カスタマーサポートマネージャーまたは [Brazeサポート]({{site.baseurl}}/user_guide/administrative/access_braze/support/)にお問い合わせください。
+詳細については、顧客サポートマネージャーまたは[Brazeサポート]({{site.baseurl}}/user_guide/administrative/access_braze/support/)にお問い合わせください。
 

@@ -109,7 +109,7 @@ Braze Swift SDK は、開発者がどの機能をプロジェクトにインポ�
 
 {: .ws-td-nw-1}
 
-#### ステップ1.3：SDKをインストールする
+#### ステップ1.3：SDK をインストール
 
 Braze SDK CocoaPod をインストールするには、ターミナル内で Xcode アプリプロジェクトのディレクトリに移動し、次のコマンドを実行します。
 ```
@@ -118,7 +118,7 @@ pod install
 
 この時点で、CocoaPods によって作成された新しい Xcode プロジェクトワークスペースを開くことができるはずです。Xcode プロジェクトの代わりに、必ずこの Xcode ワークスペースを使用してください。
 
-![新しい`BrazeExample.workspace` を表示するために拡張された Braze Example フォルダ]({% image_buster /assets/img/braze_example_workspace.png %})
+![Braze Exampleフォルダが展開され、新しい\`BrazeExample.workspace\`が表示された。]({% image_buster /assets/img/braze_example_workspace.png %})
 
 #### CocoaPodsを使用してSDKを更新する
 
@@ -129,12 +129,12 @@ pod update
 ```
 {% endtab %}
 
-{% tab マニュアル %}
+{% tab Manual %}
 #### ステップ1.1：Braze SDKをダウンロード
 
 [GitHubのBraze SDKリリースページ](https://github.com/braze-inc/braze-swift-sdk/releases)に移動し、`braze-swift-sdk-prebuilt.zip`をダウンロードします。
 
-![「GitHub の Braze SDK リリースページ。」]({% image_buster /assets/img/swift/sdk_integration/download-braze-swift-sdk-prebuilt.png %})
+!["GitHubのBraze SDKリリースページ"]({% image_buster /assets/img/swift/sdk_integration/download-braze-swift-sdk-prebuilt.png %})
 
 #### ステップ1.2：フレームワークを選択してください
 
@@ -178,14 +178,14 @@ Braze SWIFT SDK には、さまざまなスタンドアロンの XCFramework が
 
 Xcodeプロジェクトでビルドターゲットを選択し、次に**一般**を選択します。**フレームワーク、ライブラリ、および埋め込みコンテンツ**の下に、[以前に準備したファイル](#swift_step-3-prepare-your-files)をドラッグ＆ドロップします。
 
-![「各Brazeライブラリーが「埋め込みと署名」に設定されたXcodeプロジェクトの例」]({% image_buster /assets/img/swift/sdk_integration/embed-and-sign.png %})
+!["各Brazeライブラリーを「Embed& Sign」に設定したXcodeプロジェクトの例"]({% image_buster /assets/img/swift/sdk_integration/embed-and-sign.png %})
 
 {% alert note %}
-Swift SDK 12.0.0から、スタティックとダイナミックなバリアントの両方で、常にBraze XCFrameworksの**Embed & Signを**選択する必要がある。これにより、フレームワークのリソースがアプリバンドルに適切に埋め込まれるようになる。
+Swift SDK 12.0.0から、スタティックとダイナミックなバリアントの両方で、常にBraze XCFrameworksの**Embed& Signを**選択する必要がある。これにより、フレームワークのリソースがアプリバンドルに適切に埋め込まれるようになる。
 {% endalert %}
 
 {% alert tip %}
-GIFサポートをイネーブルメントにするには、`braze-swift-sdk-prebuilt/static` か`braze-swift-sdk-prebuilt/dynamic` のどちらかに`SDWebImage.xcframework` を追加する。
+GIFサポートをイネーブルメントにするには、`braze-swift-sdk-prebuilt/static` または`braze-swift-sdk-prebuilt/dynamic` のいずれかに`SDWebImage.xcframework` を追加する。
 {% endalert %}
 
 #### Objective-Cプロジェクトの一般的なエラー
@@ -356,11 +356,11 @@ AppDelegate.braze = braze;
 
 #### ログレベル
 
-Braze Swift SDKのデフォルトのログレベルは、`.error`。これは、ログがイネーブルメントである場合にサポートされる最小レベルでもある。以上がログレベルの全リストである：
+Braze Swift SDKのデフォルトのログレベルは、`.error`。これは、ログがイネーブルメントの場合にサポートされる最小レベルでもある。以上がログレベルの全リストである：
 
 | Swift       | Objective-C              | 説明                                                  |
 | ----------- | ------------------------ | ------------------------------------------------------------ |
-| `.debug`    | `BRZLoggerLevelDebug`    | (デフォルト）デバッグ情報をログに残す +`.info` +`.error`.    |
+| `.debug`    | `BRZLoggerLevelDebug`    | デバッグ情報のログ +`.info` +`.error`.              |
 | `.info`     | `BRZLoggerLevelInfo`     | 一般的なSDK情報（ユーザーの変更など）を記録する +`.error` 。 |
 | `.error`    | `BRZLoggerLevelError`    | エラーをロギングする。                                                  |
 | `.disabled` | `BRZLoggerLevelDisabled` | ロギングは行われない。                                           |
@@ -372,7 +372,7 @@ Braze Swift SDKのデフォルトのログレベルは、`.error`。これは、
 `Braze.Configuration` 、実行時にログレベルを割り当てることができる。完全な使用法の詳細については、以下を参照のこと。 [`Braze.Configuration.Logger`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/logger-swift.class).
 
 {% tabs %}
-{% tab SWIFT %}
+{% tab swift %}
 
 ```swift
 let configuration = Braze.Configuration(

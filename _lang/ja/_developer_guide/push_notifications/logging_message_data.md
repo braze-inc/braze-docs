@@ -1,5 +1,5 @@
 ---
-nav_title: メッセージングデータを記録する
+nav_title: メッセージデータを記録する
 article_title: Braze SDKを使ったプッシュ通知データのロギング
 page_order: 7.2
 description: "Braze SDKを通してプッシュ通知データを記録する方法を学習する。"

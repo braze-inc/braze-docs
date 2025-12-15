@@ -1,5 +1,5 @@
 ---
-nav_title: "取得:カスタムイベントのエクスポート"
+nav_title: "取得:カスタムイベントをエクスポート"
 article_title: "取得:カスタムイベントのエクスポート"
 search_tag: Endpoint
 page_order: 4
@@ -54,8 +54,6 @@ curl --location --request GET 'https://rest.iad-03.braze.com/events?cursor=c2tpc
 ## 応答
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "events" : [

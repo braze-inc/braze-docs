@@ -60,7 +60,7 @@ import braze_plugin
 ```swift
 static var braze: Braze? = nil
 
-func application(
+override func application(
   _ application: UIApplication,
   didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil
 ) -> Bool {
@@ -131,7 +131,7 @@ import 'package:braze_plugin/braze_plugin.dart';
 次に、[サンプルアプリ](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/lib/main.dart)のように `new BrazePlugin()` を呼び出して、Braze プラグインのインスタンスを初期化します。
 
 {% alert important %}
-未定義の動作を避けるため、Dartコード内で`BrazePlugin` のインスタンスを1つだけ割り当てて使用する。
+未定義の動作を避けるため、Dartコードでは`BrazePlugin` のインスタンスを1つだけ割り当てて使用する。
 {% endalert %}
 
 ## 統合をテストする

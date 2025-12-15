@@ -10,7 +10,7 @@ description: "この記事では、API トリガー配信 Braze エンドポイ�
 ---
 {% api %}
 # API トリガー配信を使用したキャンペーンメッセージの送信
-{% apimethod postcore_endpoint|https://www.braze.com/docs/core_endpoints %}。
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}。
 /campaigns/trigger/send
 {% endapimethod %}
 

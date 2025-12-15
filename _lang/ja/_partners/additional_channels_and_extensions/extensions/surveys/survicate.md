@@ -10,19 +10,19 @@ search_tag: Partner
 
 # Survicate
 
-![Braze のメールで埋め込み HTML アンケート (最初の質問) がどのように表示されるかを示す例。]{% image_buster /assets/img/survicate/survicate_asset_1.png %}){: style="float:right;max-width:40%;border:0; margin-left:8px;"}
+![Braze のメールで埋め込み HTML アンケート (最初の質問) がどのように表示されるかを示す例。]({% image_buster /assets/img/survicate/survicate_asset_1.png %}){: style="float:right;max-width:40%;border:0; margin-left:8px;"}
 
-> [Survicate](https://survicate.com/integrations/braze-survey/?utm_source=braze&utm_medium=integrations&utm_campaign=helpcenter) は企業が複数のチャネルおよびカスタマージャーニー全体を通して、ビジネスが顧客のインサイトを収集、分析し、それに基づいて行動するのを支援する顧客フィードバックプラットフォームです。  
+> [Survicateは](https://survicate.com/integrations/braze-survey/?utm_source=braze&utm_medium=integrations&utm_campaign=helpcenter)、複数のチャネルとカスタマージャーニーを通じて顧客のインサイトを収集、分析、活用するカスタマー・フィードバック・プラットフォームである。  
 
 _この統合は Survicate によって管理されます。_
 
 ## 統合について
 
-BrazeとSurvicateの統合により、Brazeのメールに直接アンケートを埋め込むことができ、レスポンシブ率を高めることができる。アンケートの回答は、カスタム属性またはイベントとして Braze ユーザープロファイルと自動的に同期されます。リアルタイムのインサイトにより、顧客データとともにフィードバックを簡単に追跡および分析し、ターゲットを絞ったフォローアップを作成することができます。
+BrazeとSurvicateの統合により、Brazeのメールに直接アンケートを埋め込むことができ、回答率を高めることができる。アンケートの回答は、カスタム属性またはイベントとして Braze ユーザープロファイルと自動的に同期されます。リアルタイムのインサイトにより、顧客データとともにフィードバックのトラッキングと分析が可能になり、ターゲットを絞ったフォローアップができる。
 
 ## ユースケース
 
-BrazeとSurvicateは、様々なフィードバックのユースケースをカバーするために連携し、アクション可能なユーザーインサイトの収集とカスタマーエクスペリエンスの向上を支援する：
+BrazeとSurvicateは、様々なフィードバックのユースケースをカバーし、アクション可能なユーザーインサイトを収集し、カスタマーエクスペリエンスを向上させるために協力している：
 
 - 顧客満足度の測定 (CSAT、NPS、CESなど)
 - 製品のフィードバックを収集する
@@ -55,14 +55,14 @@ Survicate と Braze の統合により、リアルタイムのデータ同期が
 
 ![アンケートの作成には、ゼロから始める、テンプレートを使用する、AIアシスト作成、質問のインポートの4つのオプションがある。]({% image_buster /assets/img/survicate/survicate_asset_3.png %})
 
-### ステップ2: Braze メールで回答者を自動的に識別する
+### ステップ 2:Braze メールで回答者を自動的に識別する
 
 1. アンケートの準備ができたら、「**設定」**タブに移動する。
 2. [*回答者の識別方法*] には、[**Braze**] を選択します。これにより、回答が自動的に Braze の顧客プロファイルにリンクされるため、アンケートで連絡先の詳細を尋ねる必要はありません。
 
 ![回答者として Braze が選択されています。]({% image_buster /assets/img/survicate/survicate_asset_2.png %})
 
-### ステップ 3: 統合を接続する
+### ステップ 3:統合を接続する
 
 1. 次に、[**接続**] タブで、Braze を見つけ、 [**接続**] を選択して統合します。 
 2. BrazeアカウントのワークスペースAPIキーとBrazeインスタンスURLを入力する。

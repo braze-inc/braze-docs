@@ -1,4 +1,4 @@
-{% multi_lang_include developer_guide/prerequisites/android.md %} [プッシュ通知を設定する必要もあります]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=android)。
+{% multi_lang_include developer_guide/prerequisites/android.md %} また、[プッシュ通知s]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=android)を設定する必要があります。
 
 ## カスタム通知レイアウト
 
@@ -12,7 +12,7 @@ Android では、カスタム通知ビューを実装するために使用でき
 
 このセクションでは、野生動物救助チームが誰が一番多くのフクロウを救えるかを競う新しいゲーム番組の司会者、スーパーブクロウとパートナーを組むことになる。通知 s をAndroid アプリでライブアップデートすることで、進行中の試合のステータスを表示し、リアルタイムでダイナミックな 更新を作成できるようにすることを求めています。
 
-![Superb Owlが見せたいライブアップデート。「ワイルドバード・ファンド」と「オール・レスキュー」の間で進行中の試合を表示する。現在のところ第4四半期で、スコアはリードのOWL で2-4 です。]({% image_buster /assets/img/android/android-live-activity-superb-owl-example.jpg %}){: style="max-width:65%;"}
+![Superb Owlが見せたいライブアップデート。「ワイルドバード・ファンド」と「オール・レスキュー」の間で進行中の試合を表示する。現在のところ第4四半期で、OWLがリードしているスコアは2-4です。]({% image_buster /assets/img/android/android-live-activity-superb-owl-example.jpg %}){: style="max-width:65%;"}
 
 ### ステップ 1: カスタムレイアウトの追加
 
@@ -30,7 +30,7 @@ Android では、カスタム通知ビューを実装するために使用でき
 各XMLファイルで、カスタムレイアウトを作成します。Superb Owl は、折りたたまれて展開されたRemoteView レイアウト用に次のレイアウトを作成しました。
 
 {% tabs local %}
-{% tab  例:折りたたまれたレイアウト %}
+{% tab  Example: Collapsed layout %}
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -48,8 +48,8 @@ Android では、カスタム通知ビューを実装するために使用でき
 ```
 {% endtab %}
 
-{% tab 例:拡張レイアウト %}
-{% details サンプリングコードを表示する %}
+{% tab Example: Expanded layout %}
+{% details Show the sample code %}
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -137,9 +137,9 @@ Android では、カスタム通知ビューを実装するために使用でき
 
 アプリ ライセンスで、[`BrazeNotificationFactory`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze-notification-factory/index.html) という名前の新しいファイルを作成し、カスタムRemoteView レイアウトの表示方法を処理します。
 
-次の例では、Superb Owlがカスタム通知ファクトリを作成し、現在のマッチングのRemoteViewレイアウトを表示しました。[次のステップ](#android_step-3-map-custom-data) では、`getTeamInfo` という新しいメソッドを作成して、チームデータをアクティビティにマッピングします。
+次の例では、Superb Owlがカスタム通知ファクトリを作成し、現在のマッチングのRemoteViewレイアウトを表示しました。[next ステップ](#android_step-3-map-custom-data) では、`getTeamInfo` という新しいメソッドを作成して、チームデータをアクティビティにマッピングします。
 
-{% details サンプリングコードを表示する %}
+{% details Show the sample code %}
 ```kotlin
 import android.app.Notification
 import android.widget.RemoteViews
@@ -304,8 +304,8 @@ curl コマンドはテストに役立ちますが、既に [iOS Live アクテ�
 
 プッシュ通知では、カスタムビュー階層内にユーザー固有の情報を表示できます。次の例では、API-トリガーを使用してパーソナライズされた プッシュ通知をユーザーに送信し、アプリで特定のタスクを完了した後に現在の進行状況を追跡できるようにします。
 
-![パーソナライズされたプッシュダッシュボードの例]({% image_buster /assets/img/push_implementation_guide/android_push_custom_layout.png %}){: style="max-width:65%;border:0"}
+![パーソナライズされたプッシュダッシュボード例]({% image_buster /assets/img/push_implementation_guide/android_push_custom_layout.png %}){: style="max-width:65%;border:0"}
 
 ダッシュボードでパーソナライズされたプッシュを設定するには、表示するカテゴリを登録し、リキッドを使用して表示する関連ユーザー 属性を設定します。
 
-![パーソナライズされたプッシュダッシュボードの例]({% image_buster /assets/img/push_implementation_guide/push5.png %}){: style="max-width:60%;"}
+![パーソナライズされたプッシュダッシュボード例]({% image_buster /assets/img/push_implementation_guide/push5.png %}){: style="max-width:60%;"}

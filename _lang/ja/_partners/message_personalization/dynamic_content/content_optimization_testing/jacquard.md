@@ -3,7 +3,7 @@ nav_title: Jacquard
 article_title: Jacquard
 alias: /partners/jacquard/
 page_order: 1
-description: "この参考記事では、Braze CurrentsとConnected Contentを活用し、Webhookを通じて購読者からクリックトラッキング情報を収集する、BrazeとJacquard Dynamic Optimisationのパートナーシップについて概説している。Jacquard は、これらのイベントを言語バリアントに関連付けて、リアルタイムで言語を最適化します。"
+description: "この参考記事では、Braze Currentsとコネクテッドコンテンツを使用し、Webhookを通じてサブスクライバーからクリック追跡情報を収集する、BrazeとJacquard Dynamic Optimisationのパートナーシップについて概説している。Jacquard は、これらのイベントを言語バリアントに関連付けて、リアルタイムで言語を最適化します。"
 page_type: partner
 search_tag: Partner
 ---
@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [Jacquard](https://www.jacquard.com/) は、人工知能、計算言語学、そして顧客中心の精神を融合し、ブランドボイスに合わせてカスタマイズされたチャネルにわたり、ブランドのメッセージを大規模に展開できるようにします。
 
-Jacquard Xを利用したDynamic Optimisationは、Braze CurrentsとConnected Contentを活用し、ウェブフックを通じて購読者からクリックトラッキング情報を収集する。Jacquard は、これらのイベントを言語バリアントに関連付けて、リアルタイムで言語を最適化します。 
+Jacquard Xによるダイナミックな最適化は、Braze Currentsとコネクテッドコンテンツを使用し、Webhookを通じてサブスクライバーからクリック追跡情報を収集する。Jacquard は、これらのイベントを言語バリアントに関連付けて、リアルタイムで言語を最適化します。 
 
 ## 前提条件
 
@@ -27,7 +27,7 @@ Jacquard Xを利用したDynamic Optimisationは、Braze CurrentsとConnected Co
 
 ### ステップ1:Jacquard Amazon S3の認証情報をリクエストする
 
-クリック・トラッキング・イベントをBrazeから受け取るには、Jacquardが専用のAmazon S3バケットをセットアップする必要がある。このプロセスを開始するには、Jacquard カスタマーサクセスマネージャーに連絡してください。バケットが作成されると、Current を作成するための一意の認証情報が提供されます。 
+クリック・トラッキング・イベントをBrazeから受け取るには、Jacquardが専用のAmazon S3バケットをセットアップする必要がある。このプロセスを開始するには、Jacquardカスタマーサクセスマネージャーに連絡する。バケットが作成されると、Current を作成するための一意の認証情報が提供されます。 
 
 ### ステップ2:Current を作成する
 
@@ -40,14 +40,14 @@ Jacquard Xを利用したDynamic Optimisationは、Braze CurrentsとConnected Co
 
 ### ステップ3:個人を特定できる情報（PII）の削除を要請すること。
 
-次に、Braze アカウントチームに連絡し、個人を特定できる情報が Jacquard に送信されないようにします。
+次に、Brazeのアカウントチームに連絡し、パーソナライゼーションされた情報がJacquardに送信されないようにする。
 
 デフォルトでは、Current にはメールや住所などの特定の PII 属性が含まれます。JacquardはPIIを受け取ることはできないし、受け取ることもないので、Jacquardに渡されるすべてのイベントデータについてこれをオフにするよう、Brazeのアカウントチームにリクエストすることが重要である。
 
 ### ステップ4:Jacquard X コードスニペット 
 
-必要なコードスニペットについては、Jacquard アカウントチームにお問い合わせください。
+必要なコードスニペットについては、Jacquardアカウントチームに問い合わせること。
 
-これらのスニペットは[コネクテッドコンテンツ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content)を利用しており、メールに配置されると、言語とトラッキングピクセルをダイナミックに取得します。これにより、Jacquard は Jacquard X を使用してリアルタイムで言語を最適化できます。
+これらのスニペットは[コネクテッドコンテンツを]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content)使用し、メールに配置された後、ダイナミックな言語とトラッキングピクセルを取り込み、Jacquard Xを使用してリアルタイムで言語を最適化できる。
 
 

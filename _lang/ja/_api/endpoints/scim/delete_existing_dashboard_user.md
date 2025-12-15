@@ -15,7 +15,7 @@ description: "この記事では、ダッシュボードのユーザーアカウ
 /scim/v2/Users/{id}
 {% endapimethod %}
 
-> このエンドポイントを使用して、SCIM [`POST`]({{site.baseurl}}/api/endpoints/scim/post_create_user_account/) メソッドによって返されるリソース `id` を指定することによって、既存のダッシュボードユーザーを永続的に削除します。 
+> このエンドポイントを使用して、SCIM [`POST`]({{site.baseurl}}/api/endpoints/scim/post_create_user_account/) メソッドによって返されるリソース `id` を指定することによって、既存のダッシュボードユーザーを永続的に削除します。
 
 これは、Brazeダッシュボードの**Company Users**セクションでユーザーを削除するのと同様である。
 

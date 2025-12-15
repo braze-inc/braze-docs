@@ -1,4 +1,4 @@
-{% hide_nav_filter = page.hide_nav_filter - % {hide_nav } - hide_nav_filter = layout.hide_nav_filter - % {-endef - % { nav_level - } {% -assign nav_level = layout.nav_level - } {% -endif - % { nav_level - } - {% -unef - {% -nav_level - } {% -assign nav_level = 2 - } {% -endif -% ナビゲーション切り替えtitleサイドナビゲーション切り替えtitle <i class="fas fa-chevron-left"> </i> {/span> {- hide_nav_filter -%}
+{%hide_nav_ フィルター = page.hide_nav_ } = page.hide nav_ } -% {hide_nav_ フィルター = layout.hide_nav_ フィルター -% {-endif -% } {% -unefter _level -% {% assign nav_level = layout.nav_level -% {% -endif -% {% -nav_level -} {% -assign nav_level -% {% -assign nav_level = 2 -% } {-endif -%} <button id="sidebar_toggle" class="btn btn-info d-print-none" href="#" aria-label="" title="サイドナビゲーション切り替え"> <i class="fas fa-chevron-left"> </i> {/span> {- hide_nav_ フィルター -%}
 <div id="nav_filter" class="flex-column flex-nowrap   ">
   <form id="filter-form"   >
     <div class="input-group">
@@ -11,10 +11,10 @@
 
   </form>
 </div>
-{%- -% でない場合は終了}
+{%- endunless -%}
 
 <nav class="bd-links navbar navbar-expand-lg navbar-light" id="left_navmenu" aria-label="左ナビゲーション" title="左ナビゲーション">
-  {%- hide_nav_filter -%} 以外
+  {%- hide_nav_フィルター -%} 以外
     <div id="filter-msg"  class="flex-column flex-nowrap d-none"></div>
   {%- endunless -%} {%- assign collection = page.collection -%} {%- if page.custom_collection -%} {%- assign collection = page.custom_collection -%} {%- endif -%} {%-UrlNavMenu {{nav_level}}|{{collection}} -%}
 </nav>
@@ -23,8 +23,8 @@
   <a href="https://learning.braze.com" target="_blank"><div class="nav_bottom_item"><i class="fa fa-flask"></i> Braze Learning </div></a --> <a id="status-indicator" href="https://braze.statuspage.io" target="_blank">
     <div class="nav_bottom_item">
 
-      <div class="status-title">{{ site.data.i18n[site.language]['braze_status'] || デフォルト:"BRAZE SYSTEM STATUS"}}</div>
-      <div class="color-dot"></div><div class="color-description">{{ site.data.i18n[site.language]['braze_status_check'] || デフォルト:"状況を確認する"}</div>
+      <div class="status-title">{{ site.data.i18n[site.language]['braze_ステータス'] || デフォルト:"BRAZE SYSTEM STATUS"}}</div>
+      <div class="color-dot"></div><div class="color-description">{{ site.data.i18n[site.language]['braze_ステータス_check'] || デフォルト:"状況を確認する"}</div>
   </div></a>
 </div>
 

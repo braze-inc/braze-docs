@@ -2,7 +2,7 @@
 nav_title: Stensul
 article_title: Stensul
 alias: /partners/stensul
-description: "このリファレンス記事では、Braze と Stensul のパートナーシップについて説明します。Stensul は、チャネル間でモバイル対応メールテンプレートを簡単に作成できるエンタープライズメールプラットフォームです。"
+description: "この参考記事では、Brazeと、チャネルを横断してモバイルレスポンシブなメールテンプレートを作成するためのエンタープライズメールプラットフォームStensulのパートナーシップについて概説している。"
 page_type: partner
 search_tag: Partner
 
@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Stensul
 
-> [Stensul](https://stensul.com/) では、メールマーケターがキャンペーン作成のためにリアルタイムで Braze にメールをダウンストリーム送信する前に、ブランドらしさのあるモバイル対応のメールを簡単に作成できます。
+> [Stensulは](https://stensul.com/)、モバイルマーケティング担当者に、キャンペーン作成のためにリアルタイムでBrazeに送信する前に、Stensulでモバイルレスポンシブでオンブランドのメールを作成するためのツールを提供する。
 
 _この統合は Stensul によって管理されます。_
 
@@ -39,19 +39,19 @@ Braze REST API キーとクラスターインスタンスをStensul カスタマ
 
 Stensul プラットフォームで Stensul メールを作成し、[**Complete**] をクリックします。
 
-![Stensul の保存オプション]({% image_buster /assets/img_archive/stensul_save_options.png %})
+![Stensul 保存オプション]({% image_buster /assets/img_archive/stensul_save_options.png %})
 
-### ステップ2:Brazeへのテンプレートのエクスポート
+### ステップ 2:Brazeへのテンプレートのエクスポート
 完了ページに表示される新しいダイアログで、[**Upload to ESP**] を選択します。
 
-![Stensul のアップロードオプション]({% image_buster /assets/img_archive/stensul_upload_options.png %})
+![アップロードオプション]({% image_buster /assets/img_archive/stensul_upload_options.png %})
 
 次に、メールの ** テンプレート name**、**subject**、および **preヘッダー** を入力し、**Up読み込む** を選択します。アップロードが成功したことを示す確認と、該当する場合はファイルの過去のアップロード履歴が表示されます。
 
-![Stensul アップロード成功]({% image_buster /assets/img_archive/stensul_upload_success.png %})
+![Stensulアップロードの成功]({% image_buster /assets/img_archive/stensul_upload_success.png %})
 
 ## 使用
 
-アップロードした Stensul テンプレートを、Braze アカウントの**[テンプレートとメディア] > [メールテンプレート]** セクションで確認します。これで、このメールテンプレートを使用して、顧客に魅力的なメールメッセージを送信できます。
+アップロードしたStensulテンプレートを、Brazeアカウントの**テンプレート& メディア > メールテンプレートセクションで**探す。これで、このメールテンプレートを使用して、顧客に魅力的なメールメッセージを送信できます。
 
 

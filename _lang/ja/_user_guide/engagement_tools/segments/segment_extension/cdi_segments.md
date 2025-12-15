@@ -28,7 +28,7 @@ CDIセグメントエクステンションは、データウェアハウスに�
 
 最初の CDI セグメントエクステンションを作成する前に、[接続ソースの]({{site.baseurl}}/user_guide/data/cloud_ingestion/connected_sources/)ステップに従って、データウェアハウスとの新しい接続ソースを設定する。
 
-### ステップ 2: セグメントを作成する
+### ステップ 2:セグメントを作成する
 
 まず、新しい[セグメントエクステンション]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/)を作成し、[**完全に更新**] を選択します。
 
