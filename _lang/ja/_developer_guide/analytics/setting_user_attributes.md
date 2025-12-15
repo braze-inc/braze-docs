@@ -29,8 +29,4 @@ description: "Braze SDKを通してユーザー属性を設定する方法を学
 {% sdktab unity %}
 {% multi_lang_include developer_guide/unity/analytics/setting_user_attributes.md %}
 {% endsdktab %}
-
-{% sdktab unreal engine %}
-{% multi_lang_include developer_guide/unreal_engine/analytics/setting_user_attributes.md %}
-{% endsdktab %}
 {% endsdktabs %}
