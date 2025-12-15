@@ -4,8 +4,8 @@ nav_title: 知っておくべき用語
 article_title: 知っておくべき Braze 用語
 
 layout: glossary_page
-glossary_top_header: "Terms to Know"
-glossary_top_text: "These terms should help you as you begin your journey to better customer and user bonds with Braze. Give this a read before you begin your onboarding."
+glossary_top_header: "知っておくべき用語"
+glossary_top_text: "これらの用語は、Brazeとのより良い顧客やユーザー結合への旅を始める際に役立つはずです。これを読んでからオンボーディングを始めてください。"
 page_type: glossary
 description: "この用語集では、Braze オンボーディングプロセスを実行する際に知っておくべき重要な用語について説明します。"
 
@@ -43,7 +43,7 @@ glossaries:
   - name: カスタムイベント
     description: "<a href=\"https://www.braze.com/docs/user_guide/data/custom_data/custom_events\">カスタムイベント</a>はユーザーによって行われるアクションであり、アプリケーションに対する価値の高いユーザーインタラクションをトラッキングするのに適しています。"
   - name: データポイント
-    description: "データポイントは、<a href=\"https://www.braze.com/docs/user_guide/data/custom_data/custom_attributes/\">カスタム属性が</a>設定または更新されたとき（同じ値で更新している場合でも）、<a href=\"https://www.braze.com/docs/user_guide/data/custom_data/custom_events\">カスタムイベントや</a>購入イベントが記録されたとき、標準データ（たとえば、<code>メール</code>、<code>姓名</code>、<code>国名</code>、<code>出身地</code>）が記録されたとき、セッションが開始されたとき、セッションが終了したときにカウントされる。"
+    description: "データポイントは以下の場合にカウントされます。<a href=\"https://www.braze.com/docs/user_guide/data/custom_data/custom_attributes/\">カスタム属性が</a>設定または更新されたとき (同じ値で更新している場合でも)、<a href=\"https://www.braze.com/docs/user_guide/data/custom_data/custom_events\">カスタムイベント</a>や購入イベントがログに記録されたとき、標準データ （たとえば、<code>email</code>、<code>first_name</code>、<code>last_name</code>、<code>country</code>、あるいは <code>home_city</code>) が記録されるとき、セッションが開始されるとき、セッションが終了するとき。"
   - name: ディープリンク
     description: "<a href=\"https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/\">ディープリンク</a>は、顧客を次のアクションやエンゲージメントに導くために使われます。ディープリンクを使えば、Web サイトまたはモバイルアプリ内のターゲットコンテンツとメッセージを接続できます。"
   - name: 休眠ユーザー
@@ -81,7 +81,7 @@ glossaries:
   - name: プッシュメッセージ
     description: "<a href=\"https://www.braze.com/docs/user_guide/message_building_by_channel/push/\">プッシュ・メッセージ</a>（プッシュ通知）とは、モバイル・アプリケーションから表示される通知のことである。プッシュ通知は、iOSでもAndroidでも、ポップアップダイアログやバナーとして表示されることが多い。"
   - name: プッシュ・トークン
-    description: "プッシュトークンは、アプリと iOS、Android、またはWeb デバイス間の接続を作成するために、Apple または Google によって作成され、割り当てられた一意のキーです。<a href=\"https://www.braze.com/docs/help/help_articles/push/push_token_migration/#push-token-migration\">プッシュトークンの移行とは</a>、すでに生成されたキーをBrazeにインポートすることである。"
+    description: "プッシュトークンは、アプリと iOS、Android、またはWeb デバイス間の接続を作成するために、Apple または Google によって作成され、割り当てられた一意のキーです。<a href=\"https://www.braze.com/docs/api/objects_filters/user_attributes_object/#migrating-push-tokens\">プッシュトークンの移行とは</a>、すでに生成されたキーをBrazeにインポートすることである。"
   - name: プッシュ有効時間 (TTL)
     description: "この有効時間は<a href=\"https://www.braze.com/docs/user_guide/administrative/app_settings/push_settings/\">プッシュ TTL</a> とも呼ばれ、キャンペーンがオフラインのユーザーへの配信試行を続ける期間を示します。"
   - name: 競合状態

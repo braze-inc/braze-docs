@@ -36,7 +36,7 @@ description: "この記事では、AI のコピーライティングアシスタ
 
 終了したら、[**生成**] を選択します。この機能は、指定された情報を使用してコピーを作成するように GPT に指示します。応答を OpenAI から取得し、ユーザーに提供します。詳細については、「[データはどのように使用されて、OpenAI に送信されるのですか?](#ai-policy)」を参照してください。
 
-![AI コピーライティングアシスタントモーダルで、利用可能なさまざまな機能を表示&クォート。]({% image_buster /assets/img/ai_copywriter/gpt3.png %} "GPT3"){: style="max-width:70%;"}
+![利用可能なさまざまな機能が表示された AI コピーライティングアシスタントモーダル]({% image_buster /assets/img/ai_copywriter/gpt3.png %} "GPT3"){: style="max-width:70%;"}
 
 {% alert important %}
 この機能は、OpenAI の[コンテンツポリシー](https://beta.openai.com/docs/usage-guidelines/content-policy)に違反する攻撃的なコンテンツに関する応答をフィルターで排除します。

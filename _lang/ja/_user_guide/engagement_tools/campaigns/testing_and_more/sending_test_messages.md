@@ -25,7 +25,7 @@ description: "この記事では、さまざまな Braze チャネルにテス�
 
 テストユーザーを整理する便利な方法として、キャンペーンからテストメッセージを受け取るユーザーのグループを含む[コンテンツテストグループ]({{site.baseurl}}/user_guide/administrative/app_settings/internal_groups_tab/)を作成することができます。このテストグループは、キャンペーンの**コンテンツテストグループの追加**フィールドの**テストレシピエント**に追加し、個々のテストユーザーs を作成または追加せずにテストを開始できます。
 
-## ステップ 2: チャネル固有のテストメッセージを送信する
+## ステップ 2:チャネル固有のテストメッセージを送信する
 
 テストメッセージを送信する手順については、それぞれのチャネルの次のセクションを参照してください。
 
@@ -37,7 +37,7 @@ description: "この記事では、さまざまな Braze チャネルにテス�
 3. **Test Send**タブを選択し、**個々のユーザーを追加s**フィールドにメールの住所またはユーザー IDを追加します。 
 4. **Send Test**を選択して、下書きのed メールを受信トレイに送信します。
 
-![テストメール]]({% image_buster /assets/img_archive/testemail.png %}){: style="max-width:40%;" }
+![テストメール]({% image_buster /assets/img_archive/testemail.png %}){: style="max-width:40%;" }
 
 {% endtab %}
 {% tab Push %}
@@ -45,10 +45,10 @@ description: "この記事では、さまざまな Braze チャネルにテス�
 #### モバイルプッシュ
 
 1. モバイルプッシュの下書きを作成します。
-2. [**設定**] タブを選択し、[**ユーザーを個別に追加**] フィールドにメールアドレスまたはユーザー ID を追加します。
+2. **Test**タブを選択し、**Add Individual ユーザー s**フィールドにメールの住所またはユーザー IDを追加します。
 3. **Send Test**を選択して、下書きのメッセージを端末に送信します。
 
-![テストプッシュ]]({% image_buster /assets/img_archive/testpush.png %})
+![テストプッシュ]({% image_buster /assets/img_archive/testpush.png %})
 
 #### Web プッシュ
 
@@ -57,12 +57,15 @@ description: "この記事では、さまざまな Braze チャネルにテス�
 3. **Send Test to Myself**を選択します。
 4. **Send Test**を選択して、Web プッシュをウェブブラウザに送信します。
 
-![試験Web プッシュ]]({% image_buster /assets/img_archive/testwebpush.png %})
+![試験Web プッシュ]({% image_buster /assets/img_archive/testwebpush.png %})
 
 Braze ダッシュボードからのプッシュメッセージをすでに受け入れている場合、プッシュは画面の隅に表示されます。それ以外の場合は、メッセージが表示されたら [**許可**] をクリックすると、メッセージが表示されます。
 
 {% endtab %}
 {% tab In-App Message %}
+
+{% alert warning %}
+[コンテンツ・テスト・グループ]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups)または個々のユーザーにテストを送信するには、送信前にテスト・デバイスでプッシュを有効にする必要がある。たとえば、テストメッセージが表示されるまでに通知をタップするには、iOS デバイスでプッシュを有効にしておく必要があります。 {% endalert %}
 
 アプリ内とテストデバイスでプッシュ通知を設定している場合は、テスト用アプリ内メッセージをアプリに送信して、リアルタイムでどのように表示されるかを確認できます。 
 
@@ -72,12 +75,63 @@ Braze ダッシュボードからのプッシュメッセージをすでに受�
 
 テスト用プッシュメッセージがデバイス画面の上部に表示されます。
 
-![アプリ内テスト]]({% image_buster /assets/img_archive/test-in-app.png %})
+![アプリのテスト]({% image_buster /assets/img_archive/test-in-app.png %})
+
+{% alert important %}
+試験送信により、1つの受信者に複数のアプリ内メッセージが送信される場合があります。
+{% endalert %}
 
 プッシュメッセージを直接クリックして開くと、アプリが開いてアプリ内メッセージのテストを確認できます。このアプリ内メッセージのテスト機能では、ユーザーがテストプッシュ通知をクリックしてアプリ内メッセージをトリガーする必要があることに注意してください。そのため、テストプッシュ通知の配信を成功させるために、ユーザーには関連アプリでプッシュ通知を受信する資格が必要です。
 
+### プレビュー
+
+**プレビュー**タブで、アプリ内メッセージを作成しながらプレビューできます。これは、ユーザーの視点から最終的なメッセージがどのように見えるかを視覚化するのに役立つはずだ。任意のユーザー、指定したユーザー、またはカスタマイズしたユーザーに、メッセージの外観をプレビューできます。モバイル端末またはタブレットのどちらでも、メールをプレビューすることができます。
+
+![アプリ内メッセージを作成する際の「作成」タブに、メッセージのプレビューが表示される。ユーザーが選択されていないため、本文に追加された Liquid はそのまま表示されます。]({% image_buster /assets/img/in-app-message-preview.png %})
+
+Braze には 3 世代のアプリ内メッセージが用意されています。どの端末がどの世代をサポートしているかによって、どの端末にメッセージを送るかを細かく設定できる。
+
+![アプリ内メッセージのプレビュー時に世代を切り替える。]({% image_buster /assets/img/iam-generations.gif %}){: height="50%" width="50%"}
+
+{% alert warning %}
+**プレビューでは**、あなたのメッセージの表示は、ユーザーのデバイス上での実際のレンダリングと同一ではないかもしれない。メディア、コピー、パーソナライズ、カスタム属性が正しく生成されることを確認するため、デバイスにテストメッセージを送信することを常に推奨する。
+{% endalert %}
+
+### テスト・チェックリスト
+
+- 画像やメディアは期待通りに表示され、機能しているか？
+- 液体は期待通りに機能しますか？リキッドが何も返さない場合、[デフォルト 属性値]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#accounting-for-null-attribute-values)を計算しましたか?
+- あなたのコピーは明確で簡潔で正しいですか？
+- あなたのボタンは、ユーザーをどこに誘導しているだろうか？
+
+### アクセシビリティスキャナー
+
+アクセシビリティのベストプラクティスを促進するために、Braze は従来のHTML エディターを使用して作成されたアプリ内メッセージのコンテンツを、アクセシビリティ標準に照らして自動的にスキャンします。このスキャナーは、Web Content Accessibility Guidelines ([WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/)) 標準を満たしていない可能性があるコンテンツを特定するのに役立ちます。WCAG は、World Wide Web Consortium (W3C) が作成し、国際的に認知された技術標準のセットで、多くの人にとってアクセスしやすい Web コンテンツを作成するためのものです。
+
+![アクセシビリティスキャンの結果]({% image_buster /assets/img/Accessibilty_Scanner_IAM.png %})
+
+{% alert note %}
+アプリ内メッセージアクセシビリティスキャナーは、カスタム HTML で作成されたメッセージに対してのみ実行されます。
+{% endalert %}
+
+#### CDI の仕組み
+
+このスキャナーはカスタム HTML メッセージに対して自動的に実行され、[WCAG 2.1 AA ルールセット](https://www.w3.org/WAI/WCAG22/quickref/?versions=2.1&currentsidebar=%23col_customize&levels=aaa)全体に照らして HTML メッセージ全体を評価します。フラグが設定された各問題について、次の情報が表示されます。
+
+- 関連する特定の HTML 要素
+- アクセシビリティの問題の説明
+- 追加のコンテキストまたは修復ガイダンスへのリンク
+
+#### 自動アクセシビリティテストについて
+
+{% multi_lang_include accessibility/automated_testing.md %}
+
 {% endtab %}
 {% tab Content Card %}
+
+{% alert warning %}
+テストを[コンテンツテストグループ]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups)または個々のユーザーに送信するには、送信する前にテストデバイスでプッシュが有効になっており、テストユーザーの有効なプッシュトークンが登録されている必要があります。iOSユーザーの場合、テストコンテンツカードを表示するには、Brazeから送信されたプッシュ通知をタップする必要があります。この動作はテストコンテンツカードにのみ適用されます。
+{% endalert %}
 
 コンテンツカードを作成したら、テストコンテンツカードをアプリに送信して、リアルタイムでどのように表示されるかを確認できます。
 
@@ -85,7 +139,92 @@ Braze ダッシュボードからのプッシュメッセージをすでに受�
 2. [**テスト**] タブを選択し、このテストメッセージを受信するコンテンツテストグループを少なくとも 1 つ、あるいは個々のユーザーを少なくとも 1 人選択します。 
 3. **Send Test**を選択して、コンテンツカードをアプリに送信します。
 
-![コンテンツカードのテスト]]({% image_buster /assets/img/contentcard_test.png %})
+![テスト内容カード]({% image_buster /assets/img/contentcard_test.png %})
+
+### プレビュー
+
+**プレビュー**タブで、カードを作成しながらプレビューできます。これは、ユーザーの視点から最終的なメッセージがどのように見えるかを視覚化するのに役立つはずだ。
+
+{% alert note %}
+作成者の**プレビュー**タブでは、メッセージの表示がユーザーのデバイスでの実際のレンダリングと同じでない場合があります。メディア、コピー、パーソナライゼーション、およびカスタム属性が正しく生成されることを確認するために、常にデバイスにテストメッセージを送信することをお勧めします。
+{% endalert %}
+
+### テスト・チェックリスト
+
+- 画像やメディアは期待通りに表示され、機能しているか？
+- 液体は期待通りに機能しますか？リキッドが何も返さない場合、[デフォルト 属性値]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#accounting-for-null-attribute-values)を計算しましたか?
+- あなたのコピーは明確で簡潔で正しいですか？
+- リンクはユーザーを目的の場所に誘導していますか？
+
+### デバッグ
+
+コンテンツカードが送信された後、開発者コンソールの[イベントユーザーログ]({{site.baseurl}}/user_guide/administrative/app_settings/event_user_log_tab/)から問題を分解またはデバッグできます。 
+
+一般的なユースケースは、ユーザーが特定のコンテンツカードを見られない理由をデバッグしようとすることです。そのためには、セッション開始時にSDKに配信されたコンテンツカードをインプレッションの前に**イベントユーザーログ**で確認し、それらを特定のキャンペーンに遡ることができます。
+
+1. **設定** > **イベントユーザーログ** に移動します。
+2. テストユーザーのSDKリクエストを見つけて展開します。
+3. [**生データ**] をクリックします。
+4. セッションの`id`を見つけてください。次に例の抜粋を示します:
+
+    ```json
+    [
+      {
+        "session_id": "D1B051E6-469B-47E2-B830-5A728D1D4AC5",
+        "data": {
+          "ids": [
+            "NDg2MTY5MmUtNmZjZS00MjE1LWJkMDUtMzI1NGZiOWU5MDU3"
+          ]
+        },
+        "name": "cci",
+        "time": 1636106490.155
+      }
+    ]
+    ```
+    
+{: start="5"}
+5. [Base64 Decode and Encode](https://www.base64decode.org/)のようなデコードツールを使用して、Base64形式から`id`をデコードし、関連する`campaign_id`を見つけます。この例では、次のようになります。
+
+    ```
+    4861692e-6fce-4215-bd05-3254fb9e9057_$_cc=c3b25740-f113-c047-4b1d-d296f280af4f&mv=6185005b9d9bee79387cce45&pi=cmp
+    ```
+
+    Where `4861692e-6fce-4215-bd05-3254fb9e9057` is the `campaign_id`.<br><br>
+
+6. **キャンペーン**ページに移動し、`campaign_id`を検索します。
+
+![キャンペーンページでcampaign_id を検索する]({% image_buster /assets/img_archive/cc_debug.png %}){: style="max-width:80%;"}
+
+そこから、メッセージ設定とコンテンツを確認して、ユーザーが特定のコンテンツカードを見られない理由を詳しく調べることができます。
+
+{% endtab %}
+{% tab Banners %}
+
+{% alert important %}
+Braze でバナーメッセージをテストするには、Braze でバナーキャンペーンを作成する必要があります。さらに、テストする配置がアプリまたはウェブサイトに既に[配置されていることを確認します]({{site.baseurl}}/developer_guide/banners/placements)。
+{% endalert %}
+
+バナーメッセージを作成したら、バナーをプレビューしたり、テストメッセージを送信したりできます。
+
+1. バナーメッセージを作成します。
+2. **プレビュー**を選択して、バナーをプレビューするか、テストメッセージを送信します。
+3. テストメッセージを送信するには、コンテンツテストグループまたは1 つ以上の個々のユーザーs を**Test Recipients** として追加し、**Send Test** を選択します。 
+
+最大5 分間、デバイスでテストメッセージを表示できます。
+
+![バナーコンポーザーのプレビュータブ。]({% image_buster /assets/img/banners/preview_banner.png %})
+
+{% alert note %}
+プレビューは、ハードウエアの違いにより、ユーザーの機器の最終的なレンダリングとは異なる場合があります。
+{% endalert %}
+
+### テスト・チェックリスト
+
+- バナーキャンペーンはプレイスメントに割り当てられていますか?
+- "画像sとメディアが表示され、ターゲットのデバイスタイプとスクリーンサイズで期待どおりに機能しますか?
+- あなたのつながりとボタンがユーザーをどこへ行けばいいのか?
+- 液体は期待通りに機能しますか？Liquidが情報を返さない場合に、デフォルト属性値を考慮しましたか？
+- あなたのコピーは明確で簡潔で正しいですか？
 
 {% endtab %}
 {% tab SMS/MMS %}
@@ -96,14 +235,14 @@ SMS または MMS メッセージを作成した後、スマートフォンに�
 2. [**テスト**] タブを選択し、このテストメッセージを受信するコンテンツテストグループを少なくとも 1 つ、あるいは個々のユーザーを少なくとも 1 人選択します。 
 3. テストメッセージを送信するには、**Send Test**を選択します。
 
-![コンテンツカードのテスト]]({% image_buster /assets/img/sms_test.png %})
+![テスト内容カード]({% image_buster /assets/img/sms_test.png %})
 
 {% endtab %}
 {% tab Webhook %}
 
 Webhook を作成した後、テスト送信を実行して Webhook の応答を確認できます。[**テスト**] タブを選択し、[**テストを送信**] を選択して、指定された Webhook URL にテスト送信を送信します。個々のユーザーを選択して、特定のユーザーとして応答をプレビューすることもできます。 
 
-![コンテンツカードのテスト]]({% image_buster /assets/img/webhook_test.png %})
+![テスト内容カード]({% image_buster /assets/img/webhook_test.png %})
 
 {% endtab %}
 {% endtabs %}
@@ -118,19 +257,25 @@ Webhook を作成した後、テスト送信を実行して Webhook の応答を
 
 テストメッセージを送信するときは、必ず [**既存のユーザーを選択**] オプションか、[**カスタムユーザー**] としてプレビューするオプションを選択します。
 
-![パーソナライズされたのテスト]({% image_buster /assets/img_archive/personalized_testing.png %}){: style="max-width:70%;" }
+![パーソナライズされたメッセージをテストする]({% image_buster /assets/img_archive/personalized_testing.png %}){: style="max-width:70%;" }
 
 #### 既存のユーザーの選択
 
 既存のユーザーを選択する場合は、検索フィールドに特定のユーザー ID またはメールを入力します。次に、ダッシュボードプレビューを使用してメッセージがそのユーザーにどのように表示されるかを確認し、そのユーザーに表示される内容を反映したテストメッセージをデバイスに送信します。
 
-![ユーザーを選択]({% image_buster /assets/img_archive/personalized_testing_select.png %})
+![ユーザーを選択する]({% image_buster /assets/img_archive/personalized_testing_select.png %})
 
 #### カスタムユーザーの選択
 
 カスタムユーザーとしてプレビューする場合は、ユーザーの名やカスタム属性など、パーソナライズできるさまざまなフィールドにテキストを入力します。繰り返しになりますが、自分のメールアドレスを入力して、デバイスにテストを送信できます。
 
-![ユーザーユーザー]]({% image_buster /assets/img_archive/personalized_testing_custom.png %})
+![カスタムユーザー]({% image_buster /assets/img_archive/personalized_testing_custom.png %})
+
+#### ユーザーのカスタマイズ
+
+任意のユーザーまたは既存のフィールドから個々のs を編集して、メッセージ内のダイナミックなの内容を検証することができます。**編集**を選択して、選択したユーザーを変更可能なカスタムユーザーに変換します。
+
+!["Preview as a User" tab with "Edit" ボタン。]({% image_buster /assets/img_archive/edit_user_preview.png %}){: style="max-width:50%;"}
 
 ### カスタムイベントプロパティでパーソナライズされたキャンペーンのテスト
 
@@ -145,7 +290,7 @@ Webhook を作成した後、テスト送信を実行して Webhook の応答を
 
 1. イベント・プロパティを含むコピーを書き上げる。 
 
-![プロパティを使用したテストメッセージの作成]({% image_buster /assets/img_archive/testeventproperties-compose.png %})
+![プロパティを使ってテストメッセージを作成する]({% image_buster /assets/img_archive/testeventproperties-compose.png %})
 
 {: start="2"}
 2\.[アクションベースの配信]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/)を使用して、イベントの発生時にキャンペーンを配信します。
@@ -154,19 +299,19 @@ Webhook を作成した後、テスト送信を実行して Webhook の応答を
 iOS プッシュキャンペーンをテストしている場合は、iOS が現在の開封 アプリのプッシュ通知を配信しないため、自分でアプリを終了できるように遅延を1 分に設定する必要があります。他のタイプのキャンペーンは、即座に配信するように設定できます。
 {% endalert %}
 
-![メッセージ配信テスト]]({% image_buster /assets/img_archive/testeventproperties-delivery.png %})
+![テスト・メッセージ配信]({% image_buster /assets/img_archive/testeventproperties-delivery.png %})
 
 {: start="3"}
 3. テストフィルターを使用したり、自分のメールアドレスをターゲットにしたりして、通常どおりにテスト用のユーザーをターゲットにして、キャンペーンの作成を完了します。 
 
-![メッセージターゲットのテスト]]({% image_buster /assets/img_archive/testeventproperties-target.png %})
+![テスト・メッセージのターゲティング]({% image_buster /assets/img_archive/testeventproperties-target.png %})
 
 {: start="4"}
 4. アプリを開いて、カスタムイベントを完了します。
 
 キャンペーンがトリガーされ、イベントプロパティでカスタマイズされたメッセージが表示されます。
 
-![テストメッセージ例]]({% image_buster /assets/img_archive/testeventproperties-message2.png %})
+![テストメッセージの例]({% image_buster /assets/img_archive/testeventproperties-message2.png %})
 
 {% endtab %}
 {% tab Test message %}
@@ -180,7 +325,7 @@ iOS プッシュキャンペーンをテストしている場合は、iOS が現
 3. ページ下部にカスタムイベント プロパティを追加し、ユーザー IDまたはメールの住所を一番上のボックスに追加します。
 4. **Send Test**を選択すると、プロパティでメッセージパーソナライズされたを受信します。
 
-![カスタマイズユーザーによるテスト]]({% image_buster /assets/img_archive/testeventproperties-customuser.png %})
+![カスタマイズされたユーザーを使ったテスト]({% image_buster /assets/img_archive/testeventproperties-customuser.png %})
 
 {% endtab %}
 {% tab Liquid %}
@@ -205,4 +350,4 @@ Android および iOS でのテスト送信の場合、クリック時に**プ�
 - **Android :**デバイスは Android 13、かつ当社の Android SDK バージョン21.0.0 である必要があります。もう1つの理由は、アプリ内メッセージが表示されるデバイスに、すでにシステムレベルのプロンプトがあることかもしれない。[**再び表示しない**] を選択している可能性があるため、再びテストする前にアプリを再インストールして、通知の許可をリセットしなければならない場合があります。
 - **iOS: **開発チームは、アプリのプッシュ通知の実装を見直し、プッシュ許可を要求するコードを手動で削除することを推奨する。詳細については、[アプリ内メッセージのプッシュプライマー]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/)を参照してください。
 
-アクションベースのアプリ内メッセージキャンペーンを配信するには、カスタムイベントをREST API ではなく Braze SDK 経由でログに記録する必要があります。これにより、ユーザーは適格のアプリ内メッセージを直接デバイスに受信できます。ユーザーは、セッション中にイベントを実行すると、アプリ内メッセージを受信できます。
+アクション ベースのアプリ内メッセージ キャンペーンを配信するには、REST API ではなくBraze SDK を介してカスタムイベントs を記録する必要があります。これにより、ユーザー s は適格なアプリ内メッセージs を直接デバイスに受信できます。ユーザは、セッション中に行動を実行した場合にアプリ内メッセージを受け取ります。

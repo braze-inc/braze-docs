@@ -24,7 +24,7 @@ channel: push
 
 誘発された開封数をキャンペーンの直接開封数に加えると合計開封数が得られます。これはプッシュキャンペーンの**キャンペーン分析**ページに表示されます。合計オープン数と直接オープン数は、メッセージのパフォーマンスおよび**過去のパフォーマンス**セクションに表示されます。誘発された開封数は、この 2 つの値の差です。
 
-キャンペーンの詳細ページに統計が開封される。]({% image_buster /assets/img_archive/Influenced_Opens2.png %})
+![キャンペーンの [キャンペーンの詳細] ページに教示される誘発された開封数の統計情報]({% image_buster /assets/img_archive/Influenced_Opens2.png %})
 
 開封数の追跡の詳細については、[プッシュ通知のベストプラクティス]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/)のコンバージョン追跡のセクションを参照してください。
 

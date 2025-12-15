@@ -1,5 +1,5 @@
 ---
-nav_title: キャンペーンの管理
+nav_title: キャンペーンのマネージャー
 article_title: キャンペーンの管理
 layout: dev_guide
 guide_top_header: "キャンペーンの管理"

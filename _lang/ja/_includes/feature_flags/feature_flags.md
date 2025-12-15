@@ -310,7 +310,7 @@ if let featureFlag, featureFlag.enabled {
 
 A/B テストは、[Feature Flag Experiment]({{site.baseurl}}/developer_guide/feature_flags/experiments/) で設定します。
 
-さて、50%のユーザーが旧来の体験を見て、残りの50%が新しい体験を見てくれるでしょう。{% multi_lang_include analytics/metrics.md metric='コンバージョン率' 2つのバリアントを分析して、どちらのチェックアウトフローがより高いコンバージョン率をもたらしたかを判断することができる。 %}
+さて、50%のユーザーが旧来の体験を見て、残りの50%が新しい体験を見てくれるでしょう。2つのバリアントを分析して、どちらのチェックアウトフローがより高いコンバージョン率をもたらしたかを判断することができる。{% multi_lang_include analytics/metrics.md metric='コンバージョン率' %}
 
 ![トラフィックを2 つの50 パーセントグループに分割する機能フラグ実験。]({% image_buster /assets/img/feature_flags/feature-flag-use-case-campaign-experiment.png %})
 

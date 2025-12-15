@@ -7,7 +7,6 @@ search_rank: 2
 ---
 
 # [![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/dynamic-personalization-with-liquid){: style="float:right;width:120px;border:0;" class="noimgborder"}リキッドを使用
-# [![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/dynamic-personalization-with-liquid){: style="float:right;width:120px;border:0;" class="noimgborder"}リキッドを使用
 
 > この記事では、さまざまなユーザー属性を使用して、メッセージングにダイナミックな個人情報を挿入する方法を紹介する。
 
@@ -73,27 +72,12 @@ Liquid は特定の構造 (構文) に従います。ダイナミックなパー
 メッセージに `{{${first_name}}}` を含めると、メッセージの送信時にユーザーの名 (ユーザープロファイルから取得) に置き換えられます。他のデフォルトユーザー属性でも同じフォーマットを使うことができる。
 
 カスタム属性の値を使用する場合は、名前空間"custom_attribute" を変数に追加する必要があります。例えば、「zip code」というカスタム属性を使用するには、メッセージに `{{custom_attribute.${zip code}}}` を含めます。
-カスタム属性の値を使用する場合は、名前空間"custom_attribute" を変数に追加する必要があります。例えば、「zip code」というカスタム属性を使用するには、メッセージに `{{custom_attribute.${zip code}}}` を含めます。
 
 ### タグの挿入
 
 どのメッセージでも、`{{` を2つ入力することでタグを挿入することができる。このタグを入力すると、自動補完機能が作動し、入力した内容が更新され続ける。入力中に表示されるオプションから変数を選択することもできる。
 
 カスタムタグを使用している場合は、そのタグをコピーして好きなメッセージに貼り付けることができる。
-
-#### 二重括弧の例外
-
-`{% assign %}` や`{% if %}` など、別のリキッドタグ内でタグを使用する場合は、二重括弧または括弧なしのいずれかを使用できます。タグが独立している場合のみ、二重のブラケットで囲む必要があります。わかりやすくするために、常にダブルブラケットを使用できます。 
-
-次のタグはすべて正しいです。
-
-```liquid
-{% if custom_attribute.${Number_Game_Attended} == 1 %}
-{% if {{custom_attribute.${Number_Game_Attended}}} == 1 %}
-
-{% assign value_one = {{custom_attribute.${one}}} %}
-{% assign value_one = custom_attribute.${one} %}
-```
 
 #### 二重括弧の例外
 
@@ -124,11 +108,11 @@ Liquid は特定の構造 (構文) に従います。ダイナミックなパー
 
 テンプレート化されたテキストフィールドの付近にある**パーソナライゼーション追加**モーダルから、事前にデフォルト値でフォーマットされた変数を挿入できます。
 
-![挿入パーソナライゼーションを選択した後に耳元にアプリする追加パーソナライゼーション モーダル。モーダルには、パーソナライゼーション型、属性、オプションのデフォルト値のフィールドsがあり、リキッド構文のプレビューが表示されます。]({% image_buster /assets/img_archive/insert_liquid_var_arrow.png %}){: style="max-width:90%;"}
+![パーソナライゼーションの挿入を選択すると表示されるパーソナライゼーションの追加モーダル。モーダルには、パーソナライゼーション型、属性、オプションのデフォルト値のフィールドsがあり、リキッド構文のプレビューが表示されます。]({% image_buster /assets/img_archive/insert_liquid_var_arrow.png %}){: style="max-width:90%;"}
 
 モーダルにより、カーソルがあった位置に、指定したデフォルト値をもつ Liquid が挿入されます。挿入位置は [プレビュー] ボックスでも指定でき、挿入位置の前後のテキストが表示されます。テキストブロックがハイライトされている場合、ハイライトされたテキストは置き換えられる。
 
-![パーソナライゼーションの追加モーダルのGIF。コンポーザー内のハイライトされたテキスト&クォート;name"をリキッドスニペットに置き換えて、ユーザーが"fellow traveler"をデフォルトとして表示します。]({% image_buster /assets/img_archive/insert_var_shot.gif %})
+![コンポーザー内の強調表示されたテキスト&クォート;name"をリキッドスニペットに置き換えるモーダルと、"fellow traveler"をデフォルトとして挿入するユーザーを示す、カスタマイズの追加モーダルのGIF。]({% image_buster /assets/img_archive/insert_var_shot.gif %})
 
 ### 変数への代入
 
