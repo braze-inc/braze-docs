@@ -83,11 +83,9 @@ Resulting in the following message:
 
 ## If Customer Engagement Platform is SFMC or Klaviyo
 
-Decisioning Studio also supports native integrations with SFMC and Klaviyo.
+Decisioning Studio also supports native integrations with SFMC and Klaviyo. For SFMC, for example, Decisioning Studio triggers API events into a journey with data required to populate dynamic elements.
 
-For SFMC, for example, Decisioning Studio triggers API events into a journey with data required to populate dynamic elements.
-
-For detailed steps to configure an agent that uses either of these customer engagement platforms, contact the services team.
+For detailed steps to configure an agent that uses either of these customer engagement platforms, following the [SFMC instructions]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/configure_sfmc/) or [Klaivyo instructions]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/configure_klaviyo/)
 
 ## If another Customer Engagement Platform
 
