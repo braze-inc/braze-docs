@@ -7,19 +7,19 @@ description: "このランディングページは、すべてのモノのプッ
 
 # プッシュ通知
 
-> [プッシュ通知]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/)を使用すると、重要なイベントが発生したときにアプリから通知を送ることができます。新しいインスタントメッセージを配信したり、ニュース速報を送信したり、ユーザーのお気に入りのテレビ番組の最新エピソードがダウンロードしてオフライン視聴する準備ができたときに、プッシュ通知を送信することがあります。また、アプリケーションは必要なときにのみ起動するため、バックグラウンドフェッチよりも効率的です。
+> [プッシュ通知]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/)を使用すると、重要なイベントが発生したときにアプリから通知を送ることができます。新しいインスタントメッセージを配信したり、ニュース速報を送信したり、ユーザーのお気に入りのテレビ番組の最新エピソードがダウンロードしてオフライン視聴する準備ができたときに、プッシュ通知を送信することがあります。また、必要なときにのみアプリケーションが起動するため、バックグラウンドでの取得よりも効率的です。
 
 {% sdktabs %}
+{% sdktab web %}
+{% multi_lang_include developer_guide/web/push_notifications.md %}
+{% endsdktab %}
+
 {% sdktab android %}
 {% multi_lang_include developer_guide/android/push_notifications.md %}
 {% endsdktab %}
 
 {% sdktab swift %}
 {% multi_lang_include developer_guide/swift/push_notifications.md %}
-{% endsdktab %}
-
-{% sdktab web %}
-{% multi_lang_include developer_guide/web/push_notifications.md %}
 {% endsdktab %}
 
 {% sdktab android tv %}
@@ -50,7 +50,7 @@ description: "このランディングページは、すべてのモノのプッ
 {% multi_lang_include developer_guide/unity/push_notifications.md %}
 {% endsdktab %}
 
-{% sdktab xamarin %}
+{% sdktab .NET MAUI (Xamarin)%}
 {% multi_lang_include developer_guide/xamarin/push_notifications.md %}
 {% endsdktab %}
 {% endsdktabs %}
