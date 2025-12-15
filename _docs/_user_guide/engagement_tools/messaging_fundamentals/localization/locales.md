@@ -165,13 +165,13 @@ For more details on managing campaigns and Canvases after launch, refer to [Edit
 
 Translations are copied along with a canvas step, campaign, or campaign variation. This is also true when copying across workspaces, so long as the locales are defined in that destination workspace. Be sure to review and update translations accordingly when making modifications to your Canvas or campaign.
 
-### Using the multi-language API with Canvases
+### Using the multi-Language API with Canvases
 
-To use the [multi-language API with Canvases]({{site.baseurl}}/api/endpoints/translations/), you must include the `workflow_id`, `step_id`, and `message_variation_id` in the parameter list.
+To use the [multi-Language API with Canvases]({{site.baseurl}}/api/endpoints/translations/), you must include the `workflow_id`, `step_id`, and `message_variation_id` in the parameter list.
 
 #### Canvas steps added to post-launch drafts
 
-When using the multi-language API with Canvas steps that were created after the Canvas has been launched, the `message_variation_id` that you pass into the API will be empty or blank.
+When using the multi-Language API with Canvas steps that were created after the Canvas has been launched, the `message_variation_id` that you pass into the API will be empty or blank.
 
 ## Frequently asked questions
 
