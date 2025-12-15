@@ -9,6 +9,8 @@ description: "Learn how to set up Decisioning Studio Pro agents to make 1:1 AI d
 
 > Think of a Decisioning Studio agent like the brain of your Martech stack:  using your rich customer data, the agent orchestrates optimal and personalized decisions at a 1:1 level to maximize a target metric you choose.
 
+   ![Decisioning Pro Diagram]({% image_buster /assets/img/decisioning_studio/decisioning_studio_pro_diagram.png %})
+
 To set up an AI Decisioning Agent and complete the AI Decisioning Loop, at a high level, you will:
 
 1. Design your agent
