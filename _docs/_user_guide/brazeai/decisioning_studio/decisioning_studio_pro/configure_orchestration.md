@@ -49,35 +49,37 @@ Here are some examples:
 
 #### Example #1: Email Campaign
 
-Suppose the Decisioning Studio agent is optimizing an email campaign. Supposing the agent is optimizing for choice of templates and Call to Action (CTA) message, then an API-triggered campaign should be created for each template, and the CTA section of one template might look like:
+Suppose the Decisioning Studio agent is optimizing an email campaign. This might be configured like this: 
 
-![Decisioning Pro Diagram]({% image_buster /assets/img/decisioning_studio/decisioning_studio_braze_email_example.png %})
+![Decisioning Pro Diagram]({% image_buster /assets/img/decisioning_studio/decisioning_email_example_1.png %})
 
-{% raw %}
-```
-{{${cta_message}}}
-```
-{% endraw %}
+Supposing the agent is optimizing for choice of templates and Call to Action (CTA) message, then an API-triggered campaign should be created for each template, and the CTA section of one template might look like:
+
+![Decisioning Pro Diagram]({% image_buster /assets/img/decisioning_studio/decisioning_studio_braze_email_example_2.png %})
 
 #### Example #2: Push campaign
 
 Suppose a Decisioning Studio agent is optimizing the message of a Push campaign. This might be configured like this:
 
-{% raw %}
-```
-{{${push_message}}}
-```
-{% endraw %}
+![Decisioning Pro Diagram]({% image_buster /assets/img/decisioning_studio/decisioning_studio_push_example_1.png %})
+
+![Decisioning Pro Diagram]({% image_buster /assets/img/decisioning_studio/decisioning_studio_push_example_2.png %})
+
+Resulting in the following message: 
+
+![Decisioning Pro Diagram]({% image_buster /assets/img/decisioning_studio/decisioning_studio_push_example_3.png %})
 
 #### Example #3: SMS Campaign
 
 Suppose that the Decisioning Studio agent is optimizing for fields in an SMS campaign. This might be configured like this:
 
-{% raw %}
-```
-{{${sms_message}}}
-```
-{% endraw %}
+![Decisioning Pro Diagram]({% image_buster /assets/img/decisioning_studio/decisioning_studio_sms_example_1.png %})
+
+![Decisioning Pro Diagram]({% image_buster /assets/img/decisioning_studio/decisioning_studio_sms_example_2.png %})
+
+Resulting in the following message: 
+
+![Decisioning Pro Diagram]({% image_buster /assets/img/decisioning_studio/decisioning_studio_sms_example_3.png %})
 
 ## If Customer Engagement Platform is SFMC or Klaviyo
 
@@ -89,16 +91,15 @@ For detailed steps to configure an agent that uses either of these customer enga
 
 ## If another Customer Engagement Platform
 
-Decisioning Studio can integrate with any customer engagement platform. However, this may require some custom engineering work, if Decisioning Studio cannot trigger communications directly.
+Decisioning Studio can integrate with any customer engagement platform. However, this may require some custom engineering work from your team, since Decisioning Studio cannot trigger communications directly.
 
-In this scenario, the agent delivers a "recommendation file." This file contains rows for each customer, with columns that indicate all of the personalized decisions for that customer.
+In this scenario, the agent will deliver a "recommendation file." This file contains rows for each customer, with columns that indicate all of the personalized decisions for that customer.
 
-For example, the following recommendation file might be used by a customer to optimize an email campaign:
+For example, the following recommendation file: 
 
-| Customer ID | Template | Subject Line | Send Time |
-|-------------|----------|--------------|-----------|
-| user_123    | Template A | Welcome! | 10:00 AM |
-| user_456    | Template B | Get Started | 2:00 PM |
+![Decisioning Pro Diagram]({% image_buster /assets/img/decisioning_studio/decisioning_studio_custom_example_2.png %})
 
-For more information on custom integrations, contact the AI Decisioning Services team.
+Might be used to optimze an email campaign that looks like the following: 
+
+![Decisioning Pro Diagram]({% image_buster /assets/img/decisioning_studio/decisioning_studio_custom_example_1.png %})
 
