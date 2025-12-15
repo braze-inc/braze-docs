@@ -27,6 +27,7 @@ Each translation should have a unique `id`. For example, when translating a simp
 
 {% raw %}`{% translation greeting %}Hello!{% endtranslation}`{% endraw %}
 
+#### Localizing HTML blocks
 A more complicated paragraph may have multiple translation tags ("offer_text" and "offer_amount"):
 
 {% raw %}
@@ -36,6 +37,22 @@ A more complicated paragraph may have multiple translation tags ("offer_text" an
 ```
 {% endraw %}
 
+{% alert important %}
+Wrapping large HTML blocks may have unintended consequences related to stylesheet and styling. Try to only wrap as small text sections as possible.
+{% endalert %}
+
+#### Localizing Links
+
+To localize anchor tag links, be sure to wrap the entire `href` URL attribute. If you only wrap a part of the URL, link templating may not function correctly.
+
+
+{% raw %}
+```
+<a href="{% translation link_href %}https://www.braze.com/en/page{% endtranslation %}">
+  {% translation link_text %}Click Me{% endtranslation %}
+</a>
+```
+{% endraw %}
 
 ### 3. Choose message locales {#choose-locales}
 
