@@ -53,31 +53,29 @@ Suppose the Decisioning Studio agent is optimizing an email campaign. Supposing 
 
 ![Decisioning Pro Diagram]({% image_buster /assets/img/decisioning_studio/decisioning_email_example.png %})
 
-{% raw %}
-```
-{{${cta_message}}}
-```
-{% endraw %}
-
 #### Example #2: Push campaign
 
 Suppose a Decisioning Studio agent is optimizing the message of a Push campaign. This might be configured like this:
 
-{% raw %}
-```
-{{${push_message}}}
-```
-{% endraw %}
+![Decisioning Pro Diagram]({% image_buster /assets/img/decisioning_studio/decisioning_studio_push_example_1.png %})
+
+![Decisioning Pro Diagram]({% image_buster /assets/img/decisioning_studio/decisioning_studio_push_example_2.png %})
+
+Resulting in the following message: 
+
+![Decisioning Pro Diagram]({% image_buster /assets/img/decisioning_studio/decisioning_studio_push_example_3.png %})
 
 #### Example #3: SMS Campaign
 
 Suppose that the Decisioning Studio agent is optimizing for fields in an SMS campaign. This might be configured like this:
 
-{% raw %}
-```
-{{${sms_message}}}
-```
-{% endraw %}
+![Decisioning Pro Diagram]({% image_buster /assets/img/decisioning_studio/decisioning_studio_sms_example_1.png %})
+
+![Decisioning Pro Diagram]({% image_buster /assets/img/decisioning_studio/decisioning_studio_sms_example_2.png %})
+
+Resulting in the following message: 
+
+![Decisioning Pro Diagram]({% image_buster /assets/img/decisioning_studio/decisioning_studio_sms_example_3.png %})
 
 ## If Customer Engagement Platform is SFMC or Klaviyo
 
