@@ -8,7 +8,7 @@ description: "This article provides an overview of multi-language settings in th
 
 # Multi-language settings
 
-> The Multi-language feature allows you to use [translation tags]({{ site.baseurl }}/user_guide/engagement_tools/messaging_fundamentals/localization/locales) to target users in different languages and locations all within a single message.
+> The Multi-Language feature allows you to use [translation tags]({{ site.baseurl }}/user_guide/engagement_tools/messaging_fundamentals/localization/locales) to target users in different languages and locations all within a single message.
 
 {% multi_lang_include locales.md section="Prerequisites" %}
 
