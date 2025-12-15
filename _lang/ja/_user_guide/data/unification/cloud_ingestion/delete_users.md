@@ -3,7 +3,7 @@ nav_title: CDIでユーザーを削除する
 article_title: クラウドデータ取り込みによるユーザーの削除
 page_order: 30
 page_type: reference
-description: "このページでは、クラウドデータ取り込みでユーザーを削除するプロセスの概要を説明します。"
+description: "このページでは、Cloud Data Ingestionでユーザーを削除するプロセスの概要を説明する。"
 
 ---
 
