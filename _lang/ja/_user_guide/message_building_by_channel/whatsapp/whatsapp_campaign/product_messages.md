@@ -2,7 +2,6 @@
 nav_title: 製品メッセージ
 article_title: 製品メッセージ
 page_order: 2
-page_order: 2
 description: "このページでは、WhatsApp 製品メッセージを使用して、メタカタログから製品を表示するインタラクティブなWhatsApp メッセージを送信する方法について説明します。"
 page_type: reference
 alias: "/whatsapp_product_messages/"
@@ -21,7 +20,7 @@ channel:
 1. ユーザーは、WhatsApp で製品またはカタログメッセージを受け取ります。
 2. ユーザーは WhatsApp から直接製品をカートに追加します。
 3. ユーザーは WhatsApp で [**Place order**] をタップします。
-4. ウェブサイトまたはアプリは、Braze からカートデータを受信し、チェックアウトリンクを生成します。
+4. Web サイトまたはアプリは、Brazeから台車データを受信し、チェックアウトリンクを生成します。
 5. ユーザーは、ウェブサイトまたはアプリのチェックアウトを完了するように指示されます。
 
 ユーザーがカタログメッセージを介してカートにアイテムを追加すると、Braze はフォローアップアクションのためのWebhook データを受け取ります。
@@ -40,18 +39,10 @@ channel:
 {% alert note %}
 [製品メッセージのセットアップ](#setting-up-product-messages)のステップ 4時にアクセスされる統合製品セレクターを使用して、製品メッセージエクスペリエンスを強化します。
 {% endalert %}
-## 製品メッセージタイプ
-
-{% alert note %}
-[製品メッセージのセットアップ](#setting-up-product-messages)のステップ 4時にアクセスされる統合製品セレクターを使用して、製品メッセージエクスペリエンスを強化します。
-{% endalert %}
 
 {% tabs local %}
 {% tab Catalog messages %}
 
-カタログメッセージには、製品カタログ全体が対話形式で表示されます。[テンプレートとレスポンスメッセージ](#building-a-product-message)として利用できます。
-
-[setup](#setting-up-product-messages) 中にBrazeするカタログ権限を有効にした場合、ユーザーs に表示するサムネールを選択できます。 
 カタログメッセージには、製品カタログ全体が対話形式で表示されます。[テンプレートとレスポンスメッセージ](#building-a-product-message)として利用できます。
 
 [setup](#setting-up-product-messages) 中にBrazeするカタログ権限を有効にした場合、ユーザーs に表示するサムネールを選択できます。 
@@ -66,7 +57,6 @@ channel:
 
 複数製品メッセージでは、カタログ内の特定の製品が強調表示されます。メッセージあたり最大30個の項目が強調表示されます。[テンプレートとレスポンスメッセージ](#building-a-product-message)として利用できます。
 
-ID を使用して製品を手動で選択するか、[setup](#setting-up-product-messages) 中にカタログ権限を有効にした場合は、ドロップダウン製品セレクターを使用します。
 ID を使用して製品を手動で選択するか、[setup](#setting-up-product-messages) 中にカタログ権限を有効にした場合は、ドロップダウン製品セレクターを使用します。
 
 {% alert important %}
@@ -85,24 +75,24 @@ ID を使用して製品を手動で選択するか、[setup](#setting-up-produc
 
 ## 製品メッセージのセットアップ
 
-1. [Meta Commerce Manager](https://business.facebook.com/business/loginpage/?next=https%3A%2F%2Fbusiness.facebook.com%2Fcommerce_manager%2F#) で、[Meta の指示](https://www.facebook.com/business/help/1275400645914358?id=725943027795860&ref=search_new_1) に従ってMeta カタログを作成します。Braze 接続のWhatsApp Business Accont が存在するのと同じMeta Business Portfolio にいることを確認します。
+1. [Meta Commerce Manager](https://business.facebook.com/business/loginpage/?next=https%3A%2F%2Fbusiness.facebook.com%2Fcommerce_manager%2F#) で、[Meta の指示](https://www.facebook.com/business/help/1275400645914358?id=725943027795860&ref=search_new_1) に従ってMeta カタログを作成します。Braze接続されたWhatsApp ビジネスアカウントが存在するメタビジネスポートフォリオと同じメタビジネスポートフォリオにあることを確認します。
 2. Meta の指示に従って、[ Meta Business Manager で"Manage Catalog" パーミッションを割り当てて、Meta カタログ](https://www.facebook.com/business/help/1953352334878186?id=2042840805783715) をBraze に接続されたWhatsApp ビジネスアカウントに接続します。 
 
-![Meta " カタログ s" " " Assign partner" "sweeney_catalog".]({% image_buster /assets/img/whatsapp/meta_catalog.png %}){: style="max-width:90%;"}
+![Meta " カタログ s" " " Assign partner" "sweeney_catalog".]({% image_buster /assets/img/whatsapp/meta_catalog.png %} というカタログのボタン{: style="max-width:90%;"}
 
 必ず、Braze Business Manager ID `332231937299182` をパートナーのビジネスID として使用してください。
 
-![パートナーの取引先ID を入力し、権限&割当て;カタログ&割当ての管理;を割り当てるためのフィールドs を含むパートナーとカタログを共有するウィンドウ。]({% image_buster /assets/img/whatsapp/share_meta_catalog.png %}){: style="max-width:70%;"}
+![カタログをパートナーと共有するためのウィンドウで、パートナーのビジネスID を入力し、権限&クォート;カタログ&クォートの管理; を割り当てるためのフィールドs が含まれています。]({% image_buster /assets/img/whatsapp/share_meta_catalog.png %}){: style="max-width:70%;"}
 
 {: start="3"}
 3\.メタカタログ設定を選択します。カタログメッセージを送信するには、**チャットヘッダーのカタログアイコンを表示**を選択する必要があります。
 
-![WhatsAppマネージャ設定の"Catalog_products" カタログのs ページ。]({% image_buster /assets/img/whatsapp/meta_catalog_settings.png %}){: style="max-width:90%;"}
+![WhatsAppマネージャの設定の"Catalog_products" カタログのs ページ。]({% image_buster /assets/img/whatsapp/meta_catalog_settings.png %}){: style="max-width:90%;"}
 
 {: start="4"}
 4\.Braze では、[埋め込みサインアップ]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/embedded_signup/) プロセスを実行して権限を付与します。必ず、**all**に権限を付与するカタログを選択してください。これにより、Braze 連携製品セレクターが利用可能になります。
 
-![5つのカタログが選択されたウィンドウでは、権限が提供されます。]({% image_buster /assets/img/whatsapp/select_catalogs.png %}){: style="max-width:50%;"}
+![5つのカタログが選択されたウィンドウには、権限が表示されます。]({% image_buster /assets/img/whatsapp/select_catalogs.png %}){: style="max-width:50%;"}
 
 {% alert tip %}
 メタカタログを作成する際のベストプラクティスについては、[Commerce Manager で高品質なカタログを作成するためのヒント](https://www.facebook.com/business/help/2086567618225367?id=725943027795860)を参照してください。
@@ -120,11 +110,10 @@ WhatsApp テンプレートメッセージまたはレスポンスメッセー�
 3. Braze で WhatsApp キャンペーンまたはキャンバスメッセージステップを作成します。
 4. テンプレートを送信した場所に一致するサブスクリプショングループを選択します。
 5. [**WhatsApp テンプレートメッセージ**] を選択します。
-5. [**WhatsApp テンプレートメッセージ**] を選択します。
 6. 使用するテンプレートを選択します。
     - 複数製品テンプレートを選択した場合は、強調表示する製品のセクションタイトルとコンテンツID を指定します。Meta Commerce Manager からコンテンツID を直接コピーするか、統合製品セレクタの権限を有効にした場合は、アイテムを選択します。
 
-![項目一覧フィールドsで、項目名と内容IDを入力します。]({% image_buster /assets/img/whatsapp/multi_product_template.png %}){: style="max-width:60%;"}
+![項目一覧にフィールドsを入力すると、項目名と内容IDを入力できます。]({% image_buster /assets/img/whatsapp/multi_product_template.png %}){: style="max-width:60%;"}
 
 ![選択する項目のドロップダウンを含む項目リスト。]({% image_buster /assets/img/whatsapp/content_id_items.png %}){: style="max-width:60%;"}
 
@@ -139,17 +128,17 @@ WhatsApp テンプレートメッセージまたはレスポンスメッセー�
 3. **レスポンスメッセージ**を選択します。
 4. **Meta Product Messages**を選択します。
 
-![メッセージタイプとレスポンスメッセージレイアウトを選択するためのオプション。"Response Message"および"Meta Product Messages"を強調表示します。]({% image_buster /assets/img/whatsapp/response_message_layouts.png %}){: style="max-width:90%;"}
+![メッセージタイプと応答メッセージレイアウトを選択するためのオプション。"Response Message"および"Meta Product Messages"が強調表示されます。]({% image_buster /assets/img/whatsapp/response_message_layouts.png %}){: style="max-width:90%;"}
 
 {: start="5"}
 5. 使用する[メッセージタイプ](#product-message-types)を選択します。
 
-!["Multi-product"のMesageレイアウト選択。]({% image_buster /assets/img/whatsapp/multi-product_message_layout.png %}){: style="max-width:90%;"}
+!["Multi-product"のメッセージレイアウト選択。]({% image_buster /assets/img/whatsapp/multi-product_message_layout.png %}){: style="max-width:90%;"}
 
 {: start="6"}
 6. メッセージの作成を続行します。
 
-![例:製品の情報が記入されたメタ製品メッセージ。]({% image_buster /assets/img/whatsapp/example_response_message.png %}){: style="max-width:90%;"}
+![Example 製品の詳細情報を含むメタ製品メッセージ。]({% image_buster /assets/img/whatsapp/example_response_message.png %}){: style="max-width:90%;"}
 
 {% endtab %}
 {% endtabs %}
@@ -174,7 +163,7 @@ Meta Business Manager で、**Commerce Manager**に移動し、組織を選択�
 
 さらに、Brazeはこれらの質問から製品IDとカタログ IDを抽出します。そのため、回答を自動化したり、他のチーム(顧客サポートなど)に質問を送信したりする場合は、それらの詳細を含めることができます。たとえば、`inbound_product_id` または`inbound_catalog_id` のWhatsAppプロパティーを使用して、レスポンスをパーソナライズできます。
 
-!["パーソナライゼーション&quot を追加; パーソナライゼーション型が" WhatsApp Properties" とハイライトされた属性が"inbound_product_id".]({% image_buster /assets/img/whatsapp/inbound_product_questions.png %}){: style="max-width:60%;"}
+!["パーソナライゼーション&quot を追加; パーソナライゼーション型が" WhatsApp Properties" ハイライトされた属性が"inbound_product_id".]({% image_buster /assets/img/whatsapp/inbound_product_questions.png %} のウィンドウ){: style="max-width:60%;"}
 
 ## チェックアウト:カートの処理と Webhook
 
@@ -205,7 +194,6 @@ Meta Business Manager で、**Commerce Manager**に移動し、組織を選択�
 - **総額:**すべての項目の合計
 - **通貨:**カートの通貨
 - **出典:**マーク "whats_app"
-- **出典:**マーク "whats_app"
 - **メタデータ:**カタログIDやメッセージテキストなどの追加データ
 
 その他の Braze カートイベント情報は、「[e コマースの推奨イベントのタイプ]({{site.baseurl}}/user_guide/data/custom_data/recommended_events/ecommerce_events#types-of-ecommerce-recommended-events)」にあります。
@@ -215,7 +203,7 @@ Meta Business Manager で、**Commerce Manager**に移動し、組織を選択�
 1. `ecommerce.cart_updated` のカスタムイベントトリガーを作成します。
 2. `source = "whats_app"` のプロパティフィルタを追加します。
 
-![`ecommerce.cart_updated` カスタムイベント トリガーのキャンバスステップ、基本プロパティは"source" equaling `whats_app`.]({% image_buster /assets/img/whatsapp/product_message_canvas_step.png %})
+![`ecommerce.cart_updated` カスタムイベント トリガーのキャンバスステップ。基本プロパティは"source" equaling `whats_app`.]({% image_buster /assets/img/whatsapp/product_message_canvas_step.png %} です。
 
 {: start="3"}
 3\.カートデータに基づいてフォローアップアクションを設定します。
@@ -251,7 +239,7 @@ Liquid を使用して、応答メッセージにカート URL を直接作成�
 2. カート URL を使用して後続のメッセージを作成します。
 3. Liquid を使用してカート URL を作成します。Shopify を使用する場合は、前の Liquid の例を使用して[カートのパーマリンクを作成](https://shopify.dev/docs/apps/build/checkout/create-cart-permalinks)できます。
 
-![液体カートのチェックアウト体験ワークフローを示す図:Meta はオーダー受信メッセージをBraze に送信します。これはトリガー がアクション ベースのトリガーを送信し、カートリンクを含むメッセージを作成してWhatsApp メッセージを送信します。]({% image_buster /assets/img/whatsapp/liquid_generated_cart_link_checkout.png %})
+![Liquid により生成されたカートのチェックアウトエクスペリエンスワークフローを示す図。Meta はオーダー受信メッセージをBraze に送信します。これはトリガー がアクション ベースのトリガーを送信し、カートリンクを含むメッセージを作成してWhatsApp メッセージを送信します。]({% image_buster /assets/img/whatsapp/liquid_generated_cart_link_checkout.png %})
 
 {% endtab %}
 {% tab Connected Content %}
@@ -263,7 +251,7 @@ e コマースシステムに対する API 呼び出しを実行し、パーソ�
 1. [`ecommerce.cart_update`]({{site.baseurl}}/user_guide/data/custom_data/recommended_events/ecommerce_events/?tab=ecommerce.cart_updated)eCommerceイベントによってトリガーされるWebhookキャンペーンまたはキャンバスステップを作成します。これにより、eCommerceシステムにカートデータが送信されます。
 2. 同じ e コマースイベントによってトリガーされる WhatsApp キャンペーンまたはキャンバスねっセージステップを作成して、カート URL を含む WhatsApp 応答メッセージをユーザーに送信します。後続の応答メッセージの指示に従って[コネクテッドコンテンツ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content)を使用します。
 
-![Connected Content コールのチェックアウトエクスペリエンスワークフローを示す図:Metaは、注文受領メッセージをBrazeに送信します。これは、eコマースプラットフォームとの往復コールがあり、WhatsAppメッセージを送信します。]({% image_buster /assets/img/whatsapp/connected_content_checkout.png %})
+![コネクテッドコンテンツ呼び出しのチェックアウトエクスペリエンスワークフローを示す図。Metaは、注文受領メッセージをBrazeに送信します。これは、eコマースプラットフォームとの往復コールがあり、WhatsAppメッセージを送信します。]({% image_buster /assets/img/whatsapp/connected_content_checkout.png %})
 
 {% endtab %}
 {% tab Webhook and custom events %}
@@ -278,7 +266,7 @@ Webhooks を使用してカートデータをシステムに送信し、カス�
 3. チェックアウトURL の生成
 4. `checkout_started` イベントをBraze に送信し、WhatsApp メッセージをチェックアウトリンクとともに送信するようにトリガーします
 
-![webhook およびカスタムイベント s のチェックアウトエクスペリエンスワークフローを示す図:Metaは、eコマースプラットフォームとの往復通話を持つBrazeにオーダー受信メッセージを送信し、その後、カートURLを含むWhatsAppメッセージを送信します。]({% image_buster /assets/img/whatsapp/webhooks_custom_events_checkout.png %})
+![Webhook およびカスタムイベントのチェックアウトエクスペリエンスワークフローを示す図:Metaは、eコマースプラットフォームとの往復通話を持つBrazeにオーダー受信メッセージを送信し、その後、カートURLを含むWhatsAppメッセージを送信します。]({% image_buster /assets/img/whatsapp/webhooks_custom_events_checkout.png %})
 
 {% endtab %}
 {% endtabs %}
