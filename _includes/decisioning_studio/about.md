@@ -47,6 +47,6 @@ Decisioning Studio currently offers two tiers: Go and Pro. Go includes self-serv
 Since audience and orchestration configuration is similar for Go and Pro, this guide will cover Go configuration first. Then the Pro section will include additional steps for agent design considerations, customer data integrations, and orchestration patterns that aren't supported in Go.
 
 {% multi_lang_include decisioning_studio/sample_agents.md %}
-1. [Setting up Decisioning Studio Go]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/)
+1. [Setting up Decisioning Studio Go]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/go/)
 2. [Setting up Decisioning Studio Pro]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_pro/)
 3. [Viewing reports and insights]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/reporting/)
