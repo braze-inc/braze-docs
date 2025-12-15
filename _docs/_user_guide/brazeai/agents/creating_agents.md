@@ -168,7 +168,6 @@ Choose specific catalogs or columns in a catalog for an agent to reference and t
 You can select up to three segments for the agent to have membership access to when the agent is used in a Canvas. Let's say your agent has segment membership selected for a "Loyalty Users" segment, and the agent is used in a Canvas. When users enter an Agent step, the agent can interpret the user's input with the context of whether the user is in the selected segment or not.
 
 ![The "Loyalty Users" segment selected for agent membership access.]({% image_buster /assets/img/ai_agent/segment_membership_context.png %}){: style="max-width:85%;"}
-search_catalog
 
 ### Temperature
 
