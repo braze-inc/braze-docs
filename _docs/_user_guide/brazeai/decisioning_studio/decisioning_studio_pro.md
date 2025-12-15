@@ -42,7 +42,7 @@ A few best practices for setting up Decisioning Studio agents:
 To learn more about what agents can do, [book a call](https://www.braze.com/get-started/) with Braze.
 
 {% alert important %}
-This guide explains the most common integration patterns. Information Security will still need to vet all connection points and Solutions Consultants will be 
+This guide explains the most common integration patterns. Information Security will still need to vet all connection points and Solutions Consultants will be available to assist with implementation.
 {% endalert %}
 
 ## Next steps

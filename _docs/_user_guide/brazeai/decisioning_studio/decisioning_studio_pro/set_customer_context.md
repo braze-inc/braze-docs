@@ -37,18 +37,18 @@ Note: For Braze, multiple segments can be combined to create the audience, and D
 
 Provide the extension ID and API key to the Braze services team. They will assist with next steps in ingesting customer data.
 
-**To define the audience in Klaviyo:**
-
 {% endtab %}
 {% tab Klaviyo %}
 
+**To define the audience in Klaviyo:**
+
 In order to do this, take the following steps:
 
-* Configure an SFMC data extension(s) for your audience and provide the data extension ID
-* Set up SFMC Installed Package for API integration with the appropriate permissions required by Decisioning Studio
-* Ensure that this data extension must be refreshed daily, as Decisioning Studio will pull from the the latest incremental data available
+* Create an audience segment
+* Generate a private API key and provide this to the Braze AI Decisioning team
+* Provide the segment ID and API key to the Braze services team
 
-Provide the extension ID and API key to the Braze services team. They will assist with next steps.
+See the [Klaviyo documentation](https://help.klaviyo.com/hc/en-us/articles/115005237908) for more information on how to take these steps.
 
 {% endtab %}
 {% tab Other Cloud Solutions %}
@@ -70,7 +70,7 @@ In order to effectively personalize customer engagement, agents need to understa
 
 The following customer data assets are important to consider: 
 
-* **[Required]** Conversions – needed to train AI models and calculate the success metric. Should include the value of each conversion (e.g., revenue) if relevant. This is especially important for establsihing the self-learning feedback loop for agents. For more information on how to properly validate, consider the [Create the Feedback Loop]({{site.baseurl}}/user_guide/brazeai/decisioning_studio_pro/create_feedback_loop/) section.
+* **[Required]** Conversions – needed to train AI models and calculate the success metric. Should include the value of each conversion (e.g., revenue) if relevant. This is especially important for establishing the self-learning feedback loop for agents. For more information on how to properly validate, consider the [Create the Feedback Loop]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_pro/create_feedback_loop/) section.
 
 * **[Required]** Activation and engagement data – what was actually sent through each channel based on Decisioning Studio's recommendations and any subsequent customer actions associated with the triggered marketing event (e.g. send, open, click).
 
@@ -95,7 +95,7 @@ The following customer data assets are important to consider:
 
 As with audience definitions, BrazeAI Decisioning Studio can use all data that you are already sending to the Braze Data Platform.
 
-If there is customer data that you would want to use for Decisioning Studio that is not currently stored in the Customer Profile or Custom Attributes, the recommended approach [Braze Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion) to ingest data from other sources.
+If there is customer data that you would want to use for Decisioning Studio that is not currently stored in the Customer Profile or Custom Attributes, the recommended approach is to use [Braze Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion) to ingest data from other sources.
 
 CDI supports any of direct integrations, including:
 

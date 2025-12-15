@@ -7,9 +7,7 @@ description: "Learn how to create the feedback loop for Decisioning Studio Pro a
 
 # Create the Feedback Loop
 
-> Finally, while all customer data is important for the agent, the *most important data assets* are those that tell the agent what happened after customer engagement decisions were sent.
-
-Finally, while all customer data is important for the agent (and for information on how to configure, refer back to [Set Customer Context]({{site.baseurl}}/user_guide/brazeai/decisioning_studio_pro/set_customer_context/)), the *most important data assets* are those that tell the agent what happened after customer engagement decisions were sent.
+> Finally, while all customer data is important for the agent (and for information on how to configure, refer back to [Set Customer Context]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_pro/set_customer_context/)), the *most important data assets* are those that tell the agent what happened after customer engagement decisions were sent.
 
 These assets create the feedback loop that allows the agent to learn.
 

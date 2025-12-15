@@ -51,8 +51,7 @@ Here are some examples:
 
 Suppose the Decisioning Studio agent is optimizing an email campaign. Supposing the agent is optimizing for choice of templates and Call to Action (CTA) message, then an API-triggered campaign should be created for each template, and the CTA section of one template might look like:
 
-
-.v![Decisioning Pro Diagram]({% image_buster /assets/img/decisioning_studio/decisioning_email_example.png %})
+![Decisioning Pro Diagram]({% image_buster /assets/img/decisioning_studio/decisioning_email_example.png %})
 
 {% raw %}
 ```
