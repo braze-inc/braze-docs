@@ -117,7 +117,7 @@ Other options for sending data include:
 These patterns require more engineering effort, but are sometimes preferable, depending on the current Braze configuration. Talk with AI Decisioning Services to learn more. 
 
 {% endtab %}
-{% tab Other Cloud Solutions Google Cloud Storage, AWS, Azure %}
+{% tab Other Cloud Solutions (GCS, AWS, Azure %}
 
 **Other Cloud Solutions (Google Cloud Storage, Azure, and AWS)**
 
