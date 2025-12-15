@@ -49,9 +49,13 @@ Here are some examples:
 
 #### Example #1: Email Campaign
 
-Suppose the Decisioning Studio agent is optimizing an email campaign. Supposing the agent is optimizing for choice of templates and Call to Action (CTA) message, then an API-triggered campaign should be created for each template, and the CTA section of one template might look like:
+Suppose the Decisioning Studio agent is optimizing an email campaign. This might be configured like this: 
 
-![Decisioning Pro Diagram]({% image_buster /assets/img/decisioning_studio/decisioning_email_example.png %})
+![Decisioning Pro Diagram]({% image_buster /assets/img/decisioning_studio/decisioning_email_example_1.png %})
+
+Supposing the agent is optimizing for choice of templates and Call to Action (CTA) message, then an API-triggered campaign should be created for each template, and the CTA section of one template might look like:
+
+![Decisioning Pro Diagram]({% image_buster /assets/img/decisioning_studio/decisioning_email_example_2.png %})
 
 #### Example #2: Push campaign
 
