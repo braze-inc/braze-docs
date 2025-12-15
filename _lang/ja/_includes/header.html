@@ -6,29 +6,29 @@
   }
 </style>
 
-<a class="skip-main" href="#content_start"> コンテンツ</a> {% comment %} にスキップ OneTrust {% endcomment %} <!-- OneTrust Cookies Consent Notice start for braze.com -->
+<a class="skip-main" href="#content_start">コンテンツへスキップ</a>{% comment %}エンドワントラスト {% endcomment %} <!-- OneTrust Cookies Consent Notice start for braze.com -->
 <script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" data-document-language="true" type="text/javascript" charset="UTF-8" data-domain-script="a4189af1-fcc1-4ec1-9f51-e3bc768c6650"></script>
 <script type="text/javascript">
 function OptanonWrapper() { }
 </script>
-<!-- OneTrust Cookies Consent Notice end for braze.com --> {% comment %} End OneTrust {% endcomment %}
+<!-- OneTrust Cookies Consent Notice end for braze.com --> {コメント｝エンドワントラスト {% endcomment %}
 
 <header id="header_nav" >
 
-  <nav class="navbar navbar-expand-md  flex-column-md flex-md-row navbar-dark" aria-label="ヘッダナビゲーション" title="ヘッダナビゲーション">
+  <nav class="navbar navbar-expand-md  flex-column-md flex-md-row navbar-dark" aria-label="ヘッダーナビゲーション" title="ヘッダーナビゲーション">
     <div id="header_wrapper">
       <div id="nav_logo">
-           <a id="logo" href="{{site.baseurl}}/"><img src="{{site.baseurl}}/assets/img/logos/braze-logo-white.svg" alt="Braze"></a> <a id="icon_logo" href="{{site.baseurl}}/"><img src="{{site.baseurl}}/assets/img/logos/braze-logo-monogram-purple.svg" alt="Braze"></a>
+           <a id="logo" href="{{site.baseurl}}/"><img src="{{site.baseurl}}/assets/img/logos/braze-logo-white.svg" alt="ブレーズ"></a> <a id="icon_logo" href="{{site.baseurl}}/"><img src="{{site.baseurl}}/assets/img/logos/braze-logo-monogram-purple.svg" alt="Braze"></a>
 
       </div>
     <div class="navbarCollapse d-none d-md-block" id="header_navbar" >
       <ul class="navbar-nav" id="header_menu">
-        {%- collect = site.collections | site.page_order } - active_url = ' ' - % { - active_title = ' - } { - assign isactive = ' ' - % } - cl.title - % { - ただしcl.hidden またはcl.page_order = 1 の場合% { } - sagn nav .label = % { } - site { } - alsign nav { } - % { } - assign nav .url = '% else | append: '/' -% { } - if % { default _nav _url | append: cl.default _nav _url - % { - endif - {% - assign isactive = ' ' - } { } - (cl.label = .collection) または (cl.label = .custom _collection) - {% - assign isactive = 'active ' -% )active_url = nav_url -% {%- active_title = cl.title -%} {%- endif -%}を割り当てます。
+        {%- assign collect = site.collections | sort: site.page_order -%} とする。{%- assign active_url = '' -%} {%- assign active_title = ''-%}{%- assign active_title = ''-%} を指定する。{%-代入 isactive = '' -%}{%- for cl in collect -%} とする。{%- if cl.title -%} とする。{%- unless cl.hidden or cl.page_order == 1 -%} {%- if cl.label == 1{%- if cl.label == 'home' -%} {%- if cl.label == 'home' -%} {%- if cl.label == 'home' -%}{%- assign nav_url = site.baseurl | append: '/' -%} {%- else -%} {%- else -%}{%- else -%} {%- assign nav_url = site.baseurl | append: '/' -%}{%- assign nav_url = site.baseurl | append: '/' | append: cl.label | append: '/' -%}} {%- else -%}{%- endif -%}{%- if cl.default_nav_url -%} とする。{%- assign nav_url = nav_url | append: cl.default_nav_url -%} {%- endif -%} {%- if cl.default_nav_url -%}{%- endif -%}{%- assign isactive = '' -%} {%- if (cl.label = ''){%- if (cl.label == page.collection) or (cl.label == page.custom_collection) -%} {%- if (cl.label == page.collection) -%- if (cl.label == page.custom_collection) -%}{%- assign isactive = 'active' -%} とする。{%- assign active_url = nav_url -%} {%- assign active_title = 'active' -%}{%- assign active_title = cl.title -%} {%- endif -%} {%- assign active_title = cl.title -%}{%- endif -%}
               <li class="nav-item {{isactive}}">
                   <a class="nav-link" href="{{nav_url}}"><div>{{cl.title}}</div></a>
               </li>
 
-            {%- endunless -%} {%- endif -%} {%- endfor -%}
+            {%- endunless -%} {%- endif -%}{%- endif -%}{%- endfor -%} とする。
 				<li>
 					<ul id="braze_header_lang">
 						<li class="nav-item nav-item-lang-li">
@@ -36,6 +36,7 @@ function OptanonWrapper() { }
 							<label for="lang_select"><i class="fa-solid fa-globe">‍</i> </label>
 							<select class="lang-select" id="lang_select" aria-label="言語選択">
                 <option value="en">EN</option>
+                <option value="de">DE</option>
                 <option value="es">ES</option>
                 <option value="fr">FR</option>
                 <option value="ja">JA</option>
@@ -50,13 +51,14 @@ function OptanonWrapper() { }
     </div>
 
 
-    {%- assign default_url = site.baseurl | append: '/' -%} {%- assign default_title = 'Home' -%} {%- if active_title == '' -%} {%- assign active_url = default_url -%} {%- assign active_title = default_title -%} {%- endif -%}
+    {%- assign default_url = site.baseurl | append: '/' -%} {%- assign default_title = 'Home{%- assign default_title = 'ホーム' -%}.{%- if active_title == '' -%} とする。{%- assign active_url = default_url -%}{%- assign active_title = default_title -%}{%- endif -%}
 
     <div class="navbarCollapse d-md-none" id="dropdown_navbar">
       <div id="dropdown_navbar_lang">
         <label for="lang_select"><i class="fa-solid fa-globe">‍</i> </label>
         <select class="lang-select" id="lang_select_responsive" aria-label="言語選択">
           <option value="en">EN</option>
+          <option value="de">DE</option>
           <option value="es">ES</option>
           <option value="fr">FR</option>
           <option value="ja">JA</option>
@@ -71,19 +73,19 @@ function OptanonWrapper() { }
              <div>{{active_title}}</div>
              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none"> <path d="M4.5 9L7.5 6L4.5 3" stroke="#FDA4FB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> </svg> </a>
            <div class="dropdown-menu" aria-labelledby="nav_responsive_dropdown">
-             {% - cl.title - { } if % { } - if cl.title - { } if % { } - assign nav.url | append: '/' | append: '/' -% { - endif -% { % - if % { default_nav_url - % } - assign nav_url = nav_url | append: cl.default_nav_url - } {% - assign isactive = ' ' - } {% - if (cl.label == page collection) または(cl.label )= page.collection =% - isactive = 'active' -% {% - active_url = nav_url -} {% - active_title = cl.title -% {% - endif -%} <a class="dropdown-item {{isactive}}" href="{{nav_url}}"><div>{{cl.title}}</div></a> {%- endif -%} {%- endunless -%} {%- endif -%} {%- endfor -%}
+             {%- for cl in collect -%} {%- if cl.title -%} {%- unless cl.hidden -%} {%- if cl.label == 'home' -%} {%- assign nav_url = site.baseurl | append: '/' -%} {%- else -%} {%- assign nav_url = site.baseurl | append: '/' | append: cl.label | append: '/' -%} {%- endif -%} {%- if cl.default_nav_url -%} {%- assign nav_url = nav_url | append: cl.default_nav_url -%} {%- assign isactive = '' -%} {%- if (cl.label == page.collection) or (cl.label == page.custom_collection) -%} {%- assign isactive = 'active' -%} {%- assign active_url = nav_url -%} {%- assign active_title = cl.title -%} {%- endif -%} <a class="dropdown-item {{isactive}}" href="{{nav_url}}"><div>{{cl.title}}</div></a> {%- endif -%}{%- endunless -%}{%- endif -%} {%- endfor -%} {%- endfor -%} {%- endfor -%}{%- endfor -%} とする。
              <hr />
-                 <a class="dropdown-item" target="_blank" href="https://www.braze.com"><div>braze.com</div><i class="fa-solid fa-up-right-from-square"></i></a>
+                 <a class="dropdown-item" target="_blank" href="https://www.braze.com"><div>Braze.com</div><i class="fa-solid fa-up-right-from-square"></i></a>
            </div>
          </li>
       </ul>
     </div>
     </div>
     <div id="navbar-search">
-       {% include header_search.html %}
-    <div class="navbar-nav" id="site-link"><a class="nav-link" href="https://braze.com"><div>braze.com</div><i class="fa-solid fa-up-right-from-square"></i></a></div>
+       {% include header_search.html %}。
+    <div class="navbar-nav" id="site-link"><a class="nav-link" href="https://braze.com"><div>Braze.com</div><i class="fa-solid fa-up-right-from-square"></i></a></div>
     </div>
 
-      % if active_nav % { hide_title ! &amp;quot ; Home &amp;quot ;if % { title ;Home&amp;quot ;if_home } <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#nav_bar" aria-controls="nav_bar" aria-expanded="false" aria-label="ナビゲーション" id="header_toggle"> <span class="burger burger-1"></span><span class="burger burger-2"></span><span class="burger burger-3"></span><span class="burger burger-4"></span> &lt;/span
+      {% unless hide_nav %} {%- if active_title != "Home" -%} <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#nav_bar" aria-controls="nav_bar" aria-expanded="false" aria-label="ナビゲーション" id="header_toggle"> <span class="burger burger-1"></span><span class="burger burger-2"></span><span class="burger burger-3"></span><span class="burger burger-4"></span> </button> {% endif %} {% endunless %}
   </nav>
 </header>

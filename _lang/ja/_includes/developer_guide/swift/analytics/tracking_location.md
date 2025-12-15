@@ -1,6 +1,6 @@
 ## 現在地を記録する
 
-### ステップ1:プロジェクトを構成する
+### ステップ 1: プロジェクトを構成する
 
 {% alert important %}
 Braze の位置情報機能を使用する場合、アプリケーションでは位置情報サービスを使用するための権限がリクエストされます。[アップル開発者のレビューをぜひ：ユーザーロケーションサービスへの認可を要求する](https://developer.apple.com/documentation/corelocation/requesting-authorization-to-use-location-services) 。
@@ -9,7 +9,7 @@ Braze の位置情報機能を使用する場合、アプリケーションで�
 位置情報の追跡を有効にするには、Xcodeプロジェクトを開封し、アプリを選択する。**General**タブで、`BrazeLocation` モジュールを追加する。
 
 {% tabs %}
-{% tab SWIFT %}
+{% tab swift %}
 
 `AppDelegate.swift` ファイルの先頭にある `BrazeLocation` モジュールをインポートします。Braze の構成に `BrazeLocationProvider` インスタンスを追加し、構成に対するすべての変更が `Braze(configuration:)` を呼び出す前に実行されるようにします。利用可能な構成については、`Braze.Configuration.Location` を参照してください。
 
@@ -95,12 +95,12 @@ static Braze *_braze = nil;
 {% endtab %}
 {% endtabs %}
 
-### ステップ2:ユーザーの位置情報を記録する
+### ステップ 2:ユーザーの位置情報を記録する
 
 次に、ユーザーが最後に知った場所をBrazeに記録する。以下の例では、Brazeインスタンスを`AppDelegate` の変数として代入していると仮定している。
 
 {% tabs %}
-{% tab SWIFT %}
+{% tab swift %}
 
 ```swift
 AppDelegate.braze?.user.setLastKnownLocation(latitude:latitude,

@@ -1,5 +1,5 @@
 ---
-nav_title: 以前の世代
+nav_title: 前の世代
 article_title: 以前のアプリ内メッセージ生成
 page_order: 20
 page_type: reference
@@ -19,10 +19,10 @@ hidden : true
 
 これにより、アプリ内メッセージに関する以前の情報が確認されます。最新のアプリ内メッセージ生成に関する最新情報については、[アプリ内メッセージ概要ドキュメント]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/)をご覧ください。
 
-{% details 全画面 %}
+{% details Fullscreen %}
 これらは最も魅力的ですが、ユーザーの画面全体を覆うため、最も侵入的でもあります。サイズが大きくリッチな画像を表示するのに適しており、重要な新機能や期限が迫っているプロモーションなど、非常に重要な情報を伝えるのに役立ちます。これらはユーザーエクスペリエンスの混乱を招くため、最優先のコンテンツには控えめに使用してください。
 
-![全画面メッセージ]({% image_buster /assets/img_archive/braze_fullscreen.png %}){: style="max-width:80%;"}
+![フルスクリーンメッセージ]({% image_buster /assets/img_archive/braze_fullscreen.png %}){: style="max-width:80%;"}
 
 **カスタマイズ可能な機能**
 
@@ -33,7 +33,7 @@ hidden : true
 - キーと値のペア
 
 {% enddetails %}
-{% details  モーダル %}
+{% details  Modal %}
 これらのメッセージはフルスクリーンメッセージほど侵入的ではありません。ユーザーがアプリのUIの一部を見ることができるからです。モーダルメッセージにはボタンと画像が含まれているため、よりインタラクティブで視覚的なキャンペーンが必要な場合は、スライドアップよりもモーダルメッセージの方が適しています。これらは、アプリの更新や緊急ではない取引やイベントなど、中優先度のコンテンツに最適です。
 
 ![モーダルメッセージ]({% image_buster /assets/img_archive/braze_modal.png %}){: style="max-width:80%;"}
@@ -48,7 +48,7 @@ hidden : true
 
 {% enddetails %}
 
-{% details 伝統的なスライドアップ %}
+{% details Traditional Slideup %}
 これらは最も控えめなメッセージタイプですが、色やバッジアイコンの使用方法によっては、より目立つこともあります。これは、新しいユーザーをオンボーディングし、特定のアプリ内機能に誘導する際に使用するメッセージ形式である可能性があります。これにより、アプリの体験が中断されず、継続的な探索が可能になります。
 
 ![スライドアップメッセージ]({% image_buster /assets/img_archive/stopwatch_slideup_IAM.gif %}){: style="max-width:50%;"}
@@ -68,9 +68,9 @@ hidden : true
 
 ## Web
 
-これにより、よりカスタマイズされたアプリ内メッセージに関する以前の情報が確認されます。最新のアプリ内メッセージ生成に関する最新情報については、[カスタマイズドキュメント]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/)をご覧ください。
+これにより、よりカスタマイズされたアプリ内メッセージに関する以前の情報が確認されます。最新のアプリ内メッセージ生成に関する最新情報については、[カスタマイズドキュメント]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/)をご覧ください。
 
-{% details メールキャプチャメッセージ %}
+{% details Email capture message %}
 メールキャプチャメッセージを使用すると、サイトのユーザーにメールアドレスの送信を促すことができ、その後、Brazeシステム内で利用可能になり、すべてのメッセージングキャンペーンで使用できます。
 
 ![メールキャプチャメッセージ]({% image_buster /assets/img_archive/web-email-capture.png %}){: style="max-width:60%;"}
@@ -87,9 +87,9 @@ hidden : true
 
 {% enddetails %}
 
-{% details カスタムHTMLメッセージ %}
+{% details Custom HTML Message %}
 
-Brazeのすぐに使えるアプリ内メッセージはさまざまな方法でカスタマイズできますが、HTML、CSS、およびJavaScriptを使用して設計および構築されたメッセージを使用すると、キャンペーンの外観と感触をさらにコントロールできます。いくつかの簡単な構成で、任意のニーズに合わせてカスタム機能とブランディングを解放できます。HTMLアプリ内メッセージを使用すると、メッセージの外観と感触をより細かくコントロールでき、HTML5でサポートされているものはすべてBrazeでもサポートされます。
+Brazeのデフォルトアプリ内メッセージは様々な方法でカスタマイズすることができるが、HTML、CSS、JavaScriptを使用してデザイン・構築されたメッセージを使用することで、キャンペーンのルック＆フィールをさらにコントロールすることができる。簡単な構成で、あらゆるニーズに合ったカスタム機能とブランディングを実現できる。HTMLアプリ内メッセージを使用すると、メッセージの外観と感触をより細かくコントロールでき、HTML5でサポートされているものはすべてBrazeでもサポートされます。
 
 **JavaScriptブリッジ（appboyBridge）**
 
@@ -103,7 +103,7 @@ HTML アプリ内メッセージは、Braze Web SDK への JavaScript 「ブリ�
 
 {% enddetails %}
 
-{% details HTML イン アプリ-メッセージ テンプレート %}
+{% details HTML In App-Message Templates %}
 
 私たちは、開始するのに役立つHTML5のインアプリメッセージテンプレートのセットを設計しました。[GitHubリポジトリ](https://github.com/braze-inc/in-app-message-templates)をチェックして、これらのテンプレートをあなたのニーズに合わせて使用およびカスタマイズする方法に関する詳細な指示を確認してください。
 
@@ -153,19 +153,16 @@ Braze は、いくつかの理由から画像や HTML アセットの zip ファ
 
 - アプリケーションやWebサイトに埋め込まれた参照フォントを使用して、HTMLアセットZIPフォルダーにフォントファイルを含めるのではなく、HTMLアプリ内メッセージをカスタマイズします。
 - HTML アセット ZIP に無関係または重複する CSS や JavaScript が含まれないようにしてください。
-- すべての画像に[ImageOptim][25]を使用して、画質を落とさずに可能な限り最小のサイズに圧縮します。
+- すべての画像に[ImageOptim](https://imageoptim.com/)を使用して、画質を落とさずに可能な限り最小のサイズに圧縮します。
 
 ### iPhone 5 仕様
 
-![iPhone 5の仕様][18]
+![iPhone 5の仕様]({% image_buster /assets/img_archive/In-AppMsg_Mockups+Specs_05.png %})
 
 ### iPhone 6 仕様
 
-![iPhone 6 仕様][19]
+![iPhone 6 仕様]({% image_buster /assets/img_archive/In-AppMsg_Mockups+Specs_06.png %})
 
 
-[18]: {% image_buster /assets/img_archive/In-AppMsg_Mockups+Specs_05.png %}
 
-[19]: {% image_buster /assets/img_archive/In-AppMsg_Mockups+Specs_06.png %}
 
-[25]: https://imageoptim.com/

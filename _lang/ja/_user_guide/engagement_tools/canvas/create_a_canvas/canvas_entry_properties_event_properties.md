@@ -20,7 +20,7 @@ tool: Canvas
 | | キャンバスエントリのプロパティ | イベントプロパティ
 |----|----|----|
 | **Liquid** | `canvas_entry_properties` | `event_properties` |
-| **永続性** | キャンバスを使用して構築されたキャンバスの期間中、すべての[メッセージ]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/)ステップから参照される。 | \- 1回のみ参照できます。<br> \- 後続のメッセージステップからは参照できません。 |
+| **永続性** | すべての[Canvas を使用して構築されたCanvas の間、Message]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) ステップs で参照できます。 | \- 1回のみ参照できます。<br> \- 後続のメッセージステップからは参照できません。 |
 | **キャンバスの動作** | キャンバスのどのステップでも`canvas_entry_properties` を参照できる。起動後の動作については、[起動後のキャンバスの編集]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/#canvas-entry-properties)を参照してください。 | \- 行われたアクションがカスタムイベントまたは購入イベントである場合、[アクションパス]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/)ステップの**後**の最初のメッセージステップで `event_properties` を参照できます。<br> \- アクションパスステップの「その他のユーザー」パスの後に置くことはできません。<br> \- アクションパスとメッセージステップの間に、他の非メッセージコンポーネントを含めることができます。これらのメッセージ以外のコンポーネントの 1 つがアクションパスのステップである場合、ユーザーはそのアクションパスの「その他のユーザー」パスをたどることができます。 | 
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -34,7 +34,7 @@ tool: Canvas
 
 **エントリプロパティ:**
 - キャンバスでアクションベースの配信を使用する任意のフルステップで `event_properties` を参照できます。
-- アクションベースのキャンバスの最初の完全なステップ以外のスケジュールされた完全なステップでは使用できません。しかし、ユーザーが[キャンバスコンポーネントを]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/)使用している場合、動作は`event_properties` の現在のキャンバスワークフロールールに従う。
+- アクションベースのキャンバスの最初の完全なステップ以外のスケジュールされた完全なステップでは使用できません。ただし、ユーザーが[Canvas コンポーネント]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/) を使用している場合、ビヘイビアは`event_properties` の現行のキャンバスワークフロールールに従います。
 
 **イベントプロパティ:**
 - リードメッセージステップで`event_properties` を使用できません。代わりに、`canvas_entry_properties` を使用するか、`event_properties` を含むメッセージステップの**前に**、対応するイベントを持つアクションパスステップを追加する必要があります。
@@ -50,7 +50,7 @@ tool: Canvas
 
 ### イベントプロパティのタイムスタンプ
 
-アクションベースのキャンバスで[トリガーイベントプロパティから]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties) [datetimeタイプの]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#custom-event-properties)タイムスタンプを使用している場合、タイムスタンプはUTCに正規化される。いくつかの例外を以下に詳述する。
+アクション ベースのキャンバスで[ datetime type]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#custom-event-properties) from [ トリガー event properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties) のタイムスタンプを使用している場合、タイムスタンプはUTC に正規化されます。いくつかの例外については、以下で詳しく説明します。
 
 この動作を考慮して、Braze は、メッセージが [ preferred timezone]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/#time-zone-filter) とともに送信されることを保証するために、次の例のような Liquid タイムゾーンフィルタを使用することを強くお勧めします。
 
@@ -67,11 +67,11 @@ tool: Canvas
 
 ## ユースケース
 
-![ウィッシュリストにアイテムを追加したユーザーには、アクションパスのステップに続いてディレイステップとメッセージングステップがあり、それ以外のユーザーにはパスがある。]({% image_buster /assets/img_archive/canvas_entry_properties1.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
+![行動パス ステップの後に、ウィッシュリストに項目を追加したユーザーの遅延ステップとメッセージステップ、および他のすべてのユーザのパスが続きます。]({% image_buster /assets/img_archive/canvas_entry_properties1.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
 
 `canvas_entry_properties` と`event_properties` の違いをさらに理解するために、ユーザーが「ウィッシュリストにアイテムを追加」というカスタムイベントを実行すると、アクションベースのキャンバスに入るというシナリオを考えてみます。 
 
-`canvas_entry_properties` は、キャンバスの作成時に[エントリスケジュール]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas#step-2b-set-your-canvas-entry-schedule)ステップで設定され、ユーザーがキャンバスに入るタイミングに対応します。これらの`canvas_entry_properties` は、どのメッセージステップでも参照できる。
+`canvas_entry_properties` は、キャンバスの作成時に[エントリスケジュール]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas#step-2b-set-your-canvas-entry-schedule)ステップで設定され、ユーザーがキャンバスに入るタイミングに対応します。これらの`canvas_entry_properties` は、Message ステップでも参照できます。
 
 このキャンバスには、ユーザーがウィッシュリストにアイテムを追加したかどうかを判断するアクションパスのステップから始まるユーザージャーニーがあります。ここから、ユーザーがアイテムを追加した場合、メッセージステップから「ウィッシュリストに新しいアイテムを追加しました」というメッセージを受け取る前に、遅延が発生します。 
 

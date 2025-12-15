@@ -14,7 +14,7 @@ tool: Reports
 
 **カスタムイベントレポート**は [**分析**] の下にあります。
 
-![カスタムイベント]]({% image_buster /assets/img_archive/Export_events.png %})
+![カスタムイベント]({% image_buster /assets/img_archive/Export_events.png %})
 
 次の CSV をエクスポートできます。
 

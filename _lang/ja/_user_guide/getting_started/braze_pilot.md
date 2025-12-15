@@ -3,7 +3,7 @@ nav_title: Brazeパイロット
 page_order: 10.5
 layout: dev_guide
 guide_top_header: "Brazeパイロット"
-guide_top_text: "Braze Pilotは、Brazeダッシュボードとシームレスに接続できるように設計されたモバイルアプリである。これにより、アプリにキャンペーンやキャンバスを立ち上げることができるようになり、Brazeのメッセージに自分の携帯電話で命を吹き込むことができる。Braze Pilotには、さまざまな業界を代表する架空のブランドのアプリシミュレーションライブラリーがあり、カスタマーエクスペリエンスから見たメッセージングを体験することができる。"
+guide_top_text: "Braze Pilotは、Brazeダッシュボードとシームレスに接続できるように設計されたモバイルアプリである。これにより、アプリにキャンペーンやキャンバスを立ち上げることができ、Brazeのメッセージに自分の携帯電話で命を吹き込むことができる。Braze Pilotには、さまざまな業界を代表する架空のブランドのアプリシミュレーションライブラリーがあり、カスタマーエクスペリエンスから見たメッセージングを体験することができる。"
 description: "Brazeのダッシュボードから携帯電話にメッセージを送るための、Brazeのさまざまな使い方をチェックしよう。"
 
 guide_featured_title: "セクションの記事"
@@ -31,7 +31,7 @@ Braze Pilotの核となるのは、アプリシミュレーションのライブ
 
 Steppingtonは、ワークアウト、エクササイズゴール、Steppington+プレミアムサービスを備えたフィットネスアプリだ。[コンテンツカード]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards)、[フィーチャーフラグで]({{site.baseurl}}/developer_guide/feature_flags)明らかにできるセクション、カスタムイベントログの強力なライブラリーなど、この業界向けのカスタマージャーニーを数多く示すことができる。
 
-![マラソントレーニング、ヨガ、サイクリング、ウェイトトレーニングのアイコンがある。]({% image_buster /assets/img/braze_pilot/steppington_app.png %}){:style="max-width:50%"}
+![マラソントレーニング、ヨガ、サイクリング、ウェイトトレーニングのアイコンが並ぶステッピングトンのホームページ。]({% image_buster /assets/img/braze_pilot/steppington_app.png %}){:style="max-width:50%"}
 
 {% endtab %}
 {% tab eCommerce %}
@@ -40,7 +40,7 @@ Steppingtonは、ワークアウト、エクササイズゴール、Steppington+
 
 PantsLabyrinthはパンツを販売するeコマースアプリだ！PantsLabyrinthアプリには、完全なショッピングカートのチェックアウト体験、フィーチャーフラグでイネーブルメントにできるオプションのウィッシュリスト機能、英国の友人と下品なジョークを言い合う多くの機会が含まれている。
 
-![PantsLabyrinthの商品ページで、ジーンズをカートに入れることができる。]({% image_buster /assets/img/braze_pilot/pantslabyrinth_app.png %}){:style="max-width:50%"}
+![PantsLabyrinthの商品ページで、ジーンズをカートに入れるオプションがある。]({% image_buster /assets/img/braze_pilot/pantslabyrinth_app.png %}){:style="max-width:50%"}
 
 {% endtab %}
 {% tab Streaming %}
@@ -49,7 +49,7 @@ PantsLabyrinthはパンツを販売するeコマースアプリだ！PantsLabyri
 
 MovieCanonは、コンテンツ・エンゲージメントに関するBrazeの一般的なユースケースを説明するために完璧に設計されたストリーミング・サービスである。 
 
-![MovieCanonアプリで、様々なスリラー映画を観ることができる。]({% image_buster /assets/img/braze_pilot/moviecanon_app.png %}){:style="max-width:50%"}
+![MovieCanonアプリで、さまざまなスリラー映画を観ることができる。]({% image_buster /assets/img/braze_pilot/moviecanon_app.png %}){:style="max-width:50%"}
 
 {% endtab %}
 {% endtabs %}
@@ -76,7 +76,7 @@ Brazeに送信されたすべてのデータは、アプリやWebサイトの特
 
 ### 匿名 
 
-この接続ステータスは、まだログインしていないアプリやWebサイトのゲストの体験を表している。お客様が匿名ユーザーとしてPilotを初期化した場合、Brazeはお客様用の[匿名ユーザープロファイルを]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/anonymous_users)作成し、そこでのお客様の活動に関するデータを記録する。匿名ユーザーをキャンペーンのターゲットにすることはできるが、ダッシュボードで直接ユーザープロファイルを調べることはできない。
+この接続ステータスは、まだログインしていないアプリやWebサイトのゲストの体験を表している。お客様が匿名ユーザーとしてPilotを初期化した場合、Brazeはお客様用の[匿名ユーザープロファイルを]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/anonymous_users)作成し、そこでのお客様の活動に関するデータを記録する。匿名ユーザーをキャンペーンのターゲットにすることは可能だが、ダッシュボードで直接ユーザープロファイルを調べることはできない。
 
 ### 識別子
 
@@ -136,6 +136,6 @@ Brazeに送信されたすべてのデータは、アプリやWebサイトの特
 
 ## 対応メッセージングチャネル
 
-Braze Pilotは現在、[アプリ内メッセージを]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about)サポートしており、アプリ内に表示され、ユーザーがアクティブにエンゲージしている間にタイムリーなメッセージを配信する。
+Braze Pilotは現在、[アプリ内メッセージに]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about)対応しており、アプリ内に表示され、ユーザーがアクティブにエンゲージしている間にタイムリーなメッセージングを配信する。
 
 ![MovieCanonアプリ内メッセージ「MovieCanonを楽しんでいますか？お友達を紹介してください！」と表示され、メールアドレスを入力して紹介状を送ることができる。]({% image_buster /assets/img/braze_pilot/moviecanon_iam.png %}){:style="max-width:40%"}

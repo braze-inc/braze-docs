@@ -12,7 +12,7 @@ description: "このリファレンス記事では、ユーザーに送信する
 
 > メッセージのアーカイブを使用すると、アーカイブやコンプライアンスの目的で、ユーザーに送信したメッセージのコピーを AWS S3 バケット、Azure Blob Storage コンテナー、または Google Cloud Storage バケットに保存できます。<br><br> この記事では、メッセージ・アーカイブの設定方法、JSONペイロードの参照方法、よくある質問について説明する。
 
-メッセージのアーカイブはアドオン機能として利用できます。メッセージのアーカイブを開始するには、Braze カスタマーサクセスマネージャーにお問い合わせください。
+メッセージのアーカイブはアドオン機能として利用できます。メッセージアーカイブの使用を開始するには、Braze 顧客のサクセスマネージャーにお問い合わせください。
 
 ## 仕組み
 
@@ -51,7 +51,11 @@ Braze は、プッシュトークンをハッシュする前にその大文字�
 
 まだクラウドストレージバケットを接続していない場合は、Braze に接続します。手順については、[Amazon S3]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/amazon_s3/)、[Azure Blob Storage]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/microsoft_azure_blob_storage_for_currents/) または [Google Cloud Storage]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/google_cloud_storage_for_currents/) に関するパートナーのドキュメントを参照してください。
 
-### ステップ 2: メッセージをアーカイブするチャネルの選択
+{% alert note %}
+メッセージアーカイブのCurrentsを設定する必要はありません。そのため、パートナードキュメントでその前提条件を省略できます。
+{% endalert %}
+
+### ステップ 2:メッセージをアーカイブするチャネルの選択
 
 [**メッセージのアーカイブ**] の設定ページで、送信するメッセージのコピーをクラウドストレージバケットに保存するチャネルを制御します。
 

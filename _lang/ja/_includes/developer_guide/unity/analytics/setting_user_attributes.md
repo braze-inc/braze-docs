@@ -22,52 +22,52 @@ Brazeは、`BrazeBinding` オブジェクトを使用して以下のユーザー
 デフォルト属性を設定するには、`BrazeBinding` オブジェクトの関連メソッドを呼び出す。
 
 {% tabs local %}
-{% tab 名 %}
+{% tab First name %}
 ```csharp
 BrazeBinding.SetUserFirstName("first name");
 ```
 {% endtab %}
-{% tab 姓 %}
+{% tab Last name %}
 ```csharp
 BrazeBinding.SetUserLastName("last name");
 ```
 {% endtab %}
-{% tab メール %}
+{% tab Email %}
 ```csharp
 BrazeBinding.SetUserEmail("email@email.com");
 ```
 {% endtab %}
-{% tab 性別 %}
+{% tab Gender %}
 ```csharp
 BrazeBinding.SetUserGender(Appboy.Models.Gender);
 ```
 {% endtab %}
-{% tab 生年月日 %}
+{% tab Birth date %}
 ```csharp
 BrazeBinding.SetUserDateOfBirth("year(int)", "month(int)", "day(int)");
 ```
 {% endtab %}
-{% tab 国名 %}
+{% tab Country %}
 ```csharp
 BrazeBinding.SetUserCountry("country name");
 ```
 {% endtab %}
-{% tab 市区町村 %}
+{% tab Home city %}
 ```csharp
 BrazeBinding.SetUserHomeCity("city name");
 ```
 {% endtab %}
-{% tab メールサブスクリプション %}
+{% tab Email subscription %}
 ```csharp
 BrazeBinding.SetUserEmailNotificationSubscriptionType(AppboyNotificationSubscriptionType);
 ```
 {% endtab %}
-{% tab プッシュサブスクリプション %}
+{% tab Push subscription %}
 ```csharp
 BrazeBinding.SetUserPushNotificationSubscriptionType(AppboyNotificationSubscriptionType);
 ```
 {% endtab %}
-{% tab 電話番号 %}
+{% tab Phone number %}
 ```csharp
 BrazeBinding.SetUserPhoneNumber("phone number");
 ```
@@ -99,7 +99,7 @@ AppboyBinding.SetCustomUserAttribute("custom string attribute key", "string cust
 
 {% endtab %}
 
-{% tab 整数 %}
+{% tab Integer %}
 
 ```csharp
 // Set Integer Attribute
@@ -124,7 +124,7 @@ AppboyBinding.SetCustomUserAttribute("custom boolean attribute key", 'boolean va
 ```
 {% endtab %}
 
-{% tab 日付 %}
+{% tab Date %}
 
 ```csharp
 AppboyBinding.SetCustomUserAttributeToNow("custom date attribute key");
@@ -140,7 +140,7 @@ Brazeに渡される日付は、[ISO 8601](http://en.wikipedia.org/wiki/ISO_8601
 
 {% endtab %}
 
-{% tab 配列 %}
+{% tab Array %}
 
 ```csharp
 // Setting An Array

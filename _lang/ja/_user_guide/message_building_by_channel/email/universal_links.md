@@ -87,7 +87,7 @@ Android アプリリンクでは、他の Web URL とは別にドメインから
 2. [**関連ドメイン**] を選択します。
 3. [**保存**] をクリックします。
 
-\![]({% image_buster /assets/img_archive/universal_links_1b.png %}){: style="max-width:75%;"}
+![]({% image_buster /assets/img_archive/universal_links_1b.png %}){: style="max-width:75%;"}
 
 #### ステップ1c: Xcodeプロジェクトで関連ドメインをオンにする {#step-1c}
 
@@ -107,7 +107,7 @@ Android アプリリンクでは、他の Web URL とは別にドメインから
 
 [ドメイン] セクションで、適切なドメインタグを追加します。`applinks:` をプレフィックスとして使用する必要があります。この場合、`applinks:yourdomain.com`を追加したことがわかります。
 
-\![]({% image_buster /assets/img_archive/universal_links_1d.png %})
+![]({% image_buster /assets/img_archive/universal_links_1d.png %})
 
 #### ステップ1e: ビルド時に権利ファイルが含まれていることを確認してください
 
@@ -216,7 +216,7 @@ Androidアプリでは、受信したディープリンクを処理する必要�
 ## ユニバーサルリンク、アプリリンク、クリックトラッキング
 
 {% alert note %}
-クリックトラッキングリンクは通常、メールのオンボーディングの一部として設定されます。これがカスタマーオンボーディング中に完了しなかった場合は、アカウントマネージャーに連絡してサポートを受けてください。
+クリックトラッキングリンクは通常、メールのオンボーディングの一部として設定されます。顧客オンボーディングの際にこれが完了していない場合は、アカウントマネージャーに問い合わせること。
 {% endalert %}
 
 私たちのメール送信パートナーであるSendGridとSparkPostは、クリックトラッキングドメインを使用してすべてのリンクをラップし、BrazeのメールでクリックトラッキングのためのURLパラメータを含めます。
@@ -311,7 +311,7 @@ HTMLエディターではメールメッセージに、ドラッグ＆ドロッ�
 - **名前:** `data-msys-clicktrack`
 - **値:** `0`
 
-\![テキストリンクのカスタム属性。]({% image_buster /assets/img/text_click_tracking_off.png %}){: style="max-width:60%;"}
+![テキストリンクのカスタム属性。]({% image_buster /assets/img/text_click_tracking_off.png %}){: style="max-width:60%;"}
 
 ##### ボタンまたは画像のカスタム属性
 
@@ -331,7 +331,7 @@ HTMLエディターではメールメッセージに、ドラッグ＆ドロッ�
 - **値:** `0`
 - **タイプ:**リンク
 
-\![ボタンのカスタム属性。]({% image_buster /assets/img/button_click_tracking_off.png %}){: style="max-width:60%;"}
+![ボタンのカスタム属性。]({% image_buster /assets/img/button_click_tracking_off.png %}){: style="max-width:60%;"}
 
 ### クリックトラッキングによるユニバーサルリンクのトラブルシューティング
 

@@ -10,13 +10,13 @@ search_tag: Partner
 
 # Transifex
 
-> Transifex は、あらゆる言語で、ユーザー群にわたる強力なローカライゼーションを支援しています。
+> [Transifex](https://www.transifex.com/) は、言語に関係なく、ユーザー群全体で堅牢なローカライゼーションを可能にします。
 
 _この統合は Transifex によって管理されます。_
 
 ## 統合について
 
-BrazeとTransifexの統合は、Connected Contentを活用することで、リソース文字列コレクションを引き出し、言語ベースの条件付き書式の行の代わりに、関連する翻訳をメッセージに含めることができる。これにより、翻訳が自動化され、チームは優れたカスタマー・エクスペリエンスの提供に集中することができる。
+BrazeとTransifexインテグレーションでは、Connected Contentを使用して、リソース文字列コレクションをプルし、言語ベースの条件付き書式の行ではなく、関連する翻訳をメッセージに含めることができます。これにより、翻訳が自動化され、チームは優れたカスタマー・エクスペリエンスの提供に集中することができる。
 
 {% alert important %}
 2022年4月7日をもって、Transifex は API バージョン2と2.5を廃止し、バージョン3に移行しました。バージョン2と2.5は動作せず、関連するリクエストは失敗します。<br><br>以下の統合手順は、バージョン3のアップデートを反映したものである。コネクテッドコンテンツ呼び出しを適宜更新します。
@@ -42,7 +42,7 @@ curl --request GET \
      --header 'Authorization: Bearer 1/<TRANSFIX_BEARER_TOKEN>'
 ```
 
-例えば、Transifexプロジェクトが`https://www.transifex.com/appboy-3/french2/french_translationspo/` にある場合、`project_name` は "french2"、`resource_name` は "french_translationspo "となる。
+たとえば、Transifex プロジェクトが`https://www.transifex.com/appboy-3/french2/french_translationspo/` にある場合、`project_name` は"french2&quot になり、`resource_name` は次のようになります "french_translationspo".
 
 ## コネクテッドコンテンツメッセージの例
 

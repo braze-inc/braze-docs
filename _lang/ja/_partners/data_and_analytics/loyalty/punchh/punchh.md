@@ -55,9 +55,9 @@ Punchh は、Braze の顧客が利用できる複数のエンドポイントを�
 
 統合で同期が正しく行われるようにするには、Punchh`user_id` と Braze `external_id` がどちらのプラットフォームでも利用可能でなければなりません。 
 - Punchh からBraze に送信されるイベントには、識別子としてBraze `external_id` が含まれます。Punchh が`external_source_id` を使用するように設定されている場合、その値が Braze `external_id` として設定されます。そうでない場合、統合はデフォルトで Punchh`user_id` を Braze`external_id` として設定します。
-- Braze から Punchh へ Webhook を送信するには、Braze ユーザープロファイルで Punchh `user_id` が利用できなければなりません。Punchh `user_id` を Braze `external_id` として使用しない場合は、カスタム属性「punchh_user_id」として設定する必要があります。 
+- Braze から Punchh へ Webhook を送信するには、Braze ユーザープロファイルで Punchh `user_id` が利用できなければなりません。Punchh `user_id` がBraze`external_id` として使用されない場合は、カスタム属性として設定する必要があります "punchh_user_id". 
 
-### ステップ 1: 外部ID 取り込みエンドポイントのセットアップ(オプション)
+### ステップ 1: external ID 取り込みエンドポイントの設定 (オプション)
 
 Braze の external ID は、新規および既存の Punchh ユーザーの次のエンドポイントを使用して追加できます。
 
@@ -75,9 +75,9 @@ Braze の external ID は、新規および既存の Punchh ユーザーの次�
 - [SSO User Update](https://developers.punchh.com/docs/dev-portal-online-ordering/eef4eef6c97a0-update-user-information)
 - [Dashboard User Update](https://developers.punchh.com/docs/dev-portal-platform-functions/6351feaf591aa-update-a-user)
 <br><br>
-{% tabs ローカル %}
-{% tab ユーザー登録 API の例 %}
-この例では、登録時にユーザープロファイルを使用して外部識別子を送信できます。このために、`external_source` を「customer_id」として、`external_source_id` を文字列データ型の「111111111111111111」として送信します。
+{% tabs local %}
+{% tab User sign-up API example %}
+この例では、登録時にユーザープロファイルを使用して外部識別子を送信できます。これを行うには、`external_source` を"customer_id" として、`external_source_id` を"111111111111111111" として文字列データ型として送信します。
 
 ```json
 curl --location --request POST 'https://server_name_goes_here.punchh.com/api2/mobile/users' \
@@ -103,8 +103,8 @@ curl --location --request POST 'https://server_name_goes_here.punchh.com/api2/mo
 }'
 ```
 {% endtab %}
-{% tab ユーザー更新 API の例 %}
-この例では、ユーザープロファイルを使用して外部識別子を更新できます。このために、`external_source` を「customer_id」として、`external_source_id` を文字列データ型の「111111111111111111」として送信します。
+{% tab User update API example %}
+この例では、ユーザープロファイルを使用して外部識別子を更新できます。これを行うには、`external_source` を"customer_id" として、`external_source_id` を"111111111111111111" として文字列データ型として送信します。
 
 ```json
 curl --location --request PUT 'https://server_name_goes_here.punchh.com/api2/mobile/users' \
@@ -166,7 +166,7 @@ Braze は、Punchh カスタムセグメントを使用してWebhook 経由で�
 3. このWebhookは、単数キャンペーンとして、またはキャンバス内のステップとして設定できます。または、この特殊なパンチSegmentにユーザーs を追加するWebhookが複数のキャンペーンs またはキャンバスで使用される場合は、[テンプレート]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/webhook_template#creating-a-webhook-template) として設定できます。<br><br>
 Webhook 内の `user_id` キーは、Punchh ユーザー ID にマッピングされます。ユーザーを Punchh カスタムセグメントに追加するには、Braze で作成されたすべての Webhook にこの ID を追加するする必要があります。`punch_user_id` カスタム属性は、[Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#pre-formatted-variables) を使用して、`user_id` キーの値としてダイナミックな入力できます。`punchh_user_id` カスタム属性変数を挿入するには、任意のテンプレートテキストフィールドの右上にある青色の「プラス」アイコンを使用します。<br><br>![]({% image_buster /assets/img/punchh/update3.png %}){: style="max-width:65%;"}<br><br>![]({% image_buster /assets/img/punchh/update4.png %}){: style="max-width:65%;"}<br><br>
 
-4. Webhook が保存されたら、以下に示すように、ユーザーの同期にこの Webhook を使用できます。たとえば、このBraze Webhook キャンペーンを起動すると、136 人のゲストが「パンチ」カスタムSegmentに追加されます。<br><br>![Braze とPunchh の統合 に伴い、保存された Webhook を使用してユーザーを同期する例。]{% image_buster /assets/img/punchh/punchh6.png %}
+4. Webhook が保存されたら、以下に示すように、ユーザーの同期にこの Webhook を使用できます。たとえば、このBraze Webhook キャンペーンを起動すると、136 人のゲストが「パンチ」カスタムSegmentに追加されます。<br><br>![Braze とPunchh の統合 に伴い、保存された Webhook を使用してユーザーを同期する例。]({% image_buster /assets/img/punchh/punchh6.png %})
 
 Brazeでのwebhookの使用方法の詳細については、[Webhookの作成]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/)を参照してください。 
 
@@ -182,16 +182,16 @@ Braze に送信される Punchh イベント (リワードイベントやゲス�
 
 ![]({% image_buster /assets/img/punchh/update5.png %})
 
-トリガーイベントをさらに絞り込むには、プロパティフィルターを追加できます。たとえば、承認済みイベントプロパティが `true` である「checkins_gift」イベントを顧客がトリガーした場合にのみ、メッセージをトリガーします。これはオプションの機能であり、すべてのユースケースに適用できるわけではありません。 
+トリガーイベントをさらに絞り込むには、プロパティフィルターを追加できます。たとえば、メッセージは、顧客 トリガーが"checkins_gift" イベントの場合にのみトリガーされます。ここで、アプリのroved イベントプロパティは`true` です。これはオプションの機能であり、すべてのユースケースに適用できるわけではありません。 
 
 #### セグメンテーション
 
-多くの場合、Punchh イベントによってトリガーされる Braze キャンペーンとキャンバスには、「すべてのユーザー」オーディエンスを設定できます。これは、これらのイベントをトリガーするユーザーのセグメンテーションがが Punchh 内で決定するためです。ただし、イベントによってトリガーされる Braze メッセージを受信するユーザーからなるオーディエンスをさらに絞り込む場合は、キャンペーン作成画面の [**ターゲットオーディエンス**] セクションまたはキャンバス作成画面の [**エントリオーディエンス**] で、フィルターとセグメントを追加します。 
+多くの場合、パンチイベントによってトリガーされているBraze キャンペーン s とキャンバスは&quoth; All ユーザー s" オーディエンス に設定できます。これは、これらのイベントをトリガーするユーザー s のセグメンテーションがパンチ内で決定されるためです。ただし、イベントによってトリガーされる Braze メッセージを受信するユーザーからなるオーディエンスをさらに絞り込む場合は、キャンペーン作成画面の [**ターゲットオーディエンス**] セクションまたはキャンバス作成画面の [**エントリオーディエンス**] で、フィルターとセグメントを追加します。 
 
 ### ユースケース
 
-{% tabs ローカル %}
-{% tab サインアップ %}
+{% tabs local %}
+{% tab Signup %}
 #### 登録キャンペーン
 
 オファーが添付されている登録キャンペーンに Braze 設定を使用する場合、Punchh 内で登録ギフティングキャンペーンを設定し、Braze でウェルカムメッセージを設定する必要があります。 
@@ -210,10 +210,10 @@ Punchh はサインアップキャンペーンに実行遅延を追加するこ�
 考慮事項:
 - 実行遅延は、ゲストが5 ～10 分の遅延を追加することをお勧めします
 
-![ユーザーセグメントが Punchh で設定され、ゲストがロイヤルティプログラムに登録されます。この後、ゲストイベント (トリガーされる場合) とBraze メッセージングキャンペーンがトリガーされます。次に、10分後に Punchh 登録ギフティングキャンペーンがトリガーされ、リワードイベントとオプションのフォローアップメッセージがトリガーされます。]({% image_buster /assets/img/punchh/usecase3.png %})
+![ユーザーセグメントが Punchh で設定され、ゲストがロイヤルティプログラムに登録されます。この後、ゲストイベント (トリガーされる場合) とBraze メッセージングキャンペーンがトリガーされます。次に、パンチ・サインアップ・ギフト・キャンペーンは、10分後にトリガーされ、報酬行事および任意のフォローアップ・メッセージをトリガーする。]({% image_buster /assets/img/punchh/usecase3.png %})
 {% endtab %}
 
-{% tab Braze ウェルカム %}
+{% tab Braze welcome %}
 #### Braze ウェルカムキャンペーン
 
 新しいユーザーがサインアップすると、Punchh はユーザーを作成するゲストイベントを Braze に送信し、カスタム属性`signup_channel` を送信します。これを使用して、Braze ウェルカムキャンペーンをトリガーできます。
@@ -225,7 +225,7 @@ Braze ウェルカムキャンペーンを設定するには、次のステッ�
 3. キャンペーンを作成し続け、準備ができたら送信します。
 
 {% endtab %}
-{% tab マスオファー %}
+{% tab Mass offer %}
 #### マスオファーキャンペーン
 
 ギフティングにマスオファーキャンペーンを使用する場合、マスオファーキャンペーンは Punchh 内で設定し、メッセージングキャンペーンは Braze で設定する必要があります。
@@ -241,18 +241,18 @@ Braze でこのオファーを受け取るユーザーのセグメントを作�
 
 **セグメンテーションとギフティングに Punchh を使用し、メッセージングに Braze を使用する:**<br>
 たとえば、2ドル割引リワードが、Punchh 内で設定可能なセグメントに送信され、メッセージングは Braze で送信されます。<br>
-![ユーザーセグメントは Punchh で設定可能であり、ユーザーは Punchh マスオファーキャンペーンでギフトを受け取ります。次に、リワードイベントがトリガーされ、その後 Braze メッセージングキャンペーンががトリガーされます。]({% image_buster /assets/img/punchh/usecase6.png %}){: style="max-width:80%;"}
+![ユーザーセグメントは Punchh で設定可能であり、ユーザーは Punchh マスオファーキャンペーンでギフトを受け取ります。次に、報酬事象がトリガーされ、次にBraze メッセージング キャンペーンがトリガーされる。]({% image_buster /assets/img/punchh/usecase6.png %}){: style="max-width:80%;"}
 
 **ギフティングに Braze セグメンテーションおよびメッセージングと Punchh を使用する:**<br>
 たとえば、パンチでは利用できない属性 s を持つSegmentに送信される$2 off 報酬 とメッセージング です。<br>
-![ユーザーセグメントは Braze で設定でき、メッセージは Braze間セグメントから送信できます。次に、ユーザーはセグメントとユーザー ID を使用して Braze Webhook から Punchh カスタムセグメントに送信されます。その後、ユーザーはカスタムセグメントが設定された Punchh マスオファーキャンペーンでギフトを受け取ります。この後、リワードイベントがトリガーされます。]({% image_buster /assets/img/punchh/usecase5.png %}){: style="max-width:80%;"}
+![ユーザーセグメントは Braze で設定でき、メッセージは Braze間セグメントから送信できます。次に、ユーザーはセグメントとユーザー ID を使用して Braze Webhook から Punchh カスタムセグメントに送信されます。その後、ユーザーはカスタムセグメントが設定された Punchh マスオファーキャンペーンでギフトを受け取ります。この後、報酬がトリガーされます。]({% image_buster /assets/img/punchh/usecase5.png %}){: style="max-width:80%;"}
 
 **ギフティングとメッセージングのいずれかまたは両方に、Braze セグメンテーションおよびメッセージングと Punchh を使用する:**<br>
 たとえば、Punchh では使用できない属性を持つセグメントに2ドル割引リワードが送信されますが、メッセージングが不要であるか、メッセージングを Punchh から送信できます (すべてのゲストが Punchh に存在している必要があることに注意してください)。<br>
-![ユーザーセグメントは Braze で設定でき、ユーザーはセグメントとユーザー ID を使用して Braze Webhook を介してPunchh カスタムセグメントに送信されます。その後、ユーザーはカスタムセグメントが設定された Punchh マスオファーキャンペーンでギフトを受け取ります。この後、リワードイベントがトリガーされます。]({% image_buster /assets/img/punchh/usecase4.png %})
+![ユーザーセグメントは Braze で設定でき、ユーザーはセグメントとユーザー ID を使用して Braze Webhook を介してPunchh カスタムセグメントに送信されます。その後、ユーザーはカスタムセグメントが設定された Punchh マスオファーキャンペーンでギフトを受け取ります。この後、報酬がトリガーされます。]({% image_buster /assets/img/punchh/usecase4.png %})
 
 {% endtab %}
-{% tab 定期的なマスオファー %}
+{% tab Recurring mass offer %}
 #### 定期的なマスオファーキャンペーン
 
 定期的なマスオファーキャンペーンをギフティングに使用する場合は、Punchh 内でマスオファーキャンペーンを設定し、Braze でメッセージング キャンペーンを設定する必要があります。顧客が Braze セグメンテーションを使用する場合は、Punchh カスタムセグメントが必要です (Punchh 内で属性を使用できない場合のみ推奨)。それ以外の場合は、Punchh セグメンテーションを使用できます。Braze メッセージング キャンペーンはリワードイベントに基づいてトリガーされます。
@@ -262,10 +262,10 @@ Braze でこのオファーを受け取るユーザーのセグメントを作�
 - セグメント:カスタムリストまたは顧客が選択
 - リワード:顧客が選択
 考慮事項:
-- キャンペーンID とキャンペーンの名前は、イベントのイベントプロパティとしてBraze に送信されます。キャンペーンを受け取るオーディエンスをさらに絞り込むために Braze で Punchh キャンペーン識別子を使用する場合、キャンペーン ID は毎日変更されるため、キャンペーン名を使用する必要があります。
+- キャンペーンID とキャンペーンの名前は、イベントのイベントプロパティとしてBraze に送信されます。キャンペーンを受信するオーディエンスをさらにフィルターするためにBrazeでパンチキャンペーン 識別子を使用する場合は、キャンペーンID が毎日変更されるため、キャンペーンの名前を使用する必要があります。
 
 {% endtab %}
-{% tab 通知を使用するチェックイン後オファー %}
+{% tab Post check-in offer with notification %}
 #### 通知との事後チェックインオファーキャンペーン
 
 チェックイン後オファーキャンペーンを利用する場合、Braze はギフティングに関する通知を送信します。ゲストがチェックインすると、Punchh のチェックイン後オファーキャンペーンからギフトが送られます。したがって、チェックイン後オファーキャンペーンは Punchh 内で設定し、メッセージングキャンペーンは Braze 内で設定する必要があります (顧客にキャンペーンについて通知する場合)。
@@ -277,10 +277,10 @@ Braze でこのオファーを受け取るユーザーのセグメントを作�
 
 たとえば、この週末に訪問するゲストに対し、Punchh では使用できない属性を持つセグメントに対するポイントが2倍になることを通知するメールなどです。対象となるチェックインの完了後に、このセグメントにポイントが与えられ、Braze からオプションのメッセージが送信されます。 
 
-![ユーザー SegmentはBrazeで設定され、メッセージはチェックイン後のBrazeのキャンペーンから送信されます。次に、対象のユーザーは、セグメントとユーザー ID を使用して Braze Webhook を介して Punchh カスタムセグメントに送信されます。最後に、カスタムセグメント内の対象のユーザーがチェックインし、チェックイン後オファーキャンペーンでギフトを受け取り、オプションのメッセージを受信します。]({% image_buster /assets/img/punchh/update7.png %})
+![ユーザー SegmentはBrazeで設定され、メッセージはチェックイン後のBrazeのキャンペーンから送信されます。次に、対象のユーザーは、セグメントとユーザー ID を使用して Braze Webhook を介して Punchh カスタムセグメントに送信されます。最後に、税関Segmentの資格ユーザーは、チェックイン後のキャンペーンを通じて、ギフトとオプションメッセージをチェックインして受け取ります]({% image_buster /assets/img/punchh/update7.png %})
 
 {% endtab %}
-{% tab 通知を使用しないチェックイン後オファー %}
+{% tab Post check-in offer without notification %}
 #### 通知を使用しないチェックイン後オファーキャンペーン
 
 最初に顧客に通知を送信しないチェックイン後オファーキャンペーンを使用する場合、このキャンペーンはギフトを与え (オプションのメッセージング) Braze 内で通知をトリガーします。したがって、チェックイン後のオファーキャンペーンはPunchh 内で設定する必要がありますが、カスタムリストは必要ありません。代わりに、Punchh 内で使用するセグメントを選択できます。 
@@ -292,10 +292,10 @@ Braze でこのオファーを受け取るユーザーのセグメントを作�
 
 たとえば、Punchh で使用可能なセグメントに、顧客に対し訪問を感謝し、次回の訪問で2ドル割引を提供する予告なしのサプライズ Braze キャンペーンが送信されます。
 
-![該当するユーザー Segmentはパンチ内で設定でき、該当するユーザーがチェックインし、パンチ後チェックインキャンペーンを通じてギフトを受け取ります。この後、リワードイベントがトリガーされ、Braze から送信されたリワードをゲストに通知する呼び戻しメッセージが送信されます。]({% image_buster /assets/img/punchh/usecase2.png %})
+![該当するユーザー Segmentはパンチ内で設定でき、該当するユーザーがチェックインし、パンチ後チェックインキャンペーンを通じてギフトを受け取ります。その後、報酬がトリガーされ、Brazeから送信された報酬をゲストに通知するリコールメッセージが送信されます。]({% image_buster /assets/img/punchh/usecase2.png %})
 
 {% endtab %}
-{% tab 記念日 %}
+{% tab Anniversary %}
 #### 記念日キャンペーン 
 
 記念日キャンペーンを利用すると、最初に Punchh キャンペーンから記念日のギフトがユーザーに贈られます。このギフティング (リワードイベント) により、ユーザーにギフトが与えられたことを通知するメッセージングキャンペーンが Braze 内でトリガーされます。そのため、カスタムリストは必要ありません。代わりに、Punchh 内でセグメントと記念日設定を選択できます。
@@ -309,10 +309,10 @@ Braze でこのオファーを受け取るユーザーのセグメントを作�
 - 存続期間 (誕生日リワードが有効である期間の長さは?)
 - 定期的なキャンペーン、スケジュールが必要 
 
-![オプションのセグメントは Punchh 内で作成でき、対象のユーザーは Punchh 記念日キャンペーンからリワードを受け取ります。この後、リワードイベントがトリガーされ、Braze から送信されたリワードをゲストに通知する呼び戻しメッセージが送信されます。]({% image_buster /assets/img/punchh/usecase1.png %})
+![オプションのセグメントは Punchh 内で作成でき、対象のユーザーは Punchh 記念日キャンペーンからリワードを受け取ります。その後、報酬がトリガーされ、Brazeから送信された報酬をゲストに通知するリコールメッセージが送信されます。]({% image_buster /assets/img/punchh/usecase1.png %})
 
 {% endtab %}
-{% tab 呼び戻し %}
+{% tab Recall %}
 #### 回収キャンペーン
 
 休眠状態に基づいてユーザーをターゲット設定するときには、呼び戻しキャンペーンを使用できます。顧客は Punchh 内でセグメントとキャンペーンを作成できますが、メッセージングには Braze を使用できます。
@@ -326,7 +326,7 @@ Braze で作成されたセグメンテーションを使用する場合は、�
 考慮事項:
 - キャンペーンはスケジュールで実行されます
 
-![オプションのSegmentはパンチ内で作成でき、該当するユーザーはパンチリコールキャンペーンを介して報酬を受信します。その後、リワードイベントがトリガーされ、Braze から送られたリワードをゲストに通知する呼び戻しメッセージが送信されます。.]({% image_buster /assets/img/punchh/usecase.png %})
+![オプションのSegmentはパンチ内で作成でき、該当するユーザーはパンチリコールキャンペーンを介して報酬を受信します。この後、報酬がトリガーされ、Brazeから送信された報酬をゲストに通知するリコールメッセージが送信されます。]({% image_buster /assets/img/punchh/usecase.png %})
 
 {% endtab %}
 {% endtabs %}

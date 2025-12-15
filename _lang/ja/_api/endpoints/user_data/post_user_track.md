@@ -1,5 +1,5 @@
 ---
-nav_title: "POST:ユーザーを追跡する"
+nav_title: "POST:ユーザーを追跡"
 article_title: "POST:ユーザーを追跡する"
 search_tag: Endpoint
 page_order: 4
@@ -17,7 +17,7 @@ description: "この記事では、「ユーザーを追跡」Braze エンドポ
 > このエンドポイントを使用して、カスタムイベントと購入を記録し、ユーザープロファイル属性を更新します。
 
 {% alert note %}
-Braze は API 経由で渡されたデータを額面通りに処理し、顧客は不要なデータポイントの消費を最小限に抑えるためにデルタ (変更されたデータ) のみを渡す必要があります。続きを読むには、[データポイント]({{site.baseurl}}/user_guide/data/data_points/)を参照してください。
+BrazeはAPIを通して渡されたデータを額面通りに処理し、顧客は不要なデータポイントのロギングを最小限にするために、デルタ（変化するデータ）のみを渡すべきである。続きを読むには、[データポイント]({{site.baseurl}}/user_guide/data/data_points/)を参照してください。
 {% endalert %}
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4cf57ea9-9b37-4e99-a02e-4373c9a4ee59 {% endapiref %}
@@ -50,7 +50,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 ### リクエストパラメーター
 
 {% alert important %}
-次のテーブルに記載されている各リクエストコンポーネントには、`external_id`、`user_alias`、`braze_id`、`email`、または `phone` のいずれかが必要です。
+以下の表に列挙されている各リクエストコンポーネントに対して、`external_id` 、`user_alias` 、`braze_id` 、`email` 、`phone` のいずれかを含める必要がある。
 {% endalert %}
 
 | パラメーター | required | データ型 | 説明 |
@@ -64,7 +64,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 ### メールアドレスでユーザープロファイルを更新
 
-`/users/track` エンドポイントを使用して、メールアドレスでユーザープロファイルを更新できます。 
+`/users/track` エンドポイントを使用して、メールアドレスでユーザープロファイルを更新できます。
 
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
@@ -140,7 +140,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 電話番号を使用して`/users/track`エンドポイントでユーザープロファイルを更新できます。このエンドポイントは、有効な電話番号を含めた場合にのみ機能します。
 
 {% alert important %}
-`email` と`phone` の両方を含むリクエストを含めると、Braze は電子メールを識別子として使用します。
+`email` と`phone` の両方をリクエストに含めると、Brazeはメールを識別子として使用する。
 {% endalert %}
 
 ```
@@ -164,7 +164,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 ```
 ### サブスクリプショングループを設定する
 
-この例では、ユーザーを作成し、ユーザー属性オブジェクト内にサブスクリプショングループを設定する方法を示します。 
+この例では、ユーザーを作成し、ユーザー属性オブジェクト内にサブスクリプショングループを設定する方法を示します。
 
 このエンドポイントを使用してサブスクリプションステータスを更新すると、`external_id` で指定されたユーザー (User1 など) が更新され、そのユーザー (User1) と同じメールアドレスを持つすべてのユーザーのサブスクリプションステータスも更新されます。
 
@@ -198,7 +198,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 
 ### エイリアスのみのユーザーを作成するリクエスト例
 
-リクエストの本文に`_update_existing_only`キーを`false`の値で設定することにより、新しいエイリアス専用ユーザーを作成するために`/users/track`エンドポイントを使用できます。この値が省略された場合、エイリアスのみのユーザープロファイルは作成されません。エイリアスのみのユーザーを使用すると、そのエイリアスを持つ1つのプロファイルが存在することが保証されます。これは、新しい統合を構築する際に特に役立ちます。重複したユーザープロファイルの作成を防ぎます。
+リクエストの本文に`_update_existing_only`キーを`false`の値で設定することにより、新しいエイリアス専用ユーザーを作成するために`/users/track`エンドポイントを使用できます。この値を省略すると、Brazeはエイリアスのみのユーザープロファイルを作成しない。エイリアスのみのユーザーを使用すると、そのエイリアスを持つ1つのプロファイルが存在することが保証されます。これは、Brazeが重複したユーザープロファイルを作成するのを防ぐため、新しい統合を構築するときに特に役立つ。
 
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
@@ -224,16 +224,16 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 
 これらのAPIリクエストのいずれかを使用する場合、次の3つの一般的な応答のいずれかを受け取るはずです: [成功メッセージ](#successful-message)、[非致命的なエラーを含む成功メッセージ](#successful-message-with-non-fatal-errors)、または[致命的なエラーを含むメッセージ](#message-with-fatal-errors)。
 
-### 成功したメッセージ
+### 成功のメッセージ
 
-成功したメッセージには次の応答が返されます:
+メッセージングに成功すると、次のようなレスポンシブが返ってくる：
 
 ```json
 {
   "message": "success",
-  "attributes_processed": (optional, integer), if attributes are included in the request, this will return an integer of the number of external_ids with attributes that were queued to be processed,
-  "events_processed": (optional, integer), if events are included in the request, this will return an integer of the number of events that were queued to be processed,
-  "purchases_processed": (optional, integer), if purchases are included in the request, this will return an integer of the number of purchases that were queued to be processed,
+  "attributes_processed": (optional, integer), if attributes are included in the request, this returns an integer of the number of external_ids with attributes that Braze queued for processing,
+  "events_processed": (optional, integer), if events are included in the request, this returns an integer of the number of events that Braze queued for processing,
+  "purchases_processed": (optional, integer), if purchases are included in the request, this returns an integer of the number of purchases that Braze queued for processing,
 }
 ```
 
@@ -252,9 +252,9 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 }
 ```
 
-成功メッセージの場合、`errors` 配列内のエラーの影響を受けないデータは引き続き処理されます。 
+成功メッセージの場合、Brazeは`errors` 配列のエラーに影響されないデータを処理する。
 
-### 致命的なエラーが発生したメッセージ
+### 致命的なエラーを含むメッセージ
 
 メッセージに致命的なエラーがある場合、次の応答が返されます:
 
@@ -271,24 +271,24 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 
 ### 致命的なエラー応答コード
 
-ステータスコードおよび関連するエラーメッセージについては、リクエストが致命的なエラーに遭遇した場合に返される[致命的なエラーと応答]({{site.baseurl}}/api/errors/#fatal-errors)を参照してください。
+リクエストが致命的なエラーに遭遇した場合にBrazeが返すステータスコードと関連するエラーメッセージについては、[致命的エラー& レスポンスを]({{site.baseurl}}/api/errors/#fatal-errors)参照のこと。
 
-「provided external_id is blacklisted and disallowed」というエラーを受け取った場合、リクエストに「dummyユーザー」が含まれている可能性があります。詳細については、「[スパムのブロック]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_archival/#spam-blocking)」を参照してください。 
+providedexternal_id is blacklisted and disallowed "というエラーが表示された場合、リクエストに "ダミーユーザー "が含まれている可能性がある。詳細については、「[スパムのブロック]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_archival/#spam-blocking)」を参照してください。
 
 ## よくある質問
 
-{% multi_lang_include email-via-sms-warning.md %}
+{% multi_lang_include alerts/important_alerts.md alert='Email via SMS' %}
 
 ### 同じメールアドレスを持つ複数のプロファイルが見つかった場合はどうなりますか？
-`external_id` が存在する場合、external ID を持つ最新の更新されたプロファイルが更新の優先順位となります。`external_id`が存在しない場合、最も最近更新されたプロファイルが更新の優先対象となります。
+`external_id` が存在する場合、Brazeは外部IDを持つ最も最近更新されたプロファイルを優先して更新する。`external_id` が存在しない場合、Brazeは最近更新されたプロファイルを優先して更新する。
 
 ### メールアドレスのプロファイルが存在しない場合はどうなりますか？
-新しいプロファイルが作成され、メール専用のユーザーが作成されます。エイリアスは作成されません。メールフィールドはtest@braze.comに設定されます。これは、メールアドレスによるユーザープロファイルの更新要求の例で示されています。
+Brazeは新しいプロファイルとEメールのみのユーザーを作成し、Eメールアドレスによるユーザープロファイルの更新リクエスト例で述べたように、Eメールフィールドをtest@braze.com に設定する。Brazeはエイリアスを作らない。
 
 ### どのようにして`/users/track`を使用してレガシーユーザーデータをインポートしますか？
-まだモバイルアプリを使用していないユーザーのユーザープロファイルを生成するために、Braze APIを通じてデータを送信することができます。ユーザーがその後アプリケーションを使用すると、SDK を介して識別された後のすべての情報が、API コールを介して作成された既存のユーザープロファイルとマージされます。識別前に SDK によって匿名で記録されたユーザーの行動は、既存の API 生成ユーザープロファイルと統合された時点で失われます。
+まだモバイルアプリを使用していないユーザーのユーザープロファイルを生成するために、Braze APIを通じてデータを送信することができます。ユーザーがその後アプリケーションを使用する場合、SDKを使用した識別に続くすべての情報は、APIコールを使用して作成した既存のユーザープロファイルにマージされる。識別前にSDKによって匿名で記録されたユーザー行動は、既存のAPI生成ユーザープロファイルと統合された時点で失われる。
 
-セグメンテーションツールは、ユーザーがアプリを使用したかどうかに関係なく、これらのユーザーを含めます。ユーザー API 経由でアップロードされたものの、アプリをまだ使用していないユーザーを除外する場合は、`Session Count > 0` フィルターを追加します。
+セグメンテーションツールは、アプリとのエンゲージメントの有無にかかわらず、これらのユーザーを含む。ユーザー API 経由でアップロードされたものの、アプリをまだ使用していないユーザーを除外する場合は、`Session Count > 0` フィルターを追加します。
 
 ### `/users/track`は重複イベントをどのように処理しますか？
 
@@ -296,16 +296,27 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 
 ### `/users/track` は無効な階層化カスタム属性をどのように処理しますか？
 
-階層化カスタム属性に無効な値 (無効な時刻形式や null 値など)が含まれている場合、要求内の階層化カスタム属性の更新はすべて処理から削除されます。これは、その特定の属性内のすべての階層化構造に適用されます。処理を成功させるには、階層化カスタム属性内のすべての値が有効であることを確認してから送信してください。
+ネストされたカスタム属性に無効な値(無効な時間形式やNULL値など)が含まれる場合、Brazeはリクエスト内のすべてのネストされたカスタム属性の更新を処理から除外する。これは、その特定の属性内のすべての階層化構造に適用されます。処理を成功させるには、階層化カスタム属性内のすべての値が有効であることを確認してから送信してください。
 
-## 1か月あたりのアクティブユーザー数 CY 24-25
-1か月あたりのアクティブユーザー数-CY 24-25 を購入した顧客の場合、Braze は `/users/track` エンドポイントでさまざまなレート制限を管理します。
+## CY24-25の月間アクティブユーザー数、ユニバーサルMAU、Web MAU、モバイルMAU  
+月間アクティブユーザー数CY 24-25、ユニバーサルMAU、Web MAU、またはモバイルMAUを購入した顧客については、Brazeは`/users/track` エンドポイントで異なるレート制限を管理している：
 - 1時間あたりのレート制限は、アカウントで予想されるデータ取り込みアクティビティに応じて設定されます。このアクティビティは、購入した月間アクティブユーザー数、業界、季節、またはその他の要因に対応する場合があります。
 - 1 時間ごとの制限に加えて、Braze は 3 秒ごとに送信できるリクエストの数にバースト制限を適用します。
-- 各リクエストは、属性、イベント、または購入オブジェクト全体で最大50件の更新をバッチ処理できます。
+- 各リクエストは、アトリビューション、イベント、購入オブジェクトを合わせて、最大75の更新をバッチすることができる。
 
 予想される取り込みに基づく現在の制限は、ダッシュボードの [**設定**] > [**API と識別子**] > [**API 使用状況ダッシュボード**] にあります。システムの安定性を保護するためにレート制限を変更したり、アカウントのデータスループットを向上させる場合があります。毎時または毎秒のリクエスト制限とビジネスのニーズに関する質問や懸念については、Braze Supportまたはカスタマーサクセスマネージャーにお問い合わせください。
 
+### 月間アクティブユーザー数（CY24-25）、ユニバーサルMAU、Web MAU、モバイルMAUのレート制限ヘッダー
 
+レート制限のない(`429` などの)すべてのレスポンスは、クライアントに時間ごとのレート制限ウィンドウの状態を示す以下のHTTPレスポンスヘッダーを含む。リクエストレートを管理するために、これらのヘッダーを使用することをお勧めする：
+
+| ヘッダー名             | 説明                                                                                 |
+| ----------------------- | ------------------------------------------------------------------------------------------- |
+| `X-RateLimit-Limit`     | 期間ごとに許可されるリクエスト数                                              |
+| `X-RateLimit-Remaining` | ウィンドウ内に残っているおおよそのリクエスト数                                |
+| `X-RateLimit-Reset`     | 現在のウィンドウがリセットされるまでの残り秒数                                    |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+HTTP`429` エラーが発生した場合、`RateLimit-Limit` 、`RateLimit-Remaining` 、`RateLimit-Reset` ヘッダーは返されないことに注意。エラーが発生すると、これらのヘッダーは`X-Ratelimit-Retry-After` 、 リクエストを開始できるまでの秒数を示す整数を返すヘッダーで置き換えられる。
 
 {% endapi %}

@@ -37,7 +37,7 @@ description: "個々のユーザーまたはユーザーのSegmentをBraze ダ�
 
 個々のユーザーをBrazeから削除するには、**Audience**> **検索ユーザーs**に移動し、ユーザーを検索して選択します。重複するユーザープロファイルを削除する場合は、正しいものを選択したことを確認します。
 
-![Brazeの「ユーザの検索」画面。]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/search_user.png %}){: style="max-width:75%;"}
+![Brazeの「ユーザの検索」ページ。]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/search_user.png %}){: style="max-width:75%;"}
 
 {% alert warning %}
 単一ユーザーの削除は永続的です。プロファイルは削除後に復元できません。  
@@ -45,7 +45,7 @@ description: "個々のユーザーまたはユーザーのSegmentをBraze ダ�
 
 プロファイル画面で、<i class="fa-solid fa-ellipsis-vertical"></i>**オプション**>**ユーザ**を削除を選択します。Braze でユーザーが完全に削除されるまでに数分かかる場合があります。
 
-![ユーザーを削除するかどうかを示す、縦楕円メニュー開封とBrazeたユーザー。]({% image_buster /assets/img/audience_management/deleting_users/delete_user.png %}){: style="max-width:85%;"}
+![ユーザーを削除するための選択肢を示す、縦長楕円メニュー開封とBrazeしたユーザー。]({% image_buster /assets/img/audience_management/deleting_users/delete_user.png %}){: style="max-width:85%;"}
 
 ### Segmentの削除 {#delete-segment}
 
@@ -61,7 +61,7 @@ Brazeで、**Audience**> **Audience**を管理し、**Delete Users**タブを選
 
 **DELETE**と入力してリクエストを確認し、**Delete ユーザー s**を選択します。
 
-![確認ボックスに'DELETE'と入力された確認ページ。]({% image_buster /assets/img/audience_management/deleting_users/confirm_segment_delete.png %}){: style="max-width:75%;"}
+![確認ボックスに「DELETE」と入力された確認ページ。]({% image_buster /assets/img/audience_management/deleting_users/confirm_segment_delete.png %}){: style="max-width:75%;"}
 
 このSegmentのユーザーはすぐには削除されません。代わりに、次の7 日間は削除保留としてマークされます。この後、削除され、お知らせするようにメールさせていただきます。
 
@@ -81,7 +81,7 @@ Brazeで、**Audience**> **Audience**を管理し、**Delete Users**タブを選
 
 削除レコードの詳細で、**削除のキャンセル**を選択します。
 
-!['Delete Users'タブの'Deletion Record Details'ウィンドウ。]({% image_buster /assets/img/audience_management/deleting_users/deletion_record_details.png %}){: style="max-width:55%;"}
+![「Delete Users」タブの「Deletion Record Details」ウィンドウ。]({% image_buster /assets/img/audience_management/deleting_users/deletion_record_details.png %}){: style="max-width:55%;"}
 
 {% alert tip %}
 一括ユーザー削除が進行中の場合は、いつでもキャンセルできます。ただし、すでに削除されているユーザーは、キャンセルリレーションを復元できません。

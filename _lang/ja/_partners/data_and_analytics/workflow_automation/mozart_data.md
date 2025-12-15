@@ -57,7 +57,7 @@ table td {
 
 #### ステップ2:Fivetran コネクターフォームに情報を入力します。
 
-Fivetran コネクターページにリダイレクトされます。このページで所定のフィールドに入力します。次に [**Continue**] > [**Save & Test**] をクリックし、Fivetran コネクターを完成させます。
+Fivetran コネクターページにリダイレクトされます。このページで所定のフィールドに入力します。次に、**Continue**> **Save & Test** をクリックしてFivetran コネクターを完成させます。
 
 Fivetran が、Braze アカウントから Snowflake データウェアハウスへのデータの同期を開始します。コネクターの同期が完了したら、Mozart Data からクエリデータにアクセスできます。 
 
@@ -81,7 +81,7 @@ Snowflake ウェアハウスの設定後に、Mozart Data の [**Integration**] 
 
 ![]({% image_buster /assets/img/mozartdata/mozartdata-braze-importsync.png %}){: style="max-width:80%;"}
 
-#### ステップ3:Braze ユーザーへの公開キーの追加
+#### ステップ 3:Braze ユーザーへの公開キーの追加
 この時点で、Snowflake に戻って設定を完了する必要があります。Brazeのダッシュボードに表示される公開鍵を、BrazeがSnowflakeに接続するために作成したユーザーに追加する。
 
 その方法の詳細については、[Snowflake のドキュメント](https://docs.snowflake.com/en/user-guide/key-pair-auth.html)を参照してください。任意の時点でのキーのローテーションを行う場合、Mozart Data は新規のキーペアを生成して、新規の公開キーを提供できます。
@@ -114,4 +114,4 @@ Brazeから同期された変換モデルまたは生データを使用して、
 これは、ユーザーのリテンションを向上させるためのエンゲージメント戦略について、より多くの情報に基づいた決定を下すのに役立つ。これはすべて、クエリーツールを使ってMozart Dataのインターフェイス内で行うことができ、結果をGoogleシートやCSVにエクスポートしてプレゼンテーションに備えることができる。
 
 #### ビジネスインテリジェンス（BI）
-自分の洞察を可視化し、他のチームメンバーと共有する準備はできているか？Mozart Data は、ほぼすべての BI ツールと統合されています。BI ツールをまだ所有していない場合は、Mozart Data に連絡して無料の Metabase アカウントの設定を依頼してください。 
+自分の洞察を可視化し、他のチームメンバーと共有する準備はできているか？Mozart Data は、ほぼすべての BI ツールと統合されています。BI ツールをまだお持ちでない場合は、Mozart Data に連絡して無料のMetabase アカウントをセットアップしてください。

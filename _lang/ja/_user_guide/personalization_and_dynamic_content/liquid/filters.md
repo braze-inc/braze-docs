@@ -13,7 +13,7 @@ description: "このリファレンスページには、固定コンテンツま
 フィルターは、Liquid の数値、文字列、変数、オブジェクトの出力を変更する方法だ。フィルターを使用して、文字列の小文字から大文字への変更など、静的テキストまたは動的テキストを再フォーマットしたり、加算や除算などの数学演算を実行したりできます。
 
 {% alert important %}
-BrazeはShopifyのすべてのリキッドフィルターをサポートしているわけではない。このページには、Braze でテスト済みの Liquid フィルターの概要を示していますが、完全なリストではない可能性があります。メッセージを送信する前に必ずお使いの Liquid をテストしてください。<br><br>ここに掲載されていないフィルターについてご質問がある場合は、カスタマー・サクセス・マネージャーまでお問い合わせください。
+BrazeはShopifyのすべてのリキッドフィルターをサポートしているわけではない。このページには、Braze でテスト済みの Liquid フィルターの概要を示していますが、完全なリストではない可能性があります。メッセージを送信する前に必ずお使いの Liquid をテストしてください。<br><br>ここに掲載されていないフィルターについて質問がある場合は、カスタマー・サクセス・マネージャーに問い合わせること。
 {% endalert %}
 
 ## フィルター構文
@@ -202,7 +202,7 @@ ${{custom_attribute.${account_balance} | money}}
 
 | マネーフィルター付き                       | マネーフィルターなし                    |
 | :------------------------------------------ | :------------------------------------------ |
-| マネーフィルター付き]({% image_buster /assets/img/with_money_filter.png %})                     | お金フィルターなし]({% image_buster /assets/img/without_money_filter.png %})                  |
+| ![マネーフィルター付き]({% image_buster /assets/img/with_money_filter.png %})                     | ![マネーフィルターなし]({% image_buster /assets/img/without_money_filter.png %})                  |
 | ここで、`account_balance` は`17.8` で入力される。 | ここで、`account_balance` は`17.8` で入力される。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

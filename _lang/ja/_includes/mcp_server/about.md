@@ -1,82 +1,82 @@
-# Braze MCP サーバー
+# Braze MCPサーバー
 
-> クラウドやカーソルなどのAI ツールがPII 以外のBrazeデータにアクセスして、疑問に答えたり、傾向を分析したり、データを変更せずにインサイトを提供したりできる、安全で読み取り専用のBraze MCP サーバーについて説明します。
+> BrazeのMCPサーバーについて学ぶ。このサーバーは、ClaudeやCursorのようなAIツールが、データを変更することなく、質問に答えたり、傾向を分析したり、インサイトを提供したりするために、非PIIのBrazeデータにアクセスできるようにする安全な読み取り専用接続である。
 
 {% multi_lang_include mcp_server/beta_alert.md %}
 
-## モデルコンテキストプロトコル(MCP)とは。
+## モデル・コンテキスト・プロトコル（MCP）とは何か？
 
-​モデルコンテキストプロトコル(MCP) は、AI エージェントが別のプラットフォームのデータに接続し、それを使用できるようにする規格です。主に2 つの部分があります。
+​モデル・コンテキスト・プロトコル（MCP）は、AIエージェントが他のプラットフォームのデータに接続し、作業できるようにする標準である。大きく分けて2つの部分がある：
 
-- **クライアント:**カーソルやクロードなど、AI エージェントが実行されるアプリライセンス。
-- **MCP サーバ:**Braze などの別のプラットフォームが提供するサービスで、AI が使用できるツールとアクセスできるデータを定義します。
+- **MCPクライアントだ：**CursorやClaudeなど、AIエージェントが動作するアプリケーション。
+- **MCPサーバーだ：**Brazeのような別のプラットフォームが提供するサービスで、AIが使用できるツールやアクセスできるデータを定義する。
 
-## Braze MCP サーバーについて
+## Braze MCPサーバーについて
 
-[Braze MCP サーバー]{% if include.section == "user" %}({{site.baseurl}}/user_guide//user_guide/brazeai/mcp_server/setup/){%elsif include.section=="開発者;" %}({{site.baseurl}}/developer_/developer_guide/mcp_server/setup/){%endif %}など)を設定すると、エージェント、アシスタント、チャットボットなどのAI ツールをBraze に直結し、キャンバスやキャンペーン分析、カスタム属性s、SegmentsBraze MCP サーバーは次の用途に適しています。
+Braze MCPサーバーの設定]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/setup/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/setup/){% endif %}) の後、エージェント、アシスタント、チャットボットなどのAIツールをBrazeに直接接続し、キャンバス＆キャンペーン分析、カスタム属性、セグメンテーションなどの集計データを読み取ることができる。BrazeのMCPサーバーは素晴らしい：
 
-- Brazeの文脈を必要とするAIを活用した工具の構築。
+- Brazeのコンテキストを必要とするAI搭載ツールを構築する。
 - マルチステップエージェントワークフローを作成するCRMエンジニア。
-- 技術マーケターは自然言語の問い合わせを試みる。
+- テクニカルマーケターが自然言語によるクエリを試している。
 
-Braze MCP サーバーは、Braze ユーザープロファイルs からデータを返さない38 個の読み取り専用エンドポイントs をサポートします。これらのエンドポイントの一部のみをBraze API キーに割り当てて、エージェントがアクセスできるデータ量をさらに制限することができます。
+Braze MCPサーバーは、ユーザープロファイルからデータを返さない38の読み取り専用エンドポイントをサポートしている。これらのエンドポイントの一部のみをAPIキーに割り当てることで、エージェントがアクセスできるデータをさらに制限することができる。
 
 {% alert warning %}
-**not** read-only という権限をAPI キーに割り当てないでください。エージェントは、意図しない結果を引き起こす可能性があるBrazeの書き込みや消去を試みることがあります。
+APIキーに読み取り専用**以外の**権限を割り当てないこと。エージェントはBrazeにデータを書き込んだり削除しようとするかもしれないが、それは意図しない結果を引き起こす可能性がある。
 {% endalert %}
 
 ## 使用例
 
-クラウドやカーソルなどのツールを使用して、自然言語でBrazeを操作できます。他の事例やベストプラクティスについては、[Braze MCP サーバー]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/usage/){% elsif include.section= "開発者" %}({{site.baseurl}}/developer_guide/mcp_server/usage/){% endif %}を参照してください。
+ClaudeやCursorのようなツールを使って自然言語でBrazeと対話することができる。その他の例やベストプラクティスについては、[Braze MCPサーバーの使用]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/usage/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/usage/){% endif %}) を参照のこと。
 
 {% tabs %}
-{% tab クロード %}
-![Claude.]({% image_buster /assets/img/mcp_server/claude/what_are_my_available_braze_functions.png %})で質問・回答されている「私のBraze機能は何ですか?」{: style="max-width:85%;"}
+{% tab Claude %}
+![私が利用できるBrazeの機能は何ですか？]({% image_buster /assets/img/mcp_server/claude/what_are_my_available_braze_functions.png %}){: style="max-width:85%;"}
 {% endtab %}
 
-{% tab カーソル %}
-![Cursor.]({% image_buster /assets/img/mcp_server/cursor/what_are_my_available_braze_functions.png %})で質問され回答されている「利用可能なBraze機能とは」
+{% tab Cursor %}
+![私の利用可能なBrazeの機能は何ですか」と尋ねられ、Cursorで答える。]({% image_buster /assets/img/mcp_server/cursor/what_are_my_available_braze_functions.png %})
 {% endtab %}
 {% endtabs %}
 
 ## よくある質問 (FAQ) {#faq}
 
-### どのMCPクライアントがサポートされていますか?
+### どのMCPクライアントがサポートされているか？
 
-現在、[Claude](https://claude.ai/)と[Cursor](https://cursor.com/)のみが公式にサポートされています。Braze MCP サーバーを使用するには、次のいずれかのクライアントのアカウントが必要です。
+現在、[Claudeと](https://claude.ai/) [Cursorのみが](https://cursor.com/)公式にサポートされている。Braze MCPサーバーを使用するには、これらのクライアントのいずれかのアカウントが必要である。
 
-### MCP クライアントはどのようなBraze情報にアクセスできますか?
+### MCPクライアントがアクセスできるBrazeデータは？
 
-MCP クライアント s は、PII を取得するために構築されていない読み取り専用エンドポイントにのみアクセスできます。Brazeでは操作できません。
+MCPクライアントは、PIIを取得するために構築されていない読み取り専用のエンドポイントにのみアクセスできる。Brazeでデータを操作することはできない。
 
-### MCP クライアントはBrazeを操作できますか?
+### MCPクライアントはBrazeデータを操作できるか？
 
-いいえ。MCP サーバーは、PII 以外の読み取り専用データを処理するツールのみを公開します。
+MCPサーバーが公開するのは、PII以外の読み取り専用データを扱うツールだけだ。
 
-### サードパーティ製のMCP サーバーをBrazeに使用できますか?
+### サードパーティのMCPサーバーをBrazeに使用できるか？
 
-サードパーティ製のMCP サーバーをBrazeに使用することはお勧めしません。[PyPi](https://pypi.org/project/braze-mcp-server/) でホストされている正式なBraze MCP サーバーのみを使用してください。
+Brazeデータ用にサードパーティのMCPサーバーを使用することは推奨されない。[PyPiで](https://pypi.org/project/braze-mcp-server/)ホストされている公式Braze MCPサーバーのみを使用する。
 
-### Braze MCP サーバーがPII または書き込みアクセスを提供しないのはなぜですか?
+### なぜBraze MCPサーバーはPIIや書き込みアクセスを提供しないのか？
 
-イノベーションを可能にしながらデータを保護するために、通常はPIIを返さない読み取り専用のエンドポイントに限定してサーバーを構築しました。これにより、価値あるユースケースをサポートしながら、危険性が低減されます。
+データを保護しつつイネーブルメントを可能にするため、我々は読み取り専用で通常PIIを返さないエンドポイントに限定してサーバーを構築した。これにより、貴重なユースケースをサポートしながらリスクを軽減することができる。
 
-### API キー s を再利用できますか?
+### APIキーを再利用できるか？
 
-いいえ。MCP クライアント用に新しいAPI キーを作成する必要があります。AI ツールが快適なものにアクセスできるようにし、権限の引き上げを避けることを忘れないでください。
+いいえ。MCPクライアント用に新しいAPIキーを作成する必要がある。AIツールへのアクセスは、自分が納得できるものだけに限定し、権限の昇格は避けることを忘れないでほしい。
 
-### Braze MCP サーバーはローカルまたはリモートでホストされていますか?
+### Braze MCPサーバーはローカルでホストされているのか、それともリモートでホストされているのか？
 
-現在、Braze MCP サーバーはローカルでホストされています。
+Currents, Braze MCPサーバーはローカルでホストされている。
 
-### Cursor のみが機能をリストしているのはなぜですか?
+### なぜカーソルは機能だけをリストアップしているのか？
 
-「ask」モードか「agent」モードかを確認します。MCP サーバを使用するには、エージェントモードである必要があります。
+質問モードかエージェントモードかを確認する。MCPサーバーを使用するには、エージェントモードにする必要がある。
 
-### エージェントが不正確に見える回答を返す場合、どうすればよいですか?
+### エージェントが不正確と思われる回答を返した場合、どうすればよいか？
 
-Cursor などのツールを使用する場合は、使用するモデルを変更してみてください。たとえば、「自動」に設定している場合は、特定のモデルに変更して、ユースケースに最適なモデルを探してみてください。新しいチャットを開始してプロンプトを再試行することもできます。 
+カーソルのようなツールで作業する場合、使用するモデルを変えてみるのもいいだろう。例えば、自動に設定されている場合は、特定のモデルに変更してみて、ユースケースに最適なパフォーマンスを発揮するモデルを実験してみよう。新しいチャットを開始して、プロンプトを再試行することもできる。 
 
-問題が解決しない場合は、[mcp-product@braze.com](mailto:mcp-product@braze.com) にメールしてお知らせください。できれば、動画を含め、呼び出し関数を展開して、エージェントが試行した呼び出しを確認できます。
+問題が解決しない場合は、[mcp-product@braze.com](mailto:mcp-product@braze.com)までメールでお知らせいただきたい。可能であれば、動画を掲載し、通話機能を拡張して、エージェントがどのような通話を試みたかを確認できるようにしてほしい。
 
 {% multi_lang_include mcp_server/legal_disclaimer.md %}

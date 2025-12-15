@@ -24,14 +24,14 @@ Braze Audience Sync to Criteo を使用すると、ブランドは独自の Braz
 
 {% alert important %}
 **Audience Sync Pro 免責条項**<br>
-Braze Audience Sync to Criteo は Audience Sync Pro 統合です。この統合の詳細については、Brazeのアカウント・マネージャーに問い合わせを。<br> 
+Braze Audience Sync to Criteo は Audience Sync Pro 統合です。この統合の詳細については、Braze アカウントマネージャーにお問い合わせください。<br> 
 {% endalert %}
 
 ## 前提条件 
 
-キャンバスで Criteo へのオーディエンス同期のステップを設定するには、以下の項目が作成され完了していることを確認する必要があります。
+Criteoにオーディエンスシンクを設定する前に、以下のアイテムが作成されているか、完了していることを確認する必要があります。
 
-| 要件 | 提供元 | 説明 |
+| 必要条件 | 提供元 | 説明 |
 | --- | --- | --- |
 | Criteo広告アカウント | [Criteo](https://marketing.criteo.com/) | ブランドに関連付けられたアクティブな Criteo 広告アカウント。<br><br>Criteo 管理者から、オーディエンスにアクセスするための適切な権限が付与されていることを確認します。 |
 | [Criteo 広告ガイドライン](https://www.criteo.com/advertising-guidelines/)<br>そして<br>[Criteo ブランドセーフティガイドライン](https://www.criteo.com/wp-content/uploads/2017/11/Criteo-Brand-Safety-Guidelines-UK-March-2016.pdf) | Criteo | Criteo のアクティブな顧客として、Criteo キャンペーンを開始する前に、Criteo の広告ガイドラインを遵守できることを確認します。 |
@@ -41,17 +41,21 @@ Braze Audience Sync to Criteo は Audience Sync Pro 統合です。この統合�
 
 ### ステップ1:Criteo に接続する
 
+{% alert important %}
+Criteo をBraze アカウントに接続するには、["Admin" permission]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#admin) が必要です。
+{% endalert %}
+
 Braze ダッシュボードで [**パートナー連携**] > [**テクノロジーパートナー**] に移動し、[**Criteo**] を選択します。[Criteo Audience Export] で、[**Criteo を接続**] を選択します。
 
 ![Braze の Criteo テクノロジーページ。[概要] セクション、[Criteo] セクション、[接続済みの Criteo] ボタンが表示されています。]({% image_buster /assets/img/criteo/criteo5.png %}){: style="max-width:80%;"}
 
-次に、Criteo oAuth ページにリダイレクトされ、Braze に Audience Sync 統合に関連するアクセス許可を承認します。
+Criteo oAuth ページアプリは、オーディエンスシンクインテグレーションに関連する権限のBrazeを許可します。
 
 [confirm] を選択すると、Braze にリダイレクトされます。同期する Criteo 広告アカウントを選択します。 
 
 ![Criteo に接続できる広告アカウントのリスト。]({% image_buster /assets/img/criteo/criteo7.png %}){: style="max-width:80%;"}
 
-接続に成功すると、パートナーページが再び表示され、どのアカウントが接続されているかを表示したり、既存のアカウントを切断したりできます。
+接続に成功すると、パートナーページに戻り、どのアカウントが接続されているかを表示したり、既存のアカウントを切断したりできます。
 
 ![広告アカウントが接続されたことを示す更新後の Criteo テクノロジーパートナーページ。]({% image_buster /assets/img/criteo/criteo4.png %}){: style="max-width:80%;"}
 
@@ -75,7 +79,7 @@ Braze プラットフォーム内でこれらのデータ保護法を遵守す�
 
 キャンバスにコンポーネントを追加し、[**オーディエンスの同期**] を選択します。
 
-![キャンバスフローに Criteo オーディエンスコンポーネントを追加するための前のステップのワークフロー]({% image_buster /assets/img/criteo/criteo9.png %}){: style="max-width:35%;"} ![キャンバスフローに Criteo オーディエンスコンポーネントを追加するための前のステップのワークフロー]({% image_buster /assets/img/criteo/criteo10.png %}){: style="max-width:28%;"}
+![前のステップs のワークフローで、キャンバスにクリテオオーディエンスコンポーネントを追加します。]({% image_buster /assets/img/criteo/criteo9.png %}){: style="max-width:35%;"}![前のステップs のワークフローで、キャンバスにクリテオオーディエンスコンポーネントを追加します。]({% image_buster /assets/img/criteo/criteo10.png %}){: style="max-width:28%;"}
 
 ### ステップ 4: 同期設定
 
@@ -85,26 +89,26 @@ Braze プラットフォーム内でこれらのデータ保護法を遵守す�
 
 ![]({% image_buster /assets/img/criteo/criteo6.png %})
 
-次に、目的の Criteo 広告アカウントを選択します。[**新規または既存のオーディエンスを選択**] ドロップダウンで、新しいオーディエンスまたは既存のオーディエンスの名前を入力します。
+次に、目的の Criteo 広告アカウントを選択します。**Choose a New or Existing Audience（新規または既存のオーディエンスを選択**）ドロップダウンで、新規または既存のオーディエンスの名前を入力します。
 
 {% tabs %}
-{% tab 新規オーディエンスの作成 %}
+{% tab Create a New Audience %}
 **新規オーディエンスの作成**<br>
 新しいオーディエンスの名前を入力し、[**ユーザーをオーディエンスに追加**] を選択して、Criteo と同期するフィールドを選択します。次に、ステップエディタの下部にある**Create Audience**ボタンをクリックしてオーディエンスを保存します。
 
-![カスタムオーディエンスキャンバスステップの展開ビュー。ここでは目的の広告アカウントが選択され、新しいオーディエンスが作成されます。]({% image_buster /assets/img/criteo/criteo3.png %})
+![カスタムオーディエンスキャンバスステップの展開ビュー。ここでは、目的のアドアカウントが選択され、新しいオーディエンスが作成されます。]({% image_buster /assets/img/criteo/criteo3.png %})
 
-ユーザーは、オーディエンスが正常に作成された場合、またはこのプロセス中にエラーが発生した場合に、ステップエディターの上部で通知されます。ユーザーは、後でキャンバスジャーニーでユーザーを削除するためにこのオーディエンスを参照することもできます。これは、オーディエンスが下書きで作成されたためです。
+オーディエンスが正常に作成された場合、またはこのプロセス中にエラーが発生した場合、ステップエディタの上部にユーザーに通知されます。ユーザーは、後でキャンバスジャーニーでユーザーを削除するためにこのオーディエンスを参照することもできます。これは、オーディエンスが下書きで作成されたためです。
 
-![キャンバスコンポーネントで新しいオーディエンスが作成された後に表示されるアラート。]({% image_buster /assets/img/criteo/criteo1.png %})
+![新しいオーディエンスがキャンバスコンポーネントに作成された後にアプリが鳴るという警告。]({% image_buster /assets/img/criteo/criteo1.png %})
 
 新しいオーディエンスを使用してキャンバスを起動すると、オーディエンス同期コンポーネントに入る時点で、Braze はユーザーをほぼリアルタイムで同期します。
 {% endtab %}
-{% tab 既存のオーディエンスと同期する %}
+{% tab Sync with an Existing Audience %}
 **既存のオーディエンスとの同期**<br>
 また、Braze は、これらのオーディエンスが最新であることを確認するために、既存の Criteo オーディエンスにユーザーを追加する機能も提供します。既存のオーディエンスと同期するには、ドロップダウンに既存のオーディエンスの名前を入力し、**オーディエンスに追加します。**Braze は、オーディエンス同期コンポーネントに入ると、ほぼリアルタイムでユーザーを追加します。
 
-![カスタムオーディエンスキャンバスステップの展開ビュー。ここでは、目的の広告アカウントと既存のオーディエンスが選択されている。]({% image_buster /assets/img/criteo/criteo8.png %})
+![カスタムオーディエンスキャンバスステップの展開ビュー。ここでは、目的のアドアカウントと既存のオーディエンスが選択されます。]({% image_buster /assets/img/criteo/criteo8.png %})
 
 {% endtab %}
 {% endtabs %}

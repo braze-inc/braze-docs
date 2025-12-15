@@ -10,7 +10,7 @@ description: "この記事では、Duplicate campaigns（キャンペーンの�
 ---
 {% api %}
 # API を使用したキャンペーンの複製
-{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
+{% apimethod postcore_endpoint|https://www.braze.com/docs/core_endpoints %}
 /campaigns/duplicate
 {% endapimethod %}
 

@@ -21,47 +21,47 @@ Brazeは、`m.Braze` オブジェクトを使用して以下のユーザー属�
 デフォルト属性を設定するには、`m.Braze` オブジェクトの関連メソッドを呼び出す。
 
 {% tabs local %}
-{% tab 名 %}
+{% tab First name %}
 ```brightscript
 m.Braze.setFirstName("Alex")
 ```
 {% endtab %}
-{% tab 姓 %}
+{% tab Last name %}
 ```brightscript
 m.Braze.setLastName("Smith")
 ```
 {% endtab %}
-{% tab メール %}
+{% tab Email %}
 ```brightscript
 m.Braze.setEmail("alex@example.com")
 ```
 {% endtab %}
-{% tab 性別 %}
+{% tab Gender %}
 ```brightscript
 m.Braze.setGender("m") ' Accepts: "m", "f", "o", "n", "u", "p"
 ```
 {% endtab %}
-{% tab 生年月日 %}
+{% tab Birth date %}
 ```brightscript
 m.Braze.setDateOfBirth(1990, 5, 15) ' Year, month, day
 ```
 {% endtab %}
-{% tab 国名 %}
+{% tab Country %}
 ```brightscript
 m.Braze.setCountry("United States")
 ```
 {% endtab %}
-{% tab 言語 %}
+{% tab Language %}
 ```brightscript
 m.Braze.setLanguage("en")
 ```
 {% endtab %}
-{% tab 市区町村 %}
+{% tab Home city %}
 ```brightscript
 m.Braze.setHomeCity("New York")
 ```
 {% endtab %}
-{% tab 電話番号 %}
+{% tab Phone number %}
 ```brightscript
 m.Braze.setPhoneNumber("+1234567890")
 ```
@@ -83,7 +83,7 @@ m.Braze.setCustomAttribute("stringAttribute", "stringValue")
 ```
 {% endtab %}
 
-{% tab 整数 %}
+{% tab Integer %}
 `integer` 、カスタム属性を設定する：
 
 ```brightscript
@@ -91,7 +91,7 @@ m.Braze.setCustomAttribute("intAttribute", 5)
 ```
 {% endtab %}
 
-{% tab 浮動小数点 %}
+{% tab Floating-points %}
 Brazeは、`float` と`double` の値をまったく同じように扱う。カスタム属性にいずれかの値を設定する：
 
 ```brightscript
@@ -107,7 +107,7 @@ m.Braze.setCustomAttribute("boolAttribute", true)
 ```
 {% endtab %}
 
-{% tab 日付 %}
+{% tab Date %}
 `date` 、カスタム属性を設定する：
 
 ```brightscript
@@ -117,7 +117,7 @@ m.Braze.setCustomAttribute("dateAttribute", dateAttribute)
 ```
 {% endtab %}
 
-{% tab 配列 %}
+{% tab Array %}
 `array` 、カスタム属性を設定する：
 
 ```brightscript
