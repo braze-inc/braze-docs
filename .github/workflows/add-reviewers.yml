@@ -98,8 +98,6 @@ jobs:
 
             const escapeRegex = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
             const containsKeyword = keywords.some(keyword => new RegExp(`\\b${escapeRegex(keyword)}\\b`, 'i').test(diff));
-
-            //const containsKeyword = keywords.some(keyword => diff.includes(keyword));
             
             if (containsKeyword) {
               console.log('Found privacy/legal/GDPR keyword in diff - adding legal team');
