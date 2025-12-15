@@ -104,13 +104,15 @@ Provide the extension ID and API key to the Braze services team. They will assis
 
 {% tab Other Cloud Solutions %}
 
-** Other Cloud Solutions (Google Cloud Storage, Azure, and AWS)**
+**Other Cloud Solutions (Google Cloud Storage, Azure, and AWS)**
 
 Finally, if the audience is not currently stored in Braze, SFMC, or Klaviyo, then the next best step is to configure an automated export directly to a Braze-controlled Google Cloud Services bucket. We can also support export to AWS or Azure (although GCS is preferable).
 
 To determine whether this is feasible, refer to the documentation for your Martech platform. For example, mParticle offers a [native integration with Google Cloud Storage](https://www.mparticle.com/integration/google-cloud-storage/). If this is the case, we can provide a GCS bucket to export audience data to. There are similar pages for [Twilio Segment](https://www.twilio.com/docs/segment/connections/storage/catalog/google-cloud-storage), [Treasure Data](https://docs.treasuredata.com/int/google-cloud-storage-export-integration), [ActionIQ](https://info.actioniq.com/hubfs/ActionIQ%20Industry%20Brief%20Solutions/ActionIQ_Integrations_Brief.pdf), and [Adobe Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/cloud-storage/google-cloud-storage).
 
 If customer data cannot be sent to the Braze data platform or via the CEP, then it should be sent directly to Google Cloud Storage bucket.
+
+{% endtab %}
 
 Finally, other options or completely custom audience builds are possible. These may require additional Services work or Engineering work from your team. To determine what is feasible and optimal, work with the AI Decisioning Services team.
 
