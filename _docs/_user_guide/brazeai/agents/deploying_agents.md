@@ -29,6 +29,7 @@ You can use agents as steps in a journey to personalize messages or guide decisi
 | --- | --- |
 | Lead scoring and qualification | Use an Agent step to evaluate incoming leads on a scale (for example, 1–10). Route users with a score above a threshold into nurture paths, while disqualifying low-fit leads. |
 | Dynamic message personalization | Have an agent generate subject lines, product recommendations, or message copy based on user attributes or recent behaviors. The response can be inserted directly into a Message step. |
+| Customer feedback handling | Pass customer comments to an agent to analyze sentiment and generate empathetic follow-up messages. For high-value users, the agent might escalate the response or include perks. |
 | Intelligent routing | Use agent outputs (boolean or numeric) to split users into different Canvas paths. For example, classify users as “at risk” or “healthy” and adjust messaging cadence accordingly. |
 | Survey or response interpretation | Let an agent parse open-ended survey responses or free-text fields, returning structured values (for example, categorizing intent or need) that drive downstream paths. |
 | Multi-step reasoning | Configure an agent to combine context fields and make complex decisions, such as recommending the next-best action (email, SMS, or human outreach) based on multiple user attributes. |
@@ -46,6 +47,8 @@ You can apply an agent to catalog fields so it automatically generates or calcul
 | Enrich product attributes | Fill in missing values such as color family, style, or season based on a product name and details. For example, if a product name is “Laguna Polarized Sunglasses,” the agent could assign the style as “sport” and the color family as “blue.” |
 | Calculate derived fields | Use existing fields to generate new data, such as a “fit score” based on attributes or a “popularity tag” from sales and review counts. |
 | Categorize or tag items | Assign tags for recommendation logic so personalization models can segment products more effectively. For example, tag products as “outdoor,” “festival-ready,” or “premium.” |
+| Localize content | Translate catalog text into another language for global campaigns, or adjust tone and length for region-specific channels. For example, translate “Classic Clubmaster Sunglasses” into Spanish as “Gafas de sol Classic Clubmaster,” or shorten descriptions for SMS campaigns. |
+| Summarize reviews or feedback | Summarize sentiment or feedback into a new field, such as assigning sentiment scores like Positive, Neutral, or Negative, or creating a short text summary like “Most customers mention great fit, but note slow shipping.” |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Steps

@@ -95,18 +95,18 @@ Refer to the following metrics to track how your Agent steps perform:
 
 ### When should I use an Agent step?
 
-In general, we recommend using an Agent step when you want to process information using AI based on your instructions for later use in your Canvas.
+In general, we recommend using an Agent step when you want to feed particular contextual data into an LLM and have it agentically assign Canvas context variables intelligently at a scale impossible for humans.
 
-Let's say you're sending a personalized message to recommend a new ice cream flavor to a user who previously ordered chocolate and strawberry. Here's the difference between using an Agent step versus AI item recommendations:
+Let’s say you’re sending a personalized message to recommend a new ice cream flavor to a user who previously ordered chocolate and strawberry. Here’s the difference between using an Agent step versus AI item recommendations:
 
-- **Agent step:** Uses LLMs to make a decision based on what the user might want based on the instructions and data given to the agent. In this example, an Agent step would recommend a new flavor based on the possibility of the user wanting to try different flavors. 
-- **AI item recommendations:** Uses machine learning models to predict the products that a user is most likely to want based on past user events, such as purchases. In this example, AI item recommendations would suggest a flavor (vanilla) based on the user's previous two orders (chocolate and strawberry). 
+- **Agent step:** Uses LLMs to make a qualitative decision  on what the user might want based on the instructions and context data points given to the agent. In this example, an Agent step might recommend a new flavor based on the possibility of the user wanting to try different flavors.
+- **AI item recommendations:** Uses machine learning models to predict the products that a user is most likely to want based on past user events, such as purchases. In this example, AI item recommendations would suggest a flavor (vanilla) based on the user’s previous two orders (chocolate and strawberry) and how those compare to the behaviors of other users in your workspace.
 
 ### When should I use a standard output format for an agent?
 
-We recommend using the output format when you want the agent to return a data structure with multiple variables defined in a structured manner, rather than a single agent output. This allows the output to be better formatted as a consistent context variable.
+We recommend using the output format when you want the agent to return a data structure with multiple values defined in a structured manner, rather than a single-value output. This allows the output to be better formatted as a consistent context variable.
 
-For example, you may use an output format within an agent that is intended to create a sample travel itinerary for a user based on a form they submitted. The output format allows you to define that every agent response should come back with values for `tripStartDate`, `tripEndDate`, and `destination` values. Each of these values can be extracted into context variables and placed in a Message step for personalization using Liquid.
+For example, you may use an output format within an agent that is intended to create a sample travel itinerary for a user based on a form they submitted. The output format allows you to define that every agent response should come back with values for `tripStartDate`, `tripEndDate`, and `destination` values. Each of these values can be extracted from context variables and placed in a Message step for personalization using Liquid.
 
 ### How do Agent steps use input data?
 

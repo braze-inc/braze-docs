@@ -43,7 +43,7 @@ To create your custom agent:
 
 1. Go to **Agent Console** > **Agent Management** in the Braze dashboard.  
 2. Select **Create agent**.  
-3. Enter a name and description to help your team understand its purpose.  
+3. Enter a name and description to help your team understand its purpose.
 4. Choose the [model](#models) your agent will use.  
 
 ![Agent Console interface for creating a custom agent in Braze. The screen displays fields for entering the agent name and description, and selecting a model.]({% image_buster /assets/img/ai_agent/create_custom_agent.png %}){: style="max-width:85%;"}
@@ -53,7 +53,7 @@ To create your custom agent:
 6. [Test the agent](#testing-your-agent) output and adjust the instructions as needed.
 7. When you’re ready, select **Create Agent** to activate the agent. 
 
-Your agent is now ready to use! For details, see [Deploying agents]({{site.baseurl}}/user_guide/brazeai/agents/deploying_agents/). 
+Your agent is now ready to use! For details, see [Deploying agents]({{site.baseurl}}/user_guide/brazeai/agents/deploying_agents/).
 
 ## Models
 
@@ -93,7 +93,7 @@ Here are some general best practices to get you started with prompting:
 9. Handle the edge cases, add guardrails, and add refusal instructions.
 10. Measure and document what works internally for reuse and scaling.
 
-We recommend also including a default as a catch-all response if the agent receives a response that can't be parsed. This error handling allows the agent to inform you of an unknown outcome variable.
+We recommend also including a default as a catch-all response if the agent receives a response that can't be parsed. This error handling allows the agent to inform you of an unknown outcome variable. For example, rather than asking the agent for only "positive" or "negative" sentiment values, ask it to return "unsure" if it can't decide.
 
 #### Examples
 
@@ -159,19 +159,19 @@ You can select [brand guidelines]({{site.baseurl}}/user_guide/administrative/app
 
 ### Catalogs
 
-Choose specific catalogs or columns in a catalog for an agent to reference and to further personalize your message.
+Choose specific catalogs for an agent to reference and to give your agent the context it needs to understand your products and other non-user data when relevant.
 
 ![The "restaurants" catalog and "Loyalty_Program" column selected for the agent to search.]({% image_buster /assets/img/ai_agent/search_catalog.png %}){: style="max-width:85%;"}
 
 ### Segment membership context
 
-You can select up to three segments for the agent to have membership access to when the agent is used in a Canvas. Let's say your agent has segment membership selected for a "Loyalty Users" segment, and the agent is used in a Canvas. When users enter an Agent step, the agent can interpret the user's input with the context of whether the user is in the selected segment or not.
+You can select up to three segments for the agent to cross-reference each user's segment membership against when the agent is used in a Canvas. Let's say your agent has segment membership selected for a "Loyalty Users" segment, and the agent is used in a Canvas. When users enter an Agent step, the agent can cross-reference if each user is a member of each segment you specified in the agent console, and use each user's membership (or non-membership) as context for the LLM.
 
 ![The "Loyalty Users" segment selected for agent membership access.]({% image_buster /assets/img/ai_agent/segment_membership_context.png %}){: style="max-width:85%;"}
 
 ### Temperature
 
-If your goal is to use an agent to generate copy to encourage users to log into your mobile app, you can set a higher temperature for your agent to be more creative and use the nuances of the context variables. If you're using an agent to generate copy for user sentiment analysis, it may be ideal to set a lower temperature to avoid any agent speculation on negative survey responses. We recommend testing this setting and reviewing the agent's generated copy to fit your scenario.
+If your goal is to use an agent to generate copy to encourage users to log into your mobile app, you can set a higher temperature for your agent to be more creative and use the nuances of the context variables. If you're using an agent to generate sentiment scores, it may be ideal to set a lower temperature to avoid any agent speculation on negative survey responses. We recommend testing this setting and reviewing the agent's generated output to fit your scenario.
 
 {% alert note %}
 Temperatures aren't currently supported for use with OpenAI.
@@ -189,14 +189,12 @@ Let's say you want to format responses to a simple feedback survey to determine 
 | --- | --- |
 | **likelihood_score** | Number |
 | **explanation** | Text |
-| **confidence_score** | Text |
+| **confidence_score** | Number |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ![Agent Console showing three output fields for likelihood score, explanation, and confidence score.]( {% image_buster /assets/img/ai_agent/output_format_fields.png %} )
 
 ### JSON schema
-
-Note that if you try to use an agent with a JSON output in a catalog, it will not follow your schema. Instead, consider using the defined output fields.
 
 Let's say you want to collect user feedback for their most recent dining experience at your restaurant chain. You could select **JSON Schema** as the output format and insert the following JSON to return a data object that includes a sentiment variable and reasoning variable.
 
@@ -218,7 +216,9 @@ Let's say you want to collect user feedback for their most recent dining experie
 }
 ```
 
-{% alert note %}
+Note that if you try to use an agent with a JSON output in a catalog, it will not follow your schema. Instead, consider using the [defined output fields](#fields).
+
+{% alert important %}
 Output formats aren't currently supported by Claude AI. If you're using an Anthropic key, we recommend manually adding the structure to the agent prompt.
 {% endalert %}
 

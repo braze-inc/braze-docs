@@ -42,17 +42,17 @@ Agents are configured with instructions (system prompts) that define how they be
 | [Instructions]({{site.baseurl}}/user_guide/brazeai/agents/creating_agents/#writing-instructions) | The rules or guidelines you give the agent (system prompt). They define how the agent should behave each time it runs. Clear instructions make the agent more reliable and predictable. |
 | Context | Data passed into the agent at runtime wherever it is deployed, such as user profile fields or catalog rows. This input provides the information the agent uses to generate outputs. |
 | [Output variable]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/agent_step/#step-3-define-the-output-variable) | The output the agent produces when used in Canvas steps. Output variables store the agent’s result to personalize content or guide workflow paths. Output variables can be a string, number, or boolean data type.  |
-| Execution | A single run of the agent. This counts against your daily and total limits. |
+| [Execution](#limitations) | A single run of the agent. This counts against your daily limits. |
 | [Output format]({{site.baseurl}}/user_guide/brazeai/agents/creating_agents/#output-format) | The predefined data structure of the agent's response. |
 | [Temperature]({{site.baseurl}}/user_guide/brazeai/agents/creating_agents/#temperature) | The level of deviation for the agent's output. This defines how precise or creative your agent can be. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Limitations
 
-Each agent can be executed up to 100,000 times per day. An agent's default daily execution limit is 50,000.
+During the beta period, the following limitations apply:
 
-Additionally, during the beta period:
-
+- Each agent can be executed up to 100,000 times per day.
+- An agent's default daily execution limit is 50,000.
 - Daily execution is limited to 100,000 runs per agent, per day.
 - Each run must complete within 30 seconds. After 30 seconds, the agent will return a null response where it is used.
 - Input data is limited to 25 KB per request. Longer inputs are truncated.
