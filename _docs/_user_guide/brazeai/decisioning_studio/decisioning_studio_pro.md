@@ -13,19 +13,20 @@ description: "Learn how to set up Decisioning Studio Pro agents to make 1:1 AI d
 
 To set up an AI Decisioning Agent and complete the AI Decisioning Loop, at a high level, you will:
 
-1. Design your agent
+#### 1. Design your agent
 
 You will make important decisions such as what metric the agent should optimize for, as well as defining the universe of possible decisions the agent could make.
 
-2. Set customer context
+#### 2. Set customer context
 
 You will connect rich first-party data sources that describe your customer for the Decisioning Agent to learn from.
 
-3. Configure orchestration
+#### 3. Configure orchestration
 
 You will connect Braze or a non-Braze Marketing Automation Platform that will carry turn the Agent’s decisions into action
 
-4. Close the AI Decisioning Loop
+#### 4. Close the AI Decisioning Loop
+
 Finally, you will close the AI Decisioning Loop by connecting data sources that tell the Agent how a customer reacts to its decisions.
 
 Decisioning Studio Pro includes AI Decisioning Services support from Braze’s forward deployed data science team, which will help you design and configure your agent to maximize your business outcomes.
