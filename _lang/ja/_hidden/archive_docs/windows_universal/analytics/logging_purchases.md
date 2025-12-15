@@ -14,7 +14,7 @@ hidden: true
 
 Braze は複数の通貨での購入に対応しています。米ドル以外の通貨でレポートする購入は、レポートされた日付の為替レートに基づいて米ドル単位でダッシュボードに表示されます。
 
-実装する前に、カスタムイベント、カスタム属性、購入イベントによって提供されるセグメンテーションオプションの例を、[ベストプラクティスの][3]記事で確認してほしい。また、[イベントの命名規則]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/)についてもよく理解しておくことをお勧めします。
+実装する前に、カスタムイベント、カスタム属性、購入イベントによって提供されるセグメンテーションオプションの例を、[ベストプラクティスの]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection)記事で確認してほしい。また、[イベントの命名規則]({{site.baseurl}}/user_guide/data/custom_data/event_naming_conventions/)についてもよく理解しておくことをお勧めします。
 
 この機能を使用するには、アプリ内購入が正常に完了した後でこのメソッド呼び出しを追加します。
 
@@ -29,7 +29,5 @@ bool LogPurchase(string productId, string currencyCode, decimal price)
 
 ## REST API
 
-REST API を使用して購入を記録することもできます。詳細については、[ユーザー API][2] のドキュメントを参照してください。
+REST API を使用して購入を記録することもできます。詳細については、[ユーザー API]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data) のドキュメントを参照してください。
 
-[2]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
-[3]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection

@@ -25,7 +25,7 @@ search_rank: 1
 
 次に、あらかじめデザインされたBrazeテンプレートから選択するか、新しいテンプレートを作成するか、既存のテンプレート（プレーンまたは[モバイル・レスポンシブ]({{site.baseurl}}/help/release_notes/2018/may/#mobile-responsive-email-templates)）を編集する。
 
-![ドラッグアンドドロップエディタまたはHTMLエディタを選択するか、Braze テンプレートsから選択するかを選択できる、企業の春物セールのメール テンプレート。]({% image_buster /assets/img/email_templates/template2.png %})
+![ドラッグアンドドロップエディタまたはHTMLエディタを選択するか、Braze テンプレートs から選択するかを選択できる、企業の春物セールのメール テンプレート。]({% image_buster /assets/img/email_templates/template2.png %})
 
 {% alert note %}
 既存のカスタムHTML テンプレートs は、ドラッグアンドドロップエディタを使用して再作成する必要があります。
@@ -103,7 +103,7 @@ API キャンペーンでメールを使用するには、`email_template_id` �
 
 テンプレートが保存されると、ユーザーに未解決のコメントのアイコンが表示されます。これらのコメントを解決するには、**Resolve**を選択します。
 
-![&quotを読むメール テンプレート的なコメント;私とquot;に良く見えます。]({% image_buster /assets/img/email_templates/template_comment.png %})
+![「Looks good to me」と書かれたメールテンプレートコメント。]({% image_buster /assets/img/email_templates/template_comment.png %})
 
 メールテンプレートに関するよくあるご質問は、[テンプレートFAQを]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/faq/)ご覧ください。
 

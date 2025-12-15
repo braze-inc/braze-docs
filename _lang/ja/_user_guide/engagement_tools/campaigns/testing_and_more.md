@@ -1,5 +1,5 @@
 ---
-nav_title: キャンペーンのテスト
+nav_title: キャンペーンをテストする
 article_title: キャンペーンのテスト
 layout: dev_guide
 guide_top_header: "キャンペーンのテスト"

@@ -18,20 +18,20 @@ _この統合は Tapcart によって管理されます。_
 | 必要条件              | 説明                                                                                                                                         |
 |--------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
 | Tapcart エンタープライズアカウント | この統合は、**Tapcart Enterprise の顧客**のみが利用できます。                                                                              |
-| Braze アプリの API キー         | [Braze アプリ識別子 API キー](https://www.braze.com/docs/api/identifier_types)が必要です。各プラットフォーム（iOSやAndroidなど）には独自のアプリ識別子がある。Braze ダッシュボードで、[**設定**] ＞ [**APIと識別子**] ＞ [**アプリ識別子**] の順に進みます。 |
+| Braze アプリの API キー         | [Braze アプリ識別子 API キー](https://www.braze.com/docs/api/identifier_types)が必要です。各プラットフォーム(iOS やAndroid など) には、独自のアプリ識別子があります。Braze ダッシュボードで、**Settings** > **APIs and Identifiers** > **App Identifiers** に移動します。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 統合について
 
-Tapcart と Braze の統合方法については、[Tapcart の Webサイトにある統合ガイドを](https://help.tapcart.com/hc/en-us/articles/36413383526675-Braze-Integration)参照してほしい。統合後は、Braze で以下の Tapcart 機能を活用できるようになります。
+Tapcart とBraze を統合する方法については、Web サイトで直接[Tapcart の統合ガイド](https://help.tapcart.com/hc/en-us/articles/36413383526675-Braze-Integration) をチェックアウトしてください。統合後は、以下のTapcart 機能をBraze で活用できます。
 
-- ベース SDK の統合
-- iOS と Android のプッシュ通知
+- ベースSDK統合
+- iOSとAndroidのプッシュ通知
 - リッチプッシュメッセージ
-- ユーザージャーニーのトラッキング、セグメンテーション
+- ユーザ・ジャーニー・トラッキングとセグメンテーション
 
-なお、以下の機能は現在サポートされていません。プッシュストーリー、Webプッシュ、アプリ内メッセージのカスタマイズ。
+以下の機能は現在サポートされていない：プッシュストーリー、Webプッシュ、アプリ内メッセージのカスタマイズ。
 
 {% alert note %}
-その他ご不明な点がございましたら、Tapcart導入スペシャリストまでお問い合わせいただくか、[help@tapcart.co](mailto:help@tapcart.co) までメールにてご連絡ください。
+その他ご不明な点があれば、Tapcart 導入スペシャリストまでお問い合わせいただくか、[help@tapcart.co](mailto:help@tapcart.co) までメールにてご連絡いただきたい。
 {% endalert %}

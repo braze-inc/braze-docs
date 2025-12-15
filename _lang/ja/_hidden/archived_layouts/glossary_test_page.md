@@ -3,8 +3,8 @@ page_order: 2
 
 nav_title: 用語集
 layout: glossary_page
-glossary_top_header: "Glossary Template"
-glossary_top_text: "This is a test Glossary Page."
+glossary_top_header: "用語集テンプレート"
+glossary_top_text: "これはテスト用語集ページです。"
 
 #Required
 description: "これはGoogle検索の説明です。160文字を超えると切り捨てられる。"

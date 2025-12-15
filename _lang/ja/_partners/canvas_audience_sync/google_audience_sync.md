@@ -39,7 +39,7 @@ Google Ads は、ターゲティングとレポート用に、"lookalike audienc
 | 必要条件 | 提供元 | 説明 |
 | ----------- | ------ | ----------- |
 | Google 広告アカウント | [Google](https://support.google.com/google-ads/answer/6366720?hl=en) | あなたのブランドのためのアクティブなGoogle 広告アカウント。<br><br>複数の管理対象アカウントでオーディエンスを共有する場合は、[マネージャーアカウント](https://support.google.com/google-ads/answer/6139186)にオーディエンスをアップロードできます。 |
-| Google 広告規約とGoogle 広告ポリシー | [Google](https://support.google.com/adspolicy/answer/54818?hl=en) | Braze Audience Syncを使用するにあたり、[Googleの広告利用規約](https://payments.google.com/u/0/paymentsinfofinder?hostOrigin=aHR0cHM6Ly9wYXltZW50cy5nb29nbGUuY29tOjQ0Mw..&sri=-40)および[Googleの広告ポリシー](https://support.google.com/adspolicy/answer/6008942?sjid=15557182366992806023-NC)、該当する場合には[EUユーザー同意ポリシー](https://www.google.com/about/company/user-consent-policy/)を受け入れ、遵守する必要があります。<br><br>Googleの新しいEUユーザー同意ポリシーについて法務チームと相談し、EEA、英国、スイスのエンドユーザーに対してGoogle広告のサービスを利用するために適切な同意を収集していることを確認する。 |
+| Google 広告規約とGoogle 広告ポリシー | [Google](https://support.google.com/adspolicy/answer/54818?hl=en) | Braze Audience Syncを使用するにあたり、[Googleの広告利用規約](https://payments.google.com/u/0/paymentsinfofinder?hostOrigin=aHR0cHM6Ly9wYXltZW50cy5nb29nbGUuY29tOjQ0Mw..&sri=-40)および[Googleの広告ポリシー](https://support.google.com/adspolicy/answer/6008942?sjid=15557182366992806023-NC)、該当する場合には[EUユーザー同意ポリシー](https://www.google.com/about/company/user-consent-policy/)を受け入れ、遵守する必要があります。<br><br>Google の新しい EU ユーザー同意ポリシーについて法務チームと相談し、EEA、英国、スイスのエンドユーザーに対して Google 広告のサービスを利用するために適切な同意を収集していることを確認してください。 |
 | Google カスタマーマッチ | [Google](https://support.google.com/google-ads/answer/6299717) |  すべての広告主がカスタマーマッチを利用できるわけではありません。<br><br>**カスタマーマッチを使用するには、アカウントが以下の条件を満たしている必要があります。**<br>• これまでポリシーを遵守してきた実績があること<br>• これまで支払いに関して問題が発生していないこと<br>• Google 広告で 90 日以上の利用実績があること<br>• 利用金額が通算5万米ドルを超えていること米ドル以外の通貨でアカウントを管理している広告主の利用金額は、その通貨の月別平均為替レートで米ドルに換算されます。<br><br>アカウントが上記の要件を満たしていない場合、現時点ではそのアカウントではカスタマーマッチを利用できません。<br><br>Google 広告の担当者に連絡して、アカウントでのカスタマーマッチの利用可能性について詳しいガイダンスを受けてください。 |
 | Google の同意シグナル | [Google](https://support.google.com/google-ads/answer/14310715) |  EEAのエンドユーザーにGoogleの顧客マッチサービスを使用して広告を配信したい場合、GoogleのEUユーザー同意ポリシーの一環として、次のカスタム属性（ブール値）をBrazeに渡す必要があります。詳細は、「[EEA、英国、スイスのエンドユーザーに対する同意の収集](#collecting-consent-for-eea-uk-and-switzerland-end-users)」に記載されている：<br> - `$google_ad_user_data`<br> - `$google_ad_personalization` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
@@ -91,47 +91,51 @@ Braze に同期すると、次の同意属性がユーザープロファイル�
 - `$google_ad_user_data`
 - `$google_ad_personalization`
 
-ユーザーをオーディエンスに追加するために Google オーディエンス同期を使用して EEA、英国、スイスのエンドユーザーをターゲットにしているキャンバスでは、両方の同意属性が `true` でない値である場合は常に、これらのユーザーを除外する必要があります。これは、同意値が`true` に設定されているときに、これらのユーザーをセグメンテーションすることで達成できる。また、Googleがこれらのユーザーをオーディエンスから拒否することがわかっているため、より正確なユーザー分析が同期される。オーディエンスからユーザーを削除するためにGoogle オーディエンス同期を使用している場合、同意属性は必要ないことに注意してください。
+Google Audience Syncを使用してユーザーをオーディエンスに追加し、EEA、英国、およびスイスのエンドユーザーをターゲットにしているキャンバスでは、両方の同意属性が`true` 以外の値である場合は、これらのユーザーを除外する必要がある。同意の値が`true` に設定されている場合、これらのユーザーをセグメンテーションすることで、これを行うことができる。また、Googleがこれらのユーザーをオーディエンスから拒否することが分かっているため、より正確なユーザー分析を確実に同期させることができる。オーディエンスからユーザーを削除するためにGoogle オーディエンス同期を使用している場合、同意属性は必要ないことに注意してください。
 
 ## 統合
 
 ### ステップ1:Googleアカウントを接続する
 
+{% alert important %}
+Google広告をBrazeアカウントに接続するには[「管理者」権限が]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#admin)必要。
+{% endalert %}
+
 開始するには、**パートナー統合** > **テクノロジーパートナー** > **Google 広告** に移動し、**Google 広告を接続** を選択します。モーダルが表示され、Google 広告アカウントに関連付けられているメールを選択し、Braze に Google 広告アカウントへのアクセスを許可するよう求められます。
 
 Google Ads アカウントを正常に接続すると、Google Ads パートナーページに戻ります。次に、Braze ワークスペースでアクセスする広告アカウントを選択するように求められます。
 
-![Braze への Google 広告アカウント接続が成功したときのワークフローを示す GIF。]({% image_buster /assets/img/google_sync/googlesync.gif %}){: style="max-width:85%;"}
+![BrazeへのGoogle広告アカウント接続が成功した場合のワークフローを示すGIF。]({% image_buster /assets/img/google_sync/googlesync.gif %}){: style="max-width:85%;"}
 
 #### iOS IDFA またはGoogle Advertising ID のエクスポート
 
 オーディエンス同期で iOS IDFA や Google 広告 ID をエクスポートする予定がある場合、Googleはリクエスト内で iOS アプリ ID および Android アプリ ID を要求します。Google オーディエンス同期の下で、[**モバイル広告 ID を追加**] を選択し、iOS アプリ ID と Android アプリ ID (アプリパッケージ名) を入力して、それぞれ保存します。
 
 <br><br>
-![更新されたGoogle 広告技術ページには、接続された広告アカウントが表示され、アカウントの再同期やモバイル広告IDの追加が可能です。]({% image_buster /assets/img/google_sync/google_sync5.png %}){: style="max-width:75%;"}
+![更新されたGoogle広告テクノロジーのページでは、接続されている広告アカウントが表示され、アカウントの再同期やモバイル広告IDの追加ができる。]({% image_buster /assets/img/google_sync/google_sync5.png %}){: style="max-width:75%;"}
 <br><br>
 
 1 つのワークスペースに複数のアプリケーションがある場合、ユーザーのモバイル広告 ID は複数のアプリケーション間で同じになるため、設定で任意のアプリ ID を入力できます。これは、Android GAID とiOS IDFA の両方がデバイス上のユニバーサル広告識別子であり、アプリ固有ではないためです。特定のアプリのユーザーのモバイル広告 ID を同期するには、セグメントフィルター (「最後に使用された特定のアプリ」または「最新のアプリバージョン」) を使用して、これらのユーザーをターゲットにすることができます。
 
-### ステップ2: キャンバスフローに Google オーディエンスステップを追加する
+### ステップ 2:キャンバスにGoogle オーディエンスのステップを追加する
 
 キャンバスにコンポーネントを追加し、[**オーディエンスの同期**] を選択します。
 
-![エディタでキャンバスコンポーネントを選択するメニュー。]({% image_buster /assets/img/audience_sync/audience_sync3.png %}){: style="max-width:35%;"}![ユーザージャーニーに追加されたAudience Sync ステップ。]({% image_buster /assets/img/audience_sync/audience_sync5.png %}){: style="max-width:28%;"}
+![エディターでキャンバスコンポーネントを選択するメニュー。]({% image_buster /assets/img/audience_sync/audience_sync3.png %}){: style="max-width:35%;"}![ユーザージャーニーに追加されたオーディエンス同期のステップ。]({% image_buster /assets/img/audience_sync/audience_sync5.png %}){: style="max-width:28%;"}
 
-### ステップ 3: 同期セットアップ
+### ステップ 3:同期セットアップ
 
 1. [**カスタムオーディエンス**]を選択し、コンポーネントエディターを開きます。
 2. オーディエンス同期のパートナーとして **Google** を選択します。
 
-![同期を開始するパートナーを選択するオプションが表示されたオーディエンス同期ステップの設定。]{% image_buster /assets/img/audience_sync/audience_sync4.png %}{: style="max-width:80%;"}
+![同期を開始するパートナーを選択するオプションが表示されたオーディエンス同期ステップの設定。]({% image_buster /assets/img/audience_sync/audience_sync4.png %}){: style="max-width:80%;"}
 
 {: start="3"}
 3\.希望するGoogle広告アカウントを選択してください。
 4\.[**Choose a New or Existing Audience (新規または既存のオーディエンスを選択)**] ドロップダウンで、新規または既存のオーディエンスの名前を入力します。 
 
 {% tabs %}
-{% tab 新規オーディエンスの作成 %}
+{% tab Create a New Audience %}
 
 1. 新しいカスタムオーディエンスの名前を入力します。
 2. [**ユーザーをオーディエンスに追加**] を選択します。
@@ -143,9 +147,9 @@ Google Ads アカウントを正常に接続すると、Google Ads パートナ�
 {: start="4"}
 4. 次に、ステップエディタの下部にある [**Create Audience**] ボタンを選択してオーディエンスを保存します。
 
-![カスタムオーディエンスキャンバスコンポーネントの展開ビュー。目的の広告アカウントが選択され、新しいオーディエンスが作成され、「お客様の連絡先情報」チェックボックスが選択されている。]({% image_buster /assets/img/audience_sync/g_sync.png %})
+![カスタムオーディエンスキャンバスコンポーネントの展開ビュー。ここで、目的の広告アカウントを選択し、新しいオーディエンスを作成し、"顧客連絡先 "チェックボックスを選択する。]({% image_buster /assets/img/audience_sync/g_sync.png %})
 
-ユーザーは、オーディエンスが正常に作成された場合、またはこのプロセス中にエラーが発生した場合に、ステップエディターの上部で通知されます。ユーザーは、後でキャンバスジャーニーでユーザーを削除するためにこのオーディエンスを参照することができます。これは、オーディエンスが下書きで作成されたためです。 
+オーディエンスが正常に作成された場合、またはこのプロセス中にエラーが発生した場合、ステップエディタの上部にユーザーに通知されます。ユーザーは、後でキャンバスジャーニーでユーザーを削除するためにこのオーディエンスを参照することができます。これは、オーディエンスが下書きで作成されたためです。 
 
 ![キャンバスコンポーネントで新しいオーディエンスが作成された後に表示されるアラート。]({% image_buster /assets/img/audience_sync/g_sync3.png %})
 
@@ -155,7 +159,7 @@ Google Ads アカウントを正常に接続すると、Google Ads パートナ�
 Google のカスタマーマッチの要件のため、顧客の連絡先情報とモバイル広告主 ID を同じ顧客リストに含めることはできません。Google カスタマーマッチはその後この情報を使用して、Google 検索、Google ディスプレイ、YouTube、Gmail でターゲットにできる人物を決定します。Google顧客マッチの要件の詳細については、彼らの[ドキュメント](https://support.google.com/google-ads/answer/7474166?hl=en&ref_topic=6296507)を確認してください。
 {% endalert %}
 {% endtab %}
-{% tab 既存のオーディエンスと同期する %}
+{% tab Sync with an Existing Audience %}
 
 Braze では、これらのオーディエンスが最新の状態であるようにするために、既存の Google 顧客リストからユーザーを追加または削除することもできます。既存のオーディエンスとの同期
 
@@ -164,7 +168,7 @@ Braze では、これらのオーディエンスが最新の状態であるよ�
 3. Brazeは、ユーザーが Google オーディエンスステップに入ると、ほぼリアルタイムでユーザーを追加または削除します。 
 4. Google オーディエンスステップを設定したら、[**完了**] を選択します。Google オーディエンスステップには、新しいオーディエンスに関する詳細情報が含まれます。
 
-![カスタムオーディエンスキャンバスコンポーネントの展開ビュー。目的の広告アカウントと既存のオーディエンス、および「ユーザーをオーディエンスに追加」ラジオボタンが選択されている。]({% image_buster /assets/img/audience_sync/g_sync2.png %})
+![カスタムオーディエンスキャンバスコンポーネントの展開ビュー。ここで、希望する広告アカウントと既存のオーディエンスを選択し、"Add user to Audience "のラジオボタンをクリックする。]({% image_buster /assets/img/audience_sync/g_sync2.png %})
 
 {% endtab %}
 {% endtabs %}
@@ -198,7 +202,7 @@ Braze では、これらのオーディエンスが最新の状態であるよ�
 
 ## よくある質問
 
-### Google オーディエンスステップ設定で複数のフィールドを選択して一致させることができないのはなぜですか?
+### Google オーディエンスステップ設定で複数のフィールドを選択してマッチングさせることができないのはなぜですか?
 
 Google カスタマーマッチには、このようなオーディエンスの形式と含める顧客情報に関して厳しい要件があります。具体的には、モバイル広告主 ID は、顧客の連絡先情報 (メールや電話番号など) とは別にアップロードする必要があります。詳細については、[Googleの顧客マッチドキュメント](https://support.google.com/google-ads/answer/7659867?hl=en#undefined)を参照してください。
 
@@ -206,7 +210,7 @@ Google カスタマーマッチには、このようなオーディエンスの�
 
 オーディエンスが Googleに同期されるまでには6～12時間かかることがあります。 
 
-### オーディエンスを同期しましたが、なぜGoogleではオーディエンスのサイズがゼロなのでしょうか?
+### オーディエンスを同期しましたが、なぜ Google ではオーディエンスのサイズがゼロなのでしょうか?
 
 プライバシーの目的で、ユーザーリストのサイズはリストに含まれるメンバーが少なくとも 1,000 人になるまでゼロと表示されます。その後、サイズは最も重要な2桁に丸められます。
 

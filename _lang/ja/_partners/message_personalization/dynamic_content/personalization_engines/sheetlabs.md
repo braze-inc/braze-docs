@@ -14,7 +14,7 @@ _この統合は Sheetlabs によって管理されます。_
 
 ## 統合について
 
-SheetlabsとBrazeの統合により、[Connected Contentを]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/)活用して、BrazeのマーケティングキャンペーンにSheetlabsのAPIを含めることができる。これは、Googleスプレッドシート（マーケティングチームが直接更新する）とBrazeテンプレートの橋渡しによく使われる。これにより、翻訳やカスタム属性の大規模なセットなど、Brazeテンプレートでより多くのことを実現できる。
+SheetlabsとBrazeの統合により、[コネクテッドコンテンツを]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/)使用して、BrazeマーケティングキャンペーンにSheetlabs APIを含めることができる。これは、Googleスプレッドシート（マーケティングチームが直接更新する）とBrazeテンプレートの橋渡しによく使われる。これにより、翻訳やカスタム属性の大規模なセットなど、Brazeテンプレートでより多くのことを実現できる。
 
 ## 前提条件
 

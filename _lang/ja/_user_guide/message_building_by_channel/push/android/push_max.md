@@ -45,7 +45,7 @@ Xiaomi、OPPO、およびVivoのような中国のOrigin al Equipment Manufactur
 3. **Schedule Delivery**ステップに移動します。
 4. **Send using Push Max**を選択します。
 
-![スケジュールされた配信ステップのAndroid Push配信可能セクションに「Push Maxを使用して送信する」というオプションがある。]({% image_buster /assets/img_archive/push_max_campaigns.png %})
+![配信スケジュールステップのAndroid Push Deliverabilityセクションに「Send using Push Max」というオプションがある。]({% image_buster /assets/img_archive/push_max_campaigns.png %})
 
 {% endtab %}
 {% tab Canvas %}
@@ -57,7 +57,7 @@ Xiaomi、OPPO、およびVivoのような中国のOrigin al Equipment Manufactur
 3. [**配信設定**] タブに移動します。
 4. **Send using Push Max**を選択します。
 
-![Androidのプッシュメッセージのステップの配信設定タブに「Push Maxを使って送信する」というオプションがある。]({% image_buster /assets/img_archive/push_max_canvas.png %})
+![Androidプッシュメッセージステップの配信設定タブに「Push Maxを使用して送信」オプションがある。]({% image_buster /assets/img_archive/push_max_canvas.png %})
 
 {% endtab %}
 {% endtabs %}
@@ -74,7 +74,7 @@ Xiaomi、OPPO、およびVivoのような中国のOrigin al Equipment Manufactur
 
 デフォルトで、[有効時間] は最長の 28 日に設定されています。**設定**＞**ワークスペース設定**＞**プッシュ設定から**、すべての新しいAndroidプッシュメッセージのデフォルトTTLを減少させるか、Androidプッシュ通知を作成する際に、**設定**タブでメッセージごとに日数を構成することができる。
 
-![生存期間のフィールドが28日に設定されている。]({% image_buster /assets/img_archive/time_to_live.png %}){: style="max-width:60%"}
+![生存期間フィールドは28日に設定されている。]({% image_buster /assets/img_archive/time_to_live.png %}){: style="max-width:60%"}
 
 ## 知っておくべきこと
 

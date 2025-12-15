@@ -103,7 +103,7 @@ page_order: 2
 
 カタログが Braze にアップロードされた後、カタログアイテムの一部のプレビューを確認して、情報が正確にインポートされたことを確認してください。プレビューでは項目がランダムになっているかもしれないが、レコメンデーションエンジンの出力には影響しない。
 
-![Brazeでのカタログの例。]({% image_buster /assets/img/recs/catalog_items.png %})
+![Brazeのサンプルカタログ。]({% image_buster /assets/img/recs/catalog_items.png %})
 
 コンテンツカードキャンペーンを作成する。作成画面で、キャンペーンの送信先のユーザー、および表示するレシピと画像を決定する Liquid ロジックを入力します。このユースケースで、Braze はユーザーの `start_date` (または登録日) を取得し、現在の日付と比較します。日数の違いによって、送信されるコンテンツカードが決まります。
 
@@ -171,11 +171,11 @@ page_order: 2
 
 以下に例を示します。
 
-![コンポーザーでのクリックビヘイビアのブロックのサンプル。]({% image_buster /assets/img/recs/on_click_behavior.png %}){: style="max-width:60%;"}<br><br>
+![たとえば、コンポーザーでのクリックビヘイビアのブロックです。]({% image_buster /assets/img/recs/on_click_behavior.png %}){: style="max-width:60%;"}<br><br>
 
 **テスト」**タブに移動し、「**ユーザーとしてメッセージをプレビュー**」で**「カスタムユーザー**」を選択する。**カスタム属性**フィールドに日付を入力し、その日にサインアップしたユーザーに送信されるコンテンツカードをプレビューする。<br><br>
 
-!['start_date'.]({% image_buster /assets/img/recs/custom_attributes_test.png %} という名前のサンプルカスタム属性
+!['start_date'.]({% image_buster /assets/img/recs/custom_attributes_test.png %} という名前のカスタム属性の例
 {% endtab %}
 
 {% tab using Connected Content %}
@@ -328,6 +328,6 @@ Good places
 
 ユーザー端末でのレスポンシブの表示例については、以下のスクリーンショットを参照のこと。
 
-![最終コールの例で生成されたレストランリストのレンダリング。]({% image_buster /assets/img/recs/sample_response.png %}){: style="max-width:30%;"}
+![最後の呼び出しの例で生成されたレストランリストのレンダリング。]({% image_buster /assets/img/recs/sample_response.png %}){: style="max-width:30%;"}
 {% endtab %}
 {% endtabs %}

@@ -50,7 +50,7 @@ Braze との接続がすでに存在する場合は、宛先カードに**Activa
 
 ![]({% image_buster /assets/img/adobe/braze-destination-account.png %}){: style="max-width:60%"}
 
-### ステップ 3: 認証
+### ステップ 3:認証
 
 次に、**Authentication**ステップで、Braze 接続の詳細を入力します。
 - **Name**:今後この宛先を認識するために使用する名前を入力します。
@@ -61,7 +61,7 @@ Braze との接続がすでに存在する場合は、宛先カードに**Activa
 ![]({% image_buster /assets/img/adobe/braze-destination-authentication.png %}){: style="max-width:60%;"}
 
 ### ステップ 4: 宛先を作成する
-[**宛先を作成**] を選択します。宛先が作成されました。You can select **Save & Exit** to activate segments later or **Next** to continue the workflow and select segments to activate. 
+[**宛先を作成**] を選択します。宛先が作成されました。**Save & Exit** を選択してSegment s 以降を有効にするか、**Next** を選択してワークフローを続行し、Segment s を選択して有効にします。 
 
 ### ステップ 5: Segmentの有効化
 Adobe Real-Time CDP で使用しているデータをアクティブにするには、セグメントを Braze 宛先にマッピングします。
@@ -98,7 +98,7 @@ Adobe Experience Platform から Braze にオーディエンスデータを正�
 
 正しいマッピングは次のようになります。
 
-![宛先マッピング:IdentityMap:IDFA が IdentityMap:external_id に、IdentityMap:GAID が IdentityMap:external_id に、IdentityMap:Email が IdentityMap:external_id に、xdm:mobilePhone.number が CustomAttribute:PhoneNumber に、xdm: person.name.lastName が CustomAtrribute:LastName に、xdm:person.name.firstName が CustomAttribute:FirstName にマッピングされている]({% image_buster /assets/img/adobe/braze-destination-mapping-example.png %})
+![宛先マッピング:IdentityMap:IDFA m アプリed to IdentityMap:external_id, IdentityMap:GAID m アプリed to IdentityMap:external_id, IdentityMap:Eメールm アプリed to IdentityMap:external_id, xdm:mobilePhone.number m アプリed to CustomAttribute:PhoneNumber, xdm:person.name.lastName m アプリed to CustomAtrribute:LastName, xdm:<meta id="7"]({% image_buster /assets/img/adobe/braze-destination-mapping-example.png %})
 
 ## エクスポートされたデータ
 データが正常に Braze にエクスポートされたかどうかを確認するには、Braze アカウントをチェックします。Adobe Experience Platform Segmentは、`AdobeExperiencePlatformSegments`属性でBrazeにエクスポートされます。

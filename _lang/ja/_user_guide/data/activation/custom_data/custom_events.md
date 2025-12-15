@@ -72,7 +72,7 @@ search_rank: 2
 - [Web]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=web)
 - [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/analytics/#logging-custom-events)
 - [Unity]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=unity)
-- [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#tracking-custom-events)
+- [.NET MAUI (旧サマリン)]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#tracking-custom-events)
 - [Roku]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=roku)
 
 {% enddetails %}
@@ -103,13 +103,13 @@ search_rank: 2
 
 Braze はセグメンテーション用として、カスタムイベントが発生した回数と、各ユーザーの最終実行時刻を記録します。**Analytics**> **カスタムイベントレポート**に移動して、これらの分析を表示します。
 
-ダッシュボードの**Custom Events Report** ページで、各カスタムイベントの発生頻度を集約して表示できます。時系列にオーバーレイされた灰色の線は、キャンペーンが最後に送信された時刻を示します。これは、キャンペーンがカスタムイベントアクティビティにどのような影響を与えたかを表示するのに役立ちます。
+ダッシュボードの**Custom Events Report** ページで、各カスタムイベントの発生頻度を集約して表示できます。時系列に重ねられた灰色の線は、キャンペーンが最後に送信された時刻を示します。これは、キャンペーンがカスタムイベント活動にどのような影響を与えたかを表示するのに役立ちます。
 
-![カスタムイベントはカスタムイベントのトレンドを示すダッシュボードの s ページのグラフを数えます]({% image_buster /assets/img_archive/custom_event_analytics_example.png %} "custom_event_analytics_example.png")
+![ダッシュボードの [カスタムイベント] ページのカスタムイベント数グラフ (カスタムイベントの傾向を示す)]({% image_buster /assets/img_archive/custom_event_analytics_example.png %} "custom_event_analytics_example.png")
 
 **フィルター**を使用して、カスタムイベントを時間、月間平均ユーザー数 (MAU)、セグメント、または KPI 式別に分類することもできます。 
 
-![カスタムイベントグラフフィルターs]({% image_buster /assets/img/custom_events_report_filters.png %}){: style="max-width:40%;"}
+![カスタムイベントのグラフフィルター]({% image_buster /assets/img/custom_events_report_filters.png %}){: style="max-width:40%;"}
 
 {% alert tip %}
 [カスタム属性]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#integers) をインクリメントして、カスタムイベントに似たユーザアクションのカウンタを保持します。ただし、カスタム属性データを時系列で表示することはできません。時系列で分析する必要のないユーザーアクションは、この方法を使用して記録する必要があります。
@@ -157,11 +157,11 @@ Braze はセグメンテーション用として、カスタムイベントが�
 
 カスタムイベントプロパティを使用して、特定のキャンペーンまたはキャンバスの対象をさらに絞り込むことができます。例えば、eコマース・アプリケーションを持っていて、ユーザーがカートを放棄したときにメッセージを送りたい場合、`item price` のカスタムイベントプロパティを追加することで、ターゲットオーディエンスを改善し、キャンペーンのパーソナライゼーションを高めることができる。
 
-![放棄されたカードのカスタムイベントプロパティフィルター。2 つのフィルターs をAND 演算子と組み合わせて、このキャンペーンを100 ～200 ドルのアイテム価格でカードを放棄したユーザーに送信します]({% image_buster /assets/img_archive/customEventProperties.png %} "customEventProperties.png")
+![放置カードのカスタムイベントプロパティフィルタ。2 つのフィルターs をAND 演算子と組み合わせて、このキャンペーンを100 ～200 ドルのアイテム価格でカードを放棄したユーザーに送信します]({% image_buster /assets/img_archive/customEventProperties.png %} "customEventProperties.png")
 
 階層化されたカスタムイベントプロパティは[アクションベースの配信]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/)でもサポートされています。
 
-![放棄されたカードのカスタムイベントプロパティフィルター。カート内のいずれかの商品価格が 100 ドルを超える場合は、1 つのフィルターが選択されます。]({% image_buster /assets/img_archive/customEventPropertiesNested.png %} "customEventPropertiesNested.png")
+![放置カードのカスタムイベントプロパティフィルタ。カート内のいずれかの商品価格が 100 ドルを超える場合は、1 つのフィルターが選択されます。]({% image_buster /assets/img_archive/customEventPropertiesNested.png %} "customEventPropertiesNested.png")
 
 #### メッセージのパーソナライゼーション
 
@@ -215,9 +215,9 @@ Well done, hero! Talk to villagers for tips on how to beat levels faster and unl
 - 過去 Y 日間に、値 B のプロパティ A を持ついずれかの購入を行った。
 - 1～30日以内のセグメンテーション機能を追加。
 
-![Abandoned Cart' があり、プロパティが「itmes の数」で、過去30 暦日の1 回より2 回以上の値が設定されているフィルター群。]({% image_buster /assets/img/nested_object3.png %})
+![「放棄されたカート」があり、プロパティ「項目数」があり、過去30 暦日の1 回より2 回以上の数値が設定されているフィルターグループ。]({% image_buster /assets/img/nested_object3.png %})
 
-特定のイベントプロパティのデータは、カスタマーサクセスマネージャーによって有効にされた後にのみ記録されます。イベントプロパティは、その日付以降にのみ利用可能です。
+データは、有効にした後の特定のイベントプロパティについてのみ記録されます。イベントプロパティは、その日付からのみ使用できます。
 
 ##### データポイント
 
@@ -242,7 +242,7 @@ Well done, hero! Talk to villagers for tips on how to beat levels faster and unl
 
 イベントプロパティの値に基づいてセグメント化するには、次の2 つの方法があります。
 
-1. **30 日以内:**Braze サポート担当者は、Braze のセグメント内にある特定のイベントプロパティ値の頻度と新近度に基づいて、イベントプロパティのセグメンテーションができます。セグメント内のイベントプロパティを活用したい場合は、Braze アカウントエグゼクティブまたはカスタマーサクセスマネージャーにお問い合わせください。このオプションは、データの使用に影響を与えます。<br><br>
+1. **30 日以内:**イベントプロパティ セグメンテーションは、Braze Segments 内の特定のイベントプロパティの頻度と新旧に基づいて使用できます。このオプションは、データの使用に影響を与えます。<br><br>
 2. **30 日以内およびそれ以降:**短期と長期の両方のイベントプロパティセグメンテーションに対応する目的で、[セグメントエクステンション]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/)を使用できます。この機能は、過去2 年間に追跡されたカスタムイベントとイベントプロパティに基づいてユーザーをセグメント化します。このオプションは、データの使用には影響しません。
 
 お客様の特定のニーズに応じた最適なアプローチの推奨事項については、Braze カスタマーサクセスマネージャーにお問い合わせください。

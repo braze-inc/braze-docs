@@ -1,5 +1,5 @@
 ---
-nav_title: コンプライアンス文書
+nav_title: コンプライアンス・ドキュメント
 article_title: コンプライアンス文書
 page_order: 1
 layout: dev_guide
@@ -15,7 +15,7 @@ guide_top_text3: "<h2>How to find the relevant Compliance Documentation</h2><br>
 
 guide_menu_title: ""
 guide_menu_list:
-- name: SMSチャンネル
+- name: モバイルメッセージチャネル
   link: /docs/compliance_documentation_sms/
   image: /assets/img/braze_icons/channel-sms.svg
 - name: ウェブフック・チャンネル
@@ -27,4 +27,15 @@ guide_menu_list:
 - name: LINEチャネル
   link: /docs/compliance_documentation_line/
   image: /assets/img/braze_icons/channel-line.svg
+- name: Shopify 連携
+  link: /docs/compliance_documentation_shopify/
+  image: /assets/img/braze_icons/shopify.svg
+- name: オーディエンスの同期
+  link: /docs/compliance_documentation_audience_sync/
+  image: /assets/img/braze_icons/refresh-ccw-02.svg
+- name: メッセージアーカイブとフィールドレベルの暗号化
+  link: /docs/compliance_documentation_message_archiving_field_level_encryption/
+  image: /assets/img/braze_icons/clock-rewind.svg
 ---
+
+{% multi_lang_include braze_legal/english_language_governance.md %}

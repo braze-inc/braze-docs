@@ -5,8 +5,8 @@ article_title: 知っておくべきSMS用語
 alias: /sms_terms_to_know/
 
 layout: glossary_page
-glossary_top_header: "Terms to Know"
-glossary_top_text: "SMS–everyone has it and knows what it is. What they don't know is the nuance. Check out the following terms to learn more about SMS ecosystems, technologies, and processes."
+glossary_top_header: "知っておくべき用語"
+glossary_top_text: "SMS-誰もが持っているし、それが何であるかも知っている。彼らが知らないのはそのニュアンスだ。SMSのエコシステム、テクノロジー、プロセスについては、以下の用語を学習してほしい。"
 page_type: glossary
 description: "この用語集は、知っておくべきさまざまなSMS用語を定義しています。"
 channel: SMS 
@@ -31,11 +31,11 @@ glossaries:
   - name: メッセージサービス
     description: Brazeを使用してSMSメッセージを送信するために使用される長いコード、短いコード、および英数字IDのコレクション。
   - name: キーワード
-    description: "短い単語は、事前に定義されたSMSプログラムとやり取りするため、または特定のプログラムやコード上のすべてのプログラムからのオプトアウトを要求するために、短いコードまたは長いコードに送信されます。たとえば、<code>STOP</code>です。キーワードは <br> - 英数字である。 <br> スペースがない <br> - 10 文字未満でなければなりません。<br> <br> 特定のキーワードと短いコードの組み合わせは、一度に1つのアクティブなプログラムでのみ使用できます。入力したキーワードが他のプログラムによって既に使用されている場合、検証エラーが表示されます。<br> <br> すべてのSMSコンテンツプロバイダーが遵守しなければならない2つの必須キーワードカテゴリがあります:<code>STOP</code>と<code>HELP</code>。"
+    description: "短い単語は、事前に定義されたSMSプログラムとやり取りするため、または特定のプログラムやコード上のすべてのプログラムからのオプトアウトを要求するために、短いコードまたは長いコードに送信されます。例えば、<code>STOP</code>。キーワードは <br> - 英数字である。 <br> スペースがない <br> - 10 文字未満でなければなりません。<br> <br> 特定のキーワードと短いコードの組み合わせは、一度に1つのアクティブなプログラムでのみ使用できます。入力したキーワードが他のプログラムによって既に使用されている場合、検証エラーが表示されます。<br> <br> すべてのSMSコンテンツプロバイダーが遵守しなければならない2つの必須キーワードカテゴリがあります:<code>STOP</code> そして <code>HELP</code>。"
   - name: 必須キーワード HELP
     description: SMSキャンペーンマネージャープラットフォームで作成される各プログラムについて、このキーワードのコンテンツを提供する必要があり、SMSトラフィックが送受信される国または地域ごとのベストプラクティスおよびキャリアコンプライアンスを満たす必要があります。ほとんどの場合、このコンテンツにはSMSプログラムの簡単な説明と、オプトアウトの方法が記載されている必要があります。
   - name: グローバルSTOPキーワード
-    description: バリエーションには、<code>STOP</code>、<code>END</code>、<code>QUIT</code>、<code>UNSUBSCRIBE</code>、<code>CANCEL</code>、<code>STOPALL</code>などがあります。これらは、<code>Global-Stop-Keywords</code>と呼ばれます。これらのキーワードのいずれかがショートコードまたはロングコードにテキスト送信されると、そのコードに関連付けられているすべてのアクティブなSMSプログラムからモバイル番号（発信元のモバイル電話番号）がオプトアウトされます。
+    description: バリエーションとして、次のものがあります。 <code>STOP</code>、<code>END</code>、<code>QUIT</code>、<code>UNSUBSCRIBE</code>、<code>CANCEL</code>、<code>STOPALL</code>。これらは次のように呼ばれます <code>Global-Stop-Keywords</code>。これらのキーワードのいずれかがショートコードまたはロングコードにテキスト送信されると、そのコードに関連付けられているすべてのアクティブなSMSプログラムからモバイル番号（発信元のモバイル電話番号）がオプトアウトされます。
   - name: バニティコード
     description: バニティショートコードとは、ブランドが明確に選択した 5 〜 6 桁の電話番号です。バニティショートコードはブランド化されており、消費者が覚えやすいです。
   - name: 共有ショートコード

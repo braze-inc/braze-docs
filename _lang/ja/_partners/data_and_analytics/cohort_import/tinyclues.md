@@ -31,9 +31,9 @@ Braze で [**パートナー連携**] > [**テクノロジーパートナー**] 
 
 ここで、RESTエンドポイントを見つけて、Brazeデータインポートキーを生成します。キーが生成されたら、新しいキーを作成するか、既存のキーを無効にできます。<br><br>![]({% image_buster /assets/img/tinyclues/tinyclues_6.png %}){: style="max-width:90%;"} 
 
-統合を完了するには、データインポートキーとRESTエンドポイントをTinycluesデータオペレーションチームに提供する必要がある。その後、Tinycluesが接続を確立し、セットアップ完了後に連絡を取る。
+統合を完了するには、データインポートキーとREST エンドポイントをTinyclues データオペレーションチームに提供する必要があります。設定が完了すると、Tinyclues が接続を確立し、連絡を取ります。
 
-### ステップ2:Tinycluesプラットフォームからキャンペーンをエクスポートする
+### ステップ 2:Tinycluesプラットフォームからキャンペーンをエクスポートする
 
 Braze で使用する Tinyclues ユーザーのコホートを作成するには、まず Tinyclues プラットフォームからエクスポートする必要があります。
 
@@ -41,12 +41,12 @@ Tinyclues でエクスポートするキャンペーンを選択し、[**Export 
 
 ![]({% image_buster /assets/img/tinyclues/tinyclues_1.png %})
 
-### ステップ 3: Tinycluesカスタムオーディエンスからセグメントを作成する
+### ステップ 3:Tinycluesカスタムオーディエンスからセグメントを作成する
 
 Brazeで「**セグメント**」に移動し、Tinycluesコホートセグメントに名前を付け、フィルターとして**Tinycluesコホートを**選択する。ここから、どのTinycluesコホートを含めるかを選択できる。Tinycluesコホートセグメントを作成した後、キャンペーンやキャンバスを作成する際に、オーディエンスフィルターとして選択することができる。
 
 ![]({% image_buster /assets/img/tinyclues/tinyclues_3.png %}){: style="max-width:90%;"}<br><br>
-![Braze セグメントビルダーで、ユーザー属性フィルター「Tinyclues cohort」が「次を含む」と「Primary cohort」に設定されている。]({% image_buster /assets/img/tinyclues/tinyclues_4.png %}{: style="max-width:90%;"}
+![Braze セグメントビルダーで、ユーザー属性フィルター「Tinyclues cohort」が「次を含む」と「Primary cohort」に設定されている。]({% image_buster /assets/img/tinyclues/tinyclues_4.png %}){: style="max-width:90%;"}
 
 コーホートの所在がわからず困っている？「[トラブルシューティング](#troubleshooting)」セクションでガイダンスをご確認ください。 
 

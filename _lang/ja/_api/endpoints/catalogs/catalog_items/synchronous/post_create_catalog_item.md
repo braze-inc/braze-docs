@@ -1,5 +1,5 @@
 ---
-nav_title: "POST:カタログアイテムの作成"
+nav_title: "POST:カタログアイテムを作成"
 article_title: "POST:カタログアイテムの作成"
 search_tag: Endpoint
 page_order: 5

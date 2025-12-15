@@ -50,8 +50,6 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/list?page
 ## 応答
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "canvases" : [
   	{

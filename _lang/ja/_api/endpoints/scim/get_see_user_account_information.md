@@ -1,5 +1,5 @@
 ---
-nav_title: "取得:既存のダッシュボードユーザーアカウントの検索"
+nav_title: "取得:現行のダッシュボード ユーザー口座を検索する"
 article_title: "取得:既存のダッシュボードユーザーアカウントの検索"
 alias: /get_see_user_account_information/
 search_tag: Endpoint
@@ -15,7 +15,7 @@ description: "この記事では、「リソース ID による既存のダッ�
 /scim/v2/Users/{id}
 {% endapimethod %}
 
-> このエンドポイントを使用して、SCIM [`POST`]({{site.baseurl}}/api/endpoints/scim/post_create_user_account/) メソッドによって返されるリソース `id` を指定して、既存のダッシュボードユーザーアカウントを検索します。 
+> このエンドポイントを使用して、SCIM [`POST`]({{site.baseurl}}/api/endpoints/scim/post_create_user_account/) メソッドによって返されるリソース `id` を指定して、既存のダッシュボードユーザーアカウントを検索します。
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#3df40764-8f74-4532-aed3-ab8a6cb92122 {% endapiref %}
 
@@ -79,7 +79,7 @@ curl --location --request GET 'https://rest.iad-01.braze.com/scim/v2/Users/dfa24
                                 "permissions": ["basic_access","publish_cards"]
                             }
                         ]
-                    } 
+                    }
                 ]
             }
         ],
@@ -91,11 +91,11 @@ curl --location --request GET 'https://rest.iad-01.braze.com/scim/v2/Users/dfa24
                 "team": [
                     {
                          "teamId": "241adcd25789fabcded",
-                         "teamName": "Test Team",                  
+                         "teamName": "Test Team",
                          "teamPermissions": ["admin"]
                     }
                 ]
-            } 
+            }
         ]
     }
 }

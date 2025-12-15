@@ -21,7 +21,7 @@ Braze とZendesk のサーバー間統合により、以下を利用できます
 | 必要条件 | 説明 |
 |---|---|
 | Zendeskアカウント | このパートナーシップを活用するには、[Zendesk 管理者アカウント](https://`<your-zendesk-instance>`.zendesk.com/agent/admin)が必要です。 |
-| Zendesk APIトークン | Braze から Zendesk チケットエンドポイントにリクエストを送信するには、Zendesk API トークン ](https://support.zendesk.com/hc/en-us/articles/226022787-Generating-a-new-API-token-) が必要です。 |
+| Zendesk APIトークン | BrazeからZendeskチケットエンドポイントにリクエストを送信するには、Zendesk [API トークン](https://support.zendesk.com/hc/en-us/articles/226022787-Generating-a-new-API-token-)が必要。 |
 | 共通識別子（推奨） | BrazeとZendesk間で[共通の識別子を](#common-identifier)使用することを推奨する。 |
 | BrazeのAPIキー | ZendeskからBrazeエンドポイントにリクエストを送信するには、Braze APIキーが必要である。使用するAPIキーが、Zendesk webhookが使用するBrazeエンドポイントに対して正しい権限を持っていることを確認する。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -43,7 +43,7 @@ Webhookに以下のフィールドを記入する：
 
 #### リクエストヘッダーとメソッド
 
-Zendeskは認証のためのHTTPヘッダーとHTTPメソッドを要求する。**設定]**タブで、<email_address> を Zendesk 管理者のメールアドレスに、<api_token> を Zendesk API トークンに置き換える。
+Zendeskは認証のためのHTTPヘッダーとHTTPメソッドを要求する。**設定**タブで、<email_address> を Zendesk 管理者のメールに、<api_token> を Zendesk API トークンに置き換える。
 
 - **HTTPメソッド**：POST
 - **リクエストヘッダー**:
@@ -117,7 +117,7 @@ Braze と Zendesk の間に共通の識別子がある場合は、それを `req
 1. **Admin Center** で、サイドバーにある [**Objects and rules**] をクリックし、**[Business rules] > [Triggers]** を選択します。<br><br>
 2. ［**トリガーを追加**] を選択します。<br><br>
 3. トリガーに名前を付け、カテゴリーを選択する。<br><br>
-4. [**条件の追加**] を選択して、Webhook をトリガーする条件を設定します。たとえば、「Status category changed to closed」や「Status category changed to solved」などです。![]({% image_buster /assets/img_archive/zendesk1.png %}){: style="max-width:70%;"}<br><br>
+4. [**条件の追加**] を選択して、Webhook をトリガーする条件を設定します。例えば、「ステータス・カテゴリーがクローズに変更されました」や「ステータス・カテゴリーが解決済みに変更されました」などである。![]({% image_buster /assets/img_archive/zendesk1.png %}){: style="max-width:70%;"}<br><br>
 5. [**アクションの追加**] を選択し、[**アクティブな webhook に通知**] を選択し、前のステップで作成した Webhook をドロップダウンから選択します。<br><br>
 6. Brazeのエンドポイントに適合するようにJSON本体を定義し、Zendeskの変数プレースホルダを使用して、関連するフィールドに動的に入力する。<br>![]({% image_buster /assets/img_archive/zendesk3.png %}){: style="max-width:70%;"}<br><br>
 7. [**作成**] を選択します。<br><br>

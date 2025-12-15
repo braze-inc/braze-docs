@@ -10,13 +10,13 @@ description: "この記事では、「ユーザーの削除」Braze エンドポ
 ---
 {% api %}
 # ユーザーを削除する
-{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
+{% apimethod postcore_endpoint|https://www.braze.com/docs/core_endpoints %}。
 /users/delete
 {% endapimethod %}
 
 > 既知のユーザー識別子を指定してユーザー・プロファイルを削除するには、このエンドポイントを使用する。
 
-1 つのリクエストには、最大 50 個の `external_ids`、`user_aliases`、`braze_ids`、`email_addresses`、または `phone_numbers` を含めることができます。単一のリクエストに含めることができるのは、`external_ids`、`user_aliases`、`braze_ids`、`email_addresses`、または`phone_numbers` のいずれか1つだけです。 
+1 つのリクエストには、最大 50 個の `external_ids`、`user_aliases`、`braze_ids`、`email_addresses`、または `phone_numbers` を含めることができます。単一のリクエストに含めることができるのは、`external_ids`、`user_aliases`、`braze_ids`、`email_addresses`、または`phone_numbers` のいずれか1つだけです。
 
 API 経由でユーザーを一括削除しても解決できないユースケースがある場合は、[Braze サポートチーム]({{site.baseurl}}/user_guide/administrative/access_braze/support/)にお問い合わせください。
 
@@ -105,8 +105,6 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/delete' \
 ## 応答
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
 {
   "deleted" : (required, integer) number of user IDs queued for deletion
 }

@@ -83,13 +83,13 @@ Braze は、**Shopify** からのLiquid 5 までのLiquid をサポートしま�
 
 各 Liquid 要素は色分けされているので、Liquid エディターではこれらを一目で区別することができます。
 
-\![]({% image_buster /assets/img/liquid_color_code.png %})
+![]({% image_buster /assets/img/liquid_color_code.png %})
 
 #### 入力予測 Liquid
 
 また、パーソナライズされたメッセージを作成する際に、カスタム属性や属性名などに入力予測 Liquid を利用することもできます。
 
-\![]({% image_buster /assets/img/liquid_auto_complete.gif %}){: style="max-width:70%;"}
+![]({% image_buster /assets/img/liquid_auto_complete.gif %}){: style="max-width:70%;"}
 
 ## 知っておくべき用語
 
