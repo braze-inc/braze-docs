@@ -35,6 +35,8 @@ A base template is any template that the Decisioning Agent might use for orchest
 
 Ensure all API Triggered Campaigns allow users to become re-eligible within **15 minutes**.
 
+![Decisioning Pro Diagram]({% image_buster /assets/img/decisioning_studio/decisioning_studio_frequency_cap.png %})
+
 {% alert note %}
 While the Decisioning Studio agent will never send the same campaign more than once a day, you will want to have the ability to send the same campaigns multiple times in a day for testing purposes.
 {% endalert %}
@@ -48,6 +50,9 @@ Here are some examples:
 #### Example #1: Email Campaign
 
 Suppose the Decisioning Studio agent is optimizing an email campaign. Supposing the agent is optimizing for choice of templates and Call to Action (CTA) message, then an API-triggered campaign should be created for each template, and the CTA section of one template might look like:
+
+
+.v![Decisioning Pro Diagram]({% image_buster /assets/img/decisioning_studio/decisioning_email_example.png %})
 
 {% raw %}
 ```
