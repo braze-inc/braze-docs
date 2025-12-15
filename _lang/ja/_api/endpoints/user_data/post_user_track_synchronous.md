@@ -10,8 +10,8 @@ description: "この記事では、「ユーザー同期追跡」Braze エンド
 ---
 {% api %}
 # ユーザーを追跡する（同期）
-{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
-/users/track/sync
+{% apimethod postcore_endpoint|https://www.braze.com/docs/core_endpoints %}。
+/ユーザー/トラッキング/同期
 {% endapimethod %}
 
 > このエンドポイントを使用して、カスタムイベントと購入を記録し、ユーザープロファイル属性を同期的に更新します。このエンドポイントは、ユーザープロファイルを非同期に更新する [`/users/track` エンドポイント]({{site.baseurl}}/api/endpoints/user_data/post_user_track)と同様に機能します。
@@ -22,9 +22,9 @@ description: "この記事では、「ユーザー同期追跡」Braze エンド
 
 ## 同期APIコールと非同期APIコール
 
-非同期呼び出しでは、API はステータスコード `201` を返し、リクエストが正常に受信、理解、受け入れられたことを示します。ただし、これは、リクエストが完全に完了したわけではありません。
+非同期呼び出しでは、APIはステータスコード`201` を返し、リクエストが正常に受信、理解、受諾されたことを示す。ただし、これは、リクエストが完全に完了したわけではありません。
 
-同期呼び出しでは、API は、リクエストが正常に受信され、理解され、受け入れられ、完了したことを示すステータスコード `201` を返します。呼び出し応答には、操作の結果として、選択されたユーザープロファイルのフィールドが表示されます。
+同期呼び出しでは、APIはステータスコード`201` を返し、リクエストの受信、理解、受諾、完了に成功したことを示す。コールレスポンスは、操作の結果として、選択されたユーザープロファイル フィールドを示す。
 
 このエンドポイントは、`/users/track` エンドポイントよりも低いレート制限を持っている（下記の[レート制限を](#rate-limit)参照）。各 `/users/track/sync` リクエストには、1つのイベントオブジェクト、1つの属性オブジェクト、**また**は1つの購入オブジェクトのみを含めることができます。このエンドポイントは、同期呼び出しが必要なユーザープロファイルの更新用に予約する必要があります。健全な実装のためには、`/users/track/sync` と`/users/track` を併用することをお勧めします。
 
@@ -58,7 +58,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 ### リクエストパラメーター
 
 {% alert important %}
-次のテーブルに記載されている各リクエストコンポーネントには、`external_id`、`user_alias`、`braze_id`、`email`、または `phone` のいずれかが必要です。
+以下の表に列挙されている各リクエストコンポーネントに対して、`external_id` 、`user_alias` 、`braze_id` 、`email` 、`phone` のいずれかを含める必要がある。
 {% endalert %}
 
 | パラメーター | required | データ型 | 説明 |
@@ -74,14 +74,14 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 ### 成功のメッセージ
 
-成功したメッセージは、更新されたユーザープロファイルデータに関する情報を含む、以下のレスポンスを返します。
+メッセージに成功すると、Brazeが更新したユーザープロファイル・データに関する情報を含む以下のレスポンシブが返される。
 
 ```json
 {
     "users": (optional, object), the identifier of the user in the request. May be empty if no users are found and _update_existing_only key is set to true,
-        "custom_attributes": (optional, object), the custom attributes as a result of the request. Only custom attributes from the request will be listed,
-        "custom_events": (optional, object), the custom events as a result of the request. Only custom events from the request will be listed,
-        "purchase_events": (optional, object), the purchase events as a result of the request. Only purchase events from the request will be listed,
+        "custom_attributes": (optional, object), the custom attributes as a result of the request. Braze lists only custom attributes from the request,
+        "custom_events": (optional, object), the custom events as a result of the request. Braze lists only custom events from the request,
+        "purchase_events": (optional, object), the purchase events as a result of the request. Braze lists only purchase events from the request,
     },
     "message": "success"
 ```
@@ -146,7 +146,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track/sync' 
         }
     ],
     "message": "success"
-} 
+}
 ```
 
 ### Eメールでカスタムイベントを更新する
@@ -201,7 +201,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track/sync' 
         }
     ],
     "message": "success"
-} 
+}
 ```
 
 ### ユーザーエイリアスで購入イベントを更新する
@@ -215,8 +215,8 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track/sync' 
 --data-raw '{
   "purchases" : [
     {
-      "user_alias" : { 
-          "alias_name" : "device123", 
+      "user_alias" : {
+          "alias_name" : "device123",
           "alias_label" : "my_device_identifier"
       }
       "app_id" : "11ae5b4b-2445-4440-a04f-bf537764c9ad",
@@ -225,13 +225,13 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track/sync' 
       "price" : 219.98,
       "time" : "2022-12-06T19:20:45+01:00",
       "properties" : {
-          "products" : [ 
+          "products" : [
             {
               "name": "Monitor",
               "category": "Gaming",
               "product_amount": 19.99
             },
-            { 
+            {
               "name": "Gaming Keyboard",
               "category": "Gaming ",
               "product_amount": 199.99
@@ -249,8 +249,8 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track/sync' 
 {
     "users": [
         {
-          "user_alias" : { 
-            "alias_name" : "device123", 
+          "user_alias" : {
+            "alias_name" : "device123",
             "alias_label" : "my_device_identifier"
           },
           "purchase_events": [
@@ -264,18 +264,18 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track/sync' 
         }
     ],
     "message": "success"
-} 
+}
 ```
 
 ## よくある質問
 
 ### 非同期エンドポイントと同期エンドポイントのどちらを使うべきか？
 
-ほとんどのプロファイル更新では、`/users/track` エンドポイントが最適に機能します。これは、レート制限が高く、柔軟に要求を一括処理できるためです。ただし、`/users/track/sync` エンドポイントは、同じユーザーに対する短時間の連続するリクエストによって競合が発生している場合に便利です。
+ほとんどのプロファイル更新では、`/users/track` のエンドポイントが、レート制限が高く、リクエストをバッチ処理できる柔軟性があるため、最適である。ただし、`/users/track/sync` エンドポイントは、同じユーザーに対する短時間の連続するリクエストによって競合が発生している場合に便利です。
 
 ### レスポンスタイムは`/users/track` エンドポイントと異なるか？
 
-同期呼び出しの場合、API はリクエストが完了するまで応答を返すのを待ちます。その結果、同期要求は `/users/track` への非同期要求よりも平均して時間がかかります。大半のリクエストでは、数秒以内にレスポンスが返ってきます。
+同期呼び出しでは、APIはBrazeがリクエストを完了するまで待ってレスポンスを返す。その結果、同期リクエストは、非同期リクエストよりも平均して、`/users/track` 。大半のリクエストでは、数秒以内にレスポンスが返ってきます。
 
 ### 複数のリクエストを同時に送信できますか？
 
