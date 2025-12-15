@@ -23,4 +23,7 @@ description: "Braze SDKのデータ収集を管理する方法を学習する。
 {% multi_lang_include developer_guide/swift/analytics/managing_data_collection.md %}
 {% endsdktab %}
 
+{% sdktab web %}
+{% multi_lang_include developer_guide/web/analytics/managing_data_collection.md %}
+{% endsdktab %}
 {% endsdktabs %}
