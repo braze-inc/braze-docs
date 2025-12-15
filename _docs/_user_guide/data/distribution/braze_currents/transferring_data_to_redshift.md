@@ -19,5 +19,3 @@ This is only one of many options you can choose from when it comes to transferri
 {% endalert %}
 
 {% markdown_embed https://raw.githubusercontent.com/Appboy/currents-examples/master/redshift-s3-loader/README.md %}
-
-{% multi_lang_include deprecations/braze_sdk/news_feed.md status="Deprecated" %}
