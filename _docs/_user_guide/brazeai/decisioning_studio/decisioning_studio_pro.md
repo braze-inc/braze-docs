@@ -50,5 +50,5 @@ This guide explains the most common integration patterns. Information Security w
 1. [Design your agent]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_pro/design_your_agent/)
 2. [Set Customer Context]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_pro/set_customer_context/)
 3. [Configure Orchestration]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_pro/configure_orchestration/)
-4. [Create the Feedback Loop]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_pro/create_feedback_loop/)
+4. [Close the AI Decisioning Loop]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_pro/create_feedback_loop/)
 

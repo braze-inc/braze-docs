@@ -1,11 +1,11 @@
 ---
 page_order: 2.4
-nav_title: Create the Feedback Loop
-article_title: Create the Feedback Loop
-description: "Learn how to create the feedback loop for Decisioning Studio Pro agents to enable self-learning."
+nav_title: Close the AI Decisioning Loop
+article_title: Close the AI Decisioning Loop
+description: "Learn how to close the AI decisioning loop for Decisioning Studio Pro agents to enable self-learning."
 ---
 
-# Create the Feedback Loop
+# Close the AI Decisioning Loop
 
 > Finally, while all customer data is important for the agent (and for information on how to configure, refer back to [Set Customer Context]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_pro/set_customer_context/)), the *most important data assets* are those that tell the agent what happened after customer engagement decisions were sent.
 

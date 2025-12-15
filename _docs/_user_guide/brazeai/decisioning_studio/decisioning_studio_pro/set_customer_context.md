@@ -70,7 +70,7 @@ In order to effectively personalize customer engagement, agents need to understa
 
 The following customer data assets are important to consider: 
 
-* **[Required]** Conversions – needed to train AI models and calculate the success metric. Should include the value of each conversion (e.g., revenue) if relevant. This is especially important for establishing the self-learning feedback loop for agents. For more information on how to properly validate, consider the [Create the Feedback Loop]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_pro/create_feedback_loop/) section.
+* **[Required]** Conversions – needed to train AI models and calculate the success metric. Should include the value of each conversion (e.g., revenue) if relevant. This is especially important for establishing the self-learning feedback loop for agents. For more information on how to properly validate, consider the [Close the AI Decisioning Loop]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_pro/create_feedback_loop/) section.
 
 * **[Required]** Activation and engagement data – what was actually sent through each channel based on Decisioning Studio's recommendations and any subsequent customer actions associated with the triggered marketing event (e.g. send, open, click).
 
