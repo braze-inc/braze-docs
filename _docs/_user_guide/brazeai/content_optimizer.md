@@ -26,7 +26,7 @@ Content Optimizer is a Canvas step that lets you define message components to te
 
 Content Optimizer uses a non-contextual [multi-armed bandit](https://en.wikipedia.org/wiki/Multi-armed_bandit) algorithm to allocate more sends to high-performing variants and reduce allocation to underperforming ones. Over time, this results in continuous improvement of your message content, with minimal manual intervention.
 
-Content Optimizer is similar to the Message step in Canvas, with features like Quiet Hours, [Intelligent Timing]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing), and event logging. You can configure a Content Optimizer step by creating a base message and defining which content components (such as subject line, body text, or call-to-action) to optimize. Variants for each component can be generated with AI or entered manually, and Liquid tags must be added to the base message to map components into the message content.
+Content Optimizer is similar to the Message step in Canvas, with features like quiet hours, [Intelligent Timing]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing), and event logging. You can configure a Content Optimizer step by creating a base message and defining which content components (such as subject line, body text, or call-to-action) to optimize. Variants for each component can be generated with AI or entered manually, and Liquid tags must be added to the base message to map components into the message content.
 
 Each user receives one message per entry into the Content Optimizer step. Re-entries are treated as new, with no memory of previous variants.
 
