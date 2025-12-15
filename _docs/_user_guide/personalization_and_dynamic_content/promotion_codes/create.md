@@ -80,7 +80,7 @@ To update a list, select one of your existing lists. You can change the name, de
 Promotion codes can't be deleted.
 {% endalert %}
 
-### Modifying incorrect promotion code list 
+### Modifying an incorrect promotion code list 
 
 If you've uploaded a CSV file with the incorrect promotion codes and selected **Save list**, you can resolve this by either method:
 
