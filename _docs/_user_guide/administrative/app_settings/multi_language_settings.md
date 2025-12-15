@@ -1,14 +1,14 @@
 ---
-nav_title: Multi-Language settings
-article_title: Multi-Language Settings
+nav_title: Multi-language settings
+article_title: Multi-language Settings
 alias: "/multi_language_support/"
 page_order: 5.5
-description: "This article provides an overview of multi-Language settings in the Braze dashboard and how to use locales in your messaging."
+description: "This article provides an overview of multi-language settings in the Braze dashboard and how to use locales in your messaging."
 ---
 
-# Multi-Language settings
+# Multi-language settings
 
-> The Multi-Language feature allows you to use [translation tags]({{ site.baseurl }}/user_guide/engagement_tools/messaging_fundamentals/localization/locales) to target users in different languages and locations all within a single message.
+> The multi-language feature allows you to use [translation tags]({{ site.baseurl }}/user_guide/engagement_tools/messaging_fundamentals/localization/locales) to target users in different languages and locations all within a single message.
 
 {% multi_lang_include locales.md section="Prerequisites" %}
 
@@ -64,4 +64,3 @@ Translation files are stored at a campaign level, meaning each message variant m
 #### Does the locale name have to follow a specific pattern or format?
 
 No. You can use your preferred naming convention. The locale name is used when selecting the locale in the editor and will be in the headings of the file you download with translation IDs.
-

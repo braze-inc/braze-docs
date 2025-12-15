@@ -82,15 +82,15 @@ Once sent, the dashboard provides dynamic analytics per country and within user-
 
 ## Sending translated messages
 
-To send personalized messages based on a user's language, locale, or custom attributes, use one of the following methods
+To send personalized messages based on a user's language, locale, or custom attributes, use one of the following methods.
 
-### Translation Liquid Tags (Recommended) {#translation-liquid-tag}
+### Translation Liquid tags (recommended) {#translation-liquid-tag}
 
-Braze supports a {% raw %}`{% translation salutation %}Hello!{% endtranslation %}`{% endraw %} liquid tag to easily target users in different languages using a single message. 
+Braze supports a {% raw %}`{% translation salutation %}Hello!{% endtranslation %}`{% endraw %} Liquid tag to target users in different languages with a single message. 
 
-For a full walkthrough, refer to the [guide on using translation tags]({{ site.baseurl }}/user_guide/engagement_tools/messaging_fundamentals/localization/locales).
+For a full walkthrough, refer to the [guide on using translation tags]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales).
   
-### Alternative Approaches
+### Alternative approaches
 
 {% tabs local %}
 {% tab Custom Liquid %}

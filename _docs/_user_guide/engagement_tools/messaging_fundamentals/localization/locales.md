@@ -9,17 +9,17 @@ description: "This article provides steps on how to use locales in your messages
 
 # Locales in messages
 
-
+> After adding locales to your workspace, you can target users in different languages all within a single push, email, banner, or in-app message.
 
 {% multi_lang_include locales.md section="Prerequisites" %}
 
 ## Using locales
 
-### 1. Set up locales in your workspace {#workspace-setup}
+### Step 1: Set up locales in your workspace {#workspace-setup}
 
-Before locales and translation tags can be used, you must first [add locales to your workspace]({{ site.baseurl }}/user_guide/administrative/app_settings/multi_language_settings).
+Before you can use locales and translation tags, you must first [add locales to your workspace]({{site.baseurl}}/user_guide/administrative/app_settings/multi_language_settings).
 
-### 2. Add translation liquid tags to your message {#add-translation-tags}
+### Step 2: Add translation liquid tags to your message {#add-translation-tags}
 
 Add translation tags {% raw %}`{% translation your_id_here %}` and `{% endtranslation %}`{% endraw %} to wrap all text, image, or link URLs that you will be translating.
 
@@ -28,6 +28,7 @@ Each translation should have a unique `id`. For example, when translating a simp
 {% raw %}`{% translation greeting %}Hello!{% endtranslation}`{% endraw %}
 
 #### Localizing HTML blocks
+
 A more complicated paragraph may have multiple translation tags ("offer_text" and "offer_amount"):
 
 {% raw %}
@@ -45,59 +46,56 @@ Wrapping large HTML blocks may have unintended consequences related to styleshee
 
 To localize anchor tag links, be sure to wrap **only the language-specific parts** and not the entire `href` URL attribute. If you wrap the entire URL, link templating may not function correctly.
 
+##### Correct usage
 
-**Correct Usage**
 {% raw %}
 ```
 <a href="https://www.braze.com/{% translation link_href %}en{% endtranslation %}/page"></a>
 ```
 {% endraw %}
 
-**Incorrect Usage**
+##### Incorrect usage
+
 {% raw %}
 ```
 <a href="{% translation link_href %}https://www.braze.com/en/page{% endtranslation %}"></a>
 ```
 {% endraw %}
 
-### 3. Choose message locales {#choose-locales}
+### Step 3: Choose message locales {#choose-locales}
 
-Once your translation tags are in the message choose your locales for this message.
+After your translation tags are in the message, go to the message's multi-language settings and select one or more locales to translate for this message.
 
-In the dropdown, select one or more locales which you plan to translate.
-
-![List of locales][todo]
-
-To access this menu, go to the message's Multi-Language setting:
+![Multi-language settings with a dropdown field to select locales.]({% image_buster /assets/img/multi-language_support/manage_language_dropdown.png %}){: style="max-width:80%;"}
 
 {% tabs %}
 {% tab Email %}
 Select **Multi-Language** from the Content menu when editing your message.
 
-![][todo]
+![Multi-language settings for email.]({% image_buster /assets/img/multi-language_support/email_multi_language.png %}){: style="max-width:45%;"}
 
 {% endtab %}
 
 {% tab Push %}
 Select **Manage Languages** when editing your message.
 
-![][todo]
+![Multi-language settings for push.]({% image_buster /assets/img/multi-language_support/push_manage_languages.png %})
 
 {% endtab %}
 
-{% tab In-App Message %}
+{% tab In-app message %}
 {% subtabs %}
 {% subtab Drag-and-Drop Editor %}
 Select **Manage Languages** at the bottom of the **Build** section.
 
-![][todo]
+![Multi-language settings for in-app drag-and-drop messages.]({% image_buster /assets/img/multi-language_support/iam_dnd_manage_languages.png %}){: style="max-width:45%;"}
 
 {% endsubtab %}
-{% subtab Traditional Editor %}
+{% subtab Traditional editor %}
 
 Select **Manage Languages** when editing your message.
 
-![][todo]
+![Multi-language settings for in-app HTML messages.]({% image_buster /assets/img/multi-language_support/iam_html_manage_languages.png %})
 
 {% endsubtab %}
 {% endsubtabs %}
@@ -105,24 +103,27 @@ Select **Manage Languages** when editing your message.
 
 {% tab Banner %}
 Select **Manage Languages** when editing your message.
+
+![Multi-language settings for banners.]({% image_buster /assets/img/multi-language_support/banner_manage_languages.png %})
+
 {% endtab %}
+{% endtabs %}
 
-### 4. Download CSV template {#download-csv}
+### Step 4: Download CSV template {#download-csv}
 
-Once you've selected your locales, download a CSV template containing a matrix of translation IDs and locales selected.
+After selecting your locales, select **Download template** to download a CSV template containing a matrix of your selected translation IDs and locales.
 
-![Example CSV][todo]
+![Example CSV for en, fr, and es locales.]({% image_buster /assets/img/multi-language_support/example_translation_csv.png %}){: style="max-width:70%;"}
 
-
-### 5. Upload a completed CSV {#upload-csv}
+### Step 5: Upload a completed CSV {#upload-csv}
 
 {% alert important %}
 Any changes to the IDs or locales in the CSV file will not automatically update in your message. To update the translations, update the CSV file and re-upload the file.
 {% endalert %}
 
-The completed CSV is in the following format:
+Here is the format for an example completed CSV:
 
-```csv
+```
 Variant1,,,,
 ,Translation tags,en,es,fr
 title,We noticed you've left something behind,We noticed you've left something behind,Notamos que has dejado algo atrás,Nous avons remarqué que vous avez oublié quelque chose derrière vous
@@ -131,13 +132,11 @@ offer_amount,10% Off,10% Off,10% de Descuento,10 % de réduction
 cta,CHECK OUT NOW,CHECK OUT NOW,VERIFICAR AHORA,VÉRIFIER MAINTENANT
 ```
 
-### 6. Preview Locales {#preview-locales}
+### Step 6: Preview locales {#preview-locales}
 
-When previewing your message, choose the **Multi-Language User** option from the "Preview as User" dropdown.
+When previewing your message, select the **Multi-Language User** option from the **Preview as User** dropdown. This lets you switch between different locale definitions to preview all translations of your message.
 
-This lets you switch between different locale definitions to preview all translations of your message.
-
-![locale previews][]
+![Locale previews]({% image_buster /assets/img/multi-language_support/multi_language_user_preview.png %})
 
 {% alert tip %}
 Check out our [Translation API]({{site.baseurl}}/api/endpoints/translations) to manage and update translations in your campaigns and Canvases.
