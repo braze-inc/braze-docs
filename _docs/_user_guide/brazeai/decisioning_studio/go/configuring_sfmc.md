@@ -1,7 +1,7 @@
 ---
 nav_title: Configuring with Salesforce Marketing Cloud
 article_title: Configuring with Salesforce Marketing Cloud for BrazeAI Decisioning Studio Go
-page_order: 5
+page_order: 3
 description: "Learn how to set up a data query automation and Journey in Salesforce Marketing Cloud for use with BrazeAI Decisioning Studio<sup>TM</sup> Go."
 toc_headers: h2
 ---

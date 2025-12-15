@@ -1,7 +1,7 @@
 ---
 nav_title: Configuring with Braze
 article_title: Configuring with Braze
-page_order: 1
+page_order: 2
 description: "Learn how to set up and integrate BrazeAI Decisioning Studio<sup>TM</sup> Go into Braze."
 ---
 
