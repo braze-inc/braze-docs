@@ -12,6 +12,8 @@ search_rank: 3.9
 
 ---
 
+{% multi_lang_include banners/content_card_alert.md %}
+
 # Creating a Content Card
 
 > This article covers how to create a Content Card in Braze when you build campaigns and Canvases. Here, we'll walk you through choosing a messaging type, composing your card, and scheduling your message delivery.
@@ -170,39 +172,136 @@ Next, check out [Content Card reporting]({{site.baseurl}}/user_guide/message_bui
 
 ## Things to know
 
-### Size limitations for Content Cards
+### Payload and feed limitations
 
-The size of a Content Card payload can be up to a 2 KB after Liquid rendering. This includes the **Title**, **Message**, **Image URL**, **Link Text**, **Link URL(s)**, and **Key-Value Pairs** (names and values). However, this limit does not include the size of the image&#8212;only the length of the image URL.
+To ensure performance, Content Cards have size and limit volumes.
+
+#### Size limitations for Content Cards
+
+The entire data payload for a single Content Card cannot exceed 2 KB **after** any Liquid personalization is rendered. This includes:
+
+* Title
+* Message
+* Image URL (the length of the URL string itself, not the image file size)
+* Link text
+* Link URLs for all specified platforms (separate URLs for iOS, Android, and Web all count towards the total)
+* Key-value pairs (both the key names and their values)
+
+Using Liquid to pull in long strings of text (such as from custom attributes) can cause you to exceed the limit. 
+
+The campaign composer will display a warning if your static content exceeds the limit. (We do not predict the size for dynamic content using Liquid.) **If the message size exceeds 2 KB, it will be aborted at send time.** You can see these aborts in the Message Activity Log with the reason `Content card maximum size exceeded`.
 
 {% alert important %}
-Messages larger than 2 KB will not be sent. During test sends, Content Cards that exceed 2 KB can still be delivered and displayed properly.
+During test sends, Content Cards that exceed 2 KB can still be delivered and displayed properly.
 {% endalert %}
 
-### Number of cards in feed
+Here are some best practices for managing Content Card payload size:
 
-Each user can have up to 250 non-expired Content Cards in their feed at any given time. When this limit is exceeded, Braze will stop returning the oldest cards, even if they are unread. Dismissed cards also count toward this limit, meaning a high number of dismissed cards can reduce the space available for new ones.
+* Use URL shorteners for long links. URLs, especially those with extensize tracking parameters, can run into size limit issues. Using a URL shortening service can dramatically reduce the character count and free up space in the payload.
+* Truncate dynamic content with Liquid. When personalizing cards with dynamic text from user attributes or API calls, the length of the content can be unpredictable. Proactively use Liquid fliters like `truncate` to cap the length of any dynamic text.
+* Be efficient with multi-platform URLs. The 2 KB limit includes the URLs for all platforms you define. Using long, unique URLs for each platform can multiply the size of the payload. If possible, use a single link that works across all platforms, or use URL shorteners as needed.
+* Consider Banners for richer content. For use cases that consistently require large amounts of content, Content Cards may not be the right channel. Banners do not have the same 2 KB payload limitation and are better suited for embedding richer content directly into an app or website experience.
 
-### Sending behavior
+#### Number of cards in feed
 
-After Content Cards have been sent, they sit waiting in an "inbox" ready to be delivered to the user (similar to what happens for emails). After content is pulled into the Content Card (at the time of display), it cannot be changed during its lifespan. This applies even if you're calling an API through Connected Content, and the data from the endpoint changes. This data won't get updated. It can only be stopped from sending to new users and removed from users' feeds. If you modify a campaign, only future cards that are sent will have the update.
+Each user can have up to 250 non-expired Content Cards in their feed at any given time. When this limit is exceeded, Braze will stop returning the oldest cards, even if they are unread. Dismissed cards also count toward this limit, meaning a high number of dismissed cards can reduce the space available for older ones.
 
-If you need to remove old cards, you must first stop the campaign. To stop a campaign, open your Content Card campaign and select **Stop Campaign**. Stopping the campaign will prompt you to decide how to handle users who have already received your card. 
+To prevent issues with the card limit, we advise the following best practices:
 
-If you want to remove the Content Card from your users' feeds, select **Remove card from feed**. The card will then be hidden by the SDK on the next sync.
+- **Use shorter expiration dates:** For campaigns that are time sensitive (such as a weekend sale), set a specific expiration date. This way, cards are automatically removed from the feed and won't count towards the limit after they are no longer relevant.
+- **Leverage action-based removal:** Set up removal events for transactional or goal-based cards. For example, a card prompting a user to complete their profile should be removed as soon as a `profile_completed` event is logged.
+- **Audit long-running campaigns:** Review recurring or ongoing campaigns to ensure they aren't creating a poor experience for your users by filling the feed with too many cards over time.
 
-![Dialog for confirming Content Card deactivation]({% image_buster /assets/img/cc_remove.png %}){: style="max-width:75%" }
+### Understanding re-eligibility for Content Cards
+
+Re-eligibility determines if and when a user can receive a message from the same campaign more than once. For Content Cards, understanding how this works is critical for managing recurring campaigns and ensuring users don't receive duplicate or stale messages.
 
 {% alert tip %}
 Do you want your content to last longer than 30 days? Try [Banners]({{site.baseurl}}/user_guide/message_building_by_channel/banners).
 {% endalert %}
 
-### Card removal events {#action-based-card-removal}
+#### How re-eligibility is calculated
 
-Some Content Cards are only relevant until a user performs some action. For example, a card nudging users to activate their account shouldn't be shown after the user completes that onboarding task.
+If you turn on re-eligibility, the countdown for when a user can "re-enter" a campaign begings after they are sent the message. The specific moment this countdown starts depends on your card creation settings:
 
-Within a campaign or Canvas message, you can optionally add a **Removal Event** to specify which custom events or purchases should cause previously sent cards to be removed from that user's feed, triggered by the SDK or REST API.
+* Content Cards using [at first impression]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/#differences-between-creating-cards-at-launch-or-entry-versus-at-first-impression) use impression time to calculate re-eligibility.
+* Content Cards created at campaign launch or Canvas step entry use whichever send time or impression time is latest.
 
-Cards will be removed on subsequent refreshes after Braze has processed the specified event.
+#### The 30-day expiration and re-eligibility
+
+A common source of confusion is the interaction between campaign re-eligibility and the automatic 30-day expiration of all Content Cards. 
+
+All Content Cards are automatically purged from Braze's systems 30 days after they are created. If you have a long-running, recurring campaign with re-eligibility turned **off**, a user may still receive the same card again after 30 days. When the original card is purged, the system no longer sees a record of that user having received the campaign, making them eligible again on their next session. 
+
+For users to only receive a message from a specific campaign once, add an audience filter to your campaign or Canvas step for users who have not received a message from this campaign. This filter is the most reliable way to prevent duplicate sends from long-running campaigns.
+
+### Managing live Content Cards
+
+After Content Cards have been sent, they sit waiting in an "inbox" ready to be delivered to the user (similar to what happens for emails). After content is pulled into the Content Card (at the time of display), it cannot be changed during its lifespan. This applies even if you're calling an API through Connected Content, and the data from the endpoint changes. This data won't get updated. It can only be stopped from sending to new users and removed from users' feeds. If you modify a campaign, only future cards that are sent will have the update.
+
+#### Updating launched cards
+
+To change a card for users who have already received it, you must use one of the following methods:
+
+##### Option 1: Duplicate the campaign (recommended for immediate changes)
+
+{% alert tip %}
+We recommend this option for messages where you are showing the latest content in the card, changes must be shown immediately, or when re-eligibility is turned off.
+{% endalert %}
+
+The first approach is to archive the campaign and launch a new, duplicated campaign:
+
+1. Stop the original campaign and, when prompted, select `Remove card after the next sync`.
+2. Duplicate the campaign, make your edits, and launch the new version.
+
+When you duplicate the campaign, you need to define the audience for the new version. Use segmentation filters to control who receives the updated card:
+* If users should never be re-eligible for a Content Card, you can filter for users who haven't received the previous version of the Content Card by setting the filter `Received Message from Campaign` to the condition to `Has Not`.
+* If users who received the prior card should be re-eligible in X days, you can set the filter for `Last Received Message from specific campaign` to more than X days ago **OR** `Received Message from Campaign` with the `Has Not` condition.
+
+###### Impact
+
+* **Existing recipients:** New and existing recipients would see the updated card at the next feed refresh if they are eligible.
+* **Reporting:** Each version of the card would have separate analytics.
+
+Let's say you've set a campaign to be triggered by a session start, and it has re-eligibility set to 30 days. A user received the campaign two days ago, and you want to change the copy. First, you'd archive the campaign and remove the cards from the feed. Second, you'd duplicate the campaign and re-launch with the new copy. If the user has another session, they'll immediately receive the new card.
+
+##### Option 2: Stop and relaunch the same campaign
+
+{% alert tip %}
+We recommend using this option for unique messages in a notification center or message inbox (such as promotions), when it’s important for analytics to be unified, or when the timeliness of the message isn't a concern (such as existing recipients can wait for the eligibility window before seeing the updated cards).
+{% endalert %}
+
+This approach keeps all your analytics unified in a single campaign. Newly eligible users will get the new card but delays the update for existing recipients until they are re-eligible:
+
+1. Stop your campaign and, when prompted, select **Remove card after the next sync**.
+2. Edit your campaign as needed.
+3. Restart your campaign.
+
+###### Impact
+
+* **Existing recipients:** Users who have already received the card would not receive the updated cards until they become re-eligible. If re-eligibility is turned off, they would never receive the new card.
+* **Reporting:** One campaign will contain all reporting analytics for the card versions launched. Braze won't differentiate between the versions launched.
+
+Let's say you have a campaign that's triggered by a session start and has re-eligibility set to 30 days. A user received the campaign two days ago, and you want to change the copy. First, stop the campaign and remove the card from the feed. Second, re-publish the campaign with the new copy. If the user has another session, they'll receive the new card in 28 days.
+
+#### Removing and expiring cards
+
+##### Manual card removal
+
+You can manually remove cards for all users' feeds at any time by stopping the campaign.
+
+1. Open the Content Card campaign and select Stop Campaign.
+2. When prompted, select **Remove card after the next sync**. The card will be removed on the next feed refresh.
+
+##### Automated card removal {#action-based-card-removal}
+
+You can automatically remove a card when a user performs a specific action, such as completing a purchase or activating a feature.
+
+In your campaign or Canvas step, specify a removal event. When a user performs that event, the card will be removed from their feed on a subsequent refresh after Braze processes the event. 
+
+{% alert note %}
+This removal is not instantaneous. There is a processing delay, so it may take several minutes and more than one feed refresh for the card to disappear.
+{% endalert %}
 
 {% alert tip %}
 You can specify multiple custom events and purchases that should remove a card from a user's feed. When **any** of those actions are performed by the user, any existing cards sent by the campaign's cards will be removed. Any future eligible cards will continue to be sent according to the message's schedule.
@@ -210,61 +309,18 @@ You can specify multiple custom events and purchases that should remove a card f
 
 ![Content Card Removal Conditions panel with Content Card Removal Event option.]({% image_buster /assets/img/content_cards/content_card_removal_event.png %})
 
-### Updating launched cards
+##### Card expiration
 
-Content Cards can't be edited after they are sent. If you find you need to make changes to cards that have already been sent, consider using [campaign re-eligibility]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/reeligibility/) as shown in the following options.
+All Content Cards are automatically purged from Braze's systems 30 days after they are sent and removed from a user's feed. 
 
-{% alert note %}
-When a Content Card becomes re-eligible, it may be sent again when the original card is still in a user's app. To avoid duplicate cards in a user's app, you can turn off re-eligibility or extend the re-eligibility window so that users won't be sent a new card until the original has expired.
-{% endalert %}
-
-Also note that Content Cards using [at first impression]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/#differences-between-creating-cards-at-launch-or-entry-versus-at-first-impression) use impression time to calculate re-eligibility. However, Content Cards created at campaign launch or Canvas step entry use whichever send time or impression time is latest.
-
-#### Option 1: Duplicating the campaign
-
-One approach is to archive the campaign and remove active cards from the feed. Then you can duplicate the campaign and launch it with updates so that any eligible users would receive the updated cards.
-
-* If users should never be re-eligible for a Content Card, you can filter for users who haven't received the previous version of the Content Card by setting the filter `Received Message from Campaign` to the condition to `Has Not`.
-* If users who received the prior card should be re-eligible in X days, you can set the filter for `Last Received Message from specific campaign` to more than X days ago **OR** `Received Message from Campaign` with the `Has Not` condition.
-
-##### Use case
-
-Let's say you've set a campaign to be triggered by a session start, and it has re-eligibility set to 30 days. A user received the campaign two days ago, and you want to change the copy. First, you'd archive the campaign and remove the cards from the feed. Second, you'd duplicate the campaign and re-launch with the new copy. If the user has another session, they'll immediately receive the new card.
-
-##### Impact
-
-* **Reporting:** Each version of the card would have separate analytics.
-* **Existing Recipients:** New and existing recipients would see the updated card at the next feed refresh if they are eligible.
+#### Making cards last longer than 30 days
 
 {% alert tip %}
-We recommend this option for messages where you are showing the latest content in the card (such as home page banners), changes must be shown immediately, or when re-eligibility is turned off.
+For use cases requiring messages to persist longer than the 30-day Content Card limit, consider using the Banners. Banners are designed for persistence and do not have a mandatory expiration date, allowing them to stay visible as long as they are needed.
 {% endalert %}
 
-#### Option 2: Stop and relaunch
+If you want a card to seem likes it's always available (i.e., lasts longer than the 30-day max), you can create a recurring campaign that effectively replaces the card every 30 days:
 
-If a card has re-eligibility turned on, you could choose to:
-
-1. Stop your campaign.
-2. Remove active Content Cards from users' feeds.
-3. Edit your campaign as needed.
-4. Restart your campaign.
-
-With this approach, newly eligible users will get the new card, and previous recipients will get the new card when they're re-eligible.
-
-##### Use case
-
-Let's say you have a campaign that's triggered by a session start and has re-eligibility set to 30 days. A user received the campaign two days ago, and you want to change the copy. First, stop the campaign and remove the card from the feed. Second, re-publish the campaign with the new copy. If the user has another session, they'll receive the new card in 28 days.
-
-##### Impact
-
-* **Reporting:** One campaign will contain all reporting analytics for the card versions launched. Braze won't differentiate between the versions launched.
-* **Existing recipients:** Users who have already received the card would not receive the updated cards until they become re-eligible. If re-eligibility is turned off, they would never receive the new card.
-
-{% alert tip %}
-We recommend using this option for unique messages in a notification center or message inbox (such as promotions), when it’s important for analytics to be unified, or when the timeliness of the message isn't a concern (such as existing recipients can wait for the eligibility window before seeing the updated cards).
-{% endalert %}
-
-#### Keeping cards in users' feeds
-
-If desired, you could keep an active Content Card campaign in users' feeds and not remove it. When the live campaign is edited, the previous unedited version of the campaign card will still be live, and only users who meet the criteria after the edits will see the new version. However, users already exposed to the campaign may see two versions of the card.
-
+1. Set the duration of the Content Card for 30 days.
+2. Set the campaign re-eligibility to 30 days.
+3. Set the campaign to trigger on "Session Start."
