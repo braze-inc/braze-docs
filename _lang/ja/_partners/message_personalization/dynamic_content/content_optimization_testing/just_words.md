@@ -40,23 +40,23 @@ Just Words と Braze [Connected Content]({{site.baseurl}}/user_guide/personaliza
 3. キャンペーンの基本的な詳細を入力します。
 4. AI を使用してパーソナライズされたバリエーションを生成します。
 
-![Just Words テンプレート作成プラットフォーム。]({% image_buster /assets/img/just_words/creation_interface.png %}){: style="max-width:80%;"}
+![単語のみのテンプレート作成プラットフォーム。]({% image_buster /assets/img/just_words/creation_interface.png %}){: style="max-width:80%;"}
 
-### ステップ2: Just Words API キーの作成
+### ステップ 2:Just Words API キーの作成
 
 1. [**Org 設定**] > [**API キー**] < [**API キーを生成**] を選択します。
 2. API キーを安全な場所にコピーして保存します。
 
-![Just Words API キーフォーム。]({% image_buster /assets/img/just_words/api_key_form.png %}){: style="max-width:80%;"}
+![単語のみのAPI キーフォーム。]({% image_buster /assets/img/just_words/api_key_form.png %}){: style="max-width:80%;"}
 
-### ステップ 3: Braze コンテンツで Just Words を使用する
+### ステップ 3:Braze コンテンツで Just Words を使用する
 
 Connected Content を使用して、Just Words がキャンバスやキャンペーンと連携します。キャンバスを作成する場合、各メールステップは一意の単語のみのテンプレートに対応する必要があります。
 
 #### ステップ 3.1:A/B テストのセットアップ
 
 {% tabs %}
-{% tab キャンバス %}
+{% tab Canvas %}
 
 1. キャンバスで、[**Add Variant**] > [**Add Variant**] を希望するバリアント数になるまで選択し、各バリアントにステップを追加します (メールメッセージステップなど)。
 2. 必要に応じてオーディエンスのトラフィックを分割します。たとえば、2 つのバリアントがある場合、それぞれに 50% を与えることができます。または、2 つのバリアントをそれぞれ 40%、コントロールグループを 20% 持つこともできます。キャンバスのA/Bテストの詳細については、[キャンバスの作成]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/)を参照してください。
@@ -80,7 +80,7 @@ Connected Content を使用して、Just Words がキャンバスやキャンペ
 ![Braze A/B テストキャンバス設定。]({% image_buster /assets/img/just_words/braze_canvas.png %}){: style="max-width:70%;"}
 
 {% endtab %}
-{% tab キャンペーン %}
+{% tab Campaign %}
 
 1. キャンペーンの [**メッセージ作成**] ステップで、2 つのバリアントを作成します。
 2. [**ターゲットオーディエンス**] ステップで、[**AB テスト**] セクションに移動し、各バリアント (およびオプションのコントロールグループ) を受信するユーザーの割合を変更します。最適化オプションを選択すると、テストをさらにカスタマイズできます。キャンペーンのA/Bテストの詳細については、[多変量およびA/Bテストの作成]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/)を参照してください。
@@ -125,13 +125,13 @@ Connected Content を使用して、Just Words がキャンバスやキャンペ
 
 `industry` のカスタム属性は、{% raw %}```&attrs.industry={{ custom_attribute.industry }}```{% endraw %} で示されます。 
 
-![HTML メッセージ作成画面の Braze Liquid ロジック。]({% image_buster /assets/img/just_words/just_words_personalization.png %}){: style="max-width:80%;"}
+![HTML メッセージ作成画面のBrazeリキッドロジック。]({% image_buster /assets/img/just_words/just_words_personalization.png %}){: style="max-width:80%;"}
 
 ### ステップ 4: メールをプレビューする
 
 Braze でメールをプレビューして、パーソナライズされたコンテンツが正しくレンダリングされていることを確認してください。
 
-![Just Words メールのの Braze メッセージプレビュー]({% image_buster /assets/img/just_words/just_words_preview.png %}{: style="max-width:80%;"}
+![単語のみのメールのBrazeのプレビュー。]({% image_buster /assets/img/just_words/just_words_preview.png %}){: style="max-width:80%;"}
 
 ### ステップ 5: Braze Currents の設定
 
@@ -140,17 +140,17 @@ Braze Currents により、時間の経過に伴うパフォーマンスの追�
 1. Braze で、[**パートナー連携**] > [**データエクスポート**] に移動します。
 2. [**Create New Test Current**] を選択し、[**Test Amazon S3 Data Export**] を選択します。
 
-![[Create New Test Current] ドロップダウンと [Test Amazon S3 Data Export] オプション。]({% image_buster /assets/img/just_words/test_amazon_s3.png %}){: style="max-width:80%;"}
+!["Create New Test Current" dropdown with " Test Amazon S3 Data Export" のオプション。]({% image_buster /assets/img/just_words/test_amazon_s3.png %}){: style="max-width:80%;"}
 
 {: start="3" }
 3\.オンボーディング時に Just Words によって提供された S3 アクセス ID、AWS シークレットアクセスキー、バケット名、およびフォルダを入力します。
 
-![AWS シークレットアクセスキーの「認証情報」セクション。]({% image_buster /assets/img/just_words/aws_secret_access_key.png %}){: style="max-width:80%;"}
+!["Credentials"AWSシークレットアクセスキーのセクション。]({% image_buster /assets/img/just_words/aws_secret_access_key.png %}){: style="max-width:80%;"}
 
 {: start="4" }
 4\.送信数、開封数、クリック数、購読解除数、コンバージョン数など、追跡するイベントを選択します。
 
-![選択するイベントを含む「メッセージエンゲージメントイベント」セクション。]({% image_buster /assets/img/just_words/message_engagement_events.png %}){: style="max-width:80%;"}
+!["Message Engagement Events"選択するイベントを含むセクション。]({% image_buster /assets/img/just_words/message_engagement_events.png %}){: style="max-width:80%;"}
 
 {: start="5" }
 5\.Braze Current を開始します。
