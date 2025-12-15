@@ -263,7 +263,7 @@ braze.getUser().setCustomUserAttribute("most_played_song", null);
 <br> `{{custom_attribute.${most_played_song}[0].play_analytics.count}}` — "1000"
 {% endraw %}
 
-![リキッドを使って曲名とリスナーがその曲を再生した回数をテンプレートする]]({% image_buster /assets/img_archive/nca_liquid_2.png %})
+![Liquidを使用して、曲名とリスナーがその曲を再生した回数をメッセージにテンプレート化する]({% image_buster /assets/img_archive/nca_liquid_2.png %})
 
 ## セグメンテーション
 
@@ -271,7 +271,7 @@ braze.getUser().setCustomUserAttribute("most_played_song", null);
 
 プロパティにパスを追加した後、**Validate** を選択して、path フィールドの値が有効であることを確認します。
 
-![リスナーが指定された回数だけ曲を再生した、最も再生された曲カスタム属性に基づくフィルタリング]({% image_buster /assets/img_archive/nca_segmentation_2.png %})
+![リスナーがある曲を指定回数再生したという、再生回数の最も多い曲のカスタム属性に基づくフィルターの適用]({% image_buster /assets/img_archive/nca_segmentation_2.png %})
 
 階層化カスタム属性を使用してセグメント化するには、[**階層化カスタム属性**] フィルターを選択してドロップダウンを表示し、そこから特定の階層化カスタム属性を選択します。
 
@@ -279,7 +279,7 @@ braze.getUser().setCustomUserAttribute("most_played_song", null);
 
 階層化カスタム属性でのセグメンテーションを使用する場合、データ型ごとにグループ化された新しい比較演算子にアクセスできます。たとえば、`play_analytics.count` は数値であるため、**Number** カテゴリの下でコンパレータを選択できます。
 
-![階層化カスタム属性のデータタイプに基づいて演算子を選択するユーザー]({% image_buster /assets/img_archive/nca_comparator.png %})
+![データ型に基づいて階層化カスタム属性のオペレーターを選択するユーザー]({% image_buster /assets/img_archive/nca_comparator.png %})
 
 ### 時間データ型へのフィルター適用
 
@@ -293,7 +293,7 @@ braze.getUser().setCustomUserAttribute("most_played_song", null);
 
 [**セグメントの Liquid をコピー**] 機能を使用してこのセグメントの Liquid コードを生成し、メッセージで使用することもできます。例えば、口座オブジェクトの配列と、アクティブで課税対象口座を持つ顧客を対象とするセグメントがあるとします。アクティブで課税対象口座のいずれかに関連する口座の目標について、顧客に貢献してもらうには、顧客に働きかけるメッセージを作成する必要があります。 
 
-![マルチクライテリアSegmentの選択されたチェックボックスを持つサンプルSegment。]({% image_buster /assets/img_archive/nca_multi_criteria.png %})
+![選択されたチェックボックスを使用したマルチ基準セグメンテーションの例のセグメント。]({% image_buster /assets/img_archive/nca_multi_criteria.png %})
 
 [**セグメントの Liquid をコピー**] を選択すると、Braze によりアクティブで課税対象の口座のみを含むオブジェクト配列を返す Liquid コードが自動的に生成されます。
 
