@@ -18,7 +18,7 @@
 
 ### 期間
 
-デフォルトでは、**キャンペーンアナリティクスの**時間範囲は、現在から過去90日間を表示する。つまり、キャンペーンが90日以上前に開始された場合、分析は指定された時間範囲に対して「0」と表示される。古いキャンペーンのすべての分析を表示するには、レポートの時間範囲を調整する。
+デフォルトでは、**Campaign Analytics**の時間範囲は、現在の時刻から最後の90 日間を表示します。つまり、キャンペーンが90 日以上前に起動された場合、分析は指定された期間に"0" として表示されます。古いキャンペーン s のすべての分析を表示するには、レポートの時間範囲を調整します。
 
 ### キャンペーンの詳細
 
@@ -42,29 +42,29 @@ WhatsAppチャネルにはリードレートが含まれる。この指標は、
 {% endif %}
 
 {% if include.channel == "Content Card" %}
-![キャンペーンのパフォーマンスを決定するために使用されるメトリクスの概要が記載されたキャンペーン詳細パネル。]({% image_buster /assets/img/cc-campaign-details.png %})
+![キャンペーン詳細パネルには、キャンペーン パフォーマンスを決定するために使用されるメトリクスの概要が表示されます。]({% image_buster /assets/img/cc-campaign-details.png %})
 
 {% elsif include.channel == "banner" %}
-![キャンペーンのパフォーマンスを決定するために使用されるメトリクスの概要が記載されたキャンペーン詳細パネル。]({% image_buster /assets/img/banners/campaign_details.png %})
+![キャンペーン詳細パネルには、キャンペーン パフォーマンスを決定するために使用されるメトリクスの概要が表示されます。]({% image_buster /assets/img/banners/campaign_details.png %})
 
 {% elsif include.channel == "email" %}
-![キャンペーンのパフォーマンスを決定するために使用されるメトリクスの概要が記載されたキャンペーン詳細パネル。]({% image_buster /assets/img/campaign_details_email.png %})
+![キャンペーン詳細パネルには、キャンペーン パフォーマンスを決定するために使用されるメトリクスの概要が表示されます。]({% image_buster /assets/img/campaign_details_email.png %})
 
 {% elsif include.channel == "push" %}
-![キャンペーンのパフォーマンスを決定するために使用されるメトリクスの概要が記載されたキャンペーン詳細パネル。]({% image_buster /assets/img/campaign_details_push.png %})
+![キャンペーン詳細パネルには、キャンペーン パフォーマンスを決定するために使用されるメトリクスの概要が表示されます。]({% image_buster /assets/img/campaign_details_push.png %})
 
 {% elsif include.channel == "SMS" %}
-![キャンペーンのパフォーマンスを決定するために使用されるメトリクスの概要が記載されたキャンペーン詳細パネル。]({% image_buster /assets/img/campaign_details_sms.png %})
+![キャンペーン詳細パネルには、キャンペーン パフォーマンスを決定するために使用されるメトリクスの概要が表示されます。]({% image_buster /assets/img/campaign_details_sms.png %})
 
 {% elsif include.channel == "in-app message" %}
-![キャンペーンのパフォーマンスを決定するために使用されるメトリクスの概要が記載されたキャンペーン詳細パネル。]({% image_buster /assets/img/campaign_details_iam.png %})
+![キャンペーン詳細パネルには、キャンペーン パフォーマンスを決定するために使用されるメトリクスの概要が表示されます。]({% image_buster /assets/img/campaign_details_iam.png %})
 
 キャンバスでは、作成したキャンバスにアプリ内メッセージのパフォーマンスがマッピングされます。ページ上部にあるコントロールパネルを使って、他のメッセージングタイプ（チャネル）を消去し、キャンバス内のアプリ内メッセージのみを表示することができる。
 
 ![]({% image_buster /assets/img/in-app_message_canvas_reporting.png %})
 
 {% elsif include.channel == "webhook" %}
-![キャンペーンのパフォーマンスを決定するために使用されるメトリクスの概要が記載されたキャンペーン詳細パネル。]({% image_buster /assets/img/campaign_details_webhook.png %})
+![キャンペーン詳細パネルには、キャンペーン パフォーマンスを決定するために使用されるメトリクスの概要が表示されます。]({% image_buster /assets/img/campaign_details_webhook.png %})
 
 {% endif %}
 
@@ -108,56 +108,56 @@ The **Message Performance** panel outlines how well your message has performed a
 
 **コンテンツカードパフォーマンスパネルは**、メッセージが様々な次元でどの程度のパフォーマンスを示したかを概説する。このパネルの指標は、選択したメッセージングチャネルや、多変量テストを実行しているかどうかに応じて異なります。<i class="fa fa-eye preview-icon"></i>[**プレビュー**] アイコンをクリックすると、バリアントやチャネルごとにメッセージを表示できます。
 
-![コンテンツカード メッセージパフォーマンス分析]({% image_buster /assets/img/cc-message-performance.png %})
+![コンテンツカードメッセージパフォーマンス 分析]({% image_buster /assets/img/cc-message-performance.png %})
 
 {% elsif include.channel == "email" %}
 ### 電子メールのパフォーマンス
 
 **メールパフォーマンスパネルでは**、メッセージのパフォーマンスを様々な角度から見ることができる。このパネルの指標は、選択したメッセージングチャネルや、多変量テストを実行しているかどうかに応じて異なります。<i class="fa fa-eye preview-icon"></i>[**プレビュー**] アイコンをクリックすると、バリアントやチャネルごとにメッセージを表示できます。
 
-![メールメッセージのパフォーマンス分析]({% image_buster /assets/img_archive/email_message_performance.png %})
+![メールパフォーマンス 分析]({% image_buster /assets/img_archive/email_message_performance.png %})
 
 {% elsif include.channel == "in-app message" %}
 ### アプリ内メッセージパフォーマンス
 
 **アプリ内メッセージパフォーマンスパネルは**、メッセージが様々な次元でどの程度のパフォーマンスを示したかを概説する。このパネルの指標は、選択したメッセージングチャネルや、多変量テストを実行しているかどうかに応じて異なります。<i class="fa fa-eye preview-icon"></i>[**プレビュー**] アイコンをクリックすると、バリアントやチャネルごとにメッセージを表示できます。
 
-![アプリ内メッセージパフォーマンス分析]({% image_buster /assets/img_archive/iam_message_performance.png %})
+![アプリ中電文パフォーマンス 分析]({% image_buster /assets/img_archive/iam_message_performance.png %})
 
 {% elsif include.channel == "push" %}
 ### プッシュ通知のパフォーマンス
 
 **プッシュ・パフォーマンス・**パネルでは、メッセージがさまざまな次元でどの程度うまくいったかを概説する。このパネルの指標は、選択したメッセージングチャネルや、多変量テストを実行しているかどうかに応じて異なります。<i class="fa fa-eye preview-icon"></i>[**プレビュー**] アイコンをクリックすると、バリアントやチャネルごとにメッセージを表示できます。
 
-![プッシュ・メッセージのパフォーマンス分析]({% image_buster /assets/img_archive/push_message_performance.png %})
+![プッシュメッセージパフォーマンス 分析]({% image_buster /assets/img_archive/push_message_performance.png %})
 
 {% elsif include.channel == "SMS" %}
-### SMS/MMS/RCSのパフォーマンス
+### SMS/MMS/RCS のパフォーマンス
 
-[**SMS/MMS/RCS のパフォーマンス**] パネルでは、さまざまな角度からメッセージのパフォーマンスを確認できます。このパネルの指標は、選択したメッセージングチャネルや、多変量テストを実行しているかどうかに応じて異なります。<i class="fa fa-eye preview-icon"></i>[**プレビュー**] アイコンをクリックすると、バリアントやチャネルごとにメッセージを表示できます。
+**SMS/MMS/RCS Performance**パネルには、さまざまな次元でメッセージがどの程度適切に実行されたかが示されています。このパネルの指標は、選択したメッセージングチャネルや、多変量テストを実行しているかどうかに応じて異なります。<i class="fa fa-eye preview-icon"></i>[**プレビュー**] アイコンをクリックすると、バリアントやチャネルごとにメッセージを表示できます。
 
-![コントロールグループ、バリアント1、バリアント2の指標の表を含む [SMS/MMS/RCS パフォーマンス] パネル。]({% image_buster /assets/img_archive/sms_message_performance.png %})
+![SMS/MMS/RCS パフォーマンスパネル。コントロールグループ、Variant 1、およびVariant 2 のメトリクスのテーブルを含みます。]({% image_buster /assets/img_archive/sms_message_performance.png %})
 
 {% elsif include.channel == "banner" %}
 ### バナーのパフォーマンス
 
 [**バナーのパフォーマンス]** パネルでは、さまざまな角度からメッセージのパフォーマンスを確認できます。これらの指標は、メッセージングチャネルや多変量テストを実施しているかどうかによって異なります。
 
-![コントロールグループ、バリアント1、バリアント2の指標の表を含む SMS/MMS パフォーマンスパネル。]({% image_buster /assets/img/banners/banner_performance.png %})
+![コントロールグループ、Variant 1、およびVariant 2 のメトリクスのテーブルを含むSMS/MMS パフォーマンスパネル。]({% image_buster /assets/img/banners/banner_performance.png %})
 
 {% elsif include.channel == "webhook" %}
 ### Webhook のパフォーマンス
 
 **Webhook パフォーマンス**パネルでは、メッセージがさまざまな側面でどの程度うまくいったかを概説する。このパネルの指標は、選択したメッセージングチャネルや、多変量テストを実行しているかどうかに応じて異なります。<i class="fa fa-eye preview-icon"></i>[**プレビュー**] アイコンをクリックすると、バリアントやチャネルごとにメッセージを表示できます。
 
-![コントロールグループとバリアント1のメトリクスの表を含むWebhookパフォーマンスパネル。]({% image_buster /assets/img/webhook_message_performance.png %})
+![コントロールグループとバリアント1のメトリクスのテーブルを含むWebフックパフォーマンスパネル。]({% image_buster /assets/img/webhook_message_performance.png %})
 
 {% elsif include.channel == "whatsapp" %}
 ### WhatsApp のパフォーマンス
 
 **WhatsApp パフォーマンス**パネルでは、様々な角度からメッセージのパフォーマンスを見ることができる。このパネルの指標は、選択したメッセージングチャネルや、多変量テストを実行しているかどうかに応じて異なります。<i class="fa fa-eye preview-icon"></i>[**プレビュー**] アイコンをクリックすると、バリアントやチャネルごとにメッセージを表示できます。
 
-![バリアント1のメトリクスの表を含むWhatsAppパフォーマンスパネル]({% image_buster /assets/img/whatsapp_message_performance.png %})
+![バリアント1 のメトリクスのテーブルを含むWhatsApp パフォーマンスパネル。]({% image_buster /assets/img/whatsapp_message_performance.png %})
 
 {% endif %}
 
@@ -167,11 +167,11 @@ The **Message Performance** panel outlines how well your message has performed a
 
 #### ヒートマップ
 
-ヒートマップを使えば、1つのメールキャンペーンで異なるリンクがどれだけ成功したかを見ることができる。[**メッセージ分析**] セクションから、[**メールパフォーマンス**] パネルに移動します。メールキャンペーンのプレビューとヒートマップを表示するには、**プレビューとヒートマップを**選択する。または、バリアント名のハイパーリンクを選択してヒートマップを表示することもできます。
+ヒートマップを使えば、1つのメールキャンペーンで異なるリンクがどれだけ成功したかを見ることができる。[**メッセージ分析**] セクションから、[**メールパフォーマンス**] パネルに移動します。メール キャンペーンとヒートマップのプレビューを表示するには、**プレビュー & ヒートマップ** を選択します。または、バリアント名のハイパーリンクを選択してヒートマップを表示することもできます。
 
 このビューでは、**ヒートマップ表示**トグルを使用して、キャンペーンの存続期間中のクリックの全体的な頻度と場所を示すメールの視覚的なビューを表示できます。**合計クリック数によるリンクテーブル**]パネルでは、メールキャンペーン内のすべてのリンクを表示し、合計クリック数で並べ替えることができる。これにより、ユーザーが移動する場所に関する詳細な情報が得られます。参照用にヒートマップのコピーを保存するには、ダウンロード・ボタンを選択する。
 
-![メールキャンペーンを含むプレビューとヒートマップページの例と、リンクエイリアスの例とその総クリック数のパネル。]({% image_buster /assets/img_archive/email_heatmap_example.png %})
+![メール キャンペーンを含むプレビューページとヒートマップページの例、およびリンクエイリアスの例を含むパネルとその総クリック数。]({% image_buster /assets/img_archive/email_heatmap_example.png %})
 
 #### 画像
 
@@ -212,19 +212,19 @@ The **Message Performance** panel outlines how well your message has performed a
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data/report_metrics/#total-impressions">インプレッション数の合計</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Total Impressions' %} これは同じユーザーに対して複数回インクリメントできる。</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Total Impressions' %} これは、同じユーザーに対して何度も増分することができます。</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data/report_metrics/#unique-impressions">ユニークインプレッション数</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Impressions' %} <span style="white-space: nowrap">このカウント</span>は、ユーザーがコンテンツカードを表示した2回目以降は増加しません。</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Impressions' %} <span style="white-space: nowrap">この数</span>は、ユーザーがコンテンツカードを表示する2回目の時間を増やしません。</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data/report_metrics/#unique-recipients">ユニーク受信者数</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Recipients' %}<br><br> コンテンツカードは1枚につき1回しか受け取れないため、同じコンテンツカードを2回目以降に表示しても、日にちに関係なくカウントは増加しません。閲覧者は毎日のユニーク受信者となる可能性があるため、<i>ユニークインプレッション数</i>よりもこの数値の方が高くなると予想されます。</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Recipients' %}<br><br> コンテンツカードの場合、各コンテンツカードは1回しか受信できません。そのため、同じコンテンツカードを2回目に表示しても、その日に関係なく、このカウントは増分されません。閲覧者は毎日のユニーク受信者となる可能性があるため、<i>ユニークインプレッション数</i>よりもこの数値の方が高くなると予想されます。</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data/report_metrics/#unique-clicks">ユニーククリック数</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Clicks' %} Brazeが提供する配信停止リンクのクリックも含まれる。</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Clicks' %} これには、Braze提供の配信停止リンクのクリックも含まれます。</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data/report_metrics/#unique-dismissals">ユニーク却下数</a></td>
@@ -239,7 +239,7 @@ The **Message Performance** panel outlines how well your message has performed a
 
 #### ユニーク受信者数とユニークインプレッション数
 
-メッセージの可視性をカバーする指標はいくつかある。これには_ユニーク受信_者と_ユニーク・インプレッションが_含まれる。これらの指標をよりよく理解するために、いくつかのシナリオ例を使ってみよう。
+メッセージの可視性をカバーする指標はいくつかある。これには、_Unique Recipients_と_Unique Impressions_が含まれます。これらの指標をよりよく理解するために、いくつかのシナリオ例を使ってみよう。
 
 例えば、今日コンテンツカードを表示し、明日、明後日も同じキャンペーンから新しいカードを受け取ると、_ユニーク受信者_として3回カウントされることになります。ただし、_ユニークインプレッション_は1回のみカウントされます。また、そのカードがお使いのデバイスで使用可能であったため、_送信済みメッセージ_の数にもカウントされます。
 
@@ -279,7 +279,7 @@ _送信済みメッセージ_」は閲覧可能なコンテンツカードを指
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-impressions">ユニークインプレッション数</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Impressions' %} <span style="white-space: nowrap">各ユーザーは1回のみカウントされます。</span></td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Impressions' %} <span style="white-space: nowrap">それぞれのユーザーは1 回だけカウントされます。</span></td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#total-clicks">クリック数の合計</a></td>
@@ -287,7 +287,7 @@ _送信済みメッセージ_」は閲覧可能なコンテンツカードを指
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-clicks">ユニーククリック数</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Clicks No Dispatch ID' %} 各ユーザーは一度しかカウントされない。</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Clicks No Dispatch ID' %} それぞれのユーザーは1 回だけカウントされます。</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#primary-conversions">1 次コンバージョン数</a></td>
@@ -308,19 +308,19 @@ _送信済みメッセージ_」は閲覧可能なコンテンツカードを指
     </tbody>
 </table>
 
-#### バナーメトリクスの計算例
+#### バナーメトリックの計算例
 
-メッセージの可視性をカバーする指標はいくつかある。これには_ユニーク受信_者と_ユニーク・インプレッションが_含まれる。これらの指標をよりよく理解するために、いくつかのシナリオ例を使ってみましょう。
+メッセージの可視性をカバーする指標はいくつかある。これには、_Unique Recipients_と_Unique Impressions_が含まれます。これらの指標をよりよく理解するために、いくつかのシナリオ例を使ってみましょう。
 
-例えば、あなたが今日バナーを閲覧し、明日も同じバナーを閲覧し、明後日もまた_同じ_バナーを閲覧したとしよう。ただし、_ユニークインプレッション_は1回のみカウントされます。
+今日バナーを見て、明日も同じバナーを見て、明後日も_一意の受信者_として3回カウントされるとします。ただし、_ユニークインプレッション_は1回のみカウントされます。
 
-別の例として、バナーキャンペーンで5つの_ユニークインプレッションが_表示されたとする。つまり、以下のステップをすべて実行したユーザーのデバイスはわずか5台しかなかったことになる：
+別の例として、バナーキャンペーンに5 つの_固有の印象_ があるとします。これは、5 つのユーザーの機器のみが次のステップs のすべてを実行したことを意味します。
 
 1. セッションを開始した、またはアプリが明示的にバナーの同期を要求した（またはその両方）
 2. バナービューに移動した
 3. SDK がインプレッションを記録し、サーバーにログを記録しました
 
-_ユニーク受信_者とは、実際に見られたバナーを指す。
+_Unique Recipients_は、実際に表示されたバナーを参照します。
 
 {% elsif include.channel == "email" %}
 
@@ -345,13 +345,13 @@ _ユニーク受信_者とは、実際に見られたバナーを指す。
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-clicks">ユニーククリック数</a></td>
             <td class="no-split">
-                {% multi_lang_include metrics.md metric='Unique Clicks' %} これは、メールの場合、7日間にわたって追跡され、<a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'> dispatch_id</a> によって測定されます。これには、Brazeが提供する配信停止リンクのクリックも含まれる。この数値は5から10% の範囲内でなければなりません。10%を超えるものは例外です。
+                {% multi_lang_include metrics.md metric='Unique Clicks' %} これは、メールの7 日間にわたって追跡され、<a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a> によって測定されます。これには、Brazeが提供する配信停止リンクのクリックも含まれる。この数値は5から10% の範囲内でなければなりません。10%を超えるものは例外です。
             </td>
         </tr>
         <tr>
-            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-opens">Unique Opens</a></td>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-opens">ユニーク開封数</a></td>
             <td class="no-split">
-                {% multi_lang_include metrics.md metric='Unique Opens' %}メールの場合、これは 7 日間にわたって追跡されます。この数値は30から40% の範囲内でなければなりません。40%を超えるものは例外です。
+                {% multi_lang_include metrics.md metric='Unique Opens' %} メールの場合、これは7 日間にわたって追跡されます。この数値は30から40% の範囲内でなければなりません。40%を超えるものは例外です。
             </td>
         </tr>
         <tr>
@@ -361,7 +361,7 @@ _ユニーク受信_者とは、実際に見られたバナーを指す。
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#spam">スパム率</a></td>
             <td class="no-split">
-                {% multi_lang_include metrics.md metric='Spam' %} この指標が0.08を超える場合は、メッセージのコピーがセールス的すぎるか、メールアドレスの収集方法を再検討する必要があることを示している可能性があります (関心のある人にメッセージを送信していることを確認するため) 。
+                {% multi_lang_include metrics.md metric='Spam' %} このメトリクスが 0.08 より大きい場合は、メッセージコピーが売れすぎるか、メールのアドレス収集方法を再検討する必要があります (通信に興味を持つ人物がメッセージングいることを確認するため)。
             </td>
         </tr>
         <tr>
@@ -374,7 +374,7 @@ _ユニーク受信_者とは、実際に見られたバナーを指す。
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#estimated-real-opens">推定実質開封数</a></td>
-            <td class="no-split"> {% multi_lang_include metrics.md metric='Estimated Real Opens' %} 詳細は以下のセクションを参照のこと。</td>
+            <td class="no-split"> {% multi_lang_include metrics.md metric='Estimated Real Opens' %} 詳細については、次のセクションを参照してください。</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#machine-opens">マシン開封数</a></td>
@@ -409,7 +409,7 @@ _延期は_現在、CurrentsまたはBraze Snowflake機能（Query Builder、SQL
 
 ##### 推定実質開封率 {#estimated-real-open-rate}
 
-この統計は、Brazeが独自に作成した分析モデルを使用して、機械開封が存在しないかのようにキャンペーン独自の開封率の推定値を再構築する。メール送信者からいくつかの開封イベントに*マシン開封の*ラベルを受け取るが（上記参照）、これらのラベルはしばしば実際の開封をマシン開封とラベル付けすることがある。言い換えれば、「*その他の開封*」は（実際のユーザーによる）実際の開封を過小評価している可能性が高い。その代わり、Brazeは各キャンペーンのクリックデータを使って、実際の人間がメッセージを開封した率を推測している。これにより、Apple の MPP を含むさまざまなマシン開封メカニズムが補われます。
+この統計は、Brazeが独自に作成した分析モデルを使用して、機械開封が存在しないかのようにキャンペーン独自の開封率の推定値を再構築する。一部の開封イベントでは、*Machine 開封 s* のラベルをメール送信者から受け取りますが(上記を参照)、これらのラベルは実際の開封s をマシン開封s としてラベル付けできます。言い換えれば、「*その他の開封*」は（実際のユーザーによる）実際の開封を過小評価している可能性が高い。その代わり、Brazeは各キャンペーンのクリックデータを使って、実際の人間がメッセージを開封した率を推測している。これにより、Apple の MPP を含むさまざまなマシン開封メカニズムが補われます。
 
 _推定実質開封率_はメール送信開始から36時間後に算出され、その後24時間ごとに再計算されます。キャンペーンが繰り返される場合、推定は別の送信が発生してから36時間後に再計算されます。
 
@@ -425,14 +425,14 @@ _推定実質開封率_はメール送信開始から36時間後に算出され�
 
 さらに、セキュリティスキャンツールを使用すると、開封率が膨張する可能性があります。これらのツールの中には、リンクをクリックしてその正当性を確認することによって、受信した電子メールに悪意のあるコンテンツが含まれていないかスキャンし、ユーザーを保護するものもある。これらのクリックは、しばしば「ボットクリック」または「非人間的相互作用」（NHI）と呼ばれる。 
 
-結局のところ、メールが当社のサーバーを離れた後、次に何が起こるかについては限られた可視性しかないが、ここでは、結果に影響を与える薬価を管理するための推奨事項を紹介する：
+最終的には、メールがサーバーを離れた後、次のhアプリの可視性は制限されますが、結果に影響するNHIを管理するための推奨事項は次のとおりです。
 
 1. この事象は、すべての送信者とほぼすべての受信者に発生する可能性があることに注意してください。クリック数は、開封数と同様に、メッセージに対する人間のインタラクションを示す完全に信頼できる指標ではないため、NHI を防ぐことはできません。
-2. エンゲージメントが高ければ高いほど、薬価が下がる傾向があるので、メールメッセージングの[ベストプラクティスに]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices)従うことが重要である。これには、通常のケイデンスでメールとSunsetting (配信停止)の未調整のサブスクライバーを送信するための明示的な権限をユーザーから取得することも含まれます。 
+2. 高い正のエンゲージメントは低いNHIと相関する傾向があるため、メール メッセージング[ベストプラクティス]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices)に従うことが大切です。これには、通常のケイデンスでメールとSunsetting (配信停止)の未調整のサブスクライバーを送信するための明示的な権限をユーザーから取得することも含まれます。 
 3. 可能な限り、メールにHTTPSリンクを使用する。NHI は、安全なリンクを使用する送信者に対してはそれほど一般的に発生しません。
-4. もしシングルクリックで配信停止を行うのであれば、ユーザー[設定センターを]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/overview)作り、ユーザーが自分の通知設定を編集・管理できるようにすることを検討しよう。NHI によって誤ってユーザーの登録を解除してしまう可能性があるため、これは有用です。
+4. シングルクリックの配信停止処理を使用する場合は、ページにユーザーs を渡して通知の環境設定を編集および管理する[ユーザー設定センター]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/overview) を作成することを検討してください。NHI によって誤ってユーザーの登録を解除してしまう可能性があるため、これは有用です。
 5. コンバージョン数、アプリセッション数、サイト訪問数など、メールマーケティングの成功を測るために[他の指標を]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/#email-performance)使うことも検討しよう。
-6. メールキャンペーンに隠しリンクを追加する。このリンクは、白地に白のテキストや句読点など、人間が気づかないようなものだろう。ボットは全てのリンクをクリックする傾向があるため、見えないリンクにクリックイベントを発生させているユーザーは、実際にはNHIの結果であり、開封やクリックが必ずしもポジティブなエンゲージメントを示しているわけではないと結論付けることができる。
+6. メールキャンペーンに隠しリンクを追加する。このリンクは、白地に白のテキストや句読点など、人間が気づかないようなものだろう。ボットはすべてのリンクをクリックする傾向があるため、不可視リンクでクリックイベントを生成するユーザーは実際にはNHIの結果であると結論付けることができます。そのため、開封またはクリックは必ずしも正のエンゲージメントを示すわけではありません。
 
 {% elsif include.channel == "in-app message" %}
 
@@ -443,7 +443,7 @@ _推定実質開封率_はメール送信開始から36時間後に算出され�
 {% alert note %}
 _ボタン1のクリック数_と_ボタン2のクリック数_のレポートは、アプリ内メッセージで [**レポート用の識別子**] をそれぞれ「0」と「1」に指定した場合にのみ機能します。
 
-![値が「0」の [レポート用の識別子] フィールド。]({% image_buster /assets/img/identifier_for_reporting.png %}){: style="max-width:50%;"}
+!["Reporting&quot の識別子; "0"の値を持つフィールド。]({% image_buster /assets/img/identifier_for_reporting.png %}){: style="max-width:50%;"}
 {% endalert %}
 
 <style>
@@ -521,7 +521,7 @@ _ボタン1のクリック数_と_ボタン2のクリック数_のレポート�
     <tbody>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#bounces">バウンス数</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Bounces' %} <a href="#bounced-push">バウンスされたプッシュ通知数</a>を参照してください。</td>
+            <td class="no-split">{% multi_lang_include metrics.md metric='Bounces' %} <a href="#bounced-push">バウンスプッシュ通知s</a>を参照してください。</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#direct-opens">直接開封数</a></td>
@@ -538,27 +538,27 @@ _ボタン1のクリック数_と_ボタン2のクリック数_のレポート�
 
 ##### 配信停止のトラッキング
 
-プッシュ配信停止はキャンペーン分析の指標には含まれず、AppleやGoogleのようなプロバイダーからのユーザーのプッシュステータスの更新に依存している。これらの更新は、頻度が低く、予測不可能な場合があります。そのため、プッシュの配信停止は、プッシュキャンペーン分析の指標として含まれません。 
+プッシュ配信停止はキャンペーン 分析のメトリクスとして含まれておらず、アップルやグーグルなどのプロバイダからのユーザーのプッシュステータスへの更新に依存します。これらの更新は、頻度が低く、予測不可能な場合があります。そのため、プッシュの配信停止は、プッシュキャンペーン分析の指標として含まれません。 
 
-ただし、手動でプッシュの配信停止をトラッキングすると、通知の頻度とコンテンツの関連性に対するユーザー応答に関する重要なインサイトが得られます。プッシュ配信停止をトラッキングするための2つのオプションを紹介しよう：セグメンテーションフィルターや顧客フィルターを使用する。
+ただし、手動でプッシュの配信停止をトラッキングすると、通知の頻度とコンテンツの関連性に対するユーザー応答に関する重要なインサイトが得られます。"トラッキングプッシュ配信停止s には、次の2 つの方法があります。Segment フィルター s またはカスタムフィルター s を使用します。
 
 {% tabs local %}
-{% tab セグメンテーションフィルター %}
+{% tab Segment filters %}
 
-プッシュトークンが有効になっていない、つまりサブスクライバーでもオプトインでもなく、[フォアグラウンドプッシュトークンを持って]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/#push-tokens)いないユーザーを識別するセグメンテーションを作成することができる。例えば、アプリの配信停止数を見るには、以下のようなセグメンテーションの組み合わせを使う： 
+Segmentを作成して、プッシュが有効になっていないユーザーを識別できます。つまり、登録またはオプトインされておらず、[フォアグラウンドプッシュトークン]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/#push-tokens)がないことを意味します。たとえば、アプリ内の配信停止の個数を表示するには、"OR" 以下のSegments の組合せを使用します。 
 
 - `Background or Foreground Push Enabled is false`
 - `Has Uninstalled`
 
-![]({% image_buster /assets/img/push_unsub_segment_example.png %}) アプリの「バックグラウンドまたはフォアグラウンドプッシュが有効なアプリ」というフィルターがfalseで、「アンインストール済み」というフィルターが選択されているセグメンテーションビルダーセクション。
+![フィルター "Background またはForeground Push Enabled for アプリ "がfalse で、フィルター "Has Uninstalled"が選択されたセグメントビルダーセクション。]({% image_buster /assets/img/push_unsub_segment_example.png %})
 
-セグメンテーションフィルターはおおよそのものであり、日付やキャンペーンに具体的に結びつけることはできない。
+セグメンテーション フィルターs はアプリ近接であり、日付とキャンペーンに特に結びつけることはできません。
 
 {% endtab %}
-{% tab カスタムフィルター %}
+{% tab Custom filters %}
 
 {% alert important %}
-サブスクリプション変更のカスタムイベントをログに記録すると、[データポイントが]({{site.baseurl}}/user_guide/data_and_analytics/data_points#consumption-count)ログに記録される。または、セグメントフィルターを使用して、プッシュが有効になっていないユーザーを識別し、ターゲットにします。
+サブスクリプション変更のカスタムイベントを記録すると、[データポイント s]({{site.baseurl}}/user_guide/data_and_analytics/data_points#consumption-count) が記録されます。または、セグメントフィルターを使用して、プッシュが有効になっていないユーザーを識別し、ターゲットにします。
 {% endalert %}
 
 別の回避策として、この指標をトラッキングするために、ユーザーのプッシュ有効ステータスが`true` か`false` かに基づいて、プッシュの配信停止のカスタムイベントを作成することもお勧めします。
@@ -581,7 +581,7 @@ _直接開封数_と_誘発された開封数_には「開封」という言葉�
 ##### バウンスが起こる理由 {#bounced-push}
 
 {% tabs %}
-{% tab Appleプッシュ通知サービス %}
+{% tab Apple Push Notification service %}
 
 バウンスは、Appleのプッシュ通知サービス（APN）において、プッシュ通知が目的のアプリがインストールされていないデバイスに配信されようとするときに発生する。APNはまた、デバイスのトークンを恣意的に変更する権利も持っている。以前にトークンを登録した時 (ユーザーに対してプッシュトークンを登録する各セッションの開始時など) から送信時刻までの間にプッシュトークンが変更されたユーザーのデバイスに送信しようとすると、バウンスが発生します。
 
@@ -590,7 +590,7 @@ _直接開封数_と_誘発された開封数_には「開封」という言葉�
 配信前に期限切れとなったプッシュ通知は失敗とはみなされず、バウンスとして記録されることもない。
 
 {% endtab %}
-{% tab Firebaseクラウドメッセージング %}
+{% tab Firebase Cloud Messaging %}
 
 Firebase Cloud Messaging (FCM) のバウンスは3つのケースで発生する可能性があります。
 
@@ -742,7 +742,7 @@ WhatsAppの主な分析指標をいくつか紹介しよう。Braze で使用さ
 
 日ごとの内訳を知りたい場合は、<i class="fas fa-bars"></i> のハンバーガーメニューをクリックし、「**CSVダウンロード**」を選択すると、レポートのCSVエクスポートを受け取ることができる。
 
-![]({% image_buster /assets/img/cc-historical-performance.png %}) 2021年2月から2022年5月までのメールの統計例を示した「過去のパフォーマンス」パネルのグラフ。
+![ヒストリカル・パフォーマンス・パネルのグラフ。2021年2 月から2022年5 月までのメールの統計の例を示します。]({% image_buster /assets/img/cc-historical-performance.png %})
 
 {% if include.channel == "in-app message" %}
 
@@ -758,11 +758,11 @@ WhatsAppの主な分析指標をいくつか紹介しよう。Braze で使用さ
 
 **キーワード応答**パネルには、メッセージ受信後にユーザーが返信した受信キーワードのタイムラインが表示されます。  
 
-![キャンペーンレベルの [SMS/MMS/RCS キーワードレスポンス] パネル。経時的なキーワード分布の折れ線グラフと、オプトイン、オプトアウト、ヘルプ、その他、追加、コーチングのチェックボックスが選択されたキーワードカテゴリーセクションが含まれています。]({% image_buster /assets/img/sms/keyword_responses.png %})
+![キャンペーンレベルSMS/MMS/RCS キーワードレスポンスパネルには、経時的なキーワード配分の折れ線グラフと、Opt-In、Opt-Out、Help、Other、More、およびコーチングのチェックボックスが選択されたキーワードカテゴリセクションが含まれます。]({% image_buster /assets/img/sms/keyword_responses.png %})
 
 ここでは、[リターゲティング]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/retargeting_campaigns)するための次のステップを決定し、便利に[セグメンテーションを作成]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment)するために、各キーワードカテゴリのレスポンシブ分布を表示することもできる。
 
-![折れ線グラフの下の表には、キーワードカテゴリ、レスポンス分布、リターゲティングのカラムがあり、キーワードカテゴリでセグメンテーションを作成するオプションが与えられている。]({% image_buster /assets/img/sms/keyword_segments.png %})
+![キーワードカテゴリ、レスポンス配分、およびリターゲットの列を含む折れ線グラフの下のテーブルでは、キーワードカテゴリを含むSegmentを作成できます。]({% image_buster /assets/img/sms/keyword_segments.png %})
 
 {% endif %}
 
@@ -770,13 +770,13 @@ WhatsAppの主な分析指標をいくつか紹介しよう。Braze で使用さ
 
 [**コンバージョンイベントの詳細**] パネルには、キャンペーンのコンバージョンイベントのパフォーマンスが表示されます。詳細については、「[コンバージョンイベント]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/#step-3-view-results)」を参照してください。
 
-![コンバージョンイベントの詳細パネル。]({% image_buster /assets/img/cc-conversion.png %})
+![変換イベントの詳細パネル。]({% image_buster /assets/img/cc-conversion.png %})
 
 ### コンバージョンの相関
 
 [**コンバージョンの相関**] パネルでは、どのようなユーザー属性と行動が、キャンペーンに設定した結果に役立つか、または悪影響を与えるかを把握できます。詳細については、「[コンバージョンの相関]({{site.baseurl}}/user_guide/engagement_tools/testing/conversion_correlation/)」を参照してください。
 
-![1次コンバージョンイベントのユーザー属性と行動に関する分析を含むコンバージョン相関パネル - A.]({% image_buster /assets/img/convcorr.png %})
+![変換相関パネルは、プライマリ変換イベント- A からのユーザー 属性s およびビヘイビアに関する解析を実行します。]({% image_buster /assets/img/convcorr.png %})
 
 {% if include.channel == "whatsapp" %}
 
