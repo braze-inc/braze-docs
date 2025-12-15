@@ -1,5 +1,5 @@
 ---
-nav_title: "取得:キャンペーンの詳細のエクスポート"
+nav_title: "取得:キャンペーンのエクスポートの詳細"
 article_title: "取得:キャンペーンの詳細のエクスポート"
 search_tag: Endpoint
 page_order: 4
@@ -47,8 +47,6 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/detail
 ## 回答
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "created_at" : (string) the date created as ISO 8601 date,
@@ -89,7 +87,9 @@ Authorization: Bearer YOUR-REST-API-KEY
     "alert": (string) the alert body text,
     "extras": (hash) any key-value pairs provided,
     "title": (string) the alert title text,
-    "action": (string) action link from click
+    "action": (string) action link from click,
+    "image_url": (string) the image URL for an Android notification image, an iOS notification image, or a Web push icon image,
+    "large_image_url": (string) the web notification image URL for Android Chrome and Windows web push actions; null in other cases
 }
 ```
 
@@ -219,7 +219,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ### 変換動作
 
-`conversion_behaviors` 配列には、キャンペーンに設定されたコンバージョンイベントの動作に関する情報が含まれます。これらの動作は、キャンペーンによって設定された順序で行われます。たとえば、変換イベントA は配列の最初の項目、変換イベントB は2 番目の項目などです。以下に、コンバージョンイベント ビヘイビアのレスポンスの例を示します。
+`conversion_behaviors` 配列には、キャンペーンに設定されたコンバージョンイベントの動作に関する情報が含まれます。これらの動作は、キャンペーンによって設定された順序で行われます。たとえば、変換イベントA は配列の最初の項目、変換イベントB は2 番目の項目、というようになります。以下に、コンバージョンイベント ビヘイビアのレスポンスの例を示します。
 
 #### メールをクリック
 

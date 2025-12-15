@@ -3,7 +3,7 @@ nav_title: "ウェブフック・オブジェクト"
 article_title: ウェブフック・メッセージング・オブジェクト
 page_order: 13
 page_type: reference
-channel: 
+channel:
   - webhook
 description: "このリファレンス記事では、BrazeのWebhookオブジェクトについて概説している。"
 
@@ -23,4 +23,4 @@ description: "このリファレンス記事では、BrazeのWebhookオブジェ
 }
 ```
 
-ベストプラクティスとして、Braze は、送信者やサーバーが時間とともに変更される可能性があるため、一貫性のある予測可能な動作を確保するために、`request_headers` フィールドに `Content-Type` の明示的な値を提供することを推奨します。`Content-Type` ヘッダーに値が指定されなければ、リクエストボディから推測されます。
+ベストプラクティスとして、Braze は、送信者やサーバーが時間とともに変更される可能性があるため、一貫性のある予測可能な動作を確保するために、`request_headers` フィールドに `Content-Type` の明示的な値を提供することを推奨します。リクエストヘッダー(`Content-Type` )に値を指定しない場合、シ ステムはリクエストボディから値を推測する。

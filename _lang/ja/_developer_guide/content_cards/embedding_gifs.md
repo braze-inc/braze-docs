@@ -21,15 +21,15 @@ platform:
 {% endalert %}
 
 {% sdktabs %}
+{% sdktab web %}
+現時点では、Web Braze SDK ではコンテンツカードGIF はサポートされていません。
+{% endsdktab %}
+
 {% sdktab android %}
 {% multi_lang_include developer_guide/android/_global/gifs.md %}
 {% endsdktab %}
 
 {% sdktab swift %}
 {% multi_lang_include developer_guide/swift/gifs.md %}
-{% endsdktab %}
-
-{% sdktab web %}
-現時点では、Web Braze SDK ではコンテンツカードGIF はサポートされていません。
 {% endsdktab %}
 {% endsdktabs %}

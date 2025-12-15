@@ -45,11 +45,11 @@ alias: /whatsapp_quick_replies/
 
 ## クイック返信 
 
-![コールトゥアクションボタンが表示されている電話画面では、クリックされたボタンのテキストが返信される。]({% image_buster /assets/img/whatsapp/whatsapp11.png %}){: style="float:right;max-width:25%;margin-left:15px;border: 0;"}
+![コール・トゥ・アクションのボタンが表示されている電話画面では、クリックされたボタンのテキストが返信される。]({% image_buster /assets/img/whatsapp/whatsapp11.png %}){: style="float:right;max-width:25%;margin-left:15px;border: 0;"}
 
 クイック返信は、会話内でクリック可能なボタンオプションとして表示されるが、ユーザーがテキストで返信したかのように動作する。そして、Braze はこれらをインバウンドメッセージとして処理し、クリックされたボタンに基づいて設定済みのレスポンスを送り返すことができます。"インバウンド WhatsApp メッセージアクション "ステップを使用して、ユーザーからの返信を作成し、フィルタリングします。
 
-![WhatsAppメッセージにテキストと3つのアクションボタンが表示されている。]({% image_buster /assets/img/whatsapp/whatsapp13.png %}){: style="max-width:50%;"}
+![WhatsAppメッセージにはテキストと3つの行動喚起ボタンが表示されている。]({% image_buster /assets/img/whatsapp/whatsapp13.png %}){: style="max-width:50%;"}
 
 ### キャンバスでのクイック返信エクスペリエンスの設定
 
@@ -57,7 +57,7 @@ alias: /whatsapp_quick_replies/
 
 まず、[WhatsApp メッセージテンプレートマネージャー](https://business.facebook.com/wa/manage/message-templates/)でメッセージテンプレート内にクイック返信 CTA を設定します。 
 
-![WhatsApp メッセージテンプレートマネージャーのUIでCTAボタンの作成方法、ボタンタイプ(カスタム)、ボタンテキストを確認できる。]({% image_buster /assets/img/whatsapp/whatsapp12.png %}){: style="max-width:80%;"}
+![WhatsAppメッセージテンプレートマネージャーのUIでCTAボタンの作成方法、ボタンタイプ(カスタム)、ボタンテキストを確認できる。]({% image_buster /assets/img/whatsapp/whatsapp12.png %}){: style="max-width:80%;"}
 
 テンプレートが提出され、WhatsAppによって承認されると、そのテンプレートを使ってBraze内でCanvasを構築することができる。 
 
@@ -69,15 +69,15 @@ alias: /whatsapp_quick_replies/
 
 次に、作成したテンプレートを含むメッセージ・ステップでキャンバスを構築する。 
 
-![WhatsAppのステップメッセージ作成画面にクイック返信テンプレートが追加された。]({% image_buster /assets/img/whatsapp/whatsapp14.png %})
+![WhatsAppステップメッセージ作成画面とクイック返信テンプレート。]({% image_buster /assets/img/whatsapp/whatsapp14.png %})
 
 メッセージステップに続くアクションステップを作成する。このアクションステップでは、クイック返信オプションごとに1つのグループを作成する。
 
-![評価アクションが「WhatsApp受信メッセージを送信」であるキャンバス。]({% image_buster /assets/img/whatsapp/whatsapp15.png %})
+![評価アクションが「whatsappの受信メッセージを送信」であるキャンバス。]({% image_buster /assets/img/whatsapp/whatsapp15.png %})
 
 各クイック返信オプション・グループに対して、マッチさせるボタンとして正確なテキストを指定する。キーワードは大文字でなければなりません。 
 
-![WhatsApp受信メッセージを送信する」というアクションが、特定のメッセージボディを受信したときに送信されるように設定されたキャンバスステップ。]({% image_buster /assets/img/whatsapp/whatsapp16.png %})
+![キャンバスのステップで、「whatsapp受信メッセージを送信する」というアクションが、特定のメッセージ本文を受信したときに送信されるように設定されている。]({% image_buster /assets/img/whatsapp/whatsapp16.png %})
 
 クイック返信の代わりにテキストで返信するユーザーに対してデフォルトの返信をしたい場合は、メッセージ本文が一致しないグループを追加で作成する。
 
@@ -87,7 +87,7 @@ alias: /whatsapp_quick_replies/
 
 各レスポンスに返信メッセージが欲しい場合がほとんどだろう。クイック返信の範囲外 (あらかじめ決められたプロンプトではなく、一般的なメッセージで返信する顧客の場合など) の返信には、catch-all オプションを使用することをお勧めします。例えば、「申し訳ありません、あなたの返答に気づきませんでした。サポートに関する問題は、<support channel> というメッセージをお送りください。」
 
-![各コールトゥアクションボタンのレスポンスを示すキャンバスを作成した。]({% image_buster /assets/img/whatsapp/whatsapp18.png %})
+![それぞれのコールトゥアクションボタンに対する反応を示すキャンバスが構築された。]({% image_buster /assets/img/whatsapp/whatsapp18.png %})
 
 レスポンス内のメッセージ、ユーザープロファイルの更新、Braze-to-Braze Webhook など、Braze キャンバスが提供する後続のアクションを使用できることに注意してください。 
 
@@ -95,7 +95,7 @@ alias: /whatsapp_quick_replies/
 
 リストメッセージは、クリック可能なオプションのリストとともに本文メッセージとして表示されます。各リストには複数のセクションを含めることができ、各リストには最大10 行を含めることができます。
 
-![WhatsAppリストメッセージの例。]({% image_buster /assets/img/whatsapp/list_message_example.png %}){: style="max-width:40%;"}
+![WhatsAppリストメッセージの例（ファッションスタイルごとに行がある]({% image_buster /assets/img/whatsapp/list_message_example.png %}){: style="max-width:40%;"}
 
 ### キャンバスでのリストメッセージエクスペリエンスの設定
 
@@ -127,7 +127,7 @@ WhatsApp [メッセージステップ]({{site.baseurl}}/user_guide/engagement_to
 2. [**メッセージ本文の場所**] チェックボックスをオンにします。
 3. 1つの行 (またはリスト項目) の内容を指定します。
 
-![服のスタイル別にグループ分けされたアクションパスのコンポーザー。]({% image_buster /assets/img/whatsapp/action_path_list_message.png %})
+![さまざまな服のスタイルに対応するグループを持つアクションパスのコンポーザー。]({% image_buster /assets/img/whatsapp/action_path_list_message.png %})
 
 キャンバスの作成を続行します。
 
@@ -135,7 +135,7 @@ WhatsApp [メッセージステップ]({{site.baseurl}}/user_guide/engagement_to
 
 行の説明がある場合は、[**次に部分一致 (正規表現も使用可)**] を使用して行を指定する必要があります。たとえば、説明"ankle boots"のお気に入りのペアに適合する新しいスタイルを指定する場合、[regex]({{site.baseurl}}/user_guide/engagement_tools/segments/regex/)を"ankle boots"とともに使用できます。
 
-![WhatsAppのトリガーが "Matches regex "のフィルターを使用して、"ankle boots "を含むレスポンシブメッセージをキャプチャした。]({% image_buster /assets/img/whatsapp/regex_list_message.png %})
+![WhatsAppのトリガーで、"Matches regex "のフィルターを使い、"ankle boots "を含むレスポンシブメッセージをキャプチャする。]({% image_buster /assets/img/whatsapp/regex_list_message.png %})
 
 ## 応答メッセージに関する考慮事項
 
@@ -152,5 +152,5 @@ WhatsApp [メッセージステップ]({{site.baseurl}}/user_guide/engagement_to
 - インバウンド製品メッセージ 
   - [`ecommerce.cart_updated`]({{site.baseurl}}/user_guide/data/custom_data/recommended_events/ecommerce_events/?tab=ecommerce.cart_updated#types-of-ecommerce-recommended-events) イベント
 
-![実行されたカスタムイベントをトリガーとするアクションパス`ecommerce.cart_updated`.]({% image_buster /assets/img/whatsapp/ecommerce_cart_updated.png %})
+![実行されたカスタムイベントのトリガーを持つアクションパス`ecommerce.cart_updated`.]({% image_buster /assets/img/whatsapp/ecommerce_cart_updated.png %})
 

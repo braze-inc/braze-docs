@@ -18,13 +18,13 @@ description: "このページでは、アプリ内メッセージのドラッグ
 
 ドラッグ＆ドロップのアプリ内メッセージを作成するときには、テンプレートとして [**背景画像付きの季節限定プロモーション**] を選択し、その後 [**メッセージを作成**] を選択します。このテンプレートは、モバイルアプリとWebブラウザの両方をサポートしている。
 
-![季節のプロモーションのテンプレートを持つアプリ内メッセージエディター。]({% image_buster /assets/img/drag_and_drop/templates/seasonal_promo.png %})
+![季節ごとのプロモーションのテンプレートを持つアプリ内メッセージエディター。]({% image_buster /assets/img/drag_and_drop/templates/seasonal_promo.png %})
 
-### ステップ 2: メッセージスタイルを設定する
+### ステップ 2:メッセージスタイルを設定する
 
 {% multi_lang_include drag_and_drop/templates.md section='message style' %}
 
-### ステップ 3: ボタンコンポーネントをカスタマイズする
+### ステップ 3:ボタンコンポーネントをカスタマイズする
 
 季節限定プロモーションを作り始めるには、エディターでボタンコンポーネントを選択します。次に、サイドメニューを使って、ユーザーがボタンを選択したときに移動する場所を選択します。テンプレートのデフォルトはメッセージを閉じることだが、アプリ内の特定のページ（宣伝している商品など）に移動することもできる。
 
@@ -36,7 +36,7 @@ description: "このページでは、アプリ内メッセージのドラッグ
 
 ドラッグアンドドロップ[アプリ内メッセージコンポーネント]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#message-components)を使用して、季節限定プロモーションの外観と感触をカスタマイズします。**メッセージコンテナー**メニューでデフォルトの背景画像 URL を置き換えて独自の背景画像を追加するか、URL を削除して[メディアライブラリ]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/)から画像を選択します。
 
-![バックグラウンド "画像を選択するサイドメニュー付きのアプリ内メッセージエディター。]({% image_buster /assets/img/drag_and_drop/templates/seasonal_promo_image.png %})
+![バックグラウンド "画像を選択するサイドメニュー付きのアプリ内メッセージエディターです。]({% image_buster /assets/img/drag_and_drop/templates/seasonal_promo_image.png %})
 
 ## 結果の分析
 

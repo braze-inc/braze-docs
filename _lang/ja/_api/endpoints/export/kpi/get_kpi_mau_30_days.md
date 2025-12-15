@@ -1,5 +1,5 @@
 ---
-nav_title: "取得:過去30 日間の月次アクティブユーザーのエクスポート"
+nav_title: "取得:過去30日間のアクティブユーザーの月次エクスポート"
 article_title: "取得:過去30 日間の月次アクティブユーザーのエクスポート"
 search_tag: Endpoint
 page_order: 4
@@ -46,8 +46,6 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/kpi/mau/data_ser
 ## 応答
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "data" : [

@@ -32,7 +32,7 @@ LINEクリック"トラッキングを有効にすると、Brazeは自動的にU
 
 1. **テキスト**メッセージをコンポーザーにドラッグし、テキストフィールドにURL を追加します。
 
-![LINE メッセージ作成画面: 長いURL を含むテキストメッセージ: https://braze.com/docs/user_guide/message_building_by_channel/line/create/]({% image_buster /assets/img/line/click_tracking_text_message.png %})
+![長いURL を含むテキストメッセージのLINE メッセージ作成画面: https://braze.com/docs/user_guide/message_building_by_channel/line/create/]({% image_buster /assets/img/line/click_tracking_text_message.png %})
 
 {: start="2"}
 2\.**Settings**タブに移動し、**Tracking**がオンになっていることを確認します。新着メールはデフォルトで「"トラッキング」に設定されています。
@@ -51,10 +51,10 @@ LINEクリック"トラッキングを有効にすると、Brazeは自動的にU
 2. アプリ可能なt アプリ可能領域の**On-click 動作**で**URI**を選択します。
 3. **Open URL**フィールドにURLを入力します。
 
-![LINE メッセージ作成画面は、2 つのt アプリ可能領域があり、それぞれがURL を持つリッチメッセージを使用します。]({% image_buster /assets/img/line/rich_message_click_tracking.png %})
+![LINE メッセージ作成画面には、2 つのt アプリ可能領域があり、それぞれにURL があるリッチメッセージがあります。]({% image_buster /assets/img/line/rich_message_click_tracking.png %})
 
 {: start="4"}
-4\.**Settings**タブに移動し、**Tracking**がオンになっていることを確認します。新着メールはデフォルトで「"トラッキング」に設定されています。
+4. **Settings**タブに移動し、**Tracking**がオンになっていることを確認します。新着メールはデフォルトで「"トラッキング」に設定されています。
 
 ### カードベースのメッセージ
 
@@ -63,7 +63,7 @@ LINEクリック"トラッキングを有効にすると、Brazeは自動的にU
 1. **カードベースのメッセージ**をコンポーザーにドラッグします。
 2. **URI** を**On-click 動作** でアプリのライセンス可能なカードまたはボタン領域を選択します。
 
-![LINE メッセージ作成画面 はカードベースのメッセージで、それぞれにURL を持つ2 つのボタンがあります。]({% image_buster /assets/img/line/card_based_message_click_tracking.png %})
+![LINE メッセージ作成画面は、カードベースのメッセージで、それぞれがURL を持つ2 つのボタンがあります。]({% image_buster /assets/img/line/card_based_message_click_tracking.png %})
 
 {: start="3"}
 3\.**Settings**タブに移動し、**Tracking**がオンになっていることを確認します。新着メールはデフォルトで「"トラッキング」に設定されています。
@@ -114,7 +114,7 @@ Liquid によってレンダリングされる URL は、API トリガーのプ�
 
 LINE パフォーマンステーブルには、**Total Clicks**列があり、バリアントごとのクリックイベント数と関連するクリック率が表示されます。LINEメトリックの詳細については、[LINEメッセージパフォーマンス]({{site.baseurl}}/user_guide/message_building_by_channel/line/reporting)を参照してください。
 
-![ラインキャンバスステップの性能。]({% image_buster /assets/img/line/line_step_performance.png %}){: style="max-width:30%;"}
+![LINE キャンバスステップの性能。]({% image_buster /assets/img/line/line_step_performance.png %}){: style="max-width:30%;"}
 
 クリックデータは、分析ダッシュボードに自動的に報告されます。 
 

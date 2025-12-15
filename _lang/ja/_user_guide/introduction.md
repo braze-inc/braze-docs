@@ -4,8 +4,8 @@ nav_title: ホーム
 article_title: Braze ユーザーガイド
 layout: user_guide
 
-user_top_header: "Braze User Guide"
-user_top_text: "This is where marketers and administrators can learn everything they need to know to get started with Braze, and how to design meaningful, data-driven customer interactions."
+user_top_header: "Braze ユーザーガイド"
+user_top_text: "ここでは、マーケターや管理者が Braze を使い始めるために必要なすべての知識と、有意義でデータドリブン型の顧客インタラクションを設計する方法を学ぶことができます。"
 description: "これはユーザーガイドのランディングページです。ここでは、マーケティング担当者や管理者は、Braze を使い始めるために必要なすべての知識と、有意義でデータドリブン型の顧客とのインタラクションを設計する方法を学習できます。"
 
 user_menu_list:

@@ -57,7 +57,7 @@ Braze のタイムスタンプは秒単位で表されます。Adobe Experience 
 {: start="7"}
 7. **Next**を選択し、データフローの詳細を確認してから、**Finish**を選択します。<br><br>![マッピングエラーのない Adobe の「データの追加」ページ。]({% image_buster /assets/img/adobe/currents_no_errors.png %})
 
-### ステップ 3: 認証情報の収集
+### ステップ 3:認証情報の収集
 
 次の認証情報を収集して Braze に入力すると、Braze が Adobe Experience Platform にデータを送信できるようになります。
 

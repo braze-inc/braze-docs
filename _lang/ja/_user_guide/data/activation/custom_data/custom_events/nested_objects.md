@@ -23,7 +23,7 @@ description: "この記事では、階層化 JSON データをカスタムイベ
 
 次の SDK バージョンでは、階層化オブジェクトがサポートされています。
 
-{% sdk_min_versions swift:5.0.0 android:1.0.0 web:3.3.0 %}
+{% sdk_min_versions swift:5.0.0 android:20.0.0 web:3.3.0 %}
 
 ## ステップ 1: スキーマの生成
 
@@ -37,7 +37,7 @@ description: "この記事では、階層化 JSON データをカスタムイベ
 
 今後新しいプロパティが送信される場合、それらは再生成されるまでスキーマには含まれません。スキーマは24 時間ごとに再生成できます。
 
-## ステップ 2: 階層化オブジェクトの使用
+## ステップ 2:階層化オブジェクトの使用
 
 ネストされたデータは、セグメンテーションおよびパーソナライゼーション中に参照できます。スキーマは必要ありません。使用例については、以下のセクションを参照してください。
 
@@ -84,14 +84,14 @@ description: "この記事では、階層化 JSON データをカスタムイベ
 {% tab Restaurant Example%}
 
 以下は、「Ordered」(注文を受けた) カスタムイベントの`/users/track` の例です。注文が完了したら、以下を送信してその注文のプロパティをキャプチャします。
-- プロパティとして"r_details" をリストするAPIリクエスト
+- プロパティとして`r_details` をリストするAPIリクエスト
 - その順序のネストされたプロパティ
 
 ```
 ...
 "properties": {
   "r_details": {
-    "name": "McDonalds",
+    "name": "SandwichEmperor",
     "identifier": "12345678",
     "location" : {
       "city": "Montclair",
@@ -154,9 +154,9 @@ description: "この記事では、階層化 JSON データをカスタムイベ
 
 「Ordered」 (注文された) イベントから階層化プロパティを持つキャンペーンをトリガーします。
 
-![カスタムイベントのために、プロパティフィルタr_details.name を追加するユーザーがマクドナルドである。]({% image_buster /assets/img/nested_object1.png %})
+![プロパティフィルターr_details.name を追加したユーザーは、カスタムイベントのSandwichEmperorとなる。]({% image_buster /assets/img/nested_object1.png %})
 
-`r_details.name`:"Mcdonalds"<br>
+`r_details.name`:「サンドウィッチ・エンペラー<br>
 `r_details.location.city`:"Montclair"
 {% endtab %}
 {% endtabs %}
