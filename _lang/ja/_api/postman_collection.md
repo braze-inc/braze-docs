@@ -1,5 +1,5 @@
 ---
-nav_title: Postman とサンプルリクエスト
+nav_title: Postmanとサンプル請求
 article_title: Postman とサンプルリクエスト
 page_order: 3
 description: "このリファレンス記事では、Braze Postmanコレクションについて、コレクションとは何か、コレクションのセットアップと使用方法、リクエストの編集と送信方法について説明する。"
@@ -7,13 +7,13 @@ page_type: reference
 
 ---
 
-# 郵便配達とサンプル請求
+# Postmanとサンプル請求
 
 > Braze では、Postman Collection を通じて、すべてのエンドポイントに対してサンプル API リクエストを生成することができます。このリファレンス記事では、Braze Postmanコレクションについて、コレクションとは何か、コレクションのセットアップと使用方法、リクエストの編集と送信方法について説明する。
 
 ## Postman とは？
 
-Postmanは、APIリクエストの構築とテストのための、無料で使えるビジュアル編集ツールである。API とやりとりする他の方法 (例えば cURL を使う) とは対照的に、Postman では API リクエストを簡単に編集したり、ヘッダー情報を確認したりすることができます。Postmanには、あらかじめ作成されたAPIリクエストのサンプルをコレクションやライブラリとして保存する機能がある。顧客が簡単に REST API を使い始められるようにするため、すべての API エンドポイントに対して事前に作成されたサンプルを含むコレクションを作成しました。
+Postmanは、APIリクエストの構築とテストのための無料のビジュアル編集ツールである。他の方法（例えばcURLを使う）と比べて、PostmanではAPIリクエストを編集したり、ヘッダー情報を見たりすることができる。コレクション（事前に作成されたAPIリクエストのサンプルのライブラリー）を保存することができる。REST APIのセットアップを高速化するために、すべてのエンドポイントについて、あらかじめ作成されたサンプル集を提供している。
 
 開始するには、[Postman ドキュメント](https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#intro)の [**Postman で実行**] をクリックして、Postman コレクションを表示またはダウンロードします。
 
@@ -56,11 +56,11 @@ Braze Postman Collection は、テンプレート変数 `{{instance_url}}` を�
 
 `GET` リクエストを編集する場合は、リクエスト URL で渡されるパラメーターを編集します。そのためには、**Params**タブを選択し、表示されるフィールドのキーと値のペアを編集する。
 
-![Postman で GET Query List of Unsubscribed Email Addresses (配信停止済みメールアドレスのクエリリストの取得) リクエストを編集するときの「パラメーター」タブ。]({% image_buster /assets/img_archive/postman_get.png %})
+![Postman で GET Query List of Unsubscribed Email Addresses (配信停止済みメールアドレスのクエリリストの取得) リクエストを編集するときの「パラメータ」タブ。]({% image_buster /assets/img_archive/postman_get.png %})
 
 ### リクエストを送信する
 
 API リクエストの準備ができたら、[**送信**] をクリックします。リクエストは送信され、レスポンスデータはリクエストエディタの下のセクションに入力される。ここから、Braze APIから返された生データを見たり、HTTPレスポンスコードを見たり、リクエストの処理にかかった時間を見たり、ヘッダー情報を見たりすることができる。
 
-![ステータスが「201 Created」、応答時間が「269 ミリ秒」の POST リクエストからの本文応答データの例。]({% image_buster /assets/img_archive/postman_response.png %})
+![ステータスが「201 Created」、応答時間が「269ミリ秒」の POST リクエストからの本文応答データの例。]({% image_buster /assets/img_archive/postman_response.png %})
 
