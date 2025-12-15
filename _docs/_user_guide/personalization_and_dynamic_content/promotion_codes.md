@@ -50,7 +50,7 @@ Promotion codes can’t be sent in in-app messages in Canvas.
 
 Looking for next steps? Start here:
 
-- [Creating a promotion code list]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes/manage/#create)
+- [Creating a promotion code list]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes/create/)
 - [Using promotion codes]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes/manage/#using-promotion-codes)
 - [Viewing promotion code usage]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes/manage/#viewing-promotion-code-usage)
 
@@ -82,7 +82,7 @@ If the message contains Liquid logic that conditionally inserts a promotion code
 
 ### If I uploaded the wrong promotion codes, can I update them?
 
-Yes. You can resolve this by deprecating the entire list or using a placeholder to delete the list. For more information, see [Updating promotion codes]({[site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes/manage/#update).
+Yes. You can resolve this by deprecating the entire list or using a placeholder to delete the list. For more information, see [Updating a promotion code list]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes/create/#updating-a-promotion-code-list).
 
 ### Can I save a promotion code to a user's profile for future messages?
 

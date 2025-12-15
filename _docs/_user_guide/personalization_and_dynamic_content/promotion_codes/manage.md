@@ -15,7 +15,7 @@ Before you can use promotion codes, you'll need to [create a promotion code list
 
 ## Using promotion codes
 
-To send a promotion code in a message, select **Copy Snippet** next to the promotion code list [you previously created](#create).
+To send a promotion code in a message, select **Copy Snippet** next to the promotion code list [you previously created]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes/create/#create).
 
 ![An option to copy the snippet to paste into your message.]({% image_buster /assets/img/promocodes/promocode9.png %}){: style="max-width:70%"}
 
@@ -40,7 +40,7 @@ If no promotion codes are available, test or live messages that rely on codes wi
 
 ### In-app message campaigns {#promotion-codes-iam-campaigns}
 
-After creating an [in-app message campaign]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages), you can insert a [promotion code list snippet]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes#creating-a-promotion-code-list) into your in-app message message body. Promotion codes in in-app messages will be deducted and used only when a user triggers the display of the in-app message.
+After creating an [in-app message campaign]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages), you can insert a [promotion code list snippet]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes/manage/#using-promotion-codes-1) into your in-app message message body. Promotion codes in in-app messages will be deducted and used only when a user triggers the display of the in-app message.
 
 ### Test messages
 
