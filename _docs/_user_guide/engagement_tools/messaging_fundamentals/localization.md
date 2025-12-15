@@ -17,7 +17,7 @@ tool:
 Locale information is stored on a user's profile based on data you collect using a [Braze SDK]({{site.baseurl}}/developer_guide/sdk_integration/) (automatically), or [REST API]({{ site.baseurl }}/api/endpoints/user_data/post_user_track). The locale contains the language and a region identifier. This information is available in the Braze segmentation tool under **Country** and **Language**.
 
 {% alert tip %}
-For for technical details on how locale is collected by our SDKs, refer to the official [iOS](https://developer.apple.com/library/ios/documentation/MacOSX/Conceptual/BPInternational/LanguageandLocaleIDs/LanguageandLocaleIDs.html), [Android](http://developer.android.com/reference/java/util/Locale.html), and [Web](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/language) documentation.
+For technical details on how locale is collected by our SDKs, refer to the official [iOS](https://developer.apple.com/library/ios/documentation/MacOSX/Conceptual/BPInternational/LanguageandLocaleIDs/LanguageandLocaleIDs.html), [Android](http://developer.android.com/reference/java/util/Locale.html), and [Web](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/language) documentation.
 {% endalert %}
 
 ## Translation management

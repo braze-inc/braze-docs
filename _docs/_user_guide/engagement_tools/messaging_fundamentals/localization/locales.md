@@ -39,7 +39,7 @@ A more complicated paragraph may have multiple translation tags ("offer_text" an
 {% endraw %}
 
 {% alert important %}
-Wrapping large HTML blocks may have unintended consequences related to stylesheet and styling. Try to only wrap as small text sections as possible.
+Wrapping large HTML blocks in translation tags can cause stylesheet or styling issues. Wrap the smallest text sections as possible.
 {% endalert %}
 
 #### Localizing Links
