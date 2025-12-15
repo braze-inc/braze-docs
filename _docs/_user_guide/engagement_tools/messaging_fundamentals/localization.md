@@ -82,7 +82,7 @@ Once sent, the dashboard provides dynamic analytics per country and within user-
 
 ## Sending translated messages
 
-To send personalized messages based on a user’s language or locale, use one of the following methods
+To send personalized messages based on a user's language, locale, or custom attributes, use one of the following methods
 
 ### Translation Liquid Tags (Recommended) {#translation-liquid-tag}
 
