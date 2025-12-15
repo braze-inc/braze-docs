@@ -36,7 +36,7 @@ Braze ダッシュボードの埋め込みサインアップフローを通じ�
 #### 複数のWABAをBrazeに接続できますか？ 
 はい。ワークスペースあたり最大10個の WhatsApp ビジネスアカウントを追加できます。各ビジネスアカウントは、異なる Meta Business Manager の下にネストすることができます。
 
-![1つのサブスクリプショングループを1つの電話番号に、複数のWhatsApp Businessアカウントを1つのワークスペースに、1つのワークスペースを複数のMeta Businessポートフォリオに接続できる。]({% image_buster /assets/img/whatsapp/whatsapp_braze_ecosystem.png %}) 
+![BrazeとWhatsAppのエコシステムの図。ワークスペースとWhatsApp Businessアカウントがどのように接続されるかを示している：1つのサブスクリプショングループを1つの電話番号に、複数のWhatsApp Businessアカウントを1つのワークスペースに、1つのワークスペースを複数のMeta Businessポートフォリオに接続できる。]({% image_buster /assets/img/whatsapp/whatsapp_braze_ecosystem.png %}) 
 
 ### WhatsAppビジネスアカウントの電話番号 
 
