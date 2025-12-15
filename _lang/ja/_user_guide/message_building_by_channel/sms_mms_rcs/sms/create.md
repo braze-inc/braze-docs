@@ -18,7 +18,7 @@ search_rank: 1
 
 ## ステップ 1: メッセージを作成する場所を選択する
 
-メッセージは、キャンペーンとキャンバスのどちらを使用して配信すべきでしょうか。キャンペーンは単一のシンプルなメッセージングキャンペーンに適していますが、キャンバスはマルチステップのユーザーのジャーニーに適しています。
+メッセージは、キャンペーンとキャンバスのどちらを使用して配信すべきでしょうか。キャンペーン s は単一のターゲットメッセージング キャンペーンに適していますが、キャンバスは複数ステップ ユーザーのジャーニーに適しています。
 
 {% tabs %}
 {% tab Campaign %}
@@ -60,15 +60,11 @@ search_rank: 1
 先に進む前に、[SMSメッセージのセグメントとコピーの上限に関する]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/segments/)ガイドラインを読みましょう。SMSメッセージ・セグメントとは、電話キャリアがテキスト・メッセージを測定するために使用する文字バッチのことです。メッセージはメッセージセグメントごとに課金されるため、メッセージの分割方法のニュアンスを理解しておきましょう。
 {% endalert %}
 
-<<<<<<< HEAD
-![BrazeのSMS作成画面に「Hifirst_name, we appreciate your support！このSMSを見せれば、特別割引が適用されます。私たちからのメッセージを受け取らないようにするにはSTOPと返信すること。"]({% image_buster /assets/img/sms_campaign_compose.png %})
-=======
-\![BrazeのSMS作成画面に「Hifirst_name, we appreciate your support！このSMSを見せれば、特別割引が適用されます。私たちからのメッセージを受け取らないようにするにはSTOPと返信すること。"]({% image_buster /assets/img/sms_campaign_compose.png %})
->>>>>>> main
+![メッセージ"Hi first_name, とBrazeたSMSコンポーザーは、あなたのサポートをアプリ受けます!このSMSを見せれば、特別割引が適用されます。STOP に応答して、us.&quot からのメッセージの受信を停止します。]({% image_buster /assets/img/sms_campaign_compose.png %})
 
 ### 連絡先カードの追加
 
-SMS メッセージに連絡先カードを追加すると、顧客がビジネスや連絡先情報を連絡先に簡単に追加できるようになります。これらのカードには、会社名、電話番号、住所、Eメール、小さな写真など、一般的なプロパティを割り当てることができます。詳しくは、[お問い合わせカード]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/mms/contact_card/)をご覧ください。
+SMSメッセージに連絡先カードを追加して、顧客が自社の取引先責任者と連絡先を追加できるようにすることができます。会社名、電話番号、住所、メール、小さな写真などのプロパティーを割り当てることができます。詳しくは[連絡先カードs]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/mms/contact_card/)を参照してください。
 
 ### ヒント
 
@@ -82,11 +78,7 @@ Liquidを使用する場合は、受信者のユーザープロファイルが�
 
 魅力的な文章を作成するためのサポートが必要な場合は、[AI コピーライティングアシスタント]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/)を使用してみてください。商品名や説明を入力すると、AIが人間のようなマーケティングコピーを生成し、メッセージングに使用します。
 
-<<<<<<< HEAD
-![SMS作成画面のメッセージフィールドにある「AIコピーライターを起動」ボタンをクリックする。]({% image_buster /assets/img/ai_copywriter/ai_copywriter_sms.png %}){: style="max-width:60%"}
-=======
-\![SMS作成画面のメッセージフィールドにある「AIコピーライターを起動」ボタンをクリックする。]({% image_buster /assets/img/ai_copywriter/ai_copywriter_sms.png %}){: style="max-width:60%"}
->>>>>>> main
+![SMSコンポーザーのメッセージフィールドにあるAIコピーライターボタンを起動します。]({% image_buster /assets/img/ai_copywriter/ai_copywriter_sms.png %}){: style="max-width:60%"}
 
 #### 右から左へのメッセージの作成
 
@@ -96,11 +88,7 @@ Liquidを使用する場合は、受信者のユーザープロファイルが�
 
 Brazeでは、送信前にメッセージをプレビューしてテストすることを常に推奨しています。**テスト**タブに切り替えて、[コンテンツテストグループ]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups)または個々のユーザーにテストSMSを送信するか、Brazeで直接ユーザーとしてメッセージをプレビューしましょう。
 
-<<<<<<< HEAD
-![コンポーザーのテストタブからSMSコピーをプレビューする。プロファイルセクションの [名] フィールドは「James」に設定されています。プレビューセクションでは、SMSに "Hi James, we appreciate your support!"と表示されるようになった。]({% image_buster /assets/img/sms_campaign_test.png %})
-=======
-\![コンポーザーのテストタブからSMSコピーをプレビューする。プロファイルセクションの [名] フィールドは「James」に設定されています。プレビューセクションでは、SMSに "Hi James, we appreciate your support!"と表示されるようになった。]({% image_buster /assets/img/sms_campaign_test.png %})
->>>>>>> main
+![コンポーザーのテストタブからの SMS コピーのプレビュー。プロファイルセクションの [名] フィールドは「James」に設定されています。プレビューの項目では、SMSは"こんにちは、James、あなたのサポートをアプリします!"]({% image_buster /assets/img/sms_campaign_test.png %})
 
 {% alert tip %}
 SMSがいくつのセグメントに分けられるかテストしたい場合は、[SMSセグメント計算機を使って]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#segment-calculator)コピーの長さをテストしてみましょう。
@@ -127,7 +115,7 @@ SMS メッセージは、スケジュールされた時刻、アクション、�
 
 {% multi_lang_include target_audiences.md %}
 
-このステップでは、セグメントからより多くのオーディエンスを選択し、必要に応じてフィルターを使用してさらにセグメントを絞り込みます。そのセグメンテーションの母集団が今どのようなものなのか、自動的にプレビューが表示される。正確なセグメントメンバーシップは常にメッセージが送信される直前に計算されることに注意してください。
+このステップでは、セグメントからより多くのオーディエンスを選択し、必要に応じてフィルターを使用してさらにセグメントを絞り込みます。そのアプリの近接Segment集団が現在どのように見えるかのプレビューが自動的に与えられます。正確なセグメントメンバーシップは常にメッセージが送信される直前に計算されることに注意してください。
 
 {% alert tip %}
 SMSリターゲティングに興味がある？詳しくはSMS[リターゲティングの記事を]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/retargeting/)ご覧いただきたい。

@@ -33,7 +33,7 @@ POST: `/meetings/{webinarId}/registrants`
 
 URL のパラメーターを使用してユーザーデータを渡し、ページの読み込み時に実行される API 呼び出しを作成して、ユーザーをウェビナーに追加します。
 
-![名、姓、メールアドレス、市区町村を含むようにLiquidテンプレートを使用したメッセージ。]({% image_buster /assets/img/zoom/zoom1.png %})
+![名、姓、Eメールアドレス、市区町村を含むLiquidテンプレートを使用したEメールメッセージ。]({% image_buster /assets/img/zoom/zoom1.png %})
 
 これで、ユーザーが Braze プロファイルにすでに存在する詳細でウェビナーに登録されます。
 

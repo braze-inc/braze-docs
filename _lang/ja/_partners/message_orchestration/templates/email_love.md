@@ -28,19 +28,19 @@ search_tag: Partner
 
 ### ステップ2: 最初のフレームを作成する
 
-プラグインで、**[+ No Template Selected]** ボタンを選択して、メールデザインの新しいフレームを作成します。
+プラグインで**[+ No Template Selected]**ボタンを選択し、メールデザイン用の新しいフレームを作成する。
 
-### ステップ 3: Email Loveの事前に構築されたコンポーネントを使用してテンプレートをデザインする
+### ステップ 3:Email Loveの事前に構築されたコンポーネントを使用してテンプレートをデザインする
 
 作成したフレームを選択し、プラグインの **Assets** ライブラリーからコンポーネント (ヘッダー、コンテンツブロック、CTA、フッター) の追加を開始して、メールを構築します。
 
-![Email Love のビルド済みコンポーネント。]({% image_buster /assets/img/email_love/emaillove1_content.png %})
+![メールラブの既成コンポーネント。]({% image_buster /assets/img/email_love/emaillove1_content.png %})
 
 ### ステップ 4: コンポーネントのカスタマイズ
 
 Figma のツールを使用してコンポーネントを変更し、テキスト、画像、色、レイアウトの要素を調整して、ブランドに合わせてテンプレートをデザインします。フッターコンポーネントを追加すると、エクスポート時に Braze 購読解除リンクが自動的に追加されます。
 
-![Figma でコンポーネントをカスタマイズする]({% image_buster /assets/img/email_love/emaillove2_components.png %})
+![Figmaでコンポメントをカスタマイズする。]({% image_buster /assets/img/email_love/emaillove2_components.png %})
 
 ### ステップ 5: Braze へのメールテンプレートのエクスポート
 
@@ -50,11 +50,11 @@ Figma のツールを使用してコンポーネントを変更し、テキス�
 4. [**Set API キー**] ボタンを選択します。
 5. [**インスタンス ID の変更**] を選択してから、Braze インスタンス ID を選択します。
 
-![Email Love プラグインからBraze へのテンプレートのエクスポート。]({% image_buster /assets/img/email_love/emaillove3_exportbraze.png %}){: style="max-width:50%;"}
+![Email LoveプラグインからBrazeにテンプレートをエクスポートする。]({% image_buster /assets/img/email_love/emaillove3_exportbraze.png %}){: style="max-width:50%;"}
 
 ### ステップ 6: Braze でのメールの編集
 
-Braze で、[**テンプレート**] > [**テンプレートを編集**] > [**メッセージを編集**] に移動します。テンプレートエディター内で、メールHTML を編集するか、[**クラシック**] タブの **リッチテキストエディター** を使用できます。
+Braze で、[**テンプレート**] > [**テンプレートを編集**] > [**メッセージを編集**] に移動します。テンプレートエディタ内で、メールHTML を編集するか、**Classic** タブの**リッチテキストエディタ** を使用できます。
 
 ## サポートとトラブルシューティング
 

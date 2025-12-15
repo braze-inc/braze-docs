@@ -1,6 +1,6 @@
 ---
 nav_title: テレビとOTT
-article_title: ろう付け用TVとOTTの統合
+article_title: Braze 用 TV と OTT の統合
 page_order: 15
 
 description: "この記事では、Braze TVおよびOTTの機能、統合、利用可能なプラットフォーム、その他の機能について詳しく説明します。"
@@ -14,7 +14,7 @@ platform:
 
 # TVとOTTの統合
 
-> テクノロジーが新しいプラットフォームやデバイスに進化するにつれて、Brazeを使用したメッセージングも進化します！Braze は、さまざまなTV オペレーティングシステムおよびOver-the-Top (OTT) コンテンツ配信方法に、さまざまなエンゲージメントチャネルを提供します。
+> テクノロジーが新しいプラットフォームやデバイスに進化するにつれて、Brazeを使用したメッセージングも進化します！Braze は、さまざまなTV オペレーティングシステムおよび Over-the-Top (OTT) コンテンツ配信方法に対応した、さまざまなエンゲージメントチャネルを提供しています。
 
 ## プラットフォームと機能
 
@@ -253,7 +253,7 @@ Braze SWIFT SDKを使用してvisionOSと統合します。iOSで利用可能な
 
 メッセージングに OTT アプリをターゲット指定する場合、その OTT アプリに固有のセグメントを作成することをお勧めします。
 
-![Android OTT アプリを使用して作成されたセグメント。]({% image_buster /assets/img/android_ott.png %})
+![Android OTTアプリを使用して作成されたセグメント。]({% image_buster /assets/img/android_ott.png %})
 
 ## ヘッドレス UI {#custom-ui}
 

@@ -1,5 +1,5 @@
 ---
-nav_title: "取得:メールテンプレートのすべての翻訳とロケールを表示"
+nav_title: "取得:メールテンプレートのすべての翻訳とローカライゼーションを表示する"
 article_title: "取得:メールテンプレートのすべての翻訳とロケールを表示"
 search_tag: Endpoint
 page_order: 3
@@ -34,17 +34,20 @@ description: "この記事では、「メールテンプレートのすべての
 | パラメータ     | required | データ型 | 説明                     |
 |---------------|----------|-----------|---------------------------------|
 | `template_id` | 必須 | string    | メールテンプレートの ID。 |
-| `locale_id`   | 必須 | 文字列    | ロケールのID。           |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-すべての翻訳IDは、ユニバーサルユニーク識別子（UUID）とみなされ、**多言語サポート**設定またはリクエストレスポンスで見つけることができる。
+{% alert note %}
+すべての翻訳IDは、ユニバーサルユニーク識別子（UUID）とみなされ、GETエンドポイントのレスポンスで見つけることができる。
+{% endalert %}
 
-## リクエスト例
+## 例のリクエスト
 
 ```
 curl --location --request GET 'https://rest.iad-03.braze.com/templates/email/translations/' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
+--Request Body
+--- template_id: "6ad1507f-ca10-44c4-95bf-6e4gay901kc5"
 ```
 
 ## 応答
@@ -56,8 +59,6 @@ curl --location --request GET 'https://rest.iad-03.braze.com/templates/email/tra
 ステータスコード `200` は、次の応答ヘッダーと本文を返す可能性があります。
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "translations": [
         {
@@ -105,17 +106,5 @@ Authorization: Bearer YOUR-REST-API-KEY
     ]
 }
 ```
-
-## トラブルシューティング
-
-以下の表は、返される可能性のあるエラーと、それに関連するトラブルシューティングの手順を示したものである。
-
-| エラーメッセージ                           | トラブルシューティング                                                                    |
-|-----------------------------------------|------------------------------------------------------------------------------------|
-| `INVALID_LOCALE_ID`                     | メッセージ翻訳にロケール ID が存在することを確認します。                         |
-| `LOCALE_NOT_FOUND`                      | 多言語設定にロケールが存在することを確認します。                         |
-| `MULTI_LANGUAGE_NOT_ENABLED`            | ワークスペースの多言語設定がオンになっていない。                       |
-| `MULTI_LANGUAGE_NOT_ENABLED_ON_MESSAGE` | 翻訳できるのは、メールテンプレートとメール、プッシュ、アプリ内メッセージキャンペーン、またはメール付きキャンバスメッセージのみです。             |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

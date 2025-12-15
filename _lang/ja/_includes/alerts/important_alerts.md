@@ -1,7 +1,7 @@
 {% if include.alert == "Shopify deprecation" %}
 
 {% alert important %}
-[Shopifyとの統合の新バージョンは]({{site.baseurl}}/partners/shopify/#new-shopify-integration)、2025年4月から順次リリースされる予定だ。フェーズは、Shopify ストアのタイプと、初期統合のセットアップに使用される外部ID に基づきます。<br><br>**旧バージョンの統合は、2025年8月28日以降は利用できなくなる。この日までに新バージョンに更新すれば、問題なく統合を使い続けることができる。**
+[新バージョンのShopifyインテグレーション]({{site.baseurl}}/partners/shopify/#new-shopify-integration)は、2025年4月から段階的にリリースされます。フェーズは、Shopify ストアのタイプと、初期統合のセットアップに使用される外部ID に基づきます。<br><br>**旧バージョンの統合は、2025年8月28日以降は利用できなくなります。この日付より前の新しいバージョンに更新すると、問題なく統合を使用し続けます。**
 {% endalert %}
 
 {% endif %}
@@ -37,7 +37,7 @@ Naver Android や iOS アプリなど、Braze のユーザー設定センター�
 {% if include.alert == 'Purchase event deprecation' %}
 
 {% alert important %}
-購入イベントの段階的廃止計画が2025年後半に発表される予定です。将来的には、購入イベントは新しい[e コマースの推奨イベント]({{site.baseurl}}/user_guide/data/activation/custom_data/recommended_events/ecommerce_events/)に置き換わる予定です。新しい e コマースの推奨イベントには、セグメンテーション、レポート、分析などの強化された機能が組み込まれる予定です。ただし新しい e コマースイベントでは、購入イベントに関連する既存の機能 (キャンバスまたはキャンペーンでの生涯価値 (LTV) または収益の報告など) はサポートされません。購入イベントに関連する機能の完全なリストについては、[購入イベントのログを]({{site.baseurl}}/user_guide/data/activation/custom_data/purchase_events/#logging-purchase-events)参照のこと。
+購入イベントの段階的廃止計画が2025年後半に発表される予定です。将来的には、購入イベントは新しい[e コマースの推奨イベント]({{site.baseurl}}/user_guide/data/activation/custom_data/recommended_events/ecommerce_events/)に置き換わる予定です。新しい e コマースの推奨イベントには、セグメンテーション、レポート、分析などの強化された機能が組み込まれる予定です。ただし新しい e コマースイベントでは、購入イベントに関連する既存の機能 (キャンバスまたはキャンペーンでの生涯価値 (LTV) または収益の報告など) はサポートされません。購入イベントに関連する機能の完全なリストについては、[購入イベントの記録]({{site.baseurl}}/user_guide/data/activation/custom_data/purchase_events/#logging-purchase-events)を参照してください。
 {% endalert %}
 
 {% endif %}
@@ -45,7 +45,7 @@ Naver Android や iOS アプリなど、Braze のユーザー設定センター�
 {% if include.alert == 'S3 file bucket export' %}
 
 {% alert important %}
-S3バケットに保存されたエクスポートファイルは、ダウンロードリンクの有効期限が切れると自動的に削除される（特に断りのない限り、エクスポートメールが送信されてから4時間）。
+S3 バケットに保存されているエクスポートファイルは、ダウン読み込むの有効期限が切れた後(特に指定がない限り、エクスポートメールが送信されてから 4 時間後)に自動的に削除されます。
 {% endalert %} 
 
 {% endif %}
@@ -53,7 +53,7 @@ S3バケットに保存されたエクスポートファイルは、ダウンロ
 {% if include.alert == 'Shopify customer create' %}
 
 {% alert important %}
-Shopifyとの統合は、Shopifyの顧客作成と顧客更新のWebhookをサポートしており、これは顧客データの設定にある。Shopifyでユーザープロファイルが作成または更新されると、Brazeでも対応するユーザープロファイルが作成または更新される。<br><br>これらのアクションはBrazeのカスタムイベントをトリガーせず、[ShopifyのユーザーデータをBrazeと同期さ]({{site.baseurl}}/partners/ecommerce/shopify/shopify_overview/#how-the-integration-works)せるためだけに使用される。同期されるデータには、[カスタム属性]({{site.baseurl}}/partners/ecommerce/shopify/shopify_data_features/#supported-shopify-custom-attributes)、[標準属性]({{site.baseurl}}/partners/ecommerce/shopify/shopify_data_features/#supported-shopify-standard-attributes)、そして設定内でイネーブルメントになっていれば、[サブスクリプショングループの状態が]({{site.baseurl}}/partners/ecommerce/shopify/shopify_overview#syncing-shopify-email-and-sms-marketing-opt-ins)含まれる。
+Shopifyインテグレーションでは、データコンフィギュレーション設定にあるShopify 顧客の作成と顧客 更新 webhookがサポートされます。ユーザープロファイルが作成されるか、更新dがShopifyで作成されると、対応するBrazeのユーザープロファイルが作成されるか、更新dが作成されます。<br><br>これらのアクションはBrazeではs をトリガー カスタムイベントせず、[Braze]({{site.baseurl}}/partners/ecommerce/shopify/shopify_overview/#how-the-integration-works) との同期Shopify ユーザーデータにのみ使用されます。同期されるデータには、[カスタム属性s]({{site.baseurl}}/partners/ecommerce/shopify/shopify_data_features/#supported-shopify-custom-attributes)、[標準属性項目s]({{site.baseurl}}/partners/ecommerce/shopify/shopify_data_features/#supported-shopify-standard-attributes)が含まれ、設定内で有効になっている場合は、[サブスクリプショングループステート]({{site.baseurl}}/partners/ecommerce/shopify/shopify_overview#syncing-shopify-email-and-sms-marketing-opt-ins)が含まれます。
 {% endalert %}
 
 {% endif %}
@@ -61,7 +61,7 @@ Shopifyとの統合は、Shopifyの顧客作成と顧客更新のWebhookをサ�
 {% if include.alert == 'context variable' %}
 
 {% alert important %}
-キャンバス・コンテキストの早期アクセスに参加している場合、キャンバス・エントリーのプロパティはキャンバス・コンテキスト変数の一部となる。これは、`canvas_entry_properties` が`context` として参照されることを意味します。各コンテキスト変数には、名前、データ型、およびLiquid を含めることができる値が含まれます。現在のところ、`canvas_entry_properties` は後方互換性を保っている。詳しくは、[コンテキストと]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context/#how-it-works) [キャンバス・コンテキスト・オブジェクトを]({{site.baseurl}}/api/objects_filters/context_object)参照のこと。
+キャンバスコンテキストの初期アクセスに参加している場合、キャンバスエントリのプロパティはキャンバスコンテキスト変数の一部です。これは、`canvas_entry_properties` が`context` として参照されることを意味します。各コンテキスト変数には、名前、データ型、およびLiquid を含めることができる値が含まれます。現在、`canvas_entry_properties` は下位互換性があります。詳しくは、[コンテキスト]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context/#how-it-works)および[キャンバスエントリプロパティオブジェクト]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/)を参照してください。
 {% endalert %}
 
 {% endif %}

@@ -18,9 +18,9 @@ description: "このリファレンス記事では、Brazeプラットフォー�
 
 Braze ダッシュボードで、[**テンプレート**] > [**Webhook テンプレート**] に移動します。
 
-![Webhook Templates "ページには、デザイン済みのWebhookテンプレートが保存されている。]({% image_buster /assets/img_archive/webhook_template_campaign.png %})
+![Webhook Templates "ページには、あらかじめデザインされ保存されたWebhookテンプレートがある。]({% image_buster /assets/img_archive/webhook_template_campaign.png %})
 
-## ステップ 2: テンプレートを選ぶ
+## ステップ 2:テンプレートを選ぶ
 
 ここから、新しいテンプレートを作成するか、あらかじめデザインされたWebhookテンプレートを使用するか、既存のテンプレートを編集するかを選択できる。
 

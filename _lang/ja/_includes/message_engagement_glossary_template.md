@@ -14,13 +14,13 @@ search_rank: 6
 
 その他のイベントの種類にアクセスする必要がある場合は、アカウントマネージャーに問い合わせるか、[サポートチケット]({{site.baseurl}}/braze_support/)を開いてください。必要な情報がこの記事に見つからない場合は、 [顧客行動イベント ライブラリ]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/)または [Currents サンプルデータの例](https://github.com/Appboy/currents-examples/tree/master/sample-data)をご覧ください。
 
-{% details メッセージエンゲージメントイベントの構造とプラットフォームの値の説明 %}
+{% details Explanation of message engagement event structure and platform values %}
 
 ### イベントの構造
 
 このイベントの内訳は、メッセージエンゲージメントイベントに一般的に含まれる情報のタイプを示します。開発者とビジネスインテリジェンス戦略チームは、情報の構成要素をしっかり理解したうえで、受信した Currents イベントデータを使用して、データドリブン型のレポートやグラフを作成したり、その他の貴重なデータ指標を活用したりすることができます。
 
-![メールの購読解除イベントを示すメッセージエンゲージメントの内訳。ユーザー固有のプロパティ、キャンペーンまたはキャンバスの追跡プロパティ、およびイベント固有のプロパティで、プロパティをグループ化してリストしています]({% image_buster /assets/img/message_engagement_event.png %})
+![ユーザー固有のプロパティー、キャンペーンまたはキャンバス"トラッキングのプロパティー、およびイベント固有のプロパティーによってグループ化されたリストされたプロパティーを持つメール 配信停止イベントを示すメッセージエンゲージメントイベントの内訳]({% image_buster /assets/img/message_engagement_event.png %})
 
 メッセージエンゲージメントイベントは、**ユーザー固有**のプロパティ、**キャンペーン / キャンバス追跡**プロパティ、 および**イベント固有**のプロパティで構成されます。
 
