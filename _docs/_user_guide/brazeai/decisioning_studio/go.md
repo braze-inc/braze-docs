@@ -9,7 +9,10 @@ description: "Learn how to set up and integrate BrazeAI Decisioning Studio<sup>T
 
 > Locate key information in Braze to begin integrating with BrazeAI Decisioning Studio™ Go.
 
-## Essentials
+This page explains how to locate key information in your CEP (Braze, SFMC, or Klaviyo) in order to integrate BrazeAI Decisioning Go use case. 
+
+{% tabs %}
+{% tab Braze %}
 
 ### Creating a REST API key in Braze
 
@@ -66,31 +69,8 @@ Braze offers app IDs (referred to as API keys in the Braze dashboard) that you c
 2. Go to the app you want to track.
 3. Copy and paste the **API Key** into your BrazeAI Decisioning Studio™ Go portal.
 
-### Setting up Klaviyo API keys
-
-You must set up an API key to use Klaviyo for BrazeAI Decisioning Studio™ Go.
-
-1. In Klaviyo, go to **Settings** > **API keys**.
-2. Select **Create Private API Key**. 
-3. Enter a name for the API key. An example is "Decisioning Studio Experimenters".
-4. Select the following permissions for the API key:
-    - Campaigns: Read Access
-    - Data Privacy: Full Access
-    - Events: Full Access
-    - Flows: Full Access
-    - Images: Read Access
-    - List: Full Access
-    - Metrics: Full Access
-    - Profiles: Full Access
-    - Segments: Read Access
-    - Templates: Full Access
-    - Webhooks: Read Access
-
-![A Klaviyo API key with selected permissions.]({% image_buster /assets/img/decisioning_studio_go/klaviyo_api_key.png %})
-
-{: start="5"}
-5. Select **Create**. 
-6. Copy this API key and paste it into the BrazeAI Decisioning Studio™ Go portal where prompted.
+{% endtab %}
+{% tab SFMC %}
 
 ### Setting up an SFMC app package
 
@@ -139,3 +119,36 @@ To use Salesforce Marketing Cloud for BrazeAI Decisioning Studio™ Go, you must
 {: start="10"}
 10. Select **Save**.
 11. Copy and paste the following fields into the BrazeAI Decisioning Studio™ Go portal: **Client Id**, **Client Secret**, **Authentication Base URI**, **REST Base URI**, **SOAP Base URI**.
+
+{% endtab %}
+{% tab Klaviyo %}
+
+### Setting up Klaviyo API keys
+
+You must set up an API key to use Klaviyo for BrazeAI Decisioning Studio™ Go.
+
+1. In Klaviyo, go to **Settings** > **API keys**.
+2. Select **Create Private API Key**. 
+3. Enter a name for the API key. An example is "Decisioning Studio Experimenters".
+4. Select the following permissions for the API key:
+    - Campaigns: Read Access
+    - Data Privacy: Full Access
+    - Events: Full Access
+    - Flows: Full Access
+    - Images: Read Access
+    - List: Full Access
+    - Metrics: Full Access
+    - Profiles: Full Access
+    - Segments: Read Access
+    - Templates: Full Access
+    - Webhooks: Read Access
+
+![A Klaviyo API key with selected permissions.]({% image_buster /assets/img/decisioning_studio_go/klaviyo_api_key.png %})
+
+{: start="5"}
+5. Select **Create**. 
+6. Copy this API key and paste it into the BrazeAI Decisioning Studio™ Go portal where prompted.
+
+{% endtab %}
+{% endtabs %}
+
