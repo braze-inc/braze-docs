@@ -6,7 +6,7 @@
 
 ## Android SDKのバナーの表示
 
-{% multi_lang_include developer_guide/_shared/tutorial_feedback.md tutorial="Banners Android&quot を表示する; %}
+{% multi_lang_include developer_guide/_shared/tutorial_feedback.md tutorial="Banners Android を表示する" %}
 
 {% scrolly %}
 
