@@ -7,9 +7,10 @@ description: "Learn how to set up and integrate BrazeAI Decisioning Studio<sup>T
 
 # BrazeAI Decisioning Studio™ Go
 
-> Locate key information in Braze to begin integrating with BrazeAI Decisioning Studio™ Go.
 
-This page explains how to locate key information in your CEP (Braze, SFMC, or Klaviyo) in order to integrate BrazeAI Decisioning Go use case. 
+Decisioning Studio currently offers two tiers: Go and Pro. Go includes self-serve creative configuration with a limited action bank, only optimizes on clicks, and is only compatible with the following three Customer Engagement Platforms (CEP's): Braze, Salesforce Marketing Cloud, and Klaviyo.
+
+Each of these tutorials provides steps that need to be completed outside of Go's interface in order for Go to be able to orchestrate via the Customer Engagement Platform of choice. 
 
 1. [Locating Key Information]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/go/)
 2. [Configure Orchestration in Braze]({{site.baseurl}}/user_guide/brazeai/decisioning_studio_go/configuring_braze/)
