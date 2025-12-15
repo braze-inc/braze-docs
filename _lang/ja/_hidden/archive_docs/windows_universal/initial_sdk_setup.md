@@ -1,5 +1,5 @@
 ---
-nav_title: SDK の初期セットアップ
+nav_title: SDK の初期設定
 article_title: Windows Universal 用の SDK 初期設定
 platform: Windows Universal
 page_order: 0
@@ -13,11 +13,11 @@ hidden: true
 
 Braze SDK は、分析、セグメンテーション、エンゲージメントで使用される情報をレポートするための API と、プッシュ通知と通知の受信用にユーザーを登録する機能を提供します。
 
->  Windows Universal SDK は、Xamarin Windows アプリとも互換性があります。
+>  Windows Universal SDKは、.NET MAUI Windowsアプリとも互換性がある。
 
-## ステップ1:NuGet パッケージマネージャーを使用したSDKのインストール
+## ステップ 1: NuGet パッケージマネージャーを使用したSDKのインストール
 
-Windows ユニバーサルSDKは、[NuGet Package Manager][14] を使用してインストールします。NuGet を使用してBraze Windows SDKをインストールするには:
+Windows ユニバーサルSDKは、[NuGet Package Manager](http://www.nuget.org/) を使用してインストールします。NuGet を使用してBraze Windows SDKをインストールするには:
 
 1. プロジェクトファイルを右クリックする
 2. [Manage NuGet Packages (NuGet パッケージの管理)]をクリックします。
@@ -48,9 +48,9 @@ Windows ユニバーサルSDKは、[NuGet Package Manager][14] を使用して�
 ## ステップ3:package.appxmanifest の設定
 
 [機能] タブで、`Internet (Client)` がオンになっていることを確認します。
-![][18]
+![]({% image_buster /assets/img_archive/internet_client.png %})
 
-## ステップ4:アプリクラスの編集
+## ステップ 4: アプリクラスの編集
 
 - `App.xaml.cs` ファイルの`usings` に以下を追加します。
 
@@ -74,9 +74,7 @@ Appboy.SharedInstance.CloseSession();
 
 ## 基本的な SDK 統合の完了
 
-これで Braze はアプリケーションからデータを収集するようになるはずです。[属性]({{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/setting_custom_attributes/)、[イベント]({{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/logging_custom_events)、および[購入]({{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/logging_purchases)を SDK に記録する方法と、プッシュメッセージングを実装する方法については、次の記事を参照してください。
+これで Braze はアプリケーションからデータを収集するようになるはずです。[属性]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/)、[イベント]({{site.baseurl}}/developer_guide/analytics/logging_events/)、および[購入]({{site.baseurl}}/developer_guide/analytics/logging_purchases/)を SDK に記録する方法と、プッシュメッセージングを実装する方法については、次の記事を参照してください。
 
 >  同じアプリで Braze Unity プロジェクトを使用している場合は、Braze への呼び出しを「AppboyPlatform.Universal.Appboy」として完全修飾する必要があります。
 
-[14]: http://www.nuget.org/
-[18]: {% image_buster /assets/img_archive/internet_client.png %}
