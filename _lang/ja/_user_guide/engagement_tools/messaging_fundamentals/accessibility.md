@@ -10,7 +10,7 @@ description: "この参考記事では、マーケティング・コンテンツ
 
 > マーケティングコンテンツにおいてアクセシビリティを考慮することが重要な理由と、Brazeでアクセシブルなメッセージを作成する方法を理解する。より詳しいガイダンスについては、Brazeラーニングの[アクセシブル・メッセージング基礎](https://learning.braze.com/accessible-messaging-foundations)コースをチェックしよう。
 
-障がい者を排除したマーケティングコンテンツは、意図しなくても、何百万人もの人々がブランドと関わることを妨げる可能性があります。マーケティングにおけるアクセシビリティとは、誰もがマーケティングを体験し、コミュニケーションを受け取って理解し、製品、サービス、またはブランドに投資したり、ファンになったりする機会を得られることです。 
+障がい者を排除したマーケティングコンテンツは、意図しなくても、何百万人もの人々がブランドと関わることを妨げる可能性があります。マーケティングのアクセシビリティとは、誰もがあなたのマーケティングを体験し、あなたのコミュニケーションを理解し、あなたの商品、サービス、ブランドに投資したり、ファンになったりできるようにすることです。 
 
 メッセージングをデザインする際には、どのようにすればすべての顧客がデザインにアクセスできるようになるかを考慮し、特別な時間をかけること。
 
@@ -241,7 +241,7 @@ Braze のドラッグ＆ドロップエディターはデフォルトでセマ�
 タッチターゲットが小さすぎたり、近すぎたりすると、移動や手先の不自由なユーザーにとって、メッセージと対話するのがイライラしたり、不可能になったりすることがある。これを改善することで、エラーを減らし、誰にとってもスムーズな体験を生み出すことができます。
 
 留意点は以下のとおりです。
-- **タップしやすくする。**タッチターゲットの最小サイズを44×44ピクセルに設定します。これは、[タッチターゲット](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html)に関する WCAG 2.2ガイドラインおよび一般的なモバイルユーザビリティ基準に沿ったものです。
+- **適切なタッチターゲットサイズを使用してください。**タッチターゲットの最小サイズを44×44ピクセルに設定します。これは、[タッチターゲット](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html)に関する WCAG 2.2ガイドラインおよび一般的なモバイルユーザビリティ基準に沿ったものです。
 - **それぞれのターゲットに余裕を与える。**リンクが重なっていたり、ボタンが密集していたりして、タップターゲットが近すぎると、見逃しや誤タップを誘発しやすくなります。それを防ぐために、要素間にスペーシングやパディングを追加します。
 - **ビジュアルだけに頼ってはいけない。**小さなアイコンであっても、パディングを追加することで、レイアウトを変更することなく最小サイズの要件を満たすことができ、より使いやすくすることができます。
 - **モバイルでプレビューする。**さまざまなスクリーンサイズでメッセージをテストし、インタラクティブな要素が使いやすいことを確認する。
@@ -598,7 +598,7 @@ ARIAはWebコンテンツをよりアクセシブルにするために設計さ�
 アクセシビリティの問題を早期に発見し、修正するために、Braze では以下の分野で自動アクセシビリティテストを提供しています。
 
 - メール向けの [Inbox Vision]({{site.baseurl}}/user_guide/message_building_by_channel/email/inbox_vision/#accessibility-testing)
-- HTMLエディタを使って作成されたメッセージ（HTMLアプリ内メッセージ、HTMLコンテンツブロック、[カスタムメールフッター]({{site.baseurl}}/user_guide/message_building_by_channel/email/custom_email_footer)、[メールオプトインページ]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#creating-a-custom-opt-in-page)、[メール配信停止ページなど]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#creating-a-custom-unsubscribe-page)）の[アクセシビリティスキャナ]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/#accessibility-scanner)。
+- HTMLエディタを使って作成されたメッセージ（HTMLアプリ内メッセージ、HTMLコンテンツブロック、[カスタムメールフッター]({{site.baseurl}}/user_guide/message_building_by_channel/email/custom_email_footer)、[メールオプトインページ]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#creating-a-custom-opt-in-page)、[メール配信停止ページなど]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#creating-a-custom-unsubscribe-page)）の[アクセシビリティスキャナ]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/?tab=in-app%20message#accessibility-scanner)。
 
 これらのテストは、Web Content Accessibility Guidelines[(WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/))標準-アクセシブルコンテンツのための国際的に認知された技術基準のセット-に対してあなたのメッセージをチェックする。自動的に検出された問題はすべてフラグが立てられ、重要度別に分類されるため、優先順位をつけやすくなる。
 

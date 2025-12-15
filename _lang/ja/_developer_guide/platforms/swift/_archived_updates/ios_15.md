@@ -1,5 +1,5 @@
 ---
-nav_title: iOS 15 アップグレードガイド
+nav_title: iOS 15 アップグレード ガイド
 article_title: iOS 15 SDKアップグレードガイド
 page_order: 7
 platform: iOS

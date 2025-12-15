@@ -70,7 +70,7 @@ PSID を受信していると確信したら、これを開発者と調整して
 
 ### ステップ 3:Webhook テンプレートのセットアップ
 
-**Templates & Media**から**Webフックテンプレート**に進み、**FaceBook Messenger Webフックテンプレート**を選択します。
+**Templates& Mediaから** **Webhook Templatesに**進み、**Facebook Messenger Webhook Templateを**選択する。
 
 1. テンプレートの名前を入力し、必要に応じてチームとタグs を追加します。
 2. メッセージを入力するか、[Facebook で利用可能なメッセージテンプレート](https://developers.facebook.com/docs/messenger-platform/reference/webhook-events/messages)からメッセージテンプレートを選択します。また、[タイプ](https://developers.facebook.com/docs/messenger-platform/send-messages#message_types)や[タグ](https://developers.facebook.com/docs/messenger-platform/send-messages/message-tags)を選択することもできます。
@@ -89,7 +89,7 @@ Webhookを確認してから送信してください。Messenger ID がBraze に
 
 設定が完了したら、この統合を使用して Facebook Messenger ユーザーをターゲットにします。ユーザーの電話番号を使用してメッセージを送信しておらず、Messenger メッセージを繰り返し送信する予定がある場合は、Messenger ID がカスタム属性として存在するすべてのユーザーに対して[セグメントを作成]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment)し、[分析の追跡]({{site.baseurl}}/user_guide/data_and_analytics/reporting/viewing_and_understanding_segment_data/)をオンにして、Messenger のサブスクリプション率を経時的に追跡する必要があります。 
 
-![セグメントフィルター「messenger_id」が「is not blank」に設定されている。]({% image_buster /assets/img_archive/fbm-segmentation.png %})
+![セグメンテーションフィルター"messenger_id" "is not blank "に設定されている。]({% image_buster /assets/img_archive/fbm-segmentation.png %})
 
 Messenger サブスクライバー向けの特定のセグメントを作成しない場合は、エラーを避けるために、既存の Messenger ID のフィルターを必ず含めてください。
 

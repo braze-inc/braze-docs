@@ -3,12 +3,16 @@ page_order: 0
 nav_title: ホーム
 layout: dev_guide
 guide_top_header: "Braze 開発者ガイド"
-guide_top_text: "ここでは、開発者が Braze SDK について知る必要のあるすべての情報を得ることができます。各SDKは、独自のGitHub公開リポジトリでホストされており、Brazeの機能をテストしたり、独自のアプリケーションと一緒に実装したりするために使用できる、完全にビルド可能なサンプルアプリが含まれている。詳しくは、<a href='{{site.baseurl}}/developer_guide/references/'>参照資料、リポジトリ、サンプルアプリ</a>を参照してください。<br><br>Braze を使用して構築している他の開発者とつながり、学び、刺激を受けたいですか?<a href='https://www.braze.com/dev-portal'>Braze 開発者コミュニティ</a>に参加しましょう。"
+guide_top_text: "ここでは、開発者が Braze SDK について知る必要のあるすべての情報を得ることができます。各SDKは、独自のGitHub公開リポジトリでホストされており、Brazeの機能をテストしたり、独自のアプリケーションと一緒に実装したりするために使用できる、完全にビルド可能なサンプルアプリが含まれている。詳しくは、<a href='https://www.braze.com/docs/developer_guide/references/'>参照資料、リポジトリ、サンプルアプリ</a>を参照してください。<br><br>Braze を使用して構築している他の開発者とつながり、学び、刺激を受けたいですか?<a href='https://www.braze.com/dev-portal'>Braze 開発者コミュニティ</a>に参加しましょう。"
 article_title: Braze 開発者ガイド
 description: "このランディングページでは、開発者は Braze で利用可能なすべての統合を見つけることができます。"
 
 guide_featured_title: "注目の統合"
 guide_featured_list:
+- name: Web
+  link: /docs/developer_guide/sdk_integration/?sdktab=web
+  image: /assets/img/braze_icons/globe-02.svg
+  nav_link: web
 - name: Android
   image: /assets/img/braze_icons/android.svg
   link: /docs/developer_guide/sdk_integration/?sdktab=android
@@ -16,10 +20,6 @@ guide_featured_list:
 - name: Swift
   link: /docs/developer_guide/sdk_integration/?sdktab=swift
   image: /assets/img/braze_icons/swift.svg
-- name: Web
-  link: /docs/developer_guide/sdk_integration/?sdktab=web
-  image: /assets/img/braze_icons/globe-02.svg
-  nav_link: web
 
 guide_menu_title: "All integrations"
 guide_menu_list:
@@ -47,12 +47,8 @@ guide_menu_list:
     link: /docs/developer_guide/sdk_integration/?sdktab=unity
     image: /assets/img/unity.png
     nav_link: unity
-  - name: Unreal Engine
-    link: /docs/developer_guide/sdk_integration/?sdktab=unreal%20engine
-    image: /assets/img/unreal.png
-    nav_link: unreal_engine
-  - name: Xamarin
-    link: /docs/developer_guide/sdk_integration/?sdktab=xamarin
+  - name: .NET MAUI (Xamarin)
+    link: /docs/developer_guide/sdk_integration/?sdktab=.net%20maui%20(xamarin)
     image: /assets/img/xamarin.png
     nav_link: xamarin
   - name: TV &amp; OTT

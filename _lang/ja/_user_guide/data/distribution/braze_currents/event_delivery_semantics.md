@@ -65,7 +65,7 @@ Currents は、以下の形式で各イベントタイプのファイルを作�
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert tip %}
-ファイルの命名規則は将来変更される可能性がある。Brazeは、バケツ内のすべてのキーの接頭辞が<your-bucket-prefix> であるものを検索することを推奨する。
+ファイルの命名規則が変更される場合があります。Braze では、<your-bucket-prefix> というプレフィックスを持つバケット内のすべてのキーを検索することをお勧めします。
 {% endalert %}
 
 ### Avro の書き込みしきい値

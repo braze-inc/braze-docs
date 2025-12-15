@@ -59,11 +59,7 @@ Braze には、API キーを含む認証用の HTTP ヘッダーと、`content-t
 
 `YOUR_API_KEY` を、`users.track` 権限を持つ Braze API キーに置き換えます。APIキーは、Brazeダッシュボードの**「設定」**>「**APIキー**」で作成できる。
 
-<<<<<<< HEAD
-![Webhookのリクエストヘッダー。]({% image_buster /assets/img_archive/webhook_settings.png %}){: style="max-width:70%;"}
-=======
-\![Webhookのリクエストヘッダー。]({% image_buster /assets/img_archive/webhook_settings.png %}){: style="max-width:70%;"}
->>>>>>> main
+![Webhookのリクエストヘッダーs。]({% image_buster /assets/img_archive/webhook_settings.png %}){: style="max-width:70%;"}
 
 #### Request body
 
@@ -115,11 +111,7 @@ Braze には、API キーを含む認証用の HTTP ヘッダーと、`content-t
 
 `YOUR_API_KEY` を、`canvas.trigger.send` 権限を持つ Braze API キーに置き換えます。APIキーは、Brazeダッシュボードの**「設定」**>「**APIキー**」で作成できる。
 
-<<<<<<< HEAD
-![Webhookのリクエストヘッダー。]({% image_buster /assets/img_archive/webhook_settings.png %}){: style="max-width:70%;"}
-=======
-\![Webhookのリクエストヘッダー。]({% image_buster /assets/img_archive/webhook_settings.png %}){: style="max-width:70%;"}
->>>>>>> main
+![Webhookのリクエストヘッダーs。]({% image_buster /assets/img_archive/webhook_settings.png %}){: style="max-width:70%;"}
 
 #### Request body
 

@@ -25,7 +25,7 @@ Brazeオーディエンス同期をSnapchatに使用することで、ブラン�
 
 {% alert important %}
 **Audience Sync Pro 免責条項**<br>
-Braze Audience Sync to Snapchat はAudience Sync Pro 統合です。この統合の詳細については、Braze アカウントマネージャーにお問い合わせください。
+Braze Audience Sync to Snapchat はAudience Sync Pro 統合です。この統合の詳細については、Brazeアカウントマネージャーに問い合わせること。
 {% endalert %}
 
 ## 前提条件 
@@ -36,14 +36,18 @@ Braze Audience Sync to Snapchat はAudience Sync Pro 統合です。この統合
 | --- | --- | --- |
 | Snapchatビジネスマネージャー | Snapchat | ブランドのSnapchatアセット（広告アカウント、ページ、アプリなど）を管理するための集中化されたツール。 |
 | Snapchat広告アカウント | Snapchat | ブランドのSnapchatビジネスマネージャーに紐づけられたアクティブなSnapchat広告アカウント。<br><br>Snapchat Business マネージャーの管理者が、Brazeで使用する予定のSnapchat広告アカウントに対する管理者権限を付与していることを確認してください。 |
-| Snapchatの利用規約とポリシー | [Snapchat](https://www.snap.com/en-US/policies) | Snapchat Audience Sync Snapchat のすべての必須条件、ポリシー、ガイドライン、ドキュメントを遵守することに同意するものとします。これには、引用により組み込まれるすべての条件、ポリシー、ガイドライン、および文書 (利用規約、ビジネス利用規約、開発者規約、オーディエンスマッチ、広告ポリシー、商用コンテンツポリシー、サプライヤー責任などを含む) が含まれます。 |
+| スナップチャット規約& ポリシー | [Snapchat](https://www.snap.com/en-US/policies) | Snapchat Audience Sync Snapchat のすべての必須条件、ポリシー、ガイドライン、ドキュメントを遵守することに同意するものとします。これには、引用により組み込まれるすべての条件、ポリシー、ガイドライン、および文書 (利用規約、ビジネス利用規約、開発者規約、オーディエンスマッチ、広告ポリシー、商用コンテンツポリシー、サプライヤー責任などを含む) が含まれます。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## 統合 
 
 ### ステップ1:Snapchatに接続
 
-Brazeのダッシュボードで、**パートナー統合** > **テクノロジーパートナー** に移動し、**Snapchat** を選択します。Snapchat オーディエンス同期で、[**Snapchat を接続**] を選択します。
+{% alert important %}
+BrazeアカウントにSnapchatを接続するには[「管理者」権限が]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#admin)必要。
+{% endalert %}
+
+Braze のダッシュボードで、[**パートナー連携**] > [**テクノロジーパートナー**] に移動し、[**Snapchat**] を選択します。Snapchat オーディエンス同期で、[**Snapchat を接続**] を選択します。
 
 ![Braze の Snapchat テクノロジーページ。「概要」セクション、「Snapchat Audience Sync」セクション、「接続済みの Snapchat」ボタンが表示されている。]({% image_buster /assets/img/snapchat/snapchat1.png %}){: style="max-width:80%;"}
 
@@ -51,7 +55,7 @@ Brazeのダッシュボードで、**パートナー統合** > **テクノロジ
 
 確認を選択すると、Brazeに戻り、同期するSnapchat広告アカウントを選択します。 
 
-![Snapchat に接続できる利用可能な広告アカウントのリストです。]({% image_buster /assets/img/snapchat/snapchat2.png %}){: style="max-width:80%;"}
+![Snapchatに接続できる利用可能な広告アカウントのリストです。]({% image_buster /assets/img/snapchat/snapchat2.png %}){: style="max-width:80%;"}
 
 接続に成功すると、パートナーページに戻ります。このページでは、接続されているアカウントを表示したり、既存のアカウントを切断したりできます。
 
@@ -65,7 +69,7 @@ Brazeのダッシュボードで、**パートナー統合** > **テクノロジ
 
 ![]({% image_buster /assets/img/audience_sync/audience_sync3.png %}){: style="max-width:35%;"} ![]({% image_buster /assets/img/audience_sync/audience_sync5.png %}){: style="max-width:28%;"}
 
-### ステップ 3: 同期セットアップ
+### ステップ 3:同期セットアップ
 
 [**カスタムオーディエンス**] ボタンをクリックしてコンポーネントエディターを開きます。
 
@@ -73,28 +77,28 @@ Brazeのダッシュボードで、**パートナー統合** > **テクノロジ
 
 ![]({% image_buster /assets/img/audience_sync/audience_sync4.png %}){: style="max-width:80%;"}
 
-次に、希望するSnapchat広告アカウントを選択します。[**新規または既存のオーディエンスを選択**] ドロップダウンで、新しいオーディエンスまたは既存のオーディエンスの名前を入力します。
+次に、希望するSnapchat広告アカウントを選択します。**Choose a New or Existing Audience（新規または既存のオーディエンスを選択**）ドロップダウンで、新規または既存のオーディエンスの名前を入力します。
 
 {% tabs %}
-{% tab 新規オーディエンスの作成 %}
+{% tab Create a New Audience %}
 
 **新規オーディエンスの作成**<br>
 新しいオーディエンスの名前を入力し、**オーディエンスにユーザーを追加**を選択し、Snapchatと同期したいフィールドを選択します。次に、ステップエディタの下部にある**オーディエンス**を作成ボタンをクリックして、オーディエンスを保存します。
 
-![カスタムオーディエンスキャンバスステップの展開ビュー。ここでは目的の広告アカウントが選択され、新しいオーディエンスが作成されます。]({% image_buster /assets/img/audience_sync/snapchat3.png %})
+![カスタムオーディエンスキャンバスステップの展開ビュー。ここで、目的の広告アカウントを選択し、新しいオーディエンスが作成される。]({% image_buster /assets/img/audience_sync/snapchat3.png %})
 
-ユーザーは、オーディエンスが正常に作成された場合、またはこのプロセス中にエラーが発生した場合に、ステップエディターの上部で通知されます。ユーザーは、後でキャンバスジャーニーでユーザーを削除するためにこのオーディエンスを参照することもできます。これは、オーディエンスが下書きで作成されたためです。
+オーディエンスが正常に作成された場合、またはこのプロセス中にエラーが発生した場合、ステップエディタの上部にユーザーに通知されます。ユーザーは、後でキャンバスジャーニーでユーザーを削除するためにこのオーディエンスを参照することもできます。これは、オーディエンスが下書きで作成されたためです。
 
 ![キャンバスコンポーネントで新しいオーディエンスが作成された後に表示されるアラート。]({% image_buster /assets/img/audience_sync/snapchat2.png %})
 
 新しいオーディエンスを使用してキャンバスを起動すると、オーディエンス同期コンポーネントに入る時点で、Braze はユーザーをほぼリアルタイムで同期します。
 
 {% endtab %}
-{% tab 既存のオーディエンスと同期する %}
+{% tab Sync with an Existing Audience %}
 **既存のオーディエンスとの同期**<br>
 また、Braze は、これらのオーディエンスが最新であることを確認するために、既存の Snapchat オーディエンスにユーザーを追加する機能も提供します。既存のオーディエンスと同期するには、ドロップダウンに既存のオーディエンスの名前を入力し、**オーディエンスに追加します。**Braze は、オーディエンス同期コンポーネントに入ると、ほぼリアルタイムでユーザーを追加します。
 
-![カスタムオーディエンスキャンバスステップの展開ビュー。ここでは、目的の広告アカウントと既存のオーディエンスが選択されている。]({% image_buster /assets/img/audience_sync/snapchat.png %})
+![カスタムオーディエンスキャンバスステップの展開ビュー。ここで、希望する広告アカウントと既存のオーディエンスが選択される。]({% image_buster /assets/img/audience_sync/snapchat.png %})
 
 {% endtab %}
 {% endtabs %}
@@ -105,9 +109,9 @@ Brazeのダッシュボードで、**パートナー統合** > **テクノロジ
 
 Snapchatでオーディエンスを表示するには、広告マネージャーアカウントにログインし、ナビゲーションのアセットセクションから**オーディエンス**を選択します。[**Audience**] ページで、各オーディエンスが1,000に達した後のオーディエンスのサイズを確認できます。
 
-![オーディエンスの名前、オーディエンスの種類、オーディエンスのサイズ、オーディエンスのリテンション (日単位) を含む、指定された Snapchat オーディエンスのオーディエンス詳細。]({% image_buster /assets/img/snapchat/snapchat7.png %}
+![オーディエンスの名前、オーディエンスの種類、オーディエンスのサイズ、オーディエンスのリテンション (日単位) を含む、指定された Snapchat オーディエンスのオーディエンス詳細。]({% image_buster /assets/img/snapchat/snapchat7.png %})
 
-## ユーザーの同期とレート制限の考慮事項
+## ユーザの同期とレート制限に関する考慮事項
 
 ユーザーがオーディエンス同期ステップに到達すると、BrazeはSnapchatのAPIレート制限を尊重しながら、これらのユーザーをほぼリアルタイムで同期します。実際には、Brazeはできるだけ多くのユーザーを5秒ごとにバッチ処理し、これらのユーザーをSnapchatに送信しようとします。
 
@@ -134,7 +138,7 @@ Snapchat の API レート制限では、1秒あたり10件のクエリと、リ
 
 ## よくある質問
 
-### Snapchat がサポート可能なオーディエンス数は?
+### Snapchat でサポート可能なオーディエンス数
 
 現時点では、Snapchat アカウントに含めることができるオーディエンスの数は1,000です。 
 

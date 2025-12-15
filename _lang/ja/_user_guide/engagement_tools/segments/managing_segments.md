@@ -1,5 +1,5 @@
 ---
-nav_title: Segmentの管理
+nav_title: セグメンテーションの管理
 article_title: セグメントの管理
 page_order: 1
 page_type: tutorial
@@ -12,7 +12,7 @@ description: "この記事では、セグメントのリストのフィルタリ
 
 > [セグメント] セクションでは、既存のセグメントの包括的なリストを表示したり、新しいセグメントを作成したり、既存のセグメントを編集したりできます。さまざまなフィルターや列を選択してセグメントのリストを絞り込み、関連性の最も高い情報のみを表示できます。
 
-![Segment s 部に活性Segments の一覧が表示されます。]({% image_buster /assets/img/segment/segments_page.png %})
+![アクティブセグメントのリストを表示するセグメントセクション]({% image_buster /assets/img/segment/segments_page.png %})
 
 ## ビューのカスタマイズ
 
@@ -48,17 +48,17 @@ description: "この記事では、セグメントのリストのフィルタリ
 
 [**スター付きのみ表示**] を選択すると、スターを付けたセグメントだけが表示されます。
 
-## Segmentのメッセージング使用率の表示
+## セグメントのメッセージング使用状況を見る
 
-Segmentの**Messaging Use** セクションに移動して、他のSegments、キャンペーンs、キャンバス内など、Segmentが使用されている場所の概要を確認します。
+セグメンテーションの「**メッセージング使用」**セクションで、他のセグメンテーション、キャンペーン、キャンバスなど、セグメンテーションが使用されている場所の概要を確認できる。
 
 {% alert note %}
-Segmentのループが相互に参照しないようにするために、**Segmentメンバーシップ**フィルターを使用するSegmentは、他のSegmentで参照できません。詳細については、[セグメンテーションフィルタ]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/)を参照してください。
+セグメント同士が互いに参照しあうループを防ぐため、**セグメント・メンバーシップ・フィルターを**使用したセグメントは、他のセグメントから参照されることはない。詳しくは、[セグメンテーション]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/)フィルターを参照のこと。
 {% endalert %}
 
 ## 特定のセグメントの管理
 
-![オプション"Edit"、"、Duplicate"、"、Archive"、"、および"を表示するSegmentの編集メニュー。]({% image_buster /assets/img/segment/segments_page_edit_menu.png %}){: style="float:right;max-width:25%;"}
+![[編集]、[複製]、[アーカイブ]、[スター付きに追加] のオプションが表示されたセグメントの編集メニュー]({% image_buster /assets/img/segment/segments_page_edit_menu.png %}){: style="float:right;max-width:25%;"}
 
 特定のセグメントを管理するには、そのセグメントの上にマウスポインタを置き、行の末尾にあるメニューアイコンを選択すると、次のオプションが表示されます。
 - **編集: **セグメント内のフィルターを編集します。
@@ -68,7 +68,7 @@ Segmentのループが相互に参照しないようにするために、**Segme
  
 また、複数のセグメント名の横にあるボックスをチェックすることで、一括アクション (一括アーカイブや一括タグ付け) を実行することもできます。
 
-![ " CRM" " Tag A" ドロップダウンフィールドで選択された複数のSegments。]({% image_buster /assets/img/segment/segments_bulk_action.png %}){: style="max-width:45%;"}
+![[タグ付けする] ドロップダウンフィールドで [CRM] を選択した状態で複数のセグメントを選択]({% image_buster /assets/img/segment/segments_bulk_action.png %}){: style="max-width:45%;"}
 
 ### 最後に表示してからの変更
 
@@ -79,5 +79,5 @@ Segmentのループが相互に参照しないようにするために、**Segme
 
 このフィールドに入力したすべての語句や文字列が検索されます。例えば、「テストセグメント 1」を検索すると、名前のどこかに「テスト」、「セグメント」、または「1」が含まれるセグメントが返されます。完全に一致する文字列を検索するには、検索語を引用符で囲みます。[[“テストセグメント 1”]を検索すると、名前に「テストセグメント 1」と完全に一致する語句を含むすべてのセグメントが返されます。
 
-![ &quot を入力するための検索結果; すべてのユーザーのS" 検索フィールドには" すべてのユーザーのS" " " " すべてのS 15" が含まれます。]({% image_buster /assets/img/segment/segments_search.png %})
+![検索フィールドに "すべてのユーザー" と入力した場合は、検索結果に「すべてのユーザー (テスト)」、「すべてのユーザー」、「すべてのユーザー 15」などが含まれます。]({% image_buster /assets/img/segment/segments_search.png %})
 

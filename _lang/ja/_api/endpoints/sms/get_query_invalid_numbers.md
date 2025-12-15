@@ -34,7 +34,7 @@ description: "この記事では、「無効な電話番号を照会する」Bra
 | `limit` | オプション | 整数 | 返される結果の数を制限するためのオプション・フィールド。デフォルトは100で、最大は500です。 |
 | `offset` | オプション | 整数 | 取得先となるリスト内のオプションの開始点。 |
 | `phone_numbers` | オプション <br>(注を参照) | e.164 形式の文字列の配列 | 提供された場合、電話番号が無効であることが判明した場合は返却する。 |
-| `reason` | オプション <br>（注を参照） | 文字列 | 利用可能な値は、"provider_error"（プロバイダーエラーで電話がSMSを受信できないことを示す）または "deactivated"（電話番号が無効化された）である。省略された場合は、すべての理由が返される。 |
+| `reason` | オプション <br>（注を参照） | string | 利用可能な値は、"provider_error" （プロバイダーエラーにより、電話がSMSを受信できないことを示す）または "deactivated"（電話番号が無効化されている）である。省略された場合は、すべての理由が返される。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}
@@ -53,8 +53,6 @@ curl --location --request GET 'https://rest.iad-01.braze.com/sms/invalid_phone_n
 エントリは降順で表示されます。
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "sms": [
     {

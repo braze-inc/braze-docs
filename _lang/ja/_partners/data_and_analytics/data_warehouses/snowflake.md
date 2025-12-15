@@ -32,7 +32,7 @@ Snowflakeの[Secure Data Sharing](https://docs.snowflake.net/manuals/user-guide/
 
 さらに、Snowflake の組み込みの役割と権限の機能を使用すると、Snowflake アカウントとアカウント内のデータに対してすでに適用されているアクセス制御を使用して、Braze から共有されるデータへのアクセスを制御および管理できます。アクセスは、あなた自身のデータと同じ方法で制限および監視できます。
 
-Snowflakeのデータ共有の詳細については、[安全なデータ共有の紹介を](https://docs.snowflake.net/manuals/user-guide/data-sharing-intro.html#how-does-secure-data-sharing-work)参照のこと。
+Snowflake のデータ共有の詳細については、[安全なデータ共有の紹介](https://docs.snowflake.net/manuals/user-guide/data-sharing-intro.html#how-does-secure-data-sharing-work)を参照してください。
 
 ## 前提条件
 
@@ -40,15 +40,15 @@ Snowflakeのデータ共有の詳細については、[安全なデータ共有�
 
 | 必要条件 | 説明 |
 | ----------- | ----------- |
-| Brazeアクセス | Braze でこの機能にアクセスするには、Braze アカウントマネージャーまたはカスタマーサクセスマネージャーに連絡する必要があります。 |
+| Braze へのアクセス | Braze でこの機能を使用するには、Braze アカウントまたは顧客 サクセスマネージャーに連絡する必要があります。 |
 | Snowflakeアカウント | `admin` の権限を持つ Snowflake アカウント。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 安全なデータ共有の設定
 
-Snowflake では、データ共有は[データプロバイダー](https://docs.snowflake.net/manuals/user-guide/data-sharing-intro.html#providers)と[データ消費者](https://docs.snowflake.net/manuals/user-guide/data-sharing-intro.html#consumers)の間で行われます。このコンテキストでは、データ共有を作成して送信するため、Braze アカウントはデータプロバイダーであり、データ共有を使用してデータベースを作成するため、Snowflake アカウントはデータ消費者です。詳細は、[Snowflake を参照してください。共有データの消費](https://docs.snowflake.com/en/user-guide/data-share-consumers).
+Snowflake では、データ共有は[データプロバイダー](https://docs.snowflake.net/manuals/user-guide/data-sharing-intro.html#providers)と[データ消費者](https://docs.snowflake.net/manuals/user-guide/data-sharing-intro.html#consumers)の間で行われます。このコンテキストでは、データ共有を作成して送信するため、Braze アカウントはデータプロバイダーであり、データ共有を使用してデータベースを作成するため、Snowflake アカウントはデータ消費者です。詳細は、[Snowflake:Consuming Shared Data](https://docs.snowflake.com/en/user-guide/data-share-consumers) を参照してください。
 
-### ステップ 1: Braze からデータ共有を送信する
+### ステップ 1: Braze からデータシェアを送信する
 
 1. Braze で、[**パートナー連携**] > [**データ共有**] に移動します。
 2. Snowflake アカウントの詳細とロケーターをします。アカウントロケーターを取得するには、送信先アカウントで`SELECT CURRENT_ACCOUNT()` を実行します。
@@ -57,12 +57,12 @@ Snowflake では、データ共有は[データプロバイダー](https://docs.
 
 ### ステップ2: Snowflakeでデータベースを作成する
 
-1. 数分後、Snowflake アカウントにインバウンドデータ共有が届くはずです。
-2. インバウンドデータ共有を使用して、テーブルを表示しクエリするためのデータベースを作成します。以下に例を示します。
+1. 数分後に、Snowflake アカウントで受信データ共有を受け取ります。
+2. インバウンドデータシェアを使用して、テーブルを表示し、クエリ先にするデータベースを作成します。以下に例を示します。
     ```sql
     CREATE DATABASE <name> FROM SHARE <provider_account>.<share_name>
     ```
-3. 新しいデータベースにクエリを実行する権限を付与します。
+3. 新しいデータベースをクエリする権限を付与します。
 
 {% alert warning %}
 Braze ダッシュボードで共有を削除して再作成する場合は、以前に作成したデータベースを削除し、`CREATE DATABASE <name> FROM SHARE <provider_account>.<share_name>` を使用して再作成し、インバウンド共有にクエリを実行する必要があります。
@@ -80,7 +80,7 @@ Currents と同様に、Snowflake セキュアデータシェアリングを使�
 - 生のイベントまたはユーザーデータをCRM（Salesforceなど）にマッピングする
 - そしてさらに
 
-[生テーブルをここからダウンロードしてください。]({% image_buster /assets/download_file/data-sharing-raw-table-schemas.txt %})
+[下にある未加工のテーブルスキーマを読み込むします。]({% image_buster /assets/download_file/data-sharing-raw-table-schemas.txt %})
 
 ### ユーザー ID スキーマ
 
@@ -115,11 +115,11 @@ Currents と同様に、Snowflake セキュアデータシェアリングを使�
 
 ### Snowflake のリージョン
 
-Braze は現在、すべてのユーザーレベルのデータを Snowflake AWS US East-1 および EU-Centra (フランクフルト) リージョンでホストしています。これらのリージョン外のユーザーの場合、Braze は、Snowflake インフラストラクチャを AWS、Azure、または GCP リージョンでホストしている共同の顧客にデータ共有を提供できます。
+Braze は現在、Snowflake AWS US East-1、EU-Central (フランクフルト)、AP-Southeast-2 (シドニー)、AP-Southeast-3 (ジャカルタ) リージョンのすべてのユーザーレベルデータをホストしています。これらのリージョン外のユーザーの場合、Braze は、Snowflake インフラストラクチャを AWS、Azure、または GCP リージョンでホストしている共同の顧客にデータ共有を提供できます。
 
-### データリテンション
+### 情報リテンション
 
-#### リテンションポリシー
+#### 保存方針
 
 2年以上前のデータはすべてアーカイブされ、長期保存に移されます。アーカイブプロセスの一環として、すべてのイベントは匿名化され、個人を特定できる情報 (PII) が含まれる機密フィールドはすべて削除されます (これには、`properties` のようなオプションの PII フィールドも含まれます)。アーカイブされたデータには依然として`user_id`フィールドが含まれており、すべてのイベントデータにわたるユーザーごとの分析が可能です。
 

@@ -5,7 +5,7 @@ description: "このオンボーディングリファレンス記事には、Bra
 page_order: 0
 ---
 
-# [![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/developer/sdk-integration-basics){: style="float:right;width:120px;border:0;" class="noimgborder"}開発者向けの SDK 概要
+# [![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/developer/sdk-integration-basics){: style="float:right;width:120px;border:0;" class="noimgborder"} 開発者向けSDK概要
 
 > Braze SDK の統合を開始する前に、正確に何を構築および統合するのかを疑問に思うかもしれません。また、ニーズに応じて SDK をより詳細にカスタマイズする方法に興味があるかもしれません。この記事は、SDK に関するすべての疑問を解決するのに役立ちます。 
 
@@ -25,11 +25,11 @@ Braze SDK のフットプリントは非常に小さいです。手動のネッ�
 
 ## SDK の互換性
 
-Braze SDK は非常に円滑に動作し、アプリ内に存在する他の SDK に干渉しないよう設計されています。別の SDK との非互換性が原因であると思われる問題が発生した場合は、Braze サポートに連絡してください。
+Braze SDK は非常に円滑に動作し、アプリ内に存在する他の SDK に干渉しないよう設計されています。他のSDKとの非互換性が原因と思われる問題が発生した場合は、Brazeサポートに連絡すること。
 
 ## デフォルトの分析とセッション処理
 
-最初に使用したアプリ、最後に使用したアプリ、合計セッション数、デバイス OS など、特定のユーザーデータは SDK で自動的に収集されます。統合ガイドに従って SDK を実装すると、この[デフォルトデータ収集]({{site.baseurl}}/user_guide/data/user_data_collection/sdk_data_collection/)を利用できるようになります。このリストを確認することで、ユーザーに関する同じ情報を複数回保存しなくて済みます。セッション開始とセッション終了を除く、自動トラッキングされるその他すべてのデータは、データポイントの割り当てにカウントされません。
+最初に使用したアプリ、最後に使用したアプリ、合計セッション数、デバイス OS など、特定のユーザーデータは SDK で自動的に収集されます。統合ガイドに従って SDK を実装すると、この[デフォルトデータ収集]({{site.baseurl}}/user_guide/data/user_data_collection/sdk_data_collection/)を利用できるようになります。このリストを確認することで、ユーザーに関する同じ情報を複数回保存しなくて済みます。セッション開始とセッション終了を除き、その他の自動トラッキングデータはデータポイント使用量にカウントされない。
 
 {% alert note %}
 すべての機能が構成可能ですが、デフォルトのデータ収集モデルを完全に実装することをお勧めします。

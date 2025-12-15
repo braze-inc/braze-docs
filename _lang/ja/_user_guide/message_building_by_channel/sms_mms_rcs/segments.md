@@ -24,11 +24,11 @@ SMS メッセージはセグメント単位で請求されます。請求を理�
 
 ### SMSセグメントとは何か？
 
-ショートメッセージングサービス (SMS) は、標準化された通信プロトコルであり、デバイスが短いテキストメッセージを送受信できるようにするものです。SMSは、他の信号プロトコルの「中間に収まる」ように設計されており、そのため、SMSメッセージの長さは、1120ビット（140バイト）のような160個の7ビット文字に制限されている。SMSメッセージ・セグメントとは、電話キャリアがテキスト・メッセージを測定するために使用する文字バッチのことである。メッセージはメッセージセグメントごとに課金されるため、SMS を活用するクライアントは、メッセージの分割方法の微妙な差異を理解すると多大なメリットを享受できます。 
+ショートメッセージングサービス (SMS) は、標準化された通信プロトコルであり、デバイスが短いテキストメッセージを送受信できるようにするものです。SMSは、他の信号プロトコルの「中間に収まる」ように設計されており、そのため、SMSメッセージの長さは、1120ビット（140バイト）のような160個の7ビット文字に制限されている。SMSメッセージ・セグメントとは、電話キャリアがテキスト・メッセージを測定するために使用する文字バッチのことである。メッセージはメッセージセグメントごとに課金されるため、SMS を活用するクライアントは、メッセージの分割方法の微妙な差異を理解すると多大なメリットを享受できます。
 
 Braze を使用して SMS のキャンペーンやキャンバスを作成するときに作成画面で作成したメッセージは、ユーザーの携帯電話にメッセージが配信されたときに表示される代表的なものですが、**メッセージがどのようにセグメントに分割され、最終的にどのように課金されるかを示すものではありません**。送信されるセグメント数を理解し、発生する可能性のある超過料金を認識することはお客様の責任ですが、当社では理解を容易にするためのいくつかのリソースを提供しています。当社独自の[セグメント計算ツール](#segment-calculator)を確認してください。
 
-\![]({% image_buster /assets/img/sms_segment_pic.png %}){: style="border:0;"}
+![]({% image_buster /assets/img/sms_segment_pic.png %}){: style="border:0;"}
 
 #### セグメントの内訳
 
@@ -36,9 +36,9 @@ Braze を使用して SMS のキャンペーンやキャンバスを作成する
 
 重要なのは、**最初のセグメントの文字数制限を過ぎると、追加の文字によってメッセージ全体が分割され、新しい文字数制限に基づいてセグメント化される**ことだ：
 - **GSM-7エンコーディング**
-    - 160 文字の制限を超えるメッセージは、153 文字のセグメントに分割されて個別に送信され、受信者のデバイスで再構成されます。例えば、161 文字のメッセージは、153 文字と 8 文字の 2 つのメッセージとして送信されます。 
+    - 160 文字の制限を超えるメッセージは、153 文字のセグメントに分割されて個別に送信され、受信者のデバイスで再構成されます。例えば、161 文字のメッセージは、153 文字と 8 文字の 2 つのメッセージとして送信されます。
 - **UCS-2エンコーディング**
-    - SMSメッセージに絵文字、中国語、韓国語、日本語などの非GSM文字を含める場合、それらのメッセージはUCS-2エンコーディングで送信されなければならない。最初のセグメント制限である70文字を超えるメッセージは、メッセージ全体が67文字のメッセージセグメントに連結される。例えば、71 文字のメッセージは、67 文字と 4 文字の 2 つのメッセージとして送信されます。 
+    - SMSメッセージに絵文字、中国語、韓国語、日本語などの非GSM文字を含める場合、それらのメッセージはUCS-2エンコーディングで送信されなければならない。最初のセグメント制限である70文字を超えるメッセージは、メッセージ全体が67文字のメッセージセグメントに連結される。例えば、71 文字のメッセージは、67 文字と 4 文字の 2 つのメッセージとして送信されます。
 
 エンコーディングの種類に関係なく、Brazeから送信される各SMSメッセージは最大10セグメントまでで、[Liquidテンプレート]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/)、[コネクテッドコンテンツ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/)、絵文字、リンクに対応している。
 
@@ -129,6 +129,34 @@ Braze を使用して SMS のキャンペーンやキャンバスを作成する
   .segment_color_3 {
     background-color: #27368f30;
   }
+  .encoding_gsm {
+    background-color: #28a745;
+    color: white;
+    padding: 1px 3px;
+    margin: 1px;
+    border-radius: 2px;
+    font-size: 10px;
+    display: inline-block;
+    white-space: nowrap;
+  }
+  .encoding_ucs2 {
+    background-color: #dc3545;
+    color: white;
+    padding: 1px 3px;
+    margin: 1px;
+    border-radius: 2px;
+    font-size: 10px;
+    display: inline-block;
+    white-space: nowrap;
+  }
+  .encoding_legend {
+    margin: 10px 0;
+    font-size: 12px;
+  }
+  .encoding_legend_item {
+    display: inline-block;
+    margin-right: 15px;
+  }
 </style>
 <form id="sms_split">
   <textarea id="sms_message_split" placeholder="SMS のコピーをここに入力..." style="width:100%;border: 1px solid #33333333;" rows="5"></textarea><br />
@@ -139,7 +167,16 @@ Braze を使用して SMS のキャンペーンやキャンバスを作成する
   メッセージの長さ: <span id="sms_length" style="padding-left: 5px;">0</span>文字。<br />
   SMSセグメント数：<span id="sms_segments" style="padding-left: 5px;">0</span>セグメント。<br />
   メッセージの出力： <span id="sms_output" style="padding-left: 5px;"></span><br />
-  <input type="checkbox" id="segment_section" name="segment_section"> <label style="padding-left: 5px; margin-bottom: 0px;">セグメントを表示する： </label>
+  <input type="checkbox" id="encoding_section" name="encoding_section"> <label for="encoding_section" style="padding-left: 5px; margin-bottom: 0px;">表示文字エンコーディング</label>
+  <div class="segment_data_hide" id="character_encoding_container">
+    <div class="encoding_legend">
+      <div class="encoding_legend_item"><span class="encoding_gsm">GSM</span>GSM-7文字</div>
+      <div class="encoding_legend_item"><span class="encoding_ucs2">UCS</span>UCS-2文字</div>
+    </div>
+    <span id="character_encoding_label">文字エンコーディング： </span><span id="character_encoding" style="padding-left: 5px;"></span><br />
+  </div>
+  <br />
+  <input type="checkbox" id="segment_section" name="segment_section"> <label for="segment_section" style="padding-left: 5px; margin-bottom: 0px;">セグメンテーションを表示する</label>
   <span class="segment_data_hide" id="sms_segments_data"></span>
 </form>
 <script type="text/javascript">
@@ -409,6 +446,26 @@ function countLength(type, s) {
   }
 }
 
+関数getCharacterEncoding(char, type) { を実行する。
+  if (タイプ === "ucs2") return "ucs2"；
+  if (type === "gsm") return "gsm"；
+
+  // 自動検出の場合、文字がGSM-7設定にあるかどうかをチェックする。
+  const codePoint =char.charCodeAt(0)；
+  return (codePoint in unicodeToGsm) ? "gsm" : "ucs2"；
+}
+
+関数 displayCharacterEncoding(text, type) { [文字コード]を表示する。
+  const characters =smsutil.unicodeCharacters(text)；
+  returncharacters.map((char, index) => {.
+    const encoding = getCharacterEncoding(char, type)；
+    const displayChar = char === " " ? " " : char；
+    const encodingClass = encoding === "gsm" ?"encoding_gsm" ： "encoding_ucs2";
+    const encodingLabel = encoding === "gsm" ?「GSM」：「UCS」である；
+    return `<span id="character_encoding_data_${index}" class="${encodingClass}" title="${displayChar} - ${encoding.toUpperCase()}">${encodingLabel}</span>`;
+  }).join("")；
+}
+
 function updateSMSSplit(){
     varsms_text = $('#sms_message_split').val();
     varsms_type = $('#sms_split input[name=sms_type]:checked').val();
@@ -417,38 +474,94 @@ function updateSMSSplit(){
     var smsSegments = セグメンテーション[sms_type](unicodeinput);
     $('#sms_length').html(countLength(sms_type, sms_text));
     $('#sms_segments').html(smsSegments.length);
-    const segmentColors = (i) =>`segment_color_${i > 3 ? i%3 : i}` ；
-    const segmentsHtml =smsSegments.map((segment,segment_index) =>segment.bytes.map((byte, i) =>`<div id='sms_segments_data_${segment_index}-${i}' class='segment ${segmentColors(segment_index)}'>${byte.map(b => smsutil.hexEncode(b)).join(" ")}</div>`).join(""))；
-    const messageOutput =smsSegments.map((segment,segment_index) =>segment.text.map((ch, i) =>`<div id='message_output_data_${segment_index}-${i}' class='message_output_char ${segmentColors(segment_index)}'>${ch !== " " ? ch : "&nbsp;"}</div>`).join(""))；
+
+    // Display character encoding
+    $('#character_encoding').html(displayCharacterEncoding(sms_text, sms_type));
+
+    const segmentColors = (i) => `segment_color_${i > 3 ? i%3 : i}`;
+    const segmentsHtml = smsSegments.map((segment,segment_index) =>  segment.bytes.map((byte, i) => `<div id='sms_segments_data_${segment_index}-${i}' class='segment ${segmentColors(segment_index)}'>${byte.map(b => smsutil.hexEncode(b)).join(" ")}</div>`).join(""));
+
+    // Create message output with both segment and character indexing
+    let characterIndex = 0;
+    const messageOutput = smsSegments.map((segment,segment_index) =>
+      segment.text.map((ch, i) => {
+        const result = `<div id='message_output_data_${segment_index}-${i}' data-char-index='${characterIndex}' class='message_output_char ${segmentColors(segment_index)}'>${ch !== " " ? ch : "&nbsp;"}</div>`;
+        characterIndex++;
+        return result;
+      }).join("")
+    );
     $('#sms_output').html(messageOutput);
     $('#sms_segments_data').html(segmentsHtml);
     $('#segment_section').click(function() {
-      if($(this).is(":checked")){
+      if($(this).is(":checked")) {
         $("#sms_segments_data").show();
       }
       else {
         $("#sms_segments_data").hide();
       }
+    });
+    $('#encoding_section').click(function() {
+      if($(this).is(":checked")) {
+        $("#character_encoding_container").show();
+      }
+      else {
+        $("#character_encoding_container").hide();
+      }
     })
 }
-const implementHover =(hover_id, input_id_prefix, output_id_prefix) => {.
-  $(hover_id).mouseover(function(e){
-    varinput_id =e.target.id ；
-    var インデックス = input_id.split(input_id_prefix)[1];
-    if(!index) {
-      return;
-    }
-    varoutput_id =`#${output_id_prefix}${index}` ；
-    $(`${output_id}, #${input_id}`).addClass("hover_segment");
-    $(`#${input_id}`).mouseleave(function() {)
-    $(`${output_id}, #${input_id}`).removeClass("hover_segment");
-  });
+// 三方向ハイライトによるホバー機能の強化
+$("#sms_segments_data").mouseover(function(e){
+  if(e.target.id.startsWith("sms_segments_data_")) {
+    const segmentIndex = e.target.id.split("sms_segments_data_")[1];
+    const messageOutputElement =`#message_output_data_${segmentIndex}` ；
+    const charIndex = $(messageOutputElement).attr('data-char-index')；
+    const encodingElement = charIndex !== undefined ?`#character_encoding_data_${charIndex}`: null；
+
+    let elementsToHighlight = `${messageOutputElement}, #${e.target.id}`;
+    if(encodingElement) elementsToHighlight += `, ${encodingElement}`;
+
+    $(elementsToHighlight).addClass("hover_segment");
+    $(`#${e.target.id}`).mouseleave(function() {
+      $(elementsToHighlight).removeClass("hover_segment");
+    });
+  }
 });
-};
-//メッセージ出力にセグメントをハイライトする
-implementHover("#sms_segments_data", "sms_segments_data_", "message_output_data_");
-// セグメントに出力されるメッセージを強調表示する
-implementHover("#sms_output", "message_output_data_", "sms_segments_data_");
+
+$("#sms_output").mouseover(function(e){
+  if(e.target.id.startsWith("message_output_data_")) {
+    const segmentIndex = e.target.id.split("message_output_data_")[1];
+    const segmentElement =`#sms_segments_data_${segmentIndex}` ；
+    const charIndex = $(e.target).attr('data-char-index')；
+    const encodingElement = charIndex !== undefined ?`#character_encoding_data_${charIndex}`: null；
+
+    let elementsToHighlight = `${segmentElement}, #${e.target.id}`;
+    if(encodingElement) elementsToHighlight += `, ${encodingElement}`;
+
+    $(elementsToHighlight).addClass("hover_segment");
+    $(`#${e.target.id}`).mouseleave(function() {
+      $(elementsToHighlight).removeClass("hover_segment");
+    });
+  }
+});
+
+$("#character_encoding").mouseover(function(e){
+  if(e.target.id.startsWith("character_encoding_data_")) {
+    const charIndex = e.target.id.split("character_encoding_data_")[1];
+    const messageOutputElement = $(`[data-char-index='${charIndex}']`)；
+    const messageOutputId =messageOutputElement.attr('id')；
+
+    if(messageOutputId) {
+      const segmentIndex = messageOutputId.split("message_output_data_")[1];
+      const segmentElement = `#sms_segments_data_${segmentIndex}`;
+
+      const elementsToHighlight = `#${e.target.id}, #${messageOutputId}, ${segmentElement}`;
+      $(elementsToHighlight).addClass("hover_segment");
+      $(`#${e.target.id}`).mouseleave(function() {
+        $(elementsToHighlight).removeClass("hover_segment");
+      });
+    }
+  }
+});
 $('#sms_message_split').on("input", function(e){
   $('#auto_encoding').html("");
   updateSMSSplit();
@@ -496,7 +609,7 @@ RCSメッセージは、その内容とメッセージが配信された国に�
 
 #### 米国モデル
 
-メッセージングはリッチとリッチメディアのどちらかに分類される。
+メッセージングはリッチかリッチメディアに分類される。
 
 {% tabs local %}
 {% tab Rich messages %}

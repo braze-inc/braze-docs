@@ -16,7 +16,7 @@ tool:
 
 たとえば、ユーザーにアプリの使い方について尋ねたり、個人的な好みについて詳しく聞いたり、特定の機能に対する満足度について尋ねたりすることができます。
 
-![通知の好み、食の好み、顧客の3つのシンプルな調査がアクション 調査を満たします。アンケートで選択した項目は、そのユーザーのログに記録されるカスタム属性s に対応します。]({% image_buster /assets/img/iam/iam-survey.png %})
+![通知の好み、食事の好み、および顧客満足度調査の 3 つのシンプルな調査のメッセージ。アンケートで選択した項目は、そのユーザーのログに記録されるカスタム属性s に対応します。]({% image_buster /assets/img/iam/iam-survey.png %})
 
 ## SDK 要件 {#supported-sdk-versions}
 
@@ -38,7 +38,7 @@ Web SDK を介して HTML アプリ内メッセージを有効にするには、
 
 調査の作成を開始するには、質問を調査の [**ヘッダー**] フィールドに追加します。必要に応じて、調査の質問の下に表示されるオプションの**本文**メッセージを追加できます。
 
-![シンプルな調査エディタのコンポーズタブ、ヘッダーのフィールドs、オプションの本文、オプションのヘルパーテキスト。]({% image_buster /assets/img/iam/iam-survey2.png %}){: style="max-width:90%"}
+![シンプルな調査エディタのコンポーズタブで、ヘッダー、オプションの本文、およびオプションのヘルパーテキストのフィールドを指定します。]({% image_buster /assets/img/iam/iam-survey2.png %}){: style="max-width:90%"}
 
 {% alert tip %}
 これらのフィールドには Liquid と絵文字の両方を含めることができるため、内容を工夫できます。
@@ -52,7 +52,7 @@ Web SDK を介して HTML アプリ内メッセージを有効にするには、
 
 次に、[カスタム属性を収集する](#custom-attributes)か、[応答のみをログに記録する](#no-attributes)かを決定します。
 
-![&quot を含む選択ドロップダウン;送信&クォート時に属性を記録;選択。]({% image_buster /assets/img/iam/collect-attributes.png %}){: style="max-width:60%"}
+![「&quot」でドロップダウンを選択します。送信とクォートで属性を記録します。選択します。]({% image_buster /assets/img/iam/collect-attributes.png %}){: style="max-width:60%"}
 
 #### カスタム属性の収集{#custom-attributes}
 
@@ -89,11 +89,11 @@ Web SDK を介して HTML アプリ内メッセージを有効にするには、
 
 [**調査**] タブの下部にある [**送信ボタン**] セクションで、ボタンのテキストとクリック時の動作を編集します。
 
-![On-click 動作は"Submit responses and display confirmation page".に設定されます。]({% image_buster /assets/img/iam/confirmation-option.png %}){: style="max-width:60%"}
+![「&quot」に設定された「On-click」ビヘイビア。応答を送信し、確認ページとクォートを表示します。]({% image_buster /assets/img/iam/confirmation-option.png %}){: style="max-width:60%"}
 
 確認ページを追加する場合は、メッセージをカスタマイズするために**確認ページ**タブに切り替える:
 
-![簡易調査エディタの確認画面]使用可能なフィールドは、ヘッダー、オプションの本文、ボタンテキスト、ボタンクリックビヘイビアです。]({% image_buster /assets/img/iam/confirmation-page.png %}){: style="max-width:90%"}
+![シンプルな調査エディターの [確認ページ] タブ。使用可能なフィールドは、ヘッダー、オプションの本文、ボタンテキスト、ボタンクリックビヘイビアです。]({% image_buster /assets/img/iam/confirmation-page.png %}){: style="max-width:90%"}
 
 アプリやWeb サイトの別のページにユーザーを誘導したい場合は、ボタンの**クリック時の動作**を変更してください。
 
@@ -101,7 +101,7 @@ Web SDK を介して HTML アプリ内メッセージを有効にするには、
 
 メッセージのフォントカラーとアクセントカラーは、**カラーテーマ**ピッカーを使用してカスタマイズできます。
 
-![ユーザーがカラーパレットをクリックした後、カラーテーマピッカーが展開されたシンプルな調査エディターのコンポーズタブ。]({% image_buster /assets/img/iam/color-theme-picker.png %}){: style="max-width:80%"}
+![ユーザーがカラーパレットをクリックした後、カラーテーマピッカーが展開されたシンプルな調査エディタのコンポーズタブ。]({% image_buster /assets/img/iam/color-theme-picker.png %}){: style="max-width:80%"}
 
 ## 結果の分析{#analytics}
 

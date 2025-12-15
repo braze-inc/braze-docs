@@ -32,12 +32,16 @@ LinkedIn へのオーディエンス同期は現在ベータ版です。ベー�
 | 必要条件 | 提供元 | 説明 |
 | --- | --- | --- |
 | LinkedIn の広告アカウント | [LinkedIn](https://www.linkedin.com/campaignmanager) | ブランドに関連付けられたアクティブなLinkedIn アドアカウント。<br><br>そのアカウントにアクセスして使用するための関連する LinkedIn の使用条件に同意していること、および LinkedIn の管理者によってオーディエンスを管理するための適切なアクセス許可が付与されていることを確認してください。 |
-| LinkedIn 利用規約 | LinkedIn | LinkedIn Audience Sync の使用に関連する LinkedIn の必須規約、ポリシー、ガイドラインおよびドキュメントを遵守することに同意するものとします。これには、参照によって組み込まれている LinkedIn の以下の項目を含む規約、ポリシー、ガイドラインおよびドキュメントが含まれます。サービス規約、広告契約、データ処理契約、プロフェッショナルコミュニティガイドライン。 |
+| LinkedIn 用語& ポリシー | LinkedIn | LinkedIn Audience Sync の使用に関連する LinkedIn の必須規約、ポリシー、ガイドラインおよびドキュメントを遵守することに同意するものとします。これには、参照によって組み込まれている LinkedIn の以下の項目を含む規約、ポリシー、ガイドラインおよびドキュメントが含まれます。サービス規約、広告契約、データ処理契約、プロフェッショナルコミュニティガイドライン。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## 統合
 
 ### ステップ1:LinkedIn への接続
+
+{% alert important %}
+LinkedIn をBraze に接続するには、["Admin" permission]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#admin) が必要です。
+{% endalert %}
 
 Braze ダッシュボードで、**Technology Partners**に移動し、**LinkedIn**を選択します。[**LinkedIn オーディエンス同期**] セクションで、[**LinkedIn を接続**] を選択します。
 
@@ -63,7 +67,7 @@ LinkedIn 接続は Braze ワークスペースレベルで適用されます。L
 
 `opt-ins`、`opt-outs`、`Do Not Sell Or Share`、または他の関連するカスタム属性を収集する場合は、キャンバスのエントリ基準にこれらをフィルターとして含める必要があります。
 
-![エントリーのオーディエンスが "opted_in_marketing "のキャンバスは、"true "に等しい。]({% image_buster /assets/img/linkedin/linkedin4.png %}){: style="max-width:75%;"}
+!["opted_in_marketing"のエントリ オーディエンスを持つキャンバスは、"true"と等しくなります。]({% image_buster /assets/img/linkedin/linkedin4.png %}){: style="max-width:75%;"}
 
 Braze プラットフォーム内でこれらのデータ保護法を遵守する方法の詳細については、[データ保護テクニカルアシスタンス]({{site.baseurl}}/dp-technical-assistance/)を参照してください。
 
@@ -71,20 +75,20 @@ Braze プラットフォーム内でこれらのデータ保護法を遵守す�
 
 キャンバスにコンポーネントを追加し、「オーディエンス同期」を選択します。[**カスタムオーディエンス**] ボタンをクリックしてコンポーネントエディターを開きます。
 
-![使用可能なコンポーネントのリストを含むキャンバスエディタ。]({% image_buster /assets/img/linkedin/linkedin2.png %}){: style="max-width:35%;"}![選択したAudience Sync コンポーネント。]({% image_buster /assets/img/linkedin/linkedin1.png %}){: style="max-width:29%;"}
+![利用可能なコンポーネントのリストが表示されたキャンバスエディター。]({% image_buster /assets/img/linkedin/linkedin2.png %}){: style="max-width:35%;"}![選択されたオーディエンス同期コンポーネント。]({% image_buster /assets/img/linkedin/linkedin1.png %}){: style="max-width:29%;"}
 
-### ステップ 4: 同期設定
+### ステップ4:同期設定
 
 **LinkedIn** を目的のオーディエンス同期パートナーとして選択します。
 
 ![「オーディエンス同期の設定」の詳細。複数のパートナーから選択可能。]({% image_buster /assets/img/linkedin/linkedin.png %}){: style="max-width:70%;"}
 
-次に、目的の LinkedIn ad アカウントを選択します。**Choose a New or Existing Audience（新規または既存のオーディエンスを選択**）ドロップダウンで、新規または既存のオーディエンスの名前を入力します。
+次に、目的の LinkedIn ad アカウントを選択します。[**新規または既存のオーディエンスを選択**] ドロップダウンで、新しいオーディエンスまたは既存のオーディエンスの名前を入力します。
 
 ![オーディエンスが広告アカウントとしてBrazeを選択した状態でLinkedInに同期する。]({% image_buster /assets/img/linkedin/linkedin20.png %})
 
 {% tabs %}
-{% tab 新規オーディエンスの作成 %}
+{% tab Create a New Audience %}
 
 **新規オーディエンスの作成**<br>
 新しいオーディエンスの名前を入力し、[**オーディエンスにユーザを追加**] を選択し、LinkedIn と同期するフィールドを選択します。この統合では、現在以下をサポートしています。 
@@ -92,23 +96,23 @@ Braze プラットフォーム内でこれらのデータ保護法を遵守す�
 - 名前と苗字
 - Android GAID
 
-次に、ステップエディタの下部にある**オーディエンスを作成**ボタンをクリックしてオーディエンスを保存します。
+次に、ステップエディタの下部にある**Create Audience**ボタンをクリックしてオーディエンスを保存します。
 
-![選択した Braze 広告アカウントを持つ「リード」オーディエンス、「リード」オーディエンス、オーディエンスにユーザーを追加するアクション、および一致させるためのフィールドとしてのメールアドレス、Android GAID、氏名]({% image_buster /assets/img/linkedin/linkedin10.png %})　　　
+![たとえば、"leads"オーディエンスは、選択したBraze広告アカウント、"leads"オーディエンスは、オーディエンスにユーザーを追加するアクションで、メール、GAID、および姓とフィールドにマッチさせます。]({% image_buster /assets/img/linkedin/linkedin10.png %})
 
-ユーザーは、オーディエンスが正常に作成された場合、またはこのプロセス中にエラーが発生した場合、ステップエディターの上部で通知されます。ユーザーは、後でキャンバスジャーニーでユーザーを削除するためにこのオーディエンスを参照することもできます。これは、オーディエンスが下書きで作成されたためです。
+オーディエンスが正常に作成された場合、またはこのプロセス中にエラーが発生した場合、ステップエディタの上部にユーザーに通知されます。ユーザーは、後でキャンバスジャーニーでユーザーを削除するためにこのオーディエンスを参照することもできます。これは、オーディエンスが下書きで作成されたためです。
 
-![「リード」オーディエンスが作成されたことの確認。]({% image_buster /assets/img/linkedin/linkedin9.png %})
+!["leads"オーディエンスが作成されたことを確認します。]({% image_buster /assets/img/linkedin/linkedin9.png %})
 
 新しいオーディエンスを使用してキャンバスを起動すると、オーディエンス同期コンポーネントに入る時点で、Braze はユーザーをほぼリアルタイムで同期します。
 
 {% endtab %}
-{% tab 既存のオーディエンスと同期する %}
+{% tab Sync with an Existing Audience %}
 
 **既存のオーディエンスとの同期**<br>
 また、Braze は、これらのオーディエンスが最新であることを確認するために、既存のLinkedIn オーディエンスにユーザーを追加する機能も提供します。既存のオーディエンスと同期するには、ドロップダウンに既存のオーディエンスの名前を入力し、**オーディエンスに追加します。**Braze は、オーディエンス同期コンポーネントに入ると、ほぼリアルタイムでユーザーを追加します。
 
-![カスタムオーディエンスキャンバスステップの展開ビュー。ここで、希望する広告アカウントと既存のオーディエンスが選択されます。]({% image_buster /assets/img/linkedin/linkedin17.png %})
+![カスタムオーディエンスキャンバスステップの展開ビュー。ここでは、目的の広告アカウントと既存のオーディエンスが選択されます。]({% image_buster /assets/img/linkedin/linkedin17.png %})
 
 {% endtab %}
 {% endtabs %}
@@ -121,11 +125,11 @@ LinkedIn のオーディエンスを表示するには、広告アカウント�
 
 ![指定したオーディエンスの以下のメトリクスをリストする LinkedIn ページ。]({% image_buster /assets/img/linkedin/linkedin8.png %})
 
-## ユーザーの同期とレート制限の考慮事項
+## ユーザの同期とレート制限に関する考慮事項
 
 ユーザーがオーディエンス同期ステップに到達すると、BrazeはLinkedInのAPIレート制限を尊重しながら、これらのユーザーをほぼリアルタイムで同期します。実際には、Braze は、これらのユーザーをLinkedIn に送信する前に、5秒ごとにできるだけ多くのユーザーをバッチ処理しようとします。
 
-LinkedInのAPIレート制限では、1秒あたり10クエリ以内、1リクエストあたり10万ユーザー以内となっている。Brazeの顧客がこのレート制限に達した場合、Braze the Canvasは最大約13時間同期を再試行する。同期が不可能な場合、これらのユーザーはエラーが発生したユーザーメトリックに一覧表示されます。
+LinkedInのAPIレート制限では、1秒あたり10クエリ以内、1リクエストあたり10万ユーザー以内となっている。Braze の顧客がこのレート制限に達した場合、Braze the Canvas は最大約 13 時間同期を再試行する。同期が不可能な場合、これらのユーザーはエラーが発生したユーザーメトリックに一覧表示されます。
 
 ## 分析の理解
 
@@ -151,7 +155,7 @@ LinkedIn は、プラットフォーム内のマッチングレートに関す�
 <br><br>
 パートナーを**LinkedIn**、広告アカウント、およびオーディエンスとして選択し、LinkedIn からオーディエンスのサイズとマッチングレートを確認します。
 
-![1万人のユーザーが入力されたオーディエンス同期ステップメトリクスの例。]({% image_buster /assets/img/linkedin/linkedin11.png %})
+![オーディエンスシンクステップメトリクスのサンプルで、10,000 個のユーザーs が入力されています。]({% image_buster /assets/img/linkedin/linkedin11.png %})
 {% endalert %}
 
 ## よくある質問
