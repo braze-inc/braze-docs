@@ -7,9 +7,7 @@ description: "Learn how to design your Decisioning Studio Pro agent with the AI 
 
 # Design your agent
 
-> During the Sales process and initial agent configuration, the first step is working with our AI Decisioning Services team to design your agent.
-
-During the Sales process and initial agent configuration, the first step is working with our AI Decisioning Services team to design your agent.
+The first step of agent setup is working with our AI Decisioning Services team to design your agent.
 
 This includes making the following decisions:
 
@@ -22,5 +20,7 @@ This includes making the following decisions:
 
 Each of these decisions has implications for how much incremental uplift the agent may be able to generate, and how quickly. Our AI Decisioning Services team will work with you to design an agent that generates maximum value while respecting all of your business rules.
 
-Once these decisions are made, and we have an architecture diagram for our integration, we can proceed to configuration.
+![Decisioning Pro Diagram]({% image_buster /assets/img/decisioning_studio/decisioning_studio_pro_agent_design.png %})
+
+Once key design decisions are made, we can proceed to configuration.
 
