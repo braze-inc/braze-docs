@@ -79,6 +79,7 @@ Other options for sending data include:
 
 These patterns require more engineering effort, but are sometimes preferable, depending on the current Braze configuration. Talk with AI Decisioning Services to learn more. 
 
+{% endtab %}
 {% tab Salesforce Marketing Cloud (SFMC) %}
 
 Decisioning Studio is able to accept an SFMC data extension as the audience as well. Decisioning Studio uses the available REST and SOAP API interfaces provided by SFMC to interact with the platform.
@@ -90,6 +91,7 @@ Decisioning Studio is able to accept an SFMC data extension as the audience as w
 
 Provide the extension ID and API key to the Braze services team. They will assist with next steps in ingesting customer data.
 
+{% endtab %}
 {% tab Klaviyo %}
 
 **To define the audience in Klaviyo:**
@@ -102,6 +104,7 @@ In order to do this, take the following steps:
 
 Provide the extension ID and API key to the Braze services team. They will assist with next steps.
 
+{% endtab %}
 {% tab Other Cloud Solutions %}
 
 **Other Cloud Solutions (Google Cloud Storage, Azure, and AWS)**
@@ -113,6 +116,7 @@ To determine whether this is feasible, refer to the documentation for your Marte
 If customer data cannot be sent to the Braze data platform or via the CEP, then it should be sent directly to Google Cloud Storage bucket.
 
 {% endtab %}
+{% endtabs %}
 
 Finally, other options or completely custom audience builds are possible. These may require additional Services work or Engineering work from your team. To determine what is feasible and optimal, work with the AI Decisioning Services team.
 
