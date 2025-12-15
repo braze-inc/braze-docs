@@ -1,5 +1,5 @@
 ---
-nav_title: オープンソースソフトウェアの開示
+nav_title: オープンソースソフトウェアの開封
 article_title: オープンソースソフトウェアの開示
 page_order: 1
 page_type: reference
