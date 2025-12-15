@@ -1,28 +1,28 @@
 ---
-nav_title: Shopifyカスタム統合セットアップ
-article_title: "Shopifyカスタム統合セットアップ"
+nav_title: Shopify カスタム統合設定
+article_title: "Shopify カスタム統合設定"
 description: "この参考記事では、カスタムストアフロントを使用してShopify Hydrogen ストアやヘッドレス Shopify ストアに接続する方法を説明します。"
 page_type: partner
 search_tag: Partner
 alias: /shopify_custom_integration/
-page_order: 2
+page_order: 3
 ---
 
-# Shopifyカスタム統合セットアップ
+# Shopify カスタム統合設定
 
 > このページでは、カスタムストアフロントを使用して、Shopify HydrogenストアやヘッドレスShopifyストアとBrazeを統合する方法を説明する。
 
-このガイドでは、Shopify の Hydrogen フレームワークを例にしています。しかし、もしあなたのブランドがShopifyをバックエンドに使い、フロントエンドを "ヘッドレス "に設定しているのであれば、同様のアプローチをとることができる。  
+このガイドでは、Shopify の Hydrogen フレームワークを例にしています。ただし、ブランドが「headless」フロントエンド設定でストアのバックエンドで Shopify を使用している場合も、同様のアプローチをとることができます。  
 
 ShopifyのヘッドレスストアをBrazeと統合するには、以下の2つの目標を達成する必要がある：
 
-1. **Braze Web SDK を初期化してロードし、オンサイトトラッキングを有効にする**<br><br> Shopifyサイトに手動でコードを追加し、Brazeオンサイトトラッキングを有効にする。ShopifyヘッドレスストアにBraze SDKを実装することで、セッション、匿名のユーザー行動、チェックアウト前のショッパーアクション、そして開発チームと一緒に選択した[カスタムイベントや]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) [カスタム属性を]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/)含むオンサイトアクティビティをトラッキングすることができます。また、アプリ内メッセージやコンテンツカードなど、SDK がサポートするチャネルを追加することもできます。 
+1. **Braze Web SDK を初期化してロードし、オンサイトトラッキングを有効にする**<br><br> 手動でShopify Web サイトにコードを追加して、Braze オンサイトのトラッキングを有効にします。ShopifyヘッドレスストアにBraze SDKを実装することで、セッション、匿名のユーザー行動、チェックアウト前のショッパーアクション、そして開発チームと一緒に選択した[カスタムイベントや]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) [カスタム属性を]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/)含むオンサイトアクティビティをトラッキングすることができます。また、アプリ内メッセージやコンテンツカードなど、SDK がサポートするチャネルを追加することもできます。 
 
 {: start="2"}
 2\.**Braze の Shopify 統合をインストールする**<br><br> ShopifyストアをBrazeに接続すると、ShopifyのWebhookを通して顧客、チェックアウト、注文、商品データにアクセスできるようになる。
 
 {% alert important %}
-統合を開始する前に、Shopify ストアフロントのチェックアウトサブドメインが正しく設定されていることを確認します。詳細については、[オンラインストアから Hydrogen への移行](https://shopify.dev/docs/storefronts/headless/hydrogen/migrate)を参照してください。<br><br> この設定が正しく行われていないと、Braze は Shopify のチェックアウト Webhook を処理できません。また、ローカルの開発環境で統合をテストすることもできません。なぜなら、それはあなたのストアフロントとチェックアウトページ間の共有ドメインに依存しているからです。
+統合を開始する前に、Shopify ストアフロントのチェックアウトサブドメインが正しく設定されていることを確認します。詳細については、[Migrate from the online store to Hydrogen](https://shopify.dev/docs/storefronts/headless/hydrogen/migrate) を参照してください。<br><br> この設定が正しく行われないと、Braze は Shopify チェックアウトWebhook を処理できなくなります。また、ローカルの開発環境で統合をテストすることもできません。なぜなら、それはあなたのストアフロントとチェックアウトページ間の共有ドメインに依存しているからです。
 {% endalert %}
 
 これらの目標を達成するには、以下のステップに従ってください。
@@ -31,24 +31,24 @@ ShopifyのヘッドレスストアをBrazeと統合するには、以下の2つ�
 
 ### ステップ 1: Braze Web サイトアプリを作成する {#step-1}
 
-Braze で、[**設定**] > [**アプリの設定**] に移動し、[**アプリの追加**] を選択します。アプリ名を「Shopify」とする。
+Braze で、[**設定**] > [**アプリの設定**] に移動し、[**アプリの追加**] を選択します。アプリに「Shopify」という名前を付けます。
 
 {% alert warning %}
-ショップの名前は「Shopify」でなければなりません、そうしないと統合が正しく機能しません。
+ショップ名は「Shopify」にする必要があります。そうしないと、統合が適切に機能しない場合があります。
 {% endalert %}
 
-### ステップ2: サブドメインと環境変数を追加する {#step-2}
+### ステップ2: サブドメインおよび環境変数の追加 {#step-2}
 
-1. Shopifyのサブドメインを設定し、[オンラインストアからのトラフィックをHydrogenにリダイレクトする](https://shopify.dev/docs/storefronts/headless/hydrogen/migrate/redirect-traffic/)。  
-2. ログイン用の[コールバック URI](https://shopify.dev/docs/storefronts/headless/building-with-the-customer-account-api/hydrogen#step-2-set-up-the-environment) を追加します。(ドメインが追加されると、URI は自動的に追加されます。)
-3. [Shopify の環境変数](https://shopify.dev/docs/storefronts/headless/hydrogen/environments#create-a-new-environment-variable)を設定します
-  - [ステップ 1](#step-1) で作成した Web サイトアプリの値を使用して、2 つの環境変数を作成します。
+1. Shopifyサブドメインを[オンラインストアから Hydrogen](https://shopify.dev/docs/storefronts/headless/hydrogen/migrate/redirect-traffic) にトラフィックをリダイレクトするように設定します。  
+2. ログイン用の[コールバック URI](https://shopify.dev/docs/storefronts/headless/building-with-the-customer-account-api/hydrogen#step-2-set-up-the-environment) を追加します。(ドメインが追加されると、自動的にURI が追加されます)。
+3. [Shopify 環境変数](https://shopify.dev/docs/storefronts/headless/hydrogen/environments#create-a-new-environment-variable)を設定します。
+  - [ステップ 1](#step-1) で作成した Web サイトアプリの値を使用して、次の 2 つの環境変数を作成します。
     - `BRAZE_API_KEY` 
     - `BRAZE_API_URL`
 
 ### ステップ 3: オンサイトトラッキングを有効にする
 
-最初のステップは、Braze Web SDKを初期化することである。そのためには、NPM パッケージをインストールすることをお勧めします。
+まず、Braze Web SDK を初期化します。これは、NPMパッケージをインストールして実行することをお勧めします。
 
 ```java
 npm install --save @braze/web-sdk@5.4.0
@@ -57,10 +57,10 @@ npm install --save @braze/web-sdk@5.4.0
 ```
 
 {% alert important %}
-Braze Web SDK のバージョンは 5.4.0 でなければなりません。
+Braze Web SDK バージョンは 5.4.0 である必要があります。
 {% endalert %}
 
-次に、[この設定を最上位キーとして]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=web) `vite.config.js` ファイルに含めます。
+次に、最上位キーとして[この設定]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=web)を `vite.config.js` ファイルに含めます。
 
 ```java
 optimizeDeps: {
@@ -68,7 +68,7 @@ optimizeDeps: {
 }
 ```
 
-NPMパッケージをインストールした後、`Layout` コンポーネント内部の`useEffect` フック内でSDKを初期化する必要がある。Hydrogen のバージョンによって、このコンポーネントは `root.jsx` または `layout.jsx` ファイルにある場合があります。
+NPMパッケージをインストールした後、`Layout` コンポーネント内部の`useEffect` フック内でSDKを初期化する必要がある。Hydrogen のバージョンに応じて、このコンポーネントは`root.jsx` または `layout.jsx` のいずれかのファイルにあります。
 
 ```java
 // Add these imports
@@ -130,18 +130,18 @@ export async function loader(args) {
 ```
 
 {% alert note %}
-コンテンツセキュリティポリシー（通常は`entry.server.jsx` Hydrogenファイルにある）は、ローカライゼーション環境でも本番環境でも、Brazeスクリプトの機能に影響を与える可能性がある。Oxygen またはカスタムデプロイを通じて Shopify に送信されるプレビュービルドを使用してテストすることをお勧めします。問題が発生した場合は、当社の JavaScript が機能するように CSP を設定する必要があります。
+コンテンツセキュリティポリシー（通常は`entry.server.jsx` Hydrogenファイルにある）は、ローカライゼーション環境でも本番環境でも、Brazeスクリプトの機能に影響を与える可能性がある。Oxygen またはカスタムデプロイメントを介して Shopify に送信されるプレビュービルドによるテストをお勧めします。問題が発生した場合は、CSP を設定してJavaScript が機能するようにする必要があります。
 {% endalert %}
 
-### ステップ 4: Shopifyアカウントログインイベントを追加する 
+### ステップ 4: Shopify アカウントログインイベントの追加 
 
-買い物客がアカウントにサインインし、ユーザー情報をBrazeに同期したタイミングをトラッキング, 追跡する。これには、`changeUser` メソッドを呼び出して、Braze external ID を持つ顧客を識別することが含まれます。 
+買い物客が自分のアカウントにサインインし、自分のユーザー情報を Braze に同期した時点を追跡します。これには、`changeUser` メソッドを呼び出して、Braze external ID を持つ顧客を識別することが含まれます。 
 
 {% alert note %}
 現在のところ、Brazeのカスタム外部IDをサポートするガイダンスはない。今すぐ統合にこれが必要な場合は、カスタマーサクセスマネージャーに連絡してください。
 {% endalert %}
 
-開始する前に、Hydrogen 内で動作する顧客ログインのコールバック URI が設定されていることを確認します。詳細については、[顧客アカウント API を Hydrogen で使用する](https://shopify.dev/docs/storefronts/headless/building-with-the-customer-account-api/hydrogen)を参照してください。
+開始する前に、Hydrogen 内で動作する顧客ログインのコールバック URI が設定されていることを確認します。詳細については、[Hydrogen を使用したカスタマーアカウント API の使用](https://shopify.dev/docs/storefronts/headless/building-with-the-customer-account-api/hydrogen)を参照してください。
 
 1. コールバックURIを設定した後、Braze SDKを呼び出す関数を定義する。新しいファイル (`Tracking.jsx` など) を作成し、コンポーネントからインポートします。
 
@@ -184,7 +184,7 @@ export function trackCustomerLogin(customerData, storefrontUrl) {
 ```
 
 {: start="2"}
-2\.Braze SDK を初期化するのと同じ `useEffect` フックに、この関数の呼び出しを追加します。
+2\.Braze SDK を初期化するのと同じ`useEffect` フックで、この関数の呼び出しを追加します。
 
 ```java
 import { trackCustomerLogin } from './Tracking';
@@ -390,9 +390,9 @@ async function loadCriticalData({context, params, request}) {
 
 #### カート更新済みイベント
 
-`cart_updated` イベントをトラッキングするだけでなく、カートトークンの値を Braze に送信する必要があります。Shopify から受信した注文 Webhook を処理するためにカートークンの値を使用します。これは、Shopify カートトークンを名前とするユーザーエイリアスを作成することで行います。 
+`cart_updated` イベントの追跡に加えて、カートトークン値を Braze に送信する必要があります。Shopify から受け取った注文 Webhook の処理にカートトークン値を使用します。これを行うには、Shopify カートトークンを名前とするユーザーエイリアスを作成します。 
 
-1. `cart_updated` イベントをトラッキングし、カートトークンを設定する関数を定義します。
+1. `cart_updated` イベントを追跡し、カートトークンを設定する関数を定義します。
 
 ```java
 export function trackCartUpdated(cart, storefrontUrl) {
@@ -575,37 +575,37 @@ function CartLineUpdateButton({children, lines}) {
 
 ### ステップ 1: Shopify ストアを接続する
 
-Shopifyのパートナーページにアクセスし、セットアップを開始する。まず、[**セットアップを開始**] を選択し、Shopify アプリストアから Braze アプリをインストールします。ガイドされたステップに従ってインストールプロセスを完了します。
+Shopify パートナーページに移動して設定を開始します。まず、[**Begin Setup**] を選択し、Shopify App Storeから Braze アプリケーションをインストールします。ガイドの手順に従って、インストールプロセスを完了します。
 
 ![Braze ダッシュボードの Shopify 統合設定ページ。]({% image_buster /assets/img/Shopify/braze_shopify_integration_page.png %})
 
-### ステップ2: Braze SDK を有効にする 
+### ステップ 2:Braze SDK を有効にする 
 
 Shopify Hydrogen またはヘッドレスストアの場合は、[**カスタム設定**] オプションを選択します。 
 
-オンボーディングプロセスを続ける前に、ShopifyのWebサイトでBraze SDKがイネーブルメントされていることを確認する。
+オンボーディングプロセスを続行する前に、Shopify Web サイトで Braze SDK が有効になっていることを確認します。
 
-![Braze SDKを有効にするためのセットアップステップ]({% image_buster /assets/img/Shopify/enable_braze_sdks_setup.png %})
+![Braze SDK を有効にする設定プ手順。]({% image_buster /assets/img/Shopify/enable_braze_sdks_setup.png %})
 
-### ステップ 3: Shopify データを追跡する 
+### ステップ 3:Shopify データを追跡する 
 
-ShopifyのWebhooksを利用して、Shopifyのイベントやアトリビューションを追加して、統合を強化しよう。この統合によってトラッキングされるデータの詳細情報については、[Shopify データの機能]({{site.baseurl}}/shopify_data_features/)を参照してください。 
+Shopify の Webhook が利用する Shopify イベントと属性をさらに追加することで、統合を強化します。この統合によって追跡されるデータの詳細については、[Shopify Data Features]({{site.baseurl}}/shopify_data_features/) を参照してください。 
 
-![Shopify のデータを追跡するための設定ステップ。]({% image_buster /assets/img/Shopify/track_shopify_data_setup.png %})
+![Shopify データ追跡の設定手順。]({% image_buster /assets/img/Shopify/track_shopify_data_setup.png %})
 
 ### ステップ 4: 履歴バックフィル (オプション)
 
-カスタム設定を通じて、Shopify 統合を接続する前に、過去 90 日間の Shopify の顧客と注文を読み込むオプションがあります。この初期データ読み込みを含めるには、初期データ読み込みオプションのボックスをチェックします。
+カスタム設定を通じて、Shopify 統合を接続する前に、過去 90 日間の Shopify の顧客と注文を読み込むオプションがあります。この初期データ読み込みを含めるには、初期データ読み込みオプションのチェックボックスをオンにします。
 
-後でバックフィルを実行する場合は、ここで初期設定を完了し、後でこのステップに戻ることができます。
+後でバックフィルを実行する場合は、ここで初期セットアップを完了し、後でこのステップに戻ることができます。
 
-![]({% image_buster /assets/img/Shopify/historical_backfill_setup.png %}) 履歴データバックフィルを設定するセクション。
+![履歴データのバックフィルを設定するセクション。]({% image_buster /assets/img/Shopify/historical_backfill_setup.png %})
 
-このテーブルには、バックフィルを通して最初に読み込まれるデータが含まれています。
+この表には、バックフィルによって最初に読み込まれるデータが掲載されています。
 
-| Brazeおすすめイベント | Shopify カスタムイベントs | Braze の標準属性項目 | Braze のサブスクリプションステータス |
+| Brazeおすすめイベント | Shopify カスタムイベントs | Braze の標準属性項目 | Braze サブスクリプションステータス |
 | --- | --- | --- | --- |
-| {::nomarkdown}<ul><li>行われた注文</li></ul>{:/}  | {::nomarkdown}<ul><li>shopify_tags</li><li>shopify_total_spent</li><li>shopify_order_count</li><li>shopify_last_order_id</li><li>shopify_last_order_name</li><li>shopify_zipcode</li>shopify_province</li></ul>{:/} | {::nomarkdown}<ul><li>メール</li><li>名</li><li>姓</li><li>電話</li><li>市区町村</li><li>国</li></ul>{:/} | {::nomarkdown}<ul><li>このShopifyストアに関連するメールマーケティングのサブスクリプション</li><li>このShopifyストアに関連するSMSマーケティングサブスクリプション</li></ul>{:/} |
+| {::nomarkdown}<ul><li>行われた注文</li></ul>{:/}  | {::nomarkdown}<ul><li>shopify_tags</li><li>shopify_total_spent</li><li>shopify_order_count</li><li>shopify_last_order_id</li><li>shopify_last_order_name</li><li>shopify_zipcode</li>shopify_province</li></ul>{:/} | {::nomarkdown}<ul><li>メール</li><li>名</li><li>姓</li><li>電話</li><li>市区町村</li><li>国</li></ul>{:/} | {::nomarkdown}<ul><li>このShopifyストアに関連付けられたメールマーケティングサブスクリプション</li><li>Shopifyストアに関連付けられたSMSマーケティングサブスクリプション</li></ul>{:/} |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation"}
 
 ### ステップ 5: 顧客データトラッキングの設定 (高度) 
@@ -647,68 +647,110 @@ Braze SDK を使用すると、この統合でサポートされているデー�
 
 イベントやカスタム属性をログに記録するには、SDKがユーザーのデバイス上で初期化（アクティビティをリッスン）されている必要がある。カスタムデータのロギングについては、[ユーザーオブジェクト](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html)と [logCustomEvent](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcustomevent) を参照してください。
 
-### ステップ 6: ユーザーの管理方法を設定する（オプション）
+### ステップ 6: ユーザーの管理方法の設定(オプション) {#step-6}
 
 ドロップダウンから `external_id` タイプを選択します。
 
-![「サブスクライバーの収集セクション。]({% image_buster /assets/img/Shopify/external_id_standard.png %})
+![「サブスクライバーの収集」セクション。]({% image_buster /assets/img/Shopify/external_id_standard.png %})
 
 {% alert important %}
-メールアドレスまたはハッシュ化されたメールアドレスを Braze external ID として使用することで、データソース全体での ID 管理を簡素化できます。しかし、ユーザーのプライバシーやデータ・セキュリティに対する潜在的なリスクを考慮することは重要だ。<br><br>
+メールアドレスまたはハッシュ化されたメールアドレスを Braze external ID として使用することで、データソース全体での ID 管理を簡素化できます。ただし、ユーザーのプライバシーとデータセキュリティに対する潜在的なリスクを考慮することが重要です。<br><br>
 
 - **推測可能な情報:**メールアドレスは推測されやすく、攻撃されやすい。
 - **悪用のリスク:**悪意のあるユーザーがWebブラウザーを改ざんし、他人のメールアドレスを外部IDとして送信した場合、機密メッセージやアカウント情報にアクセスされる可能性がある。
 {% endalert %}
 
-カスタム外部IDタイプを選択した場合は、ステップ6.1と6.2に進む。そうでない場合は、ステップ 6.3 に進みます。
+デフォルトでは、BrazeはメールsをShopifyから小文字に自動的に変換してから、外部IDとして使用します。メールまたはハッシュメールを外部IDとして使用している場合は、メールアドレスも小文字に変換されていることを確認してから、外部IDとして割り当てるか、他のデータソースからハッシュする必要があります。これにより、外部ID の不一致を防ぎ、Braze での重複ユーザープロファイルの作成を回避できます。
 
-#### ステップ6.1：カスタム `external_id` を作成する
+{% alert note %}
+次に表示されるステップは、外部ID の選択によって異なります。<br><br>
+- **カスタム外部ID タイプを選択した場合:**ステップ6.1-6.3を実行して、カスタム外部ID設定を設定します。
+- **Shopify 顧客 ID、メール、またはハッシュメールを選択した場合:**ステップ 6.1～6.3をスキップし、ステップ 6.4に進みます。
+{% endalert %}
 
-まず、Shopifyにアクセスし、`braze.external_id` メタフィールドを作成する。[カスタムのメタフィールド記述を作成する](https://help.shopify.com/en/manual/custom-data/metafields/metafield-definitions/creating-custom-metafield-definitions)」のステップに従うことを推奨します。**名前空間とキー**には `braze.external_id` と入力します。**タイプ**については、ID タイプを選択することをします。
+#### ステップ6.1: `braze.external_id` メタフィールドを作成する
 
-メタフィールドを作成したら、[`customer/create`](https://help.shopify.com/en/manual/fulfillment/setup/notifications/webhooks) webhook をリッスンして、新しい顧客が作成されたときにメタフィールドを書き込むことができるようにします。次に、[Admin API](https://shopify.dev/docs/api/admin-graphql) または[顧客 API](https://shopify.dev/docs/api/admin-rest/2025-04/resources/customer) を使用して、以前に作成したすべての顧客をこのメタフィールドで埋め戻してください。
+1. Shopifyの管理パネルで、**Settings**> **Meta フィールド s** に移動します。
+2. **Customers**> **定義を追加**を選択します。
+3. **名前空間とキー**には `braze.external_id` と入力します。
+4. **Type**には**ID Type**を選択します。
 
-#### ステップ6.2：エンドポイントを作成する
+メタフィールドが作成されたら、顧客s に入力します。次のアプリ侵害をお勧めします。
 
-外部IDを取得するには、パブリックなGETエンドポイントが必要だ。Shopifyがメタフィールドを提供できない場合、Brazeはそのエンドポイントを呼び出して外部IDを取得する。
+- **顧客作成webhookを聴く:**[`customer/create` events](https://help.shopify.com/en/manual/fulfillment/setup/notifications/webhooks) をリッスンするWebhookを設定します。これにより、新しい顧客の作成時にメタフィールドを書き込むことができます。
+- **顧客を埋め戻す:**[Admin API](https://shopify.dev/docs/api/admin-graphql)または[顧客 API](https://shopify.dev/docs/api/admin-rest/2025-04/resources/customer)を使用して、以前に作成した顧客sのメタフィールドを埋め戻します。
 
-エンドポイントの例: `https://mystore.com/custom_id?shopify_customer_id=1234&email_address=raghav.narain@braze.com&shopify_storefront=dev-store.myshopify.com`
+#### ステップ6.2: 外部ID を取得するエンドポイントを作成する
 
-##### 応答
+外部ID を取得するためにBraze が呼び出すことができる公開エンドポイントを作成する必要があります。これは、Shopify が`braze.external_id` メタフィールドを提供できない場合に必須です。 
 
-Braze には 200 ステータスコードが想定されています。それ以外のコードはエンドポイントの失敗とみなされます。応答は次のようになるはずです。
+##### エンドポイント仕様
+
+**方法:** `GET`
+
+| パラメータ | 説明 |
+| --- | --- |
+| `shopify_customer_id` | Shopify 顧客 ID。 |
+| `email_address` | ログインユーザーのメールの住所。 |
+| `shopify_storefront` | リクエストのストアフロント。 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+##### サンプルエンドポイント
+
+```
+GET 
+https://mystore.com/custom_id?shopify_customer_id=1234&email_address=bob@braze.com&shopify_storefront=dev-store.myshopify.com
+```
+
+##### 期待される反応
+
+Braze は `200` ステータスコードを待ち受けます。それ以外のコードは障害とみなされます。
 
 {% raw %}
 ```json
-{ "external_id": "my_external_id" }
+{ 
+    "external_id": "my_external_id" 
+}
 ```
 {% endraw %}
 
-Admin APIまたはCustomer APIを使用して、`shopify_customer_id` 、メールアドレスを確認し、パラメータ値がShopifyの顧客値と一致していることを確認する。検証後、API を使って `braze.external_id` メタフィールドを取得し、外部 ID 値を返すこともできます。
+{% alert important %}
+`shopify_customer_id` と`email_address` がShopify の顧客に一致することを検証することが大切です。[Admin API](https://shopify.dev/docs/api/admin-graphql)または[Customer API](https://shopify.dev/docs/api/admin-rest/2025-04/resources/customer)を使用して、これらのパラメータを検証し、`braze.external_id`メタフィールドを取得できます。
+{% endalert %}
 
-#### ステップ6.3：ShopifyからメールまたはSMSのオプトインを収集する（オプション）
+#### ステップ6.3：外部IDを入力
 
-ShopifyからメールまたはSMSマーケティングのオプトインを収集するオプションがある。 
+[手順6](#step-6)を繰り返し、Brazeの外部ID 種別としてカスタム外部ID を選択した後、エンドポイント URL を入力します。
 
-メールや SMS チャネルを使用している場合、メールや SMS マーケティングのオプトイン状態を Braze に同期させることができます。Shopifyからメールマーケティングのオプトインを同期すると、Brazeは自動的にその特定のストアに関連するすべてのユーザーのためのメールサブスクリプショングループを作成する。このサブスクリプショングループには一意な名前を作成する必要がある。
+##### 考慮事項
 
-![「サブスクライバーの収集」セクションで、メールまたは SMS マーケティングのオプトインを収集するオプションがある。]({% image_buster /assets/img/Shopify/collect_email_subscribers.png %})
+- Braze がエンドポイントにリクエストを送信したときに外部ID が生成されない場合、`changeUser` 関数が呼び出されると、インテグレーションはShopify 顧客 ID の使用をデフォルトします。このステップは、特定されたユーザープロファイルと匿名ユーザープロファイルをマージするために重要です。そのため、一時的にワークスペース内にさまざまなタイプの外部ID が存在する場合があります。
+- 外部ID が`braze.external_id` メタフィールドで使用可能な場合、この外部ID が優先され、割り当てられます。 
+    - 以前にShopify 顧客 ID がBraze 外部ID として設定されていた場合は、`braze.external_id` メタフィールドに置き換えられます。 
+
+#### ステップ6.4: Shopify からメールや SMS のオプトインを収集する (オプション)
+
+Shopify からメールまたは SMS マーケティングのオプトインを収集する選択もできます。 
+
+メールや SMS チャネルを使用している場合、メールや SMS マーケティングのオプトイン状態を Braze に同期させることができます。Shopify からメールマーケティングオプトインを同期すると、Braze はその特定のストアに関連付けられているすべてのユーザのメールサブスクリプションググループを自動的に作成します。このサブスクリプショングループに一意の名前を作成する必要があります。
+
+![「サブスクライバの収集」セクションで、電子メールまたはSMS マーケティングのオプトインを収集するオプションがあります。]({% image_buster /assets/img/Shopify/collect_email_subscribers.png %})
 
 {% alert note %}
-[Shopifyの概要で]({{site.baseurl}}/shopify_overview/)述べたように、サードパーティのキャプチャフォームを使用したい場合、開発者はBraze SDKコードを統合する必要がある。これにより、フォーム送信からメールアドレスとグローバルメール購読ステータスを取得できます。具体的には、`theme.liquid` ファイルにこれらのメソッドを実装し、テストする必要があります。<br><br>
-- [setEmail](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setemail):ユーザープロファイルのメールアドレスを設定する
-- [setEmailNotificationSubscriptionType](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setemailnotificationsubscriptiontype):グローバルメールのサブスクリプションステータスを更新する
+[Shopify概要]({{site.baseurl}}/shopify_overview/)で説明されているように、サードパーティ製のキャプチャフォームを使用する場合は、開発者がBraze SDK コードを統合する必要があります。これにより、フォーム送信からメールアドレスとグローバルメール購読ステータスを取得できます。具体的には、`theme.liquid` ファイルにこれらのメソッドを実装してテストする必要があります。<br><br>
+- [setEmail](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setemail):ユーザープロファイルのメールアドレスを設定します
+- [setEmailNotificationSubscriptionType](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#setemailnotificationsubscriptiontype):グローバルメールサブスクリプションステータスを更新します
 {% endalert %}
 
 ### ステップ 7:製品を同期 (オプション)
 
-Shopify ストアの全商品を Braze カタログに同期し、より深いメッセージングパーソナライゼーションを実現できます。自動更新はほぼリアルタイムで行われるため、カタログは常に最新の製品詳細を反映します。詳しくは、[Shopify product syncs]({{site.baseurl}}/shopify_catalogs/) を参照してください。
+Shopify ストアの全商品を Braze カタログに同期し、より詳細なメッセージングのパーソナライゼーションを実現できます。自動更新はほぼリアルタイムで行われるため、カタログには常に最新の商品詳細が反映されます。詳細は、[Shopify product sync]({{site.baseurl}}/shopify_catalogs/) を参照してください。
 
-![Braze に商品データを同期するための設定ステップ。]({% image_buster /assets/img/Shopify/sync_product_data.png %})
+![商品データを Braze に同期する設定の手順。]({% image_buster /assets/img/Shopify/sync_product_data.png %})
 
 ### ステップ 8:チャネルを有効にする
 
-アプリ内メッセージ、コンテンツカード、フィーチャーフラグをShopify直接統合を使用して有効にするには、SDKに各チャネルを追加する。次の各チャネルに提供されているドキュメントリンクに従ってください。
+Shopify 直接統合を使用してアプリ内メッセージ、コンテンツカード、および機能フラグを有効にするには、各チャネルを SDK に追加します。次の各チャネルに提供されているドキュメントリンクに従ってください。
 
 - **アプリ内メッセージ:**リード獲得フォームのユースケースでアプリ内メッセージを有効にするには、[アプリ内メッセージ]({{site.baseurl}}/developer_guide/in_app_messages/)を参照してください。
 - **コンテンツカード:**受信トレイや Web サイトバナーのユースケースでコンテンツカードを有効にするには、[コンテンツカード]({{site.baseurl}}/developer_guide/content_cards/)を参照してください。
@@ -716,9 +758,9 @@ Shopify ストアの全商品を Braze カタログに同期し、より深い�
 
 ### ステップ 9:設定完了
 
-すべてのステップを終えたら、**設定を終了**を選択してパートナーページに戻ります。次に、Shopifyの管理ページに表示されるバナーに従って、Brazeアプリの埋め込みをイネーブルメントする。
+すべてのステップを終えたら、**設定を終了**を選択してパートナーページに戻ります。次に、表示されるバナーに示されているように、Shopify 管理ページ でBraze アプリの埋め込みを有効にします。
 
-![ShopifyでBrazeアプリの埋め込みを有効にして、統合設定を完了できるようにするバナー。]({% image_buster /assets/img/Shopify/shopify_app_embed_banner.png %})
+![Braze アプリを Shopify に組み込んでアクティベートして統合の設定を完了できるようにすると表示されているバナー。]({% image_buster /assets/img/Shopify/shopify_app_embed_banner.png %})
 
 #### サンプルコード
 

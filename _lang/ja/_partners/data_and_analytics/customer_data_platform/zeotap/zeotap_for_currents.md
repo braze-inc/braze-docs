@@ -14,7 +14,7 @@ search_tag: Partner
 Braze と Zeotap の統合により、Zeotap の顧客セグメントを Braze のユーザープロファイルに同期することで、キャンペーンの規模とリーチを拡大できます。[Currents]({{site.baseurl}}/user_guide/data/braze_currents/) では、データを Zeotap に接続し、グローススタック全体で実用的なデータにすることもできます。
 
 {% alert important %}
-カスタムHTTPコネクターは現在ベータ版である。この統合の設定に興味がある場合は、カスタマーサクセスマネージャーにご連絡ください。
+カスタムHTTPコネクターは現在ベータ版である。この統合の設定に興味がある場合は、カスタマー・サクセス・マネージャーに連絡すること。
 {% endalert %}
 
 ## 前提条件
@@ -34,19 +34,19 @@ Braze と Zeotap の統合により、Zeotap の顧客セグメントを Braze �
 3. カテゴリーとして [**カスタマーエンゲージメントチャネル**] を選択します。<br><br>![「カスタマーエンゲージメントチャネル」など、さまざまなカテゴリーを一覧表示する [ソースの作成] ウィンドウ。]({% image_buster /assets/img/zeotap/cec.png %}){: style="max-width:70%;"}<br><br>
 4. データソースとして **Braze** を選択します。
 5. ソース名を入力します。
-6. 地域を選択します。<br><br>![地域とデータエンティティを選択するためのオプションがあるウィンドウ。]({% image_buster /assets/img/zeotap/select_region.png %}){: style="max-width:70%;"}<br><br>
+6. 地域を選択します。<br><br>![地域とデータ・エンティティを選択するためのオプションがあるウィンドウ。]({% image_buster /assets/img/zeotap/select_region.png %}){: style="max-width:70%;"}<br><br>
 7. [**ソースの作成**] を選択します。
 8. [**実装の詳細**] タブに行き、**API URL** と **書き込みキー**をメモします。<br><br>![API URL と書き込みキーを含む Braze Currents の実装詳細。]({% image_buster /assets/img/zeotap/implementation_details.png %})
 
-### ステップ2: Currentsでデータストリーミングを設定する
+### ステップ2:Currentsでデータストリーミングを設定する
 
 1. Braze で、[**パートナー連携**] > [**データエクスポート**] に移動します。
-2. [**Currents の新規作成**] および [**カスタム Currents エクスポート**] を選択します。<br><br>![新しいカレントを作成」ボタンのドロップダウンに「カスタムカレントエクスポート」が含まれる。]({% image_buster /assets/img/zeotap/custom_currents_export.png %}){: style="max-width:60%;"}<br><br>
+2. [**Currents の新規作成**] および [**カスタム Currents エクスポート**] を選択します。<br><br>![「Current の新規作成」ボタンのドロップダウンに「カスタム Currents のエクスポート」の表示があります。]({% image_buster /assets/img/zeotap/custom_currents_export.png %}){: style="max-width:60%;"}<br><br>
 3. 統合でエラーが発生した場合に連絡を受ける統合名とメールを入力する。
 4. **認証情報**の下に、[ステップ1](#step-1-create-a-currents-source)でメモした次の情報を入力します。
 - **エンドポイント**としての API URL
 - **ベアラートークン**としての書き込みキー<br><br>![統合の詳細および認証情報を入力するセクション。]({% image_buster /assets/img/zeotap/credentials.png %})<br><br>
-5. Zeotap に送信したいメッセージエンゲージイベントを選択します。<br><br>![メッセージエンゲージメントイベントを選択するセクションがある [一般設定] タブ。]({% image_buster /assets/img/zeotap/message_engagement_events.png %})
+5. Zeotap に送信するメッセージエンゲージメントイベントを選択します。<br><br>![メッセージエンゲージメントイベントを選択するセクションがある [一般設定] タブ。]({% image_buster /assets/img/zeotap/message_engagement_events.png %})
 6. [**Currents を起動**] を選択して変更を保存し、イベントの Zeotap への送信を開始します。
 
 {% alert important %}

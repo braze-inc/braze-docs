@@ -34,15 +34,15 @@ Census プラットフォームで Census を統合するには、[**Connections
 
 ![]({% image_buster /assets/img/census/add_service.png %}){: style="max-width:60%;"}
 
-### ステップ2: 国勢調査の同期を作成する
+### ステップ 2:国勢調査の同期を作成する
 
 顧客を Braze に同期するには、同期を作成する必要があります。ここで、データを同期する場所と、2つのプラットフォーム間でどのようにフィールドをマッピングするかを定義する。
 
 1. [**Syncs**] タブに移動し、[**New Sync**] を選択します。<br><br> 
 2. コンポーザーで、データウェアハウスからソースデータモデルを選択します。<br><br>
-3. モデルの同期先を設定する。宛先として [**Braze**] を選択し、同期する[サポートされているオブジェクトタイプ](#supported-objects)を選択します。<br>![[送信先の選択] プロンプトで接続として「Braze」が選択されており、さまざまなオプションが一覧表示されています。]({% image_buster /assets/img/census/census_2.png %}){: style="max-width:80%;"}<br><br>
+3. モデルの同期先を設定する。宛先として [**Braze**] を選択し、同期する[サポートされているオブジェクトタイプ](#supported-objects)を選択します。<br>![[Select a Destination] プロンプトで接続として「Braze」が選択されており、さまざまなオプションが一覧表示されている。]({% image_buster /assets/img/census/census_2.png %}){: style="max-width:80%;"}<br><br>
 4. 適用する同期ルールを選択します ([**Update or Create**] が最も一般的な選択肢ですが、データの削除を処理するためのより詳細なルールを選択することもできます)。<br><br>
-5. 次に、レコードマッチングのために、Brazeオブジェクトをモデルフィールドに[マッピング](#supported-objects)するシンクキーを選択する。<br>![「同期キーの選択」プロンプトで Braze の「External User ID」がソースの「user_id」に一致しています。]({% image_buster /assets/img/census/census_1.png %}){: style="max-width:80%;"}<br><br>
+5. 次に、レコードマッチングのために、Brazeオブジェクトをモデルフィールドに[マッピング](#supported-objects)するシンクキーを選択する。<br>![Select a Sync Key "プロンプトでは、Brazeの "External User ID "がソースの"user_id" 。]({% image_buster /assets/img/census/census_1.png %}){: style="max-width:80%;"}<br><br>
 6. 最後に、Census データフィールドを対応する Braze フィールドにマッピングします。<br>![Census でのマッピング]({% image_buster /assets/img/census/census_3.png %}){: style="max-width:80%;"}<br><br>
 7. 詳細を確認し、シンクを作成する。 
 
