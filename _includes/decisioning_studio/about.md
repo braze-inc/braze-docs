@@ -40,6 +40,13 @@ Designing a good agent consists of:
 
 Here are some examples of agents that you can build with BrazeAI Decisioning Studio™. Your AI decisioning agents will learn from every customer interaction and apply those insights to the next day's actions.
 
+## Decisioning Studio Go vs. Decisioning Studio Pro 
+
+Decisioning Studio currently offers two tiers: Go and Pro. Go includes self-serve creative configuration with a limited action bank, only optimizes on clicks, and is only compatible with the following three Customer Engagement Platforms (CEP's): Braze, Salesforce Marketing Cloud, and Klaviyo. Pro, on the other hand, offers the full gamut of Decisioning Studio capabilities, including maximizing any metric, using all relevant data, and offering a fuller suite of reporting and insights, among other improvements. 
+
+Since audience and orchestration configuration is similar for Go and Pro, this guide will cover Go configuration first. Then the Pro section will include additional steps for agent design considerations, customer data integrations, and orchestration patterns that aren't supported in Go.
+
 {% multi_lang_include decisioning_studio/sample_agents.md %}
-3. [Setting up Decisioning Studio Pro agents]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_pro/)
-4. [Viewing reports and insights]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/reporting/)
+1. [Setting up Decisioning Studio Go]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/)
+2. [Setting up Decisioning Studio Go]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_pro/)
+3. [Viewing reports and insights]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/reporting/)
