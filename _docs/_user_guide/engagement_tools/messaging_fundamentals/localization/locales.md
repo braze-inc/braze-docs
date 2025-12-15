@@ -43,14 +43,20 @@ Wrapping large HTML blocks may have unintended consequences related to styleshee
 
 #### Localizing Links
 
-To localize anchor tag links, be sure to wrap the entire `href` URL attribute. If you only wrap a part of the URL, link templating may not function correctly.
+To localize anchor tag links, be sure to wrap **only the language-specific parts** and not the entire `href` URL attribute. If you wrap the entire URL, link templating may not function correctly.
 
 
+**Correct Usage**
 {% raw %}
 ```
-<a href="{% translation link_href %}https://www.braze.com/en/page{% endtranslation %}">
-  {% translation link_text %}Click Me{% endtranslation %}
-</a>
+<a href="https://www.braze.com/{% translation link_href %}en{% endtranslation %}/page"></a>
+```
+{% endraw %}
+
+**Incorrect Usage**
+{% raw %}
+```
+<a href="{% translation link_href %}https://www.braze.com/en/page{% endtranslation %}"></a>
 ```
 {% endraw %}
 
