@@ -1,5 +1,5 @@
 ---
-nav_title: "取得:カタログ項目の詳細をリスト"
+nav_title: "取得:カタログ項目の詳細をリストアップする"
 article_title: "取得:カタログ項目の詳細をリスト"
 search_tag: Endpoint
 page_order: 2
