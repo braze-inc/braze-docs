@@ -10,7 +10,7 @@ description: "この記事では、APIのみを使用したBrazeエンドポイ�
 ---
 {% api %}
 # APIのみを使用してメッセージを即座に送信する
-{% apimethod postcore_endpoint|https://www.braze.com/docs/core_endpoints %}。
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}。
 /messages/send
 {% endapimethod %}
 

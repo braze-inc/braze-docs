@@ -10,7 +10,7 @@ description: "この記事では、スケジュールされたAPIトリガーキ
 ---
 {% api %}
 # スケジュールされた API トリガーキャンペーンを削除
-{% apimethod postcore_endpoint|https://www.braze.com/docs/core_endpoints %}。
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}。
 /campaigns/trigger/schedule/delete
 {% endapimethod %}
 

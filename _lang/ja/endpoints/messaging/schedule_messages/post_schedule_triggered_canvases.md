@@ -10,7 +10,7 @@ description: "この記事では、「API トリガーキャンバスのスケ�
 ---
 {% api %}
 # APIトリガーのキャンバスをスケジュールする
-{% apimethod postcore_endpoint|https://www.braze.com/docs/core_endpoints %}。
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}。
 /canvas/trigger/schedule/create
 {% endapimethod %}
 
