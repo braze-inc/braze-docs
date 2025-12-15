@@ -13,7 +13,7 @@ repositories {
 次に、Brazeを依存関係に追加する。
 
 {% tabs local %}
-{% tab ベースのみ %}
+{% tab base only %}
 Braze UIコンポーネントを使用する予定がない場合は、以下のコードを`build.gradle` に追加する。`SDK_VERSION` をお使いのAndroid Braze SDKの現在のバージョンに置き換える。全バージョンのリストは[Changelogsを]({{site.baseurl}}/developer_guide/changelogs/?sdktab=android)参照のこと。
 
 ```kotlin
@@ -24,8 +24,8 @@ dependencies {
 ```
 {% endtab %}
 
-{% tab uiコンポーネント付き %}
-Braze UIコンポーネントを後で使用する予定がある場合は、以下のコードを`build.gradle` に追加する。 `SDK_VERSION` をお使いのAndroid Braze SDKの現在のバージョンに置き換える。全バージョンのリストは[Changelogsを]({{site.baseurl}}/developer_guide/changelogs/?sdktab=android)参照のこと。
+{% tab with ui components %}
+Braze UIコンポーネントを後で使用する予定がある場合は、次のコードを`build.gradle` に追加する。 `SDK_VERSION` をお使いのAndroid Braze SDKの現在のバージョンに置き換える。全バージョンのリストは[Changelogsを]({{site.baseurl}}/developer_guide/changelogs/?sdktab=android)参照のこと。
 
 ```kotlin
 dependencies {
@@ -82,7 +82,7 @@ Android M のリリースにより、Android はインストール時権限モ�
 遅延初期化はデフォルトで無効になっている。イネーブルメントを有効にするには、以下のいずれかのオプションを使用する：
 
 {% tabs %}
-{% tab Braze XMLファイル %}
+{% tab Braze XML file %}
 プロジェクトの`braze.xml` ファイルで、`com_braze_enable_delayed_initialization` を`true` に設定する。
 
 ```xml
@@ -90,7 +90,7 @@ Android M のリリースにより、Android はインストール時権限モ�
 ```
 {% endtab %}
 
-{% tab 実行時 %}
+{% tab At runtime %}
 実行時に遅延初期化をイネーブルメントするには、以下のメソッドを使用する。
 
 {% subtabs %}
@@ -121,7 +121,7 @@ Braze.enableDelayedInitialization(context)
 プッシュ分析を明示的にキューに入れるには、以下のオプションのいずれかを選択する：
 
 {% tabs %}
-{% tab Braze XMLファイル %}
+{% tab Braze XML file %}
 `braze.xml` ファイルで、`com_braze_delayed_initialization_analytics_behavior` を`QUEUE` に設定する：
 
 ```xml
@@ -129,7 +129,7 @@ Braze.enableDelayedInitialization(context)
 ```
 {% endtab %}
 
-{% tab 実行時 %}
+{% tab At runtime %}
 `QUEUE` を追加する。 [`Braze.enableDelayedInitialization()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/enable-delayed-initialization.html)メソッドを追加する：
 
 {% subtabs %}
@@ -156,7 +156,7 @@ Braze.enableDelayedInitialization(context, DelayedInitializationAnalyticsBehavio
 プッシュ分析を中止するには、以下のオプションのいずれかを選択する：
 
 {% tabs %}
-{% tab Braze XMLファイル %}
+{% tab Braze XML file %}
 `braze.xml` ファイルで、`com_braze_delayed_initialization_analytics_behavior` を`DROP` に設定する： 
 
 ```xml
@@ -164,7 +164,7 @@ Braze.enableDelayedInitialization(context, DelayedInitializationAnalyticsBehavio
 ```
 {% endtab %}
 
-{% tab 実行時 %}
+{% tab At runtime %}
 `DROP` を追加する。 [`Braze.enableDelayedInitialization()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/enable-delayed-initialization.html)メソッドに追加する：
 
 {% subtabs %}
@@ -302,7 +302,7 @@ Braze.configure(this, brazeConfig)
 
 ### Google 広告 ID
 
-[Google Advertising ID (GAID)](https://support.google.com/googleplay/android-developer/answer/6048248/advertising-id?hl=en)は、Google Play サービスにより提供される、ユーザー固有の、匿名かつ一意の、リセット可能な広告用オプション ID である。GAID によりユーザーは、自分の識別子をリセットし、Google Play アプリ内の興味・関心に基づく広告をオプトアウトできます。また、開発者は、アプリの収益化を継続するためのシンプルな標準システムを入手できます。
+[Google Advertising ID (GAID)](https://support.google.com/googleplay/android-developer/answer/6048248/advertising-id?hl=en)は、Google Play サービスにより提供される、ユーザー固有の、匿名かつ一意の、再設定可能な広告用オプション ID である。GAID によりユーザーは、自分の識別子をリセットし、Google Play アプリ内の興味・関心に基づく広告をオプトアウトできます。また、開発者は、アプリの収益化を継続するためのシンプルな標準システムを入手できます。
 
 Google 広告 ID は Braze SDK によって自動的に収集されないため、[`Braze.setGoogleAdvertisingId()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/set-google-advertising-id.html) メソッドを使用して手動で設定する必要があります。
 
@@ -380,7 +380,7 @@ Braze Android SDK バージョン3.6.0 以降、Braze の位置情報収集機�
 {% endalert %}
 
 {% tabs local %}
-{% tab アプリケーション %}
+{% tab Application %}
 アプリで直接ログを有効にするには、他のメソッドの前に、以下をアプリケーションの `onCreate()` メソッドに追加します。
 
 {% subtabs local %}

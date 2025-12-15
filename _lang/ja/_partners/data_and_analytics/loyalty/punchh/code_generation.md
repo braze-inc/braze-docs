@@ -29,9 +29,9 @@ Punchhクーポン・フレームワークとBrazeを使えば、以下のよう
     - 動的クーポン生成トークン：これは、暗号化のためにシステムが生成したセキュリティ・トークンである。
     - 動的クーポン生成URL：このURLは、ビジネスの要求に応じて、リンクまたは画像としてメールに埋め込まれる。
 
-![Punchh でクーポンキャンペーンを作成するフォーム。]({% image_buster /assets/img/punchh/punchh8.png %}){: style="max-width:60%;"}
+![Punchhでクーポンキャンペーンを作成するためのフォーム。]({% image_buster /assets/img/punchh/punchh8.png %}){: style="max-width:60%;"}
 
-### ステップ2: 署名を生成し、URLを構築する
+### ステップ 2:署名を生成し、URLを構築する
 
 JWT.IO ライブラリは、JSONウェブトークンをデコード、検証、生成する。これは、2つの当事者間でクレームを安全に表現するための、オープンで業界標準のRFC 7519方式である。 
 
@@ -96,7 +96,7 @@ https://fakebrandz.punchh.com/request_coupons/7xY3bL9jRfZ1pA6mc8qD2eS4vT5wX?sign
 
 ユーザーがクーポンのURLをクリックすると、Punchがホストするウェブページにリダイレクトされ、そこで生成されたクーポンが表示される。
 
-![]({% image_buster /assets/img/punchh/punchh7.png %}) ユーザーがクーポンコードの生成に成功した後の確認メッセージの例。
+![ユーザーがクーポンコードの生成に成功した後の確認メッセージの例。]({% image_buster /assets/img/punchh/punchh7.png %})
 
 #### JSON経由でコードをプレーンテキストとして抽出する
 
@@ -125,8 +125,8 @@ https://fakebrandz.punchh.com/request_coupons/7xY3bL9jRfZ1pA6mc8qD2eS4vT5wX.json
 2. URL 文字列のトークンの後に`.png` を追加します。
 3. リンクをHTML{% raw %}`<img>`{% endraw %} タグに埋め込む。
 
-{% tabs ローカル %}
-{% tab 入力例 %}
+{% tabs local %}
+{% tab example input %}
 {% raw %}
 ```liquid
 <img src="https://fakebrandz.punchh.com/request_coupons/7xY3bL9jRfZ1pA6mc8qD2eS4vT5wX.png?sign={{jwt}}">
@@ -134,8 +134,8 @@ https://fakebrandz.punchh.com/request_coupons/7xY3bL9jRfZ1pA6mc8qD2eS4vT5wX.json
 {% endraw %}
 {% endtab %}
 
-{% tab 出力例 %}
-![クーポンコード画像タグのレンダリング出力]({% image_buster /assets/img/punchh/punchh9.png %})
+{% tab example output %}
+![クーポンコード画像タグのレンダリング出力。]({% image_buster /assets/img/punchh/punchh9.png %})
 {% endtab %}
 {% endtabs %}
 

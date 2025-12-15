@@ -9,7 +9,7 @@ search_tag: Partner
 
 ---
 
-# [![Braze ラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/amplitude-integration-with-braze){: style="float:right;width:120px;border:0;" class="noimgborder"}Amplitude for Currents
+# [![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/amplitude-integration-with-braze){: style="float:right;width:120px;border:0;" class="noimgborder"}CurrentsのAmplitude
 
 > [Amplitude](https://amplitude.com/) は製品分析およびビジネスインテリジェンスプラットフォームです。
 
@@ -39,7 +39,7 @@ amplitude.setDeviceId(Appboy.getInstance(context).getDeviceId();)
 
 Amplitudeには2種類のイベントをエクスポートできる：[メッセージエンゲージメントイベント](#supported-currents-events) (メッセージ送信に直接関連する Braze イベントで構成される) と、[顧客行動イベント](#supported-currents-events) (セッション、カスタムイベント、プラットフォーム経由で追跡された購入などのその他のアプリまたは Web サイトアクティビティを含む) です。すべての標準的なイベントには `[Appboy]` が接頭辞として付加され、すべてのカスタムイベントには `[Appboy] [Custom Event]` が付加されます。カスタムイベントプロパティの接頭辞は `[Custom event property]`、購入イベントプロパティの接頭辞は `[Purchase property]` です。
 
-名前が付けられ Braze にインポートされるすべてのコホートには、接頭辞として `[Amplitude]` が、接尾辞として`cohort_id` が付加されます。これは、`cohort_id` が「abcd1234」で名前が「TEST_COHORT」のコホートが、Braze フィルターでは `[Amplitude] TEST_COHORT: abcd1234` というタイトルになることを意味します。
+名前が付けられ Braze にインポートされるすべてのコホートには、接頭辞として `[Amplitude]` が、接尾辞として`cohort_id` が付加されます。これは、"TEST_COHORT" という名前のコホートで`cohort_id` "abcd1234" は、Braze フィルターs では`[Amplitude] TEST_COHORT: abcd1234` という名前になることを意味します。
 
 その他のイベントの種類にアクセスする必要がある場合は、アカウントマネージャーに問い合わせるか、[サポートチケット]({{site.baseurl}}/braze_support/)を開いてください。
 
@@ -59,9 +59,9 @@ Braze で **[Currents] > [+ Currents を作成] > [Amplitude エクスポート�
 Braze Currents から Amplitude に送信されたイベントは、Amplitude イベントボリューム割り当ての対象となります。
 {% endalert %}
 
-![Braze Amplitude Currents ページ。このページには、統合名、連絡先メール、APIキー、US リージョンのフィールドがある。Currents ページの下半分には、送信可能なCurrents イベントが表示されている。]({% image_buster /assets/img/amplitude4.png %})
+![Braze Amplitude Currents ページ。このページには、統合名、連絡先メール、APIキー、US リージョンのフィールドがある。Currents画面の下半分には、送信可能なCurrentsが表示されます。]({% image_buster /assets/img/amplitude4.png %})
 
-{% tab 注 %}
+{% tab note %}
 詳細については、Amplitude の[統合に関するドキュメント](https://amplitude.zendesk.com/hc/en-us/articles/115000217351-Appboy-Amplitude-Integration#how-to-set-up-and-use-the-integration)を参照してください。
 {% endtab %}
 

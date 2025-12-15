@@ -25,7 +25,7 @@ Braze とトレジャーデータの統合により、2 つのシステム間の
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
-トレジャーデータは各イベントを一括してログに記録します。トレジャーデータを照会してイベントカウントを取得する方法の詳細については、「[Braze Currents のインポート統合](https://docs.treasuredata.com/articles/#!int/braze-currents-import-integration)」を参照してください。
+トレジャーデータは各イベントを一括してログに記録します。トレジャーデータに照会してイベント数を取得する方法については、「[データの照会](https://docs.treasuredata.com/articles/int/braze-currents-import-integration/a/h2__592056238)」を参照のこと。<br><br>トレジャーデータの新しいBrazeストリーミングコネクターとの統合をお考えの場合は、[Braze Currents Streaming Import Integrationの](https://docs.treasuredata.com/articles/#!int/braze-currents-import-integration/q/braze/qid/72364/qp/4)詳細なセットアップステップを参照されたい。Brazeとの統合やセットアップに関するご質問は、Brazeアカウントチームまでお問い合わせください。
 {% endalert %}
 
 ## 統合
@@ -47,7 +47,7 @@ Braze で [**Currents**] > [**\+ Current を作成**] > [**トレジャーデー
 トレジャーデータに送信されるすべてのイベントには、ユーザーの `external_user_id` が含まれます。この時点では Braze は、`external_user_id` が設定されていないユーザーのイベントデータをトレジャーデータに送信しません。
 
 {% alert important %}
-トレジャーデータ URL を最新の状態に保ちます。コネクタのURLが正しくない場合、Brazeはイベントを送信できない。この状態が48時間以上続くと、コネクタのイベントは削除され、データは永久に失われる。
+トレジャーデータ URL を最新の状態に保ちます。コネクタのURLが正しくない場合、Brazeはイベントを送信できない。この状態が**5日**以上続くと、コネクタのイベントは削除され、データは永久に失われる。
 {% endalert %}
 
 #### イベント・フィールドの値の例

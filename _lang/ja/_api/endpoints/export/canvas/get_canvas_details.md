@@ -46,12 +46,10 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/details?c
 ## 回答
 
 {% alert note %}
-すべてのキャンバスステップには、`{name, next_step_id}` データの配列である `next_paths` フィールドがあります。フルステップとメッセージステップの場合、`next_step_ids` フィールドは存在するが、他のキャンバスフローのステップのデータは含まれない。
+すべてのキャンバスステップには、`{name, next_step_id}` データの配列である `next_paths` フィールドがあります。メッセージステップの場合、`next_step_ids` フィールドは存在するが、他のキャンバスステップのデータは含まれない。
 {% endalert %}
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "created_at": (string) the date created as ISO 8601 date,
   "updated_at": (string) the date updated as ISO 8601 date,

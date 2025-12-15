@@ -25,7 +25,7 @@ page_order: 1.2
 
 {% tabs local %}
 {% tab pre-formatted code %}
-!["パーソナライゼーション&quotを追加;アイテムの推奨をパーソナライゼーション型としてモーダルします。]({% image_buster /assets/img/add_personalization.png %}){: style="max-width:30%;float:right;margin-left:15px;"}
+![パーソナライゼーションタイプとしてアイテムの推奨を使用した [パーソナライゼーションを追加] モーダル。]({% image_buster /assets/img/add_personalization.png %}){: style="max-width:30%;float:right;margin-left:15px;"}
 
 メッセージコンポーザーの**パーソナライゼーションを追加** セクションからLiquid を生成できます。
 
@@ -94,7 +94,7 @@ AI 推奨では、複数の製品が配列として返されます。`items[0]` 
 {% tab Drag-and-drop%}
 メールのドラッグ＆ドロップエディターで、メールに画像ブロックを追加し、この画像ブロックを選択して [**画像のプロパティ**] を開きます。
 
-![ドラッグアンドドロップエディタの画像プロパティパネル]]({% image_buster /assets/img/image_with_liquid.png %}){: style="max-width:45%"}
+![ドラッグアンドドロップエディタのイメージプロパティパネル]({% image_buster /assets/img/image_with_liquid.png %}){: style="max-width:45%"}
 
 [**Liquid を含む画像**] を切り替え、[**ダイナミック URL**] フィールドに以下を追加します。
 

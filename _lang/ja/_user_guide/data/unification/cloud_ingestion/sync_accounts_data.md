@@ -12,7 +12,7 @@ description: "CDIを使用してBrazeアカウントデータを同期する方�
 > CDIを使用してBrazeアカウントデータを同期する方法を学習する。
 
 {% alert important %}
-[アカウント・オブジェクトは](https://braze.com/unlisted_docs/account_opportunity_object/)現在ベータ版で、この機能を使うにはこれが必要だ。ベータ版への参加に興味がある場合は、Braze のアカウントマネージャーに連絡してください。
+[アカウント・オブジェクトは](https://braze.com/unlisted_docs/account_opportunity_object/)ベータ版であり、この機能を使用するために必要である。ベータ版への参加に興味がある場合は、Braze のアカウントマネージャーに連絡してください。
 {% endalert %}
 
 ## 前提条件
@@ -58,7 +58,7 @@ CDIを使えば、データウェアハウスやファイルストレージを�
          DELETED BOOLEAN
     );
     ```
-2. Create a role, warehouse, and user, and grant permissions. If you already have credentials from another sync, you can reuse them—just make sure they have access to the accounts table.
+2. Create a role, warehouse, and user, and grant permissions. If you already have credentials from another sync, you can reuse them—make sure they have access to the accounts table.
     ```json
     CREATE ROLE BRAZE_INGESTION_ROLE;
 
@@ -100,7 +100,7 @@ CDIを使えば、データウェアハウスやファイルストレージを�
        deleted boolean
     )
     ```
-2. Create a user and grant permissions. If you already have credentials from another sync, you can reuse them—just make sure they have access to the accounts table.
+2. Create a user and grant permissions. If you already have credentials from another sync, you can reuse them—make sure they have access to the accounts table.
     {% raw %}
     ```json 
     CREATE USER braze_user PASSWORD '{password}';
@@ -216,7 +216,7 @@ CDIを使えば、データウェアハウスやファイルストレージを�
     ```
 
 {:start="2"}
-2. Create a service principal and grant permissions. If you already have credentials from another sync, you can reuse them—just make sure they have access to the accounts table.
+2. Create a service principal and grant permissions. If you already have credentials from another sync, you can reuse them—make sure they have access to the accounts table.
 
 {:start="3"}
 3. If you use network policies, allow Braze IPs to access your Microsoft Fabric instance. For the list of IPs, see [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
@@ -253,7 +253,7 @@ The following examples show valid JSON and CSV formats for syncing account data 
 ```  
 
 {% alert important %}
-ソースファイルの各行には有効なJSONが含まれていなければならない。
+ソース・ファイルの各行には有効なJSONが含まれていなければならない。
 {% endalert %}
 {% endsubtab %}
 {% subtab CSV Accounts with Delete %}

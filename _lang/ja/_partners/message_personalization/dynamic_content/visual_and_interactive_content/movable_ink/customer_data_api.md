@@ -42,7 +42,7 @@ Movable Ink は、Customer Data API を介して Braze から行動イベント�
 
 1. **Webhook URL**フィールドに、Movable InkのエンドポイントURLを入力する。
 
-![Braze の Webhook コンポーザーの「作成」タブ。Movable Ink エンドポイントのURL と、「JSON キーと値のペア」が設定された「リクエスト本文」が表示されている。]({% image_buster /assets/img/movable_ink/cd_api_webhook_url.png %}){: style="max-width:75%" }
+![Movable Ink エンドポイント URLとリクエストボディがJSONキー/値ペアに設定されているBrazeのWebhookコンポーザーのコンポーズタブ。]({% image_buster /assets/img/movable_ink/cd_api_webhook_url.png %}){: style="max-width:75%" }
 
 {:start="2"}
 2\.[**設定**] タブを選択します。
@@ -54,14 +54,14 @@ Movable Ink は、Customer Data API を介して Braze から行動イベント�
 | Authorization | Movable Ink から受け取った基本認証を入力します。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-![BrazeのWebhookコンポーザーの設定タブ。Content-TypeとAuthorizationのキー・バリュー・ペアがある。]({% image_buster /assets/img/movable_ink/cd_api_webhook_settings.png %}){: style="max-width:75%" }
+![Webhookコンポーザーの「設定」タブ。Content-Type とAuthorization のキーと値のペアがBrazeされます。]({% image_buster /assets/img/movable_ink/cd_api_webhook_settings.png %}){: style="max-width:75%" }
 
 #### ステップ1c: ペイロードを設定する
 
 1. [**作成**] タブに戻ります。
 2. **リクエスト本文**として、JSON キーと値のペアを使用して独自のリクエスト本文を作成するか、イベントペイロードを生のテキストとして入力します。標準的な e コマースイベントの例については、[サンプルペイロード](#sample-payloads)を参照してください。
 
-![ID、タイムスタンプ、ユーザー ID、およびイベントタイプの JSON キーと値のペアが指定されている、Braze の Webhook コンポーザーの「作成」タブ。]({% image_buster /assets/img/movable_ink/cd_api_webhook_kvp.png %}){: style="max-width:75%" }
+![ID、タイムスタンプ、ユーザー ID、およびイベントタイプのJSON キーと値のペアとBrazeて、Webhook コンポーザーのコンポーズタブ。]({% image_buster /assets/img/movable_ink/cd_api_webhook_kvp.png %}){: style="max-width:75%" }
 
 #### ステップ1d: Webhook をテストする {#step-1d}
 
@@ -77,9 +77,9 @@ Movable Ink は、Movable Ink クライアントエクスペリエンスチー�
 2. ユーザーとしてメッセージをプレビューし、そのユーザーのイベントペイロードのサンプルを表示する。ランダムユーザー、特定のユーザー、またはカスタムユーザーとしてのプレビューのいずれかを選択できます。
 3. 問題がなければ、**Send testを**クリックしてテストリクエストを送信する。
 
-![200OK レスポンスを示す Braze の Webhook レスポンスメッセージ。]({% image_buster /assets/img/movable_ink/cd_api_webhook_response.png %}){: style="max-width:75%" }
+![200 OK レスポンスを示すBrazeのWebフックレスポンスメッセージ。]({% image_buster /assets/img/movable_ink/cd_api_webhook_response.png %}){: style="max-width:75%" }
 
-### ステップ2: キャンペーン設定を確定する
+### ステップ 2:キャンペーン設定を確定する
 
 #### ステップ 2a: キャンペーンをスケジュールする
 
@@ -103,7 +103,7 @@ Braze では、スケジュールされたアクションベースのAPI トリ�
 
 **コントロールグループの**チェックボックスをオフにして、キャンペーンでA/Bテストを使用しないことを確認する。コントロールグループが含まれている場合、一定の割合のユーザーのデータが Movable Ink に送信されません。オーディエンス全体を、コントロールグループではなくバリアントに移動する必要があります。
 
-![Braze キャンペーンにおける AB テストパネル。100％ のバリアント分布がバリアント 1 に割り当てられ、コントロールグループはない。]({% image_buster /assets/img/movable_ink/cd_api_webhook_ab.png %})
+![バリアント分布がバリアント 1に割り当てられ、コントロールグループがないBraze キャンペーンのAB テストパネル。]({% image_buster /assets/img/movable_ink/cd_api_webhook_ab.png %})
 
 #### ステップ 2c: コンバージョンイベントを選択する（オプション）
 
@@ -155,8 +155,8 @@ Webhook キャンペーンで `External User ID` フィルターを使用して�
 
 ### プロダクト・ビュー・イベント
 
-{% tabs ローカル %}
-{% tab Braze トリガーイベントの例 %}
+{% tabs local %}
+{% tab Example Braze Trigger Event %}
 
 {% raw %}
 
@@ -190,7 +190,7 @@ Webhook キャンペーンで `External User ID` フィルターを使用して�
 {% endraw %}
 
 {% endtab %}
-{% tab 必要な Movable Ink リクエストペイロード %}
+{% tab Expected Movable Ink Request Payload %}
 
 {% raw %}
 
@@ -226,7 +226,7 @@ curl --location --request POST 'https://collector.movableink-dmz.com/behavioral/
 
 {% endraw %}
 {% endtab %}
-{% tab ウェブフックの例 %}
+{% tab Example webhook %}
 
 この例では、`external_id` を持たないユーザーのために、`anonymous_id` としてハッシュ化されたメールアドレスが使われている。
 
@@ -277,8 +277,8 @@ curl --location --request POST 'https://collector.movableink-dmz.com/behavioral/
 
 ### カテゴリー表示イベント
 
-{% tabs ローカル %}
-{% tab Braze トリガーイベントの例 %}
+{% tabs local %}
+{% tab Example Braze Trigger Event %}
 
 {% raw %}
 
@@ -302,7 +302,7 @@ curl --location --request POST 'https://collector.movableink-dmz.com/behavioral/
 {% endraw %}
 
 {% endtab %}
-{% tab 必要な Movable Ink リクエストペイロード %}
+{% tab Expected Movable Ink Request Payload %}
 
 {% raw %}
 
@@ -328,7 +328,7 @@ curl --location --request POST 'https://collector.movableink-dmz.com/behavioral/
 {% endraw %}
 
 {% endtab %}
-{% tab ウェブフックの例 %}
+{% tab Example webhook %}
 
 この例では、既知のユーザー（`external_id` を持つユーザー）のみのイベントを追跡するウェブフックを示している。
 
@@ -360,8 +360,8 @@ curl --location --request POST 'https://collector.movableink-dmz.com/behavioral/
 
 ### イベントを特定する
 
-{% tabs ローカル %}
-{% tab Braze トリガーイベントの例 %}
+{% tabs local %}
+{% tab Example Braze Trigger Event %}
 
 {% raw %}
 
@@ -379,7 +379,7 @@ curl --location --request POST 'https://collector.movableink-dmz.com/behavioral/
 
 {% endraw %}
 {% endtab %}
-{% tab 必要な Movable Ink リクエストペイロード %}
+{% tab Expected Movable Ink Request Payload %}
 
 {% raw %}
 
@@ -398,7 +398,7 @@ curl --location --request POST 'https://collector.movableink-dmz.com/behavioral/
 
 {% endraw %}
 {% endtab %}
-{% tab ウェブフックの例 %}
+{% tab Example webhook %}
 
 この例では、`external_id` を持たないユーザーのために、`anonymous_id` としてハッシュ化されたメールアドレスが使われている。
 

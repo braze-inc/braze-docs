@@ -10,7 +10,7 @@ page_order: 4
 > ランディングページでリキッドパーソナライゼーションを使用すると、内容をユーザープロファイル情報に合わせてダイナミックなできます。たとえば、複数の静的ランディングページを管理せずに、さまざまなユーザー 属性に基づいてヘッドラインをパーソナライズできます。
 
 {% alert important %}
-ランディングページのリキッドパーソナライゼーションは、ランディングページのプロティアでのみ使用できます。現在、[Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content) および[プロモーションコードs]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes) は、ランディングページのリキッドパーソナライゼーションではサポートされていません。
+ランディングページのリキッドパーソナライゼーションは、ランディングページのプロティアでのみ使用できます。現在、[Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content)、[multi-language]({{site.baseurl}}/user_guide/administrative/app_settings/multi_language_settings)、および[プロモーションコードs]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes)は、ランディングページのリキッドパーソナライゼーションではサポートされていません。
 {% endalert %}
 
 ## 液体の挿入
@@ -40,6 +40,13 @@ page_order: 4
 
 - 大きなデータセットを連続してループしたり、参照したりすることはありません。
 - リキッドブロック内の広範な数学的または条件付きロジックに依存しません。
+
+### 識別された匿名のユーザーにリキッドを使用する 
+
+Liquidでは、特定のビジターと匿名のビジターの両方のランディングページエクスペリエンスをカスタマイズできます。
+
+- **識別されるユーザーs:**Brazeからランディングページにリンクし、[ランディングページリキッドタグ]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/tracking_users/#using-landing-page-liquid-tags)を含めます。これにより、ユーザーがBraze プロファイルに関連付けられ、ページエクスペリエンスがカスタマイズされます。
+- **匿名ビジター:**乱数や時刻グリーティングなど、プロファイルベースではない文脈に応じた or 状況に即したコンテンツにはリキッドを使用します。
 
 ## フォールバックページ
 

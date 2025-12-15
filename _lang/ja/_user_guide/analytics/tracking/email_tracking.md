@@ -17,9 +17,8 @@ description: "このリファレンス記事では、開封ピクセルとクリ
 
 - `email_open_tracking_disabled`: `true` または `false` を受け入れます。`false`に設定して、このユーザーに送信されるすべての将来のメールに開封トラッキングピクセルを追加します。SparkPostとSendGridでのみ利用可能。
 - `email_click_tracking_disabled`:`true` または `false` を受け入れます。`false`に設定して、このユーザーに送信される将来のメール内のすべてのリンクにクリックトラッキングを追加します。SparkPostとSendGridでのみ利用可能。
-- `email_click_tracking_disabled`:`true` または `false` を受け入れます。`false`に設定して、このユーザーに送信される将来のメール内のすべてのリンクにクリックトラッキングを追加します。SparkPostとSendGridでのみ利用可能。
 
 参考までに、この情報はユーザープロファイルのメール**連絡設定**に反映され、**エンゲージメント**タブにあります。
 
-![メール開封を送信し、ユーザーのプロファイルの「エンゲージメント」タブにある"トラッキング画素フィールドを選択します]({% image_buster /assets/img_archive/open_click_user_profile.png %}){: style="max-width:60%;"}
+![メール開封およびクリックトラッキングピクセルフィールドは、ユーザーのプロファイルのエンゲージメントタブにあります]({% image_buster /assets/img_archive/open_click_user_profile.png %}){: style="max-width:60%;"}
 

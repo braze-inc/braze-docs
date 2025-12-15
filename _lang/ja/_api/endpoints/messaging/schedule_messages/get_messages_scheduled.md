@@ -1,5 +1,5 @@
 ---
-nav_title: "取得:今後スケジュールされているキャンペーンとキャンバスをリスト"
+nav_title: "取得:今後のスケジュールされた キャンペーンとキャンバスを一覧表示する"
 article_title: "取得:今後スケジュールされているキャンペーンとキャンバスをリスト"
 search_tag: Endpoint
 page_order: 0
@@ -44,8 +44,6 @@ curl --location --request GET 'https://rest.iad-01.braze.com/messages/scheduled_
 ## 応答
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "scheduled_broadcasts": [
     {

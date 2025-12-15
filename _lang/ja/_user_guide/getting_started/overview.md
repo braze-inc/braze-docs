@@ -24,20 +24,20 @@ Braze へようこそこの一連の記事は、Braze のプラットフォー�
 Braze は、あらゆる規模のブランドがさまざまなチャネルでパーソナライズされたターゲットを絞ったキャンペーンを作成するのを支援するカスタマーエンゲージメントプラットフォームです。Braze を使用すれば、顧客の声に耳を傾け、顧客の行動が何を示しているかを理解し、適切なメッセージを適切なチャネルを通じて適切なタイミングで顧客に送信することができます。
 
 {% alert tip %}
-[同僚をBrazeに追加して]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/adding_users_to_your_dashboard/#adding-braze-users)、一緒にプラットフォームを探検できるようにしよう。
+[同僚をBrazeに追加して]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/)、一緒にプラットフォームを探検できるようにしよう。
 {% endalert %}
 
 ## ユーザーとセグメント
 
 ユーザーとは、Braze を使ってお客様が送信したメッセージを受信している顧客のことです。ユーザーについて収集し、Braze に取り込まれたすべてのデータは、そのユーザーのユーザー層、個人情報、好み、行動などのユーザープロファイルに保存されます。この情報によってメッセージングが強化され、適切なユーザーに合わせてメッセージを調整できます。
 
-\![]({% image_buster /assets/img/getting_started/user_profile.png %})
+![]({% image_buster /assets/img/getting_started/user_profile.png %})
 
 セグメントは、顧客ベースをより小さなグループに分割し、その後、特定のメッセージングでターゲットにすることができます。性別、場所、年齢などの特性から、以前のキャンペーンとのインタラクションパターンやカスタマージャーニーのどこにいるのかといった行動まで、さまざまな変数を使用してセグメントを作成できます。
 
 セグメントはダイナミックです。ユーザーの行動やお客様のブランドとの関係に基づいて、リアルタイムにセグメントを出入りすることができます。これにより、顧客は常に最も関連性の高いメッセージを受け取ることができます。ターゲティングやメッセージの目的に合わせて必要な数だけセグメントを作成できます。
 
-\![]({% image_buster /assets/img/getting_started/segment.png %})
+![]({% image_buster /assets/img/getting_started/segment.png %})
 
 詳細については、以下をご覧ください。[開始: ユーザーとセグメント]({{site.baseurl}}/user_guide/getting_started/users_segments/)。
 
@@ -68,7 +68,7 @@ Braze は、あらゆる規模のブランドがさまざまなチャネルで�
 
 Braze は、迅速かつ簡単に稼働できるように設計されています。数百のブランドの顧客ベース全体で、当社の平均タイムトゥーバリューは6週間です。
 
-\![]({% image_buster /assets/img/getting_started/timetovalue.png %})
+![]({% image_buster /assets/img/getting_started/timetovalue.png %})
 
 並列で作業できる4つのコンポーネントに基づいて統合の長さを見積もるためのBrazeフレームワークを紹介します。一般的な期間は30日から180日で、ほとんどのアカウントは45日から60日以内に統合を完了します。
 

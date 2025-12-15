@@ -6,7 +6,7 @@ URL にUTM パラメータを追加するには、次の手順を実行します
 
 1. ベースURL から始めます。これは、追跡するページのURL です(`https://www.example.com` など)。
 2. ベースURL の後に疑問符(?) を追加します。
-3. アンパサンド(&) で区切られた各UTM パラメータを追加します。
+3. アンパサンドで区切られた各UTMパラメータを追加します (&).
 
 例は`https://www.example.com?utm_source=newsletter&utm_medium=sms`です。
 
@@ -26,7 +26,7 @@ URL にUTM パラメータを追加するには、次の手順を実行します
 
 ### 短縮URLはどのくらいの期間有効ですか？
 
-動的URL は、URL 登録時から2 か月間有効です。
+パーソナライズされた URL は、URL 登録時から2か月間有効です。
 
 ### リンクを短縮するためにBraze SDKをインストールする必要がありますか？
 
@@ -38,6 +38,6 @@ URL にUTM パラメータを追加するには、次の手順を実行します
 
 ## カスタムドメイン
 
-リンクの短縮は、独自のドメインを使用して短縮URLの外観をパーソナライズし、一貫したブランド画像を表現するのに役立ちます。詳細については、[カスタムドメイン]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/link_shortening/custom_domains/)を参照してください。
+リンクの短縮は、独自のドメインを使用して短縮URLの外観をパーソナライズし、一貫したブランド画像を表現するのに役立ちます。詳細については、[カスタムドメイン]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/link_shortening/custom_domains/)を参照してください。
 
 {% endif %}

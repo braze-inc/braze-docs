@@ -1,27 +1,104 @@
 ---
-nav_title: 会社ユーザー
-article_title: 会社ユーザー
+nav_title: Braze ユーザーs
+article_title: Braze ユーザーの管理
 page_order: 23
-layout: dev_guide
-guide_top_header: "会社ユーザー"
-guide_top_text: "会社の Braze アカウント管理者には、より細かく、またはケースバイケースでユーザーを管理しなければならないことがあります。Braze でチームを作成し、ユーザー権限と全社的な設定を管理することで、そのようなユーザー管理が容易になります。"
-
-page_type: landing
-description: "このランディングページには、ユーザーの追加と削除、ユーザー権限の設定、チームの作成、会社設定の管理など、Brazeユーザーの管理に関する記事が掲載されている。"
-
-guide_featured_title: "セクションの記事"
-guide_featured_list:
-- name: Braze ユーザーの管理
-  link: /docs/user_guide/administrative/app_settings/manage_your_braze_users/adding_users_to_your_dashboard/
-  image: /assets/img/braze_icons/user-plus-01.svg
-- name: ユーザー権限の設定
-  link: /docs/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/
-  image: /assets/img/braze_icons/user-square.svg
-- name: チーム
-  link: /docs/user_guide/administrative/app_settings/manage_your_braze_users/teams/
-  image: /assets/img/braze_icons/users-01.svg
+page_type: reference
+description: "このページでは、ユーザーの追加と削除、設定 ユーザー権限、チームの作成、企業設定の管理など、Braze ユーザーの管理について説明します。"
 ---
 
-## チーム、権限設定、役割の違いは何か？ 
+# Braze ユーザーの管理
+
+> ユーザーの追加、一時停止、削除など、会社アカウントのユーザーを管理する方法について学びましょう。
+
+{% alert note %}
+このページのいくつかのセクションでは、「**会社ユーザー**」ページを参照しています。[古いナビゲーション]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/)を使用している場合、[**会社ユーザー**] は [**ユーザーを管理**] と呼ばれ、アカウントアイコンの下にあります。
+{% endalert %}
+
+## Braze ユーザーの追加
+
+Brazeアカウントにユーザーを追加するには、管理者権限が必要。 
+
+新しいユーザーを追加する：
+
+1. [**設定**] > [**会社ユーザー**] に移動します。
+2. [**\+ 新規ユーザーを追加**] をクリックします。
+3. 指示に従って、メールアドレス、部署、[ユーザーロール]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#creating-a-role)などの情報を入力します。
+
+{% alert tip %}
+ユーザーのプロフィールに記載されている部署によって、Brazeから受け取る通信の種類が決まる。これにより、誰もがBrazeの使い方に関連したコミュニケーションやアラートだけを受け取ることができる。
+{% endalert %}
+
+![ユーザ明細フィールドs.]({% image_buster /assets/img/add_new_user_2.png %}){: style="max-width:60%;"}
+
+{:start="4"}
+
+4. 管理者でないユーザーについては、このユーザーに付与する会社レベルとワークスペースレベルの[権限]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#editing-a-users-permissions)を選択します。
+
+![カスタム権限フィールドの節を持つワークスペースレベルの権限。]({% image_buster /assets/img/add_new_user_3.png %})
+
+### 電子メールアドレスの要件
+
+[インスタンスで]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints)使用されるすべての電子メールアドレスは一意でなければならない。つまり、そのインスタンスで会社のワークスペースにアクセスしていた、または現在もアクセスしているユーザーに関連付けられているメールアドレスを追加しようとすると、エラーメッセージが表示される。 
+
+チームがGmailを使用していて、メールアドレスの追加に問題がある場合は、メールアドレスに「+1」や「+test」のようなプラス記号（+）を追加することで、エイリアスを作成することができる。例えば、`contractor@braze.com` は、`contractor+1@braze.com` というエイリアスを持つことができます。`contractor+1@braze.com` 宛のメールは`contractor@braze.com` に配信されるが、エイリアスは一意のメールアドレスとして認識される。
+
+### Brazeアカウントのメールアドレスを変更できますか?
+
+セキュリティ上の理由から、ユーザはBraze アカウントに関連付けられたメールアドレスを変更できません。ユーザがメールアドレスを更新する場合、管理者は[ 希望のメールアドレスで新しいアカウント](#adding-braze-users) を作成する必要があります。
+
+## ユーザーアクセスと責任の割り当て
 
 {% multi_lang_include permissions.md content="Differences" %}
+
+## Braze ユーザーの一時停止
+
+ユーザーを一時停止すると、そのアカウントが非アクティブ状態になり、ユーザーはログインできなくなりますが、そのアカウントに関連付けられたデータは保持されます。管理者のみが Braze ユーザーの一時停止または停止解除ができます。
+
+ユーザーをサスペンドするには、**Settings**> **Company Users**に移動し、ユーザー名を見つけて<i class="fa-solid fa-user-lock"></i>**Suspend**を選択します。
+
+![ユーザーを中断することができます。]({% image_buster /assets/img_archive/suspend_user.png %})
+
+管理者は、リストからユーザー名を選択し、フッターの [**ユーザーを一時停止**] をクリックしてユーザーを一時停止することもできます。
+
+![ユーザーの内容を編集するときは、ユーザーを一時停止します。]({% image_buster /assets/img_archive/suspend_user2.png %}){: style="max-width:70%;"}
+
+## Braze ユーザーの削除
+
+ユーザーを削除するには、**「Settings（設定）**」＞「**Company Users（会社ユーザー）**」と進み、ユーザー名を見つけ、「<i class="fa fa-trash-can"></i> **Delete user（ユーザーを削除）**」を選択する。
+
+![ユーザーを削除する]({% image_buster /assets/img_archive/delete_user_new.png %})
+
+ユーザが削除された後、Braze は次のアカウントデータを保持しません。
+
+- ユーザーが持っていたすべての属性
+- メールアドレス
+- 電話番号
+- 外部ユーザー ID
+- 性別
+- 国
+- 言語
+- その他の類似データ
+
+Braze は次のアカウントデータを保持します。
+
+- アカウントに関連付けられたカスタム属性またはテストデータ
+- 作成したキャンペーンまたはキャンバス (ただし、[**最終編集者**] 列などにユーザーの名前は表示されません)
+
+### ダッシュボード ユーザー削除の影響
+
+ダッシュボード ユーザーを削除しても、キャンペーン s、Segment s、キャンバスなど、ダッシュボード内で作成したアセットに大きな影響はありません。ただし、これらのアセットの**Created By** フィールドには、削除されたユーザーのメールアドレスではなく、"null" 値が表示されることに注意してください。
+
+その後、削除されたユーザーと同じメールアドレスを使用して新しいダッシュボード ユーザーが作成された場合、削除されたユーザーによって作成されたアセットはBraze によって新しいユーザーに再関連付けされません。新しいダッシュボード ユーザーは、クリーンなスレートで始まり、ダッシュボード内の既存のアセットの作成者としてはクレジットされません。
+
+## トラブルシューティング
+
+### ユーザーを追加しようとすると「メールはすでに使用されている」というエラーが表示される
+
+新しいユーザーを追加しようとしたときに、メールがすでに作成されているというエラーが表示されても、そのユーザーがユーザーリストで見つからない場合、そのユーザーは同じBrazeダッシュボードクラスタの別のインスタンス内に存在する可能性が高くなります。
+
+この新しいユーザーを作成するには、次のいずれかを実行します。
+
+1. 新しいインスタンスでユーザーを作成する前に、他のインスタンスからユーザーを削除します
+2. 別の電子メール文字列(`testing+01@braze.com` など)または別の電子メールエイリアスを使用してユーザーを作成します。 
+
+`testing+01@braze.com` を使用しているときに受信トレイにメッセージアクティベーションが届かない場合は、IT チームに、そのような種類のメールアドレスからのメッセージを受信できるかどうかを確認します。一部の管理者は、`+` で電子メールアドレスに送信されたメッセージをフィルタリングします。

@@ -23,17 +23,33 @@ Braze は、組織、お客様、お客様の消費者のデータプライバ�
 
 ![ISO認証グラフィック]({% image_buster /assets/img/schellman_iso27001_seal_grey_CMYK_300dpi_jpg.png %}){: height="25%" width="25%" style="border:0px;"}
 
-_Braze は、2018年12月18日付けで [[ISO 27001](https://www.iso.org/isoiec-27001-information-security.html)] の認証を取得し、2024年8月20日付けで更新しました。2027年12月15日まで有効です。_
+_Brazeは、2018年12月18日付で[ISO27001への](https://www.iso.org/standard/27001)適合証明書を取得しており、2025年8月29日付で更新した。2027年12月15日まで有効です。_
 
-Braze の認証状況を独自に確認する場合は、[[Schellman certificate directory](https://www.schellman.com/certificate-directory?certificateNumber=1504855-8)] または[[こちらの証明書]({{site.baseurl}}/assets/pdf/Braze_ISO_Cert.pdf)] をご確認ください。
+Braze の認証状況を独自に確認する場合は、[[Schellman certificate directory](https://www.schellman.com/certificate-directory?certificateNumber=1504855-9)] または[[こちらの証明書]({{site.baseurl}}/assets/pdf/Braze_ISO_Cert.pdf)] をご確認ください。
 
 ## SOC 2審査
 
-![SOC 2 検査グラフィック]({% image_buster /assets/img/SOC2.png %}){: height="25%" width="25%" style="border:0px;"}
+![SOC 2 試験グラフィック]({% image_buster /assets/img/SOC2.png %}){: height="25%" width="25%" style="border:0px;"}
 
-_最終審査日/期間: 2023年7月1日～2024年6月30日_
+_最終審査日/期間: 2024年7月1日から2025年6月30日まで_
 
-Braze は、_Security_および_Availability_についてのタイプ2 SOC 2検査を正常に完了し、独立したCPA企業[Schellman & Company, LLC](https://www.schellman.com/)によって実行されました。
+Brazeは、独立系公認会計士事務所[Schellman& Company, LLCが](https://www.schellman.com/)実施した_セキュリティと_ _可用性に関する_タイプ2のSOC 2審査を無事終了した。
+
+## TISAXアセスメント
+
+![TISAXのグラフィック。]({% image_buster /assets/img/tisax.png %}){: height="25%" width="25%" style="border:0px;"}
+
+Brazeは、最高水準の情報セキュリティとデータ保護の維持に努めており、TISAXアセスメントレベル3（AL3）の取得に成功している。これらの評価結果および対応するラベルの発行は、最高レベルの情報セキュリティおよびデータ保護の保証を維持するための当社の献身を反映したものである。現在のTISAX参加者は、以下の認証情報を使用して、ENX協会ポータルから以下の評価目的と場所に関する評価結果を確認することができる：
+
+- **会社名:**Braze
+- **スコープID：**SNCM4K
+- **アセスメントID：**AMH9TZ-1
+- **評価目標**\* EU-GDPR 条項によるデータ保護。28（「プロセッサー」）
+    - 特別カテゴリーの個人データによるデータ保護
+    - 高可用性
+    - 非常に高い可用性
+    - コンフィデンシャル
+    - 秘密厳守
 
 ## HIPAA
 
