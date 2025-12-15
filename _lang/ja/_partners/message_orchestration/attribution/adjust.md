@@ -43,7 +43,7 @@ Adjust.addGlobalPartnerParameter("braze_device_id", Braze.getInstance(getApplica
 
 <!--
 {% alert important %}
-Prior to February 2023, our Adjust attribution integration used the IDFV as the primary identifier to match iOS attribution data. Braze customers don't need to use Objective-C to fetch the Braze `device_id` and send it to Adjust upon installation as there will be no service disruption. 
+Prior to February 2023, our Adjust attribution integration used the Identifier for Vendor (IDFV) as the primary identifier to match iOS attribution data. Braze customers don't need to use Objective-C to fetch the Braze `device_id` and send it to Adjust upon installation because there is no service disruption. 
 {% endalert%}
 
 For those using the Swift SDK v5.7.0+, if you wish to continue using IDFV as the mutual identifier, you must ensure that the `useUUIDAsDeviceId` field is set to `false` so there is no disruption of the integration. 
@@ -51,7 +51,7 @@ For those using the Swift SDK v5.7.0+, if you wish to continue using IDFV as the
 If set to `true`, you must implement the iOS device ID mapping for Swift to pass the Braze `device_id` to Adjust upon app installation in order for Braze to match iOS attributions appropriately.
 --->
 
-{% tabs ローカル %}
+{% tabs local %}
 {% tab Objective-C %}
 
 iOSアプリがあれば、IDFVはAdjustによって収集され、Brazeに送信される。このIDは、Brazeで一意のデバイスIDにマッピングされる。
@@ -74,15 +74,15 @@ AdjustからBrazeにインストール後のイベントを送信する予定が
 
 Brazeで [**統合**] > [**テクノロジーパートナー**] に移動し、[**Adjust**] を選択します。 
 
-ここでは、REST エンドポイントが見つかり、Brazeデータインポートキーが生成されます。キーが生成されたら、新しいキーを作成するか、既存のキーを無効にできます。データインポートキーとRESTエンドポイントは、Adjustのダッシュボードでポストバックを設定する際に次のステップで使用される。<br><br>![Adjust テクノロジーページにある「インストールアトリビューションのデータインポート」ボックス。このボックスには、データインポートキーと REST エンドポイントが表示されます。]({% image_buster /assets/img/attribution/adjust.png %}){: style="max-width:90%;"}
+ここでは、REST エンドポイントが見つかり、Brazeデータインポートキーが生成されます。キーが生成されたら、新しいキーを作成するか、既存のキーを無効にできます。データインポートキーとRESTエンドポイントは、Adjustのダッシュボードでポストバックを設定する際に次のステップで使用される。<br><br>![Adjust テクノロジーページにある「インストールアトリビューションのデータインポート」ボックス。このボックスには、データインポートキーと REST エンドポイントが表示されている。]({% image_buster /assets/img/attribution/adjust.png %}){: style="max-width:90%;"}
 
 ### ステップ3:Adjust で Braze を設定する
 
 1. Adjust のダッシュボードで [**App Settings**]、[**Partner Setup**]、[**Add Partners**] の順に移動します。
 2. [**Braze (formerly Appboy)**] を選択し、データインポートキーと Braze REST エンドポイントを入力します。
-3. [**Save & Close**] をクリックします。
+3. **Save& Closeを**クリックする。
 
-### ステップ4:統合を確認する
+### ステップ 4: 統合を確認する
 
 Braze が Adjust からアトリビューションデータを受信すると、Braze の Adjust テクノロジーパートナーページのステータス接続インジケーターが [接続されていません] から [接続済み] に変わります。最後の成功したリクエストのタイムスタンプも含まれます。 
 
@@ -110,7 +110,7 @@ Brazeキャンペーンでクリックトラッキングリンクを使用する
 
 クリックトラッキング・リンクの調整を始めるには、[ドキュメントを](https://help.adjust.com/tracking/attribution/tracker-urls)参照すること。BrazeのキャンペーンにAdjustクリックトラッキングリンクを直接挿入することができる。Adjustは、[確率的アトリビューション手法を使って](https://www.adjust.com/blog/attribution-compatible-with-ios14/)、リンクをクリックしたユーザーをアトリビュートする。Brazeキャンペーンからのアトリビューションの精度を高めるために、Adjustトラッキングリンクにデバイス識別子を付加することをお勧めする。これにより、リンクをクリックしたユーザーを決定論的に属性付けします。
 
-{% tabs ローカル %}
+{% tabs local %}
 {% tab Android %}
 Androidの場合、Brazeを使用すると、顧客は[Google広告IDコレクション（GAID）]({{site.baseurl}}/developer_guide/platform_integration_guides/android/sdk_integration#google-advertising-id)にオプトインできます。GAID はまた、Adjust SDK 統合によってネイティブに収集されます。以下のリキッドロジックを利用することで、GAIDをAdjustクリックトラッキングリンクに含めることができる：
 {% raw %}
