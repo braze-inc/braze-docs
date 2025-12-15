@@ -91,9 +91,9 @@ For detailed steps to configure an agent that uses either of these customer enga
 
 ## If another Customer Engagement Platform
 
-Decisioning Studio can integrate with any customer engagement platform. However, this may require some custom engineering work, if Decisioning Studio cannot trigger communications directly.
+Decisioning Studio can integrate with any customer engagement platform. However, this may require some custom engineering work from your team, since Decisioning Studio cannot trigger communications directly.
 
-In this scenario, the agent delivers a "recommendation file." This file contains rows for each customer, with columns that indicate all of the personalized decisions for that customer.
+In this scenario, the agent will deliver a "recommendation file." This file contains rows for each customer, with columns that indicate all of the personalized decisions for that customer.
 
 For example, the following recommendation file might be used by a customer to optimize an email campaign:
 
