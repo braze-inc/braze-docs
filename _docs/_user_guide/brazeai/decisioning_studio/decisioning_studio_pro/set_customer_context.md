@@ -1,5 +1,5 @@
 ---
-page_order: 4.2
+page_order: 2.2
 nav_title: Set Customer Context
 article_title: Set Customer Context
 description: "Learn how to configure customer context for Decisioning Studio Pro agents, including audience definition and customer data."

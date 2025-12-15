@@ -1,5 +1,5 @@
 ---
-page_order: 4.3
+page_order: 2.3
 nav_title: Configure Orchestration
 article_title: Configure Orchestration
 description: "Learn how to configure orchestration for Decisioning Studio Pro agents to enable personalized communications."

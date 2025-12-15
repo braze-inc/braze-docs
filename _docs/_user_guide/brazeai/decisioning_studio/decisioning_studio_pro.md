@@ -1,5 +1,5 @@
 ---
-page_order: 4
+page_order: 2
 nav_title: Decisioning Studio Pro
 article_title: Setting up Decisioning Studio Pro agents
 description: "Learn how to set up Decisioning Studio Pro agents to make 1:1 AI decisions that maximize your business metrics."

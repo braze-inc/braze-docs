@@ -1,5 +1,5 @@
 ---
-page_order: 4.1
+page_order: 2.1
 nav_title: Design your agent
 article_title: Design your agent
 description: "Learn how to design your Decisioning Studio Pro agent with the AI Decisioning Services team."

@@ -1,5 +1,5 @@
 ---
-page_order: 4.4
+page_order: 2.4
 nav_title: Create the Feedback Loop
 article_title: Create the Feedback Loop
 description: "Learn how to create the feedback loop for Decisioning Studio Pro agents to enable self-learning."
