@@ -5,7 +5,7 @@ page_order: 4
 layout: dev_guide
 alias: /about_webhooks/
 guide_top_header: "Webhook"
-guide_top_text: "Webhook は、アプリケーションがリアルタイムでデータを共有するための一般的な通信方法です。今の時代、1つのスタンドアローン・アプリケーションですべてをこなせることはほとんどない。ほとんどの場合、特定のタスクを実行するために特化した多くの異なるアプリやシステムで作業しており、これらのアプリはすべて互いに通信できる必要がある。そこでウェブフックの出番だ。<br><br> ウェブフックとは、ある基準が満たされた後に、あるシステムから別のシステムへ自動送信されるメッセージのことである。Brazeでは、この基準は通常、カスタムイベントのトリガーとなる。<br><br>根本的に、Webhook は 2 つの個別システムがリアルタイムで送信されるデータに基づいて効果的なアクションを実行するための、イベントベースの方法です。そのメッセージには、特定のタスクをいつ、どのように実行するかを受信側システムに伝える指示が含まれています。そのため、Webhook を使用すると、データおよびプログラム機能へのよりダイナミックで柔軟なアクセスが可能になり、プロセスを合理化するカスタマージャーニーを設定できます。<br><br>**Webhookの使用可否はBrazeパッケージに依存する。使い始める場合は、アカウントマネージャーまたはカスタマーサクセスマネージャーにお問い合わせください。"
+guide_top_text: "Webhook は、アプリケーションがリアルタイムでデータを共有するための一般的な通信方法です。今日、1つのスタンドアローン・アプリケーションですべてをこなせることはほとんどない。ほとんどの場合、特定のタスクを実行するために特化した多くの異なるアプリやシステムで作業しており、これらのアプリはすべて互いに通信できる必要がある。そこでウェブフックの出番だ。<br><br> ウェブフックとは、ある基準が満たされた後に、あるシステムから別のシステムへ自動送信されるメッセージのことである。Brazeでは、この基準は通常、カスタムイベントのトリガーとなる。<br><br>根本的に、Webhook は 2 つの個別システムがリアルタイムで送信されるデータに基づいて効果的なアクションを実行するための、イベントベースの方法です。そのメッセージには、特定のタスクをいつ、どのように実行するかを受信側システムに伝える指示が含まれています。そのため、Webhook を使用すると、データおよびプログラム機能へのよりダイナミックで柔軟なアクセスが可能になり、プロセスを合理化するカスタマージャーニーを設定できます。<br><br>**Webhookの有無はBrazeパッケージによって異なる。まずはアカウントマネージャーまたはカスタマーサクセスマネージャーにご連絡を。"
 description: "このランディングページは Webhook のホームページです。ここでは、ウェブフックの作成、ウェブフックテンプレートの作成、Braze-to-Brazeウェブフックに関する記事を見ることができる。"
 channel:
   - webhooks
@@ -29,7 +29,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/check-square-broken.svg
 ---
 
-## [![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/understanding-webhooks){: style="float:right;width:120px;border:0;" class="noimgborder"} ユースケース
+## [![Braze ラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/understanding-webhooks){: style="float:right;width:120px;border:0;" class="noimgborder"} ユースケース
 
 Webhook は、複数のシステムを接続するための優れた方法です。結局、Webhook はアプリの通信方法です。ウェブフックが特に役立つ一般的なシナリオをいくつか紹介しよう：
 
@@ -57,7 +57,7 @@ Webhookを構成する要素を以下に示します。
 | Request body | Webhookのこの部分には、エンドポイントに伝える情報が含まれている。リクエスト本文には、JSON キーと値のペア、または生のテキストを使用できます。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-![HTTPメソッド、HTTP URL、リクエストボディを持つWebhookの例。]({% image_buster /assets/img_archive/webhook_anatomy.png %})
+![HTTPメソッド、HTTP URL、リクエスト・ボディを持つWebhookの例。]({% image_buster /assets/img_archive/webhook_anatomy.png %})
 
 ### HTTPメソッド {#methods}
 

@@ -201,7 +201,7 @@ search_rank: 7
 
 - カスタムイベントの場合、ペイロードには、イベントに関連付けられている任意の[カスタムイベントプロパティ]({{site.baseurl}}/user_guide/data/custom_data/custom_events#custom-event-properties) も入力されます。
 - `ad_id`、`ad_id_type`、および`ad_tracking_enabled` の場合、ネイティブSDK を介してiOS IDFA およびAndroid Google アドID を明示的に収集する必要があります。[iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift)、[Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id) の詳細については、リンク先を参照してください。
-- Kafka を使用して [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) データを取り込む場合は、`ad_id` 送信用のフィーチャーフリッパーを有効にするように、カスタマーサクセスマネージャーまたはアカウントマネージャーに依頼してください。
+- Kafkaを使用して[Currents]({{site.baseurl}}/user_guide/data/braze_currents/)データをインジェストしている場合は、カスタマーサクセスマネージャーまたはアカウントマネージャーに連絡して、`ad_id` を送信するための機能フリッパーをイネーブルメントしてもらう。
 {% endapi %}
 
 {% api %}
@@ -434,7 +434,7 @@ search_rank: 7
 #### プロパティの詳細
 
 - `ad_id`、`ad_id_type`、および`ad_tracking_enabled` の場合、ネイティブSDK を介してiOS IDFA およびAndroid Google アドID を明示的に収集する必要があります。[iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift)、[Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id) の詳細については、リンク先を参照してください。
-- Kafka を使用して [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) データを取り込む場合は、`ad_id` 送信用のフィーチャーフリッパーを有効にするように、カスタマーサクセスマネージャーまたはアカウントマネージャーに依頼してください。
+- Kafkaを使用して[Currents]({{site.baseurl}}/user_guide/data/braze_currents/)データをインジェストしている場合は、カスタマーサクセスマネージャーまたはアカウントマネージャーに連絡して、`ad_id` を送信するための機能フリッパーをイネーブルメントしてもらう。
 {% endapi %}
 
 {% api %}
@@ -574,7 +574,7 @@ search_rank: 7
 
 - 購入イベントの場合、ペイロードには、イベントに関連付けられている[購入イベントプロパティ]({{site.baseurl}}/user_guide/data/custom_data/purchase_events/#purchase-properties) も入力されます。
 - `ad_id`、`ad_id_type`、および`ad_tracking_enabled` の場合、ネイティブSDK を介してiOS IDFA およびAndroid Google アドID を明示的に収集する必要があります。[iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift)、[Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id) の詳細については、リンク先を参照してください。
-- Kafka を使用して [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) データを取り込む場合は、`ad_id` 送信用のフィーチャーフリッパーを有効にするように、カスタマーサクセスマネージャーまたはアカウントマネージャーに依頼してください。
+- Kafkaを使用して[Currents]({{site.baseurl}}/user_guide/data/braze_currents/)データをインジェストしている場合は、カスタマーサクセスマネージャーまたはアカウントマネージャーに連絡して、`ad_id` を送信するための機能フリッパーをイネーブルメントしてもらう。
 {% endapi %}
 
 {% api %}
@@ -1268,6 +1268,8 @@ search_rank: 7
 {% endtab %}
 {% endtabs %}
 
+{% endapi %}
+
 #### プロパティの詳細
 
 - `push_token_foreground_push_disabled` フィールドは、プッシュトークンがフォアグラウンド・プッシュとバックグラウンド・プッシュのどちらを受け取ることができるかを示す。
@@ -1282,4 +1284,3 @@ search_rank: 7
   - トークンがあるユーザーから別のユーザーに移動した場合、旧ユーザーの "remove "イベントと新ユーザーの "add "イベントがインジェストされる。
   - 同じユーザーまたはデバイスが新しいトークンを生成した場合、古いトークンの "remove "イベントと新しいトークンの "add "イベントがインジェストされる。
   - トークンが（アンインストールや無効なトークンなどの理由で）削除される場合、トークンの "remove "イベントが1つインジェストされる。
-{% endapi %}

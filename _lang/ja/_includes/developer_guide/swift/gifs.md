@@ -2,13 +2,13 @@
 
 ## カスタムイメージライブラリの統合
 
-### ステップ1:SDWebImageの統合
+### ステップ 1: SDOAImageの統合
 
-[SDWebImageリポジトリ](https://github.com/SDWebImage/SDWebImage)をXcodeプロジェクトに統合します。
+[SDOBImageリポジトリ](https://github.com/SDWebImage/SDWebImage)をXコードプロジェクトに統合します。
 
-### ステップ2: 新しいSwift ファイルを作成する
+### ステップ 2:新しいSwift ファイルを作成する
 
-Xcode プロジェクトで、`SDWebImageGIFViewProvider.swift` という名前の新しいファイルを作成し、以下をインポートします。
+Xコードプロジェクトで、`SDWebImageGIFViewProvider.swift`という名前の新しいファイルを作成し、以下をインポートします。
 
 ```swift
 import UIKit
@@ -18,7 +18,7 @@ import SDWebImage
 
 ### ステップ 3:`GIFViewProvider` を追加する
 
-次に、サンプルSDWebImage [`GIFViewProvider`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/gifviewprovider/) を追加します。ファイルは次のようになります。
+次に、サンプルSDOAImage [`GIFViewProvider`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/gifviewprovider/) を追加します。ファイルは次のようになります。
 
 ```swift
 import UIKit
@@ -48,7 +48,7 @@ extension GIFViewProvider {
 }
 ```
 
-### ステップ4:変更する `AppDelegate.swift`
+### ステップ 4: 変更する `AppDelegate.swift`
 
 プロジェクトの`AppDelegate.swift` で、`BrazeUI` コンポーネントに`GIFViewProvider` を使用してGIF サポートを追加します。ファイルは次のようになります。
 

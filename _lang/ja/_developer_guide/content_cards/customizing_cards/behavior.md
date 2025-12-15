@@ -25,19 +25,19 @@ Braze では、キーと値のペアを使用して、コンテンツカード�
 {% endalert %}
 
 {% tabs %}
-{% tab Android %}
+{% tab web %}
+
+キーと値のペアは、`extras`として<a href="https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.card.html" target="_blank">`card`</a>オブジェクトに格納されます 。これらは、カードと一緒にデータを送信し、アプリケーションでさらに処理するために使用します。`card.extras`を呼び出して、これらの値にアクセスします。
+
+{% endtab %}
+{% tab android %}
 
 キーと値のペアは、`extras`として<a href="https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/#-2118252107%2FProperties%2F-1725759721" target="_blank">`card`</a>オブジェクトに格納されます 。これらは、カードと一緒にデータを送信し、アプリケーションでさらに処理するために使用します。<a href="https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/extras.html" target="_blank">`card.extras`</a>を呼び出して、これらの値にアクセスします。
 
 {% endtab %}
-{% tab iOS %}
+{% tab swift %}
 
 キーと値のペアは、`extras`として<a href="https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard" target="_blank">`card`</a>オブジェクトに格納されます 。これらは、カードと一緒にデータを送信し、アプリケーションでさらに処理するために使用します。<a href="https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/data-swift.struct/extras" target="_blank">`card.extras`</a>を呼び出して、これらの値にアクセスします。
-
-{% endtab %}
-{% tab Web %}
-
-キーと値のペアは、`extras`として<a href="https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.card.html" target="_blank">`card`</a>オブジェクトに格納されます 。これらは、カードと一緒にデータを送信し、アプリケーションでさらに処理するために使用します。`card.extras`を呼び出して、これらの値にアクセスします。
 
 {% endtab %}
 {% endtabs %}
@@ -58,7 +58,7 @@ Braze では、キーと値のペアを使用して、コンテンツカード�
 
 [API トリガキャンペーン]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/) は、カードの値が外部要因に依存してユーザに表示するコンテンツを決定する場合に使用するのに適した戦略です。たとえば、補足的なコンテンツを表示するには、Liquid を使用してキーと値のペアを設定します。なお、`class_type`はセットアップ時に知っておく必要があります。
 
-![補足コンテンツカードのユースケースのキーと値のペア。この例では、"tile_id"、"tile_deeplink"、および"tile_title"などのカードのさまざまな側面が、Liquid.]({% image_buster /assets/img/cc_implementation/supplementary_content.png %})を使用して設定されます。{: style="max-width:60%;"}
+![補足コンテンツカードのユースケースのキーと値のペア。この例では、"tile_id", "tile_deeplink", や"tile_title" のようなカードのさまざまな側面が、Liquid を使って設定される。]({% image_buster /assets/img/cc_implementation/supplementary_content.png %}){: style="max-width:60%;"}
 
 ## インタラクティブコンテンツとしてのコンテンツカード
 ![画面左下に50%のプロモーションを示すインタラクティブなコンテンツカードが表示されている。クリックすると、カートにプロモーションが適用されます。]({% image_buster /assets/img/cc_implementation/discount2.png %}){: style="border:0;"}{: style="float:right;max-width:45%;border:0;margin-left:15px;"} 
@@ -73,7 +73,7 @@ Braze では、キーと値のペアを使用して、コンテンツカード�
 
 ## コンテンツカードバッジ
 
-![番号7]({% image_buster /assets/img/cc_implementation/ios-unread-badge.png %})を表示する赤いバッジを持つSwiftyという名前のBrazeサンプルアプリを示すiPhoneのホーム画面{: style="max-width:35%;float:right;margin-left:15px;border:none;"}
+![Brazeのサンプルアプリ「Swifty」が表示されたiPhoneのホーム画面には、赤いバッジで数字の「7」が表示されている。]({% image_buster /assets/img/cc_implementation/ios-unread-badge.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
 
 バッジは小さなアイコンで、ユーザーの注意を引くのに最適です。バッジを使って新しいコンテンツカードの内容をユーザーに知らせることで、ユーザーをアプリに呼び戻し、セッションを増やすことができます。
 
@@ -82,7 +82,18 @@ Braze では、キーと値のペアを使用して、コンテンツカード�
 コンテンツカードの未読数をバッジとしてアプリのアイコンに表示できます。 
 
 {% tabs %}
-{% tab Android %}
+{% tab web %}
+
+未読カードの数は、以下を呼び出していつでもリクエストできます。
+
+```javascript
+braze.getCachedContentCards().getUnviewedCardCount();
+```
+
+この情報を使って、未読コンテンツカードの数を示すバッジを表示することができます。詳細については、<a href="https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.contentcards.html" target="_blank">SDK リファレンスドキュメント</a>を参照してください。
+
+{% endtab %}
+{% tab android %}
 
 未読カードの数は、以下を呼び出していつでもリクエストできます。
 
@@ -107,7 +118,7 @@ Braze.getInstance(context).contentCardUnviewedCount
 
 
 {% endtab %}
-{% tab iOS %}
+{% tab swift %}
 
 次のサンプルでは、`braze.contentCards` を使用して未読コンテンツカードの数をリクエストして表示しています。アプリが閉じられ、ユーザーのセッションが終了した後、このコードはカード・カウントをリクエストし、`viewed` プロパティに基づいてカードの数をフィルタリングする。
 
@@ -146,17 +157,6 @@ for (BRZContentCardRaw *card in AppDelegate.braze.contentCards.cards) {
 
 {% endsubtab %}
 {% endsubtabs %}
-{% endtab %}
-{% tab Web %}
-
-未読カードの数は、以下を呼び出していつでもリクエストできます。
-
-```javascript
-braze.getCachedContentCards().getUnviewedCardCount();
-```
-
-この情報を使って、未読コンテンツカードの数を示すバッジを表示することができます。詳細については、<a href="https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.contentcards.html" target="_blank">SDK リファレンスドキュメント</a>を参照してください。
-
 {% endtab %}
 {% endtabs %}
 

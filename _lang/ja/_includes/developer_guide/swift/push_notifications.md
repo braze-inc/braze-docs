@@ -4,23 +4,23 @@
 
 ## プッシュ通知の設定
 
-### ステップ1:APN トークンをアップロードする
+### ステップ 1: APN トークンをアップロードする
 
 {% multi_lang_include developer_guide/swift/apns_token.md %}
 
-### ステップ2: プッシュ機能を有効にする
+### ステップ2:プッシュ機能を有効にする
 
-Xcode で、メインアプリのターゲットの**署名 & 機能**セクションに移動しプッシュ通知機能を追加します。
+Xcodeで、メインアプリターゲットの**Signing& Capabilities**セクションに行き、プッシュ通知機能を追加する。
 
-![Xcode プロジェクトの「署名 & 機能」セクション]({% image_buster /assets/img_archive/Enable_push_capabilities.png %})
+![Xcodeプロジェクトの「Signing& Capabilities」セクション。]({% image_buster /assets/img_archive/Enable_push_capabilities.png %})
 
-### ステップ 3:プッシュハンドリングの設定
+### ステップ 3:プッシュ処理の設定
 
-Swift SDK を使用して、Braze から受信したリモート通知の処理を自動化できます。これはプッシュ通知を処理する最も簡単な方法であり、推奨される処理方法です。
+Swift SDKを使用して、Brazeから受信したリモート通知の処理をオートメーション化できる。これはプッシュ通知を処理する最もシンプルな方法であり、推奨される処理方法である。
 
 {% tabs local %}
-{% tab 自動 %}
-#### ステップ 3.1:push プロパティーでの自動化の有効化
+{% tab Automatic %}
+#### ステップ 3.1:プッシュ・プロパティでオートメーションをイネーブルメントにする
 
 自動プッシュ統合を有効にするには、`push` 設定の`automation` プロパティを`true` に設定する：
 
@@ -56,7 +56,7 @@ SDK によって実行されるオートメーションステップは、コー�
 アプリケーションが SDK を初期化する前に追加の設定を必要とする場合は、[遅延初期化]({{site.baseurl}}/developer_guide/sdk_initalization/?sdktab=swift)に関するドキュメントのページを参照してください。
 {% endalert %}
 
-#### ステップ 3.2:個々の設定の上書き(オプション)
+#### ステップ 3.2:個々の設定を上書きする（オプション）
 
 よりきめ細かいコントロールのために、各オートメーションステップを個別に有効または無効にすることができます
 
@@ -84,7 +84,7 @@ configuration.push.automation.requestAuthorizationAtLaunch = NO;
 使用可能なすべてのオプションについては [`Braze.Configuration.Push.Automation`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/push-swift.class/automation-swift.class) を、オートメーション動作の詳細については [`automation`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/push-swift.class/automation-swift.property) を参照してください。
 {% endtab %}
 
-{% tab マニュアル %}
+{% tab Manual %}
 {% alert note %}
 アプリに固有の追加の動作をプッシュ通知に依存している場合でも、手動プッシュ通知統合ではなく自動プッシュ統合を使用できる場合があります。この [`subscribeToUpdates(_:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/notifications-swift.class/subscribetoupdates(_:))メソッドは、Brazeが処理したリモート通知を通知する方法を提供する。
 {% endalert %}
@@ -182,7 +182,7 @@ AppDelegate.braze?.notifications.register(deviceToken: deviceToken)
 
 {% subtabs %}
 {% subtab Swift %}
-ブレーズのデフォルトのプッシュ処理を有効にするには、アプリの`application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` メソッドに次のコードを追加します。
+Brazeデフォルトのプッシュ処理を有効にするには、アプリの`application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` メソッドに以下のコードを追加する：
 
 ```swift
 if let braze = AppDelegate.braze, braze.notifications.handleBackgroundNotification(
@@ -208,7 +208,7 @@ completionHandler()
 {% endsubtab %}
 
 {% subtab OBJECTIVE-C %}
-ブレーズのデフォルトのプッシュ処理を有効にするには、以下のコードをアプリケーションの`application:didReceiveRemoteNotification:fetchCompletionHandler:` メソッドに追加します。
+Brazeデフォルトのプッシュ処理を有効にするには、アプリケーションの`application:didReceiveRemoteNotification:fetchCompletionHandler:` メソッドに以下のコードを追加する：
 
 ```objc
 BOOL processedByBraze = AppDelegate.braze != nil && [AppDelegate.braze.notifications handleBackgroundNotificationWithUserInfo:userInfo
@@ -364,43 +364,43 @@ BRZCancellable *cancellable = [notifications subscribeToUpdatesWithPayloadTypes:
 
 プッシュプライマーキャンペーンでは、アプリのデバイスでプッシュ通知を有効にするようにユーザーに促します。これは、[ノーコードプッシュプライマー]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/)を使用して、SDK のカスタマイズなしで行うことができます。
 
-## 動的APN ゲートウェイ管理
+## ダイナミックなAPNゲートウェイ管理
 
-Dynamic Apple Push Notification Service (APNs) ゲートウェイ管理により、正しいAPNs 環境を自動的に検出することで、iOS プッシュ通知の信頼性と効率が向上します。これまでは、プッシュ通知用にAPNs 環境(開発またはプロダクション) を手動で選択していましたが、ゲートウェイ設定の誤り、配信の失敗、`BadDeviceToken` エラーが発生することがありました。
+ダイナミックなAppleプッシュ通知サービス（APNs）ゲートウェイ管理は、正しいAPNs環境を自動的に検出することで、iOSプッシュ通知の信頼性と効率を高める。以前は、プッシュ通知に使用するAPN環境（開発環境または本番環境）を手動で選択していたため、ゲートウェイの設定が間違っていたり、配信エラーや`BadDeviceToken` 。
 
-動的APN ゲートウェイ管理では、次のようになります。
+ダイナミックなAPNゲートウェイ管理で、あなたは手に入れることができる：
 
-- **信頼性の向上:**通知は常に正しいAPN環境に配信されるため、配信の失敗が減少します。
-- **簡易設定:**APNs ゲートウェイ設定を手動で管理する必要がなくなりました。
-- **エラー耐性:**無効または欠落したゲートウェイ値は正常に処理され、中断されないサービスを提供します。
+- **信頼性が向上した：**通知は常に正しいAPN環境に配信されるため、配信の失敗を減らすことができる。
+- **コンフィギュレーションの簡素化：**APNのゲートウェイ設定を手動で管理する必要がなくなった。
+- **エラーに強い：**無効または欠落したゲートウェイ値は優雅に処理され、中断のないサービスを提供する。
 
 ### 前提条件
 
-Braze は、次のSDK バージョン要件を備えたiOS でのプッシュ通知のダイナミックAPNs ゲートウェイ管理をサポートしています。
+Brazeは、以下のSDKバージョン要件で、iOSのプッシュ通知のダイナミックなAPNゲートウェイ管理をサポートする：
 
 {% sdk_min_versions swift:10.0.0 %}
 
-### CDI の仕組み
+### 仕組み
 
-iOS アプリがBraze Swift SDK と統合すると、[`aps-environment`](https://developer.apple.com/documentation/bundleresources/entitlements/aps-environment) を含むデバイス関連のデータがBraze SDK API に送信されます(利用可能な場合)。`apns_gateway` の値は、アプリが開発(`dev`) またはプロダクション(`prod`) APNs 環境を使用しているかどうかを示します。
+iOSアプリがBraze Swift SDKと統合すると、デバイス関連データを送信する。 [`aps-environment`](https://developer.apple.com/documentation/bundleresources/entitlements/aps-environment)をBraze SDK APIに送信する。`apns_gateway` の値は、アプリが開発環境(`dev`)と本番環境(`prod`)のどちらのAPNを使用しているかを示す。
 
-また、Braze は、各デバイスについて報告されたゲートウェイ値も格納します。新しい有効なゲートウェイ値を受信すると、Braze は保存された値を自動的に更新します。
+Brazeは、各デバイスのレポートされたゲートウェイ値も保存する。新しい有効なゲートウェイ値を受信すると、Brazeは自動的に保存されている値を更新する。
 
-Braze がプッシュ通知を送信すると、次のようになります。
+Brazeがプッシュ通知を送るとき：
 
-- デバイスに有効なゲートウェイ値(dev またはprod) が格納されている場合、Braze はそれを使用して正しいAPN 環境を判断します。
-- ゲートウェイ値が保存されていない場合、Braze はデフォルトで**App Settings** ページで設定されたAPNs 環境に設定されます。
+- デバイスに有効なゲートウェイ値（devまたはprod）が保存されている場合、Brazeはそれを使用して正しいAPN環境を決定する。
+- ゲートウェイ値が保存されていない場合、Brazeは**アプリ設定**ページで設定されたAPN環境をデフォルトとする。
 
 ### よくある質問
 
-#### なぜこの機能が導入されたのか?
+#### なぜこの機能が導入されたのか？
 
-動的APN ゲートウェイ管理では、正しい環境が自動的に選択されます。以前は、APNs ゲートウェイを手動で設定する必要がありました。これにより、`BadDeviceToken` エラー、トークンの無効化、および潜在的なAPNs レートリミットの問題が発生する可能性がありました。
+ダイナミックなAPNゲートウェイ管理により、適切な環境が自動的に選択される。以前は、APNsゲートウェイを手動で設定する必要があり、`BadDeviceToken` エラー、トークンの無効化、APNsレート制限の問題の可能性があった。
 
-#### この影響は、どのように配信パフォーマンスを押し上げますか?
+#### これがプッシュ配信のパフォーマンスにどのような影響を与えるのか？
 
-この機能は、適切なAPN環境に常にプッシュトークンをルーティングし、誤設定されたゲートウェイに起因する障害を回避することで、配信レートを向上させます。
+この機能は、プッシュトークンを常に正しいAPN環境にルーティングすることで、ゲートウェイの設定ミスによる失敗を回避し、配信率を向上させる。
 
-#### この機能を無効にできますか?
+#### この機能を無効にできるか？
 
-Dynamic APNs Gateway Management はデフォルトでオンになっており、信頼性の向上を提供します。手動ゲートウェイ選択が必要な特定のユースケースがある場合は、[Braze Support]({{site.baseurl}}/user_guide/administrative/access_braze/support/) までお問い合わせください。
+ダイナミックなAPNゲートウェイ管理はデフォルトでオンになっており、信頼性を向上させる。ゲートウェイの手動選択が必要な特定のユースケースがある場合は、[Brazeサポートに]({{site.baseurl}}/user_guide/administrative/access_braze/support/)連絡すること。

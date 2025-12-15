@@ -18,7 +18,7 @@ channel:
 
 プッシュトークンが再割り当てされると、ユーザープロファイルの**プッシュ通知の変更ログ**に変更が反映されます。これはユーザープロファイルの [**エンゲージメント**] タブで確認できます。
 
-![コンタクト設定 "の "Push Changelog"。]({% image_buster /assets/img/push_changelog_faq.png %}){: style="max-width:50%;"}
+![コンタクト設定」セクションの「プッシュ・チャンネルログ」。]({% image_buster /assets/img/push_changelog_faq.png %}){: style="max-width:50%;"}
 
 ### オプトイン済みのユーザーにプッシュトークンがないのはなぜですか?
 

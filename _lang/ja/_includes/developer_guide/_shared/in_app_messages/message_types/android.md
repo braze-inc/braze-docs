@@ -1,6 +1,6 @@
 
 {% tab android %}
-Braze には、メッセージ、"画像 s、[フォントアウェゾーム](https://fontawesome.com/icons?d=gallery&p=2)アイコン、アクションs、分析、カラースキームなど、カスタマイズ可能な複数のデフォルト アプリ内メッセージタイプがあります。
+Braze には、メッセージ、"画像 s、[フォントアウェゾーム](https://fontawesome.com/icons?d=gallery&p=2)アイコン、アクションs、分析、カラースキームなど、カスタマイズ可能な複数のデフォルト アプリ内メッセージタイプが用意されています。
 
 これらの基本的な動作と特性は、[`IInAppMessage`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-i-in-app-message/index.html) インターフェイスによって定義されます。[`InAppMessageBase`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-base/index.html) と呼ばれるサブクラスで定義されます。`IInAppMessage` には、サブインターフェイス、[`IInAppMessageImmersive`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-i-in-app-message-immersive/index.html) も含まれます。これにより、アプリにclose、click-アクション、および分析 [ボタン](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-message-button/index.html)
 
@@ -14,7 +14,7 @@ Braze には、メッセージ、"画像 s、[フォントアウェゾーム](ht
 
 `slideup` アプリ内メッセージオブジェクトは [`InAppMessageBase`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-base/index.html) を拡張します。
 
-![携帯電話の画面の下部からスライドして表示されるアプリ内メッセージに「人間は複雑だ」と表示されています。カスタムエンゲージメントは、そうであってはなりません。バックグラウンドには、同じアプリ内メッセージが Web ページの下端に表示されています。]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
+![携帯電話の画面の下部からスライドして表示されるアプリ内メッセージに「人間は複雑だ」と表示されています。カスタム・エンゲージメントはそうあるべきでない。バックグラウンドでは、ウェブページの右下隅に表示されるのと同じアプリ内メッセージです。]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
 
 {% endsubtab %}
 {% subtab Modal %}
@@ -22,7 +22,7 @@ Braze には、メッセージ、"画像 s、[フォントアウェゾーム](ht
 
 このメッセージタイプは、[`InAppMessageImmersiveBase`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-immersive-base/index.html) のサブクラスです。これは、`IInAppMessageImmersive` を実装する抽象クラスで、ローカルに生成されたアプリ内メッセージs にカスタム機能を追加するオプションを提供します。
 
-![携帯電話の画面中央のモーダルアプリ内メッセージに「人間は複雑だ」と表示されています。カスタム・エンゲージメントはそうあるべきでない。バックグラウンドには、同じアプリ内メッセージが Web ページの中央に表示されています。]({% image_buster /assets/img/modal-behavior.gif %}){: style="border:0px;"}
+![携帯電話の画面中央のモーダルアプリ内メッセージに「人間は複雑だ」と表示されています。カスタム・エンゲージメントはそうあるべきでない。バックグラウンドには、ホームページの中央に表示されるアプリ内メッセージと同じものがあります。]({% image_buster /assets/img/modal-behavior.gif %}){: style="border:0px;"}
 
 {% endsubtab %}
 {% subtab Full Screen %}
@@ -30,7 +30,7 @@ Braze には、メッセージ、"画像 s、[フォントアウェゾーム](ht
 
 このメッセージタイプは、[`InAppMessageImmersiveBase`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-immersive-base/index.html) を拡張し、ローカルで生成されたアプリ内メッセージs にカスタム機能を追加するオプションを提供します。
 
-![携帯電話の画面全体に表示されるアプリ内メッセージには、「人間は複雑だ。カスタムエンゲージメントは、そうであってはなりません。バックグラウンドには、同じアプリ内メッセージが Web ページの中央に大きく表示されています。]({% image_buster /assets/img_archive/In-App_Full.png %})
+![携帯電話の画面全体に表示されるアプリ内メッセージには、「人間は複雑だ。カスタム・エンゲージメントはそうあるべきでない。バックグラウンドでは、主にホームページの中央に同じアプリ内メッセージが表示されます。]({% image_buster /assets/img_archive/In-App_Full.png %})
 
 {% endsubtab %}
 {% subtab Custom HTML %}
@@ -40,7 +40,7 @@ Braze には、メッセージ、"画像 s、[フォントアウェゾーム](ht
 
 Android アプリ内メッセージ では、JavaScript `brazeBridge` インターフェイスを使用してHTML内からBraze Android SDKのメソッドを呼び出すことができます。詳しくは、<a href="{{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages#javascript-bridge/">JavaScript bridge</a> を参照してください。
 
-![コンテンツとインタラクティブボタンのカルーセルを持つHTML アプリ内メッセージ。]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
+![内容のカルーセルとインタラクティブボタンを備えたHTML アプリ内メッセージ。]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
 
 {% alert important %}
 現在、iOS と Android のプラットフォームでは、iFrame でのカスタム HTML アプリ内メッセージの表示はサポートしていません。

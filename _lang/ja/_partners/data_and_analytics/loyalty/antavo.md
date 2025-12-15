@@ -15,14 +15,14 @@ _この統合は Alpaco によって管理されます。_
 
 ## 統合について
 
-AntavoとBrazeの統合により、ロイヤルティプログラム関連データを利用してパーソナライズされたキャンペーンを構築し、顧客体験を向上させることができる。Antavo では、2つのプラットフォーム間のロイヤルティデータ同期 (Antavo から Braze への一方向データ同期のみ) がサポートされています。この統合は、`external_id` Brazeフィールドをサポートしており、Antavoはこのフィールドを使ってロイヤルティ会員IDを同期している。
+AntavoとBrazeの統合により、ロイヤルティプログラム関連データを利用してパーソナライズされたキャンペーンを構築し、顧客体験を向上させることができる。Antavo では、2つのプラットフォーム間のロイヤルティデータ同期 (Antavo から Braze への一方向データ同期のみ) がサポートされています。この統合は、`external_id` Brazeフィールドをサポートしており、Antavo はこのフィールドを使ってロイヤルティ会員 ID を同期しています。
 
 ## 前提条件
 
 | 必要条件          | 説明                                                                                                                                                                   |
 | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------  |
 | Antavo アカウント       | このパートナーシップを利用するには、Brazeとの統合を有効にした[Antavo](https://antavo.com/)アカウントが必要である。                                                |
-| Braze REST API キー   | 次の権限がある Braze REST API キー。`users.track`、`events.list`、`events.data_series`、`events.get`。<br><br>これは、Brazeダッシュボードの**「設定」**>「**APIキー**」から作成できる。  |
+| Braze REST API キー   | 次の権限がある Braze REST API キー。`users.track`、`events.list`、`events.data_series`、`events.get`。<br><br>これは、Braze ダッシュボードの [**設定**] > [**API キー**] で作成できます。  |
 | Braze REST エンドポイント  | [あなたのRESTエンドポイントURL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints)。エンドポイントは、インスタンスのBraze URLに依存する。                |
 | Brazeアプリの識別子 | アプリ識別子キー。<br><br>Braze ダッシュボードでこのキーを確認するには、[**設定**] > [**API キー**] に進み、[**識別**] セクションを確認します。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -43,7 +43,7 @@ Antavo で [**Modules**] > [**Braze**] に移動し、[**Configure**] をクリ�
 
 ![「Instance URL」、「API Token」、「App Identifier」が表示されている Antavo の「Connect Braze」画面。]({% image_buster /assets/img/antavo/connect_braze.png %})
 
-### ステップ2: フィールドマッピングを設定する
+### ステップ2:フィールドマッピングを設定する
 
 接続が確立されると、Antavoの「**Sync Fields」**ページに自動的にリダイレクトされ、2つのシステム間のフィールド同期を設定する。  このページへは、**モジュール**＞**Brazeから**いつでもアクセスできる。
 
@@ -59,15 +59,15 @@ Antavoでフィールドマッピングを設定する：
 
 {:start="4"}
 4\.フィールドの組み合わせを追加するには、ステップ1〜3を繰り返す。
-5\.同期されるデータのリストからフィールドを削除するには、行の終わりにある <i class="fa-solid fa-rectangle-xmark" title="Delete"></i> をクリックします。
-6\.[**保存**] をクリックします。
+5. 同期されるデータのリストからフィールドを削除するには、行の終わりにある <i class="fa-solid fa-rectangle-xmark" title="Delete"></i> をクリックします。
+6. [**保存**] をクリックします。
 
 Antavoで設定されたフィールドのいずれかの値が変更されると、その単一の値の同期がトリガーされるだけでなく、フィールドマッピングに追加されたすべてのフィールドがリクエストに含まれる。
 
 ![Antavo の「Sync Fields」ページ。]({% image_buster /assets/img/antavo/data_field_mapping.png %})
 
 {% alert important %}
-データポイントの消費を最小限に抑えるため、Braze内でアクションを起こすフィールドのみをマッピングすることを推奨する。
+データポイントの使用量を最小限に抑えるため、Braze内でアクションを起こすフィールドのみをマッピングすることを推奨する。
 {% endalert %}
 
 #### サポートされるデータ型

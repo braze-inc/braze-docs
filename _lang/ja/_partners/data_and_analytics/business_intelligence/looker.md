@@ -8,11 +8,11 @@ search_tag: Partner
 
 ---
 
-# [![Braze ラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/looker-integration-with-braze/){: style="float:right;width:120px;border:0;" class="noimgborder"}Looker
+# [![Braze ラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/looker-integration-with-braze/){: style="float:right;width:120px;border:0;" class="noimgborder"} Looker
 
 > ビジネスインテリジェンスとビッグデータ分析のプラットフォームである [Looker](https://looker.com/) は、リアルタイムのビジネス分析の探索、分析、共有をシームレスに行えるようにしています。
 
-Braze と Looker の統合により、Braze をご利用のお客様は REST API を介してファーストパーティの [Looker Blocks](#looker-blocks) と [Looker Actions](#looker-actions) ユーザーフラグを利用できます。これらのフラグを立てたユーザーをセグメントに追加し、将来のBrazeキャンペーンやCanvasの[ターゲットにする](#segment-users)ことができる。Braze と Looker を使用するには、[Braze Currents を使用してデータウェアハウス]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/)に Braze データを送信してから、Braze の Looker Blocks を使用して Looker で Braze データを迅速にモデル化して視覚化することを推奨します。
+Braze と Looker の統合により、Braze をご利用のお客様は REST API を介してファーストパーティの [Looker Blocks](#looker-blocks) と [Looker Actions](#looker-actions) ユーザーフラグを利用できます。これらのフラグを立てたユーザーをセグメントに追加し、将来のBrazeキャンペーンやCanvasの[ターゲットにする](#segment-users)ことができる。Braze と Looker を使用するには、[Braze Currents を使用してデータウェアハウス]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/)に Braze データを送信してから、Braze の Looker Blocks を使用して Looker で Braze データをスピーディーにモデル化および視覚化することをお勧めします。
 
 ## 前提条件
 
@@ -72,7 +72,7 @@ Braze REST API キーと REST エンドポイントを使用して、Braze Looke
 
 ![Looker Brazeの設定ページ。Braze API キーと Braze REST API エンドポイントのフィールドがある。]({% image_buster /assets/img/braze-looker-action.png %})
 
-#### ステップ2: Looker Developをセットアップする
+#### ステップ2:Looker Developをセットアップする
 
 Looker Develop 内で、適切なビューを選択する。ディメンションタグに `braze_id` を追加し、変更をコミットします。
 この`braze_id` タグは、どのフィールドがユニークキーであるかを決定するために使用される。
@@ -143,9 +143,9 @@ Authorization: Bearer [API_KEY]
 
 ### Braze でユーザーをセグメント化する {#segment-users}
 
-Braze で、これらのフラグが設定されたユーザーのセグメントを作成するには、[**エンゲージメント**] の下の [**セグメント**] に移動し、セグメントに名前を付け、フィルターとして [**Looker_Export**] を選択します。次に、"includes value "オプションを使い、Lookerで割り当てたカスタム属性フラグを指定する。
+Brazeで、これらのフラグを付けたユーザーのセグメントを作成するには、**エンゲージメントの**下の**セグメントに**移動し、セグメントに名前を付け、フィルターとして **Looker_Export**をフィルターとして選択する。次に、"includes value "オプションを使い、Lookerで割り当てたカスタム属性フラグを指定する。
 
-![Braze セグメントビルダーで、フィルター [looker_export] に [includes_value] と [Looker] が設定されている。]({% image_buster /assets/img/braze_segments.png %})
+![Brazeセグメントビルダーでは、フィルター"looker_export" 、"includes_value" 、"Looker "に設定されている。]({% image_buster /assets/img/braze_segments.png %})
 
 保存すると、キャンバスやキャンペーンの作成時にターゲットユーザーのステップでこのSegmentを参照できます。
 

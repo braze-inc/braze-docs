@@ -10,7 +10,7 @@ description: "この記事では、「スケジュールされたメッセージ
 ---
 {% api %}
 # スケジュールされたメッセージの作成
-{% apimethod postcore_endpoint|https://www.braze.com/docs/core_endpoints %}。
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}。
 /messages/schedule/create
 {% endapimethod %}
 

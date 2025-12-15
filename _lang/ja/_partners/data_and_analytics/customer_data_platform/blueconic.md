@@ -53,24 +53,24 @@ BlueConicとBraze間の接続を設定するには、接続を認証するため
 ![]({% image_buster /assets/img/blueconic/braze2.png %}){: style="max-width:80%;"}<br><br>
 3. S3 の設定と認証のセクションで、次の認証情報を入力します。Amazon Web Services（S3）のアクセスキーID、シークレットアクセスキー、S3バケット。これらは、BrazeとAmazon S3の統合を設定するときに設定した[のと同じ認証情報]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/amazon_s3/)である必要がある。設定を保存する。<br>![]({% image_buster /assets/img/blueconic/braze3.png %}){: style="max-width:80%;"}
 
-### ステップ3:インポートゴールまたはエクスポートゴールを作成する（インポートマッピング）
+### ステップ 3:インポートゴールまたはエクスポートゴールを作成する（インポートマッピング）
 
 認証が完了したら、少なくとも1つのインポートまたはエクスポートゴールを作成し、接続をオンにし、接続をスケジュールまたは実行する必要がある。
 
 {% tabs %}
-{% tab インポート %}
+{% tab Import %}
 
 1. 左パネルで [**Import data into BlueConic**] を選択し、Braze データ設定ページを開きます。<br><br>
-2. Brazeのデータの場所を選択する。ここで、Brazeのオーディエンスを選択することで、インポートするデータの場所をBlueConicに伝えることができる。<br>![「Blue Conic Test Users」に設定されている BlueConic Braze オーディエンス。]({% image_buster /assets/img/blueconic/braze4.png %}){: style="max-width:80%;"}<br><br>
-3. 次に、BrazeとBlueConicの間で識別子をマッピングする。<br>![Braze のフィールド「external ID」が、BlueConic の「Braze external ID」フィールドにマッピングするように設定されている。]({% image_buster /assets/img/blueconic/braze5.png %}){: style="max-width:80%;"}<br><br> 2つのシステム間で顧客データをリンクさせるには、1つ以上の顧客識別子を入力します。<br>既存のBlueConicプロファイルに一致しないデータについて、BlueConicが新しいプロファイルを作成することを許可するには、**「作成を許可...」**チェックボックスを使用する。<br><br>
+2. Brazeのデータの場所を選択する。ここで、Brazeのオーディエンスを選択することで、インポートするデータの場所をBlueConicに伝えることができる。<br>![BlueConicテストユーザー」として設定されたBlueConic Brazeオーディエンス。]({% image_buster /assets/img/blueconic/braze4.png %}){: style="max-width:80%;"}<br><br>
+3. 次に、BrazeとBlueConicの間で識別子をマッピングする。<br>![Brazeのフィールド「External ID」は、BlueConicの「Braze external ID」フィールドに対応するように設定されている。]({% image_buster /assets/img/blueconic/braze5.png %}){: style="max-width:80%;"}<br><br> 2つのシステム間で顧客データをリンクさせるには、1つ以上の顧客識別子を入力します。<br>既存のBlueConicプロファイルに一致しないデータについて、BlueConicが新しいプロファイルを作成することを許可するには、**「作成を許可...」**チェックボックスを使用する。<br><br>
 4. 次に、エクスポートするBlueConicのデータフィールドをBrazeのフィールドに合わせる。ドロップダウンフィールドを使用して、左側のBlueConicプロファイル識別子またはプロファイルプロパティのいずれかを選択し、対応するBrazeプロファイル識別子を選択する。次に、ドロップダウンメニューを使用して、インポートしたコンテンツを既存の値に追加する方法を指定する：追加、合計、プロファイル・プロパティが空の場合のみ設定、またはクリアに設定（Brazeフィールドが空の場合）。<br>![]({% image_buster /assets/img/blueconic/braze6.png %}){: style="max-width:80%;"}<br><br>**Add Mapping**ボタンを使って、必要に応じてマッピング行を追加作成する。**Add remaining fields**オプションで複数のマッピング行を追加できる。BlueConicは残りのBrazeフィールドを検出し、BlueConicプロファイル・プロパティと照合する。インポートのマージ戦略（set、add、sum、set if empty、clear）を設定し、BlueConicプロファイル・プロパティの名前にカスタム接頭辞を指定できる。<br><br>
 5. 最後に、**Run the connectionを**選択して接続を開始する。接続のスケジューリングと実行については、[BlueConicを](https://support.blueconic.com/hc/en-us/articles/205957522-Scheduling-Connections)ご覧いただきたい。
 {% endtab %}
-{% tab エクスポート %}
+{% tab Export %}
 
 1. 左パネルで [**Export data to Braze**] を選択し、BlueConic から Braze へのデータエクスポートを設定します。<br><br>
-2. エクスポートするBlueConicセグメントを選択する。このセグメントで、Braze で一致する識別子を持つプロファイルのみがエクスポートされます。<br>![2万件のプロファイルからなる BlueConic セグメント。]({% image_buster /assets/img/blueconic/braze8.png %}){: style="max-width:80%;"}<br><br>
-3. 次に、BlueConicプロファイルとBrazeフィールド間の識別子をリンクさせる。オプションで、一致するレコードがない場合、BlueConicに新しいレコードを作成させることもできる。<br>![Braze のフィールド「external ID」が、BlueConic の「Braze external ID」フィールドにマッピングするように設定されている。]({% image_buster /assets/img/blueconic/braze7.png %}){: style="max-width:80%;"}<br><br>
+2. エクスポートするBlueConicセグメントを選択する。このセグメントで、Braze で一致する識別子を持つプロファイルのみがエクスポートされます。<br>![BlueConicの2万プロファイルのセグメンテーション。]({% image_buster /assets/img/blueconic/braze8.png %}){: style="max-width:80%;"}<br><br>
+3. 次に、BlueConicプロファイルとBrazeフィールド間の識別子をリンクさせる。オプションで、一致するレコードがない場合、BlueConicに新しいレコードを作成させることもできる。<br>![Brazeのフィールド「External ID」は、BlueConicの「Braze external ID」フィールドに対応するように設定されている。]({% image_buster /assets/img/blueconic/braze7.png %}){: style="max-width:80%;"}<br><br>
 4. 次に、エクスポートするBlueConicのデータフィールドをBrazeのフィールドに合わせる。BlueConic アイコンのドロップダウンメニューを使用して、エクスポートする[情報](https://support.blueconic.com/hc/en-us/articles/4405501836955-Braze-Connection#creating-export-goals)のタイプを選択します。利用可能な情報には、プロファイルプロパティ、BlueConicプロファイル識別子、関連セグメント、閲覧されたすべてのインタラクション、パーミッションレベル、静的テキスト値が含まれる。<br>![]({% image_buster /assets/img/blueconic/braze6.png %}){: style="max-width:80%;"}<br><br>
 5. 最後に [**Run the connection**] をクリックして接続を開始します。接続のスケジューリングと実行については、[BlueConicを](https://support.blueconic.com/hc/en-us/articles/205957522-Scheduling-Connections)ご覧いただきたい。
 {% endtab %}

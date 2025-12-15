@@ -183,12 +183,12 @@ SparkPostとSendGridの両方が、電子メールのキーと値のペアをサ
 メールがバウンスされた場合、SparkPost または SendGrid にキーと値のペアは配信されません。
 {% endalert %}
 
-![Brazeのメッセージ作成画面の送信情報タブ。]({% image_buster /assets/img_archive/keyvalue_email.png %})
+![Brazeのメールメッセージ作成画面の [送信情報] タブ。]({% image_buster /assets/img_archive/keyvalue_email.png %})
 
 ## コンテンツカードによって促進された
 
 コンテンツカードにキーと値のペアを追加するには、Braze のメッセージ作成画面の [**設定**] タブに移動し、[**新しいペアを追加**] を選択します。
 
-![コンテンツカードにキーと値のペアを追加する。]({% image_buster /assets/img_archive/kvp_content_cards.png %}){: style="max-width:70%;"}
+![コンテンツ・カードにキーと値のペアを追加する]({% image_buster /assets/img_archive/kvp_content_cards.png %}){: style="max-width:70%;"}
 
 

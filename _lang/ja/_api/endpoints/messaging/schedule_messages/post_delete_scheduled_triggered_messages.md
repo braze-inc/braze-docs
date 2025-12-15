@@ -10,13 +10,13 @@ description: "この記事では、スケジュールされたAPIトリガーキ
 ---
 {% api %}
 # スケジュールされた API トリガーキャンペーンを削除
-{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
+{% apimethod postcore_endpoint|https://www.braze.com/docs/core_endpoints %}
 /campaigns/trigger/schedule/delete
 {% endapimethod %}
 
 > このエンドポイントを使用して、以前にAPIトリガーでスケジューリングしたCanvasメッセージを送信前にキャンセルする。
 
-スケジュールされたメッセージやトリガーが送信予定時刻の直前または送信中に削除された場合、最善の努力で更新されるため、最後の瞬間の削除は、ターゲットユーザー全員、一部、または誰にも適用されない可能性があります。
+スケジュールされたメッセージやトリガーが、送信される予定だった時間の間近またはその間に削除された場合、最善の努力で更新されるため、Brazeは、対象となるユーザー全員、一部、または全員に、直前の削除を適用する可能性がある。
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#7d34037f-4bf2-4fab-bc9c-c972988051a7 {% endapiref %}
 

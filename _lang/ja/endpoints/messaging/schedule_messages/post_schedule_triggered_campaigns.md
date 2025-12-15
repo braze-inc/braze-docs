@@ -10,7 +10,7 @@ description: "この記事では、「API トリガーキャンペーンのス�
 ---
 {% api %}
 # API トリガー・キャンペーンのスケジュール
-{% apimethod postcore_endpoint|https://www.braze.com/docs/core_endpoints %}。
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}。
 /campaigns/trigger/schedule/create
 {% endapimethod %}
 

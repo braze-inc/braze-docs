@@ -1,5 +1,5 @@
 ---
-nav_title: "POST:グローバルコントロールグループ別にユーザープロファイルをエクスポートする"
+nav_title: "POST:世界コントロールグループ別輸出ユーザープロファイル"
 article_title: "POST:グローバルコントロールグループ別にユーザープロファイルをエクスポートする"
 search_tag: Endpoint
 page_order: 6
@@ -18,6 +18,8 @@ description: "この記事では、「グローバルコントロールグルー
 
 ユーザーデータは、新しい行で区切られたユーザーのJSONオブジェクトの複数のファイルとしてエクスポートされます(1行に1つのJSONオブジェクトなど)。ファイルが生成されるたびに、グローバルコントロールグループの全ユーザーが含まれます。Brazeは、ユーザーがいつグローバルコントロールグループに追加され、削除されたかの履歴を保存しない。
 
+グローバルコントロールグループのSegment 識別子を確認するには、[API 識別子タイプ]({{site.baseurl}}/api/identifier_types/?tab=segments#segment-identifier)を参照してください。
+
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aa3d8b90-d984-48f0-9287-57aa30469de2 {% endapiref %}
 
 ## 前提条件
@@ -30,9 +32,11 @@ description: "この記事では、「グローバルコントロールグルー
 
 ## 認証情報ベースの応答の詳細
 
-[S3][1] または [Azure][2] の認証情報を Braze に追加している場合、各ファイルは `segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip` のようなキー形式の ZIP ファイルとしてバケットにアップロードされます。Azure を使用している場合は、Braze の Azure パートナーの概要ページで、[**これをデフォルトのデータエクスポート先にする**] チェックボックスがオンになっていることを確認します。通常、処理を最適化するため、5,000 人のユーザーにつき 1 ファイルを作成します。大きなワークスペース内で小さなセグメントをエクスポートすると、複数のファイルが生成される場合があります。その後、ファイルを抽出し、必要に応じてすべての`json` ファイルを1 つのファイルに連結できます。`output_format` に `gzip` を指定すると、ファイル拡張子は `.gz` ではなく `.zip` になります。
+[S3]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/amazon_s3)または[Azure]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/microsoft_azure_blob_storage_for_currents/)認証情報sを、それぞれの**Technology Partners**ページからBrazeするように追加した場合、それぞれのファイルは`segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip`のような鍵形式でZIPファイルとしてバケットにアップロードされます。Azure を使用している場合は、Braze の Azure パートナーの概要ページで、[**これをデフォルトのデータエクスポート先にする**] チェックボックスがオンになっていることを確認します。
 
-{% details ZIP のエクスポートパスの内訳 %}
+一般的に、5000 ユーザー s ごとに1 つのファイルを作成し、プロセッシングを最適化します。大きなワークスペース内で小さなセグメントをエクスポートすると、複数のファイルが生成される場合があります。その後、ファイルを抽出し、必要に応じてすべての`json` ファイルを1 つのファイルに連結できます。`output_format` の`gzip` を指定すると、ファイル拡張子は`.zip` ではなく`.gz` になります。
+
+{% details Export pathing breakdown for ZIP %}
 **ZIP 形式:**
 `bucket-name/segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip`
 
@@ -52,11 +56,15 @@ description: "この記事では、「グローバルコントロールグルー
 
 {% enddetails %}
 
-このエンドポイントを使用してエクスポートに独自のバケットポリシーを適用する場合は、独自の S3 または Azure 資格情報を設定することを強くお勧めします。クラウドストレージの認証情報が提供されていない場合、リクエストに対するレスポンスは、すべてのユーザーファイルを含むZIPをダウンロードできるURLを提供する。URL は、エクスポートの準備ができた後でのみ有効な場所になります。
+このエンドポイントを使用してエクスポートで独自のバケットポリシーを適用する場合は、独自のS3 またはAzure 認証情報s を設定することを強くお勧めします(**Partner Integrations** > **Technology Partners** > partner page)。
+
+![Azure のテクノロジーパートナーページ。Amazon S3 のタブ付き。]({% image_buster /assets/img/technology_partners_page.png %})
+
+クラウドストレージの認証情報が提供されていない場合、リクエストに対するレスポンスは、すべてのユーザーファイルを含むZIPをダウンロードできるURLを提供する。URL は、エクスポートの準備ができた後でのみ有効な場所になります。
 
 クラウドストレージの認証情報を提供しない場合、このエンドポイントからエクスポートできるデータ量には制限があることに注意しよう。エクスポートするフィールドやユーザーの個数によっては、大きすぎるとファイル転送が失敗することがあります。ベストプラクティスは、`fields_to_export` を使ってエクスポートするフィールドを指定し、転送サイズを低く抑えるために必要なフィールドだけを指定することである。ファイルの生成でエラーが発生する場合は、ランダムなバケツ番号に基づいてユーザーベースをより多くのセグメントに分割することを検討する（たとえば、ランダムなバケツ番号が1,000未満または1,000～2,000のセグメントを作成する）。
 
-どちらのシナリオでも、オプションで`callback_endpoint` を指定して、エクスポートの準備が整ったときに通知することができます。`callback_endpoint` が指定されている場合は、ダウンロードの準備ができたときに指定されたアドレスに POST リクエストを送信します。投稿の本文は"success":true になります。クラウドストレージの認証情報をBrazeに追加していない場合、投稿本文にはさらに、ダウンロードURLを値として持つ属性`url` 。
+どちらのシナリオでも、オプションで`callback_endpoint` を指定して、エクスポートの準備が整ったときに通知することができます。`callback_endpoint` が指定されている場合、ダウン読み込むの準備ができたときに、指定された住所に投稿リクエストを行います。投稿の本文は`"success":true` です。クラウドストレージ認証情報s をBraze に追加していない場合、投稿の本文には属性`url` が追加され、ダウン読み込むのURL が値になります。
 
 ユーザー群s を大きくすると、エクスポート時間が長くなります。例えば、2,000 万人のユーザーを持つアプリの場合、1 時間以上かかることもあります。
 
@@ -76,7 +84,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 {% alert warning %}
-個々のカスタム属性をエクスポートすることはできない。しかし、fields_to_export配列にcustom_attributesを含めることで、すべてのカスタム属性をエクスポートすることができる（例えば、`['first_name', 'email', 'custom_attributes']` ）。
+個々のカスタム属性をエクスポートすることはできない。ただし、fields_to_export 配列にcustom_attributes を含めることで、すべてのカスタム属性s をエクスポートできます(たとえば、`['first_name', 'email', 'custom_attributes']`)。
 {% endalert %}
 
 ## リクエストパラメーター
@@ -138,23 +146,21 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/export/globa
 ## 応答
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
-    "object_prefix": (required, string) the filename prefix that will be used for the JSON file produced by this export, for example,'bb8e2a91-c4aa-478b-b3f2-a4ee91731ad1-1464728599',
+    "object_prefix": (required, string) the filename prefix that is used for the JSON file produced by this export, for example,'bb8e2a91-c4aa-478b-b3f2-a4ee91731ad1-1464728599',
     "url" : (optional, string) the URL where the segment export data can be downloaded if you do not have your own S3 credentials
 }
 ```
 
-URL が使用可能になった後、数時間のみ有効になります。そのため、独自のS3 認証情報をBraze に追加することを強くお勧めします。
+URL が使用可能になった後、数時間しか有効になりません。そのため、独自のS3 認証情報をBraze に追加することを強くお勧めします。
 
 ### サンプルユーザーのエクスポートファイルアウトプット
 
-ユーザーエクスポートオブジェクト (できるだけ少ないデータを含めます。オブジェクトにフィールドがない場合は、null または空であると見なされます):
+ユーザエクスポートオブジェクト(可能な限り最小のデータを含みます。フィールドがオブジェクトから欠落している場合は、ヌルまたは空であると見なされます):
 
 {% tabs %}
-{% tab すべてのフィールド %}
+{% tab All fields %}
 
 ```json
 {
@@ -230,7 +236,7 @@ URL が使用可能になった後、数時間のみ有効になります。そ�
 ```
 
 {% endtab %}
-{% tab 出力例 %}
+{% tab Sample output %}
 
 ```json
 {
@@ -310,8 +316,5 @@ URL が使用可能になった後、数時間のみ有効になります。そ�
 
 {% endtab %}
 {% endtabs %}
-
-[1]: {{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/amazon_s3
-[2]: {{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/microsoft_azure_blob_storage_for_currents/
 
 {% endapi %}

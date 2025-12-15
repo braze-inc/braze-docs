@@ -21,7 +21,7 @@ toc_headers: h2
 1. [**メッセージング**] > [**キャンバス**] に進みます。
 2. [**キャンバスを作成** > [**キャンバステンプレートを使用**] を選択します。
 3. 使用するテンプレートの [**Braze テンプレート**] タブを参照します。テンプレートの名前を選択すると、テンプレートをプレビューできます。
-4. 使用するテンプレートの [**テンプレートを適用**] を選択します。<br><br>!["Canvas テンプレート s" page 開封は" s" tab で、最近使用したテンプレートと選択可能なBraze テンプレートの一覧を表示します。]({% image_buster /assets/img_archive/apply_template.png %}){: style="max-width:80%;"}
+4. 使用するテンプレートの [**テンプレートを適用**] を選択します。<br><br>!["Canvas テンプレート s" page 開封 to the " Braze テンプレート &s" tab と表示され、最近使用したテンプレートと選択可能なBraze テンプレートを表示します。]({% image_buster /assets/img_archive/apply_template.png %}){: style="max-width:80%;"}
 
 ## eコマーステンプレート
 
@@ -34,7 +34,7 @@ toc_headers: h2
 
 製品を閲覧したが、カートへの追加や注文を行わなかったユーザーにエンゲージするには、**閲覧の放棄**テンプレートを使用します。
 
-![アプリが"Abandoned Browse"拡張された"Entry Rules"を含むキャンバステンプレート。]({% image_buster /assets/img_archive/abandoned_browse.png %})
+![アプリはlied & quot;Abandoned Browse" Canvas テンプレートはexpanded & quot;Entry Rules"です。]({% image_buster /assets/img_archive/abandoned_browse.png %})
 
 ### 設定
 
@@ -57,7 +57,7 @@ toc_headers: h2
     - 入力コントロール
         - キャンバスの完全な期間が完了した後で、ユーザーはこのキャンバスに再エントリできます。
     - 終了条件 
-        - `ecommerce.cart_updated`、`ecommerce.checkout_started`、または `ecommerce.order_placed` を実行する<br><br>![キャンバスの入力コントロールs と終了基準。]({% image_buster /assets/img/ecommerce/abandoned_browse_entry_exit.png %})<br><br> 
+        - `ecommerce.cart_updated`、`ecommerce.checkout_started`、または `ecommerce.order_placed` を実行する<br><br>![キャンバスのエントリーコントロールs と終了基準。]({% image_buster /assets/img/ecommerce/abandoned_browse_entry_exit.png %})<br><br> 
 - 送信設定 
     - 登録済みまたはオプトイン済みのユーザー 
 - 遅延ステップ
@@ -97,7 +97,7 @@ toc_headers: h2
 
 カートに製品を追加したが、購入手続きまたは注文に進まなかった顧客からの潜在的な売上の損失に対応するには、**カート放棄**テンプレートを使用します。 
 
-![アプリが"Abandoned Cart"拡張された"Entry Rules"を含むキャンバステンプレート。]({% image_buster /assets/img_archive/abandoned_cart.png %})
+![アプリはlied & quot;Abandoned Cart" Canvas テンプレート はexpanded & quot;Entry Rules"です。]({% image_buster /assets/img_archive/abandoned_cart.png %})
 
 ### 設定
 
@@ -120,13 +120,25 @@ toc_headers: h2
     - 入力コントロール
         - ユーザーのキャンバスへのエントリが即時に可能になります。
     - 終了条件 
-        - `ecommerce.cart_updated`、`ecommerce.checkout_started`、または `ecommerce.order_placed` を実行する<br><br>![キャンバスの入力コントロールs と終了基準。]({% image_buster /assets/img/ecommerce/abandoned_cart_entry_exit.png %})<br><br> 
+        - `ecommerce.cart_updated`、`ecommerce.checkout_started`、または `ecommerce.order_placed` を実行する<br><br>![キャンバスのエントリーコントロールs と終了基準。]({% image_buster /assets/img/ecommerce/abandoned_cart_entry_exit.png %})<br><br> 
 - 送信設定 
     - 登録済みまたはオプトイン済みのユーザー 
 - 遅延ステップ
      - 4時間遅延
 - メッセージステップ 
     - Liquid のテンプレート作成の例を使用して、メールテンプレートと HTML ブロックを確認し、あらかじめ用意されているテンプレートでメッセージに製品を追加します。独自のメールテンプレートを使用する場合は、次のセクションに示すように、[液体変数](#message-personalization) を参照することもできます。
+
+
+### 放棄カート or カート放棄再エントリロジックの動作
+
+ユーザーがチェックアウト処理を開始すると、そのカートは`checkout_started` としてマークされます。その時点以降、同じカートIDを持つカート更新sは、放棄カート or カート放棄 ユーザーの行程に再び入るユーザーにはなりません。
+
+1. ユーザーがアイテムをカートに追加すると、キャンバスに入ります。
+2. 項目を追加または更新するたびに、キャンバスに再入力されます。これにより、カートデータとメッセージングが最新の状態に保たれます。
+3. ユーザーがチェックアウト処理を開始すると、カートは`checkout_started` とタグされ、キャンバスを終了します。
+4. 同じカートIDを使用する将来のカート更新は、このカートがすでにチェックアウトタグeに移動しているため、再エントリをトリガーしません。
+
+ユーザーがチェックアウトユーザーの行程に移動すると、代わりに[放棄されたチェックアウトキャンバス](#abandoned-checkout)がターゲットになります。これは、購買行程でさらにsをユーザーするように設計されています。
 
 ### メール向けのカート放棄の製品パーソナライゼーション {#abandoned-cart-checkout}
 
@@ -164,7 +176,7 @@ Shopify を使用する場合は、カタログ名を追加してバリアント
 
 #### HTML カート URL
 
-ユーザーをカートに戻す場合は、メタデータオブジェクトの下に次のような階層化イベントプロパティを追加できます。
+ユーザーをカートに戻すには、次のようにメタデータオブジェクトの下にネストされたイベントプロパティを追加します。
 
 {% raw %}
 ```liquid
@@ -184,7 +196,7 @@ Shopifyを使用する場合は、次のLiquidテンプレートを使用して�
 
 **購入手続き放棄**テンプレートを使用して、購入手続きプロセスを開始したが発注前に離脱した顧客をターゲットにします。 
 
-![アプリが"放棄されたCheckout"拡張された"Entry Rules"を含むキャンバステンプレート。]({% image_buster /assets/img_archive/abandoned_checkout.png %})
+![アプリはlied & quot;Abandoned Checkout" Canvas テンプレートはexpanded & quot;Entry Rules"です。]({% image_buster /assets/img_archive/abandoned_checkout.png %})
 
 ### 設定
 
@@ -208,7 +220,7 @@ Shopifyを使用する場合は、次のLiquidテンプレートを使用して�
     - 入力コントロール
         - ユーザーのキャンバスへのエントリが即時に可能になります。
         - 終了条件 
-            - `ecommerce.order_placed` イベントを実行します<br><br>![キャンバスの入力コントロールs と終了基準。]({% image_buster /assets/img/ecommerce/abandoned_checkout_entry_exit.png %})<br><br>
+            - `ecommerce.order_placed` イベントを実行します<br><br>![キャンバスのエントリーコントロールs と終了基準。]({% image_buster /assets/img/ecommerce/abandoned_checkout_entry_exit.png %})<br><br>
 - 送信設定 
     - 登録済みまたはオプトイン済みのユーザー 
 - 遅延ステップ
@@ -257,7 +269,7 @@ Shopifyを使用する場合は、次のLiquidテンプレートを使用して�
 
 **注文確認&フィードバック 調査**テンプレートを使用して、注文の成功を確認し、顧客がアクションを満たすようにします。
 
-![アプリは"Order confirm"Canvas テンプレートは、expanded "Entry Rules"です。]({% image_buster /assets/img_archive/order_confirmation_feedback.png %})
+![アプリは"Order confirm"Canvas テンプレートは"Entry Rules"と展開されています。]({% image_buster /assets/img_archive/order_confirmation_feedback.png %})
 
 ### 設定
 
@@ -281,7 +293,7 @@ Shopifyを使用する場合は、次のLiquidテンプレートを使用して�
     - 入力コントロール
         - ユーザーのキャンバスへのエントリが即時に可能になります。
     - 終了条件 
-        - 該当しない<br><br>![キャンバスの追加フィルターsとエントリ コントロールs。]({% image_buster /assets/img/ecommerce/feedback_entry_exit.png %})<br><br>
+        - 該当しない<br><br>![キャンバスの追加フィルターs およびエントリ コントロールs。]({% image_buster /assets/img/ecommerce/feedback_entry_exit.png %})<br><br>
 - 送信設定 
     - 登録済みまたはオプトイン済みのユーザー 
 - メッセージステップ 
@@ -349,9 +361,11 @@ e コマースイベントは、[推奨イベント]({{site.baseurl}}/recommende
 
 ### eコマースのフィルター
 
-**Ecommerce Source** および**Total Revenue** などのeCommerce フィルタを使用して、セグメンテータ内の**Ecommerce** セクションに移動して、ユーザをeCommerce フィルタでセグメント化します。
+**Ecommerce Source** および**Total Revenue** などのeCommerce フィルタを使用して、セグメンテータ内の**Ecommerce** セクションに移動して、ユーザをeCommerce フィルタでセグメント化します。 
 
-![セグメントフィルターは"Ecommerce"フィルター sでドロップダウンします。]({% image_buster /assets/img_archive/ecommerce_filters.png %}){: style="max-width:80%"}
+eコマースフィルターsとその定義の一覧については、[セグメントフィルターs]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/)を参照し、"eCommerce"検索カテゴリを選択してください。
+
+![セグメントフィルターは"Ecommerce"フィルター sでドロップダウンします。]({% image_buster /assets/img_archive/ecommerce_filters.png %}){: style="max-width:50%"}
 
 {% alert important %}
 購入イベントは最終的に非推奨になり、[eCommerce 推奨イベント]({{site.baseurl}}/user_guide/data/custom_data/recommended_events/) に置き換えられます。この置き換えが行われると、セグメントフィルターでは、購入動作でデータが入力されることがなくなります。購入イベントの完全なリストについては、[購入イベントの記録]({{site.baseurl}}/user_guide/data/custom_data/purchase_events/#logging-purchase-events)を参照してください。
