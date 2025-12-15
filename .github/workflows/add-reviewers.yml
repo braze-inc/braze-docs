@@ -97,7 +97,15 @@ jobs:
               'act'];
 
             const escapeRegex = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-            const containsKeyword = keywords.some(keyword => new RegExp(`\\b${escapeRegex(keyword)}\\b`, 'i').test(diff));
+            const containsKeyword = keywords.some(keyword => {
+              // If the keyword contains a space or hyphen, do a simple case-insensitive substring match
+              if (/\s|-/.test(keyword)) {
+                return diff.includes(keyword.toLowerCase());
+              } else {
+                // Single word: use word boundaries
+                return new RegExp(`\\b${escapeRegex(keyword)}\\b`, 'i').test(diff);
+              }
+            });
             
             if (containsKeyword) {
               console.log('Found privacy/legal/GDPR keyword in diff - adding legal team');
