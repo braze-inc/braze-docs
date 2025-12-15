@@ -16,6 +16,8 @@ description: "この記事では、Snowflakeのデータ共有に関するよく
 以下のシナリオでは、同じ地域のデータ共有を使用する：
 - Snowflake アカウントは US-EAST-1 (AWS) にあり、Braze ダッシュボードのリージョンは米国内にある。
 - Snowflake アカウントは EU-CENTRAL-1 にあり、Braze ダッシュボードのリージョンは EU 内にある。
+- SnowflakeリージョンはAP-Southeast-2（AWS）にあり、ダッシュボードリージョンはオーストラリアにある。
+- SnowflakeのリージョンはAP-Southeast-3（AWS）にあり、ダッシュボードのリージョンはインドネシアにある。
 
 それ以外の場合はクロスリージョンのデータ共有を使用します。 
 
