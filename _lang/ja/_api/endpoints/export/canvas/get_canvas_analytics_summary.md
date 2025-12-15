@@ -1,5 +1,5 @@
 ---
-nav_title: "取得:エクスポートキャンバスデータサマリー分析"
+nav_title: "取得:キャンバスデータのサマリー分析をエクスポート"
 article_title: "取得:エクスポートキャンバスデータサマリー分析"
 search_tag: Endpoint
 page_order: 4
@@ -50,8 +50,6 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/data_summ
 ## 応答
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "data": {
     "name": (string) the Canvas name,
