@@ -16,7 +16,7 @@ description: "この記事では、「プロダクト ID のエクスポート�
 
 > 製品IDのページ分割されたリストを返すには、このエンドポイントを使用する。
 
-{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#dff4ed40-81f5-451d-9d44-accc0e932285{% エンドパイア%}
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#dff4ed40-81f5-451d-9d44-accc0e932285{% endapiref %}
 
 ## 前提条件
 
