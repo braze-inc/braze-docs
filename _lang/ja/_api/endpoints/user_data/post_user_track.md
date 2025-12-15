@@ -10,7 +10,7 @@ description: "この記事では、「ユーザーを追跡」Braze エンドポ
 ---
 {% api %}
 # ユーザーを追跡
-{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}。
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /users/track
 {% endapimethod %}
 

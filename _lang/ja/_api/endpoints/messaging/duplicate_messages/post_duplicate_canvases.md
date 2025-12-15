@@ -10,7 +10,7 @@ description: "この記事では、「キャンバスの複製」エンドポイ
 
 {% api %}
 # API を使用したキャンバスの複製
-{% apimethod postcore_endpoint|https://www.braze.com/docs/core_endpoints %}。
+{% apimethod postcore_endpoint|https://www.braze.com/docs/core_endpoints %}
 /canvas/duplicate
 {% endapimethod %}
 

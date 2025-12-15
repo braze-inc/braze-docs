@@ -10,7 +10,7 @@ description: "この記事では、「API トリガー配信を使用してキ�
 ---
 {% api %}
 # API トリガー配信を使用したCanvas メッセージの送信
-{% apimethod postcore_endpoint|https://www.braze.com/docs/core_endpoints %}。
+{% apimethod postcore_endpoint|https://www.braze.com/docs/core_endpoints %}
 /canvas/trigger/send
 {% endapimethod %}
 
