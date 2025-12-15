@@ -10,7 +10,7 @@ description: "この記事では、「ユーザー同期追跡」Braze エンド
 ---
 {% api %}
 # ユーザーを追跡する（同期）
-{% apimethod postcore_endpoint|https://www.braze.com/docs/core_endpoints %}。
+{% apimethod postcore_endpoint|https://www.braze.com/docs/core_endpoints %}
 /ユーザー/トラッキング/同期
 {% endapimethod %}
 

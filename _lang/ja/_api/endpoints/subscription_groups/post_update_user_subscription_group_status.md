@@ -9,7 +9,7 @@ description: "この記事では、「ユーザーのサブスクリプション
 ---
 {% api %}
 # ユーザーのサブスクリプショングループステータスの更新
-{% apimethod postcore_endpoint|https://www.braze.com/docs/core_endpoints %}。
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /subscription/status/set
 {% endapimethod %}
 

@@ -10,7 +10,7 @@ description: "この記事では、「スケジュールされた API トリガ�
 ---
 {% api %}
 # スケジュールされた API トリガーキャンバスを削除
-{% apimethod postcore_endpoint|https://www.braze.com/docs/core_endpoints %}。
+{% apimethod postcore_endpoint|https://www.braze.com/docs/core_endpoints %}
 /canvas/trigger/schedule/delete
 {% endapimethod %}
 
