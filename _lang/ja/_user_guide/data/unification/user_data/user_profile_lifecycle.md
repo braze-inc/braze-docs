@@ -80,7 +80,7 @@ Braze`external_id` 以外の識別子でユーザーを参照するには、ユ�
 
 エイリアスは、[ユーザーデータエンドポイントを]({{site.baseurl}}/developer_guide/rest_api/user_data/#new-user-alias-endpoint)使用するか、SDKを通して新しい名前を渡すことによって、設定後に与えられたラベルの新しい名前で更新することができる。これにより、そのユーザーデータをエクスポートするときに、ユーザーエイリアスが表示されます。
 
-![同じユーザーエイリアスのラベルを持つが、エイリアス名が異なる別々のユーザーのための2つの異なるユーザープロファイル]({% image_buster /assets/img_archive/Braze_User_aliases.png %})
+![同じユーザーエイリアスラベルを持つが、異なるエイリアス名を持つ別のユーザーの 2 つの異なるユーザープロファイル]({% image_buster /assets/img_archive/Braze_User_aliases.png %})
 
 ### 匿名ユーザーにタグを付ける
 
@@ -96,7 +96,7 @@ Braze`external_id` 以外の識別子でユーザーを参照するには、ユ�
 
 ユーザーエイリアスの設定方法については、各プラットフォーム ([iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#aliasing-users)、[Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/#aliasing-users)、[Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/#aliasing-users)) に関する弊社のドキュメントを参照してください。
 
-![Braze でのユーザープロファイルのライフサイクルのフローチャート。匿名ユーザーについて changeUser () が呼び出されると、そのユーザーは識別されたユーザーになり、そのデータは識別されたユーザープロファイルに移行されます。識別されたユーザーは Braze ID と external ID を持ちます。この時点で、2 人目の匿名ユーザーに changeUser() を呼び出すと、その識別されたユーザーにまだ存在しないユーザーデータのフィールドがマージされます。識別されたユーザーの既存のユーザープロファイルにエイリアスが追加されている場合、データは影響を受けませんが、エイリアスを持つ識別ユーザーになります。識別されたユーザーと同じエイリアスラベルを持つが、別のエイリアス名を持つ 3 人目の匿名ユーザーについて changeUser () を呼び出すと、識別されたユーザーに存在しないフィールドがすべてマージされ、識別されたユーザープロファイルのエイリアスラベルは維持されます。]({% image_buster /assets/img_archive/Braze_User_flowchart.png %})
+![Brazeにおけるユーザープロファイルのライフサイクルのフローチャート。匿名ユーザーについて changeUser () が呼び出されると、そのユーザーは識別されたユーザーになり、そのデータは識別されたユーザープロファイルに移行されます。識別されたユーザーは Braze ID と external ID を持ちます。この時点で、2 人目の匿名ユーザーに changeUser() を呼び出すと、その識別されたユーザーにまだ存在しないユーザーデータのフィールドがマージされます。識別されたユーザーの既存のユーザープロファイルにエイリアスが追加されている場合、データは影響を受けませんが、エイリアスを持つ識別ユーザーになります。識別されたユーザーと同じエイリアスラベルを持つが、別のエイリアス名を持つ 3 人目の匿名ユーザーについて changeUser () を呼び出すと、識別されたユーザーに存在しないフィールドがすべてマージされ、識別されたユーザープロファイルのエイリアスラベルは維持されます。]({% image_buster /assets/img_archive/Braze_User_flowchart.png %})
 
 {% alert tip %}
 顧客のユーザープロファイルライフサイクルで、このプロセスがどのように行われるかを想像しにくい場合は、ユーザーデータ収集の[ベストプラクティス]({{site.baseurl}}/user_guide/data/user_data_collection/best_practices/)を参照してください。
@@ -115,5 +115,5 @@ SDKおよび[ユーザーデータエンドポイントを]({{site.baseurl}}/dev
 テストとして、ダッシュボードですべてのユーザー ID を使用して、ユーザーの検索および識別ができます。Braze ダッシュボードでダッシュボードを検索する方法については、「[テストユーザーの追加]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users)」を参照してください。
 
 {% alert important %}
-Brazeは、5,000,000セッションを超えるユーザー（「ダミーユーザー」）を禁止またはブロックし、これらのユーザーは一般的に誤統合の結果であるため、SDKイベントを取り込まなくなる。正規ユーザーに対して禁止またはブロックが発生しているとわかった場合は、Braze アカウントマネージャーに連絡してください。
+Brazeは、5,000,000セッションを超えるユーザー（「ダミーユーザー」）を禁止またはブロックし、これらのユーザーは一般的に誤統合の結果であるため、SDKイベントを取り込まなくなる。正当なユーザーにこのような事態が発生した場合は、Brazeアカウントマネージャーに連絡すること。
 {% endalert %}
