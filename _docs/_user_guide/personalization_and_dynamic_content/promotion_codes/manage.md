@@ -23,7 +23,7 @@ Paste the code snippets into one of your messages in Braze, then use [Liquid]({{
 
 ![An example message "Treat yourself to something nice this spring with our exclusive offer" followed by the code snippet.]({% image_buster /assets/img/promocodes/promocode10.png %}){: style="max-width:70%"}
 
-### Across canvas steps
+### Across Canvas steps
 
 When a code snippet is used in a campaign or Canvas with multichannel messages, each user receives a unique code. In a Canvas with multiple steps that reference promotion codes, a user gets a new code for every step they enter.
 
