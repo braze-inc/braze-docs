@@ -41,8 +41,6 @@ A few best practices for setting up Decisioning Studio agents:
 2. The more diverse the set of actions the agent can take, the more it can personalize its strategy for each user.
 3. The fewer constraints on your agents, the better. Constraints should be designed to respect business rules while freeing agent-led experimentation as much as possible. 
 
-To learn more about what agents can do, [book a call](https://www.braze.com/get-started/) with Braze.
-
 {% alert important %}
 This guide explains the most common integration patterns. Information Security will still need to vet all connection points and Solutions Consultants will be available to assist with implementation.
 {% endalert %}
