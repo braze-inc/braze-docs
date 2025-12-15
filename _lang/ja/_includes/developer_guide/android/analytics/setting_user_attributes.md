@@ -110,7 +110,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab 整数 %}
+{% tab Integers %}
 `int` 、カスタム属性を設定する：
 
 {% subtabs global %}
@@ -169,7 +169,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab 浮動小数点 %}
+{% tab Floating-points %}
 `float` 、カスタム属性を設定する：
 
 {% subtabs global %}
@@ -251,7 +251,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endsubtabs %}
 {% endtab %}
 
-{% tab 日付 %}
+{% tab Date %}
 {% subtabs global %}
 {% subtab JAVA %}
 
@@ -289,7 +289,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endalert %}
 
 {% endtab %}
-{% tab 配列 %}
+{% tab Array %}
 
 カスタム属性配列内の要素の最大数は、25にデフォルト設定されています。個々の配列の最大値は、Braze ダッシュボードの [**データ設定**] > [**カスタム属性**] で100まで増やすことができます。要素の最大数を超える配列は、含まれる要素が最大数になるよう切り捨てられます。カスタム属性配列とその動作の詳細については、[配列に関する]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays)ドキュメントを参照してください。
 
