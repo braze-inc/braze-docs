@@ -1,12 +1,12 @@
 ---
-nav_title: Multi-language settings
+nav_title: Multi-Language settings
 article_title: Multi-Language Settings
 alias: "/multi_language_support/"
 page_order: 5.5
-description: "This article provides an overview of multi-language settings in the Braze dashboard and how to use locales in your messaging."
+description: "This article provides an overview of multi-Language settings in the Braze dashboard and how to use locales in your messaging."
 ---
 
-# Multi-language settings
+# Multi-Language settings
 
 > The Multi-Language feature allows you to use [translation tags]({{ site.baseurl }}/user_guide/engagement_tools/messaging_fundamentals/localization/locales) to target users in different languages and locations all within a single message.
 
