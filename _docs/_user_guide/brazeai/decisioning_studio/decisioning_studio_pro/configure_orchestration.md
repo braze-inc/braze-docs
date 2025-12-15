@@ -95,12 +95,11 @@ Decisioning Studio can integrate with any customer engagement platform. However,
 
 In this scenario, the agent will deliver a "recommendation file." This file contains rows for each customer, with columns that indicate all of the personalized decisions for that customer.
 
-For example, the following recommendation file might be used by a customer to optimize an email campaign:
+For example, the following recommendation file: 
 
-| Customer ID | Template | Subject Line | Send Time |
-|-------------|----------|--------------|-----------|
-| user_123    | Template A | Welcome! | 10:00 AM |
-| user_456    | Template B | Get Started | 2:00 PM |
+![Decisioning Pro Diagram]({% image_buster /assets/img/decisioning_studio/decisioning_studio_custom_example_2.png %})
 
-For more information on custom integrations, contact the AI Decisioning Services team.
+Might be used to optimze an email campaign that looks like the following: 
+
+![Decisioning Pro Diagram]({% image_buster /assets/img/decisioning_studio/decisioning_studio_custom_example_1.png %})
 
