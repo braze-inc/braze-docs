@@ -12,7 +12,7 @@ description: "この記事では、「メールテンプレートのソース翻
 {% api %}
 # メールテンプレートのソース翻訳を表示
 {% apimethod get %}
-/テンプレート/メール/翻訳/ソース
+/templates/email/translations/source
 {% endapimethod %}
 
 > [メールテンプレートの]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates)ソース翻訳を表示するには、このエンドポイントを使用します。
