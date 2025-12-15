@@ -15,9 +15,58 @@ Use case audiences are typically defined in a Customer Engagement Platform (such
 
 Specific instructions for audience configuration are included below, alongside instructions for sending customer data. 
 
+### Configure your audience
+
+{% tabs %}
+{% tab Braze %}
+
+**Configure audience in Braze**
+1. Create a segment for your audience that you would like to target.
+2. Provide the Segment ID to your AI Decisioning Services team.
+
+Note: For Braze, multiple segments can be combined to create the audience, and Decisioning Studio can ingest on a segment for a Business-as-Usual comparator compaign. All of these patterns are acceptable. 
+
+
+{% endtab %}
+{% tab SFMC %}
+
+**Configure audience in Salesforce Marketing Cloud**
+1. Configure an SFMC data extension(s) for your audience and provide the data extension ID
+2. Set up SFMC Installed Package for API integration with the appropriate permissions required by Decisioning Studio
+3. Ensure that this data extension must be refreshed daily, as Decisioning Studio will pull from the the latest incremental data available
+
+Provide the extension ID and API key to the Braze services team. They will assist with next steps in ingesting customer data.
+
+**To define the audience in Klaviyo:**
+
+{% endtab %}
+{% tab Klaviyo %}
+
+In order to do this, take the following steps:
+
+* Configure an SFMC data extension(s) for your audience and provide the data extension ID
+* Set up SFMC Installed Package for API integration with the appropriate permissions required by Decisioning Studio
+* Ensure that this data extension must be refreshed daily, as Decisioning Studio will pull from the the latest incremental data available
+
+Provide the extension ID and API key to the Braze services team. They will assist with next steps.
+
+{% endtab %}
+{% tab Other Cloud Solutions %}
+
+**Other Cloud Solutions (Google Cloud Storage, Azure, and AWS)**
+
+Finally, if the audience is not currently stored in Braze, SFMC, or Klaviyo, then the next best step is to configure an automated export directly to a Braze-controlled Google Cloud Services bucket. We can also support export to AWS or Azure (although GCS is preferable).
+
+To determine whether this is feasible, refer to the documentation for your Martech platform. For example, mParticle offers a [native integration with Google Cloud Storage](https://www.mparticle.com/integration/google-cloud-storage/). If this is the case, we can provide a GCS bucket to export audience data to. There are similar pages for [Twilio Segment](https://www.twilio.com/docs/segment/connections/storage/catalog/google-cloud-storage), [Treasure Data](https://docs.treasuredata.com/int/google-cloud-storage-export-integration), [ActionIQ](https://info.actioniq.com/hubfs/ActionIQ%20Industry%20Brief%20Solutions/ActionIQ_Integrations_Brief.pdf), and [Adobe Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/cloud-storage/google-cloud-storage).
+
+If customer data cannot be sent to the Braze data platform or via the CEP, then it should be sent directly to Google Cloud Storage bucket.
+
+{% endtab %}
+{% endtabs %}
+
 ## Step 2: Send additional customer data to Decisioning Studio
 
-In order to effectively personalize customer engagement, agents need to understand as much as possible about your customers. This data should be sent along with the audience definition. 
+In order to effectively personalize customer engagement, agents need to understand as much as possible about your customers. This data should be sent along with the audience definition, and all data should map onto a single customer identifier field. 
 
 The following customer data assets are important to consider: 
 
@@ -39,24 +88,12 @@ The following customer data assets are important to consider:
 * Incremental files are preferable vs. to snapshots of the whole customer history every day
 * Include customer data on any insights that would be particularly important to your business (e.g., Do you want to see who self-learning AI treats your loyalty customers differently? Make sure it's in the customer data!)
 
-## Integration patterns
-
-
-
-### Step 1: Configure your audience
-
 {% tabs %}
 {% tab Braze %}
 
-**Configure audience in Braze**
-1. Create a segment for your audience that you would like to target.
-2. Provide the Segment ID to your AI Decisioning Services team.
+**Send customer data through Braze**
 
-Note: For Braze, multiple segments can be combined to create the audience, and Decisioning Studio can ingest on a segment for a Business-as-Usual comparator compaign. All of these patterns are acceptable. 
-
-**Send customer data from Braze**
-
-In general, BrazeAI Decisioning Studio can use all data that you are already sending to the Braze Data Platform.
+As with audience definitions, BrazeAI Decisioning Studio can use all data that you are already sending to the Braze Data Platform.
 
 If there is customer data that you would want to use for Decisioning Studio that is not currently stored in the Customer Profile or Custom Attributes, the recommended approach [Braze Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion) to ingest data from other sources.
 
@@ -80,36 +117,11 @@ Other options for sending data include:
 These patterns require more engineering effort, but are sometimes preferable, depending on the current Braze configuration. Talk with AI Decisioning Services to learn more. 
 
 {% endtab %}
-{% tab Salesforce Marketing Cloud (SFMC) %}
-
-Decisioning Studio is able to accept an SFMC data extension as the audience as well. Decisioning Studio uses the available REST and SOAP API interfaces provided by SFMC to interact with the platform.
-
-**Configure audience in SFMC**
-1. Configure an SFMC data extension(s) for your audience and provide the data extension ID
-2. Set up SFMC Installed Package for API integration with the appropriate permissions required by Decisioning Studio
-3. Ensure that this data extension must be refreshed daily, as Decisioning Studio will pull from the the latest incremental data available
-
-Provide the extension ID and API key to the Braze services team. They will assist with next steps in ingesting customer data.
-
-{% endtab %}
-{% tab Klaviyo %}
-
-**To define the audience in Klaviyo:**
-
-In order to do this, take the following steps:
-
-* Configure an SFMC data extension(s) for your audience and provide the data extension ID
-* Set up SFMC Installed Package for API integration with the appropriate permissions required by Decisioning Studio
-* Ensure that this data extension must be refreshed daily, as Decisioning Studio will pull from the the latest incremental data available
-
-Provide the extension ID and API key to the Braze services team. They will assist with next steps.
-
-{% endtab %}
-{% tab Other Cloud Solutions %}
+{% tab Other Cloud Solutions Google Cloud Storage, AWS, Azure %}
 
 **Other Cloud Solutions (Google Cloud Storage, Azure, and AWS)**
 
-Finally, if the audience is not currently stored in Braze, SFMC, or Klaviyo, then the next best step is to configure an automated export directly to a Braze-controlled Google Cloud Services bucket. We can also support export to AWS or Azure (although GCS is preferable).
+As with audience, if customer data is not currently stored in Braze, then the next best step is to configure an automated export directly to a Braze-controlled Google Cloud Services bucket. We can also support export to AWS or Azure (although GCS is preferable).
 
 To determine whether this is feasible, refer to the documentation for your Martech platform. For example, mParticle offers a [native integration with Google Cloud Storage](https://www.mparticle.com/integration/google-cloud-storage/). If this is the case, we can provide a GCS bucket to export audience data to. There are similar pages for [Twilio Segment](https://www.twilio.com/docs/segment/connections/storage/catalog/google-cloud-storage), [Treasure Data](https://docs.treasuredata.com/int/google-cloud-storage-export-integration), [ActionIQ](https://info.actioniq.com/hubfs/ActionIQ%20Industry%20Brief%20Solutions/ActionIQ_Integrations_Brief.pdf), and [Adobe Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/cloud-storage/google-cloud-storage).
 
