@@ -8,7 +8,7 @@ noindex: true
 
 > オーバービュー・レイアウトは、ページの上部に特定のナビゲーション・オプションを設け、ユーザーがボタンをクリックしてページの特定の部分や、まったく別のページに移動できるようにするのに適している。
 
-セレクタレイアウトの典型的な例は、[SDK Changelogs](https://www.braze.com/docs/developer_guide/platform_integration_guides/sdk_changelogs/) ページ、または[アプリ内メッセージクリエイティブ詳細ページ](https://www.braze.com/docs/user_guide/message_building_by_channel/in-app_messages/creative_details/)です。
+セレクタレイアウトの典型的な例は、[SDK Changelogs](https://www.braze.com/docs/developer_guide/changelogs) ページ、または[アプリ内メッセージクリエイティブ詳細ページ](https://www.braze.com/docs/user_guide/message_building_by_channel/in-app_messages/creative_details/)です。
 
 ## 必要なコンポーネント
 
