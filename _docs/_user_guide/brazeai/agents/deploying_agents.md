@@ -75,7 +75,7 @@ During the beta period, catalog agents are limited to processing input values up
 
 #### Choose defined output fields
 
-For agentic catalog columns, you can manually override any values. To revert the value back to the agent output, select the specific cell to in-line refresh. 
+For agentic catalog columns, you can manually override any values. To revert the value back to the agent output, select the specific cell to refresh it in-line.
 
 ### Error handling in catalogs  
 
