@@ -10,7 +10,7 @@ description: "この記事では、Delete scheduled messages Brazeエンドポ�
 ---
 {% api %}
 # スケジュールされたメッセージを削除する
-{% apimethod postcore_endpoint|https://www.braze.com/docs/core_endpoints %}。
+{% apimethod postcore_endpoint|https://www.braze.com/docs/core_endpoints %}
 /messages/schedule/delete
 {% endapimethod %}
 
