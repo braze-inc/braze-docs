@@ -1,4 +1,4 @@
-## アップル社のプライバシー・マニフェスト {#privacy-manifest}
+## アップルのプライバシー・マニフェスト {#privacy-manifest}
 
 ### トラッキングデータとは何か？
 
@@ -22,7 +22,7 @@ iOS 17.2 以降、Apple はエンドユーザーが [Ad Tracking Transparency (A
 
 ### 前提条件
 
-この機能を実装するには、次のブレーズSDK バージョンが必要です。
+この機能を実装するには、以下のBraze SDKバージョンが必要である：
 
 {% sdk_min_versions swift:9.0.0 %}
 
@@ -46,22 +46,22 @@ Xcode プロジェクトでアプリの `PrivacyInfo.xcprivacy` ファイルを�
 
 {% endalert %}
 
-![コンテキストメニューが開き、「Raw Keys and Values」が強調表示された Xcode プロジェクト。]({% image_buster /assets/img/apple/privacy_manifest/check_raw_keys_and_values.png %})
+![コンテキストメニューが開封され、"Raw Keys and Values "がハイライトされたXcodeプロジェクト。]({% image_buster /assets/img/apple/privacy_manifest/check_raw_keys_and_values.png %})
 
 [**App Privacy Configuration**] で [**NSPrivacyTracking**] を選択し、値を [**YES**] に設定します。
 
-![[NSPrivacyTracking] が [YES] に設定されて開かれている「PrivacyInfo.xcprivacy」ファイル。]({% image_buster /assets/img/apple/privacy_manifest/add_nsprivacytracking.png %})
+![PrivacyInfo.xcprivacy' ファイルを "NSPrivacyTracking" を "YES" に設定して開封する。]({% image_buster /assets/img/apple/privacy_manifest/add_nsprivacytracking.png %})
 
 **App Privacy Configuration**」で**「NSPrivacyTrackingDomains**」を選択する。ドメイン配列で新しい要素を追加し、その値を、`sdk-tracking` 接頭辞を付けて [`AppDelegate` に以前に追加した]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/completing_integration/#update-your-app-delegate)エンドポイントに設定します。
 
-![「NSPrivacyTrackingDomains」の下に Braze トラッキングエンドポイントがリストされて開かれている「PrivacyInfo.xcprivacy」ファイル。]({% image_buster /assets/img/apple/privacy_manifest/add_nsprivacytrackingdomains.png %})
+![NSPrivacyTrackingDomains" の下に記載されているBrazeトラッキングエンドポイントで、'PrivacyInfo.xcprivacy' ファイルを開封する。]({% image_buster /assets/img/apple/privacy_manifest/add_nsprivacytrackingdomains.png %})
 
-### ステップ4: トラッキングデータを宣言する
+### ステップ 4: トラッキングデータを宣言する
 
-次に `AppDelegate.swift` を開き、静的または動的トラッキングリストを作成して、宣言する各[トラッキングプロパティ](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/trackingproperty/)をリストします。Apple は、エンドユーザーが ATT プロンプトを受け入れるまでこれらのプロパティをブロックするため、あなたとあなたの法務チームがトラッキングを検討するプロパティのみをリストします。以下はその例です。
+次に `AppDelegate.swift` を開き、静的または動的トラッキングリストを作成して、宣言する各[トラッキングプロパティ](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/trackingproperty/)をリストします。Apple は、エンドユーザーが ATT プロンプトを受け入れるまでこれらのプロパティをブロックするため、あなたとあなたの法務チームがトラッキングを検討するプロパティのみをリストします。以下に例を示します。
 
 {% tabs %}
-{% tab 静的な例 %}
+{% tab static example %}
 以下の例では、`dateOfBirth`、`customEvent`、および `customAttribute` が静的リスト内でトラッキングデータとして宣言されています。 
 
 ```swift
@@ -92,7 +92,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 ```
 {% endtab %}
 
-{% tab ダイナミックな例 %}
+{% tab dynamic example %}
 以下の例では、エンドユーザーがATTプロンプトを受け入れた後、トラッキングリストは自動的に更新される。
 
 ```swift
@@ -129,39 +129,39 @@ func applicationDidBecomeActive(_ application: UIApplication) {
 }
 ```
 
-## データトラッキングの無効化
+## トラッキングを無効にする
 
-Swift SDK でデータ追跡アクティビティを無効にするには、Braze インスタンスで[`enabled`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/enabled) プロパティを`false` に設定します。`enabled` が `false` に設定されると、Braze SDK でパブリック API への呼び出しがすべて無視されます。SDKはまた、ネットワークリクエストやイベント処理など、飛行中のすべてのアクションをキャンセルする。 
+Swift SDKのデータ追跡アクティビティを無効にするには、Brazeインスタンスの [`enabled`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/enabled)プロパティを`false` 。`enabled` が `false` に設定されると、Braze SDK でパブリック API への呼び出しがすべて無視されます。SDKはまた、ネットワークリクエストやイベント処理など、飛行中のすべてのアクションをキャンセルする。 
 
-## 以前に保存したデータを消去する
+## 過去に保存したデータを消去する
 
-[`wipeData()`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/wipedata()) メソッドを使用すると、ローカルに保存されたSDK データをユーザのデバイス上で完全にクリアできます。
+この [`wipeData()`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/wipedata())メソッドを使用すると、ユーザーのデバイスにローカルに保存されたSDKデータを完全に消去できる。
 
-Braze Swift バージョン7.0.0 以降では、SDK および`wipeData()` メソッドによってデバイスID のUUID がランダムに生成されます。ただし、`useUUIDAsDeviceId` が`false` _ または_ に設定されている場合、Swift SDK バージョン5.7.0 以前を使用しているときは、[`/users/delete`]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/) への投稿リクエストも必要になります。これは、ベンダーの識別子(IDFV) が自動的にそのユーザーのデバイスID として使用されるためです。
+Braze Swiftのバージョン7.0.0以降では、SDKと`wipeData()` メソッドが、デバイスIDのUUIDをランダムに生成する。しかし、あなたの`useUUIDAsDeviceId` が`false` に設定されて_いるか、_Swift SDK バージョン 5.7.0 以前を使用している場合、あなたはまた、ポストリクエストを行う必要がある。 [`/users/delete`]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/)ベンダーの識別子(IDFV)が自動的にユーザーのデバイスIDとして使用されるからだ。
 
-## データトラッキングの再開
+## データトラッキングを再開する
 
-データ収集を再開するには、[`enabled`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/enabled/) を `true` に設定します。これにより、以前にワイプされたデータは復元されません。
+データ収集を再開するには、[`enabled`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/enabled/) を `true` に設定します。これは、以前に消去したデータを復元するものではないことに留意してほしい。
 
-## IDFV収集
+## IDFVコレクション
 
-Braze iOS SDK の以前のバージョンでは、IDFV (ベンダーの識別子) フィールドがユーザーのデバイス ID として自動的に収集されていました。Swift SDK `v5.7.0` から、IDFV フィールドはオプションで無効になり、代わりにBraze はランダムなUUID をデバイスID として設定します。Swift SDK `v7.0.0` で開始すると、IDFV フィールドはデフォルトでは収集されず、代わりにUUID がデバイスID として設定されます。
+Braze iOS SDK の以前のバージョンでは、IDFV (ベンダーの識別子) フィールドがユーザーのデバイス ID として自動的に収集されていました。Swift SDK`v5.7.0` 以降、IDFVフィールドはオプションで無効になり、代わりにBrazeはランダムなUUIDをデバイスIDとして設定するようになった。Swift SDK`v7.0.0` 以降、IDFV フィールドはデフォルトでは収集されず、代わりに UUID がデバイス ID として設定される。
 
 `useUUIDAsDeviceId` 機能により、デバイス ID を UUID として設定するよう [Swift SDK](https://github.com/braze-inc/braze-swift-sdk) が構成されます。従来、iOS SDK では Apple が生成した IDFV 値と同じデバイス ID が割り当てられていました。iOS アプリでこの機能がデフォルトで有効になっている場合、SDK を介して作成されたすべての新規ユーザーに、UUID と同じデバイス ID が割り当てられます。
 
-それでもIDFV を個別に収集する場合は、[`set(identifierforvendor:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/set(identifierforvendor:)) を使用できます。
+それでもIDFVを別に集めたい場合は、次のようにすることができる。 [`set(identifierforvendor:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/set(identifierforvendor:)).
 
 ### 考慮事項
 
 #### SDK バージョン
 
-Swift SDK `v7.0.0+` では、`useUUIDAsDeviceId` が有効になっている場合(デフォルト)、作成されたすべての新規ユーザーにランダムなデバイスID が割り当てられます。既存のユーザーは、すべて同じデバイス ID 値を保持します。これは、IDFV である場合もあります。
+Swift SDK`v7.0.0+` において、`useUUIDAsDeviceId` がイネーブルメント（デフォルト）である場合、新規作成されたすべてのユーザーにはランダムなデバイス ID が割り当てられる。既存のユーザーは、すべて同じデバイス ID 値を保持します。これは、IDFV である場合もあります。
 
 この機能が有効でない場合、デバイスには引き続き作成時に IDFV が割り当てられます。
 
 #### ダウンストリーム 
 
-**テクノロジーパートナー**: この機能を有効にすると、Braze デバイス ID から IDFV 値を取得するテクノロジーパートナーは、このデータにアクセスできなくなります。デバイスから派生したIDFV 値がパートナー統合に必要な場合は、この機能を`false` に設定することをお勧めします。
+**テクノロジーパートナー**: この機能を有効にすると、Braze デバイス ID から IDFV 値を取得するテクノロジーパートナーは、このデータにアクセスできなくなります。パートナー連携にデバイスから得られるIDFV値が必要な場合は、この機能を`false` に設定することを推奨する。
 
 **Currents**: `useUUIDAsDeviceId` が true に設定されている場合、Currents で送信されたデバイス ID は IDFV 値と等しくなくなります。
 
@@ -169,7 +169,7 @@ Swift SDK `v7.0.0+` では、`useUUIDAsDeviceId` が有効になっている場�
 
 #### この変更は Braze の既存ユーザーに影響しますか?
 
-いいえ。この機能を有効にしても、Braze のユーザーデータは上書きされません。新しいUUID デバイスID は、新しいデバイスに対して、または`wipedata()` が呼び出された場合にのみ作成されます。
+いいえ。この機能を有効にしても、Braze のユーザーデータは上書きされません。新しいUUIDデバイスIDは、新しいデバイス、または`wipedata()` 。
 
 #### この機能をオンにした後にオフにすることはできますか?
 
