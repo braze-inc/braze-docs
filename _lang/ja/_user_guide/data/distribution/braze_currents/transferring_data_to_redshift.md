@@ -10,7 +10,7 @@ tool: Currents
 
 # Redshift へのデータ転送
 
-> [Amazon Redshift](https://aws.amazon.com/redshift/) は、Amazon S3 と並んでAmazon Web Services 上で動作する、評判の良いデータウェアハウスです。Currents の Braze データは Redshift に直接転送しやすい構造になっています。
+> [Amazon Redshift](https://aws.amazon.com/redshift/) は、Amazon S3 と並んでAmazon Web Services 上で動作する、評判の良いデータウェアハウスです。CurrentsのBrazeデータは、Redshiftに直接転送できるように構造化されている。
 
 Extract, Transform, Load (ETL) プロセス経由で Amazon S3 から Redshift にデータを転送する方法の詳細については、Currents の例がある [GitHub リポジトリ](https://github.com/Appboy/currents-examples)を参照してください。
 
