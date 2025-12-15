@@ -7,7 +7,7 @@ description: "このページでは、カスタム属性について説明し、
 search_rank: 1
 ---
 
-# [![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/custom-events-and-attributes){: style="float:right;width:120px;border:0;" class="noimgborder"} カスタム属性
+# [![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/custom-events-and-attributes){: style="float:right;width:120px;border:0;" class="noimgborder"}カスタム属性s
 
 > このページでは、ユーザの一意の特性のコレクションであるカスタム属性について説明します。カスタム属性は、ユーザーに関する属性や、アプリケーション内の価値の低いアクションに関する情報を格納するために最適です。 
 
@@ -17,7 +17,7 @@ Braze に保存すると、カスタム属性を使用してオーディエン�
 
 ダッシュボードでカスタム属性の作成および管理を行うには、[**データ設定**] > [**カスタム属性**] に移動します。 
 
-![ブーリアンである4つのカスタム属性。]({% image_buster /assets/img/export_custom_attributes.png %})
+![ブール値である4 つのカスタム属性s。]({% image_buster /assets/img/export_custom_attributes.png %})
 
 「**最終更新日**」の列には、カスタム属性が最後に編集された時間（ブロックリストやアクティブに設定された時間など）が表示されます。
 
@@ -50,15 +50,21 @@ Braze に保存すると、カスタム属性を使用してオーディエン�
 * [ユーザー更新ステップ]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update/#removing-custom-attributes)で、削除するカスタム属性名を選択する。
 * API リクエスト内で `null` 値を[`/users/track` エンドポイント]({{site.baseurl}}/api/endpoints/user_data/post_user_track#user-track)に設定する。
 
-### 利用レポートを見る
+### データのエクスポート
+
+カスタム属性のリストを CSV ファイルとしてエクスポートするには、ページ上部の [**すべてエクスポート**] を選択します。CSVファイルが生成され、ダウンロードリンクがEメールで送信されます。
+
+## 利用レポートを見る
 
 使用状況レポートは、特定のカスタム属性を使用しているすべてのキャンバス、キャンペーン、およびセグメントを一覧表示する。このリストには、Liquid の使用状況は含まれていません。 
 
 各カスタム属性の横にあるチェックボックスを選択し、**使用状況レポートの表示**を選択すると、一度に最大100件の使用状況レポートを表示できます。
 
-### データのエクスポート
+### 「値」タブ
 
-カスタム属性のリストを CSV ファイルとしてエクスポートするには、ページ上部の [**すべてエクスポート**] を選択します。CSVファイルが生成され、ダウンロードリンクがEメールで送信されます。
+使用状況レポートを表示しているときに、**Values**タブを選択して、選択したカスタム属性sの上位値を、約250,000ユーザー秒のアプリの標本に基づいて表示します。結果はユーザーs のサブセットからサンプリングされるため、サンプルに存在するすべての値が含まれるわけではありません。つまり、**Values**タブは、トラブルシューティングや、すべてのユーザーsからのデータを組み込む必要があるユースケースには使用しないでください。
+
+![開封でクォートされた&クォート;値とクォート;国別属性値の円グラフを示すタブ(&クォート;US&クォート;および&クォート;PR&クォート;など)を使用した、選択したカスタム属性sの使用レポート。]({% image_buster /assets/img/usage_report_values.png %}){: style="max-width:80%;"}
 
 ## カスタム属性の設定
 
@@ -71,7 +77,7 @@ Braze に保存すると、カスタム属性を使用してオーディエン�
 - [Web]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/?sdktab=web)
 - [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/analytics/#logging-custom-attributes)
 - [Unity]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/?sdktab=unity)
-- [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#setting-custom-attributes)
+- [.NET MAUI (旧サマリン)]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#setting-custom-attributes)
 - [Roku]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/)
 
 {% enddetails %}
@@ -100,7 +106,7 @@ Braze に保存すると、カスタム属性を使用してオーディエン�
 
 | セグメンテーションオプション | ドロップダウン・フィルター | 入力オプション | 例 |
 | ---------------------| --------------- | ------------- | -------- |
-| ブール値がtrue、false、trueまたは未設定、falseまたは未設定のいずれか**で**あるかをチェックします。 | **該当する**  | **TRUE**,**FALSE**,**TRUE OR NOT SET**, または**FALSE OR NOT SET** | このフィルターが`coffee_drinker` を指定した場合、ユーザーは以下の状況でこのフィルターにマッチします：<br> {::nomarkdown}<ul><li>このフィルターが<code>trueで</code>、ユーザーの値が <code>coffee_drinker</code></li><li>このフィルターが<code>falseで</code>、ユーザーがその値を持っていない場合 <code>coffee_drinker</code></li><li>このフィルターが<code>trueであるか、設定されて</code>おらず、かつユーザーが <code>coffee_drinker</code>または値がない場合</li><li>このフィルターが<code>falseであるか、設定されて</code>おらず、ユーザーが <code>coffee_drinker</code>または任意の値</li></ul>{:/} |
+| ブール値がtrue、false、trueまたは未設定、falseまたは未設定のいずれか**で**あるかをチェックします。 | **該当する**  | **TRUE**,**FALSE**,**TRUE OR NOT SET**, または**FALSE OR NOT SET** | このフィルターが`coffee_drinker` を指定した場合、ユーザーは以下の状況でこのフィルターにマッチします：<br> {::nomarkdown}<ul><li>このフィルターが <code>true</code> かつユーザーが次の値を持っている:  <code>coffee_drinker</code></li><li>このフィルターが <code>false</code> かつユーザーが次の値を持っていない:  <code>coffee_drinker</code></li><li>このフィルターが <code>true or not set</code> かつユーザーが次の値を持っている:  <code>coffee_drinker</code> または値なし</li><li>このフィルターが <code>false or not set</code> かつユーザーが次の値:  <code>coffee_drinker</code> またはいずれの値も持っていない</li></ul>{:/} |
 | ユーザーのプロファイルにboolean値が**存在**し、かつnullでないことを確認します。 | **空白でない**  | **該当なし** | このフィルターが`coffee_drinker` を指定し、ユーザーが属性`coffee_drinker` の値を持つ場合、そのユーザーはこのフィルターにマッチします。 | 
 | ユーザーのプロファイルにboolean値が**存在しないか**、NULLであるかをチェックします。 | **空白である**  | **該当なし** | このフィルターが`coffee_drinker`を指定し、ユーザーが属性`coffee_drinker` を持たないか、`coffee_drinker` の値がNULLの場合、そのユーザーはこのフィルターにマッチします。|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }

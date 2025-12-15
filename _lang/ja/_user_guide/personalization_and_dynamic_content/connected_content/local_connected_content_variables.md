@@ -84,7 +84,7 @@ Enjoy the weather!
 
 APIが{%raw%}`{{localweather.consolidated_weather[0].weather_state_name}}`{%endraw%}で`Rain`を返した場合、ユーザーはこのプッシュを受け取ります。
 
-![プッシュ通知で「雨が降っている！Grab an umbrella!"]({% image_buster /assets/img_archive/connected_weather_push2.png %} "Connected Content Push Usage Example"){:style="max-width:50%" }
+![プッシュ通知 with the message "It's raining!"Grab an umbrella!"]({% image_buster /assets/img_archive/connected_weather_push2.png %} "Connected Content Push Usage Example"){:style="max-width:50%" }
 
 {% multi_lang_include connected_content.md section='default behavior' %}
 

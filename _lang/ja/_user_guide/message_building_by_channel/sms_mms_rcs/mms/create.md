@@ -56,4 +56,4 @@ Brazeは、メッセージ作成画面の**プレビュー**パネルにアッ�
 SMS/MMSアセットの順序はカスタマイズできません。順序は、このメッセージを受信する電話機によって異なります。
 {% endalert %}
 
-![メッセージ"ジムを打つ準備ができました。。。自宅で?"の例。プレビューには、テキストとして送信されたメッセージと"画像が表示されます。]({% image_buster /assets/img/sms/mms_preview.png %})
+![メッセージ" Ready to hit the gym...at home?" の例。プレビューには、テキストとして送信されたメッセージと"画像が表示されます。]({% image_buster /assets/img/sms/mms_preview.png %})

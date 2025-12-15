@@ -24,7 +24,7 @@ tool:
 2\.[**経時的なパフォーマンス**] グラフまで 下にスクロールします。
 3. [**次に関する統計**] フィールドでエクスポートするデータを選択します。エクスポートに「[利用可能なデータ](#available-data)」を参照してください。
 
-![ホームダッシュボードの経時パフォーマンスグラフ。]({% image_buster /assets/img_archive/home_dashboard_export.png %})
+![ホーム・ダッシュボードの「パフォーマンス・オーバー・タイム」グラフ。]({% image_buster /assets/img_archive/home_dashboard_export.png %})
 
 {:start="4"}
 4. <i class="fas fa-bars" title="Chart コンテキストメニュー"></i>を選択し、エクスポートオプションを選択します。

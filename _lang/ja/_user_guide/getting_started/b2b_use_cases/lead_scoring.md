@@ -25,9 +25,9 @@ Braze でのリードスコアリングワークフローの作成には、次�
 
 1. [**メッセージング**] > [**キャンバス**] に移動し、[**キャンバスを作成**] を選択してから、キャンバスの基本事項を入力します。
 
-2. キャンバスに「リードスコアリングキャンバス」などの関連する名前を付け、探しやすくするために、「リードの管理」などのタグを付けます。<br><br>![「リードスコアリングキャンバス」という名前のキャンバスを作成し、「リードマネジメント」をタグする手順1。]({% image_buster /assets/img/b2b/step_1_simple.png %}){: style="max-width:80%;"}
+2. キャンバスに「リードスコアリングキャンバス」などの関連する名前を付け、探しやすくするために、「リードの管理」などのタグを付けます。<br><br>![ステップ 1 の「リードスコアリングキャンバス」という名前のキャンバスの作成と、「リードマネジメント」のタグ付け。]({% image_buster /assets/img/b2b/step_1_simple.png %}){: style="max-width:80%;"}
 
-### ステップ 2: エントリ基準の設定
+### ステップ2:エントリ基準の設定
 
 1. **エントリ スケジュール**ステップに進み、**Action-Based**エントリ スケジュールを選択します。これにより、ユーザーが特定のアクションを実行すると、キャンバスにユーザーが入ります。
 
@@ -35,15 +35,15 @@ Braze でのリードスコアリングワークフローの作成には、次�
     - [**カスタム属性値を変更**] でリードスコアリング属性の名前 (`lead score`など) を使用して、カスタム属性値を変更します。リードスコアリング属性をまだ作成していない場合は、[カスタム属性s]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/)のステップに従います。これにより、ユーザーのリードスコアが変化するたびに、キャンバスにユーザーが入ります。
     - **メールアドレスの追加**
 
-![「アクションベース」のエントリ スケジュールでキャンバスを作成する手順2、およびカスタム属性の「リードスコア」を変更し、メールの住所を追加するアクションベースの選択肢。]({% image_buster /assets/img/b2b/step_2_simple.png %}){: style="max-width:80%;"}
+![カスタム属性の「リードスコア」を変更し、メールの住所を追加する「アクションベース」およびアクションベースの選択肢をエントリ スケジュールとしたキャンバスの作成手順2。]({% image_buster /assets/img/b2b/step_2_simple.png %}){: style="max-width:80%;"}
 
-### ステップ 3: ターゲットオーディエンスの特定
+### ステップ 3:ターゲットオーディエンスの特定
 
 #### ステップ 3a: セグメントの選択
 
 すべてのユーザーがリードスコアリングの対象であるため、どのユーザー[セグメント]({{site.baseurl}}/user_guide/engagement_tools/segments/)をターゲットに選択し、追加の[フィルター]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/)を適用することで、スコアの記録対象のユーザーに関する会社固有のルールを追加できます。たとえば、従業員、すでに顧客であるユーザー、および類似のユーザーを除外できます。 
 
-![Segment s とフィルター s を選択してエントリ オーディエンスを絞り込むための選択肢を含むキャンバスを作成する手順3。]({% image_buster /assets/img/b2b/step_3_simple.png %}){: style="max-width:80%;"}
+![キャンバスを作成するステップ 3。セグメントとフィルターを選択して、エントリオーディエンスを絞り込むオプションがあります。]({% image_buster /assets/img/b2b/step_3_simple.png %}){: style="max-width:80%;"}
 
 #### ステップ 3b： キャンバスの再適格性の設定
 
@@ -54,7 +54,7 @@ Braze でのリードスコアリングワークフローの作成には、次�
 - **指定ウィンドウ**を選択します。
 - 再適格性を「0」**秒**に設定します。
 
-[!「入力制御」セクションで、「ユーザーがこのキャンバスに再入力できるようにする」の選択肢があり、「指定ウィンドウ」が0秒に設定されています。]({% image_buster /assets/img/b2b/entry_controls_simple.png %}){: style="max-width:80%;"}
+![[ユーザーがこのキャンバスに再エントリできるようにする] が選択され、[指定された期間] が 0 秒の [エントリコントロール] セクション。]({% image_buster /assets/img/b2b/entry_controls_simple.png %}){: style="max-width:80%;"}
 
 #### ステップ 3c: 送信設定のアップデート
 
@@ -62,15 +62,15 @@ Braze でのリードスコアリングワークフローの作成には、次�
 
 [**購読設定**] の [**次のユーザーに送信**] で、[**購読解除ユーザーを含むすべてのユーザー**] を選択します。 
 
-![設定メール送信用のキャンバスを作成する手順4.]({% image_buster /assets/img/b2b/step_4_simple.png %}){: style="max-width:80%;"}
+![設定メール送信オプション用のキャンバスを作成する手順4。]({% image_buster /assets/img/b2b/step_4_simple.png %}){: style="max-width:80%;"}
 
-### ステップ 4: キャンバスを作成する
+### ステップ 4:キャンバスを作成する
 
 #### ステップ 4a: アクションパスの追加
 
 バリアントのプラスアイコンを選択し、[**アクションパス**] を選択します。
 
-![プラスアイコンで囲まれた開封に「アクションパス」が表示されたキャンバス。]({% image_buster /assets/img/b2b/action_paths_simple.png %}){: style="max-width:60%;"}
+![プラスアイコンで開いたメニューに [アクションパス] が表示されているキャンバス。]({% image_buster /assets/img/b2b/action_paths_simple.png %}){: style="max-width:60%;"}
 
 #### ステップ 4b: アクショングループの作成
 
@@ -83,19 +83,19 @@ Braze でのリードスコアリングワークフローの作成には、次�
 - **グループ 3:**1 ポイントの減分としてカウントされるすべてのイベント。
 - **その他のユーザー:**アクションパスを使用すると、待機ウィンドウを定義し、ユーザーがアクションを受け取るかどうかを確認してから、それらを「他のすべてのユーザー」グループにドロップできます。リードスコアリングの場合、これは「非アクティブ」のスコアを減分する機会です。
 
-![1点、5点、10点を加算するアクショングループ、1点、10点を減算するアクショングループ、「Everyone Else」を含むアクションパス。]({% image_buster /assets/img/b2b/action_paths_selected_simple.png %}){: style="max-width:20%;"}
+![1 ポイント、5 ポイント、および10 ポイントを追加するアクショングループ、1 ポイントと10 ポイントを減算するアクショングループ、および「Everyone Else」を含むアクションパス。]({% image_buster /assets/img/b2b/action_paths_selected_simple.png %}){: style="max-width:20%;"}
 
 #### ステップ 4c: 関連するイベントを含めるように各グループを設定する
 
 それぞれのアクショングループで、**トリガー**を選択し、特定のアクショングループのポイント数を追加するイベントを選択します。さらにトリガーを追加して、リードスコアを 1 つ増やすすべてのイベントを含めます。たとえば、ユーザーは、任意のアプリでセッションを起動したり、カスタムイベント(ウェビナーの登録や参加など)を実行したりすると、得点を1つ増やすことができます。 
 
-![任意のアプリでセッションを開始する」と「カスタムイベントを実行する」のトリガーでポイントを追加するアクショングループ。]({% image_buster /assets/img/b2b/action_groups_simple.png %}){: style="max-width:80%;"}
+![「任意のアプリでセッションを開始する」と「カスタムイベントを実行する」のトリガーで 1 ポイント加算するアクショングループ。]({% image_buster /assets/img/b2b/action_groups_simple.png %}){: style="max-width:80%;"}
 
 #### ステップ 4d: ユーザアップデートステップの追加
 
 アクションパスの下に作成した各キャンバスパスに、ユーザー更新ステップを追加します。 
 
-![キャンバスは、アクショングループごとに分岐したユーザアップデートパスs を持つアクションパスを表示します。]({% image_buster /assets/img/b2b/user_update_paths_simple.png %}){: style="max-width:80%;"}
+![アクションパスと、アクショングループごとに分岐したユーザー更新パスが表示されたキャンバス。]({% image_buster /assets/img/b2b/user_update_paths_simple.png %}){: style="max-width:80%;"}
 
 {: start=”2”}
 各ユーザー更新ステップの [**作成**] タブの対応するフィールドで、次の操作を行います。
@@ -182,11 +182,11 @@ Braze のリードステータスを使用して営業チームのリードレ�
 
 | ヘッダー | コンテンツ |
 | --- | --- |
-| 許可 | {% raw %}`Bearer {{result.access_token}}`{% endraw %}<br><br>トークンを取得するには、OAuth 2.0 クライアント認証情報フローの[接続アプリ](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&type=5)を設定してから、コネクテッドコンテンツを使用して営業チームからベアラーを取得します。<br><br>{% raw %}<code>{% connected_content https://[instance].my.salesforce.com/services/oauth2/トークン <br>: メソッドポスト <br> : 本体 client_id=[client_id]&client_secret=[client_secret]&grant_type=client_credentials<br>:保存結果%}{% endraw %}<br> ベアラ {% raw %}{{result.access_token}}</code>{% endraw %} |
+| 許可 | {% raw %}`Bearer {{result.access_token}}`{% endraw %}<br><br>トークンを取得するには、OAuth 2.0 クライアント認証情報フローの[接続アプリ](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&type=5)を設定してから、コネクテッドコンテンツを使用して営業チームからベアラーを取得します。<br><br>{% raw %}<code>{% connected_content <mem_dad38ae6-0fc5-4fa5-8271-6b210ffae92e/>[instance].my.salesforce.com/services/oauth2/token <br>:method post <br> :body client_id=[client_id]_mem_amp_client_secret=[client_secret]_mem_amp_grant_type=client_credentials <br>:save result %}{% endraw %} <br> Bearer {% raw %}{{result.access_token}}</code>{% endraw %} |
 | Content_Type | application/json |
 {: .reset-td-br-1 reset-td-br-2}
 
-![Salesforce Webhook URL、PATCH HTTP メソッド、未加工のテキストリクエストボディ、およびリクエストヘッダーs で構成されるWebhook。]({% image_buster /assets/img/b2b/webhook.png %}){: style="max-width:80%;"}
+![営業チームの Webhook URL、PATCH HTTP メソッド、生のテキストのリクエスト本文、およびリクエストヘッダーを含む、作成中の Webhook。]({% image_buster /assets/img/b2b/webhook.png %}){: style="max-width:80%;"}
 
 #### ステップ 2b: Webhook送信を予約する
 
@@ -202,7 +202,7 @@ Braze のリードステータスを使用して営業チームのリードレ�
 
 ![“lead_status”のフィルターを持つWebフックターゲティングオプションは、"MQL"のいずれでもありません。]({% image_buster /assets/img/b2b/step_3_webhook.png %}){: style="max-width:80%;"}
 
-### ステップ 3: キャンペーンの開始
+### ステップ 3:キャンペーンの開始
 
 [**開始**] を選択し、営業チームでリードステータスの変化 (顧客が MQL リードスコアのしきい値を超える) を監視します。
 

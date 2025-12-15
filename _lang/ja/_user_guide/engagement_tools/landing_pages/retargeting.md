@@ -24,11 +24,7 @@ page_order: 3
 {% tab Using a segment %}
 [セグメントを作成する]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/)場合、「リターゲティング」グループの下で [**ランディングページで送信されたフォーム**] を選択します。
 
-<<<<<<< HEAD
-![フィルタグループを&quot として選択したセグメント作成;ランディングページで送信されたフォーム"]。]({% image_buster /assets/img/landing_pages/segmentation_selected.png %})
-=======
-\![フィルタグループを&quot として選択したセグメント作成;ランディングページで送信されたフォーム"]。]({% image_buster /assets/img/landing_pages/segmentation_selected.png %})
->>>>>>> main
+![フィルターグループを「ランディングページの送信フォーム」としてセグメンテーションを作成する。]({% image_buster /assets/img/landing_pages/segmentation_selected.png %})
 
 ここから、ランディングページのランディングページフォームを送信したかどうかに基づいてユーザをセグメンテーションできます。
 {% endtab %}
@@ -38,11 +34,7 @@ page_order: 3
 
 このランディングページフォームを使用してフォームを送信するすべてのユーザは、選択したメッセージングチャネルを使用してメッセージを送信するか、選択したキャンバスに入力されます。
 
-<<<<<<< HEAD
-![ランディングページメッセージングのトリガー アクション。]({% image_buster /assets/img/landing_pages/trigger.png %})
-=======
-\![ランディングページメッセージングのトリガー アクション。]({% image_buster /assets/img/landing_pages/trigger.png %})
->>>>>>> main
+![メッセージングでランディングページのトリガーアクションを起こす。]({% image_buster /assets/img/landing_pages/trigger.png %})
 
 {% alert note %}
 ランディングページのアクションベースの配信オプションは、アプリ内メッセージでは使用できません。アプリ内メッセージを含むランディングページでフォームを送信したユーザーをターゲットにするには、キャンペーンの**Targeting Options** で**Submitted Form on Landing Page** フィルタを選択します。

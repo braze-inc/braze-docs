@@ -15,7 +15,7 @@
 SQL セグメントエクステンションの作成時に選択できる SQL エディターには、SQL エディターとインクリメンタル SQL エディターの2種類があります。
 
 - **フルリフレッシュ:**セグメントが更新されるたびに、Braze は利用可能なすべてのデータをクエリしてセグメントを更新します。これにより、増分更新よりも多くのクレジットが使用されます。完全更新エクステンションでは、メンバーシップを毎日自動的に更新できますが、増分更新を使用して更新することはできません。
-- **増分更新:**増分更新では、過去2日分のデータのみが計算されるため、コスト効率がよく、毎回使用するクレジットも少なくなります。増分更新 SQL セグメントを作成する場合、メンバーシップを毎日自動的に再生成するように設定できます。これにより、メンバーシップを毎日自動的に更新するようにSegmentを設定できます。これにより、SQL Segment拡張の毎日のデータリフレッシュの費用を削減できます。
+- **増分更新:**インクリメンタルリフレッシュは、クエリーを設定するためのより効率的な方法です。ただし、設定には、もう少し[ステップ s](#step-2-write-your-sql) が含まれます。Segmentの作成時にこれらの追加ステップを完了できる場合は、クエリーの実行単位が少なくなるため、このオプションを選択する価値があります。 
 - **AI SQL ジェネレータ:**AI SQL ジェネレーターを使用すると、プロンプトをプレーン言語で記述し、それをSegmentのSQL クエリーに変換できます。SQL を自分で書く必要もなく、すぐに始めることができます。
 
 {% alert tip %}
@@ -23,7 +23,7 @@ SQL セグメントエクステンションの作成時に選択できる SQL �
 {% endalert %}
 
 {% tabs local %}
-{% tab フルリフレッシュ %}
+{% tab Full refresh %}
 
 完全更新 SQL セグメントエクステンションを作成するには:
 
@@ -31,13 +31,13 @@ SQL セグメントエクステンションの作成時に選択できる SQL �
 2. **Create New Extension**を選択し、**Full refresh**を選択します。<br><br>
    ![]({% image_buster /assets/img/segment/segment_extension_modal.png %}){: style="max-width:50%" }<br><br>
 3. セグメントエクステンションの名前を追加し、SQL を入力します。要件およびリソースについては、[ステップ2](#step-2-write-your-sql)を参照してください。<br><br>
-   ![SQLセグメント拡張の例を示すSQLエディター。]({% image_buster /assets/img_archive/sql_segments_editor.png %}){: style="max-width:60%" }<br><br>
+   ![SQL セグメント拡張の例を示すSQL エディタ。]({% image_buster /assets/img_archive/sql_segments_editor.png %}){: style="max-width:60%" }<br><br>
 4. セグメントエクステンションを保存します。
 
 {% endtab %}
-{% tab 増分更新 %}
+{% tab Incremental refresh %}
 
-増分更新 SQL エディターを使用すると、特定の時間枠内のイベントについて、日付ごとにユーザークエリ集計を行うことができます。増分更新 SQL セグメントエクステンションを作成するには以下を実行します。
+増分更新 SQL セグメントエクステンションを作成するには以下を実行します。
 
 1. [**オーディエンス**] > [**セグメントエクステンション**] に移動します。
 
@@ -46,18 +46,18 @@ SQL セグメントエクステンションの作成時に選択できる SQL �
 {% endalert %}
 
 {:start="2"}
-2\.[**エクステンションを新規作成**] をクリックし、[**増分更新**] を選択します。<br><br>
+2\.**Create New Extension**を選択し、**Incremental refresh**を選択します。<br><br>
    ![]({% image_buster /assets/img/segment/segment_extension_modal.png %}){: style="max-width:50%" }<br><br>
 3\.セグメントエクステンションの名前を追加し、SQL を入力します。要件とリソースについては、[[SQL の作成](#writing-sql)] セクションを参照してください。<br><br>
-   ![インクリメンタルSQLセグメント拡張の例を示すSQLエディター。]({% image_buster /assets/img_archive/sql_segments_editor_incremental.png %}){: style="max-width:60%" }<br><br>
-4\.必要に応じて、[**エクステンションを毎日再生成する**] を選択します。<br><br>
-   ![エクステンションを毎日再生成するチェックボックス。]({% image_buster /assets/img_archive/sql_segments_regenerate.png %}){: style="max-width:60%" }<br><br>
+   ![増分SQL セグメント拡張の例を示すSQL エディタ。]({% image_buster /assets/img_archive/sql_segments_editor_incremental.png %}){: style="max-width:60%" }<br><br>
+4. 必要に応じて、[**エクステンションを毎日再生成する**] を選択します。<br><br>
+   ![拡張機能を毎日再生成するには、チェックボックスをオンにします。]({% image_buster /assets/img_archive/sql_segments_regenerate.png %}){: style="max-width:60%" }<br><br>
    選択すると、Braze はセグメントメンバーシップを毎日自動的に更新します。つまり、毎日会社のタイムゾーンの午前0時 (1時間遅れる可能性があります) に、Braze はセグメントの新規ユーザーを確認し、自動的にセグメントに追加します。セグメントエクステンションを 7 日間使用しなかった場合、Braze は毎日の再生成を自動的に一時停止します。未使用のセグメントエクステンションとは、キャンペーンやキャンバスの一部ではないエクステンションです (エクステンションが「使用済み」と見なされるには、キャンペーンまたはキャンバスがアクティブでなくてもかまいません)。<br><br>
 5. セグメントエクステンションを保存します。
 
 {% endtab %}
 
-{% tab AI SQLジェネレーター %}
+{% tab AI SQL Generator %}
 
 {% alert note %}
 AI SQL ジェネレーターは現在、ベータ機能としてご利用いただけます。このベータトライアルへの参加に興味がある場合は、カスタマーサクセスマネージャーにお問い合わせください。
@@ -65,12 +65,12 @@ AI SQL ジェネレーターは現在、ベータ機能としてご利用いた�
 
 AI SQL ジェネレーターは OpenAI を搭載した [GPT](https://openai.com/gpt-4) を活用して、お客様の SQL セグメントに SQL を推奨します。
 
-![「先月に通知を受信したユーザー」というプロンプトが表示された AI SQL ジェネレーター]({% image_buster /assets/img/ai_sql_generator.png %}){: style="max-width:70%;"}
+![プロンプト&quot を指定したAI SQL ジェネレータ。先月通知&quot を受信したユーザ。]({% image_buster /assets/img/ai_sql_generator.png %}){: style="max-width:70%;"}
 
 AI SQL ジェネレーターを使用するには、以下を実行します。
 
 1. フルリフレッシュまたはインクリメンタルリフレッシュを使用して[SQL Segment]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments) を作成した後、**Launch AI SQL Generator** を選択します。
-2. プロンプトを入力し、[**生成**] をクリックしてプロンプトを SQL に変換します。
+2. プロンプトを入力し、**Generate** を選択してプロンプトをSQL に変換します。
 3. 生成された SQL を確認して正しいことを確認し、セグメントを保存します。
 
 #### プロンプトの例
@@ -90,7 +90,7 @@ AI SQL ジェネレーターを使用するには、以下を実行します。
 実行に20分以上かかる SQL クエリはタイムアウトします。
 {% endalert %}
 
-エクステンションの処理が完了したら、セグメントエクステンションを使用して [セグメントを作成[]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension#step-5-use-your-extension-in-a-segment) し、この新しいセグメント]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension#step-5-use-your-extension-in-a-segment)をキャンペーンやキャンバスでターゲットにすることができます。
+拡張機能の処理が完了したら、[Segment拡張機能を使用して]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension#step-5-use-your-extension-in-a-segment)を作成し、キャンペーンとキャンバスでこの新しいSegmentを対象にすることができます。
 
 ### ステップ 2:SQL を記述する
 
@@ -101,7 +101,7 @@ SQL クエリは、[Snowflake 構文](https://docs.snowflake.com/en/sql-referenc
 {% endalert %} 
 
 {% tabs %}
-{% tab SQLエディタ %}
+{% tab SQL Editor %}
 
 SQL はさらに、次のルールに従う必要があります。
 
@@ -122,24 +122,24 @@ SELECT DISTINCT user_id FROM "INSERT TABLE NAME"
 
 - `DECLARE` 文は使用できません。
 {% endtab %}
-{% tab 増分 SQL エディター %}
+{% tab Incremental SQL Editor %}
 
 すべての増分更新クエリは、クエリとスキーマの詳細という2つの部分で構成されます。
 
 1. エディターで、目的のテーブルから `user_id` を選択するクエリを記述します。
 2. エディターの上のフィールドから [**演算子**]、[**回数**]、および [**期間**] を選択して、スキーマの詳細を追加します。クエリでは、集計列の合計が {% raw %}`{{operator}}` および `{{number of times}}`{% endraw %} プレースホルダーで指定された特定の条件を満たすかどうかが確認されます。これは、従来のセグメントエクステンションを作成するワークフローと同様に機能します。<br><br>
    - **演算子:**イベントの発生回数が、発生回数よりも多いか、少ないか、等しいかを示します。<br>
-   ![「超 (過去)」が選択された演算子フィールド。]({% image_buster /assets/img_archive/sql_segments_operator.png %})<br><br>
+   !["Ther than"が選択されたオペレータフィールド。]({% image_buster /assets/img_archive/sql_segments_operator.png %})<br><br>
    - **回数:**演算子に関してイベントを評価したい回数。<br>
-   ![「5」が入力された回数フィールド。]({% image_buster /assets/img_archive/sql_segments_times.png %})<br><br>
+   !["5"を入力した回数。]({% image_buster /assets/img_archive/sql_segments_times.png %})<br><br>
    - **期間:**イベントのインスタンスを確認する日数 (1 ～ 730日)。この期間は、現在の日を基準とした過去の日数を指します。次の例は、過去365日間にイベントを5回以上実行したユーザーのクエリを示しています。<br>
-   ![「365」が入力された期間フィールド。]({% image_buster /assets/img_archive/sql_segments_period.png %})
+   ![期間フィールド(" 365" を入力)。]({% image_buster /assets/img_archive/sql_segments_period.png %})
 
 次の例では、結果のセグメントには、指定した日付以降の過去3日間に `favorited` イベントを3回以上実行したユーザーが含まれます。
 
-![インクリメンタルSQLセグメント拡張の例を示すSQLエディター。]({% image_buster /assets/img_archive/sql_segments_editor_incremental.png %}){: style="max-width:65%" }
+![増分SQL セグメント拡張の例を示すSQL エディタ。]({% image_buster /assets/img_archive/sql_segments_editor_incremental.png %}){: style="max-width:65%" }
 
-![増分 SQL セグメントエクステンションの SQL プレビュー。]({% image_buster /assets/img_archive/sql_segments_incremental_preview.png %}){: style="max-width:85%" }
+![増分SQL セグメント拡張のSQL プレビュー。]({% image_buster /assets/img_archive/sql_segments_incremental_preview.png %}){: style="max-width:85%" }
 
 {% alert tip %}
 増分更新セグメントでは、2日以上前に発生したイベントである遅延イベント (キャプチャされた時点で送信されていない SDK イベントなど) が考慮されます。
@@ -186,7 +186,7 @@ LIMIT 10
 0 個のイベントを持つユーザーを特に対象にする場合を除き、SQL を反転する必要はありません。**Invert SQL**が選択されている場合は、機能が必要であり、Segmentが目的のオーディエンスと一致していることを確認します。例えば、照会が少なくとも1 つのイベントを持つユーザーs を対象とする場合、逆にすると、0 のイベントを持つユーザーs のみを対象とします。
 {% endalert %}
 
-![&quot という名前のセグメント拡張;過去30 日間で1 ～4 メール s をクリックしました。SQL を反転するオプションが選択されています。]({% image_buster /assets/img_archive/sql_segment_invert_sql.png %}){: style="max-width:90%;"}
+![&quot という名前のセグメント拡張;直近30 日間で1 ～4 メール s をクリックして、SQL を反転するオプションを選択します。]({% image_buster /assets/img_archive/sql_segment_invert_sql.png %}){: style="max-width:90%;"}
 
 ## セグメントのメンバーシップの更新
 
@@ -202,7 +202,7 @@ SQL を使用して作成されたセグメントエクステンションのセ�
 
 SQL セグメントエクステンションを選択すると、そのエクステンションが使用されている場所を表示したり、エクステンションをアーカイブしたり、[セグメントのメンバーシップを手動で更新](#refreshing-segment-membership)したりできます。
 
-![SQL Segmentの使用場所を示すSQL エディタのMessaging Use セクション。]({% image_buster /assets/img_archive/sql_segments_usage.png %}){: style="max-width:70%;"}
+![SQL Segmentが使用されている場所を示すSQL エディタの「メッセージングの使用」セクション。]({% image_buster /assets/img_archive/sql_segments_usage.png %}){: style="max-width:70%;"}
 
 ### 更新設定の指定
 
@@ -222,7 +222,7 @@ Snowflake クレジットは機能間で共有されません。例えば、SQL 
 
 クレジットは、毎月1日午前12 時 (UTC) に5にリセットされます。クレジット使用状況パネルで、その月のクレジット使用状況を監視できます。[**セグメントエクステンション**] ページから、[<i class="fa-solid fa-chart-column"></i>**SQL クレジット使用状況を表示**] をクリックします。
 
-![SQL セグメントエクステンションページの SQL クレジット使用状況パネル]{% image_buster /assets/img_archive/sql_segments_credits.png %}{: style="max-width:60%"}
+![SQL セグメントエクステンションページの SQL クレジット使用状況パネル]({% image_buster /assets/img_archive/sql_segments_credits.png %}){: style="max-width:60%"}
 
 クレジットがゼロになると、次のことが起こります。
 

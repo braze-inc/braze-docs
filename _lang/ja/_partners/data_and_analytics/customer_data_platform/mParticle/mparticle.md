@@ -25,15 +25,17 @@ BrazeとmParticleの統合により、2つのシステム間の情報の流れ�
 | ----------- | ----------- |
 | mParticle アカウント | このパートナーシップを利用するには、[mParticleアカウント](https://app.mparticle.com/login)が必要です。 |
 | Braze インスタンス | Braze インスタンスは[API 概要ページ]({{site.baseurl}}/api/basics/#endpoints)にあります (`US-01`、`US-02` など)。 |
-| Brazeアプリ識別子キー | アプリ識別子キー。<br><br>これは、**Braze ダッシュボード > 設定の管理 > API キー**内にあります。 |
-| ワークスペース REST APIキー | （サーバー間）Braze REST APIキー<br><br>これは、**Braze ダッシュボード > 開発者コンソール > API 設定 > API キー**内で作成できます。 |
+| Brazeアプリ識別子キー | アプリ識別子キー。<br><br>これは、ダッシュボードの**Manage Settings**>**API Keyで**確認できる。 |
+| ワークスペース REST APIキー | （サーバー間）Braze REST APIキー<br><br>これは、ダッシュボードの**Developer Console**>**API Settings**>**API Keyで**作成できる。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 統合
 
 ### オーディエンス
 
-BrazeとmParticleのパートナーシップを利用して、統合を構成し、mParticleのオーディエンスを直接Brazeにインポートしてリターゲティングを行い、1つのシステムから別のシステムへのデータの完全なループを作成します。設定するすべての統合は、アカウントのデータポイントボリュームの対象となります。
+BrazeとmParticleのパートナーシップを利用して、統合を構成し、mParticleのオーディエンスを直接Brazeにインポートしてリターゲティングを行い、1つのシステムから別のシステムへのデータの完全なループを作成します。 
+
+設定した統合はすべてデータポイントを記録する。Brazeデータポイントのニュアンスについてご質問があれば、Brazeアカウントマネージャーがお答えできる。
 
 #### オーディエンスの転送
 
@@ -75,7 +77,7 @@ Braze 配列属性の最大長は 25 です。ユーザーがメンバーとな�
 
 mParticleは、ユーザーが属する各オーディエンスに対してブール値のカスタム属性を作成します。たとえば、「Possible Parisians」という mParticle オーディエンスの場合、フィルター `In Possible Parisians` - `equals` - `true` でこれらのユーザーをセグメント化できます。
 
-![mParticle カスタム属性]({% image_buster /assets/img_archive/mparticle2.png %})
+![mParticleカスタム属性]({% image_buster /assets/img_archive/mparticle2.png %})
 
 ##### 単一の配列属性と単一の文字列属性{#both-1}
 
@@ -118,18 +120,18 @@ mParticleでオーディエンスを作成するには:
 
 #### ステップ2:Braze でユーザーをセグメント化する
 
-Braze でこれらのユーザーのセグメントを作成するには、**Segments** の **エンゲージメント** に移動し、セグメントに名前を付けます。次のものは、**セグメントを送信する**ために選択したオプションに応じた2つのセグメントの例です。各オプションの詳細については、[転送オーディエンス](#forwarding-audiences.)を参照してください。
+Braze でこれらのユーザーのセグメントを作成するには、**Segments** の **エンゲージメント** に移動し、セグメントに名前を付けます。次のものは、**セグメントを送信する**ために選択したオプションに応じた2つのセグメントの例です。各オプションの詳細については、[転送のオーディエンスを](#forwarding-audiences)参照のこと。
 
-- **単一配列属性:**`SegmentMembershipArray`をフィルターとして選択します。次に、[値を含む] オプションを使用して目的のオーディエンス ID を入力します。![「値を含む」およびオーディエンス ID で設定された mParticle セグメントフィルター「SegmentMembershipArray」。]({% image_buster /assets/img_archive/mparticle5.png %})<br><br>
-- **セグメントごとに1つの属性:**カスタム属性をフィルターとして選択します。次に、「等しい」オプションを使用し、適切なロジックを選択します。![「equals」と「true」で設定された mParticle セグメントフィルター「パリジャンの候補者内」。]({% image_buster /assets/img_archive/mparticle3.png %})
+- **単一配列属性:**`SegmentMembershipArray`をフィルターとして選択します。次に、[値を含む] オプションを使用して目的のオーディエンス ID を入力します。![「値を含む」とオーディエンス ID が設定されている mParticle セグメントフィルター「SegmentMembershipArray」。]({% image_buster /assets/img_archive/mparticle5.png %})<br><br>
+- **セグメントごとに1つの属性:**カスタム属性をフィルターとして選択します。次に、「等しい」オプションを使用し、適切なロジックを選択します。![mParticle Segment フィルター「in possible parisians」を「等しい」と「true」に設定します。]({% image_buster /assets/img_archive/mparticle3.png %})
 
 保存すると、キャンバスやキャンペーンの作成時にターゲットユーザーのステップでこのSegmentを参照できます。
 
 #### 接続の無効化と削除
 
-mParticleはBraze内のセグメントを直接管理しないため、対応するmParticleオーディエンス接続が削除または無効化された場合でも、セグメントは削除されません。この場合、mParticle は各ユーザーからオーディエンスを除去するために Braze でオーディエンスユーザー属性を更新しません。
+mParticleはBrazeで直接セグメンテーションを管理しないため、対応するmParticleオーディエンス接続が削除または無効化されても、セグメンテーションは削除されない。この場合、mParticle は各ユーザーからオーディエンスを除去するために Braze でオーディエンスユーザー属性を更新しません。
 
-削除前に Braze ユーザーからオーディエンスを除去するには、オーディエンスフィルターを調整してオーディエンスのサイズを強制的に0にしてから、オーディエンスを削除します。オーディエンスの計算が完了して0人のユーザーが返された後に、オーディエンスを削除します。次に、単一属性オプションの場合は Braze でオーディエンスのメンバーシップが `false` に更新されるか、配列形式からオーディエンス ID が削除されます。
+削除前に Braze ユーザーからオーディエンスを除去するには、オーディエンスフィルターを調整してオーディエンスのサイズを強制的に0にしてから、オーディエンスを削除します。オーディエンスの計算が完了して0人のユーザーが返された後に、オーディエンスを削除します。その後、オーディエンスメンバーシップはBrazeで更新され、単一属性オプションの場合は`false` 、配列形式からオーディエンスIDを削除する。
 
 ## データマッピング
 
@@ -139,7 +141,7 @@ mParticleはBraze内のセグメントを直接管理しないため、対応す
 
 ### Brazeの出力設定を構成する
 
-mParticleで、**セットアップ > 出力 > 出力の追加**に移動し、**Braze**を選択してBrazeキットの構成を開封します。完了したら**保存**します。
+mParticleで、**Setup > Outputs > Add Outputsと**進み、**Brazeを**選択してBrazeキット設定を開封する。完了したら**保存**します。
 
 | 設定名 | 説明 |
 | ------------ | ----------- |
@@ -154,9 +156,9 @@ mParticleで、**セットアップ > 出力 > 出力の追加**に移動し、*
 
 ### 組み込みキットの統合
 
-mParticle と Braze SDK は、埋め込みキット統合によってアプリケーションに表示されます。ただし、直接の Braze 統合とは異なり、mParticle が Braze SDK のメソッドのほとんどの呼び出しを処理します。ユーザーデータの追跡に使用する mParticle メソッドは、Braze SDK メソッドに自動的に マッピングされます。 
+mParticleとBrazeのSDKは、組み込みキットの統合を通じて、アプリケーション上に存在する。ただし、直接の Braze 統合とは異なり、mParticle が Braze SDK のメソッドのほとんどの呼び出しを処理します。ユーザーデータの追跡に使用する mParticle メソッドは、Braze SDK メソッドに自動的に マッピングされます。 
 
-これらのmParticleのSDKの[Android](https://github.com/mparticle-integrations/mparticle-android-integration-appboy)、[iOS](https://github.com/mparticle-integrations/mparticle-apple-integration-appboy)、[Web](https://github.com/Appboy/integration-appboy)のマッピングはオープンソースであり、[mParticleのGitHubページ](https://github.com/mparticle-integrations)で見つけることができます。 
+mParticleの[Android](https://github.com/mparticle-integrations/mparticle-android-integration-appboy)、[iOS](https://github.com/mparticle-integrations/mparticle-apple-integration-appboy)、[Web](https://github.com/mparticle-integrations/mparticle-javascript-integration-braze)向けSDKのこれらのマッピングはオープンソースであり、[mParticleのGitHubページで](https://github.com/mparticle-integrations)見ることができる。 
 
 埋め込みキット SDK 統合により、Braze のフルスイート機能 (プッシュ、アプリ内メッセージ、および関連するすべてのメッセージ分析トラッキング) を利用できます。
 
@@ -180,7 +182,7 @@ mParticle の[Braze イベントキット統合ガイド](https://docs.mparticle
 
 #### ステップ3:Braze 出力の接続の設定
 
-mParticle で **[Connections] > [Connect] > [[目的のプラットフォーム]] > [Connect Output]** に移動し、出力として Braze を追加します。完了したら**保存**します。
+mParticleで、**Connections**>**Connect**>**[希望のプラットフォーム]**>**Connect Outputに**移動し、出力としてBrazeを追加する。次に、**Save**を選択します。
 
 ![]({% image_buster /assets/img_archive/mParticle_event_config.png %})
 
@@ -191,7 +193,7 @@ mParticle で **[Connections] > [Connect] > [[目的のプラットフォーム]
 mParticleのサーバーサイドSDK（例えば、Ruby、Pythonなど）を使用している場合、バックエンドデータをBrazeにルーティングするためのアドオンです。Braze でこのサーバー間統合を設定するには、[mParticle のドキュメント](https://docs.mparticle.com/guides/platform-guide/connections/)の説明に従ってください。
 
 {% alert important %}
-サーバー間統合では、アプリ内メッセージング、コンテンツカード、プッシュ通知などの Braze UI 機能はサポートされていません。この方法では利用できないデバイスレベルのフィールドなど、自動的にキャプチャされたデータも存在します。 
+サーバー間統合では、アプリ内メッセージング、コンテンツカード、プッシュ通知などのBraze UI機能はサポートされない。この方法では利用できないデバイスレベルのフィールドなど、自動的にキャプチャされたデータも存在します。 
 
 これらの機能を使用したい場合は、並列統合を検討してください。
 
@@ -200,7 +202,7 @@ mParticleのサーバーサイドSDK（例えば、Ruby、Pythonなど）を使�
 
 #### Braze 出力の接続の設定
 
-mParticle で **[Connections] > [Connect] > [[目的のプラットフォーム]] > [Connect Output]** に移動し、出力として Braze を追加します。完了したら**保存**します。 
+mParticleで、**Connections > Connect > [希望のプラットフォーム] > Connect Outputに**移動し、出力としてBrazeを追加する。完了したら**保存**します。 
 
 ![]({% image_buster /assets/img_archive/mParticle_connections.png %})
 
@@ -213,10 +215,10 @@ mParticle で **[Connections] > [Connect] > [[目的のプラットフォーム]
 #### データ型
 両方のプラットフォーム間でサポートされているデータ型はすべてではありません。
 - [カスタムイベントプロパティ]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)は、文字列、数値、ブール値、または日付オブジェクトをサポートします。配列やネストされたオブジェクトはサポートされていません。
-- [カスタム属性]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/)は文字列、数値、ブール値、日付オブジェクト、および配列をサポートしますが、オブジェクトやネストされたオブジェクトはサポートしません。 
+- [カスタム属性は]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/)、文字列、数値、ブーリアン、日付オブジェクト、配列をサポートするが、オブジェクトや階層化されたオブジェクトはサポートしない。 
 
 {% alert note %}
-Braze は `Time` タイプのカスタム属性で0年以前または3000年以降のタイムスタンプをサポートしていません。Braze は、これらの値が mParticle によって送信されると値を取り込みますが、値は文字列として保存されます。
+Braze は `Time` タイプのカスタム属性で0年以前または3000年以降のタイムスタンプをサポートしていません。Brazeは、これらの値がmParticleから送信されたときに取り込むが、値は文字列として保存される。
 {% endalert %}
 
 #### データマッピング
@@ -231,7 +233,7 @@ Braze は `Time` タイプのカスタム属性で0年以前または3000年以�
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 #### ユーザーアイデンティティマッピング
-各mParticle出力について、`external_id`としてBrazeに送信する外部IDタイプを選択できます。デフォルト値は顧客IDですが、`MPID`などの別のIDをBrazeに`external_id`として送信するようにマッピングすることもできます。顧客 ID 以外の識別子を選択すると、Braze でのデータの送信方法に影響する場合があることに注意してください。 
+各mParticle出力について、`external_id`としてBrazeに送信する外部IDタイプを選択できます。デフォルト値は顧客IDですが、`MPID`などの別のIDをBrazeに`external_id`として送信するようにマッピングすることもできます。顧客ID以外の識別子を選択すると、Brazeでのデータ送信方法に影響を与える可能性があることに注意すること。 
 
 例えば、MPIDをBraze `external_id`にマッピングすると、次のような効果があります:
 - MPIDが割り当てられるタイミングの性質上、すべてのユーザーはセッション開始時に`external_id`が割り当てられます。
@@ -247,9 +249,9 @@ Braze へ消去要求を転送するには、Braze へのデータ主体要求�
 
 #### ユーザー属性/識別子の強化を有効にする (サーバー間のみ) {#enriched}
 
-mParticle接続設定では、Brazeは**拡張ユーザー属性を含める**をオフにすることを推奨します。有効にすると、mParticleは、既存のプロファイルから利用可能なすべてのユーザー属性（標準属性、カスタム属性、計算された属性など）を各ログイベントでBrazeに転送します。これにより、mParticleが各呼び出しで同じ変更されていない属性をBrazeに送信するため、データポイントの消費が多くなります。
+mParticle接続設定では、Brazeは**拡張ユーザー属性を含める**をオフにすることを推奨します。有効にすると、mParticleは、既存のプロファイルから利用可能なすべてのユーザー属性（標準属性、カスタム属性、計算された属性など）を各ログイベントでBrazeに転送します。これは、mParticleがBrazeに毎回同じ変更されていない属性を送信するため、データポイントを大量に消費する結果となる。
 
-たとえば、ユーザーが最初のセッションで名、姓、電話番号を追加し、その後、同じ情報とメールを追加してニュースレターに登録すると、ニュースレター登録イベントがトリガーされるとします。
+例えば、ユーザーが最初のセッションで名、姓、電話番号を追加し、その後ニュースレターに登録し、同じ情報とメールを追加した場合、ニュースレター登録イベントがトリガーされる：
 - オンにすると（デフォルト）、FIVEつのデータポイントが発生します。（サインアップイベント、メールアドレス、名、姓、電話番号）
 - オフにすると、2つのデータポイント（サインアップイベントとメールアドレス）が発生します
 
@@ -261,7 +263,7 @@ mParticle接続設定では、Brazeは**拡張ユーザー属性を含める**�
 
 **リッチユーザー属性を含める**をオフにする際に注意すべき点がいくつかあります:
 1. サーバー間統合はmParticleイベントAPIを使用してイベントをBrazeに送信します。各リクエストはイベントによってトリガーされます。メールアドレスの更新など、ユーザー属性が変更されても、そのユーザー属性が特定のイベント (プロファイル更新カスタムイベントなど) に関連付けられていない場合、新しい値は、ユーザーによってトリガーされる次のイベントのペイロードで「強化属性」として Braze などの出力に渡されるだけです。**Include Enriched User Attributes**がオフになっている場合、この新しい属性値は特定のイベントに関連付けられていないため、Brazeに渡されません。
-  - これを解決するために、更新された特定のユーザー属性のみをBrazeに送信する「ユーザー属性更新」イベントを別途作成することをお勧めします。この方法では、「ユーザー属性更新」イベントの追加データポイントは記録されますが、データポイントの消費は、この機能が有効になっておりすべての呼び出しですべてのユーザー属性が送信される場合よりもはるかに少なくなることに注意してください。
+  - これを解決するために、更新された特定のユーザー属性のみをBrazeに送信する「ユーザー属性更新」イベントを別途作成することをお勧めします。このアプローチでは、「ユーザー属性が更新された」イベントに対して追加のデー タポイントを記録することになるが、データポイントの使用量は、この機能をイ ネーブルメントにしたすべての呼ですべてのユーザー属性を送信するよりもはるかに少 ないことに注意。
 2. 計算された属性は、強化されたユーザー属性としてBrazeに渡されるため、「強化されたユーザー属性」がオフになると、これらはもはやBrazeに渡されません。「強化されたユーザー属性」がオフになっている場合、すべての属性をプッシュすることなく、[計算された属性フィード](https://docs.mparticle.com/guides/platform-guide/calculated-attributes/using-calculated-attributes/#forward-calculated-attributes-in-the-calculated-attributes-feed)がBrazeに計算された属性を転送するのに役立ちます。計算された属性が変更されると、フィードはBrazeに下流の更新を送信します。 
 
 ### Brazeに不要または重複するデータを送信する

@@ -30,11 +30,11 @@ noindex: true
 
 # プッシュ統合
 
-## ステップ1:APNトークンをアップロードする。
+## ステップ1:APN トークンをアップロードする
 
 {% multi_lang_include developer_guide/swift/apns_token.md %}
 
-## ステップ2: プッシュ機能を有効にする
+## ステップ2:プッシュ機能を有効にする
 
 プロジェクト設定で、［**機能**］ タブの ［**プッシュ通知**］ 機能がオンになっていることを確認します。
 
@@ -44,7 +44,7 @@ noindex: true
 
 ![[一般] タブが表示されているXcode プロジェクトの設定。このタブでは、[署名を自動的に管理する] オプションはオフになっています。]({% image_buster /assets/img_archive/xcode8_auto_signing.png %})
 
-## ステップ3: プッシュ通知に登録する
+## ステップ3:プッシュ通知に登録する
 
 ユーザーのデバイスを APNs に登録するには、アプリの `application:didFinishLaunchingWithOptions:` デリゲートメソッド内に適切なコードサンプルが含まれている必要があります。アプリケーションのメインスレッドですべてのプッシュ統合コードを呼び出すようにしてください。
 
@@ -157,7 +157,7 @@ APNs の登録が完了したら、次のメソッドを変更し結果として
 ```
 
 {% endtab %}
-{% tab SWIFT %}
+{% tab swift %}
 
 アプリの `application(_:didRegisterForRemoteNotificationsWithDeviceToken:)` メソッドに次のコードを追加します。
 
@@ -218,7 +218,7 @@ iOS 10以降に対してビルドする場合は、`UserNotifications` フレー
 フォアグラウンド通知がクリックされると、iOS 10のプッシュデリゲート `userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:` が呼び出され、Braze はプッシュクリックイベントをログに記録します。
 
 {% endtab %}
-{% tab SWIFT %}
+{% tab swift %}
 
 アプリの `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` メソッドに次のコードを追加します。
 
@@ -261,7 +261,7 @@ func userNotificationCenter(_ center: UNUserNotificationCenter,
 
 iOS 10では、プッシュがクリックされたときに `application:didReceiveRemoteNotification:fetchCompletionHandler:` を呼び出さないように動作が更新されました。そのため、iOS 10以降に対応するビルドに更新せず、`UserNotifications` フレームワークを使用する場合、古いスタイルのデリゲートの両方から Braze を呼び出す必要があり、以前の統合とは一線を画しています。
 
-iOS 10より前の SDK に対してビルドするアプリの場合は、以下の手順を使用します。
+iOS 10のSDK（< ）に対してビルドするアプリについては、以下の手順を使用する：
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -282,7 +282,7 @@ iOS 10でプッシュ分析をサポートするには、アプリの `applicati
 ```
 
 {% endtab %}
-{% tab SWIFT %}
+{% tab swift %}
 
 プッシュ通知でオープントラッキングを有効にするには、アプリの `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` メソッドに次のコードを追加します。
 

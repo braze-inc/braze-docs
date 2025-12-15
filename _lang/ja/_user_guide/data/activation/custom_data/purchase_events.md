@@ -15,7 +15,7 @@ search_rank: 3
 
 ## 購入イベントのログ記録
 
-[`/users/track` エンドポイントを介して]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) [購入オブジェクトを]({{site.baseurl}}/api/objects_filters/purchase_object/)渡すか、以下にリストアップしたSDKライブラリーのいずれかを使用することで、購入を記録することができる。
+購入を記録するには、[purchase object]({{site.baseurl}}/api/objects_filters/purchase_object/) を[`/users/track` エンドポイント]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) に渡すか、以下のSDKライブラリのいずれかを使用します。
 
 以下に、購入をログ記録するために使用されるさまざまなプラットフォームでの方法を示します。これらのページには、購入イベントにプロパティと数量を追加する方法に関するドキュメントもあります。これらのプロパティに基づいて、さらにユーザーのターゲットを絞り込むことができます。
 
@@ -24,7 +24,7 @@ search_rank: 3
 - [Web]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=web)
 - [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/analytics/#logging-purchases)
 - [Unity]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=unity)
-- [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#logging-purchases)
+- [.NET MAUI (旧サマリン)]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#logging-purchases)
 - [Roku]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=roku)
 
 ## 購入データの表示
@@ -59,11 +59,7 @@ Braze で購入データを使用する方法には、いくつかがありま�
 
 各フィルターの詳細については、[セグメンテーションフィルター]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/)の用語集を参照し、「購入行動」でフィルター処理してください。
 
-<<<<<<< HEAD
-![ちょうど3回購入したユーザーをフィルターにかける]({% image_buster /assets/img/purchase_filter_example.gif %}){: style="max-width:80%;"}
-=======
-\![ちょうど3回購入したユーザーをフィルターにかける]({% image_buster /assets/img/purchase_filter_example.gif %}){: style="max-width:80%;"}
->>>>>>> main
+![ちょうど 3 回購入したユーザーのフィルター適用]({% image_buster /assets/img/purchase_filter_example.gif %}){: style="max-width:80%;"}
 
 {% alert tip %}
 特定の購入の発生回数に基づいてセグメンテーションを行うには、その購入を個別に[増分カスタム属性]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#custom-attribute-storage)として記録します。
@@ -73,7 +69,7 @@ Braze で購入データを使用する方法には、いくつかがありま�
 
 ユーザーから収集する他のタイプのデータと同様に、購入データを使用し、Liquid を通じてメッセージングのパーソナライゼーションができます。例えば、先ほど購入した商品に似た商品を勧める、パーソナライズされたメールをユーザーに送信できます。
 
-例えば、ユーザーが最後に購入した商品の名前を格納する購入イベントプロパティ `last_purchased_product` があるとします。このプロパティを使用すると、メールメッセージを次のようにパーソナライズできます。
+ユーザーが購入した最後の商品の名前を格納する`last_purchased_product` という購入予定プロパティがあるとします。このプロパティを使用して、次のようにメールをパーソナライズできます。
 
 {% raw %}
 
@@ -89,7 +85,7 @@ Braze で購入データを使用する方法には、いくつかがありま�
 
 {% endraw %}
 
-この例のメッセージは、`last_purchased_product` プロパティに基づいてパーソナライズされています。ユーザーが最後に購入した製品が「ランニングシューズ」だった場合、ランニングパンツとウォーターボトルを勧めるメッセージが届きます。最後の商品が「ヨガマット」だった場合は、ヨガブロックとストラップを勧めるメッセージが届きます。`last_purchased_product` がそれ以外の場合、一般的なお礼メッセージが届きます。
+この例のメッセージは、`last_purchased_product` プロパティに基づいてパーソナライズされています。ユーザーが最後に購入した製品が「ランニングシューズ」だった場合、ランニングパンツとウォーターボトルを勧めるメッセージが届きます。最後の商品が"Yoga Mat"の場合、ヨガブロックとストラップを推薦するメッセージを受け取ります。`last_purchased_product` がそれ以外の場合、一般的なお礼メッセージが届きます。
 
 ### トリガーメッセージ
 
@@ -183,23 +179,15 @@ Braze には、ユーザーの LTV を把握するために参照できる主な
 
 **購入イベントプロパティに基づくトリガーの例:**
 
-<<<<<<< HEAD
-![HeadphoneMartと同じブランド名のヘッドホンを購入したユーザー群にキャンペーンを配信するアクション型配信設定。]({% image_buster /assets/img/purchase2.png %}){: style="max-width:80%;margin-left:15px;"}
-=======
-\![HeadphoneMartと同じブランド名のヘッドホンを購入したユーザー群にキャンペーンを配信するアクション型配信設定。]({% image_buster /assets/img/purchase2.png %}){: style="max-width:80%;margin-left:15px;"}
->>>>>>> main
+![ブランド名が HeadphoneMart に等しいヘッドフォンを購入したユーザーにキャンペーンを送信するアクションベースの配信設定]({% image_buster /assets/img/purchase2.png %}){: style="max-width:80%;margin-left:15px;"}
 
 詳細については、「[購入プロパティオブジェクト]({{site.baseurl}}/api/objects_filters/purchase_object/#purchase-properties-object)」を参照してください。
 
 ### イベントプロパティのセグメンテーション
 
-イベントプロパティのセグメンテーションにより、取得したカスタムイベントのみでなく、それらのイベントに関連するプロパティにも基づいて、ユーザーをターゲットにすることができます。この機能により、購入イベントとカスタムイベントをセグメント化するときのフィルターオプションが追加されます。
+イベントプロパティ セグメンテーションを使用すると、取得したカスタムイベントだけでなく、それらのイベントに関連付けられたプロパティーに基づいてユーザーs をターゲットにできます。これにより、購買とカスタムイベントsをSegmentするときに、追加のフィルター設定オプションが追加されます。
 
-<<<<<<< HEAD
 ![]({% image_buster /assets/img/nested_object3.png %}){: style="max-width:80%;margin-left:15px;"}
-=======
-\![]({% image_buster /assets/img/nested_object3.png %}){: style="max-width:80%;margin-left:15px;"}
->>>>>>> main
 
 これらのセグメンテーションフィルターには次のようなものがあります。
 - 最後のY 日に、値がV X 回のプロパティY を持つカスタムイベントを実行しました
@@ -222,11 +210,11 @@ Braze には、ユーザーの LTV を把握するために参照できる主な
 
 Brazeでは、購入オブジェクト`product_id`の一般的な命名規則を提供しています。`product_id` を選択する場合、Braze は、記録されたすべての項目をこの `product_id` でグループ化することを目的として、(SKU ではなく) 製品名や製品カテゴリなどの単純な名前を使用することを提案します。
 
-これにより、製品をセグメンテーションとトリガーのために識別しやすくなります。 
+これにより、セグメンテーションとトリガーの識別が簡単になります。 
 
 ## 禁止リストへの購入イベントの追加
 
-データポイントが多すぎたり、マーケティング戦略に役立たなくなったり、エラーで記録された購入イベントを識別することがある。開発チームがアプリや Web サイトのバックエンドからこのデータを削除する作業をしている間、このデータが Braze に送信されないようにするために、カスタムデータオブジェクトを禁止リストに入れておくことができます。
+データポイント数が多すぎたり、マーケティング 戦略に役に立たなくなったり、エラーに記録されたりする購入イベントを特定することがあります。開発チームがアプリや Web サイトのバックエンドからこのデータを削除する作業をしている間、このデータが Braze に送信されないようにするために、カスタムデータオブジェクトを禁止リストに入れておくことができます。
 
 Braze ダッシュボードでは、[**データ設定**] > [**製品**] から禁止リストを管理できます。詳細については、「[カスタムデータの管理]({{site.baseurl}}/user_guide/data/custom_data/managing_custom_data/)」を参照してください。
 

@@ -1,5 +1,5 @@
 ---
-nav_title: 位置情報とジオフェンス
+nav_title: ロケーション&amp;アンプ; ジオフェンスs
 article_title: iOS の位置情報とジオフェンス
 platform: iOS
 page_order: 6
@@ -98,11 +98,11 @@ iOS では、1 つのアプリに保存できるジオフェンスは 20 個ま�
 
 ### 場所ページからジオフェンスを有効にする
 
-![Brazeの位置情報ページのジオフェンスオプション]({% image_buster /assets/img_archive/enable-geofences-locations-page.png %})
+![Brazeの場所のジオフェンスを選択できます。]({% image_buster /assets/img_archive/enable-geofences-locations-page.png %})
 
 ### 設定ページからジオフェンスを有効にする
 
-![Braze の設定ページにあるジオフェンスのチェックボックス。]({% image_buster /assets/img_archive/enable-geofences-app-settings-page.png %})
+![Braze 設定 s ページにあるジオフェンス チェックボックス。]({% image_buster /assets/img_archive/enable-geofences-app-settings-page.png %})
 
 ## 自動ジオフェンスリクエストを無効にする
 

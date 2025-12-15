@@ -34,7 +34,7 @@ Tealium EventStream は、データの中央に位置するデータ収集およ
 Tealium AudienceStreamはオムニチャネル 顧客 セグメンテーションでリアルタイムのアクションエンジンです。AudienceStream は EventStream に流入するデータを取得し、ブランドのカスタマーエンゲージメントの最も重要な属性を表す訪問者プロファイルを作成します。設定ステップについては、[AudienceStream]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/tealium/tealium_audience_stream/)を参照してください。
 
 {% endtab %}
-{% tab iQタグ管理 %}
+{% tab iQ Tag Management %}
 Tealium iQ では、Tealium iQ Tag Management UI でタグを使用してアプリでコードをトリガーできます。このタグにより、モバイルおよび Web プラットフォームからイベントデータが収集、制御、および配信されます。これにより、アプリケーションに Braze 固有のコードを追加することなく、ネイティブの Braze 実装を設定できます。ユーザーは、iQ Tag Management または JSON 設定ファイルを使用してモバイルリモートコマンドを統合できます (Tealium アプローチが推奨されます)。Braze Web SDK を使用するユーザーは、Web iQ タグを使用して統合を行う必要があります。
 
 各メソッドの長所と短所について詳しくは、以下の[ Tealium iQ タグ マネージャー](#mobile-remote-commands) を参照してください。
@@ -117,7 +117,7 @@ Braze モバイルリモートコマンドは、すべての Braze メソッド�
 
 ### Braze Web SDK タグ
 
-WebサイトにBraze Web SDKをデプロイするには、Braze Web SDKタグを使用する。[Tealium iQ Tag Management](https://docs.tealium.com/client-side-tags/braze-web-sdk-tag/) により、顧客は訪問者のアクティビティを追跡するために Tealium ダッシュボード内でタグとして Braze を追加できます。タグは一般的に、オンライン広告、メールマーケティング、およびサイトのパーソナライゼーションの効果を理解する目的でマーケターにより使用されます。
+Web サイトに Braze Web SDK をデプロイするには、Braze Web SDK タグを使用します。[Tealium iQ Tag Management](https://docs.tealium.com/client-side-tags/braze-web-sdk-tag/) により、顧客は訪問者のアクティビティを追跡するために Tealium ダッシュボード内でタグとして Braze を追加できます。タグは一般的に、オンライン広告、メールマーケティング、およびサイトのパーソナライゼーションの効果を理解する目的でマーケターにより使用されます。
 
 1. Tealium で **[iQ] > [Tags] > [+ Add Tag] > [Braze Web SDK]** に移動します。
 2. [Tag Configuration] ダイアログボックスで、API キー (Braze アプリ識別子キー)、ベース URL (Braze SDK エンドポイント)、および[Braze Web SDK コードバージョン](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md) を入力します。また、ロギングを有効にして、デバッグ目的で Web コンソールに情報を記録することもできます。
@@ -145,7 +145,7 @@ Tealium では最初に、コネクターの取得元となる有効なデータ
 1. Tealium のサイドバーの [**Server-Side**] から **[Sources] > [Data Sources] > [+ Add Data Source]** に移動します。
 2. 使用可能なカテゴリ内で目的のプラットフォームを見つけ、ソースに名前を付けます。これは必須フィールドです。<br>![]({% image_buster /assets/img/tealium/data_source.png %}){: style="max-width:80%;margin-left:15px;margin-bottom:15px;"}
 3. **Event Specifications**オプションから、含める[イベント仕様](https://docs.tealium.com/server-side/event-specifications/about/)を選択します。イベント仕様は、インストールで追跡するイベント名と必須属性を特定するのに役立ちます。これらの仕様は受信イベントに適用されます。<br>![]({% image_buster /assets/img/tealium/event_specs.png %}){: style="max-width:80%;margin-left:15px;margin-bottom:15px;"}<br>どのデータがあなたにとって最も価値があるのか、どの仕様があなたのユースケースに最も適しているのか、時間をかけて考えてみよう。[カスタムイベント仕様](https://docs.tealium.com/iq-tag-management/events/about/)も可能です。<br>
-4. 次に、**Get Code**ステップに進みます。ここで提供されるベースコードとイベント追跡コードは、インストールガイドとして機能します。これらの指示を共有したい場合は、提供されたPDF を読み込むします。完了したら [**Save & Continue**] を選択します。<br>
+4. 次に、**Get Code**ステップに進みます。ここで提供されるベースコードとイベント追跡コードは、インストールガイドとして機能します。これらの指示を共有したい場合は、提供されたPDF を読み込むします。終了したら**Save& Continueを**選択する。<br>
 5. これで、保存したソースを表示し、イベント仕様を追加または削除することができます。<br>![]({% image_buster /assets/img/tealium/braze_connection.png %}){: style="max-width:80%;margin-left:15px;margin-bottom:15px;"}<br>詳細なデータソースビューから、次のアクションを実行できます。
 - データソース鍵の表示と複製
 - インストール手順を表示する
@@ -190,7 +190,7 @@ Tealium では最初に、コネクターの取得元となる有効なデータ
 {% endalert %}
 
 {% tabs local %}
-{% tab ユーザーの追跡 (バッチと非バッチ) %}
+{% tab Track User - Batch and Non-Batch %}
 
 このアクションを使用すると、ユーザー、イベント、購入属性をすべて1回のアクションで追跡できます。
 
@@ -198,10 +198,10 @@ Tealium では最初に、コネクターの取得元となる有効なデータ
 | ---------- | ----------- |
 | ユーザー ID | このフィールドを使用して、Tealium のユーザー ID フィールドを Braze の対応するフィールドにマッピングします。1 つ以上のユーザー ID 属性をマップします。複数のID が指定されている場合、最初の非ブランク値は、次の優先順位に基づいて選択されます。External ID、Braze ID、エイリアス名、エイリアスラベル。<br><br>\- プッシュトークンs をインポートする場合は、外部ID とBraze ID を指定しないでください。<br>\- ユーザーエイリアスを指定する場合、エイリアス名とエイリアスラベルの両方を設定する必要があります。<br><br>詳細については、Braze[`/users/track` エンドポイント]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) を参照してください。 |
 | ユーザ属性 | 既存の Braze のユーザープロファイルのフィールド名を使用して、Braze ダッシュボードのユーザープロファイル値を更新するか、独自のカスタム[ユーザー属性]({{site.baseurl}}/api/objects_filters/user_attributes_object/)データをユーザープロファイルに追加します。<br><br>\- デフォルトでは、新規ユーザーが存在しない場合は作成されます。<br>\- 設定では、** 更新 Existing Only** to `true` で、存在するユーザーs のみが更新d になり、新しいユーザーは作成されません。<br>\- Tealium 属性が空の場合、その属性は NULL に変換され、Braze ユーザープロファイルから削除されます。ユーザー属性を削除する目的で Braze に NULL 値を送信すべきでない場合は、エンリッチメントを使用してください。 |
-| Modify user attributes | このフィールドを使用して、特定のユーザー 属性を増減します<br><br>\- 整数属性は、正の整数または負の整数でインクリメントできます。<br>\- 配列属性s は、既存の配列に数値を追加または削除することで修正できます。 |
-| イベント | イベントは、タイムスタンプの時点で特定のユーザーによりカスタムイベントが1回発生したことを表します。このフィールドは、Braze [イベントオブジェクト]({{site.baseurl}}/api/objects_filters/event_object/)の属性と同様にイベント属性を追跡、マッピングする場合に使用します。<br><br>\- イベント属性 `Name` は、マッピングされたすべてのイベントで必要です。<br>\- イベント属性 `Time` は、明示的にマッピングされていない限り、自動的に現時点の時刻に設定されます。<br>\- デフォルトでは、新しいイベントは存在しない場合に作成されます。`Update Existing Only` を`true` に設定すると、既存のイベントのみが更新され、新規のイベントは作成されません。<br>\- 配列型属性s をマップして、複数のイベントを追加します。配列型の属性s は等しい長さでなければなりません。<br>\- 単一値属性を使用できます。単一値属性は各イベントに適用できます。 |
-| Event template | ボディデータで参照するイベントテンプレートを指定します。テンプレートを使用してデータを変換してから、Brazeに送信できます。詳細については、Tealiumの[テンプレートガイド](https://docs.tealium.com/server-side/connectors/webhook-connectors/trimou-templating-engine/)を参照してください。 |
-| Event template variable | イベントテンプレート変数をデータ入力として指定します。詳細については、Tealiumの[テンプレート変数ガイド](https://docs.tealium.com/server-side/connectors/webhook-connectors/template-variables/)を参照してください。 |
+| ユーザー属性の変更 | このフィールドを使用して、特定のユーザー 属性を増減します<br><br>\- 整数属性は、正の整数または負の整数でインクリメントできます。<br>\- 配列属性s は、既存の配列に数値を追加または削除することで修正できます。 |
+| イベント | イベントは、タイムスタンプの時点で特定のユーザーによりカスタムイベントが 1回発生したことを表します。このフィールドは、Braze [イベントオブジェクト]({{site.baseurl}}/api/objects_filters/event_object/)の属性と同様にイベント属性を追跡、マッピングする場合に使用します。<br><br>\- イベント属性 `Name` は、マッピングされたすべてのイベントで必要です。<br>\- イベント属性 `Time` は、明示的にマッピングされていない限り、自動的に現時点の時刻に設定されます。<br>\- デフォルトでは、新しいイベントは存在しない場合に作成されます。`Update Existing Only` を`true` に設定すると、既存のイベントのみが更新され、新規のイベントは作成されません。<br>\- 配列型属性s をマップして、複数のイベントを追加します。配列型の属性s は等しい長さでなければなりません。<br>\- 単一値属性を使用できます。単一値属性は各イベントに適用できます。 |
+| イベントテンプレート | ボディデータで参照するイベントテンプレートを指定します。テンプレートを使用してデータを変換してから、Brazeに送信できます。詳細については、Tealiumの[テンプレートガイド](https://docs.tealium.com/server-side/connectors/webhook-connectors/trimou-templating-engine/)を参照してください。 |
+| イベントテンプレート変数 | イベントテンプレート変数をデータ入力として指定します。詳細については、Tealiumの[テンプレート変数ガイド](https://docs.tealium.com/server-side/connectors/webhook-connectors/template-variables/)を参照してください。 |
 | 購入 | このフィールドは、Braze [購入オブジェクト]({{site.baseurl}}/api/objects_filters/purchase_object/)の属性と同様に購入属性を追跡、マッピングする場合に使用します。<br><br>\- 購入属性 `Product ID`、`Currency`、`Price` は、マッピングされたすべての購入に必要です。<br>\- 購入属性 `Time` は、明示的にマッピングされていない限り、自動的に現時点の時刻に設定されます。<br>\- デフォルトでは、新規購入が存在しない場合は作成されます。`Update Existing Only` を`true` に設定すると、既存の購入のみが更新され、新規購入は作成されません。<br>\- 配列型属性s をマップして、複数の購入アイテムを追加します。配列型の属性s は等しい長さでなければなりません。<br>\- 単一値属性を使用できます。単一値属性は各アイテムに適用されます。|
 | 購買テンプレート | テンプレートを使用して、Brazeに送信する前にデータを変換できます。<br>\- ネストされたオブジェクトサポートが必要な場合は、購入テンプレートを定義します。<br>\- 購入テンプレートを定義すると、アクションの購入セクションで設定された設定は無視されます。<br>\- 詳細については、Tealiumの[テンプレートガイド](https://docs.tealium.com/server-side/connectors/webhook-connectors/trimou-templating-engine/)を参照してください。|
 | 購買テンプレート変数 | 商品テンプレートの項目を入力します。詳細については、Tealiumの[テンプレート変数ガイド](https://docs.tealium.com/server-side/connectors/webhook-connectors/template-variables/)を参照してください。 |
@@ -210,7 +210,7 @@ Tealium では最初に、コネクターの取得元となる有効なデータ
 ![]({% image_buster /assets/img/tealium/track_user_example.png %})
 
 {% endtab %}
-{% tab ユーザーの削除 - 非バッチ %}
+{% tab Delete User - Non-Batch %}
 
 このアクションでは、Braze ダッシュボードからユーザーを削除できます。
 
@@ -252,7 +252,7 @@ Tealium の [Trace ツールの詳しい実装手順については、Tealium �
 
 ## 潜在データポイント 超過料金s
 
-Tealium から Braze を統合するときに、誤ってデータ超過料金が生じる主な状況が3つあります。
+Tealiumを通じてBrazeを統合する際に、誤って不必要なデータポイントを記録してしまう可能性がある主な方法は3つある：
 
 #### 重複データの送信- Brazeの属性の差分のみを送信します
 
@@ -263,7 +263,7 @@ Tealium はユーザー属性の Braze 差分を送信しません。たとえ�
 
 #### 無関係なデータの送信またはデータの不必要な上書き
 
-同じイベントフィードをターゲットとする複数の EventStream がある場合、1つのアクションがトリガーされるたびに、**そのコネクターで有効になっているすべてのアクション**が自動的に起動します。その結果、Braze でデータが上書きされ、不要なデータポイントが消費される可能性があります。
+同じイベントフィードをターゲットとする複数のEventStreamsがある場合、**そのコネクタに対してイネーブルメントされたすべてのアクションは**、単一のアクションがトリガーされるたびに自動的に発火する。その結果、Brazeでデータが上書きされ、不必要なデータポイントが記録される可能性もある。
 
 **解決策**:<br>それぞれのアクションを追跡するために、個別のイベント指定またはフィードを設定します。<br>**または**<br> Tealium ダッシュボードのトグルを使用して、起動しないアクション (またはコネクター) を無効にします。
 

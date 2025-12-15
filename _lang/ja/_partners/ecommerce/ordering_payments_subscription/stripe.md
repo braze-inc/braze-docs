@@ -31,13 +31,13 @@ Braze と Stripe を統合することで、以下のことが可能になりま
 
 {% multi_lang_include create_transformation.md %}
 
-### ステップ2: Stripe webhook を設定する
+### ステップ 2:Stripe webhook を設定する
 
 [Stripe のwebhooks documentation](https://docs.stripe.com/development/dashboard/webhooks) の手順に従って、Webhook を設定します。
 
 Data Transformation Webhook URL を**Destination URL** として追加し、Braze に送信するイベントタイプを選択します。イベントタイプの完全なリストについては、[Stripe のドキュメント](https://docs.stripe.com/api/events/types)を参照してください。
 
-![Stripe webhook 設定の例。]({% image_buster /assets/img/stripe/stripe_webhook_configuration.png %}){: style="max-width:80%;"}
+![StripeのWebhook設定例。]({% image_buster /assets/img/stripe/stripe_webhook_configuration.png %}){: style="max-width:80%;"}
 
 次に、テストイベントを Data Transformation に送信します。 
 
@@ -50,7 +50,7 @@ Data Transformation Webhook URL を**Destination URL** として追加し、Braz
 3. [**検証**] を選択すると、コードの出力のプレビューが返され、`/users/track` リクエストとして受け入れられるかどうかがチェックされます。
 4. Data Transformation を保存して有効化します。
 
-![webhook の詳細と変換コードの例。]({% image_buster /assets/img/stripe/stripe_data_transformation.png %})
+![Webhookの詳細と変換コードの例。]({% image_buster /assets/img/stripe/stripe_data_transformation.png %})
 
 #### リクエスト本文の形式
 
@@ -68,7 +68,7 @@ Data Transformation Webhook URL を**Destination URL** として追加し、Braz
 
 Data Transformation を作成したら、[**検証**] を選択して、Data Transformation コードが正しくフォーマットされており、期待通りに動作することを確認します。その後、Data Transformation を保存してアクティブ化します。アクティブ化後、カスタムイベントデータは、イベントが完了するとユーザーのプロファイルに記録されます。
 
-![Braze ユーザープロファイルの Stripe カスタムイベント「支払いに成功しました」。]({% image_buster /assets/img/stripe/stripe_braze_profile_event.png %}){: style="max-width:80%;"}
+![BrazeユーザープロファイルのStripeカスタムイベント "Charge Succeeded"。]({% image_buster /assets/img/stripe/stripe_braze_profile_event.png %}){: style="max-width:80%;"}
 
 ## Stripe Webhook ペイロードのサンプル {#example}
 
@@ -244,7 +244,7 @@ Data Transformation を作成したら、[**検証**] を選択して、Data Tra
 このテンプレートの例では、識別子として顧客フィールドを使用しています。
 
 {% tabs local %}
-{% tab インプット %}
+{% tab Input %}
 
 ```javascript
 
@@ -283,7 +283,7 @@ return brazecall;
 ```
 
 {% endtab %}
-{% tab 出力 %}
+{% tab Output %}
 
 ```json
 {

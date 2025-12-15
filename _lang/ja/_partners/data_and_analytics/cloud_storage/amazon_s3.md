@@ -13,13 +13,13 @@ search_tag: Partner
 > [Amazon S3](https://aws.amazon.com/s3/)は、Amazon Web Servicesが提供する高度にスケーラブルなストレージシステムです。
 
 {% alert important %}
-クラウドストレージプロバイダーを切り替える場合は、Braze カスタマーサクセスマネージャーに連絡し、新しい統合の設定と検証について詳細なサポートをご依頼ください。
+クラウドストレージプロバイダーを切り替える場合は、Brazeカスタマーサクセスマネージャーに連絡し、新しい統合の設定と検証についてさらにサポートを受けてください。
 {% endalert %}
 
 Braze と Amazon S3 の統合は、2 つの統合戦略を特徴としています。
 
 - [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) を利用すると、他のプラットフォーム、ツール、ロケーションに接続するまでデータを保存できます。
-- ダッシュボードのデータエクスポート（CSVエクスポートやエンゲージメントレポートなど）を使用する。
+- ダッシュボードのデータエクスポート (CSV エクスポートやエンゲージメントレポートなど) を使用します。
 
 ## 前提条件
 
@@ -27,15 +27,15 @@ Braze と Amazon S3 の統合は、2 つの統合戦略を特徴としていま�
 | ----------- | ----------- |
 | Amazon S3 アカウント | このパートナーシップを活用するには、Amazon S3アカウントが必要です。 |
 | 専用 S3 バケット | Amazon S3 と統合するには、アプリ用の S3 バケットを作成する必要があります。<br><br>すでに S3バケットがある場合は、Braze 専用の新しいバケットを作成することをお勧めします。これにより、権限を制限できるようになります。新しいバケットを作成する方法については、次の手順を参照してください。 |
-| Currents | データを Amazon S3 にエクスポートするには、アカウントに [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) を設定する必要があります。 |
+| Currents | Amazon S3にデータをエクスポートするには、アカウントに[Braze Currentsを]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents)設定する必要がある。メッセージアーカイブの設定だけなら、Currentsは必要ない。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-#### 新しいS3バケットを作成する
+#### 新しい S3 バケットの作成
 
-アプリ用のバケットを作成するには、以下のようにします。
+アプリのバケットを作成するには、以下の手順を実行します。
 
 1. [Amazon S3](https://console.aws.amazon.com/s3/) コンソールを開き、指示に従って AWS に**サインイン**または**アカウントを作成**します。 
-2. サインイン後、**Storage & Content Delivery**カテゴリから**S3**を選択します。 
+2. サインイン後、**Storage& Content Delivery**カテゴリーから**S3を**選択する。 
 3. 次の画面で**Create Bucket**を選択します。 
 4. バケットを作成してリージョンを選択するように求められます。
 
@@ -45,7 +45,7 @@ Currents は、[Object Lock](https://docs.aws.amazon.com/AmazonS3/latest/usergui
 
 ## 統合
 
-Braze には、[Braze Currents]({{site.baseurl}}/user_guide/data/braze_currents/) と、すべてのダッシュボードデータエクスポート (CSV エクスポート、エンゲージメント レポートなど) に対して、Amazon S3 で 2 つの異なる統合戦略があります。どちらの統合も、2 種類の認証/許可方法をサポートしています。
+Braze には、Amazon S3 に関する統合戦略が 2 種類あります。その 1 つは[Braze Currents]({{site.baseurl}}/user_guide/data/braze_currents/) に関するもので、もう 1 つはすべてのダッシュボードデータエクスポート (CSV エクスポート、エンゲージメント レポートなど) に関するものです。どちらの統合も、2 種類の認証/許可方法をサポートしています。
 
 - [AWS シークレットアクセスキー方式](#aws-secret-key-auth-method)
 - [AWSロールARNメソッド](#aws-role-arn-auth-method)
@@ -56,17 +56,21 @@ Braze には、[Braze Currents]({{site.baseurl}}/user_guide/data/braze_currents/
 
 ### ステップ1:ユーザーを作成する {#secret-key-1}
 
+{% alert note %}
+メッセージアーカイブの設定のみを行う場合は、「**ダッシュボードデータエクスポート**」タブのステップに従う。
+{% endalert %}
+
 アクセスキー ID とシークレットアクセスキーを取得するには、[AWS で IAM ユーザーと管理者グループを作成](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-admin-group.html)する必要があります。
 
 ### ステップ2:認証情報を取得する {#secret-key-2}
 
-新しいユーザーの作成後に、[**ユーザーセキュリティクレデンシャルを表示**] を選択して、アクセスキー ID とシークレットアクセスキーを表示します。これらの認証情報は後で Braze ダッシュボードに入力する必要があるため、どこかにメモしておくか、[**認証情報をダウンロード**] ボタンを選択します。
+新しいユーザーの作成後に、**Show User Security Credentials** を選択して、アクセスキー ID とシークレットアクセスキーを表示します。これらの認証情報は後で Braze ダッシュボードに入力する必要があるため、どこかにメモしておくか、[**認証情報をダウンロード**] ボタンを選択します。
 
 ![]({% image_buster /assets/img_archive/S3_Credentials.png %})
 
-### ステップ 3: ポリシーを作成する {#secret-key-3}
+### ステップ 3:ポリシーを作成する {#secret-key-3}
 
-[**ポリシー**] > [**開始**] > [**ポリシーを作成**] に移動して、ユーザーの権限を追加します。次に、**Create Your Own Policy**を選択します。これにより、制限された権限が付与されるため、Brazeは指定されたバケットにのみアクセスできます。 
+[**Policies**] > [**Get Started**] > [**Create Policy**] に移動して、ユーザーの権限を追加します。次に、**Create Your Own Policy**を選択します。これにより、制限された権限が付与されるため、Brazeは指定されたバケットにのみアクセスできます。 
 
 ![]({% image_buster /assets/img_archive/S3_CreatePolicy.png %})
 
@@ -75,6 +79,10 @@ Currents と Dashboard Data Export には異なるポリシーが必要です。
 {% endalert %}
 
 任意のポリシー名を指定し、**Policy Document**に以下のコードスニペットを入力します。`INSERTBUCKETNAME` は必ずバケット名に置き換えてください。これらの権限がないと、インテグレーションは認証情報チェックに失敗し、作成されません。
+
+{% alert note %}
+メッセージのアーカイブ設定のみを行う場合は、**ダッシュボードデータエクスポートタブの**コードスニペットを使用する。
+{% endalert %}
 
 {% tabs %}
 {% tab Braze Currents %}
@@ -96,7 +104,7 @@ Currents と Dashboard Data Export には異なるポリシーが必要です。
 }
 ```
 {% endtab %}
-{% tab ダッシュボードデータのエクスポート %}
+{% tab Dashboard Data Export %}
 ```json
 {
     "Version": "2012-10-17",
@@ -119,11 +127,15 @@ Currents と Dashboard Data Export には異なるポリシーが必要です。
 
 ### ステップ4:ポリシーをアタッチする {#secret-key-4}
 
-新しいポリシーの作成後に、[**ユーザー**] に移動し、特定のユーザーを選択します。[**権限**] タブで、[**ポリシーの添付**] をクリックし、作成した新しいポリシーを選択します。これで、AWS認証情報をBrazeアカウントにリンクする準備ができた。
+新しいポリシーの作成後に、**Users** に移動し、特定のユーザーを選択します。[**権限**] タブで、[**ポリシーの添付**] をクリックし、作成した新しいポリシーを選択します。これで、AWS 認証情報を Braze アカウントにリンクする準備ができています。
 
 ![]({% image_buster /assets/img_archive/S3_AttachPolicy.png %})
 
 ### ステップ 5: Brazeを AWS にリンクする {#secret-key-5}
+
+{% alert note %}
+メッセージアーカイブの設定のみを行う場合は、「**ダッシュボードデータエクスポート**」タブのステップに従う。
+{% endalert %}
 
 {% tabs %}
 {% tab Braze Currents %}
@@ -132,12 +144,12 @@ Braze で、[**パートナー連携**] > [**データエクスポート**] に�
 
 次に、[**Current を作成**] をクリックし、[**Amazon S3 データエクスポート**] を選択します。
 
-Current に名前を付けます。[**認証情報**] セクションで、**AWS Secret Access Key** が選択されていることを確認し、指定されたフィールドに S3 アクセス ID、AWS シークレットアクセスキー、および AWS S3 バケット名を入力します。
+Current に名前を付けます。**Credentials** セクションで、**AWS Secret Access Key** が選択されていることを確認し、指定されたフィールドに S3 アクセス ID、AWS シークレットアクセスキー、および AWS S3 バケット名を入力します。
 
 ![]({{site.baseurl}}/assets/img/currents-s3-example.png)
 
 {% alert warning %}
-AWSのアクセスキーID とシークレットアクセスキーを最新の状態に保ちます。コネクターの認証情報が期限切れになると、コネクターはイベントの送信を中止します。この状態が**48時間**以上続くと、コネクタのイベントは削除され、データは永久に失われる。
+AWSのアクセスキーID とシークレットアクセスキーを最新の状態に保ちます。コネクターの認証情報が期限切れになると、コネクターはイベントの送信を停止します。この状態が**5日**以上続くと、コネクタのイベントは削除され、データは永久に失われる。
 {% endalert %}
 
 必要に応じて、次のカスタマイズを追加することもできます。
@@ -150,11 +162,11 @@ AWSのアクセスキーID とシークレットアクセスキーを最新の�
 認証情報が正常に検証されたかどうかを示す通知が表示されます。これで、AWS S3が Braze Currents 用に設定されているはずです。
 
 {% endtab %}
-{% tab ダッシュボードデータのエクスポート %}
+{% tab Dashboard Data Export %}
 
 Braze で、[**パートナー連携**] > [**テクノロジーパートナー**] を選択し、[**Amazon S3**] を選択します。
 
-[**AWS 認証情報**] ページで、**AWS Secret Access Key** が選択されていることを確認し、指定したフィールドに AWS アクセス ID、AWS シークレットアクセスキー、および AWS S3 バケット名を入力します。シークレットキーを入力する際、最初に「**認証情報のテスト**」を選択して認証情報が機能することを確認し、成功したら「**保存**」を選択する。
+**AWS Credentials** ページで、**AWS Secret Access Key** が選択されていることを確認し、指定したフィールドに AWS アクセス ID、AWS シークレットアクセスキー、および AWS S3 バケット名を入力します。シークレットキーを入力する際は、まず [**認証情報のテスト**] を選択して認証情報が機能することを確認し、成功したら [**保存**] を選択します。
 
 ![]({{site.baseurl}}/assets/img/s3_tech_partners.png)
 
@@ -169,11 +181,11 @@ Braze で、[**パートナー連携**] > [**テクノロジーパートナー**
 
 ## AWS ロールARN 認証メソッド
 
-この認証メソッドは、Braze の Amazon アカウントがバケットにデータを書き込むために作成したロールのメンバーとして認証できるようにするロール Amazon リソースネーム (ARN) を生成します。
+この認証メソッドによって、Braze の Amazon アカウントがバケットにデータを書き込むために作成したロールのメンバーとして認証できるようにするロール Amazon リソースネーム (ARN) が生成されます。
 
 ### ステップ 1: ポリシーを作成する {#role-arn-1}
 
-まず、アカウント管理者として AWS 管理コンソールにサインインします。AWS コンソールの [IAM] セクションに移動し、ナビゲーションバーの [**ポリシー**] を選択してから [**ポリシーを作成**] を選択します。
+まず、アカウント管理者として AWS 管理コンソールにサインインします。AWS コンソールの IAM セクションに移動し、ナビゲーションバーで [**Policies**] を選択してから、[**Create Policy**] を選択します。
 
 ![]({{site.baseurl}}/assets/img/create_policy_1_list.png)
 
@@ -182,6 +194,10 @@ Currents と Dashboard Data Export には異なるポリシーが必要です。
 {% endalert %}
 
 [**JSON**] タブを開き、[**ポリシードキュメント**] セクションに以下のコードスニペットを入力します。`INSERTBUCKETNAME` は必ずバケット名に置き換えてください。入力が終わったら、[**ポリシーの確認**] を選択します。
+
+{% alert note %}
+メッセージのアーカイブ設定のみを行う場合は、**ダッシュボードデータエクスポートタブの**コードスニペットを使用する。
+{% endalert %}
 
 {% tabs %}
 {% tab Braze Currents %}
@@ -205,7 +221,7 @@ Currents と Dashboard Data Export には異なるポリシーが必要です。
 ```
 
 {% endtab %}
-{% tab ダッシュボードデータのエクスポート %}
+{% tab Dashboard Data Export %}
 
 ```json
 {
@@ -228,7 +244,7 @@ Currents と Dashboard Data Export には異なるポリシーが必要です。
 {% endtab %}
 {% endtabs %}
 
-次に、ポリシーに名前と説明を指定し、[**ポリシーの作成**] を選択します。
+次に、ポリシーに名前と説明を指定し、[**Create Policy**] を選択します。
 
 ![]({{site.baseurl}}/assets/img/create_policy_3_name.png)
 
@@ -236,13 +252,13 @@ Currents と Dashboard Data Export には異なるポリシーが必要です。
 
 ### ステップ2:ロールを作成する {#role-arn-2}
 
-コンソールの同じ IAM セクションで、[**ロール**] > [**ロールを作成**] をクリックします。
+コンソールと同じ IAM セクションで、[**Roles**] > [**Create Role**] を選択します。
 
 ![]({{site.baseurl}}/assets/img/create_role_1_list.png)
 
 Braze アカウントから Braze アカウント ID と external ID を取得します。
 - **Currents**:Braze で、[**パートナー連携**] > [**データエクスポート**] に移動します。次に、[**Current を作成**] をクリックし、[**Amazon S3 データエクスポート**] を選択します。ここには、ロールの作成に必要な識別子s があります。
-- **ダッシュボードデータエクスポート**:Braze で、[**パートナー連携**] > [**テクノロジーパートナー**] を選択し、[**Amazon S3**] を選択します。ここで、ロールの作成に必要な識別子を確認します。
+- **ダッシュボードデータエクスポート**:Braze で、[**パートナー連携**] > [**テクノロジーパートナー**] を選択し、[**Amazon S3**] を選択します。ここで、ロールの作成に必要な識別子を確認します。(メッセージアーカイブの設定のみを行う場合は、ここでロールを作成する)。
 
 AWS Console に戻り、信頼できるエンティティセレクターのタイプとして [**Another AWS Account**] を選択します。BrazeのアカウントID を入力し、**外部ID を要求** をオンにして、Brazeの外部ID を入力します。完了したら [**次へ**] を選択します。
 
@@ -254,7 +270,7 @@ AWS Console に戻り、信頼できるエンティティセレクターのタ�
 
 ![ロールの ARN]({{site.baseurl}}/assets/img/create_role_3_attach.png)
 
-ロールに名前と説明を付け、[**ロールの作成**] を選択します。
+ロールに名前と説明を指定し、[**Create Role**] を選択します。
 
 ![ロールの ARN]({{site.baseurl}}/assets/img/create_role_4_name.png)
 
@@ -262,7 +278,7 @@ AWS Console に戻り、信頼できるエンティティセレクターのタ�
 
 ### ステップ4:Braze AWS にリンクする {#role-arn-4}
 
-AWS コンソールで、新しく作成したロールを一覧で見つけます。名前を選択すると、そのロールの詳細が開きます。
+AWS コンソールで、新しく作成したロールを一覧で見つけます。名前を選択して、そのロールの詳細を開きます。
 
 ![]({{site.baseurl}}/assets/img/create_role_5_created.png)
 
@@ -271,6 +287,10 @@ AWS コンソールで、新しく作成したロールを一覧で見つけま�
 ![]({{site.baseurl}}/assets/img/create_role_6_summary.png)
 
 Braze アカウントに戻り、提供されたフィールドにロールARN をコピーします。
+
+{% alert note %}
+メッセージアーカイブの設定のみを行う場合は、「**ダッシュボードデータエクスポート**」タブのステップに従う。
+{% endalert %}
 
 {% tabs %}
 {% tab Braze Currents %}
@@ -293,7 +313,7 @@ Current の名前を指定します。次に、[**認証情報**] セクショ�
 {% endalert %}
 
 {% endtab %}
-{% tab ダッシュボードデータのエクスポート %}
+{% tab Dashboard Data Export %}
 
 Braze で、[**テクノロジーパートナー**] ページの [**統合**] に移動し、[**Amazon S3**] をクリックします。
 
@@ -315,7 +335,7 @@ Braze で、[**テクノロジーパートナー**] ページの [**統合**] �
 クラウドデータストレージソリューションを統合しており、API、ダッシュボードレポート、または CSV レポートをエクスポートする場合、次のような状況が発生します。
 
 - すべての API エクスポートでは、応答本文でダウンロード URL が返されないため、データストレージから取得する必要があります。
-- すべてのダッシュボードレポートと CSV レポートは、ダウンロード用のメールでユーザーに送信され (保存権限は不要です)、Data Storage にバックアップされます。 
+- すべてのダッシュボードレポートと CSV レポートは、ダウンロード用のメールでユーザーに送信され (保存権限は不要です)、Data Storage にバックアップされます。
 
 ## 複数のコネクター
 

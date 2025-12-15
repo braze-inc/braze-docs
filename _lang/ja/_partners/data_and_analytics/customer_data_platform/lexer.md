@@ -64,7 +64,7 @@ Lexer Activate により Braze プロファイルが自動的に更新され、�
 
 ![]({% image_buster /assets/img/lexer/lexer.png %})
 
-### ステップ2: アクティベーションを確認する
+### ステップ 2:アクティベーションを確認する
 
 Activate でアクティベーションが送信されたことが確認されると、Braze でレコードの更新が開始されます。Lexer から確認メールが届くまで、Braze のプロファイルは完全には更新されません。
 

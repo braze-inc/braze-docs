@@ -25,7 +25,7 @@ channel:
 3. ルートドメインまたはサブドメインを入力してメールを認証する。ルート ドメインを追加して検証している場合、これにより検証を下流のサブドメインに適用できます。例えば、`braze.com` を検証することで、後に `demo.braze.com` やその他のサブドメインを個別に検証することなく追加できます。
 4. Google では、ドメインの DNS に直接追加できる TXT レコードが生成されます。これは通常、DNS の管理者が所有します。特定の DNS の更新方法に関する情報とガイダンスについては、「[ドメインの所有権を証明する （ドメインホスト別の手順）](https://support.google.com/a/topic/1409901)」を参照してください。
 5. [**次へ**] を選択します。<br>![メールを認証するドメイン "demo.braze.com" の例。]({% image_buster /assets/img_archive/domain_authentication.png %})
-6. TXT レコードが DNS に追加されたら、Google Postmaster Tools ダッシュボードに戻り、[**検証**] を選択します。このステップでは、ドメインの所有者であることが確認されるため、Postmaster アカウントで Gmail の配信到達性指標にアクセスできるようになります。<br> ![ドメイン"demo.braze.com"の所有権を確認するプロンプトが表示された。]({% image_buster /assets/img_archive/domain_verification.png %})
+6. TXT レコードが DNS に追加されたら、Google Postmaster Tools ダッシュボードに戻り、[**検証**] を選択します。このステップでは、ドメインの所有者であることが確認されるため、Postmaster アカウントで Gmail の配信到達性指標にアクセスできるようになります。<br> ![ドメイン"demo.braze.com"の所有権を確認するプロンプトが表示される。]({% image_buster /assets/img_archive/domain_verification.png %})
 
 {% alert tip %}
 TXTレコードが、Brazeを通して使用しているサブドメインではなく、親ドメインに結びついていることを確認する。
@@ -48,7 +48,7 @@ TXTレコードが、Brazeを通して使用しているサブドメインでは
 
 検証済みのドメインが配信センターに表示されます。 
 
-![Googleポストマスターで確認された2つのドメインは、中程度と低評価である。]({% image_buster /assets/img_archive/deliverability_center2.png %})
+![グーグル・ポストマスターで確認された2つのドメインは、中位と低位の評価を受けている。]({% image_buster /assets/img_archive/deliverability_center2.png %})
 
 また、Braze ダッシュボードで [**パートナー連携**] > [**テクノロジーパートナー**] > [**Google Postmaster**] に移動して、Google Postmaster にアクセスすることもできます。連携後、Braze は過去 30 日間の信頼度とエラーのデータを取得します。データはすぐには利用できない場合があり、入力されるまで数分かかる場合があります。
 
@@ -111,7 +111,7 @@ Microsoft がメインのメールボックスプロバイダーである場合�
 配信センターにデータが表示されない場合は、IP アドレスのリストを添えて[サポート]({{site.baseurl}}/user_guide/administrative/access_braze/support/)にお問い合わせください。
 {% endalert %}
 
-![サンプルIP、受信者、RCPTコマンド、データコマンド、フィルター結果、苦情率、トラップメッセージ期間の開始と終了、スパムトラップヒットを含む。]({% image_buster /assets/img_archive/deliverability_center_msnds.png %})
+![サンプルIP、受信者、RCPTコマンド、データコマンド、フィルター結果、苦情率、トラップメッセージ期間の開始と終了、スパムトラップヒットを含むMicrosoft SNDSの結果の例。]({% image_buster /assets/img_archive/deliverability_center_msnds.png %})
 
 ### 指標と定義
 

@@ -1,6 +1,6 @@
-## 表示動作のカスタマイズ
+## 表示動作をカスタマイズする
 
-実行時のアプリ内メッセージの表示動作は、次の方法で変更できます。
+アプリ内メッセージの表示動作は、以下の方法で実行時に変更できる：
 
 ```csharp
 // Sets in-app messages to display immediately when triggered.
@@ -13,7 +13,7 @@ Appboy.AppboyBinding.SetInAppMessageDisplayAction(BrazeUnityInAppMessageDisplayA
 Appboy.AppboyBinding.SetInAppMessageDisplayAction(BrazeUnityInAppMessageDisplayActionType.IAM_DISCARD);
 ```
 
-## カスタムリスナーの設定
+## カスタムリスナーを設定する
 
 ユーザーがアプリ内メッセージを操作する方法をより細かくコントロールする必要がある場合は、`BrazeInAppMessageListener` を使用してそれを `Appboy.AppboyBinding.inAppMessageListener` に割り当てます。使用しないデリゲートについては、単に `null` のままにしておくことができます。
 

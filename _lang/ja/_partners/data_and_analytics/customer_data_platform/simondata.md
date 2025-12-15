@@ -1,27 +1,27 @@
 ---
-nav_title: Simon Data
-article_title: Simon Data
-description: "Braze と Simon Data の統合を使用して、高度なオーディエンスを作成し、オーケストレーションのためにリアルタイムでコードを使用せずに Braze に同期します。"
+nav_title: サイモンAI
+article_title: サイモンAI
+description: "BrazeとSimonAIの統合を使用して、オーケストレーションのために洗練されたオーディエンスをリアルタイムでコードなしで作成し、Brazeに同期する。"
 alias: /partners/simon_data/
 page_type: partner
 search_tag: Partner
 ---
 
-# Simon Data
+# サイモンAI
 
-> [Simon Data](https://www.simondata.com) は、マーケターにとって使いやすく、データチームの信頼を得ている顧客データプラットフォーム (ＣＤＰ) です。Simon は、データウェアハウスをマーケティングの強みに変えることで、ビジネスの実績を向上し、カスタマーエクスペリエンスを促進します。
+> [サイモンAI][1]エージェンティック・マーケティング・プラットフォームは、マーケティングチームが真のOne to Oneパーソナライゼーションを実現できるよう支援する。これは、コンポーザブルCDPと、Snowflake AIデータクラウドで直接動作するAIエージェントを組み合わせたもので、マーケターのデータと実行チームとして機能する。
 
-Braze と Simon Data の統合を使用して、高度なオーディエンスを作成し、オーケストレーションのためにリアルタイムでコードを使用せずに Braze に同期します。この統合により、Simonのキャンペーン優先順位付け、Identityマッチング機能、複雑な集計サポートなどを最大限に活用し、Brazeのキャンペーンをダウンストリームで向上させることができる。
+BrazeとSimonのAI統合を利用して、高度なオーディエンスを構築し、Brazeと同期させることで、リアルタイムでコード不要のオーケストレーションが可能になる。この統合により、Simon AIのパーソナライズされたセグメンテーション、顧客データの一元化、AI主導型のセグメンテーションを活用し、よりパーソナライズされたインパクトのあるBrazeキャンペーンを下流で展開することができる。
 
 ## 前提条件
 
-開始するには、Simon Data アカウント内で Braze アカウントを認証する必要があります。
+開始するには、Simon AIアカウント内でBrazeアカウントを認証する必要がある。
 
-| 要件         | 説明                                                                                                                                                               |
+| 必要条件         | 説明                                                                                                                                                               |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Simon Data          | Simon Data 内から Braze 統合を利用するには、既存の Simon Dataアカウントが必要です。                                                                    |
+| サイモンAI          | Simon AIからBrazeインテグレーションを利用するには、既存のSimon AIアカウントが必要である。                                                                    |
 | Braze REST API キー  | `users.track`,`campaigns.trigger.schedule.create`,および `campaigns.trigger.send` の権限を持つ Braze REST API キー。<br><br> これは、Brazeダッシュボードの**「設定」**>「**APIキー**」から作成できる。 |
-| BrazeダッシュボードURL | [RESTエンドポイントのURL]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints)。お客様のエンドポイントは、お客様のインスタンスのBraze URLに依存します。                                                                                |
+| BrazeダッシュボードURL | [RESTエンドポイントのURL][3]。お客様のエンドポイントは、お客様のインスタンスのBraze URLに依存します。                                                                                |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## ユースケース
@@ -36,21 +36,21 @@ SimonとBrazeの統合を使用する場合、Simonは各同期でBrazeにデル
 
 ## 統合
 
-### SimonでBrazeアカウントを認証する
+### Simon AIでBrazeアカウントを認証する
 
 Brazeとの統合を使用するには、まずSimonでBrazeアカウントを認証する：
 
 1. 左側のナビゲーションで [**Integrations**] をクリックし、[Braze] までスクロールします。
-2. Braze の [REST API キー]({{site.baseurl}}/api/basics/#creating-and-managing-rest-api-keys)と[ダッシュボードのURL]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints) を入力します。
+2. Braze の [REST API キー][2]と[ダッシュボードのURL][3] を入力します。
 3. [**SAVE CHANGES**] クリックします。
 
 接続に成功すると、ウィンドウに「**Connected**」と表示される。
 
-![Simon Data の統合画面]({% image_buster /assets/img/simon_data/ConnecttoBraze.png %}){: style="max-width:70%"}
+![サイモンAI][8]の統合画面{: style="max-width:70%"}
 
-### Simon でフローまたはジャーニーに Braze アクションを追加する
+### Simon AIのフローやジャーニーにBrazeアクションを追加する
 
-Simon で Braze アカウントを認証したら、Braze のアクションを[フロー](https://docs.simondata.com/docs/campaigns-flows)と[ジャーニー](https://docs.simondata.com/docs/campaigns-journeys-two)に追加できます。
+Simon AIでBrazeアカウントを認証した後、Brazeアクションを[Flowsと][4] [Journeysに][5]追加できる。
 
 3つのアクションがあります。
 
@@ -58,9 +58,9 @@ Simon で Braze アカウントを認証したら、Braze のアクションを[
 - **Trigger a Braze Canvas**:Simon のセグメントデータを利用する Braze キャンバスをトリガーします。
 - **Send a Braze campaign**:Simon から Braze キャンペーン全体を開始します。
 
-![Simon Data で利用可能な Braze アクションのリストを示すドロップダウン。]({% image_buster /assets/img/simon_data/BrazeActions.png %}){: style="max-width:60%"}
+![サイモンAIで利用可能なBrazeアクションのリストを示すドロップダウン][9]。{: style="max-width:60%"}
 
-一部のアクションは、特定のフロータイプまたはジャーニーでのみ利用できる。詳細は以下を参照のこと。 [docs.simondata.com](https://docs.simondata.com).
+一部のアクションは、特定のフロータイプまたはジャーニーでのみ利用できる。詳細は以下を参照のこと。 [docs.simondata.com][6].
 
 ### 特性と連絡先プロパティを同期する
 
@@ -79,9 +79,21 @@ Simon で Braze アカウントを認証したら、Braze のアクションを[
    2. フィールド名がBrazeに到着したときに異なる表示にしたい場合は、**Downstream nameを**編集する。
    3. Simon から Braze と初めて統合する場合は、[**Backfill all contacts**] をクリックします。フローまたはジャーニーで初めてアクションを使用するときに、すべてのデータが完全に同期されるようにするため、バックフィルにより Braze にすべてのデータポイントが送信されます。その後の同期では、この画面で選択した特性のみが Braze に送信されます。これにより、必要なデータに対してのみ課金されるようになります。
 
-![Simon Data での同期する特性の選択。]({% image_buster /assets/img/simon_data/BrazeTraitSyncing.png %})
+![サイモンAIのシンク特性を選択する][10]。
+
+[1]: https://www.simondata.com
 
 
 
 
+[1]: https://www.simondata.com
+[2]: {{site.baseurl}}/api/basics/#creating-and-managing-rest-api-keys
+[3]: {{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints
+[4]: https://docs.simondata.com/docs/campaigns-flows
+[5]: https://docs.simondata.com/docs/campaigns-journeys-two
+[6]: https://docs.simondata.com
+[7]: https://docs.simondata.com/docs/support-center
+[8]: {% image_buster /assets/img/simon_data/ConnecttoBraze.png %}  
+[9]: {% image_buster /assets/img/simon_data/BrazeActions.png %}
+[10]: {% image_buster /assets/img/simon_data/BrazeTraitSyncing.png %}
 

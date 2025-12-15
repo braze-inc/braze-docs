@@ -10,7 +10,7 @@ description: "この記事では、ブロックリストのメールBrazeエン�
 ---
 {% api %}
 # ブロックリストのメール
-{% apimethod postcore_endpoint|https://www.braze.com/docs/core_endpoints %}。
+{% apimethod postcore_endpoint|https://www.braze.com/docs/core_endpoints %}
 /email/blocklist
 {% endapimethod %}
 

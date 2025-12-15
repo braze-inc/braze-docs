@@ -26,7 +26,7 @@ Braze に接続する外部プラットフォームを特定し、プラット�
 
 ![]({% image_buster /assets/img/data_transformation/data_transformation8.png %})
 
-## ステップ 2: 変換の作成
+## ステップ 2:変換の作成
 
 {% multi_lang_include create_transformation.md location="default" %}
 
@@ -43,7 +43,7 @@ Braze に接続する外部プラットフォームを特定し、プラット�
 
 Typeform の場合は以下のようになります。
 
-![WebhookをBraze ユーザープロファイル s にマップするデータトランスフォーメーションコードの例。]({% image_buster /assets/img/data_transformation/data_transformation11.png %})
+![WebhookをBrazeユーザープロファイルにマッピングするデータ変換コードの例。]({% image_buster /assets/img/data_transformation/data_transformation11.png %})
 
 {% alert note %}
 Braze Data Transformation は、Webhook に特別な検証や認証を必要とする外部プラットフォームをまだサポートしていない可能性があります。Braze Data Transformation でこのタイプのプラットフォームを使用することに関心がある場合は、[製品フィードバック]({{site.baseurl}}/user_guide/administrative/access_braze/portal/)を残すことを検討してください。

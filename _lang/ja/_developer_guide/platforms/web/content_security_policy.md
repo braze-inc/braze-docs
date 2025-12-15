@@ -1,5 +1,5 @@
 ---
-nav_title: コンテンツセキュリティポリシーヘッダー
+nav_title: コンテンツセキュリティポリシーのヘッダー
 article_title: Webのコンテンツセキュリティポリシーヘッダー
 platform: Web
 page_order: 21
@@ -36,7 +36,7 @@ braze.initialize(apiKey, {
 ### `connect-src` {#connect-src}
 
 {% alert warning %}
-URLは、選択した`baseUrl` 初期化オプションの[API SDKエンドポイントと]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/)一致しなければならない。
+URL は、選択した `baseUrl` 初期化オプションの [ API SDKエンドポイント]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/)と一致しなければなりません。
 {% endalert %}
 
 |URL|インフォメーション|

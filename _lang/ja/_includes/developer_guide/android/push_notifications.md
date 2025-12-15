@@ -15,7 +15,7 @@
 次のフローチャートは、Brazeが権限プロンプト、トークン生成、メッセージ配信などのプッシュ通知のライフサイクルをどのように処理しているかを示している。
 
 {% tabs local %}
-{% tab 権限を与える %}
+{% tab Granting permissions %}
 ```mermaid
 ---
 config:
@@ -84,7 +84,7 @@ class H1,H2,H3,I1,J1,J2,J3,K1,L1,L2,L3,note1 brazeClass
 ```
 {% endtab %}
 
-{% tab プッシュトークンを生成する %}
+{% tab Generating push tokens %}
 ```mermaid
 ---
 config:
@@ -133,7 +133,7 @@ class H1,H2,H3,I1,J1,J2,J3,K1,L1,L2,L3,note1 brazeClass
 ```
 {% endtab %}
 
-{% tab 通知を表示する %}
+{% tab Displaying notifications %}
 ```mermaid
 ---
 config:
@@ -214,17 +214,17 @@ dependencies {
 
 Google Cloud で、Android アプリが使用しているプロジェクトを選択し、[Firebase Cloud Messaging API](https://console.cloud.google.com/apis/library/fcm.googleapis.com) を有効にします。
 
-![有効になっている Firebase Cloud Messaging API]({% image_buster /assets/img/android/push_integration/create_a_service_account/firebase-cloud-messaging-api-enabled.png %}){: style="max-width:80%;"}
+![Firebase Cloud Messaging API をイネーブルメントした。]({% image_buster /assets/img/android/push_integration/create_a_service_account/firebase-cloud-messaging-api-enabled.png %}){: style="max-width:80%;"}
 
 ### ステップ 4: サービスアカウントを作成する {#service-account}
 
 次に、新しいサービスアカウントを作成し、FCM トークンの登録時に Braze が許可された API 呼び出しを行えるようにします。Google Cloud で、[**サービスアカウント**] に移動し、プロジェクトを選択します。[**サービスアカウント**] ページで [**サービスアカウントの作成**] を選択します。
 
-![「サービス アカウントの作成」が強調表示されたプロジェクトのサービス アカウントのホーム ページ。]({% image_buster /assets/img/android/push_integration/create_a_service_account/select-create-service-account.png %})
+![プロジェクトのサービス・アカウントのホームページで、「サービス・アカウントの作成」が強調表示されている。]({% image_buster /assets/img/android/push_integration/create_a_service_account/select-create-service-account.png %})
 
 サービスアカウント名、ID、説明を入力して、[**作成して続行**] を選択します。
 
-![[サービスアカウントの詳細] のフォーム。]({% image_buster /assets/img/android/push_integration/create_a_service_account/enter-service-account-details.png %})
+![サービスアカウント詳細 "のフォーム。]({% image_buster /assets/img/android/push_integration/create_a_service_account/enter-service-account-details.png %})
 
 [**ロール**] フィールドで、ロールのリストから [**Firebase Cloud Messaging API 管理者**] を見つけて選択します。アクセスをより制限する場合は、`cloudmessaging.messages.create` 権限を持つ[カスタムロール](https://cloud.google.com/iam/docs/creating-custom-roles)を作成し、代わりにリストからそれを選択します。[**完了**] を選択します。
 
@@ -232,23 +232,23 @@ Google Cloud で、Android アプリが使用しているプロジェクトを�
 [**Firebase Cloud Messaging 管理者**] ではなく、[**Firebase Cloud Messaging _API_ 管理者**] を選択してください。
 {% endalert %}
 
-![[Firebase Cloud Messaging API 管理者] がロールとして選択されている、「このサービスアカウントにプロジェクトへのアクセス権を付与」するためのフォーム。]({% image_buster /assets/img/android/push_integration/create_a_service_account/add-fcm-api-admin.png %})
+![Firebase Cloud Messaging API Admin "をロールとして選択した状態で、"Grant this service account access to project "のフォームを表示する。]({% image_buster /assets/img/android/push_integration/create_a_service_account/add-fcm-api-admin.png %})
 
 ### ステップ 5: JSON認証情報を生成する {#json}
 
-次に、FCM サービスアカウントの JSON 認証情報を生成します。Google Cloud IAM & Admin で、[**サービスアカウント**] に移動し、プロジェクトを選択します。[先ほど作成した](#android_service-account) FCM サービスアカウントを見つけて、<i class="fa-solid fa-ellipsis-vertical"></i>[**アクション**] > [**キーの管理**] を選択します。
+次に、FCM サービスアカウントの JSON 認証情報を生成します。Google Cloud IAM& Adminで、**Service Accountsに**行き、プロジェクトを選択する。[先ほど作成した](#android_service-account) FCM サービスアカウントを見つけて、<i class="fa-solid fa-ellipsis-vertical"></i>[**アクション**] > [**キーの管理**] を選択します。
 
-![[アクション] メニューが開いた状態の、プロジェクトのサービスアカウントホームページ。]({% image_buster /assets/img/android/push_integration/generate_json_credentials/select-manage-keys.png %})
+![アクション」メニューが開封されたプロジェクトのサービスアカウントホームページ。]({% image_buster /assets/img/android/push_integration/generate_json_credentials/select-manage-keys.png %})
 
 [**キーの追加**] > [**新しいキーを作成**] を選択します。
 
-![[キーを追加] メニューが開いた状態の選択されたサービスアカウント。]({% image_buster /assets/img/android/push_integration/generate_json_credentials/select-create-new-key.png %})
+![鍵の追加」メニューが開封され、選択されたサービスアカウント。]({% image_buster /assets/img/android/push_integration/generate_json_credentials/select-create-new-key.png %})
 
 [**JSON**] を選択し、[**作成**] を選択します。FCM プロジェクト ID とは異なる Google Cloud のプロジェクト ID を使用してサービスアカウントを作成した場合は、JSON ファイルで `project_id` に割り当てられた値を手動で更新する必要があります。
 
 キーをどこにダウンロードしたかを覚えておいてください。次のステップで必要になります。
 
-![「JSON」が選択された秘密キーの作成フォームです。]({% image_buster /assets/img/android/push_integration/generate_json_credentials/select-create.png %}){: style="max-width:65%;"}
+![JSON」を選択した秘密キー作成フォーム。]({% image_buster /assets/img/android/push_integration/generate_json_credentials/select-create.png %}){: style="max-width:65%;"}
 
 {% alert warning %}
 秘密キーが漏洩した場合は、セキュリティリスクが生じる可能性があります。JSON の認証情報は安全な場所に保存しておいてください。キーは Braze にアップロードした後で削除します。
@@ -258,11 +258,11 @@ Google Cloud で、Android アプリが使用しているプロジェクトを�
 
 次に、JSON 認証情報を Braze ダッシュボードにアップロードします。Braze で、<i class="fa-solid fa-gear"></i>[**設定**] > [**アプリの設定**] を選択します。
 
-![[アプリ設定] が強調表示された状態で Braze で [設定] メニューが開いています。]({% image_buster /assets/img/android/push_integration/upload_json_credentials/select-app-settings.png %})
+![Brazeで "設定 "メニューを開き、"アプリ設定 "をハイライトする。]({% image_buster /assets/img/android/push_integration/upload_json_credentials/select-app-settings.png %})
 
 Android アプリの [**プッシュ通知設定**] で [**Firebase**] を選択し、[**JSON ファイルのアップロード**] を選択して、[先ほど生成した](#android_json)認証情報をアップロードします。完了したら、[**保存**] を選択します。
 
-![「プッシュ通知設定」のフォームで、プッシュプロバイダーとして「Firebase」が選択されています。]({% image_buster /assets/img/android/push_integration/upload_json_credentials/upload-json-file.png %})
+![プッシュ通知設定」のフォームで、プッシュプロバイダとして「Firebase」が選択されている。]({% image_buster /assets/img/android/push_integration/upload_json_credentials/upload-json-file.png %})
 
 {% alert warning %}
 秘密キーが漏洩した場合は、セキュリティリスクが生じる可能性があります。キーが Braze にアップロードされたので、[先に生成した](#android_json)ファイルを削除します。
@@ -274,11 +274,11 @@ Android アプリの [**プッシュ通知設定**] で [**Firebase**] を選択
 
 まず Firebase Console に移動し、プロジェクトを開いて、<i class="fa-solid fa-gear"></i>[**設定**] > [**プロジェクト設定**] を選択します。
 
-![[設定] メニューが開いた状態の Firebase プロジェクト。]({% image_buster /assets/img/android/push_integration/set_up_automatic_token_registration/select-project-settings.png %})
+![設定」メニューが開封されたFirebaseプロジェクト。]({% image_buster /assets/img/android/push_integration/set_up_automatic_token_registration/select-project-settings.png %})
 
 [**Cloud Messaging**] を選択し、[**Firebase Cloud Messaging API (V1)**] で [**送信者 ID**] フィールドの数字をコピーします。
 
-![[送信者 ID] が強調表示されている Firebase プロジェクトの「Cloud Messaging」ページ。]({% image_buster /assets/img/android/push_integration/set_up_automatic_token_registration/copy-sender-id.png %})
+![Firebaseプロジェクトの "Cloud Messaging "ページで、"Sender ID "がハイライトされている。]({% image_buster /assets/img/android/push_integration/set_up_automatic_token_registration/copy-sender-id.png %})
 
 次に、Android Studio プロジェクトを開き、Firebase 送信者 ID を使用して、`braze.xml` または `BrazeConfig` 内で FCM トークンの自動登録を有効にします。
 
@@ -371,7 +371,7 @@ Braze.configure(this, brazeConfig)
 新規、既存、またはBraze以外のFirebaseメッセージングサービスを作成することができる。特定のニーズに最も適したものを選択する。
 
 {% tabs local %}
-{% tab 新しい %}
+{% tab New %}
 Braze には、プッシュ受信インテントと開封インテントを処理するサービスが含まれています。`BrazeFirebaseMessagingService` クラスは `AndroidManifest.xml` に登録する必要があります。
 
 ```xml
@@ -390,7 +390,7 @@ Braze SDK 3.1.1 より前では、FCM プッシュを処理するために `Appb
 {% endalert %}
 {% endtab %}
 
-{% tab 既存 %}
+{% tab Existing %}
 Firebase Messaging Service がすでに登録されている場合は、[`RemoteMessage`](https://firebase.google.com/docs/reference/android/com/google/firebase/messaging/RemoteMessage) オブジェクトを[`BrazeFirebaseMessagingService.handleBrazeRemoteMessage()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.push/-braze-firebase-messaging-service/-companion/handle-braze-remote-message.html) 経由でBraze に渡すことができます。このメソッドは [`RemoteMessage`](https://firebase.google.com/docs/reference/android/com/google/firebase/messaging/RemoteMessage) オブジェクトが Braze から発信された場合にのみ通知を表示し、そうでない場合は無視します。
 
 {% subtabs %}
@@ -434,7 +434,7 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
 {% endsubtabs %}
 {% endtab %}
 
-{% tab ノンブレイズ %}
+{% tab Non-Braze %}
 使用したい別の Firebase メッセージングサービスがある場合は、アプリケーションが Braze からではないプッシュを受信した場合に呼び出すフォールバック Firebase メッセージングサービスを指定することもできます。
 
 `braze.xml` で次のように指定します。
@@ -489,7 +489,7 @@ Android N 以降、色を使った小さな通知アイコンアセットは更�
 
 次の図の大小アイコンは、適切にデザインされたアイコンの例です。
 
-![大きなアイコンの隣に「ねえ、バーに向かっているけど…」というメッセージが表示されると、右下に小さなアイコンが表示されます]({% image_buster /assets/img_archive/large_and_small_notification_icon.png %}「大きい通知アイコンと小さい通知アイコン」)
+![大きなアイコンの隣に「ねえ、バーに向かっているけど…」というメッセージが表示されると、右下に小さなアイコンが表示されます]({% image_buster /assets/img_archive/large_and_small_notification_icon.png %} "Large and Small Notification Icon")
 
 ### ステップ 3:通知アイコンを設定する {#configure-icons}
 
@@ -565,7 +565,7 @@ Braze.configure(this, brazeConfig)
 
 Braze ダッシュボードは、通知がクリックされたときに開くプッシュ通知キャンペーンとキャンバスでのディープリンクまたは Web URL の設定をサポートしています。
 
-![Braze ダッシュボードの「On Click Behavior」設定。ドロップダウンから「Deep Link Into Application」を選択。]({% image_buster /assets/img_archive/deep_link_click_action.png %}"Deep Link Click Action")
+![Brazeダッシュボードの「On Click Behavior」設定で、ドロップダウンから「Deep Link Into Application」が選択されている。]({% image_buster /assets/img_archive/deep_link_click_action.png %} "Deep Link Click Action")
 
 #### バックスタックの動作のカスタマイズ
 
@@ -630,7 +630,7 @@ Braze Android SDK は[Android 通知チャネル](https://developer.android.com/
 
 この時点で、Braze から送信された通知を表示できるはずです。これをテストするには、Braze ダッシュボードの [**キャンペーン**] ページにアクセスし、**プッシュ通知**キャンペーンを作成します。[**Android プッシュ**] を選択し、メッセージをデザインします。次に、作成画面で目のアイコンをクリックしてテスト送信者を取得します。現在のユーザーのユーザー ID またはメールアドレスを入力し、[**テストを送信**] をクリックします。デバイスにプッシュが表示されます。
 
-![Braze ダッシュボードのプッシュ通知キャンペーンの'Test' タブ。]({% image_buster /assets/img_archive/android_push_test.png %}"Android Push Test")
+![Brazeダッシュボードのプッシュ通知キャンペーンの「テスト」タブ。]({% image_buster /assets/img_archive/android_push_test.png %} "Android Push Test")
 
 プッシュ表示に関する問題については、[トラブルシューティングガイド]({{site.baseurl}}/developer_guide/push_notifications/troubleshooting/?sdktab=android)を参照してください。
 
@@ -683,7 +683,7 @@ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {YOUR
 
 Firebase Cloud Messaging (FCM) の上限を超えると、Google は "quota exceeded" エラーを返す。FCM のデフォルトの制限は、1分あたり 600,000 リクエストです。Brazeは、Googleが推奨するベストプラクティスに従って送信を再試行する。しかし、このようなエラーが大量に発生すると、送信時間が数分長くなることがある。潜在的な影響を軽減するために、Braze はレート制限を超えていることを示すアラートと、エラーを防ぐために実行できるステップをユーザーに送信します。
 
-現在の上限を確認するには、**Google Cloud Console**>**API & Services**>**Firebase Cloud Messaging API**>**Quotas & System Limitsに**アクセスするか、[FCM API Quotasページに](https://console.cloud.google.com/apis/api/fcm.googleapis.com/quotas)アクセスする。
+現在の制限を確認するには、**Google Cloud Console**>**API& Services**>**Firebase Cloud Messaging API**>**Quotas& System Limitsに**アクセスするか、[FCM API Quotasページに](https://console.cloud.google.com/apis/api/fcm.googleapis.com/quotas)アクセスする。
 
 ### ベストプラクティス
 

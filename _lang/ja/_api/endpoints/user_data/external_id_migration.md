@@ -1,5 +1,5 @@
 ---
-nav_title: 外部ID の移行
+nav_title: 外部IDの移行
 article_title: "外部ID の移行"
 search_tag: Endpoint
 page_order: 7

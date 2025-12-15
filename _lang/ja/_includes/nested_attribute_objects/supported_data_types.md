@@ -38,7 +38,7 @@
     </tr>
     <tr>
       <td>オブジェクト</td>
-      <td>キーと値のペアを持つ構造化された値。 <code>{"author": "Tolkien"}</code>.</td>
+      <td>のようなキーと値のペアを持つ構造化された値。 <code>{"author": "Tolkien"}</code>.</td>
     </tr>
     <tr>
       <td>オブジェクト配列</td>

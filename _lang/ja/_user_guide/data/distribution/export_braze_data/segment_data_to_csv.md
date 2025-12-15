@@ -13,19 +13,11 @@ description: "このリファレンス記事では、セグメントデータを
 
 セグメントデータをCSV にエクスポートするには、セグメントの編集中に**User Data** ドロップダウンを選択し、そのセグメントのユーザーデータまたは電子メールアドレスのいずれかをエクスポートするように選択します。
 
-<<<<<<< HEAD
-![Segment Details section with User Data ドロップダウンにエクスポートオプションが表示されます。]({% image_buster /assets/img_archive/csvexport.png %})
+![「ユーザーデータ」ドロップダウンにエクスポートオプションが表示されている「セグメントの詳細」セクション。]({% image_buster /assets/img_archive/csvexport.png %})
 
 メイン**Segments**ページから、セグメントの<i class="fas fa-gear"></i>**設定**ドロップダウンを選択して、CSVエクスポートをリクエストすることもできます。
 
-![Settings(設定)] ドロップダウン(メイン・セグメント・ページ)。]({% image_buster /assets/img_archive/csvexport2.png %})
-=======
-\![Segment Details section with User Data ドロップダウンにエクスポートオプションが表示されます。]({% image_buster /assets/img_archive/csvexport.png %})
-
-メイン**Segments**ページから、セグメントの<i class="fas fa-gear"></i>**設定**ドロップダウンを選択して、CSVエクスポートをリクエストすることもできます。
-
-\![Settings(設定)] ドロップダウン(メイン・セグメント・ページ)。]({% image_buster /assets/img_archive/csvexport2.png %})
->>>>>>> main
+![メインのセグメントページの「設定」ドロップダウン。]({% image_buster /assets/img_archive/csvexport2.png %})
 
 {% alert tip %}
 すべてのユーザープロファイルからデータをエクスポートするには、フィルタなしでセグメントを作成し、CSVエクスポートをリクエストする。
