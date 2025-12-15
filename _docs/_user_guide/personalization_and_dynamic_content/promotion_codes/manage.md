@@ -19,7 +19,7 @@ To send a promotion code in a message, select **Copy Snippet** next to the promo
 
 ![An option to copy the snippet to paste into your message.]({% image_buster /assets/img/promocodes/promocode9.png %}){: style="max-width:70%"}
 
-Paste the code snippets into one of your messages in Braze, then use [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) to insert one of the unique promotion codes from your list. That code will be marked as sent, ensuring no other message sends the same code.
+Paste the code snippets into one of your messages in Braze, then use [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) to insert one of the unique promotion codes from your list. That code is marked as sent, ensuring no other message sends the same code.
 
 ![An example message "Treat yourself to something nice this spring with our exclusive offer" followed by the code snippet.]({% image_buster /assets/img/promocodes/promocode10.png %}){: style="max-width:70%"}
 
@@ -35,16 +35,16 @@ To assign one promotion code in a Canvas and reuse it across steps:
 When a user qualifies for a code across multiple channels, they receive the same code in each channel. For example, if they get messages by email and push, the same code is sent to both. Reporting also reflects a single code.
 
 {% alert note %}
-If no promotion codes are available, test or live messages that rely on codes will not send.
+If no promotion codes are available, test or live messages that rely on codes do not send.
 {% endalert %}
 
 ### In-app message campaigns {#promotion-codes-iam-campaigns}
 
-After creating an [in-app message campaign]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages), you can insert a [promotion code list snippet]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes/manage/#using-promotion-codes-1) into your in-app message message body. Promotion codes in in-app messages will be deducted and used only when a user triggers the display of the in-app message.
+After creating an [in-app message campaign]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages), you can insert a [promotion code list snippet]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes/manage/#using-promotion-codes-1) into your in-app message message body. Promotion codes in in-app messages are deducted and used only when a user triggers the display of the in-app message.
 
 ### Test messages
 
-Test sends and seed group email sends will use up promotion codes unless requested otherwise. Contact your Braze account manager to update this feature behavior so promotion codes aren't used during test sends and seed group email sends.
+Test sends and seed group email sends use up promotion codes unless requested otherwise. Contact your Braze account manager to update this feature behavior so promotion codes aren't used during test sends and seed group email sends.
 
 ### With message extras for Currents
 
@@ -60,7 +60,7 @@ First, select the following for each field in the User Update step:
 - **Action:** Update
 - **Key Value:** The promotion code's Liquid code snippet, such as {% raw %}`{% promotion('spring25') %}`{% endraw %}
 
-Second, add the custom attribute (in this example, {% raw %}`{{custom_attribute.${Promo Code}}`{% endraw %}) to a message. The discount code will be templated in.
+Second, add the custom attribute (in this example, {% raw %}`{{custom_attribute.${Promo Code}}`{% endraw %}) to a message. The discount code is templated in.
 
 ## Viewing promotion code usage
 
@@ -79,13 +79,13 @@ For multichannel and single-send campaigns and Canvases, all promotion codes ref
 - The same promotion codes are used across channels in a multichannel message.
 - Extra promotion codes are not used if a message fails or aborts.
 
-If a user has two promotion code lists referenced in one message that is split by a Liquid conditional logic tag, all promotion codes will still be deducted, regardless of which conditional flow the user follows.
+If a user has two promotion code lists referenced in one message that is split by a Liquid conditional logic tag, all promotion codes are still deducted, regardless of which conditional flow the user follows.
 
-If a user enters a new Canvas step or re-enters a Canvas, and the promotion code Liquid snippet is applied again for a message to that user, a new promotion code will be used.
+If a user enters a new Canvas step or re-enters a Canvas, and the promotion code Liquid snippet is applied again for a message to that user, a new promotion code is used.
 
 ### Example
 
-In the following example, both promotion code lists `vip-deal` and `regular-deal` will be deducted. Here's the Liquid:
+In the following example, both promotion code lists `vip-deal` and `regular-deal` are deducted. Here's the Liquid:
 
 {% raw %}
 ```
@@ -97,7 +97,7 @@ In the following example, both promotion code lists `vip-deal` and `regular-deal
 ```
 {% endraw %}
 
-Braze recommends uploading more promotion codes than what you estimate will be used. If a promotion code list expires or runs out of promotion codes, the subsequent messages will be aborted.
+Braze recommends uploading more promotion codes than what you estimate using. If a promotion code list expires or runs out of promotion codes, the subsequent messages are aborted.
 
 {% alert tip %}
 **Here's an analogy for how promotion codes are used up in Braze.** <br><br>Imagine that sending your message is like sending a letter at the post office. You give the letter to a clerk, and they see that your letter should include a coupon. The clerk pulls the first coupon from the stack and adds it to the envelope. The clerk sends the letter, but for some reason, the letter gets lost in the mail (and the coupon is also now lost). <br><br>In this scenario, Braze is the postal clerk, and your promotion code is the coupon. We cannot retrieve it after it has been pulled from the stack of promotion codes, regardless of the webhook result.
