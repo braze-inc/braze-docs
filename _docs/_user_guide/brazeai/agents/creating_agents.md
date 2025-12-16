@@ -216,7 +216,7 @@ Let's say you want to collect user feedback for their most recent dining experie
 }
 ```
 
-Note that if you try to use an agent with a JSON output in a catalog, it will not follow your schema. Instead, consider using the [defined output fields](#fields).
+If you try to use an agent with a JSON output in a catalog, it will not follow your schema. Instead, consider using the [defined output fields](#fields).
 
 {% alert important %}
 Output formats aren't currently supported by Claude AI. If you're using an Anthropic key, we recommend manually adding the structure to the agent prompt.
