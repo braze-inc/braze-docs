@@ -51,9 +51,7 @@ Agents are configured with instructions (system prompts) that define how they be
 
 During the beta period, the following limitations apply:
 
-- Each agent can be executed up to 100,000 times per day.
-- An agent's default daily execution limit is 50,000.
-- Daily execution is limited to 100,000 runs per agent, per day.
+- Each agent has a default daily execution limit of 50,000 runs, which can be increased up to a maximum of 100,000 runs per day.
 - Each run must complete within 30 seconds. After 30 seconds, the agent will return a null response where it is used.
 - Input data is limited to 25 KB per request. Longer inputs are truncated.
 
