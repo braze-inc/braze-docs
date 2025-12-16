@@ -15,7 +15,7 @@ alias: /scim/automated_user_provisioning/
 ## Accessing SCIM provisioning settings
 
 1. In the Braze dashboard, go to **Settings** > **Admin Settings** > **SCIM Provisioning** and add an identity provider.
-2. In the **Braze provisioning** step, select a proivisioning method and provide access settings.
+2. In the **Braze provisioning** step, select a provisioning method and provide access settings.
 
 ![A page to set up the SCIM integration with sections for selecting a provisioning method and providing access settings.]({% image_buster /assets/img_archive/scim_braze_config.png %}){: style="max-width:70%;"}
 
