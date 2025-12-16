@@ -15,7 +15,7 @@ search_rank: 5
 
 Customized and tailored in-app messages enhance the user experience and help your audience get the most value out of your app. With a variety of layouts and customization tools to choose from, in-app messages engage your users more than ever before. They come with context, have lower urgency, and are delivered when the user is active within your app. For examples of in-app messages, check out our [customer stories](https://www.braze.com/customers/).
 
-## Potential use cases
+## Use cases
 
 With the rich level of content offered by in-app messages, you can leverage this channel for a variety of use cases:
 
@@ -67,7 +67,7 @@ In addition to these default message templates, you can also further customize y
 
 ## Templated in-app messages
 
-In-app messages will be delivered as templated in-app messages when **Re-evaluate campaign eligibility before displaying** is selected or if any of the following Liquid tags exist in the message:
+In-app messages are delivered as templated in-app messages when **Re-evaluate campaign eligibility before displaying** is selected or if any of the following Liquid tags exist in the message:
 
 - `canvas_entry_properties`
 - `connected_content`
@@ -76,10 +76,10 @@ In-app messages will be delivered as templated in-app messages when **Re-evaluat
 - `catalog_selection_items`
 - `event_properties`
 
-This means during session start, the device will receive the trigger of that in-app message instead of the entire message. When the user triggers the in-app message, the user's device will make a network request to fetch the actual message.
+This means that during session start, the device will receive the trigger of that in-app message instead of the entire message. When the user triggers the in-app message, the user's device will make a network request to fetch the actual message.
 
 {% alert note %}
-The message will not deliver if the device doesn't have access to the internet. The message might not deliver if the Liquid logic takes too long to resolve.
+The message will not be delivered if the device doesn't have access to the internet. The message might not be delivered if the Liquid logic takes too long to resolve.
 {% endalert %}
 
 ## Abort behavior
@@ -107,7 +107,7 @@ In other words, the logic that determines if we should abort an in-app message o
 5. Sam is not sent the two in-app messages that exclude them, but they are sent the other three messages.
 6. No abort events are logged.
 
-Braze doesn't log any abort events in Sam's case because this doesn't fulfill our definition of an abort; Sam **did not** perform any actions that would trigger the messages. In other words, when it comes to in-app messages, users never actually perform the trigger before Braze determines they shouldn’t see the message.
+Braze doesn't log any abort events in Sam's case because this doesn't fulfill our definition of an abort; Sam **did not** perform any actions that would trigger the messages. For in-app messages, users never actually perform the trigger before Braze determines they shouldn’t see the message.
 
 #### Templated in-app message abort behavior
 
@@ -126,7 +126,7 @@ This table compares the in-app message flows that Sam experienced:
 | In-app message | Abort behavior |
 | --- | --- |
 | Standard | An abort event was not logged because Sam didn't perform any actions that would trigger a message.<br><br>Standard in-app messages don’t log aborts because the definition of an abort is “didn’t see the message despite performing the trigger action.” Because in-app messages are delivered to the device before the trigger actions occur, it doesn’t make sense to consider in-app messages omitted because of Liquid logic. |
-| Templated | An abort event was logged because Sam performed the trigger action to trigger the templated in-app message but received an abort in the Liquid templating. <br><br>Templated in-app messages log aborts because the Liquid evaluation occurs after the trigger action has been performed. |
+| Templated | An abort event was logged because Sam performed the trigger action to trigger the templated in-app message, but received an abort in the Liquid templating. <br><br>Templated in-app messages log aborts because the Liquid evaluation occurs after the trigger action has been performed. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## More resources
