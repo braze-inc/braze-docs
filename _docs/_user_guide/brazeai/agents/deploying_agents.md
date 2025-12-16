@@ -76,9 +76,23 @@ You can refresh and edit the fields in your catalog that use agents. To remove a
 During the beta period, catalog agents are limited to processing input values up to 25 KB per row.
 {% endalert %}
 
-#### Choose defined output fields
+#### Define response fields
 
-For agentic catalog columns, you can manually override any values. To revert the value back to the agent output, select the specific cell to refresh it in-line.
+If your agent uses [fields]({{site.baseurl}}/user_guide/brazeai/agents/creating_agents/#fields) as the output format, you can select the corresponding field from the agent for **Response Field** to use in the catalog field. 
+
+Let's say you have an agent that adds product descriptions to a catalog with the following fields to structure the output format:
+
+| Field name | Value |
+| --- | --- |
+| **description** | Text |
+| **confidence_score_out_of_ten** | Number |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+You can add a field named **product_description** to a catalog and select **description** as the **Response Field** to populate the column with the agent's descriptions.
+
+![The option to select "Apply AI agent" for a catalog field.]({% image_buster /assets/img/ai_agent/response_field.png %}){: style="max-width:80%;"}
+
+You can also manually override the agentic cell by selecting **Edit Item** and updating the agentic description with your edits. To revert your edits back to the agentic description, select the refresh symbol in the cell.
 
 ### Error handling in catalogs  
 
