@@ -93,8 +93,7 @@ jobs:
               'subscription',
               'subscribed',
               'directive',
-              'directives',
-              'act'];
+              'directives'];
 
             const escapeRegex = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
             const containsKeyword = keywords.some(keyword => {
