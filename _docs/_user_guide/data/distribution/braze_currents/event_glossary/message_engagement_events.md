@@ -650,6 +650,7 @@ Subscription groups are only available for email, SMS, RCS, and WhatsApp channel
 
 #### Property details
 
+- `dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open).
 - `state_change_source` will return a string of the full source name. For example, the source CSV import will return the string `CSV Import`. Available sources are listed below:
 
 | Source | Description |
@@ -665,10 +666,6 @@ Subscription groups are only available for email, SMS, RCS, and WhatsApp channel
 | User Merge | When a user is updated by the user merge process |
 | Canvas User Update Step | When a user is updated by the Canvas user update step |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
-
-#### Property details
-
-- `dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open).
 
 {% endapi %}
 
