@@ -20,7 +20,7 @@ This page is a reference of tables and columns available to be queried in the [Q
 
 ## Table of contents
 
-{% multi_lang_include deprecations/braze_sdk/news_feed.md status="Deprecated" %}
+{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
 
 Table | Description
 ------|------------
