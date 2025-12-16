@@ -11,7 +11,7 @@ Before you start, you'll need the following:
 | Prerequisite | Description |
 |--------------|-------------|
 | Braze API Key | A Braze API key with the required permissions. You'll create a new key when you [set up your Braze MCP server](#create-api-key). |
-| MCP Client | Currently, only [Claude](https://claude.ai/), [Cursor](https://cursor.com/), and [Google Gemini CLI](https://docs.cloud.google.com/gemini/docs/codeassist/gemini-cli) are officially supported. You'll need an account for one of these clients to use the Braze MCP server. |
+| MCP client | Currently, only [Claude](https://claude.ai/), [Cursor](https://cursor.com/), and [Google Gemini CLI](https://docs.cloud.google.com/gemini/docs/codeassist/gemini-cli) are officially supported. You'll need an account for one of these clients to use the Braze MCP server. |
 | Terminal | A terminal app so you can run commands and install tooling. Use your preferred terminal app or the one that's pre-installed on your computer. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
@@ -228,41 +228,12 @@ Configure your MCP client using our pre-provided configuration file.
 
 {% tabs %}
 {% tab Claude %}
-In [Claude Desktop](https://claude.ai/download), go to **Settings** > **Developer** > **Edit Config**, then add the following snippet:
+Set up your MCP server using the [Claude Desktop](https://claude.ai/download) connector director. 
 
-```json
-{
-  "mcpServers": {
-    "braze": {
-      "command": "uvx",
-      "args": ["--native-tls", "braze-mcp-server@latest"],
-      "env": {
-        "BRAZE_API_KEY": "key-identifier",
-        "BRAZE_BASE_URL": "rest-endpoint"
-      }
-    }
-  }
-}
-```
+1.In Claude Desktop, go to go to **Settings** > **Connectors** > **Browse Connectors** > **Desktop Extensions** > **Braze MCP Server** > **Install**
+2. Enter your API key and base URL.
+3. Save the configuration and restart Claude Desktop.
 
-Replace `key-identifier` and `rest-endpoint` with the corresponding values from the **API Keys** page in Braze. Your configuration should be similar to the following:
-
-```json
-{
-  "mcpServers": {
-    "braze": {
-      "command": "uvx",
-      "args": ["--native-tls", "braze-mcp-server@latest"],
-      "env": {
-        "BRAZE_API_KEY": "2e8b-3c6c-d12e-bd75-4f0e2a8e5c71",
-        "BRAZE_BASE_URL": "https://torchie.braze.com"
-      }
-    }
-  }
-}
-```
-
-When you're finished, save the configuration and restart Claude Desktop.
 {% endtab %}
 
 {% tab Cursor %}
