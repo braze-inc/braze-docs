@@ -92,7 +92,7 @@ You can add a field named **product_description** to a catalog and select **desc
 
 ![A field "product_description" with the "Descriptor" agent applied. The "description" output is selected as the response field.]({% image_buster /assets/img/ai_agent/response_field.png %}){: style="max-width:80%;"}
 
-You can also manually override the agentic cell by selecting **Edit Item** and updating the agentic description with your edits. To revert your edits back to the agentic description, select the refresh symbol in the cell.
+You can also manually override the agent-generated cell by selecting **Edit Item** and updating the agent-generated description with your edits. To revert your edits back to the agent-generated description, select the refresh symbol in the cell.
 
 ### Error handling in catalogs  
 
