@@ -90,7 +90,7 @@ Let's say you have an agent that adds product descriptions to a catalog with the
 
 You can add a field named **product_description** to a catalog and select **description** as the **Response Field** to populate the column with the agent's descriptions.
 
-![The option to select "Apply AI agent" for a catalog field.]({% image_buster /assets/img/ai_agent/response_field.png %}){: style="max-width:80%;"}
+![A field "product_description" with the "Descriptor" agent applied. The "description" output is selected as the response field.]({% image_buster /assets/img/ai_agent/response_field.png %}){: style="max-width:80%;"}
 
 You can also manually override the agentic cell by selecting **Edit Item** and updating the agentic description with your edits. To revert your edits back to the agentic description, select the refresh symbol in the cell.
 
