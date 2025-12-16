@@ -123,7 +123,7 @@ Log into your Microsoft Entra admin center.
 5. In the **What are you looking to do with your application?** section, select **Integrate application you don't find in the gallery (Non-gallery)**.
 6. Select **Create**.
 
-### Step 1.3. Set up SCIM integration
+### Step 1.3: Set up SCIM integration
 
 1. Go to the **Manage** > **Provisioning** section of your SCIM application.
 2. Select **Connect your application** or **New configuration** and fill in the field values that populate within the table on the **Setup SCIM provisioning** page.
