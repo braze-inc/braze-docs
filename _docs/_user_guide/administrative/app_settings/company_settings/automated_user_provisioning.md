@@ -112,6 +112,7 @@ The Entra ID integration is currently in early access. Contact your Braze accoun
 
 ## Step 1: Set up SCIM provisioning app
 
+### Step 1.1. Log into Microsoft Entra admin center
 Log into your Microsoft Entra admin center.
 
 ### Step 1.2: Create and set up your SCIM app
