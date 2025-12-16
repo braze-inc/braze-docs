@@ -128,7 +128,7 @@ Log into your Microsoft Entra admin center.
 1. Go to the **Manage** > **Provisioning** section of your SCIM application.
 2. Select **Connect your application** or **New configuration** and fill in the field values that populate within the table on the **Setup SCIM provisioning** page.
 
-### Step 1.4. Enable provisioning to app
+### Step 1.4: Enable provisioning to app
 
 1. Go to the **Manage** > **Attribute mapping (Preview)** section of your SCIM application.
 2. Select **Provision Microsoft Entra ID Users**.
