@@ -18,37 +18,25 @@ tool: Canvas
 
 キャンバスに[実験パス]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/)を追加し、[**勝者パス**] をオンにします。
 
-<<<<<<< HEAD
-![「後続ユーザーを勝者パスに分配」というタイトルの実験パスの設定。このセクションには、勝者パスのトグルと、コンバージョンイベントと実験期間を設定するオプションがあります。]({% image_buster /assets/img/experiment_step/experiment_winning_path_recurring.png %})
-=======
-\![「後続ユーザーを勝者パスに分配」というタイトルの実験パスの設定。このセクションには、勝者パスのトグルと、コンバージョンイベントと実験期間を設定するオプションがあります。]({% image_buster /assets/img/experiment_step/experiment_winning_path_recurring.png %})
->>>>>>> main
+![後続ユーザーを勝者パスに分配」というタイトルの実験パスの設定。このセクションには、勝者パスのトグルと、コンバージョンイベントと実験期間を設定するオプションがあります。]({% image_buster /assets/img/experiment_step/experiment_winning_path_recurring.png %})
 
 ### ステップ2:勝者パスを設定する
 
 勝者を決定するコンバージョンイベントを指定します。利用できるコンバージョンイベントがない場合は、キャンバスの設定の最初のステップに戻り、[コンバージョンイベントを割り当てます]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#choose-conversion-events)。 
 
-開封 s またはクリックをコンバージョンイベントとして選択した場合は、[Message ステップ]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step) がパスの最初のステップであることを確認します。Brazeは、それぞれのパスの最初のメッセージステップからのエンゲージメントのみを数える。パスが別のステップ(遅延やオーディエンスパス ステップなど)で始まり、メッセージが後で表示される場合、そのメッセージはパフォーマンスの評価時には含まれません。
+開封またはクリックをコンバージョンイベントとして選択した場合、パスの最初のステップが[メッセージステップ]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step)であることを確認する。Brazeは、それぞれのパスにおける最初のメッセージステップからのエンゲージメントのみをカウントする。もしパスが別のステップ（ディレイやオーディエンス・パスのステップなど）から始まり、メッセージが後から来た場合、パフォーマンスを評価する際にそのメッセージは含まれない。
 
 次に、**実験期間**を設定します。**実験期間**では、勝者パスが決定され、その後のすべてのユーザーがそのパスに送られる前に、実験を行う時間を指定します。最初のユーザーがステップに入ると、期間が開始されます。
 
-<<<<<<< HEAD
-![コンバージョンイベント "Clicks&quot でパス設定を勝ち取る;12 時間の実験ウィンドウで選択。]({% image_buster /assets/img/experiment_step/experiment_winning_settings.png %})
-=======
-\![コンバージョンイベント "Clicks&quot でパス設定を勝ち取る;12 時間の実験ウィンドウで選択。]({% image_buster /assets/img/experiment_step/experiment_winning_settings.png %})
->>>>>>> main
+![勝者パスの設定、コンバージョンイベント "クリック "を選択、12時間の実験ウィンドウ。]({% image_buster /assets/img/experiment_step/experiment_winning_settings.png %})
 
-### ステップ 3: フォールバックを決定する {#statistical-significance}
+### ステップ 3:フォールバックを決定する {#statistical-significance}
 
 デフォルトでは、テストの結果が統計的に有意な勝者を決定するのに十分でない場合、将来のすべてのユーザーがベストパフォーマンスのパスに送信されます。
 
 または、**すべての将来のユーザーにパスの組み合わせの送信を続行**するよう指定することもできます。このオプションは、実験パスの配分で指定されたパーセンテージに従って、将来のユーザーにパスの組み合わせを送信します。
 
-<<<<<<< HEAD
-!["検査結果が統計的に有意でない場合、ユーザー sにパス s&quot の組み合わせを送信し続けます。h がアプリするものとして選択されます。]({% image_buster /assets/img/experiment_step/experiment_winning_statistical.png %})
-=======
-\!["検査結果が統計的に有意でない場合、ユーザー sにパス s&quot の組み合わせを送信し続けます。h がアプリするものとして選択されます。]({% image_buster /assets/img/experiment_step/experiment_winning_statistical.png %})
->>>>>>> main
+![テスト結果が統計的に有意でなかった場合、ユーザーに何が起こるかとして選択された "今後すべてのユーザーにミックスパスを送り続ける"。]({% image_buster /assets/img/experiment_step/experiment_winning_statistical.png %})
 
 {% alert note %}
 遅延グループがパス配分に表示されるのは、キャンバスが 1 回限りの入力に設定されていて、実験ステップのパスが 3 つ以下の場合のみです。勝者パスがオンになっている場合、繰り返し発生するキャンバスやトリガーされたキャンバスには遅延グループが表示されません。
@@ -75,19 +63,11 @@ tool: Canvas
 
 ユーザーのエントリが 1 回に限定されているキャンバスで勝者パスを使用する場合、遅延グループが自動的に含められます。実験期間中、一部のユーザーが遅延グループに保持され、残りのユーザーは実験パスに入ります。
 
-<<<<<<< HEAD
-![入賞経路のための遅延グループを用いた実験ステップ]({% image_buster /assets/img/experiment_step/experiment_one_time.png %}){: style="max-width:75%"}
+![勝者パスの遅延グループを使用した実験ステップ]({% image_buster /assets/img/experiment_step/experiment_one_time.png %}){: style="max-width:75%"}
 
 テストが完了して勝者パスが決まると、遅延グループに割り当てられたユーザーは選択されたパスに誘導され、キャンバスを進みます。
 
-![Delay Group を使用した実験ステップは、Winning Path を送信しました]({% image_buster /assets/img/experiment_step/experiment_one_time_results.png %}){: style="max-width:75%"}
-=======
-\![入賞経路のための遅延グループを用いた実験ステップ]({% image_buster /assets/img/experiment_step/experiment_one_time.png %}){: style="max-width:75%"}
-
-テストが完了して勝者パスが決まると、遅延グループに割り当てられたユーザーは選択されたパスに誘導され、キャンバスを進みます。
-
-\![Delay Group を使用した実験ステップは、Winning Path を送信しました]({% image_buster /assets/img/experiment_step/experiment_one_time_results.png %}){: style="max-width:75%"}
->>>>>>> main
+![勝者パスに送られる遅延グループのある実験ステップ]({% image_buster /assets/img/experiment_step/experiment_one_time_results.png %}){: style="max-width:75%"}
 
 ### ローカルタイム配信
 

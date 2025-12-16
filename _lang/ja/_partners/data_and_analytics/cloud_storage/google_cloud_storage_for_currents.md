@@ -14,7 +14,7 @@ search_tag: Partner
 > [Google Cloud Storage](https://cloud.google.com/storage/) は、Google が Cloud Computing 製品群の一部として提供する、非構造化データのための大規模拡張可能オブジェクトストレージソリューションです。
 
 {% alert important %}
-クラウドストレージプロバイダーを切り替える場合は、Braze カスタマーサクセスマネージャーに連絡し、新しい統合の設定と検証について詳細なサポートをご依頼ください。
+クラウドストレージプロバイダーを切り替える場合は、Brazeカスタマーサクセスマネージャーに連絡し、新しい統合の設定と検証についてさらにサポートを受けてください。
 {% endalert %}
 
 Braze と Google Cloud Storage の統合により、Currents データを Google Cloud Storage にストリーミングできます。その後、ETL プロセス (抽出、変換、読み込み) を使用して、データを Google BigQuery などの他の場所に転送できます。
@@ -24,7 +24,7 @@ Braze と Google Cloud Storage の統合により、Currents データを Google
 | 必要条件 | 説明 |
 | ----------- | ----------- |
 | Google Cloud Storage アカウント | このパートナーシップを活用するには、Google Cloud Storage アカウントが必要です。 |
-| Currents | Google Cloud Storage にデータを再度エクスポートするには、アカウントに [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) を設定する必要があります。 |
+| Currents | データをGoogle Cloud Storageにエクスポートするには、アカウントに[Braze Currentsを]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents)設定する必要がある。メッセージアーカイブの設定だけなら、Currentsは必要ない。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 統合
@@ -35,7 +35,7 @@ Google Cloud Storage と統合するには、Braze が書き込み先のスト�
 
 ### ステップ1:役割を作成する
 
-[**IAM & admin**] > [**Roles**] > [**\+ Create Role**] に移動して、Google Cloud Platform Console に新しいロールを作成します。
+Google Cloud Platform Consoleで、**IAM& admin**>**Roles**>**\+ Create Roleと**進み、新しいロールを作成する。
 
 ![]({% image_buster /assets/img/gcs1.png %})
 
@@ -55,35 +55,35 @@ Google Cloud Storage と統合するには、Braze が書き込み先のスト�
 
 ![]({% image_buster /assets/img/gcs2.png %})
 
-### ステップ2: 新しいサービスアカウントを作成する
+### ステップ 2: 新しいサービスアカウントを作成する
 
 #### ステップ 2.1: サービスアカウントを作成する
 
-[**IAM & admin**] > [**Service Accounts**] に移動し、[**Create Service Account**] を選択して、Google Cloud Platform Console で新しいサービスアカウントを作成します。
+Google Cloud Platform Consoleで、**IAM& admin**>**Service Accountsに**移動し、**Create Service Accountを**選択して新しいサービスアカウントを作成する。
 
 ![]({% image_buster /assets/img/gcs3.png %})
 
 次に、サービスアカウントに名前を付け、新しく作成したカスタムロールへのアクセス権を付与する。
 
-![Google Cloud Platform のサービス作成ページで、「ロールを選択」するフィールドへのロール名の入力。]({% image_buster /assets/img/gcs4.png %})
+![Google Cloud Platform のサービス作成ページで、「Select a Role」フィールドにロールの名前を入力する。]({% image_buster /assets/img/gcs4.png %})
 
-#### ステップ 2.2: キーを作成する
+#### ステップ 2.2:キーを作成する
 
 ページ下部の「**Create Key**」ボタンで、Brazeで使用する**JSON**秘密鍵を作成する。キーが作成されると、あなたのマシンにダウンロードされる。
 
 ![]({% image_buster /assets/img/gcs5.png %})
 
-### ステップ 3: Braze で Currents を設定する
+### ステップ 3:Braze で Currents を設定する
 
 Braze で [**Currents**] > [**\+ Current を作成**] > [**Google Cloud Storage データのエクスポート**] に移動し、統合名と連絡先メールを入力します。
 
 次に [**GCS JSON 認証情報**] で JSON 秘密キーをアップロードし、GCS バケット名と GCS 接頭辞 (オプション) を指定します。 
 
 {% alert important %}
-認証情報ファイルを最新の状態に維持することが重要です。コネクターの認証情報の有効期限が切れると、コネクターはイベントの送信を停止します。この状態が**48時間**以上続くと、コネクタのイベントは削除され、データは永久に失われる。
+認証情報ファイルを最新の状態に維持することが重要です。コネクターの認証情報の有効期限が切れると、コネクターはイベントの送信を停止します。この状態が**5日**以上続くと、コネクタのイベントは削除され、データは永久に失われる。
 {% endalert %}
 
-![Braze の「Google Cloud Storage Currents」ページ。このページには、統合名、連絡先メール、GCS JSON 認証情報、GCS バケット名、接頭辞のフィールドがあります。]({% image_buster /assets/img/gcs6.png %})
+![Braze の「Google Cloud Storage Currents」ページ。このページには、統合名、連絡先メール、GCS JSON 認証情報、GCS バケット名、接頭辞のフィールドがある。]({% image_buster /assets/img/gcs6.png %})
 
 最後に、ページの一番下までスクロールし、エクスポートしたいメッセージ・エンゲージメント・イベントまたは顧客行動イベントを選択する。完了したら、Current を起動します。
 
@@ -97,7 +97,7 @@ Google Cloud Storage (GCS) エクスポートを設定するには、[**Technolo
 必ず、[Google Cloud で生成された](https://cloud.google.com/iam/docs/keys-create-delete) JSON の値をすべて入力してください。
 {% endalert %}
 
-![Braze ダッシュボードの Google Cloud Storage ページ。]({% image_buster /assets/img/gcs7.png %}){: style="max-width:70%;"}
+![Braze ダッシュボードの「Google Cloud Storage」ページ。]({% image_buster /assets/img/gcs7.png %}){: style="max-width:70%;"}
 
 ### ステップ 5: サービスアカウントの認証情報のテスト (オプション)
 
@@ -111,7 +111,7 @@ Google Cloud IAM サービスアカウントには必要な権限は以下のと
 
 Braze ダッシュボードでこれらの権限を確認するには、[**Google Cloud Storage**] ページに移動して、[**認証情報のテスト**] を選択します。
 
-![Braze ダッシュボードの Google Cloud Storage 認証情報セクション。]({% image_buster /assets/img/gcs8.png %}){: style="max-width:70%;"}
+![ダッシュボードのGoogle Cloud Storage認証情報セクション。]({% image_buster /assets/img/gcs8.png %}){: style="max-width:70%;"}
 
 ## エクスポートの動作
 

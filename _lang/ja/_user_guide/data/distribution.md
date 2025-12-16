@@ -1,12 +1,12 @@
 ---
-nav_title: データ分布
-article_title: データ分布
+nav_title: データ配信
+article_title: データ配布
 page_order: 3
 layout: dev_guide
-guide_top_header: "データ分布"
-guide_top_text: "> 顧客データをBrazeからデータウェアハウスや分析プラットフォームのような他のツールに送信することで、ビジネス全体のインサイトとメッセージングの意思決定を改善するために、すべてを同期させることができる。"
+guide_top_header: "データ配布"
+guide_top_text: "> 顧客データをBrazeから他のツールに送信することで、データウェアハウスや分析 プラットフォームのように、ビジネス全体でインサイトやメッセージングの意思決定をより良くするためにすべてを同期させておくことができます。"
 page_type: landing
-description: "このセクションには、Braze Data Platformにおけるデータ配信に関連する記事が含まれている。"
+description: "ここでは、Brazeデータプラットフォームでのデータ配布に関する記事について説明します。"
 
 guide_featured_title: "セクションの記事"
 guide_featured_list:

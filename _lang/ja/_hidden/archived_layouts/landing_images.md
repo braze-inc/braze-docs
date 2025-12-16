@@ -1,5 +1,5 @@
 ---
-nav_title: 画像付きSS LP
+nav_title: "画像, 写真付きSs LP"
 layout: dev_guide
 
 page_order: 1.1

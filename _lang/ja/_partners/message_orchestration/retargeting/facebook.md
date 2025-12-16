@@ -43,13 +43,13 @@ Facebookオーディエンス・エクスポートは、**ユーザー・アク�
 1. Braze ダッシュボードで [**パートナー連携**] > [**テクノロジーパートナー**] に移動し、[**Facebook**] を選択します。 
 
 {: start="2"}
-2\.Facebook Audience Export (Facebook オーディエンスエクスポート) モジュールで、[**Facebook に接続**] を選択します。<br><br>![Braze プラットフォームの Facebook テクノロジーパートナーのページ。]({% image_buster /assets/img/fb/afb_1.png %}){: style="max-width:70%;"}
+2\.Facebook Audience Export (Facebook オーディエンスエクスポート) モジュールで、[**Facebook に接続**] を選択します。<br><br>![BrazeプラットフォームのFacebookテクノロジーパートナーのページ。]({% image_buster /assets/img/fb/afb_1.png %}){: style="max-width:70%;"}
 
 {: start="3"}
-3\.Facebook oAuthダイアログウィンドウで、BrazeがFacebook広告アカウントにカスタムオーディエンスを作成することを承認する。<br><br>!["Connect as X" をプロンプトする最初のfacebook ダイアログボックス。ここで、X はFacebook のユーザ名です。]({% image_buster /assets/img/fb/afb_3.png %}){: style="max-width:30%;"} ![ 2 番目のFacebook ダイアログボックスで、広告アカウントの広告を管理するための許可を求めます。]({% image_buster /assets/img/fb/afb_2.png %}){: style="max-width:40%;"}
+3\.Facebook oAuthダイアログウィンドウで、BrazeがFacebook広告アカウントにカスタムオーディエンスを作成することを承認する。<br><br>![最初の Facebook ダイアログボックス。[Connect as X] (X は Facebook ユーザー名) で接続するように促される。]({% image_buster /assets/img/fb/afb_3.png %}){: style="max-width:30%;"} ![広告アカウントの広告を管理する許可を求める2つ目のFacebookのダイアログボックス。]({% image_buster /assets/img/fb/afb_2.png %}){: style="max-width:40%;"}
 
 {: start="4"}
-4\.BrazeがFacebookアカウントとリンクされたら、Brazeワークスペース内で同期したい広告アカウントを選択する。<br><br>![Facebook に接続可能な広告アカウントのリスト。]({% image_buster /assets/img/fb/afb_4.png %}){: style="max-width:70%;"}<br><br> 接続後にパートナーページが再び表示され、どのアカウントが接続されているかを確認したり、既存のアカウントを切断したりできます。<br><br> ![広告アカウントが正常に接続されたことを示す更新後の Facebook テクノロジーパートナーページ。]({% image_buster /assets/img/fb/afb_5.png %}){: style="max-width:70%;"}<br>
+4\.BrazeがFacebookアカウントとリンクされたら、Brazeワークスペース内で同期したい広告アカウントを選択する。<br><br>![Facebookに接続可能な広告アカウントのリスト。]({% image_buster /assets/img/fb/afb_4.png %}){: style="max-width:70%;"}<br><br> 接続後にパートナーページが再び表示され、どのアカウントが接続されているかを確認したり、既存のアカウントを切断したりできます。<br><br> ![広告アカウントが接続されたことを示す更新後の Facebook テクノロジーパートナーページ。]({% image_buster /assets/img/fb/afb_5.png %}){: style="max-width:70%;"}<br>
 <br> Facebookとの接続は、Brazeのワークスペース・レベルで適用される。Facebook管理者があなたをFacebookビジネスマネージャーから削除したり、接続しているFacebookアカウントへのアクセスを削除した場合、Brazeは無効なトークンを検出する。そのため、Facebook オーディエンスステップを使用しているアクティブなキャンバスにはエラーが表示され、Braze はユーザーを同期できません。 
 
 {% alert important %}
@@ -96,10 +96,28 @@ Facebookオーディエンスを構築する際、ユーザーの嗜好に基づ
 
 - オプトイン、オプトアウト、`Do Not Sell Or Share`、または他の関連するカスタム属性を収集する場合は、キャンバスのエントリ基準にこれらをフィルターとして含める必要があります。 
 
-![エントリーのオーディエンスが "opted_in_marketing "のキャンバスは、"true "に等しい。]({% image_buster /assets/img/tiktok/tiktok13.png %}){: style="max-width:75%;"}
+![エントリーのオーディエンスが"opted_in_marketing" のキャンバスは "true "に等しい。]({% image_buster /assets/img/tiktok/tiktok13.png %}){: style="max-width:75%;"}
 
 
 #### 類似オーディエンス
 
 Facebook オーディエンスとしてセグメントをエクスポートしたら、Facebook [類似オーディエンス](https://www.facebook.com/business/help/164749007013531?id=401668390442328)を使用して追加のグループを作成できます。この機能は、選択したオーディエンスのデモグラフィック、興味、その他の属性を調べ、類似する属性を持つ新しいオーディエンスを作成します。
 
+## トラブルシューティング
+
+### アクセストークンの検証エラー
+
+Facebook Exportを使用している場合、`Error Validating Access Token` のエラーが表示される：
+- パスワードを変更したため、現在のセッションが無効になった。
+- フェイスブックはセキュリティ対策として、あなたをログアウトさせた。
+
+このエラーを解決するには、以下のステップに従う：
+1. フェイスブックからログアウトし、再度ログインする。
+2. BrazeでFacebookの認証情報を削除し、保存する。セグメンテーションをエクスポートしてみて、認証情報が削除されたことを確認する（エクスポートアイコンは無効になっているはず）。
+3. Facebookの認証情報を再度追加して保存する。
+4. もう一度エクスポートを試みる。 
+
+エクスポートがうまくいかない場合は、次のようにしてほしい：
+1. 認証情報をもう一度削除し、保存する。
+2. 認証情報を再度追加し、保存する。
+3. **テクノロジーパートナーの**ページでFacebookとの連携を解除し、再接続する。

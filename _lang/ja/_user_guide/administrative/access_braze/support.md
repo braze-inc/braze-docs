@@ -7,15 +7,15 @@ page_type: reference
 search_rank: 7
 ---
 
-# [Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/the-braze-support-portal/){: style="float:right;width:120px;border:0;" class="noimgborder"} Brazeサポート
+# [![Braze ラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/the-braze-support-portal/){: style="float:right;width:120px;border:0;" class="noimgborder"} Braze サポート
 
 ## サポートポータルにアクセスする
 
 Brazeサポートチームに連絡するには、Brazeダッシュボードに移動する。ダッシュボードで [**サポート**] > [**問い合わせ**] を選択します。
 
-サポート "ドロップダウンにヘルプを得るためのオプションがある。]({% image_buster /assets/img_archive/get_help.png %}){: style="max-width:60%;"}
+![Support "のドロップダウンには、ヘルプを得るためのオプションがある。]({% image_buster /assets/img_archive/get_help.png %}){: style="max-width:60%;"}
 
-お客様のBraze権限と指定サポート連絡先かどうかに応じて、ケースの提出と追跡ができるBrazeサポートポータルか、標準サポートフォームのいずれかに誘導される。自分が Braze サポート連絡先であるかどうかわからない場合は、貴社の Braze 管理者、Braze サクセスマネージャー、またはアカウントオーナーにお問い合わせください。
+お客様のBraze権限と指定サポート連絡先かどうかに応じて、ケースの提出と追跡ができるBrazeサポートポータルか、標準サポートフォームのいずれかに誘導される。自分がBrazeのサポート窓口かどうかわからない場合は、御社のBraze管理者、Brazeサクセスマネージャー、またはアカウントマネージャーに連絡する。
 
 ## 指定されたサポート連絡先の追加
 
@@ -26,7 +26,7 @@ Brazeサポートチームに連絡するには、Brazeダッシュボードに�
 3. メニューで [**編集**] を選択します。[**ユーザーを編集**] ページにリダイレクトされます。
 4. **このユーザーを、Braze Support Portalの指定されたサポート窓口として設定します**のチェックボックスをオンにします。
 
-ユーザーをサポート窓口として設定するためのチェックボックス。]({% image_buster /assets/img_archive/designated_support_contact.png %}){: style="max-width:70%;"}
+![ユーザーを指定サポートコンタクトとして設定するためのチェックボックス。]({% image_buster /assets/img_archive/designated_support_contact.png %}){: style="max-width:70%;"}
 
 ### アクセスの取得
 
@@ -68,7 +68,7 @@ Brazeサポートチームに連絡するには、Brazeダッシュボードに�
 
 1. 開発者ツールを開きます。Chrome を使用している場合は、キーボードショートカット`option` + `⌘` + `J` (macOS の場合) を使用してこれを実行できます。Windows またはLinux を使用している場合は、ショートカット`shift` + `CTRL` + `J` を使用してこれを実行できます。
 2. **Network**> **Fetch/XHR**または**XHR**を選択します。
-3. 要素の**名前**、**ステータス**、**サイズ**、**時刻**を示すスクリーンショットまたはスクリーン録画をキャプチャします。<br><br>Chromeブラウザの "Fetch/XHR "タブ。]({% image_buster /assets/img/network_xhr.png %}){: style="max-width:60%;"}
+3. 要素の**名前**、**ステータス**、**サイズ**、**時刻**を示すスクリーンショットまたはスクリーン録画をキャプチャします。<br><br>![クロームブラウザの「Fetch/XHR」タブ。]({% image_buster /assets/img/network_xhr.png %}){: style="max-width:60%;"}
 
 次に、ユーザーの録画またはスクリーンショットをサポートチケットに添付します。この情報は、サポートによる調査に役立ちます。
 

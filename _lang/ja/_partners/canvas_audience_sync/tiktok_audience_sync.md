@@ -24,7 +24,7 @@ Braze Audience Sync to TikTok を使用すると、ブランドは独自の Braz
 
 {% alert important %}
 **Audience Sync Pro 免責条項**<br>
-Braze Audience Sync to TikTok は Audience Sync Pro 統合です。この統合の詳細については、Brazeアカウントマネージャーにお問い合わせください。
+Braze Audience Sync to TikTok は Audience Sync Pro 統合です。この統合の詳細については、Brazeアカウントマネージャーに問い合わせること。
 {% endalert %}
 
 ## 前提条件
@@ -35,16 +35,20 @@ Braze Audience Sync to TikTok は Audience Sync Pro 統合です。この統合�
 | ----------- | ------ | ----------- |
 | TikTok for Business Center アカウント | [TikTok](https://business.tiktok.com/) | ブランドのTikTokアセット（広告アカウント、ページ、アプリなど）を管理するための集中型ツール。 |
 | TikTok広告アカウント | [TikTok](https://ads.tiktok.com/) | ブランドのビジネスセンターアカウントに紐づけられたアクティブなTikTok広告アカウント。<br><br>TikTokビジネスセンターマネージャーの管理者が、Brazeで使用する予定のTikTok広告アカウントに対する管理者権限を付与していることを確認してください。 |
-| TikToKの利用規約とポリシー | [TikTok](https://ads.tiktok.com/i18n/official/policy/terms) | Pinterestオーディエンス同期の使用に関連するTikTokの必要な条件、ポリシー、ガイドライン、およびドキュメント、ならびにそれに組み込まれている条件、ポリシー、ガイドライン、およびドキュメント（商業利用規約、広告利用規約、プライバシーポリシー、カスタムオーディエンス利用規約、開発者利用規約、開発者データ共有契約、広告ポリシー、ブランドガイドライン、コミュニティガイドラインを含む）に同意すること。 |
+| TikToK terms& ポリシー | [TikTok](https://ads.tiktok.com/i18n/official/policy/terms) | Pinterestオーディエンス同期の使用に関連するTikTokの必要な条件、ポリシー、ガイドライン、およびドキュメント、ならびにそれに組み込まれている条件、ポリシー、ガイドライン、およびドキュメント（商業利用規約、広告利用規約、プライバシーポリシー、カスタムオーディエンス利用規約、開発者利用規約、開発者データ共有契約、広告ポリシー、ブランドガイドライン、コミュニティガイドラインを含む）に同意すること。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## 統合 
 
 ### ステップ1:TikTokに接続
 
-Brazeのダッシュボードで、**Partner Integrations** > **Technology Partners** に移動し、**TikTok** を選択します。TikTok オーディエンス同期で、[**TikTok を接続**] を選択します。
+{% alert important %}
+TikTokをBrazeアカウントに接続するには[「管理者」権限が]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#admin)必要。
+{% endalert %}
 
-![Braze の TikTok テクノロジーページには、概要セクションと TikTok オーディエンス同期セクションがあり、接続された TikTok ボタンがあります。]{% image_buster /assets/img/tiktok/tiktok1.png %}{: style="max-width:75%;"}
+Braze のダッシュボードで、[**パートナー連携**] > [**テクノロジーパートナー**] に移動し、[**TikTok**] を選択します。TikTok オーディエンス同期で、[**TikTok を接続**] を選択します。
+
+![BrazeのTikTokテクノロジーページには、概要セクションとTikTokオーディエンス同期セクションがあり、Connected TikTokボタンがある。]({% image_buster /assets/img/tiktok/tiktok1.png %}){: style="max-width:75%;"}
 
 その後、TikTokのOAuthページにリダイレクトされ、Brazeの広告アカウント管理およびオーディエンス管理を承認するよう求められます。**確認**を選択すると、Brazeに戻り、同期するTikTok広告アカウントを選択します。 
 
@@ -56,13 +60,13 @@ Brazeのダッシュボードで、**Partner Integrations** > **Technology Partn
 
 お客様のTikTok接続はBrazeアプリグループレベルで適用されます。TikTokの管理者がTikTokビジネスセンターまたは接続されたTikTokアカウントへのアクセスを削除した場合、Brazeは無効なトークンを検出します。その結果、TikTok オーディエンスコンポーネントを使用しているアクティブなキャンバスにはエラーが表示され、Braze はユーザーを同期できません。
 
-### ステップ2:キャンバスフローで TikTok オーディエンスコンポーネントを追加する
+### ステップ 2:キャンバスにTikTokオーディエンスコンポーネントを追加する
 
 キャンバスにコンポーネントを追加し、[**オーディエンスの同期**] を選択します。 
 
 ![]({% image_buster /assets/img/audience_sync/audience_sync3.png %}){: style="max-width:35%;"} ![]({% image_buster /assets/img/audience_sync/audience_sync5.png %}){: style="max-width:28%;"}
 
-### ステップ 3: 同期セットアップ
+### ステップ 3:同期セットアップ
 
 [**カスタムオーディエンス**] ボタンをクリックしてコンポーネントエディターを開きます。
 
@@ -75,26 +79,26 @@ Brazeのダッシュボードで、**Partner Integrations** > **Technology Partn
 ![]({% image_buster /assets/img/tiktok/tiktok11.png %})
 
 {% tabs %}
-{% tab 新規オーディエンスの作成 %}
+{% tab Create a New Audience %}
 
 **新規オーディエンスの作成**<br>
-新しいオーディエンスの名前を入力し、**オーディエンスにユーザーを追加**を選択し、TikTokと同期したいフィールドを選択します。次に、ステップエディタの下部にある**オーディエンスを作成**ボタンをクリックしてオーディエンスを保存します。
+新しいオーディエンスの名前を入力し、**オーディエンスにユーザーを追加**を選択し、TikTokと同期したいフィールドを選択します。次に、ステップエディタの下部にある**Create Audience**ボタンをクリックしてオーディエンスを保存します。
 
 ![]({% image_buster /assets/img/audience_sync/tiktok3.png %})
 
-ユーザーは、オーディエンスが正常に作成された場合、またはこのプロセス中にエラーが発生した場合、ステップエディターの上部で通知されます。ユーザーは、後でキャンバスジャーニーでユーザーを削除するためにこのオーディエンスを参照することもできます。これは、オーディエンスが下書きで作成されたためです。
+オーディエンスが正常に作成された場合、またはこのプロセス中にエラーが発生した場合、ステップエディタの上部にユーザーに通知されます。ユーザーは、後でキャンバスジャーニーでユーザーを削除するためにこのオーディエンスを参照することもできます。これは、オーディエンスが下書きで作成されたためです。
 
 ![]({% image_buster /assets/img/audience_sync/tiktok2.png %})
 
 新しいオーディエンスを使用してキャンバスを起動すると、ユーザーがオーディエンスステップに入る時点で、Braze はユーザーをほぼリアルタイムで同期します。
 
 {% endtab %}
-{% tab 既存のオーディエンスと同期する %}
+{% tab Sync with an Existing Audience %}
 
 **既存のオーディエンスとの同期**<br>
 Brazeは、これらのオーディエンスが最新であることを確認するために、ユーザーを既存のTikTokオーディエンスに追加する機能も提供しています。既存のオーディエンスと同期するには、ドロップダウンに既存のオーディエンスの名前を入力し、**オーディエンスに追加します。**Brazeは、ユーザーがTikTokオーディエンスステップに入ると、ほぼリアルタイムでユーザーを追加します。
 
-![カスタムオーディエンスキャンバスステップの展開ビュー。ここで、希望する広告アカウントと既存のオーディエンスが選択されます。]({% image_buster /assets/img/audience_sync/tiktok.png %})
+![カスタムオーディエンスキャンバスステップの展開ビュー。ここで、希望の広告アカウントと既存のオーディエンスが選択される。]({% image_buster /assets/img/audience_sync/tiktok.png %})
 
 {% endtab %}
 {% endtabs %}
@@ -104,7 +108,7 @@ TikTokオーディエンスコンポーネントを構成したら、キャン�
 
 TikTokでオーディエンスを表示するには、**広告マネージャーアカウント**にログインし、**アセット**のドロップダウンから**オーディエンス**を選択します。[**Audience**] ページで、各オーディエンスが1,000に達した後のオーディエンスのサイズを確認できます。
 
-![指定したオーディエンスの以下の指標をリストする TikTok ページ。]{% image_buster /assets/img/tiktok/tiktok5.png %}
+![指定したオーディエンスの以下の指標をリストする TikTok ページ。]({% image_buster /assets/img/tiktok/tiktok5.png %})
 
 ## ユーザーの同期とレート制限の考慮事項
 
@@ -139,7 +143,7 @@ TikTokパートナーページでTikTokアカウントを切断して再接続�
 
 ### キャンバスを起動できないのはなぜですか?
 
-TikTokパートナーページで、TikTokアカウントがBrazeに正常に接続されていることを確認する。次に、広告アカウントの選択、新しいオーディエンスの名前の入力、マッチングするフィールドの選択が実行されていることを確認します。
+TikTok パートナーページで、TikTok アカウントが Braze に正常に接続されていることを確認します。次に、広告アカウントの選択、新しいオーディエンスの名前の入力、マッチングするフィールドの選択が実行されていることを確認します。
 
 ### ユーザーを TikTok に渡した後、ユーザーが一致したかどうかを確認するにはどうすればよいですか?
 
@@ -149,13 +153,13 @@ TikTokはデータプライバシーポリシーに関するこの情報を提�
 
 オーディエンスのサイズは、TikTokの広告マネージャーのオーディエンスページで24〜48時間以内に更新されます。
 
-### 私の TikTok 広告アカウントで持てる最大のオーディエンス数はどれくらいですか?
+### TikTok 広告アカウントで持てる最大のオーディエンス数はどれくらいですか?
 
 TikTok 広告アカウント 1 つにつき、最大 400 オーディエンスまで設定できます。
 
 ### TikTok でのオーディエンスサイズやマッチ率が、オーディエンス同期付き Braze で同期されているユーザーよりも高いのはなぜですか?
 
-TikTok では、1 つの ID が複数の TikTok ユーザーに関連付けられている場合があるからです。これは、クライアントがモバイル広告 ID  (iOS IDFA および Android GAID) を使用する場合に最もよく発生します。これは、1 つのデバイスに複数の TikTok ユーザーがログインしている可能性があるためです。 
+TikTok では、1 つの ID が複数の TikTok ユーザーに関連付けられている場合があるからです。これは、クライアントがモバイル広告 ID (iOS IDFA および Android GAID) を使用する場合に最もよく発生します。これは、1 つのデバイスに複数の TikTok ユーザーがログインしている可能性があるためです。 
 
 さらに、TikTok は Pangle ユーザーもマッチングユーザーとしてカウントしているため、場合によってはマッチング率が高くなることもあります。しかし、広告配信にオーディエンスを使用する場合、配置やその他の影響要因に左右されるため、実際に配信可能なオーディエンスサイズはマッチしたユーザーサイズほど高くならない可能性があります。
 

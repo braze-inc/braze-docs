@@ -22,8 +22,8 @@ search_tag: Partner
 | SessionM | SessionM Core RESTエンドポイント | エンドポイントは、インスタンスのSessionM URLに依存する。これは SessionM ダッシュボードの **Digital Properties** から作成できます。 |
 | SessionM | SessionM Core REST API キー | インスタンスとBraze統合に関連付けられたSessionM APIキー。このキーは、タグを含むすべてのコアベースのコールに使用できる。これは SessionM ダッシュボードの**デジタルプロパティ**から作成できます。 |
 | SessionM | SessionM Core REST APIのシークレット | インスタンスとBraze統合に関連付けられたSessionM APIシークレット。このキーは、タグを含むすべてのコアベースのコールに使用できる。これは SessionM ダッシュボードの**デジタルプロパティ**から作成できます。 |
-| SessionM | SessionM Connect RESTエンドポイント | エンドポイントは、インスタンスのSessionM URLに依存する。SessionM テクニカルアカウントマネージャーまたはデリバリーチームまでご連絡ください。 |
-| SessionM | SessionM Connect REST認可文字列 | インスタンスに関連付けられたSessionM Connect Basic Authorization 文字列。この認証文字列は、get_user_offersを含む、すべてのconnectベースのコールで使用できる。SessionM テクニカルアカウントマネージャーまたはデリバリーチームまでご連絡ください。 |
+| SessionM | SessionM Connect RESTエンドポイント | エンドポイントは、インスタンスのSessionM URLに依存する。SessionMテクニカルアカウントマネージャーまたはデリバリーチームに連絡する。 |
+| SessionM | SessionM Connect REST認可文字列 | インスタンスに関連付けられたSessionM Connect Basic Authorization 文字列。この認証文字列は、get_user_offers. を含む、すべての接続ベースの通話に使用できる。この認証文字列を提供 するには、SessionMのテクニカルアカウントマネージャーまたはデリバリーチームに連絡すること。 |
 | SessionM | SessionM Connect RESTの小売（店）ID。 | インスタンスに関連付けられている特定の顧客に対する一意の GUID 識別子。SessionMテクニカルアカウントマネージャーまたはデリバリーチームに連絡する。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -47,9 +47,9 @@ search_tag: Partner
 
 Brazeで、SessionMのプロモーションやオファーでターゲットとするユーザーのセグメンテーションを作成する。 
 
-![「カスタム属性」フィルターを選択したセグメントビルダー]({% image_buster /assets/img/sessionm/CreateSegment.png %})
+![カスタム属性」フィルターを選択したセグメンテーションビルダー。]({% image_buster /assets/img/sessionm/CreateSegment.png %})
 
-### ステップ2:Braze のセグメントをSessionM にインポートする
+### ステップ 2:Braze のセグメントをSessionM にインポートする
 
 #### オプション 1: SessionM Tagエンドポイントにエクスポートする（推奨）。
 
@@ -72,7 +72,7 @@ Brazeで、SessionMのプロモーションやオファーでターゲットと�
     \- 対応する値`application/json`を持つキー`Content-Type`を作成する
     \- 対応する値`Basic YOUR-ENCODED-STRING-KEY`を持つキー`Authorization`を作成します。エンドポイントのエンコードされた文字列キーについては、SessionM チームに問い合わせること。 
 
-![Webhook 設定。]({% image_buster /assets/img/sessionm/SessionMWebhookSettings.png %}){: style="max-width:85%;"}
+![Webhookの設定。]({% image_buster /assets/img/sessionm/SessionMWebhookSettings.png %}){: style="max-width:85%;"}
 
 配信をスケジュールし、[以前に作成した](#step-1-create-a-segment-in-braze)セグメントをターゲットとするように**ターゲットオーディエンス**を設定してから、キャンペーンを開始します。
 
@@ -190,7 +190,7 @@ SessionM オファーのあるキャンペーンまたはキャンバスステ�
 Liquid ドット記法を使えば、これをメッセージに入力できます。たとえば、結果として得られる `offer_id` でメッセージをパーソナライズするには、`100` を返す {% raw %}`{{wallet.payload.available_points}`{% endraw %} を使用してリターンペイロードを活用できます。
 
 {% alert note %}
-これは個別のAPIである。500ユーザー以上のバッチを送信する場合は、SessionMアカウントチームに連絡して、統合にバルクデータを組み込む方法について問い合わせること。
+これは個別のAPIである。500ユーザーを超えるバッチを送信する場合は、SessionMアカウントチームに連絡して、統合にバルクデータを組み込む方法について問い合わせること。
 {% endalert %}
 
 ## トリガーメッセージの設定
@@ -225,11 +225,11 @@ SessionMのすべてのテンプレートにある標準フィールドには、
 
 SessionM によってトリガーされる API トリガーのキャンペーンまたはキャンバスを Braze で作成します。`offer_id` や `offer title` などの追加フィールドが設定されている場合は、Liquid (例えば{% raw %}`{{api_trigger_properties.${offer_id}}}`{% endraw %}) を使用して、パーソナライズされたフィールドをメッセージングに追加します。
 
-![API トリガーのプロパティ]({% image_buster /assets/img/sessionm/apiTriggerProperties.png %})
+![APIトリガーのプロパティ。]({% image_buster /assets/img/sessionm/apiTriggerProperties.png %})
 
 [**配信のスケジュール**] タブで、キャンペーンまたはキャンバス ID をメモします。これは SessionM キャンペーンの**高度な設定**に追加されます。
 
-![API トリガーキャンペーン]({% image_buster /assets/img/sessionm/apiTriggerCampaign.png %})
+![APIトリガーキャンペーン。]({% image_buster /assets/img/sessionm/apiTriggerCampaign.png %})
 
 キャンペーンまたはキャンバスの詳細を確定し、「**Launch**」を選択する。 
 
@@ -237,7 +237,7 @@ SessionM によってトリガーされる API トリガーのキャンペーン
 
 次に、SessionMでキャンペーンを作成する。
 
-![SessionM キャンペーン作成。]({% image_buster /assets/img/sessionm/SessionMCampaignCreation.png %})
+![SessionMキャンペーン作成。]({% image_buster /assets/img/sessionm/SessionMCampaignCreation.png %})
 
 SessionMキャンペーンの詳細設定を更新して、`braze_campaign_id` または`braze_canvas_id` を含む以下のJSONペイロードを含めること。
 
@@ -250,12 +250,12 @@ SessionMキャンペーンの詳細設定を更新して、`braze_campaign_id` �
 ```
 {% endraw %}
 
-![SessionM の高度な設定。]({% image_buster /assets/img/sessionm/SessionMAdvancedSettings.png %}){: style="max-width:85%;"}
+![SessionMの詳細設定。]({% image_buster /assets/img/sessionm/SessionMAdvancedSettings.png %}){: style="max-width:85%;"}
 
 スケジュールやビヘイビアに関するメッセージトリガーを作成する。次に、**外部メッセージ**メニューの**メッセージングバリアント**として **Braze メッセージングバリアント**を選択し、テンプレートを使用します。
 
-![SessionM 外部メッセージ]({% image_buster /assets/img/sessionm/SessionMExternalMessage.png %})
+![SessionMの外部メッセージ。]({% image_buster /assets/img/sessionm/SessionMExternalMessage.png %})
 
 このテンプレートは、関連するスタティック属性とダイナミックな属性を引き出し、Brazeエンドポイントにコールアウトする。
 
-![SessionM Braze テンプレート。]({% image_buster /assets/img/sessionm/SessionMBrazeTemplate.png %}){: style="max-width:85%;"}
+![セッションM Brazeテンプレート。]({% image_buster /assets/img/sessionm/SessionMBrazeTemplate.png %}){: style="max-width:85%;"}

@@ -8,7 +8,7 @@ channel: email
 
 # トラブルシューティング 
 
-## テストメールでHTMLが正しく表示されない
+## テストメールでHTMLが正しくレンダリングされない
 
 [テストメールが]({{site.baseurl}}/developer_guide/platform_wide/sending_test_messages/#sending-a-test-push-notification-or-in-app-messages-a-classmargin-fix-namepush-inapp-testa)おかしいと感じたら、まずHTMLの設定をチェックすることをお勧めする。次に、次の問題を確認できます。
 * [拡張機能の競合](#check-conflicts)

@@ -40,11 +40,7 @@ Brazeは、`lid` （リンク識別子とも呼ばれる）と呼ばれる追加
 
 また、レポーティングやセグメンテーションを行う際に、特定のリンクを参照するためのエイリアスを設定することもできます。 
 
-<<<<<<< HEAD
-![リンク管理ページに4つのリンクエイリアスがあります。]({% image_buster /assets/img/link_aliasing_composer.png %})
-=======
-\![リンク管理ページに4つのリンクエイリアスがあります。]({% image_buster /assets/img/link_aliasing_composer.png %})
->>>>>>> main
+![4つのリンクエイリアスを持つリンクマネージメントページ。]({% image_buster /assets/img/link_aliasing_composer.png %})
 
 {% alert note %}
 リンクのエイリアシングは、クエリーパラメーターを付加しても安全なHTMLアンカータグ内の`href` 属性でのみサポートされている。Brazeが簡単に`lid` の値を追加できるように、リンクの最後にクエスチョンマーク(?)を付けるのがベストプラクティスだ。`lid` 。この値を追加しないと、Brazeはリンクエイリアス用のURLを認識しない。
@@ -63,11 +59,7 @@ Brazeは、`lid` （リンク識別子とも呼ばれる）と呼ばれる追加
 
 ここでは、並べ替え、検索、リンクエイリアスのトラッキング追跡をオフにすることができる。
 
-<<<<<<< HEAD
-![Tracked Link Aliases ページ。"TechPartners"および"Help"という2 つのリンクエイリアスが表示されます。"Email_Survey".]({% image_buster /assets/img/tracked_aliases.png %} という名前のキャンペーンに関連付けられています。]
-=======
-\![Tracked Link Aliases ページ。"TechPartners"および"Help"という2 つのリンクエイリアスが表示されます。"Email_Survey".]({% image_buster /assets/img/tracked_aliases.png %} という名前のキャンペーンに関連付けられています。]
->>>>>>> main
+![さまざまなキャンペーンに関連付けられたアクティブおよび非アクティブのリンクエイリアスを示す、トラッキングリンクエイリアスページ。]({% image_buster /assets/img/tracked_aliases.png %})
 
 {% alert tip %}
 [List link alias for campaign]({{site.baseurl}}/get_campaign_link_alias/)および[List link alias for Canvas]({{site.baseurl}}/get_canvas_link_alias/)エンドポイントを使用して、キャンペーンまたはメール固有のキャンバスコンポーネントの各メッセージバリアントに設定された`alias` を抽出する。
@@ -136,26 +128,7 @@ Brazeは、メール内のリンクを評価し、リンクテンプレートを
 
 Brazeでは、追跡するリンクを無制限に選択することができるが、ユーザーが開いた直近のリンクに限ってリターゲティングすることができる。ユーザープロファイルには、最近クリックした 100 個のリンクが含まれています。例えば、500のリンクを追跡し、ユーザーが500のリンクをすべてクリックした場合、最近クリックされた100のリンクに基づいてリターゲティングやセグメントを作成することができる。
 
-{% tabs local %}
-{% tab Drag-And-Drop Editor %}
-
-<<<<<<< HEAD
-![ドラッグアンドドロップメールエディタのリンクマネジメントタブ]]({% image_buster /assets/img/link_management_dnd.png %})
-=======
-\![ドラッグアンドドロップメールエディタのリンクマネジメントタブ]]({% image_buster /assets/img/link_management_dnd.png %})
->>>>>>> main
-
-{% endtab %}
-{% tab HTML editor %}
-
-<<<<<<< HEAD
-![HTML メールエディタのリンクマネジメントタブ]]({% image_buster /assets/img/link_management_html.png %})
-=======
-\![HTML メールエディタのリンクマネジメントタブ]]({% image_buster /assets/img/link_management_html.png %})
->>>>>>> main
-
-{% endtab %}
-{% endtabs %}
+![リンク管理タブで、2 つのリンクを選択します。]({% image_buster /assets/img/link_management_dnd.png %})
 
 {% alert note %}
 Brazeは、プロフィールレベルで、過去100回クリックされたリンクエイリアスのみを追跡する。
@@ -165,11 +138,7 @@ Brazeは、プロフィールレベルで、過去100回クリックされたリ
  
 あらゆるリンク（トラッキング済み、未トラッキング）をターゲットにアクションベースのメッセージを作成したり、あらゆるメールキャンペーンやキャンバスコンポーネントのエイリアスをクリックしたかどうかに基づいてユーザーをリターゲティングすることができる。
 
-<<<<<<< HEAD
-![アクションベースのオプション] キャンバスコンポーネントで別名をクリックしたか、キャンペーンと対話したユーザーを対象にします。]({% image_buster /assets/img/link_aliasing_action_based_filters.png %})
-=======
-\![アクションベースのオプション] キャンバスコンポーネントで別名をクリックしたか、キャンペーンと対話したユーザーを対象にします。]({% image_buster /assets/img/link_aliasing_action_based_filters.png %})
->>>>>>> main
+![キャンバスコンポーネントのエイリアスをクリックしたユーザーやキャンペーンに参加したユーザーをターゲットにするアクションベースオプション。]({% image_buster /assets/img/link_aliasing_action_based_filters.png %})
 
 ### セグメンテーションフィルター
 
@@ -187,11 +156,9 @@ Brazeでは、メールにリンクエイリアスを設定し、ユーザーが
 
 アーカイブされたメッセージのリンクは自動的に追跡解除される。しかし、アーカイブされたメッセージがアーカイブされない場合、リンクを再度追跡する必要がある。リンクエイリアスが追跡される場合、リンクレポートはトップレベルドメインや完全なURLではなく、エイリアスによってインデックスされる。
 
-<<<<<<< HEAD
-![Campaign Analytics] タブには、3 つのリンクエイリアスとその総クリック数が表示されます。]({% image_buster /assets/img/link_aliasing_click_table.png %})
-=======
-\![Campaign Analytics] タブには、3 つのリンクエイリアスとその総クリック数が表示されます。]({% image_buster /assets/img/link_aliasing_click_table.png %})
->>>>>>> main
+メール キャンペーン内のすべてのリンクとそれぞれの総クリック数を表示するには、**Message Analytics**> **メールパフォーマンス**> **プレビュー&ヒートマップ**に移動し、**Show Heatmap**トグルを選択します。
+
+![「総クリック数で表をリンク」パネルにリンクエイリアスと総クリック数が表示されます。]({% image_buster /assets/img/link_alias_total_clicks.png %}){: style="max-width:60%;"}
 
 ### 電子メールのクリック・イベント
 

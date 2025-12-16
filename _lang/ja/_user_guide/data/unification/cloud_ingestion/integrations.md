@@ -256,6 +256,10 @@ CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.USERS_ATTRIBUTES_SYNC`
    phone_number varcharである、
 - `PAYLOAD` - Braze 内のユーザーと同期するフィールドの JSON 文字列。
 
+{% alert tip %}
+Brazeは、(定義済みのスキーマを使用して)独自のプロジェクト内のBigQueryテーブルを、`UPDATED_AT` に対する述語でクエリする。大規模なテーブルを適切な粒度（例えば日次粒度）で`UPDATED_AT` 、BigQueryがパーティションを刈り込み、関連するデータのみをスキャンできるようにする。これはパフォーマンス向上とコスト削減に役立つかもしれない。詳細は[BigQueryパーティショニングドキュメントを](https://docs.cloud.google.com/bigquery/docs/partitioned-tables)参照。
+{% endalert %}
+
 #### ステップ1.2：サービスアカウントの作成と権限の付与 
 
 GCP で、Braze がテーブルに接続してデータを読み取るために使用するサービスアカウントを作成します。サービスアカウントには次の権限が必要です。 
@@ -411,11 +415,7 @@ GO
 #### ステップ1.4:ウェアハウスの接続文字列を取得する 
 Brazeを接続するには、倉庫のSQLエンドポイントが必要である。これを取得するには、Fabric で**ワークスペース**に移動し、項目の一覧でウェアハウスの名前にカーソルを合わせ、 [**SQL 接続文字列をコピー**] を選択します。
 
-<<<<<<< HEAD
-![ユーザーがSQL接続文字列を取得する必要がある。]({% image_buster /assets/img/cloud_ingestion/fabric_1.png %})
-=======
-\![ユーザーがSQL接続文字列を取得する必要がある。]({% image_buster /assets/img/cloud_ingestion/fabric_1.png %})
->>>>>>> main
+![ユーザーがSQL接続文字列を取得する必要があるMicrosoft Azureの "Fabric Console "ページ。]({% image_buster /assets/img/cloud_ingestion/fabric_1.png %})
 
 
 #### ステップ1.5:ファイアウォールで Braze IP を許可する（オプション）
@@ -433,17 +433,13 @@ Microsoft Fabric アカウントの設定によっては、Braze からのトラ
 {% tabs %}
 {% tab Snowflake %}
 
-Braze ダッシュボードで [**データ設定**] > [**クラウドデータ取り込み**] > の順に移動し、［**新しいデータ同期を作成**] を選択し ［**Snowflake のインポート**] を選択します。
+ダッシュボードで、**Data Settings**>**Cloud Data Ingestionに**進み、**Create New Data Syncを**選択し、**Snowflake Importを**選択する。
 
-#### ステップ 2.1:Snowflake の接続情報とソーステーブルの追加
+#### ステップ 2.1: Snowflake の接続情報とソーステーブルの追加
 
 Snowflake データウェアハウスとソーステーブルの情報を入力して、次のステップに進みます。
 
-<<<<<<< HEAD
-![BrazeダッシュボードのSnowflakeの "Create new import sync "ページに、ステップ1で入力したデータの例が表示されている：「接続設定」だ。]({% image_buster /assets/img/cloud_ingestion/ingestion_1.png %})
-=======
-\![BrazeダッシュボードのSnowflakeの "Create new import sync "ページに、ステップ1で入力したデータの例が表示されている：「接続設定」だ。]({% image_buster /assets/img/cloud_ingestion/ingestion_1.png %})
->>>>>>> main
+![Braze ダッシュボードの Snowflake の [新しいインポート同期の作成] ページには、ステップ1で入力したデータの例が表示されます。「接続設定」だ。]({% image_buster /assets/img/cloud_ingestion/ingestion_1.png %})
 
 #### ステップ 2.2:同期の詳細の設定
 
@@ -456,11 +452,7 @@ Snowflake データウェアハウスとソーステーブルの情報を入力�
 - 権限の問題
 - (カタログ同期のみ) カタログ層の容量不足
 
-<<<<<<< HEAD
-![ステップ2に追加されたデータ例とダッシュボードのSnowflakeの "Create new import sync "ページ：「同期の詳細を設定する」。]({% image_buster /assets/img/cloud_ingestion/ingestion_2.png %})
-=======
-\![ステップ2に追加されたデータ例とダッシュボードのSnowflakeの "Create new import sync "ページ：「同期の詳細を設定する」。]({% image_buster /assets/img/cloud_ingestion/ingestion_2.png %})
->>>>>>> main
+![Braze ダッシュボードの Snowflake の [新しいインポート同期の作成] ページには、ステップ2に追加されたデータの例が表示されます。「同期の詳細を設定する」。]({% image_buster /assets/img/cloud_ingestion/ingestion_2.png %})
 
 データ型と同期頻度も選択します。頻度の範囲は 15 分間隔から 1 か月に 1 回までです。Braze ダッシュボードで設定したタイムゾーンを使用して、定期的な同期がスケジュールされます。サポートされているデータ型は、カスタム属性、カスタムイベント、および購入イベントです。同期のデータ型は、作成後に変更できません。 
 
@@ -476,17 +468,13 @@ ALTER USER BRAZE_INGESTION_USER SET rsa_public_key='Braze12345...';
 {% endtab %}
 {% tab Redshift %}
 
-Braze ダッシュボードで [**データ設定**] > [**クラウドデータ取り込み**] > の順に移動し、［**新しいデータ同期を作成**] を選択し ［**Amazon Redshift のインポート**] を選択します。
+ダッシュボードで、「**データ設定」**>「**クラウドデータ取り込み**」と進み、「**新しいデータ同期を作成**」を選択し、「**Amazon Redshiftインポート**」を選択する。
 
-#### ステップ 2.1:Redshift の接続情報とソーステーブルの追加
+#### ステップ 2.1: Redshift の接続情報とソーステーブルの追加
 
 Redshift データウェアハウスとソーステーブルの情報を入力します。プライベート・ネットワーク・トンネルを使用している場合は、スライダーを切り替えてトンネル情報を入力する。その後、次のステップに進みます。
 
-<<<<<<< HEAD
-![ダッシュボードのRedshiftの "Create new import sync "ページをステップ1に設定する：「接続設定」だ。]({% image_buster /assets/img/cloud_ingestion/ingestion_6.png %})
-=======
-\![ダッシュボードのRedshiftの "Create new import sync "ページをステップ1に設定する：「接続設定」だ。]({% image_buster /assets/img/cloud_ingestion/ingestion_6.png %})
->>>>>>> main
+![Braze ダッシュボードの Redshift 用 [新しいインポート同期を作成] ページ、ステップ1に設定「接続設定」だ。]({% image_buster /assets/img/cloud_ingestion/ingestion_6.png %})
 
 #### ステップ 2.2:同期の詳細の設定
 
@@ -499,27 +487,19 @@ Redshift データウェアハウスとソーステーブルの情報を入力�
 - 権限の問題
 - (カタログ同期のみ) カタログ層の容量不足
 
-<<<<<<< HEAD
-![BrazeダッシュボードのRedshiftの "Create new import sync "ページに、ステップ2で追加されたサンプルデータが表示されている：「同期の詳細を設定する」。]({% image_buster /assets/img/cloud_ingestion/ingestion_7.png %})
-=======
-\![BrazeダッシュボードのRedshiftの "Create new import sync "ページに、ステップ2で追加されたサンプルデータが表示されている：「同期の詳細を設定する」。]({% image_buster /assets/img/cloud_ingestion/ingestion_7.png %})
->>>>>>> main
+![Braze ダッシュボードの Redshift 用の [新しいインポート同期の作成] ページには、ステップ2に追加されたデータのいくつかの例が表示されます。「同期の詳細を設定する」。]({% image_buster /assets/img/cloud_ingestion/ingestion_7.png %})
 
 データ型と同期頻度も選択します。頻度の範囲は 15 分間隔から 1 か月に 1 回までです。Braze ダッシュボードで設定したタイムゾーンを使用して、定期的な同期がスケジュールされます。サポートされているデータ型は、カスタム属性、カスタムイベント、および購入イベントです。同期のデータ型は、作成後に変更できません。
 {% endtab %}
 {% tab BigQuery %}
 
-Braze ダッシュボードで [**データ設定**] > [**クラウドデータ取り込み**] > の順に移動し、［**新しいデータ同期を作成**] を選択し ［**Google BigQuery のインポート**] を選択します。
+ダッシュボードで、「**データ設定」**>「**クラウドデータ取り込み**」と進み、「**新しいデータ同期を作成**」を選択し、「**Google BigQueryインポート**」を選択する。
 
-#### ステップ 2.1:BigQuery の接続情報とソーステーブルの追加
+#### ステップ 2.1: BigQuery の接続情報とソーステーブルの追加
 
 JSON キーをアップロードし、サービスアカウントの名前を入力して、ソーステーブルの詳細を入力します。
 
-<<<<<<< HEAD
-![ダッシュボードのBigQueryの "Create new import sync "ページで、ステップ1に設定する：「接続設定」だ。]({% image_buster /assets/img/cloud_ingestion/ingestion_11.png %})
-=======
-\![ダッシュボードのBigQueryの "Create new import sync "ページで、ステップ1に設定する：「接続設定」だ。]({% image_buster /assets/img/cloud_ingestion/ingestion_11.png %})
->>>>>>> main
+![Braze ダッシュボードの BigQuery 用 [新しいインポート同期を作成] ページ、ステップ1に設定「接続設定」だ。]({% image_buster /assets/img/cloud_ingestion/ingestion_11.png %})
 
 #### ステップ 2.2:同期の詳細の設定
 
@@ -532,28 +512,20 @@ JSON キーをアップロードし、サービスアカウントの名前を入
 - 権限の問題
 - (カタログ同期のみ) カタログ層の容量不足
 
-<<<<<<< HEAD
-![ダッシュボードのBigQueryの "Create new import sync "ページで、ステップ2に設定する：「同期の詳細を設定する」。]({% image_buster /assets/img/cloud_ingestion/ingestion_12.png %})
-=======
-\![ダッシュボードのBigQueryの "Create new import sync "ページで、ステップ2に設定する：「同期の詳細を設定する」。]({% image_buster /assets/img/cloud_ingestion/ingestion_12.png %})
->>>>>>> main
+![Braze ダッシュボードの BigQuery 用 [新しいインポート同期を作成] ページ、ステップ2に設定「同期の詳細を設定する」。]({% image_buster /assets/img/cloud_ingestion/ingestion_12.png %})
 
 データ型と同期頻度も選択します。頻度の範囲は 15 分間隔から 1 か月に 1 回までです。Braze ダッシュボードで設定したタイムゾーンを使用して、定期的な同期がスケジュールされます。サポートされているデータ型は、カスタム属性、カスタムイベント、購入イベント、およびユーザー削除です。同期のデータ型は、作成後に変更できません。 
 
 {% endtab %}
 {% tab Databricks %}
 
-Braze ダッシュボードで [**データ設定**] > [**クラウドデータ取り込み**] > の順に移動し、［**新しいデータ同期を作成**] を選択し ［**Databricks のインポート**] を選択します。
+ダッシュボードで、**Data Settings**>**Cloud Data Ingestionに**進み、**Create New Data Syncを**選択し、**Databricks Importを**選択する。
 
-#### ステップ 2.1:Databricks の接続情報とソーステーブルの追加
+#### ステップ 2.1: Databricks の接続情報とソーステーブルの追加
 
 Databricks データウェアハウスとソーステーブルの情報を入力して、次のステップに進みます。
 
-<<<<<<< HEAD
-![ダッシュボードのDatabricksの "Create new import sync "ページで、ステップ1に設定する：「接続設定」だ。]({% image_buster /assets/img/cloud_ingestion/ingestion_16.png %})
-=======
-\![ダッシュボードのDatabricksの "Create new import sync "ページで、ステップ1に設定する：「接続設定」だ。]({% image_buster /assets/img/cloud_ingestion/ingestion_16.png %})
->>>>>>> main
+![Braze ダッシュボードの Databricks 用 [新しいインポート同期を作成] ページ、ステップ1に設定「接続設定」だ。]({% image_buster /assets/img/cloud_ingestion/ingestion_16.png %})
 
 #### ステップ 2.2:同期の詳細の設定
 
@@ -566,11 +538,7 @@ Databricks データウェアハウスとソーステーブルの情報を入力
 - 権限の問題
 - (カタログ同期のみ) カタログ層の容量不足
 
-<<<<<<< HEAD
-![ダッシュボードのDatabricksの "Create new import sync "ページで、ステップ2に設定する：「同期の詳細を設定する」。]({% image_buster /assets/img/cloud_ingestion/ingestion_12.png %})
-=======
-\![ダッシュボードのDatabricksの "Create new import sync "ページで、ステップ2に設定する：「同期の詳細を設定する」。]({% image_buster /assets/img/cloud_ingestion/ingestion_12.png %})
->>>>>>> main
+![Braze ダッシュボードの Databricks 用 [新しいインポート同期を作成] ページ、ステップ2に設定「同期の詳細を設定する」。]({% image_buster /assets/img/cloud_ingestion/ingestion_12.png %})
 
 データ型と同期頻度も選択します。頻度の範囲は 15 分間隔から 1 か月に 1 回までです。Braze ダッシュボードで設定したタイムゾーンを使用して、定期的な同期がスケジュールされます。サポートされているデータ型は、カスタム属性、カスタムイベント、購入イベント、およびユーザー削除です。同期のデータ型は、作成後に変更できません。 
 
@@ -579,7 +547,7 @@ Databricks データウェアハウスとソーステーブルの情報を入力
 
 #### ステップ 2.1: クラウドデータ取り込みの同期を設定する
 
-Microsoft Fabric 用の新しいデータ同期を作成します。Braze ダッシュボードで [**データ設定**] > [**クラウドデータ取り込み**] > の順に移動し、［**新しいデータ同期を作成**] を選択し ［**Microsoft Fabricks のインポート**] を選択します。
+Microsoft Fabric 用の新しいデータ同期を作成します。Brazeのダッシュボードで、**Data Settings**>**Cloud Data Ingestionに**進み、**Create New Data Syncを**選択し、**Microsoft Fabric Importを**選択する。
 
 #### ステップ 2.2:Microsoft Fabricの接続情報とソーステーブルを追加する
 
@@ -588,11 +556,7 @@ Microsoft Fabric ウェアハウスの認証情報とソーステーブルの情
 - 認証情報名は、Braze におけるこれらの認証情報のラベルであり、ここでわかりやすい値を設定することができます。
 - テナント ID、プリンシパル ID、クライアントシークレット、および接続文字列を取得する方法の詳細については、セクション1のステップを参照してください。
 
-<<<<<<< HEAD
-![BrazeダッシュボードのMicrosoftの "Create new import sync "ページをステップ1に設定する：「接続設定」だ。]({% image_buster /assets/img/cloud_ingestion/fabric_setup_1.png %})
-=======
-\![BrazeダッシュボードのMicrosoftの "Create new import sync "ページをステップ1に設定する：「接続設定」だ。]({% image_buster /assets/img/cloud_ingestion/fabric_setup_1.png %})
->>>>>>> main
+![Braze ダッシュボードの iMicrosoft 用 [新しいインポート同期を作成] ページ、ステップ1に設定「接続設定」だ。]({% image_buster /assets/img/cloud_ingestion/fabric_setup_1.png %})
 
 #### ステップ 2.3:同期の詳細の設定
 
@@ -603,11 +567,7 @@ Microsoft Fabric ウェアハウスの認証情報とソーステーブルの情
 - 同期の頻度 - 頻度の範囲は 15 分間隔から 1 か月に 1 回までです。Braze ダッシュボードで設定したタイムゾーンを使用して、定期的な同期がスケジュールされます。 
   - 定期的でない同期は、手動または [API]({{site.baseurl}}/api/endpoints/cdi) 経由でトリガーできます。 
 
-<<<<<<< HEAD
-![BrazeダッシュボードのMicrosoft Fabricの "Create new import sync "ページをステップ2に設定する：「同期の詳細を設定する」。]({% image_buster /assets/img/cloud_ingestion/fabric_setup_2.png %})
-=======
-\![BrazeダッシュボードのMicrosoft Fabricの "Create new import sync "ページをステップ2に設定する：「同期の詳細を設定する」。]({% image_buster /assets/img/cloud_ingestion/fabric_setup_2.png %})
->>>>>>> main
+![Braze ダッシュボードの Microsoft Fabric 用 [新しいインポート同期を作成] ページ、ステップ2に設定「同期の詳細を設定する」。]({% image_buster /assets/img/cloud_ingestion/fabric_setup_2.png %})
 
 
 #### ステップ 2.4:通知設定を行う
@@ -623,11 +583,7 @@ Microsoft Fabric ウェアハウスの認証情報とソーステーブルの情
 
 行レベルの問題に対するアラートを設定することもできるし、同期が正常に実行されるたびにアラートを受け取るようにすることもできる。 
 
-<<<<<<< HEAD
-![BrazeダッシュボードのMicrosoft Fabricの "Create new import sync "ページで、ステップ3に設定する：「通知の設定をする」。]({% image_buster /assets/img/cloud_ingestion/fabric_setup_3.png %})
-=======
-\![BrazeダッシュボードのMicrosoft Fabricの "Create new import sync "ページで、ステップ3に設定する：「通知の設定をする」。]({% image_buster /assets/img/cloud_ingestion/fabric_setup_3.png %})
->>>>>>> main
+![Braze ダッシュボードの Microsoft Fabric 用 [新しいインポート同期を作成] ページ、ステップ3に設定「通知の設定をする」。]({% image_buster /assets/img/cloud_ingestion/fabric_setup_3.png %})
 
 
 {% endtab %}
@@ -641,11 +597,7 @@ Microsoft Fabric ウェアハウスの認証情報とソーステーブルの情
 
 Braze ダッシュボードに戻って、[**テスト接続**] をクリックします。成功すると、データのプレビューが表示されます。何らかの理由で接続できない場合、問題のトラブルシューティングに役立つエラーメッセージが表示されます。
 
-<<<<<<< HEAD
-![ステップ3のダッシュボードにあるSnowflakeの "Create new import sync "ページ："テスト接続" RSA公開キーを表示する。]({% image_buster /assets/img/cloud_ingestion/ingestion_3.png %})
-=======
-\![ステップ3のダッシュボードにあるSnowflakeの "Create new import sync "ページ："テスト接続" RSA公開キーを表示する。]({% image_buster /assets/img/cloud_ingestion/ingestion_3.png %})
->>>>>>> main
+![Braze ダッシュボードの Snowflake の [新しいインポート同期の作成] ページのステップ3。"テスト接続" RSA公開キーを表示する。]({% image_buster /assets/img/cloud_ingestion/ingestion_3.png %})
 {% endtab %}
 
 {% tab Redshift %}
@@ -653,21 +605,13 @@ Braze ダッシュボードに戻って、[**テスト接続**] をクリック�
 {% subtab Public Network %}
 Braze ダッシュボードに戻って、[**テスト接続**] をクリックします。成功すると、データのプレビューが表示されます。何らかの理由で接続できない場合、問題のトラブルシューティングに役立つエラーメッセージが表示されます。
 
-<<<<<<< HEAD
-![ダッシュボードのRedshiftの "Create new import sync "ページで、ステップ3に設定する：「テスト接続」である。]({% image_buster /assets/img/cloud_ingestion/ingestion_8.png %})
-=======
-\![ダッシュボードのRedshiftの "Create new import sync "ページで、ステップ3に設定する：「テスト接続」である。]({% image_buster /assets/img/cloud_ingestion/ingestion_8.png %})
->>>>>>> main
+![Braze ダッシュボードの Redshift 用 [新しいインポート同期を作成] ページ、ステップ3に設定「テスト接続」である。]({% image_buster /assets/img/cloud_ingestion/ingestion_8.png %})
 {% endsubtab %}
 
 {% subtab Private Network %}
 Braze ダッシュボードに戻って、[**テスト接続**] をクリックします。成功すると、データのプレビューが表示されます。何らかの理由で接続できない場合、問題のトラブルシューティングに役立つエラーメッセージが表示されます。
 
-<<<<<<< HEAD
-![ダッシュボードのRedshift Private Networkの "Create new import sync "ページにステップ4："テスト接続" RSA公開キーを表示する。]({% image_buster /assets/img/cloud_ingestion/ingestion_19.png %})
-=======
-\![ダッシュボードのRedshift Private Networkの "Create new import sync "ページにステップ4："テスト接続" RSA公開キーを表示する。]({% image_buster /assets/img/cloud_ingestion/ingestion_19.png %})
->>>>>>> main
+![Braze ダッシュボードの Redshift プライベートネットワークの [新しいインポート同期の作成] ページのステップ4。"テスト接続" RSA公開キーを表示する。]({% image_buster /assets/img/cloud_ingestion/ingestion_19.png %})
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
@@ -676,11 +620,7 @@ Braze ダッシュボードに戻って、[**テスト接続**] をクリック�
 
 同期の設定の詳細をすべて入力したら、[**テスト接続**] をクリックします。成功すると、データのプレビューが表示されます。何らかの理由で接続できない場合、問題のトラブルシューティングに役立つエラーメッセージが表示されます。
 
-<<<<<<< HEAD
-![ダッシュボードのBigQueryの "Create new import sync "ページで、ステップ3に設定する：「テスト接続」である。]({% image_buster /assets/img/cloud_ingestion/ingestion_13.png %})
-=======
-\![ダッシュボードのBigQueryの "Create new import sync "ページで、ステップ3に設定する：「テスト接続」である。]({% image_buster /assets/img/cloud_ingestion/ingestion_13.png %})
->>>>>>> main
+![Braze ダッシュボードの BigQuery 用 [新しいインポート同期を作成] ページ、ステップ3に設定「テスト接続」である。]({% image_buster /assets/img/cloud_ingestion/ingestion_13.png %})
 
 {% endtab %}
 
@@ -688,22 +628,14 @@ Braze ダッシュボードに戻って、[**テスト接続**] をクリック�
 
 同期の設定の詳細をすべて入力したら、[**テスト接続**] をクリックします。成功すると、データのプレビューが表示されます。何らかの理由で接続できない場合、問題のトラブルシューティングに役立つエラーメッセージが表示されます。
 
-<<<<<<< HEAD
-![ダッシュボードのDatabricksの "Create new import sync "ページで、ステップ3に設定する：「テスト接続」である。]({% image_buster /assets/img/cloud_ingestion/ingestion_13.png %})
-=======
-\![ダッシュボードのDatabricksの "Create new import sync "ページで、ステップ3に設定する：「テスト接続」である。]({% image_buster /assets/img/cloud_ingestion/ingestion_13.png %})
->>>>>>> main
+![Braze ダッシュボードの Databricks 用 [新しいインポート同期を作成] ページ、ステップ3に設定「テスト接続」である。]({% image_buster /assets/img/cloud_ingestion/ingestion_13.png %})
 
 {% endtab %}
 {% tab Microsoft Fabric %}
 
 同期の設定の詳細をすべて入力したら、[**テスト接続**] をクリックします。成功すると、データのプレビューが表示されます。何らかの理由で接続できない場合、問題のトラブルシューティングに役立つエラーメッセージが表示されます。
 
-<<<<<<< HEAD
-![BrazeダッシュボードのMicrosoft Fabricの "Create new import sync "ページで、ステップ4に設定する：「テスト接続」である。]({% image_buster /assets/img/cloud_ingestion/fabric_setup_4.png %})
-=======
-\![BrazeダッシュボードのMicrosoft Fabricの "Create new import sync "ページで、ステップ4に設定する：「テスト接続」である。]({% image_buster /assets/img/cloud_ingestion/fabric_setup_4.png %})
->>>>>>> main
+![Braze ダッシュボードの Microsoft Fabric 用 [新しいインポート同期を作成] ページ、ステップ4に設定「テスト接続」である。]({% image_buster /assets/img/cloud_ingestion/fabric_setup_4.png %})
 
 {% endtab %}
 {% endtabs %}
@@ -718,22 +650,14 @@ Braze ダッシュボードに戻って、[**テスト接続**] をクリック�
 {% tab Snowflake %}
 Braze との連携を複数設定することもできますが、各連携で異なるテーブルを同期するように設定する必要があります。追加の同期を作成するときに Snowflake アカウントに接続している場合は、既存の認証情報を再利用できます。
 
-<<<<<<< HEAD
-![BrazeダッシュボードのSnowflakeの "Create new import sync "ページで、ステップ1で開封した "Select credentials "ドロップダウンがある：「接続設定」だ。]({% image_buster /assets/img/cloud_ingestion/ingestion_4.png %})
-=======
-\![BrazeダッシュボードのSnowflakeの "Create new import sync "ページで、ステップ1で開封した "Select credentials "ドロップダウンがある：「接続設定」だ。]({% image_buster /assets/img/cloud_ingestion/ingestion_4.png %})
->>>>>>> main
+![Braze ダッシュボードの Snowflake の [新しいインポート同期の作成] ページ、ステップ1で [認証情報を選択] ドロップダウンが開いている。「接続設定」だ。]({% image_buster /assets/img/cloud_ingestion/ingestion_4.png %})
 
 複数の連携にわたって同じユーザーとロールを再利用する場合、公開キーを追加するステップを再び行う必要は**ありません**。
 {% endtab %}
 {% tab Redshift %}
 Braze との連携を複数設定することもできますが、各連携で異なるテーブルを同期するように設定する必要があります。追加の同期を作成するときに同じ Snowflake または Redshift のアカウントに接続している場合は、既存の認証情報を再利用できます。
 
-<<<<<<< HEAD
-![BrazeダッシュボードのRedshiftの "Create new import sync "ページで、ステップ1で開封した "Select credentials "ドロップダウンがある：「接続設定」だ。]({% image_buster /assets/img/cloud_ingestion/ingestion_9.png %})
-=======
-\![BrazeダッシュボードのRedshiftの "Create new import sync "ページで、ステップ1で開封した "Select credentials "ドロップダウンがある：「接続設定」だ。]({% image_buster /assets/img/cloud_ingestion/ingestion_9.png %})
->>>>>>> main
+![Braze ダッシュボード の Redshift 用 [新しいインポート同期を作成] ページ、ステップ1で [認証情報を選択] ドロップダウンが開いている「接続設定」だ。]({% image_buster /assets/img/cloud_ingestion/ingestion_9.png %})
 
 複数の連携にわたって同じユーザーを再利用している場合、すべてのアクティブな同期から削除されるまで、Braze ダッシュボードでそのユーザーを削除することはできません。
 {% endtab %}
@@ -741,11 +665,7 @@ Braze との連携を複数設定することもできますが、各連携で�
 
 Braze との連携を複数設定することもできますが、各連携で異なるテーブルを同期するように設定する必要があります。追加の同期を作成するときに同じ BigQuery アカウントに接続している場合は、既存の認証情報を再利用できます。
 
-<<<<<<< HEAD
-![BrazeダッシュボードのBigQueryの "Create new import sync "ページで、ステップ1の "Select credentials "ドロップダウンを開封する：「接続設定」だ。]({% image_buster /assets/img/cloud_ingestion/ingestion_14.png %})
-=======
-\![BrazeダッシュボードのBigQueryの "Create new import sync "ページで、ステップ1の "Select credentials "ドロップダウンを開封する：「接続設定」だ。]({% image_buster /assets/img/cloud_ingestion/ingestion_14.png %})
->>>>>>> main
+![Braze ダッシュボード の BigQuery 用 [新しいインポート同期を作成] ページ、ステップ1で [認証情報を選択] ドロップダウンが開いている「接続設定」だ。]({% image_buster /assets/img/cloud_ingestion/ingestion_14.png %})
 
 複数の連携にわたって同じユーザーを再利用している場合、すべてのアクティブな同期から削除されるまで、Braze ダッシュボードでそのユーザーを削除することはできません。
 
@@ -754,11 +674,7 @@ Braze との連携を複数設定することもできますが、各連携で�
 
 Braze との連携を複数設定することもできますが、各連携で異なるテーブルを同期するように設定する必要があります。追加の同期を作成するときに同じ Databricks アカウントに接続している場合は、既存の認証情報を再利用できます。
 
-<<<<<<< HEAD
-![BrazeダッシュボードのDatabricksの "Create new import sync "ページで、ステップ1の "Select credentials "ドロップダウンを開封する：「接続設定」だ。]({% image_buster /assets/img/cloud_ingestion/ingestion_17.png %})
-=======
-\![BrazeダッシュボードのDatabricksの "Create new import sync "ページで、ステップ1の "Select credentials "ドロップダウンを開封する：「接続設定」だ。]({% image_buster /assets/img/cloud_ingestion/ingestion_17.png %})
->>>>>>> main
+![Braze ダッシュボードの Databricks の [新しいインポート同期の作成] ページ、ステップ1で [認証情報を選択] ドロップダウンが開いている。「接続設定」だ。]({% image_buster /assets/img/cloud_ingestion/ingestion_17.png %})
 
 複数の連携にわたって同じユーザーを再利用している場合、すべてのアクティブな同期から削除されるまで、Braze ダッシュボードでそのユーザーを削除することはできません。
 
@@ -778,43 +694,27 @@ Braze との連携を複数設定することもできますが、各連携で�
 {% tab Snowflake %}
 有効にすると、セットアップ時に設定したスケジュールで同期が実行される。通常のテストスケジュール以外で同期を実行したい場合や、最新のデータを取得したい場合は、「**今すぐ同期**」を選択する。この実行は、定期的にスケジュールされている将来の同期には影響しません。
 
-<<<<<<< HEAD
-![ダッシュボードのSnowflakeの "Data Import "ページで、縦の楕円メニューから "Sync now "のオプションが表示されている。]({% image_buster /assets/img/cloud_ingestion/ingestion_5.png %})
-=======
-\![ダッシュボードのSnowflakeの "Data Import "ページで、縦の楕円メニューから "Sync now "のオプションが表示されている。]({% image_buster /assets/img/cloud_ingestion/ingestion_5.png %})
->>>>>>> main
+![ダッシュボードのSnowflakeの "Data Import "ページには、縦の楕円メニューから "Sync now "のオプションが表示されている。]({% image_buster /assets/img/cloud_ingestion/ingestion_5.png %})
 
 {% endtab %}
 {% tab Redshift %}
 有効にすると、セットアップ時に設定したスケジュールで同期が実行される。通常のテストスケジュール以外で同期を実行したい場合や、最新のデータを取得したい場合は、「**今すぐ同期**」を選択する。この実行は、定期的にスケジュールされている将来の同期には影響しません。
 
-<<<<<<< HEAD
-![BrazeのダッシュボードにあるRedshiftの "Data Import "ページには、縦の楕円メニューから "Sync now "のオプションが表示されている。]({% image_buster /assets/img/cloud_ingestion/ingestion_10.png %})
-=======
-\![BrazeのダッシュボードにあるRedshiftの "Data Import "ページには、縦の楕円メニューから "Sync now "のオプションが表示されている。]({% image_buster /assets/img/cloud_ingestion/ingestion_10.png %})
->>>>>>> main
+![ダッシュボードのRedshiftの "Data Import "ページには、縦の楕円メニューから "Sync now "のオプションが表示されている。]({% image_buster /assets/img/cloud_ingestion/ingestion_10.png %})
 
 {% endtab %}
 {% tab BigQuery %}
 
 有効にすると、セットアップ時に設定したスケジュールで同期が実行される。通常のテストスケジュール以外で同期を実行したい場合や、最新のデータを取得したい場合は、「**今すぐ同期**」を選択する。この実行は、定期的にスケジュールされている将来の同期には影響しません。
 
-<<<<<<< HEAD
-![BrazeダッシュボードのBigQueryの "Data Import "ページには、縦の楕円メニューから "Sync now "のオプションが表示されている。]({% image_buster /assets/img/cloud_ingestion/ingestion_15.png %})
-=======
-\![BrazeダッシュボードのBigQueryの "Data Import "ページには、縦の楕円メニューから "Sync now "のオプションが表示されている。]({% image_buster /assets/img/cloud_ingestion/ingestion_15.png %})
->>>>>>> main
+![ダッシュボードのBigQueryの "Data Import "ページには、縦の楕円メニューから "Sync now "のオプションが表示されている。]({% image_buster /assets/img/cloud_ingestion/ingestion_15.png %})
 
 {% endtab %}
 {% tab Databricks %}
 
 有効にすると、セットアップ時に設定したスケジュールで同期が実行される。通常のテストスケジュール以外で同期を実行したい場合や、最新のデータを取得したい場合は、「**今すぐ同期**」を選択する。この実行は、定期的にスケジュールされている将来の同期には影響しません。
 
-<<<<<<< HEAD
-![BrazeのダッシュボードにあるDatabricksの "Data Import "ページに、縦の楕円メニューから "Sync now "のオプションが表示されている。]({% image_buster /assets/img/cloud_ingestion/ingestion_18.png %})
-=======
-\![BrazeのダッシュボードにあるDatabricksの "Data Import "ページに、縦の楕円メニューから "Sync now "のオプションが表示されている。]({% image_buster /assets/img/cloud_ingestion/ingestion_18.png %})
->>>>>>> main
+![ダッシュボードのDatabricksの "Data Import "ページには、縦の楕円メニューから "Sync now "のオプションが表示されている。]({% image_buster /assets/img/cloud_ingestion/ingestion_18.png %})
 
 {% endtab %}
 {% tab Microsoft Fabric %}

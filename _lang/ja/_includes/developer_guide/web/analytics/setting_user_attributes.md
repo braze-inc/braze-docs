@@ -19,7 +19,7 @@ Brazeは、[`User`クラス](https://js.appboycdn.com/web-sdk/latest/doc/classes
 ### デフォルト属性の設定
 
 {% tabs %}
-{% tab 方法を使って %}
+{% tab using methods %}
 ユーザーにデフォルト属性を設定するには、Brazeインスタンスで`getUser()` メソッドを呼び出し、アプリの現在のユーザーへの参照を取得する。そして、ユーザー属性を設定するメソッドを呼び出すことができる。
 
 {% subtabs local %}
@@ -41,7 +41,7 @@ braze.getUser().setDateOfBirth(2000, 12, 25);
 {% endsubtabs %}
 {% endtab %}
 
-{% tab Google Tag Manager %}
+{% tab google tag manager %}
 Googleタグマネージャーを使用して、標準ユーザー属性（ユーザーの名など）は、カスタムユーザー属性と同じ方法でログに記録されるべきである。標準属性項目に渡す値が、[[ユーザークラス](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html)] のドキュメントで指定されている予期される形式と一致していることを確認します。
 
 たとえば、性別属性は、値として次のいずれかを使用できます。`"m" | "f" | "o" | "u" | "n" | "p"`したがって、ユーザーの性別を女性に設定するには、次の内容のカスタムHTML タグを作成します。
@@ -59,17 +59,17 @@ window.braze.getUser().setGender("f")
 デフォルトのユーザー属性を解除するには、関連するメソッドに`null` 。以下に例を示します。
 
 {% tabs local %}
-{% tab 名 %}
+{% tab First name %}
 ```javascript
 braze.getUser().setFirstName(null);
 ```
 {% endtab %}
-{% tab 性別 %}
+{% tab Gender %}
 ```javascript
 braze.getUser().setGender(null);
 ```
 {% endtab %}
-{% tab 生年月日 %}
+{% tab Date of birth %}
 ```javascript
 braze.getUser().setDateOfBirth(null, null, null);
 ```
@@ -81,8 +81,8 @@ braze.getUser().setDateOfBirth(null, null, null);
 ### カスタム属性の設定
 
 {% tabs %}
-{% tab 方法を使って %}
-デフォルトのユーザー属性に加え、[カスタム属性を]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types)設定することもできる。完全なメソッドの仕様は[JSDocsを](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html)参照のこと。
+{% tab using methods %}
+デフォルトのユーザー属性に加え、[カスタム属性を]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types)設定することもできる。メソッドの全仕様については、[JSDocsを](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html)参照のこと。
 
 {% subtabs local %}
 {% subtab String %}
@@ -165,7 +165,7 @@ braze.getUser().removeFromCustomAttributeArray(YOUR_ATTRIBUTE_KEY_STRING, "value
 {% endalert %}
 {% endtab %}
 
-{% tab Google Tag Manager %}
+{% tab google tag manager %}
 Googleタグマネージャのスクリプト言語が制限されているため、カスタムユーザー 属性は使用できません。カスタム属性s を記録するには、次の内容でカスタムHTML タグを作成します。
 
 ```html

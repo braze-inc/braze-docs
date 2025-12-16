@@ -1,6 +1,6 @@
-## Google Playプライバシーアンケート {#privacy-questionnaire}
+## Google Playプライバシー・アンケート {#privacy-questionnaire}
 
-2022年4月から、Android開発者はGoogle Playの[データ安全フォーム](https://support.google.com/googleplay/android-developer/answer/10787469)を完成させ、プライバシーとセキュリティ慣行を開示しなければなりません。このガイドでは、Braze によるアプリデータの処理方法に関する情報をこの新しいフォームに記入する方法について説明します。 
+2022年4月から、Android開発者はGoogle Playの[データ安全フォームに](https://support.google.com/googleplay/android-developer/answer/10787469)記入し、プライバシーとセキュリティの慣行を開示しなければならない。このガイドでは、Braze によるアプリデータの処理方法に関する情報をこの新しいフォームに記入する方法について説明します。 
 
 アプリ開発者は、どのデータを Braze に送信するかを制御しています。Braze が受け取ったデータは、指示に従って処理されます。これは、Google が[サービスプロバイダー](https://support.google.com/googleplay/android-developer/answer/10787469?hl=en#zippy=%2Cwhat-kinds-of-activities-can-service-providers-perform)として分類したものです。 
 
@@ -178,14 +178,14 @@ Braze によって収集されるデータは、特定の統合と収集する�
 
 Google Play のデータセーフティガイドラインの対象外となる可能性がある Braze が収集するその他のデバイスデータの詳細については、[Android ストレージの概要]({{site.baseurl}}/developer_guide/storage/?tab=android)および [SDK データ収集オプション]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/#minimum-integration)を参照してください。
 
-## データトラッキングの無効化
+## トラッキングを無効にする
 
-Android SDK でデータ追跡アクティビティを無効にするには、メソッド[`disableSDK()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/disable-sdk.html) を使用します。これにより、すべてのネットワーク接続がキャンセルされます。つまり、Braze SDK はBraze サーバにデータを渡しません。
+Android SDKのデータ追跡アクティビティを無効にするには、以下のメソッドを使用する。 [`disableSDK()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/disable-sdk.html).これにより、すべてのネットワーク接続がキャンセルされ、Braze SDKはBrazeサーバーにデータを渡さなくなる。
 
-## 以前に保存したデータを消去する
+## 過去に保存したデータを消去する
 
-[`wipeData()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/wipe-data.html) メソッドを使用して、デバイスに保存されているすべてのクライアント側データを完全にクリアできます。
+メソッドを使用することができる。 [`wipeData()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/wipe-data.html)を使えば、デバイスに保存されているクライアント側のデータをすべて消去できる。
 
-## データトラッキングの再開
+## データトラッキングを再開する
 
-データ収集を再開するには、[`enableSDK()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/enable-sdk.html) メソッドを使用できます。これにより、以前にワイプされたデータは復元されません。
+データ収集を再開するには [`enableSDK()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/enable-sdk.html)メソッドを使う。これは、以前に消去したデータを復元するものではないことに留意してほしい。

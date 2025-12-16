@@ -24,7 +24,7 @@ Eメールキャンペーンの事例をご覧になりたい方は、[ケース
 
 ## ステップ 1: メッセージを作成する場所を選択する
 
-メッセージは、キャンペーンとキャンバスのどちらを使用して配信すべきでしょうか。キャンペーンは単一のシンプルなメッセージングキャンペーンに適していますが、キャンバスはマルチステップのユーザーのジャーニーに適しています。
+メッセージは、キャンペーンとキャンバスのどちらを使用して配信すべきでしょうか。キャンペーン s は単一のターゲットメッセージング キャンペーンに適していますが、キャンバスは複数ステップ ユーザーのジャーニーに適しています。
 
 {% tabs %}
 {% tab Campaign %}
@@ -57,7 +57,7 @@ Eメールキャンペーンの事例をご覧になりたい方は、[ケース
 
 Brazeでは、メールキャンペーンを作成する際に、[ドラッグ＆ドロップエディターと]({{site.baseurl}}/dnd/)標準のHTMLエディターの2種類の編集機能を提供している。好みの編集体験に適したタイルを選ぶ。 
 
-![ドラッグアンドドロップエディタ、HTMLエディタ、またはテンプレート s をメールの編集体験用に選択します。]({% image_buster /assets/img_archive/choose_email_creation.png %}){: style="max-width:75%" }
+![ドラッグ＆ドロップエディター、HTMLエディター、テンプレートのいずれかを選択し、メール編集を体験できる。]({% image_buster /assets/img_archive/choose_email_creation.png %}){: style="max-width:75%" }
 
 次に、既存の[メールテンプレート]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/#creating-an-email-template)を選択するか、ファイルから[テンプレートをアップロード]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/html_email_template/)するか (HTML エディターのみ)、または空白のテンプレートを使用できます。 
 
@@ -69,7 +69,7 @@ Brazeでは、メールキャンペーンを作成する際に、[ドラッグ�
 
 テンプレートを選択すると、メールの概要が表示されます、そこから全画面エディターに直接移動して、メールの下書き、送信情報の変更、配信可能性や法令遵守に関する警告の表示ができます。HTML、クラシック、プレーンテキスト、[AMP]({{site.baseurl}}/user_guide/message_building_by_channel/email/amphtml/) のタブを切り替えながら作成できます。 
 
-!["HTML"ボタンから再生成します。]({% image_buster /assets/img_archive/regenerate_from_html.png %}){: style="max-width:30%;float:right;margin-left:15px;border:none;" }
+![「HTML から再生成」ボタン。]({% image_buster /assets/img_archive/regenerate_from_html.png %}){: style="max-width:30%;float:right;margin-left:15px;border:none;" }
 
 プレーンテキスト版の編集が検出されるまで、メールのプレーンテキスト版は常に HTML 版から自動的に更新されます。編集が検出されると、Brazeは平文を更新しなくなる。上書きされるべきではない意図的な変更を行ったと考えられるからだ。プレーンテキストが同期していない場合にのみ表示される「**HTML から生成**」アイコンを選択すると、「**プレーンテキスト**」タブで自動同期に戻すことができます。
 
@@ -77,7 +77,7 @@ Brazeでは、メールキャンペーンを作成する際に、[ドラッグ�
 ほとんどの受信トレイはJavaScriptをサポートしていないため、正確なプレビューでメールに動きを加えるには、JavaScriptを必要とする要素の代わりにGIFを使用する。
 {% endalert %}
 
-![メールバリアントパネルでメールを作成します。]({% image_buster /assets/img/email.png %}){: style="max-width:75%" }
+![メールを作成するための [メールのバリアント] パネル。]({% image_buster /assets/img/email.png %}){: style="max-width:75%" }
 
 {% alert important %}
 Brazeは、属性として参照されているHTMLイベントハンドラを自動的に削除する。これによりHTMLが変更されるので、完了後にメールを再チェックすることをお勧めする。[HTML ハンドラー](https://www.w3schools.com/tags/ref_eventattributes.asp)の詳細を参照してください。
@@ -86,7 +86,7 @@ Brazeは、属性として参照されているHTMLイベントハンドラを�
 {% alert tip %}
 魅力的な文章を作成するためのサポートが必要な場合は、[AI コピーライティングアシスタント]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/)を使用してみてください。商品名や説明を入力すると、AIが人間のようなマーケティングコピーを生成し、メッセージングに使用します。
 
-![メールコンポーザーの本文タブにあるAIコピーライターボタンを起動します。]({% image_buster /assets/img/ai_copywriter/ai_copywriter_email.png %}){: style="max-width:80%"}
+![メールコンポーザーの「本文」タブにあるAIコピーライターボタンを起動します。]({% image_buster /assets/img/ai_copywriter/ai_copywriter_email.png %}){: style="max-width:80%"}
 {% endalert %}
 
 アラビア語やヘブライ語などの右から左へのメッセージ作成にお困りですか？ベストプラクティスについては、[右から左へのメッセージを作成するを]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/)参照のこと。
@@ -186,9 +186,9 @@ Eメールの余分な値は、CurrentsやSnowflakeには公開されない。�
 ユーザーがダークモードのときにメールがどのように表示されるかを確認するには、**プレビューとテスト」**セクションにある**「ダークモードプレビュー」**トグルを選択する（ドラッグ＆ドロップエディターのみ）。
 {% endalert %}
 
-最終確認の準備ができたら、**Test Send**を選択し、自分またはコンテンツテスタのグループにテストメッセージを送信して、メールがさまざまな機器やメール クライアントに正しく表示されることを確認します。
+最終チェックの準備ができたら、**テスト送信を**選択し、自分自身またはコンテンツテスターのグループにテストメッセージを送信して、さまざまなデバイスやメールクライアントでメールが正しく表示されることを確認しよう。
 
-![メールの作成時に、送信オプションとサンプルメール プレビューをテストします。]({% image_buster /assets/img_archive/newEmailTest.png %})
+![メール作成時の [テスト送信] オプションとプレビューの例。]({% image_buster /assets/img_archive/newEmailTest.png %})
 
 メールに問題がある場合や変更を加えたい場合には、[**メールを編集**] を選択してエディターに戻ります。
 
