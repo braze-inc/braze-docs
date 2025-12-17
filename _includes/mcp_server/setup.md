@@ -228,7 +228,7 @@ Configure your MCP client using our pre-provided configuration file.
 
 {% tabs %}
 {% tab Claude %}
-Set up your MCP server using the [Claude Desktop](https://claude.ai/download) connector director. 
+Set up your MCP server using the [Claude Desktop](https://claude.ai/download) connector directory. 
 
 1. In Claude Desktop, go to **Settings** > **Connectors** > **Browse Connectors** > **Desktop Extensions** > **Braze MCP Server** > **Install**.
 2. Enter your API key and base URL.
