@@ -1,8 +1,8 @@
 ---
-nav_title: Creating Campaigns
-article_title: Creating Banner campaigns in Braze
+nav_title: Creating a Banner
+article_title: Creating a Banner
 page_order: 1
-description: "This reference article covers how to create, compose, configure and send Banners using Braze campaigns."
+description: "This reference article covers how to create, compose, configure and send Banners using Braze campaigns and Canvases."
 tool:
   - Campaigns
 channel:
@@ -17,20 +17,43 @@ channel:
 
 Before you can launch your Banner campaign, your development team will need to [set up placements in your app or website]({{site.baseurl}}/developer_guide/banners/creating_placements/). You can still draft your Banner campaign in the meantime&#8212;you just won't be able to launch the campaign.
 
-## Creating a Banner campaign
+## Creating a Banner message
 
 {% multi_lang_include banners/creating_placements.md section="user" %}
 
-### Step 2: Create a campaign
+### Step 1: Choose where to build your message
+
+Not sure whether your message should be sent using a campaign or a Canvas? Campaigns are better for single, targeted messaging campaigns, while Canvases are better for multi-step user journeys.
+
+
+{% tabs %}
+{% tab Campaign %}
 
 1. Go to **Messaging** > **Campaigns** and select **Create Campaign**.
 2. Select **Banner**.
 3. Name your campaign something clear and meaningful.
-4. Add teams and tags as needed. Tags make your campaigns easier to find and build reports out of. For example, when using the Report Builder, you can filter by the relevant tags.
+4. Add [teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) and [tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) as needed. Tags make your campaigns easier to find and build reports out of. For example, when using the Report Builder, you can filter by the relevant tags.
 5. Select the placement you previously created to associate it with your campaign.
 6. Add variants as needed. You can choose a different message type and layout for each one. For more information on variants, refer to [Multivariate and A/B testing]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing).
 
-### Step 3: Compose a Banner {#compose-a-banner}
+{% alert tip %}
+If all of the messages in your campaign are going to be similar or have the same content, compose your message before adding additional variants. You can then select **Copy from Variant** from the **Add Variant** dropdown.
+{% endalert %}
+
+{% endtab %}
+{% tab Canvas %}
+
+1. [Create your Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) using the Canvas composer.
+2. After setting up your Canvas, add a Message step in the Canvas builder. Name your step something clear and meaningful.
+3. Select **Banner** as your messaging channel.
+4. Select a placement for the Banner.
+5. Set the priority for the Banner 
+6. Set an expiration for the Banner. This can be after a duration of time after the step is available or at a specific date and time.
+
+{% endtab %}
+{% endtabs %}
+
+### Step 2: Compose a Banner {#compose-a-banner}
 
 To compose your Banner, you can choose to:
 
@@ -40,7 +63,7 @@ To compose your Banner, you can choose to:
 
 ![Option to choose a blank Banner or a template.]({% image_buster /assets/img/banners/choose_banner_composer.png %})
 
-#### Step 3.1: Style the Banner
+#### Step 2.1: Style the Banner
 
 You can drag and drop blocks and rows into the canvas area to start building your message.
 
@@ -48,7 +71,7 @@ To customize your message's background properties, border settings, and more, se
 
 ![Style panel of the Banner composer.]({% image_buster /assets/img/banners/banner_card_styles.png %})
 
-#### Step 3.2: Define on-click behavior (optional)
+#### Step 2.2: Define on-click behavior (optional)
 
 When a user clicks a link in the Banner, you can choose to navigate them deeper into your app or redirect them to another webpage. Additionally, you can choose to [log a custom attribute or event]({{site.baseurl}}/developer_guide/analytics/), which will update your user's profile with custom data when they click the Banner.
 
@@ -58,7 +81,7 @@ On-click behavior can be overridden if a specific element (such as a button, lin
 {:/}
 {% endalert %}
 
-#### Step 3.3: Add custom properties (optional) {#custom-properties}
+#### Step 2.3: Add custom properties (optional) {#custom-properties}
 
 You can add custom properties to a Banner to attach structured metadata, such as strings or JSON objects. These properties don’t affect how the Banner is displayed but can be [accessed through the Braze SDK]({{site.baseurl}}/developer_guide/banners/placements/) to modify your app’s behavior or appearance. For example, you could:
 
@@ -83,7 +106,7 @@ When you're finished, select **Done**.
 
 ![The properties page with a string property with a key of color and value of #FF0000.]({% image_buster /assets/img/banners/example_property.png %})
 
-### Step 4: Set campaign duration
+### Step 3: Set campaign duration
 
 Choose a start date and time for your Banner campaign. By default, Banners last indefinitely. You can change this by selecting **End Time** and specifying an end date and time.
 
@@ -103,7 +126,7 @@ If you have multiple Banner campaigns using the same placement ID, we recommend 
 
 {% multi_lang_include banners/testing.md page="campaigns" %}
 
-### Step 7: Finish building the campaign
+### Step 7: Finish building the Banner
 
 Finish building your campaign by completing the following:
 
