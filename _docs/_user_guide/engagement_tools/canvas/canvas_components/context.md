@@ -26,14 +26,14 @@ Context steps allow you to create and use temporary data during a user's journey
 
 For a full reference on context variables, including data types, usage, and best practices, see the [Context variables reference]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables/).
 
-Within a Context step, you can define or update up to 10 context variables. These variables can be used to personalize delays, segment users dynamically, and enrich messaging throughout the Canvas. For example, you might create a context variable for a user's scheduled flight time, then use it to set personalized delays and send reminders.
+Within a Context step, you can define or update up to 10 context variables. These variables can be used to personalize delays, segment users dynamically, and enrich messaging throughout the Canvas. For example, you could create a context variable for a user's scheduled flight time, then use it to set personalized delays and send reminders.
 
 You can set context variables in two ways:
 
 - **At Canvas entry:** Data from the event or API trigger can automatically populate context variables.
 - **In a Context step:** Define or update context variables manually by adding a Context step.
 
-Each context variable requires a name, a data type, and a value (set using Liquid or the Add Personalization tool). Once defined, you can reference context variables throughout the Canvas using Liquid, such as {% raw %}`{{context.${flight_time}}}`{% endraw %}.
+Each context variable requires a name, a data type, and a value (set using Liquid or the Add Personalization tool). When defined, you can reference context variables throughout the Canvas using Liquid, such as {% raw %}`{{context.${flight_time}}}`{% endraw %}.
 
 Each Canvas entry redefines context variables based on the latest entry data and Canvas setup, allowing users to have multiple active journeys with their own context. For example, if a customer has two upcoming flights, they'll have two separate journey states running simultaneously&#8212;each with its own flight-specific context variables like departure time and destination. This allows you to send personalized reminders about their 2 pm flight to New York while sending different updates about their 8 am flight to Los Angeles tomorrow, so that each message stays relevant to the specific booking.
 
@@ -42,9 +42,9 @@ Each Canvas entry redefines context variables based on the latest entry data and
 - You can define up to 10 context variables per Context step.
 - Each variable requires a unique name (letters, numbers, underscores only, up to 100 characters).
 - The total size of all variables in a step cannot exceed 50 KB.
-- Variables passed in via API triggers share the same namespace as those created in Context steps; redefining a variable in a Context step overrides the API value.
+- Variables passed in using API triggers share the same namespace as those created in Context steps; redefining a variable in a Context step overrides the API value.
 
-For more details and advanced usage, see the [Context variables reference]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables/).
+For more details and advanced usage, see [Context variables reference]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables/).
 
 ## Creating a Context step
 
@@ -67,11 +67,11 @@ To define a context variable:
 5. (Optional) To add more variables, select **Add Context variable** and repeat steps 1–4.
 6. When you're finished, select **Done**.
 
-Now you can use your context variable anywhere you use Liquid, such as in Message and User Update steps, by selecting **Add Personalization**. For a full walkthrough, see the [Context variables reference]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables/).
+Now you can use your context variable anywhere you use Liquid, such as in Message and User Update steps, by selecting **Add Personalization**. For a full walkthrough, see [Context variables reference]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables/).
 
 ### Context variable filters
 
-You can create filters using context variables in [Audience Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths) and [Decision Split]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split) steps. For filter setup, comparison logic, and advanced examples, see the [Context variables reference]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables/#context-variable-filters).
+You can create filters using context variables in [Audience Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths) and [Decision Split]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split) steps. For filter setup, comparison logic, and advanced examples, see [Context variables reference]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables/#context-variable-filters).
 
 ## Previewing user paths
 

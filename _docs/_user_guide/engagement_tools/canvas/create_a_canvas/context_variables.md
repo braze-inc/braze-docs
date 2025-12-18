@@ -7,7 +7,7 @@ description: "This reference article explains context variables in Braze Canvase
 
 # Context variables
 
-> Context variables are temporary pieces of data you can create and use within a user's journey through a specific Canvas. They enable you to personalize delays, segment users dynamically, and enrich messaging without permanently altering a user's profile information. Context variables exist only within the Canvas session and do not persist across different Canvases or outside the session.
+> Context variables are temporary pieces of data you can create and use within a user's journey through a specific Canvas. They enable you to personalize delays, segment users dynamically, and enrich messaging without altering a user's profile information permanently. Context variables exist only within the Canvas session and do not persist across different Canvases or outside the session.
 
 ## How context variables work
 
@@ -198,7 +198,7 @@ While most event properties using the timestamp type are already in UTC in Canva
 In all circumstances, we strongly recommend using [Liquid time_zone filters]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/#things-to-know) for timestamps to be represented in the desired time zone. You can reference this [frequently asked question in the Context step article]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context/#faq-example) for an example.
 {% endalert %}
 
-## Related
+## Related articles
 
 - [Context step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context/)
 - [Personalization and dynamic content with Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/)
