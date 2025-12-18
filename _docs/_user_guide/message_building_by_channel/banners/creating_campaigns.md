@@ -9,13 +9,13 @@ channel:
   - banners
 ---
 
-# Creating Banner campaigns
+# Creating a Banner
 
 > Learn how to create Banners when you build a campaign in Braze. For more general information, see [About Banners]({{site.baseurl}}/user_guide/message_building_by_channel/banners).
 
 ## Prerequisites
 
-Before you can launch your Banner campaign, your development team will need to [set up placements in your app or website]({{site.baseurl}}/developer_guide/banners/creating_placements/). You can still draft your Banner campaign in the meantime&#8212;you just won't be able to launch the campaign.
+Before you can launch your Banner, your development team will need to [set up placements in your app or website]({{site.baseurl}}/developer_guide/banners/creating_placements/). You can still draft your Banner campaign in the meantime&#8212;you just won't be able to launch the campaign.
 
 ## Creating a Banner message
 
@@ -24,7 +24,6 @@ Before you can launch your Banner campaign, your development team will need to [
 ### Step 1: Choose where to build your message
 
 Not sure whether your message should be sent using a campaign or a Canvas? Campaigns are better for single, targeted messaging campaigns, while Canvases are better for multi-step user journeys.
-
 
 {% tabs %}
 {% tab Campaign %}
@@ -35,6 +34,7 @@ Not sure whether your message should be sent using a campaign or a Canvas? Campa
 4. Add [teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) and [tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) as needed. Tags make your campaigns easier to find and build reports out of. For example, when using the Report Builder, you can filter by the relevant tags.
 5. Select the placement you previously created to associate it with your campaign.
 6. Add variants as needed. You can choose a different message type and layout for each one. For more information on variants, refer to [Multivariate and A/B testing]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing).
+7. Choose a start date and time for your Banner campaign. By default, Banners last indefinitely. You can change this by selecting **End Time** and specifying an end date and time.
 
 {% alert tip %}
 If all of the messages in your campaign are going to be similar or have the same content, compose your message before adding additional variants. You can then select **Copy from Variant** from the **Add Variant** dropdown.
@@ -47,7 +47,7 @@ If all of the messages in your campaign are going to be similar or have the same
 2. After setting up your Canvas, add a Message step in the Canvas builder. Name your step something clear and meaningful.
 3. Select **Banner** as your messaging channel.
 4. Select a placement for the Banner.
-5. Set the priority for the Banner 
+5. Set the priority for the Banner. [Banner priority]({{site.baseurl}}/user_guide/message_building_by_channel/banners/#priority) determines the order in which Banners are displayed if they share the same placement.
 6. Set an expiration for the Banner. This can be after a duration of time after the step is available or at a specific date and time.
 
 {% endtab %}
@@ -106,11 +106,12 @@ When you're finished, select **Done**.
 
 ![The properties page with a string property with a key of color and value of #FF0000.]({% image_buster /assets/img/banners/example_property.png %})
 
-### Step 3: Set campaign duration
+## Step 3: Build the remainder of your campaign or Canvas
 
-Choose a start date and time for your Banner campaign. By default, Banners last indefinitely. You can change this by selecting **End Time** and specifying an end date and time.
+{% tabs %}
+{% tab Campaign %}
 
-### Step 5: Set Banner priority (optional)
+#### Set Banner priority (optional)
 
 [Banner priority]({{site.baseurl}}/user_guide/message_building_by_channel/banners/#priority) determines the order in which Banners are displayed if they share the same placement. To manually set the priority:
 
@@ -122,13 +123,7 @@ Choose a start date and time for your Banner campaign. By default, Banners last 
 If you have multiple Banner campaigns using the same placement ID, we recommend using the drag-and-drop priority sorter to define the exact priority.
 {% endalert %}
 
-### Step 6: Test your message (optional)
-
-{% multi_lang_include banners/testing.md page="campaigns" %}
-
-### Step 7: Finish building the Banner
-
-Finish building your campaign by completing the following:
+#### Choose your audience
 
 1. In **Target Audiences**, choose segments or filters to narrow down your audience. You’ll automatically be given a preview of the approximate segment population. Exact segment membership is calculated just before the message is sent.
 
@@ -137,6 +132,25 @@ Finish building your campaign by completing the following:
 {:start="2"}
 2. In **Assign Conversions**, track how often users perform specific actions after receiving a campaign by defining conversion events with up to a 30-day window to count the action as a conversion.
 
-### Step 8: Launch your campaign
+{% multi_lang_include target_audiences.md %}
 
-After you're finished building and testing your Banner campaign, you're ready to launch!
+#### Choose conversion events
+
+Braze allows you to track how often users perform specific actions, [conversion events]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/), after receiving a campaign. You have the option of allowing up to a 30-day window during which a conversion will be counted if the user takes the specified action.
+
+{% endtab %}
+
+{% tab Canvas %}
+
+If you haven't done so already, complete the remaining sections of your Canvas component. For further details on how build out the rest of your Canvas, implement [multivariate testing]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) and [Intelligent Selection]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/), and more, refer to the [Build your Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-3-build-your-canvas) step of our Canvas documentation.
+
+{% endtab %}
+{% endtabs %}
+
+### Step 4: Test your message (optional)
+
+{% multi_lang_include banners/testing.md page="campaigns" %}
+
+### Step 5: Launch your message
+
+After you've finished building the last of your campaign or Canvas, review its details, [test it]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/), then send it when you're ready.
