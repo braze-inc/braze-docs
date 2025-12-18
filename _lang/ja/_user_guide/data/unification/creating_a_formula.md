@@ -27,7 +27,7 @@ tool: Reports
 
 式には、ダッシュボードの [[ホーム]({{site.baseurl}}/user_guide/analytics/dashboard/home_dashboard/)]、[[収益レポート]({{site.baseurl}}/user_guide/data/export_braze_data/exporting_revenue_data/)]、[[カスタムイベントレポート]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)] の各ページにある統計パネルからアクセスできます。このパネルを表示するには、**Performance Over Time** チャートに移動し、**Statistics For** ドロップダウンを**KPI Formulas** に変更してから、少なくとも1 つのKPI 数式を選択してチャートに入力します。
 
-\![BrazeダッシュボードでKPI計算式の統計を見る]({% image_buster /assets/img_archive/kpi_forms.png %})
+![Braze ダッシュボードでのKPI 数式の統計の表示]({% image_buster /assets/img_archive/kpi_forms.png %})
 
 新規の式を作成するには、次の手順に従います。
 

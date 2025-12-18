@@ -9,7 +9,7 @@ search_tag: Partner
 
 # Cloudinary
 
-> [Cloudinary](https://cloudinary.com/) is an image and video platform used to manage, edit, optimize, and deliver images and video at scale to any campaign across channels and customer journeys. When integrated and enabled, Cloudinary's media management powers dynamic, contextual, and personalized asset delivery for your Braze campaigns and Canvases. 
+> [Cloudinary](https://www.cloudinary.com?utm_source=braze_partner_page) is an image and video platform used to manage, edit, optimize, and deliver images and video at scale to any campaign across channels and customer journeys. When integrated and enabled, Cloudinary's media management powers dynamic, contextual, and personalized asset delivery for your Braze campaigns and Canvases. 
 
 ## About this integration
 
@@ -25,7 +25,7 @@ More advanced integration methods, including using [Connected Content]({{site.ba
 
 | Requirements     | Description |                        
 |-----------------------|-----------------|
-| Cloudinary Account  | A [Cloudinary Account](https://cloudinary.com/users/register_free) is required to take advantage of this partnership  |
+| Cloudinary Account  | A [Cloudinary Account](https://cloudinary.com/users/register_free?utm_source=braze+docs+page) is required to take advantage of this partnership  |
 {: .reset-td-br-1 .reset-td-br-2 role=“presentation”}
 
 ## Integration methods
@@ -116,6 +116,11 @@ If an exact match isn’t found, the function automatically selects a fallback o
 {% alert tip %}
 Refer to Cloudinary's [`braze-personalization` GitHub repo](https://github.com/cloudinary-devs/braze-personalization) for instructions on creating and applying custom functions, and an example custom function for asset selection and fallback options for a given campaign. For more guidance, contact your Cloudinary support team.
 {% endalert %}
+
+### Prerequisites
+
+To enable dynamic asset selection, Cloudinary must be able to return a set of assets based on tags and metadata. If the list delivery type is restricted, Cloudinary cannot provide the dynamic list needed for personalized asset selection in Braze campaigns.
+- Unrestrict the list delivery type: Open the Security Settings in your Cloudinary Console, and clear the Resource list item under Restricted image types.
 
 ### Dynamic selection setup
 

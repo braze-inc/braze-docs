@@ -13,9 +13,6 @@ resources_list:
   - name: Help Articles
     link: /docs/help/help_articles/overview/
     image: /assets/img/braze_icons/info-circle.svg
-  - name: Best Practices and FAQ
-    link: /docs/help/faqs/
-    image: /assets/img/braze_icons/book-open-01.svg
   - name: Release Notes
     link: /docs/help/release_notes/
     image: /assets/img/braze_icons/sticker-square.svg

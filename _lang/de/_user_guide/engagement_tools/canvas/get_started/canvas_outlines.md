@@ -1,5 +1,5 @@
 ---
-nav_title: Canvas Umrisse
+nav_title: Leinwand Umrisse
 article_title: Canvas Umrisse
 page_order: 3
 page_type: reference
@@ -10,19 +10,16 @@ tool: Canvas
 
 # Leinwand Umrisse
 
-[![Braze Learning Kurs]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/page/courses){: style="float:right;width:120px;border:0;" class="noimgborder"}
+[![Braze-Lernkurs]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/page/courses){: style="float:right;width:120px;border:0;" class="noimgborder"}
 
 > In diesem Artikel finden Sie mehrere Beispiele, die zeigen, wie Sie mit Canvas gezielte, personalisierte Nachrichten mit einer Kombination aus [Verzögerung]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/) und [Nachrichtenschritten]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) erstellen können.
 
-Braze Learning bietet auch mehrere spezielle Canvas-Kurse an, in denen die üblichen Canvas-Grundlagen behandelt werden. Hier erhalten Sie wertvolle Einblicke in Fachbegriffe und Konzepte, die in einer Mischung aus Videos, Lektionen und interaktiven Übungen erklärt werden. 
+Braze Learning bietet auch mehrere spezielle Canvas-Kurse an, in denen die üblichen Canvas-Grundlagen behandelt werden. Hier erhalten Sie wertvolle Einblicke in Fachbegriffe und Konzepte, die in einer Mischung aus Videos, Lektionen und interaktiven Übungen erklärt werden.
+
 - [Erstellen Sie Customer Journeys mit Canvas Flow](https://learning.braze.com/create-customer-journeys-with-canvas-flow)
 - [Onboarding für neue Treuemitglieder](https://learning.braze.com/new-loyalty-member-onboarding)
 - [Passive Nutzer:innen](https://learning.braze.com/lapsing-users)
 - [Nutzer-Journey zum Warenkorb-Abbruch erstellen](https://learning.braze.com/build-an-abandoned-cart-user-journey)
-
-{% alert important %}
-Seit dem 28\. Februar 2023 ist es nicht mehr möglich, Canvase in der klassischen Canvas-Umgebung zu erstellen oder zu duplizieren. Braze empfiehlt Kund:innen, die die ursprüngliche Canvas-Umgebung nutzen, den Wechsel zu Canvas Flow. Es handelt sich um eine verbesserte Bearbeitungsfunktion, mit der Sie Canvases besser erstellen und verwalten können. Erfahren Sie mehr über das [Klonen Ihrer Canvases in Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
-{% endalert %}
 
 ### Onboarding
 

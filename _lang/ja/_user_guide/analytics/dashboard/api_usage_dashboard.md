@@ -16,7 +16,7 @@ API使用状況のダッシュボードを表示するには、**設定**>**API�
 
 デフォルトのダッシュボードには、過去1日 (24時間) のワークスペースのすべての受信した REST API リクエストのビューが表示されます。ユースケースに応じて、トラフィックをフィルターまたはグループ化するようにダッシュボードコントロールを調整したり、ダッシュボードの時間範囲を設定したりできます。
 
-\![API Usageダッシュボードには130のリクエストがあり、成功率は70％、失敗率は30％であった。]({% image_buster /assets/img/api_usage_dashboard/api_usage_dashboard.png %})
+![API使用状況ダッシュボード。リクエスト総数130件、成功率70％、失敗率30％。]({% image_buster /assets/img/api_usage_dashboard/api_usage_dashboard.png %})
 
 ## 使用可能なメトリック
 
@@ -31,7 +31,7 @@ API 使用状況ダッシュボードには、次の統計が含まれます。
 
 ## ダッシュボードを使う
 
-\![ダッシュボードに適用するフィルターである：APIキー、エンドポイント、レスポンシブコード、グループデータ、日付。]({% image_buster /assets/img/api_usage_dashboard/filters.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
+![ダッシュボードに適用するフィルタ(以下を含む)APIキー、エンドポイント、レスポンシブコード、グループデータ、日付。]({% image_buster /assets/img/api_usage_dashboard/filters.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
 ### フィルター
 

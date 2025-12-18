@@ -17,7 +17,7 @@ Braze は、受信したメッセージに基づいたユーザーのリター�
 
 これらのリターゲティングフィルターを追加すると、それぞれオプションが提供されます。ユーザーのターゲティングの詳細については、キャンペーンの設定に関する [Braze ラーニングコース](https://learning.braze.com/campaign-setup-delivery-targeting-conversions)をぜひご覧ください。
 
-\![使用可能なフィルターのドロップダウンメニューを含むセグメント詳細セクション。]({% image_buster /assets/img_archive/retarget.png %}){: style="max-width:80%;"}
+![[セグメントの詳細] セクションと使用可能なフィルターのドロップダウンメニュー。]({% image_buster /assets/img_archive/retarget.png %}){: style="max-width:80%;"}
 
 ## リターゲティングのフィルター
 
@@ -33,7 +33,7 @@ Braze は、受信したメッセージに基づいたユーザーのリター�
 - メールを開いた
 - アプリ内メッセージを表示した
 
-\![]({% image_buster /assets/img_archive/clickedopened.png %})
+![]({% image_buster /assets/img_archive/clickedopened.png %})
 
 これは、どのキャンペーンをリターゲティングするかを選択することで、さらに細かく指定できます。
 
@@ -47,7 +47,7 @@ Braze は、受信したメッセージに基づいたユーザーのリター�
 - メールを開いた
 - アプリ内メッセージを表示した
 
-\![]({% image_buster /assets/img_archive/retarget_tag_filter.png %})
+![]({% image_buster /assets/img_archive/retarget_tag_filter.png %})
 
 ### キャンペーンからコンバージョン済み 
 
@@ -55,7 +55,7 @@ Braze は、受信したメッセージに基づいたユーザーのリター�
 
 定期的なキャンペーンの場合、このフィルターはユーザーがキャンペーンの最新メッセージでコンバージョンしたかどうかを参照します。
 
-\![]({% image_buster /assets/img_archive/converted_from_campaign.png %})
+![]({% image_buster /assets/img_archive/converted_from_campaign.png %})
 
 ### キャンバスからコンバージョン済み 
 
@@ -63,43 +63,43 @@ Braze は、受信したメッセージに基づいたユーザーのリター�
 
 定期的なキャンバスの場合、このフィルターはユーザーがキャンバスを通過したときに 1 度でもコンバージョンしたことがあるかどうかを参照します。
 
-\![]({% image_buster /assets/img_archive/converted_from_canvas.png %})
+![]({% image_buster /assets/img_archive/converted_from_canvas.png %})
 
 ### キャンペーンのコントロールグループ内 
 
 このフィルターを使用して、ターゲットキャンペーンのコントロールグループに含まれるユーザーまたは含まれていないユーザーを検索します。
 
-\![]({% image_buster /assets/img_archive/campaign_control_group.png %})
+![]({% image_buster /assets/img_archive/campaign_control_group.png %})
 
 ### キャンバスのコントロールグループ内 
 
 このフィルターを使用して、ドロップダウンで選択できるターゲットキャンバスのコントロールグループに属するユーザー、または属さないユーザーを検索する。
 
-\![]({% image_buster /assets/img_archive/canvas_control_group.png %})
+![]({% image_buster /assets/img_archive/canvas_control_group.png %})
 
 ### 特定のキャンペーンから最後に受信したメッセージ 
 
 このフィルターを使用して、指定した日付または日数の前後に特定のキャンペーンを最後に受信したユーザーを検索します。このフィルターは、ユーザーがいつ他のキャンペーンを受けたかを考慮しない。
 
-\![]({% image_buster /assets/img_archive/last_received_specific_campaign.png %})
+![]({% image_buster /assets/img_archive/last_received_specific_campaign.png %})
 
 ### タグ付きの特定のキャンペーンまたはキャンバスから最後に受信したメッセージ 
 
 このフィルターは、特定の日付または日数の前後に、特定のタグを持つ特定のキャンペーンまたはキャンバスを最後に受信したユーザーを検索する場合に使用します。このフィルターは、ユーザーが他のキャンペーンやキャンバスを受け取った場合は考慮しない。
 
-\![]({% image_buster /assets/img_archive/last_received_campaign_with_tag.png %})
+![]({% image_buster /assets/img_archive/last_received_campaign_with_tag.png %})
 
 ### キャンペーンからメッセージを受信 
 
 このフィルターを使用して、ターゲットキャンペーンを受信したユーザーまたは受信していないユーザーを検索します。
 
-\![]({% image_buster /assets/img_archive/receivedcamp.png %})
+![]({% image_buster /assets/img_archive/receivedcamp.png %})
 
 ### タグ付きのキャンペーンまたはキャンバスからメッセージを受信 
 
 このフィルターを使用して、ターゲットタグを含むキャンペーンまたはキャンバスを受信したユーザーまたは受信していないユーザーを検索します。
 
-\![]({% image_buster /assets/img_archive/received_campaign_with_tag.png %})
+![]({% image_buster /assets/img_archive/received_campaign_with_tag.png %})
 
 ## リターゲティングキャンペーンのメリット
 

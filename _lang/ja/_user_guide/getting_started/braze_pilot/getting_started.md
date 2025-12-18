@@ -14,13 +14,13 @@ description: "この参考記事では、エンジニアや開発者に必要な
 
 Braze Pilotを使い始めるには、まずApple App StoreかGoogle Play Storeアプリからアプリをダウンロードする必要がある。アプリストアでアプリを検索するか、以下のQRコードをスキャンして、お使いのデバイスのアプリページにアクセスすることができる。
 
-## ステップ 2: 利用規約に同意する
+## ステップ 2:利用規約に同意する
 
 次に、利用規約に同意し、あなたの仕事のメールをフォームに入力する。あなたのメールはアプリの利用分析のみに使用され、マーケティング目的には使用されない。
 
-\![Braze Pilotのウェルカムページ。]({% image_buster /assets/img/braze_pilot/pilot_welcome.png %}){:style="max-width:30%"} 仕事用のメールアドレスを入力する。]({% image_buster /assets/img/braze_pilot/pilot_signin.png %}){:style="max-width:30%"}
+![Braze Pilotのウェルカムページ。]({% image_buster /assets/img/braze_pilot/pilot_welcome.png %}){:style="max-width:30%"}![勤務先のメールアドレスを入力するオプションがある。]({% image_buster /assets/img/braze_pilot/pilot_signin.png %}){:style="max-width:30%"}
 
-## ステップ 3: Braze SDKとの接続を初期化する。
+## ステップ 3:Braze SDKとの接続を初期化する。
 
 Braze Pilotを使用すると、任意のBrazeダッシュボードに対してBraze SDKを初期化することができる。SDKが初期化されると、PilotはエンゲージメントデータのBrazeへの送信を開始し、そのBrazeダッシュボードから起動したメッセージングをトリガーできるようになる。
 
@@ -35,7 +35,7 @@ SDKの初期化、ユーザープロファイルの作成、Braze Pilotの特定
 
 | Android用パイロット | iOS用パイロット |
 | --- | --- |
-| \![Android用QRコード。]({% image_buster /assets/img/braze_pilot/android_qr_code.png %}){:style="max-width:60%"} | \![iOS用QRコード。]({% image_buster /assets/img/braze_pilot/ios_qr_code.png %}){:style="max-width:60%"} |
+| ![Android用QRコード。]({% image_buster /assets/img/braze_pilot/android_qr_code.png %}){:style="max-width:60%"} | ![iOS用QRコード。]({% image_buster /assets/img/braze_pilot/ios_qr_code.png %}){:style="max-width:60%"} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
@@ -45,11 +45,11 @@ SDKの初期化、ユーザープロファイルの作成、Braze Pilotの特定
 
 Brazeダッシュボードの**アプリ設定**ページから、ダッシュボードワークスペースとの接続を初期化するためのステップバイステップガイドに従う。
 
-\![Braze Pilotのセットアップウィザードのステップ1。]({% image_buster /assets/img/braze_pilot/setup_wizard.png %}){:style="max-width:40%"}
+![Braze Pilotのセットアップウィザードのステップ1。]({% image_buster /assets/img/braze_pilot/setup_wizard.png %}){:style="max-width:40%"}
 
 この接続はワークスペースに依存する。つまり、デモ・ワークスペースから接続を初期化し、無料トライアル・ダッシュボードのライブ・ワークスペースに切り替えると、そこで開始されたキャンペーンを受信するには、そのワークスペースからSDKを再初期化する必要がある。
 
-\![Brazeダッシュボードのワークスペース・ドロップダウンで、アクティブなワークスペースとして "Demo - Braze "が選択されている。]({% image_buster /assets/img/braze_pilot/dashboard_workspace.png %}){:style="max-width:60%"}
+![Brazeダッシュボードのワークスペース・ドロップダウンで、アクティブなワークスペースとして「Demo - Braze」が選択されている。]({% image_buster /assets/img/braze_pilot/dashboard_workspace.png %}){:style="max-width:60%"}
 
 {% endtab %}
 {% endtabs %}

@@ -15,7 +15,7 @@ search_tag: Partner
 このドキュメントは、拡張機能の使用例、イベント転送ライブラリへのインストール方法、およびイベント転送[ルール](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html?lang=en)でその機能を使用する方法について説明しています。
 
 {% alert note %}
-Brazeに属性を送信すると、Brazeのデータポイント消費が増加する可能性があります。属性を送信する前に Braze アカウントマネージャーにお問い合わせください。Brazeのドキュメントの[課金対象データポイント]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/#billable-data-points)についての詳細をご参照ください。
+Adobeイベント転送を使用すると、Brazeデータポイントの使用量が増加する可能性がある。詳細については、[データポイントに関する]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/#billable-data-points)Brazeのドキュメントを参照のこと。
 {% endalert %}
 
 ## ユースケース
@@ -62,9 +62,9 @@ Edge Network を Braze に接続するには、次のものが必要です。
 ![]({% image_buster /assets/img/efe.png %})
 
 {% tabs local %}
-{% tab ユーザー識別 %}
+{% tab User Identification %}
 
-| 入力 | 説明 |
+| インプット | 説明 |
 | --- | --- |
 | 外部ユーザ ID | 長く、ランダムで、よく分散されたUUIDまたはGUID。ユーザーIDの名前を付ける別の方法を選択する場合、それらも長く、ランダムで、よく分散されている必要があります。[推奨されるユーザー ID の命名規則]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids#suggested-user-id-naming-convention)について詳しく学びます。 |
 | Braze ユーザー ID | Braze ユーザー 識別子。 |
@@ -76,9 +76,9 @@ Edge Network を Braze に接続するには、次のものが必要です。
 {% endalert %}
 
 {% endtab %}
-{% tab イベントデータ %}
+{% tab Event Data %}
 
-| 入力 | 説明 | 必須 |
+| インプット | 説明 | 必須 |
 | --- | --- | --- |
 | イベント名 | イベントの名前。 | はい |
 | イベント時間 | ISO 8601または`yyyy-MM-dd'T'HH:mm:ss:SSSZ`形式の日付時刻文字列。 | はい |
@@ -91,7 +91,7 @@ Edge Network を Braze に接続するには、次のものが必要です。
 {% endalert %}
 
 {% endtab %}
-{% tab ユーザー 属性 %}
+{% tab User Attribute %}
 
 ユーザー属性は、指定されたユーザープロファイル上の指定された名前と値で属性を作成または更新するフィールドを含むJSONオブジェクトである可能性があります。次のプロパティがサポートされています:
 
@@ -106,13 +106,13 @@ Edge Network を Braze に接続するには、次のものが必要です。
 | 国 | ユーザーの国は、[ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)形式の文字列です。 |
 | 言語 | ユーザーの言語は[ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)形式の文字列です。 |
 | 生年月日 | 文字列形式のユーザーの生年月日（例：1980-12-21）。 |
-| タイムゾーン | [IANA タイムゾーンデータベース](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)からのタイムゾーン名 (たとえば、「America/New_York」または「東部標準時 (アメリカおよびカナダ)」)。 |
+| タイムゾーン | [IANAタイムゾーンデータベースからの](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)タイムゾーン名（例えば、’America/New_York’ または「Eastern Time (US& Canada)」）。 |
 | Facebook | `id`（文字列）、`likes`（文字列の配列）、`num_friends`（整数）のいずれかを含むハッシュ。 |
 | Twitter | `screen_name` (整数)、`followers_count` (文字列、X (旧 Twitter) ハンドル)、`friends_count` (整数)、`statuses_count` (整数) のいずれかを含むハッシュ。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
-構成内で追加されたすべての属性は、属性の値が変更されたかどうかに関係なく、イベントがBrazeに送信されるたびに送信されます。ユーザー属性を設定する際には、これがデータポイントの消費にどのように影響するかを確認してください。
+構成内で追加されたすべての属性は、属性の値が変更されたかどうかに関係なく、イベントがBrazeに送信されるたびに送信されます。ユーザー属性を設定する際には、これがデータポイント使用量にどのような影響を与えるかを確認しておくこと。
 {% endalert %}
 
 {% endtab %}
@@ -125,9 +125,9 @@ Edge Network を Braze に接続するには、次のものが必要です。
 ![]({% image_buster /assets/img/efe2.png %})
 
 {% tabs local %}
-{% tab ユーザー識別 %}
+{% tab User Identification %}
 
-| 入力 | 説明 |
+| インプット | 説明 |
 | --- | --- |
 | 外部ユーザ ID | 長く、ランダムで、よく分散されたUUIDまたはGUID。ユーザーIDの名前を付ける別の方法を選択する場合、それらも長く、ランダムで、よく分散されている必要があります。[推奨されるユーザー ID の命名規則]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids#suggested-user-id-naming-convention)について詳しく学びます。 |
 | Braze ユーザー ID | Braze ユーザー 識別子。 |
@@ -139,9 +139,9 @@ Edge Network を Braze に接続するには、次のものが必要です。
 {% endalert %}
 
 {% endtab %}
-{% tab 購入データ %}
+{% tab Purchase Data %}
 
-| 入力 | 説明 | 必須 |
+| インプット | 説明 | 必須 |
 | --- | --- | --- |
 | プロダクトID | 購入のための識別子。（例えば、製品名や製品カテゴリ） | はい |
 | 購入時刻 | ISO 8601 または `yyyy-MM-dd'T'HH:mm:ss:SSSZ` 形式の日時 (文字列)。 | はい |
@@ -157,7 +157,7 @@ Edge Network を Braze に接続するには、次のものが必要です。
 {% endalert %}
 
 {% endtab %}
-{% tab ユーザー属性 %}
+{% tab User Attributes %}
 
 構成ビュー内の各イベントに属性を送信するかどうかを選択できます。
 
@@ -174,13 +174,13 @@ Edge Network を Braze に接続するには、次のものが必要です。
 | 国 | ユーザーの国は、[ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)形式の文字列です。 |
 | 言語 | ユーザーの言語は[ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)形式の文字列です。 |
 | 生年月日 | 文字列形式のユーザーの生年月日（例：1980-12-21）。 |
-| タイムゾーン | [IANA タイムゾーンデータベース](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)からのタイムゾーン名 (たとえば、「America/New_York」または「東部標準時 (アメリカおよびカナダ)」)。 |
+| タイムゾーン | [IANAタイムゾーンデータベースからの](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)タイムゾーン名（例えば、’America/New_York’ または「Eastern Time (US& Canada)」）。 |
 | Facebook | `id`（文字列）、`likes`（文字列の配列）、`num_friends`（整数）のいずれかを含むハッシュ。 |
 | Twitter | `screen_name` (整数)、`followers_count` (文字列、X (旧 Twitter) ハンドル)、`friends_count` (整数)、`statuses_count` (整数) のいずれかを含むハッシュ。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
-構成内で追加されたすべての属性は、属性の値が変更されたかどうかに関係なく、イベントがBrazeに送信されるたびに送信されます。ユーザー属性を設定する際には、これがデータポイントの消費にどのように影響するかを確認してください。
+構成内で追加されたすべての属性は、属性の値が変更されたかどうかに関係なく、イベントがBrazeに送信されるたびに送信されます。ユーザー属性を設定する際には、これがデータポイント使用量にどのような影響を与えるかを確認してほしい。
 {% endalert %}
 
 {% endtab %}

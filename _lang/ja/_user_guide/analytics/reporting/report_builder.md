@@ -16,9 +16,9 @@ page_order: 6.2
 ## レポート テンプレートの使用
 
 1. **[分析]** > [**レポートビルダー (新機能)**] に移動します。
-2. **Create New Report（新しいレポートを作成）**」ボタンの隣にある「**More options（その他のオプション）**」矢印を選択し、「**Use a report template（レポート・テンプレートを使用**）」を選択する。<br><br>\!["Create New レポート" button ドロップダウンオプションを使用して、カスタムレポートを作成するか、テンプレートを使用します。]({% image_buster /assets/img/report_builder_2/create_new_report.png %}){: style="max-width:40%;"}<br><br>
+2. **Create New Report（新しいレポートを作成）**」ボタンの隣にある「**More options（その他のオプション）**」矢印を選択し、「**Use a report template（レポート・テンプレートを使用**）」を選択する。<br><br>!["Create New レポート" button ドロップダウンオプションを使用して、カスタムレポートを作成するか、テンプレートを使用します。]({% image_buster /assets/img/report_builder_2/create_new_report.png %}){: style="max-width:40%;"}<br><br>
 3. Brazeテンプレートライブラリーからレポートテンプレートを1つ選択する。
-    - ユースケースに関連するレポートを見つけるには、[**行項目**] と [**タグ**] のドロップダウンを使用します。<br><br>\![" Braze レポート テンプレート s" 選択するBraze テンプレートの一覧を含むウィンドウ。]({% image_buster /assets/img/report_builder_2/report_templates.png %}){: style="max-width:90%;"}<br><br>
+    - ユースケースに関連するレポートを見つけるには、[**行項目**] と [**タグ**] のドロップダウンを使用します。<br><br>![" Braze レポート テンプレート s" 選択するBraze テンプレートの一覧を含むウィンドウ。]({% image_buster /assets/img/report_builder_2/report_templates.png %}){: style="max-width:90%;"}<br><br>
 4. [レポートの作成](#creating-a-report)」のステップ3以降に従って、ユースケースに合わせてレポートをさらにカスタマイズする。
 
 ## レポートを作成する
@@ -34,10 +34,10 @@ page_order: 6.2
 
     **Rows**の選択は、[表示可能なメトリクスに影響します。たとえば、**Canvases**または**Campaigns**をレポートし、**Variant**ドリルダウンした場合にのみ、多変量メトリクスを表示できます。これらのメトリクスは、**キャンペーン s およびキャンバス** でレポートするときには表示できません。これらのキャンペーンとキャンバスに多変量検査がある場合でも同様です。 
 
-\!["Rows and columns" s フィールドでレポートの行とグループを選択します。]({% image_buster /assets/img/report_builder_2/rows_and_columns.png %}){: style="width:90%;"}
+![" Rows and columns" は、フィールド s でレポートの行とグループを選択します。]({% image_buster /assets/img/report_builder_2/rows_and_columns.png %}){: style="width:90%;"}
 
 {: start="4"}
-4\.(オプション）**Add drilldown（ドリルダウンの追加**）を選択して、データをより詳細なビューに分解する：
+4. (オプション）**Add drilldown（ドリルダウンの追加**）を選択して、データをより詳細なビューに分解する：
     \- チャネル
     \- 日付
         \- これを使用して、データをより小さな時間範囲に分割する。例えば、キャンペーンの日別のパフォーマンスに興味がある場合、以下の設定を選択する：
@@ -54,16 +54,16 @@ page_order: 6.2
 {: start="5"}
 5. [**列**] セクションで [**指標のカスタマイズ**] を選択します。
 
-\!["Customize Metrics"セクションには、複数のメトリックを選択するオプションがあります。]({% image_buster /assets/img/report_builder_2/customize_metrics.png %}){: style="width:90%;"}
+!["Customize Metrics"セクションには、複数のメトリクスを選択するオプションがあります。]({% image_buster /assets/img/report_builder_2/customize_metrics.png %}){: style="width:90%;"}
 
 {: start="6"}
 6. カテゴリー別にメトリックスを参照し、対応するチェックボックスを選択してレポートにメトリックスを追加する。
     \- 点線のアイコンを上下にドラッグして、メトリクスと列の順序を変更する。
 7. **レポートの内容で**、レポートにデータを含める日付範囲を設定する。
 8. ステップ3で選択した内容に応じて、キャンペーン、キャンバス、またはその両方をレポートに手動または自動で追加する。
-    - **手動で追加:****最終送信**日、タグまたはチャネルのフィルターを使用するか、キャンペーンまたはキャンバス名を検索して、レポートに含める各キャンペーンまたはキャンバスを選択する。<br><br>\!["手動でキャンペーン s とキャンバス es"を追加します。選択するキャンペーンs の一覧が含まれています。]({% image_buster /assets/img/report_builder_2/manually_add.png %}){: style="width:90%;"}<br><br>
+    - **手動で追加:****最終送信**日、タグまたはチャネルのフィルターを使用するか、キャンペーンまたはキャンバス名を検索して、レポートに含める各キャンペーンまたはキャンバスを選択する。<br><br>!["手動でキャンペーン s とキャンバス es"を追加します。選択するキャンペーンs の一覧が含まれます。]({% image_buster /assets/img/report_builder_2/manually_add.png %}){: style="width:90%;"}<br><br>
     - **自動的に追加:**レポートに含めるキャンペーンやキャンバスのルールを設定する。このページで選択する必要があるフィールドは1つだけです。
-        \- この画面で設定した条件を満たすキャンペーンやキャンバスが追加されると、それらは自動的に将来のレポートに追加される。<br><br>\!["キャンペーン s とキャンバス es&quot を自動的に追加します。キャンペーン s とキャンバス es をレポートに追加する規則を設定するには、フィールド s を使用します。]({% image_buster /assets/img/report_builder_2/automatically_add.png %}){: style="width:90%;"}<br><br>
+        \- この画面で設定した条件を満たすキャンペーンやキャンバスが追加されると、それらは自動的に将来のレポートに追加される。<br><br>!["自動的にキャンペーンsとキャンバスes&quotを追加します。キャンペーンsとキャンバスesをレポートに追加する規則を設定するには、フィールドsを使用します。]({% image_buster /assets/img/report_builder_2/automatically_add.png %}){: style="width:90%;"}<br><br>
 9\.**Save & Run**を選択して、レポートを実行します。
 
 {% alert note %}
@@ -77,7 +77,7 @@ page_order: 6.2
 {% alert tip %}
 キャンバスバリアントs またはステップs にレポートする場合は、行に対して**キャンバス** を選択し、フィールドを空のままにするか、ドリルダウンとして**日付** を選択します。これにより、**Canvas View** ドロップダウンが作成され、キャンバスのみのメトリクス、またはバリアント、ステップ、またはメッセージごとのグループメトリクスが表示されます。 
 
-\![開封は"キャンバスビュー&クォート;ドロップダウンです。]({% image_buster /assets/img/report_builder_2/canvas_view_dropdown.png %}){: style="width:40%;"}
+![開封は"キャンバスビュー&クォート;ドロップダウンです。]({% image_buster /assets/img/report_builder_2/canvas_view_dropdown.png %}){: style="width:40%;"}
 {% endalert %}
 
 | 指標 | 説明 |
@@ -97,13 +97,13 @@ page_order: 6.2
 
 レポート実行後、レポートページで結果を表形式で見ることができる。 
 
-\![キャンペーンのメトリクスごとのレポート情報のテーブル。]({% image_buster /assets/img/report_builder_2/report_table.png %}){: style="width:90%;"}
+![キャンペーンのメトリクスごとのレポート情報のテーブル。]({% image_buster /assets/img/report_builder_2/report_table.png %}){: style="width:90%;"}
 
 ### レポートチャートを作成する
 
 ページ下部で**チャートのタイプ**を選択し、チャート指標を設定することで、データのチャートを作成できます。デフォルトでは、最初の指標が表示されます。
 
-\![グラフのX 軸、Y 軸、グラフの種類などを設定するためのオプションを含むレポートデータチャート。]({% image_buster /assets/img/report_builder_2/visualize_table.png %}){: style="max-width:90%;"}
+![グラフのX 軸、Y 軸、グラフの種類などを設定するためのオプションを含む、レポートデータのグラフ。]({% image_buster /assets/img/report_builder_2/visualize_table.png %}){: style="max-width:90%;"}
 
 {% alert note %}
 折れ線グラフを作成するには、レポートを構成する際に、ドリルダウンオプションとして**「日付**」を選択する。これは経時的なトレンドを表示する。
@@ -113,18 +113,18 @@ page_order: 6.2
 
 レポートチャートの画像をダウンロードするには、写真をダウンロードするには、点線アイコンを選択し、ダウンロードオプションを選択します。
 
-\![各種ファイルフォーマットの下位読み込むのメニュー。]({% image_buster /assets/img/report_builder_2/download_options.png %}){: style="max-width:70%;"}
+![各種ファイルフォーマットの下位読み込むを選択できるメニューです。]({% image_buster /assets/img/report_builder_2/download_options.png %}){: style="max-width:70%;"}
 
 ## レポートの共有
 
 **Share**を選択し、次のいずれかの方法で、レポートへのダッシュボードリンクを共有できます。
 - **リンクを共有する:**リンクをコピーして共有します。
 
-\!["リンク"ドロップダウンをレポートへのリンクと共有します。]({% image_buster /assets/img/report_builder_2/share_this_report.png %}){: style="max-width:70%;"}
+!["リンクとクォート;ドロップダウンをレポートへのリンクと共有します。]({% image_buster /assets/img/report_builder_2/share_this_report.png %}){: style="max-width:70%;"}
 
 - **メールを送信またはスケジュールする:**1 時間後に期限切れになるダウン読み込むリンクを含むメールをすぐに、または指定した時刻に送信します。** メール 受信者 s** ドロップダウンにリストされているダッシュボード ユーザーs から受信者s を選択するか、他のメール アドレスを入力できます。
 
-\!["メール&quot をスケジュールします。ウィンドウにフィールドs を表示して、レポートのフォーマット方法、受信者、送信時期を選択します。]({% image_buster /assets/img/report_builder_2/schedule_an_email.png %}){: style="max-width:70%;"}
+!["メール&quot をスケジュールします。ウィンドウにフィールドs を付けて、レポートのフォーマット方法、受信者、送信時期を選択します。]({% image_buster /assets/img/report_builder_2/schedule_an_email.png %}){: style="max-width:70%;"}
 
 - **下読み込むCSV:**レポートのCSV を読み込むします。
 
@@ -132,6 +132,6 @@ page_order: 6.2
 
 1. レポート表の上部にある点線のアイコンを選択する。
 2. [**ダッシュボードに追加**] を選択します。
-3. 新しいダッシュボードを作成するか、既存のダッシュボードに追加するかを選択する。<br><br>\![レポートを新規または既存のダッシュボードに追加するかどうかを選択するウィンドウ。]({% image_buster /assets/img/report_builder_2/add_to_dashboard.png %}){: style="width:90%;"}<br><br>
+3. 新しいダッシュボードを作成するか、既存のダッシュボードに追加するかを選択する。<br><br>![レポートを新規または既存のダッシュボードに追加するかどうかを選択するためのオプションを含むウィンドウ。]({% image_buster /assets/img/report_builder_2/add_to_dashboard.png %}){: style="width:90%;"}<br><br>
 4. [ダッシュボードビルダー]({{site.baseurl}}/user_guide/analytics/reporting/dashboard_builder/)のステップに従って、ダッシュボード作成の詳細を学びます。
 

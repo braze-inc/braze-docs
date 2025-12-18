@@ -14,27 +14,33 @@ description: "Dieser Referenzartikel behandelt Tags im Braze-Dashboard, mit dene
 
 Sie können bei der Erstellung oder Bearbeitung einer Kampagne, eines Canvas oder eines Segments Tags hinzufügen. Klicken Sie auf <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-tag" ></span>**Tags** unter dem Namen des Engagements und wählen Sie ein vorhandenes Tag aus, oder beginnen Sie mit der Eingabe, um ein neues Tag hinzuzufügen.
 
-![Hinzufügen von Tags bei der Kampagnenerstellung][2]
-
-Sie können auch Tags zu mehreren Kampagnen, Canvases oder Segmenten hinzufügen, indem Sie mehrere Engagements auswählen und auf <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-tag" ></span>**Tag As** klicken.
-
-![Hinzufügen von Tags zu mehreren Kampagnen zur gleichen Zeit][5]
-
-Die für eine Kampagne, ein Canvas oder ein Segment festgelegten Tags sind auf der Detailseite neben dem Namen des Engagements sichtbar.
-
-![Tags, die auf der Seite Kampagnendetails angezeigt werden][3]
-
-Sie sind auch in der Liste der Kampagnen, Canvases oder Segmente sichtbar, zusammen mit zusätzlichen Tags für Statuskennzeichnungen wie **Archiviert** und **Entwurf**.
-
-![Tags auf der Liste der Kampagnen][4]{: style ="max-width:70%;" }
-
-Um nach einem Tag zu filtern, wählen Sie den Tagnamen aus der Liste der Tags aus oder suchen Sie den Tag im Suchbereich mit dem Selektor `tag:`. Um zum Beispiel nach dem Tag `Onboarding` zu suchen, geben Sie "tag:Onboarding" ein.
-
-![Suche nach allen Kampagnen, die als Willkommens-E-Mail getaggt sind][6]
+\![Hinzufügen von Tags bei der Erstellung von Kampagnen.]({% image_buster /assets/img_archive/tags_add_tag.png %}){: style="max-width:60%;" }
 
 {% alert important %}
 Sie können bis zu 175 Tags zu einer Kampagne, einem Canvas oder einem Segment hinzufügen.
 {% endalert %}
+
+### Bulk-Tagging
+
+Sie können auch Tags zu mehreren Kampagnen, Canvase oder Segmenten hinzufügen, indem Sie mehrere Engagements auswählen und <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-tag" ></span>**Tag As** wählen.
+
+\![Hinzufügen von Tags zu mehreren Kampagnen zur gleichen Zeit.]({% image_buster /assets/img_archive/tags_apply_multiple.gif %})
+
+{% alert important %}
+Wenn Sie die Massenverschlagwortung verwenden, um ein neues Tag auf mehrere Kampagnen anzuwenden, die bereits unterschiedliche Tags haben, erhält jede ausgewählte Kampagne das neue Tag, und alle Tags, die in einer Kampagne vorhanden sind, werden auf alle anderen ausgewählten Kampagnen angewendet, auch wenn diese Tags ursprünglich nicht mit ihnen verbunden waren.
+{% endalert %}
+
+### Anzeigen von Tags
+
+Die für eine Kampagne, ein Canvas oder ein Segment gesetzten Tags sind auf der Detailseite neben dem Namen des Engagements sichtbar. Sie erscheinen auch in den Analytics der Kampagnen.
+
+\![Tags, die auf der Seite Campaign Analytics angezeigt werden.]({% image_buster /assets/img_archive/tag_details_page.png %}){: style="max-width:60%;" }
+
+### Nach Tags filtern
+
+Tags sind in der Liste der Kampagnen, Canvase oder Segmente sichtbar, zusammen mit zusätzlichen Tags für Statuskennzeichnungen wie **Archiviert** und **Entwurf**. Um nach einem Tag zu filtern, wählen Sie den Namen des Tags aus der Liste der Tags aus.
+
+\![Tags auf der Liste der Kampagnen.]({% image_buster /assets/img_archive/tags_grid.png %})
 
 ## Angepasste Daten Tags
 
@@ -43,6 +49,18 @@ Bei der Verwaltung von benutzerdefinierten [Attributen]({{site.baseurl}}/user_gu
 {% alert important %}
 Dieses Feature befindet sich derzeit in der Early Access-Phase. Wenden Sie sich an Ihren Customer Success Manager, wenn Sie an einem Vorabzugang interessiert sind.
 {% endalert %}
+
+## Tags verwalten
+
+Sie können dieselben Tags für Kampagnen, Canvases und Segmente verwenden. Um Tags in Ihrem Dashboard effizient umzubenennen, zu entfernen oder hinzuzufügen, gehen Sie zu **Einstellungen** > **Tag Management**.
+
+\![Tab Tags auf der Seite Einstellungen verwalten.]({% image_buster /assets/img_archive/tags_view.png %})
+
+Um Ihre Tags noch besser zu organisieren, verschachteln Sie Ihre Tags unter einem übergeordneten Tag. Sie können z.B. alle Feiertags-Tags unter einem übergeordneten Tag `Holidays` oder alle Tags, die sich auf eine Phase Ihres Marketing-Trichters beziehen, unter einem übergeordneten Tag `Funnel` unterbringen. 
+
+Erstellen Sie dazu ein neues Tag, wählen Sie **Tag verschachteln unter** und wählen Sie aus, unter welchem bestehenden Tag Sie Ihr neues Tag verschachteln möchten. Sie können bestehende Tags auch auf der Seite **Tag Management** verschachteln. Bewegen Sie auf dieser Seite den Mauszeiger über eine Zeile mit Ihrem Tag und klicken Sie auf **<i class="fas fa-pencil-alt"></i>Bearbeiten**. Befolgen Sie dann die gleichen Schritte wie zuvor.
+
+\![Erstellen Sie einen verschachtelten Tag.]({% image_buster /assets/img_archive/tag_nested.png %}){: style="max-width:70%;" }
 
 ## Bewährte Praktiken {#tags-best-practices}
 
@@ -80,19 +98,12 @@ table td {
 </tbody>
 </table>
 
-Sie können dieselben Tags für Kampagnen, Canvases und Segmente verwenden. Um Tags in Ihrem Dashboard effizient umzubenennen, zu entfernen oder hinzuzufügen, gehen Sie zu **Einstellungen** > **Tag Management**.
-
-![Tab Tags auf der Seite Einstellungen verwalten][8]
-
-Um Ihre Tags noch besser zu organisieren, verschachteln Sie Ihre Tags unter einem übergeordneten Tag. Sie können z.B. alle Feiertags-Tags unter einem übergeordneten Tag `Holidays` oder alle Tags, die sich auf eine Phase Ihres Marketing-Trichters beziehen, unter einem übergeordneten Tag `Funnel` unterbringen. 
-
-Erstellen Sie dazu ein neues Tag, wählen Sie **Tag verschachteln unter** und wählen Sie aus, unter welchem bestehenden Tag Sie Ihr neues Tag verschachteln möchten. Sie können bestehende Tags auch auf der Seite **Tag Management** verschachteln. Bewegen Sie auf dieser Seite den Mauszeiger über eine Zeile mit Ihrem Tag und klicken Sie auf **<i class="fas fa-pencil-alt"></i>Bearbeiten**. Befolgen Sie dann die gleichen Schritte wie zuvor.
-
-![Einen verschachtelten Tag erstellen][1]{: style ="max-width:70%;" }
-
 ## Anwendungsfälle
 
-Suchen Sie nach Inspirationen, wie Sie Tags nutzen können, um Ihren Messaging-Lebenszyklus zu verwalten? Hier sind einige häufige Anwendungsfälle:
+Suchen Sie nach Inspirationen, wie Sie Tags nutzen können, um Ihren Messaging-Lebenszyklus zu verwalten? Hier sind einige gängige Anwendungsfälle.
+
+{% tabs %}
+{% tab Throttling %}
 
 ### Drosselung
 
@@ -102,17 +113,12 @@ Begrenzen Sie, wie oft Ihre Kunden Kampagnen eines bestimmten Typs erhalten. Sie
 <br>`OR`<br>
 `Has not received campaign` mit Tag `Promo`
 
+{% endtab %}
+{% tab Reporting %}
+
 ### Berichterstattung
 
 Richten Sie einen Engagement-Bericht ein, um das Volumen aller Kampagnen mit einem bestimmten Tag im Auge zu behalten. Wenn Sie beispielsweise alle Ihre Push-Kampagnen überwachen möchten, können Sie diesen Kampagnen ein Tag wie `Push Reporting` hinzufügen und dann einen [Engagement-Bericht]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#automatically-select-campaigns-or-canvases) einrichten, der Ihnen jeden Tag einen Bericht über diese getaggten Kampagnen sendet.
 
-
-
-[1]: {% image_buster /assets/img_archive/tag_nested.png %}
-[2]: {% image_buster /assets/img_archive/tags_add_tag.png %}
-[3]: {% image_buster /assets/img_archive/tag_details_page.png %}
-[4]: {% image_buster /assets/img_archive/tags_grid.png %}
-[5]: {% image_buster /assets/img_archive/tags_apply_multiple.png %}
-[6]: {% image_buster /assets/img_archive/tags_filtering.png %}
-[7]: {% image_buster /assets/img_archive/Tags-Potential_Tags.png %}
-[8]: {% image_buster /assets/img_archive/tags_view.png %}
+{% endtab %}
+{% endtabs %}

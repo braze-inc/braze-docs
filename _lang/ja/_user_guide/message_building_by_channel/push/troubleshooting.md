@@ -9,7 +9,7 @@ channel: push
 
 # トラブルシューティング
 
-> このページは、Pushメッセージングチャネルで発生する可能性のあるさまざまな問題のトラブルシューティングに役立つ。
+> このページを使用して、プッシュメッセージング チャネルの問題のトラブルシューティングを行います。
 
 ## プッシュ通知を受信しない
 
@@ -28,7 +28,7 @@ channel: push
 
 プッシュ通知は、登録済みユーザーまたはオプトインしたユーザーにのみ送信できます。**ユーザー**プロファイル[]セクションの[エンゲージメント]]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/#engagement-tab)タブでユーザープロファイルを確認し、テスト対象のワークスペースでアクティブにプッシュ登録されているかどうかを確認する。複数のアプリに登録している場合は、「**Push Registered For**」フィールドにリストアップされる：
 
-\![登録を押してください]({% image_buster /assets/img_archive/trouble1.png %})
+![登録済みのプッシュ通知]({% image_buster /assets/img_archive/trouble1.png %})
 
 Brazeエクスポートエンドポイントを使用してユーザープロファイルをエクスポートすることもできる：
 - [識別子別のユーザー]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier)
@@ -40,11 +40,11 @@ Brazeエクスポートエンドポイントを使用してユーザープロフ
 
 テストではなく本番のキャンペーンの場合）ターゲットにしているセグメントに該当することを確認する。**ユーザープロフィールでは**、ユーザーが現在属しているセグメントのリストが表示される。セグメンテーションはリアルタイムで更新されるため、これは常に変化する変数であることに注意してください。
 
-\![セグメント一覧]]({% image_buster /assets/img_archive/trouble2.png %})
+![セグメント一覧]({% image_buster /assets/img_archive/trouble2.png %})
 
 また、セグメンテーションを作成する際に、**User Lookupを**使用することで、ユーザーがセグメンテーションの一部であることを確認することができる。
 
-\![検索フィールドを持つユーザ検索部。]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:80%;"}
+![検索フィールドを備えたユーザー検索セクション。]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:80%;"}
 
 #### プッシュ通知上限
 
@@ -52,7 +52,7 @@ Brazeエクスポートエンドポイントを使用してユーザープロフ
 
 このためには、ダッシュボードで[グローバルフリークエンシーキャップ]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#freq-cap-feat-over)を確認します。キャンペーンがフリークエンシー・キャッピング・ルールに従うように設定されている場合、これらの設定によって影響を受けるユーザーが多数存在する。
 
-\![キャンペーン内容]]({% image_buster /assets/img_archive/trouble3.png %})
+![キャンペーン詳細]({% image_buster /assets/img_archive/trouble3.png %})
 
 #### レート制限
 
@@ -86,7 +86,7 @@ Brazeエクスポートエンドポイントを使用してユーザープロフ
 
 キャンペーンまたはキャンバスのステップで、[**モバイルアプリ内で Web URL を開く**] が選択されていないことを再確認します。選択されている場合は、その選択をクリアして再起動します。 
 
-\!["On-click behavior"プッシュセットを&quot に設定するフィールド;Web URL&quot を開く;&quot を使用する;モバイルアプリ&quot 内のWeb URL を開く;チェックなし。]({% image_buster /assets/img/push_on_click.png %})
+![" On-click behavior" プッシュセットを&quot に設定するフィールド; Web URL&quot を開く; " Web URL をモバイルアプリ&quot 内で開く; チェックなし。]({% image_buster /assets/img/push_on_click.png %})
 
 クリック時の動作 [Web URL を開く] のデフォルトのインタラクションは、SDK のバージョンによって異なります。SDKバージョンiOS 2.29.0およびAndroid 2.0.0以降では、このオプションはデフォルトで選択されており、Web URLはアプリ内のWebビューで開封される。これらのバージョン以前では、このオプションはデフォルトでクリアされ、Web URL はデバイスのデフォルトの Web ブラウザで開かれます。
 

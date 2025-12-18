@@ -30,7 +30,7 @@ WhatsApp メッセージを作成する前に、[WhatsApp の概要]({{site.base
 WhatsAppは言語ごとに異なる[メッセージテンプレートを](#template-messages)作成する。ユーザーに適切なテンプレートを提供するために、セグメンテーションを使って言語ごとにキャンペーンを作成するか、キャンバスを使う。
 {% endalert %}
 
-メッセージは、キャンペーンとキャンバスのどちらを使用して配信すべきでしょうか。キャンペーンは単一のシンプルなメッセージングキャンペーンに適していますが、キャンバスはマルチステップのユーザーのジャーニーに適しています。
+メッセージは、キャンペーンとキャンバスのどちらを使用して配信すべきでしょうか。キャンペーン s は単一のターゲットメッセージング キャンペーンに適していますが、キャンバスは複数ステップ ユーザーのジャーニーに適しています。
 
 {% tabs %}
 {% tab Campaign %}
@@ -71,7 +71,7 @@ WhatsAppは言語ごとに異なる[メッセージテンプレートを](#templ
 
 ユースケースに応じて WhatsApp [テンプレートメッセージ](#template-messages)を作成するか、応答メッセージを作成します。ビジネス主導の会話は承認されたテンプレートから始めなければならないが、応答メッセージは24時間以内のユーザーからのインバウンドメッセージへの応答で使用できる。
 
-\![メッセージバリアントセクション]では、サブスクリプショングループと2つのメッセージタイプのいずれかを選択できます。WhatsApp テンプレートメッセージとレスポンスメッセージ。]({% image_buster /assets/img/whatsapp/whatsapp_message_variants.png %}){: style="max-width:80%;"}
+![「メッセージバリアント」セクションでは、サブスクリプショングループを 1 つと、2 つのメッセージタイプのいずれかを選択できます。WhatsApp テンプレートメッセージとレスポンスメッセージ。]({% image_buster /assets/img/whatsapp/whatsapp_message_variants.png %}){: style="max-width:80%;"}
 
 {% tabs %}
 {% tab Template messages %}
@@ -85,7 +85,7 @@ WhatsAppは言語ごとに異なる[メッセージテンプレートを](#templ
 
 各テンプレートには言語が割り当てられているため、ユーザーマッチングを正しく設定するには、言語ごとにキャンペーンまたはキャンバスのステップを作成する必要がある。例えば、インドネシア語と英語が割り当てられたテンプレートを使用するキャンバスを作成する場合、インドネシア語テンプレート用のキャンバスステップと英語テンプレート用のキャンバスステップを作成する必要があります。
 
-\![メッセージのプレビュー、割り当てられた言語、およびそれらのアプリを含むテンプレート s の一覧がステータス をローブしました。]({% image_buster /assets/img/whatsapp/whatsapp_templates.png %}){: style="max-width:80%;"}
+![メッセージのプレビュー、割り当てられた言語、承認されたステータスを含むテンプレートのリスト。]({% image_buster /assets/img/whatsapp/whatsapp_templates.png %}){: style="max-width:80%;"}
 
 右から左に書かれた言語でコピーを追加する場合、右から左に書かれたメッセージの最終的な見た目は、サービスプロバイダーがどのようにそれらをレンダリングするかに大きく左右されることに注意してください。右から左へのメッセージを可能な限り正確に表示するためのベストプラクティスについては、[右から左へのメッセージを作成する]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/)を参照してください。
 
@@ -101,7 +101,7 @@ Liquidを使用する場合は、受信者のユーザープロファイルが�
 {% endraw %}
 {% endalert %}
 
-\![属性"first_name" およびデフォルト値"you" を使用したカスタマイズの追加ツール。]({% image_buster /assets/img/whatsapp/whatsapp7.png %}){: style="max-width:80%;"}
+![属性"first_name" およびデフォルト値"you" を使用したカスタマイズの追加ツール。]({% image_buster /assets/img/whatsapp/whatsapp7.png %}){: style="max-width:80%;"}
 
 ### ダイナミック・リンク 
 
@@ -119,7 +119,7 @@ Liquidを使用する場合は、受信者のユーザープロファイルが�
 - Call-to-actionボタン
 - リストメッセージ
 
-\![新しいユーザーを歓迎する返信メールの返信メッセージ作成画面に割引コードが付いています。]({% image_buster /assets/img/whatsapp/whatsapp_response_messages.png %}){: style="max-width:80%;"}
+![新規ユーザーを割引コードで歓迎する返信メッセージの作成者。]({% image_buster /assets/img/whatsapp/whatsapp_response_messages.png %}){: style="max-width:80%;"}
 
 {% endtab %}
 {% endtabs %}
@@ -128,13 +128,13 @@ Liquidを使用する場合は、受信者のユーザープロファイルが�
 
 Brazeでは、メッセージを送信する前にプレビューしてテストすることを常に推奨している。[**テスト**] タブに切り替えて、[コンテンツテストグループ]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups)または個々のユーザーにテスト用の WhatsApp メッセージを送信するか、ユーザーとしてメッセージを Braze で直接プレビューします。
 
-\![Max という名前のカスタムユーザーのプレビュー表示。]({% image_buster /assets/img/whatsapp/whatsapp8.png %}){: style="max-width:80%;"}
+![「最大」という名前のカスタムユーザーのプレビュー表示。]({% image_buster /assets/img/whatsapp/whatsapp8.png %}){: style="max-width:80%;"}
 
 {% alert note %}
 テストメッセージを含む応答メッセージを送信するには、会話ウィンドウが必要です。会話ウィンドウを開くには、このメッセージに使用する購読グループに関連付けられている電話番号にWhatsAppメッセージを送信する。関連する電話番号は、**Test**タブのアラートに表示される。
 {% endalert %}
 
-\!["確認するには、まずWhatsAppメッセージを+1 217-582-9414に送信して対話ウィンドウを開封します。その後、テストユーザーに応答メッセージを送信します。」]({% image_buster /assets/img/whatsapp/whatsapp_test_phone_number.png %}){: style="max-width:70%;"}
+![テストするには、まずWhatsAppメッセージを+1 217-582-9414に送信し、会話ウィンドウを開封してください」というアラートが表示される。その後、テストユーザーに応答メッセージを送信します。」]({% image_buster /assets/img/whatsapp/whatsapp_test_phone_number.png %}){: style="max-width:70%;"}
 
 ### ステップ 4: キャンペーンまたはキャンバスの残りの部分を作成する
 
@@ -197,6 +197,10 @@ Braze を介して送信するアウトバウンド WhatsApp メッセージで�
 | 動画 | 動画を本文の中に埋め込むことができます。これらのファイルは URL または [Braze メディアライブラリ]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library)でホストされていなければなりません。 | < 16 MB | `.3gp`, `.mp4` |
 | オーディオ | 音声はレスポンシブ・メッセージングでのみサポートされる。ファイルは URL でホストされている必要があります。 | < 16 MB | `.aac``.amr`,`.mp3`,`.mp4` 、 `.ogg` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
+
+{% alert important %}
+メタには既知の問題があり、MP4 動画がAndroid機器で再生されるのを防ぐことができます。これは、エンコードやコンテナーの設定によって異なります。恒久的な修正が使用できるようになるまで、MP4 ファイルを再フォーマットするとほとんどの送信者の問題が解決されます。Android機器のすべての動画を検査し、適切な納品性を確認します。<br><br>MP4 ファイルは、[CloudConvert](https://cloudconvert.com/mp4-converter) などのウェブツールを使用してMP4 で再フォーマットできます。MP4 ファイルをツールに読み込むし、再度MP4 に変換してから、変換したファイルをダウン読み込むします。
+{% endalert %}
 
 ### インバウンドメッセージ
 

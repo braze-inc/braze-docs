@@ -4,7 +4,7 @@ article_title: クリエイティブの詳細
 page_order: 3.5
 layout: dev_guide
 guide_top_header: "クリエイティブの詳細"
-guide_top_text: "アプリ内メッセージで創造力を発揮する前に、いくつかのガイドラインを知っておく必要があります。すべてのアプリ内メッセージテンプレートは、最新のデバイスでさまざまな長さのテキストや画像サイズを表示できるように設計されている。すべての携帯電話、タブレット、コンピューターでメッセージがうまく表示されるようにするため、以下のガイドラインに従い、起動前に必ず<a href='/docs/user_guide/message_building_by_channel/in-app_messages/testing/'>メッセージをテストする</a>ことをお勧めする。"
+guide_top_text: "アプリ内メッセージで創造力を発揮する前に、いくつかのガイドラインを知っておく必要があります。すべてのアプリ内メッセージテンプレートは、最新のデバイスでさまざまな長さのテキストや画像サイズを表示できるように設計されている。すべての携帯電話、タブレット、コンピューターでメッセージがうまく表示されるようにするため、以下のガイドラインに従い、起動前に必ず<a href='/docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/'>メッセージをテストする</a>ことをお勧めする。"
 description: "このランディングハブでは、モーダル、スライドアップ、フルスクリーンの3種類のアプリ内メッセージのデザインとコンテンツの要件をカバーしている。"
 
 channel:
@@ -50,7 +50,7 @@ guide_featured_list:
 
 {% tabs %}{% tab Fullscreen %}
 
-\![フルスクリーンアプリ内メッセージでアプリスクリーンを引き継ぎます。フルスクリーンメッセージには、大きな"画像、ヘッダー、メッセージ本文、および2つのボタンが含まれます。]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
+![アプリ内メッセージがフルスクリーンでアプリの画面を占領する。フルスクリーンメッセージには、大きな"画像、ヘッダー、メッセージ本文、および2つのボタンが含まれます。]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
 
 | レイアウト | アセットのサイズ | メモ |
 |--- | --- | --- |
@@ -64,7 +64,7 @@ guide_featured_list:
 {% endtab %}
 {% tab Modal %}
 
-\![アプリの中央にモーダルアプリ内メッセージ アプリが鳴り、対話形式でWeb サイトします。モーダルには、"画像、ヘッダー、メッセージ本文、および2つのボタンが含まれています。]({% image_buster /assets/img/modal-behavior.gif %}){: style="border:0px;"}
+![アプリやウェブサイトの中央にダイアログとして表示される、モーダルなアプリ内メッセージ。モーダルには、"画像、ヘッダー、メッセージ本文、および2つのボタンが含まれています。]({% image_buster /assets/img/modal-behavior.gif %}){: style="border:0px;"}
 
 | レイアウト | アセットのサイズ | メモ |
 |--- | --- | ------ |
@@ -77,7 +77,7 @@ guide_featured_list:
 {% endtab %}
 {% tab Slideup %}
 
-\![スライドアップアプリ内メッセージ アプリはアプリスクリーンの底面から出ています。スライドアップには、アイコン"画像と短いメッセージが表示されます。]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
+![アプリ画面下部から表示されるアプリ内メッセージのスライドアップ。スライドアップには、アイコン"画像と短いメッセージが表示されます。]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
 
 | レイアウト | アセットのサイズ | メモ |
 |--- | --- | --- |

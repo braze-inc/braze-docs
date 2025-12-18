@@ -13,8 +13,7 @@ platform:
   - React Native
   - Roku
   - Unity
-  - Unreal Engine
-  - Xamarin
+  - .NET MAUI
 ---
 
 # Analytics

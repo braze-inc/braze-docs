@@ -1,5 +1,5 @@
 ---
-nav_title: Erstellen von Kampagnen
+nav_title: Kampagnen bauen
 article_title: Erstellen von Kampagnen
 layout: dev_guide
 guide_top_header: "Erstellen von Kampagnen"
@@ -15,7 +15,7 @@ guide_featured_list:
   - name: Eine Kampagne erstellen
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/creating_campaign/
     image: /assets/img/braze_icons/list.svg
-  - name: Planen Ihrer Kampagne
+  - name: Ihre Kampagne planen
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/
     image: /assets/img/braze_icons/line-chart-up-01.svg
   - name: Rate-Limiting und Frequency-Capping
@@ -25,7 +25,7 @@ guide_featured_list:
 guide_menu_title: "Additional resources"
 guide_menu_list:
   - name: KI-Copywriting-Assistent
-    link: /docs/user_guide/brazeai/generative_ai/ai_copywriting/
+    link: /docs/user_guide/brazeai/generative_ai/copywriting/
     image: /assets/img/braze_icons/edit-05.svg
   - name: Genehmigungs-Workflow
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/approvals/

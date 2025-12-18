@@ -61,7 +61,7 @@ tool:
 
 コンバージョンの詳細の表には、常に*受信者*列と*コンバージョン*列 (比率と合計) が1列ずつ表示されます。表示される残りの 2 列は、レポートの設定時に選択したオプションによって異なります。 
 
-\![コンバージョン詳細表では、3列目と4列目のアトリビューションはタッチとなっている。]({% image_buster /assets/img_archive/conversions2_details.png %}){: style="border:none"}
+![コンバージョン詳細表では、3列目と4列目のアトリビューション方法としてタッチを使用している。]({% image_buster /assets/img_archive/conversions2_details.png %}){: style="border:none"}
 
 次の表で、表示される指標について説明します。
 
@@ -87,7 +87,7 @@ tool:
 このグラフには、一度に 1 チャネルのデータのみが表示されます。グラフの [**チャネル**] ドロップダウンを使用して、そのチャネルを選択します。
 {% endalert %}
 
-\![2つのメールキャンペーンで、メール配信、メール開封、メールクリック、コンバージョンが同様の結果を示している。]({% image_buster /assets/img_archive/conversions2_funnel.png %})
+![2つのメールキャンペーンのコンバージョンファネルバーグラフは、メール配信、メール開封、メールクリック、コンバージョンにおいて同様の結果を示している。]({% image_buster /assets/img_archive/conversions2_funnel.png %})
 
 ### 経時的なコンバージョン
 
@@ -95,7 +95,7 @@ tool:
 
 時系列データをダウンロードするには、<i class="fas fa-bars"></i> を選択し、ダウンロードオプションを選択する。使用できるオプションは PNG、JPEG、PDF、SVG、または CSV です。
 
-\![2つのメールキャンペーンにおけるコンバージョンの時系列グラフ。]({% image_buster /assets/img_archive/conversions2_over_time.png %})
+![2つのメールキャンペーンにおけるコンバージョンの時系列グラフ。]({% image_buster /assets/img_archive/conversions2_over_time.png %})
 
 ### アトリビューション方法
 
@@ -115,3 +115,21 @@ tool:
 | --- | --- |
 | タッチ | メッセージとの物理的な相互作用またはタッチポイント。<br><br>タッチには次のものが含まれます。<br>{::nomarkdown}<ul><li>メールのクリック</li><li>プッシュオープン</li><li>コンテンツカードのクリック</li><li>アプリ内メッセージのクリック</li><li>SMSクリック</li></ul>{:/} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+## トラブルシューティング
+
+### キャンペーンやキャンバスのコンバージョンが低いのはなぜか？
+
+以前のキャンペーンや期待と比較すると、コンバージョンが期待したほど高くならない可能性があります。コンバージョンは扱いにくい数値ですが、イベントトラッキングとコンバージョン期限という、Braze のプラットフォームにおけるいくつかのシンプルな機能に依存しています。
+
+その原因を解決するには、イベントトラッキングとコンバージョン期限をチェックすることをお勧めする。
+
+#### イベントトラッキング
+
+キャンペーンがセッション開始またはカスタムイベントをトリガーするとき、このイベントまたはセッションがメッセージをトリガーするのに十分な頻度で発生していることを確認したい。[ホームダッシュボードで]({{site.baseurl}}/user_guide/analytics/dashboard/home_dashboard/)セッションデータ、または[カスタムイベントレポートを]({{site.baseurl}}/user_guide/analytics/reporting/configuring_reporting/)確認する。
+
+#### コンバージョンの期限
+
+キャンペーンごとに選択したコンバージョンイベントごとに、[期限]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/#creating-a-campaign-with-conversion-tracking)設定します。つまり、コンバージョンが各キャンペーンでカウントされるための発生時間の制限を設定します。
+
+キャンペーンの指標を理解するために、[コンバージョントラッキングルールに関する]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/#conversion-tracking-rules)情報を確認しておくこと。キャンバスのユーザーコンバージョンについては、[キャンバスに関する FAQ]({{site.baseurl}}/user_guide/engagement_tools/canvas/faqs/#how-are-user-conversions-tracked-in-a-canvas) を参照してください。 

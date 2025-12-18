@@ -22,8 +22,8 @@ The following table describes how users can use each editor block type.
 |Spacer| Adds space, or "padding", between other blocks. |
 |Image| Inserts an image from the [media library]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/). | 
 |Video| Creates a link to the video content. |
-|Social| Inserts social media platform icon. Custom images can be uploaded for brand specific icons. |
-|Icons| Inserts an icon. Custom images can be uploaded. An oversized placeholder icon will be used until an image is uploaded. |
+|Social| Inserts social media platform icon. You can upload custom images for brand specific icons. |
+|Icons| Inserts an icon. You can upload custom images. Braze uses an oversized placeholder icon until you upload an image. |
 |HTML| Inserts raw HTML. Recommended for [Liquid]({{site.baseurl}}/liquid/), such as Connected Content or conditional statements. | 
 |Menu| Creates a flexible menu for the message you're designing. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" } 

@@ -26,7 +26,7 @@ Any URLs that start with `http://` or `https://` will be shortened. You can have
 
 ## Setting up click tracking
 
-### Text messsages
+### Text messages
 
 To set up click tracking for a text message:
 

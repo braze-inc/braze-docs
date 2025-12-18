@@ -18,19 +18,19 @@ description: "このリファレンスページでは、アプリ内メッセー
 
 ドラッグアンドドロップのアプリ内メッセージを作成する場合は、テンプレートの** welcome discount** を使用したメールサインアップを選択し、**Build message** を選択します。このテンプレートは、モバイルアプリとWebブラウザの両方でサポートされています。
 
-\![アプリ内メッセージエディターと割引付きメール登録フォームのテンプレート。]({% image_buster /assets/img/drag_and_drop/templates/email_capture_discount.png %})
+![割引によるメールサインアップフォームのテンプレートを持つアプリ内メッセージエディタ。]({% image_buster /assets/img/drag_and_drop/templates/email_capture_discount.png %})
 
-### ステップ 2: メッセージスタイルを設定する
+### ステップ 2:メッセージスタイルを設定する
 
 {% multi_lang_include drag_and_drop/templates.md section='message style' %}
 
-### ステップ 3: メール登録コンポーネントのカスタマイズ
+### ステップ 3:メール登録コンポーネントのカスタマイズ
 
 メールサインアップフォームの作成を開始するには、エディタでメールキャプチャ要素を選択します。デフォルトでは、収集されたメールアドレスはグローバルサブスクリプショングループ**Subscribed**を持ちます。特定のサブスクリプショングループにユーザーをオプトインするには、[メールサブスクリプションの状態を更新する]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions#updating-email-subscription-states)を参照してください。
 
 メールキャプチャ要素のプレースホルダーテキストとラベルテキストをカスタマイズできます。
 
-\![アプリ内メッセージエディターは、メールキャプチャエレメントをカスタマイズするためのサイドメニューを備えている。]({% image_buster /assets/img/drag_and_drop/templates/email_capture_field.png %})
+![メールキャプチャ要素をカスタマイズするためのサイドメニュー付きのアプリ内メッセージエディタ。]({% image_buster /assets/img/drag_and_drop/templates/email_capture_field.png %})
 
 #### メール検証
 

@@ -1,5 +1,5 @@
 ---
-nav_title: 送り
+nav_title: フィード
 article_title: コンテンツカードのフィードのカスタマイズ
 page_order: 3
 description: "この記事では、コンテンツカードフィードのカスタマイズオプションについて説明します。"
@@ -16,20 +16,42 @@ platform:
 
 > コンテンツカードフィードは、モバイルまたは Web アプリケーションの一連のコンテンツカードです。この記事では、フィードの更新時の設定、カードの順序、複数フィードの管理、「空のフィード」エラーメッセージについて説明します。コンテンツカードタイプの完全なリストについては、[コンテンツカードについて]({{site.baseurl}}/developer_guide/content_cards/)を参照してください。 
 
+{% multi_lang_include developer_guide/_shared/about_session_lifecycle.md %}
+
 ## フィードの更新
 
-デフォルトでは、コンテンツカードフィードは次の場合に自動的に更新されます。 
-1. 新しいセッションが開始される場合
-2. フィードが開かれ、最後のリフレッシュから60 秒以上経過したとき。これは、デフォルトのコンテンツカードフィードにのみ適用され、フィードを開くたびに1 回のみ発生します。
+### 自動リフレッシュ
 
-SDK は、特定の時間に手動で更新するように設定することもできます。
+デフォルトでは、次の場合にコンテンツカードフィードが自動的に更新されます。
+
+- 新しいセッションが開始される場合
+- フィードが開かれ、最後の更新から 60 秒以上経過した。(これはデフォルトのコンテンツカードフィードにのみ適用され、フィードを開くごとに1 回実行されます。)
 
 {% alert tip %}
 手動で更新せずに最新のコンテンツカードを動的に表示するには、カード作成時に **[最初のインプレッション発生時]** を選択します。これらのカードは、使用可能になると更新されます。
 {% endalert %}
 
-{% tabs local %}
-{% tab Android %}
+### 手動更新
+
+特定の時間にフィードを手動で更新するには:
+
+{% tabs %}
+{% tab web %}
+
+Web SDK から[`requestContentCardsRefresh()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestcontentcardsrefresh)を呼び出して、いつでも手動で Braze コンテンツカードのリフレッシュを要求します。 
+
+また、[`getCachedContentCards`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#getcachedcontentcards)を呼び出して、最新のコンテンツカード更新から現在利用可能なすべてのカードを取得することもできます。 
+
+```javascript
+import * as braze from "@braze/web-sdk";
+
+function refresh() {
+  braze.requestContentCardsRefresh();    
+}
+```
+
+{% endtab %}
+{% tab android %}
 
 Android SDK から[`requestContentCardsRefresh`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/request-content-cards-refresh.html)を呼び出すことで、いつでも手動で Braze コンテンツカードの更新を要求します。 
 
@@ -50,7 +72,7 @@ Braze.getInstance(context).requestContentCardsRefresh()
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab iOS %}
+{% tab swift %}
 
 [`Braze.ContentCards`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcards-swift.class)クラスで[`requestRefresh`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcards-swift.class/requestrefresh(_:))メソッドを呼び出すことで、いつでも Swift SDK から Braze コンテンツカードの手動更新を要求します。
 
@@ -59,7 +81,7 @@ Braze.getInstance(context).requestContentCardsRefresh()
 
 Swift では、オプションの補完ハンドラまたはネイティブの Swift concurrency API を使用した非同期リターンを使用して、コンテンツカードを更新できます。
 
-### 完了ハンドラ
+#### 完了ハンドラ
 
 ```swift
 AppDelegate.braze?.contentCards.requestRefresh { result in
@@ -67,7 +89,7 @@ AppDelegate.braze?.contentCards.requestRefresh { result in
 }
 ```
 
-### 非同期/待機
+#### 非同期/待機
 
 ```swift
 let contentCards = await AppDelegate.braze?.contentCards.requestRefresh()
@@ -84,26 +106,18 @@ let contentCards = await AppDelegate.braze?.contentCards.requestRefresh()
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Web %}
-
-Web SDK から[`requestContentCardsRefresh()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestcontentcardsrefresh)を呼び出して、いつでも手動で Braze コンテンツカードのリフレッシュを要求します。 
-
-また、[`getCachedContentCards`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#getcachedcontentcards)を呼び出して、最新のコンテンツカード更新から現在利用可能なすべてのカードを取得することもできます。 
-
-```javascript
-import * as braze from "@braze/web-sdk";
-
-function refresh() {
-  braze.requestContentCardsRefresh();    
-}
-```
-
-{% endtab %}
 {% endtabs %}
 
+### レート制限
+
+Braze はトークンバケットアルゴリズムを使用して、次のレート制限を適用します。
+- デバイスあたり最大 5 つの更新呼び出し、ユーザー間での共有、および `openSession()` への呼び出し
+- 制限に達すると、180 秒(3 分)ごとに新しい通話が可能になります。
+- システムは、いつでも使用できるように最大5 つのコールを保持します
+- `subscribeToContentCards()` はレート制限されていてもキャッシュされたカードを返します
 
 {% alert important %}
-最大5回まで連続して呼び出しを行うことができます。その後は、180秒ごとに1つの新しい呼び出しが可能になります。システムは、いつでも使用できるように最大5つの呼び出しを保持します。
+Braze SDKはまた、パフォーマンスと信頼性のためにレート制限なアプリである。自動テストを実行したり、手動でQA を実行する場合は、このことに注意してください。詳細については、[Braze SDK レート制限 s]({{site.baseurl}}/developer_guide/sdk_integration/rate_limits/)を参照してください。
 {% endalert %}
 
 ## 表示されるカードの順序をカスタマイズする
@@ -111,15 +125,25 @@ function refresh() {
 コンテンツカードの表示順序を変更できます。これにより、時間的制約のあるプロモーションなど、特定のタイプのコンテンツに優先順位を付けることで、ユーザーエクスペリエンスを微調整できます。
 
 {% tabs %}
-{% tab Android View System %}
+{% tab web %}
 
+`showContentCards():`の[`filterFunction`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showcontentcards)パラメーターを使用して、フィードのコンテンツカードの表示順序をカスタマイズします。以下に例を示します。
+
+```javascript
+braze.showContentCards(null, (cards) => {
+  return sortBrazeCards(cards); // Where sortBrazeCards is your sorting function that returns the sorted card array
+});
+```
+
+{% endtab %}
+{% tab android %}
+{% subtabs %}
+{% subtab android view controller %}
 [`ContentCardsFragment`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html)は、[`IContentCardsUpdateHandler`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.handlers/-i-content-cards-update-handler/index.html)に依存して、フィードに表示される前にコンテンツカードのソートまたは変更を処理します。カスタム更新ハンドラは、`ContentCardsFragment`の[`setContentCardUpdateHandler`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/set-content-card-update-handler.html)で設定できます。
 
 以下はデフォルトの`IContentCardsUpdateHandler`であり、カスタマイズの開始点として使用できます。
 
-{% subtabs local %}
-{% subtab Java %}
-
+{% details Show Java example %}
 ```java
 public class DefaultContentCardsUpdateHandler implements IContentCardsUpdateHandler {
 
@@ -185,10 +209,9 @@ public class DefaultContentCardsUpdateHandler implements IContentCardsUpdateHand
   }
 }
 ```
+{% enddetails %}
 
-{% endsubtab %}
-{% subtab Kotlin %}
-
+{% details Show Kotlin example %}
 ```kotlin
 class DefaultContentCardsUpdateHandler : IContentCardsUpdateHandler {
   override fun handleCardUpdate(event: ContentCardsUpdatedEvent): List<Card> {
@@ -246,14 +269,13 @@ class DefaultContentCardsUpdateHandler : IContentCardsUpdateHandler {
   }
 }
 ```
+{% enddetails %}
 
-{% endsubtab %}
-{% endsubtabs %}
-
+{% alert tip %}
 `ContentCardsFragment`ソースは [GitHub](https://github.com/braze-inc/braze-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/contentcards/ContentCardsFragment.kt) にあります。
-
-{% endtab %}
-{% tab Jetpack Compose %}
+{% endalert %}
+{% endsubtab %}
+{% subtab Jetpack Compose %}
 Jetpack Compose でコンテンツカードをフィルタリングおよびソートするには、`cardUpdateHandler`パラメータを設定します。以下に例を示します。
 
 ```kotlin
@@ -282,8 +304,10 @@ ContentCardsList(
     }
 )
 ```
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
-{% tab iOS %}
+{% tab swift %}
 
 {% subtabs %}
 {% subtab Swift %}
@@ -314,27 +338,23 @@ let viewController = BrazeContentCardUI.ViewController(braze: AppDelegate.braze,
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Web %}
-
-`showContentCards():`の[`filterFunction`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showcontentcards)パラメーターを使用して、フィードのコンテンツカードの表示順序をカスタマイズします。以下に例を示します。
-
-```javascript
-braze.showContentCards(null, (cards) => {
-  return sortBrazeCards(cards); // Where sortBrazeCards is your sorting function that returns the sorted card array
-});
-```
-
-{% endtab %}
 {% endtabs %}
 
 ## 「空のフィード」メッセージのカスタマイズ
 
 ユーザーがコンテンツカードに適格でない場合、SDK は次のような「空のフィード」エラーメッセージを表示します。「更新はありません。後で再度確認してください。」この「空のフィード」エラーメッセージは、次のようにカスタマイズできます。
 
-![これはカスタムの空状態メッセージです」と表示される空フィードのエラーメッセージ]({% image_buster/assets/img/content_cards/content-card-customization-empty.png %})
+![「これはカスタムの空状態のメッセージです。」と表示される空のフィードエラーメッセージ]({% image_buster/assets/img/content_cards/content-card-customization-empty.png %})
 
 {% tabs %}
-{% tab Android View System %}
+{% tab web %}
+
+Web SDK では、「空のフィード」の言語をプログラムで置き換えることはできません。フィードが表示されるたびに置き換えることを選択できますが、フィードが更新され、空のフィードテキストがすぐに表示されないため、これはお勧めしません。 
+
+{% endtab %}
+{% tab android %}
+{% subtabs %}
+{% subtab android view system %}
 
 [`ContentCardsFragment`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html)によって、ユーザがコンテンツカードに対応していないと判断された場合は、空のフィードエラーメッセージが表示されます。
 
@@ -355,9 +375,9 @@ braze.showContentCards(null, (cards) => {
 ```
 
 コンテンツカードスタイル要素のカスタマイズの詳細については、[スタイルのカスタマイズ]({{site.baseurl}}/developer_guide/content_cards/customizing_cards/style/)を参照してください。
-{% endtab %}
-{% tab Jetpack Compose %}
-Jetpack Compose で「空のフィード」エラーメッセージをカスタマイズするには、`emptyString`を`ContentCardsList`に渡します。`emptyTextStyle`を`ContentCardListStyling`に渡して、このメッセージをさらにカスタマイズすることもできます。
+{% endsubtab %}
+{% subtab Jetpack Compose %}
+Jetpack Compose で「空のフィード」エラーメッセージをカスタマイズするには、`emptyString` を [`ContentCardsList`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards/-content-cards-list.html) に渡します。また、[`emptyTextStyle`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-list-styling/index.html#1193499348%2FProperties%2F-1725759721)を`ContentCardListStyling`に渡して、このメッセージをさらにカスタマイズすることもできます。
 
 ```kotlin
 ContentCardsList(
@@ -368,7 +388,7 @@ ContentCardsList(
 )
 ```
 
-代わりに表示するコンポーザブルがある場合は、`emptyComposable`を`ContentCardsList`に渡します。`emptyComposable`を指定した場合、`emptyString`は使用されません。
+代わりに表示するコンポーザブルがある場合は、`emptyComposable` を [`ContentCardsList`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards/-content-cards-list.html) に渡します。`emptyComposable`を指定した場合、`emptyString`は使用されません。
 
 ```kotlin
 ContentCardsList(
@@ -380,8 +400,10 @@ ContentCardsList(
     }
 )
 ```
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
-{% tab iOS %}
+{% tab swift %}
 {% subtabs local %}
 {% subtab Swift %}
 
@@ -406,14 +428,9 @@ attributes.emptyStateMessageColor = .secondaryLabel
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Web %}
-
-Web SDK では、「空のフィード」の言語をプログラムで置き換えることはできません。フィードが表示されるたびに置き換えることを選択できますが、フィードが更新され、空のフィードテキストがすぐに表示されないため、これはお勧めしません。 
-
-{% endtab %}
 {% endtabs %}
 
-## 複数のフィード
+## 複数フィードの実装
 
 コンテンツカードは、特定のカードのみが表示されるようにアプリでフィルタリングできます。これにより、さまざまなユースケースで複数のコンテンツカードフィードを使用できます。たとえば、トランザクションフィードとマーケティングフィードの両方を維持できます。これを行うには、Braze ダッシュボードでキーと値のペアを設定して、コンテンツカードのさまざまなカテゴリーを作成します。次に、これらのタイプのコンテンツカードを異なる方法で処理し、一部のタイプをフィルタリングして他のタイプを表示するフィードをアプリまたはサイトに作成します。
 
@@ -428,17 +445,45 @@ Web SDK では、「空のフィード」の言語をプログラムで置き換
 キーと値のペアが割り当てられたら、他のタイプのカードを表示およびフィルタリングするカードを表示するロジックを含むフィードを作成します。この例では、`feed_type: "Transactional"`のキーと値のペアが一致するカードのみを表示します。
 
 {% tabs %}
-{% tab Android View System %}
+{% tab web %}
 
-コンテンツカードのフィルタリングは、[`Card.getExtras()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/extras.html)を介してダッシュボードに設定されたキーと値のペアを読み取り、カスタム更新ハンドラを使用してフィルタリング (または他の必要なロジックを実行) することで実現できます。
+次の例では、`Transactional`タイプカードのコンテンツカードフィードを示します。
 
-詳細に説明すると、コンテンツカードフィードが[`ContentCardsFragment`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html)に表示されます。デフォルトの`IContentCardsUpdateHandler`は、Braze SDK から[`ContentCardsUpdatedEvent`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.events/-content-cards-updated-event/index.html)を受け取り、表示するカードのリストを返しますが、カードの並べ替えのみを行い、それ自体は削除やフィルタリングを実行しません。
+```javascript
 
-`ContentCardsFragment`でフィルタリングできるようにするには、カスタムの[`IContentCardsUpdateHandler`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.handlers/-i-content-cards-update-handler/index.html)を作成します。この`IContentCardsUpdateHandler`を変更して、前に設定した`feed_type`の目的の値と一致しないカードをリストから削除します。以下に例を示します。
+/**
+ * @param {String} feed_type - value of the "feed_type" KVP to filter
+ */
+function showCardsByFeedType(feed_type) {
+  braze.showContentCards(null, function(cards) {
+    return cards.filter((card) => card.extras["feed_type"] === feed_type);
+  });
+}
+```
 
-{% subtabs local %}
-{% subtab Java %}
+次に、カスタムフィードのトグルを設定できます。
 
+```javascript
+// show the "Transactional" feed when this button is clicked
+document.getElementById("show-transactional-feed").onclick = function() {
+  showCardsByFeedType("Transactional"); 
+};
+```
+
+詳細については、[SDK メソッドドキュメント](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showcontentcards)を参照してください。
+
+{% endtab %}
+{% tab android %}
+{% subtabs %}
+{% subtab android view system %}
+
+デフォルトでは、Content Card フィードは [`ContentCardsFragment`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html) および [`IContentCardsUpdateHandler`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.handlers/-i-content-cards-update-handler/index.html) に表示され、Braze SDK から [`ContentCardsUpdatedEvent`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.events/-content-cards-updated-event/index.html) を受け取った後に表示されるカードのリストが返されます。ただし、カードのみをソートし、フィルタリングは直接処理しません。
+
+#### ステップ 2.1:カスタムハンドラの作成
+
+コンテンツカードをフィルタリングするには、ダッシュボードで[`Card.getExtras()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/extras.html) によって設定されたキーと値のペアを使用してカスタム[`IContentCardsUpdateHandler`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.handlers/-i-content-cards-update-handler/index.html) を実装し、以前に設定した`feed_type` の値と一致しないカードをリストから削除するように変更します。
+
+{% details Show Java example %}
 ```java
 private IContentCardsUpdateHandler getUpdateHandlerForFeedType(final String desiredFeedType) {
   return new IContentCardsUpdateHandler() {
@@ -477,10 +522,9 @@ private IContentCardsUpdateHandler getUpdateHandlerForFeedType(final String desi
   };
 }
 ```
+{% enddetails %}
 
-{% endsubtab %}
-{% subtab Kotlin %}
-
+{% details Show Kotlin example %}
 ```kotlin
 private fun getUpdateHandlerForFeedType(desiredFeedType: String): IContentCardsUpdateHandler {
   return IContentCardsUpdateHandler { event ->
@@ -516,36 +560,30 @@ private fun getUpdateHandlerForFeedType(desiredFeedType: String): IContentCardsU
   }
 }
 ```
+{% enddetails %}
 
-{% endsubtab %}
-{% endsubtabs %}
+#### ステップ 2.2:フラグメントに追加する
 
-`IContentCardsUpdateHandler`を作成したら、それを使用する`ContentCardsFragment`を作成します。このカスタムフィードは、他の`ContentCardsFragment`と同様に使用できます。アプリのさまざまな部分で、ダッシュボードに用意されているキーに基づいて、さまざまなコンテンツカードフィードを表示します。各`ContentCardsFragment`フィードには、各フラグメントのカスタム`IContentCardsUpdateHandler`のおかげで一意のカードセットが表示されます。 
+[`IContentCardsUpdateHandler`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.handlers/-i-content-cards-update-handler/index.html) を作成したら、それを使用する[`ContentCardsFragment`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html) を作成します。このカスタムフィードは、他の`ContentCardsFragment`と同様に使用できます。アプリのさまざまな部分で、ダッシュボードに用意されているキーに基づいて、さまざまなコンテンツカードフィードを表示します。各`ContentCardsFragment`フィードには、各フラグメントのカスタム`IContentCardsUpdateHandler`のおかげで一意のカードセットが表示されます。
 
-以下に例を示します。
-
-{% subtabs local %}
-{% subtab Java %}
-
+{% details Show Java example %}
 ```java
 // We want a Content Cards feed that only shows "Transactional" cards.
 ContentCardsFragment customContentCardsFragment = new ContentCardsFragment();
 customContentCardsFragment.setContentCardUpdateHandler(getUpdateHandlerForFeedType("Transactional"));
 ```
+{% enddetails %}
 
-{% endsubtab %}
-{% subtab Kotlin %}
-
+{% details Show Kotlin example %}
 ```kotlin
 // We want a Content Cards feed that only shows "Transactional" cards.
 val customContentCardsFragment = ContentCardsFragment()
 customContentCardsFragment.contentCardUpdateHandler = getUpdateHandlerForFeedType("Transactional")
 ```
-
+{% enddetails %}
 {% endsubtab %}
-{% endsubtabs %}
-{% endtab %}
-{% tab Jetpack Compose %}
+
+{% subtab Jetpack Compose %}
 このフィードに表示されるコンテンツカードをフィルタリングするには、`cardUpdateHandler`を使用します。以下に例を示します。
 
 ```kotlin
@@ -557,8 +595,10 @@ ContentCardsList(
      }
  )
  ```
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
-{% tab iOS %}
+{% tab swift %}
 
 次の例では、`Transactional`タイプカードのコンテンツカードフィードを示します。
 
@@ -598,34 +638,4 @@ for (BRZContentCardRaw *card in AppDelegate.braze.contentCards.cards) {
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Web %}
-
-次の例では、`Transactional`タイプカードのコンテンツカードフィードを示します。
-
-```javascript
-
-/**
- * @param {String} feed_type - value of the "feed_type" KVP to filter
- */
-function showCardsByFeedType(feed_type) {
-  braze.showContentCards(null, function(cards) {
-    return cards.filter((card) => card.extras["feed_type"] === feed_type);
-  });
-}
-```
-
-次に、カスタムフィードのトグルを設定できます。
-
-```javascript
-// show the "Transactional" feed when this button is clicked
-document.getElementById("show-transactional-feed").onclick = function() {
-  showCardsByFeedType("Transactional"); 
-};
-```
-
-詳細については、[SDK メソッドドキュメント](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showcontentcards)を参照してください。
-
-{% endtab %}
 {% endtabs %}
-
-

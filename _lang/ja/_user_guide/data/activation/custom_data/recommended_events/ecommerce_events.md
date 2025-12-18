@@ -12,7 +12,7 @@ description: "この参考記事では、eコマース推奨のイベントと�
 > このページでは、e コマース推奨のイベントとプロパティについて説明します。これらのイベントは、マーケターが効果的なメッセージング (カート放棄のターゲット設定など) をトリガーするために必要な主な購入行動をキャプチャする貯めに作成されます。
 
 {% alert important %}
-e コマースの推奨イベントは現在、早期アクセス段階です。早期アクセスにご興味のある方は、Brazeカスタマーサクセスマネージャーまでお問い合わせください。<br><br>新しい[Shopifyコネクタを]({{site.baseurl}}/partners/ecommerce/shopify/multiple_stores/?tab=shopify%20connector)使用している場合、これらの推奨イベントは統合によって自動的に利用できるようになる。
+e コマースの推奨イベントは現在、早期アクセス段階です。早期アクセスにご興味のある方は、Brazeカスタマーサクセスマネージャーまでお問い合わせください。<br><br>新しい[Shopify コネクター]({{site.baseurl}}/partners/ecommerce/shopify/multiple_stores/?tab=shopify%20connector) を使用している場合、これらの推奨されるイベントは、インテグレーションによって自動的に利用可能になります。
 {% endalert %}
 
 Braze は、データプランニングには時間がかかることを認識しています。お客様の開発チームに周知し、このイベント微送信を今すぐ開始することををお勧めします。eコマース推奨イベントですぐに利用できない機能もあるかもしれないが、eコマース機能を強化する新製品の登場を2025年中に期待できる。
@@ -21,7 +21,7 @@ Braze は、データプランニングには時間がかかることを認識�
 
 {% multi_lang_include alerts/important_alerts.md alert='Purchase event deprecation' %}
 
-USD以外の通貨がレポートされた場合、Brazeではレポートされた日の為替レートに基づいてUSDで表示される。通貨コンバージョンを防ぐため、通貨をUSDにハードコードする。
+ドル以外の通貨レポートedは、それがレポートされた日の為替レートに基づいて、米ドルでBraze表示されます。通貨コンバージョンを防止するには、通貨をUSDにハードコードします。
 
 {% tabs %}
 {% tab ecommerce.product_viewed %}
@@ -41,7 +41,7 @@ USD以外の通貨がレポートされた場合、Brazeではレポートされ
 | `currency` | はい | string | 製品価格の表示通貨 (「USD」や「EUR」など)。[ISO 4217 フォーマット](https://www.iso.org/iso-4217-currency-codes.html)です。 |
 | `source` | はい | string | イベントの派生元ソース。(Shopify の場合これはストアフロントです。) |
 | `metadata` | いいえ | オブジェクト | |
-| `type` | いいえ | オブジェクト | [在庫切れ通知や]({{site.baseurl}}/user_guide/data/activation/catalogs/catalog_triggers/back_in_stock_notifications) [値下げ通知と]({{site.baseurl}}/user_guide/data/activation/catalogs/catalog_triggers/price_drop_notifications)連動する。 |
+| `type` | いいえ | オブジェクト | [在庫調整通知s]({{site.baseurl}}/user_guide/data/activation/catalogs/catalog_triggers/back_in_stock_notifications)と[価格低下通知s]({{site.baseurl}}/user_guide/data/activation/catalogs/catalog_triggers/price_drop_notifications)で動作します。 |
 | `sku` | いいえ | string | (Shopifyのみ）Shopify SKU.これはカタログ ID フィールドとして設定できます。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
@@ -551,7 +551,7 @@ AppDelegate.braze?.logCustomEvent(name: "ecommerce.checkout_started", properties
 | `order_number` | いいえ | string | (Shopifyのみ) 発注された注文の固有の注文番号。 |
 | `tags` | いいえ | 配列 | (Shopifyのみ）注文タグ
 | `referring_site` | いいえ | string | (Shopifyのみ）注文の発信元サイト（Metaなど）。 |
-| `payment_gateway_names` | いいえ | 配列 | (Shopifyのみ）決済システムのソース（POSやモバイルなど）。 |
+| `payment_gateway_names` | いいえ | 配列 | (Shopifyのみ)決済システムソース(ポイントオブセールやモバイルなど)。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 #### オブジェクトの例
@@ -1174,4 +1174,4 @@ Canvasテンプレートでこれらのイベントを使用する方法につ�
 
 これらのユーザーフィールド計算は、ユーザープロファイルの [**トランザクション**] タブにも含まれています。
 
-\![ユーザーによって計算されたフィールドを持つ "取引 "タブ。]({% image_buster /assets/img/Shopify/transactions_tab.png %}){: style="max-width:60%;"}
+!["Trans アクション s"タブ(ユーザー計算フィールドs)。]({% image_buster /assets/img/Shopify/transactions_tab.png %}){: style="max-width:60%;"}

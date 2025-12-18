@@ -1,100 +1,100 @@
 ---
-nav_title: 청구서
-article_title: 청구서
+nav_title: 청구
+article_title: 청구
 alias: /subscription_and_usage/
 page_order: 25
 page_type: reference
-description: "이 참조 문서에서는 청구 페이지를 다루며, 여기에서 데이터 소비를 모니터링하고 확인할 수 있습니다."
+description: "이 도움말 문서에서는 데이터 사용량을 모니터링하고 확인할 수 있는 청구 페이지에 대해 설명합니다."
 tool: Dashboard
 search_rank: 5
 ---
 
-# 청구서
+# 청구
 
-> **청구** 페이지를 사용하여 작업 공간, 앱 및 이벤트 소스 전반에 걸쳐 데이터 소비를 모니터링하고 확인하는 방법을 배우십시오. 이 기사는 페이지의 다양한 섹션과 그들이 제공할 수 있는 정보에 대해 다룹니다.
+> **청구** 페이지를 사용하여 워크스페이스, 앱, 이벤트 소스 전반에서 데이터 사용량을 모니터링하고 확인하는 방법을 알아보세요. 이 문서에서는 페이지의 여러 섹션과 해당 섹션에서 제공할 수 있는 정보를 다룹니다.
 
-**청구** 페이지로 이동하려면 **설정** > **청구**로 이동하십시오.
+**청구** 페이지로 이동하려면 **설정** > **청구로** 이동합니다.
 
-**청구** 페이지에는 다음 탭이 포함됩니다:
+**청구** 페이지에는 다음 탭이 있습니다:
 
-- [구독 및 사용량](#subscriptions-and-usage)
-- [최다 사용 이벤트 and Attributes by 앱](#most-used-events-and-attributes-by-app)
+- [구독 및 사용](#subscriptions-and-usage)
+- [앱별 최다 사용 이벤트 및 속성](#most-used-events-and-attributes-by-app)
 - [총 데이터 포인트 사용량](#total-data-points-dashboard)
 
-## 구독 및 사용량
+## 구독 및 사용
 
-**구독 및 사용** 탭에는 사용 그래프와 계약 세부 정보가 포함되어 있습니다.
+**구독 및 사용량** 탭에는 사용량 그래프와 계약 세부 정보가 포함되어 있습니다.
 
 ### 사용량 그래프
 
-여기에서 귀하의 작업 공간에 적용되는 사용 그래프를 찾을 수 있습니다. 구매한 제품에 따라 대시보드에 표시되는 사용 측정기준이 다를 수 있습니다. 
+여기에서는 작업 공간에 적용되는 사용량 그래프를 확인할 수 있습니다. 구매한 제품에 따라 대시보드에 다른 사용량 측정기준이 표시될 수 있습니다. 
 
-![Usage graph showing Monthly Unique Visitors]({% image_buster /assets/img/subscription_and_billing4.png %}){: style="max-width:90%;"}
+\![월간 순 방문자 수를 보여주는 사용량 그래프]({% image_buster /assets/img/subscription_and_billing4.png %}){: style="max-width:90%;"}
 
-이 그래프는 월간 활성 사용자, 월간 고유 방문자 및 이메일 전송을 보여줄 수 있습니다. 이와 같은 사용 그래프는 사용량을 예산하고 워크스페이스가 전체 사용량에 기여하는 바를 더 깊이 이해하려고 할 때 특히 유용합니다.
+이 그래프는 월간 활성 사용자, 월간 순 방문자 수, 이메일 전송 수를 표시할 수 있습니다. 이와 같은 사용량 그래프는 사용량 예산을 책정하고 전체 사용량에 기여하는 작업 공간을 더 깊이 이해하려고 할 때 특히 유용합니다.
 
-### 연락처 세부 정보
+### 계약 세부 정보
 
-계약 세부 사항에는 Braze와의 현재 계약 시작일과 종료일이 나와 있습니다.
+계약 세부 정보에는 현재 Braze 커런츠 계약의 시작일과 종료일이 기재되어 있습니다.
 
-## 최다 사용 이벤트 및 속성별 앱
+## 앱별 최다 사용 이벤트 및 기여도 속성
 
-**최다 사용 이벤트 및 앱별 속성**에서, 속성과 커스텀 이벤트 데이터 포인트 소비의 원인을 확인할 수 있습니다. 
+**앱별 최다 사용 이벤트 및** 속성에서 속성 및 커스텀 이벤트 데이터 포인트 사용량의 동인을 확인할 수 있습니다. 
 
-![Most Used Events and Attributes By App]({% image_buster /assets/img/most_used_events_attributes_time.png %})
+!"[앱별 최다 사용 이벤트 및 속성]({% image_buster /assets/img/most_used_events_attributes_time.png %})
 
-각 앱에 대해 **세부 사항 보기**를 선택하여 선택한 기간 동안 각 특정 커스텀 속성, 프로필 속성 및 커스텀 이벤트의 예상 수를 볼 수 있으며, 해당 앱의 속성 및 이벤트 업데이트 중 해당 속성 또는 이벤트에 의해 유도된 비율도 확인할 수 있습니다. 
+각 앱에 대해 **분석 보기를** 선택하여 선택한 기간 동안의 각 특정 커스텀 속성, 프로필 속성 및 커스텀 이벤트의 예상 수와 해당 속성 또는 이벤트에 의해 발생한 해당 앱의 속성 및 이벤트 업데이트 비율을 볼 수 있습니다. 
 
-![Most Used Events and Attributes By App breakdown tab]({% image_buster /assets/img/most_used_events_attributes_2.png %}){: style="max-width:60%"}
+\![앱별 최다 사용 이벤트 및 속성 분석 탭]({% image_buster /assets/img/most_used_events_attributes_2.png %}){: style="max-width:60%"}
 
-데이터 분석은 특정 데이터 포인트가 할당량의 큰 비율을 차지하는지 이해하는 데 도움이 될 수 있습니다. 이 정보를 수시로 모니터링하여 데이터 포인트를 실수로 불필요하게 사용하지 않도록 하는 것이 좋습니다. 고객 성공 매니저는 현재 계획을 최대한 활용하거나 더 큰 유연성을 위한 옵션을 제공하는 데 도움을 줄 수 있습니다. 
+이와 같은 데이터 분석은 할당량에서 큰 비중을 차지하는 특정 데이터 포인트를 이해하는 데 도움이 될 수 있습니다. 이 정보를 수시로 모니터링하여 우발적이고 불필요한 방식으로 데이터 포인트를 사용하고 있지 않은지 확인하는 것이 좋습니다. 고객 성공 매니저가 현재 요금제를 최대한 활용할 수 있도록 안내하거나 유연성을 높이기 위한 옵션을 제공할 수 있습니다. 
 
 ## 총 데이터 포인트 대시보드
 
-**총 데이터 포인트 사용량** 탭은 데이터 포인트 소비에 대한 심층적인 분석을 제공합니다. 이 섹션에서 모든 데이터를 주 또는 월별로 집계하여 볼 수 있습니다.
+**총 데이터 포인트 사용량** 탭에서는 데이터 포인트 사용량을 자세히 살펴볼 수 있습니다. 이 섹션의 모든 데이터를 주 또는 월 단위로 집계하여 볼 수 있습니다.
 
-![Filtering Data Point Usage by weeks]({% image_buster /assets/img/subscription_and_billing2.png %})
+\![주 단위로 데이터 포인트 사용량 필터링하기]({% image_buster /assets/img/subscription_and_billing2.png %})
 
-### 연락처 세부 정보
+### 계약 세부 정보
 
-여기에서 현재 Braze 계약이 시작되고 종료되는 시기, 할당된 데이터 포인트 및 현재 계약에서 지금까지 사용된 모든 데이터 포인트의 합계에 대한 정보를 찾을 수 있습니다.
+여기에는 현재 Braze 커런츠 계약의 시작 및 종료 시점과 할당된 데이터 포인트, 그리고 현재 계약에서 지금까지 사용된 모든 데이터 포인트의 합계에 대한 정보를 확인할 수 있습니다.
 
 이 섹션의 필드는 다음과 같이 정의됩니다:
 
 - **계약 유형:** 청구 기간 구조는 연간 또는 다년입니다.
-- **계약 시작 및 종료 날짜:** 전체 계약의 시작 및 종료 날짜.
-- **할당된 데이터 포인트:** 청구 기간당 계약에 할당된 데이터 포인트의 양.
-- **계약 데이터 포인트 사용량:** 계약 기간 동안 소비된 모든 데이터 포인트의 누적 합계이며, 다음 청구 기간에 초기화되지 않습니다.
+- **계약 시작일 및 종료일:** 전체 계약의 시작일과 종료일입니다.
+- **할당된 데이터 포인트:** 청구 기간당 계약에 할당된 데이터 포인트의 양입니다.
+- **계약 데이터 포인트 사용량:** 계약 기간 동안 기록된 모든 데이터 포인트의 누적 합계로, 다음 청구 기간에는 재설정되지 않습니다.
 
-![Contract Details section of Total Data Point Usage tab]({% image_buster /assets/img/contract_details.png %})
+\![총 데이터 포인트 사용량 탭의 계약 세부 정보 섹션]({% image_buster /assets/img/contract_details.png %})
 
 ### 회사 청구 데이터
 
-#### 앱 레벨 총 데이터 포인트 사용량
+#### 앱 수준의 총 데이터 포인트 사용량
 
-이 그래프는 앱 전반에 걸쳐 데이터 포인트 사용량을 보여줍니다.
+이 그래프는 앱 전반의 데이터 포인트 사용량을 보여줍니다.
 
-![App Level Total Data Point Usage shows data points used for each app.]({% image_buster /assets/img/app_level_total.png %})
+앱 수준 총 데이터 포인트 사용량은 각 앱에 사용된 데이터 포인트를 보여줍니다.]({% image_buster /assets/img/app_level_total.png %})
 
-총계 중 하나를 선택하여 **데이터 포인트 사용량** 테이블을 확인하세요. 이 테이블은 각 작업 공간에 대한 주간 데이터 포인트 총계를 보여줍니다.  빈 **앱 이름** 열이 있는 행은 어떤 앱과도 연결되지 않은 데이터 포인트를 나타냅니다(예: `app_id`을(를) 지정하지 않은 요청에 사용되는 데이터 포인트).
+합계 중 하나를 선택하면 각 워크스페이스의 주간 데이터 포인트 **사용량** 합계가 표시된 **시간 경과에 따른 데이터 포인트 사용량** 표를 볼 수 있습니다.  **앱 이름** 열이 비어 있는 행은 앱과 연결되지 않은 데이터 포인트(예: `app_id` 을 지정하지 않는 요청에 사용된 데이터 포인트)를 담당자가 나타냅니다.
 
-![Data Point Usage Over Time showing total weekly data points for two workspaces.]({% image_buster /assets/img/data_point_usage_time.png %})
+\![시간 경과에 따른 데이터 포인트 사용량] 두 워크스페이스의 주간 총 데이터 포인트 사용량을 보여줍니다.]({% image_buster /assets/img/data_point_usage_time.png %})
 
-#### 작업 공간 데이터 포인트 사용량
+#### 워크스페이스 데이터 포인트 사용량
 
-이 그래프를 통해 워크스페이스별로 회사의 총 데이터 포인트 사용량을 평가할 수 있습니다. 이 그래프는 각 워크스페이스가 회사의 데이터 포인트 사용량에 어떻게 기여하고 있는지 평가할 수 있는 기능을 제공합니다.
+이 그래프를 통해 워크스페이스별로 회사의 총 데이터 포인트 사용량을 평가할 수 있습니다. 이 그래프를 통해 각 워크스페이스가 회사의 데이터 포인트 사용량에 어떻게 기여하고 있는지 평가할 수 있습니다.
 
-![Workspace Data Point Usage graph for two workspaces]({% image_buster /assets/img/appgroup_datapoint_usage.png %}){: style="max-width:90%;"}
+\![두 워크스페이스에 대한 워크스페이스 데이터 포인트 사용량 그래프]({% image_buster /assets/img/appgroup_datapoint_usage.png %}){: style="max-width:90%;"}
 
 #### 이벤트 소스별 청구 주기 데이터 포인트 사용량
 
-이 그래프는 데이터 포인트 사용량이 다양한 이벤트 소스, 예를 들어 다양한 API 속성, 커스텀 이벤트 및 세션에 걸쳐 어떻게 분포되어 있는지를 볼 수 있게 해줍니다.
+이 그래프를 통해 다양한 API 속성, 커스텀 이벤트 및 세션 등 여러 이벤트 소스에서 데이터 포인트 사용량이 어떻게 분산되는지 확인할 수 있습니다.
 
-![Billing Cycle Data Point Usage by Event Source displaying the data point allocation among different event sources.]({% image_buster /assets/img/event_source_stats.png %})
+이벤트 소스별 청구 주기 데이터 포인트 사용량 여러 이벤트 소스 간의 데이터 포인트 할당을 표시합니다.]({% image_buster /assets/img/event_source_stats.png %})
 
 #### 시간 경과에 따른 데이터 포인트 사용량
 
-이 그래프는 할당된 데이터 포인트 양에 비해 총 데이터 포인트 사용량을 빠르게 확인할 수 있는 기능을 제공합니다.
+이 그래프를 통해 총 데이터 포인트 사용량과 할당된 데이터 포인트 양을 빠르게 확인할 수 있습니다.
 
-![Data Point Usage over time contrasting current billing cycle allotted data points with running total]({% image_buster /assets/img/company_data_point_usage_time.png %}){: style="max-width:90%;"}
+\![현재 청구 주기에 할당된 데이터 포인트와 실행 중인 총계를 비교한 시간 경과에 따른 데이터 포인트 사용량]({% image_buster /assets/img/company_data_point_usage_time.png %}){: style="max-width:90%;"}
 

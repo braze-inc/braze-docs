@@ -74,29 +74,29 @@ Braze でビジネスオブジェクトを作成および管理するには、�
   <tr>
     <td rowspan="4">カタログ> アカウントカタログ</td>
     <td><code>id</code></td>
-    <td><code>アカウント</code></td>
+    <td><code>account</code></td>
     <td><code>id</code></td>
   </tr>
   <tr>
-    <td><code>アカウント名</code></td>
-    <td><code>アカウント</code></td>
-    <td><code>アカウント名</code></td>
+    <td><code>AccountName</code></td>
+    <td><code>account</code></td>
+    <td><code>Account Name</code></td>
   </tr>
   <tr>
-    <td><code>タイプ</code></td>
-    <td><code>アカウント</code></td>
-    <td><code>タイプ</code></td>
+    <td><code>Type</code></td>
+    <td><code>account</code></td>
+    <td><code>Type</code></td>
   </tr>
   <tr>
     <td><code>OTHER_FIELDS</code></td>
-    <td><code>アカウント</code></td>
+    <td><code>account</code></td>
     <td><code>OTHER_FIELDS</code></td>
   </tr>
 </table>
 
 ##### マップされた取引先フィールドのテーブルの例
 
-\![請求先住所や取引先所有者など、それぞれの情報を含むSalesforce 取引先のテーブル。]({% image_buster /assets/img/b2b/sf_accounts.png %})
+![請求先住所や取引先所有者など、それぞれの情報を含むSalesforce 取引先のテーブル。]({% image_buster /assets/img/b2b/sf_accounts.png %})
 
 {% endsubtab %}
 {% subtab Opportunity catalog %}
@@ -113,21 +113,21 @@ Braze でビジネスオブジェクトを作成および管理するには、�
   <tr>
     <td rowspan="4">カタログ > 案件カタログ</td>
     <td><code>id</code></td>
-    <td><code>機会</code></td>
+    <td><code>opportunity</code></td>
     <td><code>id</code></td>
   </tr>
   <tr>
-    <td><code>商談名</code></td>
-    <td><code>機会</code></td>
-    <td><code>案件名</code></td>
+    <td><code>OpportunityName</code></td>
+    <td><code>opportunity</code></td>
+    <td><code>Opportunity Name</code></td>
   </tr>
   <tr>
-    <td><code>契約地域</code></td>
-    <td><code>機会</code></td>
-    <td><code>契約地域</code></td>
+    <td><code>Territory</code></td>
+    <td><code>opportunity</code></td>
+    <td><code>Territory</code></td>
   <tr>
     <td><code>OTHER_FIELDS</code></td>
-    <td><code>機会</code></td>
+    <td><code>opportunity</code></td>
     <td><code>OTHER_FIELDS</code></td>
   </tr>
   </tr>
@@ -135,7 +135,7 @@ Braze でビジネスオブジェクトを作成および管理するには、�
 
 ##### マッピングされた商談項目の例のテーブル
 
-\![請求先住所や取引先所有者など、それぞれの情報を含むSalesforce 商談のテーブル。]({% image_buster /assets/img/b2b/sf_opportunities.png %})
+![請求先住所や取引先所有者など、それぞれの情報を含むSalesforce 商談のテーブル。]({% image_buster /assets/img/b2b/sf_opportunities.png %})
 
 {% endsubtab %}
 {% endsubtabs %}
@@ -151,7 +151,7 @@ Braze でビジネスオブジェクトを作成および管理するには、�
 {% endtab %}
 {% endtabs %}
 
-## ステップ 2: ビジネス・オブジェクトをユーザー・プロファイルに関連付ける
+## ステップ 2:ビジネス・オブジェクトをユーザー・プロファイルに関連付ける
 
 ユーザープロファイルは、Braze の主要なオブジェクトです。ユーザー層のセグメンテーション、トリガー、パーソナライゼーションの大部分の処理に使用されます。ユーザープロファイルには、SDK によって収集された[デフォルトのユーザーデータ]({{site.baseurl}}/user_guide/data/user_data_collection/) と、[カスタムデータ]({{site.baseurl}}/user_guide/data/custom_data/) が含まれます。これらのデータは、属性(人口統計データ)、イベント(行動データ)、購入(トランザクションデータ) のいずれかの形式になります。
 

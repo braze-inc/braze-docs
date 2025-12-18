@@ -13,7 +13,7 @@ tool: Currents
 > 現在データが Amazon S3 にある場合は、抽出、読み込み、変換 (ELT) プロセスを使用して、Snowflake や他のリレーショナルデータウェアハウスに転送できます。このページではその方法を説明する。
 
 {% alert note %}
-より具体的なユースケースがあり、 Currents インスタンスのサービスを Braze に希望する場合は、Braze アカウントマネージャーに Braze データプロフェッショナルサービスについてお問い合わせください。
+より具体的なユースケースがあり、BrazeにCurrentsインスタンスのサービスを依頼したい場合は、Brazeアカウントマネージャーに連絡し、Braze Data Professional Servicesについて尋ねてください。
 {% endalert %}
 
 ## CDI の仕組み
@@ -109,12 +109,12 @@ COPY INTO
 
 1. AWSで、新しい Snowflake ステージの対応するバケットに移動します。次に、[**プロパティ**] タブの [**イベント**] に移動します。
 
-\![AWSのプロパティタブ]]({% image_buster /assets/img/aws-properties.png %}){: height="50%" width="50%"}
+![AWS の [プロパティ] タブ]({% image_buster /assets/img/aws-properties.png %}){: height="50%" width="50%"}
 
 {: start="2"}
 2\.必要に応じて、Currents データの各セット ([メッセージング]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/)、[ユーザー行動]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/))、またはその両方に対して新規イベントを作成します。
 
-\![AWSでの新規行事の作成]({% image_buster /assets/img/aws-events.png %}){: height="50%" width="50%"}
+![AWSで新しいイベントを作成する]({% image_buster /assets/img/aws-events.png %}){: height="50%" width="50%"}
 
 {: start="3"}
 3\.オブジェクト作成通知のチェックボックスをオンにして、フォーム下部の ARN (Snowflake の通知チャンネル列) を確認します。
@@ -275,6 +275,6 @@ COPY INTO
 Braze Currents を使用して実行できる分析のタイプについては、「[Looker Blocks](https://github.com/llooker?q=braze)」を参照してください。
 
 {% alert note %}
-質問がある場合や、Braze によるこのプロセスのガイドに興味がある場合は、Braze のアカウントマネージャーにお問い合わせください。
+ご質問がある場合、またはBrazeがこのプロセスをご案内することにご興味がある場合は、Brazeアカウントマネージャーにお問い合わせください。
 {% endalert %}
 

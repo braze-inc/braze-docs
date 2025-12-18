@@ -18,23 +18,23 @@ description: "このページでは、アプリ内メッセージのドラッグ
 
 ドラッグ＆ドロップのアプリ内メッセージを作成するときには、テンプレートに [**メールで登録**] を選択し、[**メッセージを作成**] を選択します。このテンプレートは、モバイルアプリとWebブラウザの両方でサポートされています。
 
-\![アプリ内メッセージエディターとメールキャプチャフォームのテンプレート。]({% image_buster /assets/img/drag_and_drop/templates/email_capture_template1.png %})
+![メールキャプチャフォームのテンプレートを含むアプリ内メッセージエディタ。]({% image_buster /assets/img/drag_and_drop/templates/email_capture_template1.png %})
 
-### ステップ 2: メッセージスタイルを設定する
+### ステップ 2:メッセージスタイルを設定する
 
 {% multi_lang_include drag_and_drop/templates.md section='message style' %}
 
-### ステップ 3: メール登録コンポーネントのカスタマイズ
+### ステップ 3:メール登録コンポーネントのカスタマイズ
 
 メールサインアップフォームの作成を開始するには、エディタでメールキャプチャ要素を選択します。デフォルトでは、収集されたメールアドレスはグローバルサブスクリプショングループ**Subscribed**を持ちます。特定のサブスクリプショングループにユーザーをオプトインするには、[メールサブスクリプションの状態を更新する]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions#updating-email-subscription-states)を参照してください。
 
 メールキャプチャ要素のプレースホルダーテキストとラベルテキストをカスタマイズできます。
 
-\![アプリ内メッセージエディターは、メールキャプチャエレメントをカスタマイズするためのサイドメニューを備えている。]({% image_buster /assets/img/drag_and_drop/templates/email_capture_field1.png %})
+![メールキャプチャ要素をカスタマイズするためのサイドメニュー付きのアプリ内メッセージエディタ。]({% image_buster /assets/img/drag_and_drop/templates/email_capture_field1.png %})
 
 #### メール検証
 
-もしユーザーが受け付けられない特殊文字を含むメールアドレスを入力した場合、一般的なエラーインジケーターが表示され、フォームを送信することができない。このエラーメッセージはカスタマイズできない。エラーの動作は、**プレビュー（& Test**）タブとテスト・デバイスで確認できる。Braze が [メール アドレスの検証]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/email_validation/) でメール アドレスをどのようにフォーマットするかの詳細をご覧ください。
+もしユーザーが受け付けられない特殊文字を含むメールアドレスを入力した場合、一般的なエラーインジケーターが表示され、フォームを送信することができない。このエラーメッセージはカスタマイズできない。エラーの挙動は、**プレビュー&テスト**タブとテストデバイスで確認できます。Braze が [メール アドレスの検証]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/email_validation/) でメール アドレスをどのようにフォーマットするかの詳細をご覧ください。
 
 ### ステップ 4:免責事項の言語を追加（オプション）
 

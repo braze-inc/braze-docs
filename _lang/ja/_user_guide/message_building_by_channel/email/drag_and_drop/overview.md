@@ -73,7 +73,7 @@ tool:
 
 ## ドラッグ＆ドロップ・エディターを使う
 
-メールメッセージをキャンペーンとキャンバスのどちらで送るべきか迷っている？キャンペーンは単一のシンプルなメッセージングキャンペーンに適していますが、キャンバスはマルチステップのユーザーのジャーニーに適しています。
+メールメッセージをキャンペーンとキャンバスのどちらで送るべきか迷っている？キャンペーン s は単一のターゲットメッセージング キャンペーンに適していますが、キャンバスは複数ステップ ユーザーのジャーニーに適しています。
 
 メッセージを作成する場所を選択したら、次のステップに進み、ドラッグ＆ドロップでメールを作成します。
 
@@ -95,9 +95,9 @@ tool:
 
 [**メール本文を編集**] を選択して、ドラッグ＆ドロップエディターでメール構造のデザインを開始します。 
 
-\![" メール Variants" の節で、サンプルメール本文を使用します。]({% image_buster /assets/img/dnd/dnd_emailvariant.png %})
+![メールのバリアント」セクションには、メール本文の例が掲載されている。]({% image_buster /assets/img/dnd/dnd_emailvariant.png %})
 
-### ステップ 2: メールの作成
+### ステップ2:メールの作成
 
 ドラッグ＆ドロップによる編集は3つのセクションに分かれている：**送信設定**、**コンテンツ**、**プレビュー&テスト**。メール本文の作成は、**コンテンツ**セクションで行われる。Eメールを作成する前に、Eメール作成の指針となる重要な要素を理解することが重要である。レビューが必要な場合は、「[編集者について](#about-the-editor)」を参照してください。
 
@@ -117,7 +117,7 @@ tool:
 {% alert tip %}
 魅力的な文章を作成するためのサポートが必要な場合は、[AI コピーライティングアシスタント]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/)を使用してみてください。商品名や説明を入力すると、メッセージングに使用できる人間のようなマーケティングコピーが AI により生成されます。
 
-\![Copywriter(コピーライター)ボタン。ドラッグアンドドロップエディターのスタイル設定の隣のコンテンツパネルにあります。]({% image_buster /assets/img/ai_copywriter/ai_copywriter_dnd.png %})
+![ドラッグアンドドロップエディタのスタイル設定の横にあるコンテンツパネルにあるコピーライタボタン。]({% image_buster /assets/img/ai_copywriter/ai_copywriter_dnd.png %})
 {% endalert %}
 
 ### ステップ 3:送信情報の追加
@@ -169,7 +169,7 @@ tool:
 
 メールテンプレートに加えられた編集は、以前に生成されたリンクには反映されないことにご注意ください。編集内容を確認するには、新しいリンクプレビューを生成する必要がある。
 
-\![&quotへのボタン付きのメールプレビュー;プレビューリンクとクォートのコピー;生成されたリンクのコピー。]({% image_buster /assets/img/dnd_email_link_preview.png %})
+![ボタンto "Copy プレビュー link"生成されたリンクをコピーするためのボタン付きの電子メールプレビュー。]({% image_buster /assets/img/dnd_email_link_preview.png %})
 
 #### 受信トレイビジョンの使用
 
@@ -205,17 +205,17 @@ HTMLレンダリングは、条件コメントとCSSメディアクエリの数�
 
 メールに追加された画像は、自動的に [**自動幅**] に設定されます。この設定を調整するには、[**自動幅**] をオフに切り替え、必要に応じて幅の割合を調整します。
 
-\![ドラッグアンドドロップエディタのコンテンツタブの自動幅オプション]]({% image_buster /assets/img/dnd/dnd1.png %})
+![ドラッグ・アンド・ドロップ・エディターのコンテンツ・タブにある自動幅オプション。]({% image_buster /assets/img/dnd/dnd1.png %})
 
 ### カラーレイヤー
 
 カラーレイヤーを使用すると、メールの背景、コンテンツ領域、およびさまざまなコンテンツコンポーネントの色を変更できます。色の順序は、前面から背面に向かってコンテンツコンポーネントの色、コンテンツ領域の背景色、背景色です。
 
-\![ドラッグアンドドロップエディタでのカラーレイヤーの例。]({% image_buster /assets/img/dnd/dnd2.png %})
+![ドラッグ＆ドロップ・エディターでのカラー・レイヤリングの例。]({% image_buster /assets/img/dnd/dnd2.png %})
 
 ### コンテンツ・パディング
 
-\![ドラッグアンドドロップエディタのブロックオプション。]({% image_buster /assets/img/dnd/dnd3.png %}){: style="float:right;max-width:25%;margin-left:15px;"}
+![ドラッグアンドドロップエディターのブロックオプション。]({% image_buster /assets/img/dnd/dnd3.png %}){: style="float:right;max-width:25%;margin-left:15px;"}
 
 埋め込みを調整するには、[**ブロックのオプション**] まで下にスクロールして、[**その他のオプション**] を選択します。パディングを微調整することで、Eメールの見栄えを整えることができる。
 
@@ -227,11 +227,11 @@ HTMLレンダリングは、条件コメントとCSSメディアクエリの数�
 
 言語属性を設定するには、[**設定**] タブで使用する言語を選択します。ダイナミックな言語値が設定されているユーザーを対象としているメッセージの場合は、ユーザー属性 {%raw%} `{{${language}}}` {%endraw%} もターゲットにできます。
 
-\![ " Language" メールの値を設定します。]({% image_buster /assets/img/dnd/language_setting_dnd.png %}){: style="max-width:70%;"}
+![" Language" メールの値を設定します。]({% image_buster /assets/img/dnd/language_setting_dnd.png %}){: style="max-width:70%;"}
 
 ### パーソナライゼーション
 
-\![ドラッグアンドドロップエディタのパーソナライゼーションを追加するための選択肢。]({% image_buster /assets/img/dnd/dnd4.png %}){: style="float:right;max-width:25%;margin-left:15px;"}
+![ドラッグ＆ドロップ・エディターにパーソナライズを追加するオプション。]({% image_buster /assets/img/dnd/dnd4.png %}){: style="float:right;max-width:25%;margin-left:15px;"}
 
 基本的な Liquid は、ドラッグ＆ドロップメールエディターでサポートされています。メールにパーソナライゼーションを追加するには、次の手順に従います。
 
@@ -250,7 +250,7 @@ HTMLレンダリングは、条件コメントとCSSメディアクエリの数�
 
 メッセージを作成するときに、それぞれの [**テキストの方向**] ボタンを選択して、テキストの方向を左から右または右から左に切り替えることができます。このオプションは、アラビア語やヘブライ語などのメッセージを作成するときに使うことができる。
 
-\![Email ドラッグ&ドロップエディターメニューとボタンで、テキストの配置を右から左へ、左から右へ切り替えます。]({% image_buster /assets/img/dnd/dnd_template1.png %}){: style="max-width:50%;"}
+![ドラッグ＆ドロップでテキストの配置を右から左、または左から右に切り替えるボタンが付いたメールエディタメニュー。]({% image_buster /assets/img/dnd/dnd_template1.png %}){: style="max-width:50%;"}
 
 右から左へのメッセージの最終的な出現は、サービスプロバイダがそれらをどのようにレンダリングするかに大きく依存します。右から左へのメッセージを可能な限り正確に表示するためのベストプラクティスについては、[右から左へのメッセージを作成する]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/)を参照してください。
 
@@ -258,7 +258,7 @@ HTMLレンダリングは、条件コメントとCSSメディアクエリの数�
 
 #### HTML 属性sと連動
 
-\![" 属性 s" 属性 " を含むセクション; click "トラッキング" リンクに対して無効にします。]({% image_buster /assets/img/dnd_custom_attributes.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
+![アトリビューション」セクションで、リンクの属性「clicktracking」がオフになっている。]({% image_buster /assets/img/dnd_custom_attributes.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
 ドラッグ・アンド・ドロップ・エディターでリンク、ボタン、画像、動画を使用する場合、**コンテンツ・**セクションの**属性で** **新しい属性を追加を**選択し、EメールのHTMLタグに追加情報を追加する。これは、メッセージのパーソナライズ、セグメンテーション、スタイリングに特に役立つ。
 
@@ -312,3 +312,7 @@ HTMLレンダリングは、条件コメントとCSSメディアクエリの数�
 | `style` | `media` | アプリする媒体または機器を指定します。 | ```<style media="print">body { font-size: 12pt; }</style>``` |
 | `title` | 属性なし | `title` タグは属性s を受け入れません。 | ```<title>Kitchenerie</title>``` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
+
+{% alert note %}
+リンク名は最大63 バイトまで指定でき、制限を超えると自動的に切り捨てられます。
+{% endalert %}

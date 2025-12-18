@@ -9,15 +9,15 @@ tool: Reports
 
 # 目標到達プロセスレポート
 
-> ファンネルレポートは、顧客がキャンペーンまたはキャンバスを受信した後に受けるジャーニーを分析できる視覚的なレポートを提供します。\![ファンネルレポート 2]]({% image_buster /assets/img/funnel_report/funnel_report2.png %}){: style="float:right;max-width:15%;margin-bottom:15px; border: 0"}
+> ファネルレポートは、キャンペーンやキャンバスを受け取った後の顧客のジャーニーを分析できるビジュアルレポートを提供する。![ファネルレポート2]({% image_buster /assets/img/funnel_report/funnel_report2.png %}){: style="float:right;max-width:15%;margin-bottom:15px; border: 0"}
 
 キャンペーンまたはキャンバスでコントロールグループまたは複数のバリアントを使用している場合は、さまざまなバリアントがコンバージョンの目標到達にどのように影響したかをより詳細に把握し、このデータに基づいて最適化できます。
 
-\![ファンネルレポート1]]({% image_buster /assets/img/funnel_report/funnel_report1.jpg %}){: style="max-width:80%;"}
+![ファネルレポート1]({% image_buster /assets/img/funnel_report/funnel_report1.jpg %}){: style="max-width:80%;"}
 
 ## ファンネルレポートの設定
 
-\![ファンネルレポート5]]({% image_buster /assets/img/funnel_report/canvas_campaign.png %}){: style="float:right;max-width:40%;border:0;margin-left:15px;"}
+![ファネルレポート5]({% image_buster /assets/img/funnel_report/canvas_campaign.png %}){: style="float:right;max-width:40%;border:0;margin-left:15px;"}
 
 既存のアクティブキャンペーンとキャンバスに対してファネルレポートを実行できる。これらのレポートは、キャンペーン受信者がキャンバスまたはキャンペーンに参加した日から1～30日の間に進行する一連のイベントを表示する。指定された順序でユーザーがイベントを実行した場合、そのユーザーは目標到達ステップを通じてコンバージョンしたと見なされます。
 
@@ -38,9 +38,9 @@ tool: Reports
 ウィンドウを設定してファネルを1 日に完了する場合、ファネルイベントはメッセージ受信から24 時間以内に発生する必要があります。ただし、複数の日を選択した場合、期間は会社のタイムゾーンのカレンダー日としてカウントされます。
 {% endalert %}
 
-\![&quot を含むキャンバスのファンネルレポート;最後の7 日間"タイムフレームドロップダウンで選択。]({% image_buster /assets/img/funnel_report/funnel_report5.png %}){: style="max-width:90%;"}
+![キャンバスのファンネルレポート(&quot を含む);最後の7 日間"タイムフレームドロップダウンで選択。]({% image_buster /assets/img/funnel_report/funnel_report5.png %}){: style="max-width:90%;"}
 
-### ステップ 2: 目標到達ステップのイベントの選択
+### ステップ 2:目標到達ステップのイベントの選択
 
 すべての目標到達プロセスレポートで、最初のイベントはユーザーがメッセージを受信したときです。そこから、選択した後続のイベントによって、それらのイベントおよびそれ以前のイベントを実行したユーザーの数が分類されます。 
 
@@ -54,7 +54,7 @@ tool: Reports
 **ステップ** レポートイベントとのインタラクションは、メールまたはプッシュメッセージング チャネルs を使用するキャンバスステップでのみ使用できます。
 {% endalert %}
 
-\![使用可能なレポート項目のドロップダウンがあるキャンバスのファンネルレポート。]({% image_buster /assets/img/funnel_report/funnel_report3.png %}){: style="max-width:80%;"}
+![使用可能なレポートイベントのドロップダウンがあるキャンバスのファンネルレポート。]({% image_buster /assets/img/funnel_report/funnel_report3.png %}){: style="max-width:80%;"}
 
 目標到達プロセスレポートでは、最初に設定したコンバージョンイベントやメッセージエンゲージメントイベントだけでなく、メッセージの成功度を比較できます。そのため、当初追加していないコンバージョンイベントがある場合でも、目標到達プロセスを使用してそのイベントでのコンバージョンを追跡できます。
 
@@ -75,7 +75,7 @@ tool: Reports
 - **再生成オプション**: レポートの再生成を可能にし、現在のレポートが最後に生成された日時を示す。 
 - **バリアント**: 目標到達プロセスレポートでは、最大 8 つのバリアントと 1 つのコントロールグループを使用でき、色付きの柱で表されます。デフォルトの**チャート**には 3 つのバリアントのみが表示されます。詳細を確認するには、残りのバリアントを手動で選択します。
 
-\![ファンネルレポート図。]({% image_buster /assets/img/funnel_report/funnel_report4.jpg %})
+![ファンネルレポート図。]({% image_buster /assets/img/funnel_report/funnel_report4.jpg %})
 
 **複数のバリアントを持つキャンペーンの場合**: Brazeは、各イベントとバリアントの測定基準と、コントロールからの変化率を表に表示する。コンバージョン率とは、メッセージ受信者1人あたりがイベント（およびその後のイベント）を実行したユーザー数である。
 

@@ -22,7 +22,7 @@ When Dark Mode is enabled, the device's native menus and screens (push notificat
 
 ## Setting a Dark Mode theme
 
-The Dark Mode option, located in the Style tab when [creating an in-app message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/), lets you add an alternate color theme for users who are in Dark Mode on their device.
+Dark Mode, located in the **Design** tab when [creating an in-app message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/), lets you add an alternate color theme for users who are in Dark Mode on their device.
 
 ![User switching between Light Mode style and Dark Mode styles in the Style tab when creating an in-app message.]({% image_buster /assets/img_archive/iam-dark-mode.gif %})
 

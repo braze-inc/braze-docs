@@ -2,11 +2,7 @@
 
 ## Standard-Nutzerattribute
 
-Um Nutzer:innen-Attribute zu setzen, die von Braze automatisch gesammelt werden, können Sie die Setter-Methoden verwenden, die mit dem SDK geliefert werden.
-
-```dart
-braze.setFirstName('Name');
-```
+### Unterstützte Attribute
 
 Die folgenden Attribute werden unterstützt:
 
@@ -23,6 +19,14 @@ Die folgenden Attribute werden unterstützt:
 {% alert important %}
 Alle String-Werte wie Vorname, Nachname, Land und Wohnort sind auf 255 Zeichen begrenzt.
 {% endalert %}
+
+### Einstellung von Standardattributen 
+
+Um Nutzer:innen-Attribute zu setzen, die von Braze automatisch erfasst werden, können Sie die im SDK enthaltenen Setter-Methoden verwenden.
+
+```dart
+braze.setFirstName('Name');
+```
 
 ## Angepasste Nutzerattribute
 
@@ -89,7 +93,9 @@ braze.removeFromCustomAttributeArray("key", "attribute");
 Angepasste Attributwerte haben eine maximale Länge von 255 Zeichen; längere Werte werden abgeschnitten.
 {% endalert %}
 
-### Zurücksetzen eines benutzerdefinierten Attributs
+### Angepasste Attribute nicht anpassen
+
+Um ein angepasstes Attribut wieder freizugeben, übergeben Sie den entsprechenden Attributschlüssel an die Methode `unsetCustomUserAttribute`.
 
 ```dart
 braze.unsetCustomUserAttribute('attribute_key');

@@ -89,7 +89,7 @@ th:nth-child(6), td:nth-child(6) {
     </thead>
     <tbody>
         <tr>
-            <td><code>名称</code></td>
+            <td><code>title</code></td>
             <td>画面上部に表示されるタイトル。</td>
             <td>はい</td>
             <td></td>
@@ -97,15 +97,15 @@ th:nth-child(6), td:nth-child(6) {
             <td>実行中</td>
         </tr>
         <tr>
-            <td><code>アイコン</code></td>
-            <td>どのアイコンを使用するかを表す文字列。</td>
+            <td><code>icon</code></td>
+            <td>どのアイコンを使うかを表す文字列。</td>
             <td>いいえ</td>
             <td><code>RUNNING_HOME</code></td>
             <td>string</td>
             <td>HEART_DETAILS</td>
         </tr>
         <tr>
-            <td><code>画像, 写真</code></td>
+            <td><code>image</code></td>
             <td>画像, 写真のURL。</td>
             <td>はい</td>
             <td></td>
@@ -121,24 +121,24 @@ th:nth-child(6), td:nth-child(6) {
             <td>This%20workout%20is%20awesome%21</td>
         </tr>
         <tr>
-            <td><code>ワークアウト</code></td>
-            <td>ワークアウトの名前だ。で送られた。 <code>st_completed_class</code>イベントで送られた。</td>
+            <td><code>workout</code></td>
+            <td>ワークアウトの名前だ。で送られた。 <code>st_completed_class</code> イベントを開催した。</td>
             <td>はい</td>
             <td></td>
             <td>数値</td>
             <td>5キロマラソン</td>
         </tr>
         <tr>
-            <td><code>カロリー</code></td>
-            <td>アクティブなワークアウト画面に表示するカロリー数。で送られた。 <code>st_completed_class</code>イベントで送られた。</td>
+            <td><code>calories</code></td>
+            <td>アクティブ・ワークアウト画面に表示するカロリー数。で送られた。 <code>st_completed_class</code> イベントを開催した。</td>
             <td>いいえ</td>
             <td>500～1,250の乱数</td>
             <td>数値</td>
             <td>600</td>
         </tr>
         <tr>
-            <td><code>長さ</code></td>
-            <td>ワークアウトの長さ。で送られた。 <code>st_completed_class</code>イベントで送られた。</td>
+            <td><code>length</code></td>
+            <td>ワークアウトの長さ。で送られた。 <code>st_completed_class</code> イベントを開催した。</td>
             <td>いいえ</td>
             <td></td>
             <td>数値</td>
@@ -186,7 +186,7 @@ th:nth-child(6), td:nth-child(6) {
         </tr>
         <tr>
             <td><code>workout_info_right_icon</code></td>
-            <td>アクティブなワークアウト画面の右カードに使用されるアイコンである。</td>
+            <td>アクティブなワークアウト画面の右カードで使用するアイコンである。</td>
             <td>いいえ</td>
             <td></td>
             <td>string</td>
@@ -199,12 +199,12 @@ th:nth-child(6), td:nth-child(6) {
 
 | アイコン | 画像 |
 | --- | --- |
-| `RUNNING_HOME` | \![ランニングシューズのアイコンだ。]({% image_buster /assets/img/braze_pilot/running_home_icon.png %}){:style="max-width:30%"} |
-| `HEART_DETAILS` | \![ハートのアイコンだ。]({% image_buster /assets/img/braze_pilot/heart_details_icon.png %}){:style="max-width:30%"} |
-| `TIMER_DETAILS` | \![ストップウォッチのアイコンだ。]({% image_buster /assets/img/braze_pilot/timer_details_icon.png %}){:style="max-width:30%"} |
-| `YOGA_HOME` | \![ヨガのポーズをとる人のアイコンだ。]({% image_buster /assets/img/braze_pilot/yoga_home_icon.png %}){:style="max-width:30%"} |
-| `BICYCLE_HOME` | \![自転車のアイコンだ。]({% image_buster /assets/img/braze_pilot/bicycle_home_icon.png %}){:style="max-width:30%"} |
-| `DUMBBELL_HOME` | \![ダンベルのアイコンだ。]({% image_buster /assets/img/braze_pilot/dumbbell_home_icon.png %}){:style="max-width:30%"} |
+| `RUNNING_HOME` | ![ランニングシューズのアイコンだ。]({% image_buster /assets/img/braze_pilot/running_home_icon.png %}){:style="max-width:30%"} |
+| `HEART_DETAILS` | ![ハートのアイコンだ。]({% image_buster /assets/img/braze_pilot/heart_details_icon.png %}){:style="max-width:30%"} |
+| `TIMER_DETAILS` | ![ストップウォッチのアイコン。]({% image_buster /assets/img/braze_pilot/timer_details_icon.png %}){:style="max-width:30%"} |
+| `YOGA_HOME` | ![ヨガのポーズをとる人のアイコン。]({% image_buster /assets/img/braze_pilot/yoga_home_icon.png %}){:style="max-width:30%"} |
+| `BICYCLE_HOME` | ![自転車のアイコンだ。]({% image_buster /assets/img/braze_pilot/bicycle_home_icon.png %}){:style="max-width:30%"} |
+| `DUMBBELL_HOME` | ![ダンベルのアイコンだ。]({% image_buster /assets/img/braze_pilot/dumbbell_home_icon.png %}){:style="max-width:30%"} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## PantsLabyrinth
@@ -272,7 +272,7 @@ th:nth-child(6), td:nth-child(6) {
     </thead>
     <tbody>
         <tr>
-            <td><code>名前</code></td>
+            <td><code>name</code></td>
             <td>アイテムの名前。</td>
             <td>はい</td>
             <td></td>
@@ -280,7 +280,7 @@ th:nth-child(6), td:nth-child(6) {
             <td>ジーンズ</td>
         </tr>
         <tr>
-            <td><code>価格</code></td>
+            <td><code>price</code></td>
             <td>商品の価格。</td>
             <td>はい</td>
             <td></td>
@@ -288,7 +288,7 @@ th:nth-child(6), td:nth-child(6) {
             <td>85</td>
         </tr>
         <tr>
-            <td><code>画像, 写真</code></td>
+            <td><code>image</code></td>
             <td>画像, 写真のURL。</td>
             <td>はい</td>
             <td></td>
@@ -296,15 +296,15 @@ th:nth-child(6), td:nth-child(6) {
             <td><code>https://picsum.photos/400</code></td>
         </tr>
         <tr>
-            <td><code>記述</code></td>
-            <td>アイテムの説明。</td>
+            <td><code>description</code></td>
+            <td>商品の説明。</td>
             <td>はい</td>
             <td></td>
             <td>string</td>
             <td>This%20item%20is%20awesome%21</td>
         </tr>
         <tr>
-            <td><code>数量</code></td>
+            <td><code>quantity</code></td>
             <td>商品の数量。</td>
             <td>いいえ</td>
             <td>1</td>
@@ -320,7 +320,7 @@ th:nth-child(6), td:nth-child(6) {
             <td>大型</td>
         </tr>
         <tr>
-            <td><code>カラーズ</code></td>
+            <td><code>colors</code></td>
             <td>コンマで区切られた16進数の色のリスト。これらはこのアイテムで利用可能な色である。</td>
             <td>いいえ</td>
             <td>%23000000</td>

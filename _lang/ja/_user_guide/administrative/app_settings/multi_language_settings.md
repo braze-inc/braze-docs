@@ -21,19 +21,19 @@ description: "この記事では、Braze ダッシュボードの多言語設定
 ## ロケールを追加する
 
 1. [**設定**] > [**多言語設定**] ([**ワークスペース設定**] の下) に移動します。
-2. [**ロケールを追加**] を選択し、[**デフォルトのロケール**] または [**カスタム属性**] を選択します。<br><br>\!["Add locale"ドロップダウンでデフォルトロケールまたはカスタム属性sを選択します。]({% image_buster /assets/img/multi-language_support/add_locale_options.png %}){: style="max-width:40%;"}
+2. [**ロケールを追加**] を選択し、[**デフォルトのロケール**] または [**カスタム属性**] を選択します。<br><br>![デフォルトのロケールまたはカスタム属性を選択するオプションがある [ロケールを追加] ドロップダウン。]({% image_buster /assets/img/multi-language_support/add_locale_options.png %}){: style="max-width:40%;"}
 3. ロケールの名前を入力する。
 4. 選択したロケールオプションに対応するユーザー属性を選択します。
 
 {% tabs %}
 {% tab Default locale %}
 
-**デフォルトロケール**の場合、ドロップダウンを使用して、追加する言語、およびオプションで言語に関連付ける国を選択します。<br><br>\!["Add locale -デフォルト言語とCountry"というウィンドウ。言語と国を指定します。]({% image_buster /assets/img/multi-language_support/default_option.png %}){: style="max-width:80%;"}
+**デフォルトロケール**の場合、ドロップダウンを使用して、追加する言語、およびオプションで言語に関連付ける国を選択します。<br><br>!["Add locale - Default Language and Country" というウィンドウで、言語と国を指定します。]({% image_buster /assets/img/multi-language_support/default_option.png %}){: style="max-width:80%;"}
 
 {% endtab %}
 {% tab Custom attributes %}
 
-**Custom Attributes** の場合、ドロップダウンを使用して関連付けられたカスタム属性を選択し、テキストフィールドに値を入力します。<br><br>\!["Add locale - カスタム属性 s" というウィンドウ。カスタム属性と数値を指定します。]({% image_buster /assets/img/multi-language_support/custom_attributes_option.png %}){: style="max-width:80%;"}
+**Custom Attributes** の場合、ドロップダウンを使用して関連付けられたカスタム属性を選択し、テキストフィールドに値を入力します。<br><br>!["Add locale - カスタム属性 s" というウィンドウで、カスタム属性と数値を指定します。]({% image_buster /assets/img/multi-language_support/custom_attributes_option.png %}){: style="max-width:80%;"}
 
 {% endtab %}
 {% endtabs %}

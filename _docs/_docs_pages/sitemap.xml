@@ -15,7 +15,7 @@ layout: bare
       {%- assign hide_url = col_info.hidden -%}
     {%- endif -%}
   {%- endif -%}
-  {% unless hide_url or page.layout == 'redirect' or page.layout == 'blank_config' or page.noindex == true %}
+  {% unless hide_url or page.layout == 'redirect' or page.layout == 'blank_config' or page.noindex == true or page.config_only == true %}
   <url>
     <loc>{{site.homeurl}}{{site.baseurl}}{{ page.url }}</loc>
     <lastmod>{{site.time | date: "%Y-%m-%d"}}</lastmod>

@@ -34,20 +34,20 @@ tool: Canvas
 
 1. テンプレート名の横にある**編集**を選択します。
 
-\![キャンバスの現在のタイトルと説明。]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/select_edit_details.png %}){: style="max-width:50%;"}
+![キャンバスの現在のタイトルと説明。]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/select_edit_details.png %}){: style="max-width:50%;"}
 
 {:start="2"}
 2\.キャンバス名を更新し、このキャンバスが最近のユーザーをターゲット設定するためのものであることを示すようにします。
 3\.説明を更新し、このキャンバスの目的はユーザーに対しフィードバック送信を促すことであることを明記します。
 4. キャンバスのホームページでフィルターをかけるために、タグ「**フィードバック**」を追加する。
 
-\![キャンバスの新しい名前と説明。新しい記述にはこうある：'PWD3、リキッド・ミラージュの今後の拡大に向けた関心を測るための購入後のフィードバック・キャンバス'。]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/enter_new_canvas_name.png %}){: style="max-width:50%;"}
+![キャンバスの新しい名前と説明。新しい記述にはこうある：'PWD3、リキッド・ミラージュの今後の拡大に向けた関心を測るための購入後のフィードバック・キャンバス'。]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/enter_new_canvas_name.png %}){: style="max-width:50%;"}
 
-### ステップ 2: コンバージョンイベントを割り当てる
+### ステップ 2:コンバージョンイベントを割り当てる
 
 次に、コンバージョンイベントを割り当てよう。[**1次コンバージョンイベント - A**] を [**特定の購入**] に更新し、[**Proxy War**] を選択します。
 
-\!["コンバージョンイベントのS&quotを割り当てる;プロキシウォーのゲームプロダクトを購入するコンバージョンイベントの種類のセクション。]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/select_conversion_event.png %}){: style="max-width:90%;"}
+!["コンバージョンイベントのS"を割り当てます。プロキシウォーのゲームプロダクトを購入するコンバージョンイベントの種類のセクションです。]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/select_conversion_event.png %}){: style="max-width:90%;"}
 
 テンプレートのコンバージョン期限を3日にしておくのは、直近のユーザーをターゲットにしたいからだ。
 
@@ -63,7 +63,7 @@ tool: Canvas
 1. ターゲットセグメント「Proxy War 3を購入したユーザー」を選択する。
 2. 「Proxy War 3」の購入回数が「0」回よりも多いユーザーを含めるフィルターを選択します。
 
-\![Segmentは" Purchased Proxy War 3" そのSegmentは、ゲームを購入したユーザー s です。]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/entry_window_segment.png %}){: style="max-width:90%;"}
+![「&quot」という名前のSegment、「Purchased Proxy War 3&quot」、そのSegmentは、ゲームを購入したユーザーを表示します。]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/entry_window_segment.png %}){: style="max-width:90%;"}
 
 {: start="3"}
 3\.エントリコントロールを更新して、キャンバスの最長期間の経過後にユーザーがキャンバスに再びエントリできないようにします。
@@ -74,7 +74,7 @@ tool: Canvas
 
 送信には細心の注意を払いたいので、[**サイレント時間を有効にする**] を選択して、ユーザーのタイムゾーンで午後11時から午前10時の間にフィードバックをリクエストすることを避け、次に送信可能な時間にのみ送信するようにします。
 
-\!["Settings&quot を送信;登録または選択されているユーザーを対象としたステップ。静かな時間がオンになっている。]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/send_settings_with_quiet_hours.png %}){: style="max-width:90%;"}
+![サブスクリプション登録済みまたはオプトイン済みのユーザーをターゲットに設定する「送信設定」ステップ。静かな時間がオンになっている。]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/send_settings_with_quiet_hours.png %}){: style="max-width:90%;"}
 
 この例では、他の設定 (フリークエンシーキャップとシードグループ) は省略します。
 
@@ -103,13 +103,13 @@ tool: Canvas
 4. 3つのアンケート選択肢のそれぞれについて、カスタム属性として「**カスタマーエクスペリエンス フィードバック**」を選択する。 
 5. ユーザープロファイルの属性値は、カスタム属性と一致しているので、そのままにしておきます。
 
-\![プロキシー・ウォー3の最近の買収を3つの選択肢で楽しんだかどうかをユーザーに尋ねる調査:"Loved it", "それはOK"と"はme"ではありません。]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/survey_example_iam.png %}){: style="max-width:90%;"}
+![最近購入したProxy War 3が面白かったかどうかを3つの選択肢でユーザーに尋ねるアンケート："Loved it", "それはOK"と"はme"ではありません。]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/survey_example_iam.png %}){: style="max-width:90%;"}
 
 #### アクションパスを構築する
 
 カスタム属性（`Experience Feedback` ）と前のセクションの属性値を使って、テンプレートのアクションパスを更新し、属性と値を一致させる。
 
-\!["Good フィードバック"アクションパスステップのグループ。応答したユーザー"Loved it"を調査に含めます。]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/action_path_good_example.png %}){: style="max-width:90%;"}
+!["Good フィードバック"アクションパスステップのグループには、&quot に応答したユーザーが含まれます。Loved it"を調査に割り当てます。]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/action_path_good_example.png %}){: style="max-width:90%;"}
 
 ### 広告リターゲティングを設定する
 
@@ -121,9 +121,9 @@ tool: Canvas
 
 **サポートケースの作成**という名前のメッセージステップでは、テンプレートを更新して、購入した商品に満足できず返金を希望するユーザーを対象とする Webhook を作成します。
 
-\![否定的な感情を持ち、プロキシー・ウォーの買収代金の返金を望む顧客のための支援ケースを作り出すWebhook3.]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/webhook_example.png %}){: style="max-width:90%;"}
+![否定的な感情を持ち、代理戦争3の買収のための返金を望む顧客のための支援ケースを作り出すWebhook。]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/webhook_example.png %}){: style="max-width:90%;"}
 
-### ステップ6: キャンバスをテストして起動する
+### ステップ 6: キャンバスをテストして起動する
 
 キャンバスをテストし、期待通りに動作することを確認したら、[**キャンバスを起動**] を選択してキャンバスを起動します。これで、パーソナライズされたユーザージャーニーでユーザーを意図的にターゲット設定し、最近の『Proxy War 3』の購入に基づいてフィードバック調査に回答するように促すことができます。
 

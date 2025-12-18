@@ -41,13 +41,13 @@ Braze の [**パートナー連携**] > [**テクノロジーパートナー**] 
 
 WhatsApp パートナーページで、[**統合を開始**] を選択します。
 
-\![パートナページをWhatsAppして、インテグレーションを開始します。]({% image_buster /assets/img/whatsapp/whatsapp1.png %}){: style="max-width:70%;"}
+![WhatsAppパートナーページにはパートナー連携を開始するボタンがある。]({% image_buster /assets/img/whatsapp/whatsapp1.png %}){: style="max-width:70%;"}
 
 開いたウィンドウで [**次へ**] を選択し、[**統合を開始**] ボタンが表示されるまで続けます。ボタンを選択し、統合プロセスを開始します。
 
-\![BrazeをWhatsAppに接続するための指示。]({% image_buster /assets/img/whatsapp/instructions.png %}){: style="max-width:50%;"}
+![BrazeとWhatsAppの接続方法。]({% image_buster /assets/img/whatsapp/instructions.png %}){: style="max-width:50%;"}
 
-### ステップ 2: WhatsAppのセットアップ
+### ステップ 2:WhatsAppのセットアップ
 
 次に、Brazeセットアップのワークフローが表示される。ステップバイステップのウォークスルーについては、[WhatsApp 埋め込みサインアップ]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/embedded_signup/)を参照してください。 
 
@@ -64,16 +64,16 @@ WhatsApp パートナーページで、[**統合を開始**] を選択します�
 
 1. [**[テンプレートマネージャー](https://business.facebook.com/wa/manage/message-templates)**] に移動します。<br>
 Meta Business Manager で、**Account Tools** の下にある [**メッセージテンプレート**] を選択します。
-次に、[**テンプレートを作成**] を選択します。<br><br>\![WhatsAppマネージャ。メッセージテンプレートの一覧が表示されます。]({% image_buster /assets/img/whatsapp/whatsapp2.png %}){: style="max-width:100%;"}<br><br>
+次に、[**テンプレートを作成**] を選択します。<br><br>![WhatsApp マネージャーとメッセージテンプレートの一覧。]({% image_buster /assets/img/whatsapp/whatsapp2.png %}){: style="max-width:100%;"}<br><br>
 2. **メッセージの設定**<br>
 新しいメッセージ・テンプレート・コンポーザーで、メッセージのカテゴリーを選択し、テンプレートに名前を付け、サポートしたい言語を選択する。後で言語を削除したり追加したりすることもできる。<br><br> 
 	利用可能なメッセージテンプレートのカテゴリーには以下のものがある：
 	- マーケティング: キャンペーンや製品情報などを配信し、認知度とエンゲージメントを高める
 	- ユーティリティ: アカウント更新、注文更新、アラートなどを送信し、重要な情報を共有する
 	- 認証: 顧客がアカウントにアクセスできるようにするコードを送信する<br><br> 
-	\![マーケティング、ユーティリティ、認証のカテゴリを持つメッセージテンプレートコンポーザー。]({% image_buster /assets/img/whatsapp/whatsapp3.png %}){: style="max-width:100%;"}<br><br>
+	![マーケティング、ユーティリティ、認証のカテゴリを持つメッセージテンプレート作成画面。]({% image_buster /assets/img/whatsapp/whatsapp3.png %}){: style="max-width:100%;"}<br><br>
 3. **テンプレートを編集する**<br>
-次に、メッセージテンプレートを作成します。<br><br>テキストまたはメディアヘッダー、テキスト本文、メッセージフッタ、およびボタンを指定できます。現在、ビデオとドキュメントのヘッダーは使用できず、ヘッダーはテキストまたは画像のいずれかでなければなりません。追加したすべてのメディアは、確認処理の例として機能し、**はテンプレートメッセージに含まれていません**。Brazeで用紙を追加する必要があります。画面にメッセージのプレビューが表示されます。<br><br>Meta は Liquid をサポートしていませんが、後で Braze で Liquid 変数に置き換えることができる変数をテンプレート化することができます。[**\+ 変数を追加**] ボタンを選択します。<br><br>\![テンプレート作成者]]({% image_buster /assets/img/whatsapp/whatsapp4.png %}){: style="max-width:100%;"}
+次に、メッセージテンプレートを作成する。<br><br>テキストまたはメディアヘッダー、本文、メッセージフッター、ボタンを提供できる。現在、ビデオとドキュメントのヘッダーは使用できず、ヘッダーはテキストまたは画像のいずれかでなければなりません。あなたが追加したメディアは、審査プロセスの例となり、テンプレートメッセージには含ま**れない**。Brazeでメディアを追加する必要がある。メッセージのプレビューがパネルに表示される。<br><br>Meta は Liquid をサポートしていませんが、後で Braze で Liquid 変数に置き換えることができる変数をテンプレート化することができます。[**\+ 変数を追加**] ボタンを選択します。<br><br>![テンプレート作曲家。]({% image_buster /assets/img/whatsapp/whatsapp4.png %}){: style="max-width:100%;"}
 
 テンプレートが完成したら、[**送信**] をクリックします。 
 

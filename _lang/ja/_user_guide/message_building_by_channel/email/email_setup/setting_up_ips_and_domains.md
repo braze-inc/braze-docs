@@ -32,6 +32,8 @@ description: "この記事では、Braze 経由でメールを送信するため
 
 IP、ドメイン、サブドメイン、IPプールの設定が完了したら、DNSレコードのリストをお送りする。エンジニアや開発者に、必要な場所にこれらのDNSレコードを追加するよう依頼し、追加後、Braze Onboardingチームに知らせる。
 
+{% multi_lang_include dns_records.md %}
+
 ### 次のステップ
 
 当社で、お客様の設定を社内システムでチェックし、すべての情報を検証します。Braze のオンボーディングチームが、準備が整ったとき、または DNS レコードに問題があり、お客様が社内の開発チームと対処しなければならない場合にご連絡します。
@@ -63,7 +65,7 @@ IP、ドメイン、サブドメイン、IPプールの設定が完了したら�
 
 次に、ページの下にあるTXTレコードとCNAMEレコードをDNSプロバイダーに追加する。その後、Braze ダッシュボードに戻って、[**確認**] をクリックします。
 
-\![]({% image_buster /assets/img_archive/email_setup_rdns_records.png %})
+![]({% image_buster /assets/img_archive/email_setup_rdns_records.png %})
 
 {% alert important %}
 送信ドメインは、所有するドメインの下位ドメインである必要があります。例えば、「example.com」を所有している場合、サブドメインは「mail.example.com」になり、送信アドレス「@mail.example.com」を使用できます。

@@ -61,9 +61,9 @@ guide_menu_list:
   image: /assets/img/braze_icons/annotation-question.svg
 ---
 
-## [Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/push-fundamentals){: style="float:right;width:120px;border:0;" class="noimgborder"} ユースケース
+## [![Braze ラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/push-fundamentals){: style="float:right;width:120px;border:0;" class="noimgborder"} ユースケース
 
-\![アップル製品を横断するプッシュメッセージの例。]({% image_buster /assets/img/red-dress.gif %}){: height="400px"} iPhoneのホーム画面にStopwatchのプッシュメッセージが表示される：「こんにちは。これは iOS プッシュ通知です。」]({% image_buster /assets/img/ios_push.png %}){: height="400px"}
+![複数の Apple 製品にわたるプッシュ通知メッセージの例。]({% image_buster /assets/img/red-dress.gif %}){: height="400px"} ![iPhoneのホーム画面に表示されるStopwatchのプッシュメッセージの例:「こんにちは。これは iOS プッシュ通知です。」]({% image_buster /assets/img/ios_push.png %}){: height="400px"}
 
 プッシュ通知は、新しいユーザーを引き付け、再エンゲージメントキャンペーンを行うための非常に優れたツールです。一般的なプッシュメッセージユースケースの例を次に示します。
 

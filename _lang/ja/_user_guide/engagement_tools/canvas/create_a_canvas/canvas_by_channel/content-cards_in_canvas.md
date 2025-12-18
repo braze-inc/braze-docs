@@ -15,7 +15,7 @@ channel: content cards
 
 他のキャンバスのメッセージングチャネルと同様に、コンテンツカードは、そのステップに指定されたオーディエンスとターゲット設定の条件を満たしたときにユーザーのデバイスに送信されます。コンテンツカードが送信されると、次にカードフィードが更新されたときに、対象となる各ユーザーのフィードで使用できるようになります。
 
-\![メッセージステップのメッセージング チャネルとして選択されたコンテンツカード。]({% image_buster /assets/img_archive/content-cards-in-canvas.png %})
+![メッセージステップのメッセージングチャネルとして選択されたコンテンツカード。]({% image_buster /assets/img_archive/content-cards-in-canvas.png %})
 
 コンテンツカードステップとキャンバスとのインタラクションを変更する 2 つのオプションとして、[有効期限](#content-card-expiration)と[削除](#removal)があります。
 
@@ -23,7 +23,7 @@ channel: content cards
 
 新しいコンテンツカードを作成する際、送信時間に基づいてユーザーのフィードで使用できなくなる期限を選択できます。コンテンツカードの有効期限のカウントダウンは、カードが送信されたキャンバス内のメッセージステップにユーザーが到達するとすぐに開始されます。この時点から有効期限が切れるまで、カードはユーザーのフィードでアクティブになります。カードはユーザーのフィードで最大 30 日間使用することができます。 
 
-\![ユーザーのフィードで3時間後に削除されるメッセージステップのコンテンツカードの期限切れ設定s。]({% image_buster /assets/img_archive/content-cards-in-canvas-expiration.png %})
+![メッセージステップのコンテンツカードの有効期限設定。ユーザーのフィードで3時間後に削除される。]({% image_buster /assets/img_archive/content-cards-in-canvas-expiration.png %})
 
 ### 有効期限の種類
 
@@ -51,13 +51,13 @@ channel: content cards
 
 コンテンツカードは、ユーザーが購入を完了するか、カスタムイベントを実行する時点で削除できます。削除イベントとして、[**カスタムイベントを実行**] または [**購入**] のいずれかを選択できます。次に [**イベントを追加**] を選択します。
 
-\!["カード s ユーザーが購入を完了したとき、またはカスタムイベント.&quot を実行したときに削除します。カード s を削除するには、&quot の購入を行ったユーザーのトリガーを使用します。]({% image_buster /assets/img_archive/content-cards-in-canvas-removal-event.png %})
+!["ブレスレット "を購入したユーザーのカードを削除するトリガーで "Remove cards when users complete a purchase or perform a custom event. "を選択した。]({% image_buster /assets/img_archive/content-cards-in-canvas-removal-event.png %})
 
 ## レポートと分析
 
 キャンバスでコンテンツカードステップを開始した後、このステップについていくつかの指標の分析を開始できます。これらの指標には、送信されたメッセージ数、ユニーク受信者数、コンバージョン率、総収益などが含まれます。
 
-\![コンテンツカードメッセージパフォーマンスを含むメッセージステップの分析。]({% image_buster /assets/img_archive/content-cards-in-canvas-analytics.png %})
+![コンテンツカードのメッセージパフォーマンスでメッセージステップを分析する。]({% image_buster /assets/img_archive/content-cards-in-canvas-analytics.png %})
 
 利用可能な指標とその定義の詳細については、[レポート指標の用語集]({{site.baseurl}}/user_guide/data/report_metrics/)を参照してください。
 

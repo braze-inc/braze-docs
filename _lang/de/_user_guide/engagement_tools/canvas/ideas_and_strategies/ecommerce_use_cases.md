@@ -11,8 +11,8 @@ toc_headers: h2
 
 > Braze-Canvas bietet mehrere vorgefertigte Templates, die speziell auf E-Commerce Marketer zugeschnitten sind und die Umsetzung wichtiger Strategien erleichtern. Auf dieser Seite finden Sie einige wichtige Templates, die Sie verwenden können, um Ihre Customer Journey zu verbessern.
 
-{% alert note %}
-Braze weiß, dass die Planung von Daten Zeit braucht. Wir ermutigen unsere Kund:in, ihre Entwickler:in-Teams einzuarbeiten und jetzt mit dem Versand von E-Commerce Events zu beginnen. Auch wenn einige Features bei den empfohlenen E-Commerce-Ereignissen nicht sofort verfügbar sind, können Sie sich auf die Einführung neuer Produkte im Laufe des Jahres 2025 freuen, die Ihre E-Commerce-Funktionen verbessern werden.
+{% alert important %}
+[E-Commerce empfohlene Veranstaltungen]({{site.baseurl}}/user_guide/data/custom_data/recommended_events/ecommerce_events/) sind derzeit im frühen Zugriff. Wenden Sie sich an Ihren Customer-Success-Manager:in von Braze, wenn Sie an diesem frühzeitigen Zugang teilnehmen möchten. <br><br>Wenn Sie den neuen Shopify Konnektor verwenden, werden die empfohlenen E-Commerce-Ereignisse automatisch über die Integration verfügbar sein.
 {% endalert %}
 
 ## Verwendung einer Canvas-Vorlage
@@ -21,7 +21,7 @@ So verwenden Sie eine Canvas-Vorlage:
 1. Gehen Sie zu **Messaging** > **Canvas**.
 2. Wählen Sie **Canvas erstellen** > **Eine Canvas-Vorlage verwenden**.
 3. Suchen Sie auf dem Tab **Braze-Vorlagen** nach der gewünschten Vorlage. Sie können eine Vorschau eines Templates anzeigen, indem Sie seinen Namen auswählen.
-4. Wählen Sie **Vorlage anwenden** für die Vorlage, die Sie verwenden möchten.<br><br>![Die Seite "Canvas-Vorlagen" wurde auf dem Tab "Braze-Vorlagen" geöffnet und zeigt eine Liste der zuletzt verwendeten Templates und der auswählbaren Braze-Vorlagen.][2]{: style="max-width:80%;"}
+4. Wählen Sie **Vorlage anwenden** für die Vorlage, die Sie verwenden möchten.<br><br>!["Canvas-Vorlagen" öffnete den Tab "Braze-Vorlagen" und zeigt eine Liste der zuletzt verwendeten Templates und der auswählbaren Braze-Vorlagen.]({% image_buster /assets/img_archive/apply_template.png %}){: style="max-width:80%;"}
 
 ## E-Commerce Templates
 
@@ -34,7 +34,7 @@ So verwenden Sie eine Canvas-Vorlage:
 
 Verwenden Sie das Template **Abgebrochenes Stöbern**, um Nutzer:innen zu engagieren, die sich Produkte angesehen, aber nicht in den Warenkorb gelegt oder eine Bestellung aufgegeben haben.
 
-![Ein angewandtes "Abandoned Browse" Canvas Template mit erweiterten "Eingangsregeln".][3]
+![Ein angewandtes "Abandoned Browse" Canvas Template mit erweiterten "Eingangsregeln".]({% image_buster /assets/img_archive/abandoned_browse.png %})
 
 ### Einrichtung
 
@@ -57,7 +57,7 @@ Die folgenden Einstellungen sind in Ihrem Canvas vorkonfiguriert:
     - Eingangskontrollen
         - Nutzer:innen sind berechtigt, diesen Canvas nach Ablauf der gesamten Dauer des Canvas erneut zu betreten.
     - Ausstiegskriterien 
-        - Führt `ecommerce.cart_updated`, `ecommerce.checkout started`, oder `ecommerce.order_placed`<br><br>![Eingangskontrollen und Ausgangskriterien für den Canvas.]({% image_buster /assets/img/ecommerce/abandoned_browse_entry_exit.png %})<br><br> 
+        - Führt `ecommerce.cart_updated`, `ecommerce.checkout_started`, oder `ecommerce.order_placed`<br><br>![Eingangskontrollen und Ausgangskriterien für den Canvas.]({% image_buster /assets/img/ecommerce/abandoned_browse_entry_exit.png %})<br><br> 
 - Einstellungen senden 
     - Nutzer:innen, die Abonnent:in sind oder ein Opt-in haben 
 - Verzögerungsstufe
@@ -97,7 +97,7 @@ Hier sehen Sie ein Beispiel dafür, wie Sie einen HTML-Produktblock für Ihre E-
 
 Verwenden Sie das Template **Abgebrochener Warenkorb-Abbruch**, um potenzielle entgangene Umsätze von Kunden zu decken, die Produkte in ihren Warenkorb gelegt haben, aber nicht zur Kasse gegangen sind oder eine Bestellung aufgegeben haben. 
 
-![Ein angewandtes "Warenkorb-Abbruch" Canvas Template mit erweiterten "Eingangsregeln".][4]
+![Ein angewandtes "Warenkorb-Abbruch" Canvas Template mit erweiterten "Eingangsregeln".]({% image_buster /assets/img_archive/abandoned_cart.png %})
 
 ### Einrichtung
 
@@ -176,7 +176,7 @@ Wenn Sie Shopify verwenden, erstellen Sie die URL Ihres Warenkorbs mit Hilfe die
 
 {% raw %}
 ```liquid
-{{context.source}}/checkouts/cn/{{context.cart_id}}
+{{context.${source}}}/checkouts/cn/{{context.${cart_id}}} 
 ```
 {% endraw %}
 
@@ -184,7 +184,7 @@ Wenn Sie Shopify verwenden, erstellen Sie die URL Ihres Warenkorbs mit Hilfe die
 
 Verwenden Sie das **Abandoned Checkout** Template, um Kunden:in anzusprechen, die den Checkout-Prozess begonnen, aber vor dem Abschicken der Bestellung verlassen haben. 
 
-![Ein angewandtes "Abgebrochene Kasse" Canvas Template mit erweiterten "Eingangsregeln".][5]
+![Eine angewandte "Abgebrochene Kasse"-Canvas-Vorlage mit erweiterten "Eingangsregeln".]({% image_buster /assets/img_archive/abandoned_checkout.png %})
 
 ### Einrichtung
 
@@ -255,13 +255,13 @@ Hier sehen Sie ein Beispiel dafür, wie Sie mit Ihrem `shopping_cart` Liquid-Tag
 
 ## Auftragsbestätigung und Umfrage
 
-Verwenden Sie das Template **Bestellbestätigung & Umfrage**, um erfolgreiche Bestellungen zu bestätigen und die Kundenzufriedenheit zu erhöhen.
+Verwenden Sie die Vorlage für die **Feedback-Umfrage zur Bestellbestätigung & **, um erfolgreiche Bestellungen zu bestätigen und die Kundenzufriedenheit zu erhöhen.
 
-![Eine angewandte "Auftragsbestätigung" Canvas-Vorlage mit erweiterten "Eingangsregeln".][6]
+![Eine angewandte "Auftragsbestätigung" Canvas-Vorlage mit erweiterten "Eingangsregeln".]({% image_buster /assets/img_archive/order_confirmation_feedback.png %})
 
 ### Einrichtung
 
-Wählen Sie auf der Canvas-Seite **Canvas-Vorlage verwenden** > **Braze-Vorlagen** und wenden Sie dann die Vorlage **Bestellbestätigung & Umfrage** an. 
+Wählen Sie auf der Canvas-Seite **Canvas-Vorlage verwenden** > **Braze-Vorlagen** und wenden Sie dann die Vorlage für die **Umfrage zur Bestellbestätigung & ** an. 
 
 #### Standard Einstellungen
 
@@ -347,6 +347,16 @@ Weitere Informationen zu den ersten Schritten mit Segmenten finden Sie unter [Ü
 Die E-Commerce-Ereignisse basieren auf den [empfohlenen Ereignissen]({{site.baseurl}}/recommended_events/).
 Da es sich bei den empfohlenen Events um angepasste Events handelt, können Sie nach den Namen der empfohlenen E-Commerce Events suchen, indem Sie einen beliebigen [angepassten Event-Filter]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#segmentation-filters) auswählen.
 
+### E-Commerce Filter
+
+Segmentieren Sie Ihre Nutzer:innen mit E-Commerce-Filtern, wie z.B. **E-Commerce-Quelle** und **Gesamtumsatz**, indem Sie den Abschnitt **E-Commerce** im Segmentierer aufrufen.
+
+![Segmente Filter Dropdown mit "E-Commerce" Filter.]({% image_buster /assets/img_archive/ecommerce_filters.png %}){: style="max-width:80%"}
+
+{% alert important %}
+Das Kauf-Event wird in Zukunft veraltet sein und durch die [im E-Commerce empfohlenen Events]({{site.baseurl}}/user_guide/data/custom_data/recommended_events/) ersetzt werden. In diesem Fall werden die Filter für die Segmente nicht mehr unter Kaufverhalten angezeigt. Eine vollständige Liste der Kauf-Events finden Sie unter [Kauf-Events protokollieren]({{site.baseurl}}/user_guide/data/custom_data/purchase_events/#logging-purchase-events).
+{% endalert %}
+
 ## Verschachtelte Event-Eigenschaften
 
 Um nach verschachtelten Event-Eigenschaften zu segmentieren, können Sie [Segment-Erweiterungen]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/#why-use-segment-extensions) nutzen. Mit Segment-Erweiterungen können Sie zum Beispiel herausfinden, wer das Produkt "SKU-123" in den letzten 90 Tagen gekauft hat.
@@ -361,10 +371,5 @@ Um einen [Bericht über angepasste Events]({{site.baseurl}}/user_guide/data_and_
 
 Um Insights über die Trends bei den Bestellungen zu erhalten, die von Ihren lancierten Canvase aus getätigt wurden, müssen Sie ein [Conversions Dashboard]({{site.baseurl}}/user_guide/data_and_analytics/analytics/conversions_dashboard#conversions-dashboard) einrichten und Ihre Canvase angeben.
 
-Für fortgeschrittene Anwendungsfälle der Berichterstellung können Sie den Braze [Query Builder]({{site.baseurl}}/user_guide/data_and_analytics/query_builder/) verwenden, um angepasste Berichte zu erstellen. 
+Für fortgeschrittene Anwendungsfälle der Berichterstellung können Sie den Braze [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/) verwenden, um angepasste Berichte zu erstellen. 
 
-[2]: {% image_buster /assets/img_archive/apply_template.png %}
-[3]: {% image_buster /assets/img_archive/abandoned_browse.png %}
-[4]: {% image_buster /assets/img_archive/abandoned_cart.png %}
-[5]: {% image_buster /assets/img_archive/abandoned_checkout.png %}
-[6]: {% image_buster /assets/img_archive/order_confirmation_feedback.png %}

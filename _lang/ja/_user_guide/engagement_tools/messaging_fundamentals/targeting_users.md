@@ -31,13 +31,13 @@ tool:
 {% tab multiple filters %}
 セグメントを追加せずにユーザーをターゲットにするには、一連のフィルターを使用できます。これは、メッセージ作成中の一時的なオーディエンスであり、1回限りのオーディエンスへの送信時にセグメント作成を省略できます。
 
-\![追加フィルターは、前回開封したユーザーが当日中にアプリを受け取ったことがあり、キャンペーンやキャンバスのステップを受け取ったことがなく、30日以内に購入したことがあるメッセージです。]({% image_buster /assets/img_archive/additional_filters.png %}){: style="max-width:90%;"}
+![最後に開封したユーザーが、その日中にアプリを受け取ったことがあり、キャンペーンやキャンバスのステップを受け取ったことがなく、30日以内に購入したことのある、メッセージの追加フィルター。]({% image_buster /assets/img_archive/additional_filters.png %}){: style="max-width:90%;"}
 {% endtab %}
 
 {% tab segments & filters %}
 また、以前に作成した 1 つ以上のセグメントのユーザーで、他のフィルターにも該当するものをターゲットにすることもできます。最初にセグメントを選択したら、[**追加のフィルター**] セクションでオーディエンスをさらに絞り込むことができます。以下のスクリーンショットにこれが示されています。このスクリーンショットでは、「1日当たりのアクティブユーザー」セグメントと「未開封のメール」セグメントに属し、購入から30日以内のユーザーを対象としています。
 
-\![2つのSegmentsが含まれ、30日前に行われた前回の購入の追加フィルターがあるメッセージのターゲットオプション。]({% image_buster /assets/img_archive/target_segmenter.png %}){: style="max-width:90%;"}
+![2 つのSegment s が含まれ、30 日前に行われた前回の購買のフィルターが追加されているメッセージのターゲットオプション。]({% image_buster /assets/img_archive/target_segmenter.png %}){: style="max-width:90%;"}
 {% endtab %}
 
 {% tab Specific apps %}
@@ -46,18 +46,18 @@ tool:
 
 ただし、1 人のユーザーが複数のアプリを使用することは可能であることに注意してください。[アプリあり] フィルターでは、選択されているアプリを所有しているすべてのユーザーが識別されますが、メッセージを受信するアプリはコントロールされません。例えば [アプリあり] が Android に設定されているセグメントフィルターを適用する場合、iOS アプリも所有しているユーザーは、iOS アプリでもメッセージを受け取ります。
 
-\![アプリ "Hello, World (Android)"を持つユーザーのフィルター。]({% image_buster /assets/img_archive/has_app_hello_world.png %}){: style="max-width:60%;"}
+![アプリ "Hello, World (Android)" を持つユーザー s のフィルター。]({% image_buster /assets/img_archive/has_app_hello_world.png %}){: style="max-width:60%;"}
 
 たとえば、アプリ内メッセージをAndroid アプリにのみ送信するとします。
 
 1. セグメントを作成し、**対象アプリとウェブサイト**を**特定アプリのユーザー**に設定し、Androidアプリを選択します。
 
-\![指定したアプリのユーザーs をターゲットとするSegment。"Test_Android".]({% image_buster /assets/img_archive/app_test_android.png %}){: style="max-width:60%;"}
+![特定のアプリのユーザーs をターゲットとするSegment。"Test_Android".]({% image_buster /assets/img_archive/app_test_android.png %}){: style="max-width:60%;"}
 
 {: start="2"}
 2\.キャンペーンまたはキャンバスで**ターゲットオーディエンス**ステップに移動し、セグメントが [**セグメントを基準にユーザーをターゲットに設定**] セクションに追加されていることを確認します。 
 
-\!["Target Audiences" サンプルSegmentを選択したステップ。]({% image_buster /assets/img_archive/target_users_by_segment_example.png %})
+!["Target Audiences"サンプルSegmentを選択したステップ。]({% image_buster /assets/img_archive/target_users_by_segment_example.png %})
 
 {% alert note %}
 セグメントメンバーシップフィルタを介して**Additional Filters** セクションにセグメントを追加すると、これは機能しません。メッセージをそのアプリにのみ配信するには、**Target Users By Segment**でセグメントを直接参照する必要があります。
@@ -74,13 +74,13 @@ tool:
 
 オーディエンスにセグメントとフィルターを追加したら、[ユーザーを検索]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/)してオーディエンスの条件と一致するかどうかを確認することで、オーディエンスが期待どおりに設定されているかどうかをテストできます。
 
-\!["User Lookup"ボタン"Lookup User"を含むセクション。]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:70%"}
+!["User Lookup"ボタン"Lookup User"を含むセクション。]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:70%"}
 
 #### オーディエンスの概要
 
 **Audience Summary**には、ターゲットオーディエンスにいるユーザーの概要が表示されます。ここでは、最大ユーザー上限を設定したり、配信速度を[レート制限]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/)したりすることで、オーディエンスをさらに制限できます。
 
-\![ " Audience Summary" は、ユーザー上限またはレート制限配信スピードを設定するためのオプションを含むセクションです。]({% image_buster /assets/img_archive/audience_summary.png %})
+!["Audience Summary"は、最高ユーザー上限またはレート制限配信スピードを設定するためのオプションを含むセクションです。]({% image_buster /assets/img_archive/audience_summary.png %})
 
 #### A/B テスト
 
@@ -99,7 +99,7 @@ Braze は、ターゲットチャンネルの詳細な視聴者統計をフッ�
 
 {% multi_lang_include segments.md section='Differing audience size' %}
 
-\![" Total Population" 対象チャネルごとに到達可能なユーザー数の見積もりを含む節。]({% image_buster /assets/img_archive/multi_channel_footer.png %})
+!["Total Population"は、それぞれのターゲットチャネルの到達可能なユーザーの推定数を示します。]({% image_buster /assets/img_archive/multi_channel_footer.png %})
 
 {% alert note %}
 正確な統計の計算には数分かかる。この関数は、フィルターやフィルターグループレベルではなく、セグメントレベルでの正確な統計を計算するだけである。<br><br>

@@ -6,17 +6,17 @@ description: "この記事では、インテリジェントチャネルフィル
 search_rank: 11
 ---
 
-# [Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/most-engaged-channel){: style="float:right;width:120px;border:0;" class="noimgborder"} インテリジェントチャンネルフィルター
+# [![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/most-engaged-channel){: style="float:right;width:120px;border:0;" class="noimgborder"} インテリジェントチャネルフィルター
 
 > `Intelligent Channel` フィルター (旧称 `Most Engaged`) は、選択されたメッセージングチャネルが「最適な」チャネルであるオーディエンスの一部を選択します。 
 
 ## チャネルフィルターについて
 
-\![インテリジェント・チャンネル・フィルターには、選択可能なさまざまなチャンネルのドロップダウンがある。]({% image_buster /assets/img/intelligent_channel_filter.png %}){: style="float:right;max-width:40%;margin-left:10px;margin-top:10px;border:0"}
+![インテリジェント・チャンネル・フィルター(選択可能な各チャンネルのドロップダウン)。]({% image_buster /assets/img/intelligent_channel_filter.png %}){: style="float:right;max-width:40%;margin-left:10px;margin-top:10px;border:0"}
 
 この場合の最良とは、ユーザーの履歴からエンゲージメントの可能性が最も高いチャネルを意味します。メール、SMS、WhatsApp、Web プッシュ、またはモバイルプッシュ (利用可能なモバイル OS またはデバイスを含む) をチャネルとして選択できます。
 
-インテリジェントチャネルは、3 つのチャネルそれぞれのエンゲージメント率をユーザーごとに計算します。これは、過去 6 か月間に受信したメッセージの数に対する、メッセージのインタラクション数 (開封数またはクリック数) の比率を取得することによって行われます。利用可能なチャネルはそれぞれのエンゲージメント率に応じてランク付けされ、最も比率の高いチャネルがそのユーザーについて「エンゲージメントが最も高い」ことになります。 
+インテリジェントチャネルは、過去6ヶ月間のアクティビティにおけるメッセージ受信数に対するメッセージインタラクション（開封またはクリック）の比率を取ることによって、各ユーザーが利用可能なチャネルごとにエンゲージメント率を計算する。利用可能なチャネルはそれぞれのエンゲージメント率に応じてランク付けされ、最も比率の高いチャネルがそのユーザーについて「エンゲージメントが最も高い」ことになります。 
 
 メッセージがユーザーに送信されるたびに、またはユーザーがメッセージと対話するたびに、エンゲージメント比率が数秒以内に再計算されます。ユーザーは、メッセージと対話したときに 1 回のみカウントできます (例えば、同じメールを開封してクリックすると、そのメッセージは 2 回ではなく 1 回だけエンゲージされたとマークされます)。 
 
@@ -34,7 +34,7 @@ Braze が「最良」のチャネルを判定するには、十分なデータ�
 
 例えば、プッシュメッセージを好むユーザーにプッシュを受信させ、十分なデータがないユーザーにも同じプッシュメッセージを受信させたいとします。この場合、インテリジェントチャネルフィルターを [**モバイルプッシュ**] に設定し、[**または**] を使用して、2 番目のインテリジェントチャネルフィルターを [**データ不足**] に設定します。メールを好むユーザーには、インテリジェントチャネルフィルターがメールに設定されている別のキャンペーンで対応できます。
 
-\![モバイル・プッシュのインテリジェント・チャネル・フィルター、またはデータ不足。]({% image_buster /assets/img/intelligent_example.png %}){:style="border:none"}
+![モバイルプッシュやデータ不足のためのインテリジェントチャネルフィルター。]({% image_buster /assets/img/intelligent_example.png %}){:style="border:none"}
 
 {% alert note %}
 [フリークエンシーキャップ]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#delivery-rules)を無視するキャンペーンとキャンバスステップは、インテリジェントチャネルでは考慮されず、データ要件に貢献できません。

@@ -1502,7 +1502,6 @@ validurls['/docs/user_guide/data_and_analytics/user_data_collection/user_profile
 validurls['/docs/developer_guide/platform_integration_guides/xamarin/inapp_messages'] = '/docs/developer_guide/platform_integration_guides/xamarin/in_app_messages';
 validurls['/docs/developer_guide/platform_integration_guides/xamarin/initial_sdk_setup'] = '/docs/developer_guide/platform_integration_guides/xamarin/sdk_integration';
 
-validurls['/docs/developer_guide/platform_integration_guides/unreal_engine/initial_sdk_setup/'] = '/docs/developer_guide/platform_integration_guides/unreal_engine/sdk_integration/';
 
 validurls['/docs/developer_guide/platform_integration_guides/android'] = '/docs/developer_guide/platforms/android';
 validurls['/docs/developer_guide/platform_integration_guides/android/analytics'] = '/docs/developer_guide/platforms/android/analytics';
@@ -1834,11 +1833,6 @@ validurls['/docs/developer_guide/platform_integration_guides/unity/in_app_messag
 validurls['/docs/developer_guide/platform_integration_guides/unity/news_feed'] = '/docs/developer_guide/platforms/unity/news_feed';
 validurls['/docs/developer_guide/platform_integration_guides/unity/push_notifications'] = '/docs/developer_guide/platforms/unity/push_notifications';
 validurls['/docs/developer_guide/platform_integration_guides/unity/sdk_integration'] = '/docs/developer_guide/platforms/unity/sdk_integration';
-validurls['/docs/developer_guide/platform_integration_guides/unreal_engine'] = '/docs/developer_guide/platforms/unreal_engine';
-validurls['/docs/developer_guide/platform_integration_guides/unreal_engine/analytics'] = '/docs/developer_guide/platforms/unreal_engine/analytics';
-validurls['/docs/developer_guide/platform_integration_guides/unreal_engine/initialization'] = '/docs/developer_guide/platforms/unreal_engine/initialization';
-validurls['/docs/developer_guide/platform_integration_guides/unreal_engine/push_notifications'] = '/docs/developer_guide/platforms/unreal_engine/push_notifications';
-validurls['/docs/developer_guide/platform_integration_guides/unreal_engine/sdk_integration'] = '/docs/developer_guide/platforms/unreal_engine/sdk_integration';
 validurls['/docs/developer_guide/platform_integration_guides/web'] = '/docs/developer_guide/platforms/web';
 validurls['/docs/developer_guide/platform_integration_guides/web/analytics'] = '/docs/developer_guide/platforms/web/analytics';
 validurls['/docs/developer_guide/platform_integration_guides/web/analytics/disabling_tracking'] = '/docs/developer_guide/platforms/web/analytics/disabling_tracking';
@@ -1902,7 +1896,6 @@ validurls['/docs/developer_guide/platforms/react_native/sdk_integration/'] = '/d
 validurls['/docs/developer_guide/platforms/unity/sdk_integration/'] = '/docs/developer_guide/sdk_integration/?sdktab=unity';
 validurls['/docs/developer_guide/platforms/xamarin/sdk_integration/'] = '/docs/developer_guide/sdk_integration/?sdktab=xamarin';
 validurls['/docs/developer_guide/platforms/roku/sdk_integration/'] = '/docs/developer_guide/sdk_integration/?sdktab=roku';
-validurls['/docs/developer_guide/platforms/unreal_engine/sdk_integration/'] = '/docs/developer_guide/sdk_integration/?sdktab=unreal%20engine';
 
 validurls['/docs/user_guide/engagement_tools/landing_pages/drag_and_drop/'] = '/docs/user_guide/engagement_tools/landing_pages/creating_pages/';
 validurls['/docs/user_guide/engagement_tools/landing_pages/connect_domain'] = '/docs/user_guide/engagement_tools/landing_pages/customizing_urls/';
@@ -1938,7 +1931,6 @@ validurls['/docs/developer_guide/platforms/fireos/initialization/runtime_configu
 validurls['/docs/developer_guide/platforms/fireos/initialization/google_tag_manager'] = '/docs/developer_guide/sdk_initalization/?sdktab=android';
 validurls['/docs/developer_guide/platforms/swift/initialization/google_tag_manager'] = '/docs/developer_guide/sdk_initalization/?sdktab=swift';
 validurls['/docs/developer_guide/platforms/swift/initialization/delayed_initialization'] = '/docs/developer_guide/sdk_initalization/?sdktab=swift';
-validurls['/docs/developer_guide/platforms/unreal_engine/initialization/'] = '/docs/developer_guide/sdk_initalization/?sdktab=unreal%20engine';
 
 validurls['/docs/developer_guide/sdk_initalization/'] = '/docs/developer_guide/sdk_initialization/';
 
@@ -2084,7 +2076,6 @@ validurls['/docs/developer_guide/platforms/unity/analytics/logging_custom_events
 validurls['/docs/developer_guide/platforms/unity/analytics/setting_custom_attributes/'] = '/docs/developer_guide/analytics/setting_user_attributes/?sdktab=unity';
 validurls['/docs/developer_guide/platforms/unity/analytics/logging_purchases/'] = '/docs/developer_guide/analytics/logging_purchases/?tab=unity';
 
-validurls['/docs/developer_guide/platforms/unreal_engine/analytics/'] = '/docs/developer_guide/analytics/';
 validurls['/docs/developer_guide/platforms/android/news_feed/'] = '/docs/developer_guide/content_cards/';
 validurls['/docs/developer_guide/platforms/android/news_feed/creating_a_custom_feed/'] = '/docs/developer_guide/content_cards/';
 validurls['/docs/developer_guide/platforms/android/news_feed/customization/'] = '/docs/developer_guide/content_cards/';
@@ -2178,7 +2169,6 @@ validurls['/docs/developer_guide/platforms/unity/push_notifications/'] = '/docs/
 validurls['/docs/developer_guide/platforms/xamarin/push_notifications/'] = '/docs/developer_guide/push_notifications/?sdktab=xamarin';
 validurls['/docs/developer_guide/platforms/xamarin/troubleshooting'] = '/docs/developer_guide/push_notifications/troubleshooting/?sdktab=xamarin';
 
-validurls['/docs/developer_guide/platforms/unreal_engine/push_notifications/'] = '/docs/developer_guide/push_notifications/?sdktab=unreal%20engine';
 validurls['/docs/navigation/'] = '/docs/user_guide/administrative/access_braze/navigation/';
 
 validurls['/docs/developer_guide/android/live_notifications/'] = '/docs/developer_guide/push_notifications/live_notifications/?sdktab=android';
@@ -2199,7 +2189,6 @@ validurls['/docs/developer_guide/platforms/react_native/changelog'] = '/docs/dev
 validurls['/docs/developer_guide/platforms/roku/changelog'] = '/docs/developer_guide/changelogs/?sdktab=roku';
 validurls['/docs/developer_guide/platforms/swift/changelog'] = '/docs/developer_guide/changelogs/?sdktab=swift';
 validurls['/docs/developer_guide/platforms/unity/changelog'] = '/docs/developer_guide/changelogs/?sdktab=unity';
-validurls['/docs/developer_guide/platforms/unreal_engine/changelog'] = '/docs/developer_guide/changelogs/?sdktab=unreal%20engine';
 validurls['/docs/developer_guide/platforms/web/changelog'] = '/docs/developer_guide/changelogs/?sdktab=web';
 validurls['/docs/developer_guide/platforms/xamarin/changelog'] = '/docs/developer_guide/changelogs/?sdktab=xamarin';
 
@@ -2675,6 +2664,8 @@ validurls['/docs/api/endpoints/translations/put_update_translation_campaign'] = 
 validurls['/docs/api/endpoints/translations/get_bulk_translations_canvases'] = '/docs/api/endpoints/translations/canvas/get_bulk_translations_canvases';
 validurls['/docs/api/endpoints/translations/get_translation_canvas'] = '/docs/api/endpoints/translations/canvas/get_translation_canvas';
 validurls['/docs/api/endpoints/translations/put_update_translation_canvas'] = '/docs/api/endpoints/translations/canvas/put_update_translation_canvas';
+validurls['/docs/api/endpoints/translations/campaigns/get_bulk_translations_campaigns'] = '/docs/api/endpoints/translations/campaigns/get_translation_campaign';
+validurls['/docs/api/endpoints/translations/canvas/get_bulk_translations_canvases'] = '/docs/api/endpoints/translations/canvas/get_translation_canvas';
 
 validurls['/docs/developer_guide/sdk_integration/initialization/'] = '/docs/developer_guide/sdk_integration/';
 
@@ -2684,7 +2675,7 @@ validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/advancement'
 validurls['/docs/user_guide/data/data_points'] = '/docs/user_guide/data/infrastructure/data_points';
 validurls['/docs/user_guide/data/report_metrics'] = '/docs/user_guide/analytics/reporting/report_metrics/';
 validurls['/docs/user_guide/data/cloud_ingestion'] = '/docs/user_guide/data/unification/cloud_ingestion';
-validurls['/docs/user_guide/data/cloud_ingestion/overview'] = '/docs/user_guide/data/unification/cloud_ingestion/overview';
+validurls['/docs/user_guide/data/cloud_ingestion/overview'] = '/docs/user_guide/data/unification/cloud_ingestion/';
 validurls['/docs/user_guide/data/cloud_ingestion/connected_sources'] = '/docs/user_guide/data/unification/cloud_ingestion/connected_sources';
 validurls['/docs/user_guide/data/cloud_ingestion/integrations'] = '/docs/user_guide/data/unification/cloud_ingestion/integrations';
 validurls['/docs/user_guide/data/cloud_ingestion/file_storage_integrations'] = '/docs/user_guide/data/unification/cloud_ingestion/file_storage_integrations';
@@ -2974,7 +2965,12 @@ validurls['/docs/help/help_articles/segments/search_exact_text/'] = '/docs/user_
 validurls['/docs/help/help_articles/docs/'] = '/docs/user_guide/';
 validurls['/docs/help/help_articles/docs/scroll_bar_overlap/'] = '/docs/user_guide/';
 validurls['/docs/help/faqs/'] = '/docs/';
-
+validurls['/docs/help/help_articles/campaigns_and_canvas/'] = '/docs/user_guide/engagement_tools/';
+validurls['/docs/help/help_articles/campaigns_and_canvas/canvas_not_sending/'] = '/docs/user_guide/engagement_tools/canvas/troubleshooting/';
+validurls['/docs/help/help_articles/campaigns_and_canvas/locations_data_in_campaigns/'] = '/docs/user_guide/engagement_tools/locations_and_geofences/location_tracking/';
+validurls['/docs/help/help_articles/campaigns_and_canvas/more_people_in_control_group/'] = '/docs/user_guide/engagement_tools/canvas/troubleshooting/';
+validurls['/docs/help/help_articles/campaigns_and_canvas/using_custom_event_properties/'] = '/docs/developer_guide/analytics/logging_events/';
+validurls['/docs/help/help_articles/campaigns_and_canvas/conversions_low/'] = '/docs/user_guide/analytics/dashboard/conversions_dashboard/#troubleshooting';
 validurls['/docs/help/help_articles/push/'] = '/docs/user_guide/message_building_by_channel/push/';
 validurls['/docs/api/objects_filters/user_attributes_object/'] = '/docs/help/help_articles/push/push_token_migration/';
 validurls['/docs/help/help_articles/push/push_enablement/'] = '/docs/user_guide/message_building_by_channel/push/users_and_subscriptions/';
@@ -2995,5 +2991,15 @@ validurls['/docs/api/objects_filters/context_object/'] = '/docs/user_guide/engag
 validurls['/docs/user_guide/administrative/app_settings/manage_your_braze_users/adding_users_to_your_dashboard/'] = '/docs/user_guide/administrative/app_settings/manage_your_braze_users/';
 
 validurls['/docs/partners/message_personalization/dynamic_content/cloudinary/'] = '/docs/partners/cloudinary/';
+
+validurls['/docs/user_guide/message_building_by_channel/banners/testing/'] = '/docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/';
+validurls['/docs/user_guide/message_building_by_channel/content_cards/testing/'] = '/docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/';
+validurls['/docs/user_guide/message_building_by_channel/in-app_messages/testing/'] = '/docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/';
+validurls['/docs/user_guide/data/unification/cloud_ingestion/overview'] = '/docs/user_guide/data/unification/cloud_ingestion/';
+validurls['/docs/contributing/content_management/language_translations'] = '/docs/contributing/content_management';
+
+validurls['/docs/developer_guide/sdk_integration/?sdktab=xamarin'] = '/docs/developer_guide/sdk_integration/?sdktab=.net%20maui';
+validurls['/docs/user_guide/message_building_by_channel/in-app_messages/faq/#what-are-templated-in-app-messages'] = '/docs/user_guide/message_building_by_channel/in-app_messages/#templated-in-app-messages';
+validurls['/docs/help/help_articles/campaigns_and_canvas/not_triggering/'] = '/docs/user_guide/engagement_tools/canvas/troubleshooting/#why-did-a-user-not-receive-a-triggered-canvas-step';
 
 // validurls['OLD'] = 'NEW';

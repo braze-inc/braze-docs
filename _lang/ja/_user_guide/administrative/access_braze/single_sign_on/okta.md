@@ -15,7 +15,7 @@ description: "この記事では、シングルサインオンに Okta を使用
 
 | 要件 | 詳細 |
 | ----------- | ------- |
-| アカウントで Okta がオンになっている | Braze アカウントマネージャーに連絡して、アカウントでこれを有効にしましょう。 |
+| アカウントで Okta がオンになっている | Brazeアカウントマネージャーに連絡し、アカウントでこれをオンにする。 |
 | Okta 管理者権限 | Okta を設定する前に、管理者権限があることを確認してください。 |
 | Braze管理者権限 | Okta を設定する前に、管理者権限があることを確認してください。 |
 | RelayState API キー | IdP ログインを有効にするには、[**設定**] > [**API キー**] に移動し、`sso.saml.login` 権限を持つ API キーを作成します。 |
@@ -27,13 +27,13 @@ description: "この記事では、シングルサインオンに Okta を使用
 
 アカウントマネージャーがアカウントの SAML SSO を有効にした後、[**設定**] > [**管理者設定**] > [**セキュリティ設定**] に移動し、SAML SSO セクションを [**オン**] に切り替えます。
 
-\![セキュリティー設定]ページの[オーカSAML SSO 有効]]({% image_buster/assets/img/Okta/okta1.png %})
+![[セキュリティ設定] ページで、Okta SAML SSO が有効になっています。]({% image_buster/assets/img/Okta/okta1.png %})
 
 ### ステップ 1b: SAML SSO 設定の編集
 
-Okta Admin ダッシュボードから、ターゲットURL (ログインURL) と`x.509` 証明書が提供されます。これをBraze アカウントの**セキュリティ設定** ページに入力する必要があります。
+Okta Adminダッシュボードから、OktaがターゲットURL（ログインURL）と`x.509` 証明書を提供するので、Brazeアカウントの**セキュリティ設定**ページに入力する必要がある。
 
-\![]({% image_buster /assets/img/Okta/okta5.png %}){: style="max-width:75%"}
+![]({% image_buster /assets/img/Okta/okta5.png %}){: style="max-width:75%"}
 
 | 必要条件 | 詳細 |
 |---|---|
@@ -50,7 +50,7 @@ Okta で、Braze SAML アプリの [**サインオン**] タブを選択し、[*
 
 次に、[**デフォルトのリレーステート**] フィールドに、`sso.saml.login` 権限を持つ RelayState API キーを入力します。 
 
-\![Sign On(サインオン)タブの[Okta Default RelayState]。]({% image_buster /assets/img/Okta/okta2.png %}){: style="max-width:75%"}
+![[サインオン] タブの Okta のデフォルト RelayState。]({% image_buster /assets/img/Okta/okta2.png %}){: style="max-width:75%"}
 
 これらの新しい設定を必ず保存してください。
 
@@ -62,5 +62,5 @@ Braze アカウントユーザーを SAML SSO でのみサインイン可能に�
 
 これで、Okta を使用して Braze にログインできます。
 
-\![オークタSSO を有効にした状態でのBraze ダッシュボードログイン。]({% image_buster /assets/img/Okta/okta4.png %}){: style="max-width:60%"}
+![Okta SSO を有効にした Braze ダッシュボードログイン。]({% image_buster /assets/img/Okta/okta4.png %}){: style="max-width:60%"}
 

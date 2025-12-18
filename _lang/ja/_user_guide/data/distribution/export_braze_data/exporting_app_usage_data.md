@@ -18,13 +18,13 @@ tool:
 
 1. データを表示する期間とアプリを設定します。デフォルトでは、ダッシュボードにすべてのアプリの過去 30 日間のデータが表示されます。
 
-\![ホームダッシュボードの期間とアプリフィールド。]({% image_buster /assets/img_archive/home_dashboard_select_date.png %}){: style="max-width:60%;"}
+![ホームダッシュボードの期間とアプリフィールド。]({% image_buster /assets/img_archive/home_dashboard_select_date.png %}){: style="max-width:60%;"}
 
 {:start="2"}
 2\.[**経時的なパフォーマンス**] グラフまで 下にスクロールします。
 3. [**次に関する統計**] フィールドでエクスポートするデータを選択します。エクスポートに「[利用可能なデータ](#available-data)」を参照してください。
 
-\![ホームダッシュボードの経時パフォーマンスグラフ。]({% image_buster /assets/img_archive/home_dashboard_export.png %})
+![ホーム・ダッシュボードの「パフォーマンス・オーバー・タイム」グラフ。]({% image_buster /assets/img_archive/home_dashboard_export.png %})
 
 {:start="4"}
 4. <i class="fas fa-bars" title="Chart コンテキストメニュー"></i>を選択し、エクスポートオプションを選択します。

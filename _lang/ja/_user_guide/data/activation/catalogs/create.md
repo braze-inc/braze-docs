@@ -49,11 +49,11 @@ CSVファイルをアップロードするには、お使いのCSVファイル�
 CSV ファイルを保存するためにより多くのスペースが必要な場合、カタログのアップグレードの詳細については、Brazeのアカウントマネージャーにお問い合わせください。
 {% endalert %}
 
-### ステップ 2: CSVをアップロードする
+### ステップ 2:CSVをアップロードする
 
 ファイルをアップロードゾーンにドラッグ＆ドロップするか、[**CSV をアップロードする**] を選択してファイルを選択します。
 
-\![]({% image_buster /assets/img_archive/catalog_CSV_upload.png %}){: style="max-width:80%;"}
+![]({% image_buster /assets/img_archive/catalog_CSV_upload.png %}){: style="max-width:80%;"}
 
 各列のデータ型を選択します。
 
@@ -61,7 +61,7 @@ CSV ファイルを保存するためにより多くのスペースが必要な�
 このデータタイプは、カタログをセットアップした後は編集できない。また、`NULL` 値はCSV アップロードではサポートされておらず、文字列として扱われます。
 {% endalert %}
 
-\![]({% image_buster /assets/img_archive/catalog_data_type.png %}){: style="max-width:80%;"}
+![]({% image_buster /assets/img_archive/catalog_data_type.png %}){: style="max-width:80%;"}
 
 カタログの名前と説明(オプション)を入力します。カタログに名前を付けるときは、次の点に注意してください。
 
@@ -73,7 +73,7 @@ CSV ファイルを保存するためにより多くのスペースが必要な�
 また、[カタログネーム](#template-catalog-names)でテンプレートsを使用して、言語やキャンペーンなどの変数に基づいてカタログネームをダイナミックな生成することもできます。
 {% endalert %}
 
-\!["my_catalog".]({% image_buster /assets/img_archive/in_browser_catalog.png %} という名前のカタログ{: style="max-width:80%;"}
+!["my_catalog".]({% image_buster /assets/img_archive/in_browser_catalog.png %}という名前のカタログ{: style="max-width:80%;"}
 
 **プロセスカタログ**を押してカタログを作成します。
 
@@ -121,11 +121,11 @@ CSVファイルをアップロードしてカタログを作成する。`id`、`
 このデータタイプは、カタログをセットアップした後は編集できない。
 {% endalert %}
 
-\![4 つのカタログ列名:"id"、"title"、"price"、"image_link".]({% image_buster /assets/img_archive/catalog_data_type.png %}){: style="max-width:85%;"}
+![4 つのカタログ列名:"id"、"title"、"price"、"image_link".]({% image_buster /assets/img_archive/catalog_data_type.png %}{: style="max-width:85%;"}
 
 次に、このカタログに"games_catalog" と名前を付け、**Process カタログ** ボタンを選択します。その後、Brazeはカタログを作成する前に、カタログにエラーがないかチェックする。
 
-\!["games_catalog".]({% image_buster /assets/img_archive/catalog_new_name.png %} という名前のカタログ{: style="max-width:85%;"}
+!["games_catalog".]({% image_buster /assets/img_archive/catalog_new_name.png %}という名前のカタログ{: style="max-width:85%;"}
 
 カタログが作成された後は、この名前を編集することはできないことに注意してほしい。カタログを削除してから、同じカタログ名を使用して更新後のバージョンを再びアップロードできます。
 
@@ -149,17 +149,17 @@ CSVファイルをアップロードしてカタログを作成する。`id`、`
 また、[カタログネーム](#template-catalog-names)でテンプレートsを使用して、言語やキャンペーンなどの変数に基づいてカタログネームをダイナミックな生成することもできます。
 {% endalert %}
 
-\!["my_catalog".]({% image_buster /assets/img_archive/in_browser_catalog.png %} という名前のカタログ{: style="max-width:80%;"}
+!["my_catalog".]({% image_buster /assets/img_archive/in_browser_catalog.png %}という名前のカタログ{: style="max-width:80%;"}
 
-### ステップ 2: カタログを作成する
+### ステップ 2:カタログを作成する
 
 一覧からカタログを選択し、**アップデートカタログ**> **フィールドを追加** を選択します。**フィールド名**を入力し、ドロップダウンを使用してデータ型を選択します。必要に応じて繰り返す。
 
-\![フィールド s "rating"および"name"の2つのサンプル。]({% image_buster /assets/img_archive/add_catalog_fields.png %}){: style="max-width:50%;"}
+![「rating」と「name」という2つのフィールドの例。]({% image_buster /assets/img_archive/add_catalog_fields.png %}){: style="max-width:50%;"}
 
 [**カタログを更新**] > [**項目を追加**] を選択し、以前に追加したフィールドに基づいて情報を入力して、カタログに項目を追加します。次に、[**項目を保存**] または [**保存して追加**] を選択して、項目の追加を続行します。
 
-\![カタログアイテムを追加します。]({% image_buster /assets/img_archive/add_catalog_items.png %}){: style="max-width:50%;"}
+![カタログ項目を追加する。]({% image_buster /assets/img_archive/add_catalog_items.png %}){: style="max-width:50%;"}
 
 {% alert note %}
 Brazeは、ダッシュボードのタイムスタンプに基づいて時間値を処理する。例えば、カラムの値が "03/13/2024 "で、タイムゾーンが太平洋タイムゾーンの場合、この時刻は "Mar 12, 2024, 5:00 PM "としてBrazeにインポートされる。

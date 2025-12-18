@@ -23,11 +23,11 @@ channel:
 最後にWhatsAppを受信した日、または特定のWhatsAppキャンペーンからWhatsAppを受信したかでユーザーをフィルタリングできる。フィルターはキャンペーンビルダーのターゲットユーザーステップで設定できる。
 
 **最後に受信した WhatsApp によるフィルター処理する**<br>
-\![2025年4月22日に最後にWhatsAppを受信したときのフィルタリング。]({% image_buster /assets/img/whatsapp/whatsapp23.png %}){: style="max-width:75%"}
+![最後にWhatsAppメッセージを受信したのが2025年4月22日であることをフィルターする。]({% image_buster /assets/img/whatsapp/whatsapp23.png %}){: style="max-width:75%"}
 
 **WhatsAppキャンペーンからの受信メッセージでフィルタする**<br>
 特定のWhatsAppキャンペーンからのメッセージを受信したユーザーをフィルターする。このフィルターを使えば、WhatsAppキャンペーンからのメッセージを受信していないユーザーを除外することもできる。<br>
-\![WhatsApp キャンペーンを受信するためのフィルター。]({% image_buster /assets/img/whatsapp/whatsapp22.png %}){: style="max-width:75%"}
+![WhatsApp キャンペーンを受信するフィルター。]({% image_buster /assets/img/whatsapp/whatsapp22.png %}){: style="max-width:75%"}
 
 ### エンゲージメントで絞り込む
 WhatsApp キャンペーンまたはキャンバスステップを読んだ、あるいは読んでいないユーザーをリターゲティングします。 
@@ -37,17 +37,17 @@ WhatsApp キャンペーンまたはキャンバスステップを読んだ、�
 2. [**WhatsApp メッセージの読み取り**] を選択します。
 3. 希望のキャンペーンを選択してください。<br>
 
-\![WhatsAppを読み取ったときのフィルター。]({% image_buster /assets/img/whatsapp/whatsapp21.png %}){: style="max-width:75%"}
+![WhatsAppメッセージを既読にするフィルター。]({% image_buster /assets/img/whatsapp/whatsapp21.png %}){: style="max-width:75%"}
 
 **特定のキャンバスステップを開いた / 読んだユーザーのリターゲティング**
 1. **クリックされた／開かれたステップ**フィルターを使用してセグメントを作成する。
 2. [**WhatsApp メッセージの読み取り**] を選択します。
 3. 目的のキャンバスとキャンバスステップを選択します。<br>
 
-\![WhatsApp ステップを読み取るためのフィルター。]({% image_buster /assets/img/whatsapp/whatsapp20.png %}){: style="max-width:75%"}
+![WhatsAppのステップを読み込むフィルター。]({% image_buster /assets/img/whatsapp/whatsapp20.png %}){: style="max-width:75%"}
 
 **キャンペーンまたはキャンバスアトリビューションでフィルター**<br>
 特定の WhatsApp キャンペーン、キャンバスコンポーネント、またはタグを開封した / 読んだユーザーをフィルター処理します。
 
-\![指定したWhatsAppを開封するためのフィルタリング。]({% image_buster /assets/img/whatsapp/whatsapp19.png %}){: style="max-width:75%"}
+![特定のWhatsAppメッセージを開封するフィルター。]({% image_buster /assets/img/whatsapp/whatsapp19.png %}){: style="max-width:75%"}
 

@@ -22,7 +22,7 @@ tool:
 
 通知IDを割り当てるには、IDを追加したいプッシュの構成ページに移動し、**「設定」**タブを選択する。**Notification ID**セクションに整数を入力する。通知を発行した後にこの通知を更新するには、以前に使用したのと同じIDで別の通知を送信する。
 
-\![通知識別フィールド]]({% image_buster /assets/img_archive/notification_ids.png %}){: style="max-width:60%;" }
+![通知IDフィールド。]({% image_buster /assets/img_archive/notification_ids.png %}){: style="max-width:60%;" }
 
 ## 有効時間 (TTL) {#ttl}
 
@@ -74,11 +74,11 @@ TTL を短くすることで、ユーザーは関連性をすぐに失うイベ�
 
 要約テキストを使用すると、拡張通知ビューに追加のテキストを設定できます。画像付きの通知のキャプションとしても機能します。
 
-\![タイトルが&quotのAndroidメッセージ;これは通知."および要約テキスト"これは通知."の要約テキストです;]({% image_buster /assets/img/android/push/collapsed-android-notification.png %}){: style="max-width:65%;"}
+![タイトルは "This is the title for the notification. "で、要約テキストは "This is the summary text for the notification. "である。]({% image_buster /assets/img/android/push/collapsed-android-notification.png %}){: style="max-width:65%;"}
 
 要約テキストは、展開されたビューのメッセージ本文の下に表示されます。 
 
-\![タイトルが&quotのAndroidメッセージ;これは通知."および要約テキスト"これは通知."の要約テキストです;]({% image_buster /assets/img/android/push/expanded-android-notification.png %}){: style="max-width:65%;"}
+![タイトルは "This is the title for the notification. "で、要約テキストは "This is the summary text for the notification. "である。]({% image_buster /assets/img/android/push/expanded-android-notification.png %}){: style="max-width:65%;"}
 
 画像を含むプッシュ通知の場合、折りたたまれたビューにはメッセージテキストが表示され、通知が展開されると、要約テキストが画像のキャプションとして表示されます。 
 
@@ -86,7 +86,7 @@ TTL を短くすることで、ユーザーは関連性をすぐに失うイベ�
 
 **カスタム URI** 機能を使用すると、通知がクリックされたときの誘導先 Web URL または Android リソースを指定できます。カスタム URI が指定されていない場合、通知をクリックするとユーザーはアプリに誘導されます。カスタム URI を使用してアプリ内でディープリンクしたり、アプリ外部のリソースにユーザーを誘導することができます。これは、[メッセージング API]({{site.baseurl}}/api/endpoints/messaging/) またはプッシュ作成画面の [**作成**] タブで指定できます。
 
-\![カスタムURI フィールド。]({% image_buster /assets/img_archive/deep_link.png %}){: style="max-width:60%;"}
+![カスタムURIフィールド。]({% image_buster /assets/img_archive/deep_link.png %}){: style="max-width:60%;"}
 
 ## 通知の表示優先度
 
@@ -119,7 +119,7 @@ AndroidまたはFire OSのプッシュ通知で設定できる優先度につい
 
 アンドロイドのプッシュ通知では、通知があらかじめ定義されたカテゴリーに入るかどうかを指定するオプションがある。AndroidシステムUIは、このカテゴリーを使用して、ユーザーの通知トレイのどこに通知を配置するかについて、ランキングやフィルタリングの決定を行うことができる。
 
-\![カテゴリが「なし」に設定された設定 s タブ。デフォルト 設定です。]({% image_buster /assets/img_archive/braze_category.png %}){: style="max-width:60%;"}
+![設定]タブで[カテゴリー]をデフォルト設定の[なし]に設定する。]({% image_buster /assets/img_archive/braze_category.png %}){: style="max-width:60%;"}
 
 | カテゴリー | 説明 |
 |---|-------|
@@ -154,7 +154,7 @@ AndroidまたはFire OSのプッシュ通知で設定できる優先度につい
 
 さらに、Androidユーザーは、端末の通知プライバシー設定を変更することで、プッシュ通知をロック画面に表示する方法を上書きすることができる。この設定は、プッシュ通知からの可視性を上書きする。
 
-\![Set Visibility を有効にし、Private(プライベート)に設定したダッシュボードプッシュ優先順位の場所。]({% image_buster /assets/img_archive/braze_visibility.png %}){: style="float:right;max-width:50%;margin-left:15px;"}
+![視認性の設定が有効で、プライベートに設定されたダッシュボードのプッシュ優先度。]({% image_buster /assets/img_archive/braze_visibility.png %}){: style="float:right;max-width:50%;margin-left:15px;"}
 
 デバイスの通知プライバシー設定が「**すべてのコンテンツを表示**」（デフォルト設定）であれば、可視性にかかわらず、すべての通知がユーザーのロック画面に表示される。同様に、通知のプライバシーが「**通知を表示しない**」に設定されている場合、通知はロック画面に表示されない。可視性は、通知プライバシーが「**機密コンテンツを隠す**」に設定されている場合にのみ効果がある。
 
@@ -170,7 +170,7 @@ Android Oより前のバージョンのAndroidを搭載したデバイスでは�
 
 このフィールドで [**デフォルト**] を選択すると、デバイスのデフォルトの通知音が再生されます。これは、[メッセージング API]({{site.baseurl}}/api/endpoints/messaging/) またはプッシュ作成画面の [**設定**] で指定できます。
 
-\![The "Sound" フィールド.]({% image_buster /assets/img_archive/sound_android.png %}){: style="float:right;max-width:50%;margin-left:15px;"}
+![サウンド」フィールド。]({% image_buster /assets/img_archive/sound_android.png %}){: style="float:right;max-width:50%;margin-left:15px;"}
 
 次に、ダッシュボードのプロンプトに完全なサウンドリソース URI （例えば `android.resource://com.mycompany.myapp/raw/mysound`） を入力します。
 

@@ -12,7 +12,7 @@ page_order: 1.5
 
 ## 解約予測分析について
 
-予測が完了し、このページが入力されるとすぐに、単に[filters]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_churn/messaging_users/#filters) をセグメントまたはキャンペーンで使用して、モデルの出力の使用を開始できます。しかし、誰をターゲットにするのか、なぜターゲットにするのかを決めるのに役立ちたいのであれば、このページはモデルの歴史的な正確さと自分自身のビジネス目標に基づいて役立ちます。 
+予測が完了し、このページが入力されるとすぐに、単に[filters]({{site.baseurl}}/user_guide/brazeai/predictive_churn/messaging_users/#filters) をセグメントまたはキャンペーンで使用して、モデルの出力の使用を開始できます。しかし、誰をターゲットにするのか、なぜターゲットにするのかを決めるのに役立ちたいのであれば、このページはモデルの歴史的な正確さと自分自身のビジネス目標に基づいて役立ちます。 
 
 解約予測分析を構成する要素を以下に示します。
 
@@ -25,7 +25,7 @@ page_order: 1.5
 
 スライダーを動かすと、下側のパネルの左半分のバーに、予測オーディエンス全体からターゲットになるユーザの数が表示されます。
 
-\![]({% image_buster /assets/img/churn/churnTargeting.gif %})
+![]({% image_buster /assets/img/churn/churnTargeting.gif %})
 
 ## 解約スコアとカテゴリ {#churn_score}
 
@@ -43,7 +43,7 @@ page_order: 1.5
 
 チャートの下のパネルの右側では、予測対象ユーザーのこの領域をターゲットとする期待精度の推定値を示します。過去の予測対象ユーザーに関するデータと、その過去のデータについて解約ユーザーと非解約ユーザーを識別するモデルの精度に基づいて、これらのプログレスバーは、スライダーで強調表示されたオーディエンスを使用した将来の潜在的なメッセージについて以下を推定します。
 
-\![]({% image_buster /assets/img/churn/churnEstimatedResults.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
+![]({% image_buster /assets/img/churn/churnEstimatedResults.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
 - 解約すると予想される選択済みユーザーの数
 - 解約**しない**と予想される選択済みユーザーの数

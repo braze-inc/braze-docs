@@ -36,7 +36,7 @@ Die E-Mail-Überprüfung wird durchgeführt, wenn die E-Mail-Adresse einer Nutze
 
 E-Mail-Adressen, die über die Braze-Server angesprochen werden, müssen gemäß [RFC 2822-Standards](https://datatracker.ietf.org/doc/html/rfc2822) validiert werden. Braze akzeptiert bestimmte Zeichen nicht und erkennt sie als ungültig an. Wenn eine E-Mail gebounced wird, markiert Braze die E-Mail als ungültig und der Status des Abos wird nicht geändert. 
 
-{% details Nicht akzeptierte Zeichen außerhalb der RFC-Standards %}
+{% details Unaccepted characters outside of RFC standards %}
 - *
 - /
 - ?
@@ -60,12 +60,16 @@ E-Mail-Adressen, die über die Braze-Server angesprochen werden, müssen gemäß
 
 Achten Sie beim Einrichten Ihrer Absenderadressen darauf, dass Ihre Absender-E-Mail-Domäne mit Ihrer Absenderdomäne übereinstimmt (z. B. `marketing.yourdomain.com`). Wenn Sie dies nicht tun, kann dies zu einer falschen Ausrichtung von SPF und DKIM führen. Alle Antwort-E-Mails können auf Ihre Stammdomäne eingestellt werden.
 
+{% alert note %}
+Unicode encoding is not supported in "from" addresses.
+{% endalert %}
+
 ### Prüfen von HTML-Details
 
 Denken Sie daran, dass einige HTML-Tags und -Attribute nicht erlaubt sind, da sie möglicherweise bösartigen Code im Browser laufen lassen können.
 
 In den folgenden Listen finden Sie HTML Tags und Attribute, die in Ihren E-Mails nicht zulässig sind:
-{% details Erweitern für unzulässige HTML Tags %}
+{% details Expand for disallowed HTML tags %}
 - `<!doctype>`
 - `<applet>`
 - `<bgsound>`
@@ -83,7 +87,7 @@ In den folgenden Listen finden Sie HTML Tags und Attribute, die in Ihren E-Mails
 - `<svg>`
 {% enddetails %}
 
-{% details Erweitern für unzulässige HTML Attribute %}
+{% details Expand for disallowed HTML attributes %}
 - `<animationend>`
 - `<animationiteration>`
 - `<animationstart>`
@@ -229,5 +233,4 @@ In den folgenden Listen finden Sie HTML Tags und Attribute, die in Ihren E-Mails
 {% enddetails %}
 
 
-[24]: http://tools.ietf.org/html/rfc2822
 

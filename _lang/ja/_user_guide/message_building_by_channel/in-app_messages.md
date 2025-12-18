@@ -25,7 +25,7 @@ guide_featured_list:
 guide_menu_title: "More articles"
 guide_menu_list:
 - name: "テスト"
-  link: /docs/user_guide/message_building_by_channel/in-app_messages/testing/
+  link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/
   image: /assets/img/braze_icons/beaker-02.svg
 - name: "レポート"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/reporting/
@@ -50,7 +50,7 @@ guide_menu_list:
   image: /assets/img/braze_icons/annotation-question.svg
 ---
 
-## [![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/messaging-channels-in-app-in-browser){: style="float:right;width:120px;border:0;" class="noimgborder"} 想定されるユースケース
+## [![Braze ラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/messaging-channels-in-app-in-browser){: style="float:right;width:120px;border:0;" class="noimgborder"} 想定されるユースケース
 
 アプリ内メッセージは豊富なコンテンツを提供するので、このチャネルをさまざまなユースケースに活用できます。
 
@@ -79,32 +79,32 @@ guide_menu_list:
 
 スライドアップメッセージは通常、アプリ画面の上下に表示されます (メッセージの作成時に設定可能)。これらは、新しい利用規約、Cookie、および他の情報断片についてユーザーに警告するのに適しています。
 
-\![アプリ画面下部から表示されるアプリ内メッセージ。スライドアップにはアイコン画像と簡単なメッセージが含まれる。]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
+![アプリ画面下部から表示されるアプリ内メッセージのスライドアップ。スライドアップにはアイコン画像と簡単なメッセージが含まれる。]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
 
 <br>
 
 {% endtab %}
 {% tab Modal %}
 
-モーダルは、デバイスの画面の中央に表示され、アプリのバックグラウンドから目立つように画面オーバーレイが表示されます。これらは、ユーザーにセールやプレゼントを利用するようにそれとなく提案するのに最適です。
+モーダルは、デバイスの画面の中央に表示され、アプリのバックグラウンドから目立つように画面オーバーレイが表示されます。モーダルは、ユーザーにセールや特別オファーを活用するように大々的にお勧めする場合に、非常に優れています。
 
-\![アプリやWebサイトの中央にダイアログとして表示されるモーダルなアプリ内メッセージ。モーダルには、画像、ヘッダー、メッセージ本文、2つのボタンが含まれる。]({% image_buster /assets/img/modal-behavior.gif %}){: style="border:0px;"}
+![アプリやウェブサイトの中央にダイアログとして表示される、モーダルなアプリ内メッセージ。モーダルには、画像、ヘッダー、メッセージ本文、2つのボタンが含まれる。]({% image_buster /assets/img/modal-behavior.gif %}){: style="border:0px;"}
 
 <br>
 
 {% endtab %}
 {% tab Fullscreen %}
 
-フルスクリーン・メッセージは、デバイスの画面全体を取り上げるという、まさに期待通りのものです。このメッセージタイプは、必須アプリのアップデートのように、ユーザーの注意が本当に必要な場合に最適だ。
+フルスクリーン・メッセージは、デバイスの画面全体を取り上げるという、まさに期待通りのものです。このメッセージタイプは、必須アプリ 更新s のように、ユーザーのアテンションが本当に必要な場合に適しています。
 
-\![アプリ内メッセージがアプリ画面を占拠している。フルスクリーンのメッセージには、大きな画像、ヘッダー、メッセージ本文、2つのボタンが含まれる。]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
+![アプリ内メッセージがフルスクリーンでアプリの画面を占領する。フルスクリーンのメッセージには、大きな画像、ヘッダー、メッセージ本文、2つのボタンが含まれる。]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
 
 <br>
 
 {% endtab %}
 {% endtabs %}
 
-これらのデフォルトのメッセージテンプレートに加えて、カスタム HTML のアプリ内メッセージ、CSS を使用した Web モーダル、または Web のメールキャプチャフォームを使用して、メッセージングをさらにカスタマイズすることもできます。詳細については、[カスタマイズ]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/)を参照してください。
+これらのデフォルトメッセージテンプレートに加えて、カスタムHTMLアプリ内メッセージ、CSSによるWebモーダル、またはWebメールキャプチャフォームを使用してメッセージングをさらにカスタマイズすることもできる。詳細については、[カスタマイズ]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/)を参照してください。
 
 ## その他のリソース
 

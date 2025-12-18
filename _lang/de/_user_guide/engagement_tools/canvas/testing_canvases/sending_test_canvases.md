@@ -1,5 +1,5 @@
 ---
-nav_title: Test-Canvase verschicken
+nav_title: Test-Leinwände verschicken
 article_title: Test-Canvase verschicken
 page_order: 1
 description: "In diesem Referenzartikel erfahren Sie, wie Sie ein Canvas vor dem Start testen und wie Sie dabei am besten vorgehen."
@@ -35,7 +35,7 @@ Es gibt zwei Möglichkeiten, wie Sie Ihr Canvas testen können.
 
 - **Methode 1:** Bearbeiten Sie in dem duplizierten Canvas den Teil **Entry-Zielgruppe** des Canvas-Builders so, dass nur Testnutzer:innen für das Canvas in Frage kommen. Sie können auch Ihre eigene E-Mail-Adresse als Testnutzer:in eingeben, indem Sie den Testfilter **E-Mail-Adresse** hinzufügen. Im folgenden Beispiel haben wir den Canvas auf zwei Testnutzer:innen beschränkt, die die App vor weniger als drei Tagen zum ersten Mal verwendet haben.
 
-![][2]
+![Ein Canvas mit der Zielgruppe "Diese Apps wurden vor weniger als 3 Tagen zum ersten Mal verwendet" und den E-Mail-Adressen von zwei Testnutzer:innen.]({% image_buster /assets/img_archive/canvas_test2.png %}){: style="max-width:90%;"}
 
 - **Methode 2:** [Zeigen Sie Ihre Benutzerpfadein der Vorschau an]({{site.baseurl}}/preview_user_paths/), indem Sie in der Fußzeile des Canvas-Builders auf die Schaltfläche **Canvas testen** klicken.
 
@@ -84,5 +84,3 @@ Wenn Sie ein Canvas mit mehreren Zweigen testen, die Nutzer:innen auf der Grundl
 1. Ermitteln Sie für jeden Branch die Attribute und Events, über die die:der Nutzer:in verfügen muss, um in die Canvas-Reise aufgenommen zu werden.
 2. Bauen Sie diese in JSON-Nutzdaten auf, die über den Endpunkt `/users/track` gepostet werden.
 
-[1]: {% image_buster /assets/img_archive/canvas_test1.png %}
-[2]: {% image_buster /assets/img_archive/canvas_test2.png %}

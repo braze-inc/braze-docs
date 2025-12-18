@@ -32,13 +32,13 @@ Liquid タグ `message_extras` は、Currents や Snowflake Data Sharing の対�
 
 1. チャネルのメッセージ本文に、`message_extras` Liquidタグを入力する。または、**パーソナライゼーションを追加**モーダルを使用して、パーソナライゼーションタイプとして**メッセージエクストラ**を選択できます。 
 
-\![メッセージエクストラを含む追加パーソナライゼーション モーダルがパーソナライゼーションの種類として選択されました。]({% image_buster /assets/img_archive/message_extras1.png %}){: style="max-width:35%;"}
+![パーソナライゼーションタイプとして [メッセージエクストラ] が選択された [パーソナライゼーションを追加] モーダル。]({% image_buster /assets/img_archive/message_extras1.png %}){: style="max-width:35%;"}
 
 {: start="2"}
 
 2. 各`message_extras`タグの[キーと値のペア]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/)を入力してください。 
 
-\![メッセージエクストラタグのキーと値のペアの例。[タイトル] フィールドには「あなたの新しいお気に入り」と表示されています。メッセージはメッセージエクストラのタグのキーと値のペアと、次の文を読み取ります。「当社は、あなたの新しいお気に入りになること間違いなしの新鮮で心躍る製品のサイドセレクションをお知らせできることを嬉しく思います」]({% image_buster /assets/img_archive/message_extras2.png %}){: style="max-width:70%;"}
+![メッセージエクストラタグのキーと値のペアの例。[タイトル] フィールドには「あなたの新しいお気に入り」と表示されています。メッセージはメッセージエクストラのタグのキーと値のペアと、次の文を読み取ります。「当社は、あなたの新しいお気に入りになること間違いなしの新鮮で心躍る製品のサイドセレクションをお知らせできることを嬉しく思います」]({% image_buster /assets/img_archive/message_extras2.png %}){: style="max-width:70%;"}
 
 {: start="3"}
 

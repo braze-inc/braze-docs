@@ -34,7 +34,7 @@ description: "この記事では、「ハードバウンスメールアドレス
 | `end_date` | required | YYYY-MM-DD形式の文字列 | ハードバウンスを取得する範囲の終了日。これは、API によって UTC 時間の午前 0 時として扱われます。 |
 | `limit` | オプション | 整数 | 返される結果の数を制限するためのオプション・フィールド。デフォルトは100で、最大は500です。 |
 | `offset` | オプション | 整数 | 取得先となるリスト内のオプションの開始点。 |
-| `email` | オプション* | 文字列 | *`start_date` または `email` のいずれかが必要です。指定されると、ユーザーがハードバウンスしたかどうかを返します。Eメールの文字列が正しくフォーマットされているか確認する。 |
+| `email` | オプション* | string | *`start_date` または `email` のいずれかが必要です。指定されると、ユーザーがハードバウンスしたかどうかを返します。Eメールの文字列が正しくフォーマットされているか確認する。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert important %}
@@ -53,8 +53,6 @@ curl --location --request GET 'https://rest.iad-01.braze.com/email/hard_bounces?
 エントリは降順で表示されます。
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "emails": [
     {

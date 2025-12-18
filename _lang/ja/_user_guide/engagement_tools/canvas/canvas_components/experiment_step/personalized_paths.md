@@ -23,29 +23,29 @@ tool: Canvas
 
 [実験パス]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/)をキャンバスに追加し、[**パーソナライズされたパス**] をオンにします。
 
-\![]({% image_buster /assets/img/experiment_step/experiment_personalized_path.png %})
+![]({% image_buster /assets/img/experiment_step/experiment_personalized_path.png %})
 
-### ステップ 2: パーソナライズされたパスを設定する
+### ステップ2:パーソナライズされたパスを設定する
 
 勝者を決定するコンバージョンイベントを指定します。利用できるコンバージョンイベントがない場合は、キャンバスの設定の最初のステップに戻り、[コンバージョンイベントを割り当てます]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#choose-conversion-events)。 
 
 開封 s またはクリックをコンバージョンイベントとして選択した場合は、[Message ステップ]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step) がパスの最初のステップであることを確認します。Brazeは、それぞれのパスの最初のメッセージステップからのエンゲージメントのみを数える。パスが別のステップ(遅延やオーディエンスパス ステップなど)で始まり、メッセージが後で表示される場合、そのメッセージはパフォーマンスの評価時には含まれません。
 
-次に、**実験期間**を設定します。[**実験期間**] は、遅延グループ内の各ユーザーに最適なパスを選択する前に、ユーザーがすべてのパスに送られる時間の長さを決定します。最初のユーザーがステップに入ると、期間が開始されます。
+次に、**実験期間**を設定します。[**実験期間**] は、遅延グループ内の各ユーザーに最適なパスを選択する前に、ユーザーがすべてのパスに送られる時間の長さを決定します。期間は、最初のユーザーがステップに入ったときに始まります。
 
-\![]({% image_buster /assets/img/experiment_step/experiment_personalized_settings.png %})
+![]({% image_buster /assets/img/experiment_step/experiment_personalized_settings.png %})
 
-### ステップ 3: フォールバックを決定する
+### ステップ 3:フォールバックを決定する
 
 デフォルトでは、テストの結果が統計的に有意な勝者を決定するのに十分でない場合、将来のすべてのユーザーが単一の最もパフォーマンスの高いパスに送信されます。
 
 または、**すべての将来のユーザーにパスの組み合わせの送信を続行**するよう指定することもできます。
 
-\![]({% image_buster /assets/img/experiment_step/experiment_winning_statistical.png %})
+![]({% image_buster /assets/img/experiment_step/experiment_winning_statistical.png %})
 
 このオプションは、実験パスの配分で指定されたパーセンテージに従って、将来のユーザーにパスの組み合わせを送信します。
 
-\![]({% image_buster /assets/img/experiment_step/experiment_personalized_percentages.png %})
+![]({% image_buster /assets/img/experiment_step/experiment_personalized_percentages.png %})
 
 ### ステップ 4: パスを追加してキャンバスを開始する
 
@@ -56,11 +56,11 @@ tool: Canvas
 
 必要に応じてキャンバスの設定を終了し、開始します。最初のユーザーが実験に入ったら、キャンバスをチェックして分析を確認し、[実験のパフォーマンスを追跡]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/#tracking-performance)できます。
 
-\![]({% image_buster /assets/img/experiment_step/experiment_personalized_delay_group_pending.png %}){: style="max-width:75%;" }
+![]({% image_buster /assets/img/experiment_step/experiment_personalized_delay_group_pending.png %}){: style="max-width:75%;" }
 
 実験ウィンドウが通過し、実験が完了すると、Brazeは、予測モデルの推奨に基づいて、コンバージョンの可能性が最もパーソナライズされた遅延グループのユーザーs をそれぞれのパスs に送信します。
 
-\![]({% image_buster /assets/img/experiment_step/experiment_personalized_delay_group_complete.png %}){: style="max-width:75%;" }
+![]({% image_buster /assets/img/experiment_step/experiment_personalized_delay_group_complete.png %}){: style="max-width:75%;" }
 
 {% endtab %}
 {% tab Recurring or action-triggered or API-triggered Canvas %}
@@ -71,7 +71,7 @@ tool: Canvas
 
 実験期間が終了して実験が完了すると、その後キャンバスに入るすべてのユーザーは、コンバージョンが発生する可能性が最も高いパスに送られます。
 
-\![]({% image_buster /assets/img/experiment_step/experiment_personalized_recurring_analytics.png %}){: style="max-width:75%;" }
+![]({% image_buster /assets/img/experiment_step/experiment_personalized_recurring_analytics.png %}){: style="max-width:75%;" }
 
 {% endtab %}
 {% endtabs %}
@@ -85,15 +85,15 @@ tool: Canvas
 
 [**最初の実験**] タブには、実験期間中の各パスの指標が表示されます。指定したコンバージョンイベントに対して実行されたすべてのパスの概要を確認できます。
 
-\![最初の試験の結果は、ユーザーごとに最良のパフォーマンスパスを決定するために送信されます。テーブルには、対象チャネルのさまざまなメトリクスに基づく各パスのパフォーマンスが表示されます。]({% image_buster /assets/img/experiment_step/experiment_personalized_analytics_tab1.png %})
+![各ユーザーにとって最もパフォーマンスの高いパスを特定するために送られた、最初の実験結果。テーブルには、対象チャネルのさまざまなメトリクスに基づく各パスのパフォーマンスが表示されます。]({% image_buster /assets/img/experiment_step/experiment_personalized_analytics_tab1.png %})
 
 デフォルトでは、ユーザーのカスタムイベントとパス環境設定、またはユーザーが最もよく反応するバリアントの電文との間の関連性が検索されます。この分析では、カスタムイベントによって特定のパスに応答する可能性が増えるか減るかを検出します。次に、これらの関係を使用して、実験期間の終了後、どのユーザーにどのパスを割り当てるかが決定されます。
 
 カスタムイベント s とパス環境設定の関係は、**Initial Experiment**タブのテーブルに表示されます。
 
-\![]({% image_buster /assets/img_archive/experiment_personalized_analytics_custom_data.png %})
+![]({% image_buster /assets/img_archive/experiment_personalized_analytics_custom_data.png %})
 
-テストでカスタムイベントとパスの設定の間に意味のある関係が見つからない場合、テストはセッションベースの分析方法にフォールバックします。
+カスタムイベントsとパス設定の間に意味のある関係が見つからない場合、テストはセッションベースの分析方法にフォールバックされ、カスタムイベントデータテーブルは表示されません。
 
 {% details Fallback analysis method %}
 
@@ -106,7 +106,7 @@ tool: Canvas
 - **頻度:**セッションの頻度
 - **使用期間:**ユーザーになってからの期間
 
-\![ユーザーの特徴テーブル。これは、どのユーザーs が、最新性、頻度、および保有期間のために、3つのバケットに基づいて、パス1とパス2を好むと予測されるかを示します。]({% image_buster /assets/img/experiment_step/experiment_personalized_analytics_tab1_2.png %})
+![ユーザー特性テーブルは、どのユーザーs が、最新性、頻度、および保有期間のために下がる3つのバケットに基づいて、パス1およびパス2を優先すると予測されているかを示します。]({% image_buster /assets/img/experiment_step/experiment_personalized_analytics_tab1_2.png %})
 
 リーセンシーとは、ユーザーが最後にエンゲージしたのがどれくらい最近のことか、頻度とは、どれくらいの頻度でエンゲージしているか、そして使用期間とは、エンゲージメントを開始してからの期間と考えることができます。ユーザーを「バケット」にグループ化し、これら 3 つの条件に基づいて (**ユーザー特性**表を参照)、どのバケットがどのパスをより好むかを判断します。これは、最後に一緒に買い物をしたのはいつか、買い物をした頻度、そして顧客となってからの期間に基づいて、ユーザーを何百ものリストに分類するようなものです。
 
@@ -136,7 +136,7 @@ tool: Canvas
 - **全体的な結果:**コンバージョンイベントに基づく 2 回目の送信の結果。
 - **予測結果:**代わりに勝利バリアントのみを送信した場合の、選択した最適化指標に基づく 2 番目の送信の予測結果。
 
-\![キャンバスの個人用パスタブ]カードには、プロジェクトされたリフト、全体的なコンバージョン(パーソナライズされたパスを使用)、およびプロジェクトされた一意のオープン(勝利パスを使用)が表示されます。]({% image_buster /assets/img/experiment_step/experiment_personalized_analytics_tab2.png %})
+![キャンバスの [パーソナライズされたパス] タブ。カードには、プロジェクトされたリフト、全体的なコンバージョン(パーソナライズされたパスを使用)、およびプロジェクトされた一意のオープン(勝利パスを使用)が表示されます。]({% image_buster /assets/img/experiment_step/experiment_personalized_analytics_tab2.png %})
 
 {% endtab %}
 {% endtabs %}

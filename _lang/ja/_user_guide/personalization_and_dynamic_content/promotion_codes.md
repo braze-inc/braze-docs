@@ -25,7 +25,7 @@ description: "この参考記事では、プロモーションコード・リス
 
 ### ステップ 1: プロモーションコードセクションに進む
 
-\![プロモーションコードを作成するボタン。]({% image_buster /assets/img/promocodes/promocode1.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
+![プロモーションコードを作成するボタン。]({% image_buster /assets/img/promocodes/promocode1.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
 
 1. ダッシュボードから [**データ設定**] > [**プロモーションコード**] に移動します。
 2. **プロモーションコードリストの作成**を選択します。
@@ -42,19 +42,19 @@ description: "この参考記事では、プロモーションコード・リス
 - この一連のプロモーションコードを参照するには、Liquid でスニペット名を使用します。
 - コードスニペットが別のリストでまだ使用されていないことを確認します。
 
-\![SpringSale2025 "というプロモーション・コード・リストに "spring25 "というコード・スニペットがついている。]({% image_buster /assets/img/promocodes/promocode3.png %}){: style="max-width:80%"}
+![SpringSale2025」というプロモーション・コード・リストと、「spring25」というコード・スニペット。]({% image_buster /assets/img/promocodes/promocode3.png %}){: style="max-width:80%"}
 
-### ステップ 3: プロモーションコードオプションの選択
+### ステップ 3:プロモーションコードオプションの選択
 
 各プロモーションコード・リストには、作成時に設定された有効期限と時間がある。最長有効期限は、リストを作成または編集した日から6ヶ月先までである。 
 
 その時間内であれば、有効期限を何度でも変更・更新することができる。この有効期限は、このリストに追加されたすべてのコードに適用される。有効期限が切れると、コードはBrazeシステムから削除され、そのリストのコードスニペットを呼び出すメッセージは送信されなくなる。
 
-\![リストの有効期限は2025年4月30日午前12時までと設定されている。]({% image_buster /assets/img/promocodes/promocode4.png %}){: style="max-width:80%"}
+![リストの有効期限設定では、残りのコードはすべて2025年4月30日午前12時に失効する。]({% image_buster /assets/img/promocodes/promocode4.png %}){: style="max-width:80%"}
 
 また、オプションでカスタマイズした閾値アラートを設定するオプションもある。これらのアラートを設定すると、リスト内の利用可能なプロモーションコードが少なくなったとき、またはプロモーションコードリストの有効期限が近づいたときに、指定された受信者にメールが送信される。受信者は 1 日 1 回通知を受け取ります。
 
-\![プロモーションコード・リストの有効期限が5日後に切れたときに、"マーケター@abc.com" に通知する閾値アラートの例。]({% image_buster /assets/img/promocodes/promocode5.png %}){: style="max-width:80%"}
+![プロモーションコード・リストの有効期限が5日後に切れたときに、"マーケター@abc.com" に通知する閾値アラートの例。]({% image_buster /assets/img/promocodes/promocode5.png %}){: style="max-width:80%"}
 
 ### ステップ 4: プロモーションコードのアップロード
 
@@ -73,13 +73,13 @@ CSV ファイルが次のガイドラインに従っていることを確認し�
 
 1. アップロードが完了したら、「**リストを保存**」を選択し、入力したすべての詳細とコードを保存する。
 
-\![アップロードに成功した "springsale "というCSVファイル。]({% image_buster /assets/img/promocodes/promocode7.png %})
+![アップロードに成功した "springsale "というCSVファイル。]({% image_buster /assets/img/promocodes/promocode7.png %})
 
 {:start="2"}
 2\.保存を選択すると、[**インポート履歴**] に新しい行が表示されます。
 3\.インポートが完了したかどうかを確認するためにテーブルを更新するには、テーブルの上部にある <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-sync" ></span> [**同期**] を選択します。
 
-\![プロモーションコードはアップロード中だ。]({% image_buster /assets/img/promocodes/promocode8.png %})
+![アップロード中のプロモーションコード。]({% image_buster /assets/img/promocodes/promocode8.png %})
 
 {% alert note %}
 大きなファイルはインポートに数分かかる。待つ間、インポートが進行している間はページを離れて他の作業をすることができます。インポートが終了すると、ステータスはテーブルの**Complete** に変わります。
@@ -93,7 +93,7 @@ CSV ファイルが次のガイドラインに従っていることを確認し�
 プロモーションコードは削除できない。
 {% endalert %}
 
-### 誤ったプロモーションコードのリストを修正する 
+### 誤ったプロモーションコード一覧を修正する 
 
 間違ったプロモーションコードを含むCSVファイルをアップロードし、**「リストを保存**」を選択した場合、どちらの方法でも解決できる：
 
@@ -104,11 +104,11 @@ CSV ファイルが次のガイドラインに従っていることを確認し�
 
 メッセージでプロモーションコードを送信するには、[以前に作成した](#create)プロモーションコードリストの横にある**Copy Snippetを**選択する。
 
-\![スニペットをコピーしてメッセージに貼り付けることもできる。]({% image_buster /assets/img/promocodes/promocode9.png %}){: style="max-width:50%"}
+![スニペットをコピーしてメッセージに貼り付けるオプションもある。]({% image_buster /assets/img/promocodes/promocode9.png %}){: style="max-width:50%"}
 
 Brazeのメッセージにコードスニペットを貼り付け、[Liquidを使って]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/)リストからユニークなプロモーションコードを挿入する。そのコードは送信済みとしてマークされ、他のメッセージが同じコードを送信しないようにする。
 
-\![メッセージの例 "Treat yourself to something nice this spring with our exclusive offer "の後にコード・スニペットが続く。]({% image_buster /assets/img/promocodes/promocode10.png %}){: style="max-width:50%"}
+![メッセージの例：「この春、私たちの限定オファーで素敵なものを自分にご褒美を！」とコード・スニペットが続く。]({% image_buster /assets/img/promocodes/promocode10.png %}){: style="max-width:50%"}
 
 ### アクロス キャンバスのステップ
 
@@ -141,7 +141,7 @@ Brazeのメッセージにコードスニペットを貼り付け、[Liquidを�
 
 ## ユーザープロファイルにプロモーションコードを保存する {#save-to-profile}
 
-後続のメッセージで同じプロモーションコードを参照するには、コードをカスタム属性としてユーザープロファイルに保存する必要があります。これは、メッセージステップの前に直接、割引コードを "Promo Code "のようなカスタム属性に割り当てる[ユーザー更新ステップによって]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update/)行うことができる。
+後続のメッセージで同じプロモーションコードを参照するには、コードをカスタム属性としてユーザープロファイルに保存する必要があります。これは、メッセージステップの前に直接、"Promo Code "のようなカスタム属性に割引コードを割り当てる[ユーザー更新ステップによって]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update/)行うことができる。
 
 まず、ユーザー更新ステップの各フィールドで以下を選択する：
 
@@ -155,11 +155,11 @@ Brazeのメッセージにコードスニペットを貼り付け、[Liquidを�
 
 残りのコード数は、**プロモーションコード**ページのプロモーションコード一覧の**残り**列にあります。
 
-\![未使用コードを含むプロモーションコードの例。]({% image_buster /assets/img/promocodes/promocode11.png %})
+![未使用コードを含むプロモーションコードの例。]({% image_buster /assets/img/promocodes/promocode11.png %})
 
 このコード数は、既存のプロモーションコード一覧ページを再訪した際にも確認できる。未使用のコードをCSV ファイルとしてエクスポートすることもできます。 
 
-\![ブラックフライデー・セール」と名付けられたプロモーション・コードで、残り992個のコードがある。]({% image_buster /assets/img/promocodes/promocode12.png %}){: style="max-width:50%"}
+![ブラックフライデー・セール」と名付けられたプロモーションコードで、残り992のコードがある。]({% image_buster /assets/img/promocodes/promocode12.png %}){: style="max-width:50%"}
 
 ## マルチチャネルとシングルチャネルの送信
 
@@ -200,7 +200,7 @@ Brazeでは、使用予定数よりも多くのプロモーションコードを
 
 ### テスト送信やシード送信は使用量にカウントされるのか？
 
-デフォルトでは、テスト送信とシードグループのメール送信では、テスト送信ごとにユーザーごとのプロモーションコードが使用されます。しかし、Brazeのアカウントマネージャーに連絡すれば、テスト中にプロモーションコードを使用しないようにこの動作を更新することができる。
+デフォルトでは、テスト送信とシードグループのメール送信では、テスト送信ごとにユーザーごとのプロモーションコードが使用されます。ただし、Brazeアカウントマネージャーに連絡して、テスト中にプロモーションコードを使用しないようにこの動作を更新することができる。
 
 ### 複数のメッセージングチャネルが同じプロモーションコードスニペットを使用するとどうなるか？
 

@@ -37,7 +37,7 @@ description: "個々のユーザーまたはユーザーのSegmentをBraze ダ�
 
 個々のユーザーをBrazeから削除するには、**Audience**> **検索ユーザーs**に移動し、ユーザーを検索して選択します。重複するユーザープロファイルを削除する場合は、正しいものを選択したことを確認します。
 
-\![Brazeの「ユーザの検索」画面。]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/search_user.png %}){: style="max-width:75%;"}
+![Brazeの「ユーザの検索」ページ。]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/search_user.png %}){: style="max-width:75%;"}
 
 {% alert warning %}
 単一ユーザーの削除は永続的です。プロファイルは削除後に復元できません。  
@@ -45,7 +45,7 @@ description: "個々のユーザーまたはユーザーのSegmentをBraze ダ�
 
 プロファイル画面で、<i class="fa-solid fa-ellipsis-vertical"></i>**オプション**>**ユーザ**を削除を選択します。Braze でユーザーが完全に削除されるまでに数分かかる場合があります。
 
-\![ユーザーを削除するかどうかを示す、縦楕円メニュー開封とBrazeたユーザー。]({% image_buster /assets/img/audience_management/deleting_users/delete_user.png %}){: style="max-width:85%;"}
+![ユーザーを削除するための選択肢を示す、縦長楕円メニュー開封とBrazeしたユーザー。]({% image_buster /assets/img/audience_management/deleting_users/delete_user.png %}){: style="max-width:85%;"}
 
 ### Segmentの削除 {#delete-segment}
 
@@ -53,15 +53,15 @@ description: "個々のユーザーまたはユーザーのSegmentをBraze ダ�
 
 Brazeで、**Audience**> **Audience**を管理し、**Delete Users**タブを選択します。
 
-\![Braze ダッシュボードの「視聴者の管理」セクションの「ユーザの削除」タブ。]({% image_buster /assets/img/audience_management/deleting_users/delete_users_tab.png %}){: style="max-width:85%;"}
+![Braze ダッシュボードの「視聴者の管理」セクションの「ユーザの削除」タブ。]({% image_buster /assets/img/audience_management/deleting_users/delete_users_tab.png %}){: style="max-width:85%;"}
 
 **Delete ユーザー s**を選択し、削除するSegmentを選択し、**Next**を選択します。
 
-\![削除対象として選択されたSegmentを含むポップアップウィンドウ。]({% image_buster /assets/img/audience_management/deleting_users/choose_segment_to_delete.png %}){: style="max-width:75%;"}
+![削除対象として選択されたSegmentを含むポップアップウィンドウ。]({% image_buster /assets/img/audience_management/deleting_users/choose_segment_to_delete.png %}){: style="max-width:75%;"}
 
 **DELETE**と入力してリクエストを確認し、**Delete ユーザー s**を選択します。
 
-\![確認ボックスに'DELETE'と入力された確認ページ。]({% image_buster /assets/img/audience_management/deleting_users/confirm_segment_delete.png %}){: style="max-width:75%;"}
+![確認ボックスに「DELETE」と入力された確認ページ。]({% image_buster /assets/img/audience_management/deleting_users/confirm_segment_delete.png %}){: style="max-width:75%;"}
 
 このSegmentのユーザーはすぐには削除されません。代わりに、次の7 日間は削除保留としてマークされます。この後、削除され、お知らせするようにメールさせていただきます。
 
@@ -73,15 +73,15 @@ Brazeで、**Audience**> **Audience**を管理し、**Delete Users**タブを選
 
 保留中のSegment削除をキャンセルするには、7 日間かかります。キャンセルするには、**Audience**> **Manage Audience**に移動し、**Delete Users**タブを選択します。
 
-\![Braze ダッシュボードの「視聴者の管理」セクションの「ユーザの削除」タブ。]({% image_buster /assets/img/audience_management/deleting_users/delete_users_tab.png %}){: style="max-width:85%;"}
+![Braze ダッシュボードの「視聴者の管理」セクションの「ユーザの削除」タブ。]({% image_buster /assets/img/audience_management/deleting_users/delete_users_tab.png %}){: style="max-width:85%;"}
 
 保留中のSegment削除の横にある<i class="fa-solid fa-eye"></i>を選択して、削除レコードの詳細を開封します。
 
-\![「ユーザの削除」タブで保留中のSegmentの削除。]({% image_buster /assets/img/audience_management/deleting_users/pending_deletion.png %})
+![「ユーザの削除」タブで保留中のSegmentの削除。]({% image_buster /assets/img/audience_management/deleting_users/pending_deletion.png %})
 
 削除レコードの詳細で、**削除のキャンセル**を選択します。
 
-\!['Delete Users'タブの'Deletion Record Details'ウィンドウ。]({% image_buster /assets/img/audience_management/deleting_users/deletion_record_details.png %}){: style="max-width:55%;"}
+![「Delete Users」タブの「Deletion Record Details」ウィンドウ。]({% image_buster /assets/img/audience_management/deleting_users/deletion_record_details.png %}){: style="max-width:55%;"}
 
 {% alert tip %}
 一括ユーザー削除が進行中の場合は、いつでもキャンセルできます。ただし、すでに削除されているユーザーは、キャンセルリレーションを復元できません。
@@ -107,7 +107,7 @@ Brazeで、**Audience**> **Audience**を管理し、**Delete Users**タブを選
 
 **Audience**> **Manage Audience**に進み、**Delete Users**タブを選択します。
 
-\![Braze ダッシュボードの「視聴者の管理」セクションの「ユーザの削除」タブ。]({% image_buster /assets/img/audience_management/deleting_users/delete_users_tab.png %}){: style="max-width:85%;"}
+![Braze ダッシュボードの「視聴者の管理」セクションの「ユーザの削除」タブ。]({% image_buster /assets/img/audience_management/deleting_users/delete_users_tab.png %}){: style="max-width:85%;"}
 
 このページでは、現在および保留中のすべての削除に関する次の一般情報を確認できます。
 
@@ -121,7 +121,7 @@ Brazeで、**Audience**> **Audience**を管理し、**Delete Users**タブを選
 
 特定のリクエストの詳細については、<i class="fa-solid fa-eye"></i>を選択して削除レコードの詳細を表示します。ここでは、[キャンセルの保留中のSegment削除](#cancel) も実行できます。
 
-\![「ユーザの削除」タブで保留中のSegmentの削除。]({% image_buster /assets/img/audience_management/deleting_users/pending_deletion.png %})
+![「ユーザの削除」タブで保留中のSegmentの削除。]({% image_buster /assets/img/audience_management/deleting_users/pending_deletion.png %})
 
 ### セキュリティイベントレポート
 

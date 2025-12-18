@@ -1,58 +1,72 @@
 ---
 nav_title: Home
-article_title: Release Notes
-description: "Stay up-to-date on major product releases, ongoing product improvements, Braze partnerships, breaking SDK changes, and feature deprecations."
+article_title: What's new in Braze
+description: "Braze release notes are published monthly so you can stay up-to-date on major product releases, ongoing product improvements, Braze partnerships, breaking SDK changes, and feature deprecations."
 page_order: 0
 search_rank: 1
-page_type: landing
-layout: dev_guide
-
-guide_top_header: "Release notes"
-guide_top_text: "> Braze release notes are published monthly so you can stay up-to-date on major product releases, ongoing product improvements, Braze partnerships, breaking SDK changes, and feature deprecations."
-
-guide_featured_list:
-  - name: 2025
-    link: /docs/releases/2025/
-    image: /assets/img/braze_icons/calendar-check-02.svg
-  - name: 2024
-    link: /docs/releases/2024/
-    image: /assets/img/braze_icons/calendar-check-02.svg
-  - name: 2023
-    link: /docs/releases/2023/
-    image: /assets/img/braze_icons/calendar-check-02.svg
-  - name: 2022
-    link: /docs/releases/2022/
-    image: /assets/img/braze_icons/calendar-check-02.svg
-  - name: 2021
-    link: /docs/releases/2021/
-    image: /assets/img/braze_icons/calendar-check-02.svg
-  - name: 2020
-    link: /docs/releases/2020/
-    image: /assets/img/braze_icons/calendar-check-02.svg
-  - name: 2019
-    link: /docs/releases/2019/
-    image: /assets/img/braze_icons/calendar-check-02.svg
-  - name: 2018
-    link: /docs/releases/2018/
-    image: /assets/img/braze_icons/calendar-check-02.svg
-  - name: 2017
-    link: /docs/releases/2017/
-    image: /assets/img/braze_icons/calendar-check-02.svg
-  - name: 2016
-    link: /docs/releases/2016/
-    image: /assets/img/braze_icons/calendar-check-02.svg
-  - name: Deprecations
-    link: /docs/releases/deprecations/
-    image: /assets/img/braze_icons/calendar-minus-01.svg
-  - name: SDK Changelogs
-    link: /docs/developer_guide/changelogs/
-    image: /assets/img/braze_icons/file-code-01.svg
+page_type: reference
 
 ---
+
+# What's new in Braze
 
 {% alert tip %}
 For more information on any of the updates listed on this page, contact your account manager or [open a support ticket]({{site.baseurl}}/user_guide/administrative/access_braze/support/). You can also check out our [SDK Changelogs]({{site.baseurl}}/developer_guide/changelogs) for more information about our monthly SDK releases, improvements, and breaking changes.
 {% endalert %}
+
+{% details December 9, 2025 %}
+
+## December 9, 2025
+
+### Data & Reporting
+
+#### Adding Google Tag Manager to a landing page
+
+To add Google Tag Manager to your landing pages, add a Custom Code block to your landing page in the drag-and-drop editor, then [insert the Tag Manager code]({{site.baseurl}}/user_guide/engagement_tools/landing_pages#adding-google-tag-manager-to-a-landing-page) into the block.
+
+### Orchestration
+
+#### SMS Liquid use case
+
+The [Respond with different messages based on inbound SMS keyword]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases#sms-keyword-response) use case incorporates dynamic SMS keyword processing to respond to specific inbound messages with different message copy. For example, you can send different responses when someone texts “START” versus “JOIN”.
+
+#### Allowlisting for Connected Content
+
+You can allowlist specific URLs to be used for [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call). To access this feature, contact your customer success manager.
+
+### Channels & Touchpoints
+
+#### SMS character encoding
+
+Our [SMS segment calculator]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/segments/#segment-calculator) now has character encoding! Select **Display Character Encoding** to identify which characters are encoded as GSM-7 or UCS-2. 
+
+![SMS segment calculator with a sample SMS message entered in the textbox and the character encoding turned on.]({% image_buster /assets/img/sms/character_encoding.png %}){: style="max-width:70%;"}
+
+#### WhatsApp messages with optimization
+
+Because MM API for WhatsApp doesn’t offer 100% deliverability, it's important to understand how to retarget users who may not have received your message on other channels. 
+
+To retarget users, we recommend building a segment of users who didn’t receive a specific message. To do this, filter by the error code `131049`, which indicates that a marketing template message was not sent due to WhatsApp’s per-user marketing template limit enforcement. You can do this by [using Braze Currents or SQL Segment Extensions]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/optimized_delivery/#retargeting-users-on-other-braze-channels).
+
+### Partnerships
+
+#### OtherLevels - Dynamic content
+
+[OtherLevels]({{site.baseurl}}/partners/otherlevels/) is an experience platform that uses generative AI to transform how sports brands, publishers, and operators connect with their customers by transforming traditional content into on-brand personalized video and rich media experiences at scale.
+
+### SDK
+
+#### SDK breaking updates
+
+The following SDK updates have been released. Breaking updates are listed below; all other updates can be found by checking the corresponding SDK changelogs.
+
+- [Web SDK 6.3.1](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md)
+
+{% enddetails %}
+
+{% details November 11, 2025 %}
+
+## November 11, 2025
 
 ### Data flexibility
 
@@ -70,6 +84,24 @@ RFM analysis is a marketing technique that identifies your best users by scoring
 
 When viewing a usage report, select the [**Values** tab]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_attributes/#values-tab) to view the top values of the selected custom attributes based on a sample of approximately 250,000 users.
 
+#### Sync logs and observability for Cloud Data Ingestion
+
+{% multi_lang_include release_type.md release="General availability" %}
+
+The Cloud Data Ingestion (CDI) [Sync Log dashboard]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/sync_logs/) allows you to monitor all data processed by CDI, verify whether data was synced successfully, and diagnose any issues with “incorrect” or missing data.
+
+#### Multi-rule feature flag rollouts
+
+Use [multi-rule feature flag rollouts]({{site.baseurl}}/developer_guide/feature_flags/create/#multi-rule-feature-flag-rollouts) to define a sequence of rules for evaluating users, which allows for precise segmentation and controlled feature releases. This method is ideal for deploying the same feature to diverse audiences.
+
+#### Mapping to catalog fields for drag-and-drop product blocks
+
+In your catalog settings, you can select the **Product blocks** toggle to [map to specific fields]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/product_blocks/#catalog-setup) and information in your catalog. This allows you to select which fields to use as the product title, product URL, and image URL.
+
+#### Frequency capping abort events in Currents
+
+When using Currents, you can now reference `abort_type` in the channel abort events. This identifies that a message has been aborted due to frequency capping and includes which frequency capping rule caused the abort. This helps inform how you set up your frequency capping rules. Refer to [Message engagement events]({{site.baseurl}}/user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events) for specific Currents event details.
+
 ### Robust channels
 
 #### Background row images 
@@ -79,6 +111,10 @@ When viewing a usage report, select the [**Values** tab]({{site.baseurl}}/user_g
 You can [add a background row image]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#background-image) to an in-app message or landing page in the **Row properties** panel. Toggle on **Background image**, and then provide an image URL or select an image from the [media library]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/). Finally, configure your alt text, size, position, and whether the image repeats to create patterns across the row.
 
 ![A row background image of a pizza that has a horizontal repeat pattern.]({% image_buster /assets/img_archive/background_row.png %})
+
+#### Copy preview link
+
+Use **Copy preview link** in your [Banners]({{site.baseurl}}/user_guide/message_building_by_channel/banners/creating_campaigns/#step-6-test-your-message-optional), [email custom footers]({{site.baseurl}}/user_guide/message_building_by_channel/email/custom_email_footer/#creating-your-custom-footer), and [email opt-in and unsubscribe pages]({{site.baseurl}}/user_guide/administrative/app_settings/email_settings/?tab=custom%20footer#subscription-pages-and-footers) to generate a shareable link that shows how your content will look like for a random user.
 
 #### WhatsApp messages with optimized delivery
 
@@ -92,7 +128,21 @@ When incorporating a WhatsApp Flow message into a Braze Canvas or campaign, you 
 
 Now you can give Braze the information about the response structure by [saving the Flow response as a custom attribute]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/whatsapp_flows/?tab=recommended%20method#step-1-generate-the-flow-custom-attribute) and completing a test send.
 
+#### Editable user preview
+
+You can [edit individual fields from a random or existing user]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/?tab=webhook#customizing-an-existing-user) to help test dynamic content within your message. Select **Edit** to convert the selected user into a custom user you can modify.
+
+![The "Preview as a User" tab with an "Edit" button.]({% image_buster /assets/img_archive/edit_user_preview.png %}){: style="max-width:50%;"}
+
 ### AI and ML automation
+
+#### BrazeAI Decisioning Studio™ Go
+
+You can now set up your integration with [BrazeAI Decisioning Studio™ Go]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/go) by referencing these configuration articles for:
+
+- [Braze]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/go/configuring_braze)
+- [Klaviyo]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/go/configuring_klaviyo)
+- [Salesforce Marketing Cloud]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/go/configuring_sfmc)
 
 #### New features for Braze Agents
 
@@ -161,6 +211,10 @@ The following SDK updates have been released. Breaking updates are listed below;
 - [Braze Swift SDK 13.3.0](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md)
 - [Web SDK 6.3.0](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md)
 - [Android SDK 40.0.0-40.0.2](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md)
+
+{% enddetails %}
+
+{% details October 14, 2025 %}
 
 ## October 14, 2025 release
 
@@ -315,6 +369,9 @@ The following SDK updates have been released. Breaking updates are listed below;
 - [Unity SDK 10.0.0](https://github.com/braze-inc/braze-unity-sdk/blob/master/CHANGELOG.md)
     - Updated the native iOS bridge [from Braze Swift SDK 12.0.0 to 13.2.0](https://github.com/braze-inc/braze-swift-sdk/compare/12.0.0...13.2.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed). This includes Xcode 26 support.
 
+{% enddetails %}
+{% details September 16, 2025 %}
+
 ## September 16, 2025 release
 
 ### Data flexibility
@@ -377,6 +434,9 @@ The following SDK updates have been released. Breaking updates are listed below;
 
 - [Braze Swift SDK 7.0.0](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md#1300)
   - Updates the Braze Swift SDK bindings to require releases from the `13.0.0+` SemVer denomination. This allows compatibility with any version of the Braze SDK from `13.0.0` up to, but not including, `14.0.0`.
+
+{% enddetails %}
+{% details August 19, 2025 %}
 
 ## August 19, 2025 release
 
@@ -484,6 +544,9 @@ The following SDK updates have been released. Breaking updates are listed below;
     - Updated the internal iOS implementation of `enableSdk` method to use `setEnabled`: instead of `_requestEnableSDKOnNextAppRun`, which was deprecated in the Swift SDK.
     - Calling this method no longer requires the app to be re-launched to take effect. The SDK will now become enabled as soon as this method is executed.
     - Updated the native Android bridge from [Braze Android SDK `36.0.0` to `37.0.0`](https://github.com/braze-inc/braze-android-sdk/compare/v36.0.0...v37.0.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed).
+
+{% enddetails %}
+{% details July 22, 2025 %}
 
 ## July 22, 2025 release
 
@@ -607,6 +670,9 @@ The following SDK updates have been released. Breaking updates are listed below;
 - [Android SDK 37.0.0](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md)
 - [Swift SDK 12.0.1-12.1.0](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md)
 
+{% enddetails %}
+{% details June 24, 2025 %}
+
 ## June 24, 2025 release
 
 ### BrazeAI Decisioning Studio™
@@ -670,7 +736,7 @@ You can [embed videos]({{site.baseurl}}/user_guide/message_building_by_channel/w
 
 #### Stripe - eCommerce
 
-The Braze and [Stripe]({{site.baseurl}}/partners/stripe) intergation allows you to trigger messaging in Braze based on Stripe events such as trial started, subscription activated, subscription cancellation, and more.
+The Braze and [Stripe]({{site.baseurl}}/partners/stripe) integration allows you to trigger messaging in Braze based on Stripe events such as trial started, subscription activated, subscription cancellation, and more.
 
 ### SDK updates
 
@@ -683,6 +749,9 @@ The following SDK updates have been released. Breaking updates are listed below;
     - Updated the native iOS bridge [from Braze Swift SDK 11.6.1 to 12.0.0](https://github.com/braze-inc/braze-swift-sdk/compare/11.6.1...12.0.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed).
 - [Segment Kotlin 4.0.0-4.0.1](https://github.com/braze-inc/braze-segment-kotlin/blob/4.0.0/CHANGELOG.md#400)
     - Updated Braze Android SDK [from 35.0.0 to 36.0.0](https://github.com/braze-inc/braze-android-sdk/compare/v35.0.0...v36.0.0#diff-06572a96a58dc510037d5efa622f9bec8519bc1beab13c9f251e97e657a9d4ed)
+
+{% enddetails %}
+{% details May 27, 2025 %}
 
 ## May 27, 2025 release
 
@@ -801,6 +870,9 @@ The following SDK updates have been released. Breaking updates are listed below;
     - This release reverts the increase to the minimum Android SDK version of the Braze Android SDK from API 21 to API 25 introduced in 34.0.0. This allows the SDK to once again be compiled into apps supporting as early as API 21. However, we are not reintroducing formal support for < API 25. Read more [here](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#3600).
     - Updates the native Android bridge from Braze Android SDK 35.0.0 to 36.0.0.
     - Updates the native iOS bridge from Braze Swift SDK 11.9.0 to 12.0.0.
+
+{% enddetails %}
+{% details April 29, 2025 %}
 
 ## April 29, 2025 release
 
@@ -936,3 +1008,4 @@ The following SDK updates have been released. Breaking updates are listed below;
         - This allows compatibility with any version of the Braze SDK from `12.0.0` up to, but not including, `13.0.0`.
         - Refer to the changelog entry for [`12.0.0`](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md#1200) for more information on potential breaking changes.
 
+{% enddetails %}

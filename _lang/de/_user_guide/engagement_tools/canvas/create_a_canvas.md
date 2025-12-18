@@ -39,14 +39,11 @@ guide_featured_list:
   - name: In-App-Nachrichten in Canvas
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas/
     image: /assets/img/braze_icons/phone-02.svg
-  - name: Fortschrittsverhalten
-    link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/advancement/
-    image: /assets/img/braze_icons/users-01.svg
  
 guide_menu_title: "Additional resources"
 guide_menu_list:
   - name: KI-Copywriting-Assistent
-    link: /docs/user_guide/brazeai/generative_ai/ai_copywriting/
+    link: /docs/user_guide/brazeai/generative_ai/copywriting/
     image: /assets/img/braze_icons/edit-05.svg
   - name: Arten der Zustellung
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/delivery_types/

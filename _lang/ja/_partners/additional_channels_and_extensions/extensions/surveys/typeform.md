@@ -21,7 +21,7 @@ BrazeとTypeformを統合することで、以下のことが可能になる：
 
 | 必要条件 | 説明 |
 | ----------- | ----------- |
-| Typeform アカウント | このパートナーシップを利用するには、ウェブフックにアクセスできるTypeformアカウントが必要である。 |
+| Typeform アカウント | webhookを利用できるタイプフォームアカウントは、この提携の前進タグeをとることが求められる。 |
 | Braze Data Transformation | Typeform からデータを受信するには、[Data Transformation URL]({{site.baseurl}}/data_transformation/) が必要です。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -43,9 +43,9 @@ BrazeとTypeformを統合することで、以下のことが可能になる：
 
 ![]({% image_buster /assets/img/typeform/typeform_test_request.png %})
 
-### ステップ3:選択したTypeformのイベントを受け入れる変換コードを書く
+### ステップ 3:選択したTypeformのイベントを受け入れる変換コードを書く
 
-このステップでは、Typeformから送信されるWebhookペイロードをJavaScriptオブジェクトの戻り値に変換する。
+このステップでは、Typeform から送信されるWebhookの給与読み込むをJavaScript オブジェクトの返り値に変換します。
 
 1. Data Transformation を更新し、[**Webhook の詳細**] に Typeform テストペイロードが表示されていることを確認します。
 2. 選択した Typeform イベントをサポートするように Data Transformation コードを更新します。
@@ -326,7 +326,7 @@ Content-Type: application/json
 
 以下に、[Typeform の Webhook ペイロードのサンプル](#example-typeform-webhook-payload)を使用して作成したテンプレートの例を示します。これらのテンプレートは出発点として使用できる。ゼロから作成するか、必要に応じて特定のコンポーネントを削除することができます。
 
-これらのテンプレート例では、Brazeプロファイルにカスタムイベントをロギングしている。Typeform のタイトルはカスタムイベント名として渡され、Typeform の結果はイベントプロパティとして渡されます。これらのテンプレートの例では、Typeform の質問タイプ Calendly、File Upload、Payment は考慮されていません。
+これらのテンプレート例では、Brazeプロファイルにカスタムイベントをロギングしている。タイプフォームのタイトルはカスタムイベントの名前として渡され、タイプフォームの結果はイベントプロパティーとして渡されます。これらのテンプレートの例では、Typeform の質問タイプ Calendly、File Upload、Payment は考慮されていません。
 
 ### ユースケース:識別子としてのメール
 
@@ -336,8 +336,8 @@ Content-Type: application/json
 電子メールアドレスを識別子として使用する場合は、`/users/track` エンドポイントに関する[よくある質問を]({{site.baseurl}}/api/endpoints/user_data/post_user_track#frequently-asked-questions)参照し、期待される動作の詳細を確認すること。
 {% endalert %}
 
-{% tabs ローカル %}
-{% tab インプット %}
+{% tabs local %}
+{% tab Input %}
 
 ```javascript
 /* In the Typeform webhook payload each question is stored as a “title” within each object of the “fields” array. Our code defines a “title” variable where we store the value of each field title. */
@@ -409,7 +409,7 @@ return brazecall;
 ```
 
 {% endtab %}
-{% tab 出力 %}
+{% tab Output %}
 
 ```json
 {
@@ -474,10 +474,10 @@ return brazecall;
 
 Typeform の隠しフィールドを使用して、Typeform の応答でこの情報を渡さずに、Typeform の Webhook ペイロードでユーザーの ID などのデータを渡すことができます。
 
-このテンプレートの例では、「user_id」隠しフィールドを使用し、これを`external_id` として`/users/track` リクエストペイロードに渡しています。ここでは "user_id "を使用しているが、フィールドは必要に応じて変更することができる。
+このサンプルテンプレートでは、"user_id" 隠しフィールドを使用し、これを`/users/track` リクエストpay 読み込むに`external_id` として渡します。"user_id", を使用していますが、必要に応じてフィールドs を変更できます。
 
-{% tabs ローカル %}
-{% tab インプット %}
+{% tabs local %}
+{% tab Input %}
 
 ```javascript
 /* In the Typeform webhook payload each question is stored as a “title” within each object of the “fields” array. Our code defines a “title” variable where we store the value of each field title. */
@@ -549,7 +549,7 @@ return brazecall;
 ```
 
 {% endtab %}
-{% tab 出力 %}
+{% tab Output %}
 
 ```json
 {
@@ -614,7 +614,7 @@ return brazecall;
 
 Data Transformation の作成が完了したら、[**検証**] をクリックして、Data Transformation コードが正しくフォーマットされており、期待通りに動作することを確認します。その後、Data Transformation を保存してアクティブ化します。
 
-有効化されると、カスタムイベントデータはユーザーがフォームに入力した際にユーザーのプロフィールに記録される。
+有効にすると、フォームに入力したカスタムイベントがユーザーのプロファイルに記録されます。
 
 ![]({% image_buster /assets/img/typeform/typeform_custom_event.png %})
 

@@ -1,5 +1,5 @@
 ---
-nav_title: Creating a content card
+nav_title: Creating a Content Card
 article_title: Creating a Content Card
 page_order: 0
 description: "This reference article covers how to create, compose, configure, and send Content Cards using Braze campaigns and Canvases."
@@ -160,7 +160,7 @@ If you haven't done so already, complete the remaining sections of your Canvas c
 
 ## Step 6: Review and deploy
 
-After you've finished building the last of your campaign or Canvas, review its details, [test it]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/testing/), then send it when you're ready.
+After you've finished building the last of your campaign or Canvas, review its details, [test it]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/), then send it when you're ready.
 
 {% alert warning %}
 After a Content Card is launched, it can't be edited. It can only be stopped from sending to new users and removed from users' feeds. Refer to [Updating sent cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/#updating-launched-cards) to understand how you can approach this scenario.

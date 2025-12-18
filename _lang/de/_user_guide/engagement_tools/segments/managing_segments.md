@@ -1,7 +1,7 @@
 ---
 nav_title: Segmente verwalten
 article_title: Segmente verwalten
-page_order: 1.1
+page_order: 1
 page_type: tutorial
 tool: Segments
 description: "Dieser Artikel behandelt die Aktionen, die Sie zur Verwaltung Ihrer Segmente durchführen können, z. B. das Filtern einer Liste von Segmenten, das Erstellen von Segmenten und das Bearbeiten von Segmenten."
@@ -12,7 +12,7 @@ description: "Dieser Artikel behandelt die Aktionen, die Sie zur Verwaltung Ihre
 
 > Im Bereich Segmente können Sie eine umfassende Liste Ihrer bestehenden Segmente einsehen, neue Segmente erstellen und bestehende Segmente bearbeiten. Sie können die Liste der Segmente verfeinern, indem Sie eine Vielzahl von Filtern und Spalten auswählen, so dass nur die für Sie wichtigsten Informationen angezeigt werden.
 
-![Der Abschnitt Segmente zeigt eine Liste der aktiven Segmente an.][1]
+![Der Bereich Segmente zeigt eine Liste der aktiven Segmente an.]({% image_buster /assets/img/segment/segments_page.png %})
 
 ## Anpassen Ihrer Ansicht
 
@@ -48,9 +48,17 @@ Dies sind die Spalten mit Informationen, die Sie für die Anzeige in der Segment
 
 Wenn Sie **Nur markierte anzeigen** wählen, wird Ihre Ansicht auf die Segmente eingegrenzt, die Sie markiert haben.
 
+## Anzeigen der Messaging-Nutzung eines Segments
+
+Gehen Sie zum Abschnitt **Messaging-Verwendung** eines Segments, um eine Übersicht darüber zu erhalten, wo das Segment verwendet wird, z. B. innerhalb anderer Segmente, Kampagnen und Canvase.
+
+{% alert note %}
+Um zu verhindern, dass Schleifen von Segmenten sich gegenseitig referenzieren, können Segmente, die den Filter **Segmentzugehörigkeit** verwenden, nicht von anderen Segmenten referenziert werden. Weitere Einzelheiten finden Sie unter [Segmentierungsfilter]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/).
+{% endalert %}
+
 ## Verwaltung bestimmter Segmente
 
-![Das Bearbeitungsmenü für ein Segment mit den Optionen "Bearbeiten", "Duplizieren", "Archivieren" und "Zu markierten hinzufügen".][2]{: style="float:right;max-width:25%;"}
+![Das Bearbeitungsmenü für ein Segment mit den Optionen "Bearbeiten", "Duplizieren", "Archivieren" und "Zu Sternchen hinzufügen".]({% image_buster /assets/img/segment/segments_page_edit_menu.png %}){: style="float:right;max-width:25%;"}
 
 Um ein bestimmtes Segment zu verwalten, bewegen Sie den Mauszeiger über das Segment und wählen Sie das Menüsymbol am Ende der Zeile, um die folgenden Optionen anzuzeigen:
 - **Bearbeiten:** Bearbeiten Sie die Filter in Ihrem Segment.
@@ -60,7 +68,7 @@ Um ein bestimmtes Segment zu verwalten, bewegen Sie den Mauszeiger über das Seg
  
 Sie können auch Massenaktionen durchführen, insbesondere Massenarchivierung und Massen-Tagging, indem Sie die Kästchen neben den Namen mehrerer Segmente markieren.
 
-![Mehrere Segmente ausgewählt mit "CRM" ausgewählt im Dropdown-Feld "Tag als".][3]{: style="max-width:45%;"}
+![Mehrere Segmente ausgewählt mit "CRM" ausgewählt im Dropdown-Feld "Tag als".]({% image_buster /assets/img/segment/segments_bulk_action.png %}){: style="max-width:45%;"}
 
 ### Änderungen seit letztem Aufruf
 
@@ -71,9 +79,5 @@ Suchen Sie nach Namen von Segmenten, indem Sie Begriffe in das Suchfeld eingeben
 
 Es wird nach allen Begriffen und Zeichenfolgen gesucht, die in dieses Feld eingegeben werden. Wenn Sie zum Beispiel nach "Testsegment 1" suchen, erhalten Sie Segmente mit "Test", "Segment" oder "1" an beliebiger Stelle in ihrem Namen. Um nach einer exakten Zeichenfolge zu suchen, setzen Sie Anführungszeichen um Ihren Suchbegriff. Die Suche nach ["Testsegment 1"] gibt alle Segmente zurück, die die genaue Phrase "Testsegment 1" in ihrem Namen enthalten.
 
-![Die Suchergebnisse für die Eingabe von "alle Nutzer:innen" in das Suchfeld umfassen "Alle Nutzer:innen (Test)", "Alle Nutzer:innen", "Alle Nutzer:innen 15".][4]
+![Die Suchergebnisse für die Eingabe von "alle Nutzer:innen" in das Suchfeld umfassen "Alle Nutzer:innen (Test)", "Alle Nutzer:innen", "Alle Nutzer:innen 15".]({% image_buster /assets/img/segment/segments_search.png %})
 
-[1]: {% image_buster /assets/img/segment/segments_page.png %}
-[2]: {% image_buster /assets/img/segment/segments_page_edit_menu.png %}
-[3]: {% image_buster /assets/img/segment/segments_bulk_action.png %}
-[4]: {% image_buster /assets/img/segment/segments_search.png %}

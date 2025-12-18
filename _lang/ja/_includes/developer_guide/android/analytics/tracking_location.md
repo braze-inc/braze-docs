@@ -1,6 +1,6 @@
 ## 現在地を記録する
 
-連続追跡が無効になっている場合でも、手動でユーザーの現在位置を [`setLastKnownLocation()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/set-last-known-location.html)メソッドを使う。
+継続的なトラッキングが無効になっている場合でも、ユーザーの現在位置を [`setLastKnownLocation()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/set-last-known-location.html)メソッドを使う。
 
 {% tabs %}
 {% tab JAVA %}
@@ -34,7 +34,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 
 ユーザーの位置情報を継続的に追跡するには、`AndroidManifest.xml` ファイルに以下の権限の少なくとも1つを追加して、アプリが位置情報データを収集する意図を宣言する必要がある。
 
-|許可|説明|
+|権限|説明|
 |---|---|
 | `ACCESS_COARSE_LOCATION` | 最もバッテリー効率の良い、非GPSプロバイダー（ホームネットワークなど）を使用する。通常、ほとんどの位置情報のニーズにはこれで十分である。実行時権限モデルの下では、位置情報の権限を与えることは、暗黙のうちに、細かい位置情報のデータ収集を許可することになる。 |
 | `ACCESS_FINE_LOCATION`   | より正確な位置情報のためのGPSデータを含む。実行時権限モデルの下では、ロケーション権限の付与は、細かいロケーショ ンアクセスもカバーする。 |
@@ -58,7 +58,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 連続トラッキングは、コンパイル時または実行時に無効にすることができる。
 
 {% tabs local %}
-{% tab コンパイル時 %}
+{% tab compile time %}
 
 コンパイル時に位置情報の連続追跡を無効にするには、`braze.xml` で`com_braze_enable_location_collection` を`false` に設定する：
 
@@ -67,7 +67,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 ```
 
 {% endtab %}
-{% tab ランタイム %}
+{% tab runtime %}
 
 実行時に位置情報の連続追跡を選択的に無効にするには、次のようにする。 [`BrazeConfig`]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/runtime_configuration/#runtime-configuration):
 

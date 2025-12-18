@@ -42,8 +42,6 @@ curl --location --request GET 'https://rest.iad-01.braze.com/events/list?page=3'
 ## Response
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "events" : [

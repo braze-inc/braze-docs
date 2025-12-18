@@ -13,9 +13,9 @@ description: "この参考記事では、Liquidを通してBrazeのキャンペ�
 
 ### ステップ 1: パーソナライゼーションタイプを追加する {#step-one-personalization}
 
-選択したメッセージコンポーザーで、<i class="fas fa-plus-circle"></i> プラスアイコンを選択して**パーソナライズの追加**モーダルを開き、**パーソナライズのタイプに** **カタログアイテムを**選択する。次に、**カタログ名**を選択します。先ほどの例を使って、「ゲーム」カタログを選択する。
+選択したメッセージ作成画面で、<i class="fas fa-plus-circle"></i> プラスアイコンを選択して**カスタマイズ**モーダルを追加し、**カタログアイテム**を**カスタマイズタイプ**に対して選択します。次に、カタログの名前を選択します。先ほどの例を使って、「ゲーム」カタログを選択する。
 
-\![]({% image_buster /assets/img_archive/use_catalog_personalization.png %})
+![]({% image_buster /assets/img_archive/use_catalog_personalization.png %})
 
 以下の Liquid プレビューがすぐに表示されます。
 
@@ -56,11 +56,11 @@ Get {{ items[0].title }} for just {{ items[0].price }}!
 
 ### 複数の項目
 
-1つのメッセージ内の1つの項目だけに限定されるわけではありません。**Add Personalization**モーダルを使用して、一度に最大3つのカタログアイテムを追加できます。メッセージにアイテムを追加するには、メッセージコンポーザーで**カスタマイズを追加**を選択し、表示する追加のカタログアイテムと情報を選択します。
+メッセージ内の1つの項目に制限されていません。**パーソナライゼーションの追加**モーダルを使用して、一度に最大3つのカタログ項目を追加します。さらに追加するには、コンポーザーで**パーソナライゼーション**を再度選択し、表示する追加のカタログ項目とインフォメーションを選択します。
 
 この例では、Tales、Teslagrad、Acaratus の 3 つのゲームの `id` を**カタログアイテム**に追加し、[**表示する情報**] のために `title` を選択します。
 
-\![]({% image_buster /assets/img_archive/catalog_multiple_items.png %}){: style="max-width:70%" }
+![]({% image_buster /assets/img_archive/catalog_multiple_items.png %}){: style="max-width:70%" }
 
 Liquid の周りにテキストを追加することで、メッセージをさらにパーソナライズできます。
 
@@ -116,11 +116,11 @@ Message if the venue name's size is less than 10 characters.
 ```
 {% endraw %}
 
-\!["画像 フィールドで使用するカタログリキッドタグ付きコンテンツカードコンポーザー。]({% image_buster /assets/img_archive/catalog_image_link1.png %})
+![画像フィールドで使用されるカタログの Liquid タグを含むコンテンツカード作成画面。]({% image_buster /assets/img_archive/catalog_image_link1.png %})
 
 Liquid がレンダリングされると、次のように表示されます。
 
-\![カタログリキッドタグ付きコンテンツカードをレンダリングしました。]({% image_buster /assets/img_archive/catalog_image_link2.png %}){: style="max-width:50%" }
+![カタログのリキッドタグをレンダリングしたコンテンツカードの例。]({% image_buster /assets/img_archive/catalog_image_link2.png %}){: style="max-width:50%" }
 
 ### カタログ項目をテンプレート化する
 
@@ -154,12 +154,12 @@ Liquid テンプレートを使用することで、ウィッシュリストか�
 {% assign wishlist = {{custom_attribute.${wishlist}}}%}
 {% catalog_items Games {{ wishlist[0] }} %}
 
-Get {{ items[0].title }} now, for just {{ items[0].price }}!
+Get {{ items[0].title }} now for {{ items[0].price }}!
 ```
 {% endraw %}
 
 以下のように表示される：
-> 「Tales」をわずか 7.49 ドルで今すぐゲットしよう!
+> さっき7.49でお話しましょう！
 
 テンプレート化により、各ユーザーのカスタム属性、イベントプロパティ、その他のテンプレート化可能なフィールドに基づいて、各ユーザーに異なるカタログ項目をレンダリングすることができる。
 
@@ -171,10 +171,6 @@ Get {{ items[0].title }} now, for just {{ items[0].price }}!
 
 Liquid ロジック使用してカタログを手動で作成することもできます。ただし、存在しないIDを入力しても、Brazeはオブジェクトのないitems配列を返すことに注意。配列のサイズをチェックしたり、`if` ステートメントを使用して配列が空の場合を考慮するなど、エラー処理を含めることを推奨する。
 
-{% alert note %}
-現在、カタログ内で Liquid を使用することはできません。リキッドパーソナライゼーションがカタログのセル内にリストされている場合、ダイナミック値はレンダリングされず、実際のリキッドのみが表示される。
-{% endalert %}
-
 #### リキッドを含むカタログアイテムのテンプレート化
 
 [コネクテッドコンテンツ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content)と同様に、Liquid タグで `:rerender` フラグを使用してカタログアイテムの Liquid コンテンツをレンダリングする必要があります。`:rerender` フラグはレベル1の深さしかないことに注意してください。つまり、階層化 Liquid タグ 呼び出しには適用されません。
@@ -183,7 +179,7 @@ Liquid ロジック使用してカタログを手動で作成することもで�
 
 たとえば、「Messages」という名前のカタログに、この Liquid を含むアイテムがあるとします。
 
-\![]({% image_buster /assets/img_archive/catalog_liquid_templating.png %}){: style="max-width:80%;"}
+![]({% image_buster /assets/img_archive/catalog_liquid_templating.png %}){: style="max-width:80%;"}
 
 以下のリキッドコンテンツをレンダリングするには:
 

@@ -7,7 +7,7 @@ search_tag: Partner
 
 # Snowflake と Braze のエンティティのリレーションシップ
 
-> これらは、各メッセージングチャネルのSnowflakeとBrazeの間のエンティティ関係のリストです。
+> これらは、各メッセージングチャネルの Snowflake と Braze の間のエンティティリレーションシップのリストです。
 
 {% sdktabs %}
 {% sdktab Content Cards %}

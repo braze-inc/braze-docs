@@ -28,21 +28,21 @@ CDIセグメントエクステンションは、データウェアハウスに�
 
 最初の CDI セグメントエクステンションを作成する前に、[接続ソースの]({{site.baseurl}}/user_guide/data/cloud_ingestion/connected_sources/)ステップに従って、データウェアハウスとの新しい接続ソースを設定する。
 
-### ステップ 2: セグメントを作成する
+### ステップ 2:セグメントを作成する
 
 まず、新しい[セグメントエクステンション]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/)を作成し、[**完全に更新**] を選択します。
 
-\![]({% image_buster /assets/img/segment/segment_extension_modal.png %}){: style="max-width:60%;"}
+![]({% image_buster /assets/img/segment/segment_extension_modal.png %}){: style="max-width:60%;"}
 
 データソースには [**CDI データテーブル**] を選択します。
 
-\![]({% image_buster /assets/img/segment/cdi_data_tables.png %}){: style="max-width:60%;"}
+![]({% image_buster /assets/img/segment/cdi_data_tables.png %}){: style="max-width:60%;"}
 
 CDIのセットアップの一環として、CDIセグメントエクステンションで使用する接続を選択できる。各接続は特定のデータテーブルのセットを持っている。開発チームは、CDI のセットアップ中に接続とデータテーブルを設定することができます。
 
 利用可能なデータ・テーブル（スキーマや利用可能な説明を含む）を表示するには、**Referenceを**選択する。準備ができたら、接続を選択する。
 
-\![]({% image_buster /assets/img/segment/connection_schema_with_descriptions.png %}){: style="max-width:100%;"}
+![]({% image_buster /assets/img/segment/connection_schema_with_descriptions.png %}){: style="max-width:100%;"}
 
 次に、[Braze SQL の構文]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/#writing-sql)を使ってセグメント用の SQL を書きます。
 

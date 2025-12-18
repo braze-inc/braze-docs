@@ -31,7 +31,7 @@ local_redirect:
 
 フィーチャーフラグを作成するとき、デフォルトのプロパティを指定します。フィーチャーフラグのキャンバスステップを設定する際は、デフォルト値を維持するか、このステップに入るユーザー用に値を上書きすることができます。
 
-![プロパティが「文字列」、プロパティキーが「url」のフィーチャーフラグ [ユーザー設定センター]。]({% image_buster /assets/img/feature_flags/feature_flags_canvas_details.png %}){: style="max-width:90%"}
+![フィーチャーフラグ「ユーザー設定センター」は、プロパティとして "String"、プロパティキーとして "url"、値として "value "を持つ。]({% image_buster /assets/img/feature_flags/feature_flags_canvas_details.png %}){: style="max-width:90%"}
 
 [**メッセージング**] > [**フィーチャーフラグ**] に移動して、追加のプロパティを編集、追加、または削除します。
 

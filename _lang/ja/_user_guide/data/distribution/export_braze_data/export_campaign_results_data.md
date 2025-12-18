@@ -79,7 +79,7 @@ tool:
 権限がないと、[**ユーザーデータ**] ボタンは表示されません。ユーザーデータをエクスポートするには、そのワークスペースの**ユーザーデータのエクスポート**[権限]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#limited-and-team-role-permissions)が必要です。
 {% endalert %}
 
-\![キャンペーン詳細]ページの「ユーザデータ」ドロップダウン]({% image_buster /assets/img/campaign_export_example.png %})
+![[キャンペーンの詳細] ページの [ユーザーデータ] ドロップダウン]({% image_buster /assets/img/campaign_export_example.png %})
 
 CSV 出力には、キャンペーンの各受信者のユーザープロファイルデータが含まれます。Braze はバックグラウンドでレポートを生成し、現在ログインしているユーザーにメールで通知します。
 

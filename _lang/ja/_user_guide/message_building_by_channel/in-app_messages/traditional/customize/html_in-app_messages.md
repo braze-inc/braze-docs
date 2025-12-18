@@ -82,7 +82,7 @@ BrazeのHTMLアプリ内メッセージでは、以下のJavaScriptメソッド�
 </style>
 
 {% alert note %}
-Liquid を参照して<code>customAttributes</code> をJavaScript Bridge メソッドに挿入することはできません。
+Liquid を参照して、 <code>customAttributes</code> をJavaScript Bridge のメソッドに挿入することはできません。
 {% endalert %}
 
 {% multi_lang_include archive/appboyBridge.md %}
@@ -137,7 +137,7 @@ HTTP または HTTPS のリンクをディープリンクとして Braze で処�
 
 エディターのメッセージ・プレビュー・パネルには、メッセージに含まれるJavaScriptをレンダリングするリアルなプレビューが表示される。プレビューパネルから、ページネーションをクリックしたり、フォームやアンケートを送信したり、JavaScriptアニメーションを見たりして、カスタムメッセージをプレビューし、やりとりすることができる！
 
-\![画面をスワイプしてHTML プレビューを操作する。]({% image_buster /assets/img/iam-beta-javascript-preview.gif %})
+![HTML プレビューをスワイプして操作します。]({% image_buster /assets/img/iam-beta-javascript-preview.gif %})
 
 {% alert tip %}
 HTMLで使用している`brazeBridge` JavaScriptメソッドは、ダッシュボードでプレビューしている間はユーザー・プロフィールを更新しない。
@@ -242,8 +242,8 @@ HTMLエディタで<i class="fa-solid fa-magnifying-glass"></i>**検索**を選�
 
    | 前 | その後 |
    |:-------- |:------------|
-   |<code>hra;lt"braze://close">閉じるボタン</a></code>|<code><a href="#" onclick="brazeBridge.logClick();brazeBridge.closeMessage()">閉じるボタン</a></code>|
-   |<code>hra;lt"braze://close?abButtonId=0">閉じるボタン</a></code>|<code><a href="#" onclick="brazeBridge.logClick('0');brazeBridge.closeMessage()">閉じるボタン</a></code>|
-   |<code>hra;lt"app://deeplink?abButtonId=0">トラックボタン1</a></code>|<code>hra="app://deeplink" onclick="brazeBridge.logClick('0')">トラックボタン1</a></code>|
-   |<code><script><br>location.href = "braze://close?abButtonId=1"<br></script></code>|<code><script><br>window.addEventListener("ab.BridgeReady", function(){<br>  brazeBridge.logClick("1");<br>  brazeBridge.closeMessage();<br>});<br></script></code>|
+   |<code>&lt;a href="<mem_f2ea53fb-2c71-4cbd-a3ea-d49418b89495/>"&gt;Close Button&lt;/a&gt;</code>|<code>&lt;a href="#" onclick="brazeBridge.logClick();brazeBridge.closeMessage()"&gt;Close Button&lt;/a&gt;</code>|
+   |<code>&lt;a href="<mem_f80365b4-3f37-489e-a07f-792e07829da3/>"&gt;Close Button&lt;/a&gt;</code>|<code>&lt;a href="#" onclick="brazeBridge.logClick('0');brazeBridge.closeMessage()"&gt;Close Button&lt;/a&gt;</code>|
+   |<code>&lt;a href="<mem_f08ca691-4f42-40d4-8cd9-7ebceed41981/>">Track button 1&lt;/a&gt;</code>|<code>&lt;a href="<mem_efb380b7-dd57-4701-9ef2-e22cfe3a50bc/>" onclick="brazeBridge.logClick('0')"&gt;Track button 1&lt;/a&gt;</code>|
+   |<code>&lt;script&gt;<br>location.href = "<mem_2c9a2106-bdce-451b-829b-048facba5768/>"<br>&lt;/script&gt;</code>|<code>&lt;script&gt;<br>window.addEventListener("ab.BridgeReady", function(){<br>&nbsp;&nbsp;brazeBridge.logClick("1");<br>&nbsp;&nbsp;brazeBridge.closeMessage();<br>});<br>&lt;/script&gt;</code>|
 

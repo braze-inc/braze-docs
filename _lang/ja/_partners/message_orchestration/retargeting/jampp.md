@@ -68,7 +68,7 @@ Webhook URL で次の操作を行う必要があります。
 - Android と iOS のアプリの一意のアプリケーション識別子 (Android:「com.example」、iOS:「012345678」など) を渡します。
 - Google 広告 ID として追跡している適切なカスタム属性の [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#using-liquid) を挿入します。この例では、Google 広告 ID が `aaid` としてリストされていますが、これを開発者が設定したカスタム属性名に置き換える必要があります。
 
-![Braze Webhook ビルダーに表示される Webhook URL とメッセージプレビュー。]({% image_buster /assets/img/jampp_webhook.png %})
+![Braze Webhook ビルダーに表示されるWebhookのURL およびメッセージプレビュー。]({% image_buster /assets/img/jampp_webhook.png %})
 
 {% alert important %}
 BrazeはデバイスのIDFA/AAIDを自動的に収集しないので、これらの値を自分で保存する必要がある。このデータを収集するには、ユーザーの同意を必要とする場合があることに注意してください。

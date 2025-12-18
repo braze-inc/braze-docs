@@ -33,8 +33,8 @@ Para se conectar aos servidores da Braze, crie um arquivo `braze.xml` na pasta `
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<string name="com_braze_api_key">YOUR_APP_IDENTIFIER_API_KEY</string>
-<string translatable="false" name="com_braze_custom_endpoint">YOUR_CUSTOM_ENDPOINT_OR_CLUSTER</string>
+  <string translatable="false" name="com_braze_api_key">YOUR_APP_IDENTIFIER_API_KEY</string>
+  <string translatable="false" name="com_braze_custom_endpoint">YOUR_CUSTOM_ENDPOINT_OR_CLUSTER</string>
 </resources>
 ```
 
@@ -134,7 +134,7 @@ Em seguida, inicialize uma instância do plug-in da Braze chamando `new BrazePlu
 Para evitar comportamentos indefinidos, aloque e use apenas uma única instância do `BrazePlugin` em seu código Dart.
 {% endalert %}
 
-## Testar a integração
+## Teste da integração
 
 Você pode verificar se o SDK está integrado verificando as estatísticas da sessão no dashboard. Se você executar seu aplicativo em qualquer uma das plataformas, deverá ver uma nova sessão no dashboard (na seção **Visão geral** ).
 

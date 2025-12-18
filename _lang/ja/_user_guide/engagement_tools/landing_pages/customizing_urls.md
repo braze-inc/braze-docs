@@ -24,7 +24,7 @@ Braze アカウントに接続できるカスタムドメインの数は、[プ�
 3. **TXT** および**CNAME** レコードをコピーして、ドメインプロバイダーのDNS 設定に貼り付けます。
 4. Braze ダッシュボードに戻り、接続を確認します。
 
-\![ランディングページ設定ページには、1つのTXTレコードと2つのCNAMEレコードがそれぞれの名前と値とともに記載されている。]({% image_buster /assets/img/landing_pages/connect_subdomain.png %})
+![ランディングページ設定ページには、1 つのTXT レコードと2 つのCNAME レコードがそれぞれの名前と値とともにリストされています。]({% image_buster /assets/img/landing_pages/connect_subdomain.png %})
 
 {% alert note %}
 ドメインプロバイダーによっては、接続に最大48時間かかることがあります。プロセスが完了したら、Braze ダッシュボードのランディングページでカスタムドメインの使用を開始します。
@@ -46,16 +46,7 @@ Braze 管理者は、次の手順で以前に設定したドメインを削除�
 
 ## DNSリソース
 
-以下に、一般的に使用されるドメインプロバイダでDNS レコードを作成および管理するためのリソースを示します。別のプロバイダーを使用している場合は、そのプロバイダーのドキュメントを参照するか、サポートチームにお問い合わせください。
-
-| ドメインプロバイダー | リソース |
-| --- | --- |
-| Bluehost | [DNS レコードの説明](https://my.bluehost.com/hosting/help/508)<br> [DNS 管理DNS エントリの追加編集または削除](https://my.bluehost.com/hosting/help/559) |
-| Dreamhost | [カスタム DNS レコードを追加する方法](https://help.dreamhost.com/hc/en-us/articles/360035516812) |
-| GoDaddy | [CNAME レコードの追加](https://www.godaddy.com/help/add-a-cname-record-19236?) |
-| Cloudflare | [DNS レコードの管理](https://developers.cloudflare.com/dns/manage-dns-records/how-to/create-dns-records/) |
-| Squarespace | [カスタムDNS 設定の追加](https://support.squarespace.com/hc/en-us/articles/360002101888-Adding-custom-DNS-records-to-your-Squarespace-managed-domain) |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{% multi_lang_include dns_records.md %}
 
 ## トラブルシューティング 
 
@@ -72,4 +63,28 @@ Braze 管理者は、次の手順で以前に設定したドメインを削除�
 ### 現在メインサイトで使用しているサブドメインや送信ドメインと同じものを使用できるか？
 
 いや、すでに使われているサブドメインを使うことはできない。これらのサブドメインは有効だが、すでに他の目的に割り当てられていたり、必要なCNAMEレコードと競合するDNSレコードを持っている場合は、ランディングページに使用することはできない。
+
+### 有効なDNSレコードにもかかわらず、カスタムドメインが"Connecting" に留まっているのはなぜですか?
+
+カスタムドメインにすべてのDNSレコードが"Connected&quot として表示されているが、ドメインステータスが"Connecting"のままである場合、4 時間以上にわたって、組織でCAA (認証局認証) レコードまたはCloudflare ゾーンが使用され、Brazeによるページのセキュリティ保護が妨げられている可能性があります。
+
+#### CAA記録
+
+CA レコードは、ドメインのSSL 証明書を発行できる証明書権限を制限します。CAA レコードにLetsEncrypt が含まれていない場合、Braze (Cloudflare 経由) は必要なSSL 証明書を発行できません。
+
+これを解決するには、IT チームに以下の値を使用してサブドメインにCAA レコードを追加するよう依頼します。
+- **レコードタイプ:**CAA
+- **値:** `0 issue "letsencrypt.org"`
+
+詳細については、[LetsEncryptのCAA ドキュメント](https://letsencrypt.org/docs/caa/)を参照してください。
+
+#### クラウドフレアゾーンが保留
+
+組織でCloudflare を使用している場合、ゾーン保留セキュリティ機能によってBraze がカスタムドメインを作成できないことがあります。
+
+これを解決するには、IT チームにゾーン保留を一時的に解除するよう依頼します。詳細については、[Cloudflare のゾーンホールドドキュメント](https://developers.cloudflare.com/fundamentals/account/account-security/zone-holds/#release-zone-holds)を参照してください。
+
+#### 検証プロセスの再開
+
+いずれかの問題を解決した後、Braze ダッシュボードでカスタムドメインを削除して再作成し、検証プロセスを再開します。
 

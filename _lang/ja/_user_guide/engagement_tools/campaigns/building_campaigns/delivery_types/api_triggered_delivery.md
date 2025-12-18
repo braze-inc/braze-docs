@@ -23,14 +23,14 @@ API を利用したキャンペーンは、[API キャンペーン]({{site.baseu
 
 次に、通常の予約通知と同じようにコピーと通知を設定し、**API トリガー配信**を選択します。サーバーからこれらのキャンペーンをトリガーする方法については、こちらの [API トリガーキャンペーン送信]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/)記事をご覧ください。
 
-\![]({% image_buster /assets/img_archive/api_triggered_campaign_delivery.png %})
+![]({% image_buster /assets/img_archive/api_triggered_campaign_delivery.png %})
 
 ## API リクエストに含まれるテンプレート化されたコンテンツを使用する
 
 メッセージのトリガーに加えて、API リクエストを含むコンテンツを`trigger_properties`オブジェクト内にテンプレート化することもできます。この内容はメッセージの本文で参照できます。たとえば、次のものを含めることができます。
 ``{% raw %} {{ api_trigger_properties.${ some_value_included_with_request }}} {% endraw %}``。追加のコンテキストについては、次のソーシャル通知の例を参照してください。
 
-\![前述のトリガープロパティは、メッセージに含まれ、ユーザーの名前と次のテキストを自動入力します。「あなたの写真にいいねしました。彼らが何をしていたかを見るにはここをクリック」]({% image_buster /assets/img_archive/api_triggered_photo_social_example_1.png %}){: style="max-width:70%;"}
+![前述のトリガープロパティは、ユーザーの名前を自動入力し、「あなたの写真が気に入りました！」というテキストを続けてメッセージに含めました。彼らが何をしていたかを見るにはここをクリック」]({% image_buster /assets/img_archive/api_triggered_photo_social_example_1.png %}){: style="max-width:70%;"}
 
 ## API トリガーキャンペーンで再利用可能
 
@@ -38,6 +38,6 @@ API を利用したキャンペーンは、[API キャンペーン]({{site.baseu
 
 たとえば、API トリガーのキャンペーンを使用して、ユーザーが最近閲覧したアイテムに関するキャンペーンを送信しているとします。この場合、各アイテムの API トリガーを起動している間、閲覧したアイテムの数に関係なく、1 日 1 回までメッセージを送信するようにキャンペーンを制限できます。一方、API トリガーのキャンペーンがトランザクションベースの場合、遅延時間を 0 分に設定することで、ユーザーがトランザクションを実行するたびにキャンペーンを受け取るようにできます。
 
-\![]({% image_buster /assets/img_archive/api_triggered_reeligible.png %})
+![]({% image_buster /assets/img_archive/api_triggered_reeligible.png %})
 
 

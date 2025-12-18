@@ -33,17 +33,17 @@ channel:
 ユーザーは、最後に SMS、MMS、または RCSを受信した時点、または特定のキャンペーンから SMS、MMS、またはRCSを受信しているかどうかに基づいてフィルタリングできます。フィルターはキャンペーンビルダーの**ターゲットオーディエンス**ステップで設定できます。 
 
 **最後に受信したSMS/MMS/RCSでフィルタリングする**<br>
-\![2020年12月8日以降に最後に受信したSMSの分割フィルター。]({% image_buster /assets/img/sms/filter2.png %})
+![セグメンテーション フィルター 2020年12月8日以降に受信した最後のSMS。]({% image_buster /assets/img/sms/filter2.png %})
 
 **SMS/MMS/RCS キャンペーンからの受信電文で絞り込む**<br>
 特定のキャンペーンからメッセージを受信したユーザーをフィルタリングします。このフィルタを使用すると、キャンペーンからメッセージを受信していないものをフィルタリングすることもできます。<br>
-\![セグメンテーションフィルター キャンペーン "SMS リターゲティング"からのメールを受信しました。]({% image_buster /assets/img/sms/filter1.png %})
+![セグメンテーションフィルターはキャンペーン「SMSリターゲティング」からメッセージを受信しました。]({% image_buster /assets/img/sms/filter1.png %})
 
 ### ユーザーがSMS、MMS、またはRCSを受信するときにメッセージをトリガーします {#trigger-messages}
 
 ユーザーが特定のキャンペーンから SMS、MMS、または RCS メッセージを受信したときにメッセージをトリガーするには、アクションベースのキャンペーンのトリガーアクションとして [**キャンペーンと対話**] を選択します。次に、[**SMS を受信する**] と、使用する SMS、MMS、または RCS キャンペーンを選択します。
 
-\![]({% image_buster /assets/img/sms/trigger.png %})
+![]({% image_buster /assets/img/sms/trigger.png %})
 
 ### 高度なトラッキングリンクによるフィルター処理
 
@@ -55,14 +55,14 @@ channel:
 2. [**クリック済み SMS 短縮リンク**] を選択します。
 3. 希望のキャンペーンを選択してください。
 
-\![]({% image_buster /assets/img/sms/retargeting5.png %})
+![]({% image_buster /assets/img/sms/retargeting5.png %})
 
 **特定のキャンバスステップをクリックしたユーザーをリターゲティングする**
 1. **クリック/オープンされたステップ**フィルターを使用してセグメントを作成します。
 2. [**クリック済み SMS 短縮リンク**] を選択します。
 3. 目的のキャンバスとキャンバスステップを選択します。
 
-\![]({% image_buster /assets/img/keyword_example1.jpg %})
+![]({% image_buster /assets/img/keyword_example1.jpg %})
 
 ## キーワード カテゴリ固有のリターゲティング
 
@@ -72,20 +72,20 @@ channel:
 
 SMS、MMS、またはRCS プログラムに応答するユーザーの最新情報をフィルタリングします。このフィルタは、ユーザがキーワードカテゴリのいずれかに含まれるインバウンドメッセージを送信した最後の日付を評価します。 
 
-\![セグメンテーションフィルター 最後にSMS をサブスクリプショングループ "Marketing SMS" キーワード"Opt-in" 2020年8 月11 日以降に送信しました。]({% image_buster /assets/img/sms/retargeting1.png %})
+![セグメンテーションフィルター 最後に送信されたSMSは、2020年8月11日以降に「オプトイン」というキーワードを含む「マーケティングSMS」というサブスクリプショングループに送信されました。]({% image_buster /assets/img/sms/retargeting1.png %})
 
 ### キャンペーンまたはキャンバスアトリビューションでフィルター
 
 特定の SMS、MMS、RCS キャンペーンまたはキャンバスコンポーネント、キーワードカテゴリ、またはタグに応答したユーザーのフィルターです。
 
 **キーワードカテゴリを含む特定のキャンペーンへの応答に基づくフィルター処理**<br>
-\![キャンペーン とフィルター " SMS" キャンペーン " SMS-283" " Promotion" に対して返信しました。この機能により、フィルターの下に「このフィルターは、アクティブなキャンペーンで使用されていない場合、「プロモーション」から最後のメッセージが送信されてから 25 か月後に期限切れになります」と表示されています。]({% image_buster /assets/img/sms/clicked_opened_campaign.png %})
+![キャンペーン「SMS-283」の「プロモーション」で「SMS に応答」のフィルターを指定したキャンペーン。この機能により、フィルターの下に「このフィルターは、アクティブなキャンペーンで使用されていない場合、「プロモーション」から最後のメッセージが送信されてから 25 か月後に期限切れになります」と表示されています。]({% image_buster /assets/img/sms/clicked_opened_campaign.png %})
 
 **特定のタグを持つキャンペーンまたはキャンバスへの応答によるフィルター**
-\![キャンペーン にフィルター"SMS" キャンペーン またはキャンバスにタグ "Curbside Messaging Service C" を返信しました。]({% image_buster /assets/img/sms/clicked_opened_campaign_canvas_tag.png %})
+![タグ「Curbside Messaging Service C」を持つキャンペーンまたはキャンバスで「SMS に応答」のフィルターを指定したキャンペーン。]({% image_buster /assets/img/sms/clicked_opened_campaign_canvas_tag.png %})
 
 **特定のステップへの応答によるフィルター処理**
-\![フィルター &quot でキャンペーン;SMS&quot に返信しました;ステップ "SMS Double Opt" "ステップ - Help".]({% image_buster /assets/img/sms/clicked_opened_step.png %})
+![ステップ「SMS ダブルオプト」の「ステップ - ヘルプ」で「SMS に応答」のフィルターを指定したキャンペーン。]({% image_buster /assets/img/sms/clicked_opened_step.png %})
 
 ### キーワードによるメッセージのトリガー
 
@@ -98,11 +98,11 @@ SMS、MMS、またはRCS プログラムに応答するユーザーの最新情�
 {% endalert %}
 
 **インバウンドのキーワードカテゴリによるトリガー**<br>
-\![アクションベースのSMS キャンペーンとセグメンテーション フィルター送信キーワード"Opt-in"サブスクリプショングループ"Marketing SMS".]({% image_buster /assets/img/sms/retargeting2.png %}){: style="margin-top:10px;"}
+![アクションベースのSMSキャンペーンでセグメンテーションフィルターを使用し、「オプトイン」というキーワードをサブスクリプショングループ「マーケティングSMS」に送信しました。]({% image_buster /assets/img/sms/retargeting2.png %}){: style="margin-top:10px;"}
 
 **任意のキーワードによるトリガー**<br>
 「その他」のキーワード応答でメッセージをトリガーする場合、キーワード本文を正確なテキスト一致で評価する機会があります。この一致は、次のルールに従います。唯一の**正確な単語のメッセージ**が処理されます（大文字と小文字の_区別なし_）。`Hello Braze!` のキーワード送信は、次の例に示す基準に一致しません。
-\![キーワードカテゴリが"Other"メッセージ本文が正確に"Hello"または"Hey"のアクションベースのSMS キャンペーン。]({% image_buster /assets/img/sms/retargeting3.png %}){: style="margin-top:10px;"}
+![アクションベースのSMSキャンペーンで、キーワードカテゴリが「その他」で、メッセージ本文が正確に「Hello」または「Hey」の場合。]({% image_buster /assets/img/sms/retargeting3.png %}){: style="margin-top:10px;"}
 
 **キーワードのテンプレート化**<br>
 インバウンドの SMS または MMS でキャンペーンやキャンバスコンポーネントをトリガーする場合、Liquid を使用して、ユーザーが送信したテキストやメディア添付ファイルをキャンペーンやキャンバスの本文にテンプレート化することができます。これにより、ユーザーの応答にアクセスして、その応答を返信に含めたり、条件付きロジックを適用したり、Liquid で可能なあらゆることを実行したりできます。 

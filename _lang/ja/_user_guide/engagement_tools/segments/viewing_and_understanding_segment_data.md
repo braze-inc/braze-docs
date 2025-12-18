@@ -18,13 +18,13 @@ tool:
 
 Braze ダッシュボードの [**セグメント**] ページには、すべてのセグメントの要約が表示され、それぞれの詳細データを調べることができます。このページでは、セグメント名を検索して選択すると、そのデータの編集と表示を行うことができます。セグメンテーションの作成方法については、[セグメンテーションの作成を]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment)参照のこと。
 
-\![セグメントページ]]({% image_buster /assets/img_archive/segments.png %})
+![[セグメント] ページ]({% image_buster /assets/img_archive/segments.png %})
 
 セグメンテーション名を選択すると、セグメンテーションの統計とフィルターを表示し、フィルターを追加または削除してセグメンテーションを編集することができる。変更を必ず保存してください。
 
 [セグメントの分析トラッキングを]({{site.baseurl}}/user_guide/analytics/tracking/segment_analytics_tracking/)オンにすると、そのセグメントのセッション、カスタムイベント、収益を時系列で見ることができる。
 
-\![Segmentの分析"トラッキングの切り替え]({% image_buster /assets/img_archive/A_Tracking_2.png %})
+![セグメントの [分析の追跡] トグル]({% image_buster /assets/img_archive/A_Tracking_2.png %})
 
 ### セグメント統計
 
@@ -88,7 +88,7 @@ Braze ダッシュボードの [**セグメント**] ページには、すべて
 
 セグメンテーションがワークスペースのサイズに対して非常に小さい場合、ユーザープレビューがゼロユーザーを返す可能性があることに注意すること。これは、セグメントのユーザーがゼロであることを必ずしも意味するものではありません。セグメントの正確なサイズを判断するには、[[正確な統計を計算する]({{site.baseurl}}/user_guide/engagement_tools/segments/measuring_segment_size/#statistics-for-segment-size)] を実行します。
 
-\![ユーザープレビュー]]({% image_buster /assets/img_archive/user_preview.png %})
+![ユーザープレビュー]({% image_buster /assets/img_archive/user_preview.png %})
 
 ## セグメンテーション別にパフォーマンスデータを見る
 

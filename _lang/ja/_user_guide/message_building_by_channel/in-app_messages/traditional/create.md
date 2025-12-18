@@ -17,7 +17,7 @@ toc_headers: h2
 
 ## ステップ 1:メッセージを発信する場所を選ぶ {#create-new-campaign-in-app}
 
-メッセージは、キャンペーンとキャンバスのどちらを使用して配信すべきでしょうか。キャンペーンは単一のシンプルなメッセージングキャンペーンに適していますが、キャンバスはマルチステップのユーザーのジャーニーに適しています。
+メッセージは、キャンペーンとキャンバスのどちらを使用して配信すべきでしょうか。キャンペーンは単一のターゲットメッセージングキャンペーンに適しており、キャンバスはマルチステップユーザージャーニーに適している。
 
 {% tabs %}
 {% tab Campaign %}
@@ -58,9 +58,9 @@ toc_headers: h2
 
 | プラットフォーム                        | メッセージの配信        |
 |---------------------------------|-------------------------|
-| モバイルアプリ                     | iOS & Android SDKs      |
+| モバイルアプリ                     | iOS& Android SDKs      |
 | ウェブブラウザ                    | ウェブSDK                 |
-| 両方のモバイルアプリ& Webブラウザ | iOS, Android & Web SDKs |
+| 両モバイルアプリ& ウェブブラウザ | iOS、Android& Web SDKs |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## ステップ 3:メッセージの種類を指定する
@@ -147,15 +147,15 @@ toc_headers: h2
   <tr>
     <td><a href='/docs/user_guide/message_building_by_channel/in-app_messages/customize/#custom-html-messages'>カスタムHTMLメッセージ</a></td>
     <td>カスタムコード（HTML、CSS、JavaScript）で定義された通りに実行されるカスタムメッセージ。</td>
-    <td>N/A</td>
-    <td>アプリ内メッセージを動作させるには、<span style="white-space: nowrap"><code>allowUserSuppliedJavascript</code></span>初期化オプションを<code>true</code>に設定する必要があります。</td>
+    <td>該当なし</td>
+    <td><span style="white-space: nowrap"><code>allowUserSuppliedJavascript</code></span> 初期化オプションを設定して <code>true</code> アプリ内メッセージを有効にする。</td>
     <td>これは、IAM のすべての利点が必要であり、さらに追加の機能が必要な場合や、ブランドに沿った外観を維持したい場合に適したオプションです。フォント、色、形、サイズ、ボタンなど、メッセージの細部まで変更できる。<br><br>使用例としては、ユーザーにアプリのフィードバックを求める場合、電子メールのキャプチャフォーム、ページ分割されたメッセージなどがある。</td>
   </tr>
   <tr>
     <td><a href='/docs/user_guide/message_building_by_channel/in-app_messages/customize/#email-capture-form'>メールキャプチャフォーム</a></td>
     <td>通常、視聴者の電子メールをキャプチャするために使用される。</td>
-    <td>N/A</td>
-    <td>アプリ内メッセージを動作させるには、<span style="white-space: nowrap"><code>allowUserSuppliedJavascript</code></span>初期化オプションを<code>true</code>に設定する必要があります。</td>
+    <td>該当なし</td>
+    <td><span style="white-space: nowrap"><code>allowUserSuppliedJavascript</code></span> 初期化オプションを設定して <code>true</code> アプリ内メッセージを有効にする。</td>
     <td>ユーザーにメールアドレスの送信を促す場合。</td>
   </tr>
   <tr>
@@ -181,7 +181,7 @@ Brazeが、あなたのコードに閉じるボタンや終了ボタンが含ま
 
 **Compose**タブでは、メッセージの内容と動作のあらゆる面を編集できる。
 
-\![新しい顧客を歓迎し、ユーザープロファイルを設定するよう促すサンプルブランドのアプリ内メッセージ。]({% image_buster /assets/img_archive/iam_compose.png %}){: style="max-width:85%" }
+![新しい顧客を歓迎し、ユーザープロファイルを設定するように促す、サンプルブランドのアプリ内メッセージ。]({% image_buster /assets/img_archive/iam_compose.png %}){: style="max-width:85%" }
 
 **Compose」**タブの内容は、前のステップで選択したメッセージ・オプションによって異なるが、以下のオプションのいずれかを含むことができる：
 
@@ -205,7 +205,7 @@ Brazeが、あなたのコードに閉じるボタンや終了ボタンが含ま
 
 魅力的な文章を作成するためのサポートが必要な場合は、[AI コピーライティングアシスタント]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/)を使用してみてください。商品名や説明を入力すると、AIが人間のようなマーケティングコピーを生成し、メッセージングに使用します。
 
-\![In-アプリ メッセージ作成画面のMessage フィールドにあるAI Copy writer ボタンを起動します。]({% image_buster /assets/img/ai_copywriter/ai_copywriter_iam.png %}){: style="max-width:60%"}
+![アプリ内メッセージ作成画面のメッセージフィールドにある「AIコピーライター」ボタンを起動する。]({% image_buster /assets/img/ai_copywriter/ai_copywriter_iam.png %}){: style="max-width:60%"}
 
 ##### 右から左へのメッセージの作成
 
@@ -223,7 +223,7 @@ Brazeが、あなたのコードに閉じるボタンや終了ボタンが含ま
 
 言い換えれば、ユーザーにどちらかのボタンをより多くクリックしてもらいたいのであれば、それが右側にあることを確認する。一般に、右側のボタンはクリックされる可能性が高くなります。特に、メッセージの残りの部分とは若干対照的な色や、目立つ色を使うとその可能性が高まります。この効果は、左側のボタンの外観がメッセージにより溶け込んでいる場合にはさらに強くなります。
 
-\![アプリ内メッセージのプライマリボタンとセカンダリボタン]]({% image_buster /assets/img/primary-secondary-buttons.png %})
+![アプリ内メッセージのプライマリボタンとセカンダリボタン]({% image_buster /assets/img/primary-secondary-buttons.png %})
 
 ### クリック時動作 {#button-actions}
 
@@ -285,7 +285,7 @@ Brazeが、あなたのコードに閉じるボタンや終了ボタンが含ま
 |シェブロンまたはその他のメッセージを閉じるオプション | HEXカラーコード。 | 希望のHEXカラーが表示される。色の不透明度も選択できます。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-送信する前に、必ずメッセージを[プレビューし、テストする]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/)こと。
+送信する前に、必ずメッセージを[プレビューし、テストする]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/)こと。
 
 {% alert important %}
 一部のアプリ内メッセージタイプには、カスタムHTML (またはCSS またはJavaScript) およびZIP ファイルを使用したアセットのアップロードを超えるスタイル設定のオプションがありません。[CSS付きウェブモーダルでは]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#web-modal-css)、カスタムCSSをアップロードまたは記述して、美しく、あらゆるカスタムスタイルのメッセージングを作成できる。
@@ -312,7 +312,7 @@ Brazeが、あなたのコードに閉じるボタンや終了ボタンが含ま
 カスタムイベントに基づいてアプリ内メッセージをトリガーする場合は、そのカスタムイベントをSDK を使用して送信する必要があることに注意してください。
 {% endalert %}
 
-\![トリガー アクションを"Start Session"に設定したアクション ベースのキャンペーン。]({% image_buster /assets/img_archive/in_app_schedule.png %}){: style="max-width:80%"}
+![トリガーアクションを「セッション開始」に設定したアクションベースのキャンペーン。]({% image_buster /assets/img_archive/in_app_schedule.png %}){: style="max-width:80%"}
 
 アプリ内メッセージ配信は、すべて以下のアクショントリガーに基づいている：
 
@@ -347,7 +347,7 @@ Brazeが、あなたのコードに閉じるボタンや終了ボタンが含ま
 
 トリガーされたメッセージの優先順位の高、中、低オプションはバケットなので、複数のメッセージが同じ優先順位を持つ可能性があります。これらのバケツ内で優先順位を設定するには、**「正確な優先順位を設定**」をクリックし、キャンペーンをドラッグ＆ドロップして正しい優先順位で並べることができる。
 
-\![アプリ内メッセージ キャンペーンとキャンバスのプライオリティ設定の例]]({% image_buster /assets/img_archive/bucket_prioritization.png %}){: style="max-width:70%"}
+![アプリ内メッセージキャンペーンとキャンバスの優先度設定の例。]({% image_buster /assets/img_archive/bucket_prioritization.png %}){: style="max-width:70%"}
 
 #### ターゲットとするユーザーを選択する
 
@@ -361,14 +361,14 @@ Brazeが、あなたのコードに閉じるボタンや終了ボタンが含ま
 
 シナリオによっては、アプリ内メッセージの表示をトリガーとして、ユーザーの適格性を再評価したい場合がある。例えば、頻繁に変更されるカスタム属性をターゲットにしたキャンペーンや、直前のプロフィール変更を反映すべきメッセージなどがある。
 
-\![&quot のチェックボックス;キャンペーンの適格性を再評価してから" を表示します。を選択します。]({% image_buster /assets/img_archive/re-evaluate-iam-membership.png %}){:style="max-width:60%"}
+![表示前にキャンペーンの適格性を再評価する」のチェックボックスを選択した。]({% image_buster /assets/img_archive/re-evaluate-iam-membership.png %}){:style="max-width:60%"}
 
 **表示前にキャンペーンの適格性を再評価する**]を選択すると、送信前にユーザーがまだこのメッセージの適格者であることを確認するために、Brazeに追加のリクエストが行われる。加えて、[リキッド]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/)変数や[コネクテッドコンテンツは]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/)、メッセージが表示される前に、その時点でテンプレート化される。
 
 これにより、期限切れまたはアーカイブされたキャンペーン内のユーザーにアプリ内メッセージが送信されるのを防ぐことができる。ユーザーの適格性を再評価しない場合、キャンペーンが期限切れになった後、あるいはメッセージが SDK にありユーザーがこれをトリガーするのを待機しているためにアーカイブされた後でも、ユーザーはアプリ内メッセージを受信します。
 
 {% alert note %}
-このオプションを有効にすると、ユーザー トリガーがアプリ内メッセージしたときと、追加された適格性とテンプレートリクエストのためにメッセージが表示されたときの間に、わずかな遅延(< 100ms) が発生します。
+このオプションをイネーブルメントにすると、ユーザーがアプリ内メッセージをトリガーしてからメッセージが表示されるまでの間に、追加された適格性とテンプレートリクエストのために、(< 100msのわずかな遅延が生じる。
 <br><br>
 このオプションは、ユーザーがオフラインの間、または適格性評価と液 体再評価が必要でないときにトリガーされるメッセージには使用しないこと。
 {% endalert %}
@@ -389,7 +389,7 @@ Braze では、キャンペーンを受信した後、ユーザーが指定の�
 
 ## ステップ 8:レビューと展開
 
-キャンペーンやキャンバスの最後の構築が終わったら、その詳細を確認し、[テストし]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/)、そして送信する！
+キャンペーンやキャンバスの最後の構築が終わったら、その詳細を確認し、[テストし]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/)、そして送信する！
 
 次に、[アプリ内メッセージのレポート]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/reporting/)をチェックして、メッセージングキャンペーンの結果にアクセスする方法を確認してください。
 
@@ -397,7 +397,7 @@ Braze では、キャンペーンを受信した後、ユーザーが指定の�
 
 ### アクティブなアプリ内メッセージキャンペーンの制限
 
-Braze は信頼性とスピードを重視しています。必要なデータだけをBrazeに送信することをお勧めするのと同様に、ブランドに価値を与えなくなったキャンペーンはすべてオフにすることをお勧めする。
+Braze は信頼性とスピードを重視しています。必要なデータだけをBrazeに送信し、ブランドにとって価値がなくなったキャンペーンはオフにすることをお勧めする。
 
 アクションベースのアプリ内メッセージキャンペーンを処理すると、まだアクティブな状態であるが、メッセージを送信しなくなったり、不要になったりして、お客様や他のお客様のBrazeサービス全体のパフォーマンスが低下する。このような大量のアイドルキャンペーンを処理するために必要な余分な時間は、アプリ内メッセージがエンドユーザーの端末に表示されるまでに時間がかかることを意味し、エンドユーザーの体験に影響を与える。
 

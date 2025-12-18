@@ -38,7 +38,7 @@ Use this field to set when you want your Braze account users to reset their pass
 
 ### Session duration rules
 
-Use this field to define how long Braze will keep your session active. After Braze deems your session inactive (no activity for the defined number of minutes), the user will be logged out. The maximum number of minutes you can enter is 10,080 (equal to one week) if two-factor authentication is enforced for your company, otherwise, the maximum session duration will be 1,440 minutes (equal to 24 hours).
+Use this field to define how long Braze will keep your session active. After Braze deems your session inactive (no activity for the defined number of minutes), Braze logs out the user. The maximum number of minutes you can enter is 10,080 (equal to one week) if two-factor authentication is enforced for your company, otherwise, the maximum session duration is 1,440 minutes (equal to 24 hours).
 
 ### Single sign-on (SSO) authentication
 
@@ -48,7 +48,7 @@ For [SAML SSO]({{site.baseurl}}/user_guide/administrative/access_braze/single_si
 
 ## Dashboard IP allowlisting
 
-Use the field shown to allowlist specific IP addresses and subnets from which users can log in to your account (for example, from a company network or VPN). Specify IP addresses and subnets as CIDR ranges in a comma-separated list. If not specified, users will be able to log in from any IP address.
+Use the field shown to allowlist specific IP addresses and subnets from which users can log in to your account (for example, from a company network or VPN). Specify IP addresses and subnets as CIDR ranges in a comma-separated list. If not specified, users can log in from any IP address.
 
 ## Two-factor authentication (2FA)
 
@@ -56,10 +56,10 @@ Two-factor authentication is required for all Braze users. It adds a second leve
 
 When two-factor authentication is turned on:
 
-- In addition to entering a password, users will need to enter a verification code when logging in to their Braze account. The code can be sent through an authenticator app, email, or SMS. 
+- In addition to entering a password, users need to enter a verification code when logging in to their Braze account. The code can be sent through an authenticator app, email, or SMS. 
 - The **Remember this account for 30 days** checkbox becomes available to users.
 
-Users who fail to set up their two-factor authentication will be locked out of their Braze account. Braze account users also can set up two-factor authentication on their own in **Account Settings**, even if not required by the administrator.
+Braze locks out users who fail to set up their two-factor authentication from their Braze account. Braze account users also can set up two-factor authentication on their own in **Account Settings**, even if not required by the administrator.
 
 Be sure to save your changes before leaving the page!
 
@@ -304,9 +304,9 @@ When previewing a message, the **View PII** permission isn't applied, so users c
 
 ## Data deletion preferences 
 
-You can use this setting to set preferences for whether certain fields should be deleted during the user delete process for events. These preferences only impact data for users who have been deleted from Braze. 
+You can use this setting to set preferences for whether Braze should delete certain fields during the user delete process for events. These preferences only impact data for users Braze has deleted. 
 
-When a user is deleted, Braze removes all PII from event data but retains the anonymized data for analytics purposes. Some user-defined fields may contain PII if you send end-user information to Braze. If these fields contain PII, you can opt to delete the data when event data is anonymized for deleted users; if the fields contain no PII, they can be retained for analytics.
+When a user is deleted, Braze removes all PII from event data but retains the anonymized data for analytics purposes. Some user-defined fields may contain PII if you send end-user information to Braze. If these fields contain PII, you can opt to delete the data when Braze anonymizes event data for deleted users; if the fields contain no PII, you can retain them for analytics.
 
 You are responsible for determining the correct preferences for your workspace. The best way to determine the appropriate settings is to review with internal teams sending events data to Braze and to teams using message extras in Braze to confirm whether the fields may contain PII.  
 
@@ -320,12 +320,12 @@ You are responsible for determining the correct preferences for your workspace. 
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert warning %}
-**Deletion is permanent!** If you opt to remove any fields from Snowflake for deleted users, the setting will apply to all historical data in your workspaces and any events for users deleted in the future. After Braze has run the process to apply the settings to historical event data for deleted users, the data **cannot be restored**.
+**Deletion is permanent!** If you opt to remove any fields from Snowflake for deleted users, the setting applies to all historical data in your workspaces and any events for users deleted in the future. After Braze has run the process to apply the settings to historical event data for deleted users, you **cannot restore** the data.
 {% endalert %}
 
 ### Configure preferences
 
-Set default preferences by checking boxes for any fields that should be removed if a user is deleted. Select any of the fields that contain PII. This preference will apply to all current and future workspaces unless workspaces are explicitly added to a preference group.
+Set default preferences by checking boxes for any fields that Braze should remove if a user is deleted. Select any of the fields that contain PII. This preference applies to all current and future workspaces unless workspaces are explicitly added to a preference group.
 
 To customize preferences by workspace, you may add preference groups with different settings from the default. We apply the default settings to any workspaces not added to an additional preference group, including workspaces created in the future.  
 

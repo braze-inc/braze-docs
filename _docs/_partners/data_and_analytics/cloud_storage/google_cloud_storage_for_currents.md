@@ -24,7 +24,7 @@ The Braze and Google Cloud Storage integration allows you to stream Currents dat
 | Requirement | Description |
 | ----------- | ----------- |
 | Google Cloud Storage account | A Google Cloud Storage account is required to take advantage of this partnership. |
-| Currents | In order to export data back into Google Cloud Storage, you need to have [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) set up for your account. |
+| Currents | To export data back into Google Cloud Storage, you need to have [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) set up for your account. Currents isn't required if you're only setting up message archiving. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration

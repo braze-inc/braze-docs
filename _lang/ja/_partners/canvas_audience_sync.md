@@ -4,7 +4,7 @@ article_title: キャンバスオーディエンスの同期
 page_order: 8
 
 guide_top_header: "キャンバスオーディエンスの同期"
-guide_top_text: "Braze のオーディエンスの同期機能は、多くのトップソーシャルテクノロジーおよび広告テクノロジーにキャンペーンのリーチを拡大するのに役立ちます。このランディングページでは、開発者やマーケターが、利用可能なキャンバス同期パートナーに関するリソースを見つけることができます。"
+guide_top_text: "Brazeのオーディエンスシンク機能は、キャンペーンのリーチを多くのトップソーシャルテクノロジーや広告テクノロジーに拡大する。このランディングページでは、開発者やマーケターが、利用可能なキャンバス同期パートナーに関するリソースを見つけることができます。"
 description: "このランディングページでは、開発者やマーケターが、利用可能なキャンバス同期パートナーに関するリソースを見つけることができます。"
 
 layout: dev_guide
@@ -45,5 +45,5 @@ guide_menu_list:
 ---
 
 {% alert important %}
-Braze Audience Sync to Criteo、Braze Audience Sync to Pinterest、Braze Audience Sync to Snapchat、Braze Audience Sync to TikTok は、Audience Sync Pro 統合です。これらの統合の詳細については、Brazeのアカウントマネージャーに問い合わせを。
+Criteo、Pinterest、Snapchat、TikTokへのオーディエンスシンクが可能かどうかは、Brazeのパッケージによって異なる。まずはアカウントマネージャーまたはカスタマーサクセスマネージャーにご相談を。
 {% endalert %}

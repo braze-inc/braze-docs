@@ -33,7 +33,7 @@
 3. 状況に応じて、アプリ内メッセージは表示前に関連画像をダウンロードするか、ディスクから読み込む。低速のネットワーク接続や非常にパフォーマンスの低いデバイスを使用している場合、この処理に時間がかかることがある。画像ができるだけ小さくなるように最適化されていることを確認します。
 {% endcase %}
 
-これらのシナリオの詳細については、[高度なトラブルシューティングのセクション](#troubleshooting-in-app-advanced)を参照してください。
+これらのシナリオの詳細については、<a id="troubleshooting-in-app-advanced">高度なトラブルシューティングのセクション</a>を参照してください。
 
 ## インプレッションとクリック分析の問題点
 
@@ -52,7 +52,7 @@
 
 2. キャンペーンがセッションの開始やカスタムイベントによってトリガーされる場合、このイベントやセッションがメッセージをトリガーするのに十分な頻度で発生していることを確認する必要があります。このデータを[概要]({{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/#understanding-your-app-usage-data)（セッションデータの場合）または[カスタムイベント]({{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting)ページで確認してください。
 
-![カスタムイベント「お気に入りに追加」が1か月間に発生した回数のグラフが表示されているカスタムイベントページ]({% image_buster /assets/img_archive/trouble5.png %})
+![カスタムイベントページには、カスタムイベント「お気に入りに追加」が1か月間に発生した回数のグラフが表示されています]({% image_buster /assets/img_archive/trouble5.png %})
 
 ### インプレッションが以前より低下している
 
@@ -60,11 +60,11 @@
 
 ![キャンペーンの詳細ページで、ユーザーがキャンペーンを最後に閲覧してからの7つの変更点を含む変更履歴を表示するためのリンク]({% image_buster /assets/img_archive/trouble4.png %})
 
-2. 優先順位の高い別のアプリ内メッセージキャンペーンでトリガーイベントを再利用していないか確認する。
+2. 優先度の高い別のアプリ内メッセージ キャンペーンでトリガーを再利用しなかったことを確認します。
 
 ## 高度なトラブルシューティング {#troubleshooting-in-app-advanced}
 
-ほとんどのアプリ内メッセージの問題は、配信と表示の 2 つの主要なカテゴリに分けることができます。期待したアプリ内メッセージがデバイスに表示されなかった原因をトラブルシューティングするには、[アプリ内メッセージがデバイスに配信された](#troubleshooting-in-app-message-delivery)ことを確認し、[メッセージ表示のトラブルシューティングを行う](#troubleshooting-in-app-message-display)。
+ほとんどのアプリ内メッセージの問題は、配信と表示の 2 つの主要なカテゴリに分けることができます。期待したアプリ内メッセージがデバイスに表示されなかった原因をトラブルシューティングするには、<a id="troubleshooting-in-app-message-delivery">アプリ内メッセージがデバイスに配信された</a>ことを確認し、<a id="troubleshooting-in-app-message-display">メッセージ表示のトラブルシューティングを行う</a>。
 
 ### 配信のトラブルシューティング {#troubleshooting-in-app-message-delivery}
 
@@ -72,30 +72,30 @@ SDK はセッション開始時に Braze サーバーからアプリ内メッセ
 
 #### メッセージが要求され、返されたかどうかを確認する
 
-1. ダッシュボードで [テストユーザー]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users) として自分自身を追加します。
+1. ダッシュボードで[テストユーザー]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users) として自分自身を追加します。
 2. ユーザーを対象としたアプリ内メッセージキャンペーンを設定します。
 3. アプリケーションで新しいセッションが発生することを確認します。
-4. [イベントユーザーログ]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab) を使用して、セッション開始時にデバイスがアプリ内メッセージを要求していることを確認します。テストユーザーのセッション開始イベントに関連付けられた SDK リクエストを見つけます。
+4. [event ユーザー logs]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab)を使用して、端末がセッション起動時にアプリ内メッセージを要求していることを確認します。テストユーザーのセッション開始イベントに関連付けられた SDK リクエストを見つけます。
   - トリガーされたアプリ内メッセージをリクエストするためのアプリであれば、[**レスポンスデータ**] の [**リクエスト済みレスポンス**] フィールドに `trigger` が表示されます。
   - アプリが元のアプリ内メッセージをリクエストするためのものだった場合、[**レスポンスデータ］**] の [**リクエスト済みレスポンス**] フィールドに `in_app` が表示されます。
-5. [イベントユーザーログ]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab) を使用して、応答データで正しいアプリ内メッセージが返されるかどうかを確認します。<br>![]({% image_buster /assets/img_archive/event_user_log_iams.png %})
+5. [event ユーザー logs]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab)を使用して、レスポンスデータに正しいアプリ内メッセージsが返されているかどうかを確認します。<br>![]({% image_buster /assets/img_archive/event_user_log_iams.png %})
 
 ##### リクエストされていないメッセージのトラブルシューティング
 
 アプリ内メッセージがリクエストされていない場合、アプリ内メッセージはセッション開始時にリフレッシュされるため、アプリがセッションを正しくトラッキングしていない可能性があります。また、アプリのセッションタイムアウトセマンティクスに基づいて、アプリが実際にセッションを開始していることを確認してください:
 
-![成功したセッション開始イベントを表示するイベントユーザーログで見つかったSDKリクエスト。]({% image_buster /assets/img_archive/event_user_log_session_start.png %})
+![イベントユーザーで見つかったSDKリクエストは、成功したセッションスタートイベントを表示します。]({% image_buster /assets/img_archive/event_user_log_session_start.png %})
 
 ##### メッセージが返されない問題のトラブルシューティング
 
 アプリ内メッセージが返されない場合、キャンペーンターゲティングの問題が発生している可能性があります。
 
 1. セグメントにユーザーが含まれていない。
-  - ユーザーの [\*\*エンゲージメント**]({{ site.baseurl }}/user_guide/engagement_tools/segments/using_user_search/#engagement-tab) タブで、[**セグメント**] に正しいセグメントが表示されているかどうかを確認します。
+  - ユーザーの[\*\*Engagement**]({{ site.baseurl }}/user_guide/engagement_tools/segments/using_user_search/#engagement-tab) タブを調べて、**Segment s** で正しいSegment アプリが取得されているかどうかを確認します。
 2. ユーザーが以前にアプリ内メッセージを受け取ったことがあり、再度受け取る資格がなかった。
-  - **キャンペーン作成ツール**の**配信**ステップの [キャンペーン再適格性設定]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/) を確認し、再適格性設定がテスト設定と整合していることを確認します。
+  - **Delivery****キャンペーンコンポーザー**の**の[キャンペーン再適格性設定]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/)を確認し、再適格性設定がテスト設定と一致していることを確認します。
 3. ユーザーがキャンペーンのフリークエンシーキャップに達した。
-  - キャンペーン [フリークエンシーキャップ設定]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping) を確認し、テスト設定と整合していることを確認します。
+  - キャンペーン[周波数上限設定s]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping)]を確認し、テスト設定と一致していることを確認します。
 4. キャンペーンにコントロールグループが存在した場合、ユーザーがコントロールグループに分類された可能性があります。
   - キャンペーンバリアントが [**制御**] に設定されている受信キャンペーンバリアントフィルターでセグメントを作成し、ユーザーがそのセグメントに分類されたかどうかを確認することで、これが発生したかどうかを確認できます。
   - 統合テスト目的でキャンペーンを作成する場合は、コントロールグループの追加をオプトアウトしてください。

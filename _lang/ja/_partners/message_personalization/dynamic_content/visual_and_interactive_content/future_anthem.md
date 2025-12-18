@@ -9,10 +9,10 @@ search_tag: Partner
 
 # Future Anthem
 
-> Future Anthem のリアルマネーゲーム業界向けオールインワン製品である Amplifier AI は、コンテンツのパーソナライゼーション、リアルタイムエクスペリエンス、ダイナミックなオーディエンスを提供します。Amplifier AI は、スポーツ、カジノ、宝くじにシームレスに対応するため、お気に入りのゲーム、お気に入りのチーム、エンゲージメントスコア、次のベットのおすすめ、予想される次回のベットなど、業界固有のプレイヤー属性で Braze のプレイヤープロファイルの機能を強化することができる。
+> [フューチャーアンセムの](https://www.futureanthem.com/)リアルマネーゲーム業界向けオールインワン製品であるAmplifier AIは、コンテンツのパーソナライゼーション、リアルタイム体験、ダイナミックなオーディエンスを提供する。Amplifier AIはスポーツ、カジノ、宝くじにシームレスに対応し、カスタマーはBrazeのプレイヤープロファイルを、好きなゲーム、好きなチーム、エンゲージメントスコア、次のベットの推奨度、予想される次のベットなど、業界特有のプレイヤー属性で強化することができる。
 
 {% alert important %}
-この機能は現在早期アクセス段階です。まずは Future Anthem カスタマーサクセスチームまでご連絡ください。
+この機能は現在早期アクセス段階です。まずはFuture Anthemカスタマーサクセスチームにご連絡を。
 {% endalert %}
 
 ## 前提条件
@@ -44,7 +44,7 @@ Future Anthem カスタマーサクセスチームが統合の設定をサポー
 これらは利用可能なBrazeカスタム属性である。より詳細な情報については、[Future Anthem を参照してください。はじめに](https://knowledge.futureanthem.com/getting-started).
 
 {% tabs local %}
-{% tab ベットのおすすめ %}
+{% tab Bet Recommendations %}
 
 | サブカテゴリー | 例（JSON） | データ型 |
 | ------- | ----------- |----------- |
@@ -56,7 +56,7 @@ Future Anthem カスタマーサクセスチームが統合の設定をサポー
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
-{% tab ボーナス推薦 %}
+{% tab Bonus Recommendations %}
 
 | サブカテゴリー | 例 | データ型 |
 | ------- | ----------- |----------- |
@@ -73,7 +73,7 @@ Future Anthem カスタマーサクセスチームが統合の設定をサポー
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
-{% tab おすすめゲーム %}
+{% tab Game Recommendations %}
 
 | サブカテゴリー | 例 | データ型 |
 | ------- | ----------- |----------- |
@@ -89,7 +89,7 @@ Future Anthem カスタマーサクセスチームが統合の設定をサポー
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
 
-{% tab プレイヤークラスター %}
+{% tab Player Cluster %}
 
 | サブカテゴリー | 例 | データ型 |
 | ------- | ----------- |----------- |
@@ -97,7 +97,7 @@ Future Anthem カスタマーサクセスチームが統合の設定をサポー
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
 
-{% tab プレイヤーの持続性 - プレイヤーの潜在的リスク %}
+{% tab Player Sustain - Player potential risk %}
 
 | サブカテゴリー | 例 | データ型 |
 | ------- | ----------- |----------- |

@@ -51,7 +51,7 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 If there are multiple users (multiple `external_ids`) who share the same email address, all users will be returned as a separate user (even if they have the same email address or subscription group).
 {% endalert %}
 
-## Example request 
+## Example request
 
 {% tabs %}
 {% tab Multiple Users %}

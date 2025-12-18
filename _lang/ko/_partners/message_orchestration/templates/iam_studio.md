@@ -66,7 +66,7 @@ Next, create your personalized in-app message by adding custom fonts and using L
 ![The IAM Studio UI showing the options to customize event/attribute logging. These options include that user behavior log.]({% image_buster /assets/img/iam_studio/iam_liquid.png %})
 {% endtab %}
 {% tab Logging and Tracking %}
-![The IAM Studio UI showing the options to customize font. These options include that user can customize font style.]({% image_buster /assets/img/iam_studio/iam_tracking_logging.png  %})
+![The IAM Studio UI showing the options to customize font. These options include that user can customize font style.]({% image_buster /assets/img/iam_studio/iam_tracking_logging.png %})
 {% endtab %}
 {% endtabs %}
 

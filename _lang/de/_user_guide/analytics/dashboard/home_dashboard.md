@@ -13,11 +13,11 @@ tool:
 
 > Auf der **Startseite** des Dashboards finden Sie die wichtigsten Metriken, mit denen Sie die Performance Ihrer App oder Website tracken und verstehen können, und Sie erhalten auf einen Blick einen Überblick über Ihre Nutzerbasis.
 
-![Home-Dashboard in Braze.][1]
-
 Die **Startseite** hat zwei Hauptbereiche:
 - [Machen Sie dort weiter, wo Sie aufgehört haben.](#pick-up-where-you-left-off)
 - [Performance-Übersicht](#peformance-overview)
+
+![Home-Dashboard in Braze.]({% image_buster /assets/img_archive/home_dashboard.png %})
 
 ## Machen Sie dort weiter, wo Sie aufgehört haben.
 
@@ -25,25 +25,29 @@ Sie können dort weitermachen, wo Sie im Braze-Dashboard aufgehört haben, mit d
 
 Sie können die zuletzt bearbeiteten oder erstellten Kampagnen, Canvase und Segmente erneut aufrufen. Jede Karte ist mit Tags versehen, die den Content-Typ (Kampagne, Canvas, Segment) und den Status (aktiv, Entwurf, archiviert, gestoppt) angeben.
 
-![Ein Canvas-Entwurf, ein aktives Segment und ein Entwurf für eine Kampagne im Abschnitt "Weitermachen, wo Sie aufgehört haben".][6]
+{% alert note %}
+Der Abschnitt **Weitermachen, wo Sie aufgehört haben** erscheint, nachdem Sie eine Kampagne, ein Canvas oder ein Segment erstellt oder bearbeitet haben.
+{% endalert %}
+
+![Ein Canvas-Entwurf, ein aktives Segment und ein Entwurf für eine Kampagne im Abschnitt "Weitermachen, wo Sie aufgehört haben".]({% image_buster /assets/img/pick_up_where_you_left_off.png %})
 
 ## Performance-Übersicht
 
 Standardmäßig zeigt die **Übersicht über die Performance** die Daten der letzten 30 Tage für alle Apps und Websites. Ihre Metriken werden alle auf der Grundlage des ausgewählten Datumsbereichs berechnet.
 
-![Datumsbereich und App-Felder auf dem Home-Dashboard.][5]{: style="max-width:60%;"}
+![Datumsbereich und App-Felder auf dem Home Dashboard.]({% image_buster /assets/img_archive/home_dashboard_select_date.png %}){: style="max-width:60%;"}
 
 Die Prozentsätze werden auf der Grundlage des aktuellen Datumsbereichs im Vergleich zum vorherigen Datumsbereich berechnet, mit Ausnahme der *monatlich aktiven Nutzer*:in (MAU), die den letzten Tag des vorherigen Zeitraums anstelle eines Bereichs verwenden. 
 
 Wenn Sie beispielsweise den Datumsbereich auf **Letzte 7 Tage** einstellen und Ihre *täglich aktiven Nutzer:innen* einen prozentualen Anstieg von 1,8% aufweisen, bedeutet dies, dass Sie in dieser Woche 1,8% mehr täglich aktive:r Nutzer:innen hatten als in der vergangenen Woche.
 
-![][4]{: style="max-width:60%;"}
+![]({% image_buster /assets/img_archive/home_dashboard_metric_tile.png %}){: style="max-width:60%;"}
 
 ### Aufschlüsselung anzeigen
 
 Wählen Sie **Aufschlüsselung anzeigen** für jede Zeile der Performance-Übersichtsstatistik aus, um den Wert jeder Statistik pro Tag für den angegebenen Datumsbereich anzuzeigen.
 
-![Erweitern Sie][2]
+![Erweitern]({% image_buster /assets/img_archive/home_dashboard_breakdown.png %})
 
 ## Verfügbare Statistiken
 
@@ -53,7 +57,7 @@ Im Folgenden finden Sie die Definitionen der Ihnen zur Verfügung stehenden Stat
 
 *Nutzer:in* ist die Gesamtzahl der Nutzer:innen, die in diesem Workspace angelegt wurden. Dies schließt alle Nutzer:innen ein, die Ihre App oder Website zu einem bestimmten Zeitpunkt genutzt haben, und auch solche, die nicht mit einer bestimmten App oder Website in Verbindung gebracht werden können. Diese Zahl gibt an, wie viele Ihrer Lifetime-Nutzer als *monatlich aktive Nutzer*:innen (MAU) vertreten sind. Diese Zahl ist nützlich, um die Bindung der Nutzer:innen über einen längeren Zeitraum hinweg zu sehen.
 
-Ein niedriges MAU-zu-Nutzer-Verhältnis kann darauf hinweisen, dass Sie Ihre Messaging-Kanäle diversifizieren oder Ihre Bemühungen verstärken müssen, um passive Nutzer:innen zu erreichen. Weitere Informationen finden Sie in unserem Quick Win zu [Erfassung passiver Nutzer:innen][3]. Im Allgemeinen wird das Verhältnis von MAU zu Lifetime im Laufe der Zeit unweigerlich sinken, weil Nutzer:innen abwandern. Mit den Tools von Braze können Sie diesen Effekt jedoch minimieren, indem Sie die Nutzer:innen länger binden.
+Ein niedriges MAU-zu-Nutzer-Verhältnis kann darauf hinweisen, dass Sie Ihre Messaging-Kanäle diversifizieren oder Ihre Bemühungen verstärken müssen, um passive Nutzer:innen zu erreichen. Weitere Informationen finden Sie in unserem Quick Win zur [Erfassung von passiven Nutzer:innen]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/capturing_lapsing_users/#capturing-lapsing-users). Im Allgemeinen wird das Verhältnis von MAU zu Lifetime im Laufe der Zeit unweigerlich sinken, weil Nutzer:innen abwandern. Mit den Tools von Braze können Sie diesen Effekt jedoch minimieren, indem Sie die Nutzer:innen länger binden.
 
 ### Lifetime-Sitzungen
 
@@ -108,9 +112,3 @@ Der MAU-Wert wird jede Nacht berechnet und erst am nächsten Tag aktualisiert.
 
 *Tägliche Sitzungen pro MAU* ist das Verhältnis von *täglichen Sitzungen* zu MAU an einem bestimmten Tag. Diese Statistik zeigt Ihnen, wie viele Sitzungen Sie pro Tag und MAU erwarten können. Zusammengefasst und gemittelt können Sie so eine Idee davon bekommen, wie häufig Ihre Nutzer:innen Ihre App oder Website verwenden. Das heißt, wenn Ihre *täglichen Sitzungen pro MAU* im Durchschnitt 0,5 betragen, können Sie davon ausgehen, dass jede MAU etwa alle 2 Tage eine Sitzung aufzeichnet.  
 
-[1]: {% image_buster /assets/img_archive/home_dashboard.png %}
-[2]: {% image_buster /assets/img_archive/home_dashboard_breakdown.png %}
-[3]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/capturing_lapsing_users/#capturing-lapsing-users
-[4]: {% image_buster /assets/img_archive/home_dashboard_metric_tile.png %}
-[5]: {% image_buster /assets/img_archive/home_dashboard_select_date.png %}
-[6]: {% image_buster /assets/img/pick_up_where_you_left_off.png %}

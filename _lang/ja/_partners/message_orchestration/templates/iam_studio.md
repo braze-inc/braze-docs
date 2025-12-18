@@ -40,33 +40,33 @@ Braze と IAM Studio の統合により、カスタマイズ可能なアプリ�
 
 ![IAM Studio テンプレートギャラリーに「carousel slide modal」、「carousel slide modal」、「simple icon modal」、「modal full image」など、さまざまなテンプレートが表示されている。]({% image_buster /assets/img/iam_studio/iam_template_gallery.png %})
 
-### ステップ2: テンプレートのカスタマイズ
+### ステップ2:テンプレートのカスタマイズ
 
 まず、コンテンツの画像、テキスト、ボタンをカスタマイズします。"画像とボタンは必ず**Deeplink**を接続してください。
 
-{% tabs ローカル %}
-{% tab 画像 %}
-![画像をカスタマイズするオプションが表示されている IAM Studio のUI。オプションには、画像、画像半径、淡色表示の画像がある。]({% image_buster /assets/img/iam_studio/iam_customize_image.png %})
+{% tabs local %}
+{% tab Image %}
+![画像をカスタマイズするオプションが表示されている IAM Studio のUI。これらの選択肢には、"画像、半径、淡色表示の"画像が含まれます。]({% image_buster /assets/img/iam_studio/iam_customize_image.png %})
 {% endtab %}
-{% tab テキスト %}
-![メッセージのタイトルと字幕をカスタマイズするオプションを示すIAM Studio UI。これらのオプションには、テキスト、書式設定、およびフォントが含まれます。]({% image_buster /assets/img/iam_studio/iam_customize_text.png %})
+{% tab Text %}
+![メッセージのタイトルと字幕をカスタマイズするオプションを示すIAM Studio UI。これらのオプションには、テキスト、フォーマット、フォントが含まれます。]({% image_buster /assets/img/iam_studio/iam_customize_text.png %})
 {% endtab %}
-{% tab ボタン %}
-![メインの左および右ボタンをカスタマイズするオプションが表示されている IAM Studio の UI。これらのオプションには、色、ディープリンク、テキスト、およびフォーマットが含まれます。]({% image_buster /assets/img/iam_studio/iam_customize_button.png %})
+{% tab Button %}
+![メインの左および右ボタンをカスタマイズするオプションが表示されている IAM Studio の UI。これらのオプションには、カラー、ディープリンク、テキスト、およびフォーマットが含まれます。]({% image_buster /assets/img/iam_studio/iam_customize_button.png %})
 {% endtab %}
 {% endtabs %}
 
 次にカスタムフォントを追加し、Liquid タグを使用して、パーソナライズされたアプリ内メッセージを作成します。ログとトラッキングを有効にするには、[**Log data and track user behavior**] を選択します。
 
-{% tabs ローカル %}
-{% tab フォント %}
-![Liquid を追加するオプションが表示されている IAM Studio のUI。これらのオプションには、パーソナライズされた文章の作成も含まれます。]({% image_buster /assets/img/iam_studio/iam_custom_font.png %})
+{% tabs local %}
+{% tab Fonts %}
+![Liquid を追加するオプションが表示されている IAM Studio のUI。これらの選択肢には、パーソナライズされたセンテンスの作成が含まれます。]({% image_buster /assets/img/iam_studio/iam_custom_font.png %})
 {% endtab %}
 {% tab Liquid %}
-![イベント/属性のロギングをカスタマイズするオプションが表示されている IAM Studio のUI。これらのオプションには、ユーザー動作ログが含まれます。]({% image_buster /assets/img/iam_studio/iam_liquid.png %})
+![イベント/属性のロギングをカスタマイズするオプションが表示されている IAM Studio のUI。これらのオプションには、ビヘイビアログのユーザーが含まれます。]({% image_buster /assets/img/iam_studio/iam_liquid.png %})
 {% endtab %}
-{% tab ロギングとトラッキング %}
-![フォントをカスタマイズするオプションを示すIAM Studio UI。これらのオプションには、ユーザーがフォントスタイルをカスタマイズできることが含まれます。]({% image_buster /assets/img/iam_studio/iam_tracking_logging.png  %})
+{% tab Logging and Tracking %}
+![フォントをカスタマイズするオプションを示すIAM Studio UI。これらの選択肢には、ユーザーがフォントスタイルをカスタマイズできることが含まれます。]({% image_buster /assets/img/iam_studio/iam_tracking_logging.png  %})
 {% endtab %}
 {% endtabs %}
 

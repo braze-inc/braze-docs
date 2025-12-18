@@ -36,7 +36,7 @@ Braze.setCustomUserAttribute("attribute_key", "attribute_value", function(){
 });
 ```
 
-#### Zurücksetzen eines benutzerdefinierten Attributs
+#### Angepasste Attribute nicht anpassen
 
 ```javascript
 Braze.unsetCustomUserAttribute("attribute_key", function(){

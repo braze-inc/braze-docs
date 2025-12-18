@@ -13,6 +13,10 @@ alias: /landing_pages/
 
 Nutzen Sie Landing Pages, um Ihre Zielgruppe zu vergrößern, Nutzerdaten zu erfassen, Sonderangebote zu bewerben und Kampagnen über mehrere Kanäle zu unterstützen.
 
+{% alert note %}
+Die Verfügbarkeit von Landing Pages und angepassten Domains hängt von Ihrem Braze-Paket ab. Wenden Sie sich an Ihren Account Manager oder Customer-Success-Manager:in, um loszulegen.
+{% endalert %}
+
 {% multi_lang_include video.html id="eg4r7agod1" source="wistia" %}
 
 ## Voraussetzungen
@@ -24,16 +28,6 @@ Bevor Sie auf Landing Pages zugreifen, sie erstellen und veröffentlichen könne
 - Startseiten veröffentlichen
 
 {% multi_lang_include drag_and_drop/drag_and_drop_access.md variable_name='dnd editors' %}
-
-## Planebenen
-
-Die Anzahl der veröffentlichten Startseiten und angepassten Domains, die Sie nutzen können, hängt von der Art Ihres Tarifs ab: kostenlos oder kostenpflichtig (inkrementell).
-
-| Feature                                                                                                   | Kostenlose Nutzung     | Kostenpflichtige Nutzung (inkrementell)     |
-| :---------------------------------------------------------------------------------------------------------------- | :--------------- | ----------------- |
-| Veröffentlichte Startseiten                                                                 | Fünf pro Unternehmen | 20 zusätzlich |
-| Angepasste Domains          | Eine pro Unternehmen | Fünf zusätzliche |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 
 ## Häufig gestellte Fragen
 

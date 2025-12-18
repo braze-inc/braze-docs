@@ -115,7 +115,7 @@ The SDK includes responsive breakpoints. Confirm that your customizations work a
 
 #### Manual test checklist
 
-Manually test your accessiblity by completing these tasks:
+Manually test your accessibility by completing these tasks:
 
 - Navigate Content Cards and in-app messages with keyboard only (Tab, Enter, Space)
 - Test with screen reader (NVDA, JAWS, VoiceOver)

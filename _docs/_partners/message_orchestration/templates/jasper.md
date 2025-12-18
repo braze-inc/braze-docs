@@ -31,14 +31,14 @@ Benefits of using this integration include:
 | ------------------- | ---------------- |
 | Jasper Account      | You need a Jasper account to utilize this partnership. |
 | Braze REST API Key  | A Braze REST API key with the following permissions. <br>  <br>`templates.email.create` <br> `templates.email.update` <br>`content_blocks.create` <br>`content_blocks.update` <br><br>This key can be generated in the Braze dashboard by navigating to **Settings > API Keys**.  |
-| Braze REST Endpoint | Your REST endpoint URL. Your specific endpoint depends on the Braze URL for your instance. Refer to the [Braze API Basics: Endpoints]({{site.baseurl}}/docs/api/basics#endpoints) documentation for more details. |
+| Braze REST Endpoint | Your REST endpoint URL. Your specific endpoint depends on the Braze URL for your instance. Refer to the [Braze API Basics: Endpoints]({{site.baseurl}}/api/basics#endpoints) documentation for more details. |
 {: .reset-td-br-1 .rest-td-br-2 role=“presentation” }
 
 ## Integration methods
 
 There are two methods for generating content in Jasper and updating Braze templates:
 
-1. Use Jasper API directly
+1. Use the Jasper API directly
 2. Use Jasper Studio to build a Braze-ready custom app
 
 {% tabs %}
@@ -138,7 +138,7 @@ curl --location --request POST 'https://rest.iad-03.braze.com/templates/email/cr
 
 ## Method: Build a Braze-ready custom app with Jasper Studio
 
-Jasper Studio is a no-code platform within Jasper that allows you to build tailored AI apps without requiring IT support. You can design a custom app that generates JSON structures specifically formatted for Braze API, or generate content that can be manually added to your Braze messages.
+Jasper Studio is a no-code platform within Jasper that allows you to build tailored AI apps without requiring IT support. You can design a custom app that generates JSON structures specifically formatted for the Braze API, or generate content that can be manually added to your Braze messages.
 
 1. On your Jasper home screen, select **Create an App**.
 2. Specify the app you want to create, such as **Braze HTML Email Template** or **Content Block Template**.

@@ -2,11 +2,7 @@
 
 ## デフォルトのユーザー属性
 
-Brazeによって自動的に収集されるユーザー属性を設定するには、SDKに付属のsetterメソッドを使用します。
-
-```dart
-braze.setFirstName('Name');
-```
+### サポートされている属性
 
 以下の属性がサポートされています。
 
@@ -24,23 +20,31 @@ braze.setFirstName('Name');
 姓、名、国、市区町村などの文字列値はすべて255文字に制限されています。
 {% endalert %}
 
+### デフォルト属性の設定 
+
+Brazeが自動的に収集したユーザー属性を設定するには、SDKに付属のセッターメソッドを使用する。
+
+```dart
+braze.setFirstName('Name');
+```
+
 ## カスタムユーザー属性
 
 ### カスタム属性の設定
 
-Braze では、デフォルトのユーザー属性に加えて、さまざまなデータ型を使用してカスタム属性を定義することもできます。
+デフォルトのユーザー属性に加え、Brazeでは様々なデータタイプを使用してカスタム属性を定義することができる：
 
 {% tabs %}
 {% tab String %}
-`string` 値を使用してカスタム属性を設定するには:
+`string` 、カスタム属性を設定する：
 
 ```dart
 braze.setStringCustomUserAttribute("custom string attribute", "string custom attribute");
 ```
 
 {% endtab %}
-{% tab 整数 %}
-`integer` 値を使用してカスタム属性を設定するには:
+{% tab Integer %}
+`integer` 、カスタム属性を設定する：
 
 ```dart
 // Set Integer Attribute
@@ -51,7 +55,7 @@ braze.incrementCustomUserAttribute("key", integer);
 
 {% endtab %}
 {% tab Double %}
-`double` 値を使用してカスタム属性を設定するには:
+`double` 、カスタム属性を設定する：
 
 ```dart
 braze.setDoubleCustomUserAttribute("custom double attribute key", double);
@@ -59,22 +63,22 @@ braze.setDoubleCustomUserAttribute("custom double attribute key", double);
 
 {% endtab %}
 {% tab Boolean %}
-`boolean` 値を使用してカスタム属性を設定するには:
+`boolean` 、カスタム属性を設定する：
 
 ```dart
 braze.setBoolCustomUserAttribute("custom boolean attribute key", boolean);
 ```
 {% endtab %}
 
-{% tab 日付 %}
-`date` 値を使用してカスタム属性を設定するには:
+{% tab Date %}
+`date` 、カスタム属性を設定する：
 
 ```dart
 braze.setDateCustomUserAttribute("custom date attribute key", date);
 ```
 {% endtab %}
-{% tab 配列 %}
-`array` 値を使用してカスタム属性を設定するには:
+{% tab Array %}
+`array` 、カスタム属性を設定する：
 
 ```dart
 // Adding to an Array
@@ -89,7 +93,9 @@ braze.removeFromCustomAttributeArray("key", "attribute");
 カスタム属性値の最大長は 255 文字です。これより長い値は切り捨てられます。
 {% endalert %}
 
-### カスタム属性の設定解除
+### カスタム属性の設定を解除する
+
+カスタム属性を解除するには、`unsetCustomUserAttribute` メソッドに関連する属性キーを渡す。
 
 ```dart
 braze.unsetCustomUserAttribute('attribute_key');

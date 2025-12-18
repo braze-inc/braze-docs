@@ -95,6 +95,10 @@ If you choose **Custom Event**, select your event from the list.
 
 ![The "Completed Purchase" custom event selected as how events are currently tracked.]({% image_buster /assets/img/item_recs_3.png %})
 
+{% alert note %}
+Custom events must have sufficient data before they appear in the event list. If your custom event doesn’t appear, it may be because the Braze backend hasn’t yet processed it or it lacks enough data for model training. AI recommendations rely on historical data to generate insights, so newly created or rarely triggered events won’t be available until more data is collected.
+{% endalert %}
+
 ### Step 5: Choose the corresponding property name {#property-name}
 
 To create a recommendation, you need to tell Braze which field of your interaction event (purchase object or custom event) has the unique identifier that matches an item's `id` field in the catalog. Not sure? [View requirements](#requirements).
@@ -113,6 +117,7 @@ There are some requirements for selecting your property:
 - **If you selected Purchase Object:** Must be the `product_id` or a field of your interaction event's `properties`.
 - **If you selected Custom Event:** Must be a field of your custom event's `properties`.
 - Nested fields must be typed into the **Property Name** dropdown in dot notation with the format of `event_property.nested_property`. For example, if selecting the nested property `district_name` within the event property `location`, you would enter `location.district_name`.
+- **If using [eCommerce events]({{site.baseurl}}/user_guide/data/activation/custom_data/recommended_events/ecommerce_events/) to train item recommendations:** Add `products.product_id` to access the product ID from events.
 - The field can be inside an array of products, or end with an array of IDs. In either case, each product ID will be treated as a separate, sequential event with the same timestamp.
 
 #### Example mappings

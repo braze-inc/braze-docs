@@ -54,7 +54,7 @@ Brazeを通じてSMSまたはRCSキャンペーンを開始するには、**SMS/
 国際的な[通信コンプライアンスとガイドラインに]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/laws_and_regulations/)準拠し、Brazeは選択したサブスクリプショングループに加入していないユーザーにSMSやRCSを送信することはない。  
 {% endalert %}
 
-\![サブスクリプショングループのドロップダウンを開封し、ユーザーによって "Messaging Service A for SMS "がハイライトされている状態で、[SMS composer]を選択する。]({% image_buster /assets/img/sms/sms_subgroup_select.png %})
+![ユーザーが購読グループのドロップダウンを開き、[Messaging Service A for SMS] を強調表示した SMS 作成画面。]({% image_buster /assets/img/sms/sms_subgroup_select.png %})
 
 ## サブスクリプショングループを有効にする
 
@@ -68,7 +68,7 @@ SMS、MMS、またはRCSのサブスクリプショングループを有効に�
 {% tab MMS %}
 MMS メッセージを送信するには、購読グループ内の少なくとも 1 つの番号で MMS の送信を有効にする必要があります。これは、購読グループの横にあるタグによって示されます。 
 
-\![サブスクリプショングループのドロップダウンで、"メッセージングサービスA for SMS "をハイライトする。エントリーの先頭に "MMS "というタグが付く。]({% image_buster /assets/img/sms/mms_sub_group_tag.png %}){: style="max-width:40%"}
+![[Messaging Service A for SMS] が強調表示された購読グループのドロップダウン。エントリーの先頭に "MMS "というタグが付く。]({% image_buster /assets/img/sms/mms_sub_group_tag.png %}){: style="max-width:40%"}
 {% endtab %}
 
 {% tab RCS %}
@@ -126,7 +126,7 @@ Brazeでは、最初は少量のユーザーにRCSを送信するテストを行
 ```
 {% endraw %}
 
-\!["ユーザー更新オブジェクト "には、前述のJSONコードが含まれている。]({% image_buster /assets/img/sms/user_update_object.png %})
+!["ユーザー更新オブジェクト "には、前述のJSONコードが含まれている。]({% image_buster /assets/img/sms/user_update_object.png %})
 
 ### ステップ 4: キャンバスをテストする
 

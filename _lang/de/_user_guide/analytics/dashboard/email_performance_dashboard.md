@@ -13,7 +13,7 @@ tool:
 
 > Das Dashboard für die Kanal-Performance zeigt die aggregierten Metriken für einen gesamten Kanal, sowohl für Kampagnen als auch für Canvase. Diese Dashboards sind derzeit für E-Mail und SMS verfügbar.
 
-![Das Dashboard für die Performance von E-Mails, das das Engagement der letzten dreißig Tage für den E-Mail Kanal anzeigt.][1]
+Das Dashboard für die E-Mail Performance zeigt das Engagement des E-Mail Kanals in den letzten dreißig Tagen an.]({% image_buster /assets/img_archive/email_performance_dashboard_1.png %})
 
 Sie können die folgenden Dashboards einsehen:
 - [E-Mail Performance Dashboard](#email-performance-dashboard)
@@ -26,11 +26,11 @@ Sehen Sie sich Ihr E-Mail Performance Dashboard an, indem Sie zu **Analytics** >
 
 ### Wie die Metriken berechnet werden
 
-![][2]{: style="max-width:40%;float:right;margin-left:15px;border:none;"}
+![Eine beispielhafte E-Mail Kampagne mit 335.630 Sendungen, mit einem Durchschnitt von 11.187,667 pro Tag.]({% image_buster /assets/img_archive/email_performance_dashboard_2.png %}){: style="max-width:40%;float:right;margin-left:15px;border:none;"}
 
 Die Berechnungen für die verschiedenen Metriken im Dashboard für die E-Mail-Performance entsprechen denen auf der Ebene der einzelnen Nachrichten (z.B. Analytics für Kampagnen). Auf diesem Dashboard werden die Metriken über alle Kampagnen und Canvase für den von Ihnen ausgewählten Datumsbereich aggregiert. Um mehr über diese Definitionen zu erfahren, referenzieren Sie auf [E-Mail Metriken]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting#email-metrics).
 
-Jede Kachel zeigt zuerst die Metrik für die Rate an, gefolgt von der Zählung (mit Ausnahme von *Sends*, wo die Zählung gefolgt von der durchschnittlichen Anzahl pro Tag angezeigt wird). Die Kachel Eindeutige Klicks enthält beispielsweise die *Eindeutige Klickrate* aus dem von Ihnen ausgewählten Zeitraum und die Gesamtzahl der eindeutigen Klicks aus diesem Zeitraum. Jede Kachel zeigt auch den [Vergleich zur letzten Periode](#comparison-to-last-period-change-in-totals-or-rates).
+Jede Kachel zeigt zuerst die Metrik für die Rate an, gefolgt von der Zählung (mit Ausnahme von *Sends*, wo die Zählung gefolgt von der durchschnittlichen Anzahl pro Tag angezeigt wird). Die Kachel Eindeutige Klicks enthält beispielsweise die *Eindeutige Klickrate* aus dem von Ihnen ausgewählten Zeitraum und die Gesamtzahl der eindeutigen Klicks aus diesem Zeitraum. Jede Kachel zeigt auch den [Vergleich zur letzten Periode](#comparing-time-periods).
 
 | Metrisch | Typ | Berechnung |
 | --- | --- | ---- |
@@ -63,17 +63,17 @@ Um besser zu verstehen, was sich in dieser Kategorie "Andere" befindet, können 
 1. [Currents]({{site.baseurl}}/user_guide/data/braze_currents) sendet Ihnen den genauen Nutzer:innen String, der von den Geräten Ihrer Nutzer:innen abgerufen wurde.
 2. Nutzen Sie unseren [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder) zur Verwendung von SQL oder unseren [KI Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder#generating-sql-with-the-ai-query-builder) zur Anzeige der Nutzer:innen.
 
-![Bericht "Engagement nach Gerät", der die Anzahl der Klicks für Handy, Desktop, Tablet und andere anzeigt. Die meisten Klicks erfolgen auf mobilen Geräten.]({% image_buster /assets/img/engagement_by_device_type.png %}){: style="max-width:70%;"}
+![Engagement nach Gerät Bericht, der die Anzahl der Klicks für Handy, Desktop, Tablet und andere Geräte anzeigt. Die meisten Klicks erfolgen auf mobilen Geräten.]({% image_buster /assets/img/engagement_by_device_type.png %}){: style="max-width:70%;"}
 
 Für die Öffnung von E-Mails trennt Braze Google Image Proxy, Apple Image Proxy und Yahoo Mail Proxy. Diese Dienste zwischenspeichern und laden alle eingebetteten Bilder in einer E-Mail, bevor sie dem Empfänger:in zugestellt wird. Infolgedessen wird eine E-Mail von den Servern des Postfachanbieters und nicht vom Server des Empfängers aus getriggert, was zu überhöhten Öffnungen von E-Mails führen kann. Diese Dienste dienen dazu, den Datenschutz, die Sicherheit, die Performance und die Effizienz beim Laden von Bildern zu verbessern. Dies kann auch echte Öffnungen von Empfängern enthalten, da diese Serviceleistungen; Dienste den Nutzer:innen maskieren und wir die Daten anhand des Nutzer:innen kategorisieren.
 
-![Bericht zum Engagement nach Gerät, der die Anzahl der Klicks für Mobile, Desktop, Tablet, Apple Privacy Proxy, Google Image Proxy, Yahoo Mail Proxy und Andere anzeigt. Die meisten Öffnungen erfolgen auf mobilen Geräten.]({% image_buster /assets/img/engagement_by_device_type_proxy.png %}){: style="max-width:70%;"}
+![Engagement nach Gerät Bericht, der die Anzahl der Klicks für Mobile, Desktop, Tablet, Apple Privacy Proxy, Google Image Proxy, Yahoo Mail Proxy und Andere anzeigt. Die meisten Öffnungen finden auf mobilen Geräten statt.]({% image_buster /assets/img/engagement_by_device_type_proxy.png %}){: style="max-width:70%;"}
 
 ### Engagement nach Mailbox-Anbieter
 
-Der Bericht **Engagement nach Postfachanbieter** zeigt die wichtigsten Postfachanbieter an, die zu Ihren Klicks oder Öffnungen beitragen. Sie können auf bestimmte Premier Mailbox-Anbieter klicken, um bestimmte empfangende Domains aufzuschlüsseln. Wenn zum Beispiel Microsoft in diesem Bericht als einer Ihrer wichtigsten Mailbox-Anbieter Metriken aufgeführt ist, können Sie weitere Details für deren empfangende Domains wie "outlook.com", "hotmail.com", "live.com" und mehr einsehen.
+Der Bericht **Engagement nach Postfachanbieter** zeigt die wichtigsten Postfachanbieter an, die zu Ihren Klicks oder Öffnungen beitragen. Sie können auf bestimmte Premier Mailbox-Anbieter klicken, um bestimmte empfangende Domains aufzuschlüsseln. Wenn zum Beispiel Microsoft in diesem Bericht als eine Ihrer wichtigsten Metriken für den Mailbox-Anbieter aufgeführt ist, können Sie weitere Details für die empfangenden Domains einsehen, wie z.B. "outlook.com", "hotmail.com", "live.com" und mehr.
 
-![][5]{: style="max-width:70%;"}
+![Ein Beispiel für ein Engagement nach Mailbox-Anbieter mit Google, Apple iCloud, Yahoo, Microsoft und Mail.Ru Group und der entsprechenden Anzahl von Klicks.]({% image_buster /assets/img_archive/mailbox_provider_time_engagement.png %}){: style="max-width:70%;"}
 
 ### Engagement-Zeitpunkt
 
@@ -81,11 +81,11 @@ Der Bericht **"Zeitpunkt des Engagements** " zeigt Daten darüber an, wann Nutze
 
 Der Engagement-Bericht für **den Wochentag** schlüsselt die Öffnungen oder Klicks nach Wochentag auf. 
 
-![][6]
+![Ein Beispiel für einen Engagement-Bericht für den Tag der Woche mit den meisten Klicks am Montag und Mittwoch.]({% image_buster /assets/img_archive/time_engagement.png %})
 
-Der Engagement-Bericht **zur Tageszeit** schlüsselt die Öffnungen oder Klicks nach jeder Stunde in einem 24-Stunden-Zeitfenster auf.
+Der Bericht über das Engagement **zur Tageszeit** schlüsselt die Öffnungen oder Klicks nach jeder Stunde in einem 24-Stunden-Zeitfenster auf.
 
-![][7]
+![Ein Beispiel für einen Engagement-Bericht zur Tageszeit mit den Öffnungen oder Klicks von 12 Uhr bis 23 Uhr.]({% image_buster /assets/img_archive/time_engagement_day.png %})
 
 Weitere Informationen zu Analytics für Ihre E-Mails finden Sie unter [E-Mail-Berichterstattung]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/).
 
@@ -95,9 +95,9 @@ Um Ihr SMS Performance Dashboard zu nutzen, gehen Sie zu **Analytics** > **SMS P
 
 ### Wie die Metriken berechnet werden
 
-![][2]{: style="max-width:40%;float:right;margin-left:15px;border:none;"}
+![Eine beispielhafte SMS Kampagne mit 335.630 Sendungen, mit einem Durchschnitt von 11.187.667 pro Tag.]({% image_buster /assets/img_archive/email_performance_dashboard_2.png %}){: style="max-width:40%;float:right;margin-left:15px;border:none;"}
 
-Die Berechnungen für die verschiedenen Metriken im SMS Performance Dashboard sind die gleichen wie auf der Ebene der einzelnen Nachrichten (z.B. Analytics für Kampagnen). Auf diesem Dashboard werden die Metriken über alle Kampagnen und Canvase für den von Ihnen ausgewählten Datumsbereich aggregiert. Um mehr über diese Definitionen zu erfahren, referenzieren Sie auf [SMS Metriken]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_campaign_analytics/).
+Die Berechnungen für die verschiedenen Metriken im SMS Performance Dashboard sind die gleichen wie auf der Ebene der einzelnen Nachrichten (z.B. Analytics für Kampagnen). Auf diesem Dashboard werden die Metriken über alle Kampagnen und Canvase für den von Ihnen ausgewählten Datumsbereich aggregiert. Um mehr über diese Definitionen zu erfahren, referenzieren Sie auf [SMS Metriken]({{site.baseurl}}/sms_mms_rcs_reporting/).
 
 Jede Kachel zeigt zuerst die Metrik für die Rate an, gefolgt von der Zählung (mit Ausnahme von _Sends_, wo die Zählung gefolgt von der durchschnittlichen Anzahl pro Tag angezeigt wird). Jede Kachel zeigt auch den [Vergleich zur letzten Periode](#comparison-to-last-period-change-in-totals-or-rates).
 
@@ -120,7 +120,7 @@ Sie können die Daten auf Ihrem Dashboard mit Hilfe der folgenden Filteroptionen
 - **Canvas:** Wählen Sie bis zu 10 Canvase. Wenn Sie diese Option anwenden, zeigt Ihr Dashboard nur die Metriken für die ausgewählten Canvase an. Wenn Sie zuerst einen Tag-Filter auswählen, werden in Ihren Optionen für Canvas-Filter nur Canvase angezeigt, die den ausgewählten Tag aufweisen.
 - **Kampagne:** Wählen Sie bis zu 10 Kampagnen. Wenn Sie diese Option anwenden, zeigt Ihr Dashboard nur die Metriken für die ausgewählten Kampagnen an. Wenn Sie zuerst einen Tag-Filter auswählen, werden in Ihren Optionen für Kampagnenfilter nur Kampagnen angezeigt, die den von Ihnen ausgewählten Tag aufweisen.
 
-![Filteroptionen auf dem Channel Performance Dashboard, wo Sie einen Tag und eine Liste von Canvase auswählen können, nach denen Sie filtern möchten.][3]
+![Filteroptionen auf dem Channel Performance Dashboard, wo Sie einen Tag und eine Liste von Canvase auswählen können, nach denen Sie filtern möchten.]({% image_buster /assets/img_archive/dashboard_filters.png %})
 
 ## Vergleich der Zeiträume
 
@@ -132,7 +132,7 @@ Der Vergleich ist die prozentuale Veränderung zwischen der letzten und der aktu
 
 Sie können zwischen der Option **Änderung der Gesamtzahlen anzeigen - die**die Gesamtzahlen (z. B. die Anzahl der zugestellten E-Mails) zwischen den beiden Zeiträumen vergleicht - und der Option **Änderung der Raten anzeigen - die**die Raten (z. B. die Zustellungsrate) vergleicht - wechseln.
 
-![Radio-Buttons zum Umschalten zwischen der Anzeige von Änderungen in den Summen oder Änderungen in den Raten für das Channel Performance Dashboard.][4]
+![Radio-Buttons zum Umschalten zwischen der Anzeige von Änderungen in den Summen oder Änderungen in den Raten für das Channel Performance Dashboard.]({% image_buster /assets/img_archive/email_performance_dashboard_3.png %}){: style="max-width:60%"}
 
 ## Häufig gestellte Fragen
 
@@ -168,10 +168,3 @@ This means Braze hasn't recorded any data for that metric during the time you se
 
 --->
 
-[1]: {% image_buster /assets/img_archive/email_performance_dashboard_1.png %}
-[2]: {% image_buster /assets/img_archive/email_performance_dashboard_2.png %}
-[3]: {% image_buster /assets/img_archive/dashboard_filters.png %}
-[4]: {% image_buster /assets/img_archive/email_performance_dashboard_3.png %}
-[5]: {% image_buster /assets/img_archive/mailbox_provider_time_engagement.png %}
-[6]: {% image_buster /assets/img_archive/time_engagement.png %}
-[7]: {% image_buster /assets/img_archive/time_engagement_day.png %}

@@ -115,3 +115,21 @@ To download the time series data, select <i class="fas fa-bars"></i> and then se
 | --- | --- |
 | Touch | A physical interaction or touchpoint with a message.<br><br>Touches can include:<br>{::nomarkdown}<ul><li>Email Click</li><li>Push Open</li><li>Content Card Click</li><li>In-App Message Click</li><li>SMS Click</li></ul>{:/} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+## Troubleshooting
+
+### Why do I have low campaign or Canvas conversions?
+
+Your conversions might not be as high as you expect them to be when compared to previous campaigns or your expectations. Conversions are a tricky business, but they are dependent on a few simple functions in our platform: event tracking and conversion deadlines.
+
+To troubleshoot why that is, we recommend checking your event tracking and conversion deadlines.
+
+#### Event tracking
+
+When a campaign triggers a session start or custom event, you want to ensure that this event, or session, is happening frequently enough to trigger the message. Check the [home dashboard]({{site.baseurl}}/user_guide/analytics/dashboard/home_dashboard/) for session data, or your [custom events]({{site.baseurl}}/user_guide/analytics/reporting/configuring_reporting/) report.
+
+#### Conversion deadlines
+
+For each conversion event that you select per campaign, you set the [deadline]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/#creating-a-campaign-with-conversion-tracking). This means you are setting a time limit within which a conversion must happen in order for it to count toward each respective campaign.
+
+Check that you've reviewed information on [conversion tracking rules]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/#conversion-tracking-rules) to understand your campaign metrics. For user conversions in Canvas, refer to [Canvas FAQ]({{site.baseurl}}/user_guide/engagement_tools/canvas/faqs/#how-are-user-conversions-tracked-in-a-canvas). 

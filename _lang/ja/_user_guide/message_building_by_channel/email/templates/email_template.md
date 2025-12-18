@@ -25,7 +25,7 @@ search_rank: 1
 
 次に、あらかじめデザインされたBrazeテンプレートから選択するか、新しいテンプレートを作成するか、既存のテンプレート（プレーンまたは[モバイル・レスポンシブ]({{site.baseurl}}/help/release_notes/2018/may/#mobile-responsive-email-templates)）を編集する。
 
-\![ドラッグアンドドロップエディタまたはHTMLエディタを選択するか、Braze テンプレートsから選択するかを選択できる、企業の春物セールのメール テンプレート。]({% image_buster /assets/img/email_templates/template2.png %})
+![ドラッグアンドドロップエディタまたはHTMLエディタを選択するか、Braze テンプレートs から選択するかを選択できる、企業の春物セールのメール テンプレート。]({% image_buster /assets/img/email_templates/template2.png %})
 
 {% alert note %}
 既存のカスタムHTML テンプレートs は、ドラッグアンドドロップエディタを使用して再作成する必要があります。
@@ -43,7 +43,7 @@ search_rank: 1
 
 メールエラーは、メッセージワークフローの**Compose** タブに表示されます。エラーが発生すると、進むことができません。「警告」は、ベストプラクティスに従うためのリマインダーです。ビジネスによっては、無視することもできます。
 
-\![サンプルメールのエラーと警告の一覧。]({% image_buster /assets/img/dnd_compose_error.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
+![サンプルメールのエラーと警告の一覧。]({% image_buster /assets/img/dnd_compose_error.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
 エディタで計算されるエラーの一覧を次に示します。
 
@@ -69,7 +69,7 @@ search_rank: 1
 
 最終確認の準備ができたら、**Test Send**を選択し、自分またはコンテンツテスタのグループにテストメッセージを送信して、メールがさまざまな機器やメール クライアントに正しく表示されることを確認します。
 
-\![テスト用に送信されるサンプルメール プレビュー。]({% image_buster /assets/img_archive/newEmailTest.png %})
+![テスト用に送信されるサンプルメール プレビュー。]({% image_buster /assets/img_archive/newEmailTest.png %})
 
 テンプレートに問題がある場合、または変更を行いたい場合は、[**メールを編集**] を選択してエディターに戻ります。
 
@@ -89,7 +89,7 @@ search_rank: 1
 
 API キャンペーンでメールを使用するには、`email_template_id` が必要です。これは、Braze で作成されたメール テンプレートの下部にあります。
 
-\![メール テンプレートの下部にあるAPI 識別子。]({% image_buster /assets/img/email_templates/template5.png %})
+![メール テンプレートの下部にあるAPI 識別子。]({% image_buster /assets/img/email_templates/template5.png %})
 
 ### メール テンプレートのコメント
 
@@ -103,7 +103,7 @@ API キャンペーンでメールを使用するには、`email_template_id` �
 
 テンプレートが保存されると、ユーザーに未解決のコメントのアイコンが表示されます。これらのコメントを解決するには、**Resolve**を選択します。
 
-\![&quotを読むメール テンプレート的なコメント;私とquot;に良く見えます。]({% image_buster /assets/img/email_templates/template_comment.png %})
+![「Looks good to me」と書かれたメールテンプレートコメント。]({% image_buster /assets/img/email_templates/template_comment.png %})
 
 メールテンプレートに関するよくあるご質問は、[テンプレートFAQを]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/faq/)ご覧ください。
 

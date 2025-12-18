@@ -59,7 +59,7 @@ search_rank: 9
 最適な機能するために、半径 200 メートル以上のジオフェンスを作成することをお勧めします。設定可能なオプションの詳細については、[モバイル統合](#mobile-integrations)を参照してください。
 {% endalert %}
 
-\![2 つのジオフェンスs & quot;EastCoastGreaterNY"および"WesternRegion"で設定されたジオフェンスで、マップ上に2 つの円が表示されます。]({% image_buster /assets/img/geofence_example.png %})
+![2 つのジオフェンスs"EastCoastGreaterNY"および"WesternRegion"を使用して設定されたジオフェンスで、マップ上に2 つの円が表示されます。]({% image_buster /assets/img/geofence_example.png %})
 
 ## ジオフェンスの一括アップロード {#creating-geofence-sets-via-bulk-upload}
 
@@ -114,7 +114,7 @@ GeoJSON をアップロードするには、[**その他**] > ]**GeoJSON をア�
 
 キャンペーンおよびキャンバス トリガーの一部としてジオフェンスデータを使用するには、配信方法として**アクションベースの配信**を選択します。次に、`Trigger a Geofence` のトリガーアクションを追加します。最後に、メッセージのジオフェンスセットとジオフェンス移行イベントのタイプを選択します。また、ジオフェンスイベントを使用して、キャンバス経由でユーザーを昇格させることもできます。
 
-\![ユーザーがドイツの空港に入るとトリガーするジオフェンス付きのアクションベースのキャンペーン。]({% image_buster /assets/img_archive/action_based_geofence_trigger.png %})
+![ユーザーがドイツの空港に入るとトリガーするジオフェンスを持つアクションベースのキャンペーン。]({% image_buster /assets/img_archive/action_based_geofence_trigger.png %})
 
 ### メッセージのパーソナライズ
 

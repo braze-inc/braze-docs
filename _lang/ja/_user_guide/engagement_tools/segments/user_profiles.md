@@ -26,7 +26,7 @@ description: "この参考記事では、ダッシュボードでユーザーの
 
 一致するものが見つかった場合は、Braze SDK を使用してこのユーザーについて記録した情報を表示できます。それ以外の場合、検索で複数のユーザープロファイルが返される場合は、各プロファイルを個別にマージするか、ユーザーの一括マージを実行できます。詳細な手順については、「[重複ユーザー]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users/)」を参照してください。
 
-\![検索結果には、"複数のユーザーが検索条件に一致しました "というバナーと、"前へ "と "次へ "という2つのボタンが表示される。]({% image_buster /assets/img_archive/User_Search_Nonunique.png %}){: style="max-width:60%;"}
+![検索結果には、「検索条件に一致するユーザーが複数います」というバナーと、「前へ」と「次へ」と書かれた2つのボタンが表示される。]({% image_buster /assets/img_archive/User_Search_Nonunique.png %}){: style="max-width:60%;"}
 
 ## ユースケース
 
@@ -61,7 +61,7 @@ description: "この参考記事では、ダッシュボードでユーザーの
 
 このデータの詳細については、「[ユーザーデータ収集]({{site.baseurl}}/user_guide/data/user_data_collection/)」を参照してください。
 
-\![ユーザープロファイルの概要タブ。]({% image_buster /assets/img_archive/user_profile2.png %})
+![ユーザープロファイルの「概要」タブ。]({% image_buster /assets/img_archive/user_profile2.png %})
 
 ### 「エンゲージメント」タブ {#engagement-tab}
 
@@ -79,7 +79,7 @@ description: "この参考記事では、ダッシュボードでユーザーの
 | 予測 | このユーザーの[Churn 予測]({{site.baseurl}}/user_guide/brazeai/predictive_churn/)および[イベント予測]({{site.baseurl}}/user_guide/brazeai/predictive_events/)のスコア。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-\![ユーザープロファイルのエンゲージメントタブで、コンタクト設定やコミュニケーション統計が表示される。]({% image_buster /assets/img_archive/profiles_engagement_tab.png %})
+![ユーザープロファイルのエンゲージメントタブで、コンタクト設定やコミュニケーション統計が表示される。]({% image_buster /assets/img_archive/profiles_engagement_tab.png %})
 
 ### [メッセージ履歴] タブ
 
@@ -89,7 +89,7 @@ description: "この参考記事では、ダッシュボードでユーザーの
 この表についてフィードバックがある場合、または特定のイベントを見たい場合は、[user-targeting@braze.com](mailto:user-targeting@braze.com?subject=Messaging%20History%20Tab%20Feedback)に件名を「メッセージング履歴タブのフィードバック」としてメールを送ってほしい。
 {% endalert %}
 
-\![ユーザーがどのキャンペーンやキャンバスを受け取ったかを示すメッセージング履歴タブ。]({% image_buster /assets/img_archive/profiles_messaging_history_tab.png %})
+![ユーザーが受信したキャンペーンおよびキャンバスを示す [メッセージ履歴] タブ。]({% image_buster /assets/img_archive/profiles_messaging_history_tab.png %})
 
 #### イベントの表示と理解
 

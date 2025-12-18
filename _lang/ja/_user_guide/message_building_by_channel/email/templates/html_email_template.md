@@ -64,7 +64,7 @@ HTMLテンプレートファイルをアップロードする際に、いくつ�
 
 API キャンペーンでメールを使用するには、`email_template_id` が必要です。これは、Braze で作成されたメールテンプレートの下部にあります。
 
-\![HTMLメールテンプレートのAPI識別子セクション。]({% image_buster /assets/img_archive/email_template_id.png %}){: style="max-width:50%;"}
+![HTML メール テンプレートのAPI ID セクション。]({% image_buster /assets/img_archive/email_template_id.png %}){: style="max-width:50%;"}
 
 ## メールテンプレートを管理する
 

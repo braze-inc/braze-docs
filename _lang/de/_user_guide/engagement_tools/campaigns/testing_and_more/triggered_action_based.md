@@ -1,5 +1,5 @@
 ---
-nav_title: API-gesteuerte und aktionsbasierte Kampagnen
+nav_title: API-ausgelöste und aktionsbasierte Kampagnen
 article_title: Testen von API-getriggerten und aktionsbasierten Kampagnen
 page_order: 2
 page_type: reference

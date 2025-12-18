@@ -78,7 +78,7 @@ To define a context variable:
 2. Select a [data type](#context-variable-types).
 3. Write a Liquid expression manually or use **Add Personalization** to create a Liquid snippet from pre-existing attributes.
 4. Select **Preview** to check the value of your context variable.
-5. (Optional) To additional variables, select **Add Context variable** and repeat steps 1–4.
+5. (Optional) To add more variables, select **Add Context variable** and repeat steps 1–4.
 6. When you're finished, select **Done**.
 
 Now you can use your context variable anywhere you use Liquid, such as in Message and User Update steps, by selecting **Add Personalization**. For a full walkthrough, see [Using context variables](#using-context-variables).
@@ -88,7 +88,7 @@ Now you can use your context variable anywhere you use Liquid, such as in Messag
 Context variables that are created or updated in the step can be assigned the following data types.
 
 {% alert note %}
-Context variables have the same expected formats for data types as [custom events]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#expected-format). <br><br>For nested objects and array of objects, use the [`as_json_string` Liquid filter](#converting-connected-content-strings-to-json). If you're creating the same object in a Context step, you'll need to render the object using `as_json_string`, such as {%raw%}```{{context.${object_array} | as_json_string }}```{%endraw%}
+Context variables have the same expected formats for data types as [custom events]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#expected-format). <br><br>When using the array type, Braze tries to parse the value as JSON, which allows arrays of objects to be successfully created. If the objects within your arrays are not valid JSON, the result will be a simple array of strings. <br><br>For nested objects and array of objects, use the [`as_json_string` Liquid filter](#converting-connected-content-strings-to-json). If you're creating the same object in a Context step, you'll need to render the object using `as_json_string`, such as {%raw%}```{{context.${object_array} | as_json_string }}```{%endraw%}
 {% endalert %}
 
 | Data type | Example variable name | Example value |
@@ -97,6 +97,7 @@ Context variables have the same expected formats for data types as [custom event
 |Number| credit_score |{% raw %}<code>740{% endraw %}|
 |String| product_name |{% raw %}<code>green_tea</code>{% endraw %} |
 |Array| favorite_products|{% raw %}<code>["wireless_headphones", "smart_homehub", "fitness_tracker_swatch"]</code>{% endraw %}|
+|Array (of objects)| pet_details |{% raw %}<code>[<br>&emsp;{ "id": 1, "type": "dog", "breed": "beagle", "name": "Gus" }<br>&emsp;,<br>&emsp;{ "id": 2, "type": "cat", "breed": "calico", "name": "Gerald" }<br>]</code>{% endraw %}|
 |Time (in UTC) | last_purchase_date|{% raw %}<code>2025-12-25T08:15:30:250-0800</code>{% endraw %}|
 |Object (flattened) | user_profile|{% raw %}<code>{<br>&emsp;"first_name": "{{user.first_name}}",<br>&emsp;"last_name": "{{user.last_name}}",<br>&emsp;"email": "{{user.email}}",<br>&emsp;"loyalty_points": {{user.loyalty_points}},<br>&emsp;"preferred_categories": {{user.preferred_categories}}<br>}</code>{% endraw %} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -291,7 +292,7 @@ This change is part of a broader effort to create a more predictable and consist
 #### When is this change taking effect?
 
 - If you're participating in the Canvas Context early access, this change has already been applied. 
-- If you're not participatig in the Canvas Context early access, this change will apply when you join the early access or when Canvas Context becomes generally available.
+- If you're not participating in the Canvas Context early access, this change will apply when you join the early access or when Canvas Context becomes generally available.
 
 #### Are API-triggered or scheduled Canvases impacted by this change?
 

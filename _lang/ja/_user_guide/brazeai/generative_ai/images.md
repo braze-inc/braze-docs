@@ -20,6 +20,6 @@ description: "DALL·E 3、OpenAI からのAI システム、およびBraze サ�
 3. [**画像を生成**] を選択します。画像が生成されるまでに約1分かかることがあります。
 4. メディアライブラリに追加する画像の [<i class="fas fa-download" title="メディアライブラリに画像を追加"></i>] を選択します。
 
-\![メディアライブラリーのAI画像生成モーダル。]({% image_buster /assets/img_archive/media_library_dalle.png %}){: style="max-width:75%"}
+![メディアライブラリのAIイメージジェネレーターモーダル。]({% image_buster /assets/img_archive/media_library_dalle.png %}){: style="max-width:75%"}
 
 {% multi_lang_include brazeai/generative_ai/policy.md %}

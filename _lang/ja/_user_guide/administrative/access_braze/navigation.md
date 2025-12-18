@@ -19,37 +19,37 @@ Braze のナビゲーションは、デバイスを問わず機能やコンテ�
 
 縦方向のメニュー構造では、最も使用頻度の高いツールを1 回押すだけで済みます。メインメニュー項目を選択すると、スタックされた垂直レイアウトにそのオプションが表示されます。 
 
-\![ユーザーが "設定 "ページを選択すると、サブメニューが右側の縦に重なったメニューとして開封される。]({% image_buster /assets/img/navigation/vertical_menu.gif %})
+![ユーザーが "設定 "ページを選択すると、サブメニューが右側に縦に重なったメニューとして開封される。]({% image_buster /assets/img/navigation/vertical_menu.gif %})
 
 ## グローバル検索
 
 ヘッダーにあるグローバル検索は、Braze で何かを見つける最も早い方法です。検索バーを選択するか、Windows の場合はCtrl + K を押し、Mac の場合は⌘ + K を押して、検索バーを直接選択します。 
 
-\![検索語が入力されていない状態でグローバル検索が開かれ、最近開封されたページが表示される。]({% image_buster /assets/img/navigation/search_recently_opened.png %})
+![検索語が入力されていない状態でグローバル検索を開くと、最近開封したページが表示される。]({% image_buster /assets/img/navigation/search_recently_opened.png %})
 
 検索では、更新されたナビゲーションで名前が変更されたページのシノニムが理解されます。例えば「Currents」を検索すると、そのページの名前が変更されたため、「データのエクスポート」が表示されます。
 
-\![Currents "の検索結果を表示している："データエクスポート。前回までの『Currents』"]({% image_buster /assets/img/navigation/global_search_synonym.png %})
+![検索結果"currents"以下を表示します。"データエクスポート。前回までの『Currents』"]({% image_buster /assets/img/navigation/global_search_synonym.png %})
 
 ## サイドナビゲーションの最小化
 
 視覚的にすっきりとさせ、ワークスペースに焦点を当てるには、再度ナビゲーションパネルを最小化できます。**最小化メニュー**を押してナビゲーションを非表示にします。これは、キャンバスでユーザフローを設計するときに特に役立ちます。 
 
-\![Brazeキャンバスの左側のナビゲーションメニューをユーザーが拡大・縮小し、全文表示とアイコンのみの表示を切り替える。]({% image_buster /assets/img/navigation/expand_collapse_menu.gif %})
+![ユーザーはBrazeキャンバスの左側のナビゲーションメニューを展開したり折りたたんだりし、全文表示とアイコンのみの表示を切り替える。]({% image_buster /assets/img/navigation/expand_collapse_menu.gif %})
 
 最小化した場合でも、アイコンの上にマウスポインタを置くと、メニュー項目名のツールチップが表示され、すばやくアクセスできます。
 
-\![Brazeのナビゲーションが最小化され、Audienceメニュー項目にフォーカスが移動すると、"Audience "のツールチップが表示される。]({% image_buster /assets/img/navigation/minimized_menu_tooltip.png %}){:style="max-width:50%"}
+![Brazeのナビゲーションが最小化され、Audienceメニュー項目にフォーカスが移動すると、「オーディエンス」のツールチップが表示される。]({% image_buster /assets/img/navigation/minimized_menu_tooltip.png %}){:style="max-width:50%"}
 
 ## レスポンシブなナビゲーション
 
 ナビゲーションは、デバイスのサイズに応じてシームレスに調整されます。小さい画面では、サイドナビゲーションは自動的に折りたたまれます。必要に応じて、<i class="fa-solid fa-bars" aria-label="ナビゲーションメニュー"></i>を押してメニューを開きます。 
 
-\![小さい画面では、サイドナビゲーションは自動的に折りたたまれる。メニューアイコンをタップすると、ナビゲーションオプションが開封される。]({% image_buster /assets/img/navigation/navigation_small_screens.png %})
+![小さい画面では、サイドナビゲーションは自動的に折りたたまれます。メニューアイコンをタップすると、ナビゲーションオプションが開封される。]({% image_buster /assets/img/navigation/navigation_small_screens.png %})
 
 ## フィードバックの共有
 
 ナビゲーション、ユーザビリティ、アクセシビリティ、ビジュアルアピール、その他重要なトピックに関するフィードバックを共有できます。グローバルヘッダの**Support**メニューを開き、**Share feedback**を選択して、あなたの考えをお送りください。皆様のご意見は Braze のサービス/製品の向上に役立ちます。皆様からのご意見を伺うことは当社にとって重要です。
 
-\![サポートメニューが開封され、Brazeドキュメント、Braze学習、フィードバックの共有、ヘルプが表示される。]({% image_buster /assets/img/navigation/share_feedback.png %}){:style="max-width:50%"}
+![サポートメニューが開封され、Brazeドキュメント、Braze学習、フィードバックの共有、ヘルプの入手のオプションが表示される。]({% image_buster /assets/img/navigation/share_feedback.png %}){:style="max-width:50%"}
 

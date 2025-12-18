@@ -63,5 +63,5 @@ DMARCレコードはまた、DMARCレコードに記載されている報告用�
 2. [**メッセージのソースを表示]** を選択します。
 3. [**DMARC**] ステータスが「PASS」かどうかを確認します。
 
-\![DMARCの値として "PASS "を持つメール。]({% image_buster /assets/img_archive/dmarc_example.png %})
+![DMARCの値が "PASS "であるメール。]({% image_buster /assets/img_archive/dmarc_example.png %})
 
