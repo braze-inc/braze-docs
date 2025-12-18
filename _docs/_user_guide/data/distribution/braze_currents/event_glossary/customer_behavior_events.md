@@ -1268,8 +1268,6 @@ This event occurs when a push token is inserted, updated or removed. Use this to
 {% endtab %}
 {% endtabs %}
 
-{% endapi %}
-
 #### Property details
 
 - The `push_token_foreground_push_disabled` field indicates whether the push token can receive foreground or background push.
@@ -1284,3 +1282,4 @@ This event occurs when a push token is inserted, updated or removed. Use this to
   - If a token moved from one user to another user, this will ingest one "remove" event for the old user and one "add" event for the new user.
   - If the same user or device generates a new token, this will ingest one "remove" event for the old token and one "add" event for the new token.
   - If Braze is removing a token (for reasons like an uninstall or invalid token), this will ingest one "remove" event for the token.
+{% endapi %}
