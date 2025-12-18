@@ -200,7 +200,9 @@ Event properties for custom events are updated in real-time for any segment that
 
 ##### Adding event properties for segmentation
 
-You'll need "Manage Custom Event Property Segmentation" [user permissions]({{site.baseurl}}/user_guide/data/data_points/#viewing-data-point-usage) to create segments based on event property recency and frequency.
+You need the "Edit Custom Event Property Segmentation" [user permission]({{site.baseurl}}/user_guide/data/data_points/#viewing-data-point-usage) to create segments based on event property recency and frequency.
+
+{% multi_lang_include deprecations/user_permissions.md %}
 
 By default, you can have 20 segmentable event properties per workspace. Contact your Braze account manager to increase this limit.
 

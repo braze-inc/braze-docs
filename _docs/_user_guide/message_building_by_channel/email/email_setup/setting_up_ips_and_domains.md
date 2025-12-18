@@ -51,12 +51,12 @@ This self-service email setup feature is currently in beta. Contact your Braze a
 To use self-service email setup, you must meet the following prerequisites:
 
 1. You are a new customer in onboarding.
-2. You have the "Can Manage Company Settings" company-level permission.
+2. You have the "Manage Company Settings" company-level permission.
 
 ### Step 1: Begin setup
 
 1. Go to **Settings** > **Admin Settings** under **Company Settings**. 
-2. Next, select the **Sender Verification** tab. To view this tab, you must have the "Can Manage Company Settings" company-level permission.
+2. Next, select the **Sender Verification** tab. To view this tab, you must have the "Manage Company Settings" company-level permission.
 3. Click the **Start setup** button.
 
 ### Step 2: Add and verify a sending domain

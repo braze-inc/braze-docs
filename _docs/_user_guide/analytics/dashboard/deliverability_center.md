@@ -14,7 +14,55 @@ channel:
 
 Email deliverability is the core of campaign success. Using the Deliverability Center in the Braze dashboard, you can view your domains by **IP Reputation** or **Delivery Errors** to discover and troubleshoot any potential issues with email deliverability. 
 
-To access the Deliverability Center, you'll need "Access Campaigns, Canvases, Cards, Segments, Media Library" and "View Usage Data" [user permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/).
+To access the Deliverability Center, you need the [user permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/) in the following dropdown for your workspace.
+
+{% details User permissions for the Deliverability Center %}
+
+{% multi_lang_include deprecations/user_permissions.md %}
+
+- View Campaigns
+- Edit Campaigns
+- Archive Campaigns
+- View Canvases
+- Edit Canvases
+- Archive Canvases
+- View Frequency Capping Rules
+- Edit Frequency Capping Rules
+- View Message Prioritization
+- Edit Message Prioritization
+- View Content Blocks
+- View Feature Flags
+- Edit Feature Flags
+- Archive Feature Flags
+- View Segments
+- Edit Segments
+- View IAM Templates
+- Edit IAM Templates
+- Archive IAM Templates
+- View Email Templates
+- Edit Email Templates
+- Archive Email Templates
+- View Webhook Templates
+- Edit Webhook Templates
+- Archive Webhook Templates
+- View Link Templates
+- Edit Link Templates
+- View Media Library Assets
+- Edit Media Library Assets
+- Delete Media Library Assets
+- View Locations
+- Edit Locations
+- Archive Locations
+- View Promotion Codes
+- Edit Promotion Codes
+- Export Promotion Codes
+- View Preference Centers
+- Edit Preference Centers
+- View Reports
+- Edit Reports
+- View Usage Data
+
+{% enddetails %}
 
 ## Setting up your Google Postmaster account
 

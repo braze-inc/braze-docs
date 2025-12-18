@@ -135,7 +135,14 @@ After creating the catalog, you can begin referencing the [catalog in a campaign
 {% tab Create in browser %}
 ### Prerequisites
 
-Before you can edit or create catalogs in the browser, you'll need the **Manage Catalogs Dashboard** permission.
+Before you can edit or create catalogs in the browser, you need the following [user permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/) for your workspace:
+
+- View Catalogs
+- Edit Catalogs
+- Export Catalogs
+- Delete Catalogs
+
+{% multi_lang_include deprecations/user_permissions.md %}
 
 ### Step 1: Enter catalog details
 
