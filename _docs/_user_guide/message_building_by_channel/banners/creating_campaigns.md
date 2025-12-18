@@ -11,7 +11,11 @@ channel:
 
 # Creating a Banner
 
-> Learn how to create Banners when you build a campaign in Braze. For more general information, see [About Banners]({{site.baseurl}}/user_guide/message_building_by_channel/banners).
+> Learn how to create Banners when you build campaigns and Canvases in Braze. For more general information, see [About Banners]({{site.baseurl}}/user_guide/message_building_by_channel/banners).
+
+{% alert important %}
+Creating a Banner message in Canvas is in early access. Contact your customer success manager if you're interested in participating in this early access.
+{% endalert %}
 
 ## Prerequisites
 
