@@ -33,7 +33,7 @@ To create or edit your custom footer, do the following:
 The default footer uses the {% raw %}`{{${set_user_to_unsubscribed_url}}}`{% endraw %} attribute and our physical mailing address. If you're using this default, be sure to select **&#60;other&#62;** for the **Protocol**.
 
 {% alert important %}
-To comply with CAN-SPAM regulations, your custom footer must include an unsubscribe link. You can use this Liquid {% raw %}`{{${set_user_to_unsubscribed_url}}}`{% endraw %} or your own custom unsubscribe URL. You won’t be able to save a custom footer without this attribute.
+To comply with CAN-SPAM regulations, your custom footer must include an unsubscribe link. You can use this Liquid {% raw %}`{{${set_user_to_unsubscribed_url}}}`{% endraw %} or your own custom unsubscribe URL. You won’t be able to save a custom footer without an unsubscribe link.
 {% endalert %}
 
 ![Protocol and URL values needed for the custom footer.]({% image_buster /assets/img_archive/email_unsub_protocol.png %}){: style="max-width:50%;"}
