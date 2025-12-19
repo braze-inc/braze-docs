@@ -77,5 +77,5 @@ All [`Card`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sd
 |---|---|
 |`logImpression()` | Manually log an impression to Braze for a particular card. |
 |`logClick()` | Manually log a click to Braze for a particular card. |
-|`setIsDismissed()` | Manually log a dismissal to Braze for a particular card. If a card is already marked as dismissed, it cannot be marked as dismissed again. |
+|`isDismissed` | Set this property to `true` to mark a card as dismissed. If a card is already marked as dismissed, it cannot be marked as dismissed again. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
