@@ -46,6 +46,10 @@ Your prediction audience is the group of users whose likelihood score you would 
 
 Depending on your use case, you may want to use filters to specify the users you want to assess for the model. To do so, select **Define my own prediction audience** and choose your audience filters. For example, you might want to focus on users who have been using your app for at least 30 days by selecting the "First Used App" filter set to 30 days. Setting up this audience tells Braze that you want your model to specifically learn from users that (at the time that the model runs) have used the app for at least 30 days.
 
+{% alert important %}
+Focus your filters on user characteristics relevant to your use case, such as active users, new users, high-value users, or users in a specific country. Avoid filtering your prediction audience by whether users have already performed the event you're predicting. The prediction audience defines who you want the model to learn from, not the event outcome itself. The model needs to observe both users who have completed the event and users who have not to accurately learn and predict the likelihood of future event completion.
+{% endalert %}
+
 The prediction audience defines the group of users the machine learning model looks at to learn from the past. Braze will show you the estimated size of your prediction audience. If you specify your desired audience and do not meet the minimum required to run the model, try specifying a broader filter or use the **All Users** option. Keep in mind that many use cases don't require you to select a specific prediction audience. For example, if your use case is to target users in the EU region that are most likely to churn, you can run your model on all users and then include a filter for EU region in the campaign’s segment.
 
 {% alert note %}
