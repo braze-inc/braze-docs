@@ -76,7 +76,6 @@ Each workspace can support up to 200 active Banner campaigns. If this limit is r
 
 Additionally, Banner messages do not support the following features:
 
-- Canvas integration
 - API-triggered and action-based campaigns
 - Connected Content
 - Promotional codes
