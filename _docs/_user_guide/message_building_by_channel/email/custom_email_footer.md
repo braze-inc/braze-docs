@@ -10,7 +10,7 @@ channel:
 
 # Custom email footer
 
-> You can set a workspace-wide custom email footer which you can template into every email using the {% raw %}`{{${email_footer}}}`{% endraw %} Liquid attribute.
+> You can set a workspace-wide custom email footer, which you can template into every email using the {% raw %}`{{${email_footer}}}`{% endraw %} Liquid attribute.
 
 By using custom email footers, you no longer have to create a new footer for every email template or email campaign you use. All new and existing email campaigns reflect changes you make to your custom footer. Remember that compliance with the [CAN-SPAM Act of 2003](https://www.ftc.gov/tips-advice/business-center/guidance/can-spam-act-compliance-guide-business) requires you to include a physical address for your company and an unsubscribe link in your emails.
 
@@ -33,7 +33,7 @@ To create or edit your custom footer, do the following:
 The default footer uses the {% raw %}`{{${set_user_to_unsubscribed_url}}}`{% endraw %} attribute and our physical mailing address. If you're using this default, be sure to select **&#60;other&#62;** for the **Protocol**.
 
 {% alert important %}
-To comply with CAN-SPAM regulations, your custom footer must include {% raw %}`{{${set_user_to_unsubscribed_url}}}`{% endraw %}. You won't be able to save a custom footer without this attribute.
+To comply with CAN-SPAM regulations, your custom footer must include an unsubscribe link. You can use this Liquid {% raw %}`{{${set_user_to_unsubscribed_url}}}`{% endraw %} or your own custom unsubscribe URL. You won’t be able to save a custom footer without this attribute.
 {% endalert %}
 
 ![Protocol and URL values needed for the custom footer.]({% image_buster /assets/img_archive/email_unsub_protocol.png %}){: style="max-width:50%;"}
