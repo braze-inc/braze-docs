@@ -83,7 +83,7 @@ The following filters are applied for each channel when determining reachable us
 | --- | --- |
 | Email | **Email Available** is true. |
 | Push | **Foreground Push Enabled** is true. |
-| SMS | **Subscription Group** is any SMS subscription group. |
+| SMS | **Subscription Group** is any SMS subscription group. **Invalid Phone Number** is false. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Calculating exact statistics 
