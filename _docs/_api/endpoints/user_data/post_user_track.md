@@ -17,7 +17,7 @@ description: "This article outlines details about the Track user Braze endpoint.
 > Use this endpoint to record custom events and purchases and update user profile attributes.
 
 {% alert note %}
-Braze processes the data passed through API at face value, and customers should only pass deltas (changing data) to minimize unnecessary data point logging. To read more, refer to [Data points]({{site.baseurl}}/user_guide/data/data_points/).
+Braze processes the data passed through the API at face value, and customers should only pass deltas (changing data) to minimize unnecessary data point logging. To read more, refer to [Data points]({{site.baseurl}}/user_guide/data/data_points/).
 {% endalert %}
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4cf57ea9-9b37-4e99-a02e-4373c9a4ee59 {% endapiref %}
@@ -298,13 +298,16 @@ Each event object in the events array represents a single occurrence of a custom
 
 When a nested custom attribute contains any invalid values (such as invalid time formats or null values), Braze drops all nested custom attribute updates in the request from processing. This applies to all nested structures within that specific attribute. To ensure successful processing, verify that all values within nested custom attributes are valid before sending.
 
-## Monthly Active Users CY 24-25, Universal MAU, Web MAU, and Mobile MAU  
+## Monthly Active Users CY 24-25, Universal MAU, Web MAU, and Mobile MAU
+
+For customers on new pricing, rate limits are enforced at the company level. Customers can set workspace rate limits for hourly limits, but burst limits are still shared between all workspaces.
+
 For customers who have purchased Monthly Active Users CY 24-25, Universal MAU, Web MAU, or Mobile MAU, Braze manages different rate limits on its `/users/track` endpoint:
 - Hourly rate limits are set according to the expected data ingestion activity on your account, which may correspond to the number of monthly active users you have purchased, industry, seasonality, or other factors.
 - In addition to the hourly limit, Braze enforces a burst limit on the number of requests that can be sent every three seconds.
 - Each request may batch up to 75 updates combined across attribute, event, or purchase objects.
 
-Current limits based on expected ingestion can be found in the dashboard under **Settings** > **APIs and Identifiers** > **API Usage Dashboard**. We may modify rate limits to protect system stability or allow for increased data throughput on your account. Please contact Braze Support or your customer success manager for questions or concerns regarding hourly or per-second request limit and the needs of your business.
+Current limits based on expected ingestion can be found in the dashboard under **Settings** > **APIs and Identifiers** > **API Usage Dashboard**. We may modify rate limits to protect system stability or allow for increased data throughput on your account. Please contact Braze Support or your customer success manager for questions or concerns regarding the hourly or per-second request limit and the needs of your business.
 
 ### Rate limit headers for Monthly Active Users CY 24-25, Universal MAU, Web MAU, and Mobile MAU
 
