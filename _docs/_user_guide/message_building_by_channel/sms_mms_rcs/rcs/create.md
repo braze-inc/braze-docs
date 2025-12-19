@@ -127,7 +127,8 @@ Before proceeding, read our [guidelines for RCS message limits](#step-2-select-y
 
 ### Step 4: Preview and test your message
 
-Braze always recommends previewing and testing your message before sending. Go to the **Test** tab to send a test RCS to content test groups or individual users, or preview the message as a user directly in Braze.
+Because RCS rendering is controlled by the user’s operating system, device manufacturer, carrier, and messaging app (for example, Google Messages vs. Apple Messages), message appearance can vary. As a result, the RCS preview shown in Braze may not exactly match what an end user ultimately receives. Differences may include layout, media sizing, buttons, branding elements, or supported features. Braze always recommends previewing and testing your message before sending. Use the **Test** tab to send a test RCS to content test groups or individual users, and preview the message as a user directly within Braze. However, final rendering should always be validated on real devices whenever possible, as Braze cannot guarantee perfect parity across all OS, device, and carrier combinations.
+
 
 ### Step 5: Build the remainder of your campaign or Canvas
 
