@@ -1,14 +1,38 @@
 ## Logging data with the Braze API (recommended)
 
-Logging analytics can be done in real-time with the help of the Braze API [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/). To log analytics, send down the `braze_id` value in the key-value pairs field (as seen in the following screenshot) to identify which user profile to update.
+If you're handling push notifications with custom code instead of using the Braze SDK's default notification handling, you can log analytics in real-time with the help of the Braze API [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/).
+
+### Step 1: Pass the Braze ID in your push payload
+
+To identify which user profile to update, include the `braze_id` value as a key-value pair in your push notification payload when creating the campaign in the Braze dashboard (as seen in the following screenshot).
 
 ![A push message with three sets of key-value pairs. 1. "Braze_id" set as a Liquid call to retrieve Braze ID. 2. "cert_title" set as "Braze Marketer Certification". 3. "Cert_description" set as "Certified Braze marketers drive...".]({% image_buster /assets/img/push_implementation_guide/push18.png %}){: style="max-width:80%;"}
 
+### Step 2: Extract the Braze ID and call the API
+
+In your custom notification handler, extract the `braze_id` from the notification payload and make a server-side call to the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) to log the appropriate event (such as push opened, push received, or a custom event). You'll need to send this request from your server using your Braze REST API key.
+
+For example, to log a push open event, send a request like:
+
+```json
+{
+  "events": [
+    {
+      "external_id": "user_identifier",
+      "name": "push_notification_opened",
+      "time": "2024-01-01T00:00:00Z"
+    }
+  ]
+}
+```
+
 ## Logging data manually
 
-Logging manually will require you to first configure workspaces within Xcode, and then create, save, and retrieve analytics. This will require some custom developer work on your end. The following code snippets shown will help address this. 
+Logging manually will require you to first configure workspaces within Xcode, and then create, save, and retrieve analytics. This approach requires custom developer work on your end. The following code snippets shown will help address this. 
 
-It's important to note that analytics are not sent to Braze until the mobile application is subsequently launched. This means that, depending on your dismissal settings, there often exists an indeterminate period of time between when a push notification is dismissed and the mobile app is launched and the analytics are retrieved. While this time buffer may not affect all use cases, you should consider this impact adjust your user journey as necessary to include opening the application to address this concern. 
+### Important timing considerations
+
+It's important to note that analytics are not sent to Braze until the mobile application is subsequently launched. This means that, depending on your dismissal settings, there often exists an indeterminate period of time between when a push notification is dismissed and the mobile app is launched and the analytics are retrieved. While this time buffer may not affect all use cases, you should consider this impact and adjust your user journey as necessary to include opening the application to address this concern. 
 
 ![A graphic describing how analytics are processed in Braze. 1. Analytics data is created. 2. Analytics data is saved. 3. Push notification is dismissed. 4. Indeterminate period of time between when push notification is dismissed and mobile app is launched. 5. Mobile app is launched. 6. Analytics data is received. 7. Analytics data is sent to Braze.]({% image_buster /assets/img/push_implementation_guide/push13.png %})
 
