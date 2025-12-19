@@ -1258,7 +1258,7 @@ a:hover {
 
 
 </div>
-<script type="text/javascript" src="https://d3afgxkm1vz2tp.cloudfront.net/217433e2c4c2797776e373f19d94feff/search-clients/63590d8d-65fd-11f0-ada3-0242ac120007/an.js"></script>
+<script type="text/javascript" src="https://d1qc2gcokjmuap.cloudfront.net/217433e2c4c2797776e373f19d94feff/search-clients/63590d8d-65fd-11f0-ada3-0242ac120007/an.js"></script>
 
 <script type="text/javascript">
 
@@ -2493,8 +2493,8 @@ document.getElementById('toStep2').addEventListener('click', async function () {
             headers: {
                 "accept": "*/*",
                 "content-type": "application/json",
-                "origin": "https://d3afgxkm1vz2tp.cloudfront.net",
-                "referer": "https://d3afgxkm1vz2tp.cloudfront.net/",
+                "origin": "https://d1qc2gcokjmuap.cloudfront.net",
+                "referer": "https://d1qc2gcokjmuap.cloudfront.net/",
                 "search-client-type": "6",
                 "search-id": "22d6676b-80b1-4145-af19-6a422417e5d0",
                 "sid-session": sid,
