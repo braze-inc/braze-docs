@@ -93,7 +93,7 @@ With dynamic BCC, you can use Liquid in your BCC address. Note that this feature
 
 For example, you can add {% raw %}`{{custom_attribute.${support_agent}}}`{% endraw %} as the BCC address for emails from your support team.
 
-![BCC Address section of the Email Settings tab with a BCC address using Liquid.]({% image_buster /assets/img/email_settings/dynamic_bcc.png %}){: style="max-width:80%;" }
+![BCC Address section of the Email Settings tab with a BCC address using Liquid.]({% image_buster /assets/img/email_settings/dynamic_bcc.png %}){: style="max-width:90%;" }
 
 {% endtab %}
 {% endtabs %}
