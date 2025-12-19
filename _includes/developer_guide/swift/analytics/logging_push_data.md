@@ -30,7 +30,7 @@ Alternatively, if you have the user's `external_id`, you can use that instead of
 
 ## Logging data manually
 
-Logging manually will require you to first configure workspaces within Xcode, and then create, save, and retrieve analytics. This approach requires custom developer work on your end. The following code snippets shown will help address this. 
+Logging manually will require you to first configure workspaces within Xcode, and then create, save, and retrieve analytics. This approach requires custom developer work on your end. The following code snippets will help address this. 
 
 ### Important timing considerations
 
