@@ -47,6 +47,7 @@ You can no longer create or duplicate Canvases using the original editor. This a
 - For in-app message channels, `canvas_entry_properties` can only be referenced in a Canvas. `event_properties` can't be used for in-app message channels.
 - You can't use `event_properties` in the lead Message step. Instead, you must use `canvas_entry_properties` or add an Action Paths step with the corresponding event **before** the Message step that includes `event_properties`. 
 - When an Action Path step contains a "Sent an SMS Inbound Message" or "Sent a WhatsApp Inbound Message" trigger, the subsequent Canvas steps can include an SMS or WhatsApp Liquid property. This mirrors how event properties work in Canvases. This way you can leverage your messages to save and reference first-party data on user profiles and conversational messaging.
+- You don't need a Context step to reference properties from the triggering event in [Audience Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths) or [Decision Split]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split) steps. You can reference the properties directly in the filter groups without using Liquid by selecting the context variable. Make sure to select the correct data type when setting up your filters.
 
 ### Timestamps for event properties
 

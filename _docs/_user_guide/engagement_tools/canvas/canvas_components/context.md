@@ -37,6 +37,10 @@ Each context variable requires a name, a data type, and a value (set using Liqui
 
 Each Canvas entry redefines context variables based on the latest entry data and Canvas setup, allowing users to have multiple active journeys with their own context. For example, if a customer has two upcoming flights, they'll have two separate journey states running simultaneously&#8212;each with its own flight-specific context variables like departure time and destination. This allows you to send personalized reminders about their 2 pm flight to New York while sending different updates about their 8 am flight to Los Angeles tomorrow, so that each message stays relevant to the specific booking.
 
+{% alert tip %}
+You don't need a Context step to reference properties from the triggering event in [Audience Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths) or [Decision Split]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split) steps. You can reference the properties directly in the filter groups without using Liquid by selecting the context variable. Make sure to select the correct data type when setting up your filters.
+{% endalert %}
+
 ## Considerations
 
 - You can define up to 10 context variables per Context step.
