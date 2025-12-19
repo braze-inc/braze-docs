@@ -12,19 +12,21 @@ To identify which user profile to update, include the `braze_id` value as a key-
 
 In your custom notification handler, extract the `braze_id` from the notification payload and make a server-side call to the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) to log the appropriate event (such as push opened, push received, or a custom event). You'll need to send this request from your server using your Braze REST API key.
 
-For example, to log a push open event, send a request like:
+The `/users/track` endpoint can identify users using either `braze_id` or `external_id`. For example, to log a push open event using the `braze_id`:
 
 ```json
 {
   "events": [
     {
-      "external_id": "user_identifier",
+      "braze_id": "abc123xyz",
       "name": "push_notification_opened",
       "time": "2024-01-01T00:00:00Z"
     }
   ]
 }
 ```
+
+Alternatively, if you have the user's `external_id`, you can use that instead of `braze_id` in your API call.
 
 ## Logging data manually
 
