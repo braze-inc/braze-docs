@@ -30,4 +30,6 @@ Alternatively, if you have the user's `external_id`, you can use that instead of
 
 ## Manually logging data
 
-Alternatively, depending on the details of your payload, you can log analytics manually within your `FirebaseMessagingService.onMessageReceived` implementation or your startup activity by calling the appropriate Braze SDK methods directly (such as `Braze.logPushNotificationOpened()`). Keep in mind, your `FirebaseMessagingService` subclass must finish execution within 9 seconds of invocation to avoid being [flagged or terminated](https://firebase.google.com/docs/cloud-messaging/android/receive) by the Android system.
+Alternatively, depending on the details of your payload, you can log analytics manually within your `FirebaseMessagingService.onMessageReceived` implementation or your startup activity by calling the appropriate Braze SDK methods directly (such as `Braze.logPushNotificationOpened()`). 
+
+Keep in mind that your `FirebaseMessagingService` subclass must finish execution within 9 seconds of invocation to avoid being [flagged or terminated](https://firebase.google.com/docs/cloud-messaging/android/receive) by the Android system.
