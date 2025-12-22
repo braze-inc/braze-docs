@@ -77,5 +77,5 @@ Alle [`Card`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-s
 |---|---|
 |`logImpression()` | Protokollieren Sie manuell einen Abdruck in Braze für eine bestimmte Karte. |
 |`logClick()` | Protokollieren Sie manuell einen Klick auf Braze für eine bestimmte Karte. |
-|`isDismissed` | Setzen Sie diese Eigenschaft auf `true`, um eine Karte als abgelehnt zu markieren. Wenn eine Karte bereits als abgelehnt markiert ist, kann sie nicht erneut als abgelehnt markiert werden. |
+|`setIsDismissed()` | Protokollieren Sie manuell eine Kündigung in Braze für eine bestimmte Karte. Wenn eine Karte bereits als abgelehnt markiert ist, kann sie nicht erneut als abgelehnt markiert werden. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
