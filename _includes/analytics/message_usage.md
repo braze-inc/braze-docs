@@ -64,5 +64,5 @@ You can filter your data by:
 The data shown in the **Message Usage** dashboard is at the contract level and isn't scoped to an individual dashboard company or workspace. This data reflects usage from all workspaces within your dashboard, and potentially across all dashboards (if you have multiple).
 {% endalert %}
 
-- The underlying data is provided in a daily cadence, with the data tables refreshed at 3 am, 9 am, 12 pm, and 6 pm EST. The **Message Usage** dashboard can sometimes take slightly longer than 24 hours to update.
+- The underlying data is provided in a daily cadence, with the data tables refreshed at 3 am, 9 am, 12 pm, and 6 pm EST. The **Message Usage** dashboard may take longer than 24 hours to update.
 - Braze follows standard rounding methodology: numbers are rounded up to the nearest tenth.
