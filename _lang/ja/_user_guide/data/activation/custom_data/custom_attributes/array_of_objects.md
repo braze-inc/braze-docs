@@ -533,11 +533,11 @@ I have a {{pet.type}} named {{pet.name}}! They are a {{pet.breed}}.
 
 例えば、`type` フィールドを基準にしてオブジェクト配列 `pets` にフィルターを適用する場合は、`[].type` を選択して、フィルターを適用する `snake` などのペットのタイプを選択します。
 
-![ペットの種類でフィルターをかける。]({% image_buster /assets/img_archive/array_of_objects_segmenting_3.png %})
+![ペットの種類イコールヘビでフィルターをかける。]({% image_buster /assets/img_archive/array_of_objects_segmenting_3.png %})
 
 または、`type` が `dog` であるペットのフィルターを適用することもできます。ここで、あるユーザーは少なくとも 1 頭の犬を飼っているため、ユーザーは「タイプが犬のペットを少なくとも 1 頭飼っているユーザー」のセグメントに該当します。
 
-![ペットの種類でフィルターをかける。]({% image_buster /assets/img_archive/array_of_objects_segmenting_2.png %})
+![ペットの種類イコール犬でフィルターをかける。]({% image_buster /assets/img_archive/array_of_objects_segmenting_2.png %})
 
 ### 階層化のレベル
 

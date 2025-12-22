@@ -40,13 +40,13 @@ Inkitプラットフォーム上で、Brazeキャンペーンで使用するテ�
 
 単発のInkitウェブフックキャンペーンを作成したい場合、または既存のテンプレートを使用したい場合は、新しいキャンペーンを作成する際にBrazeの**ウェブフックを**選択する。
 
-![「Templates & Media」セクションの「Webhook Templates」タブにある、一連の利用可能な事前設計済み Webhook テンプレート。]({% image_buster /assets/img/inkit-webhook-template.png %})
+![テンプレート s & メディアセクションのWebhook テンプレート s タブで、使用可能な符号付きWebhook テンプレートs を選択します。]({% image_buster /assets/img/inkit-webhook-template.png %})
 
 Inkitウェブフック・テンプレートを選択すると、以下のように表示される：
 - **Webhook URL**:空白
 - **リクエスト本文**:Raw Text
 
-[Webhook URL] フィールドで、Inkit Webhook URL を[作成](https://docs.inkit.com/docs/set-up-a-webhook-to-an-event)して入力する必要があります。
+Webhook URL フィールドで、[create](https://docs.inkit.com/docs/set-up-a-webhook-to-an-event) を入力し、Inkit Webhook URL を入力します。
 
 ![Braze Webhook ビルダー作成タブに表示されているリクエスト本文のコードと Webhook URL。]({% image_buster /assets/img/inkit-integration.png %})
 

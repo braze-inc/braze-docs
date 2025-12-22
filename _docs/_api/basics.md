@@ -34,7 +34,7 @@ The following is an overview of terms you may see in the Braze REST API document
 
 ### Endpoints
 
-Braze manages a number of different instances for our dashboard and REST endpoints. When your account is provisioned you will log in to one of the following URLs. Use the correct REST endpoint based on which instance you are provisioned to. If you are unsure, open a [support ticket]({{site.baseurl}}/braze_support/) or use the following table to match the URL of the dashboard you use to the correct REST Endpoint.
+Braze manages a number of different instances for our dashboard and REST endpoints. When your account is provisioned, you log in to one of the following URLs. Use the correct REST endpoint based on which instance you are provisioned to. If you are unsure, open a [support ticket]({{site.baseurl}}/braze_support/) or use the following table to match the URL of the dashboard you use to the correct REST Endpoint.
 
 {% alert important %}
 When using endpoints for API calls, use the REST endpoint.
@@ -61,7 +61,7 @@ A REST Application Programming Interface key (REST API key) is a unique code tha
 
 Workspaces and API keys go hand in hand at Braze. Workspaces are designed to house versions of the same application across multiple platforms. Many customers also use workspaces to contain free and premium versions of their applications on the same platform. As you may notice, these workspaces are also making use of the REST API and have their own REST API keys. These keys can be individually scoped to include access to specific endpoints on the API. Each call to the API must include a key with access to the endpoint hit.
 
-We refer to both the REST API key and workspace API key as the `api_key`. The `api_key` is included in each request as a request header and acts as an authentication key that allows you to use our REST APIs. These REST APIs are used to track users, send messages, export user data, and more. When you create a new REST API key, you will need to give it access to specific endpoints. By assigning specific permissions to an API key, you can limit exactly which calls an API key can authenticate.
+We refer to both the REST API key and workspace API key as the `api_key`. The `api_key` is included in each request as a request header and acts as an authentication key that allows you to use our REST APIs. These REST APIs are used to track users, send messages, export user data, and more. When you create a new REST API key, you must give it access to specific endpoints. By assigning specific permissions to an API key, you can limit exactly which calls an API key can authenticate.
 
 ![REST API keys panel on the API Keys tab.]({% image_buster /assets/img_archive/rest-api-key.png %})
 
@@ -317,9 +317,9 @@ The **API Keys** tab includes the following information for each key:
 | ------------ | :------------------------------------------------------------------------------------------------------------------ |
 | API Key Name | The name given to the key upon creation.                                                                            |
 | Identifier   | The API key.                                                                                                        |
-| Created By   | The email address of the user who created the key. This field will show as "N/A" for keys created before June 2023. |
+| Created By   | The email address of the user who created the key. This field shows as "N/A" for keys created before June 2023. |
 | Date Created | The date this key was created.                                                                                      |
-| Last Seen    | The date this key was last used. This field will show as "N/A" for keys that have never been used.                  |
+| Last Seen    | The date this key was last used. This field shows as "N/A" for keys that have never been used.                  |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 To view the details of an API key, hover over the key and select <i class="fa-solid fa-eye" alt="View"></i> **View**. This includes all the permissions this key has, whitelisted IPs (if any), and if this key is opted into Braze IP whitelisting.

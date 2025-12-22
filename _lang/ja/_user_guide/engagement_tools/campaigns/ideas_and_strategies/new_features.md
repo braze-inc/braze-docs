@@ -20,10 +20,10 @@ tool: Campaigns
 
 Braze SDK は、ユーザーの最新のアプリバージョンを自動的に追跡します。これらのバージョンをフィルターやセグメントで使用して、どのユーザーがメッセージやキャンペーンを受信するかを決定できます。
 
-![キャンペーン構築ワークフローの「ターゲットユーザー」ステップの「ターゲティングのオプション」パネル。Additional Filtersセクションには、「Most Recent App Version Number for Android Stopwatch (Android) is below 3.7.0 (134.0.0.0)」というフィルターがある。]({% image_buster /assets/img_archive/new_app_version.png %}){: style="max-width:90%;"}
+![キャンペーン構築ワークフローのターゲットユーザーステップのターゲティングオプションパネル。Additional Filtersセクションには、「Most Recent App Version Number for Android Stopwatch (Android) is below 3.7.0 (134.0.0.0)」というフィルターがある。]({% image_buster /assets/img_archive/new_app_version.png %}){: style="max-width:90%;"}
 
 {% alert note %}
-現在のアプリのバージョンが反映されるまで時間がかかる場合がある。ユーザープロファイル上のアプリのバージョンは、SDKが情報を取得したときに更新されるが、これはユーザーがアプリを開封したときに依存する。ユーザーがアプリを開封しなければ、現在のバージョンは更新されない。<br><br> これらのフィルターは遡及して適用されることもない。Currentsと将来のバージョンに対して "greater than "または "equal "を使うのは良いことだが、過去のバージョンのフィルターを使うと予期せぬ動作を引き起こす可能性がある。
+現在のアプリのバージョンが反映されるまで時間がかかる場合がある。ユーザープロファイル上のアプリのバージョンは、SDKが情報を取得したときに更新されるが、これはユーザーがアプリを開封したときに依存する。ユーザーがアプリを開封しなければ、現在のバージョンは更新されない。<br><br> これらのフィルターは遡及して適用されることもない。Currentsや将来のバージョンに対して "greater than "や "equal "を使用するのは良いことだが、過去のバージョンのフィルターを使用すると予期せぬ動作を引き起こす可能性がある。
 {% endalert %}
 
 ### アプリのバージョン番号

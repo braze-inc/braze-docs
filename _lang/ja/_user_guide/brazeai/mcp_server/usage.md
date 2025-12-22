@@ -1,7 +1,7 @@
 ---
-nav_title: Braze MCP サーバーの使用
-article_title: Braze MCP サーバーの使用
-description: "クラウドやカーソルなどの自然言語を使用してBrazeデータを操作する方法について説明します。"
+nav_title: Braze MCPサーバーを使用する
+article_title: Braze MCPサーバーを使用する
+description: "ClaudeやCursorのような自然言語ツールを使って、Brazeデータと対話する方法を学習する。"
 page_order: 1.2
 ---
 

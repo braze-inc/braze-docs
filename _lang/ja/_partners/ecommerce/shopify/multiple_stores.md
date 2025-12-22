@@ -2,7 +2,7 @@
 nav_title: 複数のストアをつなぐ
 article_title: Shopify 複数ストアサポート
 alias: /shopify_connecting_multiple_stores/
-page_order: 5
+page_order: 6
 description: "この参考記事では、複数のShopifyストアを1つのワークスペースに接続し、設定する方法を取り上げている。"
 ---
 
@@ -26,23 +26,23 @@ description: "この参考記事では、複数のShopifyストアを1つのワ�
 ## その他のストアをつなぐ
 Shopify ストアに Braze アプリをインストールし、最初のストアをインストールしたら、[**\+ 新しいストアの接続**] を選択します。
 
-![Shopifyの統合ページにある「+ Connect New Store」ボタン]({% image_buster /assets/img/Shopify/begin_setup_button.png %}){: style="max-width:80%;"}
+![Shopifyインテグレーションページの"+ Connect New Store"ボタン。]({% image_buster /assets/img/Shopify/begin_setup_button.png %}){: style="max-width:80%;"}
 
 Shopifyの地域ストアを追加する場合は、[**セットアップを開始]**を選択する。
 
-![統合設定」セクションに「設定を開始する」ボタンがあります。]({% image_buster /assets/img/Shopify/multiple_stores.png %}){: style="max-width:80%;"}
+!["Integration 設定 s"ボタンで"セットアップ"を開始します。]({% image_buster /assets/img/Shopify/multiple_stores.png %}){: style="max-width:80%;"}
 
 最初の Shopify ストア統合と同様に、標準またはカスタム設定のいずれかを選択できます。
 
-![「Braze SDK を有効にする」セクションには、標準またはカスタム設定で Braze Web SDK を実装するためのオプションがあります。]({% image_buster /assets/img/Shopify/standard_or_custom.png %}){: style="max-width:80%;"}
+!["Braze SDKのS"を有効にします。スタンダードまたはカスタム設定でBraze Web SDKを実装するためのオプションがあります。]({% image_buster /assets/img/Shopify/standard_or_custom.png %}){: style="max-width:80%;"}
 
 あなたのニーズに最も適したオプションを選択します。
 
-{% multi_lang_include shopify.md section='統合タブ' %}
+{% multi_lang_include shopify.md section='Integration Tabs' %}
 
 各店舗の統合を表示し、詳細設定を行うには、ドロップダウンメニューから店舗を選択する。
 
-![Shopify ストアを選択するドロップダウンメニュー付きの「統合設定」。]({% image_buster /assets/img/Shopify/store_dropdown_menu.png %})
+!["Integration 設定 s"ドロップダウンメニューでShopifyストアを選択します。]({% image_buster /assets/img/Shopify/store_dropdown_menu.png %})
 
 ## ストア間でユーザーを同期させる
 
@@ -69,7 +69,7 @@ Braze external ID は以下のオプションから選択できます。
 - カスタムイベントと購買データ
 - セグメンテーション用のカスタムイベントプロパティ (例えば、「Y日間にX回」(X ≤ 50、Y ≤ 30))。
 - イベント数 (両プロファイルの合計)
-- 最初と最後のイベントの日付（Brazeは最も古い日付と最も遅い日付を選択する）
+- 最初と最後のイベントの日付(Brazeは最も早い日付と最も新しい日付を選択します)
 - キャンペーンのインタラクションデータ（最新の日付フィールド）
 - ワークフローのサマリー（最新の日付フィールド）
 - メッセージとエンゲージメントの履歴
@@ -80,14 +80,14 @@ Braze external ID は以下のオプションから選択できます。
 Brazeを通して直接（Shopifyコネクターの設定で）サブスクライバーを収集するか、Shopifyからデータを同期するAPIやSDKの代替手段を通してサブスクライバーを収集するかを選択できる。
 
 {% tabs local %}
-{% tab Shopify コネクター %}
+{% tab Shopify connector %}
 Shopifyコネクター設定の**ユーザー管理**ステップで、Brazeを使用してメールやSMS購読者のオプトインを収集し、専用のサブスクリプショングループに整理することができる：
 
 1. 接続する各ストアに固有のサブスクリプショングループを作成します。これは、サブスクライバーがどこから来ているかについての正確なデータを維持するのに役立ちます。
 2. メールおよび SMS サブスクライバーの収集を有効にします。
 {% endtab %}
 
-{% tab Braze API または SDK %}
+{% tab Braze API or SDKs %}
 また、Braze APIやSDKを使って、Shopifyから直接メールやSMSマーケティングのオプトイン情報を同期することもできる。
 
 |オプション|リソース|
@@ -123,7 +123,7 @@ Shopifyコネクター設定の**ユーザー管理**ステップで、Brazeを�
 
 複数のストアを接続すると、受信する e コマース推奨イベントにはソースイベントプロパティが含まれます。このプロパティは、イベントがどのストアフロントURLから発生したかを識別子化し、この情報をセグメンテーションや特定のユースケースのトリガーに使用できるようにする。
 
-![アクションベースのキャンバスで、`ecommerce.order_placed` カスタムイベントを実行したユーザーを入力するトリガーがある。]({% image_buster /assets/img/Shopify/ecommerce_order_placed.png %}){: style="max-width:80%;"}
+![`ecommerce.order_placed` カスタムイベントを実行するユーザーs を入力するトリガーを持つアクション ベースのキャンバス。]({% image_buster /assets/img/Shopify/ecommerce_order_placed.png %}){: style="max-width:80%;"}
 
 Shopify 統合内でサポートされている e コマース推奨イベントは次のとおりです。
 
@@ -138,7 +138,7 @@ Shopify 統合内でサポートされている e コマース推奨イベント
 
 Shopifyカスタムイベントには、`shopify_storefront` というイベントプロパティがある。このプロパティは、イベントがどのストアフロントURLから来たかを示し、セグメンテーションやユースケースのトリガーに活用できる。
 
-![アクションベースのキャンバスで、`shopify_paid_order` カスタムイベントを実行したユーザーを入力するトリガーがある。]({% image_buster /assets/img/Shopify/shopify_paid_order.png %}){: style="max-width:80%;"}
+![`shopify_paid_order` カスタムイベントを実行するユーザーs を入力するトリガーを持つアクション ベースのキャンバス。]({% image_buster /assets/img/Shopify/shopify_paid_order.png %}){: style="max-width:80%;"}
 
 サポートされているShopifyカスタムイベントは以下の通り：
 
@@ -153,7 +153,7 @@ Shopifyカスタムイベントには、`shopify_storefront` というイベン�
 
 Braze で各 Shopifyストアを接続および設定する際、必要に応じて、統合の一部として Shopify 製品の同期を有効にできます。
 
-各店舗の商品同期を有効にすると、BrazeはShopifyの店舗名をカタログ名に含める。これは、異なる店舗の商品を区別するのに役立ちます。
+ストアごとにプロダクトシンクを有効にすると、BrazeにはShopifyストアの名前がカタログの名前に含まれます。これにより、商品は異なる店舗と区別されます。
 
-![名前に Shopify ストアを含む Shopify のカタログ。]({% image_buster /assets/img/Shopify/catalog_store_name.png %})
+![Shopify カタログ s とそのShopifyストアの名前。]({% image_buster /assets/img/Shopify/catalog_store_name.png %})
 

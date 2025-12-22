@@ -45,7 +45,7 @@ For steps to send test messages, refer to the following section for your respect
 #### Mobile push
 
 1. Draft your mobile push.
-2. Select the **Settings** tab and add your email address or user ID in the **Add Individual Users** field.
+2. Select the **Test** tab and add your email address or user ID in the **Add Individual Users** field.
 3. Select **Send Test** to send your drafted message to your device.
 
 ![Test push]({% image_buster /assets/img_archive/testpush.png %})

@@ -36,7 +36,7 @@ Branch と Braze の統合では、堅牢なアトリビューションと[デ�
 
 Android アプリを使用している場合は、Braze のデバイス ID を Branch に渡す必要があります。この ID は、Branch SDK の `setRequestMetadataKey()` メソッドで設定できます。`initSession`を呼び出す前に、次のコードスニペットを含める必要があります。また、Branch SDK でリクエストメタデータを設定する前に、Braze SDK を初期化する必要があります。
 
-{% tabs ローカル %}
+{% tabs local %}
 {% tab Java %}
 ```java
 Branch.getInstance().setRequestMetadata("$braze_install_id", Braze.getInstance(context).deviceId); 
@@ -52,14 +52,14 @@ Branch.getInstance().setRequestMetadata("$braze_install_id", Braze.getInstance(c
 #### iOS
 
 {% alert important %}
-2023年2月までは、Branch アトリビューション統合は、iOS アトリビューションデータを照合するための主な識別子として IDFV を使用していました。Objective-C を使用している Braze のお客様は、サービスが中断されることはないため、インストール時に Braze`device_id` を取得して Branch に送信する必要はありません。
+2023年2月以前は、当社のBranch アトリビューションインテグレーションでは、iOS アトリビューションにマッチするために、ベンダ(IDFV)向けの識別子を主な識別子として使用していました。Objective-C を使用するBraze 顧客 s がBraze`device_id` を取得し、インストール時にBranch に送信する必要はありません。これは、サービスの中断がないためです。
 {% endalert%}
 
 Swift SDK v5.7.0+ を使用しているお客様は、相互識別子として IDFV を引き続き使用するには、`useUUIDAsDeviceId` フィールドが `false` に設定されていることを確認する必要があります。これにより、統合が中断されることがなくなります。 
 
 `true` に設定している場合、Brazeが iOS アトリビューションを適切に照合できるように、アプリのインストール時に Branch に Braze`device_id` を渡すために、Swift用の iOS デバイス ID マッピングを実装する必要があります。
 
-{% tabs ローカル %}
+{% tabs local %}
 {% tab Objective-C %}
 ```objc
 [braze deviceIdOnQueue:dispatch_get_main_queue() completion:^(NSString * _Nonnull deviceId) {
@@ -84,9 +84,9 @@ braze.deviceId { deviceId in
 
 Brazeで、[**パートナー連携**] > [**テクノロジーパートナー**] に移動し、[**Branch**] を選択します。 
 
-ここでは、REST エンドポイントが見つかり、Brazeデータインポートキーが生成されます。キーが生成されたら、新しいキーを作成するか、既存のキーを無効にできます。Branch のダッシュボードでポストバックを設定する場合、次のステップでデータインポートキーと REST エンドポイントが使用されます。<br><br>![Branch テクノロジーページにある「インストールアトリビューションのデータインポート」ボックス。このボックスには、データインポートキーと REST エンドポイントが表示されます。]({% image_buster /assets/img/attribution/branch.png %}){: style="max-width:90%;"}
+ここでは、REST エンドポイントが見つかり、Brazeデータインポートキーが生成されます。キーが生成されたら、新しいキーを作成するか、既存のキーを無効にできます。Branch のダッシュボードでポストバックを設定する場合、次のステップでデータインポートキーと REST エンドポイントが使用されます。<br><br>![Branch テクノロジーページにある「インストールアトリビューションのデータインポート」ボックス。このボックスには、データインポートキーと REST エンドポイントが表示されている。]({% image_buster /assets/img/attribution/branch.png %}){: style="max-width:90%;"}
 
-### ステップ 3: データフィードを設定する
+### ステップ3:データフィードを設定する
 
 1. Branch の [**Exports**] セクションで、[**Data Feeds**] を選択します。
 2. [**Data Feeds Manager**] ページで、ページ上部の [**Data Integrations**] タブを選択します。 
@@ -107,11 +107,11 @@ FacebookおよびX（旧Twitter）キャンペーンのアトリビューショ�
 
 Brazeのキャンペーンでクリック追跡リンクを使用すると、どのキャンペーンがアプリのインストールやリエンゲージメントを促進しているかを簡単に確認できる。その結果、マーケティング活動をより効果的に測定できるようになり、ROI を最大化するためにどこにリソースを投資すべきかについて、データに基づいた意思決定ができるようになります。
 
-Branch のクリックトラッキングリンクを使用するには、Branchの[ドキュメント](https://help.branch.io/using-branch/docs/ad-links)を参照してください。Braze のキャンペーンに Branch のクリックトラッキングリンクを直接挿入できます。その後 Branch は、リンクをクリックしたユーザーを紐づけるため、Branch の[確率的アトリビューション手法](https://help.branch.io/using-branch/docs/branch-attribution-logic-settings)を使用します。Braze キャンペーンのアトリビューションの精度向上のために、Branch トラッキングリンクにデバイス識別子を付加することをお勧めします。これにより、リンクをクリックしたユーザーの属性が決定的になる。
+Branch のクリックトラッキングリンクを使用するには、Branchの[ドキュメント](https://help.branch.io/using-branch/docs/ad-links)を参照してください。Braze のキャンペーンに Branch のクリックトラッキングリンクを直接挿入できます。その後 Branch は、リンクをクリックしたユーザーを紐づけるため、Branch の[確率的アトリビューション手法](https://help.branch.io/using-branch/docs/branch-attribution-logic-settings)を使用します。Braze キャンペーンのアトリビューションの精度向上のために、Branch トラッキングリンクにデバイス識別子を付加することをお勧めします。これにより、リンクをクリックしたユーザーを決定論的に属性付けします。
 
-{% tabs ローカル %}
+{% tabs local %}
 {% tab Android %}
-Android の場合、Braze ではお客様が [Google 広告 ID (GAID) 収集]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id)にオプトインできます。GAID はまた、Branch SDK 統合によってネイティブに収集されます。以下の Liquid ロジックを利用して、Branch のクリックトラッキングリンクに GAID を組み込むことができます。
+Androidの場合、Brazeを使用すると、顧客は[Google広告IDコレクション（GAID）]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id)にオプトインできます。GAID はまた、Branch SDK 統合によってネイティブに収集されます。以下の Liquid ロジックを利用して、Branch のクリックトラッキングリンクに GAID を組み込むことができます。
 {% raw %}
 ```
 {% if most_recently_used_device.${platform} == 'android' %}

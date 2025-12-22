@@ -6,7 +6,7 @@ event_documentation:
     property_details:
       - For Custom Events, the payload will also be populated with any [custom event properties]({{site.baseurl}}/user_guide/data/custom_data/custom_events#custom-event-properties) that are associated with the event.
       - "For `ad_id`, `ad_id_type`, and `ad_tracking_enabled`, you need to explicitly collect the iOS IDFA and Android Google ad ID through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift), [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id)."
-      - "If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) data, reach out to your customer success manager or account manager to enable the feature flipper for sending `ad_id`."
+      - "If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) data, contact your customer success manager or account manager to enable the feature flipper for sending `ad_id`."
   users.behaviors.Purchase:
     description: This event occurs when a user makes a purchase. Use this data to track when users purchase something in the application.
     alert_tip: Purchases are special custom events and come with a JSON encoded string of custom event properties the same way custom events do.
@@ -15,7 +15,7 @@ event_documentation:
     property_details:
       - For Purchase events, the payload will also be populated with any [purchase event properties]({{site.baseurl}}/user_guide/data/custom_data/purchase_events/#purchase-properties) that are associated with the event.
       - "For `ad_id`, `ad_id_type`, and `ad_tracking_enabled`, you need to explicitly collect the iOS IDFA and Android Google ad ID through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift), [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id)."
-      - "If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) data, reach out to your customer success manager or account manager to enable the feature flipper for sending `ad_id`."
+      - "If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) data, contact your customer success manager or account manager to enable the feature flipper for sending `ad_id`."
   users.behaviors.app.FirstSession:
     description: This event occurs when a user starts their first session in your application. Use this data to track when users start sessions.
     alert_tip: When a user starts their first session, both a `FirstSession` and a `SessionStart` event are fired.
@@ -36,7 +36,7 @@ event_documentation:
       - Locations
     property_details:
       - "For `ad_id`, `ad_id_type`, and `ad_tracking_enabled`, you need to explicitly collect the iOS IDFA and Android Google ad ID through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift), [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id)."
-      - "If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) data, reach out to your customer success manager or account manager to enable the feature flipper for sending `ad_id`."
+      - "If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) data, contact your customer success manager or account manager to enable the feature flipper for sending `ad_id`."
   users.behaviors.liveactivity.UpdateTokenChange:
     description: This event occurs when Braze syncs Live Activity update token with the user
     api_tags:
@@ -431,7 +431,7 @@ event_documentation:
       - Inbound Received
   users.messages.featureflag.Impression:
     description: |
-      This event occures whenever a user has had an opportunity to interact with your feature, or when they could have interacted if the feature is disabled (in the case of a control group in an A/B test).
+      This event occurs whenever a user has had an opportunity to interact with your feature, or when they could have interacted if the feature is disabled (in the case of a control group in an A/B test).
 
       Feature flag impressions are only logged once per session.
     api_tags:
@@ -468,7 +468,7 @@ event_documentation:
       - Entry
   users.behaviors.subscriptiongroup.StateChange:
     description: This event occurs when the subscription state of a user in a subscription group changes.
-    alert_important: Subscription groups are only available for email, SMS, and WhatsApp channels at this time.
+    alert_important: Subscription groups are only available for email, SMS, RCS, and WhatsApp channels at this time.
     api_tags:
       - Subscription
     property_details:

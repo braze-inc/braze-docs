@@ -251,7 +251,7 @@
 {% endif %}
 
 {% if include.metric == "Unique Clicks" %}
-<i>ユニーククリック率</i>とは、メッセージ内のリンクを少なくとも1回クリックした受信者の一意の数であり <a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a> によって測定されます。
+<i>ユニーククリック数とは</i>、メッセージ内のリンクを一度でもクリックした受信者の数であり、以下の方法で測定される。 <a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a>.
 {% endif %}
 
 {% if include.metric == "Unique Dismissals" %}

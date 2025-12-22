@@ -59,7 +59,7 @@ channel:
 - キーと値のペア
 - ヘッダーとボディのテキスト、ボタン、ボタンのボーダーカラー、背景、オーバーレイのスタイル
 
-![メール取り込みフォームのコンポーザー。]({% image_buster /assets/img/email_capture.png %})
+![メールキャプチャフォーム作成画面。]({% image_buster /assets/img/email_capture.png %})
 
 さらにカスタマイズが必要な場合は、[**メッセージタイプ**] に [**カスタムコード**] を選択します。[Braze Templates](https://github.com/braze-inc/in-app-message-templates/tree/master/braze-templates) GitHub リポジトリにあるこの[メールキャプチャモーダルテンプレート](https://github.com/braze-inc/in-app-message-templates/tree/master/braze-templates/5-email-capture-modal)をスターターコードとして使用できます。
 

@@ -127,14 +127,6 @@ AppboyBinding.LogPurchase("product_id", "currencyCode", price(decimal));
 ```
 
 {% endtab %}
-
-{% tab unreal engine %}
-
-```cpp
-UBraze->LogPurchase(TEXT("product_id"), TEXT("USD"), price, quantity);
-```
-
-{% endtab %}
 {% endtabs %}
 
 {% alert warning %}
@@ -261,17 +253,6 @@ Dictionary<string, object> purchaseProperties = new Dictionary<string, object>
     { "key", "value" }
 };
 AppboyBinding.LogPurchase("product_id", "currencyCode", price(decimal), purchaseProperties);
-```
-
-{% endtab %}
-
-{% tab unreal engine %}
-
-```cpp
-TMap<FString, FString> PurchaseProperties;
-PurchaseProperties.Add(TEXT("key"), TEXT("value"));
-
-UBraze->LogPurchaseWithProperties(TEXT("product_id"), TEXT("USD"), price, quantity, PurchaseProperties);
 ```
 
 {% endtab %}

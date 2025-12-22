@@ -1,5 +1,5 @@
 ---
-nav_title: ユーザ更新
+nav_title: ユーザー更新
 article_title: ユーザーの更新 
 alias: "/user_update/"
 page_order: 6
@@ -14,13 +14,9 @@ tool: Canvas
 
 ## このコンポーネントの仕組み
 
-<<<<<<< HEAD
-![" 更新 ロイヤルティ" 更新は属性 " Is Premium Member" to " true" という名前のユーザ更新 ステップ。]({% image_buster /assets/img_archive/canvas_user_update_step.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
-=======
-\![" 更新 ロイヤルティ" 更新は属性 " Is Premium Member" to " true" という名前のユーザ更新 ステップ。]({% image_buster /assets/img_archive/canvas_user_update_step.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
->>>>>>> main
+![Is Premium Member "属性を "true "に更新する "Update loyalty "という名前のユーザー更新ステップ。]({% image_buster /assets/img_archive/canvas_user_update_step.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
 
-キャンバスでこのコンポーネントを使用する場合、更新は 1 分あたり`/users/track` 件のリクエストのレート制限にはカウントされません。代わりに、Braze ではこれらの更新がバッチ処理されるので、Braze-to-Braze の Webhook よりも効率的に処理することができます。このコンポーネントは、請求不可能なデータポイントs (サブスクリプショングループ s など) を更新するために使用されている場合、[データポイント s]({{site.baseurl}}/user_guide/data/data_points/) を記録しないことに注意してください。
+キャンバスでこのコンポーネントを使用する場合、更新は 1 分あたり`/users/track` 件のリクエストのレート制限にはカウントされません。代わりに、Braze ではこれらの更新がバッチ処理されるので、Braze-to-Braze の Webhook よりも効率的に処理することができます。課金対象外のデータポイント（サブスクリプショングループなど）の更新に使用される場合、このコンポーネントは[データポイントを]({{site.baseurl}}/user_guide/data/data_points/)記録しないことに注意すること。
 
 ユーザーは、関連するユーザーの更新が完了した後でのみ、次のキャンバスステップに進みます。つまり、これらのユーザー更新に依存する後続のメッセージングは、次のステップが実行された時点で最新の状態になります。
 
@@ -38,21 +34,13 @@ tool: Canvas
 
 カスタム属性を追加や更新するには、属性のリストから属性名を選択し、キー値を入力します。
 
-<<<<<<< HEAD
-![2 つの属性s "ロイヤルティメンバー"および"ロイヤルティプログラム" to "true"を更新するユーザ更新 ステップ。]({% image_buster /assets/img_archive/canvas_user_update_update.png %}){: style="max-width:90%;"}
-=======
-\![2 つの属性s "ロイヤルティメンバー"および"ロイヤルティプログラム" to "true"を更新するユーザ更新 ステップ。]({% image_buster /assets/img_archive/canvas_user_update_update.png %}){: style="max-width:90%;"}
->>>>>>> main
+![ロイヤリティ・メンバー "と "ロイヤリティ・プログラム "の2つの属性を "true "に更新するユーザー更新ステップ。]({% image_buster /assets/img_archive/canvas_user_update_update.png %}){: style="max-width:90%;"}
 
 ### カスタム属性を削除する
 
 カスタム属性を削除するには、ドロップダウンを使用して属性名を選択します。[高度な JSON コンポーザー](#advanced-json-composer)に切り替えて、さらに編集することができます。 
 
-<<<<<<< HEAD
-![属性 &クォートを削除するユーザアップデートステップ;ロイヤルティメンバー&クォート;。]({% image_buster /assets/img_archive/canvas_user_update_remove.png %}){: style="max-width:90%;"}
-=======
-\![属性 &クォートを削除するユーザアップデートステップ;ロイヤルティメンバー&クォート;。]({% image_buster /assets/img_archive/canvas_user_update_remove.png %}){: style="max-width:90%;"}
->>>>>>> main
+![属性「ロイヤルティメンバー」を削除するユーザー更新ステップ。]({% image_buster /assets/img_archive/canvas_user_update_remove.png %}){: style="max-width:90%;"}
 
 ### 増加値と減少値
 
@@ -62,11 +50,7 @@ tool: Canvas
 
 イベントを追跡するカスタム属性をインクリメントすることで、ユーザーが1週間に受講したクラス数を追跡することができる。このコンポーネントを使用すると、クラスカウントを週の始めにリセットして、再びトラッキングを開始できます。 
 
-<<<<<<< HEAD
-![属性"class_count" を1 つ増分するユーザアップデートステップ。]({% image_buster /assets/img_archive/canvas_user_update_increment.png %}){: style="max-width:90%;"}
-=======
-\![属性"class_count" を1 つ増分するユーザアップデートステップ。]({% image_buster /assets/img_archive/canvas_user_update_increment.png %}){: style="max-width:90%;"}
->>>>>>> main
+![ユーザー"class_count" 、属性を1つインクリメントする更新ステップ。]({% image_buster /assets/img_archive/canvas_user_update_increment.png %}){: style="max-width:90%;"}
 
 ### オブジェクトの配列を更新する
 
@@ -78,11 +62,7 @@ tool: Canvas
 
 配列にアイテムを追加または削除すると、ユーザーのウィッシュリストが更新される。
 
-<<<<<<< HEAD
-![アイテム&クォート;sun ブロック" を属性"items_in_wishlist".]({% image_buster /assets/img_archive/canvas_user_update_wishlist.png %} に追加するユーザアップデートステップ]{: style="max-width:90%;"}
-=======
-\![アイテム&クォート;sun ブロック" を属性"items_in_wishlist".]({% image_buster /assets/img_archive/canvas_user_update_wishlist.png %} に追加するユーザアップデートステップ]{: style="max-width:90%;"}
->>>>>>> main
+![属性に項目 "sunblock" を追加するユーザー更新ステップ"items_in_wishlist".]({% image_buster /assets/img_archive/canvas_user_update_wishlist.png %}){: style="max-width:90%;"}
 
 #### ユースケース:ショッピングカートの合計を計算する
 
@@ -144,11 +124,7 @@ tool: Canvas
 
 ユーザーの更新ステップを使用して、`canvas_entry_property` を永続的に保存できます。例えば、アイテムがカートに追加されたときにトリガーされるイベントがあるとします。カートに追加された最新のアイテムの ID を保存し、それをリマーケッティングキャンペーンに使用できます。パーソナライゼーション機能を使用して、キャンバスのエントリプロパティを取得し、属性に保存します。
 
-<<<<<<< HEAD
-![アイテムID で属性"most_recent_cart_item" を更新するユーザー更新 ステップ。]({% image_buster /assets/img_archive/canvas_user_update_cep.png %}){: style="max-width:90%;"}
-=======
-\![アイテムID で属性"most_recent_cart_item" を更新するユーザー更新 ステップ。]({% image_buster /assets/img_archive/canvas_user_update_cep.png %}){: style="max-width:90%;"}
->>>>>>> main
+![ユーザー更新ステップ。アイテムIDで属性"most_recent_cart_item" を更新する。]({% image_buster /assets/img_archive/canvas_user_update_cep.png %}){: style="max-width:90%;"}
 
 ### パーソナライゼーション
 
@@ -167,11 +143,11 @@ tool: Canvas
 
 JSON コンポーザーには最大 65,536 文字の属性、イベント、または購入 JSON オブジェクトを追加できます。ユーザーの[グローバルサブスクリプション]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-states)および[サブスクリプショングループ]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-groups)の状態も設定できます。
 
-\![]({% image_buster /assets/img_archive/canvas_user_update_composer.png %}){: style="max-width:90%;"}
+![]({% image_buster /assets/img_archive/canvas_user_update_composer.png %}){: style="max-width:90%;"}
 
 高度なコンポーザーでは、[**プレビュー後にテスト**] タブを使用してユーザープロファイルの変更をプレビューしてテストすることもできます。ランダムなユーザーを選択するか、特定のユーザーを検索できます。次に、テストをユーザーに送信した後、生成されたリンクを使用してユーザープロファイルを表示します。
 
-\![]({% image_buster /assets/img_archive/canvas_user_update_test_preview.png %}){: style="max-width:90%;"}
+![]({% image_buster /assets/img_archive/canvas_user_update_test_preview.png %}){: style="max-width:90%;"}
 
 ### 考慮事項
 

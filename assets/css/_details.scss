@@ -19,23 +19,10 @@ details {
     color: $black-shark;
     margin: 0 0 0 0;
     font-family: $braze-medium;
-    &::-webkit-details-marker {
-        display: none;
-        //background-color: $black-shark;
-    }
-    &::marker {
-        content: "";
-        //background-color: $black-shark;
-    }
-    &::before {
-      content:"►";
-      margin-right: 2px;
-      color: $black-shark;
-    }
     margin-bottom: 10px;
   }
 
- &[open], &:hover,
+ &:hover,
  &:active, &:focus  {
     summary {
       color: $black-shark;
@@ -52,18 +39,6 @@ details {
         //background-color: $blue-scooter;
         color: $black-shark;
       }
-    }
-    &[open] {
-      summary {
-        &::marker {
-            content: "";
-            //background-color: $black-shark;
-        }
-        &::before {
-          content:"▼" ;
-        }
-      }
-      margin-bottom: 30px;
     }
   }
 
