@@ -67,6 +67,7 @@ A classic card without an image included will result in a [text announcement car
 |`getUrl()` | Returns the URL that will be opened after the card is clicked. It can be a HTTP(s) URL or a protocol URL. | 
 |`getDomain()` | Returns the link text for the property URL. |
 |`getImageUrl()` | Returns the URL of the card's image, applies only to the classic Short News Card. |
+|`isDismissed` | Manually log a dismissal to Braze for a particular card. If a card is already marked as dismissed, it cannot be marked as dismissed again. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Card methods
@@ -77,5 +78,4 @@ All [`Card`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sd
 |---|---|
 |`logImpression()` | Manually log an impression to Braze for a particular card. |
 |`logClick()` | Manually log a click to Braze for a particular card. |
-|`isDismissed` | Manually log a dismissal to Braze for a particular card. If a card is already marked as dismissed, it cannot be marked as dismissed again. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
