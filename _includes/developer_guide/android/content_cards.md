@@ -28,7 +28,7 @@ The [base card](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android
 |`isRemoved()` | Returns a boolean that reflects whether the end user has dismissed this card.|
 |`isDismissibleByUser()`  | Returns a boolean that reflects whether the card is dismissible by the user.|
 |`isClicked()` | Returns a boolean that reflects the clicked state of this card.|
-|`isDismissed()` | Returns a boolean if this card has been dismissed.|
+|`isDismissed` | Returns a boolean that reflects whether the card has been dismissed. Set to `true` to mark the card as dismissed. If a card is already marked as dismissed, it cannot be marked as dismissed again.|
 |`isControl()` | Returns a boolean if this card is a control card and should not be rendered.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -67,7 +67,7 @@ A classic card without an image included will result in a [text announcement car
 |`getUrl()` | Returns the URL that will be opened after the card is clicked. It can be a HTTP(s) URL or a protocol URL. | 
 |`getDomain()` | Returns the link text for the property URL. |
 |`getImageUrl()` | Returns the URL of the card's image, applies only to the classic Short News Card. |
-|`isDismissed` | Manually log a dismissal to Braze for a particular card. If a card is already marked as dismissed, it cannot be marked as dismissed again. |
+|`isDismissed` | Returns a boolean indicating whether the card has been dismissed. Set to `true` to mark the card as dismissed. If a card is already marked as dismissed, it cannot be marked as dismissed again. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Card methods
