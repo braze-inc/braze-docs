@@ -1,11 +1,11 @@
 ---
-nav_title: 보고서 보기
-article_title: 의사 결정 스튜디오 보고 보기
+nav_title: 보고서 및 인사이트
+article_title: 보고서 및 인사이트
 page_order: 3
 description: "AI 기반 의사 결정이 캠페인에 어떤 영향을 미치는지 파악할 수 있도록 BrazeAI Decisioning Studio™ 보고서를 보는 방법을 알아보세요."
 ---
 
-# 의사 결정 스튜디오 보고서 보기
+# 보고서 및 인사이트
 
 > AI 기반 의사 결정이 캠페인에 어떤 영향을 미치는지 파악할 수 있도록 BrazeAI Decisioning Studio™ 보고서를 보는 방법을 알아보세요. 성능/성과 측정기준부터 데이터 상태 및 시스템 변경 사항까지, 이러한 보고서를 통해 결과를 이해하고, 문제를 해결하고, 자신 있게 정보에 입각한 의사 결정을 내릴 수 있습니다.
 

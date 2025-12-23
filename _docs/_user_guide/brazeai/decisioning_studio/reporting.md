@@ -1,11 +1,11 @@
 ---
-nav_title: Viewing reports
-article_title: Viewing decisioning studio reporting
+nav_title: Reports and Insights
+article_title: Reports and Insights
 page_order: 3
 description: "Learn how to view BrazeAI Decisioning Studio™ reports in Braze, so you can understand how AI-powered decisions impact your campaigns."
 ---
 
-# Viewing decisioning studio reports
+# Reports and Insights
 
 > Learn how to view BrazeAI Decisioning Studio™ reports in Braze, so you can understand how AI-powered decisions impact your campaigns. From performance metrics to data health and system changes, these reports help you understand results, troubleshoot issues, and make informed decisions with confidence.
 
@@ -19,7 +19,7 @@ Before you can view decisioning studio reports in the Braze, you'll need to:
 
 ## Viewing reports {#view}
 
-To view metrics for a decisioning studio agents in Braze, go to **AI Decisioning** > **BrazeAI Decisioning Studio™**, then select an agent.
+To view metrics for a decisioning studio agent in Braze, go to **AI Decisioning** > **BrazeAI Decisioning Studio™**, then select an agent.
 
 ![BrazeAI Decisioning Studio™ reporting home screen showing a dashboard with multiple report cards. Each card displays a report type such as Performance, Insights, Diagnostics, and Timeline, with brief descriptions and icons for each.]( {% image_buster /assets/img/decisioning_studio/reporting_home.png %} )
 
@@ -41,7 +41,7 @@ To set or exclude dates, select <i class="fa-solid fa-gear"></i> **Settings**, t
 
 ### Performance
 
-The performance report offers high-level agent metrics that compare treatment groups (from Braze) to one or more control groups, (like revenue). It supports two different views: **Trending** and **Driver Tree**.
+The performance report offers high-level agent metrics that compare treatment groups (from Braze) to one or more control groups (like revenue). It supports two different views: **Trending** and **Driver Tree**.
 
 By default, the report uses the **Trending** view, which compares how BrazeAI™ performs over time compared to your control groups, and tracks the uplift evolution.
 
@@ -63,7 +63,7 @@ To compare performance between two groups, use the dropdowns to select your desi
 
 ### Insights
 
-Insights show you how the various recommendation options in your action bank are generated, like SL or block selection. There's two different insights reports: **Agent preferences** and **SHAPs**.
+Insights show you how the various recommendation options in your action bank are generated, like SL or block selection. There are two different insights reports: **Agent preferences** and **SHAPs**.
 
 {% tabs local %}
 {% tab agent preferences %}
@@ -76,7 +76,7 @@ Refer to the following table for more details about this report:
 | Field | Description |
 |-------|-------------|
 | Dimension | The attribute used to organize results, such as channel, campaign, or platform. |
-| Comparison group | The groups that you want to compare in your report. You can select multiple comparison groups, up to NUM. |
+| Comparison group | The groups that you want to compare in your report. You can select multiple comparison groups. |
 | Parameter | The metric applied to that attribute, such as opens, clicks, or conversion rate. |
 | Segment | The [audience segment]({{site.baseurl}}/user_guide/engagement_tools/segments/) that you created in Braze. |
 | Option             | The specific recommendation option selected from the action bank. |
