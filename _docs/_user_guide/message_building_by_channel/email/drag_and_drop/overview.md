@@ -1,6 +1,6 @@
 ---
-nav_title: Creating an email
-article_title: Creating an Email with Drag-and-Drop
+nav_title: Create an email
+article_title: Create an Email with Drag-and-Drop
 alias: "/dnd/overview/"
 channel: email
 page_order: 0
@@ -10,7 +10,7 @@ tool:
 - Canvas
 ---
 
-# Creating an email with drag-and-drop
+# Create an email with drag-and-drop
 
 > Using the drag-and-drop editor, you can create completely custom and personalized email messages for either campaigns or Canvases, all without using HTML to build your email body.
 

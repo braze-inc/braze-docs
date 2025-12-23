@@ -6,7 +6,7 @@ page_type: reference
 description: "Everything you do in the Braze platform happens within a workspace. This article describes how they work and what important considerations to keep in mind when planning your workspaces in Braze."
 ---
 
-# Getting Started: Workspaces
+# Get started: workspaces
 
 Everything you do in the Braze platform happens within a workspace. Workspaces act as separate silos of data, and allow you to keep different brands or activities separate. Multiple versions of your website or mobile app can send data to the same workspace. We refer to the different sites and apps that are collected within a workspace as "app instances."
 
@@ -240,5 +240,5 @@ You should have more than one Braze user with admin permissions for a single wor
 
 ## Next steps
 
-After you've determined your workspace plan, it's time to create your workspace and add app instances. For steps, check out [Creating and managing workspaces]({{site.baseurl}}/user_guide/administrative/app_settings/workspaces/).
+After you've determined your workspace plan, it's time to create your workspace and add app instances. For steps, check out [Create and manage workspaces]({{site.baseurl}}/user_guide/administrative/app_settings/workspaces/).
 

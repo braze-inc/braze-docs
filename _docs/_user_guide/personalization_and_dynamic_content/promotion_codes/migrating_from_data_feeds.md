@@ -1,11 +1,11 @@
 ---
-nav_title: Migrating from data feeds
-article_title: Migrating from Data Feeds to Promotion Codes
+nav_title: Migrate from data feeds
+article_title: Migrate from Data Feeds to Promotion Codes
 page_order: 10
 description: "This reference article provides guidance on migrating from Data Feeds to promotion codes."
 ---
 
-# Migrating from Data Feeds to promotion codes
+# Migrate from Data Feeds to promotion codes
 
 {% alert note %}
 Data Feeds is being deprecated. Braze recommends that customers who use Data Feeds move over to promotion code lists.

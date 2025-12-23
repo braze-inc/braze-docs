@@ -1,6 +1,6 @@
 ---
-nav_title: Setting delegates
-article_title: Setting In-App Message Delegates for iOS
+nav_title: Set delegates
+article_title: Set In-App Message Delegates for iOS
 platform: iOS
 page_order: 2
 description: "This reference article covers setting in-app messaging delegates for your iOS application."
@@ -12,7 +12,7 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# Setting delegates
+# Set delegates
 
 In-app message display and delivery customizations can be accomplished in code by setting our optional delegates.
 

@@ -1,11 +1,11 @@
 ---
-nav_title: Creating agents
-article_title: Creating custom agents
+nav_title: Create agents
+article_title: Create custom agents
 description: "Learn how to create agents, what to prepare before you start, and how to put them to work across messaging, decisioning, and data management."
 alias: /creating-agents/
 ---
 
-# Creating custom agents
+# Create custom agents
 
 > Learn how to create custom agents, what to prepare before you start, and how to put them to work across messaging, decisioning, and data management. For more general information, see [Braze Agents]({{site.baseurl}}/user_guide/brazeai/agents). 
 
@@ -53,7 +53,7 @@ To create your custom agent:
 6. [Test the agent](#testing-your-agent) output and adjust the instructions as needed.
 7. When you’re ready, select **Create Agent** to activate the agent. 
 
-Your agent is now ready to use! For details, see [Deploying agents]({{site.baseurl}}/user_guide/brazeai/agents/deploying_agents/).
+Your agent is now ready to use! For details, see [Deploy agents]({{site.baseurl}}/user_guide/brazeai/agents/deploying_agents/).
 
 ## Models
 

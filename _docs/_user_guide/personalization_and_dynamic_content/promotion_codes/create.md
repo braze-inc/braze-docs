@@ -1,11 +1,11 @@
 ---
-nav_title: Creating codes
-article_title: Creating promotion codes
+nav_title: Create codes
+article_title: Create promotion codes
 page_order: 0.1
 description: "Learn how to create promotion codes in your campaigns and Canvases."
 ---
 
-# Creating promotion codes
+# Create promotion codes
 
 > Learn how to create promotion codes in your campaigns and Canvases.
 

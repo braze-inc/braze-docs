@@ -1,6 +1,6 @@
 ---
-nav_title: Testing Banners
-article_title: Testing Banners
+nav_title: Test banners
+article_title: Test banners
 page_order: 2
 description: "Learn how to test your Banner message before launching your campaign so you can ensure all media, copy, personalization, and custom attributes render correctly."
 channel:
@@ -8,7 +8,7 @@ channel:
 noindex: true
 ---
 
-# Testing Banners
+# Test banners
 
 > Learn how to test your Banner message before launching your campaign so you can ensure all media, copy, personalization, and custom attributes render correctly. For more general information, see [About Banners]({{site.baseurl}}/developer_guide/banners).
 

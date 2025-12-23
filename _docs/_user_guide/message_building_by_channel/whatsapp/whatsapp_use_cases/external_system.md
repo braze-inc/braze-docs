@@ -1,6 +1,6 @@
 ---
 nav_title: WhatsApp and external system
-article_title: Integrating Braze and WhatsApp with an external system
+article_title: Integrate Braze and WhatsApp with an external system
 page_order: 2
 description: "This reference article provides a step-by-step guide for integrating the Braze and WhatsApp integration with an external AI or communication system."
 page_type: reference
@@ -9,7 +9,7 @@ channel:
   - WhatsApp
 ---
 
-# Integrating Braze and WhatsApp with an external AI or communication system
+# Integrate Braze and WhatsApp with an external AI or communication system
 
 > Leverage the power of AI chatbots and live agent hand-offs on the WhatsApp channel to streamline your customer support operations. By automating routine inquiries and seamlessly transitioning to human agents when needed, you can significantly improve response times and enhance the overall customer experience.
 

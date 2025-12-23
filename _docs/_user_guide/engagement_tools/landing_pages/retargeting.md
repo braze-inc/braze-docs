@@ -1,11 +1,11 @@
 ---
 nav_title: Retargeting users
-article_title: Retargeting Users through a Landing Page
+article_title: Retarget Users through a Landing Page
 description: "Learn how to retarget users who've submitted a form through a landing page."
 page_order: 3
 ---
 
-# Retargeting users through a landing page
+# Retarget users through a landing page
 
 > Learn how to retarget users who've submitted a form through a landing page by creating a dedicated segment or triggering a message when the form is submitted.
 

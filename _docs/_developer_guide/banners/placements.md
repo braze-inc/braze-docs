@@ -1,6 +1,6 @@
 ---
-nav_title: Managing placements
-article_title: Managing Banner placements for the Braze SDK
+nav_title: Manage placements
+article_title: Manage Banner placements for the Braze SDK
 description: "Learn how to create and manage Banner placements in the Braze SDK, including accessing their unique properties and logging impressions."
 page_order: 2
 platform:
@@ -11,7 +11,7 @@ platform:
   - React Native
 ---
 
-# Managing Banner placements
+# Manage banner placements
 
 > Learn how to create and manage Banner placements in the Braze SDK, including accessing their unique properties and logging impressions. For more general information, see [About Banners]({{site.baseurl}}/developer_guide/banners).
 

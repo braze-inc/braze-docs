@@ -1,6 +1,6 @@
 ---
-nav_title: "Creating an RCS message"
-article_title: Creating an RCS Message
+nav_title: Create an RCS message
+article_title: Create an RCS Message
 page_order: 2
 alias: /create_rcs_message/
 description: "This article covers how to create an RCS message."
@@ -9,7 +9,7 @@ channel:
   - RCS
 ---
 
-# Creating an RCS message
+# Create an RCS message
 
 > RCS campaigns are great for directly reaching and programmatically conversing with your customers. You can use Liquid and other dynamic content to create a personal experience with your users and create an environment that fosters and enhances an unobtrusive user experience with your brand.
 

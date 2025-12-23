@@ -1,13 +1,13 @@
 ---
 nav_title: Cloning Canvases
-article_title: Cloning Canvases
+article_title: Clone Canvases
 page_order: 3
 alias: "/cloning_canvases/"
 description: "This reference article describes how to clone a Canvas from the original Canvas editor into the Canvas Flow workflow."
 tool: Canvas
 ---
 
-# Cloning Canvases to Canvas Flow
+# Clone Canvases to Canvas Flow
 
 {% alert important %}
 You can no longer create or duplicate Canvases using the original Canvas experience. Braze recommends that customers who use the original Canvas experience move to Canvas Flow, the current Canvas experience.

@@ -15,16 +15,16 @@ guide_featured_list:
   - name: Getting Started
     link: /docs/user_guide/engagement_tools/canvas/get_started/
     image: /assets/img/braze_icons/book-closed.svg
-  - name: Building Canvases
+  - name: Build Canvases
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/
     image: /assets/img/braze_icons/brush-02.svg
   - name: Canvas Components
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/about/
     image: /assets/img/braze_icons/dataflow-03.svg 
-  - name: Managing Canvases
+  - name: Manage Canvases
     link: /docs/user_guide/engagement_tools/canvas/managing_canvases/
     image: /assets/img/braze_icons/edit-05.svg
-  - name: Testing Canvases
+  - name: Test Canvases
     link: /docs/user_guide/engagement_tools/canvas/testing_canvases/
     image: /assets/img/braze_icons/beaker-02.svg
   - name: Ideas and Strategies

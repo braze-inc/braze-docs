@@ -1,6 +1,6 @@
 ---
-nav_title: Tracking sessions
-article_title: Tracking Sessions for iOS
+nav_title: Track sessions
+article_title: Track Sessions for iOS
 platform: iOS
 page_order: 0
 description: "This reference article shows how to subscribe to session updates for your iOS application."

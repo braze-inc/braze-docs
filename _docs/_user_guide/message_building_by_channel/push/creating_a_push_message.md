@@ -1,6 +1,6 @@
 ---
-nav_title: "Creating a push message"
-article_title: Creating a Push Campaign
+nav_title: Create a push message
+article_title: Create a Push Campaign
 page_order: 4
 page_type: tutorial
 description: "This tutorial page covers the different components involved in creating a Push Message, including configuration, sending, targeting, and more."
@@ -10,7 +10,7 @@ tool:
   
 ---
 
-# Creating a push message
+# Create a push message
 
 > Push notifications are wonderful for time-sensitive calls to action, as well as re-engaging users who haven't come into the app in a while. Successful push campaigns drive the user directly to content and demonstrate the value of your app. To see examples of push notifications, check out our [case studies](https://www.braze.com/customers).
 
