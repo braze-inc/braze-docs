@@ -1,12 +1,12 @@
 ---
-nav_title: Configuring with Klaviyo
-article_title: Configuring with Klaviyo for BrazeAI Decisioning Studio
+nav_title: Configure with Klaviyo
+article_title: Configure with Klaviyo for BrazeAI Decisioning Studio
 page_order: 3
 description: "Learn how to set up a Klaviyo Flow for use with BrazeAI Decisioning Studio<sup>TM</sup> Go."
 toc_headers: h2
 ---
 
-# Configuring with Klaviyo for BrazeAI Decisioning Studio™ Go
+# Configure with Klaviyo for BrazeAI Decisioning Studio™ Go
 
 > Set up a placeholder template and a flow in Klaviyo to trigger activations through BrazeAI Decisioning Studio™ Go.
 

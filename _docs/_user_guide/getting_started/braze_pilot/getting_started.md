@@ -6,7 +6,7 @@ page_type: reference
 description: "This reference article briefly covers the integration steps required from your engineers or developers."
 ---
 
-# Getting started with Braze Pilot
+# Get started with Braze Pilot
 
 > This article covers how to get started using Braze Pilot. Here we’ll walk you through downloading the app, initializing the connection with your Braze dashboard, and completing the setup.
 

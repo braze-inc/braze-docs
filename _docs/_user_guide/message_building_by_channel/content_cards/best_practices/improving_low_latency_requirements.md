@@ -1,13 +1,13 @@
 ---
 nav_title: Improving low latency
-article_title: Improving Low Latency for Content Cards as banners
+article_title: Improve Low Latency for Content Cards as banners
 page_order: 10
 description: "This article covers strategies to ensure low-latency requirements are met with Content Cards."
 channel:
   - content cards
 ---
 
-# Improving latency for Content Cards as banners
+# Improve latency for Content Cards as banners
 
 > If you're experiencing latency with your Content Cards implementation for critical use cases, such as homepage banners, review this page for strategies and tips to help resolve and speed up your rendering.
 

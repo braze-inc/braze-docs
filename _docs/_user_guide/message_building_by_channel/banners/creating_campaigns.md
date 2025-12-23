@@ -1,6 +1,6 @@
 ---
-nav_title: Creating Campaigns
-article_title: Creating Banner campaigns in Braze
+nav_title: Create Campaigns
+article_title: Create Banner campaigns in Braze
 page_order: 1
 description: "This reference article covers how to create, compose, configure and send Banners using Braze campaigns."
 tool:
@@ -9,7 +9,7 @@ channel:
   - banners
 ---
 
-# Creating Banner campaigns
+# Create Banner campaigns
 
 > Learn how to create Banners when you build a campaign in Braze. For more general information, see [About Banners]({{site.baseurl}}/user_guide/message_building_by_channel/banners).
 

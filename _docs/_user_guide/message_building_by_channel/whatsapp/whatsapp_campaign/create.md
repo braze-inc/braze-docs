@@ -1,6 +1,6 @@
 ---
-nav_title: Creating a WhatsApp message
-article_title: Creating a WhatsApp Message
+nav_title: Create a WhatsApp message
+article_title: Create a WhatsApp Message
 page_order: 0
 description: "This reference article covers the steps involved in building out and creating a WhatsApp message."
 page_type: reference
@@ -11,7 +11,7 @@ channel:
 search_rank: 1
 ---
 
-# Creating a WhatsApp message
+# Create a WhatsApp message
 
 > WhatsApp campaigns are great for directly reaching and programmatically conversing with your customers. You can use Liquid and other dynamic content to create a personal experience with your users and create an environment that fosters and enhances an unobtrusive user experience with your brand. 
 

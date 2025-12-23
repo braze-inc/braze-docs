@@ -1,11 +1,11 @@
 ---
-nav_title: Deploying agents
-article_title: Deploying custom agents
+nav_title: Deploy agents
+article_title: Deploy custom agents
 description: "Learn how to put custom agents to use in Braze after you create them."
 alias: /deploying-agents/
 ---
 
-# Deploying custom agents
+# Deploy custom agents
 
 > Learn how to put custom agents to use in Canvas steps or catalog fields after you create them. For an introduction, see [Braze Agents]({{site.baseurl}}/user_guide/brazeai/agents/). 
 

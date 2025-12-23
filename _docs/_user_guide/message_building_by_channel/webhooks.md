@@ -81,7 +81,7 @@ In Braze, you can create a webhook as a webhook campaign, API campaign, or Canva
 1. In the Braze dashboard, go to **Campaigns**.
 2. Click **Create Campaign** and select **Webhook**.
 
-Refer to [Creating a webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/) for more information.
+Refer to [Create a webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/) for more information.
 
 {% endtab %}
 {% tab API Campaign %}
@@ -91,7 +91,7 @@ Refer to [Creating a webhook]({{site.baseurl}}/user_guide/message_building_by_ch
 3. Click **Add Messages** and select **Webhook**.
 4. Format your API call to include a [webhook object]({{site.baseurl}}/api/objects_filters/messaging/webhook_object/).
 
-Refer to [Creating a webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/) for more information.
+Refer to [Create a webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/) for more information.
 
 {% endtab %}
 {% tab Canvas Component %}
@@ -99,7 +99,7 @@ Refer to [Creating a webhook]({{site.baseurl}}/user_guide/message_building_by_ch
 1. In your Canvas, create a new component.
 2. In the **Message** section of your component, select **Webhook**.
 
-Refer to [Creating a webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/) for more information.
+Refer to [Create a webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/) for more information.
 
 {% endtab %}
 {% endtabs %}

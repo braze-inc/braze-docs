@@ -1,6 +1,6 @@
 ---
-nav_title: Creating a webhook
-article_title: Creating a Webhook
+nav_title: Create a webhook
+article_title: Create a Webhook
 page_order: 1
 channel:
   - webhooks
@@ -8,7 +8,7 @@ description: "This reference article covers how to create and configure a webhoo
 search_rank: 2
 ---
 
-# Creating a webhook campaign
+# Create a webhook campaign
 
 > Creating a webhook campaign or including a webhook in a multichannel campaign allows you to trigger non-app actions by providing other systems and applications with real-time information. 
 

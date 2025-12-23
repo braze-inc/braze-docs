@@ -1,7 +1,7 @@
 ---
 page_order: 6
 nav_title: Soft push prompts
-article_title: Setting up soft push prompts for the Braze SDK
+article_title: Set up soft push prompts for the Braze SDK
 channel:
   - push notifications
 ---
