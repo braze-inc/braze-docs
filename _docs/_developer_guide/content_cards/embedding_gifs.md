@@ -22,7 +22,7 @@ For wrapper SDKs not listed, use the relevant native Android or Swift method ins
 
 {% sdktabs %}
 {% sdktab web %}
-At this time, Content Card GIFs are not supported for the Web Braze SDK.
+GIF support is included by default in the Web SDK integration.
 {% endsdktab %}
 
 {% sdktab android %}
