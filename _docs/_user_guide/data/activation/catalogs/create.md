@@ -27,6 +27,10 @@ After this information is imported, you can begin accessing it in messages in a 
 
 To create a catalog, go to **Data Settings** > **Catalogs**, then select **Create New Catalog** and choose one of the following options:
 
+{% alert note %}
+You can also create and maintain catalogs through [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/sync_catalogs_data/), which allows you to sync catalog data directly from your data warehouse.
+{% endalert %}
+
 {% tabs local %}
 {% tab Upload CSV %}
 ### Step 1: Review your CSV file
@@ -191,6 +195,10 @@ To update your catalog after uploading a CSV or creating a catalog in the browse
 As you build more catalogs, you can also use the [List catalogs endpoint]({{site.baseurl}}/api/endpoints/catalogs/catalog_management/synchronous/get_list_catalogs/) to return a list of the catalogs in a workspace.
 
 Supported data types for using API include: string, integer, float, boolean, or datetime. You can also upload arrays and objects when managing your catalogs with the API.
+
+### Using Cloud Data Ingestion
+
+You can also create and maintain catalogs through [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/sync_catalogs_data/). This allows you to sync catalog data directly from your data warehouse (such as Snowflake, Redshift, BigQuery, Databricks, Microsoft Fabric, or S3) on a scheduled basis, keeping your catalogs automatically up-to-date with your source data.
 
 ## Managing catalog items
 
