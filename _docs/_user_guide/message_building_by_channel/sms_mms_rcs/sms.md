@@ -1,7 +1,7 @@
 ---
 nav_title: "SMS"
 article_title: About SMS
-page_order: 13
+page_order: 14
 description: "This reference article covers general use cases of the SMS channel and requirements needed to get SMS up and running."
 page_type: reference
 alias: /about_sms/

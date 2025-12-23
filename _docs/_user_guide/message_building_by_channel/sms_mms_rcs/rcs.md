@@ -3,7 +3,7 @@ nav_title: "RCS"
 article_title: About Rich Communication Services (RCS)
 alias: /about_rcs/
 page_type: reference
-page_order: 14
+page_order: 15
 description: "This reference article covers general use cases of the RCS channel and requirements needed to get your RCS channel ready for use."
 ---
 

@@ -1,5 +1,5 @@
 ---
-page_order: 13
+page_order: 14
 nav_title: Best practices
 article_title: Email Best Practices
 layout: dev_guide

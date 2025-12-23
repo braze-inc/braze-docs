@@ -15,7 +15,7 @@ description: "This landing page is home to campaign testing and tips. Here, you 
 guide_featured_title: "Section articles"
 guide_featured_list:
   - name: Sending Test Messages
-    link: /docs/developer_guide/in_app_messages/sending_test_messages/
+    link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/
     image: /assets/img/braze_icons/mail-01.svg
   - name: API-Triggered and Action-Based Campaigns
     link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/triggered_action_based/
