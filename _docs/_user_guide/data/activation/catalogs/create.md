@@ -27,10 +27,6 @@ After this information is imported, you can begin accessing it in messages in a 
 
 To create a catalog, go to **Data Settings** > **Catalogs**, then select **Create New Catalog** and choose one of the following options:
 
-{% alert note %}
-You can also create catalogs through [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/sync_catalogs_data/), which allows you to sync catalog data directly from your data warehouse.
-{% endalert %}
-
 {% tabs local %}
 {% tab Upload CSV %}
 ### Step 1: Review your CSV file
