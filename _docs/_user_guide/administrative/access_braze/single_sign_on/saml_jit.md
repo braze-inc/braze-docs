@@ -31,7 +31,7 @@ Have a Braze administrator do the following:
 4. Select the default permission set to assign to that new dashboard user. To learn how to create a permission set, see [Setting user permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/).
 6. Select **Save changes** at the bottom of the page
 7. In your SSO provider’s settings, add all users that need Braze access to your SSO provider's directory.
-8. Now users can sign up or log in.
+8. Instruct users to access Braze through your IdP portal for their first login. After this, the SAML single sign-on button displays for future logins.
 
 ## Frequently asked questions
 
