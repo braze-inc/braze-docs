@@ -24,7 +24,7 @@ Specific instructions for audience configuration are included below, alongside i
 1. Create a segment for your audience that you would like to target.
 2. Provide the Segment ID to your AI Decisioning Services team.
 
-Note: For Braze, multiple segments can be combined to create the audience, and Decisioning Studio can ingest on a segment for a Business-as-Usual comparator compaign. All of these patterns are acceptable. 
+Note: For Braze, multiple segments can be combined to create the audience, and Decisioning Studio can ingest on a segment for a Business-as-Usual comparator campaign. All of these patterns are acceptable. 
 
 
 {% endtab %}
@@ -33,7 +33,7 @@ Note: For Braze, multiple segments can be combined to create the audience, and D
 **Configure audience in Salesforce Marketing Cloud**
 1. Configure an SFMC data extension(s) for your audience and provide the data extension ID
 2. Set up SFMC Installed Package for API integration with the appropriate permissions required by Decisioning Studio
-3. Ensure that this data extension must be refreshed daily, as Decisioning Studio will pull from the the latest incremental data available
+3. Ensure that this data extension must be refreshed daily, as Decisioning Studio will pull from the latest incremental data available
 
 Provide the extension ID and API key to the Braze services team. They will assist with next steps in ingesting customer data.
 
@@ -85,7 +85,7 @@ The following customer data assets are important to consider:
 ### Best practices
 
 * Customer data should have descriptive column names
-* Incremental files are preferable vs. to snapshots of the whole customer history every day
+* Incremental files are preferable vs. snapshots of the whole customer history every day
 * Include customer data on any insights that would be particularly important to your business (e.g., Do you want to see who self-learning AI treats your loyalty customers differently? Make sure it's in the customer data!)
 
 {% tabs %}
@@ -117,7 +117,7 @@ Other options for sending data include:
 These patterns require more engineering effort, but are sometimes preferable, depending on the current Braze configuration. Talk with AI Decisioning Services to learn more. 
 
 {% endtab %}
-{% tab Other Cloud Solutions (GCS, AWS, Azure %}
+{% tab Other Cloud Solutions (GCS, AWS, Azure) %}
 
 **Other Cloud Solutions (Google Cloud Storage, Azure, and AWS)**
 

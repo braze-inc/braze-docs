@@ -9,7 +9,7 @@ description: "Learn how to set up Decisioning Studio Pro agents to make 1:1 AI d
 
 > Think of a Decisioning Studio agent like the brain of your Martech stack:  using your rich customer data, the agent orchestrates optimal and personalized decisions at a 1:1 level to maximize a target metric you choose.
 
-AI Decisioning Pro is more flexible and more powerful than AI Decisioniong Go. Setting up a Pro agent requires collaboration with our AI Decisioning Services team, which guides and assists with agent design throughout to drive maximum value for your business. 
+AI Decisioning Pro is more flexible and more powerful than AI Decisioning Go. Setting up a Pro agent requires collaboration with our AI Decisioning Services team, which guides and assists with agent design throughout to drive maximum value for your business. 
 
    ![Decisioning Pro Diagram]({% image_buster /assets/img/decisioning_studio/decisioning_studio_pro_diagram.png %})
 
@@ -25,7 +25,7 @@ You will connect rich first-party data sources that describe your customer for t
 
 #### 3. Configure orchestration
 
-You will connect Braze or a non-Braze Marketing Automation Platform that will carry turn the Agent’s decisions into action
+You will connect Braze or a non-Braze Marketing Automation Platform that will carry out the Agent's decisions into action
 
 #### 4. Close the AI Decisioning Loop
 

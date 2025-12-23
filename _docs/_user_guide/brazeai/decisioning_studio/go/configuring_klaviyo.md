@@ -150,13 +150,13 @@ Next, create a new **Trigger split** and **Email** node for each additional base
 {: start="4"}
 4. Drag and drop an **Email** node in the **Yes** branch of your new trigger split.
 5. Repeat steps 1-5 in [Step 3.1](#step-31-add-your-email-template) to select the corresponding template.
-5. Set the **Subject line** to {% raw %}`{{event.SubjectLine}}`{% endraw %}, and uncheck the **Skip recently emailed profiles** checkbox.
-6. Repeat this process until you have one **Trigger split** node and one **Email** node for each base template your experimenter is using. Your last Trigger split should have nothing in the "No" branch.
+6. Set the **Subject line** to {% raw %}`{{event.SubjectLine}}`{% endraw %}, and uncheck the **Skip recently emailed profiles** checkbox.
+7. Repeat this process until you have one **Trigger split** node and one **Email** node for each base template your experimenter is using. Your last Trigger split should have nothing in the "No" branch.
 
 ![A Klaviyo flow with multiple Trigger split nodes that branch to multiple Email nodes.]({% image_buster /assets/img/decisioning_studio_go/flow10.png %})
 
-{: start="7"}
-7. In each of your **Email** nodes, update the mode from **Draft** to **Live**.
+{: start="8"}
+8. In each of your **Email** nodes, update the mode from **Draft** to **Live**.
 
 ![The option to update the node status to "Live".]({% image_buster /assets/img/decisioning_studio_go/flow11.png %})
 

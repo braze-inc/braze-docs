@@ -7,7 +7,7 @@ description: "Learn how to set up and integrate BrazeAI Decisioning Studio<sup>T
 
 > Locate key information in Braze to begin integrating with BrazeAI Decisioning Studio™ Go.
 
-This page explains how to locate key information in your CEP (Braze, SFMC, or Klaviyo) in order to integrate BrazeAI Decisioning Go use case. 
+This page explains how to locate key information in your CEP (Braze, SFMC, or Klaviyo) in order to integrate BrazeAI Decisioning Studio Go use case. 
 
 {% tabs %}
 {% tab Braze %}
@@ -55,7 +55,7 @@ To find your user ID:
 To identify your Braze URL:
 
 1. Go to the Braze dashboard.
-2. In your browser window, your Braze URL is starts with `https://` and ends with `braze.com`. An example Braze URL is `https://dashboard-01.braze.com`.
+2. In your browser window, your Braze URL starts with `https://` and ends with `braze.com`. An example Braze URL is `https://dashboard-01.braze.com`.
 
 ### Finding your Braze API key
 

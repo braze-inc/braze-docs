@@ -46,7 +46,7 @@ The engagement asset must meet similar requirements to the conversion asset:
 
 ## Activations Asset
 
-The activations asset tells the agent which communications were sent. This is often necessary depending on how orchestration is configured. If the agent orchestrates via a direct integration with Braze, SFMC, or Klaviyo, then the agent may be able to pull activation data directly. Note that engagement data and activations data are very commonly delivered found in the same data asset. 
+The activations asset tells the agent which communications were sent. This is often necessary depending on how orchestration is configured. If the agent orchestrates via a direct integration with Braze, SFMC, or Klaviyo, then the agent may be able to pull activation data directly. Note that engagement data and activations data are very commonly found in the same data asset. 
 
 The activation asset must meet the following requirements:
 

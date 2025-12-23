@@ -57,7 +57,7 @@ Next, we'll create 2 SQL queries: a subscribers query and an engagement query. T
 ![An example query in the SQL Query section.]({% image_buster /assets/img/decisioning_studio_go/query10.png %})
 
 {: start="8"}
-8. In your BrazeAI Decisioning Studio™ Go portal, in the the **Resources to use** section, locate the external key of the target data extension. Then, paste it into the search bar to search.
+8. In your BrazeAI Decisioning Studio™ Go portal, in the **Resources to use** section, locate the external key of the target data extension. Then, paste it into the search bar to search.
 
 ![An external key pasted into the search bar]({% image_buster /assets/img/decisioning_studio_go/query9.png %})
 
