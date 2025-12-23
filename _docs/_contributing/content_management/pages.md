@@ -1,6 +1,6 @@
 ---
 nav_title: Pages
-article_title: Manage Pages
+article_title: Manage pages
 description: "Learn how to create, modify, and remove pages on Braze Docs."
 page_order: 0
 noindex: true
