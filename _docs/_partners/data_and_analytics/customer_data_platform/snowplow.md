@@ -1,7 +1,7 @@
 ---
 nav_title: Snowplow
 article_title: Snowplow
-description: "This reference article outlines the partnership between Braze and Snowplow, an open-source data collection platform, that allow you to forward Snowplow events to Braze through Google Tag Manager server-side tagging."
+description: "This reference article outlines the partnership between Braze and Snowplow, a data infrastructure platform, that allows you to forward Snowplow events to Braze in real-time using Snowplow's Event Forwarding."
 alias: /partners/snowplow/
 page_type: partner
 search_tag: Partner
@@ -10,28 +10,30 @@ search_tag: Partner
 
 # Snowplow
 
-> [Snowplow](https://snowplowanalytics.com) is a scalable open-source platform for rich, high-quality, low-latency data collection. It is designed to collect high-quality, complete behavioral data for enterprise businesses.
+> [Snowplow](https://snowplowanalytics.com) is a scalable platform for rich, high-quality, low-latency data collection. It is designed to collect high-quality, complete behavioral data for enterprise businesses.
 
 _This integration is maintained by Snowplow._
 
 ## About the integration
 
-The Braze and Snowplow integration enables users to forward Snowplow events to Braze through Google Tag Manager server-side tagging. The Snowplow Braze tag allows you to send events to Braze while offering additional flexibility and control:
-- Full visibility into all transformations on the data
-- Ability to evolve sophistication over time
+The Braze and Snowplow integration enables you to forward Snowplow events to Braze in real-time using Snowplow's Event Forwarding solution. This integration allows you to send events to Braze while offering flexibility and control:
+- Filter and transform events before sending to Braze
+- Map Snowplow event data to Braze user attributes, custom events, and purchases
 - All data remains in your private cloud until you choose to forward it
-- Ease of setup due to rich libraries of tags and familiar Google Tag Manager UI
+- Self-managed deployment within your existing Snowplow cloud account
+
+Snowplow's [Event Forwarding](https://docs.snowplow.io/docs/destinations/forwarding-events/) is a paid add-on feature available to Snowplow customers. To forward events to Braze without this add-on, use Snowplow's [Google Tag Manager Server-Side](https://docs.snowplow.io/docs/destinations/forwarding-events/google-tag-manager-server-side/) integration.
 
 Leverage Snowplow's rich behavioral data to drive powerful customer-centric interactions in Braze and deliver personalized messages in real-time.
 
 ## Prerequisites
 
-| Requirement | Description |
-| ----------- | ----------- |
-| Snowplow pipeline | A Snowplow pipeline needs to be up and running. |
-| Google Tag Manager server-side | GTM-SS needs to be deployed and the [Snowplow client for GTM-SS](https://docs.snowplowanalytics.com/docs/forwarding-events-to-destinations/forwarding-events/google-tag-manager-server-side/snowplow-client-for-gtm-ss/) set up. |
-| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
-| Braze REST endpoint | [Your REST endpoint URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). Your endpoint will depend on the Braze URL for your instance. |
+| Requirement             | Description                                                                                                                                                                                                                                                                              |
+| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Snowplow pipeline       | A Snowplow pipeline needs to be up and running.                                                                                                                                                                                                                                          |
+| Snowplow Console access | Access to Snowplow Console to configure event forwarders.                                                                                                                                                                                                                                |
+| Braze REST API key      | A Braze REST API key with the following permissions: `users.track`, `users.alias.new`, `users.identify`, `users.export.ids`, `users.merge`, `users.external_ids.rename`, and `users.alias.update`. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
+| Braze REST endpoint     | [Your REST endpoint URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). Your endpoint will depend on the Braze URL for your instance.                                                                                                                                     |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Use cases
@@ -44,79 +46,44 @@ Create dynamic audiences in Braze based on Snowplow's high-quality behavioral da
 
 ## Integration
 
-### Step 1: Template installation
+### Step 1: Configure the destination in Snowplow Console
 
-#### Manual installation
+To create the event forwarder:
 
-1. Download the [`template.tpl`](https://github.com/snowplow/snowplow-gtm-server-side-braze-tag/blob/main/template.tpl) template file.
-2. Create a new tag in the **Templates** section of a Google Tag Manager server container.
-3. Click the **More Actions** menu in the top right-hand corner, and select **Import**.
-4. Import your downloaded template file and save it.
+1. In Snowplow Console, navigate to **Destinations** and select **Create new destination**.
+2. When configuring the connection, select **Braze** for the connection type.
+3. Enter your Braze API key and REST API endpoint.
+4. Save the connection.
 
-#### Tag Manager gallery
+### Step 2: Configure the event forwarder
 
-Coming soon! This tag is pending approval to be included in the GTM gallery.
+When configuring the forwarder, you can choose which Snowplow events to forward and map them to Braze object types:
 
-### Step 2: Braze tag setup
+1. **[User attributes]({{site.baseurl}}/api/objects_filters/user_attributes_object)**: Update user profile data and custom user properties.
+2. **[Custom events]({{site.baseurl}}/api/objects_filters/event_object)**: Send user actions and behaviors.
+3. **[Purchases]({{site.baseurl}}/api/objects_filters/purchase_object)**: Send transaction data with product details.
 
-With the template installed, add the Braze tag to your GTM-SS container.
+For each object type, you can configure field mappings to specify how Snowplow event data maps to Braze fields. See Snowplow's [Creating forwarders documentation](https://docs.snowplow.io/docs/destinations/forwarding-events/creating-forwarders/) for detailed setup instructions and field mapping configuration.
 
-1. From the **Tag** tab, select **New**, then select the **Braze Tag** as your tag configuration.
-2. Select your desired trigger for the events you wish to forward to Braze.
-3. Enter the required parameters and configure your tag (more details can be found in the following Customization section).
-4. Click **Save**.
+### Step 3: Validate the integration
 
-## Customization
+You can confirm events are reaching Braze by checking the following pages in your Braze account:
 
-### Required tag parameters
+1. **Query Builder**: In Braze, navigate to **Analytics** > **Query Builder**. You can write queries on the following tables to preview the data forwarded from Snowplow: `USER_BEHAVIORS_CUSTOMEVENT_SHARED`, `USERS_BEHAVIORS_PURCHASE_SHARED`.
+2. **API Usage Dashboard**: In Braze, navigate to **Settings** > **APIs and Identifiers** to see a chart of API usage over time. You can filter specifically for the API key used by Snowplow and see both successes and failures.
 
-The following table lists the required tag parameters you must include in your Braze tag setup.
+## Sending custom properties
 
-| Parameter | Description |
-| --------- | ----------- |
-| Braze REST API endpoint | Set this to the URL of your Braze REST [endpoint]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). |
-| Braze API key | Set this to your Braze [API key]({{site.baseurl}}/developer_guide/rest_api/basics/#app-group-rest-api-keys) that will be included in each request. |
-| Braze `external_id` | Set this key to the client event property that corresponds to your users' `external_id` and will be used as the [Braze user identifier]({{site.baseurl}}/developer_guide/rest_api/basics/#external-user-id-explanation). |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+You can send custom properties beyond the standard fields. The structure depends on which Braze object type you're using:
 
-### Event mapping
+- **User attributes**: Add as top-level fields (for example, `subscription_tier`, `loyalty_points`)
+- **Event properties**: Nest under `properties` object (for example, `properties.plan_type`, `properties.feature_flag`)
+- **Purchase properties**: Nest under `properties` object (for example, `properties.color`, `properties.size`)
 
-The following table lists event mapping options concerning the Snowplow event as claimed by the [Snowplow client](https://docs.snowplowanalytics.com/docs/forwarding-events-to-destinations/forwarding-events/google-tag-manager-server-side/snowplow-client-for-gtm-ss/).
+For property names containing spaces, use bracket notation (for example, `["account type"]` or `properties["campaign source"]`).
 
-| Mapping option | Description |
-| --------- | ----------- |
-| Include self describing event | Turned on by default. Indicates if the Snowplow self-describing event data will be included in the event's properties objects sent to Braze. |
-| Snowplow event context rules | Describes how the Braze tag will use the context entities attached to a Snowplow event. |
-| Extract entity from array if single element | Snowplow entities are always in arrays, as multiple of the same entity can be attached to an event. This option will pick the single element from the array if the array only contains a single element. |
-| Include all entities in the event object | Turned on by default. Includes all entities on an event within the Braze event's properties object. Disable this option to select individual entities for inclusion. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+See the [Event Object documentation]({{site.baseurl}}/api/objects_filters/event_object) for details on supported data types, property naming requirements, and payload size limits.
 
-### Advanced event mapping
+## Limitations
 
-#### Event property rules
-
-If you want to include other properties from the client event and map them onto the Braze event, reference the rules in the following table: 
-
-| Event property rules | Description |
-| --------- | ----------- |
-| Include common event properties | Enabled by default, this option sets whether to automatically include the event properties from the [common event definition](https://developers.google.com/tag-platform/tag-manager/server-side/common-event-data) in the properties of the Braze event. |
-| Additional user property and event property mapping rules | Specify the property key from the client event and the properties' object key you would like to map it to (or leave the mapped key blank to keep the same name). You can use key path notation here (for example, `x-sp-tp2.p` for a Snowplow events platform or `x-sp-contexts.com_snowplowanalytics_snowplow_web_page_1.0.id` for a Snowplow events page view id (in array index 0) or pick non-Snowplow properties if using an alternative client.<br><br>Event property mapping rules populate the Braze event properties object.|
-| Include common user properties| Enabled by default, this option sets whether to include the `user_data` properties from the common event definition in the Braze user attributes object.|
-| Event time property | This option lets you specify the client event property to populate the event time (in ISO-8601 format) or leave it empty to use the current time (default behavior). |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-### Entity mapping
-
-Using the Snowplow entity mapping table, the entities can be remapped to have different names in Braze and included in event properties, or user attributes objects. 
-
-The entity can be specified in two different formats:
-- Major version match: `x-sp-contexts_com_snowplowanalytics_snowplow_web_page_1` where `com_snowplowanalytics_snowplow` is the event vendor, `web_page` is the schema name and `1` is the major version number. `x-sp-` can also be omitted from this if desired.
-- Full schema match: `iglu:com.snowplowanalytics.snowplow/webPage/jsonschema/1-0-0`
-<br><br>
-
-| Entity mapping option | Description |
-| --------- | ----------- |
-| Include unmapped entities in event | When remapping or moving some entities to user attributes with the preceding customization, this option enables you to ensure that all unmapped entities (such as any entities not found in the [event property rules](#event-property-rules)) will be included in the properties object of the Braze event. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-
+**Rate limits:** Braze enforces a rate limit of 3,000 API calls every three seconds for the Track Users API. Because Snowplow doesn't support batching for event forwarders, this API rate limit also functions as the event rate limit. If your input throughput exceeds 3,000 events per three seconds, you will experience increased latency.
