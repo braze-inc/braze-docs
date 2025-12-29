@@ -1,6 +1,6 @@
 ---
-nav_title: "POST: Track users"
-article_title: "POST: Track Users"
+nav_title: "POST: Create and update users"
+article_title: "POST: Create and update users"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -9,7 +9,7 @@ description: "This article outlines details about the Track user Braze endpoint.
 
 ---
 {% api %}
-# Track users
+# Create and update users
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /users/track
 {% endapimethod %}
