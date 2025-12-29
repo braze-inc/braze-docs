@@ -165,4 +165,4 @@ Additionally, TikTok also counts Pangle users as matched users, which in some ca
 
 ### Why am I receiving an email with subject "Audience Does Not Exist For Canvas"?
 
-This could happen if the audience you chose to sync to is not a Streaming audience (e.g., if it's a Lookalike Audience or if it is a Customer file Audience). Try creating a new audience through the Braze Audience Sync Canvas step.
+This could happen if the audience you chose to sync to is not a Streaming audience (e.g., if it is a Lookalike Audience or if it is a Customer file Audience). Try creating a new audience through the Braze Audience Sync Canvas step.
