@@ -1,5 +1,5 @@
 ---
-nav_title: Benutzerverwaltung
+nav_title: "Nutzer:in Verwaltung"
 article_title: LINE Benutzerverwaltung
 page_order: 0
 description: "Dieser Artikel befasst sich mit der LINE-Benutzer-ID und wie Sie diese festlegen."
@@ -43,6 +43,5 @@ Wenn Sie ein Benutzerprofil im Braze-Dashboard anzeigen, können Sie sehen, ob d
 
 Wenn die `native_line_id` eingestellt wurde, wird sie unter **LINE User ID** angezeigt. Andernfalls wird es nicht angezeigt.
 
-![Zeile Kontakteinstellungen auf dem Tab Engagement.][1]{: style="max-width:60%;"}
+![Zeile Kontakteinstellungen auf dem Tab Engagement.]({% image_buster /assets/img/line/line_contact_settings.png %}){: style="max-width:50%;"}
 
-[1]: {% image_buster /assets/img/line/line_contact_settings.png %}

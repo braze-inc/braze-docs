@@ -1,5 +1,5 @@
 ---
-nav_title: Standortverfolgung
+nav_title: Standort-Tracking
 article_title: Standortverfolgung
 page_order: 0
 page_type: reference
@@ -16,9 +16,9 @@ search_rank: 2
 
 Um die Erfassung von Standorten in Ihrer App zu aktivieren, lesen Sie das Handbuch für Entwickler:innen für die von Ihnen verwendete Plattform:
 
-- [iOS][2]
-- [Android][3]
-- [Internet][4]
+- [iOS]({{site.baseurl}}/developer_guide/analytics/tracking_location/?sdktab=swift)
+- [Android]({{site.baseurl}}/developer_guide/analytics/tracking_location/?sdktab=android)
+- [Internet]({{site.baseurl}}/developer_guide/analytics/tracking_location/?sdktab=web)
 
 Im Allgemeinen verwenden mobile Apps den GPS-Chip des Geräts und andere Systeme (wie z. B. Wi-Fi-Scanning), um den Standort des Benutzers zu ermitteln. Web-Apps werden WPS (Wi-Fi Positioning System) verwenden, um den Standort eines Nutzers oder einer Nutzerin zu verfolgen. Bei all diesen Plattformen müssen die Nutzer der Standortverfolgung zustimmen. Die Genauigkeit Ihrer Standortverfolgungsdaten kann davon abhängen, ob Ihre Nutzer Wi-Fi auf ihren Geräten aktiviert haben oder nicht. Android-Benutzer können auch verschiedene Standortmodi wählen - Benutzer, die sich im "Batteriesparmodus" oder "Nur Gerät" befinden, haben möglicherweise ungenaue Daten.
 
@@ -34,11 +34,11 @@ Jetzt verwendet Braze die IP-Adresse, um den Länderwert in Nutzerprofilen festz
 
 Mit Standort-Tracking Daten und Segmenten können Sie standortbezogene Kampagnen und Strategien einrichten. So können Sie beispielsweise eine Werbekampagne für Nutzer durchführen, die in einer bestimmten Region leben, oder Nutzer in einer Region mit strengeren Vorschriften ausschließen.
 
-Weitere Informationen zur Erstellung eines Standortsegments finden Sie unter [Standort-Targeting][1].
+Weitere Informationen zur Erstellung eines Standortsegments finden Sie unter [Standort-Targeting]({{site.baseurl}}/user_guide/engagement_tools/segments/location_targeting/).
 
 ## Feste Einstellung des Standardattributs für den Standort
 
-Sie können auch den [Endpunkt`users/track` ][8] in unserer API verwenden, um das [`current_location`][9]-Standard-Attribut zu aktualisieren. Ein Beispiel ist:
+Sie können auch den [Endpunkt`users/track` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) in unserer API verwenden, um das [`current_location`]({{site.baseurl}}/api/objects_filters/user_attributes_object/)-Standard-Attribut zu aktualisieren. Ein Beispiel ist:
 
 ```
 https://[your_braze_rest_endpoint]/users/track
@@ -58,21 +58,28 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 Wenn Sie bestehende Beacon- oder Geofence-Unterstützung mit unseren Targeting- und Nachrichtenfunktionen kombinieren, erhalten Sie mehr Informationen über die physischen Aktionen Ihrer Nutzer, so dass Sie ihnen entsprechende Nachrichten senden können. Sie können das Standort-Tracking mit einigen unserer Partner nutzen: 
 
-- [Radar][6]
-- [Infillion][10]
-- [Foursquare][7]
+- [Radar]({{site.baseurl}}/partners/message_personalization/location/radar/)
+- [Infillion]({{site.baseurl}}/partners/message_personalization/location/infillion/)
+- [Foursquare]({{site.baseurl}}/partners/message_personalization/location/foursquare/)
 
 ## Häufig gestellte Fragen
 
-Antworten auf häufig gestellte Fragen zu den [Standorten][11] finden Sie in unseren [FAQ zu den Standorten][11].
+### Wann sammelt Braze Standortdaten?
 
-[1]: {{site.baseurl}}/user_guide/engagement_tools/segments/location_targeting/
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/location_tracking/
-[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/location_tracking/
-[4]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/location_tracking/
-[6]: {{site.baseurl}}/partners/data_augmentation/contextual_location/radar/
-[7]: {{site.baseurl}}/partners/data_augmentation/contextual_location/foursquare/
-[8]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/
-[9]: {{site.baseurl}}/api/objects_filters/user_attributes_object/
-[10]: {{site.baseurl}}/partners/message_personalization/location/infillion/
-[11]: {{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/faqs/#locations
+Braze sammelt den Standort nur, wenn die Anwendung im Vordergrund geöffnet ist. Daher zielt unser `Most Recent Location`-Filter auf Nutzer:innen ab, die die Anwendung zuletzt geöffnet haben (auch als Sitzungsbeginn bezeichnet).
+
+Sie sollten auch die folgenden Nuancen beachten:
+
+- Wenn der Standort deaktiviert ist, zeigt der `Most Recent Location`-Filter den zuletzt aufgenommenen Standort an.
+- Wenn ein Nutzer jemals einen Standort in seinem Profil gespeichert hat, fällt er unter den `Location Available` Filter, auch wenn er die Standortverfolgung seitdem abgelehnt hat.
+
+### Was ist der Unterschied zwischen den Filtern „Aktuellstes Gebietsschema des Geräts“ und „Letzter Standort“?
+
+Der Filter `Most Recent Device Locale` stammt aus den Geräteeinstellungen des Nutzers oder der Nutzerin. Für Nutzer:innen eines iPhones erscheint dies beispielsweise in ihrem Gerät unter **Einstellungen** > **Allgemein** > **Sprache & Region**. Dieser Filter wird verwendet, um sprachliche und regionale Formatierungen zu erfassen, wie z. B. Datumsangaben und Adressen, und ist unabhängig vom `Most Recent Location`-Filter.
+
+Die `Most Recent Location` ist der letzte bekannte GPS-Standort des Geräts. Dieser Filter wird beim Start der Sitzung aktualisiert und im Profil es Nutzers oder der Nutzerin gespeichert.
+
+### Werden die alten Standortdaten von Braze entfernt, wenn ein Benutzer die Standortverfolgung abbestellt?
+
+Nein. Wenn ein Nutzer:innen jemals einen Standort in seinem Profil gespeichert hat, werden diese Daten nicht automatisch entfernt, wenn er/sie sich später gegen das Standort-Tracking entscheidet.
+

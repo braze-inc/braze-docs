@@ -1,5 +1,5 @@
 ---
-nav_title: "Benutzerdefinierte App-Symbol-Funktion (iOS)"
+nav_title: "Feature für angepasste App-Symbole (iOS)"
 article_title: Benutzerdefinierte App-Symbol-Funktion
 page_order: 7
 page_type: reference

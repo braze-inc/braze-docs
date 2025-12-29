@@ -1,12 +1,12 @@
 ---
-nav_title: Setting up environment
-article_title: Setting up your local Braze Docs environment
+nav_title: Set up environment
+article_title: Set up your local Braze Docs environment
 description: "Learn how to set up your local Braze Docs environment, so you can make complex or multi-page changes."
 page_order: 0.1 
 noindex: true
 ---
 
-# Setting up your local environment
+# Set up your local environment
 
 > Learn how to set up your local Braze Docs environment, so you can make complex or multi-page changes.
 
@@ -168,7 +168,7 @@ To verify your installation and start your local docs server on localhost `http:
 # for 'en' language:
 rake
 
-# for other langauges:
+# for other languages:
 rake es
 rake fr
 rake ja

@@ -196,7 +196,7 @@ Dans Braze, accédez à **Intégrations de partenaires** > **Partenaires technol
 
 Vous y trouverez l'endpoint REST et générerez votre clé d'importation des données Braze. Après la génération de la clé, vous pouvez créer une nouvelle clé ou invalider une clé existante. La clé d'importation des données et l'endpoint REST sont utilisés à l'étape suivante lors de la configuration d'un système automatisé de communication dans le tableau de bord d'Airbridge.
 
-![][1]
+![]({% image_buster /assets/img/airbridge/airbridge_integration_step_1.png %})
 
 ### Étape 3 : Configurez Braze dans le tableau de bord d'Airbridge
 
@@ -231,7 +231,7 @@ En supposant que vous configurez votre intégration comme suggéré, Braze mappe
 
 Votre base d'utilisateurs peut être segmentée par les données d'attribution dans le tableau de bord de Braze en utilisant les filtres d'attribution d'installation.
 
-![][2]
+![]({% image_buster /assets/img/airbridge/airbridge_integration_step_2.png %})
 
 ## Données d'attribution Meta Business
 
@@ -274,5 +274,3 @@ Si vous n'utilisez actuellement aucun identifiant d'appareil - tel que l'IDFV ou
 {% endalert %}
 
 
-[1]: {% image_buster /assets/img/airbridge/airbridge_integration_step_1.png %}
-[2]: {% image_buster /assets/img/airbridge/airbridge_integration_step_2.png %}

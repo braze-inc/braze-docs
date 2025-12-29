@@ -31,7 +31,7 @@ In Braze, navigate to **Partner Integrations** > **Technology Partners** and sel
 
 Here, you will find your REST endpoint and generate your Braze data import key. After the key is generated, you can create a new key or invalidate an existing one.<br><br>![]({% image_buster /assets/img/tinyclues/tinyclues_6.png %}){: style="max-width:90%;"} 
 
-To complete the integration, you will need to provide the data import key and REST endpoint to your Tinyclues data operations team. Tinyclues will then establish the connection and reach out to you after the setup is complete.
+To complete the integration, you must provide the data import key and REST endpoint to your Tinyclues data operations team. Tinyclues will then establish the connection and contact you after the setup is complete.
 
 ### Step 2: Export a campaign from the Tinyclues platform
 

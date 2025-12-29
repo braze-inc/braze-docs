@@ -14,7 +14,7 @@ By using a combination of features in the Braze Data Platform, you can leverage 
 
 ## Unify your data 
 
-Collect and consolidate first-party data from any source, using [APIs] and [SDKs]. You can also leverage our built-in ingestion tools like [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion) to create a simple integration directly from your data warehouse or file storage solution to Braze, or use [Data Transformation]({{site.baseurl}}/user_guide/data/unification/data_transformation) to build and manage webhook integrations to collect your data to transfer into Braze.
+Collect and consolidate first-party data from any source using [APIs] and [SDKs]. You can also use built-in ingestion tools like [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion) to create a direct integration from your data warehouse or file storage solution to Braze, or use [Data Transformation]({{site.baseurl}}/user_guide/data/unification/data_transformation) to build and manage webhook integrations for transferring data into Braze.
 
 ## Activate your data
 

@@ -1,11 +1,11 @@
 ---
 nav_title: AI recommendations
-article_title: Creating AI Item Recommendations
+article_title: Create AI Item Recommendations
 description: "This reference article covers how to create an AI item recommendation for items in a catalog."
 page_order: 1
 ---
 
-# Creating AI item recommendations
+# Create AI item recommendations
 
 > Learn how to create an AI recommendation engine from items in your catalog.
 
@@ -16,6 +16,8 @@ Use AI item recommendations to calculate the most popular products or create per
 {% alert tip %}
 [AI Personalized recommendations](#recommendation-types) work best with hundreds or thousands of items and typically at least 30,000 users with purchase or interaction data. This is only a rough guide and can vary. The other recommendation types can work with less data.
 {% endalert %}
+
+{% multi_lang_include brazeai/recommendations/ai.md section="Plan-specific features" %}
 
 ## Creating an AI item recommendation
 
@@ -93,6 +95,10 @@ If you choose **Custom Event**, select your event from the list.
 
 ![The "Completed Purchase" custom event selected as how events are currently tracked.]({% image_buster /assets/img/item_recs_3.png %})
 
+{% alert note %}
+Custom events must have sufficient data before they appear in the event list. If your custom event doesn’t appear, it may be because the Braze backend hasn’t yet processed it or it lacks enough data for model training. AI recommendations rely on historical data to generate insights, so newly created or rarely triggered events won’t be available until more data is collected.
+{% endalert %}
+
 ### Step 5: Choose the corresponding property name {#property-name}
 
 To create a recommendation, you need to tell Braze which field of your interaction event (purchase object or custom event) has the unique identifier that matches an item's `id` field in the catalog. Not sure? [View requirements](#requirements).
@@ -111,6 +117,7 @@ There are some requirements for selecting your property:
 - **If you selected Purchase Object:** Must be the `product_id` or a field of your interaction event's `properties`.
 - **If you selected Custom Event:** Must be a field of your custom event's `properties`.
 - Nested fields must be typed into the **Property Name** dropdown in dot notation with the format of `event_property.nested_property`. For example, if selecting the nested property `district_name` within the event property `location`, you would enter `location.district_name`.
+- **If using [eCommerce events]({{site.baseurl}}/user_guide/data/activation/custom_data/recommended_events/ecommerce_events/) to train item recommendations:** Add `products.product_id` to access the product ID from events.
 - The field can be inside an array of products, or end with an array of IDs. In either case, each product ID will be treated as a separate, sequential event with the same timestamp.
 
 #### Example mappings
@@ -296,32 +303,3 @@ This event has a property of `"sku": "ADI-RD-8"`, which maps to the second item 
 When you're ready, select **Create Recommendation**. This process can take anywhere from 10 minutes to 36 hours to complete. You will receive an email update when the recommendation is successfully trained or an explanation of why the creation may have failed.
 
 You can find the recommendation on the **Predictions** page, where you can then edit or archive it as needed. Recommendations will automatically retrain once every week (paid) or month (free).
-
-## Plan-specific features
-
-The following table describes the differences between the free and pro version of the AI Personalized, Popular, and Trending recommendation types:
-
-| Area                   | Free version                          | Pro version            |
-| :---------------------- | ------------------------------------- | :--------------------------------------- |
-| User update frequency<sup>1</sup>   | Weekly                                | Daily                                    |
-| Model retraining frequency  | Monthly                               | Weekly                                   |
-| Maximum recommendation models | 1 model per type<sup>2</sup> | 100 models per type<sup>2</sup> |
-
-<sup>1. This is the frequency at which user-specific item recommendations are updated (all models except Most Popular items, which updates when the model retrains). For example, if a user purchases an item recommended based on AI item recommendations, their recommended items will be updated according to this frequency</sup><br>
-<sup>2. Available recommendation types are AI Personalized, Most recent, Most popular, and Trending.</sup>
-
-## Frequently asked questions (FAQ) {#faq}
-
-### What causes "Most popular" items to be mixed into other models' recommendations?
-
-When our recommendation engine curates a list for you, it first prioritizes personalized selections based on the specific model you’ve chosen, like "Most recent" or "AI Personalized". If this model can’t fill the complete list of 30 recommendations for whatever reason, some of your most popular items among all users are then added to make sure each user always has a full set of recommendations.
-
-This happens under a few specific conditions:
-
-- The model finds fewer than 30 items that match your criteria.
-- Relevant items are no longer available or in stock.
-- Items don’t meet the current selection criteria, perhaps due to a change in stock or user preferences.
-
-### Do existing recommendations train weekly after upgrading to Item Recommendations Pro?
-
-Yes, but only after their next scheduled update. Existing recommendations don’t switch to weekly training and daily prediction immediately upon upgrading to Item Recommendations Pro. However, they will adopt the new schedule automatically at their next retraining cycle. For example, if a recommendation was last trained on February 1 and is set to retrain every 30 days, it will adopt the new weekly schedule after its next update on March 2.

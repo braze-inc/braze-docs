@@ -35,15 +35,15 @@ tool: Media
 
 後で Braze でメッセージの下書きを作成するときに、メディアライブラリから画像を取り込むことができます。
 
-![メディアライブラリにアクセスするための一般的な 2 つの方法 (メッセージ作成画面によって異なる)。そのうちの1つでは、「画像とGIF」というタイトルの付いたメールドラッグ＆ドロップエディターと「メディアライブラリから追加」ボタンが表示されます。もう1つでは、「メディア」というタイトルと「画像を追加」のボタンが付いたプッシュやアプリ内メッセージなどの標準エディターが表示されます。]({% image_buster /assets/img_archive/media_library_composers.png %}){: style="border:none"}
+![メディアライブラリにアクセスするための一般的な 2 つの方法 (メッセージ作成画面によって異なる)。そのうちの1つでは、「画像とGIF」というタイトルの付いたメールドラッグ＆ドロップエディターと「メディアライブラリから追加」ボタンが表示されます。もう1 つは、プッシュおよびアプリ内メッセージs などの標準エディタと、タイトル"Media"ボタンから"Add Image"を表示します。]({% image_buster /assets/img_archive/media_library_composers.png %}){: style="border:none"}
 
-{% alert tip %} メディアライブラリの詳細については、[テンプレートとメディアに関するよくある質問]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/faqs)をご覧ください。 {% endalert %}
+{% alert tip %} メディアライブラリーの詳細については、[テンプレート&メディアFAQ]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/faqs)を参照してください。 {% endalert %}
 
 ## 画像の仕様
 
 メディアライブラリにアップロードされるすべての画像は5 MB 未満でなければなりません。サポートされているファイルタイプはPNG、JPEG、GIF、SVGである。メッセージングチャネル別の特定の推奨画像については、次のセクションを参照してください。
 
-### コンテンツカードによって促進された
+### コンテンツカード
 
 {% multi_lang_include image_specs.md variable_name='content cards' %}
 
@@ -57,7 +57,7 @@ tool: Media
 
 詳しくは、[アプリ内メッセージクリエイティブの詳細]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/)をご覧ください。
 
-### プッシュ
+### プッシュ通知
 
 {% multi_lang_include image_specs.md variable_name="push notifications"  %}
 
@@ -68,10 +68,6 @@ tool: Media
 ### 動画
 
 メディアライブラリにアップロードされた動画は、今のところWhatsAppメッセージでのみ使用できる。詳細については、[WhatsApp メッセージを作成する]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create/#outbound-messages)を参照してください。
-
-{% alert important %}
-WhatsApp メッセージに動画を追加する機能は、現在早期アクセス段階です。早期アクセスへの参加に興味がある方は、Brazeのアカウントマネージャーに連絡を。
-{% endalert %}
 
 ## BrazeAI<sup>TM</sup> で画像写真を生成する {#generate-ai}
 

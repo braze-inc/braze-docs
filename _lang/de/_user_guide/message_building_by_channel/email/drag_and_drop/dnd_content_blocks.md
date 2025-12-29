@@ -37,9 +37,9 @@ Um einen Content-Block im Editor hinzuzufügen, gehen Sie wie folgt vor:
 
 1. Gehen Sie im Editor auf die Registerkarte **Zeilen** und wählen Sie **Inhaltsblöcke**. 
 2. Ziehen Sie Ihren Content-Block per Drag & Drop in den E-Mail-Editor. 
-3. (Optional) Passen Sie die Breite Ihres Content-Blocks an, indem Sie den Button im Navigationsmenü auswählen. Die Standardbreite ist 100 %. <br><br>![Ein doppelseitiger Pfeil mit einer Option zur Bearbeitung der Breite.][1]{: style="max-width:30%;" }<br><br>
+3. (Optional) Passen Sie die Breite Ihres Content-Blocks an, indem Sie den Button im Navigationsmenü auswählen. Der Standardwert für die Breite ist 100%, wenn Sie in den globalen Einstellungen für den E-Mail-Stil nichts angegeben haben. Andernfalls werden die globalen Einstellungen beachtet. <br><br>\![Ein doppelseitiger Pfeil mit einer Option zum Bearbeiten der Breite.]({% image_buster /assets/img_archive/content_block_width_updated.png %}){: style="max-width:30%;" }<br><br>
 
-Nachdem Sie den Content-Block zum E-Mail-Editor hinzugefügt haben, können Sie den Content-Block bearbeiten, ohne dass sich dies auf den ursprünglichen Content-Block auswirkt, den Sie in **Templates und Medien** erstellt haben. Das liegt daran, dass Content-Blöcke, die per Drag-and-Drop hinzugefügt werden, nicht mit dem ursprünglichen Content-Block verknüpft sind. Um alle Änderungen am ursprünglichen Content-Block anzuzeigen, ziehen Sie ihn erneut in den E-Mail-Editor. 
+Nachdem Sie den Content-Block zum E-Mail-Editor hinzugefügt haben, können Sie Änderungen am Content-Block vornehmen, die sich nicht auf den ursprünglichen Content-Block auswirken, den Sie in **Templates & Medien** erstellt haben. Das liegt daran, dass Content-Blöcke, die per Drag-and-Drop hinzugefügt werden, nicht mit dem ursprünglichen Content-Block verknüpft sind. Um alle Änderungen am ursprünglichen Content-Block anzuzeigen, ziehen Sie ihn erneut in den E-Mail-Editor. 
 
 Im Drag-and-Drop-Editor kann es zu Ausrichtungsfehlern kommen, wenn mehrere Content-Blöcke zu einem einzelnen Zeilenblock hinzugefügt werden. Versuchen Sie, separate Zeilenblöcke zu verwenden, um die Ausrichtung Ihres Contents auf Zeilenebene beizubehalten.
 
@@ -51,12 +51,12 @@ Um einen Content-Block mit Hilfe von Liquid hinzuzufügen, gehen Sie wie folgt v
 2. Klicken Sie auf <i class="fas fa-plus"></i> **Personalisierung**.
 3. Suchen Sie die Registerkarte **Personalisierung hinzufügen** und wählen Sie **Inhaltsblöcke** in der Dropdown-Liste **Personalisierungstyp**.
 4. Wählen Sie den Namen Ihres Inhaltsblocks im Feld **Attribut**. Das Liquid Snippet-Feld wird mit Ihrem Content Block Liquid Tag gefüllt. 
-5. Kopieren Sie das Liquid-Snippet und fügen Sie es in einen Texteditor-Block ein. <br>![Die Registerkarte Personalisierung hinzufügen mit Optionen.][2]{: style="max-width:30%;"}
+5. Kopieren Sie das Liquid-Snippet und fügen Sie es in einen Texteditor-Block ein. <br>\![Der Tab Personalisierung hinzufügen mit Optionen.]({% image_buster /assets/img_archive/dnd_content_block_personalization.png %}){: style="max-width:30%;"}
 
 Wenn Sie eine Vorschau Ihrer E-Mail-Nachrichten anzeigen, wird das Liquid-Snippet als Inhaltsblock des Drag-and-Drop-Editors angezeigt. 
 
 {% alert important %}
-Wenn ein Content-Block mit Liquid in den E-Mail-Editor eingefügt wird, ist dieser Content-Block mit dem ursprünglichen, in **Templates und Medien** erstellten Content-Block verknüpft. Das bedeutet, dass der Content-Block aktualisiert wird, um alle Änderungen an der ursprünglichen Content-Block-Template zu berücksichtigen.
+Wenn ein Content-Block in den E-Mail-Editor mit Liquid eingefügt wird, ist dieser Content-Block mit dem ursprünglichen Content-Block verknüpft, der in **Templates & Medien** erstellt wurde. Das bedeutet, dass der Content-Block aktualisiert wird, um alle Änderungen an der ursprünglichen Content-Block-Template zu berücksichtigen.
 {% endalert %}
 
 ## Aktualisieren von Content-Blöcken
@@ -65,5 +65,3 @@ Um einen vorhandenen Inhaltsblock zu aktualisieren, können Sie entweder den urs
 
 Um einen Inhaltsblock zu archivieren, gehen Sie zu **Vorlagen** > **Inhaltsblöcke**, wählen das vertikale Ellipsen-Symbol <i class="fas fa-ellipsis-vertical"></i> für den Inhaltsblock und klicken auf **Archivieren**. Wenn Sie einen Content-Block archivieren, enthalten Ihre Nachrichten weiterhin den Content des archivierten Blocks. Archivierte Content-Blöcke sind jedoch schreibgeschützt. Dearchivieren Sie daher den Content-Block, bevor Sie ihn bearbeiten. 
 
-[1]: {% image_buster /assets/img_archive/content_block_width.png %}
-[2]: {% image_buster /assets/img_archive/dnd_content_block_personalization.png %}

@@ -10,16 +10,16 @@ description: "This landing page is home to all things push notifications."
 > [Push notifications]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/) allow you to send out notifications from your app when important events occur. You might send a push notification when you have new instant messages to deliver, breaking news alerts to send, or the latest episode of your user's favorite TV show ready for them to download for offline viewing. They are also more efficient than background fetch, as your application only launches when necessary.
 
 {% sdktabs %}
+{% sdktab web %}
+{% multi_lang_include developer_guide/web/push_notifications.md %}
+{% endsdktab %}
+
 {% sdktab android %}
 {% multi_lang_include developer_guide/android/push_notifications.md %}
 {% endsdktab %}
 
 {% sdktab swift %}
 {% multi_lang_include developer_guide/swift/push_notifications.md %}
-{% endsdktab %}
-
-{% sdktab web %}
-{% multi_lang_include developer_guide/web/push_notifications.md %}
 {% endsdktab %}
 
 {% sdktab android tv %}
@@ -50,11 +50,7 @@ description: "This landing page is home to all things push notifications."
 {% multi_lang_include developer_guide/unity/push_notifications.md %}
 {% endsdktab %}
 
-{% sdktab unreal engine %}
-{% multi_lang_include developer_guide/unreal_engine/push_notifications.md %}
-{% endsdktab %}
-
-{% sdktab xamarin %}
+{% sdktab .NET MAUI (Xamarin)%}
 {% multi_lang_include developer_guide/xamarin/push_notifications.md %}
 {% endsdktab %}
 {% endsdktabs %}

@@ -41,18 +41,19 @@ There are no path parameters for this endpoint.
 | --------- | ---------| --------- | ----------- |
 | `campaign_id` | Required | String | The ID of your campaign. |
 | `message_variation_id` | Required | String | The ID of your message variation. |
-| `locale_name` | Required | String | The name of the locale. |
+| `locale_id`| Required | String | The ID (UUID) of the locale. |
+| `translation_map` | Required | Object | Object containing the new translations. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-Note all translation IDs are considered universal unique identifiers (UUIDs), which can be found in **Multi-Language Support** settings or in the GET request response.
+{% alert note %}
+All translation IDs are considered universal unique identifiers (UUIDs), which can be found in the GET endpoint's response.
+{% endalert %}
 
 ## Example request
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
-    "campaign_id": "e24404b3-3626-4de0-bdec-06935f3aa0ab", // CAMPAIGNS ONLY
+    "campaign_id": "e24404b3-3626-4de0-bdec-06935f3aa0ab",
     "message_variation_id": "f14404b3-3626-4de0-bdec-06935f3aa0ad",
     "locale_id": "h94404b3-3626-4de0-bdec-06935f3aa0ad",
     "translation_map": {
@@ -86,20 +87,5 @@ The status code `400` could return the following response body. Refer to [Troubl
 	]
 }
 ```
-
-
-## Troubleshooting
-
-The following table lists possible returned errors and their associated troubleshooting steps.
-
-| Error message  | Troubleshooting |
-|----|----------|
-| `The provided translations yielded errors when parsing. Please contact Braze for more information.` | Occurs when the third-party translator provides translations with exceptions that generate Liquid errors. Contact Braze Support for further assistance. |
-| `The provided translations are missing 'id_1', 'id_2'` | Translation IDs are mismatched or translated text exceeds limits. For example, this could mean the payload shape is missing fields in the translation object. Every message (when enabled for multi-language) should have a specific number of "translation blocks" with an ID associated with it. If the payload provided is missing any of the IDs, then this would be considered an incomplete object and result in an error. |
-| `The provided locale code does not exist.` | The third-party translator's payload contains a locale code that doesn't exist in Braze. |
-| `The provided translations have exceeded the maximum of 20MB.` | The provided payload exceeds the size limit. |
-| `You have exceeded the maximum number of requests. Please try again later.` | All Braze APIs have built-in rate limiting, and this error will automatically returned when the rate has exceeded the allotted amount for this authentication token. |
-| `This message does not support multi-language.` | This can occur when a message ID doesn't support multi-language messages yet. Only messages in the following channels can be translated: push, in-app messages, and email. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

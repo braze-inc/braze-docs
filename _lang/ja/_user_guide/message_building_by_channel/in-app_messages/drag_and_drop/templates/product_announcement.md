@@ -1,5 +1,5 @@
 ---
-nav_title: 製品発表
+nav_title: 製品の告知
 article_title: 製品発表
 alias: "/product_announcement/"
 page_order: 7
@@ -10,17 +10,17 @@ description: "このページでは、アプリ内メッセージのドラッグ
 
 > アプリ内メッセージのドラッグアンドドロップエディタを使用して、新製品のローンチに対する認識を高めます。
 
-{% multi_lang_include drag_and_drop/templates.md section='SDKの要件' %}
+{% multi_lang_include drag_and_drop/templates.md section='SDK requirements' %}
 
 ## 製品発表の作成
 
 ### ステップ1:テンプレートを選ぶ
 
-ドラッグアンドドロップのアプリ内メッセージを作成する場合は、テンプレートの**Product announement**を選択し、**Build message**を選択します。このテンプレートは、モバイルアプリとWebブラウザの両方でサポートされています。
+ドラッグアンドドロップアプリ内メッセージを作成する場合は、テンプレートの**製品アナウンス**を選択し、**メッセージの作成**を選択します。このテンプレートは、モバイルアプリとWebブラウザの両方でサポートされています。
 
-![製品アナウンスのテンプレートを含むアプリ内メッセージエディタ。]({% image_buster /assets/img/drag_and_drop/templates/product_announcement.png %})
+![プロダクトアナウンスのテンプレートを含むアプリ内メッセージエディタ。]({% image_buster /assets/img/drag_and_drop/templates/product_announcement.png %})
 
-### ステップ2:メッセージスタイルを設定する
+### ステップ 2:メッセージスタイルを設定する
 
 {% multi_lang_include drag_and_drop/templates.md section='message style' %}
 
@@ -28,7 +28,7 @@ description: "このページでは、アプリ内メッセージのドラッグ
 
 製品発表の作成を開始するには、エディタでボタンコンポーネントを選択します。次に、サイドメニューを使って、ユーザーがボタンを選択したときに移動する場所を選択します。デフォルトでは、テンプレートはメッセージを閉じますが、アプリ内の特定のページ(お知らせに記載されている製品のページなど)に移動することを選択できます。
 
-![アプリ内メッセージエディタで、ボタン要素をカスタマイズするためのサイドメニューがあります。]({% image_buster /assets/img/drag_and_drop/templates/product_announcement_button.png %})
+![ボタン要素をカスタマイズするためのサイドメニュー付きのアプリ内メッセージエディタ。]({% image_buster /assets/img/drag_and_drop/templates/product_announcement_button.png %})
 
 また、「**ページ**」セクションで製品発表にメッセージを追加し、それらを順番にリンクさせることもできます。たとえば、製品の機能を簡単に説明し、ユーザーを製品ページに連れて行くボタンで終わる一連のメッセージをまとめることができます。その方法については、[ページを接続する]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/?tab=adding%20pages#step-3a-connect-pages-together)を参照してください。
 

@@ -15,11 +15,11 @@ platform:
   - Unity
 ---
 
-# [![Braze ラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/sdk-integration-basics){: style="float:right;width:120px;border:0;" class="noimgborder"}はじめに：統合の概要
+# [![Braze ラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/sdk-integration-basics){: style="float:right;width:120px;border:0;" class="noimgborder"} はじめに：統合の概要
 
 > この記事では、オンボーディング・プロセスの基本的な概要を説明する。
 
-![発見、統合、品質保証、保守の4つのサークルのベン図は、「価値実現までの時間」を中心に描かれている。]({% image_buster /assets/img/getting-started/getting-started-integrate-flower.png %}){: style="max-width:50%;float:right;margin-left:15px;border:none;"} 
+![発見、統合、品質保証、保守という4つの円のベン図は、"価値実現までの時間 "を中心に描かれている。]({% image_buster /assets/img/getting-started/getting-started-integrate-flower.png %}){: style="max-width:50%;float:right;margin-left:15px;border:none;"} 
 
 技術リソースとして、Braze を技術スタックに統合することで、チームを強化できます。オンボーディングは大きく4つのステップに分けられる：
 * [発見と計画](#discovery)：チームと協力して、スコープを調整し、データとキャンペーンの構造を計画し、適切なワークスペース構造を作成する。 
@@ -44,7 +44,7 @@ platform:
 御社のオンボーディング期間中、Braze は技術概要セッションを開催します。エンジニアにはこれらのセッションに参加することを強く推奨する。技術概要セッションでは、プラットフォーム・アーキテクチャのスケーラビリティについて話し合ったり、同規模の企業が同様のユースケースで過去にどのように成功したかという実践的な事例を見たりすることができる。
 {% endalert %}
 
-![メール、ショッピングカート、画像、写真、ジオロケーションなど、さまざまなチャネルに対応するアイコン。]({% image_buster /assets/img/getting-started/data-graphic-2.png %}){: style="max-width:40%;float:right;margin-left:15px;"} 
+![メール、ショッピングカート、画像、ジオロケーションなど、さまざまなチャネル用のアイコン。]({% image_buster /assets/img/getting-started/data-graphic-2.png %}){: style="max-width:40%;float:right;margin-left:15px;"} 
 
 ### キャンペーン計画
 
@@ -225,9 +225,9 @@ Braze [GitHub](https://github.com/braze-inc/) を使用して、Braze プラッ�
 
 ## SDK レート制限 
 
-### 1か月あたりのアクティブユーザー数 CY 24-25 
+### CY24-25の月間アクティブユーザー数、ユニバーサルMAU、Web MAU、モバイルMAU  
 
-Monthly Active Users - CY 24-25 を購入した顧客に対しては、Braze は、セッション、ユーザー属性、イベント、その他のユーザープロファイルデータを更新するために SDK によって使用される API リクエストにサーバー側のレート制限を適用します。これはプラットフォームの安定性を確保し、高速で信頼性の高いサービスを維持するためである。 
+Monthly Active Users CY 24-25、Universal MAU、Web MAU、Mobile MAUを購入された顧客に対して、Brazeは、SDKがセッション、ユーザー属性、イベント、その他ユーザープロファイルデータを更新するために使用するAPIリクエストに対して、サーバー側のレート制限を実施します。これはプラットフォームの安定性を確保し、高速で信頼性の高いサービスを維持するためである。 
 
 * 時間単位のレート制限は、お客様が購入した月間アクティブユーザー数（MAU）、業界、季節性、またはその他の要因に対応する、お客様のアカウントで予想されるSDKトラフィックに応じて設定される。時間あたりのレート制限に達すると、Brazeは次の時間までリクエストをスロットルする。
 * すべてのレート制限リクエストは SDK によって自動的に再試行されます。

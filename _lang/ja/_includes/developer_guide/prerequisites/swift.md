@@ -1,3 +1,3 @@
 ## 前提条件
 
-この機能を使用する前に、[Swift Braze SDK]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=swift)を統合する必要があります。
+この機能を使う前に、[Swift Braze SDKを統合する]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=swift)必要がある。

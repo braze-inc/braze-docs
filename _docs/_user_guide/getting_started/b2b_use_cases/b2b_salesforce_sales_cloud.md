@@ -1,12 +1,12 @@
 ---
 nav_title: Salesforce Sales Cloud
-article_title: Managing leads with Salesforce Sales Cloud
+article_title: Manage leads with Salesforce Sales Cloud
 page_order: 3
 page_type: reference
 description: "Learn how to use Braze webhooks to create and update leads in Salesforce Sales Cloud through the Salesforce sobjects/Lead endpoint."
 ---
 
-# Managing leads with Salesforce Sales Cloud
+# Manage leads with Salesforce Sales Cloud
 
 > [Salesforce](https://www.salesforce.com/) is one of the world’s leading cloud-based Customer Relationship Management (CRM) platforms designed to help businesses manage their entire sales process, including lead generation, opportunity tracking, and account management.<br><br>This page demonstrates how to use Braze webhooks to create and update leads in Salesforce Sales Cloud through a community-submitted integration.
 
@@ -48,7 +48,7 @@ As your customer engagement platform, Braze can generate new leads based on user
 
 ### Step 2: Set up your webhook template
 
-Use templates to quickly re-use this webhook across the Braze platform. 
+Use templates to quickly reuse this webhook across the Braze platform. 
 
 1. In Braze, go to **Templates**, select **Webhook Templates**, then select **+ Create Webhook Template**.
 2. Provide a name for the template, such as “Salesforce Sales Cloud > Create Lead”.

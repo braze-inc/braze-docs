@@ -4,7 +4,7 @@ article_title: Programar tu campaña
 layout: dev_guide
 page_order: 3
 guide_top_header: "Programar tu campaña"
-guide_top_text: "Esta sección repasa los tres métodos de entrega que ofrece Braze (entrega programada, entrega basada en acciones y entrega activada por API) y cómo configurarlos y utilizarlos. En combinación con estos artículos, también le recomendamos que consulte nuestro curso Braze Learning de <a href='https://learning.braze.com/campaign-setup-delivery-targeting-conversions'>configuración de campañas</a>.<br><br>La elección del modo de difusión de su campaña es crucial para desarrollar una campaña eficaz. Afortunadamente, con Braze puedes controlar con precisión cuándo y cómo se envían tus campañas. <br><br>Todo experto en marketing sabe que el momento oportuno es clave, por lo que Braze ofrece múltiples opciones de programación que le permitirán llegar a los usuarios en el momento preciso. La amplia flexibilidad, sin embargo, puede causar incertidumbre sobre qué tipo de horario se ajusta mejor a los objetivos de tu campaña. Para ayudarle a sacar el máximo partido de Braze, hemos recopilado estos prácticos artículos que repasan sus opciones de programación, mejores prácticas y casos de uso."
+guide_top_text: "Esta sección repasa los tres métodos de entrega que ofrece Braze (Entrega programada, Entrega basada en acciones y Entrega desencadenada por API) y cómo configurarlos y utilizarlos. Junto con estos artículos, también te recomendamos que consultes nuestro curso de Braze Learning <a href='https://learning.braze.com/campaign-setup-delivery-targeting-conversions'>sobre Configuración de campañas</a>.<br><br>Elegir cómo se entrega tu campaña es crucial para desarrollar una campaña eficaz. Afortunadamente, con Braze tienes un control preciso sobre cuándo y cómo se envían tus campañas. <br><br>Todo especialista en marketing sabe que el momento es la clave, y por eso Braze ofrece múltiples opciones de programación que te permitirán llegar a los usuarios precisamente en el momento adecuado. La amplia flexibilidad, sin embargo, puede causar incertidumbre sobre qué tipo de horario se ajusta mejor a los objetivos de tu campaña. Para ayudarte a sacar el máximo partido de Braze, hemos seleccionado estos prácticos artículos que repasan tus opciones de programación, mejores prácticas y casos de uso."
 
 page_type: landing
 description: "Esta sección repasa los tres métodos diferentes de entrega de campañas (Entrega programada, Entrega basada en acciones y Entrega activada por API) y cómo configurarlos y utilizarlos."
@@ -27,7 +27,7 @@ guide_menu_list:
   - name: Reelegibilidad para las campañas
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/reeligibility/
     image: /assets/img/braze_icons/clock.svg
-  - name: Calendario de la campaña
+  - name: Calendario de campaña
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/campaign_calendar/
     image: /assets/img/braze_icons/calendar-check-02.svg
 ---

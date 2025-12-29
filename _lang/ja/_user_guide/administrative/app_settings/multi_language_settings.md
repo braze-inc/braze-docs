@@ -26,14 +26,14 @@ description: "この記事では、Braze ダッシュボードの多言語設定
 4. 選択したロケールオプションに対応するユーザー属性を選択します。
 
 {% tabs %}
-{% tab デフォルトのロケール %}
+{% tab Default locale %}
 
-**デフォルトロケール**の場合、ドロップダウンを使用して、追加する言語、およびオプションで言語に関連付ける国を選択します。<br><br>![言語と国を指定するための「ロケールの追加 - デフォルトの言語と国」というウィンドウ。]({% image_buster /assets/img/multi-language_support/default_option.png %}){: style="max-width:80%;"}
+**デフォルトロケール**の場合、ドロップダウンを使用して、追加する言語、およびオプションで言語に関連付ける国を選択します。<br><br>!["Add locale - Default Language and Country" というウィンドウで、言語と国を指定します。]({% image_buster /assets/img/multi-language_support/default_option.png %}){: style="max-width:80%;"}
 
 {% endtab %}
-{% tab カスタム属性 %}
+{% tab Custom attributes %}
 
-**Custom Attributes** の場合、ドロップダウンを使用して関連付けられたカスタム属性を選択し、テキストフィールドに値を入力します。<br><br>![カスタム属性と値を指定するための「ロケールの追加-カスタム属性」というウィンドウ。]({% image_buster /assets/img/multi-language_support/custom_attributes_option.png %}){: style="max-width:80%;"}
+**Custom Attributes** の場合、ドロップダウンを使用して関連付けられたカスタム属性を選択し、テキストフィールドに値を入力します。<br><br>!["Add locale - カスタム属性 s" というウィンドウで、カスタム属性と数値を指定します。]({% image_buster /assets/img/multi-language_support/custom_attributes_option.png %}){: style="max-width:80%;"}
 
 {% endtab %}
 {% endtabs %}

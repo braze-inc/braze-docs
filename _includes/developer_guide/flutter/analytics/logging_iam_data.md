@@ -58,7 +58,7 @@ The in-app message data is automatically forwarded from the Android layer.
 
 You can forward in-app message data in one of two ways:
 
-{% subtab ui deligate %}
+{% subtab UI Delegate %}
 
 1. Implement the `BrazeInAppMessageUIDelegate` delegate as described in our iOS article on [core in-app message delegate](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c1-inappmessageui).
 

@@ -1,5 +1,5 @@
 ---
-nav_title: "SAML とシングルサインオン"
+nav_title: "SAMLとシングルサインオン"
 article_title: SAML とシングルサインオン
 page_order: 5
 layout: dev_guide

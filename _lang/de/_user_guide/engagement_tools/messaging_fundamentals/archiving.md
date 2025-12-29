@@ -18,7 +18,7 @@ tool:
 Wenn Sie eine Kampagne oder ein Canvas archivieren, werden Ihnen keine Nachrichten mehr zugestellt und Ihre In-App-Nachrichten werden nicht mehr angezeigt. Sie können die Ergebnisse auch nach der Archivierung noch einsehen, aber Sie können die Kampagne oder den Canvas nicht mehr bearbeiten. Dazu müssen Sie die Datei zunächst [entarchivieren](#unarchiving-campaigns-and-canvases).
 
 {% tabs local %}
-{% tab Kampagne %}
+{% tab campaign %}
 So archivieren Sie eine Kampagne:
 
 1. Gehen Sie zu **Messaging** > **Kampagnen**.
@@ -26,7 +26,7 @@ So archivieren Sie eine Kampagne:
 3. Wählen Sie **Archiv**.
 {% endtab %}
 
-{% tab Canvas %}
+{% tab canvas %}
 So archivieren Sie ein Canvas:
 
 1. Gehen Sie zu **Messaging** > **Canvas**.
@@ -39,4 +39,4 @@ So archivieren Sie ein Canvas:
 
 Wenn Sie die Archivierung einer Kampagne oder eines Canvas aufheben, wird die Kampagne oder das Canvas nicht live geschaltet, sondern ihr Status wird lediglich in **Aktiv** geändert. Nachdem Sie die Archivierung aufgehoben haben, können Sie die Nachricht bearbeiten und überprüfen, wie sie aufgebaut ist, ohne dass Nachrichten gesendet werden.
 
-Um die Kampagne oder den Canvas fortzusetzen und mit dem Versenden von Nachrichten zu beginnen, wählen Sie das Menü g<i class="fas fa-ellipsis-vertical"></i> für die entsprechende Zeile und wählen Sie **Fortsetzen**.
+Um die Kampagne oder den Canvas fortzusetzen und mit dem Versenden von Nachrichten zu beginnen, wählen Sie das Menü <i class="fas fa-ellipsis-vertical"></i> für die entsprechende Zeile und wählen Sie **Fortsetzen**.

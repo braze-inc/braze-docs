@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Nexla
 
-> [Nexla](https://www.nexla.com) is a leader in unified data operations and a 2021 Gartner Cool Vendor. The Nexla platform makes it simple for anyone to create scalable data flows, delivering zero-friction, governed data operations, better collaboration, and agility for business and data teams. Teams working with data get a no/low-code unified experience to integrate, transform, provision, and monitor data for any use case. 
+> [Nexla](https://www.nexla.com) is a leader in unified data operations and a 2021 Gartner Cool Vendor. The Nexla platform provides tools for creating scalable data flows, delivering governed data operations, collaboration, and agility for business and data teams. Teams working with data get a no/low-code unified experience to integrate, transform, provision, and monitor data for any use case. 
 
 The Braze and Nexla integration allows customers that use [Currents]({{site.baseurl}}/user_guide/data/braze_currents/setting_up_currents/) to leverage Nexla to extract, transform, and load data lake data to other locations in a custom format, making data easily accessible across your entire ecosystem.
 
@@ -25,7 +25,7 @@ The Braze and Nexla integration allows customers that use [Currents]({{site.base
 
 ## Use cases
 
-Nexla's data-as-a-product, [Nexsets](https://nexla.zendesk.com/hc/en-us/articles/360052999674-Dataset-Information), make it easy to work with data of any format without worrying about metadata. When you set up your data flows to or from Braze with Nexla, no-code tools make it easy and available in minutes. After the data flow is set to a destination, Nexla will monitor your flow and scale to any amount of data.
+Nexla's data-as-a-product, [Nexsets](https://nexla.zendesk.com/hc/en-us/articles/360052999674-Dataset-Information), enables working with data of any format without managing metadata. When you set up data flows to or from Braze with Nexla, no-code tools are available within minutes. After the data flow is set to a destination, Nexla monitors the flow and scales to any amount of data.
 
 ## Integration
 
@@ -41,7 +41,7 @@ If you do not already have a Nexla account, head to the Nexla [website](https://
 3. Select **Add a New Credential**, name the credential, add your Braze API key and REST endpoint, and **Save**.
 4. Lastly, select your data and click **Save**. 
 
-Nexla will now search the source for any data it finds and generate a [Nexset](https://nexla.zendesk.com/hc/en-us/articles/360052999674-Dataset-Information) for transformation or sending to destination.
+Nexla will search the source for available data and generate a [Nexset](https://nexla.zendesk.com/hc/en-us/articles/360052999674-Dataset-Information) for transformation or sending to a destination.
 
 #### If Braze is your destination
 

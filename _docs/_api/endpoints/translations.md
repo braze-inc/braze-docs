@@ -16,28 +16,28 @@ guide_featured_list:
   - name: "GET: View Translation for a Campaign"
     link: /docs/api/endpoints/translations/campaigns/get_translation_campaign/
     image: /assets/img/braze_icons/message-plus-square.svg
-  - name: "GET: View All Translations for a Campaign"
-    link: /docs/api/endpoints/translations/campaigns/get_bulk_translations_campaigns/
-    image: /assets/img/braze_icons/message-plus-square.svg
   - name: "PUT: Update Translation in a Campaign"
     link: /docs/api/endpoints/translations/campaigns/put_update_translation_campaign/
     image: /assets/img/braze_icons/target-04.svg
+  - name: "GET: View Campaign Default Source Translations"
+    link: /docs/api/endpoints/translations/campaigns/get_source_campaign/
+    image: /assets/img/braze_icons/message-plus-square.svg
 
 guide_menu_title: "Canvas endpoints"
 guide_menu_list:
   - name: "GET: View Translation for a Canvas"
     link: /docs/api/endpoints/translations/canvas/get_translation_canvas/
     image: /assets/img/braze_icons/message-plus-square.svg
-  - name: "GET: View All Translations for a Canvas"
-    link: /docs/api/endpoints/translations/canvas/get_bulk_translations_canvases/
-    image: /assets/img/braze_icons/message-plus-square.svg
   - name: "PUT: Update Translation in a Canvas"
     link: /docs/api/endpoints/translations/canvas/put_update_translation_canvas/
     image: /assets/img/braze_icons/target-04.svg
-  
+  - name: "GET: View Canvas Default Source Translations"
+    link: /docs/api/endpoints/translations/canvas/get_source_canvas/
+    image: /assets/img/braze_icons/message-plus-square.svg
+
 guide_menu_title2: "Email template endpoints"
 guide_menu_list2:
-  - name: "GET: View Source Translation"
+  - name: "GET: View Email Template Default Source Translations"
     link: /docs/api/endpoints/translations/email_templates/get_view_source_template/
     image: /assets/img/braze_icons/message-plus-square.svg
   - name: "GET: View Specific Translation and Locale"

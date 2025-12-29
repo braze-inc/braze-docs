@@ -10,9 +10,9 @@ tool: Currents
 
 # How Braze uses Currents
 
-> Braze uses Currents! That's right, we like our own product enough to use it in conjunction with a few of [our partners]({{site.baseurl}}/user_guide/data/braze_currents/available_partners/).
+> Braze uses Currents internally with selected [partners]({{site.baseurl}}/user_guide/data/braze_currents/available_partners/).
 
-We filter our data from our email and push campaigns into a business insights tool, Looker, but it takes an interesting route to get there. We use a slightly inverted version of the Extract, Transform, Load (ETL) methodology—we just switch up the order to Extract, Load, Transform (ELT)!
+We filter our data from email and push campaigns into a business insights tool, Looker, but it takes a slightly different route to get there. We use an inverted version of the Extract, Transform, Load (ETL) methodology—switching the order to Extract, Load, Transform (ELT).
 
 ## Step 1: Intake and aggregate event data
 
@@ -22,7 +22,7 @@ After launching campaigns using any of our engagement tools (like campaigns or C
 
 We set up Currents to send Braze event data to Amazon S3 for storage and extraction. Now, we do know that you can use [Athena](https://aws.amazon.com/athena/) to sit on top of S3 and run queries. It's a great short-term solution. But we wanted a long-term solution using a Relational Database and a Business Intelligence/Analytics tool. (We recommend that same for you.)
 
-We think of S3 as our keys to the castle! It opens up the door to so many possibilities for moving, pivoting, and analyzing our data by transferring it where we need it to go. However, we are careful not to transform our data in S3, as we have a very specific structure for it.
+S3 provides flexible storage and routing options for moving, pivoting, and analyzing data. We do not transform data in S3 because we maintain a specific structure for it.
 
 ## Step 3: Transform event data with a relational database
 
@@ -34,7 +34,7 @@ Snowflake isn't the only warehouse option. Other options include [Redshift](http
 
 Snowflake Reader Accounts offer users access to the same data and functionality as [Snowflake Data Sharing]({{site.baseurl}}/partners/snowflake/), all without requiring a Snowflake account or customer relationship with Snowflake. With Reader Accounts, Braze will create and share your data into an account and provide you credentials to log in and access your data. This will result in all data sharing and usage billing being handled entirely by Braze. 
 
-To learn more, reach out to your customer success manager.
+To learn more, contact your customer success manager.
 
 #### Additional resources
 For helpful usage monitoring resources, check out Snowflake's [Resource Monitors](https://docs.snowflake.com/en/user-guide/resource-monitors.html) and [Viewing Warehouse Credit Usage](https://docs.snowflake.com/en/user-guide/credits.html#viewing-warehouse-credit-usage-for-your-account) articles.

@@ -204,10 +204,82 @@ empty_swift_file.swift
 {% endtab %}
 {% endtabs local %}
 
-### Schritt 2: Aktualisieren Sie Ihren App-Delegierten
+### Schritt 2: Verzögerte Initialisierung einrichten (optional)
+
+Sie können die Initialisierung des Braze Swift SDK verzögern. Das ist nützlich, wenn Ihre App die Konfiguration laden oder auf die Zustimmung des Nutzers:innen warten muss, bevor Sie das SDK starten. Die verzögerte Initialisierung stellt sicher, dass Push-Benachrichtigungen von Braze in die Warteschlange gestellt werden, bis das SDK bereit ist.
+
+Um dies zu ermöglichen, rufen Sie `Braze.prepareForDelayedInitialization()` so früh wie möglich auf - idealerweise innerhalb oder vor Ihrem `application(_:didFinishLaunchingWithOptions:)`.
 
 {% alert note %}
-Im Folgenden wird davon ausgegangen, dass Sie bereits eine `AppDelegate` zu Ihrem Projekt hinzugefügt haben (die nicht standardmäßig generiert wird). Wenn Sie dies nicht vorhaben, sollten Sie das Braze SDK so früh wie möglich initialisieren, z.B. beim Start der App.
+Dies gilt nur für Push-Benachrichtigungen von Braze. Andere Push-Benachrichtigungen werden normalerweise von Systemdelegierten bearbeitet.
+{% endalert %}
+
+{% tabs %}
+{% tab Swift %}
+{% subtabs local %}
+{% subtab UIKit %}
+```swift
+func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+  // Prepare the SDK for delayed initialization
+  Braze.prepareForDelayedInitialization()
+
+  // ... Additional non-Braze setup code
+
+  return true
+}
+```
+{% endsubtab %}
+
+{% subtab SwiftUI %}
+```swift
+@main
+struct MyApp: App {
+  @UIApplicationDelegateAdaptor var appDelegate: AppDelegate
+
+  var body: some Scene {
+    WindowGroup {
+      ContentView()
+    }
+  }
+}
+
+class AppDelegate: NSObject, UIApplicationDelegate {
+  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+    // Prepare the SDK for delayed initialization
+    Braze.prepareForDelayedInitialization()
+
+    // ... Additional non-Braze setup code
+
+    return true
+  }
+}
+```
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+
+{% tab Objective-C %}
+```objc
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+  // Prepare the SDK for delayed initialization
+  [Braze prepareForDelayedInitialization];
+  
+  // ... Additional non-Braze setup code
+
+  return YES;
+}
+```
+{% endtab %}
+{% endtabs %}
+
+{% alert note %}
+[`Braze.prepareForDelayedInitialization(pushAutomation:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/preparefordelayedinitialization(pushautomation:)) akzeptiert einen optionalen Parameter `pushAutomation`. Bei der Einstellung `nil` sind alle Features der Push-Automatisierung aktiviert, mit Ausnahme der Anfrage zur Push-Autorisierung beim Start.
+{% endalert %}
+
+### Schritt 3: Aktualisieren Sie Ihren App-Delegierten
+
+{% alert important %}
+Im Folgenden wird davon ausgegangen, dass Sie Ihrem Projekt bereits eine `AppDelegate` hinzugefügt haben (die nicht standardmäßig erstellt wird). Wenn Sie dies nicht vorhaben, sollten Sie das Braze SDK so früh wie möglich initialisieren, z.B. beim Start der App.
 {% endalert %}
 
 {% subtabs local %}

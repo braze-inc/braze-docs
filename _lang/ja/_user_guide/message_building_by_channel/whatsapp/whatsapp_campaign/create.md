@@ -30,10 +30,10 @@ WhatsApp メッセージを作成する前に、[WhatsApp の概要]({{site.base
 WhatsAppは言語ごとに異なる[メッセージテンプレートを](#template-messages)作成する。ユーザーに適切なテンプレートを提供するために、セグメンテーションを使って言語ごとにキャンペーンを作成するか、キャンバスを使う。
 {% endalert %}
 
-メッセージは、キャンペーンとキャンバスのどちらを使用して配信すべきでしょうか。キャンペーンは単一のシンプルなメッセージングキャンペーンに適していますが、キャンバスはマルチステップのユーザーのジャーニーに適しています。
+メッセージは、キャンペーンとキャンバスのどちらを使用して配信すべきでしょうか。キャンペーン s は単一のターゲットメッセージング キャンペーンに適していますが、キャンバスは複数ステップ ユーザーのジャーニーに適しています。
 
 {% tabs %}
-{% tab キャンペーン %}
+{% tab Campaign %}
 
 **ステップ:**
 
@@ -49,7 +49,7 @@ WhatsAppは言語ごとに異なる[メッセージテンプレートを](#templ
 {% endalert %}
 
 {% endtab %}
-{% tab キャンバス %}
+{% tab Canvas %}
 
 **ステップ:**
 
@@ -71,24 +71,25 @@ WhatsAppは言語ごとに異なる[メッセージテンプレートを](#templ
 
 ユースケースに応じて WhatsApp [テンプレートメッセージ](#template-messages)を作成するか、応答メッセージを作成します。ビジネス主導の会話は承認されたテンプレートから始めなければならないが、応答メッセージは24時間以内のユーザーからのインバウンドメッセージへの応答で使用できる。
 
-![「メッセージバリアント」セクションでは、サブスクリプショングループを 1 つと、2 つのメッセージタイプのいずれかを選択できます。WhatsApp テンプレートメッセージとレスポンスメッセージ]({% image_buster /assets/img/whatsapp/whatsapp_message_variants.png %}){: style="max-width:80%;"}
+![「メッセージバリアント」セクションでは、サブスクリプショングループを 1 つと、2 つのメッセージタイプのいずれかを選択できます。WhatsApp テンプレートメッセージとレスポンスメッセージ。]({% image_buster /assets/img/whatsapp/whatsapp_message_variants.png %}){: style="max-width:80%;"}
 
-#### テンプレートメッセージ
+{% tabs %}
+{% tab Template messages %}
 
 [承認済みの WhatsApp テンプレートメッセージ]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/#step-3-create-whatsapp-templates
 )を使って WhatsApp ユーザーと会話を始めることができます。これらのメッセージは事前に WhatsApp に提出され、コンテンツの承認を受けますが、承認には最大 24 時間かかります。コピーを編集した場合は、WhatsApp に再送信する必要があります。
 
 無効なテキストフィールド(灰色でハイライト)は、承認されたWhatsAppテンプレートの一部であるため、編集することはできない。無効化されたテキストを更新するには、テンプレートを編集し、再承認を得る必要がある。
 
-##### 言語
+#### 言語
 
 各テンプレートには言語が割り当てられているため、ユーザーマッチングを正しく設定するには、言語ごとにキャンペーンまたはキャンバスのステップを作成する必要がある。例えば、インドネシア語と英語が割り当てられたテンプレートを使用するキャンバスを作成する場合、インドネシア語テンプレート用のキャンバスステップと英語テンプレート用のキャンバスステップを作成する必要があります。
 
-![]({% image_buster /assets/img/whatsapp/whatsapp_templates.png %}) メッセージのプレビュー、割り当てられた言語、承認ステータスを含むテンプレートのリスト。{: style="max-width:80%;"}
+![メッセージのプレビュー、割り当てられた言語、承認されたステータスを含むテンプレートのリスト。]({% image_buster /assets/img/whatsapp/whatsapp_templates.png %}){: style="max-width:80%;"}
 
 右から左に書かれた言語でコピーを追加する場合、右から左に書かれたメッセージの最終的な見た目は、サービスプロバイダーがどのようにそれらをレンダリングするかに大きく左右されることに注意してください。右から左へのメッセージを可能な限り正確に表示するためのベストプラクティスについては、[右から左へのメッセージを作成する]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/)を参照してください。
 
-##### 変数
+#### 変数
 
 Meta Business Manager で WhatsApp テンプレートを作成する際に変数を追加した場合、それらはメッセージ作成画面に空白として表示されます。これらの空白をリキッドまたはプレーンテキストに置き換える。プレーン・テキストを使うには、二重中括弧で囲まれた "text here "という書式を使う。テンプレートのビルド時にイメージを含めることを選択した場合は、メディアライブラリからイメージをアップロードまたは追加するか、イメージのURL を参照することができます。
 
@@ -100,13 +101,14 @@ Liquidを使用する場合は、受信者のユーザープロファイルが�
 {% endraw %}
 {% endalert %}
 
-![パーソナライゼーションの追加ツール。属性は "first_name"、デフォルト値は "you"。]({% image_buster /assets/img/whatsapp/whatsapp7.png %}){: style="max-width:80%;"}
+![属性"first_name" およびデフォルト値"you" を使用したカスタマイズの追加ツール。]({% image_buster /assets/img/whatsapp/whatsapp7.png %}){: style="max-width:80%;"}
 
-#### ダイナミック・リンク 
+### ダイナミック・リンク 
 
-コールトゥアクション URL は、Meta では `{% raw %}https://example.com/{{variable}}{% endraw %}` のように URL の末尾になければなりませんが、URL に変数を含めることができます。この変数は Braze で Liquid に置き換えることができます。リンクはテンプレートの一部として本文に含めることもできる。現時点では、どちらのリンクも短縮することはできない。 
+コールトゥアクション URL は、Meta では `{% raw %}https://example.com/{{variable}}{% endraw %}` のように URL の末尾になければなりませんが、URL に変数を含めることができます。この変数は Braze で Liquid に置き換えることができます。リンクはテンプレートの一部として本文に含めることもできる。これらのリンクは両方とも、[クリック"トラッキング]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/click_tracking/)を使用して短縮し、追跡できます。
 
-#### 応答メッセージ
+{% endtab %}
+{% tab Response messages %}
 
 ユーザーからのインバウンドメッセージに返信するために、応答メッセージを使うことができます。これらのメッセージは、作成中に Braze のアプリ内で作成され、いつでも編集できます。Liquid を使えば、応答メッセージの言語を適切なユーザーに合わせることができます。
 
@@ -117,13 +119,16 @@ Liquidを使用する場合は、受信者のユーザープロファイルが�
 - Call-to-actionボタン
 - リストメッセージ
 
-![]({% image_buster /assets/img/whatsapp/whatsapp_response_messages.png %}) 新規ユーザーを割引コードで歓迎する返信メッセージの作成画面。{: style="max-width:80%;"}
+![新規ユーザーを割引コードで歓迎する返信メッセージの作成者。]({% image_buster /assets/img/whatsapp/whatsapp_response_messages.png %}){: style="max-width:80%;"}
+
+{% endtab %}
+{% endtabs %}
 
 ### ステップ 3: メッセージをプレビューしてテストする
 
 Brazeでは、メッセージを送信する前にプレビューしてテストすることを常に推奨している。[**テスト**] タブに切り替えて、[コンテンツテストグループ]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups)または個々のユーザーにテスト用の WhatsApp メッセージを送信するか、ユーザーとしてメッセージを Braze で直接プレビューします。
 
-![カスタムユーザー Max のプレビューメッセージ。]({% image_buster /assets/img/whatsapp/whatsapp8.png %}){: style="max-width:80%;"}
+![「最大」という名前のカスタムユーザーのプレビュー表示。]({% image_buster /assets/img/whatsapp/whatsapp8.png %}){: style="max-width:80%;"}
 
 {% alert note %}
 テストメッセージを含む応答メッセージを送信するには、会話ウィンドウが必要です。会話ウィンドウを開くには、このメッセージに使用する購読グループに関連付けられている電話番号にWhatsAppメッセージを送信する。関連する電話番号は、**Test**タブのアラートに表示される。
@@ -134,7 +139,7 @@ Brazeでは、メッセージを送信する前にプレビューしてテスト
 ### ステップ 4: キャンペーンまたはキャンバスの残りの部分を作成する
 
 {% tabs %}
-{% tab キャンペーン %}
+{% tab Campaign %}
 
 次に、キャンペーンの残りの部分を作成します。WhatsAppメッセージ作成に最適なツールの使い方については以下のセクションを参照。
 
@@ -150,6 +155,8 @@ WhatsApp メッセージは、スケジュールされた時刻、アクショ�
 
 次に、セグメントまたはフィルターを選択して[ユーザーをターゲットに設定]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/)し、オーディエンスを絞り込む必要があります。すでにサブスクリプショングループを選択しているため、ユーザーがブランドに対して希望しているコミュニケーションの頻度やカテゴリによって、ユーザーが絞り込まれます。このステップでは、セグメントからより多くのオーディエンスを選択し、フィルターを使ってさらにセグメントを絞り込みます。セグメントのおおよその人数について現在の状態を示すスナップショットが自動的に表示されます。正確なセグメントメンバーシップは常にメッセージが送信される直前に計算されることに注意してください。
 
+{% multi_lang_include target_audiences.md %}
+
 #### コンバージョンイベントを選択する
 
 Braze では、キャンペーンを受信した後、ユーザーが指定のアクションや[コンバージョンイベント]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/)を実行する頻度を追跡できます。ユーザーが指定されたアクションを取った場合、コンバージョンがカウントされる最大30日間のウィンドウを許可することができる。
@@ -158,7 +165,7 @@ Braze では、キャンペーンを受信した後、ユーザーが指定の�
 
 {% endtab %}
 
-{% tab キャンバス %}
+{% tab Canvas %}
 
 キャンバスコンポーネントが完成していない場合は、残りのセクションを完成させます。キャンバスの残りの部分の構築方法、多変量テストとインテリジェントセレクションの実装方法などの詳細については、キャンバスドキュメントの「[キャンバスを構築する」]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create/)ステップを参照のこと。
 
@@ -185,11 +192,15 @@ Braze を介して送信するアウトバウンド WhatsApp メッセージで�
 | 本文テキスト | 文字列と可変パラメーターがサポートされている。 | - | - |
 | フッターテキスト | 文字列と可変パラメーターがサポートされている。 | - | - |
 | CTAリンク | 様々なコール・トゥ・アクション（CTA）タイプがサポートされている。詳しくは「[コールトゥアクションの種類](#ctas)」を参照してください。 | - | - |
-| 画像 | 画像を本文の中に埋め込むことができます。8ビットで、RGBまたはRGBAのカラーモデルを使用しなければならない。 | < 5 MB | `.png``.jpg` 、 `.jpeg` |
+| 画像 | 画像を本文の中に埋め込むことができます。8ビットで、RGBまたはRGBAのカラーモデルを使用しなければならない。 | < 5 MB | `.png`, `.jpg`、 `.jpeg` |
 | 文書 | 文書を本文の中に埋め込むことができます。ファイルは URL でホストされている必要があります。 | < 100 MB | `.txt``.xls`,`.xlsx`,`.doc`,`.docx`,`.ppt`,`.pttx` 、 `.pdf` |
 | 動画 | 動画を本文の中に埋め込むことができます。これらのファイルは URL または [Braze メディアライブラリ]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library)でホストされていなければなりません。 | < 16 MB | `.3gp`, `.mp4` |
 | オーディオ | 音声はレスポンシブ・メッセージングでのみサポートされる。ファイルは URL でホストされている必要があります。 | < 16 MB | `.aac``.amr`,`.mp3`,`.mp4` 、 `.ogg` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
+
+{% alert important %}
+メタには既知の問題があり、MP4 動画がAndroid機器で再生されるのを防ぐことができます。これは、エンコードやコンテナーの設定によって異なります。恒久的な修正が使用できるようになるまで、MP4 ファイルを再フォーマットするとほとんどの送信者の問題が解決されます。Android機器のすべての動画を検査し、適切な納品性を確認します。<br><br>MP4 ファイルは、[CloudConvert](https://cloudconvert.com/mp4-converter) などのウェブツールを使用してMP4 で再フォーマットできます。MP4 ファイルをツールに読み込むし、再度MP4 に変換してから、変換したファイルをダウン読み込むします。
+{% endalert %}
 
 ### インバウンドメッセージ
 
@@ -214,7 +225,7 @@ Brazeを通じて送信するWhatsAppメッセージでは、以下のコール�
 | ウェブサイトを見る | 最大1ボタン（可変パラメーターを含む）。 |
 | 電話番号にかける | メッセージテンプレートのみで利用可能。<br>ボタンは最大 1 つ。 |
 | カスタムクイック返信ボタン | ボタンは最大 3 つ。 |
-| マーケティング・オプトアウト・ボタン | デフォルトでは、サブスクリプションのステータスは自動更新されない。詳しい説明は、[オプトインとオプトアウトを]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/opt-ins_and_opt-outs/#marketing-opt-out-selection)参照のこと。 |
+| マーケティング・オプトアウト・ボタン | デフォルトでは、サブスクリプションのステータスは自動更新されない。フルウォークスルーについては、[Opt-ins &Opt-Outs]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/opt-ins_and_opt-outs/#marketing-opt-out-selection)を参照してください。 |
 | クーポンコードメッセージテンプレート | メッセージテンプレートのみで利用可能。<br>これらのテンプレートは、他のメッセージテンプレートと同様に開いたり編集したりできます。また、Liquid と Braze のプロモーションコードと互換性があります。 |
 | CTA応答メッセージ  | アクションへの呼び出しボタンを含む応答メッセージを作成します。 |
 | [応答メッセージをリストする]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/user_messages/#list-messages) | ユーザーが選択できる最大10個のオプションのリストを含む応答メッセージを作成します。 |

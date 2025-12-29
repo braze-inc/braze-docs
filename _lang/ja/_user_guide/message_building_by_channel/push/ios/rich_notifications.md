@@ -59,7 +59,7 @@ Braze はベストプラクティスとして、モバイルプッシュ通知�
 </table>
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 }
 
-![ロック画面に表示されるプッシュ通知の例。展開した場合と、デバイスがアクティブな場合。]({% image_buster /assets/img_archive/push_ios_notification_states.png %})
+![ロック画面に表示される押し、展開されるとき、および機器が有効なときのプッシュ通知を例示します。]({% image_buster /assets/img_archive/push_ios_notification_states.png %})
 
 {% alert note %}
 プッシュ通知の拡大には2:1のアスペクト比を推奨しているが、ほぼすべてのアスペクト比に対応している。画像は常に通知の幅いっぱいに表示され、高さはそれに応じて調整される。
@@ -70,43 +70,43 @@ Braze はベストプラクティスとして、モバイルプッシュ通知�
 コンテンツを作成する際には、テキストの表示量に影響する可能性のある以下のシナリオを考慮すること。
 
 {% tabs %}
-{% tab タイミング %}
+{% tab Timing %}
 
 ユーザーがプッシュ通知に反応したタイミングに応じて、タイムスタンプではタイトルテキストを短くすることができます。
 
-![タイムスタンプ "now"、タイトル文字数35のプッシュ通知例]({% image_buster/assets/img_archive/push_ios_timing_35.png %})
+![タイムスタンプが"now"タイトル文字数が35のサンプルプッシュ通知。]({% image_buster/assets/img_archive/push_ios_timing_35.png %})
 <br>タイトルの文字数：**35**
 
-![タイムスタンプが "3h ago"、タイトル文字数が33のプッシュ通知例]({% image_buster/assets/img_archive/push_ios_timing_33.png %})
+![タイムスタンプが"3h ago"タイトル文字数が33のサンプルプッシュ通知。]({% image_buster/assets/img_archive/push_ios_timing_33.png %})
 <br>タイトルの文字数：**33**
 
-![タイムスタンプが "Yesterday, 8:37 AM"、タイトル文字数が22のプッシュ通知例]({% image_buster/assets/img_archive/push_ios_timing_22.png %})
+![タイムスタンプが&quot、昨日午前8時37分&quot、タイトル文字数が22のサンプルプッシュ通知。]({% image_buster/assets/img_archive/push_ios_timing_22.png %})
 <br>タイトルの文字数：**22**
 
 {% endtab %}
-{% tab 画像 %}
+{% tab Images %}
 
 画像がある場合、本文は1行につき約10文字短くなる。
 
-![画像なし、本文文字数179のプッシュ通知例]({% image_buster/assets/img_archive/push_ios_images_179.png %})
+!["画像がなく、本文文字数が179 のプッシュ通知の例。]({% image_buster/assets/img_archive/push_ios_images_179.png %})
 <br>本文の文字数: **179**
 
-![画像と本文の文字数が154のプッシュ通知例]({% image_buster/assets/img_archive/push_ios_images_154.png %})
+!["画像と本文文字数が154 のプッシュ通知の例。]({% image_buster/assets/img_archive/push_ios_images_154.png %})
 <br>本文の文字数: **154**
 
 {% endtab %}
-{% tab 中断レベル %}
+{% tab Interruption level %}
 
 iOS15では、Time Sensitive とCritical の表記は、タイトルをタイムスタンプのない新しい行に押し下げ、少しスペースを与える。
 
-![]({% image_buster/assets/img_archive/push_ios_interruption_level_35.png %}) 「Time Sensitive」または「Critical」の表記がなく、タイトル文字数が35のプッシュ通知例。
+![タイムセンシティブまたはクリティカルなデノテーションがなく、タイトル文字数が35 のサンプルプッシュ通知。]({% image_buster/assets/img_archive/push_ios_interruption_level_35.png %})
 <br>タイトルの文字数：**35**
 
-![「Time Sensitive」の表記があり、タイトル文字数が 39 のプッシュ通知例。]({% image_buster/assets/img_archive/push_ios_interruption_level_39.png %})
+![Time Sensitive デノテーションとタイトル文字数が39 のサンプルプッシュ通知。]({% image_buster/assets/img_archive/push_ios_interruption_level_39.png %})
 <br>タイトルの文字数：**39**
 
 {% endtab %}
-{% tab もっと見る %}
+{% tab More %}
 
 以下の詳細は、テキストの切り捨てにも影響します。
 
@@ -131,7 +131,7 @@ iOS15では、Time Sensitive とCritical の表記は、タイトルをタイム
 
 このメッセージは、iOS 10を搭載したデバイスを持っているユーザーだけに送信するよう制限することもできる。iOS10にアップグレードしていないユーザーの場合、「**リッチ通知をサポートするデバイスにのみ送信**」のチェックを外しておくと、リッチコンテンツを含まないテキストのみの通知として表示される。
 
-![画像を追加したり、画像URLを入力したりできる拡張通知画像セクション。]({% image_buster /assets/img_archive/rich_notification_ios10_select.png %}){: style="max-width:70%;" }
+![画像を追加したり、画像のURLを入力したりすることができる、拡張された通知画像セクションです。]({% image_buster /assets/img_archive/rich_notification_ios10_select.png %}){: style="max-width:70%;" }
 
 ### ステップ 3:キャンペーンの作成を続ける
 

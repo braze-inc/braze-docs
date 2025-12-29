@@ -1,5 +1,5 @@
 ---
-nav_title: X in Y フィルターの動作
+nav_title: YフィルターのXの動作
 permalink: /x-in-y-behavior/
 ---
 
@@ -15,7 +15,7 @@ permalink: /x-in-y-behavior/
 
 以下のキャンペーンは4月16日午後9時に送信されます。オーディエンスのセグメンテーションは「過去3日間に2回以上購入した」です。
 
-![キャンペーンスケジュール][1]
+![キャンペーンスケジュール]({% image_buster /assets/img/campaign-schuedule-example.png %})
 
 東部標準時の4月16日午後9時は協定世界時の4月17日午前1時です。
 
@@ -41,7 +41,7 @@ permalink: /x-in-y-behavior/
 - `Every 1 day` では、キャップはユーザー現地時間の現在の暦日に制限されます (現地時間の午前0時に終了します)。
 - `Every 2 days` では、キャップはユーザーの現地時間の前日と現在の暦日に制限されます (現在の暦日の現地時間午前0時に終了します)。
 
-### 会社と現地時間
+### 会社& 現地時間
 
 会社のタイムゾーンの現在の暦日は、日 `0` としてカウントされます。
 
@@ -59,4 +59,3 @@ Braze には「X in Y フィルター」と呼ばれるセグメンテーショ�
 
 
 
-[1]:{% image_buster /assets/img/campaign-schuedule-example.png %}

@@ -114,4 +114,4 @@ Using the transform models or raw data synced from Braze, you can analyze users'
 This can help you make more informed decisions about engagement strategies to improve user retention. This can all be done within Mozart Data's interface using the Query tool, where you can export the results into a Google Sheet or CSV to prepare for a presentation.
 
 #### Business intelligence (BI)
-Ready to visualize and share your insights with other team members? Mozart Data integrates with almost every BI tool. If you do not already have a BI tool, reach out to Mozart Data to set up a free Metabase account. 
+Ready to visualize and share your insights with other team members? Mozart Data integrates with almost every BI tool. If you do not already have a BI tool, contact Mozart Data to set up a free Metabase account.

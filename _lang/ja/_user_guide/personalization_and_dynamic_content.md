@@ -1,5 +1,5 @@
 ---
-nav_title: "パーソナライゼーションとダイナミックコンテンツ"
+nav_title: "カスタマイズ&amp;アンプ; ダイナミックな内容"
 article_title: "パーソナライゼーションとダイナミックコンテンツ"
 page_order: 6
 layout: dev_guide
@@ -32,7 +32,7 @@ guide_featured_list:
   link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/canvas_persistent_entry_properties/
   image: /assets/img/braze_icons/dataflow-03.svg
 - name: カタログ
-  link: /docs/user_guide/personalization_and_dynamic_content/catalogs/
+  link: /docs/user_guide/data/activation/catalogs/
   image: /assets/img/braze_icons/list.svg
 ---
 

@@ -7,7 +7,7 @@ description: "Get acquainted with the core concepts you'll need to know when wor
 
 ---
 
-# Getting Started: Braze overview
+# Get started: Braze overview
 
 Welcome to Braze! This collection of articles will help you get started with our platform and introduce you to the key terms, features, and functionalities of Braze. This page introduces the core concepts you'll need to know when working in Braze.
 
@@ -24,7 +24,7 @@ Let's explore the power of Braze together.
 Braze is a customer engagement platform that helps brands of all sizes create personalized and targeted campaigns across various channels. Braze gives you the ability to listen to your customers, understand what their behavior is signaling, and then act by sending customers the right message, through the right channel, at the right time.
 
 {% alert tip %}
-Make sure to [add your colleagues to Braze]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/adding_users_to_your_dashboard/#adding-braze-users) so they can explore the platform with you.
+Make sure to [add your colleagues to Braze]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/) so they can explore the platform with you.
 {% endalert %}
 
 ## Users and segments

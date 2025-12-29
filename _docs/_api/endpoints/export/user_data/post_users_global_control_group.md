@@ -16,7 +16,7 @@ description: "This article outlines details about the Export users in Global Con
 
 > Use this endpoint to export all users within a Global Control Group.
 
-User data is exported as multiple files of user JSON objects separated by new lines (such as one JSON object per line). All users in a Global Control Group are included each time the files are generated. Braze doesn't store a history of when users are added and removed from a Global Control Group. 
+User data is exported as multiple files of user JSON objects separated by new lines (such as one JSON object per line). All users in a Global Control Group are included each time the files are generated. Braze doesn't store a history of when users are added and removed from a Global Control Group.
 
 To locate the segment identifier of your Global Control Group, refer to [API identifier types]({{site.baseurl}}/api/identifier_types/?tab=segments#segment-identifier).
 
@@ -32,9 +32,9 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 
 ## Credentials-based response details
 
-If you have added your [S3]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/amazon_s3) or [Azure]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/microsoft_azure_blob_storage_for_currents/) credentials to Braze, then each file will be uploaded in your bucket as a ZIP file with the key format that looks like `segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip`. If using Azure, make sure that you have the **Make this the default data export destination** box checked in the Azure partner overview page in Braze. 
+If you have added your [S3]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/amazon_s3) or [Azure]({{site.baseurl}}/partners/data_and_infrastructure_agility/cloud_storage/microsoft_azure_blob_storage_for_currents/) credentials to Braze through the respective **Technology Partners** page, then each file is uploaded in your bucket as a ZIP file with the key format that looks like `segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip`. If using Azure, make sure that you have the **Make this the default data export destination** box checked in the Azure partner overview page in Braze.
 
-Generally, we will create one file per 5,000 users to optimize processing. Exporting smaller segments within a large workspace may result in multiple files. You can then extract the files and concatenate all of the `json` files to a single file if needed. If you specify an `output_format` of `gzip`, then the file extension will be `.gz` instead of `.zip`.
+Generally, we create one file per 5,000 users to optimize processing. Exporting smaller segments within a large workspace may result in multiple files. You can then extract the files and concatenate all of the `json` files to a single file if needed. If you specify an `output_format` of `gzip`, then the file extension is `.gz` instead of `.zip`.
 
 {% details Export pathing breakdown for ZIP %}
 **ZIP format:**
@@ -56,11 +56,15 @@ Generally, we will create one file per 5,000 users to optimize processing. Expor
 
 {% enddetails %}
 
-We strongly suggest setting up your own S3 or Azure credentials when using this endpoint to enforce your own bucket policies on the export. If you do not have your cloud storage credentials provided, the response to the request provides the URL where a ZIP containing all the user files can be downloaded. The URL will only become a valid location after the export is ready.
+We strongly suggest setting up your own S3 or Azure credentials (by going to **Partner Integrations** > **Technology Partners** > partner page) when using this endpoint to enforce your own bucket policies on the export.
+
+![The Technology Partners page for Azure, with a tab for Amazon S3.]({% image_buster /assets/img/technology_partners_page.png %})
+
+If you do not have your cloud storage credentials provided, the response to the request provides the URL where a ZIP containing all the user files can be downloaded. The URL becomes a valid location only after the export is ready.
 
 Be aware that if you do not provide your cloud storage credentials, there is a limitation on the amount of data that you can export from this endpoint. Depending on the fields you're exporting and the number of users, the file transfer may fail if it is too large. A best practice is to specify which fields you want to export using `fields_to_export` and specifying only the fields you need in order to keep the size of the transfer lower. If you are getting errors generating the file, consider breaking your user base up into more segments based on a random bucket number (for example, create a segment where random bucket number is less than 1,000 or between 1,000 and 2,000).
 
-In either scenario, you may optionally provide a `callback_endpoint` to be notified when the export is ready. If the `callback_endpoint` is provided, we will make a post request to the provided address when the download is ready. The body of the post will be `"success":true`. If you haven't added your cloud storage credentials to Braze, the body of the post will additionally have the attribute `url` with the download URL as the value.
+In either scenario, you may optionally provide a `callback_endpoint` to be notified when the export is ready. If the `callback_endpoint` is provided, we make a post request to the provided address when the download is ready. The body of the post is `"success":true`. If you haven't added your cloud storage credentials to Braze, the body of the post additionally has the attribute `url` with the download URL as the value.
 
 Larger user bases will result in longer export times. For example, an app with 20 million users could take an hour or more.
 
@@ -142,20 +146,18 @@ The following is a list of valid `fields_to_export`. Using `fields_to_export` to
 ## Response
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
-    "object_prefix": (required, string) the filename prefix that will be used for the JSON file produced by this export, for example,'bb8e2a91-c4aa-478b-b3f2-a4ee91731ad1-1464728599',
+    "object_prefix": (required, string) the filename prefix that is used for the JSON file produced by this export, for example,'bb8e2a91-c4aa-478b-b3f2-a4ee91731ad1-1464728599',
     "url" : (optional, string) the URL where the segment export data can be downloaded if you do not have your own S3 credentials
 }
 ```
 
-After the URL is made available, it will only be valid for a few hours. As such, we highly recommend that you add your own S3 credentials to Braze.
+After the URL is made available, it is valid for only a few hours. As such, we highly recommend that you add your own S3 credentials to Braze.
 
 ### Example user export file output
 
-User export object (we will include the least data possible—if a field is missing from the object it should be assumed to be null or empty):
+User export object (we include the least data possible—if a field is missing from the object it should be assumed to be null or empty):
 
 {% tabs %}
 {% tab All fields %}

@@ -2,9 +2,25 @@
 
 ## 기본 사용자 속성
 
+### 미리 정의된 메서드
+
+Braze는 [`User` 클래스](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html) 내에서 다음 사용자 속성을 설정하기 위해 미리 정의된 메서드를 제공합니다:
+
+- 이름
+- Last Name
+- 언어
+- 국가
+- 생년월일
+- 이메일
+- 성별
+- 출생지
+- 전화번호
+
+### 기본 속성 설정
+
 {% tabs %}
-{% tab 표준 구현 %}
-사용자에 대한 기본 속성을 설정하려면, Braze 인스턴스에서 `getCurrentUser()` 메서드를 호출하여 앱의 현재 사용자에 대한 참조를 가져옵니다. 그런 다음 사용자 속성을 설정하기 위해 메서드를 호출할 수 있습니다.
+{% tab 메서드 사용 %}
+사용자에 대한 기본 속성을 설정하려면, Braze 인스턴스에서 `getUser()` 메서드를 호출하여 앱의 현재 사용자에 대한 참조를 가져옵니다. 그런 다음 사용자 속성을 설정하기 위해 메서드를 호출할 수 있습니다.
 
 {% subtabs local %}
 {% subtab First name %}
@@ -38,23 +54,35 @@ window.braze.getUser().setGender("f")
 {% endtab %}
 {% endtabs %}
 
-Braze는 [`User` 클래스](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html) 내에서 다음 사용자 속성을 설정하기 위해 미리 정의된 메서드를 제공합니다:
+### 기본 속성 해제
 
-- 이름
-- 성
-- 언어
-- 국가
-- 생년월일
-- 이메일
-- 성별
-- 출생지
-- 전화번호
+기본 사용자 속성을 해제하려면 관련 메서드에 `null`을 전달합니다. For example:
+
+{% tabs local %}
+{% tab 이름 %}
+```javascript
+braze.getUser().setFirstName(null);
+```
+{% endtab %}
+{% tab 성별 %}
+```javascript
+braze.getUser().setGender(null);
+```
+{% endtab %}
+{% tab 생년월일 %}
+```javascript
+braze.getUser().setDateOfBirth(null, null, null);
+```
+{% endtab %}
+{% endtabs %}
 
 ## 사용자 지정 사용자 속성
 
+### 사용자 지정 속성 설정
+
 {% tabs %}
-{% tab 표준 구현 %}
-기본 사용자 속성 메서드 외에도, 사용자에 대해 [커스텀 속성]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types)을 설정할 수 있습니다. 전체 메서드 사양은 [우리의 JSDocs](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html)를 참조하십시오.
+{% tab 메서드 사용 %}
+기본 사용자 속성 메서드 외에도 사용자에 대해 [커스텀 속성]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types)을 설정할 수 있습니다. 전체 메서드 사양은 [우리 JSDocs](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html)를 참조하세요.
 
 {% subtabs local %}
 {% subtab String %}
@@ -110,7 +138,7 @@ braze.getUser().setCustomUserAttribute(
 {% endsubtab %}
 {% subtab Array %}
 
-커스텀 속성 배열에는 최대 25개의 요소를 가질 수 있습니다. 수동으로 설정된 개별 배열(자동으로 감지되지 않음)은 Braze 대시보드의 **데이터 유형** 아래에서 최대 100으로 증가할 수 있습니다. **데이터 설정** > **커스텀 속성**. 이 최대치를 늘리고 싶다면, Braze 계정 매니저에게 문의하십시오.
+커스텀 속성 배열에는 최대 25개의 요소를 가질 수 있습니다. 수동으로 설정된 개별 배열(자동으로 감지되지 않음)은 Braze 대시보드의 **데이터 유형** 아래 **데이터 설정** > **커스텀 속성**에서 최대 100으로 증가할 수 있습니다. 이 최대치를 늘리고 싶다면 Braze 계정 매니저에게 문의하세요.
 
 최대 요소 수를 초과하는 [배열은]({{site.baseurl}}/developer_guide/platform_wide/getting_started/analytics_overview/#arrays) 최대 요소 수를 포함하도록 잘립니다.
 
@@ -133,7 +161,7 @@ braze.getUser().removeFromCustomAttributeArray(YOUR_ATTRIBUTE_KEY_STRING, "value
 {% endsubtabs %}
 
 {% alert important %}
-커스텀 속성 키와 값은 최대 255자까지만 가질 수 있습니다. 유효한 커스텀 속성 값에 대한 자세한 정보는 [참조 설명서](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html)를 참조하십시오.
+커스텀 속성 키와 값은 최대 255자만 가질 수 있습니다. 유효한 커스텀 속성 값에 대한 자세한 내용은 [참조 설명서](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html)를 참조하십시오.
 {% endalert %}
 {% endtab %}
 
@@ -154,21 +182,37 @@ GTM 템플릿은 이벤트 또는 구매에 중첩된 속성을 지원하지 않
 {% endtab %}
 {% endtabs %}
 
-### 사용자 지정 속성 설정 해제하기
+### 커스텀 속성 해제
 
-커스텀 속성은 값을 `null`로 설정하여 해제할 수 있습니다.
+커스텀 속성을 해제하려면 관련 메서드에 `null`을(를) 전달하십시오.
 
 ```javascript
 braze.getUser().setCustomUserAttribute(YOUR_ATTRIBUTE_KEY_STRING, null);
 ```
 
+### 커스텀 속성 중첩
+
+커스텀 속성 내에서 속성을 중첩할 수도 있습니다. 다음 예제에서는 중첩 속성이 있는 `favorite_book` 객체가 사용자 프로필의 커스텀 속성으로 설정됩니다. 자세한 내용은 [중첩 커스텀 속성]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support)를 참조하십시오.
+
+```javascript
+import * as braze from "@braze/web-sdk";
+
+const favoriteBook = {
+  title: "The Hobbit",
+  author: "J.R.R. Tolkien",
+  publishing_date: "1937"
+};
+
+braze.getUser().setCustomUserAttribute("favorite_book", favoriteBook);
+```
+
 ### REST API 사용
 
-사용자 속성을 설정하거나 해제하기 위해 우리의 REST API를 사용할 수도 있습니다. 자세한 내용은 [사용자 데이터 엔드포인트]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data)를 참조하십시오.
+REST API를 사용하여 사용자 속성을 설정하거나 해제할 수도 있습니다. 자세한 정보는 [사용자 데이터 엔드포인트]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data)를 참조하십시오.
 
 ## 사용자 구독 설정
 
-사용자에 대한 가입(이메일 또는 푸시)을 설정하려면 각각 `setEmailNotificationSubscriptionType()` 또는 `setPushNotificationSubscriptionType()` 함수를 호출합니다. 두 함수 모두 `enum` 유형 `braze.User.NotificationSubscriptionTypes`을 인수로 사용합니다. 이 유형에는 세 가지 상태가 있습니다:
+사용자에 대한 가입(이메일 또는 푸시)을 설정하려면 각각 `setEmailNotificationSubscriptionType()` 또는 `setPushNotificationSubscriptionType()` 함수를 호출합니다. 두 함수 모두 `enum` 유형 `braze.User.NotificationSubscriptionTypes`을(를) 인수로 사용합니다. 이 유형에는 세 가지 상태가 있습니다:
 
 | 구독 상태 | 정의 |
 | ------------------- | ---------- |
@@ -181,13 +225,13 @@ braze.getUser().setCustomUserAttribute(YOUR_ATTRIBUTE_KEY_STRING, null);
 
 가입 및 명시적 옵트인 구현에 대한 자세한 내용은 [사용자 가입 관리]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions)를 참조하세요.
 
-### 이메일에서 사용자를 구독 취소하기
+### 사용자를 이메일 구독 해지
 
 ```javascript
 braze.getUser().setEmailNotificationSubscriptionType(braze.User.NotificationSubscriptionTypes.UNSUBSCRIBED);
 ```
 
-### 푸시에서 사용자를 구독 취소하기
+### 사용자를 푸시 구독 해지
 
 ```java
 braze.getUser().setPushNotificationSubscriptionType(braze.User.NotificationSubscriptionTypes.UNSUBSCRIBED);

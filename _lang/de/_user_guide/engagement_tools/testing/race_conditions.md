@@ -1,11 +1,11 @@
 ---
-nav_title: Rennbedingungen
+nav_title: Race-Conditions
 article_title: Rennbedingungen
 alias: /race_conditions/
 page_order: 9
 page_type: reference
 description: "Dieser Artikel beschreibt bewährte Praktiken, um zu vermeiden, dass Race-Conditions Ihre Messaging-Kampagnen beeinträchtigen."
-
+toc_headers: h2
 ---
 
 # Race-Conditions
@@ -47,6 +47,10 @@ Sie können diese Verzögerung auch im [Braze SDK]({{site.baseurl}}/developer_gu
 
 ## Szenario 2: Mehrere API-Endpunkte verwenden
 
+{% alert important %}
+Wir verwenden asynchrone Verarbeitung, um Geschwindigkeit und Flexibilität zu maximieren. Das bedeutet, wenn API-Aufrufe separat an uns gesendet werden, können wir nicht garantieren, dass sie in der Reihenfolge verarbeitet werden, in der sie gesendet wurden.
+{% endalert %}
+
 Es gibt ein paar Szenarien, in denen mehrere API Endpunkte ebenfalls zu dieser Race-Condition führen können, z. B. wenn:
 
 - Verwendung separater API-Endpunkte zum Erstellen von Benutzern und Auslösen von Canvases oder Kampagnen
@@ -72,7 +76,7 @@ Anstatt mehrere Endpunkte zu verwenden, können Sie die [Nutzer:innen-Attribute]
 
 Wenn diese Objekte in den Trigger aufgenommen werden, werden die Attribute zuerst verarbeitet, bevor die Nachricht getriggert wird, wodurch mögliche Race-Conditions vermieden werden. Beachten Sie, dass triggernde Eigenschaften das Nutzerprofil nicht aktualisieren, sondern nur im Zusammenhang mit der Nachricht verwendet werden.
 
-#### Verwenden Sie die POST: Tracking von Nutzer:innen (Bulk) Endpunkt
+#### Verwenden Sie die POST: Tracking von Nutzer:innen (Sync) Endpunkt
 
 Verwenden Sie den [Endpunkt`/users/track/sync/` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track_synchronous), um angepasste Events und Käufe aufzuzeichnen und die Attribute des Nutzerprofils synchron zu aktualisieren. Wenn Sie diesen Endpunkt verwenden, um Nutzerprofile gleichzeitig und in einem einzigen Aufruf zu aktualisieren, können Sie mögliche Race-Conditions verhindern.
 
@@ -117,8 +121,8 @@ In diesem Fall können Sie eine Trigger-Verzögerung in einer Kampagne implement
 ```
 {% endraw %}
 
+#### Bestätigen Sie, wie die Nutzerdaten verwaltet werden
 
-[1]: {{site.baseurl}}/api/objects_filters/user_attributes_object/
-[2]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/
-[3]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/
-[4]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/
+Wenn eine Race-Condition bei der Auswertung des Canvas-Eingangs auftritt, können Nutzer:innen einen Canvas betreten, den sie eigentlich nicht betreten sollten. Das Profil des Nutzers könnte beispielsweise so eingestellt werden, dass es in die Zielgruppe aufgenommen wird, und anschließend aktualisiert werden, nachdem der Canvas die Nutzer:innen in die Warteschlange gestellt hat, damit sie nicht mehr für die Zielgruppe in Frage kommen. 
+
+Wir empfehlen Ihnen, sich zu vergewissern, wie Nutzerdaten verwaltet und aktualisiert werden, insbesondere wann und wie bestimmte Attribute aktualisiert werden, z.B. über SDK, API, Batch-API und andere Methoden. Dies kann dabei helfen, zu erkennen und zu klären, warum ein Nutzer:innen eine Kampagne oder ein Canvas betreten hat und wann das Profil des Nutzers aktualisiert wurde.

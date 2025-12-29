@@ -1,5 +1,5 @@
 ---
-nav_title: Zoom-Registrierung automatisieren
+nav_title: Automatisieren Sie die Zoom-Registrierung
 article_title: Zoom-Registrierung automatisieren
 page_order: 1
 page_type: tutorial
@@ -27,13 +27,13 @@ POST: `/meetings/{webinarId}/registrants`
 Weitere Informationen finden Sie unter dem [Endpunkt Webinar-Anmelder hinzufügen von](https://developers.zoom.us/docs/api/rest/reference/zoom-api/methods/#operation/webinarRegistrantCreate) Zoom.<br><br>
 
 {% tabs %}
-{% tab E-Mail %}
+{% tab Email %}
 
 Erstellen Sie eine E-Mail-Kampagne mit einer Call-to-Action-Schaltfläche im Nachrichtentext. Wenn ein:e Nutzer:in auf den Button klickt, leiten Sie ihn auf die Webinar-Landing-Page um (mit den entsprechenden Parametern im Umleitungslink). 
 
 Verwenden Sie die Parameter in der URL, um Nutzerdaten zu übergeben, und erstellen Sie einen API-Aufruf, der beim Laden der Seite ausgelöst wird, um die:den Nutzer:in zum Webinar hinzuzufügen.
 
-![Nachrichten mit Liquid-Templates, die den Vornamen, den Nachnamen, die E-Mail-Adresse und den Ort enthalten.]({% image_buster /assets/img/zoom/zoom1.png %})
+![E-Mail Nachricht mit Liquid-Template, das Vorname, Nachname, E-Mail-Adresse und Ort enthält.]({% image_buster /assets/img/zoom/zoom1.png %})
 
 Nutzer:innen sind nun für das Webinar mit den Angaben registriert, die bereits in ihrem Braze-Profil vorhanden sind.
 
@@ -54,7 +54,7 @@ Nutzer:innen sind nun für das Webinar mit den Angaben registriert, die bereits 
 2. Erstellen Sie eine Webhook-Kampagne, die durch eine In-App-Nachricht oder einen Klick auf einen Button getriggert wird.<br><br>
  	Melden Sie die Nutzer:innen anhand der bestehenden Nutzerdaten in ihrem Braze Profil für das Webinar an.<br>
 
-	![Eine aktionsbasierte Kampagne, die an Benutzer gesendet wird, die auf eine Schaltfläche für eine bestimmte Kampagne geklickt haben.]({% image_buster /assets/img/zoom/zoom6.png %})<br><br>
+	![Eine aktionsbasierte Kampagne, die an Nutzer:innen gesendet wird, die auf einen Button für eine bestimmte Kampagne geklickt haben.]({% image_buster /assets/img/zoom/zoom6.png %})<br><br>
 
 	Beispiel für einen Webhook-Aufruf an den Zoom-Endpunkt.<br>
 	{% raw %}
@@ -75,7 +75,7 @@ Nutzer:innen sind nun für das Webinar mit den Angaben registriert, die bereits 
 3. Nutzer:innen sind nun für das Webinar mit den Angaben registriert, die bereits in ihrem Braze-Profil vorhanden sind.
 
 {% endtab %}
-{% tab In-App-Nachricht %}
+{% tab In-app message %}
 
 1. In-App-Nachrichtenkampagne erstellen<br><br>
 
@@ -90,7 +90,7 @@ Nutzer:innen sind nun für das Webinar mit den Angaben registriert, die bereits 
 2. Erstellen Sie eine Webhook-Kampagne, die durch eine In-App-Nachricht oder einen Klick auf einen Button getriggert wird.<br><br>
 	Melden Sie die Nutzer:innen anhand der bestehenden Nutzerdaten in ihrem Braze Profil für das Webinar an.<br>
 
-	![Eine aktionsbasierte Kampagne, die an Benutzer gesendet wird, die auf eine Schaltfläche für eine bestimmte Kampagne geklickt haben.]({% image_buster /assets/img/zoom/zoom5.png %})<br><br>
+	![Eine aktionsbasierte Kampagne, die an Nutzer:innen gesendet wird, die auf einen Button für eine bestimmte Kampagne geklickt haben.]({% image_buster /assets/img/zoom/zoom5.png %})<br><br>
 
 	Beispiel für einen Webhook-Aufruf an den Zoom-Endpunkt.<br>
 	{% raw %}

@@ -3,7 +3,7 @@ nav_title: Recherche de campagnes
 article_title: Recherche de campagnes
 page_order: 10
 page_type: reference
-description: "Cet article décrit les différentes façons dont vous pouvez rechercher des campagnes sur la page de la liste des campagnes."
+description: "Cet article décrit les différentes façons de rechercher des campagnes sur la page de la liste des campagnes."
 tool:
   - Campaigns
 
@@ -15,14 +15,14 @@ tool:
 
 Vous pouvez rechercher des campagnes de plusieurs manières sur la page de la liste des campagnes en sélectionnant :
 
-- État
-- Balises
+- Statut
+- Tags
 - Filtres
 - Colonnes
 
 Vous pouvez utiliser la barre de recherche pour saisir des mots-clés et des phrases en rapport avec le nom de votre campagne. Pour effectuer une recherche exacte, utilisez des guillemets ("") pour entourer votre phrase de recherche. Par exemple, pour rechercher spécifiquement les campagnes de test webhook, saisissez `"webhook test"` dans la barre de recherche.
 
-![La page de la liste des campagnes avec trois campagnes répertoriées. La page est organisée de manière à présenter les campagnes actives. Les colonnes sont Nom, Statut, Date d'arrêt, Type de campagne et Envoyé pour organiser la vue.]({% image_buster /assets/img/campaign_list_example.png %})
+La page de la liste des campagnes contient trois campagnes. La page est organisée de manière à présenter les campagnes actives. Les colonnes sont Nom, Statut, Date d'arrêt, Type de campagne et Envoyé pour organiser la vue.]({% image_buster /assets/img/campaign_list_example.png %})
 
 ### Sélection d'un statut
 
@@ -41,9 +41,9 @@ Utilisez les filtres pour regrouper les résultats en fonction des détails de c
 - Type de campagne 
 - Qui a créé la campagne
 - Qui a modifié la campagne pour la dernière fois ?
-- Planification d’entrée
+- Planification de l'entrée
 - Segmentation du ciblage
-- Équipes
+- Teams
 - Campagnes dont les données d'interaction ont expiré
 
 Vous pouvez également effectuer une recherche en sélectionnant la plage de dates à laquelle la campagne a été créée ou modifiée pour la dernière fois. Cela peut s'avérer particulièrement utile si vous recherchez des campagnes utilisées pendant une période de promotion.

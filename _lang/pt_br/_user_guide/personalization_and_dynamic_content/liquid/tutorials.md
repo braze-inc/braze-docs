@@ -13,24 +13,24 @@ page_type: tutorial
 Quando terminar de ler estes tutoriais, você será capaz de:
 
 - Escreva código Liquid para casos de uso comuns
-- String together Liquid conditional logic to personalize messages based on user data
-- Use variáveis e filtros para escrever equações que usem os valores das atribuições
+- Combine a lógica condicional do Liquid para personalizar mensagens com base nos dados do usuário
+- Use variáveis e filtros para escrever equações que usem os valores dos atributos
 - Reconhecer comandos básicos no código Liquid e formar um entendimento geral sobre o que o código está fazendo
 
 | Tutorial | Objetivos de aprendizado |
 | --- | --- |
-| [Personalize as mensagens para segmentos de usuários](#segments) | valores padrão, lógica condicional |
-| [Lembretes de carrinho abandonado](#reminders) | operadores, lógica condicional |
+| [Personalize mensagens para segmentos de usuários](#segments) | valores padrão, lógica condicional |
+| [Lembretes de carrinhos abandonados](#reminders) | operadores, lógica condicional |
 | [Contagem regressiva do evento](#countdown) | variáveis, filtros de data |
-| [Envio mensal de mensagens de aniversário](#birthday) | variáveis, filtros de data, operadores |
+| [Mensagem mensal de aniversário](#birthday) | variáveis, filtros de data, operadores |
 | [Promover um produto favorito](#favorite-product) | variáveis, filtros de data, equações, operadores |
 {: .reset-br-td-1 .reset-br-td-2}
 
-## Envio de mensagens personalizadas para segmentos de usuários {#segments}
+## Mensagens personalizadas para segmentos de usuários {#segments}
 
-Vamos personalizar o envio de mensagens para diferentes segmentos de usuários, como clientes VIP e novos assinantes.
+Vamos personalizar as mensagens para diferentes segmentos de usuários, como clientes VIP e novos assinantes.
 
-1. Abra a mensagem com envios de mensagens personalizadas para enviar quando tiver e não tiver o nome do usuário. Para fazer isso, crie uma tag Liquid que inclua a atribuição `first_name` e um valor padrão a ser usado se `first_name` estiver em branco. Nesse cenário, vamos usar "traveler" como o valor padrão.
+1. Abra a mensagem com saudações personalizadas para enviar quando tiver e não tiver o primeiro nome de um usuário. Para fazer isso, crie uma tag Liquid que inclua o atributo `first_name` e um valor padrão a ser usado se `first_name` estiver em branco. Nesse cenário, vamos usar "traveler" como o valor padrão.
 
 {% raw %}
 ```liquid
@@ -69,7 +69,7 @@ Thanks for traveling with us! Enjoy your unique discount code: SUMMRTRVLS240.
 ```
 {% endraw %}
 
-{% details Código Liquid completo %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 Happy summer, {{${first_name} | default: "traveler"}}!
@@ -84,7 +84,7 @@ Thanks for traveling with us! Enjoy your unique discount code: SUMMRTRVLS240.
 {% endraw %}
 {% enddetails %}
 
-## Lembretes de carrinho abandonado {#reminders}
+## Lembretes de carrinhos abandonados {#reminders}
 
 Vamos enviar mensagens personalizadas para lembrar os usuários dos itens deixados no carrinho. Nós os personalizaremos ainda mais para enviar com base no número de itens no carrinho, de modo que, se eles tiverem mais de três itens ou menos, listaremos todos os itens. Se houver mais de três itens, enviaremos uma mensagem mais concisa.
 
@@ -106,7 +106,7 @@ Vamos enviar mensagens personalizadas para lembrar os usuários dos itens deixad
 {% endraw %}
 
 {: start="3"}
-3\. Escreva uma mensagem que cumprimente o usuário pelo nome ou, se isso não estiver disponível, use "there" como o valor padrão. Inclua o que deve ser declarado se houver mais de três itens no carrinho. Como não queremos sobrecarregar o usuário com uma lista completa, vamos listar os três primeiros `cart_items`.
+3\. Escreva uma mensagem que cumprimente o usuário pelo primeiro nome ou, se ele não estiver disponível, use "there" como o valor padrão. Inclua o que deve ser declarado se houver mais de três itens no carrinho. Como não queremos sobrecarregar o usuário com uma lista completa, vamos listar os três primeiros `cart_items`.
 
 {% raw %}
 ```liquid
@@ -126,7 +126,7 @@ Hi {{${first_name} | default: 'there'}}, don't forget to complete your purchase!
 {% endraw %}
 
 {: start="5"}
-5\. Use `else` e, em seguida, `abort_message` para informar ao código Liquid para não enviar uma mensagem se o carrinho não atender a nenhuma das condições anteriores. Em outras palavras, se o carrinho estiver vazio. Feche a lógica com `endif`.
+5\. Use `else` e, em seguida, `abort_message` para informar ao código do Liquid para não enviar uma mensagem se o carrinho não atender a nenhuma das condições anteriores. Em outras palavras, se o carrinho estiver vazio. Feche a lógica com `endif`.
 
 {% raw %}
 ```liquid
@@ -136,7 +136,7 @@ Hi {{${first_name} | default: 'there'}}, don't forget to complete your purchase!
 ```
 {% endraw %}
 
-{% details Código Liquid completo %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% if {{custom_attribute.${cart_items}}} != blank %}
@@ -154,7 +154,7 @@ Hi {{${first_name} | default: 'there'}}, don't forget to complete your purchase!
 
 ## Contagem regressiva do evento {#countdown}
 
-Vamos enviar aos usuários uma mensagem que informa quantos dias faltam para uma promoção de aniversário. Para isso, usaremos variáveis para podermos criar equações que manipulem os valores das atribuições.
+Vamos enviar aos usuários uma mensagem que informa quantos dias faltam para uma promoção de aniversário. Para isso, usaremos variáveis para podermos criar equações que manipulem os valores dos atributos.
 
 1. Primeiro, vamos atribuir a variável `sale_date` ao atributo personalizado `anniversary_date` e aplicar o filtro `date: "s"`. Isso converte o `anniversary_date` em um formato de carimbo de data/hora expresso em segundos e, em seguida, atribui esse valor a `sale_date`.
 
@@ -174,7 +174,7 @@ Vamos enviar aos usuários uma mensagem que informa quantos dias faltam para uma
 {% endraw %}
 
 {: start="3"}
-3\. Agora vamos calcular quantos segundos faltam entre agora (`today`) e a Promoção de Aniversário (`sale_date`). Para fazer isso, atribua à variável `difference` o valor de `sale_date` menos `today`.
+3\. Agora vamos calcular quantos segundos faltam entre agora (`today`) e a Promoção de Aniversário (`sale_date`). Para fazer isso, atribua a variável `difference` para igualar o valor de `sale_date` menos `today`.
 
 {% raw %}
 ```liquid
@@ -200,7 +200,7 @@ Get ready! Our Anniversary Sale is in {{ difference_days }} days!
 ```
 {% endraw %}
 
-{% details Código Liquid completo %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% assign sale_date = {{custom_attribute.${anniversary_date}}} | date: "%s" %}
@@ -212,7 +212,7 @@ Get ready! Our Anniversary Sale is in {{ difference_days }} days!
 {% endraw %}
 {% enddetails %}
 
-## Envio mensal de mensagens de aniversário {#birthday}
+## Mensagem mensal de aniversário {#birthday}
 
 Vamos enviar uma promoção especial a todos os usuários que fazem aniversário no mês de hoje. Os usuários que não fizerem aniversário neste mês não receberão nenhuma mensagem.
 
@@ -252,7 +252,7 @@ We heard {{this_month}} is a special month! Enjoy a 50% discount on your purchas
 {% endraw %}
 
 {: start="5"}
-5\. Use a tag `else` para especificar o que acontece se a condição não for atendida (porque este mês não é o mês de nascimento do usuário).
+5\. Use a tag `else` para especificar o que acontecerá se a condição não for atendida (porque esse mês não é o mês de nascimento do usuário).
 
 {% raw %}
 ```liquid
@@ -270,7 +270,7 @@ We heard {{this_month}} is a special month! Enjoy a 50% discount on your purchas
 ```
 {% endraw %}
 
-{% details Código Liquid completo %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% assign this_month = 'now' | date: "%B" %}
@@ -315,7 +315,7 @@ Vamos promover o produto favorito de um usuário se a data da última compra tiv
 {% endraw %}
 
 {: start="4"}
-4\. Se tivermos a data da compra, precisaremos atribuí-la a uma variável para que possamos compará-la com a data de hoje. Primeiro, vamos criar um valor para a data de hoje atribuindo a variável `today` a `now` (a data e a hora atuais) e usando o filtro `date: "%s"` para converter o valor em um formato de carimbo de data/hora expresso em segundos. Adicionaremos o filtro `plus: 0` para adicionar um "0" ao registro de data e hora. Isso não altera o valor do registro de data e hora, mas é útil para usar o registro de data e hora em equações futuras.
+4\. Se tivermos a data da compra, precisaremos atribuí-la a uma variável para que possamos compará-la com a data de hoje. Primeiro, vamos criar um valor para a data de hoje atribuindo a variável `today` a `now` (a data e a hora atuais) e usando o filtro `date: "%s"` para converter o valor em um formato de carimbo de data/hora expresso em segundos. Adicionaremos o filtro `plus: 0` para adicionar um "0" ao registro de data e hora. Isso não altera o valor do carimbo de data/hora, mas é útil para usar o carimbo de data/hora em equações futuras.
 
 
 {% raw %}
@@ -388,7 +388,7 @@ We noticed it’s been a while since you last purchased {{custom_attribute.${fav
 {% endraw %}
 
 {: start="12"}
-12\. Para finalizar, terminaremos o Liquid com duas tags `endif`. O primeiro `endif` encerra a verificação condicional do produto favorito ou da data da última compra, e o segundo `endif` encerra a verificação condicional da data da última compra, que é de pelo menos seis meses atrás.
+12\. Para finalizar, encerraremos o Liquid com duas tags `endif`. O primeiro `endif` encerra a verificação condicional do produto favorito ou da data da última compra, e o segundo `endif` encerra a verificação condicional da data da última compra, que é de pelo menos seis meses atrás.
 
 {% raw %}
 ```liquid
@@ -397,7 +397,7 @@ We noticed it’s been a while since you last purchased {{custom_attribute.${fav
 ```
 {% endraw %}
 
-{% details Código Liquid completo %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% if {{custom_attribute.${favorite_product}}} == blank or {{custom_attribute.${last_purchase_date}}} == blank %}

@@ -1,6 +1,6 @@
 ---
-nav_title: Création de carte
-article_title: Création de carte
+nav_title: Création de cartes
+article_title: Création de cartes
 alias: /card_creation/
 description: "Cet article décrit les différences entre la création de cartes de contenu au moment du lancement de la campagne ou de l'entrée dans l'étape du canvas par rapport à la première impression."
 page_order: 0
@@ -9,45 +9,45 @@ channel:
   - content cards
 ---
 
-# Création de carte
+# Création de cartes
 
 > Vous pouvez choisir le moment où Braze évalue l'éligibilité de l'audience et la personnalisation pour les nouvelles campagnes de cartes de contenu et les étapes du canvas en spécifiant le moment de la création de la carte.
 
 ## Conditions préalables
 
-Pour profiter de cette fonctionnalité, vous devez effectuer une mise à niveau vers les versions minimales du SDK suivantes :
+Pour bénéficier de cette fonctionnalité, vous devez passer aux versions minimales suivantes du SDK :
 
 {% sdk_min_versions swift:5.2.0 android:23.0.0 web:4.2.0 %}
 
-Après la mise à niveau du SDK, vos utilisateurs mobiles doivent mettre à niveau leur application. Vous pouvez filtrer l’audience de votre campagne ou de votre canvas pour [ne cibler que les utilisateurs de ces versions minimales d'application]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions).
+Après avoir mis à jour le SDK, vos utilisateurs mobiles doivent mettre à jour leur application. Vous pouvez filtrer votre campagne ou votre audience Canvas pour ne [cibler]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions) que [les utilisateurs de ces versions minimales d'apps]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions).
 
 ## Aperçu
 
 {% tabs %}
-{% tab Campagne %}
+{% tab Campaign %}
 
-Vous pouvez choisir le moment où Braze crée une carte à l'étape **Livraison** lors de la création d'une nouvelle [campagne de cartes de contenu]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/) avec une livraison planifiée.
+Vous pouvez choisir le moment où Braze crée une carte à l'étape **Réception/distribution** lors de la création d'une nouvelle [campagne de cartes de contenu]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/) avec une réception/distribution planifiée.
 
-![Section Contrôles de la carte de contenu lors de la modification de la distribution d’une carte de contenu planifiée.]({% image_buster /assets/img_archive/card_creation.png %})
+!section Contrôles des cartes de contenu lorsque vous modifiez la réception/distribution d'une carte de contenu planifiée.]({% image_buster /assets/img_archive/card_creation.png %})
 
-Les options suivantes sont disponibles :
+Les options suivantes sont disponibles :
 
-- **Lors du lancement de la campagne :** Le comportement par défaut précédent pour les cartes de contenu. Braze calcule l’éligibilité et la personnalisation de l’audience au lancement de la campagne, puis crée la carte et la stocke jusqu’à ce que l’utilisateur ouvre votre application. 
-- **A la première impression (recommandé) :** Lorsque l’utilisateur ouvre ensuite votre application (c’est-à-dire qu’il démarre une nouvelle [session](https://www.braze.com/resources/articles/whats-an-app-session-anyway)), Braze détermine les cartes de contenu auxquelles l’utilisateur est éligible, modélise les personnalisations telles que le Liquid ou le contenu connecté, puis crée la carte. Cette option permet généralement d'obtenir de meilleures performances en matière de réception/distribution de cartes.
+- **Lors du lancement de la campagne :** L'ancien comportement par défaut pour les cartes de contenu. Braze calcule l'éligibilité de l'audience et la personnalisation lors du lancement de la campagne, puis crée la carte et la stocke jusqu'à ce que l'utilisateur ouvre votre appli. 
+- **A la première impression (recommandé) :** Lorsque l'utilisateur ouvre votre application (c'est-à-dire lorsqu'il démarre une nouvelle [session](https://www.braze.com/resources/articles/whats-an-app-session-anyway)), Braze détermine les cartes de contenu auxquelles l'utilisateur est éligible, les modèles de personnalisation tels que Liquid ou Connected Content, puis crée la carte. Cette option permet généralement d'obtenir de meilleures performances en matière de réception/distribution de cartes.
 
 Quelle que soit l'option choisie, le compte à rebours de la date d'expiration de la carte de contenu commencera lorsque la campagne sera lancée.
 
 {% endtab %}
 {% tab Canvas %}
 
-Vous pouvez choisir le moment où Braze crée une carte dans l'onglet **Canaux de communication** d'une [étape Message]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) de carte de contenu.
+Vous pouvez choisir le moment où Braze crée une carte dans l'onglet **Canaux de communication** d'une [étape Message de]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) carte de contenu.
 
-![Section Contrôles de la carte de contenu lors de la modification de la distribution d’une carte de contenu planifiée.]({% image_buster /assets/img_archive/card_creation_canvas.png %})
+!section Contrôles des cartes de contenu lorsque vous modifiez la réception/distribution d'une carte de contenu planifiée.]({% image_buster /assets/img_archive/card_creation_canvas.png %})
 
-Les options suivantes sont disponibles :
+Les options suivantes sont disponibles :
 
-- **À l'entrée de l'étape :** Le comportement par défaut précédent pour les cartes de contenu. Braze calcule l'éligibilité de l'audience lorsque l'utilisateur entre dans l'étape du canvas, puis crée la carte et la stocke jusqu'à ce que l'utilisateur ouvre votre appli.
-- **A la première impression (recommandé) :** Braze calcule l'éligibilité de l'audience lorsque l'utilisateur entre dans l'étape du canvas. Lorsque l'utilisateur ouvre ensuite votre application (c'est-à-dire lorsqu'il démarre une nouvelle [session](https://www.braze.com/resources/articles/whats-an-app-session-anyway)), Braze modélise toute personnalisation comme le Liquid ou le contenu collecté, puis crée la carte. Cette option vous permettra de bénéficier de meilleures performances dans la distribution des cartes et d'une personnalisation plus actuelle.
+- **A l'entrée de l'étape :** L'ancien comportement par défaut pour les cartes de contenu. Braze calcule l'éligibilité de l'audience lorsque l'utilisateur entre dans l'étape du canvas, puis crée la carte et la stocke jusqu'à ce que l'utilisateur ouvre votre appli.
+- **A la première impression (recommandé) :** Braze calcule l'éligibilité de l'audience lorsque l'utilisateur entre dans l'étape du canvas. Lorsque l'utilisateur ouvre votre application (c'est-à-dire lorsqu'il démarre une nouvelle [session](https://www.braze.com/resources/articles/whats-an-app-session-anyway)), Braze modélise toute personnalisation, comme Liquid ou Connected Content, puis crée la carte. Cette option vous permettra de bénéficier d'une meilleure performance dans la réception/distribution des cartes et d'une personnalisation plus actuelle.
 
 Quelle que soit l'option choisie, le compte à rebours de la date d'expiration de la carte de contenu commencera lorsque l'utilisateur entrera dans l'étape du canvas.
 
@@ -59,7 +59,7 @@ Si vous souhaitez que les utilisateurs anonymes voient une carte de contenu lors
 {% endtabs %}
 
 {% alert note %}
-Pour les deux options, après la création d’une carte, Braze ne recalcule pas l’éligibilité ou la personnalisation de l’audience.
+Pour les deux options, après la création d'une carte, Braze ne recalcule pas l'éligibilité de l'audience ou la personnalisation.
 {% endalert %}
 
 ### Différences entre la création de cartes au moment du lancement ou de l'entrée sur le marché et la création de cartes lors de la première impression
@@ -77,53 +77,53 @@ Cette section décrit les principales différences entre la création de cartes 
   <tr>
     <th class="tg-0pky"></th>
     <th class="tg-0pky">Lorsque la campagne est lancée / À l'entrée de l'étape du canvas</th>
-    <th class="tg-0pky">À la première impression</th>
+    <th class="tg-0pky">À première vue</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td class="leftHeader">Quand l’utiliser</td>
-    <td class="tg-0pky">Si vous avez besoin que le contenu soit instantané à un moment spécifique (heure de lancement).</td>
+    <td class="leftHeader">Quand l'utiliser ?</td>
+    <td class="tg-0pky">Si vous avez besoin que le contenu soit diffusé à un moment précis (le moment du lancement).</td>
     <td class="tg-0pky"><ul><li>Si vous devez afficher des cartes à de nouveaux utilisateurs ou à des utilisateurs anonymes susceptibles d'entrer dans le segment après le lancement<a href="#campaign_note">(campagnes uniquement*).</a></li><li>Si vous utilisez la personnalisation et souhaitez que le contenu le plus récent soit disponible sur la carte.</li></ul></td>
   </tr>
   <tr>
-    <td class="leftHeader">Audience</td>
-    <td class="tg-0pky">Braze évalue l’appartenance à l’audience lorsque la campagne s’envoie.<br><br>L’éligibilité des utilisateurs nouveaux ou anonymes ne sera pas évaluée s’ils essaient d’afficher la carte après l’envoi de la campagne. Pour les campagnes récurrentes, cela se fera à l’intervalle de récurrence suivant.</td>
-    <td class="tg-0pky">Braze évalue l'adhésion lors de la prochaine ouverture de votre appli par l'utilisateur (démarrage d'une session, <a href="#campaign_note">campagnes uniquement*</a>).<br><br> Ce paramètre aura une portée d’audience plus large car l’éligibilité de l’utilisateur nouveau ou anonyme sera toujours évaluée lorsqu’il essaiera d’afficher la carte. <br><br>En outre, la limite de débit (limitation du nombre de personnes qui recevront la campagne) n'est pas applicable lorsqu'elle est définie sur « À la première impression » (<a href="#campaign_note">campagnes uniquement*</a>).</td>
+    <td class="leftHeader">L'audience</td>
+    <td class="tg-0pky">Braze évalue l'adhésion de l'audience au moment de l'envoi de la campagne.<br><br>L'éligibilité des utilisateurs nouveaux ou anonymes ne sera pas évaluée s'ils tentent de consulter la carte après l'envoi de la campagne. Pour les campagnes récurrentes, ce sera au prochain intervalle de récurrence.</td>
+    <td class="tg-0pky">Braze évalue l'adhésion lors de la prochaine ouverture de votre appli par l'utilisateur (démarrage d'une session, <a href="#campaign_note">campagnes uniquement*</a>).<br><br> Ce paramètre permettra d'atteindre une audience plus large, car les utilisateurs anonymes ou nouveaux seront toujours évalués pour déterminer leur éligibilité lorsqu'ils tenteront de consulter la carte. <br><br>En outre, la limite de débit (limitation du nombre de personnes qui recevront la carte) n'est pas applicable lorsqu'elle est réglée sur à la première impression.</td>
   </tr>
   <tr>
     <td class="leftHeader">Personnalisation</td>
-    <td class="tg-0pky">Braze évalue le Liquid, le contenu connecté et les blocs de contenu au lancement de la campagne ou lorsqu'un utilisateur entre dans l'étape du canvas. Pour les campagnes récurrentes, cela se fera à l’intervalle de récurrence suivant.</td>
-    <td class="tg-0pky">Braze évalue le Liquid, le contenu connecté et les blocs de contenu au moment de la première impression ou après l’intervalle de récurrence suivant.</td>
+    <td class="tg-0pky">Braze évalue le Liquid, le contenu connecté et les blocs de contenu au moment où la campagne est lancée ou lorsqu'un utilisateur entre dans l'étape du canvas. Pour les campagnes récurrentes, ce sera au prochain intervalle de récurrence.</td>
+    <td class="tg-0pky">Braze évalue le liquide, le contenu connecté et les blocs de contenu au moment de la première impression ou après le prochain intervalle de récurrence.</td>
   </tr>
   <tr>
-    <td class="leftHeader">Analyse</td>
-    <td class="tg-0pky"><em>Messages envoyés</em> fait référence au nombre de cartes créées et disponibles pour être consultées. Le fait que les utilisateurs aient consulté ou non la carte n’est pas comptabilisé.</td>
+    <td class="leftHeader">Analyse/analytique (si utilisé comme adjectif)</td>
+    <td class="tg-0pky">Les <em>messages envoyés</em> font référence au nombre de cartes créées et disponibles pour être vues. Cela ne tient pas compte du fait que les utilisateurs ont ou non consulté la carte.</td>
     <td class="tg-0pky">Les <em>messages envoyés</em> correspondent au nombre de cartes envoyées à un utilisateur après le démarrage d'une session. Dans Canvas, les utilisateurs qui entrent dans l'étape sans démarrer de session n'auront pas de carte envoyée, c'est pourquoi cette mesure peut ne pas correspondre au nombre d'utilisateurs entrant dans une étape.<br><br>Alors que vos utilisateurs atteignables et vos impressions ne changeront pas, vous pouvez vous attendre à une diminution du volume d'envoi<em>(messages envoyés</em>) lorsqu'une carte est créée lors de la première impression par rapport à la même carte créée lors du lancement de la campagne ou de l'entrée dans l'étape du canvas.</td>
   </tr>
   <tr>
-    <td class="leftHeader">Temps de traitement</td>
-    <td class="tg-0pky">Les cartes sont créées pour chaque utilisateur éligible du segment au moment du lancement. Pour les audiences importantes, nous recommandons de sélectionner <b>lors de la première impression</b>, car les cartes seront disponibles plus rapidement après le lancement.</td>
-    <td class="tg-0pky">Les cartes sont créées la première fois qu’un utilisateur essaie de les visualiser, de sorte qu’il peut s’écouler 1 à 2 secondes pour qu’elles s’affichent lors de la première impression.</td>
+    <td class="leftHeader">Délai de traitement</td>
+    <td class="tg-0pky">Des cartes sont créées pour chaque utilisateur éligible dans le segment au moment du lancement. Pour les audiences importantes, nous vous recommandons de sélectionner <b>À la première impression</b>, car les cartes seront disponibles plus rapidement après le lancement.</td>
+    <td class="tg-0pky">Les cartes sont créées la première fois qu'un utilisateur essaie de les visualiser, ce qui peut prendre 1 à 2 secondes pour qu'elles s'affichent lors de la première impression.</td>
   </tr>
 </tbody>
 </table>
 
-<p id="campaign_note"><sup>* Ce scénario ne s'applique qu'aux campagnes, car l'audience Canvas est évaluée à l'entrée du canvas, et non au niveau de l'étape.</sup></p>
+<p id="campaign_note"><sup>* Ce scénario ne s'applique qu'aux campagnes, car l'audience de Canvas est évaluée à l'entrée dans Canvas, et non au niveau de l'étape.</sup></p>
 
 ## Considérations
 
-### Modification de la création de la carte après le lancement
+### Modification de la création des cartes après le lancement
 
-Braze recommande de ne pas modifier la façon dont les cartes sont créées après le lancement d’une campagne. En raison des différences dans la façon dont les messages envoyés sont calculés entre les deux types de création de cartes, changer la façon dont les cartes sont créées après le lancement de la campagne peut affecter la précision de votre volume d’envoi.
+Braze recommande de ne pas modifier la façon dont les cartes sont créées après le lancement d'une campagne. En raison des différences de calcul des messages envoyés entre les deux types de création de cartes, le fait de modifier le mode de création des cartes après le lancement de la campagne peut avoir une incidence sur la précision de votre volume d'envoi.
 
 ### Temps de traitement potentiel
 
-Nous recommandons que les campagnes avec une audience importante utilisent l’option de créer des cartes dès la première impression, car les cartes seront disponibles beaucoup plus rapidement après le lancement de la campagne. Les campagnes qui sont déclenchées au début de la session peuvent également envisager de passer à la création de la carte à la première impression (disponible par le biais de la réception/distribution) afin d'améliorer les performances.
+Nous recommandons aux campagnes ayant une audience importante de choisir l'option de création de cartes dès la première impression, car les cartes seront disponibles beaucoup plus rapidement après le lancement de la campagne. Les campagnes qui sont déclenchées au début de la session peuvent également envisager de passer à la création de la carte à la première impression (disponible par le biais de la réception/distribution) afin d'améliorer les performances.
 
-Lorsque les cartes sont créées à la première impression, leur traitement peut prendre 1 à 2 secondes. La durée de ce temps de traitement dépend de divers facteurs, tels que la taille de la carte et la complexité des options de modélisation du message. Par exemple, le temps de traitement des cartes utilisant le Contenu connecté sera au moins aussi long que le temps de réponse du Contenu connecté.
+Lorsque les cartes sont créées lors de la première impression, le traitement des cartes peut prendre 1 à 2 secondes. La durée de ce traitement dépend de divers facteurs, tels que la taille de la carte et la complexité des options d'envoi de messages. Par exemple, le temps de traitement des cartes utilisant le contenu connecté sera au moins aussi long que le temps de réponse du contenu connecté.
 
-### Versions antérieures du SDK
+### Versions précédentes du SDK
 
-Si l’application d’un utilisateur exécute une version antérieure du SDK, il recevra toujours des cartes de contenu envoyées avec une création de carte spécifiée. Cependant, les cartes prendront plus de temps à apparaître pour ces utilisateurs et peuvent ne pas apparaître avant la prochaine synchronisation de la carte de contenu.
+Si l'application d'un utilisateur exécute une version antérieure du SDK, il recevra toujours les cartes de contenu envoyées avec une création de carte spécifiée. Cependant, les cartes prendront plus de temps à apparaître pour ces utilisateurs, et peuvent ne pas apparaître avant la prochaine synchronisation des cartes de contenu.
 

@@ -1,20 +1,20 @@
 ---
-nav_title: Variáveis de Conteúdo Conectado Local
-article_title: Variáveis de Conteúdo Conectado Local
+nav_title: Variáveis de conteúdo local conectado
+article_title: Variáveis de conteúdo local conectado
 page_order: 1
-description: "Este artigo de referência cobre como usar e armazenar variáveis de conteúdos conectados locais."
+description: "Este artigo de referência aborda como usar e armazenar variáveis locais do Connected Content."
 search_rank: 1
 ---
 
-# Variáveis de Conteúdo Local Conectado
+# Variáveis de conteúdo local conectado
 
 > Esta página fornece uma visão geral das variáveis locais do Connected Content e como usá-las e armazená-las.
 
-A Braze faz uma solicitação GET padrão no momento do envio para o endpoint especificado na tag `connected_content`. Se o endpoint retornar JSON, ele será automaticamente analisado e armazenado em uma variável chamada `connected`. Se o endpoint retornar texto, ele será inserido diretamente na mensagem no lugar da tag `connected_content`.
+O Braze faz uma solicitação GET padrão no momento do envio para o endpoint especificado na tag `connected_content`. Se o ponto de extremidade retornar JSON, ele será automaticamente analisado e armazenado em uma variável chamada `connected`. Se o ponto de extremidade retornar texto, ele será inserido diretamente na mensagem no lugar da tag `connected_content`.
 
-Se você deseja salvar sua resposta em uma variável, é recomendável retornar objetos JSON. E se você quiser que a resposta do Connected Content substitua a tag pelo texto, certifique-se de que a resposta não seja um JSON válido (conforme definido por [json.org](http://www.json.org))
+Se você quiser salvar sua resposta em uma variável, é recomendável retornar objetos JSON. E se você quiser que a resposta do Connected Content substitua a tag pelo texto, certifique-se de que a resposta não seja um JSON válido (conforme definido por [json.org](http://www.json.org))
 
-Você também pode especificar `:save your_variable_name` após o URL para salvar os dados como outra coisa. Por exemplo, a seguinte tag `connected_content` armazenará a resposta em uma variável local chamada `localweather` (você pode salvar várias variáveis JSON `connected_content`):
+Você também pode especificar `:save your_variable_name` após o URL para salvar os dados como outra coisa. Por exemplo, a seguinte tag `connected_content` armazenará a resposta em uma variável local chamada `localweather` (você pode salvar várias variáveis JSON `connected_content` ):
 
 {% raw %}
 ```js
@@ -22,13 +22,13 @@ Você também pode especificar `:save your_variable_name` após o URL para salva
 ```
 {% endraw %}
 
-Metaweather é uma API de clima gratuita que usa um "Where-on-Earth ID" para retornar o clima em uma região. Use este código apenas para fins de teste e aprendizado.
+Metaweather é uma API meteorológica gratuita que usa um "ID Where-on-Earth" para retornar o clima em uma área. Use esse código apenas para fins de teste e aprendizado.
 
->  A variável armazenada só pode ser acessada dentro do campo que contém a `connected_content` solicitação. Por exemplo, se você quiser usar a variável `localweather` tanto no campo de mensagem quanto no campo de título, você deve fazer a solicitação `connected_content` dentro de ambos os campos. Se a solicitação for idêntica, a Braze usará os resultados em cache, em vez de fazer uma segunda solicitação ao servidor de destino. No entanto, as chamadas de Conteúdo Conectado feitas via HTTP POST não são armazenadas em cache por padrão e farão uma segunda solicitação ao servidor de destino. Se você deseja adicionar cache às chamadas POST, consulte a opção [`cache_max_age`](#configurable-caching).
+>  A variável armazenada só pode ser acessada dentro do campo que contém a solicitação `connected_content`. Por exemplo, se você quiser usar a variável `localweather` nos campos de mensagem e título, deverá fazer a solicitação `connected_content` em ambos os campos. Se a solicitação for idêntica, o Braze usará os resultados armazenados em cache, em vez de fazer uma segunda solicitação ao servidor de destino. No entanto, as chamadas de Connected Content feitas via HTTP POST não são armazenadas em cache por padrão e farão uma segunda solicitação ao servidor de destino. Se você quiser adicionar o armazenamento em cache às chamadas POST, consulte a opção [`cache_max_age`](#configurable-caching) opção.
 
-## análise JSON
+## Análise de JSON
 
-O conteúdo conectado interpretará quaisquer resultados formatados em JSON em uma variável local, quando você especificar `:save`. Por exemplo, um endpoint de conteúdo conectado relacionado ao clima retorna o seguinte objeto JSON, que você armazena em uma variável local `localweather` especificando `:save localweather`.
+A Connected Content interpretará todos os resultados formatados em JSON em uma variável local, quando você especificar `:save`. Por exemplo, um endpoint Connected Content relacionado ao clima retorna o seguinte objeto JSON, que você armazena em uma variável local `localweather` especificando `:save localweather`.
 {% raw %}
 
 ```js
@@ -62,10 +62,10 @@ O conteúdo conectado interpretará quaisquer resultados formatados em JSON em u
   }
 ```
 
-Você pode testar se está chovendo ou não referenciando `{{localweather.consolidated_weather[0].weather_state_name}}`, o que, se usado neste objeto, retornaria `Clear`. Se você também quiser personalizar com o nome do local resultante, `{{localweather.title}}` retorna `New York`.
+Você pode testar se está chovendo ou não fazendo referência a `{{localweather.consolidated_weather[0].weather_state_name}}`, que, se usado nesse objeto, retornaria `Clear`. Se você também quiser personalizar com o nome do local resultante, `{{localweather.title}}` retornará `New York`.
 {% endraw %}
 
-A imagem a seguir ilustra o tipo de realce de sintaxe que você deve ver no dashboard se estiver configurando as coisas corretamente. Também demonstra como você pode aproveitar o exemplo de solicitação `connected_content`!
+A imagem a seguir ilustra o tipo de realce de sintaxe que você deve ver no painel se estiver configurando tudo corretamente. Ele também demonstra como você pode aproveitar o exemplo da solicitação `connected_content`!
 
 {% raw %}
 ```liquid
@@ -82,45 +82,22 @@ Enjoy the weather!
 ```
 {% endraw %}
 
-Se a API respondesse com {%raw%}`{{localweather.consolidated_weather[0].weather_state_name}}`{%endraw%} retornando `Rain`, o usuário receberia este push.
+Se a API respondesse com {%raw%}`{{localweather.consolidated_weather[0].weather_state_name}}`{%endraw%} retornando `Rain`, o usuário receberia esse push.
 
-![Notificação por push com a mensagem "Está chovendo!" Pegue um guarda-chuva!"]({% image_buster /assets/img_archive/connected_weather_push2.png %} "Connected Content Push Usage Example"){:style="max-width:50%" }
+Notificação push com a mensagem "It's raining! Pegue um guarda-chuva!"]({% image_buster /assets/img_archive/connected_weather_push2.png %} "Connected Content Push Usage Example"){:style="max-width:50%" }
 
-Por padrão, o conteúdo conectado definirá um `Content-Type` cabeçalho em uma solicitação HTTP GET que ele faz para `application/json` com `Accept: */*`. Se precisar de outro tipo de conteúdo, especifique-o explicitamente adicionando `:content_type your/content-type` à tag. A Braze definirá então tanto o cabeçalho Content-Type quanto o cabeçalho Accept para o tipo que você especificar.
+{% multi_lang_include connected_content.md section='default behavior' %}
 
-{% raw %}
-```js
-{% connected_content http://numbersapi.com/random/trivia :content_type application/json %}
-```
-{% endraw %}
+## HTTP POST
 
-## POST HTTP
-
-Por padrão, o conteúdo conectado faz uma solicitação HTTP GET para a URL especificada. Para fazer uma solicitação POST, especifique `:method post`.
-
-Você pode opcionalmente fornecer um corpo POST especificando `:body` seguido por uma consulta string do formato `key1=value1&key2=value2&...` ou uma referência aos valores capturados. O tipo de conteúdo padrão é `application/x-www-form-urlencoded`. Se você especificar `:content_type application/json` e fornecer um corpo codificado em formulário, como `key1=value1&key2=value2`, a Braze codificará automaticamente o corpo em JSON antes de enviar.
-
-O Connected Content também não armazena em cache as chamadas POST por padrão. Você pode atualizar esse comportamento adicionando `:cache_max_age` à chamada POST do Connected Content.
-
-#### Tipo de conteúdo padrão
-
-{% raw %}
-```js
-{% connected_content https://example.com/api/endpoint :method post :body key1=value1&key2=value2 %}
-```
-#### Tipo de Conteúdo Application/JSON
-
-```js
-{% connected_content https://example.com/api/endpoint :method post :body key1=value1&key2=value2 :content_type application/json %}
-```
-{% endraw %}
+{% multi_lang_include connected_content.md section='http post' %}
 
 ### Fornecimento de corpo JSON
 
-Para fornecer seu próprio corpo JSON, escreva-o em linha se não houver espaços. Se seu corpo tiver espaços, você deve usar uma instrução de atribuir ou capturar. Ou seja, qualquer um desses três é aceitável:
+Se você quiser fornecer seu próprio corpo JSON, poderá escrevê-lo em linha se não houver espaços. Se o seu corpo tiver espaços, você deverá usar uma instrução de atribuição ou captura. Ou seja, qualquer uma dessas três opções é aceitável:
 
 {% raw %}
-##### Em linha: espaços não permitidos
+##### Inline: espaços não são permitidos
 
 ```js
 {% connected_content https://example.com/api/endpoint :method post :body {"foo":"bar","baz":"{{1|plus:1}}"} :content_type application/json %}
@@ -167,7 +144,7 @@ Para fornecer seu próprio corpo JSON, escreva-o em linha se não houver espaço
 
 ## Códigos de status HTTP
 
-Você pode utilizar o status HTTP de uma chamada de conteúdo conectado salvando-o primeiro como uma variável local e depois usando a chave `__http_status_code__`. Por exemplo:
+Você pode utilizar o status HTTP de uma chamada de Connected Content salvando-o primeiro como uma variável local e, em seguida, usando a tecla `__http_status_code__`. Por exemplo:
 
 {% raw %}
 ```js
@@ -179,7 +156,7 @@ Você pode utilizar o status HTTP de uma chamada de conteúdo conectado salvando
 {% endraw %}
 
 {% alert important %}
-Esta chave só será adicionada automaticamente ao objeto de conteúdo conectado se o endpoint retornar um objeto JSON válido e uma `2XX` resposta. Se o endpoint retornar um vetor ou outro tipo, essa chave não poderá ser configurada automaticamente na resposta.
+Essa chave só será adicionada automaticamente ao objeto Connected Content se o ponto de extremidade retornar um objeto JSON válido e uma resposta `2XX`. Se o ponto de extremidade retornar uma matriz ou outro tipo, essa chave não poderá ser definida automaticamente na resposta.
 {% endalert %}
 
 

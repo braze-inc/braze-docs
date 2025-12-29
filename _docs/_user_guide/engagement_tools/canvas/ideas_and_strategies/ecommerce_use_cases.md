@@ -128,6 +128,18 @@ The following settings are pre-configured in your Canvas:
 - Message step 
     - Review the email template and HTML block with a Liquid templating example to add products to your message in the pre-built template. If you use your own email template, you can also reference [Liquid variables](#message-personalization), as demonstrated in the following section.
 
+
+### How abandoned cart re-entry logic works
+
+When a user starts the checkout process, their cart is marked as `checkout_started`. From that point onward, any further cart updates with the same cart ID will not qualify the user to re-enter the abandoned cart user journey.
+
+1. When a user adds an item to their cart, they enter the Canvas.
+2. Each time they add or update items, they re-enter the Canvas—this keeps their cart data and messaging up to date.
+3. When the user starts the checkout process, their cart is tagged as `checkout_started`, and they exit the Canvas.
+4. Any future cart updates using the same cart ID will not trigger re-entry because this cart has already moved into the checkout stage.
+
+When users move to the checkout user journey, they're targeted by the [abandoned checkout Canvas](#abandoned-checkout) instead, which is designed for users further along in the purchase journey.
+
 ### Abandoned cart product personalization for emails {#abandoned-cart-checkout}
 
 Abandoned cart user journeys require a special `shopping_cart` Liquid tag for product personalization. 
@@ -164,7 +176,7 @@ If you use Shopify, add your catalog name to get the variant image URL.
 
 #### HTML cart URL
 
-If you want to direct users back to their cart, you can add a nested event property under the medata object, such as:
+If you want to direct users back to their cart, you can add a nested event property under the metadata object, such as:
 
 {% raw %}
 ```liquid
@@ -349,13 +361,13 @@ Because recommended events are more opinionated custom events, you can search fo
 
 ### eCommerce filters
 
-Segment your users with eCommerce filters, like **Ecommerce Source** and **Total Revenue**, by going to the **Ecommerce** section within the segmenter.
+Segment your users with eCommerce filters, like **Ecommerce Source** and **Total Revenue**, by going to the **Ecommerce** section within the segmenter. 
 
-![Segment filters dropdown with "Ecommerce" filters.]({% image_buster /assets/img_archive/ecommerce_filters.png %}){: style="max-width:80%"}
+For a list of eCommerce filters and their definitions, refer to [Segment filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) and select the "eCommerce" search category.
 
-{% alert important %}
-The purchase event will eventually be deprecated and replaced with [eCommerce recommended events]({{site.baseurl}}/user_guide/data/custom_data/recommended_events/). When this happens, segment filters will no longer populate under purchase behavior. For a full list of purchase events, refer to [Logging purchase events]({{site.baseurl}}/user_guide/data/custom_data/purchase_events/#logging-purchase-events). 
-{% endalert %}
+![Segment filters dropdown with "Ecommerce" filters.]({% image_buster /assets/img_archive/ecommerce_filters.png %}){: style="max-width:50%"}
+
+{% multi_lang_include alerts/important_alerts.md alert='Purchase event deprecation for eCommerce filters' %}
 
 ## Nested event properties
 

@@ -1,19 +1,19 @@
 ---
 nav_title: Tutoriels
-article_title: "Tutoriels : Écrire du code Liquid"
+article_title: "Tutoriels : Écrire du code liquide"
 page_order: 11
 description: "Cette page de référence contient des tutoriels pour débutants qui vous aideront à vous familiariser avec le code Liquid."
 page_type: tutorial
 ---
 
-# Tutoriels : Écrire du code Liquid
+# Tutoriels : Écrire du code liquide
 
-> Nouveau pour Liquid ? Ces tutoriels vous aideront à commencer à écrire du code Liquid pour des cas d'utilisation conviviaux pour les débutants. Chaque tutoriel couvre une combinaison différente d'objectifs d'apprentissage, tels que la logique conditionnelle et les opérateurs.
+> Nouveau pour Liquid ? Ces tutoriels vous aideront à commencer à écrire du code liquide pour des cas d'utilisation conviviaux pour les débutants. Chaque tutoriel couvre une combinaison différente d'objectifs d'apprentissage, tels que la logique conditionnelle et les opérateurs.
 
 Lorsque vous aurez terminé ces tutoriels, vous serez en mesure de.. :
 
-- Écrire du code Liquid pour les cas d'utilisation courants
-- Enchaîner des logiques conditionnelles Liquid pour personnaliser les messages en fonction des données de l'utilisateur.
+- Écrire du code liquide pour les cas d'utilisation courants
+- Enchaîner des logiques conditionnelles liquides pour personnaliser les messages en fonction des données de l'utilisateur.
 - Utilisez des variables et des filtres pour écrire des équations qui utilisent les valeurs des attributs.
 - Reconnaître les commandes de base d'un code liquide et se faire une idée générale de ce que fait le code.
 
@@ -39,7 +39,7 @@ Happy summer, {{${first_name} | default: "traveler"}}!
 {% endraw %}
 
 {: start="2"}
-2\. Maintenant, fournissons le message à envoyer si l'utilisateur est un client VIP. Pour ce faire, nous devons utiliser une étiquette de logique conditionnelle : `if`. Cette étiquette indique que si l'attribut personnalisé `vip_status` est égal à `VIP`, le code Liquid suivant est exécuté. Dans ce cas, un message spécifique sera envoyé.
+2\. Maintenant, fournissons le message à envoyer si l'utilisateur est un client VIP. Pour ce faire, nous devons utiliser une étiquette de logique conditionnelle : `if`. Cette étiquette indique que si l'attribut personnalisé `vip_status` est égal à `VIP`, le liquide suivant est exécuté. Dans ce cas, un message spécifique sera envoyé.
 
 {% raw %}
 ```liquid
@@ -69,7 +69,7 @@ Thanks for traveling with us! Enjoy your unique discount code: SUMMRTRVLS240.
 ```
 {% endraw %}
 
-{% details Code Liquid complet %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 Happy summer, {{${first_name} | default: "traveler"}}!
@@ -88,7 +88,7 @@ Thanks for traveling with us! Enjoy your unique discount code: SUMMRTRVLS240.
 
 Envoyons des messages personnalisés pour rappeler aux utilisateurs les articles restés dans leur panier. Nous les personnaliserons davantage pour qu'elles soient envoyées en fonction du nombre d'articles dans le panier, de sorte que s'il y a plus de trois articles ou moins, nous listerons tous les articles. S'il y a plus de trois éléments, nous enverrons un message plus concis.
 
-1. Vérifions si le panier de l'utilisateur est vide en ouvrant une logique conditionnelle Liquid avec l'opérateur `!=`, qui signifie "n'est pas égal". Dans ce cas, la condition est que l'attribut personnalisé `cart_items` ne soit pas égal à une valeur vide.
+1. Vérifions si le panier de l'utilisateur est vide en ouvrant une logique conditionnelle liquide avec l'opérateur `!=`, qui signifie "n'est pas égal". Dans ce cas, la condition est que l'attribut personnalisé `cart_items` ne soit pas égal à une valeur vide.
 
 {% raw %}
 ```liquid
@@ -136,7 +136,7 @@ Hi {{${first_name} | default: 'there'}}, don't forget to complete your purchase!
 ```
 {% endraw %}
 
-{% details Code Liquid complet %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% if {{custom_attribute.${cart_items}}} != blank %}
@@ -200,7 +200,7 @@ Get ready! Our Anniversary Sale is in {{ difference_days }} days!
 ```
 {% endraw %}
 
-{% details Code Liquid complet %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% assign sale_date = {{custom_attribute.${anniversary_date}}} | date: "%s" %}
@@ -270,7 +270,7 @@ We heard {{this_month}} is a special month! Enjoy a 50% discount on your purchas
 ```
 {% endraw %}
 
-{% details Code Liquid complet %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% assign this_month = 'now' | date: "%B" %}
@@ -370,7 +370,7 @@ We noticed it’s been a while since you last purchased {{custom_attribute.${fav
 {% endraw %}
 
 {: start="10"}
-10\. Nous utiliserons l'étiquette `else` pour préciser ce qui doit se passer si la condition n'est pas remplie (parce que l'achat n'a pas eu lieu il y a au moins six mois).
+10\. Nous utiliserons l'étiquette `else` pour spécifier ce qui doit se passer si la condition n'est pas remplie (parce que l'achat n'a pas eu lieu il y a au moins six mois).
 
 {% raw %}
 ```liquid
@@ -397,7 +397,7 @@ We noticed it’s been a while since you last purchased {{custom_attribute.${fav
 ```
 {% endraw %}
 
-{% details Code Liquid complet %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% if {{custom_attribute.${favorite_product}}} == blank or {{custom_attribute.${last_purchase_date}}} == blank %}

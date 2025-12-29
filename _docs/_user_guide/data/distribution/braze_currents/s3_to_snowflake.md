@@ -1,6 +1,6 @@
 ---
-nav_title: Transferring data from Amazon S3 to Snowflake
-article_title: Transferring Data from Amazon S3 to Snowflake
+nav_title: Transfer data from Amazon S3 to Snowflake
+article_title: Transfer Data from Amazon S3 to Snowflake
 page_order: 7
 page_type: tutorial
 description: "This how-to article will walk you through transferring data from cloud storage (like Amazon S3) to a warehouse (like Snowflake) using the Extract, Transform, Load (ETL) process."
@@ -8,12 +8,12 @@ tool: Currents
 
 ---
 
-# Transferring data from Amazon S3 to Snowflake
+# Transfer data from Amazon S3 to Snowflake
 
 > If your data currently sits in Amazon S3, you can transfer it to Snowflake or another relational data warehouse using the Extract, Load, Transform (ELT) process. This page covers how to do so.
 
 {% alert note %}
-If you have more specific use cases and would like Braze to service your Currents instance, reach out to your Braze account manager and ask them about Braze Data Professional Services.
+If you have more specific use cases and would like Braze to service your Currents instance, contact your Braze account manager and ask them about Braze Data Professional Services.
 {% endalert %}
 
 ## How it works
@@ -275,6 +275,6 @@ You must repeat the `CREATE TABLE` and `CREATE PIPE` commands for every event ty
 To see the types of analytics you can perform using Braze Currents, consult our [Looker Blocks](https://github.com/llooker?q=braze).
 
 {% alert note %}
-Reach out to your Braze account manager if you have any questions or if you're interested in having Braze guide you through this process.
+Contact your Braze account manager if you have any questions or if you're interested in having Braze guide you through this process.
 {% endalert %}
 

@@ -32,7 +32,7 @@ Braze と Segments の統合により、Braze Currents を利用して Braze イ
 Segment ダッシュボードで、Segment ソースを選択します。** [設定] > [API キー]** に移動します。ここで **Segment Write Key** を確認します。
 
 {% alert warning %}
-Segment Write Key を最新の状態に保つことが重要です。コネクターの認証情報が期限切れになると、コネクターはイベントの送信を中止します。この状態が**48時間**以上続くと、コネクタのイベントは削除され、データは永久に失われる。
+Segment Write Key を最新の状態に保つことが重要です。コネクターの認証情報が期限切れになると、コネクターはイベントの送信を停止します。これが**5 日** 以上続く場合、コネクタのイベントはドロップされ、データは永続的に失われます。
 {% endalert %}
 
 ### ステップ2:新しいCurrentsコネクターを作成する
@@ -41,19 +41,19 @@ Segment Write Key を最新の状態に保つことが重要です。コネク�
 2. [**\+ 新しい Currents を作成**] > [**セグメントデータのエクスポート**] をクリックします。
 3. 次に、統合名、連絡先メール、Segment Write Key、および Segment リージョンを指定します。
 
-![Braze の Segment Currents ページ。このページには、統合名、連絡先メール、Segment リージョン、API キーのフィールドがあります。]({% image_buster /assets/img/segment/segment_currents_integration_config.png %})
+![Braze の Segment Currents ページ。統合名、連絡先メール、Segment リージョン、API キーのフィールドがある。]({% image_buster /assets/img/segment/segment_currents_integration_config.png %})
 
-### ステップ 3: メールエンゲージメントをエクスポートする
+### ステップ3:メールエンゲージメントをエクスポートする
 
 次に、エクスポートするメッセージエンゲージメントイベントを選択します。リストされている次のエクスポートイベントおよびプロパティテーブルを参照してください。Segment に送信されるイベントはすべて、ユーザーの `external_user_id` を `userId` に、ユーザーの `braze_id` を `anonymousId` に組み入れます。
 
-Braze は、**匿名ユーザーからのイベントを含める**にチェックが入れられている場合にのみ、`external_user_id` がないユーザーのイベントデータを送信するため、注意が必要です。
+Braze は、[**匿名ユーザーからのイベントを含める**] にチェックが入れられている場合にのみ、`external_user_id` がないユーザーのイベントデータを送信するため、注意が必要です。
 
 {% alert important %}
 現在、匿名ユーザーのエクスポートは早期アクセスの対象です。早期アクセスへの参加をご希望の場合は、Braze のアカウントマネージャーにご連絡ください。
 {% endalert %}
 
-![Braze の Segment Currents ページの利用可能なすべてのメッセージエンゲージメントイベントのリスト。]({% image_buster /assets/img/segment/segment_currents_data_config.png %})
+![Braze の Segment Currents ページの利用可能なすべてのメッセージエンゲージイベントのリスト。]({% image_buster /assets/img/segment/segment_currents_data_config.png %})
 
 最後に [**Currents を起動**] を選択します。
 

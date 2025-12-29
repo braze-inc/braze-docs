@@ -53,10 +53,10 @@ valid_partner_list:
   url: /docs/partners/mozart_data/
 - name: SalesWings
   url: /docs/partners/saleswings/
-- name: Scuba
-  url: /docs/partners/scuba/
 - name: Inbox Monster
   url: /docs/partners/inbox_monster/
+- name: キックボクシング
+  url: /docs/partners/kickbox/
 - name: Amazon S3
   url: /docs/partners/amazon_s3/
 - name: Google Cloud Storage
@@ -163,4 +163,6 @@ valid_partner_list:
   url: /docs/partners/eagle_eye/
 - name: Eppo
   url: /docs/partners/eppo/
+- name: レムニスク
+  url: /docs/partners/lemnisk/
 ---

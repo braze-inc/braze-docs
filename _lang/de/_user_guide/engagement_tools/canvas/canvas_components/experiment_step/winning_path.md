@@ -1,5 +1,5 @@
 ---
-nav_title: Gewinnerpfad 
+nav_title: Gewinnerpfad
 article_title: Gewinnerpfad in Experimentpfaden 
 page_type: reference
 description: "Dieser Referenzartikel behandelt Winning Path, ein Feature, mit dem Sie Ihre A/B-Tests automatisieren können, wenn es für einen Experimentpfad-Schritt aktiviert ist."
@@ -14,31 +14,29 @@ Wenn der Winning Path in einem Experimentierpfad-Schritt aktiviert ist, werden a
 
 ## Winning Path verwenden
 
-### Schritt 1: Einen Experimentierpfad hinzufügen
+### Schritt 1: Add an Experiment Path step
 
 Fügen Sie einen [Experimentierpfad]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/) zu Ihrem Canvas hinzu und aktivieren Sie dann die Option **Gewinnpfad**.
 
-![Einstellungen im Experimentierpfad mit dem Titel "Nachfolgende Benutzer auf den Gewinnerpfad verteilen". Der Abschnitt enthält einen Umschalter für den Winning-Pfad und Optionen zur Konfiguration des Konversions-Events und des Experiment-Fensters.][1]
+![Einstellungen im Experiment-Pfad mit dem Titel "Nachfolgende Nutzer:innen auf den Siegerpfad verteilen". Der Abschnitt enthält einen Umschalter für den Winning-Pfad und Optionen zur Konfiguration des Konversions-Events und des Experiment-Fensters.]({% image_buster /assets/img/experiment_step/experiment_winning_path_recurring.png %})
 
 ### Schritt 2: Konfigurieren Sie die Einstellungen für den Gewinnweg
 
-Geben Sie das Umwandlungsereignis an, das den Gewinner bestimmen soll. Wenn keine Konversions-Events verfügbar sind, kehren Sie zum ersten Schritt der Canvas-Einrichtung zurück und [weisen Konversions-Events zu]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#choose-conversion-events). Beachten Sie, dass, wenn Sie den Gewinner mit Öffnungen und Klicks ermitteln, nur die erste Nachricht im Pfad, die Öffnungen oder Klicks erzeugt, zur Ermittlung des Gewinners beiträgt.
+Geben Sie das Umwandlungsereignis an, das den Gewinner bestimmen soll. Wenn keine Konversions-Events verfügbar sind, kehren Sie zum ersten Schritt der Canvas-Einrichtung zurück und [weisen Konversions-Events zu]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#choose-conversion-events). 
+
+Wenn Sie Öffnungen oder Klicks als Konversions-Event wählen, stellen Sie sicher, dass der erste Schritt im Pfad ein [Nachrichten-Schritt]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step) ist. Braze zählt nur das Engagement ab dem ersten Schritt der Nachricht im jeweiligen Pfad. Wenn der Pfad mit einem anderen Schritt beginnt (wie z.B. einem Verzögerungs- oder Zielgruppen-Pfad-Schritt) und die Nachricht später kommt, wird diese Nachricht bei der Bewertung der Performance nicht berücksichtigt.
 
 Legen Sie als nächstes das **Experimentierfenster** fest. Das **Experiment-Fenster** gibt an, wie lange das Experiment läuft, bevor der Gewinnerpfad ermittelt wird und alle nachfolgenden Benutzer diesen Pfad entlang geschickt werden. Das Fenster beginnt, wenn der erste Nutzer:innen den Schritt betritt.
 
-![][2]
+![Winning Path Settings mit dem Konversions-Event "Klicks" ausgewählt für ein 12-Stunden-Experimentierfenster.]({% image_buster /assets/img/experiment_step/experiment_winning_settings.png %})
 
 ### Schritt 3: Fallback bestimmen {#statistical-significance}
 
 Wenn die Ergebnisse des Tests nicht ausreichen, um einen statistisch signifikanten Gewinner zu ermitteln, werden alle zukünftigen Benutzer standardmäßig auf den Pfad mit der besten Leistung geschickt.
 
-Alternativ können Sie auch auswählen, **allen zukünftigen Nutzer:innen die Mischung der Pfade weiter zu senden**.
+Alternativ können Sie auch auswählen, **allen zukünftigen Nutzer:innen die Mischung der Pfade weiter zu senden**. Mit dieser Option werden künftige Benutzer entsprechend den in der Pfadverteilung des Experiments angegebenen Prozentsätzen auf die verschiedenen Pfade geschickt.
 
-![][6]
-
-Mit dieser Option werden künftige Benutzer entsprechend den in der Pfadverteilung des Experiments angegebenen Prozentsätzen auf die verschiedenen Pfade geschickt.
-
-![In der Versuchsverteilung angegebene Prozentsätze][3]
+!["Allen zukünftigen Nutzern weiterhin den Pfadmix senden" ausgewählt, was mit den Nutzer:innen geschehen soll, wenn das Testergebnis statistisch nicht signifikant ist.]({% image_buster /assets/img/experiment_step/experiment_winning_statistical.png %})
 
 {% alert note %}
 Eine Verzögerungsgruppe erscheint nur dann in Ihrer Pfadverteilung, wenn Ihr Canvas für eine einmalige Eingabe eingerichtet ist und Ihr Experimentschritt drei oder weniger Pfade hat. Wiederkehrende und getriggerte Canvase haben keine Verzögerungsgruppe, wenn Winning Path aktiviert ist.
@@ -65,11 +63,11 @@ Wenn Sie Winning Path aktiviert haben, ist Ihre Analyseansicht in zwei Registerk
 
 Bei der Verwendung von Gewinnwegen in einem Canvas, bei dem Nutzer:innen nur eine einmalige Eingabe vornehmen dürfen, wird automatisch eine Verzögerungsgruppe eingefügt. Während der Dauer des Experiments wird ein bestimmter Prozentsatz der Nutzer:innen in der Verzögerungsgruppe gehalten, während die übrigen Nutzer:innen Ihre Experimentpfade betreten.
 
-![Experimentierschritt mit einer Verzögerungsgruppe für den Siegerpfad][4]{: style="max-width:75%"}
+![Experiment-Pfad-Schritt mit einer Verzögerungsgruppe für den Gewinnerpfad]({% image_buster /assets/img/experiment_step/experiment_one_time.png %}){: style="max-width:75%"}
 
 Wenn der Test abgeschlossen ist und ein Siegerpfad ermittelt wurde, werden die Benutzer, die der Verzögerungsgruppe zugewiesen sind, zu dem gewählten Pfad geleitet und fahren mit dem Canvas fort.
 
-![Experiment-Pfad-Schritt mit einer Verzögerungsgruppe, die auf dem Siegerpfad gesendet wird][5]{: style="max-width:75%"}
+![Experiment-Pfad-Schritt mit einer Verzögerungsgruppe, die auf den Siegerpfad geschickt wird]({% image_buster /assets/img/experiment_step/experiment_one_time_results.png %}){: style="max-width:75%"}
 
 ### Lieferung in Ortszeit
 
@@ -77,9 +75,3 @@ Wir raten davon ab, in Canvases with Winning Paths eine lokale Zeitangabe zu ver
 
 Wenn Sie eine lokale Zustellung wünschen, sollten Sie ein Zeitfenster von 24-48 oder mehr Stunden einplanen. Auf diese Weise betreten Nutzer:innen in frühen Zeitzonen den Canvas und triggern den Start des Experiments, aber es bleibt noch genügend Zeit im Experimentierfenster. Nutzer:innen in späteren Zeitzonen haben noch genügend Zeit, um den Canvas und den Experiment-Schritt mit Gewinn-Pfaden zu betreten und möglicherweise umzuwandeln, bevor das Experiment-Fenster abläuft.
 
-[1]: {% image_buster /assets/img/experiment_step/experiment_winning_path_recurring.png %}
-[2]: {% image_buster /assets/img/experiment_step/experiment_winning_settings.png %}
-[3]: {% image_buster /assets/img/experiment_step/experiment_path_distribution.png %}
-[4]: {% image_buster /assets/img/experiment_step/experiment_one_time.png %}
-[5]: {% image_buster /assets/img/experiment_step/experiment_one_time_results.png %}
-[6]: {% image_buster /assets/img/experiment_step/experiment_winning_statistical.png %}

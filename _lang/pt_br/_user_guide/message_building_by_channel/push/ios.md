@@ -7,10 +7,10 @@ layout: dev_guide
 page_type: landing
 channel: push
 platform: iOS
-description: "Esta landing page lista tudo o que é exclusivamente iOS push para a Braze."
+description: "Esta página de aterrissagem lista tudo o que é exclusivamente iOS push para o Braze."
 
-guide_top_header: "Push para iOS"
-guide_top_text: "Os artigos a seguir listam tudo o que o iOS empurra para a Braze."
+guide_top_header: "iOS Push"
+guide_top_text: "Os artigos a seguir listam tudo o que o iOS empurra exclusivamente para o Braze."
 
 guide_featured_title: "Artigos de seção"
 guide_featured_list:
@@ -23,7 +23,7 @@ guide_featured_list:
 - name: "Opções de notificação"
   link: /docs/user_guide/message_building_by_channel/push/ios/notification_options/
   image: /assets/img/braze_icons/settings-01.svg
-- name: "Notificações Ricas"
+- name: "Notificações avançadas"
   link: /docs/user_guide/message_building_by_channel/push/ios/rich_notifications/
   image: /assets/img/braze_icons/beaker-02.svg
 - name: "Configurações avançadas de campanha"

@@ -1,12 +1,12 @@
-{% multi_lang_include developer_guide/prerequisites/roku.md %} Además, los mensajes dentro de la aplicación sólo se enviarán a dispositivos Roku que ejecuten la versión mínima del SDK admitida:
+{% multi_lang_include developer_guide/prerequisites/roku.md %} Además, los mensajes dentro de la aplicación sólo se enviarán a dispositivos Roku que ejecuten la versión mínima compatible del SDK:
 
 {% sdk_min_versions roku:0.1.2 %}
 
 ## Tipos de mensajes
 
 {% tabs %}
-{% multi_lang_include developer_guide/_shared/push_notifications/message_types/android.md %}
-{% multi_lang_include developer_guide/_shared/push_notifications/message_types/swift.md %}
+{% multi_lang_include developer_guide/_shared/in_app_messages/message_types/android.md %}
+{% multi_lang_include developer_guide/_shared/in_app_messages/message_types/swift.md %}
 {% endtabs %}
 
 ## Habilitación de mensajes dentro de la aplicación

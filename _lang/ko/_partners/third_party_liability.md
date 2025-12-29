@@ -1,7 +1,7 @@
 ---
 nav_title: 제3자 책임
 article_title: 제3자 책임
-page_order: 8
+page_order: 12
 page_type: reference
 description: "이 참조 문서에서는 Braze가 관련된 서드파티와의 참조에서 책임을 져야 하는 사항에 대한 정책을 자세히 설명합니다."
 

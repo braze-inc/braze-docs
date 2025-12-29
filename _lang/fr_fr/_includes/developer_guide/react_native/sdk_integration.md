@@ -20,7 +20,7 @@ Si votre app iOS est conforme à `RCTAppDelegate` et suit notre précédente con
 
 Pour intégrer le SDK, la version 0.71 ou ultérieure de React Native est nécessaire. Pour obtenir la liste complète des versions prises en charge, consultez notre [référentiel GitHub du SDK React Native](https://github.com/braze-inc/braze-react-native-sdk?tab=readme-ov-file#version-support).
 
-### Étape 1 : Intégrez la bibliothèque Braze
+### Étape 1 : Intégrez la bibliothèque Braze
 
 {% tabs local %}
 {% tab npm %}
@@ -48,7 +48,7 @@ Assurez-vous que votre version du SDK React Native de Braze correspond au minimu
 Pour installer le plugin Braze Expo, exécutez la commande suivante :
 
 ```bash
-expo install @braze/expo-plugin
+npx expo install @braze/expo-plugin
 ```
 
 #### Étape 2.2 : Ajoutez le plug-in à votre app.json
@@ -125,7 +125,7 @@ Exemple de configuration :
 La préconstruction de votre application générera les fichiers natifs nécessaires au fonctionnement du plugin Braze Expo.
 
 ```bash
-expo prebuild
+npx expo prebuild
 ```
 
 Exécutez votre application tel qu’indiqué dans la [documentation Expo](https://docs.expo.dev/workflow/customizing/). Gardez à l'esprit que si vous modifiez les options de configuration, vous devrez préconstruire et exécuter à nouveau l'application.
@@ -156,8 +156,8 @@ Pour vous connecter aux serveurs Braze, créez un fichier `braze.xml` dans le do
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<string name="com_braze_api_key">YOU_APP_IDENTIFIER_API_KEY</string>
-<string translatable="false" name="com_braze_custom_endpoint">YOUR_CUSTOM_ENDPOINT_OR_CLUSTER</string>
+  <string translatable="false" name="com_braze_api_key">YOU_APP_IDENTIFIER_API_KEY</string>
+  <string translatable="false" name="com_braze_custom_endpoint">YOUR_CUSTOM_ENDPOINT_OR_CLUSTER</string>
 </resources>
 ```
 
@@ -249,10 +249,10 @@ Dans le dossier racine du projet :
 
 ```bash
 # To install using the React Native New Architecture
-cd ios && RCT_NEW_ARCH_ENABLED=1 pod install
+cd ios && pod install
 
 # To install using the React Native legacy architecture
-cd ios && pod install
+cd ios && RCT_NEW_ARCH_ENABLED=0 pod install
 ```
 
 #### Étape 2.3 : Configurer le SDK Braze

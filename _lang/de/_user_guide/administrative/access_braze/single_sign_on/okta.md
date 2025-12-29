@@ -9,10 +9,7 @@ description: "In diesem Artikel erfahren Sie, wie Sie Braze für die Verwendung 
 
 # Okta 
 
-![Anmeldung auf dem Braze-Dashboard mit aktiviertem Okta-SSO.][4]{: style="float:right;max-width:30%;margin-left:15px;margin-bottom:15px;"}
-
 > Okta verbindet jede Person mit jeder Anwendung auf jedem Gerät. Es handelt sich um einen Identitätsverwaltungsdienst für Unternehmen, der für die Cloud entwickelt wurde, aber mit vielen lokalen Anwendungen kompatibel ist. Mit Okta kann Ihr IT-Team den Zugriff eines jeden Mitarbeiters auf jede Anwendung oder jedes Gerät verwalten.
-<br>
 
 ## Anforderungen
 
@@ -30,13 +27,13 @@ description: "In diesem Artikel erfahren Sie, wie Sie Braze für die Verwendung 
 
 Nachdem Ihr Account Manager SAML SSO für Ihr Konto aktiviert hat, gehen Sie zu **Einstellungen** > **Admin-Einstellungen** > **Sicherheitseinstellungen** und schalten Sie den Abschnitt SAML SSO auf **EIN**.
 
-![Okta SAML SSO auf der Seite Sicherheitseinstellungen aktiviert.][1]
+\![Okta SAML SSO auf der Seite Sicherheitseinstellungen aktiviert.]({% image_buster/assets/img/Okta/okta1.png %})
 
 ### Schritt 1b: SAML SSO-Einstellungen bearbeiten
 
 Über Ihr Okta Admin-Dashboard erhalten Sie eine Ziel-URL (Anmelde-URL) und ein `x.509` -Zertifikat, die Sie auf der Seite **Sicherheitseinstellungen** Ihres Braze-Kontos eingeben müssen.
 
-![][7]{: style="max-width:75%"}
+\![]({% image_buster /assets/img/Okta/okta5.png %}){: style="max-width:75%"}
 
 | Anforderung | Details |
 |---|---|
@@ -53,7 +50,7 @@ Wählen Sie in Okta die Registerkarte **Anmelden** für die Braze SAML-App und k
 
 Als nächstes geben Sie den RelayState-API-Schlüssel mit der Berechtigung `sso.saml.login` in das Feld **Standard-Relay-Status** ein. 
 
-![Okta-Standard-RelayState auf dem Tab „Anmelden“.][2]{: style="max-width:75%"}
+\![Okta Standard RelayState auf dem Tab Anmelden.]({% image_buster /assets/img/Okta/okta2.png %}){: style="max-width:75%"}
 
 Stellen Sie sicher, dass Sie diese neuen Einstellungen speichern.
 
@@ -65,9 +62,5 @@ Wenn Sie möchten, dass sich die Benutzer Ihres Braze-Kontos nur mit SAML SSO an
 
 Sie sollten jetzt in der Lage sein, sich mit Okta bei Braze anzumelden!
 
-[1]: {% image_buster/assets/img/Okta/okta1.png %}
-[2]: {% image_buster /assets/img/Okta/okta2.png %}
-[4]: {% image_buster /assets/img/Okta/okta4.png %}
-[7]: {% image_buster /assets/img/Okta/okta5.png %}
-[5]: {% image_buster /assets/img/sso2.png %}
-[6]: {% image_buster /assets/img/samlsso.gif %}
+Anmeldung im Braze-Dashboard mit Okta SSO Enablement.]({% image_buster /assets/img/Okta/okta4.png %}){: style="max-width:60%"}
+

@@ -22,8 +22,8 @@ So richten Sie Ihren Konversions Dashboard-Bericht ein:
 3. Wählen Sie die zu analysierenden Kampagnen oder Canvase (oder beides) aus. 
    - (optional) Filtern Sie Kampagnen und Canvase, indem Sie einen Tag auswählen.  
 4. Wählen Sie **den/die Kanal/Kanäle** aus, den/die Sie für Ihre Nachrichten analysieren möchten.
-5. (optional) Wählen Sie eine **Aufschlüsselungsebene** aus, um verschiedene Dimensionen von Daten anzuzeigen, z. B. nach Variante, Canvas-Schritt, Land oder Sprache.
-6. (optional) Wenn Sie die Konversionen eines Events berechnen möchten, das nicht als Konversions-Event in der Kampagne oder im Canvas eingerichtet wurde, aktivieren Sie [Angepasste Events verwenden](#using-custom-events).
+5. Wählen Sie eine **Aufschlüsselung nach** Ebene aus, um verschiedene Dimensionen von Daten anzuzeigen, z. B. nach Variante, Canvas-Schritt, Land oder Sprache.
+6. (Optional) Wenn Sie Konversionen eines Ereignisses berechnen möchten, das nicht als Konversions-Event in der Kampagne oder im Canvas eingerichtet wurde, aktivieren Sie [Angepasste Events verwenden](#using-custom-events).
 7. Wählen Sie eine [Attribution-Methode](#attribution-methods) aus, mit der die ausgewählten Nachrichten analysiert werden sollen.
 
 {% alert note %}
@@ -59,7 +59,11 @@ Ihr Bericht ist in drei Abschnitte unterteilt:
 
 ### Konversionsdetails
 
-Die Tabelle mit den Konversionsdetails zeigt immer eine Spalte für *Empfänger:innen* und eine weitere für *Konversionen* (Rate und Summe). Die beiden verbleibenden Tabellenspalten, die angezeigt werden, hängen von den Optionen ab, die Sie beim Einrichten Ihres Berichts ausgewählt haben. Die folgende Tabelle beschreibt mögliche Metriken.
+Die Tabelle mit den Konversionsdetails zeigt immer eine Spalte für *Empfänger:innen* und eine weitere für *Konversionen* (Rate und Summe). Die beiden verbleibenden Tabellenspalten, die angezeigt werden, hängen von den Optionen ab, die Sie beim Einrichten Ihres Berichts ausgewählt haben. 
+
+![Tabelle mit Konversionsdetails, die Berührungen als Attributionsmethode für die Spalten drei und vier anzeigt.]({% image_buster /assets/img_archive/conversions2_details.png %}){: style="border:none"}
+
+Die folgende Tabelle beschreibt mögliche Metriken.
 
 | Angezeigte Metrik | Beschreibung |
 | --- | --- |
@@ -68,8 +72,6 @@ Die Tabelle mit den Konversionsdetails zeigt immer eine Spalte für *Empfänger:
 | Attributionsmethode | Definiert durch die [Attribution-Methode](#attribution-methods), die Sie beim Einrichten des Berichts ausgewählt haben. Bei der Last Touch Attribution oder wenn mehrere Kanäle ausgewählt sind, erscheint dies als [Berührungen](#terms-to-know). |
 | Konversionsrate (Attributionsmethode) | Definiert durch die [Attribution-Methode](#attribution-methods), die Sie beim Einrichten des Berichts ausgewählt haben. Wenn Sie mehrere Kanäle ausgewählt haben, wird standardmäßig die Letztkontakt-Attribution verwendet. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-![]({% image_buster /assets/img_archive/conversions2_details.png %})
 
 Wenn Sie beim [Einrichten Ihres Berichts](#setting-up-your-report) (Schritt 5) Details auf der Aufschlüsselungsebene für Kampagnen oder Canvase ausgewählt haben, können Sie auf <i class="fas fa-angle-down"></i> klicken, um die Tabelle zu erweitern.
 
@@ -85,7 +87,7 @@ Wählen Sie eine Download-Option aus, um die Zeitreihendaten herunterzuladen: PN
 Dieses Diagramm zeigt jeweils nur Daten für einen einzelnen Kanal an. Verwenden Sie das Dropdown-Menü **Kanal** auf dem Chart, um einen einzelnen Kanal auszuwählen.
 {% endalert %}
 
-![]({% image_buster /assets/img_archive/conversions2_funnel.png %}){: style="max-width:70%"}
+![Funnel-Balkendiagramm für Konversionen für zwei Kampagnen, die ähnliche Ergebnisse für zugestellte E-Mails, geöffnete E-Mails, angeklickte E-Mails und Konversionen zeigen.]({% image_buster /assets/img_archive/conversions2_funnel.png %})
 
 ### Konversionen im Zeitverlauf
 
@@ -93,7 +95,7 @@ Dieses Zeitreihendiagramm enthält eine Darstellung der Konversionen pro Kampagn
 
 Um die Zeitreihendaten herunterzuladen, wählen Sie <i class="fas fa-bars"></i> und dann die gewünschte Download-Option aus. Die verfügbaren Optionen sind PNG, JPEG, PDF, SVG oder CSV.
 
-![]({% image_buster /assets/img_archive/conversions2_over_time.png %}){: style="max-width:70%"}
+![Zeitreihengrafik der Konversionen für zwei E-Mail Kampagnen, die die Konversionen nach Tagen anzeigt.]({% image_buster /assets/img_archive/conversions2_over_time.png %})
 
 ### Attributionsmethoden
 

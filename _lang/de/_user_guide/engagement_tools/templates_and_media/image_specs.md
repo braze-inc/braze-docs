@@ -17,13 +17,13 @@ tool:
 
 Sie sollten Ihre Nachrichten immer in [einer Vorschau anzeigen und auf verschiedenen Geräten testen]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/), um sicherzustellen, dass die wichtigsten Bereiche Ihres Bildes und Ihrer Nachricht wie erwartet erscheinen.
 
-{% alert tip %} Erstellen Sie Assets mit Vertrauen! Unsere Bildvorlagen für In-App-Nachrichten und Safe-Zone-Overlays sind so gestaltet, dass sie auf Geräten aller Größen gut funktionieren. [Download Designvorlagen ZIP]({% image_buster /assets/download_file/Braze-In-App-Message-Design-Templates.zip %}). {% endalert %}
+{% alert tip %} Erstellen Sie Assets mit Vertrauen! Unsere Templates für In-App-Nachricht-Bilder und Overlays für die Sicherheitszone sind so gestaltet, dass sie mit Geräten aller Größen gut funktionieren. [Download Design Templates ZIP]({% image_buster /assets/download_file/Braze-In-App-Message-Design-Templates.zip %}). {% endalert %}
 
-{% multi_lang_include image_specs.md variable_name='Nutzlastgröße' %}
+{% multi_lang_include image_specs.md variable_name='payload size' %}
 
 ## In-App-Nachrichten
 
-{% multi_lang_include image_specs.md variable_name='in-app Nachrichten' %}
+{% multi_lang_include image_specs.md variable_name='in-app messages' %}
 
 ### Font Awesome
 

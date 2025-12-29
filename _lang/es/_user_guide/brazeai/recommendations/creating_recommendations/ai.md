@@ -1,5 +1,5 @@
 ---
-nav_title: Recomendaciones sobre IA
+nav_title: Recomendaciones de la IA
 article_title: Crear recomendaciones de elementos de IA
 description: "Este artículo de referencia explica cómo crear una recomendación de artículos de IA para los artículos de un catálogo."
 page_order: 1
@@ -11,11 +11,13 @@ page_order: 1
 
 ## Acerca de las recomendaciones de artículos AI
 
-Utiliza las recomendaciones de artículos de IA para calcular los productos más populares o crear recomendaciones de IA personalizadas para un [catálogo]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/) específico. Después de crear tu recomendación, puedes utilizar la personalización para insertar esos productos en tus mensajes.
+Utiliza las recomendaciones de artículos de IA para calcular los productos más populares o crear recomendaciones de IA personalizadas para un [catálogo]({{site.baseurl}}/user_guide/data/activation/catalogs/) específico. Después de crear tu recomendación, puedes utilizar la personalización para insertar esos productos en tus mensajes.
 
 {% alert tip %}
 [Las recomendaciones personalizadas con IA](#recommendation-types) funcionan mejor con cientos o miles de artículos y, normalmente, al menos 30.000 usuarios con datos de compra o interacción. Esto es sólo una guía aproximada y puede variar. Los otros tipos de recomendación pueden funcionar con menos datos.
 {% endalert %}
+
+{% multi_lang_include brazeai/recommendations/ai.md section="Plan-specific features" %}
 
 ## Crear una recomendación de artículo de IA
 
@@ -23,7 +25,7 @@ Utiliza las recomendaciones de artículos de IA para calcular los productos más
 
 Antes de empezar, tendrás que completar lo siguiente:
 
-- Debes tener al menos un [catálogo]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/) para utilizar cualquiera de los tipos de recomendación que se describen a continuación.
+- Debes tener al menos un [catálogo]({{site.baseurl}}/user_guide/data/activation/catalogs/) para utilizar cualquiera de los tipos de recomendación descritos a continuación.
 - Debes tener datos de compra o evento en Braze (eventos personalizados o el objeto de compra) que incluyan una referencia a ID de producto únicos almacenados en un catálogo.
 
 ### Paso 1: Crear una nueva recomendación
@@ -31,23 +33,23 @@ Antes de empezar, tendrás que completar lo siguiente:
 Puedes crear una recomendación de elemento de IA desde cualquier lugar del panel:
 
 {% tabs local %}
-{% tab Desde el menú de navegación %}
+{% tab From the navigation menu %}
 1. Ve a **Análisis** > **Recomendación de elementos de IA**.
 2. Selecciona **Crear predicción** > **Recomendación de elementos AI**.
 {% endtab %}
 
-{% tab De un catálogo %}
+{% tab From a catalog %}
 También puedes elegir crear una recomendación directamente desde un catálogo individual. Selecciona tu catálogo en la página **Catálogos** y, a continuación, selecciona **Crear recomendación**.
 {% endtab %}
 {% endtabs %}
 
-### Paso 2: Añadir detalles de la recomendación
+### Paso 2: Añadir detalles de la recomendación
 
 Dale a tu recomendación un nombre y una descripción opcional.
 
-![Paso "Detalles de la recomendación" con los campos nombre y descripción.]({% image_buster /assets/img/item_recs_1.png %})
+\!["Detalles de la recomendación" paso con los campos nombre y descripción.]({% image_buster /assets/img/item_recs_1.png %})
 
-### Paso 3: Define tu recomendación {#recommendation-type}
+### Paso 3: Define tu recomendación {#recommendation-type}
 
 Selecciona un tipo de recomendación. Cada tipo utiliza los últimos seis meses de datos de interacción de artículos, como una compra o datos de eventos personalizados. Para obtener información más detallada y casos de uso de cada uno, consulta [Tipos y casos de uso]({{site.baseurl}}/user_guide/brazeai/recommendations/).
 
@@ -59,24 +61,24 @@ Al utilizar **Más recientes** o **AI personalizada**, los usuarios con datos in
 
 Para evitar sugerir artículos que un usuario ya haya comprado o con los que ya haya interactuado, selecciona **No recomendar artículos con los que los usuarios hayan interactuado previamente**. Esta opción sólo está disponible cuando el **Tipo de** recomendación está configurado como **AI Personalizado**.
 
-![Paso "Define tu recomendación" con "AI Personalizada" como tipo y la opción "No recomendar artículos con los que los usuarios hayan interactuado previamente" seleccionada.]({% image_buster /assets/img/item_recs_2-3.png %})
+\!["Define tu recomendación" paso con "AI Personalizada" como tipo y la opción "No recomendar artículos con los que los usuarios hayan interactuado previamente" seleccionada.]({% image_buster /assets/img/item_recs_2-3.png %})
 
 Esta configuración impide que la mensajería reutilice los artículos que un usuario ya ha comprado o con los que ya ha interactuado, siempre que la recomendación se haya actualizado recientemente. Los artículos comprados o con los que se haya interactuado entre las actualizaciones de las recomendaciones pueden seguir apareciendo. En la versión gratuita de las recomendaciones de artículos, las actualizaciones son semanales. Para la versión pro de las recomendaciones de elementos de IA, las actualizaciones se producen cada 24 horas.
 
 Por ejemplo, al utilizar la versión pro de las recomendaciones de artículos de IA, si un usuario compra algo y luego recibe un correo electrónico de marketing en 30 minutos, es posible que el artículo que acaba de comprar no se excluya del correo electrónico a tiempo. Sin embargo, los mensajes enviados después de 24 horas no incluirán ese elemento.
 
-#### Paso 3.2: Seleccionar un catálogo
+#### Paso 3.2: Selecciona un catálogo
 
-Si aún no está rellenado, selecciona el [catálogo]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/) del que esta recomendación extraerá artículos.
+Si aún no está rellenado, selecciona el [catálogo]({{site.baseurl}}/user_guide/data/activation/catalogs/) del que esta recomendación extraerá artículos.
 
 #### Paso 3.3: Añade una selección (opcional)
 
-Si quieres tener más control sobre tu recomendación, elige una [selección]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/) para aplicar filtros personalizados. Las selecciones filtran las recomendaciones por columnas específicas de tu catálogo, como marca, tamaño o ubicación. Las selecciones que contienen Liquid no pueden utilizarse en tu recomendación.
+Si quieres tener más control sobre tu recomendación, elige una [selección]({{site.baseurl}}/user_guide/data/activation/catalogs/selections/) para aplicar filtros personalizados. Las selecciones filtran las recomendaciones por columnas específicas de tu catálogo, como marca, tamaño o ubicación. Las selecciones que contienen Liquid no pueden utilizarse en tu recomendación.
 
-![Un ejemplo de la selección "en stock" seleccionada para la recomendación.]({% image_buster /assets/img/item_recs_2-2.png %})
+\![Un ejemplo de la selección "en stock" seleccionada para la recomendación.]({% image_buster /assets/img/item_recs_2-2.png %})
 
 {% alert tip %}
-Si no puedes encontrar tu selección, asegúrate de que esté configurada en tu catálogo.
+Si no encuentras tu selección, asegúrate primero de que está configurada en tu catálogo.
 {% endalert %}
 
 ### Paso 4: Selecciona la interacción para impulsar las recomendaciones
@@ -91,7 +93,7 @@ Puedes optimizar para:
 
 Si eliges **Evento personalizado**, selecciona tu evento de la lista.
 
-![El evento personalizado "Compra finalizada" seleccionado como la forma en que se realiza actualmente el seguimiento de los eventos.]({% image_buster /assets/img/item_recs_3.png %})
+\![El evento personalizado "Compra finalizada" seleccionado como la forma en que se realiza actualmente el seguimiento de los eventos.]({% image_buster /assets/img/item_recs_3.png %})
 
 ### Paso 5: Elige el nombre de la propiedad correspondiente {#property-name}
 
@@ -101,7 +103,7 @@ Selecciona este campo para el **Nombre de la propiedad**.
 
 El campo **Nombre de propiedad** se rellenará previamente con una lista de campos enviados a través del SDK a Braze. Si se proporcionan datos suficientes, estas propiedades también se clasificarán por orden de probabilidad de ser la propiedad correcta. Selecciona la que corresponda al campo `id` del catálogo.
 
-![El nombre de la propiedad "purchase_item" seleccionada que corresponde a los ID de los artículos del catálogo.]({% image_buster /assets/img/item_recs_4.png %})
+\![El nombre de la propiedad "purchase_item" seleccionada que corresponde al ID del artículo en el catálogo.]({% image_buster /assets/img/item_recs_4.png %})
 
 #### Requisitos {#requirements}
 
@@ -155,7 +157,7 @@ Los siguientes ejemplos de mapeados hacen referencia a este catálogo de muestra
 </table>
 
 {% tabs %}
-{% tab Evento personalizado %}
+{% tab Custom event %}
 
 Supongamos que quieres utilizar el evento personalizado `added_to_cart` para poder recomendar productos similares antes de que el cliente pase por caja. El evento `added_to_cart` tiene una propiedad de evento `product_sku`.
 
@@ -183,7 +185,7 @@ Este evento tiene `"product_sku": "ADI-BL-7"`, que coincide con el primer elemen
 
 ##### Ejemplo de objeto evento personalizado con una matriz de productos
 
-Si tus propiedades del evento contienen varios productos en una matriz, cada ID de producto se tratará como un evento independiente y secuencial. Este evento puede utilizar la propiedad `products.sku` para que coincida con el primer y el tercer elemento del catálogo de muestras.
+Si las propiedades del evento contienen varios productos en una matriz, cada ID de producto se tratará como un evento independiente y secuencial. Este evento puede utilizar la propiedad `products.sku` para que coincida con el primer y el tercer elemento del catálogo de muestras.
 
 ```json
 {
@@ -229,7 +231,7 @@ Si los ID de tus productos son valores de una matriz en lugar de objetos, puedes
 ```
 
 {% endtab %}
-{% tab Objeto de compra %}
+{% tab Purchase object %}
 
 Se pasa un objeto de compra a través de la API cuando se ha realizado una compra.
 
@@ -264,7 +266,7 @@ Este evento tiene `"product_id": "ADI-BL-7`, que mapea al primer elemento del ca
 
 ##### Ejemplo de objeto de compra mapeado a un campo de propiedades
 
-Este evento tiene una propiedad `"sku": "ADI-RD-8"`, que está mapeada en el segundo elemento del catálogo.
+Este evento tiene una propiedad de `"sku": "ADI-RD-8"`, que mapea al segundo elemento del catálogo.
 
 ```json
 {
@@ -296,32 +298,3 @@ Este evento tiene una propiedad `"sku": "ADI-RD-8"`, que está mapeada en el seg
 Cuando estés listo, selecciona **Crear recomendación**. Este proceso puede durar entre 10 minutos y 36 horas. Recibirás una actualización por correo electrónico cuando la recomendación se haya formado correctamente o una explicación de por qué puede haber fallado la creación.
 
 Puedes encontrar la recomendación en la página **Predicciones**, donde luego puedes editarla o archivarla según necesites. Las recomendaciones se reciclarán automáticamente una vez a la semana (de pago) o al mes (gratis).
-
-## Características específicas del plan
-
-En la tabla siguiente se describen las diferencias entre la versión gratuita y la pro de los tipos de recomendación AI Personalizada, Popular y Tendencias:
-
-| Área                   | Versión gratuita                          | Versión Pro            |
-| :---------------------- | ------------------------------------- | :--------------------------------------- |
-| Frecuencia de actualización de <sup>usuarios1</sup>   | Semanalmente                                | Diariamente                                    |
-| Frecuencia de reentrenamiento del modelo  | Mensualmente                               | Semanalmente                                   |
-| Modelos de recomendación máxima | 1 modelo por <sup>tipo2</sup> | 100 modelos por <sup>tipo2</sup> |
-
-<sup>1\. Es la frecuencia con la que se actualizan las recomendaciones de artículos específicas del usuario (todos los modelos excepto Artículos más populares, que se actualiza cuando el modelo se vuelve a entrenar). Por ejemplo, si un usuario compra un artículo recomendado basándose en las recomendaciones de artículos de la IA, sus artículos recomendados se actualizarán según esta frecuencia</sup><br>
-<sup>2\. Los tipos de recomendación disponibles son AI Personalizada, Más reciente, Más popular y Tendencias.</sup>
-
-## Preguntas más frecuentes (FAQ) {#faq}
-
-### ¿Qué hace que los artículos "Más populares" se mezclen con las recomendaciones de otros modelos?
-
-Cuando nuestra herramienta de recomendaciones selecciona una lista para ti, primero da prioridad a las selecciones personalizadas basadas en el modelo específico que has elegido, como "Más reciente" o "Personalizado con IA". Si este modelo no puede llenar la lista completa de 30 recomendaciones por cualquier motivo, se añaden entonces algunos de tus artículos más populares entre todos los usuarios, para asegurarte de que cada usuario tenga siempre un conjunto completo de recomendaciones.
-
-Esto ocurre en algunas condiciones específicas:
-
-- El modelo encuentra menos de 30 artículos que coinciden con tus criterios.
-- Los artículos relevantes ya no están disponibles o en stock.
-- Los artículos no cumplen los criterios de selección actuales, quizás debido a un cambio en las existencias o a las preferencias del usuario.
-
-### ¿Las recomendaciones existentes se entrenan semanalmente después de actualizar a Recomendaciones de Artículos Pro?
-
-Sí, pero sólo después de su próxima actualización programada. Las recomendaciones existentes no cambian a entrenamiento semanal y predicción diaria inmediatamente después de actualizar a Recomendaciones de artículos Pro. Sin embargo, adoptarán el nuevo horario automáticamente en su próximo ciclo de reciclaje. Por ejemplo, si una recomendación se entrenó por última vez el 1 de febrero y está configurada para volver a entrenarse cada 30 días, adoptará el nuevo programa semanal tras su próxima actualización el 2 de marzo.

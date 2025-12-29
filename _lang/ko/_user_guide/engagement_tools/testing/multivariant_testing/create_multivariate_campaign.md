@@ -3,7 +3,7 @@ nav_title: 테스트 만들기
 article_title: 다변량 및 A/B 테스트 만들기
 page_order: 1
 page_type: reference
-description: "이 문서에서는 Braze로 다변량 및 A/B 테스트를 만드는 방법을 설명합니다."
+description: "이 문서에서는 Braze로 다변량 테스트 및 A/B 테스트를 만드는 방법을 설명합니다."
 
 local_redirect: #optimizations
   optimizations: '/docs/user_guide/engagement_tools/testing/multivariant_testing/optimizations/'
@@ -11,64 +11,64 @@ local_redirect: #optimizations
 
 # 다변량 및 A/B 테스트 만들기 {#creating-tests}
 
-> 단일 채널을 타겟팅하는 모든 캠페인에 대해 [다변량 또는 A/B 테스트]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/)를 만들 수 있습니다.
+> 단일 채널과 단일 기기를 타겟팅하는 모든 캠페인에 대해 [다변량 또는 A/B 테스트를]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) 만들 수 있습니다. 예를 들어 푸시 캠페인에 다변량 테스트 또는 A/B 테스트를 사용하려는 경우 동일한 캠페인에서 두 가지 기기 유형이 아닌 iOS 기기만 타겟팅하거나 Android 기기만 타겟팅할 수 있습니다.
 
-![The dropdown from selecting the "Create campaign" button to choose either multichannel or single channel.]({% image_buster /assets/img/ab_create_1.png %}){: style="max-width:25%;float:right;margin-left:15px;" }
+'캠페인 만들기' 버튼을 선택하면 드롭다운에서 멀티채널 또는 단일 채널을 선택할 수 있습니다.]({% image_buster /assets/img/ab_create_1.png %}){: style="max-width:25%;float:right;margin-left:15px;" }
 
 ## 1단계: 캠페인 만들기
 
-1. **메시징** > **캠페인으로** 이동합니다.
-2. 다변량 및 A/B 테스트를 허용하는 섹션에서 **캠페인 만들기** 및 캠페인의 채널을 선택합니다. 각 메시징 채널에 대한 자세한 설명은 [캠페인 만들기를]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/creating_campaign/) 참조하세요.
+1. **메시징** > 캠페인으로 이동합니다.
+2. 다변량 및 A/B 테스트를 허용하는 섹션에서 **캠페인 생성을** 선택하고 캠페인에 대한 채널을 선택합니다. 각 메시징 채널에 대한 자세한 설명서는 [캠페인 만들기를]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/creating_campaign/) 참조하세요.
 
-## 2단계: 배리언트 상품 구성
+## 2단계: 배리언트 구성하기
 
-제목, 콘텐츠, 이미지 등을 차별화하여 최대 8가지의 메시지 변형을 만들 수 있습니다. 메시지 간 차이의 수에 따라 다변량 테스트인지 A/B 테스트인지가 결정됩니다. A/B 테스트는 하나의 변수를 변경했을 때의 효과를 검사하는 반면, 다변량 테스트는 두 개 이상의 변수를 검사합니다.
+제목, 콘텐츠, 이미지 등을 차별화하여 최대 8개의 배리언트 메시지를 만들 수 있습니다. 메시지 간 차이의 수에 따라 다변량 테스트인지 A/B 테스트인지가 결정됩니다. A/B 테스트는 하나의 변수를 변경했을 때의 효과를 검사하는 반면, 다변량 테스트는 두 개 이상의 변수를 검사합니다.
 
-이형 상품 차별화를 시작하는 방법에 대한 몇 가지 아이디어는 [채널별 팁을](#tips-different-channels) 참조하세요.
+배리언트 차별화를 시작하는 방법에 대한 몇 가지 아이디어는 [채널별 팁을](#tips-different-channels) 참조하세요.
 
-![Selecting "Add Variant" for a campaign.]({% image_buster /assets/img/ab_create_2.png %})
+캠페인에 '배리언트 추가' 선택하기.]({% image_buster /assets/img/ab_create_2.png %})
 
 ## 3단계: 캠페인 예약하기
 
-다변량 캠페인의 예약은 다른 Braze 캠페인의 예약과 동일하게 작동합니다. All standard [delivery types]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/) are available.
+다변량 캠페인을 예약하는 것은 다른 Braze 캠페인을 예약하는 것과 동일하게 작동합니다. 모든 표준 [전달 유형을]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/) 사용할 수 있습니다.
 
-다변량 테스트가 시작되면 캠페인을 변경할 수 없습니다. 제목이나 HTML 본문과 같은 매개변수를 변경하면 Braze는 실험이 손상된 것으로 간주하고 즉시 실험을 비활성화합니다.
+다변량 테스트가 시작되면 캠페인을 변경할 수 없습니다. 제목란이나 HTML 본문과 같은 매개변수를 변경하면 Braze는 실험이 손상된 것으로 간주하고 즉시 실험을 비활성화합니다.
 
 {% alert important %}
-[최적화]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/) (일부 채널에서 사용 가능)를 사용하려면 캠페인을 한 번만 게재하도록 예약합니다. 반복되거나 재적격성이 켜져 있는 캠페인에는 최적화를 사용할 수 없습니다.
+[최적화]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/) (일부 채널에서만 사용 가능)를 사용하려면 캠페인을 한 번만 게재하도록 예약하세요. 반복되거나 재적격성이 켜져 있는 캠페인에는 최적화를 사용할 수 없습니다.
 {% endalert %}
 
-## 4단계: 세그먼트를 선택하고 배리언트 상품에 사용자를 배포하세요.
+## 4단계: 세그먼트를 선택하고 배리언트별로 사용자를 배포하세요.
 
-타겟팅할 세그먼트를 선택한 다음 선택한 배리언트 상품과 선택적 [대조군](#including-a-control-group)에 멤버를 배포합니다. 테스트할 세그먼트 선택에 대한 모범 사례는 [세그먼트 선택하기](#choosing-a-segment)를 참조하세요.
+타겟팅할 세그먼트를 선택한 다음, 선택한 배리언트와 선택적 [대조군으로](#including-a-control-group) 구성원을 배포합니다. 테스트할 세그먼트 선택에 대한 모범 사례는 [세그먼트 선택하기를](#choosing-a-segment) 참조하세요.
 
-한 번만 전송하도록 예약된 푸시, 이메일 및 웹훅 캠페인의 경우 [최적화를]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/) 사용할 수도 있습니다. 이렇게 하면 A/B 테스트에서 타겟 오디언스의 일부를 예약하고 첫 번째 테스트의 결과를 기반으로 두 번째 최적화된 전송을 위해 보류합니다.
+한 번만 전송하도록 예약된 푸시, 이메일, 웹훅 캠페인의 경우 [최적화를]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/) 사용할 수도 있습니다. 이렇게 하면 A/B 테스트에서 타겟 오디언스 중 일부를 예약하고 첫 번째 테스트 결과를 기반으로 두 번째 최적화 전송을 위해 예약합니다.
 
 ### 대조군 {#including-a-control-group}
 
-타겟 오디언스의 일정 비율을 무작위 대조군으로 예약할 수 있습니다. 대조군 사용자에게는 테스트가 제공되지 않지만, Braze는 캠페인 기간 동안 전환율을 모니터링합니다.
+타겟 오디언스의 일정 비율을 무작위 대조군으로 예약할 수 있습니다. 대조군의 사용자는 테스트를 받지 않지만, 캠페인 기간 동안 Braze가 전환율을 모니터링합니다.
 
-결과를 볼 때 이형 상품의 전환율을 대조 그룹에서 제공한 기준 전환율과 비교할 수 있습니다. 이를 통해 메시지를 전혀 보내지 않았을 때 발생할 전환율과 배리언트의 효과를 모두 비교할 수 있습니다.
+결과를 확인할 때 배리언트의 전환율을 대조군에서 제공한 기준 전환율과 비교할 수 있습니다. 이를 통해 배리언트의 효과와 메시지를 전혀 보내지 않았을 때의 전환율과 배리언트의 효과를 모두 비교할 수 있습니다.
 
-![A/B Testing panel that shows the percentage breakdown of the Control Group, Variant 1, Variant 2, and Variant 3 with 25% for each group.]({% image_buster /assets/img/ab_create_4.png %})
+대조군, 배리언트 1, 배리언트 2, 배리언트 3의 비율을 각 그룹에 25%로 표시한 A/B 테스트 패널.]({% image_buster /assets/img/ab_create_4.png %})
 
 {% alert important %}
-_열기_ 또는 _클릭_ 수로 우승자를 결정할 때 대조 그룹을 사용하는 것은 권장되지 않습니다. 대조군은 메시지를 수신하지 않으므로 해당 사용자는 열기나 클릭을 수행할 수 없습니다. 따라서 해당 그룹의 전환율은 정의상 0%이므로 배리언트 상품과 의미 있는 비교가 되지 않습니다.
+_열기_ 또는 _클릭_ 수로 당첨자를 결정할 때 대조군을 사용하는 것은 권장되지 않습니다. 대조군은 메시지를 수신하지 않으므로 해당 사용자는 열기나 클릭을 수행할 수 없습니다. 따라서 해당 그룹의 전환율은 정의상 0%이며 배리언트와 의미 있는 비교가 되지 않습니다.
 {% endalert %}
 
-#### A/B 테스트를 통한 대조군
+#### A/B 테스트를 실시한 대조군
 
-A/B 테스트에서 사용량 제한을 사용하는 경우, 사용량 제한은 테스트 그룹과 동일한 방식으로 대조군에 적용되지 않으므로 시간 편향의 잠재적 원인이 될 수 있습니다. 이러한 편향을 피하려면 적절한 전환 기간을 사용하세요.
+A/B 테스트에서 속도 제한을 사용하는 경우, 속도 제한이 테스트 그룹과 동일한 방식으로 대조군에는 적용되지 않으므로 시간 편향의 잠재적 원인이 될 수 있습니다. 이러한 편향을 피하려면 적절한 전환 기간을 사용하세요.
 
-#### 지능형 선택 기능이 있는 제어 그룹
+#### 지능형 선택을 사용한 대조군
 
-The size of the control group for a campaign with [Intelligent Selection]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/) is based on the number of variants. 각 변종이 20% 이상의 사용자에게 전송되는 경우 대조군은 20%가 되고, 변종은 나머지 80%에 균등하게 분배됩니다. 그러나 각 배리언트가 20% 미만의 사용자에게 전송될 만큼 충분한 변종이 있는 경우 대조군은 더 작아져야 합니다. 지능형 선택이 테스트의 성과를 분석하기 시작하면 결과에 따라 대조군이 커지거나 줄어듭니다.
+[지능형 선택을]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/) 사용하는 캠페인의 대조군 규모는 배리언트 수에 따라 결정됩니다. 각 배리언트가 20% 이상의 사용자에게 전송되면 대조군은 20%가 되고 배리언트는 나머지 80%에 균등하게 분배됩니다. 그러나 각 배리언트가 20% 미만의 사용자에게 전송될 만큼 충분한 배리언트가 있는 경우 대조군은 더 작아져야 합니다. 지능형 선택이 테스트의 성능/성과를 분석하기 시작하면 결과에 따라 대조군이 커지거나 줄어듭니다.
 
 ## 5단계: 전환 이벤트 지정(선택 사항)
 
 캠페인에 전환 이벤트를 설정하면 해당 캠페인을 수신한 후 특정 작업을 수행한 수신자 수를 확인할 수 있습니다.
 
-이는 이전 단계에서 **주요 전환**을 선택한 경우에만 테스트에 영향을 미칩니다. 자세한 내용은 [전환 이벤트를]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/) 참조하세요. 
+이는 이전 단계에서 **기본 전환율을** 선택한 경우에만 테스트에 영향을 줍니다. 자세한 내용은 [전환 이벤트를]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/) 참조하세요. 
 
 ## 6단계: 검토 및 실행
 
@@ -76,57 +76,57 @@ The size of the control group for a campaign with [Intelligent Selection]({{site
 
 ## 알아두어야 할 사항
 
-실험이 이미 전송을 시작한 상태에서 메시지를 수정하면 실험이 무효화되고 모든 실험 결과가 제거됩니다.
+실험이 이미 전송을 시작한 상태에서 메시지를 편집하면 실험이 무효화되고 모든 실험 결과가 제거됩니다.
 
-- 예상되는 실험 동작에 방해가 되지 않도록 실험 캠페인 시작 후 1시간 이내에는 메시지 수정을 피하는 것이 좋습니다.
-- 실험이 완료되고 전송 후 메시지를 수정하면 대시보드 분석에서 실험 결과를 계속 사용할 수 있습니다. 그러나 캠페인을 다시 시작하면 실험 결과가 제거됩니다.
+- 예상되는 실험 동작에 방해가 되지 않도록 실험 캠페인 시작 후 1시간 이내에는 메시지 편집을 피하는 것이 좋습니다.
+- 실험이 완료되고 전송 후 메시지를 편집하면 대시보드 분석에서 실험 결과를 계속 사용할 수 있습니다. 그러나 캠페인을 다시 실행하면 실험 결과가 제거됩니다.
 
 ### 다양한 채널을 위한 팁 {#tips-different-channels}
 
-어떤 채널을 선택하느냐에 따라 메시지의 다양한 구성 요소를 테스트할 수 있습니다. 예를 들어, 테스트하려는 대상과 증명하고자 하는 내용에 대한 아이디어를 가지고 변형을 구성해 볼 수 있습니다. 어떤 레버를 당겨야 하며, 원하는 효과는 무엇인가요? 다변량 및 A/B 테스트를 사용하여 조사할 수 있는 가능성은 수백만 가지가 있지만, 시작하기 위한 몇 가지 제안 사항이 있습니다.
+선택한 채널에 따라 메시징의 다양한 구성 요소를 테스트할 수 있습니다. 예를 들어 테스트하려는 대상과 증명하고자 하는 내용에 대한 아이디어를 가지고 배리언트를 작성해 볼 수 있습니다. 어떤 레버를 당겨야 하며, 원하는 효과는 무엇인가요? 다변량 및 A/B 테스트를 사용하여 조사할 수 있는 가능성은 수백만 가지가 있지만, 시작하기 위한 몇 가지 제안 사항이 있습니다:
 
-| 채널 | 변경할 수 있는 메시지의 측면 | 찾을 결과 |
+| 채널 | 변경할 수 있는 메시징의 측면 | 찾을 결과 |
 | ---------------------| --------------- | ------------- |
-| 푸시 | 복사 <br> 이미지 및 이모티콘 사용 <br> 딥링크  <br> 숫자 표시(예: "3배" 대 "200% 증가")  <br> 시간 표시(예: "자정에 종료" 대 "6시간 후 종료") | 열람 수  <br> 전환율 |
-| 이메일 | 제목 <br> 표시 이름 <br> 인사말 <br> 본문 복사 <br> 이미지 및 이모티콘 사용 <br> 숫자 표시(예: "3배" 대 "200% 증가") <br> 시간 표시(예: "자정에 종료" 대 "6시간 후 종료") | 열람 수  <br> 전환율 |
-| 인앱 메시지 | "푸시"에 대해 나열된 측면 <br> [Message format]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/message_format/) | 클릭 <br> 전환율 |
+| 푸시 | 복사 <br> 이미지 및 이모티콘 사용 <br> 딥링크  <br> 숫자 표시(예: "3배" 대 "200% 증가")  <br> 시간 표시(예: "자정에 종료" 대 "6시간 후 종료") | 열기  <br> 전환율 |
+| 이메일 | 제목 <br> 표시 이름 <br> 인사말 <br> 본문 복사 <br> 이미지 및 이모티콘 사용 <br> 숫자 표시(예: "3배" 대 "200% 증가") <br> 시간 표시(예: "자정에 종료" 대 "6시간 후 종료") | 열기  <br> 전환율 |
+| 인앱 메시지 | "푸시"에 대해 나열된 측면 <br> [메시지 형식]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/message_format/) | 클릭 <br> 전환율 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert tip %}
-When running A/B tests, don't forget to generate [funnel reports]({{site.baseurl}}/user_guide/analytics/reporting/funnel_reports/) that let you understand how each variant impacted your conversion funnel, especially if "conversion" for your business involves taking multiple steps or actions.
+A/B 테스트를 실행할 때, 특히 비즈니스의 '전환'이 여러 단계나 행동을 수반하는 경우 각 배리언트가 전환 퍼널에 미치는 영향을 파악할 수 있는 [퍼널 보고서를]({{site.baseurl}}/user_guide/analytics/reporting/funnel_reports/) 생성하는 것을 잊지 마세요.
 {% endalert %}
 
-또한 채널에 따라 이상적인 테스트 길이도 달라질 수 있습니다. 대부분의 사용자가 각 채널에 참여하는 데 걸리는 평균 시간을 염두에 두세요.
+또한 테스트의 이상적인 길이도 채널에 따라 다를 수 있습니다. 대부분의 사용자가 각 채널에 참여하는 데 필요한 평균 시간을 염두에 두세요.
 
-예를 들어 푸시를 테스트하는 경우 사용자가 푸시를 즉시 볼 수 있지만 이메일을 확인하거나 열기까지 며칠이 걸릴 수 있으므로 이메일을 테스트할 때보다 더 빠르게 유의미한 결과를 얻을 수 있습니다. 인앱 메시지를 테스트하는 경우, 사용자가 앱을 열어야 캠페인을 볼 수 있으므로 가장 활발하게 앱을 여는 사용자뿐만 아니라 일반적인 사용자로부터 결과를 수집할 때까지 더 오래 기다려야 한다는 점에 유의하세요.
+예를 들어 푸시를 테스트하는 경우 사용자가 푸시를 즉시 볼 수 있지만 이메일을 확인하거나 열기까지 며칠이 걸릴 수 있으므로 이메일을 테스트할 때보다 더 빠르게 유의미한 결과를 얻을 수 있습니다. 인앱 메시지를 테스트하는 경우 사용자가 앱을 열어야 캠페인을 볼 수 있으므로 가장 활발하게 앱을 여는 사용자뿐만 아니라 일반적인 사용자로부터 결과를 수집하려면 더 오래 기다려야 한다는 점을 명심하세요.
 
-If you're unsure how long your test should run for, the [Intelligent Selection]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/) feature can be useful for finding a Winning Variant efficiently.
+테스트를 얼마나 오래 실행해야 할지 잘 모르겠다면 [지능형 선택]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/) 기능을 사용하면 우승 배리언트를 효율적으로 찾는 데 유용할 수 있습니다.
 
-### 세그먼트 선택 {#choosing-a-segment}
+### 세그먼트 선택하기 {#choosing-a-segment}
 
-사용자 세그먼트에 따라 메시지에 다르게 반응할 수 있으므로 특정 메시지의 성공 여부는 메시지 자체와 대상 세그먼트 모두에 대해 알 수 있습니다. 따라서 타겟 세그먼트를 염두에 두고 테스트를 설계하세요.
+사용자 세그먼트에 따라 메시징에 다르게 반응할 수 있으므로 특정 메시지의 성공 여부는 메시지 자체와 타겟팅 세그먼트 모두에 대해 알 수 있습니다. 따라서 타겟 세그먼트를 염두에 두고 테스트를 설계하세요.
 
-예를 들어, 활성 사용자는 "이 딜은 내일 만료됩니다!"와 "이 딜은 24시간 후에 만료됩니다!"에 대한 응답률이 동일할 수 있지만, 일주일 동안 앱을 열지 않은 사용자는 후자의 문구가 더 긴박감을 주기 때문에 후자의 문구에 더 많은 반응을 보일 수 있습니다.
+예를 들어, 활성 사용자는 "이 거래는 내일 만료됩니다!"와 "이 거래는 24시간 후에 만료됩니다!"의 열람율이 동일할 수 있지만, 일주일 동안 앱을 열지 않은 사용자는 후자의 문구에 더 큰 긴박감을 느끼기 때문에 후자의 문구에 더 반응할 수 있습니다.
 
-또한 테스트를 실행할 세그먼트를 선택할 때는 해당 세그먼트의 크기가 테스트에 충분히 큰지 고려해야 합니다. 일반적으로 배리언트가 많은 다변량 및 A/B 테스트는 통계적으로 유의미한 결과를 얻기 위해 더 큰 테스트 그룹이 필요합니다. 이형 상품이 많아지면 각 이형 상품을 보는 사용자 수가 줄어들기 때문입니다.
+또한 테스트를 실행할 세그먼트를 선택할 때는 해당 세그먼트의 크기가 테스트에 충분히 큰지 고려해야 합니다. 일반적으로 배리언트가 많은 다변량 및 A/B 테스트는 통계적으로 유의미한 결과를 얻기 위해 더 많은 테스트 그룹이 필요합니다. 배리언트가 많을수록 각 배리언트를 보는 사용자 수가 줄어들기 때문입니다.
 
 {% alert tip %}
-일반적으로 테스트 결과에서 95%의 신뢰도를 얻으려면 배리언트 상품당 약 15,000명의 사용자(대조군 포함)가 필요합니다. 그러나 필요한 정확한 사용자 수는 특정 사례에 따라 이보다 더 많거나 적을 수 있습니다. 배리언트 샘플 크기에 대한 보다 정확한 지침은 [샘플 크기 계산기](https://www.calculator.net/sample-size-calculator.html)를 참조하세요.
+일반적으로 테스트 결과에서 95%의 신뢰도를 얻으려면 배리언트당 약 15,000명의 사용자(대조군 포함)가 필요합니다. 그러나 필요한 정확한 사용자 수는 특정 사례에 따라 이보다 더 많거나 적을 수 있습니다. 배리언트 샘플 크기에 대한 보다 정확한 지침은 [샘플 크기 계산기를](https://www.calculator.net/sample-size-calculator.html) 참조하세요.
 {% endalert %}
 
 ### 편향 및 무작위 배정
 
-대조군 및 테스트 그룹 할당에 대한 일반적인 질문은 테스트에 편향성을 유발할 수 있는지 여부입니다. 어떤 사람들은 이러한 과제가 정말 무작위인지 어떻게 알 수 있는지 궁금해하기도 합니다.
+대조군 및 테스트군 할당에 대한 일반적인 질문은 테스트에 편향성을 유발할 수 있는지 여부입니다. 어떤 사람들은 이러한 과제가 정말 무작위인지 어떻게 알 수 있는지 궁금해하기도 합니다.
 
-사용자는 (무작위로 생성된) 사용자 ID를 (무작위로 생성된) 캠페인 또는 캔버스 ID와 연결하고 해당 값의 계수를 100으로 하여 메시지 배리언트, 캔버스 배리언트 또는 각각의 대조군에 할당된 다음, 대시보드에서 선택한 배리언트 및 선택적 제어에 대한 할당 비율에 해당하는 슬라이스로 사용자를 정렬합니다. 따라서 특정 캠페인이나 캔버스를 만들기 전 사용자의 행동이 변형과 제어에 따라 체계적으로 달라질 수 있는 실질적인 방법은 없습니다. 또한 이 구현보다 더 무작위(또는 더 정확하게는 의사 무작위)로 구현하는 것은 실용적이지 않습니다.
+사용자는 (무작위로 생성된) 사용자 ID를 (무작위로 생성된) 캠페인 또는 캔버스 ID와 연결하고 해당 값의 계수를 100으로 취한 다음 대시보드에서 선택한 배리언트 및 선택적 제어에 대한 할당 비율에 해당하는 슬라이스로 사용자를 정렬하여 메시지 배리언트, 캔버스 배리언트 또는 해당 대조군에 할당됩니다. 따라서 특정 캠페인이나 캔버스를 만들기 전 사용자의 행동이 배리언트와 제어에 따라 체계적으로 달라질 수 있는 실질적인 방법은 없습니다. 또한 이 구현보다 더 무작위(또는 더 정확하게는 의사 무작위)로 구현하는 것은 실용적이지 않습니다.
 
 #### 피해야 할 실수
 
-오디언스를 올바르게 필터링하지 않으면 메시징 채널에 따라 차이가 있는 것처럼 보이게 되는 몇 가지 일반적인 실수를 피할 수 있습니다.
+오디언스를 올바르게 필터링하지 않으면 메시징 채널에 따라 차이가 있는 것처럼 보이는 실수를 피하기 위해 몇 가지 일반적인 실수가 있습니다.
 
-예를 들어, 컨트롤을 사용하여 광범위한 대상에게 푸시 메시지를 보내는 경우 테스트 그룹은 푸시 토큰이 있는 사용자에게만 메시지를 보냅니다. 그러나 대조군에는 푸시 토큰을 보유한 사용자와 그렇지 않은 사용자가 모두 포함됩니다. 이 경우 캠페인 또는 캔버스의 초기 오디언스가 푸시 토큰을 가지고 있는지 필터링해야 합니다(`Push Enabled`는 `true`). 다른 채널에서 메시지를 받을 수 있는 자격(옵트인, 푸시 토큰 보유, 구독 등)을 갖추려면 동일한 절차를 거쳐야 합니다.
+예를 들어 대조군으로 광범위한 오디언스에게 푸시 메시지를 보내는 경우, 테스트 그룹은 푸시 토큰이 있는 사용자에게만 메시지를 보냅니다. 그러나 대조군에는 푸시 토큰을 보유한 사용자와 그렇지 않은 사용자가 모두 포함됩니다. 이 경우 캠페인 또는 캔버스의 초기 오디언스가 푸시 토큰을 가지고 있는지 필터링해야 합니다(`Foreground Push Enabled` 는 `true`). 다른 채널에서 메시지를 받을 수 있는 자격(옵트인, 푸시 토큰 보유, 가입자 등)에 대해서도 동일하게 적용해야 합니다.
 
 {% alert note %}
-대조 그룹에 무작위 버킷 번호를 수동으로 사용하는 경우 대조 그룹에서 [주의해야 할 사항을]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/#things-to-watch-for) 확인하세요.
+대조군에 무작위 버킷 번호를 수동으로 사용하는 경우 대조군에서 [주의해야 할 사항을]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/#things-to-watch-for) 확인하세요.
 {% endalert %}
 

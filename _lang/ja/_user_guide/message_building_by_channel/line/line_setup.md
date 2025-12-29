@@ -61,6 +61,10 @@ Braze から LINE メッセージを送信すると、アカウントのメッ�
 4. [ユーザー更新方法の変更](#step-4-change-your-user-update-methods)
 5. [(オプション) ユーザープロファイルのマージ](#step-5-merge-profiles-optional)
 
+{% alert note %}
+1つのワークスペースには1つのLINEアカウントしか持てない。複数のLINEアカウントを持っている場合は、それぞれ別のワークスペースで使うことをお勧めする。
+{% endalert %}
+
 ## ステップ 1: 既存のLINEユーザーをインポートまたは更新する
 
 Braze は LINE ユーザーのサブスクリプションステータスを後から自動的に取得して正しいユーザープロファイルを更新するので、すでに存在している識別済みの LINE ユーザーがいる場合には、このステップを行う必要があります。過去にユーザーとLINE IDを照合していない場合は、このステップをスキップする。 
@@ -99,7 +103,7 @@ Braze は LINE ユーザーのサブスクリプションステータスを後�
    - [**自動応答メッセージ**] をオフにする。トリガーメッセージはすべて Braze 経由で送信されます。これにより、LINE コンソールから直接送信できなくなることはありません。
    - [**Webhook**] をオンにする。
 
-![アカウントでのチャットの処理方法を切り替えるレスポンス設定ページ。]({% image_buster /assets/img/line/response_settings.png %}){: style="max-width:80%;"}
+![アカウントがチャットを処理する方法を切り替えられる、応答設定ページ。]({% image_buster /assets/img/line/response_settings.png %}){: style="max-width:80%;"}
 
 ### ステップ 2.2:BrazeでLINEサブスクリプショングループを作成する
 
@@ -120,7 +124,7 @@ LINE アカウントにIP ホワイトリストを追加する場合は、[IP al
 {: start="2"}
 2\.接続後、Brazeによって、ワークスペースに正常に追加された LINE 統合ごとに Braze サブスクリプショングループが自動的に生成されます。<br><br> フォロワーリストの変更 (新しいフォロワーやフォロー解除など) は、自動的に Braze にプッシュされます。
 
-![「LINE」チャネルに1つのサブスクリプショングループを表示する LINE サブスクリプショングループセクション。]({% image_buster /assets/img/line/line_subscription_groups.png %}){: style="max-width:80%;"}
+![「LINE」チャネルに 1 つのサブスクリプショングループを表示する LINE サブスクリプショングループセクション。]({% image_buster /assets/img/line/line_subscription_groups.png %}){: style="max-width:80%;"}
 
 ## ステップ 3:ユーザーIDを照合する
 
@@ -320,7 +324,7 @@ LINE IDと既存のBrazeユーザープロファイルを組み合わせるに�
 
 この方法によって、ユーザーはLINEアカウントとアプリのユーザーアカウントをリンクさせることができる。その後、Braze で {% raw %}`{{line_id}}`{% endraw %} などの Liquid を使用して、ユーザーの LINE ID を Web サイトまたはアプリに渡すユーザーのためにパーソナライズされた URL を作成します。渡された LINE ID は、既知のユーザーに関連付けることができます。
 
-1. サブスクリプションの状態変化に基づき、ユーザーがLINEチャネルにサブスクライブしたときにトリガーされるアクションベースのキャンバスを作成する。<br>![ユーザがLINE チャネルにサブスクライブするとトリガーされるキャンバス。]({% image_buster /assets/img/line/account_link_1.png %})
+1. サブスクリプションの状態変化に基づき、ユーザーがLINEチャネルにサブスクライブしたときにトリガーされるアクションベースのキャンバスを作成する。<br>![ユーザーがLINEチャンネルにサブスクライバーしたときにトリガーするキャンバス。]({% image_buster /assets/img/line/account_link_1.png %})
 2. (Liquid を使用して) ユーザーの LINE ID をクエリパラメーターとして渡し、Web サイトやアプリへのログインを促す次のようなメッセージを作成します。
 
 ```
@@ -329,7 +333,7 @@ Thanks for following Flash n' Thread on LINE! For personalized offers and 20% of
 
 {: start="3"}
 3\.クーポンコードを配信するフォローアップメッセージを作成する。
-4. (オプション) LINEユーザーが識別子されたときにトリガーして、ユーザーにクーポンコードを送信するアクションベースのキャンペーンまたはキャンバスを作成する。<br>![LINE ユーザーが識別されたときにトリガーされるアクションベースのキャンペーン。]({% image_buster /assets/img/line/account_link_2.png %})
+4. (オプション) LINEユーザーが識別子されたときにトリガーして、ユーザーにクーポンコードを送信するアクションベースのキャンペーンまたはキャンバスを作成する。<br>![LINEユーザーを識別子としてトリガーするアクションベースのキャンペーン。]({% image_buster /assets/img/line/account_link_2.png %})
 
 #### 仕組み
 

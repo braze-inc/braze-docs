@@ -3,6 +3,7 @@ nav_title: Liquid
 article_title: Liquid
 page_order: 0
 layout: dev_guide
+alias: /liquid/
 search_rank: 3
 guide_top_header: "液体タグを使用したカスタマイズ"
 guide_top_text: "Braze は、指定されたユーザーの値を自動的にメッセージに置き換えます。中括弧の2組の内側に式を置き、補間値を使用していることをBrazeに通知します。これらの括弧内では、置換するユーザー値は、先頭にドル記号を付けた追加の括弧で囲む必要があります。<br><br>Liquid の詳細については、Braze Learning のガイド付きの「<b><a href='https://learning.braze.com/path/dynamic-personalization-with-liquid'>Liquid のダイナミックパーソナライゼーション</a></b>」の Braze 学習パスをご覧ください。"

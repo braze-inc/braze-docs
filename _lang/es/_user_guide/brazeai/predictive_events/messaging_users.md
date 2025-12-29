@@ -20,7 +20,7 @@ En la página de **predicciones** individuales, después de decidir a qué rango
 
 También puedes utilizar los filtros "Puntuación de probabilidad de evento" y "Categoría de probabilidad de evento" en campañas, Canvas o segmentos para dirigirte al usuario según su puntuación de probabilidad o categoría, igual que utilizas cualquier otro filtro en Braze.
 
-![Los filtros disponibles al definir una audiencia incluyen la Categoría de Probabilidad y la Puntuación de Probabilidad.]({% image_buster /assets/img_archive/predictive_event_filters.png %})
+Los filtros disponibles al definir una audiencia incluyen la Categoría de Probabilidad y la Puntuación de Probabilidad.]({% image_buster /assets/img_archive/predictive_event_filters.png %})
 
 ## Consideraciones estratégicas {#strategy}
 
@@ -40,7 +40,7 @@ Reserva las promociones para los usuarios de probabilidad media que necesiten un
 
 ### Usuarios poco probables
 
-Hay un par de caminos que puedes probar para los usuarios con pocas probabilidades. ¿Crees que puedes convencerles para que hagan una compra? Ofrece mayores descuentos o haz un bombardeo concentrado de canales cruzados durante tres días. Ofrece recomendaciones personalizadas o ayuda práctica para que el proceso de compra sea lo más sencillo y fácil posible.
+Hay un par de caminos que puedes probar para los usuarios con pocas probabilidades. ¿Crees que puedes convencerles para que hagan una compra? Ofrece descuentos más elevados o haz un bombardeo concentrado de canales cruzados durante tres días. Ofrece recomendaciones personalizadas o ayuda práctica para que el proceso de compra sea lo más sencillo y fácil posible.
 
-Incorpora a estos usuarios a una campaña más pasiva o a Canvas como una forma de mantener tu marca en primer plano. Puede ser un boletín semanal específico para una persona, una serie de casos de estudio de clientes relevantes o un resumen mensual de nuevos consejos y trucos.
+Incorpora a estos usuarios a una campaña más pasiva o a Canvas como una forma de mantener tu marca en primer plano. Puede ser un boletín semanal específico para cada persona, una serie de casos de estudio de clientes relevantes o un resumen mensual de nuevos consejos y trucos.
 

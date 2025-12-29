@@ -40,12 +40,10 @@ channel: in-app messages
 
 - Was ist Ihr Ziel für diese Nachricht? Wie können Sie das in Ihrer Nachricht darstellen?
 - Bieten Ihre Schaltflächen Optionen, die für Ihre Benutzer sinnvoll sind? Was ist Ihre [wichtigste Aufforderung zum Handeln]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/#buttons)?
-- Verwenden Sie [Deeplinks zu anderen In-App-Inhalten][1]? Verwenden Sie diese In-App-Nachricht, um eine [Anfrage für eine Genehmigung oder ein Push-Priming][21] zu senden und zu akzeptieren?
+- Verwenden Sie [Deeplinks zu anderen In-App-Inhalten]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#deep-linking-to-in-app-content)? Verwenden Sie diese In-App-Nachricht, um eine [Anfrage für eine Genehmigung oder ein Push-Priming]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/) zu senden und zu akzeptieren?
 - Haben Sie eine Option zum Beenden von Nachrichten? Falls nicht, können Sie dieses Snippet jederzeit kopieren und einfügen, um einen schnellen Button zu erstellen:
     ```html
     <a href="appboy://close">X</a>
     ```
 
 
-[1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#deep-linking-to-in-app-content
-[21]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/

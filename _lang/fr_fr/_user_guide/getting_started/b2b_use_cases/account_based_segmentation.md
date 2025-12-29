@@ -17,7 +17,7 @@ Vous pouvez effectuer une segmentation B2B basée sur les comptes de deux maniè
 
 ## Mise en place d'une segmentation B2B basée sur les comptes
 
-### Option 1 : Lorsque vous utilisez des catalogues pour vos objets de gestion
+### Option 1 : Lorsque vous utilisez des catalogues pour vos objets de gestion
 
 #### Segmentation des modèles SQL de base
 
@@ -25,8 +25,8 @@ Pour vous aider à démarrer, nous avons créé des modèles SQL de base pour un
 
 Supposons que vous souhaitiez segmenter les utilisateurs qui sont des employés d'un compte d'entreprise cible. 
 
-1. Allez dans **Audience** > **Extensions de segments** > **Créer une nouvelle extension** > **Commencer avec un modèle** et sélectionnez le modèle **Segmentation de catalogue pour les événements**. <br><br> ![Modale "Select a Template" avec options de segmentation du catalogue pour les événements ou les achats.]({% image_buster /assets/img/b2b/select_a_template.png %})<br><br>L'éditeur SQL s'enrichit automatiquement d'un modèle qui associe les données d'événement utilisateur aux données du catalogue afin de segmenter les utilisateurs qui s'intéressent à certains articles du catalogue. <br><br>![Un éditeur SQL pour une nouvelle extension avec un onglet "Variables" ouvert.]({% image_buster /assets/img/b2b/enter_new_name.png %})<br><br>
-2. Utilisez l'onglet **Variables** pour fournir les champs nécessaires à votre modèle avant de générer votre segment.<br><br>Pour que Braze identifie les utilisateurs en fonction de leur engagement avec les articles du catalogue, vous devez faire ce qui suit :
+1. Allez dans **Audience** > **Extensions de segments** > **Créer une nouvelle extension** > **Commencer avec un modèle** et sélectionnez le modèle **Segmentation de catalogue pour les événements**. <br><br> !modale "Select a Template" avec des options de segmentation du catalogue pour les événements ou les achats.]({% image_buster /assets/img/b2b/select_a_template.png %})<br><br>L'éditeur SQL s'enrichit automatiquement d'un modèle qui associe les données d'événement utilisateur aux données du catalogue afin de segmenter les utilisateurs qui s'intéressent à certains articles du catalogue. <br><br>Un éditeur SQL pour une nouvelle extension avec un onglet "Variables" ouvert.]({% image_buster /assets/img/b2b/enter_new_name.png %})<br><br>
+2. Utilisez l'onglet **Variables** pour fournir les champs nécessaires à votre modèle avant de générer votre segmentation.<br><br>Pour que Braze identifie les utilisateurs en fonction de leur engagement avec les éléments du catalogue, vous devez procéder comme suit :
 - Sélectionnez un catalogue qui contient un champ de catalogue
 - Sélectionnez un événement personnalisé qui contient une propriété d'événement
 - Faites correspondre les valeurs des propriétés des champs et des événements de votre catalogue.
@@ -39,8 +39,8 @@ Sélectionnez les variables suivantes pour un cas d'utilisation de segmentation 
 | --- | --- |
 | Catalogue | Catalogue des comptes |
 | Champ du catalogue | ID |
-| Événement personnalisé | lien_compte |
-| Propriété de l'événement personnalisé | account_id |
+| Événement personnalisé | account_linked |
+| Propriétés d'événement personnalisé | account_id |
 | (sous Filtrer les résultats SQL) Champ du catalogue | Classification |
 | (sous Filtrer les résultats SQL) Valeur | Entreprise |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -106,9 +106,9 @@ AND salesforce_opportunities.Stage = 'Closed Won'
 ;
 ```
 
-### Option 2 : Lorsque vous utilisez des sources connectées pour vos objets de gestion
+### Option 2 : Lorsque vous utilisez des sources connectées pour vos objets de gestion
 
-Pour savoir comment utiliser les sources connectées dans la segmentation, reportez-vous aux [segments CDI.]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/) Utilisez les modèles décrits dans la section [Utilisation des catalogues](#option-1-when-using-catalogs-for-your-business-objects) pour vous inspirer de la manière de formater les tables sources, car vous pouvez les formater comme vous le souhaitez.
+Pour savoir comment utiliser les sources connectées dans la segmentation, reportez-vous à [CDI Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/). Utilisez les modèles décrits dans la section [Utilisation des catalogues](#option-1-when-using-catalogs-for-your-business-objects) pour vous inspirer de la manière de formater les tables sources, car vous pouvez les formater comme vous le souhaitez.
 
 ## Utilisation de votre extension basée sur le compte dans un segment
 

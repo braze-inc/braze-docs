@@ -1,5 +1,5 @@
 ---
-nav_title: Webhookテンプレートを作成する
+nav_title: ウェブフック・テンプレートを作成する
 article_title: Webhookテンプレートを作成する
 page_order: 2
 tool:
@@ -18,9 +18,9 @@ description: "このリファレンス記事では、Brazeプラットフォー�
 
 Braze ダッシュボードで、[**テンプレート**] > [**Webhook テンプレート**] に移動します。
 
-![事前に設計され、保存済みの Webhook テンプレートが表示されている「Webhook テンプレート」ページ。]({% image_buster /assets/img_archive/webhook_template_campaign.png %})
+![Webhook Templates "ページには、あらかじめデザインされ保存されたWebhookテンプレートがある。]({% image_buster /assets/img_archive/webhook_template_campaign.png %})
 
-## ステップ2:テンプレートを選ぶ
+## ステップ 2:テンプレートを選ぶ
 
 ここから、新しいテンプレートを作成するか、あらかじめデザインされたWebhookテンプレートを使用するか、既存のテンプレートを編集するかを選択できる。
 

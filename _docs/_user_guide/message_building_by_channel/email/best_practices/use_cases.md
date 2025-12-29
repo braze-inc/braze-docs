@@ -14,7 +14,7 @@ channel: email
 
 ## Onboarding
 
-When your users are onboarded, provide helpful tips to get users started and showcase only the most essential features. Try to always send a welcome email after a user signs up. The following is an example from LivingSocial that contains simple calls to action and informs users about a deal:
+When your users are onboarded, provide helpful tips to get users started and showcase only the most essential features. Try to always send a welcome email after a user signs up. The following is an example from LivingSocial that contains clear calls to action and informs users about a deal:
 
 ![Onboarding email sent from LivingSocial that welcomes new users.]({% image_buster /assets/img_archive/Livingsocial_email.png %}){: style="max-width:70%;"}
 
@@ -22,7 +22,7 @@ However, too much information can be overwhelming and potentially confusing if t
 
 ## Sales and promotional
 
-Your content should communicate the value of a promotion, such as the discounts and sales information and how long the offer lasts. Providing graphics is a great way to illustrate any products you're promoting. Keep your copy concise and simple so that it doesn't clutter your email and distract users from the essential content. Make your call to action clear and give recipients an easy way to immediately participate in the promotion.
+Your content should communicate the value of a promotion, such as the discounts and sales information and how long the offer lasts. Providing graphics is a great way to illustrate any products you're promoting. Keep your copy concise and focused so that it doesn't clutter your email and distract users from the essential content. Make your call to action clear and give recipients an easy way to immediately participate in the promotion.
 
 For recommending certain products, try to present them as curated, personal suggestions that the user may like. If you're promoting a limited time offer, be sure to let users know! Ideeli does a great job at conveying urgency in this email:
 
@@ -35,7 +35,7 @@ After a user makes an in-app purchase, here are some content guidelines for your
 - Provide them with shipping confirmation and a way to ask questions about their shipment
 - Ask for feedback to solicit input without being pushy
 
-Because you've just provided users with a service, they may be more likely to share their thoughts. Here's an example of an email from Restaurant.com:
+Because you've provided users with a service, they may be more likely to share their thoughts. Here's an example of an email from Restaurant.com:
 
 ![Transactional email sent from Restaurants.com that asks users for feedback. The email reads "Tell Us All About It! We hope you enjoyed your meal and experience at REDACTED. To ensure we are doing everything we can to provide you with the best service, food, and overall experience, please take a moment to give us your feedback. Your opinion is very valuable to us and we appreciate your thoughts." The call to action reads "Take Survey".]({% image_buster /assets/img_archive/Restaurant_email.png %}){: style="max-width:80%;"}
 
@@ -52,7 +52,7 @@ Try to make your message personal to show the user that they are still valued. R
 
 ## Social
 
-Email can help you build up a social fanbase by directing recipients toward your social media platforms. Include links to your social media accounts within the email to make it easy for users to connect.
+Email can build a social fanbase by directing recipients to your social media platforms. Include links to your social media accounts to streamline user connection.
 
 Make it fun! Try running a photo contest, promoting a hashtag, or having a giveaway. The following is an email from Hailo that offers a reward for participating in photo challenges:
 

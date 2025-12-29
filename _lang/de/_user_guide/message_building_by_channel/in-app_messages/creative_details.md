@@ -1,7 +1,7 @@
 ---
 nav_title: Kreative Details
 article_title: Kreative Details
-page_order: 4
+page_order: 3.5
 layout: dev_guide
 guide_top_header: "Kreative Details"
 guide_top_text: "Bevor Sie mit unseren In-App-Nachrichten kreativ werden, sollten Sie einige der Richtlinien kennen. Alle Templates für In-App-Nachrichten sind so konzipiert, dass sie auf modernen Geräten unterschiedliche Textlängen und Bildgrößen anzeigen. Um sicherzustellen, dass Ihre Nachricht auf allen Handys, Tablets und Computern gut angezeigt wird, empfehlen wir Ihnen, die folgenden Richtlinien zu befolgen und <a href='/docs/user_guide/message_building_by_channel/in-app_messages/testing/'>Ihre Nachrichten</a> vor der Veröffentlichung immer <a href='/docs/user_guide/message_building_by_channel/in-app_messages/testing/'>zu testen</a>."
@@ -46,11 +46,11 @@ Im Allgemeinen empfiehlt Braze, Bilder zu verwenden, die auf einen 16:10-Bildsch
 - Wir empfehlen, Bilder in der [Bibliothek]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/) zu hosten, damit das Braze-SDK-Assets von unserem CDN herunterladen kann, um Nachrichten offline anzuzeigen.
 - Für Vollbildnachrichten befolgen Sie unsere Richtlinien für die [sichere Bildzone]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/fullscreen/#image-safe-zone).
 
-{% alert tip %} Erstellen Sie Ihre Assets mit Zuversicht! Unsere Bildvorlagen für In-App-Nachrichten und die Overlays für die Sicherheitszone sind so gestaltet, dass sie auf Geräten aller Größen gut funktionieren. [Designvorlagen herunterladen ZIP]({% image_buster /assets/download_file/Braze-In-App-Message-Design-Templates.zip %}) {% endalert %}
+{% alert tip %} Erstellen Sie Assets mit Vertrauen! Unsere Templates für In-App-Nachricht-Bilder und Overlays für die sichere Zone sind so konzipiert, dass sie auf Geräten aller Größen gut funktionieren. [Download Design-Vorlagen ZIP]({% image_buster /assets/download_file/Braze-In-App-Message-Design-Templates.zip %}) {% endalert %}
 
-{% tabs %}{% tab Vollbild %}
+{% tabs %}{% tab Fullscreen %}
 
-![Bildschirmfüllende In-App-Nachricht, die einen App-Bildschirm einnimmt. Die Nachricht im Vollbildmodus enthält ein großes Bild, einen Header, einen Nachrichtentext und zwei Buttons.]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
+![In-App-Nachricht im Vollbildmodus, die den Bildschirm einer App einnimmt. Die Nachricht im Vollbildmodus enthält ein großes Bild, eine Kopfzeile, einen Nachrichtentext und zwei Buttons.]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
 
 | Layout | Asset-Größe | Anmerkungen |
 |--- | --- | --- |
@@ -64,7 +64,7 @@ Im Allgemeinen empfiehlt Braze, Bilder zu verwenden, die auf einen 16:10-Bildsch
 {% endtab %}
 {% tab Modal %}
 
-![Modale In-App-Nachricht, die in der Mitte einer App und Website als Dialogfeld angezeigt werden. Das Modal enthält ein Bild, einen Header, einen Nachrichtentext und zwei Buttons.]({% image_buster /assets/img/modal-behavior.gif %}){: style="border:0px;"}
+![Modale In-App-Nachricht, die in der Mitte einer App und Website als Dialog erscheint. Das Modal enthält ein Bild, eine Kopfzeile, einen Nachrichtentext und zwei Buttons.]({% image_buster /assets/img/modal-behavior.gif %}){: style="border:0px;"}
 
 | Layout | Asset-Größe | Anmerkungen |
 |--- | --- | ------ |
@@ -77,7 +77,7 @@ Im Allgemeinen empfiehlt Braze, Bilder zu verwenden, die auf einen 16:10-Bildsch
 {% endtab %}
 {% tab Slideup %}
 
-![Slideup-In-App-Nachricht, die am unteren Rand des App-Bildschirms angezeigt wird. Das Slideup enthält ein Symbolbild und eine kurze Nachricht.]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
+![Slideup In-App-Nachricht, die am unteren Rand des App-Bildschirms erscheint. Das Slideup enthält ein Symbolbild und eine kurze Nachricht.]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
 
 | Layout | Asset-Größe | Anmerkungen |
 |--- | --- | --- |

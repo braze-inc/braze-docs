@@ -1,12 +1,12 @@
-# Links PRs to matching issues if [BD-####] is in title, with label guard
-name: Link PR to Matching Issue
+# Syncs BD numbers from issues to PRs and links them
+name: Sync BD Numbers and Link Issues
 
 on:
   pull_request:
     types: [opened, edited, synchronize]
 
 jobs:
-  link-issue:
+  sync-and-link:
     runs-on: ubuntu-latest
     permissions:
       issues: write
@@ -15,6 +15,69 @@ jobs:
     steps:
       - name: Check out code
         uses: actions/checkout@v4
+
+      - name: Sync BD number from linked issue to PR title
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const pr = context.payload.pull_request;
+            
+            // Step 1: Check if PR author is Copilot
+            const isCopilot = pr.user.login === 'Copilot';
+            
+            if (!isCopilot) {
+              core.info(`PR author is ${pr.user.login}, not Copilot - skipping BD sync`);
+              return;
+            }
+            core.info("PR author is Copilot");
+            
+            // Step 2: Check if PR is linked to an issue
+            const bodyText = pr.body || "";
+            const issueRefs = bodyText.match(/(closes|fixes|resolves)\s+#(\d+)/gi);
+            
+            if (!issueRefs || issueRefs.length === 0) {
+              core.info("PR is not linked to any issue, skipping BD sync");
+              return;
+            }
+            
+            // Extract issue number from first reference
+            const issueMatch = issueRefs[0].match(/#(\d+)/);
+            const issueNumber = parseInt(issueMatch[1]);
+            core.info(`PR is linked to issue #${issueNumber}`);
+            
+            // Step 3: Get the linked issue and check for BD number
+            const { data: issue } = await github.rest.issues.get({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issueNumber
+            });
+            
+            const issueBdMatch = issue.title.match(/\[BD-(\d+)\]/);
+            if (!issueBdMatch) {
+              core.info("Linked issue does not contain [BD-NUM] in title, skipping BD sync");
+              return;
+            }
+            
+            const bdTag = issueBdMatch[0]; // e.g., "[BD-1234]"
+            core.info(`Found BD tag in issue: ${bdTag}`);
+            
+            // Step 4: Check if PR title already has BD number
+            const prBdMatch = pr.title.match(/\[BD-\d+\]/);
+            if (prBdMatch) {
+              core.info(`PR title already has BD tag: ${prBdMatch[0]}, no update needed`);
+              return;
+            }
+            
+            // Update PR title with BD number
+            const newTitle = `${bdTag} ${pr.title}`;
+            await github.rest.pulls.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: pr.number,
+              title: newTitle
+            });
+            core.info(`Updated PR title to: ${newTitle}`);
 
       - name: Link issue if PR title matches
         uses: actions/github-script@v7
@@ -51,13 +114,21 @@ jobs:
             core.info(`Matching issue found? ${issueFound ? "yes" : "no"}`);
             if (!issueFound) return;
 
-            await github.rest.issues.createComment({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: pr.number,
-              body: `Fixes #${matchedIssue.number}`
-            });
-            core.info("Comment posted? yes");
+            const fixesRef = `Fixes #${matchedIssue.number}`;
+
+            let newBody = pr.body || "";
+            if (!newBody.includes(fixesRef)) {
+              newBody = `${newBody}\n\n${fixesRef}`;
+              await github.rest.pulls.update({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: pr.number,
+                body: newBody
+              });
+              core.info("PR body updated with fixes reference");
+            } else {
+              core.info("PR body already contains fixes reference");
+            }
 
             await github.rest.issues.addLabels({
               owner: context.repo.owner,

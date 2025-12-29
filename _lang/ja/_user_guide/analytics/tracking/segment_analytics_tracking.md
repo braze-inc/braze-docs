@@ -27,19 +27,19 @@ Segmentのページ** Segment Details** セクションで、**Analytics Trackin
 
 [このセグメントの収益と購入の推移]({{site.baseurl}}/user_guide/data/export_braze_data/exporting_revenue_data/)に関するデータを表示するには、[**分析**] > [**収益レポート**] に移動します。
 
-![セグメント別収益データ]({% image_buster /assets/img_archive/Revenue.png %})
+![Segment別売上高]({% image_buster /assets/img_archive/Revenue.png %})
 
 任意のカスタム期間のセグメントデータを視覚的に比較するには、セグメントをグラフに追加するか、グラフから削除します。**Breakdown**ドロップダウンで**Segment**を選択し、**Breakdown values**でSegmentを選択します。
 
 グラフの上にある任意のSegmentネームを選択して、そのSegmentのメトリクスの表示/非表示を切り替えます。
 
-![複数セグメントの収益]({% image_buster /assets/img_archive/segment_revenue_multiple.png %})
+![複数のセグメントの収益]({% image_buster /assets/img_archive/segment_revenue_multiple.png %})
 
 ## セッション数の推移
 
 同様に、[この特定セグメントのセッション数の推移]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_app_usage_data/#exporting-app-usage-data)に関するデータは、[**ホーム**] ページで確認できます。
 
-![セグメント別セッションデータ]({% image_buster /assets/img_archive/events_over_time2.png %})
+![Segment別セッションデーター]({% image_buster /assets/img_archive/events_over_time2.png %})
 
 ## カスタムイベントsの経時的な表示
 

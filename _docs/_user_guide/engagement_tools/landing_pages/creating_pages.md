@@ -1,11 +1,11 @@
 ---
-nav_title: Creating landing pages
-article_title: Creating Landing Pages
+nav_title: Create landing pages
+article_title: Create Landing Pages
 description: "This article covers how to create and customize Braze landing pages with the drag-and-drop editor."
 page_order: 0
 ---
 
-# Creating landing pages
+# Create landing pages
 
 > Learn how to create and customize a landing page using the drag-and-drop editor, so you can grow your audience and collect preferences directly in Braze.
 
@@ -49,11 +49,12 @@ If you haven't already, select **Save as draft**. To start customizing your page
 
 ![An example landing page being created in the drag-and-drop editor.]({% image_buster /assets/img/landing_pages/template.png %})
 
-The editor uses two types of components for landing page composition: [basic blocks](#basic-blocks) and [form blocks](#form-blocks). All blocks must be placed in a row.
+The editor uses two types of components for landing page composition: basic blocks and form blocks. All blocks must be placed in a row.
 
 ![The 'Build' section containing 'Rows' and 'Form Blocks'.]({% image_buster /assets/img/landing_pages/dnd.png %}){: style="max-width:35%;"}
 
-#### Basic blocks
+{% tabs %}
+{% tab Basic blocks %}
 
 You can use these blocks to add content and customize the layout of your landing page.
 
@@ -73,7 +74,8 @@ You can use these blocks to add content and customize the layout of your landing
 
 {% multi_lang_include span_text.md %}
 
-#### Form blocks
+{% endtab %}
+{% tab Form blocks %}
 
 You can use these blocks to create a form that links user-submitted data to their profile in Braze. Keep in mind, if you use form blocks, you'll also need to create an additional landing page for the confirmation state.
 
@@ -86,11 +88,15 @@ You can use these blocks to create a form that links user-submitted data to thei
 | Input Field   | A form field that supports standard attributes (such as first and last name) or a custom attribute string of your choice. |
 | Dropdown      | Users can select an item from a pre-defined list. You can add any custom attribute strings to the list. |
 | Checkbox      | If a user checks the box, the block's attribute is set to `true`. If left unchecked, it's attribute is set to `false`. |
+| Checkbox Group| Users can select from multiple choices presented. Values are either set or added to a defined array custom attribute. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert important %}
 After creating a landing page with a form, be sure to embed its [landing page Liquid tag]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/tracking_users) into your message. With this tag, Braze can automatically identify and update existing user profiles when they submit the form.
 {% endalert %}
+
+{% endtab %}
+{% endtabs %}
 
 #### Page container styles
 
@@ -103,6 +109,8 @@ We recommend setting up page container-level styles before you customize styles 
 #### Responsive to user devices
 
 You can make your landing page responsive to the size of a user's device by vertically stacking columns on smaller screens. To enable this, add a column into the row you want to make responsive, and then toggle on **Vertically stack on smaller screens** in the **Customize columns** section.
+
+When enabled, you can also reverse stack columns to control the vertical order of multi-column content on smaller screens. This makes pages look and feel better on mobile without custom code.
 
 ![The "Vertically stack on smaller screens" toggle in the "Customize columns" section.]({% image_buster /assets/img/landing_pages/device_responsive_toggle.png %}){: style="max-width:50%;"}
 
@@ -125,6 +133,10 @@ To link the confirmation page:
 - Use the **Open web URL** action to link to your confirmation page
 
 If you don’t include a confirmation page, users may not know their form was submitted successfully. Always include a confirmation experience to complete the journey.
+
+{% alert note %} 
+If your confirmation page opens in a new tab, a user who returns to the original landing page and resubmits with updated information can overwrite the previous submission, resulting in inconsistent data. 
+{% endalert %}
 
 ### Step 5: Preview the page
 

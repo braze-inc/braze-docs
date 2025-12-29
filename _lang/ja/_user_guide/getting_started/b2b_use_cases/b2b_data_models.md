@@ -42,9 +42,12 @@ Braze でビジネスオブジェクトを作成および管理するには、�
 
 | 方法 | 説明 |
 | --- | --- |
-| [カタログ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs) | これらは、Braze のプライマリユーザプロファイルの独立したデータオブジェクト (補足データオブジェクト) です。B2B のコンテキストでは、アカウントと案件のカタログがある可能性があります。 |
+| [カタログ]({{site.baseurl}}/user_guide/data/activation/catalogs) | これらは、Braze のプライマリユーザプロファイルの独立したデータオブジェクト (補足データオブジェクト) です。B2B のコンテキストでは、アカウントと案件のカタログがある可能性があります。 |
 | [接続されたソース]({{site.baseurl}}/user_guide/data/cloud_ingestion/connected_sources/) | これにより、Braze はデータウェアハウスに直接クエリを実行できます。すでにリード、連絡先、案件、アカウントの各オブジェクトをデータウェアハウスと定期的に同期している可能性があるため、Braze セグメンテーションをそのウェアハウスに直接ポイントし、ゼロコピー環境で有効化することができます。 |
 {: .reset-td-br-1 .reset-td-br-2 }
+
+{% tabs %}
+{% tab Catalogs %}
 
 ### オプション 1: アカウントと案件のカタログを使用する
 
@@ -56,8 +59,8 @@ Braze でビジネスオブジェクトを作成および管理するには、�
 
 以下の表に、CRM のアカウントオブジェクトと案件オブジェクトからマップできるフィールドの例をいくつか示します。
 
-{% tabs %}
-{% tab アカウントカタログ %}
+{% subtabs %}
+{% subtab Account catalog %}
 
 この使用例では、Salesforce がCRM システムの例です。CRM のオブジェクトに含まれる任意のフィールドにマップできます。
 
@@ -93,10 +96,10 @@ Braze でビジネスオブジェクトを作成および管理するには、�
 
 ##### マップされた取引先フィールドのテーブルの例
 
-![請求先住所やアカウント所有者などの該当する情報を含む Salesforce アカウントのテーブル。]({% image_buster /assets/img/b2b/sf_accounts.png %})
+![請求先住所や取引先所有者など、それぞれの情報を含むSalesforce 取引先のテーブル。]({% image_buster /assets/img/b2b/sf_accounts.png %})
 
-{% endtab %}
-{% tab 案件カタログ %}
+{% endsubtab %}
+{% subtab Opportunity catalog %}
 
 この使用例では、Salesforce がCRM システムの例です。CRM のオブジェクトに含まれる任意のフィールドにマップできます。
 
@@ -132,18 +135,23 @@ Braze でビジネスオブジェクトを作成および管理するには、�
 
 ##### マッピングされた商談項目の例のテーブル
 
-![請求先住所やアカウント所有者などの該当する情報を含む Salesforce の商談の表。]({% image_buster /assets/img/b2b/sf_opportunities.png %})
+![請求先住所や取引先所有者など、それぞれの情報を含むSalesforce 商談のテーブル。]({% image_buster /assets/img/b2b/sf_opportunities.png %})
+
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+{% tab Connected sources %}
+
+### オプション 2: アカウントと案件に接続されたソースを使用する
+
+接続されたソースは、独自のデータウェアハウスでホストされ、Braze [CDI Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/) によってクエリされるデータテーブルです。カタログとは異なり、Braze でビジネスオブジェクト (アカウントと案件) を複製する代わりに、データウェアハウスにこれらのオブジェクトを維持し、ウェアハウスを信頼できる情報源として使用します。
+
+接続されたソースを設定するには、「[接続されたソースの統合]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/connected_sources#integrating-connected-sources)」を参照してください。
 
 {% endtab %}
 {% endtabs %}
 
-### オプション 2: アカウントと案件に接続されたソースを使用する
-
-接続されたソースは、ユーザーが独自のデータウェアハウスでホストし、Braze [CDI セグメント]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/) によって照会されるデータテーブルです。カタログとは異なり、Braze でビジネスオブジェクト (アカウントと案件) を複製する代わりに、データウェアハウスにこれらのオブジェクトを維持し、ウェアハウスを信頼できる情報源として使用します。
-
-接続されたソースを設定するには、「[接続されたソースの統合]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/connected_sources#integrating-connected-sources)」を参照してください。
-
-## ステップ2:ビジネス・オブジェクトをユーザー・プロファイルに関連付ける
+## ステップ 2:ビジネス・オブジェクトをユーザー・プロファイルに関連付ける
 
 ユーザープロファイルは、Braze の主要なオブジェクトです。ユーザー層のセグメンテーション、トリガー、パーソナライゼーションの大部分の処理に使用されます。ユーザープロファイルには、SDK によって収集された[デフォルトのユーザーデータ]({{site.baseurl}}/user_guide/data/user_data_collection/) と、[カスタムデータ]({{site.baseurl}}/user_guide/data/custom_data/) が含まれます。これらのデータは、属性(人口統計データ)、イベント(行動データ)、購入(トランザクションデータ) のいずれかの形式になります。
 
@@ -169,7 +177,10 @@ ID を同期したら、Braze ユーザープロファイルをビジネスオ�
 
 ### ステップ 2.2:ユーザプロファイルとビジネスオブジェクト間の関係を作成する
 
-#### オプション 1: ビジネス・オブジェクトのカタログを使用する場合
+{% tabs %}
+{% tab Catalogs %}
+
+#### オプション 1: カタログsを使用する場合
 
 商談および取引先の詳細がBraze カタログとして会計処理されるようになったので、これらのカタログと、メッセージを送信するユーザプロファイルとの間に関係を作成する必要があります。現在、これには2つのステップが必要です。
 
@@ -201,8 +212,14 @@ ID を同期したら、Braze ユーザープロファイルをビジネスオ�
 }
 ```
 
+{% endtab %}
+{% tab Connected sources %}
+
 #### オプション 2: 接続したソースを使用する場合
 
 接続されたソースのテーブルの1つに、Braze でユーザーに対して設定された `external_user_id` に一致する `user_id` が含まれている必要があります。前述のユーザープロファイル設定では、リードと `contact_ids` が `external_id` として使用されています。このため、リード/連絡先のテーブルにこれらの ID が含まれていることを確認する必要があります。
 
 ID の一致を確認することに加え、効率的なセグメンテーションとパーソナライゼーションのために、基本的なアカウントレベルデータ (`account_id`、`opportunity_id` など) と一般的な企業統計属性 (`industry` など) をユーザープロファイルに書き込むことをお勧めします。
+
+{% endtab %}
+{% endtabs %}

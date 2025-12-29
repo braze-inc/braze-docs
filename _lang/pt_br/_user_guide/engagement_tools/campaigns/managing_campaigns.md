@@ -8,7 +8,7 @@ page_order: 3
 
 tool: Campaigns
 page_type: landing
-description: "Esta landing page aborda o gerenciamento de campanhas. Aqui, você pode encontrar artigos sobre aprovação de campanhas, duplicação, alertas, arquivamento, alteração de sua campanha após o lançamento e muito mais."
+description: "Essa página de destino aborda o gerenciamento de campanhas. Aqui, você pode encontrar artigos sobre aprovação de campanhas, duplicação, alertas, arquivamento, alteração de sua campanha após o lançamento e muito mais."
 
 guide_featured_title: "Artigos de seção"
 guide_featured_list:
@@ -24,10 +24,10 @@ guide_featured_list:
 
 guide_menu_title: "Additional resources"
 guide_menu_list:
-  - name: Fluxo de aprovação
+  - name: Fluxo de trabalho de aprovação
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/approvals/
     image: /assets/img/braze_icons/brush-02.svg
-  - name: Regras de envio de mensagens para aprovação
+  - name: Regras de mensagens para aprovação
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/approvals/messaging_rules/
     image: /assets/img/braze_icons/check-square.svg
   - name: Arquivamento de campanhas

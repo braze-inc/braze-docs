@@ -194,6 +194,10 @@ hide_toc: true
     textarea {
       border-radius: 0 !important;
     }
+    #doc_release_notes_label {
+      font-size: 12pt !important;
+      font-family: Sailec W00 Regular,Arial,sans-serif;
+    }
     #doc_verify_label {
       font-size: 12pt !important;
       font-family: Sailec W00 Regular,Arial,sans-serif;
@@ -364,24 +368,33 @@ hide_toc: true
       var braze_internal = $('#braze_internal').remove();
       $('#header_nav').after(braze_internal);
       
-      // Handle disclosure visibility
-      function toggleDisclosure() {
+      // Handle Form Element visibility
+      function toggleFormElements() {
         var selectedValue = $('#doc_urgent').val();
         if (selectedValue === 'suggestion') {
             $('[id^="disclosure"]').show();
-            $('#default-instructions').hide(); 
+            $('#doc_release_notes_group').hide();
+            $('[id^="resource_urls"]').hide();
+            $('#doc_verify_div').show();
+        } else if (selectedValue === 'feature') {
+            $('#disclosure-warning').hide();
+            $('#resource_urls').show();
+            $('#doc_verify_div').show();
+            $('#doc_release_notes_group').show();
         } else {
+            $('#doc_release_notes_group').hide();
+            $('#doc_verify_div').show();
             $('[id^="disclosure"]').hide();
-            $('#default-instructions').show(); 
+            $('[id^="resource_urls"]').hide();
         }
       }
       
       // Show/hide disclosures on page load
-      toggleDisclosure();
+      toggleFormElements();
       
       // Show/hide disclosures when selection changes
       $('#doc_urgent').change(function() {
-        toggleDisclosure();
+        toggleFormElements();
       });
       
       $('#doc_form').submit(function(e) {
@@ -402,7 +415,7 @@ hide_toc: true
           $('#doc_div').hide();
           $('#doc_thankyou').show();
           $('#doc_thankyou_msg').fadeTo(800,0,function(){
-              $(this).html('<h3>Thanks for your submission!</h3> Someone from our team will reach out to you if we have any questions. To view the status of your ticket or add comments, check your email for your ticket confirmation.').fadeTo(800,1);
+              $(this).html('<h3>Thanks for your submission!</h3> Someone from our team will contact you if we have any questions. To view the status of your ticket or add comments, check your email for your ticket confirmation.').fadeTo(800,1);
           });
         });
 
@@ -425,10 +438,7 @@ hide_toc: true
           </div>
           <div class="row">
             <div class="col">
-              <div class="form-group" id="doc_name_div">
-                <label for="doc_name" id="doc_name_label">Name</label>
-                <input type="text" name="Name" id="doc_name" maxlength="80" required="required" value="" placeholder="Enter your name" class="form-control" />
-              </div>
+              <input type='hidden' name='Name' value='' />
               <div class="form-group" id="doc_urgent_div">
               <div class="form-check">
                 <label class="form-check-label" for="doc_urgent" style="display: block;">
@@ -474,17 +484,24 @@ hide_toc: true
               </div>
 
               <div class="form-group" id="doc_request_url">
-                <label for="doc_request" id="doc_request_url_label">URL</label>
+                <label for="doc_request" id="doc_request_url_label">Braze URL</label>
                 <input type="url" name="Request_Url" id="doc_request_url" maxlength="180" required="required" value="" placeholder="e.g., https://www.braze.com/docs/" class="form-control" />
               </div>
 
               <div class="form-group">
 
                 <label for="doc_description" id="doc_description_label" style="margin-bottom:6px;line-height:1.2;">Description</label>
-                <div class="sublabel" id="default-instructions">What needs to be done for you to consider this request complete? Include links to any resources such as drive folders of images, relevant Slack threads, Confluence articles, and any relevant links that might need to be included in the documentation.</div>
-                <div class="sublabel" id="disclosure-instructions">What needs to be done for you to consider this request complete? Don't add links to any resources, such as Slack threads or Confluence articles. Directly add all relevant content to this field.</div>
+                <div class="sublabel" style="margin-bottom:6px;">Provide as much detail as possible about the requested update.</div>
                 <textarea name="Description" class="form-control" id="doc_description" data-toggle="popover" data-trigger="focus" data-placement="top" data-content=""
                   rows="7"></textarea>
+              </div>
+
+              <div class="form-group" id="resource_urls">
+                <label for="resource_urls" id="resource_urls_label">Resource URLs</label>
+                 <div class="sublabel" style="margin-bottom:6px;">Include URLs from Confluence, Productboard, Google Docs, Jira, or any other resources about this feature.</div>
+                <textarea name="Resource_Urls" class="form-control" id="resource_urls" data-toggle="popover" data-trigger="focus" data-placement="top" data-content=""
+                  rows="2" ></textarea>
+
               </div>
 
               <div class="form-group">
@@ -502,6 +519,14 @@ hide_toc: true
               </label>
               </div>
               </div>
+              <div class="form-group" id="doc_release_notes_group">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Y" id="doc_release_notes" name="Release_Notes">
+                <label class="form-check-label" for="doc_release_notes" id="doc_release_notes_label">
+                  <span></span> Include in release notes
+                </label>
+              </div>
+              </div>              
               <div class="inline_text">
               Please wait up to ten seconds after submitting for your request to process.
               </div>

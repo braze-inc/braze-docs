@@ -1,5 +1,5 @@
 ---
-nav_title: オーディエンスパス 
+nav_title: オーディエンスパス
 article_title: オーディエンスパス 
 alias: /audience_paths/
 page_order: 1
@@ -15,9 +15,9 @@ tool: Canvas
 
 このキャンバスコンポーネントは、過剰なオーディエンスベースのフルステップを作成する必要をなくし、8 つのフルコンポーネントを 1 つにまとめることを可能にします。これは、不必要に複雑になったキャンバスを整理してユーザーのターゲット設定を簡素化するのに役立ちます。 
 
-## CDI の仕組み
+## 仕組み
 
-![エンゲージメント・ユーザーとそれ以外のユーザーという2つのグループを持つオーディエンスパス]({% image_buster /assets/img/audience_path/audience_path.png %}){: style="float:right;max-width:45%;margin-left:15px;margin-top:15px;"}
+![オーディエンスパスには、ユーザー s と他のすべてのユーザーが参加する2 つのグループがあります。]({% image_buster /assets/img/audience_path/audience_path.png %}){: style="float:right;max-width:45%;margin-left:15px;margin-top:15px;"}
 
 オーディエンスパスは、ランキング基準を持つ並べ替えのファネルに似ています。ユーザーは、各基準について優先順位の高い順に評価され、最も高い順位の基準を満たすパスに送られます。これにより、ユーザーがどこに送られ、どのようなメッセージを受け取るのかを把握しやすくなります。なお、ランクを[開始後に編集]({{site.baseurl}}/post-launch_edits/)することはできません。
 
@@ -31,7 +31,7 @@ tool: Canvas
 
 ### ユーザー評価の時間を確保する
 
-![メッセージステップの後に24時間の遅延とオーディエンスパスを示すキャンバス。]({% image_buster /assets/img/audience_path/audience_path5.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
+![キャンバスは、メッセージステップの後に24 時間の遅延を表示し、その後にオーディエンスパスを表示します。]({% image_buster /assets/img/audience_path/audience_path5.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
 ユーザーはオーディエンスパスのステップに到達するとすぐに評価される。評価が完了するとすぐに次のステップに進みます。このため、オーディエンスパスがユーザーアクションによって決定される場合には、適切な期間を確実に経過させることが重要になります。
 
@@ -56,17 +56,17 @@ tool: Canvas
 
 例えば、オンボーディングメッセージングのターゲットをユーザーグループに絞りたい場合、「メールをクリックしたユーザー」や「アプリ内メッセージをクリックしたユーザー」といったリターゲティングフィルターを選択することができる。
 
-![アジア料理が好き」、「ラテン料理が好き」、「ヨーロッパ料理が好き」、「それ以外」のグループを持つ拡張オーディエンスパス。]({% image_buster /assets/img/audience_path/audience_path3.png %})
+![「"Loves Asian Cuisine」、「Loves Latin Cuisine」、「Loves European Cuisine」、および「"Everyone Else"」のグループを含む拡張されたAudience Path。]({% image_buster /assets/img/audience_path/audience_path3.png %})
 
 オーディエンスパスステップの完了後、各オーディエンスグループは個別の分岐を持ちます。オーディエンスパスを使用してオーディエンスをさらに絞り込むことも、標準のキャンバスステップを使用してキャンバスのジャーニーを続けることもできます。 
 
-![]({% image_buster /assets/img/audience_path/audience_path4.png %}) エンゲージメントによって異なるグループを持つ2つのオーディエンスパス。{: style="max-width:50%"}
+![エンゲージメントに基づいて、さまざまなグループを持つ2 つのオーディエンスパス。]({% image_buster /assets/img/audience_path/audience_path4.png %}){: style="max-width:50%"}
 
 ### オーディエンスグループをテストする
 
 オーディエンスにセグメントとフィルターを追加した後、[ユーザーを検索]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/)してオーディエンス基準に一致しているかを確認することで、オーディエンスグループが期待通りに設定されているかどうかをテストできます。
 
-![ユーザー検索」セクション]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:70%"}
+!["User Lookup"セクション。]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:70%"}
 
 ## オーディエンスパスを使う
 
@@ -74,7 +74,7 @@ tool: Canvas
 
 これらのグループに高い優先順位を割り当てることで、特定のフィルターやセグメントに該当するユーザーをターゲットにしながら、これらの特定の基準を満たさないユーザーもターゲットにすることができます。これをすべて 1 つのキャンバスステップで実行できます。
 
-![ビッグブランドの靴が好き」、「ビッグブランドが好き」、「それ以外」のグループを持つオーディエンスパス。]({% image_buster /assets/img/audience_path/audience_path2.png %}){: style="float:right;max-width:50%;margin-left:15px;margin-bottom:15px;"}
+![「Likes Big Brand Shoes」、「Likes Big Brand」、および"Everyone Else"のグループを持つAudience Path。]({% image_buster /assets/img/audience_path/audience_path2.png %}){: style="float:right;max-width:50%;margin-left:15px;margin-bottom:15px;"}
 
 例えば、新商品の広告をユーザーのグループに送りたいとします。その場合、その商品に該当するフィルターをオーディエンスパスの上位にランク付けすることから始めます。もしあなたが「ビッグブランド」という会社のマーケティングキャンペーンを作成していて、新しい小売（店)ブランドがリリースされたばかりだとしたら、「ビッグブランドの靴が好き」や「ビッグブランドのバッグが好き」といったフィルターを選択し、どのフィルターグループに属するかによって異なるメールメッセージを送るかもしれない。 
 

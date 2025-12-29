@@ -1,5 +1,5 @@
 ---
-nav_title: MMSキャンペーンの作成
+nav_title: MMSキャンペーンを作成する
 article_title: MMSキャンペーンの作成
 page_order: 2
 description: "このリファレンス記事では、MMS メッセージの作成、送信、およびプレビューに関連するステップについて説明します。"
@@ -38,7 +38,7 @@ MMSは、テキストのみのSMSとは異なる料金で請求され、すべ�
 
 MMSメッセージを作成するには、サブスクリプショングループをMMS送信用に設定する必要があります。これは、サブスクリプショングループを選択するときにMMSタグが表示されることで示されます。MMS 対応の購読グループを選択すると、画像のアップロード、画像 URL の参照、連絡先カードの取り込みができるようになります。
 
-![メッセージを作成するための [作成] タブ。]({% image_buster /assets/img/sms/mms_composer.png %}){: style="max-width:80%;"}
+!["Compose"タブでメッセージを書きます。]({% image_buster /assets/img/sms/mms_composer.png %}){: style="max-width:80%;"}
 
 ### 画像の仕様
 
@@ -56,4 +56,4 @@ Brazeは、メッセージ作成画面の**プレビュー**パネルにアッ�
 SMS/MMSアセットの順序はカスタマイズできません。順序は、このメッセージを受信する電話機によって異なります。
 {% endalert %}
 
-![「Ready to hit the gym...at home?」というメッセージの例。プレビューには、テキストとして送信されたメッセージと画像が表示される。]({% image_buster /assets/img/sms/mms_preview.png %})
+![メッセージ" Ready to hit the gym...at home?" の例。プレビューには、テキストとして送信されたメッセージと"画像が表示されます。]({% image_buster /assets/img/sms/mms_preview.png %})

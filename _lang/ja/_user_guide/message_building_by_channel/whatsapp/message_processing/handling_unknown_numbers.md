@@ -1,5 +1,5 @@
 ---
-nav_title: 不明な電話番号への対応
+nav_title: 知らない電話番号への対応
 article_title: 不明な電話番号への対応
 description: "この参考記事では、BrazeがWhatsAppユーザーの不明な電話番号をどのように処理するかについて説明する。"
 page_type: reference

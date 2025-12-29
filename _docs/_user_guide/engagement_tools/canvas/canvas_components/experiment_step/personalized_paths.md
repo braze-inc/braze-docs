@@ -93,7 +93,7 @@ The relationships between custom events and path preferences are displayed in th
 
 ![]({% image_buster /assets/img_archive/experiment_personalized_analytics_custom_data.png %})
 
-If the test can't find a meaningful relationship between custom events and path preferences, the test will fall back to a session-based analysis method.
+If the test can't find a meaningful relationship between custom events and path preferences, the test falls back to a session-based analysis method, and no custom event data tables are shown.
 
 {% details Fallback analysis method %}
 

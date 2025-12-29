@@ -21,7 +21,9 @@ Wenn Sie das Verhalten von Nutzern, die Nachrichten erhalten, mit dem von Nutzer
 
 Mit der Globalen Kontrollgruppe können Sie einen Prozentsatz aller Benutzer als Kontrollgruppe festlegen. Nach dem Speichern erhalten die Benutzer der Gruppe keine Kampagnen oder Leinwände. 
 
-Ihre Globale Kontrollgruppe wird auf alle Kanäle, Kampagnen und Canvases angewendet, mit Ausnahme von [API-Kampagnen]({{site.baseurl}}/api/api_campaigns#api-campaigns) und News Feed Cards (veraltet). Die Nutzer in Ihrer Kontrollgruppe erhalten weiterhin API-Kampagnen und News Feed Cards. Diese Ausnahme gilt nicht für Content Cards - wenn Sie Content Cards verwenden, erhalten die Benutzer in Ihrer Kontrollgruppe diese nicht.
+{% alert important %}
+Ihre globale Kontrollgruppe gilt für alle Kanäle, Kampagnen und Canvase, außer für [API-Kampagnen]({{site.baseurl}}/api/api_campaigns). Das bedeutet, dass die Nutzer:innen in Ihrer Kontrollgruppe weiterhin API Kampagnen erhalten werden. Diese Ausnahme gilt jedoch nicht für Content-Cards. Wenn Sie eine API-getriggerte Content-Card-Kampagne verwenden, erhalten die Nutzer:innen in Ihrer Kontrollgruppe diese nicht.
+{% endalert %}
 
 ### Weisen Sie Benutzer zufällig der Globalen Kontrollgruppe zu
 
@@ -39,6 +41,10 @@ Ihre Behandlungsgruppe wird ähnlich groß sein wie Ihre globale Kontrollgruppe,
 
 Sie können keine [Funktionsflags]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/feature_flags/) für Benutzer in Ihrer Globalen Kontrollgruppe aktivieren. Das bedeutet, dass Benutzer in Ihrer Globalen Kontrollgruppe auch nicht an Experimenten mit Funktionskennzeichen teilnehmen können.
 
+### Nutzer:innen von der globalen Kontrollgruppe ausschließen
+
+Sie können bestimmte Nutzer:innen nicht aus der globalen Kontrollgruppe entfernen, aber Sie können [Ausschlusseinstellungen]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/#step-3-assign-exclusion-settings) hinzufügen, so dass Kampagnen und Canvase mit bestimmten Tags **die globale Kontrollgruppe nicht nutzen können**. Sie können Ihre globale Kontrollgruppe auch deaktivieren und wieder aktivieren, um die Mitgliedschaft zu mischen. Die ideale Dauer für das Mischen der Nutzer:innen hängt von der Art des Tests ab, den Sie durchführen, aber wir empfehlen Ihnen, die Nutzer:innen nicht öfter als einmal pro Monat zu mischen.
+
 ## Eine globale Kontrollgruppe erstellen
 
 ### Schritt 1: Navigieren Sie zu den Globalen Kontrollgruppeneinstellungen
@@ -49,9 +55,11 @@ Gehen Sie auf dem Dashboard zu **Zielgruppe** > **Globale Kontrollgruppe**.
 
 Geben Sie einen Prozentsatz für Ihre Kontrollgruppe ein und wählen Sie **Speichern**. Nach der Eingabe zeigt Ihnen Braze eine Schätzung an, wie viele Nutzer:innen in Ihre Globale Kontrolle, Behandlung und Behandlungsstichprobe fallen werden. Beachten Sie, dass diese Schätzung umso genauer ist, je mehr Benutzer Sie in Ihrem Arbeitsbereich haben. 
 
-Die Anzahl der Nutzer:innen in Ihrer globalen Kontrollgruppe wird nach der Ersteinrichtung automatisch aktualisiert, damit sie proportional zu diesem Prozentsatz der Zielgruppe bleibt, wenn weitere Nutzer:innen zu Ihrem Workspace hinzugefügt werden. Außerdem werden neue Nutzer:innen, die nach der Einrichtung der globalen Kontrollgruppe hinzukommen und zufällige Bucket-Nummern haben, auch der globalen Kontrollgruppe hinzugefügt. Wenn viele Nutzer:innen hinzukommen, können Sie davon ausgehen, dass die Größe Ihrer globalen Kontrollgruppe wachsen wird, so dass sie einen konstanten Prozentsatz im Verhältnis zu Ihrer gesamten Nutzerbasis beibehält. Die Richtlinien für den Prozentsatz finden Sie im folgenden [Abschnitt über bewährte Verfahren](#percentage-guidelines).
+Die Anzahl der Nutzer:innen in Ihrer globalen Kontrollgruppe wird nach der Ersteinrichtung automatisch aktualisiert, damit sie proportional zu diesem Prozentsatz bleibt, wenn weitere Nutzer:innen zu Ihrem Workspace hinzugefügt werden. Außerdem werden Nutzer:innen, die nach der Einrichtung der globalen Kontrollgruppe beitreten und zufällige Bucket-Nummern haben, ebenfalls der globalen Kontrollgruppe hinzugefügt. Wenn viele Nutzer:innen hinzukommen, wird die Größe Ihrer globalen Kontrollgruppe wachsen, um einen konstanten Prozentsatz im Verhältnis zu Ihrer gesamten Nutzerbasis zu erhalten. Wenn die Größe Ihrer globalen Kontrollgruppe wächst, bleiben die Nutzer:innen, die zuvor in der Gruppe waren, in der Gruppe (es sei denn, Sie nehmen Änderungen an Ihrer Gruppe vor, indem Sie sie deaktivieren und eine neue Gruppe erstellen).
 
-![Die globalen Kontrollgruppeneinstellungen mit den Zielgruppeneinstellungen auf "Fünf Prozent der globalen Kontrollgruppenpopulation zuweisen".][4]
+Richtlinien für den Prozentsatz finden Sie unter [Bewährte Testverfahren](#percentage-guidelines).
+
+![Die globalen Kontrollgruppen-Einstellungen mit den Zielgruppen-Einstellungen, die auf "Weisen Sie fünf Prozent aller Nutzer:innen der globalen Kontrollgruppe zu" eingestellt sind.]({% image_buster /assets/img/control_group/control_group4.png %})
 
 ### Schritt 3: Ausschlusseinstellungen zuweisen
 
@@ -61,7 +69,7 @@ Mit Tags können Sie Ausschlusskriterien zu der globalen Kontrollgruppe hinzufü
 Wenn Sie transaktionsbezogene Nachrichten haben, die an alle Nutzer:innen gesendet werden sollen, möchten Sie vielleicht Ausschlusseinstellungen hinzufügen.
 {% endalert %}
 
-![Die Option zum Hinzufügen von Ausschlusseinstellungen zu Ihrer Globalen Kontrollgruppe.][5]
+![Der Bereich zum Hinzufügen oder Bearbeiten von Ausschlusseinstellungen für Ihre globale Kontrollgruppe.]({% image_buster /assets/img/control_group/control_group5.png %})
 
 ### Schritt 4: Speichern Sie Ihre Kontrollgruppe
 
@@ -77,7 +85,7 @@ Bevor Sie Ihre Kontrollgruppe deaktivieren, empfehlen wir Ihnen, eine CSV-Datei 
 
 Wenn Sie die Kontrollgruppe deaktiviert haben, können Sie eine neue Gruppe speichern. Wenn Sie einen Prozentsatz eingeben und speichern, erzeugt Braze eine neue, zufällig ausgewählte Gruppe von Benutzern. Wenn Sie den gleichen Prozentsatz wie zuvor eingeben, erstellt Braze trotzdem eine neue Gruppe von Benutzern für Ihre Kontroll- und Behandlungsgruppen.
 
-![Ein Dialogfenster mit der Überschrift "Sie ändern die globalen Messaging-Einstellungen" und diesem Text: "Sobald Ihre Globale Kontrollgruppe deaktiviert ist, wird sie nicht mehr von neuen oder derzeit aktiven Kampagnen oder Canvases ausgeschlossen. Benutzer in dieser Gruppe sind sofort berechtigt, Nachrichten zu erhalten. Sind Sie sicher, dass Sie fortfahren möchten?" mit zwei Tasten: Abbrechen und Fortfahren.][2]{: style="max-width:50%" }
+![Ein Dialogfenster mit der Überschrift "Sie nehmen Änderungen an den globalen Messaging-Einstellungen vor" mit einer Warnung, dass Ihre globale Kontrollgruppe nach der Deaktivierung nicht mehr von neuen oder aktiven Kampagnen oder Canvase ausgeschlossen werden kann.]({% image_buster /assets/img/control_group/control_group2.png %}){: style="max-width:60%" }
 
 ## Exportieren Sie Ihre Kontrollgruppenmitglieder {#export-group-members}
 
@@ -93,7 +101,7 @@ Historische Kontrollgruppen bleiben nicht erhalten, Sie können also nur die Mit
 
 Sie können die Zugehörigkeit zu einer globalen Kontrollgruppe prüfen, wenn Sie im jeweiligen Nutzerprofil unter **Engagement** den Abschnitt **Verschiedenes** aufrufen.
 
-![Abschnitt "Verschiedenes" mit der zufällig generierten nutzerspezifischen Bucket-Nummer 2030 und Angaben zur Mitgliedschaft in der globalen Kontrollgruppe.][1]{: style="max-width:60%;"}
+![Ein Abschnitt "Verschiedenes", der meldet, dass der Nutzer:in eine zufällige Bucket-Nummer von 6356 hat und nicht in der globalen Kontrollgruppe ist.]({% image_buster /assets/img/control_group/control_group1.png %}){: style="max-width:50%;"}
 
 ## Berichterstattung
 
@@ -171,8 +179,3 @@ Sie sollten entscheiden, wie lange Ihr Experiment laufen soll, bevor Sie es begi
 
 Überlegen Sie, welche Verhaltensweisen für die jeweiligen Metriken relevant sind. Interessieren Sie sich für die Verkaufszahlen bei Abos, die nur jahresweise verlängert werden? Oder haben die Kund:innen eine wöchentliche Gewohnheit für das Ereignis, das Sie messen möchten? Überlegen Sie sich, wie lange es dauert, bis die Nutzer ihr Verhalten aufgrund Ihrer Botschaft möglicherweise ändern. Nachdem Sie entschieden haben, wie lange Ihr Experiment laufen soll, achten Sie darauf, dass Sie Ihr Experiment nicht vorzeitig beenden oder die Endergebnisse aufzeichnen, da sonst Ihre Ergebnisse verfälscht werden könnten.
 
-[1]: {% image_buster /assets/img/control_group/control_group1.png %}
-[2]: {% image_buster /assets/img/control_group/control_group2.png %}
-[4]: {% image_buster /assets/img/control_group/control_group4.png %}
-[5]: {% image_buster /assets/img/control_group/control_group5.png %}
-[6]: {% image_buster /assets/img/control_group/control_group6.png %}

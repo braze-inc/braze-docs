@@ -1,5 +1,5 @@
 ---
-nav_title: スタイル設定
+nav_title: スタイル設定s
 article_title: "アプリ内メッセージスタイルの設定"
 description: "このリファレンス記事では、ドラッグアンドドロップエディタを使用してアプリ内メッセージを作成するときに使用できるスタイル設定について説明します。"
 page_order: 3
@@ -7,15 +7,15 @@ page_order: 3
 
 # アプリ内メッセージのスタイルの設定
 
-> ドラッグアンドドロップによる編集は、2 つのセクションに分かれています。**ビルド**と**プレビュー&アンプ;テスト**。この記事では、エディタの**Build**タブ内で作業するために必要なことを説明し、すでに[アプリ内メッセージ]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/)を作成していることを前提としています。
+> ドラッグアンドドロップによる編集は、2 つのセクションに分かれています。**Build**と**プレビュー&テスト**。この記事では、エディタの**Build**タブ内で作業するために必要なことを説明し、すでに[アプリ内メッセージ]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/)を作成していることを前提としています。
 
-![[メッセージのスタイル] タブ]({% image_buster /assets/img_archive/dnd_iam_message_styles.png %}){: style="float:right;max-width:25%;margin-left:15px;max-width:30%"}
+!["メッセージスタイルとクォート;タブ。]({% image_buster /assets/img_archive/dnd_iam_message_styles.png %}){: style="float:right;max-width:25%;margin-left:15px;max-width:30%"}
 
 ## メッセージレベルのスタイル
 
 [**メッセージスタイル**] タブから、アプリ内メッセージにある関連するすべてのブロックに特定のスタイルを設定できます。たとえば、メッセージ内のすべてのテキストまたはすべてのリンクの色のフォントをカスタマイズできます。
 
-この項のスタイルは、指定したブロックで上書きする場合を除き、メッセージ内のあらゆる場所で使用されます。メッセージに[複数ページ]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create#multi-page)が含まれている場合は、表示タイプと最大幅を除き、個々のページのメッセージレベルスタイルをオーバーライドすることもできます。ページレベルのスタイルとメッセージレベルのスタイルの両方を適用しようとすると、ページレベルのスタイルがメッセージレベルのスタイルを上書きします。
+この項のスタイルは、指定したブロックで上書きする場合を除き、メッセージ内のあらゆる場所で使用されます。メッセージに[複数ページ]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create#multi-page)が含まれている場合は、表示タイプと最大幅を除き、個々のページのメッセージレベルスタイルをオーバーライドすることもできます。
 
 デザインをより簡単にするために、メッセージレベルのスタイルを設定してから、スタイルをブロック段階でカスタマイズすることをお勧めします。
 
@@ -42,23 +42,43 @@ page_order: 3
 
 ## メッセージのコンポーネント
 
-![プロモーションのためのアプリ内メッセージが作成される様子を示す GIF。]({% image_buster /assets/img_archive/dnd_iam_create.gif %})
+![作成中のプロモーションアプリ内メッセージを示すGIF。]({% image_buster /assets/img_archive/dnd_iam_create.gif %})
 
 ドラッグ＆ドロップエディターは、**行**と**ブロック**の 2 つの主要コンポーネントを使用してアプリ内メッセージを作成します。すべてのブロックは行に配置する必要があります。
+
+### 閉じるxボタン
+
+ModalおよびFullscreen アプリ内メッセージ sでは、メッセージの右上隅に<i class="fa-solid fa-xmark"></i>と表示される閉じるボタンをカスタマイズできます。カスタマイズ機能には、ボタン位置、サイズ、塗りつぶしカラー、バックグラウンドカラー、ボーダースタイル、ボーダー半径などがあります。
+
+![ボタンの大きさ、塗りつぶしカラー、バックグラウンドカラー、ボーダースタイル、およびボーダー半径を含む、アプリ内メッセージsの閉じるxボタンをカスタマイズするための選択肢。]({% image_buster /assets/img_archive/close_x_button.png %}){: style="max-width:40%"}
+
+### スパンスタイル
+
+アプリ内メッセージ s 内のテキストにスパンスタイルを追加すると、メッセージアプリのイヤランスのカスタマイズが強化され、さまざまなテキストカラー、フォント、およびサイズを使用できるようになります。スパンスタイリングを使用すると、主要な情報に注意を払い、全体的なメッセージの明瞭度を向上させることで、ユーザーがより魅力的で視覚的にアプリなイーリングエクスペリエンスを実現できます。
+
+![アプリ内メッセージでテキストを強調表示するときに表示されるオプション。小さなペイントブラシアイコンは、スタイルのスパンでラップできることを示しています。]({% image_buster /assets/img_archive/span_1.png %}){: style="max-width:40%"}
+
+![&quot のサイドパネル;Span Properties&quot。これにより、エンドユーザーはフォントファミリー、フォントウェイト、フォントサイズ、文字間隔、テキストカラーをカスタマイズできます。]({% image_buster /assets/img_archive/span_2.png %}){: style="max-width:40%"}
 
 ### \- 行
 
 行は、セルを使用してメッセージのセクションの水平方向の構成を定義する構造単位です。
 
-![アプリ内メッセージで追加できる行]({% image_buster /assets/img_archive/dnd_iam_rows.png %}){: style="max-width:40%"}
+![アプリ内メッセージに追加できる行。]({% image_buster /assets/img_archive/dnd_iam_rows.png %}){: style="max-width:40%"}
 
 行を選択すると、**Column customization**セクションから必要な列数を追加または削除して、異なるコンテンツ要素を並べて配置できます。 
 
 スライドして、既存の列のサイズを調整することもできます。
 
-![[列をカスタマイズ] セクションでの列の調整。]({% image_buster /assets/img_archive/dnd_iam_column_customization.gif %}){: style="max-width:40%"}
+!["Column customization"セクションから列をAdjustします。]({% image_buster /assets/img_archive/dnd_iam_column_customization.gif %}){: style="max-width:40%"}
 
 ベストプラクティスとして、行および列のプロパティーを書式設定してから、行内のブロックs を書式設定します。間隔や整列を調整できる場所はたくさんありますので、基礎から始めると、行きながら編集しやすくなります。
+
+#### 背景画像
+
+**Row properties** パネルの行にバックグラウンド "画像を追加できます。**背景"画像**を切り替え、"画像 URLを入力するか、[メディアライブラリー]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/)から"画像を選択します。最後に、すべてのテキスト、サイズ、位置、および"画像を繰り返して行全体にパターンを作成するかどうかを設定します。
+
+![水平リピートパターンを持つピザの行バックグラウンド "画像。]({% image_buster /assets/img_archive/background_row.png %})
 
 ### ブロック
 
@@ -68,15 +88,11 @@ page_order: 3
 ブロックを追加するには、[メッセージレベルのスタイル](#set-message-level-styles)を、メッセージコンテナー、フォント、カラー、その他のカスタマイズするものに設定します。その後、必要に応じて個々のブロックをカスタマイズできます。**Close Button** はメッセージの上部に残ります。これにより、ユーザー s は常にメッセージを閉じることができます。
 {% endalert %}
 
-![選択できるドラッグ＆ドロップボックス。]({% image_buster /assets/img_archive/dnd_iam_editor_blocks.png %}){: style="max-width:40%"}
+![選択するボックスをドラッグ&ドロップします。]({% image_buster /assets/img_archive/dnd_iam_editor_blocks.png %}){: style="max-width:40%"}
 
-すべてのブロックには、パディング上の粒状コントロールなどの設定s があります。右側のパネルは、選択したコンテンツ要素のスタイルパネルに自動的に切り替えるします。詳細については、[エディタのブロックプロパティー]({{site.baseurl}}/editor_blocks_dnd_iam/)を参照してください。
+すべてのブロックには、パディング上の粒状コントロールなどの設定s があります。右側のパネルは、選択したコンテンツ要素のスタイルパネルに自動的に切り替えるします。詳細については、[エディタのブロックプロパティー]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/drag_and_drop_editor_blocks/?sdktab=in-app%20messages#inappmessages_properties)を参照してください。
 
 アプリ内メッセージを作成するときに、ツールバーでモバイル、タブレット、またはデスクトップビューを選択して、アプリ内メッセージがユーザーグループにどのように表示されるかをプレビューできます。これにより、コンテンツがレスポンシブになり、随時必要な調整を行うことができます。
-
-#### スパンテキスト
-
-{% multi_lang_include span_text.md %}
 
 ## クリエイティブの詳細
 
@@ -84,7 +100,7 @@ page_order: 3
 
 タブレットまたはデスクトップブラウザでは、フルスクリーンアプリ内メッセージがアプリスクリーンの中央に配置されます。全画面メッセージの最大幅の編集は、タブレットおよびデスクトップデバイスにのみ適用されます。 
 
-![全画面表示のアプリ内メッセージの例。]({% image_buster /assets/img_archive/dnd_iam_fullscreen_example.png %}){: style="border:none"}
+![フルスクリーンアプリ内メッセージの例。]({% image_buster /assets/img_archive/dnd_iam_fullscreen_example.png %}){: style="border:none"}
 
 ### バックグラウンド画像の追加
 
@@ -100,11 +116,11 @@ page_order: 3
 
 ### Liquid の追加
 
-![Liquid パーソナライゼーションを追加するアイコン。]({% image_buster /assets/img_archive/dnd_iam_liquid.png %}){: style="float:right;max-width:25%;margin-left:15px"}
+![リキッドパーソナライゼーションを追加します。]({% image_buster /assets/img_archive/dnd_iam_liquid.png %}){: style="float:right;max-width:25%;margin-left:15px"}
 
 アプリ内メッセージに[Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid) を追加するには、エディタツールバーから<i class="fa-solid fa-circle-plus"></i>**Add Personalization** を選択します。ここで、デフォルト属性、デバイス属性、カスタム属性など、さまざまなパーソナライゼーションのタイプを追加できます。
 
-次に、生成した Liquid スニペットをメッセージに挿入します。アプリ内メッセージを設計および構築した後、** プレビュー & Test** に移動して、メッセージをプレビューします。
+次に、生成した Liquid スニペットをメッセージに挿入します。アプリ内メッセージを設計および構築した後、**プレビュー & Test** に移動して、メッセージをプレビューします。
 
 ### AI コピーライターの使用
 
@@ -114,13 +130,13 @@ page_order: 3
 ブロック内のテキストを強調表示してからアイコンをクリックすると、数回のクリックを保存できます。強調表示されたテキストがツールに追加され、コピーがすぐに生成されます。
 {% endalert %}
 
-![AI コピーライターの GIF。]({% image_buster /assets/img_archive/dnd_iam_ai_copywriter.gif %})
+![AI コピーライターのGIF。]({% image_buster /assets/img_archive/dnd_iam_ai_copywriter.gif %})
 
 ### スタイルをデフォルトにリセットする
 
 デフォルトスタイルから変更したプロパティーには、橙色の点が付きます。特定のプロパティをデフォルトスタイルにリセットするには、フィールドの上にマウスポインタを合わせて [**デフォルトにリセット**] を選択します。
 
-![テキストサイズをデフォルトサイズにリセットするオレンジのドット。]({% image_buster /assets/img_archive/dnd_iam_reset_styles.gif %}){: style="max-width:45%"}
+![文字の大きさをデフォルトの大きさにリセットする橙色の点。]({% image_buster /assets/img_archive/dnd_iam_reset_styles.gif %}){: style="max-width:45%"}
 
 また、プロパティパネル名の横にある<i class="fas fa-paintbrush" title="スタイルボタン"></i>をコピーまたは貼り付け、**デフォルトスタイルにリセット**を選択して、選択した要素のスタイルをすべてリセットすることもできます。
 

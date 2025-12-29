@@ -1,4 +1,3 @@
-
 <!---DEFAULT RATE LIMIT-->
 
 {% if include.endpoint == "default" %}
@@ -33,11 +32,11 @@ We apply a rate limit of 1,000 requests per minute to this endpoint, as document
 <!---/users/track-->
 
 {% elsif include.endpoint == "users track" %}
-Starting on October 28th, 2024, we apply a base speed limit of 3,000 requests per three seconds to this endpoint for all customers. Each `/users/track` request can contain up to 75 event objects, 75 attribute objects, and 75 purchase objects. Each object (event, attribute, and purchase arrays) can update one user each. In total, this means a maximum of 225 users can be updated in a single call. In addition, a single user profile can be updated by multiple objects.
+Starting on October 28th, 2024, we apply a base speed limit of 3,000 requests per three seconds to this endpoint for all customers. Each `/users/track` request can contain up to 75 event objects, 75 attribute objects, and 75 purchase objects. Each object (event, attribute, and purchase arrays) can update one user each. In total, this means you can update up to 225 users in a single call. In addition, you can update a single user profile with multiple objects.
 
-Different limits apply to customers who have purchased **Monthly Active Users - CY 24-25**. For details on these limits, see [Monthly Active Users - CY 24-25 limits]({{site.baseurl}}/api/endpoints/user_data/post_user_track/#monthly-active-users-cy-24-25).
+Different limits apply to customers who have purchased **Monthly Active Users - CY 24-25**. For details on these limits, see [Monthly Active Users - CY 24-25 limits]({{site.baseurl}}/api/endpoints/user_data/post_user_track/#monthly-active-users-cy-24-25-universal-mau-web-mau-and-mobile-mau).
 
-See our page on [API rate limits]({{site.baseurl}}/api/api_limits/) for details, and reach out to your customer success manager if you need your limit increased.
+See our page on [API rate limits]({{site.baseurl}}/api/api_limits/) for details, and contact your customer success manager if you need your limit increased.
 
 <!---/users/export/ids-->
 
@@ -113,7 +112,7 @@ Braze Transactional Emails are not subject to a rate limit. Depending on your ch
 <!---/sends/id/create-->
 
 {% elsif include.endpoint == "sends id create" %}
-The daily maximum number of custom send identifiers that can be created via this endpoint is 100 for a given workspace. Each `send_id` and `campaign_id` combination that you create will count toward your daily limit. The response headers for any valid request include the current rate limit status, see [API rate limits]({{site.baseurl}}/api/api_limits/) for details.
+You can create up to 100 custom send identifiers per day using this endpoint for a given workspace. Each `send_id` and `campaign_id` combination that you create will count toward your daily limit. The response headers for any valid request include the current rate limit status. See [API rate limits]({{site.baseurl}}/api/api_limits/) for details.
 
 <!---/subscription/status/set-->
 {% elsif include.endpoint == "subscription status set" %}

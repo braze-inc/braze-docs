@@ -1,8 +1,8 @@
 ---
 nav_title: Relatórios
-article_title: Relatórios do cartão de conteúdo
+article_title: Relatórios do Content Card
 page_order: 4
-description: "Este artigo de referência fornece uma visão geral das diferentes métricas de relatório do cartão de conteúdo e das opções de análise de dados fornecidas no dashboard da Braze."
+description: "Este artigo de referência fornece uma visão geral das diferentes métricas de relatório do Content Card e das opções de análise fornecidas no painel do Braze."
 channel:
   - content cards
 tool:
@@ -10,8 +10,8 @@ tool:
   
 ---
 
-# Relatório do cartão de conteúdo
+# Relatório do Content Card
 
-> Este artigo de referência fornece uma visão geral das diferentes métricas de relatório do cartão de conteúdo e das opções de análise de dados fornecidas no dashboard da Braze.
+> Este artigo de referência fornece uma visão geral das diferentes métricas de relatório do Content Card e das opções de análise fornecidas no painel do Braze.
 
-{% multi_lang_include campaign_analytics.md channel="Content Card" %}
+{% multi_lang_include analytics/campaign_analytics.md channel="Content Card" %}

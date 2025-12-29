@@ -11,13 +11,13 @@ layout: scrolly
 > Follow along with the sample code in this tutorial to display Banners using their placement ID. For more general information, see [Banners]({{site.baseurl}}/developer_guide/banners/).
 
 {% sdktabs %}
+{% sdktab web %}
+{% multi_lang_include developer_guide/web/banners/tutorial_displaying_banners.md %}
+{% endsdktab %}
 {% sdktab android %}
 {% multi_lang_include developer_guide/android/banners/tutorial_displaying_banners.md %}
 {% endsdktab %}
 {% sdktab swift %}
 {% multi_lang_include developer_guide/swift/banners/tutorial_displaying_banners.md %}
-{% endsdktab %}
-{% sdktab web %}
-{% multi_lang_include developer_guide/web/banners/tutorial_displaying_banners.md %}
 {% endsdktab %}
 {% endsdktabs %}

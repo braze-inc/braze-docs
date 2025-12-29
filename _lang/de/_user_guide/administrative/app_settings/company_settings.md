@@ -31,4 +31,3 @@ Alle Änderungen, die Sie im Bereich **Admin-Einstellungen** vornehmen, gelten f
 
 <br>
 
-[1]: {{site.baseurl}}/user_guide/administrative/

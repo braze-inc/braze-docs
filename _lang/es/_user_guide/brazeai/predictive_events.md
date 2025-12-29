@@ -1,23 +1,23 @@
 ---
-nav_title: Eventos predecibles
-article_title: Eventos predecibles
+nav_title: Eventos de predicción
+article_title: Eventos de predicción
 description: "Este artículo trata de los Eventos predictivos (antes Compras predictivas), una herramienta que ofrece a los especialistas en marketing la posibilidad de identificar y enviar mensajes a los usuarios en función de su probabilidad de realizar un evento."
 page_order: 2.1
 alias: /predictive_purchases/
 search_rank: 1
 ---
 
-# Eventos predecibles
+# Eventos de predicción
 
-> Los Eventos Predictivos proporcionan a los especialistas en marketing una potente herramienta para identificar y enviar mensajes a los usuarios en función de su probabilidad de realizar un evento. Cuando creas una predicción de eventos, Braze entrena un modelo de aprendizaje automático utilizando [árboles de decisión con gradiente reforzado](https://en.wikipedia.org/wiki/Gradient_boosting) para aprender de la actividad previa y predecir la actividad futura.
+> Los Eventos Predictivos proporcionan a los especialistas en marketing una potente herramienta para identificar y enviar mensajes a los usuarios en función de su probabilidad de realizar un evento. Cuando creas una predicción de evento, Braze entrena un modelo de aprendizaje automático utilizando [árboles de decisión con gradiente reforzado](https://en.wikipedia.org/wiki/Gradient_boosting) para aprender de la actividad previa y predecir la actividad futura.
 
-## Acerca de los eventos predictivos
+## Acerca de los eventos de predicción
 
 Una vez elaborada la predicción, se asigna a los usuarios una [puntuación de probabilidad]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_events/prediction_analytics/#purchase_score) entre 0 y 100, que denota la probabilidad de que realicen el evento seleccionado. Cuanto mayor sea la puntuación, más probable es que el usuario realice ese evento. Los usuarios también se clasifican por categorías de probabilidad baja, media y alta.
 
 El verdadero valor de los Eventos Predictivos reside en utilizar los resultados de la predicción para crear un segmento o una campaña. Los especialistas en marketing pueden crear campañas específicas directamente en la página de **predicción** para obtener resultados inmediatos que aumenten los ingresos, o guardar un segmento para una futura campaña o Canvas. ¿No sabes a quién dirigirte primero? Lee nuestras [consideraciones estratégicas]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_events/messaging_users/#strategy) para enviar mensajes a los usuarios en función de su puntuación de probabilidad.
 
-![Gráfico titulado "Cómo funcionan los eventos de predicción", que muestra los datos de usuario embudados en el modelo de aprendizaje automático. La etiqueta dice "Entrena con datos históricos, compara el comportamiento de los usuarios que sí realizaron el evento en un periodo determinado con los que no". También muestra los resultados del aprendizaje automático, donde se clasifica a los usuarios de menor a mayor probabilidad de realizar el evento. La etiqueta dice "Predecir la probabilidad de acontecimientos futuros, asignar una puntuación de probabilidad a los usuarios para una orientación precisa y conveniente."]({% image_buster /assets/img/how_predictive_events_works.png %})
+\![Gráfico titulado "Cómo funcionan los eventos de predicción", que muestra cómo se embudan los datos de usuario en el modelo de aprendizaje automático. La etiqueta dice "Entrena con datos históricos, compara el comportamiento de los usuarios que sí realizaron el evento en un periodo determinado con los que no". También muestra los resultados del aprendizaje automático, donde se clasifica a los usuarios de menor a mayor probabilidad de realizar el evento. La etiqueta dice "Predecir la probabilidad de sucesos futuros, asignar una puntuación de probabilidad a los usuarios para una orientación precisa y conveniente."]({% image_buster /assets/img/how_predictive_events_works.png %})
 
 ## Acceso a los eventos de predicción
 

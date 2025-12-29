@@ -93,6 +93,10 @@ If you want to report on Canvas variants or steps, select **Canvases** for rows 
 | Unique Recipients | Available for Campaigns, Canvases, Campaigns and Canvases, Tags. Unavailable with **Channels** drilldown. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
+### Deleted message variants
+
+Statistics for deleted message variants are not displayed when you break down your report by campaigns or Canvases. However, channel-level totals include all statistics regardless of whether the variant was deleted. For example, _Sends_ for email include all email sends, but if you break down those statistics by campaign, the numbers may be lower because sends for deleted message variants are filtered out.
+
 ## Viewing a report
 
 After running your report, you can view your results in table format on the report page. 

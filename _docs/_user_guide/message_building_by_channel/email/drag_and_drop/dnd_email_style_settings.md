@@ -69,7 +69,7 @@ You can add up to 17 fallback fonts. The first fallback font selected will be th
 
 ## Title styling
 
-Here, you can adjust the styles of your email titles by editing the font size, font color, and text alignment. This applies to the main header and secondary header. 
+Here, you can adjust the styles of your email titles by editing the font size, font color, and text alignment. 
 
 ![Title Styling settings for a center-aligned main header and secondary header.]({% image_buster /assets/img_archive/dnd_title_styling.png %})
 
@@ -124,6 +124,8 @@ Using the email template width, you can adjust and set a width for consistency a
 
 ## Content Block width
 
-You can also set the Content Block width in the email drag-and-drop editor. We recommend matching the Content Block width to the email template width.
+This setting will be the pre-configured for all future Content Blocks. Existing Content Blocks won't be updated. You can set all Content Blocks to be set at 100%, adhering to the width where a Content Block is inserted, or define a specific pixel value.
 
-![Content Block width set to 600px.]({% image_buster /assets/img_archive/dnd_content_block_width.png %})
+We recommend matching the Content Block width to the email template width.
+
+![Content Block width set to 600px.]({% image_buster /assets/img_archive/dnd_content_block_width_update.png %})

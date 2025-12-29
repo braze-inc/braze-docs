@@ -256,6 +256,10 @@ You can name the project, dataset, and table as you'd like, but the column names
    phone_number varchar,
 - `PAYLOAD` - This is a JSON string of the fields you want to sync to the user in Braze.
 
+{% alert tip %}
+Braze queries your BigQuery tables in your own project (using the predefined schema) with predicates on `UPDATED_AT`. Partitioning large tables by `UPDATED_AT` with an appropriate granularity (for example, daily granularity) lets BigQuery prune partitions so only relevant data is scanned. This may help improve performance and lower cost. Refer to [BigQuery partitioning documentation](https://docs.cloud.google.com/bigquery/docs/partitioned-tables) for more information.
+{% endalert %}
+
 #### Step 1.2: Create a Service Account and grant permissions 
 
 Create a service account in GCP for Braze to use to connect and read data from your table(s). The service account should have the below permissions: 
@@ -429,7 +433,7 @@ Depending on the configuration of your Microsoft Fabric account, you may need to
 {% tabs %}
 {% tab Snowflake %}
 
-In the Braze Dashbord, go to **Data Settings** > **Cloud Data Ingestion**, select **Create New Data Sync**, and then select **Snowflake Import**.
+In the Braze Dashboard, go to **Data Settings** > **Cloud Data Ingestion**, select **Create New Data Sync**, and then select **Snowflake Import**.
 
 #### Step 2.1: Add Snowflake connection information and source table
 
@@ -464,7 +468,7 @@ ALTER USER BRAZE_INGESTION_USER SET rsa_public_key='Braze12345...';
 {% endtab %}
 {% tab Redshift %}
 
-In the Braze Dashbord, go to **Data Settings** > **Cloud Data Ingestion**, select **Create New Data Sync**, and then select **Amazon Redshift Import**.
+In the Braze Dashboard, go to **Data Settings** > **Cloud Data Ingestion**, select **Create New Data Sync**, and then select **Amazon Redshift Import**.
 
 #### Step 2.1: Add Redshift connection information and source table
 
@@ -489,7 +493,7 @@ You will also choose the data type and sync frequency. Frequency can be anywhere
 {% endtab %}
 {% tab BigQuery %}
 
-In the Braze Dashbord, go to **Data Settings** > **Cloud Data Ingestion**, select **Create New Data Sync**, and then select **Google BigQuery Import**.
+In the Braze Dashboard, go to **Data Settings** > **Cloud Data Ingestion**, select **Create New Data Sync**, and then select **Google BigQuery Import**.
 
 #### Step 2.1: Add BigQuery connection information and source table
 
@@ -515,7 +519,7 @@ You will also choose the data type and sync frequency. Frequency can be anywhere
 {% endtab %}
 {% tab Databricks %}
 
-In the Braze Dashbord, go to **Data Settings** > **Cloud Data Ingestion**, select **Create New Data Sync**, and then select **Databricks Import**.
+In the Braze Dashboard, go to **Data Settings** > **Cloud Data Ingestion**, select **Create New Data Sync**, and then select **Databricks Import**.
 
 #### Step 2.1: Add Databricks connection information and source table
 
@@ -543,7 +547,7 @@ You will also choose the data type and sync frequency. Frequency can be anywhere
 
 #### Step 2.1: Set up a Cloud Data Ingestion sync
 
-You will create a new data sync for Microsoft Fabric. In the Braze dashbord, go to **Data Settings** > **Cloud Data Ingestion**, select **Create New Data Sync**, and then select **Microsoft Fabric Import**.
+You will create a new data sync for Microsoft Fabric. In the Braze dashboard, go to **Data Settings** > **Cloud Data Ingestion**, select **Create New Data Sync**, and then select **Microsoft Fabric Import**.
 
 #### Step 2.2: Add Microsoft Fabric connection information and source table
 

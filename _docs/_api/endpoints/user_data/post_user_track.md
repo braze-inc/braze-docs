@@ -10,14 +10,14 @@ description: "This article outlines details about the Track user Braze endpoint.
 ---
 {% api %}
 # Track users
-{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /users/track
 {% endapimethod %}
 
 > Use this endpoint to record custom events and purchases and update user profile attributes.
 
 {% alert note %}
-Braze processes the data passed through API at face value, and customers should only pass deltas (changing data) to minimize unnecessary data point logging. To read more, refer to [Data points]({{site.baseurl}}/user_guide/data/data_points/). 
+Braze processes the data passed through the API at face value, and customers should only pass deltas (changing data) to minimize unnecessary data point logging. To read more, refer to [Data points]({{site.baseurl}}/user_guide/data/data_points/).
 {% endalert %}
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4cf57ea9-9b37-4e99-a02e-4373c9a4ee59 {% endapiref %}
@@ -50,7 +50,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 ### Request parameters
 
 {% alert important %}
-For each request component listed in the following table, one of `external_id`, `user_alias`, `braze_id`, `email`, or `phone` is required.
+For each request component listed in the following table, you must include one of `external_id`, `user_alias`, `braze_id`, `email`, or `phone`.
 {% endalert %}
 
 | Parameter | Required | Data Type | Description |
@@ -64,7 +64,7 @@ For each request component listed in the following table, one of `external_id`, 
 
 ### Update a user profile by email address
 
-You can update a user profile by email address using the `/users/track` endpoint. 
+You can update a user profile by email address using the `/users/track` endpoint.
 
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
@@ -140,7 +140,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 You can update a user profile by phone number using the `/users/track` endpoint. This endpoint only works if you include a valid phone number.
 
 {% alert important %}
-If you include a request with both `email` and `phone`, Braze will use the email as the identifier.
+If you include a request with both `email` and `phone`, Braze uses the email as the identifier.
 {% endalert %}
 
 ```
@@ -164,7 +164,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 ```
 ### Set subscription groups
 
-This example shows how to create a user and set their subscription group within the user attributes object. 
+This example shows how to create a user and set their subscription group within the user attributes object.
 
 Updating the subscription status with this endpoint will update the user specified by their `external_id` (such as User1) and update the subscription status of any users with the same email as that user (User1).
 
@@ -198,7 +198,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 
 ### Example request to create an alias-only user
 
-You can use the `/users/track` endpoint to create a new alias-only user by setting the `_update_existing_only` key with a value of `false` in the body of the request. If this value is omitted, the alias-only user profile will not be created. Using an alias-only user guarantees that one profile with that alias will exist. This is especially helpful when building a new integration as it prevents the creation of duplicate user profiles.
+You can use the `/users/track` endpoint to create a new alias-only user by setting the `_update_existing_only` key with a value of `false` in the body of the request. If you omit this value, Braze does not create the alias-only user profile. Using an alias-only user guarantees that one profile with that alias will exist. This is especially helpful when building a new integration as it prevents Braze from creating duplicate user profiles.
 
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
@@ -226,14 +226,14 @@ When using any of the aforementioned API requests, you should receive one of the
 
 ### Successful message
 
-Successful messages will be met with the following response:
+Successful messages are met with the following response:
 
 ```json
 {
   "message": "success",
-  "attributes_processed": (optional, integer), if attributes are included in the request, this will return an integer of the number of external_ids with attributes that were queued to be processed,
-  "events_processed": (optional, integer), if events are included in the request, this will return an integer of the number of events that were queued to be processed,
-  "purchases_processed": (optional, integer), if purchases are included in the request, this will return an integer of the number of purchases that were queued to be processed,
+  "attributes_processed": (optional, integer), if attributes are included in the request, this returns an integer of the number of external_ids with attributes that Braze queued for processing,
+  "events_processed": (optional, integer), if events are included in the request, this returns an integer of the number of events that Braze queued for processing,
+  "purchases_processed": (optional, integer), if purchases are included in the request, this returns an integer of the number of purchases that Braze queued for processing,
 }
 ```
 
@@ -252,7 +252,7 @@ If your message is successful but has non-fatal errors, such as one invalid even
 }
 ```
 
-For success messages, any data not affected by an error in the `errors` array will still be processed. 
+For success messages, Braze still processes any data not affected by an error in the `errors` array.
 
 ### Message with fatal errors
 
@@ -271,24 +271,24 @@ If your message has a fatal error, you will receive the following response:
 
 ### Fatal error response codes
 
-For status codes and associated error messages that will be returned if your request encounters a fatal error, reference [Fatal errors & responses]({{site.baseurl}}/api/errors/#fatal-errors).
+For status codes and associated error messages that Braze returns if your request encounters a fatal error, reference [Fatal errors & responses]({{site.baseurl}}/api/errors/#fatal-errors).
 
-If you receive the error "provided external_id is blacklisted and disallowed", your request may have included a "dummy user." For more information, refer to [Spam blocking]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_archival/#spam-blocking). 
+If you receive the error "provided external_id is blacklisted and disallowed", your request may have included a "dummy user." For more information, refer to [Spam blocking]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_archival/#spam-blocking).
 
 ## Frequently asked questions
 
 {% multi_lang_include alerts/important_alerts.md alert='Email via SMS' %}
 
 ### What happens when multiple profiles with the same email address are found?
-If the `external_id` exists, the most recently updated profile with an external ID will be prioritized for updates. If the `external_id` doesn't exist, the most recently updated profile will be prioritized for updates.
+If the `external_id` exists, Braze prioritizes the most recently updated profile with an external ID for updates. If the `external_id` doesn't exist, Braze prioritizes the most recently updated profile for updates.
 
 ### What happens if no profile with the email address currently exists?
-A new profile will be created, and an email-only user will be created. An alias will not be created. The email field will be set to test@braze.com, as noted in the example request for updating a user profile by email address.
+Braze creates a new profile and an email-only user, and sets the email field to test@braze.com, as noted in the example request for updating a user profile by email address. Braze does not create an alias.
 
 ### How do you use `/users/track` to import legacy user data?
-You may submit data through the Braze API for a user who has not yet used your mobile app to generate a user profile. If the user subsequently uses the application all information following their identification using the SDK will be merged with the existing user profile you created using the API call. Any user behavior recorded anonymously by the SDK before identification will be lost upon merging with the existing API-generated user profile.
+You may submit data through the Braze API for a user who has not yet used your mobile app to generate a user profile. If the user subsequently uses the application, all information following their identification using the SDK is merged with the existing user profile you created using the API call. Any user behavior recorded anonymously by the SDK before identification is lost upon merging with the existing API-generated user profile.
 
-The segmentation tool will include these users regardless of whether they have engaged with the app. If you want to exclude users uploaded using the User API who have not yet engaged with the app, add the `Session Count > 0` filter.
+The segmentation tool includes these users regardless of whether they have engaged with the app. If you want to exclude users uploaded using the User API who have not yet engaged with the app, add the `Session Count > 0` filter.
 
 ### How does `/users/track` handle duplicate events?
 
@@ -296,16 +296,30 @@ Each event object in the events array represents a single occurrence of a custom
 
 ### How does `/users/track` handle invalid nested custom attributes?
 
-When a nested custom attribute contains any invalid values (such as invalid time formats or null values), all nested custom attribute updates in the request will be dropped from processing. This applies to all nested structures within that specific attribute. To ensure successful processing, verify that all values within nested custom attributes are valid before sending.
+When a nested custom attribute contains any invalid values (such as invalid time formats or null values), Braze drops all nested custom attribute updates in the request from processing. This applies to all nested structures within that specific attribute. To ensure successful processing, verify that all values within nested custom attributes are valid before sending.
 
-## Monthly Active Users CY 24-25
-For customers who have purchased Monthly Active Users - CY 24-25, Braze manages different rate limits on its `/users/track` endpoint:
+## Monthly Active Users CY 24-25, Universal MAU, Web MAU, and Mobile MAU
+
+For customers on new pricing, rate limits are enforced at the company level. Customers can set workspace rate limits for hourly limits, but burst limits are still shared between all workspaces.
+
+For customers who have purchased Monthly Active Users CY 24-25, Universal MAU, Web MAU, or Mobile MAU, Braze manages different rate limits on its `/users/track` endpoint:
 - Hourly rate limits are set according to the expected data ingestion activity on your account, which may correspond to the number of monthly active users you have purchased, industry, seasonality, or other factors.
 - In addition to the hourly limit, Braze enforces a burst limit on the number of requests that can be sent every three seconds.
-- Each request may batch up to 50 updates combined across attribute, event, or purchase objects.
+- Each request may batch up to 75 updates combined across attribute, event, or purchase objects.
 
-Current limits based on expected ingestion can be found in the dashboard under **Settings** > **APIs and Identifiers** > **API Usage Dashboard**. We may modify rate limits to protect system stability or allow for increased data throughput on your account. Please contact Braze Support or your customer success manager for questions or concerns regarding hourly or per-second request limit and the needs of your business.
+Current limits based on expected ingestion can be found in the dashboard under **Settings** > **APIs and Identifiers** > **API Usage Dashboard**. We may modify rate limits to protect system stability or allow for increased data throughput on your account. Please contact Braze Support or your customer success manager for questions or concerns regarding the hourly or per-second request limit and the needs of your business.
 
+### Rate limit headers for Monthly Active Users CY 24-25, Universal MAU, Web MAU, and Mobile MAU
 
+All non-rate-limited (such as non-`429`) responses will contain the following HTTP response headers that indicate the state of the hourly rate limit window to the client. We recommend using these headers to manage your request rate:
+
+| Header name             | Description                                                                                 |
+| ----------------------- | ------------------------------------------------------------------------------------------- |
+| `X-RateLimit-Limit`     | The number of requests allowed per time period                                              |
+| `X-RateLimit-Remaining` | The approximate number of requests remaining within a window                                |
+| `X-RateLimit-Reset`     | The number of seconds remaining before the current window resets                                    |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+Note that the `RateLimit-Limit`, `RateLimit-Remaining`, and `RateLimit-Reset` headers are not returned when you hit an HTTP `429` error. When the error occurs, those headers are replaced with an `X-Ratelimit-Retry-After` header that returns an integer indicating the number of seconds before you can start making requests.
 
 {% endapi %}

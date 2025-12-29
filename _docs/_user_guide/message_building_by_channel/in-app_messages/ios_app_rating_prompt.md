@@ -1,6 +1,6 @@
 ---
-nav_title: In-App rating prompt for iOS
-article_title: In-App Rating Prompt for iOS
+nav_title: In-app rating prompt for iOS
+article_title: In-app rating prompt for iOS
 page_order: 6
 description: "This article describes approaches and implications for using Braze to ask users to review your app."
 channel:
@@ -14,7 +14,7 @@ channel:
 
 Apple offers a native prompt, introduced with iOS 10.3, that lets users rate apps from within the app itself. If you want to request app ratings from users using an in-app message on iOS, you must use the native prompt, as Apple disallows custom review prompts (see [App Store Review Guidelines](https://developer.apple.com/app-store/review/guidelines/#code-of-conduct), section 5.6.1).
 
-Per Apple guidelines, app review prompts can be displayed to a user up to three times a year, so any app review campaigns should take advantage of [rate limiting]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/). Users can also opt-out of seeing app review prompts entirely in their app settings. For more on App Store ratings, refer to Apple's article on [Ratings, Reviews, and Responses](https://developer.apple.com/app-store/ratings-and-reviews/).
+Per Apple guidelines, app review prompts can be displayed to a user up to three times a year, so any app review campaigns should take advantage of [rate limiting]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/). Users can also opt out of seeing app review prompts entirely in their app settings. For more on App Store ratings, refer to Apple's article on [Ratings, Reviews, and Responses](https://developer.apple.com/app-store/ratings-and-reviews/).
 
 ## Using Braze to ask users for app reviews
 

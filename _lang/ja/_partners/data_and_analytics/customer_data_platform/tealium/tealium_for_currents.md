@@ -38,7 +38,7 @@ Braze で **[Currents] > [+ Currents を作成] > [Tealium のエクスポート
 Tealium に送信されるすべてのイベントには、ユーザーの `external_user_id` が含まれます。現時点では、Brazeは、`external_user_id` を設定していないユーザーのイベントデータをTealiumに送信しない。
 
 {% alert important %}
-Tealium URL を最新の状態に保つことが重要です。コネクタのURLが正しくない場合、Brazeはイベントを送信できない。この状態が**48時間**以上続くと、コネクタのイベントは削除され、データは永久に失われる。
+Tealium URL を最新の状態に保つことが重要です。コネクタのURLが正しくない場合、Brazeはイベントを送信できない。これが**5 日** 以上続く場合、コネクタのイベントはドロップされ、データは永続的に失われます。
 {% endalert %}
 
 ## 統合の詳細

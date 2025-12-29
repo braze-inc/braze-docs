@@ -20,9 +20,9 @@ search_rank: 1
 | -------------  | ---- |
 | 標準（デフォルト）属性 | `{{${city}}}`<br> `{{${country}}}`<br> `{{${date_of_birth}}}`<br> `{{${email_address}}}`<br> `{{${first_name}}}`<br> `{{${gender}}}`<br> `{{${language}}}`<br> `{{${last_name}}}`<br> `{{${last_used_app_date}}}`<br> `{{${most_recent_app_version}}}`<br> `{{${most_recent_locale}}}`<br> `{{${most_recent_location}}}`<br> `{{${phone_number}}}`<br> `{{${time_zone}}}`<br> `{{${user_id}}}`<br> `{{${braze_id}}}`<br> `{{${random_bucket_number}}}`<br> `{{subscribed_state.${email_global}}}`<br> `{{subscribed_state.${subscription_group_id}}}` |
 | デバイス属性 | `{{most_recently_used_device.${carrier}}}`<br> `{{most_recently_used_device.${id}}}`<br> `{{most_recently_used_device.${idfa}}}`<br> `{{most_recently_used_device.${model}}}`<br> `{{most_recently_used_device.${os}}}`<br> `{{most_recently_used_device.${platform}}}`<br> `{{most_recently_used_device.${google_ad_id}}}`<br> `{{most_recently_used_device.${roku_ad_id}}}`<br> `{{most_recently_used_device.${foreground_push_enabled}}}`|
-| [メールリストの属性]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions) | `{{${set_user_to_unsubscribed_url}}}`<br>このタグは、以前の `{{${unsubscribe_url}}}` タグを置き換えるものです。古いタグは以前に作成されたEメールでも機能するが、代わりに新しいタグを使用することをお勧めする。<br><br> `{{${set_user_to_subscribed_url}}}`<br> `{{${set_user_to_opted_in_url}}}`|
-| [SMS属性]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#trigger-messages-by-keyword) | `{{sms.${inbound_message_body}}}`<br> `{{sms.${inbound_media_urls}}}` |
-| [WhatsApp 属性]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/user_messages/) | `{{whats_app.${inbound_message_body}}}`<br> `{{whats_app.${inbound_media_urls}}}` |
+| <a href='/docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions'>メールリストの属性</a> | `{{${set_user_to_unsubscribed_url}}}`<br>このタグは、以前の `{{${unsubscribe_url}}}` タグを置き換えるものです。古いタグは以前に作成されたEメールでも機能するが、代わりに新しいタグを使用することをお勧めする。<br><br> `{{${set_user_to_subscribed_url}}}`<br> `{{${set_user_to_opted_in_url}}}`|
+| <a href='/docs/user_guide/message_building_by_channel/sms_mms_rcs/retargeting/#trigger-messages'>SMS属性</a> | `{{sms.${inbound_message_body}}}`<br> `{{sms.${inbound_media_urls}}}` |
+| <a href='/docs/user_guide/message_building_by_channel/whatsapp/message_processing/user_messages/'>WhatsApp 属性</a> | `{{whats_app.${inbound_message_body}}}`<br> `{{whats_app.${inbound_media_urls}}}`<br> `{{whats_app.${inbound_flow_response}}}`<br> `{{whats_app.${inbound_product_id}}}`<br> `{{whats_app.${inbound_catalog_id}}}` |
 | キャンペーン属性 | `{{campaign.${api_id}}}`<br> `{{campaign.${dispatch_id}}}`<br> `{{campaign.${name}}}`<br> `{{campaign.${message_name}}}`<br> `{{campaign.${message_api_id}}}` |
 | キャンバスの属性 | `{{canvas.${name}}}`<br> `{{canvas.${api_id}}}`<br> `{{canvas.${variant_name}}}`<br> `{{canvas.${variant_api_id}}}` |
 | キャンバス・ステップの属性 | `{{campaign.${api_id}}}`<br> `{{campaign.${dispatch_id}}}`<br> `{{campaign.${name}}}`<br> `{{campaign.${message_name}}}`<br> `{{campaign.${message_api_id}}}` |
@@ -31,7 +31,7 @@ search_rank: 1
 | イベントプロパティ <br> (ワークスペースによって異なる)| `{{event_properties.${your_custom_event_property}}}` |
 | キャンバスのコンテキスト変数 | `{{context}}` |
 | カスタム属性 <br> (ワークスペースによって異なる) | `{{custom_attribute.${your_custom_attribute}}}` |
-| [API トリガーのプロパティ]({{site.baseurl}}/api/objects_filters/trigger_properties_object/) |`{{api_trigger_properties}}` |
+| <a href='/docs/api/objects_filters/trigger_properties_object/'>API トリガーのプロパティ</a> |`{{api_trigger_properties}}` |
 | キャンバスエントリのプロパティ | `{{canvas_entry_properties.${property_name}}}` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -96,14 +96,14 @@ User is in list of apps
 
 ## ターゲットデバイス情報
 
-プッシュ通知およびアプリ内メッセージチャネルの場合、メッセージの送信先デバイスの以下の属性でテンプレートを作成できます。つまり、プッシュ通知またはアプリ内メッセージに、メッセージが表示されているデバイスのデバイス属性を含めることができます。これらの属性はコンテンツカードでは機能しないことに注意しよう。 
+プッシュ通知、アプリ内メッセージ、バナーでは、メッセージを送信するデバイスのアトリビューションを以下のようにテンプレート化できる。つまり、プッシュ通知、アプリ内メッセージ、またはバナーは、メッセージが読まれる端末の端末属性を含むことができる。これらの属性はコンテンツカードでは機能しないことに注意しよう。 
 
 |タグ | 説明 |
 |------------------|---|
 | `{{targeted_device.${id}}}` | これはBrazeのデバイス識別子である。iOS の場合、これは Apple のベンダー用識別子 (IDFV) または UUID になります。Android などのプラットフォームでは、ランダムに生成されたUUID です。たとえば、ユーザに5 つのデバイスがある場合、5 つのデバイスすべてに対して送信試行が行われ、それぞれに対応するデバイス識別子が使用されます。ユーザーが最後に使用したデバイスにメッセージを送信するようするように設定されている場合、Braze で識別された最後に使用されたデバイスに対して送信操作が1 回だけ試行されます。 |
 | `{{targeted_device.${carrier}}}` | 利用可能であれば、直近で使用したデバイスの電話サービスキャリア。例えば、「Verizon」や「Orange」などです。 |
 | `{{targeted_device.${idfa}}}` | iOS デバイスの場合、アプリケーションが[ オプションのIDFA コレクション]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/other_sdk_customizations/) で設定されている場合、この値はAdvertising (IDFA) の識別子になります。iOS以外のデバイスの場合、この値はNULLになる。 |
-| `{{targeted_device.${google_ad_id}}}` | Android デバイスの場合、当社オプションの Google Play 広告 ID コレクションでお客様のアプリケーションが設定されていれば、この値は Google Play の広告識別子になります。Android以外のデバイスの場合、この値はNULLになる。 |
+| `{{targeted_device.${google_ad_id}}}` | Androidデバイスの場合、アプリケーションが当社の[オプションのGoogle Play広告IDコレクション]で設定されている場合、この値はGoogle Play広告識別子となる。Android以外のデバイスの場合、この値はNULLになる。 |
 | `{{targeted_device.${roku_ad_id}}}` | Rokuデバイスの場合、この値は、アプリケーションがBrazeで設定される際に収集されるRoku Advertising Identifierとなる。Roku以外のデバイスの場合、この値はNULLになる。 |
 | `{{targeted_device.${model}}}` | もしあれば、デバイスのモデル名。例えば、「iPhone 6S」や「Nexus 6P」、「Firefox」などだ。 |
 | `{{targeted_device.${os}}}` | もしあれば、デバイスのオペレーティングシステム。例えば、「iOS 9.2.1」や「アンドロイド（ロリポップ）」、「ウィンドウズ」などだ。 |
@@ -117,7 +117,7 @@ User is in list of apps
 
 さらに、プッシュ通知では、プッシュトークンが API を介してインポートされた場合など、特定の状況下で Braze がプッシュ通知に添付されたデバイスを判別できないことがあります。その結果、これらのメッセージの値は `null` になります。
 
-![プッシュメッセージで first_name 変数が使用されている場合にデフォルト値「there」を使う例。]({% image_buster /assets/img_archive/personalized_firstname_.png %})
+![プッシュ・メッセージでファーストネーム変数を使うときにデフォルト値「there」を使う例。]({% image_buster /assets/img_archive/personalized_firstname_.png %})
 
 ### デフォルト値の代わりに条件付きロジックを使う
 
@@ -163,7 +163,7 @@ User is in list of apps
 
 メッセージ作成画面で、`assign` タグを使用して変数を作成できます。変数には一意の名前を使用することをお勧めします。サポートされているパーソナライゼーションタグ(`language` など) と同じ名前の変数を作成すると、メッセージングロジックに影響する可能性があります。
 
-変数を作成したら、メッセージング・ロジックやメッセージの中でその変数を参照できる。このタグは、[Connected Content]({% image_buster /assets/img_archive/personalized_firstname_.png %}) 機能から返されたコンテンツを再フォーマットしたいときに便利です。詳しくは、Shopifyの[変数タグに関する](https://docs.shopify.com/themes/liquid/tags/variable-tags)ドキュメントを参照されたい。
+変数を作成したら、メッセージング・ロジックやメッセージの中でその変数を参照できる。このタグは、[Connected Content]({% image_buster /assets/img_archive/personalized_firstname_.png %}) ]機能から返されたコンテンツを再フォーマットしたいときに便利だ。詳しくは、Shopifyの[変数タグに関する](https://docs.shopify.com/themes/liquid/tags/variable-tags)ドキュメントを参照されたい。
 
 {% alert tip %}
 すべてのメッセージに同じ変数を割り当てていることに気づいているか？`assign` タグを何度も書き出す代わりに、そのタグをコンテンツブロックとして保存し、メッセージの先頭に置くことができます。

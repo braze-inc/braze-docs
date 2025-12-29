@@ -51,14 +51,18 @@ If the endpoint returns JSON, you can detect that by checking if the `connected`
 
 Connected Content employs an unhealthy host detection mechanism to detect when the target host experiences a high rate of significant slowness or overload, resulting in timeouts, too many requests, or other outcomes that prevent Braze from successfully communicating with the target endpoint. It acts as a safeguard to reduce unnecessary load that may be causing the target host to struggle. It also serves to stabilize Braze infrastructure and maintain fast messaging speeds.
 
-If the target host experiences a high rate of significant slowness or overload, Braze temporarily will halt requests to the target host for one minute, instead simulating responses indicating the failure. After one minute, Braze will probe the host's health using a small number of requests before resuming requests at full speed if the host is found to be healthy. If the host is still unhealthy, Braze will wait another minute before trying again.
+If the target host experiences a high rate of significant slowness or overload, Braze will temporarily halt requests to the target host for one minute, instead simulating responses indicating the failure. After one minute, Braze will probe the host's health using a small number of requests before resuming requests at full speed if the host is found to be healthy. If the host is still unhealthy, Braze will wait another minute before trying again.
 
 If requests to the target host are halted by the unhealthy host detector, Braze will continue to render messages and follow your Liquid logic as if it received an error response code. If you want to ensure that these Connected Content requests are retried when they're halted by the unhealthy host detector, use the `:retry` option. For more information on the `:retry` option, see [Connected Content retries]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries).
 
 If you believe the unhealthy host detection may be causing issues, contact [Braze Support]({{site.baseurl}}/support_contact/).
 
+{% alert note %}
+You can allowlist specific URLs to be used for Connected Content. To access this feature, contact your customer success manager.
+{% endalert %}
+
 {% alert tip %}
-Visit [Troubleshooting webhook and Connected Content requests]({{site.baseurl}}/help/help_articles/api/webhook_connected_content_errors#unhealthy-host-detection) to learn more on how to troubleshoot common error codes.
+Visit [Troubleshooting webhook and Connected Content requests]({{site.baseurl}}/help/help_articles/api/webhook_connected_content_errors#unhealthy-host-detection) to learn more about how to troubleshoot common error codes.
 {% endalert %}
 
 ## Allowing for efficient performance
@@ -94,7 +98,7 @@ You can then use this basic authentication credential in your API calls by refer
 
 {% raw %}
 ```
-Hi there, here is some fun trivia for you!: {% connected_content https://yourwebsite.com/random/trivia :auth_credential credential_name %}
+Hi there, here is some fun trivia for you!: {% connected_content https://yourwebsite.com/random/trivia :basic_auth credential_name %}
 ```
 {% endraw %}
 
@@ -139,8 +143,9 @@ The following example illustrates retrieving and saving an access token to a loc
 {% connected_content
      https://your_API_access_token_endpoint_here/
      :method post
+     :auth_credentials access_token_credential_abc
      :headers {
-       "Content-Type": "YOUR-CONTENT-TYPE",
+       "Content-Type": "YOUR-CONTENT-TYPE"
      }
      :cache_max_age 900
      :save token_response
@@ -166,9 +171,18 @@ After the token is saved, it can be dynamically templated into the subsequent Co
 ```
 {% endraw %}
 
+### Editing credentials
+
+You can edit the credential name for authentication types.
+
+- For basic authentication, you can update the username and password. Note that the previously entered password will not be visible.
+- For token authentication, you can update the header key-value pairs and the allowed domain. Note that the previously set header values will not be visible.
+
+![The option to edit credentials.]({% image_buster /assets/img/connected_content/edit_credentials.png %}){: style="max-width:60%"}
+
 ## Connected Content IP allowlisting
 
-When a message using Connected Content is sent from Braze, the Braze servers automatically make network requests to our customers' or third parties' servers to pull back data. With IP allowlisting, you can verify that Connected Content requests are actually coming from Braze, adding an additional layer of security.
+When a message using Connected Content is sent from Braze, the Braze servers automatically make network requests to our customers' or third parties' servers to pull back data. With IP allowlisting, you can verify that Connected Content requests are actually coming from Braze, adding a layer of security.
 
 Braze will send Connected Content requests from the following IP ranges. The listed ranges are automatically and dynamically added to any API keys that have been opted in for allowlisting. 
 
@@ -209,7 +223,14 @@ It’s expected that a Connected Content API call can be made more than once per
 
 Connected Content doesn’t have its own rate limit. Instead, the rate limit is based on the message-sending rate. We recommend setting the messaging rate limit below your intended Connected Content rate limit if there are more Connected Content calls than messages sent.  
 
-### What’s caching behavior?
+### What is caching behavior?
 
 By default, POST requests do not cache. However, you can add the `:cache_max_age` parameter to force the POST call to cache.
+
 Caching can help reduce duplicate Connected Content calls. However, it isn’t guaranteed to always result in a single Connected Content call per user.
+
+### What is the Connected Content HTTP default behavior? 
+
+{% multi_lang_include connected_content.md section='default behavior' %}
+
+{% multi_lang_include connected_content.md section='http post' %}

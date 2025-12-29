@@ -1,16 +1,16 @@
 ---
 nav_title: Accessibility
-article_title: Building Accessible Messages in Braze
+article_title: Build Accessible Messages in Braze
 page_order: 10.1
 page_type: reference
 description: "This reference article explains why accessibility is important to consider in your marketing content, and how you can build accessible messages in Braze."
 ---
 
-# Building accessible messages in Braze
+# Build accessible messages in Braze
 
 > Understand why accessibility is important to consider in your marketing content, and how you can build accessible messages in Braze. For more guidance, check out our [Accessible Messaging Foundations](https://learning.braze.com/accessible-messaging-foundations) course on Braze Learning.
 
-Marketing content that excludes people with disabilities, even unintentionally, can prevent millions of people from interacting with your brand. Accessibility in marketing is about making it easy for everyone to experience your marketing, receive and understand your communication, and have the opportunity to invest in or become a fan of your product, service, or brand. 
+Marketing content that excludes people with disabilities, even unintentionally, can prevent millions of people from interacting with your brand. Accessibility in marketing is about enabling everyone to experience your marketing, understand your communication, and have the opportunity to invest in or become a fan of your product, service, or brand. 
 
 When designing your messaging, take the extra time to consider how you can make your designs accessible to all your customers.
 
@@ -241,7 +241,7 @@ Touch targets are any part of your message that users tap to take action, like b
 When touch targets are too small or too close together, it can be frustrating or impossible for users with mobility or dexterity challenges to interact with your message. Improving this can help reduce errors and create a smoother experience for everyone.
 
 Here’s what to keep in mind:
-- **Make it easy to tap.** Aim for a minimum touch target size of 44 x 44 pixels. This aligns with WCAG 2.2 guidelines for [touch targets](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html) and common mobile usability standards.
+- **Use adequate touch target size.** Aim for a minimum touch target size of 44 x 44 pixels. This aligns with WCAG 2.2 guidelines for [touch targets](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html) and common mobile usability standards.
 - **Give each target breathing room.** If tap targets are too close together—like stacked links or tightly grouped buttons—it can be easy to miss or tap the wrong one. Add spacing or padding between elements to prevent that.
 - **Don’t rely on visuals alone.** Even small icons can be made more usable with extra padding, allowing them to meet minimum size requirements without altering the layout.
 - **Preview on mobile.** Test your message on different screen sizes and make sure interactive elements are easy to use.
@@ -598,7 +598,7 @@ Emails created in the email drag-and-drop editor have presentational elements au
 To help you identify and fix accessibility issues early, Braze offers automated accessibility testing in the following areas:
 
 - [Inbox Vision]({{site.baseurl}}/user_guide/message_building_by_channel/email/inbox_vision/#accessibility-testing) for emails
-- [Accessibility scanner]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/#accessibility-scanner) for messages created using our HTML editor (for example, HTML in-app messages, HTML Content Blocks, [custom email footers]({{site.baseurl}}/user_guide/message_building_by_channel/email/custom_email_footer), [email opt-in pages]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#creating-a-custom-opt-in-page), and [email unsubscribe pages]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#creating-a-custom-unsubscribe-page)).
+- [Accessibility scanner]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/?tab=in-app%20message#accessibility-scanner) for messages created using our HTML editor (for example, HTML in-app messages, HTML Content Blocks, [custom email footers]({{site.baseurl}}/user_guide/message_building_by_channel/email/custom_email_footer), [email opt-in pages]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#creating-a-custom-opt-in-page), and [email unsubscribe pages]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#creating-a-custom-unsubscribe-page)).
 
 These tests check your message against the Web Content Accessibility Guidelines ([WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/)) standard—a set of internationally recognized technical standards for accessible content. Any issues that can be detected automatically are flagged and categorized by severity to help you prioritize.
 

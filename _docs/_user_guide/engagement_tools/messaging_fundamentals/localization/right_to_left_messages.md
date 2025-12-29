@@ -1,12 +1,13 @@
 ---
 nav_title: Right-to-left messages
-article_title: Creating Right-to-Left Messages
+article_title: Create Right-to-Left Messages
 page_order: 1
+alias: /right_to_left_messages/
 page_type: reference
 description: "This page covers best practices for crafting messages in Braze that read from right-to-left."
 ---
 
-# Creating right-to-left messages
+# Create right-to-left messages
 
 > The final appearance of right-to-left messages depends largely on how service providers (such as Apple, Android, and Google) render them. This page covers best practices for crafting right-to-left messages so that your messages display accurately as much as possible.
 

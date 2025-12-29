@@ -6,7 +6,7 @@ description: "この記事では、コネクテッドコンテンツ API 呼び�
 search_rank: 2
 ---
 
-# [![Braze ラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/connected-content){: style="float:right;width:120px;border:0;" class="noimgborder"}コネクテッドコンテンツ API 呼び出しの実行
+# [![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/connected-content){: style="float:right;width:120px;border:0;" class="noimgborder"} コネクテッドコンテンツAPIコールの作成
 
 > コネクテッド・コンテンツを使えば、ユーザーに送るメッセージに、APIでアクセスできるあらゆる情報を直接挿入することができる。Web サーバーから直接、またはパブリックにアクセス可能な API からコンテンツをプルできます。<br><br>このページではコネクテッドコンテンツ API 呼び出しの方法、高度なコネクテッドコンテンツユースケース、エラー処理などについて説明します。
 
@@ -49,13 +49,17 @@ URL が使用できず、404 ページに達すると、Braze はその場所に
 
 ### 不健全ホストの検出
 
-コネクテッドコンテンツは、不健全ホストの検出メカニズムを採用して、タイムアウト、過剰なリクエスト、または Braze がターゲットエンドポイントと正常に通信することを妨げるその他の結果が発生する原因となる、ターゲットホストの著しい速度低下または過負荷の発生を検出します。これは、ターゲットホストに問題を引き起こす可能性のある不必要な負荷を軽減するための保護手段として機能します。また、Brazeインフラを安定させ、高速メッセージング速度を維持する役割も果たしている。
+コネクテッドコンテンツは、不健全ホストの検出メカニズムを採用して、タイムアウト、過剰なリクエスト、または Braze がターゲットエンドポイントと正常に通信することを妨げるその他の結果が発生する原因となる、ターゲットホストの著しい速度低下または過負荷の発生を検出します。これは、ターゲットホストに問題を引き起こす可能性のある不必要な負荷を軽減するための保護手段として機能します。また、Brazeインフラストラクチャを安定化し、高速メッセージング速度を維持するのにも役立ちます。
 
-ターゲットホストが高率に著しい速度低下や過負荷に見舞われた場合、Brazeは一時的にターゲットホストへのリクエストを1分間停止し、代わりに障害を示すレスポンスをシミュレートする。1分後、Brazeは少数のリクエストを使ってホストの健全性を調査し、ホストが健全であることが判明した場合、リクエストをフルスピードで再開する。ホストがまだ不健全である場合、Braze はもう1分待ってから再試行します。
+ターゲットホストが高率に著しい速度低下や過負荷に見舞われた場合、Brazeはターゲットホストへのリクエストを一時的に1分間停止し、代わりに障害を示すレスポンスをシミュレートする。1分後、Brazeは少数のリクエストを使ってホストの健全性を調査し、ホストが健全であることが判明した場合、リクエストをフルスピードで再開する。ホストがまだ不健全である場合、Braze はもう1分待ってから再試行します。
 
 ターゲットホストへのリクエストが不健全ホスト検出器によって停止された場合、Braze はメッセージのレンダリングを続行し、エラー応答コードを受け取ったかのように Liquid ロジックに従います。これらのコネクテッドコンテンツリクエストが不健全なホスト検出器によって停止されたときに再試行されるようにするには、`:retry` オプションを使用します。`:retry` オプションの詳細については、[コネクテッドコンテンツの再試行]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries)を参照してください。
 
 不健全なホスト検出が問題を引き起こしている可能性がある場合は、[Braze サポート]({{site.baseurl}}/support_contact/)にお問い合わせください。
+
+{% alert note %}
+コネクテッドコンテンツに使用する特定のURLを許可することができる。この機能を利用するには、カスタマー・サクセス・マネージャーに連絡すること。
+{% endalert %}
 
 {% alert tip %}
 一般的なエラーコードのトラブルシューティング方法については、[Webhookおよびコネクテッドコンテンツリクエストのトラブルシューティングを]({{site.baseurl}}/help/help_articles/api/webhook_connected_content_errors#unhealthy-host-detection)参照。
@@ -69,7 +73,7 @@ Braze は、各受信者に複数回、同じコネクテッドコンテンツ A
 
 ## 知っておくべきこと
 
-* Braze は API 呼び出しについて課金せず、指定のデータポイント割り当てにはカウントされません。
+* BrazeはAPIコールには課金せず、データポイント使用量にはカウントしない。
 * コネクテッドコンテンツ応答には1 MB の制限があります。
 * コネクテッドコンテンツ呼び出しは、メッセージの送信時に行われます。ただし、アプリ内メッセージは、メッセージが表示されたときにこの呼び出しを行います。
 * コネクテッドコンテンツ呼び出しはリダイレクトに従いません。
@@ -78,13 +82,17 @@ Braze は、各受信者に複数回、同じコネクテッドコンテンツ A
 
 ### 基本認証の使用
 
-URL に基本的な認証が必要な場合、Braze は API 呼び出しで使用するための基本的な認証情報を生成できます。既存の基本的な認証情報を管理したり、[**設定**] > [**コネクテッドコンテンツ**] から新しいものを追加したりできます。
+URLにBasic認証が必要な場合、BrazeはAPIコールで使用するBasic認証情報を保存することができる。**設定**＞**コネクテッドコンテンツで**、既存のベーシック認証情報を管理し、新しい認証情報を追加できる。
 
-![Braze ダッシュボードの「コネクテッドコンテンツ」の設定。]({% image_buster /assets/img_archive/basic_auth_mgmt.png %})
+![ダッシュボードのコネクテッドコンテンツ設定。]({% image_buster /assets/img/connected_content/basic_auth_mgmt.png %})
 
-新しい認証情報を追加するには、[**Add Credential**]を選択する。認証情報に名前を付け、ユーザーの名前とパスワードを入力します。
+新しい認証情報を追加するには、「**Add credential（認証情報の追加**）」 > 「**Basic authentication（基本認証**）」を選択する。 
 
-![名前、ユーザー名、パスワードを入力するオプションがある [新しい認証情報の作成] ウィンドウ。]({% image_buster /assets/img_archive/basic_auth_token.png %}){: style="max-width:30%" }
+!["認証情報の追加 "ドロップダウンには、ベーシック認証またはトークン認証を使用するオプションがある。]({% image_buster /assets/img/connected_content/add_credential_button.png %}){: style="max-width:60%"}
+
+認証情報に名前を付け、ユーザーの名前とパスワードを入力します。
+
+![名前、ユーザ名、パスワードを入力するオプションのある "Create New Credential "ウィンドウが表示される。]({% image_buster /assets/img/connected_content/basic_auth_token.png %}){: style="max-width:60%"}
 
 次に、トークンの名前を参照することで、API 呼び出しでこの基本的な認証情報を使用できます。
 
@@ -100,18 +108,21 @@ Hi there, here is some fun trivia for you!: {% connected_content https://yourweb
 
 ### トークン 認証の使用
 
-Braze コネクテッドコンテンツを使用する場合、特定の API では、ユーザー名とパスワードの代わりにトークンが必要になることがあります。次の呼び出しに含まれているのは、メッセージを参照し、それをメッセージのモデルとして使用するためのコードスニペットです。
+Braze コネクテッドコンテンツを使用する場合、特定の API では、ユーザー名とパスワードの代わりにトークンが必要になることがあります。Brazeは、トークン認証ヘッダー値を保持する認証情報を保存することもできる。
+
+トークン値を保持する認証情報を追加するには、「**Add credential（認証情報の追加**）」 > 「**Token authentication（トークン認証**）」を選択する。次に、APIコールヘッダーと許可ドメインのキーと値のペアを追加する。
+
+![トークン認証の詳細が記載されたトークンの例"token_credential_abc" 。]({% image_buster /assets/img/connected_content/token_auth.png %}){: style="max-width:60%"}
+
+そして、認証情報名を参照することで、APIコールでこの認証情報を使用することができる：
 
 {% raw %}
 ```
 {% assign campaign_name="New Year Sale" %}
 {% connected_content
-     https://your_API_link_here/
+     https://api.endpoint.com/your_path
      :method post
-     :headers {
-       "X-App-Id": "YOUR-APP-ID",
-       "X-App-Token": "YOUR-APP-TOKEN"
-     }
+     :auth_credentials token_credential_abc
      :body campaign={{campaign_name}}&customer={{${user_id}}}&channel=Braze
      :content_type application/json
      :save publication
@@ -132,9 +143,9 @@ Braze コネクテッドコンテンツを使用する場合、特定の API で
 {% connected_content
      https://your_API_access_token_endpoint_here/
      :method post
+     :auth_credentials access_token_credential_abc
      :headers {
-       "Content-Type": "YOUR-CONTENT-TYPE",
-       "Authorization": "Bearer YOUR-APP-TOKEN"
+       "Content-Type": "YOUR-CONTENT-TYPE"
      }
      :cache_max_age 900
      :save token_response
@@ -160,15 +171,36 @@ Braze コネクテッドコンテンツを使用する場合、特定の API で
 ```
 {% endraw %}
 
+### 認証情報を編集する
+
+認証タイプの認証情報を編集することができる。
+
+- ベーシック認証では、ユーザー名とパスワードを更新することができる。以前に入力したパスワードは表示されないことに注意。
+- トークン認証では、ヘッダーのキーと値のペアと許可ドメインを更新することができる。以前に設定したヘッダー値は表示されないことに注意。
+
+![認証情報を編集するオプション。]({% image_buster /assets/img/connected_content/edit_credentials.png %}){: style="max-width:60%"}
+
 ## コネクテッドコンテンツ IP の許可リスト
 
-コネクテッドコンテンツを使用したメッセージが Braze から送信されると、Braze サーバーは、自動的に顧客またはサードパーティのサーバーにネットワークリクエストを行い、データをプルバックします。IP 許可リストを使用すると、コネクテッドコンテンツリクエストが実際に Braze から送信されていることを確認し、セキュリティレイヤーを追加することができます。
+コネクテッドコンテンツを使用したメッセージが Braze から送信されると、Braze サーバーは、自動的に顧客またはサードパーティのサーバーにネットワークリクエストを行い、データをプルバックします。IP allowlistingを使えば、コネクテッドコンテンツのリクエストが実際にBrazeから来ていることを確認でき、セキュリティのレイヤーが増える。
 
 Braze は、次のIP 範囲から接続コンテンツリクエストを送信します。リストされている範囲は自動的に追加され、許可リストにオプトインされているすべての API キーにダイナミックに追加されます。 
 
 Braze には、すべてのサービスに使用される一連の予約済み IP があります。これらの ＩＰ はすべて一度にアクティブになるわけではありません。これは、Braze が別のデータセンターから送信したり、保守を行ったりするために、顧客に影響を与えないように設計されています。Braze は、コネクテッドコンテンツリクエストを作成するときに、以下の IP のいずれか 1 つ、サブセット、またはすべてを使用できます。
 
 {% multi_lang_include data_centers.md datacenters='ips' %}
+
+### `User-Agent` ヘッダー
+
+Brazeは、すべてのコネクテッドコンテンツとWebhookリクエストに、以下のような`User-Agent` ヘッダーを含む：
+
+```text
+Braze Sender 75e404755ae1270441f07eb238f0faf25e44dfdc
+```
+
+{% alert tip %}
+ハッシュ値は定期的に変更されることを覚えておいてほしい。`User-Agent` でトラフィックをフィルターしている場合、`Braze Sender` で始まるすべての値を許可する。
+{% endalert %}
 
 ## トラブルシューティング
 
@@ -194,7 +226,11 @@ Braze には、すべてのサービスに使用される一連の予約済み I
 ### キャッシュ動作とは何か？
 
 デフォルトでは、POSTリクエストはキャッシュしない。ただし `:cache_max_age` パラメータを追加することで、POST 呼び出しを強制的にキャッシュさせることができます。
+
 キャッシュは、コネクテッドコンテンツの重複コールを削減するのに役立ちます。しかし、ユーザーごとにコネクテッド・コンテンツの呼び出しが1回になるとは限らない。
 
+### コネクテッドコンテンツHTTPのデフォルト動作とは？ 
 
-[16]: [success@braze.com](mailto:success@braze.com)
+{% multi_lang_include connected_content.md section='default behavior' %}
+
+{% multi_lang_include connected_content.md section='http post' %}

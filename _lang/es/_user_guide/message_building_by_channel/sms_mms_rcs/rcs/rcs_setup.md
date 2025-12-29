@@ -34,11 +34,11 @@ Para ser elegible para enviar RCS con Braze, tu empresa debe cumplir tres criter
 - Colombia
 3. Debes adquirir un SKU(s) de 0 RCS en tu contrato.
 
-## Paso 2: Registrar un remitente verificado por RCS
+## Paso 2: Registrar un remitente verificado por RCS
 
 Antes de poder enviar mensajes RCS, debes registrar un remitente verificado por RCS. Es la representación de tu marca que los usuarios verán en sus dispositivos móviles, que incluye el nombre de tu marca, el logotipo, una señal de verificación y un eslogan opcional. El remitente verificado por RCS refuerza la confianza del cliente y confirma que tus mensajes proceden de una fuente autenticada. 
 
-![Un ejemplo de remitente verificado por RCS en un mensaje RCS llamado "Cat Failz Cafe".]({% image_buster /assets/img/rcs/rcs_sender.png %}){: style="max-width:60%;"}
+\![Un ejemplo de remitente verificado por RCS en un mensaje RCS llamado "Cat Failz Cafe".]({% image_buster /assets/img/rcs/rcs_sender.png %}){: style="max-width:60%;"}
 
 Cuando hayas añadido las SKU de RCS a tu formulario de pedido, Braze recibirá una notificación y se pondrá en contacto contigo para facilitarte la información de registro del remitente de RCS. Su formato dependerá de los países a los que desees enviar mensajes RCS. 
 
@@ -56,7 +56,7 @@ El plazo para la aprobación del operador varía según el país y también pued
 
 Cuando se apruebe tu remitente verificado por RCS, nuestro equipo de operaciones actualizará tus grupos de suscripción según sea necesario para confirmar que tienen incluido al remitente RCS. 
 
-## Paso 3: Configurar grupos de suscripción
+## Paso 3: Configurar grupos de suscripción
 
 El RCS se suele utilizar de dos formas: 
 - Para mejorar el tráfico SMS existente 

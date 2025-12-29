@@ -79,55 +79,6 @@ Com os botões de ação de notificação, as intenções `BRAZE_PUSH_INTENT_NOT
 Crie seu ouvinte de notificação por push em `Application.onCreate` para garantir que o ouvinte seja disparado depois que um usuário final tocar em uma notificação enquanto o app estiver em um estado finalizado.
 {% endalert %}
 
-## Personalização de fontes
-
-### Etapa 1: Criar uma família de fontes
-
-A seguir, um exemplo de definição de família de fontes personalizada usando o [guia de família de fontes](https://developer.android.com/guide/topics/ui/look-and-feel/fonts-in-xml.html#font-family). Para este exemplo, usamos a [fonte Bungee Shade](https://fonts.google.com/specimen/Bungee+Shade).
-
-```html
-<?xml version="1.0" encoding="utf-8"?>
-<font-family xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:app="http://schemas.android.com/apk/res-auto">
-
-  <!--Note: You must declare both sets of attributes
-      so that your fonts load on devices running Android 8.0 (API level 26) or lower.
-      See https://developer.android.com/guide/topics/ui/look-and-feel/fonts-in-xml.html -->
-
-  <font android:fontStyle="normal"
-        android:fontWeight="400"
-        android:font="@font/bungeeshade"
-
-        app:fontStyle="normal"
-        app:fontWeight="400"
-        app:font="@font/bungeeshade"/>
-</font-family>
-```
-
-Depois de armazenar a definição da família de fontes em `/res/font/bungee_font_family.xml`, podemos fazer referência a ela em XML como `@font/bungee_font_family`.
-
-### Etapa 2: Faça referência à sua família de fontes
-
-Agora que a família de fontes foi criada, você pode substituir os padrões de estilo do Braze em seu site `styles.xml` para incluir referências à família de fontes.
-
-Por exemplo, a seguinte substituição de estilos usaria a família de fontes `bungee` para todas as mensagens no app do Braze.
-
-```html
-<style name="Braze.InAppMessage">
-  <item name="android:fontFamily">@font/bungee_font_family</item>
-  <item name="fontFamily">@font/bungee_font_family</item>
-</style>
-
-<style name="Braze.Cards">
-  <item name="android:fontFamily">@font/another_custom_font_family</item>
-  <item name="fontFamily">@font/another_custom_font_family</item>
-</style>
-```
-
-{% alert warning %}
-Os atributos de estilo `android:fontFamily` e `fontFamily` devem ser definidos para manter a compatibilidade em todas as versões do SDK.
-{% endalert %}
-
 ## Personalização da exibição de notificações {#customization-display}
 
 ### Etapa 1: Crie sua fábrica de notificações personalizada
@@ -224,9 +175,9 @@ setCustomBrazeNotificationFactory(null)
 {% endtab %}
 {% endtabs %}
 
-## Texto do multiplicador de renderização
+## Renderização de texto multicolorido
 
-Na versão 3.1.1 do SDK da Braze, o HTML pode ser enviado a um dispositivo para renderizar o texto multiplicador nas notificações por push.
+Na versão 3.1.1 do SDK do Braze, o HTML pode ser enviado a um dispositivo para renderizar texto multicolorido em notificações por push.
 
 ![Uma mensagem push do Android "Multicolor Push test message" em que as letras são de cores diferentes, em itálico e com uma cor de fundo.]({% image_buster /assets/img/multicolor_android_push.png %}){: style="max-width:40%;"}
 
@@ -387,7 +338,7 @@ Você pode exibir uma imagem maior em sua notificação por push do Android usan
 
 ### Compatibilidade
 
-Embora você possa enviar imagens em linha para qualquer dispositivo, os dispositivos e SDKs que não atenderem às versões mínimas exibirão uma imagem padrão. Para que as imagens em linha sejam exibidas corretamente, são necessários o SDK do Braze para Android v10.0.0+ e um dispositivo com Android M+.
+Embora você possa enviar imagens em linha para qualquer dispositivo, os dispositivos e SDKs que não atenderem às versões mínimas exibirão uma imagem padrão. Para que as imagens em linha sejam exibidas corretamente, são necessários o SDK do Braze para Android v10.0.0+ e um dispositivo com Android M+. O SDK também deve estar ativado para que a imagem seja renderizada.
 
 {% alert note %}
 Os dispositivos que executam o Android 12 serão renderizados de forma diferente devido a alterações nos estilos de notificação por push personalizados.
@@ -419,15 +370,15 @@ O campo **TTL** permite que você defina um tempo personalizado para armazenar m
 
 ### Texto resumido {#summary-text}
 
-O texto de resumo permite que você defina texto adicional na visualização expandida da notificação. Também serve como uma legenda para notificações com imagens.
+O texto de resumo permite que você defina texto adicional na visualização expandida da notificação. Ele também serve como legenda para notificações com imagens.
 
-![Uma mensagem do Android com o título "Saudações do Appboy!", a mensagem "Este é o corpo da mensagem!" Você pode até adicionar emojis." e texto de resumo "Este é o texto de resumo."]({% image_buster /assets/img_archive/summary_text.png %}){: style="max-width:65%;"}
+![Uma mensagem do Android com o título "Este é o título da notificação." e o texto de resumo "Este é o texto de resumo da notificação."]({% image_buster /assets/img/android/push/collapsed-android-notification.png %}){: style="max-width:65%;"}
 
-O texto do resumo será exibido sob o corpo da mensagem na exibição expandida.
+O texto do resumo será exibido sob o corpo da mensagem na exibição expandida. 
+
+![Uma mensagem do Android com o título "Este é o título da notificação." e o texto de resumo "Este é o texto de resumo da notificação."]({% image_buster /assets/img/android/push/expanded-android-notification.png %}){: style="max-width:65%;"}
 
 Para notificações por push que incluem imagens, o texto da mensagem será mostrado na exibição recolhida, enquanto o texto do resumo será exibido como a legenda da imagem quando a notificação for expandida. 
-
-![Uma mensagem do Android com o título "Appboy!", a mensagem "Este é o corpo da mensagem..." e o texto de resumo "E este é o texto de resumo."]({% image_buster /assets/img_archive/messagesummary.gif %}){: style="max-width:65%;"}
 
 ### URIs personalizados {#custom-uri}
 
@@ -470,4 +421,4 @@ Para dispositivos executando versões do Android anteriores ao O, o Braze permit
 
 Digite o URI completo do recurso de som (por exemplo, `android.resource://com.mycompany.myapp/raw/mysound`) no prompt do dashboard.
 
-Para enviar mensagens para toda a sua base de usuários com um som específico, recomendamos que especifique indiretamente o som por meio da [configuração do canal de envio de mensagens](https://developer.android.com/training/notify-user/channels) (para direcionar dispositivos O+) *e* envie o som individual a partir do dashboard (para direcionar dispositivos <O).
+Para enviar mensagens a toda a sua base de usuários com um som específico, recomendamos especificar indiretamente o som por meio da [configuração do canal de envio de mensagens](https://developer.android.com/training/notify-user/channels) (para direcionar dispositivos O+) *e* enviar o som individual a partir do dashboard (para direcionar dispositivos <O).

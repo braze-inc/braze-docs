@@ -34,7 +34,7 @@ The following is an overview of terms you may see in the Braze REST API document
 
 ### Endpoints
 
-Braze manages a number of different instances for our dashboard and REST endpoints. When your account is provisioned you will log in to one of the following URLs. Use the correct REST endpoint based on which instance you are provisioned to. If you are unsure, open a [support ticket]({{site.baseurl}}/braze_support/) or use the following table to match the URL of the dashboard you use to the correct REST Endpoint.
+Braze manages a number of different instances for our dashboard and REST endpoints. When your account is provisioned, you log in to one of the following URLs. Use the correct REST endpoint based on which instance you are provisioned to. If you are unsure, open a [support ticket]({{site.baseurl}}/braze_support/) or use the following table to match the URL of the dashboard you use to the correct REST Endpoint.
 
 {% alert important %}
 When using endpoints for API calls, use the REST endpoint.
@@ -51,17 +51,17 @@ For most APIs, Braze has a default rate limit of 250,000 requests per hour. Howe
 ### User IDs
 
 - **External user ID**: The `external_id` serves as a unique user identifier for whom you are submitting data. This identifier should be the same as the one you set in the Braze SDK in order to avoid creating multiple profiles for the same user.
-- **Braze user ID**: `braze_id` serves as a unique user identifier that is set by Braze. This identifier can be used to delete users through the REST API in addition to external_ids.
+- **Braze user ID**: `braze_id` serves as a unique user identifier that Braze sets. You can use this identifier to delete users through the REST API in addition to external_ids.
 
 For more information, refer to the following articles based on your platform: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/), and [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/).
 
 ## About REST API keys
 
-A REST Application Programming Interface key (REST API key) is a unique code that is passed into an API to authenticate the API call and identify the calling application or user. API access is done using HTTPS web requests to your company's REST API endpoint. We use REST API keys at Braze in tandem with our App Identifier keys to track, access, send, export, and analyze data to help make sure everything is running smoothly on both your and our end.
+A REST Application Programming Interface key (REST API key) is a unique code that you pass into an API to authenticate the API call and identify the calling application or user. You access the API using HTTPS web requests to your company's REST API endpoint. We use REST API keys at Braze in tandem with our App Identifier keys to track, access, send, export, and analyze data to help make sure everything is running smoothly on both your and our end.
 
 Workspaces and API keys go hand in hand at Braze. Workspaces are designed to house versions of the same application across multiple platforms. Many customers also use workspaces to contain free and premium versions of their applications on the same platform. As you may notice, these workspaces are also making use of the REST API and have their own REST API keys. These keys can be individually scoped to include access to specific endpoints on the API. Each call to the API must include a key with access to the endpoint hit.
 
-We refer to both the REST API key and workspace API key as the `api_key`. The `api_key` is included in each request as a request header and acts as an authentication key that allows you to use our REST APIs. These REST APIs are used to track users, send messages, export user data, and more. When you create a new REST API key, you will need to give it access to specific endpoints. By assigning specific permissions to an API key, you can limit exactly which calls an API key can authenticate.
+We refer to both the REST API key and workspace API key as the `api_key`. The `api_key` is included in each request as a request header and acts as an authentication key that allows you to use our REST APIs. These REST APIs are used to track users, send messages, export user data, and more. When you create a new REST API key, you must give it access to specific endpoints. By assigning specific permissions to an API key, you can limit exactly which calls an API key can authenticate.
 
 ![REST API keys panel on the API Keys tab.]({% image_buster /assets/img_archive/rest-api-key.png %})
 
@@ -147,7 +147,7 @@ API key permissions are permissions you can assign a user or group to limit thei
 | `sends.id.create` | [`/sends/id/create`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_create_send_ids/) | Create send ID for message blast tracking. |
 | `campaigns.url_info.details` | [`/campaigns/url_info/details`]({{site.baseurl}}) | Query for URL details of a specific message variation within a campaign. |
 | `transactional.send` | [`/transactional/v1/campaigns/{campaign_id}/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_transactional_message/) | Allows for ability to send transactional messaging using the Transactional messaging endpoint. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% endtab %}
 {% tab Canvas %}
@@ -309,7 +309,7 @@ API key permissions are permissions you can assign a user or group to limit thei
 
 ### Managing REST API keys
 
-You can view details for or delete existing REST API keys from **Settings** > **APIs and Identifiers** > **API Keys** tab. Note that REST API keys cannot be edited after they're created.
+You can view details for or delete existing REST API keys from **Settings** > **APIs and Identifiers** > **API Keys** tab. Note that you cannot edit REST API keys after you create them.
 
 The **API Keys** tab includes the following information for each key:
 
@@ -317,16 +317,16 @@ The **API Keys** tab includes the following information for each key:
 | ------------ | :------------------------------------------------------------------------------------------------------------------ |
 | API Key Name | The name given to the key upon creation.                                                                            |
 | Identifier   | The API key.                                                                                                        |
-| Created By   | The email address of the user who created the key. This field will show as "N/A" for keys created before June 2023. |
+| Created By   | The email address of the user who created the key. This field shows as "N/A" for keys created before June 2023. |
 | Date Created | The date this key was created.                                                                                      |
-| Last Seen    | The date this key was last used. This field will show as "N/A" for keys that have never been used.                  |
+| Last Seen    | The date this key was last used. This field shows as "N/A" for keys that have never been used.                  |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 To view the details of an API key, hover over the key and select <i class="fa-solid fa-eye" alt="View"></i> **View**. This includes all the permissions this key has, whitelisted IPs (if any), and if this key is opted into Braze IP whitelisting.
 
 ![The list of API key permissions in the Braze dashboard.]({% image_buster /assets/img_archive/view-api-key.png %})
 
-Note when [deleting a user]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/adding_users_to_your_dashboard/), the associated API keys a user created won't be deleted. To delete a key, hover over the key and select <i class="fa-solid fa-trash-can" alt="Delete"></i> **Delete**.
+Note when [deleting a user]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/), Braze does not delete the associated API keys that user created. To delete a key, hover over the key and select <i class="fa-solid fa-trash-can" alt="Delete"></i> **Delete**.
 
 ![An API key named 'Last Seen' with the trash icon highlighted, showing 'Delete'.]({% image_buster /assets/img_archive/api-key-options.png %}){: style="max-width:30%;"}
 
@@ -342,7 +342,7 @@ A good security practice is to assign a user only as much access as is necessary
 Given that REST API keys allow access to potentially sensitive REST API endpoints, make sure they are stored and used securely. For example, do not use this key to make AJAX calls from your website or expose it in any other public manner.
 {% endalert %}
 
-If accidental exposure of a key occurs, it can be deleted from the Developer Console. For help with this process, open a [support ticket]({{site.baseurl}}/braze_support/).
+If you accidentally expose a key, you can delete it from the Developer Console. For help with this process, open a [support ticket]({{site.baseurl}}/braze_support/).
 
 ### API IP allowlisting
 
@@ -365,6 +365,6 @@ If you're implementing Braze using Ruby, you can use our [Ruby client library](h
 The Ruby client library supports the [User endpoints]({{site.baseurl}}/api/endpoints/user_data).
 
 {% alert important %}
-This client library is currently in beta. Want to help us make this library better? Send us feedback at [smb-product@braze.com](mailto:smb-product@braze.com).
+This client library is in beta. Want to help us make this library better? Send us feedback at [smb-product@braze.com](mailto:smb-product@braze.com).
 {% endalert %}
 

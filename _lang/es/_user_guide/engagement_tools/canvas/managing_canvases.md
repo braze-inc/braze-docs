@@ -1,13 +1,13 @@
 ---
-nav_title: Gestión de lonas
-article_title: Gestión de lonas
+nav_title: Administrando Lienzos
+article_title: Administrando Lienzos
 page_order: 2
 layout: dev_guide
-guide_top_header: "Gestión de lonas"
-guide_top_text: "Una vez que hayas lanzado tu Canvas, es hora de sentarse y ver cómo llegan los datos. Si necesitas realizar algún cambio o archivar tu Canvas, consulta los siguientes artículos para obtener ayuda."
+guide_top_header: "Administrando Lienzos"
+guide_top_text: "Una vez que hayas lanzado tu Canvas, es hora de sentarse y ver cómo llegan los datos. Si necesitas hacer algún cambio o archivar tu Canvas, consulta los siguientes artículos para obtener ayuda."
 
 page_type: landing
-description: "En esta página encontrará artículos sobre la gestión de su Canvas, como archivar, duplicar o realizar cambios después del lanzamiento."
+description: "En esta página encontrarás artículos sobre la gestión de tu Canvas, como archivar, duplicar o hacer cambios después de su lanzamiento."
 tool: Canvas
 
 guide_featured_title: "Artículos de sección"
@@ -21,7 +21,7 @@ guide_featured_list:
   - name: Historial de versiones de Canvas
     link: /docs/user_guide/engagement_tools/canvas/managing_canvases/canvas_version_history/
     image: /assets/img/braze_icons/list.svg
-  - name: Clonación de Canvas
+  - name: Clonación de lienzos
     link: /docs/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/
     image: /assets/img/braze_icons/copy-04.svg
 

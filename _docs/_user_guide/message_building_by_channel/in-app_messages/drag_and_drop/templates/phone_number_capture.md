@@ -18,7 +18,7 @@ description: "This page covers how to create an SMS, RCS, and WhatsApp sign-up f
 
 ### Step 1: Choose your template
 
-When creating a drag-and-drop in-app message, select **SMS sign-up** (this accomodates for RCS sign-up) or **WhatsApp sign-up** for your template, then select **Build message**. These templates are supported for both mobile apps and web browsers.
+When creating a drag-and-drop in-app message, select **SMS sign-up** (this accommodates for RCS sign-up) or **WhatsApp sign-up** for your template, then select **Build message**. These templates are supported for both mobile apps and web browsers.
 
 ![Modal to select SMS sign-up or WhatsApp sign-up as a template when creating an in-app message.]({% image_buster /assets/img_archive/dnd_iam_phone_capture_template.png %}){: style="max-width:80%"}
 

@@ -1,4 +1,4 @@
-## フルッターコンテンツカードについて
+## Flutter コンテンツカードについて
 
 Braze SDK には、コンテンツカードを使い始めるためのデフォルトのカードフィードが含まれています。カードフィードを表示するには、`braze.launchContentCards()` メソッドを使用できます。Braze SDK に含まれるデフォルトのカードフィードは、ユーザーのコンテンツカードの分析トラッキング、却下、レンダリングをすべて処理します。
 
@@ -42,24 +42,17 @@ contentCardsStreamSubscription.cancel();
 
 ### ステップ2:ネイティブレイヤーからコンテンツカードデータを転送する
 
-ステップ 1 の Dart レイヤーでデータを受信するには、次のコードを追加して、ネイティブレイヤーからコンテンツカードデータを転送します。
+{% alert note %}
+このステップはiOS専用です。コンテンツカードデータは Android レイヤーから自動的に転送されます。
+{% endalert %}
 
-{% tabs %}
-{% tab Android %}
-
-コンテンツカードデータは Android レイヤーから自動的に転送されます。
-
-{% endtab %}
-{% tab iOS %}
+ステップ 1 からDart レイヤーのデータを受信するには、次のコードを追加して、ネイティブiOS レイヤーからコンテンツカードデータを転送します。
 
 1. [subscribeToUpdates](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcards-swift.class/subscribetoupdates(_:)) のドキュメントの説明に従って、コンテンツカードの最新情報を購読登録するように `contentCards.subscribeToUpdates` を実装します。
 
 2. `contentCards.subscribeToUpdates` コールバックの実装では `BrazePlugin.processContentCards(contentCards)` を呼び出す必要があります。
 
 例としては [AppDelegate.swift](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/ios/Runner/AppDelegate.swift)を参照のこと。
-
-{% endtab %}
-{% endtabs %}
 
 #### コンテンツカードのコールバックを再生する
 

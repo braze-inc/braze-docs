@@ -1,5 +1,5 @@
 ---
-nav_title: IPとドメインを設定する
+nav_title: IPとドメインの設定
 article_title: IPとドメインを設定する
 page_order: 0
 page_type: tutorial
@@ -31,6 +31,8 @@ description: "この記事では、Braze 経由でメールを送信するため
 ### ステップ 3:DNSレコードを追加する
 
 IP、ドメイン、サブドメイン、IPプールの設定が完了したら、DNSレコードのリストをお送りする。エンジニアや開発者に、必要な場所にこれらのDNSレコードを追加するよう依頼し、追加後、Braze Onboardingチームに知らせる。
+
+{% multi_lang_include dns_records.md %}
 
 ### 次のステップ
 

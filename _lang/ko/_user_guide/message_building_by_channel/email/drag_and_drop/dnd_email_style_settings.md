@@ -1,6 +1,6 @@
 ---
-nav_title: 이메일 전역 스타일 설정
-article_title: 이메일 전역 스타일 설정
+nav_title: 이메일 글로벌 스타일 설정
+article_title: 이메일 글로벌 스타일 설정
 alias: "/dnd/global_style_settings/"
 channel: email
 page_order: 3
@@ -12,11 +12,11 @@ tool:
 
 # 이메일 글로벌 스타일 설정
 
-> 글로벌 스타일 설정을 통해 이메일 캠페인과 캔버스의 모양을 개인화할 수 있습니다. 드래그 앤 드롭 편집기의 기본 테마를 추가하고 사용자 지정할 수 있습니다. 여기에는 이메일 제목, 텍스트, 버튼 등에 대한 스타일 편집이 포함됩니다. 이러한 설정을 조합하여 사용하면 이메일 메시징 전반에 걸쳐 일관된 디자인을 만들 수 있습니다.
+> 글로벌 스타일 설정을 사용하면 이메일 캠페인과 캔버스의 모양을 개인화할 수 있습니다. 드래그 앤 드롭 편집기의 기본값 테마를 추가하고 커스텀할 수 있습니다. 여기에는 이메일 제목, 텍스트, 버튼 등에 대한 스타일 편집이 포함됩니다. 이러한 설정을 조합하여 사용하면 이메일 메시징 전반에 걸쳐 일관된 디자인을 만들 수 있습니다.
 
-전역 스타일 설정을 편집하려면 **설정** > **이메일 환경설정** > **이메일 환경설정 끌어서 놓기로** 이동하세요. After editing the styles in the drag-and-drop email editor, select **Save**. To further customize your email campaigns and Canvases, check out how you can incorporate [drag-and-drop editor blocks]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_editor_blocks).
+전역 스타일 설정을 편집하려면 **설정** > **이메일 환경설정** > **이메일 환경설정 드래그 앤 드롭으로** 이동하세요. 드래그 앤 드롭 이메일 편집기에서 스타일을 편집한 후 **저장을** 선택합니다. 이메일 캠페인과 캔버스를 더욱 커스텀하려면 [드래그 앤 드롭 편집기 블록을]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_editor_blocks) 통합하는 방법을 확인하세요.
 
-![Email Global Style Settings section in the Drag-And-Drop Email Editor Settings tab.]({% image_buster /assets/img_archive/dnd_global_style_settings.png %})
+드래그 앤 드롭 이메일 편집기 설정 탭의 이메일 글로벌 스타일 설정 섹션을 클릭합니다.]({% image_buster /assets/img_archive/dnd_global_style_settings.png %})
 
 {% alert note %}
 글로벌 스타일 설정에 대한 업데이트는 향후 모든 이메일 캠페인과 캔버스에 적용됩니다.
@@ -24,71 +24,71 @@ tool:
 
 ## 기본 스타일링 
 
-**기본 스타일링**의 경우 이메일 캠페인 및 캔버스에 대한 기본 이메일 및 콘텐츠 배경색을 설정할 수 있습니다. 기본 글꼴을 선택하고, 사용자 지정 글꼴을 추가하고, 링크 색상을 편집할 수도 있습니다.
+**기본 스타일링의** 경우 이메일 캠페인과 캔버스에 대한 기본값 이메일 및 콘텐츠 배경색을 설정할 수 있습니다. 기본값 글꼴을 선택하고, 커스텀 글꼴을 추가하고, 링크 색상을 편집할 수도 있습니다.
 
-![Basic styling options that include options to edit the email and content background colors, default font name, and default link color.]({% image_buster /assets/img_archive/dnd_basic_styling.png %}) 
+이메일 및 콘텐츠 배경색, 기본값 글꼴 이름, 기본 링크 색상을 편집할 수 있는 옵션이 포함된 기본 스타일링 옵션입니다.]({% image_buster /assets/img_archive/dnd_basic_styling.png %}) 
 
-## 사용자 지정 글꼴
+## 커스텀 글꼴
 
-사용자 지정 글꼴을 사용하면 다양한 이메일 플랫폼에서 일관성 있는 브랜딩을 위해 웹 글꼴을 수동으로 추가할 수 있습니다. You can add one custom font for each styling section.
+커스텀 글꼴을 사용하면 다양한 이메일 플랫폼에서 일관된 브랜딩을 위해 웹 글꼴을 수동으로 추가할 수 있습니다. 각 스타일링 섹션에 커스텀 글꼴을 하나씩 추가할 수 있습니다.
 
-### Requirements
+### 요구 사항
 
-사용자 정의 글꼴을 추가하기 전에 사용자 정의 글꼴 파일이 다음 요구 사항을 충족하는지 확인하세요:
+커스텀 글꼴을 추가하기 전에 커스텀 글꼴 파일이 다음 요구 사항을 충족하는지 확인하세요:
 
-- 사용자 정의 글꼴 파일을 제공하는 서버에서 CORS가 활성화되어 있어야 합니다. 이는 일반적으로 IT 팀에서 관리합니다. 
-  - 사용자 정의 글꼴 파일에는 헤더가 있어야 합니다: `Access-Control-Allow-Origin: *`
-- The file URL must point to a CSS file (not WOFF or OTF).
-- The custom font name must match the name of the font face in the CSS file.
+- 커스텀 글꼴 파일을 제공하는 서버에서 CORS를 인에이블먼트해야 합니다. 이는 일반적으로 IT 팀에서 관리합니다. 
+  - 커스텀 글꼴 파일에는 헤더가 있어야 합니다: `Access-Control-Allow-Origin: *`
+- 파일 URL은 WOFF 또는 OTF가 아닌 CSS 파일을 가리켜야 합니다.
+- 커스텀 글꼴 이름은 CSS 파일에 있는 글꼴 서체의 이름과 일치해야 합니다.
 
-Note that the custom font provider may collect personal data from your recipients. 사용하기 전에 글꼴 제공업체의 정책을 검토해야 합니다.
+커스텀 글꼴 제공업체는 수신자로부터 개인 데이터를 수집할 수 있다는 점에 유의하세요. 사용하기 전에 글꼴 제공업체의 정책을 검토해야 합니다.
 
-### Adding a custom font
+### 커스텀 글꼴 추가하기
 
-To add a custom font, do the following:
+커스텀 글꼴을 추가하려면 다음과 같이 하세요:
 
-1. In the **Default Font Name** section of **Basic Styling**, select **Add a custom font**.
-2. **글꼴 이름** 필드에 사용자 정의 글꼴 소스 파일에 표시되는 것과 동일한 글꼴 이름을 입력합니다. Make sure this name is capitalized and spaced correctly.
+1. **기본 스타일링의** **기본 글꼴 이름** 섹션에서 **커스텀 글꼴 추가를** 선택합니다.
+2. **글꼴 이름** 필드에 커스텀 글꼴 소스 파일에 표시된 것과 동일한 글꼴 이름을 입력합니다. 이 이름이 대문자로 되어 있고 띄어쓰기가 올바른지 확인하세요.
 3. **글꼴 URL** 필드에 해당 URL을 입력합니다.
-4. Check that the preview shows your custom font.
-5. Select **Save** to use the custom font as your default email font. 
+4. 미리 보기에 커스텀 글꼴이 표시되는지 확인합니다.
+5. **저장을** 선택하여 커스텀 글꼴을 기본값 이메일 글꼴로 사용합니다. 
 
 {% alert important %}
-Gmail은 커스텀 글꼴을 지원하지 않으므로 커스텀 글꼴이 기본 시스템 글꼴로 표시될 수 있습니다. 다른 이메일 플랫폼의 경우 이메일 메시지를 보내기 전에 커스텀 글꼴이 올바르게 표시되는지 확인하세요.
+Gmail은 커스텀 글꼴을 지원하지 않으므로 커스텀 글꼴이 기본값인 시스템 글꼴로 표시될 수 있습니다. 다른 이메일 플랫폼의 경우 이메일 메시지를 보내기 전에 커스텀 글꼴이 올바르게 표시되는지 확인하세요.
 {% endalert %}
 
-To use other custom fonts in your email campaigns, you can create an [email template]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/email_template/) or [Content Blocks]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_content_blocks/) that includes the custom font. For example, you can create a specific email template designed with festive custom fonts tailored to your sale theme. 선택한 글꼴이 여전히 웹에서 안전하며 이메일 플랫폼에서 지원되는지 확인하세요.
+이메일 캠페인에서 다른 커스텀 글꼴을 사용하려면 커스텀 글꼴이 포함된 [이메일 템플릿]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/email_template/) 또는 [콘텐츠 블록을]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_content_blocks/) 만들면 됩니다. 예를 들어, 판매 테마에 맞는 축제 커스텀 글꼴로 디자인된 특정 이메일 템플릿을 만들 수 있습니다. 선택한 글꼴이 여전히 웹에서 안전하며 이메일 플랫폼에서 지원되는지 확인하세요.
 
 ### 대체 글꼴
 
-기본 글꼴이 받은 편지함 공급자나 운영 체제에서 지원되지 않는 경우 제목, 머리글, 본문 텍스트에 대체 글꼴이 사용됩니다. 기본적으로 Braze는 글로벌 스타일 설정이 저장될 때 Arial을 대체 글꼴로 자동 설정합니다. 또한 기본 글꼴 모음에 세리프 또는 산세리프를 옵션으로 추가하는 옵션도 있습니다.
+기본값으로 선택한 글꼴이 받은편지함 제공업체나 운영 체제에서 지원되지 않는 경우 제목, 머리글, 본문 텍스트에 대체 글꼴이 사용됩니다. 기본적으로 Braze는 글로벌 스타일 설정이 저장될 때 Arial을 대체 글꼴로 자동 설정합니다. 또한 기본값 글꼴 모음에 세리프 또는 산세리프를 옵션으로 추가하는 옵션도 있습니다.
 
-![An example of "Arial" as a fallback font with "Sans-serif" as the font family.]({% image_buster /assets/img_archive/dnd_fallbacks.png %})
+!!\![글꼴 패밀리가 "산세리프"인 대체 글꼴로 "Arial"의 예입니다.]({% image_buster /assets/img_archive/dnd_fallbacks.png %})
 
-대체 글꼴을 최대 17개까지 추가할 수 있습니다. 선택한 첫 번째 대체 글꼴이 가장 먼저 시도되는 글꼴이 됩니다. 대체 글꼴은 새로 만든 템플릿, 이메일 캠페인 및 캔버스 구성 요소에 대해서만 적용됩니다. 대체 글꼴이 지정되기 전에 작성된 메시지의 경우 대체 글꼴이 자동으로 설정되지 않습니다. 브랜딩 전반의 일관성을 유지하기 위해 이메일 메시지와 유사한 대체 글꼴을 선택하는 것이 좋습니다.
+최대 17개의 대체 글꼴을 추가할 수 있습니다. 처음 선택한 대체 글꼴이 가장 먼저 시도되는 글꼴이 됩니다. 대체 글꼴은 새로 만든 템플릿, 이메일 캠페인 및 캔버스 컴포넌트에만 적용됩니다. 대체 글꼴이 지정되기 전에 생성된 메시징에는 대체 글꼴이 자동으로 설정되지 않습니다. 브랜딩 전반의 일관성을 유지하기 위해 이메일 메시징과 유사한 대체 글꼴을 선택하는 것이 좋습니다.
 
 ## 제목 스타일링
 
-여기에서 글꼴 크기, 글꼴 색상 및 텍스트 정렬을 편집하여 이메일 제목의 스타일을 조정할 수 있습니다. 이는 메인 헤더와 보조 헤더에 적용됩니다. 
+여기에서 글꼴 크기, 글꼴 색상, 텍스트 정렬을 편집하여 이메일 제목의 스타일을 조정할 수 있습니다. 이는 메인 헤더와 보조 헤더에 적용됩니다. 
 
-![Title Styling settings for a center-aligned main header and secondary header.]({% image_buster /assets/img_archive/dnd_title_styling.png %})
+중앙에 정렬된 메인 헤더와 보조 헤더에 대한 제목 스타일링 설정.]({% image_buster /assets/img_archive/dnd_title_styling.png %})
 
-원하는 경우 끌어서 놓기 편집기 테마의 기본 스타일을 재정의할 수 있습니다. Select **Override default style** to apply your choice of title styling. 여기에는 다른 글꼴 및 링크 색상 설정이 포함될 수 있습니다.
+원하는 경우 드래그 앤 드롭 편집기 테마의 기본값 스타일을 재정의할 수 있습니다. **기본값 스타일 덮어쓰기를** 선택하여 원하는 제목 스타일을 적용합니다. 여기에는 다른 글꼴 및 링크 색상 설정이 포함될 수 있습니다.
 
 ## 단락 스타일링
 
-기본 단락 스타일을 설정하려면 **단락 스타일 지정**으로 이동하여 **글꼴 크기**를 입력하고 **글꼴 색상**을 선택하여 글꼴 색상을 선택합니다. 또한 **상단 패딩**, **오른쪽 패딩**, **하단 패딩** 및 **왼쪽 패딩** 값을 편집하여 본문 텍스트의 블록 스타일을 조정할 수도 있습니다. 이는 단락 블록을 둘러싼 네 영역의 간격에 모두 적용됩니다.
+기본값 문단 스타일을 설정하려면 **문단 스타일링으로** 이동하여 **글꼴 크기를** 입력한 다음 글꼴 **색상을** 선택하여 글꼴 색상을 선택합니다. 또한 **상단 패딩**, **오른쪽 패딩**, **하단 패딩** 및 **왼쪽 패딩** 값을 편집하여 본문 텍스트의 블록 스타일을 조정할 수도 있습니다. 이는 단락 블록을 둘러싼 네 영역의 간격에 모두 적용됩니다.
 
-![Paragraph Styling settings for text with 14pt font.]({% image_buster /assets/img_archive/dnd_paragraph_styling.png %})
+14pt 글꼴의 텍스트에 대한 단락 스타일링 설정.]({% image_buster /assets/img_archive/dnd_paragraph_styling.png %})
 
 ## 목록 스타일링
 
-메시지에 목록을 추가할 때 **목록 스타일** 지정 섹션을 사용하면 목록의 스타일이 일관성 있게 지정됩니다. 여기에는 다음과 같은 세부 정보가 포함됩니다: 
+메시징에 목록을 추가할 때 **목록 스타일** 지정 섹션을 사용하면 목록의 스타일이 일관성 있게 지정됩니다. 여기에는 다음과 같은 세부 사항이 포함됩니다: 
 
 - 글꼴 크기
 - 글꼴 색상
-- 글꼴 두께
-- 줄 높이
+- 글꼴 무게
+- 선 높이
 - 정렬
 - 텍스트 방향
 - 문자 간격
@@ -97,33 +97,35 @@ To use other custom fonts in your email campaigns, you can create an [email temp
 - 목록 유형
 - 목록 스타일 유형
 
-**목록 유형**을 번호 매기기 또는 글머리 기호로 설정할 수 있습니다. **목록 스타일 유형**은 목록 스타일에 대한 추가 커스텀 기능을 제공합니다. 예를 들어 목록 유형은 항상 글머리 기호로, 각 글머리 기호는 사각형으로 설정할 수 있습니다.  
+**목록 유형을** 번호 매기기 또는 글머리 기호로 설정할 수 있습니다. **목록 스타일 유형은** 목록 스타일에 대한 추가 커스텀 기능을 제공합니다. 예를 들어 목록 유형은 항상 글머리 기호로, 각 글머리 기호는 사각형으로 설정할 수 있습니다.  
 
-![List Styling settings for a bulleted list.]({% image_buster /assets/img_archive/dnd_list_styling.png %})
+글머리 기호 목록의 스타일링 설정.]({% image_buster /assets/img_archive/dnd_list_styling.png %})
 
 ## 버튼 스타일링
 
-**버튼 스타일링** 섹션에서 버튼의 다음 기본 스타일을 편집할 수 있습니다:
+**버튼 스타일링** 섹션에서 버튼의 다음 기본값 스타일을 편집할 수 있습니다:
 - 배경색
 - 글꼴 크기
 - 글꼴 색상
-- 테두리 반지름
-- 테두리 색
+- 테두리 반경
+- 테두리 색상
 - 테두리 무게
 - 버튼 패딩
 
-![Button Styling settings for a rectangular button with a blue background.]({% image_buster /assets/img_archive/dnd_button_styling.png %})
+파란색 배경의 직사각형 버튼에 대한 버튼 스타일링 설정입니다.]({% image_buster /assets/img_archive/dnd_button_styling.png %})
 
-다른 모든 스타일링 섹션과 마찬가지로 **패딩 상단**, **패딩 오른쪽**, **패딩 하단** 및 **패딩 왼쪽** 값을 편집하여 블록 스타일링을 조정할 수 있습니다.
+다른 모든 스타일링 섹션과 마찬가지로 **패딩 상단**, **패딩 오른쪽**, **패딩 하단** 및 패딩 **왼쪽** 값을 편집하여 블록 스타일링을 조정할 수 있습니다.
 
 ## 이메일 템플릿 너비
 
-이메일 템플릿 너비를 사용하여 이메일 캠페인 전반에서 일관성을 유지할 수 있도록 너비를 조정하고 설정할 수 있습니다. 
+이메일 템플릿 너비를 사용하여 이메일 캠페인 전반의 일관성을 위해 너비를 조정하고 설정할 수 있습니다. 
 
-![Email template width set to 600px.]({% image_buster /assets/img_archive/dnd_email_template_width.png %})
+\![이메일 템플릿 너비가 600px로 설정되었습니다.]({% image_buster /assets/img_archive/dnd_email_template_width.png %})
 
 ## 콘텐츠 블록 너비
 
-이메일 드래그 앤 드롭 편집기에서 콘텐츠 블록 너비를 설정할 수도 있습니다. 콘텐츠 블록 너비를 이메일 템플릿 너비와 일치시키는 것이 좋습니다.
+이 설정은 향후 모든 콘텐츠 블록에 대해 사전 구성됩니다. 기존 콘텐츠 블록은 업데이트되지 않습니다. 모든 콘텐츠 블록을 100%로 설정하여 콘텐츠 블록이 삽입되는 너비를 준수하도록 설정하거나 특정 픽셀 값을 정의할 수 있습니다.
 
-![Content Block width set to 600px.]({% image_buster /assets/img_archive/dnd_content_block_width.png %})
+콘텐츠 블록 너비를 이메일 템플릿 너비에 맞추는 것이 좋습니다.
+
+\![콘텐츠 블록 너비가 600px로 설정되었습니다.]({% image_buster /assets/img_archive/dnd_content_block_width_update.png %})

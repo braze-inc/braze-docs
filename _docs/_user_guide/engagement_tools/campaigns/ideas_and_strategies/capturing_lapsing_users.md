@@ -1,6 +1,6 @@
 ---
-nav_title: Capturing lapsing users
-article_title: Capturing Lapsing Users
+nav_title: Capture lapsing users
+article_title: Capture Lapsing Users
 page_order: 1
 page_type: tutorial
 description: "This how-to article addresses the issue of lapsing users and how to effectively use Braze campaigns to re-engage those users."
@@ -10,7 +10,7 @@ tool:
 
 ---
 
-# Capturing lapsing users
+# Capture lapsing users
 
 > If your audience is dwindling, it's crucial to try wooing them back. With Braze, you can set up automated recurring re-engagement campaigns to capture lapsing users. You can choose the re-engagement timeframe and recurrence that best suits your app, but to demonstrate, we'll get started with a 14 day re-engagement plan.
 

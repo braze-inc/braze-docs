@@ -11,9 +11,7 @@ tool: Canvas
 
 > This reference article covers information about `canvas_entry_properties` and `event_properties`, including when to use each property and the differences in behavior. <br><br> For information about custom event properties in general, check out [Custom events properties]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties).
 
-{% alert important %}
-If you're participating in the [Context component early access]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context), Canvas entry properties are part of Canvas context variables. This means `canvas_entry_properties` is now referenced as `context`. Each `context` variable includes a name, data type, and a value that can include Liquid.
-{% endalert %}
+{% multi_lang_include alerts/important_alerts.md alert='context variable' %}
 
 Canvas entry properties and event properties function differently within your Canvas workflows. Properties of events or API calls that trigger a user's entry into a Canvas are known as `canvas_entry_properties`. Properties of events that occur as a user moves through a Canvas journey are known as `event_properties`. The key difference is `canvas_entry_properties` focuses on more than just events by also accessing the properties of entry payloads in API-triggered Canvases.
 
@@ -49,6 +47,8 @@ You can no longer create or duplicate Canvases using the original editor. This a
 - For in-app message channels, `canvas_entry_properties` can only be referenced in a Canvas. `event_properties` can't be used for in-app message channels.
 - You can't use `event_properties` in the lead Message step. Instead, you must use `canvas_entry_properties` or add an Action Paths step with the corresponding event **before** the Message step that includes `event_properties`. 
 - When an Action Path step contains a "Sent an SMS Inbound Message" or "Sent a WhatsApp Inbound Message" trigger, the subsequent Canvas steps can include an SMS or WhatsApp Liquid property. This mirrors how event properties work in Canvases. This way you can leverage your messages to save and reference first-party data on user profiles and conversational messaging.
+
+{% multi_lang_include alerts/tip_alerts.md alert='Reference properties from triggering event' %}
 
 ### Timestamps for event properties
 

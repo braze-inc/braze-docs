@@ -1,6 +1,6 @@
 ---
-nav_title: Targeting users
-article_title: Targeting Users
+nav_title: Target users
+article_title: Target Users
 page_order: 9
 page_type: reference
 description: "This reference article covers how to target your audience in your campaign and Canvas editors."
@@ -9,7 +9,7 @@ tool:
     - Canvas
 ---
 
-# Targeting users
+# Target users
 
 > Determining how to target your users is one of the most crucial steps when creating a campaign or Canvas. By understanding how to segment your audience based on their behaviors, preferences and demographics, you can tailor and personalize your messaging.
 

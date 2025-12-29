@@ -1,5 +1,5 @@
 ---
-nav_title: キャンペーンを作成
+nav_title: キャンペーンを作成する
 article_title: キャンペーンを作成
 layout: dev_guide
 page_order: 0

@@ -22,8 +22,8 @@ Warning! Don't make any changes to this document without approval from the legal
 
 Braze enables its customers to delete entire User Profiles and Attribute data themselves from their workspace.
 
-This means you can: 
-- Delete user profiles using the Braze [Delete user API endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/) 
+This means you can:
+- Delete user profiles using the Braze [Delete user API endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/)
 - Delete (null) or amend attributes on user profiles using the Braze [Track user API endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)
 
 Behavioral events cannot be deleted from a User Profile (custom events, sessions, campaigns, purchases). To remove those events, you must delete the entire User Profile.
@@ -40,11 +40,11 @@ A User may have multiple profiles, and you may need to delete multiple profiles 
 
 Each week, Braze runs a process to remove Inactive and Dormant Users from the Braze Services. In general, these are users who are not reachable (for example, have no email address, no phone number, no push token, do not use your apps or visit your websites), have had no activity recorded on their user profile, and have not been messaged or engaged with using Braze. This is done to adhere to GDPR principles and best practices. You can read more about this process on our [user archival definitions]({{site.baseurl}}/user_archival/) page.
 
-{% alert note %} 
-Customers have full control over whether or not a user is Inactive or Dormant and can prevent archiving of user profiles by recording a data point at regular intervals. Braze Canvas offers the ability to do this automatically, allowing you to effectively turn off this functionality for some or all of your Inactive or Dormant Users. 
+{% alert note %}
+Customers have full control over whether or not a user is Inactive or Dormant and can prevent archiving of user profiles by recording a data point at regular intervals. Braze Canvas offers the ability to do this automatically, allowing you to effectively turn off this functionality for some or all of your Inactive or Dormant Users.
 {% endalert %}
 
-#### Campaign and Canvas Interactions Data 
+#### Campaign and Canvas Interactions Data
 
 Messaging interaction data refers to how a user interacts with a campaign or Canvas they received (for example, when a user opens campaign A or a user receives variant A). This data is used for retargeting. You can read more about messaging interaction data availability on [About messaging interaction data availability]({{site.baseurl}}/messaging_interaction_data/).
 

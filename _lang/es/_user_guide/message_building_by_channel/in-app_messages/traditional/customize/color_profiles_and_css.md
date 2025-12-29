@@ -1,36 +1,36 @@
 ---
 nav_title: Perfiles de color y plantillas CSS
-article_title: Perfiles de color y plantillas CSS para mensajes en la aplicación
+article_title: Perfiles de color y plantillas CSS para mensajes dentro de la aplicación
 page_order: 4
 page_type: reference
-description: "Este artículo ofrece una visión general de los perfiles de color de los mensajes dentro de la aplicación y de las plantillas CSS."
+description: "Este artículo ofrece un resumen de los perfiles de color de los mensajes dentro de la aplicación y de las plantillas CSS."
 channel:
   - in-app messages
 ---
 
 # Perfiles de color y plantillas CSS {#reusable-color-profiles}
 
-> Puedes guardar plantillas de mensajes en la aplicación y en el navegador en el panel de control para crear rápidamente nuevas campañas y mensajes con tu estilo. 
+> Puedes guardar plantillas de mensajes dentro de la aplicación y mensajes en el explorador en el panel para crear rápidamente nuevas campañas y mensajes con tu estilo. 
 
-Vaya a **Plantillas** > **Plantillas de mensajes In-App**.
+Ve a **Plantillas** > Plantillas de mensajes dentro de la aplicación **.**
 
 Desde esta página, puedes editar las plantillas existentes o hacer clic en **\+ Crear** y elegir **Perfil de color** o **Plantilla CSS** para crear nuevas plantillas y utilizarlas en tus mensajes dentro de la aplicación.
 
 ## Perfil de color
 
-Puede personalizar la combinación de colores de la plantilla de mensajes introduciendo un código de color HEX o haciendo clic en el cuadro de color y seleccionando un color con el selector de color.
+Puedes personalizar la combinación de colores de tu plantilla de mensajes introduciendo un código de color HEX o haciendo clic en la casilla de color y seleccionando un color con el selector de color.
 
 Haz clic en **Guardar perfil de color** cuando hayas terminado.
 
-### Gestión de perfiles de color
+### Administrador de perfiles de color
 
-También puedes [duplicar]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) y [archivar]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) plantillas. Más información sobre la creación y gestión de plantillas y contenido creativo en [Plantillas y medios]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
+¡También puedes [duplicar]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) y [archivar]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) plantillas! Obtén más información sobre cómo crear y administrar plantillas y contenido creativo en [Plantillas & Medios]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
 
 ## Plantilla CSS {#in-app-message-templates}
 
-Puedes personalizar una plantilla CSS completa para tu [mensaje modal web in-app](#web-modal-css).
+Puedes personalizar una plantilla CSS completa para tu [mensaje modal web dentro de la aplicación](#web-modal-css).
 
-Nombre y etiquete su Plantilla CSS, luego elija si será o no su plantilla por defecto. Puede escribir su propio CSS en el espacio proporcionado. Este espacio ya está rellenado con el CSS que se muestra en la vista previa del mensaje, y puedes ajustarlo ligeramente para adaptarlo a tus necesidades.
+Nombra y etiqueta tu Plantilla CSS, y luego elige si será o no tu plantilla predeterminada. Puedes escribir tu propio CSS en el espacio proporcionado. Este espacio ya está rellenado previamente con el CSS que se muestra en la vista previa de tu mensaje, y debes sentirte libre de ajustarlo ligeramente para satisfacer tus necesidades.
 
 ```css
 .ab-message-header, .ab-message-text {
@@ -82,14 +82,14 @@ Nombre y etiquete su Plantilla CSS, luego elija si será o no su plantilla por d
 
 Como puedes ver, puedes editarlo todo, desde el color de fondo hasta el tamaño y el peso de la fuente, y mucho más.
 
-### Gestión de plantillas CSS
+### Administrador de plantillas CSS
 
-También puedes [duplicar]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) y [archivar]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) plantillas. Más información sobre la creación y gestión de plantillas y contenido creativo en [Plantillas y medios]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
+¡También puedes [duplicar]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) y [archivar]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) plantillas! Obtén más información sobre cómo crear y administrar plantillas y contenido creativo en [Plantillas & Medios]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
 
-## Modal con CSS (sólo web) {#web-modal-css}
+## Modal con CSS (sólo Web) {#web-modal-css}
 
-Si decides utilizar un Modal Web sólo con mensaje CSS, puedes aplicar tu propia plantilla o escribir tu propio CSS en el espacio proporcionado. Este espacio ya está rellenado con el CSS que se muestra en la vista previa del mensaje, pero siéntete libre de ajustarlo ligeramente para satisfacer tus necesidades.
+Si decides utilizar un Modal Web sólo con mensaje CSS, puedes aplicar tu propia plantilla o escribir tu propio CSS en el espacio proporcionado. Este espacio ya está rellenado previamente con el CSS que se muestra en la vista previa de tu mensaje, pero siéntete libre de ajustarlo ligeramente para satisfacer tus necesidades.
 
-Si decides aplicar tu propia plantilla, haz clic en **Aplicar plantilla** y elige una de la galería de plantillas de mensajes de la aplicación. Si no tiene ninguna opción, puede cargar una [plantilla CSS]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/color_profiles_and_css/#in-app-message-templates) utilizando el generador de plantillas CSS.
+Si decides aplicar tu propia plantilla, haz clic en **Aplicar plantilla** y elige de la galería de plantillas de mensajes dentro de la aplicación. Si no tienes ninguna opción, puedes subir una [plantilla CSS]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/color_profiles_and_css/#in-app-message-templates) utilizando el constructor de plantillas CSS.
 
 

@@ -25,12 +25,12 @@ Hay un límite de cinco predicciones activas simultáneamente. Antes de comprar 
 {: start="2"}
 2\. Dale a tu predicción un nombre único. También puedes proporcionar una descripción para guardar cualquier nota relevante.
 
-![]({% image_buster /assets/img/purchasePrediction/purchases_step1.png %})
+\![]({% image_buster /assets/img/purchasePrediction/purchases_step1.png %})
 
 {: start="3"}
 3\. Haz clic en **Adelante** para pasar al siguiente paso. <br><br>Opcionalmente, puedes hacer clic en **Construir ahora** para utilizar toda la configuración predeterminada y pasar al último paso de la creación. Tendrás la oportunidad de revisar la configuración antes de iniciar el proceso de construcción. Además, puedes volver a cualquier paso más tarde haciendo clic en él en la barra superior.
 
-## Paso 2: Especificar seguimiento de eventos {#event-tracking}
+## Paso 2: Especificar seguimiento de eventos {#event-tracking}
 
 Especifica si los eventos de tus usuarios se almacenan en Braze como [eventos de compra]({{site.baseurl}}/user_guide/data/custom_data/purchase_events/) o [eventos personalizados]({{site.baseurl}}/user_guide/data/custom_data/custom_events/).
 
@@ -40,13 +40,13 @@ Aquí verás si el método seleccionado proporciona suficientes datos para que B
 
 La ventana del evento es el intervalo de tiempo en el que quieres predecir si un usuario realizará el evento. Se puede configurar hasta 60 días. Esta ventana se utiliza para consultar datos históricos para entrenar la predicción. Además, después de crear la predicción y de que los usuarios reciban puntuaciones, la puntuación de probabilidad indica la probabilidad de que un usuario realice el evento en el número de días especificado por la ventana de eventos.
 
-### Paso 3: Filtra tu audiencia de predicción (opcional) {#audience}
+### Paso 3: Filtra tu audiencia de predicción (opcional) {#audience}
 
 Tu audiencia de predicción es el grupo de usuarios cuya puntuación de probabilidad te gustaría predecir. Si lo deseas, puedes realizar una predicción sobre toda tu población de usuarios. Para ello, deja seleccionada la opción predeterminada **Todos los usuarios**.
 
-El modelo suele rendir mejor si filtras a los usuarios que quieres evaluar con algún criterio. Para ello, selecciona **Definir mi propia audiencia de predicción** y elige tus filtros de audiencia. Por ejemplo, es posible que quieras centrarte en los usuarios que han estado utilizando tu aplicación durante al menos 30 días seleccionando el filtro "Primera aplicación utilizada" establecido en 30 días.
+Dependiendo de tu caso de uso, puede que quieras utilizar filtros para especificar los usuarios que quieres evaluar para el modelo. Para ello, selecciona **Definir mi propia audiencia de predicción** y elige tus filtros de audiencia. Por ejemplo, es posible que quieras centrarte en los usuarios que han estado utilizando tu aplicación durante al menos 30 días seleccionando el filtro "Primera aplicación utilizada" establecido en 30 días. Configurar esta audiencia indica a Braze que quieres que tu modelo aprenda específicamente de los usuarios que (en el momento en que se ejecuta el modelo) han utilizado la aplicación durante al menos 30 días.
 
-La definición de la audiencia de predicción también se utiliza para consultar datos históricos que permitan al modelo de aprendizaje automático aprender del pasado. De forma similar a la página anterior, se muestra la cantidad de datos que proporcionan estos filtros junto con el requisito. Si especificas la audiencia deseada y no alcanzas el mínimo, prueba a especificar un filtro más amplio o utiliza la opción **Todos los usuarios**.
+La audiencia de predicción define el grupo de usuarios en los que se fija el modelo de aprendizaje automático para aprender del pasado. Braze te mostrará el tamaño estimado de tu audiencia de predicción. Si especificas la audiencia deseada y no alcanzas el mínimo necesario para ejecutar el modelo, prueba a especificar un filtro más amplio o utiliza la opción **Todos los usuarios**. Ten en cuenta que muchos casos de uso no requieren que selecciones una audiencia de predicción específica. Por ejemplo, si tu caso de uso es dirigirte a los usuarios de la región de la UE con más probabilidades de abandono, puedes ejecutar tu modelo en todos los usuarios y luego incluir un filtro para la región de la UE en el segmento de la campaña.
 
 {% alert note %}
 La audiencia de la predicción no puede superar los 100 millones de usuarios.
@@ -62,7 +62,9 @@ Por ejemplo, si la ventana de eventos se establece en 14 días, se tardará 14 d
 
 ### Paso 4: Elige el calendario de actualización
 
-El modelo de aprendizaje automático creado cuando completes esta página se utilizará según el calendario que selecciones aquí, para generar nuevas puntuaciones de la probabilidad de que los usuarios realicen el evento (puntuación de probabilidad). Selecciona la **frecuencia máxima de actualizaciones** que te resulte útil. Por ejemplo, si estás prediciendo compras y planeas enviar una promoción semanal, establece la frecuencia de actualización en **Semanal** el día y la hora que elijas.
+El modelo de aprendizaje automático generará puntuaciones de probabilidad de sucesos para los usuarios, y esas puntuaciones se actualizarán en función de la programación que selecciones aquí. Podrás dirigirte a los usuarios en función de su puntuación de probabilidad de suceso. 
+
+Selecciona la **frecuencia máxima de actualizaciones** que te resulte útil. Por ejemplo, si estás prediciendo compras y planeas enviar una promoción semanal, establece la frecuencia de actualización en **Semanal** el día y la hora que elijas.
 
 {% alert note %}
 La vista previa y la predicción de demostración nunca actualizarán las puntuaciones de probabilidad de los usuarios.
@@ -72,7 +74,7 @@ La vista previa y la predicción de demostración nunca actualizarán las puntua
 
 Comprueba que los datos que has proporcionado son correctos y elige **Crear predicción**. También puedes guardar tus cambios en forma de borrador seleccionando **Guardar como borrador** para volver a esta página y construir el modelo más tarde. 
 
-Después de hacer clic en **Construir predicción**, comenzará el proceso que genera el modelo. Esto puede tardar entre 30 minutos y unas horas, dependiendo del volumen de datos. Para esta predicción, verás una página en la que se explica que el entrenamiento está en curso mientras dure el proceso de construcción del modelo.
+Después de hacer clic en **Construir predicción**, comenzará el proceso que genera el modelo. Esto puede tardar entre 30 minutos y unas horas, dependiendo del volumen de datos. Para esta predicción, verás una página en la que se explica que el entrenamiento está en curso mientras dure el proceso de construcción del modelo. El modelo Braze tiene en cuenta los eventos personalizados, los eventos de compra, los eventos de interacción de campaña y los datos de sesión.
 
 Una vez completado, la página cambiará automáticamente a la vista de análisis, y recibirás un correo electrónico informándote de que la predicción y los resultados están listos. En caso de error, la página volverá al modo de edición con una explicación de lo que ha ido mal.
 

@@ -24,7 +24,7 @@ This feature lets brands control what specific first-party data is shared with T
 
 {% alert important %}
 **Audience Sync Pro disclaimer**<br>
-Braze Audience Sync to TikTok is an Audience Sync Pro integration. For more information on this integration, reach out to your Braze account manager.
+Braze Audience Sync to TikTok is an Audience Sync Pro integration. For more information on this integration, contact your Braze account manager.
 {% endalert %}
 
 ## Prerequisites
@@ -41,6 +41,10 @@ You must ensure the following items are created, completed, and/or accepted befo
 ## Integration 
 
 ### Step 1: Connect to TikTok
+
+{% alert important %}
+You must have the ["Admin" permission]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#admin) to connect TikTok to your Braze account.
+{% endalert %}
 
 In the Braze dashboard, go to **Partner Integrations** > **Technology Partners** and select **TikTok**. Under TikTok Audience Sync, select **Connect TikTok**.
 

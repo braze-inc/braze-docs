@@ -1,5 +1,5 @@
 ---
-nav_title: SDK の概要 
+nav_title: SDK の概要
 article_title: SDK の概要 
 page_order: 9
 page_type: reference
@@ -8,7 +8,7 @@ description: "この参考記事では Braze SDK の基本情報について説�
 
 # SDK の概要 
 
-> Braze SDK を使用すると、Web サイトやアプリを通じてセッション データの収集、ユーザーの識別、購入やカスタムイベントの記録が簡単になります。SDK を使用して、アプリ内メッセージやプッシュ通知を Braze ダッシュボードから直接送信することでユーザーとやり取りすることもできます。
+> Braze SDKは、Webサイトやアプリを通じてセッションデータを収集し、ユーザーを識別し、購入やカスタムイベントを記録します。SDKを使用して、アプリ内メッセージやプッシュ通知をダッシュボードから直接送信してユーザーをエンゲージすることもできる。
 
 Braze SDK を簡単に説明すると、次のとおりです。
 * ユーザーデータを収集し、統合されたユーザープロファイルに同期する。
@@ -28,13 +28,13 @@ SDK をアプリまたはサイトに組み込むには、そのアプリケー�
 
 ## データの集約
 
-Braze SDK はユーザーレベルで膨大な量のデータを自動的にキャプチャし、アプリとユーザーベースの主要な指標を簡単に確認できるようにします。類似したアプリをダッシュ​​ボード上の1つのワークスペースにグループ化します。たとえば、アプリの iOS バージョンと Android バージョンを同じワークスペースにグループ化すると、両方のプラットフォームのユーザーから収集されたデータを確認できるようになります。これにより、Web チャネルとモバイルチャネル全体でユーザーをより完全に把握できるようになります。詳細については、[ホームページ]({{site.baseurl}}/user_guide/analytics/dashboard/home_dashboard/)の記事を参照してください。
+Braze SDKは、ユーザーレベルのデータを自動的に取得し、アプリとユーザー群の主要な指標を提供する。類似アプリを1つのワークスペースにグループ化し（例えば、iOS版とAndroid版を一緒にする）、プラットフォーム間で収集したデータを表示し、ユーザーアクティビティの全体像を構築する。詳細については、[ホームページ]({{site.baseurl}}/user_guide/analytics/dashboard/home_dashboard/)の記事を参照してください。
 
 ## アプリ内メッセージング
 
-SDK を使用すると、アプリ内メッセージを簡単に作成して送信し、ユーザーと直接やり取りすることができます。キャンペーン戦略に基づいて、スライドアップ、モーダル、または全画面メッセージの送信を選択できます。アプリ内メッセージの作成の詳細については、[アプリ内メッセージの作成]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/)に関するページを参照してください。
+SDKを使ってアプリ内メッセージを作成し、直接送信する。キャンペーン戦略に応じて、スライドアップ、モーダル、フルスクリーンのメッセージを選択できる。構成の詳細については、[アプリ内メッセージの作成を]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/)参照のこと。
 
-![Web ブラウザーに表示されるプッシュ]({% image_buster /assets/img_archive/web_push_macbook.png %}){: style="float:right;max-width:45%;margin-left:20px;border:0;"}
+![ウェブブラウザに表示されるプッシュ]({% image_buster /assets/img_archive/web_push_macbook.png %}){: style="float:right;max-width:45%;margin-left:20px;border:0;"}
 
 ## プッシュ通知
 
@@ -48,36 +48,10 @@ Web サイトまたはアプリのユーザーは、プッシュ通知を受け�
 
 **特定のアプリからのユーザー**を**ターゲットにしたアプリと Web サイト**を設定して Ｗｅｂ ユーザーのセグメントを作成し、**特定のアプリ**の Web サイトのみを選択できます。
 
-![Web アプリが強調表示されている [セグメントの詳細]ページ]({% image_buster /assets/img_archive/web-users-segment.png %}){:style="max-width:60%"}
+![Webアプリにフォーカスしたセグメンテーション詳細ページ]({% image_buster /assets/img_archive/web-users-segment.png %}){:style="max-width:60%"}
 
 これにより、インテリジェントな方法でユーザーの行動に基づいてユーザーをターゲットにすることができます。Web ユーザーをターゲットにしてモバイルアプリのダウンロードを奨励したい場合は、このセグメントをターゲットユーザーとして作成します。Web メッセージではなくモバイルアプリ内メッセージを含むメッセージングキャンペーンを送信したい場合は、セグメント内の Web サイトのアイコンのチェックを外します。
 
-## Braze にはどのような統合がありますか?
-Braze は、多くのプラットフォーム (Web、Android、iOS、Flutter、React Native など) 向けに SDK のバージョンを提供していますが、それらはすべて基本的に同じように動作します。したがって、たとえば「Web SDK」という記述があれば、それは単に Web サイト用の Braze SDK のバージョンです。
+## 対応プラットフォーム
 
-<style>
-table th:nth-child(1) {
-width: 33%;
-}
-table th:nth-child(2) {
-width: 33%;
-}
-table th:nth-child(3) {
-width: 33%;
-}
-table td {
-word-break: break-word;
-text-align: center;
-}
-</style>
-注目の統合   |    |   
------------ |---------------- | --------------------
-[![Android]({% image_buster /assets/img/braze_icons/android.svg %})]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=android){: style="max-width:40%;margin-right:15px;border:0" class="noimgborder"}  [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android) |[![iOS]({% image_buster /assets/img/braze_icons/apple.svg %})]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=swift){: style="max-width:20%;margin-right:15px;border:0" class="noimgborder"} [iOS]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=swift) |[![ウェブ]({% image_buster /assets/img/braze_icons/globe-02.png %})]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=web){: style="max-width:25%;margin-right:15px;border:0" class="noimgborder"} [ウェブ]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=web)  
-
-すべての統合   |    |   
------------ |---------------- | --------------------
-[![Cordova Android]({% image_buster /assets/img/cordova.png %})]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=cordova&tab=android){: style="max-width:40%;margin-right:15px;border:0" class="noimgborder"}  [Cordova Android]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=cordova&tab=android) | [![Cordova iOS]({% image_buster /assets/img/cordova.png %})]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=cordova&tab=ios){: style="max-width:40%;margin-right:15px;border:0" class="noimgborder"}  [Cordova iOS]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=cordova&tab=ios) | [![Flutter の Android および iOS]({% image_buster /assets/img/flutter_icon.png %})]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=flutter){: style="max-width:20%;margin-top:5%;border:0" class="noimgborder"}  [Flutter の Android および iOS]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=flutter)
-[![React Native]({% image_buster /assets/img/reactnative_icon.png %})]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=react%20native){: style="max-width:40%;margin-right:15px;border:0" class="noimgborder"}  [React Native]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=react%20native) | [![tvOS]({% image_buster /assets/img/tvos_icon.png %})]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/tvos/initial_sdk_setup/){: style="max-width:40%;margin-top:5%;border:0" class="noimgborder"}  [tvOS]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/tvos/initial_sdk_setup/) | [![MacOS]({% image_buster /assets/img/macOS_icon.png %})]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/macOS/initial_sdk_setup/){: style="max-width:40%;margin-top:15%;border:0" class="noimgborder"}  [MacOS]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/macOS/initial_sdk_setup/)
-[![Unity Android]({% image_buster /assets/img/unity.png %})]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=unity){: style="max-width:40%;margin-right:15px;border:0" class="noimgborder"}  [ユニティ アンドロイド]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=unity) | [![Unity iOS]({% image_buster /assets/img/unity.png %})]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=unity){: style="max-width:40%;margin-right:15px;border:0" class="noimgborder"}  [ユニティ iOS]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=unity) | [![Xamarin]({% image_buster /assets/img/xamarin.png %})]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=xamarin){: style="max-width:35%;margin-top:5%;border:0" class="noimgborder"}  [Xamarin]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=xamarin) 
-[![Roku]({% image_buster /assets/img/roku.png %})]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=roku){: style="max-width:40%;margin-top:5%;border:0" class="noimgborder"}  [Roku]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=roku) | [![Unreal Engine]({% image_buster /assets/img/unreal.png %})]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=unreal%20engine){: style="max-width:30%;margin-right:15px;border:0" class="noimgborder"}  [Unreal Engine]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=unreal%20engine)
-
+Brazeは、Web、Android、Swiftといった複数のプラットフォーム用のSDKを提供している。完全なリストは[Braze開発者ガイドを]({{site.baseurl}}/developer_guide/home)参照のこと。

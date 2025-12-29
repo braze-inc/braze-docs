@@ -11,13 +11,13 @@ hidden: true
 # プッシュ通知の統合
 {% multi_lang_include archive/windows_deprecation.md %}
 
-![Windows Universal プッシュ通知の例。][10]{: style="float:right;max-width:40%;margin-left:15px;"}
+![Windows Universal プッシュ通知の例。]({% image_buster /assets/img_archive/windows_uni_push_sample.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
 プッシュ通知は、重要なアップデートが発生したときにユーザーの画面に表示されるアプリ外のアラートです。プッシュ通知は、時間的制約があって関連性の高いコンテンツをユーザーに提供したり、ユーザーをアプリに再エンゲージしたりするための効果的な方法です。
 
-その他のベストプラクティスについては、[ドキュメント][9] ] を参照のこと。
+その他のベストプラクティスについては、[ドキュメントを]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/)参照のこと。
 
-## ステップ1:プッシュ通知用にアプリケーションを設定する
+## ステップ 1: プッシュ通知用にアプリケーションを設定する
 
 `Package.appxmanifest` ファイルで、次の設定が構成されていることを確認します。
 
@@ -25,10 +25,10 @@ hidden: true
 
 ## ステップ2:Brazeダッシュボードを設定する
 
-1. [SID とクライアントシークレットを検索する][4]
-2. Brazeダッシュボードの**設定**ページで、SIDとクライアントシークレットを設定に追加する。<br>![][6]
+1. [SID とクライアントシークレットを検索する](http://msdn.microsoft.com/en-us/library/windows/apps/hh465407.aspx)
+2. Brazeダッシュボードの**設定**ページで、SIDとクライアントシークレットを設定に追加する。<br>![]({% image_buster /assets/img_archive/windows_sid.png %} "Windows SID dashboard")
 
-## ステップ3:バックグラウンド開封ロギングの更新
+## ステップ 3:バックグラウンド開封ロギングの更新
 
 `OnLaunched` メソッドで、`OpenSession` をコールした後、以下のコード・スニペットを追加する。
 
@@ -66,15 +66,9 @@ WNSのディープリンクサポートは、ユーザーをどこに送るか�
 
 プッシュ通知設定の [追加の起動文字列設定] フィールドで、起動文字列に追加する文字列を指定します。
 
-![][15]
+![]({% image_buster /assets/img_archive/windows_deep_link_click_action.png %} "Deep Link Click Action")
 
 ### パート3：REST APIによるディープリンク
 
-Braze では、REST API 経由でディープリンクを送信することもできます。[Windows Universal プッシュ通知オブジェクト][13] は、オプションの `extra_launch_string` パラメータを受け入れます。
+Brazeでは、REST APIを通じてディープリンクを送信することもできる。[Windowsユニバーサルプッシュオブジェクトは]({{site.baseurl}}/api/objects_filters/)、オプションの`extra_launch_string` パラメータを受け付ける。
 
-[4]: http://msdn.microsoft.com/en-us/library/windows/apps/hh465407.aspx
-[6]: {% image_buster /assets/img_archive/windows_sid.png %} 「Windows SIDダッシュボード
-[9]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/
-[10]: {% image_buster /assets/img_archive/windows_uni_push_sample.png %}
-[13]: {{site.baseurl}}/api/objects_filters/messaging/windows_objects/
-[15]: {% image_buster /assets/img_archive/windows_deep_link_click_action.png %}「ディープリンククリックアクション」
