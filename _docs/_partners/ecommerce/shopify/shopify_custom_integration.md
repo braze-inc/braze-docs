@@ -694,7 +694,7 @@ Braze sends the following parameters to your endpoint:
 |----------------------|----------|-----------|------------------------------------------------------------------|
 | shopify_customer_id  | Yes      | String    | The Shopify customer ID.                                         |
 | shopify_storefront   | Yes      | String    | The storefront name for the request. Ex: `<storefront_name>.myshopify.com` |
-| email_address        | No       | String    | The email address of the logged-in user. <br><br>This field may be missing in certain webhook scenarios. Your endpoint logic should account for null values here (for example, fetch the email using the shopify_customer_id if your internal logic requires it). |                       |
+| email_address        | No       | String    | The email address of the logged-in user. <br><br>This field may be missing in certain webhook scenarios. Your endpoint logic should account for null values here (for example, fetch the email using the shopify_customer_id if your internal logic requires it). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation"}
 
 ##### Example endpoint
@@ -721,7 +721,7 @@ Any status code other than `200` is considered a failure.
 
 - **Merge implications:** If the endpoint fails (returns non-`200` or times out), Braze cannot retrieve the external ID. Consequently, the merge between the Shopify user and the Braze user profile will not happen at that time.
 - **Retry logic:** Braze may attempt standard immediate network retries, but if the failure persists, the merge will be deferred until the next qualifying event (for example, the next time the user updates their profile or completes a checkout).
-- **Supportability:** To support timely user merging, ensure your endpoint is highly available and handles the optional email_address field gracefully.
+- **Supportability:** To support timely user merging, ensure your endpoint is highly available and handles the optional `email_address` field gracefully.
 
 #### Step 6.3: Input your external ID
 
