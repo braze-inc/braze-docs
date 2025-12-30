@@ -147,7 +147,7 @@ Target users by choosing segments or filters to narrow down your audience. You s
 
 {% multi_lang_include target_audiences.md %}
 
-Next, you'll select the larger audience from your segments and narrow that segment further with optional [filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/). You'll automatically be given a preview of what that approximate segment population looks like right now. Keep in mind that exact segment membership is always calculated just before the message is sent.
+Next, you select the larger audience from your segments and narrow that segment further with optional [filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/). You automatically receive a preview of what that approximate segment population looks like. Keep in mind that exact segment membership is always calculated before the message is sent.
 
 {% alert tip %}
 Interested in using RCS retargeting to target users based on their SMS and RCS interactions? Refer to [Retargeting]({{site.baseurl}}/sms_mms_rcs_user_retargeting/).

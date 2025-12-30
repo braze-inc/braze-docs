@@ -166,7 +166,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 
 This example shows how to create a user and set their subscription group within the user attributes object.
 
-Updating the subscription status with this endpoint will update the user specified by their `external_id` (such as User1) and update the subscription status of any users with the same email as that user (User1).
+Updating the subscription status with this endpoint updates the user specified by their `external_id` (such as User1) and updates the subscription status of any users with the same email as that user (User1).
 
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
@@ -198,7 +198,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 
 ### Example request to create an alias-only user
 
-You can use the `/users/track` endpoint to create a new alias-only user by setting the `_update_existing_only` key with a value of `false` in the body of the request. If you omit this value, Braze does not create the alias-only user profile. Using an alias-only user guarantees that one profile with that alias will exist. This is especially helpful when building a new integration as it prevents Braze from creating duplicate user profiles.
+You can use the `/users/track` endpoint to create an alias-only user by setting the `_update_existing_only` key with a value of `false` in the body of the request. If you omit this value, Braze does not create the alias-only user profile. Using an alias-only user ensures that one profile with that alias exists. This is especially helpful when building an integration as it prevents Braze from creating duplicate user profiles.
 
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
@@ -239,7 +239,7 @@ Successful messages are met with the following response:
 
 ### Successful message with non-fatal errors
 
-If your message is successful but has non-fatal errors, such as one invalid event object out of a long list of events, then you will receive the following response:
+If your message is successful but has non-fatal errors, such as one invalid event object out of a long list of events, you receive the following response:
 
 ```json
 {
@@ -256,7 +256,7 @@ For success messages, Braze still processes any data not affected by an error in
 
 ### Message with fatal errors
 
-If your message has a fatal error, you will receive the following response:
+If your message has a fatal error, you receive the following response:
 
 ```json
 {
@@ -282,8 +282,8 @@ If you receive the error "provided external_id is blacklisted and disallowed", y
 ### What happens when multiple profiles with the same email address are found?
 If the `external_id` exists, Braze prioritizes the most recently updated profile with an external ID for updates. If the `external_id` doesn't exist, Braze prioritizes the most recently updated profile for updates.
 
-### What happens if no profile with the email address currently exists?
-Braze creates a new profile and an email-only user, and sets the email field to test@braze.com, as noted in the example request for updating a user profile by email address. Braze does not create an alias.
+### What happens if no profile with the email address exists?
+Braze creates a profile and an email-only user and sets the email field to test@braze.com, as noted in the example request for updating a user profile by email address. Braze does not create an alias.
 
 ### How do you use `/users/track` to import legacy user data?
 You may submit data through the Braze API for a user who has not yet used your mobile app to generate a user profile. If the user subsequently uses the application, all information following their identification using the SDK is merged with the existing user profile you created using the API call. Any user behavior recorded anonymously by the SDK before identification is lost upon merging with the existing API-generated user profile.
@@ -296,7 +296,7 @@ Each event object in the events array represents a single occurrence of a custom
 
 ### How does `/users/track` handle invalid nested custom attributes?
 
-When a nested custom attribute contains any invalid values (such as invalid time formats or null values), Braze drops all nested custom attribute updates in the request from processing. This applies to all nested structures within that specific attribute. To ensure successful processing, verify that all values within nested custom attributes are valid before sending.
+When a nested custom attribute contains any invalid values (such as invalid time formats or null values), Braze drops all nested custom attribute updates in the request from processing. This applies to all nested structures within that specific attribute. To help ensure successful processing, verify that all values within nested custom attributes are valid before sending.
 
 ## Monthly Active Users CY 24-25, Universal MAU, Web MAU, and Mobile MAU
 
@@ -311,7 +311,7 @@ Current limits based on expected ingestion can be found in the dashboard under *
 
 ### Rate limit headers for Monthly Active Users CY 24-25, Universal MAU, Web MAU, and Mobile MAU
 
-All non-rate-limited (such as non-`429`) responses will contain the following HTTP response headers that indicate the state of the hourly rate limit window to the client. We recommend using these headers to manage your request rate:
+All non-rate-limited (such as non-`429`) responses contain the following HTTP response headers that indicate the state of the hourly rate limit window to the client. Use these headers to manage your request rate:
 
 | Header name             | Description                                                                                 |
 | ----------------------- | ------------------------------------------------------------------------------------------- |

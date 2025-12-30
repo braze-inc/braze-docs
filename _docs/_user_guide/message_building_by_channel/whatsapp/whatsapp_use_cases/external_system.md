@@ -62,7 +62,7 @@ First, create a webhook campaign to establish a way to send WhatsApp messages re
 ![Action-based delivery with a trigger of sending a WhatsApp inbound message.]({% image_buster /assets/img/whatsapp/inbound_message_trigger.png %})
 
 {: start="6"}
-6. Finish composing your campaign, then save and launch the campaign. Now, every time a message is received, Braze will send a webhook to your external system.
+6. Finish composing your campaign, then save and launch the campaign. After you launch the campaign, every time a message is received, Braze sends a webhook to your external system.
 
 ### Step 2: Create an API-triggered campaign for outbound messages {#step-2}
 
