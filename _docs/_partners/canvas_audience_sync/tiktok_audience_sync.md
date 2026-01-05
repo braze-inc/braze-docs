@@ -163,6 +163,6 @@ This is because in TikTok, one ID may be associated with multiple TikTok users. 
 
 Additionally, TikTok also counts Pangle users as matched users, which in some cases can result in an elevated match rate. However, when you use the audience for ad delivery, the actual deliverable audience size may not be as high as the matched user size as it depends on placement and other influencing factors.
 
-### Why am I receiving an email with subject "Audience Does Not Exist For Canvas"?
+### Why am I receiving an email with the subject "Audience Does Not Exist For Canvas"?
 
-This could happen if the audience you chose to sync to is not a Streaming audience (e.g., if it is a Lookalike Audience or if it is a Customer file Audience). Try creating a new audience through the Braze Audience Sync Canvas step.
+This can occur if the audience you chose to sync to is not a streaming audience (for example, if it's a lookalike audience or a user file audience). Try creating a new audience through the Braze Audience Sync Canvas step.
