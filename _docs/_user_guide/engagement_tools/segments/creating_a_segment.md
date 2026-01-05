@@ -1,6 +1,6 @@
 ---
-nav_title: Creating a segment
-article_title: Creating a Segment
+nav_title: Create a segment
+article_title: Create a Segment
 page_order: 0
 page_type: tutorial
 description: "This how-to article will walk you through how to set up and create a segment using Braze."
@@ -8,7 +8,7 @@ tool: Segments
 search_rank: 3
 ---
 
-# [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/segmentation-course){: style="float:right;width:120px;border:0;" class="noimgborder"}Creating a segment
+# [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/segmentation-course){: style="float:right;width:120px;border:0;" class="noimgborder"}Create a segment
 
 > Segmentation allows you to target users based upon their demographic, behavioral, or technical characteristics and actions. Creative and intelligent use of segmentation and messaging automation enables you to seamlessly move your users from first touch to long-term customer. Segments update in real-time as data changes, and you can create as many segments as needed for your targeting and messaging purposes.
 

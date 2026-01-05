@@ -1,12 +1,12 @@
 ---
 nav_title: Optimizations
-article_title: Optimizing A/B Tests with Winning Variant or Personalized Variants
+article_title: Optimize A/B Tests with Winning Variant or Personalized Variants
 page_order: 1
 page_type: reference
 description: "Learn how to use Winning Variant or Personalized Variant when creating multivariate and A/B tests."
 ---
 
-# Optimizing A/B tests with Winning Variant or Personalized Variants
+# Optimize A/B tests with Winning Variant or Personalized Variants
 
 When [creating an A/B test]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/) for email, push, webhook, SMS, and WhatsApp campaigns scheduled to send once, you can select an optimization. There are two optimization options: **Winning Variant** and **Personalized Variant**.
 

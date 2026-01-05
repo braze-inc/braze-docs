@@ -1,6 +1,6 @@
 ---
-nav_title: Building campaigns
-article_title: Building Campaigns
+nav_title: Build campaigns
+article_title: Build Campaigns
 layout: dev_guide
 guide_top_header: "Building Campaigns"
 guide_top_text: "This landing page is home to resources on building your campaigns. After you've created your <a href='/docs/user_guide/engagement_tools/segments/'>segments</a>, use the resources here to set up your campaign and learn about the different options available.<br><br>We also highly recommend you check out our <a href='https://learning.braze.com/campaign-setup-delivery-targeting-conversions'>Campaign Setup</a> Braze Learning course."
@@ -12,7 +12,7 @@ description: "This landing page is home to resources on building your campaigns.
 
 guide_featured_title: "Section articles"
 guide_featured_list:
-  - name: Creating a Campaign
+  - name: Create a Campaign
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/creating_campaign/
     image: /assets/img/braze_icons/list.svg
   - name: Scheduling Your Campaign

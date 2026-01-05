@@ -59,5 +59,5 @@ During the beta period, the following limitations apply:
 
 Now that you know about Braze Agents, you’re ready for the next steps:
 
-- [Creating custom agents]({{site.baseurl}}/user_guide/brazeai/agents/creating_agents/)
-- [Deploying custom agents]({{site.baseurl}}/user_guide/brazeai/agents/deploying_agents/)
+- [Create custom agents]({{site.baseurl}}/user_guide/brazeai/agents/creating_agents/)
+- [Deploy custom agents]({{site.baseurl}}/user_guide/brazeai/agents/deploying_agents/)
