@@ -1,7 +1,7 @@
 ---
 nav_title: Snowplow
 article_title: Snowplow
-description: "This reference article outlines the partnership between Braze and Snowplow, a data infrastructure platform, that allows you to forward Snowplow events to Braze in real-time using Snowplow's Event Forwarding."
+description: "This reference article outlines the partnership between Braze and Snowplow, a data infrastructure platform, that allows you to forward Snowplow events to Braze in real time using Snowplow's Event Forwarding."
 alias: /partners/snowplow/
 page_type: partner
 search_tag: Partner
@@ -30,8 +30,8 @@ Leverage Snowplow's rich behavioral data to drive powerful customer-centric inte
 
 | Requirement             | Description                                                                                                                                                                                                                                                                              |
 | ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Snowplow pipeline       | A Snowplow pipeline needs to be up and running.                                                                                                                                                                                                                                          |
-| Snowplow Console access | Access to Snowplow Console to configure event forwarders.                                                                                                                                                                                                                                |
+| Snowplow pipeline       | You need a Snowplow pipeline up and running.                                                                                                                                                                                                                                          |
+| Snowplow Console access | You must have access to Snowplow Console to configure event forwarders.                                                                                                                                                                                                                                |
 | Braze REST API key      | A Braze REST API key with the following permissions: `users.track`, `users.alias.new`, `users.identify`, `users.export.ids`, `users.merge`, `users.external_ids.rename`, and `users.alias.update`. <br><br> You can create this in the Braze dashboard from **Settings** > **API Keys**. |
 | Braze REST endpoint     | [Your REST endpoint URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). Your endpoint depends on the Braze URL for your instance.                                                                                                                                     |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -86,4 +86,4 @@ See the [Event Object documentation]({{site.baseurl}}/api/objects_filters/event_
 
 ## Limitations
 
-**Rate limits:** Braze enforces a rate limit of 3,000 API calls every three seconds for the Track Users API. Because Snowplow doesn't support batching for event forwarders, this API rate limit also functions as the event rate limit. If your input throughput exceeds 3,000 events per three seconds, you will experience increased latency.
+**Rate limits:** Braze enforces a rate limit of 3,000 API calls every three seconds for the Track Users API. Because Snowplow doesn't support batching for event forwarders, this API rate limit also functions as the event rate limit. If your input throughput exceeds 3,000 events per three seconds, you may experience increased latency.
