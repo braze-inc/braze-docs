@@ -10,17 +10,17 @@ search_tag: Partner
 
 # Snowplow
 
-> [Snowplow](https://snowplowanalytics.com) is a scalable platform for rich, high-quality, low-latency data collection. It is designed to collect high-quality, complete behavioral data for enterprise businesses.
+> [Snowplow](https://snowplowanalytics.com) is a scalable platform for rich, high-quality, low-latency data collection. Snowplow is designed to collect high-quality, complete behavioral data for enterprise businesses.
 
 _This integration is maintained by Snowplow._
 
 ## About the integration
 
-The Braze and Snowplow integration enables you to forward Snowplow events to Braze in real-time using Snowplow's Event Forwarding solution. This integration allows you to send events to Braze while offering flexibility and control:
-- Filter and transform events before sending to Braze
-- Map Snowplow event data to Braze user attributes, custom events, and purchases
-- All data remains in your private cloud until you choose to forward it
-- Self-managed deployment within your existing Snowplow cloud account
+The Braze and Snowplow integration enables you to forward Snowplow events to Braze in real time using Snowplow's Event Forwarding solution. This integration lets you send events to Braze while offering flexibility and control. Specifically, you can:
+- Filter and transform events before sending to Braze.
+- Map Snowplow event data to Braze user attributes, custom events, and purchases.
+- Retain all data in your private cloud until you choose to forward it.
+- Deploy the solution yourself within your existing Snowplow cloud account. 
 
 Snowplow's [Event Forwarding](https://docs.snowplow.io/docs/destinations/forwarding-events/) is a paid add-on feature available to Snowplow customers. To forward events to Braze without this add-on, use Snowplow's [Google Tag Manager Server-Side](https://docs.snowplow.io/docs/destinations/forwarding-events/google-tag-manager-server-side/) integration.
 
@@ -32,8 +32,8 @@ Leverage Snowplow's rich behavioral data to drive powerful customer-centric inte
 | ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Snowplow pipeline       | A Snowplow pipeline needs to be up and running.                                                                                                                                                                                                                                          |
 | Snowplow Console access | Access to Snowplow Console to configure event forwarders.                                                                                                                                                                                                                                |
-| Braze REST API key      | A Braze REST API key with the following permissions: `users.track`, `users.alias.new`, `users.identify`, `users.export.ids`, `users.merge`, `users.external_ids.rename`, and `users.alias.update`. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
-| Braze REST endpoint     | [Your REST endpoint URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). Your endpoint will depend on the Braze URL for your instance.                                                                                                                                     |
+| Braze REST API key      | A Braze REST API key with the following permissions: `users.track`, `users.alias.new`, `users.identify`, `users.export.ids`, `users.merge`, `users.external_ids.rename`, and `users.alias.update`. <br><br> You can create this in the Braze dashboard from **Settings** > **API Keys**. |
+| Braze REST endpoint     | [Your REST endpoint URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). Your endpoint depends on the Braze URL for your instance.                                                                                                                                     |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Use cases
@@ -67,10 +67,10 @@ For each object type, you can configure field mappings to specify how Snowplow e
 
 ### Step 3: Validate the integration
 
-You can confirm events are reaching Braze by checking the following pages in your Braze account:
+Confirm events are reaching Braze by checking the following pages in your Braze account:
 
-1. **Query Builder**: In Braze, navigate to **Analytics** > **Query Builder**. You can write queries on the following tables to preview the data forwarded from Snowplow: `USER_BEHAVIORS_CUSTOMEVENT_SHARED`, `USERS_BEHAVIORS_PURCHASE_SHARED`.
-2. **API Usage Dashboard**: In Braze, navigate to **Settings** > **APIs and Identifiers** to see a chart of API usage over time. You can filter specifically for the API key used by Snowplow and see both successes and failures.
+1. **Query Builder**: In Braze, navigate to **Analytics** > **Query Builder**. You can write queries on the following tables to preview the data forwarded from Snowplow: `USER_BEHAVIORS_CUSTOMEVENT_SHARED` and `USERS_BEHAVIORS_PURCHASE_SHARED`.
+2. **API Usage Dashboard**: In Braze, navigate to **Settings** > **APIs and Identifiers** to see a chart of API usage over time. You can filter specifically for the API key Snowplow uses and see both successes and failures.
 
 ## Sending custom properties
 
