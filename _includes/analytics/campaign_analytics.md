@@ -275,7 +275,7 @@ For the full definitions of all Banners metrics, refer to the [Report Metrics Gl
     <tbody>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#total-impressions">Total Impressions</a></td>
-            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Total Impressions' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Total Impressions' %} For Banners, impressions are logged once per user session. If the same Banner is viewed multiple times within the same session, only one impression is logged.</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-impressions">Unique Impressions</a></td>
