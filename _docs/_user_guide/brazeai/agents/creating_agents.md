@@ -72,7 +72,7 @@ This is the simplest option, with no extra setup required. Braze provides access
 With this option, you can connect your Braze account with providers like OpenAI, Anthropic, AWS Bedrock, or Google Gemini. If you bring your own API key from an LLM provider, costs are billed directly through your provider, not from Braze.
 
 {% alert important %}
-We recommend routinely testing the newest and latest models as older legacy models may be discontinued or deprecated after a few months of obsolescence.
+We recommend routinely testing the most recent models, as legacy models may be discontinued or deprecated after a few months.
 {% endalert %}
 
 To set this up:
