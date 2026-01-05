@@ -57,7 +57,7 @@ Your agent is now ready to use! For details, see [Deploying agents]({{site.baseu
 
 ## Models
 
-When you set up an agent, you'll choose the model it uses to generate responses. You have two options: using a Braze-powered model or bringing your own API key.
+When you set up an agent, you can choose the model it uses to generate responses. You have two options: using a Braze-powered model or bringing your own API key.
 
 {% alert important %}
 When using the Braze-powered **Auto** model, we have optimized for models whose thinking capabilities is sufficient to perform tasks such as catalog search and user segmentation membership. When using other models, we recommend testing to confirm your model works well for your use case. You may need to adjust your [instructions](#writing-instructions) to give different levels of detail or step-by-step thinking to models with different speeds and capabilities.
