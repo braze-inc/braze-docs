@@ -24,7 +24,7 @@ The Braze and Snowplow integration enables you to forward Snowplow events to Bra
 
 Snowplow's [Event Forwarding](https://docs.snowplow.io/docs/destinations/forwarding-events/) is a paid add-on feature available to Snowplow customers. To forward events to Braze without this add-on, use Snowplow's [Google Tag Manager Server-Side](https://docs.snowplow.io/docs/destinations/forwarding-events/google-tag-manager-server-side/) integration.
 
-Leverage Snowplow's rich behavioral data to drive powerful customer-centric interactions in Braze and deliver personalized messages in real-time.
+Leverage Snowplow's rich behavioral data to drive powerful customer-centric interactions in Braze and deliver personalized messages in real time.
 
 ## Prerequisites
 
