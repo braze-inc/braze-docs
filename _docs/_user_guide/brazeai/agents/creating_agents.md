@@ -60,7 +60,7 @@ Your agent is now ready to use! For details, see [Deploying agents]({{site.baseu
 When you set up an agent, you'll choose the model it uses to generate responses. You have two options: using a Braze-powered model or bringing your own API key.
 
 {% alert important %}
-When using the Braze-selected provider, we have optimized for models whose thinking capabilities is sufficient to perform tasks such as catalog search and user segmentation membership. When using other models, we recommend testing to confirm your model works well for your use case. You may need to adjust your [instructions](#writing-instructions) to give more information to faster, more-optimized models than everyday models.
+When using the Braze-powered **Auto** model, we have optimized for models whose thinking capabilities is sufficient to perform tasks such as catalog search and user segmentation membership. When using other models, we recommend testing to confirm your model works well for your use case. You may need to adjust your [instructions](#writing-instructions) to give different levels of detail or step-by-step thinking to models with different speeds and capabilities.
 {% endalert %}
 
 ### Option 1: Use a Braze-powered model
@@ -70,6 +70,10 @@ This is the simplest option, with no extra setup required. Braze provides access
 ### Option 2: Bring your own API key
 
 With this option, you can connect your Braze account with providers like OpenAI, Anthropic, AWS Bedrock, or Google Gemini. If you bring your own API key from an LLM provider, costs are billed directly through your provider, not from Braze.
+
+{% alert important %}
+We recommend routinely testing the newest and latest models as older legacy models may be discontinued or deprecated after a few months of obsolescence.
+{% endalert %}
 
 To set this up:
 
