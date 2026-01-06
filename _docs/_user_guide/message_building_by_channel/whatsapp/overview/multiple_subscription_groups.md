@@ -1,7 +1,7 @@
 ---
 nav_title: Multiple business accounts
 article_title: Multiple WhatsApp Business Accounts and Phone Numbers
-page_order: 2
+page_order: 3
 description: "This reference article covers the steps to add WhatsApp Business accounts and phone numbers."
 page_type: reference
 channel:
@@ -34,6 +34,10 @@ You can add up to 10 WhatsApp Business accounts per workspace. The business acco
 {% alert important %}
 Your phone number must follow all the requirements of any WhatsApp phone number, including not being registered to any other WhatsApp accounts. 
 {% endalert %}
+
+### Considerations
+
+Connect each WhatsApp Business Account to a single Infobip account. Each time you connect an additional phone number or subscription group, if the WhatsApp Business Account is already connected to an Infobip account, you must re-enter the API credentials for the existing account.
 
 ## Multiple subscription groups and phone numbers
 
