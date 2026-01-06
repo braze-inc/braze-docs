@@ -12125,7 +12125,7 @@ This event occurs when a user clicks an SMS short link.
     "short_url" : "(required, string) Shortened url that was clicked",
     "suspected_bot_click_reason" : "(optional, array of string) Why this event was classified as a bot",
     "url" : "(optional, string) URL that the user clicked on",
-    "user_agent" : "(optional, string) User agent on which the spam report occurred"
+    "user_agent" : "(optional, string) User agent on which the click occurred"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
