@@ -15,6 +15,13 @@ toc_headers: h2
 [eCommerce recommended events]({{site.baseurl}}/user_guide/data/custom_data/recommended_events/ecommerce_events/) are currently in early access. Contact your Braze customer success manager if you’re interested in participating in this early access. <br><br>If you’re using the new Shopify connector, eCommerce recommended events will automatically be available through the integration.
 {% endalert %}
 
+## eCommerce Canvas templates
+
+- [Abandoned browse](#abandoned-browse)
+- [Abandoned cart](#abandoned-cart)
+- [Abandoned checkout](#abandoned-checkout)
+- [Order confirmation and feedback survey](#order-confirmation--feedback-survey)
+
 ## Using a Canvas template
 
 To use a Canvas template:
@@ -22,13 +29,6 @@ To use a Canvas template:
 2. Select **Create Canvas** > **Use a Canvas Template**.
 3. Browse the **Braze templates** tab for the template you want to use. You can preview a template by selecting its name.
 4. Select **Apply Template** for the template you want to use.<br><br>!["Canvas templates" page opened to the "Braze templates" tab and showing a list of recently used templates and selectable Braze templates.]({% image_buster /assets/img_archive/apply_template.png %}){: style="max-width:80%;"}
-
-## eCommerce templates
-
-- [Abandoned browse](#abandoned-browse)
-- [Abandoned cart](#abandoned-cart)
-- [Abandoned checkout](#abandoned-checkout)
-- [Order confirmation and feedback survey](#order-confirmation--feedback-survey)
 
 ## Abandoned browse
 
@@ -375,13 +375,18 @@ To segment by nested event properties, you can leverage [Segment Extensions]({{s
 
 ## Analytics
 
-{% alert note %}
-At this time, the Shopify integration doesn’t support populating the Braze [purchase event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events#purchase-events). As a result, purchase filters, Liquid tags, action-based triggered, and analytics should use the ecommerce.order_placed event. 
-{% endalert %}
+### Custom events report
 
-To create a [Custom Events report]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events#analytics) based on who has performed an event supported through the integration, you can specify the specific [event name]({{site.baseurl}}/shopify_data_features/).
+You can track eCommerce recommended event volume in the [Custom Events report]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_events/#analytics). Filter by **Perform Custom Event**, then specify the [eCommerce recommended event name]({{site.baseurl}}/user_guide/data/activation/custom_data/recommended_events/ecommerce_events/#types-of-ecommerce-recommended-events) to view its performance over time.
 
-To gain insights into the trends related to orders placed from your launched Canvases, you will need to set up a [Conversions Dashboard]({{site.baseurl}}/user_guide/data_and_analytics/analytics/conversions_dashboard#conversions-dashboard) and specify your Canvases.
+![Custom Events chart displaying results for six selected events.]({% image_buster /assets/img/ecommerce/custom_events_chart.png %})
 
-For more advanced reporting use cases, you can use the Braze [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/) to generate custom reports. 
+### Conversions report 
 
+When you launch a campaign or Canvas using the Places Order conversion event, you can create a corresponding [Conversion report]({{site.baseurl}}/user_guide/analytics/dashboard/conversions_dashboard#conversions-dashboard) to track performance. 
+
+![Conversion Details table with statistics on different campaigns and Canvases.]({% image_buster /assets/img/ecommerce/conversion_details.png %})
+
+### Revenue report 
+
+To analyze data from these new events, go to the [Dashboard Builder]({{site.baseurl}}/user_guide/analytics/reporting/dashboard_builder/) and view the [**eCommerce Revenue - Last Touch Attribution** dashboard]({{site.baseurl}}/ecommerce_revenue_dashboard/).

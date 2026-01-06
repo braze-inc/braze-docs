@@ -15,7 +15,7 @@ tool:
 
 ## How it works
 
-Let's say you're creating a personalized holiday campaign for active users, a conversion event of **Start a Session** within two or three days may be appropriate since it will allow you to gather a sense of user engagement from receiving your message. Additional events like **Make Purchase**, **Upgrade App**, or any of your custom events can be selected as conversion events.
+Let's say you're creating a personalized holiday campaign for active users, a conversion event of **Start a Session** within two or three days may be appropriate since it will allow you to gather a sense of user engagement from receiving your message. Additional events like **Places order**, **Upgrade App**, or any of your custom events can be selected as conversion events.
 
 {% alert tip %}
 For more on conversions, check out our [Braze Learning course](https://learning.braze.com/campaign-setup-delivery-targeting-conversions) on campaign setup.
@@ -56,14 +56,15 @@ We recommend using as many conversion events as you feel is necessary because th
 
 First, select the general type of event you'd like to use:
 
-| Conversion Event Type         | Description                                                                                                                                                                                                                                                                                                                                 |
-|-------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Starts Session**      | A user is counted as having converted when they open any one of the apps that you specify (defaults to all apps in the workspace).                                                                                                                                                                                                         |
-| **Makes Purchase**      | A user is counted as having converted when they purchase the product you specify (defaults to any product).                                                                                                                                                                                                                                 |
-| **Performs Custom Event** | A user is counted as having converted when they perform one of your existing custom events (no default, you must specify the event).                                                                                                                                                                                                        |
-| **Upgrade App**         | A user is counted as having converted when they upgrade the app version on any one of the apps that you specify (defaults to all apps in the workspace). Braze performs a best-efforts numerical comparison to determine if the change was an upgrade. Non-numeric versions are counted as conversions if the version changes.              |
-| **Opens email**         | A user is counted as having converted when they open the email (only for email campaigns).                                                                                                                                                                                                                                                 |
-| **Clicks email**        | A user is counted as having converted when they click a link within the email (only for email campaigns).                                                                                                                                                                                                                                  |
+| Conversion Event Type   | Description                |
+|-------------------------|----------------------------|
+| **Starts Session**      | A user is counted as having converted when they open any one of the apps that you specify (defaults to all apps in the workspace).|
+| **Makes Purchase**      | A user is counted as having converted when they record a [Purchase event]({{site.baseurl}}/api/objects_filters/purchase_object/). This tracks any purchase by default, or you can specify a particular product.|
+| **Places Order**        | A user is counted as having converted when they trigger the [Order Placed eCommerce recommended event]({{site.baseurl}}/user_guide/data/activation/custom_data/recommended_events/ecommerce_events?tab=ecommerce.order_placed#ecommerce-recommended-events). This tracks any order by default, or you can filter by a specific product.|
+| **Performs Custom Event**| A user is counted as having converted when they perform one of your existing custom events (no default, you must specify the event).|
+| **Upgrade App**         | A user is counted as having converted when they upgrade the app version on any one of the apps that you specify (defaults to all apps in the workspace). Braze performs a best-efforts numerical comparison to determine if the change was an upgrade. Non-numeric versions are counted as conversions if the version changes.|
+| **Opens email**         | A user is counted as having converted when they open the email (only for email campaigns).|
+| **Clicks email**        | A user is counted as having converted when they click a link within the email (only for email campaigns).|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 Set your conversion deadline. This is the maximum amount of time that may pass to consider a conversion. You have the option of allowing up to a 30-day window during which the conversion will be counted if the user takes the specified action.
