@@ -97,7 +97,7 @@ All successful responses will return `Subscribed`, `Unsubscribed`, or `Unknown` 
 ```
 
 {% alert note %}
-When a user unsubscribes globally, they're unsubscribed from each subscription group. This endpoint returns the last subscription status for each subscription group. This is expected behavior because if the user decides to globally resubscribe, Braze reverts each subscription status.
+When a user unsubscribes globally, they are unsubscribed from each subscription group. This endpoint returns the last subscription status for each subscription group. This is expected behavior because if the user decides to globally resubscribe, Braze reverts each subscription status.
 {% endalert %}
 
 {% endapi %}
