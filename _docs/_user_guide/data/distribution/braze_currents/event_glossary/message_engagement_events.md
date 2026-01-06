@@ -10116,7 +10116,7 @@ This event is created when a user opens an RCS message on their device, indicati
 {% endapi %}
 
 {% api %}
-## Rejection events {#rejection-events}
+## RCS Rejection events {#rcs-rejection-events}
 
 {% apitags %}
 RCS, Rejection
@@ -10326,7 +10326,7 @@ An event that is created when an RCS message fails to be delivered to a user's m
 {% endapi %}
 
 {% api %}
-## Send events {#send-events}
+## RCS Send events {#rcs-send-events}
 
 {% apitags %}
 RCS, Sends
@@ -11997,7 +11997,7 @@ This event occurs when a user clicks an SMS short link.
     "short_url" : "(required, string) Shortened url that was clicked",
     "suspected_bot_click_reason" : "(optional, array of string) Why this event was classified as a bot",
     "url" : "(optional, string) URL that the user clicked on",
-    "user_agent" : "(optional, string) User agent on which the spam report occurred",
+    "user_agent" : "(optional, string) User agent on which the click occurred",
     "user_phone_number" : "(optional, string) [PII] The user's phone number from which the message was received"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
@@ -12037,7 +12037,7 @@ This event occurs when a user clicks an SMS short link.
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token",
     "url" : "(optional, string) URL that the user clicked on",
-    "user_agent" : "(optional, string) User agent on which the spam report occurred",
+    "user_agent" : "(optional, string) User agent on which the click occurred",
     "user_phone_number" : "(optional, string) [PII] The user's phone number from which the message was received"
   }
 }
@@ -12073,7 +12073,7 @@ This event occurs when a user clicks an SMS short link.
           "short_url" : "(required, string) Shortened url that was clicked",
           "source_request_id" : "(required, string) Globally unique ID for this event",
           "url" : "(optional, string) URL that the user clicked on",
-          "user_agent" : "(optional, string) User agent on which the spam report occurred"
+          "user_agent" : "(optional, string) User agent on which the click occurred"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
@@ -12158,7 +12158,7 @@ This event occurs when a user clicks an SMS short link.
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "url" : "(required, string) URL that the user clicked on",
-  "user_agent" : "(optional, string) User agent on which the spam report occurred",
+  "user_agent" : "(optional, string) User agent on which the click occurred",
   "user_id" : "(required, string) Braze user ID of the user who performed this event",
   "user_phone_number" : "(optional, string) [PII] The user's phone number from which the message was received"
 }
@@ -13020,7 +13020,7 @@ This event occurs when a user clicks a link or button in a WhatsApp message wher
     "short_url" : "(required, string) Shortened url that was clicked",
     "timezone" : "(optional, string) Time zone of the user",
     "url" : "(optional, string) URL that the user clicked on",
-    "user_agent" : "(optional, string) User agent on which the spam report occurred",
+    "user_agent" : "(optional, string) User agent on which the click occurred",
     "user_phone_number" : "(optional, string) [PII] The user's phone number from which the message was received"
   },
   "event_type" : "(required, string) The event type name, as it is exported to Amplitude",
@@ -13058,7 +13058,7 @@ This event occurs when a user clicks a link or button in a WhatsApp message wher
     "time" : "(required, int) UNIX timestamp at which the event happened",
     "token" : "(required, string) The Mixpanel API token",
     "url" : "(optional, string) URL that the user clicked on",
-    "user_agent" : "(optional, string) User agent on which the spam report occurred",
+    "user_agent" : "(optional, string) User agent on which the click occurred",
     "user_phone_number" : "(optional, string) [PII] The user's phone number from which the message was received"
   }
 }
@@ -13093,7 +13093,7 @@ This event occurs when a user clicks a link or button in a WhatsApp message wher
           "short_url" : "(required, string) Shortened url that was clicked",
           "source_request_id" : "(required, string) Globally unique ID for this event",
           "url" : "(optional, string) URL that the user clicked on",
-          "user_agent" : "(optional, string) User agent on which the spam report occurred"
+          "user_agent" : "(optional, string) User agent on which the click occurred"
         },
         "custom_event_type" : "(required, string) The mParticle custom event type if the event_type is 'custom_event' (always 'other')",
         "event_name" : "(required, string) The event type name, as it is exported to mParticle",
@@ -13142,7 +13142,7 @@ This event occurs when a user clicks a link or button in a WhatsApp message wher
     "message_variation_id" : "(optional, string) API ID of the message variation this user received",
     "message_variation_name" : "(optional, string) Name of the message variation",
     "short_url" : "(required, string) Shortened url that was clicked",
-    "user_agent" : "(optional, string) User agent on which the spam report occurred"
+    "user_agent" : "(optional, string) User agent on which the click occurred"
   },
   "timestamp" : "(required, int) UNIX timestamp at which the event happened",
   "type" : "track",
@@ -13175,7 +13175,7 @@ This event occurs when a user clicks a link or button in a WhatsApp message wher
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
   "url" : "(required, string) URL that the user clicked on",
-  "user_agent" : "(optional, string) User agent on which the spam report occurred",
+  "user_agent" : "(optional, string) User agent on which the click occurred",
   "user_id" : "(required, string) Braze user ID of the user who performed this event",
   "user_phone_number" : "(optional, string) [PII] The user's phone number from which the message was received"
 }
