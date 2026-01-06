@@ -88,6 +88,22 @@ This event is not fired when the user actually uninstalls the app, as that's imp
 {% endalert %}
 
 {% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.behaviors.Uninstall
+
+{
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "app_id" : "(required, string) API ID of the app on which this event occurred",
+  "device_id" : "(optional, string) ID of the device on which the event occurred",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "id" : "(required, string) Globally unique ID for this event",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+
 {% tab Amplitude %}
 ```json
 // Uninstall (users.behaviors.Uninstall)
@@ -183,22 +199,6 @@ This event is not fired when the user actually uninstalls the app, as that's imp
 }
 ```
 {% endtab %}
-
-{% tab Cloud Storage %}
-```json
-// users.behaviors.Uninstall
-
-{
-  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-  "app_id" : "(required, string) API ID of the app on which this event occurred",
-  "device_id" : "(optional, string) ID of the device on which the event occurred",
-  "external_user_id" : "(optional, string) [PII] External ID of the user",
-  "id" : "(required, string) Globally unique ID for this event",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
-}
-```
-{% endtab %}
 {% endtabs %}
 
 {% endapi %}
@@ -213,6 +213,37 @@ Subscription
 This event occurs when Braze receives a request to update the global subscription state of the user.
 
 {% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.behaviors.subscription.GlobalStateChange
+
+{
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "app_id" : "(optional, string) API ID of the app on which this event occurred",
+  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+  "canvas_name" : "(optional, string) Name of the Canvas",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+  "channel" : "(optional, string) Channel this event belongs to",
+  "channel_identifier" : "(optional, string) [PII] The user's identifier on the channel the event is for.",
+  "email_address" : "(optional, string) [PII] Email address of the user",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "id" : "(required, string) Globally unique ID for this event",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "state_change_source" : "(optional, string) Source of the state change, e.g: REST API, SDK, Dashboard, etc.",
+  "subscription_status" : "(required, string) Subscription status: 'Subscribed', 'Unsubscribed' or 'Opted In'",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "timezone" : "(optional, string) Time zone of the user",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+
 {% tab Amplitude %}
 ```json
 // Global Subscription State Change (users.behaviors.subscription.GlobalStateChange)
@@ -370,37 +401,6 @@ This event occurs when Braze receives a request to update the global subscriptio
 }
 ```
 {% endtab %}
-
-{% tab Cloud Storage %}
-```json
-// users.behaviors.subscription.GlobalStateChange
-
-{
-  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-  "app_id" : "(optional, string) API ID of the app on which this event occurred",
-  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
-  "campaign_name" : "(optional, string) Name of the campaign",
-  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
-  "canvas_name" : "(optional, string) Name of the Canvas",
-  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
-  "canvas_step_name" : "(optional, string) Name of the Canvas step",
-  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
-  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-  "channel" : "(optional, string) Channel this event belongs to",
-  "channel_identifier" : "(optional, string) [PII] The user's identifier on the channel the event is for.",
-  "email_address" : "(optional, string) [PII] Email address of the user",
-  "external_user_id" : "(optional, string) [PII] External ID of the user",
-  "id" : "(required, string) Globally unique ID for this event",
-  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
-  "state_change_source" : "(optional, string) Source of the state change, e.g: REST API, SDK, Dashboard, etc.",
-  "subscription_status" : "(required, string) Subscription status: 'Subscribed', 'Unsubscribed' or 'Opted In'",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
-}
-```
-{% endtab %}
 {% endtabs %}
 
 #### Property details
@@ -440,6 +440,41 @@ Subscription groups are only available for email, SMS, RCS, and WhatsApp channel
 {% endalert %}
 
 {% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.behaviors.subscriptiongroup.StateChange
+
+{
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "app_id" : "(optional, string) API ID of the app on which this event occurred",
+  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+  "canvas_name" : "(optional, string) Name of the Canvas",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+  "channel" : "(optional, string) Channel this event belongs to",
+  "channel_identifier" : "(optional, string) [PII] The user's identifier on the channel the event is for.",
+  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+  "email_address" : "(optional, string) [PII] Email address of the user",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "id" : "(required, string) Globally unique ID for this event",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "message_variation_name" : "(optional, string) Name of the message variation",
+  "phone_number" : "(optional, string) [PII] Phone number of the user in e.164 format (for example +14155552671)",
+  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "state_change_source" : "(optional, string) Source of the state change, e.g: REST API, SDK, Dashboard, etc.",
+  "subscription_group_id" : "(required, string) Subscription group API ID",
+  "subscription_status" : "(required, string) Subscription status: 'Subscribed' or 'Unsubscribed'",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "timezone" : "(optional, string) Time zone of the user",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+
 {% tab Amplitude %}
 ```json
 // Subscription Group State Change (users.behaviors.subscriptiongroup.StateChange)
@@ -611,41 +646,6 @@ Subscription groups are only available for email, SMS, RCS, and WhatsApp channel
 }
 ```
 {% endtab %}
-
-{% tab Cloud Storage %}
-```json
-// users.behaviors.subscriptiongroup.StateChange
-
-{
-  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-  "app_id" : "(optional, string) API ID of the app on which this event occurred",
-  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
-  "campaign_name" : "(optional, string) Name of the campaign",
-  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
-  "canvas_name" : "(optional, string) Name of the Canvas",
-  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
-  "canvas_step_name" : "(optional, string) Name of the Canvas step",
-  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
-  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-  "channel" : "(optional, string) Channel this event belongs to",
-  "channel_identifier" : "(optional, string) [PII] The user's identifier on the channel the event is for.",
-  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
-  "email_address" : "(optional, string) [PII] Email address of the user",
-  "external_user_id" : "(optional, string) [PII] External ID of the user",
-  "id" : "(required, string) Globally unique ID for this event",
-  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
-  "message_variation_name" : "(optional, string) Name of the message variation",
-  "phone_number" : "(optional, string) [PII] Phone number of the user in e.164 format (for example +14155552671)",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
-  "state_change_source" : "(optional, string) Source of the state change, e.g: REST API, SDK, Dashboard, etc.",
-  "subscription_group_id" : "(required, string) Subscription group API ID",
-  "subscription_status" : "(required, string) Subscription status: 'Subscribed' or 'Unsubscribed'",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
-}
-```
-{% endtab %}
 {% endtabs %}
 
 #### Property details
@@ -687,6 +687,29 @@ Note that the conversion event is encoded in the `conversion_behavior` field, wh
 {% endalert %}
 
 {% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.campaigns.Conversion
+
+{
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "app_id" : "(optional, string) API ID of the app on which this event occurred",
+  "campaign_id" : "(required, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "conversion_behavior" : "(optional, string) JSON-encoded string describing the conversion behavior",
+  "conversion_behavior_index" : "(optional, int) Index of the conversion behavior",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "id" : "(required, string) Globally unique ID for this event",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "message_variation_name" : "(optional, string) Name of the message variation",
+  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "timezone" : "(optional, string) Time zone of the user",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+
 {% tab Amplitude %}
 ```json
 // Campaign Conversion (users.campaigns.Conversion)
@@ -815,29 +838,6 @@ Note that the conversion event is encoded in the `conversion_behavior` field, wh
 }
 ```
 {% endtab %}
-
-{% tab Cloud Storage %}
-```json
-// users.campaigns.Conversion
-
-{
-  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-  "app_id" : "(optional, string) API ID of the app on which this event occurred",
-  "campaign_id" : "(required, string) API ID of the campaign this event belongs to",
-  "campaign_name" : "(optional, string) Name of the campaign",
-  "conversion_behavior" : "(optional, string) JSON-encoded string describing the conversion behavior",
-  "conversion_behavior_index" : "(optional, int) Index of the conversion behavior",
-  "external_user_id" : "(optional, string) [PII] External ID of the user",
-  "id" : "(required, string) Globally unique ID for this event",
-  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
-  "message_variation_name" : "(optional, string) Name of the message variation",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
-}
-```
-{% endtab %}
 {% endtabs %}
 
 {% endapi %}
@@ -856,6 +856,27 @@ This event occurs when a user is enrolled in a control variant set on a multi-va
 {% endalert %}
 
 {% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.campaigns.EnrollInControl
+
+{
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "app_id" : "(optional, string) API ID of the app on which this event occurred",
+  "campaign_id" : "(required, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "id" : "(required, string) Globally unique ID for this event",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "message_variation_name" : "(optional, string) Name of the message variation",
+  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "timezone" : "(optional, string) Time zone of the user",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+
 {% tab Amplitude %}
 ```json
 // Campaign Control Group Enrollment (users.campaigns.EnrollInControl)
@@ -976,27 +997,6 @@ This event occurs when a user is enrolled in a control variant set on a multi-va
 }
 ```
 {% endtab %}
-
-{% tab Cloud Storage %}
-```json
-// users.campaigns.EnrollInControl
-
-{
-  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-  "app_id" : "(optional, string) API ID of the app on which this event occurred",
-  "campaign_id" : "(required, string) API ID of the campaign this event belongs to",
-  "campaign_name" : "(optional, string) Name of the campaign",
-  "external_user_id" : "(optional, string) [PII] External ID of the user",
-  "id" : "(required, string) Globally unique ID for this event",
-  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
-  "message_variation_name" : "(optional, string) Name of the message variation",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
-}
-```
-{% endtab %}
 {% endtabs %}
 
 {% endapi %}
@@ -1015,6 +1015,30 @@ Note that the conversion event is encoded in the `conversion_behavior` field, wh
 {% endalert %}
 
 {% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.canvas.Conversion
+
+{
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "app_id" : "(optional, string) API ID of the app on which this event occurred",
+  "canvas_id" : "(required, string) API ID of the Canvas this event belongs to",
+  "canvas_name" : "(optional, string) Name of the Canvas",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(required, string) API ID of the Canvas variation this event belongs to",
+  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+  "conversion_behavior" : "(optional, string) JSON-encoded string describing the conversion behavior",
+  "conversion_behavior_index" : "(optional, int) Index of the conversion behavior",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "id" : "(required, string) Globally unique ID for this event",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "timezone" : "(optional, string) Time zone of the user",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+
 {% tab Amplitude %}
 ```json
 // Canvas Conversion (users.canvas.Conversion)
@@ -1143,30 +1167,6 @@ Note that the conversion event is encoded in the `conversion_behavior` field, wh
 }
 ```
 {% endtab %}
-
-{% tab Cloud Storage %}
-```json
-// users.canvas.Conversion
-
-{
-  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-  "app_id" : "(optional, string) API ID of the app on which this event occurred",
-  "canvas_id" : "(required, string) API ID of the Canvas this event belongs to",
-  "canvas_name" : "(optional, string) Name of the Canvas",
-  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
-  "canvas_step_name" : "(optional, string) Name of the Canvas step",
-  "canvas_variation_id" : "(required, string) API ID of the Canvas variation this event belongs to",
-  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-  "conversion_behavior" : "(optional, string) JSON-encoded string describing the conversion behavior",
-  "conversion_behavior_index" : "(optional, int) Index of the conversion behavior",
-  "external_user_id" : "(optional, string) [PII] External ID of the user",
-  "id" : "(required, string) Globally unique ID for this event",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
-}
-```
-{% endtab %}
 {% endtabs %}
 
 {% endapi %}
@@ -1181,6 +1181,28 @@ Canvas, Entry
 This event occurs when a user enters into the Canvas. This event tells you which variant the user entered into.
 
 {% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.canvas.Entry
+
+{
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "canvas_id" : "(required, string) API ID of the Canvas this event belongs to",
+  "canvas_name" : "(optional, string) Name of the Canvas",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(required, string) API ID of the Canvas variation this event belongs to",
+  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "id" : "(required, string) Globally unique ID for this event",
+  "in_control_group" : "(required, boolean) Whether the user was enrolled in the control group",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "timezone" : "(optional, string) Time zone of the user",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+
 {% tab Amplitude %}
 ```json
 // Canvas Entry (users.canvas.Entry)
@@ -1302,28 +1324,6 @@ This event occurs when a user enters into the Canvas. This event tells you which
 }
 ```
 {% endtab %}
-
-{% tab Cloud Storage %}
-```json
-// users.canvas.Entry
-
-{
-  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-  "canvas_id" : "(required, string) API ID of the Canvas this event belongs to",
-  "canvas_name" : "(optional, string) Name of the Canvas",
-  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
-  "canvas_step_name" : "(optional, string) Name of the Canvas step",
-  "canvas_variation_id" : "(required, string) API ID of the Canvas variation this event belongs to",
-  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-  "external_user_id" : "(optional, string) [PII] External ID of the user",
-  "id" : "(required, string) Globally unique ID for this event",
-  "in_control_group" : "(required, boolean) Whether the user was enrolled in the control group",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
-}
-```
-{% endtab %}
 {% endtabs %}
 
 {% endapi %}
@@ -1338,6 +1338,30 @@ Exit, Canvas
 This event occurs when a user has exited a Canvas by matching an audience.
 
 {% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.canvas.exit.MatchedAudience
+
+{
+  "app_group_api_id" : "(optional, string) [DEPRECATED]",
+  "app_group_id" : "(required, string) API ID of the app group this user belongs to",
+  "canvas_api_id" : "(optional, string) [DEPRECATED]",
+  "canvas_id" : "(required, string) API ID of the Canvas this event belongs to",
+  "canvas_name" : "(optional, string) Name of the Canvas",
+  "canvas_step_api_id" : "(optional, string) [DEPRECATED]",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_api_id" : "(optional, string) [DEPRECATED]",
+  "canvas_variation_id" : "(required, string) API ID of the Canvas variation this event belongs to",
+  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "id" : "(required, string) Globally unique ID for this event",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+
 {% tab Amplitude %}
 ```json
 // Exit Match Audience (users.canvas.exit.MatchedAudience)
@@ -1449,10 +1473,23 @@ This event occurs when a user has exited a Canvas by matching an audience.
 }
 ```
 {% endtab %}
+{% endtabs %}
 
+{% endapi %}
+
+{% api %}
+## Exit Perform Event events {#exit-perform-event-events}
+
+{% apitags %}
+Exit, Canvas
+{% endapitags %}
+
+This event occurs when a user has exited a Canvas by performing an event.
+
+{% tabs %}
 {% tab Cloud Storage %}
 ```json
-// users.canvas.exit.MatchedAudience
+// users.canvas.exit.PerformedEvent
 
 {
   "app_group_api_id" : "(optional, string) [DEPRECATED]",
@@ -1473,20 +1510,7 @@ This event occurs when a user has exited a Canvas by matching an audience.
 }
 ```
 {% endtab %}
-{% endtabs %}
 
-{% endapi %}
-
-{% api %}
-## Exit Perform Event events {#exit-perform-event-events}
-
-{% apitags %}
-Exit, Canvas
-{% endapitags %}
-
-This event occurs when a user has exited a Canvas by performing an event.
-
-{% tabs %}
 {% tab Amplitude %}
 ```json
 // Exit Perform Event (users.canvas.exit.PerformedEvent)
@@ -1598,30 +1622,6 @@ This event occurs when a user has exited a Canvas by performing an event.
 }
 ```
 {% endtab %}
-
-{% tab Cloud Storage %}
-```json
-// users.canvas.exit.PerformedEvent
-
-{
-  "app_group_api_id" : "(optional, string) [DEPRECATED]",
-  "app_group_id" : "(required, string) API ID of the app group this user belongs to",
-  "canvas_api_id" : "(optional, string) [DEPRECATED]",
-  "canvas_id" : "(required, string) API ID of the Canvas this event belongs to",
-  "canvas_name" : "(optional, string) Name of the Canvas",
-  "canvas_step_api_id" : "(optional, string) [DEPRECATED]",
-  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
-  "canvas_step_name" : "(optional, string) Name of the Canvas step",
-  "canvas_variation_api_id" : "(optional, string) [DEPRECATED]",
-  "canvas_variation_id" : "(required, string) API ID of the Canvas variation this event belongs to",
-  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-  "external_user_id" : "(optional, string) [PII] External ID of the user",
-  "id" : "(required, string) Globally unique ID for this event",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
-}
-```
-{% endtab %}
 {% endtabs %}
 
 {% endapi %}
@@ -1636,6 +1636,31 @@ Canvas
 This event occurs when a user convert for a Canvas experiment step.
 
 {% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.canvas.experimentstep.Conversion
+
+{
+  "app_id" : "(optional, string) API ID of the app on which this event occurred",
+  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+  "canvas_name" : "(optional, string) Name of the Canvas",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+  "conversion_behavior" : "(optional, string) JSON-encoded string describing the conversion behavior",
+  "conversion_behavior_index" : "(optional, int) Index of the conversion behavior",
+  "experiment_split_id" : "(optional, string) API ID of the experiment split the user enrolled in",
+  "experiment_split_name" : "(optional, string) Name of the experiment split",
+  "experiment_step_id" : "(optional, string) API ID of the experiment step this event belongs to",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "id" : "(required, string) Globally unique ID for this event",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+
 {% tab Amplitude %}
 ```json
 // Experiment Step Conversion (users.canvas.experimentstep.Conversion)
@@ -1766,31 +1791,6 @@ This event occurs when a user convert for a Canvas experiment step.
 }
 ```
 {% endtab %}
-
-{% tab Cloud Storage %}
-```json
-// users.canvas.experimentstep.Conversion
-
-{
-  "app_id" : "(optional, string) API ID of the app on which this event occurred",
-  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
-  "canvas_name" : "(optional, string) Name of the Canvas",
-  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
-  "canvas_step_name" : "(optional, string) Name of the Canvas step",
-  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
-  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-  "conversion_behavior" : "(optional, string) JSON-encoded string describing the conversion behavior",
-  "conversion_behavior_index" : "(optional, int) Index of the conversion behavior",
-  "experiment_split_id" : "(optional, string) API ID of the experiment split the user enrolled in",
-  "experiment_split_name" : "(optional, string) Name of the experiment split",
-  "experiment_step_id" : "(optional, string) API ID of the experiment step this event belongs to",
-  "external_user_id" : "(optional, string) [PII] External ID of the user",
-  "id" : "(required, string) Globally unique ID for this event",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
-}
-```
-{% endtab %}
 {% endtabs %}
 
 {% endapi %}
@@ -1805,6 +1805,29 @@ Canvas
 This event occurs when a user enters a Canvas experiment step path.
 
 {% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.canvas.experimentstep.SplitEntry
+
+{
+  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+  "canvas_name" : "(optional, string) Name of the Canvas",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+  "experiment_split_id" : "(optional, string) API ID of the experiment split the user enrolled in",
+  "experiment_split_name" : "(optional, string) Name of the experiment split",
+  "experiment_step_id" : "(optional, string) API ID of the experiment step this event belongs to",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "id" : "(required, string) Globally unique ID for this event",
+  "in_control_group" : "(required, boolean) Whether the user was enrolled in the control group",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+
 {% tab Amplitude %}
 ```json
 // Experiment Split Entry (users.canvas.experimentstep.SplitEntry)
@@ -1928,29 +1951,6 @@ This event occurs when a user enters a Canvas experiment step path.
 }
 ```
 {% endtab %}
-
-{% tab Cloud Storage %}
-```json
-// users.canvas.experimentstep.SplitEntry
-
-{
-  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
-  "canvas_name" : "(optional, string) Name of the Canvas",
-  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
-  "canvas_step_name" : "(optional, string) Name of the Canvas step",
-  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
-  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-  "experiment_split_id" : "(optional, string) API ID of the experiment split the user enrolled in",
-  "experiment_split_name" : "(optional, string) Name of the experiment split",
-  "experiment_step_id" : "(optional, string) API ID of the experiment step this event belongs to",
-  "external_user_id" : "(optional, string) [PII] External ID of the user",
-  "id" : "(required, string) Globally unique ID for this event",
-  "in_control_group" : "(required, boolean) Whether the user was enrolled in the control group",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
-}
-```
-{% endtab %}
 {% endtabs %}
 
 {% endapi %}
@@ -1965,6 +1965,32 @@ Canvas, Progression
 This event occurs when a user progresses through a step in a Canvas with some outcome. Note that this event doesn't occur when steps are entered or exited. Currently, only split steps (Audience Paths, Decision Split, Action Paths, Experiment) and advance outcomes generate step progression events.
 
 {% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.canvasstep.Progression
+
+{
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "canvas_entry_id" : "(required, string) Unique identifier for this instance of a user in a canvas",
+  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+  "canvas_name" : "(optional, string) Name of the Canvas",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+  "device_id" : "(optional, string) ID of the device on which the event occurred",
+  "exit_reason" : "(optional, string) If this is an exit, the reason a user exited the canvas during the step",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "id" : "(required, string) Globally unique ID for this event",
+  "is_canvas_entry" : "(optional, boolean) Whether this is entry into a first step in a canvas",
+  "next_step_id" : "(optional, string) API ID of the next step in the canvas",
+  "progression_type" : "(required, string) What type of step progression event this is",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+
 {% tab Amplitude %}
 ```json
 // Canvas Step Progression (users.canvasstep.Progression)
@@ -2102,32 +2128,6 @@ This event occurs when a user progresses through a step in a Canvas with some ou
 }
 ```
 {% endtab %}
-
-{% tab Cloud Storage %}
-```json
-// users.canvasstep.Progression
-
-{
-  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-  "canvas_entry_id" : "(required, string) Unique identifier for this instance of a user in a canvas",
-  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
-  "canvas_name" : "(optional, string) Name of the Canvas",
-  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
-  "canvas_step_name" : "(optional, string) Name of the Canvas step",
-  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
-  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-  "device_id" : "(optional, string) ID of the device on which the event occurred",
-  "exit_reason" : "(optional, string) If this is an exit, the reason a user exited the canvas during the step",
-  "external_user_id" : "(optional, string) [PII] External ID of the user",
-  "id" : "(required, string) Globally unique ID for this event",
-  "is_canvas_entry" : "(optional, boolean) Whether this is entry into a first step in a canvas",
-  "next_step_id" : "(optional, string) API ID of the next step in the canvas",
-  "progression_type" : "(required, string) What type of step progression event this is",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
-}
-```
-{% endtab %}
 {% endtabs %}
 
 {% endapi %}
@@ -2142,6 +2142,43 @@ Banner, Abort
 This event occurs when an originally scheduled banner message was aborted for some reason.
 
 {% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.messages.banner.Abort
+
+{
+  "abort_log" : "(optional, string) [PII] Log message describing abort details (up to 128 chars)",
+  "abort_type" : "(optional, string) Type of abort",
+  "ad_id" : "(optional, string) [PII] Advertising identifier",
+  "ad_id_type" : "(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']",
+  "ad_tracking_enabled" : "(optional, boolean) Whether advertising tracking is enabled for the device",
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "app_id" : "(optional, string) API ID of the app on which this event occurred",
+  "banner_placement_id" : "(optional, string) Customer specified banner placement ID",
+  "browser" : "(optional, string) Device browser - extracted from user_agent - on which the open occurred",
+  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "carrier" : "(optional, string) Carrier of the device",
+  "country" : "(optional, string) [PII] Country of the user",
+  "device_id" : "(optional, string) ID of the device on which the event occurred",
+  "device_model" : "(optional, string) Model of the device",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "gender" : "(optional, string) [PII] Gender of the user, one of ['M', 'F', 'O', 'N', 'P']",
+  "id" : "(required, string) Globally unique ID for this event",
+  "language" : "(optional, string) [PII] Language of the user",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "message_variation_name" : "(optional, string) Name of the message variation",
+  "os_version" : "(optional, string) Version of the operating system of the device",
+  "platform" : "(optional, string) Platform of the device",
+  "resolution" : "(optional, string) Resolution of the device",
+  "sdk_version" : "(optional, string) Version of the Braze SDK in use during the event",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "timezone" : "(optional, string) Time zone of the user",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+
 {% tab Amplitude %}
 ```json
 // Banner Abort (users.messages.banner.Abort)
@@ -2298,14 +2335,25 @@ This event occurs when an originally scheduled banner message was aborted for so
 }
 ```
 {% endtab %}
+{% endtabs %}
 
+{% endapi %}
+
+{% api %}
+## Banner Click events {#banner-click-events}
+
+{% apitags %}
+Banner, Clicks
+{% endapitags %}
+
+This event occurs when a user clicks a banner.
+
+{% tabs %}
 {% tab Cloud Storage %}
 ```json
-// users.messages.banner.Abort
+// users.messages.banner.Click
 
 {
-  "abort_log" : "(optional, string) [PII] Log message describing abort details (up to 128 chars)",
-  "abort_type" : "(optional, string) Type of abort",
   "ad_id" : "(optional, string) [PII] Advertising identifier",
   "ad_id_type" : "(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']",
   "ad_tracking_enabled" : "(optional, boolean) Whether advertising tracking is enabled for the device",
@@ -2313,6 +2361,7 @@ This event occurs when an originally scheduled banner message was aborted for so
   "app_id" : "(optional, string) API ID of the app on which this event occurred",
   "banner_placement_id" : "(optional, string) Customer specified banner placement ID",
   "browser" : "(optional, string) Device browser - extracted from user_agent - on which the open occurred",
+  "button_id" : "(optional, string) ID of the button clicked, if this click represents a click on a button",
   "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
   "campaign_name" : "(optional, string) Name of the campaign",
   "carrier" : "(optional, string) Carrier of the device",
@@ -2335,20 +2384,7 @@ This event occurs when an originally scheduled banner message was aborted for so
 }
 ```
 {% endtab %}
-{% endtabs %}
 
-{% endapi %}
-
-{% api %}
-## Banner Click events {#banner-click-events}
-
-{% apitags %}
-Banner, Clicks
-{% endapitags %}
-
-This event occurs when a user clicks a banner.
-
-{% tabs %}
 {% tab Amplitude %}
 ```json
 // Banner Click (users.messages.banner.Click)
@@ -2501,10 +2537,23 @@ This event occurs when a user clicks a banner.
 }
 ```
 {% endtab %}
+{% endtabs %}
 
+{% endapi %}
+
+{% api %}
+## Banner Impression events {#banner-impression-events}
+
+{% apitags %}
+Banner, Impressions
+{% endapitags %}
+
+This event occurs when a user views a banner.
+
+{% tabs %}
 {% tab Cloud Storage %}
 ```json
-// users.messages.banner.Click
+// users.messages.banner.Impression
 
 {
   "ad_id" : "(optional, string) [PII] Advertising identifier",
@@ -2514,7 +2563,6 @@ This event occurs when a user clicks a banner.
   "app_id" : "(optional, string) API ID of the app on which this event occurred",
   "banner_placement_id" : "(optional, string) Customer specified banner placement ID",
   "browser" : "(optional, string) Device browser - extracted from user_agent - on which the open occurred",
-  "button_id" : "(optional, string) ID of the button clicked, if this click represents a click on a button",
   "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
   "campaign_name" : "(optional, string) Name of the campaign",
   "carrier" : "(optional, string) Carrier of the device",
@@ -2537,20 +2585,6 @@ This event occurs when a user clicks a banner.
 }
 ```
 {% endtab %}
-{% endtabs %}
-
-{% endapi %}
-
-{% api %}
-## Banner Impression events {#banner-impression-events}
-
-{% apitags %}
-Banner, Impressions
-{% endapitags %}
-
-This event occurs when a user views a banner.
-
-{% tabs %}
 {% tab Amplitude %}
 ```json
 // Banner Impression (users.messages.banner.Impression)
@@ -2699,41 +2733,6 @@ This event occurs when a user views a banner.
 }
 ```
 {% endtab %}
-
-{% tab Cloud Storage %}
-```json
-// users.messages.banner.Impression
-
-{
-  "ad_id" : "(optional, string) [PII] Advertising identifier",
-  "ad_id_type" : "(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']",
-  "ad_tracking_enabled" : "(optional, boolean) Whether advertising tracking is enabled for the device",
-  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-  "app_id" : "(optional, string) API ID of the app on which this event occurred",
-  "banner_placement_id" : "(optional, string) Customer specified banner placement ID",
-  "browser" : "(optional, string) Device browser - extracted from user_agent - on which the open occurred",
-  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
-  "campaign_name" : "(optional, string) Name of the campaign",
-  "carrier" : "(optional, string) Carrier of the device",
-  "country" : "(optional, string) [PII] Country of the user",
-  "device_id" : "(optional, string) ID of the device on which the event occurred",
-  "device_model" : "(optional, string) Model of the device",
-  "external_user_id" : "(optional, string) [PII] External ID of the user",
-  "gender" : "(optional, string) [PII] Gender of the user, one of ['M', 'F', 'O', 'N', 'P']",
-  "id" : "(required, string) Globally unique ID for this event",
-  "language" : "(optional, string) [PII] Language of the user",
-  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
-  "message_variation_name" : "(optional, string) Name of the message variation",
-  "os_version" : "(optional, string) Version of the operating system of the device",
-  "platform" : "(optional, string) Platform of the device",
-  "resolution" : "(optional, string) Resolution of the device",
-  "sdk_version" : "(optional, string) Version of the Braze SDK in use during the event",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
-}
-```
-{% endtab %}
 {% endtabs %}
 
 {% endapi %}
@@ -2748,6 +2747,37 @@ Abort, Content Cards
 This event occurs if a Content Card message was aborted based on Liquid aborts, etc.
 
 {% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.messages.contentcard.Abort
+
+{
+  "abort_log" : "(optional, string) [PII] Log message describing abort details (up to 128 chars)",
+  "abort_type" : "(optional, string) Type of abort",
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+  "canvas_name" : "(optional, string) Name of the Canvas",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_message_variation_id" : "(optional, string) API ID of the Canvas step message variation this user received",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+  "device_id" : "(optional, string) ID of the device on which the event occurred",
+  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "id" : "(required, string) Globally unique ID for this event",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "message_variation_name" : "(optional, string) Name of the message variation",
+  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "timezone" : "(optional, string) Time zone of the user",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+
 {% tab Amplitude %}
 ```json
 // Content Card Abort (users.messages.contentcard.Abort)
@@ -2897,37 +2927,6 @@ This event occurs if a Content Card message was aborted based on Liquid aborts, 
 }
 ```
 {% endtab %}
-
-{% tab Cloud Storage %}
-```json
-// users.messages.contentcard.Abort
-
-{
-  "abort_log" : "(optional, string) [PII] Log message describing abort details (up to 128 chars)",
-  "abort_type" : "(optional, string) Type of abort",
-  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
-  "campaign_name" : "(optional, string) Name of the campaign",
-  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
-  "canvas_name" : "(optional, string) Name of the Canvas",
-  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
-  "canvas_step_message_variation_id" : "(optional, string) API ID of the Canvas step message variation this user received",
-  "canvas_step_name" : "(optional, string) Name of the Canvas step",
-  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
-  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-  "device_id" : "(optional, string) ID of the device on which the event occurred",
-  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
-  "external_user_id" : "(optional, string) [PII] External ID of the user",
-  "id" : "(required, string) Globally unique ID for this event",
-  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
-  "message_variation_name" : "(optional, string) Name of the message variation",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
-}
-```
-{% endtab %}
 {% endtabs %}
 
 #### Property details
@@ -2950,6 +2949,41 @@ This event occurs when a user clicks a Content Card.
 {% endalert %}
 
 {% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.messages.contentcard.Click
+
+{
+  "ad_id" : "(optional, string) [PII] Advertising identifier",
+  "ad_id_type" : "(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']",
+  "ad_tracking_enabled" : "(optional, boolean) Whether advertising tracking is enabled for the device",
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "app_id" : "(required, string) API ID of the app on which this event occurred",
+  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+  "canvas_name" : "(optional, string) Name of the Canvas",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+  "content_card_id" : "(required, string) ID of the card that generated this event",
+  "device_id" : "(optional, string) ID of the device on which the event occurred",
+  "device_model" : "(optional, string) Model of the device",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "id" : "(required, string) Globally unique ID for this event",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "message_variation_name" : "(optional, string) Name of the message variation",
+  "os_version" : "(optional, string) Version of the operating system of the device",
+  "platform" : "(optional, string) Platform of the device",
+  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "timezone" : "(optional, string) Time zone of the user",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+
 {% tab Amplitude %}
 ```json
 // Content Card Click (users.messages.contentcard.Click)
@@ -3126,10 +3160,31 @@ This event occurs when a user clicks a Content Card.
 }
 ```
 {% endtab %}
+{% endtabs %}
 
+#### Property details
+
+- For `ad_id`, `ad_id_type`, and `ad_tracking_enabled`, you need to explicitly collect the iOS IDFA and Android Google advertising ID through the native SDKs. Learn more about this setup for [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift) and [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
+- If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) data, contact your customer success manager to enable sending `ad_id`.
+{% endapi %}
+
+{% api %}
+## Content Card Dismiss events {#content-card-dismiss-events}
+
+{% apitags %}
+Content Cards, Dismissal
+{% endapitags %}
+
+This event occurs when a user dismisses a Content Card.
+
+{% alert note %}
+`dispatch_id` is deprecated and will be removed in the next Currents release.
+{% endalert %}
+
+{% tabs %}
 {% tab Cloud Storage %}
 ```json
-// users.messages.contentcard.Click
+// users.messages.contentcard.Dismiss
 
 {
   "ad_id" : "(optional, string) [PII] Advertising identifier",
@@ -3161,28 +3216,7 @@ This event occurs when a user clicks a Content Card.
 }
 ```
 {% endtab %}
-{% endtabs %}
 
-#### Property details
-
-- For `ad_id`, `ad_id_type`, and `ad_tracking_enabled`, you need to explicitly collect the iOS IDFA and Android Google advertising ID through the native SDKs. Learn more about this setup for [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift) and [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
-- If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) data, contact your customer success manager to enable sending `ad_id`.
-{% endapi %}
-
-{% api %}
-## Content Card Dismiss events {#content-card-dismiss-events}
-
-{% apitags %}
-Content Cards, Dismissal
-{% endapitags %}
-
-This event occurs when a user dismisses a Content Card.
-
-{% alert note %}
-`dispatch_id` is deprecated and will be removed in the next Currents release.
-{% endalert %}
-
-{% tabs %}
 {% tab Amplitude %}
 ```json
 // Content Card Dismiss (users.messages.contentcard.Dismiss)
@@ -3359,10 +3393,31 @@ This event occurs when a user dismisses a Content Card.
 }
 ```
 {% endtab %}
+{% endtabs %}
 
+#### Property details
+
+- For `ad_id`, `ad_id_type`, and `ad_tracking_enabled`, you need to explicitly collect the iOS IDFA and Android Google advertising ID through the native SDKs. Learn more about this setup for [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift) and [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
+- If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) data, contact your customer success manager to enable sending `ad_id`.
+{% endapi %}
+
+{% api %}
+## Content Card Impression events {#content-card-impression-events}
+
+{% apitags %}
+Content Cards, Impressions
+{% endapitags %}
+
+This event occurs when a user views a Content Card.
+
+{% alert note %}
+`dispatch_id` is deprecated and will be removed in the next Currents release.
+{% endalert %}
+
+{% tabs %}
 {% tab Cloud Storage %}
 ```json
-// users.messages.contentcard.Dismiss
+// users.messages.contentcard.Impression
 
 {
   "ad_id" : "(optional, string) [PII] Advertising identifier",
@@ -3394,28 +3449,7 @@ This event occurs when a user dismisses a Content Card.
 }
 ```
 {% endtab %}
-{% endtabs %}
 
-#### Property details
-
-- For `ad_id`, `ad_id_type`, and `ad_tracking_enabled`, you need to explicitly collect the iOS IDFA and Android Google advertising ID through the native SDKs. Learn more about this setup for [iOS]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift) and [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android#android_google-advertising-id).
-- If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) data, contact your customer success manager to enable sending `ad_id`.
-{% endapi %}
-
-{% api %}
-## Content Card Impression events {#content-card-impression-events}
-
-{% apitags %}
-Content Cards, Impressions
-{% endapitags %}
-
-This event occurs when a user views a Content Card.
-
-{% alert note %}
-`dispatch_id` is deprecated and will be removed in the next Currents release.
-{% endalert %}
-
-{% tabs %}
 {% tab Amplitude %}
 ```json
 // Content Card Impression (users.messages.contentcard.Impression)
@@ -3592,41 +3626,6 @@ This event occurs when a user views a Content Card.
 }
 ```
 {% endtab %}
-
-{% tab Cloud Storage %}
-```json
-// users.messages.contentcard.Impression
-
-{
-  "ad_id" : "(optional, string) [PII] Advertising identifier",
-  "ad_id_type" : "(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']",
-  "ad_tracking_enabled" : "(optional, boolean) Whether advertising tracking is enabled for the device",
-  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-  "app_id" : "(required, string) API ID of the app on which this event occurred",
-  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
-  "campaign_name" : "(optional, string) Name of the campaign",
-  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
-  "canvas_name" : "(optional, string) Name of the Canvas",
-  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
-  "canvas_step_name" : "(optional, string) Name of the Canvas step",
-  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
-  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-  "content_card_id" : "(required, string) ID of the card that generated this event",
-  "device_id" : "(optional, string) ID of the device on which the event occurred",
-  "device_model" : "(optional, string) Model of the device",
-  "external_user_id" : "(optional, string) [PII] External ID of the user",
-  "id" : "(required, string) Globally unique ID for this event",
-  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
-  "message_variation_name" : "(optional, string) Name of the message variation",
-  "os_version" : "(optional, string) Version of the operating system of the device",
-  "platform" : "(optional, string) Platform of the device",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
-}
-```
-{% endtab %}
 {% endtabs %}
 
 #### Property details
@@ -3649,6 +3648,35 @@ This event occurs when a Content Card gets sent to a user.
 {% endalert %}
 
 {% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.messages.contentcard.Send
+
+{
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+  "canvas_name" : "(optional, string) Name of the Canvas",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+  "content_card_id" : "(required, string) ID of the card that generated this event",
+  "device_id" : "(optional, string) ID of the device on which the event occurred",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "id" : "(required, string) Globally unique ID for this event",
+  "message_extras" : "(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "message_variation_name" : "(optional, string) Name of the message variation",
+  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "timezone" : "(optional, string) Time zone of the user",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+
 {% tab Amplitude %}
 ```json
 // Content Card Send (users.messages.contentcard.Send)
@@ -3798,35 +3826,6 @@ This event occurs when a Content Card gets sent to a user.
 }
 ```
 {% endtab %}
-
-{% tab Cloud Storage %}
-```json
-// users.messages.contentcard.Send
-
-{
-  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
-  "campaign_name" : "(optional, string) Name of the campaign",
-  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
-  "canvas_name" : "(optional, string) Name of the Canvas",
-  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
-  "canvas_step_name" : "(optional, string) Name of the Canvas step",
-  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
-  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-  "content_card_id" : "(required, string) ID of the card that generated this event",
-  "device_id" : "(optional, string) ID of the device on which the event occurred",
-  "external_user_id" : "(optional, string) [PII] External ID of the user",
-  "id" : "(required, string) Globally unique ID for this event",
-  "message_extras" : "(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering",
-  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
-  "message_variation_name" : "(optional, string) Name of the message variation",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
-}
-```
-{% endtab %}
 {% endtabs %}
 
 #### Property details
@@ -3844,6 +3843,39 @@ Abort, Email
 This event occurs if an email message was aborted based on Liquid aborts, etc.
 
 {% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.messages.email.Abort
+
+{
+  "abort_log" : "(optional, string) [PII] Log message describing abort details (up to 128 chars)",
+  "abort_type" : "(optional, string) Type of abort",
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+  "canvas_name" : "(optional, string) Name of the Canvas",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_message_variation_id" : "(optional, string) API ID of the Canvas step message variation this user received",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+  "device_id" : "(optional, string) ID of the device on which the event occurred",
+  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+  "email_address" : "(required, string) [PII] Email address of the user",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "id" : "(required, string) Globally unique ID for this event",
+  "ip_pool" : "(optional, string) IP pool from which the email send was made",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "message_variation_name" : "(optional, string) Name of the message variation",
+  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "timezone" : "(optional, string) Time zone of the user",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+
 {% tab Amplitude %}
 ```json
 // Email Abort (users.messages.email.Abort)
@@ -4002,39 +4034,6 @@ This event occurs if an email message was aborted based on Liquid aborts, etc.
 }
 ```
 {% endtab %}
-
-{% tab Cloud Storage %}
-```json
-// users.messages.email.Abort
-
-{
-  "abort_log" : "(optional, string) [PII] Log message describing abort details (up to 128 chars)",
-  "abort_type" : "(optional, string) Type of abort",
-  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
-  "campaign_name" : "(optional, string) Name of the campaign",
-  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
-  "canvas_name" : "(optional, string) Name of the Canvas",
-  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
-  "canvas_step_message_variation_id" : "(optional, string) API ID of the Canvas step message variation this user received",
-  "canvas_step_name" : "(optional, string) Name of the Canvas step",
-  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
-  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-  "device_id" : "(optional, string) ID of the device on which the event occurred",
-  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
-  "email_address" : "(required, string) [PII] Email address of the user",
-  "external_user_id" : "(optional, string) [PII] External ID of the user",
-  "id" : "(required, string) Globally unique ID for this event",
-  "ip_pool" : "(optional, string) IP pool from which the email send was made",
-  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
-  "message_variation_name" : "(optional, string) Name of the message variation",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
-}
-```
-{% endtab %}
 {% endtabs %}
 
 #### Property details
@@ -4053,6 +4052,40 @@ Email, Bounce
 This event occurs when an Internet Service Provider returns a hard bounce. A hard bounce signifies a permanent deliverability failure.
 
 {% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.messages.email.Bounce
+
+{
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "bounce_reason" : "(optional, string) [PII] The SMTP reason code and user friendly message received for this bounce event",
+  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+  "canvas_name" : "(optional, string) Name of the Canvas",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+  "email_address" : "(required, string) [PII] Email address of the user",
+  "esp" : "(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "from_domain" : "(optional, string) Sending domain for the email",
+  "id" : "(required, string) Globally unique ID for this event",
+  "ip_pool" : "(optional, string) IP pool from which the email send was made",
+  "is_drop" : "(optional, boolean) Indicates that this event counts as a drop event",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "message_variation_name" : "(optional, string) Name of the message variation",
+  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "sending_ip" : "(optional, string) IP address from which the email send was made",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "timezone" : "(optional, string) Time zone of the user",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+
 {% tab Amplitude %}
 ```json
 // Email Bounce (users.messages.email.Bounce)
@@ -4219,40 +4252,6 @@ This event occurs when an Internet Service Provider returns a hard bounce. A har
 }
 ```
 {% endtab %}
-
-{% tab Cloud Storage %}
-```json
-// users.messages.email.Bounce
-
-{
-  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-  "bounce_reason" : "(optional, string) [PII] The SMTP reason code and user friendly message received for this bounce event",
-  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
-  "campaign_name" : "(optional, string) Name of the campaign",
-  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
-  "canvas_name" : "(optional, string) Name of the Canvas",
-  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
-  "canvas_step_name" : "(optional, string) Name of the Canvas step",
-  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
-  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
-  "email_address" : "(required, string) [PII] Email address of the user",
-  "esp" : "(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)",
-  "external_user_id" : "(optional, string) [PII] External ID of the user",
-  "from_domain" : "(optional, string) Sending domain for the email",
-  "id" : "(required, string) Globally unique ID for this event",
-  "ip_pool" : "(optional, string) IP pool from which the email send was made",
-  "is_drop" : "(optional, boolean) Indicates that this event counts as a drop event",
-  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
-  "message_variation_name" : "(optional, string) Name of the message variation",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
-  "sending_ip" : "(optional, string) IP address from which the email send was made",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
-}
-```
-{% endtab %}
 {% endtabs %}
 
 #### Property details
@@ -4271,6 +4270,49 @@ Email, Clicks
 This event occurs when a user clicks an email. Multiple events may be generated for the same campaign if a user clicks multiple times or clicks different links within the email.
 
 {% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.messages.email.Click
+
+{
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "browser" : "(optional, string) Device browser - extracted from user_agent - on which the open occurred",
+  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+  "canvas_name" : "(optional, string) Name of the Canvas",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+  "device_class" : "(optional, string) Device class extracted from user_agent (mobile, desktop, tablet, etc...)",
+  "device_model" : "(optional, string) Model of the device",
+  "device_os" : "(optional, string) Device operating system extracted from user_agent",
+  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+  "email_address" : "(required, string) [PII] Email address of the user",
+  "esp" : "(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "from_domain" : "(optional, string) Sending domain for the email",
+  "id" : "(required, string) Globally unique ID for this event",
+  "ip_pool" : "(optional, string) IP pool from which the email send was made",
+  "is_amp" : "(optional, boolean) Indicates that this is an AMP event",
+  "is_suspected_bot_click" : "(optional, boolean) Indicates that this is a suspected bot click. Will only populate when Bot Filtering setting is enabled",
+  "link_alias" : "(optional, string) Alias associated with this link ID",
+  "link_id" : "(optional, string) Unique ID for the link which was clicked, as created by Braze",
+  "mailbox_provider" : "(optional, string) Mailbox provider value returned by the esp for this event",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "message_variation_name" : "(optional, string) Name of the message variation",
+  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "suspected_bot_click_reason" : "(optional, array of string) Reason(s) why this is a suspected bot click. Will always populate even if Bot Filtering setting is disabled.",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "timezone" : "(optional, string) Time zone of the user",
+  "url" : "(optional, string) URL that the user clicked on",
+  "user_agent" : "(optional, string) User agent on which the click occurred",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+
 {% tab Amplitude %}
 ```json
 // Email Click (users.messages.email.Click)
@@ -4477,49 +4519,6 @@ This event occurs when a user clicks an email. Multiple events may be generated 
 }
 ```
 {% endtab %}
-
-{% tab Cloud Storage %}
-```json
-// users.messages.email.Click
-
-{
-  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-  "browser" : "(optional, string) Device browser - extracted from user_agent - on which the open occurred",
-  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
-  "campaign_name" : "(optional, string) Name of the campaign",
-  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
-  "canvas_name" : "(optional, string) Name of the Canvas",
-  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
-  "canvas_step_name" : "(optional, string) Name of the Canvas step",
-  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
-  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-  "device_class" : "(optional, string) Device class extracted from user_agent (mobile, desktop, tablet, etc...)",
-  "device_model" : "(optional, string) Model of the device",
-  "device_os" : "(optional, string) Device operating system extracted from user_agent",
-  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
-  "email_address" : "(required, string) [PII] Email address of the user",
-  "esp" : "(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)",
-  "external_user_id" : "(optional, string) [PII] External ID of the user",
-  "from_domain" : "(optional, string) Sending domain for the email",
-  "id" : "(required, string) Globally unique ID for this event",
-  "ip_pool" : "(optional, string) IP pool from which the email send was made",
-  "is_amp" : "(optional, boolean) Indicates that this is an AMP event",
-  "is_suspected_bot_click" : "(optional, boolean) Indicates that this is a suspected bot click. Will only populate when Bot Filtering setting is enabled",
-  "link_alias" : "(optional, string) Alias associated with this link ID",
-  "link_id" : "(optional, string) Unique ID for the link which was clicked, as created by Braze",
-  "mailbox_provider" : "(optional, string) Mailbox provider value returned by the esp for this event",
-  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
-  "message_variation_name" : "(optional, string) Name of the message variation",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
-  "suspected_bot_click_reason" : "(optional, array of string) Reason(s) why this is a suspected bot click. Will always populate even if Bot Filtering setting is disabled.",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "timezone" : "(optional, string) Time zone of the user",
-  "url" : "(optional, string) URL that the user clicked on",
-  "user_agent" : "(optional, string) User agent on which the click occurred",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
-}
-```
-{% endtab %}
 {% endtabs %}
 
 #### Property details
@@ -4538,6 +4537,42 @@ Email, Deferral
 This event occurs when an Internet Service Provider does not immediately deliver the email to a non-hard bounced email address and Braze retries the email for up to 72 hours. Typical reasons for deferrals include reputation-based email volume rate-limiting from the inbox provider, temporary connectivity issues, recipient's mailbox is full, or DNS errors.
 
 {% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.messages.email.Deferral
+
+{
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "attempt_count" : "(optional, int) Number of attempts made to send the message",
+  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+  "canvas_name" : "(optional, string) Name of the Canvas",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_message_variation_id" : "(optional, string) API ID of the Canvas step message variation this user received",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+  "deferral_reason" : "(optional, string) [PII] The SMTP reason code and user friendly message received for this deferral event",
+  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+  "email_address" : "(required, string) [PII] Email address of the user",
+  "esp" : "(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "from_domain" : "(optional, string) Sending domain for the email",
+  "id" : "(required, string) Globally unique ID for this event",
+  "ip_pool" : "(optional, string) IP pool from which the email send was made",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "message_variation_name" : "(optional, string) Name of the message variation",
+  "recipient_domain" : "(optional, string) Recipient's email domain",
+  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "sending_ip" : "(optional, string) IP address from which the email send was made",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "timezone" : "(optional, string) Time zone of the user",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+
 {% tab Amplitude %}
 ```json
 // Email Deferral (users.messages.email.Deferral)
@@ -4703,42 +4738,6 @@ This event occurs when an Internet Service Provider does not immediately deliver
 }
 ```
 {% endtab %}
-
-{% tab Cloud Storage %}
-```json
-// users.messages.email.Deferral
-
-{
-  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-  "attempt_count" : "(optional, int) Number of attempts made to send the message",
-  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
-  "campaign_name" : "(optional, string) Name of the campaign",
-  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
-  "canvas_name" : "(optional, string) Name of the Canvas",
-  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
-  "canvas_step_message_variation_id" : "(optional, string) API ID of the Canvas step message variation this user received",
-  "canvas_step_name" : "(optional, string) Name of the Canvas step",
-  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
-  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-  "deferral_reason" : "(optional, string) [PII] The SMTP reason code and user friendly message received for this deferral event",
-  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
-  "email_address" : "(required, string) [PII] Email address of the user",
-  "esp" : "(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)",
-  "external_user_id" : "(optional, string) [PII] External ID of the user",
-  "from_domain" : "(optional, string) Sending domain for the email",
-  "id" : "(required, string) Globally unique ID for this event",
-  "ip_pool" : "(optional, string) IP pool from which the email send was made",
-  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
-  "message_variation_name" : "(optional, string) Name of the message variation",
-  "recipient_domain" : "(optional, string) Recipient's email domain",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
-  "sending_ip" : "(optional, string) IP address from which the email send was made",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
-}
-```
-{% endtab %}
 {% endtabs %}
 
 #### Property details
@@ -4757,6 +4756,38 @@ Email, Delivery
 This event occurs when an email sent made it successfully to the end-users inbox.
 
 {% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.messages.email.Delivery
+
+{
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+  "canvas_name" : "(optional, string) Name of the Canvas",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+  "email_address" : "(required, string) [PII] Email address of the user",
+  "esp" : "(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "from_domain" : "(optional, string) Sending domain for the email",
+  "id" : "(required, string) Globally unique ID for this event",
+  "ip_pool" : "(optional, string) IP pool from which the email send was made",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "message_variation_name" : "(optional, string) Name of the message variation",
+  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "sending_ip" : "(optional, string) IP address from which the email send was made",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "timezone" : "(optional, string) Time zone of the user",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+
 {% tab Amplitude %}
 ```json
 // Email Delivery (users.messages.email.Delivery)
@@ -4915,10 +4946,27 @@ This event occurs when an email sent made it successfully to the end-users inbox
 }
 ```
 {% endtab %}
+{% endtabs %}
 
+#### Property details
+
+- `dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open).
+  - The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for entry steps, which can be scheduled) as triggered events, even when they are scheduled.
+{% endapi %}
+
+{% api %}
+## Email Mark As Spam events {#email-mark-as-spam-events}
+
+{% apitags %}
+Email, Spam
+{% endapitags %}
+
+This event occurs when the end-user hits the "spam" button on the email. Note that this does not represent the fact the email went into the spam folder as Braze does not track this.
+
+{% tabs %}
 {% tab Cloud Storage %}
 ```json
-// users.messages.email.Delivery
+// users.messages.email.MarkAsSpam
 
 {
   "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
@@ -4940,31 +4988,14 @@ This event occurs when an email sent made it successfully to the end-users inbox
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
   "send_id" : "(optional, string) Message send ID this message belongs to",
-  "sending_ip" : "(optional, string) IP address from which the email send was made",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
+  "user_agent" : "(optional, string) User agent on which the spam report occurred",
   "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
-{% endtabs %}
 
-#### Property details
-
-- `dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open).
-  - The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for entry steps, which can be scheduled) as triggered events, even when they are scheduled.
-{% endapi %}
-
-{% api %}
-## Email Mark As Spam events {#email-mark-as-spam-events}
-
-{% apitags %}
-Email, Spam
-{% endapitags %}
-
-This event occurs when the end-user hits the "spam" button on the email. Note that this does not represent the fact the email went into the spam folder as Braze does not track this.
-
-{% tabs %}
 {% tab Amplitude %}
 ```json
 // Email Mark As Spam (users.messages.email.MarkAsSpam)
@@ -5127,38 +5158,6 @@ This event occurs when the end-user hits the "spam" button on the email. Note th
 }
 ```
 {% endtab %}
-
-{% tab Cloud Storage %}
-```json
-// users.messages.email.MarkAsSpam
-
-{
-  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
-  "campaign_name" : "(optional, string) Name of the campaign",
-  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
-  "canvas_name" : "(optional, string) Name of the Canvas",
-  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
-  "canvas_step_name" : "(optional, string) Name of the Canvas step",
-  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
-  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
-  "email_address" : "(required, string) [PII] Email address of the user",
-  "esp" : "(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)",
-  "external_user_id" : "(optional, string) [PII] External ID of the user",
-  "from_domain" : "(optional, string) Sending domain for the email",
-  "id" : "(required, string) Globally unique ID for this event",
-  "ip_pool" : "(optional, string) IP pool from which the email send was made",
-  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
-  "message_variation_name" : "(optional, string) Name of the message variation",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "timezone" : "(optional, string) Time zone of the user",
-  "user_agent" : "(optional, string) User agent on which the spam report occurred",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
-}
-```
-{% endtab %}
 {% endtabs %}
 
 #### Property details
@@ -5183,6 +5182,45 @@ It's known behavior that the email open event fields `device_model` and `mailbox
 {% endalert %}
 
 {% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.messages.email.Open
+
+{
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "browser" : "(optional, string) Device browser - extracted from user_agent - on which the open occurred",
+  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+  "canvas_name" : "(optional, string) Name of the Canvas",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+  "device_class" : "(optional, string) Device class extracted from user_agent (mobile, desktop, tablet, etc...)",
+  "device_model" : "(optional, string) Model of the device",
+  "device_os" : "(optional, string) Device operating system extracted from user_agent",
+  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+  "email_address" : "(required, string) [PII] Email address of the user",
+  "esp" : "(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "from_domain" : "(optional, string) Sending domain for the email",
+  "id" : "(required, string) Globally unique ID for this event",
+  "ip_pool" : "(optional, string) IP pool from which the email send was made",
+  "is_amp" : "(optional, boolean) Indicates that this is an AMP event",
+  "machine_open" : "(optional, string) Populated to 'true' if the open event is triggered without user engagement, for example by an Apple device with Mail Privacy Protection enabled. Value may change over time to provide more granularity.",
+  "mailbox_provider" : "(optional, string) Mailbox provider value returned by the esp for this event",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "message_variation_name" : "(optional, string) Name of the message variation",
+  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "timezone" : "(optional, string) Time zone of the user",
+  "user_agent" : "(optional, string) User agent on which the open occurred",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+
 {% tab Amplitude %}
 ```json
 // Email Open (users.messages.email.Open)
@@ -5374,45 +5412,6 @@ It's known behavior that the email open event fields `device_model` and `mailbox
 }
 ```
 {% endtab %}
-
-{% tab Cloud Storage %}
-```json
-// users.messages.email.Open
-
-{
-  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-  "browser" : "(optional, string) Device browser - extracted from user_agent - on which the open occurred",
-  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
-  "campaign_name" : "(optional, string) Name of the campaign",
-  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
-  "canvas_name" : "(optional, string) Name of the Canvas",
-  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
-  "canvas_step_name" : "(optional, string) Name of the Canvas step",
-  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
-  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-  "device_class" : "(optional, string) Device class extracted from user_agent (mobile, desktop, tablet, etc...)",
-  "device_model" : "(optional, string) Model of the device",
-  "device_os" : "(optional, string) Device operating system extracted from user_agent",
-  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
-  "email_address" : "(required, string) [PII] Email address of the user",
-  "esp" : "(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)",
-  "external_user_id" : "(optional, string) [PII] External ID of the user",
-  "from_domain" : "(optional, string) Sending domain for the email",
-  "id" : "(required, string) Globally unique ID for this event",
-  "ip_pool" : "(optional, string) IP pool from which the email send was made",
-  "is_amp" : "(optional, boolean) Indicates that this is an AMP event",
-  "machine_open" : "(optional, string) Populated to 'true' if the open event is triggered without user engagement, for example by an Apple device with Mail Privacy Protection enabled. Value may change over time to provide more granularity.",
-  "mailbox_provider" : "(optional, string) Mailbox provider value returned by the esp for this event",
-  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
-  "message_variation_name" : "(optional, string) Name of the message variation",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "timezone" : "(optional, string) Time zone of the user",
-  "user_agent" : "(optional, string) User agent on which the open occurred",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
-}
-```
-{% endtab %}
 {% endtabs %}
 
 #### Property details
@@ -5431,6 +5430,36 @@ Email, Sends
 This event occurs when an email send request was successfully communicated between Braze and SendGrid. Though, this does not mean the email was received in the user's inbox.
 
 {% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.messages.email.Send
+
+{
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+  "canvas_name" : "(optional, string) Name of the Canvas",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+  "email_address" : "(required, string) [PII] Email address of the user",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "id" : "(required, string) Globally unique ID for this event",
+  "ip_pool" : "(optional, string) IP pool from which the email send was made",
+  "message_extras" : "(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "message_variation_name" : "(optional, string) Name of the message variation",
+  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "timezone" : "(optional, string) Time zone of the user",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+
 {% tab Amplitude %}
 ```json
 // Email Send (users.messages.email.Send)
@@ -5589,36 +5618,6 @@ This event occurs when an email send request was successfully communicated betwe
 }
 ```
 {% endtab %}
-
-{% tab Cloud Storage %}
-```json
-// users.messages.email.Send
-
-{
-  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
-  "campaign_name" : "(optional, string) Name of the campaign",
-  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
-  "canvas_name" : "(optional, string) Name of the Canvas",
-  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
-  "canvas_step_name" : "(optional, string) Name of the Canvas step",
-  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
-  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
-  "email_address" : "(required, string) [PII] Email address of the user",
-  "external_user_id" : "(optional, string) [PII] External ID of the user",
-  "id" : "(required, string) Globally unique ID for this event",
-  "ip_pool" : "(optional, string) IP pool from which the email send was made",
-  "message_extras" : "(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering",
-  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
-  "message_variation_name" : "(optional, string) Name of the message variation",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
-}
-```
-{% endtab %}
 {% endtabs %}
 
 #### Property details
@@ -5638,6 +5637,39 @@ Email, Bounce
 This event occurs when an Internet Service Provider returns a soft bounce. A soft bounce signifies that an email could not be delivered because of a temporary deliverability failure.
 
 {% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.messages.email.SoftBounce
+
+{
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "bounce_reason" : "(optional, string) [PII] The SMTP reason code and user friendly message received for this bounce event",
+  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+  "canvas_name" : "(optional, string) Name of the Canvas",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+  "email_address" : "(required, string) [PII] Email address of the user",
+  "esp" : "(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "from_domain" : "(optional, string) Sending domain for the email",
+  "id" : "(required, string) Globally unique ID for this event",
+  "ip_pool" : "(optional, string) IP pool from which the email send was made",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "message_variation_name" : "(optional, string) Name of the message variation",
+  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "sending_ip" : "(optional, string) IP address from which the email send was made",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "timezone" : "(optional, string) Time zone of the user",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+
 {% tab Amplitude %}
 ```json
 // Email Soft Bounce (users.messages.email.SoftBounce)
@@ -5800,39 +5832,6 @@ This event occurs when an Internet Service Provider returns a soft bounce. A sof
 }
 ```
 {% endtab %}
-
-{% tab Cloud Storage %}
-```json
-// users.messages.email.SoftBounce
-
-{
-  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-  "bounce_reason" : "(optional, string) [PII] The SMTP reason code and user friendly message received for this bounce event",
-  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
-  "campaign_name" : "(optional, string) Name of the campaign",
-  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
-  "canvas_name" : "(optional, string) Name of the Canvas",
-  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
-  "canvas_step_name" : "(optional, string) Name of the Canvas step",
-  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
-  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
-  "email_address" : "(required, string) [PII] Email address of the user",
-  "esp" : "(optional, string) ESP related to the event (SparkPost, SendGrid, or Amazon SES)",
-  "external_user_id" : "(optional, string) [PII] External ID of the user",
-  "from_domain" : "(optional, string) Sending domain for the email",
-  "id" : "(required, string) Globally unique ID for this event",
-  "ip_pool" : "(optional, string) IP pool from which the email send was made",
-  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
-  "message_variation_name" : "(optional, string) Name of the message variation",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
-  "sending_ip" : "(optional, string) IP address from which the email send was made",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
-}
-```
-{% endtab %}
 {% endtabs %}
 
 #### Property details
@@ -5855,6 +5854,35 @@ The `Unsubscribe` event is actually a specialized click event that is fired when
 {% endalert %}
 
 {% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.messages.email.Unsubscribe
+
+{
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+  "canvas_name" : "(optional, string) Name of the Canvas",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+  "email_address" : "(required, string) [PII] Email address of the user",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "id" : "(required, string) Globally unique ID for this event",
+  "ip_pool" : "(optional, string) IP pool from which the email send was made",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "message_variation_name" : "(optional, string) Name of the message variation",
+  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "timezone" : "(optional, string) Time zone of the user",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+
 {% tab Amplitude %}
 ```json
 // Email Unsubscribe (users.messages.email.Unsubscribe)
@@ -6005,35 +6033,6 @@ The `Unsubscribe` event is actually a specialized click event that is fired when
 }
 ```
 {% endtab %}
-
-{% tab Cloud Storage %}
-```json
-// users.messages.email.Unsubscribe
-
-{
-  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
-  "campaign_name" : "(optional, string) Name of the campaign",
-  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
-  "canvas_name" : "(optional, string) Name of the Canvas",
-  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
-  "canvas_step_name" : "(optional, string) Name of the Canvas step",
-  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
-  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
-  "email_address" : "(required, string) [PII] Email address of the user",
-  "external_user_id" : "(optional, string) [PII] External ID of the user",
-  "id" : "(required, string) Globally unique ID for this event",
-  "ip_pool" : "(optional, string) IP pool from which the email send was made",
-  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
-  "message_variation_name" : "(optional, string) Name of the message variation",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
-}
-```
-{% endtab %}
 {% endtabs %}
 
 #### Property details
@@ -6053,8 +6052,46 @@ This event occurs whenever a user has had an opportunity to interact with your f
 
 Feature flag impressions are only logged once per session.
 
-
 {% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.messages.featureflag.Impression
+
+{
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "app_id" : "(optional, string) API ID of the app on which this event occurred",
+  "browser" : "(optional, string) Device browser - extracted from user_agent - on which the open occurred",
+  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+  "canvas_name" : "(optional, string) Name of the Canvas",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_message_variation_id" : "(optional, string) API ID of the Canvas step message variation this user received",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+  "carrier" : "(optional, string) Carrier of the device",
+  "country" : "(optional, string) [PII] Country of the user",
+  "device_id" : "(optional, string) ID of the device on which the event occurred",
+  "device_model" : "(optional, string) Model of the device",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "feature_flag_id_name" : "(optional, string) The Feature Flag Rollout identifier",
+  "gender" : "(optional, string) [PII] Gender of the user, one of ['M', 'F', 'O', 'N', 'P']",
+  "id" : "(required, string) Globally unique ID for this event",
+  "language" : "(optional, string) [PII] Language of the user",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "message_variation_name" : "(optional, string) Name of the message variation",
+  "os_version" : "(optional, string) Version of the operating system of the device",
+  "platform" : "(optional, string) Platform of the device",
+  "resolution" : "(optional, string) Resolution of the device",
+  "sdk_version" : "(optional, string) Version of the Braze SDK in use during the event",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "timezone" : "(optional, string) Time zone of the user",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+
 {% tab Amplitude %}
 ```json
 // Feature Flag Experiment Impression (users.messages.featureflag.Impression)
@@ -6212,45 +6249,6 @@ Feature flag impressions are only logged once per session.
 }
 ```
 {% endtab %}
-
-{% tab Cloud Storage %}
-```json
-// users.messages.featureflag.Impression
-
-{
-  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-  "app_id" : "(optional, string) API ID of the app on which this event occurred",
-  "browser" : "(optional, string) Device browser - extracted from user_agent - on which the open occurred",
-  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
-  "campaign_name" : "(optional, string) Name of the campaign",
-  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
-  "canvas_name" : "(optional, string) Name of the Canvas",
-  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
-  "canvas_step_message_variation_id" : "(optional, string) API ID of the Canvas step message variation this user received",
-  "canvas_step_name" : "(optional, string) Name of the Canvas step",
-  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
-  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-  "carrier" : "(optional, string) Carrier of the device",
-  "country" : "(optional, string) [PII] Country of the user",
-  "device_id" : "(optional, string) ID of the device on which the event occurred",
-  "device_model" : "(optional, string) Model of the device",
-  "external_user_id" : "(optional, string) [PII] External ID of the user",
-  "feature_flag_id_name" : "(optional, string) The Feature Flag Rollout identifier",
-  "gender" : "(optional, string) [PII] Gender of the user, one of ['M', 'F', 'O', 'N', 'P']",
-  "id" : "(required, string) Globally unique ID for this event",
-  "language" : "(optional, string) [PII] Language of the user",
-  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
-  "message_variation_name" : "(optional, string) Name of the message variation",
-  "os_version" : "(optional, string) Version of the operating system of the device",
-  "platform" : "(optional, string) Platform of the device",
-  "resolution" : "(optional, string) Resolution of the device",
-  "sdk_version" : "(optional, string) Version of the Braze SDK in use during the event",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
-}
-```
-{% endtab %}
 {% endtabs %}
 
 {% endapi %}
@@ -6265,6 +6263,49 @@ In-App Messages, Abort
 This event occurs when an originally scheduled in-app message was aborted.
 
 {% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.messages.inappmessage.Abort
+
+{
+  "abort_log" : "(optional, string) [PII] Log message describing abort details (up to 128 chars)",
+  "abort_type" : "(optional, string) Type of abort",
+  "ad_id" : "(optional, string) [PII] Advertising identifier",
+  "ad_id_type" : "(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']",
+  "ad_tracking_enabled" : "(optional, boolean) Whether advertising tracking is enabled for the device",
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "app_id" : "(optional, string) API ID of the app on which this event occurred",
+  "browser" : "(optional, string) Device browser - extracted from user_agent - on which the open occurred",
+  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+  "canvas_name" : "(optional, string) Name of the Canvas",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_message_variation_id" : "(optional, string) API ID of the Canvas step message variation this user received",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+  "card_id" : "(optional, string) API ID of the card",
+  "carrier" : "(optional, string) Carrier of the device",
+  "device_id" : "(optional, string) ID of the device on which the event occurred",
+  "device_model" : "(optional, string) Model of the device",
+  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "id" : "(required, string) Globally unique ID for this event",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "message_variation_name" : "(optional, string) Name of the message variation",
+  "os_version" : "(optional, string) Version of the operating system of the device",
+  "platform" : "(optional, string) Platform of the device",
+  "resolution" : "(optional, string) Resolution of the device",
+  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "timezone" : "(optional, string) Time zone of the user",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event",
+  "version" : "(required, string) Which version of in-app message, legacy or triggered"
+}
+```
+{% endtab %}
+
 {% tab Amplitude %}
 ```json
 // In-App Message Abort (users.messages.inappmessage.Abort)
@@ -6447,49 +6488,6 @@ This event occurs when an originally scheduled in-app message was aborted.
 }
 ```
 {% endtab %}
-
-{% tab Cloud Storage %}
-```json
-// users.messages.inappmessage.Abort
-
-{
-  "abort_log" : "(optional, string) [PII] Log message describing abort details (up to 128 chars)",
-  "abort_type" : "(optional, string) Type of abort",
-  "ad_id" : "(optional, string) [PII] Advertising identifier",
-  "ad_id_type" : "(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']",
-  "ad_tracking_enabled" : "(optional, boolean) Whether advertising tracking is enabled for the device",
-  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-  "app_id" : "(optional, string) API ID of the app on which this event occurred",
-  "browser" : "(optional, string) Device browser - extracted from user_agent - on which the open occurred",
-  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
-  "campaign_name" : "(optional, string) Name of the campaign",
-  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
-  "canvas_name" : "(optional, string) Name of the Canvas",
-  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
-  "canvas_step_message_variation_id" : "(optional, string) API ID of the Canvas step message variation this user received",
-  "canvas_step_name" : "(optional, string) Name of the Canvas step",
-  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
-  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-  "card_id" : "(optional, string) API ID of the card",
-  "carrier" : "(optional, string) Carrier of the device",
-  "device_id" : "(optional, string) ID of the device on which the event occurred",
-  "device_model" : "(optional, string) Model of the device",
-  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
-  "external_user_id" : "(optional, string) [PII] External ID of the user",
-  "id" : "(required, string) Globally unique ID for this event",
-  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
-  "message_variation_name" : "(optional, string) Name of the message variation",
-  "os_version" : "(optional, string) Version of the operating system of the device",
-  "platform" : "(optional, string) Platform of the device",
-  "resolution" : "(optional, string) Resolution of the device",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event",
-  "version" : "(required, string) Which version of in-app message, legacy or triggered"
-}
-```
-{% endtab %}
 {% endtabs %}
 
 {% endapi %}
@@ -6508,6 +6506,42 @@ This event occurs when a user clicks on an in-app message.
 {% endalert %}
 
 {% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.messages.inappmessage.Click
+
+{
+  "ad_id" : "(optional, string) [PII] Advertising identifier",
+  "ad_id_type" : "(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']",
+  "ad_tracking_enabled" : "(optional, boolean) Whether advertising tracking is enabled for the device",
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "app_id" : "(required, string) API ID of the app on which this event occurred",
+  "button_id" : "(optional, string) ID of the button clicked, if this click represents a click on a button",
+  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+  "canvas_name" : "(optional, string) Name of the Canvas",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+  "card_id" : "(optional, string) API ID of the card",
+  "device_id" : "(optional, string) ID of the device on which the event occurred",
+  "device_model" : "(optional, string) Model of the device",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "id" : "(required, string) Globally unique ID for this event",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "message_variation_name" : "(optional, string) Name of the message variation",
+  "os_version" : "(optional, string) Version of the operating system of the device",
+  "platform" : "(optional, string) Platform of the device",
+  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "timezone" : "(optional, string) Time zone of the user",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+
 {% tab Amplitude %}
 ```json
 // In-App Message Click (users.messages.inappmessage.Click)
@@ -6688,42 +6722,6 @@ This event occurs when a user clicks on an in-app message.
 }
 ```
 {% endtab %}
-
-{% tab Cloud Storage %}
-```json
-// users.messages.inappmessage.Click
-
-{
-  "ad_id" : "(optional, string) [PII] Advertising identifier",
-  "ad_id_type" : "(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']",
-  "ad_tracking_enabled" : "(optional, boolean) Whether advertising tracking is enabled for the device",
-  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-  "app_id" : "(required, string) API ID of the app on which this event occurred",
-  "button_id" : "(optional, string) ID of the button clicked, if this click represents a click on a button",
-  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
-  "campaign_name" : "(optional, string) Name of the campaign",
-  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
-  "canvas_name" : "(optional, string) Name of the Canvas",
-  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
-  "canvas_step_name" : "(optional, string) Name of the Canvas step",
-  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
-  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-  "card_id" : "(optional, string) API ID of the card",
-  "device_id" : "(optional, string) ID of the device on which the event occurred",
-  "device_model" : "(optional, string) Model of the device",
-  "external_user_id" : "(optional, string) [PII] External ID of the user",
-  "id" : "(required, string) Globally unique ID for this event",
-  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
-  "message_variation_name" : "(optional, string) Name of the message variation",
-  "os_version" : "(optional, string) Version of the operating system of the device",
-  "platform" : "(optional, string) Platform of the device",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
-}
-```
-{% endtab %}
 {% endtabs %}
 
 #### Property details
@@ -6746,6 +6744,43 @@ This event occurs when a user views an in-app message.
 {% endalert %}
 
 {% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.messages.inappmessage.Impression
+
+{
+  "ad_id" : "(optional, string) [PII] Advertising identifier",
+  "ad_id_type" : "(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']",
+  "ad_tracking_enabled" : "(optional, boolean) Whether advertising tracking is enabled for the device",
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "app_id" : "(required, string) API ID of the app on which this event occurred",
+  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+  "canvas_name" : "(optional, string) Name of the Canvas",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+  "card_id" : "(optional, string) API ID of the card",
+  "device_id" : "(optional, string) ID of the device on which the event occurred",
+  "device_model" : "(optional, string) Model of the device",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "id" : "(required, string) Globally unique ID for this event",
+  "locale_key" : "(optional, string) [PII] The key corresponding to the translations (for example 'en-us') used to compose this message (null for default).",
+  "message_extras" : "(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "message_variation_name" : "(optional, string) Name of the message variation",
+  "os_version" : "(optional, string) Version of the operating system of the device",
+  "platform" : "(optional, string) Platform of the device",
+  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "timezone" : "(optional, string) Time zone of the user",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+
 {% tab Amplitude %}
 ```json
 // In-App Message Impression (users.messages.inappmessage.Impression)
@@ -6930,43 +6965,6 @@ This event occurs when a user views an in-app message.
 }
 ```
 {% endtab %}
-
-{% tab Cloud Storage %}
-```json
-// users.messages.inappmessage.Impression
-
-{
-  "ad_id" : "(optional, string) [PII] Advertising identifier",
-  "ad_id_type" : "(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']",
-  "ad_tracking_enabled" : "(optional, boolean) Whether advertising tracking is enabled for the device",
-  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-  "app_id" : "(required, string) API ID of the app on which this event occurred",
-  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
-  "campaign_name" : "(optional, string) Name of the campaign",
-  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
-  "canvas_name" : "(optional, string) Name of the Canvas",
-  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
-  "canvas_step_name" : "(optional, string) Name of the Canvas step",
-  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
-  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-  "card_id" : "(optional, string) API ID of the card",
-  "device_id" : "(optional, string) ID of the device on which the event occurred",
-  "device_model" : "(optional, string) Model of the device",
-  "external_user_id" : "(optional, string) [PII] External ID of the user",
-  "id" : "(required, string) Globally unique ID for this event",
-  "locale_key" : "(optional, string) [PII] The key corresponding to the translations (for example 'en-us') used to compose this message (null for default).",
-  "message_extras" : "(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering",
-  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
-  "message_variation_name" : "(optional, string) Name of the message variation",
-  "os_version" : "(optional, string) Version of the operating system of the device",
-  "platform" : "(optional, string) Platform of the device",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
-}
-```
-{% endtab %}
 {% endtabs %}
 
 #### Property details
@@ -6985,6 +6983,38 @@ LINE, Abort
 This event occurs when a scheduled LINE message cannot be delivered, before sending to LINE.
 
 {% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.messages.line.Abort
+
+{
+  "abort_log" : "(optional, string) [PII] Log message describing abort details (up to 128 chars)",
+  "abort_type" : "(optional, string) Type of abort",
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_message_variation_id" : "(optional, string) API ID of the Canvas step message variation this user received",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "device_id" : "(optional, string) ID of the device on which the event occurred",
+  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "id" : "(required, string) Globally unique ID for this event",
+  "line_channel_id" : "(required, string) The LINE Channel ID the message was sent to or received from",
+  "line_channel_name" : "(required, string) The LINE Channel Name the message was sent to or received from",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "native_line_id" : "(required, string) [PII] The user's Line ID from which the message was sent to or received from",
+  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "subscription_group_id" : "(optional, string) Subscription group API ID",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "timezone" : "(optional, string) Time zone of the user",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+
 {% tab Amplitude %}
 ```json
 // Abort (users.messages.line.Abort)
@@ -7139,38 +7169,6 @@ This event occurs when a scheduled LINE message cannot be delivered, before send
 }
 ```
 {% endtab %}
-
-{% tab Cloud Storage %}
-```json
-// users.messages.line.Abort
-
-{
-  "abort_log" : "(optional, string) [PII] Log message describing abort details (up to 128 chars)",
-  "abort_type" : "(optional, string) Type of abort",
-  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
-  "campaign_name" : "(optional, string) Name of the campaign",
-  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
-  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
-  "canvas_step_message_variation_id" : "(optional, string) API ID of the Canvas step message variation this user received",
-  "canvas_step_name" : "(optional, string) Name of the Canvas step",
-  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
-  "device_id" : "(optional, string) ID of the device on which the event occurred",
-  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
-  "external_user_id" : "(optional, string) [PII] External ID of the user",
-  "id" : "(required, string) Globally unique ID for this event",
-  "line_channel_id" : "(required, string) The LINE Channel ID the message was sent to or received from",
-  "line_channel_name" : "(required, string) The LINE Channel Name the message was sent to or received from",
-  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
-  "native_line_id" : "(required, string) [PII] The user's Line ID from which the message was sent to or received from",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
-  "subscription_group_id" : "(optional, string) Subscription group API ID",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
-}
-```
-{% endtab %}
 {% endtabs %}
 
 #### Property details
@@ -7189,6 +7187,40 @@ LINE, Clicks
 This event occurs when a user clicks a link in a LINE message where the link's domain matches the click tracking domain.
 
 {% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.messages.line.Click
+
+{
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_message_variation_id" : "(optional, string) API ID of the Canvas step message variation this user received",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "device_id" : "(optional, string) ID of the device on which the event occurred",
+  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "id" : "(required, string) Globally unique ID for this event",
+  "is_suspected_bot_click" : "(optional, boolean) Whether this event was processed as a bot event",
+  "line_channel_id" : "(required, string) The LINE Channel ID the message was sent to or received from",
+  "line_channel_name" : "(required, string) The LINE Channel Name the message was sent to or received from",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "native_line_id" : "(required, string) [PII] The user's Line ID from which the message was sent to or received from",
+  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "short_url" : "(required, string) Shortened url that was clicked",
+  "subscription_group_id" : "(optional, string) Subscription group API ID",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "timezone" : "(optional, string) Time zone of the user",
+  "url" : "(required, string) URL that the user clicked on",
+  "user_agent" : "(optional, string) User agent on which the click occurred",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+
 {% tab Amplitude %}
 ```json
 // Click (users.messages.line.Click)
@@ -7350,40 +7382,6 @@ This event occurs when a user clicks a link in a LINE message where the link's d
 }
 ```
 {% endtab %}
-
-{% tab Cloud Storage %}
-```json
-// users.messages.line.Click
-
-{
-  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
-  "campaign_name" : "(optional, string) Name of the campaign",
-  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
-  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
-  "canvas_step_message_variation_id" : "(optional, string) API ID of the Canvas step message variation this user received",
-  "canvas_step_name" : "(optional, string) Name of the Canvas step",
-  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
-  "device_id" : "(optional, string) ID of the device on which the event occurred",
-  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
-  "external_user_id" : "(optional, string) [PII] External ID of the user",
-  "id" : "(required, string) Globally unique ID for this event",
-  "is_suspected_bot_click" : "(optional, boolean) Whether this event was processed as a bot event",
-  "line_channel_id" : "(required, string) The LINE Channel ID the message was sent to or received from",
-  "line_channel_name" : "(required, string) The LINE Channel Name the message was sent to or received from",
-  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
-  "native_line_id" : "(required, string) [PII] The user's Line ID from which the message was sent to or received from",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
-  "short_url" : "(required, string) Shortened url that was clicked",
-  "subscription_group_id" : "(optional, string) Subscription group API ID",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "timezone" : "(optional, string) Time zone of the user",
-  "url" : "(required, string) URL that the user clicked on",
-  "user_agent" : "(optional, string) User agent on which the click occurred",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
-}
-```
-{% endtab %}
 {% endtabs %}
 
 #### Property details
@@ -7402,6 +7400,38 @@ LINE, Inbound Received
 This event occurs when a LINE message is received from a user.
 
 {% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.messages.line.InboundReceive
+
+{
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_message_variation_id" : "(optional, string) API ID of the Canvas step message variation this user received",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "device_id" : "(optional, string) ID of the device on which the event occurred",
+  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "id" : "(required, string) Globally unique ID for this event",
+  "line_channel_id" : "(required, string) The LINE Channel ID the message was sent to or received from",
+  "line_channel_name" : "(required, string) The LINE Channel Name the message was sent to or received from",
+  "media_id" : "(optional, string) The LINE-generated ID which can be used to retrieve inbound media from LINE",
+  "message_body" : "(optional, string) Typed response from the user",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "native_line_id" : "(required, string) [PII] The user's Line ID from which the message was sent to or received from",
+  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "subscription_group_id" : "(optional, string) Subscription group API ID",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "timezone" : "(optional, string) Time zone of the user",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+
 {% tab Amplitude %}
 ```json
 // LINE Inbound Receive (users.messages.line.InboundReceive)
@@ -7556,38 +7586,6 @@ This event occurs when a LINE message is received from a user.
 }
 ```
 {% endtab %}
-
-{% tab Cloud Storage %}
-```json
-// users.messages.line.InboundReceive
-
-{
-  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
-  "campaign_name" : "(optional, string) Name of the campaign",
-  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
-  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
-  "canvas_step_message_variation_id" : "(optional, string) API ID of the Canvas step message variation this user received",
-  "canvas_step_name" : "(optional, string) Name of the Canvas step",
-  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
-  "device_id" : "(optional, string) ID of the device on which the event occurred",
-  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
-  "external_user_id" : "(optional, string) [PII] External ID of the user",
-  "id" : "(required, string) Globally unique ID for this event",
-  "line_channel_id" : "(required, string) The LINE Channel ID the message was sent to or received from",
-  "line_channel_name" : "(required, string) The LINE Channel Name the message was sent to or received from",
-  "media_id" : "(optional, string) The LINE-generated ID which can be used to retrieve inbound media from LINE",
-  "message_body" : "(optional, string) Typed response from the user",
-  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
-  "native_line_id" : "(required, string) [PII] The user's Line ID from which the message was sent to or received from",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
-  "subscription_group_id" : "(optional, string) Subscription group API ID",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
-}
-```
-{% endtab %}
 {% endtabs %}
 
 #### Property details
@@ -7606,6 +7604,37 @@ LINE, Sends
 This event occurs when a LINE message is sent to LINE.
 
 {% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.messages.line.Send
+
+{
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_message_variation_id" : "(optional, string) API ID of the Canvas step message variation this user received",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "device_id" : "(optional, string) ID of the device on which the event occurred",
+  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "id" : "(required, string) Globally unique ID for this event",
+  "line_channel_id" : "(required, string) The LINE Channel ID the message was sent to or received from",
+  "line_channel_name" : "(required, string) The LINE Channel Name the message was sent to or received from",
+  "message_extras" : "(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "native_line_id" : "(required, string) [PII] The user's Line ID from which the message was sent to or received from",
+  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "subscription_group_id" : "(optional, string) Subscription group API ID",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "timezone" : "(optional, string) Time zone of the user",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+
 {% tab Amplitude %}
 ```json
 // Send (users.messages.line.Send)
@@ -7756,37 +7785,6 @@ This event occurs when a LINE message is sent to LINE.
 }
 ```
 {% endtab %}
-
-{% tab Cloud Storage %}
-```json
-// users.messages.line.Send
-
-{
-  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
-  "campaign_name" : "(optional, string) Name of the campaign",
-  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
-  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
-  "canvas_step_message_variation_id" : "(optional, string) API ID of the Canvas step message variation this user received",
-  "canvas_step_name" : "(optional, string) Name of the Canvas step",
-  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
-  "device_id" : "(optional, string) ID of the device on which the event occurred",
-  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
-  "external_user_id" : "(optional, string) [PII] External ID of the user",
-  "id" : "(required, string) Globally unique ID for this event",
-  "line_channel_id" : "(required, string) The LINE Channel ID the message was sent to or received from",
-  "line_channel_name" : "(required, string) The LINE Channel Name the message was sent to or received from",
-  "message_extras" : "(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering",
-  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
-  "native_line_id" : "(required, string) [PII] The user's Line ID from which the message was sent to or received from",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
-  "subscription_group_id" : "(optional, string) Subscription group API ID",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
-}
-```
-{% endtab %}
 {% endtabs %}
 
 #### Property details
@@ -7805,6 +7803,27 @@ Live Activity, Outcome
 This event occurs when Braze receives a response from a third party provider (e.g. APNs) after the Live Activity send
 
 {% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.messages.liveactivity.Outcome
+
+{
+  "activity_attributes_type" : "(optional, string) Live Activity attribute type",
+  "activity_id" : "(optional, string) Live Activity identifier",
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "app_id" : "(optional, string) API ID of the app on which this event occurred",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "id" : "(required, string) Globally unique ID for this event",
+  "live_activity_event_outcome" : "(optional, string) Outcome of Live Activity event",
+  "live_activity_event_type" : "(optional, string) Event type of Live Activity. One of ['start', 'update', 'end']",
+  "push_to_start_token" : "(optional, string) Live Activity push to start token",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "update_token" : "(optional, string) Live Activity update token",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+
 {% tab Amplitude %}
 ```json
 // Live Activity Outcome (users.messages.liveactivity.Outcome)
@@ -7920,27 +7939,6 @@ This event occurs when Braze receives a response from a third party provider (e.
 }
 ```
 {% endtab %}
-
-{% tab Cloud Storage %}
-```json
-// users.messages.liveactivity.Outcome
-
-{
-  "activity_attributes_type" : "(optional, string) Live Activity attribute type",
-  "activity_id" : "(optional, string) Live Activity identifier",
-  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-  "app_id" : "(optional, string) API ID of the app on which this event occurred",
-  "external_user_id" : "(optional, string) [PII] External ID of the user",
-  "id" : "(required, string) Globally unique ID for this event",
-  "live_activity_event_outcome" : "(optional, string) Outcome of Live Activity event",
-  "live_activity_event_type" : "(optional, string) Event type of Live Activity. One of ['start', 'update', 'end']",
-  "push_to_start_token" : "(optional, string) Live Activity push to start token",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "update_token" : "(optional, string) Live Activity update token",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
-}
-```
-{% endtab %}
 {% endtabs %}
 
 {% endapi %}
@@ -7955,6 +7953,26 @@ Live Activity, Sends
 This event occurs when Braze backend makes a request to its provider regarding Live Activity
 
 {% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.messages.liveactivity.Send
+
+{
+  "activity_attributes_type" : "(optional, string) Live Activity attribute type",
+  "activity_id" : "(optional, string) Live Activity identifier",
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "app_id" : "(optional, string) API ID of the app on which this event occurred",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "id" : "(required, string) Globally unique ID for this event",
+  "live_activity_event_type" : "(optional, string) Event type of Live Activity. One of ['start', 'update', 'end']",
+  "push_to_start_token" : "(optional, string) Live Activity push to start token",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "update_token" : "(optional, string) Live Activity update token",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+
 {% tab Amplitude %}
 ```json
 // Live Activity Send (users.messages.liveactivity.Send)
@@ -8066,26 +8084,6 @@ This event occurs when Braze backend makes a request to its provider regarding L
 }
 ```
 {% endtab %}
-
-{% tab Cloud Storage %}
-```json
-// users.messages.liveactivity.Send
-
-{
-  "activity_attributes_type" : "(optional, string) Live Activity attribute type",
-  "activity_id" : "(optional, string) Live Activity identifier",
-  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-  "app_id" : "(optional, string) API ID of the app on which this event occurred",
-  "external_user_id" : "(optional, string) [PII] External ID of the user",
-  "id" : "(required, string) Globally unique ID for this event",
-  "live_activity_event_type" : "(optional, string) Event type of Live Activity. One of ['start', 'update', 'end']",
-  "push_to_start_token" : "(optional, string) Live Activity push to start token",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "update_token" : "(optional, string) Live Activity update token",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
-}
-```
-{% endtab %}
 {% endtabs %}
 
 {% endapi %}
@@ -8100,6 +8098,39 @@ Abort, Push
 This event occurs if a push notification message was aborted based on Liquid aborts, etc.
 
 {% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.messages.pushnotification.Abort
+
+{
+  "abort_log" : "(optional, string) [PII] Log message describing abort details (up to 128 chars)",
+  "abort_type" : "(optional, string) Type of abort",
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "app_id" : "(optional, string) API ID of the app on which this event occurred",
+  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+  "canvas_name" : "(optional, string) Name of the Canvas",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_message_variation_id" : "(optional, string) API ID of the Canvas step message variation this user received",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+  "device_id" : "(optional, string) ID of the device on which the event occurred",
+  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "id" : "(required, string) Globally unique ID for this event",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "message_variation_name" : "(optional, string) Name of the message variation",
+  "platform" : "(required, string) Platform of the device",
+  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "timezone" : "(optional, string) Time zone of the user",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+
 {% tab Amplitude %}
 ```json
 // Push Notification Abort (users.messages.pushnotification.Abort)
@@ -8257,39 +8288,6 @@ This event occurs if a push notification message was aborted based on Liquid abo
 }
 ```
 {% endtab %}
-
-{% tab Cloud Storage %}
-```json
-// users.messages.pushnotification.Abort
-
-{
-  "abort_log" : "(optional, string) [PII] Log message describing abort details (up to 128 chars)",
-  "abort_type" : "(optional, string) Type of abort",
-  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-  "app_id" : "(optional, string) API ID of the app on which this event occurred",
-  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
-  "campaign_name" : "(optional, string) Name of the campaign",
-  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
-  "canvas_name" : "(optional, string) Name of the Canvas",
-  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
-  "canvas_step_message_variation_id" : "(optional, string) API ID of the Canvas step message variation this user received",
-  "canvas_step_name" : "(optional, string) Name of the Canvas step",
-  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
-  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-  "device_id" : "(optional, string) ID of the device on which the event occurred",
-  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
-  "external_user_id" : "(optional, string) [PII] External ID of the user",
-  "id" : "(required, string) Globally unique ID for this event",
-  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
-  "message_variation_name" : "(optional, string) Name of the message variation",
-  "platform" : "(required, string) Platform of the device",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
-}
-```
-{% endtab %}
 {% endtabs %}
 
 #### Property details
@@ -8308,6 +8306,39 @@ Push, Sends, Bounce
 This event occurs when an error is received from either Apple Push Notification Service or Fire Cloud Messaging. This means that the push message was bounced, and therefore not delivered to the user's device.
 
 {% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.messages.pushnotification.Bounce
+
+{
+  "ad_id" : "(optional, string) [PII] Advertising identifier",
+  "ad_id_type" : "(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']",
+  "ad_tracking_enabled" : "(optional, boolean) Whether advertising tracking is enabled for the device",
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "app_id" : "(required, string) API ID of the app on which this event occurred",
+  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+  "canvas_name" : "(optional, string) Name of the Canvas",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+  "device_id" : "(optional, string) ID of the device on which the event occurred",
+  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "id" : "(required, string) Globally unique ID for this event",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "message_variation_name" : "(optional, string) Name of the message variation",
+  "platform" : "(optional, string) Platform of the device",
+  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "timezone" : "(optional, string) Time zone of the user",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+
 {% tab Amplitude %}
 ```json
 // Push Notification Bounce (users.messages.pushnotification.Bounce)
@@ -8473,10 +8504,27 @@ This event occurs when an error is received from either Apple Push Notification 
 }
 ```
 {% endtab %}
+{% endtabs %}
 
+#### Property details
+
+- If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) data, contact your customer success manager or account manager to enable the feature flipper for sending `ad_id`.
+- `dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open).
+{% endapi %}
+
+{% api %}
+## Push Notification iOS Foreground Open events {#push-notification-ios-foreground-open-events}
+
+{% apitags %}
+Push, iOS, Sends
+{% endapitags %}
+
+This event is not supported by our [Swift SDK](https://github.com/braze-inc/braze-swift-sdk) and is now deprecated using our [Obj-C SDK](https://github.com/Appboy/appboy-ios-sdk).
+
+{% tabs %}
 {% tab Cloud Storage %}
 ```json
-// users.messages.pushnotification.Bounce
+// users.messages.pushnotification.IosForeground
 
 {
   "ad_id" : "(optional, string) [PII] Advertising identifier",
@@ -8498,7 +8546,7 @@ This event occurs when an error is received from either Apple Push Notification 
   "id" : "(required, string) Globally unique ID for this event",
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
-  "platform" : "(optional, string) Platform of the device",
+  "platform" : "(required, string) Platform of the device",
   "send_id" : "(optional, string) Message send ID this message belongs to",
   "time" : "(required, int) UNIX timestamp at which the event happened",
   "timezone" : "(optional, string) Time zone of the user",
@@ -8506,24 +8554,7 @@ This event occurs when an error is received from either Apple Push Notification 
 }
 ```
 {% endtab %}
-{% endtabs %}
 
-#### Property details
-
-- If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) data, contact your customer success manager or account manager to enable the feature flipper for sending `ad_id`.
-- `dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open).
-{% endapi %}
-
-{% api %}
-## Push Notification iOS Foreground Open events {#push-notification-ios-foreground-open-events}
-
-{% apitags %}
-Push, iOS, Sends
-{% endapitags %}
-
-This event is not supported by our [Swift SDK](https://github.com/braze-inc/braze-swift-sdk) and is now deprecated using our [Obj-C SDK](https://github.com/Appboy/appboy-ios-sdk).
-
-{% tabs %}
 {% tab Amplitude %}
 ```json
 // Push Notification iOS Foreground Open (users.messages.pushnotification.IosForeground)
@@ -8642,39 +8673,6 @@ This event is not supported by our [Swift SDK](https://github.com/braze-inc/braz
 }
 ```
 {% endtab %}
-
-{% tab Cloud Storage %}
-```json
-// users.messages.pushnotification.IosForeground
-
-{
-  "ad_id" : "(optional, string) [PII] Advertising identifier",
-  "ad_id_type" : "(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']",
-  "ad_tracking_enabled" : "(optional, boolean) Whether advertising tracking is enabled for the device",
-  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-  "app_id" : "(required, string) API ID of the app on which this event occurred",
-  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
-  "campaign_name" : "(optional, string) Name of the campaign",
-  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
-  "canvas_name" : "(optional, string) Name of the Canvas",
-  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
-  "canvas_step_name" : "(optional, string) Name of the Canvas step",
-  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
-  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-  "device_id" : "(optional, string) ID of the device on which the event occurred",
-  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
-  "external_user_id" : "(optional, string) [PII] External ID of the user",
-  "id" : "(required, string) Globally unique ID for this event",
-  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
-  "message_variation_name" : "(optional, string) Name of the message variation",
-  "platform" : "(required, string) Platform of the device",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
-}
-```
-{% endtab %}
 {% endtabs %}
 
 #### Property details
@@ -8700,6 +8698,44 @@ In rare cases, a push open may appear before the corresponding push send event i
 {% endalert %}
 
 {% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.messages.pushnotification.Open
+
+{
+  "ad_id" : "(optional, string) [PII] Advertising identifier",
+  "ad_id_type" : "(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']",
+  "ad_tracking_enabled" : "(optional, boolean) Whether advertising tracking is enabled for the device",
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "app_id" : "(required, string) API ID of the app on which this event occurred",
+  "button_action_type" : "(optional, string) Action type of the push notification button, null if not from a button click. One of ['uri', 'deep_link', 'none', 'close']",
+  "button_string" : "(optional, string) Identifier (button_string) of the push notification button clicked. null if not from a button click",
+  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+  "canvas_name" : "(optional, string) Name of the Canvas",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_message_variation_id" : "(optional, string) API ID of the Canvas step message variation this user received",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+  "device_id" : "(optional, string) ID of the device on which the event occurred",
+  "device_model" : "(optional, string) Model of the device",
+  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "id" : "(required, string) Globally unique ID for this event",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "message_variation_name" : "(optional, string) Name of the message variation",
+  "os_version" : "(optional, string) Version of the operating system of the device",
+  "platform" : "(optional, string) Platform of the device",
+  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "timezone" : "(optional, string) Time zone of the user",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+
 {% tab Amplitude %}
 ```json
 // Push Notification Open (users.messages.pushnotification.Open)
@@ -8872,44 +8908,6 @@ In rare cases, a push open may appear before the corresponding push send event i
 }
 ```
 {% endtab %}
-
-{% tab Cloud Storage %}
-```json
-// users.messages.pushnotification.Open
-
-{
-  "ad_id" : "(optional, string) [PII] Advertising identifier",
-  "ad_id_type" : "(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']",
-  "ad_tracking_enabled" : "(optional, boolean) Whether advertising tracking is enabled for the device",
-  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-  "app_id" : "(required, string) API ID of the app on which this event occurred",
-  "button_action_type" : "(optional, string) Action type of the push notification button, null if not from a button click. One of ['uri', 'deep_link', 'none', 'close']",
-  "button_string" : "(optional, string) Identifier (button_string) of the push notification button clicked. null if not from a button click",
-  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
-  "campaign_name" : "(optional, string) Name of the campaign",
-  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
-  "canvas_name" : "(optional, string) Name of the Canvas",
-  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
-  "canvas_step_message_variation_id" : "(optional, string) API ID of the Canvas step message variation this user received",
-  "canvas_step_name" : "(optional, string) Name of the Canvas step",
-  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
-  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-  "device_id" : "(optional, string) ID of the device on which the event occurred",
-  "device_model" : "(optional, string) Model of the device",
-  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
-  "external_user_id" : "(optional, string) [PII] External ID of the user",
-  "id" : "(required, string) Globally unique ID for this event",
-  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
-  "message_variation_name" : "(optional, string) Name of the message variation",
-  "os_version" : "(optional, string) Version of the operating system of the device",
-  "platform" : "(optional, string) Platform of the device",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
-}
-```
-{% endtab %}
 {% endtabs %}
 
 #### Property details
@@ -8929,6 +8927,41 @@ Push, Sends
 This event occurs when Braze processes a push message for a user, communicating this to Apple Push Notification Service or Fire Cloud Messaging. This does not mean the push was delivered to the device, just that a message was sent.
 
 {% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.messages.pushnotification.Send
+
+{
+  "ad_id" : "(optional, string) [PII] Advertising identifier",
+  "ad_id_type" : "(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']",
+  "ad_tracking_enabled" : "(optional, boolean) Whether advertising tracking is enabled for the device",
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "app_id" : "(required, string) API ID of the app on which this event occurred",
+  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+  "canvas_name" : "(optional, string) Name of the Canvas",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+  "device_id" : "(optional, string) ID of the device on which the event occurred",
+  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "id" : "(required, string) Globally unique ID for this event",
+  "locale_key" : "(optional, string) [PII] The key corresponding to the translations (for example 'en-us') used to compose this message (null for default).",
+  "message_extras" : "(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "message_variation_name" : "(optional, string) Name of the message variation",
+  "platform" : "(required, string) Platform of the device",
+  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "timezone" : "(optional, string) Time zone of the user",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+
 {% tab Amplitude %}
 ```json
 // Push Notification Send (users.messages.pushnotification.Send)
@@ -9102,41 +9135,6 @@ This event occurs when Braze processes a push message for a user, communicating 
 }
 ```
 {% endtab %}
-
-{% tab Cloud Storage %}
-```json
-// users.messages.pushnotification.Send
-
-{
-  "ad_id" : "(optional, string) [PII] Advertising identifier",
-  "ad_id_type" : "(optional, string) One of ['ios_idfa', 'google_ad_id', 'windows_ad_id', 'roku_ad_id']",
-  "ad_tracking_enabled" : "(optional, boolean) Whether advertising tracking is enabled for the device",
-  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-  "app_id" : "(required, string) API ID of the app on which this event occurred",
-  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
-  "campaign_name" : "(optional, string) Name of the campaign",
-  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
-  "canvas_name" : "(optional, string) Name of the Canvas",
-  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
-  "canvas_step_name" : "(optional, string) Name of the Canvas step",
-  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
-  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-  "device_id" : "(optional, string) ID of the device on which the event occurred",
-  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
-  "external_user_id" : "(optional, string) [PII] External ID of the user",
-  "id" : "(required, string) Globally unique ID for this event",
-  "locale_key" : "(optional, string) [PII] The key corresponding to the translations (for example 'en-us') used to compose this message (null for default).",
-  "message_extras" : "(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering",
-  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
-  "message_variation_name" : "(optional, string) Name of the message variation",
-  "platform" : "(required, string) Platform of the device",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
-}
-```
-{% endtab %}
 {% endtabs %}
 
 #### Property details
@@ -9157,6 +9155,33 @@ RCS, Abort
 This event is created when an RCS send is interrupted due to an error detected within Braze, and the message is dropped.
 
 {% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.messages.rcs.Abort
+
+{
+  "abort_log" : "(optional, string) [PII] Log message describing abort details (up to 128 chars)",
+  "abort_type" : "(optional, string) The type of abort",
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "canvas_name" : "(optional, string) Name of the Canvas",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_message_variation_id" : "(optional, string) API ID of the Canvas step message variation this user received",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "id" : "(required, string) Globally unique ID for this event",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "message_variation_name" : "(optional, string) Name of the message variation",
+  "subscription_group_id" : "(optional, string) Subscription group API ID",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+
 {% tab Amplitude %}
 ```json
 // Abort  (users.messages.rcs.Abort)
@@ -9292,33 +9317,6 @@ This event is created when an RCS send is interrupted due to an error detected w
 }
 ```
 {% endtab %}
-
-{% tab Cloud Storage %}
-```json
-// users.messages.rcs.Abort
-
-{
-  "abort_log" : "(optional, string) [PII] Log message describing abort details (up to 128 chars)",
-  "abort_type" : "(optional, string) The type of abort",
-  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
-  "campaign_name" : "(optional, string) Name of the campaign",
-  "canvas_name" : "(optional, string) Name of the Canvas",
-  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
-  "canvas_step_message_variation_id" : "(optional, string) API ID of the Canvas step message variation this user received",
-  "canvas_step_name" : "(optional, string) Name of the Canvas step",
-  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
-  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-  "external_user_id" : "(optional, string) [PII] External ID of the user",
-  "id" : "(required, string) Globally unique ID for this event",
-  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
-  "message_variation_name" : "(optional, string) Name of the message variation",
-  "subscription_group_id" : "(optional, string) Subscription group API ID",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
-}
-```
-{% endtab %}
 {% endtabs %}
 
 {% endapi %}
@@ -9333,6 +9331,41 @@ RCS, Clicks
 An event that is created when the user interacts with an RCS message in a way that involves tapping or clicking on a UI element.
 
 {% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.messages.rcs.Click
+
+{
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "canvas_name" : "(optional, string) Name of the Canvas",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_message_variation_id" : "(optional, string) API ID of the Canvas step message variation this user received",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "device_id" : "(optional, string) ID of the device on which the event occurred",
+  "element_label" : "(optional, string) Optional details about the clicked element, such as the text of a suggested reply or button. \nExample: Button or chip text (will be reply message body for reply chips and buttons)",
+  "element_type" : "(optional, string) Specifies if an interaction_type that is common across suggestions and buttons came from a suggestion or button. Examples: Suggestion, Button",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "id" : "(required, string) Globally unique ID for this event",
+  "interaction_type" : "(required, string) The type of interaction that generated the click. Example string values: Text URL, Reply, OpenURL",
+  "is_suspected_bot_click" : "(optional, boolean) Whether this event was processed as a bot event",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "message_variation_name" : "(optional, string) Name of the message variation",
+  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "short_url" : "(optional, string) The shortened URL that a user clicks on",
+  "subscription_group_id" : "(optional, string) Subscription group API ID",
+  "suspected_bot_click_reason" : "(optional, array of string) Reasons why this event was classified as a bot",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "url" : "(optional, string) The full URL that the user clicked on",
+  "user_agent" : "(optional, string) User agent on which the click occurred",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event",
+  "user_phone_number" : "(required, string) [PII] The user's phone number from which the message was received"
+}
+```
+{% endtab %}
+
 {% tab Amplitude %}
 ```json
 // Click (users.messages.rcs.Click)
@@ -9502,41 +9535,6 @@ An event that is created when the user interacts with an RCS message in a way th
 }
 ```
 {% endtab %}
-
-{% tab Cloud Storage %}
-```json
-// users.messages.rcs.Click
-
-{
-  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
-  "campaign_name" : "(optional, string) Name of the campaign",
-  "canvas_name" : "(optional, string) Name of the Canvas",
-  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
-  "canvas_step_message_variation_id" : "(optional, string) API ID of the Canvas step message variation this user received",
-  "canvas_step_name" : "(optional, string) Name of the Canvas step",
-  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
-  "device_id" : "(optional, string) ID of the device on which the event occurred",
-  "element_label" : "(optional, string) Optional details about the clicked element, such as the text of a suggested reply or button. \nExample: Button or chip text (will be reply message body for reply chips and buttons)",
-  "element_type" : "(optional, string) Specifies if an interaction_type that is common across suggestions and buttons came from a suggestion or button. Examples: Suggestion, Button",
-  "external_user_id" : "(optional, string) [PII] External ID of the user",
-  "id" : "(required, string) Globally unique ID for this event",
-  "interaction_type" : "(required, string) The type of interaction that generated the click. Example string values: Text URL, Reply, OpenURL",
-  "is_suspected_bot_click" : "(optional, boolean) Whether this event was processed as a bot event",
-  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
-  "message_variation_name" : "(optional, string) Name of the message variation",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
-  "short_url" : "(optional, string) The shortened URL that a user clicks on",
-  "subscription_group_id" : "(optional, string) Subscription group API ID",
-  "suspected_bot_click_reason" : "(optional, array of string) Reasons why this event was classified as a bot",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "url" : "(optional, string) The full URL that the user clicked on",
-  "user_agent" : "(optional, string) User agent on which the click occurred",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event",
-  "user_phone_number" : "(required, string) [PII] The user's phone number from which the message was received"
-}
-```
-{% endtab %}
 {% endtabs %}
 
 {% endapi %}
@@ -9551,6 +9549,36 @@ RCS, Delivery
 This event is created when an RCS message is successfully delivered to a user's mobile device.
 
 {% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.messages.rcs.Delivery
+
+{
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "canvas_name" : "(optional, string) Name of the Canvas",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_message_variation_id" : "(optional, string) API ID of the Canvas step message variation this user received",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+  "device_id" : "(optional, string) ID of the device on which the event occurred",
+  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "from_rcs_sender" : "(optional, string) The RCS sender ID or agent name used to send the message",
+  "id" : "(required, string) Globally unique ID for this event",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "message_variation_name" : "(optional, string) Name of the message variation",
+  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "subscription_group_id" : "(optional, string) Subscription group API ID",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "to_phone_number" : "(required, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+
 {% tab Amplitude %}
 ```json
 // Delivery (users.messages.rcs.Delivery)
@@ -9702,36 +9730,6 @@ This event is created when an RCS message is successfully delivered to a user's 
 }
 ```
 {% endtab %}
-
-{% tab Cloud Storage %}
-```json
-// users.messages.rcs.Delivery
-
-{
-  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
-  "campaign_name" : "(optional, string) Name of the campaign",
-  "canvas_name" : "(optional, string) Name of the Canvas",
-  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
-  "canvas_step_message_variation_id" : "(optional, string) API ID of the Canvas step message variation this user received",
-  "canvas_step_name" : "(optional, string) Name of the Canvas step",
-  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
-  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-  "device_id" : "(optional, string) ID of the device on which the event occurred",
-  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
-  "external_user_id" : "(optional, string) [PII] External ID of the user",
-  "from_rcs_sender" : "(optional, string) The RCS sender ID or agent name used to send the message",
-  "id" : "(required, string) Globally unique ID for this event",
-  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
-  "message_variation_name" : "(optional, string) Name of the message variation",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
-  "subscription_group_id" : "(optional, string) Subscription group API ID",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "to_phone_number" : "(required, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
-}
-```
-{% endtab %}
 {% endtabs %}
 
 #### Property details
@@ -9750,6 +9748,36 @@ RCS, Inbound Received
 This event is created when Braze receives an RCS message that originates from the user.
 
 {% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.messages.rcs.InboundReceive
+
+{
+  "action" : "(required, string) Action taken in response to this message. (for example Subscribed, Unsubscribed or None).",
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "canvas_name" : "(optional, string) Name of the Canvas",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_message_variation_id" : "(optional, string) API ID of the Canvas step message variation this user received",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "id" : "(required, string) Globally unique ID for this event",
+  "media_urls" : "(optional, array of string) Media URLs from the user",
+  "message_body" : "(required, string) Typed response from the user",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "message_variation_name" : "(optional, string) Name of the message variation",
+  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "subscription_group_id" : "(optional, string) Subscription group API ID",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "to_rcs_sender" : "(required, string) The inbound RCS sender that the message was sent to",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event",
+  "user_phone_number" : "(required, string) [PII] The user's phone number from which the message was received"
+}
+```
+{% endtab %}
+
 {% tab Amplitude %}
 ```json
 // Inbound Receive (users.messages.rcs.InboundReceive)
@@ -9898,36 +9926,6 @@ This event is created when Braze receives an RCS message that originates from th
 }
 ```
 {% endtab %}
-
-{% tab Cloud Storage %}
-```json
-// users.messages.rcs.InboundReceive
-
-{
-  "action" : "(required, string) Action taken in response to this message. (for example Subscribed, Unsubscribed or None).",
-  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
-  "campaign_name" : "(optional, string) Name of the campaign",
-  "canvas_name" : "(optional, string) Name of the Canvas",
-  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
-  "canvas_step_message_variation_id" : "(optional, string) API ID of the Canvas step message variation this user received",
-  "canvas_step_name" : "(optional, string) Name of the Canvas step",
-  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
-  "external_user_id" : "(optional, string) [PII] External ID of the user",
-  "id" : "(required, string) Globally unique ID for this event",
-  "media_urls" : "(optional, array of string) Media URLs from the user",
-  "message_body" : "(required, string) Typed response from the user",
-  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
-  "message_variation_name" : "(optional, string) Name of the message variation",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
-  "subscription_group_id" : "(optional, string) Subscription group API ID",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "to_rcs_sender" : "(required, string) The inbound RCS sender that the message was sent to",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event",
-  "user_phone_number" : "(required, string) [PII] The user's phone number from which the message was received"
-}
-```
-{% endtab %}
 {% endtabs %}
 
 {% endapi %}
@@ -9942,6 +9940,31 @@ RCS, Read
 This event is created when a user opens an RCS message on their device, indicating that they have seen or read the message content.
 
 {% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.messages.rcs.Read
+
+{
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "canvas_name" : "(optional, string) Name of the Canvas",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_message_variation_id" : "(optional, string) API ID of the Canvas step message variation this user received",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "id" : "(required, string) Globally unique ID for this event",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "message_variation_name" : "(optional, string) Name of the message variation",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "to_phone_number" : "(required, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+
 {% tab Amplitude %}
 ```json
 // Read (users.messages.rcs.Read)
@@ -10071,31 +10094,6 @@ This event is created when a user opens an RCS message on their device, indicati
 }
 ```
 {% endtab %}
-
-{% tab Cloud Storage %}
-```json
-// users.messages.rcs.Read
-
-{
-  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
-  "campaign_name" : "(optional, string) Name of the campaign",
-  "canvas_name" : "(optional, string) Name of the Canvas",
-  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
-  "canvas_step_message_variation_id" : "(optional, string) API ID of the Canvas step message variation this user received",
-  "canvas_step_name" : "(optional, string) Name of the Canvas step",
-  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
-  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-  "external_user_id" : "(optional, string) [PII] External ID of the user",
-  "id" : "(required, string) Globally unique ID for this event",
-  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
-  "message_variation_name" : "(optional, string) Name of the message variation",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "to_phone_number" : "(required, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
-}
-```
-{% endtab %}
 {% endtabs %}
 
 {% endapi %}
@@ -10110,6 +10108,38 @@ RCS, Rejection
 An event that is created when an RCS message fails to be delivered to a user's mobile device due to intervention by the carrier.
 
 {% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.messages.rcs.Rejection
+
+{
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "canvas_name" : "(optional, string) Name of the Canvas",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+  "device_id" : "(optional, string) ID of the device on which the event occurred",
+  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+  "error" : "(optional, string) Error name",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "from_rcs_sender" : "(optional, string) The RCS sender ID or agent name used to send the message",
+  "id" : "(required, string) Globally unique ID for this event",
+  "is_sms_fallback" : "(optional, boolean) Indicates if SMS fallback was attempted for this rejected RCS message. It is linked/paired to the SMS Delivery event",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "message_variation_name" : "(optional, string) Name of the message variation",
+  "provider_error_code" : "(optional, string) The error code from the provider",
+  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "subscription_group_id" : "(optional, string) Subscription group API ID",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "to_phone_number" : "(required, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+
 {% tab Amplitude %}
 ```json
 // Rejection (users.messages.rcs.Rejection)
@@ -10273,38 +10303,6 @@ An event that is created when an RCS message fails to be delivered to a user's m
 }
 ```
 {% endtab %}
-
-{% tab Cloud Storage %}
-```json
-// users.messages.rcs.Rejection
-
-{
-  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
-  "campaign_name" : "(optional, string) Name of the campaign",
-  "canvas_name" : "(optional, string) Name of the Canvas",
-  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
-  "canvas_step_name" : "(optional, string) Name of the Canvas step",
-  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
-  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-  "device_id" : "(optional, string) ID of the device on which the event occurred",
-  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
-  "error" : "(optional, string) Error name",
-  "external_user_id" : "(optional, string) [PII] External ID of the user",
-  "from_rcs_sender" : "(optional, string) The RCS sender ID or agent name used to send the message",
-  "id" : "(required, string) Globally unique ID for this event",
-  "is_sms_fallback" : "(optional, boolean) Indicates if SMS fallback was attempted for this rejected RCS message. It is linked/paired to the SMS Delivery event",
-  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
-  "message_variation_name" : "(optional, string) Name of the message variation",
-  "provider_error_code" : "(optional, string) The error code from the provider",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
-  "subscription_group_id" : "(optional, string) Subscription group API ID",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "to_phone_number" : "(required, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
-}
-```
-{% endtab %}
 {% endtabs %}
 
 {% endapi %}
@@ -10319,6 +10317,38 @@ RCS, Sends
 This event is created when an RCS messages is sent out of Braze to our last-mile delivery partners.
 
 {% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.messages.rcs.Send
+
+{
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "canvas_name" : "(optional, string) Name of the Canvas",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_message_variation_id" : "(optional, string) API ID of the Canvas step message variation this user received",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+  "category" : "(optional, string) Keyword category name, only populated for auto-reply messages: 'opt-in', 'opt-out', 'help', or custom value",
+  "device_id" : "(optional, string) ID of the device on which the event occurred",
+  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "from_rcs_sender" : "(optional, string) The RCS sender ID or agent name used to send the message",
+  "id" : "(required, string) Globally unique ID for this event",
+  "message_extras" : "(optional, string) A JSON string of the tagged key-value pairs during liquid rendering",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "message_variation_name" : "(optional, string) Name of the message variation",
+  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "subscription_group_id" : "(optional, string) Subscription group API ID",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "to_phone_number" : "(required, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+
 {% tab Amplitude %}
 ```json
 // Send (users.messages.rcs.Send)
@@ -10478,38 +10508,6 @@ This event is created when an RCS messages is sent out of Braze to our last-mile
 }
 ```
 {% endtab %}
-
-{% tab Cloud Storage %}
-```json
-// users.messages.rcs.Send
-
-{
-  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
-  "campaign_name" : "(optional, string) Name of the campaign",
-  "canvas_name" : "(optional, string) Name of the Canvas",
-  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
-  "canvas_step_message_variation_id" : "(optional, string) API ID of the Canvas step message variation this user received",
-  "canvas_step_name" : "(optional, string) Name of the Canvas step",
-  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
-  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-  "category" : "(optional, string) Keyword category name, only populated for auto-reply messages: 'opt-in', 'opt-out', 'help', or custom value",
-  "device_id" : "(optional, string) ID of the device on which the event occurred",
-  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
-  "external_user_id" : "(optional, string) [PII] External ID of the user",
-  "from_rcs_sender" : "(optional, string) The RCS sender ID or agent name used to send the message",
-  "id" : "(required, string) Globally unique ID for this event",
-  "message_extras" : "(optional, string) A JSON string of the tagged key-value pairs during liquid rendering",
-  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
-  "message_variation_name" : "(optional, string) Name of the message variation",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
-  "subscription_group_id" : "(optional, string) Subscription group API ID",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "to_phone_number" : "(required, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
-}
-```
-{% endtab %}
 {% endtabs %}
 
 #### Property details
@@ -10528,6 +10526,34 @@ Abort, SMS
 This event occurs if an SMS message was aborted based on Liquid aborts, etc.
 
 {% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.messages.sms.Abort
+
+{
+  "abort_log" : "(optional, string) [PII] Log message describing abort details (up to 128 chars)",
+  "abort_type" : "(optional, string) Type of abort",
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+  "canvas_name" : "(optional, string) Name of the Canvas",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_message_variation_id" : "(optional, string) API ID of the Canvas step message variation this user received",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "id" : "(required, string) Globally unique ID for this event",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "message_variation_name" : "(optional, string) Name of the message variation",
+  "subscription_group_id" : "(optional, string) Subscription group API ID",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+
 {% tab Amplitude %}
 ```json
 // SMS Abort (users.messages.sms.Abort)
@@ -10667,34 +10693,6 @@ This event occurs if an SMS message was aborted based on Liquid aborts, etc.
 }
 ```
 {% endtab %}
-
-{% tab Cloud Storage %}
-```json
-// users.messages.sms.Abort
-
-{
-  "abort_log" : "(optional, string) [PII] Log message describing abort details (up to 128 chars)",
-  "abort_type" : "(optional, string) Type of abort",
-  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
-  "campaign_name" : "(optional, string) Name of the campaign",
-  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
-  "canvas_name" : "(optional, string) Name of the Canvas",
-  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
-  "canvas_step_message_variation_id" : "(optional, string) API ID of the Canvas step message variation this user received",
-  "canvas_step_name" : "(optional, string) Name of the Canvas step",
-  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
-  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-  "external_user_id" : "(optional, string) [PII] External ID of the user",
-  "id" : "(required, string) Globally unique ID for this event",
-  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
-  "message_variation_name" : "(optional, string) Name of the message variation",
-  "subscription_group_id" : "(optional, string) Subscription group API ID",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
-}
-```
-{% endtab %}
 {% endtabs %}
 
 {% endapi %}
@@ -10713,6 +10711,36 @@ This event occurs when an SMS is sent to the carrier.
 {% endalert %}
 
 {% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.messages.sms.CarrierSend
+
+{
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+  "canvas_name" : "(optional, string) Name of the Canvas",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "from_phone_number" : "(optional, string) Phone number used to send in e.164 format (for example +14155552671)",
+  "id" : "(required, string) Globally unique ID for this event",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "message_variation_name" : "(optional, string) Name of the message variation",
+  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "subscription_group_id" : "(optional, string) Subscription group API ID",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "timezone" : "(optional, string) Time zone of the user",
+  "to_phone_number" : "(optional, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+
 {% tab Amplitude %}
 ```json
 // SMS Carrier Send (users.messages.sms.CarrierSend)
@@ -10868,36 +10896,6 @@ This event occurs when an SMS is sent to the carrier.
 }
 ```
 {% endtab %}
-
-{% tab Cloud Storage %}
-```json
-// users.messages.sms.CarrierSend
-
-{
-  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
-  "campaign_name" : "(optional, string) Name of the campaign",
-  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
-  "canvas_name" : "(optional, string) Name of the Canvas",
-  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
-  "canvas_step_name" : "(optional, string) Name of the Canvas step",
-  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
-  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
-  "external_user_id" : "(optional, string) [PII] External ID of the user",
-  "from_phone_number" : "(optional, string) Phone number used to send in e.164 format (for example +14155552671)",
-  "id" : "(required, string) Globally unique ID for this event",
-  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
-  "message_variation_name" : "(optional, string) Name of the message variation",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
-  "subscription_group_id" : "(optional, string) Subscription group API ID",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "timezone" : "(optional, string) Time zone of the user",
-  "to_phone_number" : "(optional, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
-}
-```
-{% endtab %}
 {% endtabs %}
 
 #### Property details
@@ -10916,6 +10914,37 @@ SMS, Delivery
 This event occurs when an SMS was successfully delivered to the user's mobile phone.
 
 {% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.messages.sms.Delivery
+
+{
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+  "canvas_name" : "(optional, string) Name of the Canvas",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "from_phone_number" : "(optional, string) Phone number used to send in e.164 format (for example +14155552671)",
+  "id" : "(required, string) Globally unique ID for this event",
+  "is_sms_fallback" : "(optional, boolean) Indicates that a SMS fallback message was sent due to a rejected RCS message. The message could result in delivery, delivery failure, or rejection. It can be linked to the RCS Rejection event via a send ID and dispatch ID",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "message_variation_name" : "(optional, string) Name of the message variation",
+  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "subscription_group_id" : "(optional, string) Subscription group API ID",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "timezone" : "(optional, string) Time zone of the user",
+  "to_phone_number" : "(optional, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+
 {% tab Amplitude %}
 ```json
 // SMS Delivery (users.messages.sms.Delivery)
@@ -11075,37 +11104,6 @@ This event occurs when an SMS was successfully delivered to the user's mobile ph
 }
 ```
 {% endtab %}
-
-{% tab Cloud Storage %}
-```json
-// users.messages.sms.Delivery
-
-{
-  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
-  "campaign_name" : "(optional, string) Name of the campaign",
-  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
-  "canvas_name" : "(optional, string) Name of the Canvas",
-  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
-  "canvas_step_name" : "(optional, string) Name of the Canvas step",
-  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
-  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
-  "external_user_id" : "(optional, string) [PII] External ID of the user",
-  "from_phone_number" : "(optional, string) Phone number used to send in e.164 format (for example +14155552671)",
-  "id" : "(required, string) Globally unique ID for this event",
-  "is_sms_fallback" : "(optional, boolean) Indicates that a SMS fallback message was sent due to a rejected RCS message. The message could result in delivery, delivery failure, or rejection. It can be linked to the RCS Rejection event via a send ID and dispatch ID",
-  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
-  "message_variation_name" : "(optional, string) Name of the message variation",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
-  "subscription_group_id" : "(optional, string) Subscription group API ID",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "timezone" : "(optional, string) Time zone of the user",
-  "to_phone_number" : "(optional, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
-}
-```
-{% endtab %}
 {% endtabs %}
 
 #### Property details
@@ -11124,6 +11122,38 @@ SMS, Delivery
 This event occurs when an SMS experiences delivery failure. Use this event and the provided error codes to help troubleshoot issues with SMS delivery.
 
 {% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.messages.sms.DeliveryFailure
+
+{
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+  "canvas_name" : "(optional, string) Name of the Canvas",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+  "error" : "(optional, string) Error name",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "id" : "(required, string) Globally unique ID for this event",
+  "is_sms_fallback" : "(optional, boolean) Indicates that a SMS fallback message was sent due to a rejected RCS message. The message could result in delivery, delivery failure, or rejection. It can be linked to the RCS Rejection event via a send ID and dispatch ID",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "message_variation_name" : "(optional, string) Name of the message variation",
+  "provider_error_code" : "(optional, string) Error code from the SMS provider",
+  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "subscription_group_id" : "(optional, string) Subscription group API ID",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "timezone" : "(optional, string) Time zone of the user",
+  "to_phone_number" : "(optional, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+
 {% tab Amplitude %}
 ```json
 // SMS Delivery Failure (users.messages.sms.DeliveryFailure)
@@ -11287,38 +11317,6 @@ This event occurs when an SMS experiences delivery failure. Use this event and t
 }
 ```
 {% endtab %}
-
-{% tab Cloud Storage %}
-```json
-// users.messages.sms.DeliveryFailure
-
-{
-  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
-  "campaign_name" : "(optional, string) Name of the campaign",
-  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
-  "canvas_name" : "(optional, string) Name of the Canvas",
-  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
-  "canvas_step_name" : "(optional, string) Name of the Canvas step",
-  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
-  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
-  "error" : "(optional, string) Error name",
-  "external_user_id" : "(optional, string) [PII] External ID of the user",
-  "id" : "(required, string) Globally unique ID for this event",
-  "is_sms_fallback" : "(optional, boolean) Indicates that a SMS fallback message was sent due to a rejected RCS message. The message could result in delivery, delivery failure, or rejection. It can be linked to the RCS Rejection event via a send ID and dispatch ID",
-  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
-  "message_variation_name" : "(optional, string) Name of the message variation",
-  "provider_error_code" : "(optional, string) Error code from the SMS provider",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
-  "subscription_group_id" : "(optional, string) Subscription group API ID",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "timezone" : "(optional, string) Time zone of the user",
-  "to_phone_number" : "(optional, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
-}
-```
-{% endtab %}
 {% endtabs %}
 
 #### Property details
@@ -11340,8 +11338,37 @@ When Braze receives an inbound SMS, we attribute that inbound message to any use
 
 If we detect that this inbound message is a reply to an outbound campaign or Canvas component sent from Braze, we will also include the campaign or Canvas metadata with the event. Braze defines a reply as an inbound message coming within four hours of an outbound message. However, there is a one-minute cache for the attributed campaign information of the last outbound SMS received.
 
-
 {% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.messages.sms.InboundReceive
+
+{
+  "action" : "(required, string) Action taken in response to this message. (for example Subscribed, Unsubscribed or None).",
+  "app_group_id" : "(required, string) API ID of the app group this user belongs to",
+  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+  "canvas_name" : "(optional, string) Name of the Canvas",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "id" : "(required, string) Globally unique ID for this event",
+  "inbound_phone_number" : "(required, string) The inbound number that the message was sent to",
+  "media_urls" : "(optional, array of string) Media URLs from the user",
+  "message_body" : "(required, string) Typed response from the user",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "message_variation_name" : "(optional, string) Name of the message variation",
+  "subscription_group_id" : "(optional, string) Subscription group API ID",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "user_id" : "(optional, string) Braze user ID of the user who performed this event",
+  "user_phone_number" : "(required, string) [PII] The user's phone number from which the message was received"
+}
+```
+{% endtab %}
+
 {% tab Amplitude %}
 ```json
 // SMS Inbound Received (users.messages.sms.InboundReceive)
@@ -11494,36 +11521,6 @@ If we detect that this inbound message is a reply to an outbound campaign or Can
 }
 ```
 {% endtab %}
-
-{% tab Cloud Storage %}
-```json
-// users.messages.sms.InboundReceive
-
-{
-  "action" : "(required, string) Action taken in response to this message. (for example Subscribed, Unsubscribed or None).",
-  "app_group_id" : "(required, string) API ID of the app group this user belongs to",
-  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
-  "campaign_name" : "(optional, string) Name of the campaign",
-  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
-  "canvas_name" : "(optional, string) Name of the Canvas",
-  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
-  "canvas_step_name" : "(optional, string) Name of the Canvas step",
-  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
-  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-  "external_user_id" : "(optional, string) [PII] External ID of the user",
-  "id" : "(required, string) Globally unique ID for this event",
-  "inbound_phone_number" : "(required, string) The inbound number that the message was sent to",
-  "media_urls" : "(optional, array of string) Media URLs from the user",
-  "message_body" : "(required, string) Typed response from the user",
-  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
-  "message_variation_name" : "(optional, string) Name of the message variation",
-  "subscription_group_id" : "(optional, string) Subscription group API ID",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "user_id" : "(optional, string) Braze user ID of the user who performed this event",
-  "user_phone_number" : "(required, string) [PII] The user's phone number from which the message was received"
-}
-```
-{% endtab %}
 {% endtabs %}
 
 {% endapi %}
@@ -11538,6 +11535,39 @@ SMS, Rejection
 This event occurs when an SMS send gets rejected by the carrier, this can happen for several reasons. Use this event and the provided error codes to help troubleshoot issues with SMS delivery.
 
 {% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.messages.sms.Rejection
+
+{
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+  "canvas_name" : "(optional, string) Name of the Canvas",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+  "error" : "(optional, string) Error name",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "from_phone_number" : "(optional, string) Phone number used to send in e.164 format (for example +14155552671)",
+  "id" : "(required, string) Globally unique ID for this event",
+  "is_sms_fallback" : "(optional, boolean) Indicates that a SMS fallback message was sent due to a rejected RCS message. The message could result in delivery, delivery failure, or rejection. It can be linked to the RCS Rejection event via a send ID and dispatch ID\nIt can be linked to the RCS Rejection event via a send ID and dispatch ID. (Event property)",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "message_variation_name" : "(optional, string) Name of the message variation",
+  "provider_error_code" : "(optional, string) Error code from the SMS provider",
+  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "subscription_group_id" : "(optional, string) Subscription group API ID",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "timezone" : "(optional, string) Time zone of the user",
+  "to_phone_number" : "(optional, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+
 {% tab Amplitude %}
 ```json
 // SMS Rejection (users.messages.sms.Rejection)
@@ -11705,39 +11735,6 @@ This event occurs when an SMS send gets rejected by the carrier, this can happen
 }
 ```
 {% endtab %}
-
-{% tab Cloud Storage %}
-```json
-// users.messages.sms.Rejection
-
-{
-  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
-  "campaign_name" : "(optional, string) Name of the campaign",
-  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
-  "canvas_name" : "(optional, string) Name of the Canvas",
-  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
-  "canvas_step_name" : "(optional, string) Name of the Canvas step",
-  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
-  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
-  "error" : "(optional, string) Error name",
-  "external_user_id" : "(optional, string) [PII] External ID of the user",
-  "from_phone_number" : "(optional, string) Phone number used to send in e.164 format (for example +14155552671)",
-  "id" : "(required, string) Globally unique ID for this event",
-  "is_sms_fallback" : "(optional, boolean) Indicates that a SMS fallback message was sent due to a rejected RCS message. The message could result in delivery, delivery failure, or rejection. It can be linked to the RCS Rejection event via a send ID and dispatch ID\nIt can be linked to the RCS Rejection event via a send ID and dispatch ID. (Event property)",
-  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
-  "message_variation_name" : "(optional, string) Name of the message variation",
-  "provider_error_code" : "(optional, string) Error code from the SMS provider",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
-  "subscription_group_id" : "(optional, string) Subscription group API ID",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "timezone" : "(optional, string) Time zone of the user",
-  "to_phone_number" : "(optional, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
-}
-```
-{% endtab %}
 {% endtabs %}
 
 #### Property details
@@ -11756,6 +11753,37 @@ SMS, Sends
 This event occurs when a user sends an SMS.
 
 {% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.messages.sms.Send
+
+{
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+  "canvas_name" : "(optional, string) Name of the Canvas",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+  "category" : "(optional, string) Keyword category name, only populated for auto-reply messages: 'opt-in', 'opt-out', 'help', or custom value",
+  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "id" : "(required, string) Globally unique ID for this event",
+  "message_extras" : "(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "message_variation_name" : "(optional, string) Name of the message variation",
+  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "subscription_group_id" : "(optional, string) Subscription group API ID",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "timezone" : "(optional, string) Time zone of the user",
+  "to_phone_number" : "(optional, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+
 {% tab Amplitude %}
 ```json
 // SMS Send (users.messages.sms.Send)
@@ -11915,37 +11943,6 @@ This event occurs when a user sends an SMS.
 }
 ```
 {% endtab %}
-
-{% tab Cloud Storage %}
-```json
-// users.messages.sms.Send
-
-{
-  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
-  "campaign_name" : "(optional, string) Name of the campaign",
-  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
-  "canvas_name" : "(optional, string) Name of the Canvas",
-  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
-  "canvas_step_name" : "(optional, string) Name of the Canvas step",
-  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
-  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-  "category" : "(optional, string) Keyword category name, only populated for auto-reply messages: 'opt-in', 'opt-out', 'help', or custom value",
-  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
-  "external_user_id" : "(optional, string) [PII] External ID of the user",
-  "id" : "(required, string) Globally unique ID for this event",
-  "message_extras" : "(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering",
-  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
-  "message_variation_name" : "(optional, string) Name of the message variation",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
-  "subscription_group_id" : "(optional, string) Subscription group API ID",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "timezone" : "(optional, string) Time zone of the user",
-  "to_phone_number" : "(optional, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
-}
-```
-{% endtab %}
 {% endtabs %}
 
 #### Property details
@@ -11964,6 +11961,37 @@ SMS, Clicks
 This event occurs when a user clicks an SMS short link.
 
 {% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.messages.sms.ShortLinkClick
+
+{
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+  "canvas_name" : "(optional, string) Name of the Canvas",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "id" : "(required, string) Globally unique ID for this event",
+  "is_suspected_bot_click" : "(optional, boolean) Whether this event was processed as a bot event",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "message_variation_name" : "(optional, string) Name of the message variation",
+  "short_url" : "(required, string) Shortened url that was clicked",
+  "suspected_bot_click_reason" : "(optional, array of string) Why this event was classified as a bot",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "timezone" : "(optional, string) Time zone of the user",
+  "url" : "(required, string) URL that the user clicked on",
+  "user_agent" : "(optional, string) User agent on which the click occurred",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event",
+  "user_phone_number" : "(optional, string) [PII] The user's phone number from which the message was received"
+}
+```
+{% endtab %}
+
 {% tab Amplitude %}
 ```json
 // SMS Short Link Click (users.messages.sms.ShortLinkClick)
@@ -12122,37 +12150,6 @@ This event occurs when a user clicks an SMS short link.
 }
 ```
 {% endtab %}
-
-{% tab Cloud Storage %}
-```json
-// users.messages.sms.ShortLinkClick
-
-{
-  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
-  "campaign_name" : "(optional, string) Name of the campaign",
-  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
-  "canvas_name" : "(optional, string) Name of the Canvas",
-  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
-  "canvas_step_name" : "(optional, string) Name of the Canvas step",
-  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
-  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-  "external_user_id" : "(optional, string) [PII] External ID of the user",
-  "id" : "(required, string) Globally unique ID for this event",
-  "is_suspected_bot_click" : "(optional, boolean) Whether this event was processed as a bot event",
-  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
-  "message_variation_name" : "(optional, string) Name of the message variation",
-  "short_url" : "(required, string) Shortened url that was clicked",
-  "suspected_bot_click_reason" : "(optional, array of string) Why this event was classified as a bot",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "timezone" : "(optional, string) Time zone of the user",
-  "url" : "(required, string) URL that the user clicked on",
-  "user_agent" : "(optional, string) User agent on which the click occurred",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event",
-  "user_phone_number" : "(optional, string) [PII] The user's phone number from which the message was received"
-}
-```
-{% endtab %}
 {% endtabs %}
 
 {% endapi %}
@@ -12167,6 +12164,37 @@ Abort, Webhooks
 This event occurs if a webhook message was aborted based on Liquid aborts, etc.
 
 {% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.messages.webhook.Abort
+
+{
+  "abort_log" : "(optional, string) [PII] Log message describing abort details (up to 128 chars)",
+  "abort_type" : "(optional, string) Type of abort",
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+  "canvas_name" : "(optional, string) Name of the Canvas",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_message_variation_id" : "(optional, string) API ID of the Canvas step message variation this user received",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+  "device_id" : "(optional, string) ID of the device on which the event occurred",
+  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "id" : "(required, string) Globally unique ID for this event",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "message_variation_name" : "(optional, string) Name of the message variation",
+  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "timezone" : "(optional, string) Time zone of the user",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+
 {% tab Amplitude %}
 ```json
 // Webhook Abort (users.messages.webhook.Abort)
@@ -12316,37 +12344,6 @@ This event occurs if a webhook message was aborted based on Liquid aborts, etc.
 }
 ```
 {% endtab %}
-
-{% tab Cloud Storage %}
-```json
-// users.messages.webhook.Abort
-
-{
-  "abort_log" : "(optional, string) [PII] Log message describing abort details (up to 128 chars)",
-  "abort_type" : "(optional, string) Type of abort",
-  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
-  "campaign_name" : "(optional, string) Name of the campaign",
-  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
-  "canvas_name" : "(optional, string) Name of the Canvas",
-  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
-  "canvas_step_message_variation_id" : "(optional, string) API ID of the Canvas step message variation this user received",
-  "canvas_step_name" : "(optional, string) Name of the Canvas step",
-  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
-  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-  "device_id" : "(optional, string) ID of the device on which the event occurred",
-  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
-  "external_user_id" : "(optional, string) [PII] External ID of the user",
-  "id" : "(required, string) Globally unique ID for this event",
-  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
-  "message_variation_name" : "(optional, string) Name of the message variation",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
-}
-```
-{% endtab %}
 {% endtabs %}
 
 #### Property details
@@ -12365,6 +12362,43 @@ Failure, Webhooks
 This event occurs if a webhook message was delivered but failed with an error response from the endpoint.
 
 {% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.messages.webhook.Failure
+
+{
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+  "canvas_name" : "(optional, string) Name of the Canvas",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_message_variation_id" : "(optional, string) API ID of the Canvas step message variation this user received",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+  "content_length" : "(optional, int) Content length of the response",
+  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+  "endpoint_url" : "(optional, string) The endpoint URL of the failed webhook",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "host" : "(optional, string) The host of the webhook URL that returned a failure response",
+  "http_status_code" : "(optional, int) HTTP status code of the response",
+  "id" : "(required, string) Globally unique ID for this event",
+  "is_terminal" : "(optional, boolean) Whether this event was the terminal attempt in a send",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "message_variation_name" : "(optional, string) Name of the message variation",
+  "raw_response" : "(optional, string) Truncated raw response from endpoint",
+  "retry_count" : "(optional, int) Number of webhook sends attempted before giving up",
+  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "url_path" : "(optional, string) The path of the webhook URL that returned a failure response",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event",
+  "webhook_duration" : "(optional, int) Total duration of this request in milliseconds",
+  "webhook_failure_source" : "(optional, string) To tell whether an error was created by Braze or by the endpoint itself. The source field could be External Endpoint, Treat no status code to host unreachable"
+}
+```
+{% endtab %}
+
 {% tab Amplitude %}
 ```json
 // Webhook Failure (users.messages.webhook.Failure)
@@ -12540,43 +12574,6 @@ This event occurs if a webhook message was delivered but failed with an error re
 }
 ```
 {% endtab %}
-
-{% tab Cloud Storage %}
-```json
-// users.messages.webhook.Failure
-
-{
-  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
-  "campaign_name" : "(optional, string) Name of the campaign",
-  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
-  "canvas_name" : "(optional, string) Name of the Canvas",
-  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
-  "canvas_step_message_variation_id" : "(optional, string) API ID of the Canvas step message variation this user received",
-  "canvas_step_name" : "(optional, string) Name of the Canvas step",
-  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
-  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-  "content_length" : "(optional, int) Content length of the response",
-  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
-  "endpoint_url" : "(optional, string) The endpoint URL of the failed webhook",
-  "external_user_id" : "(optional, string) [PII] External ID of the user",
-  "host" : "(optional, string) The host of the webhook URL that returned a failure response",
-  "http_status_code" : "(optional, int) HTTP status code of the response",
-  "id" : "(required, string) Globally unique ID for this event",
-  "is_terminal" : "(optional, boolean) Whether this event was the terminal attempt in a send",
-  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
-  "message_variation_name" : "(optional, string) Name of the message variation",
-  "raw_response" : "(optional, string) Truncated raw response from endpoint",
-  "retry_count" : "(optional, int) Number of webhook sends attempted before giving up",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "url_path" : "(optional, string) The path of the webhook URL that returned a failure response",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event",
-  "webhook_duration" : "(optional, int) Total duration of this request in milliseconds",
-  "webhook_failure_source" : "(optional, string) To tell whether an error was created by Braze or by the endpoint itself. The source field could be External Endpoint, Treat no status code to host unreachable"
-}
-```
-{% endtab %}
 {% endtabs %}
 
 #### Property details
@@ -12595,6 +12592,34 @@ Webhooks, Sends
 This event occurs when a webhook was processed and sent to the third party specified in that webhook. Note that this does not signify whether or not the request was received.
 
 {% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.messages.webhook.Send
+
+{
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+  "canvas_name" : "(optional, string) Name of the Canvas",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "id" : "(required, string) Globally unique ID for this event",
+  "message_extras" : "(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "message_variation_name" : "(optional, string) Name of the message variation",
+  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "timezone" : "(optional, string) Time zone of the user",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+
 {% tab Amplitude %}
 ```json
 // Webhook Send (users.messages.webhook.Send)
@@ -12740,34 +12765,6 @@ This event occurs when a webhook was processed and sent to the third party speci
 }
 ```
 {% endtab %}
-
-{% tab Cloud Storage %}
-```json
-// users.messages.webhook.Send
-
-{
-  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
-  "campaign_name" : "(optional, string) Name of the campaign",
-  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
-  "canvas_name" : "(optional, string) Name of the Canvas",
-  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
-  "canvas_step_name" : "(optional, string) Name of the Canvas step",
-  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
-  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
-  "external_user_id" : "(optional, string) [PII] External ID of the user",
-  "id" : "(required, string) Globally unique ID for this event",
-  "message_extras" : "(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering",
-  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
-  "message_variation_name" : "(optional, string) Name of the message variation",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
-}
-```
-{% endtab %}
 {% endtabs %}
 
 #### Property details
@@ -12786,6 +12783,38 @@ WhatsApp, Abort
 This event occurs if a WhatsApp message was aborted based on Liquid aborts, etc.
 
 {% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.messages.whatsapp.Abort
+
+{
+  "abort_log" : "(optional, string) [PII] Log message describing abort details (up to 128 chars)",
+  "abort_type" : "(optional, string) Type of abort",
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+  "canvas_name" : "(optional, string) Name of the Canvas",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_message_variation_id" : "(optional, string) API ID of the Canvas step message variation this user received",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+  "device_id" : "(optional, string) ID of the device on which the event occurred",
+  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "id" : "(required, string) Globally unique ID for this event",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "message_variation_name" : "(optional, string) Name of the message variation",
+  "subscription_group_id" : "(optional, string) Subscription group API ID",
+  "time" : "(required, long) UNIX timestamp at which the event happened",
+  "timezone" : "(optional, string) Time zone of the user",
+  "to_phone_number" : "(optional, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+
 {% tab Amplitude %}
 ```json
 // WhatsApp Abort (users.messages.whatsapp.Abort)
@@ -12941,38 +12970,6 @@ This event occurs if a WhatsApp message was aborted based on Liquid aborts, etc.
 }
 ```
 {% endtab %}
-
-{% tab Cloud Storage %}
-```json
-// users.messages.whatsapp.Abort
-
-{
-  "abort_log" : "(optional, string) [PII] Log message describing abort details (up to 128 chars)",
-  "abort_type" : "(optional, string) Type of abort",
-  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
-  "campaign_name" : "(optional, string) Name of the campaign",
-  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
-  "canvas_name" : "(optional, string) Name of the Canvas",
-  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
-  "canvas_step_message_variation_id" : "(optional, string) API ID of the Canvas step message variation this user received",
-  "canvas_step_name" : "(optional, string) Name of the Canvas step",
-  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
-  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-  "device_id" : "(optional, string) ID of the device on which the event occurred",
-  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
-  "external_user_id" : "(optional, string) [PII] External ID of the user",
-  "id" : "(required, string) Globally unique ID for this event",
-  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
-  "message_variation_name" : "(optional, string) Name of the message variation",
-  "subscription_group_id" : "(optional, string) Subscription group API ID",
-  "time" : "(required, long) UNIX timestamp at which the event happened",
-  "timezone" : "(optional, string) Time zone of the user",
-  "to_phone_number" : "(optional, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
-}
-```
-{% endtab %}
 {% endtabs %}
 
 #### Property details
@@ -12991,6 +12988,37 @@ WhatsApp, Clicks
 This event occurs when a user clicks a link or button in a WhatsApp message where the link's domain matches the click tracking domain.
 
 {% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.messages.whatsapp.Click
+
+{
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+  "canvas_name" : "(optional, string) Name of the Canvas",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_message_variation_id" : "(optional, string) API ID of the Canvas step message variation this user received",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+  "device_id" : "(optional, string) ID of the device on which the event occurred",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "id" : "(required, string) Globally unique ID for this event",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "message_variation_name" : "(optional, string) Name of the message variation",
+  "short_url" : "(required, string) Shortened url that was clicked",
+  "time" : "(required, int) UNIX timestamp at which the event happened",
+  "timezone" : "(optional, string) Time zone of the user",
+  "url" : "(required, string) URL that the user clicked on",
+  "user_agent" : "(optional, string) User agent on which the click occurred",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event",
+  "user_phone_number" : "(optional, string) [PII] The user's phone number from which the message was received"
+}
+```
+{% endtab %}
+
 {% tab Amplitude %}
 ```json
 // WhatsApp Tracked Link Click (users.messages.whatsapp.Click)
@@ -13142,37 +13170,6 @@ This event occurs when a user clicks a link or button in a WhatsApp message wher
 }
 ```
 {% endtab %}
-
-{% tab Cloud Storage %}
-```json
-// users.messages.whatsapp.Click
-
-{
-  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
-  "campaign_name" : "(optional, string) Name of the campaign",
-  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
-  "canvas_name" : "(optional, string) Name of the Canvas",
-  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
-  "canvas_step_message_variation_id" : "(optional, string) API ID of the Canvas step message variation this user received",
-  "canvas_step_name" : "(optional, string) Name of the Canvas step",
-  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
-  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-  "device_id" : "(optional, string) ID of the device on which the event occurred",
-  "external_user_id" : "(optional, string) [PII] External ID of the user",
-  "id" : "(required, string) Globally unique ID for this event",
-  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
-  "message_variation_name" : "(optional, string) Name of the message variation",
-  "short_url" : "(required, string) Shortened url that was clicked",
-  "time" : "(required, int) UNIX timestamp at which the event happened",
-  "timezone" : "(optional, string) Time zone of the user",
-  "url" : "(required, string) URL that the user clicked on",
-  "user_agent" : "(optional, string) User agent on which the click occurred",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event",
-  "user_phone_number" : "(optional, string) [PII] The user's phone number from which the message was received"
-}
-```
-{% endtab %}
 {% endtabs %}
 
 {% endapi %}
@@ -13187,6 +13184,41 @@ WhatsApp, Delivery
 This event occurs when an WhatsApp message sent made it successfully to the user's device.
 
 {% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.messages.whatsapp.Delivery
+
+{
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+  "canvas_name" : "(optional, string) Name of the Canvas",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_message_variation_id" : "(optional, string) API ID of the Canvas step message variation this user received",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+  "device_id" : "(optional, string) ID of the device on which the event occurred",
+  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "flow_id" : "(optional, string) The unique ID of the Flow in the WhatsApp Manager. Present if the message includes a CTA to respond to a WhatsApp Flow",
+  "from_phone_number" : "(required, string) Phone number used to send in e.164 format (for example +14155552671)",
+  "id" : "(required, string) Globally unique ID for this event",
+  "message_id" : "(optional, string) The unique ID generated by Meta for this message",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "message_variation_name" : "(optional, string) Name of the message variation",
+  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "subscription_group_id" : "(optional, string) Subscription group API ID",
+  "template_name" : "(optional, string) [PII] Name of the template in the WhatsApp manager. Present if sending a Template Message",
+  "time" : "(required, long) UNIX timestamp at which the event happened",
+  "timezone" : "(optional, string) Time zone of the user",
+  "to_phone_number" : "(optional, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+
 {% tab Amplitude %}
 ```json
 // WhatsApp Delivery (users.messages.whatsapp.Delivery)
@@ -13354,10 +13386,27 @@ This event occurs when an WhatsApp message sent made it successfully to the user
 }
 ```
 {% endtab %}
+{% endtabs %}
 
+#### Property details
+
+- `dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open).
+
+{% endapi %}
+
+{% api %}
+## WhatsApp Failure events {#whatsapp-failure-events}
+
+{% apitags %}
+WhatsApp, Failure
+{% endapitags %}
+
+This event occurs when WhatsApp cannot deliver the message to the user. A hard bounce signifies a permanent deliverability failure.
+
+{% tabs %}
 {% tab Cloud Storage %}
 ```json
-// users.messages.whatsapp.Delivery
+// users.messages.whatsapp.Failure
 
 {
   "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
@@ -13379,6 +13428,8 @@ This event occurs when an WhatsApp message sent made it successfully to the user
   "message_id" : "(optional, string) The unique ID generated by Meta for this message",
   "message_variation_id" : "(optional, string) API ID of the message variation this user received",
   "message_variation_name" : "(optional, string) Name of the message variation",
+  "provider_error_code" : "(required, string) Error code from WhatsApp",
+  "provider_error_title" : "(required, string) Description of error from WhatsApp",
   "send_id" : "(optional, string) Message send ID this message belongs to",
   "subscription_group_id" : "(optional, string) Subscription group API ID",
   "template_name" : "(optional, string) [PII] Name of the template in the WhatsApp manager. Present if sending a Template Message",
@@ -13389,24 +13440,7 @@ This event occurs when an WhatsApp message sent made it successfully to the user
 }
 ```
 {% endtab %}
-{% endtabs %}
 
-#### Property details
-
-- `dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open).
-
-{% endapi %}
-
-{% api %}
-## WhatsApp Failure events {#whatsapp-failure-events}
-
-{% apitags %}
-WhatsApp, Failure
-{% endapitags %}
-
-This event occurs when WhatsApp cannot deliver the message to the user. A hard bounce signifies a permanent deliverability failure.
-
-{% tabs %}
 {% tab Amplitude %}
 ```json
 // WhatsApp Failure (users.messages.whatsapp.Failure)
@@ -13582,43 +13616,6 @@ This event occurs when WhatsApp cannot deliver the message to the user. A hard b
 }
 ```
 {% endtab %}
-
-{% tab Cloud Storage %}
-```json
-// users.messages.whatsapp.Failure
-
-{
-  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
-  "campaign_name" : "(optional, string) Name of the campaign",
-  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
-  "canvas_name" : "(optional, string) Name of the Canvas",
-  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
-  "canvas_step_message_variation_id" : "(optional, string) API ID of the Canvas step message variation this user received",
-  "canvas_step_name" : "(optional, string) Name of the Canvas step",
-  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
-  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-  "device_id" : "(optional, string) ID of the device on which the event occurred",
-  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
-  "external_user_id" : "(optional, string) [PII] External ID of the user",
-  "flow_id" : "(optional, string) The unique ID of the Flow in the WhatsApp Manager. Present if the message includes a CTA to respond to a WhatsApp Flow",
-  "from_phone_number" : "(required, string) Phone number used to send in e.164 format (for example +14155552671)",
-  "id" : "(required, string) Globally unique ID for this event",
-  "message_id" : "(optional, string) The unique ID generated by Meta for this message",
-  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
-  "message_variation_name" : "(optional, string) Name of the message variation",
-  "provider_error_code" : "(required, string) Error code from WhatsApp",
-  "provider_error_title" : "(required, string) Description of error from WhatsApp",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
-  "subscription_group_id" : "(optional, string) Subscription group API ID",
-  "template_name" : "(optional, string) [PII] Name of the template in the WhatsApp manager. Present if sending a Template Message",
-  "time" : "(required, long) UNIX timestamp at which the event happened",
-  "timezone" : "(optional, string) Time zone of the user",
-  "to_phone_number" : "(optional, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
-}
-```
-{% endtab %}
 {% endtabs %}
 
 #### Property details
@@ -13637,6 +13634,46 @@ WhatsApp, Inbound Received
 This event occurs when one of your users sends a WhatsApp message to a phone number in one of your Braze WhatsApp subscription groups.
 
 {% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.messages.whatsapp.InboundReceive
+
+{
+  "action" : "(required, string) Action taken in response to this message. (for example Subscribed, Unsubscribed or None).",
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+  "canvas_name" : "(optional, string) Name of the Canvas",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_message_variation_id" : "(optional, string) API ID of the Canvas step message variation this user received",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+  "catalog_id" : "(optional, string) Catalog ID of a product if a product is referenced in the inbound message. Otherwise, empty.",
+  "device_id" : "(optional, string) ID of the device on which the event occurred",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "flow_id" : "(optional, string) The unique ID of the Flow in the WhatsApp Manager. Present if the user is responding to a WhatsApp Flow.",
+  "flow_response_json" : "(optional, string) [PII] The form values the user responded with. Present if the user is responding to a WhatsApp Flow.",
+  "id" : "(required, string) Globally unique ID for this event",
+  "in_reply_to" : "(optional, string) The message_id of the message this message was replying to",
+  "inbound_phone_number" : "(required, string) The inbound number that the message was sent to",
+  "media_urls" : "(optional, array of string) Media URLs from the user",
+  "message_body" : "(optional, string) Typed response from the user",
+  "message_id" : "(optional, string) The unique ID generated by Meta for this message",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "message_variation_name" : "(optional, string) Name of the message variation",
+  "product_id" : "(optional, string) Product SKU if a product is referenced in the inbound message. Otherwise, empty.",
+  "quick_reply_text" : "(optional, string) Text of button pressed by the user",
+  "subscription_group_id" : "(optional, string) Subscription group API ID",
+  "time" : "(required, long) UNIX timestamp at which the event happened",
+  "timezone" : "(optional, string) Time zone of the user",
+  "user_id" : "(optional, string) Braze user ID of the user who performed this event",
+  "user_phone_number" : "(required, string) [PII] The user's phone number from which the message was received"
+}
+```
+{% endtab %}
+
 {% tab Amplitude %}
 ```json
 // WhatsApp Inbound Received (users.messages.whatsapp.InboundReceive)
@@ -13823,46 +13860,6 @@ This event occurs when one of your users sends a WhatsApp message to a phone num
 }
 ```
 {% endtab %}
-
-{% tab Cloud Storage %}
-```json
-// users.messages.whatsapp.InboundReceive
-
-{
-  "action" : "(required, string) Action taken in response to this message. (for example Subscribed, Unsubscribed or None).",
-  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
-  "campaign_name" : "(optional, string) Name of the campaign",
-  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
-  "canvas_name" : "(optional, string) Name of the Canvas",
-  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
-  "canvas_step_message_variation_id" : "(optional, string) API ID of the Canvas step message variation this user received",
-  "canvas_step_name" : "(optional, string) Name of the Canvas step",
-  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
-  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-  "catalog_id" : "(optional, string) Catalog ID of a product if a product is referenced in the inbound message. Otherwise, empty.",
-  "device_id" : "(optional, string) ID of the device on which the event occurred",
-  "external_user_id" : "(optional, string) [PII] External ID of the user",
-  "flow_id" : "(optional, string) The unique ID of the Flow in the WhatsApp Manager. Present if the user is responding to a WhatsApp Flow.",
-  "flow_response_json" : "(optional, string) [PII] The form values the user responded with. Present if the user is responding to a WhatsApp Flow.",
-  "id" : "(required, string) Globally unique ID for this event",
-  "in_reply_to" : "(optional, string) The message_id of the message this message was replying to",
-  "inbound_phone_number" : "(required, string) The inbound number that the message was sent to",
-  "media_urls" : "(optional, array of string) Media URLs from the user",
-  "message_body" : "(optional, string) Typed response from the user",
-  "message_id" : "(optional, string) The unique ID generated by Meta for this message",
-  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
-  "message_variation_name" : "(optional, string) Name of the message variation",
-  "product_id" : "(optional, string) Product SKU if a product is referenced in the inbound message. Otherwise, empty.",
-  "quick_reply_text" : "(optional, string) Text of button pressed by the user",
-  "subscription_group_id" : "(optional, string) Subscription group API ID",
-  "time" : "(required, long) UNIX timestamp at which the event happened",
-  "timezone" : "(optional, string) Time zone of the user",
-  "user_id" : "(optional, string) Braze user ID of the user who performed this event",
-  "user_phone_number" : "(required, string) [PII] The user's phone number from which the message was received"
-}
-```
-{% endtab %}
 {% endtabs %}
 
 {% endapi %}
@@ -13877,6 +13874,41 @@ WhatsApp, Read
 This event occurs when an WhatsApp message is read by the user.
 
 {% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.messages.whatsapp.Read
+
+{
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+  "canvas_name" : "(optional, string) Name of the Canvas",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_message_variation_id" : "(optional, string) API ID of the Canvas step message variation this user received",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
+  "device_id" : "(optional, string) ID of the device on which the event occurred",
+  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "flow_id" : "(optional, string) The unique ID of the Flow in the WhatsApp Manager. Present if the message includes a CTA to respond to a WhatsApp Flow",
+  "from_phone_number" : "(required, string) Phone number used to send in e.164 format (for example +14155552671)",
+  "id" : "(required, string) Globally unique ID for this event",
+  "message_id" : "(optional, string) The unique ID generated by Meta for this message",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "message_variation_name" : "(optional, string) Name of the message variation",
+  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "subscription_group_id" : "(optional, string) Subscription group API ID",
+  "template_name" : "(optional, string) [PII] Name of the template in the WhatsApp manager. Present if sending a Template Message",
+  "time" : "(required, long) UNIX timestamp at which the event happened",
+  "timezone" : "(optional, string) Time zone of the user",
+  "to_phone_number" : "(optional, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+
 {% tab Amplitude %}
 ```json
 // WhatsApp Read (users.messages.whatsapp.Read)
@@ -14044,41 +14076,6 @@ This event occurs when an WhatsApp message is read by the user.
 }
 ```
 {% endtab %}
-
-{% tab Cloud Storage %}
-```json
-// users.messages.whatsapp.Read
-
-{
-  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
-  "campaign_name" : "(optional, string) Name of the campaign",
-  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
-  "canvas_name" : "(optional, string) Name of the Canvas",
-  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
-  "canvas_step_message_variation_id" : "(optional, string) API ID of the Canvas step message variation this user received",
-  "canvas_step_name" : "(optional, string) Name of the Canvas step",
-  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
-  "canvas_variation_name" : "(optional, string) Name of the Canvas variation this user received",
-  "device_id" : "(optional, string) ID of the device on which the event occurred",
-  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
-  "external_user_id" : "(optional, string) [PII] External ID of the user",
-  "flow_id" : "(optional, string) The unique ID of the Flow in the WhatsApp Manager. Present if the message includes a CTA to respond to a WhatsApp Flow",
-  "from_phone_number" : "(required, string) Phone number used to send in e.164 format (for example +14155552671)",
-  "id" : "(required, string) Globally unique ID for this event",
-  "message_id" : "(optional, string) The unique ID generated by Meta for this message",
-  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
-  "message_variation_name" : "(optional, string) Name of the message variation",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
-  "subscription_group_id" : "(optional, string) Subscription group API ID",
-  "template_name" : "(optional, string) [PII] Name of the template in the WhatsApp manager. Present if sending a Template Message",
-  "time" : "(required, long) UNIX timestamp at which the event happened",
-  "timezone" : "(optional, string) Time zone of the user",
-  "to_phone_number" : "(optional, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
-}
-```
-{% endtab %}
 {% endtabs %}
 
 #### Property details
@@ -14097,6 +14094,41 @@ WhatsApp, Sends
 This event occurs when a send request was successfully communicated between Braze and WhatsApp. Though, this does not mean the message was received by the user.
 
 {% tabs %}
+{% tab Cloud Storage %}
+```json
+// users.messages.whatsapp.Send
+
+{
+  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
+  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
+  "campaign_name" : "(optional, string) Name of the campaign",
+  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
+  "canvas_name" : "(optional, string) Name of the Canvas",
+  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
+  "canvas_step_message_variation_id" : "(optional, string) API ID of the Canvas step message variation this user received",
+  "canvas_step_name" : "(optional, string) Name of the Canvas step",
+  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
+  "device_id" : "(optional, string) ID of the device on which the event occurred",
+  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
+  "external_user_id" : "(optional, string) [PII] External ID of the user",
+  "flow_id" : "(optional, string) The unique ID of the Flow in the WhatsApp Manager. Present if the message includes a CTA to respond to a WhatsApp Flow",
+  "from_phone_number" : "(required, string) Phone number used to send in e.164 format (for example +14155552671)",
+  "id" : "(required, string) Globally unique ID for this event",
+  "message_extras" : "(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering",
+  "message_id" : "(optional, string) The unique ID generated by Meta for this message",
+  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
+  "message_variation_name" : "(optional, string) Name of the message variation",
+  "send_id" : "(optional, string) Message send ID this message belongs to",
+  "subscription_group_id" : "(optional, string) Subscription group API ID",
+  "template_name" : "(optional, string) [PII] Name of the template in the WhatsApp Manager. Present if sending a Template Message",
+  "time" : "(required, long) UNIX timestamp at which the event happened",
+  "timezone" : "(optional, string) Time zone of the user",
+  "to_phone_number" : "(optional, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)",
+  "user_id" : "(required, string) Braze user ID of the user who performed this event"
+}
+```
+{% endtab %}
+
 {% tab Amplitude %}
 ```json
 // WhatsApp Send (users.messages.whatsapp.Send)
@@ -14265,41 +14297,6 @@ This event occurs when a send request was successfully communicated between Braz
   "timestamp" : "(required, long) UNIX timestamp at which the event happened",
   "type" : "track",
   "userId" : "(optional, string) [PII] External ID of the user"
-}
-```
-{% endtab %}
-
-{% tab Cloud Storage %}
-```json
-// users.messages.whatsapp.Send
-
-{
-  "app_group_id" : "(optional, string) API ID of the app group this user belongs to",
-  "campaign_id" : "(optional, string) API ID of the campaign this event belongs to",
-  "campaign_name" : "(optional, string) Name of the campaign",
-  "canvas_id" : "(optional, string) API ID of the Canvas this event belongs to",
-  "canvas_name" : "(optional, string) Name of the Canvas",
-  "canvas_step_id" : "(optional, string) API ID of the Canvas step this event belongs to",
-  "canvas_step_message_variation_id" : "(optional, string) API ID of the Canvas step message variation this user received",
-  "canvas_step_name" : "(optional, string) Name of the Canvas step",
-  "canvas_variation_id" : "(optional, string) API ID of the Canvas variation this event belongs to",
-  "device_id" : "(optional, string) ID of the device on which the event occurred",
-  "dispatch_id" : "(optional, string) ID of the dispatch this message belongs to",
-  "external_user_id" : "(optional, string) [PII] External ID of the user",
-  "flow_id" : "(optional, string) The unique ID of the Flow in the WhatsApp Manager. Present if the message includes a CTA to respond to a WhatsApp Flow",
-  "from_phone_number" : "(required, string) Phone number used to send in e.164 format (for example +14155552671)",
-  "id" : "(required, string) Globally unique ID for this event",
-  "message_extras" : "(optional, string) [PII] A JSON string of the tagged key-value pairs during liquid rendering",
-  "message_id" : "(optional, string) The unique ID generated by Meta for this message",
-  "message_variation_id" : "(optional, string) API ID of the message variation this user received",
-  "message_variation_name" : "(optional, string) Name of the message variation",
-  "send_id" : "(optional, string) Message send ID this message belongs to",
-  "subscription_group_id" : "(optional, string) Subscription group API ID",
-  "template_name" : "(optional, string) [PII] Name of the template in the WhatsApp Manager. Present if sending a Template Message",
-  "time" : "(required, long) UNIX timestamp at which the event happened",
-  "timezone" : "(optional, string) Time zone of the user",
-  "to_phone_number" : "(optional, string) [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)",
-  "user_id" : "(required, string) Braze user ID of the user who performed this event"
 }
 ```
 {% endtab %}
