@@ -105,3 +105,15 @@ The number of saved logs is influenced by several conditions. For example, if a 
     - Email Block errors
 - Up to 100 user aliasing error logs will be saved for the same workspace within one fixed clock hour.
 
+## Test sends
+
+The **Message Activity Log** shows test logs for these messaging channels:
+
+- SMS
+- WhatsApp
+- LINE
+- Webhook
+
+The following channels don't have test send logs: email, Content Cards, in-app messages, and push.
+
+Test send logs are prefixed with "[TEST SEND]", but it's not guaranteed that all test send logs will have the prefix (for example, Connected Content errors don't have the prefix).
