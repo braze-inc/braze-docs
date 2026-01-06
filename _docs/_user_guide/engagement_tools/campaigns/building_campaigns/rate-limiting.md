@@ -217,16 +217,16 @@ Global frequency capping is scheduled based on the user's time zone, and is calc
 {% tabs %}
 {% tab Use case 1 %}
 
-Let's say that you set a frequency capping rule which asks that your user receive no more than three push notification campaigns or Canvas components per week from all campaign or Canvas components.
+Let's say that you set a frequency capping rule which asks that your user receive no more than three push notification campaigns or Canvas steps per week from all campaign or Canvas steps.
 
 If your user is slated to receive three push notifications, two in-app messages, and one Content Card this week, they will receive all of those messages.
 
 {% endtab %}
 {% tab Use case 2 %}
 
-This scenario uses the following frequency capping rules:
+This scenario uses a frequency capping rule for users to receive no more than two push notification campaigns or Canvas steps per week from all campaign or Canvas steps.
 
-**When following scenario occurs:**
+**When the following scenario occurs:**
 
 - A user triggers the same campaign, `Campaign ABC` three times over the course of a week.
 - This user triggers `Campaign ABC` once on Monday, once on Wednesday, and once on Thursday.
