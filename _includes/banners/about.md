@@ -48,7 +48,7 @@ Avoid modifying placement IDs after launching a Banner campaign.
 
 ### Banner priority {#priority}
 
-When multiple campaigns reference the same placement ID, Banners are displayed in order of priority: high, medium, or low. By default, newly created Banners are set to medium, but you can [manually set the priority]({{site.baseurl}}/user_guide/message_building_by_channel/banners/creating_campaigns/#set-priority) when you create or edit your Banner campaign. 
+When multiple Banner messages reference the same placement ID, Banners are displayed in order of priority: high, medium, or low. By default, newly created Banners are set to medium, but you can [manually set the priority]({{site.baseurl}}/user_guide/message_building_by_channel/banners/creating_campaigns/#set-priority) when you create or edit your Banner campaign. 
 
 If multiple Banners are set to the same priority, the newest Banner that user is eligible for is displayed first.
 
