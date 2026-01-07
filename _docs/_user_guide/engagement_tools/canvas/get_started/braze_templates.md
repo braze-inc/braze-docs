@@ -1,6 +1,6 @@
 ---
 nav_title: Using Braze templates
-article_title: Using Braze Templates
+article_title: Use Braze Templates
 page_order: 2
 layout: dev_guide
 guide_top_header: "Using Braze Templates"

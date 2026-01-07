@@ -1156,6 +1156,7 @@ This event occurs when a push token is inserted, updated or removed. Use this to
     "app_id" : "(optional, string) API ID of the app on which this event occurred",
     "ios_push_token_apns_gateway" : "(optional, int) APNS gateway of the push token, only applies to iOS push tokens, 1 for development, 2 for production",
     "platform" : "(optional, string) Platform of the device",
+    "push_token" : "(optional, string) Push token of the event",
     "push_token_created_at" : "(optional, int) UNIX timestamp at which the push token was created",
     "push_token_device_id" : "(optional, string) Device id of the push token",
     "push_token_foreground_push_disabled" : "(optional, boolean) Foreground push disabled flag of the push token",
@@ -1251,6 +1252,7 @@ This event occurs when a push token is inserted, updated or removed. Use this to
   "id" : "(required, string) Globally unique ID for this event",
   "ios_push_token_apns_gateway" : "(optional, int) APNS gateway of the push token, only applies to iOS push tokens, 1 for development, 2 for production",
   "platform" : "(optional, string) Platform of the device",
+  "push_token" : "(optional, string) Push token of the event",
   "push_token_created_at" : "(optional, int) UNIX timestamp at which the push token was created",
   "push_token_device_id" : "(optional, string) Device id of the push token",
   "push_token_foreground_push_disabled" : "(optional, boolean) Foreground push disabled flag of the push token",
@@ -1268,8 +1270,6 @@ This event occurs when a push token is inserted, updated or removed. Use this to
 {% endtab %}
 {% endtabs %}
 
-{% endapi %}
-
 #### Property details
 
 - The `push_token_foreground_push_disabled` field indicates whether the push token can receive foreground or background push.
@@ -1284,3 +1284,4 @@ This event occurs when a push token is inserted, updated or removed. Use this to
   - If a token moved from one user to another user, this will ingest one "remove" event for the old user and one "add" event for the new user.
   - If the same user or device generates a new token, this will ingest one "remove" event for the old token and one "add" event for the new token.
   - If Braze is removing a token (for reasons like an uninstall or invalid token), this will ingest one "remove" event for the token.
+{% endapi %}

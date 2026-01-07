@@ -129,7 +129,7 @@ If you have multiple Banner campaigns using the same placement ID, we recommend 
 
 #### Choose your audience
 
-1. In **Target Audiences**, choose segments or filters to narrow down your audience. You’ll automatically be given a preview of the approximate segment population. Exact segment membership is calculated just before the message is sent.
+1. In **Target Audiences**, choose segments or filters to narrow your audience. You automatically receive a preview of the approximate segment population. Exact segment membership is calculated before the message is sent.
 
 {% multi_lang_include target_audiences.md %}
 

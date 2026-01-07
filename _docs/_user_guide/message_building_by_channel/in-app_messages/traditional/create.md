@@ -1,6 +1,6 @@
 ---
-nav_title: Creating an in-app message
-article_title: Creating an In-App Message
+nav_title: Create an in-app message
+article_title: Create an In-App Message
 page_order: 1
 description: "This reference article covers how to create an in-app message using the Braze platform using campaigns or Canvas."
 channel:
@@ -11,7 +11,7 @@ search_rank: 4.8
 toc_headers: h2
 ---
 
-# Creating an in-app message
+# Create an in-app message
 
 > You can create an in-app message or in-browser message using the Braze platform using campaigns, Canvas, or as an API campaign. We highly recommend planning out your messages and preparing all materials ahead of time using our handy [In-app message prep guide]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/best_practices/).
 
@@ -351,7 +351,7 @@ The high, medium, and low options for triggered message priorities are buckets, 
 
 #### Choose users to target
 
-Next, you need to [target users]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) by choosing segments or filters to narrow down your audience. You'll automatically be given a snapshot of what that approximate segment population looks like right now. Keep in mind that exact segment membership is always calculated just before the message is sent.
+Next, you must [target users]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) by choosing segments or filters to narrow your audience. You automatically receive a snapshot of what that approximate segment population looks like. Keep in mind that exact segment membership is always calculated before the message is sent.
 
 {% alert note %} 
 If there's a delay on the in-app message step, segment membership will be evaluated after the delay. If the user is eligible, the in-app message will sync on the next available session.

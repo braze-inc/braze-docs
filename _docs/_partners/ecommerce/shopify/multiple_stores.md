@@ -6,7 +6,7 @@ page_order: 6
 description: "This reference article covers how to connect and configure multiple Shopify stores to a single workspace."
 ---
 
-# Connecting multiple Shopify stores
+# Connect multiple Shopify stores
 
 > Connect multiple Shopify store domains to a single workspace to have a holistic view of your customers across all markets. Build and launch automation programs and journeys in a single workspace without duplicating efforts across regional stores.  
 

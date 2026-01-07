@@ -26,7 +26,7 @@ guide_featured_list:
   - name: Importing Users
     link: /docs/user_guide/data/unification/user_data_collection/user_import/
     image: /assets/img/braze_icons/users-01.svg
-  - name: Deleting Users
+  - name: Delete Users
     link: /docs/user_guide/data/unification/user_data/delete_users/
     image: /assets/img/braze_icons/users-01.svg
   - name: Anonymous Users

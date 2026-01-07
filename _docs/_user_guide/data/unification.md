@@ -19,7 +19,7 @@ guide_featured_list:
   - name: User Data Collection
     link: /docs/user_guide/data/unification/user_data_collection/
     image: /assets/img/braze_icons/users-01.svg
-  - name: Creating a Formula
+  - name: Create a Formula
     link: /docs/user_guide/data/unification/creating_a_formula/
     image: /assets/img/braze_icons/beaker-02.svg
 

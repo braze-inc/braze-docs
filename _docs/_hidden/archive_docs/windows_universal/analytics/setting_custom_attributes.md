@@ -1,13 +1,13 @@
 ---
-nav_title: Setting custom attributes
-article_title: Setting Custom Attributes for Windows Universal
+nav_title: Set custom attributes
+article_title: Set Custom Attributes for Windows Universal
 platform: Windows Universal
 page_order: 3
 description: "This reference article covers how to set custom attributes on the Windows Universal platform."
 hidden: true
 ---
 
-# Setting custom attributes
+# Set custom attributes
 {% multi_lang_include archive/windows_deprecation.md %}
 
 Braze provides methods for assigning attributes to users. You'll be able to filter and segment your users according to these attributes on the dashboard.
