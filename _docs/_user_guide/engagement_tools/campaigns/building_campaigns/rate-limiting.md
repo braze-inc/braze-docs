@@ -97,7 +97,7 @@ Be wary of delaying time-sensitive messages with this form of rate limiting in r
 
 #### Multichannel campaigns
 
-When sending a multi-channel campaign with a speed rate limit, the rate limit is shared between channels. This means the total number of messages sent per minute from the campaign will not exceed the rate limit. For example, if your campaign has a rate limit of 10,000 per minute and uses email and SMS, Braze sends a total of 10,000 messages per minute across email and SMS.
+When sending a multi-channel campaign with a speed rate limit, the rate limit is shared between channels. This means the total number of messages sent per minute from the campaign does not exceed the rate limit. For example, if your campaign has a rate limit of 10,000 per minute and uses email and SMS, Braze sends a total of 10,000 messages per minute across email and SMS.
 
 ![The option to limit the rate at which the campaign sends, selected with 500,000 messages per minute.]({% image_buster /assets/img_archive/multichannel_campaigns_rate_limit.png %}){: style="max-width:50%;"} 
 
