@@ -15,12 +15,6 @@ toc_headers: h2
 [eCommerce recommended events]({{site.baseurl}}/user_guide/data/custom_data/recommended_events/ecommerce_events/) are currently in early access. Contact your Braze customer success manager if you’re interested in participating in this early access. <br><br>If you’re using the new Shopify connector, eCommerce recommended events will automatically be available through the integration.
 {% endalert %}
 
-## eCommerce Canvas templates
-
-Braze offers four eCommerce Canvas templates.
-
-{% multi_lang_include canvas/ecommerce_templates.md %}
-
 ## Using a Canvas template
 
 To use a Canvas template:
@@ -28,6 +22,12 @@ To use a Canvas template:
 2. Select **Create Canvas** > **Use a Canvas Template**.
 3. Browse the **Braze templates** tab for the template you want to use. You can preview a template by selecting its name.
 4. Select **Apply Template** for the template you want to use.<br><br>!["Canvas templates" page opened to the "Braze templates" tab and showing a list of recently used templates and selectable Braze templates.]({% image_buster /assets/img_archive/apply_template.png %}){: style="max-width:80%;"}
+
+## eCommerce Canvas templates
+
+Braze offers four eCommerce Canvas templates.
+
+{% multi_lang_include canvas/ecommerce_templates.md %}
 
 ## Message personalization
 
