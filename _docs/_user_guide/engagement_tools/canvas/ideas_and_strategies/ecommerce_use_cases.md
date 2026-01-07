@@ -9,7 +9,7 @@ toc_headers: h2
 
 # eCommerce use cases
 
-> Braze Canvas offers several pre-built templates tailored specifically for eCommerce marketers, making it easier to implement essential strategies. This page offers some key templates you can use to enhance your customer journeys.
+> Braze Canvas offers several pre-built templates tailored specifically for eCommerce marketers, making it easier to implement essential strategies. This page covers key templates you can use to enhance your customer journeys.
 
 {% alert important %}
 [eCommerce recommended events]({{site.baseurl}}/user_guide/data/custom_data/recommended_events/ecommerce_events/) are currently in early access. Contact your Braze customer success manager if you’re interested in participating in this early access. <br><br>If you’re using the new Shopify connector, eCommerce recommended events will automatically be available through the integration.
@@ -17,7 +17,9 @@ toc_headers: h2
 
 ## eCommerce Canvas templates
 
-For a list of available eCommerce Canvas templates, refer to [eCommerce Canvas templates]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_templates/templates/#ecommerce-canvas-templates).
+Braze offers four eCommerce Canvas templates.
+
+{% multi_lang_include canvas/ecommerce_templates.md %}
 
 ## Using a Canvas template
 
