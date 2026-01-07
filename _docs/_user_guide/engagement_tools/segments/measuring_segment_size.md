@@ -1,6 +1,6 @@
 ---
-nav_title: Measuring segment size
-article_title: Measuring Segment Size
+nav_title: Measure segment size
+article_title: Measure Segment Size
 page_order: 5
 page_type: reference
 tool: 
@@ -8,7 +8,7 @@ tool:
 description: "This page covers how you can monitor your segment’s membership and size."
 ---
 
-# Measuring segment size
+# Measure segment size
 
 > This page covers how you can monitor your segment’s membership and size.
 

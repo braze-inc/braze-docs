@@ -50,10 +50,6 @@ description: "Auf dieser Landing Page finden Sie alles rund um Push-Benachrichti
 {% multi_lang_include developer_guide/unity/push_notifications.md %}
 {% endsdktab %}
 
-{% sdktab unreal engine %}
-{% multi_lang_include developer_guide/unreal_engine/push_notifications.md %}
-{% endsdktab %}
-
 {% sdktab xamarin %}
 {% multi_lang_include developer_guide/xamarin/push_notifications.md %}
 {% endsdktab %}

@@ -1,5 +1,5 @@
 ---
-nav_title: カスタムディスプレイ処理
+nav_title: カスタムディスプレイの操作
 article_title: iOS のアプリ内メッセージ表示処理のカスタマイズ
 platform: iOS
 page_order: 4

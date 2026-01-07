@@ -1,6 +1,6 @@
 ---
-nav_title: Sending test messages
-article_title: Sending Test Messages
+nav_title: Send test messages
+article_title: Send Test Messages
 page_order: 0
 tool: 
   - Campaigns
@@ -9,7 +9,7 @@ description: "This reference article covers how to send test messages across the
 
 ---
 
-# Sending test messages
+# Send test messages
 
 > Before sending a messaging campaign to your users, as a suggested best practice, we recommend testing to make sure it looks right and operates as intended. You can create and send test messages to select devices or team members using the tools in the Braze dashboard.
 
@@ -45,7 +45,7 @@ For steps to send test messages, refer to the following section for your respect
 #### Mobile push
 
 1. Draft your mobile push.
-2. Select the **Settings** tab and add your email address or user ID in the **Add Individual Users** field.
+2. Select the **Test** tab and add your email address or user ID in the **Add Individual Users** field.
 3. Select **Send Test** to send your drafted message to your device.
 
 ![Test push]({% image_buster /assets/img_archive/testpush.png %})

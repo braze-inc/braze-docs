@@ -14,7 +14,7 @@ description: "この記事では、「ユーザーのマージ」Braze エンド
 /users/merge
 {% endapimethod %}
 
-> このエンドポイントを使用して、あるユーザーを別のユーザーにマージする。 
+> このエンドポイントを使用して、あるユーザーを別のユーザーにマージする。
 
 マージはリクエストごとに50個まで指定できます。このエンドポイントは非同期である。
 
@@ -50,17 +50,17 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 ### マージ動作
 
-以下に説明する動作は、Snowflakeを使用して*いない*Brazeの全機能に当てはまる。**メッセージング履歴]**タブ、[セグメント拡張]、[クエリビルダー]、および[カレント]では、ユーザーのマージが反映されない。
+以下に説明する動作は、Snowflakeを使用して**いない**Brazeの全機能に当てはまる。**メッセージング履歴]**タブ、[セグメント拡張]、[クエリビルダー]、および[カレント]では、ユーザーのマージが反映されない。
 
 {% alert important %}
 エンドポイントは、`merge_updates` オブジェクトが更新される順序を保証しない。
 {% endalert %}
 
-このエンドポイントは、ターゲットユーザーで見つからない場合、次のフィールドをマージします。
+このエンドポイントは、次のフィールドが対象ユーザーで見つからない場合にマージします。
 
 - 名
 - 姓
-- メール
+- メールアドレス([encrypted]({{site.baseurl}}/user_guide/data/field_level_encryption/) 以外)
 - 性別
 - 生年月日
 - 電話番号
@@ -70,25 +70,25 @@ Authorization: Bearer YOUR_REST_API_KEY
 - 言語
 - デバイス情報
 - セッション数 （両方のプロファイルのセッションの合計）
-- 初回セッションの日付 (Braze は2つの日付のうち早い方を選択します)
-- 最終セッションの日付 (Braze は2つの日付のうち遅い方の日付を選択します)
-- カスタム属性（ターゲットプロファイル上の既存のカスタム属性は保持され、ターゲットプロファイル上に存在しなかったカスタム属性も含まれる）
+- 最初のセッション日(Brazeは、2つの日付の前の日付を選択します)
+- 最後のセッション日(Braze は2 つの日付の後の日付を選択します)
+- カスタム属性 s (Braze は、ターゲットプロファイル上に存在するカスタム属性を保持し、ターゲットプロファイル上に存在しないカスタム属性を含みます)
 - カスタム・イベントと購入イベントのデータ
-- Y日間にX回」のセグメンテーション（X<=50、Y<=30）のためのカスタムイベントと購入イベントのプロパティ。
+- &quot のカスタムイベントおよび購入イベントプロパティ;Y 日数とクォートのX 回; セグメンテーション (ここでX<=50) および Y<=30)
 - セグメント可能なカスタム・イベントのサマリー
   - イベント数（両プロファイルの合計）
-  - イベントが最初に発生した日（Brazeは2つの日付のうち早い方を選ぶ）
-  - イベントが最後に発生した日（Brazeは2つの日付のうち遅い方を選ぶ）
+  - 最初に発生した事象(Braze は2 つの日付の前の日付を選択します)
+  - 最後に発生した事象(Braze は2 つの日付の後の日付を選択します)
 - アプリ内購入の合計（セント単位）（両方のプロファイルの合計)
 - 購入総数 (両方のプロファイルの合計)
-- 初回購入日 (Braze は2つの日付のうち早い方を選択します)
-- 最終購入日 (Braze は2つの日付のうち遅い方を選択します)
+- 最初の購入日(Brazeは2つの日付の前の日付を選択します)
+- 最終購入日(Brazeは2つの日付の後の日付を選択します)
 - アプリの概要
-- Last_X_atフィールド（Brazeは、孤児となったプロファイルフィールドがより新しいものであれば、フィールドを更新する）
-- キャンペーンのインタラクションデータ（Brazeは最新の日付フィールドを選ぶ）
-- ワークフローのサマリー（Brazeは最新の日付フィールドを選ぶ）
+- Last_X_at フィールド s (Braze 更新 s フィールド s (孤立したプロファイル フィールドs がより新しい場合)
+- キャンペーンのアクション間データ(Brazeは最新の日付フィールドを選択します)
+- ワークフローの概要(Brazeは最新の日付フィールドを選択します)
 - メッセージとメッセージのエンゲージメント履歴
-- セッションデータは、両方のユーザープロファイルにアプリが存在する場合にのみマージされる。
+- Brazeは、両方のユーザープロファイルsにアプリが存在する場合にのみセッションをマージします。
 
 {% alert note %}
 ユーザーをマージする場合、`/users/merge` エンドポイントを使用すると、[`changeUser()` メソッドを](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser)使用した場合と同じように機能します。
@@ -96,11 +96,11 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 #### カスタムイベント日と購入イベント日の動作
 
-これらの統合されたフィールドは、「Y日以内にXイベント」フィルターを更新する。購入イベントの場合、これらのフィルターには、「Y日間の購入回数」と「過去Y日間の使用金額」が含まれる。
+これらのマージされたフィールドs 更新 " X イベントのY days" フィルター s。購入イベントの場合、これらのフィルターには、「Y日間の購入回数」と「過去Y日間の使用金額」が含まれる。
 
 ### 電子メールまたは電話番号でユーザーをマージする
 
-識別子として `email` または `phone` が指定された場合、識別子にはさらに `prioritization` の値が必要になります。`prioritization` は、複数のユーザーが見つかった場合に、どのユーザーをマージするかを指定する配列でなければならない。`prioritization` は順序付き配列である。つまり、優先順位付けから複数のユーザーがマッチした場合、マージは行われない。
+`email`または`phone`が識別子として指定されている場合は、追加の`prioritization`値を識別子に含める必要があります。`prioritization` は、複数のユーザーs が見つかった場合にマージするユーザーを指定する順序付けされた配列である必要があります。つまり、優先順位付けから複数のユーザーが一致した場合、マージは行われません。
 
 配列に指定できる値は次のとおりです。
 
@@ -165,7 +165,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 
 ### 未確認ユーザーをマージする
 
-以下のリクエストは、電子メールアドレス "john.smith@braze.com" を持つ、直近に更新された未確認ユーザーを、`external_id` "john "を持つユーザーにマージします。`most_recently_updated` または`least_recently_updated` を使用すると、クエリは 1 人の識別されていないユーザーにのみフィルタリングされます。そのため、このメールアドレスを持つ未確認のユーザーが2人いた場合、`external_id` "john "のユーザーにマージされるのは1人だけである。
+次のリクエストは、直近に更新された識別されていないユーザーを、外部ID `john` を持つユーザーにメールアドレス`john.smith@braze.com` でマージします。この例題では、`most_recently_updated` フィルターを使用して、クエリーを1 つの不明なユーザーにします。そのため、2 つの未確認ユーザーがこのメールアドレスを持つ場合、1 つだけが外部ID `john` を持つユーザーにマージされます。
 
 ```json
 curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
@@ -189,7 +189,9 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
 
 ### 未確認ユーザーを識別されたユーザーにマージする
 
-この次の例は、電子メールアドレス "john.smith@braze.com" を持つ、最も最近更新された未確認ユーザーを、電子メールアドレス "john.smith@braze.com" を持つ、最も最近更新された識別されたユーザーにマージします。`most_recently_updated` または`least_recently_updated` を使用すると、クエリは 1 人のユーザー(`identifier_to_merge` では1 人のユーザー、`identifier_to_keep` では1 人のユーザー) にのみフィルタリングされます。
+次に、直近の更新不明ユーザーとメールアドレス`john.smith@braze.com` を、メールアドレス`john.smith@braze.com` の識別されたユーザーにマージします。
+
+`most_recently_updated` フィルターを使用すると、クエリーは1 つのユーザーに(`identifier_to_merge` には1 つの識別されないユーザー、`identifier_to_keep` には1 つの識別されたユーザー) になります。
 
 ```json
 curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
@@ -201,20 +203,20 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \
     {
       "identifier_to_merge": {
         "email": "john.smith@braze.com",
-        "prioritization": ["unidentified", "most_recently_updated", "least_recently_updated"]
+        "prioritization": ["unidentified", "most_recently_updated"]
       },
       "identifier_to_keep": {
         "email": "john.smith@braze.com",
-        "prioritization": ["identified", "most_recently_updated", "least_recently_updated"]
+        "prioritization": ["identified", "most_recently_updated"]
       }
     }
   ]
 }'
 ```
 
-### most_recently_updated の優先順位付けを含めずに、未確認ユーザーをマージする
+### most_recently_updated 優先順位を指定せずに、識別されていないユーザーをマージする
 
-メールアドレス"john.smith@braze.com"を持つ正体不明のユーザーが2人いる場合、このリクエスト例では、そのメールアドレスを持つ正体不明のユーザーが2人いるため、どのユーザーもマージしない。このリクエストは、メールアドレス"john.smith@braze.com"を持つ未確認ユーザーが1人しかいない場合にのみ機能する。
+メールアドレス`john.smith@braze.com`を持つ2つの不明なユーザーsがある場合、このリクエストは、そのメールアドレスを持つ2つの不明なユーザーsがあるため、ユーザーsをマージしません。このリクエストは、メール address `john.smith@braze.com` を持つ識別できないユーザーが1 つしかない場合にのみ機能します。
 
 ```json
 curl --location --request POST 'https://rest.iad-01.braze.com/users/merge' \

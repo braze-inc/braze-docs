@@ -17,17 +17,27 @@ platform:
 
 ## デバイスのプロパティ
 
-デフォルトでは、Brazeは以下のデバイスレベルプロパティを収集し、デバイス、言語、タイムゾーンベースのメッセージパーソナライゼーションを可能にする：
+デフォルトでは、Braze は以下のデバイスレベルプロパティを収集し、デバイス、言語、タイムゾーンベースのメッセージのパーソナライズを可能にします。
 
 {% tabs %}
-{% tab Android %}
+{% tab web %}
+- `BROWSER`
+- `BROWSER_VERSION`
+- `LANGUAGE`
+- `OS`
+- `RESOLUTION`
+- `TIME_ZONE`
+- `USER_AGENT`
+{% endtab %}
+
+{% tab android %}
 - `AD_TRACKING_ENABLED`
 - `ANDROID_VERSION`
 - `CARRIER`
 - `IS_BACKGROUND_RESTRICTED`
 - `LOCALE`
 - `MODEL`
-- `NOTIFICIATION_ENABLED`
+- `NOTIFICATION_ENABLED`
 - `RESOLUTION`
 - `TIMEZONE`
 
@@ -54,23 +64,25 @@ Braze SDK はIDFA を自動的に収集しません。アプリはオプショ�
 2. 広告主の識別子 (IDFA) を設定するには、[`set(identifierForAdvertiser:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/set(identifierforadvertiser:)/) を使用します。
 {% endalert %}
 {% endtab %}
-
-{% tab ウェブ %}
-- `BROWSER`
-- `BROWSER_VERSION`
-- `LANGUAGE`
-- `OS`
-- `RESOLUTION`
-- `TIME_ZONE`
-- `USER_AGENT`
-{% endtab %}
 {% endtabs %}
 
-デフォルトでは、すべてのプロパティがイネーブルメントになっている。しかし、手動でイネーブルメントを有効にも無効にもできる。Braze SDKの機能の中には、特定のプロパティ（ローカルタイムゾーン配信やタイムゾーンなど）を必要とするものがあるため、本番環境にリリースする前に、必ず設定をテストしておくことに留意すること。
+デフォルトでは、すべてのプロパティが有効になっています。しかし、手動で有効にも無効にもできます。Braze SDKの機能の中には、特定のプロパティ（ローカルタイムゾーン配信やタイムゾーンなど）を必要とするものがあるため、本番環境にリリースする前に、必ず設定をテストしておくことに留意すること。
 
 {% tabs %}
-{% tab Android %}
-たとえば、Android OSのバージョンやデバイスのロケールを指定して、allowlistedにすることができる。詳細は [`setDeviceObjectAllowlistEnabled()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-device-object-allowlist-enabled.html)と [`setDeviceObjectAllowlist()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-device-object-allowlist.html)メソッドを参照のこと。 
+{% tab web %}
+例えば、許可リストに登録するデバイスの言語を指定することができます。詳細については、[`InitializationOptions`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initializationoptions) の`devicePropertyAllowlist` オプションを参照してください。
+
+```javascript
+import * as braze from"@braze/web-sdk";
+braze.initialize("API-KEY", {
+    baseUrl: "BASE-URL",
+    devicePropertyAllowlist: [ braze.DeviceProperties.LANGUAGE ] // list of `DeviceProperties` you want to collect
+});
+```
+{% endtab %}
+
+{% tab android %}
+たとえば、許可リストに登録する Android OS バージョンとデバイスロケールを指定できます。詳細は [`setDeviceObjectAllowlistEnabled()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-device-object-allowlist-enabled.html)と [`setDeviceObjectAllowlist()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-device-object-allowlist.html)メソッドを参照のこと。 
 
 ```java
 new BrazeConfig.Builder()
@@ -80,7 +92,7 @@ new BrazeConfig.Builder()
 {% endtab %}
 
 {% tab swift %}
-例えば、タイムゾーンやロケールコレクションを許可リストに指定することができる。詳細については、 オブジェクトの [`devicePropertyAllowList`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/devicepropertyallowlist)`configuration` プロパティを参照のこと。
+たとえば、許可リストに登録するタイムゾーンとロケール収集を指定できます。詳細については、`configuration` オブジェクトの [`devicePropertyAllowList`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/devicepropertyallowlist) プロパティを参照してください。
 
 {% subtabs %}
 {% subtab swift %}
@@ -102,29 +114,17 @@ configuration.devicePropertyAllowList = @[
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-
-{% tab ウェブ %}
-例えば、許可リストに入れるデバイスの言語を指定することができる。詳しくは、`devicePropertyAllowlist` のオプションを参照のこと。 [`InitializationOptions`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initializationoptions).
-
-```javascript
-import * as braze from"@braze/web-sdk";
-braze.initialize("API-KEY", {
-    baseUrl: "BASE-URL",
-    devicePropertyAllowlist: [ braze.DeviceProperties.LANGUAGE ] // list of `DeviceProperties` you want to collect
-});
-```
-{% endtab %}
 {% endtabs %}
 
 {% alert tip %}
 自動的に収集されるデバイスプロパティの詳細については、[SDKデータ収集を]({{site.baseurl}}/user_guide/data/user_data_collection/sdk_data_collection/)参照のこと。
 {% endalert %}
 
-## Cookieを保存する（Webのみ） {#cookies}
+## Cookie を保存する (Web のみ) {#cookies}
 
-[Web Braze SDKを初期化](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize)すると、有効期限400日のCookieが作成・保存され、新しいセッションで自動的に更新される。
+[ Web Braze SDK を初期化](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize)すると、有効期限 400 日の Cookie が作成および保存され、新しいセッションで自動的に更新されます。
 
-以下のCookieが保存される：
+以下の Cookie が保存されます。
 
 |クッキー|説明|サイズ|
 |---|----|---|---|
@@ -137,7 +137,7 @@ braze.initialize("API-KEY", {
 
 ### Cookie を無効にする {#disable-cookies}
 
-すべての Cookie を無効にするには、Web SDK を初期化する際に [`noCookies`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initializationoptions) オプションを使用します。これにより、サブドメインを越えて移動する匿名ユーザーを関連付けることができなくなり、各サブドメインで新しいユーザーが発生することになる。
+すべての Cookie を無効にするには、Web SDK を初期化する際に [`noCookies`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initializationoptions) オプションを使用します。これにより、サブドメインをまたいで移動する匿名ユーザーを関連付けることができなくなり、各サブドメインで新しいユーザーが発生することになる。
 
 ```javascript
 import * as braze from"@braze/web-sdk";

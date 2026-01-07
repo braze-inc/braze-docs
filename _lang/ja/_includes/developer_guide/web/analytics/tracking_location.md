@@ -1,6 +1,6 @@
 ## 現在地を記録する
 
-ユーザーの現在地を取得するには、ジオロケーションAPIの [`getCurrentPosition()`](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition)メソッドを使う。これにより、ユーザーはトラッキングを許可するかしないかを即座に選択することになる（すでに許可している場合を除く）。
+ユーザーの現在地を取得するには、geolocation APIの [`getCurrentPosition()`](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition)メソッドを使う。これにより、ユーザーはトラッキングの許可または不許可を即座に選択することになる（すでに許可している場合を除く）。
 
 ```javascript
 import * as braze from "@braze/web-sdk";

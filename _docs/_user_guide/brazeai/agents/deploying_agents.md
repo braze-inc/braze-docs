@@ -1,11 +1,11 @@
 ---
-nav_title: Deploying agents
-article_title: Deploying custom agents
+nav_title: Deploy agents
+article_title: Deploy custom agents
 description: "Learn how to put custom agents to use in Braze after you create them."
 alias: /deploying-agents/
 ---
 
-# Deploying custom agents
+# Deploy custom agents
 
 > Learn how to put custom agents to use in Canvas steps or catalog fields after you create them. For an introduction, see [Braze Agents]({{site.baseurl}}/user_guide/brazeai/agents/). 
 
@@ -73,8 +73,26 @@ You can refresh and edit the fields in your catalog that use agents. To remove a
 ![The option to select "Apply AI agent" for a catalog field.]({% image_buster /assets/img/ai_agent/edit_agent_column.png %}){: style="max-width:80%;"}
 
 {% alert note %}
-During the beta period, catalog agents are limited to processing input values up to 10 KB per row, and will update only the first 10,000 rows in a catalog.
+During the beta period, catalog agents are limited to processing input values up to 25 KB per row.
 {% endalert %}
+
+#### Define response fields
+
+If your agent uses [fields]({{site.baseurl}}/user_guide/brazeai/agents/creating_agents/#fields) as the output format, you can select the corresponding field from the agent for **Response Field** to use in the catalog field. 
+
+Let's say you have an agent that adds product descriptions to a catalog with the following fields to structure the output format:
+
+| Field name | Value |
+| --- | --- |
+| **description** | Text |
+| **confidence_score_out_of_ten** | Number |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+You can add a field named **product_description** to a catalog and select **description** as the **Response Field** to populate the column with the agent's descriptions.
+
+![A field "product_description" with the "Descriptor" agent applied. The "description" output is selected as the response field.]({% image_buster /assets/img/ai_agent/response_field.png %}){: style="max-width:80%;"}
+
+You can also manually override the agent-generated cell by selecting **Edit Item** and updating the agent-generated description with your edits. To revert your edits back to the agent-generated description, select the refresh symbol in the cell.
 
 ### Error handling in catalogs  
 

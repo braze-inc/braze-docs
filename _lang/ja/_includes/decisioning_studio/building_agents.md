@@ -16,7 +16,7 @@ AI 意思決定エージェントは、BrazeAI™ 意思決定エンジンのカ
 - オファー、件名、クリエイティブ、チャネル、送信時間など、テストするディメンションを定義する。
 - メールと SMS、1 日および 1 週あたりの頻度など、ディメンションごとにオプションを選択する。
 
-![紹介メール用の Decisioning Studio エージェントのサンプル図。]({% image_buster /assets/img/offerfit/example_use_cases_referral_email.png %})
+![紹介メール用決定スタジオエージェントの例図。]({% image_buster /assets/img/offerfit/example_use_cases_referral_email.png %})
 
 ## サンプルエージェント
 
@@ -32,7 +32,7 @@ BrazeAI Decisioning Studio™ で構築できるエージェントの例をい�
 
 ### ステップ 1: AI エキスパートサービスへの連絡
 
-AI エキスパートサービスチームが協力して、意思決定エージェントの調査、設計、構築を行います。ご連絡がまだの場合は、[問い合わせ](https://www.braze.com/get-started/)ページからご連絡ください。
+AI エキスパートサービスチームが協力して、意思決定エージェントの調査、設計、構築を行います。まだの方は、まずは[ご連絡を](https://www.braze.com/get-started/)。
 
 以下のステップを一緒に実行して、適切なカスタムエージェントを構築します。
 

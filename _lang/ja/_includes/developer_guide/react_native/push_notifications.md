@@ -1,6 +1,6 @@
 {% multi_lang_include developer_guide/prerequisites/react_native.md %}
 
-## プッシュ通知のセットアップ {#setting-up-push-notifications}
+## プッシュ通知の設定 {#setting-up-push-notifications}
 
 ### ステップ 1: 初期設定を完了する
 
@@ -8,24 +8,24 @@
 {% tab Expo %}
 #### 前提条件
 
-プッシュ通知 のExpo を使用するには、[Braze Expo プラグイン]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/sdk_integration/?tab=expo) を設定する必要があります。
+Expoをプッシュ通知に使用する前に、[Braze Expoプラグインを設定する]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/sdk_integration/?tab=expo)必要がある。
 
-#### ステップ1.1：`app.json` ファイルを更新する
+#### ステップ1.1：`app.json` ファイルを更新する。
 
-次に、Android およびiOS の`app.json` を更新します。
+次にAndroidとiOS用の`app.json` ファイルを更新する：
 
-- **Android :**`enableFirebaseCloudMessaging` オプションを追加します。
-- **iOS:**`enableBrazeIosPush` オプションを追加します。
+- **Android :**`enableFirebaseCloudMessaging` オプションを追加する。
+- **iOS:**`enableBrazeIosPush` オプションを追加する。
 
 #### ステップ1.2：Google の送信者 ID を追加する
 
 まず Firebase Console に移動し、プロジェクトを開いて、<i class="fa-solid fa-gear"></i>[**設定**] > [**プロジェクト設定**] を選択します。
 
-![[設定] メニューが開いた状態の Firebase プロジェクト。]({% image_buster /assets/img/android/push_integration/set_up_automatic_token_registration/select-project-settings.png %})
+![設定」メニューが開封されたFirebaseプロジェクト。]({% image_buster /assets/img/android/push_integration/set_up_automatic_token_registration/select-project-settings.png %})
 
 [**Cloud Messaging**] 選択し、[**Firebase Cloud Messaging API (V1)**] の下にある [**送信者 ID**] をクリップボードにコピーします。
 
-![[送信者 ID] が強調表示されている Firebase プロジェクトの「Cloud Messaging」ページ。]({% image_buster /assets/img/android/push_integration/set_up_automatic_token_registration/copy-sender-id.png %})
+![Firebaseプロジェクトの "Cloud Messaging "ページで、"Sender ID "がハイライトされている。]({% image_buster /assets/img/android/push_integration/set_up_automatic_token_registration/copy-sender-id.png %})
 
 次に、プロジェクトの`app.json` ファイルを開き、`firebaseCloudMessagingSenderId` プロパティをクリップボード内の送信者IDに設定する。以下に例を示します。
 
@@ -63,18 +63,18 @@
 [Expo 通知](https://docs.expo.dev/versions/latest/sdk/notifications/)などの追加のプッシュ通知ライブラリに依存している場合は、ネイティブのセットアップ手順ではなく、これらの設定を使用する必要があることに注意してください。
 {% endtab %}
 
-{% tab Androidネイティブ %}
-Braze Expoプラグインを使用していない場合、またはこれらの設定をネイティブで設定する場合は、[ネイティブAndroidプッシュインテグレーションガイド]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/?tab=android/)を参照してプッシュ用に登録します。
+{% tab Android Native %}
+Braze Expoプラグインを使用していない場合、またはこれらの設定をネイティブで行いたい場合は、[Androidネイティブプッシュ統合ガイドを]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/?tab=android/)参照してプッシュ登録を行う。
 {% endtab %}
 
-{% tab iOSネイティブ %}
-Braze Expo プラグインを使用していない場合、またはこれらの設定をネイティブで設定する場合は、[ネイティブiOS プッシュインテグレーションガイド]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift)の以下のステップを参照してプッシュに登録します。
+{% tab iOS Native %}
+Braze Expoプラグインを使用していない場合、またはこれらの設定をネイティブで行いたい場合は、[ネイティブiOSプッシュ統合ガイドの]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift)以下のステップを参照してプッシュ登録を行う：
 
-#### ステップ1.1：プッシュ許可の要求
+#### ステップ1.1：プッシュ権限のリクエスト
 
-アプリの起動時にプッシュ権限を要求する予定がない場合は、アプリDelegate で`requestAuthorizationWithOptions:completionHandler:` コールを省略します。次に、[ステップ2](#reactnative_step-2-request-push-notifications-permission)にスキップします。そうでない場合は、[iOSネイティブ・インテグレーション・ガイドに]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/?tab=objective-c#automatic-push-integration)従うこと。
+アプリの起動時にプッシュ権限を要求する予定がない場合は、AppDelegateの`requestAuthorizationWithOptions:completionHandler:` コールを省略する。そして[ステップ](#reactnative_step-2-request-push-notifications-permission)2に進む。そうでない場合は、[iOSネイティブ・インテグレーション・ガイドに]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/?tab=objective-c#automatic-push-integration)従うこと。
 
-#### ステップ1.2 (オプション):プッシュキーを移行する
+#### ステップ1.2（オプション）：プッシュキーを移行する
 
 以前にプッシュキーの管理に `expo-notifications` を使用していた場合は、アプリケーションのルートフォルダーから `expo fetch:ios:certs` を実行してください。これにより、プッシュキー (a .p8 ファイル) がダウンロードされ、その後 Braze ダッシュボードにアップロードできるようになります。
 {% endtab %}
@@ -136,21 +136,21 @@ Braze.addListener(Braze.Events.PUSH_NOTIFICATION_EVENT, data => {
 
 ### ステップ3: ディープリンクを有効にする (オプション)
 
-Braze がプッシュ通知をクリックしたときにReact コンポーネント内のディープリンクを処理できるようにするには、まず[React Native Linking](https://reactnative.dev/docs/linking) ライブラリーで説明されているステップs、または任意のソリューションを実装します。次に、以下の追加ステップs に従ってください。
+プッシュ通知がクリックされたときに、BrazeがReactコンポーネント内のディープリンクを処理できるようにするには、まず、[React Native Linking](https://reactnative.dev/docs/linking)libraryで説明されているステップを実装するか、選択したソリューションで実装する。その後、以下の追加ステップに従う。
 
 ディープリンクの詳細については、[FAQ の記事を]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking)参照してください。
 
 {% tabs local %}
-{% tab Androidネイティブ %}
-[ Braze Expo プラグイン]({{site.baseurl}}/developer_guide/platforms/react_native/sdk_integration/?tab=expo#step-2-choose-a-setup-option) を使用している場合は、`androidHandlePushDeepLinksAutomatically` を`true` に設定することで、プッシュ通知のディープリンクを自動的に処理できます。
+{% tab Android Native %}
+[Braze Expoプラグインを]({{site.baseurl}}/developer_guide/platforms/react_native/sdk_integration/?tab=expo#step-2-choose-a-setup-option)使用している場合、`app.json` で`androidHandlePushDeepLinksAutomatically` を`true` に設定することで、プッシュ通知のディープリンクを自動的に処理することができる。
 
-代わりに、ディープリンクを手動で処理するには、ネイティブAndroid ドキュメントを参照してください。[ディープリンクの追加]({{site.baseurl}}/developer_guide/push_notifications/deep_linking).
+ディープリンクを手動で処理するには、Androidネイティブのドキュメントを参照すること：[ディープリンクを追加する]({{site.baseurl}}/developer_guide/push_notifications/deep_linking)。
 
 {% endtab %}
-{% tab iOSネイティブ %}
-#### ステップ 3.1:アプリ起動時にプッシュ通知の給与読み込むを保存する
+{% tab iOS Native %}
+#### ステップ 3.1:アプリ起動時にプッシュ通知のペイロードを保存する
 {% alert note %}
-Braze Expo プラグインを使用している場合は、この機能は自動的に処理されるため、ステップ 3.1 をスキップしてください。
+Braze Expoプラグインを使用している場合は、この機能は自動的に処理されるので、ステップ3.1をスキップする。
 {% endalert %}
 
 iOS の場合は、AppDelegate の `didFinishLaunchingWithOptions` メソッドに `populateInitialPayloadFromLaunchOptions` を追加します。以下に例を示します。
@@ -174,9 +174,9 @@ iOS の場合は、AppDelegate の `didFinishLaunchingWithOptions` メソッド�
 }
 ```
 
-#### ステップ 3.2:クローズ状態からのディープリンクの処理
+#### ステップ 3.2:閉じた状態からのディープリンクを扱う
 
-[React Native Linking](https://reactnative.dev/docs/linking) によって処理される基本シナリオに加えて、`Braze.getInitialPushPayload` メソッドを実装し、`url` 値を取得して、実行されていないときにアプリを開封するプッシュ通知 s からのディープリンクを考慮します。以下に例を示します。
+[React Native Linkingが](https://reactnative.dev/docs/linking)扱う基本シナリオに加えて、`Braze.getInitialPushPayload` メソッドを実装し、`url` 値を取得することで、アプリが実行されていないときに開封されるプッシュ通知からのディープリンクを考慮する。以下に例を示します。
 
 ```javascript
 // Handles deep links when an iOS app is launched from a hard close via push click.
@@ -193,9 +193,9 @@ Braze.getInitialPushPayload(pushPayload => {
 アプリ起動時の競合状態が原因で、React Native の Linking API がこのシナリオをサポートしていないため、Braze はこの回避策を提供します。
 {% endalert %}
 
-#### ステップ3.3ユニバーサルリンクの有効化(オプション)
+#### ステップ3.3 ユニバーサルリンクを有効にする（オプション）
 
-[ユニバーサルリンク]({{site.baseurl}}/developer_guide/push_notifications/deep_linking/?sdktab=swift#universal-links)サポートを有効にするには、`BrazeReactDelegate.h`ファイルを`iOS`ディレクトリーに作成し、次のコードスニペットを追加します。
+[ユニバーサル・リンク・]({{site.baseurl}}/developer_guide/push_notifications/deep_linking/?sdktab=swift#universal-links)サポートを有効にするには、`iOS` ディレクトリに`BrazeReactDelegate.h` ファイルを作成し、以下のコード・スニペットを追加する。
 
 ```objc
 #import <Foundation/Foundation.h>
@@ -206,7 +206,7 @@ Braze.getInitialPushPayload(pushPayload => {
 @end
 ```
 
-次に、`BrazeReactDelegate.m` ファイルを作成し、次のコード スニペットを追加します。`YOUR_DOMAIN_HOST` を実際のドメインに置き換えます。
+次に、`BrazeReactDelegate.m` ファイルを作成し、以下のコード・スニペットを追加する。`YOUR_DOMAIN_HOST` を実際のドメインに置き換える。
 
 ```objc
 #import "BrazeReactDelegate.h"
@@ -235,7 +235,7 @@ Braze.getInitialPushPayload(pushPayload => {
 @end
 ```
 
-次に、プロジェクトの`AppDelegate.m` ファイルの`didFinishLaunchingWithOptions` に`BrazeReactDelegate` を作成して登録します。
+次に、プロジェクトの`AppDelegate.m` ファイルの`didFinishLaunchingWithOptions` に、`BrazeReactDelegate` を作成し登録する。
 
 ```objc
 #import "BrazeReactUtils.h"
@@ -257,11 +257,11 @@ Braze.getInitialPushPayload(pushPayload => {
 }
 ```
 
-たとえば、サンプルインテグレーションでは、サンプルアプリ[here](https://github.com/braze-inc/braze-react-native-sdk/blob/master/BrazeProject/ios/BrazeProject/AppDelegate.mm)を参照します。
+統合の例については、[こちらの](https://github.com/braze-inc/braze-react-native-sdk/blob/master/BrazeProject/ios/BrazeProject/AppDelegate.mm)サンプルアプリを参照されたい。
 {% endtab %}
 {% endtabs %}
 
-### ステップ 4: 試験プッシュ通知の送信
+### ステップ 4: テストプッシュ通知を送信する
 
 この時点で、デバイスに通知を送信できるはずです。次のステップに従って、プッシュ統合をテストします。
 
@@ -269,15 +269,15 @@ Braze.getInitialPushPayload(pushPayload => {
 macOS 13以降の特定のデバイスでは、Xcode 14以降で実行されている iOS 16以降のシミュレーターで iOS プッシュ通知をテストできます。詳細については、[Xcode 14 リリース ノート](https://developer.apple.com/documentation/xcode-release-notes/xcode-14-release-notes)を参照してください。
 {% endalert %}
 
-1. `Braze.changeUserId('your-user-id')` メソッドを呼び出して、React Native アプリ ライケーションにアクティブユーザーを設定します。
+1. `Braze.changeUserId('your-user-id')` メソッドを呼び出して、React Native アプリケーションにアクティブユーザーを設定する。
 2. [**キャンペーン**] に移動し、新しいプッシュ通知キャンペーンを作成します。テストしたいプラットフォームを選択します。
 3. テスト通知を作成し、[**テスト**] タブに移動します。テストユーザーと同じ `user-id` を追加し、[**テストを送信**] をクリックします。まもなくデバイスに通知が届くはずです。
 
-![テスト受信者として独自のユーザID を追加して、プッシュ通知をテストできることを示す Braze プッシュキャンペーン。]({% image_buster /assets/img/react-native/push-notification-test.png %}"Push Campaign Test")
+![Brazeのプッシュキャンペーンでは、自分のユーザーIDをテスト受信者として追加し、プッシュ通知をテストすることができる。]({% image_buster /assets/img/react-native/push-notification-test.png %} "Push Campaign Test")
 
-## Expoプラグインの使用
+## Expoプラグインを使う
 
-[ Expo](#reactnative_setting-up-push-notifications) にプッシュ通知s を設定すると、次のプッシュ通知ビヘイビアを処理できます。ネイティブのAndroid またはiOS レイヤーにコードを書き込む必要はありません。
+[Expoのプッシュ通知を設定](#reactnative_setting-up-push-notifications)すると、AndroidやiOSのネイティブレイヤーにコードを記述することなく、[Expoを使って](#reactnative_setting-up-push-notifications)以下のプッシュ通知の動作を処理することができる。
 
 ### Androidプッシュを追加FMSに転送する
 
@@ -308,23 +308,23 @@ Expo Application Services（EAS）を使用していて、`enableBrazeIosRichPus
 
 ### トラブルシューティング
 
-これらは、Braze React Native SDK およびExpo プラグインとのプッシュ通知統合のための一般的なトラブルシューティングステップです。
+これらは、Braze React Native SDKとExpoプラグインを使用したプッシュ通知の統合に関する一般的なトラブルシューティングのステップである。
 
-#### プッシュ通知s 動作停止 {#troubleshooting-stopped-working}
+#### プッシュ通知が機能しなくなった {#troubleshooting-stopped-working}
 
-エキスポプラグインを介したプッシュ通知が機能しなくなった場合:
+Expoプラグインによるプッシュ通知が機能しなくなった場合：
 
-1. Braze SDKがまだ"トラッキング セッション s であることを確認します。
-2. `wipeData` への明示的または暗黙的な呼び出しによってSDKが無効になっていないことを確認します。
-3. Brazeの設定と競合する可能性があるため、Expo または関連ライブラリの最近のアップグレードを確認します。
-4. 最近追加されたプロジェクト依存関係を確認し、既存のプッシュ通知委任メソッドを手動で上書きしているかどうかを確認します。
+1. Braze SDKがまだセッションをトラッキング, 追跡していることを確認する。
+2. SDK が`wipeData` への明示的または暗黙的なコールによって無効化されていないことを確認する。
+3. お使いのBrazeの設定と競合する可能性があるため、Expoまたはその関連ライブラリーの最近のアップグレードを確認する。
+4. 最近追加されたプロジェクトの依存関係を確認し、既存のプッシュ通知デリゲートメソッドを手動でオーバーライドしていないかチェックする。
 
 {% alert tip %}
-iOS 統合の場合は、[ プッシュ通知設定チュートリアル](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b1-standard-push-notifications) を参照して、プロジェクトの依存関係との潜在的な競合を特定することもできます。
+iOSとの統合については、[プッシュ通知のセットアップチュートリアルを](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/b1-standard-push-notifications)参照し、プロジェクトの依存関係との潜在的な競合を特定するのに役立てることができる。
 {% endalert %}
 
-#### 機器トークンがBrazeに登録されない {#troubleshooting-token-registration}
+#### トークンがBrazeに登録されない。 {#troubleshooting-token-registration}
 
-デバイストークンがBrazeに登録されない場合は、まず[プッシュ通知sが動作を停止しました](#troubleshooting-stopped-working)を確認します。
+デバイストークンがBrazeに登録されない場合は、まず[プッシュ通知が機能しなくなった](#troubleshooting-stopped-working)ことを確認する。
 
-問題が解決しない場合は、個別の依存関係がBraze プッシュ通知設定を妨害している可能性があります。削除するか、`Braze.registerPushToken` を手動で呼び出すことができます。
+問題が解決しない場合は、別の依存関係がBrazeのプッシュ通知設定に干渉している可能性がある。削除してみるか、代わりに手動で`Braze.registerPushToken` 。

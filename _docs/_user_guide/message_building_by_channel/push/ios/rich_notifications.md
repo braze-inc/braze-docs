@@ -1,5 +1,5 @@
 ---
-nav_title: "Creating rich notifications"
+nav_title: Create rich notifications
 article_title: "Creating rich push notifications for iOS"
 page_order: 3
 page_type: tutorial
@@ -13,7 +13,7 @@ tool:
 
 ---
 
-# Creating rich push notifications for iOS
+# Create rich push notifications for iOS
 
 > Rich Notifications allow for more customization in your push notifications by adding additional content beyond copy. Android notifications have included images in push notifications for some time now, messaged as an 'Expanded Notification Image'. Starting with iOS 10, your customers will be able to receive iOS push notifications that include GIFs, images, videos, or audio.
 

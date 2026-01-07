@@ -1,5 +1,5 @@
 ---
-nav_title: "取得:収益データのエクスポート"
+nav_title: "取得:輸出収入データ"
 article_title: "取得:収益データのエクスポート"
 search_tag: Endpoint
 page_order: 2
@@ -16,7 +16,7 @@ description: "本稿では、輸出売上データBraze エンドポイントに
 
 > このエンドポイントを使用して、ある期間にわたってアプリに費やされた総金額を返します。
 
-{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#f6e05f9a-13c0-4d66-8caa-4a376d25749f{% endapiref %}
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#f6e05f9a-13c0-4d66-8caa-4a376d25749f{% endapiref %}とする。
 
 ## 前提条件
 
@@ -47,8 +47,6 @@ curl --location --request GET 'https://rest.iad-01.braze.com/purchases/revenue_s
 ## 応答
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "message": (required, string) the status of the export, returns 'success' when completed without errors,
   "data" : [

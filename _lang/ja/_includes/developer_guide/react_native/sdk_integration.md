@@ -20,7 +20,7 @@ SDKバージョン6.0.0から、BrazeはReact Native Turbo Moduleを使用して
 
 SDKを統合するには、React Nativeバージョン0.71以降が必要である。サポートされているバージョンの完全なリストについては、 [React Native SDK GitHub リポジトリ](https://github.com/braze-inc/braze-react-native-sdk?tab=readme-ov-file#version-support)を参照してください。
 
-### ステップ 1: Braze ライブラリーを統合する
+### ステップ 1: Braze ライブラリーの統合
 
 {% tabs local %}
 {% tab npm %}
@@ -41,7 +41,7 @@ Braze SDKは、Braze Expoプラグインまたはネイティブレイヤーの�
 
 {% tabs %}
 {% tab Expo %}
-#### ステップ 2.1:Braze Expo プラグインのインストール
+#### ステップ2.1: Braze Expo プラグインのインストール
 
 Braze React Native SDK のバージョンが1.37.0以降であることを確認してください。サポートされているバージョンの全リストは、[Braze React Native](https://github.com/braze-inc/braze-expo-plugin?tab=readme-ov-file#version-support)リポジトリをチェックしてほしい。
 
@@ -80,6 +80,7 @@ npx expo install @braze/expo-plugin
 | `enableBrazeIosRichPush`                      | ブーリアン | iOSのみ。iOSのリッチプッシュ機能を有効にするかどうか。                                                                                                  |
 | `enableBrazeIosPushStories`                   | ブーリアン | iOSのみ。iOSのBraze Push Storiesを有効にするかどうか。                                                                                                  |
 | `iosPushStoryAppGroup`                        | ストリング  | iOSのみ。iOSのプッシュストーリーズに使われているアプリ群だ。                                                                                                       |
+| `iosUseUUIDAsDeviceId`                        | ブーリアン | iOSのみ。デバイスIDにランダムに生成されたUUIDを使用するかどうか。                                                                                       |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 構成例:
@@ -133,7 +134,7 @@ npx expo prebuild
 
 {% tab Android %}
 
-#### ステップ 2.1:リポジトリの追加
+#### ステップ2.1: リポジトリの追加
 
 最上位プロジェクト `build.gradle` で、`buildscript` > `dependencies` から以下を追加します。
 
@@ -229,7 +230,7 @@ override fun onNewIntent(intent: Intent) {
 {% endtab %}
 {% tab iOS %}
 
-#### ステップ 2.1:(オプション) ダイナミック XCFramework に関する Podfile の構成
+#### ステップ2.1: (オプション) ダイナミック XCFramework に関する Podfile の構成
 
 BrazeUI などの特定の Braze ライブラリーを Objective-C++ ファイルにインポートするには、`#import` 構文を使用する必要があります。Braze Swift SDKのバージョン7.4.0以降、バイナリにはこの構文と互換性のある[ダイナミック XCFramework としてのオプションの配布チャネル](https://github.com/braze-inc/braze-swift-sdk-prebuilt-dynamic)があります。
 

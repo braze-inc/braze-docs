@@ -23,13 +23,13 @@ LINE トリガーワードを使用するなど、LINE を通じてユーザー�
 
 アクションベースの配信キャンペーンをスケジュールする際に、トリガーワードを設定します。
 
-![“のアクションベースのトリガー]メッセージ本文が“ であるサブスクリプショングループに受信LINE を送信したユーザーに、このキャンペーンを送信します。また、空白のフィールドを送信します。]({% image_buster /assets/img/line/trigger_word_campaign.png %})
+![「メッセージ本文が以下の内容であるサブスクリプショングループにインバウンド LINE を送信したユーザーに、このキャンペーンを送信する」というアクションベースのトリガーと空白フィールド。]({% image_buster /assets/img/line/trigger_word_campaign.png %})
 
 ### キャンバス
 
 キャンバス内の[アクションパス]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths)にトリガーワードを設定します。
 
-![“のトリガーを含むアクションパス;メッセージ本文が“ であるサブスクリプショングループに受信LINE を送信したユーザーに、このキャンペーンを送信します;空白のフィールド。]({% image_buster /assets/img/line/trigger_word_canvas.png %})
+![「メッセージ本文が以下の内容であるサブスクリプショングループにインバウンド LINE を送信したユーザーに、このキャンペーンを送信する」というトリガーを持つアクションパスと空白フィールド。]({% image_buster /assets/img/line/trigger_word_canvas.png %})
 
 ### 要件
 

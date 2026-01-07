@@ -1,6 +1,6 @@
 ---
 nav_title: Using catalogs
-article_title: Using Catalogs
+article_title: Use Catalogs
 page_order: 1.5
 description: "This reference article covers how to use catalogs to reference non-user data in your Braze campaigns through Liquid."
 ---

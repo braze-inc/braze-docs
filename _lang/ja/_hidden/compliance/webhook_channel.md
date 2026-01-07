@@ -1,6 +1,6 @@
 ---
-nav_title: Webhooksのコンプライアンス・ドキュメント
-article: Compliance Documentation for Webhooks
+nav_title: Webhookのコンプライアンス・ドキュメント
+article_title: Webhooksのコンプライアンス・ドキュメント
 permalink: /compliance_documentation_webhooks/
 description: "Webhooksチャネルに関するコンプライアンス文書。"
 page_order: 3
@@ -30,3 +30,5 @@ Braze は、顧客が Webhook を使用してメッセージの送信または B
 ## 一般用語
 
 本契約に基づく顧客の義務の一般性を制限することなく、また、疑義を回避するためにのみ、顧客は、本チャネルの使用に関連して、必要なすべての権利、同意、承認を取得し、本チャネルの使用に関連して法的に適切なプライバシー通知を提供し、本チャネルを通じてメッセージを送信または該当する場合、受信するために法的に必要なすべての同意および承認を取得することについて、単独で責任を負うものとします。
+
+{% multi_lang_include braze_legal/english_language_governance.md %}

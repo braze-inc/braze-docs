@@ -1,13 +1,13 @@
 ---
-nav_title: Creating a Canvas template
-article_title: Creating a Canvas Template
+nav_title: Create a Canvas template
+article_title: Create a Canvas Template
 alias: "/canvas_templates/"
 page_order: 0.5
 description: "This reference article covers how to create a template for Canvas."
 page_type: reference
 ---
 
-# Creating a Canvas template
+# Create a Canvas template
 
 > This reference article covers how to create and manage templates for Canvas. Using templates can refine your messaging by creating a consistent framework that can be easily customized to fit your specific goals across your Canvases.
 

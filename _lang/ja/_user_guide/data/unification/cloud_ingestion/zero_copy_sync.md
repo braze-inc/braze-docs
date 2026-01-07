@@ -1,39 +1,39 @@
 ---
-nav_title: ゼロコピーパーソナライゼーション
-article_title: CDIによるゼロコピーパーソナライゼーション
+nav_title: ゼロコピー・パーソナライゼーション
+article_title: CDIを使用したゼロコピーパーソナライゼーション
 page_order: 4
 page_type: reference
-description: "ここでは、CDI を使用してキャンバスをトリガー Brazeする方法について説明します。"
+description: "このページでは、CDIを使ってBraze Canvasesをトリガーする方法の概要を説明する。"
 ---
 
-# CDIによるゼロコピーパーソナライゼーション
+# CDIを使用したゼロコピーパーソナライゼーション
 
-> CDI を使用してゼロコピーパーソナライゼーションでキャンバストリガーを同期する方法について説明します。この機能は、データストレージソリューションからユーザー固有の情報にアクセスし、それを送信先キャンバスに渡します。キャンバスステップs には、オプションで、Braze ユーザープロファイルs に保持されていないパーソナライゼーション フィールドs を含めることができます。
+> CDIを使用してキャンバスのトリガーを同期させ、ゼロコピーパーソナライゼーションを実現する方法を学習する。この機能は、データストレージソリューションからユーザー固有の情報にアクセスし、送信先のキャンバスに渡す。キャンバスステップには、Brazeユーザープロファイルに永続化されないパーソナライゼーションフィールドをオプションで含めることができる。
 
 {% alert important %}
-CDI Canvas トリガーは、現在、初期段階にあります。早期アクセスへの参加に興味がある方は、Brazeのアカウントマネージャーに連絡を。
+CDIキャンバスのトリガーは現在早期アクセス中である。早期アクセスへの参加に興味がある方は、Brazeのアカウントマネージャーに連絡を。
 {% endalert %}
 
-## キャンバストリガーの同期
+## キャンバスのトリガーを同期する
 
-### クイックスタートステップs
+### クイックスタートのステップ
 
-Braze CDI にすでに精通している場合は、キャンバストリガーシンクの設定が[ユーザー-data CDI 統合]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/integrations/) の処理に厳密に従うことに注意してください。
+すでにBraze CDIに慣れ親しんでいる場合、キャンバストリガー同期のセットアップは、以下の注意点を除き、[ユーザーデータCDI統合の]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/integrations/)プロセスに忠実に従うことに注意されたい：
 
-- 外部ID またはユーザー別名識別子のみがサポートされます。メールおよび電話番号は、サポートされていない識別子sです。  
-- 同期できるのは、すでに存在するBraze ユーザーs のみです。新しいユーザーsは作成できません。  
-- `properties` `payload` 列を置き換えます。これは、パーソナライゼーションのキャンバスエントリプロパティーとして使用するフィールドのJSON ストリングです。
+- 外部IDまたはユーザーエイリアス識別子のみがサポートされる。メールや電話番号は識別子としてサポートされていない。  
+- 同期できるのは既存のBrazeユーザーだけである。新しいユーザーを作成することはできない。  
+- `properties` `payload` 。これは、パーソナライゼーションのためのキャンバスエントリープロパティとして使用したいフィールドのJSON文字列である。
 
-開始するには、新しい同期の作成時に**Canvas Triggers**データ型を選択します。
+はじめに、新しいシンクを作成するときに、**キャンバストリガーの**データタイプを選択する。
 
-### カンバストリガーの使用 
+### キャンバストリガーを使う 
 
 #### ステップ 1: キャンバストリガーのデータソースを設定する
 
 {% tabs %}
 {% tab Snowflake %}
 
-##### ステップ1.1：Snowflake でのソーステーブルの設定
+##### ステップ1.1：Snowflakeでソーステーブルを設定する
 
 次の例の名前を使用することも、独自のデータベース、スキーマ、およびテーブルの名前を選択することもできます。テーブルの代わりに、ビューまたはマテリアライズドビューを使用することもできます。  
 
@@ -51,21 +51,21 @@ CREATE OR REPLACE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.CANVAS_TRIGGERS_SYNC (
 );
 ```
 
-必要に応じてデータベース、スキーマ、およびテーブルに名前を付けることができますが、列名は前述の定義と一致する必要があります。
+データベース、スキーマ、テーブルには好きな名前をつけることができるが、カラム名は前述の定義と一致させる必要がある。
 
-* `UPDATED_AT`:この行が更新dであったか、テーブルに追加された時刻。最後の同期以降に追加または更新された行のみが同期されます。  
-* ユーザー 識別子列として`external_id` または`alias_name` と`alias_label` のいずれかを指定します。これらは、キャンバスメッセージングをトリガーするユーザーを識別します。  
-  * `EXTERNAL_ID`:キャンバスに入力するユーザーを指定します。これは Braze で使用されている `external_id` 値と一致しなければなりません。  
-  * `ALIAS_NAME` と`ALIAS_LABEL`:これらの列はユーザー別名オブジェクトを作成します。`alias_name` は一意の識別子で、`alias_label` は別名の種類を指定します。ユーザーは、異なるラベルを持つ複数のエイリアスを持つことができますが、`alias_label` ごとに alias_name を1つしか持つことができません。  
-* `PROPERTIES`:キャンバスでパーソナライゼーションプロパティーとして使用できるようにするフィールドs のJSON ストリング。これには、ユーザー固有の情報が含まれます。
+* `UPDATED_AT`:この行が更新または追加された時刻。前回の同期以降に追加または更新された行のみが同期される。  
+* `external_id` 、または`alias_name` 、`alias_label` のいずれかをユーザー識別子列とする。これらは、キャンバスのメッセージングをトリガーしたいユーザーを識別する。  
+  * `EXTERNAL_ID`:キャンバスに入るユーザーを識別子で指定する。これは Braze で使用されている `external_id` 値と一致しなければなりません。  
+  * `ALIAS_NAME` と`ALIAS_LABEL` ：これらのカラムはユーザーエイリアスオブジェクトを作成する。`alias_name` は一意の識別子でなければならず、`alias_label` はエイリアスのタイプを指定する。ユーザーは、異なるラベルを持つ複数のエイリアスを持つことができますが、`alias_label` ごとに alias_name を1つしか持つことができません。  
+* `PROPERTIES`:キャンバスでパーソナライゼーションのプロパティとして利用できるようにするフィールドのJSON文字列。これにはユーザー固有の情報が含まれているはずだ。
 
 {% alert note %}
-プロパティーは、すべての行またはユーザーに必要なわけではありません。ただし、プロパティ値は有効なJSON 文字列である必要があります。行のプロパティがない場合は、空の`{}` 文字列を入力します。
+プロパティは、すべての行やユーザーに必要なわけではない。ただし、プロパティ値は有効なJSON文字列でなければならない。行のプロパティがない場合は、空の`{}` 文字列を入力する。
 {% endalert %}
 
-##### ステップ1.2：認証情報の設定
+##### ステップ1.2：認証情報を設定する
 
-ロール、ウェアハウス、ユーザーを設定し、適切な権限を付与します。既存の同期からすでに認証情報s がある場合は、それらを再利用できますが、必ずキャンバストリガーs のソーステーブルへのアクセスを拡張してください。  
+ロール、ウェアハウス、ユーザーを設定し、適切な権限を与える。既存のシンクの認証情報をすでに持っている場合は、それを再利用することができるが、キャンバストリガーのソーステーブルへのアクセスを拡張することを確認する。  
 
 ```sql
 
@@ -83,14 +83,14 @@ GRANT ROLE BRAZE_INGESTION_ROLE TO USER BRAZE_INGESTION_USER;
 
 ```
 
-##### ステップ1.3：ネットワークポリシーの設定
+##### ステップ1.3：ネットワークポリシーを設定する
 
-アカウントにネットワークポリシーがある場合は、BrazeIP を許可してCDI サービスコネクションを有効にします。IP のリストについては、[クラウドデータ取り込み]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/integrations/?tab=snowflake#step-15-allow-braze-ips-in-snowflake-network-policy-optional)を参照してください。  
+アカウントにネットワークポリシーがある場合は、CDIサービス接続をイネーブルメントにするためにBraze IPを許可する。IPのリストについては、[Cloud Data Ingestionを]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/integrations/?tab=snowflake#step-15-allow-braze-ips-in-snowflake-network-policy-optional)参照のこと。  
 
 {% endtab %}
 {% tab Redshift %}
 
-##### ステップ1.1：Redshift でソーステーブルを設定する
+##### ステップ1.1：Redshiftでソーステーブルを設定する
 
 次の例の名前を使用することも、独自のデータベース、スキーマ、およびテーブルの名前を選択することもできます。テーブルの代わりに、ビューまたはマテリアライズドビューを使用することもできます。
 
@@ -108,21 +108,21 @@ CREATE TABLE BRAZE_CLOUD_PRODUCTION.INGESTION.CANVAS_TRIGGERS_SYNC (
  );
 ```
 
-必要に応じてデータベース、スキーマ、およびテーブルに名前を付けることができますが、列名は前述の定義と一致する必要があります。
+データベース、スキーマ、テーブルには好きな名前をつけることができるが、カラム名は前述の定義と一致させる必要がある。
 
-* `UPDATED_AT`:この行が更新dであったか、テーブルに追加された時刻。最後の同期以降に追加または更新された行のみが同期されます。  
-* ユーザー 識別子列として`external_id` または`alias_name` と`alias_label` のいずれかを指定します。これらは、キャンバスメッセージングをトリガーするユーザーを識別します。  
-  * `EXTERNAL_ID`:キャンバスに入力するユーザーを指定します。これは Braze で使用されている `external_id` 値と一致しなければなりません。  
-  * `ALIAS_NAME` と`ALIAS_LABEL`:これらの列はユーザー別名オブジェクトを作成します。`alias_name` は一意の識別子で、alias_label は別名の種類を指定します。ユーザーは、異なるラベルを持つ複数のエイリアスを持つことができますが、`alias_label` ごとに `alias_name` を1つしか持つことができません。  
-* `PROPERTIES`:キャンバスでパーソナライゼーションプロパティーとして使用できるようにするフィールドs のJSON ストリング。これには、ユーザー固有の情報が含まれます。
+* `UPDATED_AT`:この行が更新または追加された時刻。前回の同期以降に追加または更新された行のみが同期される。  
+* `external_id` 、または`alias_name` 、`alias_label` のいずれかをユーザー識別子列とする。これらは、キャンバスのメッセージングをトリガーしたいユーザーを識別する。  
+  * `EXTERNAL_ID`:キャンバスに入るユーザーを識別子で指定する。これは Braze で使用されている `external_id` 値と一致しなければなりません。  
+  * `ALIAS_NAME` と`ALIAS_LABEL` ：これらのカラムはユーザーエイリアスオブジェクトを作成する。`alias_name` は一意の識別子でなければならず、alias_label はエイリアスのタイプを指定する。ユーザーは、異なるラベルを持つ複数のエイリアスを持つことができますが、`alias_label` ごとに `alias_name` を1つしか持つことができません。  
+* `PROPERTIES`:キャンバスでパーソナライゼーションのプロパティとして利用できるようにするフィールドのJSON文字列。これにはユーザー固有の情報が含まれているはずだ。
 
 {% alert note %}
-プロパティーは、すべての行またはユーザーに必要なわけではありません。ただし、プロパティ値は有効なJSON 文字列です。行のプロパティがない場合は、空の`{}` 文字列を入力します。
+プロパティは、すべての行やユーザーに必要なわけではない。ただし、プロパティ値は有効なJSON文字列でなければならない。行のプロパティがない場合は、空の`{}` 文字列を入力する。
 {% endalert %}
 
-##### ステップ1.2：認証情報の設定
+##### ステップ1.2：認証情報を設定する
 
-ロール、ウェアハウス、およびユーザーを設定し、適切な権限を付与します。既存の同期からすでに認証情報s がある場合は、それらを再利用できますが、必ずキャンバストリガーs のソーステーブルへのアクセスを拡張してください。
+ロール、ウェアハウス、およびユーザーを設定し、適切な権限を付与します。既存のシンクの認証情報をすでに持っている場合は、それを再利用することができるが、キャンバストリガーのソーステーブルへのアクセスを拡張することを確認する。
 
 ```sql
 CREATE USER braze_user PASSWORD '{password}';
@@ -130,21 +130,21 @@ GRANT USAGE ON SCHEMA BRAZE_CLOUD_PRODUCTION.INGESTION to braze_user;
 GRANT SELECT ON TABLE CANVAS_TRIGGERS_SYNC TO braze_user;
 ```
 
-##### ステップ1.3：ネットワークポリシーの設定 
+##### ステップ1.3：ネットワークポリシーを設定する 
 
-アカウントにネットワークポリシーがある場合は、BrazeIP を許可してCDI サービスコネクションを有効にします。IP のリストについては、[クラウドデータ取り込み]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/integrations/?tab=redshift#step-13-allow-access-to-braze-ips)を参照してください。
+アカウントにネットワークポリシーがある場合は、CDIサービス接続をイネーブルメントにするためにBraze IPを許可する。IPのリストについては、[Cloud Data Ingestionを]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/integrations/?tab=redshift#step-13-allow-access-to-braze-ips)参照のこと。
 
 {% endtab %}
 {% tab BigQuery %}
 
-##### ステップ1.1：ソーステーブルの新しいプロジェクトまたはデータセットを作成する(オプション)
+##### ステップ1.1：ソース・テーブル用に新しいプロジェクトまたはデータセットを作成する（オプション）
 
 ```sql
 CREATE SCHEMA BRAZE-CLOUD-PRODUCTION.INGESTION;
 ```
 
-##### ステップ1.2：BigQuery でのソーステーブルの設定
-ソーステーブルを作成する場合は、次を参照してください。  
+##### ステップ1.2：BigQueryでソーステーブルを設定する
+ソース・テーブルを作成する際には、以下を参照のこと：  
 
 | フィールド名 | タイプ | 必須かどうか | 
 | :---- | :---- | :---- | 
@@ -156,7 +156,7 @@ CREATE SCHEMA BRAZE-CLOUD-PRODUCTION.INGESTION;
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
-プロパティーは、すべての行またはユーザーに必要なわけではありません。ただし、プロパティ値は有効なJSON 文字列です。行のプロパティがない場合は、空の`{}` 文字列を入力します。
+プロパティは、すべての行やユーザーに必要なわけではない。ただし、プロパティ値は有効なJSON文字列でなければならない。行のプロパティがない場合は、空の`{}` 文字列を入力する。
 {% endalert %}
 
 ```sql
@@ -172,35 +172,35 @@ CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.CANVAS_TRIGGERS_SYNC`
 );
 ```
 
-##### ステップ1.3：認証情報の設定
+##### ステップ1.3：認証情報を設定する
 
-ユーザーを作成し、権限を付与します。すでに別の同期の認証情報がある場合は、キャンバス トリガー s テーブルにアクセスできる限り、それらを再利用できます。
+ユーザーを作成し、権限を与える。すでに別のシンクの認証情報を持っている場合は、キャンバストリガー・テーブルへのアクセス権を持っている限り、その認証情報を再利用することができる。
 
 | 権限 | 目的 |
 | :---- | :---- |
-| BigQuery 接続ユーザ | Brazeの接続を許可します。 |
-| BigQueryユーザー | クエリーの実行、メタデータの読み取り、およびテーブルの一覧表示をBrazeに許可します。 |
-| BigQuery データビューア | Brazeがデータセットとコンテンツを表示できるようにします。 |
-| BigQueryジョブユーザー | Brazeがジョブを実行できるようにします。 |
+| BigQuery接続ユーザー | Brazeの接続を許可する。 |
+| BigQueryユーザー | Brazeがクエリーを実行し、メタデータを読み、テーブルを一覧できるようにする。 |
+| BigQueryデータビューアー | Brazeがデータセットとコンテンツを閲覧できるようにする。 |
+| BigQueryジョブユーザー | Brazeがジョブを実行できるようにする。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-権限を付与した後、JSON キーを生成します。手順については、[キーの作成と削除](https://cloud.google.com/iam/docs/keys-create-delete)を参照してください。後でBraze ダッシュボードにアップロードします。
+権限を付与したら、JSONキーを生成する。手順については、[キーの作成と削除を](https://cloud.google.com/iam/docs/keys-create-delete)参照のこと。後でダッシュボードにアップロードする。
 
-##### ステップ1.4:ネットワークポリシーの設定 
-アカウントにネットワークポリシーがある場合は、BrazeIP を許可してCDI サービスコネクションを有効にします。IP のリストについては、[クラウドデータ取り込み]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/integrations/?tab=bigquery#step-13-allow-access-to-braze-ips)を参照してください。
+##### ステップ1.4:ネットワークポリシーを設定する 
+アカウントにネットワークポリシーがある場合は、CDIサービス接続をイネーブルメントにするためにBraze IPを許可する。IPのリストについては、[Cloud Data Ingestionを]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/integrations/?tab=bigquery#step-13-allow-access-to-braze-ips)参照のこと。
 
 {% endtab %}
 {% tab Databricks %}
 
-##### ステップ1.1：ソーステーブルのカタログまたはスキーマを登録します。
+##### ステップ1.1：ソース・テーブルのカタログまたはスキーマを作成する。
 
 ```sql
 CREATE SCHEMA BRAZE-CLOUD-PRODUCTION.INGESTION;
 ```
 
-#### ステップ1.2：Databricks でのソーステーブルの設定
+#### ステップ1.2：Databricksでソーステーブルを設定する
 
-ソーステーブルを作成する場合は、次を参照してください。
+ソース・テーブルを作成する際には、以下を参照のこと：
 
 | フィールド名 | タイプ | required |
 | :---- | :---- | :---- |
@@ -211,16 +211,16 @@ CREATE SCHEMA BRAZE-CLOUD-PRODUCTION.INGESTION;
 | `ALIAS_LABEL` | 文字列 | NULL 許容 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-必要に応じてスキーマとテーブルに名前を付けることができますが、列名は前述の定義と一致する必要があります。
+スキーマとテーブルには好きな名前をつけることができるが、カラム名は前述の定義と一致させる必要がある。
 
-* `UPDATED_AT`:この行が更新dであったか、テーブルに追加された時刻。最後の同期以降に追加または更新された行のみが同期されます。  
-* ユーザー 識別子列として`external_id` または`alias_name` と`alias_label` のいずれかを指定します。これらは、キャンバスメッセージングをトリガーするユーザーを識別します。  
-  * `EXTERNAL_ID`:キャンバスに入力するユーザーを指定します。これは Braze で使用されている `external_id` 値と一致しなければなりません。  
-  * `ALIAS_NAME` と`ALIAS_LABEL`:これらの列はユーザー別名オブジェクトを作成します。`alias_name` は一意の識別子で、`alias_label` は別名の種類を指定します。ユーザーは、異なるラベルを持つ複数のエイリアスを持つことができますが、`alias_label` ごとに alias_name を1つしか持つことができません。  
-* `PROPERTIES`:フィールドs のストリングまたは構造体で、キャンバスのパーソナライゼーションプロパティーとして使用できるようにします。これには、ユーザー固有の情報が含まれます。
+* `UPDATED_AT`:この行が更新または追加された時刻。前回の同期以降に追加または更新された行のみが同期される。  
+* `external_id` 、または`alias_name` 、`alias_label` のいずれかをユーザー識別子列とする。これらは、キャンバスのメッセージングをトリガーしたいユーザーを識別する。  
+  * `EXTERNAL_ID`:キャンバスに入るユーザーを識別子で指定する。これは Braze で使用されている `external_id` 値と一致しなければなりません。  
+  * `ALIAS_NAME` と`ALIAS_LABEL` ：これらのカラムはユーザーエイリアスオブジェクトを作成する。`alias_name` は一意の識別子でなければならず、`alias_label` はエイリアスのタイプを指定する。ユーザーは、異なるラベルを持つ複数のエイリアスを持つことができますが、`alias_label` ごとに alias_name を1つしか持つことができません。  
+* `PROPERTIES`:キャンバスでパーソナライゼーションプロパティとして利用できるようにするフィールドの文字列または構造体。これにはユーザー固有の情報が含まれているはずだ。
 
 {% alert note %}
-プロパティーは、すべての行またはユーザーに必要なわけではありません。ただし、プロパティ値は有効なJSON 文字列である必要があります。行のプロパティがない場合は、空の`{}` 文字列を入力します。
+プロパティは、すべての行やユーザーに必要なわけではない。ただし、プロパティ値は有効なJSON文字列でなければならない。行のプロパティがない場合は、空の`{}` 文字列を入力する。
 {% endalert %}
 
 ```sql
@@ -236,24 +236,24 @@ CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.USERS_ATTRIBUTES_SYNC`
 );
 ```
 
-##### ステップ1.3：認証情報の設定 
+##### ステップ1.3：認証情報を設定する 
 
-データブロックで個人用のアクセストークンを作成します。
+Databricksでパーソナアクセストークンを作成する：
 
-1. ユーザーの名前を選択し、**ユーザー設定を選択します。**  
-2. **Access トークン s**タブで、**新しいトークンの生成を選択します。**  
-3. 「Braze CDI」など、トークンを識別するための注釈を追加します。  
-4. **Lifetime (days)**を空白のままにして、有効期限なしの状態で**Generate**を選択します。  
-5. Braze ダッシュボードで使用するために、トークンを安全にコピーして保存します。
+1. ユーザー名を選択し、**ユーザー設定を**選択する**。**  
+2. **アクセストークンタブで**、**Generate new tokenを**選択する。  
+3. Braze CDI」のように、トークンを識別するためのコメントを追加する。  
+4. **Lifetime(日数)を**空白のままにして、有効期限なしとし、**Generateを**選択する。  
+5. トークンをコピーし、Brazeダッシュボードで使用できるように安全に保存する。
 
-##### ステップ1.4:ネットワークポリシーの設定 
+##### ステップ1.4:ネットワークポリシーを設定する 
 
-アカウントにネットワークポリシーがある場合は、BrazeIP を許可してCDI サービスコネクションを有効にします。IP のリストについては、[クラウドデータ取り込み]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/integrations/?tab=databricks#step-13-allow-access-to-braze-ips)を参照してください。
+アカウントにネットワークポリシーがある場合は、CDIサービス接続をイネーブルメントにするためにBraze IPを許可する。IPのリストについては、[Cloud Data Ingestionを]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/integrations/?tab=databricks#step-13-allow-access-to-braze-ips)参照のこと。
 
 {% endtab %}
 {% tab Fabric %}
 
-##### ステップ1.1：ファブリックでのソーステーブルの設定
+##### ステップ1.1：ファブリックでソーステーブルを設定する
 
 ```sql
 CREATE OR ALTER TABLE [warehouse].[schema].[CDI_table_name] 
@@ -269,69 +269,69 @@ CREATE OR ALTER TABLE [warehouse].[schema].[CDI_table_name]
 GO
 ```
 
-##### ステップ1.2：認証情報の設定 
+##### ステップ1.2：認証情報を設定する 
 
-サービスプリンシパルを作成し、権限を付与します。別の同期からすでに認証情報を取得している場合は、それらを再利用できます。つまり、アカウントテーブルにアクセスできることを確認します。
+サービスプリンシパルを作成し、権限を付与する。すでに別のシンクの認証情報を持っている場合は、それを再利用することができる。
 
-##### ステップ1.3：ネットワークポリシーの設定 
+##### ステップ1.3：ネットワークポリシーを設定する 
 
-アカウントにネットワークポリシーがある場合は、BrazeIP を許可してCDI サービスコネクションを有効にします。IP のリストについては、[クラウドデータ取り込み]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/integrations/?tab=microsoft%20fabric#step-15-allow-braze-ips-in-firewall-optional)を参照してください。
+アカウントにネットワークポリシーがある場合は、CDIサービス接続をイネーブルメントにするためにBraze IPを許可する。IPのリストについては、[Cloud Data Ingestionを]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/integrations/?tab=microsoft%20fabric#step-15-allow-braze-ips-in-firewall-optional)参照のこと。
 
 {% endtab %}
 {% tab File Storage %}
 
-ファイルストレージからキャンバストリガーを同期するには、次のフィールドs を使用してソースファイルを作成します。
+ファイルストレージからキャンバストリガーを同期するには、以下のフィールドを持つソースファイルを作成する。
 
 | フィールド | 必須 | 説明 |
 | :---- | :---- | :---- |
-| `EXTERNAL_ID` | はい、`external_id` または`alias_name` のいずれか `alias_label` | これは更新したいユーザーの識別子である。これは Braze で使用されている `external_id` 値と一致しなければなりません。 |
-| `ALIAS_NAME` と `ALIAS_LABEL` | はい、`external_id` または`alias_name` のいずれか `alias_label` | これら2つの列は、ユーザーエイリアスオブジェクトを作成する。`alias_name` は一意の識別子でなければならず、`alias_label` はエイリアスのタイプを指定する。ユーザーは、異なるラベルを持つ複数のエイリアスを持つことができますが、`alias_label` ごとに `alias_name` を1つしか持つことができません。 |
-| `PROPERTIES` | はい | キャンバスでパーソナライゼーションプロパティーとして使用できるようにするフィールドのJSON ストリング。これには、ユーザー固有の情報が含まれます。 |
+| `EXTERNAL_ID` | はい、`external_id` または`alias_name` のどちらかである。 `alias_label` | これは更新したいユーザーの識別子である。これは Braze で使用されている `external_id` 値と一致しなければなりません。 |
+| `ALIAS_NAME` と `ALIAS_LABEL` | はい、`external_id` または`alias_name` のどちらか1つである。 `alias_label` | これら2つの列は、ユーザーエイリアスオブジェクトを作成する。`alias_name` は一意の識別子でなければならず、`alias_label` はエイリアスのタイプを指定する。ユーザーは、異なるラベルを持つ複数のエイリアスを持つことができますが、`alias_label` ごとに `alias_name` を1つしか持つことができません。 |
+| `PROPERTIES` | はい | キャンバスのパーソナライゼーションプロパティとして利用可能なフィールドのJSON文字列。これにはユーザー固有の情報が含まれているはずだ。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert tip %}
-ファイル名はAWS規則に従い、一意である必要があります。固有性を確保するためにタイムスタンプを追加します。Amazon S3 の同期の詳細については、[File Storage Integrations](https://www.braze.com/docs/user_guide/data/cloud_ingestion/file_storage_integrations)を参照してください。
+ファイル名はAWSのルールに従い、一意でなければならない。タイムスタンプを付加することで、一意性を確保する。Amazon S3の同期については、[ファイル・ストレージの統合を](https://www.braze.com/docs/user_guide/data/cloud_ingestion/file_storage_integrations)参照のこと。
 {% endalert %}
 
 {% endtab %}
 {% endtabs %}
 
-#### ステップ 2: 送信先キャンバスの設定
+#### ステップ 2:送信先キャンバスを設定する
 
-1. キャンバストリガーの送信先キャンバスを設定します。新規に作成するか、既存のAPI-トリガーのキャンバスを選択します。配信スケジュール型がAPI-トリガーのキャンバスを作成する方法については、[入力スケジュール型]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas#entry-schedule-types)を参照してください。
-2. API-トリガー 配信スケジュールの種類を選択した後、キャンバスの設定を続行してキャンバスを構築します。キャンバスには、シンプルな単一メッセージ送信から、複数のステップを持つ複雑な顧客ワークフローまで、さまざまな種類があります。
-3. キャンバスステップs 内で、[Canvas エントリプロパティー]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties) を使用して、ソーステーブルから同期する予定のプロパティーフィールドs を使用してメッセージをカスタマイズします。
-  * たとえば、ステップ1 で`account_balance` のプロパティーフィールドをインストゥルメントした場合、次のリキッドテンプレートを使用してメッセージをパーソナライズします: `\{\{canvas_entry_properties.\$\{account_balance\}\}\}`。
-5. キャンバスを構築したら、それを起動し、[ステップ3](#step-3-create-your-zero-copy-sync)に進みます。
+1. 送信先のキャンバスをキャンバスのトリガーに設定する。新しいキャンバスを作成するか、既存のAPIトリガーキャンバスを選択する。APIトリガー配信スケジュールタイプでキャンバスを作成する方法については、[エントリースケジュールタイプを]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas#entry-schedule-types)参照のこと。
+2. APIトリガー配信スケジュールタイプを選択した後、キャンバスのセットアップを続行し、キャンバスを構築する。キャンバスは、単純なシングルメッセージの送信から、複数のステップを持つ複雑な顧客ワークフローまで、幅広く対応できる。
+3. キャンバス・ステップの中で、[キャンバス・エントリー・プロパティを使って]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties)、ソース・テーブルから同期する予定のプロパティ・フィールドでメッセージをパーソナライズさせる。
+  * 例えば、ステップ1で、`account_balance` のプロパティフィールドをインストルメント化した場合、メッセージをパーソナライズするために、次のようなLiquidテンプレートを使うことになる：`\{\{canvas_entry_properties.\$\{account_balance\}\}\}`.
+5. キャンバスを構築したら、それを起動し、[ステップ](#step-3-create-your-zero-copy-sync)3に進む。
 
-#### ステップ 3: ゼロコピー同期の作成
+#### ステップ 3:ゼロコピー・シンクを作成する
 
-ソース設定が完了し、送信先キャンバスが起動したら、新しいデータシンクを作成します。
+データソースのセットアップが完了し、送信先キャンバスが起動したら、新しいデータシンクを作成する：
 
-1. Brazeで、**データ設定**> **クラウドデータ取り込み**に移動します。
-1. 接続の詳細(または既存の認証情報s を再利用)を入力し、ソーステーブルを[ステップ1](#step-1-set-up-data-source-for-canvas-triggers) から設定します。
-2. 統合の名前を指定します。
-3. **キャンバストリガーs**データタイプを選択します。
-4. 送信先のキャンバスを選択します([ステップ2](#step-2-configure-your-destination-canvas))。
-5. 同期周波数を選択します。
-6. 通知環境設定を設定します。
-7. **Test Connection**を選択して、すべてが期待どおりに動作することを確認します。Snowflakeに接続する場合は、最初にダッシュボードに表示される公開キーを、Snowflakeに接続するためにBraze用に作成されたユーザーに追加します。このステップを完了するには、Snowflakeで**SECURITYADMIN**アクセス以上が必要です。 
-8. 同期を保存して、キャンバストリガーの同期を開始します。
+1. Brazeで、**Data Settings**>**Cloud Data Ingestion**に進む。
+1. 接続の詳細（または既存の認証情報を再利用）と[ステップ](#step-1-set-up-data-source-for-canvas-triggers)1のソース・テーブルを入力して接続を設定する。
+2. 統合名を記入する。
+3. **キャンバストリガーの**データタイプを選択する。
+4. [ステップ](#step-2-configure-your-destination-canvas)2で）送信先のキャンバスを選択する。
+5. 同期周波数を選択する。
+6. 通知の設定をする。
+7. **Test Connection（接続のテスト）**」を選択し、すべてが期待通りに動作することを確認する。Snowflakeに接続する場合は、まずダッシュボードに表示される公開キーを、Braze用に作成したユーザーに追加してSnowflakeに接続する。このステップを完了するには、**SnowflakeのSECURITYADMIN**アクセス以上が必要である。 
+8. 同期を保存してキャンバストリガーの同期を開始する。
 
-同期が実行されると、ソーステーブルのユーザーがキャンバスに入ります。キャンバス分析とクラウドデータインジェションの同期ログページを使用して、パフォーマンスを監視します。
+同期が実行されると、ソーステーブルのユーザーがキャンバスに入り始める。パフォーマンスを監視するには、キャンバス分析とCloud Data Ingestion sync logsページを使用する。
 
 {% alert tip %}  
-設定全体(同期動作からキャンバス設定まで)を確認して、予期しない送信を避けます。キャンバス設定s (レート制限 ing、フリークエンシーキャップ、およびセグメンテーション フィルター s など) は、メッセージ配信をさらに絞り込むことができます。<br><br>本番ユースケースs を実装する前に、小規模またはテストオーディエンスで試運転を行うことをお勧めします。
+予期せぬ送信を避けるために、設定全体（同期の動作からキャンバスの設定まで）を見直す。レート制限、フリークエンシーキャップ、セグメンテーションフィルターなどのキャンバス設定は、メッセージ配信をさらに洗練させることができる。<br><br>本番のユースケースを実装する前に、少人数またはテストオーディエンスで試運転を行うことをお勧めする。
 {% endalert %}
 
 ### 考慮事項
 
-CDI Canvas トリガー は、`/canvas/trigger/send` のREST API レート制限を使用します。このエンドポイントをCDI Canvas トリガー s およびREST API インテグレーションと同時に使用している場合は、組み合わせ使用量がレート制限にカウントされることを想定してください。
+CDI キャンバスのトリガーは`/canvas/trigger/send` の REST API のレート制限を利用する。このエンドポイントをCDIキャンバストリガーとREST API統合と同時に使用している場合、合計使用量はレート制限にカウントされる。
 
-CDI Canvas トリガーは初期アクセスですが、次の点を考慮してください。
+CDIキャンバスのトリガーは早期アクセスであるが、以下の詳細を考慮されたい：
 
-* ワークスペースごとに最大5 つの有効なキャンバストリガーシンク  
-* 1 回の同期実行で、1 時間あたり最大375万 ユーザー 秒のアプリ速度で、それぞれの送信先 キャンバスにユーザーs が入力されます。  
-  * 以下の場合、ソースからキャンバスへのエントリ時間が長くなるように準備してください。  
-    * 同期実行ごとに3.75M 以上のユーザーを同期する。  
-    * REST API の[ レート制限が`/canvas/trigger/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/#rate-limit) ですでに飽和しているときにCDI Canvas トリガーを使用する。
+* ワークスペースごとに最大5つのアクティブなキャンバス・トリガー・シンクが可能。  
+* 各同期の実行は、1時間あたり最大約375万人のユーザーをそれぞれの送信先キャンバスに入力する。  
+  * 次のような場合、ソースからキャンバスへのエントリ時間が長くなる：  
+    * 1回のシンクで375万人以上のユーザーをシンクする。  
+    * [ `/canvas/trigger/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/#rate-limit) REST APIのレート制限に達している場合、CDIキャンバストリガーを使用する。

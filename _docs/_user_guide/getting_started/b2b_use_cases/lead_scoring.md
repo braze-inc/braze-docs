@@ -1,12 +1,12 @@
 ---
 nav_title: Lead scoring
-article_title: Creating a Lead-Scoring Workflow
+article_title: Create a Lead-Scoring Workflow
 page_order: 1
 page_type: reference
 description: "Learn how to use Braze to do simple lead scoring, external lead scoring, and lead handoffs."
 ---
 
-# Creating a lead-scoring workflow
+# Create a lead-scoring workflow
 
 > This use case demonstrates how you can use Braze to update user lead scores in real time and automatically hand off leads to your Sales teams.
 

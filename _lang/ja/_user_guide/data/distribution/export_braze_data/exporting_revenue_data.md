@@ -1,5 +1,5 @@
 ---
-nav_title: 輸出収入および総収入データ
+nav_title: 輸出収入&amp;アンプ、総収入データ
 article_title: 収益および総収益データのエクスポート
 page_order: 4
 page_type: reference
@@ -35,11 +35,7 @@ tool:
     - (オプション) セグメント別 1 時間あたりの収益
 - ユーザーあたりの収益
 
-<<<<<<< HEAD
 ![収益グラフ]({% image_buster /assets/img_archive/Export_revenue_graph.png %})
-=======
-\![収益グラフ]({% image_buster /assets/img_archive/Export_revenue_graph.png %})
->>>>>>> main
 
 ## 総収益
 

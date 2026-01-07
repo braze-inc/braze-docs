@@ -57,6 +57,6 @@ Currents からアクセスされるイベントデータを使用してでき�
 
 ## Currents へのアクセス方法
 
-Currents コネクターは、弊社のプロレベルおよびエンタープライズレベルの多くのパッケージにすでに含まれています。Currents の使用に興味がある場合は、アカウントマネージャーにお問い合わせください。アカウントマネージャーとデータスペシャリストが、[Currents の設定と連携]({{site.baseurl}}/user_guide/data/braze_currents/setting_up_currents/)をサポートできます。
+Currents コネクターは、弊社のプロレベルおよびエンタープライズレベルの多くのパッケージにすでに含まれています。Currentsの使用に興味がある場合は、アカウントマネージャーに連絡する。アカウントマネージャーとデータスペシャリストが、[Currents の設定と連携]({{site.baseurl}}/user_guide/data/braze_currents/setting_up_currents/)をサポートできます。
 
 <br><br>

@@ -1,6 +1,6 @@
 ---
-nav_title: Managing Canvases
-article_title: Managing Canvases
+nav_title: Manage Canvases
+article_title: Manage Canvases
 page_order: 2
 layout: dev_guide
 guide_top_header: "Managing Canvases"

@@ -72,7 +72,7 @@ table td {
 [USERS_MESSAGES_PUSHNOTIFICATION_ABORT_SHARED](#USERS_MESSAGES_PUSHNOTIFICATION_ABORT_SHARED) | 当初予定されていたプッシュ通知メッセージが、何らかの理由で中止された。
 [USERS_MESSAGES_PUSHNOTIFICATION_BOUNCE_SHARED](#USERS_MESSAGES_PUSHNOTIFICATION_BOUNCE_SHARED) | プッシュ通知がバウンスしたとき
 [USERS_MESSAGES_PUSHNOTIFICATION_INFLUENCEDOPEN_SHARED](#USERS_MESSAGES_PUSHNOTIFICATION_INFLUENCEDOPEN_SHARED) | ユーザーが通知を受け取った後、通知をクリックせずにアプリを開いた場合
-[USERS_MESSAGES_PUSHNOTIFICATION_IOSFOREGROUND_SHARED](#USERS_MESSAGES_PUSHNOTIFICATION_IOSFOREGROUND_SHARED) | アプリを開いているときにプッシュ通知を受け取った場合
+[USERS_MESSAGES_PUSHNOTIFICATION_IOSFOREGROUND_SHARED](#USERS_MESSAGES_PUSHNOTIFICATION_IOSFOREGROUND_SHARED) | アプリ開封中にユーザーがプッシュ通知を受け取った場合。<br><br>このイベントは[Swift SDKでは](https://github.com/braze-inc/braze-swift-sdk)サポートされておらず、[Obj-C SDKでは](https://github.com/Appboy/appboy-ios-sdk)非推奨となっている。
 [USERS_MESSAGES_PUSHNOTIFICATION_OPEN_SHARED](#USERS_MESSAGES_PUSHNOTIFICATION_OPEN_SHARED) | ユーザーがプッシュ通知を開いたとき、またはプッシュ通知ボタン（アプリを開かないCLOSEボタンを含む）をクリックしたとき。<br><br> プッシュボタンの操作には複数の結果があります。「No」、「Decline」、「Cancel」アクションは 「クリック数」、Accept アクションは「開封数」です。この表では両者が表されているが、両者を区別するために **BUTTON_ACTION_TYPE**列で区別できる。たとえば、「No」、「Decline」、「Cancel」でない`BUTTON_ACTION_TYPE`でグループ化するためにクエリを使用できます。
 [USERS_MESSAGES_PUSHNOTIFICATION_SEND_SHARED](#USERS_MESSAGES_PUSHNOTIFICATION_SEND_SHARED) | ユーザーにプッシュ通知を送るとき
 [USERS_MESSAGES_SMS_ABORT_SHARED](#USERS_MESSAGES_SMS_ABORT_SHARED) | 当初予定されていたSMSメッセージが何らかの理由で中止された。
@@ -1428,6 +1428,10 @@ table td {
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### USERS_MESSAGES_PUSHNOTIFICATION_IOSFOREGROUND_SHARED {#USERS_MESSAGES_PUSHNOTIFICATION_IOSFOREGROUND_SHARED}
+
+{% alert important %}
+このイベントは[Swift SDKでは](https://github.com/braze-inc/braze-swift-sdk)サポートされておらず、[Obj-C SDKでは](https://github.com/Appboy/appboy-ios-sdk)非推奨となっている。
+{% endalert %}
 
 フィールド | タイプ | 説明
 ------|------|------------

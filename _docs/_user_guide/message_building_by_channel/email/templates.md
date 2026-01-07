@@ -11,10 +11,10 @@ channel:
 
 guide_featured_title: "Section articles"
 guide_featured_list:
-- name: Creating an Email Template
+- name: Create an Email Template
   link: /docs/user_guide/message_building_by_channel/email/templates/email_template/
   image: /assets/img/braze_icons/brush-02.svg
-- name: Uploading an Email Template
+- name: Upload an Email Template
   link: /docs/user_guide/message_building_by_channel/email/templates/html_email_template/
   image: /assets/img/braze_icons/upload-01-alt.svg
 - name: Link Aliasing
