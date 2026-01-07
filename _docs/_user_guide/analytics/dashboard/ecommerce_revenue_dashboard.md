@@ -57,8 +57,8 @@ Revenue and order counts use Braze standardized calculations.
 
 ### Excluded data
 
-Purchases logged using the legacy purchase event are not included.
-The **eCommerce Revenue - Last Touch Attribution** dashboard currently does not support features tied to legacy purchase events, such as LTV or revenue reporting within campaigns or Canvases. 
+Purchases logged using the legacy purchase event are not included. The **eCommerce Revenue - Last Touch Attribution** dashboard currently does not support features tied to legacy purchase events, such as LTV or revenue reporting within campaigns or Canvases. 
+
 
 ## Currency handling
 

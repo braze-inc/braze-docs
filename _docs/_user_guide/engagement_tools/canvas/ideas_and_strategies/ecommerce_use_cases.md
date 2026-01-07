@@ -389,7 +389,7 @@ To create a [Custom Events report]({{site.baseurl}}/user_guide/data_and_analytic
 
 #### Conversions dashboard
 
-To gain insights into the trends related to orders placed from your launched Canvases, you will need to set up a [Conversions dashboard]({{site.baseurl}}/user_guide/data_and_analytics/analytics/conversions_dashboard#conversions-dashboard) and specify your Canvases.
+To gain insights into the trends related to orders placed from your launched Canvases, set up a [Conversions dashboard]({{site.baseurl}}/user_guide/data_and_analytics/analytics/conversions_dashboard#conversions-dashboard) and specify your Canvases.
 
 #### eCommerce revenue dashboard
 
