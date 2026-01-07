@@ -15,7 +15,7 @@ description: "This article outlines details about the View source translations f
 /templates/email/translations/source
 {% endapimethod %}
 
-> Use this endpoint to view the source translations for an [email template]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates).
+> Use this endpoint to view the source translations for an [email template]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates). [Learn more]({{ site.baseurl }}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/) about translations feature.
 
 {% alert important %}
 This endpoint is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
