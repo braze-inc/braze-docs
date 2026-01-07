@@ -1,12 +1,12 @@
 ---
 nav_title: Braze users
-article_title: Managing Braze users
+article_title: Manage Braze users
 page_order: 23
 page_type: reference
 description: "This page covers managing your Braze users, such as adding and deleting users, setting user permissions, creating Teams, and managing company settings."
 ---
 
-# Managing Braze users
+# Manage Braze users
 
 > Learn how to manage users in your company account, including adding, suspending, and deleting users.
 

@@ -1,6 +1,6 @@
 ---
-nav_title: Creating a Banner
-article_title: Creating a Banner
+nav_title: Create a Banner
+article_title: Create a Banner
 page_order: 1
 description: "This reference article covers how to create, compose, configure and send Banners using Braze campaigns and Canvases."
 tool:
@@ -9,7 +9,7 @@ channel:
   - banners
 ---
 
-# Creating a Banner
+# Create a Banner
 
 > Learn how to create Banners when you build campaigns and Canvases in Braze. For more general information, see [About Banners]({{site.baseurl}}/user_guide/message_building_by_channel/banners).
 
@@ -129,7 +129,7 @@ If you have multiple Banner campaigns using the same placement ID, we recommend 
 
 #### Choose your audience
 
-1. In **Target Audiences**, choose segments or filters to narrow down your audience. You’ll automatically be given a preview of the approximate segment population. Exact segment membership is calculated just before the message is sent.
+1. In **Target Audiences**, choose segments or filters to narrow your audience. You automatically receive a preview of the approximate segment population. Exact segment membership is calculated before the message is sent.
 
 {% multi_lang_include target_audiences.md %}
 

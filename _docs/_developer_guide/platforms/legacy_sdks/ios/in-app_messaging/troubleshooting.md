@@ -12,7 +12,7 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# Troubleshooting in-app messages
+# Troubleshoot in-app messages
 
 ## Impressions
 

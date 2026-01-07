@@ -367,9 +367,7 @@ For a list of eCommerce filters and their definitions, refer to [Segment filters
 
 ![Segment filters dropdown with "Ecommerce" filters.]({% image_buster /assets/img_archive/ecommerce_filters.png %}){: style="max-width:50%"}
 
-{% alert important %}
-The purchase event will eventually be deprecated and replaced with [eCommerce recommended events]({{site.baseurl}}/user_guide/data/custom_data/recommended_events/). When this happens, segment filters will no longer populate under purchase behavior. For a full list of purchase events, refer to [Logging purchase events]({{site.baseurl}}/user_guide/data/custom_data/purchase_events/#logging-purchase-events). 
-{% endalert %}
+{% multi_lang_include alerts/important_alerts.md alert='Purchase event deprecation for eCommerce filters' %}
 
 ## Nested event properties
 

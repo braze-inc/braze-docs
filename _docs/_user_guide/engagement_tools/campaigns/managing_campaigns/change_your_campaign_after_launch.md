@@ -1,6 +1,6 @@
 ---
-nav_title: Editing your campaign after launch
-article_title: Editing Your Campaign After Launch
+nav_title: Edit your campaign after launch
+article_title: Edit Your Campaign After Launch
 page_order: 1
 tool: Campaigns
 page_type: reference
@@ -8,7 +8,7 @@ description: "This reference article gives an overview of the result of editing 
 
 ---
 
-# Editing your campaign after launch
+# Edit your campaign after launch
 
 > This article gives an overview of the result of editing certain aspects of a campaign post-launch.
 
