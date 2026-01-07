@@ -15,7 +15,7 @@ description: "This article outlines details about the View all translations and 
 /templates/email/translations/
 {% endapimethod %}
 
-> Use this endpoint to view all translations and locales for an [email template]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates). [Learn more]({{ site.baseurl }}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/) about translations feature.
+> Use this endpoint to view all translations and locales for an [email template]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates). See [Locales in messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/) for more information about translation features.
 
 {% alert important %}
 This endpoint is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.

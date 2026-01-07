@@ -15,7 +15,7 @@ description: "This article outlines details about the campaign translation sourc
 /campaigns/translations/source
 {% endapimethod %}
 
-> Use this endpoint to view all the default translation sources for a campaign's translation tags. These are the values within the {% raw %}`{% translation id %} source {% endtranslation %}`{% endraw %}. [Learn more]({{ site.baseurl }}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/) about translations feature.
+> Use this endpoint to view all the default translation sources for a campaign's translation tags. These are the values within the {% raw %}`{% translation id %} source {% endtranslation %}`{% endraw %}. See [Locales in messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/) for more information about translation features.
 
 {% alert important %}
 This endpoint is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.

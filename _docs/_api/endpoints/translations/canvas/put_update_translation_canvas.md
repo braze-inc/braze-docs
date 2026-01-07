@@ -15,7 +15,7 @@ description: "This article outlines details about the Update translation in a Ca
 /canvas/translations
 {% endapimethod %}
 
-> Use this endpoint to update multiple translations for a Canvas. [Learn more]({{ site.baseurl }}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/) about translations feature.
+> Use this endpoint to update multiple translations for a Canvas. See [Locales in messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/) for more information about translation features.
 
 If you want to update translations after a Canvas has been launched, you'll need to [save your message as a draft]({{site.baseurl}}/post-launch_edits/) first.
 
