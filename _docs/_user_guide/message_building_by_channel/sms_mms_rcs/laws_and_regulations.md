@@ -23,7 +23,7 @@ This article is not intended to provide, nor may it be relied upon as providing 
 
 In general, we encourage using your best judgment when sending SMS, MMS, or RCS messages. Braze, as well as our sending partners, have checks in place that prevent most SMS, MMS, and RCS abuses.
 
-There are six rules you should follow:
+Use the following rules when sending messages:
 
 1. **Obtain explicit consent from users before sending them SMS, MMS, or RCS.** Whenever users provide consent, it's your responsibility to log, update, and maintain that information in a compliant user database. According to basic legal guidelines, the most important information you need to retain regarding consent is:
   - The time and date the user gave consent
