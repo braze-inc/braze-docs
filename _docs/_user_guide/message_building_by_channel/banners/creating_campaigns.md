@@ -1,6 +1,6 @@
 ---
-nav_title: Creating a Banner
-article_title: Creating a Banner
+nav_title: Create a Banner
+article_title: Create a Banner
 page_order: 1
 description: "This reference article covers how to create, compose, configure and send Banners using Braze campaigns and Canvases."
 tool:
@@ -9,7 +9,7 @@ channel:
   - banners
 ---
 
-# Creating a Banner
+# Create a Banner
 
 > Learn how to create Banners when you build campaigns and Canvases in Braze. For more general information, see [About Banners]({{site.baseurl}}/user_guide/message_building_by_channel/banners).
 
@@ -21,7 +21,7 @@ Creating a Banner message in Canvas is in early access. Contact your customer su
 
 Before you can launch your Banner, your development team will need to [set up placements in your app or website]({{site.baseurl}}/developer_guide/banners/creating_placements/). You can still draft your Banner campaign in the meantime&#8212;you just won't be able to launch the campaign.
 
-## Creating a Banner message
+## Create a Banner message
 
 {% multi_lang_include banners/creating_placements.md section="user" %}
 
