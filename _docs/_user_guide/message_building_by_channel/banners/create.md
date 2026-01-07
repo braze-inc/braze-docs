@@ -110,7 +110,7 @@ When you're finished, select **Done**.
 
 ![The properties page with a string property with a key of color and value of #FF0000.]({% image_buster /assets/img/banners/example_property.png %})
 
-## Step 3: Build the remainder of your campaign or Canvas
+### Step 3: Build the remainder of your campaign or Canvas
 
 {% tabs %}
 {% tab Campaign %}
@@ -151,10 +151,10 @@ If you haven't done so already, complete the remaining sections of your Canvas c
 {% endtab %}
 {% endtabs %}
 
-## Step 4: Test your message (optional)
+### Step 4: Test your message (optional)
 
 {% multi_lang_include banners/testing.md page="campaigns" %}
 
-## Step 5: Review and deploy
+### Step 5: Review and deploy
 
 After you've finished building your campaign or Canvas, review its details, [test it]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/), then send it when you're ready.
