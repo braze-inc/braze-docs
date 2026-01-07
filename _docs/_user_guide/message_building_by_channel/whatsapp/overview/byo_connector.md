@@ -89,7 +89,7 @@ After completing setup, your phone number is listed as a subscription group unde
 Connect each WhatsApp Business Account to a single Infobip account. Each time you connect an additional phone number or subscription group, if the WhatsApp Business Account is already connected to an Infobip account, you must re-enter the API credentials for the existing account.
 {% endalert %}
 
-## Step 4: Sending messages
+## Step 3: Sending messages
 
 Follow the native integration sending process, including:
 - [Subscribing users to the subscription group]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_subscription/)
