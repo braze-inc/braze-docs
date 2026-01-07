@@ -48,9 +48,9 @@ Avoid modifying placement IDs after launching a Banner campaign.
 
 ### Banner priority {#priority}
 
-When multiple Banner messages reference the same placement ID, Banners are displayed in order of priority: high, medium, or low. By default, newly created Banners are set to medium, but you can [manually set the priority]({{site.baseurl}}/user_guide/message_building_by_channel/banners/creating_campaigns/#set-priority) when you create or edit your Banner campaign. 
+When multiple Banner messages reference the same placement ID, Banners are displayed in order of priority: high, medium, or low. By default, Banners are set to medium, but you can [manually set the priority]({{site.baseurl}}/user_guide/message_building_by_channel/banners/creating_campaigns/#set-priority) when you create or edit your Banner campaign. 
 
-If multiple Banners are set to the same priority, the newest Banner that user is eligible for is displayed first.
+If multiple Banners are set to the same priority, the newest Banner that the user is eligible for is displayed first.
 
 ### Placement requests {#requests}
 
@@ -58,7 +58,7 @@ If multiple Banners are set to the same priority, the newest Banner that user is
 
 ### Message delivery
 
-Banner messages are delivered to your app or website as HTML content, typically rendered inside an iframe. This ensures that your Banners will render consistently across devices, and helps you keep their styles and scripts separate from the rest of your code.
+Banner messages are delivered to your app or website as HTML content, typically rendered inside an iframe. This ensures that your Banners render consistently across devices, and helps you keep their styles and scripts separate from the rest of your code.
 
 Iframes allow for dynamic and personalized content updates that don't require changes to your codebase. Each iframe retrieves and displays the HTML for each user session using campaign targeting and personalization logic.
 
@@ -67,7 +67,7 @@ Iframes allow for dynamic and personalized content updates that don't require ch
 Here's what you need to know about Banner dimensions and sizing:
 
 - While the composer allows you to preview Banners in different dimensions, that information isn't saved or sent to the SDK.
-- The HTML will take up the full width of the container it's rendered in.
+- The HTML takes up the full width of the container it's rendered in.
 - We recommend making a fixed dimension element and testing those dimensions in composer.
 
 ## Limitations

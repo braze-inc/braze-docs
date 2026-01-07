@@ -19,7 +19,7 @@ Creating a Banner message in Canvas is in early access. Contact your customer su
 
 ## Prerequisites
 
-Before you can launch your Banner, your development team will need to [set up placements in your app or website]({{site.baseurl}}/developer_guide/banners/creating_placements/). You can still draft your Banner campaign in the meantime&#8212;you just won't be able to launch the campaign.
+Before you can launch your Banner, your development team must [set up placements in your app or website]({{site.baseurl}}/developer_guide/banners/creating_placements/). You can still draft your Banner campaign in the meantime, but you won't be able to launch the campaign until the placements are configured.
 
 ## Create a Banner message
 
@@ -77,11 +77,11 @@ To customize your message's background properties, border settings, and more, se
 
 #### Step 2.2: Define on-click behavior (optional)
 
-When a user clicks a link in the Banner, you can choose to navigate them deeper into your app or redirect them to another webpage. Additionally, you can choose to [log a custom attribute or event]({{site.baseurl}}/developer_guide/analytics/), which will update your user's profile with custom data when they click the Banner.
+When a user clicks a link in the Banner, you can choose to navigate them deeper into your app or redirect them to another webpage. Additionally, you can choose to [log a custom attribute or event]({{site.baseurl}}/developer_guide/analytics/), which updates your user's profile with custom data when they click the Banner.
 
 {% alert important %}
 {::nomarkdown}
-On-click behavior can be overridden if a specific element (such as a button, link, or image, of the Banner) has its own on-click behavior. For example, given the following on-click behaviors:<br><ul><li>A Banner has an on-click behavior that redirects to a website's homepage.</li><li>An image in the Banner has an on-click behavior that redirects to a website's product page.</li></ul>If a user clicks the image, they'll be redirected to the product page. However, clicking the surrounding area in the Banner will redirect them to the homepage.
+On-click behavior can be overridden if a specific element (such as a button, link, or image, of the Banner) has its own on-click behavior. For example, given the following on-click behaviors:<br><ul><li>A Banner has an on-click behavior that redirects to a website's homepage.</li><li>An image in the Banner has an on-click behavior that redirects to a website's product page.</li></ul>If a user clicks the image, they are redirected to the product page. However, clicking the surrounding area in the Banner redirects them to the homepage.
 {:/}
 {% endalert %}
 
@@ -140,7 +140,7 @@ If you have multiple Banner campaigns using the same placement ID, we recommend 
 
 #### Choose conversion events
 
-Braze allows you to track how often users perform specific actions, [conversion events]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/), after receiving a campaign. You have the option of allowing up to a 30-day window during which a conversion will be counted if the user takes the specified action.
+Braze allows you to track how often users perform specific actions, [conversion events]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/), after receiving a campaign. You have the option of allowing up to a 30-day window during which a conversion is counted if the user takes the specified action.
 
 {% endtab %}
 
