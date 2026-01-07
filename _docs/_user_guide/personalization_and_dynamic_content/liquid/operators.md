@@ -114,7 +114,7 @@ Your fleet awaits your next orders. Log on when you're ready to rejoin the war f
 
 {% raw %}
 ```liquid
-{% elsif {{custom_attribute.${recent_game}}} != blank and 'Awkward Dinner Party' or 'Proxy War 3: War of Thirst' %}
+{% elsif {{custom_attribute.${recent_game}}} != blank and {{custom_attribute.${recent_game}}} != 'Awkward Dinner Party' and {{custom_attribute.${recent_game}}} != 'Proxy War 3: War of Thirst' %}
 Limited Time Deal! Get 15% off our best-selling classics!
 ```
 {% endraw %}
