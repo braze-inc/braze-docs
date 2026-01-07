@@ -262,7 +262,7 @@ Canvases are tagged at the Canvas level, as opposed to tagging by component. So,
 
 #### Conflicting rules
 
-When rules conflict, the most restrictive, applicable frequency capping rule are applied to your users. For example, let's say you have the following rules:
+When rules conflict, the most restrictive, applicable frequency capping rule is applied to your users. For example, let's say you have the following rules:
 
 1. No more than one push notification campaign or Canvas component per week from all campaign and Canvas components. <br>**AND**
 2. No more than three push notification campaigns or Canvas components per week with the tag `promotional`.
