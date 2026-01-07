@@ -63,7 +63,7 @@ The **Overview** tab contains basic information about a user and their interacti
 | Purchases | Lifetime revenue attributed to this user, their last purchase, total number of purchases, and a list of each purchase. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-For more information on this data, see [User Data Collection]({{site.baseurl}}/user_guide/data/user_data_collection/).
+For more information on this data, see [SDK data collection]({{site.baseurl}}/user_guide/data/unification/user_data/sdk_data_collection/).
 
 ![The Overview tab of a user profile.]({% image_buster /assets/img_archive/user_profile2.png %})
 
