@@ -72,12 +72,22 @@ Before setting up the BYO WhatsApp connector, confirm that your WhatsApp Busines
 {: start="3"}
 3. Enter the API key and base URL from [Step 1](#step-1).
 4. Select **Connect**.
-5. Proceed through the [Embedded Signup workflow]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/embedded_signup/#whatsapp-embedded-signup-workflow).
-    - If you’re using an Infobip number, to receive the verification code, go to your Infobip dashboard > **Analyze** > **Logs**, and pull the code from the inbound SMS message.  
+5. Proceed through the [Embedded Signup workflow]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/embedded_signup/#whatsapp-embedded-signup-workflow) with these considerations:
+- You can't select the same business portfolio that is used by a different Business Solution Provider.
+- You can't select a phone number that's used by another Business Solution Provider.
+- You must create a new WABA, not select an existing one.
+
+{% alert note %}
+To receive the verification code, go to your Infobip dashboard > **Analyze** > **Logs**, and pull the code from the inbound SMS message.  
+{% endalert %}
 
 ![Message logs showing an inbound SMS message with the verification code.]({% image_buster /assets/img/whatsapp/byo_connector/verification_code.png %})
 
 After completing setup, your phone number is listed as a subscription group under your WhatsApp Business Group. The WhatsApp Business Group contains the Infobip account name and API base URL it’s connected to. Accounts connected through the native integration will not have an Infobip account name.
+
+{% alert note %}
+Connect each WhatsApp Business Account to a single Infobip account. Each time you connect an additional phone number or subscription group, if the WhatsApp Business Account is already connected to an Infobip account, you must re-enter the API credentials for the existing account.
+{% endalert %}
 
 ## Step 4: Sending messages
 
@@ -100,6 +110,8 @@ Confirm your WhatsApp Business Account isn’t connected to a different Braze wo
 ![The "Cancel number" button for an Infobip number.]({% image_buster /assets/img/whatsapp/byo_connector/cancel_number.png %})
 
 ## Considerations 
+
+### Use cases
 
 While all existing functionality with Braze is supported, these use cases are currently not supported.
 
