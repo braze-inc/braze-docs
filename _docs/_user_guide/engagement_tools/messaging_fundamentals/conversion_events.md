@@ -15,7 +15,7 @@ tool:
 
 ## How it works
 
-Let's say you're creating a personalized holiday campaign for active users, a conversion event of **Start a Session** within two or three days may be appropriate since it will allow you to gather a sense of user engagement from receiving your message. Additional events like **Places order**, **Upgrade App**, or any of your custom events can be selected as conversion events.
+Let's say you're creating a personalized holiday campaign for active users, a conversion event of **Start a Session** within two or three days may be appropriate since it will allow you to gather a sense of user engagement from receiving your message. Additional events like **Places Order**, **Upgrade App**, or any of your custom events can be selected as conversion events.
 
 {% alert tip %}
 For more on conversions, check out our [Braze Learning course](https://learning.braze.com/campaign-setup-delivery-targeting-conversions) on campaign setup.
