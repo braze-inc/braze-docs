@@ -123,7 +123,7 @@ With the Braze SDKs, you can track custom events or custom attributes that go be
   </tbody>
 </table>
 
-Tracking custom data helps you gain deeper insights into user behavior and personalize their experience even further. To implement custom events, you need to edit your [storefront's theme code](https://help.shopify.com/en/manual/online-store/themes/theme-structure/extend/edit-theme-code) in the `theme.liquid` file. You may need help from your developers.
+Tracking custom data provides deeper insights into user behavior and supports additional personalization. To implement custom events, you need to edit your [storefront's theme code](https://help.shopify.com/en/manual/online-store/themes/theme-structure/extend/edit-theme-code) in the `theme.liquid` file. You may need help from your developers.
 
 For example, the following JavaScript snippet tracks if the current user subscribes to a newsletter, and logs that as a custom event on their profile in Braze:
 
@@ -148,7 +148,7 @@ Select your `external_id` type from the dropdown.
 ![“Collect subscribers” section.]({% image_buster /assets/img/Shopify/external_id_standard.png %})
 
 {% alert important %}
-Using an email address or a hashed email address as your Braze external ID can help simplify identity management across your data sources. However, it's important to consider the potential risks to user privacy and data security.<br><br>
+Using an email address or a hashed email address as your Braze external ID can simplify identity management across your data sources. However, it's important to consider the potential risks to user privacy and data security.<br><br>
 
 - **Guessable Information:** Email addresses are easily guessable, making them vulnerable to attacks.
 - **Risk of Exploitation:** If a malicious user alters their web browser to send someone else's email address as their external ID, they could potentially access sensitive messages or account information.
@@ -156,14 +156,19 @@ Using an email address or a hashed email address as your Braze external ID can h
 
 By default, Braze automatically converts emails from Shopify to lowercase before using them as the external ID. If you’re using email or hashed email as your external ID, confirm that your email addresses are also converted to lowercase before you assign them as your external ID or before hashing them from other data sources. This helps prevent discrepancies in external IDs and avoid creating duplicate user profiles in Braze.
 
-If you selected a custom external ID type, proceed to steps 4.1—4.3. Otherwise, continue to step 4.4.
+{% alert note %}
+The next steps depend on your external ID selection:<br><br>
+- **If you selected a custom external ID type:** Complete steps 4.1—4.3 to set up your custom external ID configuration.
+- **If you selected Shopify customer ID, email, or hashed email:** Skip steps 4.1—4.3 and continue directly to step 4.4.
+{% endalert %}
 
 ### Step 4.1: Create the `braze.external_id` metafield
 
-1. In your Shopify admin panel, go to **Settings** > **Metafields**.
+1. In your Shopify admin panel, go to **Settings** > **Metafields and metaobjects**.
 2. Select **Customers** > **Add definition**.
-3. For **Namespace and key**, enter `braze.external_id`.
-4. For **Type**, select **ID Type**.
+3. For **Name**, enter `braze.external_id`. 
+4. Select the auto-generated namespace and key (`custom.braze_external_id`) to edit it and change it to `braze.external_id`.
+5. For **Type**, select **ID Type**.
 
 After the metafield is created, populate it for your customers. We recommend the following approaches:
 
@@ -234,7 +239,7 @@ As mentioned in [Shopify overview]({{site.baseurl}}/shopify_overview/), if you w
 
 ## Step 5: Sync products (optional)
 
-You can sync all products from your Shopify store to a Braze catalog for deeper messaging personalization. Automatic updates occur in near real-time so your catalog always reflects the latest product details. To learn more, check out [Shopify product sync]({{site.baseurl}}/partners/ecommerce/shopify/shopify_catalogs/).
+You can sync all products from your Shopify store to a Braze catalog for deeper messaging personalization. Automatic updates occur in near real-time so your catalog reflects up-to-date product details. To learn more, check out [Shopify product sync]({{site.baseurl}}/partners/ecommerce/shopify/shopify_catalogs/).
 
 ![Step 4 of the set up process with "Shopify Variant ID" as the "Catalog product identifier".]({% image_buster /assets/img/Shopify/sync_products_step1.png %}){: style="max-width:80%;"}
 
@@ -245,7 +250,7 @@ You can enable in-app messages without using a developer by configuring them in 
 ![Setup step to activate channels, with the available option being in-browser messaging.]({% image_buster /assets/img/Shopify/activate_channels_standard.png %})
 
 {% alert note %}
-Braze collects visitor information, such as email addresses and phone numbers, through in-browser messages. This information is then sent to Shopify. This data helps merchants recognize visitors to their store and create a more personalized shopping experience. For more details, refer to [Visitor API](https://shopify.dev/docs/api/web-pixels-api/emitting-data#visitor-api).
+Braze collects visitor information, such as email addresses and phone numbers, through in-browser messages. This information is sent to Shopify. This data enables merchants to recognize visitors to their store and create a more personalized shopping experience. For more details, refer to [Visitor API](https://shopify.dev/docs/api/web-pixels-api/emitting-data#visitor-api).
 {% endalert %}
 
 ### Supporting additional SDK channels
@@ -258,9 +263,7 @@ To add content cards or feature flags, you will need to collaborate with your de
 
 #### Web push notifications
 
-Web push currently isn't supported for the Shopify integration. If you want to see this supported in the future, submit a product request through the [Braze product portal]({{site.baseurl}}/user_guide/administrative/access_braze/portal/).
-
-If you wish to see this supported in the future, submit a product request through the Braze [product portal]({{site.baseurl}}/user_guide/administrative/access_braze/portal/).
+Web push currently is not supported for the Shopify integration. To request support, submit a product request through the [Braze product portal]({{site.baseurl}}/user_guide/administrative/access_braze/portal/).
 
 ## Step 7: Finish setup
 

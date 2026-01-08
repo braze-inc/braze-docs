@@ -21,7 +21,7 @@ Para utilizar correctamente esta plantilla, necesitarás un [evento personalizad
 
 Supongamos que trabajas en Calorie Rocket, una aplicación de entrega de comida, que acaba de lanzar Cruise Control, una característica para programar entregas de comida recurrentes, y quieres animar a más usuarios a adoptar esta nueva característica. En nuestro ejemplo, utilizaremos el evento personalizado `scheduled_delivery` para hacer un seguimiento de cuándo los usuarios han probado la característica Control de crucero.
 
-Para acceder a la plantilla de reserva, al crear un nuevo Canvas, selecciona **Utilizar una plantilla de Canvas** > **Plantillas de Braze**. A continuación, junto a **Adopción de características**, selecciona **Aplicar plantilla**. Ahora, podemos repasar la plantilla para adaptarla a nuestras necesidades.
+Para acceder a la plantilla de reserva, al crear un nuevo Canvas, selecciona **Utilizar una plantilla de Canvas** > **Plantillas de Braze**. Luego, junto a **Adopción de características**, selecciona **Aplicar plantilla**. Ahora, podemos repasar la plantilla para adaptarla a nuestras necesidades.
 
 ### Paso 1: Configura los detalles
 
@@ -29,16 +29,16 @@ Vamos a ajustar los detalles del Canvas para reflejar nuestro objetivo.
 
 1. Selecciona **Editar** junto al nombre de la plantilla.
 
-![El título actual y la descripción del Canvas.]({% image_buster /assets/img/canvas_templates/feature_adoption/select_edit_details.png %}){: style="max-width:60%;"}
+\![El título actual y la descripción del Canvas.]({% image_buster /assets/img/canvas_templates/feature_adoption/select_edit_details.png %}){: style="max-width:60%;"}
 
 {:start="2"}
 2\. Actualiza el nombre del Canvas para especificar que el Canvas está destinado a los usuarios para recoger sus opiniones.
 3\. Actualiza la descripción para especificar que el Canvas sirve para animar a los usuarios a enviar comentarios y hacer un seguimiento de la opinión de los usuarios sobre la nueva característica Control de crucero.
 4\. Añade la etiqueta **Adopción de características** para que podamos filtrarla en la página de inicio de Canvas.
 
-![El nuevo nombre y descripción del Canvas. La nueva descripción dice Canvas de adopción de características para el seguimiento de la adopción y el sentimiento de los usuarios de Cruise Control, una característica para programar entregas recurrentes de comida.']({% image_buster /assets/img/canvas_templates/feature_adoption/enter_new_canvas_name.png %}){: style="max-width:60%;"}
+\![El nuevo nombre y descripción del Canvas. La nueva descripción dice Un Canvas de adopción de características para el seguimiento de la adopción y el sentimiento de los usuarios de Cruise Control, una característica para programar entregas recurrentes de comida".]({% image_buster /assets/img/canvas_templates/feature_adoption/enter_new_canvas_name.png %}){: style="max-width:60%;"}
 
-### Paso 2: Asignar un evento de conversión
+### Paso 2: Asignar un evento de conversión
 
 A continuación, vamos a añadir un evento de conversión a nuestro Canvas para señalar la adopción de la característica. Esto nos permitirá adaptar más adelante la ruta de experimentos en nuestro recorrido del usuario.
 
@@ -47,9 +47,9 @@ A continuación, vamos a añadir un evento de conversión a nuestro Canvas para 
 3. Selecciona nuestro evento personalizado `scheduled_delivery`.
 4. Mantendremos el plazo de conversión en tres días.
 
-![La ventana del evento de conversión en el Canvas.]({% image_buster /assets/img/canvas_templates/feature_adoption/assign_conversion_event_cruise_control.png %}){: style="max-width:90%;"}
+La ventana del evento de conversión en el Canvas.]({% image_buster /assets/img/canvas_templates/feature_adoption/assign_conversion_event_cruise_control.png %}){: style="max-width:90%;"}
 
-### Paso 3: Adapta el horario de entrada
+### Paso 3: Adapta el horario de entrada
 
 Nuestro objetivo es animar a nuestros usuarios a adoptar el Control de Crucero, pero no queremos que nuestra mensajería sea demasiado frecuente. Por tanto, mantendremos este Canvas como una entrega programada y haremos los siguientes ajustes en la sección **Opciones basadas en el tiempo**.
 
@@ -69,7 +69,7 @@ Ahora, vamos a configurar nuestra audiencia objetivo actualizando los siguientes
 2. Elimina los filtros adicionales de la plantilla. 
 3. Crea este filtro utilizando nuestro evento personalizado: `Has scheduled_delivery for exactly 0 times`. Esto nos permite excluir a los usuarios que ya han utilizado la característica de entrar en nuestro Canvas.
 
-![El segmento de todos los usuarios que no han utilizado el Control de Crucero.]({% image_buster /assets/img/canvas_templates/feature_adoption/cruise_control_segment.png %}){: style="max-width:90%;"}
+\![El segmento para todos los usuarios que no han utilizado el Control de Crucero.]({% image_buster /assets/img/canvas_templates/feature_adoption/cruise_control_segment.png %}){: style="max-width:90%;"}
 
 {: start="4"}
 4\. Teniendo en cuenta que Calorie Rocket permitió anteriormente a algunos usuarios probar la nueva característica Control de Crucero, actualizaremos los criterios de salida para excluir a estos usuarios de entrar en el Canvas.
@@ -86,14 +86,14 @@ A continuación, vamos a construir el primer paso de la ruta de acción, que tie
 
 1. Como la característica Control de crucero sólo está disponible después de que se haya añadido un pedido al carrito, daremos al primer grupo de acción el nombre de **Añadido al carrito** y seleccionaremos `added_to_cart` para el evento personalizado.
 
-![El nombre del grupo de acciones establecido en "Añadido al carrito" y el "Realizar evento personalizado" establecido en "added_to_cart".]({% image_buster /assets/img/canvas_templates/feature_adoption/action_path_added_to_cart.png %}){: style="max-width:60%;"}
+\![El nombre del grupo de acciones establecido en "Añadido a la cesta" y la opción "Realizar evento personalizado" establecida en "added_to_cart".]({% image_buster /assets/img/canvas_templates/feature_adoption/action_path_added_to_cart.png %}){: style="max-width:60%;"}
 
 {: start="2"}
 2\. Mantén el segundo grupo de acción **Recorrido realizado** tal cual, ya que queremos evaluar si los usuarios han hecho un recorrido por la aplicación y, si lo han hecho, entonces avanzarán a la segunda ruta.
 3\. En la ruta de acción siguiente denominada **Evaluar uso**, sustituye **Característica usada >3x** por **Configuración del control de crucero vista**.
 4\. Selecciona el menú desplegable **Realizar evento personalizado** y, a continuación, selecciona `scheduled_delivery` para el evento personalizado.
 
-![El nombre del grupo de acciones se ha establecido en 'Característica utilizada >3x' y 'Realizar evento personalizado' en 'entrega_programada'.]({% image_buster /assets/img/canvas_templates/feature_adoption/action_path_assess_usage.png %}){: style="max-width:60%;"}
+\![El nombre del grupo de acción establecido en "Característica utilizada >3x" y "Realizar evento personalizado" establecido en 'scheduled_delivery'.]({% image_buster /assets/img/canvas_templates/feature_adoption/action_path_assess_usage.png %}){: style="max-width:60%;"}
 
 #### Configurar cuestionario de opinión
 

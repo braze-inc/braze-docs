@@ -9,58 +9,58 @@ description: "Este artículo te mostrará cómo configurar Braze para utilizar O
 
 # Okta 
 
-> Okta conecta a cualquier persona con cualquier aplicación en cualquier dispositivo. Es un servicio de gestión de identidades de nivel empresarial, creado para la nube, pero compatible con muchas aplicaciones locales. Con Okta, su equipo de TI puede gestionar el acceso de cualquier empleado a cualquier aplicación o dispositivo.
+> Okta conecta a cualquier persona con cualquier aplicación en cualquier dispositivo. Es un servicio de gestión de identidades de nivel empresarial, creado para la nube, pero compatible con muchas aplicaciones locales. Con Okta, tu equipo de TI puede gestionar el acceso de cualquier empleado a cualquier aplicación o dispositivo.
 
 ## Requisitos
 
 | Requisito | Detalles |
 | ----------- | ------- |
-| Okta activado para tu cuenta | Póngase en contacto con su gestor de cuenta Braze para activar esta opción en su cuenta. |
-| Privilegios de administrador de Okta | Asegúrese de tener privilegios de administrador antes de configurar Okta. |
-| Privilegios de administrador de Braze | Asegúrese de tener privilegios de administrador antes de configurar Okta. |
-| Clave API RelayState | Para habilitar la sesión de IdP, ve a **Configuración** > **Claves de API** y crea una clave de API con permisos `sso.saml.login`. |
+| Okta activado para tu cuenta | Ponte en contacto con tu director de cuentas Braze para activar esta opción en tu cuenta. |
+| Privilegios de administrador de Okta | Asegúrate de que tienes privilegios de administrador antes de configurar Okta. |
+| Privilegios de administrador de Braze | Asegúrate de que tienes privilegios de administrador antes de configurar Okta. |
+| Clave de API de RelayState | Para habilitar la sesión de IdP, ve a **Configuración** > **Claves de API** y crea una clave de API con permisos `sso.saml.login`. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Paso 1: Configurar Braze
 
-### Paso 1a: Vaya a Configuración de seguridad en Braze
+### Paso 1a: Ve a Configuración de seguridad en Braze
 
-Después de que su administrador de cuenta haya habilitado SAML SSO para su cuenta, vaya a **Configuración** > **Configuración de administración** > **Configuración de seguridad** y **active la** sección SAML SSO.
+Después de que tu director de cuentas haya habilitado SAML SSO para tu cuenta, ve a **Configuración** > **Configuración de administración** > **Configuración de seguridad** y alterna la sección SAML SSO a **ON**.
 
-![Okta SAML SSO habilitado en la página de configuración de seguridad.]({% image_buster/assets/img/Okta/okta1.png %})
+\![Okta SAML SSO habilitado en la página Configuración de seguridad.]({% image_buster/assets/img/Okta/okta1.png %})
 
-### Paso 1b: Editar la configuración de SAML SSO
+### Paso 1b: Editar configuración SAML SSO
 
-Desde el panel de administración de Okta, se le proporcionará una URL de destino (URL de inicio de sesión) y un certificado `x.509`, que deberá introducir en la página **Configuración de seguridad** de su cuenta Braze.
+Desde tu panel de administración de Okta, se te proporcionará una URL de destino (URL de inicio de sesión) y un certificado `x.509`, que deberás introducir en la página de **configuración de seguridad** de tu cuenta Braze.
 
-![]({% image_buster /assets/img/Okta/okta5.png %}){: style="max-width:75%"}
+\![]({% image_buster /assets/img/Okta/okta5.png %}){: style="max-width:75%"}
 
 | Requisito | Detalles |
 |---|---|
-| `SAML Name` | Aparecerá como texto del botón en la pantalla de inicio de sesión. Suele ser el nombre de su proveedor de identidad, por ejemplo, "Okta". |
-| `Target URL` | Esta es la URL de inicio de sesión proporcionada por el panel de administración de Okta. Encuéntrelo yendo a **Aplicaciones** > su aplicación > pestaña **General** > **App Embed Link** > **Embed Link**. |
-| `Certificate` | El certificado codificado PEM de `x.509` lo proporciona tu proveedor de identidad. Debe copiarlo y pegarlo en este campo. Recupérelo en Okta yendo a **SAML Signing Certificates** y seleccionando **Actions** > **Download certificate**. |
+| `SAML Name` | Aparecerá como texto del botón en la pantalla de iniciar sesión. Suele ser el nombre de tu proveedor de identidad, por ejemplo, "Okta". |
+| `Target URL` | Esta es la URL para iniciar sesión que proporciona el panel de administración de Okta. Encuéntralo yendo a **Aplicaciones** > tu aplicación > pestaña **General** > **App Embed Link** > **Embed Link**. |
+| `Certificate` | El certificado codificado PEM de `x.509` lo proporciona tu proveedor de identidad. Debes copiarlo y pegarlo en este campo. Recupéralo en Okta yendo a **Certificados de firma SAML** y seleccionando **Acciones** > **Descargar certificado**. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-Seleccione **Guardar cambios** en la parte inferior de la página cuando haya terminado.
+Selecciona **Guardar cambios** en la parte inferior de la página cuando hayas terminado.
 
-## Paso 2: Configurar Okta
+## Paso 2: Configurar Okta
 
-En Okta, seleccione la pestaña **Iniciar sesión** de la aplicación Braze SAML y, a continuación, haga clic en **Editar**. 
+En Okta, selecciona la pestaña **Iniciar sesión** de la aplicación SAML de Braze y, a continuación, haz clic en **Editar**. 
 
-A continuación, introduce la clave de API RelayState con permiso `sso.saml.login` en el campo **Estado de relay predeterminado**. 
+A continuación, introduce la clave de API RelayState con permiso `sso.saml.login` en el campo **Estado de retransmisión predeterminado**. 
 
-![Okta RelayState predeterminado en la pestaña Sign On.]({% image_buster /assets/img/Okta/okta2.png %}){: style="max-width:75%"}
+\![Okta RelayState predeterminado en la pestaña Iniciar sesión.]({% image_buster /assets/img/Okta/okta2.png %}){: style="max-width:75%"}
 
-Asegúrese de guardar estos nuevos ajustes.
+Asegúrate de guardar esta nueva configuración.
 
 {% alert tip %}
-Si desea que los usuarios de su cuenta Braze sólo inicien sesión con SAML SSO, puede [restringir la autenticación de inicio de sesión único]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up/#restriction) desde la página **Configuración de la empresa**.
+Si quieres que los usuarios de tu cuenta Braze sólo inicien sesión con SAML SSO, puedes [restringir la autenticación de inicio de sesión único]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up/#restriction) desde la página **Configuración de la empresa**.
 {% endalert %}
 
-## Paso 3: Iniciar sesión
+## Paso 3: Iniciar sesión
 
-Ahora debería poder iniciar sesión en Braze utilizando Okta.
+¡Ahora deberías poder iniciar sesión en Braze utilizando Okta!
 
-![Inicio de sesión en el panel de Braze con Okta SSO habilitado.]({% image_buster /assets/img/Okta/okta4.png %}){: style="max-width:60%"}
+\![Iniciar sesión en el panel de Braze con Okta SSO habilitado.]({% image_buster /assets/img/Okta/okta4.png %}){: style="max-width:60%"}
 

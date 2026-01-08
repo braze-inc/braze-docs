@@ -7,7 +7,7 @@ description: "This reference article covers how to export segment data to CSV."
 
 ---
 
-# Exporting segment data to CSV
+# Export segment data to CSV
 
 > This page covers how to request a CSV export of user data from a segment, and the data included in the export.
 
@@ -26,16 +26,18 @@ To export data from all your user profiles, create a segment with no filters, an
 The CSV output contains the data from each user profile captured in the segment at the time of export. You can export any segment by selecting the gear icon and CSV export. Braze will generate the report in the background and email it to the user who is currently logged in.
 
 {% alert important %} 
-Due to file size restrictions, your export may fail if the estimated size of your segment is over 500,000 users. Note that this restriction uses the estimated size of your segment, and not the exact calculation. For more details, see [Exporting large segments]({{site.baseurl}}/help/help_articles/segments/exporting_large_segments/).
+Due to file size restrictions, your export may fail if the estimated size of your segment is over 500,000 users. Note that this restriction uses the estimated size of your segment, and not the exact calculation. For more details, refer to [Exporting large segments](#exporting-large-segments).
 {% endalert %}
 
-If you've linked your [Amazon S3 credentials]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/amazon_s3/#amazon-s3-integration) to Braze, the CSV will instead be uploaded in your S3 bucket under the key `segment-export/SEGMENT_ID/YYYY-MM-dd/users-RANDOMSTRING.zip`. The link emailed to you will expire after one day of exporting, and requires you to be logged into the dashboard for access.
+If you've linked your [Amazon S3 credentials]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/amazon_s3/#amazon-s3-integration) to Braze, the CSV will instead be uploaded in your S3 bucket under the key `segment-export/SEGMENT_ID/YYYY-MM-dd/users-RANDOMSTRING.zip`. You must be logged into the dashboard to access the download link emailed to you.
+
+{% multi_lang_include alerts/important_alerts.md alert='S3 file bucket export' %}
 
 ## Data included in export
 
 The following is included in your export depending on your selection.
 
-### CSV Export User Data
+### CSV export user data
 
 | Field Name                  | Description                                              |
 | --------------------------- | -------------------------------------------------------- |
@@ -95,3 +97,28 @@ The following is included in your export depending on your selection.
 For help with CSV and API exports, visit our [troubleshooting]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/) article.
 {% endalert %} 
 
+## Exporting large segments
+
+There are several methods to export a large user segment that contains over 500,000 users.
+
+{% tabs %}
+{% tab Multiple segments %}
+
+You can split a large segment into smaller segments and then export each of the smaller segments from Braze. 
+
+{% endtab %}
+{% tab Random bucket numbers %}
+
+You can also use [random bucket numbers]({{site.baseurl}}/user_guide/engagement_tools/testing/random_bucket_numbers/) to break your user base into multiple segments, and then combine them after export. For example, if you need to break up your segment into two different segments, you can do so with the following filters:
+- Segment 1: Random bucket number is less than 5000 (includes 0-4999)
+- Segment 2: Random bucket number is more than 4999 (includes 5000-9999)
+
+{% endtab %}
+{% tab Endpoints %}
+
+You can also leverage the following endpoints to export user data for a specific segment. Note that these endpoints are subject to data limits.
+- [`/users/export/segment`]({{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/)
+- [`/users/export/global_control_group`]({{site.baseurl}}/api/endpoints/export/user_data/post_users_global_control_group/)
+
+{% endtab %}
+{% endtabs %}

@@ -8,7 +8,7 @@ description: "This reference article covers the basics of the Braze SDK."
 
 # SDK overview 
 
-> The Braze SDK makes it easy to collect session data, identify users, and record purchases and custom events through your website or app. You can also use the SDK to engage with your users by sending in-app messages and push notifications directly from the Braze dashboard.
+> The Braze SDK collects session data, identifies users, and records purchases and custom events through your website or app. You can also use the SDK to engage users by sending in-app messages and push notifications directly from the Braze dashboard.
 
 In brief, the Braze SDK:
 * Collects and syncs user data into a consolidated user profile
@@ -28,11 +28,11 @@ For the sake of saving you time and ensuring a smooth integration, we recommend 
 
 ## Data aggregation
 
-The Braze SDK automatically captures immense amounts of data at the user level, making it easy to see key metrics for your app and user base. You will group similar apps into a single workspace on your dashboard. For example, you will group the iOS and Android versions of your app into the same workspace, allowing you to see the collected data from users across both platforms. This gives you a more complete view of your users across web and mobile channels. See the article on the [Home page]({{site.baseurl}}/user_guide/analytics/dashboard/home_dashboard/) for more information.
+The Braze SDK automatically captures user-level data, giving you key metrics for your app and user base. Group similar apps into a single workspace (for example, iOS and Android versions together) to view collected data across platforms and build a complete picture of user activity. See the article on the [Home page]({{site.baseurl}}/user_guide/analytics/dashboard/home_dashboard/) for more information.
 
 ## In-app messaging
 
-The SDK makes it easy to compose and send in-app messages to engage with users directly. You can choose to send slideup, modal, or fullscreen messages based on your campaign strategy. For more information on composing an in-app message, see our page on [creating an in-app message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/).
+Use the SDK to compose and send in-app messages directly. You can choose slideup, modal, or fullscreen messages based on your campaign strategy. For composition details, refer to [Create an in-app message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/).
 
 ![Push displayed on a web browser]({% image_buster /assets/img_archive/web_push_macbook.png %}){: style="float:right;max-width:45%;margin-left:20px;border:0;"}
 

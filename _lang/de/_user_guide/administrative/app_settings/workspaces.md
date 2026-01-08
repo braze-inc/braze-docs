@@ -19,7 +19,7 @@ Alles, was Sie in Braze tun, geschieht innerhalb eines Workspace. Workspaces sin
 
 ### Schritt 1: Haben Sie einen Plan
 
-Bevor Sie beginnen, stellen Sie sicher, dass Sie mit Ihrem Team und Ihrem Braze Onboarding Manager zusammenarbeiten, um die beste Workspace-Konfiguration für Ihren Anwendungsfall zu bestimmen. Wenn Sie mehr über die Planung Ihrer Workspaces in Braze erfahren möchten, lesen Sie unseren Artikel [Erste Schritte]: Workspaces][link] Leitfaden.
+Bevor Sie beginnen, stellen Sie sicher, dass Sie mit Ihrem Team und Ihrem Braze Onboarding Manager zusammenarbeiten, um die beste Workspace-Konfiguration für Ihren Anwendungsfall zu bestimmen. To learn more about planning your workspaces in Braze, check out our [Getting Started: Workspaces]({{site.baseurl}}/user_guide/getting_started/workspaces/) guide.
 
 ### Schritt 2: Ihren Arbeitsbereich hinzufügen
 
@@ -27,7 +27,7 @@ Sie können über das Dropdown-Menü Arbeitsbereich in der globalen Kopfzeile ne
 
 1. Wählen Sie das Dropdown-Menü Workspace und dann <i class="fa-solid fa-square-plus" style="color: #0b8294;"></i> **Workspace erstellen**.
 
-![Das Workspace-Dropdown mit dem Button "Workspace erstellen".][1]{: style="max-width:60%;"}
+\![Das Workspace-Dropdown mit dem Button "Workspace erstellen".]({% image_buster /assets/img/workspaces/workspace_create.png %}){: style="max-width:60%;"}
 
 {:start="2"}
 2\. Geben Sie Ihrem Arbeitsbereich einen Namen.
@@ -39,11 +39,11 @@ Vielleicht möchten Sie eine Namenskonvention festlegen, damit andere in Ihrem U
 {:start="3"}
 3\. Wählen Sie **Erstellen**. Es kann ein paar Sekunden dauern, bis Braze Ihren Arbeitsbereich erstellt hat.
 
-![Modal "Workspace erstellen" mit dem Namen "Upon Voyage US - Staging".][2]{: style="max-width:60%" }
+\!["Workspace erstellen"-Modal mit dem Namen "Upon Voyage US - Staging".]({% image_buster /assets/img/workspaces/workspace_name.png %}){: style="max-width:60%" }
 
 Sie werden zur Seite **App-Einstellungen** weitergeleitet, auf der Sie Ihre App-Instanzen hinzufügen können. Sie können diese Seite jederzeit über **Einstellungen** > **App-Einstellungen** aufrufen.
 
-![Seite "App-Einstellungen" für den Upon Voyage US - Staging Workspace mit einem Button zum Hinzufügen einer App.][3]
+\!["App-Einstellungen"-Seite für den Upon Voyage US - Staging Workspace mit einem Button zum Hinzufügen einer App.]({% image_buster /assets/img/workspaces/workspace_empty_state.png %})
 
 ### Schritt 3: Fügen Sie Ihre App-Instanzen hinzu
 
@@ -52,7 +52,7 @@ Wir bezeichnen die verschiedenen Websites und Apps, die innerhalb eines Workspac
 1. Wählen Sie auf der Seite mit **den App-Einstellungen** **\+ App hinzufügen**.
 2. Geben Sie Ihrer App-Instanz einen Namen und wählen Sie aus, auf welcher Plattform oder welchen Plattformen diese App-Instanz läuft. Wenn Sie mehrere Plattformen auswählen, wird Braze eine App-Instanz für jede Plattform erstellen.
 
-![Modal "Neue App zu Upon Voyage US - Staging hinzufügen" mit Optionen zum Auswählen der App-Details.][4]{: style="max-width:60%" }
+\!["Neue App zu Upon Voyage US - Staging hinzufügen"-Modal mit Optionen zum Auswählen von App-Details.]({% image_buster /assets/img/workspaces/workspace_add_app.png %}){: style="max-width:60%" }
 
 {:start="3"}
 3\. Wählen Sie zur Bestätigung **App hinzufügen**.
@@ -61,7 +61,7 @@ Wir bezeichnen die verschiedenen Websites und Apps, die innerhalb eines Workspac
 
 Nachdem Sie Ihre App-Instanz hinzugefügt haben, haben Sie Zugang zu ihrem API-Schlüssel. Der API-Schlüssel wird verwendet, wenn Sie Anfragen zwischen Ihrer App-Instanz und der Braze API stellen. Der API-Schlüssel ist auch wichtig für die Integration des Braze SDK mit Ihrer App oder Website.
 
-![Einstellungsseite für die Upon Voyage iOS App mit Feldern für den API-Schlüssel und den SDK-Endpunkt.][5]
+\![Einstellungsseite für die Upon Voyage iOS App mit Feldern für den API-Schlüssel und den SDK-Endpunkt.]({% image_buster /assets/img/workspaces/app_api_key.png %})
 
 {% alert note %}
 Sie müssen für jede Version Ihrer App auf jeder Plattform separate App-Instanzen erstellen. Wenn Sie zum Beispiel eine kostenlose und eine Pro-Version Ihrer App für iOS und Android haben, erstellen Sie vier App-Instanzen in Ihrem Arbeitsbereich (kostenlose iOS-App, kostenlose Android-App, Pro-iOS-App und Pro-Android-App). So erhalten Sie vier API-Schlüssel, die Sie verwenden können, einen für jede App-Instanz.
@@ -73,7 +73,7 @@ Die Live-SDK-Version, die auf der Seite App-Einstellungen für eine bestimmte Ap
 
 Dieses Feld erscheint, nachdem Sie das Braze SDK in Ihre App oder Website integriert haben. Wenn eine neuere Version des Braze SDK für Ihre Plattform verfügbar ist, wird dies hier mit dem Tag "Neuere Version verfügbar" vermerkt.
 
-![Abschnitt "Live SDK Version" mit dem Feldwert "5.4.0" und einem Symbol, das besagt, dass eine neue Version verfügbar ist.][6]
+\!["Live SDK Version"-Abschnitt mit dem Feldwert "5.4.0" und einem Symbol, das besagt, dass eine neue Version verfügbar ist.]({% image_buster /assets/img/workspaces/app_live_sdk_version.png %})
 
 ### Schritt 4: Wiederholen Sie den Vorgang nach Bedarf
 
@@ -89,7 +89,7 @@ Wiederholen Sie die Schritte 2 und 3, um so viele Workspaces einzurichten, wie I
 
 Sie können bevorzugte Workspaces hinzufügen, um noch schneller auf die Workspaces zuzugreifen, die Sie am häufigsten verwenden.
 
-![Workspace-Dropdown mit dem Tab für "Favorisierte Workspaces".][7]{: style="max-width:50%;"}
+\![Workspace-Dropdown mit dem Tab für "Favorisierte Workspaces".]({% image_buster /assets/img/workspaces/workspace_favorites.png %}){: style="max-width:50%;"}
 
 So fügen Sie bevorzugte Arbeitsbereiche hinzu:
 
@@ -108,7 +108,7 @@ So benennen Sie Ihren Arbeitsbereich um:
 2. Bewegen Sie den Mauszeiger über den Namen Ihres Arbeitsbereichs und wählen Sie <i class="image: /assets/img/braze_icons/pencil-01.svg" style="color: #0b8294;"></i>.
 3. Geben Sie Ihrem Arbeitsbereich einen neuen Namen und wählen Sie dann <i class="fa-solid fa-square-check" style="color: #0b8294;"></i> **Speichern**.
 
-![Das Bleistiftsymbol neben dem Namen des Workspaces.][8]{: style="max-width:50%;"}
+\![Das Bleistift-Symbol erscheint neben dem Namen des Workspace.]({% image_buster /assets/img/workspaces/workspace_rename.gif %}){: style="max-width:50%;"}
 
 ### Löschen von Workspaces und App-Instanzen
 
@@ -123,21 +123,23 @@ Sie können keine App-Instanzen oder Workspaces löschen, die derzeit für das T
 Seien Sie vorsichtig beim Löschen von Arbeitsbereichen! Nachdem ein Workspace gelöscht wurde, kann er nicht wiederhergestellt werden.
 {% endalert %}
 
-![Die Seite App-Einstellungen mit einem Button zum Löschen eines Workspace und einem Mülleimer-Symbol zum Löschen einer App.][9]
+\![Die Seite App-Einstellungen mit einem Button zum Löschen eines Workspace und einem Mülleimer-Symbol zum Löschen einer App.]({% image_buster /assets/img/workspaces/workspace_delete.png %})
 
 ## Häufig gestellte Fragen
 
 ### Sollte ich einen neuen Workspace erstellen, wenn ich eine aktualisierte App veröffentliche?
 
-Wenn Benutzer nur ihre App aktualisieren müssen und Sie keine völlig neue App im App Store veröffentlichen, sollten Sie keinen neuen Arbeitsbereich erstellen, es sei denn, Sie haben nicht vor, die Benutzer der älteren Version nicht mehr zu benachrichtigen.
+This depends on whether you're updating your app or creating an entirely new one.
 
-Wenn Sie einen neuen Arbeitsbereich erstellen, werden alle historischen Daten und Benutzerprofile aus der älteren App-Version in diesem neuen Arbeitsbereich nicht mehr vorhanden sein. Wenn Sie also ein Upgrade auf die neue App-Version durchführen, wird ein neues Profil ohne die Verhaltensdaten aus der alten App erstellt.
+#### Updating your app
 
-Außerdem würden Ihre Nutzer:innen an zwei Orten existieren: im alten Workspace und im neuen Workspace. Sie können auch potenziell denselben Push-Token haben. Dies kann dazu führen, dass Nutzer:innen eine Marketing-Nachricht erhalten, die sich nur an Nutzer:innen des alten Workspace richtet, auch wenn sie bereits aktualisiert haben.
+If you're updating your app, you should separate the old and new versions by creating a new app instance within the same workspace. Auf diese Weise können Sie effektiv Zielgruppen aus Nutzer:innen der neuen Version ansprechen, wenn Sie diese App bei der Segmentierung auswählen. Wenn Sie Nutzern, die eine alte Version verwenden, eine Nachricht zukommen lassen möchten, können Sie Filter verwenden, die [auf die vorherige App-Version abzielen]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features#filtering-by-most-recent-app-versions).
 
-#### Was sollte ich stattdessen tun?
+If you create a new workspace, your users will exist in two places: the old workspace and the new workspace. They could also potentially have the same push token. This can lead to users receiving a marketing message intended for only old workspace users, even if they’ve already upgraded.
 
-Um alte und neue Apps zu trennen, erstellen Sie eine neue App-Instanz innerhalb desselben Workspace. Auf diese Weise können Sie effektiv Zielgruppen aus Nutzer:innen der neuen Version ansprechen, wenn Sie diese App bei der Segmentierung auswählen. Wenn Sie Nutzern, die eine alte Version verwenden, eine Nachricht zukommen lassen möchten, können Sie Filter verwenden, die [auf die vorherige App-Version abzielen]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features#filtering-by-most-recent-app-versions).
+#### Releasing a new app
+
+If you're releasing an entirely new app to the app store, you should create a new workspace. Wenn Sie einen neuen Arbeitsbereich erstellen, werden alle historischen Daten und Benutzerprofile aus der älteren App-Version in diesem neuen Arbeitsbereich nicht mehr vorhanden sein. Wenn Sie also ein Upgrade auf die neue App-Version durchführen, wird ein neues Profil ohne die Verhaltensdaten aus der alten App erstellt.
 
 ### Ich habe mehrere App-Instanzen in einem Workspace. Wie kann ich sicherstellen, dass ich mit meiner Nachricht nur eine einzige App anspreche? {#singular-app}
 
@@ -149,36 +151,22 @@ Standardmäßig zielt ein Segment auf alle Apps und Websites im Workspace ab. So
 2. Für **gezielte Apps und Websites** wählen Sie **Benutzer aus bestimmten Apps**.
 3. Wählen Sie in der Dropdown-Liste **Spezifische Apps** Ihre App oder Website aus.
 
-![Segmente, die Nutzer:innen aus bestimmten Apps zusammenstellen.][10]
+Segment, das Nutzer:innen aus bestimmten Apps zusammenstellt.]({% image_buster /assets/img/workspaces/users_from_specific_apps_filter.png %})
 
 Sie können dieses Segment dann zu Ihrer Nachricht hinzufügen und Ihre Zielgruppe bei Bedarf mit zusätzlichen Segmenten und Filtern weiter verfeinern.
 
 #### Kampagnen
 
-Für Kampagnen fügen Sie Ihr Segment im Schritt **Zielbenutzer** des Composers hinzu.
+For campaigns, add your segment to the **Target Audiences** step of the composer.
 
-#### Canvas Flow
+#### Canvas
 
-In Canvas Flow fügen Sie Ihr Segment zu Ihren Nachrichtenschritten hinzu, und zwar im Abschnitt **Zustellungsvalidierungen**. Zustellungsvalidierungen überprüfen nochmals, dass Ihre Zielgruppe die Zustellungskriterien beim Senden der Nachrichten erfüllt. Denken Sie daran, für jeden Nachrichtenschritt Zustellungsvalidierungen festzulegen, um sicherzustellen, dass die Nachricht an die richtige App zugestellt wird. Eine Segmentierung auf der Einstiegsebene ist nicht erforderlich.
+In Canvas, add your segment to your Message steps, in the **Delivery Validations** section. Zustellungsvalidierungen überprüfen nochmals, dass Ihre Zielgruppe die Zustellungskriterien beim Senden der Nachrichten erfüllt. Denken Sie daran, für jeden Nachrichtenschritt Zustellungsvalidierungen festzulegen, um sicherzustellen, dass die Nachricht an die richtige App zugestellt wird. Eine Segmentierung auf der Einstiegsebene ist nicht erforderlich.
 
-{% details Erweitern für Schritte im ursprünglichen Canvas-Workflow %}
-
-{% alert important %}
-Ab dem 28\. Februar 2023 können Sie keine Canvase mehr mit dem Original-Editor erstellen oder duplizieren. Dieser Inhalt ist als Referenz verfügbar, um Segmente und Targeting im Original-Editor zu verstehen.<br><br>Braze empfiehlt Kund:innen, die die ursprüngliche Canvas-Umgebung nutzen, den Wechsel zu Canvas Flow. Es handelt sich um eine verbesserte Bearbeitungsfunktion, mit der Sie Canvases besser erstellen und verwalten können. Erfahren Sie mehr über das [Klonen Ihrer Canvases in Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
-{% endalert %}
+{% details Expand for steps in the original Canvas workflow %}
 
 Im ursprünglichen Canvas-Workflow fügen Sie Ihr Segment auf der Canvas-Komponentenebene im Bereich **Zielgruppe** hinzu. Eine Segmentierung auf der Einstiegsebene ist nicht erforderlich.
+
 {% enddetails %}
 
 
-[1]: {% image_buster /assets/img/workspaces/workspace_create.png %}
-[2]: {% image_buster /assets/img/workspaces/workspace_name.png %}
-[3]: {% image_buster /assets/img/workspaces/workspace_empty_state.png %}
-[4]: {% image_buster /assets/img/workspaces/workspace_add_app.png %}
-[5]: {% image_buster /assets/img/workspaces/app_api_key.png %}
-[6]: {% image_buster /assets/img/workspaces/app_live_sdk_version.png %}
-[7]: {% image_buster /assets/img/workspaces/workspace_favorites.png %}
-[8]: {% image_buster /assets/img/workspaces/workspace_rename.gif %}
-[9]: {% image_buster /assets/img/workspaces/workspace_delete.png %}
-[10]: {% image_buster /assets/img/workspaces/users_from_specific_apps_filter.png %}
-[Link]: {{site.baseurl}}/user_guide/getting_started/workspaces/

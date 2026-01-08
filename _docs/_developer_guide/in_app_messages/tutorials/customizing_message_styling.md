@@ -1,5 +1,5 @@
 ---
-nav_title: Customizing message styling
+nav_title: Customize message styling
 article_title: "Tutorial: Customizing styling using key-value pairs"
 description: ""
 page_order: 1
@@ -11,6 +11,76 @@ layout: scrolly
 > Follow along with the sample code in this tutorial to customize your in-app message styling using key-value pairs in the Braze SDK.
 
 {% sdktabs %}
+{% sdktab web %}
+{% multi_lang_include developer_guide/prerequisites/web.md %} However, no additional setup is required.
+
+## Customizing message styling using key-value pairs for Web
+
+{% multi_lang_include developer_guide/_shared/tutorial_feedback.md tutorial="Customizing Message Styling Web" %}
+
+{% scrolly %}
+
+```js file=index.js
+import * as braze from "@braze/web-sdk";
+// Remove any calls to `braze.automaticallyShowInAppMessages()`
+
+braze.initialize("YOUR-API-KEY", {
+  baseUrl: "YOUR-ENDPOINT",
+  enableLogging: true,
+});
+
+braze.subscribeToInAppMessage(function (message) {
+  const extras = message.extras;
+  const customTemplateType = extras["custom-template"] || "";
+  const customColor = extras["custom-color"] || "";
+  const customMessageId = extras["message-id"] || "";
+
+  if (customTemplateType) {
+    // add your own custom code to render this message
+  } else {
+    // otherwise, use Braze built-in UI
+    braze.showInAppMessage(message);
+  }
+});
+```
+
+!!step
+lines-index.js=2
+
+#### 1. Remove calls to `automaticallyShowInAppMessages()`
+
+Remove any calls to [`automaticallyShowInAppMessages()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#automaticallyshowinappmessages) , as they’ll override any custom logic you implement later.
+
+!!step
+lines-index.js=6
+
+#### 2. Enable debugging (optional)
+
+To make troubleshooting easier while developing, consider enabling debugging.
+
+!!step
+lines-index.js=9-21
+
+#### 3. Subscribe to the in-app message callback handler
+
+Register a callback with [`subscribeToInAppMessage(callback)`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetoinappmessage) to receive a message any time an in-app message is triggered.
+
+!!step
+lines-index.js=10-13
+
+#### 4. Access the `message.extras` property
+
+Use `message.extras` to access customization types, styling attributes, or any other values defined in the dashboard. All values are returned as strings.
+
+!!step
+lines-index.js=19
+
+#### 5. Conditionally call `showInAppMessage`
+
+To display the message, call [`showInAppMessage(message)`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showinappmessage). Otherwise, use any custom properties as needed.
+
+{% endscrolly %}
+{% endsdktab %}
 {% sdktab android %}
 {% multi_lang_include developer_guide/prerequisites/android.md %} You'll also need to [enable in-app messages for Android]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=android#android_enabling-in-app-messages).
 
@@ -263,76 +333,6 @@ lines-AppDelegate.swift=38-46
 #### 5. Update the message's styling attributes
 
 Use [`inAppMessage(_:prepareWith:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:preparewith:)-11fog) to access the `PresentationContext` so you can modify styling attributes directly. Each in-app message type exposes different attributes.
-
-{% endscrolly %}
-{% endsdktab %}
-{% sdktab web %}
-{% multi_lang_include developer_guide/prerequisites/web.md %} However, no additional setup is required.
-
-## Customizing message styling using key-value pairs for Web
-
-{% multi_lang_include developer_guide/_shared/tutorial_feedback.md tutorial="Customizing Message Styling Web" %}
-
-{% scrolly %}
-
-```js file=index.js
-import * as braze from "@braze/web-sdk";
-// Remove any calls to `braze.automaticallyShowInAppMessages()`
-
-braze.initialize("YOUR-API-KEY", {
-  baseUrl: "YOUR-ENDPOINT",
-  enableLogging: true,
-});
-
-braze.subscribeToInAppMessage(function (message) {
-  const extras = message.extras;
-  const customTemplateType = extras["custom-template"] || "";
-  const customColor = extras["custom-color"] || "";
-  const customMessageId = extras["message-id"] || "";
-
-  if (customTemplateType) {
-    // add your own custom code to render this message
-  } else {
-    // otherwise, use Braze built-in UI
-    braze.showInAppMessage(message);
-  }
-});
-```
-
-!!step
-lines-index.js=2
-
-#### 1. Remove calls to `automaticallyShowInAppMessages()`
-
-Remove any calls to [`automaticallyShowInAppMessages()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#automaticallyshowinappmessages) , as they’ll override any custom logic you implement later.
-
-!!step
-lines-index.js=6
-
-#### 2. Enable debugging (optional)
-
-To make troubleshooting easier while developing, consider enabling debugging.
-
-!!step
-lines-index.js=9-21
-
-#### 3. Subscribe to the in-app message callback handler
-
-Register a callback with [`subscribeToInAppMessage(callback)`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetoinappmessage) to receive a message any time an in-app message is triggered.
-
-!!step
-lines-index.js=10-13
-
-#### 4. Access the `message.extras` property
-
-Use `message.extras` to access customization types, styling attributes, or any other values defined in the dashboard. All values are returned as strings.
-
-!!step
-lines-index.js=19
-
-#### 5. Conditionally call `showInAppMessage`
-
-To display the message, call [`showInAppMessage(message)`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showinappmessage). Otherwise, use any custom properties as needed.
 
 {% endscrolly %}
 {% endsdktab %}

@@ -1,5 +1,5 @@
 ---
-nav_title: "Webプッシュ"
+nav_title: "Web プッシュ"
 article_title: Webプッシュ通知
 page_order: 8.5
 page_type: reference
@@ -21,12 +21,12 @@ Web プッシュは、御社の Web アプリライケーションのユーザ�
 Web プッシュ通知は、迅速なコンバージョンを促進する緊急のアクション可能な更新を配信します。Web プッシュを使用すると、次のことができます。
 
 - 価格が下がるなど、重要なデータが変化したときにメッセージを正しくトリガーします
-- シンプルな行動喚起ボタンで Web サイトにユーザーを呼び戻します
+- 明確なコールトゥアクションボタンでWebサイトへ誘導する
 - 製品と顧客の情報を使用してプッシュをパーソナライズし、メッセージの関連性を向上させます
 
 Web プッシュは、スマートフォンでのアプリのプッシュ通知と同様に機能します。Web プッシュの作成の詳細については、[プッシュ通知の作成]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message)を参照してください。
 
-![ノートパソコンと電話機に同じプッシュメッセージが表示されるWeb プッシュ例。]({% image_buster /assets/img_archive/Macbook_Push.png %}){: style="border:none"}
+![Webプッシュサンプルは、ラップトップと電話機に表示されるのと同じプッシュメッセージを使用します。]({% image_buster /assets/img_archive/Macbook_Push.png %}){: style="border:none"}
 
 ## 潜在ユースケースs
 

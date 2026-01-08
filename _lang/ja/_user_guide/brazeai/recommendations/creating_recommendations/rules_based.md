@@ -1,5 +1,5 @@
 ---
-nav_title: ルールに基づくレコメンデーション
+nav_title: ルールに基づく推奨
 article_title: ルールベースのアイテムレコメンドの作成
 description: "この記事では、カタログに掲載されているアイテムについて、AI によるアイテムのおすすめを作成する方法を説明します。"
 page_order: 2
@@ -11,7 +11,7 @@ page_order: 2
 
 ## ルールベースの項目の推奨事項について
 
-ルールベースのレコメンデーションエンジンは、ユーザーデータと商品情報を使って、メッセージング内でユーザーに関連アイテムを提案する。これは、[Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/)を使用し、Braze [catalogs]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/)または[Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/)を使用して、ユーザーの動作と属性に基づいてコンテンツを動的にパーソナライズします。
+ルールベースのレコメンデーションエンジンは、ユーザーデータと商品情報を使って、メッセージング内でユーザーに関連アイテムを提案する。これは、[Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/)を使用し、Braze [catalogs]({{site.baseurl}}/user_guide/data/activation/catalogs/)または[Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/)を使用して、ユーザーの動作と属性に基づいてコンテンツを動的にパーソナライズします。
 
 {% alert important %}
 ルールベースの推奨事項は、手動で設定する必要がある固定ロジックに基づいています。つまり、ロジックを更新しない限り、ユーザーの購入履歴や嗜好に合わせてレコメンドが調整されないということだ。<br><br>AI によりパーソナライズされたおすすめ (ユーザーの履歴に合わせて自動的に調整される) を作成するには、「[AI によるアイテムのおすすめ]({{site.baseurl}}/user_guide/brazeai/recommendations/creating_recommendations/ai/)」を参照してください。
@@ -25,7 +25,7 @@ page_order: 2
   <thead>
     <tr>
       <th>レコメンデーションエンジン</th>
-      <th>データポイントは消費されません</th>
+      <th>データポイントがログに記録されない</th>
       <th>ノーコードソリューション</th>
       <th>高度な Liquid がない</th>
       <th>製品フィードを自動的に更新する</th>
@@ -79,11 +79,11 @@ page_order: 2
 カタログまたは接続コンテンツのいずれかを使用して、推奨エンジンを作成します。
 
 {% tabs local %}
-{% tab カタログを使用 %}
+{% tab using a catalog %}
 カタログを使用してレコメンドエンジンを作成するには
 
-1. 製品の[カタログを作成]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog/)します。
-2. 製品ごとに、推奨製品のリストを区切り記号 (パイプ `|` のようなもの) で区切った文字列として、「product_recommendations 」という名前の列に追加します。
+1. 製品の[カタログを作成]({{site.baseurl}}/user_guide/data/activation/catalogs/create/)します。
+2. 製品ごとに、推奨される製品のリストを、(パイプ`|` のような) 区切り文字で区切られた文字列として名前付きの列に追加します “product_recommendations”.
 3. カタログにおすすめを探したい製品IDを渡す。
 4. そのカタログアイテムの `product_recommendations` 値を取得し、Liquid の分割フィルターを使用して区切り記号で区切ります。
 5. それらの 1 つ以上の ID をカタログに渡して、他の製品の詳細を収集します。
@@ -103,7 +103,7 @@ page_order: 2
 
 カタログが Braze にアップロードされた後、カタログアイテムの一部のプレビューを確認して、情報が正確にインポートされたことを確認してください。プレビューでは項目がランダムになっているかもしれないが、レコメンデーションエンジンの出力には影響しない。
 
-![Braze のカタログの例。]({% image_buster /assets/img/recs/catalog_items.png %})
+![Brazeのサンプルカタログ。]({% image_buster /assets/img/recs/catalog_items.png %})
 
 コンテンツカードキャンペーンを作成する。作成画面で、キャンペーンの送信先のユーザー、および表示するレシピと画像を決定する Liquid ロジックを入力します。このユースケースで、Braze はユーザーの `start_date` (または登録日) を取得し、現在の日付と比較します。日数の違いによって、送信されるコンテンツカードが決まります。
 
@@ -154,7 +154,7 @@ page_order: 2
 
 以下に例を示します。
 
-![コンテンツカードキャンペーンのメッセージコンポーザーの例。]({% image_buster /assets/img/recs/content_card_preview.png %})
+![コンテンツカードキャンペーンからのサンプルメッセージ作成画面。]({% image_buster /assets/img/recs/content_card_preview.png %})
 
 **On click behavior**セクションで、iOS、Android、Webデバイスでユーザーがコンテンツカードをクリックしたときに、どこにリダイレクトされるべきかのLiquidロジックを入力する。 
 
@@ -171,14 +171,14 @@ page_order: 2
 
 以下に例を示します。
 
-![作成画面でのクリック時動作ブロックの例。]({% image_buster /assets/img/recs/on_click_behavior.png %}){: style="max-width:60%;"}<br><br>
+![たとえば、コンポーザーでのクリックビヘイビアのブロックです。]({% image_buster /assets/img/recs/on_click_behavior.png %}){: style="max-width:60%;"}<br><br>
 
 **テスト」**タブに移動し、「**ユーザーとしてメッセージをプレビュー**」で**「カスタムユーザー**」を選択する。**カスタム属性**フィールドに日付を入力し、その日にサインアップしたユーザーに送信されるコンテンツカードをプレビューする。<br><br>
 
-!['start_date'.]({% image_buster /assets/img/recs/custom_attributes_test.png %})という名前のカスタム属性の例
+!['start_date'.]({% image_buster /assets/img/recs/custom_attributes_test.png %} という名前のカスタム属性の例
 {% endtab %}
 
-{% tab Connected Content を使用 %}
+{% tab using Connected Content %}
 Connected Content を使用してレコメンドエンジンを作成するには、まず次のいずれかの方法を使用して新しいエンドポイントを作成します。
 
 |オプション|説明|
@@ -328,6 +328,6 @@ Good places
 
 ユーザー端末でのレスポンシブの表示例については、以下のスクリーンショットを参照のこと。
 
-![例の最終呼び出しで生成されたレストランリストのレンダリング。]({% image_buster /assets/img/recs/sample_response.png %}){: style="max-width:30%;"}
+![最後の呼び出しの例で生成されたレストランリストのレンダリング。]({% image_buster /assets/img/recs/sample_response.png %}){: style="max-width:30%;"}
 {% endtab %}
 {% endtabs %}

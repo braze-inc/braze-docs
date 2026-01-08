@@ -1,5 +1,5 @@
 ---
-nav_title: カスタム・キーワード・ハンドリング
+nav_title: カスタムキーワードの処理
 article_title: カスタム・キーワード・ハンドリング
 page_order: 3
 description: "この参照記事では、Braze がどのように双方向のSMS、MMS、およびRCS メッセージングと自動応答を処理するかについて説明します。これには、キーワード・トリガーの仕組みやカスタム・キーワード・カテゴリー、多言語サポートについての説明が含まれる。"
@@ -24,7 +24,7 @@ channel:
 SMS、MMS、および RCS with Braze には、キーワードトリガーの作成、カスタム応答、複数の言語のキーワードセットの定義、およびカスタムキーワードカテゴリの設定を行うオプションがあります。 
 
 {% tabs %}
-{% tab キーワードトリガーの追加 %}
+{% tab Add Keyword Triggers %}
 
 #### キーワード・トリガーを追加する
 
@@ -32,9 +32,9 @@ SMS、MMS、および RCS with Braze には、キーワードトリガーの作�
 
 独自のキーワードを定義するには、以下のようにする：
 
-1. Brazeダッシュボードで、[**オーディエンス**] > [**サブスクリプショングループ**] に移動し、サブスクリプショングループを選択します。<br><br>
-2. **Global Keywords**で、キーワードを追加するキーワードカテゴリの横にある鉛筆アイコンを選択します。![]({% image_buster /assets/img/sms/sms_keywords.png %})<br><br>
-3. 開いたタブで、このキーワード・カテゴリーをトリガーしたいキーワードを追加する。キーワードは大文字小文字を区別せず、`START` 、`YES` 、`UNSTOP` のようなユニバーサルキーワードは変更できないことに注意。![「オプトイン」カテゴリのキーワードの編集追加されたキーワードは、"START"、"UNSTOP"、"YES "である。返信メッセージフィールドに、「この番号からのメッセージを配信停止しました」と表示されます。ヘルプの場合は HELP と返信します。配信停止するには STOP と返信します。メッセージ料金とデータ料金が適用される場合があります。"]({% image_buster /assets/img/sms/keyword_edit2.png %})
+1. Braze ダッシュボードで、**Audience**> **サブスクリプショングループ Management** に移動し、**SMS/MMS/RCS** サブスクリプショングループを選択します。<br><br>
+2. **Global キーワード s**で、キーワードを追加するキーワードカテゴリの横にある鉛筆アイコンを選択します。![鉛筆アイコンが表示されているオプトインキーワード。]({% image_buster /assets/img/sms/sms_keywords.png %})<br><br>
+3. 開いたタブで、このキーワード・カテゴリーをトリガーしたいキーワードを追加する。キーワードは大文字小文字を区別せず、`START` 、`YES` 、`UNSTOP` のようなユニバーサルキーワードは変更できないことに注意。![「オプトイン」カテゴリのキーワードの編集追加されたキーワードは、"START"、"UNSTOP"、"YES "である。返信メッセージフィールドに、「この番号からのメッセージを配信停止しました」と表示されます。ヘルプの場合は HELP と返信します。配信停止するには STOP と返信します。メッセージレートとデータレートがアプリする場合があります。]({% image_buster /assets/img/sms/keyword_edit2.png %})
 
 キーワードとキーワード回答には以下のルールが適用される：
 
@@ -48,16 +48,16 @@ SMS、MMS、および RCS with Braze には、キーワードトリガーの作�
 {% endalert %}
 {% endtab %}
 
-{% tab 応答の管理 %}
+{% tab Manage responses %}
 
 #### 応答の管理
 
 ユーザーが特定のキーワードカテゴリーにキーワードをテキスト入力した後に送信される独自のレスポンスを管理することができる。
 
-1. Brazeダッシュボードで、[**オーディエンス**] > [**サブスクリプショングループ**] に移動し、**SMS/MMS/RCS** サブスクリプショングループを選択します。<br><br>
-2. **Global Keywords**で、鉛筆アイコンを選択して応答を編集するキーワードカテゴリを選択します。![]({% image_buster /assets/img/sms/sms_keywords.png %})<br><br> 
-3. 開いたタブで、応答を編集します。応答を作成するときには、[コンプライアンスを正しく実施するためのルール 6 項目]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/#the-six-rules-to-get-compliance-right)に留意し、キーワードとキーワード応答に適用される以下のルールを読んでください。![応答]({% image_buster /assets/img/sms/keyword_home.png %})<br><br>
-4. 回答中の静的URLを自動的に短縮するには、**リンク短縮**トグルを選択する。文字数カウンターが更新され、短縮URLの予想される長さが表示される。![リンク短縮」トグルがオンになっているときに更新される文字カウンターを示すGIF。]({% image_buster /assets/img/sms/link_shortening.gif %}){: style="max-width:50%;"}
+1. Braze ダッシュボードで、**Audience**> **サブスクリプショングループ Management** に移動し、**SMS/MMS/RCS** サブスクリプショングループを選択します。<br><br>
+2. **Global キーワード s**で、鉛筆アイコンを選択してレスポンスを変更するキーワードカテゴリを選択します。![鉛筆アイコンが表示されているオプトインキーワード。]({% image_buster /assets/img/sms/sms_keywords.png %})<br><br> 
+3. 開いたタブで、応答を編集します。応答を作成するときには、[コンプライアンスを正しく実施するためのルール 6 項目]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/#the-six-rules-to-get-compliance-right)に留意し、キーワードとキーワード応答に適用される以下のルールを読んでください。![レスポンス]({% image_buster /assets/img/sms/keyword_home.png %}){: style="max-width:70%;"}<br><br>
+4. 回答中の静的URLを自動的に短縮するには、**リンク短縮**トグルを選択する。文字数カウンターが更新され、短縮URLの予想される長さが表示される。!["Link Shortening"トグルがオンになっているときの文字カウンタ更新を示すGIF。]({% image_buster /assets/img/sms/link_shortening.gif %}){: style="max-width:60%;"}
 
 ##### 考慮事項
 
@@ -75,8 +75,8 @@ SMS、MMS、および RCS with Braze には、キーワードトリガーの作�
 
 ## 多言語サポート
 
-特定の国に送信する場合、送信者はインバウンドのキーワードとアウトバウンドの返信を現地語でサポートする必要がある場合がある。これをサポートするために、Brazeでは言語固有のキーワード設定を作成することができる。
-![]({% image_buster /assets/img/sms/multi-language.png %}){: style="float:right;max-width:40%;margin-left:10px;"}
+特定の国に送信する場合、送信者はインバウンドのキーワードとアウトバウンドの返信を現地語でサポートする必要がある場合がある。これをサポートするために、Brazeでは言語固有のキーワード設定を作成することができる。作成されると、言語固有のキーワード 設定s がサブスクリプショングループ内のすべての送信番号にアプリされます。
+![キーワード 設定として追加する言語を表示するドロップダウン。]({% image_buster /assets/img/sms/multi-language.png %}){: style="float:right;max-width:50%;margin-left:10px;"}
 
 ### 言語固有のキーワードを作成する
 
@@ -88,7 +88,7 @@ SMS、MMS、および RCS with Braze には、キーワードトリガーの作�
 
 言語を削除する必要がある場合は、右下の [**言語を削除**] ボタンを選択します。
 
-![[フランス語] タブが選択されている [グローバルキーワード] ページ。追加された言語ごとに追加のタブがあります。]({% image_buster /assets/img/sms/multi-language2.png %})
+!["Italian"タブが選択されたグローバルキーワードページ。追加された言語ごとに追加のタブが存在する。]({% image_buster /assets/img/sms/multi-language2.png %})
 
 ## カスタムキーワードのカテゴリ
 
@@ -96,14 +96,14 @@ SMS、MMS、および RCS with Braze には、キーワードトリガーの作�
 
 これらのカスタム・キーワードは、「常時オン」で動作する。つまり、メッセージ・サービスに加入しているユーザーなら誰でも、いつでもキーワードをテキストで送信し、応答を受け取ることができる。この動作に加え、ユーザーのライフサイクルの[特定のポイントでのみ]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#lifecycle-specific-keywords)送信できる特定のキーワードを定義するオプションもある。 
 
-![ダブルオプティン」カテゴリーのキーワード。ユーザーが「Y」と入力すると、「Hair Cuttery SMS への登録を確定くださりありがとうございます」というメッセージを受信します。]({% image_buster /assets/img/sms/sms_custom_keyword.png %})
+!["Promo"カテゴリのキーワード。ユーザーのテキストが"YO" の場合は、プロモコードでメッセージを受け取ります。]({% image_buster /assets/img/sms/sms_custom_keyword.png %})
 
 ### カスタム・カテゴリーを作成する
 
 カスタム・キーワード・カテゴリーを作成するには、以下のようにする：
 
 1. 適切なサブスクリプショングループを編集します。
-2. [**カスタムキーワードを追加**] を選択します。![]({% image_buster /assets/img/sms/sms_custom_step.png %}){: style="max-width:90%;"}
+2. **カスタムキーワード**を選択します。![新しいキーワードを追加する項目。]({% image_buster /assets/img/sms/sms_custom_step.png %}){: style="max-width:90%;"}
 3. キーワード・カテゴリー名を指定し、ユーザーが返信メッセージを受信するために入力できるキーワードを定義する。
 
 このキーワードカテゴリが作成されると、キャンペーンやキャンバスで[フィルタリングやトリガーをかける]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/retargeting/)ことができるようになる。
@@ -118,11 +118,11 @@ SMS、MMS、および RCS with Braze には、キーワードトリガーの作�
 
 #### キャンバス
 
-![メッセージ本文が正規表現「キャレット記号 skip」に一致する場合に、キーワードカテゴリが [その他] の「Messaging Service」サブスクリプショングループにインバウンド SMS を送信するトリガーを指定したアクションベースのキャンバスステップ。]({% image_buster /assets/img/sms/canvas_trigger.png %}){: style="max-width:90%;"}
+![メッセージ本文が正規表現「キャレット記号 skip」に一致する場合に、キーワードカテゴリが [その他] の「メッセージングサービス」サブスクリプショングループにインバウンド SMS を送信するトリガーを指定したアクションベースのキャンバスステップ。]({% image_buster /assets/img/sms/canvas_trigger.png %}){: style="max-width:90%;"}
 
-#### キャンペーン
+#### Campaign
 
-![メッセージ本文が「Keyword1」または「Keyword2」であるか、「Keyword A」でない場合に、キーワードカテゴリが [その他] のサブスクリプショングループ「Marketing Message Service A」にインバウンド SMS を送信するトリガーを指定したアクションベースのキャンペーン。]({% image_buster /assets/img/sms/campaign_trigger.png %}){: style="max-width:90%;"}
+![メッセージ本文が 「Keyword1」または「Keyword2」であるか、「Keyword A」でない場合に、キーワードカテゴリが [その他] のサブスクリプショングループ「Marketing Message Service A」にインバウンド SMS を送信するトリガーを指定したアクションベースのキャンペーン。]({% image_buster /assets/img/sms/campaign_trigger.png %}){: style="max-width:90%;"}
 
 ### 不明のキーワードの処理
 
@@ -130,7 +130,7 @@ SMS、MMS、および RCS with Braze には、キーワードトリガーの作�
 
 これは、次のようなメッセージを使用する SMS、MMS、RCS キャンペーンを作成することで可能です。「申し訳ありません。STOPで止まれ、HELPで助けろというキーワードがわからなかったんだ」。次に、配信ステップで、[**アクションベースの配信**] を選択し、トリガー「**キーワードカテゴリ [その他] 内のサブスクリプショングループにインバウンド SMS を送信**」を使用します。
 
-![]({% image_buster /assets/img/sms/sms_other.png %})
+![キーワードカテゴリ"Other"内のサブスクリプショングループに送信された受信SMS のトリガーが"のキャンペーンに対するアクションベースの送信。]({% image_buster /assets/img/sms/sms_other.png %})
 
 {% alert tip %}
 キャンペーンやキャンバスで、これらのキーワードやキーワード・カテゴリーをどのように使い、リターゲティングやメッセージのトリガーにできるかを見てみたい。詳細については、「[リターゲティング]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/retargeting/)」を参照してください。

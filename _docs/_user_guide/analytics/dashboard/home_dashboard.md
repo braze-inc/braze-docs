@@ -1,5 +1,5 @@
 ---
-nav_title: Home Dashboard
+nav_title: Home dashboard
 article_title: Home Dashboard (Previously Overview)
 page_order: 1
 page_type: reference
@@ -24,6 +24,10 @@ The **Home** page has two main sections:
 You can pick up where you left off in the Braze dashboard with direct access to files you've recently edited or created. This section appears at the top of the **Home** page of the Braze dashboard.
 
 You can revisit recently edited or created campaigns, Canvases, and segments. Each card is paired with tags that indicate the content type (campaign, Canvas, segment) and status (active, draft, archived, stopped).
+
+{% alert note %}
+The **Pick up where you left off** section appears after you have edited or created a campaign, Canvas, or segment.
+{% endalert %}
 
 ![A Canvas draft, an active segment, and a campaign draft in the "Pick up where you left off" section.]({% image_buster /assets/img/pick_up_where_you_left_off.png %})
 
@@ -68,9 +72,34 @@ The percentage next to the MAU count shows the change in MAU for this period com
 
 $$\text{Change in MAU} = \frac{\text{MAU of last date in range} - \text{MAU of day before start date}}{\text{MAU of day before start date}}$$
 
+#### MAU calculation rules
+
+MAU calculations follow specific rules to ensure accurate and consistent billing:
+
+- **Calculation timing**: Calculated once per day at 12:05 UTC as a 30-day snapshot; counts never change retroactively.
+- **Anonymous profiles**: Count **only** when at least one session is logged.
+- **Identified profiles**: Count automatically once they exist.
+- **Orphaned profiles**: Duplicates merged into another user are **not** counted.
+- **CSV uploads**: Users uploaded by CSV count only when `date_of_first_session` or `date_of_last_session` is supplied, or when they later log a session.
+- **API deletions**: Deleting a user via API does not update MAU immediately; the count self-corrects in the next monthly cycle.
+
 {% alert note %}
 Anonymous users also count toward your MAU. For mobile devices, anonymous users are device-dependent. For web users, anonymous users are browser cache-dependent.
 {% endalert %}
+
+#### MAU calculation example
+
+The following example demonstrates how MAU calculations work through different user actions:
+
+| Step | Action | Immediate MAU change | Resulting total |
+|------|--------|----------------------|-----------------|
+| 1 | Create **Anonymous User 1** and log a session | +1 | 1 |
+| 2 | Identify **Anonymous User 1** (profile converts to identified) | 0 | 1 |
+| 3 | Create **Anonymous User 2** and log a session | +1 | 2 |
+| 4 | Identify **Anonymous User 2** as the **same person** as User 1 (User 2 becomes orphaned) | –1 | 1 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation"}
+
+MAU snapshots are calculated once per day and never change retroactively. In this example, the MAU count for the day after step 3 permanently remains 2, even though User 2 later becomes orphaned. However, the MAU count for subsequent days reflects only the non-orphaned user. Within any 30-day window, this flow ultimately consumes 1 MAU since only one distinct, non-orphaned user remains.
 
 ### Daily active users
 

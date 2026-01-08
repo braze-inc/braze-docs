@@ -66,7 +66,7 @@ Em seguida, crie sua mensagem personalizada no app adicionando fontes personaliz
 ![A interface do usuário do IAM Studio mostrando as opções para personalizar o registro de eventos/atributos. Essas opções incluem o registro do comportamento do usuário.]({% image_buster /assets/img/iam_studio/iam_liquid.png %})
 {% endtab %}
 {% tab Registro e rastreamento %}
-![A interface de usuário do IAM Studio mostra as opções para personalizar a fonte. Essas opções incluem a possibilidade de o usuário personalizar o estilo da fonte.]({% image_buster /assets/img/iam_studio/iam_tracking_logging.png  %})
+![A interface de usuário do IAM Studio mostra as opções para personalizar a fonte. Essas opções incluem a possibilidade de o usuário personalizar o estilo da fonte.]({% image_buster /assets/img/iam_studio/iam_tracking_logging.png %})
 {% endtab %}
 {% endtabs %}
 

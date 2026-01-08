@@ -33,7 +33,7 @@
 3. Dependiendo de las circunstancias, los mensajes dentro de la aplicación descargarán o cargarán las imágenes relevantes del disco antes de su visualización. Si tienes una conexión de red lenta o un dispositivo de muy bajo rendimiento, este proceso puede tardar un poco. Asegúrate de que tus imágenes están optimizadas para ser lo más pequeñas posible.
 {% endcase %}
 
-Para profundizar en estas situaciones, visita [la sección de solución de problemas avanzados](#troubleshooting-in-app-advanced).
+Para profundizar en estas situaciones, visita <a id="troubleshooting-in-app-advanced">la sección de solución de problemas avanzados</a>.
 
 ## Problemas con los análisis de impresiones y clics
 
@@ -64,7 +64,7 @@ Si has configurado un delegado de mensajes dentro de la aplicación para que ges
 
 ## Solución de problemas avanzada {#troubleshooting-in-app-advanced}
 
-La mayoría de los problemas de mensajes dentro de la aplicación pueden dividirse en dos categorías principales: entrega y visualización. Para solucionar los problemas por los que un mensaje dentro de la aplicación no se ha mostrado en tu dispositivo, confirma que el [mensaje dentro de la aplicación se ha entregado al dispositivo](#troubleshooting-in-app-message-delivery) y, a continuación, [soluciona el problema de la visualización del mensaje](#troubleshooting-in-app-message-display).
+La mayoría de los problemas de mensajes dentro de la aplicación pueden dividirse en dos categorías principales: entrega y visualización. Para solucionar los problemas por los que un mensaje dentro de la aplicación no se ha mostrado en tu dispositivo, confirma que el <a id="troubleshooting-in-app-message-delivery">mensaje dentro de la aplicación se ha entregado al dispositivo</a> y, a continuación, <a id="troubleshooting-in-app-message-display">soluciona el problema de la visualización del mensaje</a>.
 
 ### Solución de problemas de entrega {#troubleshooting-in-app-message-delivery}
 
@@ -72,7 +72,7 @@ El SDK solicita mensajes dentro de la aplicación a los servidores Braze al inic
 
 #### Comprueba si se solicitan y devuelven mensajes
 
-1. Añádete como [usuario de prueba]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users) en el panel.
+1. Añádase como [usuario de prueba]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users) en el panel.
 2. Configura una campaña de mensajes dentro de la aplicación dirigida a tu usuario.
 3. Asegúrate de que se produce una nueva sesión en tu aplicación.
 4. Utiliza el [registro de usuarios del evento]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab) para comprobar que tu dispositivo solicita mensajes dentro de la aplicación al iniciar la sesión. Busca la solicitud SDK asociada al evento de inicio de sesión de tu usuario de prueba.

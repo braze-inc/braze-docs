@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Kochava
 
-> Kochava offers mobile attribution and analytics to help you harness your data for growth. The Kochava Audience Platform enables you to plan, target, activate, measure, and optimize your app campaigns.
+> [Kochava](https://www.kochava.com/) offers mobile attribution and analytics to help you harness your data for growth. The Kochava Audience Platform enables you to plan, target, activate, measure, and optimize your app campaigns.
 
 _This integration is maintained by Kochava._
 
@@ -33,7 +33,7 @@ The Braze and Kochava integration helps power a more holistic understanding of y
 
 #### Android
 
-The [Android](https://support.kochava.com/sdk-integration/sdk-kochavatracker-android/class-tracker?scrollto=marker_3) SDK generates a GUID as the Braze ID on session start. This is the identifier we recommend passing into the Kochava `IdentityLink` method as it allows Braze to reconcile the data back to the correct user profile. The Braze ID can be retrieved using the following method:
+The [Android](https://support.kochava.com/sdk-integration/sdk-kochavatracker-android/class-tracker?scrollto=marker_3) SDK generates a Globally Unique Identifier (GUID) as the Braze ID on session start. This identifier should be passed into the Kochava `IdentityLink` method so Braze can reconcile the data back to the correct user profile. Retrieve the Braze ID with the following method:
 
 ```java
 Apppboy.getInstance(context).getDeviceId();
@@ -42,12 +42,12 @@ Apppboy.getInstance(context).getDeviceId();
 #### iOS
 
 {% alert important %}
-Prior to February 2023, our Kochava attribution integration used the IDFV as the primary identifier to match iOS attribution data. It is not necessary for Braze customers using Objective-C to fetch the Braze `device_id` and sent to Kochava upon install as there will be no disruption of service. 
+Prior to February 2023, our Kochava attribution integration used the Identifier for Vendor (IDFV) as the primary identifier to match iOS attribution data. It is not necessary for Braze customers using Objective-C to fetch the Braze `device_id` and send it to Kochava upon install because there is no disruption of service. 
 {% endalert%}
 
 For those using the Swift SDK v5.7.0+, if you wish to continue using IDFV as the mutual identifier, you must ensure that the `useUUIDAsDeviceId` field is set to `false` so there is no disruption of the integration. If set to `true`, you must implement the iOS device ID mapping for Swift in order to pass the Braze `device_id` to Kochava upon app install in order for Braze to appropriately match iOS attributions.
 
-Braze has two APIs that will produce the same value, one with a completion handler and another using the new Swift concurrency support. Note that you will need to modify the following code snippets to conform with Kochava's [iOS SDK](https://support.kochava.com/sdk-integration/ios-sdk-integration/) instructions. For additional help, reach out to Kochava support.
+Braze has two APIs that will produce the same value, one with a completion handler and another using the new Swift concurrency support. Note that you will need to modify the following code snippets to conform with Kochava's [iOS SDK](https://support.kochava.com/sdk-integration/ios-sdk-integration/) instructions. For additional help, contact Kochava support.
 
 ##### Completion handler
 ```

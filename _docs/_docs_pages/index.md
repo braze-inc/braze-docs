@@ -35,10 +35,10 @@ doc_menu_list:
     image: /assets/img/braze_icons/code-browser.svg
     link: /docs/api/home/
     description: "Braze provides a high-performance REST API to allow you to track users, send messages, export data, and more."
-  - name: Release Notes
+  - name: What's New
     bg_color: '#ff9349'
     image: /assets/img/braze_icons/annotation-dots.svg
-    link: /docs/releases/home
+    link: /docs/releases/home/
     description: "Get monthly summaries about our major product releases, ongoing product improvements, breaking SDK changes, and more."
   - name: Compliance Documentation
     bg_color: '#ff9349'
@@ -71,8 +71,6 @@ helpful_resources_list:
     link: /docs/api/data_retention/
   - name: Data Protection Technical Assistance
     link: /docs/dp-technical-assistance/
-  - name: Release Notes
-    link: /docs/help/release_notes/
   - name: Contributing to Braze Docs
     link: /docs/contributing/home/
 ---

@@ -43,7 +43,7 @@ Additional benefits of using an `external_id` include the following:
 {% alert warning %}
 Don't assign an `external_id` to a user profile before you can uniquely identify them. After you identify a user, you can't revert them to anonymous.
 <br><br>
-Additionally, an `external_id` is unchangeable after it has been set against a user profile. Any attempt to set a different `external_id` during a user's session will create a new user profile with the new `external_id` associated with it. No data will be passed between the two profiles.
+An `external_id` can be updated using the [`/users/external_ids/rename` endpoint]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_rename/). However, any attempt to set a different `external_id` during a user's session will create a new user profile with the new `external_id` associated with it. No data will be passed between the two profiles.
 {% endalert %} 
 
 #### Risk of using an email or hashed email as an external ID
@@ -78,7 +78,7 @@ Each alias functions as a key-value pair that consists of two parts: an `alias_l
 
 ### Updating user aliases
 
-Unlike an `external_id`, an alias can be updated with a new name for a given label after it's set either by using our [User Data endpoints]({{site.baseurl}}/developer_guide/rest_api/user_data/#new-user-alias-endpoint) or passing a new name through the SDK. The user alias will then be visible when exporting that user's data.
+An alias can be updated with a new name for a given label after it's set either by using our [User Data endpoints]({{site.baseurl}}/developer_guide/rest_api/user_data/#new-user-alias-endpoint) or passing a new name through the SDK. The user alias will then be visible when exporting that user's data.
 
 ![Two different user profiles for separate users with the same user alias label but different alias names]({% image_buster /assets/img_archive/Braze_User_aliases.png %})
 
@@ -115,7 +115,5 @@ Uninstalling and reinstalling an app will generate a new anonymous `braze_id` fo
 All user IDs can be used to find and identify users within your dashboard for testing. To find your user in the Braze dashboard, refer to [Adding Test Users]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users).
 
 {% alert important %}
-Braze will ban or block users with over 5,000,000 sessions ("dummy users") and will no longer ingest their SDK events, as these users are generally the result of misintegration. If you find that this has happened to a legitimate user, reach out to your Braze account manager.
+Braze will ban or block users with over 5,000,000 sessions ("dummy users") and will no longer ingest their SDK events, as these users are generally the result of misintegration. If you find that this has happened to a legitimate user, contact your Braze account manager.
 {% endalert %}
-
-

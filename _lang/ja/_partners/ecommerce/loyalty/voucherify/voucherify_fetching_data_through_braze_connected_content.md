@@ -40,7 +40,7 @@ Voucherify の [GitHub リポジトリ](https://github.com/voucherifyio/braze-co
 以下の設定が行われてない場合、コネクテッドコンテンツメッセージがトリガーされるたびに、Voucherify API が2回以上呼び出されます。これらの設定により、Brazeに請求されるAPIコールの数が減り、メッセージ配信を妨げる可能性のあるハードブロッキングAPI制限に達するリスクが軽減されます。
 
 {% tabs %}
-{% tab レート制限 %}
+{% tab Rate Limiter %}
 
 **レート制限**
 
@@ -49,7 +49,7 @@ Braze によって送信されるメッセージの数を1分あたり[制限す
 ![]({% image_buster /assets/img/voucherify/voucherify_cc_limiter.png %})
 
 {% endtab %}
-{% tab キャッシュ %}
+{% tab Caching %}
 
 **POST 呼び出しでのキャッシュ**
 
@@ -69,7 +69,7 @@ POST呼び出しにキャッシュを追加するには:
 _結果に注意してください。_BrazeはURLに基づいてAPIコールをキャッシュします。クエリパラメーターとして使用される一意の文字列は Voucherify では無視されますが、この文字列により Braze の異なる API リクエストが区別され、一意の試行を個別にキャッシュすることができるようになります。そのクエリパラメータがないと、すべての顧客はキャッシュ期間中に同じクーポンコードを受け取ります。
 
 {% endtab %}
-{% tab リトライ属性 %}
+{% tab Retry attribute %}
 
 **retry 属性**
 
@@ -80,7 +80,7 @@ _結果に注意してください。_BrazeはURLに基づいてAPIコールを�
 ![]({% image_buster /assets/img/voucherify/voucherify_cc_retry.png %})
 
 {% endtab %}
-{% tab 一意のコード発行 %}
+{% tab Unique publications %}
 
 **顧客ごとの一意のコード発行**
 
@@ -99,7 +99,7 @@ _結果に注意してください。_BrazeはURLに基づいてAPIコールを�
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
-{% tab 1回のみの参加 %}
+{% tab Join-once %}
 
 **1回のみの参加**
 
@@ -352,7 +352,7 @@ Voucherify の [GitHub リポジトリ](https://github.com/voucherifyio/braze-co
 
 ### ステップ1:メッセージテンプレートにコネクテッドコンテンツスクリプトを追加
 
-1.  メッセージHTMLテンプレートの{% raw %}`<body>`{% endraw %}タグの下にコネクテッドコンテンツスクリプトをコピーして貼り付けます。VoucherifyキャンペーンダッシュボードのURLアドレスからコピーした**CAMPAIGN_ID**をVoucherify{% raw %}`campaign_id`{% endraw %}に置き換えます。<br>![]({% image_buster /assets/img/voucherify/voucherify_cc_campaignId.png %}){: style="margin-top:15px;margin-bottom:15px;"}
+1.  メッセージHTMLテンプレートの{% raw %}`<body>`{% endraw %}タグの下にコネクテッドコンテンツスクリプトをコピーして貼り付けます。置き換える **CAMPAIGN_ID**をVoucherifyキャンペーンダッシュボードのURLアドレスからコピーしたVoucherify{% raw %}`campaign_id`{% endraw %} に置き換える。<br>![]({% image_buster /assets/img/voucherify/voucherify_cc_campaignId.png %}){: style="margin-top:15px;margin-bottom:15px;"}
     {% raw %}  
     ```
     assign voucherify_campaign_id = "camp_Y7h1meBSyybsNs7UpSVVZZce"
@@ -428,7 +428,7 @@ Voucherify API からの応答は、{% raw %}`:save`{% endraw %} パラメータ
 
 コネクテッドコンテンツスクリプト:
 
-![コネクテッドコンテンツ呼び出しの最後に Voucherify 応答を保存することを示しているコネクテッドコンテンツスクリプト]({% image_buster /assets/img/voucherify/voucherify_cc_save_parameter.png %})
+![コネクテッドコンテンツのスクリプトで、コネクテッドコンテンツ呼び出しの最後にVoucherifyのレスポンスを保存することを示す]({% image_buster /assets/img/voucherify/voucherify_cc_save_parameter.png %})
 
 Brazeメッセージテンプレートのスニペット:
 

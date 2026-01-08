@@ -58,7 +58,7 @@ Selecting **Calendar date** allows you to hold users in the step until a specifi
 If the selected date and time have already passed by the time users proceed to the Delay step, users will exit the Canvas. There can be up to 31 days between the start of the Canvas and the dates chosen for "wait until an exact day" steps.
 
 {% alert important %}
-If you're participating in the [Context step early access]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context), you can set delays of up to 2 years.
+If you're participating in the [Canvas Context early access]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context), you can set delays of up to 2 years.
 {% endalert %}
 
 For example, users won't receive steps or messages in these scenarios:
@@ -110,7 +110,17 @@ Personalized delays and extended delays are in early access. Contact your Braze 
 
 Select the **Personalize delay** toggle to set up a personalized delay for your users. You can use this with a [Context step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context) to select the context variable to delay by. This will override the time of day set in the selected attribute or property. This is useful when applying an offset in days or weeks, and you want users to move forward at a specific time. The time zone comes from the attribute or property, or uses the fallback if none is available. 
 
-Note that it's possible for a custom attribute or context variable to have neither a specific time nor a time zone if it's a string data type. If it's a time data type, you'll need to specify the time and time zone. However, if the custom attribute or context variable is an "irrelevant" string (such as "product_name"), the user will exit the Canvas.
+#### Time zone behavior for "at specific time"
+
+When configuring personalized delays with the **at specific time** option, time zone behavior depends on the data type of your attribute or context variable:
+
+- **String data type with time zone:** If the attribute or context variable is a string data type that includes time zone information, it conforms to the time zone specified in the string. For example, `2025-06-10T10:00:00-08:00` uses UTC-8.
+- **String data type without time zone:** If the attribute or context variable is a string data type without time zone information, it conforms to the fallback time zone. For example, `2025-06-10` uses the fallback time zone.
+- **Time data type:** If the attribute or context variable is a time data type, it conforms to UTC. This is because the time data type is always converted to UTC when saved in the database, so "at specific time" will always reference UTC when the variable is set to time data type. For example, `2025-06-10T10:00:00-08:00` uses UTC+0.
+
+{% alert note %}
+It's possible for a custom attribute or context variable to have neither a specific time nor a time zone if it's a string data type. If it's a time data type, you'll need to specify the time and time zone. However, if the custom attribute or context variable is an "irrelevant" string (such as "product_name"), the user will exit the Canvas.
+{% endalert %}
 
 #### Use case
 

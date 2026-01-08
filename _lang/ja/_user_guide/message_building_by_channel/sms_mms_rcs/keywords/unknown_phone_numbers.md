@@ -1,5 +1,5 @@
 ---
-nav_title: 不明な電話番号への対応
+nav_title: 知らない電話番号への対応
 article_title: 不明な電話番号への対応
 page_order: 4
 description: "この参照記事では、Braze が新しいユーザからの不明な電話番号を処理する方法について説明します。"

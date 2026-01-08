@@ -44,7 +44,7 @@ All customers who currently have and/or use US long codes to send to US customer
 
 ## Two-factor authentication reset
 
-Users experiencing issues logging in via two-factor authentication can reach out to their company admins to [reset their two-factor authentication]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/security_settings/#user-authetication-reset).
+Users experiencing issues logging in via two-factor authentication can contact their company admins to [reset their two-factor authentication]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/security_settings/#user-authetication-reset).
 
 ## New Braze partnerships
 

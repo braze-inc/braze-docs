@@ -30,7 +30,7 @@ guide_featured_list:
 
 guide_menu_title: "More articles"
 guide_menu_list:
-  - name: Configuring Reporting
+  - name: Configure Reporting
     link: /docs/user_guide/analytics/reporting/configuring_reporting/
     image: /assets/img/braze_icons/settings-01.svg
   - name: Campaign Analytics
@@ -344,7 +344,7 @@ More questions you can answer with this report:
 {% tab Predictive Churn %}
 **Predictive Churn**
 
-[Predictive Churn]({{site.baseurl}}/user_guide/brazeai/predictive_churn/) is the first model in the [Braze Predictive Suite]({{site.baseurl}}/user_guide/brazeai/). Use Predictive Churn to define and generate predictions, providing a proactive approach toward minimizing future churn.
+Use [Predictive Churn]({{site.baseurl}}/user_guide/brazeai/predictive_churn/) to define and generate predictions, providing a proactive approach toward minimizing future churn.
 
 Since every business defines churn and retention differently, you can simply input your definitions into Predictive Churn, and Braze will do the rest. You can also create campaigns or Canvases to act off the predictions or build segments for further analysis.
 

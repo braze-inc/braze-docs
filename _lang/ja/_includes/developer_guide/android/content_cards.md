@@ -1,18 +1,18 @@
 ## 前提条件
 
-ろう付けコンテンツカードを使用する前に、[Android SDK]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android) をアプリに統合する必要があります。ただし、追加のセットアップは必要ありません。
+Braze コンテンツカードを使用するには、[Braze Android SDK]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android) をアプリに統合する必要があります。ただし、追加のセットアップは必要ありません。
 
 ## Googleフラグメント
 
 Android では、コンテンツカードフィードは Braze Android UI プロジェクトで使用可能な[フラグメント](https://developer.android.com/guide/components/fragments.html)として実装されます。この[`ContentCardsFragment`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html)クラスは、コンテンツカードの内容を自動的に更新して表示し、使用状況分析をログに記録します。ユーザーの`ContentCards` カードに表示できるカードは、Braze ダッシュボードで作成されます。
 
-アクティビティにフラグメントを追加する方法については、[Googleのフラグメントドキュメント](https://developer.android.com/guide/fragments#Adding "Androidドキュメント:フラグメント")を参照してください。
+アクティビティにフラグメントを追加する方法については、[Googleのフラグメントドキュメント](https://developer.android.com/guide/fragments#Adding)を参照してください。
 
 ## カードの種類とプロパティ
 
-コンテンツカードデータモデルはAndroid SDK で利用でき、以下のユニークなコンテンツカードタイプを提供します。各タイプは基本モデルを共有しており、基本モデルから共通のプロパティを継承するだけでなく、独自の固有のプロパティも持つことができます。完全なリファレンスドキュメントについては、[`com.braze.models.cards`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/index.html) を参照してください。
+コンテンツカードデータモデルはAndroid SDKで使用でき、次の一意のコンテンツカードタイプを提供します。各タイプは基本モデルを共有しており、基本モデルから共通のプロパティを継承するだけでなく、独自の固有のプロパティも持つことができます。完全なリファレンスドキュメントについては、[`com.braze.models.cards`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/index.html)を参照してください。
 
-### ベースカードモデル {#base-card-for-android}
+### 基準カード型式 {#base-card-for-android}
 
 [ベースカード](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html)モデルは、すべてのカードの基本的な動作を規定します。  
 
@@ -22,11 +22,14 @@ Android では、コンテンツカードフィードは Braze Android UI プロ
 |`getViewed()` | カードがユーザーによって既読か未読かを反映したブール値を返す。|
 |`getExtras()` | このカードのキーと値の追加のマップを返します。|
 |`getCreated()`  | カードの作成時刻をBrazeからunixタイムスタンプで返す。|
-|`getIsPinned` | カードがピン留めされているかどうかを示すブール値を返す。|
+|`isPinned` | カードがピン留めされているかどうかを示すブール値を返す。|
 |`getOpenUriInWebView()`  | このカードの Uris を開くべきかどうかを示すブール値を返す。 <br> Braze WebView で開くべきかどうか|
 |`getExpiredAt()` | カードの有効期限を取得する。|
-|`getIsRemoved()` | エンドユーザーがこのカードを退会したかどうかを示すブール値を返す。|
-|`getIsDismissible()`  | カードがピン留めされているかどうかを示すブール値を返す。|
+|`isRemoved()` | エンドユーザーがこのカードを退会したかどうかを示すブール値を返す。|
+|`isDismissibleByUser()`  | カードがユーザーによって排除可能かどうかを示すブール値を返します。|
+|`isClicked()` | このカードのクリック状態を反映するブール値を返します。|
+|`isDismissed()` | このカードが削除された場合はブーリアン値を返します。|
+|`isControl()` | このカードがコントロール カードであり、レンダリングすべきでない場合はブール値を返します。|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### 画像のみ {#banner-image-card-for-android}
@@ -40,7 +43,7 @@ Android では、コンテンツカードフィードは Braze Android UI プロ
 |`getDomain()` | プロパティ URL のリンクテキストを返します。|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-### キャプション画像 {#captioned-image-card-for-android}
+### キャプション付き"画像 {#captioned-image-card-for-android}
 
 [キャプション付き画像カード](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-captioned-image-card/index.html)はクリック可能なフルサイズの画像で、説明文が添えられています。
 

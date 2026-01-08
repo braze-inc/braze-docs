@@ -13,16 +13,16 @@ channel:
 
 # Spam-Vorschriften
 
-> Es gibt eine Reihe von Gesetzen, die die Absender elektronischer Kommunikation regulieren, einschließlich E-Mail, Push-Benachrichtigungen und SMS. Sie sollten sich immer über die [örtlichen Vorschriften][4] informieren, die Sie oder Ihre Benutzer betreffen könnten. 
+> Es gibt eine Reihe von Gesetzen, die die Absender elektronischer Kommunikation regulieren, einschließlich E-Mail, Push-Benachrichtigungen und SMS. Sie sollten sich immer über die [örtlichen Vorschriften](https://en.wikipedia.org/wiki/Email_spam_legislation_by_country) informieren, die Sie oder Ihre Benutzer betreffen könnten. 
 
 Braze stellt relevante Informationen zur Verfügung, die auf unseren eigenen Recherchen beruhen. Für vollständige und aktuelle Details sollten Sie jedoch auch den vollständigen Text dieser Gesetze lesen.
 
-- [CAN-SPAM][1]
-- [Kanadisches Anti-Spam-Gesetz][2]
+- [CAN-SPAM](#can-spam)
+- [Kanadisches Anti-Spam-Gesetz](#casl)
 
 ## CAN-SPAM
 
-Das CAN-SPAM-Gesetz von 2003 regelt die Versendung von E-Mails an U.S. "Jede elektronische Nachricht, deren Hauptzweck die kommerzielle Werbung oder die Förderung eines kommerziellen Produkts oder Dienstes ist". Weitere Einzelheiten können Sie auf der offiziellen Website [der Federal Trade Commission][5] nachlesen.
+Das CAN-SPAM-Gesetz von 2003 regelt die Versendung von E-Mails an U.S. "Jede elektronische Nachricht, deren Hauptzweck die kommerzielle Werbung oder die Förderung eines kommerziellen Produkts oder Dienstes ist". Weitere Einzelheiten können Sie auf der offiziellen Website [der Federal Trade Commission](http://www.business.ftc.gov/documents/bus61-can-spam-act-compliance-guide-business) nachlesen.
 
 Es gibt sieben Hauptanforderungen für CAN-SPAM:
 
@@ -38,7 +38,7 @@ Transaktions-E-Mails sind mit Ausnahme von Nr. 1 von diesen Regeln ausgenommen.
 
 ## Kanadisches Anti-Spam-Gesetz (CASL) {#casl}
 
-Am 1\. Juli 2014 tritt das kanadische Anti-Spam-Gesetz (CASL) für E-Mails an Einwohner Kanadas in Kraft. Den vollständigen Text des Gesetzes können Sie auf der [Website][3] der kanadischen Regierung [zu den Justizgesetzen][3] lesen. Das Gesetz besagt im Wesentlichen, dass kanadische Empfänger von E-Mail- und Push-Benachrichtigungen eine "ausdrückliche oder stillschweigende" Zustimmung zu Ihrer Kommunikation mit ihnen geben müssen.
+Am 1\. Juli 2014 tritt das kanadische Anti-Spam-Gesetz (CASL) für E-Mails an Einwohner Kanadas in Kraft. Den vollständigen Text des Gesetzes können Sie auf der [Website](http://laws-lois.justice.gc.ca/eng/annualstatutes/2010_23/FullText.html) der kanadischen Regierung [zu den Justizgesetzen](http://laws-lois.justice.gc.ca/eng/annualstatutes/2010_23/FullText.html) lesen. Das Gesetz besagt im Wesentlichen, dass kanadische Empfänger von E-Mail- und Push-Benachrichtigungen eine "ausdrückliche oder stillschweigende" Zustimmung zu Ihrer Kommunikation mit ihnen geben müssen.
 
 ### CASL versus CAN-SPAM
 
@@ -62,7 +62,7 @@ Die folgenden Arten von Nachrichten sind von den Anforderungen des CASL ausgenom
 - Nachrichten, die über sachliche Informationen zu Abonnement, Mitgliedschaft oder Konto informieren
 - Nachrichten, die ein Produkt oder eine Dienstleistung liefern, einschließlich Produktaktualisierungen oder Upgrades
 
->  Dies ist nicht die vollständige Liste der Ausnahmen. Lesen Sie den [vollständigen Text des Gesetzes][3] für weitere Details.
+>  Dies ist nicht die vollständige Liste der Ausnahmen. Lesen Sie den [vollständigen Text des Gesetzes](http://laws-lois.justice.gc.ca/eng/annualstatutes/2010_23/FullText.html) für weitere Details.
 
 ### Zustimmung zu Nachrichten
 
@@ -112,11 +112,5 @@ In iOS wurden Ihre Nutzer:innen schon immer gebeten, Push-Benachrichtigungen zu 
 
 ### Android {#spam-android}
 
-Bei Android können Ihre Benutzer davon ausgehen, dass sie durch die stillschweigende Zustimmung, die in Ihrer Datenschutzrichtlinie oder Endbenutzer-Lizenzvereinbarung angegeben ist, eingewilligt haben. Vielleicht möchten Sie ein ausdrückliches Opt-in implementieren, vielleicht in einem Startbildschirm, wenn der oder die Nutzer:in die App zum ersten Mal startet. Weitere Informationen finden Sie im Artikel [Push-Best Practices][6]. Sie können die Nutzer:innen auch darauf hinweisen, welche Arten von Push-Benachrichtigungen sie erhalten werden, und so die Opt-in-Rate erhöhen.
+Bei Android können Ihre Benutzer davon ausgehen, dass sie durch die stillschweigende Zustimmung, die in Ihrer Datenschutzrichtlinie oder Endbenutzer-Lizenzvereinbarung angegeben ist, eingewilligt haben. Vielleicht möchten Sie ein ausdrückliches Opt-in implementieren, vielleicht in einem Startbildschirm, wenn der oder die Nutzer:in die App zum ersten Mal startet. Weitere Informationen finden Sie im Artikel [Push-Best Practices]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/). Sie können die Nutzer:innen auch darauf hinweisen, welche Arten von Push-Benachrichtigungen sie erhalten werden, und so die Opt-in-Rate erhöhen.
 
-[1]: #can-spam
-[2]: #casl
-[3]: http://laws-lois.justice.gc.ca/eng/annualstatutes/2010_23/FullText.html
-[4]: https://en.wikipedia.org/wiki/Email_spam_legislation_by_country "Wikipedia: E-Mail-Spam-Gesetzgebung nach Land"
-[5]: http://www.business.ftc.gov/documents/bus61-can-spam-act-compliance-guide-business "CAN-SPAM-Gesetz: Ein Leitfaden zur Einhaltung von Vorschriften für Unternehmen"
-[6]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/

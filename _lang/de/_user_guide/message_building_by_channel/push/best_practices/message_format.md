@@ -1,5 +1,5 @@
 ---
-nav_title: Nachrichtenformate
+nav_title: Nachrichten-Formate
 article_title: Push-Nachrichten und Bildformate
 page_order: 5
 page_type: reference
@@ -17,7 +17,7 @@ Die besten Ergebnisse erzielen Sie, wenn Sie sich bei der Gestaltung Ihrer Push-
 ## iOS und Android Push
 
 {% tabs local %}
-{% tab Bilder %}
+{% tab Images %}
 
 **Bildtyp** | **Empfohlene Bildgröße** | **Maximale Bildgröße** | **Dateitypen**
 --- | --- | --- | ---
@@ -41,7 +41,7 @@ Die besten Ergebnisse erzielen Sie, wenn Sie sich bei der Gestaltung Ihrer Push-
 Sie fragen sich, wie viele Zeichen Sie in einer iOS-Push-Benachrichtigung verwenden können, ohne dass diese abgeschnitten wird? Sehen Sie sich unsere [Richtlinien für iOS-Zeichen]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/#character-count) an.
 
 {% endtab %}
-{% tab Payload-Größe %}
+{% tab Payload Size %}
 
 **Plattform** | **Größe**
 --- | ---
@@ -51,17 +51,17 @@ Android (FCM) | 4 KB
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
-{% tab Bildbeispiel %}
+{% tab Image Example %}
 {% subtabs %}
 {% subtab iOS %}
 
-![iOS Push-Benachrichtigung mit Text, der wie folgt lautet: "Hallo! Dies ist ein iOS Push mit einem Bild" mit einem Emoji. Neben dem Text befindet sich ein kleines Bild.]({% image_buster /assets/img_archive/braze_richpush1.png %}){: style="max-width:50%;"}
-![iOS-Push-Benachrichtigung über einen Hard Push mit dem gleichen Text wie die vorherige Nachricht mit einem erweiterten Bild vor dem Text.]({% image_buster /assets/img_archive/braze_richpush2.png %}){: style="max-width:50%;"}
+\![iOS Push-Benachrichtigung mit Text, der lautet: "Hallo! Dies ist ein iOS Push mit einem Bild" mit einem Emoji. Neben dem Text befindet sich ein kleines Bild.]({% image_buster /assets/img_archive/braze_richpush1.png %}){: style="max-width:50%;"}
+\![iOS Push-Benachrichtigung über einen Hard Push mit dem gleichen Text wie die vorherige Nachricht mit einem erweiterten Bild vor dem Text.]({% image_buster /assets/img_archive/braze_richpush2.png %}){: style="max-width:50%;"}
 
 {% endsubtab %}
 {% subtab Android %}
 
-![Android-Push-Benachrichtigung mit einem großen Bild unter dem Nachrichtentext.]({% image_buster /assets/img_archive/android_push_img2.png %})
+\![Android Push-Benachrichtigung mit einem großen Bild unter dem Text der Nachricht.]({% image_buster /assets/img_archive/android_push_img2.png %})
 
 {% alert note %}
 Große Bildbenachrichtigungen werden am besten angezeigt, wenn Sie ein Bild mit einer Größe von mindestens 600x300 Pixeln verwenden.
@@ -70,15 +70,15 @@ Große Bildbenachrichtigungen werden am besten angezeigt, wenn Sie ein Bild mit 
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Textbeispiel %}
+{% tab Text Example %}
 {% subtabs %}
 {% subtab iOS %}
 
-![iOS Push-Benachrichtigung mit Text, der wie folgt lautet: "Hallo! Dies ist ein iOS Push".]({% image_buster /assets/img_archive/iOS_push_notification_small.png %})
+\![iOS Push-Benachrichtigung mit Text, der lautet: "Hallo! Dies ist ein iOS Push".]({% image_buster /assets/img_archive/iOS_push_notification_small.png %})
 
 {% endsubtab %}
 {% subtab Android %}
-![Android-Push-Benachrichtigung, die auf dem Startbildschirm angezeigt wird.]({% image_buster /assets/img_archive/Push_Android_2.png %})
+\![Android Push-Benachrichtigung wird auf dem Startbildschirm angezeigt.]({% image_buster /assets/img_archive/Push_Android_2.png %})
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
@@ -87,7 +87,7 @@ Große Bildbenachrichtigungen werden am besten angezeigt, wenn Sie ein Bild mit 
 ## Web-Push
 
 {% tabs local %}
-{% tab Bilder %}
+{% tab Images %}
 
 | **Browser** | **Empfohlene Symbolgröße**
 | --- | ---

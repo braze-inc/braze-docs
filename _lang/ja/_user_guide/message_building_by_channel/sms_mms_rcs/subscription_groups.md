@@ -23,7 +23,7 @@ SMSとRCSのユーザーには、`subscribed` と`unsubscribed` の2つのサブ
 | 状態 | 定義 |
 | --------- | ---------- |
 | 配信登録済み | ユーザーが特定のサブスクリプショングループから SMS と RCSを受信することを明示的に確認しました。ユーザーは、Braze の購読 API を介して購読状態を更新するか、オプトインのキーワード応答テキストを送信することで、購読に登録できます。ユーザーが SMS または RCS あるいはこの両方を受信するには、SMS または RCS サブスクリプショングループに登録している必要があります。 |
-| 配信停止済み | ユーザーは SMS および RCSサブスクリプショングループからのメッセージング、およびサブスクリプショングループ内での電話番号の送信を明示的にオプトアウトしました。ユーザーは、オプトアウトキーワードレスポンスをテキストで送信することで配信停止を行うか、ブランドが[Braze subscription API]({{ site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/). SMSおよびRCSサブスクリプショングループから配信停止されたユーザーは、サブスクリプショングループに属する送信電話番号からのSMSまたはRCSを受信しなくなる。|
+| 配信停止済み | ユーザーは SMS および RCSサブスクリプショングループからのメッセージング、およびサブスクリプショングループ内での電話番号の送信を明示的にオプトアウトしました。ユーザーはオプトアウトのキーワード応答テキストを送信することで購読解除できます。また、ブランドは [Braze の購読 API]({{ site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/) を通じてユーザーを購読解除できます。SMSおよびRCSサブスクリプショングループから配信停止されたユーザーは、そのサブスクリプショングループに属する送信電話番号からのSMSまたはRCSを受信しなくなる。|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### ユーザーの状態の設定
@@ -34,7 +34,7 @@ SMSとRCSのユーザーには、`subscribed` と`unsubscribed` の2つのサブ
 
 ユーザーのサブスクリプショングループの状態を設定するには、以下のいずれかの方法を使用する：
 
-- **Rest API:**Braze REST API を使用することで、ユーザープロファイルを [`/subscription/status/set`エンドポイント]({{ site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/)によってプログラムで設定できます。
+- **Rest API:**ユーザープロファイルは、REST APIを使用して、[\`/subscription/status/set\`エンドポイント]({{ site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/) 、プログラムで設定することができる。
 - **SDKの統合** [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/add-to-subscription-group.html)、[iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/user-swift.class/addtosubscriptiongroup(id:fileid:line:))、[Web](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html#addtosubscriptiongroup)用の`addToSubscriptionGroup` メソッドを使用して、メールまたはSMS、RCSサブスクリプショングループにユーザーを追加できる。
 - **ユーザーのオプトイン / オプトアウト時に自動的に処理される:**ユーザーがデフォルトのオプトインまたはオプトアウト[キーワード]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/optin_optout/)をテキスト入力すると、Braze はユーザーの配信登録状態を自動的に設定、更新します。
 - **ユーザー輸入**：**ユーザーのインポート**を使用してユーザーをメールまたは SMS および RCS サブスクリプショングループに追加できます。購読グループのステータスを更新する場合、CSV には `subscription_group_id` と `subscription_state` の2 列が必要です。詳細については、[「ユーザーインポート」]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#updating-subscription-group-status)を参照してください。
@@ -48,13 +48,13 @@ SMSとRCSのユーザーには、`subscribed` と`unsubscribed` の2つのサブ
 
 ## サブスクリプショングループを使用したメッセージの送信
 
-Braze で SMS または RCS キャンペーンを開始するには、[**SMS/MMS/RCS バリアント**] ドロップダウンからサブスクリプショングループを選択します。購読グループを選択すると、オーディエンスフィルターがキャンペーンまたはキャンバスに自動的に追加され、選択した購読グループを購読している (`subscribed`) ユーザーのみが確実にターゲットオーディエンスに含まれます。
+Brazeを通じてSMSまたはRCSキャンペーンを開始するには、**SMS/MMS/RCSバリアントの**ドロップダウンからサブスクリプショングループを選択する。購読グループを選択すると、オーディエンスフィルターがキャンペーンまたはキャンバスに自動的に追加され、選択した購読グループを購読している (`subscribed`) ユーザーのみが確実にターゲットオーディエンスに含まれます。
 
 {% alert important %}
 国際的な[通信コンプライアンスとガイドラインに]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/laws_and_regulations/)準拠し、Brazeは選択したサブスクリプショングループに加入していないユーザーにSMSやRCSを送信することはない。  
 {% endalert %}
 
-![サブスクリプショングループのドロップダウンが開いており、[Messaging Service A for SMS] が強調表示されている SMS 作成画面。]({% image_buster /assets/img/sms/sms_subgroup_select.png %})
+![ユーザーが購読グループのドロップダウンを開き、[Messaging Service A for SMS] を強調表示した SMS 作成画面。]({% image_buster /assets/img/sms/sms_subgroup_select.png %})
 
 ## サブスクリプショングループを有効にする
 
@@ -68,7 +68,7 @@ SMS、MMS、またはRCSのサブスクリプショングループを有効に�
 {% tab MMS %}
 MMS メッセージを送信するには、購読グループ内の少なくとも 1 つの番号で MMS の送信を有効にする必要があります。これは、購読グループの横にあるタグによって示されます。 
 
-![[Messaging Service A for SMS] が強調表示された購読グループのドロップダウン。エントリの先頭に "MMS "というタグが付いている。]({% image_buster /assets/img/sms/mms_sub_group_tag.png %}){: style="max-width:40%"}
+![[Messaging Service A for SMS] が強調表示された購読グループのドロップダウン。エントリーの先頭に "MMS "というタグが付く。]({% image_buster /assets/img/sms/mms_sub_group_tag.png %}){: style="max-width:40%"}
 {% endtab %}
 
 {% tab RCS %}
@@ -126,9 +126,9 @@ Brazeでは、最初は少量のユーザーにRCSを送信するテストを行
 ```
 {% endraw %}
 
-![前述の JSON コードが表示されている [ユーザー更新オブジェクト]。]({% image_buster /assets/img/sms/user_update_object.png %})
+!["ユーザー更新オブジェクト "には、前述のJSONコードが含まれている。]({% image_buster /assets/img/sms/user_update_object.png %})
 
-### ステップ 4:キャンバスをテストする
+### ステップ 4: キャンバスをテストする
 
 より多くのオーディエンスにキャンバスを送信する前に、キャンバスが期待通りに機能することを確認するため、[キャンバスをテスト]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/sending_test_canvases/)することを強くお勧めします。
 

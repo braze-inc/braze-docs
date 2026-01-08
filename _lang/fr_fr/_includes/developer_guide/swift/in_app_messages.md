@@ -3,12 +3,12 @@
 ## Types de messages
 
 {% tabs %}
-{% multi_lang_include developer_guide/_shared/push_notifications/message_types/swift.md %}
+{% multi_lang_include developer_guide/_shared/in_app_messages/message_types/swift.md %}
 {% endtabs %}
 
 ## Activation des messages in-app
 
-### Étape 1 : Créez une implémentation de `BrazeInAppMessagePresenter`
+### Étape 1 : Créez une implémentation de `BrazeInAppMessagePresenter`
 
 Pour permettre à Braze d'afficher des messages in-app, créez une implémentation du protocole `BrazeInAppMessagePresenter` et attribuez-la à l'option `inAppMessagePresenter` de votre instance Braze. Vous pouvez également utiliser le présentateur par défaut de Braze UI en instanciant un objet `BrazeInAppMessageUI`.
 

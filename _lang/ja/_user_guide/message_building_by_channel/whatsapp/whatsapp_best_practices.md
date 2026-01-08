@@ -1,7 +1,7 @@
 ---
 nav_title: ベストプラクティス
 article_title: WhatsAppのベストプラクティス
-page_order: 8
+page_order: 9
 description: "この記事では、WhatsApp メッセージングチャネルを使用する際に推奨されるベストプラクティスの概要を示します。電話の高品質評価を維持する方法、高いブロック率とレポート率を回避する方法などがあります。"
 page_type: reference
 channel:
@@ -18,7 +18,7 @@ WhatsAppの[電話品質評価は](https://www.facebook.com/business/help/896873
 
 WhatsAppで 初めてユーザーにメッセージを送信すると、以下のオプションがメッセージスレッド内に表示されます。
 
-![WhatsApp のメッセージスレッドには、企業をブロックしたり報告したりするオプションが用意されている。]({% image_buster /assets/img/whatsapp/whatsapp_block_report.png %}){: style="max-width:30%;"}
+![WhatsAppのメッセージスレッドには、企業をブロックしたり報告したりするオプションが用意されている。]({% image_buster /assets/img/whatsapp/whatsapp_block_report.png %}){: style="max-width:30%;"}
 
 {% alert note %}
 ブロックとレポートに関する指標については、WhatsApp Manager の [[Insights] タブ](https://www.facebook.com/business/help/683499390267496)を必ずオンにしてください。

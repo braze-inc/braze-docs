@@ -1,5 +1,5 @@
 ---
-nav_title: 勝者パス 
+nav_title: 勝者パス
 article_title: 実験パスの勝者パス 
 page_type: reference
 description: "この記事では、勝者パスについて説明します。実験パスステップでこの機能を有効にすると、AB テストを自動化することができます。"
@@ -18,23 +18,25 @@ tool: Canvas
 
 キャンバスに[実験パス]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/)を追加し、[**勝者パス**] をオンにします。
 
-![後続ユーザーを勝者パスに分配」というタイトルの実験パスの設定。このセクションには、勝者パスのトグルと、コンバージョンイベントと実験期間を設定するオプションがある。]({% image_buster /assets/img/experiment_step/experiment_winning_path_recurring.png %})
+![後続ユーザーを勝者パスに分配」というタイトルの実験パスの設定。このセクションには、勝者パスのトグルと、コンバージョンイベントと実験期間を設定するオプションがあります。]({% image_buster /assets/img/experiment_step/experiment_winning_path_recurring.png %})
 
 ### ステップ2:勝者パスを設定する
 
-勝者を決定するコンバージョンイベントを指定します。利用できるコンバージョンイベントがない場合は、キャンバスの設定の最初のステップに戻り、[コンバージョンイベントを割り当てます]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#choose-conversion-events)。開封とクリックで勝者を決定する場合、開封またはクリックを生成するパスの最初のメッセージのみが勝者の決定に役立つことに注意してください。
+勝者を決定するコンバージョンイベントを指定します。利用できるコンバージョンイベントがない場合は、キャンバスの設定の最初のステップに戻り、[コンバージョンイベントを割り当てます]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#choose-conversion-events)。 
+
+開封またはクリックをコンバージョンイベントとして選択した場合、パスの最初のステップが[メッセージステップ]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step)であることを確認する。Brazeは、それぞれのパスにおける最初のメッセージステップからのエンゲージメントのみをカウントする。もしパスが別のステップ（ディレイやオーディエンス・パスのステップなど）から始まり、メッセージが後から来た場合、パフォーマンスを評価する際にそのメッセージは含まれない。
 
 次に、**実験期間**を設定します。**実験期間**では、勝者パスが決定され、その後のすべてのユーザーがそのパスに送られる前に、実験を行う時間を指定します。最初のユーザーがステップに入ると、期間が開始されます。
 
-![実験期間が 12 時間でコンバージョンイベント [クリック数] が選択されている勝者パス設定。]({% image_buster /assets/img/experiment_step/experiment_winning_settings.png %})
+![勝者パスの設定、コンバージョンイベント "クリック "を選択、12時間の実験ウィンドウ。]({% image_buster /assets/img/experiment_step/experiment_winning_settings.png %})
 
-### ステップ 3: フォールバックを決定する {#statistical-significance}
+### ステップ 3:フォールバックを決定する {#statistical-significance}
 
 デフォルトでは、テストの結果が統計的に有意な勝者を決定するのに十分でない場合、将来のすべてのユーザーがベストパフォーマンスのパスに送信されます。
 
 または、**すべての将来のユーザーにパスの組み合わせの送信を続行**するよう指定することもできます。このオプションは、実験パスの配分で指定されたパーセンテージに従って、将来のユーザーにパスの組み合わせを送信します。
 
-![テスト結果が統計的に有意ではない場合にユーザーに対する動作として [すべての将来のユーザーにパスの組み合わせの送信を続行] が選択されている。]({% image_buster /assets/img/experiment_step/experiment_winning_statistical.png %})
+![テスト結果が統計的に有意でなかった場合、ユーザーに何が起こるかとして選択された "今後すべてのユーザーにミックスパスを送り続ける"。]({% image_buster /assets/img/experiment_step/experiment_winning_statistical.png %})
 
 {% alert note %}
 遅延グループがパス配分に表示されるのは、キャンバスが 1 回限りの入力に設定されていて、実験ステップのパスが 3 つ以下の場合のみです。勝者パスがオンになっている場合、繰り返し発生するキャンバスやトリガーされたキャンバスには遅延グループが表示されません。

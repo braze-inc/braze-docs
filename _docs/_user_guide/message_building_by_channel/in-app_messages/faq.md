@@ -45,23 +45,6 @@ Eligibility for an in-app message is calculated at the time of delivery. If an i
 
 Once the in-app message is displayed, the eligibility will depend on when the in-app message is downloaded and triggered.
 
-### What are templated in-app messages?
-
-In-app messages will be delivered as templated in-app messages when **Re-evaluate campaign eligibility before displaying** is selected or if any of the following Liquid tags exist in the message:
-
-- `context`
-- `connected_content`
-- SMS variables such as {% raw %}`{sms.${*}}`{% endraw %}
-- `catalog_items`
-- `catalog_selection_items`
-- `event_properties`
-
-This means during session start, the device will receive the trigger of that in-app message instead of the entire message. When the user triggers the in-app message, the user's device will make a network request to fetch the actual message.
-
-{% alert note %}
-The message will not deliver if the device doesn't have access to the internet. The message might not deliver if the Liquid logic takes too long to resolve.
-{% endalert %}
-
 ### Why is my archived in-app message campaign still delivering in-app message impressions?
 
 This can occur for users who met the segment criteria when the in-app message campaign was active.

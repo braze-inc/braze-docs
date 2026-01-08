@@ -1,12 +1,12 @@
 ---
 nav_title: Liquid code
-article_title: Generating Liquid code with BrazeAI
+article_title: Generate Liquid code with BrazeAI
 description: "This article will cover how the AI Liquid Assistant works and how you can use it to generate Liquid snippets for your messaging."
 page_type: reference
 page_order: 0.0
 ---
 
-# Generating Liquid code with BrazeAI<sup>TM</sup>
+# Generate Liquid code with BrazeAI<sup>TM</sup>
 
 > The BrazeAI<sup>TM</sup> Liquid Assistant is a chat assistant powered by BrazeAI<sup>TM</sup> that helps generate the Liquid you need to personalize message content.
 

@@ -14,7 +14,7 @@ search_tag: Partner
 The Braze and Zeotap integration empowers you to extend the scale and reach of your campaigns by syncing Zeotap customer segments to Braze user profiles. With [Currents]({{site.baseurl}}/user_guide/data/braze_currents/), you can also connect data to Zeotap to make it actionable across the entire growth stack.
 
 {% alert important %}
-The custom HTTP connector is currently in beta. If you're interested in setting up this integration, reach out to your customer success manager.
+The custom HTTP connector is currently in beta. If you're interested in setting up this integration, contact your customer success manager.
 {% endalert %}
 
 ## Prerequisites

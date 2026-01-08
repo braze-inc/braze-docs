@@ -1,5 +1,5 @@
 ---
-nav_title: API キー
+nav_title: API と識別子
 article_title: API キー
 page_order: 3
 page_type: reference
@@ -21,7 +21,7 @@ description: "このリファレンス記事では、ワークスペースの AP
 
 さらなるセキュリティ強化のため、特定の REST API キーに対する REST API リクエストが許可されている IP アドレスおよびサブネットのリストを指定できます。これは、許可リストまたはホワイトリストと呼ばれます。特定の IP アドレスやサブネットを許可するには、新規の REST API キーの作成時に [**IP をホワイトリストに追加**] セクションにそれらを追加します。 
 
-![新しいAPIキーを作成する際のAPI IP Whitelistingセクション]({% image_buster /assets/img_archive/api-key-ip-whitelisting.png %})
+![新規 API キー作成時の API の [IP を許可リストに登録] セクション]({% image_buster /assets/img_archive/api-key-ip-whitelisting.png %})
 
 何も指定しない場合、すべての IP アドレスからリクエストを送信できます。
 

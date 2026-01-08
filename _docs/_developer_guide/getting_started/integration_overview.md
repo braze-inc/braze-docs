@@ -225,9 +225,9 @@ You will track updates to the Braze platform via the Braze [GitHub](https://gith
 
 ## SDK rate limits 
 
-### Monthly Active Users CY 24-25 
+### Monthly Active Users CY 24-25, Universal MAU, Web MAU, and Mobile MAU  
 
-For customers who have purchased Monthly Active Users - CY 24-25, Braze enforces server-side rate limits on API requests used by our SDKs to update sessions, user attributes, events, and other user profile data. This is to ensure platform stability and to maintain fast, reliable service. 
+For customers who have purchased Monthly Active Users CY 24-25, Universal MAU, Web MAU, and Mobile MAU , Braze enforces server-side rate limits on API requests used by our SDKs to update sessions, user attributes, events, and other user profile data. This is to ensure platform stability and to maintain fast, reliable service. 
 
 * Hourly rate limits are set according to the expected SDK traffic on your account, which may correspond to the number of monthly active users (MAU) you have purchased, industry, seasonality, or other factors. When the hourly rate limit is reached, Braze will throttle requests until the next hour.
 * All rate limited requests are automatically retried by the SDK.

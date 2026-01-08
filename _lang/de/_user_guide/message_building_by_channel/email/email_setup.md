@@ -1,12 +1,12 @@
 ---
-nav_title: E-Mail-Einrichtung
+nav_title: E-Mail einrichten
 article_title: Onboarding-E-Mail einrichten
 layout: dev_guide
 page_order: 1
 guide_top_header: "E-Mail-Einrichtung"
 guide_top_text: "Braze kann Ihnen helfen, E-Mail Kampagnen zu versenden. Folgen Sie entweder unseren Anleitungen oder besuchen Sie unseren Braze Learning-Kurs <a href='https://learning.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability' target='_blank'>E-Mail-Onboarding</a>."
 page_type: landing
-description: "Diese Startseite enthält Ressourcen für den Einstieg in E-Mail-Kampagnen, einschließlich der Einrichtung Ihrer IPs und Domains, IP-Erwärmung, E-Mail-Validierung und mehr."
+description: "Auf dieser Landing Page finden Sie Ressourcen für den Start von Kampagnen, einschließlich der Einrichtung Ihrer IPs und Domains, IP-Warming, E-Mail-Validierung und mehr."
 channel: email
 
 guide_featured_title: "Abschnittsartikel"
@@ -43,10 +43,10 @@ Bevor Sie mit dem Versenden von E-Mails beginnen, benötigen Sie einige Dinge. L
 
 | Anforderung | Beschreibung | Quelle |
 |---|---|---|
-| Eine dedizierte IP (Internetprotokoll)| Eine dedizierte IP ist eine einzigartige Internetadresse, die exklusiv für ein einzelnes Hosting-Konto bereitgestellt wird. | Braze stellt seinen Kund:innen dedizierte IPs zur Verfügung, um die Kontrolle über Ihre Absender-Reputation zu gewährleisten. Das Braze Onboarding wird dies für Sie einrichten.|
+| Eine dedizierte IP (Internetprotokoll)| Eine dedizierte IP ist eine einzigartige Internetadresse, die exklusiv für ein einzelnes Hosting-Konto bereitgestellt wird. | Braze stellt Ihnen dedizierte IPs zur Verfügung, um die Kontrolle über die Absender-Reputation Ihrer E-Mails zu gewährleisten. Das Braze Onboarding wird dies für Sie einrichten.|
 | Whitelabel-Domains | Diese bestehen aus einer Domain und einer Subdomain. Durch Whitelabeling können Sie die E-Mail-Authentifizierungsprüfungen für DKIM und SPF umgehen. | Das Braze-Onboarding-Team wird diese Domains für Sie generieren, aber Sie müssen deren Namen selbst wählen. |
 | Subdomänen | Dies ist eine Unterteilung einer Domain (z. B. „@news.company.com“) innerhalb Ihrer E-Mail Adresse. Mit einer Subdomain vermeiden Sie Fehler, die dem offiziellen Ruf Ihres Unternehmens bei E-Mails schaden könnten. | Das Onboarding-Team wird dies für Sie erstellen, aber Sie müssen den Namen der Subdomain festlegen. Sie können keine Subdomains verwenden, die derzeit außerhalb von Braze verwendet werden. |
-| IP-Pools | Hierbei handelt es sich um eine optionale Konfiguration, die dazu dient, die Reputation verschiedener Arten von E-Mails (z.B. "Werbe-E-Mails" und "Transaktions-E-Mails") voneinander zu trennen, um zu verhindern, dass die Reputation der einen die der anderen beeinflusst, und um eine höhere Zustellbarkeit zu unterstützen. | Das Onboarding-Team wird die Pools für Sie einrichten. Wählen Sie dann beim Verfassen Ihrer E-Mail den IP-Pool Ihrer E-Mail aus der Dropdown-Liste **IP-Pool** auf der Seite **Zielbenutzer** aus.|
+| IP-Pools | Hierbei handelt es sich um eine optionale Konfiguration, die dazu dient, die Reputation verschiedener Arten von E-Mails (z.B. "Werbe-E-Mails" und "Transaktions-E-Mails") voneinander zu trennen, um zu verhindern, dass die Reputation der einen die der anderen beeinflusst, und um eine höhere Zustellbarkeit zu unterstützen. | Das Onboarding-Team wird die Pools für Sie einrichten. Wenn Sie dann Ihre E-Mail verfassen, können Sie den IP-Pool Ihrer E-Mail im Schritt **Targeting Zielgruppen** einsehen.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## IP-Warming
@@ -55,9 +55,9 @@ Bevor Sie mit dem Versenden von E-Mails beginnen, benötigen Sie einige Dinge. L
 IP-Warming ist der **wichtigste Schritt** bei der Einrichtung von E-Mails. Obwohl dies nicht der erste Schritt ist (es ist eigentlich der letzte), weisen wir Sie hier darauf hin, dass Sie Ihre IP-Adresse aufwärmen müssen, da sonst alle von Ihnen gesendeten E-Mails als Spam verschickt werden oder anderen Sendebarrieren unterliegen.
 {% endalert %}
 
-[IP-Warming]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ip_warming/) bedeutet, dass Sie in Ihrem ersten Stapel eine relativ kleine Anzahl von E-Mails versenden und dann im Laufe der Zeit das Volumen in den folgenden Stapeln leicht erhöhen, bis Sie Ihr typisches tägliches Volumen erreichen. Dies geschieht ganz am Ende des Einrichtungsvorgangs Ihrer E-Mail.
+[IP-Warming]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ip_warming/) bedeutet, dass Sie in Ihrem ersten Stapel eine relativ kleine Anzahl von E-Mails versenden und dann im Laufe der Zeit das Volumen in den folgenden Stapeln leicht erhöhen, bis Sie Ihr typisches tägliches Volumen erreichen. Dies geschieht ganz am Ende des Einrichtungsprozesses Ihrer E-Mail.
 
-Indem Sie mit kleineren Mengen an E-Mails beginnen, bauen Sie ein Vertrauensverhältnis zu Ihrem E-Mail-Anbieter auf und zeigen, dass Sie nur E-Mails an relevante Nutzer:innen senden. Wenn Sie Ihre ersten E-Mails an die Nutzer:innen mit dem größten Engagement senden, können Sie so schneller Vertrauen bei Ihrem Anbieter gewinnen.
+Indem Sie mit kleineren Mengen an E-Mails beginnen, bauen Sie ein Vertrauensverhältnis zu Ihrem E-Mail-Anbieter auf und zeigen, dass Sie nur E-Mails an relevante Nutzer:innen senden. Wenn Sie Ihre ersten E-Mails an die Nutzer:innen mit dem größten Engagement senden, können Sie schneller Vertrauen bei Ihrem Anbieter gewinnen.
 
 Nachdem Sie Ihre IP aufgewärmt haben, können Sie [mit dem Erstellen und Versenden von E-Mails beginnen]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/)!
 

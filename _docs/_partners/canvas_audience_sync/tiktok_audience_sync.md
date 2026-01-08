@@ -24,7 +24,7 @@ This feature lets brands control what specific first-party data is shared with T
 
 {% alert important %}
 **Audience Sync Pro disclaimer**<br>
-Braze Audience Sync to TikTok is an Audience Sync Pro integration. For more information on this integration, reach out to your Braze account manager.
+Braze Audience Sync to TikTok is an Audience Sync Pro integration. For more information on this integration, contact your Braze account manager.
 {% endalert %}
 
 ## Prerequisites
@@ -41,6 +41,10 @@ You must ensure the following items are created, completed, and/or accepted befo
 ## Integration 
 
 ### Step 1: Connect to TikTok
+
+{% alert important %}
+You must have the ["Admin" permission]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#admin) to connect TikTok to your Braze account.
+{% endalert %}
 
 In the Braze dashboard, go to **Partner Integrations** > **Technology Partners** and select **TikTok**. Under TikTok Audience Sync, select **Connect TikTok**.
 
@@ -159,4 +163,6 @@ This is because in TikTok, one ID may be associated with multiple TikTok users. 
 
 Additionally, TikTok also counts Pangle users as matched users, which in some cases can result in an elevated match rate. However, when you use the audience for ad delivery, the actual deliverable audience size may not be as high as the matched user size as it depends on placement and other influencing factors.
 
+### Why am I receiving an email with the subject "Audience Does Not Exist For Canvas"?
 
+This can occur if the audience you chose to sync to is not a streaming audience (for example, if it's a lookalike audience or a user file audience). Try creating a new audience through the Braze Audience Sync Canvas step.

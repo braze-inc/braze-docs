@@ -47,7 +47,7 @@ In Braze, navigate to **Currents** > **+ Create Current** > **Treasure Data Expo
 All events sent to Treasure Data will include the user’s `external_user_id`. At this time, Braze does not send event data to Treasure Data for users who haven't set their `external_user_id`.
 
 {% alert important %}
-Keep your Treasure Data URL up to date. If your connector’s URL is incorrect, Braze won't be able to send events. If this persists for more than 48 hours, the connector’s events will be dropped and data will be permanently lost.
+Keep your Treasure Data URL up to date. If your connector’s URL is incorrect, Braze won't be able to send events. If this persists for more than **5 days**, the connector’s events will be dropped and data will be permanently lost.
 {% endalert %}
 
 #### Example event field value

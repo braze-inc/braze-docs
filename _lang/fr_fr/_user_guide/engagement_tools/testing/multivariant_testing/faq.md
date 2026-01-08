@@ -13,11 +13,11 @@ description: "Cet article couvre les FAQ pour les tests multivariés et les test
 
 ### Quelle est la différence entre les tests A/B et les tests multivariés ?
 
-#### Tests A/B
+#### Test A/B
 
 Dans les tests A/B, le marketeur expérimente une seule variable au sein de la campagne (comme les lignes d'objet d'un e-mail ou l'heure d'envoi du message). Il s'agit de diviser au hasard un sous-ensemble de l'audience en deux groupes ou plus, de présenter à chaque groupe une variante différente et d'observer quelle variante présente le taux de conversion le plus élevé. En général, la variante la plus performante est ensuite envoyée au reste de l'audience.
 
-#### Tests multivariés 
+#### Test multivarié 
 
 Le test multivarié est une extension du test A/B, qui permet au marketeur de tester plusieurs variables à la fois afin de déterminer la combinaison la plus efficace. Par exemple, vous pouvez tester la ligne d'objet de votre message e-mail, l'image qui accompagne votre texte et la couleur du bouton CTA. Ce type de test vous permet d'explorer davantage de variables et de combinaisons de variations au sein d'une même expérience, et d'obtenir des informations plus rapidement et de manière plus complète que les tests A/B. Cependant, tester plus de variables et de combinaisons au sein d'une même expérience nécessite une audience plus importante pour obtenir une signification statistique.
 
@@ -25,7 +25,11 @@ Le test multivarié est une extension du test A/B, qui permet au marketeur de te
 
 Braze teste toutes les variantes les unes par rapport aux autres à l'aide de tests du chi-carré de Pearson, qui permettent de déterminer si une variante est statistiquement plus performante que toutes les autres à un niveau de signification de p < 0,05, ou ce que nous appelons une signification à 95 %. Parmi toutes les variantes qui dépassent ce seuil d'importance, la variante la plus performante est désignée comme "gagnante".
 
-Ce test est différent du score de confiance, qui décrit uniquement la performance d’une variante par rapport au groupe de contrôle avec une valeur numérique comprise entre 0 et 100 %. Plus précisément, il représente notre confiance dans le fait que la différence standardisée du taux de conversion entre la variante et le contrôle est significativement plus grande que le hasard.
+Il s'agit d'un test distinct du score de confiance, qui décrit uniquement la performance d'une variante par rapport au contrôle avec une valeur numérique comprise entre 0 et 100 %. Plus précisément, il représente notre confiance dans le fait que la différence standardisée du taux de conversion entre la variante et le contrôle est significativement plus grande que le hasard.
+
+### Pourquoi la répartition des variantes n'est-elle pas uniforme ?
+
+{% multi_lang_include multivariant_testing.md section='Variant distribution' %}
 
 ## Exécution et conclusion des tests
 
@@ -37,9 +41,9 @@ Pour les campagnes récurrentes, basées sur des actions et déclenchées par l'
 
 ### Comment Braze traite-t-il les utilisateurs qui ont reçu une variante de message dans le cadre d'une campagne récurrente ou d'une étape du canvas ? 
 
-Les utilisateurs sont affectés de manière aléatoire à une variante particulière avant de recevoir la campagne pour la première fois. À chaque réception de campagne (ou lorsque l’utilisateur entre à nouveau dans une Canvas Variant), ils recevront la même variante à moins que les pourcentages de variante soient modifiés. Si les pourcentages de variante changent, les utilisateurs peuvent être répartis sur d’autres variantes. Les utilisateurs restent dans ces variantes jusqu’à ce que les pourcentages soient à nouveau modifiés. Les utilisateurs ne seront redistribués que pour les variantes qui ont été modifiées.
+Les utilisateurs sont affectés de manière aléatoire à une variante particulière avant de recevoir la campagne pour la première fois. Chaque fois que la campagne est reçue (ou que l'utilisateur entre à nouveau dans une variante du canvas), il recevra la même variante, à moins que les pourcentages de variante ne soient modifiés. Si les pourcentages des variantes changent, les utilisateurs peuvent être redistribués vers d'autres variantes. Les utilisateurs restent dans ces variantes jusqu'à ce que les pourcentages soient à nouveau modifiés. Les utilisateurs ne seront redistribués que pour les variantes qui ont été modifiées.
 
-Par exemple, disons que nous avons une campagne ou un Canvas avec trois variantes. Si seules les variantes A et B sont modifiées ou mises à jour, les utilisateurs de la variante C ne seront pas redistribués car le pourcentage de variante de la variante C n'a pas été modifié. Les groupes de contrôles restent uniformes si le pourcentage de variantes est inchangé. Les utilisateurs qui ont déjà reçu des messages ne peuvent pas entrer dans le groupe de contrôle lors d'un envoi ultérieur, et aucun utilisateur du groupe de contrôle ne peut jamais recevoir de message.
+Par exemple, disons que nous avons une campagne ou un Canvas avec trois variantes. Si seules les variantes A et B sont modifiées ou mises à jour, les utilisateurs de la variante C ne seront pas redistribués car le pourcentage de variante de la variante C n'a pas été modifié. Les groupes de contrôle restent cohérents si le pourcentage de variante est inchangé. Les utilisateurs qui ont déjà reçu des messages ne peuvent pas entrer dans le groupe de contrôle lors d'un envoi ultérieur, et aucun utilisateur du groupe de contrôle ne peut jamais recevoir de message.
 
 #### Qu'en est-il des chemins d'expérience ?
 

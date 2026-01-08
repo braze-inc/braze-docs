@@ -1,6 +1,6 @@
 ---
-nav_title: Tracking custom events
-article_title: Tracking Custom Events for iOS
+nav_title: Track custom events
+article_title: Track Custom Events for iOS
 platform: iOS
 page_order: 2
 description: "This reference article covers how to add and track custom events for your iOS application."
@@ -10,7 +10,7 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# Tracking custom events for iOS
+# Track custom events for iOS
 
 You can record custom events in Braze to learn more about your app's usage patterns and to segment your users by their actions on the dashboard.
 

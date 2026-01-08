@@ -1,184 +1,184 @@
 ---
-nav_title: 실행 기반 전달
-article_title: 실행 기반 전달
+nav_title: 행동 기반 전송
+article_title: 행동 기반 전송
 page_order: 1
 page_type: reference
-description: "이 참조 문서에서는 사용자가 특정 이벤트를 완료한 후 캠페인을 트리거하여 전송하는 방법에 대해 설명합니다."
+description: "이 참조 기사는 사용자가 특정 이벤트를 완료한 후 캠페인을 전송하도록 트리거하는 방법을 설명합니다."
 tool: Campaigns
 
 ---
 
-# 액션 기반 전달
+# 행동 기반 전송
 
-> 실행 기반 전달 캠페인 또는 이벤트 트리거 캠페인은 트랜잭션 또는 업적 기반 메시지에 매우 효과적입니다. 특정 날짜에 캠페인을 전송하는 대신 사용자가 특정 이벤트를 완료한 후에 캠페인을 전송하도록 트리거할 수 있습니다. 
+> 행동 기반 전송 캠페인 또는 이벤트 트리거 캠페인은 거래 또는 성과 기반 메시지에 매우 효과적입니다. 특정 날짜에 캠페인을 전송하는 대신, 사용자가 특정 이벤트를 완료한 후 전송하도록 트리거할 수 있습니다. 
 
 ## 트리거된 캠페인 설정하기
 
-### 1단계: 트리거 이벤트 선택
+### 1단계: 트리거 이벤트 선택하기
 
-트리거 이벤트를 선택합니다. 여기에는 다음 중 어느 것이든 포함될 수 있습니다:
+트리거 이벤트를 선택하세요. 다음 중 하나를 포함할 수 있습니다:
 - 구매하기
 - 세션 시작하기
-- 사용자 지정 이벤트 수행
-- 캠페인의 기본 전환 이벤트 수행하기
+- 사용자 정의 이벤트 수행하기
+- 캠페인의 주요 전환 이벤트 수행하기
 - 사용자 프로필에 이메일 주소 추가하기
-- 사용자 지정 속성 값 변경하기
+- 사용자 정의 속성 값 변경하기
 - 구독 상태 업데이트하기
 - 구독 그룹 상태 업데이트하기
-- 다른 캠페인과 상호 작용하기
-    - 인앱 메시지 보기
-    - 인앱 메시지 클릭
-    - 인앱 메시지 버튼 클릭
+- 다른 캠페인과 상호작용하기
+    - 앱 내 메시지 보기
+    - 앱 내 메시지 클릭
+    - 앱 내 메시지 버튼 클릭
     - 이메일 클릭
-    - 이메일에서 별칭 클릭
-    - 캠페인 또는 캔버스 단계에서 클릭한 별칭
+    - 이메일의 별칭 클릭
+    - 모든 캠페인 또는 캔버스 단계에서 별칭 클릭
     - 이메일 열기
-    - 이메일 열람(기계 열람)
-    - 이메일 열람(기타 열람)
-    - 푸시 알림 바로 열기
+    - 이메일 열기 (기계 열기)
+    - 이메일 열기 (기타 열기)
+    - 푸시 알림 직접 열기
     - 푸시 알림 버튼 클릭
     - 푸시 스토리 페이지 클릭
     - 전환 이벤트 수행
     - 이메일 수신
     - SMS 수신
     - 단축 SMS 링크 클릭
-    - 푸시 알림 받기
+    - 푸시 알림 수신
     - 웹훅 수신
     - 대조군에 등록됨
     - 콘텐츠 카드 보기
     - 콘텐츠 카드 클릭
-    - 콘텐츠 카드 해제
-- 위치 입력
-- 다른 캠페인에 대한 예외 이벤트 수행
-- 캔버스 단계와 상호 작용하기
-- 지오펜스 트리거
-- SMS 인바운드 메시지 보내기
-- WhatsApp 인바운드 메시지 보내기
+    - 콘텐츠 카드 닫기
+- 위치 입력 중
+- 다른 캠페인에 대한 예외 이벤트 수행 중
+- 캔버스 단계와 상호작용 중
+- 지오펜스 트리거 중
+- SMS 수신 메시지 전송 중
+- WhatsApp 수신 메시지 전송 중
 
-You can also further filter trigger events through Braze [custom event properties]({{site.baseurl}}/user_guide/data/custom_data/custom_events/), allowing for customizable event properties for custom events and in-app purchases. 이 기능을 사용하면 사용자 지정 이벤트의 특정 속성을 기반으로 메시지를 수신할 사용자를 더욱 맞춤화할 수 있으므로 캠페인 개인화를 강화하고 데이터를 더욱 정교하게 수집할 수 있습니다. 
+Braze [사용자 정의 이벤트 속성]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)을 통해 트리거 이벤트를 추가로 필터링할 수 있어, 사용자 정의 이벤트 및 인앱 구매를 위한 사용자 정의 가능한 이벤트 속성을 제공합니다. 이 기능은 특정 사용자 정의 이벤트의 속성에 따라 메시지를 받을 사용자를 더욱 세분화할 수 있게 해주어, 캠페인 개인화 및 더 정교한 데이터 수집이 가능합니다. 
 
-예를 들어, '장바구니 값' 속성 필터로 추가 타겟팅되는 버려진 장바구니 사용자 지정 이벤트가 있는 캠페인이 있다고 가정해 보겠습니다. 이 캠페인은 장바구니에 100달러에서 200달러 상당의 상품을 남긴 사용자에게만 도달합니다. 
+예를 들어, 포기된 장바구니 사용자 정의 이벤트가 있는 캠페인이 "장바구니 가치" 속성 필터로 추가 타겟팅된다고 가정해 보겠습니다. 이 캠페인은 장바구니에 $100에서 $200 사이의 상품을 남긴 사용자에게만 도달합니다. 
 
-![]({% image_buster /assets/img_archive/customEventProperties.png %})
+\![]({% image_buster /assets/img_archive/customEventProperties.png %})
 
 {% alert note %}
-캠페인의 세그먼트가 신규 사용자에게 적용되는 경우 트리거 이벤트 "세션 시작"은 사용자의 첫 번째 앱 실행이 될 수 있습니다. (예를 들어, 세그먼트가 세션이 없는 사용자로 구성된 경우).
+트리거 이벤트 "세션 시작"은 캠페인 세그먼트가 신규 사용자에게 적용되는 경우 사용자가 앱을 처음 열 때가 될 수 있습니다. (예를 들어, 세그먼트가 세션이 없는 사용자로 구성된 경우).
 {% endalert %}
 
-특정 사용자 세그먼트에 트리거된 캠페인을 보낼 수 있으므로 해당 세그먼트에 속하지 않은 사용자는 트리거 이벤트를 완료하더라도 캠페인을 받지 못합니다. If you notice users not receiving the campaign even though they qualified for the segment, see our section on [why a user might not have received a triggered campaign]({{site.baseurl}}/help/help_articles/campaigns_and_canvas/not_triggering/).
+특정 사용자 세그먼트에 트리거된 캠페인을 여전히 보낼 수 있다는 점을 염두에 두세요. 따라서 세그먼트에 포함되지 않은 사용자는 트리거 이벤트를 완료하더라도 캠페인을 받지 못합니다. 세그먼트에 자격이 있음에도 불구하고 사용자가 캠페인을 받지 못하는 경우, [사용자가 트리거된 캠페인을 받지 못하는 이유]({{site.baseurl}}/help/help_articles/campaigns_and_canvas/not_triggering/) 섹션을 참조하세요.
 
-사용자가 프로필에 이메일 주소를 추가할 때의 트리거 이벤트와 관련하여 다음 규칙이 적용됩니다:
+사용자가 프로필에 이메일 주소를 추가할 때의 트리거 이벤트에 대해 다음 규칙이 적용됩니다:
 
-- 트리거 이벤트는 사용자 프로필 속성이 업데이트된 후에 발생합니다. 즉, 캠페인의 세그먼트 및 필터에 대한 평가는 속성 업데이트 후에 이루어집니다. "이메일 주소 일치 gmail.com"와 같은 필터를 설정하여 Gmail 사용자에게만 전송하고 이메일 주소를 추가하는 즉시 실행되는 트리거 캠페인을 만들 수 있기 때문에 유용합니다.
-- 트리거 이벤트는 이메일 주소가 사용자 프로필에 추가되면 실행됩니다. 동일한 이메일 주소로 생성한 사용자 프로필이 여러 개 있는 경우 각 사용자 프로필에 대해 한 번씩 캠페인이 여러 번 실행될 수 있습니다.
+- 트리거 이벤트는 사용자 프로필 속성이 업데이트된 후에 발생합니다. 이는 캠페인의 세그먼트 및 필터 평가가 모든 속성 업데이트 후에 이루어진다는 것을 의미합니다. 이것은 "이메일 주소가 gmail.com와 일치"와 같은 필터를 설정할 수 있게 해주기 때문에 유익합니다. 이를 통해 Gmail 사용자에게만 전송되고 사용자가 이메일 주소를 추가하자마자 발동되는 트리거 캠페인을 생성할 수 있습니다.
+- 트리거 이벤트는 사용자 프로필에 이메일 주소가 추가될 때 발동됩니다. 같은 이메일 주소로 생성한 여러 사용자 프로필이 있는 경우, 캠페인은 각 사용자 프로필마다 한 번씩 여러 번 발동될 수 있습니다.
 
-또한 트리거된 인앱 메시지는 여전히 인앱 메시지 전달 규칙을 준수하며 앱 세션이 시작될 때 표시됩니다.
+또한, 트리거된 인앱 메시지는 여전히 인앱 메시지 전송 규칙을 준수하며 앱 세션의 시작 부분에 나타납니다.
 
-![]({% image_buster /assets/img_archive/schedule_triggered1.png %})
+\![]({% image_buster /assets/img_archive/schedule_triggered1.png %})
 
 ### 2단계: 지연 길이 선택
 
-트리거 기준이 충족된 후 캠페인을 보내기 전에 대기할 기간을 선택합니다. 선택한 지연 길이가 메시지 전송 기간보다 길면 캠페인을 수신하는 사용자가 없습니다. 
+트리거 기준이 충족된 후 캠페인을 보내기 전에 얼마나 기다릴지를 선택합니다. 선택한 지연 길이가 메시지 전송 기간보다 길면, 어떤 사용자도 캠페인을 받지 못합니다. 
 
-또한 캠페인이 시작된 후 트리거 이벤트를 완료한 사용자는 지연 시간이 지난 후 가장 먼저 메시지를 받기 시작합니다. 캠페인이 시작되기 전에 트리거 이벤트를 완료한 사용자는 캠페인을 받을 자격이 없습니다.
+또한, 캠페인이 시작된 후 트리거 이벤트를 완료한 사용자가 지연이 지난 후 메시지를 받기 시작하는 첫 번째 사용자가 됩니다. 캠페인이 시작되기 전에 트리거 이벤트를 완료한 사용자는 캠페인을 받을 자격이 없습니다.
 
-![]({% image_buster /assets/img_archive/schedule_triggered22.png %})
+\![]({% image_buster /assets/img_archive/schedule_triggered22.png %})
 
-또한 향후 특정 요일("다음날"을 선택한 다음 하루를 선택)이나 특정 일수("다음날"을 선택)에 캠페인을 보내도록 선택할 수도 있습니다. Alternatively, you may choose to send your message using the [Intelligent Timing]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/) feature instead of manually selecting a delivery time.
+특정 요일(다음 요일 선택 후 요일 선택)이나 특정 일수(미래의 "안에" 선택)를 선택하여 캠페인을 보낼 수도 있습니다. 또는 수동으로 전송 시간을 선택하는 대신 [지능형 타이밍]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/) 기능을 사용하여 메시지를 보낼 수 있습니다.
 
-![]({% image_buster /assets/img_archive/schedule_triggered7.png %})
-![]({% image_buster /assets/img_archive/schedule_triggered8.png %})
+\![]({% image_buster /assets/img_archive/schedule_triggered7.png %})
+\![]({% image_buster /assets/img_archive/schedule_triggered8.png %})
 
 ### 3단계: 예외 이벤트 선택
 
-사용자가 이 캠페인을 받을 자격을 박탈할 예외 이벤트를 선택합니다. 트리거된 메시지가 시간 지연 후에 전송되는 경우에만 이 작업을 수행할 수 있습니다. [Exception events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria/#exception-events) can be making a purchase, starting a session, performing one of a campaign's designated [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#conversion-events), or performing a custom event. 사용자가 트리거 이벤트를 완료했지만 시간 지연으로 인해 메시지가 전송되기 전에 예외 이벤트를 완료하면 캠페인을 받지 못합니다. 예외 이벤트로 인해 캠페인을 받지 못한 사용자는 사용자가 [재대상자]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/reeligibility/)로 지정하지 않더라도 다음에 트리거 이벤트를 완료할 때 자동으로 캠페인을 받을 수 있습니다.
+이 캠페인을 받지 못하도록 사용자 자격을 박탈할 예외 이벤트를 선택합니다. 트리거된 메시지가 시간 지연 후에 전송되는 경우에만 이 작업을 수행할 수 있습니다. [예외 이벤트]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria/#exception-events)는 구매하기, 세션 시작하기, 캠페인의 지정된 [전환 이벤트]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#conversion-events) 중 하나 수행하기 또는 사용자 정의 이벤트 수행하기가 될 수 있습니다. 사용자가 트리거 이벤트를 완료했지만 메시지가 전송되기 전에 시간 지연으로 인해 예외 이벤트를 완료하면 캠페인을 받지 못합니다. 예외 이벤트로 인해 캠페인을 받지 못한 사용자는 자동으로 미래에 캠페인을 받을 자격이 생기며, 트리거 이벤트를 완료할 때마다 캠페인을 받을 수 있습니다. 사용자가 [재자격]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/reeligibility/)을 선택하지 않더라도 말입니다.
 
-![]({% image_buster /assets/img_archive/schedule_triggered32.png %})
+\![]({% image_buster /assets/img_archive/schedule_triggered32.png %})
 
-예외 이벤트를 사용하는 방법에 대한 자세한 내용은 [사용 사례]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/#use-cases) 섹션에서 확인할 수 있습니다.
+예외 이벤트를 사용하는 방법에 대한 자세한 내용은 [사용 사례]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/#use-cases) 섹션을 참조하세요.
 
-> 예외 이벤트와 일치하는 트리거 이벤트가 포함된 캠페인을 전송하면 Braze는 캠페인을 취소하고 예외 이벤트의 메시지 전송 시간에 따라 자동으로 새 캠페인을 다시 예약합니다. 예를 들어 첫 번째 트리거 이벤트가 5분에 시작되고 예외 이벤트가 10분에 시작되는 경우 예외 이벤트의 10분을 공식 캠페인의 메시지 전달 시간으로 사용합니다.
+> 트리거 이벤트가 예외 이벤트와 일치하는 캠페인을 보내면, Braze는 캠페인을 취소하고 예외 이벤트의 메시지 전송 시간을 기반으로 새로운 캠페인을 자동으로 재일정합니다. 예를 들어, 첫 번째 트리거 이벤트가 5분에 시작하고 예외 이벤트가 10분에 시작하는 경우, 공식 캠페인의 메시지 전송 시간으로 예외 이벤트의 10분을 의존하게 됩니다.
 
 {% alert note %}
-캠페인의 트리거 이벤트와 예외 이벤트를 모두 "세션 시작"으로 설정할 수 없습니다. 그러나 이 옵션 외에 다른 커스텀 이벤트를 언제든지 선택할 수 있습니다.
+캠페인에 대해 "세션 시작"을 트리거 이벤트와 예외 이벤트로 모두 설정할 수 없습니다. 그러나 이 옵션 외의 다른 사용자 정의 이벤트를 선택할 수 있는 선택권은 항상 있습니다.
 {% endalert %}
 
-### 4단계: 기간 지정
+### 4단계: 지속 시간 할당
 
-시작 시간과 종료 시간(선택 사항)을 지정하여 캠페인 기간을 지정합니다.
+시작 시간과 선택적 종료 시간을 지정하여 캠페인의 지속 시간을 할당합니다.
 
-![]({% image_buster /assets/img_archive/schedule_triggered43.png %})
+\![]({% image_buster /assets/img_archive/schedule_triggered43.png %})
 
-사용자가 지정된 기간 동안 트리거 이벤트를 완료했지만 예정된 지연으로 인해 해당 기간 외에는 메시지를 받을 자격이 없는 경우 캠페인을 받지 못합니다. 따라서 메시지 시간보다 긴 시간 지연을 설정하면 캠페인을 수신할 사용자가 없습니다. 또한 사용자의 [현지 시간]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/scheduled_delivery/#local-time-zone-campaigns)대로 메시지를 보내도록 선택할 수 있습니다.
+사용자가 지정된 시간 프레임 내에서 트리거 이벤트를 완료하지만 예정된 지연으로 인해 시간 프레임 외부에서 메시지 자격을 갖춘 경우, 캠페인을 받지 못합니다. 따라서 메시지의 시간 프레임보다 긴 시간 지연을 설정하면, 어떤 사용자도 캠페인을 받지 못합니다. 또한 사용자의 [현지 시간대]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/scheduled_delivery/#local-time-zone-campaigns)에 메시지를 전송하도록 선택할 수 있습니다.
 
-### 5단계: 기간 선택
+### 5단계: 시간 프레임 선택
 
-사용자가 하루 중 특정 시간대에 캠페인을 수신할지 여부를 선택합니다. 메시지에 시간 프레임을 지정했는데 사용자가 이 시간 프레임 전에 트리거 이벤트를 완료하거나 메시지 지연으로 인해 시간 프레임을 놓친 경우 기본적으로 사용자는 메시지를 받지 못합니다.
+사용자가 하루의 특정 부분 동안 캠페인을 받을지 여부를 선택합니다. 메시지에 시간 프레임을 부여하고 사용자가 시간 프레임 외부에서 트리거 이벤트를 완료하거나 메시지 지연으로 인해 시간 프레임을 놓치게 되면 기본적으로 사용자는 메시지를 받지 못합니다.
 
-![]({% image_buster /assets/img_archive/schedule_triggered5.png %})
+\![]({% image_buster /assets/img_archive/schedule_triggered5.png %})
 
-사용자가 기간 내에 트리거 이벤트를 완료했지만 메시지 지연으로 인해 사용자가 기간에서 벗어난 경우 다음 확인란을 선택하여 해당 사용자가 캠페인을 계속 받을 수 있도록 할 수 있습니다.
+사용자가 시간 프레임 내에서 트리거 이벤트를 완료했지만 메시지 지연으로 인해 시간 프레임에서 벗어나는 경우, 이러한 사용자가 여전히 캠페인을 받을 수 있도록 다음 상자를 체크할 수 있습니다.
 
-![]({% image_buster /assets/img_archive/schedule_triggered_next_available.png %})
+\![]({% image_buster /assets/img_archive/schedule_triggered_next_available.png %})
 
-사용자가 기간을 놓쳐서 메시지를 받지 못한 경우에는 사용자가 [다시 자격]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/reeligibility/)을 얻도록 선택하지 않았더라도 다음에 트리거 이벤트를 완료할 때 메시지를 받을 수 있는 자격을 얻게 됩니다. 사용자가 다시 자격을 갖추도록 선택한 경우, 지정된 기간 동안 자격을 갖추었다고 가정하여 사용자가 트리거 이벤트를 완료할 때마다 캠페인을 받을 수 있습니다.
+사용자가 시간 프레임을 놓쳐서 메시지를 받지 못하는 경우, 트리거 이벤트를 완료할 때마다 다음 번에 받을 자격이 여전히 있습니다. 사용자가 [재자격]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/reeligibility/)을 선택하지 않았더라도 말입니다. 사용자가 재자격을 받도록 선택하는 경우, 사용자는 지정된 시간 프레임 내에서 자격을 갖춘 경우 트리거 이벤트를 완료할 때마다 캠페인을 받을 수 있습니다.
 
-캠페인에 특정 기간도 지정한 경우 사용자는 해당 기간과 하루 중 특정 시간대에 자격을 갖추어야 메시지를 받을 수 있습니다.
+캠페인에 특정 지속 시간을 할당한 경우, 사용자는 메시지를 받기 위해 지속 시간과 하루의 특정 부분 모두에서 자격을 갖춰야 합니다.
 
-### 6단계: 재적격 여부 결정
+### 6단계: 재자격 결정
 
-Determine whether users can become [re-eligible]({% image_buster /assets/img_archive/ReEligible.png %}) for the campaign. 사용자가 다시 캠페인을 받을 수 있도록 허용하는 경우, 사용자가 캠페인을 다시 받을 수 있는 기간을 지정할 수 있습니다. 이렇게 하면 트리거된 캠페인이 "스팸성"이 되는 것을 방지할 수 있습니다.
+사용자가 캠페인에 대해 [재자격]({% image_buster /assets/img_archive/ReEligible.png %})이 될 수 있는지 결정합니다. 사용자가 재자격이 되는 것을 허용하는 경우, 사용자가 캠페인을 다시 받을 수 있는 시간 지연을 지정할 수 있습니다. 이것은 트리거된 캠페인이 "스팸"이 되는 것을 방지합니다.
 
-![]({% image_buster /assets/img_archive/schedule_triggered6.png %})
+\![]({% image_buster /assets/img_archive/schedule_triggered6.png %})
 
 ## 사용 사례
 
-트리거 캠페인은 트랜잭션 또는 업적 기반 메시지에 매우 효과적입니다.
+트리거된 캠페인은 거래 또는 성과 기반 메시지에 매우 효과적입니다.
 
-거래 캠페인에는 사용자가 구매를 완료하거나 장바구니에 상품을 추가한 후 전송되는 메시지가 포함됩니다. 후자의 경우는 예외 이벤트의 혜택을 받을 수 있는 캠페인의 좋은 예입니다. 사용자가 구매하지 않은 장바구니에 있는 상품을 상기시키는 캠페인이라고 가정해 보겠습니다. 이 경우 예외 이벤트는 사용자가 카트에서 제품을 구매하는 경우입니다. 업적 기반 캠페인의 경우, 사용자가 전환을 완료하거나 게임 레벨을 달성한 후 5분 후에 메시지를 보낼 수 있습니다.
+거래 캠페인에는 사용자가 구매를 완료하거나 장바구니에 항목을 추가한 후에 전송되는 메시지가 포함됩니다. 후자의 경우는 예외 이벤트의 혜택을 받을 수 있는 캠페인의 훌륭한 예입니다. 캠페인이 사용자가 구매하지 않은 장바구니의 항목을 상기시킨다고 가정해 보세요. 이 경우 예외 이벤트는 사용자가 장바구니의 제품을 구매하는 것입니다. 성과 기반 캠페인의 경우, 사용자가 전환을 완료하거나 게임 레벨을 통과한 후 5분 후에 메시지를 보낼 수 있습니다.
 
-또한 환영 캠페인을 만들 때 사용자가 계정을 등록하거나 설정한 후에 메시지를 보내도록 트리거할 수 있습니다. 등록 후 서로 다른 날짜에 메시지를 보내도록 시차를 두면 철저한 온보딩 프로세스를 만들 수 있습니다.
+또한, 환영 캠페인을 만들 때 사용자가 등록하거나 계정을 설정한 후에 메시지를 전송하도록 트리거할 수 있습니다. 등록 후 서로 다른 날에 전송될 메시지를 stagger하면 철저한 온보딩 프로세스를 만들 수 있습니다.
 
-## 사용자가 트리거된 캠페인을 받지 못한 이유는 무엇인가요?
+## 사용자가 내 트리거된 캠페인을 받지 못한 이유는 무엇인가요?
 
-트리거 이벤트를 완료한 사용자가 캠페인을 수신하지 못하게 됩니다.
+이러한 것들은 트리거 이벤트를 완료한 사용자가 캠페인을 받지 못하게 합니다:
 
 - 사용자가 시간 지연이 완전히 경과하기 전에 예외 이벤트를 완료했습니다.
-- Liquid [`abort_message` 로직]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages)이 사용되었고 `abort_message` 로직 또는 규칙에 따라 메시지가 중단되었습니다.
-- 시간 지연으로 인해 사용자는 기간 종료 후 캠페인을 받을 수 있는 자격을 얻게 됩니다.
-- 시간 지연으로 인해 사용자는 지정된 시간 외에는 캠페인을 받을 수 있는 자격을 얻지 못했습니다.
-- 사용자가 이미 캠페인을 받았으며 사용자는 다시 캠페인에 참여할 수 없습니다.
-- 사용자는 캠페인을 다시 받을 수 있지만, 일정 기간이 지난 후에만 다시 트리거할 수 있으며 해당 기간이 아직 경과하지 않았습니다.
+- Liquid [`abort_message` logic]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages)이 사용되었고 메시지가 `abort_message` 논리 또는 규칙에 따라 중단되었습니다.
+- 시간 지연으로 인해 사용자가 기간이 끝난 후 캠페인을 받을 자격이 생겼습니다.
+- 시간 지연으로 인해 사용자가 하루의 지정된 부분 외부에서 캠페인을 받을 자격이 생겼습니다.
+- 사용자는 이미 캠페인을 받았으며 사용자는 재자격이 되지 않습니다.
+- 사용자가 캠페인을 다시 받을 자격이 있지만, 특정 기간이 지나야만 다시 트리거할 수 있으며, 그 기간은 아직 경과되지 않았습니다.
 
-이벤트 발생 시점에 기록된 사용자 데이터로 트리거된 캠페인을 [세그먼트화하면]({{site.baseurl}}/user_guide/engagement_tools/segments/) [경쟁 조건이]({{site.baseurl}}/help/best_practices/race_conditions/#race-conditions) 발생할 수 있습니다. 이는 캠페인이 세분화되는 사용자 속성이 변경되었지만 캠페인이 전송될 때 사용자에 대한 변경 사항이 처리되지 않은 경우에 발생합니다. 캠페인은 가입 시 세그먼트 멤버십을 확인하기 때문에 사용자가 캠페인을 받지 못할 수 있습니다.
+[세분화]({{site.baseurl}}/user_guide/engagement_tools/segments/) 이벤트 발생 시 기록된 사용자 데이터에 대한 트리거된 캠페인은 [경쟁 조건]({{site.baseurl}}/help/best_practices/race_conditions/#race-conditions)을 초래할 수 있습니다. 이는 캠페인이 세분화된 사용자 속성이 변경되었지만, 캠페인이 전송될 때 사용자의 변경 사항이 처리되지 않았을 때 발생합니다. 캠페인이 진입 시 세그먼트 멤버십을 확인하므로, 이로 인해 사용자가 캠페인을 받지 못할 수 있습니다.
 
-예를 들어 방금 등록한 남성 사용자에게 이벤트 트리거 캠페인을 보내고 싶다고 가정해 보겠습니다. 사용자가 등록하면 커스텀 이벤트 `registration`을 기록하는 동시에 사용자의 `gender` 속성을 설정합니다. Braze가 사용자의 성별을 처리하기 전에 이벤트가 트리거되어 캠페인을 받지 못할 수도 있습니다.
+예를 들어, 방금 등록한 남성 사용자에게 이벤트 기반 캠페인을 보내고 싶다고 가정해 보겠습니다. 사용자가 등록할 때, 사용자 정의 이벤트 `registration`를 기록하고 동시에 사용자의 `gender` 속성을 설정합니다. 이 이벤트는 Braze가 사용자의 성별을 처리하기 전에 캠페인을 트리거할 수 있으며, 이로 인해 사용자가 캠페인을 받지 못할 수 있습니다.
 
-모범 사례로, 이벤트 전에 캠페인이 세분화되는 속성이 Braze 서버로 플러시되는지 확인하세요. If this isn't possible, the best way to guarantee delivery is to use [custom event properties]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties) to attach the relevant user properties to the event and apply a property filter for the specific event property instead of a segmentation filter. 예를 들어, 커스텀 이벤트 `registration`에 `gender` 속성정보를 추가하면 캠페인이 트리거될 때 필요한 데이터를 Braze가 확보할 수 있습니다.
+모범 사례로, 캠페인이 세분화된 속성이 이벤트 전에 Braze 서버에 플러시되도록 해야 합니다. 이것이 불가능한 경우, 배달을 보장하는 가장 좋은 방법은 [사용자 정의 이벤트 속성]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties)을 사용하여 관련 사용자 속성을 이벤트에 첨부하고 세분화 필터 대신 특정 이벤트 속성에 대한 속성 필터를 적용하는 것입니다. 예를 들어, Braze가 캠페인이 트리거될 때 필요한 데이터를 보장받기 위해 사용자 정의 이벤트 `registration`에 `gender` 속성을 추가해야 합니다.
 
-또한 캠페인이 액션 기반이고 지연이 있는 경우, **전송 시 세그먼트 멤버십 재평가** 옵션을 선택하여 메시지를 전송할 때 사용자가 여전히 타겟 오디언스에 속해 있는지 확인할 수 있습니다.
+또한, 캠페인이 행동 기반이고 지연이 있는 경우, 메시지가 전송될 때 사용자가 여전히 대상 청중의 일부인지 확인하기 위해 **전송 시 세그먼트 멤버십 재평가** 옵션을 확인할 수 있습니다.
 
-특정 사용자 지정 이벤트에 의해 캠페인이 트리거되고 세그먼트를 대상 그룹으로 선택한 경우, 사용자가 세그먼트에 포함되려면 동일한 사용자 지정 이벤트를 수행해야 합니다. 즉, 실행 기반 캠페인이 트리거되기 전에 사용자가 오디언스의 일부가 되어야 합니다. 트리거된 캠페인의 일반적인 워크플로우는 다음과 같습니다:
+캠페인이 특정 사용자 정의 이벤트에 의해 트리거되고 청중으로 세그먼트를 선택하는 경우, 사용자는 세그먼트에 포함되기 위해 동일한 사용자 정의 이벤트를 수행해야 합니다. 이는 사용자가 행동 기반 캠페인이 트리거되기 전에 청중의 일부가 되어야 함을 의미합니다. 트리거된 캠페인의 일반적인 워크플로우는 다음과 같습니다:
 
-1. **오디언스와 함께하기:** 사용자가 사용자 지정 이벤트를 수행하면 캠페인의 타겟 오디언스에 추가됩니다.
-2. **이메일 트리거:** 이메일이 전송되기 전에 사용자가 오디언스에 포함되어 있어야 하므로 이메일을 트리거하려면 커스텀 이벤트를 다시 수행해야 합니다.
+1. **청중에 참여하기:** 사용자가 사용자 정의 이벤트를 수행하면 캠페인의 대상 청중에 추가됩니다.
+2. **이메일 트리거하기:** 사용자는 이메일을 트리거하기 위해 사용자 정의 이벤트를 다시 수행해야 하며, 이메일이 전송되기 전에 청중의 일부가 되어야 합니다.
 
-모든 사용자를 포함하도록 대상 그룹을 변경하거나 이벤트를 수행할 것으로 예상되는 사용자가 이미 캠페인의 대상 그룹에 포함되어 있는지 확인하여 메시지를 트리거하는 것이 좋습니다.
+우리는 대상 청중을 모든 사용자를 포함하도록 변경하거나, 이벤트를 수행할 것으로 예상되는 사용자가 이미 캠페인 청중의 일부인지 확인할 것을 권장합니다.
 
-![]({% image_buster /assets/img_archive/reevaluate_segment_membership.png %})
+\![]({% image_buster /assets/img_archive/reevaluate_segment_membership.png %})
 
-### Troubleshooting custom events
+### 사용자 정의 이벤트 문제 해결
 
-First, confirm that the custom event is being passed to Braze. Go to **Analytics** > **Custom Events Report**, and then select the respective custom event and date range. If the event doesn't display, confirm that it's set up correctly and that the user performed the correct action.
+먼저, 사용자 정의 이벤트가 Braze에 전달되고 있는지 확인하십시오. **분석** > **사용자 정의 이벤트 보고서**로 이동한 다음, 해당 사용자 정의 이벤트와 날짜 범위를 선택하십시오. 이벤트가 표시되지 않으면, 올바르게 설정되었는지와 사용자가 올바른 작업을 수행했는지 확인하십시오.
 
-If the custom event displays, further troubleshoot by doing the following:
+사용자 정의 이벤트가 표시되면, 다음을 수행하여 추가 문제를 해결하십시오:
 
-- Check the user's profile download to confirm they triggered the event and when they did it. If the event was triggered, compare the timestamp for when the event was triggered to the time the campaign went live. The event may have been triggered before the campaign went live.
-- Review changelogs for the campaign and any segments used in targeting to determine if the user was in the segment when their custom event was triggered. If they weren't in the segment, they wouldn't have received the campaign.
-- Verify whether the user was entered into a control group through segmentation and consequently prevented from receiving the campaign.
-- If there is a scheduled delay, check if the user's custom event was triggered before the delay. If the event was triggered before the delay, they wouldn't have received the campaign.
+- 사용자의 프로필 다운로드를 확인하여 이벤트를 트리거했는지와 언제 트리거했는지 확인하십시오. 이벤트가 트리거되었다면, 이벤트가 트리거된 시간과 캠페인이 시작된 시간을 비교하십시오. 이벤트가 캠페인이 시작되기 전에 트리거되었을 수 있습니다.
+- 캠페인에 대한 변경 로그와 타겟팅에 사용된 세그먼트를 검토하여 사용자가 사용자 정의 이벤트가 트리거될 때 세그먼트에 있었는지 확인하십시오. 그들이 세그먼트에 없었다면, 캠페인을 받지 못했을 것입니다.
+- 사용자가 세분화를 통해 대조군에 들어갔는지 확인하고, 그로 인해 캠페인을 받지 못했는지 확인하십시오.
+- 예정된 지연이 있는 경우, 사용자의 사용자 정의 이벤트가 지연 전에 트리거되었는지 확인하십시오. 이벤트가 지연 전에 트리거되었다면, 그들은 캠페인을 받지 못했을 것입니다.
 
 {% alert note %}
-In-app messages can only be triggered by events sent through the SDK, not the REST API.
+앱 내 메시지는 SDK를 통해 전송된 이벤트에 의해서만 트리거될 수 있으며, REST API에 의해서는 트리거될 수 없습니다.
 {% endalert %}
 

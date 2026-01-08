@@ -1,5 +1,5 @@
 ---
-nav_title: Configuration de SMS
+nav_title: Configuration des SMS
 config_only: true
 noindex: true
 layout: blank_config

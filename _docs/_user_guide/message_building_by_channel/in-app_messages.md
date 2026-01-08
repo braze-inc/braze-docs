@@ -3,54 +3,19 @@ nav_title: "In-app messages"
 article_title: In-App Messages
 page_order: 2
 alias: /in-app_messages/
-layout: dev_guide
-guide_top_header: "In-App Messages"
-guide_top_text: "In-app messages help you get content to your user without interrupting their day with a push notification, as these messages don't deliver outside of the user's app and won't intrude on their home screen. <br><br>Customized and tailored in-app messages enhance the user experience and help your audience get the most value out of your app. With a variety of layouts and customization tools to choose from, in-app messages engage your users more than ever before. They come with context, have lower urgency, and are delivered when the user is active within your app. For examples of in-app messages, check out our <a href='https://www.braze.com/customers'>customer stories</a>."
 description: "This landing page is home to all things in-app message. Here, you can find articles on how to create in-app messages, the drag-and-drop editor, how to customize your messages, reporting, and more."
 channel:
   - in-app messages
 search_rank: 5
-guide_featured_title: "Popular articles"
-guide_featured_list:
-- name: "Drag-And-Drop Editor"
-  link: /docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/
-  image: /assets/img/braze_icons/phone-02.svg
-- name: "Traditional Editor"
-  link: /docs/user_guide/message_building_by_channel/in-app_messages/traditional/
-  image: /assets/img/braze_icons/phone-02.svg
-- name: "Creative Details"
-  link: /docs/user_guide/message_building_by_channel/in-app_messages/creative_details/
-  image: /assets/img/braze_icons/brush-02.svg
-
-guide_menu_title: "More articles"
-guide_menu_list:
-- name: "Testing"
-  link: /docs/user_guide/message_building_by_channel/in-app_messages/testing/
-  image: /assets/img/braze_icons/beaker-02.svg
-- name: "Reporting"
-  link: /docs/user_guide/message_building_by_channel/in-app_messages/reporting/
-  image: /assets/img/braze_icons/bar-chart-01.svg
-- name: "Dark Mode"
-  link: /docs/user_guide/message_building_by_channel/in-app_messages/traditional/dark-mode/
-  image: /assets/img/braze_icons/phone-02.svg
-- name: "App Store Rating Prompt"
-  link: /docs/user_guide/message_building_by_channel/in-app_messages/ios_app_rating_prompt/
-  image: /assets/img/braze_icons/star-01.svg
-- name: "Simple survey"
-  link: /docs/user_guide/message_building_by_channel/in-app_messages/traditional/templates/simple_survey/
-  image: /assets/img/braze_icons/bar-chart-07.svg
-- name: "Locales in Messages"
-  link: /docs/locales_in_messages/
-  image: /assets/img/braze_icons/translate-01.svg
-- name: "Best Practices"
-  link: /docs/user_guide/message_building_by_channel/in-app_messages/best_practices
-  image: /assets/img/braze_icons/check-square-broken.svg
-- name: "FAQ"
-  link: /docs/user_guide/message_building_by_channel/in-app_messages/faq/
-  image: /assets/img/braze_icons/annotation-question.svg
 ---
 
-## [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/messaging-channels-in-app-in-browser){: style="float:right;width:120px;border:0;" class="noimgborder"} Potential use cases
+# [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/messaging-channels-in-app-in-browser){: style="float:right;width:120px;border:0;" class="noimgborder"} In-app messages
+
+> In-app messages help you get content to your user without interrupting their day with a push notification, as these messages don't deliver outside of the user's app and won't intrude on their home screen. 
+
+Customized and tailored in-app messages enhance the user experience and help your audience get the most value out of your app. With a variety of layouts and customization tools to choose from, in-app messages engage your users more than ever before. They come with context, have lower urgency, and are delivered when the user is active within your app. For examples of in-app messages, check out our [customer stories](https://www.braze.com/customers/).
+
+## Use cases
 
 With the rich level of content offered by in-app messages, you can leverage this channel for a variety of use cases:
 
@@ -81,16 +46,12 @@ Slide-up messages typically appear at the top and bottom of the app screen (you 
 
 ![Slideup in-app message appearing from the bottom of the app screen. The slide-up includes an icon image and a brief message.]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
 
-<br>
-
 {% endtab %}
 {% tab Modal %}
 
 Modals appear in the center of the device's screen with a screen overlay that helps it stand out from your app in the background. These are perfect for not-so-subtly suggesting that your user take advantage of a sale or giveaway.
 
 ![Modal in-app message appearing in the center of an app and website as a dialog. The modal includes an image, header, message body, and two buttons.]({% image_buster /assets/img/modal-behavior.gif %}){: style="border:0px;"}
-
-<br>
 
 {% endtab %}
 {% tab Fullscreen %}
@@ -99,12 +60,74 @@ Fullscreen messages are exactly what you'd expect—they take up the whole scree
 
 ![Fullscreen in-app message taking over an app screen. The fullscreen message includes a large image, header, message body, and two buttons.]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
 
-<br>
-
 {% endtab %}
 {% endtabs %}
 
-In addition to these out-of-the box message templates, you can also further customize your messaging using custom HTML in-app messages, web modals with CSS, or web email capture forms. For more information, refer to [Customization]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/).
+In addition to these default message templates, you can also further customize your messaging using custom HTML in-app messages, web modals with CSS, or web email capture forms. For more information, refer to [Customization]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/).
+
+## Templated in-app messages
+
+In-app messages are delivered as templated in-app messages when **Re-evaluate campaign eligibility before displaying** is selected or if any of the following Liquid tags exist in the message:
+
+- `canvas_entry_properties`
+- `connected_content`
+- SMS variables such as {% raw %}`{sms.${*}}`{% endraw %}
+- `catalog_items`
+- `catalog_selection_items`
+- `event_properties`
+
+This means that during session start, the device will receive the trigger of that in-app message instead of the entire message. When the user triggers the in-app message, the user's device will make a network request to fetch the actual message.
+
+{% alert note %}
+The message will not be delivered if the device doesn't have access to the internet. The message might not be delivered if the Liquid logic takes too long to resolve.
+{% endalert %}
+
+## Abort behavior
+
+At Braze, an abort occurs when a user takes an action that makes them eligible to receive a message, but they don't receive the message because its Liquid logic marks them as ineligible. For example:
+
+1. Sam performs an action which should trigger an email campaign.
+2. The email’s body contains Liquid logic that says if a custom attribute score is less than 50, do not send this email.
+3. Sam's custom attribute score is 20.
+4. Braze recognizes that Sam shouldn’t receive this email, and the email is aborted.
+5. An abort event is logged.
+
+However, because in-app messages are a pull channel, aborts work a little differently for them.
+
+### In-app message abort behavior
+
+In-app messages are pulled in by the device at session start and cached on the device, so regardless of Internet connection quality, the message can be delivered instantly to the user. For example, if a user receives five in-app messages within their session, they will receive all five on session start. The messages will be cached locally and appear when their defined trigger events occur (session start, user clicks a button which logs a custom event, or other).
+
+In other words, the logic that determines if we should abort an in-app message occurs **before** the trigger has occurred. To demonstrate this, let's say Sam from the email example is subscribed to push notifications.
+
+1. Sam starts a session by launching a Braze-powered app on their phone.
+2. Based on the audience criteria of the active campaigns in the workspace, Sam could be eligible for five different campaigns. All five are pulled into their phone and cached.
+3. Sam **has not** performed any actions that would trigger these messages, but they could receive those messages in the session.
+4. The Liquid in two of the in-app messages has rules that exclude Sam from receiving the message (such as their score custom attribute not being high enough).
+5. Sam is not sent the two in-app messages that exclude them, but they are sent the other three messages.
+6. No abort events are logged.
+
+Braze doesn't log any abort events in Sam's case because this doesn't fulfill our definition of an abort; Sam **did not** perform any actions that would trigger the messages. For in-app messages, users never actually perform the trigger before Braze determines they shouldn’t see the message.
+
+#### Templated in-app message abort behavior
+
+[Templated in-app messages](#templated-in-app-messages) force the SDK to reevaluate if a message should display when the trigger event occurs. This has a different abort behavior. To demonstrate, let's consider this example:
+
+1. Sam starts a Braze session by launching a Braze-powered app on their phone.
+2. The audience criteria of the active campaigns say Sam could be eligible for a templated in-app message, so the trigger information is sent to their device without the message payload.
+3. Sam selects a button that logs a custom event, triggering the templated in-app message.
+4. Sam's device makes a network request to fetch the in-app message.
+5. The message's Liquid logic leads to an abort, so Braze logs this as an abort; Sam performed the trigger action prior to this evaluation.
+
+##### Comparing in-app message abort behavior
+
+This table compares the in-app message flows that Sam experienced:
+
+| In-app message | Abort behavior |
+| --- | --- |
+| Standard | An abort event was not logged because Sam didn't perform any actions that would trigger a message.<br><br>Standard in-app messages don’t log aborts because the definition of an abort is “didn’t see the message despite performing the trigger action.” Because in-app messages are delivered to the device before the trigger actions occur, it doesn’t make sense to consider in-app messages omitted because of Liquid logic. |
+| Templated | An abort event was logged because Sam performed the trigger action to trigger the templated in-app message, but received an abort in the Liquid templating. <br><br>Templated in-app messages log aborts because the Liquid evaluation occurs after the trigger action has been performed. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## More resources
 

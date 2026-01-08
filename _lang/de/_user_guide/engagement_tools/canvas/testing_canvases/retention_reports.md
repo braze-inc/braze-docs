@@ -1,5 +1,5 @@
 ---
-nav_title: Aufbewahrungsberichte
+nav_title: Bindungsberichte
 page_order: 3
 noindex: true
 layout: redirect

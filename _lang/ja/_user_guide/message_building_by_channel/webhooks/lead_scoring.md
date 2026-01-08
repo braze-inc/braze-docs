@@ -1,5 +1,5 @@
 ---
-nav_title: リード・スコアリング
+nav_title: リードスコアリング
 page_order: 6
 noindex: true
 layout: redirect

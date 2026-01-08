@@ -66,7 +66,7 @@ Judoは、モバイルアプリにJudoとBraze SDKを並べて統合するため
 
 Brazeプラットフォームから、**カスタムコードの**メッセージタイプでBrazeアプリ内メッセージキャンペーンを作成する。次に、カスタムタイプとして [**HTML Upload**] を選択します。メッセージのコンテンツに、ベースのアプリ内メッセージングのフィールドが取り込まれていることを確認してください。このコンテンツはユーザーには表示されません。
 
-![「カスタムコード」メッセージタイプを選択したときのダッシュボードの画像。]({% image_buster /assets/img/judo/braze-campaign-select-custom-type.png %})
+![カスタムコード」メッセージタイプを選択したときのダッシュボードのイメージ。]({% image_buster /assets/img/judo/braze-campaign-select-custom-type.png %})
 
 次に、以下の最小限のHTMLスニペットを使って、フォームのバリデーションを満たす： 
 ```
@@ -77,8 +77,8 @@ JudoがこれをJudoエクスペリエンスに書き換えて置き換えるの
 
 ![キャンペーンの作成ステップに追加されたフォーム検証コードを示す画像。]({% image_buster /assets/img/judo/braze-html-boilerplate.png %})
 
-### ステップ2: 柔道のキーと値のペアを設定する
-![この統合に必要な１つのキー値ペアを示す画像。「キー」は「judo-experience」、「値」は Judo リンクです。.]({% image_buster /assets/img/judo/braze-campaign-extras-judo-experience.png %}){: style="float:right;max-width:50%;margin-left:15px;"}
+### ステップ2:柔道のキーと値のペアを設定する
+![この統合に必要な１つのキー値ペアを示す。「キー」は「judo-experience」、「値」は Judo リンクである。]({% image_buster /assets/img/judo/braze-campaign-extras-judo-experience.png %}){: style="float:right;max-width:50%;margin-left:15px;"}
 
 キャンペーンに[カスタムキーバリューペアを]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/)設定する。キーは`judo-experience` 。ここに表示したい柔道体験のURLを記入する。その後、Judo-Braze 統合ライブラリはハンドラーでこのキー値ペアを検出し、このペアを使用して Judo エクスペリエンスを標準 Braze アプリ内メッセージ UI の代わりに挿入します。
 <br><br>

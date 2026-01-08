@@ -22,12 +22,12 @@ channel:
 キャンペーンとキャンバスの両方で、[メッセージバリアントレベルで]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/#step-1-create-your-campaign)リンク短縮とクリック追跡をオンにすることができる。 
 
 URLの長さは、有効になっているトラッキングの種類によって決まる：
-- **基本的なトラッキング**はキャンペーンレベルのクリック追跡を可能にします。静的 URL の長さは 20 文字で、パーソナライズされた URL の長さは 25 文字です。
-- **高度なトラッキング** は、キャンペーンレベルおよびユーザーレベルのクリックトラッキングを有効にし、クリックに依存するセグメンテーションおよびターゲット変更機能を使用できるようにします。クリックは、Currentsを通じて送信される[SMSクリックイベント]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/)も生成します。高度なトラッキングを備えた静的URLは27〜28文字の長さになり、URLをクリックしたユーザーのセグメントを作成することができます。パーソナライズされたURL の場合、長さは32 ～33 文字になります。
+- **基本的なトラッキング**はキャンペーンレベルのクリック追跡を可能にします。スタティックURL の長さは20 文字、パーソナライズされたURL の長さは25 文字です。
+- **高度な"トラッキング** は、キャンペーンレベルおよびユーザーレベルのクリック"トラッキングを有効にし、クリックに依存するセグメンテーションおよびリターゲティング機能を使用できるようにします。クリックは、Currents経由で送信される[SMSクリックイベント]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/)も生成します。高度な"トラッキングを持つスタティックURL の長さは27 ～28 文字です。これにより、URL をクリックしたユーザーのSegmentを作成できます。パーソナライズされた URL の長さは 32 ～ 33 文字です。
 
-リンクは、共有ショートドメイン（`brz.ai`）を使用して短縮されます。例として、URL は次のようになります: `https://brz.ai/8jshX` (基本的、静的) または `https://brz.ai/p/8jshX/2dj8d` (高度な、パーソナライゼーション)。詳細については[テスト](#testing)を参照してください。
+リンクは、共有ショートドメイン(`brz.ai`) を使用して短縮されます。例として、URL は次のようになります: `https://brz.ai/8jshX` (基本的、静的) または `https://brz.ai/p/8jshX/2dj8d` (高度な、パーソナライゼーション)。詳細については[テスト](#testing)を参照してください。
 
-`http://` または`https://` で始まる静的URLはすべて短縮される。静的な短縮URLは、作成日から1年間有効です。Liquidパーソナライゼーションを含む短縮URLは2か月間有効です。
+`http://` または`https://` で始まる静的URL は短縮されます。静的短縮URL は、作成日から1 年間有効です。リキッドパーソナライゼーションを含む短縮URL は、2 か月間有効です。
 
 {% alert note %}
 BrazeAI<sup>TM</sup>[インテリジェント・チャネル・フィルタ]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_channel/)を使用し、SMSおよびRCSチャネルを選択可能にする場合は、高度なトラッキングによるリンク短縮をオンにします。
@@ -37,15 +37,15 @@ BrazeAI<sup>TM</sup>[インテリジェント・チャネル・フィルタ]({{s
 
 リンク短縮を使用するには、メッセージコンポーザーのリンク短縮トグルがオンになっていることを確認します。次に、ベーシックトラッキングまたはアドバンストトラッキングを使用することを選択します。
 
-![リンク短縮のトグルがあるメッセージ作成画面。]({% image_buster /assets/img/link_shortening/shortening1.png %})
+![メッセージ作成画面にリンク短縮のトグルがついた。]({% image_buster /assets/img/link_shortening/shortening1.png %})
 
-Braze は、`http://` または`https://` で始まるURL のみを認識します。URL が認識されると、**プレビュー** セクションがプレースホルダURL で更新されます。BrazeはURLを短縮した後の長さを見積もりますが、警告が表示され、テストユーザーを選択してメッセージを下書きとして保存するよう促され、より正確な見積もりが得られます。
+Braze は、`http://` または`https://` で始まるURL のみを認識します。URL が認識されると、**プレビュー** セクションがプレースホルダURL で更新されます。Braze は、短縮後のURL の長さを見積もりますが、テストユーザーを選択し、メッセージを下書きとして保存してキュレートの見積もりを増やすように促す警告が表示されます。
 
 ![[メッセージ] ボックスに長い URL が表示され、プレビューに短縮リンクが生成されたメッセージ作成画面。]({% image_buster /assets/img/link_shortening/shortening3.png %})
 
 ### UTMパラメータの追加
 
-{% multi_lang_include click_tracking.md section='UTM parameters' %}
+{% multi_lang_include analytics/click_tracking.md section='UTM parameters' %}
 
 ## URL での Liquid パーソナライゼーション
 
@@ -76,7 +76,7 @@ https://example.com/{{url_var}}
 
 LiquidによってレンダリングされるURLは、APIトリガーのプロパティに含まれているものも短縮されます。たとえば、{% raw %}`{{api_trigger_properties.${url_value}}}`{% endraw %} が有効なURL を表す場合、メッセージを送信する前にそのURL を短縮して追跡します。 
 
-### /messages/send エンドポイントでのURL の短縮
+### `/messages/send`エンドポイントでURLを短縮
 
 リンク短縮は、[`/messages/send` endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/) を介してAPI 専用メッセージに対してもオンになります。基本的または高度なトラッキングをオンにするには、`link_shortening_enabled` または `user_click_tracking_enabled` リクエストパラメーターを使用します。
 
@@ -92,12 +92,14 @@ LiquidによってレンダリングされるURLは、APIトリガーのプロ�
 
 キャンペーンまたはキャンバスを起動する前に、まずメッセージをプレビューしてテストすることをお勧めします。そのためには、[**テスト**] タブに移動して SMS または RCS メッセージをプレビューし、[コンテンツテストグループ]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab#content-test-groups)または個々のユーザーにこれらのメッセージを送信します。 
 
-このプレビューは、関連するパーソナライゼーションと短縮されたURL で更新されます。文字数と[課金対象のセグメント]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/segments/)も、レンダリングされたパーソナライゼーションと短縮URLを反映するように更新されます。 
+このプレビュー 更新には、関連するパーソナライゼーションと短縮されたURL が含まれます。文字数と[課金可能なSegments]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/segments/) も、レンダリングされたパーソナライゼーションと短縮されたURL を反映するために更新です。
 
-テストメッセージを送信する前に、キャンペーンまたはキャンバスを保存して、メッセージに送信される短縮URLの表現を受け取るようにしてください。テスト送信前にキャンペーンまたはキャンバスが保存されていない場合、テスト送信にはプレースホルダURL が含まれます。
+キャンペーンまたはキャンバスを保存してから、テストメッセージを送信し、メッセージに送信された短縮URL の表現を受け取るようにしてください。キャンペーンまたはキャンバスがテスト送信前に保存されていない場合、テスト送信にはプレースホルダURL が含まれます。
+
+キャンバスが&quot で耳をアプリするには、短縮されたSMS リンクとクォートをクリックします。フィルターでは、短縮リンクを含むキャンバスステップも詳細"トラッキングで有効にする必要があります。これにより、ユーザーレベルのクリック"トラッキングが可能になります。ショートリンクが基本"トラッキングで設定されている場合、ショートリンククリックイベントをフィルターするオプションは使用できません。
 
 {% alert important %}
-アクティブなキャンバス内にドラフトが作成された場合、短縮されたURL は生成されません。キャンバスドラフトがアクティブになると、実際の短縮URL が生成されます。
+アクティブなキャンバス内にドラフトが作成された場合、短縮されたURL は生成されません。実際に短縮されたURL は、キャンバスの下書きがアクティブになったときに生成されます。
 {% endalert %}
 
 ![テスト受信者を選択するためのフィールドがあるメッセージの [テスト] タブ。]({% image_buster /assets/img/link_shortening/shortening2.png %})
@@ -108,31 +110,35 @@ Liquidパーソナライゼーションと短縮URLは、ユーザーが選択�
 
 ## クリックトラッキング
 
-リンク短縮がオンになっている場合、[**SMS/MMS/RCS のパフォーマンス**] テーブルには、バリアントごとのクリックイベントの数と関連するクリック率を示す**総クリック数**というタイトルの列が含まれます。メトリックの詳細については、[メッセージパフォーマンス]({{site.baseurl}}/sms_mms_rcs_reporting/)を参照してください。
+リンク短縮が有効になっている場合、**SMS/MMS/RCS Performance** テーブルには、**Total Clicks** という名前の列が含まれ、バリアントごとのクリックイベント数と関連するクリック率が表示されます。メトリックの詳細については、[メッセージパフォーマンス]({{site.baseurl}}/sms_mms_rcs_reporting/)を参照してください。
 
-![SMS およびMMS パフォーマンスメトリックテーブル。]({% image_buster /assets/img/link_shortening/shortening4.png %})
+![SMSとMMSのパフォーマンス・メトリクス表。]({% image_buster /assets/img/link_shortening/shortening4.png %})
 
-[**過去のパフォーマンス**] と [**SMS/MMS/RCS のス**] テーブルには、**総クリック数**のオプションも含まれており、クリックイベントの日次時系列が表示されます。クリック数はリダイレクト時（例えば、ユーザーがリンクを訪問したとき）に増加し、ユーザーごとに複数回増加することがあります。
+**Historical Performance**および**SMS/MMS/RCS Performance**テーブルには、**Total Clicks**のオプションも含まれ、毎日のクリックイベントの時系列が表示されます。クリック数はリダイレクト時（例えば、ユーザーがリンクを訪問したとき）に増加し、ユーザーごとに複数回増加することがあります。
 
 ## ユーザーのリターゲティング
 
 リターゲットのガイダンスについては、[リターゲット]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/#filter-by-advanced-tracking-links)を参照してください。
 
-{% multi_lang_include click_tracking.md section='Custom Domains' %}
+{% multi_lang_include analytics/click_tracking.md section='Custom Domains' %}
 
-{% multi_lang_include click_tracking.md section='Frequently Asked Questions' %}
+{% multi_lang_include analytics/click_tracking.md section='Frequently Asked Questions' %}
 
 ### URL をクリックしている個々のユーザーを特定することはできますか?
 
 はい。**Advanced Tracking** をオンにすると、Currents 経由で送信される[SMS リターゲティングフィルタ]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/retargeting/)または SMS クリックイベント(`users.messages.sms.ShortLinkClick`)を利用して、URL をクリックしたユーザーをリターゲティングできます。
 
 {% alert note %}
-現時点では、RCS クリックイベントは Currents 経由では使用できません。
+現時点では、RCSクリックイベントはCurrentsからは利用できません。
 {% endalert %}
 
 ### リンク短縮作業は、ディープリンクやユニバーサルリンクと連携していますか?
 
-リンク短縮はディープリンクでは機能しない。BranchやAppsFlyerなどのプロバイダーからユニバーサルリンクを短縮することはできるが、Brazeでは、その際に発生する可能性のある問題（アトリビューションが壊れる、リダイレクトが発生するなど）のトラブルシューティングはできない。
+リンク短縮はディープリンクでは機能しない。または、Branch やAppsFlyer などのサードパーティプロバイダからのユニバーサルリンクを短縮することもできますが、ユーザー s で短いリダイレクトまたは" flickering" エフェクトが発生する場合があります。これは、アプリ 開封リングをサポートするユニバーサルリンクに解決する前に、短縮されたリンクルートが最初にウェブを通過するためです。さらに、Braze は、アトリビューションの切断や予期しないリダイレクトの原因など、ユニバーサルリンクの短縮時に発生する可能性のある問題をトラブルシューティングできません。
+
+{% alert note %}
+ユニバーサルリンクを使用したリンク短縮を実装する場合は、事前にユーザーエクスペリエンスをテストして、期待を満たしていることを確認してください。
+{% endalert %}
 
 ### `send_ids` はSMS クリックイベントに関連付けられていますか?
 

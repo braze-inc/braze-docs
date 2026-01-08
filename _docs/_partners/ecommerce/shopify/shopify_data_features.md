@@ -469,7 +469,7 @@ For more information on how to build out a Liquid `for` loop to dynamically add 
 {% subtab Checkout started %}
 **Event**: `ecommerce.checkout_started`<br>
 **Type**: Recommended event<br>
-**Triggered**: When a customer adds, removes, or updates their shopping cart<br>
+**Triggered**: When a user navigates to the checkout page<br>
 **Use Case**: Checkout abandonment
 
 For Abandoned Checkout Canvases, you first need to use the following Liquid tag:
@@ -743,7 +743,7 @@ Shopify’s checkout completed webhook doesn't contain product URLs or image URL
 {% endraw %}
 
 {% alert note %}
-The Shopify integration currently doesn't support populating the Braze [purchase event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events#purchase-events). As a result, purchase filters, Liquid tags, action-based triggers, and analytics should use the ecommerce.order_placed event. 
+The Shopify integration currently doesn't support populating the Braze [purchase event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events#purchase-events). As a result, purchase filters, Liquid tags, action-based triggers, and analytics should use the `ecommerce.order_placed` event. 
 {% endalert %}
 
 {% endsubtab %}
@@ -752,6 +752,7 @@ The Shopify integration currently doesn't support populating the Braze [purchase
 {% endtabs %}
 
 ## Supported Shopify custom attributes
+
 {% tabs local %}
 {% tab Example Payload %}
 {% subtabs %}
@@ -784,6 +785,15 @@ The Shopify integration currently doesn't support populating the Braze [purchase
 | `shopify_zipcode` | The customer's zipcode from their default address. |
 | `shopify_province` | The customer's province from their default address. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+
+{% alert important %}
+A known issue with the current Shopify API version prevents the `shopify_last_order_name` user attribute from correctly populating. The impact on users is as follows:<br><br>
+
+- **Existing users:** For any user who already has a value for `shopify_last_order_name`, that value persists but is not updated by subsequent orders.
+- **New users:** For any new users, the field does not populate and remains empty or null.
+
+This page will be updated after Shopify resolves this issue.
+{% endalert %}
 
 ### Liquid personalization
 

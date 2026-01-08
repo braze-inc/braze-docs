@@ -1,7 +1,7 @@
 ---
-nav_title: Abfrage-Templates
+nav_title: Templates für Abfragen
 article_title: Query Builder Templates
-page_order: 0
+page_order: 1
 page_type: reference
 toc_headers: h2
 description: "Dieser referenzierte Artikel listet die Arten von Berichten auf, die Sie mit Braze-Daten aus Snowflake im Query Builder erstellen können."

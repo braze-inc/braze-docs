@@ -1,5 +1,5 @@
 ---
-nav_title: CSSインライニング
+nav_title: CSSインライン展開
 article_title: CSSインライニング
 page_order: 5.1
 description: "このリファレンス記事では、CSSのインライン展開を有効にする方法といくつかのベストプラクティスについて説明します。"
@@ -18,7 +18,7 @@ channel:
 
 HTMLエディターの [**送信情報**] タブにある [**インライン CSS を有効にする**] トグルを使用して、メールメッセージに対する CSS インライン展開の有効または無効をコントロールできます。
 
-![HTML 作成画面で CSS インライン展開を管理するためのチェックボックス。]({% image_buster /assets/img_archive/css-inline2.png %}){: style="max-width:40%;"}
+![HTML 作成画面で CSS のインライン化を管理するためのチェックボックス。]({% image_buster /assets/img_archive/css-inline2.png %}){: style="max-width:40%;"}
 
 ### デフォルトのインライン化状態
 

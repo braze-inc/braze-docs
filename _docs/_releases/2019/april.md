@@ -17,7 +17,7 @@ You can now export subscription group state change data from Braze to [Segment](
 Additionally, the property `canvas_step_id` has been added to available [Conversion Events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/#conversion-events).
 
 {% alert important %}
-To take advantage of these updates, you will need to edit your Currents connector settings and enable the events you want to use. Reach out to your account manager if you have any questions.
+To take advantage of these updates, you will need to edit your Currents connector settings and enable the events you want to use. Contact your account manager if you have any questions.
 {% endalert %}
 
 ## Subscription groups archiving

@@ -1,6 +1,6 @@
 ---
-nav_title: Managing templates
-article_title: Managing Templates
+nav_title: Manage templates
+article_title: Manage Templates
 page_order: 3
 
 page_type: reference
@@ -11,7 +11,7 @@ tool:
 
 ---
 
-# Managing templates
+# Manage templates
 
 > Archiving or duplicating templates can help better organize and manage them. This reference article covers how to archive and duplicate templates in the **Templates** section of the Braze dashboard.
 

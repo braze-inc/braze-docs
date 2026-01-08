@@ -1,16 +1,20 @@
 ---
-nav_title: データ収集のマネージャー
-article_title: Braze SDKのデータ収集マネージャー
+nav_title: データ収集の管理
+article_title: Braze SDK のデータ収集の管理
 page_order: 8
 description: "Braze SDKのデータ収集を管理する方法を学習する。"
 
 ---
 
-# データ収集のマネージャー
+# データ収集の管理
 
-> Braze SDKのデータ収集を管理する方法を学習し、必要に応じてデータプライバシー規制に準拠できるようにする。
+> Braze SDK のデータ収集を管理する方法を学習し、必要に応じてデータプライバシー規制に準拠できるようにします。
 
 {% sdktabs %}
+{% sdktab web %}
+{% multi_lang_include developer_guide/web/analytics/managing_data_collection.md %}
+{% endsdktab %}
+
 {% sdktab android %}
 {% multi_lang_include developer_guide/android/analytics/managing_data_collection.md %}
 {% endsdktab %}
@@ -21,9 +25,5 @@ description: "Braze SDKのデータ収集を管理する方法を学習する。
 
 {% sdktab web %}
 {% multi_lang_include developer_guide/web/analytics/managing_data_collection.md %}
-{% endsdktab %}
-
-{% sdktab unreal engine %}
-{% multi_lang_include developer_guide/unreal_engine/analytics/managing_data_collection.md %}
 {% endsdktab %}
 {% endsdktabs %}

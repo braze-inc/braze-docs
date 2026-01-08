@@ -1,0 +1,109 @@
+# Renames PRs starting with 'i18n_phrase-' and adds 'phrase-translation' label.
+name: Translation tasks
+
+on:
+  pull_request:
+    # add more types if needed, but only the minimum required for each job in the workflow.
+    types: [opened, reopened, synchronize, edited]
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+jobs:
+  translation-tasks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout PR branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Fix inline image syntax
+        run: |
+          branch="${{ github.event.pull_request.head.ref }}"
+          
+          # Only run for phrase translation branches
+          if [[ ! "$branch" =~ ^i18n_phrase- ]]; then
+            echo "Skipping: not a phrase translation branch"
+            exit 0
+          fi
+          
+          # Fix the syntax
+          find ./_docs ./_lang -type f -exec sed -i 's/\[\\!\[/[![/g' {} + 2>/dev/null || true
+          
+          # Check if there are changes
+          if git diff --quiet; then
+            echo "No changes needed"
+            exit 0
+          fi
+          
+          # Configure git
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Commit and push
+          git add ./_docs ./_lang
+          git commit -m "fix: correct inline image syntax [\![ to [!["
+          git push
+
+      - name: Rename title and add label
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const pr = context.payload.pull_request;
+            const branch = pr.head.ref;
+            core.info(`Branch: ${branch}`);
+
+            // 1) If branch does not start with i18n_phrase-, mark as passed
+            if (!branch.startsWith('i18n_phrase-')) {
+              core.info(`Pass: non-Phrase branch (${branch}).`);
+              return;
+            }
+
+            // 2) Skip if label already present (but still pass)
+            const hasLabel = (pr.labels || []).some(l => l.name === 'phrase-translation');
+            if (hasLabel) {
+              core.info('Pass: label already present.');
+              return;
+            }
+
+            // 3) Parse i18n_phrase-<lang>-<YYYYMMDD> with optional trailing content
+            const m = branch.match(/^i18n_phrase-([a-z_]+)-(\d{8})(?:--\d+)?$/);
+            if (!m) {
+              core.info(`Pass: branch pattern not matched: ${branch}`);
+              return;
+            }
+            const lang = m[1];
+            const y = m[2].slice(0,4);
+            const mo = m[2].slice(4,6);
+            const d = m[2].slice(6,8);
+
+            const date = new Date(Date.UTC(+y, +mo - 1, +d));
+            const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+            const pretty = `${months[date.getUTCMonth()]} ${date.getUTCDate()}, ${date.getUTCFullYear()}`;
+            const newTitle = `Phrase translations for '${lang}' ${pretty}`;
+
+            if (pr.title !== newTitle) {
+              await github.rest.pulls.update({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: pr.number,
+                title: newTitle
+              });
+              core.info(`Title set: ${newTitle}`);
+            } else {
+              core.info('Title already correct.');
+            }
+
+            await github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: pr.number,
+              labels: ['phrase-translation']
+            });
+            core.info('Label added.');

@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Friendbuy
 
-> Leverage the integration between Friendbuy and Braze to expand your email and SMS capabilities while effortlessly automating your referral and loyalty program communications. Braze will generate customer profiles for all the opted-in phone numbers collected via Friendbuy.
+> Use the integration between [Friendbuy](https://www.friendbuy.com/) and Braze to expand your email and SMS capabilities while effortlessly automating your referral and loyalty program communications. Braze will generate customer profiles for all the opted-in phone numbers collected via Friendbuy.
 
 _This integration is maintained by Friendbuy._
 

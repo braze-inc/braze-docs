@@ -1,6 +1,6 @@
 ---
-nav_title: Setting up IPs & domains
-article_title: Setting Up IPs & Domains
+nav_title: Set up IPs & domains
+article_title: Set Up IPs & Domains
 page_order: 0
 page_type: tutorial
 channel: email
@@ -8,7 +8,7 @@ description: "This how-to article will walk you through how to set up your IPs a
 
 ---
 
-# Setting up IPs and domains
+# Set up IPs and domains
 
 {% multi_lang_include video.html id="iTm3yQkJ0UU" align="right"  %}
 
@@ -31,6 +31,8 @@ After receiving your email, we'll get to work configuring your IPs, domains and 
 ### Step 3: Add DNS records
 
 After your IPs, domains, subdomains, and IP pools are configured, we'll send you a list of DNS records. Ask your engineers and developers to add these DNS records where needed, and after they have been added, let the Braze Onboarding team know.
+
+{% multi_lang_include dns_records.md %}
 
 ### Next steps
 

@@ -92,7 +92,7 @@ Use the email address as the identifier in the user track endpoint.
 }
 ```
 {% alert important %}
-This functionality is currently in early access.
+This functionality is in early access.
 {% endalert %}
 
 ## Syncing data to user profiles
@@ -110,7 +110,7 @@ This functionality is currently in early access.
 ## Sending audiences of users to Braze
 
 [Cohort import sync partner documentation]({{site.baseurl}}/partners/isv_partners/cohort_import/)<br>
-- Audiences of users can be synced to Braze as a cohort using the Braze Cohort Import API endpoints. Rather than these audiences being stored on the user profile as user attributes, customers can build and target this cohort through a Partner branded filter within our Segmentation tool. This can make finding and targeting a particular segment of users easier and more simple for customers.
+- Audiences of users can be synced to Braze as a cohort using the Braze Cohort Import API endpoints. Rather than these audiences being stored on the user profile as user attributes, customers can build and target this cohort through a Partner branded filter within our Segmentation tool. This enables you to more efficiently find and target a particular segment of users.
 - Cohort Import endpoints are not public and are specific to each Partner. For this reason, syncs to the cohort endpoints will not count toward a customer’s workspace rate limits. 
 
 [User track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)<br>

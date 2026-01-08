@@ -5,8 +5,8 @@ article_title: 知っておくべきSMS用語
 alias: /sms_terms_to_know/
 
 layout: glossary_page
-glossary_top_header: "Terms to Know"
-glossary_top_text: "SMS–everyone has it and knows what it is. What they don't know is the nuance. Check out the following terms to learn more about SMS ecosystems, technologies, and processes."
+glossary_top_header: "知っておくべき用語"
+glossary_top_text: "SMS-誰もが持っているし、それが何であるかも知っている。彼らが知らないのはそのニュアンスだ。SMSのエコシステム、テクノロジー、プロセスについては、以下の用語を学習してほしい。"
 page_type: glossary
 description: "この用語集は、知っておくべきさまざまなSMS用語を定義しています。"
 channel: SMS 

@@ -12,7 +12,7 @@ page_order: 1.3
 
 ## 予測イベント分析について
 
-予測がトレーニングされ、このページが入力されるとすぐに、セグメントやキャンペーンで[フィルターを]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_churn/messaging_users/#filters)使い始め、モデルの出力を使い始めることができる。誰をターゲットにするのか、なぜターゲットにするのかを決める手助けが必要なら、このページがモデルの歴史的正確さとあなた自身のビジネス目標に基づいて手助けしてくれるだろう。
+予測がトレーニングされ、このページが入力されるとすぐに、セグメントやキャンペーンで[フィルターを]({{site.baseurl}}/user_guide/brazeai/predictive_churn/messaging_users/#filters)使い始め、モデルの出力を使い始めることができる。誰をターゲットにするのか、なぜターゲットにするのかを決める手助けが必要なら、このページがモデルの歴史的正確さとあなた自身のビジネス目標に基づいて手助けしてくれるだろう。
 
 以下は、予測イベント分析を構成するコンポーネントです。
 
@@ -43,7 +43,7 @@ page_order: 1.3
 
 チャートの下にあるパネルの右半分には、選択した予測対象ユーザーのうち、イベントを実行すると予想されるユーザー数と、実行しないと予想されるユーザー数という2つの方法で、選択した部分をターゲットにした場合の予想精度を示している。
 
-![選択した視聴者と推定精度は、Braze ダッシュボードに表示されます。]({% image_buster /assets/img/purchasePrediction/purchaseEstimatedResults.png %})
+![Brazeのダッシュボードに表示される選択されたオーディエンスと推定精度。]({% image_buster /assets/img/purchasePrediction/purchaseEstimatedResults.png %})
 
 ### 実施予定
 

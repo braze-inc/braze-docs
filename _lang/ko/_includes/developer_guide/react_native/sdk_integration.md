@@ -1,22 +1,22 @@
-## 리액트 네이티브 브라즈 SDK 정보
+## React Native Braze 소프트웨어 개발 키트 소개
 
-리액트 네이티브 브라즈 SDK를 통합하면 기본적인 분석 기능이 제공되며, 하나의 코드베이스로 iOS와 안드로이드용 인앱 메시지와 콘텐츠 카드를 통합할 수 있습니다.
+React Native Braze SDK를 통합하면 기본 분석 기능을 제공하고 단 하나의 코드베이스로 iOS 및 Android용 인앱 메시지와 콘텐츠 카드를 통합할 수 있습니다.
 
 ## 새로운 아키텍처 호환성
 
-다음 최소 SDK 버전은 [React Native의 새 아키텍처를](https://reactnative.dev/docs/the-new-architecture/landing-page) 사용하는 모든 앱과 호환됩니다:
+다음 최소 소프트웨어 개발 키트 버전은 [React Native의 새 아키텍처를](https://reactnative.dev/docs/the-new-architecture/landing-page) 사용하는 모든 앱과 호환됩니다:
 
 {% sdk_min_versions reactnative:2.0.1 %}
 
-SDK 버전 6.0.0부터 Braze는 새로운 아키텍처와 레거시 브리지 아키텍처 모두와 호환되는 React Native Turbo 모듈을 사용하므로 추가 설정이 필요하지 않습니다.
+소프트웨어 개발 키트 버전 6.0.0부터 Braze는 새로운 아키텍처 및 레거시 브리지 아키텍처와 모두 호환되는 React Native Turbo 모듈을 사용하므로 추가 설정이 필요하지 않습니다.
 
 {% alert warning %}
-iOS 앱이 `RCTAppDelegate` 을 준수하고 이전 `AppDelegate` 설정을 따르는 경우, 터보 모듈에서 이벤트를 구독할 때 발생하는 충돌을 방지하기 위해 [기본 설정 완료에](#reactnative_step-2-complete-native-setup) 있는 샘플을 검토하세요.
+iOS 앱이 `RCTAppDelegate` 을 준수하고 이전 `AppDelegate` 설정을 따르는 경우, 터보 모듈에서 이벤트에 가입할 때 발생하는 충돌을 방지하기 위해 [기본 설정 완료의](#reactnative_step-2-complete-native-setup) 샘플을 검토하세요.
 {% endalert %}
 
-## React Native SDK 통합
+## React Native SDK 통합하기
 
-### Prerequisites
+### 필수 조건
 
 SDK를 통합하려면 React Native 버전 0.71 이상이 필요합니다. 지원되는 버전의 전체 목록은 [React Native SDK GitHub 리포지토리](https://github.com/braze-inc/braze-react-native-sdk?tab=readme-ov-file#version-support)를 참조하세요.
 
@@ -37,7 +37,7 @@ yarn add @braze/react-native-sdk
 
 ### 2단계: 설정 옵션 선택
 
-Braze Expo 플러그인을 사용하거나 기본 레이어 중 하나를 통해 Braze SDK를 관리할 수 있습니다. 엑스포 플러그인을 사용하면 네이티브 레이어에서 코드를 작성하지 않고도 특정 SDK 기능을 구성할 수 있습니다. 앱의 요구 사항에 가장 적합한 옵션을 선택하세요.
+Braze Expo 플러그인을 사용하거나 기본 레이어 중 하나를 통해 소프트웨어 개발 키트를 관리할 수 있습니다. 엑스포 플러그인을 사용하면 네이티브 레이어에서 코드를 작성하지 않고도 특정 소프트웨어 개발 키트 기능을 구성할 수 있습니다. 앱의 요구 사항에 가장 적합한 옵션을 선택하세요.
 
 {% tabs %}
 {% tab Expo %}
@@ -45,17 +45,17 @@ Braze Expo 플러그인을 사용하거나 기본 레이어 중 하나를 통해
 
 Braze React Native SDK 버전이 1.37.0 이상인지 확인합니다. 지원되는 전체 버전 목록은 [Braze React Native 리포지토리에서](https://github.com/braze-inc/braze-expo-plugin?tab=readme-ov-file#version-support) 확인하세요.
 
-Braze Expo 플러그인을 설치하려면 다음 명령을 실행합니다:
+Braze Expo 플러그인을 설치하려면 다음 명령을 실행하세요:
 
 ```bash
-expo install @braze/expo-plugin
+npx expo install @braze/expo-plugin
 ```
 
 #### 2.2 단계: 플러그인을 app.json에 추가하세요
 
 귀하의 `app.json`에 Braze Expo 플러그인을 추가하십시오. 다음 구성 옵션을 제공할 수 있습니다:
 
-| 방법                                        | 유형    | 설명                                                                                                                                              |
+| 방법                                        | 유형    | Description                                                                                                                                              |
 | --------------------------------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `androidApiKey`                               | 문자열  | 필수. 귀하의 Android 애플리케이션에 대한 [API 키]({{site.baseurl}}/api/identifier_types/)는 Braze 대시보드의 **설정 관리** 아래에 있습니다. |
 | `iosApiKey`                                   | 문자열  | 필수. iOS 애플리케이션의 [API 키]({{site.baseurl}}/api/identifier_types/)는 Braze 대시보드의 **설정 관리** 아래에 있습니다.     |
@@ -122,10 +122,10 @@ expo install @braze/expo-plugin
 
 #### 2.3 단계: 애플리케이션 빌드 및 실행
 
-애플리케이션을 미리 빌드하면 Braze Expo 플러그인이 작동하는 데 필요한 네이티브 파일이 생성됩니다.
+애플리케이션을 미리 빌드하면 Braze Expo 플러그인이 작동하는 데 필요한 기본 파일이 생성됩니다.
 
 ```bash
-expo prebuild
+npx expo prebuild
 ```
 
 [Expo 문서](https://docs.expo.dev/workflow/customizing/)에 지정된 대로, 애플리케이션을 실행합니다. 구성 옵션을 변경하는 경우 애플리케이션을 다시 사전 빌드하고 실행해야 한다는 점에 유의하세요.
@@ -156,8 +156,8 @@ Braze 서버에 연결하려면 프로젝트의 `res/values` 폴더에서 `braze
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<string name="com_braze_api_key">YOU_APP_IDENTIFIER_API_KEY</string>
-<string translatable="false" name="com_braze_custom_endpoint">YOUR_CUSTOM_ENDPOINT_OR_CLUSTER</string>
+  <string translatable="false" name="com_braze_api_key">YOU_APP_IDENTIFIER_API_KEY</string>
+  <string translatable="false" name="com_braze_custom_endpoint">YOUR_CUSTOM_ENDPOINT_OR_CLUSTER</string>
 </resources>
 ```
 
@@ -249,10 +249,10 @@ React Native는 라이브러리를 기본 플랫폼에 자동으로 연결하므
 
 ```bash
 # To install using the React Native New Architecture
-cd ios && RCT_NEW_ARCH_ENABLED=1 pod install
+cd ios && pod install
 
 # To install using the React Native legacy architecture
-cd ios && pod install
+cd ios && RCT_NEW_ARCH_ENABLED=0 pod install
 ```
 
 #### 2.3 단계: Braze SDK 구성
@@ -351,7 +351,7 @@ static Braze *_braze = nil;
 
 ### 3단계: 라이브러리 가져오기
 
-그런 다음, `import` 리액트 네이티브 코드에 라이브러리를 추가합니다. 자세한 내용은 [샘플 프로젝트를](https://github.com/braze-inc/braze-react-native-sdk/tree/master/BrazeProject) 확인하세요. 
+그런 다음, React Native 코드의 라이브러리를 `import`. 자세한 내용은 [샘플 프로젝트를](https://github.com/braze-inc/braze-react-native-sdk/tree/master/BrazeProject) 확인하세요. 
 
 ```javascript
 import Braze from "@braze/react-native-sdk";
@@ -359,7 +359,7 @@ import Braze from "@braze/react-native-sdk";
 
 ### 4단계: 통합 테스트(선택 사항)
 
-SDK 연동을 테스트하려면 앱에서 다음 코드를 호출하여 두 플랫폼에서 사용자에 대한 새 세션을 시작하세요.
+SDK 통합을 테스트하려면 앱에서 다음 코드를 호출하여 어느 플랫폼에서든 사용자의 새 세션을 시작하세요.
 
 ```javascript
 Braze.changeUser("userId");
@@ -383,4 +383,4 @@ const App = () => {
   )
 ```
 
-Braze 대시보드에서 [사용자 검색으로]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search#using-user-search) 이동하여 `some-user-id` 과 일치하는 ID를 가진 사용자를 찾습니다. 여기에서 세션 및 디바이스 데이터가 기록되었는지 확인할 수 있습니다.
+Braze 대시보드에서 [사용자 검색으로]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search#using-user-search) 이동하여 `some-user-id` 과 일치하는 ID를 가진 사용자를 찾습니다. 여기에서 세션 및 기기 데이터가 기록되었는지 확인할 수 있습니다.

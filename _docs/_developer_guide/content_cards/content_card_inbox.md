@@ -373,7 +373,7 @@ lines-BrazeInboxView.swift=8,43,49-56
 
 You can log impressions and clicks using the [`logClick(using:)`](<https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/logclick(using:)/>) and [`logImpression(using:)`](<https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/logimpression(using:)/>) methods available for a content card.
 
-Additionally, you can use [`LogDimissed(using:)`](<https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/logdismissed(using:)/>) for dimissals.
+Additionally, you can use [`logDismissed(using:)`](<https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/logdismissed(using:)/>) for dismissals.
 
 Impressions should only be logged once when viewed by the user. Here, a naive mechanism using a `Set` and `willDisplay` is used to achieve this. Note that you may need to think through the UI lifecycle of your app, as well as use case, to ensure impressions are logged correctly.
 
@@ -562,7 +562,7 @@ lines-main.js=96-99,101
 
 #### 3. Subscribe to Content Card updates
 
-Subscribe to the Content Cards listener to receive the latest updates, and then call [`requestContentCardsRefresh()`](<https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestcontentcardsrefresh>) to request the latest Content Cards for that user.
+Subscribe to the Content Cards listener to receive the latest updates, and then call [`requestContentCardsRefresh()`](<https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestcontentcardsrefresh>) to request the latest Content Cards for that user. Alternatively, call the subscriber before `openSession()` for an automatic refresh on session start. 
 
 !!step
 lines-main.js=64,67,70-74

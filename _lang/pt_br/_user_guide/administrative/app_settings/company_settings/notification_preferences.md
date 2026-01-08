@@ -1,21 +1,21 @@
 ---
 nav_title: Preferências de notificação
-article_title: Preferências de notificação
+article_title: Preferências de Notificação
 page_order: 1
 page_type: reference
-description: "Este artigo de referência cobre suas opções disponíveis para monitorar o envio de mensagens e a atividade na conta da sua empresa."
+description: "Este artigo de referência cobre suas opções disponíveis para monitorar mensagens e atividades em sua conta da empresa."
 
 ---
 
 # Preferências de notificação
 
-> Se você gostaria de monitorar o envio de mensagens e a atividade na conta da sua empresa, pode optar por configurar notificações específicas e selecionar para onde elas vão.
+> Se você gostaria de monitorar as mensagens e atividades em sua conta da empresa, pode escolher configurar notificações específicas e selecionar para onde elas vão.
 
-A página **Preferências de Notificação** é onde você pode configurar quem (se alguém) recebe notificações sobre sua empresa. Você pode configurar quem deve receber notificações sobre a entrega da campanha ou erros técnicos. Você também pode especificar destinatários para o relatório semanal de análise de dados. Para a maioria das notificações, a Braze suporta canais de e-mail e webhook.
+A página **Preferências de Notificação** é onde você pode configurar quem (se alguém) recebe notificações sobre sua empresa. Você pode configurar quem deve receber notificações sobre a entrega de campanhas ou erros técnicos. Você também pode especificar destinatários para o relatório analítico semanal. Para a maioria das notificações, o Braze suporta canais de email e webhook.
 
-![Página de preferências de notificação no dashboard do Braze]({% image_buster /assets/img_archive/notification_preferences.png %})
+\![Página de Preferências de Notificação no painel do Braze]({% image_buster /assets/img_archive/notification_preferences.png %})
 
-Para acessar esta página, acessar **Configurações** > **Configurações de Admin** > **Preferências de Notificação**.
+Para acessar esta página, vá para **Configurações** > **Configurações do Administrador** > **Preferências de Notificação**.
 
 ## Notificações disponíveis
 
@@ -23,41 +23,41 @@ A tabela a seguir descreve as notificações disponíveis e quais canais são us
 
 | Notificação | Descrição | Canais de notificação disponíveis |
 |--------------|-------------|-----------------|
-| Erros de credenciais do AWS | Notifica os destinatários quando a Braze recebe um erro ao tentar usar suas credenciais do Amazon Web Services para uma exportação de dados. Isso inclui notificações de erros de credenciais para o Google Cloud Services e o Azure (Microsoft Cloud Services). | e-mail, Webhook |
-| Campanha interrompida automaticamente | Notifica os destinatários quando a Braze interrompe uma campanha. | E-mail |
-| Expiração da interação da campanha | Notifica os destinatários sobre qualquer campanha que esteja prestes a expirar os dados de interação da campanha, juntamente com qualquer informação sobre segmentos, campanhas ou canvas que a referenciem em um filtro de redirecionamento e que foram usados para enviar uma mensagem nos últimos 30 dias. | E-mail |
-| Campanha/canva atualizado | Notifica os destinatários quando uma campanha ou Canvas ativo é atualizado ou desativado, bem como quando uma campanha ou Canvas inativo é reativado ou rascunhos são lançados. | E-mail |
-| Limite de volume de envios de campanhas/canvas atingido | Notifica os destinatários quando uma campanha ou Canva atinge seu limite de volume de envios. | E-mail | 
-| Expiração da interação do canva | Notifica os destinatários sobre qualquer canva que esteja prestes a expirar os dados de interação do canva, juntamente com qualquer informação sobre segmentos, campanhas ou canvas que o referenciem em um filtro de redirecionamento e que foram usados para enviar uma mensagem nos últimos 30 dias. | E-mail |
-| Erros de credenciais de push | Notifica os destinatários quando as credenciais de push de um app são inválidas e quando elas estão prestes a expirar. | e-mail, Webhook |
-| Campanha agendada enviada/não enviada | Notifica os destinatários quando as campanhas programadas começam a ser enviadas ou quando as campanhas programadas tentam enviar, mas não têm usuários elegíveis para enviar. | e-mail, Webhook |
-| Limite de campanha agendada atingido | Notifica os destinatários quando o limite de uma campanha agendada recorrente é atingido. | e-mail, Webhook |
-| Campanha agendada concluiu os envios | Notifica os destinatários quando uma campanha agendada conclui os envios. | e-mail, Webhook |
-| Relatório semanal de análise de dados | Toda segunda, envia para os destinatários um resumo das atividades da semana anterior ocorridas no espaço de trabalho. Os destinatários recebem um resumo de todos os espaços de trabalho dos quais fazem parte. | E-mail |
-| Limites de volume de envios diários de canvas/campanha | Envia notificações sempre que um limite de envio é atingido. | E-mail |
+| Erros de Credenciais da AWS | Notifica os destinatários quando o Braze recebe um erro ao tentar usar suas credenciais da Amazon Web Services para uma exportação de dados. Isso inclui notificações de erro de credenciais para Google Cloud Services e Azure (Serviços de Nuvem da Microsoft). | Email, Webhook |
+| Campanha Parada Automaticamente | Notifica os destinatários quando o Braze parou uma campanha. | Email |
+| Expiração da Interação da Campanha | Notifica os destinatários sobre qualquer campanha que está prestes a expirar os dados de interação da campanha, juntamente com qualquer informação sobre segmentos, campanhas ou Canvases que a referenciam em um filtro de retargeting e foram usados para enviar uma mensagem nos últimos 30 dias. | Email |
+| Campanha/Canvas Atualizado | Notifica os destinatários quando uma campanha ou Canvas ativa é atualizada ou desativada, assim como quando uma campanha ou Canvas inativa é reativada ou rascunhos são lançados. | Email |
+| Limite de Volume da Campanha/Canvas Atingido | Notifica os destinatários quando uma campanha ou Canvas atinge seu limite de volume. | Email | 
+| Expiração da Interação do Canvas | Notifica os destinatários sobre qualquer Canvas que está prestes a expirar os dados de interação do Canvas, juntamente com qualquer informação sobre segmentos, campanhas ou Canvases que a referenciam em um filtro de retargeting e foram usados para enviar uma mensagem nos últimos 30 dias. | Email |
+| Erros de Credenciais de Push | Notifica os destinatários quando as credenciais de push de um aplicativo são inválidas e quando as credenciais de push de um aplicativo estão prestes a expirar. | Email, Webhook |
+| Campanha Agendada Enviada/Não Enviada | Notifica os destinatários quando campanhas agendadas começam a ser enviadas ou quando campanhas agendadas tentam enviar, mas não têm usuários elegíveis para enviar. | Email, Webhook |
+| Limite de Campanha Agendada Atingido | Notifica os destinatários quando o limite para uma campanha agendada recorrente foi atingido. | Email, Webhook |
+| Campanha Agendada Terminou de Enviar | Notifica os destinatários quando uma campanha agendada terminou de enviar. | Email, Webhook |
+| Relatório Semanal de Análise | Envia um resumo da atividade do espaço de trabalho da semana passada para os destinatários toda segunda-feira. Os destinatários recebem um resumo para cada espaço de trabalho ao qual pertencem. | Email |
+| Limites diários de volume de Canvas/Campanha | Envia notificações sempre que um limite de envio é alcançado. | Email |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-## Relatório semanal de análise de dados
+## Relatório analítico semanal
 
-Braze opcionalmente envia um relatório semanal via e-mail para as pessoas que você designar dentro da sua empresa toda segunda-feira às 5h EST. Você pode selecionar os eventos personalizados a serem incluídos no relatório semanal em **Configurações de Dados** > **Eventos Personalizados**.
+A Braze envia opcionalmente um relatório semanal por e-mail para indivíduos que você designar dentro da sua empresa toda segunda-feira às 5 da manhã EST. Você pode selecionar os eventos personalizados a serem incluídos no relatório semanal em **Configurações de Dados** > **Eventos Personalizados**.
 
-Você pode selecionar até FIVE eventos para serem incluídos em seu relatório semanal:
+Você pode selecionar até cinco eventos para serem incluídos no seu relatório semanal:
 
-![Seleção de eventos a serem incluídos no relatório de análise de dados]({% image_buster /assets/img_archive/company_analytics_report_new.png %})
+\![Selecionando eventos a serem incluídos no Relatório de Análise]({% image_buster /assets/img_archive/company_analytics_report_new.png %})
 
 ## Integração de webhook de entrada do Slack
 
-O Slack tem um [app de webhook de entrada](https://my.slack.com/services/new/incoming-webhook/) que permite que as mensagens sejam postadas de fontes externas no Slack. Para começar, abra o app de webhook de entrada.
+O Slack possui um [aplicativo de webhook de entrada](https://my.slack.com/services/new/incoming-webhook/) que permite que mensagens sejam postadas de fontes externas no Slack. Para começar, abra o aplicativo de webhook de entrada.
 
-1. Selecione o canal do Slack que você gostaria que as notificações fossem Acessar e clique em **Adicionar integração de webhooks de entrada**.<br><br>
-    ![Adicionar integração de webhooks de entrada no Slack]({% image_buster /assets/img_archive/slack_f.png %})<br><br>
-  O Slack gerará um URL que você precisará inserir na Braze para as notificações que deseja receber.<br><br>
+1. Selecione o canal do Slack para o qual você gostaria que as notificações fossem enviadas e clique em **Adicionar Integração de Webhooks de Entrada**.<br><br>
+    \![Adicionar integração de webhooks de entrada no Slack]({% image_buster /assets/img_archive/slack_f.png %})<br><br>
+  O Slack gerará uma URL que você precisará inserir na Braze para as notificações que deseja receber.<br><br>
 2. Copie a **URL do Webhook**.<br><br>
-    ![Copiar o URL do webhook]({% image_buster /assets/img_archive/copy_url.png %})<br><br>
-3. Navegue até a guia **Preferências de notificação** em **Configurações da empresa**.<br><br>
+    \![Copiar URL do webhook]({% image_buster /assets/img_archive/copy_url.png %})<br><br>
+3. Navegue até a aba **Preferências de Notificação** em **Configurações da Empresa**.<br><br>
 4. Selecione a notificação que você deseja ativar para o Slack. Ou, se você tiver várias notificações que deseja enviar para este canal do Slack, use **Adicionar em Massa** para adicionar o webhook a várias notificações.<br><br>
-    ![Selecione as notificações do Slack para ativar]({% image_buster /assets/img_archive/click_edit_f.png %}){: style="max-width:60%;"}<br><br>
-5. Digite a URL que o Slack gerou para você.
+    \![Selecione as notificações do Slack para habilitar]({% image_buster /assets/img_archive/click_edit_f.png %}){: style="max-width:60%;"}<br><br>
+5. Insira a URL que o Slack gerou para você.
 
-Pronto! Você deve começar a receber notificações sobre sua empresa nesse canal do Slack. Você também pode conferir o artigo de ajuda do Slack sobre esse tópico: [Envio de mensagens usando Webhooks de entrada](https://api.slack.com/incoming-webhooks).
+É isso aí! Você deve começar a receber notificações sobre sua empresa neste canal do Slack. Você também pode conferir o artigo de ajuda do Slack sobre este tópico: [Enviando mensagens usando Webhooks de Entrada](https://api.slack.com/incoming-webhooks).
 

@@ -13,7 +13,7 @@ hidden: true
 
 The Braze SDK will provide you with an API to report information to be used in analytics, segmentation, and engagement, as well as the ability to register users for push and receive notifications.
 
->  The Windows Universal SDK is also compatible with Xamarin Windows Apps.
+>  The Windows Universal SDK is also compatible with .NET MAUI Windows Apps.
 
 ## Step 1: Install the SDK via the NuGet package manager
 

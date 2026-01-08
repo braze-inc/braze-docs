@@ -11,11 +11,11 @@ tool: Canvas
 
 # メッセージ 
 
-> メッセージステップでは、キャンバスフロー内の目的の場所にスタンドアロンメッセージを追加できます。
+> メッセージステップを使えば、キャンバスの好きな場所に単体のメッセージを追加できる。
 
-![プッシュチャネルを使用した「Lunch promo」というメッセージステップ]({% image_buster /assets/img/canvas_components/message_step1.png %}){: style="float:right;max-width:25%;margin-left:15px;"}
+![プッシュチャネルを使った「ランチプロモ」というメッセージステップ。]({% image_buster /assets/img/canvas_components/message_step1.png %}){: style="float:right;max-width:25%;margin-left:15px;"}
 
-## メッセージの作成
+## メッセージを作成する
 
 メッセージコンポーネントを作成するには、まずキャンバスにステップを追加します。サイドバーからコンポーネントをドラッグ＆ドロップするか、ステップの一番下にある <i class="fas fa-plus-circle"></i> プラスのボタンを選択し、[**メッセージ**] を選択します。 
 
@@ -33,7 +33,7 @@ tool: Canvas
 
 ![メッセージステップで選択可能なメッセージングチャネルのリスト。]({% image_buster /assets/img/canvas_components/message_step2.png %})
 
-### ステップ2: 配信設定を編集する
+### ステップ 2:配信設定を編集する
 
 次に、インテリジェントデリバリー、サイレント時間のオーバーライド、配信検証の設定を編集できます。
 
@@ -96,9 +96,9 @@ tool: Canvas
 `event_properties` は先頭のメッセージステップで使用できません。代わりに、`canvas_entry_properties` を使用するか、`event_properties` を含むメッセージステップの前に、対応するイベントを持つアクションパスステップを追加する必要があります。
 {% endalert %}
 
-{% details 元のキャンバスエディターの拡張 %}
+{% details Expand for original Canvas editor %}
 
-2023 年 2 月 28 日以降、元のエディターを使用したキャンバスの作成や複製はできなくなりました。このセクションは参照のみを目的としています。
+元のエディターを使用したキャンバスの作成や複製はできなくなりました。このセクションは参照のみを目的としています。
 
 - `event_properties` はスケジュールされたフルステップでは使用できません。ただし、アクションベースのキャンバスの最初のフルステップでは、フルステップがスケジュールされている場合でも `event_properties` を使用できます。
 - キャンバスの最初のフルステップでのみ `canvas_entry_properties` を参照できます。

@@ -1,29 +1,29 @@
 ---
-nav_title: "Plantillas y soportes"
-article_title: Plantillas y soportes
+nav_title: "Plantillas y medios"
+article_title: Plantillas y medios
 page_order: 5
 layout: dev_guide
-guide_top_header: "Plantillas y soportes"
-guide_top_text: "La sección Plantillas de Braze permite gestionar plantillas y cargar imágenes para mensajes en una única ubicación centralizada. También puede consolidar y organizar sus plantillas en el panel de control para conseguir un aspecto coherente."
+guide_top_header: "Plantillas y medios"
+guide_top_text: "La sección Plantillas de Braze te permite gestionar plantillas y cargar imágenes para mensajes en una única ubicación centralizada. También puedes consolidar y organizar tus plantillas en el panel para que tengan un aspecto coherente."
 search_rank: 2
 page_type: landing
 tool: 
 - Templates
 - Media
-description: "En esta página encontrará plantillas y artículos multimedia. Aquí encontrará recursos sobre la mediateca, cómo gestionar plantillas, cargar imágenes, crear Bloques de contenido, etc."
+description: "En esta página de inicio encontrarás plantillas y artículos sobre medios de comunicación. Aquí puedes encontrar recursos sobre la biblioteca multimedia, cómo administrar plantillas, subir imágenes, crear bloques de contenido y mucho más."
 
 guide_featured_title: "Artículos de sección"
 guide_featured_list:
-  - name: Biblioteca de medios
+  - name: Mediateca
     link: /docs/user_guide/engagement_tools/templates_and_media/media_library/
     image: /assets/img/braze_icons/book-closed.svg
   - name: Bloques de contenido
     link: /docs/user_guide/engagement_tools/templates_and_media/content_blocks/
     image: /assets/img/braze_icons/columns-01.svg
-  - name: Plantillas de Canvas
+  - name: Plantillas Canvas
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_templates/#available-braze-templates
     image: /assets/img/braze_icons/palette.svg
-  - name: Gestión de plantillas
+  - name: Plantillas de administrador
     link: /docs/user_guide/engagement_tools/templates_and_media/managing_templates/
     image: /assets/img/braze_icons/archive.svg
   - name: Preguntas frecuentes
@@ -31,15 +31,15 @@ guide_featured_list:
     image: /assets/img/braze_icons/annotation-question.svg
 ---
 
-## Sobre plantillas y soportes
+## Sobre plantillas y medios
 
-Puede utilizar y gestionar plantillas y contenido creativo en la sección **Plantillas** para las siguientes funciones:
+Puedes utilizar y administrar plantillas y contenido creativo en la sección **Plantillas** para las siguientes características:
 
 - **[Plantillas de correo electrónico]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/#creating-an-email-template)**
 - **[Bloques de contenido]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/)**
-- **[Plantillas de webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/webhook_template/#creating-a-webhook-template)**
+- **[Plantillas webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/webhook_template/#creating-a-webhook-template)**
 - **[Plantillas de enlaces]({{site.baseurl}}/user_guide/message_building_by_channel/email/link_templates/#link-templates)**
-- **[Perfiles de color y plantillas CSS para mensajes integrados en la aplicación]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#color-profile)**
-- **[Gestionar activos en la mediateca]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#media-library)**
+- **[Perfiles de color de mensajes dentro de la aplicación y plantillas CSS]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#color-profile)**
+- **[Administra los activos de la biblioteca multimedia]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#media-library)**
 <br><br><br>
 

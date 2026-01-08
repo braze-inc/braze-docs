@@ -1,5 +1,5 @@
 ---
-nav_title: 環境設定調査を使用したオンボーディング
+nav_title: オンボーディングと好みの調査
 article_title: 環境設定調査を使用したオンボーディング
 page_order: 5.5
 page_type: reference
@@ -24,7 +24,7 @@ tool: Canvas
 
 ## テンプレートをニーズに合わせる
 
-私たちは、行く必要のある場所に人をもらうオンデマンドのライドシェアアプリ、StyleRydeで働いているとしよう。キャンバスを作成する前に、ユーザーがアプリを初めて使用したときのエクスペリエンスと印象を判断するための、一連の魅力的な質問を含む[簡単な調査]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog)を設定しました。
+私たちは、行く必要のある場所に人をもらうオンデマンドのライドシェアアプリ、StyleRydeで働いているとしよう。キャンバスを作成する前に、ユーザーがアプリを初めて使用したときのエクスペリエンスと印象を判断するための、一連の魅力的な質問を含む[簡単な調査]({{site.baseurl}}/user_guide/data/activation/catalogs/catalog)を設定しました。
 
 テンプレートにアクセスするには、新しいキャンバスを作成するときに、**キャンバステンプレートを使用**> **ブレーズテンプレート**を選択します。次に、**オンボーディングと好みの調査**の横にある**テンプレートを適用**を選択します。あとは、テンプレートを見ながら、自分たちのニーズに合わせていくだけだ。
 
@@ -34,20 +34,20 @@ tool: Canvas
 
 1. テンプレート名の横にある**編集**を選択します。
 
-![]({% image_buster /assets/img/canvas_templates/preference_survey1.png %}) キャンバスの現在のタイトルと説明。{: style="max-width:50%;"}
+![キャンバスの現在のタイトルと説明。]({% image_buster /assets/img/canvas_templates/preference_survey1.png %}){: style="max-width:50%;"}
 
 {:start="2"}
 2\.キャンバス名を更新し、アプリを初めて使うユーザーをターゲットにしたキャンバスであることを指定します。
 3\.このキャンバスにパーソナライズされたメッセージングが含まれていることを説明する説明を更新します。
 4\.**Onboarding** というタグを追加し、キャンバスのホームページでフィルターできるようにします。
 
-![キャンバスの新しい名前、説明、タグ。]({% image_buster /assets/img/canvas_templates/preference_survey2.png %}){: style="max-width:90%;"}
+![キャンバスの新しい名前、説明、およびタグ。]({% image_buster /assets/img/canvas_templates/preference_survey2.png %}){: style="max-width:90%;"}
 
-### ステップ2: 変換イベントの割り当て
+### ステップ 2:変換イベントの割り当て
 
 **1次コンバージョンイベント - A** を**カスタムイベントを実行**に更新します。次に、カスタムイベントに**Last Used App** を選択します。
 
-![コンバージョンイベント用にカスタムイベント名として選択した、[最後に使用したアプリケーション]。]({% image_buster /assets/img/canvas_templates/preference_survey3.png %}){: style="max-width:90%;"}
+![コンバージョンイベントの選択したカスタムイベントの名前として最後に使用されたアプリケーション。]({% image_buster /assets/img/canvas_templates/preference_survey3.png %}){: style="max-width:90%;"}
 
 ### ステップ 3:エントリスケジュールを調整する
 
@@ -55,21 +55,21 @@ tool: Canvas
 
 ここでは、**入力ウィンドウ**を希望の日時に調整することで、このセクションの更新を行います。
 
-![開始時刻が2025年1月30日午後12時に設定されている「エントリ期間」セクション。]{% image_buster /assets/img/canvas_templates/preference_survey4.png %}{: style="max-width:90%;"}
+![" Entry Window" 開始時刻が2025年1 月30 日午後12 時のセクション。]({% image_buster /assets/img/canvas_templates/preference_survey4.png %}){: style="max-width:90%;"}
 
-### ステップ4:ターゲットオーディエンスを選択する
+### ステップ 4: ターゲットオーディエンスを選択する
 
 1日前に初めてStyleRydeアプリを使用したユーザーをターゲットにするために、ターゲット視聴者をそのまま維持します。
 
-![エントリのオーディエンスをターゲットにするために選択された 「最初にこれらのアプリを使用したのは1日前未満」フィルター。]({% image_buster /assets/img/canvas_templates/preference_survey5.png %}){: style="max-width:90%;"}
+![" 最初にこれらのアプリを使用したのは1 日前" フィルターはエントリ オーディエンスを対象として選択されています。]({% image_buster /assets/img/canvas_templates/preference_survey5.png %}){: style="max-width:90%;"}
 
 ### ステップ 5: 送信設定を選択する
 
 デフォルトのサブスクリプション設定を維持します。これにより、サイレント時間をオンにした状態でサブスクリプション登録したユーザーおよびメッセージまたは通知の受信を選択したユーザーのみに送信されるようになります。その他の設定 (フリークエンシーキャップ、シードグループ) は省略します。
 
-![「送信設定」セクションに、サイレント時間が午前12時から午後8時までの間にオンになっている、購読またはオプトインしたユーザーの購読設定が記載されています。]({% image_buster /assets/img/canvas_templates/preference_survey6.png %}){: style="max-width:90%;"}
+!["設定 のS" を送信します。午前12 時から午後8 時の間にQuiet Hours が有効になっている、購読または選択されているユーザーs のサブスクリプション 設定がs であるセクションです。]({% image_buster /assets/img/canvas_templates/preference_survey6.png %}){: style="max-width:90%;"}
 
-### ステップ6: キャンバスをカスタマイズする
+### ステップ 6: キャンバスをカスタマイズする
 
 ここでは、ユーザーに送信するコンテンツをカスタマイズして、Canvas を構築します。 
 
@@ -79,7 +79,7 @@ tool: Canvas
 - セッションを開始したか、オンボーディングメールをクリックしたユーザー
 - セッションを開始していないユーザ、またはオンボーディングメールをクリックしていないユーザ
 
-![アクションパスステップは2つのパスに分割され、1つはセッションを開始したユーザー用、もう1つは他のすべてのユーザー用です。]({% image_buster /assets/img/canvas_templates/preference_survey8.png %}){: style="max-width:50%;"}
+![アクションパス ステップは2 つのパスs に分割され、1 つはセッションを開始したユーザー s 用、もう1 つは他のすべてのユーザ用です。]({% image_buster /assets/img/canvas_templates/preference_survey8.png %}){: style="max-width:50%;"}
 
 ここから、前述のグループに基づいてユーザーとメッセージングをターゲットにします。
 
@@ -91,7 +91,7 @@ tool: Canvas
 
 次に、**コンテンツの好みについての調査**メッセージステップを更新して、ユーザーが今後情報を受け取ることに関心のあるトピックを選択するように求める好みに関する調査を含めます。
 
-![適用されるすべての関心を選択するようユーザーに求める好みに関する調査のプレビュー。]({% image_buster /assets/img/canvas_templates/preference_survey7.png %}){: style="max-width:90%;"}
+![ユーザーにアプリするすべての関心を選択するように促す環境設定調査のプレビュー。]({% image_buster /assets/img/canvas_templates/preference_survey7.png %}){: style="max-width:90%;"}
 
 #### オンボーディングを開始していないユーザーを誘導する 
 

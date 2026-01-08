@@ -67,7 +67,7 @@ Braze が改良してリリースした `/users/track` エンドポイントで�
 2. ウェブフックキャンペーンを作成する。Webhook の例については、[購読グループ]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/opt-ins_and_opt-outs/#update-subscription-status)を参照してください。
 
 {% alert tip %}
-WhatsAppチャンネルに参加するためのURLやQRコードは、[WhatsAppマネージャー](https://business.facebook.com/wa/manage/phone-numbers/)内の「**電話番号**」>「**メッセージリンク**」から作成できる。<br>![WhatsApp QR コード作成画面。]({% image_buster /assets/img/whatsapp/whatsapp115.png %}){: style="max-width:55%;"}
+WhatsAppチャンネルに参加するためのURLやQRコードは、[WhatsAppマネージャー](https://business.facebook.com/wa/manage/phone-numbers/)内の「**電話番号**」>「**メッセージリンク**」から作成できる。<br>![WhatsApp QRコード作成ツール。]({% image_buster /assets/img/whatsapp/whatsapp115.png %}){: style="max-width:55%;"}
 {% endalert %}
 
 ### ブレーズを利用したオプトイン・メソッド 
@@ -98,13 +98,13 @@ Braze SDK とのインターフェイスに、[HTML アプリ内メッセージ]
 
 #### ステップ 1:「インバウンドの WhatsApp メッセージ」のトリガーを持つキャンバスの作成
  
-![WhatsApp インバウンドメッセージを送信したユーザーをエントリーするアクションベースのキャンバスエントリーステップ。]({% image_buster /assets/img/whatsapp/whatsapp116.png %}){: style="max-width:85%;"}
+![WhatsApp インバウンドメッセージを送信するユーザーをエントリさせるアクションベースのキャンバスエントリステップ。]({% image_buster /assets/img/whatsapp/whatsapp116.png %}){: style="max-width:85%;"}
 
 キーワードトリガーを選択する際には、「Stop」や「No Message」といった単語を含める。この方法を選択した場合は、必ず顧客にオプトアウトの言葉を伝えてください。例えば、最初のオプトインを受信した後、「これらのメッセージからオプトアウトするには、いつでも『Stop』のメッセージを送信してください」などのフォローアップ応答を含めます。 
 
-![メッセージ本文が「STOP」または「NO MESSAGE」である WhatsApp 受信メッセージを送信するメッセージステップ]({% image_buster /assets/img/whatsapp/whatsapp117.png %}){: style="max-width:85%;"}
+![WhatsApp受信メッセージを送信するステップ。メッセージ本文は「STOP」または「NO MESSAGE」。]({% image_buster /assets/img/whatsapp/whatsapp117.png %}){: style="max-width:85%;"}
 
-#### ステップ 2: ユーザーのプロフィールを更新する
+#### ステップ 2:ユーザーのプロフィールを更新する
 
 [購読グループ]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_subscription/#update-subscription-status)で説明されている方法のいずれかを使用して、ユーザープロファイルを更新します。
 
@@ -136,7 +136,7 @@ WhatsAppのキーワード応答ワークフローは、この2つの方法で�
 「STOP」メッセージの場合は、オプトアウトを確認するメッセージステップと、ユーザー更新ステップの順序を逆にします。そうしないと、ユーザーはまず購読グループからオプトアウトされ、確認メッセージを受け取る資格がなくなる。
 {% endalert %}
 
-![WhatsApp メッセージステップ。メッセージ本文は「START」である。]({% image_buster /assets/img/whatsapp/whatsapp_inbound_message.png %}){: style="max-width:80%;"}
+![メッセージ本文が「START」であるWhatsApp メッセージステップ。]({% image_buster /assets/img/whatsapp/whatsapp_inbound_message.png %}){: style="max-width:80%;"}
 
 {: start="2"}
 2\.キャンバスで、[**ユーザーの更新を設定**] ステップを作成し、[**アクション**] で [**高度な JSON エディター**] を選択します。<br><br>![アクションが「高度なJSONエディター」であるユーザー更新ステップ。]({% image_buster /assets/img/whatsapp/user_update.png %})<br><br>
@@ -176,7 +176,7 @@ STOPメッセージにこの方法を使う必要はない。確認メッセー�
 
 1. アクションベースのステップ [**WhatsApp インバウンドメッセージを送信**] を含むキャンペーンまたはキャンバスを作成します。[**メッセージ本文の場所**] をオンにして、[**次に該当する**] に「START」と入力します。
 
-![メッセージ本文が「START」であるWhatsAppメッセージステップ]({% image_buster /assets/img/whatsapp/whatsapp_inbound_message.png %}){: style="max-width:85%;"}
+![メッセージ本文が「START」であるWhatsApp メッセージステップ。]({% image_buster /assets/img/whatsapp/whatsapp_inbound_message.png %}){: style="max-width:85%;"}
 
 {: start="2"}
 2\.キャンペーンまたはキャンバスで、Webhook メッセージステップを作成し、[**リクエスト本文**] を [**生のテキスト**] に変更します。
@@ -186,7 +186,7 @@ STOPメッセージにこの方法を使う必要はない。確認メッセー�
 {: start="3"}
 3\.[**Webhook URL**] に顧客の[エンドポイント URL ]({{site.baseurl}}/api/basics/)を入力し、その後にエンドポイントのリンク `campaigns/trigger/send` を付加します。たとえば `https://dashboard-02.braze.eu/campaigns/trigger/send` です。
 
-![[Webhook を作成] セクションの下の[Webhook URL] フィールド。]({% image_buster /assets/img/whatsapp/campaigns_webhook_url.png %}){: style="max-width:70%;"}
+![「Webhook を作成」セクションの下のWebhook URL フィールド。]({% image_buster /assets/img/whatsapp/campaigns_webhook_url.png %}){: style="max-width:70%;"}
 
 {: start="4"}
 4\.[生のテキスト] に次の JSON ペイロードを入力し、`XXXXXXXXXXX` を購読グループ ID に置き換えます。2 つ目のキャンペーンの作成後に、`campaign_id` を置き換える必要があります。
@@ -227,7 +227,7 @@ STOPメッセージにこの方法を使う必要はない。確認メッセー�
 | Modifier | トリガーワード | アクション (Action) |
 | --- | --- | --- |
 | `Is` | `STOP` | 大文字と小文字に関係なく、「stop」に完全一致する単語の使用をすべて検出します。たとえば、"stop"はキャッチしますが、"はストップ"はキャッチしません。 |
-| `Matches regex` | `STOP` | 指定されている大文字または小文字での「STOP」の使用をすべて検出します。たとえば、"stop"はキャッチしますが、"PLEASE STOP"はキャッチしません。 |
+| `Matches regex` | `STOP` | そのユースケースで "STOP "が使われた場合はすべてキャッチする。例えば、これは「STOP」と「PLEASE STOP」はキャッチするが、「STOP」はキャッチしない。 |
 | `Matches regex` | `(?i)STOP(?-i)` | 大文字と小文字に関係なく「STOP」の使用をすべて検出します。例えば 「stop」、「please stop」、「never stop sending me messages」を検出します。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 

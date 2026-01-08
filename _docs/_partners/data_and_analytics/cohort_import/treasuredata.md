@@ -46,7 +46,7 @@ Search for the Braze Integration in the **Catalog**, then hover over the icon an
 Sync your cohorts to Braze through an activation in the **Audience Studio** or by executing a query in the **Data Workbench**.
 
 {% alert important %}
-Only users who already exist within Braze will be added or removed from a cohort. Cohort Import will not create new users in Braze.
+Only users who already exist within Braze are added or removed from a cohort. Cohort Import will not create new users in Braze.
 {% endalert %}
 
 {% tabs local %}

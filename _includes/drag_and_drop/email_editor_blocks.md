@@ -14,7 +14,7 @@ The following table describes how users can use each editor block type.
 
 | Name | Description |
 |---|---|
-|Title| Adds text with H1, H2, and H3 tags for email. | 
+|Title| Adds text for Headers within the email. | 
 |Paragraph| Enters text into their message. A toolbar helps with font and text editing functionality. | 
 |List| Adds a bulleted list. |
 |Button| Adds a standard button. Properties for this block allow for editing and setting links easily. | 
@@ -22,8 +22,8 @@ The following table describes how users can use each editor block type.
 |Spacer| Adds space, or "padding", between other blocks. |
 |Image| Inserts an image from the [media library]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/). | 
 |Video| Creates a link to the video content. |
-|Social| Inserts social media platform icon. Custom images can be uploaded for brand specific icons. |
-|Icons| Inserts an icon. Custom images can be uploaded. An oversized placeholder icon will be used until an image is uploaded. |
+|Social| Inserts social media platform icon. You can upload custom images for brand specific icons. |
+|Icons| Inserts an icon. You can upload custom images. Braze uses an oversized placeholder icon until you upload an image. |
 |HTML| Inserts raw HTML. Recommended for [Liquid]({{site.baseurl}}/liquid/), such as Connected Content or conditional statements. | 
 |Menu| Creates a flexible menu for the message you're designing. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" } 
@@ -37,7 +37,7 @@ Refer to the following table for details on the `Title` editor block properties.
 
 | Properties | Description |
 |---|---|
-|Title| Selects the heading style. Only H1, H2, or H3 are available. | 
+|Title| Selects the heading style. | 
 |Font family| This is the font style for your title. |
 |Font weight| This is the overall boldness of the font. |
 |Font size| Determines the size of your text. |
@@ -120,7 +120,7 @@ Refer to the following table for details on the `Image` editor block. For dynami
 |Align| Orients the image to either the left, center or right of the block. |
 |Image with Liquid| Use [Liquid]({{site.baseurl}}/liquid/) logic to dynamically set different images within the same block of content. |
 |URL| Set an image using the address to where it's hosted. |
-|Alternate text| A short description of the image that gives users the same information that's shown in the image. This is essential for screen-reader accessability or when the image fails to load. |
+|Alternate text| A short description of the image that gives users the same information that's shown in the image. This is essential for screen-reader accessibility or when the image fails to load. |
 |Image with Rounded Corners| Render the image with rounded corners. By default, images are rendered with squared corners. |
 |Action| Triggers an action when the user clicks the image.|
 |Block Options| Sets padding around the image block. |
@@ -138,8 +138,8 @@ Refer to the following table for details on the `Video` editor block.
 
 | Properties | Description |
 |---|---|
-|URL| The URL for the video. |
-|Title| Auto-generated from the video meta data or can be customized. Note that only YouTube and Vimeo are supported. |
+|URL| The URL for the video. Note that only YouTube and Vimeo are supported. |
+|Title| Auto-generated from the video meta data or can be customized. |
 |Play Icon Style| Includes different options for the play button located at the top of a video image. |
 |Play Icon Color| Option to select either **Light** or **Dark** for the play button. |
 |Play Icon Size| Choose the pixel size for the play button. Pre-fixed range from 50&nbsp;px to 80&nbsp;px (incremented by 5&nbsp;px). |

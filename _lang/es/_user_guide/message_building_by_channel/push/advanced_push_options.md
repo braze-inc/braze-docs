@@ -1,16 +1,16 @@
 ---
-nav_title: "Opciones Push Avanzadas"
-article_title: Opciones Push Avanzadas
+nav_title: "Opciones avanzadas de push"
+article_title: Opciones avanzadas de push
 page_order: 5
 layout: dev_guide
 
 page_type: landing
 channel: push
 
-description: "Esta página de inicio enumera varias opciones push avanzadas, como las historias push y los botones de acción para notificación push."
+description: "Esta página de destino enumera varias opciones push avanzadas, como las historias push y los botones de acción para notificación push."
 
-guide_top_header: "Opciones Push Avanzadas"
-guide_top_text: "Esta página de inicio enumera varias opciones push avanzadas, como las historias push y los botones de acción para notificación push."
+guide_top_header: "Opciones avanzadas de push"
+guide_top_text: "Esta página de destino enumera varias opciones push avanzadas, como las historias push y los botones de acción para notificación push."
 
 guide_featured_title: "Artículos de sección"
 guide_featured_list:

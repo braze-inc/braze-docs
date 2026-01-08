@@ -58,7 +58,7 @@ Enjoy the weather!
 ```
 {% endraw %}
 
-![雨が降っています」というコネクテッド・コンテンツのプッシュメッセージ！Android デバイスに表示される「傘のご用意を!」というメッセージ]({% image_buster /assets/img_archive/connected_weather_push2.png %}「Connected Content のプッシュ使用例」){: style="max-width:40%"}
+![雨が降っています」というコネクテッド・コンテンツのプッシュメッセージ！アンドロイド端末で表示される「傘を持とう]({% image_buster /assets/img_archive/connected_weather_push2.png %} "Connected Content Push Usage Example"){: style="max-width:40%"}
 
 2つのコネクテッドコンテンツ呼び出しの詳細を以下の例に示します。
 
@@ -155,7 +155,7 @@ Enjoy the weather!
 「Key」ID は有用な変数であり、2番目の GET リクエストで使用されています。
 この JSON オブジェクトは、URL の後に `:save location_info` を指定することで、ローカル変数 `location_info` に格納できます。
 {% endtab %}
-{% tab Current Conditions %}
+{% tab Current conditions %}
 
 #### Current Conditions API の例
 

@@ -6,7 +6,7 @@ layout: dev_guide
 channel:
   - WhatsApp
 guide_top_header: "WhatsApp"
-guide_top_text: "WhatsApp ist eine beliebte Peer-to-Peer Messaging-Plattform, die weltweit genutzt wird und konversationsbasiertes Messaging für Unternehmen bietet. Der Messaging-Kanal von WhatsApp bietet eine direkte Möglichkeit, Nutzer:innen und Kund:innen auf der WhatsApp-Plattform zu erreichen. <br><br>**WhatsApp-Zugang ist nur in ausgewählten Braze-Paketen verfügbar. Wenden Sie sich an Ihren oder Ihre Account Manager:in oder Customer-Success-Manager:in, um loszulegen.**"
+guide_top_text: "WhatsApp ist eine beliebte Peer-to-Peer Messaging-Plattform, die weltweit genutzt wird und konversationsbasiertes Messaging für Unternehmen bietet. Der Messaging-Kanal von WhatsApp bietet eine direkte Möglichkeit, Nutzer:innen und Kund:innen auf der WhatsApp-Plattform zu erreichen. <br><br>**Die Verfügbarkeit von WhatsApp hängt von Ihrem Braze-Paket ab. Wenden Sie sich an Ihren oder Ihre Account Manager:in oder Customer-Success-Manager:in, um loszulegen.**"
 description: "Auf dieser Landing Page finden Sie alles rund um WhatsApp, z. B. wie Sie eine WhatsApp-Kampagne erstellen, Opt-Ins und Ops-Outs, Schnellantworten, Berichte und mehr."
 search_rank: 3
 alias: /whatsapp/
@@ -51,6 +51,9 @@ guide_featured_list:
 - name: "Angepasste Domains"
   link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/custom_domains/
   image: /assets/img/braze_icons/link-03.svg
+- name: "WhatsApp Anwendungsfälle"
+  link: /docs/whatsapp_use_cases/
+  image: /assets/img/braze_icons/phone-02.svg
 - name: "WhatsApp FAQ"
   link: /docs/user_guide/message_building_by_channel/whatsapp/faqs/
   image: /assets/img/braze_icons/annotation-question.svg

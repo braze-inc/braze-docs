@@ -26,7 +26,7 @@ guide_featured_list:
   - name: Importing Users
     link: /docs/user_guide/data/unification/user_data_collection/user_import/
     image: /assets/img/braze_icons/users-01.svg
-  - name: Deleting Users
+  - name: Delete Users
     link: /docs/user_guide/data/unification/user_data/delete_users/
     image: /assets/img/braze_icons/users-01.svg
   - name: Anonymous Users
@@ -40,7 +40,7 @@ guide_featured_list:
 <br>
 
 {% alert important %}
-Braze will ban or block users ("dummy users") with over 5 million sessions and no longer ingest their SDK events because they're usually the result of misintegration. If you find that this has happened for a legitimate user, reach out to your Braze account manager.
+Braze will ban or block users ("dummy users") with over 5 million sessions and no longer ingest their SDK events because they're usually the result of misintegration. If you find that this has happened for a legitimate user, contact your Braze account manager.
 {% endalert %}
 
 <br>

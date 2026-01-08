@@ -6,7 +6,7 @@ Braze では、ユーザーに属性を割り当てるメソッドが提供さ�
 
 ### デフォルトのユーザー属性
 
-Brazeによって自動的に収集されるユーザー属性を設定するには、SDKに付属のsetterメソッドを使用します。
+Brazeが自動収集したユーザー属性を設定するには、SDK付属のセッターメソッドを使用する。
 
 ```javascript
 Braze.setFirstName("Name");
@@ -36,7 +36,7 @@ Braze.setCustomUserAttribute("attribute_key", "attribute_value", function(){
 });
 ```
 
-#### カスタム属性の設定解除
+#### カスタム属性の設定を解除する
 
 ```javascript
 Braze.unsetCustomUserAttribute("attribute_key", function(){
@@ -48,7 +48,7 @@ Braze.unsetCustomUserAttribute("attribute_key", function(){
 
 ```javascript
 
-// Adds a string to a custom atttribute string array, or creates that array if one doesn't exist.
+// Adds a string to a custom attribute string array, or creates that array if one doesn't exist.
 Braze.addToCustomUserAttributeArray("my-attribute-array", "new or existing value", optionalCallback);
 
 // Removes a string from a custom attribute string array.

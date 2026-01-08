@@ -14,15 +14,15 @@ description: "This article outlines details about the Export users by segment Br
 /users/export/segment
 {% endapimethod %}
 
-> Use this endpoint to export all the users within a segment. 
+> Use this endpoint to export all the users within a segment.
 
 {% alert important %}
 When using this endpoint, note the following:<br><br>1. The `fields_to_export` field in this API request is **required**.<br>2. The fields for `custom_events`, `purchases`, `campaigns_received`, and `canvases_received` only contain data from the last 90 days.
 {% endalert %}
 
-User data is exported as multiple files of user JSON objects separated by new lines (such as one JSON object per line). Data is exported to an automatically generated URL or to an S3 bucket if this integration is already set up.
+User data is exported as multiple files of user JSON objects separated by new lines (such as one JSON object per line). Data is exported to an automatically generated URL or to an S3 bucket if this integration is already set up. If the export is successful, you receive a .txt file that contains a compressed archive ZIP or GZIP file. If the export fails, you receive an email notification.
 
-Note that a company may run at most one export per segment using this endpoint at a given time. Wait for your export to complete before trying again. 
+Note that a company may run at most one export per segment using this endpoint at a given time. Wait for your export to complete before trying again.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#cfa6fa98-632c-4f25-8789-6c3f220b9457 {% endapiref %}
 
@@ -36,7 +36,7 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 
 ## Credentials-based response details
 
-If you have added your [S3][1], [Azure][2], or [Google Cloud Storage][3] credentials to Braze, then each file will be uploaded in your bucket as a ZIP file with the key format that looks like `segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip`. If using Azure, make sure that you have the **Make this the default data export destination** box checked in the Azure partner overview page in Braze. Generally, we will create 1 file per 5,000 users to optimize processing. Exporting smaller segments within a large workspace may result in multiple files. You can then extract the files and concatenate all of the `json` files to a single file if needed. If you specify an `output_format` of `gzip`, then the file extension will be `.gz` instead of `.zip`.
+If you have added your [S3][1], [Azure][2], or [Google Cloud Storage][3] credentials to Braze, then each file is uploaded to your bucket as a ZIP file with the key format that looks like `segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip`. If using Azure, make sure that you have the **Make this the default data export destination** box checked in the Azure partner overview page in Braze. Generally, Braze creates 1 file per 5,000 users to optimize processing. Exporting smaller segments within a large workspace may result in multiple files. You can then extract the files and concatenate all of the `json` files to a single file if needed. If you specify an `output_format` of `gzip`, then the file extension is `.gz` instead of `.zip`.
 
 {% details Export pathing breakdown for ZIP %}
 **ZIP format:**
@@ -58,13 +58,13 @@ If you have added your [S3][1], [Azure][2], or [Google Cloud Storage][3] credent
 
 {% enddetails %}
 
-We strongly suggest setting up your own S3 or Azure credentials when using this endpoint to enforce your own bucket policies on the export. If you do not have your cloud storage credentials, the response to the request provides the URL where a ZIP file containing all the user files can be downloaded. The URL will only become a valid location after the export is ready. 
+We strongly suggest setting up your own S3 or Azure credentials when using this endpoint to enforce your own bucket policies on the export. If you do not have your cloud storage credentials, the response to the request provides the URL where a ZIP file containing all the user files can be downloaded. The URL becomes a valid location only after the export is ready.
 
 Be aware that if you do not provide your cloud storage credentials, there is a limitation on the amount of data you can export from this endpoint. Depending on the fields you're exporting and the number of users, the file transfer may fail if it is too large. A best practice is to specify which fields you want to export using `fields_to_export` and specify only the fields you need to keep the size of the transfer lower. If you are getting errors generating the file, consider breaking your user base into more segments based on a random bucket number (for example, create a segment where a random bucket number is less than 1,000 or between 1,000 and 2,000).
 
-In either scenario, you may optionally provide a `callback_endpoint` to be notified when the export is ready. If the `callback_endpoint` is provided, we will make a post request to the provided address when the download is ready. The body of the post will be "success":true. If you have not added S3 credentials to Braze, then the body of the post will additionally have the attribute `url` with the download URL as the value.
+In either scenario, you may optionally provide a `callback_endpoint` to be notified when the export is ready. If the `callback_endpoint` is provided, Braze makes a post request to the provided address when the download is ready. The body of the post is "success":true. If you have not added S3 credentials to Braze, then the body of the post additionally has the attribute `url` with the download URL as the value.
 
-Larger user bases will result in longer export times. For example, an app with 20 million users could take an hour or more.
+Larger user bases result in longer export times. For example, an app with 20 million users could take an hour or more.
 
 ## Request body
 
@@ -164,30 +164,28 @@ The following is a list of valid `fields_to_export`. Using `fields_to_export` to
 
 ## Important reminders
 
-- The fields for `custom_events`, `purchases`, `campaigns_received`, and `canvases_received` will contain only data from the last 90 days.
-- Both `custom_events` and `purchases` contain fields for `first` and `count`. Both of these fields will reflect information from all time, and will not be limited to just data from the last 90 days. For example, if a particular user first did the event 90 days ago, this will be accurately reflected in the `first` field, and the `count` field will take into account events that occurred prior to the last 90 days as well.
-- The number of concurrent segment exports a company can run at the endpoint level is capped at 100. Attempts that surpass this limit will result in an error.
-- Attempting to export a segment a second time while the first export job is still running will result in a 429 error.
+- The fields for `custom_events`, `purchases`, `campaigns_received`, and `canvases_received` contain only data from the last 90 days.
+- Both `custom_events` and `purchases` contain fields for `first` and `count`. Both of these fields reflect information from all time, and are not limited to data from the last 90 days. For example, if a particular user first did the event 90 days ago, this is accurately reflected in the `first` field, and the `count` field takes into account events that occurred prior to the last 90 days as well.
+- The number of concurrent segment exports a company can run at the endpoint level is capped at 100. Attempts that surpass this limit result in an error.
+- Attempting to export a segment a second time while the first export job is still running results in a 429 error.
 
 ## Response
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
-    "object_prefix": (required, string) the filename prefix that will be used for the JSON file produced by this export, for example, 'bb8e2a91-c4aa-478b-b3f2-a4ee91731ad1-1464728599',
+    "object_prefix": (required, string) the filename prefix that is used for the JSON file produced by this export, for example, 'bb8e2a91-c4aa-478b-b3f2-a4ee91731ad1-1464728599',
     "url" : (optional, string) the URL where the segment export data can be downloaded if you do not have your own S3 credentials
 }
 ```
 
-After the URL is made available, it will only be valid for a few hours. As such, we highly recommend that you add your own S3 credentials to Braze.
+After the URL is made available, it is only valid for a few hours. As such, we highly recommend that you add your own S3 credentials to Braze.
 
-If you see `object_prefix` in your API response and no URL to download the data, this means you have an Amazon S3 bucket already set up for this endpoint. Any data exported using this endpoint will go directly to your S3 bucket.
+If you see `object_prefix` in your API response and no URL to download the data, this means you have an Amazon S3 bucket already set up for this endpoint. Any data exported using this endpoint goes directly to your S3 bucket.
 
 ## Example user export file output
 
-User export object (we will include the least data possible - if a field is missing from the object it should be assumed to be null or empty):
+User export object (Braze includes the least data possible&#8212;if a field is missing from the object, it should be assumed to be null or empty):
 
 {% tabs %}
 {% tab All fields %}
@@ -278,7 +276,7 @@ User export object (we will include the least data possible - if a field is miss
       {
         "name" : (string),
         "last_received" : (string) date,
-        "engaged" : 
+        "engaged" :
          {
            "opened_email" : (boolean),
            "opened_push" : (boolean),
@@ -362,10 +360,10 @@ User export object (we will include the least data possible - if a field is miss
     "attributed_source" : "braze_test_source_072219",
     "attributed_adgroup" : "braze_test_adgroup_072219",
     "attributed_ad" : "braze_test_ad_072219",
-    "push_subscribe" : "opted_in", 
+    "push_subscribe" : "opted_in",
     "push_opted_in_at": "2020-01-26T22:45:53.953Z",
     "email_subscribe" : "subscribed",
-    "custom_attributes": 
+    "custom_attributes":
     {
       "loyaltyId": "37c98b9d-9a7f-4b2f-a125-d873c5152856",
       "loyaltyPoints": "321",
@@ -425,12 +423,12 @@ User export object (we will include the least data possible - if a field is miss
         "name": "Email Unsubscribe",
         "api_campaign_id": "d72fdc84-ddda-44f1-a0d5-0e79f47ef942",
         "last_received": "2022-06-02T03:07:38.105Z",
-        "engaged": 
+        "engaged":
         {
            "opened_email": true
         },
         "converted": true,
-        "multiple_converted": 
+        "multiple_converted":
         {
           "Primary Conversion Event - A": true
         },
@@ -460,7 +458,7 @@ User export object (we will include the least data possible - if a field is miss
         ]
       }
       ...
-    ],    
+    ],
     "cards_clicked" : [
       {
         "name" : "Loyalty Promo"

@@ -25,10 +25,10 @@ So erstellen Sie Kampagnen für mehrere Plattformen und Geräte:
 3. Wählen Sie die gewünschten Plattformen (Mobile, Web, Kindle) und Mobilgeräte (iOS, Android). Wenn Sie mehrere Geräte auswählen, sind keine Mehrvariantentests möglich.
 
 ### Plattformen für eine Kampagne auswählen
-![Möglichkeit zur Auswahl mehrerer Plattformen für Push-Kampagnen wie Mobilgerät, Web und Kindle oder mehrerer Geräte wie iOS und Android.][1]
+Optionen, um mehrere Plattformen für eine Push-Kampagne auszuwählen, z. B. Mobile, Internet und Kindle, und mehrere Geräte, z. B. iOS und Android.]({% image_buster /assets/img_archive/quick_push_1.png %})
 
 ### Plattformen für einen Canvas-Schritt auswählen
-![Optionen, um mehrere Plattformen für einen Push-Nachrichten-Schritt auszuwählen, z. B. Mobile, Internet und Kindle, und mehrere Geräte, z. B. iOS und Android.][8]
+\![Optionen, um mehrere Plattformen für einen Push-Nachrichten-Schritt auszuwählen, z. B. Mobile, Internet und Kindle, und mehrere Geräte, z. B. iOS und Android.]({% image_buster /assets/img_archive/quick_push_4.png %})
 
 {:start="4"}
 4\. Wählen Sie **Bestätigen**. Nachdem Sie **Bestätigen** ausgewählt haben, können Sie Ihre ausgewählten Plattformen oder Geräte nicht mehr ändern.
@@ -42,13 +42,13 @@ Auf der Registerkarte **Verfassen** können Sie einen Titel, eine Nachricht und 
 
 Das Vorschaufenster bietet einen ungefähren Eindruck, wie Ihre Nachricht auf den einzelnen Plattformen aussehen wird. Es kann Ihnen zwar einen guten Anhaltspunkt dafür geben, wo Sie die Zeichengrenzen erreichen könnten, aber denken Sie daran, dass Sie Ihre Nachrichten immer auf einem echten Gerät testen sollten, bevor Sie Ihre Kampagne versenden.
 
-![Eine einzige Bearbeitungsansicht mit einem Feld für Titel, Nachricht und Klickverhalten für drei Push-Typen: iOS, Android und Web.][2]
+\![Einzelne Bearbeitungsansicht mit einem Titel, einer Nachricht und einem Feld für das Klickverhalten für drei Push-Typen: iOS, Android und Internet.]({% image_buster /assets/img_archive/quick_push_2.png %})
 
-Wählen Sie im Bereich **Assets** die Bilder aus, die für jede Plattform angezeigt werden sollen, oder laden Sie sie hoch. Denken Sie daran, dass verschiedene Geräte unterschiedliche Spezifikationen für Bilder und Zeichenzahlen haben. Weitere Informationen finden Sie unter [Push-Nachrichten- und Bildformate][3] ].
+Wählen Sie im Bereich **Assets** die Bilder aus, die für jede Plattform angezeigt werden sollen, oder laden Sie sie hoch. Denken Sie daran, dass verschiedene Geräte unterschiedliche Spezifikationen für Bilder und Zeichenzahlen haben. Siehe [Push Nachrichten und Bildformate]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/message_format/) für Hilfe.
 
-![Abschnitt "Assets" in der Einzelbearbeitungsansicht mit Feldern für Push-Symbolbild, iOS-Benachrichtigungsbild, Android-Benachrichtigungsbild und Web-Benachrichtigungsbild.][4]{:style="max-width:50%"}
+\![Abschnitt Assets der Einzelbearbeitungsansicht mit Feldern für Push-Symbolbild, iOS-Benachrichtigungsbild, Android-Benachrichtigungsbild und Internet-Benachrichtigungsbild.]({% image_buster /assets/img_archive/quick_push_3.png %}){:style="max-width:50%"}
 
-Beenden Sie dann die Einrichtung Ihrer Push-Kampagne wie gewohnt. Weitere Informationen finden Sie unter [Erstellen einer Push-Kampagne][5] ].
+Beenden Sie dann die Einrichtung Ihrer Push-Kampagne wie gewohnt. Weitere Informationen finden Sie unter [Erstellen einer Push-Kampagne]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/).
 
 ## Was Sie wissen sollten
 
@@ -66,15 +66,7 @@ Sie können plattformspezifische Einstellungen im Editor bearbeiten. Dazu gehör
 
 Beachten Sie, dass Push-Action-Buttons beim Targeting von Quick-Push-Kampagnen sowohl für iOS als auch für Android nicht unterstützt werden. Weitere Informationen zu gerätespezifischen Einstellungen finden Sie in den folgenden Artikelsammlungen:
 
-- [iOS-Optionen][6]
-- [Android-Optionen][7]
+- [iOS-Optionen]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios)
+- [Android Optionen]({{site.baseurl}}/user_guide/message_building_by_channel/push/android)
 
 
-[1]: {% image_buster /assets/img_archive/quick_push_1.png %}
-[2]: {% image_buster /assets/img_archive/quick_push_2.png %}
-[4]: {% image_buster /assets/img_archive/quick_push_3.png %}
-[8]: {% image_buster /assets/img_archive/quick_push_4.png %}
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/message_format/
-[5]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/
-[6]: {{site.baseurl}}/user_guide/message_building_by_channel/push/ios
-[7]: {{site.baseurl}}/user_guide/message_building_by_channel/push/android

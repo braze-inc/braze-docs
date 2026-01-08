@@ -41,7 +41,7 @@ Braze では、[カスタムフッター]({{site.baseurl}}/user_guide/message_bu
 
 ### バウンスおよび無効なメール
 
-{% multi_lang_include metrics.md metric='Hard Bounce' %} {% multi_lang_include metrics.md metric='Soft Bounce' %} 
+{% multi_lang_include analytics/metrics.md metric='Hard Bounce' %} {% multi_lang_include analytics/metrics.md metric='Soft Bounce' %} 
 
 メールアドレスがハードバウンスすると、ユーザーの購読状態は「購読解除」に自動的に設定されません。E メールアドレスがハードバウンスする場合(E メールが無効または存在しない場合など)、ユーザのE メールアドレスは無効としてマークされ、そのE メールアドレスにそれ以上のE メールを送信しようとはしません。そのユーザーがEメールアドレスを変更した場合、新しいEメールアドレスが有効である可能性があるため、そのユーザーへのEメール送信を再開する。ソフトバウンスは自動的に 72 時間再試行されます。
 
@@ -70,12 +70,12 @@ Braze SDK を使用して、ユーザーの購読状態を更新します。
 
 ### メール購読状態の確認
 
-![John Doe のユーザープロファイルで、メール購読の状態が「購読中」に設定されている。]({% image_buster /assets/img/push_example.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
+![John Doeのユーザプロファイルで、メール購読の状態が「購読済み」に設定されている。]({% image_buster /assets/img/push_example.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
 Braze でユーザーメール購読状態を確認するには、2 つの方法があります。
 
 1. **REST API でのエクスポート:**[セグメント別ユーザーのエクスポート]({{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/)または[識別子によるユーザーのエクスポート]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/)エンドポイントを使用して、個々のユーザープロファイルをJSON 形式でエクスポートします。
-2. **ユーザープロフィール:**[[ユーザーを検索]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/)]ページでユーザープロファイルを検索し、[**エンゲージメント**] タブを選択して、ユーザーの購読状態を表示して手動で更新します。 
+2. **ユーザープロフィール:**[[ユーザーを検索]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/)]ページでユーザープロファイルを検索し、[**エンゲージメント**] タブを選択して、ユーザーの購読状態を表示して手動で更新します。
 
 ユーザーがメールアドレスを更新すると、ユーザーの購読状態は購読中に設定されます。ただし、更新後のメールアドレスが Braze ワークスペースの他の場所に既に存在する場合を除きます。
 
@@ -89,20 +89,20 @@ Braze ダッシュボードの [** 購読グループ**] ページに保存し�
 
 ### 購読グループの作成
 
-1. [**オーディエンス**] > [**購読**] に移動します。
+1. **オーディエンス**>**サブスクリプショングループマネジメントに**進む。
 2. **メールサブスクリプショングループの作成**を選択します。 
 3. サブスクリプショングループに名前と説明を付けます。
 4. [**保存**] を選択します。 
 
 すべての購読グループは自動的にユーザー設定センターに追加されます。
 
-![サブスクリプショングループを作成するフィールド。]({% image_buster /assets/img/sub_group_create.png %}){: style="max-width:75%"}
+![購読グループを作成するためのフィールド。]({% image_buster /assets/img/sub_group_create.png %}){: style="max-width:75%"}
 
 ### 購読グループによるセグメンテーション
 
 セグメントを作成するときに、購読グループ名をフィルターとして設定します。これにより、グループにオプトインしたユーザーがメールを受信することが確認されます。これは、月刊ニュースレター、クーポン、メンバーシップ層などに最適です。
 
-![「Lapsed Users」セグメント内のユーザーを、「Stable Alerts」サブスクリプショングループのユーザーでフィルタリングしてターゲットにする例。]({% image_buster /assets/img/segment_sub_group.png %}){: style="max-width:90%"}
+![週刊メール」サブスクリプショングループのユーザーのフィルターを使用して、「離脱ユーザー」セグメントのユーザーをターゲティングする例。]({% image_buster /assets/img/segment_sub_group.png %}){: style="max-width:90%"}
 
 ### 購読グループのアーカイブ
 
@@ -113,13 +113,13 @@ Braze ダッシュボードの [** 購読グループ**] ページに保存し�
 1. サブスクリプショングループのリストでグループを検索します。 
 2. <i class="fa-solid fa-ellipsis-vertical"></i>ドロップダウンメニューから**アーカイブ**を選択します。
 
-Brazeは、アーカイブされたグループのユーザーの状態変更を処理しない。例えば、Susie が購読しているときに「購読グループ A」をアーカイブした場合、Susie が購読解除リンクをクリックしても、Susie はこのグループで「購読」のままになります (「購読グループ A」はアーカイブ済みで、それを使用したメッセージの送信はできないので、Susie には影響しない)。
+Brazeは、アーカイブされたグループのユーザーの状態変更を処理しない。例えば、Susieがサブスクライバーになっている間にサブスクリプショングループ1をアーカイブした場合、Susieが配信停止リンクをクリックしても、Susieはこのサブスクリプショングループに "サブスクライブ "したままとなる（サブスクリプショングループ1はアーカイブされ、それを使ってメッセージを送信することはできないので、Susieには関係ないはずだ）。
 
 #### 購読グループのサイズの表示
 
 [**購読グループ**] ページの [**購読グループの時系列**] グラフを参照して、一定期間のユーザー数に基づく購読グループのサイズを確認できます。これらの購読グループのサイズは、セグメントサイズの計算など、Braze の他の分野とも一致します。
 
-![12月2日から11日までの「サブスクリプショングループの時系列」グラフの例。グラフは、6日から7日までのユーザー数が約1000万人増加したことを示しています。]({% image_buster /assets/img_archive/subscription_group_graph.png %})
+![12月2日から11日までの「サブスクリプショングループの時系列」グラフの例。グラフは、6日から7日にかけてユーザー数が1000万人近く増加したことを示しています。]({% image_buster /assets/img_archive/subscription_group_graph.png %})
 
 #### キャンペーン分析での購読グループの表示
 
@@ -129,6 +129,11 @@ Brazeは、アーカイブされたグループのユーザーの状態変更を
 2. **Subscription Groups** の下にある矢印を選択すると、顧客が送信した状態変更の集計カウントが表示されます。
 
 ![顧客が送信した状態変更の合計数を表示する「メールメッセージパフォーマンス」ページ。]({% image_buster /assets/img/campaign_analytics_sub_groups.png %})
+
+### ユーザーのサブスクリプショングループを確認する
+
+- **ユーザープロフィール:**個々のユーザープロフィールは、[ユーザー検索]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/#access-profiles)ページのBrazeダッシュボードからアクセスできます。ここでは、メールアドレス、電話番号、または外部ユーザーIDでユーザープロフィールを検索できます。**エンゲージメントタブで**ユーザーのサブスクリプショングループを表示することもできる。
+- **Braze REST API：**個々のユーザープロファイルのサブスクリプショングループを表示するには、[List user's subscription groups エンドポイント]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_groups/)または[List user's subscription group status エンド]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/)ポイントを使用する。 
 
 ## メールユーザー設定センター
 
@@ -163,7 +168,7 @@ Brazeは、アーカイブされたグループのユーザーの状態変更を
 
 誤って購読を解除してしまった場合に備えて、ユーザーが購読を再開できるよう、ランディングページに再購読リンク（{% raw %}`{{${set_user_to_subscribed_url}}}`{% endraw %} など）を設けることをお勧めする。
 
-![[カスタム購読解除ページ] パネルのカスタム購読解除メール。]({% image_buster /assets/img/custom_unsubscribe.png %})
+!["お別れして残念です！"のプレビューがあるカスタム配信停止ページ。]({% image_buster /assets/img/custom_unsubscribe.png %})
 
 ### カスタムオプトインページを作成する
 
@@ -173,9 +178,13 @@ Brazeは、アーカイブされたグループのユーザーの状態変更を
 2. [**サブスクリプションのページおよびフッター**] を選択します。
 3. **Custom opt-in page** セクションのスタイルをカスタマイズして、ユーザが購読済みであることをユーザに示す方法を確認します。
 
+ユーザーは、{% raw %}`{{${set_user_to_opted_in_url}}}`{% endraw %} タグを通してこのページに誘導される。
+
 {% alert tip %}
 Braze では、メールでのアウトリーチを支援するために、ダブルオプトインプロセスを使用することをお勧めしています。このプロセスでは、追加の確認メールが送信され、ユーザーはメール内のリンクを通じて通知設定を再度確認することになる。この時点で、ユーザーはオプトインしたとみなされます。
 {% endalert %}
+
+![あなたがまだ私たちからの連絡を望んでいるのを見て嬉しい」というメッセージを添えたカスタムオプトインメール。]({% image_buster /assets/img/custom_optin.png %})
 
 ## 購読とキャンペーンのターゲティング{#subscriptions-and-campaign-targeting}
 
@@ -197,5 +206,5 @@ Braze は3つのターゲット状態をサポートしています。
 
 オプトインもオプトアウトもしていないユーザーをターゲットにし、Eメールやプッシュへのオプトインを明示的に促したい場合に有効だ。この場合、「メール / プッシュ購読ステータスが購読中」のフィルターを使用してセグメントを作成すると、このセグメントへのキャンペーンは購読中だがオプトインしていないユーザーに送信されます
 
-![セグメントフィルタとして使用されるメールサブスクリプションステータス。]({% image_buster /assets/img_archive/not_optin.png %})
+![セグメントフィルターとして使用されるメール購読ステータス。]({% image_buster /assets/img_archive/not_optin.png %})
 

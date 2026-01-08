@@ -1,5 +1,5 @@
 ---
-nav_title: レコメンデーションの使用
+nav_title: 推奨事項の使用
 article_title: メッセージングでの項目の推奨事項の使用
 description: "この記事では、メッセージで項目の推奨事項を使用する方法について説明します。"
 page_order: 1.2
@@ -24,8 +24,8 @@ page_order: 1.2
 おすすめのトレーニングが終了したら、Liquidでメッセージをカスタマイズして、そのカタログに最も人気のある製品を挿入できます。
 
 {% tabs local %}
-{% tab フォーマット済みのコード %}
-![パーソナライゼーションタイプとして項目のレコメンデーションが設定されている [パーソナライゼーションを追加] モーダル。]({% image_buster /assets/img/add_personalization.png %}){: style="max-width:30%;float:right;margin-left:15px;"}
+{% tab pre-formatted code %}
+![パーソナライゼーションタイプとしてアイテムの推奨を使用した [パーソナライゼーションを追加] モーダル。]({% image_buster /assets/img/add_personalization.png %}){: style="max-width:30%;float:right;margin-left:15px;"}
 
 メッセージコンポーザーの**パーソナライゼーションを追加** セクションからLiquid を生成できます。
 
@@ -37,7 +37,7 @@ page_order: 1.2
 6. [**コピー**] アイコンを選択し、メッセージ内の必要な場所に Liquid を貼り付けます。
 {% endtab %}
 
-{% tab カスタムコード %}
+{% tab custom code %}
 カタログの`product_recommendation` オブジェクトを参照することで、カスタムのLiquid コードを記述できます。これには、そのカタログの動的に生成されたすべての製品レコメンドデータが含まれ、オブジェクトの配列として構造化されます。各オブジェクトは、推奨アイテムを表します。
 
 |仕様|詳細|
@@ -91,7 +91,7 @@ AI 推奨では、複数の製品が配列として返されます。`items[0]` 
 おすすめのカタログにイメージリンクが含まれている場合は、メッセージで参照できます。 
 
 {% tabs %}
-{% tab ドラッグアンドドロップ%}
+{% tab Drag-and-drop%}
 メールのドラッグ＆ドロップエディターで、メールに画像ブロックを追加し、この画像ブロックを選択して [**画像のプロパティ**] を開きます。
 
 ![ドラッグアンドドロップエディタのイメージプロパティパネル]({% image_buster /assets/img/image_with_liquid.png %}){: style="max-width:45%"}

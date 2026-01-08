@@ -1,17 +1,17 @@
 ---
-nav_title: "SAML e logon único"
-article_title: SAML e logon único
+nav_title: "SAML e autenticação única"
+article_title: SAML e Autenticação Única
 page_order: 5
 layout: dev_guide
-guide_top_header: "SAML e logon único"
-guide_top_text: "O logon único (SSO) oferece às empresas uma maneira segura e centralizada de controlar o acesso ao dashboard do Braze. Em resumo, um único conjunto de credenciais pode ser usado para acessar diferentes aplicativos, inclusive a Braze. <br> <br> O Braze oferece suporte ao SAML SSO, que suporta os mais recentes padrões do setor Security Assertion Markup Language (SAML 2.0), e também oferece suporte ao Microsoft Entra ID (antigo Azure Active Directory), Okta e OneLogin."
+guide_top_header: "SAML e Autenticação Única"
+guide_top_text: "A Autenticação Única (SSO) fornece às empresas uma maneira segura e centralizada de controlar o acesso ao painel do Braze. Em resumo, um único conjunto de credenciais pode ser usado para acessar diferentes aplicativos, incluindo o Braze. <br> <br> O Braze suporta SAML SSO, que atende aos mais recentes padrões da indústria de Linguagem de Marcação de Aserções de Segurança (SAML 2.0) e também suporta Microsoft Entra ID (anteriormente Azure Active Directory), Okta e OneLogin."
 
 page_type: landing
-description: "Esta landing page contém artigos sobre logon único (SSO). Aqui, você pode encontrar ajuda para configurar provedores de identidade compatíveis ou realizar uma configuração personalizada."
+description: "Esta página de destino é o lar de artigos sobre autenticação única (SSO). Aqui, você pode encontrar ajuda para configurar provedores de identidade suportados ou realizar uma configuração personalizada."
 
-guide_featured_title: "Tópicos do SAML SSO"
+guide_featured_title: "Tópicos de SAML SSO"
 guide_featured_list:
-- name: Configuração de SSO SAML personalizado
+- name: Configuração Personalizada de SAML SSO
   link: /docs/user_guide/administrative/access_braze/single_sign_on/set_up/
   image: /assets/img/braze_icons/fingerprint-03.svg
 - name: Restringir ao SAML SSO
@@ -32,7 +32,7 @@ guide_featured_list:
 <br>
 
 {% alert important %}
-O suporte a Google SSO e SAML SSO está disponível para clientes Pro e Enterprise. Para outros clientes, entre em contato com seu gerente de conta Braze para obter mais detalhes.
+O suporte ao Google SSO e SAML SSO está disponível para clientes Pro e Enterprise. Para outros clientes, entre em contato com seu gerente de conta do Braze para mais detalhes.
 {% endalert %}
 
 <br>

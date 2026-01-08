@@ -127,6 +127,9 @@ Selected choices will automatically flow through to Currents, under the [**In-Ap
 
 ## Use cases
 
+{% tabs %}
+{% tab User satisfaction %}
+
 ### User satisfaction
 
 **Goal:** Measure customer satisfaction and send win-back campaigns to users who left low scores.
@@ -144,6 +147,9 @@ To set this up, use a single-choice selection survey with five options ranging f
 
 When a user submits the survey, their selected value is logged as a custom attribute. You can then build follow-up campaigns using audience filters. For example, target win-back messages to users whose `customer_satisfaction` attribute is 1 or 2.
 
+{% endtab %}
+{% tab Notification preferences %}
+
 ### Notification preferences
 
 **Goal:** Let users opt into specific types of notifications.
@@ -158,6 +164,9 @@ To set this up, use a multiple-choice selection survey where each choice represe
 | Surveys & Feedback | `wants_surveys`        | `true` |
 | Tips & Tutorials   | `wants_tips`           | `true` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
+{% endtab %}
+{% tab Identify customer goals %}
 
 ### Identify customer goals
 
@@ -176,6 +185,9 @@ To set this up, use a single-choice selection survey with each option representi
 
 When a user submits the survey, the selected value is logged as a custom attribute on their profile. You can then use this data to personalize future experiences or segment users based on their primary goal.
 
+{% endtab %}
+{% tab Improve conversion rates %}
+
 ### Improve conversion rates
 
 **Goal:** Understand why customers aren’t upgrading or purchasing.
@@ -192,6 +204,9 @@ To set this up, use a single-choice selection survey with each option representi
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 When a user submits the survey, the selected value is saved to their profile. You can then target these users with campaigns tailored to their specific objection, like discount offers or usability improvements.
+
+{% endtab %}
+{% tab Favorite features %}
 
 ### Favorite features
 
@@ -212,5 +227,5 @@ To set this up, use a multiple-choice selection survey where each option represe
 
 Because this survey uses multiple-choice selection, the user's profile will be updated with a list of all selected feature values.
 
-
-
+{% endtab %}
+{% endtabs %}

@@ -1,19 +1,16 @@
 ---
 nav_title: E-Mail
 article_title: E-Mail
-page_order: 2
+page_order: 1.5
 layout: dev_guide
 guide_top_header: "E-Mail"
-guide_top_text: "Mit E-Mail bei Braze können Sie vollständig angepasste und personalisierte E-Mail-Nachrichten in Kampagnen oder Canvas erstellen, die die Aufmerksamkeit Ihrer Benutzer schnell auf sich ziehen werden. Lesen Sie die folgenden Artikel, um mehr zu erfahren."
+guide_top_text: "Mit E-Mail bei Braze können Sie vollständig angepasste und personalisierte E-Mail-Nachrichten in Kampagnen oder Canvas erstellen, die die Aufmerksamkeit Ihrer Nutzer auch außerhalb Ihrer App oder Website schnell auf sich ziehen werden. Passen Sie Ihre E-Mail-Nachrichten an, von der Zielgruppenverwaltung bis hin zur Einbindung auffälliger multimedialer Contents. Um Beispiele für E-Mail Kampagnen zu sehen, sehen Sie sich unsere <a href='https://www.braze.com/customers/'>Anwendungsbeispiele</a> an."
 description: "Diese Startseite ist der Ausgangspunkt für Braze-E-Mail. Hier erfahren Sie, wie Sie eine E-Mail-Kampagne erstellen, wie Sie den Drag-and-Drop-Editor verwenden, wie Sie Benutzerabonnements verwalten, das Einstellungscenter nutzen und vieles mehr."
 channel:
   - email
 search_rank: 2
 guide_featured_title: "Beliebte Artikel"
 guide_featured_list:
-- name: Informationen zu E-Mail
-  link: /docs/user_guide/message_building_by_channel/email/about/
-  image: /assets/img/braze_icons/check-square-broken.svg
 - name: Benutzerabonnements verwalten
   link: /docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/
   image: /assets/img/braze_icons/users-01.svg
@@ -39,7 +36,7 @@ guide_menu_list:
   link: /docs/user_guide/message_building_by_channel/email/email_setup/
   image: /assets/img/braze_icons/mail-01.svg
 - name: Lokale in Nachrichten
-  link: /docs/user_guide/message_building_by_channel/email/using_locales/
+  link: /docs/locales_in_messages/
   image: /assets/img/braze_icons/users-01.svg
 - name: Präferenzzentrum
   link: /docs/user_guide/message_building_by_channel/email/preference_center/
@@ -57,7 +54,7 @@ guide_menu_list:
   link: /docs/user_guide/message_building_by_channel/email/transactional_message_api_campaign/
   image: /assets/img/braze_icons/bank-note-02.svg
 - name: Verschlüsselung auf Bezeichner-Feldebene
-  link: /docs/user_guide/analytics/field_level_encryption/
+  link: /docs/user_guide/data/field_level_encryption/
   image: /assets/img/braze_icons/database-01.svg
 - name: Gmail Promotion Tool
   link: /docs/user_guide/message_building_by_channel/email/html_editor/gmail_promotions_tab/
@@ -77,8 +74,27 @@ guide_menu_list:
 - name: Häufig gestellte Fragen
   link: /docs/user_guide/message_building_by_channel/email/faq/
   image: /assets/img/braze_icons/annotation-question.svg
-
-
 ---
 
-<br><br>
+## [![Braze Lernkurse]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/messaging-channels-email){: style="float:right;width:120px;border:0;" class="noimgborder"} Passen Sie Ihre E-Mails an
+
+Sie können Ihr E-Mail Messaging auf vielfältige Weise anpassen, zum Beispiel:
+
+- [Braze-E-Mail-Templates]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/email_template/)
+- [Benutzerdefinierte HTML-Vorlagen]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/html_email_template/)
+- [Blöcke für den Drag-and-Drop-Editor]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_editor_blocks/)
+- [Benutzer-Abonnements]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/)
+
+## Tolle Anwendungsfälle
+
+Hier sind einige großartige Anwendungsfälle, die Sie inspirieren werden!
+
+| Anwendungsfall | Erklärung |
+| --- | --- |
+| Erneute Interaktion | Erreichen Sie Nutzer außerhalb Ihrer App, auch solche, die die App nicht installiert haben. |
+| Onboarding | Binden Sie neue Benutzer ein und ermutigen Sie sie, Push-Benachrichtigungen zu aktivieren oder die App in sozialen Netzwerken zu teilen. |
+| Rich-Nachrichten | Ermöglichen Sie umfangreiche und dynamische HTML-Nachrichten. |
+| Multimedialer Content | Einfache Platzierung von Multimedia-Inhalten, die Nutzer:innen engagieren, wie z.B. Videos und Bilder. |
+| Newsletters | Versenden Sie bequem monatliche oder wöchentliche Newsletter, um das Engagement der Nutzer:innen aufrechtzuerhalten. |
+| Transaktionen | Benachrichtigen Sie Benutzer über kürzlich getätigte Käufe und liefern Sie wichtige Produkt- und Versandinformationen mit [Transaktions-E-Mails]({{site.baseurl}}/user_guide/message_building_by_channel/email/transactional_message_api_campaign/).
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }

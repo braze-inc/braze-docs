@@ -6,9 +6,9 @@ This use case shows how you can use Braze features to build a booking reminder e
 
 Other benefits of creating this service include:
 - Sent messages will have full tracking and reporting.
-- Message content can be updated by non-technical Braze users.
+- Non-technical Braze users can update message content.
 - Messages obey opt-in and opt-out statuses on user profiles per campaign configuration.
-- Both booking data and message interaction data can be used to segment and target users for additional messaging. For example, you can retarget those who don’t open the initial reminder message with an additional reminder before their appointment.
+- You can use both booking data and message interaction data to segment and target users for additional messaging. For example, you can retarget those who don't open the initial reminder message with an additional reminder before their appointment.
 
 Follow these steps to achieve this use case:
 1. [Write upcoming booking data to a Braze user profile](#step-1)
@@ -17,7 +17,7 @@ Follow these steps to achieve this use case:
 
 ## Step 1: Write upcoming booking data to a Braze user profile {#step-1}
 
-Use the Braze [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint to write a [nested custom attribute]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support/) to a user profile each time a booking takes place. Make sure the nested custom attribute contains all the information that will be needed to send and personalize the reminder message. In this use case, we’ll name the nested custom attribute “trips”.
+Use the Braze [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint to write a [nested custom attribute]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support/) to a user profile each time a booking takes place. Make sure the nested custom attribute contains all the information you need to send and personalize the reminder message. In this use case, we’ll name the nested custom attribute “trips”.
 
 ### Add booking
 
@@ -120,7 +120,7 @@ braze.getUser().setCustomUserAttribute("trips", json);
 {% endtab %}
 {% endtabs %}
 
-The specified booking will be removed from the nested custom attribute in the user profile and display any remaining bookings.
+Braze removes the specified booking from the nested custom attribute in the user profile and displays any remaining bookings.
 
 ![A nested custom attribute for a London trip.]({% image_buster /assets/img/use_cases/1_nested_attribute.png %}){: style="max-width:70%;"}
 
@@ -155,7 +155,7 @@ You have the following booked in 2 days! Check the information below:
 
 ### Step 2c: Launch your campaign
 
-Launch the campaign for the reminder email message. Now, each time Braze receives the “trips” custom attribute, a message will be scheduled according to the data included in the respective booking’s object.
+Launch the campaign for the reminder email message. Now, each time Braze receives the "trips" custom attribute, Braze schedules a message according to the data included in the respective booking's object.
 
 ## Step 3: Handle updated booking updates and cancellations {#step-3}
 
@@ -256,7 +256,7 @@ If the user in this use case updated their Sydney trip, you’d use the `/users/
 
 #### Cancelled booking
 
-If the user in this use case cancelled their Syndey trip, you’d send the following call to the `/users/track` endpoint:
+If the user in this use case cancelled their Sydney trip, you'd send the following call to the `/users/track` endpoint:
 
 {% raw %}
 ```json

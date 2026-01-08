@@ -1,6 +1,6 @@
 ---
-nav_title: "Creating an RCS message"
-article_title: Creating an RCS Message
+nav_title: Create an RCS message
+article_title: Create an RCS Message
 page_order: 2
 alias: /create_rcs_message/
 description: "This article covers how to create an RCS message."
@@ -9,7 +9,7 @@ channel:
   - RCS
 ---
 
-# Creating an RCS message
+# Create an RCS message
 
 > RCS campaigns are great for directly reaching and programmatically conversing with your customers. You can use Liquid and other dynamic content to create a personal experience with your users and create an environment that fosters and enhances an unobtrusive user experience with your brand.
 
@@ -17,7 +17,7 @@ channel:
 
 ### Step 1: Choose where to build your message
 
-Not sure whether your message should be sent using a campaign or a Canvas? Campaigns are better for single, simple messaging campaigns, while Canvases are better for multi-step user journeys.
+Not sure whether your message should be sent using a campaign or a Canvas? Campaigns are better for single, targeted messaging campaigns, while Canvases are better for multi-step user journeys.
 
 {% tabs %}
 {% tab Campaign %}
@@ -127,7 +127,8 @@ Before proceeding, read our [guidelines for RCS message limits](#step-2-select-y
 
 ### Step 4: Preview and test your message
 
-Braze always recommends previewing and testing your message before sending. Go to the **Test** tab to send a test RCS to content test groups or individual users, or preview the message as a user directly in Braze.
+Because RCS rendering is controlled by the user’s operating system, device manufacturer, carrier, and messaging app (for example, Google Messages vs. Apple Messages), message appearance can vary. As a result, the RCS preview shown in Braze may not exactly match what an end user ultimately receives. Differences may include layout, media sizing, buttons, branding elements, or supported features. Braze always recommends previewing and testing your message before sending. Use the **Test** tab to send a test RCS to content test groups or individual users, and preview the message as a user directly within Braze. However, final rendering should always be validated on real devices whenever possible, as Braze cannot guarantee perfect parity across all OS, device, and carrier combinations.
+
 
 ### Step 5: Build the remainder of your campaign or Canvas
 
@@ -147,7 +148,7 @@ Target users by choosing segments or filters to narrow down your audience. You s
 
 {% multi_lang_include target_audiences.md %}
 
-Next, you'll select the larger audience from your segments and narrow that segment further with optional [filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/). You'll automatically be given a preview of what that approximate segment population looks like right now. Keep in mind that exact segment membership is always calculated just before the message is sent.
+Next, you select the larger audience from your segments and narrow that segment further with optional [filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/). You automatically receive a preview of what that approximate segment population looks like. Keep in mind that exact segment membership is always calculated before the message is sent.
 
 {% alert tip %}
 Interested in using RCS retargeting to target users based on their SMS and RCS interactions? Refer to [Retargeting]({{site.baseurl}}/sms_mms_rcs_user_retargeting/).

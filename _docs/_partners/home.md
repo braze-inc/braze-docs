@@ -91,7 +91,7 @@ valid_partner_list:
 - name: Segment
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/segment/
 - name: mParticle
-  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/mparticle/
+  url: /docs/partners/mparticle_overview/
 - name: Tealium
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/tealium/
 - name: RudderStack
@@ -296,6 +296,8 @@ valid_partner_list:
   url: /docs/partners/liveramp/
 - name: Inbox Monster
   url: /docs/partners/inbox_monster/
+- name: Kickbox
+  url: /docs/partners/kickbox/
 - name: mypostcard
   url: /docs/partners/message_orchestration/additional_channels/direct_mail/mypostcard/
 - name: SEEN
@@ -358,4 +360,16 @@ valid_partner_list:
   url: /docs/partners/lemnisk/
 - name: Jasper
   url: /docs/partners/jasper/
+- name: Kameleoon
+  url: /docs/partners/kameleoon/
+- name: Swym
+  url: /docs/partners/swym/
+- name: StackAdapt
+  url: /docs/partners/stackadapt/
+- name: Oppizi
+  url: /docs/partners/oppizi/
+- name: Cloudinary
+  url: /docs/partners/message_personalization/dynamic_content/visual_and_interactive_content/cloudinary/
+- name: LILT
+  url: /docs/partners/lilt/
 ---

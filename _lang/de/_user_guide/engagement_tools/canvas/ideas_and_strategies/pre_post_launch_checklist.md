@@ -1,5 +1,5 @@
 ---
-nav_title: Checkliste vor und nach dem Start
+nav_title: Checkliste vor und nach der Markteinführung
 article_title: Checkliste vor und nach dem Start
 page_order: 2
 description: "Dieser Artikel enthält eine Anleitung für Aufgaben, die Sie vor und nach dem Start eines Canvas überprüfen sollten."
@@ -15,10 +15,6 @@ tool: Canvas
 
 Bevor Sie ein Canvas starten, können Sie einige Details überprüfen, um sicherzustellen, dass Ihre Nachrichten und Sendezeiten mit den Präferenzen Ihrer Zielgruppe übereinstimmen. Zu berücksichtigen sind dabei unter anderem unterschiedliche Zeitzonen, Eingabeeinstellungen und mehr. Verwenden Sie diese Checkliste als Leitfaden, um diese Bereiche auf der Grundlage Ihres Anwendungsfalls zu optimieren und so zum Erfolg Ihres Canvas beizutragen. 
 
-{% alert important %}
-Seit dem 28\. Februar 2023 ist es nicht mehr möglich, Canvase in der klassischen Canvas-Umgebung zu erstellen oder zu duplizieren. Braze empfiehlt Kund:innen, die die ursprüngliche Canvas-Umgebung nutzen, den Wechsel zu Canvas Flow. Es handelt sich um eine verbesserte Bearbeitungsfunktion, mit der Sie Canvases besser erstellen und verwalten können. Erfahren Sie mehr über das [Klonen Ihrer Canvases in Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
-{% endalert %}
-
 ### Überprüfen Sie die Zeitzoneneinstellungen
 
 Wenn Sie die Nutzer:innen entsprechend ihrer lokalen Zeitzone mit einem Zeitplan für die Eingabe eingeben, sollten Sie Ihren Canvas mindestens 24 Stunden vor dem Zeitpunkt starten, an dem die Nutzer:innen Ihren Canvas aufrufen sollen. Im Folgenden finden Sie ein Beispiel für ein Canvas, das nicht genug Zeit zwischen dem Start und der geplanten Eintrittszeit gelassen hat. In diesem Szenario gibt es möglicherweise einige Benutzer, die Ihr Canvas nicht betreten werden, da die geplante Eintrittszeit in bestimmten Zeitzonen bereits verstrichen ist. 
@@ -27,7 +23,7 @@ Wenn Sie die Nutzer:innen entsprechend ihrer lokalen Zeitzone mit einem Zeitplan
 Sie erhalten eine Meldung, wenn Sie nicht genügend Puffer eingeplant haben. Eine schnelle Lösung ist die Anpassung der Sendezeit, um sicherzustellen, dass die Nutzer:innen volle 24 Stunden lang im Zielsegment bleiben können.
 {% endalert %}
 
-![][1]
+\![Ein Canvas mit einem Zeitplan, der Nutzer:innen am 30\. April 2025 ab 10 Uhr morgens in ihrer Ortszeit erfasst.]({% image_buster /assets/img_archive/canvas_checklist1.png %}){: style="max-width:75%;"}
 
 ### Verwendung regulärer Ausdrücke für Zielgruppenfilter in Betracht ziehen
 
@@ -72,7 +68,7 @@ Sie haben Ihr Canvas gestartet! Was nun? Verwenden Sie diese Checkliste, um zu s
 
 ### Viele Einträge, aber wenig Sendungen
 
-Nehmen wir zum Beispiel an, Sie haben ein Missverhältnis zwischen der Anzahl Ihrer gesendeten Nachrichten und der Anzahl Ihrer Einträge festgestellt. Sie können Bereiche identifizieren und aufdecken, in denen Sie Ihren Canvas anpassen müssen, indem Sie diese Schlüsselbereiche überprüfen.
+Nehmen wir an, Sie haben ein Missverhältnis zwischen der Anzahl Ihrer gesendeten Nachrichten und der Gesamtzahl Ihrer Eingänge festgestellt. Sie können Bereiche identifizieren und aufdecken, in denen Sie Ihren Canvas anpassen müssen, indem Sie diese Schlüsselbereiche überprüfen.
 
 #### Entry-Zielgruppe
 
@@ -80,7 +76,7 @@ Wenn Sie eine Kampagne mit geplantem Versand verwenden, überprüfen Sie Ihre Zi
 
 #### Erste Komponente des Canvas
 
-Überprüfen Sie alle Zielgruppenfilter, Aktions-Trigger oder Segmente, die in den ersten Komponenten Ihres Canvas verwendet wurden. Gibt es Rechtschreibfehler oder zu strenge Bedingungen, die verhindern, dass Ihr Canvas richtig anläuft? Verwenden Sie „Ist gleich“, obwohl Sie „Stimmt mit Regex überein“ verwenden sollten?
+Überprüfen Sie alle Zielgruppenfilter, Aktions-Trigger oder Segmente, die in den ersten Komponenten Ihres Canvas verwendet wurden. Gibt es Rechtschreibfehler oder zu strenge Bedingungen, die Ihren Canvas daran hindern, richtig zu starten? Verwenden Sie „Ist gleich“, obwohl Sie „Stimmt mit Regex überein“ verwenden sollten?
 
 #### Canvas-Kontrollgruppe 
 
@@ -92,7 +88,7 @@ Wenn Sie keine Entry-Daten für Ihr Canvas sehen, kann der Grund dafür, dass Nu
 
 Wenn Sie in Ihrem Entry-Zeitplan die aktionsbasierte Entry verwenden, stellen Sie sicher, dass Sie hier nicht die gleiche Trigger-Aktion verwendet haben wie in Ihrer **Zielgruppe**. Es kann eine Race-Condition auftreten, bei der der oder die Nutzer:in zum Zeitpunkt der Ausführung des Trigger-Events nicht in der Zielgruppe ist, was bedeutet, dass er oder sie das Canvas nicht aufrufen wird.
 
-Prüfen Sie außerdem, ob das ausgewählte Segment Nutzer enthält, indem Sie die Tabelle **Zielpopulation** in den **Zielgruppeneinstellungen** überprüfen. Wenn diese Zahl zu niedrig ist, sehen Sie nach, wie Sie Ihre Eingabeeinstellungen anpassen können, oder überprüfen Sie Ihre ausgewählten Segmente oder Filter auf eventuelle Fehler.
+Prüfen Sie außerdem, ob das ausgewählte Segment Nutzer enthält, indem Sie die Tabelle **Zielpopulation** in den **Zielgruppeneinstellungen** überprüfen. Wenn diese Zahl niedrig ist, sehen Sie nach, wie Sie Ihre Eingabeeinstellungen anpassen oder Ihre ausgewählten Segmente oder Filter auf Fehler überprüfen können.
 
 ### Unerwarteter Abfall zwischen den Stufen
 
@@ -103,10 +99,9 @@ Als Nächstes ist es wichtig, die Einstellungen zu ermitteln, die beeinflussen k
 - Ruhezeiten
 - Zustellungsvalidierungen
 
-Im Allgemeinen wählen Sie für Ihren Canvas entweder Intelligent Timing oder Quiet Hours, nicht beides. Es gilt der gleiche Vorschlag, entweder Intelligent Timing oder [Ratenbegrenzung]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/) zu verwenden, nicht beides. Weitere Informationen darüber, wie Sie die Intelligence Suite am besten nutzen, finden Sie in unseren [Intelligence FAQ]({{site.baseurl}}/user_guide/brazeai/intelligence/faqs/).
+Im Allgemeinen wählen Sie für Ihren Canvas entweder Intelligent Timing oder Quiet Hours, nicht beides. Es gilt der gleiche Vorschlag, entweder Intelligent Timing oder [Ratenbegrenzung]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/) zu verwenden, nicht beides. Wenn Sie mehr darüber erfahren möchten, wie Sie die Intelligence Suite am besten nutzen, lesen Sie unsere [Anwendungsfälle zur Intelligence Suite]({{site.baseurl}}/user_guide/brazeai/intelligence/#use-cases).
 
 ### Verdächtiges Sendevolumen zwischen Pfaden
 
 Wenn das Sendevolumen zwischen zwei oder mehreren Pfaden (entweder Zielgruppenpfade oder Aktionspfade) nicht Ihren Erwartungen entspricht, kann dies eine Gelegenheit sein, Ihre Segmente, Filter oder Trigger-Aktionen zu überprüfen. Stellen Sie außerdem sicher, dass Sie alle überlappenden Filter identifizieren und entfernen.
 
-[1]: {% image_buster /assets/img_archive/canvas_checklist1.png %}

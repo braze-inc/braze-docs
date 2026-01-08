@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Kochava
 
-> Kochava は、モバイルアトリビューションと分析を提供し、データを活用した成長を支援しています。Kochava Audience Platform では、アプリキャンペーンの計画、ターゲット、アクティベーション、測定、最適化を実施できます。
+> [Kochavaは](https://www.kochava.com/)モバイルのアトリビューションと分析を提供し、データを成長のために活用する手助けをする。Kochava Audience Platform では、アプリキャンペーンの計画、ターゲット、アクティベーション、測定、最適化を実施できます。
 
 _この統合は Kochava によって管理されます。_
 
@@ -33,7 +33,7 @@ BrazeとKochavaの統合により、アトリビューションデータをBraze
 
 #### Android
 
-[Android](https://support.kochava.com/sdk-integration/sdk-kochavatracker-android/class-tracker?scrollto=marker_3) SDKは、セッション開始時にBraze IDとしてGUIDを生成します。この識別子を Kochava `IdentityLink` メソッドに渡すことが推奨されます。これにより、Braze はデータを正しいユーザープロファイルと照合することができます。Braze IDは次の方法で取得できます:
+[Android](https://support.kochava.com/sdk-integration/sdk-kochavatracker-android/class-tracker?scrollto=marker_3)SDKは、セッション開始時にGUID（Globally Unique Identifier）をBraze IDとして生成する。この識別子をKochava`IdentityLink` メソッドに渡すことで、Brazeはデータを正しいユーザープロファイルに照合することができる。以下の方法でBraze IDを取得する：
 
 ```java
 Apppboy.getInstance(context).getDeviceId();
@@ -42,12 +42,12 @@ Apppboy.getInstance(context).getDeviceId();
 #### iOS
 
 {% alert important %}
-2023年2月までは、Kochava アトリビューション統合は、iOS アトリビューションデータを照合するための主な識別子として IDFV を使用していました。Objective-C を使用している Braze のお客様は、サービスが中断されることはないため、インストール時に Braze `device_id` を取得して Kochava に送信する必要はありません。
+2023年2月以前は、Kochavaのアトリビューション統合は、iOSのアトリビューションデータを照合するための主要識別子としてIDFV（Identifier for Vendor）を使用していた。Objective-Cを使用しているBraze顧客は、サービスの中断がないため、インストール時にBraze`device_id` を取得し、Kochavaに送信する必要はない。
 {% endalert%}
 
 Swift SDK v5.7.0+ を使用しているお客様は、相互識別子として IDFV を引き続き使用するには、`useUUIDAsDeviceId` フィールドが `false` に設定されていることを確認する必要があります。これにより、統合が中断されることがなくなります。`true` に設定している場合、Brazeが iOS アトリビューションを適切に照合できるように、アプリのインストール時にKochava に Braze `device_id` を渡すために、Swift用の iOS デバイス ID マッピングを実装する必要があります。
 
-Braze には、同じ値を生成する2つのAPI があります。1つは完了ハンドラを使用し、もう1つは新しいSwift 同時実行サポートを使用します。次のコードスニペットをKochavaの[iOS SDK](https://support.kochava.com/sdk-integration/ios-sdk-integration/)の指示に従って修正する必要があることに注意してください。追加のヘルプが必要な場合は、Kochavaサポートに連絡してください。
+Braze には、同じ値を生成する2つのAPI があります。1つは完了ハンドラを使用し、もう1つは新しいSwift 同時実行サポートを使用します。次のコードスニペットをKochavaの[iOS SDK](https://support.kochava.com/sdk-integration/ios-sdk-integration/)の指示に従って修正する必要があることに注意してください。その他のヘルプについては、Kochavaサポートに問い合わせること。
 
 ##### 完了ハンドラ
 ```
@@ -64,13 +64,13 @@ let deviceId = await AppDelegate.braze?.deviceId()
 
 Brazeで、**Partner Integrations** > **Technology Partners** に移動し、**Kochava** を選択します。 
 
-ここでは、REST エンドポイントが見つかり、Brazeデータインポートキーが生成されます。キーが生成されたら、新しいキーを作成するか、既存のキーを無効にできます。データインポートキーとRESTエンドポイントは、Kochavaのダッシュボードでポストバックを設定する次のステップで使用されます。<br><br>![この画像は、Kochavaテクノロジーページにある「インストールアトリビューションのためのデータインポート」ボックスを示しています。このボックスには、データインポートキーと REST エンドポイントが表示されます。]({% image_buster /assets/img/attribution/kochava.png %}){: style="max-width:90%;"}
+ここでは、REST エンドポイントが見つかり、Brazeデータインポートキーが生成されます。キーが生成されたら、新しいキーを作成するか、既存のキーを無効にできます。データインポートキーとRESTエンドポイントは、Kochavaのダッシュボードでポストバックを設定する次のステップで使用されます。<br><br>![この画像は、Kochavaテクノロジーページにある「インストールアトリビューションのためのデータインポート」ボックスを示しています。このボックスには、データインポートキーと REST エンドポイントが表示されている。]({% image_buster /assets/img/attribution/kochava.png %}){: style="max-width:90%;"}
 
 ### ステップ3:Kochavaからのポストバックを設定する
 
 Kochava ダッシュボードに[ポストバックを追加します](https://support.kochava.com/campaign-management/create-a-kochava-certified-postback)。Braze のダッシュボードで見つけたデータインポートキーと REST エンドポイントの入力を求められます。
 
-### ステップ4:統合を確認する
+### ステップ 4: 統合を確認する
 
 Braze が Kochava からアトリビューションデータを受信すると、Braze の Kochava テクノロジーパートナーページのステータス接続インジケーターが [接続されていません] から [接続済み] に変わります。最後の成功したリクエストのタイムスタンプも含まれます。 
 
@@ -86,7 +86,7 @@ Brazeキャンペーンでクリックトラッキングリンクを使用する
 
 Kochavaのクリックトラッキングリンクを開始するには、[ドキュメント](https://support.kochava.com/reference-information/attribution-overview/)をご覧ください。BrazeキャンペーンにKochavaクリックトラッキングリンクを直接挿入できます。Kochavaはその後、[確率的アトリビューション方法論](https://www.kochava.com/getting-prepared-for-ios-14/)を使用して、リンクをクリックしたユーザーを属性します。Brazeキャンペーンからのアトリビューションの精度を向上させるために、Kochavaトラッキングリンクにデバイス識別子を追加することをお勧めします。これにより、リンクをクリックしたユーザーを決定論的に属性付けします。
 
-{% tabs ローカル %}
+{% tabs local %}
 {% tab Android %}
 Androidの場合、Brazeを使用すると、顧客は[Google広告IDコレクション（GAID）]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id)にオプトインできます。GAID はまた、Kochava SDK統合によってネイティブに収集されます。次のLiquidロジックを利用して、KochavaクリックトラッキングリンクにGAIDを含めることができます:
 {% raw %}

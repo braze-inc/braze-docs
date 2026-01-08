@@ -1,18 +1,18 @@
 ---
 nav_title: 기존 편집기
-article_title: 인앱 메시지용 기존 편집기
+article_title: 인앱 메시지를 위한 기존 편집기
 page_order: 3
 layout: dev_guide
-guide_top_header: "인앱 메시지용 기존 편집기"
-description: "이 랜딩 페이지에서는 인앱 메시지용 기존 편집기에 대한 정보를 확인할 수 있습니다."
-guide_top_text: "이 랜딩 페이지에서는 인앱 메시지용 기존 편집기에 대한 정보를 확인할 수 있습니다."
+guide_top_header: "인앱 메시지를 위한 기존 편집기"
+description: "이 랜딩 페이지에서는 인앱 메시지를 위한 기존 편집기에 대한 정보를 확인할 수 있습니다."
+guide_top_text: "이 랜딩 페이지에서는 인앱 메시지를 위한 기존 편집기에 대한 정보를 확인할 수 있습니다."
 
 guide_featured_title: "섹션 기사"
 guide_featured_list:
-- name: 인앱 메시지 만들기
+- name: 인앱 메시지 생성하기
   link: /docs/user_guide/message_building_by_channel/in-app_messages/traditional/create/
   image: /assets/img/braze_icons/phone-02.svg
-- name: 사용자 지정
+- name: 커스텀
   link: /docs/user_guide/message_building_by_channel/in-app_messages/traditional/customize/
   image: /assets/img/braze_icons/brush-02.svg
 - name: 다크 모드

@@ -18,13 +18,13 @@ In diesem Artikel erläutern wir Ihnen einen Anwendungsfall für die Vorlage **A
 Um dieses Template erfolgreich zu verwenden, benötigen Sie Folgendes:
 
 - Ein separates Canvas für die Nutzer:innen nach dem Kauf, da ein Kauf in diesem Canvas zum Verlassen des Canvas führt.
-- Eine konfigurierte [Braze-Zielgruppen-Synchronisierung]({{site.baseurl}}/partners/canvas_steps) mit den Partnern und Zielgruppen, die Sie verwenden.
+- Eine konfigurierte [Braze-Zielgruppen-Synchronisierung]({{site.baseurl}}/partners/canvas_audience_sync/) mit den Partnern und Zielgruppen, die Sie verwenden.
 
 ## Anpassen des Templates an Ihre Bedürfnisse
 
 Nehmen wir an, wir arbeiten bei Kitchenerie, einer Einzelhandelsmarke, die sich auf Küchenutensilien spezialisiert hat, und unser Ziel ist es, Nutzer, die das neueste Produkt "Riesiger Pappteller" in ihren Einkaufswagen gelegt, aber nicht gekauft haben, wieder anzusprechen.
 
-Bevor wir das Canvas erstellen, richten wir die [Braze Audience Sync to Facebook-Integration]({{site.baseurl}}/partners/canvas_steps/facebook_audience_sync/) ein, so dass wir Benutzerdaten von Braze zu Facebook Audiences hinzufügen können, um Anzeigen auf der Grundlage von verhaltensbezogenen Auslösern, Segmentierung und mehr zu senden.
+Bevor wir das Canvas erstellen, richten wir die [Braze Audience Sync to Facebook-Integration]({{site.baseurl}}/partners/canvas_audience_sync/facebook_audience_sync/) ein, so dass wir Benutzerdaten von Braze zu Facebook Audiences hinzufügen können, um Anzeigen auf der Grundlage von verhaltensbezogenen Auslösern, Segmentierung und mehr zu senden.
 
 Um auf die Vorlage für verlassene Absichten zuzugreifen, wählen Sie beim Erstellen eines neuen Canvas die Option **Canvas-Vorlage verwenden** > **Braze-Vorlagen**. Wählen Sie dann neben **Abandoned Intent** die Option **Vorlage anwenden**. Jetzt können wir das Template durchgehen, um es an unsere Bedürfnisse anzupassen.
 
@@ -51,7 +51,7 @@ Als nächstes weisen wir unser Konvertierungsereignis zu. Da wir uns auf unser P
 2. Wählen Sie **Einen bestimmten Kauf tätigen**. So können wir einen bestimmten Produktnamen auswählen.
 3. Wählen Sie **Enorm großer Pappteller**.
 
-![Primäres Konversions-Event - A mit dem Konversionstyp „Kauft etwas“ mit dem Produktnamen „Riesiger Pappteller“. Es gibt eine Frist von 3 Tagen für die Konversion.][1]
+![Primäres Konversions-Event - A mit dem Konversionstyp "Macht Kauf" mit dem Produktnamen "Riesiger Pappteller". Es gibt eine Frist von 3 Tagen für die Konversion.]({% image_buster /assets/img/canvas_templates/abandoned_intent1.png %})
 
 ### Schritt 3: Entry-Zeitplan festlegen
 
@@ -62,19 +62,19 @@ Der Zeitplan für den Eintrag dieser Vorlage ist zwar auf **API-gesteuert** eing
 3. Wählen Sie für das Entry-Fenster das Datum der Startzeit aus.
 4. Wählen Sie die Option aus, die es Nutzern:innen erlaubt, ihre Ortszeit einzugeben. Dies kann die Relevanz unserer Nachrichten aufrechterhalten und zu einem höheren Engagement führen, wenn die Nachrichten zum optimalen Zeitpunkt gesendet werden.
 
-![Ein aktionsbasiertes Canvas, das auf Nutzer:innen abzielt, die ihren Warenkorb abgebrochen haben, mit dem Eingangsfenster 15\. Oktober 2024 15:20 Uhr in der Ortszeit der Nutzer:innen.][2]
+![Ein aktionsbasiertes Canvas, das auf Nutzer:innen abzielt, die ihren Warenkorb abgebrochen haben, mit dem Eingangsfenster 15\. Oktober 2024 15:20 Uhr in der Ortszeit der Nutzer:innen.]({% image_buster /assets/img/canvas_templates/abandoned_intent2.png %})
 
 ### Schritt 4: Festlegen, wer das Canvas aufruft
 
 Als nächstes definieren wir unsere Zielgruppe als Nutzer, die in den letzten 90 Tagen ausschließlich online bei uns eingekauft haben. So können wir unser Publikum auf die Nutzer eingrenzen, von denen wir wissen, dass sie sich für unsere Produkte interessieren. 
 
-!["Online Shopper Segment - 90 Tage" als das Segment der Nutzer:innen, das für dieses Canvas targetiert werden soll.][3]
+!["Online Shoppers Segment - 90 Tage" als Segment der Nutzer:innen für das Targeting in diesem Canvas.]({% image_buster /assets/img/canvas_templates/abandoned_intent3.png %})
 
 Wir belassen die Eingangskontrollen so, wie sie sind, so dass Nutzer:innen diesen Canvas nicht erneut betreten dürfen und die Anzahl der Personen, die diesen Canvas betreten können, nicht begrenzt ist.
 
 Als Ausstiegskriterium werden Nutzer:innen den Canvas verlassen, wenn sie den "Riesigen Pappteller" gekauft haben. Auf diese Weise erhalten sie keine weiteren Nachrichten zu einem Artikel, den sie bereits gekauft haben.
 
-![Ausstiegskriterien, die festlegen, dass Benutzer, die einen bestimmten Kauf für den riesigen Pappteller tätigen, den Canvas verlassen.][4]
+![Exit-Kriterium, das festlegt, dass Nutzer:innen, die einen bestimmten Kauf für den riesigen Pappteller tätigen, den Canvas verlassen.]({% image_buster /assets/img/canvas_templates/abandoned_intent4.png %})
 
 ### Schritt 5: Wählen Sie Ihre Sendeeinstellungen aus
 
@@ -87,14 +87,14 @@ Jetzt bauen wir unser Canvas auf, indem wir die in der Vorlage enthaltenen Schri
 1. Wählen Sie den Schritt „Aktionspfade“ und dann den Namen der Aktionsgruppe **Kauf erfolgt** aus.
 2. Wählen Sie für **Kauf tätigen** die Option **Einen bestimmten Kauf tätigen** und wählen Sie als Produkt **Enormes Pappteller**. Ähnlich wie bei den Ausstiegskriterien werden Nutzer:innen, die dieses Produkt kaufen, den Canvas verlassen.
 
-![Aktionsgruppe "Gekauft", die das Canvas verlässt, wenn der Nutzer:innen den riesigen Pappteller kauft.][5]
+!["Made purchase" Aktionsgruppe, die das Canvas verlässt, wenn der Nutzer:in den riesigen Pappteller kauft.]({% image_buster /assets/img/canvas_templates/abandoned_intent5.png %})
 
 {: start="3"}
 3\. Für den Schritt Nachricht wählen Sie **Nachricht bearbeiten**, um die E-Mail anzupassen, die an unsere Benutzer gesendet wird, um sie über die Artikel in ihrem abgebrochenen Warenkorb zu informieren.
 4\. Lassen Sie den Schritt „Delay“ unverändert.
 5\. In den Schritten für die Nachrichten, die sich an den Schritt für den Zielgruppenpfad anschließen, passen wir die E-Mail- und SMS-Nachrichten an, die unsere Nutzer erhalten werden. Hier möchten wir unsere Nutzer mit personalisierten Nachrichten zum Kauf von Produkten anregen.
 
-![Eine Vorschau auf die SMS Nachricht, die Nutzer:innen erhalten werden: "Hallo, Sie haben den riesigen Pappteller in Ihrem Einkaufswagen vergessen! Schließen Sie Ihren Kauf jetzt ab und verbessern Sie Ihre Hosting-Fähigkeiten. Verwenden Sie den Code MYPLATE beim Checkout, um 20 % Rabatt auf Ihre Bestellung zu erhalten!“][6]
+![Eine Vorschau auf die SMS Nachricht, die Nutzer:innen erhalten werden: "Hallo, Sie haben den riesigen Pappteller in Ihrem Einkaufswagen vergessen! Schließen Sie Ihren Kauf jetzt ab und verbessern Sie Ihre Hosting-Fähigkeiten. Verwenden Sie den Code MYPLATE beim Checkout, um 20 % Rabatt auf Ihre Bestellung zu erhalten!“]({% image_buster /assets/img/canvas_templates/abandoned_intent6.png %})
 
 {: start="6"}
 6\. Im nächsten Schritt Aktions-Pfade wählen Sie die Aktionsgruppe **Gekauft aus**. Wählen Sie dann **Gezielt einkaufen** und wählen Sie **Enormous Paper Plate** als Produkt aus. Dieser Schritt spiegelt den ersten Schritt von Action Paths wider, indem er Benutzer, die unser Produkt gekauft haben, ausschließt, damit sie keine weiteren Nachrichten erhalten.
@@ -112,9 +112,3 @@ Nachdem Sie unser Canvas getestet und überprüft haben, um sicherzustellen, das
 In unserer [Checkliste für die Zeit vor und nach dem Start eines]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/pre_post_launch_checklist/#things-to-consider-before-launch) Canvas finden Sie die Dinge, die Sie beachten sollten, bevor und nachdem Sie ein Canvas starten.
 {% endalert %}
 
-[1]: {% image_buster /assets/img/canvas_templates/abandoned_intent1.png %}
-[2]: {% image_buster /assets/img/canvas_templates/abandoned_intent2.png %}
-[3]: {% image_buster /assets/img/canvas_templates/abandoned_intent3.png %}
-[4]: {% image_buster /assets/img/canvas_templates/abandoned_intent4.png %}
-[5]: {% image_buster /assets/img/canvas_templates/abandoned_intent5.png %}
-[6]: {% image_buster /assets/img/canvas_templates/abandoned_intent6.png %}

@@ -175,7 +175,7 @@ The <i>Failed Delivery Rate</i> is the percentage of sends that failed because t
 {% endif %}
 
 {% if include.metric == "Primary Conversions (A) or Primary Conversion Event" %}
-<i>Primary Conversions (A)</i> or <i>Primary Conversion Event</i> is the number of times a defined event occurred after interacting with or viewing a received message from a Braze campaign. This defined event is determined by you when building the campaign.
+<i>Primary Conversions (A)</i> or <i>Primary Conversion Event</i> is the number of unique users who perform a defined event after receiving or viewing a message from a Braze campaign. This event is selected by you when setting up the campaign and is used as the primary success metric for reporting and optimization.
 {% endif %}
 
 {% if include.metric == "Reads" %}
@@ -252,6 +252,11 @@ The <i>Failed Delivery Rate</i> is the percentage of sends that failed because t
 
 {% if include.metric == "Unique Clicks" %}
 <i>Unique Clicks</i>  is the distinct number of recipients who have clicked a link within a message at least once and is measured by <a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a>.
+{% endif %}
+
+<!-- Pull channels like Banners that don't have a Dispatch ID-->
+{% if include.metric == "Unique Clicks No Dispatch ID" %}
+<i>Unique Clicks</i> is the distinct number of recipients who have clicked a link within a message at least once.
 {% endif %}
 
 {% if include.metric == "Unique Dismissals" %}

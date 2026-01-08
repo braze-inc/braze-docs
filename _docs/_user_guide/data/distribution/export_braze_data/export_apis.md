@@ -12,7 +12,7 @@ platform: API
 
 > This page covers Braze Export APIs, which allow you to programmatically export a JSON file of dashboard data. Refer to [Export endpoints]({{site.baseurl}}/api/endpoints/export/) for a list of data that you can access, including instructions and sample code for the export.
 
-## When to use export APIs instead of CVS downloads
+## When to use export APIs instead of CSV downloads
 
 There are a few reasons why you would prefer this method over exporting a CSV directly from the dashboard:
 

@@ -156,7 +156,7 @@ Note that WhatsApp uses the same system for assessing template quality in templa
 
 Ultimately, this update provides you with a quicker feedback loop (30 minutes versus hours or days with template pausing), so you can adjust your templates and provide a better customer experience.
 
-**If you have any further questions about this update, please reach out to your Meta partner representative.**
+**If you have any further questions about this update, contact your Meta partner representative.**
 
 ### June 2023: Messaging Experimentation 
 *Last Updated June 2023*

@@ -15,10 +15,10 @@ description: "この記事では、Braze ダッシュボードの表示言語を
 
 Braze ダッシュボードは、[複数言語](#supported-languages)で使用できます。表示言語はいつでも変更できます。
 
-1. グローバルヘッダーで、[<i class="fa-solid fa-globe" aria-label="言語を選択"></i>] を選択します。
+1. グローバルヘッダーで、<i class="fa-solid fa-globe" aria-label="言語を選択します"></i>。
 2. リストから言語を選択します。
 
-![]({% image_buster /assets/img_archive/language_dashboard.png %}){: style="max-width:60%"}
+![Braze ダッシュボードで選択された英語]({% image_buster /assets/img_archive/language_dashboard.png %}){: style="max-width:40%"}
 
 ダッシュボードが再度読み込まれるまで、少し時間のかかる場合があります。
 
@@ -26,6 +26,7 @@ Braze ダッシュボードは、[複数言語](#supported-languages)で使用�
 
 次のサポートされている言語から選択できます。
 
+- ドイツ語(ドイツ語)
 - 英語
 - スペイン語 (Español)
 - フランス語 (Français)

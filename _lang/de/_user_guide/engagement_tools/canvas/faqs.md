@@ -3,26 +3,34 @@ nav_title: FAQ
 article_title: Leinwand FAQ
 page_order: 8
 alias: "/canvas_v2_101/"
-description: "Dieser Artikel enthält Antworten auf häufig gestellte Fragen zu Canvas und Canvas Flow."
+description: "Dieser Artikel enthält Antworten auf häufig gestellte Fragen zu Canvas."
 tool: Canvas
 
 ---
 
 # Häufig gestellte Fragen
 
-> Dieser Artikel enthält Antworten auf einige häufig gestellte Fragen zu Canvas und [Canvas Flow](#canvas-flow).
+> Dieser Artikel enthält Antworten auf einige häufig gestellte Fragen zu Canvas.
 
-{% alert important %}
-Seit dem 28\. Februar 2023 ist es nicht mehr möglich, Canvase in der klassischen Canvas-Umgebung zu erstellen oder zu duplizieren. Braze empfiehlt Kunden, die die klassische Canvas-Umgebung nutzen, den Wechsel zu Canvas Flow. Es handelt sich um eine verbesserte Bearbeitungsfunktion, mit der Sie Canvases besser erstellen und verwalten können. Erfahren Sie mehr über das [Klonen Ihrer Canvases in Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
-{% endalert %}
+### Wie viele Schritte kann ich in ein Canvas aufnehmen?
 
-## Allgemein
+Sie können bis zu 200 Schritte in einem Canvas hinzufügen.
 
 ### Was passiert, wenn die Zielgruppe und die Sendezeit bei einem Canvas, der eine Variante, aber mehrere Verzweigungen hat, identisch sind?
 
 Wir stellen für jeden Schritt einen Auftrag in die Warteschlange - sie laufen etwa zur gleichen Zeit und einer von ihnen "gewinnt". In der Praxis kann dies etwas gleichmäßig sortiert sein, aber es ist wahrscheinlich, dass zumindest eine leichte Tendenz zu dem Schritt besteht, der zuerst erstellt wurde. 
 
 Außerdem können wir keine Garantien dafür geben, wie diese Verteilung genau aussehen wird. Wenn Sie eine gleichmäßige Aufteilung wünschen, fügen Sie einen [Random Bucket Number]({{site.baseurl}}/user_guide/engagement_tools/testing/random_bucket_numbers/) Filter hinzu.
+
+### Kann ich einen Canvas mit nicht verbundenen Schritten starten?
+
+Ja Sie können Canvase auch nach dem Start mit nicht verbundenen Schritten speichern. 
+
+### Wohin gehen die Nutzer:innen, wenn sie eine unterbrochene Stufe erreicht haben?
+
+Wenn sich ein Nutzer:in einem nicht verbundenen Schritt Ihres Canvas-Workflows befindet, wird er zum nächsten Schritt vorgebracht, sofern es einen gibt. Die Einstellung des Schritts gibt vor, wie der Nutzer:in voranzukommen hat. Dies soll es Benutzern ermöglichen, Änderungen an Schritten vorzunehmen, ohne sie direkt mit dem Rest des Canvas zu verbinden. Dies gibt Ihnen auch etwas Spielraum zum Testen, bevor Sie sofort live gehen, denn es ist zulässig, einen Entwurf zu speichern.
+
+Wir empfehlen, die Analytics-Ansicht für Nutzer:innen in einem Canvas-Schritt zu überprüfen, bevor Sie die Verbindung zu einem Schritt unterbrechen.
 
 ### Was passiert, wenn Sie einen Canvas anhalten?
 
@@ -36,7 +44,7 @@ Wenn Sie einen Canvas anhalten, gilt Folgendes:
 
 Je nachdem, was Sie mit Ihrem Canvas erreichen möchten, benötigen Sie unterschiedliche Ansätze, um Ihre Nutzer:innen zu erreichen. Die Flexibilität von Canvas erlaubt es Ihnen, die User Journeys jeder Phase des Nutzerlebenszyklus abzubilden. In unseren [Braze-Canvas-Templates]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/braze_templates) finden Sie mehrere Beispiele für optimierte Ansätze zur Erstellung effektiver User Journeys.
 
-#### In-App-Nachrichten in Canvas
+### Wann werden In-App-Nachrichten in Canvas gesendet?
 
 In-App-Nachrichten werden beim nächsten Sitzungsstart gesendet. Das bedeutet, dass der oder die Nutzer:in, wenn er oder sie den Canvas-Schritt vor dem Beenden der Canvas-Sitzung aufruft, die In-App-Nachricht beim nächsten Sitzungsstart erhält, solange die In-App-Nachricht noch nicht abgelaufen ist.
 
@@ -60,7 +68,7 @@ Weitere Informationen darüber, was Sie nach dem Start bearbeiten können, finde
 
 Ein Benutzer kann nur einmal pro Canvas-Eintrag konvertieren. Umrechnungen werden der letzten Nachricht zugeordnet, die der Benutzer für diesen Eintrag erhalten hat. Der Zusammenfassungsblock am Anfang eines Canvas spiegelt alle Konvertierungen wider, die von Benutzern innerhalb dieses Pfads durchgeführt wurden, unabhängig davon, ob sie eine Nachricht erhalten haben oder nicht. Bei jedem weiteren Schritt werden nur Konversionen angezeigt, die während des letzten Schrittes, den der Nutzer:innen erhalten hat, stattgefunden haben.
 
-{% details Beispiele %}
+{% details Expand for examples %}
 
 **Beispiel 1**
 
@@ -87,7 +95,7 @@ Es gibt einen einstufigen Canvas mit aktivierten Ruhezeiten:
 
 {% enddetails %}
 
-### Was ist der Unterschied zwischen den verschiedenen Arten von Umrechnungskursen?
+### Was ist der Unterschied zwischen den verschiedenen Arten von Konversionsraten?
 
 - Die Gesamtzahl der Canvas-Konversionen gibt an, wie viele eindeutige Nutzer:innen ein Konversions-Event abgeschlossen haben, nicht wie viele Konversionen sie jeweils abgeschlossen haben. 
 - Die Variante Konversionsrate oder der zusammenfassende Block am Anfang eines Canvas spiegelt alle Konversionen wider, die von den Nutzer:innen innerhalb dieses Pfads durchgeführt wurden, unabhängig davon, ob sie eine Nachricht erhalten haben oder nicht, und zwar in einer Gesamtsumme. 
@@ -119,49 +127,41 @@ Es ist üblich, dass die Gesamtsumme der Umwandlung einer Canvas-Variante größ
 
 ### Wie werden die Canvas-Zuschauer bewertet? 
 
-Standardmäßig werden Filter und Segmente für vollständige Schritte im Canvas zum Zeitpunkt des Sendens überprüft. Bei Canvas Flow führt die Komponente Decision Split eine Auswertung direkt nach dem Empfang eines vorherigen Schritts (oder vor einer Verzögerung) durch.
+Standardmäßig werden Filter und Segmente für vollständige Schritte im Canvas zum Zeitpunkt des Sendens überprüft. Der Decision-Split-Schritt führt eine Auswertung direkt nach dem Empfang eines vorherigen Schritts (oder vor einer Verzögerung) durch.
 
 {% alert tip %}
 Wenn Sie weitere Unterstützung bei der Fehlersuche mit Canvas benötigen, wenden Sie sich bitte innerhalb von 30 Tagen nach Auftreten des Problems an den Braze-Support, da uns nur die Diagnoseprotokolle der letzten 30 Tage vorliegen.
 {% endalert %}
 
-## Canvas Flow
+### Was ist der Unterschied zwischen "Hat nicht an der Canvas-Variante teilgenommen" und "Ist nicht in der Canvas-Kontrollgruppe"?
 
-### Was ist Canvas Flow?
+Vollständige Filter-Definitionen finden Sie unter [Segmentierungs-Filter]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters).
 
-Canvas Flow ist die verbesserte Bearbeitungsfunktion, die es Marketern erleichtert, ihre Canvas-Nutzer:innen zu erstellen und zu verwalten. Sie können davon ausgehen, dass Sie Canvas-Komponenten im Canvas-Builder problemlos anzeigen und verwenden können. Sie haben auch Zugriff auf mehr Bearbeitungsmöglichkeiten nach dem Start, um Verbindungen zwischen Schritten zu bearbeiten, Schritte und Varianten zu löschen und Nutzer:innen auf andere Schritte umzuleiten.
+#### Hat keine Canvas-Variante eingegeben
 
-### Wie konvertiere ich ein bestehendes Canvas in Canvas Flow?
+Der Nutzer:in hat nie einen Variationspfad eines bestimmten Canvas eingegeben. Alle Nutzer:innen, die nicht in der Kontrollgruppe sind, werden berücksichtigt, unabhängig davon, ob sie den Canvas betreten haben. Dazu gehören Nutzer:innen, die eine andere Variante eingegeben haben, und Nutzer:innen, die keine Variante eingegeben haben. 
 
-Sie können [Ihr Canvas in Canvas Flow klonen]({{site.baseurl}}/cloning_canvases/). Dadurch wird eine Kopie Ihres ursprünglichen Canvas im Canvas Flow-Workflow erstellt.
+#### Gehört nicht zur Canvas-Kontrollgruppe
 
-### Was geschieht mit den Canvase, die ich mit dem Original-Editor erstellt habe?
+Der Nutzer:in hat den Canvas betreten, ist aber nicht in der Kontrollgruppe und hat daher eine Variation erhalten. Dazu gehören nur Nutzer:innen, die den Canvas betreten haben.
 
-Alle Ihre bestehenden Canvases und der ursprüngliche Canvas-Editor bleiben bestehen und werden von Braze unterstützt. Kund:innen, die sich für einen frühzeitigen Zugriff auf Canvas Flow entscheiden, haben die Möglichkeit, ein Canvas entweder mit dem ursprünglichen oder dem Flow-Workflow zu erstellen.
+Beachten Sie, dass die Zuweisung von Variationen beim Eingang in Canvas erfolgt. Wenn ein Nutzer:innen keinen Canvas eingegeben hat, wird ihm keine Variante zugewiesen. Mit anderen Worten: Sie gehören weder zur Kontrollgruppe noch zu einer Variante.
 
-### Gibt es eine Grenze für die Anzahl der Schritte, die ich aufnehmen kann?
+{% details Expand for original Canvas editor FAQs %}
 
-Ja Ein mit Canvas Flow erstelltes Canvas kann bis zu 200 Schritte enthalten.
+### Wie konvertiere ich ein bestehendes Canvas aus dem ursprünglichen Editor in den aktuellen Editor?
 
-### Kann ich einen Canvas mit nicht verbundenen Schritten starten?
+Sie können [Ihren Canvas klonen]({{site.baseurl}}/cloning_canvases/). Dadurch wird eine Kopie Ihres ursprünglichen Canvas im aktuellsten Canvas-Workflow erstellt.
 
-Ja! Mit Canvas Flow können Sie Ihre Canvas mit nicht verbundenen Schritten starten. Sie können Canvase auch nach dem Start mit nicht verbundenen Schritten speichern. 
+### Was sind die wichtigsten Unterschiede zwischen dem aktuellen und dem ursprünglichen Canvas-Editor?
 
-### Wohin gehen die Nutzer:innen, wenn sie eine unterbrochene Stufe erreicht haben?
+#### Symbolleiste der Canvas-Komponente
 
-Wenn sich ein Benutzer in einem nicht verbundenen Schritt Ihres Canvas Flow-Workflows befindet, gelangt er zum nächsten Schritt, falls es einen gibt, und die Einstellung des Schritts gibt vor, wie der Benutzer vorgehen soll. Dies soll es Benutzern ermöglichen, Änderungen an Schritten vorzunehmen, ohne sie direkt mit dem Rest des Canvas zu verbinden. Dies gibt Ihnen auch etwas Spielraum zum Testen, bevor Sie sofort live gehen, denn es ist zulässig, einen Entwurf zu speichern.
-
-Wir empfehlen, die Analytics-Ansicht für Nutzer:innen in einem Canvas-Schritt zu überprüfen, bevor Sie die Verbindung zu einem Schritt unterbrechen.
-
-### Was sind die wichtigsten Unterschiede zwischen Canvas Flow und dem ursprünglichen Canvas-Editor?
-
-#### Symbolleiste der Leinwandkomponente
-
-Im ursprünglichen Canvas-Editor wurde standardmäßig ein vollständiger Schritt hinzugefügt, wenn Sie einen beliebigen Schritt in Ihrer User Journey erstellt haben. Mit Canvas Flow werden diese vollständigen Schritte nun durch verschiedene Canvas-Komponenten ersetzt, was Ihnen den Vorteil einer besseren Sichtbarkeit und Anpassung an Ihre Bearbeitungserfahrung bietet. Sie können alle Ihre Canvas-Komponenten sofort in der Canvas-Schritt-Symbolleiste sehen.
+Im ursprünglichen Canvas-Editor wurde standardmäßig ein vollständiger Schritt hinzugefügt, wenn Sie einen beliebigen Schritt in Ihrer User Journey erstellt haben. Diese vollständigen Schritte werden durch verschiedene Canvas-Komponenten ersetzt, was Ihnen den Vorteil einer erhöhten Sichtbarkeit und Anpassung an Ihre Bearbeitungserfahrung bietet. Sie können alle Ihre Canvas-Komponenten sofort in der Canvas-Schritt-Symbolleiste sehen.
 
 #### Stufenverhalten
 
-Zuvor enthielt jeder vollständige Schritt Informationen wie Delay- und Zeitplaneinstellungen, Ausnahme-Events, Zielgruppen-Filter, Nachrichtenkonfiguration und Optionen für den Fortschritt von Nachrichten – alles in einer Komponente. Dies sind separate Einstellungen in Canvas Flow, die Ihre Canvas-Erstellung anpassbarer machen und einige Unterschiede in der Funktionalität mit sich bringen.
+Zuvor enthielt jeder vollständige Schritt Informationen wie Delay- und Zeitplaneinstellungen, Ausnahme-Events, Zielgruppen-Filter, Nachrichtenkonfiguration und Optionen für den Fortschritt von Nachrichten – alles in einer Komponente. Dabei handelt es sich um separate Einstellungen im aktuellen Editor, mit denen Sie Ihre Canvas-Erstellung besser anpassen können und die einige Unterschiede in der Funktionalität mit sich bringen.
 
 #### Weiterentwicklung der Nachrichtenkomponente
 
@@ -173,14 +173,14 @@ Die [Delay-Komponenten]({{site.baseurl}}/user_guide/engagement_tools/canvas/canv
 
 Nehmen wir an, dass wir am 12\. April eine Verzögerungskomponente haben, bei der die Verzögerung so eingestellt ist, dass Ihr Benutzer an einem Tag um 14 Uhr zum nächsten Schritt weitergeleitet wird. Ein:e Nutzer:in gibt die Komponente am 13\. April um 14:01 Uhr ein. 
 - Bei dem ursprünglichen Workflow würde der Nutzer:innen am 14\. April um 14 Uhr zum nächsten Schritt übergehen, also weniger als einen Tag nach dem Eingang. 
-- Für Canvas Flow würde der Nutzer:innen am 15\. April um 14 Uhr zum nächsten Schritt übergehen. Beachten Sie, dass dies die gleiche Zeit ist, aber mehr als einen Tag von der Entry-Zeit entfernt. 
+- Im aktuellen Editor würde der Nutzer:innen am 15\. April um 14 Uhr zum nächsten Schritt übergehen. Beachten Sie, dass dies die gleiche Zeit ist, aber mehr als einen Tag von der Entry-Zeit entfernt. 
 
 #### Intelligentes Timing-Verhalten
 
 Da [Intelligentes Timing]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/) in der Nachrichtenkomponente gespeichert ist, werden Delays vor den Berechnungen des Intelligenten Timings angewendet. Je nachdem, wann ein:e Nutzer:in die Komponente aufruft, erhält er oder sie die Nachricht also möglicherweise später als in einem Canvas, das mit dem ursprünglichen Canvas-Workflow erstellt wurde.
 
 Nehmen wir an, Ihre Verzögerung ist auf 2 Tage eingestellt, Intelligent Timing ist aktiviert, und es hat festgestellt, dass die beste Zeit für den Versand Ihrer Nachricht 14 Uhr ist. Ein:e Nutzer:in betritt den Delay-Schritt um 14:01 Uhr.
-- **Canvas Flow:** Es dauert 48 Stunden, bis die Verzögerung verstrichen ist, so dass der Nutzer:innen die Nachricht am dritten Tag um 14 Uhr erhält.
+- **Aktueller Arbeitsablauf:** Es dauert 48 Stunden, bis die Verzögerung verstrichen ist, so dass der Nutzer:innen die Nachricht am dritten Tag um 14 Uhr erhält.
 - **Ursprünglicher Workflow:** Der Benutzer erhält die Nachricht am zweiten Tag um 14 Uhr.
 
 Beachten Sie, dass bei Aktivierung von „Intelligentes Timing“ die Nachricht innerhalb von 24 Stunden nach dem Aufrufen der Nachrichtenkomponente durch den oder die Nutzer:in zum festgelegten intelligenten Zeitpunkt gesendet wird (auch wenn keine Delay-Komponente beteiligt ist).
@@ -189,10 +189,12 @@ Beachten Sie, dass bei Aktivierung von „Intelligentes Timing“ die Nachricht 
 
 ##### Ruhezeiten
 
-Die Funktion „Ausnahme-Events“ in Canvas Flow wird über Aktionspfade angewendet, die von den Nachrichtenschritten getrennt sind. Die Ruhezeiten werden in der Nachrichtenkomponente durchgesetzt. Das heißt, wenn ein Nutzer:innen den Aktions-Pfad bereits passiert hat (und dort nicht mit dem Ausnahme-Event ausgeschlossen wurde), dann die Ruhezeiten erreicht hat, als er zur Komponente Nachricht kam, und sein Canvas so konfiguriert war, dass die Nachricht nach den Ruhezeiten erneut gesendet wird, wird das Ausnahme-Event nicht mehr angewendet. Beachten Sie, dass dieser Anwendungsfall nicht üblich ist.
+Ausnahme-Events werden über Aktions-Pfade angewendet, die von den Nachrichtenschritten getrennt sind. Die Ruhezeiten werden in der Nachrichtenkomponente durchgesetzt. Das bedeutet, wenn ein Nutzer:innen den Aktions-Pfad bereits durchlaufen hat (und nicht mit dem Ausnahme-Event ausgeschlossen wurde), dann auf Ruhezeiten stößt, wenn er die Komponente Nachricht erreicht, und sein Canvas so konfiguriert hat, dass die Nachricht nach den Ruhezeiten erneut gesendet wird, wird das Ausnahme-Event nicht mehr angewendet. Beachten Sie, dass dieser Anwendungsfall nicht üblich ist.
 
-Für Segmente und Filter verfügt die Komponente Canvas Flow Message über eine neue Funktion namens Zustellungsvalidierung, mit der Benutzer zusätzliche Segmente und Filter konfigurieren können, die zum Zeitpunkt des Versands validiert werden. Dies verhindert den bereits erwähnten Randfall der Ruhezeiten.
+Für Segmente und Filter verfügt der Schritt Nachricht über Zustellungsvalidierungen, die es den Nutzer:innen ermöglichen, zusätzliche Segmente und Filter zu konfigurieren, die zum Zeitpunkt des Versands validiert werden. Dies verhindert den bereits erwähnten Randfall der Ruhezeiten.
 
 ##### Zeitplaneinstellung „in“ oder „nächste“
 
-Ausnahmeereignisse in Canvas Flow werden über Aktionspfade erstellt. Aktionspfade unterstützen nur „nach einem X-Zeitfenster“ und nicht „in X-Zeit“ oder „zum nächsten X-Zeitpunkt“.
+Ausnahme-Events werden über Aktions-Pfade erstellt. Aktionspfade unterstützen nur „nach einem X-Zeitfenster“ und nicht „in X-Zeit“ oder „zum nächsten X-Zeitpunkt“.
+
+{% enddetails %}

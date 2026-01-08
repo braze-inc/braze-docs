@@ -1,12 +1,12 @@
 ---
-nav_title: Logging purchases
-article_title: Logging purchases through the Braze SDK
+nav_title: Log purchases
+article_title: Log purchases through the Braze SDK
 page_order: 3.2
 description: "Learn how to log purchases through the Braze SDK."
 
 ---
 
-# Logging purchases
+# Log purchases
 
 > Learn how to log in-app purchases through the Braze SDK, so you can determine your revenue over-time and across sources. This will let you segment users [based on their lifetime value]({{site.baseurl}}/developer_guide/analytics/#purchase-events--revenue-tracking) using custom events, custom attributes, and purchase events.
 
@@ -21,6 +21,21 @@ Any non-USD currency reported will display in Braze in USD based on the exchange
 To log purchases and revenue, call `logPurchase()` after a successful purchase in your app. If the product Identifier is empty, the purchase will not be logged to Braze.
 
 {% tabs %}
+{% tab web %}
+For a standard Web SDK implementation, you can use the following method:
+
+```javascript
+braze.logPurchase(product_id, price, "USD", quantity);
+```
+
+If you'd like to use Google Tag Manager instead, you can use the **Purchase** tag type to call the [`logPurchase` method](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logpurchase). Use this tag to track purchases to Braze, optionally including purchase properties. To do so:
+
+1. The **Product ID** and **Price** fields are required.
+2. Use the **Add Row** button to add purchase properties.
+
+![A dialog box showing the Braze Action Tag configuration settings. Settings included are "tag type", "external ID", "price", "currency code", "quantity", and "purchase properties".]({% image_buster /assets/img/web-gtm/gtm-purchase.png %})
+{% endtab %}
+
 {% tab android %}
 {% subtabs %}
 {% subtab java %}
@@ -71,21 +86,6 @@ AppDelegate.braze?.logPurchase(productID: "product_id", currency: "USD", price: 
 {% endsubtabs %}
 {% endtab %}
 
-{% tab web %}
-For a standard Web SDK implementation, you can use the following method:
-
-```javascript
-braze.logPurchase(product_id, price, "USD", quantity);
-```
-
-If you'd like to use Google Tag Manager instead, you can use the **Purchase** tag type to call the [`logPurchase` method](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logpurchase). Use this tag to track purchases to Braze, optionally including purchase properties. To do so:
-
-1. The **Product ID** and **Price** fields are required.
-2. Use the **Add Row** button to add purchase properties.
-
-![A dialog box showing the Braze Action Tag configuration settings. Settings included are "tag type", "external ID", "price", "currency code", "quantity", and "purchase properties".]({% image_buster /assets/img/web-gtm/gtm-purchase.png %})
-{% endtab %}
-
 {% tab cordova %}
 
 ```javascript
@@ -127,14 +127,6 @@ AppboyBinding.LogPurchase("product_id", "currencyCode", price(decimal));
 ```
 
 {% endtab %}
-
-{% tab unreal engine %}
-
-```cpp
-UBraze->LogPurchase(TEXT("product_id"), TEXT("USD"), price, quantity);
-```
-
-{% endtab %}
 {% endtabs %}
 
 {% alert warning %}
@@ -146,6 +138,32 @@ UBraze->LogPurchase(TEXT("product_id"), TEXT("USD"), price, quantity);
 You can add metadata about purchases by passing a Dictionary populated with `Int`, `Double`, `String`, `Bool`, or `Date` values.
 
 {% tabs %}
+{% tab web %}
+For a standard Web SDK implementation, you can use the following method:
+
+```javascript
+braze.logPurchase(product_id, price, "USD", quantity, {key: "value"});
+```
+
+If your site logs purchases using the standard [eCommerce event](https://developers.google.com/analytics/devguides/collection/ga4/ecommerce?client_type=gtm) data layer item to Google Tag Manager, then you can use the **E-commerce Purchase** tag type. This action type will log a separate "purchase" in Braze for each item sent in the list of `items`.
+
+You can also specify additional property names you want to include as purchase properties by specifying their keys in the Purchase properties list. Note that Braze will look within the individual `item` that is being logged for any purchase properties you add to the list.
+
+For example, given the following eCommerce payload:
+
+```
+items: [{
+  item_name: "5 L WIV ECO SAE 5W/30",
+  item_id: "10801463",
+  price: 24.65,
+  item_brand: "EUROLUB",
+  quantity: 1
+}]
+```
+
+If you only want `item_brand` and `item_name` to be passed as purchase properties, then just add those two fields to the purchase properties table. If you don't supply any properties, then no purchase properties will be sent in the [`logPurchase`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logpurchase) call to Braze.
+{% endtab %}
+
 {% tab android %}
 {% subtabs %}
 {% subtab java %}
@@ -193,32 +211,6 @@ NSDictionary *purchaseProperties = @{@"key": @"value"};
 {% endsubtabs %}
 {% endtab %}
 
-{% tab web %}
-For a standard Web SDK implementation, you can use the following method:
-
-```javascript
-braze.logPurchase(product_id, price, "USD", quantity, {key: "value"});
-```
-
-If your site logs purchases using the standard [eCommerce event](https://developers.google.com/analytics/devguides/collection/ga4/ecommerce?client_type=gtm) data layer item to Google Tag Manager, then you can use the **E-commerce Purchase** tag type. This action type will log a separate "purchase" in Braze for each item sent in the list of `items`.
-
-You can also specify additional property names you want to include as purchase properties by specifying their keys in the Purchase properties list. Note that Braze will look within the individual `item` that is being logged for any purchase properties you add to the list.
-
-For example, given the following eCommerce payload:
-
-```
-items: [{
-  item_name: "5 L WIV ECO SAE 5W/30",
-  item_id: "10801463",
-  price: 24.65,
-  item_brand: "EUROLUB",
-  quantity: 1
-}]
-```
-
-If you only want `item_brand` and `item_name` to be passed as purchase properties, then just add those two fields to the purchase properties table. If you don't supply any properties, then no purchase properties will be sent in the [`logPurchase`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logpurchase) call to Braze.
-{% endtab %}
-
 {% tab cordova %}
 
 ```javascript
@@ -261,17 +253,6 @@ Dictionary<string, object> purchaseProperties = new Dictionary<string, object>
     { "key", "value" }
 };
 AppboyBinding.LogPurchase("product_id", "currencyCode", price(decimal), purchaseProperties);
-```
-
-{% endtab %}
-
-{% tab unreal engine %}
-
-```cpp
-TMap<FString, FString> PurchaseProperties;
-PurchaseProperties.Add(TEXT("key"), TEXT("value"));
-
-UBraze->LogPurchaseWithProperties(TEXT("product_id"), TEXT("USD"), price, quantity, PurchaseProperties);
 ```
 
 {% endtab %}

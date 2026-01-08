@@ -32,7 +32,7 @@ The integration requires the following resources:
 
 ### AWS definitions
 
-First, let's define some of the terms used during this task.
+First, define the terms used during this task.
 
 | Term | Definition |
 | --- | --- |
@@ -177,7 +177,7 @@ Give the role a name and a description, and select **Create Role**.
 <br><br>![An example role named "new-role-name".]({% image_buster /assets/img/create_role_4_name.png %})<br><br>
 
 {: start="5"}
-5. Take note of the ARN of the role you just created and the external ID you generated, as you’ll use them to create the Cloud Data Ingestion integration.
+5. Take note of the ARN of the role you created and the external ID you generated, because you need them to create the Cloud Data Ingestion integration.
 
 ## Setting up Cloud Data Ingestion in Braze
 

@@ -1,12 +1,12 @@
 ---
-nav_title: Creating an Event Prediction
-article_title: Creating an Event Prediction
+nav_title: Create an Event Prediction
+article_title: Create an Event Prediction
 page_order: 1.1
 description: "This article covers how to create an event prediction within the Braze dashboard."
 
 ---
 
-# Creating an event prediction
+# Create an event prediction
 
 > A prediction is one instance of a trained machine learning model and all the parameters and data it uses. To learn more about Predictive Events, refer to the [Predictive Events overview]({{site.baseurl}}/user_guide/brazeai//predictive_events/).
 
@@ -44,9 +44,13 @@ The event window is the time frame in which you want to predict if a user will p
 
 Your prediction audience is the group of users whose likelihood score you would like to predict. If desired, you can run a prediction on your entire population of users. To do this, leave the default option **All Users** selected.
 
-The model typically performs better if you filter the users you want to assess with some criteria. To do so, select **Define my own prediction audience** and choose your audience filters. For example, you might want to focus on users who have been using your app for at least 30 days by selecting the "First Used App" filter set to 30 days.
+Depending on your use case, you may want to use filters to specify the users you want to assess for the model. To do so, select **Define my own prediction audience** and choose your audience filters. For example, you might want to focus on users who have been using your app for at least 30 days by selecting the "First Used App" filter set to 30 days. Setting up this audience tells Braze that you want your model to specifically learn from users that (at the time that the model runs) have used the app for at least 30 days.
 
-The prediction audience definition is also used to query historical data to allow the machine learning model to learn from the past. Similar to the previous page, the quantity of data provided by these filters is displayed along with the requirement. If you specify your desired audience and do not meet the minimum, try specifying a broader filter or use the **All Users** option.
+{% alert important %}
+Focus your filters on user characteristics relevant to your use case, such as active users, new users, high-value users, or users in a specific country. Avoid filtering your prediction audience by whether users have already performed the event you're predicting. The prediction audience defines who you want the model to learn from, not the event outcome itself. The model needs to observe both users who have completed the event and users who have not to accurately learn and predict the likelihood of future event completion.
+{% endalert %}
+
+The prediction audience defines the group of users the machine learning model looks at to learn from the past. Braze will show you the estimated size of your prediction audience. If you specify your desired audience and do not meet the minimum required to run the model, try specifying a broader filter or use the **All Users** option. Keep in mind that many use cases don't require you to select a specific prediction audience. For example, if your use case is to target users in the EU region that are most likely to churn, you can run your model on all users and then include a filter for EU region in the campaign’s segment.
 
 {% alert note %}
 The prediction audience cannot exceed 100 million users.
@@ -62,7 +66,9 @@ For example, if the event window is set to 14 days, it will take 14 days to coll
 
 ### Step 4: Choose the update schedule
 
-The machine learning model created when you complete this page will be used on a schedule you select here, to generate fresh scores of users' probability to perform the event (likelihood score). Select the **maximum frequency of updates** that you'll find useful. For example, if you're predicting purchases and are planning to send a weekly promotion, set the update frequency to **Weekly** on the day and time of your choosing.
+The machine learning model will generate event likelihood scores for users, and those scores will be updated based on the schedule you select here. You'll be able to target users based on their event likelihood score. 
+
+Select the **maximum frequency of updates** that you'll find useful. For example, if you're predicting purchases and planning to send a weekly promotion, set the update frequency to **Weekly** on the day and time of your choosing.
 
 {% alert note %}
 Preview and demo prediction will never update users' likelihood scores.
@@ -72,7 +78,7 @@ Preview and demo prediction will never update users' likelihood scores.
 
 Verify that the details you've provided are correct, and choose **Build Prediction**. You can also save your changes in draft form by selecting **Save As Draft** to return to this page and build the model later. 
 
-After you click **Build Prediction**, the process that generates the model will begin. This could take between 30 minutes to a few hours, depending on data volumes. For this prediction, you will see a page explaining that training is in progress for the duration of the model building process.
+After you click **Build Prediction**, the process that generates the model will begin. This could take between 30 minutes to a few hours, depending on data volumes. For this prediction, you will see a page explaining that training is in progress for the duration of the model building process. The Braze model takes into account custom events, purchase events, campaign interaction events, and session data.
 
 When completed, the page will switch to the analytics view automatically, and you will receive an email informing you that the prediction and results are ready. In the event of an error, the page will return to the editing mode with an explanation of what went wrong.
 

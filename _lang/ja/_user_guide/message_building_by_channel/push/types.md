@@ -7,25 +7,25 @@ description: "この用語集には、Brazeで送信できるプッシュ通知�
 channel: push
 
 layout: glossary_page
-glossary_top_header: "Types of push notifications"
-glossary_top_text: "There are many types of push notifications you can use to interact with your customers. These can be narrowed by channel and used to meet the needs of many different users. You can configure most of these settings in your Push campaigns, but there are notes in the following descriptions that will indicate whether any backend configurations are needed and what those might be."
+glossary_top_header: "プッシュ通知の種類"
+glossary_top_text: "顧客との対話に使えるプッシュ通知には、さまざまな種類がある。これらはチャネルごとに絞り込むことができ、さまざまなユーザーのニーズに応えることができる。これらの設定のほとんどは、Pushキャンペーンで設定することができるが、以下の説明には、バックエンドの設定が必要かどうかと、その内容を示す注釈がある。"
 
 glossary_tag_name: Channels
 glossary_filter_text: "Select any of the following channels to narrow Push Type options."
 
 # category to icon/fa or image mapping
 glossary_tags:
-  - name: iOS
-  - name: Android
   - name: Web
+  - name: Android
+  - name: iOS
 
 glossaries:
   - name: "レギュラープッシュ"
     description: "包括的なプッシュ・メッセージだ。ユーザーのデバイスで通知音を送出し、通知バーやスタックにメッセージをスライド表示します。"
     tags:
-      - iOS
-      - Android
       - Web
+      - Android
+      - iOS
   - name: "ウェブプッシュ"
     description: "これらのプッシュメッセージは、ウェブアプリやブラウザに表示される。それでも、顧客にリーチするには許可が必要です。ユーザーが非表示のブラウザーを使用している場合、ウェブ・プッシュは機能しないことに注意。"
     tags:
@@ -33,9 +33,9 @@ glossaries:
   - name: "プッシュプライマーキャンペーン"
     description: "ユーザーからプッシュ通知の明示的なオプトインまたはオプトアウトの意志を確認するために使用されるアプリ内メッセージのキャンペーン。プライマーを通じて、デバイスの設定でプッシュをオフにしている可能性の高いユーザーへの通知送信を避けることができる。iOS の場合、プッシュ通知のキャンペーンが重要です。これは、ユーザーが明示的に iOS のネイティブプッシュプロンプトにオプトインするまで、フォアグラウンドのプッシュ通知 (デバイスをスリープ解除する通知など) が有効にならないためです。"
     tags:
-      - iOS
-      - Android
       - Web
+      - Android
+      - iOS
   - name: "プッシュ通知ストーリー"
     description: "プッシュストーリーは、カルーセルの形でユーザーを視覚的な旅に誘う没入型のメッセージだ。これらはモバイルデバイスでのみ使用できます。"
     tags:
@@ -44,16 +44,11 @@ glossaries:
   - name: "アクションボタンによるプッシュ通知"
     description: "プッシュ・ウィズ・アクション・ボタンは、ユーザーに選択肢を提供し、いくつかの行動を呼びかけることができるメッセージだ。"
     tags:
-      - iOS
-      - Android
       - Web
+      - Android
+      - iOS
   - name: "リッチなプッシュ通知"
     description: "リッチプッシュ通知とは、単純なアイコンと行動喚起のテキストだけでなく、没入感のある画像やクリエイティブなコンテンツを含む通知である。"
-    tags:
-      - iOS
-      - Android
-  - name: "サイレント・プッシュ通知"
-    description: "デバイス上でレンダリングする際、デバイスをスリープ解除しないプッシュ通知。代わりに、通知はデバイスの通知トレイに保存される。"
     tags:
       - iOS
       - Android
@@ -70,12 +65,12 @@ glossaries:
     tags:
       - iOS
       - Android
-  - name: "バックグラウンドプッシュ通知"
-    description: "デバイス用にレンダリングされていないプッシュ通知。通常、バックグラウンドプロセスとアンインストール追跡の目的で、情報のパケットをアプリに送信するために使用されます。バックグラウンドプッシュ通知を送信するには、バックグラウンド対応プッシュトークンが必要です。"
+  - name: "バックグラウンドまたはサイレントプッシュ通知"
+    description: "デバイス上でレンダリングされないプッシュ通知。通常、バックグラウンドプロセスとアンインストール追跡の目的で、情報のパケットをアプリに送信するために使用されます。バックグラウンド・プッシュまたはサイレント・プッシュを送信するには、バックグラウンド・イネーブル・プッシュトークンが必要である。"
     tags:
-      - iOS
-      - Android
       - Web
+      - Android
+      - iOS
   - name: "ウェアラブルプッシュ通知"
     description: "これらのプッシュ通知によって、ブランドはApple Watchのようなウェアラブル端末に直接メッセージを送ることができる。"
     tags:

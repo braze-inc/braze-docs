@@ -5,7 +5,7 @@ page_order: 4
 layout: dev_guide
 alias: /about_webhooks/
 guide_top_header: "Webhooks"
-guide_top_text: "Webhooks are a common way for applications to communicate—to share data in real time. In this day and age, we rarely have one standalone application that can do everything. Most of the time, you're working in many different apps or systems that are specialized to perform certain tasks, and these apps all need to be able to communicate with one another. That's where webhooks come in. <br><br> A webhook is an automated message from one system to another after a certain criteria has been met. In Braze, this criteria is usually the triggering of a custom event. <br><br>At its core, a webhook is an event-based method for two separate systems to take effective action based on data transmitted in real time. That message contains instructions that tells the receiving system when and how to perform a specific task. Because of this, webhooks can provide you with more dynamic and flexible access to data and programmatic functionality, and empower you to set up customer journeys that streamline processes."
+guide_top_text: "Webhooks are a common way for applications to communicate—to share data in real time. Today, we rarely have one standalone application that can do everything. Most of the time, you're working in many different apps or systems that are specialized to perform certain tasks, and these apps all need to be able to communicate with one another. That's where webhooks come in. <br><br> A webhook is an automated message from one system to another after a certain criteria has been met. In Braze, this criteria is usually the triggering of a custom event. <br><br>At its core, a webhook is an event-based method for two separate systems to take effective action based on data transmitted in real time. That message contains instructions that tells the receiving system when and how to perform a specific task. Because of this, webhooks can provide you with more dynamic and flexible access to data and programmatic functionality, and empower you to set up customer journeys that streamline processes. <br><br>**Webhooks availability depends on your Braze package. Contact your account manager or customer success manager to get started.**"
 description: "This landing page is home to webhooks. Here, you can find articles on creating webhooks, creating webhook templates, and Braze-to-Braze webhooks."
 channel:
   - webhooks
@@ -81,7 +81,7 @@ In Braze, you can create a webhook as a webhook campaign, API campaign, or Canva
 1. In the Braze dashboard, go to **Campaigns**.
 2. Click **Create Campaign** and select **Webhook**.
 
-Refer to [Creating a webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/) for more information.
+Refer to [Create a webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/) for more information.
 
 {% endtab %}
 {% tab API Campaign %}
@@ -91,7 +91,7 @@ Refer to [Creating a webhook]({{site.baseurl}}/user_guide/message_building_by_ch
 3. Click **Add Messages** and select **Webhook**.
 4. Format your API call to include a [webhook object]({{site.baseurl}}/api/objects_filters/messaging/webhook_object/).
 
-Refer to [Creating a webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/) for more information.
+Refer to [Create a webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/) for more information.
 
 {% endtab %}
 {% tab Canvas Component %}
@@ -99,7 +99,7 @@ Refer to [Creating a webhook]({{site.baseurl}}/user_guide/message_building_by_ch
 1. In your Canvas, create a new component.
 2. In the **Message** section of your component, select **Webhook**.
 
-Refer to [Creating a webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/) for more information.
+Refer to [Create a webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/) for more information.
 
 {% endtab %}
 {% endtabs %}

@@ -168,7 +168,7 @@ The `user_id` key within the webhook maps to the Punchh user ID. This identifier
 
 4. After the webhook is saved, it can be used to sync users, as shown below. For example, 136 guests would be added to the Punch custom segment when this Braze webhook campaign is launched.<br><br>![An example of syncing users using the saved webhook due to Braze and Punchh integration.]({% image_buster /assets/img/punchh/punchh6.png %})
 
-For more information on how webhooks are used at Braze, check out [Creating a webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). 
+For more information on how webhooks are used at Braze, check out [Create a webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). 
 
 ## Use case campaigns
 
@@ -186,7 +186,7 @@ Property filters can be added to further filter the triggering event. For exampl
 
 #### Segmentation
 
-In many cases, Braze campaigns and Canvases being triggered by Punchh events can be set to an "All Users" audience since the segmentation of users triggering these events will be determined within Punchh. However, customers looking to further refine the audience of users who will receive the Braze messaging triggered by the event can do so by adding additional filters and segments in the **Target Audiences** section of the campaign composer or the **Entry Audience** of the Canvas composer. 
+In many cases, Braze campaigns and Canvases being triggered by Punchh events can be set to an "All Users" audience because the segmentation of users triggering these events is determined within Punchh. However, customers looking to further refine the audience of users who will receive the Braze messaging triggered by the event can do so by adding additional filters and segments in the **Target Audiences** section of the campaign composer or the **Entry Audience** of the Canvas composer. 
 
 ### Use cases
 
@@ -262,7 +262,7 @@ Punchh configurations required:
 - Segment: Custom list or customer choice
 - Reward: Customer choice
 Considerations:
-- Campaign IDs and campaign names are sent to Braze as an event property on the event. If you want to use a Punchh campaign identifier in Braze to further filter the audience receiving the campaign, the campaign name must be used since the campaign IDs will change daily.
+- Campaign IDs and campaign names are sent to Braze as an event property on the event. If you want to use a Punchh campaign identifier in Braze to further filter the audience receiving the campaign, you must use the campaign name because the campaign IDs change daily.
 
 {% endtab %}
 {% tab Post check-in offer with notification %}

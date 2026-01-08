@@ -39,28 +39,24 @@ description: "この記事では、「メールテンプレートの翻訳を更
 | --------- | ---------| --------- | ----------- |
 | `template_id` | 必須 | string | メールテンプレートの ID。 |
 | `locale_id` | 必須 | 文字列 | ロケールのID。 |
-| `translations` | 必須 | string | メールテンプレートの翻訳のマップ。 |
+| `translations_map` | 必須 | string | メールテンプレートの翻訳のマップ。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-すべての翻訳IDは、**多言語サポート**設定またはGETリクエストレスポンスで見つけることができるユニバーサルユニーク識別子（UUID）とみなされることに注意。
+{% alert note %}
+すべての翻訳IDは、ユニバーサルユニーク識別子（UUID）とみなされ、GETエンドポイントのレスポンスで見つけることができる。
+{% endalert %}
 
-## リクエスト例
+## 例のリクエスト
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "template_id": "e24404b3-3626-4de0-bdec-06935f3aa0ab",
     "locale_id": "h94404b3-3626-4de0-bdec-06935f3aa0ad",
-    "translations": [
-        {
-            "translation_map": {
-                "id_0": "¡Hola!",
-                "id_1": "Me llamo Jacky",
-                "id_2": "¿Dónde está la biblioteca?"
-            }
-        }
-    ]
+    "translation_map": {
+        "id_0": "¡Hola!",
+        "id_1": "Me llamo Jacky",
+        "id_2": "¿Dónde está la biblioteca?"
+    }
 }
 ```
 
@@ -90,20 +86,5 @@ Authorization: Bearer YOUR-REST-API-KEY
 	]
 }
 ```
-
-
-## トラブルシューティング
-
-以下の表は、返される可能性のあるエラーと、それに関連するトラブルシューティングの手順を示したものである。
-
-| エラーメッセージ  | トラブルシューティング |
-|----|----------|
-| `The provided translations yielded errors when parsing. Please contact Braze for more information.` | サードパーティの翻訳者が、Liquid エラーを発生させる例外を含む翻訳を提供した場合に発生します。Braze サポートにお問い合わせください。 |
-| `The provided translations are missing 'id_1', 'id_2'` | 翻訳IDが一致しないか、翻訳されたテキストが制限を超えています。例えば、これはペイロードの形状が翻訳オブジェクトのフィールドを欠いていることを意味します。すべてのメッセージ（多言語イネーブルメントの場合）は、ID が関連づけられた「翻訳ブロック」を特定の数だけ持つ必要があります。提供されたペイロードに ID のいずれかが欠けている場合、これは不完全なオブジェクトとみなされ、エラーとなります。 |
-| `The provided locale code does not exist.` | サードパーティの翻訳者のペイロードに、Braze には存在しないロケールコードが含まれています。 |
-| `The provided translations have exceeded the maximum of 20MB.` | 提供されたペイロードがサイズ制限を超えました。 |
-| `You have exceeded the maximum number of requests. Please try again later.` | すべての Braze API にはレート制限が組み込まれており、この認証トークンに割り当てられたレートを超えた場合、このエラーが自動的に返されます。 |
-| `This message does not support multi-language.` | これは、メッセージ ID がまだ多言語メッセージをサポートしていない場合に発生する可能性があります。プッシュ、アプリ内メッセージ、メールのチャネルのメッセージのみを翻訳できます。 |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

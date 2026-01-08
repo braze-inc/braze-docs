@@ -4,16 +4,13 @@ article_title: メール
 page_order: 1.5
 layout: dev_guide
 guide_top_header: "メール"
-guide_top_text: "Braze のメールでは、キャンペーンとキャンバスのいずれかで、十分にカスタマイズとパーソナライゼーションを行ってメールメッセージを作成でき、ユーザーの関心をただちに引くことができます。詳しくは以下の記事をご覧いただきたい。"
+guide_top_text: "Brazeのメールなら、キャンペーンやキャンバスで完全にカスタマイズされたパーソナライゼーションメッセージを作成することができ、アプリやWebサイトの外でもユーザーの注目を素早く集めることができる。閲覧者の管理から目を引くマルチメディアコンテンツの挿入まで、Eメールメッセージをカスタマイズしよう。Eメールキャンペーンの事例をご覧になりたい方は、<a href='https://www.braze.com/customers/'>ケーススタディを</a>ご覧ください。"
 description: "このランディングページはBrazeのEメールのホームである。ここでは、メールキャンペーンの作成方法、ドラッグ＆ドロップエディターの使用方法、ユーザー購読の管理方法、ユーザー設定センターなどを学ぶことができます。"
 channel:
   - email
 search_rank: 2
 guide_featured_title: "よく読まれている記事"
 guide_featured_list:
-- name: Eメールについて
-  link: /docs/user_guide/message_building_by_channel/email/about/
-  image: /assets/img/braze_icons/check-square-broken.svg
 - name: ユーザー購読の管理
   link: /docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/
   image: /assets/img/braze_icons/users-01.svg
@@ -39,7 +36,7 @@ guide_menu_list:
   link: /docs/user_guide/message_building_by_channel/email/email_setup/
   image: /assets/img/braze_icons/mail-01.svg
 - name: メッセージのロケール
-  link: /docs/user_guide/message_building_by_channel/email/using_locales/
+  link: /docs/locales_in_messages/
   image: /assets/img/braze_icons/users-01.svg
 - name: ユーザー設定センター
   link: /docs/user_guide/message_building_by_channel/email/preference_center/
@@ -77,8 +74,27 @@ guide_menu_list:
 - name: よくある質問
   link: /docs/user_guide/message_building_by_channel/email/faq/
   image: /assets/img/braze_icons/annotation-question.svg
-
-
 ---
 
-<br><br>
+## [![Braze ラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/messaging-channels-email){: style="float:right;width:120px;border:0;" class="noimgborder"} カスタマイズメール
+
+メールメッセージは、以下のようなさまざまな方法でカスタマイズできる：
+
+- [Braze メールテンプレート]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/email_template/)
+- [カスタムHTMLテンプレート]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/html_email_template/)
+- [ドラッグ＆ドロップ・エディター用ブロック]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_editor_blocks/)
+- [ユーザーサブスクリプション]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/)
+
+## 素晴らしい使用例
+
+インスピレーションを得るための素晴らしい使用例をいくつか紹介しよう！
+
+| ユースケース | 説明 |
+| --- | --- |
+| 再エンゲージメント | アプリをまだインストールしていないユーザーを含め、アプリ外のユーザーにリーチします。 |
+| オンボーディング | オンボーディングでは、新しいユーザーにプッシュ通知の有効化やソーシャルネットワーク上でのアプリ共有を促します。 |
+| リッチなメッセージ | リッチでダイナミックなHTMLメッセージを可能にする。 |
+| マルチメディア・コンテンツ | ビデオや画像など、ユーザーを惹きつけるマルチメディア・コンテンツの配置のしやすさ。 |
+| ニュースレター | ユーザーエンゲージメントを維持するために、月刊や週刊のニュースレターを簡単に送信できます。 |
+| トランザクション | 最近購入した商品をユーザーに通知し、重要な商品情報や配送情報を[トランザクションメールで]({{site.baseurl}}/user_guide/message_building_by_channel/email/transactional_message_api_campaign/)配信する。
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }

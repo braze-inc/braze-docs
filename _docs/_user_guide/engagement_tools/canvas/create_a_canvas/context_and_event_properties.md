@@ -48,6 +48,8 @@ You can no longer create or duplicate Canvases using the original editor. Note t
 - You can't use `event_properties` in the lead Message step. Instead, you must use `context` or add an Action Paths step with the corresponding event **before** the Message step that includes `event_properties`. 
 - When an Action Path step contains a "Sent an SMS Inbound Message" or "Sent a WhatsApp Inbound Message" trigger, the subsequent Canvas steps can include an SMS or WhatsApp Liquid property. This mirrors how event properties work in Canvases. This way you can leverage your messages to save and reference first-party data on user profiles and conversational messaging.
 
+{% multi_lang_include alerts/tip_alerts.md alert='Reference properties from triggering event' %}
+
 ### Timestamps for triggers
 
 If you're using timestamps with a [datetime type]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#custom-event-properties) from events that trigger action-based Canvases, which are referenced using [context]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties), timestamps are normalized to UTC.

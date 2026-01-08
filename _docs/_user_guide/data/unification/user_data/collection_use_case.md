@@ -56,6 +56,6 @@ These attributes allow you to send campaigns to users such as:
 2. Using our message templates and [personalization features]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/overview/#personalized-messaging) to drag the unique promotion code attribute into messaging directed at users.
 
 {% alert important %}
-Braze will ban or block users ("dummy users") with over 5,000,000 sessions and no longer ingest their SDK events because they are usually the result of misintegration. If you find that this has happened for a legitimate user, reach out to your Braze account manager.
+Braze will ban or block users ("dummy users") with over 5,000,000 sessions and no longer ingest their SDK events because they are usually the result of misintegration. If you find that this has happened to a legitimate user, contact your Braze account manager.
 {% endalert %}
 

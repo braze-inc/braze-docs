@@ -4,7 +4,7 @@ article_title: Content Cards
 page_order: 1
 layout: dev_guide
 guide_top_header: "Content Cards"
-guide_top_text: "With Content Cards, you can send a highly targeted, dynamic stream of rich content to your customers within the apps they love without interrupting their experience. <br><br>Content Cards are embedded directly into your app or website, letting you create message inboxes and custom interfaces that extend the reach of other channels such as email or push notifications. Additionally, Content Cards support more personalized features, including card pinning, card dismissal, API-based delivery, Connected Content, custom card expiration times, card analytics, and easy coordination with push notifications. <br><br>Content Cards are available as part of your Message Credits entitlements. If you’re not on our flexible Message Credits model, Content Cards are available as an add-on feature. Contact your Braze customer success manager or our support team for more information."
+guide_top_text: "With Content Cards, you can send a highly targeted, dynamic stream of rich content to your customers within the apps they love without interrupting their experience. <br><br>Content Cards are embedded directly into your app or website, letting you create message inboxes and custom interfaces that extend the reach of other channels such as email or push notifications. Additionally, Content Cards support more personalized features, including card pinning, card dismissal, API-based delivery, Connected Content, custom card expiration times, card analytics, and easy coordination with push notifications. <br><br>**Content Cards availability depends on your Braze package. Contact your account manager or customer success manager to get started.**"
 description: "This landing page is home to Braze Content Cards. Here, you can find articles on how to create a Content Card, how to customize your Content Cards, testing, reporting, and more."
 channel:
   - content cards
@@ -21,7 +21,7 @@ guide_featured_list:
   link: /docs/user_guide/message_building_by_channel/content_cards/creative_details/
   image: /assets/img/braze_icons/brush-02.svg
 - name: Testing
-  link: /docs/user_guide/message_building_by_channel/content_cards/testing/
+  link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/
   image: /assets/img/braze_icons/beaker-02.svg
 - name: Reporting
   link: /docs/user_guide/message_building_by_channel/content_cards/reporting/

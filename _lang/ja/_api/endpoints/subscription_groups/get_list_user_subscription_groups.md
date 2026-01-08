@@ -1,5 +1,5 @@
 ---
-nav_title: "取得:ユーザーのサブスクリプショングループをリストする"
+nav_title: "取得:ユーザーサブスクリプショングループを一覧表示する。"
 article_title: "取得:ユーザーのサブスクリプショングループをリストする"
 search_tag: Endpoint
 page_order: 4
@@ -14,7 +14,7 @@ description: "この記事では、リストユーザーのサブスクリプシ
 /subscription/user/status
 {% endapimethod %}
 
-> このエンドポイントを使用して、特定のユーザーのサブスクリプショングループを一覧表示および取得します。
+> このエンドポイントを使用して、特定のユーザーの履歴を持つサブスクリプショングループをリストアップし、取得する。
 
 例を見たり、このエンドポイントをテストしたりする場合は、**メールサブスクリプショングループ**をご覧ください。
 
@@ -51,15 +51,15 @@ description: "この記事では、リストユーザーのサブスクリプシ
 同じメールアドレスを共有する複数のユーザー（複数の`external_ids`）がいる場合、すべてのユーザーは別々のユーザーとして返されます（たとえ同じメールアドレスやサブスクリプショングループを持っていても）。
 {% endalert %}
 
-## 例のリクエスト 
+## 例のリクエスト
 
 {% tabs %}
-{% tab 複数のユーザー %}
+{% tab Multiple Users %}
 {% raw %}
 `https://rest.iad-03.braze.com/subscription/user/status?external_id[]=1&external_id[]=2`
 {% endraw %}
 {% endtab %}
-{% tab SMSとWhatsApp %}
+{% tab SMS and WhatsApp %}
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/user/status?external_id={{external_id}}&limit=100&offset=1&phone=+11112223333' \
@@ -67,7 +67,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/use
 ```
 {% endraw %}
 {% endtab %}
-{% tab メール %}
+{% tab Email %}
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/user/status?external_id={{external_id}}&email=example@braze.com&limit=100&offset=0' \
@@ -77,7 +77,9 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/use
 {% endtab %}
 {% endtabs %}
 
-## 応答の例
+## 回答例
+
+ユーザーの履歴にサブスクリプションステータスの更新があったサブスクリプショングループのみが、成功したレスポンスに含まれる。つまり、新しく作成されたサブスクリプショングループはリストされない。
 
 ```json
 {

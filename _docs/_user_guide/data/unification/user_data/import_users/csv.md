@@ -1,6 +1,6 @@
 ---
-nav_title: Using a CSV
-article_title: "CSV Import"
+nav_title: CSV import
+article_title: "CSV import"
 description: "Learn how to record and update user attributes and custom events using CSV import."
 page_order: 1.2
 ---
@@ -275,7 +275,7 @@ Setting `language` or `country` on a user through CSV import or API will prevent
 
 ## Troubleshooting
 
-Review these common issues if you’re having trouble with CSV import. Still need help? Reach out to [support@braze.com](mailto:support@braze.com).
+Review these common issues if you’re having trouble with CSV import. Still need help? Contact [support@braze.com](mailto:support@braze.com).
 
 ### File formatting issues
 

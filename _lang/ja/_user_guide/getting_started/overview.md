@@ -24,7 +24,7 @@ Braze へようこそこの一連の記事は、Braze のプラットフォー�
 Braze は、あらゆる規模のブランドがさまざまなチャネルでパーソナライズされたターゲットを絞ったキャンペーンを作成するのを支援するカスタマーエンゲージメントプラットフォームです。Braze を使用すれば、顧客の声に耳を傾け、顧客の行動が何を示しているかを理解し、適切なメッセージを適切なチャネルを通じて適切なタイミングで顧客に送信することができます。
 
 {% alert tip %}
-[同僚をBrazeに追加して]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/adding_users_to_your_dashboard/#adding-braze-users)、一緒にプラットフォームを探検できるようにしよう。
+[同僚をBrazeに追加して]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/)、一緒にプラットフォームを探検できるようにしよう。
 {% endalert %}
 
 ## ユーザーとセグメント

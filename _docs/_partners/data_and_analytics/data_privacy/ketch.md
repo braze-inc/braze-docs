@@ -55,7 +55,7 @@ In order to collect and orchestrate user opt-in and opt-out signals, identities 
 
 ### Step 3: Configure identities
 
-A user can only see the marketing preference center when Ketch can confirm that user's marketing preference identity. If Ketch cannot capture the user's identity properly, then the marketing preferences page will not display to that user since Ketch is be unable to manage their user preferences.
+A user can see only the marketing preference center when Ketch can confirm that user's marketing preference identity. If Ketch cannot capture the user's identity properly, then the marketing preferences page does not appear to that user because Ketch is unable to manage their user preferences.
 
 1. To configure the marketing preference identity, go to the **Settings** page in Ketch, and click  **Identity space**. You will need to either create a new identity space or edit an existing identity space to assign that identity space as the marketing preference identity. Check that the Ketch tag deployed on the property properly captures that identity space.
 2. Go to **Experience Server** > **Properties**, and edit the desired property. Under the data layer for that property, make sure to enable the custom identity space. Then, configure how the marketing preference identity is captured on this site.

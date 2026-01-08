@@ -11,9 +11,13 @@ alias: /landing_pages/
 
 > Braze のランディングページは、ユーザー獲得とエンゲージメント戦略を推進できる独立した Web ページです。
 
-![特典、画像、お客様の声のレイアウトが適用されたスキンケア製品発売ランディングページ]({% image_buster /assets/img/landing_pages/example_landing_page.png %}){: style="float:right;max-width:45%;margin-left:15px;"}
-
 ランディングページを使用して、オーディエンスの拡大、ユーザーデータの収集、特別なオファーのプロモート、マルチチャネルキャンペーンの促進を行います。
+
+{% alert note %}
+ランディングページとカスタムドメインの可用性は、Brazeのパッケージによって異なります。開始するには、アカウントマネージャーまたは顧客のサクセスマネージャーに連絡してください。
+{% endalert %}
+
+{% multi_lang_include video.html id="eg4r7agod1" source="wistia" %}
 
 ## 前提条件
 
@@ -23,23 +27,32 @@ alias: /landing_pages/
 - ランディングページの下書きを作成
 - ランディングページを公開
 
-{% multi_lang_include drag_and_drop_access.md variable_name='dnd editors' %}
+{% multi_lang_include drag_and_drop/drag_and_drop_access.md variable_name='dnd editors' %}
 
-## プランの階層
+## ランディングページへのGoogle タグマネージャの追加
 
-使用できる公開されたランディングページとカスタムドメインの数は、プランタイプ (無料または有料 (増分)) によって異なります。
+ランディングページにGoogleタグマネージャを追加するには、ドラッグアンドドロップエディタで**カスタムコード**ブロックをランディングページに追加し、タグマネージャコードをブロックに挿入します。次の例のように、タグマネージャコードの前にデータレイヤを追加するようにしてください。
 
-| 機能                                                                                                   | 無料階層     | 有料ティア (増分)     |
-| :---------------------------------------------------------------------------------------------------------------- | :--------------- | ----------------- |
-| 公開ランディングページ                                                                 | 1社につき5つ | 20追加 |
-| カスタムドメイン          | 1社につき1つ | 5追加 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
+```
+<script>
+window.dataLayer = window.dataLayer || [];
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-XXXXXX');</script>
+<!-- End Google Tag Manager -->
+```
+
+Googleタグマネージャの実装については、[Googleのドキュメント](https://developers.google.com/tag-platform/tag-manager/datalayer#installation)を参照してください。
 
 ## よくある質問
 
 ### ランディングページの最大サイズは何ですか?
 
-ランディングページの本文サイズは最大1MBです。
+ランディングページの本文サイズは、最大500KB です。
 
 ### ランディングページを公開するための技術的な要件はありますか？
 
@@ -52,4 +65,3 @@ alias: /landing_pages/
 ### ランディングページ内に Webhook を作成できるますか?
 
 いいえ、これは現在サポートされていません。
-
