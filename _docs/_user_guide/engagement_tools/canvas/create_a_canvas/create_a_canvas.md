@@ -281,7 +281,7 @@ Select **Done** after you've finished configuring your Canvas component.
 {% tabs local %}
 {% tab Canvas Entry Properties %}
 
-The [`context` object]({{site.baseurl}}/api/objects_filters/context_object) is configured in the **Entry Schedule** step of creating a Canvas and indicate the trigger that enters a user into a Canvas. These properties can also access the properties of entry payloads in API-triggered Canvases. Note that the `context` object can be up to 50 KB. 
+The [`context` object]({{site.baseurl}}/api/objects_filters/context_object) is configured in the **Entry Schedule** step of creating a Canvas and indicates the trigger that enters a user into a Canvas. These properties can also access the properties of entry payloads in API-triggered Canvases. Note that the `context` object can be up to 50 KB. 
 
 Use the following Liquid when referencing these properties created upon entering the Canvas: {% raw %} ``context.${property_name}`` {% endraw %}. Note that the events must be custom events or purchase events to be used this way.
 
