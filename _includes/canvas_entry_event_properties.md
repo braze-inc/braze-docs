@@ -3,7 +3,7 @@ You can use Canvas entry properties and event properties in your Canvas user jou
 {% tabs local %}
 {% tab Canvas Entry Properties %}
 
-[Canvas entry properties]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/) are the properties you map for Canvases that are action-based or API-triggered. Note that the `canvas_entry_properties` object has a maximum size limit of 50 KB.
+[Canvas entry properties]({{site.baseurl}}/api/objects_filters/context_object/) are the properties you map for Canvases that are action-based or API-triggered. Note that the `canvas_entry_properties` object has a maximum size limit of 50 KB.
 
 {% alert note %}
 For in-app message channels specifically, `context` can only be referenced in Canvas.
