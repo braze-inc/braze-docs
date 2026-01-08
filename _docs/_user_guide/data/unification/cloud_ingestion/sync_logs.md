@@ -82,6 +82,10 @@ Select **Export rows** to export the row-level logs for a sync run. Then, choose
 * **Rows with errors:** Downloads a file containing only the rows that had an **Error** status.
 * **All rows:** Downloads a file containing every row processed in the run.
 
+{% alert important %}
+Exporting sync logs for all rows is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
+{% endalert %}
+
 Logs can't be exported directly from the dashboard. After the export is generated, you’ll receive an email with a link to download the log export file. 
 
 ## Notifications
