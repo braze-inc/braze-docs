@@ -14,6 +14,89 @@ page_type: reference
 For more information on any of the updates listed on this page, contact your account manager or [open a support ticket]({{site.baseurl}}/user_guide/administrative/access_braze/support/). You can also check out our [SDK Changelogs]({{site.baseurl}}/developer_guide/changelogs) for more information about our monthly SDK releases, improvements, and breaking changes.
 {% endalert %}
 
+{% details January 8, 2026 %}
+## January 8, 2026 release
+
+### Data flexibility
+
+#### eCommerce recommended events
+
+{% multi_lang_include release_type.md release="Early access" %}
+
+To match eCommerce recommended events with the existing purchase event, we added the ["Places Order" conversion event]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/ecommerce_use_cases/#conversions-report), which is similar to “Makes Purchase".
+
+#### Updates to Currents events
+
+{% multi_lang_include release_type.md release="General availability" %}
+
+These following changes were made to Currents in Version 4:
+
+* Field changes to event type `users.behaviors.pushnotification.TokenStateChange`:
+    * Added new `string` field `push_token`: Push token of the event
+* Field changes to event type `users.messages.pushnotification.Bounce`:
+    * Added new `string` field `push_token`: Push token of the event
+* Field changes to event type `users.messages.pushnotification.Send`:
+    * Added new `string` field `push_token`: Push token of the event
+* Field changes to event type `users.messages.rcs.Click`:
+    * Added new `string` field `canvas_variation_name`: Name of the Canvas variation this user received
+    * Field `user_phone_number` is now *optional*.
+* Field changes to event type `users.messages.rcs.InboundReceive`:
+    * Field `user_id` is now *optional*.
+* Field changes to event type `users.messages.rcs.Rejection`:
+    * Added new `string` field `canvas_step_message_variation_id`: API ID of the Canvas step message variation this user received
+
+Refer to the [Currents changelog]({{site.baseurl}}/user_guide/data/distribution/braze_currents/event_glossary/currents_changelogs) for the event changes for each release.
+
+#### Export sync logs by all rows
+
+{% multi_lang_include release_type.md release="Early access" %}
+
+In the [Cloud Data Ingestion **Sync Log** dashboard]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/sync_logs/#exporting-sync-logs), you can choose to export the row-level logs for a sync run by:
+
+* **Rows with errors:** Downloads a file containing only the rows that had an **Error** status.
+* **All rows:** Downloads a file containing every row processed in the run.
+
+### Robust channels
+
+#### Bring Your Own (BYO) WhatsApp connector
+
+The [Bring Your Own (BYO) WhatsApp connector]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/byo_connector/) offers a partnership between Braze and Infobip, in which you give Braze access to your Infobip WhatsApp Business Manager (WABA). This allows you to manage and pay for messaging costs directly with Infobip while using Braze for segmentation, personalization, and campaign orchestration. 
+
+#### Banners in Canvas
+
+{% multi_lang_include release_type.md release="Early access" %}
+
+You can select **Banners** as a messaging channel in a [Message step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step) for Canvas. You can use the drag-and-drop editor to create personalized inline messages, providing non-intrusive, contextually relevant experiences that update automatically at the start of each user session. 
+
+#### Dynamic BCC
+
+{% multi_lang_include release_type.md release="General availability" %}
+
+With [dynamic BCC]({{site.baseurl}}/user_guide/administrative/app_settings/email_settings/?tab=bcc%20address#dynamic-bcc), you can use Liquid in your BCC address. Note that this feature is only available in **Email Preferences** and can’t be set on the campaign itself. Only one BCC address per email recipient is allowed.
+
+#### Channel-based rate limits
+
+As an alternative to a rate limit that gets shared across an entire multi-channel campaign or Canvas, you can select a specific rate limit per channel. In this case, the rate limit will apply to each of your selected channels. For example, you can set your campaign or Canvas to send a maximum of 5,000 webhooks and 2,500 SMS messages per minute across the campaign or Canvas. For more details, see [Rate limiting and frequency capping]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting).
+
+### New Braze partnerships
+
+#### LILT - Localization
+
+[LILT]({{site.baseurl}}/partners/lilt/) is the complete AI solution for enterprise translation and content creation. LILT enables global organizations to scale and optimize their content, product, communications, and support operations, with AI agents and fully automated workflows.
+
+### SDK updates
+
+The following SDK updates have been released. Breaking updates are listed below; all other updates can be found by checking the corresponding SDK changelogs.
+
+-[Android 40.1.1](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#4011)
+- [Android SDK 40.1.0](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#4010)
+- [Swift SDK 14.0.0](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md)
+    - Removes News Feed.
+        - This fully removes all UI elements, data models, and actions associated with News Feed.
+- [Web SDK 6.4.0](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md)
+
+{% enddetails %}
+
 {% details December 9, 2025 %}
 
 ## December 9, 2025
