@@ -25,7 +25,7 @@ Before you can launch your Banner, your development team must [set up placements
 
 {% multi_lang_include banners/creating_placements.md section="user" %}
 
-### Step 1: Choose where to build your message
+### Step 2: Choose where to build your message
 
 Not sure whether your message should be sent using a campaign or a Canvas? Campaigns are better for single, targeted messaging campaigns, while Canvases are better for multi-step user journeys.
 
@@ -57,7 +57,7 @@ If all of the messages in your campaign are going to be similar or have the same
 {% endtab %}
 {% endtabs %}
 
-### Step 2: Compose a Banner {#compose-a-banner}
+### Step 3: Compose a Banner {#compose-a-banner}
 
 To compose your Banner, you can choose to:
 
@@ -67,7 +67,7 @@ To compose your Banner, you can choose to:
 
 ![Option to choose a blank Banner or a template.]({% image_buster /assets/img/banners/choose_banner_composer.png %})
 
-#### Step 2.1: Style the Banner
+#### Step 3.1: Style the Banner
 
 You can drag and drop blocks and rows into the canvas area to start building your message.
 
@@ -75,7 +75,7 @@ To customize your message's background properties, border settings, and more, se
 
 ![Style panel of the Banner composer.]({% image_buster /assets/img/banners/banner_card_styles.png %})
 
-#### Step 2.2: Define on-click behavior (optional)
+#### Step 3.2: Define on-click behavior (optional)
 
 When a user clicks a link in the Banner, you can choose to navigate them deeper into your app or redirect them to another webpage. Additionally, you can choose to [log a custom attribute or event]({{site.baseurl}}/developer_guide/analytics/), which updates your user's profile with custom data when they click the Banner.
 
@@ -85,7 +85,7 @@ On-click behavior can be overridden if a specific element (such as a button, lin
 {:/}
 {% endalert %}
 
-#### Step 2.3: Add custom properties (optional) {#custom-properties}
+#### Step 3.3: Add custom properties (optional) {#custom-properties}
 
 You can add custom properties to a Banner to attach structured metadata, such as strings or JSON objects. These properties don’t affect how the Banner is displayed but can be [accessed through the Braze SDK]({{site.baseurl}}/developer_guide/banners/placements/) to modify your app’s behavior or appearance. For example, you could:
 
@@ -110,7 +110,7 @@ When you're finished, select **Done**.
 
 ![The properties page with a string property with a key of color and value of #FF0000.]({% image_buster /assets/img/banners/example_property.png %})
 
-### Step 3: Build the remainder of your campaign or Canvas
+### Step 4: Build the remainder of your campaign or Canvas
 
 {% tabs %}
 {% tab Campaign %}
@@ -151,10 +151,10 @@ If you haven't done so already, complete the remaining sections of your Canvas c
 {% endtab %}
 {% endtabs %}
 
-### Step 4: Test your message (optional)
+### Step 5: Test your message (optional)
 
 {% multi_lang_include banners/testing.md page="campaigns" %}
 
-### Step 5: Review and deploy
+### Step 6: Review and deploy
 
 After you've finished building your campaign or Canvas, review its details, [test it]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/), then send it when you're ready.
