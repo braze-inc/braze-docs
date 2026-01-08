@@ -14,10 +14,6 @@ tool: Canvas
 
 > Context steps allow you to create and update one or more variables for a user as they move through a Canvas. For example, if you have a Canvas that manages seasonal discounts, you can use a context variable to store a different discount code each time a user enters the Canvas.
 
-{% alert important %}
-Context steps are currently in early access. Contact your Braze account manager if you're interested in participating in this early access.<br><br>Note that opting into the Canvas Context step early access will make changes to how timestamps are handled across all your Canvases. To learn more about this, refer to [Time zone consistency standardization](#time-zone-consistency-standardization).
-{% endalert %}
-
 ## How it works
 
 ![A Context step as the first step of a Canvas.]({% image_buster /assets/img/context_step3.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
@@ -126,21 +122,16 @@ Refer to [Data types]({{site.baseurl}}/user_guide/engagement_tools/canvas/create
 
 ## Frequently asked questions
 
-### What will be changing when Canvas Context becomes generally available?
+### What changed when Canvas Context became generally available?
 
-When Canvas Context becomes generally available, the following details will apply:
+As Canvas Context is generally available, the following details apply:
 
-- All timestamps with a [datetime type]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#custom-event-properties) from [trigger event properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties) in action-based Canvases will always be in [UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time). 
-- This change will impact all action-based Canvases, whether the specific Canvas is using a Context step or not.
+- All timestamps with a [datetime type]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#custom-event-properties) from [trigger event properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties) in action-based Canvases are in [UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time). 
+- This change impacts all action-based Canvases, whether the specific Canvas is using a Context step or not.
 
 #### What is the reason for this change?
 
 This change is part of a broader effort to create a more predictable and consistent experience when editing Canvas steps and messages.
-
-#### When is this change taking effect?
-
-- If you're participating in the Canvas Context early access, this change has already been applied. 
-- If you're not participating in the Canvas Context early access, this change will apply when you join the early access or when Canvas Context becomes generally available.
 
 #### Are API-triggered or scheduled Canvases impacted by this change?
 
@@ -204,7 +195,7 @@ The preferred time zone can also be sent in the event properties payload like th
 
 ### How do context variables differ from Canvas entry properties?
 
-If you’re participating in the Context step early access, Canvas entry properties are now included as Canvas context variables. This means you can send Canvas entry properties using the Braze API and reference them in other steps, similar to using a context variable with the Liquid snippet.
+Canvas entry properties are included as Canvas context variables. This means you can send Canvas entry properties using the Braze API and reference them in other steps, similar to using a context variable with the Liquid snippet.
 
 ### Can variables reference each other in a singular Context step?
 
@@ -218,6 +209,7 @@ Yes. All variables in a Context step are evaluated in a sequence, meaning you co
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 This also applies across multiple Context steps. For example, imagine this sequence:
+
 1. An initial Context step creates a variable called `JobInfo` with the value `job_title`.
 2. A Message step references {% raw %}`{{context.${JobInfo}}}`{% endraw %} and displays `job_title` to the user.
 3. Later, a Context step updates the context variable, changing the value of `JobInfo` to `job_description`.
