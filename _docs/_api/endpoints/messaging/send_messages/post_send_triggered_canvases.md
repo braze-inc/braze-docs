@@ -40,18 +40,18 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```json
 {
   "canvas_id": (required, string) see Canvas identifier,
-  "canvas_entry_properties": (optional, object) personalization key-value pairs that apply to all users in this request,
+  "context": (optional, object) personalization key-value pairs that apply to all users in this request,
   "broadcast": (optional, boolean) see Broadcast -- defaults to false on 8/31/17, must be set to true if `recipients` is omitted,
   "audience": (optional, connected audience object) see connected audience,
   // Including 'audience' will only send to users in the audience
-  "recipients": (optional, array; if not provided and broadcast is not set to 'false', message will send to the entire segment targeted by the Canvas)
+  "recipients": (optional, array; if not provided and broadcast is not set to 'false', message sends to the entire segment targeted by the Canvas)
     [{
       // Either "external_user_id" or "user_alias" or "email" is required. Requests must specify only one.
       "user_alias": (optional, user alias object) user alias of user to receive message,
       "external_user_id": (optional, string) external identifier of user to receive message,
       "email": (optional, string) email address of user to receive message,
       "prioritization": (optional, array) prioritization array; required when using email,
-      "canvas_entry_properties": (optional, object) personalization key-value pairs that apply to this user (these key-value pairs override any keys that conflict with the parent `canvas_entry_properties`)
+      "context": (optional, object) personalization key-value pairs that apply to this user (these key-value pairs override any keys that conflict with the parent `context`)
       "send_to_existing_only": (optional, boolean) defaults to true, can't be used with user aliases
       "attributes": (optional, object) fields in the attributes object create or update an attribute of that name with the given value on the specified user profile before the message is sent and existing values are overwritten
     }],
@@ -64,10 +64,10 @@ Authorization: Bearer YOUR-REST-API-KEY
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
 |`canvas_id`| Required | String | See [Canvas identifier]({{site.baseurl}}/api/identifier_types/). |
-|`canvas_entry_properties`| Optional | Object | This includes [Canvas entry properties]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/). Personalization key-value pairs apply to all users in this request. The Canvas entry properties object has a maximum size limit of 50 KB. <br><br>**Note:** If you're participating in the [Canvas Context early access]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context/), this parameter is `context` and includes Canvas entry properties. |
+|`context`| Optional | Object | This includes [Canvas entry properties]({{site.baseurl}}/api/objects_filters/context_object/). Personalization key-value pairs apply to all users in this request. The context object has a maximum size limit of 50 KB. |
 |`broadcast`| Optional | Boolean | You must set `broadcast` to true when sending a message to an entire segment that a campaign or Canvas targets. This parameter defaults to false (as of August 31, 2017). <br><br> If `broadcast` is set to true, a `recipients` list cannot be included. However, use caution when setting `broadcast: true`, as unintentionally setting this flag may cause you to send your message to a larger-than-expected audience. |
 |`audience`| Optional| Connected audience object | See [Connected audience]({{site.baseurl}}/api/objects_filters/connected_audience/). |
-|`recipients`| Optional | Array | See [Recipients object]({{site.baseurl}}/api/objects_filters/recipient_object/). <br><br>If not provided and `broadcast` is set to `true`, the message is sent to the entire segment that the Canvas targets.<br><br> The `recipients` array may contain up to 50 objects, with each object containing a single `external_user_id` string and a `canvas_entry_properties` object. This call requires an `external_user_id`, `user_alias`, or `email`. Requests must specify only one. <br><br>If `email` is the identifier, you must include [`prioritization`]({{site.baseurl}}/api/endpoints/user_data/post_user_identify#identifying-users-by-email) in the recipients object. |
+|`recipients`| Optional | Array | See [Recipients object]({{site.baseurl}}/api/objects_filters/recipient_object/). <br><br>If not provided and `broadcast` is set to `true`, the message is sent to the entire segment that the Canvas targets.<br><br> The `recipients` array may contain up to 50 objects, with each object containing a single `external_user_id` string and a `context` object. This call requires an `external_user_id`, `user_alias`, or `email`. Requests must specify only one. <br><br>If `email` is the identifier, you must include [`prioritization`]({{site.baseurl}}/api/endpoints/user_data/post_user_identify#identifying-users-by-email) in the recipients object. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert important %}
@@ -87,7 +87,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/canvas/trigger/sen
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --data-raw '{
   "canvas_id": "canvas_identifier",
-  "canvas_entry_properties": {"product_name" : "shoes", "product_price" : 79.99},
+  "context": {"product_name" : "shoes", "product_price" : 79.99},
   "broadcast": false,
   "audience": {
     "AND": [

@@ -16,7 +16,9 @@ description: "This article outlines details about the Schedule API-triggered Can
 
 > Use this endpoint to schedule Canvas messages via API-triggered delivery, allowing you to decide what action should trigger the message to be sent.
 
-You can pass in `canvas_entry_properties` that will be templated into the messages sent by the first steps of the Canvas.
+You can pass in `context` that will be templated into the messages sent by the first steps of the Canvas.
+
+{% multi_lang_include alerts/important_alerts.md alert='context variable' %}
 
 Note that to send messages with this endpoint, you must have a [Canvas ID]({{site.baseurl}}/api/identifier_types/#canvas-api-identifier), created when you build a Canvas.
 
@@ -49,7 +51,7 @@ Authorization: Bearer YOUR-REST-API-KEY
   // If 'recipients' and 'audience' are not provided and broadcast is not set to 'false',
   // the message will send to entire segment targeted by the Canvas
   "broadcast": (optional, boolean) see broadcast -- defaults to false on 8/31/17, must be set to true if "recipients" object is omitted,
-  "canvas_entry_properties": (optional, object) personalization key-value pairs for the first step for all users in this send; see trigger properties,
+  "context": (optional, object) personalization key-value pairs for the first step for all users in this send; see trigger properties,
   "schedule": {
     "time": (required, datetime as ISO 8601 string) time to send the message,
     "in_local_time": (optional, bool),
@@ -66,7 +68,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | `recipients` | Optional | Array of recipients objects | See [recipients object]({{site.baseurl}}/api/objects_filters/recipient_object/). |
 | `audience` | Optional | Connected audience object | See [connected audience]({{site.baseurl}}/api/objects_filters/connected_audience/). |
 |`broadcast`| Optional | Boolean | You must set `broadcast` to true when sending a message to an entire segment that a campaign or Canvas targets. This parameter defaults to false (as of August 31, 2017). <br><br> If `broadcast` is set to true, a `recipients` list cannot be included. However, use caution when setting `broadcast: true`, as unintentionally setting this flag may cause you to send your message to a larger than expected audience. |
-| `canvas_entry_properties` | Optional | Object | Personalization key-value pairs for all users in this send. See [Canvas entry properties object]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object). |
+| `context` | Optional | Object | Personalization key-value pairs for all users in this send. See [Canvas context object]({{site.baseurl}}/api/objects_filters/context_object). |
 | `schedule` | Required | Schedule object | See [schedule object]({{site.baseurl}}/api/objects_filters/schedule_object/). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
@@ -81,7 +83,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/canvas/trigger/sch
     {
       "user_alias": "example_alias",
       "external_user_id": "external_user_identifier",
-      "canvas_entry_properties": {}
+      "context": {}
     }
   ],
   "audience": {
@@ -132,7 +134,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/canvas/trigger/sch
     ]
   },
   "broadcast": false,
-  "canvas_entry_properties": {},
+  "context": {},
   "schedule": {
     "time": "",
     "in_local_time": false,

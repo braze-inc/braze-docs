@@ -63,20 +63,22 @@ All users who enter the Message step will advance to the next step when any one 
 If an action-based Canvas is triggered by an inbound SMS message, you can reference SMS properties in the first step (Message step) or a Message step that is nested under an Action Path step. For example, in the Message step, you could use `{{sms.${inbound_message_body}}}` or `{{sms.${inbound_media_urls}}}`.
 {% endraw %}
 
-## Referencing Canvas entry properties
+## Referencing context properties
 
-Canvas entry properties are configured in the **Entry Schedule** step of creating a Canvas and will indicate the trigger that enters a user into a Canvas. These properties can also access the properties of entry payloads in API-triggered Canvases. Note that the `canvas_entry_properties` object has a maximum size limit of 50 KB. 
+{% multi_lang_include alerts/important_alerts.md alert='context variable' %}
 
-Entry properties can be used in Liquid in any Message step. Use the following Liquid when referencing these entry properties: {% raw %}``canvas_entry_properties${property_name}``{% endraw %}. Events must be custom events or purchase events to be used this way.
+Entry properties are configured in the **Entry Schedule** step of creating a Canvas and will indicate the trigger that enters a user into a Canvas. These properties can also access the properties of entry payloads in API-triggered Canvases. Note that the `context` object has a maximum size limit of 50 KB.
+
+Entry properties can be used in Liquid in any Message step. Use the following Liquid when referencing these entry properties: {% raw %}``context.${property_name}``{% endraw %}. Events must be custom events or purchase events to be used this way.
 
 {% alert note %}
-For in-app message channels specifically, `canvas_entry_properties` can only be referenced in Canvas.
+For in-app message channels specifically, `context` can only be referenced in Canvas.
 {% endalert %}
 
-Use the following Liquid when referencing these entry properties: {% raw %}``canvas_entry_properties${property_name}``{% endraw %}. Note that the events must be custom events or purchase events to be used this way.
+Use the following Liquid when referencing these entry properties: {% raw %}``context.${property_name}``{% endraw %}. Note that the events must be custom events or purchase events to be used this way.
 
 {% raw %}
-For example, consider the following request: `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}`. You could add the word "shoes" to a message with the Liquid `{{canvas_entry_properties.${product_name}}}`.
+For example, consider the following request: `\"context\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}`. You could add the word "shoes" to a message with the Liquid `{{context.${product_name}}}`.
 {% endraw %}
 
 You can also leverage [persistent entry properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/canvas_persistent_entry_properties/) in any Message step to guide your users through personalized steps throughout your Canvas workflow.
@@ -94,7 +96,7 @@ In Canvas, custom event and purchase event properties can be used in Liquid in a
 In the first Message step following an Action Path, you can use `event_properties` related to the event referenced in that Action Path. You can have other steps (that are not another Action Paths or Message step) in between this Action Paths step and the Message step. Note that you'll only have access to `event_properties` if your Message step can be traced back to a non-Everyone Else path in an Action Path step.
 
 {% alert important %}
-You can't use `event_properties` in the lead Message step. Instead, you must use `canvas_entry_properties` or add an Action Paths step with the corresponding event before the Message step that includes `event_properties`.
+You can't use `event_properties` in the lead Message step. Instead, you must use `context` or add an Action Paths step with the corresponding event before the Message step that includes `event_properties`.
 {% endalert %}
 
 {% details Expand for original Canvas editor %}
@@ -102,8 +104,8 @@ You can't use `event_properties` in the lead Message step. Instead, you must use
 You can no longer create or duplicate Canvases using the original editor. This section is available for reference only.
 
 - `event_properties` can't be used in scheduled full steps. However, you can use `event_properties` in the first full step of an action-based Canvas, even if the full step is scheduled.
-- `canvas_entry_properties` can be referenced only in the first full step of a Canvas.
-- For in-app message channels specifically, `canvas_entry_properties` can be referenced in the original Canvas editor if you have persistent entry properties enabled as part of the previous early access.
+- `context` can be referenced only in the first full step of a Canvas.
+- For in-app message channels specifically, `context` can be referenced in the original Canvas editor if you have persistent entry properties enabled as part of the previous early access.
 
 {% enddetails %}
 

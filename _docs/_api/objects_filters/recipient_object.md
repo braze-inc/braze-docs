@@ -25,7 +25,7 @@ The recipients object allows you to combine the [user alias object]({{site.baseu
   "email": (optional, string) email address of user to receive message,
   "prioritization": (optional, array) see Prioritization; required when using email,
   "trigger_properties": (optional, object) personalization key-value pairs for this user when sending a campaign or message; see Trigger Properties,
-  "canvas_entry_properties": (optional, object) personalization key-value pairs for this user when triggering a Canvas; see Canvas Entry Properties,
+  "context": (optional, object) personalization key-value pairs for this user when triggering a Canvas; see Canvas context object
   "send_to_existing_only": (optional, boolean) defaults to true; cannot be used with user aliases,
   "attributes": (optional, object) fields in the attributes object create or update an attribute of that name with the given value on the specified user profile before the message is sent and existing values are overwritten
 }]
