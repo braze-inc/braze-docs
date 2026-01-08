@@ -1,6 +1,6 @@
 ---
 nav_title: Locales in messages
-article_title: Locales in messages
+article_title: Translating locales
 alias: /locales_in_messages/
 page_order: 0
 page_type: reference
