@@ -18,7 +18,7 @@ channel:
 | --- | --- |
 | Infobip account | An Infobip account is required to use the BYO WhatsApp connector.
 | Messaging credits | You consume Braze messaging credits when you send WhatsApp messages. |
-| WhatsApp requirements | Complete all [WhatsApp requirements]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview#prerequisites). |
+| WhatsApp requirements | Complete all [WhatsApp requirements]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/#prerequisites). |
 | Phone number | We suggest you [acquire a phone number through Infobip](https://www.infobip.com/docs/numbers/getting-started) for convenience. |
 {: .reset-td-br-1 .reset-td-br-2 role=”presentation” }
 
@@ -46,12 +46,12 @@ Before setting up the BYO WhatsApp connector, confirm that your WhatsApp Busines
 4. Add an expiry date that is far into the future to avoid issues with token expiration.
     - Make a note to generate a new API key and reconnect your WABA before the expiry date.
 5. Select these scopes:
-- Message:send
-- Whatsapp:manage
-- Whatsapp:message:send
-- Account-management:manage
-- Subscriptions:manage
-- Metrics:manage
+- `Message:send`
+- `Whatsapp:manage`
+- `Whatsapp:message:send`
+- `Account-management:manage`
+- `Subscriptions:manage`
+- `Metrics:manage`
 6. After creating the key, copy the API Key.
     - The key can only be copied for a limited time after creation. You can repeat these steps to create a new key if you need to connect another WhatsApp Business Account in the future.
 
@@ -83,7 +83,7 @@ To receive the verification code, go to your Infobip dashboard > **Analyze** > *
 
 ![Message logs showing an inbound SMS message with the verification code.]({% image_buster /assets/img/whatsapp/byo_connector/verification_code.png %})
 
-After completing setup, your phone number is listed as a subscription group under your WhatsApp Business Group. The WhatsApp Business Group contains the Infobip account name and API base URL it’s connected to. Accounts connected through the native integration will not have an Infobip account name.
+After completing setup, your phone number is listed as a subscription group under your WhatsApp Business Group. The WhatsApp Business Group contains the Infobip account name and API base URL it’s connected to. Accounts connected through the native integration do not have an Infobip account name.
 
 {% alert note %}
 Connect each WhatsApp Business Account to a single Infobip account. Each time you connect an additional phone number or subscription group, if the WhatsApp Business Account is already connected to an Infobip account, you must re-enter the API credentials for the existing account.
@@ -94,7 +94,6 @@ Connect each WhatsApp Business Account to a single Infobip account. Each time yo
 Follow the native integration sending process, including:
 - [Subscribing users to the subscription group]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/user_subscription/)
 - [Creating a WhatsApp message]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create/)
-
 
 ## Troubleshooting setup
 
@@ -111,7 +110,6 @@ Confirm your WhatsApp Business Account isn’t connected to a different Braze wo
 
 ## Considerations 
 
-### Use cases
 
 While all existing functionality with Braze is supported, these use cases are currently not supported.
 
