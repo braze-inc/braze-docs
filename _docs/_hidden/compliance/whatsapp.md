@@ -19,9 +19,9 @@ The following additional terms apply in relation to Customer’s use of the What
 
 Customer shall comply with any prerequisites, terms, and policies applicable to the WhatsApp Channel, including any terms required by WhatsApp, LLC and its group affiliates, as described in the Braze [WhatsApp setup]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/) page.
 
-## Bring Your Own (BYO) Whatsapp Connector
+## Bring Your Own (BYO) WhatsApp Connector
 
-Customers can connect their direct Whatsapp accounts with Braze using the BYO Whatsapp Connector. 
+Customers can connect their direct WhatsApp accounts with Braze using the BYO WhatsApp Connector. 
 
 ## General terms
 
