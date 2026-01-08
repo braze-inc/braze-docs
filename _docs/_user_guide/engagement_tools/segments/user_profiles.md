@@ -152,4 +152,10 @@ Some fields may be absent in a user's **Message History** tab in the following s
    - If a particular message is missing entirely from the messaging history but appears in the **Campaigns Received** log, it's likely the user received the campaign before being identified as the current user. If an existing profile is orphaned, the **Campaigns Received** log is transferred, but the messaging history is not. 
 - When data is missing for **Campaign/Canvas**, a manual test may have been sent. Manual tests are logged in the **Messaging History** tab, but the campaign or Canvas that was sent won't be logged.
 
+## Related articles
+
+- [User profile lifecycle]({{site.baseurl}}/user_guide/data/unification/user_data/user_profile_lifecycle/)
+- [POST: Export user profile by identifier]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/)
+- [POST: Delete users]({{site.baseurl}}/api/endpoints/user_data/post_user_delete)
+
 
