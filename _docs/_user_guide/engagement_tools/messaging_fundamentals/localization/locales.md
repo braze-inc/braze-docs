@@ -7,7 +7,7 @@ page_type: reference
 description: "This article provides steps on how to use locales in your messages."
 ---
 
-# Locales in messages
+# Translating locales
 
 > After adding locales to your workspace, you can target users in different languages all within a single push, email, banner, or in-app message.
 
