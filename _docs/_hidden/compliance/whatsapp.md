@@ -9,7 +9,7 @@ noindex: true
 
 # Compliance Documentation for WhatsApp Services ("WhatsApp Channel")
 
-_Revision Date: 6 January 2025_
+_Revision Date: 6 January 2026_
 
 _(Effective as of the Revision Date; subject to change)_
 
