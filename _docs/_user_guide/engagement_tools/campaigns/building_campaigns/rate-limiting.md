@@ -125,9 +125,8 @@ If you select a limit for push notifications, you can't set individual push chan
 
 Some notes to keep in mind when configuring rate limits and what behavior you should expect:
 
-SMS sends are subject to a rate limit of 50,000 per subscription group. Some SMS providers may enforce other limits.
-
-The following messages will not be throttled by or counted towards the rate limit:
+- SMS sends are subject to a rate limit of 50,000 per subscription group. Some SMS providers may enforce other limits.
+- The following messages will not be throttled by or counted towards the rate limit:
 
 - Test sends
 - Seed groups
