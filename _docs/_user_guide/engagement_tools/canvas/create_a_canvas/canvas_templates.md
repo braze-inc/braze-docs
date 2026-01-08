@@ -64,7 +64,7 @@ There are two ways to use your template when composing a Canvas:
 
 ### Available Braze templates
 
-For a list of available Canvas templates, refer to [Canvas templates]({{site.baseurl}}/canvas_templates/templates/).
+For a list of available Canvas templates, refer to [Canvas templates]({{site.baseurl}}/canvas_templates/templates/). For details on using eCommerce Canvas templates, refer to [How to use eCommerce recommended events]({{site.baseurl}}/ecommerce_use_cases/).
 
 ## Managing Canvas templates
 

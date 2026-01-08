@@ -7,9 +7,9 @@ description: "This reference article covers several pre-built Braze templates ta
 toc_headers: h2
 ---
 
-# eCommerce use cases
+# How to use eCommerce recommended events
 
-> Braze Canvas offers several pre-built templates tailored specifically for eCommerce marketers, making it easier to implement essential strategies. This page covers key templates you can use to enhance your customer journeys.
+> This page covers how and where you can use eCommerce recommended events across the platform, including how to use Braze eCommerce Canvas templates.
 
 {% alert important %}
 [eCommerce recommended events]({{site.baseurl}}/user_guide/data/custom_data/recommended_events/ecommerce_events/) are currently in early access. Contact your Braze customer success manager if you’re interested in participating in this early access. <br><br>If you’re using the new Shopify connector, eCommerce recommended events will automatically be available through the integration.
