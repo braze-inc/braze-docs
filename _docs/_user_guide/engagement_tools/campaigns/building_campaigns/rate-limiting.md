@@ -127,18 +127,15 @@ Some notes to keep in mind when configuring rate limits and what behavior you sh
 
 - SMS sends are subject to a rate limit of 50,000 per subscription group. Some SMS providers may enforce other limits.
 - The following messages will not be throttled by or counted towards the rate limit:
-
-- Test sends
-- Seed groups
-- Content Cards configured to create "at first impression" (This will be controlled by the rate of app impressions. Refer to [Card creation]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/#differences) for more information on the differences between Card Creation options.)
-
-Delivery rate speed limits aren't supported for the following:
-
-- SMS autoresponses
-- SLA-backed messages (such as [Transactional Email]({{site.baseurl}}/user_guide/message_building_by_channel/email/transactional_message_api_campaign))
-- In-app messages
-- Feature flags
-- Banners
+    - Test sends
+    - Seed groups
+    - Content Cards configured to create "at first impression" (This will be controlled by the rate of app impressions. Refer to [Card creation]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/#differences) for more information on the differences between Card Creation options.)
+- Delivery rate speed limits aren't supported for the following:
+    - SMS autoresponses
+    - SLA-backed messages (such as [Transactional Email]({{site.baseurl}}/user_guide/message_building_by_channel/email/transactional_message_api_campaign))
+    - In-app messages
+    - Feature flags
+    - Banners
 
 #### Rate limiting and Connected Content retries
 
