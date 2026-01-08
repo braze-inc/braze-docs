@@ -3215,4 +3215,6 @@ validurls['/docs/hidden/archive_docs/windows_universal/analytics/logging_purchas
 validurls['/docs/hidden/archive_docs/windows_universal/analytics/setting_user_ids/#setting-user-ids'] = '/docs/hidden/archive_docs/windows_universal/analytics/setting_user_ids/#set-user-ids';
 validurls['/docs/hidden/archive_docs/windows_universal/analytics/setting_custom_attributes/#setting-custom-attributes'] = '/docs/hidden/archive_docs/windows_universal/analytics/setting_custom_attributes/#set-custom-attributes';
 
+validurls['/docs/user_guide/message_building_by_channel/banners/creating_campaigns'] = '/docs/user_guide/message_building_by_channel/banners/create';
+
 // validurls['OLD'] = 'NEW';
