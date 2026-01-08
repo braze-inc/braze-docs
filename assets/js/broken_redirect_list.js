@@ -3217,4 +3217,6 @@ validurls['/docs/hidden/archive_docs/windows_universal/analytics/setting_custom_
 
 validurls['/docs/user_guide/message_building_by_channel/banners/creating_campaigns'] = '/docs/user_guide/message_building_by_channel/banners/create';
 
+validurls['/docs/api/objects_filters/canvas_entry_properties_object/'] = '/docs//api/objects_filters/context_object/';
+
 // validurls['OLD'] = 'NEW';
