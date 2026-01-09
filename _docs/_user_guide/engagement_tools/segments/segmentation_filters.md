@@ -584,7 +584,7 @@ glossaries:
     tags:
       - Intelligence and predictive
   - name: Message Open Likelihood
-    description: Filters your users based on their likelihood to open a message on a specified channel on a scale of 0-100%. Users without sufficient data to measure a likelihood for a channel can be selected using "is blank."
+    description: Filters your users based on their likelihood to open a message on a specified channel on a scale of 0-100%. Users without sufficient data to measure a likelihood for a channel can be selected using "is blank."<br><br>For the email channel, machine opens are excluded from the likelihood calculation.
     tags:
       - Intelligence and predictive
   - name: Number of Facebook Friends Using App
