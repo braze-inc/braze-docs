@@ -70,6 +70,11 @@ After launching, the agent runs and evaluates each row, taking the selected colu
 
 You can refresh and edit the fields in your catalog that use agents. To remove an agent from a column, unselect **Apply AI agent**. This reverts the column to a non-agentic column, and the fields retain the latest values the agent applied the last time it ran on the catalog.
 
+Circular references in catalogs aren't supported, meaning the following scenario can't occur:
+
+- Agentic Column 1 uses Agentic Column 2 as an input
+- Agentic Column 2 uses Agentic Column 1 as an input
+
 ![The option to select "Apply AI agent" for a catalog field.]({% image_buster /assets/img/ai_agent/edit_agent_column.png %}){: style="max-width:80%;"}
 
 {% alert note %}
