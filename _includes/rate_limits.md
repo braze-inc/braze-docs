@@ -205,3 +205,9 @@ This endpoint has a rate limit of 50,000 requests per minute.
 
 {% endif %}
 
+
+{% if include.endpoint == "media library" %}
+
+This endpoint has a rate limit of xxx requests per minute.
+
+{% endif %}
