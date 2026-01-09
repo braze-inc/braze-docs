@@ -1,12 +1,12 @@
 ---
-nav_title: Deleting users
-article_title: Deleting users
+nav_title: Delete users
+article_title: Delete users
 page_order: 4.2
 toc_headers: h2
 description: "Learn how to delete an individual user or a segment of users directly through the Braze dashboard." 
 ---
 
-# Deleting users
+# Delete users
 
 > Learn how to delete an individual user or a segment of users directly through the Braze dashboard.
 

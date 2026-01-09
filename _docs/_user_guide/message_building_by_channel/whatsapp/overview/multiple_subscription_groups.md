@@ -1,7 +1,7 @@
 ---
 nav_title: Multiple business accounts
 article_title: Multiple WhatsApp Business Accounts and Phone Numbers
-page_order: 2
+page_order: 3
 description: "This reference article covers the steps to add WhatsApp Business accounts and phone numbers."
 page_type: reference
 channel:

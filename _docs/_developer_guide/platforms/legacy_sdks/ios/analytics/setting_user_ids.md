@@ -1,6 +1,6 @@
 ---
-nav_title: Setting user IDs
-article_title: Setting User IDs for iOS
+nav_title: Set user IDs
+article_title: Set User IDs for iOS
 platform: iOS
 page_order: 1
 description: "This reference article shows how to set user IDs in your iOS app, suggested user ID naming conventions, and some best practices."
@@ -10,7 +10,7 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# Setting user IDs for iOS
+# Set user IDs for iOS
 
 {% multi_lang_include archive/setting_user_ids/setting_user_ids.md %}
 

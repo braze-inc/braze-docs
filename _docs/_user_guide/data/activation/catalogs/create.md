@@ -1,12 +1,12 @@
 ---
-nav_title: Creating a catalog
-article_title: Creating a Catalog
+nav_title: Create a catalog
+article_title: Create a Catalog
 alias: "/catalogs/"
 page_order: 1
 description: "This reference article covers how to create catalogs that reference non-user data in your Braze campaigns through Liquid."
 ---
 
-# Creating a catalog
+# Create a catalog
 
 > Creating a catalog involves importing a CSV file of non-user data into Braze. This allows you to then access that information to enrich your messages. You can bring in any type of data into a catalog. This data is typically some sort of metadata from your company such as product information for an eCommerce business, or course information for an education provider.
 

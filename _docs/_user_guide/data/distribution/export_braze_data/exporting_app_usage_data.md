@@ -10,7 +10,7 @@ tool:
 
 ---
 
-# Exporting usage analytics
+# Export usage analytics
 
 > This page covers the **Home** page of the dashboard, which contains high-level data of app usage, as well as detailed statistics of different KPIs by date.
 

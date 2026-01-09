@@ -1,11 +1,11 @@
 ---
-nav_title: Customizing the URL
-article_title: Customizing landing page URLs
+nav_title: Customize the URL
+article_title: Customize landing page URLs
 description: "Learn how to customize your landing page URLs with your company's brand, by connecting your domain to your Braze workspace."
 page_order: 1
 ---
 
-# Customizing landing page URLs
+# Customize landing page URLs
 
 > Learn how to customize your landing page URLs with your company's brand, by connecting your domain to your Braze workspace.
 

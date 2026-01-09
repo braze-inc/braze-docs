@@ -1,6 +1,6 @@
 ---
 nav_title: Retargeting campaigns
-article_title: Retargeting Campaigns
+article_title: Retarget Campaigns
 page_order: 2
 page_type: reference
 description: "This reference article goes over how and why you should consider retargeting campaigns based on messages your users receive."
@@ -9,7 +9,7 @@ tool:
   
 ---
 
-# Retargeting campaigns
+# Retarget campaigns
 
 > By retargeting campaigns based on the user's previous actions, like whether or not they opened an email, you can help reclassify your users, opening the door to an effective, data-driven marketing approach.
 

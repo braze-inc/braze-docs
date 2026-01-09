@@ -1,6 +1,6 @@
 ---
-nav_title: Configuring reporting
-article_title: Configuring Reporting
+nav_title: Configure reporting
+article_title: Configure Reporting
 page_order: 1.1
 page_type: reference
 description: "This page describes the automatically generated analytics report provided by Braze."
@@ -8,7 +8,7 @@ tool: Reporting
 
 ---
 
-# Configuring reporting
+# Configure reporting
 
 > Braze automatically generates a weekly email report to help you understand the performance of your apps and messaging campaigns. 
 

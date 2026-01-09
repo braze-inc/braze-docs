@@ -32,7 +32,7 @@ Drag and drop the **Agent** component from the sidebar, or select the <i class="
 
 ### Step 2: Select your agent  
 
-Select the agent that will process data in this step. Choose an existing agent, or create a new one directly from this step. For setup guidance, see [Creating custom agents]({{site.baseurl}}/user_guide/brazeai/agents/creating_agents/).
+Select the agent that will process data in this step. Choose an existing agent, or create a new one directly from this step. For setup guidance, see [Create custom agents]({{site.baseurl}}/user_guide/brazeai/agents/creating_agents/).
 
 ### Step 3: Define the output variable
 
@@ -117,5 +117,5 @@ You can choose to either pass the entirety of Canvas context into the agent as c
 ## Related articles  
 
 - [Braze Agents overview]({{site.baseurl}}/user_guide/brazeai/agents/)  
-- [Creating custom agents]({{site.baseurl}}/user_guide/brazeai/agents/creating_agents/)  
-- [Deploying agents]({{site.baseurl}}/user_guide/brazeai/agents/deploying_agents/)  
+- [Create custom agents]({{site.baseurl}}/user_guide/brazeai/agents/creating_agents/)  
+- [Deploy agents]({{site.baseurl}}/user_guide/brazeai/agents/deploying_agents/)  

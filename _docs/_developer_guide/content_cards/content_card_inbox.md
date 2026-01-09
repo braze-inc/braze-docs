@@ -562,7 +562,7 @@ lines-main.js=96-99,101
 
 #### 3. Subscribe to Content Card updates
 
-Subscribe to the Content Cards listener to receive the latest updates, and then call [`requestContentCardsRefresh()`](<https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestcontentcardsrefresh>) to request the latest Content Cards for that user.
+Subscribe to the Content Cards listener to receive the latest updates, and then call [`requestContentCardsRefresh()`](<https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestcontentcardsrefresh>) to request the latest Content Cards for that user. Alternatively, call the subscriber before `openSession()` for an automatic refresh on session start. 
 
 !!step
 lines-main.js=64,67,70-74

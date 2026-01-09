@@ -1,11 +1,11 @@
 ---
-nav_title: Personalizing landing pages
-article_title: Personalizing landing pages
+nav_title: Personalize landing pages
+article_title: Personalize landing pages
 description: "This article covers how to personalize Braze landing pages with the drag-and-drop editor."
 page_order: 4
 ---
 
-# Personalizing landing pages
+# Personalize landing pages
 
 > Use Liquid personalization in landing pages to dynamically tailor the content with user profile data. For example, you can personalize headlines based on different user attributes without managing multiple static landing pages.
 
