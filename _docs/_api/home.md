@@ -42,6 +42,7 @@ glossary_tags:
   - name: Email List
   - name: Email Templates
   - name: KPI
+  - name: Media Library
   - name: Purchases
   - name: Preference Center
   - name: Schedule Messages
@@ -474,4 +475,8 @@ glossaries:
     description: Delete an SDK Authentication key for your app.
     tags:
       - SDK Authentication
+  - name: <a href='/docs/api/endpoints/media_library/manage_assets/create/'>/media_library/create</a>
+    description: Upload an asset to the media library
+    tags:
+      - Media Library
 ---

@@ -35,7 +35,6 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 | --------- | ---------| --------- | ----------- |
 |`asset_url`| Required | String | A publicly accessible URL for the asset to be uploaded into Braze. |
 |`name`| Required | String | A name to appear in the media library for this asset. |
-|`app_group_id`| Required | String | The workspace (app_group_id) identifier to upload into. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Example request
@@ -44,7 +43,7 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 curl -X POST --location 'http://api.dashboard-03.braze.com/media_library/create' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --header 'Content-Type: application/json' \
---data '{"asset_url": "https://cdn.example.com/assets/cat.jpg", "name": "Cat Graphic", "app_group_id": "APP_GROUP_ID"}'
+--data '{"asset_url": "https://cdn.example.com/assets/cat.jpg", "name": "Cat Graphic"}'
 ```
 
 ## Response
