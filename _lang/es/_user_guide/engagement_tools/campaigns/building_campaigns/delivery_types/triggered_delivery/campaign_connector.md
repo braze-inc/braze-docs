@@ -35,10 +35,6 @@ Esta característica te permite dirigirte a usuarios que completen las siguiente
 - Haz clic en la tarjeta de contenido
 - Descartar tarjeta de contenido
 
-{% alert important %}
-Los activadores del conector de campaña no pueden utilizarse para activar campañas de mensajes dentro de la aplicación. Los mensajes dentro de la aplicación sólo pueden activarse mediante eventos SDK, como eventos personalizados o el inicio de sesión. Para más información, consulta [Crear un mensaje dentro de la aplicación]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/).
-{% endalert %}
-
 ### Normas de entrega
 
 Ten en cuenta que no puedes utilizar el conector de campaña para enviar un mensaje a un usuario después de que haya completado una interacción con una campaña. Por ejemplo, si estás ejecutando una campaña de marketing durante nueve semanas y configuras una campaña de seguimiento que utilice el conector de campaña al principio de la cuarta semana, la campaña de seguimiento sólo entregará mensajes a los usuarios que hayan interactuado con la campaña de marketing después de que se haya publicado la campaña de seguimiento (semanas 4-9). Por tanto, para asegurarte de que tus campañas de seguimiento llegan a todos los usuarios a los que te diriges, debes
@@ -80,6 +76,8 @@ Continúa creando tu campaña como lo harías normalmente. Ten en cuenta que si 
 Puedes utilizar el Conector de Campaña para dirigirte a los usuarios que participan o no en las campañas activas.
 
 Por ejemplo, puedes dirigirte a los usuarios que han hecho clic en un mensaje push promocional que anunciaba un envío gratuito para enviarles un mensaje push promocional que anuncie un 15% de descuento en una compra.
+
+O puedes hacer un seguimiento de los usuarios que han hecho clic en un vínculo profundo en un mensaje dentro de la aplicación de incorporación enviándoles otro mensaje dentro de la aplicación que destaque características adicionales.  De este modo, puedes dirigirte a los usuarios que han demostrado que están interesados en saber más sobre las características de tu aplicación y evitar molestar a los usuarios que prefieren descubrir estas características por sí mismos.
 
 El conector de campaña también puede dirigirse a usuarios que reciben una notificación push recordándoles que han abandonado su carrito. Por ejemplo, puede que quieras reenviar la notificación a usuarios que no la abrieron directamente. Sin embargo, es probable que quieras excluir a los usuarios que hayan realizado una compra desde que enviaste la notificación original, aunque no la hayan abierto directamente. Puedes conseguir este caso de uso añadiendo un desencadenante de "Notificación push recibida" para la campaña "Carrito abandonado", configurando un retraso en la programación y añadiendo "Realiza compra" y "Notificaciones push de apertura directa" como excepciones.
 

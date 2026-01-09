@@ -35,10 +35,6 @@ Esse recurso permite segmentar usuários que concluem as seguintes interações 
 - Clique no cartão de conteúdo
 - Dispensar cartão de conteúdo
 
-{% alert important %}
-Os gatilhos do Campaign Connector não podem ser usados para acionar campanhas de mensagens no app. As mensagens no app só podem ser acionadas por eventos do SDK, como eventos personalizados ou início de sessão. Para obter mais informações, consulte [Criar uma mensagem no app]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/).
-{% endalert %}
-
 ### Regras de entrega
 
 Observe que não é possível usar o Campaign Connector para enviar uma mensagem a um usuário depois que ele tiver concluído uma interação com uma campanha. Por exemplo, se você estiver executando uma campanha de marketing por nove semanas e configurar uma campanha de acompanhamento que use o Campaign Connector no início da quarta semana, a campanha de acompanhamento só entregará mensagens aos usuários que interagiram com a campanha de marketing depois que a campanha de acompanhamento foi publicada (semanas 4 a 9). Portanto, para garantir que suas campanhas de acompanhamento alcancem todos os usuários que você tem como alvo, você deve:
@@ -80,6 +76,8 @@ Continue criando sua campanha como faria normalmente. Observe que, se você quis
 Você pode usar o Campaign Connector para direcionar usuários que se envolvem ou não com campanhas ativas.
 
 Por exemplo, você pode optar por segmentar os usuários que clicaram em uma mensagem push promocional que anunciava frete grátis para que você possa enviar a eles uma mensagem push promocional anunciando 15% de desconto em uma compra.
+
+Ou então, você pode acompanhar os usuários que clicaram em um link profundo em uma mensagem in-app de integração, enviando-lhes outra mensagem in-app que destaque recursos adicionais.  Dessa forma, você pode direcionar os usuários que demonstraram interesse em saber mais sobre os recursos do seu aplicativo e evitar incomodar os usuários que preferem descobrir esses recursos por conta própria.
 
 O Campaign Connector também pode direcionar os usuários que recebem uma notificação push lembrando-os de que abandonaram o carrinho. Por exemplo, talvez você queira reenviar a notificação aos usuários que não a abriram diretamente. No entanto, é provável que você queira excluir os usuários que fizeram uma compra desde que você enviou a notificação original, mesmo que eles não a tenham aberto diretamente. Você pode obter esse caso de uso adicionando um acionador "Recebeu notificação por push" para a campanha "Carrinho abandonado", definindo um atraso de programação e adicionando "Faz compra" e "Notificações por push abertas diretamente" como exceções.
 
