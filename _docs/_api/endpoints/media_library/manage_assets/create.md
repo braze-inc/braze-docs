@@ -27,7 +27,7 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 
 ## Rate limit
 
-{% multi_lang_include rate_limits.md endpoint='media library' %}
+{% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Query parameters
 
@@ -43,11 +43,20 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 curl -X POST --location 'http://api.dashboard-03.braze.com/media_library/create' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --header 'Content-Type: application/json' \
---data '{"asset_url": "https://cdn.example.com/assets/cat.jpg", "name": "Cat Graphic"}'
+--data '{"asset_url":"https://cdn.example.com/assets/cat.jpg", "name":"Cat Graphic"}'
 ```
 
 ## Response
 
 There are four status code responses for this endpoint: `200`, `400`, `404`, and `429`.
+
+The expected response shape: (TODO)
+
+```
+{
+    "dashboard_url": "http://dashboard-03.braze.com/engagement/templates_and_media/media_library/687447bf9cb22cf80c4cc4f5",
+    "message": "success"
+}
+```
 
 {% endapi %}
