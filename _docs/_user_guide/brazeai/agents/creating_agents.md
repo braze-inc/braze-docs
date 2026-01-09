@@ -156,7 +156,7 @@ For more details on prompting best practices, refer to guides from the following
 
 ### Output format
 
-Use the **Output Format** field to organize and define the agent's output by manually structuring fields or using JSON.
+Use the **Output Format** field to organize and define the agent's output by manually structuring fields or using JSON. Setting up an output format with fields is a no-code way to enforce an agent output that you can use consistently. Using JSON allows you to use code to prescribe a more precise output format, where you can nest variables and objects within the JSON schema.
 
 #### Fields
 
