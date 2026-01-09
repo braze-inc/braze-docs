@@ -3216,5 +3216,7 @@ validurls['/docs/hidden/archive_docs/windows_universal/analytics/setting_user_id
 validurls['/docs/hidden/archive_docs/windows_universal/analytics/setting_custom_attributes/#setting-custom-attributes'] = '/docs/hidden/archive_docs/windows_universal/analytics/setting_custom_attributes/#set-custom-attributes';
 
 validurls['/docs/user_guide/message_building_by_channel/banners/creating_campaigns'] = '/docs/user_guide/message_building_by_channel/banners/create';
+validurls['/docs/user_guide/brazeai/predictive_events/prediction_analytics/#prediction_quality'] = '/docs/user_guide/brazeai/predictive_events/analytics/#prediction_quality';
+validurls['/docs/user_guide/brazeai/predictive_events/prediction_analytics/#purchase_score'] = '/docs/user_guide/brazeai/predictive_events/analytics/#purchase_score';
 
 // validurls['OLD'] = 'NEW';
