@@ -35,6 +35,10 @@ Cette fonctionnalité vous permet de cibler les utilisateurs qui effectuent les 
 - Cliquez sur la carte de contenu
 - Fermeture de la carte de contenu
 
+{% alert important %}
+Les déclencheurs de Campaign Connector ne peuvent pas être utilisés pour déclencher des campagnes de messages in-app. Les messages in-app ne peuvent être déclenchés que par des événements SDK, tels que des événements personnalisés ou le démarrage d'une session. Pour en savoir plus, consultez [Créer un message in-app]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/).
+{% endalert %}
+
 ### Règles de réception/distribution
 
 Notez que vous ne pouvez pas utiliser Campaign Connector pour envoyer un message à un utilisateur après qu'il a terminé une interaction avec une campagne. Par exemple, si vous menez une campagne marketing pendant neuf semaines et que vous mettez en place une campagne de suivi qui utilise Campaign Connector au début de la quatrième semaine, la campagne de suivi n'enverra des messages qu'aux utilisateurs qui ont interagi avec la campagne marketing après la publication de la campagne de suivi (semaines 4 à 9). Par conséquent, afin de vous assurer que vos campagnes de suivi atteignent chaque utilisateur que vous ciblez, vous devez :
@@ -76,8 +80,6 @@ Continuez à créer votre campagne comme vous le feriez normalement. Notez que s
 Vous pouvez utiliser Campaign Connector pour cibler les utilisateurs qui s'engagent ou non dans des campagnes actives.
 
 Par exemple, vous pouvez choisir de cibler les utilisateurs qui ont cliqué sur un message push promotionnel annonçant des frais de port gratuits afin de leur envoyer un message push promotionnel annonçant une réduction de 15 % sur un achat.
-
-Vous pouvez également assurer le suivi des utilisateurs qui ont cliqué sur un lien profond dans un message in-app d'onboarding en leur envoyant un autre message in-app qui met en avant des fonctionnalités supplémentaires.  De cette façon, vous pouvez cibler les utilisateurs qui ont démontré qu'ils étaient intéressés par la découverte des fonctionnalités de votre application et éviter d'ennuyer les utilisateurs qui préfèrent découvrir ces fonctionnalités par eux-mêmes.
 
 Campaign Connector peut également cibler les utilisateurs qui reçoivent une notification push leur rappelant qu'ils ont abandonné leur panier. Par exemple, vous pouvez renvoyer la notification aux utilisateurs qui ne l'ont pas ouverte directement. Cependant, vous souhaiterez probablement exclure les utilisateurs qui ont effectué un achat depuis l'envoi de la notification initiale, même s'ils ne l'ont pas ouverte directement. Vous pouvez réaliser ce cas d'utilisation en ajoutant un déclencheur "Received push notification" pour la campagne "Abandoned Cart", en définissant un délai de planification et en ajoutant "Makes Purchase" et "Directly opened push notifications" comme exceptions.
 

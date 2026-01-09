@@ -35,6 +35,10 @@ This feature allows you to target users who complete the following interactions 
 - Click content card
 - Dismiss content card
 
+{% alert important %}
+Campaign Connector triggers cannot be used to trigger in-app message campaigns. In-app messages can only be triggered by SDK events, such as custom events or session start. For more information, see [Create an in-app message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/).
+{% endalert %}
+
 ### Delivery rules
 
 Note that you can't use Campaign Connector to send a message to a user after they have completed an interaction with a campaign. For example, if you're running a marketing campaign for nine weeks and set up a follow-on campaign that uses Campaign Connector at the beginning of week four, the follow-on campaign will only deliver messages to users that interacted with the marketing campaign after the follow-on campaign was published (weeks 4-9). Therefore, in order to ensure that your follow-on campaigns reach every user that you are targeting, you should:
@@ -76,8 +80,6 @@ Continue creating your campaign just as you normally would. Note that if you wan
 You can use Campaign Connector to target users who engage or do not engage with active campaigns.
 
 For example, you might choose to target users who clicked on a promotional push message that advertised free shipping so that you can send them a promotional push message advertising 15% off a purchase.
-
-Or, you might follow up with users who clicked a deep link in an onboarding in-app message by sending them another in-app message that highlights additional features.  This way, you can target users that have demonstrated that they are interested in learning more about the features of your application and avoid annoying the users that prefer to discover these features by themselves.
 
 Campaign Connector can also target users who receive a push notification reminding them that they have abandoned their cart. For example, you might want to resend the notification to users who did not directly open it. However, you'll likely want to exclude users that have made a purchase since you send the original notification, even if they did not directly open it. You can achieve this use case by adding a "Received push notification" trigger for the campaign "Abandoned Cart," setting a schedule delay and adding "Makes Purchase" and "Directly opened push notifications" as exceptions.
 

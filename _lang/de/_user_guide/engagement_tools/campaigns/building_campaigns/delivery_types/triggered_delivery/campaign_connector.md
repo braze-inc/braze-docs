@@ -35,6 +35,10 @@ Mit dieser Funktion können Sie Nutzer ansprechen, die die folgenden Interaktion
 - Inhaltskarte anklicken
 - Inhaltskarte verwerfen
 
+{% alert important %}
+Campaign Connector-Trigger können nicht verwendet werden, um In-App-Nachrichtenkampagnen auszulösen. In-App-Nachrichten können nur durch SDK-Ereignisse ausgelöst werden, z. B. benutzerdefinierte Ereignisse oder den Start einer Sitzung. Weitere Informationen finden Sie unter [Eine In-App-Nachricht erstellen]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/).
+{% endalert %}
+
 ### Regeln für die Zustellung
 
 Beachten Sie, dass Sie den Campaign Connector nicht verwenden können, um eine Nachricht an einen Nutzer:innen zu senden, nachdem dieser eine Interaktion mit einer Kampagne abgeschlossen hat. Wenn Sie beispielsweise eine Marketing-Kampagne neun Wochen lang laufen lassen und zu Beginn der vierten Woche eine Folgekampagne einrichten, die den Campaign Connector verwendet, werden in der Folgekampagne nur Nachrichten an Nutzer:innen zugestellt, die mit der Marketing-Kampagne interagiert haben, nachdem die Folgekampagne veröffentlicht wurde (Wochen 4-9). Um sicherzustellen, dass Ihre Folgekampagnen alle Nutzer:innen erreichen, auf die Sie das Targeting ausrichten, sollten Sie daher:
@@ -76,8 +80,6 @@ Fahren Sie mit der Erstellung Ihrer Kampagne fort, wie Sie es normalerweise tun 
 Sie können Campaign Connector verwenden, um Nutzer anzusprechen, die sich an aktiven Kampagnen beteiligen oder nicht beteiligen.
 
 So können Sie z.B. gezielt Nutzer ansprechen, die auf eine Push-Nachricht geklickt haben, in der ein kostenloser Versand beworben wurde, um ihnen eine Push-Nachricht zu schicken, in der ein Rabatt von 15% auf einen Einkauf beworben wird.
-
-Oder Sie können Nutzer:innen, die in einer In-App-Nachricht zum Onboarding auf einen Deeplink geklickt haben, eine weitere In-App-Nachricht schicken, in der zusätzliche Features hervorgehoben werden.  Auf diese Weise können Sie gezielt Nutzer ansprechen, die gezeigt haben, dass sie daran interessiert sind, mehr über die Funktionen Ihrer Anwendung zu erfahren, und vermeiden es, Nutzer zu verärgern, die diese Funktionen lieber selbst entdecken möchten.
 
 Der Kampagnen Konnektor kann auch Nutzer:innen zusammenstellen, die eine Push-Benachrichtigung erhalten, die sie daran erinnert, dass sie ihren Warenkorb-Abbruch vorgenommen haben. So können Sie beispielsweise die Benachrichtigung erneut an Benutzer senden, die sie nicht direkt geöffnet haben. Sie werden jedoch wahrscheinlich Nutzer ausschließen wollen, die seit dem Versand der ursprünglichen Benachrichtigung einen Kauf getätigt haben, auch wenn sie diese nicht direkt geöffnet haben. Sie können diesen Anwendungsfall erreichen, indem Sie einen Trigger "Empfangene Push-Benachrichtigung" für die Kampagne "Warenkorb-Abbruch" hinzufügen, eine Zeitplan-Verzögerung festlegen und "Kauf tätigen" und "Direkt geöffnete Push-Benachrichtigungen" als Ausnahmen hinzufügen.
 
