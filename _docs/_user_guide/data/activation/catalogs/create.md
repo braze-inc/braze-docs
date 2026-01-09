@@ -192,6 +192,10 @@ As you build more catalogs, you can also use the [List catalogs endpoint]({{site
 
 Supported data types for using API include: string, integer, float, boolean, or datetime. You can also upload arrays and objects when managing your catalogs with the API.
 
+### Using Cloud Data Ingestion
+
+You can maintain catalogs through [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/sync_catalogs_data/) by syncing catalog data directly from your data warehouse (such as Snowflake, Redshift, BigQuery, Databricks, Microsoft Fabric, or S3) on a scheduled basis.
+
 ## Managing catalog items
 
 In addition to managing your catalogs, you can also use asynchronous and synchronous endpoints to manage the catalog items. This includes the ability to edit and delete catalog items, and to list catalog item details. 
