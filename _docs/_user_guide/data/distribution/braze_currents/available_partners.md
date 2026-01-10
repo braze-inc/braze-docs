@@ -42,9 +42,7 @@ These customer data platforms collect and route information from multiple source
 These partners specialize in product analytics and business intelligence and can help you interact with your users based on their actions.
 
 * [Amplitude]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/amplitude/amplitude_for_currents/)
-
 * [Mixpanel]({{site.baseurl}}/partners/data_and_analytics/analytics/mixpanel/)
-
 * [Heap]({{site.baseurl}}/partners/data_and_analytics/analytics/heap/heap_cohort_import/)
 
 
