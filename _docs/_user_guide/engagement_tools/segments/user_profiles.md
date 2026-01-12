@@ -156,6 +156,6 @@ Some fields may be absent in a user's **Message History** tab in the following s
 
 - [User profile lifecycle]({{site.baseurl}}/user_guide/data/unification/user_data/user_profile_lifecycle/)
 - [POST: Export user profile by identifier]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/)
-- [POST: Delete users]({{site.baseurl}}/api/endpoints/user_data/post_user_delete)
+- [POST: Delete users]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/)
 
 
