@@ -67,7 +67,7 @@ You must decide what data the agent should receive at runtime. The following opt
 - **Provide values:** Pass only selected properties, such as a user’s first name or favorite color. Choose this option to only give the agent access to the values you assign here. For each **Key**, enter the [Liquid tag]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags) that defines the specific user profile field or context variable.  
 
 {% alert note %}
-Braze will only pass the first 10 KB of content to the agent. Providing values that have a total value of more than 10 KB will result in truncation.
+Braze passes the first 10 KB of content to the agent. Providing values that have a total value exceeding 10 KB results in truncation.
 {% endalert %}
 
 ### Step 5: Test the agent
