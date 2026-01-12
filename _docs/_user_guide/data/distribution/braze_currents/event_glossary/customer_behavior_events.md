@@ -925,7 +925,7 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
 Live Activity, Push To Start Token
 {% endapitags %}
 
-This event occurs when Braze syncs Live Activity push to start token with the user
+This event occurs when Braze syncs the Live Activity push to start token with the user.
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -1143,7 +1143,7 @@ This event occurs when Braze syncs Live Activity update token with the user
 Push, Token State Change
 {% endapitags %}
 
-This event occurs when a push token is inserted, updated or removed. Use this to track the states of push tokens.
+This event occurs when a push token is inserted, updated, or removed. Use this to track the states of push tokens.
 
 {% tabs %}
 {% tab Cloud Storage %}
