@@ -4,12 +4,16 @@ The Web Braze SDK lets you collect analytics and display rich in-app messages, p
 
 {% multi_lang_include archive/web-v4-rename.md %}
 
-## Integrating the Web SDK
+## Integrate the Web SDK
 
 You can integrate the Web Braze SDK using the following methods. For additional options, see [other integration methods](#web_other-integration-methods).
 
-- **Code-Based Integration:** Integrate the Web Braze SDK directly in your codebase using your preferred package manager or the Braze CDN. This will give you full control over how the SDK is loaded and configured.
+- **Code-based integration:** Integrate the Web Braze SDK directly in your codebase using your preferred package manager or the Braze CDN. This will give you full control over how the SDK is loaded and configured.
 - **Google Tag Manager:** A no-code solution that let's you integrate the Web Braze SDK without modifying your site’s code. For more information, see [Google Tag Manager with the Braze SDK]({{site.baseurl}}/developer_guide/sdk_integration/google_tag_manager/).
+
+{% alert important %}
+We recommend using the [NPM integration method]({{site.baseurl}}/developer_guide/sdk_integration/?subtab=package%20manager&sdktab=web). Benefits include storing SDK libraries locally on your website, providing immunity from ad-blocker extensions, and contributing to faster load times as part of bundler support.
+{% endalert %}
 
 {% tabs local %}
 {% tab code-based integration %}
