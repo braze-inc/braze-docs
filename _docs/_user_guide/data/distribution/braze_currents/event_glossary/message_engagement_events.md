@@ -1633,7 +1633,7 @@ This event occurs when a user has exited a Canvas by performing an event.
 Canvas
 {% endapitags %}
 
-This event occurs when a user convert for a Canvas experiment step.
+This event occurs when a user converts for a Canvas experiment step.
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -8694,7 +8694,7 @@ This event is not supported by our [Swift SDK](https://github.com/braze-inc/braz
 Push, Opens
 {% endapitags %}
 
-This event occurs when a user directly clicks on the Push notification to open the application. Currently, Push Open Events refer specifically to "Direct Opens" rather than "Total Opens". This does not include statistics shown at the campaign level of "influenced opens" as these are not attributed at the user level.
+This event occurs when a user directly clicks on the push notification to open the application. Currently, Push Open Events refer specifically to "Direct Opens" rather than "Total Opens". This does not include statistics shown at the campaign level of "influenced opens" as these are not attributed at the user level.
 
 {% alert note %}
 In rare cases, a push open may appear before the corresponding push send event in Currents data because of the following:
