@@ -1,6 +1,6 @@
 ---
-nav_title: Test banners
-article_title: Test banners
+nav_title: Test Banners
+article_title: Test Banners
 page_order: 2
 description: "Learn how to test your Banner message before launching your campaign so you can ensure all media, copy, personalization, and custom attributes render correctly."
 channel:
@@ -8,13 +8,13 @@ channel:
 noindex: true
 ---
 
-# Test banners
+# Test Banners
 
 > Learn how to test your Banner message before launching your campaign so you can ensure all media, copy, personalization, and custom attributes render correctly. For more general information, see [About Banners]({{site.baseurl}}/developer_guide/banners).
 
 ## Prerequisites
 
-Before you can test Banner messages in Braze, you'll need to create a [Banner campaign in Braze]({{site.baseurl}}/user_guide/message_building_by_channel/banners/creating_campaigns/). Additionally, verify that the placement you want to test is already [placed in your app or website]({{site.baseurl}}/developer_guide/banners/placements). 
+Before you can test Banner messages in Braze, you'll need to create a [Banner campaign in Braze]({{site.baseurl}}/user_guide/message_building_by_channel/banners/create/). Additionally, verify that the placement you want to test is already [placed in your app or website]({{site.baseurl}}/developer_guide/banners/placements). 
 
 To send a test to either [content test groups]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups) or individual users, push must be enabled on your test devices with valid push tokens registered for the test user before sending.
 
