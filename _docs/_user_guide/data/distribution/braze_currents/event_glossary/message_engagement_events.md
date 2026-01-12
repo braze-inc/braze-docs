@@ -13448,6 +13448,7 @@ This event occurs when WhatsApp cannot deliver the message to the user. A hard b
 }
 ```
 {% endtab %}
+{% endtabs %}
 
 #### Property details
 
