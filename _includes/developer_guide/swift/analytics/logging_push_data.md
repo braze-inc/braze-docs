@@ -4,7 +4,7 @@ If you're handling push notifications with custom code instead of using the Braz
 
 ### Step 1: Pass the Braze ID in your push payload
 
-To identify which user profile to update, include the `braze_id` value as a key-value pair in your push notification payload when creating the campaign in the Braze dashboard (as seen in the following screenshot).
+To identify which user profile to update, include the `braze_id` value as a key-value pair in your push notification payload when creating the campaign in the Braze dashboard.
 
 ![A push message with three sets of key-value pairs. 1. "Braze_id" set as a Liquid call to retrieve Braze ID. 2. "cert_title" set as "Braze Marketer Certification". 3. "Cert_description" set as "Certified Braze marketers drive...".]({% image_buster /assets/img/push_implementation_guide/push18.png %}){: style="max-width:80%;"}
 
@@ -32,9 +32,9 @@ Alternatively, if you have the user's `external_id`, you can use that instead of
 
 Logging manually will require you to first configure workspaces within Xcode, and then create, save, and retrieve analytics. This approach requires custom developer work on your end. The following code snippets will help address this. 
 
-### Important timing considerations
+### Timing considerations
 
-It's important to note that analytics are not sent to Braze until the mobile application is subsequently launched. This means that, depending on your dismissal settings, there often exists an indeterminate period of time between when a push notification is dismissed and the mobile app is launched and the analytics are retrieved. While this time buffer may not affect all use cases, you should consider this impact and adjust your user journey as necessary to include opening the application to address this concern. 
+Analytics are not sent to Braze until the mobile application is subsequently launched. Depending on your dismissal settings, there often exists an indeterminate period of time between when a push notification is dismissed, the mobile app is launched, and the analytics are retrieved. While this time buffer may not affect all use cases, you should consider this impact and adjust your user journey as necessary to include opening the application to address this concern. 
 
 ![A graphic describing how analytics are processed in Braze. 1. Analytics data is created. 2. Analytics data is saved. 3. Push notification is dismissed. 4. Indeterminate period of time between when push notification is dismissed and mobile app is launched. 5. Mobile app is launched. 6. Analytics data is received. 7. Analytics data is sent to Braze.]({% image_buster /assets/img/push_implementation_guide/push13.png %})
 
