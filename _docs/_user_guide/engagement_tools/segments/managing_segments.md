@@ -1,6 +1,6 @@
 ---
-nav_title: Managing segments
-article_title: Managing Segments
+nav_title: Manage segments
+article_title: Manage Segments
 page_order: 1
 page_type: tutorial
 tool: Segments
@@ -8,7 +8,7 @@ description: "This article covers the actions you can take to manage your segmen
 
 ---
 
-# Managing Segments
+# Manage segments
 
 > The Segments section allows you to view a comprehensive list of your existing segments, create new segments, and edit existing segments. You can refine the list of segments by selecting a variety of filters and columns so only the most relevant information to you is displayed.
 

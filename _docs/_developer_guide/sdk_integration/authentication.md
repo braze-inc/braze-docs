@@ -1,7 +1,7 @@
 ---
 page_order: 1.2
 nav_title: Authentication
-article_title: Setting up authentication for the Braze SDK
+article_title: Set up authentication for the Braze SDK
 description: "This reference article covers SDK authentication and how to enable this feature in the Braze SDK."
 platform:
   - iOS
@@ -10,7 +10,7 @@ platform:
   
 ---
 
-# Setting up SDK authentication
+# Set up SDK authentication
 
 > SDK Authentication allows you to supply cryptographic proof (generated server-side) to SDK requests made on behalf of logged-in users.
 

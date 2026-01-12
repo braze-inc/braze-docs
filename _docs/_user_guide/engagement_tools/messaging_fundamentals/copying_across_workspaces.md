@@ -1,6 +1,6 @@
 ---
-nav_title: Copying across workspaces
-article_title: Copying Across Workspaces
+nav_title: Copy across workspaces
+article_title: Copy Across Workspaces
 page_order: 4.5
 alias: "/copying_to_workspaces/"
 page_type: reference
@@ -10,7 +10,7 @@ tool:
     - Canvas
 ---
 
-# Copying campaigns and Canvases across workspaces
+# Copy campaigns and Canvases across workspaces
 
 > Copying campaigns across workspaces lets you jumpstart your message composition by starting with a copy of a campaign in a different workspace. This page covers how to copy campaigns to different workspaces and lists what is and isn't copied over.
 

@@ -1,11 +1,11 @@
 ---
-nav_title: Configuring with Braze
-article_title: Configuring with Braze
+nav_title: Configure with Braze
+article_title: Configure with Braze
 page_order: 1
 description: "Learn how to set up and integrate BrazeAI Decisioning Studio<sup>TM</sup> Go into Braze."
 ---
 
-# Configuring with Braze
+# Configure with Braze
 
 > Create an API campaign in Braze designed for BrazeAI Decisioning Studio™ Go.
 

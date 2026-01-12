@@ -16,6 +16,9 @@ guide_featured_list:
 - name: "WhatsApp Setup"
   link: /docs/user_guide/message_building_by_channel/whatsapp/overview
   image: /assets/img/braze_icons/whatsapp.svg
+- name: "Bring Your Own WhatsApp Connector"
+  link: /docs/user_guide/message_building_by_channel/whatsapp/overview/byo_connector/
+  image: /assets/img/braze_icons/whatsapp.svg
 - name: "WhatsApp Subscription Group"
   link: /docs/user_guide/message_building_by_channel/whatsapp/user_subscription/
   image: /assets/img/braze_icons/table.svg

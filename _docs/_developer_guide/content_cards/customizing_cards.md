@@ -1,6 +1,6 @@
 ---
 page_order: 0.1
-nav_title: Customizing cards
+nav_title: Customize cards
 description: "Learn about customizing Content Cards for the Braze SDK."
 layout: dev_guide
 

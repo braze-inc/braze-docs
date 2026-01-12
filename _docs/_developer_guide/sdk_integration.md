@@ -1,11 +1,11 @@
 ---
-nav_title: Integrating the SDK
-article_title: Integrating the Braze SDK
+nav_title: Integrate the SDK
+article_title: Integrate the Braze SDK
 description: "Learn how to integrate the Braze SDK."
 page_order: 2.0
 ---
 
-# ![Braze Logo]({% image_buster /assets/Braze_Primary_Icon_BLACK.svg %}){: style="float:right;width:120px;border:0;" class="noimgborder"}Integrating the Braze SDK
+# ![Braze Logo]({% image_buster /assets/Braze_Primary_Icon_BLACK.svg %}){: style="float:right;width:120px;border:0;" class="noimgborder"}Integrate the Braze SDK
 
 > Learn how to integrate the Braze SDK into your mobile app. Each SDK is hosted in its own public GitHub repository, which includes fully-buildable sample apps you can use to test Braze features or implement alongside your own applications. To learn more, see [References, Repositories, and Sample Apps]({{site.baseurl}}/developer_guide/references/). For more general information about the SDK, see [Getting started: Integration overview]({{site.baseurl}}/developer_guide/getting_started/integration_overview/).
 

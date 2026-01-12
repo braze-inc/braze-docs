@@ -1,12 +1,12 @@
 ---
-nav_title: Creating an Event Prediction
-article_title: Creating an Event Prediction
+nav_title: Create an Event Prediction
+article_title: Create an Event Prediction
 page_order: 1.1
 description: "This article covers how to create an event prediction within the Braze dashboard."
 
 ---
 
-# Creating an event prediction
+# Create an event prediction
 
 > A prediction is one instance of a trained machine learning model and all the parameters and data it uses. To learn more about Predictive Events, refer to the [Predictive Events overview]({{site.baseurl}}/user_guide/brazeai//predictive_events/).
 

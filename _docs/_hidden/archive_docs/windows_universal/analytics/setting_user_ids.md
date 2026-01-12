@@ -1,13 +1,13 @@
 ---
-nav_title: Setting user IDs
-article_title: Setting User IDs for Windows Universal
+nav_title: Set user IDs
+article_title: Set User IDs for Windows Universal
 platform: Windows Universal
 page_order: 1
 description: "This reference article covers how to set user ids on the Windows Universal platform."
 hidden: true
 ---
 
-# Setting user IDs
+# Set user IDs
 {% multi_lang_include archive/windows_deprecation.md %}
 
 {% multi_lang_include archive/setting_user_ids/setting_user_ids.md %}

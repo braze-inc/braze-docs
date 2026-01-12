@@ -1533,7 +1533,7 @@ var ticket_lookuptable = {
             },
             'Email Templates' : {
               'ShowSubmit': true,
-              'LinksTitle': ['Creating an Email Template','Email Template Frequently Asked Questions'],
+              'LinksTitle': ['Create an Email Template','Email Template Frequently Asked Questions'],
               'Links' : ['{{site.baseurl}}/user_guide/message_building_by_channel/email/templates/email_template#step-3-customize-your-template','{{site.baseurl}}/user_guide/message_building_by_channel/email/templates/faq/']
             },
             'Liquid' : {
@@ -1618,12 +1618,12 @@ var ticket_lookuptable = {
               'SelectOption' : {
                 'Email' : {
                   'ShowSubmit': true,
-                  'LinksTitle': ['Creating an Email Campaign with the Drag-And-Drop Editor','Creating an Email Campaign with the HTML Editor'],
+                  'LinksTitle': ['Create an Email Campaign with the Drag-And-Drop Editor','Create an Email Campaign with the HTML Editor'],
                   'Links' : ['{{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/','{{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/']
                 },
                 'Push' : {
                   'ShowSubmit': true,
-                  'LinksTitle': ['Creating a Push Campaign','Braze Learning Course: Push'],
+                  'LinksTitle': ['Create a Push Campaign','Braze Learning Course: Push'],
                   'Links' : ['{{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message#creating-a-push-message','https://learning.braze.com/messaging-channels-push']
                 },
                 'In-App Messages' : {
@@ -1633,17 +1633,17 @@ var ticket_lookuptable = {
                 },
                 'Content Cards' : {
                   'ShowSubmit': true,
-                  'LinksTitle': ['Creating a Content Card Campaign','Braze Learning Course: Content Cards'],
+                  'LinksTitle': ['Create a Content Card Campaign','Braze Learning Course: Content Cards'],
                   'Links' : ['{{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/','https://learning.braze.com/messaging-channels-content-cards']
                 },
                 'Webhooks' : {
                   'ShowSubmit': true,
-                  'LinksTitle': ['Creating a Webhook Campaign'],
+                  'LinksTitle': ['Create a Webhook Campaign'],
                   'Links' : ['{{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/']
                 },
                 'SMS and MMS' : {
                   'ShowSubmit': true,
-                  'LinksTitle': ['Create an SMS Campaign','Creating as MMS Campaign'],
+                  'LinksTitle': ['Create an SMS Campaign','Create an MMS Campaign'],
                   'Links' : ['{{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/create/','{{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/create/']
                 },
                 'WhatsApp' : {

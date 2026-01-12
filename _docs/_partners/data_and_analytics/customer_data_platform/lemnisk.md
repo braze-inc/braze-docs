@@ -1,6 +1,6 @@
 ---
 nav_title: Lemnisk
-article_title: Integrating Lemnisk with Braze
+article_title: Integrate Lemnisk with Braze
 description: "This reference article details the partnership between Braze and Lemnisk, an AI-enabled customer data platform-led Marketing Automation platform, allowing you to stream user data collected at Lemnisk from various sources, into Braze to activate them across various channels and destinations using Braze's tools."
 alias: /partners/lemnisk/
 page_type: partner

@@ -1,6 +1,6 @@
 ---
-nav_title: Setting up Currents
-article_title: Setting Up Currents
+nav_title: Set up Currents
+article_title: Set Up Currents
 page_order: 0
 page_type: tutorial
 description: "This how-to article walks you through the process for integrating and configuring Braze Currents."
@@ -8,7 +8,7 @@ tool: Currents
 search_rank: 8
 ---
 
-# [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/currents-the-basics-2/){: style="float:right;width:120px;border:0;" class="noimgborder"}Setting up Currents
+# [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/currents-the-basics-2/){: style="float:right;width:120px;border:0;" class="noimgborder"}Set up Currents
 
 > This page outlines and describes the generic process for integrating and configuring Braze Currents.
 
@@ -46,7 +46,7 @@ Before you begin your integration, it's best to decide which integration is best
 
 ### Step 2: Open Currents
 
-To get started, go to **Partner Integrations** > **Data Export**. You'll be taken to the Currents integration management page.
+To get started, go to **Partner Integrations** > **Currents**. You'll be taken to the Currents integration management page.
 
 ![Currents page in the Braze dashboard]({% image_buster /assets/img_archive/currents-main-page.png %})
 

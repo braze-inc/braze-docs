@@ -7,7 +7,7 @@ description: "This page contains troubleshooting steps for various issues relati
 channel: push
 ---
 
-# Troubleshooting Push
+# Troubleshoot push
 
 > Use this page to troubleshoot issues with the Push messaging channel.
 

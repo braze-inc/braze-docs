@@ -1,6 +1,6 @@
 ---
 nav_title: Refreshing the feed
-article_title: Refreshing the Content Card Feed for iOS
+article_title: Refresh the Content Card Feed for iOS
 platform: iOS
 page_order: 4
 description: "This reference article covers implementing Content Card refreshing in your iOS application."
@@ -12,7 +12,7 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# Refreshing the feed
+# Refresh the feed
 
 ## Refreshing Content Cards
 

@@ -1,11 +1,11 @@
 ---
-nav_title: Creating codes
-article_title: Creating promotion codes
+nav_title: Create codes
+article_title: Create promotion codes
 page_order: 0.1
 description: "Learn how to create promotion codes in your campaigns and Canvases."
 ---
 
-# Creating promotion codes
+# Create promotion codes
 
 > Learn how to create promotion codes in your campaigns and Canvases.
 
@@ -33,7 +33,7 @@ Here are some details to consider when creating a code snippet:
 
 ### Step 3: Choose promotion code options
 
-Each promotion code list has a corresponding expiration date and time that gets set upon creation. The maximum expiration length is six months into the future from the day you're creating or editing your list.
+Each promotion code list has a corresponding expiration date and time that gets set upon creation. The maximum expiration length is six months from the day you're creating or editing your list.
 
 Within that time, you can change and update the expiration date repeatedly. This expiration date applies to all codes added to this list. Upon expiration, the codes are deleted from the Braze system, and any messages calling that list's code snippet is not sent.
 

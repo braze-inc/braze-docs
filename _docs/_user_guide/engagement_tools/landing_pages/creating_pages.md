@@ -1,11 +1,11 @@
 ---
-nav_title: Creating landing pages
-article_title: Creating Landing Pages
+nav_title: Create landing pages
+article_title: Create Landing Pages
 description: "This article covers how to create and customize Braze landing pages with the drag-and-drop editor."
 page_order: 0
 ---
 
-# Creating landing pages
+# Create landing pages
 
 > Learn how to create and customize a landing page using the drag-and-drop editor, so you can grow your audience and collect preferences directly in Braze.
 

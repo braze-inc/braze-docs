@@ -1,6 +1,6 @@
 ---
 nav_title: WhatsApp and external system
-article_title: Integrating Braze and WhatsApp with an external system
+article_title: Integrate Braze and WhatsApp with an external system
 page_order: 2
 description: "This reference article provides a step-by-step guide for integrating the Braze and WhatsApp integration with an external AI or communication system."
 page_type: reference
@@ -9,7 +9,7 @@ channel:
   - WhatsApp
 ---
 
-# Integrating Braze and WhatsApp with an external AI or communication system
+# Integrate Braze and WhatsApp with an external AI or communication system
 
 > Leverage the power of AI chatbots and live agent hand-offs on the WhatsApp channel to streamline your customer support operations. By automating routine inquiries and seamlessly transitioning to human agents when needed, you can significantly improve response times and enhance the overall customer experience.
 
@@ -62,7 +62,7 @@ First, create a webhook campaign to establish a way to send WhatsApp messages re
 ![Action-based delivery with a trigger of sending a WhatsApp inbound message.]({% image_buster /assets/img/whatsapp/inbound_message_trigger.png %})
 
 {: start="6"}
-6. Finish composing your campaign, then save and launch the campaign. Now, every time a message is received, Braze will send a webhook to your external system.
+6. Finish composing your campaign, then save and launch the campaign. After you launch the campaign, every time a message is received, Braze sends a webhook to your external system.
 
 ### Step 2: Create an API-triggered campaign for outbound messages {#step-2}
 

@@ -1,8 +1,8 @@
 ---
-nav_title: Testing campaigns
-article_title: Testing Campaigns
+nav_title: Test campaigns
+article_title: Test Campaigns
 layout: dev_guide
-guide_top_header: "Testing Campaigns"
+guide_top_header: "Test Campaigns"
 guide_top_text: "Before you send your campaigns, you should always test your messages. After, you should always look at the results to ensure your campaign went well and will affect your future campaigns positively.<br><br> Here, you can find resources on testing campaigns, such as sending test messages and performing A/B testing."
 page_order: 4
 

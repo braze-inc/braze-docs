@@ -1,13 +1,13 @@
 ---
-nav_title: Navigating Braze
-article_title: Navigating Braze
+nav_title: Navigate Braze
+article_title: Navigate Braze
 alias: /navigating_braze/
 page_order: 0
 page_type: reference
 description: "This guide explains how to use the updated navigation."
 ---
 
-# Navigating Braze
+# Navigate Braze
 
 Braze navigation is designed to help you efficiently access features and content across devices. Let’s explore how to make the most of it.
 

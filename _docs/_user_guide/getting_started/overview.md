@@ -7,7 +7,7 @@ description: "Get acquainted with the core concepts you'll need to know when wor
 
 ---
 
-# Getting Started: Braze overview
+# Get started: Braze overview
 
 Welcome to Braze! This collection of articles will help you get started with our platform and introduce you to the key terms, features, and functionalities of Braze. This page introduces the core concepts you'll need to know when working in Braze.
 

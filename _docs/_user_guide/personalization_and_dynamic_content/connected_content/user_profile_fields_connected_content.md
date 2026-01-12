@@ -1,12 +1,12 @@
 ---
 nav_title: Pulling user profile data
-article_title: Pulling User Profile Data in Connected Content Calls
+article_title: Pull User Profile Data in Connected Content Calls
 page_order: 3
 description: "This article covers how to pull user profiles into your Connected Content calls, and best practices involving Liquid templating."
 toc_headers: h2
 ---
 
-# Pulling user profile data
+# Pull user profile data
 
 > This page covers how to pull user profiles into your Connected Content calls and best practices involving Liquid templating. 
 

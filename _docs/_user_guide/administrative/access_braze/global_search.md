@@ -1,12 +1,12 @@
 ---
-nav_title: Searching your Braze dashboard
-article_title: Searching Your Braze Dashboard
+nav_title: Search your Braze dashboard
+article_title: Search Your Braze Dashboard
 page_order: 0.5
 page_type: reference
 description: "Learn about global search in Braze."
 ---
 
-# Searching your Braze dashboard
+# Search your Braze dashboard
 
 You can use the search bar to find your work and other information within your Braze dashboard. The search bar is at the top of your Braze dashboard. Click the search bar, or press <kbd>Ctrl</kbd>&nbsp;+&nbsp;<kbd>K</kbd> on Windows or <kbd>⌘</kbd>&nbsp;+&nbsp;<kbd>K</kbd> on a Mac to jump directly to the search bar.
 

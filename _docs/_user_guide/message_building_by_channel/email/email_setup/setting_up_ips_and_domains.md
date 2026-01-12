@@ -1,6 +1,6 @@
 ---
-nav_title: Setting up IPs & domains
-article_title: Setting Up IPs & Domains
+nav_title: Set up IPs & domains
+article_title: Set Up IPs & Domains
 page_order: 0
 page_type: tutorial
 channel: email
@@ -8,7 +8,7 @@ description: "This how-to article will walk you through how to set up your IPs a
 
 ---
 
-# Setting up IPs and domains
+# Set up IPs and domains
 
 {% multi_lang_include video.html id="iTm3yQkJ0UU" align="right"  %}
 

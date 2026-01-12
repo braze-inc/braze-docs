@@ -1,13 +1,13 @@
 ---
-nav_title: Accessing your account
-article_title: Accessing Your Account
+nav_title: Access your account
+article_title: Access Your Account
 page_order: 2
 page_type: reference
 description: "This article covers how to get your Braze account, how to log in after granted access, and how to go about resetting your Braze password."
 
 ---
 
-# Accessing your account
+# Access your account
 
 > This article covers how to get your Braze account, how to log in after being granted access, and how to troubleshoot your dashboard access and dashboard performance.
 

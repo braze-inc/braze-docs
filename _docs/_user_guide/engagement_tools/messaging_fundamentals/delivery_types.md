@@ -9,7 +9,7 @@ tool:
     - Canvas
 ---
 
-# Scheduling your message
+# Schedule your message
 
 > In Braze, there are three different ways you can schedule your message: scheduled, action-based, and API-triggered. Choosing how and when your message gets delivered is crucial in developing an effective message. 
 
