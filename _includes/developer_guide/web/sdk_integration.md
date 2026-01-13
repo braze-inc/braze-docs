@@ -50,6 +50,11 @@ const braze = require("@braze/web-sdk");
 Add the Braze Web SDK directly to your HTML by referencing our CDN-hosted script, which loads the library asynchronously.
 
 <script src="{{site.baseurl}}/assets/js/embed.js?target=https%3A%2F%2Fgithub.com%2Fbraze-inc%2Fbraze-web-sdk%2Fblob%2Fmaster%2Fsnippets%2Floading-snippet.js&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
+
+{% alert note %}
+When using the CDN integration method, be aware that the default **Prevent Cross-Site Tracking** setting in Safari can prevent in-app message types like Banners and Content Cards from displaying. We recommend using the NPM integration method instead so that Safari doesn't classify them as cross-site referencing, and your web users can see the messages on all browsers.
+{% endalert %}
+
 {% endsubtab %}
 {% endsubtabs %}
 
