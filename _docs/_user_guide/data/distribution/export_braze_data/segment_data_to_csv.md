@@ -1,5 +1,5 @@
 ---
-nav_title: Segment data 
+nav_title: Segment data
 article_title: Export Segment Data
 page_order: 2
 page_type: reference
