@@ -674,17 +674,34 @@ When migrating from Content Cards to Banners, be aware of the following limitati
 
 | Feature | Content Cards | Banners |
 |---------|--------------|---------|
+| **Content Structure** |
 | Multiple cards in feed | ✅ Supported | ❌ Single banner per placement |
-| Card types (Classic, Captioned, Image Only) | ✅ Multiple types | ✅ Single HTML-based banner |
+| Multiple placements | ❌ Not applicable | ✅ Multiple placements supported |
+| Card types (Classic, Captioned, Image Only) | ✅ Multiple predefined types | ✅ Single HTML-based banner (more flexible) |
+| **Content Management** |
+| Drag-and-drop editor | ❌ Requires developer for customization | ✅ Marketers can create/update without engineering |
+| Custom HTML/CSS | ❌ Limited to card structure | ✅ Full HTML/CSS support |
+| Key-value pairs for customization | ✅ Required for advanced customization | ❌ Not needed (HTML-based) |
+| **Persistence & Expiration** |
+| Card expiration | ✅ Supported (30-day limit) | ✅ Supported (no expiration limit) |
+| True persistence | ❌ 30-day maximum | ✅ Unlimited persistence |
+| **Display & Targeting** |
+| Feed UI | ✅ Default feed available | ❌ Placement-based only |
+| Context-specific placement | ❌ Feed-based | ✅ Native placement support |
+| Native prioritization | ❌ Requires custom logic | ✅ Built-in prioritization |
+| **User Interaction** |
 | Manual dismissal | ✅ Supported | ❌ Not supported |
 | Pinned cards | ✅ Supported | ❌ Not supported |
-| Card expiration | ✅ Supported | ✅ Supported |
-| Custom card filtering | ✅ Supported | ❌ Not supported |
-| Feed UI | ✅ Default feed available | ❌ Placement-based only |
+| **Analytics** |
+| Automatic analytics (default UI) | ✅ Supported | ✅ Supported |
+| Custom filtering/sorting | ✅ Supported | ❌ Not supported |
+| **Content Updates** |
+| Liquid logic refresh | ❌ On initial load only | ✅ Refreshes on every session |
+| Eligibility refresh | ❌ On initial load only | ✅ Refreshes on every session |
 
 ### SDK limitations
 
-- **Unity and Cordova**: Banners are not currently supported on .NET MAUI (Xamarin), Cordova, Unity, Vega, or TV platforms
+- **Unsupported Platforms**: Banners are not currently supported on .NET MAUI (Xamarin), Cordova, Unity, Vega, or TV platforms
 - **Minimum SDK versions**: Ensure you're using the minimum SDK versions listed in the prerequisites
 
 ## Next steps
