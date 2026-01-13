@@ -100,18 +100,7 @@ To export your revenue data, select <i class="fas fa-bars" title="Chart context 
 
 ### Performance Over Time graph
 
-The following data can be viewed in the **Performance Over Time** graph:
-
-- KPI Formulas
-- Purchases
-    - (Optional) Purchases By Product
-- Revenue
-    - (Optional) Revenue By Segment
-    - (Optional) Revenue By Product
-- Revenue per Hour
-    - (Optional) Revenue per Hour By Segment
-- Revenue per User
-
+In the **Performance Over Time** graph, you can view key revenue and purchase metrics, such as purchases, revenue, revenue per user, and related breakdowns by product, segment, and hour.
 ![Revenue graph]({% image_buster /assets/img_archive/Export_revenue_graph.png %})
 
 ### Total revenue
