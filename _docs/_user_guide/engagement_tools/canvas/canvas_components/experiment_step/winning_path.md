@@ -26,15 +26,13 @@ Specify the conversion event that should determine the winner. If there are no c
 
 If you choose opens or clicks as your conversion event, make sure the first step in the path is a [Message step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step). Braze only counts engagement from the first Message step in each respective path. If the path starts with a different step (like a Delay or Audience Path step) and the message comes later, that message won’t be included when evaluating performance.
 
-Next, set the **Experiment Window**. The **Experiment Window** specifies how long the experiment will run before the Winning Path is determined and all users that follow are sent down that path. The window begins when the first user enters the step.
+Next, set the **Experiment Window**. The **Experiment Window** specifies how long the experiment will run before the Winning Path is determined and all users who follow are sent down that path. The window begins when the first user enters the step.
 
 ![Winning Path Settings with the conversion event "Clicks" selected for a 12-hour experiment window.]({% image_buster /assets/img/experiment_step/experiment_winning_settings.png %})
 
 ### Step 3: Determine fallback {#statistical-significance}
 
-By default, if the results of the test aren't enough to determine a statistically significant winner, all future users will be sent down the best performing path.
-
-Alternatively, you can select **Continue sending all future users the mix of paths**. This option will send future users down the mix of paths according to the percentages specified in the experiment path distribution.
+By default, if the results of the test aren't enough to determine a statistically significant winner, all future users will be sent down the best-performing path. Alternatively, you can select **Continue sending all future users the mix of paths**. This option sends future users down the mix of paths according to the percentages specified in the experiment path distribution.
 
 !["Continue sending all future users the mix of paths" selected as what will happen to users if the test result isn't statistically significant.]({% image_buster /assets/img/experiment_step/experiment_winning_statistical.png %})
 
@@ -52,7 +50,7 @@ After a Winning Path concludes, all subsequent users who enter the Canvas will g
 
 ## Analytics {#analytics}
 
-If Winning Path was turned on, your analytics view is separated into two tabs: **Initial Experiment** and **Winning Path**.
+If Winning Path is turned on, your analytics view is separated into two tabs: **Initial Experiment** and **Winning Path**.
 
 - **Initial Experiment:** Shows the metrics for each path during the experiment window. You can see a summary of how all the paths performed for the specified conversion events and which path was selected as the winner.
 - **Winning Path:** Shows only the metrics for the Winning Path starting from the moment the Initial Experiment finished.
@@ -65,7 +63,7 @@ When using Winning Paths in a Canvas where users are allowed to enter only once,
 
 ![Experiment Step with a Delay Group for Winning Path]({% image_buster /assets/img/experiment_step/experiment_one_time.png %}){: style="max-width:75%"}
 
-When the test is complete and a Winning Path is determined, the users assigned to the Delay Group will be directed to the chosen path, and continue through the Canvas.
+When the test finishes and a Winning Path is determined, the users assigned to the Delay Group are directed to the chosen path and continue through the Canvas.
 
 ![Experiment Step with a Delay Group sent down the Winning Path]({% image_buster /assets/img/experiment_step/experiment_one_time_results.png %}){: style="max-width:75%"}
 
@@ -75,3 +73,6 @@ We don't recommend using local time delivery in Canvases with Winning Paths. Thi
 
 Alternatively, if you wish to use local delivery, use an experiment window of 24-48 or more hours. That way, users in early time zones enter the Canvas and trigger the experiment to start, but plenty of time in the experiment window remains. Users in later time zones will still have sufficient time to enter the Canvas and the Experiment Step with Winning Paths and possibly convert before the experiment window expires.
 
+### Variants based on clicks
+
+If you're setting up a Winning Path variant based on clicks, every interaction counts as a click unless it is identified as an unsubscribe click by Braze.
