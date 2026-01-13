@@ -17,7 +17,7 @@ For more information on any of the updates listed on this page, contact your acc
 {% details January 8, 2026 %}
 ## January 8, 2026 release
 
-### Data flexibility
+### Data & Reporting
 
 #### eCommerce recommended events
 
@@ -56,7 +56,7 @@ In the [Cloud Data Ingestion **Sync Log** dashboard]({{site.baseurl}}/user_guide
 * **Rows with errors:** Downloads a file containing only the rows that had an **Error** status.
 * **All rows:** Downloads a file containing every row processed in the run.
 
-### Robust channels
+### Channels & Touchpoints
 
 #### Bring Your Own (BYO) WhatsApp connector
 
@@ -78,17 +78,17 @@ With [dynamic BCC]({{site.baseurl}}/user_guide/administrative/app_settings/email
 
 As an alternative to a rate limit that gets shared across an entire multi-channel campaign or Canvas, you can select a specific rate limit per channel. In this case, the rate limit will apply to each of your selected channels. For example, you can set your campaign or Canvas to send a maximum of 5,000 webhooks and 2,500 SMS messages per minute across the campaign or Canvas. For more details, see [Rate limiting and frequency capping]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting).
 
-### New Braze partnerships
+### Partnerships
 
 #### LILT - Localization
 
 [LILT]({{site.baseurl}}/partners/lilt/) is the complete AI solution for enterprise translation and content creation. LILT enables global organizations to scale and optimize their content, product, communications, and support operations, with AI agents and fully automated workflows.
 
-### SDK updates
+### SDK breaking updates
 
 The following SDK updates have been released. Breaking updates are listed below; all other updates can be found by checking the corresponding SDK changelogs.
 
--[Android 40.1.1](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#4011)
+- [Android 40.1.1](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#4011)
 - [Android SDK 40.1.0](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#4010)
 - [Swift SDK 14.0.0](https://github.com/braze-inc/braze-swift-sdk/blob/main/CHANGELOG.md)
     - Removes News Feed.

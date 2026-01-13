@@ -7,7 +7,7 @@ tool: Currents
 
 # Currents changelog
 
-## Changes in Version 4 (release date 2026-01-07)
+## Changes in Version 4 (release date 2026-01-08)
 
 * Field changes to event type `users.behaviors.pushnotification.TokenStateChange`:
     * Added new `string` field `push_token`: Push token of the event
