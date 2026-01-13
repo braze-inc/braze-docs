@@ -23,7 +23,7 @@ You can also request a CSV export from the main **Segments** page by selecting t
 To export data from all your user profiles, create a segment with no filters, and then request a CSV export.
 {% endalert %}
 
-The CSV output contains the data from each user profile captured in the segment at the time of export. You can export any segment by selecting the gear icon and CSV export. Braze generates the report in the background and email it to the user who is currently logged in.
+The CSV output contains the data from each user profile captured in the segment at the time of export. You can export any segment by selecting the gear icon and CSV export. Braze generates the report in the background and emails it to the user who is currently logged in.
 
 {% alert important %} 
 Due to file size restrictions, your export may fail if the estimated size of your segment is over 500,000 users. Note that this restriction uses the estimated size of your segment, and not the exact calculation. For more details, refer to [Exporting large segments](#exporting-large-segments).
