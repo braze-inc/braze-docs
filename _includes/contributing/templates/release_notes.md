@@ -11,7 +11,7 @@ page_type: reference
 <!-- The title should include the date the release note is made live. For example, "February 21, 2024 release". -->
 # MONTH DAY, YEAR release
 
-<!-- Fill out the following six sections ("Data and Reporting," "BrazeAI<sup>TM</sup>" "Orchestration," "Channels and Touchpoints", “Partnerships”, and “SDK”) using the example section under the next HTML comment. -->
+<!-- Fill out the following six sections ("Data & Reporting," "BrazeAI<sup>TM</sup>", "Orchestration," "Channels & Touchpoints", "Partnerships", and "SDK") using the example section under the next HTML comment. -->
 ## Data & Reporting
 
 <!-- An example release note title specific to the “Data & Reporting” section. -->
