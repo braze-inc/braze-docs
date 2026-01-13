@@ -88,20 +88,13 @@ When you record revenue for a currency without an exchange rate, Braze records i
 
 ## Export revenue and total revenue data
 
-Use the [Revenue Report]({{site.baseurl}}/user_guide/analytics/reporting/revenue_report/) page of the dashboard to view data on revenue over specific periods of time, a specific product revenue, and your app's total revenue.
-
-You can find the **Revenue Report** under **Analytics**.
-
-{% alert tip %}
-Looking for more ways to get revenue data? Try adding purchase behavior (as well as purchase of a product) to campaigns or Canvases as [conversion events]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/).
-{% endalert %}
-
 To export your revenue data, select <i class="fas fa-bars" title="Chart context menu"></i> in the **Performance Over Time** graph and select your export option.
 
-### Performance Over Time graph
-
-In the **Performance Over Time** graph, you can view key revenue and purchase metrics, such as purchases, revenue, revenue per user, and related breakdowns by product, segment, and hour.
 ![Revenue graph]({% image_buster /assets/img_archive/Export_revenue_graph.png %})
+
+{% alert important %}
+Revenue reports cannot be exported through API. For help with CSV exports, refer to [export troubleshooting]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/).
+{% endalert %}
 
 ### Total revenue
 
@@ -110,7 +103,7 @@ You can view revenue statistics on a case-by-case basis on the [Campaign Analyti
 {% multi_lang_include analytics/metrics.md metric='Total Revenue' %}
 
 {% alert tip %}
-Revenue reports cannot be exported through API. For help with CSV exports, refer to [export troubleshooting]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/).
+Looking for more ways to get revenue data? Try adding purchase behavior (as well as purchase of a product) to campaigns or Canvases as [conversion events]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/).
 {% endalert %}
 
 {% comment %}
