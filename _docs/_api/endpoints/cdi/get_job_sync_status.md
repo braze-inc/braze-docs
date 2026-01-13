@@ -32,17 +32,7 @@ To use this endpoint, you'll need to generate an API key with the `cdi.integrati
 | `integration_id` | Required | String | Integration ID. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-## Retrieving your integration ID
-
-To retrieve your `integration_id`, you can use one of the following methods:
-
-### From the Braze dashboard
-
-Navigate to **Data Settings** > **Cloud Data Ingestion** and select your integration. The `integration_id` is located in the URL of the integration details page. For example, in the URL `https://dashboard.braze.com/integrations/cloud_data_ingestion/00000000-0000-0000-0000-000000000000`, the `integration_id` is `00000000-0000-0000-0000-000000000000`.
-
-### Using the List integrations API
-
-You can also retrieve your `integration_id` by calling the [GET: List integrations endpoint]({{site.baseurl}}/api/endpoints/cdi/get_integration_list/). The response includes the `integration_id` for each integration in your workspace.
+{% include api/cdi_retrieve_integration_id.md %}
 
 ## Query parameters
 
