@@ -30,101 +30,33 @@ A convenient way to organize your test users is by creating a [Content Test Grou
 For steps to send test messages, refer to the following section for your respective channel.
 
 {% tabs local %}
-{% tab Email %}
-
-1. Draft your email message.
-2. Select **Preview and Test**.
-3. Select the **Test Send** tab and add your email address or user ID in the **Add individual users** field. 
-4. Select **Send Test** to send your drafted email to your inbox.
-
-![Test Email]({% image_buster /assets/img_archive/testemail.png %}){: style="max-width:40%;" }
-
-{% endtab %}
-{% tab Push %}
-
-#### Mobile push
-
-1. Draft your mobile push.
-2. Select the **Test** tab and add your email address or user ID in the **Add Individual Users** field.
-3. Select **Send Test** to send your drafted message to your device.
-
-![Test push]({% image_buster /assets/img_archive/testpush.png %})
-
-#### Web push
-
-1. Create your web push.
-2. Select the **Test** tab. 
-3. Select **Send Test to Myself**.
-4. Select **Send Test** to send your web push to your web browser.
-
-![Test web push]({% image_buster /assets/img_archive/testwebpush.png %})
-
-If you have already accepted push messages from the Braze dashboard, the push will come through in the corner of your screen. Otherwise, click **Allow** when prompted, and the message will appear.
-
-{% endtab %}
-{% tab In-App Message %}
-
-{% alert warning %}
-To send a test to either [Content Test Groups]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups) or individual users, push must be enabled on your test devices before sending. For example, you must have push enabled on your iOS device in order to tap the notification before the test message displays. {% endalert %}
-
-If you have push notifications set up within your app and on your test device, you can send test in-app messages to your app to see what it looks like in real-time. 
-
-1. Draft your in-app message.
-2. Select the **Test** tab and add your email address or user ID to the **Add Individual Users** field. 
-3. Select **Send Test** to send your push message to your device.
-
-A test push message will appear at the top of your device screen.
-
-![Test In App]({% image_buster /assets/img_archive/test-in-app.png %})
+{% tab Banners %}
 
 {% alert important %}
-Test sends may result in more than one in-app message being sent to each recipient. 
+Before you can test Banner messages in Braze, you'll need to create a Banner campaign in Braze. Additionally, verify that the placement you want to test is already [placed in your app or website]({{site.baseurl}}/developer_guide/banners/placements).
 {% endalert %}
 
-Directly clicking and opening the push message will send you to your app, where you can view your in-app message test. Note this in-app message testing feature relies on the user clicking a test push notification to trigger the in-app message. As such, the user must be eligible to receive push notifications in the relevant app for the successful delivery of the test push notification.
+After creating your Banner message, you can preview your Banner or send a test message.
 
-### Preview
+1. Draft your Banner message.
+2. Select **Preview** to preview your Banner or send a test message.
+3. To send a test message, add either a content test group or one or more individual users as **Test Recipients**, then select **Send Test**. 
 
-You can preview your in-app message as you compose it in the **Preview** tab. This should help you visualize what your final message will look like from your user's perspective. You can preview what your message will look like to a random user, a specific user, or a customized user. You can also preview messages for either mobile devices or tablets.
+You'll be able to view your test message on the device for up to 5 minutes.
 
-![Compose tab when building an in-app message showing the preview of what the message will look like. A user is not selected, so the Liquid added in the body section displays as is.]({% image_buster /assets/img/in-app-message-preview.png %})
+![Preview tab of the Banner composer.]({% image_buster /assets/img/banners/preview_banner.png %})
 
-Braze has three generations of in-app messages available. You can fine-tune to which devices your messages should be sent, based on which Generation they support.
-
-![Switching between generations when previewing an in-app message.]({% image_buster /assets/img/iam-generations.gif %}){: height="50%" width="50%"}
-
-{% alert warning %}
-In **Preview**, the view of your message might not be identical to its actual rendering on the user's device. We always recommend sending a test message to a device to ensure that your media, copy, personalization, and custom attributes generate correctly.
+{% alert note %}
+Keep in mind, your preview may not be identical to the final render on a user's device due to differences across hardware.
 {% endalert %}
 
 ### Test checklist
 
-- Do the images and media show up and act as expected?
-- Does the Liquid function as expected? Have you accounted for a [default attribute value]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#accounting-for-null-attribute-values) if the Liquid returns no information?
+- Is your Banner campaign assigned to a placement?
+- Do the images and media show up and act as expected on your targeted device types and screen sizes?
+- Do your links and buttons direct the user to where they should go?
+- Does the Liquid function as expected? Have you accounted for a default attribute value in the event that the Liquid returns no information?
 - Is your copy clear, concise, and correct?
-- Do your buttons direct the user where they should go?
-
-### Accessibility scanner
-
-To support accessibility best practices, Braze automatically scans the content of in-app messages created using the traditional HTML editor against accessibility standards. This scanner helps identify content that may not meet Web Content Accessibility Guidelines ([WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/)) standards. WCAG is a set of internationally recognized technical standards developed by the World Wide Web Consortium (W3C) to make web content more accessible to people with disabilities.
-
-![Accessibility scan results]({% image_buster /assets/img/Accessibilty_Scanner_IAM.png %})
-
-{% alert note %}
-The in-app message accessibility scanner only runs on messages built with custom HTML. 
-{% endalert %}
-
-#### How it works
-
-The scanner runs automatically on custom HTML messages and evaluates your entire HTML message against the full [WCAG 2.1 AA rule set](https://www.w3.org/WAI/WCAG22/quickref/?versions=2.1&currentsidebar=%23col_customize&levels=aaa). For each flagged issue, it shows:
-
-- The specific HTML element involved
-- A description of the accessibility issue
-- A link to additional context or remediation guidance
-
-#### Understanding automated accessibility testing
-
-{% multi_lang_include accessibility/automated_testing.md %}
 
 {% endtab %}
 {% tab Content Card %}
@@ -198,40 +130,117 @@ A common use case is trying to debug why a user can't see a particular Content C
 From there, you can review your message settings and content to drill down and determine why a user can't see a particular Content Card.
 
 {% endtab %}
-{% tab Banners %}
+{% tab Email %}
+
+1. Draft your email message.
+2. Select **Preview and Test**.
+3. Select the **Test Send** tab and add your email address or user ID in the **Add individual users** field. 
+4. Select **Send Test** to send your drafted email to your inbox.
+
+![Test Email]({% image_buster /assets/img_archive/testemail.png %}){: style="max-width:40%;" }
+
+{% endtab %}
+{% tab In-app message %}
+
+{% alert warning %}
+To send a test to either [Content Test Groups]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups) or individual users, push must be enabled on your test devices before sending. For example, you must have push enabled on your iOS device in order to tap the notification before the test message displays. {% endalert %}
+
+If you have push notifications set up within your app and on your test device, you can send test in-app messages to your app to see what it looks like in real-time. 
+
+1. Draft your in-app message.
+2. Select the **Test** tab and add your email address or user ID to the **Add Individual Users** field. 
+3. Select **Send Test** to send your push message to your device.
+
+A test push message will appear at the top of your device screen.
+
+![Test In App]({% image_buster /assets/img_archive/test-in-app.png %})
 
 {% alert important %}
-Before you can test Banner messages in Braze, you'll need to create a Banner campaign in Braze. Additionally, verify that the placement you want to test is already [placed in your app or website]({{site.baseurl}}/developer_guide/banners/placements).
+Test sends may result in more than one in-app message being sent to each recipient. 
 {% endalert %}
 
-After creating your Banner message, you can preview your Banner or send a test message.
+Directly clicking and opening the push message will send you to your app, where you can view your in-app message test. Note this in-app message testing feature relies on the user clicking a test push notification to trigger the in-app message. As such, the user must be eligible to receive push notifications in the relevant app for the successful delivery of the test push notification.
 
-1. Draft your Banner message.
-2. Select **Preview** to preview your Banner or send a test message.
-3. To send a test message, add either a content test group or one or more individual users as **Test Recipients**, then select **Send Test**. 
+### Preview
 
-You'll be able to view your test message on the device for up to 5 minutes.
+You can preview your in-app message as you compose it in the **Preview** tab. This should help you visualize what your final message will look like from your user's perspective. You can preview what your message will look like to a random user, a specific user, or a customized user. You can also preview messages for either mobile devices or tablets.
 
-![Preview tab of the Banner composer.]({% image_buster /assets/img/banners/preview_banner.png %})
+![Compose tab when building an in-app message showing the preview of what the message will look like. A user is not selected, so the Liquid added in the body section displays as is.]({% image_buster /assets/img/in-app-message-preview.png %})
 
-{% alert note %}
-Keep in mind, your preview may not be identical to the final render on a user's device due to differences across hardware.
+Braze has three generations of in-app messages available. You can fine-tune to which devices your messages should be sent, based on which Generation they support.
+
+![Switching between generations when previewing an in-app message.]({% image_buster /assets/img/iam-generations.gif %}){: height="50%" width="50%"}
+
+{% alert warning %}
+In **Preview**, the view of your message might not be identical to its actual rendering on the user's device. We always recommend sending a test message to a device to ensure that your media, copy, personalization, and custom attributes generate correctly.
 {% endalert %}
 
 ### Test checklist
 
-- Is your Banner campaign assigned to a placement?
-- Do the images and media show up and act as expected on your targeted device types and screen sizes?
-- Do your links and buttons direct the user to where they should go?
-- Does the Liquid function as expected? Have you accounted for a default attribute value in the event that the Liquid returns no information?
+- Do the images and media show up and act as expected?
+- Does the Liquid function as expected? Have you accounted for a [default attribute value]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#accounting-for-null-attribute-values) if the Liquid returns no information?
 - Is your copy clear, concise, and correct?
+- Do your buttons direct the user where they should go?
+
+### Accessibility scanner
+
+To support accessibility best practices, Braze automatically scans the content of in-app messages created using the traditional HTML editor against accessibility standards. This scanner helps identify content that may not meet Web Content Accessibility Guidelines ([WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/)) standards. WCAG is a set of internationally recognized technical standards developed by the World Wide Web Consortium (W3C) to make web content more accessible to people with disabilities.
+
+![Accessibility scan results]({% image_buster /assets/img/Accessibilty_Scanner_IAM.png %})
+
+{% alert note %}
+The in-app message accessibility scanner only runs on messages built with custom HTML. 
+{% endalert %}
+
+#### How it works
+
+The scanner runs automatically on custom HTML messages and evaluates your entire HTML message against the full [WCAG 2.1 AA rule set](https://www.w3.org/WAI/WCAG22/quickref/?versions=2.1&currentsidebar=%23col_customize&levels=aaa). For each flagged issue, it shows:
+
+- The specific HTML element involved
+- A description of the accessibility issue
+- A link to additional context or remediation guidance
+
+#### Understanding automated accessibility testing
+
+{% multi_lang_include accessibility/automated_testing.md %}
 
 {% endtab %}
-{% tab SMS/MMS %}
+{% tab LINE %}
 
-After creating your SMS or MMS message, you can send a test message to your phone to see what it will look like in real-time. 
+1. Create your LINE message.
+2. Select the **Test** tab and select at least one Content Test Group or individual user to receive this test message.
+3. Select **Send Test** to send your message.
 
-1. Draft your SMS or MMS message.
+![Test LINE message.]({% image_buster /assets/img/line/test_preview.png %})
+
+{% endtab %}
+{% tab Push %}
+
+#### Mobile push
+
+1. Draft your mobile push.
+2. Select the **Test** tab and add your email address or user ID in the **Add Individual Users** field.
+3. Select **Send Test** to send your drafted message to your device.
+
+![Test push]({% image_buster /assets/img_archive/testpush.png %})
+
+#### Web push
+
+1. Create your web push.
+2. Select the **Test** tab. 
+3. Select **Send Test to Myself**.
+4. Select **Send Test** to send your web push to your web browser.
+
+![Test web push]({% image_buster /assets/img_archive/testwebpush.png %})
+
+If you have already accepted push messages from the Braze dashboard, the push will come through in the corner of your screen. Otherwise, click **Allow** when prompted, and the message will appear.
+
+{% endtab %}
+{% tab SMS/MMS and RCS %}
+
+After creating your SMS, MMS, or RCS message, you can send a test message to your phone to see what it will look like in real-time. 
+
+1. Draft your SMS, MMS, or RCS message.
 2. Select the **Test** tab and select at least one Content Test Group or individual user to receive this test message. 
 3. Select **Send Test** to send your test message.
 
@@ -243,6 +252,16 @@ After creating your SMS or MMS message, you can send a test message to your phon
 After creating your webhook, you can do a test send to check the webhook response. Select the **Test** tab and select **Send Test** to send a test send to the supplied webhook URL. You can also select an individual user to preview the response as a specific user. 
 
 ![Test Content Card]({% image_buster /assets/img/webhook_test.png %})
+
+{% endtab %}
+{% tab WhatsApp %}
+
+1. Create your WhatsApp message.
+2. Select the **Test** tab and select at least one Content Test Group or individual user to receive this test message.
+3. Initiate a conversation window by sending a WhatsApp message to the phone number associated with the subscription group you’re using for this message. The associated phone number is listed in the alert on the **Test** tab.
+4. Select **Send Test** to send your message.
+
+![Test WhatsApp message.]({% image_buster /assets/img/whatsapp/whatsapp_test.png %})
 
 {% endtab %}
 {% endtabs %}
