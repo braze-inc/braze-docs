@@ -18,6 +18,7 @@ You can also retrieve your `integration_id` by calling the [GET: List integratio
       "app_group_id": "12345678-1234-1234-1234-123456789012",
       "integration_name": "my_integration_name",
       "integration_type": "SNOWFLAKE",
+      "integration_status": "ACTIVE",
       ...
     }
   ],
