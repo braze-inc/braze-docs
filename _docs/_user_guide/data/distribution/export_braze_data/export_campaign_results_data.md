@@ -1,5 +1,5 @@
 ---
-nav_title: Export campaign data
+nav_title: Campaign data
 article_title: Export Campaign Data
 page_order: 0
 page_type: reference

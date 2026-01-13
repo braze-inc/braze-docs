@@ -28,9 +28,6 @@ guide_menu_list:
   - name: Message Archiving
     link: /docs/user_guide/data/export_braze_data/message_archiving/
     image: /assets/img/braze_icons/clock-rewind.svg
-  - name: Export Overview Data
-    link: /docs/user_guide/data/export_braze_data/exporting_app_usage_data/
-    image: /assets/img/braze_icons/target-05.svg
   - name: Export Revenue Data
     link: /docs/user_guide/data/export_braze_data/exporting_revenue_data/
     image: /assets/img/braze_icons/coins-hand.svg
@@ -40,10 +37,7 @@ guide_menu_list:
   - name: Export APIs
     link: /docs/user_guide/data/export_braze_data/export_custom_event_data/
     image: /assets/img/braze_icons/server-01.svg
-  - name: Opening CSV Exports in Excel
-    link: /docs/user_guide/data/export_braze_data/opening_csv_reports_in_excel/
-    image: /assets/img/braze_icons/file-02.svg
-  - name: Export Troubleshooting
+  - name: Troubleshooting
     link: /docs/user_guide/data/export_braze_data/export_troubleshooting/
     image: /assets/img/braze_icons/help-circle.svg
   - name: Frequently Asked Questions

@@ -30,3 +30,11 @@ This is expected behavior for workspaces with a lot of users. Braze will split y
 ### Why do I see duplicates when I export users by segment through REST API?
 
 This is a very rare occurrence caused by the underlying architecture of the database provider. Duplicates are cleaned out every week; however, most weeks, no duplicates are cleared.
+
+### How do I open CSV reports in Excel?
+
+While CSV files are usually automatically opened in Excel by default, this may not always be the case. Refer to the [Windows](https://support.microsoft.com/en-us/windows/change-which-programs-windows-7-uses-by-default-62fd162f-8c82-0436-806f-c60d69dcf495) and [Apple](https://support.apple.com/guide/mac-help/choose-an-app-to-open-a-file-on-mac-mh35597/mac) troubleshooting articles for steps to set Excel as your default program.
+
+To convert a CSV to XLSX or XLS, or get rid of the comma between data values, refer to [this guide](https://www.ablebits.com/office-addins-blog/convert-csv-excel/#import-csv-wizard) for importing CSVs into Excel.
+
+You may sometimes find that leading zeroes are stripped from user IDs in your CSV export. This happens because Excel treats the numbers in a CSV as data instead of text. To resolve this, run the [Excel Text Import Wizard](https://www.ablebits.com/office-addins-blog/converting-csv-excel-issues/#leading-zeros).

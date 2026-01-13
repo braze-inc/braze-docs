@@ -1,5 +1,5 @@
 ---
-nav_title: Export APIs
+nav_title: APIs
 article_title: Export APIs
 page_order: 8
 page_type: reference
