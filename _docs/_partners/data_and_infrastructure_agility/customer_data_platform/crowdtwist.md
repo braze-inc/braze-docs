@@ -277,7 +277,7 @@ Data Transformations are a very dynamic tool and can be designed for purposes be
 [0]: https://www.oracle.com/uk/cx/marketing/customer-loyalty/
 [1]: https://docs.oracle.com/en/cloud/saas/marketing/crowdtwist-develop/Developers/PushUserProfile-withTiersv2.html
 [2]: https://docs.oracle.com/en/cloud/saas/marketing/crowdtwist-develop/Developers/LivePushUserActivity.html
-[3]:https://docs.oracle.com/en/cloud/saas/marketing/crowdtwist-develop/Developers/LivePushUserRedemption.html 
+[3]: https://docs.oracle.com/en/cloud/saas/marketing/crowdtwist-develop/Developers/LivePushUserRedemption.html 
 [4]: https://docs.oracle.com/en/cloud/saas/marketing/crowdtwist-develop/Developers/DataPush.html 
 [5]: https://www.braze.com/docs/user_guide/data/data_transformation/overview 
 [6]: https://www.braze.com/docs/user_guide/data/data_transformation/creating_a_transformation?redirected=1#step-2-create-a-transformation 
