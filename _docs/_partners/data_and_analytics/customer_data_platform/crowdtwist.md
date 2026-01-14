@@ -160,7 +160,7 @@ if (payload.tierInfo) {
 let brazecall = {
  "attributes": [
    {
-     "external_id": payload.third_party_id,
+     "external_id": payload.thirdPartyId,
      "email": payload.emailAddress,
      "_update_existing_only": false,
      "crowdtwist_loyalty_points": payload.redeemablePoints,
