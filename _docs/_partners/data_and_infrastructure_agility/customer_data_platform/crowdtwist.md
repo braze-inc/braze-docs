@@ -13,7 +13,7 @@ search_tag: Partner
 
 Oracle Crowdtwist’s Data Push feature allows for user or event metadata to be passed whenever an update occurs in Crowdtwist’s platform.
 
-This guide outlines how to integrate Oracle Crowdtwist’s User Profile, User Activity, and User Redemption Live Push feeds into your Braze environment. At the time of writing, there are two additional Data Push types available which are not explicitly covered in this documentation, but whose setup would follow the same principles as are laid out below. 
+This guide outlines how to integrate Oracle Crowdtwist’s User Profile, User Activity, and User Redemption Live Push feeds into your Braze environment. Two additional Data Push types are available that are not explicitly covered in this documentation, but their setup follows the same principles outlined below. 
 
 * [Live Push User Profile][1]: Includes creations of new profiles and updates to existing profiles.
 
