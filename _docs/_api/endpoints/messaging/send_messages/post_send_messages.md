@@ -21,7 +21,7 @@ If you are targeting a segment, a record of your request will be stored in the [
 {% multi_lang_include api/payload_size_alert.md %}
 
 {% alert important %}
-When using this endpoint for API-Only sends (API Campaign), the recipient must already exist in Braze for the request to succeed. This applies when specifying users in the `external_user_ids`, `user_aliases`, or when using the `recipients` object.
+When using this endpoint for API-Only sends (API Campaign), the recipient must already exist in Braze for the request to succeed. This applies when specifying users in the `external_user_ids` or `user_aliases` parameters.
 {% endalert %}
 
 ### Creating new users with API sends
