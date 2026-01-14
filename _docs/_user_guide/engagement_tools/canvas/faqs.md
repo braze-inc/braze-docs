@@ -69,7 +69,7 @@ For more information on what you can edit after launch, refer to [Changing your 
 A user can only convert once per Canvas entry. Conversions are assigned to the most recent message received by the user for that entry. The summary block at the beginning of a Canvas reflects all conversions performed by users within that path, whether or not they received a message. Each subsequent step will only show conversions that happened while that was the most recent step the user received.
 
 {% alert note %}
-If a user re-enters a Canvas, conversion events will only be tracked for the most recent entry. Conversion events will no longer be logged for previous entries, even if the conversion event is backfilled.
+When a user re-enters a Canvas, conversion events are only tracked for the most recent entry. Conversion events are not logged for previous entries, even if the conversion event is backfilled.
 {% endalert %}
 
 {% details Expand for examples %}
