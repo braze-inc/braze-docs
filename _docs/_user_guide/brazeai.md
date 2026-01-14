@@ -13,9 +13,10 @@ guide_top_text: "BrazeAI<sup>TM</sup> powers a collection of accessible, easy-to
 
 guide_featured_title: "Features"
 guide_featured_list:
-- name: BrazeAI Decisioning Studio<sup>TM</sup>
+- name: Decisioning Studio
   link: /docs/user_guide/brazeai/decisioning_studio/
-- name: Braze Agents
+  image: /assets/img/braze_icons/stars-03.svg
+- name: Agents
   link: /docs/user_guide/brazeai/agents/
   image: /assets/img/braze_icons/star-06.svg
 - name: BrazeAI Operator

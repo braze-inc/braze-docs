@@ -1,7 +1,7 @@
 ---
+page_order: 3
 nav_title: Reports and Insights
 article_title: Reports and Insights
-page_order: 3
 description: "Learn how to view BrazeAI Decisioning Studio™ reports in Braze, so you can understand how AI-powered decisions impact your campaigns."
 ---
 
