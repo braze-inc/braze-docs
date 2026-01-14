@@ -373,5 +373,5 @@ valid_partner_list:
 - name: LILT
   url: /docs/partners/lilt/
 - name: Fullstory
-  url: /docs/partners/fullstory
+  url: /docs/partners/message_personalization/dynamic_content/personalized_recommendations/fullstory
 ---
