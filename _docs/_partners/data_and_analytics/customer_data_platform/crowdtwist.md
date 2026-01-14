@@ -48,7 +48,7 @@ As shown in [Oracle Crowdtwist's Data Push documentation](https://docs.oracle.co
 
 ## Step 2: Update and Test Template
 
-Below you see the annotated templates. The body of these templates is designed to apply to the `/users/track` destination. Annotations are marked by the `//` line-start and green text, and you can delete them without affecting the operation of the transformation code. 
+Below, you’ll see the annotated templates. The body of these templates is designed to apply to the `/users/track` destination. Annotations are marked by the `//` line-start and green text, and you can delete them without affecting the operation of the transformation code. 
 
 The transformation uses JavaScript, which builds an object called "brazecall". This object is where you create the request body that is sent to a Braze REST API endpoint. For guidance on the required structures of the requests to these destinations, see the links in the "destinations" section.    
 
