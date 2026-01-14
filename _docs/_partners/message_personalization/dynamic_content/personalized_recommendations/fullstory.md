@@ -22,7 +22,7 @@ In the following example, Canvas Context data is leveraged in an Agent AI Canvas
 
 ## Use cases
 
-![ALT_TEXT]({% image_buster /assets/img/fullstory/1.png %})
+![Diagram showing Fullstory integration use cases with Braze]({% image_buster /assets/img/fullstory/1.png %})
 
 ## Prerequisites
 
@@ -46,7 +46,7 @@ To create a Fullstory API key, navigate to the Fullstory platform, then **Settin
 
 #### B: Creating a session summary Profile ID
 
-Following [Fullstory's guidance](https://developer.staging.fullstory.com/anywhere/activation/ai-session-summary-api/#step-1-creating-and-managing-summary-profiles), create a session summary profile using the dedicated endpoint. This is where you define what sort of data you want the Session Summary response to provide to Braze.
+Following [Fullstory's guidance](https://developer.fullstory.com/anywhere/activation/ai-session-summary-api/#step-1-creating-and-managing-summary-profiles), create a session summary profile using the dedicated endpoint. This is where you define what sort of data you want the Session Summary response to provide to Braze.
 In the response to this request, Fullstory provides a Session “Profile ID”. This Profile ID is a key component of the connected content request body used in the following use case.
 
 
@@ -55,7 +55,7 @@ In the response to this request, Fullstory provides a Session “Profile ID”. 
 
 2. Name the authentication “fullstory”.
 
-3. Add the Head key “Authorization”. Supply the Header value Fullstory provided in the previous step. 
+3. Add the Header key “Authorization”. Supply the Header value Fullstory provided in the previous step. 
 
 4. Under Allowed Domain, submit “api.fullstory.com”.
 
