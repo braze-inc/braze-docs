@@ -237,7 +237,7 @@ return brazecall;
 
 ### Destinations
 
-The templates in this guide are created to deliver to the "Track Users" destination, but you can design your template to send to any of the endpoints listed in [Braze's Data Transformation guide]({{site.baseurl}}/user_guide/data/data_transformation/creating_a_transformation/#step-2-create-a-transformation ), with the support of the associated [REST API documentation]({{site.baseurl}}/api/home).
+The templates in this guide are created to deliver to the "Track Users" destination, but you can design your template to send to any of the endpoints listed in [Braze's Data Transformation guide]({{site.baseurl}}/user_guide/data/data_transformation/creating_a_transformation/#step-2-create-a-transformation), with the support of the associated [REST API documentation]({{site.baseurl}}/api/home).
 
 ### Testing
 
