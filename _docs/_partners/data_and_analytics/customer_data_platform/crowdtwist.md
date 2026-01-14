@@ -248,7 +248,7 @@ After you modify the template to your liking, you must validate that it operates
 
 When you're happy with the object you see in the "output" field, click **Activate** so that the Data Transformation endpoint is ready to accept data. 
 
-You find your Data Transformation's webhook URL on the left-hand side panel. Copy this and use it for configuration within Oracle Crowdtwist's Integration Hub.
+You'll find your Data Transformation's webhook URL on the left-hand side panel. Copy this and use it for configuration within Oracle Crowdtwist's Integration Hub.
 
 {% alert important %}
 The Braze Data Transformation endpoints have a rate limit of 1000 requests per minute. Consider the speed at which you want this data made available in Braze, and speak to your Braze Account Manager if you require a higher Data Transformation rate limit.
