@@ -231,7 +231,7 @@ return brazecall;
 }
 
 ```
-{%endtab%}
+{% endtab %}
 {% endtabs %}
 
 ### Destinations
