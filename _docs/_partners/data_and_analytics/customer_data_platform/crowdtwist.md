@@ -125,8 +125,7 @@ let brazecall = {
      "properties": {
        "description": payload.description,
        "date_assigned": payload.dateAwarded
-     },
-           "_update_existing_only": true
+     }
    }
  ]
 };
