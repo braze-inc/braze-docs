@@ -61,7 +61,7 @@ For example, let's say a user does the following:
 2. Logs an attribution method on October 1.
 3. Performs the conversion event on October 2.
 
-This user **will not** appear in a report with a date range of October 1—October 7. This is because the user entered the Canvas before the reporting period, even though the conversion event occurred within the defined date range. For the user to appear in a report, the date range must include September 30.
+This user **will not** appear in a report with a date range of October 1 to October 7. This is because the user entered the Canvas before the reporting period, even though the conversion event occurred within the defined date range. For the user to appear in a report, the date range must include September 30.
 
 ## Understanding your report
 
