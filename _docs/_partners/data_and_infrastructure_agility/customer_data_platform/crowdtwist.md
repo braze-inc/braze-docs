@@ -59,7 +59,7 @@ For example, when we see ` external_id: payload.thirdPartyId `, this means that 
 {% endalert %}
 
 {% alert important %}
- The objects sent from Oracle Crowdtwist can be used to create users in Braze. By including the `update_existing_only` key with the value `false`, if an attribute or event object includes an identifier which does not currently exist in Braze, a user profile will be created with the attributes included in the event or attribute object. If you would prefer that Oracle Crowdtwist only update profiles that already exist in Braze, set this attribute as `true` in each attribute or event object. 
+ The objects sent from Oracle Crowdtwist can be used to create users in Braze. By including the `update_existing_only` key with the value `false`, if an attribute or event object includes an identifier which does not exist in Braze, a user profile will be created with the attributes included in the event or attribute object. If you would prefer that Oracle Crowdtwist only update profiles that already exist in Braze, set this attribute as `true` in each attribute or event object. 
 {% endalert %}
 
 ### Data Transformation Templates
