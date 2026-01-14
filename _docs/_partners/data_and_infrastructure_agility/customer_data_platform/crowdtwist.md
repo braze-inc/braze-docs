@@ -1,5 +1,5 @@
 ---
-nav_title: Oracle_Crowdtwist
+nav_title: Oracle Crowdtwist
 article_title: Crowdtwist
 description: "This article outlines the partnership between Braze and Oracle Crowdtwist, by way of specially created Braze Data-Transformation templates and Crowdtwist's Data Push Objects."
 page_type: partner
