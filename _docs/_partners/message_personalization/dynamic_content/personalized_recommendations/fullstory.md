@@ -30,7 +30,7 @@ ADDITIONAL_INFORMATION.
 
 CONTENT.
 
-![ALT_TEXT]({% image_buster /assets/img/PARTNER_NAME/IMAGE_NAME.png %})
+![ALT_TEXT]({% image_buster /assets/img/fullstory/1.png %})
 
 ## Prerequisites
 
@@ -63,7 +63,7 @@ Add the Head key “Authorization”. Supply the Header value provided by Fullst
 
 Under Allowed Domain, submit “api.fullstory.com”.
 
-![Screenshot of Braze showing the Edit Credential fields]({% image_buster /assets/img/PARTNER_NAME/IMAGE_NAME.png %})
+![Screenshot of Braze showing the Edit Credential fields]({% image_buster /assets/img/fullstory/2.png %})
 
 
 ## Use case: Leverage Fullstory Session Summary data & Braze Canvas Context steps & AI Agents to create dynamic message journeys
@@ -72,7 +72,7 @@ Using Fullstory’s [Activation Steam’s](https://help.fullstory.com/hc/en-us/a
 
 Canvas Context steps allow users to set variables that can be used for the length of a users Canvas journey. Connected Content calls can be used in Context steps , which allows users to make API requests to pull data from Fullstory’s Session Summary API’s and set the response data as a context variable
 
-![Screenshot of Braze Canvas Context step showing the context variable “summary_result” being created and populated with a connected content call to Fullstory, to retrieve a session summary({% image_buster /assets/img/PARTNER_NAME/IMAGE_NAME.png %})
+![Screenshot of Braze Canvas Context step showing the context variable “summary_result” being created and populated with a connected content call to Fullstory, to retrieve a session summary({% image_buster /assets/img/fullstory/3.png %})
 
 Using the Authorisation token created earlier, users can make a request to pull data for each user in the Canvas, to retrieve Session Summary Data on their most recent website or app activity. 
 
@@ -155,7 +155,7 @@ Any of the data available in the object above can be leveraged using the context
 {% alert Note %}
 For the avoidance of unexpected behaviour, an Audience Path step could be included after the Context step, which can drop users out of the context if their Context tag is empty, indicating the connected content call failed or otherwise returned no information
 
-![Screenshot of Braze Audience step({% image_buster /assets/img/PARTNER_NAME/IMAGE_NAME.png %})
+![Screenshot of Braze Audience step({% image_buster /assets/img/fullstory/3.png %})
 
 {%endalert%}
 
@@ -165,7 +165,7 @@ For the avoidance of unexpected behaviour, an Audience Path step could be includ
 
 In this example, we’ll look at using this data in order to allow the AI Agent to generate appropriate message copy for use in a content card, which can encourage the user to return to their abandoned basket
 
-![Screenshot of Braze Agent Context creator with the prompt({% image_buster /assets/img/PARTNER_NAME/IMAGE_NAME.png %})
+![Screenshot of Braze Agent Context creator with the prompt({% image_buster /assets/img/fullstory/4.png %})
 
 The name used for the Context Liquid tag created in this step should be the same as the context liquid tag used in the AI Agent step created earlier. 
 
@@ -174,7 +174,7 @@ The prompt required for your use case will vary, but our Best Practices for crea
 
 In your canvas, select an AI Agent Step and then select the “Session Context” agent created from the dropdown. Be sure to save the output as a variable, in this case “message”, which can be placed into message copy by using the liquid tag {{context.${message}.message}}.
 
-![Screenshot of Braze Agent Context Canvas step with the prompt({% image_buster /assets/img/PARTNER_NAME/IMAGE_NAME.png %})
+![Screenshot of Braze Agent Context Canvas step with the prompt({% image_buster /assets/img/fullstory/5.png %})
 
 Create a message step which leverages the AI Agent created copy. The liquid tag can be found in this step. 
 
