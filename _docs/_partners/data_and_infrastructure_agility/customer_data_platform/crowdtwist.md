@@ -40,7 +40,7 @@ Braze and Oracle Crowdtwist have created [Data Transformation templates][6] to h
 
 ## Step 1: Create Data Transformation from Oracle Crowdtwist Template
 
-Navigate to Data Settings > Data Transformation > Create Transformations > Use a Template > Select 	“BRAZE <> CROWDTWIST” template of your choice. 
+Navigate to Data Settings > Data Transformation > Create Transformations > Use a Template > Select “BRAZE <> CROWDTWIST” template of your choice. 
 
 You will find four templates - one each for transforming User Profile, User Activity, and User Redemption events, and a master template that uses conditional logic to apply to multiple different Data Push events.
 
