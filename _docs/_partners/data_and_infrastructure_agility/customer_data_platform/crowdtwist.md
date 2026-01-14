@@ -75,7 +75,7 @@ let brazecall = {
    // **Important** If you want to allow Oracle Crowdtwist events to create users in Braze set the value of “_update_existing_only” to false. Otherwise, set this value to TRUE in your event and attribute objects.
      "_update_existing_only": false,
      "crowdtwist_loyalty_points": payload.redeemablePoints,
- //In this example, the “tierInfo” object from Crowdtwist is transformed into a Braze Nested Custom Attribute. We use the “_merge_objects” value to avoid duplications in a data-point efficient manner.
+ //In this example, the “tierInfo” object from Crowdtwist is transformed into a Braze Nested Custom Attribute. We use the “_merge_objects” value to avoid duplications in a data point efficient manner.
      "tierinfo_current_level": payload.tierInfo.currentLevel,
      "_merge_objects" : true,
      "tierInfo" : {
