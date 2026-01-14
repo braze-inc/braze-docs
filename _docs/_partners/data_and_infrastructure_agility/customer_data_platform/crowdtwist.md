@@ -11,7 +11,7 @@ search_tag: Partner
 
 > [Oracle Crowdtwist][0] is a leading cloud-native customer loyalty solution to empower brands to offer personalized customer experiences. Their solution offers over 100 out-of-the-box engagement paths, providing rapid time-to-value for marketers to develop a more complete view of the customer.
 
-Oracle Crowdtwist’s Data Push feature allows for user or event metadata to be passed whenever an update occurs in the Crowdtwist’s platform.
+Oracle Crowdtwist’s Data Push feature allows for user or event metadata to be passed whenever an update occurs in Crowdtwist’s platform.
 
 This guide outlines how to integrate Oracle Crowdtwist’s User Profile, User Activity, and User Redemption Live Push feeds into your Braze environment. At the time of writing, there are two additional Data Push types available which are not explicitly covered in this documentation, but whose setup would follow the same principles as are laid out below. 
 
