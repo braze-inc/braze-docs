@@ -150,7 +150,7 @@ return brazecall;
 
 ```
 {%endtab%}
-{%tab Master Template %}
+{% tab Master Template %}
 ```javascript
 //The master template uses JavaScript's conditional operators to determine the output of the Data Transformation. This example shows how to apply JavaScript to your transformation to allow for a dynamic range of sources or inputs. 
 
