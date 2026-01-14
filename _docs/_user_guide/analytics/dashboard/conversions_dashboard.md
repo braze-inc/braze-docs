@@ -19,17 +19,6 @@ To set up your conversions dashboard report:
 
 1. Go to **Analytics** > **Conversions**.
 2. Select a **Date Range** for your report, up to a 90-day window.
-
-{% alert important %}
-For a user to be counted in the report, they must meet all of the following criteria within the selected date range:
-- Enter the Canvas or campaign
-- Meet the attribution method criteria (such as message delivery, open, or click)
-- Perform the conversion event
-
-For example, if a user enters a Canvas on September 30, the attribution method is logged on October 1, and they perform the conversion event on October 2, they will not appear in a report with a date range of October 1–October 7. This is because the user entered the Canvas before the reporting period, even though the conversion event occurred within the defined date range.
-{% endalert %}
-
-{:start="3"}
 3. Select the campaigns or Canvases (or both) to analyze. 
    - (optional) Filter campaigns and Canvases by selecting a tag.  
 4. Select the **Channel(s)** to analyze for your messages.
@@ -59,6 +48,20 @@ To calculate conversions of an event that wasn't set up as a conversion event on
 {% alert note %}
 If you select a custom event, you won't see the **Conversion Event** dropdown on the page and will have to re-run to report to view conversions for different custom events.
 {% endalert %}
+
+### Considerations
+
+For a user to be counted in the report, they must meet the following criteria within the selected date range:
+1. Enter the Canvas or campaign.
+2. Log an [attribution method]({{site.baseurl}}/user_guide/analytics/dashboard/conversions_dashboard/#attribution-methods).
+3. Perform the conversion event.
+
+For example, let's say a user does the following:
+1. Enters the Canvas on September 30.
+2. Logs an attribution method on October 1.
+3. Performs the conversion event on October 2.
+
+This user **will not** appear in a report with a date range of October 1—October 7. This is because the user entered the Canvas before the reporting period, even though the conversion event occurred within the defined date range. For the user to appear in a report, the date range must include September 30.
 
 ## Understanding your report
 
