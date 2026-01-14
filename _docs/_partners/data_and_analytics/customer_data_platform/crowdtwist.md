@@ -131,8 +131,8 @@ let brazecall = {
 };
 return brazecall;
 ```
-{%endtab%}
-{%tab Redemption Event Template %}
+{% endtab %}
+{% tab Redemption Event Template %}
 ```javascript
 let brazecall = {
  "attributes": [
