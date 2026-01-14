@@ -32,7 +32,7 @@ Refer to [Supported personalization tags]({{site.baseurl}}/user_guide/personaliz
 
 You can create and assign variables by using the `assign` tag. This creates a variable in the message composer that can also be referenced throughout your message.
 
-### Does using Liquid consume data points?
+### Does using Liquid log data points?
 
 No.
 
@@ -72,7 +72,7 @@ Abort logic allows you to stop a message from being sent if the conditions are m
 
 For loops are also known as [iteration tags](https://shopify.github.io/liquid/tags/iteration/). Using for loop logic in your Liquid snippets allows you to cycle through blocks of Liquid until a condition is met. 
 
-In Braze, this could be used for checking items in an array custom attribute, or a list of values and objects returned by a [catalog]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs), [selection]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/), or [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content) call response. Specifically, you can use for loop logic as part of your messaging to check whether a product is in stock, or if a product has a minimum rating. 
+In Braze, this could be used for checking items in an array custom attribute, or a list of values and objects returned by a [catalog]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs), [selection]({{site.baseurl}}/user_guide/data/activation/catalogs/selections/), or [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content) call response. Specifically, you can use for loop logic as part of your messaging to check whether a product is in stock, or if a product has a minimum rating. 
 
 For example, let's say you have a catalog called "Games" that has a selection called "cheap_games". To pull the titles of the games in "cheap_games", you could use this Liquid snippet:
 

@@ -1,13 +1,13 @@
 ---
-nav_title: Setting User IDs
-article_title: Setting User IDs for Windows Universal
+nav_title: Set user IDs
+article_title: Set User IDs for Windows Universal
 platform: Windows Universal
 page_order: 1
 description: "This reference article covers how to set user ids on the Windows Universal platform."
 hidden: true
 ---
 
-# Setting user IDs
+# Set user IDs
 {% multi_lang_include archive/windows_deprecation.md %}
 
 {% multi_lang_include archive/setting_user_ids/setting_user_ids.md %}
@@ -32,6 +32,3 @@ Additionally, we recommend against changing the user ID when a user logs out, as
 
 {% multi_lang_include archive/setting_user_ids/best_practices.md %}
 
-[1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
-[2]: {{site.baseurl}}/developer_guide/rest_api/messaging/
-[6]: http://developer.android.com/reference/java/util/Locale.html#default_locale "Android Developer Docs - Localization"

@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: [Endpoint Name]"
+nav_title: "GETする：[エンドポイント名]。"
 article_title: "レイアウト例：GET: [Endpoint Name]"
 search_tag: Endpoint
 page_order: 1
@@ -12,7 +12,7 @@ noindex: true
 #ATTENTION: remove noindex and this alert from template
 ---
 {% api %}
-# クエリまたは List [項目エンドポイント "Gets"]
+# クエリまたはリスト [項目エンドポイント "Gets"]] 。
 
 {% apimethod get %}
 /sms/invalid_phone_numbers
@@ -59,8 +59,6 @@ curl --location --request GET 'https://rest.iad-01.braze.com/sms/invalid_phone_n
 
 <!-- An example response that defines the different variables returned-->
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "sms": [
     {

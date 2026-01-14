@@ -1,5 +1,5 @@
 ---
-nav_title: Analyses Canvas
+nav_title: Analyse/analytique du canvas (si utilisé comme adjectif)
 page_order: 4.6
 noindex: true
 layout: redirect

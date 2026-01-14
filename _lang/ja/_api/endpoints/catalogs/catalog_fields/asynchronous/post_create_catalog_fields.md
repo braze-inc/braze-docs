@@ -1,5 +1,5 @@
 ---
-nav_title: "POST:カタログフィールドの作成"
+nav_title: "POST:カタログ・フィールドを作成する"
 article_title: "POST:カタログフィールドの作成"
 search_tag: Endpoint
 page_order: 2
@@ -16,9 +16,6 @@ description: "この記事では、「カタログフィールドの作成」Bra
 {% endapimethod %}
 
 > このエンドポイントを使用して、カタログに複数のフィールドを作成する。
-{% alert important %}
-このエンドポイントは現在早期アクセス中である。この早期アクセスへ参加することに興味がある場合は、カスタマーサクセスマネージャーにお問い合わせください。
-{% endalert %}
 
 ## 前提条件
 

@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Remove Email Addresses from Spam List"
+nav_title: "POST: Remove email addresses from spam list"
 article_title: "POST: Remove Email Addresses from Spam List"
 search_tag: Endpoint
 page_order: 7

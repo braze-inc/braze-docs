@@ -1,7 +1,7 @@
 ---
+page_order: 2.5
 nav_title: Feature Flags
 article_title: Feature Flags para o SDK do Braze
-page_order: 1
 description: "Este artigo de referência aborda uma visão geral dos feature flags, incluindo pré-requisitos e casos de uso."
 tool: Feature Flags
 platform:
@@ -21,7 +21,7 @@ platform:
 > Os Feature Flags permitem ativar ou desativar remotamente a capacitação de uma seleção específica ou aleatória de usuários. É importante ressaltar que eles permitem ativar e desativar um recurso na produção sem implementação adicional de código ou atualizações na App Store. Isso permite que você implemente novos recursos com segurança e confiança.
 
 {% alert tip %}
-Quando estiver pronto para criar seus próprios sinalizadores de recursos, consulte [Criação de sinalizadores de recursos]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/create/).
+Quando estiver pronto para criar seus próprios sinalizadores de recursos, consulte [Criação de sinalizadores de recursos]({{site.baseurl}}/developer_guide/feature_flags/create/).
 {% endalert %}
 
 ## Pré-requisitos
@@ -51,11 +51,14 @@ Com os feature flags da Braze, podemos implementar gradualmente o recurso e miti
 * Ativaremos esse novo recurso para apenas 10% dos usuários para determinar se estamos com a equipe adequada.
 * Se houver algum erro, podemos desativar rapidamente o recurso em vez de nos apressarmos em enviar uma nova versão.
 
-Para implementar gradualmente esse recurso, podemos [criar um sinalizador de recurso]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/create/) chamado "Live Chat Widget".
+Para implementar gradualmente esse recurso, podemos [criar um sinalizador de recurso]({{site.baseurl}}/developer_guide/feature_flags/create/) chamado "Live Chat Widget".
 
 ![Detalhes do Feature Flag para um exemplo chamado Live Chat Widget. A ID é enable_live_chat. A descrição desse sinalizador de recurso indica que o widget de bate-papo ao vivo será exibido na página de suporte.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-livechat-1.png %})
 
 Em nosso código do app, mostraremos o botão **Start Live Chat** somente quando a bandeira do recurso Braze estiver ativada:
+
+{% tabs %}
+{% tab JavaScript %}
 
 ```javascript
 import {useState} from "react";
@@ -76,8 +79,56 @@ return (<>
   Need help? <button>Email Our Team</button>
   {liveChatEnabled && <button>Start Live Chat</button>}
 </>)
+```
+
+{% endtab %}
+{% tab Java %}
+
+```java
+// Get the initial value from the Braze SDK
+FeatureFlag featureFlag = braze.getFeatureFlag("enable_live_chat");
+Boolean liveChatEnabled = featureFlag != null && featureFlag.getEnabled();
+
+// Listen for updates from the Braze SDK
+braze.subscribeToFeatureFlagsUpdates(event -> {
+  FeatureFlag newFeatureFlag = braze.getFeatureFlag("enable_live_chat");
+  Boolean newValue = newFeatureFlag != null && newFeatureFlag.getEnabled();
+  liveChatEnabled = newValue;
+});
+
+// Only show the Live Chat view if the Braze SDK determines it is enabled
+if (liveChatEnabled) {
+  liveChatView.setVisibility(View.VISIBLE);
+} else {
+  liveChatView.setVisibility(View.GONE);
+}
+```
+
+{% endtab %}
+{% tab Kotlin %}
+
+```kotlin
+// Get the initial value from the Braze SDK
+val featureFlag = braze.getFeatureFlag("enable_live_chat")
+var liveChatEnabled = featureFlag?.enabled
+
+// Listen for updates from the Braze SDK
+braze.subscribeToFeatureFlagsUpdates() { event ->
+  val newValue = braze.getFeatureFlag("enable_live_chat")?.enabled
+  liveChatEnabled = newValue
+}
+
+// Only show the Live Chat view if the Braze SDK determines it is enabled
+if (liveChatEnabled) {
+  liveChatView.visibility = View.VISIBLE
+} else {
+  liveChatView.visibility = View.GONE
+}
 
 ```
+
+{% endtab %}
+{% endtabs %}
 
 ### Controle remotamente as variáveis do app
 
@@ -92,6 +143,9 @@ Para configurar remotamente esse recurso, criaremos um novo feature flag chamado
 ![Feature Flag com propriedades de link e texto que direcionam para uma página de vendas genérica.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-navigation-link-1.png %})
 
 Em nosso app, usaremos os métodos getter do Braze para recuperar as propriedades desse sinalizador de recurso e criar os links de navegação com base nesses valores:
+
+{% tabs %}
+{% tab JavaScript %}
 
 ```javascript
 import * as braze from "@braze/web-sdk";
@@ -114,6 +168,40 @@ return (<>
   </div>
 </>)
 ```
+
+{% endtab %}
+{% tab Java %}
+
+```java
+// liveChatView is the View container for the Live Chat UI
+FeatureFlag featureFlag = braze.getFeatureFlag("navigation_promo_link");
+if (featureFlag != null && featureFlag.getEnabled()) {
+  liveChatView.setVisibility(View.VISIBLE);
+} else {
+  liveChatView.setVisibility(View.GONE);
+}
+liveChatView.setPromoLink(featureFlag.getStringProperty("link"));
+liveChatView.setPromoText(featureFlag.getStringProperty("text"));
+
+```
+
+{% endtab %}
+{% tab Kotlin %}
+
+```kotlin
+// liveChatView is the View container for the Live Chat UI
+val featureFlag = braze.getFeatureFlag("navigation_promo_link")
+if (featureFlag?.enabled == true) {
+  liveChatView.visibility = View.VISIBLE
+} else {
+  liveChatView.visibility = View.GONE
+}
+liveChatView.promoLink = featureFlag?.getStringProperty("link")
+liveChatView.promoText = featureFlag?.getStringProperty("text")
+```
+
+{% endtab %}
+{% endtabs %}
 
 Agora, na véspera do Dia de Ação de Graças, só precisamos alterar esses valores de propriedade no dashboard da Braze.
 
@@ -149,6 +237,9 @@ Para começar, criaremos um novo feature flag chamado `enable_checkout_v2`. Não
 
 Em nosso app, verificaremos se o sinalizador de recurso está ativado ou não e trocaremos o fluxo de checkout com base na resposta:
 
+{% tabs %}
+{% tab JavaScript %}
+
 ```javascript
 import * as braze from "@braze/web-sdk";
 
@@ -161,7 +252,36 @@ if (featureFlag?.enabled) {
 }
 ```
 
-Configuraremos nosso teste A/B em um [Feature Flag Experiment]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/experiments/).
+{% endtab %}
+{% tab Java %}
+
+```java
+FeatureFlag featureFlag = braze.getFeatureFlag("enable_checkout_v2");
+braze.logFeatureFlagImpression("enable_checkout_v2");
+if (featureFlag != null && featureFlag.getEnabled()) {
+  return new NewCheckoutFlow();
+} else {
+  return new OldCheckoutFlow();
+}
+```
+
+{% endtab %}
+{% tab Kotlin %}
+
+```kotlin
+val featureFlag = braze.getFeatureFlag("enable_checkout_v2")
+braze.logFeatureFlagImpression("enable_checkout_v2")
+if (featureFlag?.enabled == true) {
+  return NewCheckoutFlow()
+} else {
+  return OldCheckoutFlow()
+}
+```
+
+{% endtab %}
+{% endtabs %}
+
+Configuraremos nosso teste A/B em um [Feature Flag Experiment]({{site.baseurl}}/developer_guide/feature_flags/experiments/).
 
 Agora, 50% dos usuários verão a experiência antiga, enquanto os outros 50% verão a nova experiência. Em seguida, podemos analisar as duas variantes para determinar qual fluxo de checkout resultou em uma taxa de conversão mais alta. {% multi_lang_include metrics.md metric='Conversion Rate' %}
 
@@ -188,7 +308,7 @@ Essas são as limitações do Feature Flag para planos gratuitos e pagos.
 | Recurso                                                                                                   | Versão gratuita     | Versão paga      |
 | :---------------------------------------------------------------------------------------------------------------- | :--------------- | ----------------- |
 | [Feature Flags ativos](#active-feature-flags)                                                                     | 10 por espaço de trabalho | 110 por espaço de trabalho |
-| [Experimentos de campanha ativos]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/experiments/)          | 1 por espaço de trabalho  | 100 por espaço de trabalho |
+| [Experimentos de campanha ativos]({{site.baseurl}}/developer_guide/feature_flags/experiments/)          | 1 por espaço de trabalho  | 100 por espaço de trabalho |
 | [Etapas do canva do Feature Flag]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/feature_flags/) | Ilimitado        | Ilimitado         |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

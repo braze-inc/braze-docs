@@ -1,5 +1,5 @@
 ---
-nav_title: Email Sign-up with Confirmation
+nav_title: Email sign-up with confirmation
 article_title: Email Sign-up with Confirmation Page
 alias: "/email_confirmation_page/"
 page_order: 6
@@ -16,9 +16,9 @@ description: "This page covers how to use the in-app message drag-and-drop edito
 
 ### Step 1: Choose your template
 
-When creating a drag-and-drop in-app message, select **Email sign-up with comfirmation page** for your template, then select **Build message**. This template is supported for both mobile apps and web browsers.
+When creating a drag-and-drop in-app message, select **Email sign-up with confirmation page** for your template, then select **Build message**. This template is supported for both mobile apps and web browsers.
 
-![The in-app message editor with the template for an email sign-up form with comfirmation page.][img1]
+![The in-app message editor with the template for an email sign-up form with confirmation page.]({% image_buster /assets/img/drag_and_drop/templates/email_capture_confirmation.png %})
 
 ### Step 2: Set up your message styles
 
@@ -30,7 +30,7 @@ To get started building your email sign-up form, select the email capture elemen
 
 You can customize the placeholder text and label text of the email capture element.
 
-![The in-app message editor with a side menu for customizing the email capture element.][img2]
+![The in-app message editor with a side menu for customizing the email capture element.]({% image_buster /assets/img/drag_and_drop/templates/email_capture_field_confirmation.png %})
 
 #### Email validation
 
@@ -42,7 +42,7 @@ You can customize the placeholder text and label text of the email capture eleme
 
 ### Step 5: Style your message
 
-Customize the look and feel of your email sign-up form and confirmation page using the drag-and-drop [in-app message components][3].
+Customize the look and feel of your email sign-up form and confirmation page using the drag-and-drop [in-app message components]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#message-components).
 
 ## Analyzing the results
 
@@ -52,7 +52,4 @@ Customize the look and feel of your email sign-up form and confirmation page usi
 
 {% multi_lang_include drag_and_drop/templates.md section='email double opt-in' %}
 
-[img1]: {% image_buster /assets/img/drag_and_drop/templates/email_capture_confirmation.png %} 
-[img2]: {% image_buster /assets/img/drag_and_drop/templates/email_capture_field_confirmation.png %} 
 
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#message-components

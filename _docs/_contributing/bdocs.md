@@ -1,5 +1,5 @@
 ---
-nav_title: About bdocs Wrapper
+nav_title: About bdocs wrapper
 article_title: About bdocs wrapper
 description: "Learn how to use bdocs, the Braze-Docs CLI tool, that helps you replace links, generate redirect URLs, generate deployment text, and more."
 page_order: 8.5
@@ -35,6 +35,8 @@ OPTIONS:
   tlinks         Transform reference links to inline links on 1 or more pages
   rlinks         Remove unused reference links on 1 or more pages
   ulinks         Update old links using newest redirect on 1 or more pages
+  mredirects     Make redirects for all renamed files in this branch
+  fblinks        Finds broken links throughout the docs site
   lredirects     Test new redirects by listing old URLs in this branch
   syntax         Print all unique Markdown syntax supported by Braze Docs
   help           Display this help message and exit
@@ -52,7 +54,7 @@ If you're on MacOS, you can copy the output of `bdocs` directly to your clipboar
 
 ### `deploy`
 
-This command creates the pull request description for weekly deployments by comparing which pull requests have been merged into `develop` but not `master` and then listing them in the proper Markdown format.
+This command creates the pull request description for weekly deployments by comparing which pull requests have been merged into `develop` but not `main` and then listing them in the proper Markdown format.
 
 {% tabs local %}
 {% tab usage example %}
@@ -68,7 +70,7 @@ $ ./bdocs deploy
 
 ### `release`
 
-This command creates the pull request description for monthly releases by comparing which pull requests have been merged into `master` since the last release and then listing them in the proper Markdown format.
+This command creates the pull request description for monthly releases by comparing which pull requests have been merged into `main` since the last release and then listing them in the proper Markdown format.
 
 {% tabs local %}
 {% tab usage example %}
@@ -188,7 +190,7 @@ Total replacements made: 1
 
 {% raw %}
 ```markdown
-Learn how to [log analytics]({{site.baseurl}}/developer_guide/content_cards/logging_analytics/) for your custom Content Cards.
+Learn how to [log analytics]({{site.baseurl}}/developer_guides/android/content_cards/logging_analytics/) for your custom Content Cards.
 ```
 {% endraw %}
 
@@ -196,7 +198,7 @@ Learn how to [log analytics]({{site.baseurl}}/developer_guide/content_cards/logg
 
 {% raw %}
 ```markdown
-Learn how to [log analytics]({{site.baseurl}}/developer_guide/content_cards/logging_analytics/) for your custom Content Cards.
+Learn how to [log analytics]({{site.baseurl}}/developer_guides/content_cards/analytics/) for your custom Content Cards.
 ```
 {% endraw %}
 {% endtab %}
@@ -206,17 +208,91 @@ Learn how to [log analytics]({{site.baseurl}}/developer_guide/content_cards/logg
 
 Ideally, redirects added to [`assets/js/broken_redirect_list.js`](https://github.com/braze-inc/braze-docs/blob/develop/assets/js/broken_redirect_list.js) should only be used to:
 
-- Redirect traffic from outside of Braze Docs to the correct content (such as those coming from Stack Overflow, [Braze Learning](https://learning.braze.com/), the [Braze Blog]({{site.baseurl}}/resources/articles), etc.).
+- Redirect traffic from outside of Braze Docs to the correct content (such as those coming from Stack Overflow, [Braze Learning](https://learning.braze.com/), the [Braze Blog](https://www.braze.com/resources/articles), and similar).
 - Prevent existing bookmarks from breaking.
 
 It should not be used to redirect URLs on an existing Braze Docs page to another existing Braze Docs page. Instead, these URLs should be updated with the newest possible link. We want to avoid cases in which someone reading an existing Braze Docs page clicks a link and is redirected from one page, to another page, to another page, and so on. `ulinks` helps solves this issue, improving the end-user experience.
+
+### `mredirects`
+
+`mredirects` (short for "make redirects") checks for renamed files committed in the current branch, then creates [URL redirects]({{site.baseurl}}/contributing/content_management/redirecting_urls/) in `assets/js/broken_redirect_list.js` for each renamed file.
+
+Because it relies on `git diff` to check for renamed files, redirects are only created for committed files in the following scenarios:
+
+|Scenario|Example|
+|--------|-------|
+|The file was renamed.|Renaming `developer_guide.md` to `dev_references.md`|
+|A directory in a file's path was renamed.| Renaming `_docs/developer_guide/home.md` to `_docs/dev_reference/home.md`|
+|The file was moved to a new directory.|Moving `_docs/developer_guide/home.md` into `_docs/developer_guide/getting_started/`|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+
+{% tabs local %}
+{% tab usage example %}
+#### Example command
+
+```bash
+$ ./bdocs mredirects                           
+Redirects created successfully!
+```
+
+#### Example redirect file
+
+```js
+validurls['/docs/partners/message_personalization/dynamic_content/niftyimages'] = '/docs/partners/message_personalization/dynamic_content/visual_and_interactive_content/niftyimages';
+validurls['/docs/partners/message_personalization/dynamic_content/movable_ink'] = '/docs/partners/message_personalization/dynamic_content/visual_and_interactive_content/movable_ink';
+validurls['/docs/partners/message_personalization/dynamic_content/offerfit'] = '/docs/partners/message_personalization/dynamic_content/content_optimization_testing/offerfit';
+validurls['/docs/partners/message_personalization/dynamic_content/stylitics'] = '/docs/partners/message_personalization/dynamic_content/visual_and_interactive_content/stylitics';
+validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform/jebbit'] = '/docs/partners/additional_channels_and_extensions/extensions/surveys/jebbit';
+validurls['/docs/partners/message_personalization/dynamic_content/judo/'] = '/docs/partners/message_personalization/dynamic_content/visual_and_interactive_content/judo/';
+```
+{% endtab %}
+{% endtabs %}
+
+### `fblinks`
+
+`fblinks` (short for "find broken links") checks each file in the `_docs` directory for links that lead to a 404 page. Each broken link is written to a `.csv` file that you can import to Google Sheets.
+
+#### Requirements
+
+To use `fblinks`, you'll need to install the dependencies using `yarn`. This only needs to be done a single time. To install dependencies, run:
+
+```bash
+cd ~/braze-docs
+brew install node yarn
+yarn install
+```
+
+{% tabs local %}
+{% tab usage example %}
+#### Example command
+
+```bash
+$ ./bdocs fblinks                           
+59 broken links were found. The full list can be found at:
+  /Users/Alex.Lee/braze-docs/scripts/temp/broken-links.csv
+```
+
+{% alert tip %}
+If you're using VS Code, hold <kbd>Command</kbd>, then <kbd>Left-Click</kbd> the link to open the CSV file in a new tab.
+{% endalert %}
+
+#### Example CSV file
+
+```plaintext
+File,Broken Link,Path to Broken Link
+/Users/Alex.Lee/braze-docs/_docs/_api/api_limits.md,/docs/api/endpoints/email/bounce/remove,/Users/Alex.Lee/braze-docs/_docs/_api/endpoints/email/bounce/remove.md
+/Users/Alex.Lee/braze-docs/_docs/_api/endpoints/messaging.md,/docs/docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/,/Users/Alex.Lee/braze-docs/_docs/_docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery.md
+/Users/Alex.Lee/braze-docs/_docs/_contributing/bdocs.md,/docs/resources/articles,/Users/Alex.Lee/braze-docs/_docs/_resources/articles.md
+```
+{% endtab %}
+{% endtabs %}
 
 ### `lredirects`
 
 `lredirects` (short for "list redirects") checks if any new redirects have been added to [`broken_redirect_list.js`](https://github.com/braze-inc/braze-docs/blob/develop/assets/js/broken_redirect_list.js), then lists all of the old URLs using a base URL of your choice. For more general information, see [Redirecting URLs]({{site.baseurl}}/contributing/content_management/redirecting_urls).
 
 {% alert tip %}
-If you're using VS Code, hold **CMD** while right-clicking a link to open it in your default browser. Because these are the old links, they should all redirect to the new URL specified in the redirect file. If it doesn't, there's an issue with the redirect.
+If you're using VS Code, hold <kbd>Command</kbd>, then <kbd>Left-Click</kbd> a link to open it in your default browser. Because these are the old links, they should all redirect to the new URL specified in the redirect file. If it doesn't, there's an issue with the redirect.
 {% endalert %}
 
 {% tabs local %}

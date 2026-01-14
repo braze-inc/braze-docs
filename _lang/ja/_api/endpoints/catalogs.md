@@ -39,7 +39,7 @@ guide_menu_list2:
     image: /assets/img/braze_icons/user-circle.svg
 
 guide_menu_title3: "Synchronous catalog items endpoints"
-guide_menu_list3:  
+guide_menu_list3:
   - name: "DELETE:カタログ項目を削除する"
     link: /docs/api/endpoints/catalogs/catalog_items/synchronous/delete_catalog_item/
     image: /assets/img/braze_icons/edit-05.svg
@@ -55,7 +55,7 @@ guide_menu_list3:
   - name: "POST:カタログアイテムの作成"
     link: /docs/api/endpoints/catalogs/catalog_items/synchronous/post_create_catalog_item/
     image: /assets/img/braze_icons/check-square-broken.svg
-  - name: "PUT:カタログ項目を更新する"
+  - name: "PUT:カタログ項目を置換"
     link: /docs/api/endpoints/catalogs/catalog_items/synchronous/put_update_catalog_item/
     image: /assets/img/braze_icons/user-circle.svg
 

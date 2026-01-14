@@ -1,5 +1,5 @@
 ---
-nav_title: Creating an In-App Message
+nav_title: Create an in-app message
 article_title: "Creating an In-App Message with Drag-and-Drop"
 description: "This reference article covers creating an in-app message with the drag-and-drop editor, prerequisites, creative details, and more."
 alias: "/create_dnd_iam/"
@@ -11,15 +11,16 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
   creative-details: '/docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#creative-details'
 ---
 
-# Creating an in-app message with drag-and-drop
+# Create an in-app message with drag-and-drop
 
 > With the drag-and-drop editor, you can create completely custom and personalized in-app messages in either campaigns or Canvas using the drag-and-drop editing experience.
 
-{% multi_lang_include video.html id="tbrgv_mU1zI" align="right" source="youtube" %}
+
+{% multi_lang_include video.html id="j94omgo73o" align="right" source="wistia" %}
 
 If you want to use your existing custom HTML templates or templates created by a third party, they must be recreated in the drag-and-drop editor.
 
-Not sure whether your in-app message should be sent using a campaign or a [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas/)? Campaigns are better for single, simple messaging campaigns, while Canvases are better for multi-step user journeys. After you've selected where to build your message, let's dive into the steps to create a drag-and-drop in-app message.
+Not sure whether your in-app message should be sent using a campaign or a [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas/)? Campaigns are better for single, targeted messaging campaigns, while Canvases are better for multi-step user journeys. After you've selected where to build your message, let's dive into the steps to create a drag-and-drop in-app message.
 
 ## Prerequisites
 
@@ -69,7 +70,7 @@ After selecting the drag-and-drop editor as your editing experience, you can cho
 
 Select **Build message** to begin designing your in-app message in the drag-and-drop editor.
 
-![The Braze Templates section where you can choose a basic, background image, phone number capture, or blank template.]({% image_buster /assets/img_archive/dnd_iam_select_template.png %}){: style="max-width:75%"}
+![The Braze Templates section where you can choose a basic, background image, phone number capture, or blank template.]({% image_buster /assets/img_archive/dnd_iam_select_template.png %})
 
 You can also access all templates from the **Templates** section of the dashboard.
 
@@ -135,7 +136,7 @@ Here's where your message gets to strut down the runway, dressed in your brand's
 
 - For a list of available editor blocks and their properties, refer to [Editor blocks]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/editor_blocks/).
 - For help customizing the look and feel of your message, check out [Style settings]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/).
-- For best practices creating right-to-left messages, refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/).
+- For best practices creating right-to-left messages, refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/).
 
 ## Step 5: Test your in-app message
 
@@ -175,6 +176,8 @@ Body clicks are not automatically collected for in-app messages created with the
 
 Yes, you can segment based on button clicks for up to two buttons in your message. To do so, set the **Identifier for Reporting** for your buttons to "0" and "1", which will correspond to the segmentation filters "Clicked in-app message button 1" and "Clicked in-app message button 2" respectively.
 
+![The "Identifier for Reporting" field with a value of "0".]({% image_buster /assets/img/identifier_for_reporting.png %}){: style="max-width:50%;"}
+
 #### Can I customize my in-app message using custom HTML or JavaScript or transfer existing HTML messages into the editor?
 
 You can’t directly transfer existing HTML messages into the editor, but you can insert raw HTML, CSS, and JavaScript into a Custom Code block. You can use Custom Code blocks to embed third-party videos and advanced Liquid, such as Connected Content or conditional statements.
@@ -185,8 +188,8 @@ Currently the editor is limited to modal and fullscreen messages only. You can s
 
 #### Can I save my in-app message as a template after I build it within my campaign or Canvas?
 
-Yes. For any in-app message you want to re-use in a future campaign or Canvas step, you can save it as a custom template using the **Save as template** button, available after you exit the editor. Before you can save it as a template, you must first launch the campaign OR save it as a draft.
+Yes. For any in-app message you want to reuse in a future campaign or Canvas step, you can save it as a custom template using the **Save as template** button, available after you exit the editor. Before you can save it as a template, you must first launch the campaign OR save it as a draft.
 
-![A preview of an in-app message for signing up for text updates.]({% image_buster /assets/img_archive/dnd_iam_save_as_template.png %})
+![A preview of an in-app message for a product tour.]({% image_buster /assets/img_archive/dnd_iam_save_as_template.png %})
 
 You can also create and save in-app message templates by navigating to **Templates** > **In-App Message Templates**.

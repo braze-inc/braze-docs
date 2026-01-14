@@ -1,6 +1,6 @@
 ---
-nav_title: Your First Contribution
-article: Your first contribution
+nav_title: Your first contribution
+article_title: Your first contribution
 description: "If you're new to docs-as-code or Braze Docs, start with this step-by-step tutorial."
 page_order: 1
 noindex: true
@@ -32,7 +32,7 @@ The [Braze Docs GitHub repository](https://github.com/braze-inc/braze-docs) host
 
 Now that you're a little familiar with the docs repository, you're ready to start making changes. First, open [Braze Docs]({{site.baseurl}}) and find a simple change you'd like to make.
 
-You'll make your change using the [same method you choose previously]({{site.baseurl}}/contributing/home#step-4-choose-how-to-contribute):
+You'll make your change using the [same method you chose previously]({{site.baseurl}}/contributing/home#step-4-choose-how-to-contribute):
 
 |Method           |Use Case                              |Additional Requirements                                                                                              |
 |-----------------|--------------------------------------|--------------------------------------------------------------------------------------------------------------------|
@@ -78,6 +78,9 @@ From the base repository dropdown, choose **braze-inc/braze-docs**, then select 
 
 ![The "Comparing changes" window with "braze-inc/braze-docs" highlighted in the base repository dropdown list.]({% image_buster /assets/img/contributing/github/choose_base_repository.png %})
 
+{% alert important %}
+If `braze-inc/braze-docs` is missing from the list of available base branches, there may be an issue with the origin of your forked repository. For detailed information, see [Troubleshooting]({{site.baseurl}}/contributing/troubleshooting/#missing-base-repository).
+{% endalert %}
 {% endtab %}
 
 {% tab local environment %}

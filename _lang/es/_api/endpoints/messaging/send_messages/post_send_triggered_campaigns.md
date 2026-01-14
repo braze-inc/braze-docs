@@ -74,20 +74,16 @@ Authorization: Bearer YOUR-REST-API-KEY
 | --------- | ---------| --------- | ----------- |
 |`campaign_id`|Obligatoria|Cadena|Ver [identificador de campaña]({{site.baseurl}}/api/identifier_types/). |
 |`send_id`| Opcional | Cadena | Ver [identificador de envío]({{site.baseurl}}/api/identifier_types/). |
-|`trigger_properties`| Opcional | Objeto | Ver [propiedades del desencadenante]({{site.baseurl}}/api/objects_filters/trigger_properties_object/). Pares clave-valor de personalización que se aplicarán a todos los usuarios de esta solicitud. |
+|`trigger_properties`| Opcional | Objeto | Ver [propiedades del desencadenante]({{site.baseurl}}/api/objects_filters/trigger_properties_object/). Los pares clave-valor de personalización se aplicarán a todos los usuarios de esta solicitud. |
 |`broadcast`| Opcional | Booleano | Debes establecer `broadcast` en verdadero cuando envíes un mensaje a un segmento completo al que se dirige una campaña o Canvas. Este parámetro está predeterminado como falso (a 31 de agosto de 2017). <br><br> Si `broadcast` tiene el valor true, no se puede incluir una lista `recipients`. Sin embargo, ten cuidado al configurar `broadcast: true`, ya que si lo haces involuntariamente puede que envíes tu mensaje a una audiencia mayor de la esperada. |
 |`audience`| Opcional | Objeto de audiencia conectado| Ver [audiencia conectada]({{site.baseurl}}/api/objects_filters/connected_audience/). |
-|`recipients`| Opcional | Matriz | Ver [objeto de destinatarios]({{site.baseurl}}/api/objects_filters/recipient_object/).<br><br>Si `send_to_existing_only` es `false`, debe incluirse un objeto de atributo.<br><br>Si no se proporciona `recipients` y `broadcast` está configurado como verdadero, el mensaje se enviará a todo el segmento al que se dirige la campaña. |
+|`recipients`| Opcional | Matriz | Ver [objeto de destinatarios]({{site.baseurl}}/api/objects_filters/recipient_object/).<br><br>Si `send_to_existing_only` es `false`, debe incluirse un objeto de atributo.<br><br>Si no se proporciona `recipients` y `broadcast` está configurado como verdadero, el mensaje se enviará a todo el segmento al que se dirige la campaña. <br><br> Si `email` es el identificador, debes incluir [`prioritization`]({{site.baseurl}}/api/endpoints/user_data/post_user_identify#identifying-users-by-email) en el objeto destinatario. |
 |`attachments`| Opcional | Matriz | Si `broadcast` está configurado como verdadero, no se puede incluir la lista `attachments`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 - La matriz de destinatarios puede contener hasta 50 objetos, cada uno de ellos con una única cadena `external_user_id` y un objeto `trigger_properties`.
 - Cuando `send_to_existing_only` es `true`, Braze sólo enviará el mensaje a los usuarios existentes. Sin embargo, esta bandera no puede utilizarse con alias de usuario.
 - Cuando `send_to_existing_only` es `false`, debe incluirse un atributo. Braze creará un usuario con la dirección `id` y los atributos antes de enviar el mensaje.
-
-{% alert important %}
-Especificar un destinatario por dirección de correo electrónico está actualmente en acceso temprano. Ponte en contacto con tu administrador del éxito del cliente si estás interesado en participar en este acceso anticipado.
-{% endalert %}
 
 El estado del grupo de suscripción de un usuario puede actualizarse mediante la inclusión de un parámetro `subscription_groups` dentro del objeto `attributes`. Para más detalles, consulta [Objeto de atributos de usuario]({{site.baseurl}}/api/objects_filters/user_attributes_object).
 
@@ -173,15 +169,15 @@ curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/
 
 ## Detalles de la respuesta
 
-Las respuestas de los puntos finales de envío de mensajes incluirán la dirección `dispatch_id` del mensaje como referencia para el envío del mensaje. El `dispatch_id` es el ID del envío del mensaje, un ID único para cada transmisión enviada desde Braze. Al utilizar este punto final, recibes un único `dispatch_id` para todo un conjunto de usuarios por lotes. Para más información sobre `dispatch_id`, consulta nuestra documentación sobre [el comportamiento de Dispatch ID]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+Las respuestas del punto final de envío de mensajes incluirán la dirección `dispatch_id` del mensaje para que sirva de referencia al envío del mensaje. El `dispatch_id` es el ID del envío del mensaje, un ID único para cada transmisión enviada desde Braze. Al utilizar este punto final, recibes un único `dispatch_id` para todo un conjunto de usuarios por lotes. Para más información sobre `dispatch_id`, consulta nuestra documentación sobre [el comportamiento de Dispatch ID]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 
 Si tu solicitud encuentra un error fatal, consulta [Errores y respuestas]({{site.baseurl}}/api/errors/#fatal-errors) para ver el código de error y la descripción.
 
 ## Objeto de atribución para campañas
 
-Braze tiene un objeto de mensajería llamado `attributes` que te permitirá añadir, crear o actualizar atributos y valores de un usuario antes de enviarle una campaña desencadenada por la API. Utilizando el punto final `campaign/trigger/send` como esta llamada API procesará el objeto de atributos de usuario antes de procesar y enviar la campaña. Esto ayuda a minimizar el riesgo de que se produzcan problemas causados por [condiciones de carrera]({{site.baseurl}}/help/best_practices/race_conditions/). Sin embargo, por defecto, los grupos de suscripción no pueden actualizarse de esta forma.
+Braze tiene un objeto de mensajería llamado `attributes` que te permitirá añadir, crear o actualizar atributos y valores de un usuario antes de enviarle una campaña desencadenada por la API. Utilizando el punto final `campaign/trigger/send` como esta llamada API procesará el objeto de atributos de usuario antes de procesar y enviar la campaña. Esto ayuda a minimizar el riesgo de que se produzcan problemas causados por [condiciones de carrera]({{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions/).
 
-{% alert important %}
+{% alert tip %}
 ¿Buscas la versión Canvas de este punto final? Echa un vistazo a [Enviar mensajes Canvas utilizando la entrega desencadenada por API]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/#create-send-endpoint).
 {% endalert %}
 

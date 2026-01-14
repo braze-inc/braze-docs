@@ -34,7 +34,7 @@ Lo que sigue es un resumen de los términos que puedes ver en la documentación 
 
 ### Puntos finales
 
-Braze gestiona varias instancias diferentes para nuestro panel y puntos finales REST. Cuando se aprovisione tu cuenta, accederás a una de las siguientes URL. Utiliza el punto final REST correcto en función de la instancia a la que estés aprovisionado. Si no estás seguro, abre un [ticket de soporte][support] o utiliza la siguiente tabla para hacer coincidir la URL del panel que utilizas con el REST Endpoint correcto.
+Braze gestiona varias instancias diferentes para nuestro panel y puntos finales REST. Cuando se aprovisione tu cuenta, accederás a una de las siguientes URL. Utiliza el punto final REST correcto en función de la instancia a la que estés aprovisionado. Si no estás seguro, abre un [ticket de soporte]({{site.baseurl}}/braze_support/) o utiliza la siguiente tabla para hacer coincidir la URL del panel que utilizas con el punto final REST correcto.
 
 {% alert important %}
 Cuando utilices puntos finales para las llamadas a la API, utiliza el punto final REST.
@@ -42,19 +42,7 @@ Cuando utilices puntos finales para las llamadas a la API, utiliza el punto fina
 Para la integración de SDK, utiliza el [punto final SDK]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/), no el punto final REST.
 {% endalert %}
 
-|Instancia|URL|Punto final de REST|Punto final de SDK|
-|---|---|---|
-|US-01| `https://dashboard-01.braze.com` | `https://rest.iad-01.braze.com` | `sdk.iad-01.braze.com` |
-|US-02| `https://dashboard-02.braze.com` | `https://rest.iad-02.braze.com` | `sdk.iad-02.braze.com` |
-|US-03| `https://dashboard-03.braze.com` | `https://rest.iad-03.braze.com` | `sdk.iad-03.braze.com` |
-|US-04| `https://dashboard-04.braze.com` | `https://rest.iad-04.braze.com` | `sdk.iad-04.braze.com` |
-|US-05| `https://dashboard-05.braze.com` | `https://rest.iad-05.braze.com` | `sdk.iad-05.braze.com` |
-|US-06| `https://dashboard-06.braze.com` | `https://rest.iad-06.braze.com` | `sdk.iad-06.braze.com` |
-|US-07| `https://dashboard-07.braze.com` | `https://rest.iad-07.braze.com` | `sdk.iad-07.braze.com` |
-|US-08| `https://dashboard-08.braze.com` | `https://rest.iad-08.braze.com` | `sdk.iad-08.braze.com` |
-|EU-01| `https://dashboard-01.braze.eu` | `https://rest.fra-01.braze.eu` | `sdk.fra-01.braze.eu` |
-|EU-02| `https://dashboard-02.braze.eu` | `https://rest.fra-02.braze.eu` | `sdk.fra-02.braze.eu` |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
+{% multi_lang_include data_centers.md datacenters='instances' %}
 
 ### Límites de API
 
@@ -65,7 +53,7 @@ Para la mayoría de las API, Braze tiene un límite de velocidad predeterminado 
 - **ID externo del usuario**: La dirección `external_id` sirve como identificador único del usuario cuyos datos envías. Este identificador debe ser el mismo que el que estableciste en el SDK de Braze para evitar crear varios perfiles para el mismo usuario.
 - **Braze ID de usuario**: `braze_id` sirve como identificador único de usuario que establece Braze. Este identificador puede utilizarse para eliminar usuarios a través de la API REST, además de external_ids.
 
-Para más información, consulta los siguientes artículos en función de tu plataforma: [iOS][9], [Android][10] y [Web][13].
+Para más información, consulta los siguientes artículos en función de tu plataforma: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/) y [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/).
 
 ## Acerca de las claves de API REST
 
@@ -75,7 +63,7 @@ Los espacios de trabajo y las claves de API van de la mano en Braze. Los espacio
 
 Nos referimos tanto a la clave de la API REST como a la clave de la API del espacio de trabajo como `api_key`. El `api_key` se incluye en cada solicitud como encabezado de solicitud y actúa como clave de autenticación que te permite utilizar nuestras API REST. Estas API REST se utilizan para hacer un seguimiento de los usuarios, enviar mensajes, exportar datos de usuario, etc. Cuando crees una nueva clave de API REST, tendrás que darle acceso a puntos finales específicos. Al asignar permisos específicos a una clave de API, puedes limitar exactamente qué llamadas puede autenticar dicha clave.
 
-![Panel de claves de API REST en la pestaña Claves de API.][27]
+![Panel de claves de API REST en la pestaña Claves de API.]({% image_buster /assets/img_archive/rest-api-key.png %})
 
 {% alert tip %}
 Además de las claves de API REST, también existe un tipo de clave llamada clave identificadora que puede utilizarse para hacer referencia a cosas concretas como aplicaciones, plantillas, lienzos, campañas, tarjetas de contenido y segmentos de la API. Para más información, consulta [Tipos de identificadores API]({{site.baseurl}}/api/identifier_types/).
@@ -86,16 +74,10 @@ Además de las claves de API REST, también existe un tipo de clave llamada clav
 Para crear una nueva clave de API REST:
 
 1. Ve a **Configuración** > **API e identificadores**.
-
-{% alert note %}
-Si utilizas la [navegación anterior]({{site.baseurl}}/navigation), puedes crear una clave de API desde **Consola para desarrolladores** > **Configuración de API**.
-{% endalert %}
-
-{:start="2"}
-2\. Selecciona **Crear clave de API**.
-3\. Asigna un nombre a tu nueva clave para identificarla de un vistazo.
-4\. Especifica [las direcciones IP y subredes permitidas](#api-ip-allowlisting) para la nueva clave.
-5\. Selecciona los [permisos](#rest-api-key-permissions) que quieres asociar a tu nueva clave.
+2. Selecciona **Crear clave de API**.
+3. Asigna un nombre a tu nueva clave para identificarla de un vistazo.
+4. Especifica [las direcciones IP y subredes permitidas](#api-ip-allowlisting) para la nueva clave.
+5. Selecciona los [permisos](#rest-api-key-permissions) que quieres asociar a tu nueva clave.
 
 {% alert important %}
 Ten en cuenta que después de crear una nueva clave de API, no puedes editar el alcance de los permisos ni las IP permitidas. Esta limitación se aplica por motivos de seguridad. Si necesitas cambiar el alcance de una clave, crea una nueva con los permisos actualizados e implementa esa clave en lugar de la anterior. Cuando hayas completado la implementación, puedes eliminar la clave antigua.
@@ -213,18 +195,6 @@ Los permisos de clave de API son permisos que puedes asignar a un usuario o grup
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% endtab %}
-{% tab Canal de noticias %}
-
-{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
-
-| Permiso | Punto de conexión | Descripción |
-|---|---|---|
-| `feed.list` | [`/feed/list`]({{site.baseurl}}/api/endpoints/export/news_feed/get_news_feed_cards/) | Consulta una lista de tarjetas de canal de noticias. |
-| `feed.data_series` | [`/feed/data_series`]({{site.baseurl}}/api/endpoints/export/news_feed/get_news_feed_card_analytics/) | Consulta el análisis de un canal de noticias a lo largo de un intervalo de tiempo. |
-| `feed.details` | [`/feed/details`]({{site.baseurl}}/api/endpoints/export/news_feed/get_news_feed_card_details/) | Consulta los detalles de un canal de noticias concreto. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
-
-{% endtab %}
 {% tab Sesiones %}
 
 | Permiso | Punto de conexión | Descripción |
@@ -324,6 +294,17 @@ Los permisos de clave de API son permisos que puedes asignar a un usuario o grup
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% endtab %}
+{% tab Autenticación SDK %}
+
+| Permiso | Punto de conexión | Descripción |
+|---|---|---|
+| `sdk_authentication.create` | [`/app_group/sdk_authentication/create`]({{site.baseurl}}/api/endpoints/sdk_authentication/post_create_sdk_authentication_key) | Crea una nueva clave de autenticación SDK para tu aplicación. |
+| `sdk_authentication.primary` | [`/app_group/sdk_authentication/primary`]({{site.baseurl}}/api/endpoints/sdk_authentication/put_primary_sdk_authentication_key/) | Marca una clave de autenticación SDK como clave principal de tu aplicación. |
+| `sdk_authentication.delete` | [`/app_group/sdk_authentication/delete`]({{site.baseurl}}/api/endpoints/sdk_authentication/delete_sdk_authentication_key) | Elimina una clave de autenticación SDK para tu aplicación. |
+| `sdk_authentication.keys` | [`/app_group/sdk_authentication/keys`]({{site.baseurl}}/api/endpoints/sdk_authentication/get_sdk_authentication_keys) | Obtén todas las claves de autenticación del SDK para tu aplicación. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
+{% endtab %}
 {% endtabs %}
 
 ### Gestión de claves de API REST
@@ -343,11 +324,11 @@ La pestaña **Claves de API** incluye la siguiente información para cada clave:
 
 Para ver los detalles de una clave de API, pasa el ratón por encima de la clave y selecciona <i class="fa-solid fa-eye" alt="View"></i> **Ver**. Esto incluye todos los permisos que tiene esta clave, las IP de la lista blanca (si las hay), y si esta clave está incluida en la lista blanca de IP de Braze.
 
-![La lista de permisos de la clave de API en el panel Braze.][30]
+![La lista de permisos de la clave de API en el panel Braze.]({% image_buster /assets/img_archive/view-api-key.png %})
 
 Ten en cuenta que, al [eliminar un]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/adding_users_to_your_dashboard/) usuario, no se eliminarán las claves de API asociadas que haya creado. Para borrar una tecla, pasa el ratón sobre ella y selecciona <i class="fa-solid fa-trash-can" alt="Delete"></i> **Borrar**.
 
-![Una clave de API llamada "Visto por última vez" con el icono de la papelera resaltado, mostrando "Eliminar".][29]{: style="max-width:30%;"}
+![Una clave de API llamada "Visto por última vez" con el icono de la papelera resaltado, mostrando "Eliminar".]({% image_buster /assets/img_archive/api-key-options.png %}){: style="max-width:30%;"}
 
 ### Seguridad de la clave de API REST
 
@@ -361,13 +342,13 @@ Una buena práctica de seguridad es asignar a un usuario sólo el acceso necesar
 Dado que las claves de API REST permiten acceder a puntos finales de API REST potencialmente sensibles, asegúrate de que se almacenan y utilizan de forma segura. Por ejemplo, no utilices esta clave para hacer llamadas AJAX desde tu sitio web ni la expongas de ninguna otra forma pública.
 {% endalert %}
 
-Si se produce una exposición accidental de una clave, puede borrarse desde la consola para desarrolladores. Si necesitas ayuda con este proceso, abre un [ticket de soporte][support].
+Si se produce una exposición accidental de una clave, puede borrarse desde la consola para desarrolladores. Si necesitas ayuda con este proceso, abre un [ticket de soporte]({{site.baseurl}}/braze_support/).
 
 ### Lista de direcciones IP permitidas de la API
 
 Para mayor seguridad, puedes especificar una lista de direcciones IP y subredes a las que se permite realizar solicitudes de API REST para una clave de API REST determinada. Esto se denomina lista blanca o lista permitida. Para permitir direcciones IP o subredes específicas, añádelas a la sección **IPs de la lista blanca** al crear una nueva clave de API REST:
 
-![Opción para permitir IPs de la lista al crear una clave de API.][26]
+![Opción para permitir IPs de la lista al crear una clave de API.]({% image_buster /assets/img_archive/api-key-ip-whitelisting.png %})
 
 Si no especificas ninguna, las peticiones pueden enviarse desde cualquier dirección IP.
 
@@ -383,22 +364,7 @@ Si estás implementando Braze utilizando Ruby, puedes utilizar nuestra [bibliote
 
 La biblioteca cliente Ruby admite los [puntos finales Usuario]({{site.baseurl}}/api/endpoints/user_data).
 
-{% alert note %}
+{% alert important %}
 Esta biblioteca cliente está actualmente en fase beta. ¿Quieres ayudarnos a mejorar esta biblioteca? Envíanos tus comentarios a [smb-product@braze.com](mailto:smb-product@braze.com).
 {% endalert %}
 
-[1]: https://en.wikipedia.org/wiki/UTF-8
-[7]: {{site.baseurl}}/api/objects_filters/connected_audience/
-[9]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/
-[10]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/
-[13]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/
-[2]: {{site.baseurl}}/api/identifier_types/
-[5]: {{site.baseurl}}/api/basics/
-[6]: https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#intro
-[25]: {% image_buster /assets/img_archive/api-key-permissions.png %}
-[26]: {% image_buster /assets/img_archive/api-key-ip-whitelisting.png %}
-[soporte]: {{site.baseurl}}/braze_support/
-[28]: {% image_buster /assets/img_archive/create-new-key.png %}
-[29]: {% image_buster /assets/img_archive/api-key-options.png %}
-[27]: {% image_buster /assets/img_archive/rest-api-key.png %}
-[30]: {% image_buster /assets/img_archive/view-api-key.png %}

@@ -29,7 +29,7 @@ Para utilizar este punto final, necesitarás un token SCIM. Utilizarás el orige
 
 ## Límite de velocidad
 
-{% multi_lang_include rate_limits.md endpoint='buscar correo electrónico del usuario del cuadro de mandos' %}
+{% multi_lang_include rate_limits.md endpoint='look up dashboard user email' %}
 
 ## Parámetros de la ruta
 

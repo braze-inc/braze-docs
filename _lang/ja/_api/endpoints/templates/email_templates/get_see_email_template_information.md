@@ -1,5 +1,5 @@
 ---
-nav_title: "取得:メールテンプレート情報を参照"
+nav_title: "取得:メールテンプレート情報を参照してください"
 article_title: "取得:メールテンプレート情報を参照"
 search_tag: Endpoint
 page_order: 4
@@ -44,11 +44,9 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/templates/email/
 ```
 {% endraw %}
 
-## 応答 
+## 応答
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
 {
   "email_template_id": (string) Your email template's API Identifier,
   "template_name": (string) The name of your email template,

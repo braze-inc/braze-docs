@@ -1,12 +1,8 @@
 No painel da Braze, acesse **Configurações de Dados** > **Transformação de Dados**.
 
-{% alert note %}
-Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), você pode encontrar **Transformações** em **Dados**.
-{% endalert %}
-
 Selecione **Criar Transformação** para nomear sua transformação, em seguida escolha sua experiência de edição.
 
-![Detalhes da transformação com a opção de escolher "Usar um modelo" ou "Começar do zero" para sua experiência de edição.]({% image_buster /assets/img/data_transformation/data_transformation10.png %})
+![Detalhes da transformação com a opção de escolher "Usar um modelo" ou "Começar do zero" para sua experiência de edição.]({% image_buster /assets/img/data_transformation/data_transformation10.png %}){: style="max-width:80%;"}
 
 Selecione **Usar um modelo** para navegar por uma biblioteca de modelos, incluindo casos de uso de Transformação de Dados. Ou, selecione **Começar do zero** para carregar um modelo de código padrão. 
 
@@ -28,8 +24,8 @@ Após criar sua transformação, você verá a visão detalhada da transformaç�
 
 {% if include.location == "typeform" %}
 
-![]({% image_buster /assets/img/typeform/data_transformation_typeform.png %})
-
-Capture seu **Webhook URL** para uso na próxima etapa.
+![Um exemplo de detalhes de webhook e código de transformação.]({% image_buster /assets/img/typeform/data_transformation_typeform.png %})
 
 {% endif %}
+
+Capture seu **Webhook URL** para uso na próxima etapa.

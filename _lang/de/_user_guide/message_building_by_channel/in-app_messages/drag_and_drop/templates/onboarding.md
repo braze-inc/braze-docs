@@ -10,7 +10,7 @@ description: "Auf dieser Seite erfahren Sie, wie Sie neue Nutzer:innen willkomme
 
 > Verwenden Sie die Vorlage für In-App-Nachricht im **Onboarding-Flow**, um Nutzer:innen-Attribute, Insights und Präferenzen zu sammeln, die Ihre Strategie für die Kampagne unterstützen. 
 
-{% multi_lang_include drag_and_drop/templates.md section='SDK-Anforderungen' %}
+{% multi_lang_include drag_and_drop/templates.md section='SDK requirements' %}
 
 ## Erstellen eines Onboarding-Ablaufs
 
@@ -18,11 +18,11 @@ description: "Auf dieser Seite erfahren Sie, wie Sie neue Nutzer:innen willkomme
 
 Wenn Sie eine In-App-Nachricht per Drag-and-Drop erstellen, wählen Sie für Ihr Template den **Onboarding-Fluss** und dann **Nachricht erstellen**. Dieses Template wird sowohl für mobile Apps als auch für Webbrowser unterstützt.
 
-![Der Editor für In-App-Nachrichten mit dem Onboarding Flow Template.][img1]
+![Der Editor für In-App-Nachrichten mit dem Onboarding Flow Template.]({% image_buster /assets/img/drag_and_drop/templates/onboarding_editor.png %})
 
 ### Schritt 2: Nachrichtenstile festlegen
 
-{% multi_lang_include drag_and_drop/templates.md section='Nachrichtenstil' %}
+{% multi_lang_include drag_and_drop/templates.md section='message style' %}
 
 ### Schritt 3: Passen Sie die Reihenfolge Ihres Onboarding-Flusses an
 
@@ -32,12 +32,10 @@ Vergewissern Sie sich, dass Ihre Nachrichten in der richtigen Reihenfolge verkn�
 
 ### Schritt 4: Nachricht gestalten
 
-Passen Sie das Aussehen Ihres Onboarding-Flusses mit den [In-App-Nachrichten-Komponenten][3] per Drag-and-Drop an.
+Passen Sie das Aussehen Ihres Onboarding-Flusses mit den [In-App-Nachrichten-Komponenten]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#message-components) per Drag-and-Drop an.
 
 ## Analysieren der Ergebnisse
 
-{% multi_lang_include drag_and_drop/templates.md section='Berichterstattung' %}
+{% multi_lang_include drag_and_drop/templates.md section='reporting' %}
 
-[img1]: {% image_buster /assets/img/drag_and_drop/templates/onboarding_editor.png %}
 
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#message-components

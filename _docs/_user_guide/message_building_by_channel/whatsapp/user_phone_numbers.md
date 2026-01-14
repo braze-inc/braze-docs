@@ -1,5 +1,5 @@
 ---
-nav_title: "User Phone Numbers"
+nav_title: "User phone numbers"
 article_title: WhatsApp User Phone Numbers
 page_order: 1.5
 description: "This reference article covers WhatsApp phone number formatting, how to importing phone numbers, as well as how to add users to WhatsApp subscription groups."
@@ -29,7 +29,7 @@ All U.S. numbers must be valid, 10-digit phone numbers with a valid area code. T
 
 All international numbers should start with a `+`, followed by their country code and then the phone number. (e.g `+442071838750`)
 
-![][picture]{: style="max-width:50%;border: 0;"}
+![]({% image_buster /assets/img/sms/e164.png %}){: style="max-width:50%;border: 0;"}
 
 However, to ensure accuracy in the event that you are sending to multiple regions with different country or area codes, it is recommended to use the `E.164` format, even for U.S.-based phone numbers.
 
@@ -38,7 +38,7 @@ You can see the differences between local number formatting as well as universal
 | Country | Local | Country Code | `E.164` |
 |---|---|---|---|
 | USA | `4155552671` | 1 | `+14155552671` |
-| UK | `2071838750` | 44 | `+442071838750` |
+| UK | `02071838750` | 44 | `+442071838750` |
 | Brazil | `1155256325` | 55 | `+551155256325` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 reset-td-br-4}
 
@@ -51,5 +51,4 @@ For a customer to receive an WhatsApp message, they must have a valid phone numb
 
 If multiple users have the same phone number within a segment of a single campaign or Canvas step, Braze will deduplicate the sending and send only one message to that one phone number. 
 
-[picture]: {% image_buster /assets/img/sms/e164.png %}
 

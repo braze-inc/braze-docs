@@ -30,12 +30,16 @@
 <i>ソフトバウンスとは</i>、受信者のメールアドレスが有効であるにもかかわらず、一時的な配信エラーによってメールが受信者に届かないことをいう。ソフトバウンスが発生する理由として、受信者の受信トレイがいっぱいである、サーバーが停止している、メッセージが受信者の受信トレイには大きすぎる、などがあります。
 {% endif %}
 
+{% if include.metric == "Deferral" %}
+<i>延期とは</i>、メールがすぐに配信されなかった場合であるが、Brazeは、この一時的な配信失敗の後、最大72時間までメールを再試行し、特定のキャンペーンの試行が停止される前に、配信成功の可能性を最大化する。
+{% endif %}
+
 {% if include.metric == "Body Click" %}
 プッシュストーリー通知は、通知がクリックされると<i>ボディクリックを</i>記録する。メッセージが展開されたとき、またはアクションボタンがクリックされたときには記録されません。
 {% endif %}
 
 {% if include.metric == "Body Clicks" %}
-<i>ボディ・クリックは</i>、従来のエディターで作成されたボタン（ボタン1、ボタン2）のないメッセージをユーザーがクリックしたとき、また、HTMLエディターやドラッグ＆ドロップ・エディターで作成されたメッセージが引数のない  <code>brazeBridge.logClick()</code>  を使用したときに発生します。
+<i>ボディ・クリックは</i>、従来のエディターで作成されたボタン（ボタン1、ボタン2）のないメッセージをユーザーがクリックしたとき、また、HTMLエディターやドラッグ＆ドロップ・エディターで作成されたメッセージが引数のない <code>brazeBridge.logClick()</code>  を使用したときに発生します。
 {% endif %}
 
 {% if include.metric == "Button 1 Clicks" %}
@@ -102,8 +106,16 @@
 <i>配信の失敗とは</i>、キューがオーバーフローしたためにSMSを送信できなかった場合である（ロングコードまたはショートコードが処理できる以上のレートでSMSを送信した）。
 {% endif %}
 
+{% if include.metric == "Delivery Failures RCS" %}
+<i>配信失敗</i>とは、キューがオーバーフローしたために RCS を送信できなかった (RCS を検証済みの送信者が処理できる以上の速度で RCS を送信した) 場合です。
+{% endif %}
+
+{% if include.metric == "Failed Delivery Rate" %}
+<i>配信失敗率</i>は、メッセージが送信できなかったために失敗した送信の割合です。これは、キューのオーバーフロー、アカウントの停止、MMSの場合のメディアエラーなど、さまざまな理由で起こりうる。
+{% endif %}
+
 {% if include.metric == "Direct Opens" %}
-<i>直接開封数</i>とは、プッシュから直接開封されたプッシュ通知の合計数 (および割合)。
+<i>直接開封数</i>は、通知を直接押してアプリや Web サイトを開いたユーザーの総数です。
 {% endif %}
 
 {% if include.metric == "Emailable" %}
@@ -123,19 +135,19 @@
 {% endif %}
 
 {% if include.metric == "Lifetime Revenue" %}
-<i>生涯収益</i>とは開始以降に受け取った  <code>PurchaseEvents</code>  価格の合計 (USD) です。
+<i>生涯収益</i>とは開始以降に受け取った <code>PurchaseEvents</code>  価格の合計 (USD) です。
 {% endif %}
 
 {% if include.metric == "Lifetime Value Per User" %}
-<i>ユーザーあたりの生涯価値</i>とは、指定された日のキャンペーンとキャンバスの収益の合計の平均です。
+<i>Lifetime Value Per Userは</i>、<i>生涯収益を</i> <i>総ユーザー数で</i>割ったものである（ホームページに記載）。
 {% endif %}
 
 {% if include.metric == "Average Daily Revenue" %}
-<i>平均日次収益とは</i>、<i>生涯収益を</i> <i>総ユーザー数で</i>割ったものである（ホームページに記載）。
+<i>Average Daily revenue</i> は、指定された日のキャンペーンとキャンバスの収益の合計の平均です。
 {% endif %}
 
 {% if include.metric == "Daily Purchases" %}
-[<i>日割り購入数</i>] は、期間中のユニークの合計  <code>PurchaseEvents</code>  を平均した数です。
+[<i>日割り購入数</i>] は、期間中のユニークの合計 <code>PurchaseEvents</code>  を平均した数です。
 {% endif %}
 
 {% if include.metric == "Daily Revenue Per User" %}
@@ -155,7 +167,7 @@
 {% endif %}
 
 {% if include.metric == "Opt-Out" %}
-<i>オプトアウトとは</i>、ユーザーがあなたのメッセージに<a href="https://braze.com/docs/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#default-opt-in-opt-out-keywords">オプトアウトキーワードで</a>返信し、あなたのSMSプログラムから配信停止された場合である。
+<i>オプトアウト</i>とは、ユーザーがあなたのメッセージに<a href="https://braze.com/docs/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#default-opt-in-opt-out-keywords">オプトアウトキーワード</a>で返信し、あなたの SMS または RCS プログラムから購読解除された時のことをいいます。
 {% endif %}
 
 {% if include.metric == "Pending Retry" %}
@@ -163,11 +175,15 @@
 {% endif %}
 
 {% if include.metric == "Primary Conversions (A) or Primary Conversion Event" %}
-<i>1次コンバージョン (A)</i> または <i>1次コンバージョンイベント</i>とは Braze キャンペーンから受信したメッセージの操作後または表示後に、定義されたイベントが発生した回数です。この定義されたイベントは、キャンペーンを作成するときにあなたが決定します。
+<i>1次コンバージョン（A）</i>または<i>1次コンバージョンイベントとは</i>、Brazeキャンペーンからのメッセージを受信または閲覧した後、定義されたイベントを実行したユニークユーザーの数である。このイベントはキャンペーンの設定時に選択され、レポートと最適化のための主要な成功指標として使用される。
 {% endif %}
 
 {% if include.metric == "Reads" %}
-<i>既読</i>とは、ユーザーが WhatsApp メッセージを読んだ時のことをいいます。Braze が既読数を追跡するには、ユーザーの既読レシートが「オン」になっている必要があります。
+<i>既読</i>とは、ユーザーがメッセージを読んだ時のことを言います。Braze が既読数を追跡するには、ユーザーの既読レシートが「オン」になっている必要があります。
+{% endif %}
+
+{% if include.metric == "Read Rate" %}
+<i>読み取り率とは</i>、送信のうち、読み取りが行われた割合である。これは、読み取りレシートをオンにしているユーザーにのみ与えられる。
 {% endif %}
 
 {% if include.metric == "Received" %}
@@ -175,7 +191,7 @@
 {% endif %}
 
 {% if include.metric == "Rejections" %}
-<i>拒否とは</i>、SMSがキャリアによって拒否された場合である。これは、通信事業者のコンテンツフィルタリング、宛先デバイスの可用性、電話番号の使用停止など、さまざまな理由から発生する可能性があります。
+<i>拒否</i>とは、SMS またはRCS がキャリアによって拒否された時のことをいいます。これは、通信事業者のコンテンツフィルタリング、宛先デバイスの可用性、電話番号の使用停止など、さまざまな理由から発生する可能性があります。
 {% endif %}
 
 {% if include.metric == "Revenue" %}
@@ -187,7 +203,7 @@
 {% endif %}
 
 {% if include.metric == "Sent" %}
-<i>送信済みとは</i>、キャンペーンまたはキャンバスステップが開始またはトリガーされ、BrazeからSMSが送信されるたびに送信される。エラーによってSMSがユーザーの端末に届かなかった可能性もある。
+<i>送信済み</i>とは、キャンペーンまたはキャンバスステップが開始またはトリガーされ、Braze から SMS または RCS が送信されることをいいます。エラーによって SMS または RCS がユーザーの端末に届かなかった可能性もあります。
 {% endif %}
 
 {% if include.metric == "Sends" %}
@@ -198,8 +214,12 @@
 <i>キャリアへの送信数</i>は非推奨になりましたが、すでにそれをお持ちのユーザーについては引き続きサポートされます。これは、<i>確認済み配信数</i>、<i>拒否数</i>、および通信事業者によって配信または拒否が確認されなかった<i>送信数</i>の合計です。これには、一部の通信事業者がこの確認を提供していないか、送信時に提供できないため、通信事業者が配信や拒否された確認を提供していない場合も含まれます。
 {% endif %}
 
+{% if include.metric == "Sends to Carrier Rate" %}
+<i>キャリアへの送信率</i>は、送信されたメッセージのうち、<i>キャリアへの送信</i>として分類されたメッセージの割合です。これには、運送業者が配達確認や配達拒否確認を提供しない場合も含まれる。運送業者によっては、配達確認を提供しないか、発送時に提供できない場合もあるからだ。この指標は非推奨ですが、すでにそれをお持ちのユーザーについては引き続きサポートされます。
+{% endif %}
+
 {% if include.metric == "Spam" %}
-<i>スパムは</i>、"スパム "とマークされたメールの総数である。Braze では、メールをスパムとしてマークしたユーザーを自動的に配信停止し、そのようなユーザーは将来のメールのターゲットになりません。
+<i>スパム</i>は、受信者によって「スパム」とマークされたメールの総数です。Braze はこれらのユーザーの購読状態を変更しませんが、「購読解除を含むすべてのユーザーに送信する」ように設定されているトランザクションメールを送信しない限り、これらのユーザーは今後のメールで自動的に除外されます。
 {% endif %}
 
 {% if include.metric == "Survey Page Dismissals" %}
@@ -211,11 +231,11 @@
 {% endif %}
 
 {% if include.metric == "Total Clicks" %}
-<i>Total Clicksは</i>、同じユーザーが複数回クリックしたかどうかにかかわらず、配信されたメッセージ内でクリックしたユーザーの総数（および割合）である。
+<i>クリック数の合計</i>は、配信されたメッセージ内のリンクをクリックしたユニークな受信者の数です。
 {% endif %}
 
 {% if include.metric == "Total Dismissals" %}
-<i>却下数の合計</i>とは、キャンペーンのコンテンツカードが却下された回数です。あるユーザーがメッセージを 2 回無視しても、1 回のみカウントされます。
+<i>却下数の合計</i>とは、キャンペーンのコンテンツカードが却下された回数です。
 {% endif %}
 
 {% if include.metric == "Total Impressions" %}
@@ -231,21 +251,26 @@
 {% endif %}
 
 {% if include.metric == "Unique Clicks" %}
-<i>ユニーククリック率</i>とは、メッセージ内で少なくとも1回クリックしたユニーク受信者の数であり <a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a> によって測定されます。
+<i>ユニーククリック数とは</i>、メッセージ内のリンクを一度でもクリックした受信者の数であり、以下の方法で測定される。 <a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a>.
+{% endif %}
+
+<!-- Pull channels like Banners that don't have a Dispatch ID-->
+{% if include.metric == "Unique Clicks No Dispatch ID" %}
+<i>ユニーククリック数とは</i>、メッセージ内のリンクを一度でもクリックした受信者の数である。
 {% endif %}
 
 {% if include.metric == "Unique Dismissals" %}
-<i>ユニーク却下数</i>とは、キャンペーンからコンテンツカードを却下したユーザーの数です。あるユーザーがキャンペーンからコンテンツカードを複数回却下すると、ユニークな却下 1 回になります。
+<i>ユニーク却下数</i>は、キャンペーンからコンテンツカードを却下した受信者の一意の数です。あるユーザーがキャンペーンからコンテンツカードを複数回却下すると、ユニークな却下 1 回になります。
 {% endif %}
 
 <!-- Unique Impressions & Unique Recipients have a dedicated section in campaign_analytics.md -->
 
 {% if include.metric == "Unique Impressions" %}
-<i>ユニークインプレッション数</i>とは、1日に特定のメッセージを受信して表示したユーザーの総数です。
+<i>ユニークインプレッション数</i>とは、特定のキャンペーンからメッセージを受信して表示したユーザーの総数です。
 {% endif %}
 
 {% if include.metric == "Unique Recipients" %}
-<i>ユニーク受信者数</i>とは、1日のユニーク受信者数、つまり、1日に特定のメッセージを受信したユーザーの数です。
+<i>ユニーク受信者数</i>とは、1日のユニーク受信者数、つまり、1日に新しいメッセージを受信したユーザーの数です。このカウントが1人のユーザーに対して複数回増分されるためには、そのユーザーが別の日に新しいメッセージを受け取る必要があります。
 {% endif %}
 
 {% if include.metric == "Unique Opens" %}

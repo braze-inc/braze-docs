@@ -10,11 +10,15 @@ search_tag: Partner
 
 # Radar
 
-> [Radar](https://www.onradar.com/) es la principal plataforma de geovallado y seguimiento de ubicación. La plataforma Radar tiene tres productos principales: [Geovallas](https://radar.io/product/geofencing), [seguimiento de viajes](https://radar.io/product/trip-tracking) y [API geográficas](https://radar.io/product/api). La combinación de la plataforma de compromiso líder del sector de Braze y las capacidades de geofencing líderes del sector de Radar le permite impulsar los ingresos y la fidelidad a través de una amplia gama de experiencias de productos y servicios basadas en la ubicación. Entre ellas se incluyen el seguimiento de la recogida y la entrega, las notificaciones activadas por la ubicación, la personalización contextual, la verificación de la ubicación, los localizadores de tiendas, la función de autocompletar direcciones, etc.
+> [Radar](https://www.onradar.com/) es la principal plataforma de geovallado y seguimiento de ubicación. La plataforma Radar tiene tres productos principales: [Geovallas](https://radar.io/product/geofencing), [seguimiento de viajes](https://radar.io/product/trip-tracking) y [API geográficas](https://radar.io/product/api). La combinación de la plataforma de interacción líder del sector Braze y las capacidades de geovallado líderes del sector de Radar te permite impulsar los ingresos y la fidelización a través de una amplia gama de experiencias de productos y servicios basadas en la ubicación. Entre ellas se incluyen el seguimiento de la recogida y la entrega, las notificaciones activadas por la ubicación, la personalización contextual, la verificación de la ubicación, los localizadores de tiendas, la función de autocompletar direcciones, etc.
+
+_Esta integración está mantenida por Radar._
+
+## Sobre la integración
 
 La integración de Braze y Radar le permite acceder a sofisticados activadores de campañas basados en la ubicación y al enriquecimiento del perfil del usuario con datos de ubicación enriquecidos y de primera mano. Cuando se generan eventos de geovalla Radar o de seguimiento de viajes, los eventos personalizados y los atributos de usuario se envían a Braze en tiempo real. Estos eventos y atributos pueden utilizarse para lanzar campañas basadas en la localización, impulsar operaciones de recogida y entrega en el último kilómetro, supervisar la logística de flotas y envíos o crear segmentos de usuarios basados en patrones de localización. 
 
-Además, las Geo API de Radar pueden aprovecharse para enriquecer o personalizar sus campañas de marketing a través [del Contenido Conectado]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/). 
+Además, las Geo API de Radar pueden aprovecharse para enriquecer o personalizar sus campañas de marketing a través [del Contenido Conectado]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/). 
 
 ## Requisitos previos
 
@@ -68,7 +72,7 @@ Por ejemplo, diríjase a cualquier usuario que haya visitado su tienda en los ú
 
 El siguiente ejemplo muestra cómo realizar una promoción para llevar a los usuarios cercanos a la tienda con una oferta digital. 
 
-![Una imagen de Android de un mensaje push de contenido conectado que muestra "Nuevas ofertas en tienda, Walmart y Target cerca de ti".][1]{: style="float:right;max-width:30%;border:0;"}
+![Una imagen de Android de un mensaje push de contenido conectado que muestra "Nuevas ofertas en tienda, Walmart y Target cerca de ti".]({% image_buster /assets/img/radar_example.png %}){: style="float:right;max-width:30%;border:0;"}
 
 Para empezar, necesitará tener a mano su clave de API publicable de Radar para utilizarla en sus URL de solicitud.
 
@@ -179,4 +183,4 @@ near you!
 Visita [la documentación de Radar](https://radar.io/documentation/api) para ver todas las API de Radar que pueden aprovecharse en el contenido conectado.
 {% endalert %}
 
-[1]: {% image_buster /assets/img/radar_example.png %}
+

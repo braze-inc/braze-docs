@@ -1,5 +1,5 @@
 ---
-nav_title: Technical Solutions
+nav_title: Technical solutions
 page_order: 3
 
 #Required
@@ -82,6 +82,5 @@ If you want to learn more about things that were discussed in the article, check
 
 ### Still Lost?
 
-If this article didn't help, leave feedback or open a [support ticket][support]!
+If this article didn't help, leave feedback or open a [support ticket]({{site.baseurl}}/braze_support/)!
 
-[support]: {{site.baseurl}}/braze_support/

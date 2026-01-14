@@ -59,6 +59,9 @@ L’élément du code d’état d’une réponse serveur est un numéro à 3 ch
 - Le code d'état de **classe 2XX** (non fatal) indique que **votre demande** a été reçue, comprise et acceptée avec succès.
 - La **classe 4XX** du code de statut (fatal) indique une **erreur du client**. Reportez-vous au tableau des erreurs fatales pour obtenir une liste complète des codes d’erreur et descriptions de la classe 4XX.
 - La **classe 5XX** du code de statut (fatal) indique une **erreur du serveur**. Il y a plusieurs causes possibles, par exemple, le serveur auquel vous essayez d'accéder n'est pas en mesure d'exécuter la requête, le serveur fait l'objet d'une maintenance qui l'empêche d'exécuter la requête, ou le serveur connaît des niveaux élevés de trafic. Dans ce cas, nous vous recommandons de réessayer votre demande avec un délai exponentiel. En cas d'incident ou de panne, Braze n'est pas en mesure de lire à nouveau un appel d’API REST qui a échoué pendant la fenêtre d'incident. Vous devrez réessayer les appels qui ont échoué pendant la fenêtre d'incident.
+  - Une **erreur 502** est un échec avant que le message n'atteigne le serveur de destination.
+  - Une **erreur 503** signifie que la demande est parvenue jusqu'au serveur de destination, mais que nous ne pouvons pas la traiter en raison d'un manque de capacité, d'un problème de réseau ou d'un problème similaire.
+  - Une **erreur 504** indique qu'un serveur n'a pas reçu de réponse d'un autre serveur en amont.
 
 ### Erreurs fatales
 
@@ -89,7 +92,7 @@ Tous les codes d’erreur suivants indiquent qu’aucun message ne sera envoyé.
 | `400 Android Push Length Exceeded` | La charge utile JSON est supérieure à 4 000 octets.|
 | `400 Bad Request` | Impossible d’analyser l’horodatage `send_at`.|
 | `400 Bad Request` | Dans votre demande, `in_local_time` est vrai, mais `time` est passé dans le fuseau horaire de votre entreprise.|
-| `401 Unauthorized` | Clé API non valide. |
+| `401 Unauthorized` | Clé API non valide. Cette erreur peut également se produire si<br><br> \- Vous envoyez la demande à la mauvaise [instance]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/). Par exemple, si votre compte se trouve sur notre instance européenne (`https://dashboard-01.braze.eu`), la demande doit être envoyée à `https://rest.fra-01.braze.eu`.<br>\- La syntaxe de la clé API utilise des guillemets simples ou doubles. La syntaxe correcte est `Authorization: Bearer {YOUR-API-KEY}`. |
 | `403 Forbidden` | Le plan tarifaire n'est pas pris en charge ou le compte est désactivé.|
 | `403 Access Denied` | La clé API REST que vous utilisez ne dispose pas d'autorisations suffisantes, vérifiez les autorisations de la clé API sous la page **Paramètres.** |
 | `404 Not Found` | URL non valide. |

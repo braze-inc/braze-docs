@@ -42,11 +42,11 @@ glossary_tags:
   - name: Lista de correo electrónico
   - name: Plantillas de correo electrónico
   - name: KPI
-  - name: Canal de noticias
   - name: Compras
   - name: Centro de preferencias
   - name: Programar mensajes
   - name: SCIM
+  - name: Autenticación SDK
   - name: Segmentos
   - name: Enviar mensajes
   - name: SMS
@@ -312,18 +312,6 @@ glossaries:
     description: Recupera una serie diaria del número total de desinstalaciones en cada fecha.
     tags:
       - KPI
-  - name: "<a href='/docs/api/endpoints/export/news_feed/get_news_feed_card_analytics/'>/feed/data_series</a>"
-    description: Recuperar una serie diaria de estadísticas de participación de una tarjeta a lo largo del tiempo.
-    tags:
-      - News Feed
-  - name: "<a href='/docs/api/endpoints/export/news_feed/get_news_feed_card_details/'>/feed/details</a>"
-    description: Recuperar información relevante sobre una tarjeta.
-    tags:
-      - News Feed
-  - name: "<a href='/docs/api/endpoints/export/news_feed/get_news_feed_cards/'>/feed/list</a>"
-    description: "Exportar una lista de tarjetas de noticias, cada una de las cuales incluirá su nombre y el identificador API de la tarjeta."
-    tags:
-      - News Feed
   - name: "<a href='/docs/api/endpoints/sms/post_remove_invalid_numbers/'>/sms/invalid_phone_numbers/remove</a>"
     description: "Eliminar números de teléfono \"inválidos\" de la lista de inválidos en Braze. Se puede utilizar para volver a validar números de teléfono después de que se hayan marcado como no válidos."
     tags:
@@ -409,11 +397,11 @@ glossaries:
     tags:
       - Catalogs
   - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/put_update_catalog_item/'>/catalogs/{catalog_name}/items/{item_id}</a>"
-    description: Actualizar un elemento de un catálogo.
+    description: Sustituye un elemento de un catálogo.
     tags:
       - Catalogs
   - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/asynchronous/put_update_catalog_items/'>/catalogs/{catalog_name}/items/</a>"
-    description: Actualizar varios elementos de un catálogo.
+    description: Sustituye varios elementos de un catálogo.
     tags:
       - Catalogs
   - name: "<a href='/docs/api/endpoints/catalogs/catalog_fields/asynchronous/post_create_catalog_fields/'>/catalogs/{catalog_name}/fields/</a>"
@@ -437,7 +425,7 @@ glossaries:
     tags:
       - SCIM
   - name: "<a href='/docs/get_see_user_account_information/'>/scim/v2/Usuarios/{id}</a>"
-    description: Busca una cuenta de usuario existente en el panel especificando su dirección de correo electrónico.
+    description: Busca una cuenta de usuario existente en el panel especificando su ID de recurso.
     tags:
       - SCIM
   - name: "<a href='/docs/post_update_existing_user_account/'>/scim/v2/Usuarios/{id}</a>"
@@ -464,4 +452,20 @@ glossaries:
     description: Devuelve una lista de estados de sincronización.
     tags:
       - Cloud Data Ingestion
+  - name: "<a href='/docs/api/endpoints/sdk_authentication/post_create_sdk_authentication_key/'>/app_group/sdk_authentication/crear</a>"
+    description: Crea una nueva clave de autenticación SDK para tu aplicación.
+    tags:
+      - SDK Authentication
+  - name: "<a href='/docs/api/endpoints/sdk_authentication/get_sdk_authentication_keys/'>/app_group/sdk_authentication/keys</a>"
+    description: Lista las claves de autenticación del SDK para tu aplicación.
+    tags:
+      - SDK Authentication
+  - name: "<a href='/docs/api/endpoints/sdk_authentication/put_primary_sdk_authentication_key/'>/app_group/sdk_authentication/primario</a>"
+    description: Establece una clave de autenticación SDK como clave principal de tu aplicación.
+    tags:
+      - SDK Authentication
+  - name: "<a href='/docs/api/endpoints/sdk_authentication/delete_sdk_authentication_key/'>/app_group/sdk_autenticacion/eliminar</a>"
+    description: Elimina una clave de autenticación SDK para tu aplicación.
+    tags:
+      - SDK Authentication  
 ---

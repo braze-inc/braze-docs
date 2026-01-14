@@ -59,7 +59,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 |`body`|Facultatif|Chaîne de caractères|Corps du modèle d’e-mail pouvant inclure du HTML.|
 |`plaintext_body`|Facultatif|Chaîne de caractères|Une version en texte brut du corps du modèle d’e-mail.|
 |`preheader`|Facultatif|Chaîne de caractères|Accroche d’e-mail utilisée pour générer des aperçus chez certains clients.|
-|`tags`|Facultatif|Chaîne de caractères|Les [étiquettes]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) doivent déjà exister.|
+|`tags`|Facultatif|Chaîne de caractères|Les [étiquettes]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) doivent déjà exister.|
 |`should_inline_css`|Facultatif|Valeur booléenne|Active ou désactive la fonction `inline_css` par modèle. Si non renseigné, Braze utilisera le paramètre par défaut de l’AppGroup. `true` ou `false` est attendu.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 

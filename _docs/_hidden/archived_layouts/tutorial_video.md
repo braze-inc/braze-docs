@@ -1,5 +1,5 @@
 ---
-nav_title: Video Tutorial
+nav_title: Video tutorial
 layout: featured_video
 video_id: XY5uXoKIvFY
 video_source: youtube
@@ -120,6 +120,5 @@ If you want to learn more about things that were discussed in the article, check
 
 ### Still Lost?
 
-If this article didn't help, leave feedback or open a [support ticket][support]!
+If this article didn't help, leave feedback or open a [support ticket]({{site.baseurl}}/braze_support/)!
 
-[support]: {{site.baseurl}}/braze_support/

@@ -1,5 +1,5 @@
 ---
-nav_title: "取得:既存のダッシュボードユーザーアカウントをメールで検索"
+nav_title: "取得:既存のダッシュボードのユーザーアカウントをEメールで検索する"
 article_title: "取得:既存のダッシュボードユーザーアカウントをメールで検索"
 alias: /get_search_existing_dashboard_user_email/
 search_tag: Endpoint
@@ -12,10 +12,10 @@ description: "この記事では、EメールBrazeエンドポイントによる
 {% api %}
 # 既存のダッシュボードのユーザーアカウントをEメールで検索する
 {% apimethod get %}
-scim/v2/Users?filter=userName%20eq%20"user%40test.com"
+scim/v2/Users?filter=userName%20eq%20 "user%40test.com"
 {% endapimethod %}
 
-> このエンドポイントを使用して、フィルタークエリーパラメーターにメールを指定して、既存のダッシュボードユーザーアカウントを検索します。 
+> このエンドポイントを使用して、フィルタークエリーパラメーターにメールを指定して、既存のダッシュボードユーザーアカウントを検索します。
 
 クエリーパラメーターがURLエンコードされている場合、次のようになることに注意：
 
@@ -79,11 +79,11 @@ curl --location --request GET \ 'https://rest.iad-01.braze.com/scim/v2/Users?fil
                         "team": [
                             {
                                 "teamId": "241adcd25789fabcded",
-                                "teamName": "Test Team",                  
+                                "teamName": "Test Team",
                                 "teamPermissions": ["admin"]
                             }
                         ]
-                    } 
+                    }
                 ]
             }
         }

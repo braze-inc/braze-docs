@@ -1,6 +1,6 @@
 ---
-nav_title: Creating an Email
-article_title: Creating an Email with Custom HTML
+nav_title: Create an email
+article_title: Create an Email with Custom HTML
 page_order: 1
 description: "This reference article covers how to create an email using the Braze platform. Included are best practices on how to compose your messages, preview your content, and schedule your campaign or Canvas."
 tool:
@@ -10,7 +10,7 @@ channel:
 search_rank: 1  
 ---
 
-# Creating an email with custom HTML
+# Create an email with custom HTML
 
 > Email messages are great for delivering content to your users on their terms. They are also excellent tools to re-engage users who may have even uninstalled your app. Sending customized and tailored email messages will enhance your users' experience, and help your users get the most value out of your app. 
 
@@ -24,18 +24,12 @@ If this is your first time creating an email campaign, we highly recommend check
 
 ## Step 1: Choose where to build your message
 
-Not sure whether your message should be sent using a campaign or a Canvas? Campaigns are better for single, simple messaging campaigns, while Canvases are better for multi-step user journeys.
+Not sure whether your message should be sent using a campaign or a Canvas? Campaigns are better for single, targeted messaging campaigns, while Canvases are better for multi-step user journeys.
 
 {% tabs %}
 {% tab Campaign %}
 
 1. Go to **Messaging** > **Campaigns** and select **Create Campaign**.
-
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), you can find **Campaigns** under **Engagement**.
-{% endalert %}
-
-{:start=“2"}
 2. Select **Email**, or, for campaigns targeting multiple channels, select **Multichannel**.
 3. Name your campaign something clear and meaningful.
 4. Add [teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) and [tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) as needed.
@@ -57,13 +51,15 @@ If all of the messages in your campaign are going to be similar or have the same
 {% endtab %}
 {% endtabs %}
 
+{% multi_lang_include drag_and_drop/drag_and_drop_access.md variable_name='email html editor' %}
+
 ## Step 2: Select your editing experience {#step-2-choose-your-template-and-compose-your-email}
 
 Braze offers two editing experiences when creating an email campaign: our [drag-and-drop editor]({{site.baseurl}}/dnd/) and our standard HTML editor. Choose the appropriate tile for the editing experience you'd prefer. 
 
-![Choosing between the drag-and-drop editor, HTML editor, or templates for your email editing experience.][3]{: style="max-width:75%" }
+![Choosing between the drag-and-drop editor, HTML editor, or templates for your email editing experience.]({% image_buster /assets/img_archive/choose_email_creation.png %}){: style="max-width:75%" }
 
-Then, you can either select an existing [email template][10], [upload a template][18] from a file (HTML editor only), or use a blank template. 
+Then, you can either select an existing [email template]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/#creating-an-email-template), [upload a template]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/html_email_template/) from a file (HTML editor only), or use a blank template. 
 
 {% alert tip %}
 We recommend selecting one editing experience per email campaign. For example, choose either the **HTML Classic** or **Block editor** in a single email campaign rather than switching between editors.
@@ -73,7 +69,7 @@ We recommend selecting one editing experience per email campaign. For example, c
 
 After you've selected your template, you'll see an overview of your email where you can directly jump to the fullscreen editor to draft your email, change your sending information, and view warnings about deliverability or law compliance. You can switch among HTML, classic, plaintext, and [AMP]({{site.baseurl}}/user_guide/message_building_by_channel/email/amphtml/) tabs while you compose. 
 
-![The "Regenerate from HTML" button.][1]{: style="max-width:30%;float:right;margin-left:15px;border:none;" }
+![The "Regenerate from HTML" button.]({% image_buster /assets/img_archive/regenerate_from_html.png %}){: style="max-width:30%;float:right;margin-left:15px;border:none;" }
 
 The plaintext version of your email will always update automatically from the HTML version until an edit to the plaintext version is detected. When an edit is detected, Braze will no longer update the plaintext, as we assume you made intentional changes that shouldn't be overwritten. You can revert to automatic synchronization in the **Plaintext** tab by selecting the **Regenerate from HTML** icon, which only appears if the plaintext isn't synchronizing.
 
@@ -81,19 +77,19 @@ The plaintext version of your email will always update automatically from the HT
 To add motion in an email with an accurate preview, use GIFs instead of elements that require JavaScript, as most inboxes don't support JavaScript.
 {% endalert %}
 
-![Email Variants panel for composing your email.][14]{: style="max-width:75%" }
+![Email Variants panel for composing your email.]({% image_buster /assets/img/email.png %}){: style="max-width:75%" }
 
 {% alert important %}
 Braze will automatically remove HTML event handlers referenced as attributes. This will modify the HTML, so it is recommended to re-check the email after it's completed. Learn more about [HTML handlers](https://www.w3schools.com/tags/ref_eventattributes.asp).
 {% endalert %}
 
 {% alert tip %}
-Need help creating awesome copy? Try using the [AI copywriting assistant]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/). Input a product name or description and the AI will generate human-like marketing copy for use in your messaging.
+Need help creating awesome copy? Try using the [AI copywriting assistant]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/). Input a product name or description and the AI will generate human-like marketing copy for use in your messaging.
 
 ![Launch AI Copywriter button, located in the Body tab of the email composer.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_email.png %}){: style="max-width:80%"}
 {% endalert %}
 
-Need help crafting right-to-left messages for languages like Arabic and Hebrew? Refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/) for best practices.
+Need help crafting right-to-left messages for languages like Arabic and Hebrew? Refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/) for best practices.
 
 ### Step 3a: Add your sending information
 
@@ -103,6 +99,8 @@ After you've finished designing and building your email message, it's time to ad
 2. Select an email as the **Reply-To Address**. You can also customize this by selecting **Customize Reply-To Address**.
 3. Next, select an email as the **BCC Address** to make your email visible to this address.
 4. Add a subject line to your email. Optionally, you can also add a preheader and a whitespace after the preheader.
+
+{% multi_lang_include alerts/tip_alerts.md alert='Liquid email display name and reply-to address' %}
 
 A preview in the right-hand panel will populate with the sending information you've added. This information can also be updated by going to **Settings** > **Email Preferences** > **Sending Configuration**.
 
@@ -169,7 +167,7 @@ Email extras allows you to send additional data back to other email service prov
 To add email extras, go to the **Sending Info** and select **Add New Extra**.
 
 {% alert warning %}
-The total key-value pairs added should not exceed 1&nbsp;kB. Otherwise, the messages will be aborted.
+The total key-value pairs added should not exceed 1 KB. Otherwise, the messages will be aborted.
 {% endalert %}
 
 Email extra values are not published to Currents or Snowflake. If you're looking to send additional metadata or dynamic values to Currents or Snowflake, use [`message_extras`]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/message_extras/) instead.
@@ -178,7 +176,9 @@ Email extra values are not published to Currents or Snowflake. If you're looking
 
 After you finish composing your perfect email, you need to test it before sending it out. From the bottom of the overview screen, select **Preview and Test**. 
 
-Here, you can preview how your email will appear in a customer's inbox. With **Preview as User** selected, you can preview your email as a random user, select a specific user, or create a custom user. This allows you to test that your Connected Content and personalization calls are working as they should.
+Here, you can preview how your email will appear in a customer's inbox. With **Preview as User** selected, you can preview your email as a random user, select a specific user, or create a custom user. This allows you to test that your Connected Content and personalization calls are working as they should. 
+
+Then, you can **Copy preview link** to generate and copy a shareable preview link that shows what the email will look like for a random user. The link will last for seven days before it needs to be regenerated.
 
 You can also switch between desktop, mobile, and plaintext views to get a sense of how your message will appear in different contexts.
 
@@ -188,7 +188,7 @@ Curious about what your email looks like for dark mode users? Select the **Dark 
 
 When you're ready for a final check, select **Test Send** and send a test message to yourself or a group of content testers to ensure that your email displays properly on a variety of devices and email clients.
 
-![Test Send option and example email preview when composing your email.][15]
+![Test Send option and example email preview when composing your email.]({% image_buster /assets/img_archive/newEmailTest.png %})
 
 If you see any issues with your email, or want to make any changes, select **Edit Email** to return to the editor.
 
@@ -211,7 +211,7 @@ The editor will call out any problems it catches with your message before you se
 - Invalid **From** and **Reply-To** addresses
 - Duplicate **Header** keys
 - Liquid syntax problems
-- Email bodies larger than 400kb (bodies are highly recommended to be [smaller than 102kb][16])
+- Email bodies larger than 400kb (bodies are highly recommended to be [smaller than 102kb]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/guidelines_and_tips/#email-size))
 - Emails with a blank **Body** or **Subject**
 - Emails without an unsubscribe link
 - Email you're sending from is not allowlisted (sends will be highly limited to ensure deliverability)
@@ -234,7 +234,9 @@ You can also set the campaign's duration, specify [Quiet Hours]({{site.baseurl}}
 
 #### Choose users to target
 
-Next, you need to [target users]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/) by choosing segments or filters to narrow down your audience. You'll automatically be given a snapshot of what that segment population looks like right now, including how many users within that segment are reachable via email. Keep in mind that exact segment membership is always calculated just before the message is sent.
+Next, you need to [target users]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) by choosing segments or filters to narrow down your audience. You'll automatically be given a preview of what that segment population looks like, including how many users within that segment are reachable through email. Keep in mind that exact segment membership is always calculated before the message is sent.
+
+{% multi_lang_include target_audiences.md %}
 
 You can also choose to only send your campaign to users who have a specific [subscription status]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/), such as those who are subscribed and opted in to email.
 
@@ -251,12 +253,12 @@ For multichannel campaigns targeting both email and push channels, you may want 
 To do so, under **Audience Summary**, select to send this campaign to "opted-in users only". This option will check that only opted-in users will receive your email, and Braze will only send your push to users who are push enabled by default.
 
 {% alert important %}
-With this configuration, don't include any filters in the **Target Users** step that limit the audience to a single channel (for example, `Push Enabled = True` or `Email Subscription = Opted-In`).
+With this configuration, don't include any filters in the **Target Audiences** step that limit the audience to a single channel (for example, `Foreground Push Enabled = True` or `Email Subscription = Opted-In`).
 {% endalert %}
 
 #### Choose conversion events
 
-Braze allows you to track how often users perform specific actions, [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/), after receiving a campaign. You can specify any of the following actions as a conversion event:
+Braze allows you to track how often users perform specific actions, [conversion events]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/), after receiving a campaign. You can specify any of the following actions as a conversion event:
 
 - Opens app
 - Makes purchase (This can be a generic purchase or a specific item)
@@ -277,17 +279,3 @@ The final section will give you a summary of the campaign you've just designed. 
 
 To learn how you can access the results of your email campaigns, check out [Email reporting]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/).
 
-[1]: {% image_buster /assets/img_archive/regenerate_from_html.png %}
-[3]: {% image_buster /assets/img_archive/choose_email_creation.png %}
-[5]: {% image_buster /assets/img_archive/targetsegment_email_new.png %}
-[6]: {% image_buster /assets/img_archive/confirm_email.png %}
-[10]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/#creating-an-email-template
-[13]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/
-[14]: {% image_buster /assets/img/email.png %}
-[15]: {% image_buster /assets/img_archive/newEmailTest.png %}
-[16]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/guidelines_and_tips/#email-size
-[18]: {{site.baseurl}}/user_guide/message_building_by_channel/email/templates/html_email_template/
-[19]: {% image_buster /assets/img_archive/new_campaign_email.png %}
-[20]: {{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/
-[21]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/
-[22]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/

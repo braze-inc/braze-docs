@@ -17,7 +17,7 @@ description: "Este artigo de referência lista e explica os diferentes objetos A
 
 ```json
 {
-   "badge": (optional, int) the badge count after this message,
+   "badge": (optional, integer) the badge count after this message,
    "alert": (required unless content-available is true, string or Apple Push Alert Object) the notification message,
    // Specifying "default" in the sound field will play the standard notification sound
    "sound": (optional, string) the location of a custom notification sound within the app,
@@ -27,6 +27,7 @@ description: "Este artigo de referência lista e explica os diferentes objetos A
    "relevance_score": (optional, float) specifies the relevance score between 0.0 and 1.0 used for grouping notification summaries (iOS 15+),
    "expiry": (optional, ISO 8601 date string) if set, push messages will expire at the specified datetime,
    "custom_uri": (optional, string) a web URL, or Deep Link URI,
+   "use_webview": (optional, boolean) whether to open the web URL inside the app if the action is "URI", defaults to true,
    "message_variation_id": (optional, string) used when providing a campaign_id to specify which message variation this message should be tracked under (must be an iOS Push Message),
    "notification_group_thread_id": (optional, string) the notification group thread ID the notification will be sent with,
    "asset_url": (optional, string) content URL for rich notifications for devices using iOS 10 or higher,
@@ -35,7 +36,8 @@ description: "Este artigo de referência lista e explica os diferentes objetos A
    "mutable_content": (optional, boolean) if true, Braze will add the mutable-content flag to the payload and set it to 1. The mutable-content flag is automatically set to 1 when sending a rich notification, regardless of the value of this parameter.
    "send_to_most_recent_device_only": (optional, boolean) defaults to false, if set to true, Braze will only send this push to a user's most recently used iOS device, rather than all eligible iOS devices,
    "category": (optional, string) the iOS notification category identifier for displaying push action buttons,
-   "buttons" : (optional, array of Apple push action button objects) push action buttons to display
+   "buttons" : (optional, array of Apple push action button objects) push action buttons to display,
+   "apns_priority": (optional, integer) override the default apns_priority value using an integer between 1 and 10; use 10 for immediate delivery, 5 for power-aware delivery, and 1 to minimize power impact and avoid waking the device,
 }
 ```
 
@@ -59,6 +61,27 @@ Na maioria dos casos, `alert` pode ser especificado como uma string em um objeto
    "loc_key": (optional, string) a key to an alert-message string in a Localizable.strings file for the current localization,
    "loc_args": (optional, array of strings) variable string values to appear in place of the format specifiers in loc_key,
    "sound": (optional, string) the location of a custom notification sound within the app (live activities only),
+}
+```
+
+#### Exemplo
+
+```json
+{
+  "broadcast": false,
+  "external_user_ids": ["PushTest12"],
+  "campaign_id": "9c2fefcd-9115-3932-f771-c7f43d18d6b6",
+  "override_frequency_capping": "false",
+  "recipient_subscription_state": "all",
+  "messages": {
+    "apple_push": {
+      "alert": {
+        "title": "Hello!",
+        "body": "Message here"
+      },
+      "message_variation_id": "iosPush-640"
+    }
+  }
 }
 ```
 

@@ -16,9 +16,6 @@ description: "En este artículo se describen los detalles del punto final Elimin
 {% endapimethod %}
 
 > Utiliza este punto final para eliminar un campo del catálogo.
-{% alert important %}
-Este punto final se encuentra actualmente en acceso anticipado. Ponte en contacto con tu administrador del éxito del cliente si estás interesado en participar en este acceso anticipado.
-{% endalert %}
 
 ## Requisitos previos
 
@@ -26,7 +23,7 @@ Para utilizar este punto final, necesitarás una [clave de API]({{site.baseurl}}
 
 ## Límite de velocidad
 
-{% multi_lang_include rate_limits.md endpoint='campos de catálogo asíncronos' %}
+{% multi_lang_include rate_limits.md endpoint='asynchronous catalog fields' %}
 
 ## Parámetros de la ruta
 

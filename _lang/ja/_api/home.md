@@ -3,8 +3,8 @@ page_order: 0
 nav_title: ホーム
 article_title: Braze API ガイド
 layout: api_glossary
-glossary_top_header: "Braze API Guide"
-glossary_top_text: "Braze provides a high-performance REST API to allow you to track users, send messages, export data, and more. This page lists available Braze API endpoints and their uses."
+glossary_top_header: "Braze API ガイド"
+glossary_top_text: "Braze には、ユーザーs の追跡、メッセージの送信、データのエクスポートなどを可能にする高パフォーマンス RESTなAPI が用意されています。ここでは、使用可能なBraze API エンドポイントとその用途について説明します。"
 page_type: glossary
 description: "このランディングページには、利用可能なBraze APIエンドポイントとその用途が掲載されている。"
 glossary_tag_name: Endpoint Type
@@ -42,11 +42,11 @@ glossary_tags:
   - name: Eメールリスト
   - name: メールテンプレート
   - name: KPI
-  - name: ニュースフィード
   - name: 購入
   - name: 環境設定センター
   - name: メッセージをスケジュール
   - name: SCIM
+  - name: SDK認証
   - name: セグメント
   - name: メッセージを送る
   - name: SMS
@@ -109,7 +109,7 @@ glossaries:
     tags:
       - Send Messages
   - name: "<a href='/docs/api/endpoints/messaging/send_messages/post_create_send_ids/'>/sends/id/create</a>"
-    description: 送信ごとにキャンペーンを作成することなく、プログラムでメッセージを送信し、メッセージのパフォーマンスを追跡するために使用できる送信IDを作成する。
+    description: "送信ごとにキャンペーンを作成せずに、メッセージの送信およびメッセージパフォーマンスの\"トラッキングに使用する送信ID をプログラムで作成します。"
     tags:
       - Send Messages
   - name: "<a href='/docs/api/endpoints/messaging/send_messages/post_send_transactional_message/'>/transactional/v1/campaigns/{CAMPAIGN_ID}/send</a>"
@@ -149,7 +149,7 @@ glossaries:
     tags:
       - Schedule Messages
   - name: "<a href='/docs/api/endpoints/messaging/schedule_messages/post_update_scheduled_triggered_canvases/'>/canvas/trigger/schedule/update</a>"
-    description: ダッシュボードで作成された、スケジュールされたAPIトリガーキャンバスを更新する。
+    description: ダッシュボードで作成したスケジュールされた API-トリガー ed キャンバスをアップデートします。
     tags:
       - Schedule Messages
   - name: "<a href='/docs/api/endpoints/messaging/schedule_messages/get_messages_scheduled/'>/messages/scheduled_broadcasts</a>"
@@ -225,7 +225,7 @@ glossaries:
     tags:
       - Campaigns
   - name: "<a href='/docs/api/endpoints/export/campaigns/get_campaigns/'>/campaigns/list</a>"
-    description: キャンペーンのリストをエクスポートする。各キャンペーンには、名前、キャンペーンAPI識別子、APIキャンペーンかどうか、キャンペーンに関連するタグが含まれる。
+    description: キャンペーンs の一覧をエクスポートします。それぞれの一覧には、名前、キャンペーン API 識別子、API キャンペーンかどうか、およびキャンペーンに関連付けられたタグs が含まれます。
     tags:
       - Campaigns
   - name: "<a href='/docs/api/endpoints/export/campaigns/get_send_analytics/'>/sends/data_series</a>"
@@ -257,7 +257,11 @@ glossaries:
     tags:
       - Segments
   - name: "<a href='/docs/api/endpoints/export/segments/get_segment/'>/segments/list</a>"
-    description: セグメントのリストをエクスポートする。各セグメントには、名前、セグメントAPI識別子、アナリティクスのトラッキングが有効かどうかが含まれる。
+    description: "Segments の一覧をエクスポートします。それぞれに名前、Segment API 識別子、および分析 \"トラッキングが有効になっているかどうかが含まれます。"
+    tags:
+      - Segments
+  - name: "<a href='/docs/api/endpoints/export/segments/post_cancel_export/'>/export/Segment/キャンセル</a>"
+    description: 指定されたSegment ID のエクスポートを取り消します。
     tags:
       - Segments
   - name: "<a href='/docs/api/endpoints/export/sessions/get_sessions_analytics/'>/sessions/data_series</a>"
@@ -277,7 +281,7 @@ glossaries:
     tags:
       - Custom Events
   - name: "<a href='/docs/api/endpoints/export/custom_events/get_custom_events/'>/events/list</a>"
-    description: アプリに記録されたカスタムイベントの名前のリストをエクスポートする。
+    description: アプリに記録されたカスタムイベントの名前の一覧をエクスポートします。
     tags:
       - Custom Events
   - name: "<a href='/docs/api/endpoints/templates/content_blocks_templates/post_create_email_content_block/'>/content_blocks/create</a>"
@@ -312,24 +316,12 @@ glossaries:
     description: 各日付のアンインストールの総数を日次で取得します。
     tags:
       - KPI
-  - name: "<a href='/docs/api/endpoints/export/news_feed/get_news_feed_card_analytics/'>/feed/data_series</a>"
-    description: カードのエンゲージメント統計情報を日次で取得する。
-    tags:
-      - News Feed
-  - name: "<a href='/docs/api/endpoints/export/news_feed/get_news_feed_card_details/'>/feed/details</a>"
-    description: カードの関連情報を取得する。
-    tags:
-      - News Feed
-  - name: "<a href='/docs/api/endpoints/export/news_feed/get_news_feed_cards/'>/feed/list</a>"
-    description: ニュースフィードカードのリストをエクスポートする。各カードには名前とカードAPI識別子が含まれる。
-    tags:
-      - News Feed
   - name: "<a href='/docs/api/endpoints/sms/post_remove_invalid_numbers/'>/sms/invalid_phone_numbers/remove</a>"
-    description: Brazeの無効リストから「無効」な電話番号を削除する。これを使用して、電話番号が無効とマークされた後、それらの電話番号を再検証できます。
+    description: Brazeの無効リストから「無効」な電話番号を削除する。Brazeが不正と判断した電話番号を再検証する場合に使用します。
     tags:
       - SMS
   - name: "<a href='/docs/api/endpoints/sms/get_query_invalid_numbers/'>/sms/invalid_phone_numbers</a>"
-    description: 一定期間内に「無効」と判断された電話番号のリストを引き出す。
+    description: "Brazeが\"invalid\"とマークした電話番号の一覧を、一定期間内に引き出します。"
     tags:
       - SMS
   - name: "<a href='/docs/api/endpoints/export/purchases/get_list_product_id/'>/purchases/product_list</a>"
@@ -343,7 +335,7 @@ glossaries:
   - name: "<a href='/docs/api/endpoints/export/purchases/get_revenue_series/'>/purchases/revenue_series</a>"
     description: 特定の期間内のアプリ内支出額の合計を返します。
     tags:
-      - Purchases    
+      - Purchases
   - name: "<a href='/docs/api/endpoints/preference_center/get_create_url_preference_center'>/preference_center/v1/{preferenceCenterExternalId}/url/{userId}。</a>"
     description: ユーザー設定センターの URL を作成します。
     tags:
@@ -353,7 +345,7 @@ glossaries:
     tags:
       - Preference Center
   - name: "<a href='/docs/api/endpoints/preference_center/get_view_details_preference_center'>/preference_center/v1/{preferenceCenterExternalId}.</a>"
-    description: ユーザー設定センターの詳細 (作成日時や更新日時など) を表示します。
+    description: ユーザー設定センターが作成された日時や更新d など、詳しく表示されます。
     tags:
       - Preference Center
   - name: "<a href='/docs/api/endpoints/preference_center/post_create_preference_center'>/preference_center/v1</a>"
@@ -409,11 +401,11 @@ glossaries:
     tags:
       - Catalogs
   - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/put_update_catalog_item/'>/catalogs/{catalog_name}/items/{item_id}</a>"
-    description: カタログの項目を更新する。
+    description: カタログの項目を置換します。
     tags:
       - Catalogs
   - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/asynchronous/put_update_catalog_items/'>/catalogs/{catalog_name}/items/</a>"
-    description: カタログの複数の項目を更新する。
+    description: カタログの複数の項目を置換します。
     tags:
       - Catalogs
   - name: "<a href='/docs/api/endpoints/catalogs/catalog_fields/asynchronous/post_create_catalog_fields/'>/catalogs/{catalog_name}/fields/</a>"
@@ -437,7 +429,7 @@ glossaries:
     tags:
       - SCIM
   - name: "<a href='/docs/get_see_user_account_information/'>/scim/v2/Users/{id}</a>"
-    description: Eメールを指定して既存のダッシュボード・ユーザー・アカウントを検索する。
+    description: リソース ID を指定して、既存のダッシュボードユーザーアカウントを検索する。
     tags:
       - SCIM
   - name: "<a href='/docs/post_update_existing_user_account/'>/scim/v2/Users/{id}</a>"
@@ -464,4 +456,20 @@ glossaries:
     description: 同期ステータスのリストを返す。
     tags:
       - Cloud Data Ingestion
+  - name: "<a href='/docs/api/endpoints/sdk_authentication/post_create_sdk_authentication_key/'>/app_group/sdk_authentication/create</a>"
+    description: アプリ用に新しい SDK 認証キーを作成する。
+    tags:
+      - SDK Authentication
+  - name: "<a href='/docs/api/endpoints/sdk_authentication/get_sdk_authentication_keys/'>/app_group/sdk_authentication/keys</a>"
+    description: アプリの SDK 認証キーをリストアップする。
+    tags:
+      - SDK Authentication
+  - name: "<a href='/docs/api/endpoints/sdk_authentication/put_primary_sdk_authentication_key/'>/app_group/sdk_authentication/primary</a>"
+    description: SDK 認証キーをアプリのプライマリキーとして設定します。
+    tags:
+      - SDK Authentication
+  - name: "<a href='/docs/api/endpoints/sdk_authentication/delete_sdk_authentication_key/'>/app_group/sdk_authentication/delete</a>"
+    description: アプリの SDK 認証キーを削除する。
+    tags:
+      - SDK Authentication
 ---

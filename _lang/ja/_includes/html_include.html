@@ -1,0 +1,151 @@
+<head>
+  <title>{% if page.article_title %}{{ page.article_title }}{% elsif page.nav_title %}{{ page.nav_title }}{% elsif page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="google-site-verification" content="kI0o3QRqDw5zhtd9W5umZTzLTDe6X1tp-gybtFg_7bQ" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   {% noindex {{ page.パス }} %}
+  <link rel="icon" type="image/x-icon" href="{{site.baseurl}}/assets/favicon.ico" sizes="160x160">
+
+  <meta name="description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncatewords:25 }}{% else %}{% if page.content.size &gt; 5 %}{{ page.content | strip_html | truncatewords:25 }}{% else %}{{ page.id | slice:1,page.id.size | replace: &apos;/&apos;, &apos; &apos; | replace: &apos;_&apos;, &apos; &apos; }}{% endif %}{% endif %}">
+  <link rel="canonical" {% if page.url="=" site.index_url %} href="{{ site.baseurl | prepend: site.homeurl }}" else endif/>
+
+  <meta name="keywords" content="ろうそく、ドック、ドキュメント、アプリボーイ、アカデミー{{ page.id | replace: &apos;_&apos;, &apos; &apos;| replace: &apos;/&apos;, &apos;, }} ">
+
+  <script type="application/ld+json">
+  {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "url": "https://www.braze.com/docs",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://www.braze.com/docs/search/?query={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+  </script>
+
+<link href="{{site.baseurl}}/assets/css/bootstrap.css" rel="stylesheet" />
+<link type="text/css" rel="stylesheet" href="//fast.fonts.net/cssapi/34a7ffbc-6962-4ab8-b4f5-9aa2b4258efc.css"/>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+
+<!-- link rel="stylesheet" href="//use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous" -->
+<link href="{{site.baseurl}}/assets/css/fontawesome.css" rel="stylesheet" />
+
+
+<script type="text/javascript" src="{{site.baseurl}}/assets/js/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="{{site.baseurl}}/assets/js/bootstrap.js"></script>
+
+
+{% include 分析.html %}
+
+<link type="text/css" rel="stylesheet" href="{{site.baseurl}}/assets/css/swiper.css" />
+<link type="text/css" rel="stylesheet" href="{{site.baseurl}}/assets/css/algolia_theme.css"  />
+
+{%- css_asset_tag global -%} - /assets/css/application.scss {%- endcss_asset_tag -%} {%- case site.language -%} {%- when "es" -%} {%- css_asset_tag multi_lang -%} - /assets/css/_lang_es.scss {%- endcss_asset_tag -%} {%- when "fr" -%} {%- css_asset_tag multi_lang -%} - /assets/css/_lang_fr.scss {%- endcss_asset_tag -%} {%- when "ja" -%} {%- css_asset_tag multi_lang -%} - /assets/css/_lang_ja.scss {%- endcss_asset_tag -%} {%- when "ko" -%} {%- css_asset_tag multi_lang -%} - /assets/css/_lang_ko.scss {%- endcss_asset_tag -%} {%- when "pt-br" -%} {%- css_asset_tag multi_lang -%} - /assets/css/_lang_pt-br.scss {%- endcss_asset_tag -%} {%- endcase -%} {%- assign page_collection_title = "" -%} {%- assign page_collection_default_path = "" -%} {%- for site_collection in site.collections -%} {%- if site_collection.label == page.collection -%} {%- assign page_collection_title = site_collection.title -%} {%- assign page_collection_default_path = site_collection.default_nav_url -%} {%- endif -%} {%- endfor -%}
+
+<script type="text/javascript">
+  const page_collection = '{{ page.collection }}';
+  const page_collection_title = '{{page_collection_title}}';
+  const page_collection_default_path = '{{page_collection_default_path}}';
+  const site_language = '{{ site.language }}';
+  const site_i18n = {};
+  {% for i18n in site.data.i18n[site.language] %}
+  site_i18n['{{i18n[0]}}'] = '{{i18n[1]}}';
+  {%- endfor -%}
+</script>
+
+
+<script type="text/javascript" src="{{site.baseurl}}/assets/js/clipboard.js"></script>
+<script type='text/javascript' src='{{site.baseurl}}/assets/js/jquery.mark.js' ></script>
+
+{% javascript_asset_タグ global %} - /assets/js/highlight.js - /assets/js/breadcrumb.js - /assets/js/left_nav.js - /assets/js/js.Cookie.js - /assets/js/toc.js - /assets/js/documents.js - /assets/js/フィードバック.js - /assets/js/contentカードs.js {% endjavascript_asset_タグ %}
+
+<script type='text/javascript' src='{{site.baseurl}}/assets/js/swiper.js' ></script>
+
+<script type="text/javascript" src="{{site.baseurl}}/assets/js/algolia_search.js?{{site.time | date: " %s'}}'></script>
+
+<script src="{{site.baseurl}}/assets/js/mermaid.js"></script>
+
+<script type="text/javascript" src="{{site.baseurl}}/assets/js/copy-heading-tag-links.js"></script>
+
+<script type="text/javascript">
+
+  const { autocomplete,getAlgoliaResults, createAutocomplete } = window['@algolia/autocomplete-js'];
+  const { createAlgoliaInsightsPlugin } = window['@algolia/autocomplete-plugin-algolia-insights'];
+  const searchClient = algoliasearch('{{ site.algolia.application_id }}', '{{ site.algolia.algolia_api_key }}');
+  insightsClient('init', {
+    appId: '{{ site.algolia.application_id }}',
+    apiKey: '{{ site.algolia.algolia_api_key }}'
+  });
+  insightsClient('setUserToken', algolia_user);
+
+  const algoliaInsightsPluginHeader = createAlgoliaInsightsPlugin({
+    insightsClient,
+    onItemsChange({ insights, insightsEvents }) {
+      const events = insightsEvents.map((insightsEvent) => ({
+        ...insightsEvent,
+        eventName: 'Viewed from Header Search',
+      }));
+      insights.viewedObjectIDs(...events);
+    },
+    onSelect({ insights, insightsEvents }) {
+      const events = insightsEvents.map((insightsEvent) => ({
+        ...insightsEvent,
+        eventName: 'Clicked from Header Search',
+      }));
+      insights.clickedObjectIDsAfterSearch(...events);
+    },
+  });
+
+  const algoliaInsightsPluginMain = createAlgoliaInsightsPlugin({
+    insightsClient,
+    onItemsChange({ insights, insightsEvents }) {
+      const events = insightsEvents.map((insightsEvent) => ({
+        ...insightsEvent,
+        eventName: 'Viewed from Home Search',
+      }));
+      insights.viewedObjectIDs(...events);
+    },
+    onSelect({ insights, insightsEvents }) {
+      const events = insightsEvents.map((insightsEvent) => ({
+        ...insightsEvent,
+        eventName: 'Clicked from Home Search',
+      }));
+      insights.clickedObjectIDsAfterSearch(...events);
+    },
+  });
+  const instant_search = instantsearch({
+    indexName: '{{ site.algolia.index_name }}',
+    searchClient,
+  });
+
+  var algolia_debug = {{ site.search_debug }};
+  var base_url = '{{site.baseurl}}';
+
+  var toc_minheaders = {{ page.toc_minheaders  | default: 2 }} ;
+  var toc_headers = '{{ page.toc_headers  | default: "h2, h3" }}';
+  var algolia_doc_index = '{{ site.algolia.index_name }}';
+  var algolia_learning_index = '{{ site.learning_index_name }}';
+  var max_redirects = 10;
+
+  var query_params = new URLSearchParams(window.location.search);
+</script>
+
+<!-- Adds LaTeX support -->
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+
+<meta name="tool" content="{{ page.tool | join: ', ' | default: '' }}" />
+<meta name="platform" content="{{ page.platform | join: ', ' | default: '' }}" />
+{% assign page_ids = page.id | split: '/' %}
+<meta name="type" content="{{ page_ids[1] | replace: '_', ' ' | default: '' }}" />
+<meta name="category" content="{{ page_ids[2] | replace: '_', ' ' | default: '' }}" />
+<meta name="page_name" content="{{ page_ids | last | replace: '_', ' ' | default: '' }}" />
+<meta name="channel" content="{{ page.channel | join: ', ' | default: '' }}" />
+</head>

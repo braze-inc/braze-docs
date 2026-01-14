@@ -1,5 +1,5 @@
 ---
-nav_title: Architectural Overview
+nav_title: Architectural overview
 article_title: Architectural Overview
 page_order: 3
 description: "This article discusses the different parts and pieces of the Braze technology stack, with links to relevant articles."
@@ -69,7 +69,7 @@ The classification, orchestration, and personalization layers are where your mar
 
 Many common types of user attributes, such as name, email, date of birth, country, and others are automatically tracked by the SDK by default. As a developer, you'll work with your team to define what additional, custom data makes sense to track for your use case. Your custom data will impact how your user base will be classified and segmented. You will set this data model up during the implementation process. 
 
-Learn more about [automatically collected data and custom data]({{site.baseurl}}/developer_guide/getting_started/analytics_overview/).
+Learn more about [automatically collected data and custom data]({{site.baseurl}}/developer_guide/analytics/).
 
 ## Orchestration {#orchestration}
 The orchestration layer allows your marketing team to design user journeys based on your user data and prior engagement. This work is mostly done through our dashboard interface, but you also have the option to launch [campaigns through the API]({{site.baseurl}}/api/api_campaigns#api-campaigns). For example, you can have your backend tell Braze when to send the messages and campaigns your marketers designed in the dashboard, and trigger them according to your backend logic. An example of an API-triggered message might be password resets or shipping confirmations. 
@@ -104,7 +104,7 @@ Critically, all end-user interactions with Braze are tracked so you can measure 
 [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) is an optional Braze add-on that provides a granular streaming export that continuously feeds other destinations of your stack. Currents is a per user per event raw data feed that exports data every five minutes, or every 15,000 events, whichever comes first. Examples of some downstream destinations for Currents would be Segment, S3, Redshift and Mixpanel, among others. 
 
 ### Snowflake data sharing
-Snowflake’s [Secure Data Sharing]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/) functionality allows Braze to give you secure access to data on our Snowflake portal without worrying about workflow friction, failure points, and unnecessary costs that come with typical data provider relationships. All sharing is accomplished through Snowflake’s unique services layer and metadata store: no data is actually copied or transferred between accounts. This is an important concept because shared data does not take up any storage in a consumer account and, therefore, does not contribute to your monthly data storage charges. The only charges to consumers are for the computing resources (that is, virtual warehouses) used to query the shared data.
+Snowflake’s [Secure Data Sharing]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/) functionality allows Braze to give you secure access to data on our Snowflake portal without worrying about workflow friction, failure points, and unnecessary costs that come with typical data provider relationships. All sharing is accomplished through Snowflake’s unique services layer and metadata store: no data is actually copied or transferred between accounts. This is an important concept because shared data does not take up any storage in a consumer account and, therefore, does not contribute to your monthly data storage charges. The only charges to consumers are for the computing resources (that is, virtual warehouses) used to query the shared data.
 
 ### Braze export APIs
 The Braze API provides [endpoints]({{site.baseurl}}/api/endpoints/export) that allow you to programmatically export aggregate analytics, as well as to export individual user data. This data can be exported for audiences and segments of any size. 

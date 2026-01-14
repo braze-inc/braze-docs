@@ -12,7 +12,7 @@ hidden: true
 
 Braze には、ユーザーに属性を割り当てるメソッドが用意されています。ダッシュボードでこれらの属性に基づき、ユーザーをフィルターおよびセグメント化できます。
 
-実施にあたっては、まずカスタムイベント、カスタム属性、購買イベントが提供するセグメンテーション選択肢の事例を[ベストプラクティス][7]で検討してください。
+実施にあたっては、まずカスタムイベント、カスタム属性、購買イベントが提供するセグメンテーション選択肢の事例を[ベストプラクティス]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection)で検討してください。
 
 ユーザー属性は、現在の`IAppboyUser` に割り当てることができる。現在の`IAppboyUser` への参照を取得するには、`Appboy.SharedInstance.AppboyUser` を呼び出します。
 
@@ -47,12 +47,12 @@ Appboy.SharedInstance.AppboyUser.FirstName = "User's First Name"
 bool SetCustomAttribute(STRING_KEY, BOOL_VALUE);
 ```
 {% endtab %}
-{% tab 整数 %}
+{% tab Integer %}
 ```csharp
 bool SetCustomAttribute(STRING_KEY, INT_VALUE);
 ```
 {% endtab %}
-{% tab ダブルまたはフロート %}
+{% tab Double or Float %}
 ```csharp
 bool SetCustomAttribute(STRING_KEY, DOUBLE_VALUE);
 ```
@@ -68,13 +68,13 @@ bool SetCustomAttribute(STRING_KEY, "STRING_VALUE");
 bool SetCustomAttribute(STRING_KEY, LONG_VALUE);
 ```
 {% endtab %}
-{% tab 日付 %}
+{% tab Date %}
 ```csharp
 bool SetCustomAttribute(STRING_KEY, "DATE_VALUE");
 ```
->  Braze に渡される日付は、[ISO 8601][2] 形式、e.g `2013-07-16T19:20:30+01:00`、または`yyyy-MM-dd'T'HH:mm:ss:SSSZ` 形式のいずれかである必要があります e.g `2016-12-14T13:32:31.601-0800`
+>  Braze に渡される日付は、[ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) 形式、e.g `2013-07-16T19:20:30+01:00`、または`yyyy-MM-dd'T'HH:mm:ss:SSSZ` 形式のいずれかである必要があります e.g `2016-12-14T13:32:31.601-0800`
 {% endtab %}
-{% tab 配列 %}
+{% tab Array %}
 ```csharp
 // Setting a custom attribute with an array value
 Appboy.SharedInstance.EventLogger.SetCustomAttributeArray("custom_attribute_array_test", testSetArray);
@@ -104,7 +104,7 @@ bool UnsetCustomAttribute(STRING_KEY);
 
 ### REST API によるカスタム属性の設定
 
-REST API を使用してユーザー属性を設定することもできます。詳細については、[ユーザー API][4] のドキュメントを参照してください。
+REST API を使用してユーザー属性を設定することもできます。詳細については、[ユーザー API]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data) のドキュメントを参照してください。
 
 ### カスタム属性値の制限
 
@@ -126,10 +126,5 @@ REST API を使用してユーザー属性を設定することもできます�
 - `PushNotificationSubscriptionType`
   - ユーザーは、有効なプッシュ登録時に自動的に`Subscribed` に設定されるが、明示的なオプトイン・プロセスを確立し、ユーザーから明示的な同意を得た時点でこの値を`OptedIn` に設定することを推奨する。
 
->  これらのタイプは `AppboyPlatform.PCL.Models.NotificationSubscriptionType` に属します。詳細については、「[ユーザーサブスクリプションの管理][10]」を参照してください。
+>  これらのタイプは `AppboyPlatform.PCL.Models.NotificationSubscriptionType` に属します。詳細については、「[ユーザーサブスクリプションの管理]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions)」を参照してください。
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/setting_user_ids/#user-id-integration-best-practices--notes
-[2]: http://en.wikipedia.org/wiki/ISO_8601
-[4]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
-[7]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
-[10]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions

@@ -6,8 +6,7 @@ description: "Dieser Referenzartikel behandelt die bei Braze verwendeten LINE-Me
 page_type: reference
 channel:
  - LINE
-hidden: true
-permalink: /line/reporting/
+alias: /line/reporting/
 ---
 
 # LINE Berichterstattung
@@ -15,7 +14,7 @@ permalink: /line/reporting/
 > Nachdem Sie Ihre Kampagne oder Canvas gestartet haben, können Sie die wichtigsten Kennzahlen auf der Seite mit den Kampagnendetails oder der Canvas-Analyse einsehen. In diesem Artikel erfahren Sie, wo Sie diese Metriken finden können und was sie bedeuten.
 
 {% alert tip %}
-Suchen Sie nach Definitionen für die Begriffe und Kennzahlen in Ihrem Bericht? Weitere Informationen finden Sie im [Glossar zu den Berichtsmetriken]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/).
+Suchen Sie nach Definitionen für die Begriffe und Kennzahlen in Ihrem Bericht? Weitere Informationen finden Sie im [Glossar zu den Berichtsmetriken]({{site.baseurl}}/user_guide/data/report_metrics/).
 {% endalert %}
 
 ## Kampagnen-Analysen
@@ -34,19 +33,19 @@ In diesem Bereich sehen Sie die Gesamtmetriken, wie z.B. die Anzahl der gesendet
 
 #### Kontrollgruppen
 
-Um die Wirkung einer einzelnen LINE-Botschaft zu messen, können Sie einem A/B-Test eine [Kontrollgruppe]({{site.baseurl}}/user_guide/intelligence/multivariate_testing/) hinzufügen. Der Bereich **Kampagnendetails** auf der obersten Ebene enthält keine Metriken aus der Variante Kontrollgruppe.
+Um die Wirkung einer einzelnen LINE-Botschaft zu messen, können Sie einem A/B-Test eine [Kontrollgruppe]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) hinzufügen. Der Bereich **Kampagnendetails** auf der obersten Ebene enthält keine Metriken aus der Variante Kontrollgruppe.
 
 ### LINE-Performance
 
 Das **LINE-Performance-Panel** zeigt Ihnen, wie gut Ihre Nachricht in verschiedenen Bereichen abgeschnitten hat. Die Metriken in diesem Bereich variieren je nach dem von Ihnen gewählten Nachrichtenkanal und je nachdem, ob Sie einen multivariaten Test durchführen oder nicht. Sie können auf das Symbol <i class="fa fa-eye preview-icon"></i> **Vorschau** klicken, um Ihre Nachricht für jede Variante oder jeden Kanal zu sehen.
 
-![Das Panel "LINE Performance" zeigt Metriken für zwei Varianten an.][1]
+\![Das Panel "LINE Performance" zeigt Metriken für zwei Varianten an.]({% image_buster /assets/img/line/line_performance.png %})
 
 Wenn Sie Ihre Ansicht vereinfachen möchten, wählen Sie **\+ Spalten hinzufügen/entfernen** und löschen Sie alle gewünschten Metriken. Standardmäßig werden alle Metriken angezeigt.
 
 #### LINE Metriken
 
-Hier sind einige wichtige LINE-Kennzahlen, die Sie in Ihren Analysen sehen können. Die Definitionen aller LINE-Metriken, die in Braze verwendet werden, finden Sie im [Glossar der Berichtsmetriken]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/).
+Hier sind einige wichtige LINE-Kennzahlen, die Sie in Ihren Analysen sehen können. Die Definitionen aller LINE-Metriken, die in Braze verwendet werden, finden Sie im [Glossar der Berichtsmetriken]({{site.baseurl}}/user_guide/data/report_metrics/).
 
 | Begriff | Definition |
 | --- | --- |
@@ -72,4 +71,3 @@ Das Panel **Details zum Konversions-Event** zeigt Ihnen die Performance Ihrer Ko
 Das Panel **Konversionskorrelation** gibt Ihnen Aufschluss darüber, welche Benutzerattribute und Verhaltensweisen die von Ihnen für Kampagnen festgelegten Ergebnisse fördern oder beeinträchtigen. Weitere Informationen finden Sie unter [Umrechnungskorrelation]({{site.baseurl}}/user_guide/engagement_tools/testing/conversion_correlation).
 
 
-[1]: {% image_buster /assets/img/line/line_performance.png %}

@@ -50,7 +50,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 | `description` | Opcional | Cadena | Descripción del bloque de contenido. Debe tener menos de 250 caracteres. |
 | `content` | Obligatoria | Cadena | Contenido HTML o de texto dentro del Bloque de contenido. |
 | `state` | Opcional | Cadena | Elige `active` o `draft`. Predetermina `active` si no se especifica. |
-| `tags` | Opcional | Matriz de cadenas | [Las etiquetas]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) ya deben existir. |
+| `tags` | Opcional | Matriz de cadenas | [Las etiquetas]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) ya deben existir. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Ejemplo de solicitud
@@ -88,7 +88,7 @@ La siguiente tabla enumera los posibles errores devueltos y los pasos asociados 
 | --- | --- |
 | `Content cannot be blank` | |
 | `Content must be a string` | Asegúrate de que tu contenido está entre comillas (`""`). |
-| `Content must be smaller than 50kb` | El contenido del Bloque de contenido debe ser inferior a 50 kb en total. |
+| `Content must be smaller than 50kb` | El contenido de tu bloque de contenido debe ser inferior a 50 KB en total. |
 | `Content contains malformed liquid` | El Liquid proporcionado no es válido ni analizable. Inténtalo de nuevo con un Liquid válido o ponte en contacto con el servicio de asistencia. |
 | `Content Block cannot be referenced within itself` | |
 | `Content Block description cannot be blank` | |

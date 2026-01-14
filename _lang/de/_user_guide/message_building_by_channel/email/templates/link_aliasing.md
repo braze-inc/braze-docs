@@ -1,5 +1,5 @@
 ---
-nav_title: Link Aliasing
+nav_title: Link-Aliasing
 article_title: Link Aliasing
 alias: /link_aliasing/
 page_order: 3
@@ -9,7 +9,8 @@ channel:
 
 ---
 
-# [![Braze-Lernkurse]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/link-aliasing){: style="float:right;width:120px;border:0;" class="noimgborder"}Link Aliasing
+# [![Braze Lernkurs]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/link-aliasing){: style="float:right;width:120px;border:0;" class="noimgborder"} Link-Aliasing
+# [![Braze Lernkurs]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/link-aliasing){: style="float:right;width:120px;border:0;" class="noimgborder"} Link-Aliasing
  
 > Verwenden Sie Link-Aliasing, um wiedererkennbare, benutzergenerierte Namen zur Identifizierung von Links zu erstellen, die in E-Mail-Nachrichten von Braze gesendet werden. Diese Links sind für Segmentierungs-Retargeting, aktionsbasiertes Triggering und Link-Analysen verfügbar.
 
@@ -27,6 +28,8 @@ Mit Link-Aliasing können Sie:
 
 Braze identifiziert Links in E-Mails eindeutig, indem es einen zusätzlichen Parameter namens `lid` (auch bekannt als Bezeichner des Links) an jede Link-URL anhängt. Dieser `lid`-Wert ermöglicht es Braze, die Interaktionen der Nutzer:innen mit dem Link zu tracken, zu überwachen und zu aggregieren, auch wenn die übrigen URL-Parameter unterschiedlich sein können. So erhalten Sie Einblicke in die Art und Weise, wie Nutzer mit den Inhalten Ihrer E-Mail-Kampagnen umgehen.
 
+Die Bezeichner der Links werden auch aktualisiert, wenn eine E-Mail-Kampagne, ein Canvas mit einer Nachricht oder ein Content-Block dupliziert wird.
+
 ## Link-Alias erstellen
 
 Um einen Link-Alias zu erstellen, gehen Sie folgendermaßen vor: 
@@ -38,7 +41,7 @@ Um einen Link-Alias zu erstellen, gehen Sie folgendermaßen vor:
 
 Sie können auch einen Alias festlegen, der verwendet wird, um einen bestimmten Link zu referenzieren, wenn es um Berichte oder Segmentierung geht. 
 
-![Link Management Seite mit vier Link-Aliasnamen.][2]
+![Link Management Seite mit vier Link-Aliases.]({% image_buster /assets/img/link_aliasing_composer.png %})
 
 {% alert note %}
 Link Aliasing wird nur in `href`-Attributen innerhalb von HTML-Anker-Tags unterstützt, wo es sicher ist, einen Abfrageparameter anzuhängen. Am besten fügen Sie am Ende Ihres Links ein Fragezeichen (?) ein, damit Braze den Wert `lid` einfach anhängen kann. Wenn Sie den Wert `lid` nicht anhängen, erkennt Braze die URL nicht für Link-Aliasing.
@@ -57,7 +60,7 @@ Wenn Sie die [ältere Navigation]({{site.baseurl}}/user_guide/administrative/acc
 
 Hier können Sie sortieren, suchen und das Tracking für Link-Aliase deaktivieren.
 
-![Die Seite Verfolgte Link-Aliase zeigt zwei Link-Aliase mit den Namen "TechPartners" und "Hilfe", die mit einer Kampagne mit dem Namen "Email_Survey" verbunden sind.][8]
+![Tracking Link-Aliasing-Seite, die zwei Link-Aliase mit den Namen "TechPartners" und "Hilfe" zeigt, die mit einer Kampagne mit dem Namen "Email_Survey".]({% image_buster /assets/img/tracked_aliases.png %})
 
 {% alert tip %}
 Verwenden Sie die Endpunkte [Listenlink-Alias für Kampagnen]({{site.baseurl}}/get_campaign_link_alias/) und [Listenlink-Alias für Canvas]({{site.baseurl}}/get_canvas_link_alias/), um den Satz `alias` in jeder Nachrichtenvariante in einer Kampagne oder einer E-Mail-spezifischen Canvas-Komponente zu extrahieren.
@@ -121,20 +124,20 @@ In den folgenden Tabellen finden Sie Beispiele für Links in einem E-Mail-Text, 
 Wählen Sie auf der Registerkarte **Linkverwaltung** aus, welche Aliase für die Segmentierung "verfolgt" werden und in den Segmentierungsfiltern vorhanden sein sollen. Beachten Sie, dass verfolgte Aliase nur der Segmentierung dienen und keinen Einfluss darauf haben, dass Ihr Link zu Berichtszwecken getrackt wird.
 
 {% alert tip %}
-Um Metriken für die Link-Interaktion zu verfolgen, stellen Sie sicher, dass Ihr Link entweder mit HTTP oder HTTPS beginnt.
+Um Metriken für die Link-Interaktion zu verfolgen, stellen Sie sicher, dass Ihr Link entweder mit HTTP oder HTTPS beginnt. Um das Tracking von Klicks für bestimmte Links zu deaktivieren, referenzieren Sie auf [Universal Links und App Links]({{site.baseurl}}/user_guide/message_building_by_channel/email/universal_links/#turning-off-click-tracking-on-a-link-to-link-basis).
 {% endalert %}
 
 Mit Braze können Sie eine unbegrenzte Anzahl von Links zum Nachverfolgen auswählen. Allerdings können Sie nur die zuletzt geöffneten Links nachverfolgen. Die Benutzerprofile enthalten die 100 zuletzt angeklickten Links. Wenn Sie beispielsweise 500 Links verfolgen und ein Nutzer auf alle 500 klickt, können Sie ein Retargeting durchführen oder Segmente erstellen, die auf den 100 zuletzt angeklickten Links basieren.
 
 {% tabs local %}
-{% tab Drag-and-Drop-Editor %}
+{% tab Drag-And-Drop Editor %}
 
-![Tab „Link-Management“ des Drag-and-Drop-Editors für E-Mails.]({% image_buster /assets/img/link_management_dnd.png %})
+![Link Management Tab des Drag-and-Drop-Editors für E-Mails.]({% image_buster /assets/img/link_management_dnd.png %})
 
 {% endtab %}
-{% tab HTML-Editor %}
+{% tab HTML editor %}
 
-![Registerkarte Linkverwaltung des HTML-E-Mail-Editors.]({% image_buster /assets/img/link_management_html.png %})
+![Tab Link Management des HTML-Editors für E-Mails.]({% image_buster /assets/img/link_management_html.png %})
 
 {% endtab %}
 {% endtabs %}
@@ -145,27 +148,27 @@ Braze verfolgt nur bis zu den letzten 100 angeklickten Link-Aliasen auf Profileb
 
 ### Aktionsbasierte Filter
  
-Sie können aktionsbasierte Nachrichten erstellen, die auf einen beliebigen Link (getrackt oder nicht getrackt) abzielen, oder Benutzer erneut ansprechen, wenn sie in einer beliebigen E-Mail-Kampagne oder Canvas-Komponente auf einen Alias geklickt haben.
+Sie können aktionsbasierte Nachrichten erstellen, die auf einen beliebigen Link (mit oder ohne Tracking) abzielen, oder Nutzer:innen anhand eines Klicks auf einen Alias in einer beliebigen E-Mail-Kampagne oder Canvas-Komponente retargeten.
 
-![Aktionsbasierte Optionen, um Nutzer anzusprechen, die auf einen Alias in einer Canvas-Komponente geklickt oder mit einer Kampagne interagiert haben.][6]
+![Aktionsbasierte Optionen zum Targeting von Nutzern:in, die auf einen Alias in einer Canvas-Komponente geklickt oder mit einer Kampagne interagiert haben.]({% image_buster /assets/img/link_aliasing_action_based_filters.png %})
 
 ### Segmentierungsfilter
 
 Wenn Sie in Braze einen Link-Alias in Ihrer E-Mail haben und ein Benutzer darauf klickt, wird das Ereignis im Profil des Benutzers mit dem Alias aufgezeichnet.
 
-Wenn Sie den Segmentierungsfilter "Geklickter Alias in einer beliebigen Kampagne oder einem beliebigen Canvas-Schritt" verwenden und später beschließen, diesen Link-Alias umzubenennen, werden die vorherigen Klickdaten im Benutzerprofil **nicht** aktualisiert, d.h. er wird weiterhin als der vorherige Link-Alias angezeigt. Wenn Sie also Benutzer auf der Grundlage des neuen Link-Alias ansprechen, werden die Daten des vorherigen Link-Alias nicht berücksichtigt.
+Wenn Sie den Segmentierungsfilter "Geklickter Alias in einer beliebigen Kampagne oder einem beliebigen Canvas-Schritt" verwenden und später beschließen, diesen Link-Alias umzubenennen, werden die vorherigen Klickdaten im Benutzerprofil **nicht** aktualisiert, d.h. er wird weiterhin als der vorherige Link-Alias angezeigt. Wenn Sie also Nutzer:innen auf der Grundlage des neuen Link-Alias zusammenstellen, werden die Daten des vorherigen Link-Alias nicht berücksichtigt.
 
 Wenn Sie den Segmentierungsfilter "Alias in Kampagne angeklickt" oder "Alias in Canvas angeklickt" verwenden, werden Ihre Benutzer danach gefiltert, ob sie einen bestimmten Alias in einer bestimmten Kampagne oder einem Canvas angeklickt haben. Wenn mehrere Benutzer dieselbe E-Mail-Adresse verwenden und der Alias-Link angeklickt wird, werden die Benutzerprofile aller anderen Benutzer, die dieselbe E-Mail-Adresse verwenden, aktualisiert. 
 
-Die folgenden Filter für die Segmentierung gelten für Klick-Events, die zum Zeitpunkt der Verarbeitung des Events getrackt werden. Das bedeutet, dass das Aufheben der Verfolgung von Links die vorhandenen Daten nicht löscht und die Verfolgung eines Links die Daten nicht wieder auffüllt. Weitere Einzelheiten finden Sie unter [Segmentierungsfilter]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters).
+Die folgenden Filter für die Segmentierung gelten für Klick-Events, die zum Zeitpunkt der Verarbeitung des Events getrackt werden. Das bedeutet, dass nicht getrackte Links vorhandene Daten nicht löschen und dass das Tracking eines Links die Daten nicht wieder auffüllt. Weitere Einzelheiten finden Sie unter [Segmentierungsfilter]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters).
 
 #### Tracking für Links aufheben
 
-Wenn Sie das Tracking eines Links aufheben, werden vorhandene Segmente mit dem Filter nicht erneut dem nicht getrackten Alias zugewiesen. Die alten Daten bleiben in den Nutzerprofilen erhalten, bis sie durch neuere Daten ersetzt werden.
+Wenn Sie das Tracking eines Links aufheben, werden vorhandene Segmente mit dem Filter nicht erneut dem nicht getrackten Alias zugewiesen. Die alten Daten bleiben in den Nutzerprofilen erhalten, bis sie durch neuere Daten ersetzt werden. 
 
-Zum Zwecke der Segmentierung können standardmäßig nur 100 Links pro Workspace getrackt werden. Das Tracking von Links in archivierten Nachrichten wird automatisch aufgehoben. Wenn archivierte Nachrichten jedoch nicht archiviert werden, müssen die Links erneut getrackt werden. Wenn Link-Aliase verfolgt werden, werden die Link-Berichte anhand des Alias indexiert und nicht anhand von Top-Level-Domänen oder vollständigen URLs.
+Das Tracking von Links in archivierten Nachrichten wird automatisch aufgehoben. Wenn archivierte Nachrichten jedoch nicht archiviert werden, müssen die Links erneut getrackt werden. Wenn Link-Aliase verfolgt werden, werden die Link-Berichte anhand des Alias indexiert und nicht anhand von Top-Level-Domänen oder vollständigen URLs.
 
-![Registerkarte Kampagnenanalyse, die drei Link-Aliase und deren Gesamtklicks anzeigt.][1]
+![Analytics Tab für Kampagnen, der drei Link-Aliases und deren Gesamtklicks anzeigt.]({% image_buster /assets/img/link_aliasing_click_table.png %})
 
 ### Event „E-Mail Klicks“
 
@@ -218,13 +221,13 @@ Wenn ein Inhaltsblock ohne einen `lid` Wert in eine neue Nachricht eingefügt wi
 Für Content-Blöcke empfiehlt Braze die Erstellung von Kopien bestehender Content-Blöcke zur Verwendung in neuen Nachrichten. Dies kann durch Massenvervielfältigung erfolgen, um Szenarien zu vermeiden, in denen Sie auf einen Content-Block verweisen, der in einer neuen Nachricht nicht für Link Aliasing aktiviert wurde.
 {% endalert %}
 
-## Link-Aliasing für über Liquid generierte URLs
+## Link-Aliasing für von Liquid generierte URLs
 
-Für URLs, die durch eine `assign`-Anweisung im HTML oder in einem Content-Block erzeugt werden, empfehlen wir, ein Fragezeichen (?) in den Anker-Tag einzufügen. Dies hilft Braze, Abfrageparameter anzuhängen (`lid = somevalue`), damit Link Aliasing richtig funktioniert. Wenn Sie nicht angeben, wo die Abfrageparameter angehängt werden sollen, erkennt das Link-Aliasing diese URLs nicht.
+Für URLs, die von Liquid generiert werden, z.B. `assign` Anweisungen im HTML oder von einem Content-Block, müssen Sie ein Fragezeichen (`?`) an den Liquid-Tag anfügen. Dies erlaubt Braze das Anhängen von Abfrageparametern (`lid = somevalue`), so dass Link-Aliasing richtig funktionieren kann. Wenn Sie nicht angeben, wo die Abfrageparameter angehängt werden sollen, erkennt Link-Aliasing diese URLs nicht und die Link-Templates können nicht angewendet werden.
 
 ### Beispiel
 
-Sehen Sie sich dieses Link Aliasing-Beispiel für die empfohlene Formatierung des Anker-Tags an:
+Sehen Sie sich dieses Link-Aliasing-Beispiel für die empfohlene Formatierung des Links an:
 
 {% raw %}
 ```liquid
@@ -245,8 +248,3 @@ Wenn der Link Parameter enthält, die ein Fragezeichen (`?`) enthalten, können 
 {% endraw %}
 
 
-[1]: {% image_buster /assets/img/link_aliasing_click_table.png %}
-[2]: {% image_buster /assets/img/link_aliasing_composer.png %}
-[5]: {% image_buster /assets/img/link_aliasing_segmentation_filters.png %}
-[6]: {% image_buster /assets/img/link_aliasing_action_based_filters.png %}
-[8]: {% image_buster /assets/img/tracked_aliases.png %}

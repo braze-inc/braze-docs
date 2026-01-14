@@ -1,21 +1,21 @@
 ---
-nav_title: "PUT: 카탈로그 항목 업데이트"
-article_title: "PUT: 카탈로그 항목 업데이트"
+nav_title: "PUT: 카탈로그 항목 바꾸기"
+article_title: "PUT: 카탈로그 항목 바꾸기"
 search_tag: Endpoint
 page_order: 6
 
 layout: api_page
 page_type: reference
-description: "이 문서에서는 업데이트 카탈로그 항목 Braze 엔드포인트에 대한 자세한 내용을 설명합니다."
+description: "이 문서에서는 카탈로그 항목 바꾸기 Braze 엔드포인트에 대한 자세한 내용을 설명합니다."
 
 ---
 {% api %}
-# 카탈로그 항목 업데이트
+# 카탈로그 항목 교체
 {% apimethod put %}
 /catalogs/{catalog_name}/items/{item_id}
 {% endapimethod %}
 
-> 이 엔드포인트를 사용하여 카탈로그의 항목을 업데이트하세요.
+> 이 엔드포인트를 사용하여 카탈로그의 항목을 교체할 수 있습니다.
 
 `item_id` 을 찾을 수 없는 경우 이 엔드포인트가 카탈로그에 항목을 생성합니다. 이 엔드포인트는 동기식입니다.
 

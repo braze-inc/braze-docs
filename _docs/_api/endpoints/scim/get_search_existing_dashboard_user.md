@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: Search Existing Dashboard User Account by Email"
+nav_title: "GET: Search existing dashboard user account by email"
 article_title: "GET: Search Existing Dashboard User Account by Email"
 alias: /get_search_existing_dashboard_user_email/
 search_tag: Endpoint
@@ -15,7 +15,7 @@ description: "This article outlines details about the Search for an existing das
 scim/v2/Users?filter=userName%20eq%20"user%40test.com"
 {% endapimethod %}
 
-> Use this endpoint to look up an existing dashboard user account by specifying their email in the filter query parameter. 
+> Use this endpoint to look up an existing dashboard user account by specifying their email in the filter query parameter.
 
 Note that when the query parameter is URL encoded it will read like this:
 
@@ -79,11 +79,11 @@ curl --location --request GET \ 'https://rest.iad-01.braze.com/scim/v2/Users?fil
                         "team": [
                             {
                                 "teamId": "241adcd25789fabcded",
-                                "teamName": "Test Team",                  
+                                "teamName": "Test Team",
                                 "teamPermissions": ["admin"]
                             }
                         ]
-                    } 
+                    }
                 ]
             }
         }

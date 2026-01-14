@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Phrase](https://phrase.com/) is a cloud-based software for localization management. Phrase enables automated translation workflows and supports continuous localization for agile teams.
 
+_This integration is maintained by Phrase._
+
+## About the integration
+
 The Phrase and Braze integration allow you to translate email templates and Content Blocks without leaving the Braze interface. With the Phrase TMS integration for Braze, you can increase customer engagement and drive growth into new markets with seamless localization.
 
 ## Prerequisites
@@ -20,7 +24,7 @@ The Phrase and Braze integration allow you to translate email templates and Cont
 | --- | --- |
 | Phrase TMS account | A Phrase TMS Ultimate or Enterprise account is required to take advantage of this partnership. |
 | Braze REST API key | A Braze REST API key with all permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
-| Braze REST endpoint | [Your REST endpoint URL][1]. Your endpoint will depend on the Braze URL for your instance. |
+| Braze REST endpoint | [Your REST endpoint URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). Your endpoint will depend on the Braze URL for your instance. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration
@@ -81,4 +85,4 @@ In Phrase, navigate to **Settings > Integrations > Connectors > New**.
 
 The [Connector API](https://cloud.memsource.com/web/docs/api#) can automate steps otherwise performed manually through the UI. [Webhooks](https://support.phrase.com/hc/en-us/articles/5709693398812) can be used to have Phrase TMS notify 3rd party systems about certain events (for example, a job status change).
 
-[1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
+

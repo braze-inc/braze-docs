@@ -16,8 +16,12 @@ guide_featured_list:
   link: /docs/know_before_send/
   image: /assets/img/braze_icons/send-01.svg
 - name: "テストメッセージの送信"
-  link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/
+  link: /docs/developer_guide/in_app_messages/sending_test_messages/
   image: /assets/img/braze_icons/mail-01.svg
+- name: "低遅延の要件を改善する"
+  image: /assets/img/braze_icons/send-01.svg
+  link: /docs/user_guide/message_building_by_channel/content_cards/best_practices/improving_low_latency_requirements
+
 ---
 
 <br><br>

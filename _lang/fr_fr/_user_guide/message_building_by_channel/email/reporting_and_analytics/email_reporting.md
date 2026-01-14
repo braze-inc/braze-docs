@@ -1,8 +1,8 @@
 ---
-nav_title: Reporting
-article_title:  Reporting E-mail
+nav_title: Rapports
+article_title:  Rapports sur les e-mails
 page_order: 20
-description: "Cet article de référence explique les différents éléments du reporting d’e-mails et où il se trouve dans le tableau de bord."
+description: "Cet article de référence couvre les différents composants des rapports sur les e-mails et l'endroit où ils se trouvent dans le tableau de bord."
 tool:
   - Reports
 channel:
@@ -10,9 +10,9 @@ channel:
 
 ---
 
-# Reporting d’e-mails
+# Rapports par e-mail
 
-> Le présent article explique les différents composants de votre reporting d’e-mails et où il se trouve dans le tableau de bord.
+> Cet article aborde les différents composants de votre rapport d'e-mail et l'endroit où il se trouve dans le tableau de bord.
 
-{% multi_lang_include campaign_analytics.md channel="e-mail" %}
+{% multi_lang_include analytics/campaign_analytics.md channel="email" %}
 

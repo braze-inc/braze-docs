@@ -1,5 +1,5 @@
 ---
-nav_title: Persistente Entry-Eigenschaften
+nav_title: Persistente Eigenschaften des Entrys
 article_title: Persistente Entry-Eigenschaften
 alias: "/persistent_entry/"
 page_type: reference
@@ -10,20 +10,23 @@ page_order: 5
 
 # Persistente Eigenschaften des Entrys
 
-> Wenn ein Canvas durch ein benutzerdefiniertes Ereignis, einen Kauf oder einen API-Aufruf ausgelöst wird, können Sie Metadaten aus dem API-Aufruf, dem benutzerdefinierten Ereignis oder dem Kaufereignis zur Personalisierung in jedem Schritt Ihres Canvas-Workflows verwenden. 
+> Wenn ein Canvas durch ein benutzerdefiniertes Ereignis, einen Kauf oder einen API-Aufruf ausgelöst wird, können Sie Metadaten aus dem API-Aufruf, dem benutzerdefinierten Ereignis oder dem Kaufereignis zur Personalisierung in jedem Schritt Ihres Canvas-Workflows verwenden. Sie können diese Eigenschaften verwenden, um mehr kuratierte Nachrichten zu versenden.
 
-Vor diesem Feature konnten die Entry-Eigenschaften nur im ersten Schritt von Canvas verwendet werden. Durch die Möglichkeit der Verwendung von Eingabeeigenschaften während der gesamten Canvas-Reise können Kunden gezieltere Nachrichten senden und ein hochentwickeltes Endbenutzererlebnis schaffen.
+{% alert important %}
+Persistente Eingangs-Eigenschaften sind ein Artefakt des ursprünglichen Canvas-Editors, daher gibt es veraltete Referenzen auf Begriffe, die als historische Referenz verbleiben. Den aktuellen, aktualisierten Canvas-Editor finden Sie unter [Canvas-Eingangs-Eigenschaften und Event-Eigenschaften]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties).
+{% endalert %}
 
 ## Eingabeeigenschaften verwenden
 
 Eingabeeigenschaften können in aktionsbasierten und API-gesteuerten Canvases verwendet werden. Diese Entry-Eigenschaften werden definiert, wenn ein Canvas durch ein angepasstes Event, einen Kauf oder einen API-Aufruf getriggert wird. Weitere Informationen finden Sie in den folgenden Artikeln:
+
 - [Canvas Entry Eigenschaften Objekt]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/)
 - [Event-Eigenschaften Objekt]({{site.baseurl}}/api/objects_filters/event_object/)
 - [Kauf-Objekt]({{site.baseurl}}/api/objects_filters/purchase_object/#purchase-product_id)
 
 Eigenschaften, die von diesen Objekten übergeben werden, können mit dem Tag `canvas_entry_properties` Liquid-Tag referenziert werden. Eine Anfrage mit `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}` könnte zum Beispiel das Wort "Schuhe" zu einer Nachricht hinzufügen, indem Sie das Liquid {% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %} hinzufügen.
 
-Wenn ein Canvas eine Nachricht mit dem Tag `canvas_entry_properties` Liquid enthält, werden die mit diesen Eigenschaften verbundenen Werte für die Dauer der Reise eines Benutzers im Canvas gespeichert und gelöscht, wenn der Benutzer das Canvas verlässt. Beachten Sie, dass die Eigenschaften von Canvas-Entrys nur in Liquid referenziert werden können. Um nach den Eigenschaften innerhalb des Canvas zu filtern, verwenden Sie stattdessen die [Segmentierung von Event-Eigenschaften]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/nested_objects/).
+Wenn ein Canvas eine Nachricht mit dem Tag `canvas_entry_properties` Liquid enthält, werden die mit diesen Eigenschaften verbundenen Werte für die Dauer der Reise eines Benutzers im Canvas gespeichert und gelöscht, wenn der Benutzer das Canvas verlässt. Beachten Sie, dass die Eigenschaften von Canvas-Entrys nur in Liquid referenziert werden können. Um nach den Eigenschaften innerhalb des Canvas zu filtern, verwenden Sie stattdessen die [Segmentierung von Event-Eigenschaften]({{site.baseurl}}/user_guide/data/custom_data/custom_events/nested_objects/).
 
 {% alert note %}
 Das Objekt Canvas Entry-Eigenschaften hat eine maximale Größe von 50 KB.
@@ -76,17 +79,15 @@ url -X POST \
     }' \
 ```
  
-In dieser Anfrage ist der globale Wert für "Lebensmittelallergien" "keine". Für Customer_123 ist der Wert "Milch". Nachrichten in diesem Canvas, die das Liquid-Snippet {%raw%}`{{canvas_entry_properties.${food_allergies}}}`{%endraw%} enthalten, werden mit der Vorlage "dairy" für Customer_123 und "none" für alle anderen versehen. 
+In dieser Anfrage ist der globale Wert für "Lebensmittelallergien" "keine". Für Customer_123, lautet der Wert "Molkerei". Nachrichten in diesem Canvas, die das Liquid Snippet {%raw%}`{{canvas_entry_properties.${food_allergies}}}`{%endraw%} enthalten, erhalten ein Template mit "dairy" für Customer_123 und "none" für alle anderen. 
 
 ## Anwendungsfall
 
-Wenn Sie ein Canvas haben, das ausgelöst wird, wenn ein Benutzer einen Artikel auf Ihrer E-Commerce-Website anschaut, ihn aber nicht in den Warenkorb legt, könnte der erste Schritt des Canvas eine Push-Benachrichtigung sein, die den Benutzer fragt, ob er den Artikel kaufen möchte. Sie können den Namen des Produkts referenzieren, indem Sie {% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %}
+Wenn Sie ein Canvas haben, das ausgelöst wird, wenn ein Nutzer:in einen Artikel auf Ihrer E-Commerce-Website stöbert, ihn aber nicht in den Warenkorb legt, könnte der erste Schritt des Canvas eine Push-Benachrichtigung sein, in der er gefragt wird, ob er den Artikel kaufen möchte. Sie können den Namen des Produkts referenzieren, indem Sie {% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %}
 
-![][1]{: style="border:0;margin-left:15px;"}
+![]({% image_buster /assets/img/persistent_entry_properties/PEP1.png %}){: style="border:0;margin-left:15px;"}
 
 Im zweiten Schritt kann eine weitere Push-Benachrichtigung gesendet werden, die den Benutzer zur Kasse bittet, wenn er den Artikel in den Warenkorb gelegt, aber noch nicht gekauft hat. Sie können weiterhin die Eigenschaft des Entrys `product_name` referenzieren, indem Sie {% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %} verwenden.
 
-![][2]{: style="border:0;margin-left:15px;"}
+![]({% image_buster /assets/img/persistent_entry_properties/PEP12.png %}){: style="border:0;margin-left:15px;"}
 
-[1]:{% image_buster /assets/img/persistent_entry_properties/PEP1.png %}
-[2]:{% image_buster /assets/img/persistent_entry_properties/PEP12.png %}

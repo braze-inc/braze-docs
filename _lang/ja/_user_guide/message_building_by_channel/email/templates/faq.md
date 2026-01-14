@@ -51,7 +51,7 @@ channel: email
 
 ### すべてのタグを適用したリンクをプレビューするには？
 
-リンクをプレビューする方法はいくつかある。[リンクテンプレートを]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/link_template/)適用した後、自分自身に[テストメールを]({{site.baseurl}}/developer_guide/platform_wide/sending_test_messages/)送信し、すべてのリンクを表示することができる。 
+リンクをプレビューする方法はいくつかある。[リンクテンプレートを]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/link_template/)適用した後、自分自身に[テストメールを]({{site.baseurl}}/developer_guide/in_app_messages/sending_test_messages/)送信し、すべてのリンクを表示することができる。 
 
 新しいタブのプレビュー・ペインから、リンクを開いて見ることもできる。また、プレビュー・ペインでリンクにカーソルを合わせると、ブラウザの下部に表示される。
 

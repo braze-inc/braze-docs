@@ -1,21 +1,17 @@
 ---
-nav_title: Changing Custom Attribute or Event Data Type
-article_title: Changing Custom Attribute or Event Data Type
+nav_title: Changing custom attribute or event data type
+article_title: Change Custom Attribute or Event Data Type
 page_order: 1
 
 page_type: solution
 description: "This help article walks you through how to change the data type of a custom attribute or custom event, and the implications of doing so."
 ---
 
-# Changing custom attribute or event data type
+# Change custom attribute or event data type
 
 To change the data type of a custom attribute or event, from the Braze dashboard, navigate to **Data Settings** and select either **Custom Attributes** or **Custom Events**.
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), the **Custom Events** and **Custom Attributes** pages are located under **Manage Settings**.
-{% endalert %}
-
-![Custom Attributes tab to edit attribute or data type][1]
+![Custom Attributes tab to edit attribute or data type]({% image_buster /assets/img/change_custom_attribute.png %})
 
 If you must change the data type of a custom attribute or event (for example, changing `time` to `string`), consider the following:
 
@@ -29,4 +25,3 @@ The ability to prevent automatic detection from updating the custom attribute da
 
 _Last updated on February 8, 2024_
 
-[1]: {% image_buster /assets/img/change_custom_attribute.png %}

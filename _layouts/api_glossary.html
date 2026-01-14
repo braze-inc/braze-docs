@@ -3,6 +3,8 @@ layout: default
 hide_toc: true
 hide_bottom_nav: false
 hide_breadcrumb: false
+hide_feedback: true
+hide_binary_feedback: false
 ---
 
 
@@ -99,7 +101,7 @@ $(document).ready(function() {
         str = str.replace(new RegExp(from.charAt(i), 'g'), to.charAt(i));
     }
 
-    str = str.replace(/[\(\)]/g, '') // remove parenthsis
+  str = str.replace(/[\(\)]/g, '') // remove parenthesis
         .replace(/[^a-z0-9 -]/g, '-') // remove invalid chars
         .replace(/\s+/g, '-') // collapse whitespace and replace by -
         .replace(/-+/g, '-');  // collapse dashes
@@ -337,8 +339,11 @@ $(document).ready(function() {
 
     {% include footer.html class="footer_glossary" %}
 </div>
-{%- unless hide_toc -%}
 <div class="d-none d-lg-block col-lg-2 d-print-none" id="toc_col">
+  {%- unless hide_toc -%}
   <div id="toc" ></div>
+  {%- endunless -%}
+  {% unless hide_binary_feedback -%}
+  {% include binary_feedback.html  %}
+  {% endunless -%}
 </div>
-{%- endunless -%}

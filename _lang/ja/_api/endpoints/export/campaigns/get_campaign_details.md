@@ -1,5 +1,5 @@
 ---
-nav_title: "取得:キャンペーンの詳細のエクスポート"
+nav_title: "取得:キャンペーンのエクスポートの詳細"
 article_title: "取得:キャンペーンの詳細のエクスポート"
 search_tag: Endpoint
 page_order: 4
@@ -33,6 +33,7 @@ description: "この記事では、「キャンペーンの詳細のエクスポ
 | パラメーター | required | データ型 | 説明 |
 | --------- | -------- | --------- | ----------- |
 | `campaign_id` | 必須 | string | [キャンペーン API 識別子]({{site.baseurl}}/api/identifier_types/)を参照してください。<br><br> API キャンペーンの `campaign_id` は、[API キー]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/)ページ、またはダッシュボードの**キャンペーンの詳細**ページで確認できます。または、[「キャンペーンリストのエクスポート」エンドポイント](#campaign-list-endpoint)を使用することもできます。 |
+| `post_launch_draft_version` | オプション | ブール値 | 開始後の下書きがあるメッセージの場合、これを`true` に設定すると、利用可能な下書きの変更が表示されます。デフォルトは `false` です |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 例のリクエスト
@@ -46,14 +47,14 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/detail
 ## 回答
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "created_at" : (string) the date created as ISO 8601 date,
     "updated_at" : (string) the date last updated as ISO 8601 date,
     "archived": (boolean) whether this campaign is archived,
     "draft": (boolean) whether this campaign is a draft,
+    "enabled": (boolean) whether this campaign is active or not,
+    "has_post_launch_draft": (boolean) whether this campaign has a post-launch draft,
     "name" : (string) the campaign name,
     "description" : (string) the campaign description,
     "schedule_type" : (string) the type of scheduling action,
@@ -81,11 +82,14 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ```json
 {
-    "channel": (string) the description of the channel, such as "ios_push" or "android_push"
+    "channel": (string) the description of the channel, such as "ios_push" or "android_push",
+    "name": (string) the name of the variant,
     "alert": (string) the alert body text,
     "extras": (hash) any key-value pairs provided,
     "title": (string) the alert title text,
-    "action": (string) action link from click
+    "action": (string) action link from click,
+    "image_url": (string) the image URL for an Android notification image, an iOS notification image, or a Web push icon image,
+    "large_image_url": (string) the web notification image URL for Android Chrome and Windows web push actions; null in other cases
 }
 ```
 
@@ -215,7 +219,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ### 変換動作
 
-`conversion_behaviors` 配列には、キャンペーンに設定されたコンバージョンイベントの動作に関する情報が含まれます。これらの動作は、キャンペーンによって設定された順序で行われます。たとえば、変換イベントA は配列の最初の項目、変換イベントB は2 番目の項目などです。以下に、コンバージョンイベント ビヘイビアのレスポンスの例を示します。
+`conversion_behaviors` 配列には、キャンペーンに設定されたコンバージョンイベントの動作に関する情報が含まれます。これらの動作は、キャンペーンによって設定された順序で行われます。たとえば、変換イベントA は配列の最初の項目、変換イベントB は2 番目の項目、というようになります。以下に、コンバージョンイベント ビヘイビアのレスポンスの例を示します。
 
 #### メールをクリック
 
@@ -285,7 +289,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 {% alert tip %}
-CSV および API のエクスポートに関するヘルプについては、「[エクスポートのトラブルシューティング]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)」を参照してください。
+CSV および API のエクスポートに関するヘルプについては、「[エクスポートのトラブルシューティング]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/)」を参照してください。
 {% endalert %}
 
 {% endapi %}

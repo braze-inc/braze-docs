@@ -1,5 +1,5 @@
 ---
-nav_title: Retention Reports
+nav_title: Retention reports
 article_title: Retention Reports for Campaigns and Canvases
 page_order: 5
 tool: Reports
@@ -19,7 +19,7 @@ Retention Reports are not available for API-triggered campaigns.
 
 ### Step 1: Select a date range
 
-![Report Date][8]{: style="float:right;max-width:30%;margin-left:15px;"}
+![Report Date]({% image_buster /assets/img/date_select_retention.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
 
 Get started by visiting any campaign or Canvas in your Braze dashboard, and select a date range for your report. Selecting an appropriate date range is crucial because of the way it affects the retention reports. 
 
@@ -42,13 +42,13 @@ Next, select **Analyze Variants**. From here, you can analyze your variants, che
 {% endtab %}
 {% endtabs %}
 
-![Select a Retention event][1]{: style="max-width:80%"}
+![Select a Retention event]({% image_buster /assets/img/retention_1.png %}){: style="max-width:80%"}
 
 ### Step 3: Generate the report
 
 After you've selected a retention event, select **Run Report** to start the query.
 
-![Run Report][2]{: style="max-width:80%"}
+![Run Report]({% image_buster /assets/img/retention_2.png %}){: style="max-width:80%"}
 
 This query may take a few minutes to run, depending on how much data needs to be retrieved to generate the results. If it takes too long, you'll see a notification asking you to retry loading the report again. You may need to wait up to five minutes before the report will load.
 
@@ -97,7 +97,7 @@ Range retention measures how many users come back in the range of days listed ac
 
 Range Reports are some of the most intuitive reports to read. They clearly state, of all the users in a cohort, what percentage of those users performed the retention event within a given date range. For example, in the following image, referencing the All Users Cohort, on date range "Day 0 (0-24hrs)", 35.71% of the cohort performed the retention report. If a user performs multiple retention events within multiple date ranges, they will be counted as retained for each range.
 
-![Retention Report][5]
+![Retention Report]({% image_buster /assets/img/range_retention.png %})
 
 ### Retention report components
 
@@ -138,7 +138,7 @@ Some use cases for showing performance by variant:
 - **Date Range**: Set on the Campaign or Canvas **Details** page, the date range includes all users who received the campaign or Canvas during this window, and of those users, the data of those that performed their retention event during the date range will appear in the report. Each day the retention rate, percentage change from the control group, and confidence are measured.
 - **Retention Rate**: Shows the retention rate by variant. The retention rate is equivalent to the number of users that performed the retention event divided by the total users that have received the campaign or Canvas.
 - **Percentage Change from Control**: Quantifies the percentage change per variant from the control group.
-- **Confidence**: {% multi_lang_include metrics.md metric='Confidence' %} Braze compares each variant's conversion rate against the control's conversion rate with a statistical procedure called a Z Test to calculate a [confidence]({{site.baseurl}}/user_guide/intelligence/multivariate_testing/#understanding-confidence) percentage.
+- **Confidence**: {% multi_lang_include analytics/metrics.md metric='Confidence' %} Braze compares each variant's conversion rate against the control's conversion rate with a statistical procedure called a Z Test to calculate a [confidence]({{site.baseurl}}/user_guide/intelligence/multivariate_testing/#understanding-confidence) percentage.
 - **Units**: You can adjust the units between the percentage of users and the number of users in the upper right-hand corner of the chart, specific units may prove to be more significant when judging the impact of a campaign or Canvas.
 - **Variant Graph**: This graph summarizes the results by variant for the selected date range.
 
@@ -151,9 +151,5 @@ Retention Reports are easy to generate, yet challenging to interpret and act on.
 - Are you seeing messaging fatigue?
 - Did a specific optimization you make to a campaign or Canvas X days ago have a positive impact?
 
-[1]: {% image_buster /assets/img/retention_1.png %}
-[2]: {% image_buster /assets/img/retention_2.png %}
-[5]: {% image_buster /assets/img/range_retention.png %}
-[8]: {% image_buster /assets/img/date_select_retention.png %}
 
 

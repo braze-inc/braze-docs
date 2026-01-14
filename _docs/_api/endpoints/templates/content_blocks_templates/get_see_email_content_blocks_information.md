@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: See Content Blocks Information"
+nav_title: "GET: See Content Blocks information"
 article_title: "GET: See Content Blocks Information"
 search_tag: Endpoint
 page_order: 4
@@ -44,8 +44,6 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/content_blocks/i
 ## Response
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
 {
   "content_block_id": (string) the Content Block identifier,
   "name": (string) the name of the Content Block,

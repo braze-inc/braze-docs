@@ -16,7 +16,11 @@ description: "Este artigo descreve detalhes sobre o endpoint Create scheduled me
 
 > Use esse ponto de extremidade para programar o envio de uma campanha, Canva ou outra mensagem em um horário designado e forneça um identificador para fazer referência a essa mensagem para atualizações.
 
-Se estiver direcionando um segmento de mensagem, um registro da sua solicitação será armazenado no [console de desenvolvedor](https://dashboard.braze.com/app_settings/developer_console/activitylog/) depois que todas as mensagens programadas tiverem sido enviadas.
+Se estiver direcionando um segmento de mensagem, um registro da sua solicitação será armazenado no [console do desenvolvedor](https://dashboard.braze.com/app_settings/developer_console/activitylog/) após o envio de todas as mensagens programadas.
+
+{% alert tip %}
+Se estiver interessado em enviar mensagens imediatamente para usuários designados, use o [endpoint`/messages/send` ]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages).
+{% endalert %}
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#25272fb8-bc39-41df-9a41-07ecfd76cb1d {% endapiref %}
 
@@ -72,15 +76,14 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Parâmetro | Obrigatória | Tipo de dados | Descrição |
 | --------- | ---------| --------- | ----------- |
-|`broadcast`| Opcional | Booleano | Você deve definir `broadcast` como verdadeiro ao enviar uma mensagem para um segmento inteiro que uma campanha ou canva segmenta. O padrão desse parâmetro é false (a partir de 31 de agosto de 2017). <br><br> Se `broadcast` estiver definido como true, uma lista `recipients` não poderá ser incluída. No entanto, tenha cuidado ao definir `broadcast: true`, pois definir esta flag de forma não intencional pode fazer com que você envie sua mensagem para um público maior do que o esperado. |
+|`broadcast`| Opcional | Booleano | Você deve definir `broadcast` como verdadeiro ao enviar uma mensagem para um segmento inteiro que uma campanha ou canva segmenta. O padrão desse parâmetro é `false`. <br><br> Se `broadcast` estiver definido como `true`, não será possível incluir uma lista de destinatários. No entanto, tenha cuidado ao definir `broadcast: true`, pois definir essa flag inadvertidamente pode fazer com que você envie sua mensagem para um público maior do que o esperado. |
 | `external_user_ids` | Opcional | Matriz de strings | Consulte [identificador de usuário externo]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields). |
 | `user_aliases` | Opcional | Vetor de objetos de alias de usuário | Consulte o [objeto de alias de usuário]({{site.baseurl}}/api/objects_filters/user_alias_object/). |
 | `audience` | Opcional | Objeto de público conectado | Veja [público conectado]({{site.baseurl}}/api/objects_filters/connected_audience/). |
 | `segment_id` | Opcional | String | Consulte [identificador de segmento]({{site.baseurl}}/api/identifier_types/). |
 | `campaign_id`|Opcional|String| Consulte [identificador de campanha]({{site.baseurl}}/api/identifier_types/). |
-| `recipients` | Opcional | Matriz de objetos de destinatários | Veja [objetos de destinatários]({{site.baseurl}}/api/objects_filters/recipient_object/). |
 | `send_id` | Opcional | String | Consulte [enviar identificador]({{site.baseurl}}/api/identifier_types/). |
-| `override_messaging_limits` | Opcional | Booleano | Ignorar limites globais de frequência para campanhas; o padrão é false |
+| `override_messaging_limits` | Opcional | Booleano | Ignorar o limite de frequência para campanhas; o padrão é false |
 |`recipient_subscription_state`| Opcional | String | Use essa opção para enviar mensagens apenas para usuários que tenham aceitado receber mensagens (`opted_in`), apenas para usuários que tenham feito a inscrição ou aceitado receber mensagens (`subscribed`) ou para todos os usuários, inclusive os que cancelaram a inscrição (`all`). <br><br>O uso de usuários do `all` é útil para envio de mensagens por e-mail de transação. O padrão é `subscribed`. |
 | `schedule` | Obrigatória | Objeto de programação | Ver [objeto de programação]({{site.baseurl}}/api/objects_filters/schedule_object/) |
 | `messages` | Opcional | Objeto de envio de mensagens | Consulte os [objetos de envio de mensagens disponíveis]({{site.baseurl}}/api/objects_filters/#messaging-objects). |

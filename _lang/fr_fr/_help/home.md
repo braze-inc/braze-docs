@@ -17,7 +17,7 @@ resources_list:
     link: /docs/help/faqs/
     image: /assets/img/braze_icons/book-open-01.svg
   - name: Notes de version
-    link: /docs/help/release_notes/most_recent/
+    link: /docs/help/release_notes/
     image: /assets/img/braze_icons/sticker-square.svg
   - name: Connection à Braze Learning
     link: https://learning.braze.com/
@@ -26,12 +26,12 @@ resources_list:
     link: https://www.youtube.com/channel/UCEXVTEWeAHx1OlddOMRTaOg
     image: /assets/img/braze_icons/youtube.svg
   - name: Assistance Braze
-    link: /docs/braze_support/
+    link: /docs/user_guide/administrative/access_braze/support/
     image: /assets/img/braze_icons/mail-01.svg
 
 popular_topic_list:
   - name: À savoir avant l’envoi
-    link: /docs/help/help_articles/campaigns_and_canvas/know_before_send/
+    link: /docs/user_guide/engagement_tools/messaging_fundamentals/know_before_send/
   - name: Migration du jeton Push
     link: /docs/help/help_articles/push/push_token_migration/
   - name: Journalisation des Propriétés de l’événement personnalisé
@@ -39,13 +39,11 @@ popular_topic_list:
   - name: "ID d'envoi"
     link: /docs/help/help_articles/data/dispatch_id/
   - name: E-mails renvoyés
-    link: /docs/help/help_articles/email/email_bounces/
+    link: /docs/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/
   - name: Supprimer des utilisateurs via l’API
     link: /docs/help/help_articles/api/delete_user/
   - name: Modification du type de données personnalisé
     link: /docs/help/help_articles/data/change_custom_data_type/
-  - name: Messages in-app non affichés
-    link: /docs/help/help_articles/in-app_messages/in-app_messages_not_displaying/  
   - name: Journalisation des événements
     link: /docs/help/help_articles/campaigns_and_canvas/using_event_logging/ 
 ---

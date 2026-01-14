@@ -1,6 +1,6 @@
 ---
-nav_title: Groupes d’abonnement
-article_title: Groupes d’abonnement
+nav_title: "Groupes d'abonnement"
+article_title: "Groupes d'abonnement"
 page_order: 1
 description: "Cet article traite des groupes d'abonnement aux messages LINE."
 page_type: reference
@@ -11,7 +11,7 @@ alias: /line/subscription_groups/
 
 # LINE groupes d'abonnement
 
-> Il existe deux états d'abonnement pour les utilisateurs de LINE : abonné et désabonné. LINE peut compter jusqu'à 100 groupes d'abonnement par espace de travail, chaque groupe d'abonnement étant connecté à son propre canal LINE.
+> Il existe deux états d'abonnement pour les utilisateurs de LINE : abonné et désabonné. LINE peut compter jusqu'à 100 groupes d'abonnement par espace de travail, chaque groupe d'abonnement étant connecté à son propre canal LINE.
 
 | État | Définition |
 | --- | --- |

@@ -15,7 +15,7 @@ channel:
 > リンクテンプレートを使用すると、パラメータを追加したり URL を先頭に追加したりすることで、メールキャンペーンの動的リンクと再利用可能リンクを作成できます。これにより、キャンペーンとメッセージ全体でURL の一貫性を高めることができます。 
 
 {% alert note %}
-リンクテンプレートはオプション機能である。**Templates**セクションに**Email Link Templates が**ない場合は、アカウントマネージャーに連絡して機能をオンにしてもらう。
+リンクテンプレートはオプション機能である。**テンプレート**セクションに**メールリンクテンプレートが**ない場合は、アカウントマネージャーに連絡して機能をオンにしてもらう。
 {% endalert %}
 
 ## CDI の仕組み
@@ -33,15 +33,9 @@ channel:
 
 1. [**テンプレート**] > [**メールリンクテンプレート**] に移動します。 
 2. **メールリンクテンプレートの作成**を選択します。
-
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、このページは**Engagement**> **Templates & Media**> **リンクテンプレート** にあります。
-{% endalert %}
-
-{:start="3"}
-3\.リンクテンプレートに名前を付けます。
-4\. (オプション) 説明、チーム、またはタグを追加して、リンクテンプレートに関する詳細を追加します。
-5\. (オプション)メールキャンペーンとキャンバスのリンクにリンクテンプレートを自動的に追加するには、トグルを選択します。これは、新規または既存のメールに新しいリンクを追加する場合に適用されます。
+3. リンクテンプレートに名前を付けます。
+4. (オプション) リンクテンプレートに関する詳細を追加するための説明、チーム、またはタグを追加します。
+5. (オプション) メールキャンペーンとキャンバスのリンクにリンクテンプレートを自動的に追加するには、トグルを選択します。これは、新規または既存のメールに新しいリンクを追加する場合に適用されます。
 
 作成できるリンクテンプレートには2種類ある：
 
@@ -58,9 +52,9 @@ channel:
 2. **Template Position**を**Before URL**に設定します。 
 3. URL の先頭に常に追加される文字列を入力します。 
 
-挿入プロセスの例を示すプレビューセクションが提供されます。
+**テンプレートプレビュー** は、URL の前にリンクテンプレートを挿入する方法の例を示すために提供されています。
 
-![URLの前にリンクテンプレートを挿入する際の「テンプレートの位置」、「URLのプリペンド」、「テンプレートのプレビュー」フィールド。]({% image_buster /assets/img_archive/link_template_preappend.png %}){: style="max-width:90%;"}
+![URLの前にリンクテンプレートを挿入するプロセスのための「テンプレート位置」、「URLのプリペンド」、「テンプレートプレビュー」フィールド。]({% image_buster /assets/img_archive/link_template_preappend.png %}){: style="max-width:90%;"}
 
 ### 追加: URLの後に挿入するリンクテンプレートを作成する {#append-link-template}
 
@@ -70,7 +64,7 @@ channel:
 2. **Template Position**を**After URL**に設定します。 
 3. 各URL の末尾にクエリパラメータ(`value=example`) を入力します。URLの末尾に複数のパラメーターを付加することができる。
 
-![URL後のリンクテンプレート挿入処理における、テンプレート位置、クエリパラメータ、テンプレートプレビューフィールド。]({% image_buster /assets/img_archive/link_template_postappend.png %}){: style="max-width:90%;"}
+![URLの後のリンクテンプレート挿入処理のためのテンプレート位置、クエリパラメータ、テンプレートプレビューフィールド。]({% image_buster /assets/img_archive/link_template_postappend.png %}){: style="max-width:90%;"}
 
 ## Eメールキャンペーンでリンクテンプレートを使用する
 
@@ -84,17 +78,17 @@ channel:
 
 - **ドラッグ＆ドロップ・エディター：****コンテンツ**＞**リンク管理**タブを選択する。次に、**Add a Link Template**を選択します。ドラッグ＆ドロップ・エディターでリンクテンプレートにアクセスするには、[リンクのエイリアシングを]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/link_aliasing/)オンにしておく必要がある。
 
-![ドラッグ・アンド・ドロップ・エディターの「リンク管理」タブには、リンク・テンプレートの例がリストアップされている。][1]
+![ドラッグ・アンド・ドロップ・エディターの「リンク管理」タブには、リンク・テンプレートの例がリストアップされている。]({% image_buster /assets/img_archive/link_template_messagecomposer2.png %})
 
 {% alert note %}
 リンクテンプレートはプレーンテキストには適用されません。つまり、「現在」には、リンクテンプレートのパラメータを含まないクリックが表示される場合があります。これは、これらのクリックは、電子メールのプレーンテキストバージョンから取得される可能性があるためです。
 {% endalert %}
 
-**リンク管理]**タブでリンクテンプレートを追加すると、右にスクロールして追加したテンプレートを見ることができる。
+**リンク管理]**タブでリンクテンプレートを追加すると、右にスクロールして追加したテンプレートを見ることができる。メール内の既存のリンクに既にリンクテンプレートが追加されている場合、新しく追加されたリンクにもデフォルトでリンクテンプレートが追加されます。
 
 ## リンクテンプレートを管理する
 
-リンクテンプレートを[複製する]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/)こともできる。テンプレートとクリエイティブ・コンテンツの作成と管理については、「[テンプレートとメディア]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/)」をご覧ください。
+リンクテンプレートを[複製する]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/)こともできる。テンプレートとクリエイティブ・コンテンツの作成とマネージャーについては、[テンプレート& メディアで]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/)学習しよう。
 
 {% alert important %}
 テンプレートのアーカイブは、現在リンクテンプレートでは利用できません。
@@ -102,11 +96,5 @@ channel:
 
 ## よくある質問
 
-リンクテンプレートに関するよくある質問については、[テンプレート FAQ][10] ] ページをチェックしよう。
+リンクテンプレートに関するよくある質問への回答については、[Templates FAQ]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/faq/) ページをご覧ください。
 
-[1]:{% image_buster /assets/img_archive/link_template_messagecomposer2.png %}
-[2]:{% image_buster /assets/img_archive/link_template_postappend.png %}
-[3]:{% image_buster /assets/img_archive/link_template_preappend.png %}
-[4]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/
-[10]: {{site.baseurl}}/user_guide/message_building_by_channel/email/templates/faq/
-[11]: {% image_buster /assets/img_archive/create_link_template.png %}

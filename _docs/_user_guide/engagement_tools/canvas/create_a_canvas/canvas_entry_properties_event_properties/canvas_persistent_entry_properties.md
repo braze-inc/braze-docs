@@ -1,5 +1,5 @@
 ---
-nav_title: Persistent Entry Properties
+nav_title: Persistent entry properties
 article_title: Persistent Entry Properties
 alias: "/persistent_entry/"
 page_type: reference
@@ -10,13 +10,16 @@ page_order: 5
 
 # Persistent entry properties
 
-> When a Canvas is triggered by a custom event, purchase, or an API call, you can use metadata from the API call, custom event, or purchase event for personalization in each step in your Canvas workflow. 
+> When a Canvas is triggered by a custom event, purchase, or an API call, you can use metadata from the API call, custom event, or purchase event for personalization in each step in your Canvas workflow. You can use these properties to send more curated messages.
 
-Prior to this feature, the entry properties could only be used in the first step of Canvas. The ability to use entry properties throughout a Canvas journey allows customers to send more curated messages and create a highly refined end-user experience.
+{% alert important %}
+Persistent entry properties are an artifact of the original Canvas editor, so there are deprecated references to terms that remain for historical reference. For the current updated Canvas editor, refer to [Canvas entry properties and event properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties).
+{% endalert %}
 
 ## Using entry properties
 
 Entry properties can be used in action-based and API-triggered Canvases. These entry properties are defined when a Canvas is triggered by a custom event, purchase, or API call. Refer to the following articles for more information:
+
 - [Canvas entry properties object]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/)
 - [Event properties object]({{site.baseurl}}/api/objects_filters/event_object/)
 - [Purchase object]({{site.baseurl}}/api/objects_filters/purchase_object/#purchase-product_id)
@@ -26,7 +29,7 @@ Properties passed in from these objects can be referenced by using the `canvas_e
 When a Canvas includes a message with the `canvas_entry_properties` Liquid tag, the values associated with those properties will be saved for the duration of a user's journey in the Canvas and deleted when the user exits the Canvas. Note that Canvas entry properties are only available for reference in Liquid. To filter on the properties within the Canvas, use [event property segmentation]({{site.baseurl}}/user_guide/data/custom_data/custom_events/nested_objects/) instead.
 
 {% alert note %}
-The Canvas entry properties object has a maximum size limit of 50 KB. 
+The Canvas entry properties object has a maximum size limit of 50 KB.
 {% endalert %}
 
 ## Updating Canvas to use entry properties
@@ -82,11 +85,9 @@ In this request, the global value for "food allergies" is "none". For Customer_1
 
 If you have a Canvas that is triggered when a user browses an item in your eCommerce site but does not add it to their cart, the first step of the Canvas might be a push notification asking if they are interested in purchasing the item. You could reference the product name by using {% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %}
 
-![][1]{: style="border:0;margin-left:15px;"}
+![]({% image_buster /assets/img/persistent_entry_properties/PEP1.png %}){: style="border:0;margin-left:15px;"}
 
 The second step may send another push notification prompting the user to checkout if they added the item to their cart but have not purchased it yet. You can continue to reference the `product_name` entry property by using {% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %}.
 
-![][2]{: style="border:0;margin-left:15px;"}
+![]({% image_buster /assets/img/persistent_entry_properties/PEP12.png %}){: style="border:0;margin-left:15px;"}
 
-[1]:{% image_buster /assets/img/persistent_entry_properties/PEP1.png %}
-[2]:{% image_buster /assets/img/persistent_entry_properties/PEP12.png %}

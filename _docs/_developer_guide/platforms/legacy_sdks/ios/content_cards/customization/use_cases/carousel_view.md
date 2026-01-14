@@ -1,5 +1,5 @@
 ---
-nav_title: Carousel View
+nav_title: Carousel view
 article_title: Content Card Carousel View for iOS
 platform: iOS
 page_order: 5

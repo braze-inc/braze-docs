@@ -1,5 +1,5 @@
 ---
-nav_title: "Android Options"
+nav_title: "Android options"
 article_title: Android Push Options
 page_order: 7
 layout: dev_guide

@@ -16,7 +16,7 @@ Braze empfiehlt Ihnen, nur Kundendaten zu senden, die Sie auf der Braze-Plattfor
 - **Targeting** Ihrer Zielgruppen durch [Segmentierung der Zielgruppen]({{site.baseurl}}/user_guide/engagement_tools/segments/).
 - **Triggern Sie** Ihre Nachrichten mit [aktionsbasierter]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery#action-based-delivery) oder [API-gesteuerter]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/) Zustellung.
 - **Erstellen Sie Vorlagen** und personalisieren Sie Ihre Nachrichten mit [Liquid Conditional Logic]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid).
-- **Verfolgen Sie** die Wirksamkeit Ihrer Kampagnen mit [Konversions-Tracking]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events?redirected=true#conversion-events).
+- **Verfolgen Sie** die Wirksamkeit Ihrer Kampagnen mit [Konversions-Tracking]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/).
 
 Auf diese Weise können Sie die Daten, die Sie an Braze senden, optimieren und Ihre Nutzer besser informieren, während Sie gleichzeitig sicherstellen, dass Sie keine Datenpunkte verfolgen, die für Ihr Team langfristig nicht hilfreich sind. 
 
@@ -34,7 +34,7 @@ Es ist auch wichtig, Ihre [aktiven Nutzer]({{site.baseurl}}/user_guide/engagemen
 
 ### Feature-Bewusstsein
 
-Wenn Sie Ihre Nutzer:innen auf ein neues Feature oder eine neue Version der App aufmerksam machen wollen, sollten Sie eine Strategie mit mehreren Kanälen verfolgen und sich dabei auf In-App-Kanäle konzentrieren. [In-App-Nachrichten][5] und Content-Cards][7] sind im Allgemeinen weniger störend, wenn ein Nutzer:in nicht sofort ein Update durchführen möchte. 
+Wenn es Ihr Ziel ist, Ihre Nutzer:innen auf ein neues Feature oder eine neue App-Version aufmerksam zu machen, sollten Sie eine Strategie mit mehreren Kanälen verfolgen, bei der der Schwerpunkt auf In-App-Kanälen liegt. [In-App-Nachrichten]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/) und [Content-Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/) sind im Allgemeinen weniger störend, wenn ein Nutzer:in nicht sofort ein Update durchführen möchte. 
 
 Stellen Sie sicher, dass Sie [Deeplinks]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/) zu dem entsprechenden App Shop setzen.
 
@@ -44,7 +44,7 @@ Es kann schwierig sein, Benutzer davon zu überzeugen, ihre App zu aktualisieren
 
 Das Timing ist entscheidend! Wenn Ihr Ziel darin besteht, Nutzer:innen zu einem Update ihrer App zu bewegen, warten Sie, bis sie ein positives Erlebnis in der App haben, um sie zu fragen. Um Ihr Publikum bei der Stange zu halten, vermeiden Sie sich wiederholende Botschaften, die aufdringlich wirken könnten.
 
-Mit der Zeit vergessen Ihre Benutzer vielleicht bestimmte Funktionen oder nehmen neue Funktionen nicht mehr wahr. Wenn neue Funktionen hinzugefügt werden, sollten Sie Ihre Nutzer mit [In-App-Nachrichten]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/) darüber informieren. Wenn Nutzer:innen sich nicht mit den wichtigsten Features in der App beschäftigen, sollten Sie sie daran erinnern, wann sie sich mit Ihrer App beschäftigen und wann dieses neue Feature von Nutzen wäre. In unserem Artikel über [data Opt-in][7] finden Sie weitere Informationen, wie Sie sicherstellen können, dass Ihre Anfrage mit den Erwartungen der Nutzer:innen übereinstimmt. 
+Mit der Zeit vergessen Ihre Benutzer vielleicht bestimmte Funktionen oder nehmen neue Funktionen nicht mehr wahr. Wenn neue Funktionen hinzugefügt werden, sollten Sie Ihre Nutzer mit [In-App-Nachrichten]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/) darüber informieren. Wenn Nutzer:innen sich nicht mit den wichtigsten Features in der App beschäftigen, sollten Sie sie daran erinnern, wann sie sich mit Ihrer App beschäftigen und wann dieses neue Feature von Nutzen wäre. In unserem Artikel über das [Opt-in von Daten]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/) finden Sie weitere Informationen darüber, wie Sie sicherstellen können, dass Ihre Anfrage mit den Erwartungen der Nutzer:innen übereinstimmt. 
 
 ## Hohe Bewertungen
 
@@ -62,7 +62,7 @@ Um höhere Bewertungen zu erhalten, bitten Sie Ihre Power-User, Ihre App im App 
 - Hat diese Apps in den letzten 14 Tagen mehr als 10 Mal verwendet
 - Hat mehr als 50 Dollar ausgegeben
 
-![Ein Beispiel für ein Segment, das auf leistungsstarke Nutzer:innen einer App abzielt.][6]
+\![Ein Beispiel für ein Segment, das auf leistungsstarke Nutzer:innen einer App abzielt.]({% image_buster /assets/img_archive/ratings_power_users.png %})
 
 Der Besuch des App Stores kostet Ihre Benutzer Zeit. Um die Wahrscheinlichkeit zu erhöhen, dass sie sich die Mühe machen, bitten Sie sie um eine Bewertung oder Rezension, nachdem sie gerade eine positive Erfahrung mit Ihrer App gemacht haben. Fragen Sie sie z.B., nachdem sie ein Spiellevel besiegt oder einen Einkauf mit einem Rabattcode getätigt haben. In unserem Artikel über die [Zustimmung zu Daten]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-states) finden Sie weitere Informationen darüber, wie Sie sicherstellen können, dass Ihre Anfrage mit den Erwartungen der Benutzer übereinstimmt.
 
@@ -75,6 +75,7 @@ Beachten Sie bei der Bearbeitung von Kampagnenplänen oder Zielgruppen die folge
 - **Lokale Kampagnen zur Sendezeit:** Nehmen Sie keine Änderungen 24 Stunden vor der geplanten Sendezeit vor.
 - **Optimale Kampagnen zur Sendezeit:** Nehmen Sie keine Änderungen 24 Stunden vor Mitternacht des Tages vor, an dem die Kampagne versendet werden soll.
 
-[6]: {% image_buster /assets/img_archive/ratings_power_users.png %}
-[5]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/
-[7]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/
+{% alert note %}
+Wenn Sie eine Live-Kampagne bearbeiten und die Zustellung auf **Lokale Sendezeit** ändern, wird ein neuer Stapel von Nachrichten in die Warteschlange gestellt. Das bedeutet, dass Ihre Nutzer:innen die Nachricht zweimal erhalten, da die Nachricht zweimal in die Warteschlange gestellt wird. Um dies zu verhindern, stoppen Sie zunächst die Originalkampagne und starten dann nach dem Update des Zeitplans eine zweite Kampagne.
+{% endalert %}
+

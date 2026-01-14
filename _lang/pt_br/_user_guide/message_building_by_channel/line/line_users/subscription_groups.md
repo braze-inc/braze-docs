@@ -1,24 +1,24 @@
 ---
-nav_title: Grupos de inscrições
-article_title: Grupos de inscrições
+nav_title: Grupos de assinatura
+article_title: Grupos de assinatura
 page_order: 1
-description: "Este artigo aborda os grupos de inscrições de mensagens LINE."
+description: "Este artigo aborda os grupos de assinatura de mensagens LINE."
 page_type: reference
 channel:
  - LINE
 alias: /line/subscription_groups/
 ---
 
-# Grupos de inscrições LINE
+# Grupos de assinatura LINE
 
-> Há dois estados de inscrição para usuários do LINE: inscrito e cancelado inscrição. O LINE pode ter até 100 grupos de inscrições por espaço de trabalho, com cada grupo de inscrições conectado a seu próprio canal LINE.
+> Há dois estados de assinatura para os usuários do LINE: inscrito e não inscrito. O LINE pode ter até 100 grupos de assinatura por espaço de trabalho, com cada grupo de assinatura conectado ao seu próprio canal LINE.
 
-| Status | Definição |
+| Estado | Definição |
 | --- | --- |
-| Inscreveu-se | O usuário seguiu o canal do LINE em seu app do LINE. Os usuários são automaticamente inscritos quando seguem o site após a conclusão das etapas de integração. |
-| Cancelou inscrição | O usuário não seguiu o canal LINE em seu app LINE ou deixou explicitamente de seguir o canal LINE. <br><br> Os usuários que cancelarem a inscrição em um grupo de inscrições LINE não receberão mais mensagens LINE dos canais de envio de mensagens que pertencem ao grupo de inscrições. |
+| Assinatura | O usuário seguiu o canal LINE a partir de seu aplicativo LINE. Os usuários são inscritos automaticamente quando os seguem após a conclusão das etapas de integração. |
+| Cancelamento da inscrição | O usuário não seguiu o canal LINE no aplicativo LINE ou deixou explicitamente de seguir o canal LINE. <br><br> Os usuários que cancelarem a assinatura de um grupo de assinatura LINE não receberão mais nenhuma mensagem LINE dos canais de envio que pertencem ao grupo de assinatura. |
 {: .reset-td-br-1 .reset-td-br-2 }
 
-## Configuração do grupo de inscrições LINE de um usuário
+## Definição do grupo de assinatura LINE de um usuário
 
-O LINE hospeda o status da inscrição dos usuários. O Braze processa os eventos de seguir e deixar de seguir que atualizam o status da inscrição.
+O LINE hospeda o status da assinatura dos usuários. O Braze processa os eventos de seguir e deixar de seguir que atualizam o status da assinatura.

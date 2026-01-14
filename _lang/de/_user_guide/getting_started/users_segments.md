@@ -19,7 +19,7 @@ In Braze werden die Informationen über Ihr Publikum in Nutzerprofilen gespeiche
 
 Wenn Sie die Nutzerprofile kennen, können Sie Insights über Ihre Zielgruppe gewinnen und sie gezielt und persönlich ansprechen. Nutzerprofile enthalten eine Vielzahl von Informationen. Dies sind die wichtigsten:
 
-- **Nutzerkennung:** Jedes Benutzerprofil wird durch eine Benutzer-ID, `external_id` genannt, eindeutig identifiziert. Diese Kennung ermöglicht es Braze, Benutzerdaten über verschiedene Kanäle und Geräte hinweg zu verfolgen und zuzuordnen. So erhalten Sie einen einheitlichen Überblick über die Interaktionen der einzelnen Benutzer mit Ihrer Marke. [Anonyme Nutzerprofile]({{site.baseurl}}/user_guide/getting_started/users_segments/anonymous_users/) (Nutzer, die Ihre Website oder Anwendung besuchen, ohne sich anzumelden) haben kein `external_id`, können aber als alternativer Bezeichner mit [einem Nutzer-Aliasing]({{site.baseurl}}/user_guide/getting_started/users_segments/anonymous_users/#assigning-user-aliases) versehen werden.
+- **Nutzerkennung:** Jedes Benutzerprofil wird durch eine Benutzer-ID, `external_id` genannt, eindeutig identifiziert. Diese Kennung ermöglicht es Braze, Benutzerdaten über verschiedene Kanäle und Geräte hinweg zu verfolgen und zuzuordnen. So erhalten Sie einen einheitlichen Überblick über die Interaktionen der einzelnen Benutzer mit Ihrer Marke. [Anonyme Nutzerprofile]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/anonymous_users/) (Nutzer, die Ihre Website oder Anwendung besuchen, ohne sich anzumelden) haben kein `external_id`, können aber als alternativer Bezeichner mit [einem Nutzer-Aliasing]({{site.baseurl}}/user_guide/data/user_data_collection/anonymous_users/#assigning-user-aliases) versehen werden.
 - [Attribute](#attributes)**:** Dabei handelt es sich um spezifische Informationen über den Benutzer, wie z.B. Name, Alter, Standort oder andere demografische Informationen. Sie können diese Attribute nutzen, um Ihre Zielgruppe zu unterteilen und Ihre Nachrichten zu personalisieren.
 - [Ereignisse](#events)**:** Das sind Aktionen, die der Benutzer durchführt, z.B. einen Kauf tätigen, auf einen Link klicken oder eine App öffnen. Braze verfolgt diese Ereignisse, um Ihnen zu helfen, das Verhalten und das Engagement der Benutzer nachzuvollziehen. Ähnlich wie bei Attributen können Sie auch Ereignisse zur Segmentierung und Personalisierung verwenden.
 - **Käufe:** In diesem Bereich wird die Kaufhistorie des Benutzers aufgezeichnet. Das ist wichtig, um die Kaufgewohnheiten und Vorlieben der Nutzer zu verstehen.
@@ -52,7 +52,7 @@ Standardattribute sind vorgegebene Attribute, die Sie mit Braze verfolgen könne
 
 #### Angepasste Attribute
 
-[Benutzerdefinierte Attribute]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/) sind Attribute, die Sie auf der Grundlage Ihrer spezifischen Geschäftsanforderungen definieren. Sie ermöglichen es Ihnen, Daten im Blick zu behalten, die Ihre App oder Ihr Unternehmen auszeichnen. 
+[Benutzerdefinierte Attribute]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/) sind Attribute, die Sie auf der Grundlage Ihrer spezifischen Geschäftsanforderungen definieren. Sie ermöglichen es Ihnen, Daten im Blick zu behalten, die Ihre App oder Ihr Unternehmen auszeichnen. 
 
 Eine Musikstreaming-App kann zum Beispiel diese benutzerdefinierten Attribute verfolgen:
 
@@ -87,7 +87,7 @@ Ereignisse stellen bestimmte Aktionen oder Verhaltensweisen dar, die von Benutze
 
 #### Angepasste Events
 
-[Benutzerdefinierte Ereignisse]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) sind Ereignisse, die Sie auf der Grundlage der spezifischen Aktionen definieren, die Sie innerhalb Ihrer App oder Website verfolgen möchten. Eine Musikstreaming-App kann zum Beispiel diese benutzerdefinierten Ereignisse verfolgen:
+[Benutzerdefinierte Ereignisse]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) sind Ereignisse, die Sie auf der Grundlage der spezifischen Aktionen definieren, die Sie innerhalb Ihrer App oder Website verfolgen möchten. Eine Musikstreaming-App kann zum Beispiel diese benutzerdefinierten Ereignisse verfolgen:
 
 - Gespielter Song
 - Wiedergabeliste erstellt
@@ -109,7 +109,7 @@ Datenpunkte werden verbraucht, wenn die Profildaten von Benutzern aktualisiert w
 
 Wenn Sie sich genau überlegen, was Sie als Datenpunkte verfolgen wollen, können Sie die Daten auswählen, die für Ihre Benutzer am wichtigsten sind. Ihr Braze Account Manager kann Ihnen geeignete Datenpraktiken für Ihre Bedürfnisse empfehlen.
 
-In unseren Artikel zum Thema, erfahren Sie mehr über [Datenpunkte]({{site.baseurl}}/user_guide/data_and_analytics/data_points/).
+In unseren Artikel zum Thema, erfahren Sie mehr über [Datenpunkte]({{site.baseurl}}/user_guide/data/data_points/).
 
 ## Segmente
 
@@ -126,15 +126,13 @@ Tipps für die Arbeit mit Segmenten:
 
 Nehmen wir an, Sie betreiben ein Online-Kleidungsgeschäft und haben einen Nachrichtenfluss eingerichtet, um eine Reihe von E-Mails an Benutzer zu senden, die einen Artikel in ihren Einkaufswagen gelegt, den Kauf aber nicht abgeschlossen haben. Infrage kommen etwa eine erste Erinnerungs- oder Anknüpfungsmail mit einem Rabattangebot oder und eine abschließende Erinnerungsmail.
 
-![][1]{: style="max-width:70%" }
+![]({% image_buster /assets/img/getting_started/segment_example.png %}){: style="max-width:70%" }
 
 Sie könnten ein Segment von Benutzern erstellen, die das benutzerdefinierte Ereignis "Artikel in den Warenkorb gelegt" ausgelöst, aber nicht das benutzerdefinierte Ereignis "Kauf abgeschlossen" ausgelöst haben. Innerhalb dieses Segments können Sie dann die Nutzer bestimmen, die die erste Erinnerungsmail geöffnet aber keinen Kauf getätigt haben (Engagement mit einer bestimmten Nachricht).
 
-![][2]
+![]({% image_buster /assets/img/getting_started/segment_example_breakdown.png %})
 
 Dieses Segment könnte dann mit einer aggressiveren Kampagne angesprochen werden, um Käufe anzuregen. Sie könnten ihnen zum Beispiel ein Sonderangebot oder eine persönliche Empfehlung auf der Grundlage der Artikel in ihrem Warenkorb schicken.
 
 Dies ist nur ein Beispiel dafür, wie Sie Benutzeraktionen und -inaktionen, benutzerdefinierte Ereignisse und Engagementdaten nutzen können, um Segmente zu erstellen und Ihre Marketingstrategien in Braze anzupassen.
 
-[1]: {% image_buster /assets/img/getting_started/segment_example.png %}
-[2]: {% image_buster /assets/img/getting_started/segment_example_breakdown.png %}

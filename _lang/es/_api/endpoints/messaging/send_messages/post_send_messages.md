@@ -16,9 +16,9 @@ description: "Este artículo describe en detalle el punto final Enviar mensajes 
 
 > Utiliza este punto final para enviar mensajes inmediatos a usuarios designados utilizando la API Braze.
 
-Asegúrese de incluir objetos de mensajería en su cuerpo para completar sus solicitudes.
-
 Si te estás dirigiendo a un segmento específico, se almacenará un registro de tu solicitud en la [consola para desarrolladores](https://dashboard.braze.com/app_settings/developer_console/activitylog/).
+
+{% multi_lang_include api/payload_size_alert.md %}
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#946cb701-96e3-48d7-868c-f079785b6d24 {% endapiref %}
 
@@ -31,6 +31,10 @@ Para utilizar este punto final, deberás generar una clave de API con el permiso
 {% multi_lang_include rate_limits.md endpoint='send endpoints' category='message send endpoint' %}
 
 ## Cuerpo de la solicitud
+
+{% alert tip %}
+Asegúrate de incluir [objetos de mensajería]({{site.baseurl}}/api/objects_filters/#messaging-objects) en tu cuerpo para completar tus peticiones.
+{% endalert %}
 
 ```
 Content-Type: application/json

@@ -17,31 +17,31 @@ tool: Canvas
 [キャンバスのセットアップ]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/)の詳細に取り組む前に、キャンバスを構成する主要なパーツを確認しておきましょう。
 
 {% tabs %}
-  {% tab キャンバス %}
+  {% tab Canvas %}
   キャンバスは、マーケティング担当者が複数のメッセージを使ったキャンペーンを作成するための統一インターフェースである。いわばビジュアルプログラミングツールのようなもので、一連のステップを使って一貫したユーザージャーニーを作成できます。
 
-  ![]({% image_buster /assets/img/canvas_intro/canvas_intro.gif %})
+  ![ユーザーがプッシュ有効になっているかどうかに応じて、デシジョン分割ステップを2 つの別々のユーザージャーニーに分割するキャンバスのサンプル。]({% image_buster /assets/img/canvas_intro/canvas_intro.gif %})
 
   {% endtab %}
 
-  {% tab ジャーニー %}
+  {% tab Journey %}
 
-  ジャーニー (一般にユーザージャーニーと呼ばれる) は、キャンバス内での個々のユーザーエクスペリエンスです。<br><br> ![]({% image_buster /assets/img_archive/Journey_2.png %}){: style="max-width:90%;"}
-
-  {% endtab %}
-
-  {% tab キャンバスビルダー %}
-  キャンバスビルダーは、キャンバスを作成する際の手順を示している。これには、キャンバスに名前を付けたり、チームを追加するなどの基本操作が含まれます。基本的に、キャンバスビルダーはキャンバスを作り始める前に必要な重要なセットアップです。ここでは、[エントリスケジュール]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2b-set-your-canvas-entry-schedule)、[ターゲットオーディエンス]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2c-set-your-target-entry-audience)の編集、[設定の送信]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2d-select-your-send-settings)などのオプションを使用して、ユーザーのカスタマージャーニーの開始と履行方法をコントロールできます。<br><br> ![]({% image_buster /assets/img_archive/canvas_flow_entry_wizard.png %}){: style="max-width:90%;"}
+  ジャーニー (一般にユーザージャーニーと呼ばれる) は、キャンバス内での個々のユーザーエクスペリエンスです。<br><br> ![新しいユーザーのカスタマージャーニーを含むチャート。匿名ユーザーがアプリをインストールし、Katがアカウントを作成し、Katが1週間アプリを開封せず、プッシュ通知がKatをアプリに戻し、Katが定期的にアプリを使用します。]({% image_buster /assets/img_archive/Journey_2.png %}){: style="max-width:90%;"}
 
   {% endtab %}
 
-  {% tab バリアント %}
-  バリアントとは、各顧客がたどるジャーニーを指します。キャンバスは、コントロールグループで最大 8 つのバリアントをサポートします。各バリアントをたどるオーディエンスのセグメントを制御できます。<br><br> ![]({% image_buster /assets/img/canvas_intro/add_canvas_variant.gif %})
+  {% tab Canvas Builder %}
+  キャンバスビルダーは、キャンバスを作成する際の手順を示している。これには、キャンバスに名前を付けたり、チームを追加するなどの基本操作が含まれます。基本的に、キャンバスビルダーはキャンバスを作り始める前に必要な重要なセットアップです。ここでは、[エントリスケジュール]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2b-set-your-canvas-entry-schedule)、[ターゲットオーディエンス]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2c-set-your-target-entry-audience)の編集、[設定の送信]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2d-select-your-send-settings)などのオプションを使用して、ユーザーのカスタマージャーニーの開始と履行方法をコントロールできます。<br><br> ![キャンバスの「基本」セクションの「キャンバス」ビルダ。名前は「&quot」、「新規キャンバス&quot」です。]({% image_buster /assets/img_archive/canvas_flow_entry_wizard.png %}){: style="max-width:90%;"}
 
   {% endtab %}
 
-  {% tab ステップ %}
-  キャンバスにおけるステップとは、「A の場合は B」というようなマーケティングの意思決定ポイントです。[キャンバスコンポーネント]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/#about-canvas-components)を活用してユーザージャーニーのステップを作成します。<br>ステップ内で、トリガーや配信スケジュールを設定し、フィルターを追加したり[例外イベントを]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/)マークすることでターゲティングを絞り込み、プッシュ通知やウェブフック・イベントのような異なるチャンネルを指定する。<br><br> ![]({% image_buster /assets/img/canvas_intro/add_canvas_step.gif %})
+  {% tab Variants %}
+  バリアントとは、各顧客がたどるジャーニーを指します。キャンバスは、コントロールグループで最大 8 つのバリアントをサポートします。各バリアントをたどるオーディエンスのセグメントを制御できます。<br><br> !["Add Variant"ボタンを選択します。]({% image_buster /assets/img/canvas_intro/add_canvas_variant.gif %})
+
+  {% endtab %}
+
+  {% tab Steps %}
+  キャンバスにおけるステップとは、「A の場合は B」というようなマーケティングの意思決定ポイントです。[キャンバスコンポーネント]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/#about-canvas-components)を活用してユーザージャーニーのステップを作成します。<br><br> ![キャンバスに遅延ステップを追加する例。]({% image_buster /assets/img/canvas_intro/add_canvas_step.gif %})<br><br> ユーザーがキャンバスに入ると、最初のステップから始まります。各ステップには、ユーザーが次のステップに移動できるかどうかを決定する条件があります。ステップ内で、トリガーまたはスケジュール配信の設定、フィルタの追加または例外イベントのマーク付けによるターゲット設定の絞り込み、プッシュ通知やWebhook イベントなどの異なるチャネルの指定を行うことができます。キャンバスでは、ステップはシーケンスで実行されます。つまり、最初のステップは、2 番目のステップが実行される前に実行されます。たとえば、次の手順でキャンバスを作成します。24時間の遅延がある遅延ステップA、プッシュメッセージを持つメッセージステップA、アプリ内メッセージを持つメッセージステップB。ユーザーAは24時間遅延され、24時間後にプッシュメッセージを受信し、その後アプリ内メッセージを受信します。
 
   {% endtab %}
 {% endtabs %}
@@ -64,7 +64,7 @@ tool: Canvas
 
 常に明確な目標を持つことが重要であり、キャンバスは、セッションのエンゲージメント、購入、カスタムイベントなどの KPIs におけるパフォーマンスを理解するのに役立ちます。
 
-少なくとも 1 つの[コンバージョンイベント]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/)を選択することで、キャンバス内でパフォーマンスを最適化する方法を把握することができます。また、キャンバスに複数のバリエーションやコントロールグループがある場合、Braze はコンバージョンイベントを使用して、この目標を達成するのに最適なバリエーションを決定します。
+少なくとも 1 つの[コンバージョンイベント]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/)を選択することで、キャンバス内でパフォーマンスを最適化する方法を把握することができます。また、キャンバスに複数のバリエーションやコントロールグループがある場合、Braze はコンバージョンイベントを使用して、この目標を達成するのに最適なバリエーションを決定します。
 
 * **セッションを開始**:ユーザーに再度アプリを使ってもらいたい。
 * **購入**:ユーザーに購入してもらいたい。
@@ -78,7 +78,7 @@ tool: Canvas
 あなたの回答によって、キャンバスがいつ、どのようにお客様に届けられるかの詳細が決まります。ユーザーは、スケジュールトリガーまたはアクションベースのトリガーのいずれかの方法でキャンバスに入れます。
 
 {% alert tip %}
-さらに多くの戦略や一般的な質問への回答については、キャンバスの[時間ベースの機能]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/time_based_canvas/)を参照してください。
+さらに多くの戦略や一般的な質問への回答については、キャンバスの[時間ベースの機能]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/delivery_types/)を参照してください。
 {% endalert %}
 
 予約配信では、ターゲットオーディエンスにキャンバスをすぐに送信できます。定期的に送信したり、将来の特定の時間を予約することもできます。アクションベースのキャンバスは、特定の顧客行動にその時点で反応します。例えば、アクションベースのトリガーには、アプリを開く、購入する、別のキャンペーンと接する、カスタムイベントをトリガーするなどが含まれます。アクションが発生した時点で、キャンバスをユーザーに送信できます。
@@ -107,7 +107,7 @@ tool: Canvas
 * [プッシュ]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/)
 * [アプリ内メッセージ]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/)
 * [コンテンツカードによって促進された]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/)
-* [SMS または MMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/about_sms/)
+* [SMS または MMS]({{site.baseurl}}/about_sms/)
 * [Webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/)
 
 ### 「どのように」: 完全なエクスペリエンスを構築する

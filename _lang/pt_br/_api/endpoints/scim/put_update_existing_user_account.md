@@ -15,7 +15,7 @@ description: "Este artigo traz informações sobre o endpoint da Braze \"Atualiz
 /scim/v2/Users/{id}
 {% endapimethod %}
 
-> Use esse endpoint para atualizar uma conta de usuário do dashboard existente, especificando o recurso `id` retornado pelo método SCIM [`POST`]({{site.baseurl}}/scim/post_create_user_account/).
+> Use esse endpoint para atualizar uma conta de usuário do dashboard existente, especificando o recurso `id` retornado pelo método SCIM [`POST`]({{site.baseurl}}/api/endpoints/scim/post_create_user_account/).
 
 Ele permite a atualização de nomes e sobrenomes, permissões (para definir permissões no nível da empresa, do espaço de trabalho e da equipe) e departamento.
 
@@ -29,7 +29,7 @@ Para usar esse endpoint, você precisará de um token SCIM. Você usará a orige
 
 ## Limite de taxa
 
-{% multi_lang_include rate_limits.md endpoint='atualizar usuário do dashboard' %}
+{% multi_lang_include rate_limits.md endpoint='update dashboard user' %}
 
 ## Parâmetros da jornada
 

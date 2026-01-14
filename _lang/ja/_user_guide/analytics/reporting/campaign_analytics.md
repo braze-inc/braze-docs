@@ -18,6 +18,9 @@ guide_featured_list:
   - name: メール
     link: /docs/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/
     image: /assets/img/braze_icons/mail-01.svg
+  - name: フィーチャーフラグ
+    link: /docs/developer_guide/feature_flags/experiments/
+    image: /assets/img/braze_icons/flag-06.svg
   - name: アプリ内メッセージ
     link: /docs/user_guide/message_building_by_channel/in-app_messages/reporting/
     image: /assets/img/braze_icons/message-text-circle-01.svg
@@ -25,7 +28,7 @@ guide_featured_list:
     link: /docs/user_guide/message_building_by_channel/push/push_reporting/
     image: /assets/img/braze_icons/phone-01.svg
   - name: SMS
-    link: /docs/user_guide/message_building_by_channel/sms/sms_campaign_analytics/
+    link: /docs/sms_mms_rcs_reporting/
     image: /assets/img/braze_icons/phone-02.svg
   - name: Webhook
     link: /docs/user_guide/message_building_by_channel/webhooks/reporting/

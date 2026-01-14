@@ -16,12 +16,12 @@ Learn more about how Braze collects data:
 
 - `braze_id`: A Braze-assigned identifier that is unchangeable and associated with a particular user when created within our database.
 - `external_id`: A customer-assigned identifier, typically a UUID. We recommend customers assign the `external_id` when the user can be uniquely identified. After a user is identified, they cannot be reverted to anonymous.
-- `user_alias`: A unique alternate identifier that the customer can assign as a means of referencing the user by an ID before an `external_id` being assigned. User aliases can later be merged with other aliases or an `external_id` when one becomes available through Braze’s [User identify]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/) endpoint.
+- `user_alias`: A unique alternate identifier that the customer can assign as a means of referencing the user by an ID before an `external_id` being assigned. User aliases can later be merged with other aliases or an `external_id` when one becomes available through the Braze [User identify]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/) endpoint.
     - Within the [User identify]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/) endpoint the `merge_behavior` field can be used to specify what data from the user alias profile should persist on the known user profile.
     - Note that for the user alias to be a sendable profile, you must still include email and/or phone as a standard attribute on the profile.
 - `device_id`: An automatically generated, device-specific identifier. A user profile can have a number of `device_ids` associated with it. For example, a user who has logged in to their account on their work computer, home computer, tablet, and iOS app would have 4 `device_ids` associated with their profile.
 - Email Address & Phone Number:
-    - Supported as an identifier in Braze’s track user endpoint. 
+    - Supported as an identifier in the Braze track user endpoint. 
     - When using the email address or phone numbers as the identifier within a request, there are three possible outcomes:
         1. If a user with this email/phone does not exist within Braze, an email-only/phone-only user profile will be created, and any data in the request will be added to the profile.
         2. If a profile with this email/phone already exists within Braze, it will be updated to include any data sent within the request.
@@ -92,7 +92,7 @@ Use the email address as the identifier in the user track endpoint.
 }
 ```
 {% alert important %}
-This functionality is currently in early access.
+This functionality is in early access.
 {% endalert %}
 
 ## Syncing data to user profiles
@@ -105,12 +105,12 @@ This functionality is currently in early access.
 - Similar to the user track endpoint, data can be synced to user profiles through Cloud Data Ingestion. When using this tool, attributes, events, and purchases are logged to profiles by setting up and connecting the data warehouse table or view you would like to sync to the desired Braze workspace.
 
 [Data points]({{site.baseurl}}/user_guide/data/data_points/)
-- Braze has a data point consumption model where data points are incurred per “write” to the user profile regardless of whether the value has changed. For this reason, we recommend that only those attributes that have changed are sent to Braze. 
+- Braze has a data point model where data points are logged per “write” to the user profile regardless of whether the value has changed. For this reason, we recommend that only those attributes that have changed are sent to Braze. 
 
 ## Sending audiences of users to Braze
 
 [Cohort import sync partner documentation]({{site.baseurl}}/partners/isv_partners/cohort_import/)<br>
-- Audiences of users can be synced to Braze as a cohort using Braze’s Cohort Import API endpoints. Rather than these audiences being stored on the user profile as user attributes, customers can build and target this cohort through a Partner branded filter within our Segmentation tool. This can make finding and targeting a particular segment of users easier and more simple for customers.
+- Audiences of users can be synced to Braze as a cohort using the Braze Cohort Import API endpoints. Rather than these audiences being stored on the user profile as user attributes, customers can build and target this cohort through a Partner branded filter within our Segmentation tool. This enables you to more efficiently find and target a particular segment of users.
 - Cohort Import endpoints are not public and are specific to each Partner. For this reason, syncs to the cohort endpoints will not count toward a customer’s workspace rate limits. 
 
 [User track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)<br>
@@ -118,14 +118,14 @@ This functionality is currently in early access.
 - When using this endpoint, ensure that you are including the `partner` key as shown in our [Partner documentation]({{site.baseurl}}/partners/isv_partners/api_partner).
 
 [Data points]({{site.baseurl}}/user_guide/data/data_points/)<br>
-- Braze has a data point consumption model where data points are incurred per “write” to the user profile regardless of if the value has changed.
+- Braze has a data point model where data points are logged per “write” to the user profile regardless of if the value has changed.
 - Data points are incurred by both cohort import and the user track endpoints.
 
 ## Engagement analytics streaming to partner
 
 ### Currents
 
-Currents are Braze's near real-time message engagement analytics streaming tool. This will stream user-level data on all sends, deliveries, opens, clicks, etc., for campaigns and Canvases sent from the customer's workspace. A couple of things to note: Currents are priced per connector for the customer, so all-new Currents Partners must go through an EA process. We ask that our Partners have five customers as part of the EA before we build the custom-branded UI and publicly make the connector available. 
+Currents are a near real-time message engagement analytics streaming tool in Braze. This will stream user-level data on all sends, deliveries, opens, clicks, etc., for campaigns and Canvases sent from the customer's workspace. A couple of things to note: Currents are priced per connector for the customer, so all-new Currents Partners must go through an EA process. We ask that our Partners have five customers as part of the EA before we build the custom-branded UI and publicly make the connector available. 
 - [Partner documentation]({{site.baseurl}}/partners/isv_partners/currents_integration/)
 - [Message Engagement Events]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) - all customers who purchase a Currents connector will have access to these events.
 - [User Behavior Events]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/) - not all customers who purchase a Current connector will purchase an "all events" connector that will include these events. 
@@ -162,7 +162,7 @@ When creating API campaigns (different from the API-triggered campaigns referenc
 - [Schedule an API campaign]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_schedule_messages/)
 
 ### Send IDs
-Use Braze's endpoint to generate a send ID which can be used to break down campaign analytics by send. For example, if a `campaign_id` (API campaign) is created per location, a send ID could be generated per send to track how well different messaging is performing for a particular location. 
+Use the Braze endpoint to generate a send ID which can be used to break down campaign analytics by send. For example, if a `campaign_id` (API campaign) is created per location, a send ID could be generated per send to track how well different messaging is performing for a particular location. 
 - [Send IDs]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_create_send_ids/)
 
 ## Connected Content
@@ -176,17 +176,14 @@ Connected Contents' versatility makes this a feature used by many of our custome
 - Localization and translation
 
 Things to be aware of:
-- Braze does not charge for API calls and will not count toward your data point allotment.
+- Braze does not charge for API calls and will not count toward your data point usage.
 - There is a limit of 1 MB for Connected Content responses.
 - Connected Content calls will happen when the message is sent, except for in-app messages, which will make this call when the message is viewed.
 - Connected Content calls do not follow redirects.Braze requires that server response time is less than 2 seconds for performance reasons; if the server takes longer than 2 seconds to respond, the content will not be inserted.
 - Braze’s systems may make the same Connected Content API call more than once per recipient. That is because Braze may need to make a Connected Content API call to render a message payload, and message payloads can be rendered multiple times per recipient for validation, retry logic, or other internal purposes. 
 
 Refer to these articles to learn more about Connected Content:
-- [Making a Connected Content call][1]
-- [Aborting Connected Content][2]
-- [Connected Content retries][3]
+- [Making a Connected Content call]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/)
+- [Aborting Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content)
+- [Connected Content retries]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries)
 
-[1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/
-[2]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content
-[3]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries

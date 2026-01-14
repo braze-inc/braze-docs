@@ -1,5 +1,5 @@
 ---
-nav_title: Canvas Analytics
+nav_title: Canvas analytics
 article_title: Canvas Analytics
 page_order: 2
 page_type: reference
@@ -22,7 +22,7 @@ The top of the **Canvas Details** page contains top-line Canvas statistics. Thes
 
 This is a great place to get a high-level overview to check how your Canvas is performing against your goal.
 
-![][24]
+![]({% image_buster /assets/img_archive/Journey_5.png %})
 
 ### Changes Since Last Viewed
 
@@ -38,7 +38,7 @@ For Canvas Flow, a user will exit the Canvas after entering and receiving the me
 
 The metrics also include impressions, unique recipients, conversion count, and revenue generated. You can click on a component to further breakdown your data and see channel-specific performance.
 
-![Two examples of performance details for Canvas components. On the left shows the performance details for a user path with one Canvas component. On the right shows performance details for an expanded Canvas component and a nested step that shows the in-app message impression count.][25]
+![Two examples of performance details for Canvas components. On the left shows the performance details for a user path with one Canvas component. On the right shows performance details for an expanded Canvas component and a nested step that shows the in-app message impression count.]({% image_buster /assets/img_archive/Journey_6.png %})
 
 ## Performance breakdown by variant
 
@@ -54,7 +54,7 @@ In the **Analyze Variants** tab, you can see a breakdown of performance by varia
 
 You can quickly infer effective variants and identify the right cadences, content, triggers, timing, and more.
 
-![][26]
+![]({% image_buster /assets/img_archive/analyze_variants.png %})
 
 Basic metrics include the following:  
 
@@ -69,22 +69,37 @@ Like conversions, revenue is technically tracked at the Canvas level, but is att
 For example, if a user completes two steps and then makes a purchase, that revenue is attributed to the second component, and to the variant they entered. If they enter the Canvas but make a purchase before receiving the first Canvas component, that revenue is attributed to the variant they entered, but not to any component.
 {% endalert %}
 
-Beyond that, you can see a more explicit breakdown of [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/), including the following:
+Beyond that, you can see a more explicit breakdown of [conversion events]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/), including the following:
 
 - Conversion totals and conversion rates for each conversion event
 - Uplift against the control variant
 - Statistical confidence for each conversion event
 
+### How conversions are tracked 
+
+A user can only convert once per conversion event per Canvas entry. Conversions are assigned to the most recent message received by the user for that entry. The Canvas summary reflects all conversions performed by users in that path and whether or not they received a message. Each subsequent step will only show conversions that happened while that was the most recent step the user received. 
+
+Consider the following example: a Canvas has 10 push notifications and the conversion event is "Opens App" (or "Session Start").
+- User A opens the app after entering but before receiving the first message.
+- User B opens the app after each push notification.
+
+The Canvas summary will show two conversions while the individual steps will show one conversion on the first step and none for all subsequent steps. If Quiet Hours are active when the conversion event happens, the same rules will apply. 
+
+Now, let's say we have a Canvas with Quiet Hours and the following events occur:
+
+1. User A enters a Canvas.
+2. The first step is a Delay step within the set Quiet Hours, so the message is suppressed.
+3. User A performs the conversion event.
+
+User A will count as converted in the overall Canvas variant, but not the step since they didn't receive the step.
+
+For our last example, let's say we have a Canvas with re-eligibility turned on. If a re-eligible user performs the conversion event on the first entry and second entry, two conversions will be counted.
+
 ### Funnel report
 
-Funnel reporting offers a visual report that allows you to analyze the journeys your customers take after receiving a Canvas. If your Canvas uses a control group or multiple variants, you'll be able to understand how the different variants have impacted the conversion funnel at a more granular level and optimize based on this data. For more information on funnel reports, see [Funnel reports][2].
+Funnel reporting offers a visual report that allows you to analyze the journeys your customers take after receiving a Canvas. If your Canvas uses a control group or multiple variants, you'll be able to understand how the different variants have impacted the conversion funnel at a more granular level and optimize based on this data. For more information on funnel reports, see [Funnel reports]({{site.baseurl}}/user_guide/analytics/reporting/funnel_reports/).
 
 ### Retention report
 
-User retention is one of the most important metrics for any marketer. Keeping engaged users coming back for more indicates that business is healthy. Braze now allows you to measure user retention right on the **Canvas Analytics** page. For more information on how to read and interpret your retention report, check out [Retention reports][1].
+User retention is one of the most important metrics for any marketer. Keeping engaged users coming back for more indicates that business is healthy. Braze now allows you to measure user retention right on the **Canvas Analytics** page. For more information on how to read and interpret your retention report, check out [Retention reports]({{site.baseurl}}/user_guide/analytics/reporting/retention_reports/).
 
-[1]: {{site.baseurl}}/user_guide/engagement_tools/canvas/retention_reports/
-[2]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_funnel_reports/
-[24]:{% image_buster /assets/img_archive/Journey_5.png %}
-[25]:{% image_buster /assets/img_archive/Journey_6.png %}
-[26]:{% image_buster /assets/img_archive/analyze_variants.png %}

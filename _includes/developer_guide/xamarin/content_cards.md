@@ -1,12 +1,12 @@
-## About Xamarin Content Cards
+## About .NET MAUI Content Cards
 
-The Braze Xamarin SDK includes a default card feed to get you started with Content Cards. The default card feed included with the Braze SDK will handle all analytics tracking, dismissals, and rendering for a user’s Content Cards.
+The Braze .NET MAUI (formerly Xamarin) SDK includes a default card feed to get you started with Content Cards. The default card feed included with the Braze SDK will handle all analytics tracking, dismissals, and rendering for a user’s Content Cards.
 
 {% multi_lang_include developer_guide/prerequisites/xamarin.md %}
 
 ## Card types and properties
 
-The Braze Xamarin SDK has three unique Content Cards card types that share a base model: [Banner](#xamarin_banner), [Captioned Image](#xamarin_captioned-image), and [Classic](#xamarin_classic). Each type inherits common properties from a base model and has the following additional properties.
+The Braze .NET MAUI SDK has three unique Content Cards card types that share a base model: [Banner](#xamarin_banner), [Captioned Image](#xamarin_captioned-image), and [Classic](#xamarin_classic). Each type inherits common properties from a base model and has the following additional properties.
 
 ### Base card model
 
@@ -20,8 +20,8 @@ The Braze Xamarin SDK has three unique Content Cards card types that share a bas
 |`pinned`           | Whether the card is pinned.                                                                                            |
 |`dismissed`        | Whether the user has dismissed this card. Marking a card as dismissed that has already been dismissed will be a no-op. |
 |`dismissible`      | Whether the card is dismissible by the user.                                                                           |
-|`urlString`        | (Optional) The url string associated with the card click action.                                                       |
-|`openUrlInWebView` | Whether URLs for this card should be opened in Braze's WebView or not.                                                 |
+|`urlString`        | (Optional) The URL string associated with the card click action.                                                       |
+|`openUrlInWebView` | Whether URLs for this card should be opened in the Braze WebView or not.                                                 |
 |`isControlCard`    | Whether this card is a control card. Control cards should not be displayed to the user.                                |
 |`extras`           | The map of key-value extras for this card.                                                                             |
 |`isTest`           | Whether this card is a test card.                                                                                      |

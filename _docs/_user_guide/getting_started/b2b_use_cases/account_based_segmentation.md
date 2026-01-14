@@ -1,12 +1,12 @@
 ---
-nav_title: Account-Based Segmentation
-article_title: Setting Up Account-Based Segmentation
+nav_title: Account-based segmentation
+article_title: Set Up Account-Based Segmentation
 page_order: 2
 page_type: reference
 description: "Learn how to use various Braze features to power your B2B account-based segmentation use cases."
 ---
 
-# Setting up account-based segmentation
+# Set up account-based segmentation
 
 > This page shows how to use various Braze features to power your B2B account-based segmentation use cases.
 
@@ -25,7 +25,7 @@ To help you get started, we created basic SQL templates for simple account-based
 
 Let’s say you want to segment users who are employees of a target enterprise account. 
 
-1. Go to **Audience** > **Segment Extensions** > **Create New Extension** > **Start with a template** and select the template **Catalog segment for events**. <br><br> !["Select a Template" modal with catalog segment options for events or purchases.][1]<br><br>The SQL editor automatically populates with a template that joins user event data with catalog data to segment users who engage with certain catalog items. <br><br>![A SQL editor for a new extension with an open "Variables" tab.][2]<br><br>
+1. Go to **Audience** > **Segment Extensions** > **Create New Extension** > **Start with a template** and select the template **Catalog segment for events**. <br><br> !["Select a Template" modal with catalog segment options for events or purchases.]({% image_buster /assets/img/b2b/select_a_template.png %})<br><br>The SQL editor automatically populates with a template that joins user event data with catalog data to segment users who engage with certain catalog items. <br><br>![A SQL editor for a new extension with an open "Variables" tab.]({% image_buster /assets/img/b2b/enter_new_name.png %})<br><br>
 2. Use the **Variables** tab to provide the necessary fields for your template before generating your segment.<br><br>For Braze to identify users based on their engagement with catalog items, you need to do the following:
 - Select a catalog that contains a catalog field
 - Select a custom event that contains an event property
@@ -49,7 +49,7 @@ Select the following variables for a B2B account-based segmentation use case:
 
 For more sophisticated or complex segmentation, refer to [SQL Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/). To help you get started, here are a few SQL templates you can use to help you get a head start with B2B account-based segmentation:
 
-1. Create a segment comparing two filters in a single catalog (such as users who work in the restaurant industry for an enterprise-level account).
+1. Create a segment comparing two filters in a single catalog (such as users who work in the restaurant industry for an enterprise-level account). You must include the catalog ID and item ID.
 
 ```sql
 WITH salesforce_accounts AS (
@@ -108,11 +108,9 @@ AND salesforce_opportunities.Stage = 'Closed Won'
 
 ### Option 2: When using connected sources for your business objects
 
-For the basics on how to use connected sources in segmentation, refer to [CDI segments]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/). Use the templates covered in [When using catalogs](#option-1-when-using-catalogs-for-your-business-objects) for inspiration on how to format the source tables, as you can format them any way you want.
+For the basics on how to use connected sources in segmentation, refer to [CDI Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/). Use the templates covered in [When using catalogs](#option-1-when-using-catalogs-for-your-business-objects) for inspiration on how to format the source tables, as you can format them any way you want.
 
 ## Using your account-based extension in a segment
 
 After you’ve created your account-level segmentation in the above steps, you can directly pull those Segment Extensions into your targeting criteria. It’s also easy to layer on incremental user demographic criteria such as role, engagement with previous campaigns, and more. For more information, refer to [Using your extension in a segment]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/#step-6-use-your-extension-in-a-segment).
 
-[1]: {% image_buster /assets/img/b2b/select_a_template.png %}
-[2]: {% image_buster /assets/img/b2b/enter_new_name.png %}

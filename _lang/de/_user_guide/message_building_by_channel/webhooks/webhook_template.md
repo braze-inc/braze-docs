@@ -18,11 +18,7 @@ description: "In diesem Referenzartikel erfahren Sie, wie Sie Webhook-Templates 
 
 Gehen Sie im Dashboard von Braze zu **Vorlagen** > **Webhook-Vorlagen**.
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie diese Seite unter **Engagement** > **Vorlagen & Medien** > **Webhook-Vorlagen**.
-{% endalert %}
-
-![Die Seite "Webhook-Vorlagen" mit vordefinierten und gespeicherten Webhook-Vorlagen.]({% image_buster /assets/img_archive/webhook_template_campaign.png %})
+![Die Seite "Webhook-Vorlagen" mit vorgefertigten und gespeicherten Webhook-Templates.]({% image_buster /assets/img_archive/webhook_template_campaign.png %})
 
 ## Schritt 2: Wählen Sie Ihre Vorlage
 
@@ -34,7 +30,7 @@ Wenn Sie z.B. [LINE]({{site.baseurl}}/user_guide/message_building_by_channel/lin
 
 1. Geben Sie Ihrer Webhook-Vorlage einen eindeutigen Namen.
 2. (Optional) Fügen Sie eine Beschreibung der Vorlage hinzu, um zu erklären, wie diese Vorlage verwendet werden soll.
-3. Fügen Sie bei Bedarf [Teams]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) und [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) hinzu, um die Suche nach Ihrer Vorlage zu erleichtern und zu filtern.
+3. Fügen Sie bei Bedarf [Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) und [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) hinzu, um die Suche nach Ihrer Vorlage zu erleichtern und zu filtern.
 
 ## Schritt 4: Template erstellen
 
@@ -43,7 +39,7 @@ Wenn Sie z.B. [LINE]({{site.baseurl}}/user_guide/message_building_by_channel/lin
 3. Fügen Sie einen Anfragetext hinzu. Dies kann entweder ein **JSON-Schlüssel/Wert-Paar** oder **Rohtext** sein.
 4. (Optional) Fügen Sie einen Anfragekopf hinzu. Dies kann für Ihr Webhook-Ziel erforderlich sein.
 
-![Der Tab „Verfassen“ beim Erstellen eines Webhook-Templates. Verfügbare Felder sind die Webhook-URL, die HTTP-Methode, der Anfragetext und die Anfrage-Header. Sie können auch Sprachen hinzufügen.]({% image_buster /assets/img_archive/Webhook_template_test.png %}){: style="max-width:90%"}
+![Der Tab "Zusammenstellen" beim Erstellen eines Webhook Templates. Verfügbare Felder sind die Webhook-URL, die HTTP-Methode, der Anfragetext und die Anfrage-Header. Sie können auch Sprachen hinzufügen.]({% image_buster /assets/img_archive/Webhook_template_test.png %}){: style="max-width:90%"}
 
 ## Schritt 5: Testen Sie Ihre Vorlage
 

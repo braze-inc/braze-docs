@@ -1,5 +1,5 @@
 ---
-nav_title: Difference Between Blocklisting and Deletion
+nav_title: Difference between blocklisting and deletion
 article_title: Difference Between Blocklisting and Deletion
 page_order: 2
 

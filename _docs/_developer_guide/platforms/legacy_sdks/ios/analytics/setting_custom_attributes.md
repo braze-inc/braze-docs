@@ -1,6 +1,6 @@
 ---
-nav_title: Setting Custom Attributes
-article_title: Setting Custom Attributes for iOS
+nav_title: Set custom attributes
+article_title: Set Custom Attributes for iOS
 platform: iOS
 page_order: 3
 description: "This reference article shows how to set custom attributes in your iOS application."
@@ -10,7 +10,7 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# Setting custom attributes for iOS
+# Set custom attributes for iOS
 
 Braze provides methods for assigning attributes to users. You'll be able to filter and segment your users according to these attributes on the dashboard.
 
@@ -54,7 +54,7 @@ The following attributes should be set on the `ABKUser` object:
 
 ## Assigning custom user attributes
 
-Beyond the default user attributes, Braze also allows you to define custom attributes using several different data types. See our [user data collection]({{site.baseurl}}/developer_guide/getting_started/analytics_overview/) for more information on the segmentation options each of these attributes will afford you.
+Beyond the default user attributes, Braze also allows you to define custom attributes using several different data types. See our [user data collection]({{site.baseurl}}/developer_guide/analytics/) for more information on the segmentation options each of these attributes will afford you.
 
 ### Custom attribute with a string value
 
@@ -157,7 +157,7 @@ Appboy.sharedInstance()?.user.setCustomAttributeWithKey("your_attribute_key", an
 
 ### Custom attribute with an array value
 
-The maximum number of elements in [custom attribute arrays]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays) defaults to 25. Arrays exceeding the maximum number of elements will be truncated to contain the maximum number of elements. The maximum for individual arrays can be increased to up to 100. If you would like this maximum increased, reach out to your customer service manager. 
+The maximum number of elements in [custom attribute arrays]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays) defaults to 25. Arrays exceeding the maximum number of elements will be truncated to contain the maximum number of elements. The maximum for individual arrays can be increased to up to 100. If you would like this maximum increased, contact your customer service manager. 
 
 
 {% tabs %}

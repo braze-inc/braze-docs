@@ -1,6 +1,6 @@
 ---
-nav_title: Setting Up IPs & Domains
-article_title: Setting Up IPs & Domains
+nav_title: Set up IPs & domains
+article_title: Set Up IPs & Domains
 page_order: 0
 page_type: tutorial
 channel: email
@@ -8,7 +8,7 @@ description: "This how-to article will walk you through how to set up your IPs a
 
 ---
 
-# Setting up IPs and domains
+# Set up IPs and domains
 
 {% multi_lang_include video.html id="iTm3yQkJ0UU" align="right"  %}
 
@@ -31,6 +31,8 @@ After receiving your email, we'll get to work configuring your IPs, domains and 
 ### Step 3: Add DNS records
 
 After your IPs, domains, subdomains, and IP pools are configured, we'll send you a list of DNS records. Ask your engineers and developers to add these DNS records where needed, and after they have been added, let the Braze Onboarding team know.
+
+{% multi_lang_include dns_records.md %}
 
 ### Next steps
 
@@ -57,17 +59,13 @@ To use self-service email setup, you must meet the following prerequisites:
 2. Next, select the **Sender Verification** tab. To view this tab, you must have the "Can Manage Company Settings" company-level permission.
 3. Click the **Start setup** button.
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Sender Verification** by selecting your profile icon.
-{% endalert %}
-
 ### Step 2: Add and verify a sending domain
 
 A sending domain is used in the "from" address when sending an email. Enter a sending domain and click **Submit**. 
 
 Next, add the TXT and CNAME records from the bottom of the page to your DNS provider. Then, return to the Braze dashboard and click **Verify**.
 
-![][1]
+![]({% image_buster /assets/img_archive/email_setup_rdns_records.png %})
 
 {% alert important %}
 The sending domain must be a subordinate to a domain you own. For example, if you own "example.com", a subdomain could be "mail.example.com", which allows you to use the sending address "@mail.example.com".
@@ -89,4 +87,3 @@ Note that additional domains that have been added will not appear in the **Sende
 
 After your sender verification is complete, we recommend IP warming so that your messages reach their destination inboxes at a consistently high rate. After completing this setup, be sure to also consult with the Braze Onboarding team to confirm if your domains and [IP address]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ip_warming/) are working.
 
-[1]: {% image_buster /assets/img_archive/email_setup_rdns_records.png %}

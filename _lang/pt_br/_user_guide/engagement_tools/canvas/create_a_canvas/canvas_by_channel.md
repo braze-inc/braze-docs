@@ -1,5 +1,5 @@
 ---
-nav_title: Canvas por canal
+nav_title: Tela por canal
 config_only: true
 noindex: true
 page_order: 6

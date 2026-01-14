@@ -1,5 +1,5 @@
 ---
-nav_title: In-App Message Delivery
+nav_title: In-App message delivery
 article_title: In-App Message Delivery for iOS
 platform: iOS
 page_order: 3
@@ -19,7 +19,7 @@ noindex: true
 Our in-app message product allows you to trigger in-app message display as a result of several different event types: `Any Purchase`, `Specific Purchase`, `Session Start`, `Custom Event`, and `Push Click`. Furthermore, `Specific Purchase` and `Custom Event` triggers contain robust property filters.
 
 {% alert note %}
-Triggered in-app messages only work with custom events logged through the Braze SDK. In-app messages can't be triggered through the API or by API events (such as purchase events). If you're working with iOS, visit our [tracking custom events]({{site.baseurl}}/developer_guide/platforms/swift/analytics/tracking_custom_events/) article to learn more. 
+Triggered in-app messages only work with custom events logged through the Braze SDK. In-app messages can't be triggered through the API or by API events (such as purchase events). If you're working with iOS, visit our [tracking custom events]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=swift) article to learn more. 
 {% endalert %}
 
 ## Delivery semantics
@@ -32,7 +32,7 @@ There can be some latency for in-app messages that display immediately on delive
 
 ## Minimum time interval between triggers
 
-By default, we rate limit in-app messages to once every 30 seconds to faciliate a quality user experience.
+By default, we rate limit in-app messages to once every 30 seconds to facilitate a quality user experience.
 
 You can override this value via the `ABKMinimumTriggerTimeIntervalKey` inside the `appboyOptions` parameter passed to `startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions:`. Set the `ABKMinimumTriggerTimeIntervalKey` to the integer value you want as your minimum time in seconds between in-app messages:
 

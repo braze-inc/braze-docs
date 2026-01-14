@@ -15,7 +15,7 @@ description: "En este artículo se describen los detalles del punto final Actual
 /scim/v2/Users/{id}
 {% endapimethod %}
 
-> Utiliza este punto final para actualizar una cuenta de usuario existente en el panel especificando el recurso `id` devuelto por el método SCIM [`POST`]({{site.baseurl}}/scim/post_create_user_account/).
+> Utiliza este punto final para actualizar una cuenta de usuario existente en el panel especificando el recurso `id` devuelto por el método SCIM [`POST`]({{site.baseurl}}/api/endpoints/scim/post_create_user_account/).
 
 Permite actualizar los nombres y apellidos, los permisos (para establecer permisos a nivel de empresa, espacio de trabajo y equipo) y el departamento.
 

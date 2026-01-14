@@ -1,5 +1,5 @@
 ---
-nav_title: "POST:ユーザーのサブスクリプション・グループ・ステータスを更新する V2"
+nav_title: "POST:ユーザーサブスクリプショングループのステータスを更新する v2"
 alias: /post_update_user_subscription_group_status_v2/
 layout: api_page
 page_type: reference
@@ -16,7 +16,7 @@ channel:
 /v2/subscription/status/set
 {% endapimethod %}
 
-> このエンドポイントを使用して、Braze ダッシュボード上で最大50ユーザーのサブスクリプション状態を一括更新します。 
+> このエンドポイントを使用して、Braze ダッシュボード上で最大50ユーザーのサブスクリプション状態を一括更新します。
 
 **サブスクリプショングループ**ページに移動すると、サブスクリプショングループの `subscription_group_id` にアクセスできます。
 
@@ -34,13 +34,17 @@ channel:
 
 ## 前提条件
 
-このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/basics#rest-api-key/)と`subscription.status.set`の権限が必要です。
+このエンドポイントを使用するには、`subscription.status.set` 権限を持つ [API キー]({{site.baseurl}}/api/basics#rest-api-key/)が必要です。
+
+{% alert note %}
+このエンドポイントを[LINEサブスクリプショングループで]({{site.baseurl}}/user_guide/message_building_by_channel/line/line_users/subscription_groups/)使用することに興味がある場合は、カスタマーサクセスマネージャーに連絡すること。
+{% endalert %}
 
 ## レート制限
 
 {% multi_lang_include rate_limits.md endpoint='subscription status set' %}
 
-## 要求本文:
+## Request body
 
 ```
 Content-Type: application/json
@@ -74,7 +78,8 @@ Authorization: Bearer YOUR-REST-API-KEY
 | `subscription_state` | 必須 | 文字列 | 使用できる値は、`unsubscribed` (サブスクリプショングループに含まれない) または `subscribed` (サブスクリプショングループに含まれる) です。 |
 | `external_ids` | 必須* | 文字列の配列 | ユーザーの `external_id` には、最大で50個の `id` を含めることができます。 |
 | `emails` | 必須* | 文字列または文字列の配列 | ユーザーのメールアドレスは、文字列の配列として渡すことができます。少なくとも 1 件のメールアドレス (最大 50件 まで) を含める必要があります。<br><br>同じワークスペース内の複数のユーザー (`external_id`) が同じメールアドレスを共有している場合、そのメールアドレスを共有するすべてのユーザーは、サブスクリプショングループの変更で更新されます。 |
-| `phones` | 必須* | [E.164](https://en.wikipedia.org/wiki/E.164)形式の文字列 | ユーザーの電話番号。文字列の配列として渡すことができます。少なくとも1つの電話番号を含める必要があります（最大50まで）。 |
+| `phones` | 必須* | [E.164](https://en.wikipedia.org/wiki/E.164)形式の文字列 | ユーザーの電話番号。文字列の配列として渡すことができます。少なくとも 1 つの電話番号を含める必要があります（最大 50 件）。<br><br>同じワークスペース内の複数のユーザー (`external_id`) が同じ電話番号を共有している場合、その電話番号を共有しているすべてのユーザーは同じ購読グループの変更で更新されます。|
+| `use_double_opt_in_logic` | オプション | ブール値 | このパラメーター省略するか、または `false` に設定すると、ユーザーは SMS ダブルオプトインワークフローに入力されません。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 {% alert note %}

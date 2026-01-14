@@ -1,6 +1,6 @@
 ---
-nav_title: Messaging Users
-article_title: Messaging LINE Users
+nav_title: Messaging users
+article_title: Message LINE Users
 page_order: 2
 description: "This reference article covers how chat with users by using templated campaigns and Canvases."
 page_type: reference
@@ -23,13 +23,13 @@ You can create campaigns and Canvases that start, branch, and have mid-journey c
 
 Set your trigger words when scheduling an action-based delivery campaign.
 
-![Action-based trigger of "Send this campaign to users who sent inbound LINE to subscription group where the message body is" and a blank field.][1]
+![Action-based trigger of "Send this campaign to users who sent inbound LINE to subscription group where the message body is" and a blank field.]({% image_buster /assets/img/line/trigger_word_campaign.png %})
 
 ### Canvas
 
 Set your trigger words within [action paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths) in your Canvas.
 
-![Action path with a trigger of "Send this campaign to users who sent inbound LINE to subscription group where the message body is" and a blank field.][2]
+![Action path with a trigger of "Send this campaign to users who sent inbound LINE to subscription group where the message body is" and a blank field.]({% image_buster /assets/img/line/trigger_word_canvas.png %})
 
 ### Requirements
 
@@ -47,5 +47,3 @@ After creating action groups for the custom filter phrases, add another action g
 
 For this message, you should send a LINE message informing the user that this channel is not monitored by a human and, if needed, guide them to a support channel.
 
-[1]: {% image_buster /assets/img/line/trigger_word_campaign.png %}
-[2]: {% image_buster /assets/img/line/trigger_word_canvas.png %}

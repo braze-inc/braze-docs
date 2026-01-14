@@ -11,7 +11,7 @@ description: "Cette page d’accueil explique et répertorie les endpoints Braze
 page_type: landing
 
 guide_top_header: "Endpoints d’exportation"
-guide_top_text: "Avec cette collection de points de terminaison, vous pouvez accéder et exporter divers niveaux de détails sur vos KPI, cartes de flux d'actualités, sessions d'application, utilisateurs, segments, campagnes et Canvases. <br> <br> Assurez-vous de connaître votre <a href='/docs/user_guide/administrative/access_braze/braze_instances/' target='_blank'>instance Braze</a>, <a href='/docs/api/api_key/' target='_blank'>clé API</a> et <a href='/docs/api/identifier_types/' target='_blank'>identifiant d’API</a> lors de l’élaboration de vos paramètres et corps de requête."
+guide_top_text: "Avec cette collection d'endpoints, vous pouvez accéder et exporter différents niveaux de détails sur vos KPI, sessions d'app, utilisateurs, segments, campagnes et Canvases. <br> <br> Assurez-vous de connaître votre <a href='/docs/user_guide/administrative/access_braze/braze_instances/' target='_blank'>instance Braze</a>, <a href='/docs/api/api_key/' target='_blank'>clé API</a> et <a href='/docs/api/identifier_types/' target='_blank'>identifiant d’API</a> lors de l’élaboration de vos paramètres et corps de requête."
 
 guide_featured_title: "Exporter les points de terminaison de la campagne"
 guide_featured_list:
@@ -69,18 +69,6 @@ guide_menu_list3:
   - name: "GET : Indicateurs clé de performance pour les désinstallations par date"
     link: /docs/api/endpoints/export/kpi/get_kpi_uninstalls_date/
     image: /assets/img/braze_icons/target-04.svg
-
-guide_menu_title4: "Export News Feed endpoints"
-guide_menu_list4:
-  - name: "GET : Statistiques d’engagement de carte de fil d’actualité"
-    link: /docs/api/endpoints/export/news_feed/get_news_feed_card_analytics/
-    image: /assets/img/braze_icons/download-cloud-01.svg
-  - name: "GET : Informations relatives à la carte de fil d’actualité"
-    link: /docs/api/endpoints/export/news_feed/get_news_feed_card_details/
-    image: /assets/img/braze_icons/download-cloud-01.svg
-  - name: "GET : Liste des cartes de fil d’actualité"
-    link: /docs/api/endpoints/export/news_feed/get_news_feed_cards/
-    image: /assets/img/braze_icons/download-cloud-01.svg
 
 guide_menu_title5: "Export purchase endpoints"
 guide_menu_list5:

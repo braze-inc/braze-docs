@@ -2,10 +2,6 @@
 
 Integrating the React Native Braze SDK provides basic analytics functionality and lets you integrate in-app messages and Content Cards for both iOS and Android with just one codebase.
 
-## Sample app
-
-To see a React Native app running the Braze SDK, checkout [our sample app on GitHub](https://github.com/braze-inc/braze-react-native-sdk/tree/master/BrazeProject). For usage examples of the Braze Expo plugin, checkout [our Expo sample on GitHub](https://github.com/braze-inc/braze-expo-plugin/tree/main/example).
-
 ## New Architecture compatibility
 
 The following minimum SDK version is compatible with all apps using [React Native's New Architecture](https://reactnative.dev/docs/the-new-architecture/landing-page):
@@ -15,7 +11,7 @@ The following minimum SDK version is compatible with all apps using [React Nativ
 Starting with SDK version 6.0.0, Braze uses a React Native Turbo Module, which is compatible with both the New Architecture and legacy bridge architecture&#8212;meaning no additional setup is required.
 
 {% alert warning %}
-If your iOS app conforms to `RCTAppDelegate` and follows our previous `AppDelegate` setup, review the samples in [Complete native setup](#step-2-complete-native-setup) to prevent any crashes from occurring when subscribing to events in the Turbo Module.
+If your iOS app conforms to `RCTAppDelegate` and follows our previous `AppDelegate` setup, review the samples in [Complete native setup](#reactnative_step-2-complete-native-setup) to prevent any crashes from occurring when subscribing to events in the Turbo Module.
 {% endalert %}
 
 ## Integrating the React Native SDK
@@ -41,7 +37,7 @@ yarn add @braze/react-native-sdk
 
 ### Step 2: Choose a setup option
 
-You can manage the Braze SDK using the Braze Expo plugin or through one of the native layers. With the Expo plugin, you can configure certain SDK features without writing code in the any of native layers. Choose whichever option best meets your app's needs.
+You can manage the Braze SDK using the Braze Expo plugin or through one of the native layers. With the Expo plugin, you can configure certain SDK features without writing code in any of the native layers. Choose whichever option best meets your app's needs.
 
 {% tabs %}
 {% tab Expo %}
@@ -52,7 +48,7 @@ Ensure that your version of the Braze React Native SDK is at least 1.37.0. For t
 To install the Braze Expo plugin, run the following command:
 
 ```bash
-expo install @braze/expo-plugin
+npx expo install @braze/expo-plugin
 ```
 
 #### Step 2.2: Add the plugin to your app.json
@@ -84,6 +80,7 @@ In your `app.json`, add the Braze Expo Plugin. You can provide the following con
 | `enableBrazeIosRichPush`                      | boolean | iOS only. Whether to enable rich push features for iOS.                                                                                                  |
 | `enableBrazeIosPushStories`                   | boolean | iOS only. Whether to enable Braze Push Stories for iOS.                                                                                                  |
 | `iosPushStoryAppGroup`                        | string  | iOS only. The app group used for iOS Push Stories.                                                                                                       |
+| `iosUseUUIDAsDeviceId`                        | boolean | iOS only. Whether the device ID will use a randomly generated UUID.                                                                                       |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 Example configuration:
@@ -129,7 +126,7 @@ Example configuration:
 Prebuilding your application will generate the native files necessary for the Braze Expo plugin to work.
 
 ```bash
-expo prebuild
+npx expo prebuild
 ```
 
 Run your application as specified in the [Expo docs](https://docs.expo.dev/workflow/customizing/). Keep in mind, if you make any changes to the configuration options, you'll be required to prebuild and run the application again.
@@ -160,8 +157,8 @@ To connect to Braze servers, create a `braze.xml` file in your project's `res/va
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<string name="com_braze_api_key">YOU_APP_IDENTIFIER_API_KEY</string>
-<string translatable="false" name="com_braze_custom_endpoint">YOUR_CUSTOM_ENDPOINT_OR_CLUSTER</string>
+  <string translatable="false" name="com_braze_api_key">YOU_APP_IDENTIFIER_API_KEY</string>
+  <string translatable="false" name="com_braze_custom_endpoint">YOUR_CUSTOM_ENDPOINT_OR_CLUSTER</string>
 </resources>
 ```
 
@@ -253,10 +250,10 @@ From the root folder of the project:
 
 ```bash
 # To install using the React Native New Architecture
-cd ios && RCT_NEW_ARCH_ENABLED=1 pod install
+cd ios && pod install
 
 # To install using the React Native legacy architecture
-cd ios && pod install
+cd ios && RCT_NEW_ARCH_ENABLED=0 pod install
 ```
 
 #### Step 2.3: Configure the Braze SDK
@@ -267,6 +264,7 @@ cd ios && pod install
 Import the Braze SDK at the top of the `AppDelegate.swift` file:
 ```swift
 import BrazeKit
+import braze_react_native_sdk
 ```
 
 In the `application(_:didFinishLaunchingWithOptions:)` method, replace the API [key]({{site.baseurl}}/api/identifier_types/) and [endpoint]({{site.baseurl}}/api/basics/#endpoints) with your app's values. Then, create the Braze instance using the configuration, and create a static property on the `AppDelegate` for easy access:

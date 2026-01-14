@@ -15,7 +15,7 @@ description: "이 문서에서는 기존 대시보드 사용자 계정 Braze 엔
 /scim/v2/Users/{id}
 {% endapimethod %}
 
-> 이 엔드포인트를 사용하여 SCIM 메서드에서 반환된 `id` 리소스를 지정하여 기존 대시보드 사용자 계정을 업데이트합니다. [`POST`]({{site.baseurl}}/scim/post_create_user_account/) 메서드에서 반환되는 리소스를 지정합니다.
+> 이 엔드포인트를 사용하여 SCIM 메서드에서 반환된 `id` 리소스를 지정하여 기존 대시보드 사용자 계정을 업데이트합니다. [`POST`]({{site.baseurl}}/api/endpoints/scim/post_create_user_account/) 메서드에서 반환되는 리소스를 지정합니다.
 
 주어진 이름과 가족 이름, 권한(회사, 워크스페이스 및 팀 수준에서 권한을 설정하는 데 사용) 및 부서를 업데이트할 수 있습니다.
 

@@ -13,5 +13,5 @@ tool: Reports
 
 > Dieser Artikel behandelt die Push-Berichterstattung, mit der Sie den Erfolg Ihrer Push-Kampagnen anzeigen und analysieren können.
 
-{% multi_lang_include campaign_analytics.md channel="push" %}
+{% multi_lang_include analytics/campaign_analytics.md channel="push" %}
 

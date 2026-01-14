@@ -141,7 +141,11 @@ Aquí tienes consejos para la solución de problemas comunes en `5XX`:
 
 Los webhooks Braze y el Contenido conectado emplean un mecanismo de detección de host no saludable para detectar cuando el host de destino experimenta una alta tasa de lentitud significativa o una sobrecarga que provoca tiempos de espera, demasiadas solicitudes u otros resultados que impiden que Braze se comunique correctamente con el punto final de destino. Actúa como salvaguarda para reducir la carga innecesaria que pueda estar causando dificultades al host de destino. También sirve para estabilizar la infraestructura de Braze y mantener velocidades rápidas de mensajería.
 
-En general, si el número de **fallos supera los 3.000 en cualquier ventana de tiempo móvil de un minuto** (por combinación única de nombre de host y grupo de aplicaciones, **no** por ruta de punto final), Braze detendrá temporalmente las solicitudes al host de destino durante un minuto, simulando en su lugar respuestas con un código de error `598` para indicar la mala salud. Al cabo de un minuto, Braze reanudará las peticiones a toda velocidad si se comprueba que el anfitrión está sano. Si el anfitrión sigue sin estar sano, Braze esperará otro minuto antes de volver a intentarlo.
+Los umbrales de detección difieren entre los webhooks y el Contenido conectado:
+- **Para webhooks**: Si el número de **fallos supera los 3.000 en cualquier ventana de tiempo móvil de un minuto** (por combinación única de nombre de host y grupo de aplicaciones, **no** por ruta de punto final), Braze detendrá temporalmente las solicitudes al host de destino durante un minuto.
+- **Para contenido conectado**: Si el número de **fallos supera los 3.000 Y la tasa de error supera el 90% en cualquier ventana de tiempo móvil de un minuto** (por combinación única de nombre de host y grupo de aplicaciones, **no** por ruta de punto final), Braze detendrá temporalmente las solicitudes al host de destino durante un minuto.
+
+Cuando las peticiones se detienen, Braze simula respuestas con un código de error `598` para indicar la mala salud. Al cabo de un minuto, Braze reanudará las peticiones a toda velocidad si se comprueba que el anfitrión está sano. Si el anfitrión sigue sin estar sano, Braze esperará otro minuto antes de volver a intentarlo.
 
 Los siguientes códigos de error contribuyen al recuento de fallos del detector de host insalubre: `408`, `429`, `502`, `503`, `504`, `529`.
 
@@ -150,3 +154,46 @@ Para los webhooks, Braze reintentará automáticamente las peticiones HTTP que f
 Para el Contenido conectado, si las solicitudes al anfitrión de destino se detienen por el detector de anfitrión insalubre, Braze continuará mostrando mensajes y seguirá su lógica Liquid como si hubiera recibido un código de respuesta de error. Si quieres asegurarte de que estas solicitudes de Contenido conectado se reintentan cuando son detenidas por el detector de host insalubre, utiliza la opción `:retry`. Para más información sobre la opción `:retry`, consulta [Reintentos de contenido conectado]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries).
 
 Si crees que la detección de host no saludable puede estar causando problemas, ponte en contacto con [el soporte de Braze]({{site.baseurl}}/support_contact/).
+
+## Automatización de envíos electrónicos y entradas en el registro de actividad de mensajes
+
+### Configuración de envíos electrónicos automatizados
+
+Si experimentas más de 100.000 errores de webhook o de punto final de contenido conectado (incluidos los reintentos) en un espacio de trabajo en un periodo de 24 horas, recibirás un correo electrónico con la siguiente información sobre cómo resolver los errores. 
+
+- Nombre del espacio de trabajo
+- Un enlace al Canvas o a la campaña
+- URL del punto final
+- Código de error
+- Hora en que se observó el error por última vez
+- Enlaces al registro de actividad de mensajes y documentación relacionada
+
+{% alert note %}
+Puedes configurar el umbral de error por espacio de trabajo. Para ajustar este umbral, ponte en contacto con [el soporte de Braze]({{site.baseurl}}/support_contact/).
+{% endalert %}
+
+Los errores del punto final son:
+
+- **`4XX`:** `400`, `401`, `403`, `404`, `405`, `408`, `409`, `429`
+- **`5XX`:** `500`, `502`, `503`, `504`, `598`, `599`
+
+Estos correos electrónicos sólo se envían una vez al día a nivel de espacio de trabajo. Si ningún usuario se registra para recibir estos correos electrónicos, se notificará a todos los administradores de la empresa.
+
+Para registrarte para recibir estos correos electrónicos, haz lo siguiente:
+
+1. Vaya a **Configuración** > **Configuración del administrador** > **Preferencias de notificación**.
+2. Selecciona **Errores de contenido conectado** y **Errores de webhook** en la **sección Canvas y campañas.** 
+
+### Entradas del registro de actividad de mensajes
+
+Habrá al menos una entrada en [el registro de actividades de mensajería]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab) relacionada con el error que desencadenó el envío por correo electrónico automatizado.
+
+### Información adicional sobre fallos en Braze Currents
+
+Para aumentar la transparencia de los problemas relacionados con los webhooks, Braze transmite eventos detallados de fallos de webhooks a Currents y Snowflake Data Sharing. Estos eventos incluyen peticiones de webhook fallidas (como respuestas HTTP `4xx` o `5xx` ), lo que proporciona más capacidad de observación sobre cómo los problemas de webhook pueden afectar a la entrega de mensajes. Ten en cuenta que los eventos de fallo incluyen errores de terminal, así como errores que se están reintentando.
+
+{% alert note %}
+Las solicitudes de contenido conectado no se incluyen en estos eventos de fallo de webhook.
+{% endalert %}
+
+Para más información, consulta el [glosario de eventos de interacción con mensajes]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/).

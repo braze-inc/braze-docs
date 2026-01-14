@@ -24,9 +24,9 @@ Web-Push-Benachrichtigungen liefern dringende, umsetzbare Updates, die zu schnel
 - Bringen Sie Besucher mit einfachen Aktions-Buttons zurück auf Ihre Website
 - Passen Sie Ihren Push mit Produkt- und Kundeninformationen an, damit Ihre Nachricht relevant ist.
 
-Web-Push funktioniert genauso wie die Push-Benachrichtigungen von Apps auf Ihrem Telefon. Weitere Informationen zum Verfassen einer Web-Push-Nachricht finden Sie unter [Erstellen einer Push-Benachrichtigung][11].
+Web-Push funktioniert genauso wie die Push-Benachrichtigungen von Apps auf Ihrem Telefon. Weitere Informationen zum Verfassen einer Web-Push-Nachricht finden Sie unter [Erstellen einer Push-Benachrichtigung]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message).
 
-![Beispiel für Web-Push mit der gleichen Nachricht, die auf einem Laptop und einem Telefon angezeigt wird.][12]{: style="border:none"}
+![Web-Push-Beispiel mit der gleichen Push Nachricht, die auf einem Laptop und einem Telefon angezeigt wird.]({% image_buster /assets/img_archive/Macbook_Push.png %}){: style="border:none"}
 
 ## Potenzielle Anwendungsfälle
 
@@ -42,7 +42,7 @@ Hier sind einige Beispiele für gängige Anwendungsfälle von Web-Push-Nachricht
 
 ## Voraussetzungen für die Verwendung von Web Push
 
-Bevor Sie mit Braze Push-Nachrichten erstellen und versenden können, müssen Sie mit Ihren Entwicklern zusammenarbeiten, um Push in Ihre Website zu integrieren. Detaillierte Schritte finden Sie in unserer [Anleitung zur Integration von Web-Push]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/).
+Bevor Sie mit Braze Push-Nachrichten erstellen und versenden können, müssen Sie mit Ihren Entwicklern zusammenarbeiten, um Push in Ihre Website zu integrieren. Detaillierte Schritte finden Sie in unserer [Anleitung zur Integration von Web-Push]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=web).
 
 ### Push-Erlaubnis
 
@@ -65,11 +65,8 @@ Die folgenden Browser unterstützen Web-Push-Benachrichtigungen. Private Browsin
 Weitere Informationen zu den Push-Protokollstandards und der Browserunterstützung finden Sie in den für Ihren Browser relevanten Ressourcen:
 
 - [Safari (Desktop)](https://developer.apple.com/notifications/safari-push-notifications/)
-- [Safari (mobil)]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/safari_mobile_push/)
+- [Safari (mobil)]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=safari)
 - [Mozilla Firefox](https://developer.mozilla.org/en-us/docs/web/api/push_api#browser_compatibility)
 - [Microsoft Edge](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/how-to/push)
 
 
-[11]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message
-[12]: {% image_buster /assets/img_archive/Macbook_Push.png %}
-[13]: {% image_buster /assets/img_archive/WebPush_Prompt.png %}

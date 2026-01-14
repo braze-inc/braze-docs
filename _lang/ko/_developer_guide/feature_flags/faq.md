@@ -30,6 +30,9 @@ Braze는 iOS, Android 및 웹 플랫폼에서 기능 플래그를 지원하며, 
 
 필요한 대부분의 노력은 엔지니어링 팀이 출시하려는 새로운 기능을 빌드하는 작업과 관련됩니다. 하지만 기능 플래그를 추가하는 경우 앱 또는 웹사이트의 코드에서 `IF`/`ELSE` 문만큼이나 간단합니다.
 
+{% tabs %}
+{% tab 자바스크립트 %}
+
 ```javascript
 import { getFeatureFlag } from "@braze/web-sdk";
 
@@ -40,6 +43,31 @@ else {
     // Show the old homepage
 }
 ```
+
+{% endtab %}
+{% tab Java %}
+
+```java
+if (braze.getFeatureFlag("new_shopping_cart").getEnabled()) {
+  // Show the new homepage your team has built
+} else {
+  // Show the old homepage
+}
+```
+
+{% endtab %}
+{% tab 코틀린 %}
+
+```kotlin
+if (braze.getFeatureFlag("new_shopping_cart")?.enabled == true) {
+  // Show the new homepage your team has built
+} else {
+  // Show the old homepage
+}
+```
+
+{% endtab %}
+{% endtabs %}
 
 ### 기능 플래그가 마케팅 팀에 어떻게 도움이 될 수 있습니까? {#marketing-teams}
 
@@ -76,10 +104,6 @@ else {
 - 롤아웃을 20%에서 10%로 낮추면 원래 10%의 사용자만 활성화된 상태로 유지됩니다.
 
 이 전략은 사용자가 앱에서 일관된 경험을 이용하도록 도와주며 여러 세션에서 변동되지 않도록 합니다. 물론 기능을 0%로 비활성화하면 모든 사용자가 기능 플래그에서 제거됩니다. 버그를 발견하거나 기능을 완전히 비활성화해야 할 때 유용합니다.
-
-### 현재 기능 플래그에 있는 사용자의 세그먼트를 생성할 수 있습니까? {#feature-flag-filter}
-
-바로 제품 로드맵에 있습니다. 이를 우선적으로 처리하려면 Braze 고객 팀에 이 피드백을 전달하거나 팀에 이메일([feature-flags-feedback@braze.com](mailto:feature-flags-feedback@braze.com))로 문의하시기 바랍니다.
 
 ## 기술 주제
 

@@ -22,9 +22,9 @@ guide_featured_list:
   - name: Filter für die Segmentierung
     link: /docs/user_guide/engagement_tools/segments/segmentation_filters/
     image: /assets/img/braze_icons/flag-02.svg
-  - name: Segmente Funnels
-    link: /docs/user_guide/engagement_tools/segments/segment_funnels/
-    image: /assets/img/braze_icons/users-right.svg
+  - name: Segmentdaten
+    link: /docs/viewing_and_understanding_segment_data/
+    image: /assets/img/braze_icons/pie-chart-01.svg
 
 guide_menu_title: "More articles"
 guide_menu_list:
@@ -41,7 +41,7 @@ guide_menu_list:
     link: /docs/catalog_segments/
     image: /assets/img/braze_icons/users-01.svg
   - name: Benutzerprofile
-    link: /docs/user_guide/engagement_tools/segments/using_user_search/
+    link: /docs/user_guide/engagement_tools/segments/user_profiles/
     image: /assets/img/braze_icons/users-01.svg
   - name: Standort-Targeting
     link: /docs/user_guide/engagement_tools/segments/location_targeting/
@@ -49,6 +49,12 @@ guide_menu_list:
   - name: Reguläre Ausdrücke
     link: /docs/user_guide/engagement_tools/segments/regex/
     image: /assets/img/braze_icons/search-sm.svg
+  - name: Unterdrückungslisten
+    link: /docs/user_guide/engagement_tools/segments/suppression_lists/
+    image: /assets/img/braze_icons/list.svg 
+  - name: Messung der Segmentgröße
+    link: /docs/user_guide/engagement_tools/segments/measuring_segment_size/
+    image: /assets/img/braze_icons/pie-chart-02.svg
   - name: Fehlersuche
     link: /docs/user_guide/engagement_tools/segments/troubleshooting/
     image: /assets/img/braze_icons/annotation-question.svg
@@ -56,7 +62,7 @@ guide_menu_list:
 guide_menu_title2: "Other"
 guide_menu_list2:
   - name: Angepasste Attribute
-    link: /docs/user_guide/data_and_analytics/custom_data/custom_attributes/
+    link: /docs/user_guide/data/custom_data/custom_attributes/
     image: /assets/img/braze_icons/table.svg
 
 ---
@@ -85,5 +91,5 @@ Sie können Ihre Segmente weiter verfeinern, indem Sie [Segmenterweiterungen]({{
 - **Events und Nachrichten-Interaktionen:** Segmentieren Sie die Nutzer danach, ob sie in den letzten dreißig Tagen einen Kauf getätigt haben und außerdem mit einer bestimmten In-App-Nachricht interagiert haben.
 - **Daten abfragen:** 
   - **Snowflake abfragen:** Segmentieren Sie Nutzer:innen mit kombinierten Daten aus Braze und externen Quellen, wie z. B. einem CRM oder einem Data Warehouse, indem Sie [SQL-Segmenterweiterungen]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/) zur Abfrage von Snowflake verwenden.
-  - **Synchronisierung aus dem Data Warehouse:** Segmentieren Sie Nutzer:innen mit Daten, die direkt aus Ihrem Data Warehouse oder Dateispeichersystem mit Braze synchronisiert wurden, indem Sie [CDI Segmente]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/) verwenden.
+  - **Synchronisierung aus dem Data Warehouse:** Segmentieren Sie Nutzer:innen mit Daten, die direkt aus Ihrem Data Warehouse oder Dateispeichersystem mit Braze synchronisiert wurden, indem Sie [CDI Segment-Erweiterungen]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/) verwenden.
 

@@ -27,9 +27,13 @@ Braze tests all the variants against each other with Pearson's chi-squared tests
 
 This is a separate test from the confidence score, which only describes the performance of a variant compared to the control with a numeric value between 0 and 100%. Specifically, it represents our confidence that the standardized difference in conversion rate between the variant and control is significantly greater than chance.
 
+### Why isn't the variant distribution even?
+
+{% multi_lang_include multivariant_testing.md section='Variant distribution' %}
+
 ## Running and concluding tests
 
-### When is the inital test over?
+### When is the initial test over?
 
 When using Winning Variant for single-send campaigns, the test is over when the Winning Variant Send Time arrives. Braze will deem a variant to be the winner if it shows the highest conversion rate by a statistically significant margin.
 
@@ -65,4 +69,4 @@ To assign users to message variants, Canvas variants, or their respective contro
 
 ### Why can't I use rate limiting with a control group?
 
-Braze currently doesn’t support rate limiting with A/B testing that has a control group. This is because rate limiting doesn’t apply to the control group in the same way as the variants, thus introducing bias. Instead, consider using [Intelligent Selection]({{site.baseurl}}/user_guide/intelligence/intelligent_selection/), which automatically adjusts the percentage of users that will receive each variant based on analytics and the performance of the campaign.
+Braze currently doesn’t support rate limiting with A/B testing that has a control group. This is because rate limiting doesn’t apply to the control group in the same way as the variants, thus introducing bias. Instead, consider using [Intelligent Selection]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/), which automatically adjusts the percentage of users that will receive each variant based on analytics and the performance of the campaign.

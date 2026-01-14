@@ -1,4 +1,12 @@
-# Welcome to Braze Docs!
+<img src="assets/Braze_Primary_Icon_PURPLE.png" width="65" height="65" alt="Braze icon" align="left"/>
+
+Welcome to Braze Docs!
+===
+
+[![GitHub Release](https://img.shields.io/github/v/release/braze-inc/braze-docs)](https://github.com/braze-inc/braze-docs/releases)
+[![GitHub branch status](https://img.shields.io/github/checks-status/braze-inc/braze-docs/main)](https://github.com/braze-inc/braze-docs/deployments)
+[![Static Badge](https://img.shields.io/badge/License-Creative_Commons-lightgrey)](/LICENSE.md)
+[![X (formerly Twitter) Follow](https://img.shields.io/twitter/follow/braze)](https://x.com/braze)
 
 This repository contains the source files for [Braze Docs](http://www.braze.com/docs), which hosts all user, developer, partner, and API documentation for the Braze customer engagement platform.
 
@@ -10,7 +18,8 @@ If you'd like to help improve the docs, you can:
 
 ## Quick start
 
-> **Note:** For a full walkthrough, see [Contributing to Braze Docs](https://www.braze.com/docs/contributing/home/).
+> [!TIP]
+> For a full walkthrough, see [Contributing to Braze Docs](https://www.braze.com/docs/contributing/home/).
 
 To build the docs locally, you'll need Ruby version `3.3.0` installed. In the terminal, open `braze-docs` and check for Ruby version `3.3.0`.
 
@@ -25,27 +34,44 @@ If this version isn't installed, use a [supported version manager](https://www.r
 rbenv install 3.3.0
 ```
 
+If you have multiple versions of Node.js installed, use `asdf` for version management.
+
+```bash
+brew install asdf
+```
+
 Next, install project dependencies.
 
 ```bash
-bundle install
+bundle install && asdf install
 ```
 
-To start your local docs server on localhost `http://127.0.0.1:4000`, run:
+To start your local docs server on localhost `http://127.0.0.1:4000`, run the following command. To stop your server, reopen the terminal and press **Control**+**C**.
 
 ```bash
 # for 'en' language:
 rake
 
-# for other langauges:
+# for other languages:
+rake de
 rake es
 rake fr
 rake ja
 rake ko
 rake pt_br
+
+# to render content in '{% markdown_embed %}' tags:
+MARKDOWN_API=true rake
+
+# to render tiles on partner landing pages:
+PARTNER_API=true rake
+
+# to render both APIs:
+MARKDOWN_API=true PARTNER_API=true rake
 ```
 
-To stop your server, reopen the terminal and press **Control**+**C**.
+> [!NOTE]
+> Prepending `MARKDOWN_API=true` to your rake command lets you preview content within a `{% markdown_embed %}` tag, such as the content on the [Developer Guide: Changelogs](https://www.braze.com/docs/developer_guide/changelogs/) page. Prepending `PARTNER_API=true` lets you render the tiles on a partner landing page, such as [Technology Partners](https://www.braze.com/docs/partners/home/).
 
 ## About `bdocs` wrapper
 

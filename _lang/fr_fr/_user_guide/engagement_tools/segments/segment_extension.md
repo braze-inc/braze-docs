@@ -1,169 +1,146 @@
 ---
 nav_title: Extensions de segments
 article_title: Extensions de segments
-page_order: 3.1
-
-page_type: tutorial
+page_order: 6
+page_type: reference
 description: "Cet article pratique vous explique comment configurer et utiliser une extension de segments pour améliorer vos capacités de segmentation."
 tool: Segments
 ---
 
 # Extensions de segments
 
-> La segmentation de Braze vous permet de cibler les utilisateurs en fonction d'un événement personnalisé ou d'un comportement d'achat stocké pendant toute la durée de vie de ce profil utilisateur. Les exemples comprennent le fait de trouver des utilisateurs qui ont ou n’ont pas effectué un événement personnalisé donné depuis un moment spécifique, ou bien de segmenter les utilisateurs sur la base des produits qu’ils ont déjà achetés ou combien d’argent ils ont dépensé pour votre service.
+> Les extensions de segments vous permettent de créer des segments très précis sur une longue période de l'historique d'un utilisateur. Par exemple, grâce aux extensions de segments, vous pouvez cibler les utilisateurs qui ont acheté un produit particulier au cours des seize derniers mois ou qui ont dépensé une certaine somme d'argent avec votre service. Affinez cette audience en utilisant les propriétés d'événement pour rendre le ciblage encore plus granulaire.
 
-Les Segment Extensions sont des définitions d’audience vous permettant d’utiliser des propriétés de l’événement imbriqué ou créer des ensembles fenêtrés d’un événement personnalisé et des propriétés de l’événement d’achat au cours des deux dernières années (730 jours). Par exemple, la segmentation de Braze vous permet de trouver les utilisateurs qui ont acheté un produit spécifique au cours de leur vie. Avec Segment Extensions, vous pouvez affiner cette audience pour des utilisateurs qui ont acheté une couleur donnée d’un produit donné au moins deux fois au cours des 2 dernières années. Lorsque vous créez une extension de segment, vous pouvez également spécifier si l’audience est statique ou régénérée toutes les 24 heures.
+La segmentation de Braze vous permet de cibler les utilisateurs en fonction d'un événement personnalisé ou d'un comportement d'achat. Les extensions de segments renforcent cette capacité en vous permettant de puiser dans les données historiques enregistrées dans le profil utilisateur. Grâce aux extensions de segments, vous pouvez identifier et atteindre les utilisateurs qui ont réalisé un événement personnalisé ou un événement d'achat, quel que soit le nombre de fois au cours des deux dernières années (730 jours). 
 
-L’utilisation des propriétés de l’événement imbriqué pour la [livraison par événement][19] n’a pas besoin d’extensions de segment, étant donné que le traitement des événements s’effectue en temps réel. De même, les Attributs personnalisés imbriqués n’ont pas besoin d’utiliser les Segment Extensions.
+## Pourquoi utiliser les extensions de segments ?
 
-{% alert important %}
-Par défaut, 25 extensions de segments actives sont allouées par espace de travail à un moment donné. Si vous avez besoin d’augmenter cette limite, contactez votre gestionnaire du succès des clients Braze pour discuter de votre cas d’utilisation.
-{% endalert %}
+Les segments de Braze vous offrent de puissants outils de ciblage pour créer des groupes dynamiques d'utilisateurs. Pour la plupart des cas d'utilisation, cela suffit pour atteindre votre audience de manière efficace. Les extensions de segments sont conçues pour les cas d'utilisation avancés dans lesquels vous devez analyser des comportements remontant jusqu'à deux ans ou appliquer une logique complexe, sans compromettre la conservation des données ou les performances du système. Vous pouvez utiliser des requêtes [SQL]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments) (SQL Segment Extensions) ou des données provenant de votre propre [entrepôt de données]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments) pour affiner davantage votre audience.
 
-## Étape 1 : Accéder aux Segment Extensions
-
-Sélectionnez **Audience** > **Extensions de segments**.
+Par exemple, la segmentation par défaut de Braze trouvera les utilisateurs qui correspondent à des critères spécifiques que vous définissez, comme l'identification d'un utilisateur qui a récemment acheté l'un de vos produits. Les extensions de segments vous permettent d'aller plus loin, par exemple en identifiant les utilisateurs qui ont acheté une couleur particulière d'un produit spécifique au moins deux fois il y a 18 à 24 mois. Les extensions de segments constituent une amélioration et non une exigence. Si vous avez besoin de filtres plus avancés ou d'une fenêtre d'observation plus longue, ils constituent un excellent outil pour vous aider tout en optimisant l'utilisation de vos données.
 
 {% alert note %}
-Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/navigation), vous trouverez cette page sous **Engagement** > **Segments** > **Extensions de segments**.
+Par défaut, 25 extensions de segments actives sont attribuées par espace de travail à un moment donné. Si vous avez besoin d'augmenter cette limite, contactez votre gestionnaire satisfaction client Braze pour discuter de votre cas d'utilisation.
 {% endalert %}
 
-Dans le tableau Extensions de segments, cliquez sur **Créer une nouvelle extension**, puis sélectionnez votre expérience de création d'extensions de segments :
+## Création d'une extension de segmentation
 
-- **Extension simple :** Créez une extension de segment axée sur un seul événement en utilisant un formulaire guidé.
-Il s’agit de la meilleure option si vous ne souhaitez pas utiliser de code SQL.
-- **Commencez par un modèle :** Créez un segment SQL avec un modèle personnalisable en utilisant des données Snowflake.
-- **Actualisation progressive :** Écrivez un segment SQL Snowflake qui actualise automatiquement les deux derniers jours de données ou les actualise manuellement selon les besoins. Il s’agit du meilleur compromis précision/coût.
-- **Actualisation complète :** Écrivez un segment SQL Snowflake qui recalcule l’intégralité de l’audience lors d’une actualisation manuelle. Il s’agit de la meilleure option lorsque vous avez besoin d’une vision complète et actualisée de votre audience.
+Pour créer une extension de segment, vous allez créer un filtre pour affiner un segment de vos utilisateurs sur la base de propriétés d'événement personnalisées. Lors de la création d'une extension de segments, vous choisirez si le segment sera statique ou s'il sera actualisé dynamiquement à un intervalle donné.
 
-![][20]{: style="max-width:50%"}
+### Étape 1 : Naviguer vers les extensions de segments
 
-Si vous sélectionnez une expérience qui utilise SQL, reportez-vous à la section [Extensions de segments SQL]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/) pour plus d'informations.
+Allez dans **Audience** > **Extensions de** segments.
 
-Si vous sélectionnez l'**extension simple**, passez aux étapes suivantes.
+Dans le tableau Extensions de segments, sélectionnez **Créer une nouvelle extension**, puis sélectionnez votre expérience de création d'extensions de segments :
 
-## Étape 2 : Nommer votre Segment Extension
+- **Extension simple :** Créez une extension de segmentation axée sur un seul événement en utilisant un formulaire guidé.
+Le mieux pour les cas où vous ne voulez pas utiliser SQL.
+- **Commencez par un modèle :** Créez un segment SQL avec un modèle personnalisable en utilisant les données de Snowflake.
+- **Actualiser de manière incrémentielle :** Écrivez un segment SQL Snowflake qui actualise automatiquement les données des deux derniers jours ou qui les actualise manuellement si nécessaire. Le meilleur moyen d'équilibrer la précision et le rapport coût-efficacité.
+- **Actualiser complètement :** Ecrivez un segment SQL avec les données de Snowflake ou toute autre [source connectée à CDI]({{site.baseurl}}/cdi_segment_extensions/) qui actualise l'ensemble de l'audience lors d'une réactualisation manuelle. C'est la solution idéale lorsque vous avez besoin d'une vue complète et actualisée de votre audience.
 
-Nommez votre Segment Extension en décrivant le type d’utilisateur que vous souhaitez cibler. Cela vous permettra de retrouver facilement cette extension lorsque vous souhaiterez l’utiliser en tant que filtre dans votre segment.
+!Table avec différentes expériences de création d'extensions de segments à choisir.]({% image_buster /assets/img/segment/segment_extension_modal.png %}){: style="max-width:50%"}
 
-![Segment Extension nommée « Online Shoppers Extenion - 90 Days (Extension pour acheteurs en ligne : 90 jours) » avec la case « Regenerate Extension Daily (Renouveler l’extension quotidiennement) » cochée.][2]
+Si vous sélectionnez une expérience qui utilise SQL, reportez-vous à la section [Extensions de segments SQL]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/) pour plus d'informations. Si vous sélectionnez **Extension simple**, passez à l'étape 2.
 
-## Étape 3 : Choisir vos critères
+#### Utilisation du crédit SQL
 
-Sélectionnez un critère d’achat, de message, d’engagement ou d’événement personnalisé pour le ciblage. Après avoir sélectionné les critères du type d'événement souhaité, choisissez l'article acheté, l'interaction du message ou l'événement personnalisé spécifique que vous souhaitez cibler pour votre liste d'utilisateurs. Choisissez ensuite le nombre de fois (supérieur, inférieur ou égal) que l'utilisateur doit avoir effectué l'événement, ainsi que la période de temps - pour les extensions de segments en particulier, vous pouvez remonter jusqu'aux 730 derniers jours (2 ans).
+Les types d'extensions de segments suivants consomment des crédits SQL :
 
-La segmentation basée sur les données d'événements de plus de 730 jours peut être effectuée à l'aide d'autres filtres disponibles dans **Segments**. Lorsque vous choisissez votre période, vous pouvez spécifier une plage de dates relatives (par exemple les X derniers jours), une date de début, une date de fin ou une plage de dates exactes (de la date A à la date B).
+- SQL Segment Extensions (actualisation incrémentielle et complète)
+- Segments du catalogue
+- Segments du CDI 
+    - Les crédits sont consommés dans votre propre entrepôt de données
 
-![][3]
+### Étape 2 : Nommez votre extension de segmentation
 
-### Segmentation des propriétés de l’événement
+Nommez votre extension de segments en décrivant le type d'utilisateurs que vous souhaitez filtrer. Cela permettra de découvrir facilement et précisément cette extension lorsque vous l'appliquerez comme filtre dans votre segmentation.
 
-Pour accroître la précision du ciblage, cochez la case **Ajouter des filtres de propriété**. Cela vous permettra d’analyser les résultats en fonction des propriétés spécifiques de votre achat ou événement personnalisé. Nous prenons en charge la segmentation des propriétés de l’événement en fonction des objets de chaîne de caractères, numériques, booléens et temporels.
+!Extension de segmentation nommée "Extension pour les acheteurs en ligne - 90 jours".]({% image_buster /assets/img/segment/segment_extension2.png %})
 
-Pour les propriétés des chaînes de caractères, vous pouvez saisir plusieurs valeurs à la fois. Dans l'exemple ci-dessous, ce filtre recherche les utilisateurs dont le statut est égal à l'une des valeurs suivantes : or, argent ou bronze.
+### Étape 3 : Choisissez vos critères
 
-![Segmentation basée sur les propriétés des chaînes de caractères.][13.5]
+Sélectionnez des critères d'achat, d'engagement message ou d'événement personnalisé pour le ciblage. Après avoir sélectionné les critères du type d'événement souhaité, choisissez l'article acheté, l'interaction du message ou l'événement personnalisé spécifique que vous souhaitez cibler pour votre liste d'utilisateurs. Choisissez ensuite le nombre de fois (supérieur, inférieur ou égal) que l'utilisateur doit avoir effectué l'événement, ainsi que la période de temps - pour les extensions de segments en particulier, vous pouvez remonter jusqu'aux 730 derniers jours (2 ans).
 
-![Segmentation basée sur les propriétés numériques.][13]
+La segmentation basée sur les données d'événements de plus de 730 jours peut être effectuée à l'aide d'autres filtres situés dans **Segments**. Lorsque vous choisissez votre période, vous pouvez spécifier une plage de dates relatives pour sélectionner les X derniers jours, une date de début, une date de fin ou une plage de dates exactes (de la date A à la date B).
 
-![Segmentation basée sur les propriétés booléennes.][14]
+Critères de segmentation pour les utilisateurs qui ont effectué un événement personnalisé plus de 2 fois entre le 1er et le 31 mars 2025.]({% image_buster /assets/img/segment/segment_extension1.png %})
 
-![Segmentation basée sur les objets temporels.][15]
+#### Segmentation des propriétés d'événement
 
-Nous prenons également en charge la segmentation basée sur les [propriétés d'événements imbriqués]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/nested_objects/).
+Pour accroître la précision du ciblage, cochez la case **Ajouter des filtres de propriété**. Cela vous permettra d'effectuer des recherches en fonction des propriétés spécifiques de votre achat ou de votre événement personnalisé. Nous prenons en charge la segmentation des propriétés d'événement sur la base de chaînes de caractères, d'objets numériques, booléens et temporels.
 
-![Segmenter en fonction de propriétés de l’événement imbriqué.][18]
+Pour les propriétés de type chaîne de caractères, vous pouvez saisir plusieurs valeurs à la fois. Dans l'exemple ci-dessous, ce filtre recherche les utilisateurs dont le statut est égal à l'une des valeurs suivantes : or, argent ou bronze.
 
-Les Segment Extensions s’appuient sur le stockage à long terme des propriétés de l’événement et n’ont pas de limite de stockage de propriété horodatée. Vous pouvez regarder les propriétés de l’événement suivies sur les deux dernières années.
+\![Segmentation basée sur les propriétés des chaînes de caractères.]({% image_buster /assets/img/segment/property5.png %})
+
+!Segmentation basée sur les propriétés numériques.]({% image_buster /assets/img/segment/property2.png %})
+
+!Segmentation basée sur des propriétés booléennes.]({% image_buster /assets/img/segment/property3.png %})
+
+!Segmentation basée sur des objets de type datetime.]({% image_buster /assets/img/segment/property4.png %})
+
+Nous prenons également en charge la segmentation basée sur les [propriétés d'événements imbriqués]({{site.baseurl}}/user_guide/data/custom_data/custom_events/nested_objects/).
+
+!Segmentation basée sur les propriétés d'événements imbriqués.]({% image_buster /assets/img/segment/nested_segment_extensions.png %})
+
+Les extensions de segments reposent sur le stockage à long terme des propriétés d'événement et n'ont pas de limite de stockage des propriétés horodatées. Vous pouvez consulter les propriétés d'événement suivies au cours des deux dernières années. L'utilisation des propriétés d'événement dans les extensions de segments n'a pas d'incidence sur l'utilisation des points de données.
 
 {% alert note %}
-L’utilisation de propriétés de l’événement dans des Segment Extensions n’affecte pas l’utilisation de vos points de données.
+Vous n'avez pas besoin des extensions de segment pour utiliser les propriétés d'événement ou les attributs personnalisés imbriqués dans votre segment. Les extensions de segments ne font que prolonger la fenêtre historique utilisée pour créer un segment par défaut. Vous pouvez créer un [segment]({{site.baseurl}}/user_guide/engagement_tools/segments/) par défaut en temps réel qui utilise les propriétés des événements des 30 derniers jours ou des attributs personnalisés imbriqués. De même, vous pouvez [planifier le]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/) déclenchement de [votre message]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/) en temps réel sur la base d'une propriété d'événement - aucune extension de segment n'est nécessaire.
 {% endalert %}
 
-## Étape 4 : Désigner des paramètres d'actualisation (facultatif)
+### Étape 4 : Désigner des paramètres d'actualisation (facultatif)
 
-Si vous n'avez pas besoin que votre extension soit actualisée à intervalles réguliers, vous pouvez l'enregistrer sans utiliser les paramètres d'actualisation, et Braze générera par défaut votre extension de segmentation en fonction de votre adhésion d'utilisateur à ce moment-là. Utilisez le comportement par défaut si vous ne souhaitez générer l'audience qu'une seule fois et la cibler ensuite avec une campagne ponctuelle.
+{% multi_lang_include segments.md section='Refresh settings' %}
 
-Votre segmentation commencera toujours à être traitée après l'enregistrement initial. À chaque fois que votre segment est actualisé, Braze ré-exécute le segment et met à jour l'appartenance au segment pour refléter les utilisateurs de votre segment au moment de l'actualisation. Cela peut aider vos campagnes récurrentes à atteindre les utilisateurs les plus pertinents.
+### Étape 5 : Enregistrez votre extension de segmentation
 
-### Mise en place d'une actualisation récurrente
+Après avoir sélectionné **Enregistrer**, le traitement de votre extension de segments commencera. Le temps nécessaire pour générer votre extension de segmentation dépend du nombre d'utilisateurs, du nombre d'événements personnalisés ou d'événements d'achat que vous capturez et du nombre de jours de l'historique.
 
-Pour mettre en place une planification récurrente, sélectionnez **Actualiser les paramètres** dans le coin supérieur droit de votre extension spécifique. L'option permettant d'actualiser les paramètres est disponible pour tous les types d'extensions de segments, y compris les segments SQL, les segments CDI et les extensions de segments basées sur des formulaires simples.
+Pendant que votre extension de segment est en cours de traitement, vous verrez une petite animation à côté du nom de l'extension de segment, et le mot "Processing" dans la colonne **Last Processed (Dernier traitement) de** la liste des extensions de segment. Notez que vous ne pourrez pas modifier une extension de segments pendant qu'elle est en cours de traitement.
 
-{% alert important %}
-Les paramètres d'actualisation sont automatiquement désactivés pour les extensions de segments non utilisées. Braze définit une extension non utilisée comme une extension répondant aux critères suivants :
+!page "Extensions de segments" avec deux extensions actives.]({% image_buster /assets/img/segment/segment_extension5.png %})
 
-- Utilisée dans aucune campagne, ni aucun canvas ou segment actif
-- Utilisée dans aucune campagne, ni aucun canvas ou segment inactif, à l’état d’ébauche, abandonné(e) ou archivé(e)
-- N’a pas été modifiée depuis plus de 7 jours
+Lors du traitement d'une extension de segments, Braze continue d'utiliser l'historique des versions du segment par défaut d'avant le début du traitement à des fins de segmentation de l'audience. Le traitement a lieu à chaque fois qu'un enregistrement ou une actualisation se produit et implique l'interrogation et la mise à jour des profils utilisateurs - en d'autres termes, la composition de votre segment par défaut n'est pas mise à jour instantanément. Cela signifie que si l'action d'un utilisateur n'est pas effectuée avant le début de l'actualisation, nous ne pouvons pas garantir que l'utilisateur sera inclus dans l'extension de segments une fois l'actualisation terminée. Inversement, les utilisateurs qui faisaient partie de l'extension de segment avant l'actualisation et qui ne répondent plus aux critères continueront à correspondre à votre segmentation de sourds jusqu'à ce que le processus d'actualisation soit terminé et que les mises à jour soient appliquées.
 
-Si ce paramètre est désactivé, Braze informera son contact au sein de l’entreprise ainsi que la personne ayant créé l’extension. L’option permettant de renouveler les extensions quotidiennement peut être réactivée à tout moment.
-{% endalert %}
+### Étape 6 : Utilisez votre extension dans un segment
 
-#### Sélectionner vos paramètres d'actualisation
+Après avoir créé une extension de segment, vous pouvez l'utiliser comme filtre lors de la création d'un segment ou de la définition d'une audience pour une campagne ou un Canvas. Commencez par choisir l'**extension segmentation de Braze** dans la liste des filtres de la section **Attributs de l'utilisateur**.
 
-![Paramètres d'intervalle d'actualisation avec une fréquence d'actualisation hebdomadaire, une heure de début de 10 heures et le lundi sélectionné comme jour.][21]{: style="max-width:60%;"}
+!section "Filtres" avec un filtre déroulant affichant "Extensions de segments Braze".]({% image_buster /assets/img/segment/segment_extension7.png %})
 
-Dans le panneau **Paramètres d'actualisation**, vous pouvez sélectionner la fréquence à laquelle cette extension de segments sera actualisée : toutes les heures, tous les jours, toutes les semaines ou tous les mois. Vous devrez également sélectionner l'heure spécifique (dans le fuseau horaire de votre entreprise) à laquelle l'actualisation doit avoir lieu, par exemple :
+Dans la liste de filtres Extension de segment de Braze, choisissez l'extension de segment que vous souhaitez inclure ou exclure dans ce segment.
 
-- Si votre campagne d'e-mail est envoyée tous les lundis à 11 heures, heure de la société, et que vous voulez vous assurer que votre segment est actualisé juste avant l'envoi, vous devriez choisir une planification d'actualisation hebdomadaire à 10 heures les lundis.
-- Si vous souhaitez que votre segmentation soit actualisée tous les jours, sélectionnez la fréquence d'actualisation quotidienne, puis choisissez l'heure à laquelle l'actualisation doit avoir lieu.
+Un filtre "Braze Segment Extensions" qui inclut un segment "1 click e-mail dans les 56 derniers jours".]({% image_buster /assets/img/segment/segment_extension6.png %})
 
-{% alert note %}
-La possibilité de définir une planification d'actualisation horaire n'est pas disponible pour les extensions de segments basées sur des formulaires (mais vous pouvez définir des planifications quotidiennes, hebdomadaires ou mensuelles).
-{% endalert %}
+Pour consulter les critères de segmentation, sélectionnez **Afficher les détails de l'extension** pour afficher les détails dans une nouvelle fenêtre.
 
-### Consommation de crédits et coûts supplémentaires
+!Extension pour "1 clic d'e-mail dans les 56 derniers jours".]({% image_buster /assets/img/segment/segment_extension8.png %}){: style="max-width:70%;"}
 
-Étant donné que les actualisations réexécutent la requête de votre segment, chaque actualisation pour les segments SQL consommera des crédits de segment SQL, et chaque actualisation pour les segments CDI entraînera un coût au sein de votre entrepôt de données third-party.
+Vous pouvez maintenant procéder comme d'habitude à la [création de votre segmentation]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/).
 
-{% alert note %}
-L'actualisation des segments peut prendre jusqu'à 60 minutes en raison du temps de traitement des données. Les segments en cours d'actualisation auront un statut "En cours" dans votre liste d'extensions de segments. Cela a plusieurs implications :
+## Questions fréquemment posées
 
-- Pour terminer le traitement de votre segment avant une heure précise, choisissez une heure d'actualisation située 60 minutes plus tôt. 
-- Il ne peut y avoir qu'une seule actualisation à la fois pour une extension de segments donnée. En cas de conflit où une nouvelle actualisation est lancée alors qu'une actualisation existante a déjà commencé à être traitée, Braze annulera la nouvelle demande d'actualisation et poursuivra le traitement en cours.
-{% endalert %}
+### Puis-je créer une extension de segments qui utilise plusieurs événements personnalisés ?
 
-## Étape 5 : Enregistrez votre extension de segment
+Oui. Vous pouvez ajouter plusieurs événements ou référencer plusieurs tables Snowflake lorsque vous utilisez les [extensions de segments SQL.]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/) 
 
-Une fois que vous aurez cliqué sur **Enregistrer**, le traitement de votre demande d'extension commencera. La durée nécessaire pour générer votre extension dépend du nombre d’utilisateurs que vous avez, du nombre d’événements personnalisés ou d’événements d’achat que vous collectez, et du nombre de jours que vous analysez dans l’historique.
+Lorsque vous utilisez les extensions **simples** de segments, vous pouvez sélectionner un événement personnalisé, un événement d'achat ou une interaction de canal. Toutefois, vous pouvez combiner plusieurs extensions de segments à l'aide d'un ET ou d'un OU lors de la création du segment par défaut.
 
-Pendant que votre extension est en cours de traitement, vous verrez une petite animation à côté du nom de l'extension, et le mot "Processing" dans la colonne **Last Processed de** la liste des extensions. Notez que vous ne pourrez pas modifier une extension lorsqu’elle est en cours de traitement.
+### Puis-je archiver des extensions de segments si elles existent dans une campagne active ?
 
-![][5]
+Non. Avant de pouvoir archiver une extension de segment, vous devez la supprimer de tous les envois de messages actifs.
 
-## Étape 6 : Utiliser votre extension dans un segment
+### Puis-je utiliser des tableaux dans les extensions de segments ?
 
-Après avoir créé une extension, vous pouvez l’utiliser comme filtre lorsque vous créez un segment ou définissez une audience pour une campagne ou un Canvas. Commencez par choisir l'**extension segmentation de Braze** dans la liste des filtres de la section **Attributs de l'utilisateur**.
+Oui. Pour utiliser des tableaux, ajoutez des crochets (`[]`) au nom de votre propriété. Si votre propriété est `location_code`, vous devez saisir `location_code[]`. 
 
-![][6]
+Braze utilise `[]` pour parcourir les tableaux et vérifier si un élément du tableau parcouru correspond à la propriété de l'événement. Par exemple, vous pouvez créer une extension de segments pour les utilisateurs qui correspondent à au moins une valeur d'une propriété d'un tableau.
 
-Dans la liste des filtres Braze Segment Extension, choisissez l’extension que vous souhaitez inclure ou exclure de ce segment.
+### Comment Braze calcule-t-il la période pour une période relative de "derniers __ jours" ?
 
-![][7]
+Lorsque les extensions de segments calculent la période relative ("les X derniers jours"), l'heure de début est fixée à minuit UTC. Par exemple, pour une extension de segment qui s'actualise le 2024-09-16 21:00 UTC et spécifie 10 jours, l'heure de début est fixée au 2024-09-06 00:00 UTC, et non au 2024-09-06 21:00 UTC. 
 
-Pour afficher les critères de l'extension, cliquez sur **Afficher les détails de l'extension** pour afficher les détails dans une fenêtre modale.
+Toutefois, vous pouvez spécifier les fuseaux horaires en utilisant des segments SQL pour identifier les utilisateurs qui ont effectué l'événement personnalisé il y a 10 jours en se basant sur minuit à l'heure de la société, ou les utilisateurs qui ont effectué l'événement il y a 10 jours en se basant sur l'heure actuelle.
 
-![][8]{: style="max-width:70%;"}
-
-Vous pouvez maintenant [créer votre segment][11] comme vous le faites habituellement.
-
-[2]: {% image_buster /assets/img/segment/segment_extension2.png %}
-[3]: {% image_buster /assets/img/segment/segment_extension1.png %}
-[5]: {% image_buster /assets/img/segment/segment_extension5.png %}
-[6]: {% image_buster /assets/img/segment/segment_extension7.png %}
-[7]: {% image_buster /assets/img/segment/segment_extension6.png %}
-[8]: {% image_buster /assets/img/segment/segment_extension8.png %}
-[10]: {{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/
-[11]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/
-[12]: {% image_buster /assets/img/segment/property1.png %}
-[13]: {% image_buster /assets/img/segment/property2.png %}
-[13.5]: {% image_buster /assets/img/segment/property5.png %}
-[14]: {% image_buster /assets/img/segment/property3.png %}
-[15]: {% image_buster /assets/img/segment/property4.png %}
-[16]: {% image_buster /assets/img/Shopify/arrow.jpeg %}
-[17]: {% image_buster /assets/img/segment/segment_extension9.png %}
-[18]: {% image_buster /assets/img/segment/nested_segment_extensions.png %}
-[19]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/
-[20]: {% image_buster /assets/img/segment/segment_extension_modal.png %}
-[21]: {% image_buster /assets/img/segment/segment_interval_settings.png %}

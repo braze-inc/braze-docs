@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: Export Revenue Data"
+nav_title: "GET: Export revenue data"
 article_title: "GET: Export Revenue Data"
 search_tag: Endpoint
 page_order: 2
@@ -47,8 +47,6 @@ curl --location --request GET 'https://rest.iad-01.braze.com/purchases/revenue_s
 ## Response
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "message": (required, string) the status of the export, returns 'success' when completed without errors,
   "data" : [

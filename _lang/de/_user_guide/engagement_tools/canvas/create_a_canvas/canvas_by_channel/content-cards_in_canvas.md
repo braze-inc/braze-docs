@@ -15,21 +15,23 @@ channel: content cards
 
 Wie bei anderen Canvas-Messaging-Kanälen werden Content Cards an das Gerät eines Nutzers gesendet, wenn dieser die für die jeweilige Stufe festgelegten Zielgruppen- und Targeting-Kriterien erfüllt. Nachdem die Content Card versendet wurde, ist sie im Feed jedes berechtigten Nutzers verfügbar, wenn dessen Karten-Feed das nächste Mal aktualisiert wird.
 
-![][1]
+![Content-Cards als Messaging-Kanal für einen Nachrichten-Schritt ausgewählt.]({% image_buster /assets/img_archive/content-cards-in-canvas.png %})
 
-Zwei Optionen, die die Interaktion des Content-Card-Schritts mit Canvas verändern, beziehen sich auf [Ablauf](#content-card-expiration) und [Fortschrittsverhalten](#advancement-behavior-options).
+Zwei Optionen, die die Interaktion des Content-Card-Schrittes mit Canvas verändern, sind sein [Ablauf](#content-card-expiration) und seine [Entfernung](#removal).
 
 ## Content-Card-Ablauf {#content-card-expiration}
 
 Wenn Sie eine neue Content-Card erstellen, können Sie anhand der Sendezeit festlegen, wann diese aus dem Feed des Nutzers oder der Nutzerin ablaufen soll. Der Countdown für den Ablauf einer Content-Card beginnt, wenn der oder die Nutzer:in den Nachrichtenschritt im Canvas erreicht, in dem die Karte gesendet wird. Die Karte ist ab diesem Zeitpunkt im Feed des Nutzers der Nutzerin aktiv, bis sie abläuft. Eine Karte kann bis zu 30 Tage lang im Feed eines Benutzers vorhanden sein. 
 
-### Relative versus absolute Verfallsdaten
+![Ablaufeinstellungen für eine Content-Card für einen Nachrichtenschritt, die nach drei Stunden im Feed eines Nutzers:innen entfernt wird.]({% image_buster /assets/img_archive/content-cards-in-canvas-expiration.png %})
 
-Sie haben zwei Möglichkeiten festzulegen, wann eine Karte aus dem Feed eines Benutzers verschwinden soll: ein relatives Datum oder ein absolutes Datum. So funktionieren sie:
+### Arten des Verfalls
+
+Sie haben zwei Möglichkeiten festzulegen, wann eine Karte aus dem Feed eines Benutzers verschwinden soll: ein relatives Datum oder ein absolutes Datum.
 
 #### Relative Daten
 
-Wenn Sie ein relatives Datum auswählen, wie z. B. „Gesendete Karten nach 5 Tagen aus dem Feed eines Nutzers oder einer Nutzerin entfernen“, können Sie ein Ablaufdatum von maximal 30 Tagen festlegen.
+Wenn Sie ein relatives Datum wählen, wie z.B. "Gesendete Karten nach 5 Tagen im Feed eines Nutzers:innen entfernen", können Sie ein Verfallsdatum von bis zu 30 Tagen festlegen.
 
 #### Absolute Daten
 
@@ -45,49 +47,19 @@ Die Content-Card bleibt bis zu ihrem Ablaufdatum im Feed des Nutzers oder der Nu
 
 Nachdem eine Content Card abgelaufen ist, wird sie bei der nächsten Aktualisierung automatisch aus dem Feed des Benutzers entfernt, auch wenn dieser sie noch nicht angesehen hat.
 
-## Fortschrittsverhalten-Optionen {#advancement-behavior-options}
+## Content-Card entfernen {#removal}
 
-{% alert important %}
-Ab dem 28\. Februar 2023 können Sie keine Canvase mehr mit dem Original-Editor erstellen oder duplizieren. Dieser Abschnitt dient zum Nachschlagen, wenn Sie verstehen möchten, wie das Fortschrittsverhalten bei Schritten mit Inhaltskarten funktioniert.
-{% endalert %}
+Content-Cards können entfernt werden, wenn Nutzer:innen einen Kauf abschließen oder ein angepasstes Event durchführen. Sie können eines der folgenden Ereignisse als Entfernungsereignis auswählen: **Passen Sie ein angepasstes Event an** und **tätigen Sie einen Kauf**. Wählen Sie dann **Ereignis hinzufügen**.
 
-{% alert note %}
-In Canvas Flow bringen die Nachrichtenkomponenten automatisch alle Nutzer:innen voran, die den Schritt aufrufen. Es ist nicht erforderlich, das Verhalten des Nachrichtenfortschritts anzugeben, wodurch die Konfiguration des Gesamtschritts vereinfacht wird. Wenn Sie die Option **Weiterleiten, wenn Nachricht gesendet wurde** implementieren möchten, fügen Sie einen separaten [Zielgruppenpfad]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths/) hinzu, um Benutzer zu filtern, die den vorherigen Schritt nicht erhalten haben.
-{% endalert %}
-
-Mit der Option „Fortschrittsverhalten“ können Sie festlegen, wann ein:e Nutzer:in den nächsten Schritt übergehen soll. Schritte, die [nur Content-Cards](#steps-with-in-content-cards-only) versenden, haben andere Möglichkeiten des Fortschritts als [Schritte mit mehreren Content-Typen](#steps-with-multiple-message-channels) (Push, E-Mail usw.). Bei Content-Cards in einem Canvas-Flow-Workflow ist diese Option so eingestellt, dass die Zielgruppe immer sofort fortschreitet.
-
-### Schritte nur mit Inhaltskarten {#steps-with-in-content-cards-only}
-
-Wenn ein Schritt nur Content-Cards (und keinen anderen Messaging-Kanal) enthält, können Sie das Fortschrittsverhalten mit den folgenden Optionen steuern:
-
-| Option | Beschreibung |
-|---|---|
-| Voranbringen, wenn Nachricht gesendet wird | Nutzer:innen gelangen zu den nächsten Schritten des Canvas, wenn die Content-Card erfolgreich gesendet wurde. Verwenden Sie diese Option, wenn Sie möchten, dass die Benutzer nur dann weiterkommen, wenn die Karte gesendet und nicht abgebrochen wird. |
-| Zielgruppe sofort voranbringen | Nutzer:innen gelangen zu den nächsten Schritten des Canvas, wenn versucht wird, die Content-Card zu senden. Wenn die Karte abgebrochen und nicht gesendet wird, gelangen die Nutzer:innen trotzdem zum nächsten Schritt. Verwenden Sie diese Option, wenn Nutzer:innen unabhängig davon, ob die Content-Card erfolgreich gesendet oder abgebrochen wurde, weitergeleitet werden sollen. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-![][2]
-
-### Komponenten mit mehreren Kanälen {#steps-with-multiple-message-channels}
-
-Canvas-Komponenten mit einer Content-Card und einem anderen Messaging-Kanal haben die folgenden Fortschrittsoptionen:
-
-| Option | Beschreibung |
-|---|---|
-| Voranbringen, wenn Nachricht gesendet wird | Nutzer:innen gelangen zu den nächsten Schritten des Canvas, wenn mindestens einer der Content-Typen in diesem Schritt erfolgreich gesendet wurde.|
-| Zielgruppe sofort voranbringen | Wenn diese Option ausgewählt ist, wird jeder in der Zielgruppe der Komponente nach Ablauf der Verzögerung zu den nächsten Schritten geleitet, unabhängig davon, ob er oder sie die notierte Nachricht gesehen hat oder nicht.  <br> <br> _Nutzer:innen müssen die Segmentierungs- und Filterkriterien der Komponente erfüllen, um mit den nächsten Schritten fortfahren zu können._ |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-![][3]
+!["Karten entfernen, wenn Nutzer:innen einen Kauf abschließen oder ein angepasstes Event durchführen." ausgewählt mit dem Trigger, um Karten für Nutzer:innen zu entfernen, die einen bestimmten Kauf für "Armband" tätigen.]({% image_buster /assets/img_archive/content-cards-in-canvas-removal-event.png %})
 
 ## Berichte und Analysen
 
 Nachdem Sie einen Content-Cards-Schritt in Canvas gestartet haben, können Sie damit beginnen, verschiedene Metriken für diesen Schritt zu analysieren. Zu diesen Metriken gehören die Anzahl der versendeten Nachrichten, eindeutige Empfänger, Konversionsraten, Gesamtumsatz und mehr.
 
-![][4]
+![Analytics für einen Nachrichtenschritt mit der Content-Card Nachricht Performance.]({% image_buster /assets/img_archive/content-cards-in-canvas-analytics.png %})
 
-Weitere Informationen zu den verfügbaren Metriken und ihren Definitionen finden Sie in unserem [Report Metrics Glossary][6]].
+Weitere Informationen über die verfügbaren Metriken und ihre Definitionen finden Sie in unserem [Glossar der Berichtsmetriken]({{site.baseurl}}/user_guide/data/report_metrics/).
 
 ## Anwendungsfälle
 
@@ -103,12 +75,6 @@ Mit Canvas können Sie eine Komponente hinzufügen, die sowohl eine Inhaltskarte
 
 #### Mehrere Feeds basierend auf Kategorien
 
-Sie können Ihre Content Cards in mehrere Feeds unterteilen, die auf Kategorien basieren, wie z.B. verschiedene Themen, die Benutzer durchsuchen können, oder Transaktions- und Marketing-Feeds. Weitere Informationen zur Erstellung mehrerer Feeds mithilfe von Schlüssel-Wert-Paaren finden Sie in unserem Leitfaden [Content-Anpassen von Card-Feeds][7].
+Sie können Ihre Content Cards in mehrere Feeds unterteilen, die auf Kategorien basieren, wie z.B. verschiedene Themen, die Benutzer durchsuchen können, oder Transaktions- und Marketing-Feeds. Weitere Informationen zur Erstellung mehrerer Feeds mithilfe von Schlüssel-Wert-Paaren finden Sie in unserem Leitfaden zur [Anpassung von Content-Card-Feeds]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed/#multiple-feeds).
 
 
-[1]: {% image_buster /assets/img_archive/content-cards-in-canvas.png %}
-[2]: {% image_buster /assets/img_archive/content-cards-in-canvas-single-channel.png %}
-[3]: {% image_buster /assets/img_archive/content-cards-in-canvas-multiple-channels.png %}
-[4]: {% image_buster /assets/img_archive/content-cards-in-canvas-analytics.png %}
-[6]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/
-[7]: {{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed/#multiple-feeds

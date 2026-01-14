@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: Export Number of Purchases"
+nav_title: "GET: Export number of purchases"
 article_title: "GET: Export Number of Purchases"
 search_tag: Endpoint
 page_order: 3
@@ -47,8 +47,6 @@ curl --location --request GET 'https://rest.iad-01.braze.com/purchases/quantity_
 ## Response
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "message": (required, string) the status of the export, returns 'success' when completed without errors,
   "data" : [

@@ -43,4 +43,3 @@ Si vous utilisez l'API pour des appels de serveur à serveur, il se peut que vou
 
 Les réponses des endpoints de planification des messages incluront le `dispatch_id` du message pour y faire référence lors de l’envoi. Le `dispatch_id` est l’identifiant de la transmission du message (ID unique pour chaque « dispatch » envoyé par Braze).
 
-[33]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/

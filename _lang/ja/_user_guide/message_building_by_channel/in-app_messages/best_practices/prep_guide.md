@@ -25,7 +25,7 @@ channel: in-app messages
 - あなたのメッセージをユーザーにどこで見せたいですか？貴社の Webアプリで表示しますか?貴社のモバイルアプリで表示しますか?
 - どのイベントがこのメッセージをトリガーする必要がありますか？
 - ユーザーの中に、古いバージョンのアプリを使用している人はいますか?もしそうなら、彼らはあなたのメッセージのいくつかの要素を見ることができないかもしれません。
-- このメッセージはどのタイプのデバイス用に作成しますか?覚えておいてください、メッセージは**プレビュー**ボックスまたは**テスト**タブを使用してプレビューできます。詳細については[テスト]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/)を参照してください。
+- このメッセージはどのタイプのデバイス用に作成しますか?覚えておいてください、メッセージは**プレビュー**ボックスまたは**テスト**タブを使用してプレビューできます。詳細については[テスト]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/)を参照してください。
 
 ## コンテンツの考慮事項
 
@@ -40,12 +40,10 @@ channel: in-app messages
 
 - このメッセージの目的は何ですか？それをメッセージでどのように表現できますか？
 - あなたのボタンは、ユーザーにとって意味のあるオプションを提供していますか？あなたの[主なコール・トゥ・アクション]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/#buttons)は何ですか？
-- [ディープリンクを使用して他のアプリ内コンテンツにリンクしていますか][1]？このアプリ内メッセージを使用して、[許可またはプッシュプライミングリクエスト][21]を送信および受信していますか？
+- [ディープリンクを使用して他のアプリ内コンテンツにリンクしていますか]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#deep-linking-to-in-app-content)？このアプリ内メッセージを使用して、[許可またはプッシュプライミングリクエスト]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/)を送信および受信していますか？
 - メッセージ終了オプションはありますか？もしそうでない場合は、このスニペットをコピーして貼り付けることで、すぐにボタンを作成できます。
     ```html
     <a href="appboy://close">X</a>
     ```
 
 
-[1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#deep-linking-to-in-app-content
-[21]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/

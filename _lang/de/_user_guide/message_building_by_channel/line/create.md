@@ -1,5 +1,5 @@
 ---
-nav_title: Erstellen einer LINE-Nachricht
+nav_title: Erstellen einer LINE Nachricht
 article_title: Erstellen einer LINE-Nachricht
 page_order: 1
 description: "Dieser Artikel beschreibt, wie Sie eine LINE Nachrichten-Kampagne oder ein Canvas erstellen."
@@ -20,7 +20,7 @@ alias: /line/create/
 Bevor Sie eine LINE-Nachricht erstellen, gehen Sie wie folgt vor:
 
 1. Lesen Sie die LINE-Übersicht.
-2. Acknolwedge Richtlinien, Grenzen und Inhaltsregeln.
+2. Erkennen Sie Richtlinien, Einschränkungen und Inhaltsregeln an.
 3. [Richten Sie Ihre LINE-Verbindung ein]({{site.basesurl}}/user_guide/message_building_by_channel/line/line_setup/).
 
 Wenn Sie LINE-Nachrichten von Braze aus versenden, wird das Nachrichtenguthaben Ihres Kontos verbraucht.
@@ -30,19 +30,14 @@ Wenn Sie LINE-Nachrichten von Braze aus versenden, wird das Nachrichtenguthaben 
 Sie sind sich nicht sicher, ob Ihre Nachricht über eine Kampagne oder ein Canvas versendet werden soll? Kampagnen eignen sich eher für einzelne einfache Messaging-Kampagnen, während Canvases besser für mehrstufige User Journeys geeignet sind.
 
 {% tabs %}
-{% tab Kampagne %}
+{% tab Campaign %}
 
 **Schritte:**
 
 1. Gehen Sie zu **Messaging** > **Kampagnen** und wählen Sie **Kampagne erstellen**.
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie **Kampagnen** unter **Engagement**.
-{% endalert %}
-
-{: start="2"}
-2\. Wählen Sie **LINE**, oder für Kampagnen, die auf mehrere Kanäle abzielen, wählen Sie **Multichannel-Kampagne**.
-3\. Geben Sie Ihrer Kampagne einen klaren und aussagekräftigen Namen.
-4\. Fügen Sie nach Bedarf [Teams]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/) und [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) hinzu.
+2. Wählen Sie **LINE**, oder für Kampagnen, die auf mehrere Kanäle abzielen, wählen Sie **Multichannel-Kampagne**.
+3. Geben Sie Ihrer Kampagne einen klaren und aussagekräftigen Namen.
+4. Fügen Sie nach Bedarf [Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) und [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) hinzu.
    * Mithilfe von Tags lassen sich Ihre Kampagnen leichter finden und Berichte daraus erstellen.
 5. Fügen Sie so viele Varianten hinzu, wie Sie für Ihre Kampagne benötigen, und benennen Sie sie. Sie können für jede hinzugefügte Variante verschiedene Plattformen, Nachrichtentypen und Layouts auswählen. Weitere Informationen zu diesem Thema finden Sie unter [Multivariate und A/B-Tests]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
@@ -58,9 +53,9 @@ Wenn alle Nachrichten in Ihrer Kampagne ähnlich sind oder den gleichen Inhalt h
 1. [Erstellen Sie Ihr Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) mit dem Canvas Composer.
 2. Wenn Sie den Canvas eingerichtet haben, fügen Sie im Canvas Builder einen Schritt hinzu. Geben Sie Ihrem Schritt einen klaren und aussagekräftigen Namen.
 3. Wählen Sie einen [Zeitplan für den Schritt]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/time_based_canvas/#schedule-delay) und geben Sie bei Bedarf eine Verzögerung an.
-4. Filtern Sie Ihre Zielgruppe für diesen Schritt nach Bedarf. Sie können den Empfängerkreis mit Segmenten und zusätzlichen Filtern weiter eingrenzen. Die Zielgruppen-Optionen werden nach der Verzögerung zum Zeitpunkt des Versendens der Nachrichten überprüft.
+4. Filtern Sie Ihre Zielgruppe für diesen Schritt nach Bedarf. Sie können den Empfängerkreis mit Segmenten und zusätzlichen Filtern weiter eingrenzen. Die Zielgruppenoptionen werden mit einer gewissen Verzögerung zum Versandzeitpunkt überprüft.
 5. Legen Sie das [Fortschrittsverhalten]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/) fest.
-6. Wählen Sie andere Messaging-Kanäle, die Sie mit Ihrer Nachricht verknüpfen möchten.
+6. Wählen Sie weitere Messaging-Kanäle für Ihre Nachricht aus.
 
 {% endtab %}
 {% endtabs %}
@@ -69,22 +64,28 @@ Wenn alle Nachrichten in Ihrer Kampagne ähnlich sind oder den gleichen Inhalt h
 
 Schreiben Sie Ihre Nachricht nach Bedarf mit Personalisierung (z. B. Liquid oder Connected-Content). LINE lässt bis zu fünf Sprechblasen pro Nachricht zu, die in einem der verfügbaren Nachrichten-Layouts erscheinen können: Text, Bild, Rich oder Card-based.
 
-![LINE composer mit einer in der Vorschau angezeigten Nachricht.][1]
+![LINE-Editor mit einer Nachricht, die in der Vorschau angezeigt wird.]({% image_buster /assets/img/line/line_composer.png %})
 
-{% alert tip %}
+### Tipps
+
+#### Liquid verwenden
+
 Wenn Sie Liquid verwenden möchten, stellen Sie sicher, dass Sie einen Standardwert für Ihre Personalisierung angeben. Dadurch wird verhindert, dass Empfänger mit unvollständigen Benutzerprofilen einen leeren Platzhalter erhalten. Zum Beispiel könnte ein:e Nutzer:in statt der Nachricht "Hallo!" die Nachricht "Hallo, neue:r Abonnent:in!" erhalten.
-{% endalert %}
+
+#### Erstellen von Nachrichten von rechts nach links
+
+Wie Nachrichten von rechts nach links letztendlich aussehen, hängt weitgehend davon ab, wie die Diensteanbieter sie darstellen. Bewährte Methoden zur Erstellung von Nachrichten, die so genau wie möglich angezeigt werden, finden Sie unter [Erstellen von Nachrichten von]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/) rechts nach links.
 
 ## Schritt 3: Vorschau und Test Ihrer Nachricht
 
 Wechseln Sie auf die Registerkarte **Test**, um eine Test-LINE-Nachricht an Inhaltstestgruppen oder einzelne Benutzer zu senden oder eine Vorschau der Nachricht als Benutzer direkt in Braze anzuzeigen.
 
-![Der Tab "Tests" zeigt eine Vorschau auf eine Testnachricht an.][2]
+![Der Tab "Tests" zeigt eine Vorschau auf eine Testnachricht an.]({% image_buster /assets/img/line/test_preview.png %})
 
 ## Schritt 4: Erstellen Sie den Rest Ihrer Kampagne oder Ihres Canvas
 
 {% tabs %}
-{% tab Kampagne %}
+{% tab Campaign %}
 
 Bauen Sie den Rest Ihrer Kampagne auf. In den folgenden Abschnitten erfahren Sie mehr darüber, wie Sie unsere Tools zur Erstellung von LINE-Nachrichten am besten einsetzen.
 
@@ -96,13 +97,13 @@ Sie können die Zustellung steuern, z. B. indem Sie Nutzer:innen erlauben, [sic
 
 ### Wählen Sie Nutzer:innen als Zielgruppe aus
 
-[Stellen Sie Nutzer:innen durch die Auswahl von Segmenten oder Filtern gezielt zusammen]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/), um Ihre Zielgruppe einzugrenzen. Sie sollten bereits die Abonnementgruppe ausgewählt haben, die die Nutzer nach der Ebene oder Kategorie der Kommunikation mit Ihnen eingrenzt. 
+[Stellen Sie Nutzer:innen durch die Auswahl von Segmenten oder Filtern gezielt zusammen]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/), um Ihre Zielgruppe einzugrenzen. Sie sollten bereits die Abonnementgruppe ausgewählt haben, die die Nutzer nach der Ebene oder Kategorie der Kommunikation mit Ihnen eingrenzt. 
 
 Wählen Sie die größere Zielgruppe aus Ihren Segmenten aus und grenzen Sie dieses Segment optional mit unseren [Filtern]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) weiter ein. Sie erhalten automatisch einen Überblick über die ungefähre Zusammensetzung dieses Segments. Denken Sie daran, dass die genaue Segmentzugehörigkeit immer erst kurz vor dem Versand der Nachricht berechnet wird.
 
 ### Wählen Sie Konversions-Events aus
 
-Mit Braze können Sie nachverfolgen, wie oft Benutzer nach Erhalt einer Kampagne bestimmte Aktionen, d.h. [Conversion Events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/), durchführen. Sie haben die Möglichkeit, ein Zeitfenster von bis zu 30 Tagen zuzulassen, in dem eine Konversion gezählt wird, wenn der Nutzer:innen die angegebene Aktion durchführt.
+Mit Braze können Sie nachverfolgen, wie oft Benutzer nach Erhalt einer Kampagne bestimmte Aktionen, d.h. [Conversion Events]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/), durchführen. Sie haben die Möglichkeit, ein Zeitfenster von bis zu 30 Tagen zuzulassen, in dem eine Konversion gezählt wird, wenn der Nutzer:innen die angegebene Aktion durchführt.
 
 Konversions-Events helfen Ihnen, den Erfolg Ihrer Kampagnen zu messen. Zum Beispiel:
 
@@ -114,7 +115,7 @@ Sie können auch benutzerdefinierte Konvertierungsereignisse für Ihren speziell
 {% endtab %}
 {% tab Canvas %}
 
-Falls Sie das noch nicht getan haben, füllen Sie die restlichen Abschnitte Ihres Canvas aus. Weitere Einzelheiten zum Aufbau des restlichen Canvas, zur Verwendung von multivariaten Tests und intelligenter Auswahl und mehr finden Sie unter [Erstellen eines Canvas](/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/).
+Falls Sie das noch nicht getan haben, füllen Sie die restlichen Abschnitte Ihres Canvas aus. Weitere Einzelheiten zum Aufbau des restlichen Canvas, zur Verwendung von multivariaten Tests und intelligenter Auswahl und mehr finden Sie unter [Erstellen eines Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/).
 
 {% endtab %}
 {% endtabs %}
@@ -123,8 +124,6 @@ Falls Sie das noch nicht getan haben, füllen Sie die restlichen Abschnitte Ihre
 
 Nachdem Sie den letzten Teil Ihrer Kampagne oder Ihres Canvas erstellt haben, überprüfen Sie die Details, testen Sie sie und senden Sie sie ab!
 
-Sehen Sie sich als nächstes die [LINE-Berichterstattung](https://www.braze.com/docs/line/reporting/) an, um zu erfahren, wie Sie auf die Ergebnisse Ihrer LINE-Kampagnen zugreifen können.
+Sehen Sie sich als nächstes die [LINE-Berichterstattung]({{site.baseurl}}/line/reporting/) an, um zu erfahren, wie Sie auf die Ergebnisse Ihrer LINE-Kampagnen zugreifen können.
 
 
-[1]: {% image_buster /assets/img/line/line_composer.png %}
-[2]: {% image_buster /assets/img/line/test_preview.png %}

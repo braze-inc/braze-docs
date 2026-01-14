@@ -1,6 +1,6 @@
 ---
-nav_title: Configuration de reporting
-article_title: Configuration de reporting
+nav_title: Configuration des rapports
+article_title: Configuration des rapports
 page_order: 1.1
 page_type: reference
 description: "Cette page décrit le rapport d'analyse/analytique généré automatiquement par Braze."
@@ -8,9 +8,9 @@ tool: Reporting
 
 ---
 
-# Configuration de reporting
+# Configuration des rapports
 
-> Braze génère automatiquement un rapport hebdomadaire sur les e-mails pour vous aider à comprendre les performances de vos applications et de vos campagnes de communication. 
+> Braze génère automatiquement un rapport hebdomadaire par e-mail pour vous aider à comprendre les performances de vos apps et de vos campagnes de messages. 
 
 ## S'abonner aux rapports
 
@@ -22,7 +22,3 @@ Vous pouvez vous abonner à ce rapport à partir de la page **Préférences de n
 ## Ajout d'événements personnalisés aux rapports
 
 En outre, si vous utilisez des événements personnalisés, vous pouvez sélectionner jusqu'à cinq événements clés dans la page **Événements personnalisés** à inclure dans votre rapport hebdomadaire. Allez dans **Paramètres des données** > **Événements personnalisés** pour mettre à jour ces événements à tout moment.
-
-{% alert note %}
-Si vous utilisez l' [ancienne navigation]({{site.baseurl}}/navigation), ces pages se trouvent à un emplacement/localisation différent. <br>\- Les préférences de notification sont situées sous l'icône de votre compte > **Paramètres de l'entreprise** > **Préférences de notification.**<br>\- Les **événements personnalisés** sont situés/localisés sous **Gérer les paramètres**.
-{% endalert %}

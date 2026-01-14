@@ -1,7 +1,7 @@
 ---
 nav_title: FAQ
 article_title: Email FAQ
-page_order: 14
+page_order: 15
 description: "This page provides answers to frequently asked questions about email messaging."
 channel: email
 
@@ -37,7 +37,7 @@ However, a rate can be higher than 98% and still have deliverability issues. For
 
 Additionally, messages may be getting delivered and ending up in Spam, indicating potentially serious reputation issues. It's important to monitor not just the number of messages being delivered, but also open and click rates to determine whether users are actually seeing the messages in their inboxes. Because providers usually don't report every spam instance, a spam rate of even 1% could be cause for concern and further analysis.
 
-Finally, your business and the types of emails you send may also affect delivery. For example, someone sending mostly [transactional emails][1] should expect to see a better rate than someone sending many marketing messages.
+Finally, your business and the types of emails you send may also affect delivery. For example, someone sending mostly [transactional emails]({{site.baseurl}}/api/api_campaigns/transactional_api_campaign) should expect to see a better rate than someone sending many marketing messages.
 
 ### Why are my email delivery metrics not adding up to 100%?
 
@@ -60,26 +60,17 @@ You may be seeing more clicks than opens for any of the following reasons:
 - Users click on some email links within the preview pane of their phones. In this case, Braze logs this email as being clicked but not opened.
 - Users reopen an email that they previewed earlier.
 
+### Why am I seeing zero email opens and clicks?
+
+You may be seeing zero email opens and clicks if there's a misconfiguration with your tracking domain. This can be due to any of the following reasons:
+- There is an SSL issue where tracking URLs are `http` instead of `https`.
+- There is an issue with your CDN where the user agent string on the open events, click events, or both aren't populating.
+
 ### What are the potential risks of triggering server clicks?
 
 Certain elements of an email message, such as overly long messages or too many exclamation marks, have the potential to trigger email security responses. These responses can impact reporting, IP reputation, and can result in users unsubscribing. 
 
 For best practices on how to handle these responses, refer to [Handling increases in click rates]({{site.baseurl}}/help/help_articles/email/open_rates/).
-
-### How can I remove an email address from the bounce or spam list?
-
-You can remove bounced emails and emails on the spam list with the following endpoints:
-- [`/email/bounce/remove`]({{site.baseurl}}/api/endpoints/email/post_remove_hard_bounces)
-- [`/email/spam/remove`]({{site.baseurl}}/api/endpoints/email/post_remove_spam)
-
-### How can I check a user's email subscription group?
-
-- **User Profile:** Individual user profiles can be accessed through the Braze dashboard from the [Search Users]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/#access-profiles) page. Here, you can look up user profiles by email address, phone number, or external user ID. When inside a user profile, under the Engagement tab, you can view a user's email subscription groups.
-- **Rest API:** Individual user profiles subscription group can be viewed by the [List user’s subscription groups endpoint][9] or [List user’s subscription group status endpoint][8] by using the Braze REST API. 
-
-### How can I update a user's email subscription group?
-
-Users will be prevented from entering the Canvas and no further messages will be sent out. For email campaigns and Canvases, the stop button does not mean that send will immediately stop. This is because after the send requests are sent out, they cannot be stopped from being delivered to the user.
 
 ### Can Braze track unsubscribe links counted toward the "Unsubscribe" metric?
 
@@ -91,6 +82,3 @@ No, Braze does not offer this functionality. This is because an increasing major
 
 **Workaround:** To achieve this same result, you can host the content of your email on an external landing page (such as your website), which can then be linked to from the email campaign you are building using the **Link** tool when editing the email body.
 
-[8]: {{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/
-[9]: {{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_groups/
-[1]: {{site.baseurl}}/api/api_campaigns/transactional_api_campaign

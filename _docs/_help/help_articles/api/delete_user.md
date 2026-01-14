@@ -1,6 +1,6 @@
 ---
-nav_title: Removing Users via API
-article_title: Removing Users via API
+nav_title: Remove users via API
+article_title: Remove Users via API
 page_order: 0
 
 page_type: reference
@@ -9,9 +9,9 @@ tool: Dashboard
 platform: API
 ---
 
-# Removing users via API
+# Remove users via API
 
-When you [remove a user via the Braze REST API][1], the following data is deleted (nulled):
+When you [remove a user via the Braze REST API]({{site.baseurl}}/api/endpoints/user_data/#user-delete-endpoint/), the following data is deleted (nulled):
 - Any attributes that the user had
 - Email address
 - Phone number
@@ -20,9 +20,9 @@ When you [remove a user via the Braze REST API][1], the following data is delete
 - Country
 - Language
 
-When you [remove a user via the Braze REST API][1], the following events occur:
+When you [remove a user via the Braze REST API]({{site.baseurl}}/api/endpoints/user_data/#user-delete-endpoint/), the following events occur:
 - The user profile is deleted (nulled).
-- The [Lifetime Users][2] count will be updated to account for the newly removed users.	
+- The [Lifetime Users]({{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/#lifetime-users) count will be updated to account for the newly removed users.	
 - The removed user will still count toward the aggregated conversion percentage. Custom event counts and purchase counts will not be updated for removed users.
 
 ## Multiple profiles with a shared email address
@@ -38,5 +38,3 @@ To merge these user profiles:
 
 _Last updated on September 13, 2023_
 
-[1]: {{site.baseurl}}/api/endpoints/user_data/#user-delete-endpoint/
-[2]: {{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/#lifetime-users

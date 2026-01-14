@@ -1,6 +1,6 @@
 ---
-nav_title: Cross-Referencing
-article: Cross-referencing
+nav_title: Cross-referencing
+article_title: Cross-referencing
 description: "Learn how to cross-reference other pages on Braze Docs."
 page_order: 3
 noindex: true
@@ -40,7 +40,7 @@ Your in-line link should be similar to the following:
 
 {% raw %}
 ```markdown
-Before continuing, [create your SSH token]({{site.baseurl}}/docs/developer_guide/platform_wide/sdk_authentication).
+Before continuing, [create your SSH token]({{site.baseurl}}/dev_guide/auth).
 ```
 {% endraw %}
 {% endtab %}

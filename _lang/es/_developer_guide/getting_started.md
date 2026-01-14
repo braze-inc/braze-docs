@@ -22,12 +22,6 @@ guide_featured_list:
   - name: Resumen de la arquitectura
     link: /docs/developer_guide/getting_started/architecture_overview/
     image: /assets/img/braze_icons/columns-01.svg
-  - name: Resumen de análisis
-    link: /docs/developer_guide/getting_started/analytics_overview/
-    image: /assets/img/braze_icons/check-done-02.svg
-  - name: Resumen de la personalización
-    link: /docs/developer_guide/getting_started/customization_overview/
-    image: /assets/img/braze_icons/announcement-01.svg
 
 search_rank: 4
 ---

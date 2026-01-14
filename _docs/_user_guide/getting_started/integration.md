@@ -27,7 +27,7 @@ The Braze SDK (Software Development Kit) is how we send and get information to a
 
 * Your [API keys]({{site.baseurl}}/api/api_key/)
 * Your [SDK endpoint]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/)
-  * Braze no longer gives out custom endpoints so use the predefined SDK endpoints. If you have been given a pre-existing custom endpoint, Here, you can find the setup steps involved for [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-5-optional-custom-endpoint-setup), [iOS]({{site.baseurl}}/developer_guide/platforms/swift/sdk_integration/), and [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#initializing-the-sdk) integration.
+  * Braze no longer gives out custom endpoints so use the predefined SDK endpoints. If you have been given a pre-existing custom endpoint, Here, you can find the setup steps involved for [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-5-optional-custom-endpoint-setup), [iOS]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=swift), and [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#initializing-the-sdk) integration.
 
 You can either give this information to them directly, or you can give them access to Braze by creating an account for them. 
 
@@ -46,8 +46,8 @@ Be sure to tell your developers which channels you want to use to ensure that im
 | In-app messages | Requires SDK implementation as well as these channel-specific steps. |
 | Push | Requires SDK implementation to provide proper handling around messaging credentials and push tokens. |
 | Email | This is an entirely different process. Check out the [Email Setup]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/) section for more details on integration. |
-| Content Cards | To get started with [Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/), reach out to your Braze customer success manager. |
-| SMS & MMS | Check out the [SMS Setup]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_setup/) section for more details on integration. |
+| Content Cards | To get started with [Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/), contact your Braze customer success manager. |
+| SMS & MMS | Check out the [SMS Setup]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/sms/sms_setup/sms_sending/) section for more details on integration. |
 | Webhooks | Requires SDK implementation as well as channel-specific steps. | 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -74,7 +74,7 @@ If you want things like API-triggered launching and Connected Content, discuss t
 
 ### Step 5: You both perform QA on your implementation
 
-Work together with your engineer to make sure everything is working. Send [test messages]({{site.baseurl}}/developer_guide/sending_test_messages/), use our [test apps for Android]({{site.baseurl}}/developer_guide/platforms/android/sample_apps/) and [test apps for iOS]({{site.baseurl}}/developer_guide/platforms/swift/sample_apps/), check every box before you start sending!
+Work together with your engineer to make sure everything is working. Send [test messages]({{site.baseurl}}/developer_guide/in_app_messages/sending_test_messages/), use our [test apps for Android]({{site.baseurl}}/developer_guide/references/?tab=android) and [test apps for iOS]({{site.baseurl}}/developer_guide/references/?tab=swift), check every box before you start sending!
 
 We even have specific instructions for [testing your Android or FireOS integration]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/test_your_basic_integration/#test-your-basic-integration) and testing [push for iOS]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/push_notifications/testing/).
 

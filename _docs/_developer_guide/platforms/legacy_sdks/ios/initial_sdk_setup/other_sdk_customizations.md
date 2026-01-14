@@ -1,5 +1,5 @@
 ---
-nav_title: Other SDK Customizations
+nav_title: Other SDK customizations
 article_title: Other SDK Customizations for iOS
 platform: iOS
 description: "This reference article covers SDK customization such as log level, IDFA collection, and other customizations."
@@ -97,7 +97,7 @@ Log level can only be set at runtime with Braze iOS SDK v4.4.0 or newer. If usin
 
 In previous versions of the Braze iOS Swift SDK, the IDFV (Identifier for Vendor) field was automatically collected as the user's device ID. 
 
-Beginning in Swift SDK v5.7.0, the IDFV field can optionally be disabled, and instead, Braze will set a random UUID as the device ID. For more information, refer to [Collecting IDFV]({{site.baseurl}}/developer_guide/platforms/swift/analytics/swift_idfv/).
+Beginning in Swift SDK v5.7.0, the IDFV field can optionally be disabled, and instead, Braze will set a random UUID as the device ID. For more information, refer to [Collecting IDFV]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift).
 
 ## Optional IDFA collection
 

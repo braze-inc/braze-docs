@@ -88,11 +88,11 @@ Wählen Sie **\+ Neuen Header hinzufügen** für jeden der folgenden Anfrage-Hea
 {: start="4" }
 4\. Wählen Sie **Template speichern**.
 
-![Ein ausgefülltes Webhook Template, um einen Lead zu erstellen.][6]{: style="max-width:70%;"}
+\![Ein ausgefülltes Webhook Template, um einen Lead zu erstellen.]({% image_buster /assets/img/b2b/create_lead_webhook.png %}){: style="max-width:70%;"}
  
 ## Update eines Leads in Salesforce Sales Cloud {#updating-lead}
 
-Um einen Braze Salesforce Sales Cloud Webhook einzurichten, der Leads in Salesforce aktualisiert, benötigen Sie einen gemeinsamen Bezeichner zwischen Salesforce Sales Cloud und Braze. Im folgenden Beispiel wird die Salesforce `lead_id` als Braze `external_id` verwendet, aber Sie können dies auch durch die Verwendung eines `user_alias` erreichen. Einzelheiten hierzu finden Sie unter [B2B Daten](https://www.braze.com/docs/user_guide/getting_started/b2b_use_cases/b2b_data_models)
+Um einen Braze Salesforce Sales Cloud Webhook einzurichten, der Leads in Salesforce aktualisiert, benötigen Sie einen gemeinsamen Bezeichner zwischen Salesforce Sales Cloud und Braze. Im folgenden Beispiel wird die Salesforce `lead_id` als Braze `external_id` verwendet, aber Sie können dies auch durch die Verwendung eines `user_alias` erreichen. Einzelheiten hierzu finden Sie unter [B2B Daten]({{site.baseurl}}/user_guide/getting_started/b2b_use_cases/b2b_data_models)
 
 Dieses Beispiel zeigt speziell, wie Sie die Lead-Stufe eines Leads auf "MQL" (Marketing Qualified Lead) aktualisieren, nachdem ein Lead einen bestimmten Schwellenwert überschritten hat. Dies ist ein zentraler Bestandteil unseres [B2B-Lead-Scoring-Workflow-Anwendungsfalls]({{site.baseurl}}/user_guide/getting_started/b2b_use_cases/lead_scoring/).
 
@@ -141,7 +141,7 @@ Wählen Sie **\+ Neuen Header hinzufügen** für jeden der folgenden Anfrage-Hea
 {: start="4"}
 4\. Wählen Sie **Template speichern**.
 
-![Ein ausgefülltes Webhook Template zum Update eines Leads.][7]{: style="max-width:70%;"}
+\![Eine ausgefüllte Webhook-Vorlage zum Update eines Leads.]({% image_buster /assets/img/b2b/update_lead_webhook.png %}){: style="max-width:70%;"}
 
 ## Verwendung dieser Webhooks in einem operativen Arbeitsablauf
 
@@ -154,11 +154,11 @@ Sie können Ihre Templates schnell zu Ihren operativen Arbeitsabläufen in Braze
 
 Um einen Lead in Salesforce zu erstellen, wenn ein Nutzer:innen seine E-Mail Adresse angibt, können Sie eine Kampagne erstellen, die das Template "Update Lead" Webhook verwendet und triggert, wenn ein Nutzer:innen seine E-Mail Adresse hinzufügt (z.B. ein Webformular ausfüllt).
 
-![Schritt 2 der Erstellung einer Kampagne, die aktionsbasiert ist und die Aktion triggern soll: "Eine E-Mail Adresse hinzufügen".][1]{: style="max-width:70%;"}
+\![Schritt 2 der Erstellung einer Kampagne, die aktionsbasiert ist und die Aktion triggern soll: "Eine E-Mail Adresse hinzufügen".]({% image_buster /assets/img/b2b/salesforce_create_campaign.png %}){: style="max-width:70%;"}
 
 ### Lead Scoring Canvas für das Überschreiten der Marketing Qualified Lead (MQL)-Schwelle {#lead-scoring}
 
-Dieser Webhook wird im Anwendungsfall [Lead Scoring]({{site.baseurl}}https://www.braze.com/docs/user_guide/getting_started/b2b_use_cases/lead_scoring/#lead-handoff) behandelt, aber Sie können auch nach MQLs suchen und Salesforce direkt innerhalb des Lead Scoring Canvas aktualisieren (im Gegensatz zur Erstellung einer separaten Webhook-Kampagne): 
+Dieser Webhook wird im Anwendungsfall [Lead Scoring]({{site.baseurl}}/user_guide/getting_started/b2b_use_cases/lead_scoring/#lead-handoff) behandelt, aber Sie können auch nach MQLs suchen und Salesforce direkt innerhalb des Lead Scoring Canvas aktualisieren (im Gegensatz zur Erstellung einer separaten Webhook-Kampagne): 
 
 Fügen Sie Ihrer Nutzer:innen-Aktualisierung einen weiteren Schritt hinzu, um zu prüfen, ob ein Nutzer:in die von Ihnen definierte MQL-Schwelle gelangt ist. Wenn sie sich gekreuzt haben, aktualisieren Sie den Status des Nutzers:innen auf "MQL" und aktualisieren dann Salesforce mit demselben "MQL"-Status, indem Sie dieses Webhook Template verwenden. Salesforce kümmert sich um den Rest, indem es diesen Lead anhand der von Ihnen definierten Lead-Routing-Regeln an die entsprechenden Teams weiterleitet.  
 
@@ -167,21 +167,21 @@ Fügen Sie Ihrer Nutzer:innen-Aktualisierung einen weiteren Schritt hinzu, um zu
 1. Fügen Sie einen **Zielgruppen-Pfad-Schritt** mit zwei Gruppen hinzu: "MQL-Schwelle" und "Alle anderen".
 2. Suchen Sie in der Gruppe "MQL-Schwelle" nach Nutzern:innen, die derzeit nicht den Status "MQL" haben (z.B. `lead_stage` ist gleich "Lead"), aber einen Lead-Score haben, der über der von Ihnen definierten Schwelle liegt (z.B. `lead_score` größer als 50). Wenn ja, gehen sie zum nächsten Schritt über, wenn nicht, verlassen sie die Seite.
 
-![Die Zielgruppe-Pfad-Gruppe "MQL Threshold" mit Filtern für eine `lead_stage` gleich "Lead" und eine `lead_score` größer als "50".][2]{: style="max-width:70%;"}
+\![Die "MQL Threshold" Zielgruppe-Pfad-Gruppe mit Filtern für eine `lead_stage` gleich "Lead" und eine `lead_score` größer als "50".]({% image_buster /assets/img/b2b/salesforce_check_mql.png %}){: style="max-width:70%;"}
 
 {: start="3" }
 3\. Fügen Sie einen Schritt **zum Update des Nutzers** hinzu, der den Wert des Attributs `lead_stage` des Nutzers:innen auf "MQL" aktualisiert.
 
-![Der Schritt "Update auf MQL" Nutzer:in, der das Attribut `lead_stage` aktualisiert, so dass es den Wert "MQL" hat.][3]{: style="max-width:70%;"}
+\![Der Benutzer:in-Schritt "Update auf MQL", der das Attribut `lead_stage` auf den Wert "MQL" aktualisiert.]({% image_buster /assets/img/b2b/salesforce_update_mql.png %}){: style="max-width:70%;"}
 
 {: start="4" }
 4\. Fügen Sie einen Webhook-Schritt hinzu, der Salesforce mit der neuen MQL-Stufe aktualisiert.
 
-![Der Webhook-Schritt "Update Salesforce" mit abgeschlossenen Details.][4]{: style="max-width:70%;"}
+\![Der Webhook-Schritt "Update Salesforce" mit abgeschlossenen Details.]({% image_buster /assets/img/b2b/salesforce_webhook.png %}){: style="max-width:70%;"}
 
 Jetzt aktualisiert Ihr Canvas Fluss Nutzer:innen, die Ihren MQL-Schwellenwert überschritten haben!
 
-![Ein Canvas-Schritt zum Update von Nutzern:innen, der prüft, ob ein Nutzer:innen den MQL-Schwellenwert überschreitet, und, falls dies der Fall ist, Salesforce aktualisiert.][5]{: style="max-width:50%;"}
+\![Ein Canvas-Schritt zum Update von Nutzern:innen, der prüft, ob ein Nutzer:innen den MQL-Schwellenwert überschreitet, und, falls der Nutzer:innen den Schwellenwert überschreitet, Salesforce aktualisiert.]({% image_buster /assets/img/b2b/salesforce_canvas.png %}){: style="max-width:50%;"}
 
 ## Fehlersuche
 
@@ -189,13 +189,5 @@ Diese Workflows verfügen nur über begrenzte Debugging-Möglichkeiten in Salesf
 
 Ein Fehler, der durch eine ungültige URL für den Abruf des oAuth-Tokens verursacht wird, wird beispielsweise als `https://[insert_instance_name].my.salesforce.com/services/oauth2/token is not a valid URL` angezeigt.
 
-![Ein Fehler-Antwortkörper, der besagt, dass die URL keine gültige URL ist.][8]
+\![Ein Fehler-Antwortkörper, der besagt, dass die URL keine gültige URL ist.]({% image_buster /assets/img/b2b/error_message_invalid_url.png %})
 
-[1]: {% image_buster /assets/img/b2b/salesforce_create_campaign.png %}
-[2]: {% image_buster /assets/img/b2b/salesforce_check_mql.png %}
-[3]: {% image_buster /assets/img/b2b/salesforce_update_mql.png %}
-[4]: {% image_buster /assets/img/b2b/salesforce_webhook.png %}
-[5]: {% image_buster /assets/img/b2b/salesforce_canvas.png %}
-[6]: {% image_buster /assets/img/b2b/create_lead_webhook.png %}
-[7]: {% image_buster /assets/img/b2b/update_lead_webhook.png %}
-[8]: {% image_buster /assets/img/b2b/error_message_invalid_url.png %}

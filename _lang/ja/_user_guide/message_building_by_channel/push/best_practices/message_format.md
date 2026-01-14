@@ -16,8 +16,8 @@ channel: push
 
 ## iOSとAndroidプッシュ
 
-{% tabs ローカル %}
-{% tab 画像 %}
+{% tabs local %}
+{% tab Images %}
 
 **画像タイプ** | **推奨画像サイズ** | **最大画像サイズ** | **ファイルの種類**
 --- | --- | --- | ---
@@ -27,7 +27,7 @@ channel: push
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% endtab %}
-{% tab テキスト %}
+{% tab Text %}
 
 | メッセージタイプ | 推奨メッセージ長 (テキストのみ) | 推奨メッセージ長 (リッチ)
 --- | ---
@@ -41,7 +41,7 @@ channel: push
 iOS プッシュ通知で、切り詰められずに使用できる文字数が不明の場合は、[iOS文字数ガイドライン]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/#character-count)を確認してください。
 
 {% endtab %}
-{% tab ペイロードサイズ %}
+{% tab Payload Size %}
 
 **プラットフォーム** | **サイズ**
 --- | ---
@@ -51,17 +51,17 @@ Android(FCM) | 4 KB
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
-{% tab 画像例 %}
+{% tab Image Example %}
 {% subtabs %}
 {% subtab iOS %}
 
-![読み上げる文字を含むiOSプッシュ通知:「こんにちは。これは、画像を含む iOS プッシュ通知です」と絵文字があります。テキストの横に小さな画像があります。]({% image_buster /assets/img_archive/braze_richpush1.png %}){: style="max-width:50%;"}
-![長押しで表示される iOS プッシュ通知。前のメッセージと同じテキストを持ち、画像がテキストの前に拡大表示されています。]({% image_buster /assets/img_archive/braze_richpush2.png %}){: style="max-width:50%;"}
+![読み上げる文字を含むiOSプッシュ通知:「こんにちは。これは、画像を含む iOS プッシュ通知です」と絵文字があります。本文の横に小さな"画像があります。]({% image_buster /assets/img_archive/braze_richpush1.png %}){: style="max-width:50%;"}
+![iOS は、テキストの前に展開された"画像がある前のメッセージと同じテキストで、ハードプッシュをプッシュ通知します。]({% image_buster /assets/img_archive/braze_richpush2.png %}){: style="max-width:50%;"}
 
 {% endsubtab %}
 {% subtab Android %}
 
-![メッセージテキストの下に大きな画像がある Android のプッシュ通知。]({% image_buster /assets/img_archive/android_push_img2.png %})
+![本文の下に大きな"画像があるAndroid プッシュ通知。]({% image_buster /assets/img_archive/android_push_img2.png %})
 
 {% alert note %}
 大画像の通知は、600x300 ピクセル以上の画像を使用すると最も良く表示されます。
@@ -70,15 +70,15 @@ Android(FCM) | 4 KB
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab テキストの例 %}
+{% tab Text Example %}
 {% subtabs %}
 {% subtab iOS %}
 
-![読み上げる文字を含むiOSプッシュ通知:「こんにちは。これは iOS プッシュ通知です。」]({% image_buster /assets/img_archive/iOS_push_notification_small.png %})
+![読み上げる文字を含むiOSプッシュ通知:「こんにちは。これはiOS のPush" です。]({% image_buster /assets/img_archive/iOS_push_notification_small.png %})
 
 {% endsubtab %}
 {% subtab Android %}
-![ホーム画面に表示されるAndroid プッシュ通知]({% image_buster /assets/img_archive/Push_Android_2.png %})
+![ホームスクリーンに表示されるAndroid プッシュ通知。]({% image_buster /assets/img_archive/Push_Android_2.png %})
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
@@ -86,8 +86,8 @@ Android(FCM) | 4 KB
 
 ## Web プッシュ
 
-{% tabs ローカル %}
-{% tab 画像 %}
+{% tabs local %}
+{% tab Images %}
 
 | **ブラウザー** | **推奨アイコンサイズ**
 | --- | ---
@@ -112,7 +112,7 @@ Opera | macOS | 該当なし
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% endtab %}
-{% tab テキスト %}
+{% tab Text %}
 
 | **ブラウザー** | **プラットフォーム** | **タイトルの最大長**  | **メッセージ本文の最大長**
 | --- | --- | --- | ---

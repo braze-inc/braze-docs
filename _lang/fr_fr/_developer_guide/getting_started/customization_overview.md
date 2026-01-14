@@ -3,7 +3,9 @@ nav_title: Aperçu de la personnalisation
 article_title: Aperçu de la personnalisation
 page_order: 10
 description: "Cet article de référence aborde les concepts essentiels de la personnalisation et de l'extension des canaux de communication du SDK."
-  
+hidden: true
+layout: redirect
+redirect_to: /docs/developer_guide/getting_started/
 ---
 
 # Aperçu de la personnalisation
@@ -126,7 +128,7 @@ Les marketeurs conservent le contrôle de l’audience, de contenu, du comportem
 
 Avec l’approche Run, les développeurs ont un contrôle total sur l’expérience des utilisateurs. Le code personnalisé dicte l'aspect des messages, leur comportement et leur interaction avec d'autres canaux d'envoi de messages (par exemple, le déclenchement d'une carte de contenu sur la base d'une notification push).
 
-Lorsque vous créez un contenu personnalisé entièrement nouveau, comme de nouveaux types de cartes de contenu ou des messages in-app avec une interface utilisateur sur mesure, le SDK de Braze [ne suivra pas automatiquement les analyses]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/). Vous devez gérer les analyses de manière programmatique afin que les marketeurs continuent d'avoir accès à des indicateurs tels que les impressions, les clics et les rejets dans le tableau de bord de Braze. Appelez les méthodes d'analyse du SDK de Braze pour que le SDK retransmette ces données à Braze. Chaque canal de communication dispose d'un article d'analyses pour faciliter cette démarche.
+Lorsque vous créez un contenu personnalisé entièrement nouveau, comme de nouveaux types de cartes de contenu ou des messages in-app avec une interface utilisateur sur mesure, le SDK de Braze [ne suivra pas automatiquement les analyses]({{site.baseurl}}/developer_guide/analytics/). Vous devez gérer les analyses de manière programmatique afin que les marketeurs continuent d'avoir accès à des indicateurs tels que les impressions, les clics et les rejets dans le tableau de bord de Braze. Appelez les méthodes d'analyse du SDK de Braze pour que le SDK retransmette ces données à Braze. Chaque canal de communication dispose d'un article d'analyses pour faciliter cette démarche.
 
 <table>
 <thead>

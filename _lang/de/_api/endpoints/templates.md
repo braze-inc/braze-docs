@@ -9,7 +9,7 @@ description: "Auf dieser Landing Page werden die Endpunkte der Braze-Vorlagen f�
 page_type: landing
 
 guide_top_header: "Vorlagen Endpunkte"
-guide_top_text: "Mit den Vorlagen-Endpunkten können Sie Ihre Vorlagen für E-Mails und Inhaltsblöcke erstellen und verwalten. <br><br> Suchen Sie nach weiteren Anleitungen zur Erstellung von Vorlagen für E-Mails und Inhaltsblöcke? Sehen Sie sich unseren <a href='/docs/user_guide/message_building_by_channel/email/templates/'>Abschnitt</a> für <a href='/docs/user_guide/message_building_by_channel/email/templates/'>E-Mail-Vorlagen</a> und den <a href='/docs/user_guide/engagement_tools/templates_and_media/content_blocks/'>Artikel über Inhaltsblöcke</a> an."
+guide_top_text: "Mit den Vorlagen-Endpunkten können Sie Ihre Vorlagen für E-Mails und Inhaltsblöcke erstellen und verwalten. <br><br> Suchen Sie nach weiteren Anleitungen zur Erstellung von Vorlagen für E-Mails und Inhaltsblöcke? Sehen Sie sich unseren <a href='/docs/user_guide/message_building_by_channel/email/templates/'>Abschnitt für E-Mail-Vorlagen</a> und den <a href='/docs/user_guide/engagement_tools/templates_and_media/content_blocks/'>Artikel über Inhaltsblöcke</a> an."
 
 guide_featured_title: "Endpunkte für E-Mail-Vorlagen"
 guide_featured_list:

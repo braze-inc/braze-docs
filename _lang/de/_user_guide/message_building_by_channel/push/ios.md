@@ -1,5 +1,5 @@
 ---
-nav_title: "iOS Optionen"
+nav_title: "iOS-Optionen"
 article_title: iOS Push-Optionen
 page_order: 8
 layout: dev_guide
@@ -15,7 +15,7 @@ guide_top_text: "In den folgenden Artikeln finden Sie alles, was ausschließlich
 guide_featured_title: "Abschnittsartikel"
 guide_featured_list:
 - name: "Push-Primer-Kampagne"
-  link: /docs/user_guide/message_building_by_channel/push/ios/create_push_primer/
+  link: /docs/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/
   image: /assets/img/braze_icons/message-square-02.svg
 - name: "Anpassbare App-Symbole"
   link: /docs/user_guide/message_building_by_channel/push/ios/customizable_app_icons/
@@ -27,7 +27,7 @@ guide_featured_list:
   link: /docs/user_guide/message_building_by_channel/push/ios/rich_notifications/
   image: /assets/img/braze_icons/beaker-02.svg
 - name: "Erweiterte Kampagneneinstellungen"
-  link: /docs/user_guide/message_building_by_channel/push/ios/advanced_campaign_settings/
+  link: /docs/user_guide/message_building_by_channel/push/ios/notification_options/
   image: /assets/img/braze_icons/bar-chart-01.svg
 - name: "Badge-Zählung verwenden"
   link: /docs/user_guide/message_building_by_channel/push/ios/utilizing_badge_count/

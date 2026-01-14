@@ -20,7 +20,7 @@ Note, you will additionally need to make a call to `AppboyBinding.RequestContent
 
 Incoming `string` messages received in your Content Cards game object callback can be parsed into our pre-supplied [`ContentCard`](https://github.com/braze-inc/braze-unity-sdk/blob/master/Assets/Plugins/Appboy/Models/Cards/ContentCard.cs) model object for convenience.
 
-Parsing Content Cards requires Json parsing, see the following example for details:
+Parsing Content Cards requires JSON parsing, see the following example for details:
 
 ##### Example Content Cards callback
 

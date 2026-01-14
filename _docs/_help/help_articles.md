@@ -1,5 +1,5 @@
 ---
-nav_title: Help Articles
+nav_title: Help articles
 article_title: Help Articles
 page_order: 1
 layout: dev_guide
@@ -12,7 +12,7 @@ description: "This landing page is home to help articles that can help you solve
 guide_featured_title: "Topics"
 guide_featured_list:
   - name: Account
-    link: /docs/help/help_articles/account/
+    link: /docs/user_guide/administrative/access_braze/troubleshooting/
     image: /assets/img/braze_icons/user-circle.svg
   - name: API
     link: /docs/help/help_articles/api/

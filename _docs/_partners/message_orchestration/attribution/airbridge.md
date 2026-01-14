@@ -10,7 +10,11 @@ search_tag: Partner
 
 # Airbridge
 
-> [Airbridge](https://www.airbridge.io/) is a unified mobile measurement platform that helps you discover true sources of growth through mobile attribution, incrementalist measurement, and marketing mix modeling.
+> [Airbridge](https://www.airbridge.io/) is a unified mobile measurement platform for discovering sources of growth through mobile attribution, incremental measurement, and marketing mix modeling.
+
+_This integration is maintained by Airbridge._
+
+## About the integration
 
 The Braze and Airbridge integration lets you pass all non-organic install attribution data from Airbridge to Braze to build personalized marketing campaigns.
 
@@ -190,18 +194,14 @@ AirbridgeUnity.StartTracking()
 
 In Braze, navigate to **Partner Integrations** > **Technology Partners** and select **Airbridge**.
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Integrations**.
-{% endalert %}
+Here, you will find the REST endpoint and generate your Braze data import key. After the key is generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in Airbridge's dashboard.
 
-Here, you will find the REST endpoint and generate your Braze data import key. After the key is generated generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in Airbridge's dashboard.
-
-![][1]
+![]({% image_buster /assets/img/airbridge/airbridge_integration_step_1.png %})
 
 ### Step 3: Configure Braze in Airbridge's dashboard
 
 1. In Airbridge, navigate to **Integrations > Third-party Integrations** in the left sidebar and select **Braze**.
-2. Provide the data import key and REST endpoint that you found in Braze's dashboard.
+2. Provide the data import key and REST endpoint that you found in the Braze dashboard.
 3. Select the event type (Install Event or Install & Deeplink Open Event) and save.
 
 {% alert note %}
@@ -231,7 +231,7 @@ Assuming you configure your integration as suggested, Braze will map install dat
 
 Your user base can be segmented by attribution data in the Braze dashboard using the Install Attribution filters.
 
-![][2]
+![]({% image_buster /assets/img/airbridge/airbridge_integration_step_2.png %})
 
 ## Meta Business attribution data
 
@@ -239,7 +239,7 @@ Attribution data for Meta Business campaigns is not available through our partne
 
 ## Airbridge click tracking URLs in Braze (optional)
 
-Using click tracking links in your Braze campaigns will allow you to easily see which campaigns are driving app installs and re-engagement. As a result, you'll be able to measure your marketing efforts more effectively and make data-driven decisions on where to invest more resources for the maximum ROI.
+Using click tracking links in your Braze campaigns shows which campaigns drive app installs and re-engagement. Use the results to measure marketing performance and decide where to invest resources for stronger ROI.
 
 To get started with Airbridge click tracking links, visit [Airbridge](https://help.airbridge.io/en/guides/creating-a-new-tracking-link). After set up is completed, you can directly insert the Airbridge click tracking links into your Braze campaigns. Airbridge will then use its [probabilistic attribution methodologies](https://help.airbridge.io/en/guides/identity-matching) to attribute the user that has clicked on the link. We recommend appending your Airbridge tracking links with a device identifier to improve the accuracy of attributions from your Braze campaigns. This will deterministically attribute the user that has clicked on the link.
 
@@ -273,5 +273,4 @@ idfv={{most_recently_used_device.${id}}}
 If you currently do not use any device identifiers - such as the IDFV or GAID - in your click tracking links, or do not plan to in the future, Airbridge will still be able to attribute these clicks through their probabilistic modeling.
 {% endalert %}
 
-[1]: {% image_buster /assets/img/airbridge/airbridge_integration_step_1.png %}
-[2]: {% image_buster /assets/img/airbridge/airbridge_integration_step_2.png %}
+

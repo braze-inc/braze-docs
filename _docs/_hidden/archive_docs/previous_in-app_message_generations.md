@@ -1,5 +1,5 @@
 ---
-nav_title: Previous Generations
+nav_title: Previous generations
 article_title: Previous In-App Message Generations
 page_order: 20
 page_type: reference
@@ -89,7 +89,7 @@ Email capture messages allow you to easily prompt users of your site to submit t
 
 {% details Custom HTML Message %}
 
-While Braze's out-of-the box in-app messages can be customized in a variety of ways, you can gain even greater control over the look and feel of your campaigns using messages designed and built using HTML, CSS, and JavaScript. With some simple composition, you can unlock custom functionality and branding to match any of your needs. HTML in-app messages allow for greater control over the look and feel of a message, and anything supported by HTML5 is also supported by Braze.
+While Braze's default in-app messages can be customized in a variety of ways, you can gain even greater control over the look and feel of your campaigns using messages designed and built using HTML, CSS, and JavaScript. With some simple composition, you can unlock custom functionality and branding to match any of your needs. HTML in-app messages allow for greater control over the look and feel of a message, and anything supported by HTML5 is also supported by Braze.
 
 **JavaScript Bridge (appboyBridge)**
 
@@ -153,19 +153,16 @@ The following strategies are helpful for keeping file sizes down:
 
 - Reference fonts embedded in your application or website to customize your HTML in-app messages rather than including the font files in your HTML asset ZIP folder.
 - Ensure no extraneous or duplicative CSS or JavaScript are included in your HTML asset ZIPs.
-- Use [ImageOptim][25] on all images to compress images to their minimum possible size with no reduction in quality.
+- Use [ImageOptim](https://imageoptim.com/) on all images to compress images to their minimum possible size with no reduction in quality.
 
 ### iPhone 5 specs
 
-![iPhone 5 Specs][18]
+![iPhone 5 Specs]({% image_buster /assets/img_archive/In-AppMsg_Mockups+Specs_05.png %})
 
 ### iPhone 6 specs
 
-![iPhone 6 Specs][19]
+![iPhone 6 Specs]({% image_buster /assets/img_archive/In-AppMsg_Mockups+Specs_06.png %})
 
 
-[18]: {% image_buster /assets/img_archive/In-AppMsg_Mockups+Specs_05.png %}
 
-[19]: {% image_buster /assets/img_archive/In-AppMsg_Mockups+Specs_06.png %}
 
-[25]: https://imageoptim.com/

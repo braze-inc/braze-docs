@@ -1,13 +1,13 @@
 ---
-nav_title: Braze Overview
+nav_title: Braze overview
 article_title: Getting Started&#58; Braze Overview
 page_order: 1
 page_type: reference
-description: "Get acquianted with the core concepts you'll need to know when working in Braze."
+description: "Get acquainted with the core concepts you'll need to know when working in Braze."
 
 ---
 
-# Getting Started: Braze overview
+# Get started: Braze overview
 
 Welcome to Braze! This collection of articles will help you get started with our platform and introduce you to the key terms, features, and functionalities of Braze. This page introduces the core concepts you'll need to know when working in Braze.
 
@@ -24,20 +24,20 @@ Let's explore the power of Braze together.
 Braze is a customer engagement platform that helps brands of all sizes create personalized and targeted campaigns across various channels. Braze gives you the ability to listen to your customers, understand what their behavior is signaling, and then act by sending customers the right message, through the right channel, at the right time.
 
 {% alert tip %}
-Make sure to [add your colleagues to Braze]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/adding_users_to_your_dashboard/#adding-braze-users) so they can explore the platform with you.
+Make sure to [add your colleagues to Braze]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/) so they can explore the platform with you.
 {% endalert %}
 
 ## Users and segments
 
 Users are your customers—the people receiving the messages you send using Braze. All the data you gather about a user and ingest into Braze is stored in their user profile, such as their demographics, personal information, preferences, and behaviors. This information powers your messaging and is how you can tailor your messages to the right user.
 
-![][1]
+![]({% image_buster /assets/img/getting_started/user_profile.png %})
 
 Segments divide your customer base into smaller groups that you can then target with specific messaging. You can use different variables to create segments, ranging from characteristics such as gender, location, and age to behaviors like interaction patterns with previous campaigns or where they are in the customer journey.
 
 Segments are dynamic—users can move in and out of segments in real time based on their behavior and where they are in relation to your brand. This ensures that your customers receive the messaging most relevant to them at any given time. You can create as many segments as needed for your targeting and messaging purposes.
 
-![][2]
+![]({% image_buster /assets/img/getting_started/segment.png %})
 
 For more, check out: [Getting Started: Users and segments]({{site.baseurl}}/user_guide/getting_started/users_segments/).
 
@@ -68,7 +68,7 @@ For more, check out: [Getting Started: Workspaces]({{site.baseurl}}/user_guide/g
 
 Braze is designed to get up and running quickly and easily. Our average time-to-value is six weeks across our customer base of hundreds of brands.
 
-![][3]
+![]({% image_buster /assets/img/getting_started/timetovalue.png %})
 
 Here's the Braze framework for estimating the length of your integration based on four components you can work on in parallel. The typical range is 30 to 180 days, with most accounts completing their integration within 45 to 60 days.
 
@@ -84,6 +84,3 @@ Need help with your migration? Our [certified Braze partners](https://www.braze.
 
 For more, check out: [Getting Started: Integration overview]({{site.baseurl}}/user_guide/getting_started/integration/).
 
-[1]: {% image_buster /assets/img/getting_started/user_profile.png %}
-[2]: {% image_buster /assets/img/getting_started/segment.png %}
-[3]: {% image_buster /assets/img/getting_started/timetovalue.png %}

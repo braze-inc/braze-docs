@@ -11,17 +11,15 @@ description: "Este artigo de referência aborda o objeto de evento, o que ele é
 
 > Este artigo explica os diferentes componentes de um objeto de evento, como você pode usar esse objeto e os exemplos a serem usados.
 
-## O que é o objeto de evento?
+## O que é um objeto de evento?
 
 Um objeto de evento é um objeto que é passado pela API quando ocorre um evento específico. Os objetos de eventos são armazenados em um vetor de eventos. Cada objeto de evento no vetor de eventos representa uma única ocorrência de um evento personalizado por um usuário específico no valor de tempo designado. O objeto de evento tem muitos campos diferentes que permitem a personalização por meio da configuração e do uso das propriedades do evento em mensagens, coleta de dados e personalização.
 
-Você pode verificar como configurar eventos personalizados para uma plataforma específica consultando o Guia de Integração de Plataformas no [Guia do Desenvolvedor][1]. Você pode encontrar essas informações na página **Rastreamento de eventos personalizados**, na guia **Análise de dados** das várias plataformas. Colocamos vários links para você.
+Para obter etapas sobre como configurar eventos personalizados para uma plataforma específica, consulte o Guia de Integração de Plataformas no [Guia do Desenvolvedor]({{site.baseurl}}/developer_guide/home/). Consulte o artigo relevante de acordo com sua plataforma:
 
-Artigo sobre o rastreamento de eventos personalizados:
-
-- [Android][2]
-- [iOS][3]
-- [Web][4]
+- [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/)
+- [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_custom_events/)
+- [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_custom_events/)
 
 ### Corpo do objeto
 
@@ -46,17 +44,18 @@ Artigo sobre o rastreamento de eventos personalizados:
 
 - [ID de usuário externo]({{site.baseurl}}/api/basics/#user-ids)
 - [Identificador do app]({{site.baseurl}}/api/identifier_types/)
-- [Código de tempo ISO 8601][22]
+- [Código de tempo ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
 
 #### Atualizar apenas os perfis existentes
 
-Se desejar atualizar apenas os perfis de usuário existentes na Braze, passe a chave `_update_existing_only` com o valor `true` no corpo da solicitação. Se esse valor for omitido, a Braze criará um novo perfil de usuário se o `external_id` ainda não existir.
+Para atualizar apenas os perfis de usuário existentes no Braze, passe a chave `_update_existing_only` com um valor de `true` no corpo da solicitação. Se esse valor for omitido, a Braze criará um novo perfil de usuário se o `external_id` ainda não existir.
 
 {% alert note %}
-Se você estiver criando um perfil de usuário somente de alias por meio do endpoint `/users/track`, `_update_existing_only` deverá ser definido como `false`. Se esse valor for omitido, o perfil somente de alias não será criado.
+Se você estiver criando um perfil de usuário somente de alias por meio do ponto de extremidade `/users/track`, `_update_existing_only` deverá ser definido como `false`. Se esse valor for omitido, o perfil somente de alias não será criado.
 {% endalert %}
 
 ## Objeto de propriedades do evento
+
 Os eventos personalizados e as compras podem ter propriedades de evento. Os valores das "propriedades" devem ser um objeto em que as chaves são os nomes das propriedades e os valores são os valores das propriedades. Os nomes de propriedades devem ser strings não vazias com até 255 caracteres, sem cifrões ($) à esquerda.
 
 Os valores de propriedade podem ser qualquer um dos seguintes tipos de dados:
@@ -65,7 +64,7 @@ Os valores de propriedade podem ser qualquer um dos seguintes tipos de dados:
 | --- | --- |
 | Números | Como [números inteiros](https://en.wikipedia.org/wiki/Integer) ou [flutuantes](https://en.wikipedia.org/wiki/Floating-point_arithmetic) |
 | Booleanos | `true` ou `false` |
-| Datetimes | Formatado como strings no formato [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) ou `yyyy-MM-dd'T'HH:mm:ss:SSSZ`. Não é compatível com matrizes. |
+| Datetimes | Deve ser formatado como strings no formato [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) ou em qualquer um dos seguintes formatos: <br>- `yyyy-MM-ddTHH:mm:ss:SSSZ` <br>- `yyyy-MM-ddTHH:mm:ss` <br>- `yyyy-MM-dd HH:mm:ss` <br>- `yyyy-MM-dd` <br>- `MM/dd/yyyy` <br>- `ddd MM dd HH:mm:ss.TZD YYYY` <br><br>Não é compatível com matrizes. <br><br>Note que "T" é um designador de tempo, não um espaço reservado, e não deve ser alterado ou removido. <br><br>As atribuições de horário sem um fuso horário terão como padrão a meia-noite UTC (e serão formatadas no dashboard como o equivalente à meia-noite UTC no fuso horário da empresa). <br><br> Os eventos com registros de data e hora no futuro terão como padrão a hora atual.  |
 | Strings | 255 caracteres ou menos. |
 | Matrizes | As matrizes não podem incluir datas e horários. |
 | Objetos | Os objetos serão ingeridos como strings. |
@@ -74,7 +73,8 @@ Os valores de propriedade podem ser qualquer um dos seguintes tipos de dados:
 Os objetos de propriedade de evento que contêm valores de vetor ou objeto podem ter uma carga útil de propriedade de evento de até 100 KB.
 
 ### Persistência de propriedades de eventos
-As propriedades de eventos são projetadas para filtragem e personalização de Liquid em mensagens disparadas por seus eventos principais. Por padrão, eles não são mantidos no perfil de usuário da Braze. Para usar valores de propriedades de eventos na segmentação, consulte [eventos personalizados][5], que detalha as várias abordagens para armazenar valores de propriedades de eventos a longo prazo.
+
+As propriedades de eventos são projetadas para filtragem e personalização de Liquid em mensagens disparadas por seus eventos principais. Por padrão, eles não são mantidos no perfil de usuário da Braze. Para usar valores de propriedades de eventos na segmentação, consulte [eventos personalizados]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/), que detalha as várias abordagens para armazenar valores de propriedades de eventos a longo prazo.
 
 #### Exemplo de solicitação de evento
 
@@ -109,19 +109,10 @@ Authorization: Bearer YOUR-REST-API-KEY
   ]
 }
 ```
-- [ISO 8601 Time Code Wiki][19]
+- [ISO 8601 Time Code Wiki](http://en.wikipedia.org/wiki/ISO_8601)
 
 ## Objetos de eventos
 
 Usando o exemplo fornecido, podemos ver que alguém assistiu a um trailer recentemente e depois alugou um filme. Embora não possamos entrar em uma campanha e segmentar os usuários com base nessas propriedades, podemos usar essas propriedades estrategicamente, usando-as na forma de um recibo, para enviar uma mensagem personalizada por meio de um canal usando o Liquid. Por exemplo, "Hello **Beth**, Thanks for renting **The Sad Egg** by **Dan Alexander**, here are some recommended movies based on your rental..."
 
 
-[1]: {{site.baseurl}}/developer_guide/home/
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/
-[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/tracking_custom_events/
-[4]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_custom_events/
-[5]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/
-[19]: http://en.wikipedia.org/wiki/ISO_8601 "ISO 8601 Time Code Wiki"
-[21]: {{site.baseurl}}/api/api_key/#the-app-identifier-api-key
-[22]: https://en.wikipedia.org/wiki/ISO_8601 "Código de tempo ISO 8601"
-[23]: {{site.baseurl}}/api/basics/#external-user-id-explanation

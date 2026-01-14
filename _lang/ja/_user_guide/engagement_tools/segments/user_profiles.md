@@ -1,7 +1,7 @@
 ---
-nav_title: ユーザープロフィール
+nav_title: ユーザープロファイル
 article_title: ユーザープロフィール
-page_order: 5
+page_order: 9
 page_type: reference
 tool: 
   - Dashboard
@@ -17,25 +17,22 @@ description: "この参考記事では、ダッシュボードでユーザーの
 
 ユーザーのプロファイルにアクセスするには、「**ユーザーの検索**」ページに移動し、次のいずれかでユーザーを検索します。
 
-- 外部ユーザー ID
-- メールアドレス
+- 外部ユーザ ID
+- Braze ID
+- メール
 - 電話番号
 - プッシュトークン
-- 「[user_alias] [alias_name]」という形式のユーザーエイリアス (「amplitude_id: user_123」など)
-
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合、[**ユーザーの検索**] は [**ユーザー検索**」 で、[**ユーザー**] の下にあります。
-{% endalert %}
+- "[user_alias]:[alias_name]", のような形式のユーザーエイリアス。 "amplitude_id:user_123"
 
 一致するものが見つかった場合は、Braze SDK を使用してこのユーザーについて記録した情報を表示できます。それ以外の場合、検索で複数のユーザープロファイルが返される場合は、各プロファイルを個別にマージするか、ユーザーの一括マージを実行できます。詳細な手順については、「[重複ユーザー]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users/)」を参照してください。
 
-![検索結果には、「複数のユーザーが検索条件に一致しました」というバナーと、「前へ」と「次へ」というラベルの付いた 2 つのボタンが表示されます。][1]
+![検索結果には、「検索条件に一致するユーザーが複数います」というバナーと、「前へ」と「次へ」と書かれた2つのボタンが表示される。]({% image_buster /assets/img_archive/User_Search_Nonunique.png %}){: style="max-width:60%;"}
 
 ## ユースケース
 
 ユーザープロファイルは、ユーザーのエンゲージメント履歴、セグメントメンバーシップ、デバイス、オペレーティングシステムに関する情報に簡単にアクセスできるため、トラブルシューティングやテストに最適なリソースです。
 
-たとえば、ユーザーが問題を報告したときに、使用しているデバイスとオペレーティングシステムがわからない場合は、[[概要](#overview-tab)] タブを使用してこの情報を確認できます (ユーザーのメールアドレスまたはユーザー ID がわかっている場合)。また、ユーザーの言語を確認できるので、期待どおりに動作しなかった多言語キャンペーン][13]のトラブルシューティングを行う場合に役立ちます。
+たとえば、ユーザーが問題を報告したときに、使用しているデバイスとオペレーティングシステムがわからない場合は、[[概要](#overview-tab)] タブを使用してこの情報を確認できます (ユーザーのメールアドレスまたはユーザー ID がわかっている場合)。また、ユーザーの言語を確認できるので、期待どおりに動作しなかった[多言語キャンペーン]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/#campaigns-in-multiple-languages)のトラブルシューティングを行う場合に役立ちます。
 
 [[エンゲージメント](#engagement-tab)] タブを使用して、特定のユーザーがキャンペーンを受け取ったかどうかを確認できます。さらに、この特定のユーザーがキャンペーンを受け取った場合は、そのユーザーがいつキャンペーンを受け取ったかを確認できます。また、ユーザーが特定のセグメントに属しているかどうか、ユーザーがプッシュ、メール、またはその両方にオプトインしているかどうかを確認することもできます。この情報はトラブルシューティングに役立ちます。たとえば、ユーザーが受け取るはずのキャンペーンを受け取っていない場合や、受け取るはずではなかったキャンペーンを受け取っている場合は、この情報を確認する必要があります。
 
@@ -46,6 +43,7 @@ description: "この参考記事では、ダッシュボードでユーザーの
 - **概要:**ユーザー、セッションデータ、カスタム属性、カスタムイベント、購入、およびおよびユーザーが最後にログインしたデバイスに関する基本情報。
 - **エンゲージメント:**ユーザーの連絡先設定、受信したキャンペーン、セグメント、コミュニケーション統計、インストールアトリビューション、ランダムバケット番号に関する情報。
 - **メッセージング履歴:**過去30日間の、このユーザーの最近のメッセージング関連イベント。
+- **フィーチャーフラグの適格性:**ロールアウト、キャンバスステップ、実験にわたって、ユーザーが現在どのフィーチャーフラグの対象であるかを検証します。 
 
 ### 「概要」タブ {#overview-tab}
 
@@ -54,16 +52,16 @@ description: "この参考記事では、ダッシュボードでユーザーの
 | 概要カテゴリ | 含有 |
 | --- | --- |
 | プロファイル | 性別、年齢層、場所、言語、ロケール、タイムゾーン、および誕生日。 |
-| セッションの概要 | セッションの数、最初のセッションと最後のセッションの日時、および使用したアプリ。 |
+| セッションの概要 | 何回セッションを受けたか、最初と最後のセッションはいつだったか、どのアプリでセッションを受けたか。 |
 | カスタム属性 | このユーザーに関連付けられているカスタム属性とそれに関連する値 (階層化カスタム属性を含む)。 |
 | 最近のデバイス | ログインしたデバイスの数、各デバイスの詳細、および関連する広告ID(ある場合)。 |
 | カスタムイベント | このユーザーが実行したカスタムイベント、その回数、および各イベントを最後に実行した日時。 |
 | 購入 | このユーザーに帰属する生涯収益、前回の購入、購入の合計数、および各購入のリスト。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-このデータの詳細については、「ユーザーデータ収集][12]」を参照してください。
+このデータの詳細については、「[ユーザーデータ収集]({{site.baseurl}}/user_guide/data/user_data_collection/)」を参照してください。
 
-![ユーザープロファイルの「概要」タブ。][2]
+![ユーザープロファイルの「概要」タブ。]({% image_buster /assets/img_archive/user_profile2.png %})
 
 ### 「エンゲージメント」タブ {#engagement-tab}
 
@@ -71,27 +69,27 @@ description: "この参考記事では、ダッシュボードでユーザーの
 
 | エンゲージメントカテゴリー | 含有 |
 | --- | --- |
-| 連絡先の設定 | メール、SMS、プッシュのサブスクリプション ステータス、およびこのユーザーのサブスクリプショングループは、これら3つのチャネルに関連付けられています。このセクションには、プッシュトークンの変更ログ情報も含まれています。サブスクリプションおよびopt-in の設定方法については、[メール]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/)、[SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/)、[push]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/) を参照してください。 |
+| 連絡先の設定 | メール、SMS、プッシュのサブスクリプション ステータス、およびこのユーザーのサブスクリプショングループは、これら3つのチャネルに関連付けられています。このセクションには、プッシュトークンの変更ログ情報も含まれています。サブスクリプションおよびopt-in の設定方法については、[メール]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/)、[SMS]({{site.baseurl}}/sms_rcs_subscription_groups/)、[push]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/) を参照してください。 |
 | 受信したキャンペーン | 受信したキャンペーンは、ユーザーがキャンペーンを受け取ったとき、またはユーザーとのインタラクションデータを最初に検出したときにマークされます。一覧からキャンペーンを選択して表示します。 |
 | セグメント | このユーザーはセグメントに含まれています。一覧からセグメントを選択して表示します。 |
-| コミュニケーション統計 | このユーザーが各チャネルから御社からのメッセージを最後に受信した時期。 |
+| コミュニケーション統計 | このユーザーが最後に各チャネルからのメッセージを受信した日時。 |
 | アトリビューションのインストール | ユーザーがアプリをインストールした方法と日時に関する情報。[ユーザーインストールの理解]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/install_attribution/)について詳しく説明します。 |
-| その他 | ユーザーの[ランダムバケット番号]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/ab_testing_with_random_buckets/)。 |
+| その他 | ユーザーの[ランダムバケット番号]({{site.baseurl}}/user_guide/engagement_tools/testing/random_bucket_numbers/)。 |
 | 受信したキャンバスメッセージ | このユーザーが受信したキャンバスメッセージとその時期。リストからメッセージを選択して表示します。 |
-| 予測 | このユーザーの[Churn 予測]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn)および[イベント予測]({{site.baseurl}}/user_guide/predictive_suite/predictive_purchases)のスコア。 |
+| 予測 | このユーザーの[Churn 予測]({{site.baseurl}}/user_guide/brazeai/predictive_churn/)および[イベント予測]({{site.baseurl}}/user_guide/brazeai/predictive_events/)のスコア。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-![ユーザープロファイルのエンゲージメントタブで、コンタクト設定やコミュニケーション統計が表示される。][3]
+![ユーザープロファイルのエンゲージメントタブで、コンタクト設定やコミュニケーション統計が表示される。]({% image_buster /assets/img_archive/profiles_engagement_tab.png %})
 
 ### [メッセージ履歴] タブ
 
-ユーザープロファイルの [**メッセージ履歴**] タブには、過去30日間の個々のユーザーの最近のメッセージング関連イベント (約40件) が表示されます。これらのイベントには、ユーザーに送られたメッセージ、ユーザーが受信したメッセージ、ユーザーが処理したメッセージなどが含まれます。このタブのデータは、ユーザーがマージされた後は更新されないことに注意してください。
+ユーザープロファイルの「**メッセージ履歴」**タブには、ユーザー個人の過去30日間の最近のメッセージング関連イベント（約40件）が表示される。これらのイベントには、ユーザーに送られたメッセージ、ユーザーが受信したメッセージ、ユーザーが処理したメッセージなどが含まれます。このタブのデータは、ユーザーがマージされた後は更新されないことに注意してください。
 
 {% alert note %}
-このテーブルにフィードバックがある場合、または具体的なイベントを表示したい場合は、件名行"Messaging History Tab フィードバック" で[ユーザー-targeting@braze.com](mailto:user-targeting@braze.com?subject=Messaging%20History%20Tab%20Feedback) をメールしてください。
+この表についてフィードバックがある場合、または特定のイベントを見たい場合は、[user-targeting@braze.com](mailto:user-targeting@braze.com?subject=Messaging%20History%20Tab%20Feedback)に件名を「メッセージング履歴タブのフィードバック」としてメールを送ってほしい。
 {% endalert %}
 
-![ユーザーが受信したキャンペーンおよびキャンバスを示す [メッセージ履歴] タブ。][5]
+![ユーザーが受信したキャンペーンおよびキャンバスを示す [メッセージ履歴] タブ。]({% image_buster /assets/img_archive/profiles_messaging_history_tab.png %})
 
 #### イベントの表示と理解
 
@@ -99,16 +97,17 @@ description: "この参考記事では、ダッシュボードでユーザーの
 
 ##### メッセージエンゲージメントイベント
 
-次のメッセージエンゲージメントイベントは、メール、SMS、プッシュ、アプリ内メッセージ、コンテンツカード、Webhook で使用できます。特定のイベントの追跡方法の詳細については、[メッセージエンゲージメントイベントの用語集]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events)を参照してください。
+次のメッセージエンゲージメントイベントは、メール、SMS、プッシュ、アプリ内メッセージ、コンテンツカード、Webhook で使用できます。特定のイベントの追跡方法の詳細については、[メッセージエンゲージメントイベントの用語集]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/)を参照してください。
 
 | チャネル | 利用可能な参加イベント |
 | --- | --- |
-| メールアドレス | バウンス<br>クリック<br>配信<br>スパムとしてマーク<br>開封 ([メール開封イベントに関する注記](#note-on-email-open-event)を参照)<br>送信<br>ソフトバウンス<br>購読解除 |
+| メールアドレス | バウンス<br>クリック<br>延期イベント<br>配信<br>スパムとしてマーク<br>開封 ([メール開封イベントに関する注記](#note-on-email-open-event)を参照)<br>送信<br>ソフトバウンス<br>購読解除 |
 | SMS | 通信事業者の送信<br>配信<br>配信失敗<br>インバウンド受信<br>拒否<br>送信 |
 | プッシュ | バウンス<br>誘発された開封<br>iOS フォアグラウンド<br>開封<br>送信 |
 | アプリ内メッセージ | クリック<br>インプレッション |
 | コンテンツカードによって促進された | クリック<br>無視<br>インプレッション<br>送信 |
 | Webhook | 送信 |
+| WhatsApp | 中止<br>配信<br>失敗<br>フリークエンシーキャップ適用済み<br>インバウンド受信<br>既読<br>送信 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ##### メッセージ中止イベント
@@ -126,11 +125,7 @@ description: "この参考記事では、ダッシュボードでユーザーの
 
 ##### フリークエンシーキャップイベント
 
-フリークエンシーキャップイベントは、ユーザーがメッセージを受信する資格はあるが、[フリークエンシーキャップ]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping)の設定により実際には受信しなかった場合に発生します。フリークエンシーキャップ設定は、[**設定**] > [**フリークエンシーキャップルール**] からカスタマイズできます。
-
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation)を使用している場合は、[**エンゲージメント**] > [**グローバルメッセージの設定]** からフリークエンシーキャップを管理できます。
-{% endalert %}
+フリークエンシーキャップイベントは、ユーザーがメッセージを受信する資格があるにもかかわらず、[フリークエンシーキャップ]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping)設定のために実際にメッセージを受信しなかった場合に発生する。フリークエンシーキャップ設定は、[**設定**] > [**フリークエンシーキャップルール**] からカスタマイズできます。
 
 ##### 空白の送信先
 
@@ -142,12 +137,15 @@ description: "この参考記事では、ダッシュボードでユーザーの
 
 メールの開封追跡は、Braze を含むどのツールでもエラーが発生しやすくなります。さまざまなメールクライアントが提供するさまざまなプライバシー保護機能により、画像の自動読み込みをブロックしたり、サーバーに積極的に読み込んだりするため、メール開封イベントは誤検知と誤陰性の両方の影響を受けやすくなります。
 
-メールの開封統計は、たとえばさまざまな件名の有効性を比較する場合など、概して役立つ場合がありますが、個々のユーザーの個別の開封イベントに意味があると考えるべきではありません。
+メールの開封統計は、例えば異なる件名の効果を比較するために集計することは有用であるが、個々のユーザーの開封イベントを意味のあるものと仮定すべきではない。
+
+#### メッセージ履歴タブで特定のフィールドが空白なのはなぜか？
+
+以下のシナリオでは、ユーザーの**メッセージ履歴**タブにフィールドがない場合がある：
+
+- イベントに**メッセージ送信の**データがない場合、キャンペーンにメッセージのバリエーションがないことを示す。
+- イベントに**Campaign/Canvas**と**Message Sent** のデータがない場合、このメッセージは`campaign_id` と`message_variation_id` を指定していない API キャンペーン（API トリガーキャンペーンではない）から送信されたことを示す。これらのフィールドはオプショナルであり、リクエストボディから 省略することもできる。これらのフィールドが指定されると、その情報がメッセージ履歴ログに入力される。
+   - 特定のメッセージがメッセージング履歴から完全に消えているにもかかわらず、「**受信したキャンペーン」**ログに表示されている場合は、ユーザーが現在のユーザーとして識別される前にキャンペーンを受信した可能性がある。既存のプロファイルが孤児になった場合、**受信したキャンペーンの**ログは転送されるが、メッセージング履歴は転送されない。 
+- **キャンペーン/キャンバスの**データが欠落している場合、手動テストが送信された可能性がある。手動テストは**メッセージング履歴**タブに記録されるが、送信されたキャンペーンやキャンバスは記録されない。
 
 
-[1]: {% image_buster /assets/img_archive/User_Search_Nonunique.png %}
-[2]: {% image_buster /assets/img_archive/user_profile2.png %}
-[3]: {% image_buster /assets/img_archive/profiles_engagement_tab.png %}
-[5]: {% image_buster /assets/img_archive/profiles_messaging_history_tab.png %}
-[12]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/
-[13]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/#campaigns-in-multiple-languages

@@ -10,7 +10,11 @@ search_tag: Partner
 
 # Singular
 
-> Singular is a unified marketing analytics platform that delivers attribution, cost aggregation, marketing analytics, creative reporting, and workflow automation.
+> [Singular](https://www.singular.net/) is a unified marketing analytics platform that delivers attribution, cost aggregation, marketing analytics, creative reporting, and workflow automation.
+
+_This integration is maintained by Singular._
+
+## About the integration
 
 The Braze and Singular integration allows you to import paid install attribution data to segment intelligently within your lifecycle campaigns.
 
@@ -39,7 +43,7 @@ SingularConfig config = new SingularConfig("SDK KEY", "SDK SECRET")
 #### iOS
 
 {% alert important %}
-Prior to February 2023, our Singular attribution integration used the IDFV as the primary identifier to match iOS attribution data. It is not necessary for Braze customers using Objective-C to fetch the Braze `device_id` and sent to Singular upon install as there will be no disruption of service. 
+Prior to February 2023, our Singular attribution integration used the Identifier for Vendor (IDFV) as the primary identifier to match iOS attribution data. It is not necessary for Braze customers using Objective-C to fetch the Braze `device_id` and send it to Singular upon install because there is no disruption of service. 
 {% endalert%}
 
 For those using the Swift SDK v5.7.0+, if you wish to continue using IDFV as the mutual identifier, you must ensure that the `useUUIDAsDeviceId` field is set to `false` so there is no disruption of the integration. 
@@ -72,13 +76,9 @@ config.setGlobalProperty("brazeDeviceId", withValue: brazeDeviceId, overrideExis
 
 In Braze, navigate to **Partner Integrations** > **Technology Partners** and select **Singular**. 
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Integrations**.
-{% endalert %}
-
 Here, you will find the REST endpoint and generate your Braze data import key. After the key is generated, you can create a new key or invalidate an existing one. 
 
-You will need to provide the data import key and REST endpoint to your Singular account manager to complete the integration.<br><br>![This image shows the "Data Import for Install Attribution" box found in the Singular technology page. In this box, you are shown the data import key and the REST endpoint.][4]{: style="max-width:90%;"}
+You will need to provide the data import key and REST endpoint to your Singular account manager to complete the integration.<br><br>![This image shows the "Data Import for Install Attribution" box found in the Singular technology page. In this box, you are shown the data import key and the REST endpoint.]({% image_buster /assets/img/attribution/singular.png %}){: style="max-width:90%;"}
 
 ### Step 3: Confirm the integration
 
@@ -126,4 +126,4 @@ idfv={{most_recently_used_device.${id}}}
 If you currently do not use any device identifiers - such as the IDFV or GAID - in your click tracking links, or do not plan to in the future, Singular will still be able to attribute these clicks through their probabilistic modeling.
 {% endalert %}
 
-[4]: {% image_buster /assets/img/attribution/singular.png %}
+

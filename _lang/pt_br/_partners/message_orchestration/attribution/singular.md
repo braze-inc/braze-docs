@@ -12,6 +12,10 @@ search_tag: Partner
 
 > Como uma plataforma de análise de dados de marketing unificada, a Singular oferece atribuição, agregação de custos, análise de dados de marketing, relatórios criativos e automação de fluxo de trabalho.
 
+_A integração é mantida pela Singular._
+
+## Sobre a integração
+
 A integração entre o Braze e o Singular permite importar dados de atribuição de instalação paga para segmentar de forma inteligente suas campanhas de ciclo de vida.
 
 ## Pré-requisitos
@@ -72,13 +76,9 @@ config.setGlobalProperty("brazeDeviceId", withValue: brazeDeviceId, overrideExis
 
 Na Braze, navegue até **Integrações de parceiros** > **Parceiros de tecnologia** e selecione **Singular**. 
 
-{% alert note %}
-Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), você pode encontrar **Parceiros de Tecnologia** em **Integrações**.
-{% endalert %}
-
 Aqui você encontra o endpoint REST e gera sua chave de importação de dados da Braze. Depois que a chave é gerada, você pode criar outra ou invalidar uma existente. 
 
-Você precisará fornecer a chave de importação de dados e o endpoint REST ao gerente de sua conta Singular para concluir a integração.<br><br>![Esta imagem mostra a caixa "Data Import for Install Attribution" (Importação de dados para atribuição de instalação) encontrada na página da tecnologia Singular. Essa caixa contém chave de importação de dados e o endpoint REST.][4]{: style="max-width:90%;"}
+Você precisará fornecer a chave de importação de dados e o endpoint REST ao gerente de sua conta Singular para concluir a integração.<br><br>![Esta imagem mostra a caixa "Data Import for Install Attribution" (Importação de dados para atribuição de instalação) encontrada na página da tecnologia Singular. Nesta caixa, você vê a chave de importação de dados e o endpoint REST.]({% image_buster /assets/img/attribution/singular.png %}){: style="max-width:90%;"}
 
 ### Etapa 3: Confirmar a integração
 
@@ -126,4 +126,4 @@ idfv={{most_recently_used_device.${id}}}
 Se você não usa atualmente nenhum identificador de dispositivo - como o IDFV ou GAID - em seus links de rastreamento de cliques, ou não planeja fazê-lo no futuro, a Singular ainda poderá atribuir esses cliques por meio de sua modelagem probabilística.
 {% endalert %}
 
-[4]: {% image_buster /assets/img/attribution/singular.png %}
+

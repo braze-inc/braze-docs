@@ -1,5 +1,5 @@
 ---
-nav_title: "取得:配信停止になっているメールアドレスのリストを照会"
+nav_title: "取得:配信停止になっているメールアドレスのリストの照会"
 article_title: "取得:配信停止になっているメールアドレスのリストを照会"
 search_tag: Endpoint
 page_order: 3
@@ -14,7 +14,7 @@ description: "この記事では、配信停止になっているメールの照
 /email/unsubscribes
 {% endapimethod %}
 
-> このエンドポイントを使用して、`start_date` から `end_date` までの期間に配信停止された最新のメールを返します。完全なサブスクリプション状態の履歴については、このデータを追跡するために[Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents)を使用してください。
+> このエンドポイントを使用して、`start_date` から `end_date` までの期間に配信停止された最新のメールを返します。完全なサブスクリプション状態の履歴については、このデータを追跡するために[Currents]({{site.baseurl}}/user_guide/data/braze_currents/)を使用してください。
 
 このエンドポイントを使用して、Brazeと他のメールシステムまたは独自のデータベースとの間で双方向同期を設定できます。
 
@@ -32,7 +32,7 @@ description: "この記事では、配信停止になっているメールの照
 
 | パラメーター | required | データ型 | 説明 |
 | ----------|-----------| ---------|------ |
-| `start_date` | オプション <br>(注を参照) | YYYY-MM-DD形式の文字列| 配信停止を取得する範囲の開始日で、end_date よりも前である必要があります。これは、API によって UTC 時間の午前 0 時として扱われます。 |
+| `start_date` | オプション <br>(注を参照) | YYYY-MM-DD形式の文字列| 配信停止を取得する範囲の開始日。end_date. より前でなければならない。API では UTC 時間の午前 0 時として扱われる。 |
 | `end_date` | オプション <br>(注を参照) | YYYY-MM-DD形式の文字列 | 配信停止を取得する範囲の終了日。これは、API によって UTC 時間の午前 0 時として扱われます。 |
 | `limit` | オプション | 整数 | 返される結果の数を制限するためのオプション・フィールド。デフォルトは100で、最大は500です。 |
 | `offset` | オプション | 整数 | 取得先となるリスト内のオプションの開始点。 |
@@ -57,8 +57,6 @@ curl --location --request GET 'https://rest.iad-01.braze.com/email/unsubscribes?
 エントリは降順で表示されます。
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "emails": [
     {

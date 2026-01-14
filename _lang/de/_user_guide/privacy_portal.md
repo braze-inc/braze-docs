@@ -31,10 +31,10 @@ guide_featured_list:
   link: /docs/user_guide/message_building_by_channel/email/preference_center
   image: /assets/img/braze_icons/list.svg
 - name: SMS-Abo-Gruppen
-  link: /docs/user_guide/message_building_by_channel/sms/sms_subscription_group/
+  link: /docs/sms_rcs_subscription_groups/
   image: /assets/img/braze_icons/users-01.svg
 - name: SMS-Gesetze und -Vorschriften
-  link: /docs/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/
+  link: /docs/user_guide/message_building_by_channel/sms_mms_rcs/laws_and_regulations/
   image: /assets/img/braze_icons/briefcase-02.svg
 - name: WhatsApp-Abo-Gruppen
   link: /docs/user_guide/message_building_by_channel/whatsapp/user_subscription
@@ -46,7 +46,7 @@ guide_featured_list:
   link: /docs/user_guide/data_and_analytics/export_braze_data/message_archiving#overview
   image: /assets/img/braze_icons/clock-rewind.svg
 - name: Standard- und minimale SDK-Datenerfassung
-  link: /docs/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/
+  link: /docs/user_guide/data/user_data_collection/sdk_data_collection/
   image: /assets/img/braze_icons/settings-01.svg
 - name: Canvas Audience Sync - Überlegungen zum Datenschutz
   link: /docs/partners/canvas_steps/overview#data-privacy-considerations
@@ -64,7 +64,7 @@ guide_featured_list:
 guide_menu_title: "Legal"
 guide_menu_list:
 - name: Datenverarbeitung Addendum (PDF)
-  link: https://marketing-assets.braze.com/production/hero/Braze-DPA-Rev-June-2023-Final-copy.pdf?v=1685959392
+  link: https://cdn.sanity.io/files/b7pblshe/marketing-prod/278808c2579b16e3d478e52c341890a28d3216ab.pdf
   image: /assets/img/braze_icons/briefcase-02.svg
 - name: DPA-FAQs
   link: https://www.braze.com/company/legal/dpa

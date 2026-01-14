@@ -12,6 +12,10 @@ search_tag: Partner
 
 > Crowdin es un software basado en la nube para la gestión de la localización. Con Crowdin, puedes traducir tus aplicaciones para Android e iOS, tu sitio web, las capturas de pantalla de tu tienda y otros contenidos. La traducción puede realizarse a través de tu equipo interno, de una agencia de traducción o utilizando máquinas de traducción automática.
 
+_Esta integración está mantenida por Crowdin._
+
+## Sobre la integración
+
 La integración de Braze y Crowdin te permite traducir plantillas de correo electrónico y bloques de contenido. También puedes sincronizar el contenido de tu cuenta de Braze con tu proyecto de Crowdin y volver a añadir traducciones a Braze.
 
 ## Requisitos previos
@@ -56,14 +60,12 @@ Una vez que proporciones tus credenciales de Braze, verás dos paneles. Seleccio
 
 En el modo Editor de Crowdin, el contenido sincronizado desde tu cuenta Braze puede mostrarse a tus traductores como una lista de cadenas o como una vista previa del archivo.
 
-![Una imagen del aspecto del compositor de correo electrónico Crowdin Editor con algunas traducciones básicas añadidas.][2]
+![Una imagen del aspecto del compositor de correo electrónico Crowdin Editor con algunas traducciones básicas añadidas.]({% image_buster /assets/img/crowdin/crowdin_editor_email_preview.png %})
 
 ### Paso 3: Añade traducciones a Braze
 
 En cuanto las traducciones estén completas, abre la aplicación Braze en Crowdin, selecciona los archivos traducidos (para cada archivo, puedes elegir todos los idiomas de destino o sólo algunos específicos) en el panel izquierdo, y haz clic en **Sincronizar con Braze**.
 
-![Imagen de un usuario seleccionando sus archivos de traducción y sincronizándolos con Braze.][3]
+![Una imagen de un usuario seleccionando sus archivos de traducción y sincronizándolos con Braze.]({% image_buster /assets/img/crowdin/sync_translations.png %})
 
-[1]: {% image_buster /assets/img/crowdin/copy_api_key_identifier.png %}
-[2]: {% image_buster /assets/img/crowdin/crowdin_editor_email_preview.png %}
-[3]: {% image_buster /assets/img/crowdin/sync_translations.png %}
+

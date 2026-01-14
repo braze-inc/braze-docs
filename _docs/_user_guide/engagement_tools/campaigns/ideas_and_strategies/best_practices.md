@@ -1,5 +1,5 @@
 ---
-nav_title: Best Practices
+nav_title: Best practices
 article_title: Campaign Best Practices
 page_order: 0
 description: "This article provides best practices for creating and customizing your campaigns."
@@ -16,7 +16,7 @@ Braze recommends that you only send customer data that you intend to utilize on 
 - **Target** your audiences by building [audience segments]({{site.baseurl}}/user_guide/engagement_tools/segments/).
 - **Trigger** your messages with [action-based]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery#action-based-delivery) or [API-triggered]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/) delivery.
 - **Template** and personalize your messages with [Liquid conditional logic]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid).
-- **Track** the efficacy of your campaigns with [conversion tracking]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events).
+- **Track** the efficacy of your campaigns with [conversion tracking]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/).
 
 This allows you to optimize the data you send to Braze and will streamline your ability to message your users while guaranteeing against tracking data points your team may not find helpful long-term. 
 
@@ -34,7 +34,7 @@ It's also important to understand your [active users]({{site.baseurl}}/user_guid
 
 ### Feature awareness
 
-If your goal is to draw your users toward a new feature or app version, use a multichannel strategy with a focus on in-app channels. [In-app messages][5] and [Content Cards][7] are generally less disruptive if a user doesn't wish to update immediately. 
+If your goal is to draw your users toward a new feature or app version, use a multichannel strategy with a focus on in-app channels. [In-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/) and [Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/) are generally less disruptive if a user doesn't wish to update immediately. 
 
 Be sure to include [deep links]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/) to the appropriate app store.
 
@@ -44,7 +44,7 @@ Persuading users to update their app or change how they use your app can be diff
 
 Timing is key! When your goal is to convince users to update their app, wait until they have a positive experience within the app to ask users. To keep your audience engaged, avoid repetitive messaging that may appear intrusive.
 
-Over time, your users may forget certain features or not notice new features. When new features are added, be sure to let your users know with [in-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/). If users aren't engaging with major features within the app, it may be best to remind them when they're engaging with your app and when this new feature would be of use. Our article on [data opt-in][7] has more information on ensuring your request agrees with users' workflow expectations. 
+Over time, your users may forget certain features or not notice new features. When new features are added, be sure to let your users know with [in-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/). If users aren't engaging with major features within the app, it may be best to remind them when they're engaging with your app and when this new feature would be of use. Our article on [data opt-in]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/) has more information on ensuring your request agrees with users' workflow expectations. 
 
 ## High ratings
 
@@ -62,7 +62,7 @@ To ensure higher ratings, ask your power users to review your app in the app sto
 - Has used these apps more than 10 times in the last 14 days
 - Has spent more than 50 dollars
 
-![An example of a segment that targets power users of an app.][6]
+![An example of a segment that targets power users of an app.]({% image_buster /assets/img_archive/ratings_power_users.png %})
 
 Visiting the app store takes time on the part of your users. To maximize the likelihood that they will go through the extra effort, request a rating or review after they just had a positive experience with your app. For instance, ask them after they beat a game level or made a purchase using a discount code. Our article on [data opt-in]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-states) has more information on ways to ensure your request agrees with users' workflow expectations.
 
@@ -79,6 +79,3 @@ When editing campaign schedules or audiences, note the following best practices:
 Editing a live campaign and changing the delivery to **Local Send Time** will cause a new batch of messages to be enqueued, meaning your users will receive the message twice due to the message being enqueued twice. To prevent this, first stop the original campaign, then launch a duplicate after updating the schedule.
 {% endalert %}
 
-[6]: {% image_buster /assets/img_archive/ratings_power_users.png %}
-[5]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/
-[7]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/

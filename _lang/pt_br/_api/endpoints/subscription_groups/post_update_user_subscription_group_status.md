@@ -21,7 +21,7 @@ Se você quiser ver exemplos ou testar esse endpoint para **grupos de inscriçõ
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#8895e87e-6324-47a3-a833-adf29a258bb9 {% endapiref %}
 
-Se você quiser ver exemplos ou testar este endpoint para **Grupos de Inscrição de SMS**:
+Se você quiser ver exemplos ou testar esse endpoint para **grupos de inscrições SMS e RCS**:
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#72558b32-7dbe-4cba-bd22-a7ce513076dd {% endapiref %}
 
@@ -36,7 +36,7 @@ Para usar esse endpoint, você precisará de uma [chave de API]({{site.baseurl}}
 ## Corpo da solicitação
 
 {% tabs %}
-{% tab SMS %}
+{% tab SMS e RCS %}
 ```
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
@@ -48,10 +48,10 @@ Authorization: Bearer YOUR-REST-API-KEY
    "subscription_state": (required, string) available values are "unsubscribed" (not in subscription group) or "subscribed" (in subscription group),
    "external_id": (required*, array of strings) the external ID of the user or users, may include up to 50 IDs,
    "phone": (required*, array of strings in E.164 format) The phone number of the user (must include at least one phone number and at most 50 phone numbers),
-   // SMS subscription group - one of external_id or phone is required
+   // SMS and RCS subscription group - one of external_id or phone is required
  }
 ```
-\* Grupos de inscrições de SMS: Somente `external_id` ou `phone` são aceitos.
+\* Grupos de inscrições de SMS e RCS: Somente `external_id` ou `phone` são aceitos.
 
 {% endtab %}
 {% tab Email %}
@@ -88,7 +88,7 @@ Ao criar novos usuários usando o endpoint [/users/track]({{site.baseurl}}/api/e
 | `subscription_state` | Obrigatória | String | Os valores disponíveis são `unsubscribed` (não está no grupo de inscrições) ou `subscribed` (está no grupo de inscrições). |
 | `external_id` | Obrigatório* | Matriz de strings | O `external_id` do usuário ou dos usuários pode incluir até 50 `id`s. |
 | `email` | Obrigatório* | string ou array de strings | O endereço de e-mail do usuário pode ser passado como um vetor de strings. Deve incluir pelo menos um endereço de e-mail (com um máximo de 50). <br><br>Se vários usuários (`external_id`) no mesmo espaço de trabalho compartilharem o mesmo endereço de e-mail, todos os usuários que compartilham o endereço de e-mail serão atualizados com as alterações do grupo de inscrições. |
-| `phone` | Obrigatório* | String em [E.164](https://en.wikipedia.org/wiki/E.164) formato | O número de telefone do usuário pode ser passado como uma matriz de strings. Deve incluir pelo menos um número de telefone (com um máximo de 50). |
+| `phone` | Obrigatório* | String em [E.164](https://en.wikipedia.org/wiki/E.164) formato | O número de telefone do usuário pode ser passado como uma matriz de strings. Deve incluir pelo menos um número de telefone (até 50). <br><br>Se vários usuários (`external_id`) no mesmo espaço de trabalho compartilharem o mesmo número de telefone, todos os usuários que compartilham o número de telefone serão atualizados com as mesmas alterações no grupo de inscrições. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Exemplos de solicitações
@@ -108,7 +108,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/subscription/statu
 '
 ```
 
-### SMS
+### SMS e RCS
 
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/subscription/status/set' \

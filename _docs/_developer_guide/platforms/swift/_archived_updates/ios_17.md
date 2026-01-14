@@ -1,5 +1,5 @@
 ---
-nav_title: iOS 17 Upgrade Guide
+nav_title: iOS 17 upgrade guide
 article_title: iOS 17 Upgrade Guide
 page_order: 7
 platform: 
@@ -33,7 +33,7 @@ Apple announced its commitment to expand the scope of [Ad Tracking Transparency 
 
 Apple now requires a privacy manifest file that describes the reason your app and third-party SDKs collect data, along with their data-collection methods. Starting with iOS 17.2, Apple will block all declared tracking endpoints in your app until the end-user accepts the ATT prompt.
 
-Braze has released our own privacy manifest, along with new flexible APIs that automatically reroute declared tracking data to dedicated `-tracking` endpoints. For more information, see [Braze's privacy manifest]({{site.baseurl}}/developer_guide/platforms/swift/privacy_manifest/).
+Braze has released our own privacy manifest, along with new flexible APIs that automatically reroute declared tracking data to dedicated `-tracking` endpoints. For more information, see the [Braze privacy manifest]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift#swift_privacy-manifest).
 
 #### Code signing
 

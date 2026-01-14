@@ -10,20 +10,23 @@ page_order: 5
 
 # 永続的なエントリプロパティ
 
-> キャンバスがカスタムイベント、購入、または API 呼び出しによってトリガーされる際、キャンバスワークフローの各ステップでのパーソナライゼーションに、API 呼び出し、カスタムイベント、購入イベントからのメタデータを使用することができます。 
+> キャンバスがカスタムイベント、購入、または API 呼び出しによってトリガーされる際、キャンバスワークフローの各ステップでのパーソナライゼーションに、API 呼び出し、カスタムイベント、購入イベントからのメタデータを使用することができます。これらのプロパティーを使用して、さらにキュレートd メッセージを送信できます。
 
-この機能がリリースされる前は、キャンバスの最初のステップでのみエントリプロパティを使用できました。キャンバスジャーニー全体でエントリープロパティを使用できるようになり、よりキュレートされたメッセージを顧客に送信し、高度に洗練されたエンドユーザーエクスペリエンスを作成することが可能になりました。
+{% alert important %}
+永続的なエントリプロパティーは、元のキャンバスエディターのアーティファクトであるため、履歴参照のために残っている用語への推奨されないリファレンスがあります。現行の更新d キャンバスエディタについては、[キャンバスエントリプロパティとイベントプロパティ]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties)を参照してください。
+{% endalert %}
 
 ## エントリプロパティを使用する
 
 エントリプロパティは、アクションベースおよび API トリガーのキャンバスで使用できます。これらのエントリプロパティは、キャンバスがカスタムイベント、購入、または API 呼び出しによってトリガーされた時点で定義されます。詳細については、次の記事を参照してください。
+
 - [キャンバスエントリのプロパティオブジェクト]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/)
 - [イベントのプロパティオブジェクト]({{site.baseurl}}/api/objects_filters/event_object/)
 - [購入対象]({{site.baseurl}}/api/objects_filters/purchase_object/#purchase-product_id)
 
 これらのオブジェクトから渡されるプロパティは、Liquid タグ `canvas_entry_properties` を使用して参照できます。例えば、`\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}` を使ったリクエストの場合、{% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %} という Liquid を追加して、メッセージに「shoes」という単語を追加できます。
 
-キャンバスに Liquid タグ `canvas_entry_properties` を持つメッセージが含まれている場合、これらのプロパティに関連付けられている値は、ユーザーのジャーニーの間保持され、ユーザーがキャンバスを退出したときに削除されます。キャンバスエントリのプロパティは、Liquid で参照用にのみ使用できる点に注意してください。キャンバス内のプロパティをフィルタリングするには、代わりに[イベントプロパティのセグメンテーション]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/nested_objects/)を使用します。
+キャンバスに Liquid タグ `canvas_entry_properties` を持つメッセージが含まれている場合、これらのプロパティに関連付けられている値は、ユーザーのジャーニーの間保持され、ユーザーがキャンバスを退出したときに削除されます。キャンバスエントリのプロパティは、Liquid で参照用にのみ使用できる点に注意してください。キャンバス内のプロパティをフィルタリングするには、代わりに[イベントプロパティのセグメンテーション]({{site.baseurl}}/user_guide/data/custom_data/custom_events/nested_objects/)を使用します。
 
 {% alert note %}
 キャンバスエントリのプロパティオブジェクトの最大サイズは 50 KB に制限されています。
@@ -76,17 +79,15 @@ url -X POST \
     }' \
 ```
  
-このリクエストでは、「food allergies」のグローバル値は「none」です。Customer_123 の場合、値は「dairy」です。Liquid スニペットの {%raw%}`{{canvas_entry_properties.${food_allergies}}}`{%endraw%} を含むこのキャンバスのメッセージでは、「Customer_123」に「dairy」、他のすべてのユーザーには「none」がテンプレート化されます。 
+このリクエストでは、「food allergies」のグローバル値は「none」です。Customer_123, の場合、値は"dairy" です。このキャンバスのメッセージには、リキッドスニペット{%raw%}`{{canvas_entry_properties.${food_allergies}}}`{%endraw%} が含まれています。"dairy" Customer_123 および"none" は、他のすべてのユーザーにテンプレートされます。 
 
 ## ユースケース
 
 ユーザーが e コマースサイトでアイテムをブラウズした後に、そのアイテムをカートに追加しないときにトリガーされるキャンバスがある場合、キャンバスの最初のステップを、アイテムの購入に興味があるかどうかを尋ねるプッシュ通知にすることができます。製品名は、{% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %} を使用して参照できます。
 
-![][1]{: style="border:0;margin-left:15px;"}
+![]({% image_buster /assets/img/persistent_entry_properties/PEP1.png %}){: style="border:0;margin-left:15px;"}
 
 2 番目のステップでは、ユーザーがカートにアイテムを追加したにもかかわらず、まだ購入していない場合、別のプッシュ通知を送信してチェックアウトするように促すことができます。`product_name` エントリプロパティは、引き続き {% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %} を使用して参照できます。
 
-![][2]{: style="border:0;margin-left:15px;"}
+![]({% image_buster /assets/img/persistent_entry_properties/PEP12.png %}){: style="border:0;margin-left:15px;"}
 
-[1]:{% image_buster /assets/img/persistent_entry_properties/PEP1.png %}
-[2]:{% image_buster /assets/img/persistent_entry_properties/PEP12.png %}

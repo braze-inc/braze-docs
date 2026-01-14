@@ -1,11 +1,11 @@
 ---
-nav_title: "GET: Siehe Informationen zur E-Mail-Vorlage"
-article_title: "GET: Siehe Informationen zur E-Mail-Vorlage"
+nav_title: "GET: Siehe E-Mail Template Informationen"
+article_title: "GET: Siehe E-Mail Template Informationen"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Dieser Artikel beschreibt die Details des Endpunkts See email template Braze."
+description: "Dieser Artikel beschreibt die Details des Endpunkts E-Mail Template Braze sehen."
 
 ---
 {% api %}
@@ -14,10 +14,10 @@ description: "Dieser Artikel beschreibt die Details des Endpunkts See email temp
 /templates/email/info
 {% endapimethod %}
 
-> Verwenden Sie diesen Endpunkt, um Informationen über Ihre E-Mail-Vorlagen zu erhalten.
+> Verwenden Sie diesen Endpunkt, um Informationen über Ihre E-Mail Templates zu erhalten.
 
 {% alert important %}
-Vorlagen, die mit dem Drag-and-Drop-Editor für E-Mails erstellt wurden, werden nicht akzeptiert.
+Templates, die mit dem Drag-and-Drop-Editor für E-Mails erstellt wurden, werden nicht akzeptiert.
 {% endalert %}
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#e98d2d5b-62fe-4358-b391-9fe9e460d0ac {% endapiref %}
@@ -25,15 +25,15 @@ Vorlagen, die mit dem Drag-and-Drop-Editor für E-Mails erstellt wurden, werden 
 ## Voraussetzungen
 Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/api_key/) mit der Berechtigung `templates.email.info`.
 
-## Preisgrenze
+## Rate-Limit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
-## Parameter anfordern
+## Parameter der Anfrage
 
-| Parameter | Erforderlich | Daten Typ | Beschreibung |
+| Parameter | Erforderlich | Datentyp | Beschreibung |
 |---|---|---|---|
-| `email_template_id`  | Erforderlich | String | Siehe [API-Kennung für E-Mail-Vorlagen]({{site.baseurl}}/api/identifier_types/). |
+| `email_template_id`  | Erforderlich | String | Siehe [E-Mail Template API Bezeichner]({{site.baseurl}}/api/identifier_types/). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Beispiel Anfrage

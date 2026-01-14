@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: Export Daily New Users by Date"
+nav_title: "GET: Export daily new users by date"
 article_title: "GET: Export Daily News Users by Date"
 search_tag: Endpoint
 page_order: 4
@@ -46,8 +46,6 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/kpi/new_users/da
 ## Response
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "data" : [

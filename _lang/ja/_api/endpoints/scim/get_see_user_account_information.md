@@ -1,21 +1,21 @@
 ---
-nav_title: "取得:既存のダッシュボードユーザーアカウントの検索"
+nav_title: "取得:現行のダッシュボード ユーザー口座を検索する"
 article_title: "取得:既存のダッシュボードユーザーアカウントの検索"
 alias: /get_see_user_account_information/
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "この記事では、「既存のダッシュボードユーザーアカウントの検索」Braze エンドポイントの詳細について説明します。"
+description: "この記事では、「リソース ID による既存のダッシュボードユーザーアカウントの検索」Braze エンドポイントの詳細について説明します。"
 ---
 
 {% api %}
-# 現行のダッシュボード ユーザー口座を検索する
+# リソース ID で既存のダッシュボードユーザーアカウントを検索する
 {% apimethod get %}
 /scim/v2/Users/{id}
 {% endapimethod %}
 
-> このエンドポイントを使用して、SCIM [`POST`]({{site.baseurl}}/scim/post_create_user_account/) メソッドによって返されるリソース `id` を指定して、既存のダッシュボードユーザーアカウントを検索します。 
+> このエンドポイントを使用して、SCIM [`POST`]({{site.baseurl}}/api/endpoints/scim/post_create_user_account/) メソッドによって返されるリソース `id` を指定して、既存のダッシュボードユーザーアカウントを検索します。
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#3df40764-8f74-4532-aed3-ab8a6cb92122 {% endapiref %}
 
@@ -61,6 +61,7 @@ curl --location --request GET 'https://rest.iad-01.braze.com/scim/v2/Users/dfa24
     },
     "department": "finance",
     "lastSignInAt": "Thursday, January 1, 1970 12:00:00 AM",
+    "createdAt": "Thursday, January 1, 1970 12:00:00 AM",
     "permissions": {
         "companyPermissions": ["manage_company_settings"],
         "roles": [
@@ -78,7 +79,7 @@ curl --location --request GET 'https://rest.iad-01.braze.com/scim/v2/Users/dfa24
                                 "permissions": ["basic_access","publish_cards"]
                             }
                         ]
-                    } 
+                    }
                 ]
             }
         ],
@@ -90,11 +91,11 @@ curl --location --request GET 'https://rest.iad-01.braze.com/scim/v2/Users/dfa24
                 "team": [
                     {
                          "teamId": "241adcd25789fabcded",
-                         "teamName": "Test Team",                  
+                         "teamName": "Test Team",
                          "teamPermissions": ["admin"]
                     }
                 ]
-            } 
+            }
         ]
     }
 }

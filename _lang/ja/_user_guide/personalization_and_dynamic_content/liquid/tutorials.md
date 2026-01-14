@@ -69,7 +69,7 @@ Thanks for traveling with us! Enjoy your unique discount code: SUMMRTRVLS240.
 ```
 {% endraw %}
 
-{% details 完全な Liquid コード %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 Happy summer, {{${first_name} | default: "traveler"}}!
@@ -136,7 +136,7 @@ Hi {{${first_name} | default: 'there'}}, don't forget to complete your purchase!
 ```
 {% endraw %}
 
-{% details 完全な Liquid コード %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% if {{custom_attribute.${cart_items}}} != blank %}
@@ -200,7 +200,7 @@ Get ready! Our Anniversary Sale is in {{ difference_days }} days!
 ```
 {% endraw %}
 
-{% details 完全な Liquid コード %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% assign sale_date = {{custom_attribute.${anniversary_date}}} | date: "%s" %}
@@ -270,7 +270,7 @@ We heard {{this_month}} is a special month! Enjoy a 50% discount on your purchas
 ```
 {% endraw %}
 
-{% details 完全な Liquid コード %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% assign this_month = 'now' | date: "%B" %}
@@ -334,7 +334,7 @@ We heard {{this_month}} is a special month! Enjoy a 50% discount on your purchas
 {% endraw %}
 
 {: start="6"}
-6. 最終購入日と本日の日付は秒単位であるため、6か月の秒数を計算する必要があります。式(約6ヶ月×30.44日×24時間×60分×60秒)を作成し、変数`six_months`に代入します。`times` を使用して、時間単位の乗算を指定します。
+6. 最終購入日と本日の日付は秒単位であるため、6ヶ月間の秒数を計算する必要があります。式(約6ヶ月×30.44日×24時間×60分×60秒)を作成し、変数`six_months`に代入します。`times` を使用して、時間単位の乗算を指定します。
 
 {% raw %}
 ```liquid
@@ -397,7 +397,7 @@ We noticed it’s been a while since you last purchased {{custom_attribute.${fav
 ```
 {% endraw %}
 
-{% details 完全な Liquid コード %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% if {{custom_attribute.${favorite_product}}} == blank or {{custom_attribute.${last_purchase_date}}} == blank %}

@@ -1,5 +1,5 @@
 ---
-nav_title: "POST:APIトリガーキャンペーンをスケジュールする"
+nav_title: "POST:API トリガー・キャンペーンのスケジュール"
 article_title: "POST:APIトリガーキャンペーンをスケジュールする"
 search_tag: Endpoint
 page_order: 4
@@ -28,7 +28,7 @@ description: "この記事では、「API トリガーキャンペーンのス�
 
 ## レート制限
 
-{% multi_lang_include rate_limits.md endpoint='default' category='message endpoints' %}
+{% multi_lang_include rate_limits.md endpoint='default' category='send messages endpoints' %}
 
 ## 要求本文:
 
@@ -147,8 +147,6 @@ curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/
 ### 成功応答の例
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-API-KEY-HERE
 {
 {
     "dispatch_id": "dispatch_identifier",

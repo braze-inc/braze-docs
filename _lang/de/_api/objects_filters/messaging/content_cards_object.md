@@ -1,16 +1,16 @@
 ---
-nav_title: "Inhalt Kartenobjekt"
-article_title: Inhalt Karte Messaging Objekt
+nav_title: "Content-Card Objekt"
+article_title: Content-Card Messaging Objekt
 page_order: 4
 page_type: reference
 channel: content cards
-description: "Dieser Referenzartikel erklärt die verschiedenen Komponenten des Braze Content Card Objekts."
+description: "Dieser referenzierte Artikel erläutert die verschiedenen Komponenten des Braze Content-Card-Objekts."
 
 ---
 
-# Inhalt Kartenobjekt
+# Content-Card Objekt
 
-> Mit dem Objekt `content_card` können Sie Content Cards über unsere [Messaging-Endpunkte]({{site.baseurl}}/api/endpoints/messaging) erstellen.
+> Mit dem Objekt `content_card` können Sie Content-Cards über unsere [Messaging-Endpunkte]({{site.baseurl}}/api/endpoints/messaging) erstellen.
 
 ```json
 {

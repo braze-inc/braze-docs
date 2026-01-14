@@ -9,7 +9,7 @@ Si un tel identifiant n’est pas disponible, Braze attribue un identifiant uniq
 {% endalert %}
 
 {% alert warning %}
-Si vous souhaitez inclure une valeur identifiable comme ID utilisateur, pour plus de sécurité, nous **vous recommandons vivement d'** ajouter notre fonctionnalité d'[authentification SDK]({{site.baseurl}}/developer_guide/platform_wide/sdk_authentication/) afin d'empêcher l'usurpation d'identité.
+Si vous souhaitez inclure une valeur identifiable comme ID utilisateur, pour plus de sécurité, nous **vous recommandons vivement d'** ajouter notre fonctionnalité d'[authentification SDK]({{site.baseurl}}/developer_guide/authentication/) afin d'empêcher l'usurpation d'identité.
 {% endalert %}
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data

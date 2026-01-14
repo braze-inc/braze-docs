@@ -12,6 +12,10 @@ search_tag: Partner
 
 > Singular는 기여도 분석, 비용 집계, 마케팅 분석, 크리에이티브 보고, 워크플로 자동화가 가능한 통합 마케팅 분석 플랫폼입니다.
 
+_This integration is maintained by Singular._
+
+## 통합 정보
+
 Braze 및 Singular 통합을 통해 생애주기 캠페인 내에서 유료 설치 경로 데이터를 세그먼트에 지능적으로 가져올 수 있습니다.
 
 ## 필수 조건
@@ -72,13 +76,9 @@ config.setGlobalProperty("brazeDeviceId", withValue: brazeDeviceId, overrideExis
 
 Braze에서 **파트너 통합** > **기술 파트너**로 이동하여 **Singular**를 선택합니다. 
 
-{% alert note %}
-[이전 탐색]({{site.baseurl}}/navigation)을 사용하는 경우 **통합**에서 **기술 파트너**를 찾을 수 있습니다.
-{% endalert %}
-
 여기에서 REST 엔드포인트를 찾아 Braze 데이터 가져오기 키를 생성합니다. 키가 생성된 후에는 새 키를 만들거나 기존 키를 무효화할 수 있습니다. 
 
-통합을 완료하려면 데이터 가져오기 키와 REST 엔드포인트를 Singular 계정 매니저에게 제공해야 합니다.<br><br>![이 이미지는 Singular 기술 페이지에 있는 '설치 경로에 대한 데이터 가져오기' 상자를 보여줍니다. 이 상자에 데이터 가져오기 키와 REST 엔드포인트가 표시됩니다.][4]{: style="max-width:90%;"}
+통합을 완료하려면 데이터 가져오기 키와 REST 엔드포인트를 Singular 계정 매니저에게 제공해야 합니다.<br><br>![이 이미지는 Singular 기술 페이지에 있는 '설치 경로에 대한 데이터 가져오기' 상자를 보여줍니다. In this box, you are shown the data import key and the REST endpoint.]({% image_buster /assets/img/attribution/singular.png %}){: style="max-width:90%;"}
 
 ### 3단계: 통합 확인
 
@@ -126,4 +126,4 @@ idfv={{most_recently_used_device.${id}}}
 기기 식별자(IDFV 또는 GAID 등)를 현재 클릭 추적 링크에 사용하지 않거나, 앞으로도 사용할 계획이 없는 경우에도 Singular는 확률적 모델링을 통해 이러한 클릭을 속성할 수 있습니다.
 {% endalert %}
 
-[4]: {% image_buster /assets/img/attribution/singular.png %}
+

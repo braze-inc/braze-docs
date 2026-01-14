@@ -1,5 +1,5 @@
 ---
-nav_title: "PUT:更新ダッシュボードユーザーアカウント"
+nav_title: "PUT:ダッシュボードのユーザーアカウントを更新する"
 article_title: "PUT:更新ダッシュボードユーザーアカウント"
 alias: /post_update_existing_user_account/
 search_tag: Endpoint
@@ -15,7 +15,7 @@ description: "この記事では、既存のダッシュボードのユーザー
 /scim/v2/Users/{id}
 {% endapimethod %}
 
-> このエンドポイントを使用して、SCIM [`POST`]({{site.baseurl}}/scim/post_create_user_account/) メソッドによって返されるリソース `id` を指定して、既存のダッシュボードユーザーアカウントを更新します。
+> このエンドポイントを使用して、SCIM [`POST`]({{site.baseurl}}/api/endpoints/scim/post_create_user_account/) メソッドによって返されるリソース `id` を指定して、既存のダッシュボードユーザーアカウントを更新します。
 
 これにより、姓名、権限 (会社、ワークスペース、チームレベルでの権限設定)、および部門を更新できます。
 
@@ -70,7 +70,7 @@ Authorization: Bearer YOUR-SCIM-TOKEN-KEY
                     {
                          "teamName": "Test Team",
                          "teamPermissions": ["admin"]
-                    } 
+                    }
                 ]
             },
             {
@@ -80,7 +80,7 @@ Authorization: Bearer YOUR-SCIM-TOKEN-KEY
                         "appGroupPermissionSetName":  "Test Permission Set"
                     }
                 ]
-            } 
+            }
         ]
    }
 }
@@ -126,11 +126,11 @@ curl --location --request PUT 'https://rest.iad-01.braze.com/scim/v2/Users/dfa24
                 "appGroupPermissions": ["basic_access","send_campaign_canvases"],
                 "team": [
                     {
-                         "teamName": "Test Team",                  
+                         "teamName": "Test Team",
                          "teamPermissions": ["admin"]
                     }
                 ]
-            } 
+            }
         ]
     }
 }
@@ -162,11 +162,11 @@ curl --location --request PUT 'https://rest.iad-01.braze.com/scim/v2/Users/dfa24
                         "team": [
                             {
                                 "teamId": "2519dafcdba238ae7",
-                                "teamName": "Some Team",                  
+                                "teamName": "Some Team",
                                 "teamPermissions": ["export_user_data"]
                             }
                         ]
-                    } 
+                    }
                 ]
             },
             {
@@ -183,7 +183,7 @@ curl --location --request PUT 'https://rest.iad-01.braze.com/scim/v2/Users/dfa24
                                 "permissions": ["basic_access","publish_cards"]
                             }
                         ]
-                    } 
+                    }
                 ]
             }
         ],
@@ -195,11 +195,11 @@ curl --location --request PUT 'https://rest.iad-01.braze.com/scim/v2/Users/dfa24
                 "team": [
                     {
                          "teamId": "2519dafcdba238ae7",
-                         "teamName": "Test Team",                  
+                         "teamName": "Test Team",
                          "teamPermissions": ["admin"]
                     }
                 ]
-            } 
+            }
         ]
     }
 }

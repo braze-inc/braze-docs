@@ -47,10 +47,6 @@ To import previously identified users, you can upload a CSV to Braze, or send da
 
 You can upload and update user profiles via CSV files from **Audience** > **Import Users**. When importing your customer data, you'll need to specify each customer's unique identifier, also known as `external_id`.
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), this is located at **Users** > **User Import**.
-{% endalert %}
-
 Before starting your CSV import, it's important to understand from your engineering team how users will be identified in Braze. Typically this would be a database ID used internally. This should align with how users will be identified by the Braze SDK on mobile and web, so that each customer will have a single user profile within Braze across their devices. Learn more about the Braze [user profile lifecycle]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/).
 
 When you provide an `external_id` in your import, Braze will update any existing user with the same `external_id` or create a newly identified user with that `external_id` set if one is not found.
@@ -163,7 +159,7 @@ Once you have created your segment, add a `Most Recent Location` filter to targe
 - For polygonal regions, you can more specifically designate which areas you wish to be included in your segment.
 
 {% alert tip %}
-Interested in taking advantage of location targeting with the help of a Braze partner? Check out our available Braze [contextual location partners]({{site.baseurl}}/partners/message_personalization/location).
+Interested in taking advantage of location targeting with the help of a Braze partner? Check out our available Braze [contextual location partners]({{site.baseurl}}/partners/message_personalization/).
 {% endalert %}
 
 {% endapi %}
@@ -440,7 +436,7 @@ Stopping a Canvas will not exit users who are waiting in a step. If you re-enabl
 Canvases
 {% endapitags %}
 
-[Exception events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/) only trigger while the user is waiting to receive the Canvas component it's associated with. If a user performs an action in advance, the exception event will not trigger.
+Exception events only trigger while the user is waiting to receive the Canvas component it's associated with. If a user performs an action in advance, the exception event will not trigger.
 
 If you want to except users who have performed a certain event in advance, use [filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) instead.
 
@@ -573,13 +569,13 @@ To schedule a recurring engagement report, do the following:
 
 1. In your dashboard account, navigate to **Engagement Reports**, under **Data**.
 2. Click **+ Create New Report**.
-3. Add the [campaigns and Canvas messages]({{site.baseurl}}//user_guide/data_and_analytics/reporting/engagement_reports/#manually-select-campaigns-or-canvases) (individually or [by tag]({{site.baseurl}}//user_guide/data_and_analytics/reporting/engagement_reports/#automatically-select-campaigns-or-canvases)) that you would like to compile in your report.
-4. [Add statistics]({{site.baseurl}}//user_guide/data_and_analytics/reporting/engagement_reports/#add-statistics-to-your-report) to your report.
+3. Add the [campaigns and Canvas messages]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#manually-select-campaigns-or-canvases) (individually or [by tag]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#automatically-select-campaigns-or-canvases)) that you would like to compile in your report.
+4. [Add statistics]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#add-statistics-to-your-report) to your report.
 5. Select the compression and deliminator for your report.
 6. Enter the email addresses of Braze users who should receive this report.
-7. Select the [time frame]({{site.baseurl}}//user_guide/data_and_analytics/reporting/engagement_reports/#time-frame) from which you would like your report to run data.
-8. Select the [intervals (daily, weekly, etc.)]({{site.baseurl}}//user_guide/data_and_analytics/reporting/engagement_reports/#data-display) at which would like to see the breakdown of your data.
-9. Schedule your report to [send immediately]({{site.baseurl}}//user_guide/data_and_analytics/reporting/engagement_reports/#send-immediately) or at a [future, specified time]({{site.baseurl}}//user_guide/data_and_analytics/reporting/engagement_reports/#send-at-designated-time).
+7. Select the [time frame]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#time-frame) from which you would like your report to run data.
+8. Select the [intervals (daily, weekly, etc.)]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#data-display) at which would like to see the breakdown of your data.
+9. Schedule your report to [send immediately]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#send-immediately) or at a [future, specified time]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#send-at-designated-time).
 10. Run the report, then open it in your email when it arrives!
 
 {% endapi %}

@@ -16,9 +16,6 @@ description: "Cet article présente les détails du point de terminaison Créer 
 {% endapimethod %}
 
 > Utilisez cet endpoint pour créer une sélection dans votre catalogue.
-{% alert important %}
-Cet endpoint est actuellement en accès anticipé. Contactez votre gestionnaire de satisfaction client si vous souhaitez participer à cet accès anticipé.
-{% endalert %}
 
 ## Conditions préalables
 

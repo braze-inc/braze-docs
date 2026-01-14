@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: Look Up an Existing Dashboard User Account"
+nav_title: "GET: Look up an existing dashboard user account"
 article_title: "GET: Look Up an Existing Dashboard User Account"
 alias: /get_see_user_account_information/
 search_tag: Endpoint
@@ -15,7 +15,7 @@ description: "This article outlines details about the Look up an existing dashbo
 /scim/v2/Users/{id}
 {% endapimethod %}
 
-> Use this endpoint to look up an existing dashboard user account by specifying the resource `id` returned by the SCIM [`POST`]({{site.baseurl}}/api/endpoints/scim/post_create_user_account/) method. 
+> Use this endpoint to look up an existing dashboard user account by specifying the resource `id` returned by the SCIM [`POST`]({{site.baseurl}}/api/endpoints/scim/post_create_user_account/) method.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#3df40764-8f74-4532-aed3-ab8a6cb92122 {% endapiref %}
 
@@ -61,6 +61,7 @@ curl --location --request GET 'https://rest.iad-01.braze.com/scim/v2/Users/dfa24
     },
     "department": "finance",
     "lastSignInAt": "Thursday, January 1, 1970 12:00:00 AM",
+    "createdAt": "Thursday, January 1, 1970 12:00:00 AM",
     "permissions": {
         "companyPermissions": ["manage_company_settings"],
         "roles": [
@@ -78,7 +79,7 @@ curl --location --request GET 'https://rest.iad-01.braze.com/scim/v2/Users/dfa24
                                 "permissions": ["basic_access","publish_cards"]
                             }
                         ]
-                    } 
+                    }
                 ]
             }
         ],
@@ -90,11 +91,11 @@ curl --location --request GET 'https://rest.iad-01.braze.com/scim/v2/Users/dfa24
                 "team": [
                     {
                          "teamId": "241adcd25789fabcded",
-                         "teamName": "Test Team",                  
+                         "teamName": "Test Team",
                          "teamPermissions": ["admin"]
                     }
                 ]
-            } 
+            }
         ]
     }
 }

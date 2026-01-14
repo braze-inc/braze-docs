@@ -5,15 +5,15 @@ page_order: 2
 layout: dev_guide
 
 guide_top_header: "Administrativo"
-guide_top_text: "Esta seção explica como administrar o painel do Braze, incluindo a configuração inicial para integrações, administração do painel, gerenciamento de permissões de usuário e muito mais.<br><br>Além dos tópicos e artigos incluídos nesta seção, também recomendamos conferir nosso curso do Braze Learning sobre <a href='https://learning.braze.com/admin-dashboard-management/'>gerenciamento de administradores e dashboards</a>, que aborda como gerenciar o acesso de usuários e as práticas recomendadas para manutenção de dashboards."
+guide_top_text: "Esta seção explica como administrar o painel do Braze, incluindo a configuração inicial para integrações, administração do painel, gerenciamento de permissões de usuário e muito mais.<br><br>Além dos tópicos e artigos incluídos nesta seção, recomendamos também que você confira o curso <a href='https://learning.braze.com/admin-dashboard-management/'>Admin and Dashboard Management</a> Braze Learning, que aborda como gerenciar o acesso do usuário e as práticas recomendadas para a manutenção do painel."
 description: "Esta seção explica como administrar o painel do Braze, incluindo a configuração inicial para integrações, administração do painel, gerenciamento de permissões de usuário e muito mais."
 
 guide_featured_title: "Tópicos populares"
 guide_featured_list:
-- name: Acesso à Braze
+- name: Acesso à brasagem
   link: /docs/user_guide/administrative/access_braze/
   image: /assets/img/braze_icons/log-in-01.svg
-- name: Configurações de administrador
+- name: Configurações do administrador
   link: /docs/user_guide/administrative/app_settings/company_settings/
   image: /assets/img/braze_icons/building-02.svg
 - name: Faturamento

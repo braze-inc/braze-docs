@@ -10,7 +10,7 @@ page_type: landing
 search_tag: Endpoint
 
 guide_top_header: "Endpoint des groupes d’abonnement"
-guide_top_text: "Utilisez les API REST de groupe d'abonnement pour gérer de manière programmatique les groupes d'abonnement que vous avez stockés dans le tableau de bord de Braze, sur la page **Groupe d'abonnement**. Ceci s’applique aux groupes d’abonnement aux SMS et aux e-mails.<br><br> Vous recherchez des conseils sur la création de groupes d’abonnement ? Consultez nos articles sur les <a href='/docs/user_guide/message_building_by_channel/sms/sms_subscription_group//'>groupes d’abonnement aux SMS</a> et les <a href='/docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/'>groupes d’abonnement aux e-mails</a>."
+guide_top_text: "Utilisez les API REST de groupe d'abonnement pour gérer de manière programmatique les groupes d'abonnement que vous avez stockés dans le tableau de bord de Braze, sur la page **Groupe d'abonnement**. Ceci s’applique aux groupes d’abonnement aux SMS et aux e-mails.<br><br> Vous recherchez des conseils sur la création de groupes d’abonnement ? Consultez nos articles sur les <a href='/docs/user_guide/message_building_by_channel/sms/sms_subscription_group/'>groupes d’abonnement aux SMS</a> et les <a href='/docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/'>groupes d’abonnement aux e-mails</a>."
 
 guide_featured_title: ""
 guide_featured_list:

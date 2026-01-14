@@ -1,0 +1,55 @@
+{%-assign hide_nav_filter = page.hide_nav_filter -%} {%-assign nav_level = page.nav_level -%} {%-unless hide_nav_filter -%} {%-assign hide_nav_filter = layout.hide_nav_filter -%} {%-endunless -%} {%-unless nav_level -%} {%-assign nav_level = layout.nav_level -%} {%-endunless -%} {%-unless nav_level -%} {%-assign nav_level = 2 -%} {%-endunless -%} <button id="sidebar_toggle" class="btn btn-info d-print-none" href="#" aria-label="Bascule de navigation latérale" title="Bascule de navigation latérale"> <i class="fas fa-chevron-left"></i> </button> {%- unless hide_nav_filter -%}
+<div id="nav_filter" class="flex-column flex-nowrap   ">
+  <form id="filter-form"   >
+    <div class="input-group">
+      <input type="text" class="form-control has-clear " name="nav_filter_input" id="nav_filter_input" placeholder="Filtrer les sujets..." aria-label="Filtre" />
+      <div class="input-group-append">
+      <i id="filter-action" class="fa"></i>
+      </div>
+
+    </div>
+
+  </form>
+</div>
+{%- endunless -%}
+
+<nav class="bd-links navbar navbar-expand-lg navbar-light" id="left_navmenu" aria-label="Navigation à gauche" title="Navigation à gauche">
+  {%- unless hide_nav_filter -%}
+    <div id="filter-msg"  class="flex-column flex-nowrap d-none"></div>
+  {%- endunless -%} {%- assign collection = page.collection -%} {%- if page.custom_collection -%} {%- assign collection = page.custom_collection -%} {%- endif -%} {%-UrlNavMenu {{nav_level}}|{{collection}} -%}
+</nav>
+<div id="nav_bottom" style="">
+  <!-- a href="https://www.braze.com/terms/" target="_blank"><div class="nav_bottom_item"><i class="fa fa-balance-scale"></i> LEGAL</div></a>
+  <a href="https://learning.braze.com" target="_blank"><div class="nav_bottom_item"><i class="fa fa-flask"></i> Braze Learning </div></a --> <a id="status-indicator" href="https://braze.statuspage.io" target="_blank">
+    <div class="nav_bottom_item">
+
+      <div class="status-title">{{ site.data.i18n[site.language]['braze_status'] || default : "ÉTAT DU SYSTÈME DE BRAZE"}}</div>
+      <div class="color-dot"></div><div class="color-description">{{ site.data.i18n[site.language]['braze_status_check'] || default : "Statut de contrôle" }}</div>
+  </div></a>
+</div>
+
+<script type="text/javascript">
+  function loadStatusPage() {
+    var lsp = document.createElement('script');
+    lsp.type = 'text/javascript';
+    lsp.async = true;
+    lsp.src = '//statuspage-production.s3.amazonaws.com/se-v2.js';
+    lsp.onload = function() {
+      if (typeof(StatusPage) !== "undefined") {
+        var sp = new StatusPage.page({page: '{{site.status_io_key}}'});
+        sp.status({
+          success: function (data) {
+            var sd = document.getElementById('status-indicator');
+            sd.getElementsByClassName('color-description')[0].textContent = data.status.description;
+            sd.getElementsByClassName('color-dot')[0].className = "color-dot " + data.status.indicator;
+          }
+        });
+      }
+    };
+
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(lsp, s);
+  };
+
+  window.addEventListener('load', loadStatusPage, false);
+</script>

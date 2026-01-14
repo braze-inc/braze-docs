@@ -1,5 +1,5 @@
 ---
-nav_title: LINE Setup
+nav_title: LINE setup
 article_title: LINE Setup
 description: "This article covers how to set up the Braze LINE channel, including prerequisites and suggested next steps."
 page_type: partner
@@ -61,6 +61,10 @@ To set up consistent user updates, bring over existing users' LINE IDs, and sync
 4. [Change user update methods](#step-4-change-your-user-update-methods)
 5. [(Optional) Merge user profiles](#step-5-merge-profiles-optional)
 
+{% alert note %}
+You can only have one LINE account in a single workspace. If you have multiple LINE accounts, we recommend using each one in a different workspace.
+{% endalert %}
+
 ## Step 1: Import or update existing LINE users
 
 This step is necessary if you have an existing and identified LINE user, as Braze will later automatically pull their subscription state and update the correct user profile. If you haven’t previously reconciled users with their LINE ID, skip this step. 
@@ -82,14 +86,14 @@ After the integration process completes, Braze will automatically pull that chan
 1. In LINE, go the **Messaging API** tab and edit your **Webhook settings**:
    - Set the **Webhook URL** to `https://anna.braze.com/line/events`.
       - Braze will automatically change this to a different URL when integrating, based on your dashboard cluster.
-   - Turn on **Use webhook** and **Webhook redelivery**. <br><br> ![Webhook settings page to verify or edit the webhook URL, toggling on or off "Use webhook", "Webhook redelivery", and "Error statistics aggregation".][1]{: style="max-width:70%;"}
+   - Turn on **Use webhook** and **Webhook redelivery**. <br><br> ![Webhook settings page to verify or edit the webhook URL, toggling on or off "Use webhook", "Webhook redelivery", and "Error statistics aggregation".]({% image_buster /assets/img/line/webhook_settings.png %}){: style="max-width:70%;"}
 2. Take note of the following information in the **Providers** tab:
 
 | Information type | Location |
 | --- | --- |
 | Provider ID | Select your provider and then go to ***Settings** > **Basic information** |
 | Channel ID | Select your provider and then go to **Channels** > your channel > **Basic settings** |
-| Channel secret | Select your provider and then go to **Channels** > your channel > **Basic settings** |
+| Channel secret | Select your provider and then go to **Channels** > your channel > **Basic settings**. |
 | Channel access token | Select your provider and then go to **Channels** > your channel > **Messaging API**. If there isn't a channel access token, select **Issue**. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -99,7 +103,7 @@ After the integration process completes, Braze will automatically pull that chan
    - Turn off **Auto-response messages**. All triggered messaging should be through Braze. This won't prevent you from sending directly from the LINE console.
    - Turn on **Webhooks**.
 
-![Response settings page with toggles for how your account will handle chats.][2]{: style="max-width:80%;"}
+![Response settings page with toggles for how your account will handle chats.]({% image_buster /assets/img/line/response_settings.png %}){: style="max-width:80%;"}
 
 ### Step 2.2: Generate LINE subscription groups in Braze
 
@@ -109,12 +113,18 @@ After the integration process completes, Braze will automatically pull that chan
    - Channel secret
    - Channel access token
 
-![LINE messaging integration page with LINE integration section.][3]{: style="max-width:80%;"}
+If you want to add IP whitelisting in your LINE account, add all of the IP addresses listed for your cluster in [IP allowlisting]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#ip-allowlisting) to your allowlist.
+
+{% alert important %}
+During integration, be sure to check that your channel secret is correct. If it's incorrect, there may be inconsistencies in the subscription status.
+{% endalert %}
+
+![LINE messaging integration page with LINE integration section.]({% image_buster /assets/img/line/integration.png %}){: style="max-width:80%;"}
 
 {: start="2"}
 2. After connecting, Braze will automatically generate a Braze subscription group for each LINE integration that's successfully added to your workspace. <br><br> Any changes to your followers list (such as new followers or unfollowers) will be automatically pushed into Braze.
 
-![LINE subscription groups section displaying one subscription group for the "LINE" channel.][4]{: style="max-width:80%;"}
+![LINE subscription groups section displaying one subscription group for the "LINE" channel.]({% image_buster /assets/img/line/line_subscription_groups.png %}){: style="max-width:80%;"}
 
 ## Step 3: Reconcile user IDs
 
@@ -168,7 +178,7 @@ Here is an example payload to `/users/track` that updates a user profile by the 
 
 ## Step 5: Merge profiles (optional)
 
-As described above, there's a possibilty for multiple user profiles to exist with the same `native_line_id`. If your update methods create duplicate user profiles, you can merge unidentified user profiles to identified user profiles with the `/user/merge` endpoint. 
+As described above, there's a possibility for multiple user profiles to exist with the same `native_line_id`. If your update methods create duplicate user profiles, you can merge unidentified user profiles to identified user profiles with the `/user/merge` endpoint. 
 
 Here's an example payload to `/users/merge` that targets an unidentified user profile by user alias `line_id`:
 
@@ -207,7 +217,7 @@ To help manage this, Braze offers tooling and logic that supports a well-integra
 1. **Subscription sync tool:** This tool is automatically deployed after a successful LINE channel integration. Use it to update existing profiles and create new profiles.<br><br>All Braze user profiles that have a `native_line_id` that follows the LINE channel will be updated to have a subscription group status of `subscribed`. Any follower of the LINE channel that doesn't have a Braze user profile with the `native_line_id` will have:<br><br>- An anonymous user profile created with `native_line_id` set to the user LINE ID following the channel <br>- A user alias `line_id` set to the user LINE ID following the channel <br>- A subscription group status of `subscribed`
 
 {: start="2"}
-2. **Event updates:** These are used to update a user's subscription status. When Braze receives user event updates for the integrated LINE channel and the event is a follow, the user profile will have a subscription group status of `subscribed`. If the event is an unfollow, the user profile will have a subscription group status of `unsubscribed`.<br><br>- All Braze user profiles with a matching `native_line_id` will be automatically updated. <br>- If no matching user profile exists for an event, Braze will [create an anonymous user](https://www.braze.com/docs/line/user_management/).
+2. **Event updates:** These are used to update a user's subscription status. When Braze receives user event updates for the integrated LINE channel and the event is a follow, the user profile will have a subscription group status of `subscribed`. If the event is an unfollow, the user profile will have a subscription group status of `unsubscribed`.<br><br>- All Braze user profiles with a matching `native_line_id` will be automatically updated. <br>- If no matching user profile exists for an event, Braze will [create an anonymous user]({{site.baseurl}}/line/user_management/).
 
 ## Use cases
 
@@ -314,7 +324,7 @@ To acquire the correct LINE ID for each user, set up LINE Login under the same p
 
 This method allows users to link their LINE account to your app’s user account. You can then use Liquid in Braze, such as {% raw %}`{{line_id}}`{% endraw %}, to create a personalized URL for the user that passes the user's LINE ID back to your website or app, which can then be associated with a known user.
 
-1. Create an action-based Canvas that is based on a subscription state change and triggers when a user subscribes to your LINE channel.<br>![][9]
+1. Create an action-based Canvas that is based on a subscription state change and triggers when a user subscribes to your LINE channel.<br>![Canvas that triggers when a user subscribes to the LINE channel.]({% image_buster /assets/img/line/account_link_1.png %})
 2. Create a message incentivizing users to log into your website or app, passing the user's LINE ID as a query parameter (through Liquid), such as:
 
 ```
@@ -323,7 +333,7 @@ Thanks for following Flash n' Thread on LINE! For personalized offers and 20% of
 
 {: start="3"}
 3. Create a follow-up message that delivers the coupon code.
-4. (Optional) Create an action-based campaign or Canvas that triggers when the LINE user is identified to send the user their coupon code. <br>![][10]
+4. (Optional) Create an action-based campaign or Canvas that triggers when the LINE user is identified to send the user their coupon code. <br>![Action-based campaign that triggers when the LINE user is identified.]({% image_buster /assets/img/line/account_link_2.png %})
 
 #### How it works
 
@@ -369,7 +379,7 @@ if (user && isLoggedIn && lineUserId) {
 
 You can test your LINE channel before setting up [user reconciliation](#user-id-reconciliation) by creating a "Who am I" Canvas or campaign.
 
-1. Set up a Canvas that returns a user's Braze user ID on a specific trigger word. <br><br>Example trigger <br><br>![Trigger to send the campaign to users who sent an inbound LINE to a specific subscription group.][7]{: style="max-width:80%;"}<br><br>Example message<br><br>![LINE message stating the Braze user ID.][8]{: style="max-width:40%;"}<br><br>
+1. Set up a Canvas that returns a user's Braze user ID on a specific trigger word. <br><br>Example trigger <br><br>![Trigger to send the campaign to users who sent an inbound LINE to a specific subscription group.]({% image_buster /assets/img/line/trigger.png %}){: style="max-width:80%;"}<br><br>Example message<br><br>![LINE message stating the Braze user ID.]({% image_buster /assets/img/line/message.png %}){: style="max-width:40%;"}<br><br>
 
 2. In Braze, you can use the Braze ID to search for specific users and modify them as needed.
 
@@ -378,13 +388,3 @@ Make sure the Canvas doesn't have global control or control groups preventing se
 {% endalert %}
 
 
-[1]: {% image_buster /assets/img/line/webhook_settings.png %}
-[2]: {% image_buster /assets/img/line/response_settings.png %}
-[3]: {% image_buster /assets/img/line/integration.png %}
-[4]: {% image_buster /assets/img/line/line_subscription_groups.png %}
-[5]: {% image_buster /assets/img/line/filter_group.png %}
-[6]: {% image_buster /assets/img/line/csv_export_user_data.png %}
-[7]: {% image_buster /assets/img/line/trigger.png %}
-[8]: {% image_buster /assets/img/line/message.png %}
-[9]: {% image_buster /assets/img/line/account_link_1.png %}
-[10]: {% image_buster /assets/img/line/account_link_2.png %}

@@ -1,5 +1,5 @@
 ---
-nav_title: "DELETE:カタログ項目を削除する"
+nav_title: "DELETE:カタログ項目を削除"
 article_title: "DELETE:カタログ項目を削除する"
 search_tag: Endpoint
 page_order: 1

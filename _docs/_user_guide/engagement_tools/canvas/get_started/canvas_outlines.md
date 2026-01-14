@@ -1,5 +1,5 @@
 ---
-nav_title: Canvas Outlines
+nav_title: Canvas outlines
 article_title: Canvas Outlines
 page_order: 3
 page_type: reference
@@ -14,15 +14,12 @@ tool: Canvas
 
 > This article highlights several examples that demonstrate how you can use Canvas to accomplish targeted, personalized messaging using a combination of [Delay]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/) and [Message]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) steps.
 
-Braze Learning also offers several dedicated Canvas courses that go over common Canvas outlines. Check them out for valuable insights into technical terms and concepts explained through a mix of videos, lessons, and interactive exercises. 
+Braze Learning also offers several dedicated Canvas courses that go over common Canvas outlines. Check them out for valuable insights into technical terms and concepts explained through a mix of videos, lessons, and interactive exercises.
+
 - [Create Customer Journeys with Canvas Flow](https://learning.braze.com/create-customer-journeys-with-canvas-flow)
 - [New Loyalty Member Onboarding](https://learning.braze.com/new-loyalty-member-onboarding)
 - [Lapsed Users](https://learning.braze.com/lapsing-users)
 - [Build an Abandoned Cart User Journey](https://learning.braze.com/build-an-abandoned-cart-user-journey)
-
-{% alert important %}
-As of February 28, 2023, you will no longer be able to create or duplicate Canvases using the original Canvas experience. Braze recommends that customers who use the original Canvas experience move to Canvas Flow. It's an improved editing experience to better build and manage Canvases. Learn more about [cloning your Canvases to Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
-{% endalert %}
 
 ### Onboarding
 

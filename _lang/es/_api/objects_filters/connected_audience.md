@@ -158,3 +158,6 @@ Este filtro te permite segmentar en función de cuándo fue la última vez que e
 - **Comparaciones permitidas:** `after`, `before`
 - **Valores permitidos:** datetime (cadena ISO 8601)
 
+### Consideraciones
+
+Las audiencias conectadas no pueden filtrar usuarios por atributos predeterminados, eventos personalizados, segmentos o eventos de interacción con los clientes. Para utilizar estos filtros, te recomendamos incorporarlos a un segmento de audiencia y luego especificar ese segmento en el botón [`segment_id`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages#request-parameters).

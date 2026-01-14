@@ -26,7 +26,7 @@ Um einen Test entweder an [Inhaltstestgruppen]({{site.baseurl}}/user_guide/admin
 
 Sie können auch auf der Registerkarte **Test** eine Vorschau der Nachrichten anzeigen, als ob Sie ein Benutzer wären. Sie können eine:n bestimmte:n oder zufällige:n Nutzer:in auswählen oder eine:n angepasste:n Nutzer:in erstellen.
 
-![Custom_User_Preview][3]
+\![Eine Content-Card Vorschau im Tab "Test".]({% image_buster /assets/img/cc-user-preview.png %}){: style="max-width:80%;"}
 
 ### Test-Checkliste
 
@@ -37,19 +37,14 @@ Sie können auch auf der Registerkarte **Test** eine Vorschau der Nachrichten an
 
 ## Debuggen
 
-Nachdem Ihre Content Cards versendet wurden, können Sie im [Ereignisbenutzerprotokoll]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/) in der Entwicklerkonsole eventuelle Probleme aufschlüsseln oder beheben. 
+Nachdem Ihre Content Cards versendet wurden, können Sie im [Ereignisbenutzerprotokoll]({{site.baseurl}}/user_guide/administrative/app_settings/event_user_log_tab/) in der Entwicklerkonsole eventuelle Probleme aufschlüsseln oder beheben. 
 
 Ein häufiger Anwendungsfall ist die Fehlersuche, wenn ein:e Nutzer:in eine bestimmte Content-Card nicht sehen kann. Dazu können Sie in den **Event-Nutzerprotokollen** nach den Content-Cards suchen, die dem SDK beim Sitzungsstart, aber vor einer Impression zugestellt wurden, und diese zu einer bestimmten Kampagne zurückverfolgen:
 
 1. Gehen Sie zu **Einstellungen** > **Ereignisbenutzerprotokoll**.
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie das **Event-Nutzerprotokoll** in der **Entwicklungskonsole**.
-{% endalert %}
-
-{:start="2"}
-2\. Suchen Sie die SDK-Anfrage für Ihren Testbenutzer und erweitern Sie sie.
-3\. Klicken Sie auf **Rohdaten**.
-4\. Finden Sie die `id` für Ihre Sitzung. Im Folgenden sehen Sie einen Beispielauszug:
+2. Suchen Sie die SDK-Anfrage für Ihren Testbenutzer und erweitern Sie sie.
+3. Klicken Sie auf **Rohdaten**.
+4. Finden Sie die `id` für Ihre Sitzung. Im Folgenden sehen Sie einen Beispielauszug:
 
     ```json
     [
@@ -57,7 +52,7 @@ Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden
         "session_id": "D1B051E6-469B-47E2-B830-5A728D1D4AC5",
         "data": {
           "ids": [
-            "NjE4NTAwNWE5ZDliZWU3OTM4N2NjZTQzXyRfY2M9YzNiMjU3NDAtZjExMy1jMDQ3LTRiMWQtZDI5NmYyODBhZjRmJm12PTYxODUwMDViOWQ5YmVlNzkzODdjY2U0NSZwaT1jbXA="
+            "NDg2MTY5MmUtNmZjZS00MjE1LWJkMDUtMzI1NGZiOWU5MDU3"
           ]
         },
         "name": "cci",
@@ -69,16 +64,14 @@ Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden
 5. Verwenden Sie ein Dekodierungstool wie [Base64 Decode and Encode](https://www.base64decode.org/), um die `id` aus dem Base64-Format zu dekodieren und die zugehörige `campaign_id` zu finden. In unserem Beispiel ergibt sich daraus folgendes:
 
     ```
-    6185005a9d9bee79387cce43_$_cc=c3b25740-f113-c047-4b1d-d296f280af4f&mv=6185005b9d9bee79387cce45&pi=cmp
+    4861692e-6fce-4215-bd05-3254fb9e9057_$_cc=c3b25740-f113-c047-4b1d-d296f280af4f&mv=6185005b9d9bee79387cce45&pi=cmp
     ```
 
-    Wobei `6185005a9d9bee79387cce43` die `campaign_id` ist.<br><br>
+    Wobei `4861692e-6fce-4215-bd05-3254fb9e9057` die `campaign_id` ist.<br><br>
 
 6. Gehen Sie auf die Seite **Kampagnen** und suchen Sie nach der `campaign_id`.
 
-![Suchen Sie nach campaign_id auf der Seite Campaigns][1]
+\![Suchen Sie auf der Seite Kampagnen nach campaign_id ]({% image_buster /assets/img_archive/cc_debug.png %}){: style="max-width:80%;"}
 
 Von dort aus können Sie Ihre Nachrichteneinstellungen und Inhalte überprüfen, um herauszufinden, warum ein Benutzer eine bestimmte Inhaltskarte nicht sehen kann.
 
-[1]: {% image_buster /assets/img_archive/cc_debug.png %}
-[3]: {% image_buster /assets/img/cc-user-preview.png %}

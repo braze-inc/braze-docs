@@ -15,7 +15,7 @@ Nach Abschluss dieser Tutorials können Sie Folgende Aktionen ausführen:
 - Schreiben Sie Liquid-Code für gängige Anwendungsfälle
 - Bedingte Liquid-Logik zusammenstellen, um Nachrichten auf der Grundlage von Nutzerdaten zu personalisieren.
 - Variablen und Filter verwenden, um Gleichungen zu schreiben, die die Werte von Attributen verwenden
-- Grundlegende Befehle in Liquid-Code wiedererkennen und ein allgemeines Verständnis dafür entwickeln, was der Code tut
+- Grundlegende Befehle im Liquid Code zu erkennen und ein allgemeines Verständnis dafür zu entwickeln, was der Code tut
 
 | Tutorial | Lernziele |
 | --- | --- |
@@ -69,7 +69,7 @@ Thanks for traveling with us! Enjoy your unique discount code: SUMMRTRVLS240.
 ```
 {% endraw %}
 
-{% details Vollständiger Liquid-Code %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 Happy summer, {{${first_name} | default: "traveler"}}!
@@ -136,7 +136,7 @@ Hi {{${first_name} | default: 'there'}}, don't forget to complete your purchase!
 ```
 {% endraw %}
 
-{% details Vollständiger Liquid-Code %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% if {{custom_attribute.${cart_items}}} != blank %}
@@ -200,7 +200,7 @@ Get ready! Our Anniversary Sale is in {{ difference_days }} days!
 ```
 {% endraw %}
 
-{% details Vollständiger Liquid-Code %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% assign sale_date = {{custom_attribute.${anniversary_date}}} | date: "%s" %}
@@ -270,7 +270,7 @@ We heard {{this_month}} is a special month! Enjoy a 50% discount on your purchas
 ```
 {% endraw %}
 
-{% details Vollständiger Liquid-Code %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% assign this_month = 'now' | date: "%B" %}
@@ -334,7 +334,7 @@ Lassen Sie uns das Lieblingsprodukt eines Nutzers bewerben, wenn sein letzter Ka
 {% endraw %}
 
 {: start="6"}
-6\. Da das Datum des letzten Kaufs und das heutige Datum in Sekunden angegeben sind, müssen wir berechnen, wie viele Sekunden in sechs Monaten enthalten sind. Lassen Sie uns eine Gleichung aufstellen (ungefähr 6 Monate * 30,44 Tage * 24 Stunden * 60 Minuten * 60 Sekunden) und sie der Variablen `six_months` zuweisen. Wir werden `times` verwenden, um die Multiplikation von Zeiteinheiten anzugeben.
+6\. Da das Datum des letzten Kaufs und das heutige Datum in Sekunden angegeben sind, müssen wir berechnen, wie viele Sekunden in sechs Monaten liegen. Lassen Sie uns eine Gleichung aufstellen (ungefähr 6 Monate * 30,44 Tage * 24 Stunden * 60 Minuten * 60 Sekunden) und sie der Variablen `six_months` zuweisen. Wir werden `times` verwenden, um die Multiplikation von Zeiteinheiten anzugeben.
 
 {% raw %}
 ```liquid
@@ -397,7 +397,7 @@ We noticed it’s been a while since you last purchased {{custom_attribute.${fav
 ```
 {% endraw %}
 
-{% details Vollständiger Liquid-Code %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% if {{custom_attribute.${favorite_product}}} == blank or {{custom_attribute.${last_purchase_date}}} == blank %}

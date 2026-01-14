@@ -1,5 +1,5 @@
 ---
-nav_title: "取得:エクスポートキャンバスデータシリーズ分析"
+nav_title: "取得:キャンバスデータ系列分析をエクスポート"
 article_title: "取得:エクスポートキャンバスデータシリーズ分析"
 search_tag: Endpoint
 page_order: 4
@@ -51,8 +51,6 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/data_seri
 ## 応答
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "data": {
     "name": (string) the Canvas name,
@@ -117,7 +115,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 {% alert tip %}
-CSV および API のエクスポートに関するヘルプについては、「[エクスポートのトラブルシューティング]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)」を参照してください。
+CSV および API のエクスポートに関するヘルプについては、「[エクスポートのトラブルシューティング]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/)」を参照してください。
 {% endalert %}
 
 {% endapi %}

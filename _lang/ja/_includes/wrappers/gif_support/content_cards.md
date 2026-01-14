@@ -1,6 +1,6 @@
 {% tabs %}
 {% tab Android %}
-デフォルトでは、ネイティブの [Braze Android SDK](https://github.com/braze-inc/braze-android-sdk) はコンテンツカードのアニメーション GIF をサポートしていません。ただし、代わりにサードパーティの画像ライブラリを使用して GIF を表示できます。詳しくは、[Androidコンテンツカードを参照のこと：GIF]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/GIFs/).
+デフォルトでは、ネイティブの [Braze Android SDK](https://github.com/braze-inc/braze-android-sdk) はコンテンツカードのアニメーション GIF をサポートしていません。ただし、代わりにサードパーティの画像ライブラリを使用して GIF を表示できます。詳しくは、[Androidコンテンツカードを参照のこと：GIF]({{site.baseurl}}/developer_guide/content_cards/embedding_gifs/?sdktab=android).
 {% endtab %}
 
 {% tab iOS %}

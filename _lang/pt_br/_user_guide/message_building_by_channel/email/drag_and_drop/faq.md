@@ -1,5 +1,5 @@
 ---
-nav_title: Perguntas frequentes
+nav_title: PERGUNTAS FREQUENTES
 article_title: Perguntas frequentes sobre o editor de arrastar e soltar
 alias: "/dnd/faq/"
 channel: email
@@ -15,9 +15,9 @@ tool:
 
 > Esta página fornece respostas a algumas perguntas frequentes relacionadas ao editor de arrastar e soltar para e-mail.
 
-### Posso fazer uma prévia da aparência do meu e-mail no modo escuro?
+### Posso visualizar a aparência do meu e-mail no modo escuro?
 
-Sim. Acesse a seção **Preview and Test (Prévia e teste** ) do editor de arrastar e soltar e ative **o modo escuro**. Recomendamos também o envio de e-mails com prévia e teste em diferentes plataformas de usuários e o uso de imagens transparentes para as imagens de fundo das linhas, quando possível. 
+Sim. Vá para a seção **Preview and Test (Visualização e teste** ) do editor de arrastar e soltar e ative **o modo Escuro**. Recomendamos também visualizar e testar seus e-mails em diferentes plataformas de usuários e usar imagens transparentes para imagens de fundo de linha sempre que possível. 
 
 ### Como posso alterar o preenchimento do e-mail no celular sem atualizar o preenchimento na visualização da Web?
 
@@ -36,7 +36,7 @@ Atualmente, o editor de arrastar e soltar é compatível com duas camadas. Você
 
 ### Posso salvar meu e-mail de arrastar e soltar como um modelo depois de criá-lo em minha campanha ou no Canvas?
 
-Não, você precisa recriar o e-mail em **Modelos de e-mail** para salvá-lo.
+Não, você precisa recriar o e-mail em **Email Templates** para salvar.
 
 ### Posso adicionar anexos de e-mail ao editor de arrastar e soltar?
 

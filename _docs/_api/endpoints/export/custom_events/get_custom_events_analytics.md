@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: Export Custom Events Analytics"
+nav_title: "GET: Export custom events analytics"
 article_title: "GET: Export Custom Event Analytics"
 search_tag: Endpoint
 page_order: 4
@@ -50,8 +50,6 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/events/data_seri
 ## Response
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "data" : [

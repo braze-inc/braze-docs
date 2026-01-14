@@ -6,7 +6,7 @@ page_order: 1
 
 layout: api_page
 page_type: reference
-description: "Dieser Artikel beschreibt die Details des Braze Endpunkts Katalogauswahl löschen."
+description: "Dieser Artikel beschreibt die Details des Endpunkts Katalogauswahl löschen in Braze."
 
 ---
 {% api %}
@@ -16,21 +16,18 @@ description: "Dieser Artikel beschreibt die Details des Braze Endpunkts Kataloga
 {% endapimethod %}
 
 > Verwenden Sie diesen Endpunkt, um eine Katalogauswahl zu löschen.
-{% alert important %}
-Dieser Endpunkt befindet sich derzeit im Early Access. Wenden Sie sich an Ihren Customer Success Manager, wenn Sie an diesem frühen Zugang interessiert sind.
-{% endalert %}
 
 ## Voraussetzungen
 
 Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/basics#rest-api-key/) mit der Berechtigung `catalogs.delete_selection`.
 
-## Preisgrenze
+## Rate-Limit
 
 {% multi_lang_include rate_limits.md endpoint='asynchronous catalog selections' %}
 
 ## Pfad-Parameter
 
-| Parameter        | Erforderlich | Daten Typ | Beschreibung                    |
+| Parameter        | Erforderlich | Datentyp | Beschreibung                    |
 | ---------------- | -------- | --------- | ------------------------------ |
 | `catalog_name`   | Erforderlich | String    | Name des Katalogs.           |
 | `selection_name` | Erforderlich | String    | Name der Katalogauswahl. |
@@ -46,11 +43,11 @@ curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/restaur
 
 ## Antwort
 
-Es gibt zwei Statuscode-Antworten für diesen Endpunkt: `202` und `404`.
+Für diesen Endpunkt gibt es zwei Status Code Antworten: `202` und `404`.
 
 ### Beispiel für eine erfolgreiche Antwort
 
-Der Statuscode `202` könnte den folgenden Antwortkörper zurückgeben:
+Der Status Code `202` könnte den folgenden Antwortkörper zurückgeben:
 
 ```json
 {
@@ -60,7 +57,7 @@ Der Statuscode `202` könnte den folgenden Antwortkörper zurückgeben:
 
 ### Beispiel einer Fehlerantwort
 
-Der Statuscode `404` könnte den folgenden Antwortkörper zurückgeben. Weitere Informationen zu Fehlern, die auftreten können, finden Sie unter [Fehlersuche](#troubleshooting).
+Der Status Code `404` könnte den folgenden Antwortkörper zurückgeben. Unter [Fehlerbehebung](#troubleshooting) finden Sie weitere Informationen zu Fehlern, die bei Ihnen auftreten können.
 
 ```json
 {
@@ -87,7 +84,7 @@ In der folgenden Tabelle finden Sie eine Liste möglicher zurückgegebener Fehle
 | Fehler                | Fehlersuche                                          |
 | -------------------- | -------------------------------------------------------- |
 | `catalog-not-found`  | Prüfen Sie, ob der Katalogname gültig ist.                    |
-| `invalid-selection`  | Prüfen Sie, ob der Name der Auswahl gültig ist.                  |
+| `invalid-selection`  | Prüfen Sie, ob der Auswahlname gültig ist.                  |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

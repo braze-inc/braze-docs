@@ -1,5 +1,5 @@
 ---
-nav_title: Suche nach Kampagnen
+nav_title: Suchen nach Kampagnen
 article_title: Suche nach Kampagnen
 page_order: 10
 page_type: reference
@@ -22,7 +22,7 @@ Es gibt mehrere Möglichkeiten, auf der Seite mit der Kampagnenliste nach Kampag
 
 Sie können die Suchleiste verwenden, um Schlüsselwörter und Phrasen einzugeben, die mit dem Namen Ihrer Kampagne in Verbindung stehen. Um eine exakte Suche durchzuführen, verwenden Sie Anführungszeichen (""), um Ihren Suchbegriff zu umgeben. Wenn Sie zum Beispiel speziell nach Webhook-Testkampagnen suchen möchten, geben Sie `"webhook test"` in die Suchleiste ein.
 
-![Die Seite mit der Kampagnenliste, auf der drei Kampagnen aufgelistet sind. Die Seite ist so aufgebaut, dass aktive Kampagnen angezeigt werden. Die Spalten sind „Name“, „Status“, „Stoppdatum“, „Kampagnentyp“ und „Gesendet“, um die Ansicht zu organisieren.]({% image_buster /assets/img/campaign_list_example.png %})
+\![Die Seite mit der Kampagnenliste, auf der drei Kampagnen aufgeführt sind. Die Seite ist so aufgebaut, dass aktive Kampagnen angezeigt werden. Die Spalten sind Name, Status, Stoppdatum, Kampagnentyp und Gesendet, um die Ansicht zu organisieren.]({% image_buster /assets/img/campaign_list_example.png %})
 
 ### Auswählen eines Status
 
@@ -32,7 +32,7 @@ Wenn Sie zum Beispiel Ihre Kampagnenentwürfe prüfen möchten, wählen Sie **St
 
 ### Suchen nach Tags
 
-Wenn Sie Ihre Kampagnen nach [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) durchsuchen, können Sie Ihre Ergebnisse weiter eingrenzen. Wenn Sie z.B. alle Kampagnen suchen, die Sie für die Ansprache von Neukunden, Vielkäufern und ehemaligen Kunden erstellt haben, können Sie diese Kampagnen nach ihrem gemeinsamen Tag **Targeting nach Kundentyp** durchsuchen.
+Wenn Sie Ihre Kampagnen nach [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) durchsuchen, können Sie Ihre Ergebnisse weiter eingrenzen. Wenn Sie z.B. alle Kampagnen suchen, die Sie für die Ansprache von Neukunden, Vielkäufern und ehemaligen Kunden erstellt haben, können Sie diese Kampagnen nach ihrem gemeinsamen Tag **Targeting nach Kundentyp** durchsuchen.
 
 ### Anpassen der Filter
 

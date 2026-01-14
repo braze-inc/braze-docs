@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: List Integrations"
+nav_title: "GET: List integrations"
 article_title: "GET: List Integrations"
 search_tag: Endpoint
 page_order: 1

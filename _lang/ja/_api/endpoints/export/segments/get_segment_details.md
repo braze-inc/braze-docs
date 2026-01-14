@@ -1,8 +1,8 @@
 ---
-nav_title: "取得:セグメントの詳細のエクスポート"
+nav_title: "取得:セグメントの詳細をエクスポート"
 article_title: "取得:セグメントの詳細のエクスポート"
 search_tag: Endpoint
-page_order: 4
+page_order: 2
 layout: api_page
 page_type: reference
 description: "この記事では、「セグメントの詳細をエクスポート」Braze エンドポイントの詳細について説明します。"
@@ -44,8 +44,6 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/segments/details
 ## 応答
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
       "message": (required, string) the status of the export, returns 'success' when completed without errors,
       "created_at" : (string) the date created as ISO 8601 date,
@@ -59,7 +57,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 {% alert tip %}
-CSV および API のエクスポートに関するヘルプについては、「[エクスポートのトラブルシューティング]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/)」を参照してください。
+CSV および API のエクスポートに関するヘルプについては、「[エクスポートのトラブルシューティング]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/)」を参照してください。
 {% endalert %}
 
 {% endapi %}

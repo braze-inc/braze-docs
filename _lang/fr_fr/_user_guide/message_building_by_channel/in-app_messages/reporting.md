@@ -1,8 +1,8 @@
 ---
-nav_title: Reporting
-article_title: Rapports sur les messages in-app
+nav_title: Rapports
+article_title: Rapport sur les messages in-app
 page_order: 5
-description: "Le présent article de référence couvre les rapports et analyses des messages in-app, dont les détails de la campagne, la performance des messages et les performances historiques."
+description: "Cet article de référence couvre les rapports et analyses de messages in-app (notamment les détails de la campagne, les performances des messages et l'historique des performances)."
 channel:
   - in-app messages
 tool:
@@ -10,9 +10,9 @@ tool:
 
 ---
 
-# Rapports sur les messages in-app {#iam-reporting}
+# Rapport sur les messages in-app {#iam-reporting}
 
-> Le présent article de référence couvre les rapports et analyses des messages in-app, dont les détails de la campagne, la performance des messages et les performances historiques.
+> Cet article de référence couvre les rapports et analyses de messages in-app (notamment les détails de la campagne, les performances des messages et l'historique des performances).
 
-{% multi_lang_include campaign_analytics.md channel="message in-app" %}
+{% multi_lang_include analytics/campaign_analytics.md channel="in-app message" %}
 

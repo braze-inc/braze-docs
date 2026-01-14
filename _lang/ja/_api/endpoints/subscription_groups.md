@@ -10,7 +10,7 @@ page_type: landing
 search_tag: Endpoint
 
 guide_top_header: "サブスクリプション・グループ エンドポイント"
-guide_top_text: "サブスクリプショングループ REST API を使用して、Braze ダッシュボードの **サブスクリプショングループ**ページに保存したサブスクリプショングループをプログラムで管理します。これは、SMS とメールの両方のサブスクリプショングループに適用されます。<br><br> 購読グループの作成に関するガイダンスをお探しですか？<a href='/docs/user_guide/message_building_by_channel/sms/sms_subscription_group//'>SMS購読グループと</a> <a href='/docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/'>Eメール購読</a>グループの記事をチェックする。"
+guide_top_text: "サブスクリプショングループ REST API を使用して、Braze ダッシュボードの **サブスクリプショングループ**ページに保存したサブスクリプショングループをプログラムで管理します。これは、SMS とメールの両方のサブスクリプショングループに適用されます。<br><br> 購読グループの作成に関するガイダンスをお探しですか？<a href='/docs/user_guide/message_building_by_channel/sms/sms_subscription_group/'>SMS購読グループと</a> <a href='/docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/'>Eメール購読</a>グループの記事をチェックする。"
 
 guide_featured_title: ""
 guide_featured_list:

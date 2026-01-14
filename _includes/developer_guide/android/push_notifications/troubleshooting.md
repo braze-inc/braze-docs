@@ -1,11 +1,45 @@
-# Troubleshooting
+## Understanding the Braze push workflow
 
-> This article provides several Android troubleshooting scenarios.
-
-## Understanding the Braze workflow
 The Firebase Cloud Messaging (FCM) service is Google's infrastructure for push notifications sent to Android applications. Here is the simplified structure of how push notifications are enabled for your users' devices and how Braze can send push notifications to them:
 
+```mermaid
+---
+config:
+  theme: mc
+---
+sequenceDiagram
+  participant Device as User Device
+  participant App as Android App
+  participant BrazeSDK as Braze SDK
+  participant BrazeAPI as Braze Server
+  participant Firebase as Google Firebase
+  Note over Device, Firebase: Register Option 1<br/>Register Automatically using `com_braze_firebase_cloud_messaging_registration_enabled` in braze.xml
+  App ->> Braze: App initializes Braze with the first Braze call<br>This could be automatic session handling
+  BrazeSDK ->> App: Get push token from Firebase Manager
+  BrazeSDK ->> BrazeAPI: Send push token to Braze Server
+  Note right of BrazeAPI: Braze will remove push token from any<br>other user who may have previously<br> been logged in on the same device.
+  Note over Device, Firebase: Register Option 2<br/>Manual registration.
+  App ->> BrazeSDK: App sets `Braze.registeredPushToken`
+  BrazeSDK ->> BrazeAPI: Send push token to Braze Server
+  Note right of BrazeAPI: Braze will remove push token from any<br>other user who may have previously<br> been logged in on the same device.  
+  Note over Device, Firebase: Push permission
+  BrazeAPI ->> BrazeSDK: In-App Message containing push prompt
+  BrazeSDK -> App: In-App Message is displayed
+  App -> BrazeSDK: User requests permissions
+  BrazeSDK -> App: Displays the Push Authorization prompt
+  BrazeSDK -> BrazeAPI: If authorized and `com_braze_optin_when_push_authorized`, Opt-In value is sent.
+  Note over Device, Firebase: Push Notification Is Sent
+  BrazeAPI ->> Firebase: Sends push message 
+  Firebase ->> Device: Push message sent
+  Device ->> App: Android will send the push to the App.<br>This could be blocked to Do Not Disturb, Power Saving Mode, etc.
+  App ->> BrazeSDK: Message is sent to BrazeFirebaseMessagingService
+  BrazeSDK ->> Device: SDK will check if the push is from Braze.<br>If so, push data is transformed into a Push Notification and displayed.
+
+```
+
+
 ### Step 1: Configuring your Google Cloud API key
+
 In developing your app, you'll need to provide the Braze Android SDK with your Firebase sender ID. Additionally, you'll need to provide an API Key for server applications to the Braze dashboard. Braze will use this API key to send messages to your devices. You will also need to check that FCM service is enabled in Google Developer's console. 
 
 {% alert note %}
@@ -13,12 +47,15 @@ A common mistake during this step is using the app identifier API key instead of
 {% endalert %}
 
 ### Step 2: Devices register for FCM and provide Braze with push tokens
+
 In typical integrations, the Braze Android SDK will handle registering devices for FCM capability. This will usually happen immediately upon opening the app for the first time. After registration, Braze will be provided with an FCM Registration ID, which is used to send messages to that device specifically. We will store the Registration ID for that user, and that user will become "push registered" if they previously did not have a push token for any of your apps.
 
 ### Step 3: Launching a Braze push campaign
+
 When a push campaign is launched, Braze will make requests to FCM to deliver your message. Braze will use the API key copied in the dashboard to authenticate and verify that we can send push notifications to the push tokens provided.
 
 ### Step 4: Removing invalid tokens
+
 If FCM informs us that any of the push tokens we were attempting to send a message to are invalid, we remove those tokens from the user profiles they were associated with. If users have no other push tokens, they will no longer show up as "Push Registered" under the **Segments** page.
 
 For more details about FCM, visit [Cloud messaging](https://firebase.google.com/docs/cloud-messaging/).
@@ -38,6 +75,8 @@ Your push messages might not be sending because of the following situations:
 - Your credentials exist in the wrong Google Cloud Platform project ID (wrong sender ID).
 - Your credentials have the wrong permission scope.
 - You uploaded wrong credentials to the wrong Braze workspace (wrong sender ID).
+
+For other issues that may prevent you from sending a push message, refer to [User Guide: Troubleshooting Push Notifications]({{site.baseurl}}/user_guide/message_building_by_channel/push/troubleshooting/).
 
 ### No "push registered" users showing in the Braze dashboard (prior to sending messages)
 
@@ -162,4 +201,3 @@ If the deep link [works correctly with ADB](https://developer.android.com/traini
 ```xml
 <bool name="com_braze_push_deep_link_back_stack_activity_enabled">false</bool>
 ```
-

@@ -8,9 +8,9 @@ description: "This reference page notes the operators that Liquid supports, as w
 
 # Operators
 
-> Liquid supports many [operators][25] that can be used in your conditional statements. This page covers the operators that Liquid supports and provides use cases of how you can use them in your messages.
+> Liquid supports many [operators](https://docs.shopify.com/themes/liquid/basics/operators) that can be used in your conditional statements. This page covers the operators that Liquid supports and provides use cases of how you can use them in your messages.
 
-This table lists the operators that are supported. Note that parentheses are invalid characters in Liquid and prevents your tags from working.
+This table lists the operators that are supported. Note that parentheses are invalid characters in Liquid and prevent your tags from working.
 
 |   Syntax| Operator Description|
 |---------|-----------|
@@ -29,7 +29,7 @@ This table lists the operators that are supported. Note that parentheses are inv
 
 Let's go through a few tutorials to learn how to use these operators for your marketing campaigns:
 
-### Choose message with an integer custom attribute
+### Choose a message with an integer custom attribute
 
 Let's send push notifications with personalized promotional discounts to users who have or haven't made purchases. The push notification will use an integer custom attribute called `total_spend` to check a user's total spend.
 
@@ -61,7 +61,7 @@ Need a sign to update your wardrobe? We added a 15% discount code to your accoun
 ```
 {% endraw %}
 
-![A push notification composer with the full Liquid code from the tutorial.][13]{: width="100%"}
+![A push notification composer with the full Liquid code from the tutorial.]({% image_buster /assets/img/liquid-if-totalspend.png %}){: width="100%"}
 
 {% details Full Liquid code %}
 {% raw %}
@@ -75,7 +75,7 @@ Need a sign to update your wardrobe? We added a 15% discount code to your accoun
 {% endraw %}
 {% enddetails %}
 
-Now if a user's "Total Spend" custom attribute is greater than `0`, they will get the message:
+Now, if a user's "Total Spend" custom attribute is greater than `0`, they will get the message:
 
 ```
 Surprise! We added a 15% discount code to your account that automatically applies to your next order.
@@ -86,7 +86,7 @@ If a user's "Total Spend" custom attribute does not exist or is equal to `0`, th
 Need a sign to update your wardrobe? We added a 15% discount code to your account that will automatically apply to your first order.
 ```
 
-### Choose message with a string custom attribute
+### Choose a message with a string custom attribute
 
 Let's send push notifications to users, and personalize the message based on each user's most recently played game. This will use a string custom attribute called `recent_game` to check which game a user has last played.
 
@@ -110,11 +110,11 @@ Your fleet awaits your next orders. Log on when you're ready to rejoin the war f
 {% endraw %}
 
 {: start="3"}
-3. Use the `elsif` tag with the does not equal (`!=`) and "and" (`&&`) operators to check if the user has a recent game (meaning the value isn't blank), and that the game isn't *Awkward Dinner Party* or *Proxy War 3: War of Thirst*. Then, create a message to send to those users.
+3. Use the `elsif` tag with the "does not equal" (`!=`) and "and" (`and`) operators to check if the user has a recent game (meaning the value isn't blank), and that the game isn't *Awkward Dinner Party* or *Proxy War 3: War of Thirst*. Then, create a message to send to those users.
 
 {% raw %}
 ```liquid
-{% elsif {{custom_attribute.${recent_game}}} != blank && 'Awkward Dinner Party' or 'Proxy War 3: War of Thirst' %}
+{% elsif {{custom_attribute.${recent_game}}} != blank and {{custom_attribute.${recent_game}}} != 'Awkward Dinner Party' and {{custom_attribute.${recent_game}}} != 'Proxy War 3: War of Thirst' %}
 Limited Time Deal! Get 15% off our best-selling classics!
 ```
 {% endraw %}
@@ -145,7 +145,7 @@ Hey! I've got a deal for you. Buy 2 of our newest releases and get 10% off!
 You are formally invited to our next dinner party. Log on next week for another round of delectable dishes and curious conversations.
 {% elsif {{custom_attribute.${recent_game}}} == 'Proxy War 3: War of Thirst' %}
 Your fleet awaits your next orders. Log on when you're ready to rejoin the war for hydration.
-{% elsif {{custom_attribute.${recent_game}}} != blank && 'Awkward Dinner Party' or 'Proxy War 3: War of Thirst' %}
+{% elsif {{custom_attribute.${recent_game}}} != blank and {{custom_attribute.${recent_game}}} != 'Awkward Dinner Party' and {{custom_attribute.${recent_game}}} != 'Proxy War 3: War of Thirst' %}
 Limited Time Deal! Get 15% off our best-selling classics!
 {% else %}
 Hey! I've got a deal for you. Buy 2 of our newest releases and get 10% off!
@@ -154,7 +154,7 @@ Hey! I've got a deal for you. Buy 2 of our newest releases and get 10% off!
 {% endraw %}
 {% enddetails %}
 
-![A push notification composer with the full Liquid code from the tutorial.][14]
+![A push notification composer with the full Liquid code from the tutorial.]({% image_buster /assets/img/liquid-if-elsif-games.png %})
 
 Now, if a user last played *Awkward Dinner Party*, they'll receive this message:
 
@@ -216,13 +216,8 @@ Stream now!
 {% endraw %}
 {% enddetails %}
 
-![A push notification composer with the full Liquid code from the tutorial.][26]
+![A push notification composer with the full Liquid code from the tutorial.]({% image_buster /assets/img/abort-if.png %})
 
-You can also [abort messages][1] based on Connected Content.
+You can also [abort messages]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/) based on Connected Content.
 
 
-[1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/
-[13]: {% image_buster /assets/img/liquid-if-totalspend.png %}
-[14]: {% image_buster /assets/img/liquid-if-elsif-games.png %}
-[25]: https://docs.shopify.com/themes/liquid/basics/operators
-[26]: {% image_buster /assets/img/abort-if.png %}

@@ -1,6 +1,6 @@
 ---
-nav_title: Managing Content
-article: Managing Content
+nav_title: Manage content
+article_title: Manage content
 description: "This is an overview of how content is managed on Braze Docs."
 page_order: 2 
 noindex: true
@@ -61,7 +61,7 @@ Replace the following.
 ```markdown
 ---
 nav_title: Contributing to Braze Docs
-article: Contributing to Braze Docs
+article_title: Contributing to Braze Docs
 description: "Here's what you need to start contributing to Braze Docs!"
 page_order: 0
 search_tag: Contributing
@@ -302,7 +302,7 @@ Your cross-reference link should be similar to the following:
 
 {% raw %}
 ```markdown
-Before continuing, [create your SSH token]({{site.baseurl}}/docs/developer_guide/platform_wide/sdk_authentication).
+Before continuing, [create your SSH token]({{site.baseurl}}/dev_guide/auth).
 ```
 {% endraw %}
 

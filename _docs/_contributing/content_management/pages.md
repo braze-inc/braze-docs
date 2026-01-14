@@ -1,12 +1,12 @@
 ---
 nav_title: Pages
-article: Managing Pages
+article_title: Manage pages
 description: "Learn how to create, modify, and remove pages on Braze Docs."
 page_order: 0
 noindex: true
 ---
 
-# Managing pages
+# Manage pages
 
 > Learn how to create, modify, and remove pages on Braze Docs. To create or reorder a section instead, see [Sections]({{site.baseurl}}/contributing/content_management/sections/). For general information about pages, see [About content management]({{site.baseurl}}/contributing/content_management/#pages).
 
@@ -31,15 +31,21 @@ Replace `PAGE_TITLE` with the title of your page, which should follow the [Braze
 
 ### Step 2: Add a template
 
-Copy and paste one of the following templates into your Markdown file. For more information, see [Templates]({{site.baseurl}}/contributing/content_types/).
+Copy and paste one of the following templates into your Markdown file, and then customize it. For more information, see [Templates]({{site.baseurl}}/contributing/content_types/).
 
-#### Basic template
+{% tabs local %}
+{% tab Basic template %}
 
 {% multi_lang_include contributing/templates/basic.md %}
+{% endtab %}
 
-#### Technology partner template
-
+{% tab Technology partner template %}
 {% multi_lang_include contributing/templates/technology_partner.md %}
+{% endtab %}
+{% endtabs %}
+
+![Diagram showing the components of a page, such as breadcrumbs, article title, description, and table of contents.]({% image_buster /assets/img/contributing/article_anatomy.png %})
+<sup>*The [Creating a Content Card]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/) page uses the [how-to guide]({{site.baseurl}}/contributing/content_types/#how-to-guides) and [reference]({{site.baseurl}}/contributing/content_types/#references) templates.*</sup>
 
 ## Writing content
 

@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: Query Invalid Phone Numbers"
+nav_title: "GET: Query invalid phone numbers"
 article_title: "GET: Query Invalid Phone Numbers"
 search_tag: Endpoint
 page_order: 1
@@ -53,8 +53,6 @@ curl --location --request GET 'https://rest.iad-01.braze.com/sms/invalid_phone_n
 Entries are listed in descending order.
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "sms": [
     {

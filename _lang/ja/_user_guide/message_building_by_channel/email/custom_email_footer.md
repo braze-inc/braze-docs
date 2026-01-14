@@ -12,7 +12,7 @@ channel:
 
 > Liquid 属性 {% raw %}`{{${email_footer}}}`{% endraw %} を使用して個々のメールにテンプレート化できるカスタムメールフッターを、ワークスペース全体で設定できます。
 
-カスタムメールフッターを使うことで、メールテンプレートやメールキャンペーンごとに新しいフッターを作成する必要がなくなる。カスタムフッターに加えた変更は、新規および既存のすべてのメールキャンペーンに反映される。[CAN-SPAM法（2003年）を](https://www.ftc.gov/tips-advice/business-center/guidance/can-spam-act-compliance-guide-business)遵守するためには、Eメールにあなたの会社の物理的な住所と配信停止リンクを含める必要があることを覚えておいてほしい。
+カスタムメールフッターを使うことで、メールテンプレートやメールキャンペーンごとに新しいフッターを作成する必要がなくなる。新規および既存のすべてのメール キャンペーンには、カスタムフッタに加えた変更が反映されます。[CAN-SPAM法（2003年）を](https://www.ftc.gov/tips-advice/business-center/guidance/can-spam-act-compliance-guide-business)遵守するためには、Eメールにあなたの会社の物理的な住所と配信停止リンクを含める必要があることを覚えておいてほしい。
 
 {% alert warning %}
 前述の要件を満たすカスタムフッターにすることは、お客様の責任です。
@@ -22,18 +22,13 @@ channel:
 
 カスタムフッターを作成または編集するには、以下のようにする：
 
-1. [**設定**] > [**メール設定**] に移動します。
+1. **Settings** > **Email Preferences** > **Subscription Pages and Footers**に移動します。
+2. **カスタムフッタ**セクションに移動し、カスタムフッタをオンにします。
+3. **Edit**を選択し、**Compose**セクションでフッタを編集します。
+4. **プレビュー**を選択して、メールフッタが顧客の受信トレイでどのように耳をアプリするかをプレビューします。オプションで、**Copy プレビュー link**を選択して、ランダムユーザーのメールがどのように見えるかを示す共有可能なプレビューリンクを生成し、コピーすることができます。リンクは7日間有効であり、それ以降は再生成が必要になります。
+5. テストメッセージを送信します。 
 
-{% alert note %}
-[古いナビゲーション]({{site.baseurl}}/navigation) を使用している場合、このページは**Email Settings** と呼ばれ、**Manage Settings** の下にあります。
-{% endalert %}
-
-{: start="2"}
-2\.**カスタムフッターセクションに**行き、カスタムフッターをオンにする。
-3\.**Compose**セクションでフッタを編集します。
-4. テストメッセージを送信します。 
-
-![カスタムフッタの例。][20]
+![カスタムフッタの例。]({% image_buster /assets/img_archive/custom_footer.png %})
 
 デフォルトのフッターでは、属性 {% raw %}`{{${set_user_to_unsubscribed_url}}}`{% endraw %} と物理的な住所を使用しています。このデフォルトを使用する場合は、必ず**<other>**を**Protocol**に選択してください。
 
@@ -41,7 +36,7 @@ channel:
 CAN-SPAM規制に準拠するため、カスタムフッターには{% raw %}`{{${set_user_to_unsubscribed_url}}}`{% endraw %} を含める必要がある。この属性がないと、カスタムフッターを保存することができない。
 {% endalert %}
 
-![カスタムフッターに必要なプロトコルとURLの値。][24]{: style="max-width:50%;"}
+![カスタムフッターに必要なプロトコルとURLの値。]({% image_buster /assets/img_archive/email_unsub_protocol.png %}){: style="max-width:50%;"}
 
 ## 配信停止リンクのないフッター
 
@@ -49,11 +44,11 @@ CAN-SPAM規制に準拠するため、カスタムフッターには{% raw %}`{{
 
 メール作成者の警告は次のとおりです。
 
-![フッターなしで構成された電子メールの例。][21]
+![フッターなしで構成された電子メールの例。]({% image_buster /assets/img_archive/no_unsub_link_warning.png %})
 
 キャンペーンコンポーザーの警告は次のとおりです。
 
-![フッターなしで作成されたキャンペーン。][22]
+![フッターなしで作成されたキャンペーン。]({% image_buster /assets/img_archive/no_footer_test.png %})
 
 ### カスタム配信停止リンクの作成
 
@@ -95,10 +90,5 @@ CAN-SPAM規制に準拠するため、カスタムフッターには{% raw %}`{{
 
 プレーンテキストのフッターを含めない場合、Brazeは自動的にHTMLフッターからフッターを作成する。カスタムフッターの作成が完了したら、[**保存**] をクリックする。
 
-![[カスタムプレーンテキストフッターを設定] オプションを選択したメール。][23]{: style="max-width:70%" }
+![[カスタムプレーンテキストフッターを設定] オプションを選択したメール。]({% image_buster /assets/img_archive/custom_footer_save_changes.png %}){: style="max-width:70%" }
 
-[20]: {% image_buster /assets/img_archive/custom_footer.png %}
-[21]: {% image_buster /assets/img_archive/no_unsub_link_warning.png %}
-[22]: {% image_buster /assets/img_archive/no_footer_test.png %}
-[23]: {% image_buster /assets/img_archive/custom_footer_save_changes.png %}
-[24]: {% image_buster /assets/img_archive/email_unsub_protocol.png %}

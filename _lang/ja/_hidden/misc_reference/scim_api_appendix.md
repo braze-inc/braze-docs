@@ -32,6 +32,7 @@ Braze では、アプリグループはワークスペースに改名されま�
 | キー | required | データタイプ | 説明 |
 | --- | --- | --- | --- |
 | `companyPermissions` | オプション | 配列 | [会社許可文字列](#company) テーブルからの会社レベルの許可文字列の配列。文字列の存在は、対応する許可を持つユーザに対応します。 |
+| `roles` | オプション | 配列 | [ロールオブジェクト](#role-object)の配列。 |
 | `appGroup` | required | 配列 | [ワークスペース許可オブジェクト](#workspace-permission-object)の配列。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
@@ -69,6 +70,16 @@ Braze では、アプリグループはワークスペースに改名されま�
 | `teamPermissions` | required | 配列 | [チーム許可文字列](#team) テーブルからのチームレベルの許可文字列の配列。文字列の存在は、指定されたチームに対する対応する許可を持つユーザーに対応します。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
+## 役割オブジェクト
+
+有効なロールオブジェクトは、以下のキーと値のペアを持つJSONオブジェクトである：
+
+| キー | required | データタイプ | 説明 |
+| --- | --- | --- | --- |
+| `roleName` | オプション | string | ユーザーに割り当てられているロールの名前。 |
+| `roleId` | `roleName` がない場合は必須 | string | ロールの ID。ロールを指定する代替方法として機能します。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
+
 ## 付録
 
 ### 会社の許可文字列 {#company}
@@ -86,6 +97,7 @@ Braze では、アプリグループはワークスペースに改名されま�
 | --- | --- |
 | 管理者 | `admin` |
 | アクセスキャンペーン、キャンバス、カード、セグメント、メディアライブラリー | `basic_access` |
+| キャンバスの承認と拒否 | `approve_deny_campaigns` |
 | キャンペーン、キャンバスの送信 | `send_campaigns_canvases` |
 | カードの発行 | `publish_cards` |
 | セグメントの編集 | `edit_segments` |
@@ -116,6 +128,7 @@ Braze では、アプリグループはワークスペースに改名されま�
 | --- | --- |
 | 管理者 | `admin` |
 | アクセスキャンペーン、キャンバス、カード、セグメント、メディアライブラリー | `basic_access` |
+| キャンバスの承認と拒否 | `approve_deny_campaigns` |
 | キャンペーン、キャンバスの送信 | `send_campaigns_canvases` |
 | カードの発行 | `publish_cards` |
 | セグメントの編集 | `edit_segments` |

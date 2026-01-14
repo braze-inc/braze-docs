@@ -1,5 +1,5 @@
 ---
-nav_title: ビデオ・チュートリアル
+nav_title: ビデオチュートリアル
 layout: featured_video
 video_id: XY5uXoKIvFY
 video_source: youtube
@@ -120,6 +120,5 @@ noindex: true
 
 ### まだ迷っていますか？
 
-この記事がお役に立たなかった場合は、フィードバックを残すか、[サポートチケット][support]を開封してください！
+この記事がお役に立たなかった場合は、フィードバックを残すか、[サポートチケット]({{site.baseurl}}/braze_support/)を開封してください！
 
-[support]: {{site.baseurl}}/braze_support/

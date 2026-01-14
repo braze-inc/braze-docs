@@ -1,12 +1,12 @@
 ## Prerequisites
 
-Before you can use Braze Content Cards, you'll need to integrate the [Braze Android SDK]({{site.baseurl}}/developer_guide/platforms/android/sdk_integration/) into your app. However, no additional setup is required.
+Before you can use Braze Content Cards, you'll need to integrate the [Braze Android SDK]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android) into your app. However, no additional setup is required.
 
 ## Google fragments
 
 In Android, the Content Cards feed is implemented as a [fragment](https://developer.android.com/guide/components/fragments.html) available in the Braze Android UI project. The [`ContentCardsFragment`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html) class will automatically refresh and display the contents of the Content Cards and log usage analytics. The cards that can appear in a user's `ContentCards` are created on the Braze dashboard.
 
-To learn how to add a fragment to an activity, see [Google's fragments documentation](https://developer.android.com/guide/fragments#Adding "Android Documentation: Fragments").
+To learn how to add a fragment to an activity, see [Google's fragments documentation](https://developer.android.com/guide/fragments#Adding).
 
 ## Card types and properties
 
@@ -22,11 +22,14 @@ The [base card](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android
 |`getViewed()` | Returns a boolean reflects if the card is read or unread by the user.|
 |`getExtras()` | Returns a map of key-value extras for this card.|
 |`getCreated()`  | Returns the unix timestamp of the card's creation time from Braze.|
-|`getIsPinned` | Returns a boolean that reflects whether the card is pinned.|
+|`isPinned` | Returns a boolean that reflects whether the card is pinned.|
 |`getOpenUriInWebView()`  | Returns a boolean that reflects whether Uris for this card should be opened <br> in the Braze WebView or not.|
 |`getExpiredAt()` | Gets the expiration date of the card.|
-|`getIsRemoved()` | Returns a boolean that reflects whether the end user has dismissed this card.|
-|`getIsDismissible()`  | Returns a boolean that reflects whether the card is pinned.|
+|`isRemoved()` | Returns a boolean that reflects whether the end user has dismissed this card.|
+|`isDismissibleByUser()`  | Returns a boolean that reflects whether the card is dismissible by the user.|
+|`isClicked()` | Returns a boolean that reflects the clicked state of this card.|
+|`isDismissed` | Returns a boolean that reflects whether the card has been dismissed. Set to `true` to mark the card as dismissed. If a card is already marked as dismissed, it cannot be marked as dismissed again.|
+|`isControl()` | Returns a boolean if this card is a control card and should not be rendered.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Image only {#banner-image-card-for-android}
@@ -64,6 +67,7 @@ A classic card without an image included will result in a [text announcement car
 |`getUrl()` | Returns the URL that will be opened after the card is clicked. It can be a HTTP(s) URL or a protocol URL. | 
 |`getDomain()` | Returns the link text for the property URL. |
 |`getImageUrl()` | Returns the URL of the card's image, applies only to the classic Short News Card. |
+|`isDismissed` | Returns a boolean that reflects whether the card has been dismissed. Set to `true` to mark the card as dismissed. If a card is already marked as dismissed, it cannot be marked as dismissed again. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Card methods
@@ -74,5 +78,4 @@ All [`Card`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sd
 |---|---|
 |`logImpression()` | Manually log an impression to Braze for a particular card. |
 |`logClick()` | Manually log a click to Braze for a particular card. |
-|`setIsDismissed()` | Manually log a dismissal to Braze for a particular card. If a card is already marked as dismissed, it cannot be marked as dismissed again. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }

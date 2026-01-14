@@ -1,5 +1,5 @@
 ---
-nav_title: Conversion Correlation
+nav_title: Conversion correlation
 article_title: Conversion Correlation
 alias: /conversion_correlation/
 page_order: 3
@@ -17,11 +17,11 @@ tool:
 
 ## Overview
 
-For every campaign, Braze checks a list of attributes and user behaviors and computes whether users are statistically significantly associated with increases or decreases in each of the [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/) you've chosen for the campaign. We also compute how much more or less likely users with the given attribute or behavior were to convert, and if it's significant, display that on the corresponding side of the table. Users with each attribute or behavior of interest are compared to the rates for the entire campaign audience as a whole. Behaviors and attributes that have no significant correlation with conversion are not shown in the table.
+For every campaign, Braze checks a list of attributes and user behaviors and computes whether users are statistically significantly associated with increases or decreases in each of the [conversion events]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/) you've chosen for the campaign. We also compute how much more or less likely users with the given attribute or behavior were to convert, and if it's significant, display that on the corresponding side of the table. Users with each attribute or behavior of interest are compared to the rates for the entire campaign audience as a whole. Behaviors and attributes that have no significant correlation with conversion are not shown in the table.
 
 To run a conversion correlation analysis, select the conversion event of interest from the dropdown menu.
 
-![Conversion Correlation panel that shows an example with "Select a conversion event" set to "Primary Conversion Event - A" with the Event Setting as "Made Purchase within 12 hours (Any product)".][1]
+![Conversion Correlation panel that shows an example with "Select a conversion event" set to "Primary Conversion Event - A" with the Event Setting as "Made Purchase within 12 hours (Any product)".]({% image_buster /assets/img/convcorr.png %})
 
 ## What is checked?
 
@@ -52,4 +52,3 @@ We check for statistical significance by using the [Wilson confidence interval](
 
 Then, for each of the variables, we also compute the rate at which users with that particular attribute or behavior of interest converted at 95% confidence. By dividing that by the base rate, we're able to measure the ratio. If it's much larger than 1, users with the attribute or behavior are more likely to convert. If it's much less, they're less likely. We display the value of the ratio itself in the table. The value is only displayed if it's far enough from 1 to be significant at the 95% confidence level.
 
-[1]: {% image_buster /assets/img/convcorr.png %}

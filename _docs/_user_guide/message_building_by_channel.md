@@ -1,5 +1,5 @@
 ---
-nav_title: Message Building by Channel
+nav_title: Message building by channel
 article_title: Message Building by Channel
 page_order: 5
 layout: dev_guide
@@ -10,6 +10,9 @@ description: "This landing page covers Braze messaging channels. Messaging chann
 
 guide_featured_title: "Available channels"
 guide_featured_list:
+- name: Banners
+  link: /docs/user_guide/message_building_by_channel/banners/
+  image: /assets/img/braze_icons/table.svg
 - name: Content Cards
   link: /docs/user_guide/message_building_by_channel/content_cards/
   image: /assets/img/braze_icons/table.svg
@@ -22,8 +25,8 @@ guide_featured_list:
 - name: Push Messaging
   link: /docs/user_guide/message_building_by_channel/push/
   image: /assets/img/braze_icons/marker-pin-01.svg
-- name: SMS & MMS
-  link: /docs/user_guide/message_building_by_channel/sms/
+- name: SMS, MMS, and RCS
+  link: /docs/user_guide/message_building_by_channel/sms_mms_rcs/
   image: /assets/img/braze_icons/message-text-circle-01.svg
 - name: Webhooks
   link: /docs/user_guide/message_building_by_channel/webhooks/
@@ -33,6 +36,15 @@ guide_featured_list:
   image: /assets/img/braze_icons/whatsapp.svg
 ---
 
+## Accessibility resources
+
+You can use Braze to create accessible messaging campaigns across each channel. Work with your engineers to ensure that you meet accessibility standards in your implementation. If you’d like additional guidance, we recommend:
+
+- [Accessible Messaging Foundations](https://learning.braze.com/accessible-messaging-foundations): Learn fundamental accessibility principles that apply to brand communications in this Braze Learning course.
+- [Building Accessible Messages]({{site.baseurl}}/help/accessibility/): Learn how to add alt text and structure your content for assistive technologies directly within Braze.
+
+{% multi_lang_include accessibility/feedback.md %}
+
 ## Choosing a message channel
 
 When determining what message channel is best for your campaigns and Canvases, always think about the content and urgency of your message:
@@ -40,10 +52,10 @@ When determining what message channel is best for your campaigns and Canvases, a
 - **Content** is how visually engaging your message is. You can add multimedia and other assets to your copy to make your content more rich.
 - **Urgency** is a measure of how quickly a message is able to notify your user and attract their attention. Notifications the user can immediately view have a high urgency, whereas messages that need the user to log in to your app have a low urgency.
 
-The following matrix illustrates the strengths and weaknesses of key messaging channels in terms of content and urgency. Always think about how urgent and content rich your message should be, then choose the right channel for your campaign.
+The Braze Messaging Matrix streamlines channel selection by mapping **Content Complexity** against **Delivery Urgency**. By balancing these two factors, you can help your message resonate rather than interrupt.
 
 ![Mobile/web push are simple content, high urgency; Emails are rich content, high urgency; In-app/browser messages are simple content, low urgency; Content Cards are low urgency, rich content]({% image_buster /assets/img_archive/messaging_matrix.png %})
 
-To learn more about how you can leverage this matrix, check out our Braze Learning course on [Understanding the Messaging Matrix](https://learning.braze.com/understand-the-messaging-matrix).
+While the matrix highlights core channels, it is adaptable: SMS and WhatsApp, for instance, are high-urgency tools that scale into rich content when utilizing multimedia formats. To learn more about how you can leverage this matrix, check out our Braze Learning course on [Cross-Channel Messaging](https://learning.braze.com/cross-channel-messaging).
 
 <br><br>

@@ -1,5 +1,5 @@
 ---
-nav_title: "Tag \"Nachrichten-Extras\""
+nav_title: Tag für Nachrichten-Extras
 article_title: "Tag \"Nachrichten-Extras\""
 page_order: 1
 description: "Dieser Artikel erklärt, wie Sie das Liquid-Tag \"Nachrichten-Extras\" verwenden und die Syntax überprüfen können."
@@ -30,8 +30,18 @@ Das Tag `message_extras` wird für alle Nachrichtentypen mit Sendeereignis und f
 
 ## So verwenden Sie das Tag `message_extras` 
 
-1. Geben Sie in den Nachrichtentext für den Kanal das Liquid-Tag `message_extras` ein. Oder Sie verwenden das Modal **Personalisierung hinzufügen** und wählen die Option **Nachrichten-Extras** als Personalisierungstyp aus. <br>![Das Modal "Personalisierung hinzufügen" mit ausgewählten Nachrichten-Extras als Personalisierungstyp.][1]{: style="max-width:70%;"}
-2. Geben Sie das [Schlüssel-Wert-Paar]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/) für jedes `message_extras`-Tag ein. <br>![Ein Beispiel für Schlüssel-Wert-Paare für das Tag Nachrichten-Extras. Das Titelfeld lautet "Ihre neuen Favoriten". Die Nachricht enthält Schlüssel-Wert-Paare für das Tag Nachrichten-Extras und den folgenden Satz: "Wir freuen uns, Ihnen eine Auswahl an neuen und spannenden Produkten anbieten zu können, die mit Sicherheit zu Ihren neuen Lieblingsprodukten werden."][2]{: style="max-width:70%;"}
+1. Geben Sie in den Nachrichtentext für den Kanal das Liquid-Tag `message_extras` ein. Oder Sie verwenden das Modal **Personalisierung hinzufügen** und wählen die Option **Nachrichten-Extras** als Personalisierungstyp aus. 
+
+![Das Modal "Personalisierung hinzufügen" mit ausgewählten Nachrichten-Extras als Personalisierungstyp.]({% image_buster /assets/img_archive/message_extras1.png %}){: style="max-width:35%;"}
+
+{: start="2"}
+
+2. Geben Sie das [Schlüssel-Wert-Paar]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/) für jedes `message_extras`-Tag ein. 
+
+![Ein Beispiel für Schlüssel-Wert-Paare für das Tag Nachrichten-Extras. Das Titelfeld lautet "Ihre neuen Favoriten". Die Nachricht enthält Schlüssel-Wert-Paare für das Tag Nachrichten-Extras und den folgenden Satz: "Wir freuen uns, Ihnen eine Auswahl an neuen und spannenden Produkten anbieten zu können, die mit Sicherheit zu Ihren neuen Lieblingsprodukten werden."]({% image_buster /assets/img_archive/message_extras2.png %}){: style="max-width:70%;"}
+
+{: start="3"}
+
 3. Wenn Ihre Kampagne oder Ihr Canvas versendet wurde, hängt Braze die dynamischen Daten zum Sendezeitpunkt an das Feld `message_extras` der Sendeereignisse in Currents oder Snowflake Data Sharing an.
 
 ## Überprüfung der Syntax
@@ -43,6 +53,10 @@ Alle anderen Eingaben, die nicht dem oben beschriebenen Tag-Standard entsprechen
 - Zusätzlicher Text, bevor Schlüssel oder Werte definiert werden
 - Schlüssel und Werte in falscher Reihenfolge 
   - {% raw %}Zum Beispiel, ```{% message_extras :value 123 :key test %}```{% endraw %}
+
+## Senden von Aktionscode-Informationen an Currents
+
+{% multi_lang_include shopify.md section='Liquid promotion codes with Currents' %}
 
 ## Überlegungen
 
@@ -64,5 +78,3 @@ Ja, Sie können `message_extras` in Ihren In-App-Nachrichten verwenden, solange 
 
 {% sdk_min_versions web:5.2.0 android:30.4.0 swift:8.4.0 %}
 
-[1]: {% image_buster /assets/img_archive/message_extras1.png %}
-[2]: {% image_buster /assets/img_archive/message_extras2.png %}

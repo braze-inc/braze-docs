@@ -1,5 +1,5 @@
 ---
-nav_title: Benutzerverwaltung
+nav_title: "Nutzer:in Verwaltung"
 article_title: LINE Benutzerverwaltung
 page_order: 0
 description: "Dieser Artikel befasst sich mit der LINE-Benutzer-ID und wie Sie diese festlegen."
@@ -13,7 +13,7 @@ alias: /line/user_management/
 
 > Die LINE-Benutzer-ID wird im Benutzerprofil-Attribut `native_line_id` gespeichert, das zum Senden von Nachrichten an einen Benutzer im LINE-Kanal verwendet wird. Dieser Artikel beschreibt, wie Sie das Attribut `native_line_id` einstellen und finden können.
 
-Die Benutzerdaten des Kunden werden in einem [Braze-Benutzerprofil]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/) dargestellt. Ein Benutzerprofil speichert Informationen und Attribute über die Benutzer eines Unternehmens, z. B. Vornamen und E-Mail-Adressen. 
+Die Benutzerdaten des Kunden werden in einem [Braze-Benutzerprofil]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/) dargestellt. Ein Benutzerprofil speichert Informationen und Attribute über die Benutzer eines Unternehmens, z. B. Vornamen und E-Mail-Adressen. 
 
 Wenn Sie LINE-Nachrichten über Braze versenden, verwendet Braze das Attribut `native_line_id`, um die Nutzer:innen zu identifizieren, an die die Nachricht gesendet werden soll. Wenn LINE Braze-Webhook-Events sendet, z. B. wenn ein:e Nutzer:in einem Kanal folgt oder auf eine Nachricht antwortet, wird die `native_line_id` verwendet, um das entsprechende Nutzerprofil nachzuschlagen.
 
@@ -43,6 +43,5 @@ Wenn Sie ein Benutzerprofil im Braze-Dashboard anzeigen, können Sie sehen, ob d
 
 Wenn die `native_line_id` eingestellt wurde, wird sie unter **LINE User ID** angezeigt. Andernfalls wird es nicht angezeigt.
 
-![Zeile Kontakteinstellungen auf dem Tab Engagement.][1]{: style="max-width:60%;"}
+![Zeile Kontakteinstellungen auf dem Tab Engagement.]({% image_buster /assets/img/line/line_contact_settings.png %}){: style="max-width:50%;"}
 
-[1]: {% image_buster /assets/img/line/line_contact_settings.png %}

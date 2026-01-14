@@ -33,7 +33,7 @@
 3. Selon les circonstances, les messages in-app téléchargeront ou chargeront les images pertinentes à partir du disque avant de les afficher. Si vous disposez d'une connexion réseau lente ou d'appareils très peu performants, ce processus peut prendre du temps. Veillez à ce que vos images soient optimisées pour être aussi petites que possible.
 {% endcase %}
 
-Pour une discussion plus approfondie de ces scénarios, consultez [la section sur la résolution des problèmes avancés](#troubleshooting-in-app-advanced).
+Pour une discussion plus approfondie de ces scénarios, consultez <a id="troubleshooting-in-app-advanced">la section sur la résolution des problèmes avancés</a>.
 
 ## Problèmes d'analyse des impressions et des clics
 
@@ -50,21 +50,21 @@ Si vous avez défini un délégué de message in-app pour gérer manuellement l'
 
 1. Les déclencheurs mettent du temps à se synchroniser avec l’appareil au démarrage de la session, il peut donc y avoir une condition de concurrence si les utilisateurs enregistrent un événement ou achètent juste après avoir démarré une session. Une possible solution pourrait être de changer la campagne pour qu’elle se déclenche au démarrage de la session, puis de segmenter l’événement ou l’achat prévu. Notez que cela enverrait le message in-app à l’application au prochain démarrage de la session après que l’événement se soit produit.
 
-2. Si la campagne est déclenchée par un début de session ou un événement personnalisé, vous devez vous assurer que cet événement ou cette session est suffisamment fréquent pour déclencher le message. Vérifiez ces données sur les pages [Aperçu][1] (pour les données de session) ou [Événements personnalisés][2]:
+2. Si la campagne est déclenchée par un début de session ou un événement personnalisé, vous devez vous assurer que cet événement ou cette session est suffisamment fréquent pour déclencher le message. Vérifiez ces données sur les pages [Aperçu]({{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/#understanding-your-app-usage-data) (pour les données de session) ou [Événements personnalisés]({{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting):
 
-![Page Événements personnalisés affichant un graphique pour le nombre de fois que l’événement personnalisé Added to Favorites (Ajouté aux favoris) s’est produit sur une période d’un mois][14]
+![La page des événements personnalisés affiche un graphique indiquant le nombre de fois où l'événement personnalisé Ajouté aux favoris s'est produit sur une période d'un mois.]({% image_buster /assets/img_archive/trouble5.png %})
 
 ### Les impressions sont plus faibles qu'auparavant
 
 1. Assurez-vous que personne n'a modifié involontairement le segment ou la campagne depuis le lancement. Nos Journaux de modifications des segments et des campagnes vous informeront sur les changements, qui les a faits et quand.
 
-![Lien pour afficher les modifications sur la page Détails de la campagne avec sept changements depuis que l’utilisateur a vu la campagne pour la dernière fois][10]
+![Lien pour afficher le journal des modifications sur la page des détails de la campagne avec sept modifications depuis que l'utilisateur a consulté la campagne pour la dernière fois]({% image_buster /assets/img_archive/trouble4.png %})
 
 2. Assurez-vous que vous n'avez pas réutilisé votre événement déclencheur dans une campagne de messages in-app distincte avec une priorité plus élevée.
 
 ## Résolution avancée des problèmes {#troubleshooting-in-app-advanced}
 
-La plupart des problèmes de messages in-app peuvent être divisés en deux catégories principales : livraison et affichage. Pour savoir pourquoi un message in-app attendu ne s'est pas affiché sur votre appareil, confirmez que le [message in-app a bien été envoyé à l'appareil](#troubleshooting-in-app-message-delivery), puis [résolvez le problème d'affichage du message.](#troubleshooting-in-app-message-display)
+La plupart des problèmes de messages in-app peuvent être divisés en deux catégories principales : livraison et affichage. Pour savoir pourquoi un message in-app attendu ne s'est pas affiché sur votre appareil, confirmez que le <a id="troubleshooting-in-app-message-delivery">message in-app a bien été envoyé à l'appareil</a>, puis <a id="troubleshooting-in-app-message-display">résolvez le problème d'affichage du message.</a>
 
 ### Résolution des problèmes réception/distribution {#troubleshooting-in-app-message-delivery}
 
@@ -72,19 +72,19 @@ Le SDK demande des messages in-app aux serveurs Braze au démarrage de la sessio
 
 #### Vérifier si les messages sont demandés et retournés
 
-1. Ajoutez vous en tant qu'[utilisateur test]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users) dans le tableau de bord.
+1. Ajoutez vous en tant qu'utilisateur test]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users) sur le tableau de bord.
 2. Configurez une campagne de messages in-app ciblée pour votre utilisateur.
 3. Assurez-vous qu’une nouvelle session se produit dans votre application.
-4. Utilisez les [journaux d’événements utilisateurs]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab) pour vérifier que votre appareil demande des messages in-app au démarrage de la session. Recherchez la requête SDK associée à l’événement de démarrage de session de votre utilisateur test.
+4. Utilisez le journal des événements utilisateurs]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab) pour vérifier que votre appareil demande des messages in-app au démarrage de la session. Recherchez la requête SDK associée à l’événement de démarrage de session de votre utilisateur test.
   - Si votre application était censée demander des messages intégrés déclenchés, vous devriez voir `trigger` dans le champ **Réponses demandées** sous **Données de réponse**.
   - Si votre application était censée demander des messages intégrés originaux, vous devriez voir `in_app` dans le champ **Réponses demandées** sous **Données de réponse**.
-5. Utilisez les [journaux d’événements utilisateurs]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab) pour vérifier si les messages in-app corrects sont renvoyés dans les données de réponse.<br>![]({% image_buster /assets/img_archive/event_user_log_iams.png %})
+5. Utilisez les journaux des événements utilisateurs]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab) pour vérifier si les messages in-app corrects sont renvoyés dans les données de réponse.<br>![]({% image_buster /assets/img_archive/event_user_log_iams.png %})
 
 ##### Résoudre les problèmes de messages non demandés
 
 Si vos messages in-app ne sont pas demandés, il est possible que votre application ne suive pas correctement les sessions, car les messages in-app sont actualisés au démarrage de la session. Assurez-vous également que votre application démarre réellement une session en fonction de la sémantique du délai d’expiration de session de votre application :
 
-![La requête de SDK trouvée dans les journaux des événements utilisateurs affichant un événement de démarrage de session réussi.]({% image_buster /assets/img_archive/event_user_log_session_start.png %})
+![La demande de SDK trouvée dans le journal des événements utilisateurs affichant un événement de démarrage de session réussi.]({% image_buster /assets/img_archive/event_user_log_session_start.png %})
 
 ##### Résoudre les problèmes de messages non renvoyés
 
@@ -126,7 +126,3 @@ Si votre application demande et reçoit avec succès des messages in-app, mais q
 {% endcase %}
 7. Si votre message in-app est déclenché par le démarrage de la session et que vous avez défini un délai d'attente prolongé, cela aura une incidence sur la vitesse à laquelle vous pouvez afficher les messages. Par exemple, si le délai d'expiration de votre session est fixé à 300 secondes, le fait de fermer et de rouvrir l'application en moins de temps que cela n'actualisera pas la session, de sorte qu'un message in-app déclenché par le démarrage d'une session ne s'affichera pas.
 
-[1]: {{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/#understanding-your-app-usage-data
-[2]: {{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting
-[10]: {% image_buster /assets/img_archive/trouble4.png %}
-[14]: {% image_buster /assets/img_archive/trouble5.png %}

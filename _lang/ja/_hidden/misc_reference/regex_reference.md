@@ -9,7 +9,7 @@ hidden: true
 このページは、一般的なトークン、メタ・シーケンス、一般的なトークン、グループ定数などを含む、正規表現のクイック・リファレンス・ガイドとして役立つ。
 
 {% tabs %}
-{% tab 共通トークン %}
+{% tab Common tokens %}
 
 | 共通トークン |
 | ------------- |
@@ -38,7 +38,7 @@ hidden: true
 | 非単語境界 | `\B` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
-{% tab メタ・シークエンス %}
+{% tab Meta sequence %}
 
 | メタ・シークエンス |
 | ------------- |
@@ -77,7 +77,7 @@ hidden: true
 | 任意の文字をリテラルにする | `\` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
-{% tab 一般トークン %}
+{% tab General tokens %}
 
 | 一般トークン |
 | -------------- |
@@ -88,7 +88,7 @@ hidden: true
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
-{% tab 文字クラス修飾子 %}
+{% tab Character class modifiers %}
 
 | 文字クラス修飾子 |
 | ------------------------- |
@@ -109,7 +109,7 @@ hidden: true
 | 単語文字 | `[:>:]` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
-{% tab グループ定数 %}
+{% tab Group constants %}
 
 | グループ定数 |
 | --------------- |
@@ -166,7 +166,7 @@ hidden: true
 | 正規表現エンジン修飾子 | `(*NO_START_OPT)` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
-{% tab 量指定子 %}
+{% tab Quantifiers %}
 
 | 量指定子 |
 | ----------- |
@@ -181,7 +181,7 @@ hidden: true
 | 所有量指定子 | `a*+` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
-{% tab アンカー %}
+{% tab Anchors %}
 
 | アンカー |
 | ------- |
@@ -196,7 +196,7 @@ hidden: true
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
 
-{% tab フラグと修飾子 %}
+{% tab Flags and modifiers %}
 
 | フラグと修飾子 |
 | ------------------- | 
@@ -213,7 +213,7 @@ hidden: true
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
-{% tab 置換 %}
+{% tab Substitution %}
 
 | 代替 |
 | ------------ |

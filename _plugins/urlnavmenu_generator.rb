@@ -221,7 +221,7 @@ module Jekyll
                     page_key = ma[@page_key_index].to_s.gsub(/[^0-9a-z]/i, '')
                 end
 
-                # Check if it has a page assocated with it
+                # Check if it has a page associated with it
                 unless menu_hash[@menu_nav_pages].nil?
                   if menu_hash[@menu_nav_pages][ma[@page_key_index]].is_a?( Jekyll::Document)
                     curinfo = menu_hash[@menu_nav_pages][ma[@page_key_index]]

@@ -5,7 +5,7 @@ search_tag: Endpoint
 page_order: 2
 layout: api_page
 page_type: reference
-description: "Dieser Artikel beschreibt die Details des Braze-Endpunkts Ungültige Telefonnummern entfernen."
+description: "Dieser Artikel beschreibt die Details des Endpunkts Ungültige Telefonnummern entfernen von Braze."
 
 ---
 {% api %}
@@ -24,11 +24,11 @@ Damit können Sie Telefonnummern erneut validieren, nachdem sie als ungültig ma
 
 Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/basics#rest-api-key/) mit der Berechtigung `sms.invalid_phone_numbers.remove`.
 
-## Preisgrenze
+## Rate-Limit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
-## Körper der Anfrage
+## Anfragetext
 
 ```
 Content-Type: application/json
@@ -41,11 +41,11 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-## Parameter anfordern
+## Parameter der Anfrage
 
-| Parameter | Erforderlich | Daten Typ | Beschreibung |
+| Parameter | Erforderlich | Datentyp | Beschreibung |
 | ----------|-----------| ---------|------ |
-| `phone_number` | Erforderlich | Array von Zeichenketten im Format e.164  | Eine Reihe von bis zu 50 Telefonnummern zum Ändern. |
+| `phone_number` | Erforderlich | String-Array im Format e.164  | Eine Reihe von bis zu 50 Telefonnummern zum Ändern. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Beispiel Anfrage

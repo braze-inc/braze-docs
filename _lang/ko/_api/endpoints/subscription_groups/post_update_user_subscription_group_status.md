@@ -21,7 +21,7 @@ description: "이 문서에서는 사용자의 구독 그룹 상태 Braze 엔드
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#8895e87e-6324-47a3-a833-adf29a258bb9 {% endapiref %}
 
-예제를 보거나 **SMS 구독 그룹에** 대한 이 엔드포인트를 테스트하려면 다음과 같이 하세요:
+**SMS 및 RCS 가입 그룹에** 대한 이 엔드포인트의 예시를 보거나 테스트하려면 다음과 같이 하세요:
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#72558b32-7dbe-4cba-bd22-a7ce513076dd {% endapiref %}
 
@@ -36,7 +36,7 @@ description: "이 문서에서는 사용자의 구독 그룹 상태 Braze 엔드
 ## 요청 본문
 
 {% tabs %}
-{% tab SMS %}
+{% tab SMS 및 RCS %}
 ```
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
@@ -48,10 +48,10 @@ Authorization: Bearer YOUR-REST-API-KEY
    "subscription_state": (required, string) available values are "unsubscribed" (not in subscription group) or "subscribed" (in subscription group),
    "external_id": (required*, array of strings) the external ID of the user or users, may include up to 50 IDs,
    "phone": (required*, array of strings in E.164 format) The phone number of the user (must include at least one phone number and at most 50 phone numbers),
-   // SMS subscription group - one of external_id or phone is required
+   // SMS and RCS subscription group - one of external_id or phone is required
  }
 ```
-\* SMS 구독 그룹: `external_id` 또는 `phone` 만 허용됩니다.
+\* SMS 및 RCS 구독 그룹: `external_id` 또는 `phone` 만 허용됩니다.
 
 {% endtab %}
 {% tab 이메일 %}
@@ -88,7 +88,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | `subscription_state` | 필수 | 문자열 | 사용 가능한 값은 `unsubscribed` (구독 그룹에 속하지 않음) 또는 `subscribed` (구독 그룹에 속함)입니다. |
 | `external_id` | 필수* | 문자열 배열 | 사용자(또는 사용자)의 `external_id` 에는 최대 50개의 `id`을 포함할 수 있습니다. |
 | `email` | 필수* | 문자열 또는 문자열 배열 | 사용자의 이메일 주소는 문자열 배열로 전달할 수 있습니다. 이메일 주소를 하나 이상(최대 50개) 포함해야 합니다. <br><br>동일한 워크스페이스에서 여러 사용자(`external_id`)가 동일한 이메일 주소를 공유하는 경우 이메일 주소를 공유하는 모든 사용자에게 구독 그룹 변경 사항이 업데이트됩니다. |
-| `phone` | 필수* | 문자열의 [E.164](https://en.wikipedia.org/wiki/E.164) 형식 | 사용자의 전화번호는 문자열 배열로 전달할 수 있습니다. 전화번호를 하나 이상 포함해야 합니다(최대 50개까지 가능). |
+| `phone` | 필수* | 문자열의 [E.164](https://en.wikipedia.org/wiki/E.164) 형식 | 사용자의 전화번호는 문자열 배열로 전달할 수 있습니다. 전화번호를 하나 이상 포함해야 합니다(최대 50개). <br><br>동일한 워크스페이스에서 여러 사용자(`external_id`)가 동일한 전화번호를 공유하는 경우 전화번호를 공유하는 모든 사용자에게 동일한 가입 그룹 변경사항이 업데이트됩니다. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 요청 예시
@@ -108,7 +108,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/subscription/statu
 '
 ```
 
-### SMS
+### SMS 및 RCS
 
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/subscription/status/set' \

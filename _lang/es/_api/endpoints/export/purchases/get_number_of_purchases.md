@@ -24,7 +24,7 @@ Para utilizar este punto final, necesitarás una [clave de API]({{site.baseurl}}
 
 ## Límite de velocidad
 
-{% multi_lang_include rate_limits.md endpoint='lista de productos de compras' %}
+{% multi_lang_include rate_limits.md endpoint='purchases product list' %}
 
 ## Parámetros de la solicitud
 
@@ -64,5 +64,5 @@ Authorization: Bearer YOUR-REST-API-KEY
 {% endapi %}
 
 {% alert tip %}
-Para obtener ayuda con las exportaciones CSV y API, visita [Solución de problemas de exportación]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
+Para obtener ayuda con las exportaciones CSV y API, visita [Solución de problemas de exportación]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/).
 {% endalert %}

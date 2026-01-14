@@ -17,7 +17,7 @@ channel:
 
 ## サイレント通知
 
-[プッシュ通知メッセージを作成する]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message//?tab=android#step-4-compose-your-push-message)際、Android プッシュメッセージはタイトルなしでは送信**できません**。ただし、代わりに1つのスペースを入力できます。メッセージにスペースが1つしか含まれていない場合、無音のプッシュ通知として送信されることを覚えておいてほしい。詳しくは、[サイレント・プッシュ]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/silent_push_notifications/)通知を参照のこと。
+[プッシュ通知メッセージを作成する]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/?tab=android#step-4-compose-your-push-message)際、Android プッシュメッセージはタイトルなしでは送信**できません**。ただし、代わりに1つのスペースを入力できます。メッセージにスペースが1つしか含まれていない場合、無音のプッシュ通知として送信されることを覚えておいてほしい。詳しくは、[サイレント・プッシュ]({{site.baseurl}}/developer_guide/push_notifications/silent/?sdktab=android)通知を参照のこと。
 
 ## 通知グループ
 
@@ -25,7 +25,7 @@ channel:
 
 まず、Androidプッシュ通知キャンペーンを作成し、[**メール作成]**タブの一番上にある[**通知チャネル**]ドロップダウンを探す。
 
-![][28]{: style="max-width:60%;" }
+![]({% image_buster /assets/img_archive/notification_channel_dropdown.png %}){: style="max-width:60%;"}
 
 ドロップダウンから通知チャンネルを選択する。また、[通知チャネル] 設定で不具合が生じた場合に備えて、フォールバックチャネルを選択する必要があります。
 
@@ -33,8 +33,6 @@ channel:
 
 通知 ID を通知チャネル に追加するには、[**通知チャネル**] ドロップダウンメニューの [**通知チャネルを管理**] をクリックし、必須フィールドに入力します。通知チャネルを Braze プラットフォームで使用するには、アプリ上で通知チャネルを定義する必要があります。
 
-![][29]{: style="max-width:80%;" }
+![]({% image_buster /assets/img_archive/notification_channels.png %}){: style="max-width:80%;" }
 
 
-[28]: {% image_buster /assets/img_archive/notification_channel_dropdown.png %}
-[29]: {% image_buster /assets/img_archive/notification_channels.png %}

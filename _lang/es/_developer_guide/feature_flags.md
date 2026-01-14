@@ -1,7 +1,7 @@
 ---
+page_order: 2.5
 nav_title: Conmutador de características
 article_title: Banderas de características para el SDK de Braze
-page_order: 1
 description: "Este artículo de referencia ofrece un resumen de los indicadores de características, incluidos los requisitos previos y los casos de uso."
 tool: Feature Flags
 platform:
@@ -21,7 +21,7 @@ platform:
 > Las banderas de características te permiten habilitar o deshabilitar a distancia la funcionalidad para una selección específica o aleatoria de usuarios. Y lo que es más importante, te permiten activar y desactivar una característica en producción sin necesidad de desplegar código adicional ni actualizar la tienda de aplicaciones. Esto te permite desplegar nuevas características con seguridad y confianza.
 
 {% alert tip %}
-Cuando estés listo para crear tus propias banderas de características, consulta [Crear banderas de características]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/create/).
+Cuando estés listo para crear tus propias banderas de características, consulta [Crear banderas de características]({{site.baseurl}}/developer_guide/feature_flags/create/).
 {% endalert %}
 
 ## Requisitos previos
@@ -51,11 +51,14 @@ Con las feature flags de Braze, podemos desplegar la característica gradualment
 * Habilitaremos esta nueva característica sólo para el 10% de los usuarios para determinar si contamos con el personal adecuado.
 * Si hay algún error, podemos desactivar rápidamente la característica en lugar de apresurarnos a enviar una nueva versión.
 
-Para desplegar gradualmente esta característica, podemos [crear una bandera de característica]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/create/) llamada "Widget de chat en vivo".
+Para desplegar gradualmente esta característica, podemos [crear una bandera de característica]({{site.baseurl}}/developer_guide/feature_flags/create/) llamada "Widget de chat en vivo".
 
 ![Detalles de la feature flag de un ejemplo llamado Widget de Chat en vivo. El ID es enable_live_chat. La descripción de esta bandera de característica dice que el widget de chat en vivo se mostrará en la página de soporte.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-livechat-1.png %})
 
 En el código de nuestra aplicación, sólo mostraremos el botón **Iniciar chat en vivo** cuando esté habilitada la bandera de la característica Braze:
+
+{% tabs %}
+{% tab JavaScript %}
 
 ```javascript
 import {useState} from "react";
@@ -76,8 +79,56 @@ return (<>
   Need help? <button>Email Our Team</button>
   {liveChatEnabled && <button>Start Live Chat</button>}
 </>)
+```
+
+{% endtab %}
+{% tab Java %}
+
+```java
+// Get the initial value from the Braze SDK
+FeatureFlag featureFlag = braze.getFeatureFlag("enable_live_chat");
+Boolean liveChatEnabled = featureFlag != null && featureFlag.getEnabled();
+
+// Listen for updates from the Braze SDK
+braze.subscribeToFeatureFlagsUpdates(event -> {
+  FeatureFlag newFeatureFlag = braze.getFeatureFlag("enable_live_chat");
+  Boolean newValue = newFeatureFlag != null && newFeatureFlag.getEnabled();
+  liveChatEnabled = newValue;
+});
+
+// Only show the Live Chat view if the Braze SDK determines it is enabled
+if (liveChatEnabled) {
+  liveChatView.setVisibility(View.VISIBLE);
+} else {
+  liveChatView.setVisibility(View.GONE);
+}
+```
+
+{% endtab %}
+{% tab Kotlin %}
+
+```kotlin
+// Get the initial value from the Braze SDK
+val featureFlag = braze.getFeatureFlag("enable_live_chat")
+var liveChatEnabled = featureFlag?.enabled
+
+// Listen for updates from the Braze SDK
+braze.subscribeToFeatureFlagsUpdates() { event ->
+  val newValue = braze.getFeatureFlag("enable_live_chat")?.enabled
+  liveChatEnabled = newValue
+}
+
+// Only show the Live Chat view if the Braze SDK determines it is enabled
+if (liveChatEnabled) {
+  liveChatView.visibility = View.VISIBLE
+} else {
+  liveChatView.visibility = View.GONE
+}
 
 ```
+
+{% endtab %}
+{% endtabs %}
 
 ### Controla a distancia las variables de la aplicación
 
@@ -92,6 +143,9 @@ Para configurar remotamente esta característica, crearemos una nueva bandera de
 ![Bandera de característica con propiedades de enlace y texto que dirigen a una página de ventas genérica.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-navigation-link-1.png %})
 
 En nuestra aplicación, utilizaremos métodos getter de Braze para recuperar las propiedades de esta bandera de característica y construir los enlaces de navegación basándonos en esos valores:
+
+{% tabs %}
+{% tab JavaScript %}
 
 ```javascript
 import * as braze from "@braze/web-sdk";
@@ -114,6 +168,40 @@ return (<>
   </div>
 </>)
 ```
+
+{% endtab %}
+{% tab Java %}
+
+```java
+// liveChatView is the View container for the Live Chat UI
+FeatureFlag featureFlag = braze.getFeatureFlag("navigation_promo_link");
+if (featureFlag != null && featureFlag.getEnabled()) {
+  liveChatView.setVisibility(View.VISIBLE);
+} else {
+  liveChatView.setVisibility(View.GONE);
+}
+liveChatView.setPromoLink(featureFlag.getStringProperty("link"));
+liveChatView.setPromoText(featureFlag.getStringProperty("text"));
+
+```
+
+{% endtab %}
+{% tab Kotlin %}
+
+```kotlin
+// liveChatView is the View container for the Live Chat UI
+val featureFlag = braze.getFeatureFlag("navigation_promo_link")
+if (featureFlag?.enabled == true) {
+  liveChatView.visibility = View.VISIBLE
+} else {
+  liveChatView.visibility = View.GONE
+}
+liveChatView.promoLink = featureFlag?.getStringProperty("link")
+liveChatView.promoText = featureFlag?.getStringProperty("text")
+```
+
+{% endtab %}
+{% endtabs %}
 
 Ahora, el día antes de Acción de Gracias, sólo tenemos que cambiar esos valores de propiedad en el panel de Braze.
 
@@ -149,6 +237,9 @@ Para empezar, crearemos una nueva feature flag llamada `enable_checkout_v2`. No 
 
 En nuestra aplicación, comprobaremos si la bandera de característica está habilitada o no y cambiaremos el flujo de pago en función de la respuesta:
 
+{% tabs %}
+{% tab JavaScript %}
+
 ```javascript
 import * as braze from "@braze/web-sdk";
 
@@ -161,9 +252,38 @@ if (featureFlag?.enabled) {
 }
 ```
 
-Configuraremos nuestra prueba A/B en un [Experimento de bandera de características]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/experiments/).
+{% endtab %}
+{% tab Java %}
 
-Ahora, el 50% de los usuarios verán la experiencia antigua, mientras que el otro 50% verá la experiencia nueva. A continuación, podemos analizar las dos variantes para determinar qué flujo de pago dio lugar a una mayor tasa de conversión. {% multi_lang_include metrics.md metric='Tasa de conversión' %}
+```java
+FeatureFlag featureFlag = braze.getFeatureFlag("enable_checkout_v2");
+braze.logFeatureFlagImpression("enable_checkout_v2");
+if (featureFlag != null && featureFlag.getEnabled()) {
+  return new NewCheckoutFlow();
+} else {
+  return new OldCheckoutFlow();
+}
+```
+
+{% endtab %}
+{% tab Kotlin %}
+
+```kotlin
+val featureFlag = braze.getFeatureFlag("enable_checkout_v2")
+braze.logFeatureFlagImpression("enable_checkout_v2")
+if (featureFlag?.enabled == true) {
+  return NewCheckoutFlow()
+} else {
+  return OldCheckoutFlow()
+}
+```
+
+{% endtab %}
+{% endtabs %}
+
+Configuraremos nuestra prueba A/B en un [Experimento de bandera de características]({{site.baseurl}}/developer_guide/feature_flags/experiments/).
+
+Ahora, el 50% de los usuarios verán la experiencia antigua, mientras que el otro 50% verá la experiencia nueva. A continuación, podemos analizar las dos variantes para determinar qué flujo de pago dio lugar a una mayor tasa de conversión. {% multi_lang_include metrics.md metric='Conversion Rate' %}
 
 ![Un experimento de bandera de características que divide el tráfico en dos grupos del 50%.]({% image_buster /assets/img/feature_flags/feature-flag-use-case-campaign-experiment.png %})
 
@@ -188,7 +308,7 @@ Estas son las limitaciones de la bandera de características para los planes gra
 | Característica                                                                                                   | Versión gratuita     | Versión de pago      |
 | :---------------------------------------------------------------------------------------------------------------- | :--------------- | ----------------- |
 | [Banderas de características activas](#active-feature-flags)                                                                     | 10 por espacio de trabajo | 110 por espacio de trabajo |
-| [Experimentos activos de campaña]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/experiments/)          | 1 por espacio de trabajo  | 100 por espacio de trabajo |
+| [Experimentos activos de campaña]({{site.baseurl}}/developer_guide/feature_flags/experiments/)          | 1 por espacio de trabajo  | 100 por espacio de trabajo |
 | [Pasos en Canvas de feature flag]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/feature_flags/) | Sin límites        | Sin límites         |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

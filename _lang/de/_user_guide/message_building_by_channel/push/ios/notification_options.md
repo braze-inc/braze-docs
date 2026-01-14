@@ -1,5 +1,5 @@
 ---
-nav_title: "Benachrichtigungsoptionen"
+nav_title: "Optionen für Benachrichtigungen"
 article_title: iOS-Benachrichtigungsoptionen
 page_order: 2
 page_layout: reference
@@ -19,15 +19,15 @@ channel:
 
 Wenn Sie Ihre Nachrichten kategorisieren und im Benachrichtigungsfeld Ihres Benutzers gruppieren möchten, können Sie über Braze die Funktion Benachrichtigungsgruppen von iOS nutzen.
 
-Erstellen Sie Ihre iOS-Push-Kampagne und suchen Sie dann oben auf der Registerkarte **Verfassen** nach dem Dropdown-Menü **Benachrichtigungsgruppen**.
+Erstellen Sie Ihre iOS Push-Kampagne, gehen Sie dann zum Tab **Einstellungen** und öffnen Sie die Dropdown-Liste **Benachrichtigungsgruppe**.
 
-![][26]{: style="max-width:60%;" }
+![Der Tab "Einstellungen" mit einem Dropdown-Menü "Benachrichtigungsgruppe", das den Wert "Gutscheine" ausgewählt hat.]({% image_buster /assets/img_archive/notification_group_dropdown.png %}){: style="max-width:50%;" }
 
 Wählen Sie Ihre Benachrichtigungsgruppen aus der Dropdown-Liste. Wenn Ihre Einstellungen für die Benachrichtigungsgruppe nicht korrekt sind oder Sie **Keine** aus der Dropdown-Liste auswählen, wird die Nachricht automatisch wie gewohnt an alle definierten Benutzer im Arbeitsbereich gesendet.
 
 Wenn hier keine Benachrichtigungsgruppen aufgeführt sind, können Sie eine mit Hilfe der iOS Thread ID hinzufügen. Sie benötigen eine iOS-Thread-ID für jede Benachrichtigungsgruppe, die Sie hinzufügen möchten. Fügen Sie sie dann zu Ihren Benachrichtigungsgruppen hinzu, indem Sie in der Dropdown-Liste auf **Benachrichtigungsgruppen verwalten** klicken und die erforderlichen Felder im Fenster **iOS Push-Benachrichtigungsgruppen verwalten** ausfüllen, das dann erscheint.
 
-![][27]
+![Fenster zur Verwaltung von iOS Push-Benachrichtigungsgruppen.]({% image_buster /assets/img_archive/managenotgroups.png %}){: style="max-width:70%;" }
 
 Erstellen Sie Ihre iOS-Push-Kampagne, und sehen Sie sich dann den oberen Teil des Editors an. Dort sehen Sie ein Dropdown-Menü mit der Bezeichnung **Benachrichtigungsgruppen**.
 
@@ -82,11 +82,11 @@ Die vorläufige Autorisierung hat das Potenzial, Ihre Opt-in-Rate drastisch zu e
 
 Je nachdem, für welche Option sich der Benutzer entscheidet, wird der entsprechende Token- oder [Abonnementstatus]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/) zu seinen [Kontakteinstellungen]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/#engagement-tab) auf der Registerkarte **Engagement** in seinem Benutzerprofil hinzugefügt.
 
-![]({% image_buster /assets/img/profile-push-prov-auth.png %}){: width="50%"}
+![Kontakteinstellungen mit einem Push-abonnierten Status.]({% image_buster /assets/img/profile-push-prov-auth.png %}){: width="50%"}
 
 Mit unseren [Segmentierungsfiltern]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) können Sie Ihre Benutzer gezielt ansprechen, je nachdem, ob sie vorläufig autorisiert sind oder nicht.
 
-![Panel „Segmentdetails“ mit dem Beispielsegmentfilter „Vorläufige Autorisierung unter iOS-Stoppuhr (iOS) ist wahr“, um Nutzer:innen zu erreichen.]({% image_buster /assets/img/segment-push-prov-auth.png %})
+![Segment Details Panel mit dem Beispiel Segment Filter "Vorläufig autorisiert auf iOS Stoppuhr (iOS) ist wahr", um Nutzer:innen zu targetieren.]({% image_buster /assets/img/segment-push-prov-auth.png %})
 
 {% alert tip %}
 Wenn Nutzer:innen sich dafür entscheiden, den vorläufigen Push von Ihnen zu deaktivieren, werden sie keine vorläufigen Push-Nachrichten mehr von Ihnen sehen. Achten Sie auf den Inhalt und die Kadenz der Nachrichten, die Sie mit dieser Funktion versenden!
@@ -106,7 +106,7 @@ Die Implementierung der provisorischen Push-Authentifizierung unterstützt nur i
 
 {% tabs local %}
   {% tab Swift %}
-**Swift**
+**Schnell**
 
 ```
 var options: UNAuthorizationOptions = [.alert, .sound, .badge]
@@ -132,11 +132,17 @@ if (@available(iOS 12.0, *)) {
 
 ### Unterbrechungsstufe (iOS 15+) {#interruption-level}
 
-![Die Seite mit den iOS-Benachrichtigungseinstellungen zeigt Benachrichtigungen an, die für die sofortige Zustellung aktiviert sind und bei denen zeitabhängige Benachrichtigungen aktiviert sind.]({% image_buster /assets/img/ios/ios15-notification-settings.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0"}
-
 Mit dem neuen Fokusmodus von iOS 15 haben Sie mehr Kontrolle darüber, wann App-Benachrichtigungen Sie mit einem Ton oder einer Vibration "unterbrechen" können.
 
+Die Seite mit den Einstellungen für iOS-Benachrichtigungen zeigt Benachrichtigungen an, die für die sofortige Zustellung aktiviert sind, sowie zeitabhängige Benachrichtigungen, die aktiviert sind.]({% image_buster /assets/img/ios/ios15-notification-settings.png %}){: style="max-width:40%"}
+
 Apps können jetzt festlegen, welche Stufe der Unterbrechung eine Benachrichtigung je nach Dringlichkeit enthalten soll.
+
+Um die Unterbrechungsstufe für eine iOS-Push-Benachrichtigung zu ändern, wählen Sie die Registerkarte **Einstellungen** und wählen Sie die gewünschte Stufe aus dem Dropdown-Menü **Unterbrechungsstufe**.
+
+![Dropdown zum Auswählen der Unterbrechungsstufe.]({% image_buster /assets/img/ios/interruption_level.png %}){: style="max-width:50%"}
+
+Für diese Funktion gibt es keine Mindestanforderungen an die SDK-Version, sie gilt jedoch nur für Geräte mit iOS 15+.
 
 Denken Sie daran, dass der Benutzer letztlich die Kontrolle über seinen Fokus hat. Selbst wenn eine zeitabhängige Benachrichtigung zugestellt wird, kann er festlegen, welche Apps seinen Fokus nicht durchbrechen dürfen.
 
@@ -150,15 +156,9 @@ In der folgenden Tabelle finden Sie die Unterbrechungsstufen und ihre Beschreibu
 |[Kritisch](https://developer.apple.com/documentation/usernotifications/unnotificationinterruptionlevel/critical)|Gibt einen Ton aus, vibriert und schaltet den Bildschirm ein, auch wenn der Schalter **"Nicht stören"** des Telefons aktiviert ist. Dies [erfordert die ausdrückliche Zustimmung von Apple](https://developer.apple.com/contact/request/notifications-critical-alerts-entitlement/).|Notfälle wie Unwetter oder Sicherheitswarnungen|Ja|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-Um die Unterbrechungsstufe für eine iOS-Push-Benachrichtigung zu ändern, wählen Sie die Registerkarte **Einstellungen** und wählen Sie die gewünschte Stufe aus dem Dropdown-Menü **Unterbrechungsstufe**.
-
-![Unterbrechungsstufe auf „Aktiv“ (Standard) festgelegt und erweitert, um alle verfügbaren Unterbrechungsstufen anzuzeigen: Passiv, Aktiv (Standard), Zeitsensitiv und Kritisch.][28]
-
-Für diese Funktion gibt es keine Mindestanforderungen an die SDK-Version, sie gilt jedoch nur für Geräte mit iOS 15+.
-
 ### Bewertung der Relevanz (iOS 15+) {#relevance-score}
 
-![Eine Benachrichtigungszusammenfassung für iOS mit dem Titel „Ihre Abendzusammenfassung“ mit drei Benachrichtigungen.]({% image_buster /assets/img/ios/ios15-notification-summary.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0"}
+![Eine Benachrichtigungsübersicht für iOS mit dem Titel "Ihre Abendübersicht" mit drei Benachrichtigungen.]({% image_buster /assets/img/ios/ios15-notification-summary.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0"}
 
 iOS 15 bietet Nutzern:innen außerdem die Möglichkeit, einen Zeitplan für die Zusammenfassung mehrerer Benachrichtigungen zu bestimmten Zeiten im Laufe des Tages zu erstellen. Dies geschieht, um zu verhindern, dass Sie den ganzen Tag über ständig von Benachrichtigungen unterbrochen werden, die keine sofortige Aufmerksamkeit erfordern.
 
@@ -168,7 +168,7 @@ Alle Benachrichtigungen werden weiterhin im Benachrichtigungszentrum des Benutze
 
 Um den Relevanzwert einer iOS-Benachrichtigung festzulegen, geben Sie auf der Registerkarte **Einstellungen** einen Wert zwischen `0.0` und `1.0` ein. Die wichtigste Nachricht sollte beispielsweise mit `1.0` gesendet werden, während eine Nachricht von mittlerer Wichtigkeit mit `0.5` gesendet werden kann.
 
-![][29]
+![Relevanzwert von "0.5".]({% image_buster /assets/img/ios/relevance-score.png %}){: style="max-width:80%;"}
 
 Für diese Funktion gibt es keine Mindestanforderungen an die SDK-Version, sie gilt jedoch nur für Geräte mit iOS 15+.
 
@@ -177,7 +177,3 @@ Weitere Informationen zur maximalen Nachrichtenlänge für verschiedene Nachrich
 - [Bild- und Textangaben]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/#image-and-text-specifications)
 - [iOS-Richtlinien für die Anzahl der Zeichen]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/#character-count)
 
-[26]: {% image_buster /assets/img_archive/notification_group_dropdown.png %}
-[27]: {% image_buster /assets/img_archive/managenotgroups.png %}
-[28]: {% image_buster /assets/img/ios/interruption-level.png %}
-[29]: {% image_buster /assets/img/ios/relevance-score.png %}

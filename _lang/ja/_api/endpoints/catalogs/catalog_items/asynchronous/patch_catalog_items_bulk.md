@@ -1,5 +1,5 @@
 ---
-nav_title: "パッチ:複数のカタログアイテムの編集"
+nav_title: "パッチ:複数のカタログ項目を編集"
 article_title: "パッチ:複数のカタログアイテムの編集"
 alias: /catalogs_items_patch/
 search_tag: Endpoint

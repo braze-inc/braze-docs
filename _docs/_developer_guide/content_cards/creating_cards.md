@@ -1,6 +1,6 @@
 ---
-nav_title: Creating Cards
-article_title: Creating Content Cards
+nav_title: Create cards
+article_title: Create Content Cards
 page_order: 0
 description: "This article covers components of creating a custom Content Card UI."
 channel:
@@ -12,28 +12,30 @@ platform:
   - Web
 ---
 
-# Creating Content Cards
+# Create content cards
 
-> This article discusses the basic approach you'll use when implementing custom Content Cards, as well as three common use cases: banner images, a message inbox, and a carousel of images. It assumes you've already read the other articles in the Content Card customization guide to understand what can be done by default and what requires custom code. It is especially to understand how to [log analytics]({{site.baseurl}}/developer_guide/content_cards/logging_analytics/) for your custom Content Cards. 
+> This article discusses the basic approach you'll use when implementing custom Content Cards, as well as three common use cases. It assumes you've already read the other articles in the Content Card customization guide to understand what can be done by default and what requires custom code. It's especially helpful to understand how to [log analytics]({{site.baseurl}}/developer_guide/content_cards/logging_analytics/) for your custom Content Cards. 
+
+{% multi_lang_include banners/content_card_alert.md %}
 
 ## Creating a card
 
 ### Step 1: Create a custom UI 
 
 {% tabs local %}
-{% tab Android %}
-
-First, create your own custom fragment. The default [`ContentCardFragment`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html) is only designed to handle our default Content Card types, but is a good starting point.
-
-{% endtab %}
-{% tab iOS %}
-
-First, create your own custom view controller component. The default [`BrazeContentCardUI.ViewController`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller) is only designed to handle our default Content Card types, but is a good starting point.
-
-{% endtab %}
-{% tab Web %}
+{% tab web %}
 
 First, create your custom HTML component that will be used to render the cards. 
+
+{% endtab %}
+{% tab android %}
+
+First, create your own custom fragment. The default [`ContentCardsFragment`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html) is only designed to handle our default Content Card types, but is a good starting point.
+
+{% endtab %}
+{% tab swift %}
+
+First, create your own custom view controller component. The default [`BrazeContentCardUI.ViewController`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller) is only designed to handle our default Content Card types, but is a good starting point.
 
 {% endtab %}
 {% endtabs %}
@@ -58,7 +60,7 @@ To test your Content Card:
 
 ## Content Card placements
 
-Content Cards can be used in many different ways. Three common implementations are to use them as a message center, a banner ad, or an image carousel. For each of these placements, you will assign [key-value pairs]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_behavior/#key-value-pairs) (the `extras` property in the data model) to your Content Cards, and based on the values, dynamically adjust the card's behavior, appearance, or functionality during runtime. 
+Content Cards can be used in many different ways. Three common implementations are to use them as a message center, a dynamic image ad, or an image carousel. For each of these placements, you will assign [key-value pairs]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_behavior/#key-value-pairs) (the `extras` property in the data model) to your Content Cards, and based on the values, dynamically adjust the card's behavior, appearance, or functionality during runtime. 
 
 ![]({% image_buster /assets/img_archive/cc_placements.png %}){: style="border:0px;"}
 
@@ -68,9 +70,9 @@ Content Cards can be used to simulate a message center. In this format, each mes
 
 #### Example
 
-For example, you may want to create two message cards: a call-to-action for users enable to reading recommendations and a coupon code given to your new subscriber segment.
+For example, you may want to create two message cards: a call-to-action for users to enable reading recommendations and a coupon code given to your new subscriber segment.
 
-Keys like `body`, `title`, and `buttonText` might have simple string values your marketers can set. Keys like `terms` might have values that provide a small collection of phrases approved by your Legal department. Keys like `style` and `class_type` have string values that you can set to determine how your card renders on your app or site."
+Keys like `body`, `title`, and `buttonText` might have simple string values your marketers can set. Keys like `terms` might have values that provide a small collection of phrases approved by your Legal department. Keys like `style` and `class_type` have string values that you can set to determine how your card renders on your app or site.
 
 {% tabs local %}
 {% tab Reading recommendations %}
@@ -103,7 +105,7 @@ Key-value pairs for a new subscriber coupon:
 
 {% details Additional information for Android %}
 
-In the Android and FireOS SDK, the message center logic is driven by the `class_type` value that is provided by the key-value pairs from Braze. Using the [`createContentCardable`]({{site.baseurl}}/developer_guide/platforms/android/content_cards/examples/) method, you can filter and identify these class types.
+In the Android and FireOS SDK, the message center logic is driven by the `class_type` value that is provided by the key-value pairs from Braze. Using the [`createContentCardable`]({{site.baseurl}}/developer_guide/content_cards/) method, you can filter and identify these class types.
 
 {% tabs local %}
 {% tab Kotlin %}
@@ -237,8 +239,8 @@ To implement a Content Card carousel:
 If you're implementing a carousel as a secondary Content Cards feed, be sure to [sort cards into the correct feed using key-value pairs]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed/#multiple-feeds).
 {% endalert %}
 
-### Banner
+### Image-only
 
-Content Cards don't have to look like "cards." For example, Content Cards can appear as a dynamic banner that persistently displays on your home page or at the top of designated pages.
+Content Cards don't have to look like "cards." For example, Content Cards can appear as a dynamic image that persistently displays on your home page or at the top of designated pages.
 
-To achieve this, your marketers will create a campaign or Canvas step with a **Image Only** type of Content Card. Then, set key-value pairs that are appropriate for using [Content Cards as supplemental content]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_behavior/#content-cards-as-supplemental-content).
+To achieve this, your marketers will create a campaign or Canvas step with an **Image Only** type of Content Card. Then, set key-value pairs that are appropriate for using [Content Cards as supplemental content]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_behavior/#content-cards-as-supplemental-content).

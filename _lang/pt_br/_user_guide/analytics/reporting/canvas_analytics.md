@@ -1,5 +1,5 @@
 ---
-nav_title: Análise de dados do Canva
+nav_title: Análise do Canvas
 page_order: 4.6
 noindex: true
 layout: redirect

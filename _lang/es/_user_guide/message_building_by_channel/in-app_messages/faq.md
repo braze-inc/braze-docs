@@ -1,33 +1,33 @@
 ---
-nav_title: Preguntas frecuentes
-article_title: Preguntas frecuentes sobre los mensajes en la aplicación
+nav_title: PREGUNTAS FRECUENTES
+article_title: Preguntas frecuentes sobre mensajes dentro de la aplicación
 page_order: 19
-description: "Este artículo ofrece respuestas a las preguntas más frecuentes sobre los Mensajes In-App."
+description: "Este artículo ofrece respuestas a las preguntas más frecuentes sobre los mensajes dentro de la aplicación."
 tool: in-app messages
 
 ---
 
 # Preguntas más frecuentes
 
-> Este artículo ofrece respuestas a algunas preguntas frecuentes sobre los mensajes in-app.
+> Este artículo ofrece respuestas a algunas preguntas frecuentes sobre los mensajes dentro de la aplicación.
 
-### ¿Qué es un mensaje in-browser y en qué se diferencia de un mensaje in-app?
+### ¿Qué es un mensaje en el explorador y en qué se diferencia de un mensaje dentro de la aplicación?
 
-Los mensajes dentro del navegador son mensajes dentro de la aplicación que se envían a los navegadores web. Para crear un mensaje en navegador, asegúrate de seleccionar **Navegador web** en el campo **Enviar a** al crear tu campaña de mensajes en aplicación o Canvas. 
+Los mensajes dentro de la aplicación se envían a los navegadores web. Para crear un mensaje dentro del explorador, asegúrate de seleccionar **Explorador** web en el campo **Enviar a** al crear tu campaña de mensajería dentro de la aplicación o Canvas. 
 
-### ¿Se mostrará un mensaje en la aplicación si el dispositivo está desconectado?
+### ¿Se mostrará un mensaje dentro de la aplicación si el dispositivo está desconectado?
 
-Depende. Dado que los mensajes in-app se entregan al inicio de la sesión, el dispositivo puede descargar la carga útil antes de desconectarse, y el mensaje in-app puede seguir mostrándose mientras se está desconectado. Si no se descarga la carga útil, el mensaje dentro de la aplicación no se mostrará.
+Depende. Como los mensajes dentro de la aplicación se entregan al inicio de la sesión, el dispositivo puede descargar la carga útil antes de desconectarse, y el mensaje dentro de la aplicación puede seguir mostrándose mientras se está desconectado. Si no se descarga la carga útil, el mensaje dentro de la aplicación no se mostrará.
 
-### Si un usuario ya tiene una carga útil de mensaje in-app en su dispositivo y se cambia la caducidad del mensaje, ¿se actualizará la caducidad en su dispositivo?
+### Si un usuario ya tiene una carga útil de mensaje dentro de la aplicación en su dispositivo y se cambia la caducidad del mensaje, ¿se actualizará la caducidad en su dispositivo?
 
-Cuando un usuario inicia una sesión, Braze comprueba si se han realizado cambios en los mensajes de la aplicación a los que tiene derecho y los actualiza en consecuencia. De este modo, si la caducidad ha cambiado y se registra una sesión, el mensaje de la aplicación se envía al dispositivo con la información actualizada.
+Cuando un usuario inicia una sesión, Braze comprueba si se han realizado cambios en los mensajes dentro de la aplicación para los que es elegible y los actualiza en consecuencia. Así, si la caducidad ha cambiado y registran una sesión, entonces el mensaje dentro de la aplicación se envía al dispositivo con la información actualizada.
 
-### ¿Cómo configuro las horas de silencio para una campaña de mensajes in-app?
+### ¿Cómo configuro las horas tranquilas para una campaña de mensajes dentro de la aplicación?
 
-La función Horas de silencio no está disponible para campañas de mensajes dentro de la aplicación. Esta función se utiliza para impedir que se envíen mensajes a sus usuarios durante determinadas horas. En el caso de las campañas de mensajes dentro de la aplicación, los usuarios sólo recibirán mensajes dentro de la aplicación si están activos en ella. 
+La característica Horas tranquilas no está disponible para su uso con campañas de mensajes dentro de la aplicación. Esta característica se utiliza para evitar que se envíen mensajes a tus usuarios durante determinadas horas. En las campañas de mensajería dentro de la aplicación, tus usuarios sólo recibirán mensajes dentro de la aplicación si están activos en ella. 
 
-Como solución para enviar mensajes dentro de la aplicación a una hora determinada, utilice el siguiente código Liquid de ejemplo. Esto permite abortar el mensaje si el mensaje in-app se muestra después de las 7:59 pm o antes de las 8 am en la zona horaria especificada.
+Como solución para enviar mensajes dentro de la aplicación durante un tiempo específico, utiliza el siguiente código Liquid de ejemplo. Esto permite abortar el mensaje si el mensaje dentro de la aplicación se muestra después de las 19:59 o antes de las 8 en la zona horaria especificada.
 
 {% raw %}
 ```liquid
@@ -39,15 +39,15 @@ MESSAGE HERE
 ```
 {% endraw %}
 
-### ¿Cuándo se calcula la elegibilidad para un mensaje in-app?
+### ¿Cuándo se calcula la elegibilidad para un mensaje dentro de la aplicación?
 
-La elegibilidad para un mensaje dentro de la aplicación se calcula en el momento de la entrega. Si un mensaje in-app está programado para enviarse a las 7 am, entonces la elegibilidad se comprueba para este mensaje in-app a las 7 am.
+La elegibilidad para un mensaje dentro de la aplicación se calcula en el momento de la entrega. Si un mensaje dentro de la aplicación está programado para enviarse a las 7 de la mañana, entonces la elegibilidad se comprueba para este mensaje dentro de la aplicación a las 7 de la mañana.
 
 Una vez que se muestre el mensaje dentro de la aplicación, la elegibilidad dependerá de cuándo se descargue y desencadene el mensaje dentro de la aplicación.
 
-### ¿Qué son las plantillas de mensajes in-app?
+### ¿Qué son las plantillas de mensajes dentro de la aplicación?
 
-Los mensajes in-app se entregarán como mensajes in-app con plantilla cuando se seleccione **Reevaluar elegibilidad de campaña antes de mostrar** o si alguna de las siguientes etiquetas Liquid existe en el mensaje:
+Los mensajes dentro de la aplicación se entregarán como plantillas de mensajes dentro de la aplicación cuando se seleccione **Reevaluar elegibilidad de campaña antes de mostrar** o si en el mensaje existe alguna de las siguientes etiquetas de Liquid:
 
 - `canvas_entry_properties`
 - `connected_content`
@@ -56,18 +56,18 @@ Los mensajes in-app se entregarán como mensajes in-app con plantilla cuando se 
 - `catalog_selection_items`
 - `event_properties`
 
-Esto significa que durante el inicio de sesión, el dispositivo recibirá el desencadenante de ese mensaje in-app en lugar del mensaje completo. Cuando el usuario activa el mensaje in-app, el dispositivo del usuario hará una petición de red para obtener el mensaje real.
+Esto significa que, durante el inicio de la sesión, el dispositivo recibirá el desencadenante de ese mensaje dentro de la aplicación en lugar del mensaje completo. Cuando el usuario desencadena el mensaje dentro de la aplicación, el dispositivo del usuario realiza una solicitud de red para obtener el mensaje real.
 
 {% alert note %}
-El mensaje no se enviará si el dispositivo no tiene acceso a Internet. El mensaje podría no entregarse si la lógica de Liquid tarda demasiado en resolverse.
+El mensaje no se entregará si el dispositivo no tiene acceso a Internet. El mensaje podría no entregarse si la lógica Liquid tarda demasiado en resolverse.
 {% endalert %}
 
-### ¿Por qué mi campaña archivada de mensajes in-app sigue proporcionando impresiones de mensajes in-app?
+### ¿Por qué mi campaña de mensajería dentro de la aplicación archivada sigue entregando impresiones de mensajes dentro de la aplicación?
 
-Esto puede ocurrir para usuarios que cumplían los criterios del segmento cuando la campaña de mensajes in-app estaba activa.
+Esto puede ocurrir para los usuarios que cumplían los criterios del segmento cuando la campaña de mensajería dentro de la aplicación estaba activa.
 
-Para evitarlo, durante la configuración de la campaña, seleccione **Reevaluar la elegibilidad de la campaña antes de mostrarla**. 
+Para evitarlo, durante la configuración de tu campaña, selecciona **Reevaluar elegibilidad de la campaña antes de mostrarla**. 
 
-### ¿Cómo calcula Braze la caducidad de un mensaje in-app configurado como "después de 1 día(s)"?
+### ¿Cómo calcula Braze la caducidad de un mensaje dentro de la aplicación configurado como "después de 1 día(s)"?
 
-Braze calcula un tiempo de expiración de un día como 24 horas después de que los usuarios sean elegibles para recibir un mensaje.
+Braze calcula un tiempo de caducidad de un día como 24 horas después de que los usuarios sean elegibles para recibir un mensaje.

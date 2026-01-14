@@ -1,6 +1,6 @@
 ---
 page_order: 20
-nav_title: Best Practices
+nav_title: Best practices
 article_title: Content Card Best Practices
 layout: dev_guide
 guide_top_header: "Content Card Best Practices"
@@ -16,8 +16,12 @@ guide_featured_list:
   link: /docs/know_before_send/
   image: /assets/img/braze_icons/send-01.svg
 - name: "Sending Test Messages"
-  link: /docs/developer_guide/sending_test_messages/
+  link: /docs/developer_guide/in_app_messages/sending_test_messages/
   image: /assets/img/braze_icons/mail-01.svg
+- name: "Improving Low Latency Requirements"
+  image: /assets/img/braze_icons/send-01.svg
+  link: /docs/user_guide/message_building_by_channel/content_cards/best_practices/improving_low_latency_requirements
+
 ---
 
 <br><br>

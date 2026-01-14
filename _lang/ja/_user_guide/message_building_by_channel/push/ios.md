@@ -1,5 +1,5 @@
 ---
-nav_title: "iOSオプション"
+nav_title: "iOS オプション"
 article_title: iOSプッシュオプション
 page_order: 8
 layout: dev_guide
@@ -15,7 +15,7 @@ guide_top_text: "以下の記事には、Braze の Android プッシュ通知専
 guide_featured_title: "セクションの記事"
 guide_featured_list:
 - name: "プッシュプライマーキャンペーン"
-  link: /docs/user_guide/message_building_by_channel/push/ios/create_push_primer/
+  link: /docs/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/
   image: /assets/img/braze_icons/message-square-02.svg
 - name: "アプリのアイコンをカスタマイズできる"
   link: /docs/user_guide/message_building_by_channel/push/ios/customizable_app_icons/
@@ -27,7 +27,7 @@ guide_featured_list:
   link: /docs/user_guide/message_building_by_channel/push/ios/rich_notifications/
   image: /assets/img/braze_icons/beaker-02.svg
 - name: "キャンペーンの詳細設定"
-  link: /docs/user_guide/message_building_by_channel/push/ios/advanced_campaign_settings/
+  link: /docs/user_guide/message_building_by_channel/push/ios/notification_options/
   image: /assets/img/braze_icons/bar-chart-01.svg
 - name: "バッジ数の活用"
   link: /docs/user_guide/message_building_by_channel/push/ios/utilizing_badge_count/

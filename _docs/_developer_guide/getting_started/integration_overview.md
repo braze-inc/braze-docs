@@ -1,5 +1,5 @@
 ---
-nav_title: Integration Overview
+nav_title: Integration overview
 article_title: Integration Overview
 page_order: 2
 description: "This article provides a basic overview of the onboarding process."
@@ -52,7 +52,7 @@ Your CRM team will plan out the messaging use cases that you'll launch in the ne
 * [Channel]({{site.baseurl}}/user_guide/message_building_by_channel) (for example, push notifications or in-app messages)
 * [Delivery method]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types) (for example, scheduled delivery or action-based delivery)
 * [Target audience]({{site.baseurl}}/user_guide/engagement_tools/segments)
-* [Success metrics]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events)
+* [Success metrics]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/)
 
 For example, a new customer campaign might be: an email sent daily at 10 am to a segment of customers who logged their first session yesterday. The conversion event (the success metric) is logging a session.
 
@@ -73,11 +73,11 @@ As a developer, you'll work with your team to define what additional, custom dat
 Keep data nomenclature consistent across tools. For example, your data warehouse may record "purchase limited time offer" in a particular way. You will need to decide if a custom event in Braze is needed to match this format.
 {% endalert %}
 
-Learn more about [automatically collected data and custom data]({{site.baseurl}}/developer_guide/getting_started/analytics_overview/).
+Learn more about [automatically collected data and custom data]({{site.baseurl}}/developer_guide/analytics/).
 
 ### Customizations planning
 
-Talk to your marketers about their desired customizations. For example, do you want to implement the default Braze Content Cards? Do you want to slightly tweak their look and feel to match your brand guidelines? Do you want to develop an entirely new UI for a component and have Braze track its analytics? Different levels of customization require different levels of scope; see our [customization overview]({{site.baseurl}}/developer_guide/getting_started/customization_overview) for more information.
+Talk to your marketers about their desired customizations. For example, do you want to implement the default Braze Content Cards? Do you want to slightly tweak their look and feel to match your brand guidelines? Do you want to develop an entirely new UI for a component and have Braze track its analytics? Different levels of customization require different levels of scope.
 
 ### Getting dashboard access
 
@@ -111,14 +111,14 @@ You'll need developers who are familiar with:
 
 ### CDP integration partners
 
-Many customers use Braze onboarding as an opportunity to also integrate with a customer data platform (CDP) as an integration partner. Braze provides data tracking and analytics, while a CDP can provide additional data routing and orchestration. Braze offers seamless integration with many CDPs, such as [mParticle]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/mParticle/mparticle/) and [Segment]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment/). 
+Many customers use Braze onboarding as an opportunity to also integrate with a customer data platform (CDP) as an integration partner. Braze provides data tracking and analytics, while a CDP can provide additional data routing and orchestration. Braze offers seamless integration with many CDPs, such as [mParticle]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/mparticle/mparticle/) and [Segment]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/segment/segment/). 
 
 If you are performing side-by-side integration with a CDP, you will map the calls from your CDP's SDK to the Braze SDK. Essentially, you will:
 * Map identifying calls to `changeUser` ([Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/change-user.html), [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/changeuser(userid:sdkauthsignature:fileid:line:)/), [web](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser)) and set attributes.
 * Map data flush calls to `requestImmediateDataFlush` ([Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/request-immediate-data-flush.html?query=abstract%20fun%20requestImmediateDataFlush()), [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/requestimmediatedataflush()), [web](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestimmediatedataflush)).
 * Log custom events or purchases.
 
-Example integrations between the Braze SDK and your CDP of choice might be available, depending on which platform you've chosen. See our [list of CDP technology partners]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform) for more information. 
+Example integrations between the Braze SDK and your CDP of choice might be available, depending on which platform you've chosen. See our [list of CDP technology partners]({{site.baseurl}}/partners/data_and_analytics/) for more information. 
 
 ### Braze SDK integration
 
@@ -132,7 +132,7 @@ During SDK implementation, you will:
 
 * Write SDK integration code for each platform you want to support.
 * Activate the messaging channels for each platform, ensuring that the Braze SDK tracks the data from your interactions with your customers across email, SMS, push notifications, and other channels.
-* Create any planned [UI component customizations]({{site.baseurl}}/developer_guide/getting_started/customization_overview) (for example, custom Content Cards). For completely custom content, you will need to log analytics since the SDK's automatic data collection won't be aware of your new components. You can pattern this implementation on our default components.
+* Create any planned UI component customizations (for example, custom Content Cards). For completely custom content, you will need to log analytics since the SDK's automatic data collection won't be aware of your new components. You can pattern this implementation on our default components.
 
 ### Using the Braze API
 
@@ -161,7 +161,7 @@ You can also import users and update customer attribute values through a one-tim
 
 ### Setting up session tracking
 
-The Braze SDK generates "open session" and "close session" data points. The Braze SDK also flushes data at regular intervals. Refer to these links for session tracking default values, all of which can be customized ([Android]({{site.baseurl}}/developer_guide/platforms/android/analytics/tracking_sessions/), [iOS]({{site.baseurl}}/developer_guide/platforms/swift/analytics/tracking_sessions/), [web]({{site.baseurl}}/developer_guide/platforms/web/analytics/tracking_sessions/)).
+The Braze SDK generates "open session" and "close session" data points. The Braze SDK also flushes data at regular intervals. Refer to these links for session tracking default values, all of which can be customized ([Android]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=android), [iOS]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=swift), [web]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=web)).
 
 ### Tracking custom events, attributes, and purchase events
 
@@ -197,6 +197,10 @@ Make sure your production and testing environments are set up before beginning Q
 |                           | Confirm all message channel integrations are working together properly. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
+{% alert note %}
+While performing QA on your SDK integration, use the [SDK Debugger]({{site.baseurl}}/developer_guide/sdk_integration/debugging) to get troubleshoot issues without turning on verbose logging for your app.
+{% endalert %}
+
 ### Passing Braze off to marketers
 
 Once you have integrated your platform or site, you will want to involve your Marketing team to pass ownership of the platform to them. This process looks different at every company, but might include the following:
@@ -221,9 +225,9 @@ You will track updates to the Braze platform via the Braze [GitHub](https://gith
 
 ## SDK rate limits 
 
-### Monthly Active Users CY 24-25 
+### Monthly Active Users CY 24-25, Universal MAU, Web MAU, and Mobile MAU  
 
-For customers who have purchased Monthly Active Users - CY 24-25, Braze enforces server-side rate limits on API requests used by our SDKs to update sessions, user attributes, events, and other user profile data. This is to ensure platform stability and to maintain fast, reliable service. 
+For customers who have purchased Monthly Active Users CY 24-25, Universal MAU, Web MAU, and Mobile MAU , Braze enforces server-side rate limits on API requests used by our SDKs to update sessions, user attributes, events, and other user profile data. This is to ensure platform stability and to maintain fast, reliable service. 
 
 * Hourly rate limits are set according to the expected SDK traffic on your account, which may correspond to the number of monthly active users (MAU) you have purchased, industry, seasonality, or other factors. When the hourly rate limit is reached, Braze will throttle requests until the next hour.
 * All rate limited requests are automatically retried by the SDK.

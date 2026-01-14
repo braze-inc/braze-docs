@@ -13,18 +13,18 @@ description: "This landing page covers articles on Segmentation within dashboard
 
 guide_featured_title: "Popular articles"
 guide_featured_list:
-  - name: Creating a Segment
+  - name: Create a Segment
     link: /docs/user_guide/engagement_tools/segments/creating_a_segment/
     image: /assets/img/braze_icons/pie-chart-01.svg
-  - name: Managing Segments
+  - name: Manage Segments
     link: /docs/user_guide/engagement_tools/segments/managing_segments/
     image: /assets/img/braze_icons/edit-05.svg
   - name: Segmentation Filters
     link: /docs/user_guide/engagement_tools/segments/segmentation_filters/
     image: /assets/img/braze_icons/flag-02.svg
-  - name: Segment Funnels
-    link: /docs/user_guide/engagement_tools/segments/segment_funnels/
-    image: /assets/img/braze_icons/users-right.svg
+  - name: Segment Data
+    link: /docs/viewing_and_understanding_segment_data/
+    image: /assets/img/braze_icons/pie-chart-01.svg
 
 guide_menu_title: "More articles"
 guide_menu_list:
@@ -52,6 +52,9 @@ guide_menu_list:
   - name: Suppression Lists
     link: /docs/user_guide/engagement_tools/segments/suppression_lists/
     image: /assets/img/braze_icons/list.svg 
+  - name: Measuring Segment Size
+    link: /docs/user_guide/engagement_tools/segments/measuring_segment_size/
+    image: /assets/img/braze_icons/pie-chart-02.svg
   - name: Troubleshooting
     link: /docs/user_guide/engagement_tools/segments/troubleshooting/
     image: /assets/img/braze_icons/annotation-question.svg
@@ -88,5 +91,5 @@ You can further refine your segments by using [Segment Extensions]({{site.baseur
 - **Events and message interactions:** Segment users by whether they made a purchase in the last thirty days and also interacted with a specific in-app message.
 - **Query data:** 
   - **Query Snowflake:** Segment users with data combined from Braze and external sources, such as a CRM or a data warehouse, by using [SQL Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/) to query Snowflake.
-  - **Sync from data warehouse:** Segment users with data directly synced from your data warehouse or file storage system to Braze by using [CDI segments]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/).
+  - **Sync from data warehouse:** Segment users with data directly synced from your data warehouse or file storage system to Braze by using [CDI Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/).
 

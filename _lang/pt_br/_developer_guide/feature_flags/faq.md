@@ -30,6 +30,9 @@ Um Feature Flag pode ser criado e integrado em poucos minutos.
 
 A maior parte do esforço envolvido estará relacionada à sua equipe de engenharia que está desenvolvendo o novo recurso que você planeja implementar. Mas quando se trata de adicionar um sinalizador de recurso, é tão simples quanto uma declaração `IF`/`ELSE` no código do seu app ou site:
 
+{% tabs %}
+{% tab JavaScript %}
+
 ```javascript
 import { getFeatureFlag } from "@braze/web-sdk";
 
@@ -40,6 +43,31 @@ else {
     // Show the old homepage
 }
 ```
+
+{% endtab %}
+{% tab Java %}
+
+```java
+if (braze.getFeatureFlag("new_shopping_cart").getEnabled()) {
+  // Show the new homepage your team has built
+} else {
+  // Show the old homepage
+}
+```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+if (braze.getFeatureFlag("new_shopping_cart")?.enabled == true) {
+  // Show the new homepage your team has built
+} else {
+  // Show the old homepage
+}
+```
+
+{% endtab %}
+{% endtabs %}
 
 ### Como os sinalizadores de recursos podem beneficiar as equipes de marketing? {#marketing-teams}
 
@@ -76,10 +104,6 @@ As implementações de Feature Flag permanecem consistentes para os usuários em
 - Se você reduzir a distribuição de 20% para 10%, apenas os 10% originais dos usuários permanecerão ativados.
 
 Essa estratégia ajuda a garantir que os usuários tenham uma experiência consistente no app e não fiquem alternando entre as sessões. Obviamente, a desativação de um recurso até 0% removerá todos os usuários do sinalizador de recurso, o que é útil se você descobrir um bug ou precisar desativar o recurso por completo.
-
-### Posso criar um segmento de usuários que estão atualmente em um sinalizador de recurso? {#feature-flag-filter}
-
-Isso está em nosso mapa de produto Para ajudar a priorizar isso, envie esse feedback para a equipe da sua conta Braze ou envie um e-mail para a nossa equipe: [feature-flags-feedback@braze.com](mailto:feature-flags-feedback@braze.com).
 
 ## Tópicos técnicos
 

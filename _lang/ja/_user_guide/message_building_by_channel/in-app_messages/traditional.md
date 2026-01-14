@@ -1,5 +1,5 @@
 ---
-nav_title: 従来の編集者
+nav_title: 従来のエディタ
 article_title: 従来のアプリ内メッセージ用エディター
 page_order: 3
 layout: dev_guide

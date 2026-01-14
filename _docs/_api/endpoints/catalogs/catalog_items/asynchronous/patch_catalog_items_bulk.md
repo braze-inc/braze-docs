@@ -1,5 +1,5 @@
 ---
-nav_title: "PATCH: Edit Multiple Catalog Items"
+nav_title: "PATCH: Edit multiple catalog items"
 article_title: "PATCH: Edit Multiple Catalog Items"
 alias: /catalogs_items_patch/
 search_tag: Endpoint

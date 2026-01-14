@@ -1,5 +1,5 @@
 ---
-nav_title: Email Guidelines
+nav_title: Email guidelines
 article_title: Email Guidelines
 page_order: 1
 page_type: reference
@@ -59,6 +59,10 @@ Email addresses targeted via the Braze servers must be validated per [RFC 2822](
 ### Setting from and reply-to addresses
 
 When setting your "from" addresses, make sure your "from" email domain matches your sending domain (such as `marketing.yourdomain.com`). Failure to do this may result in SPF and DKIM misalignment. All reply-to emails can be set to your root domain.
+
+{% alert note %}
+Unicode encoding is not supported in "from" addresses.
+{% endalert %}
 
 ### Checking HTML details
 
@@ -229,5 +233,4 @@ Check out the following lists for HTML tags and attributes that aren't allowed i
 {% enddetails %}
 
 
-[24]: http://tools.ietf.org/html/rfc2822
 

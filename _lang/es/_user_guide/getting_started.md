@@ -1,23 +1,23 @@
 ---
 page_order: 0.1
-nav_title: Guía de inicio
+nav_title: Cómo empezar
 article_title: Primeros pasos con Braze
 layout: dev_guide
 search_rank: 4
 
 guide_top_header: "Primeros pasos con Braze"
-guide_top_text: "Bienvenido a Braze, ¡nos alegramos de que estés aquí! Esta colección de artículos le ayudará a iniciarse en nuestra plataforma y le introducirá en los términos, características y funcionalidades clave de Braze."
-description: "Esta colección de artículos le ayudará a iniciarse en nuestra plataforma y le introducirá en los términos, características y funcionalidades clave de Braze."
+guide_top_text: "Bienvenido a Braze, ¡nos alegramos de que estés aquí! Esta colección de artículos te ayudará a empezar a utilizar nuestra plataforma y te presentará los términos, características y funcionalidades clave de Braze."
+description: "Esta colección de artículos te ayudará a empezar a utilizar nuestra plataforma y te presentará los términos, características y funcionalidades clave de Braze."
 
 guide_featured_title: "Ruta de aprendizaje"
 guide_featured_list:
-  - name: Visión general de Braze
+  - name: Resumen de Braze
     link: /docs/user_guide/getting_started/overview/
     image: /assets/img/braze_icons/announcement-01.svg
   - name: Usuarios y segmentos
     link: /docs/user_guide/getting_started/users_segments/
     image: /assets/img/braze_icons/check-done-02.svg
-  - name: Campañas y Canvas
+  - name: Campañas y Lonas
     link: /docs/user_guide/getting_started/campaigns_canvases/
     image: /assets/img/braze_icons/message-smile-circle.svg
   - name: Espacios de trabajo
@@ -26,7 +26,7 @@ guide_featured_list:
   - name: Integración
     link: /docs/user_guide/getting_started/integration/
     image: /assets/img/braze_icons/chevron-up-double.svg
-  - name: Términos que debe conocer
+  - name: Términos que debes conocer
     link: /docs/user_guide/getting_started/terms_to_know/
     image: /assets/img/braze_icons/lightbulb-01.svg
 

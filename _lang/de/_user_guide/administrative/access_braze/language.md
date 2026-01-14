@@ -15,10 +15,10 @@ Dieser Artikel beschreibt, wie Sie die Sprache ändern, in der das Braze-Dashboa
 
 Das Dashboard von Braze ist in [mehreren Sprachen](#supported-languages) verfügbar. Sie können die Anzeigesprache jederzeit in Ihre bevorzugte Sprache ändern.
 
-1. Klicken Sie in der globalen Kopfzeile auf <i class="fa-solid fa-globe" aria-label="Wählen Sie Ihre Sprache"></i>.
+1. Wählen Sie in der globalen Kopfzeile <i class="fa-solid fa-globe" aria-label="Wählen Sie Ihre Sprache aus"></i>.
 2. Wählen Sie Ihre Sprache aus der Liste.
 
-![][1]{: style="max-width:60%"}
+![Englisch als Sprache für das Braze-Dashboard ausgewählt.]({% image_buster /assets/img_archive/language_dashboard.png %}){: style="max-width:40%"}
 
 Es kann ein paar Augenblicke dauern, bis das Dashboard neu geladen wird.
 
@@ -26,6 +26,7 @@ Es kann ein paar Augenblicke dauern, bis das Dashboard neu geladen wird.
 
 Sie können aus den folgenden unterstützten Sprachen wählen:
 
+- Deutsch (Deutsch)
 - Englisch
 - Spanisch (Español)
 - Französisch (Français)
@@ -58,4 +59,3 @@ If you have limited permissions, your notification language is set to the defaul
 
 -->
 
-[1]: {% image_buster /assets/img_archive/language_dashboard.png %}

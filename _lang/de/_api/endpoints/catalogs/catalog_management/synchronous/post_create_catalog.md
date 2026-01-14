@@ -6,13 +6,13 @@ page_order: 3
 
 layout: api_page
 page_type: reference
-description: "Dieser Artikel beschreibt Details zum Endpunkt Katalog erstellen Braze."
+description: "Dieser Artikel enthält Einzelheiten zum Endpunkt Katalog erstellen Braze."
 
 ---
 {% api %}
 # Katalog erstellen
 {% apimethod post %}
-/catalogs
+/Kataloge
 {% endapimethod %}
 
 > Verwenden Sie diesen Endpunkt, um einen Katalog zu erstellen.
@@ -23,20 +23,20 @@ description: "Dieser Artikel beschreibt Details zum Endpunkt Katalog erstellen B
 
 Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/basics#rest-api-key/) mit der Berechtigung `catalogs.create`.
 
-## Preisgrenze
+## Rate-Limit
 
 {% multi_lang_include rate_limits.md endpoint='synchronous catalog' %}
 
-## Parameter anfordern
+## Parameter der Anfrage
 
-| Parameter | Erforderlich | Daten Typ | Beschreibung |
+| Parameter | Erforderlich | Datentyp | Beschreibung |
 |---|---|---|---|
 | `catalogs` | Erforderlich | Array | Ein Array, das Katalogobjekte enthält. Für diese Anfrage ist nur ein Katalogobjekt zulässig. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ### Katalogobjekt-Parameter
 
-| Parameter | Erforderlich | Daten Typ | Beschreibung |
+| Parameter | Erforderlich | Datentyp | Beschreibung |
 |---|---|---|---|
 | `name` | Erforderlich | String | Der Name des Katalogs, den Sie erstellen möchten. |
 | `description` | Erforderlich | String | Die Beschreibung des Katalogs, den Sie erstellen möchten. |
@@ -98,11 +98,11 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs' \
 
 ## Antwort
 
-Es gibt zwei Statuscode-Antworten für diesen Endpunkt: `201` und `400`.
+Für diesen Endpunkt gibt es zwei Status Code Antworten: `201` und `400`.
 
 ### Beispiel für eine erfolgreiche Antwort
 
-Der Statuscode `201` könnte den folgenden Antwortkörper zurückgeben.
+Der Status Code `201` könnte den folgenden Antwortkörper zurückgeben.
 
 ```json
 {
@@ -158,7 +158,7 @@ Der Statuscode `201` könnte den folgenden Antwortkörper zurückgeben.
 
 ### Beispiel einer Fehlerantwort
 
-Der Statuscode `400` könnte den folgenden Antwortkörper zurückgeben. Weitere Informationen zu Fehlern, die auftreten können, finden Sie unter [Fehlersuche](#troubleshooting).
+Der Status Code `400` könnte den folgenden Antwortkörper zurückgeben. Unter [Fehlerbehebung](#troubleshooting) finden Sie weitere Informationen zu Fehlern, die bei Ihnen auftreten können.
 
 ```json
 {
@@ -190,7 +190,7 @@ In der folgenden Tabelle finden Sie eine Liste möglicher zurückgegebener Fehle
 | `description-too-long` | Das Zeichenlimit für die Beschreibung beträgt 250. |
 | `field-names-not-unique` | Derselbe Feldname wird zweimal referenziert. |
 | `field-names-too-large` | Das Zeichenlimit für einen Feldnamen beträgt 250. |
-| `id-not-first-column` | Die `id` muss das erste Feld im Array sein. Prüfen Sie, ob der Typ eine Zeichenkette ist. |
+| `id-not-first-column` | Die `id` muss das erste Feld im Array sein. Prüfen Sie, ob der Typ ein String ist. |
 | `invalid-catalog-name` | Der Katalogname darf nur Buchstaben, Zahlen, Bindestriche und Unterstriche enthalten. |
 | `invalid-field-names` | Felder können nur Buchstaben, Zahlen, Bindestriche und Unterstriche enthalten. |
 | `invalid-field-types` | Stellen Sie sicher, dass die Feldtypen gültig sind. |

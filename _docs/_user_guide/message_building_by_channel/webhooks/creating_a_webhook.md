@@ -1,6 +1,6 @@
 ---
-nav_title: Creating a Webhook
-article_title: Creating a Webhook
+nav_title: Create a webhook
+article_title: Create a Webhook
 page_order: 1
 channel:
   - webhooks
@@ -8,7 +8,7 @@ description: "This reference article covers how to create and configure a webhoo
 search_rank: 2
 ---
 
-# Creating a webhook campaign
+# Create a webhook campaign
 
 > Creating a webhook campaign or including a webhook in a multichannel campaign allows you to trigger non-app actions by providing other systems and applications with real-time information. 
 
@@ -20,7 +20,7 @@ To learn more about what webhooks are and how you can use them in Braze, check o
 
 ## Step 1: Choose where to build your message
 
-Not sure whether your message should be sent using a campaign or a Canvas? Campaigns are better for single, simple messaging campaigns, while Canvases are better for multi-step user journeys.
+Not sure whether your message should be sent using a campaign or a Canvas? Campaigns are better for single, targeted messaging campaigns, while Canvases are better for multi-step user journeys.
 
 {% tabs %}
 {% tab Campaign %}
@@ -28,12 +28,6 @@ Not sure whether your message should be sent using a campaign or a Canvas? Campa
 **Steps:**
 
 1. Go to **Messaging** > **Campaigns** and select **Create Campaign**.
-
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), you can find **Campaigns** under **Engagement**.
-{% endalert %}
-
-{:start="2"}
 2. Select **Webhook**, or, for campaigns targeting multiple channels, select **Multichannel**.
 3. Name your campaign something clear and meaningful.
 4. (Optional) Add a description to describe how this campaign will be used.
@@ -71,15 +65,15 @@ The **Compose** tab consists of the following fields:
 - HTTP method
 - Request body
 
-![The "Compose" tab with an example Facebook Messenger webhook template.]({% image_buster /assets/img_archive/webhook_compose.png %})
+![The "Compose" tab with an example webhook template.]({% image_buster /assets/img_archive/webhook_compose.png %})
 
 #### Language {#internationalization}
 
-[Internationalization][16] is supported in the URL and the request body. To internationalize your message, select **Add languages** and fill out the required fields. 
+[Internationalization]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/#campaigns-in-multiple-languages) is supported in the URL and the request body. To internationalize your message, select **Add languages** and fill out the required fields. 
 
 We recommend selecting your languages before writing your content so you can fill in your text where it belongs in the Liquid. For our full list of available languages you can use, refer to [Languages supported]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported).
 
-If you're adding copy in a language that is written right-to-left, note that the final appearance of right-to-left messages depends largely on how service providers render them. For best practices on crafting right-to-left messages that display as accurately as possible, refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/localizing_a_campaign/right_to_left_messages/).
+If you're adding copy in a language that is written right-to-left, note that the final appearance of right-to-left messages depends largely on how service providers render them. For best practices on crafting right-to-left messages that display as accurately as possible, refer to [Creating right-to-left messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/).
 
 #### Webhook URL
 
@@ -91,7 +85,7 @@ Braze only allows URLs that communicate over standard ports `80` (HTTP) and `443
 
 ##### Using Liquid
 
-You can personalize your webhook URLs using [Liquid][15]. At times, certain endpoints may require you to identify a user or provide user-specific information as part of your URL. When using Liquid, make sure to include a [default value][19] for each piece of user-specific information that you use in your URL.
+You can personalize your webhook URLs using [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/). At times, certain endpoints may require you to identify a user or provide user-specific information as part of your URL. When using Liquid, make sure to include a [default value]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=web) for each piece of user-specific information that you use in your URL.
 
 #### HTTP method
 
@@ -107,13 +101,13 @@ JSON key-value pairs allow you to easily write a request for an endpoint that ex
 
 ![Request body set to JSON key-value pairs.]({% image_buster /assets/img/webhook_json_1.png %})
 
-You can personalize your key-value pairs using Liquid, such as including any user attribute, [custom attribute][17], or [event property][18] in your request. For example, you can include a customer's first name and email in your request. Be sure to include a [default value][19] for each attribute.
+You can personalize your key-value pairs using Liquid, such as including any user attribute, [custom attribute]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#additional-notes-and-best-practices), or [event property]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) in your request. For example, you can include a customer's first name and email in your request. Be sure to include a [default value]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=web) for each attribute.
 
 ##### Raw text
 
 The raw text option gives you the flexibility to write a request for an endpoint that expects a body of any format. For example, you might use this to write a request for an endpoint that expects your request to be in XML format. 
 
-Both [personalization][15] and [internationalization][16] using Liquid is supported in raw text.
+Both [personalization]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) and [internationalization]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/#campaigns-in-multiple-languages) using Liquid is supported in raw text.
 
 ![An example of a request body with raw text using Liquid.]({% image_buster /assets/img_archive/webhook_rawtext.png %})
 
@@ -178,11 +172,13 @@ This step is also where you can specify delivery controls, such as allowing user
 
 #### Choose users to target
 
-Next, you need to [target users]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/) by choosing segments or filters to narrow down your audience. In this step, you will select the larger audience from your segments, and narrow that segment further with our filters, if you choose. You'll automatically be given a snapshot of what that approximate segment population looks like right now. Keep in mind that exact segment membership is always calculated just before the message is sent.
+Next, you must [target users]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) by choosing segments or filters to narrow down your audience. In this step, you select the larger audience from your segments, and narrow that segment further with our filters, if you choose. You automatically receive a preview of what that approximate segment population looks like. Keep in mind that exact segment membership is always calculated before the message is sent.
+
+{% multi_lang_include target_audiences.md %}
 
 #### Choose conversion events
 
-Braze allows you to track how often users perform specific actions, [conversion events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/), after receiving a campaign. You have the option of allowing up to a 30-day window during which a conversion will be counted if the user takes the specified action.
+Braze allows you to track how often users perform specific actions, [conversion events]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/), after receiving a campaign. You have the option of allowing up to a 30-day window during which a conversion will be counted if the user takes the specified action.
 
 {% endtab %}
 
@@ -201,17 +197,20 @@ After you've finished building the last of your campaign or Canvas, review its d
 
 ### Errors, retry logic, and timeouts
 
-Webhooks rely on Braze servers making requests to an external endpoint, and syntax and other errors may arise. The first step to avoiding webhook errors is to test your webhook campaign for syntax errors and to make sure that personalized variables have a default value. However, webhooks may still fail due to issues like expired API keys, rate limits, or unexpected server errors. If your webhook fails to send, an error message gets logged to the [Message Activity Log][42].
+Webhooks rely on Braze servers making requests to an external endpoint, and errors can occasionally occur. The most common errors include syntax errors, expired API keys, rate limits, and unexpected server-side issues. Before sending a webhook campaign:
 
-This description contains the time the error occurred, the app name, and the error message:
+- Test your webhook for syntax errors
+- Ensure personalized variables have default values
+
+If your webhook fails to send, an error message gets logged to the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/), and includes details like the error timestamp, app name, and details about the error.
 
 ![Webhook error with the message "An active access token must be used to query information about the current user".]({% image_buster /assets/img_archive/webhook-error.png %})
 
-If the message body is not clear enough regarding the source of the error, you should check the documentation of the API endpoint you're using. These typically provide an explanation of the error codes the endpoint uses as well as what they're typically caused by.
+If the error message is not clear enough regarding the source of the error, you should check the documentation of the API endpoint you're using. These typically provide an explanation of the error codes the endpoint uses as well as what they're typically caused by.
 
-Like other campaigns, Braze tracks the delivery of your webhook campaigns and the conversions resulting from them. When the webhook request is sent, the receiving server will return a response code indicating what happened with the request. 
+#### Response codes and retry logic
 
-The following table summarizes the different responses the server may send, how they impact campaign analytics, and whether, in the case of errors, Braze will try to redeliver the campaign:
+When the webhook request is sent, the receiving server will return a response code indicating what happened with the request. The following table summarizes the different responses the server may send, how they impact campaign analytics, and whether, in the case of errors, Braze will try to redeliver the campaign:
 
 | Response code | Marked as received? | Retries? |
 |---------------|-----------|----------|
@@ -224,8 +223,12 @@ The following table summarizes the different responses the server may send, how 
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert note %}
-For `5XX` errors, Braze will retry the webhook send up to 5 times over 30 minutes using exponential backoff. For all other errors, Braze will continue to retry for up to 24 hours.<br><br>Each webhook is allowed 90 seconds before it times out.
+Braze retries the above status codes up to five times within 30 minutes using exponential backoff. If we can't reach your endpoint, retries may be spread over a 24-hour period.<br><br>Each webhook is allowed 90 seconds before it times out.
 {% endalert %}
+
+#### Troubleshooting and additional error details
+
+For detailed explanations, troubleshooting steps, and guidance on resolving specific webhook errors, refer to [Troubleshooting webhook and Connected Content requests]({{site.baseurl}}/help/help_articles/api/webhook_connected_content_errors/). You'll also find more explanations on how our unhealthy host detection system works and how Braze provides error notifications through automated emails and additional logging in Braze Currents.
 
 ### IP allowlisting {#ip-allowlisting}
 
@@ -237,66 +240,16 @@ Braze will send webhooks from the following IPs. The listed IPs are automaticall
 If you're making a Braze-to-Braze webhook and using allowlisting, you should allowlist all the following IPs, including `127.0.0.1`.
 {% endalert %}
 
-| For Instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`, and `US-07`: |
-|---|
-| `127.0.0.1`
-| `23.21.118.191`
-| `34.206.23.173`
-| `50.16.249.9`
-| `52.4.160.214`
-| `54.87.8.34`
-| `54.156.35.251`
-| `52.54.89.238`
-| `18.205.178.15`
-
-| For Instances `EU-01` and `EU-02`: |
-|---|
-| `127.0.0.1`
-| `52.58.142.242`
-| `52.29.193.121`
-| `35.158.29.228`
-| `18.157.135.97`
-| `3.123.166.46`
-| `3.64.27.36`
-| `3.65.88.25`
-| `3.68.144.188`
-| `3.70.107.88` 
-
-| For Instance `US-08`: |
-|---|
-| `52.151.246.51`
-| `52.170.163.182`
-| `40.76.166.157`
-| `40.76.166.170`
-| `40.76.166.167`
-| `40.76.166.161`
-| `40.76.166.156`
-| `40.76.166.166`
-| `40.76.166.160`
-| `40.88.51.74`
-| `52.154.67.17`
-| `40.76.166.80`
-| `40.76.166.84`
-| `40.76.166.85`
-| `40.76.166.81`
-| `40.76.166.71`
-| `40.76.166.144`
-| `40.76.166.145`
+{% multi_lang_include data_centers.md datacenters='ips' %}
 
 ### Using webhooks with Braze partners {#utilizing-webhooks}
 
 There are many ways to use webhooks, and with our technology partners (Alloys), you can use webhooks to level up your communication directly with your customers and users.
 
 Check out:
-* [Messenger]({{site.baseurl}}/partners/message_orchestration/additional_channels/instant_chat/messenger/)
-* [Remerge]({{site.baseurl}}/partners/message_orchestration/additional_channels/retargeting/remerge)
-* [Lob.com]({{site.baseurl}}/partners/message_orchestration/additional_channels/direct_mail/lob)
+* [Messenger]({{site.baseurl}}/partners/additional_channels_and_extensions/additional_channels/instant_chat/messenger/)
+* [Remerge]({{site.baseurl}}/partners/remerge/)
+* [Lob.com]({{site.baseurl}}/partners/additional_channels_and_extensions/additional_channels/direct_mail/lob/)
 * And many more of our [technology partners]({{site.baseurl}}/partners/home/)!
 
 
-[15]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/
-[16]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/#campaigns-in-multiple-languages
-[17]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#additional-notes-and-best-practices
-[18]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/
-[19]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/
-[42]: {{site.baseurl}}/user_guide/administrative/app_settings/developer_console/message_activity_log_tab/

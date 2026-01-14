@@ -11,7 +11,7 @@ _Your reason here..._
 <!--
 For related GitHub issues and features, add "Fixes #ISSUE_NUMBER".
 For Jira tickets, add the ticket number and a link to the ticket, like:
-[BD-NUMBER](https://jira.braze.com/browse/BD-NUMBER)
+- [BD-NUMBER](https://jira.braze.com/browse/BD-NUMBER)
 -->
 - N/A
 
@@ -23,7 +23,7 @@ For Jira tickets, add the ticket number and a link to the ticket, like:
 <!-- After you've filled out the previous sections, select "Create Draft Pull Request", then review your PR before filling out the following checklist. -->
 - [ ] I confirm that my PR meets the following:
     - I signed the [Contribution License Agreement (CLA)](https://www.braze.com/docs/cla).
-    - My style and voice follows the [Braze Style Guide](https://docs.google.com/document/u/2/d/e/2PACX-1vTluyDFO3ZEV7V6VvhXE4As_hSFwmnFFdU9g6_TrAYTgH1QmbRoEDDdn5GzKAB9vdBbIdyiFdoaJcNk/pub).
+    - My style and voice follow the [Braze Style Guide](https://docs.google.com/document/u/2/d/e/2PACX-1vTluyDFO3ZEV7V6VvhXE4As_hSFwmnFFdU9g6_TrAYTgH1QmbRoEDDdn5GzKAB9vdBbIdyiFdoaJcNk/pub).
     - My content contains correct spelling and grammar.
     - All links are working correctly.
     - If I renamed or moved a file or directory, I set up [URL redirects](https://www.braze.com/docs/contributing/content_management/redirecting_urls) for each file.

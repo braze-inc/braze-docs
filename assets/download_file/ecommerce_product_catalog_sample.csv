@@ -1,0 +1,9 @@
+id,product_id,variant_id,product_title,variant_title,product_url,product_image_url,variant_image_url,vendor,product_type,price,inventory_quantity,status
+1001,1,1001,Classic T-Shirt,Small,https://example.com/tshirt/small,https://example.com/images/tshirt.jpg,https://example.com/images/tshirt_small.jpg,Brand A,Apparel,19.99,150,active
+1002,2,1002,Classic T-Shirt,Medium,https://example.com/tshirt/medium,https://example.com/images/tshirt.jpg,https://example.com/images/tshirt_medium.jpg,Brand A,Apparel,19.99,100,active
+1003,3,1003,Classic T-Shirt,Large,https://example.com/tshirt/large,https://example.com/images/tshirt.jpg,https://example.com/images/tshirt_large.jpg,Brand A,Apparel,19.99,75,active
+2001,4,2001,Running Shoes,Size 8,https://example.com/shoes/size8,https://example.com/images/shoes.jpg,https://example.com/images/shoes_size8.jpg,Brand B,Footwear,59.99,50,active
+2002,5,2002,Running Shoes,Size 9,https://example.com/shoes/size9,https://example.com/images/shoes.jpg,https://example.com/images/shoes_size9.jpg,Brand B,Footwear,59.99,30,active
+3001,6,3001,Coffee Mug,Standard,https://example.com/mug,https://example.com/images/mug.jpg,https://example.com/images/mug_standard.jpg,Brand C,Kitchenware,12.99,200,active
+4001,7,4001,Bluetooth Headphones,Black,https://example.com/headphones,https://example.com/images/headphones.jpg,https://example.com/images/headphones_black.jpg,Brand D,Electronics,89.99,25,active
+5001,8,5001,Yoga Mat,Extra Thick,https://example.com/yoga-mat,https://example.com/images/yoga_mat.jpg,https://example.com/images/yoga_mat_thick.jpg,Brand E,Fitness,29.99,100,active

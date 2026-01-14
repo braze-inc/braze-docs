@@ -1,4 +1,3 @@
-
 <!---DEFAULT RATE LIMIT-->
 
 {% if include.endpoint == "default" %}
@@ -33,16 +32,25 @@ We apply a rate limit of 1,000 requests per minute to this endpoint, as document
 <!---/users/track-->
 
 {% elsif include.endpoint == "users track" %}
-Starting on October 28th, 2024, we apply a base speed limit of 3,000 requests per three seconds to this endpoint for all customers. Each `/users/track` request can contain up to 75 event objects, 75 attribute objects, and 75 purchase objects. Each object (event, attribute, and purchase arrays) can update one user each. In total, this means a maximum of 225 users can be updated in a single call. In addition, a single user profile can be updated by multiple objects.
+Starting on October 28th, 2024, we apply a base speed limit of 3,000 requests per three seconds to this endpoint for all customers. Each `/users/track` request can contain up to 75 event objects, 75 attribute objects, and 75 purchase objects. Each object (event, attribute, and purchase arrays) can update one user each. In total, this means you can update up to 225 users in a single call. In addition, you can update a single user profile with multiple objects.
 
-Different limits apply to customers who have purchased **Monthly Active Users - CY 24-25**. For details on these limits, see [Monthly Active Users - CY 24-25 limits]({{site.baseurl}}/api/endpoints/user_data/post_user_track/#monthly-active-users-cy-24-25).
+Different limits apply to customers who have purchased **Monthly Active Users - CY 24-25**. For details on these limits, see [Monthly Active Users - CY 24-25 limits]({{site.baseurl}}/api/endpoints/user_data/post_user_track/#monthly-active-users-cy-24-25-universal-mau-web-mau-and-mobile-mau).
 
-See our page on [API rate limits]({{site.baseurl}}/api/api_limits/) for details, and reach out to your customer success manager if you need your limit increased.
+See our page on [API rate limits]({{site.baseurl}}/api/api_limits/) for details, and contact your customer success manager if you need your limit increased.
 
 <!---/users/export/ids-->
 
 {% elsif include.endpoint == "users export ids" %}
 If you onboarded with Braze on or after August 22, 2024, this endpoint has a rate limit of 250 requests per minute, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
+
+You can also increase this endpoint's rate limit to 40 requests per second by meeting the following requirements:
+
+- Your workspace has the default rate limit (250 requests per minute) enabled. Contact your Braze account manager for further assistance with removing any pre-existing rate limit you may have.
+- Your request includes the `fields_to_export` parameter to list out all the fields you want to receive.
+
+{% alert important %}
+If you include `canvases_received` or `campaigns_received` in the `fields_to_export` parameter, your request will be ineligible for the faster rate limit. We recommend only including these in your request if you have a specific use case for them.
+{% endalert %}
 
 <!---/users/delete-->
 
@@ -104,7 +112,7 @@ Braze Transactional Emails are not subject to a rate limit. Depending on your ch
 <!---/sends/id/create-->
 
 {% elsif include.endpoint == "sends id create" %}
-The daily maximum number of custom send identifiers that can be created via this endpoint is 100 for a given workspace. Each `send_id` and `campaign_id` combination that you create will count toward your daily limit. The response headers for any valid request include the current rate limit status, see [API rate limits]({{site.baseurl}}/api/api_limits/) for details.
+You can create up to 100 custom send identifiers per day using this endpoint for a given workspace. Each `send_id` and `campaign_id` combination that you create will count toward your daily limit. The response headers for any valid request include the current rate limit status. See [API rate limits]({{site.baseurl}}/api/api_limits/) for details.
 
 <!---/subscription/status/set-->
 {% elsif include.endpoint == "subscription status set" %}
@@ -135,6 +143,23 @@ Braze endpoints support [batching API requests]({{site.baseurl}}/api/api_limits/
 - Up to 50 specific `external_ids`, each with individual message parameters
 - A segment of any size created in the Braze dashboard, specified by its `segment_id`
 - An audience segment of any size, defined in the request as a [connected audience]({{site.baseurl}}/api/objects_filters/connected_audience/) object
+
+{% endif %}
+
+{% if include.category == "send messages endpoints" %}
+
+Braze endpoints support [batching API requests]({{site.baseurl}}/api/api_limits/#batching-api-requests). A single request to the messaging endpoints can reach any of the following:
+
+- Up to 50 specific `external_ids`, each with individual message parameters
+- An audience segment of any size, defined in the request as a [connected audience]({{site.baseurl}}/api/objects_filters/connected_audience/) object
+
+{% endif %}
+
+<!---Additional if statement for Translation endpoints-->
+
+{% if include.endpoint == "translation endpoints" %}
+
+This endpoint has a rate limit of 250,000 requests per minute.
 
 {% endif %}
 
@@ -179,3 +204,4 @@ This endpoint has a shared rate limit of 50 requests per minute between all asyn
 This endpoint has a rate limit of 50,000 requests per minute.
 
 {% endif %}
+

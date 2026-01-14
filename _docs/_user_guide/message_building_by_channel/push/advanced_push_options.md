@@ -1,5 +1,5 @@
 ---
-nav_title: "Advanced Push Options"
+nav_title: "Advanced push options"
 article_title: Advanced Push Options
 page_order: 5
 layout: dev_guide

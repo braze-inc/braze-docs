@@ -1,6 +1,6 @@
 ---
 page_order: 1
-nav_title: Getting Started
+nav_title: Getting started
 article_title: Getting Started
 layout: dev_guide
 
@@ -22,12 +22,6 @@ guide_featured_list:
   - name: Architecture Overview
     link: /docs/developer_guide/getting_started/architecture_overview/
     image: /assets/img/braze_icons/columns-01.svg
-  - name: Analytics Overview
-    link: /docs/developer_guide/getting_started/analytics_overview/
-    image: /assets/img/braze_icons/check-done-02.svg
-  - name: Customization Overview
-    link: /docs/developer_guide/getting_started/customization_overview/
-    image: /assets/img/braze_icons/announcement-01.svg
 
 search_rank: 4
 ---

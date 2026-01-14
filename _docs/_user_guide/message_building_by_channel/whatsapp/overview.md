@@ -1,5 +1,5 @@
 ---
-nav_title: WhatsApp Setup
+nav_title: WhatsApp setup
 article_title: WhatsApp Setup
 alias: /partners/whatsapp/
 description: "This article covers how to set up the Braze WhatsApp channel, including prerequisites and suggested next steps."
@@ -24,7 +24,6 @@ Acknowledge the following before proceeding with integration:
 - **Compliance:** Comply with all applicable Braze and Meta documentation and any applicable [Meta policies](https://www.whatsapp.com/legal/?lang=en).
 - **24-hour conversation limits:** After a business sends an initial templated message or a user sends a message, a 24-hour window will occur where the two parties can message back and forth. 
 - **Initiating conversation:** Users can initiate a conversation at any point. A business can only initiate a conversation through an approved message template.
-- **Account limitations:** Each Braze workspace can hold one WhatsApp Business account, subscription group, and phone number. Additionally, each WhatsApp Business account can only hold [one third-party integration](https://developers.facebook.com/docs/whatsapp/embedded-signup/faq#faq_194614375799047). A WhatsApp Business account can only exist in one workspace and can't be shared across workspaces.
 <br><br>
 
 | Requirement| Description|
@@ -40,17 +39,13 @@ Acknowledge the following before proceeding with integration:
 
 In Braze, go to **Partner Integrations** > **Technology Partners** and search for **WhatsApp**.
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can find **Technology Partners** under **Integrations**.
-{% endalert %}
-
 On the WhatsApp partner page, select **Begin Integration**.
 
-![][1]
+![WhatsApp partner page with a button to begin the integration.]({% image_buster /assets/img/whatsapp/whatsapp1.png %}){: style="max-width:70%;"}
 
 In the open window, select **Next** until the **Begin Integration** button appears. Select the button to begin the integration process.
 
-![Instructions for connecting Braze to WhatsApp.][7]
+![Instructions for connecting Braze to WhatsApp.]({% image_buster /assets/img/whatsapp/instructions.png %}){: style="max-width:50%;"}
 
 ### Step 2: WhatsApp setup
 
@@ -69,16 +64,18 @@ Only approved WhatsApp message templates can be used to initiate conversations w
 
 1. **Navigate to the [template manager](https://business.facebook.com/wa/manage/message-templates)**<br>
 In the Meta Business Manager, under **Account Tools**, select **Message Templates**.
-Next, select **Create Templates**.<br><br>![][3]{: style="max-width:100%;"}<br><br>
+Next, select **Create Templates**.<br><br>![WhatsApp Manager with a list of message templates.]({% image_buster /assets/img/whatsapp/whatsapp2.png %}){: style="max-width:100%;"}<br><br>
 2. **Message settings**<br>
 In the new message template composer, select the category of your message, name your template, and choose the languages you want to support. You can delete or add more languages later.<br><br> 
 	The available message template categories include the following:
 	- Marketing: Send promotional offers, product announcements, and more to increase awareness and engagement
 	- Utility: Send account updates, order updates, alerts, and more to share important information
 	- Authentication: Send codes that allow your customers to access their accounts<br><br> 
-	![][4]{: style="max-width:100%;"}<br><br>
+	![Message template composer with categories for marketing, utility, and authentication.]({% image_buster /assets/img/whatsapp/whatsapp3.png %}){: style="max-width:100%;"}<br><br>
 3. **Edit template**<br>
-Next, you will be prompted to create your message template. <br><br>Here, you can provide a text or media header, the text body, a message footer, and buttons. Note that video and document headers are not currently available, and headers must be of either text or image type. A preview of your message will be shown on the right. <br><br>While Meta does not support Liquid, you can template in variables that can be later replaced in Braze for Liquid variables. Select the **+ Add variable** button to do so.<br><br>![][5]{: style="max-width:100%;"}<br><br>Once you have completed your template, press **Submit**. 
+Next, create your message template. <br><br>You can provide a text or media header, the text body, a message footer, and buttons. Note that video and document headers are not currently available, and headers must be of either text or image type. Any media you add serves as an example for the review process and **is not** included in the template message. Media needs to be added in Braze. A preview of your message will display in a panel. <br><br>While Meta does not support Liquid, you can template in variables that can be later replaced in Braze for Liquid variables. Select the **+ Add variable** button to do so.<br><br>![Template composer.]({% image_buster /assets/img/whatsapp/whatsapp4.png %}){: style="max-width:100%;"}
+
+Once you have completed your template, press **Submit**. 
 
 #### Template approval time
 
@@ -109,10 +106,3 @@ We also recommend reading about [user phone numbers]({{site.baseurl}}/user_guide
 
 Braze supports WhatsApp’s [Cloud API Local Storage](https://developers.facebook.com/docs/whatsapp/cloud-api/overview/local-storage?content_id=ka6F9gESPqhQpm5). To have this enabled, contact your Braze customer support manager.
 
-[1]: {% image_buster /assets/img/whatsapp/whatsapp1.png %} 
-[2]: {% image_buster /assets/img/whatsapp/whatsapp10.png %} 
-[3]: {% image_buster /assets/img/whatsapp/whatsapp2.png %} 
-[4]: {% image_buster /assets/img/whatsapp/whatsapp3.png %} 
-[5]: {% image_buster /assets/img/whatsapp/whatsapp4.png %} 
-[6]: {% image_buster /assets/img/whatsapp/whatsapp5.png %} 
-[7]: {% image_buster /assets/img/whatsapp/instructions.png %} 

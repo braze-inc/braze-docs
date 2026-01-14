@@ -18,7 +18,7 @@ module Jekyll
       if @url.empty?
         embedmarkdown = false
       end
-      if ENV["MARKDOWN_API"].to_s.downcase != 'yes'
+      if ENV["MARKDOWN_API"].to_s.downcase != 'true'
         embedmarkdown = false
       end
       if embedmarkdown

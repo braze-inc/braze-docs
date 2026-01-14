@@ -30,6 +30,9 @@ Se puede crear e integrar una bandera de características en pocos minutos.
 
 La mayor parte del esfuerzo tendrá que ver con tu equipo de ingeniería y la construcción de la nueva característica que piensas lanzar. Pero cuando se trata de añadir una feature flag, es tan sencillo como una declaración `IF`/`ELSE` en el código de tu aplicación o sitio web:
 
+{% tabs %}
+{% tab JavaScript %}
+
 ```javascript
 import { getFeatureFlag } from "@braze/web-sdk";
 
@@ -40,6 +43,31 @@ else {
     // Show the old homepage
 }
 ```
+
+{% endtab %}
+{% tab Java %}
+
+```java
+if (braze.getFeatureFlag("new_shopping_cart").getEnabled()) {
+  // Show the new homepage your team has built
+} else {
+  // Show the old homepage
+}
+```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+if (braze.getFeatureFlag("new_shopping_cart")?.enabled == true) {
+  // Show the new homepage your team has built
+} else {
+  // Show the old homepage
+}
+```
+
+{% endtab %}
+{% endtabs %}
 
 ### ¿Cómo pueden beneficiar las feature flags a los equipos de marketing? {#marketing-teams}
 
@@ -76,10 +104,6 @@ Los despliegues de la bandera de características siguen siendo coherentes para 
 - Si reduces el despliegue del 20 % al 10 %, solo quedará habilitado el 10 % original de los usuarios.
 
 Esta estrategia ayuda a garantizar que los usuarios tengan una experiencia coherente en tu aplicación y no vayan y vengan de una sesión a otra. Por supuesto, desactivar una característica hasta el 0% eliminará a todos los usuarios de la bandera de características, lo que resulta útil si descubres un error o necesitas desactivar la característica por completo.
-
-### ¿Puedo crear un segmento de usuarios que estén actualmente en una bandera de característica? {#feature-flag-filter}
-
-Está en nuestra hoja de ruta de productos. Para ayudar a priorizar esto, plantea esta opinión a tu equipo de cuenta Braze o envía un correo electrónico a nuestro equipo: [feature-flags-feedback@braze.com](mailto:feature-flags-feedback@braze.com).
 
 ## Temas técnicos
 

@@ -33,7 +33,7 @@
 3. Depending on circumstances, in-app messages will either download or load relevant images from disk prior to display. If you are on a slow network connection or a very low performance devices, this process may take time. Ensure that your images are optimized to be as small as possible.
 {% endcase %}
 
-For more in-depth discussion of these scenarios, visit [the advanced troubleshooting section](#troubleshooting-in-app-advanced).
+For more in-depth discussion of these scenarios, visit <a id="troubleshooting-in-app-advanced">the advanced troubleshooting section</a>.
 
 ## Issues with Impressions and Click Analytics
 
@@ -50,21 +50,21 @@ If you have set an in-app message delegate to manually handle message display or
 
 1. Triggers take time to sync to the device on session start, so there can be a race condition if users log an event or purchase right after they start a session. One potential workaround could be changing the campaign to trigger off of session start, then segmenting off the intended event or purchase. Note that this would deliver the in-app message on the next session start after the event has occurred.
 
-2. If the campaign is triggered by a session start or a custom event, you want to ensure that this event or session is happening frequently enough to trigger the message. Check this data on the [Overview][1] (for session data) or [Custom Events][2] pages:
+2. If the campaign is triggered by a session start or a custom event, you want to ensure that this event or session is happening frequently enough to trigger the message. Check this data on the [Overview]({{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/#understanding-your-app-usage-data) (for session data) or [Custom Events]({{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting) pages:
 
-![Custom Events page showing a graph for the number of times the custom event Added to Favorites occurred over a one month period][14]
+![Custom Events page showing a graph for the number of times the custom event Added to Favorites occurred over a one month period]({% image_buster /assets/img_archive/trouble5.png %})
 
 ### Impressions are lower than they used to be
 
 1. Ensure no one unintentionally altered the segment or campaign since launch. Our segment and campaign changelogs will give you insight into changes that have been made, who made the change, and when it happened.
 
-![Link to view changelog on the Campaign Details page with seven changes since the user has last viewed the campaign][10]
+![Link to view changelog on the Campaign Details page with seven changes since the user has last viewed the campaign]({% image_buster /assets/img_archive/trouble4.png %})
 
-2. Ensure you didn't re-use your trigger event in a separate in-app message campaign with a higher priority.
+2. Ensure you didn't reuse your trigger event in a separate in-app message campaign with a higher priority.
 
 ## Advanced Troubleshooting {#troubleshooting-in-app-advanced}
 
-Most in-app message issues can be broken down into two main categories: delivery and display. To troubleshoot why an expected in-app message did not display on your device, confirm that the [in-app message was delivered to the device](#troubleshooting-in-app-message-delivery), then [troubleshoot message display](#troubleshooting-in-app-message-display).
+Most in-app message issues can be broken down into two main categories: delivery and display. To troubleshoot why an expected in-app message did not display on your device, confirm that the <a id="troubleshooting-in-app-message-delivery">in-app message was delivered to the device</a>, then <a id="troubleshooting-in-app-message-display">troubleshoot message display</a>.
 
 ### Troubleshooting delivery {#troubleshooting-in-app-message-delivery}
 
@@ -126,7 +126,3 @@ If your app is successfully requesting and receiving in-app messages, but they a
 {% endcase %}
 7. If your in-app message is triggered by session start and you've set an extended session timeout, this will affect how quickly you can show messages. For instance, if your session timeout is set to 300 seconds, closing and re-opening the app in less than that time will not refresh the session, so an in-app message triggered by a session start will not display.
 
-[1]: {{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/#understanding-your-app-usage-data
-[2]: {{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting
-[10]: {% image_buster /assets/img_archive/trouble4.png %}
-[14]: {% image_buster /assets/img_archive/trouble5.png %}

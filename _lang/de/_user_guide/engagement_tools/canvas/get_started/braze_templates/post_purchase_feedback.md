@@ -18,13 +18,13 @@ Dieser Artikel führt Sie durch einen Anwendungsfall für die Vorlage **Post-Pur
 Um dieses Template erfolgreich zu verwenden, benötigen Sie Folgendes:
 
 - Ein [benutzerdefiniertes Attribut]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#managing-custom-attributes), auf das Sie bei Feedback-Umfrageergebnissen verweisen können.
-- Eine konfigurierte [Braze-Zielgruppen-Synchronisierung]({{site.baseurl}}/partners/canvas_steps) mit den Partnern und Zielgruppen, die Sie verwenden.
+- Eine konfigurierte [Braze-Zielgruppen-Synchronisierung]({{site.baseurl}}/partners/canvas_audience_sync/) mit den Partnern und Zielgruppen, die Sie verwenden.
 
 ## Anpassen des Templates an Ihre Bedürfnisse
 
 Nehmen wir an, wir arbeiten für Decorumsoft, einen Entwickler von mobilen Videospielen. Wir werden die Vorlage für das Feedback nach dem Kauf verwenden, um das Feedback für unser neuestes Videospiel, Proxy War 3, zu messen: Krieg des Durstes. Anhand dieses Feedbacks werden wir unsere Entwicklungspläne für das Erweiterungspaket Liquid Mirage anpassen.
 
-Bevor wir das Canvas erstellen, richten wir die [Braze Audience Sync to Google-Integration]({{site.baseurl}}/partners/canvas_steps/google_audience_sync/) ein, damit wir Nutzerdaten von Braze zu Google Audiences hinzufügen können, um Werbung auf der Grundlage von verhaltensbezogenen Auslösern, Segmentierung und mehr zu senden.
+Bevor wir das Canvas erstellen, richten wir die [Braze Audience Sync to Google-Integration]({{site.baseurl}}/partners/canvas_audience_sync/google_audience_sync/) ein, damit wir Nutzerdaten von Braze zu Google Audiences hinzufügen können, um Werbung auf der Grundlage von verhaltensbezogenen Auslösern, Segmentierung und mehr zu senden.
 
 Um auf die Vorlage für das Feedback nach dem Kauf zuzugreifen, wählen Sie bei der Erstellung eines neuen Canvas die Option **Eine Canvas-Vorlage verwenden** > **Lötvorlagen**. Wählen Sie dann neben **Post-Purchase Feedback** die Option **Vorlage anwenden**. Jetzt können wir das Template durchgehen, um es an unsere Bedürfnisse anzupassen.
 
@@ -41,13 +41,13 @@ Passen wir die Canvas-Details an, um unser Ziel zu erreichen.
 3\. Aktualisieren Sie die Beschreibung, um zu verdeutlichen, dass das Canvas dazu dient, Benutzer zur Abgabe von Feedback zu ermutigen.
 4\. Fügen Sie das Tag **Feedback** hinzu, um auf der Canvas-Startseite danach zu filtern.
 
-![Der neue Name und die Beschreibung für das Canvas. In der neuen Beschreibung heißt es: ]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/enter_new_canvas_name.png %}) 'Ein Feedback-Kanal nach dem Kauf, um das Interesse an der kommenden Erweiterung für PWD3, Liquid Mirage, zu ermitteln.{: style="max-width:50%;"}
+![Der neue Name und die Beschreibung für das Canvas. In der neuen Beschreibung heißt es: Ein Canvas mit Feedback nach dem Kauf, um das Interesse an der kommenden Erweiterung für PWD3, Liquid Mirage, zu ermitteln.]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/enter_new_canvas_name.png %}){: style="max-width:50%;"}
 
 ### Schritt 2: Konversions-Events zuweisen
 
 Als nächstes weisen wir unsere Konvertierungsereignisse zu. Aktualisieren Sie das **primäre Konvertierungsereignis - A** auf **Einen bestimmten Kauf tätigen** und wählen Sie **Proxy War**.
 
-![Abschnitt „Konversions-Events zuweisen“ für den Konversions-Event-Typ des Proxy-War-Spielprodukts.]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/select_conversion_event.png %}){: style="max-width:90%;"}
+!["Konversions-Events zuweisen" für den Konversions-Event-Typ des Kaufs des Produkts Proxy War game.]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/select_conversion_event.png %}){: style="max-width:90%;"}
 
 Wir behalten die Frist für die Konversion des Templates von drei Tagen bei, da wir unsere jüngsten Nutzer:innen ansprechen wollen.
 
@@ -74,7 +74,7 @@ Wir behalten die Standardeinstellungen für das Abonnement bei, d.h. wir senden 
 
 Da wir mit dem Versenden achtsam sein wollen, wählen wir die Option **Ruhige Zeiten aktivieren**, um zu vermeiden, dass wir zwischen 23 und 10 Uhr in der Zeitzone unserer Nutzer um Feedback bitten, und senden erst zur nächsten verfügbaren Zeit.
 
-![Der Schritt „Sendeeinstellungen“ stellt das Targeting von Nutzern:in zusammen, die Abonnent:in sind oder sich angemeldet haben. Stille Stunden sind eingeschaltet.]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/send_settings_with_quiet_hours.png %}){: style="max-width:90%;"}
+!["Sendeeinstellungen" Schritt Targeting von Nutzern:in, die Abonnent:in sind oder sich angemeldet haben. Die Ruhezeiten sind eingeschaltet.]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/send_settings_with_quiet_hours.png %}){: style="max-width:90%;"}
 
 Für unser Beispiel überspringen wir die anderen Einstellungen (Frequenzkappung und Seed-Gruppen).
 
@@ -103,13 +103,13 @@ Als Nächstes müssen wir die Details für die Variante **In-App-Nachricht** aus
 4. Wählen Sie für jede der drei Umfragen das Attribut **Experience Feedback** als unser angepasstes Attribut aus. 
 5. Wir behalten die Attributwerte im Benutzerprofil unverändert bei, da diese Werte mit unserem benutzerdefinierten Attribut übereinstimmen.
 
-![Eine Umfrage mit drei Optionen, in der Sie gefragt werden, ob Ihnen der Kauf von Proxy War 3 gefallen hat: „Toll“, „Ganz okay“ und „Nichts für mich“.]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/survey_example_iam.png %}){: style="max-width:90%;"}
+![Eine Umfrage, die den Nutzer:innen die Frage stellt, ob sie mit dem Kauf von Proxy War 3 zufrieden waren: "Ich habe es geliebt", "Es war OK" und "Nichts für mich".]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/survey_example_iam.png %}){: style="max-width:90%;"}
 
 #### Aktionspfad weiterentwickeln
 
 Mit unserem benutzerdefinierten Attribut `Experience Feedback` und den Attributwerten aus dem vorherigen Abschnitt aktualisieren wir den Aktionspfad der Vorlage, damit er mit unserem Attribut und den Werten übereinstimmt.
 
-![Die Gruppe "Gutes Feedback" für den Schritt "Aktionspfad", die Benutzer umfasst, die in unserer Umfrage mit "Gefällt mir" geantwortet haben.]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/action_path_good_example.png %}){: style="max-width:90%;"}
+![Die Gruppe "Gutes Feedback" für den Schritt Aktions-Pfad, die Nutzer:innen umfasst, die bei unserer Umfrage mit "Gefällt mir" geantwortet haben.]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/action_path_good_example.png %}){: style="max-width:90%;"}
 
 ### Retargeting von Anzeigen einrichten
 
@@ -121,7 +121,7 @@ Als Nächstes richten wir den Webhook ein, um potenzielle Supportfälle auszulö
 
 Für den Schritt Nachricht mit dem Namen **Erstellung von Supportfällen** aktualisieren wir die Vorlage, um einen Webhook für Benutzer zu erstellen, die mit ihrem Kauf unzufrieden sind und eine Rückerstattung wünschen.
 
-![Ein Webhook, der Support-Fälle für Kund:innen erstellt, die eine negative Stimmung haben und eine Rückerstattung für ihren Kauf von Proxy War 3 wünschen.]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/webhook_example.png %}){: style="max-width:90%;"}
+![Ein Webhook, der Support-Fälle für Kund:in erstellt, die eine negative Stimmung haben und eine Rückerstattung für ihren Kauf von Proxy War 3 wünschen.]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/webhook_example.png %}){: style="max-width:90%;"}
 
 ### Schritt 6: Testen und starten Sie den Canvas
 

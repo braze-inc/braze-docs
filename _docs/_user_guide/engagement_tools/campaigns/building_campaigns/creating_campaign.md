@@ -1,5 +1,5 @@
 ---
-nav_title: Create a Campaign
+nav_title: Create a campaign
 article_title: Create a Campaign
 layout: dev_guide
 page_order: 0
@@ -24,10 +24,10 @@ guide_featured_list:
   link: /docs/user_guide/message_building_by_channel/push/creating_a_push_message/
   image: /assets/img/braze_icons/channel-mobile-push.svg
 - name: SMS Campaign
-  link: /docs/user_guide/message_building_by_channel/sms/campaign/create/
+  link: /docs/user_guide/message_building_by_channel/sms_mms_rcs/sms/create/
   image: /assets/img/braze_icons/channel-sms.svg
 - name: MMS Campaign
-  link: /docs/user_guide/message_building_by_channel/sms/mms/create/
+  link: /docs/user_guide/message_building_by_channel/sms_mms_rcs/mms/create/
   image: /assets/img/braze_icons/channel-sms.svg
 - name: Webhook Campaign
   link: /docs/user_guide/message_building_by_channel/webhooks/creating_a_webhook/

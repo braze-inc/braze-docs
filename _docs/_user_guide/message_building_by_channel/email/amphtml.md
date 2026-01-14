@@ -1,5 +1,5 @@
 ---
-nav_title: AMP for Email
+nav_title: AMP for email
 article_title: AMP for Email
 alias: /amphtml/
 page_order: 11
@@ -11,38 +11,38 @@ channel:
 
 # AMP for email
 
-> With [AMP for email](https://amp.dev/about/email), you can add interactive elements to your emails and elevate your communications with your customers, delivering a full experience directly to your user's inbox. AMP makes this possible through its use of various components that can be used to help build exciting in email offerings such as surveys, feedback questionnaires, voting campaigns, reviews, subscription centers, and more. Tools like these can offer opportunities to increase engagement and retention.
+> With [AMP for email](https://amp.dev/about/email), you can add interactive elements to your emails and elevate your communications with your customers, delivering a full experience directly to your user's inbox. AMP makes this possible through its use of various components that can be used to help build exciting email offerings such as surveys, feedback questionnaires, voting campaigns, reviews, subscription centers, and more. Tools like these can offer opportunities to increase engagement and retention.
 
 ## Requirements
 
-Braze is not responsible for users registering with Google or meeting the necessary security requirements.
+Braze is not responsible for users registering with Google or meeting the necessary security requirements. AMP for email is available for SparkPost and SendGrid only.
 
 | Requirement   | Description |
 | --------------| ----------- |
-| AMP for email turned on | AMP is available for everyone. Reach out to your account manager if you're interested in enabling this feature. |
+| AMP for email turned on | AMP is available for all users. |
 | Gmail account enablement | See [Enabling Gmail account](#enabling-gmail-account). |
 | Google sender authentication | Gmail [authenticates the sender](https://developers.google.com/gmail/ampemail/security-requirements#sender_authentication) of AMP emails with DKIM, SPF, and DMARC. These must be set up for your account. <br><br>- [Domain Keys Identified Mail](https://en.wikipedia.org/wiki/DomainKeys_Identified_Mail) (DKIM) <br>- [Sender Policy Framework](https://en.wikipedia.org/wiki/Sender_Policy_Framework)(SPF)<br>- [Domain-based Message Authentication, Reporting, and Conformance](https://en.wikipedia.org/wiki/DMARC)(DMARC)
 | AMP email elements | A compelling AMP email includes the strategic use of various components. Refer to the Essentials tab in the [Components](#components) section below. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-### Supported clients
+### Supported email clients
 
-Before you can send AMP emails to users, you must register with our clients. The registration process involves sending a test AMP HTML email to get approved. Approval times vary client to client. Follow the register links for more information.
+Before you can send AMP emails to users, you must register with our email clients. The registration process involves sending a test AMP HTML email to get approved. Approval times vary from client to client. Follow the registration links for more information.
 
-| Client | Register Link |
+| Client | Registration Link |
 | ------ | -------- |
 | Gmail | [Google](https://developers.google.com/gmail/ampemail/register) |
 | FairEmail | [FairEmail](https://email.faircode.eu/) |
 | Yahoo | [Yahoo](https://senders.yahooinc.com/amp/) |
 | Mail.ru | [Mail.ru](https://postmaster.mail.ru/amp/) |
 
-For a full list of supported platforms, refer to [AMP documentation](https://amp.dev/support/faq/email-support). 
+For a full list of supported email clients, refer to [AMP documentation](https://amp.dev/support/faq/email-support).
 
 ### Enabling Gmail account
 
 Go to your Gmail settings, and select **Enable Dynamic Email** under **General**.
 
-![An example of Gmail settings with the "Enable dynamic email" checkbox selected.][1]
+![An example of Gmail settings with the "Enable dynamic email" checkbox selected.]({% image_buster /assets/img/dynamic-content.png %})
 
 ## API usage
 
@@ -87,10 +87,12 @@ Refer to these additional resources:
 
 ### Components
 
+When building the AMP elements, we recommend you check in with your engineering team and include design resources and elements for an extra layer of polish.
+
 {% tabs %}
   {% tab Essentials %}
 
-These are what make an AMP HTML email...AMP'ed! Each of these elements is required in the body of your AMP email.
+Each of these elements is required in the body of your AMP email.
 
 | Component | Description | Example |
 |---------|--------------|---------|
@@ -211,19 +213,19 @@ By wrapping your content around the `raw` tag, the Braze processing engine will 
     <tbody>
         <tr>
             <td class="no-split">Total Opens</td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Total Opens' %} For AMP emails, this is the total opens for the HTML and plaintext versions.</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Total Opens' %} For AMP emails, this is the total opens for the HTML and plaintext versions.</td>
         </tr>
         <tr>
             <td class="no-split">Total Clicks</td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Total Clicks' %} For AMP emails, this is the total clicks in the HTML and plaintext versions.</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Total Clicks' %} For AMP emails, this is the total clicks in the HTML and plaintext versions.</td>
         </tr>
         <tr>
             <td class="no-split">AMP Opens</td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='AMP Opens' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='AMP Opens' %}</td>
         </tr>
         <tr>
             <td class="no-split">AMP Clicks</td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='AMP Clicks' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='AMP Clicks' %}</td>
         </tr>
     </tbody>
 </table>
@@ -235,22 +237,18 @@ Note that total clicks and unique clicks don't account for any clicks that occur
 Before you send your AMP email, we recommend that you test according to these [Gmail guidelines](https://developers.google.com/gmail/ampemail/testing-dynamic-email).
 
 For your AMP email to be delivered to any Gmail account, the email must meet the following conditions:
+
 - The AMP for email security requirements must be met.
 - The AMP MIME part must contain a valid AMP document.
 - The email should include the AMP MIME part before the HTML MIME part.
 - The AMP MIME part must be smaller than 100&nbsp;KB.
 
-If none of these conditions are causing the error, reach out to [Support][support].
+If none of these conditions are causing the error, contact [Support]({{site.baseurl}}/support_contact/).
 
 ### Frequently asked questions
 
-{% details Should I segment with AMP emails? %}
-We advocate not segmenting to send to all different types of users. This is because we send AMP messages in multipart, having different versions included in the original email. If a user can't see the AMP version, it will default back to HTML. 
-{% enddetails %}
+#### Should I segment with AMP emails?
 
-{% details Do you have any additional tips for building an AMP email? %}
-Check in with your engineering team to build out the AMP elements. After these elements are set up, we encourage you to include design resources and elements you have to add an extra layer of polish.
-{% enddetails %}
+We advocate not segmenting to send to all different types of users. This is because we send AMP messages in multipart, having different versions included in the original email. If a user can't see the AMP version, it will default back to HTML.
 
-[1]: {% image_buster /assets/img/dynamic-content.png %}
-[support]: {{site.baseurl}}/support_contact/
+

@@ -22,12 +22,6 @@ Windows 統合では、アプリが起動されるとセッションオープン
 
 ユーザーを介してセッションを検出するには、ダッシュボードでユーザーを見つけ、ユーザープロファイルの [アプリの利用状況] に移動します。セッショントラッキングが機能していることを確認するには、「セッション」メトリクスが期待どおりに増加することを確認します。
 
-![ユーザープロファイルには、アプリの利用状況が表示されており、25セッション、最後の使用が2時間前、初めての使用が20日前と表示されています。][session_tracking_7]
+![ユーザープロファイルでは、アプリの使用は25セッション、最後に使用したのは2時間前、最初に使用したのは20日前となっている。]({% image_buster /assets/img_archive/test_session.png %})
 
-[session_tracking_1]: {{ site.baseurl }}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview#customizing-braze-on-startup
-[session_tracking_3]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-2-configure-the-braze-sdk-in-appboyxml
-[session_tracking_5]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize
-[session_tracking_6]: http://msdn.microsoft.com/en-us/library/windows/apps/hh464925.aspx
-[session_tracking_7]: {% image_buster /assets/img_archive/test_session.png %}
-[session_tracking_8]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-4-tracking-user-sessions-in-android
 

@@ -1,5 +1,5 @@
 ---
-nav_title: Differences between Campaign and Canvas Attributes in Braze
+nav_title: Differences between campaign and Canvas attributes in Braze
 article_title: Differences between Campaign and Canvas Attributes in Braze
 page_order: 1
 

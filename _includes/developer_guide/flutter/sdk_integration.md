@@ -33,8 +33,8 @@ To connect to Braze servers, create a `braze.xml` file in your project's `androi
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<string name="com_braze_api_key">YOUR_APP_IDENTIFIER_API_KEY</string>
-<string translatable="false" name="com_braze_custom_endpoint">YOUR_CUSTOM_ENDPOINT_OR_CLUSTER</string>
+  <string translatable="false" name="com_braze_api_key">YOUR_APP_IDENTIFIER_API_KEY</string>
+  <string translatable="false" name="com_braze_custom_endpoint">YOUR_CUSTOM_ENDPOINT_OR_CLUSTER</string>
 </resources>
 ```
 
@@ -60,7 +60,7 @@ In the same file, create the Braze configuration object in the `application(_:di
 ```swift
 static var braze: Braze? = nil
 
-func application(
+override func application(
   _ application: UIApplication,
   didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil
 ) -> Bool {
@@ -147,6 +147,3 @@ braze.changeUser("{some-user-id}");
 
 Search for the user with `{some-user-id}` in the dashboard under **Audience** > **Search Users**. There, you can verify that session and device data have been logged.
 
-{% alert note %}
-If you are using the [older navigation]({{site.baseurl}}/navigation), you can search for users from **Users** > **User Search**.
-{% endalert %}

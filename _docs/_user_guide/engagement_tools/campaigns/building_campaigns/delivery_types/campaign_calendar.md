@@ -1,5 +1,5 @@
 ---
-nav_title: Content Calendar
+nav_title: Content calendar
 article_title: Content Calendar
 page_order: 4
 tool: Campaigns
@@ -12,10 +12,6 @@ description: "This reference page breaks down the components of the content cale
 > The content calendar offers a high-level overview for your upcoming scheduled campaigns.
 
 You can analyze messaging data, as well as view and manage your scheduled campaigns. To open the calendar, select **Messaging** > **Content Calendar**.
-
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), select **Engagement** > **Campaigns** > **Calendar**.
-{% endalert %}
 
 ## Messaging analytics
 

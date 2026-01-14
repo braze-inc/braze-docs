@@ -1,5 +1,5 @@
 ---
-nav_title: E-Mail Registrierung mit Double Opt-in
+nav_title: E-Mail Registrierung mit doppeltem Opt-in
 article_title: E-Mail Registrierung mit Double Opt-in
 page_order: 2
 page_type: reference
@@ -46,7 +46,7 @@ Passen wir die Canvas-Details an, um unser Ziel zu erreichen.
 
 Lassen Sie uns nun unsere Konversions-Events zuweisen. Konversions-Events sind eine Art Metrik, mit der Sie den Erfolg des Canvas messen können. Für den **Ereignistyp Konversion** wählen Sie **Angepasstes Event durchführen**. Wählen Sie dann **email_opt_in** für den **Namen des angepassten Events**.
 
-!["Konversions-Ereignisse zuweisen" für den Konversions-Ereignistyp des Opt-in für E-Mail.]({% image_buster /assets/img/canvas_templates/email_signup3.png %}){: style="max-width:90%;"}
+!["Konversions-Events zuweisen" für den Konversions-Event-Typ des Opt-in für E-Mail.]({% image_buster /assets/img/canvas_templates/email_signup3.png %}){: style="max-width:90%;"}
 
 Wir behalten die Frist für die Konversion des Templates von drei Tagen bei, da wir unsere jüngsten Nutzer:innen ansprechen wollen.
 
@@ -56,11 +56,11 @@ Behalten wir den Zeitplan für den Eingang als **aktionsbasiert** bei, damit die
 
 Wir werden auch die **aktionsbasierten Optionen** beibehalten, so dass Nutzer:innen den Canvas nur betreten, wenn sie eine Sitzung starten.
 
-![Ein aktionsbasierter Zeitplan für den Eingang von Nutzern:innen, die eine beliebige Sitzung im Canvas beginnen.]({% image_buster /assets/img/canvas_templates/email_signup4.png %}){: style="max-width:90%;"}
+![Ein aktionsbasierter Zeitplan für den Eingang von Nutzer:innen, die eine beliebige Sitzung beginnen, in den Canvas.]({% image_buster /assets/img/canvas_templates/email_signup4.png %}){: style="max-width:90%;"}
 
 Für das **Fenster Eingang** aktualisieren wir die **Startzeit (erforderlich)** auf das gewünschte Datum und die Uhrzeit.
 
-![Ein Eingabefenster mit der Startzeit 16\. Januar 2025 um 12:30 Uhr. Nutzer:innen werden diese Nachricht in ihrer Ortszeit eingeben.]({% image_buster /assets/img/canvas_templates/email_signup5.png %}){: style="max-width:90%;"}
+![Ein Eingangsfenster mit der Startzeit 16\. Januar 2025 um 12:30 Uhr. Nutzer:innen werden diese Nachricht in ihrer Ortszeit eingeben.]({% image_buster /assets/img/canvas_templates/email_signup5.png %}){: style="max-width:90%;"}
 
 ### Schritt 4: Wählen Sie die Zielgruppe aus
 
@@ -70,9 +70,9 @@ Wir definieren unsere Zielgruppe als Nutzer:innen von Steppington, die keine E-M
 
 ### Schritt 5: Wählen Sie Ihre Sendeeinstellungen aus
 
-Wir behalten die Standard-Einstellungen für Abonnenten bei, d.h. wir senden nur an Nutzer:innen, die Nachrichten oder Benachrichtigungen abonniert oder sich dafür entschieden haben, und lassen die anderen Einstellungen (Frequency-Capping, Ruhezeiten und Seed-Gruppen) weg.
+Wir behalten die Standardeinstellungen für Abonnements bei, d.h. wir senden nur an Benutzer, die Nachrichten oder Benachrichtigungen abonniert oder sich dafür entschieden haben, und überspringen die anderen Einstellungen (Häufigkeitsbegrenzung, ruhige Stunden und Seed-Gruppen).
 
-![Standard-Sendeoptionen, um nur an Nutzer:in zu senden, die Abonnent:in oder Opt-in sind.]({% image_buster /assets/img/canvas_templates/email_signup7.png %}){: style="max-width:90%;"}
+![Standard-Sendeoptionen, um nur an Nutzer:in zu senden, die ein Abonnent:in sind oder ein Opt-in haben.]({% image_buster /assets/img/canvas_templates/email_signup7.png %}){: style="max-width:90%;"}
 
 ### Schritt 6: Canvas anpassen
 

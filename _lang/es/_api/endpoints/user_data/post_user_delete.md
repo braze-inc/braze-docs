@@ -16,7 +16,9 @@ description: "En este artículo se describen los detalles del punto final Elimin
 
 > Utiliza este punto final para eliminar cualquier perfil de usuario especificando un identificador de usuario conocido.
 
-Se pueden incluir hasta 50 `external_ids`, `user_aliases`, `braze_ids`, o `email_addresses` en una sola solicitud. Sólo se puede incluir uno de `external_ids`, `user_aliases`, `braze_ids`, o `email_addresses` en una única solicitud.
+Se pueden incluir hasta 50 `external_ids`, `user_aliases`, `braze_ids`, `email_addresses`, o `phone_numbers` en una sola solicitud. Sólo se puede incluir una de las siguientes opciones en una misma solicitud: `external_ids`, `user_aliases`, `braze_ids`, `email_addresses`, o `phone_numbers`. 
+
+Si tienes un caso de uso que no puede resolverse con la eliminación masiva de usuarios a través de la API, ponte en contacto con el [equipo de soporte de Braze]({{site.baseurl}}/user_guide/administrative/access_braze/support/) para obtener ayuda.
 
 {% alert warning %}
 La eliminación de perfiles de usuario no se puede deshacer. Eliminará permanentemente a los usuarios que puedan causar discrepancias en tus datos. Obtén más información sobre lo que ocurre cuando [eliminas un perfil de usuario utilizando la API]({{site.baseurl}}/help/help_articles/api/delete_user/) en nuestra documentación de Ayuda.
@@ -30,7 +32,7 @@ Para utilizar este punto final, necesitarás una [clave de API]({{site.baseurl}}
 
 ## Límite de velocidad
 
-{% multi_lang_include rate_limits.md endpoint='eliminar usuarios' %}
+{% multi_lang_include rate_limits.md endpoint='users delete' %}
 
 ## Cuerpo de la solicitud
 
@@ -41,29 +43,35 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 ```json
 {
-  "external_ids" : (optional, array of string) External IDs for the users to delete,
-  "user_aliases" : (optional, array of user alias objects) User aliases for the users to delete,
-  "braze_ids" : (optional, array of string) Braze user identifiers for the users to delete,
-  "email_addresses": (optional, array of string) User emails for the users to delete
+  "external_ids" : (optional, array of string) External IDs to be deleted,
+  "user_aliases" : (optional, array of user alias objects) User aliases to be deleted,
+  "braze_ids" : (optional, array of string) Braze user identifiers to be deleted,
+  "email_addresses": (optional, array of string) User emails to be deleted,
+  "phone_numbers": (optional, array of string) User phone numbers to be deleted
 }
 ```
 ### Parámetros de la solicitud
 
 | Parámetro         | Obligatoria | Tipo de datos                  | Descripción                                                                                      |
 |-------------------|----------|----------------------------|--------------------------------------------------------------------------------------------------|
-| `external_ids`    | Opcional | Matriz de cadenas           | Identificadores externos de los usuarios a eliminar.                                                    |
-| `user_aliases`    | Opcional | Matriz de objeto alias de usuario | [Alias]({{site.baseurl}}/api/objects_filters/user_alias_object/) de usuario para los usuarios a eliminar. |
-| `braze_ids`       | Opcional | Matriz de cadenas           | Braze identificadores de usuario para que los usuarios los eliminen.                                                  |
-| `email_addresses` | Opcional | Matriz de cadenas           | Correos electrónicos para que los usuarios los eliminen. Consulta [Eliminar usuarios por correo](#deleting-users-by-email) electrónico para más información.                                                             |
+| `external_ids`    | Opcional | Matriz de cadenas           | Identificadores externos que hay que eliminar.                                                    |
+| `user_aliases`    | Opcional | Matriz de objeto alias de usuario | [Alias de usuario]({{site.baseurl}}/api/objects_filters/user_alias_object/) a eliminar. |
+| `braze_ids`       | Opcional | Matriz de cadenas           | Identificadores de usuario Braze a eliminar.                                                  |
+| `email_addresses` | Opcional | Matriz de cadenas           | Correos electrónicos de usuarios que deben eliminarse. Consulta [Eliminar usuarios por correo](#deleting-users-by-email) electrónico para más información.                                                             |
+| `phone_numbers` | Opcional | Matriz de cadenas | Números de teléfono de usuario que hay que borrar. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-### Eliminar usuarios por correo electrónico
+### Eliminar usuarios por direcciones de correo electrónico y números de teléfono
 
-Si se especifica un `email` como identificador, se requiere un valor `prioritization` adicional en el identificador. La `prioritization` es una matriz ordenada y debe especificar qué usuario eliminar si se encuentran varios usuarios. Esto significa que la eliminación de usuarios no se producirá si más de un usuario coincide con una priorización.
+Si se especifica una dirección de correo electrónico o un número de teléfono como identificador, se requiere un valor adicional `prioritization` en el identificador. `prioritization` debe ser una matriz ordenada y debe especificar qué usuario eliminar si hay varios usuarios. Esto significa que la eliminación de usuarios no se producirá si más de un usuario coincide con una priorización.
 
-Los valores permitidos para la matriz son: `identified`, `unidentified`, `most_recently_updated`. `most_recently_updated` se refiere a dar prioridad al usuario actualizado más recientemente.
+Los valores permitidos para la matriz son:
 
-En la matriz de priorización solo puede existir una de las siguientes opciones a la vez:
+- `identified`
+- `unidentified`
+- `most_recently_updated` (se refiere a dar prioridad al usuario actualizado más recientemente)
+
+En la matriz `prioritization` sólo puede existir una de las siguientes opciones a la vez:
 
 - `identified` se refiere a dar prioridad a un usuario con un `external_id`
 - `unidentified` se refiere a dar prioridad a un usuario sin un `external_id`

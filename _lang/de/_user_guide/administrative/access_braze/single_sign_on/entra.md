@@ -13,19 +13,14 @@ description: "In diesem Artikel erfahren Sie, wie Sie die Microsoft Entra Single
 
 ## Anforderungen
 
-Bei der Einrichtung werden Sie aufgefordert, eine Anmelde-URL und eine ACS-URL (Assertion Consumer Service) anzugeben.  
+Bei der Einrichtung werden Sie aufgefordert, eine URL für den Assertion Consumer Service (ACS) anzugeben.  
 
 | Anforderung | Details |
 |---|---|
-| Anmelde-URL | `https://<SUBDOMAIN>.braze.com/sign_in` <br><br> Verwenden Sie für die Subdomain die koordinierende Subdomain, die in der URL Ihrer [Braze-Instanz]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/) aufgeführt ist. Wenn Ihre Instanz zum Beispiel `US-01` ist, lautet Ihre URL `https://dashboard-01.braze.com`. Das bedeutet, dass Ihre Subdomain `dashboard-01` sein wird. |
 | Assertion Consumer Service (ACS) URL | `https://<SUBDOMAIN>.braze.com/auth/saml/callback` <br> Bei einigen Identitätsanbietern wird dies auch als Reply URL, Audience URL oder Audience URI bezeichnet. |
 | Entitäts-ID | `braze_dashboard`|
 | RelayState API-Schlüssel | Um die Anmeldung beim Identitätsanbieter zu aktivieren, gehen Sie zu **Einstellungen** > **API-Schlüssel** und erstellen Sie einen API-Schlüssel mit `sso.saml.login` Berechtigungen. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie Ihre API-Schlüssel unter **Einstellungen** unter **Entwicklerkonsole** > **API-Einstellungen**.
-{% endalert %}
 
 ## Vom Service Provider (SP) initiierte Anmeldung innerhalb von Microsoft Entra SSO
 
@@ -41,11 +36,16 @@ Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden
 3. Wählen Sie auf der Seite **Single Sign-On mit SAML einrichten** das Bearbeitungssymbol für die **grundlegende SAML-Konfiguration**.
 4. Konfigurieren Sie die Anwendung im IdP-initiierten Modus, indem Sie eine **Antwort-URL** eingeben, die Ihre [Braze-Instanz]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/#braze-instances) mit dem folgenden Muster kombiniert: `https://<SUBDOMAIN>.braze.com/auth/saml/callback`.
 5. Konfigurieren Sie optional RelayState, indem Sie Ihren von Relay State generierten API-Schlüssel in das Feld **Relay State (Optional)** eingeben.
-6. Wenn Sie die Anwendung im SP-initiierten Modus konfigurieren möchten, wählen Sie **Zusätzliche URLs festlegen** und geben Sie eine Anmelde-URL ein, die Ihre [Braze-Instanz]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/#braze-instances) mit dem folgenden Muster kombiniert: `https://<SUBDOMAIN>.braze.com/sign_in`.
-7. Formatieren Sie SAML-Assertions in dem spezifischen Format, das Braze erwartet. Lesen Sie sich die folgenden Registerkarten zu Benutzerattributen und Benutzeransprüchen durch, um zu verstehen, wie diese Attribute und Werte formatiert werden müssen.
+
+{% alert important %}
+Legen Sie das Feld **Anmelde-URL** **nicht** fest. Lassen Sie dieses Feld leer, um Probleme mit dem von Ihrem IdP initiierten SAML SSO zu vermeiden.
+{% endalert %}
+
+{: start="6"}
+6\. Formatieren Sie SAML-Assertions in dem spezifischen Format, das Braze erwartet. Lesen Sie sich die folgenden Registerkarten zu Benutzerattributen und Benutzeransprüchen durch, um zu verstehen, wie diese Attribute und Werte formatiert werden müssen.
 
 {% tabs %}
-{% tab Benutzerattribute %}
+{% tab User Attributes %}
 Sie können die Werte dieser Attribute im Bereich **Benutzerattribute** auf der Seite **Anwendungsintegration** verwalten.
 
 Verwenden Sie die folgenden Attributspaarungen:
@@ -64,7 +64,7 @@ Es ist sehr wichtig, dass das E-Mail-Feld mit dem übereinstimmt, was für Ihre 
 {% endalert %}
 
 {% endtab %}
-{% tab Benutzeransprüche %}
+{% tab User Claims %}
 
 Auf der Seite **Single Sign-On mit SAML einrichten** wählen Sie **Bearbeiten**, um das Dialogfeld **Benutzerattribute** zu öffnen. Bearbeiten Sie dann die Benutzeransprüche entsprechend dem richtigen Format.
 
@@ -96,13 +96,7 @@ Wenn Sie Braze im Microsoft Entra Admin Center eingerichtet haben, erstellt Micr
 Wenn Ihr Account Manager SAML SSO für Ihr Konto aktiviert hat, gehen Sie wie folgt vor:
 
 1. Gehen Sie zu **Einstellungen** > **Admin-Einstellungen** > **Sicherheitseinstellungen** und schalten Sie den Abschnitt SAML SSO auf **EIN**.
-
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, wählen Sie Ihr Kontosymbol und gehen Sie zu **Unternehmenseinstellungen** > **Sicherheitseinstellungen**, um den Abschnitt SAML SSO zu finden.
-{% endalert %}
-
-{: start="2"}
-2\. Fügen Sie auf derselben Seite Folgendes hinzu:
+2. Fügen Sie auf derselben Seite Folgendes hinzu:
 
 | Anforderung | Details |
 |---|---|

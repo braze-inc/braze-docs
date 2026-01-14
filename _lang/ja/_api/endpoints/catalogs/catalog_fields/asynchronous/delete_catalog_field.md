@@ -1,5 +1,5 @@
 ---
-nav_title: "DELETE:カタログフィールドの削除"
+nav_title: "DELETE:カタログ・フィールドを削除する"
 article_title: "DELETE:カタログフィールドの削除"
 search_tag: Endpoint
 page_order: 1
@@ -16,9 +16,6 @@ description: "この記事では、「カタログフィールドの削除」Bra
 {% endapimethod %}
 
 > カタログ・フィールドを削除するには、このエンドポイントを使用する。
-{% alert important %}
-このエンドポイントは現在早期アクセス中である。この早期アクセスへ参加することに興味がある場合は、カスタマーサクセスマネージャーにお問い合わせください。
-{% endalert %}
 
 ## 前提条件
 

@@ -1,6 +1,6 @@
 ---
-page_order: 1.2
-nav_title: Filter für die Segmentierung
+page_order: 2
+nav_title: Segmentierungsfilter
 article_title: Filter für die Segmentierung
 layout: glossary_page
 glossary_top_header: "Segmentation Filters"
@@ -35,7 +35,7 @@ glossary_tags:
 
 glossaries:
   - name: Segmentzugehörigkeit
-    description: "Ermöglicht es Ihnen, überall dort, wo Filter verwendet werden (z. B. Segmente, Kampagnen und andere), nach der Segmentzugehörigkeit zu filtern und mehrere verschiedene Segmente innerhalb einer Kampagne anzusprechen. <br><br>Beachten Sie, dass Segmente, die diesen Filter bereits verwenden, nicht weiter einbezogen oder in andere Segmente verschachtelt werden können. Sie müssen das Segment, das Sie einbeziehen möchten, mit denselben Filtern neu erstellen."
+    description: "Ermöglicht es Ihnen, überall dort, wo Filter verwendet werden (z. B. Segmente, Kampagnen und andere), nach der Segmentzugehörigkeit zu filtern und mehrere verschiedene Segmente innerhalb einer Kampagne anzusprechen. <br><br>Beachten Sie, dass Segmente, die diesen Filter bereits verwenden, nicht weiter in andere Segmente eingeschlossen oder verschachtelt werden können, da dies zu einem Zyklus führen kann, bei dem Segment A Segment B einschließt, das dann wiederum versucht, Segment A einzuschließen. In diesem Fall würde das Segment immer wieder auf sich selbst verweisen, so dass es unmöglich wäre, zu berechnen, wer tatsächlich dazugehört. Außerdem wird die Verschachtelung von Segmenten auf diese Weise komplizierter und kann die Arbeit verlangsamen. Erstellen Sie stattdessen das Segment, das Sie einbeziehen möchten, mit denselben Filtern neu."
     tags:
       - Segment or CSV membership
   - name: Braze-Segmenterweiterungen
@@ -47,7 +47,7 @@ glossaries:
     tags:
       - Segment or CSV membership
   - name: Angepasste Attribute
-    description: "Ermittelt, ob ein:e Nutzer:in mit einem angepassten Attribut-Wert übereinstimmt oder nicht. (24-Stunden-Zeitraum) <br><br>Zeitzone:<br>Zeitzone des Unternehmens"
+    description: "Ermittelt, ob ein:e Nutzer:in mit einem angepassten Attribut-Wert übereinstimmt oder nicht. <br><br>Zeitzone:<br>Zeitzone des Unternehmens"
     tags:
       - Custom attributes
   - name: Erstellt am
@@ -59,7 +59,7 @@ glossaries:
     tags:
       - Custom attributes
   - name: Tag des wiederkehrenden Events
-    description: "Dieser Filter betrachtet den Monat und den Tag eines benutzerdefinierten Attributs mit dem Datentyp \"Datum\", aber nicht das Jahr. Dieser Filter ist nützlich für jährliche Events.<br><br>Zeitzone:<br>Dieser Filter passt sich an die Zeitzonen an, in denen sich der Benutzer befindet."
+    description: "Dieser Filter betrachtet den Monat und den Tag eines benutzerdefinierten Attributs mit dem Datentyp \"Datum\", aber nicht das Jahr. Dieser Filter ist nützlich für jährliche Events.<br><br>Zeitzone:<br>Dieser Filter passt sich an alle Zeitzonen an, in denen sich der Nutzer:innen befindet, sofern die Nachricht mit der Option für die Lokalisierung des Zeitplans gesendet wird. Andernfalls verwendet dieser Filter die Zeitzone Ihres Unternehmens."
     tags:
       - Custom attributes
   - name: Angepasstes Event
@@ -71,7 +71,7 @@ glossaries:
     tags:
       - Custom events
   - name: Letzte Durchführung von angepasstem Event 
-    description: "Ermittelt den spätesten Zeitpunkt, an dem ein:e Nutzer:inn ein speziell aufgezeichnetes Event durchgeführt hat. (24-Stunden-Zeitraum) <br><br>Beispiel:<br> Letzter verlassener Warenkorb Vor weniger als 1 Tag<br><br>Zeitzone:<br>Zeitzone des Unternehmens"
+    description: "Ermittelt den spätesten Zeitpunkt, an dem ein:e Nutzer:inn ein speziell aufgezeichnetes Event durchgeführt hat. Dieser Filter unterstützt Dezimalzahlen, z.B. 0,25 Stunden. (24-Stunden-Zeitraum) <br><br>Beispiel:<br> Letzter verlassener Warenkorb Vor weniger als 1 Tag<br><br>Zeitzone:<br>Zeitzone des Unternehmens"
     tags:
       - Custom events
   - name: X angepasstes Event in Y Tagen
@@ -83,7 +83,7 @@ glossaries:
     tags:
       - Custom events
   - name: E-Mail-Adresse 
-    description: "Ermöglicht es Ihnen, Ihre Kampagnenempfänger zu Testzwecken nach einzelnen E-Mail-Adressen zu benennen. Sie können damit auch Transaktions-E-Mails an alle Ihre Nutzer:innen senden (auch an die, die sich abgemeldet haben), indem Sie im Filter den Parameter „E-Mail-Adresse ist nicht leer“ angeben."
+    description: "Ermöglicht es Ihnen, Ihre Kampagnenempfänger zu Testzwecken nach einzelnen E-Mail-Adressen zu benennen. Sie können damit auch Transaktions-E-Mails an alle Ihre Nutzer:innen (auch an die, die sich abgemeldet haben) senden, indem Sie im Filter den Parameter \"E-Mail-Adresse ist nicht leer\" angeben. So können Sie die Zustellung von E-Mails unabhängig vom Opt-in-Status maximieren. <br><br>Dieser Filter prüft nur, ob Nutzerprofile eine E-Mail Adresse haben, während der Filter <a href=\"/docs/user_guide/engagement_tools/segments/segmentation_filters#email-available\">E-Mail verfügbar</a> nach zusätzlichen Kriterien prüft."
     tags:
       - Other Filters
   - name: Externe Nutzer-ID
@@ -127,11 +127,11 @@ glossaries:
     tags:
       - Sessions
   - name: Hat Nachricht aus Kampagne empfangen
-    description: "Segmentiert Ihre Nutzer danach, ob sie eine bestimmte Kampagne erhalten haben oder nicht.<br><br> Bei Content-Cards und In-App-Nachrichten ist dies der Zeitpunkt, an dem ein:e Nutzer:in eine Impression protokolliert, nicht der Zeitpunkt, an dem die Karte oder In-App-Nachricht gesendet wird.<br><br>Bei Push- und Webhooks ist dies der Zeitpunkt, an dem die Nachricht an den Benutzer gesendet wird.<br><br> Bei WhatsApp ist dies der Zeitpunkt, an dem die letzte Nachrichten-API-Anfrage an WhatsApp gesendet wird, nicht der Zeitpunkt, an dem die Nachricht an das Gerät des Benutzers geliefert wird. <br><br>Bei E-Mails ist dies der Zeitpunkt, an dem eine E-Mail-Anfrage an den E-Mail-Dienstanbieter gesendet wird (unabhängig davon, ob sie tatsächlich zugestellt wird). Wenn mehrere Benutzer dieselbe E-Mail-Adresse verwenden:<br>- Beim ersten Senden wird nur das Profil des oder der spezifischen Targeting-Nutzer:in aktualisiert. <br>- Wenn die E-Mail zugestellt wird oder wenn der Benutzer die E-Mail oder einen Link in der E-Mail öffnet, scheinen alle Benutzer, die die gleiche E-Mail-Adresse haben, die Nachricht erhalten zu haben.<br><br>Bei SMS ist dies der Zeitpunkt, an dem die letzte Nachricht an den SMS-Anbieter zugestellt wurde. Dies ist keine Garantie dafür, dass die Nachricht auf dem Gerät des Benutzers angekommen ist."
+    description: "Segmentiert Ihre Nutzer danach, ob sie eine bestimmte Kampagne erhalten haben oder nicht.<br><br> Bei Content-Cards, Bannern und In-App-Nachrichten ist dies der Zeitpunkt, an dem ein Nutzer:innen eine Impression protokolliert, nicht der Zeitpunkt, an dem die Karte oder die In-App-Nachricht gesendet wird.<br><br>Bei Push- und Webhooks ist dies der Zeitpunkt, an dem die Nachricht an den Benutzer gesendet wird.<br><br> Bei WhatsApp ist dies der Zeitpunkt, an dem die letzte Nachrichten-API-Anfrage an WhatsApp gesendet wird, nicht der Zeitpunkt, an dem die Nachricht an das Gerät des Benutzers geliefert wird. <br><br>Bei E-Mails ist dies der Zeitpunkt, an dem eine E-Mail-Anfrage an den E-Mail-Dienstanbieter gesendet wird (unabhängig davon, ob sie tatsächlich zugestellt wird). Wenn mehrere Benutzer dieselbe E-Mail-Adresse verwenden:<br>- Beim ersten Senden wird nur das Profil des oder der spezifischen Targeting-Nutzer:in aktualisiert. <br>- Wenn die E-Mail zugestellt wird oder wenn der Benutzer die E-Mail oder einen Link in der E-Mail öffnet, scheinen alle Benutzer, die die gleiche E-Mail-Adresse haben, die Nachricht erhalten zu haben.<br><br>Bei SMS ist dies der Zeitpunkt, an dem die letzte Nachricht an den SMS-Anbieter zugestellt wurde. Dies ist keine Garantie dafür, dass die Nachricht auf dem Gerät des Benutzers angekommen ist."
     tags:
       - Retargeting
   - name: Empfangene Kampagnenvariante
-    description: "Segmentiert Ihre Nutzer danach, welche Variante einer multivariaten Kampagne sie erhalten haben.<br><br> Bei Content-Cards und In-App-Nachrichten ist dies der Zeitpunkt, an dem ein:e Nutzer:in eine Impression protokolliert, nicht der Zeitpunkt, an dem die Karte oder In-App-Nachricht gesendet wird.<br><br>Bei Push- und Webhooks ist dies der Zeitpunkt, an dem die Nachricht an den Benutzer gesendet wird.<br><br> Bei WhatsApp ist dies der Zeitpunkt, an dem die letzte Nachrichten-API-Anfrage an WhatsApp gesendet wird, nicht der Zeitpunkt, an dem die Nachricht an das Gerät des Benutzers geliefert wird. <br><br>Bei E-Mails ist dies der Zeitpunkt, an dem eine E-Mail-Anfrage an den E-Mail-Dienstanbieter gesendet wird (unabhängig davon, ob sie tatsächlich zugestellt wird). Wenn mehrere Benutzer dieselbe E-Mail-Adresse verwenden:<br>- Beim ersten Senden wird nur das Profil des oder der spezifischen Targeting-Nutzer:in aktualisiert. <br>- Wenn die E-Mail zugestellt wird oder wenn der Benutzer die E-Mail oder einen Link in der E-Mail öffnet, scheinen alle Benutzer, die die gleiche E-Mail-Adresse haben, die Nachricht erhalten zu haben.<br><br>Bei SMS ist dies der Zeitpunkt, an dem die letzte Nachricht an den SMS-Anbieter zugestellt wurde. Dies ist keine Garantie dafür, dass die Nachricht auf dem Gerät des Benutzers angekommen ist."
+    description: "Segmentiert Ihre Nutzer danach, welche Variante einer multivariaten Kampagne sie erhalten haben.<br><br> Bei Content-Cards, Bannern und In-App-Nachrichten ist dies der Zeitpunkt, an dem ein Nutzer:innen eine Impression protokolliert, nicht der Zeitpunkt, an dem die Karte oder die In-App-Nachricht gesendet wird.<br><br>Bei Push- und Webhooks ist dies der Zeitpunkt, an dem die Nachricht an den Benutzer gesendet wird.<br><br> Bei WhatsApp ist dies der Zeitpunkt, an dem die letzte Nachrichten-API-Anfrage an WhatsApp gesendet wird, nicht der Zeitpunkt, an dem die Nachricht an das Gerät des Benutzers geliefert wird. <br><br>Bei E-Mails ist dies der Zeitpunkt, an dem eine E-Mail-Anfrage an den E-Mail-Dienstanbieter gesendet wird (unabhängig davon, ob sie tatsächlich zugestellt wird). Wenn mehrere Benutzer dieselbe E-Mail-Adresse verwenden:<br>- Beim ersten Senden wird nur das Profil des oder der spezifischen Targeting-Nutzer:in aktualisiert. <br>- Wenn die E-Mail zugestellt wird oder wenn der Benutzer die E-Mail oder einen Link in der E-Mail öffnet, scheinen alle Benutzer, die die gleiche E-Mail-Adresse haben, die Nachricht erhalten zu haben.<br><br>Bei SMS ist dies der Zeitpunkt, an dem die letzte Nachricht an den SMS-Anbieter zugestellt wurde. Dies ist keine Garantie dafür, dass die Nachricht auf dem Gerät des Benutzers angekommen ist."
     tags:
       - Retargeting
   - name: Hat Nachricht aus Canvas-Schritt empfangen
@@ -147,7 +147,7 @@ glossaries:
     tags:
       - Retargeting
   - name: Hat Nachricht aus Kampagne oder Canvas mit Tag empfangen
-    description: "Segmentiert Ihre Nutzer danach, ob sie eine bestimmte Kampagne oder Leinwand mit einem bestimmten Tag erhalten haben oder nicht.<br><br> Bei Content-Cards und In-App-Nachrichten ist dies der Zeitpunkt, an dem ein:e Nutzer:in eine Impression protokolliert, nicht der Zeitpunkt, an dem die Karte oder In-App-Nachricht gesendet wird.<br><br>Bei Push- und Webhooks ist dies der Zeitpunkt, an dem die Nachricht an den Benutzer gesendet wird.<br><br> Bei WhatsApp ist dies der Zeitpunkt, an dem die letzte Nachrichten-API-Anfrage an WhatsApp gesendet wird, nicht der Zeitpunkt, an dem die Nachricht an das Gerät des Benutzers geliefert wird. <br><br>Bei E-Mails ist dies der Zeitpunkt, an dem eine E-Mail-Anfrage an den E-Mail-Dienstanbieter gesendet wird (unabhängig davon, ob sie tatsächlich zugestellt wird). Wenn mehrere Benutzer dieselbe E-Mail-Adresse verwenden:<br>- Beim ersten Senden wird nur das Profil des oder der spezifischen Targeting-Nutzer:in aktualisiert. <br>- Wenn die E-Mail zugestellt wird oder wenn der Benutzer die E-Mail oder einen Link in der E-Mail öffnet, scheinen alle Benutzer, die die gleiche E-Mail-Adresse haben, die Nachricht erhalten zu haben.<br><br>Bei SMS ist dies der Zeitpunkt, an dem die letzte Nachricht an den SMS-Anbieter zugestellt wurde. Dies ist keine Garantie dafür, dass die Nachricht auf dem Gerät des Benutzers angekommen ist."
+    description: "Segmentiert Ihre Nutzer danach, ob sie eine bestimmte Kampagne oder Leinwand mit einem bestimmten Tag erhalten haben oder nicht.<br><br> Bei Content-Cards, Bannern (nur Kampagnen) und In-App-Nachrichten ist dies der Zeitpunkt, an dem ein Nutzer:innen eine Impression protokolliert, nicht der Zeitpunkt, an dem die Karte oder die In-App-Nachricht gesendet wird.<br><br>Bei Push- und Webhooks ist dies der Zeitpunkt, an dem die Nachricht an den Benutzer gesendet wird.<br><br> Bei WhatsApp ist dies der Zeitpunkt, an dem die letzte Nachrichten-API-Anfrage an WhatsApp gesendet wird, nicht der Zeitpunkt, an dem die Nachricht an das Gerät des Benutzers geliefert wird. <br><br>Bei E-Mails ist dies der Zeitpunkt, an dem eine E-Mail-Anfrage an den E-Mail-Dienstanbieter gesendet wird (unabhängig davon, ob sie tatsächlich zugestellt wird). Wenn mehrere Benutzer dieselbe E-Mail-Adresse verwenden:<br>- Beim ersten Senden wird nur das Profil des oder der spezifischen Targeting-Nutzer:in aktualisiert. <br>- Wenn die E-Mail zugestellt wird oder wenn der Benutzer die E-Mail oder einen Link in der E-Mail öffnet, scheinen alle Benutzer, die die gleiche E-Mail-Adresse haben, die Nachricht erhalten zu haben.<br><br>Bei SMS ist dies der Zeitpunkt, an dem die letzte Nachricht an den SMS-Anbieter zugestellt wurde. Dies ist keine Garantie dafür, dass die Nachricht auf dem Gerät des Benutzers angekommen ist."
     tags:
       - Retargeting
   - name: Letzte empfangene Nachricht aus einer Kampagne oder einem Canvas mit Tag
@@ -182,24 +182,16 @@ glossaries:
     description: "Segmentiert Ihre Nutzer nach dem letzten Zeitpunkt, an dem sie eine WhatsApp-Nachricht erhalten haben. Dies ist der Zeitpunkt, an dem die letzte Nachrichten-API-Anfrage an WhatsApp gesendet wird, nicht der Zeitpunkt, an dem die Nachricht an das Gerät des Benutzers geliefert wird. (24-Stunden-Zeitraum)<br><br>Zeitzone:<br>Zeitzone des Unternehmens"
     tags:
       - Retargeting
-  - name: Zuletzt aufgerufener Newsfeed
-    description: "Segmentiert Ihre Nutzer nach dem letzten Mal, als sie den News Feed angesehen haben."
-    tags:
-      - Retargeting
-  - name: Anzahl der Newsfeed-Aufrufe
-    description: "Segmentiert Ihre Nutzer danach, wie oft sie den News Feed angesehen haben."
-    tags:
-      - Retargeting
   - name: Kampagne angeklickt/geöffnet
-    description: "Filtern Sie nach der Interaktion mit einer bestimmten Kampagne. <br><br> Für E-Mail, wenn mehrere Benutzer dieselbe E-Mail-Adresse verwenden:<br>- Wenn die E-Mail geöffnet oder angeklickt wird, werden die Profile aller anderen Benutzer mit der gleichen E-Mail-Adresse ebenfalls aktualisiert. <br>- Wenn der ursprüngliche Benutzer seine E-Mail-Adresse nach dem Senden der Nachricht und vor dem Öffnen oder Klicken ändert, wird das Öffnen oder Klicken auf alle verbleibenden Benutzer mit dieser E-Mail-Adresse anstelle des ursprünglichen Benutzers angewendet.<br><br>Für SMS ist eine Interaktion definiert als:<br>- Der Benutzer hat zuletzt eine Antwort-SMS gesendet, die einer bestimmten Stichwortkategorie entspricht. Dies wird der letzten Kampagne zugeschrieben, die alle Nutzer mit dieser Telefonnummer erhalten haben. Die Kampagne muss in den letzten vier Stunden eingegangen sein.<br>- Der Benutzer hat zuletzt einen verkürzten Link in einer SMS-Nachricht ausgewählt, bei der die Klickverfolgung für den Benutzer aktiviert ist, und zwar in einer bestimmten Kampagne."
+    description: "Filtern Sie nach der Interaktion mit einer bestimmten Kampagne. Bei E-Mail Messaging umfasst das Öffnungsereignis sowohl maschinell geöffnete als auch nicht maschinell geöffnete Nachrichten.<br><br> Bei E-Mails umfasst dies auch die Option, nach \"geöffneten E-Mails (Maschinenöffnungen)\" und \"geöffneten E-Mails (andere Öffnungen)\" zu filtern. Wenn mehrere Benutzer dieselbe E-Mail-Adresse verwenden:<br>- Wenn die E-Mail geöffnet oder angeklickt wird, werden die Profile aller anderen Benutzer mit der gleichen E-Mail-Adresse ebenfalls aktualisiert. <br>- Wenn der ursprüngliche Benutzer seine E-Mail-Adresse nach dem Senden der Nachricht und vor dem Öffnen oder Klicken ändert, wird das Öffnen oder Klicken auf alle verbleibenden Benutzer mit dieser E-Mail-Adresse anstelle des ursprünglichen Benutzers angewendet.<br><br>Für SMS ist eine Interaktion definiert als:<br>- Der Benutzer hat zuletzt eine Antwort-SMS gesendet, die einer bestimmten Stichwortkategorie entspricht. Dies wird der letzten Kampagne zugeschrieben, die alle Nutzer mit dieser Telefonnummer erhalten haben. Die Kampagne muss in den letzten vier Stunden eingegangen sein.<br>- Der Benutzer hat zuletzt einen verkürzten Link in einer SMS-Nachricht ausgewählt, bei der die Klickverfolgung für den Benutzer aktiviert ist, und zwar in einer bestimmten Kampagne."
     tags:
       - Retargeting
   - name: Kampagne oder Canvas mit Tag angeklickt/geöffnet
-    description: "Filtern Sie nach Interaktionen mit einer bestimmten Kampagne, die ein bestimmtes Tag hat. <br><br> Wenn mehrere Benutzer dieselbe E-Mail-Adresse verwenden:<br>- Wenn die E-Mail geöffnet oder angeklickt wird, werden die Profile aller anderen Benutzer mit der gleichen E-Mail-Adresse ebenfalls aktualisiert. <br>- Wenn der ursprüngliche Benutzer seine E-Mail-Adresse nach dem Senden der Nachricht und vor dem Öffnen oder Klicken ändert, wird das Öffnen oder Klicken auf alle verbleibenden Benutzer mit dieser E-Mail-Adresse anstelle des ursprünglichen Benutzers angewendet.<br><br>Für SMS ist eine Interaktion definiert als:<br>- Der Benutzer hat zuletzt eine Antwort-SMS gesendet, die einer bestimmten Stichwortkategorie entspricht. Dies wird der letzten Kampagne zugeschrieben, die alle Nutzer mit dieser Telefonnummer erhalten haben. Die Kampagne muss in den letzten vier Stunden eingegangen sein.<br>- Wenn der oder die Nutzer:in einer SMS-Nachricht, in der das Tracking von Klicks eingeschaltet ist, zuletzt einen verkürzten Link aus einer bestimmten Kampagne oder einem Canvas-Schritt mit Tag ausgewählt hat."
+    description: "Filtern Sie nach Interaktionen mit einer bestimmten Kampagne, die ein bestimmtes Tag hat. Bei E-Mail Messaging umfasst das Öffnungsereignis sowohl maschinell geöffnete als auch nicht maschinell geöffnete Nachrichten.<br><br> Für E-Mails beinhaltet dies die Option, nach \"geöffnete E-Mails (Maschinenöffnungen)\" und \"geöffnete E-Mails (andere Öffnungen)\" zu filtern. Wenn mehrere Benutzer dieselbe E-Mail-Adresse verwenden:<br>- Wenn die E-Mail geöffnet oder angeklickt wird, werden die Profile aller anderen Benutzer mit der gleichen E-Mail-Adresse ebenfalls aktualisiert. <br>- Wenn der ursprüngliche Benutzer seine E-Mail-Adresse nach dem Senden der Nachricht und vor dem Öffnen oder Klicken ändert, wird das Öffnen oder Klicken auf alle verbleibenden Benutzer mit dieser E-Mail-Adresse anstelle des ursprünglichen Benutzers angewendet.<br><br>Für SMS ist eine Interaktion definiert als:<br>- Der Benutzer hat zuletzt eine Antwort-SMS gesendet, die einer bestimmten Stichwortkategorie entspricht. Dies wird der letzten Kampagne zugeschrieben, die alle Nutzer mit dieser Telefonnummer erhalten haben. Die Kampagne muss in den letzten vier Stunden eingegangen sein.<br>- Wenn der oder die Nutzer:in einer SMS-Nachricht, in der das Tracking von Klicks eingeschaltet ist, zuletzt einen verkürzten Link aus einer bestimmten Kampagne oder einem Canvas-Schritt mit Tag ausgewählt hat."
     tags:
       - Retargeting
   - name: Schritt angeklickt/geöffnet
-    description: "Filtern Sie nach der Interaktion mit einer bestimmten Canvas-Komponente.<br><br>Für SMS ist eine Interaktion definiert als:<br>- Der Benutzer hat zuletzt eine Antwort-SMS gesendet, die einer bestimmten Stichwortkategorie entspricht. Dies wird der letzten Kampagne zugeschrieben, die alle Nutzer mit dieser Telefonnummer erhalten haben. Die Kampagne muss in den letzten vier Stunden eingegangen sein. <br>- Der oder die Nutzer:in hat zuletzt einen verkürzten Link in einer SMS-Nachricht ausgewählt, in der das Tracking von Nutzerklicks aktiviert ist, und zwar in einem bestimmten Canvas-Schritt."
+    description: "Filtern Sie nach der Interaktion mit einer bestimmten Canvas-Komponente. Bei E-Mail Messaging umfasst das Öffnungsereignis sowohl maschinell geöffnete als auch nicht maschinell geöffnete Nachrichten.<br><br>Für E-Mails beinhaltet dies die Option, nach \"geöffnete E-Mails (Maschinenöffnungen)\" und \"geöffnete E-Mails (andere Öffnungen)\" zu filtern.<br><br>Für SMS ist eine Interaktion definiert als:<br>- Der Benutzer hat zuletzt eine Antwort-SMS gesendet, die einer bestimmten Stichwortkategorie entspricht. Dies wird der letzten Kampagne zugeschrieben, die alle Nutzer mit dieser Telefonnummer erhalten haben. Die Kampagne muss in den letzten vier Stunden eingegangen sein. <br>- Der oder die Nutzer:in hat zuletzt einen verkürzten Link in einer SMS-Nachricht ausgewählt, in der das Tracking von Nutzerklicks aktiviert ist, und zwar in einem bestimmten Canvas-Schritt."
     tags:
       - Retargeting
   - name: Alias in Kampagne angeklickt
@@ -259,11 +251,11 @@ glossaries:
     tags:
       - Retargeting
   - name: Empfangszeitpunkt der letzten Nachricht
-    description: "Segmentiert Ihre Benutzer anhand der zuletzt erhaltenen Nachricht. (24-Stunden-Zeitraum)<br><br> Bei Content Cards und In-App-Nachrichten ist dies der Zeitpunkt, an dem ein Benutzer zuletzt eine Impression erfasst hat, nicht der Zeitpunkt, an dem die Karte oder In-App-Nachricht zuletzt gesendet wurde.<br><br>Bei Push- und Webhooks ist dies der Zeitpunkt, an dem eine Nachricht an den Benutzer gesendet wurde.<br><br> Bei WhatsApp ist dies der Zeitpunkt, an dem die letzte Nachrichten-API-Anfrage an WhatsApp gesendet wurde, nicht der Zeitpunkt, an dem die Nachricht an das Gerät des Benutzers zugestellt wurde. <br><br>Bei E-Mails ist dies der Zeitpunkt, an dem eine E-Mail-Anfrage an den E-Mail-Dienstanbieter gesendet wird (unabhängig davon, ob sie tatsächlich zugestellt wird). Wenn mehrere Benutzer dieselbe E-Mail-Adresse verwenden:<br>- Beim ersten Senden wird nur das Profil des oder der spezifischen Targeting-Nutzer:in aktualisiert. <br>- Wenn die E-Mail zugestellt wird oder wenn der Benutzer die E-Mail oder einen Link in der E-Mail öffnet, scheinen alle Benutzer, die die gleiche E-Mail-Adresse haben, die Nachricht erhalten zu haben.<br><br>Bei SMS ist dies der Zeitpunkt, an dem die letzte Nachricht an den SMS-Anbieter zugestellt wurde. Dies ist keine Garantie dafür, dass die Nachricht auf dem Gerät des Benutzers angekommen ist.<br><br>Beispiel:<br>Letzte erhaltene Nachricht vor weniger als 1 Tag = vor weniger als 24 Stunden<br><br>Zeitzone:<br>Zeitzone des Unternehmens"
+    description: "Segmentiert Ihre Benutzer anhand der zuletzt erhaltenen Nachricht. (24-Stunden-Zeitraum)<br><br> Bei Content-Cards, Bannern und In-App-Nachrichten ist dies der Zeitpunkt, an dem ein Nutzer:innen zuletzt eine Impression erfasst hat, nicht der Zeitpunkt, an dem die Karte oder In-App-Nachricht zuletzt gesendet wurde.<br><br>Bei Push- und Webhooks ist dies der Zeitpunkt, an dem eine Nachricht an den Benutzer gesendet wurde.<br><br> Bei WhatsApp ist dies der Zeitpunkt, an dem die letzte Nachrichten-API-Anfrage an WhatsApp gesendet wurde, nicht der Zeitpunkt, an dem die Nachricht an das Gerät des Benutzers zugestellt wurde. <br><br>Bei E-Mails ist dies der Zeitpunkt, an dem eine E-Mail-Anfrage an den E-Mail-Dienstanbieter gesendet wird (unabhängig davon, ob sie tatsächlich zugestellt wird). Wenn mehrere Benutzer dieselbe E-Mail-Adresse verwenden:<br>- Beim ersten Senden wird nur das Profil des oder der spezifischen Targeting-Nutzer:in aktualisiert. <br>- Wenn die E-Mail zugestellt wird oder wenn der Benutzer die E-Mail oder einen Link in der E-Mail öffnet, scheinen alle Benutzer, die die gleiche E-Mail-Adresse haben, die Nachricht erhalten zu haben.<br><br>Bei SMS ist dies der Zeitpunkt, an dem die letzte Nachricht an den SMS-Anbieter zugestellt wurde. Dies ist keine Garantie dafür, dass die Nachricht auf dem Gerät des Benutzers angekommen ist.<br><br>Beispiel:<br>Letzte erhaltene Nachricht vor weniger als 1 Tag = vor weniger als 24 Stunden<br><br>Zeitzone:<br>Zeitzone des Unternehmens"
     tags:
       - Retargeting
   - name: Letzte Interaktion mit Nachricht
-    description: "Segmentiert Ihre Nutzer danach, wann sie das letzte Mal einen Ihrer Nachrichtenkanäle (Content Card, E-Mail, In-App, SMS, Push, WhatsApp) angeklickt oder geöffnet haben. Enthält die Option zum Filtern nach maschinellen Öffnungen oder anderen Öffnungen für Nachrichten per E-Mail. (24-Stunden-Zeitraum)<br><br>Bei E-Mails ist dies der Zeitpunkt, an dem eine E-Mail-Anfrage an den E-Mail-Dienstanbieter gesendet wird (unabhängig davon, ob sie tatsächlich zugestellt wird). Wenn mehrere Benutzer dieselbe E-Mail-Adresse verwenden:<br>- Beim ersten Senden wird nur das Profil des oder der spezifischen Targeting-Nutzer:in aktualisiert. <br>- Wenn die E-Mail zugestellt wird oder wenn der Benutzer die E-Mail oder einen Link in der E-Mail öffnet, scheinen alle Benutzer, die die gleiche E-Mail-Adresse haben, die Nachricht erhalten zu haben.<br><br>Bei SMS ist dies der Zeitpunkt, an dem der Benutzer zuletzt einen verkürzten Link in einer Nachricht ausgewählt hat, für die die Klickverfolgung aktiviert ist.<br><br>Zeitzone:<br>Zeitzone des Unternehmens"
+    description: "Segmentiert Ihre Nutzer danach, wann sie das letzte Mal auf einen Ihrer Messaging-Kanäle (Banner, Content-Card, E-Mail, In-App, SMS, Push, WhatsApp) geklickt oder diesen geöffnet haben. Bei E-Mail Messaging umfasst das Öffnungsereignis sowohl maschinell geöffnete als auch nicht maschinell geöffnete Nachrichten. (24-Stunden-Zeitraum)<br><br>Bei E-Mails ist dies der Zeitpunkt, an dem eine E-Mail-Anfrage an den E-Mail-Dienstanbieter gesendet wird (unabhängig davon, ob sie tatsächlich zugestellt wird). Dazu gehört auch die Möglichkeit, nach \"geöffneten E-Mails (Maschinenöffnungen)\" und \"geöffneten E-Mails (andere Öffnungen)\" zu filtern. Wenn mehrere Benutzer dieselbe E-Mail-Adresse verwenden:<br>- Beim ersten Senden wird nur das Profil des oder der spezifischen Targeting-Nutzer:in aktualisiert. <br>- Wenn die E-Mail zugestellt wird oder wenn der Benutzer die E-Mail oder einen Link in der E-Mail öffnet, scheinen alle Benutzer, die die gleiche E-Mail-Adresse haben, die Nachricht erhalten zu haben.<br><br>Bei SMS ist dies der Zeitpunkt, an dem der Benutzer zuletzt einen verkürzten Link in einer Nachricht ausgewählt hat, für die die Klickverfolgung aktiviert ist.<br><br>Zeitzone:<br>Zeitzone des Unternehmens"
     tags:
       - Retargeting
   - name: Angeklickte Karte 
@@ -279,7 +271,7 @@ glossaries:
     tags:
       - Channel subscription behavior
   - name: E-Mail-Adresse verfügbar
-    description: "Segmentiert Ihre Benutzer danach, ob sie eine gültige E-Mail-Adresse haben oder nicht und ob sie E-Mails abonniert/angemeldet haben. Der Filter für verfügbare E-Mails prüft auf drei Kriterien: ob der Nutzer:innen von E-Mails abgemeldet ist, ob Braze einen Hard Bounce erhalten hat und ob die E-Mail als Spam markiert wurde. Wenn eines dieser Kriterien erfüllt ist, oder wenn für einen Benutzer keine E-Mail existiert, wird der Benutzer nicht berücksichtigt."
+    description: "Segmentiert Ihre Nutzer:innen danach, ob sie eine gültige E-Mail-Adresse haben und ob sie ein Abonnent:in sind oder ein Opt-in für E-Mails haben. Dieser Filter prüft auf drei Kriterien: ob der Nutzer:innen sich von E-Mails abgemeldet hat, ob Braze einen Hard Bounce erhalten hat und ob die E-Mail als Spam markiert wurde. Wenn eines dieser Kriterien erfüllt ist, oder wenn für einen Benutzer keine E-Mail existiert, wird der Benutzer nicht berücksichtigt.<br><br>Beachten Sie, dass Nutzer:innen, deren \"E-Mail verfügbar\" <code>falsch</code> ist, nicht in die Berechnung der Zielgruppe einbezogen werden, aber dennoch eine Nachricht erhalten können, wenn Sie eine Transaktions-E-Mail senden. Bei der Berechnung der Zielgruppe werden jedoch nur Abonnent:innen oder Opt-in-Nutzer:innen berücksichtigt. <br><br>Für E-Mails, bei denen der Opt-in-Status wichtig ist, empfehlen wir die Verwendung des Filters \"E-Mail verfügbar\" anstelle des Filters \" <a href=\"/docs/user_guide/engagement_tools/segments/segmentation_filters#email-address\">E-Mail-Adresse\"</a>. Die zusätzlichen Kriterien können Ihnen helfen, Nutzer:innen zu targetieren, die Ihre Nachrichten wirklich sehen wollen."
     tags:
       - Channel subscription behavior
   - name: Datum des E-Mail-Opt-ins
@@ -294,16 +286,16 @@ glossaries:
     description: "Segmentiert Ihre Nutzer:innen nach dem Datum, an dem sie sich von zukünftigen E-Mails abgemeldet haben."
     tags:
       - Channel subscription behavior
-  - name: Push aktiviert
-    description: "Segmentiert Ihre Benutzer, die über eine vorläufige Push-Autorisierung verfügen oder für Push im Vordergrund aktiviert sind. Diese Zählung umfasst insbesondere:<br>1. iOS-Benutzer, die vorläufig für Push autorisiert sind. <br>2. Benutzer, die explizit Push-Benachrichtigungen für eine der Apps in Ihrem Arbeitsbereich aktiviert haben. Für diese Benutzer umfasst diese Zählung nur den Push im Vordergrund.<br><br>Bei Push-Aktivierung werden Nutzer:innen, die sich abgemeldet haben, nicht berücksichtigt. <br><br>Nachdem Sie mit diesem Filter eine Segmentierung vorgenommen haben, können Sie im unteren Bereich mit der Bezeichnung <em>Erreichbare Nutzer</em> eine Aufschlüsselung der Mitglieder dieses Segments für Android, iOS und Web sehen."
+  - name: Foreground-Push aktiviert
+    description: "Segmentiert Ihre Benutzer, die über eine vorläufige Push-Autorisierung verfügen oder für Push im Vordergrund aktiviert sind. Diese Zählung umfasst insbesondere:<br>1. iOS-Benutzer, die vorläufig für Push autorisiert sind. <br>2. Nutzer:innen, die Push im Vordergrund aktiviert haben und deren Push-Abonnementstatus nicht abgemeldet ist, für jede Ihrer Apps. Für diese Benutzer umfasst diese Zählung nur den Push im Vordergrund.<br><br>Bei Foreground Push Enablement werden Nutzer:innen, die sich abgemeldet haben, nicht berücksichtigt. <br><br>Nachdem Sie mit diesem Filter eine Segmentierung vorgenommen haben, können Sie im unteren Bereich mit der Bezeichnung <em>Erreichbare Nutzer</em> eine Aufschlüsselung der Mitglieder dieses Segments für Android, iOS und Web sehen."
     tags:
       - Channel subscription behavior
-  - name: Push für App aktiviert
-    description: "Segmentiert danach, ob Nutzer Push für Ihre App auf ihrem Gerät aktiviert haben. Diese Benutzer sind zwar über Push erreichbar, haben sich aber möglicherweise nicht angemeldet. Diese Zahl umfasst Benutzer, die vorläufig autorisierte Vordergrund- und Hintergrund-Push-Tokens haben."
+  - name: Push im Vordergrund für App aktiviert
+    description: "Segmentiert danach, ob Nutzer Push für Ihre App auf ihrem Gerät aktiviert haben. Nutzer:innen, die für eine App Push im Vordergrund aktiviert haben. Der Status des Push-Abos wird dabei nicht berücksichtigt. Diese Zahl umfasst Benutzer, die vorläufig autorisierte Vordergrund- und Hintergrund-Push-Tokens haben."
     tags:
       - Channel subscription behavior
-  - name: Background-Push aktiviert
-    description: "Segmentiert Ihre Nutzer danach, ob sie Hintergrund-Push aktiviert haben oder nicht."
+  - name: Push im Hinter- oder Vordergrund aktiviert
+    description: "Segmentiert danach, ob Nutzer:innen ein Push-Token haben und sich nicht abgemeldet haben. Nutzer:innen, die im Hintergrund oder im Vordergrund Push für eine Ihrer Apps aktiviert haben."
     tags:
       - Channel subscription behavior
   - name: Datum des Push-Opt-ins
@@ -386,8 +378,8 @@ glossaries:
     description: "Segmentiert Ihre Nutzer nach Geschlecht, wie sie es in Ihrer App angegeben haben."
     tags:
       - Demographic attributes
-  - name: Telefonnummer
-    description: "Segmentiert Ihre Nutzer nach deren Telefonnummer. Verwenden Sie nur Ziffern [0-9]. Verzichten Sie auf Klammern, Bindestriche und ähnliches."
+  - name: Unformatierte Telefonnummer
+    description: "Segmentiert Ihre Nutzer:innen nach ihrer unformatierten Telefonnummer. Enthält keine Klammern, Bindestriche oder andere Symbole."
     tags:
       - Demographic attributes
   - name: Vorname
@@ -403,11 +395,11 @@ glossaries:
     tags:
       - App
   - name: Aktuellster Name der App-Version
-    description: Segmente nach dem aktuellen Namen der App des Nutzers oder der Nutzerin.
+    description: "Segmente nach dem aktuellen Namen der App des Nutzers oder der Nutzerin.<br><br>Wenn Sie \"kleiner als\" oder \"kleiner oder gleich\" verwenden und die Hauptversion der App nicht existiert, gibt dieser Filter `true` zurück, weil der Nutzer:in älter ist als die App-Version. Das heißt, wenn die letzte Hauptversion der App des Nutzers:innen nicht existiert, passt sie automatisch zu dem Filter."
     tags:
       - App 
   - name: Aktuellste Nummer der App-Version
-    description: Segmentiert nach der Versionsnummer der letzten App des Benutzers.
+    description: "Segmentiert nach der Versionsnummer der letzten App des Benutzers.<br><br>Wenn Sie \"kleiner als\" oder \"kleiner oder gleich\" verwenden und die Hauptversion der App nicht existiert, gibt dieser Filter `true` zurück, da der Nutzer:in älter ist als die App-Version. Das heißt, wenn die letzte Hauptversion der App des Nutzers:innen nicht existiert, passt sie automatisch zu dem Filter.<br><br>Es kann einige Zeit dauern, bis die aktuellen Versionen der Apps angezeigt werden. Die App-Version im Nutzerprofil wird aktualisiert, wenn die Informationen vom SDK erfasst werden, das sich darauf verlässt, wann Nutzer:innen ihre Apps öffnen. Wenn der Nutzer:innen die App nicht öffnet, wird die aktuelle Version nicht aktualisiert. Diese Filter können auch nicht rückwirkend angewendet werden. Es ist gut, \"größer als\" oder \"gleich\" für aktuelle und zukünftige Versionen zu verwenden, aber die Verwendung von Filtern für frühere Versionen kann zu unerwartetem Verhalten führen."
     tags:
       - App 
   - name: Deinstalliert
@@ -566,8 +558,8 @@ glossaries:
     description: "Segmentiert Ihre Nutzer danach, wie viele X (früher Twitter) Follower sie haben."
     tags:
       - Social activity
-  - name: Absender-Rufnummer
-    description: "Segmentiert Ihre Nutzer:innen nach dem Feld für die e.164-Telefonnummer.<br><br>Wenn eine Telefonnummer an Braze gesendet wird, versucht Braze, sie in das <a href=\"/docs/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/#importing-phone-numbers\">e.164-Format</a> zu zwingen, das für den Versand über SMS- und WhatsApp-Kanäle verwendet wird. Die Erzwingung kann fehlschlagen, wenn die Nummer nicht richtig formatiert ist, was dazu führt, dass das Nutzerprofil zwar eine Telefonnummer hat, aber keine sendende Telefonnummer.<br><br>Anwendungsfälle:<br> - Verwenden Sie mit diesem Filter reguläre Ausdrücke (regex), um nach Telefonnummern mit einer bestimmten Landesvorwahl zu segmentieren. <br>- Verwenden Sie diesen Filter, um Nutzer:innen nach Telefonnummern zu segmentieren, die die e.164-Erzwingung nicht bestanden haben."
+  - name: Telefonnummer
+    description: "Segmentiert Ihre Nutzer:innen nach dem E.164-formatierten Rufnummernfeld.<br><br> Wenn eine Telefonnummer an Braze gesendet wird, versucht Braze, sie in das <a href=\"/docs/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/#importing-phone-numbers\">e.164-Format</a> zu zwingen, das für den Versand über SMS- und WhatsApp-Kanäle verwendet wird. Der Zwangsprozess kann fehlschlagen, wenn die Nummer nicht richtig formatiert ist, was dazu führt, dass das Nutzerprofil zwar eine unformatierte Telefonnummer, aber keine sendende Telefonnummer enthält. Dieser Segmente Filter liefert Nutzer:innen nach ihrer e.164-formatierten Telefonnummer (sofern verfügbar).<br><br>Anwendungsfälle:<br> - Verwenden Sie diesen Filter, um beim Versenden von SMS- oder WhatsApp-Nachrichten die genaueste Größe der Zielgruppe zu ermitteln.  <br>- Verwenden Sie mit diesem Filter reguläre Ausdrücke (regex), um nach Telefonnummern mit einer bestimmten Landesvorwahl zu segmentieren. <br>- Verwenden Sie diesen Filter, um Nutzer:innen nach Telefonnummern zu segmentieren, die die e.164-Erzwingung nicht bestanden haben."
     tags:
       - Other filters
 ---

@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: [エンドポイント名］"
+nav_title: "POSTする：[エンドポイント名]。"
 article_title: "レイアウト例：POST:ユーザートラック"
 search_tag: Endpoint
 page_order: 4
@@ -13,7 +13,7 @@ noindex: true
 #ATTENTION: remove noindex and this alert from template
 ---
 {% api %}
-# [エンドポイント名]
+# [エンドポイント名]。
 
 {% apimethod post %}
 /sms/invalid_phone_numbers/remove

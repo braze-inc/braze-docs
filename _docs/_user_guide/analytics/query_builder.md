@@ -2,9 +2,9 @@
 nav_title: Query Builder
 article_title: Query Builder
 page_order: 15
-page_type: reference
 description: "This reference article describes how to build reports using Braze data from Snowflake in the Query Builder."
 tool: Reports
+alias: /query_builder/
 ---
 
 # Query Builder
@@ -18,12 +18,6 @@ Because the Query Builder allows direct access to some customer data, you can on
 To run a Query Builder report:
 
 1. Go to **Analytics** > **Query Builder**.
-
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), you can find **Query Builder** under **Data**.
-{% endalert %}
-
-{:start="2"}
 2. Select **Create SQL Query**. If you need inspiration or help in crafting your query, select **Query Template** and choose a template from the list. Otherwise, select **SQL Editor** to head straight to the editor.
 3. Your report is automatically given a name with the current date and time. Hover over the name and select <i class="fas fa-pencil" alt="Edit"></i> to give your SQL query a meaningful name.
 4. Write your SQL query in the editor or [get help from AI](#ai-query-builder) from the **AI Query Builder** tab. If writing your own SQL, see [Writing custom SQL queries](#custom-sql) for requirements and resources.
@@ -43,13 +37,46 @@ See [Query templates]({{site.baseurl}}/user_guide/analytics/query_builder/query_
 
 ### Data timeframe
 
-All queries surface data from the last 60 days. 
+All queries surface data from the last 60 days.
+
+### Query Builder time zone
+
+The default time zone for querying our Snowflake database is UTC. As a result, there may be some data discrepancies between your **Email Channel Engagement** page (which follows your company's time zone) and your Query Builder results.
+
+To convert the time zone in your query results, add the following SQL to your query and customize it for your company's time zone:
+
+{% raw %}
+```sql
+SELECT
+DATE_TRUNC(
+'day',
+CONVERT_TIMEZONE('UTC','Australia/Sydney', TO_TIMESTAMP(TIME))
+) AS send_date_sydney,
+COUNT(ID) AS emails_sent
+USERS_MESSAGES_EMAIL_SEND_SHARED
+WHERE
+-- Apply the date range in Sydney time as well
+CONVERT_TIMEZONE('UTC','Australia/Sydney', TO_TIMESTAMP(TIME)) >= '2025-03-25 00:00:00'
+AND CONVERT_TIMEZONE('UTC','Australia/Sydney', TO_TIMESTAMP(TIME)) < '2025-03-29 00:00:00'
+AND APP_GROUP_ID = 'your app group ID'
+GROUP BY
+send_date_sydney
+ORDER BY
+send_date_sydney;
+```
+{% endraw %}
+
+### Query history
+
+The **Query history** section in Query Builder displays your previously run queries to help you track and reuse your work. Query history is retained for seven days, meaning that queries older than seven days are automatically removed.
+
+If you need to audit query usage for longer periods or maintain records beyond seven days, we recommend exporting or saving important query results before they expire.
 
 ## Generating SQL with the AI Query Builder
 
 The AI Query Builder leverages [GPT](https://openai.com/gpt-4), powered by OpenAI, to recommend SQL for your query.
 
-![][2]{: style="max-width:60%;" }
+![The SQL AI query builder.]({% image_buster /assets/img_archive/query_builder_ai_tab.png %}){: style="max-width:60%;" }
 
 To generate SQL with the AI Query Builder:
 
@@ -113,6 +140,16 @@ FROM USERS_MESSAGES_EMAIL_SEND_SHARED
 LIMIT 100
 ```
 
+### Automatically populate the campaign variant name
+
+If you want the campaign variant name to automatically populate, include the column name `MESSAGE_VARIATION_API_ID` in your query, such as in this example:
+
+```sql
+SELECT CANVAS_ID, CANVAS_VARIATION_API_ID, CAMPAIGN_ID, MESSAGE_VARIATION_API_ID
+FROM USERS_MESSAGES_EMAIL_SEND_SHARED 
+LIMIT 100
+```
+
 ### Troubleshooting
 
 Your query may fail for any of the following reasons:
@@ -125,8 +162,6 @@ Your query may fail for any of the following reasons:
 ## Using variables
 
 Use variables to use predefined variable types in SQL to reference values without needing to manually copy the value. For example, instead of manually copying a campaign's ID to the SQL editor, you can use {% raw %}`{{campaign.${My campaign}}}`{% endraw %} to directly select a campaign from a dropdown in the **Variables** tab.
-
-![][3]
 
 After a variable is created, it will appear in the **Variables** tab of your Query Builder report. Benefits of using SQL variables include:
 
@@ -165,8 +200,6 @@ The following variable types are accepted:
 
 #### Date range
 
-![][4]{: style="max-width:50%;"}
-
 If using both `start_date` and `end_date`, they must have the same name so you can use them as a date range.
 
 ##### Example values
@@ -191,8 +224,6 @@ All four types are shown if both `start_date` and `end_date` are used with the s
 #### Messaging
 
 All messaging variables must share the same identifier when you want to tie together their state in one group.
-
-![][5]{: style="max-width:50%;"}
 
 ##### Canvas
 
@@ -236,221 +267,16 @@ For selecting Canvas variants that belong to a chosen Canvas. It must be used wi
 - **Replacement value:** Canvas variants API IDs, strings delimited by commas such as in `api-id1, api-id2`.
 - **Usage example:** {% raw %}`canvas_variation_api_id IN ({{canvas_variants.${some name}}})`{% endraw %}
 
-##### Canvas Step
+##### Canvas step
 
 For selecting a Canvas step that belongs to a chosen Canvas. It must be used with a Canvas variable.
 
 - **Replacement value:** Canvas step API ID
 - **Usage example:** {% raw %}`canvas_step_api_id = ‘{{canvas_step.${some name}}}’`{% endraw %}
 
-##### Canvas Steps
+##### Canvas steps
 
 For selecting Canvas steps that belong to chosen Canvases. It must be used with a Canvas or Canvases variable.
 
 - **Replacement value:** Canvas steps API IDs
 - **Usage example:** {% raw %}`canvas_step_api_id IN ({{canvas_steps.${some name}}})`{% endraw %}
-
-#### Products
-
-For selecting a list of product names.
-
-- **Replacement value:** Product names are surrounded by single quotes and separated by commas, such as in `product1, product2`
-- **Usage example:** {% raw %}`product_id IN ({{products.${product name (optional)}}})`{% endraw %}
-
-#### Custom events
-
-For selecting a list of custom events.
-
-- **Replacement value:** Custom event property names are separated by commas such as in `event1, event2`
-- **Usage example:** {% raw %}`name = ‘{{custom_events.${event names)}}}’`{% endraw %}
-
-#### Custom event properties
-
-For selecting a list of custom event property names. It must be used with the custom events variable.
-
-- **Replacement value:** Custom event property names are separated by commas such as in `property1, property2`
-- **Usage example:** {% raw %}`name = ‘{{custom_event_properties.${property names)}}}’`{% endraw %}
-
-#### Workspace
-
-For selecting a workspace.
-
-- **Replacement value:** Workspace BSON ID
-- **Usage example:** {% raw %}`workspace_id = ‘{{workspace.${app_group_id}}}’`{% endraw %}
-
-#### Catalogs
-
-For selecting catalogs.
-
-- **Replacement value:** Catalog BSON IDs
-- **Usage example:** {% raw %}`catalog_id = ‘{{catalogs.${catalog}}}’`{% endraw %}
-
-#### Catalog Fields
-
-For selecting catalog fields. It must be used with the catalogs variable.
-
-- **Replacement value:** Catalog field names
-- **Usage example:** {% raw %}`field_name = '{{catalog_fields.${some name}}}’`{% endraw %}
-
-#### Options {#options}
-
-For selecting from a list of options.
-
-- **Replacement value:** The value of the selected options
-- **Usage example:**
-    - For select dropdown: {% raw %}`{{options.${metrics} | is_multi_select: 'true' | options: '[{"label": "test", "value": "test_value"}, {"label": "test2", "value": "test_value2"}]'}}`{% endraw %}
-        - `is_multi_select` allows specifying whether the end user can select more than one option
-    - For radio button: {% raw %}`{{options.${metrics} | is_radio_button: 'true' | options: '[{"label": "test", "value": "test_value"}, {"label": "test2", "value": "test_value2"}]'}}`{% endraw %}
-
-#### Segments
-
-For selecting segments that have [Analytics Tracking]({{site.baseurl}}/user_guide/analytics/tracking/segment_analytics_tracking/) turned on.
-
-- **Replacement value:** The segment analytics ID, which corresponds to the IDs stored in the `user_segment_membership_ids` column in the tables where this column is available.
-- **Usage example:** {% raw %}`{{segments.${analytics_segments}}}`{% endraw %}
-
-#### String
-
-For changing repetitive string values between report runs. Use this variable to avoid hardcoding a value multiple times in your SQL.
-
-- **Replacement value:** The string as is without any surrounding quotes
-- **Usage example:** {% raw %}`{{string.${some name}}}`{% endraw %}
-
-#### Tags
-
-For selecting tags for campaigns and Canvases.
-
-- **Replacement value:** Campaigns and Canvases with single-quoted comma-separated BSON IDs that are associated with the selected tags
-- **Usage example:** {% raw %}`{{tags.${some tags}}}`{% endraw %}
-
-### Variable metadata
-
-Metadata can be attached to a variable to change its behavior by appending the metadata with a pipe ( &#124; ) character following the variable name. The ordering of the metadata doesn’t matter and you can append any number of them. Additionally, all types of metadata can be used for any variable, except for special metadata that is specific to certain variables (this will be indicated in those cases). The usage of all metadata is optional and is used to change the default’s variable behavior.
-
-**Usage example:** {% raw %}`{{string.${my var}| is_required: ‘false’ | description: ‘My optional string var’}}`{% endraw %}
-
-#### Visible
-
-For whether variables are visible. All variables are visible by default in the **Variables** tab, where you can input values.
-
-There are several special variables whose value is dependent on another variable, such as whether another variable has a value. These special variables are marked as not visible so they don't show in the **Variables** tab.
-
-**Usage example:** `visible: ‘false’`
-
-#### Required
-
-For whether variables are required by default. An empty value for a variable usually leads to an incorrect query.
-
-**Usage example:** `required: ‘false’`
-
-#### Order
-
-For selecting the position of the variable in the **Variables** tab.
-
-**Usage example:** `order: ‘1’`
-
-#### Include single quotes
-
-For surrounding the values of a variable with single quotes.
-
-**Usage example:** `include_quotes: ‘true’`
-
-#### Include double quotes
-
-For surrounding the values of a variable with double quotes.
-
-**Usage example:** `include_double_quotes: ‘true’`
-
-#### Multi-select
-
-For whether the select dropdown allows a single or multi-select. For now, you can include this metadata only if you use the [Options](#options) variable.
-
-**Usage example:** `is_multi_select: ‘true’`
-
-![][7]{: style="max-width:50%;"}
-
-#### Radio button
-
-For showing options as radio buttons instead of a select dropdown in the **Variables** tab. You can include this metadata only if you use the [Options](#options) variable.
-
-**Usage example:** `is_radio_button: ‘true’`
-
-![][6]{: style="max-width:50%;"}
-
-#### Options 
-
-For providing the list of selectable options in the form of a label and value. The label is what gets shown and the value is what the variable gets replaced with when the option is selected. You can include this metadata only if you use the [Options](#options) variable.
-
-**Usage example:** `options: '[{"label": "test", "value": "test_value"}, {"label": "test2", "value": "test_value2"}]'`
-
-#### Placeholder
-
-For specifying the placeholder text shown in the variable’s input field.
-
-**Usage example:** `placeholder: ‘enter some value’`
-
-#### Description
-
-For specifying the description text shown under the variable’s input field.
-
-**Usage example:** `description: ‘some description’`
-
-#### Default value
-
-For specifying the default value for the variable when no value is specified.
-
-**Usage example:** `default_value: ‘5’`
-
-#### Hide label
-
-For hiding the variable's name label. The variable's name is used as a default label.
-
-**Usage example:** `hide_label: ‘true’`
-
-### Special variables
-
-The following variables can be used with other variables:
-
-#### Presence or absence of another variable’s value
-
-For knowing whether a variable’s value is filled. This is useful for optional variables where you want to short-circuit a condition if a variable’s value is not filled.
-
-- **Replacement value:** `true` or `false` depending on the other variable’s value
-- **Usage example:** {% raw %}`{{string.${type_name_has_no_value} | visible: 'false'}} or {{string.${type_name_has_value} | visible: 'false'}}`{% endraw %}
-
-`type` and `name` refer to the referenced variable. For example, to short-circuit the following optional variable: {% raw %}`{{campaigns.${messaging}}`, you can use the following:
-`{{string.${campaigns_messaging_has_no_value}  | visible: 'false'}} OR campaign_id IN ({{campaigns.${messaging} | is_required: ‘false’}})`{% endraw %}
-
-## Report timeout
-
-Reports that take longer than six minutes to run will time out. If this is the first query you're running in some time, it may take longer to process and therefore has a higher likelihood of timing out. If this happens, try running the report again.
-
-If a report times out or runs into errors even after retrying, contact [Support]({{site.baseurl}}/help/support#braze-support).
-
-## Data and results
-
-Results, and exports of results, are tables that can contain up to 1,000 rows. For reports that require larger amounts of data, use another tool such as [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) or Braze’s [export APIs]({{site.baseurl}}/api/endpoints/export).
-
-## Monitoring your Query Builder usage
-
-Each Braze workspace has 5 Snowflake credits available per month. A small portion of a Snowflake credit is used whenever you run a query or preview a table.
-
-{% alert note %}
-Snowflake credits are not shared between features. For example, credits across SQL Segment Extensions and Query Builder are independent of each other.
-{% endalert %}
-
-Credit usage is correlated to the run time of your SQL query. The longer the run time is, the higher the portion of a Snowflake credit a query will cost. Run time can vary depending on the complexity and size of your queries over time. The more complex and frequent queries you run, the larger your resource allocation and the faster your run time becomes.
-
-Credits are not used when writing, editing, or saving reports within the Braze SQL editor. Your credits will reset to 5 on the first of each month at 12 am UTC. You can monitor your monthly credit usage at the top of the Query Builder page.
-
-![Query Builder showing the amount of credits used in the current month.][1]{: style="max-width:60%;"}
-
-When you reach the credit cap, you cannot run queries, but you can create, edit, and save SQL reports. If you want to purchase more Query Builder credits, please get in touch with your account manager.
-
-[1]: {% image_buster /assets/img_archive/query_builder_credits.png %}
-[2]: {% image_buster /assets/img_archive/query_builder_ai_tab.png %}
-[3]: {% image_buster /assets/img_archive/sql_variables_panel.png %}
-[4]: {% image_buster /assets/img_archive/query_builder_time_range.png %}
-[5]: {% image_buster /assets/img_archive/sql_variables_canvases.png %}
-[6]: {% image_buster /assets/img_archive/sql_variables_campaigns.png %}
-[7]: {% image_buster /assets/img_archive/sql_variables_productname.png %}

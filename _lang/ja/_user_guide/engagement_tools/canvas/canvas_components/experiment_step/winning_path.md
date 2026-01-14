@@ -1,5 +1,5 @@
 ---
-nav_title: 勝者パス 
+nav_title: 勝者パス
 article_title: 実験パスの勝者パス 
 page_type: reference
 description: "この記事では、勝者パスについて説明します。実験パスステップでこの機能を有効にすると、AB テストを自動化することができます。"
@@ -8,37 +8,35 @@ tool: Canvas
 
 # 実験パスの勝者パス
 
-> 勝者パスは、キャンペーンの[勝者バリアント]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/#optimizations)に似ており、AB テストを自動化できます。
+> 勝者パスは、キャンペーンの[勝者バリアント]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/)に似ており、AB テストを自動化できます。
 
 実験パスのステップで勝者パスがオンになっている場合、一定時間が経過すると、それ以降のすべてのユーザーはコンバージョン率が最も高いパスに送られます。
 
 ## 勝者パスを使用する
 
-### ステップ 1: 実験パスを追加する
+### ステップ 1: 実験パスステップを追加する
 
 キャンバスに[実験パス]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/)を追加し、[**勝者パス**] をオンにします。
 
-![後続ユーザーを勝者パスに分配」というタイトルの実験パスの設定。このセクションには、勝者パスのトグルと、コンバージョンイベントと実験期間を設定するオプションがあります。][1]
+![後続ユーザーを勝者パスに分配」というタイトルの実験パスの設定。このセクションには、勝者パスのトグルと、コンバージョンイベントと実験期間を設定するオプションがあります。]({% image_buster /assets/img/experiment_step/experiment_winning_path_recurring.png %})
 
 ### ステップ2:勝者パスを設定する
 
-勝者を決定するコンバージョンイベントを指定します。利用できるコンバージョンイベントがない場合は、キャンバスの設定の最初のステップに戻り、[コンバージョンイベントを割り当てます]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#choose-conversion-events)。開封とクリックで勝者を決定する場合、開封またはクリックを生成するパスの最初のメッセージのみが勝者の決定に役立つことに注意してください。
+勝者を決定するコンバージョンイベントを指定します。利用できるコンバージョンイベントがない場合は、キャンバスの設定の最初のステップに戻り、[コンバージョンイベントを割り当てます]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#choose-conversion-events)。 
+
+開封またはクリックをコンバージョンイベントとして選択した場合、パスの最初のステップが[メッセージステップ]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step)であることを確認する。Brazeは、それぞれのパスにおける最初のメッセージステップからのエンゲージメントのみをカウントする。もしパスが別のステップ（ディレイやオーディエンス・パスのステップなど）から始まり、メッセージが後から来た場合、パフォーマンスを評価する際にそのメッセージは含まれない。
 
 次に、**実験期間**を設定します。**実験期間**では、勝者パスが決定され、その後のすべてのユーザーがそのパスに送られる前に、実験を行う時間を指定します。最初のユーザーがステップに入ると、期間が開始されます。
 
-![][2]
+![勝者パスの設定、コンバージョンイベント "クリック "を選択、12時間の実験ウィンドウ。]({% image_buster /assets/img/experiment_step/experiment_winning_settings.png %})
 
-### ステップ 3: フォールバックを決定する {#statistical-significance}
+### ステップ 3:フォールバックを決定する {#statistical-significance}
 
 デフォルトでは、テストの結果が統計的に有意な勝者を決定するのに十分でない場合、将来のすべてのユーザーがベストパフォーマンスのパスに送信されます。
 
-または、**すべての将来のユーザーにパスの組み合わせの送信を続行**するよう指定することもできます。
+または、**すべての将来のユーザーにパスの組み合わせの送信を続行**するよう指定することもできます。このオプションは、実験パスの配分で指定されたパーセンテージに従って、将来のユーザーにパスの組み合わせを送信します。
 
-![][6]
-
-このオプションは、実験パスの配分で指定されたパーセンテージに従って、将来のユーザーにパスの組み合わせを送信します。
-
-![実験分布で指定されたパーセンテージ][3]
+![テスト結果が統計的に有意でなかった場合、ユーザーに何が起こるかとして選択された "今後すべてのユーザーにミックスパスを送り続ける"。]({% image_buster /assets/img/experiment_step/experiment_winning_statistical.png %})
 
 {% alert note %}
 遅延グループがパス配分に表示されるのは、キャンバスが 1 回限りの入力に設定されていて、実験ステップのパスが 3 つ以下の場合のみです。勝者パスがオンになっている場合、繰り返し発生するキャンバスやトリガーされたキャンバスには遅延グループが表示されません。
@@ -65,11 +63,11 @@ tool: Canvas
 
 ユーザーのエントリが 1 回に限定されているキャンバスで勝者パスを使用する場合、遅延グループが自動的に含められます。実験期間中、一部のユーザーが遅延グループに保持され、残りのユーザーは実験パスに入ります。
 
-![勝者パスの遅延グループを使用した実験ステップ][4]{: style="max-width:75%"}
+![勝者パスの遅延グループを使用した実験ステップ]({% image_buster /assets/img/experiment_step/experiment_one_time.png %}){: style="max-width:75%"}
 
 テストが完了して勝者パスが決まると、遅延グループに割り当てられたユーザーは選択されたパスに誘導され、キャンバスを進みます。
 
-![勝者パスに送られる遅延グループのある実験ステップ][5]{: style="max-width:75%"}
+![勝者パスに送られる遅延グループのある実験ステップ]({% image_buster /assets/img/experiment_step/experiment_one_time_results.png %}){: style="max-width:75%"}
 
 ### ローカルタイム配信
 
@@ -77,9 +75,3 @@ tool: Canvas
 
 ローカルタイム配信を使用したい場合は、24 ～ 48 時間以上の実験期間を使用してください。これにより、初期のタイムゾーンのユーザーがキャンバスに入って実験の開始がトリガーされた後でも実験期間に十分な時間を残すことができます。それ以降のタイムゾーンにいるユーザーが、キャンバスと勝者パスを使った実験ステップに入り、実験期間が期限切れになる前にコンバージョンに至るのに十分な時間があります。
 
-[1]: {% image_buster /assets/img/experiment_step/experiment_winning_path_recurring.png %}
-[2]: {% image_buster /assets/img/experiment_step/experiment_winning_settings.png %}
-[3]: {% image_buster /assets/img/experiment_step/experiment_path_distribution.png %}
-[4]: {% image_buster /assets/img/experiment_step/experiment_one_time.png %}
-[5]: {% image_buster /assets/img/experiment_step/experiment_one_time_results.png %}
-[6]: {% image_buster /assets/img/experiment_step/experiment_winning_statistical.png %}

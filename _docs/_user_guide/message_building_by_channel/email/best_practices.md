@@ -1,6 +1,6 @@
 ---
-page_order: 13
-nav_title: Best Practices
+page_order: 14
+nav_title: Best practices
 article_title: Email Best Practices
 layout: dev_guide
 guide_top_header: "Email Best Practices"
@@ -21,7 +21,7 @@ guide_featured_list:
   - name: "Use Cases"
     link: /docs/user_guide/message_building_by_channel/email/best_practices/use_cases/
     image: /assets/img/braze_icons/edit-05.svg
-  - name: "Managing Email Subscriptions"
+  - name: "Manage Email Subscriptions"
     link: /docs/user_guide/message_building_by_channel/email/best_practices/duplicate_emails/
     image: /assets/img/braze_icons/list.svg
   - name: "Email Services"
@@ -31,7 +31,7 @@ guide_featured_list:
     link: /docs/user_guide/message_building_by_channel/email/best_practices/sunset_policies/
     image: /assets/img/braze_icons/sun-setting-03.svg
   - name: "Sending Test Messages"
-    link: /docs/developer_guide/sending_test_messages/
+    link: /docs/developer_guide/in_app_messages/sending_test_messages/
     image: /assets/img/braze_icons/mail-01.svg
   - name: "Know Before You Send"
     link: /docs/know_before_send/

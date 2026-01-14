@@ -1,5 +1,5 @@
 ---
-nav_title: B2B Use Cases
+nav_title: B2B use cases
 page_order: 11
 layout: dev_guide
 guide_top_header: "B2B use cases"

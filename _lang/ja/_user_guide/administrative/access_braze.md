@@ -11,7 +11,7 @@ description: "このランディングページには、Braze アカウントま
 
 guide_featured_title: "セクションの記事"
 guide_featured_list:
-- name: ナビゲーション
+- name: Braze のナビゲーション
   link: /docs/user_guide/administrative/access_braze/navigation/
   image: /assets/img/braze_icons/list.svg
 - name: ダッシュボードを検索する
@@ -31,14 +31,13 @@ guide_featured_list:
   image: /assets/img/braze_icons/log-in-01.svg
 - name: 製品ポータル
   link: /docs/user_guide/administrative/access_braze/portal/
+  image: /assets/img/braze_icons/target-05.svg
+- name: トラブルシューティング
+  link: /docs/user_guide/administrative/access_braze/troubleshooting/
   image: /assets/img/braze_icons/annotation-question.svg
+- name: Braze支援
+  link: /docs/user_guide/administrative/access_braze/support/
+  image: /assets/img/braze_icons/mail-01.svg
 ---
-## サポートされているブラウザー
-
-Braze ダッシュボードは次のブラウザーをサポートしています。
-- Chrome（バージョン87以降）
-- Firefox（バージョン85以降）
-- Safari (バージョン 15.4 以降)
-- Edge (バージョン 87 以降)
 
 <br><br>

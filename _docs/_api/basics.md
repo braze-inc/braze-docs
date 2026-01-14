@@ -1,5 +1,5 @@
 ---
-nav_title: "API Overview"
+nav_title: "API overview"
 article_title: API Overview
 page_order: 2.1
 description: "This reference article covers the API basics including what a REST API is, the terminology, and an overview of API keys."
@@ -34,7 +34,7 @@ The following is an overview of terms you may see in the Braze REST API document
 
 ### Endpoints
 
-Braze manages a number of different instances for our dashboard and REST endpoints. When your account is provisioned you will log in to one of the following URLs. Use the correct REST endpoint based on which instance you are provisioned to. If you are unsure, open a [support ticket][support] or use the following table to match the URL of the dashboard you use to the correct REST Endpoint.
+Braze manages a number of different instances for our dashboard and REST endpoints. When your account is provisioned, you log in to one of the following URLs. Use the correct REST endpoint based on which instance you are provisioned to. If you are unsure, open a [support ticket]({{site.baseurl}}/braze_support/) or use the following table to match the URL of the dashboard you use to the correct REST Endpoint.
 
 {% alert important %}
 When using endpoints for API calls, use the REST endpoint.
@@ -42,41 +42,28 @@ When using endpoints for API calls, use the REST endpoint.
 For SDK integration, use the [SDK endpoint]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/), not the REST endpoint.
 {% endalert %}
 
-|Instance|URL|REST Endpoint|SDK Endpoint|
-|---|---|---|
-|US-01| `https://dashboard-01.braze.com` | `https://rest.iad-01.braze.com` | `sdk.iad-01.braze.com` |
-|US-02| `https://dashboard-02.braze.com` | `https://rest.iad-02.braze.com` | `sdk.iad-02.braze.com` |
-|US-03| `https://dashboard-03.braze.com` | `https://rest.iad-03.braze.com` | `sdk.iad-03.braze.com` |
-|US-04| `https://dashboard-04.braze.com` | `https://rest.iad-04.braze.com` | `sdk.iad-04.braze.com` |
-|US-05| `https://dashboard-05.braze.com` | `https://rest.iad-05.braze.com` | `sdk.iad-05.braze.com` |
-|US-06| `https://dashboard-06.braze.com` | `https://rest.iad-06.braze.com` | `sdk.iad-06.braze.com` |
-|US-07| `https://dashboard-07.braze.com` | `https://rest.iad-07.braze.com` | `sdk.iad-07.braze.com` |
-|US-08| `https://dashboard-08.braze.com` | `https://rest.iad-08.braze.com` | `sdk.iad-08.braze.com` |
-|EU-01| `https://dashboard-01.braze.eu` | `https://rest.fra-01.braze.eu` | `sdk.fra-01.braze.eu` |
-|EU-02| `https://dashboard-02.braze.eu` | `https://rest.fra-02.braze.eu` | `sdk.fra-02.braze.eu` |
-|AU-01| `https://dashboard.au-01.braze.com`| `https://rest.au-01.braze.com` | `sdk.au-01.braze.com` |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
+{% multi_lang_include data_centers.md datacenters='instances' %}
 
 ### API limits
 
-For most APIs, Braze has a default rate limit of 250,000 requests per hour. However, certain request types have their own rate limit applied to better handle high volumes of data across our customer base. For details, refer to [API rate limits]({{site.baseurl}}/api/api_limits/)
+For most APIs, Braze has a default rate limit of 250,000 requests per hour. However, certain request types have their own rate limit applied to better handle high volumes of data across the customer base. For details, refer to [API rate limits]({{site.baseurl}}/api/api_limits/)
 
 ### User IDs
 
 - **External user ID**: The `external_id` serves as a unique user identifier for whom you are submitting data. This identifier should be the same as the one you set in the Braze SDK in order to avoid creating multiple profiles for the same user.
-- **Braze user ID**: `braze_id` serves as a unique user identifier that is set by Braze. This identifier can be used to delete users through the REST API in addition to external_ids.
+- **Braze user ID**: `braze_id` serves as a unique user identifier that Braze sets. You can use this identifier to delete users through the REST API in addition to external_ids.
 
-For more information, refer to the following articles based on your platform: [iOS][9], [Android][10], and [Web][13].
+For more information, refer to the following articles based on your platform: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/), and [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/).
 
 ## About REST API keys
 
-A REST Application Programming Interface key (REST API key) is a unique code that is passed into an API to authenticate the API call and identify the calling application or user. API access is done using HTTPS web requests to your company's REST API endpoint. We use REST API keys at Braze in tandem with our App Identifier keys to track, access, send, export, and analyze data to help make sure everything is running smoothly on both your and our end.
+A REST Application Programming Interface key (REST API key) is a unique code that you pass into an API to authenticate the API call and identify the calling application or user. You access the API using HTTPS web requests to your company's REST API endpoint. REST API keys work in tandem with App Identifier keys to track, access, send, export, and analyze data to help ensure everything is running smoothly.
 
 Workspaces and API keys go hand in hand at Braze. Workspaces are designed to house versions of the same application across multiple platforms. Many customers also use workspaces to contain free and premium versions of their applications on the same platform. As you may notice, these workspaces are also making use of the REST API and have their own REST API keys. These keys can be individually scoped to include access to specific endpoints on the API. Each call to the API must include a key with access to the endpoint hit.
 
-We refer to both the REST API key and workspace API key as the `api_key`. The `api_key` is included in each request as a request header and acts as an authentication key that allows you to use our REST APIs. These REST APIs are used to track users, send messages, export user data, and more. When you create a new REST API key, you will need to give it access to specific endpoints. By assigning specific permissions to an API key, you can limit exactly which calls an API key can authenticate.
+We refer to both the REST API key and workspace API key as the `api_key`. The `api_key` is included in each request as a request header and acts as an authentication key that allows you to use our REST APIs. These REST APIs are used to track users, send messages, export user data, and more. When you create a new REST API key, you must give it access to specific endpoints. By assigning specific permissions to an API key, you can limit exactly which calls an API key can authenticate.
 
-![REST API keys panel on the API Keys tab.][27]
+![REST API keys panel on the API Keys tab.]({% image_buster /assets/img_archive/rest-api-key.png %})
 
 {% alert tip %}
 In addition to REST API keys, there also exists a type of key called Identifier keys that can be used to reference specific things like apps, templates, Canvases, campaigns, Content Cards, and segments from the API. For more information, refer to [API identifier types]({{site.baseurl}}/api/identifier_types/).
@@ -87,12 +74,6 @@ In addition to REST API keys, there also exists a type of key called Identifier 
 To create a new REST API key:
 
 1. Go to **Settings** > **APIs and Identifiers**.
-
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), you can create an API key from **Developer Console** > **API Settings**.
-{% endalert %}
-
-{:start="2"}
 2. Select **Create API Key**.
 3. Give your new key a name for identification at a glance.
 4. Specify [allowlisted IP addresses](#api-ip-allowlisting) and subnets for the new key.
@@ -156,7 +137,7 @@ API key permissions are permissions you can assign a user or group to limit thei
 | Permission | Endpoint | Description |
 |---|---|---|
 | `campaigns.trigger.send` | [`/campaigns/trigger/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) | Trigger the sending of an existing campaign. |
-| `campaigns.trigger.schedule.create` | [`/campaigns/trigger/schedule/create`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_schedule_triggered_campaigns/) | Schedule a future send of a campaign with API-triggered delivery. |
+| `campaigns.trigger.schedule.create` | [`/campaigns/trigger/schedule/create`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_schedule_triggered_campaigns/) | Schedule a send of a campaign with API-triggered delivery. |
 | `campaigns.trigger.schedule.update` | [`/campaigns/trigger/schedule/update`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_update_scheduled_triggered_campaigns/) | Update a campaign scheduled with API-triggered delivery. |
 | `campaigns.trigger.schedule.delete` | [`/campaigns/trigger/schedule/delete`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_delete_scheduled_triggered_messages/) |Delete a campaign scheduled with API-triggered delivery. |
 | `campaigns.list` | [`/campaigns/list`]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaigns/) | Query for a list of campaigns. |
@@ -166,7 +147,7 @@ API key permissions are permissions you can assign a user or group to limit thei
 | `sends.id.create` | [`/sends/id/create`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_create_send_ids/) | Create send ID for message blast tracking. |
 | `campaigns.url_info.details` | [`/campaigns/url_info/details`]({{site.baseurl}}) | Query for URL details of a specific message variation within a campaign. |
 | `transactional.send` | [`/transactional/v1/campaigns/{campaign_id}/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_transactional_message/) | Allows for ability to send transactional messaging using the Transactional messaging endpoint. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% endtab %}
 {% tab Canvas %}
@@ -174,7 +155,7 @@ API key permissions are permissions you can assign a user or group to limit thei
 | Permission | Endpoint | Description |
 |---|---|---|
 | `canvas.trigger.send` | [`/canvas/trigger/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) | Trigger the sending of an existing Canvas. |
-| `canvas.trigger.schedule.create` | [`/canvas/trigger/schedule/create`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_schedule_triggered_canvases/) | Schedule a future send of a Canvas with API-triggered delivery. |
+| `canvas.trigger.schedule.create` | [`/canvas/trigger/schedule/create`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_schedule_triggered_canvases/) | Schedule a send of a Canvas with API-triggered delivery. |
 | `canvas.trigger.schedule.update` | [`/canvas/trigger/schedule/update`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_update_scheduled_triggered_canvases/) | Update a Canvas scheduled with API-triggered delivery. |
 | `canvas.trigger.schedule.delete` | [`/canvas/trigger/schedule/delete`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_delete_scheduled_triggered_canvases/)| Delete a Canvas scheduled with API-triggered delivery. |
 | `canvas.list` | [`/canvas/list`]({{site.baseurl}}/api/endpoints/export/canvas/get_canvases/) |  Query for a list of Canvases. |
@@ -211,18 +192,6 @@ API key permissions are permissions you can assign a user or group to limit thei
 |---|---|---|
 | `events.list` | [`/events/list`]({{site.baseurl}}/api/endpoints/export/custom_events/get_custom_events/) | Query for a list of custom events. |
 | `events.data_series` | [`/events/data_series`]({{site.baseurl}}/api/endpoints/export/custom_events/get_custom_events_analytics/) | Query occurrences of a custom event over a time range. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
-
-{% endtab %}
-{% tab News Feed %}
-
-{% multi_lang_include deprecations/braze_sdk/news_feed.md %}
-
-| Permission | Endpoint | Description |
-|---|---|---|
-| `feed.list` | [`/feed/list`]({{site.baseurl}}/api/endpoints/export/news_feed/get_news_feed_cards/) | Query for a list of News Feed cards. |
-| `feed.data_series` | [`/feed/data_series`]({{site.baseurl}}/api/endpoints/export/news_feed/get_news_feed_card_analytics/) | Query for News Feed analytics over a time range. |
-| `feed.details` | [`/feed/details`]({{site.baseurl}}/api/endpoints/export/news_feed/get_news_feed_card_details/) | Query for details of a specific News Feed. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% endtab %}
@@ -325,11 +294,22 @@ API key permissions are permissions you can assign a user or group to limit thei
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% endtab %}
+{% tab SDK Authentication %}
+
+| Permission | Endpoint | Description |
+|---|---|---|
+| `sdk_authentication.create` | [`/app_group/sdk_authentication/create`]({{site.baseurl}}/api/endpoints/sdk_authentication/post_create_sdk_authentication_key) | Create a new SDK Authentication key for your app. |
+| `sdk_authentication.primary` | [`/app_group/sdk_authentication/primary`]({{site.baseurl}}/api/endpoints/sdk_authentication/put_primary_sdk_authentication_key/) | Mark an SDK Authentication key as the primary key for your app. |
+| `sdk_authentication.delete` | [`/app_group/sdk_authentication/delete`]({{site.baseurl}}/api/endpoints/sdk_authentication/delete_sdk_authentication_key) | Delete an SDK Authentication key for your app. |
+| `sdk_authentication.keys` | [`/app_group/sdk_authentication/keys`]({{site.baseurl}}/api/endpoints/sdk_authentication/get_sdk_authentication_keys) | Get all SDK Authentication keys for your app. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
+{% endtab %}
 {% endtabs %}
 
 ### Managing REST API keys
 
-You can view details for or delete existing REST API keys from **Settings** > **APIs and Identifiers** > **API Keys** tab. Note that REST API keys cannot be edited after they're created.
+You can view details for or delete existing REST API keys from **Settings** > **APIs and Identifiers** > **API Keys** tab. Note that you cannot edit REST API keys after you create them.
 
 The **API Keys** tab includes the following information for each key:
 
@@ -337,18 +317,18 @@ The **API Keys** tab includes the following information for each key:
 | ------------ | :------------------------------------------------------------------------------------------------------------------ |
 | API Key Name | The name given to the key upon creation.                                                                            |
 | Identifier   | The API key.                                                                                                        |
-| Created By   | The email address of the user who created the key. This field will show as "N/A" for keys created before June 2023. |
+| Created By   | The email address of the user who created the key. This field shows as "N/A" for keys created before June 2023. |
 | Date Created | The date this key was created.                                                                                      |
-| Last Seen    | The date this key was last used. This field will show as "N/A" for keys that have never been used.                  |
+| Last Seen    | The date this key was last used. This field shows as "N/A" for keys that have never been used.                  |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 To view the details of an API key, hover over the key and select <i class="fa-solid fa-eye" alt="View"></i> **View**. This includes all the permissions this key has, whitelisted IPs (if any), and if this key is opted into Braze IP whitelisting.
 
-![The list of API key permissions in the Braze dashboard.][30]
+![The list of API key permissions in the Braze dashboard.]({% image_buster /assets/img_archive/view-api-key.png %})
 
-Note when [deleting a user]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/adding_users_to_your_dashboard/), the associated API keys a user created won't be deleted. To delete a key, hover over the key and select <i class="fa-solid fa-trash-can" alt="Delete"></i> **Delete**.
+Note when [deleting a user]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/), Braze does not delete the associated API keys that user created. To delete a key, hover over the key and select <i class="fa-solid fa-trash-can" alt="Delete"></i> **Delete**.
 
-![An API key named 'Last Seen' with the trash icon highlighted, showing 'Delete'.][29]{: style="max-width:30%;"}
+![An API key named 'Last Seen' with the trash icon highlighted, showing 'Delete'.]({% image_buster /assets/img_archive/api-key-options.png %}){: style="max-width:30%;"}
 
 ### REST API key security
 
@@ -362,44 +342,29 @@ A good security practice is to assign a user only as much access as is necessary
 Given that REST API keys allow access to potentially sensitive REST API endpoints, make sure they are stored and used securely. For example, do not use this key to make AJAX calls from your website or expose it in any other public manner.
 {% endalert %}
 
-If accidental exposure of a key occurs, it can be deleted from the Developer Console. For help with this process, open a [support ticket][support].
+If you accidentally expose a key, you can delete it from the Developer Console. For help with this process, open a [support ticket]({{site.baseurl}}/braze_support/).
 
 ### API IP allowlisting
 
 For additional security, you can specify a list of IP addresses and subnets which are allowed to make REST API requests for a given REST API key. This is referred to as allowlisting, or whitelisting. To allow specific IP addresses or subnets, add them to the **Whitelist IPs** section when creating a new REST API key:
 
-![Option to allowlist IPs when creating an API key.][26]
+![Option to allowlist IPs when creating an API key.]({% image_buster /assets/img_archive/api-key-ip-whitelisting.png %})
 
 If you don't specify any, requests can be sent from any IP address.
 
 {% alert tip %}
-Making a Braze-to-Braze webhook and using allowlisting? Check out our list of [IPs to whitelist]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#ip-whitelisting).
+If you're making a Braze-to-Braze webhook and using allowlisting, see the list of [IPs to whitelist]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#ip-whitelisting).
 {% endalert %}
 
 ## Additional resources
 
 ### Ruby client library
 
-If you're implementing Braze using Ruby, you can use our [Ruby client library](https://github.com/braze-inc/braze-api-client-ruby) to reduce your data import time. A client library is a collection of code specific to one programming language—in this case, Ruby—that makes it easier to use an API.
+If you're implementing Braze using Ruby, you can use the [Ruby client library](https://github.com/braze-inc/braze-api-client-ruby) to reduce your data import time. A client library is a collection of code specific to one programming language—in this case, Ruby—that makes it easier to use an API.
 
 The Ruby client library supports the [User endpoints]({{site.baseurl}}/api/endpoints/user_data).
 
 {% alert important %}
-This client library is currently in beta. Want to help us make this library better? Send us feedback at [smb-product@braze.com](mailto:smb-product@braze.com).
+This client library is in beta. To help make this library better, send feedback to [smb-product@braze.com](mailto:smb-product@braze.com).
 {% endalert %}
 
-[1]: https://en.wikipedia.org/wiki/UTF-8
-[7]: {{site.baseurl}}/api/objects_filters/connected_audience/
-[9]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/
-[10]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/
-[13]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/
-[2]: {{site.baseurl}}/api/identifier_types/
-[5]: {{site.baseurl}}/api/basics/
-[6]: https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#intro
-[25]: {% image_buster /assets/img_archive/api-key-permissions.png %}
-[26]: {% image_buster /assets/img_archive/api-key-ip-whitelisting.png %}
-[support]: {{site.baseurl}}/braze_support/
-[28]: {% image_buster /assets/img_archive/create-new-key.png %}
-[29]: {% image_buster /assets/img_archive/api-key-options.png %}
-[27]: {% image_buster /assets/img_archive/rest-api-key.png %}
-[30]: {% image_buster /assets/img_archive/view-api-key.png %}

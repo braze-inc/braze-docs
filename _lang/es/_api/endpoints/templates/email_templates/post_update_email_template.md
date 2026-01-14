@@ -59,7 +59,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 |`body`|Opcional|Cadena|Cuerpo de la plantilla de correo electrónico que puede incluir HTML.|
 |`plaintext_body`|Opcional|Cadena|Una versión en texto plano del cuerpo de la plantilla de correo electrónico.|
 |`preheader`|Opcional|Cadena|Preencabezado de correo electrónico utilizado para generar vistas previas en algunos clientes.|
-|`tags`|Opcional|Cadena|[Las etiquetas]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) ya deben existir.|
+|`tags`|Opcional|Cadena|[Las etiquetas]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) ya deben existir.|
 |`should_inline_css`|Opcional|Booleano|Habilita o deshabilita la característica `inline_css` por plantilla. Si no se proporciona, Braze utilizará la configuración predeterminada para el AppGroup. Se espera una de `true` o `false`.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 

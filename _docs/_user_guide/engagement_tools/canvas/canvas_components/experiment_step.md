@@ -1,5 +1,5 @@
 ---
-nav_title: Experiment Paths 
+nav_title: Experiment Paths
 article_title: Experiment Paths 
 alias: /experiment_step/
 page_order: 4
@@ -14,7 +14,7 @@ tool: Canvas
 
 When you include an Experiment Paths step in your user journey, it will randomly assign users to different paths (or an optional control group) you create. Portions of the audience will be assigned to different paths according to the percentages you select, allowing you to test different messages or paths against each other and determine which is most effective. 
 
-![An Experiment Path step that splits into Path 1, Path 2, and Control.][0]{: style="float:right;max-width:50%;margin-left:15px;"}
+![An Experiment Path step that splits into Path 1, Path 2, and Control.]({% image_buster /assets/img/experiment_step/experiment_step.png %}){: style="float:right;max-width:50%;margin-left:15px;"}
 
 ## Use cases
 
@@ -33,7 +33,7 @@ Experiment Paths are best suited for testing delivery, cadence, message copy, an
 
 To use Experiment Paths, your Canvas must include conversion events. While you can't add conversion events after a Canvas has been launched, you can clone the launched Canvas and add conversion events to add Experiment Paths.
 
-## Create an experiment path
+## Creating an experiment path
 
 To create an Experiment Paths component, first add a step to your Canvas. Drag and drop the component from the sidebar, or click the <i class="fas fa-plus-circle"></i> plus button at the bottom of a step and select **Experiment Paths**. 
 
@@ -45,7 +45,7 @@ You can add up to four paths by clicking **Add Path** and an optional control gr
 
 You can also choose whether users in the control group should continue down the Canvas or exit after the conversion tracking window for the **Control Group Behavior**. Optionally, you can add a description to explain to others what this experiment path intends to test or include additional information that might be helpful to note.
 
-![Experiment Settings where you can add paths and distribute the percentage of users in each path.][1]
+![Experiment Settings where you can add paths and distribute the percentage of users in each path.]({% image_buster /assets/img/experiment_step/exp_settings.png %})
 
 {% alert note %}
 If Canvas re-eligibility is enabled, users who enter the Canvas and go down a randomly chosen path will go down the same path again if they become re-eligible and re-enter the Canvas. This maintains the validity of the experiment and associated analytics. If you want the step to always randomize path assignment, select **Randomized Paths in Experiment Paths**. This option is not available when using either Winning or Personalized Paths.
@@ -53,23 +53,23 @@ If Canvas re-eligibility is enabled, users who enter the Canvas and go down a ra
 
 ### Step 2: Turn on Winning Path or Personalized Paths (optional) {#step-2}
 
-You can choose to optimize your experiment by turning on [Winning Path][WP] or [Personalized Paths][PP]. Both options work by initially testing your paths with a portion of your audience. After the experiment ends, the remaining and subsequent users are sent down either the best-performing path overall (Winning Path) or the best-performing path for each user (Personalized Paths).
+You can choose to optimize your experiment by turning on [Winning Path]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/winning_path) or [Personalized Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/personalized_paths). Both options work by initially testing your paths with a portion of your audience. After the experiment ends, the remaining and subsequent users are sent down either the best-performing path overall (Winning Path) or the best-performing path for each user (Personalized Paths).
 
 ### Step 3: Create paths
 
 Lastly, you must build your downstream paths. Select **Done** and return to the Canvas builder. Click the <i class="fas fa-plus-circle"></i> plus button under each path to begin creating journeys using the usual Canvas tools as you see fit, and launch the Canvas when you are ready.
 
-![Adding steps to each path that splits from an Experiment Path component.][3]{: style="max-width:75%"}
+![Adding steps to each path that splits from an Experiment Path component.]({% image_buster /assets/img/experiment_step/experiment_downstream_paths.gif %}){: style="max-width:75%"}
 
 Keep in mind that paths and their downstream steps cannot be removed from a Canvas after they're created. However, when launched, you can modify the audience distribution across paths as you see fit. For example, if a day after launching a Canvas, you conclude that one path is superior to the rest based on the analytics, you can set that path to 100% and the others to 0%. Or, depending on your needs, you can continue sending users down multiple paths.
 
-{% alert note %}
-Experiment Paths can't be edited after a Canvas is launched. If your experiment is in mid-send and you edit the message, the test will be rendered useless and any experiment results will be removed. You also can't turn on Personalized Paths or Winning Paths for an already active Canvas with an Experiment Path step.<br><br> For more information, refer to [Editing Canvases after launch]({{site.baseurl}}/post-launch_edits/).
+{% alert important %}
+To prevent experiment contamination, if your Canvas has an active or in-progress Winning Path or Personalized Path experiment and you update the active Canvas, regardless if you update the Experiment Path step itself, the in-progress experiment will end and the experiment step will not determine a winning path or personalized paths. To restart the experiment, you can disconnect the existing Experiment Path and launch a new one, or duplicate the Canvas and launch a new Canvas. Otherwise, users will flow through the experiment path as if no optimization method was selected. You also can't turn on Personalized Paths or Winning Paths for an already active Canvas with an Experiment Path step.<br><br>For more information, refer to [Editing Canvases after launch]({{site.baseurl}}/post-launch_edits/).
 {% endalert %}
 
 ## Tracking performance
 
-From the **Canvas Analytics** page, click the Experiment Path to open a [detailed table]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/#performance-breakdown-by-variant) identical to the **Analyze Variants** tab to compare detailed performance and conversion statistics across paths. You can also export the table via CSV and compare percent changes for metrics of interest relative to the path or control you select.
+From the **Canvas Analytics** page, select the Experiment Path to open a [detailed table]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/#performance-breakdown-by-variant) identical to the **Analyze Variants** tab to compare detailed performance and conversion statistics across paths. You can also export the table via CSV and compare percent changes for metrics of interest relative to the path or control you select.
 
 Each step in each path will display statistics in the [Canvas Analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/) view, just like any Canvas step. However, keep in mind that the analytics of individual steps do **not** take into account the structure of the experiment. The analytics in the Experiment Step should be used to compare across paths.
 
@@ -77,18 +77,10 @@ Each step in each path will display statistics in the [Canvas Analytics]({{site.
 
 Take advantage of Winning Paths to track performance over a period of time and then automatically send subsequent users down the path with the best performance. For more information on analytics when **Winning Path** or **Personalized Paths** are turned on for your experiment, refer to:
 
-- [Winning Path][WP_analytics]
-- [Personalized Paths][PP_analytics]
+- [Winning Path]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/winning_path/#analytics)
+- [Personalized Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/personalized_paths/#analytics)
 
 ### Additional settings
 
 Experiment Paths will record users who enter each step and convert while in the assigned path. This will track all conversion events specified in the Canvas setup. On the **Additional Settings** tab, enter how many days (between 1 and 30) you'd like this experiment to track conversions. The time window you specify here will determine how long conversion events (chosen in the Canvas setup) will be tracked for the experiment. The per-event conversion windows specified in the Canvas setup will not apply to this step's tracking and will be replaced by this conversion window.
 
-[0]: {% image_buster /assets/img/experiment_step/experiment_step.png %}
-[1]: {% image_buster /assets/img/experiment_step/exp_settings.png %}
-[3]: {% image_buster /assets/img/experiment_step/experiment_downstream_paths.gif %}
-
-[WP]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/winning_path
-[WP_analytics]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/winning_path/#analytics
-[PP]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/personalized_paths
-[PP_analytics]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/personalized_paths/#analytics

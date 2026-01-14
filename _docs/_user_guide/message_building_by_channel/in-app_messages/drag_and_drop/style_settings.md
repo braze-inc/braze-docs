@@ -1,5 +1,5 @@
 ---
-nav_title: Style Settings
+nav_title: Style settings
 article_title: "In-App Message Style Settings"
 description: "This reference article covers the styling options available when creating an in-app message with the drag-and-drop editor."
 page_order: 3
@@ -9,7 +9,7 @@ page_order: 3
 
 > The drag-and-drop editing experience is divided into two sections: **Build** and **Preview & Test**. This article covers what you need to know for working within the **Build** tab of the editor and assumes you've already [created an in-app message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/).
 
-![]({% image_buster /assets/img_archive/dnd_iam_message_styles.png %}){: style="float:right;max-width:25%;margin-left:15px;max-width:30%"}
+!["Message styles" tab.]({% image_buster /assets/img_archive/dnd_iam_message_styles.png %}){: style="float:right;max-width:25%;margin-left:15px;max-width:30%"}
 
 ## Message-level styles
 
@@ -42,23 +42,43 @@ The message-level font will only apply to the current message and any duplicated
 
 ## Message components
 
-![]({% image_buster /assets/img_archive/dnd_iam_create.gif %})
+![A GIF showing a promotional in-app message being created.]({% image_buster /assets/img_archive/dnd_iam_create.gif %})
 
 The drag-and-drop editor uses two key components for composing in-app messages: **rows** and **blocks**. All blocks must be placed in a row.
+
+### Close x button
+
+For Modal and Fullscreen in-app messages, you can customize the close button displayed as <i class="fa-solid fa-xmark"></i> in the top-right corner of your message. Customization options include button position, size, fill color, background color, border style, and border radius.
+
+![Options to customize the close x button in in-app messages including button size, fill color, background color, border style, and border radius.]({% image_buster /assets/img_archive/close_x_button.png %}){: style="max-width:40%"}
+
+### Span styling
+
+Adding span styling to text within in-app messages allows for enhanced customization of message appearance, enabling the use of different text colors, fonts, and sizes. Span styling gives your users a more engaging and visually appealing experience by drawing their attention to key information and improving overall message clarity.
+
+![Option shown when highlighting text in an in-app message. A small paintbrush icon shows that you can wrap with span for style.]({% image_buster /assets/img_archive/span_1.png %}){: style="max-width:40%"}
+
+![Side panel for "Span Properties" that allows the end user to customize font family, font weight, font size, letter spacing, and text color.]({% image_buster /assets/img_archive/span_2.png %}){: style="max-width:40%"}
 
 ### Rows
 
 Rows are structural units that define the horizontal composition of a section of the message by using cells.
 
-![]({% image_buster /assets/img_archive/dnd_iam_rows.png %}){: style="max-width:40%"}
+![Rows you can add in your in-app message.]({% image_buster /assets/img_archive/dnd_iam_rows.png %}){: style="max-width:40%"}
 
 When a row is selected, you can add or remove the number of columns you need from the **Column customization** section to put different content elements side by side. 
 
 You can also slide to adjust the size of existing columns.
 
-![]({% image_buster /assets/img_archive/dnd_iam_column_customization.gif %}){: style="max-width:40%"}
+![Adjusting columns from the "Column customization" section.]({% image_buster /assets/img_archive/dnd_iam_column_customization.gif %}){: style="max-width:40%"}
 
 As a best practice, format your row and column properties before formatting any of the blocks inside the rows. There are many places where you can adjust the spacing and alignment, so starting from the foundation makes it easier to edit as you go.
+
+#### Background image
+
+You can add a background image to a row in the **Row properties** panel. Toggle on **Background image**, and then provide an image URL or select an image from the [media library]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/). Finally, configure your alt text, size, position, and whether the image repeats to create patterns across the row.
+
+![A row background image of a pizza that has a horizontal repeat pattern.]({% image_buster /assets/img_archive/background_row.png %})
 
 ### Blocks
 
@@ -68,9 +88,9 @@ Blocks represent different types of content you can use in your message. Drag on
 Before you add blocks, set up [message-level styles](#set-message-level-styles) for the message container, font, colors, and anything else you want to customize. You can then customize individual blocks as needed. The **Close Button** will remain at the top section of your message so that users always have the option to dismiss the message.
 {% endalert %}
 
-![]({% image_buster /assets/img_archive/dnd_iam_editor_blocks.png %}){: style="max-width:40%"}
+![Drag-and-drop boxes to select from.]({% image_buster /assets/img_archive/dnd_iam_editor_blocks.png %}){: style="max-width:40%"}
 
-Every block has its settings, such as granular control on padding. The right-side panel automatically switches to a styling panel for the selected content element. For more information, see [Editor block properties]({{site.baseurl}}/editor_blocks_dnd_iam/).
+Every block has its settings, such as granular control on padding. The right-side panel automatically switches to a styling panel for the selected content element. For more information, see [Editor block properties]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/drag_and_drop_editor_blocks/?sdktab=in-app%20messages#inappmessages_properties).
 
 As you build your in-app message, you can select a mobile, tablet, or desktop view in the toolbar to preview how your in-app message will look for your user groups. This will ensure that your content is responsive, and you can make any necessary adjustments along the way.
 
@@ -80,7 +100,7 @@ As you build your in-app message, you can select a mobile, tablet, or desktop vi
 
 On a tablet or desktop browser, a fullscreen in-app message will sit in the center of the app screen. Any edits to the max width of the fullscreen message will only apply to tablet and desktop devices. 
 
-![]({% image_buster /assets/img_archive/dnd_iam_fullscreen_example.png %}){: style="border:none"}
+![Full screen in-app message example.]({% image_buster /assets/img_archive/dnd_iam_fullscreen_example.png %}){: style="border:none"}
 
 ### Adding a background image
 
@@ -96,7 +116,7 @@ If you're having trouble selecting a certain block, you can use the up arrow in 
 
 ### Adding Liquid
 
-![]({% image_buster /assets/img_archive/dnd_iam_liquid.png %}){: style="float:right;max-width:25%;margin-left:15px"}
+![Icon to add Liquid personalization.]({% image_buster /assets/img_archive/dnd_iam_liquid.png %}){: style="float:right;max-width:25%;margin-left:15px"}
 
 To add [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid) into your in-app message, select <i class="fa-solid fa-circle-plus"></i> **Add Personalization** from the editor toolbar. Here, you can add various personalization types such as default attributes, device attributes, custom attributes, and more.
 
@@ -104,19 +124,19 @@ Next, take your generated Liquid snippet and insert it into your message. After 
 
 ### Using the AI copywriter
 
-When a text block is selected in your in-app message, click <i class="fa-solid fa-wand-magic-sparkles" title="AI copywriter"></i> in the block toolbar to launch the [AI-powered copywriting assistant]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/). The AI copywriting assistant passes a brief product name or description to OpenAI’s GPT3 copy generation tool to generate human-like marketing copy for your messaging.
+When a text block is selected in your in-app message, click <i class="fa-solid fa-wand-magic-sparkles" title="AI copywriter"></i> in the block toolbar to launch the [AI-powered copywriting assistant]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/). The AI copywriting assistant passes a brief product name or description to OpenAI’s GPT3 copy generation tool to generate human-like marketing copy for your messaging.
 
 {% alert tip %}
 You can save a few clicks by highlighting text inside the block before clicking the icon. The highlighted text will be added to the tool, and copy will be generated immediately.
 {% endalert %}
 
-![]({% image_buster /assets/img_archive/dnd_iam_ai_copywriter.gif %})
+![GIF of the AI copywriter.]({% image_buster /assets/img_archive/dnd_iam_ai_copywriter.gif %})
 
 ### Resetting styles to default
 
 Properties that you have changed from their default styling are marked with an orange dot. To reset a specific property to its default style, hover over the field and select **Reset to default**.
 
-![]({% image_buster /assets/img_archive/dnd_iam_reset_styles.gif %}){: style="max-width:45%"}
+![Orange dot that resets a text size to its default size.]({% image_buster /assets/img_archive/dnd_iam_reset_styles.gif %}){: style="max-width:45%"}
 
 You can also reset all styling for a selected element by selecting the <i class="fas fa-paintbrush" title="Copy or paste styles button"></i> next to the properties panel name and selecting **Reset to default styles**.
 
@@ -124,7 +144,7 @@ You can also reset all styling for a selected element by selecting the <i class=
 
 After making changes to the styling of an element, you can copy and paste those styles to another element. When pasting styles, only the properties relevant to that element are applied.
 
-![]({% image_buster /assets/img_archive/dnd_iam_copypaste_styles.png %}){: style="float:right;margin-left:15px;max-width:45%"}
+![Dropdown menu with option to copy styles.]({% image_buster /assets/img_archive/dnd_iam_copypaste_styles.png %}){: style="float:right;margin-left:15px;max-width:35%"}
 
 1. With the element selected, select <i class="fas fa-paintbrush" title="Copy or paste styles"></i> next to the properties panel name (For example, if you have a button selected, next to "Button properties").
 2. Click **Copy styles** and select the element where you would like to apply the copied style.

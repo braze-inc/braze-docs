@@ -2,7 +2,7 @@
 {% tab Android %}
 ネイティブの[Braze Android SDKを使って](https://github.com/braze-inc/braze-android-sdk)、アプリ内メッセージにアニメーションGIFを追加できる。デフォルトでは、Android SDK は HTML アプリ内メッセージを使用して GIF を表示します。
 
-その他のアプリ内メッセージの場合は、カスタム画像ライブラリを使用する必要がある。詳しくは、[Androidアプリ内メッセージを参照のこと：GIF]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/gifs/).
+その他のアプリ内メッセージの場合は、カスタム画像ライブラリを使用する必要がある。詳しくは、[Androidアプリ内メッセージを参照のこと：GIF]({{site.baseurl}}/developer_guide/in_app_messages/gifs/?sdktab=android).
 {% endtab %}
 
 {% tab iOS %}

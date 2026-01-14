@@ -15,7 +15,7 @@ description: "En este artículo se describen los detalles del punto final Elimin
 /scim/v2/Users/{id}
 {% endapimethod %}
 
-> Utiliza este punto final para eliminar de forma permanente un usuario existente del panel especificando el recurso `id` devuelto por el método SCIM [`POST`]({{site.baseurl}}/scim/post_create_user_account/) . 
+> Utiliza este punto final para eliminar de forma permanente un usuario existente del panel especificando el recurso `id` devuelto por el método SCIM [`POST`]({{site.baseurl}}/api/endpoints/scim/post_create_user_account/) . 
 
 Esto es similar a eliminar un usuario en la sección **Usuarios de la empresa** del panel de Braze.
 

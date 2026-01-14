@@ -1,5 +1,5 @@
 ---
-nav_title: Link Templates
+nav_title: Link templates
 article_title: Link Templates
 page_order: 4
 description: "This article covers how to create different types of link templates in your emails."
@@ -15,7 +15,7 @@ channel:
 > With link templates, you can create dynamic and reusable links for your email campaigns by appending parameters or prepending URLs. This can create consistency in the URLs across your campaigns and messages. 
 
 {% alert note %}
-Link templates are an optional feature. If **Email Link Templates** is missing from the **Templates** section, reach out to your account manager to turn on the feature.
+Link templates are an optional feature. If **Email Link Templates** is missing from the **Templates** section, contact your account manager to turn on the feature.
 {% endalert %}
 
 ## How it works
@@ -33,15 +33,9 @@ You can create an unlimited number of link templates to support your various nee
 
 1. Go to **Templates** > **Email Link Templates**. 
 2. Select **Create email link template**.
-
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), this page is located at **Engagement** > **Templates & Media** > **Link Templates**.
-{% endalert %}
-
-{:start="3"}
 3. Give your link template a name.
-4. (optional) Add a description, team, or tag to add details about the link template.
-5. (optional) Select the toggle to automatically add the link template to links in email campaigns and Canvases. This applies when adding a new link to any new or existing email.
+4. (Optional) Add a description, team, or tag to add details about the link template.
+5. (Optional) Select the toggle to automatically add the link template to links in email campaigns and Canvases. This applies when adding a new link to any new or existing email.
 
 There are two types of link templates you can create:
 
@@ -58,7 +52,7 @@ To add a string or URL before the links in your email message, do the following:
 2. Set the **Template Position** to **Before URL**. 
 3. Enter a string that will always get prepended to your URL. 
 
-A preview section is provided to give you an example of the insertion process.
+The **Template preview** is provided to give you an example of how the link template will be inserted before a URL.
 
 ![Template Position, Prepend URL, and Template Preview fields for the link template insertion process before a URL.]({% image_buster /assets/img_archive/link_template_preappend.png %}){: style="max-width:90%;"}
 
@@ -84,7 +78,7 @@ To access the **Link Management** tab in the updated HTML email editor, you must
 
 - **Drag-and-drop editor:** Select **Content** > **Link Management** tab. Then, select **Add a Link Template**. To access link templates in the drag-and-drop editor, you must have [link aliasing]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/link_aliasing/) turned on.
 
-![Link Management tab in the drag-and-drop editor with an example list of link templates.][1]
+![Link Management tab in the drag-and-drop editor with an example list of link templates.]({% image_buster /assets/img_archive/link_template_messagecomposer2.png %})
 
 {% alert note %}
 Link templates aren't applied to plain text. This means Currents may show clicks that don't include the parameters from the link templates as those clicks may come from the plain text version of the email.
@@ -102,11 +96,5 @@ Archiving templates is not currently available for link templates.
 
 ## Frequently asked questions
 
-For answers to frequently asked questions about link templates, check out our [Templates FAQ][10] page.
+For answers to frequently asked questions about link templates, check out our [Templates FAQ]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/faq/) page.
 
-[1]:{% image_buster /assets/img_archive/link_template_messagecomposer2.png %}
-[2]:{% image_buster /assets/img_archive/link_template_postappend.png %}
-[3]:{% image_buster /assets/img_archive/link_template_preappend.png %}
-[4]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/
-[10]: {{site.baseurl}}/user_guide/message_building_by_channel/email/templates/faq/
-[11]: {% image_buster /assets/img_archive/create_link_template.png %}

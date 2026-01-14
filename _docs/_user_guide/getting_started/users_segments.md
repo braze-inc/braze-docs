@@ -1,5 +1,5 @@
 ---
-nav_title: Users and Segments
+nav_title: Users and segments
 article_title: Getting Started&#58; Users and Segments
 page_order: 2
 page_type: reference
@@ -7,7 +7,7 @@ description: "This article provides an overview of users and segments, outlining
 
 ---
 
-# Getting Started: Users and segments
+# Get started: Users and segments
 
 Understanding your users and effectively targeting them is crucial for sending personalized and targeted marketing campaigns. This article provides an overview of users and segments, outlining their significance and how they can be leveraged to engage your audience.
 
@@ -19,7 +19,7 @@ In Braze, information about your audience is stored in user profiles. A [user pr
 
 By understanding user profiles, you can gain insights into your audience and engage with them on a personalized and targeted level. A user's profile contains a lot of information, but here are some of the key parts:
 
-- **User Identifier:** Each user profile is uniquely identified by a user ID, called an `external_id`. This identifier allows Braze to track and associate user data across different channels and devices, providing a unified view of each user's interactions with your brand. [Anonymous user profiles]({{site.baseurl}}/user_guide/data/user_data_collection/anonymous_users) (users who visit your website or application without logging in) don't have an `external_id`, but can be assigned [user aliases]({{site.baseurl}}/user_guide/data/user_data_collection/anonymous_users/#assigning-user-aliases) as an alternative identifier.
+- **User Identifier:** Each user profile is uniquely identified by a user ID, called an `external_id`. This identifier allows Braze to track and associate user data across different channels and devices, providing a unified view of each user's interactions with your brand. [Anonymous user profiles]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/anonymous_users/) (users who visit your website or application without logging in) don't have an `external_id`, but can be assigned [user aliases]({{site.baseurl}}/user_guide/data/user_data_collection/anonymous_users/#assigning-user-aliases) as an alternative identifier.
 - [Attributes](#attributes)**:** These are specific pieces of information about the user, such as their name, age, location, or any other demographic information. You can use these attributes to segment your audience and personalize your messaging.
 - [Events](#events)**:** These are actions that the user takes, like making a purchase, clicking on a link, or opening an app. Braze tracks these events to help you understand the user’s behavior and engagement. Similar to attributes, you can also use events to segment and personalize.
 - **Purchases:** This section records the user's purchase history. It's crucial for understanding the user's buying habits and preferences.
@@ -126,15 +126,13 @@ Tips for working with segments:
 
 Suppose you run an online clothing store, and you've set up a messaging flow to send a series of emails to users who have added an item to their cart but have not completed the purchase. This abandoned cart flow might include an initial reminder email, a follow-up email offering a discount, and a final reminder email.
 
-![][1]{: style="max-width:70%" }
+![]({% image_buster /assets/img/getting_started/segment_example.png %}){: style="max-width:70%" }
 
 You could create a segment of users who have triggered the custom event "Added Item to Cart" but have not triggered the custom event "Completed Purchase". Then, within this segment, you could further identify users who have opened the initial reminder email (engagement with a specific message) but have not made a purchase.
 
-![][2]
+![]({% image_buster /assets/img/getting_started/segment_example_breakdown.png %})
 
 This segment could be targeted with a more aggressive campaign to try and convert these users into buyers. For example, you might send them a special offer or a personalized recommendation based on the items in their cart.
 
 This is just one example of how you can use user actions and inactions, custom events, and engagement data to create segments and tailor your marketing strategies in Braze.
 
-[1]: {% image_buster /assets/img/getting_started/segment_example.png %}
-[2]: {% image_buster /assets/img/getting_started/segment_example_breakdown.png %}

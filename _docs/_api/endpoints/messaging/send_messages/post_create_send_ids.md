@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Create Send IDs"
+nav_title: "POST: Create send IDs"
 article_title: "POST: Create Send IDs"
 search_tag: Endpoint
 page_order: 4
@@ -66,8 +66,6 @@ curl --location --request POST 'https://rest.iad-01.braze.com/sends/id/create' \
 ### Example success response
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "message": "success",
   "send_id" : (string) the send identifier

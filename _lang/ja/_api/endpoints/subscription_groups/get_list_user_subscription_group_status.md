@@ -1,5 +1,5 @@
 ---
-nav_title: "取得:ユーザのサブスクリプショングループステータスの一覧表示"
+nav_title: "取得:ユーザーのサブスクリプショングループステータスを一覧表示する。"
 article_title: "取得:ユーザーのサブスクリプション・グループ・ステータスをリストする"
 search_tag: Endpoint
 page_order: 4
@@ -54,17 +54,17 @@ description: "本稿では、List ユーザー のサブスクリプショング
 - SMS およびWhatsApp サブスクリプショングループ s の場合、`external_id` または`phone` のいずれかが必要です。 両方が送信されると、`external_id` のみがクエリに使用され、電話番号はそのユーザーに適用されます。
 - メール サブスクリプショングループs の場合、`external_id` または`email` のいずれかが必要です。 両方が送信されると、`external_id` のみがクエリに使用され、メールアドレスはそのユーザーに適用されます。
 
-## 例のリクエスト 
+## リクエスト例
 
 {% tabs %}
-{% tab 複数のユーザー %}
+{% tab Multiple Users %}
 {% raw %}
 ```
 https://rest.iad-03.braze.com/subscription/status/get?subscription_group_id={{subscription_group_id}}&external_id[]=1&external_id[]=2
 ```
 {% endraw %}
 {% endtab %}
-{% tab SMSとWhatsApp %}
+{% tab SMS and WhatsApp %}
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/status/get?subscription_group_id={{subscription_group_id}}&phone=+11112223333' \
@@ -72,7 +72,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/sta
 ```
 {% endraw %}
 {% endtab %}
-{% tab メール %}
+{% tab Email %}
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/status/get?subscription_group_id={{subscription_group_id}}&email=example@braze.com' \
@@ -87,8 +87,6 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/sta
 すべての成功したレスポンスは、サブスクリプショングループのステータスとユーザー履歴に応じて、`Subscribed`、`Unsubscribed`、または`Unknown` を返します。
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "status": {
     "1": "Unsubscribed",

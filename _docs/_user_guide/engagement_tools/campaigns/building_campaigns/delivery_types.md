@@ -1,6 +1,6 @@
 ---
-nav_title: Scheduling Your Campaign
-article_title: Scheduling Your Campaign
+nav_title: Schedule your campaign
+article_title: Schedule Your Campaign
 layout: dev_guide
 page_order: 3
 guide_top_header: "Scheduling Your Campaign"
@@ -25,7 +25,7 @@ guide_featured_list:
 guide_menu_title: "More articles"
 guide_menu_list:
   - name: Re-eligibility for Campaigns
-    link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/
+    link: /docs/user_guide/engagement_tools/messaging_fundamentals/reeligibility/
     image: /assets/img/braze_icons/clock.svg
   - name: Campaign Calendar
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/campaign_calendar/

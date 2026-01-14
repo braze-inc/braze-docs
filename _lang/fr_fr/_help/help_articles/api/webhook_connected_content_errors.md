@@ -141,7 +141,11 @@ Vous trouverez ci-dessous des conseils pour la résolution des problèmes les pl
 
 Les webhooks et le contenu connecté de Braze utilisent un mécanisme de détection d'hôte malsain pour détecter lorsque l'hôte cible connaît un taux élevé de lenteur significative ou de surcharge entraînant des dépassements de délai, un trop grand nombre de demandes ou d'autres résultats qui empêchent Braze de communiquer avec succès avec l'endpoint cible. Il agit comme un garde-fou pour réduire la charge inutile qui pourrait être à l'origine des difficultés de l'hôte cible. Il sert également à stabiliser l'infrastructure de Braze et à maintenir des vitesses d'envoi de messages rapides.
 
-En général, si le nombre d'**échecs dépasse 3 000 dans une fenêtre de temps mobile d'une minute** (par combinaison unique de nom d'hôte et de groupe d'applications - et **non** par chemin d'accès), Braze interrompt temporairement les requêtes vers l'hôte cible pendant une minute et simule des réponses avec un code d'erreur `598` pour indiquer le mauvais état de santé de l'hôte. Au bout d'une minute, Braze reprend les requêtes à pleine vitesse si l'hôte est jugé sain. Si l'hôte est toujours en mauvaise santé, Braze attendra encore une minute avant de réessayer.
+Les seuils de détection diffèrent entre les webhooks et le contenu connecté :
+- **Pour les webhooks**: Si le nombre d'**échecs dépasse 3 000 dans une fenêtre de temps mobile d'une minute** (par combinaison unique de nom d'hôte et de groupe d'applications, et **non** par chemin d'accès à l'endpoint), Braze interrompt temporairement les requêtes vers l'hôte cible pendant une minute.
+- **Pour le contenu connecté**: Si le nombre d'**échecs dépasse 3 000 ET que le taux d'erreur dépasse 90 % dans une fenêtre de temps mobile d'une minute** (par combinaison unique de nom d'hôte et de groupe d'applications - et **non** par chemin d'accès à l'endpoint), Braze interrompt temporairement les requêtes vers l'hôte cible pendant une minute.
+
+Lorsque les requêtes sont interrompues, Braze simule des réponses avec un code d'erreur `598` pour indiquer le mauvais état de santé. Au bout d'une minute, Braze reprend les requêtes à pleine vitesse si l'hôte est jugé sain. Si l'hôte est toujours en mauvaise santé, Braze attendra encore une minute avant de réessayer.
 
 Les codes d'erreur suivants contribuent au nombre d'échecs du détecteur d'hôte malsain : `408`, `429`, `502`, `503`, `504`, `529`.
 
@@ -150,3 +154,46 @@ Pour les webhooks, Braze relance automatiquement les requêtes HTTP qui ont ét�
 Pour le contenu connecté, si les requêtes vers l'hôte cible sont interrompues par le détecteur d'hôte malsain, Braze continuera à rendre les messages et à suivre votre logique Liquid comme s'il avait reçu un code de réponse d'erreur. Si vous voulez vous assurer que ces demandes de contenu connecté sont relancées lorsqu'elles sont interrompues par le détecteur d'hôte malsain, utilisez l'option `:retry`. Pour plus d'informations sur l'option `:retry`, reportez-vous à la section [Tentatives de contenu connecté]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries).
 
 Si vous pensez que la détection des hôtes malsains peut être à l'origine de problèmes, contactez l'[assistance de Braze]({{site.baseurl}}/support_contact/).
+
+## E-mails automatisés et entrées dans le journal d'activité des messages
+
+### Mise en place d'e-mails automatisés
+
+Si vous rencontrez plus de 100 000 erreurs de webhook ou d'endpoint de contenu connecté (y compris les tentatives) dans un espace de travail au cours d'une période de 24 heures, vous recevrez un e-mail contenant les informations suivantes sur la manière de résoudre les erreurs. 
+
+- Nom de l'espace de travail
+- Un lien vers le canvas ou la campagne
+- URL de l'endpoint
+- code d'erreur
+- Heure à laquelle l'erreur a été observée pour la dernière fois
+- Liens vers le journal d'activité des messages et la documentation connexe
+
+{% alert note %}
+Vous pouvez configurer le seuil d'erreur par espace de travail. Pour ajuster ce seuil, contactez le [service d'assistance de Braze]({{site.baseurl}}/support_contact/).
+{% endalert %}
+
+Les erreurs d'endpoint sont les suivantes :
+
+- **`4XX`:** `400`, `401`, `403`, `404`, `405`, `408`, `409`, `429`
+- **`5XX`:** `500`, `502`, `503`, `504`, `598`, `599`
+
+Ces e-mails ne sont envoyés qu'une fois par jour au niveau de l'espace de travail. Si aucun utilisateur ne s'inscrit pour recevoir ces e-mails, tous les administrateurs de l'entreprise en seront informés.
+
+Pour vous inscrire à la réception de ces e-mails, procédez comme suit :
+
+1. Allez dans **Réglages** > **Réglages administratifs** > **Préférences de notification.**
+2. Sélectionnez les **erreurs de contenu connecté** et les **erreurs de webhook** dans la **section Canvas et campagnes.** 
+
+### Entrées du journal d'activité des messages
+
+Il y aura au moins une entrée dans le [journal d'activité des messages]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab) liée à l'erreur qui a déclenché l'e-mail automatisé.
+
+### Informations supplémentaires sur les défaillances dans Braze Currents
+
+Pour améliorer la transparence des problèmes liés aux webhooks, Braze transmet les événements détaillés de défaillance des webhooks à Currents et à Snowflake Data Sharing. Ces événements comprennent les demandes de webhook qui ont échoué (telles que les réponses HTTP `4xx` ou `5xx` ), ce qui permet de mieux observer la manière dont les problèmes de webhook peuvent influer sur la réception/distribution des messages. Notez que les événements d'échec comprennent les erreurs de terminal ainsi que les erreurs qui sont retentées.
+
+{% alert note %}
+Les demandes de contenu connecté ne sont pas incluses dans ces événements d'échec du webhook.
+{% endalert %}
+
+Pour plus d'informations, consultez le [glossaire des événements d'engagement aux messages.]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/)

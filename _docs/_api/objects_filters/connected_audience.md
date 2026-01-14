@@ -1,5 +1,5 @@
 ---
-nav_title: "Connected Audience Filter & Object"
+nav_title: "Connected audience filter & object"
 article_title: API Connected Audience Object
 page_order: 3
 page_type: reference
@@ -9,7 +9,7 @@ description: "This article explains the different components of the connected au
 
 # Connected audience object
 
-> A connected audience object is a selector that identifies the audience to send the message to. 
+> A connected audience object identifies the audience of your message. For example, if you use custom attribute arrays to track every category and TV show that a user has favorited, you can use connected audiences to automatically send a push notification or email to anyone who has favorited a show whenever a new episode is released—without needing to set up a segment for each show.
 
 This object is composed of either a single connected audience filter or several connected audience filters in a logical expression using either `AND` or `OR` operators.
 
@@ -34,7 +34,7 @@ This object is composed of either a single connected audience filter or several 
 
 ## Connected audience filters
 
-Combining multiple custom attribute filters will create a connected audience filter, which will create a connected audience filter when combined with `AND` and `OR` operators.
+Combining multiple custom attribute filters with `AND` and `OR` operators creates a connected audience filter.
 
 ### Custom attribute filter
 
@@ -61,7 +61,7 @@ The custom attribute's data type determines the comparisons that are valid for a
 | Array | `includes_value`, `does_not_include_value`, `exists`, `does_not_exist` |
 | Numeric | `equals`, `not_equal`, `greater_than`, `greater_than_or_equal_to`, `less_than`, `less_than_or_equal_to`, `exists`, `does_not_exist` |
 | Boolean | `equals`, `does_not_equal`, `exists`, `does_not_exist` |
-| Time | `less_than_x_days_ago`, `greater_than_x_days_ago`, `less_than_x_days_in_the_future`, `greater_than_x_days_in_the_future`, `after`, `before`, `exists`, `does_not_exist` | 
+| Time | `less_than_x_days_ago`, `greater_than_x_days_ago`, `less_than_x_days_in_the_future`, `greater_than_x_days_in_the_future`, `after`, `before`, `exists`, `does_not_exist` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 #### Attribute comparison caveats
@@ -142,7 +142,7 @@ This filter allows you to segment based on a user's email subscription status.
 
 ### Last used app filter
 
-This filter allows you to segment based on when was the last time the user used the App. These filters contain two fields:
+This filter allows you to segment based on when the user last used the app. These filters contain two fields:
 
 #### Filter body
 ```json
@@ -160,4 +160,4 @@ This filter allows you to segment based on when was the last time the user used 
 
 ### Considerations
 
-Connected audiences cannot filter users by default attributes, custom events, segments, or message engagement events. To use these filters, we recommend incorporating them into an audience segment and then specifying that segment in the [`segment_id`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages#request-parameters).
+Connected audiences cannot filter users by default attributes, custom events, segments, or message engagement events. To use these filters, we recommend incorporating them into an audience segment and then specifying that segment in the `segment_id` parameter for the [`/messages/send` endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages#request-parameters). When using other endpoints, you'll need to add the segment to the API-triggered campaign or Canvas in the Braze dashboard first.

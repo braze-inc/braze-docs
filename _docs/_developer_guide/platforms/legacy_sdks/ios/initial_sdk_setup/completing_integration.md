@@ -1,6 +1,6 @@
 ---
-nav_title: Completing the Integration
-article_title: Completing the iOS SDK Integration
+nav_title: Completing the integration
+article_title: Complete the iOS SDK Integration
 platform: iOS
 description: "This reference article shows how to finish integrating the Braze SDK after installing it via one of the integration options."
 page_order: 2
@@ -10,7 +10,7 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# Completing the integration
+# Complete the integration
 
 Before following these steps, make sure you have integrated the SDK using either [Carthage]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/installation_methods/carthage_integration/), [CocoaPods]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/installation_methods/cocoapods/), [Swift Package Manager]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/installation_methods/swift_package_manager/), or a [manual]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/installation_methods/manual_integration_options/) integration.
 
@@ -97,7 +97,7 @@ If given a pre-existing custom endpoint:
 
 ## SDK integration complete
 
-Braze should now be collecting data from your application, and your basic integration should be complete. See the following articles to enable [custom event tracking]({{site.baseurl}}/developer_guide/platforms/swift/analytics/tracking_custom_events/), [push messaging]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/push_notifications/integration/), and the complete suite of Braze features.
+Braze should now be collecting data from your application, and your basic integration should be complete. See the following articles to enable [custom event tracking]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=swift), [push messaging]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/push_notifications/integration/), and the complete suite of Braze features.
 
 ## Customizing Braze on startup
 
@@ -108,7 +108,7 @@ If you wish to customize Braze on startup, you can instead use the Braze initial
 In your `AppDelegate.m` file, within your `application:didFinishLaunchingWithOptions:` method, add the following Braze method:
 
 ```objc
-[Appboy startWithApiKey:@"YOUR-APP-IDENTIFER-API-KEY"
+[Appboy startWithApiKey:@"YOUR-APP-IDENTIFIER-API-KEY"
           inApplication:application
       withLaunchOptions:launchOptions
       withAppboyOptions:appboyOptions];
@@ -149,5 +149,5 @@ If you call `startWithApiKey:` in your `didFinishLaunchingWithOptions:` delegate
 
 ## Additional resources
 
-Full [iOS class documentation](http://appboy.github.io/appboy-ios-sdk/docs/annotated.html "full iOS class documentation") is available to provide additional guidance on any SDK methods.
+Full [iOS class documentation](http://appboy.github.io/appboy-ios-sdk/docs/annotated.html) is available to provide additional guidance on any SDK methods.
 

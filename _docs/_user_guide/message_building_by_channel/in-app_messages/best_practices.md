@@ -1,6 +1,6 @@
 ---
 page_order: 11
-nav_title: Best Practices
+nav_title: Best practices
 article_title: In-App Message Best Practices
 layout: dev_guide
 guide_top_header: "In-App Message Best Practices"
@@ -15,7 +15,7 @@ guide_featured_list:
   link: /docs/user_guide/message_building_by_channel/in-app_messages/best_practices/prep_guide/
   image: /assets/img/braze_icons/book-closed.svg
 - name: "Sending Test Messages"
-  link: /docs/developer_guide/sending_test_messages/
+  link: /docs/developer_guide/in_app_messages/sending_test_messages/
   image: /assets/img/braze_icons/mail-01.svg
 - name: "Know Before You Send"
   link: /docs/know_before_send/

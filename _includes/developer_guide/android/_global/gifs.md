@@ -131,7 +131,7 @@ class GlideBrazeImageLoader : IBrazeImageLoader {
 
 ### Step 2: Setting the image loader delegate
 
-The Braze SDK will use any custom image loader set with [`setBrazeImageLoader`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.images/-i-braze-image-loader/index.html). We recommend setting the custom image loader in a custom application subclass:
+The Braze SDK will use any custom image loader set with [`IBrazeImageLoader`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.images/-i-braze-image-loader/index.html). We recommend setting the custom image loader in a custom application subclass:
 
 {% tabs %}
 {% tab JAVA %}
@@ -163,7 +163,7 @@ class GlideIntegrationApplication : Application() {
 
 ## Custom Image Loading with Jetpack Compose
 
-To override image loading with Jetpack Compose, you can pass in a value to `imageComposable`. This function will take a `Card` and render the image and the modifiers needed. Alternatively, you can use `customCardComposer` of `ContentCardsList` to render the entire card.
+To override image loading with Jetpack Compose, you can pass in a value to [`imageComposable`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-styling/index.html#-808910455%2FProperties%2F-1725759721). This function will take a `Card` and render the image and the modifiers needed. Alternatively, you can use `customCardComposer` of `ContentCardsList` to render the entire card.
 
 In the following example, Glide's Compose library is used for the cards listed in the `imageComposable` function:
 

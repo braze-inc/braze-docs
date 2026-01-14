@@ -28,7 +28,7 @@ As mensagens modais no app são projetadas para se ajustarem ao dispositivo nas 
 
 Embora não haja limites para o número de caracteres de texto que você pode incluir em uma mensagem no app (assim como botões, título, corpo principal e outros), moderamos o número de caracteres de texto que você usa. O excesso de texto exigirá que os usuários expandam e rolem a mensagem.
 
-Todas as mensagens no app têm um tamanho de imagem recomendado de 500 KB, tamanho máximo de imagem de 5 MB e são compatíveis com os tipos de arquivo PNG, JPG e GIF.
+Todas as mensagens no app têm um tamanho de imagem recomendado de 500 KB, tamanho máximo de imagem de 5 MB e são compatíveis com os tipos de arquivo PNG, JPEG e GIF.
 
 {% tabs %}
 {% tab Retrato %}
@@ -61,7 +61,7 @@ Todas as mensagens no app têm um tamanho de imagem recomendado de 500 KB, taman
 
 | Tipo | Proporção | Qualidade da imagem | Notas |
 | --- | --- | --- | --- |
-| Modal (somente imagem) | 1:1 | Alta resolução de 1200 x 2000 px <br> Resolução mínima de 600 x 600 px | A mensagem será redimensionada para se ajustar a imagens com a maioria das proporções. |
+| Modal (somente imagem) | 1:1 | Resolução máxima recomendada: 1200 x 2000 px <br> Resolução mínima: 600 x 600 px | A mensagem será redimensionada para se ajustar a imagens com a maioria das proporções. A resolução máxima recomendada tem uma proporção de 3:5, o que pode não proporcionar os melhores resultados. Embora imagens maiores possam ser usadas, elas podem levar a tempos de carregamento mais longos. <br> A proporção ideal para imagens é de 1:1, e o não cumprimento dessa proporção pode disparar um aviso durante o upload. Esse aviso é uma sugestão para obter os melhores resultados e não impede que se faça upload de imagens maiores. |
 | Modal com texto | 29:10 | Alta resolução 1450 x 500 px <br> Resolução mínima de 600 x 205 px | As imagens altas serão reduzidas e centralizadas horizontalmente. Imagens largas serão cortadas nas bordas esquerda e direita. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 }
 
@@ -90,47 +90,52 @@ table td {
 </style>
 
 <table>
-  <tr>
-    <th>Tipo de imagem</th>
-    <th>Proporção</th>
-    <th>Qualidade da imagem</th>
-    <th>Tamanho máximo da imagem</th>
-    <th>Tipos de arquivos</th>
-    <th>Notas</th>
-  </tr>
-  <tr>
-    <td>iOS</td>
-    <td>2:1 (recomendado)</td>
-    <td>1038 x 1038 px no máximo</td>
-    <td>5 MB</td>
-    <td>PNG, JPG, GIF</td>
-    <td>A partir de janeiro de 2020, as notificações por push avançadas do iOS podem lidar com imagens de 1038 x 1038 px, desde que tenham menos de 10 MB, mas recomendamos usar o menor tamanho de arquivo possível. Na prática, o envio de arquivos grandes pode causar estresse desnecessário na rede e tornar os tempos limite de download mais comuns.<br><br>Para saber mais, consulte <a href="{{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/">notificações rich do iOS</a>.</td>
-  </tr>
-  <tr>
-    <td>Ícone push do Android</td>
-    <td>1:1</td>
-    <td>N/D</td>
-    <td>500 KB</td>
-    <td>PNG, JPG</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Imagem de notificação expandida do Android</td>
-    <td>2:1</td>
-    <td>Pequeno: 512 x 256 px<br>Médio: 1024 x 512 px<br>Grande: 2048 x 1024 px</td>
-    <td>500 KB</td>
-    <td>PNG, JPG</td>
-    <td>Usado em <a href="{{site.baseurl}}/user_guide/message_building_by_channel/push/android/rich_notifications/">notificações Rich do Android</a>.</td>
-  </tr>
-  <tr>
-    <td>Imagem de inclinação do Android</td>
-    <td>3:2</td>
-    <td>N/D</td>
-    <td>N/D</td>
-    <td>PNG, JPG</td>
-    <td>Para obter mais detalhes, consulte <a href="{{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/inline_image_push/">push de imagem inline para Android</a>.</td>
-  </tr>
+  <thead>
+    <tr>
+      <th>Tipo de imagem</th>
+      <th>Proporção</th>
+      <th>Máximo de pixels</th>
+      <th>Tamanho máximo da imagem</th>
+      <th>Tipos de arquivos</th>
+      <th>Notas</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>iOS</td>
+      <td>2:1 (recomendado)</td>
+      <td>1038 x 1038</td>
+      <td>5 MB</td>
+      <td>PNG, JPEG, GIF</td>
+      <td>A partir de janeiro de 2020, as notificações por push avançadas do iOS podem lidar com imagens de 1038 x 1038 px, desde que tenham menos de 10 MB, mas recomendamos usar o menor tamanho de arquivo possível. Na prática, o envio de arquivos grandes pode causar estresse desnecessário na rede e tornar os tempos limite de download mais comuns.<br><br>Para saber mais, consulte <a href="{{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/">notificações rich do iOS</a>.</td>
+    </tr>
+    <tr>
+      <td>Ícone push do Android</td>
+      <td>1:1</td>
+      <td>N/D</td>
+      <td>500 KB</td>
+      <td>PNG, JPEG</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Imagem de notificação expandida do Android</td>
+      <td>2:1</td>
+      <td><b>Pequeno:</b><br>512 x 256<br><br><b>Médio:</b><br>1024 x 512<br><br><b>Grande:</b><br>2048 x 1024</td>
+      <td>500 KB</td>
+      <td>PNG, JPEG</td>
+      <td>Usado em <a href="{{site.baseurl}}/user_guide/message_building_by_channel/push/android/rich_notifications/">notificações Rich do Android</a>.</td>
+    </tr>
+    <tr>
+      <td>Imagem de inclinação do Android</td>
+      <td>3:2</td>
+      <td>N/D</td>
+      <td>N/D</td>
+      <td>PNG, JPEG</td>
+      <td>Para obter mais detalhes, consulte <a href="{{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/inline_image_push/">push de imagem inline para Android</a>.</td>
+    </tr>
+  </tbody>
 </table>
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4  .reset-td-br-5 .reset-td-br-6 role="presentation"}
 
 {% endif %}
 
@@ -147,7 +152,7 @@ table td {
 | --- | --- | 
 | Tamanho | 5 MB |
 | Largura | Cabeçalho: 600 px<br>Corpo: 480 px |
-| Tipos de arquivos | PNG, JPG, GIF |
+| Tipos de arquivos | PNG, JPEG, GIF |
 {: .reset-td-br-1 .reset-td-br-2}
 
 | Especificações de texto | Propriedades máximas recomendadas |

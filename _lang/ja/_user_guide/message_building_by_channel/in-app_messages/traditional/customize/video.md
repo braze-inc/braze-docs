@@ -10,7 +10,7 @@ channel:
 
 # ビデオ {#video}
 
-> HTML アプリ内メッセージでビデオを再生するには、HTML に次の `<video>` 要素を含め、動画名を実際のファイル名 (またはリモートアセットの URL) に置き換えます。他の可能な`<video>`オプションは[MDN Web Docs][9]で見つけることができます。
+> HTML アプリ内メッセージでビデオを再生するには、HTML に次の `<video>` 要素を含め、動画名を実際のファイル名 (またはリモートアセットの URL) に置き換えます。他の可能な`<video>`オプションは[MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video)で見つけることができます。
 
 ```html
 <video class="video" autoplay muted playsinline controls>
@@ -28,7 +28,7 @@ channel:
 
 ## Androidに関する考慮事項
 
-Android 上の HTML アプリ内メッセージに動画およびその他の HTML5 コンテンツを埋め込むには、アプリ内メッセージが表示されるアクティビティでハードウェアアクセラレーションを有効にする必要があります。詳細については、[Android開発者ガイド]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/youtube_in_html/)を参照してください。
+Android 上の HTML アプリ内メッセージに動画およびその他の HTML5 コンテンツを埋め込むには、アプリ内メッセージが表示されるアクティビティでハードウェアアクセラレーションを有効にする必要があります。詳細については、[Android開発者ガイド]({{site.baseurl}}/developer_guide/in_app_messages/html_messages/#android_embedding-youtube-content)を参照してください。
 
 ## iOSの考慮事項
 
@@ -38,4 +38,3 @@ iOS デバイスをサポートするには:
 - iOSはデフォルトで自動再生をサポートしていません。このデフォルトオプションを更新するには、[`ABKInAppMessageHTMLViewController`](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyUI/ABKInAppMessage/ViewControllers/ABKInAppMessageHTMLViewController.m)を変更できます。
 
 
-[9]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video

@@ -1,7 +1,7 @@
 ---
+page_order: 2.5
 nav_title: Indicateurs de fonctionnalité
 article_title: Indicateurs de fonctionnalité du SDK Braze
-page_order: 1
 description: "Cet article de référence couvre un aperçu des indicateurs de fonctionnalité, y compris les prérequis et les cas d’utilisation."
 tool: Feature Flags
 platform:
@@ -21,7 +21,7 @@ platform:
 > Les indicateurs de fonctionnalité vous permettent d’activer ou de désactiver à distance la fonctionnalité d’une sélection d’utilisateurs spécifique ou aléatoire. Il est important de noter qu’ils vous permettent d’activer et de désactiver une fonction dans l'environnement de production sans déployer du code supplémentaire ou mettre à jour d’applications. Cela vous permet de déployer de nouvelles fonctionnalités en toute sécurité et en toute confiance.
 
 {% alert tip %}
-Lorsque vous serez prêt à créer vos propres indicateurs de fonctionnalité, consultez la rubrique [Création d’indicateurs de fonctionnalité]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/create/).
+Lorsque vous serez prêt à créer vos propres indicateurs de fonctionnalité, consultez la rubrique [Création d’indicateurs de fonctionnalité]({{site.baseurl}}/developer_guide/feature_flags/create/).
 {% endalert %}
 
 ## Conditions préalables
@@ -51,7 +51,7 @@ Avec les indicateurs de fonctionnalités de Braze, nous pouvons progressivement 
 * Nous allons activer cette nouvelle fonctionnalité pour seulement 10 % des utilisateurs afin de déterminer si nos effectifs sont appropriés.
 * En cas de bogues, nous pouvons rapidement désactiver la fonction au lieu de nous précipiter pour expédier une nouvelle version.
 
-Pour déployer progressivement cette fonctionnalité, nous pouvons [créer un indicateur de fonctionnalité]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/create/) nommé "Live Chat Widget".
+Pour déployer progressivement cette fonctionnalité, nous pouvons [créer un indicateur de fonctionnalité]({{site.baseurl}}/developer_guide/feature_flags/create/) nommé "Live Chat Widget".
 
 ![Détails de l’indicateur de fonctionnalité pour un exemple nommé Widget d’assistance en direct. L'ID est enable_live_chat. La description de cette fonctionnalité indique que le widget de ligne/en production/instantané s'affichera sur la page d'assistance.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-livechat-1.png %})
 
@@ -143,7 +143,7 @@ Utilisez des indicateurs de caractéristiques pour expérimenter et confirmer vo
 
 Un [test A/B]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) est un outil puissant qui permet de comparer les réponses des utilisateurs à plusieurs versions d'une variable.
 
-Dans cet exemple, notre équipe a créé un nouveau flux de paiement pour notre application d’e-commerce. Même si nous sommes convaincus que c’est une amélioration de l’expérience utilisateur, nous souhaitons exécuter un test A/B afin de mesurer son impact sur le chiffre d’affaires de notre application.
+Dans cet exemple, notre équipe a créé un nouveau flux de paiement pour notre application de commerce électronique. Même si nous sommes convaincus que c’est une amélioration de l’expérience utilisateur, nous souhaitons exécuter un test A/B afin de mesurer son impact sur le chiffre d’affaires de notre application.
 
 Pour commencer, nous allons créer un nouvel indicateur de fonctionnalité appelé `enable_checkout_v2`. Nous n’ajouterons pas d'audience ou de pourcentage de déploiement. Au lieu de cela, nous utiliserons une expérience d’indicateur de fonctionnalité pour diviser le trafic, activer la fonctionnalité et mesurer le résultat.
 
@@ -161,7 +161,7 @@ if (featureFlag?.enabled) {
 }
 ```
 
-Nous mettrons en place notre test A/B dans le cadre d'une [expérience d’indicateur de fonctionnalité]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/experiments/).
+Nous mettrons en place notre test A/B dans le cadre d'une [expérience d’indicateur de fonctionnalité]({{site.baseurl}}/developer_guide/feature_flags/experiments/).
 
 Désormais, 50 % des utilisateurs verront l'ancienne expérience, tandis que les 50 % restants verront la nouvelle expérience. Nous pouvons ensuite analyser les deux variantes pour déterminer quel flux de paiement a permis d'obtenir un taux de conversion plus élevé. {% multi_lang_include metrics.md metric='Conversion Rate' %}
 
@@ -188,7 +188,7 @@ Il s'agit des limitations d’indicateur de fonctionnalité pour les plans gratu
 | Fonctionnalité                                                                                                   | Version gratuite     | Version payante      |
 | :---------------------------------------------------------------------------------------------------------------- | :--------------- | ----------------- |
 | [Indicateurs de fonctionnalité active](#active-feature-flags)                                                                     | 10 par espace de travail | 110 par espace de travail |
-| [Expériences de campagnes actives]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/experiments/)          | 1 par espace de travail  | 100 par espace de travail |
+| [Expériences de campagnes actives]({{site.baseurl}}/developer_guide/feature_flags/experiments/)          | 1 par espace de travail  | 100 par espace de travail |
 | [Étapes du canvas pour l’indicateur de fonctionnalité]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/feature_flags/) | Illimité        | Illimité         |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

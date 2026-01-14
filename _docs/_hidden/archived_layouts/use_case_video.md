@@ -1,5 +1,5 @@
 ---
-nav_title: Use Case with Video
+nav_title: Use case with video
 
 page_order: 7
 
@@ -129,6 +129,5 @@ If you want to learn more about things that were discussed in the article, check
 
 ### Still Lost?
 
-If this article didn't help, leave feedback or open a [support ticket][support]!
+If this article didn't help, leave feedback or open a [support ticket]({{site.baseurl}}/braze_support/)!
 
-[support]: {{site.baseurl}}/braze_support/

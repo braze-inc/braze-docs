@@ -78,7 +78,7 @@ The relationships between custom events and message preferences are displayed in
 
 ![]({% image_buster /assets/img_archive/ab_analytics_pv_3.png %})
 
-If the test can't find a meaningful relationship between custom events and variant preferences, the test will fall back to a session-based analysis method.
+If the test can't find a meaningful relationship between custom events and path preferences, the test falls back to a session-based analysis method, and no custom event data tables are shown.
 
 {% details Fallback analysis method %}
 
@@ -148,6 +148,20 @@ A test that doesn't have a confidence of 95% can still hold important insights. 
 - While testing is useful for discovering which type of messaging generates the most response from your audience, it's also important to understand which alterations in messaging have only a negligible effect. This allows you to either continue testing for another more effective alternative, or save the time that may have been spent deciding between two alternate messages.
 
 Whether or not your test has a clear winner, it can be helpful to run a [follow-up test](#recommended-follow-ups) to confirm your results or apply your findings to a slightly different scenario.
+
+## Discrepancies between the control group and variant
+
+In in-app message campaigns, the way users are tracked and how impressions are logged can cause discrepancies in the expected split between the control group and variant. This is because the actual impressions logged may not reflect this split, and Braze ultimately has no control over the individual user behavior of who will perform the trigger.
+
+For example, let's say a campaign has a target audience of 200 users at launch, with 100 users in the control group and 100 users in the variant.
+
+The 100 users in the variant receive the in-app message payload, and 50 of them perform the trigger action and see the in-app message. The 100 users in the control group are only tracked if they perform the campaign's trigger action, and 75 of them perform the trigger action and log an impression but don't see the in-app message.
+
+Despite the initial 50/50 split, the unique impressions logged aren't balanced. The variant group has 50 impressions, while the control group has 75 impressions.
+
+### In-app message delays 
+
+For triggered in-app message campaigns that include delayed displays, control group impressions will be recorded when the end user would have originally received the in-app message. For example, if a campaign is set to delay the display by one hour, control group impressions will not be logged until the one-hour delay has passed. This helps with the accurate tracking of impressions related to the intended timing of the message delivery.
 
 ## Recommended follow-ups {#recommended-follow-ups}
 

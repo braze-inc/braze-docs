@@ -19,13 +19,9 @@ description: "Dieser Referenzartikel enthält wichtige Informationen für Admini
 
 Um auf diese Seite zuzugreifen, gehen Sie zu **Einstellungen** > **Admin-Einstellungen** > **Kontaktinformationen**.
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, wählen Sie Ihr Konto-Dropdown und gehen Sie zu **Unternehmenseinstellungen** > **Kontaktinformationen**.
-{% endalert %}
+Auf dieser Seite können Sie die Kontaktinformationen und die Zeitzone Ihres Unternehmens verwalten. Stellen Sie sicher, dass Sie **Speichern** auswählen, bevor Sie die Seite verlassen!
 
-Auf dieser Seite können Sie die Kontaktinformationen und die Zeitzone Ihres Unternehmens verwalten. Stellen Sie sicher, dass Sie auf **Speichern** klicken, bevor Sie die Seite verlassen!
-
-### Folgen der Umstellung Ihrer Zeitzone
+## Folgen der Umstellung Ihrer Zeitzone
 
 {% alert warning %}
 

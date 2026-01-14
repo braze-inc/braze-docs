@@ -1,5 +1,5 @@
 ---
-nav_title: キャンペーンのスケジュール設定
+nav_title: キャンペーンのスケジュール
 article_title: キャンペーンのスケジュール設定
 layout: dev_guide
 page_order: 3
@@ -25,7 +25,7 @@ guide_featured_list:
 guide_menu_title: "More articles"
 guide_menu_list:
   - name: キャンペーンの再適格性
-    link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/
+    link: /docs/user_guide/engagement_tools/messaging_fundamentals/reeligibility/
     image: /assets/img/braze_icons/clock.svg
   - name: キャンペーンカレンダー
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/campaign_calendar/

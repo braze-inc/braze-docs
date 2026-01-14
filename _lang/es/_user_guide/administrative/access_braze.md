@@ -1,20 +1,20 @@
 ---
-nav_title: Acceso a Braze
-article_title: Acceso a Braze
+nav_title: Acceso Braze
+article_title: Acceso Braze
 page_order: 0
 layout: dev_guide
-guide_top_header: "Acceso a Braze"
-guide_top_text: "Aquí puede encontrar artículos que le ayudarán a acceder a su cuenta Braze o a su panel de control, como iniciar sesión en su cuenta por primera vez, volver a comprobar sus puntos finales, restablecer contraseñas, etc."
+guide_top_header: "Acceso Braze"
+guide_top_text: "Aquí puedes encontrar artículos que te ayudarán a acceder a tu cuenta o panel Braze, como iniciar sesión en tu cuenta por primera vez, comprobar dos veces tus puntos finales, restablecer contraseñas y mucho más."
 
 page_type: reference
-description: "En esta página encontrará artículos sobre cómo acceder a su cuenta Braze o a su panel de control. Aquí encontrarás recursos sobre SSO, inicio de sesión, instancias de Braze, puntos finales SDK, restablecimiento de contraseñas y mucho más."
+description: "En esta página encontrarás artículos sobre cómo acceder a tu cuenta o panel de Braze. Aquí encontrarás recursos sobre SSO, inicio de sesión, instancias de Braze, puntos finales SDK, restablecimiento de contraseñas y mucho más."
 
 guide_featured_title: "Artículos de sección"
 guide_featured_list:
-- name: Navegación
+- name: Navegar por Braze
   link: /docs/user_guide/administrative/access_braze/navigation/
   image: /assets/img/braze_icons/list.svg
-- name: Buscar en tu panel
+- name: Buscar en tu panel de control
   link: /docs/user_guide/administrative/access_braze/global_search/
   image: /assets/img/braze_icons/search-sm.svg
 - name: API y puntos finales SDK
@@ -31,14 +31,13 @@ guide_featured_list:
   image: /assets/img/braze_icons/log-in-01.svg
 - name: Portal de productos
   link: /docs/user_guide/administrative/access_braze/portal/
+  image: /assets/img/braze_icons/target-05.svg
+- name: Solución de problemas
+  link: /docs/user_guide/administrative/access_braze/troubleshooting/
   image: /assets/img/braze_icons/annotation-question.svg
+- name: Soporte de Braze
+  link: /docs/user_guide/administrative/access_braze/support/
+  image: /assets/img/braze_icons/mail-01.svg
 ---
-## Navegadores compatibles
-
-El panel de Braze es compatible con los siguientes navegadores:
-- Chrome (versión 87 o posterior)
-- Firefox (versión 85 o posterior)
-- Safari (versión 15.4 o posterior)
-- Edge (versión 87 o posterior)
 
 <br><br>

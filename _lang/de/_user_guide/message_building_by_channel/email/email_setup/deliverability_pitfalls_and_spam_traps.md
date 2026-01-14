@@ -1,5 +1,5 @@
 ---
-nav_title: Zustellbarkeitsfehler und Spam-Traps
+nav_title: "Zustellbarkeitsfallen &amp; Spam-Trap's"
 article_title: Zustellbarkeitsfehler und Spam-Traps
 page_order: 7
 page_type: reference
@@ -8,7 +8,7 @@ channel: email
 
 ---
 
-# [![Braze Lernkurse]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability){: style="float:right;width:120px;border:0;" class="noimgborder"}Zustellbarkeitsfehler und Spam-Traps
+# [![Braze Lernkurs]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability){: style="float:right;width:120px;border:0;" class="noimgborder"} Zustellbarkeitsfallen und Spam-Trap
 
 Die Zustellbarkeit Ihrer E-Mails kann durch folgende Spam-Traps beeinträchtigt werden:
 
@@ -32,3 +32,9 @@ Diese Fallen lassen sich vermeiden, wenn Sie ein bestätigtes Opt-in-Verfahren e
 {% alert tip %}
 Die Teams für Customer-Success und Zustellbarkeit von Braze können Ihnen dabei helfen, die Zustellbarkeit weltweit zu maximieren.
 {% endalert %}
+
+## Entfernen einer E-Mail Adresse aus Ihrer Bounce- oder Spam-Liste
+
+Mit den folgenden Endpunkten können Sie gebouncte E-Mails und E-Mails auf Ihrer Braze Spam-Liste entfernen:
+- [`/email/bounce/remove`]({{site.baseurl}}/api/endpoints/email/post_remove_hard_bounces)
+- [`/email/spam/remove`]({{site.baseurl}}/api/endpoints/email/post_remove_spam)

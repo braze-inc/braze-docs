@@ -1,28 +1,28 @@
 ---
-nav_title: "GET: Liste Abonnementstatus mit E-Mail-Adresse oder Telefonnummer"
-article_title: "GET: Liste Abonnementstatus mit E-Mail-Adresse oder Telefonnummer"
+nav_title: "GET: Liste Abo-Status mit E-Mail Adresse oder Telefonnummer"
+article_title: "GET: Liste Abo-Status mit E-Mail Adresse oder Telefonnummer"
 search_tag: Endpoint
 page_order: 2
 hidden: true
 layout: api_page
 page_type: reference
-description: "Dieser Artikel beschreibt die Details des Braze-Endpunkts Listenabonnementstatus mit E-Mail-Adresse oder Telefonnummer."
+description: "Dieser Artikel beschreibt die Details zum Status des Abos einer Liste mit einer E-Mail Adresse oder Telefonnummer am Endpunkt von Braze."
 
 ---
 {% api %}
-# Angabe des Abonnementstatus mit einer E-Mail-Adresse oder Telefonnummer
+# Liste Abo-Status mit einer E-Mail Adresse oder Telefonnummer
 {% apimethod get %}
-/users/subscription
+/benutzer/abo
 {% endapimethod %}
 
-> Verwenden Sie diesen Endpunkt, um den Wert des Abonnementstatus auf der Grundlage einer E-Mail-Adresse oder Telefonnummer zurückzugeben.
+> Verwenden Sie diesen Endpunkt, um den Wert des Abo-Status auf der Grundlage einer E-Mail Adresse oder Telefonnummer zurückzugeben.
 
-## Parameter anfordern
+## Parameter der Anfrage
 
-| Parameter | Erforderlich | Daten Typ | Beschreibung |
+| Parameter | Erforderlich | Datentyp | Beschreibung |
 | --- | --- | --- | --- |
-| `email` | Ja | String | Die E-Mail-Adresse des Benutzers (muss mindestens eine Adresse und höchstens 50 Adressen enthalten). |
-| `phone` | Ja | String | Die Telefonnummer des Benutzers (muss mindestens eine Telefonnummer und höchstens 50 Telefonnummern enthalten). Wir empfehlen, dies im Format E.164 bereitzustellen. |
+| `email` | Ja | String | Die E-Mail Adresse des Nutzers:innen (muss mindestens eine Adresse und höchstens 50 Adressen enthalten). |
+| `phone` | Ja | String | Die Telefonnummer des Nutzers:innen (muss mindestens eine Telefonnummer und höchstens 50 Telefonnummern enthalten). Wir empfehlen, dies im Format E.164 bereitzustellen. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Beispiel Anfrage
@@ -33,7 +33,7 @@ curl --location --request GET 'https://rest.iad-01.braze.com/users/subscriptions
 
 ## Antwort
 
-Die Einträge sind in absteigender Reihenfolge aufgeführt.
+Die Eingänge sind in absteigender Reihenfolge aufgeführt.
 
 ```json
 Content-Type: application/json

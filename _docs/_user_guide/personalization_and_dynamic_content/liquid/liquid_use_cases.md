@@ -1,5 +1,5 @@
 ---
-nav_title: Liquid Use Case Library
+nav_title: Liquid use case library
 article_title: Liquid Use Case Library
 page_order: 10
 search_rank: 2
@@ -60,7 +60,7 @@ Exactly three years ago today we met for the first time!
 ```
 {% endraw %}
 
-**Explanation:** Here, we use the reserved variable `now` to template in the current date and time in [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601 "ISO 8601 Time Code Wiki") format. The filters `%B` (month like "May") and `%d` (day like "18") format the current month and day. We then use the same date and time filters on the `signup_date` values to ensure we can compare the two values using conditional tags and logic.
+**Explanation:** Here, we use the reserved variable `now` to template in the current date and time in [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) format. The filters `%B` (month like "May") and `%d` (day like "18") format the current month and day. We then use the same date and time filters on the `signup_date` values to ensure we can compare the two values using conditional tags and logic.
 
 Then we repeat three more variable statements to get the `%B` and `%d` for the `signup_date`, but also adding `%Y` (year like "2021"). This forms the date and time of the `signup_date` into just the year. Knowing the day and month lets us check if the user's anniversary is today, and knowing the year tells us how many years it's been—which lets us know how many years to congratulate them on!
 
@@ -1316,6 +1316,38 @@ This is a message for Verizon users!
 
 {% else %}
 {% abort_message %}
+{% endif %}
+```
+{% endraw %}
+
+{% endapi %}
+
+{% api %}
+
+## SMS
+
+{% apitags %}
+SMS
+{% endapitags %}
+
+- [Respond with different messages based on inbound SMS keyword](#sms-keyword-response)
+
+### Respond with different messages based on inbound SMS keyword {#sms-keyword-response}
+
+This use case incorporates dynamic SMS keyword processing to respond to specific inbound messages with different message copy. For example, you can send different responses when someone texts "START" versus "JOIN".
+
+{% raw %}
+```liquid
+{% assign inbound_message = {{sms.${inbound_message_body}}} | downcase | strip %}
+{% if inbound_message contains 'start' %}
+Thanks for joining our SMS program! Make sure your account is up to date for the best deals!
+
+{% elsif inbound_message contains 'join' %}
+Thanks for joining our SMS program! Create an account to get the best deals!
+
+{% else %}
+Thanks for joining our SMS program!
+
 {% endif %}
 ```
 {% endraw %}

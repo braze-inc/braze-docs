@@ -16,9 +16,6 @@ description: "Este artigo descreve detalhes sobre o endpoint da Braze Excluir se
 {% endapimethod %}
 
 > Use esse ponto de extremidade para excluir uma seleção de catálogo.
-{% alert important %}
-Esse ponto de extremidade está atualmente em acesso antecipado. Entre em contato com seu gerente de sucesso do cliente se tiver interesse em participar desse acesso antecipado.
-{% endalert %}
 
 ## Pré-requisitos
 
@@ -26,7 +23,7 @@ Para usar esse endpoint, você precisará de uma [chave de API]({{site.baseurl}}
 
 ## Limite de taxa
 
-{% multi_lang_include rate_limits.md endpoint='seleções de catálogo assíncronas' %}
+{% multi_lang_include rate_limits.md endpoint='asynchronous catalog selections' %}
 
 ## Parâmetros da jornada
 

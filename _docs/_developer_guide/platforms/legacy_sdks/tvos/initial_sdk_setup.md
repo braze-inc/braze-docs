@@ -1,5 +1,5 @@
 ---
-nav_title: Initial SDK Setup
+nav_title: Initial SDK setup
 article_title: Initial SDK Setup for tvOS
 platform: tvOS
 page_order: 0
@@ -33,8 +33,8 @@ Run the following command to get started:
 $ sudo gem install cocoapods
 ```
 
-- If you are prompted to overwrite the `rake` executable, refer to [Getting started](http://guides.cocoapods.org/using/getting-started.html "CocoaPods Installation Directions") on CocoaPods.org for further details.
-- If you have issues regarding CocoaPods, refer to the [CocoaPods troubleshooting guide](http://guides.cocoapods.org/using/troubleshooting.html "CocoaPods Troubleshooting Guide").
+- If you are prompted to overwrite the `rake` executable, refer to [Getting started](http://guides.cocoapods.org/using/getting-started.html) on CocoaPods.org for further details.
+- If you have issues regarding CocoaPods, refer to the [CocoaPods troubleshooting guide](http://guides.cocoapods.org/using/troubleshooting.html).
 
 ### Step 2: Constructing the Podfile
 
@@ -123,7 +123,7 @@ If given a pre-existing custom endpoint:
 - Starting with Braze iOS SDK v3.0.2, you can set a custom endpoint using the `Info.plist` file. Add the `Appboy` dictionary to your Info.plist file. Inside the `Appboy` dictionary, add the `Endpoint` string subentry and set the value to your custom endpoint URLs authority (for example, `sdk.iad-01.braze.com`, not `https://sdk.iad-01.braze.com`).
 
 #### Runtime endpoint configuration
-If given a pre-exisiting custom endpoint:
+If given a pre-existing custom endpoint:
 - Starting with Braze iOS SDK v3.17.0+, you can override set your endpoint via the `ABKEndpointKey` inside the `appboyOptions` parameter passed to `startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions:`. Set the value to your custom endpoint URL authority (for example, `sdk.iad-01.braze.com`, not `https://sdk.iad-01.braze.com`).
 
 {% alert note %}
@@ -193,5 +193,5 @@ If you call `startWithApiKey:` in your `didFinishLaunchingWithOptions:` delegate
 You can also integrate our tvOS SDK manually - simply grab the Framework from our [Public Repository](https://github.com/appboy/appboy-ios-sdk) and initialize Braze as outlined in the preceding sections.
 
 ## Identifying users and reporting analytics
-See our [iOS documentation]({{site.baseurl}}/developer_guide/platforms/swift/analytics/setting_user_ids/) for information about setting user ids, logging custom events, setting user attributes. We also recommend familiarizing yourself with our [event naming conventions]({{site.baseurl}}/user_guide/data/custom_data/event_naming_conventions/).
+See our [iOS documentation]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=swift) for information about setting user ids, logging custom events, setting user attributes. We also recommend familiarizing yourself with our [event naming conventions]({{site.baseurl}}/user_guide/data/custom_data/event_naming_conventions/).
 

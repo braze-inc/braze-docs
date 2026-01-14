@@ -1,5 +1,5 @@
 ---
-nav_title: Pre and Post-Launch Checklist
+nav_title: Pre and post-launch checklist
 article_title: Pre and Post-Launch Checklist
 page_order: 2
 description: "This article provides a guideline for things to check before and after you launch a Canvas."
@@ -15,10 +15,6 @@ tool: Canvas
 
 Before you launch a Canvas, there are several details you can check to ensure that your messaging and send times align with your audience's preferences. Things to consider include any variations in time zones, entry settings, and more. Using this checklist as a guide, finetune these areas based on your use case to help contribute to the success of your Canvas. 
 
-{% alert important %}
-As of February 28, 2023, you will no longer be able to create or duplicate Canvases using the original Canvas experience. Braze recommends that customers who use the original Canvas experience move to Canvas Flow. It's an improved editing experience to better build and manage Canvases. Learn more about [cloning your Canvases to Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
-{% endalert %}
-
 ### Review time zone settings
 
 If you're entering users according to their local time zone using a scheduled entry schedule, you should launch your Canvas at least 24 hours prior to when you want users to enter your Canvas. For example, here's a Canvas that hasn't left enough time between the launch and the scheduled entry time. In this scenario, there may be some users who won't enter your Canvas since the scheduled entry time has already passed in certain time zones. 
@@ -27,7 +23,7 @@ If you're entering users according to their local time zone using a scheduled en
 You'll see an alert if you haven't scheduled enough of a buffer. A quick solution is to adjust the send time to ensure that users can remain in the targeted segment for a full 24 hours.
 {% endalert %}
 
-![][1]
+![A Canvas scheduled to enter users at one time starting at 10 am on April 30, 2025, in their local time.]({% image_buster /assets/img_archive/canvas_checklist1.png %}){: style="max-width:75%;"}
 
 ### Consider using regular expressions for audience filters
 
@@ -72,7 +68,7 @@ You've launched your Canvas! Now, what? Use this checklist to see how you can re
 
 ### Many entries, but few sends
 
-For example, let's say that you've noticed a disparity between your number of messages sent versus total entries. You can identify and uncover areas to adjust your Canvas by checking these key areas.
+For example, let's say that you've noticed a disparity between your number of messages sent and the total entries. You can identify and uncover areas to adjust your Canvas by checking these key areas.
 
 #### Entry audience
 
@@ -80,7 +76,7 @@ If you're using a scheduled send campaign, double-check your target audience by 
 
 #### First component of the Canvas
 
-Review any audience filters, action triggers, or segments used in the beginning components of your Canvas. Are there any misspellings, or too-strict conditions that are preventing your Canvas from starting off right? Are you using "Equals" when you should be using "Matches Regex"?
+Review any audience filters, action triggers, or segments used in the beginning components of your Canvas. Are there any misspellings or too-strict conditions that are preventing your Canvas from starting off right? Are you using "Equals" when you should be using "Matches Regex"?
 
 #### Canvas control group 
 
@@ -92,7 +88,7 @@ If you aren’t seeing any entry data for your Canvas, the reason that users may
 
 If you're using action-based entry in your entry schedule, check that you haven't used the same trigger action here as in your **Target Audience**. A race condition may occur in which the user is not in the audience at the time they perform the trigger event, which means they won't enter the Canvas.
 
-Additionally, check that the selected segment has users in it by reviewing the **Target Population** table in the **Target Audience** settings. If this number is low, see how you can adjust your entry settings, or review your selected segments or filters for any errors.
+Additionally, check that the selected segment has users in it by reviewing the **Target Population** table in the **Target Audience** settings. If this number is low, see how you can adjust your entry settings or review your selected segments or filters for any errors.
 
 ### Unexpected drop-off between steps
 
@@ -103,10 +99,9 @@ Next, it's important to identify these settings that can affect when and if mess
 - Quiet Hours
 - Delivery validations
 
-In general, choose either Intelligent Timing or Quiet Hours for your Canvas, not both. The same suggestion applies to use either Intelligent Timing or [rate limiting]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/), not both. For more information on how to best use the Intelligence Suite, read our [Intelligence FAQ]({{site.baseurl}}/user_guide/brazeai/intelligence/faqs/).
+In general, choose either Intelligent Timing or Quiet Hours for your Canvas, not both. The same suggestion applies to use either Intelligent Timing or [rate limiting]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/), not both. For more information on how to best use the Intelligence Suite, read our [Intelligent Suite use cases]({{site.baseurl}}/user_guide/brazeai/intelligence/#use-cases).
 
 ### Suspicious send volumes between paths
 
 When the volume of sends between two or more paths (either Audience Paths or Action Paths) isn't what you expect, this can be an opportunity to check your segments, filters, or trigger actions. Also, be sure to identify and remove any overlapping filters.
 
-[1]: {% image_buster /assets/img_archive/canvas_checklist1.png %}

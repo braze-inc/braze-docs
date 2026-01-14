@@ -57,17 +57,13 @@ Um das SB-E-Mail-Setup zu nutzen, müssen Sie die folgenden Voraussetzungen erf�
 2. Wählen Sie dann die Registerkarte **Absenderüberprüfung**. Um diese Registerkarte sehen zu können, müssen Sie über die Berechtigung "Unternehmenseinstellungen verwalten können" auf Unternehmensebene verfügen.
 3. Klicken Sie auf die Schaltfläche **Einrichtung starten**.
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, können Sie die **Senderüberprüfung** finden, indem Sie auf Ihr Profilsymbol klicken.
-{% endalert %}
-
 ### Schritt 2: Sender-Domain hinzufügen und überprüfen
 
 Eine Sender-Domain wird in der „Von“-Adresse verwendet, wenn eine E-Mail gesendet wird. Geben Sie eine Senderdomäne ein und klicken Sie auf **Senden**. 
 
 Als nächstes fügen Sie die TXT- und CNAME-Einträge unten auf der Seite zu Ihrem DNS-Anbieter hinzu. Kehren Sie dann zum Braze Dashboard zurück und klicken Sie auf **Überprüfen**.
 
-![][1]
+![]({% image_buster /assets/img_archive/email_setup_rdns_records.png %})
 
 {% alert important %}
 Die sendende Domain muss einer Domain untergeordnet sein, die Sie besitzen. Wenn Sie z. B. „example.com“ besitzen, könnte eine Subdomain „mail.example.com“ sein, die es Ihnen ermöglicht, die Sendeadresse „@mail.example.com“ zu verwenden.
@@ -89,4 +85,3 @@ Beachten Sie, dass zusätzliche Domains, die hinzugefügt wurden, nicht im Absch
 
 Nachdem Ihre Absenderüberprüfung abgeschlossen ist, empfehlen wir Ihnen die IP-Erwärmung, damit Ihre Nachrichten mit einer gleichbleibend hohen Rate den Posteingang des Empfängers erreichen. Wenden Sie sich nach Abschluss dieser Einrichtung an das Braze Onboarding-Team, um zu überprüfen, ob Ihre Domains und [IP-Adresse]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ip_warming/) funktionieren.
 
-[1]: {% image_buster /assets/img_archive/email_setup_rdns_records.png %}

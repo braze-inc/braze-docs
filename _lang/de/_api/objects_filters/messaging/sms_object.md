@@ -1,15 +1,15 @@
 ---
-nav_title: "SMS-Objekt"
-article_title: SMS-Nachrichten-Objekt
+nav_title: "SMS Objekt"
+article_title: SMS Messaging Objekt
 page_order: 10
 page_type: reference
 channel: SMS
-description: "Dieser Referenzartikel erklärt die verschiedenen Komponenten des Braze SMS-Objekts."
+description: "Dieser referenzierte Artikel erklärt die verschiedenen Komponenten des Braze SMS-Objekts."
 
 ---
 # SMS-Objekt
 
-> Mit dem Objekt `sms` können Sie SMS-Nachrichten über unsere [Messaging-Endpunkte]({{site.baseurl}}/api/endpoints/messaging) ändern oder erstellen.
+> Mit dem Objekt `sms` können Sie über unsere [Messaging-Endpunkte]({{site.baseurl}}/api/endpoints/messaging) SMS-Nachrichten ändern oder erstellen.
 
 ```json
 {
@@ -23,4 +23,5 @@ description: "Dieser Referenzartikel erklärt die verschiedenen Komponenten des 
 }
 ```
 
-- [App Kennung]({{site.baseurl}}/api/identifier_types/)
+- [Bezeichner der App]({{site.baseurl}}/api/identifier_types/)
+  - Jede gültige `app_id` von einer App, die in Ihrem Workspace konfiguriert ist, funktioniert für alle Nutzer:innen in Ihrem Workspace, unabhängig davon, ob der Nutzer die spezifische App in seinem Profil hat oder nicht.

@@ -1,5 +1,5 @@
 ---
-nav_title: Revenue Report
+nav_title: Revenue report
 article_title: Revenue Report
 page_type: reference
 description: "This page describes how to use the Revenue Report page to view data on revenue over specific periods of time, a specific product revenue, and your app’s total revenue."
@@ -12,15 +12,11 @@ tool: Reports
 
 To view a report for your revenue from the dashboard, go to **Analytics** > **Revenue Report**. 
 
-{% alert note %}
-If you're using the [older navigation]({{site.baseurl}}/navigation), this page can be found under **Data**.
-{% endalert %}
-
 ## Customizing your revenue report
 
 You can customize your revenue report by selecting a date range, the apps to report on, and parameters.
 
-![The "Revenue Report" page showing the "Performance Over Time" graph with "Revenue" set as the parameter.][1]
+![The "Revenue Report" page showing the "Performance Over Time" graph with "Revenue" set as the parameter.]({% image_buster /assets/img/revenue_report.png %})
 
 ### Filtering by date and apps
 
@@ -43,6 +39,10 @@ You can view the following data in the **Performance Over Time Graph**:
 
 ## Understanding revenue calculations
 
+{% alert note %}
+When you record revenue for a currency without an exchange rate, Braze records it as a purchase of US $0.00.
+{% endalert %}
+
 <style>
     .no-split {
         word-break: keep-all;
@@ -59,23 +59,23 @@ You can view the following data in the **Performance Over Time Graph**:
     <tbody>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#lifetime-revenue">Lifetime Revenue</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Lifetime Revenue' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Lifetime Revenue' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#lifetime-value-per-user">Lifetime Value Per User</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Lifetime Value Per User' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Lifetime Value Per User' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#average-daily-revenue">Average Daily Revenue</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Average Daily Revenue' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Average Daily Revenue' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#daily-purchases">Daily Purchases</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Daily Purchases' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Daily Purchases' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#daily-revenue-per-user">Daily Revenue Per User</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Daily Revenue Per User' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Daily Revenue Per User' %}</td>
         </tr>
     </tbody>
 </table>
@@ -84,8 +84,6 @@ You can view the following data in the **Performance Over Time Graph**:
 
 Refer to the **Product Breakdown** table for a list of the products purchased during your selected date range, how many of each product were purchased, and how much revenue each product generated.
 
-![The "Product Breakdown" table showing the columns "Product Name", "Purchased", and "Revenue".][2]
+![The "Product Breakdown" table showing the columns "Product Name", "Purchased", and "Revenue".]({% image_buster /assets/img/revenue_report_product_breakdown.png %})
 
 
-[1]: {% image_buster /assets/img/revenue_report.png %}
-[2]: {% image_buster /assets/img/revenue_report_product_breakdown.png %}

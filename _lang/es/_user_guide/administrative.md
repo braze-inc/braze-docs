@@ -5,15 +5,15 @@ page_order: 2
 layout: dev_guide
 
 guide_top_header: "Administrativo"
-guide_top_text: "En esta sección se explica cómo administrar el cuadro de mandos de Braze, incluida la configuración inicial de las integraciones, la administración del cuadro de mandos, la gestión de los permisos de los usuarios, etc.<br><br>Además de los temas y artículos incluidos en esta sección, también recomendamos encarecidamente consultar nuestro curso Braze Learning <a href='https://learning.braze.com/admin-dashboard-management/'>sobre administración y gestión de cuadros</a> de mando, que trata sobre cómo gestionar el acceso de los usuarios y las mejores prácticas para el mantenimiento de los cuadros de mando."
-description: "En esta sección se explica cómo administrar el cuadro de mandos de Braze, incluida la configuración inicial de las integraciones, la administración del cuadro de mandos, la gestión de los permisos de los usuarios, etc."
+guide_top_text: "Esta sección explica cómo administrar tu panel de Braze, incluida la configuración inicial para las integraciones, la administración del panel, la gestión de permisos de usuario y mucho más.<br><br>Además de los temas y artículos incluidos en esta sección, también te recomendamos encarecidamente que consultes nuestro curso de Braze Learning <a href='https://learning.braze.com/admin-dashboard-management/'>sobre administración y gestión de paneles</a>, que trata sobre cómo gestionar el acceso de los usuarios y las mejores prácticas para el mantenimiento de los paneles."
+description: "Esta sección explica cómo administrar tu panel de Braze, incluida la configuración inicial para las integraciones, la administración del panel, la gestión de permisos de usuario y mucho más."
 
 guide_featured_title: "Temas populares"
 guide_featured_list:
-- name: Acceso a Braze
+- name: Acceso Braze
   link: /docs/user_guide/administrative/access_braze/
   image: /assets/img/braze_icons/log-in-01.svg
-- name: Configuración de administrador
+- name: Configuración del administrador
   link: /docs/user_guide/administrative/app_settings/company_settings/
   image: /assets/img/braze_icons/building-02.svg
 - name: Facturación

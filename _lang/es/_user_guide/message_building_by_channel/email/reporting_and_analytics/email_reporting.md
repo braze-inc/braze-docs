@@ -1,8 +1,8 @@
 ---
-nav_title: Informe
+nav_title: Informar
 article_title:  Informes por correo electrónico
 page_order: 20
-description: "Este artículo de referencia cubre los diferentes componentes de los informes de correo electrónico y dónde se pueden encontrar en el panel de control."
+description: "Este artículo de referencia cubre los diferentes componentes de los informes de correo electrónico y dónde se pueden encontrar en el panel."
 tool:
   - Reports
 channel:
@@ -12,7 +12,7 @@ channel:
 
 # Informes por correo electrónico
 
-> En este artículo se describen los distintos componentes de los informes de correo electrónico y su ubicación en el panel de control.
+> Este artículo cubre los diferentes componentes de tus informes de correo electrónico y dónde se pueden encontrar en el panel.
 
-{% multi_lang_include campaign_analytics.md channel="email" %}
+{% multi_lang_include analytics/campaign_analytics.md channel="email" %}
 

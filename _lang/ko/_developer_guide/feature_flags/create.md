@@ -13,7 +13,7 @@ platform:
 
 # 기능 플래그 생성
 
-> 기능 플래그를 사용하면 선택한 사용자에 대해 원격으로 기능을 활성화 또는 비활성화할 수 있습니다. Braze 대시보드 내에서 새 기능 플래그를 만듭니다. 이 기능을 활성화할 사용자의 이름과 `ID`, 오디언스 및 비율을 입력합니다. 그런 다음, 앱이나 웹사이트의 코드에서 동일한 `ID`를 사용하여 비즈니스 로직의 특정 부분을 조건부로 실행할 수 있습니다. 기능 플래그와 Braze에서 기능 플래그를 사용하는 방법에 대해 자세히 알아보려면 [기능 플래그 정보를]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/about/) 참조하세요.
+> 기능 플래그를 사용하면 선택한 사용자에 대해 원격으로 기능을 활성화 또는 비활성화할 수 있습니다. Braze 대시보드 내에서 새 기능 플래그를 만듭니다. 이 기능을 활성화할 사용자의 이름과 `ID`, 오디언스 및 비율을 입력합니다. 그런 다음, 앱이나 웹사이트의 코드에서 동일한 `ID`를 사용하여 비즈니스 로직의 특정 부분을 조건부로 실행할 수 있습니다. 기능 플래그와 Braze에서 기능 플래그를 사용하는 방법에 대해 자세히 알아보려면 [기능 플래그 정보를]({{site.baseurl}}/developer_guide/feature_flags/) 참조하세요.
 
 ## 전제 조건
 
@@ -71,7 +71,7 @@ platform:
 |`footer_settings`|`JSON`|`{ "colors": [ "red", "blue", "green" ], "placement": 123 }`|
 
 {% alert tip %}
-추가할 수 있는 속성 수에는 제한이 없습니다. 그러나 기능 플래그의 속성정보는 총 10KB로 제한됩니다. 속성 값과 키의 길이는 모두 255자로 제한됩니다.
+추가할 수 있는 속성 수에는 제한이 없습니다. 그러나 기능 플래그의 속성은 총 10KB로 제한됩니다. 속성 값과 키의 길이는 모두 255자로 제한됩니다.
 {% endalert %}
 {% endtab %}
 {% endtabs %}
@@ -109,7 +109,7 @@ platform:
 
 ```javascript
 const featureFlag = braze.getFeatureFlag("expanded_user_profile");
-if (featureFlag.enabled) {
+if (featureFlag?.enabled) {
   console.log(`expanded_user_profile is enabled`);
 } else {
   console.log(`expanded_user_profile is not enabled`);
@@ -121,7 +121,7 @@ if (featureFlag.enabled) {
 
 ```swift
 let featureFlag = braze.featureFlags.featureFlag(id: "expanded_user_profile")
-if featureFlag.enabled {
+if featureFlag?.enabled == true {
   print("expanded_user_profile is enabled")
 } else {
   print("expanded_user_profile is not enabled")
@@ -131,7 +131,7 @@ if featureFlag.enabled {
 {% tab Java %}
 ```java
 FeatureFlag featureFlag = braze.getFeatureFlag("expanded_user_profile");
-if (featureFlag.getEnabled()) {
+if (featureFlag != null && featureFlag.getEnabled()) {
   Log.i(TAG, "expanded_user_profile is enabled");
 } else {
   Log.i(TAG, "expanded_user_profile is not enabled");
@@ -143,7 +143,7 @@ if (featureFlag.getEnabled()) {
 
 ```kotlin
 val featureFlag = braze.getFeatureFlag("expanded_user_profile")
-if (featureFlag.enabled) {
+if (featureFlag?.enabled == true) {
   Log.i(TAG, "expanded_user_profile is enabled.")
 } else {
   Log.i(TAG, "expanded_user_profile is not enabled.")
@@ -155,7 +155,7 @@ if (featureFlag.enabled) {
 
 ```javascript
 const featureFlag = await Braze.getFeatureFlag("expanded_user_profile");
-if (featureFlag.enabled) {
+if (featureFlag?.enabled) {
   console.log(`expanded_user_profile is enabled`);
 } else {
   console.log(`expanded_user_profile is not enabled`);
@@ -166,7 +166,7 @@ if (featureFlag.enabled) {
 {% tab Unity %}
 ```csharp
 var featureFlag = Appboy.AppboyBinding.GetFeatureFlag("expanded_user_profile");
-if (featureFlag.Enabled) {
+if (featureFlag != null && featureFlag.Enabled) {
   Console.WriteLine("expanded_user_profile is enabled");
 } else {
   Console.WriteLine("expanded_user_profile is not enabled");
@@ -177,7 +177,7 @@ if (featureFlag.Enabled) {
 {% tab 코르도바 %}
 ```javascript
 const featureFlag = await BrazePlugin.getFeatureFlag("expanded_user_profile");
-if (featureFlag.enabled) {
+if (featureFlag?.enabled) {
   console.log(`expanded_user_profile is enabled`);  
 } else {
   console.log(`expanded_user_profile is not enabled`);
@@ -186,8 +186,8 @@ if (featureFlag.enabled) {
 {% endtab %}
 {% tab Flutter %}
 ```dart
-BrazeFeatureFlag featureFlag = await braze.getFeatureFlagByID("expanded_user_profile");
-if (featureFlag.enabled) {
+BrazeFeatureFlag? featureFlag = await braze.getFeatureFlagByID("expanded_user_profile");
+if (featureFlag?.enabled == true) {
   print("expanded_user_profile is enabled");
 } else {
   print("expanded_user_profile is not enabled");
@@ -198,7 +198,7 @@ if (featureFlag.enabled) {
 {% tab Roku %}
 ```brightscript
 featureFlag = m.braze.getFeatureFlag("expanded_user_profile")
-if featureFlag.enabled
+if featureFlag <> invalid and featureFlag.enabled
   print "expanded_user_profile is enabled"
 else
   print "expanded_user_profile is not enabled"
@@ -277,7 +277,7 @@ m.Braze.logFeatureFlagImpression("expanded_user_profile");
 
 기능 플래그의 속성정보에 액세스하려면 대시보드에서 정의한 유형에 따라 다음 메서드 중 하나를 사용합니다.
 
-기능 플래그가 활성화되지 않았거나 참조하는 속성정보가 존재하지 않는 경우 이 메서드는 `null`을 반환합니다.
+참조한 프로퍼티가 존재하지 않는 경우 이 메서드는 `null` 을 반환합니다.
 
 {% tabs %}
 {% tab 자바스크립트 %}

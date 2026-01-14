@@ -42,11 +42,11 @@ glossary_tags:
   - name: 이메일 목록
   - name: 이메일 템플릿
   - name: KPI
-  - name: 뉴스피드
   - name: 구매
   - name: 환경설정 센터
   - name: 메시지 예약
   - name: SCIM
+  - name: SDK 인증
   - name: 세그먼트
   - name: 메시지 보내기
   - name: SMS
@@ -220,7 +220,7 @@ glossaries:
     description: 시간에 따른 캠페인의 다양한 통계를 매일 시리즈로 검색할 수 있습니다.
     tags:
       - Campaigns
-  - name: "<a href='/docs/api/endpoints/export/campaigns/get_campaign_details/'>/캠페인/세부정보</a>"
+  - name: "<a href='/docs/api/endpoints/export/campaigns/get_campaign_details/'>/campaigns/details</a>"
     description: 지정된 캠페인에 대한 관련 정보를 검색합니다.
     tags:
       - Campaigns
@@ -312,18 +312,6 @@ glossaries:
     description: 각 날짜의 총 제거 횟수에 대한 일별 시리즈를 검색합니다.
     tags:
       - KPI
-  - name: "<a href='/docs/api/endpoints/export/news_feed/get_news_feed_card_analytics/'>/feed/data_series</a>"
-    description: 시간 경과에 따른 카드의 일일 참여 통계 시리즈를 검색합니다.
-    tags:
-      - News Feed
-  - name: "<a href='/docs/api/endpoints/export/news_feed/get_news_feed_card_details/'>/feed/details</a>"
-    description: 카드에서 관련 정보를 검색합니다.
-    tags:
-      - News Feed
-  - name: "<a href='/docs/api/endpoints/export/news_feed/get_news_feed_cards/'>/feed/list</a>"
-    description: 뉴스피드 카드 목록을 내보내면 각 카드의 이름과 카드 API 식별자가 포함됩니다.
-    tags:
-      - News Feed
   - name: "<a href='/docs/api/endpoints/sms/post_remove_invalid_numbers/'>/sms/invalid_phone_numbers/remove</a>"
     description: "Braze의 유효하지 않은 전화번호 목록에서 \"유효하지 않은\" 전화번호를 제거합니다. 유효하지 않은 것으로 표시된 전화번호의 유효성을 다시 검사하는 데 사용할 수 있습니다."
     tags:
@@ -409,11 +397,11 @@ glossaries:
     tags:
       - Catalogs
   - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/synchronous/put_update_catalog_item/'>/catalogs/{catalog_name}/items/{item_id}</a>"
-    description: 카탈로그에서 품목을 업데이트합니다.
+    description: 카탈로그에서 품목을 교체합니다.
     tags:
       - Catalogs
   - name: "<a href='/docs/api/endpoints/catalogs/catalog_items/asynchronous/put_update_catalog_items/'>/catalogs/{catalog_name}/items/</a>"
-    description: 카탈로그의 여러 항목을 업데이트합니다.
+    description: 카탈로그에서 여러 항목을 교체합니다.
     tags:
       - Catalogs
   - name: "<a href='/docs/api/endpoints/catalogs/catalog_fields/asynchronous/post_create_catalog_fields/'>/catalogs/{catalog_name}/fields/</a>"
@@ -437,7 +425,7 @@ glossaries:
     tags:
       - SCIM
   - name: "<a href='/docs/get_see_user_account_information/'>/scim/v2/Users/{id}</a>"
-    description: 이메일을 지정하여 기존 대시보드 사용자 계정을 조회합니다.
+    description: 리소스 ID를 지정하여 기존 대시보드 사용자 계정을 조회합니다.
     tags:
       - SCIM
   - name: "<a href='/docs/post_update_existing_user_account/'>/scim/v2/Users/{id}</a>"
@@ -464,4 +452,20 @@ glossaries:
     description: 동기화 상태 목록을 반환합니다.
     tags:
       - Cloud Data Ingestion
+  - name: "<a href='/docs/api/endpoints/sdk_authentication/post_create_sdk_authentication_key/'>/app_group/sdk_authentication/create</a>"
+    description: 앱을 위한 새로운 SDK 인증 키를 생성하세요.
+    tags:
+      - SDK Authentication
+  - name: "<a href='/docs/api/endpoints/sdk_authentication/get_sdk_authentication_keys/'>/app_group/sdk_authentication/keys</a>"
+    description: 앱의 SDK 인증 키를 나열합니다.
+    tags:
+      - SDK Authentication
+  - name: "<a href='/docs/api/endpoints/sdk_authentication/put_primary_sdk_authentication_key/'>/app_group/sdk_authentication/primary</a>"
+    description: SDK 인증 키를 앱의 기본 키로 설정합니다.
+    tags:
+      - SDK Authentication
+  - name: "<a href='/docs/api/endpoints/sdk_authentication/delete_sdk_authentication_key/'>/app_group/sdk_authentication/delete</a>"
+    description: 앱을 위한 SDK 인증 키를 삭제하세요.
+    tags:
+      - SDK Authentication  
 ---

@@ -1,14 +1,14 @@
 ---
-nav_title: Herramientas de compromiso
-article_title: Herramientas de compromiso
+nav_title: Herramientas de interacción
+article_title: Herramientas de interacción
 page_order: 4
 layout: dev_guide
 
-guide_top_header: "Herramientas de compromiso"
-guide_top_text: "Braze ofrece muchas formas de llegar a sus clientes y usuarios con nuestras herramientas de campaña y Canvas. También puede optimizar la coherencia (y cargar imágenes y otros contenidos) con nuestras herramientas de plantillas y medios. A partir de ahí, puede crear segmentos y geocercas para dirigirse a su público por ubicación u otros atributos. <br> <br> Si está buscando los canales a los que puede enviar utilizando Lienzos Braze y campañas, consulte nuestra sección <a href='/docs/user_guide/message_building_by_channel/'>Creación de mensajes por canal</a>."
-description: "Braze ofrece muchas formas de llegar a sus clientes y usuarios con nuestras campañas, Canvas y herramientas de segmentación. También puede optimizar la coherencia utilizando nuestras herramientas de plantillas y medios."
+guide_top_header: "Herramientas de interacción"
+guide_top_text: "Braze ofrece muchas formas de llegar a tus clientes y usuarios con nuestras herramientas de campaña y Canvas. También puedes optimizar la coherencia (y subir imágenes y otros contenidos) utilizando nuestras herramientas de plantillas y medios. A partir de ahí, puedes crear segmentos y geovallas para dirigirte a tu audiencia por ubicación u otros atributos. <br> <br> Si buscas los canales a los que puedes enviar mensajes con los Lienzos Braze y las campañas, consulta nuestra sección <a href='/docs/user_guide/message_building_by_channel/'>Creación de mensajes por canal</a>."
+description: "Braze te ofrece muchas formas de llegar a tus clientes y usuarios con nuestras campañas, Canvas y herramientas de segmentación. También puedes optimizar la coherencia utilizando nuestras herramientas de plantillas y medios."
 
-guide_featured_title: "Crear una campaña de mensajes"
+guide_featured_title: "Construye una campaña de mensajería"
 guide_featured_list:
   - name: Campañas
     link: /docs/user_guide/engagement_tools/campaigns/

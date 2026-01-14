@@ -1,24 +1,24 @@
 ---
-nav_title: "POST: API-getriggerte Leinwände planen"
-article_title: "POST: API-getriggerte Leinwände planen"
+nav_title: "POST: Zeitplan für API-getriggerte Canvase"
+article_title: "POST: Zeitplan für API-getriggerte Canvase"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Dieser Artikel beschreibt Details zum Canvases Braze Endpunkt, der durch die Schedule API ausgelöst wird."
+description: "Dieser Artikel beschreibt die Details des durch die Schedule API getriggerten Canvase Braze Endpunkts."
 
 ---
 {% api %}
-# Planen von API-gesteuerten Leinwänden
+# Zeitplan für API-getriggerte Canvase
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /canvas/trigger/schedule/create
 {% endapimethod %}
 
-> Verwenden Sie diesen Endpunkt, um Canvas-Nachrichten über eine API-ausgelöste Zustellung zu planen. So können Sie entscheiden, welche Aktion den Versand der Nachricht auslösen soll.
+> Verwenden Sie diesen Endpunkt, um Zeitpläne für Canvas Nachrichten über eine API-getriggerte Zustellung zu erstellen. Dabei können Sie entscheiden, welche Aktion den Versand der Nachricht triggern soll.
 
-Sie können `canvas_entry_properties` übergeben, das als Vorlage für die Nachrichten dient, die von den ersten Schritten des Canvas gesendet werden.
+Sie können `canvas_entry_properties` übergeben, das als Template in die Nachrichten eingefügt wird, die von den ersten Schritten des Canvas gesendet werden.
 
-Beachten Sie, dass Sie zum Senden von Nachrichten mit diesem Endpunkt eine [Canvas-ID]({{site.baseurl}}/api/identifier_types/#canvas-api-identifier) benötigen, die Sie beim Erstellen eines Canvas erstellt haben.
+Beachten Sie, dass Sie zum Versenden von Nachrichten über diesen Endpunkt eine [Canvas ID]({{site.baseurl}}/api/identifier_types/#canvas-api-identifier) benötigen, die Sie beim Erstellen eines Canvas erstellt haben.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4bc75890-b807-405d-b226-5aca284e6b7d {% endapiref %}
 
@@ -26,11 +26,11 @@ Beachten Sie, dass Sie zum Senden von Nachrichten mit diesem Endpunkt eine [Canv
 
 Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/basics#rest-api-key/) mit der Berechtigung `canvas.trigger.schedule.create`.
 
-## Preisgrenze
+## Rate-Limit
 
 {% multi_lang_include rate_limits.md endpoint='default' category='message endpoints' %}
 
-## Körper der Anfrage
+## Anfragetext
 
 ```
 Content-Type: application/json
@@ -58,16 +58,16 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-## Parameter anfordern
+## Parameter der Anfrage
 
-| Parameter | Erforderlich | Daten Typ | Beschreibung |
+| Parameter | Erforderlich | Datentyp | Beschreibung |
 | --------- | ---------| --------- | ----------- |
-|`canvas_id`|Erforderlich|String| Siehe [Canvas-Kennung]({{site.baseurl}}/api/identifier_types/). |
-| `recipients` | Optional | Array von Empfängerobjekten | Siehe [Empfängerobjekt]({{site.baseurl}}/api/objects_filters/recipient_object/). |
-| `audience` | Optional | Verbundenes Publikumsobjekt | Siehe [angeschlossenes Publikum]({{site.baseurl}}/api/objects_filters/connected_audience/). |
-|`broadcast`| Optional | Boolesche | Sie müssen `broadcast` auf true setzen, wenn Sie eine Nachricht an ein ganzes Segment senden, auf das eine Kampagne oder ein Canvas abzielt. Dieser Parameter ist standardmäßig auf false eingestellt (Stand: 31\. August 2017). <br><br> Wenn `broadcast` auf true gesetzt ist, kann eine `recipients` Liste nicht aufgenommen werden. Seien Sie jedoch vorsichtig, wenn Sie `broadcast: true` setzen, da das unbeabsichtigte Setzen dieser Markierung dazu führen kann, dass Sie Ihre Nachricht an ein größeres Publikum als erwartet senden. |
-| `canvas_entry_properties` | Optional | Objekt | Personalisierungs-Schlüsselwertpaare für alle Benutzer in dieser Sendung. Siehe [Objekt Canvas entry properties]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object). |
-| `schedule` | Erforderlich | Objekt terminieren | Siehe [Schedule-Objekt]({{site.baseurl}}/api/objects_filters/schedule_object/). |
+|`canvas_id`|Erforderlich|String| Siehe [Canvas Bezeichner]({{site.baseurl}}/api/identifier_types/). |
+| `recipients` | Optional | Array von Empfänger:innen-Objekten | Siehe [Empfänger:innen Objekt]({{site.baseurl}}/api/objects_filters/recipient_object/). |
+| `audience` | Optional | Verbundenes Objekt der Zielgruppe | Siehe [verbundene Zielgruppe]({{site.baseurl}}/api/objects_filters/connected_audience/). |
+|`broadcast`| Optional | Boolesch | Sie müssen `broadcast` auf true setzen, wenn Sie eine Nachricht an ein ganzes Segment senden, auf das eine Kampagne oder ein Canvas abzielt. Dieser Parameter ist standardmäßig auf false eingestellt (Stand: 31\. August 2017). <br><br> Wenn `broadcast` auf true gesetzt ist, kann eine `recipients` Liste nicht aufgenommen werden. Seien Sie jedoch vorsichtig, wenn Sie `broadcast: true` setzen, denn wenn Sie dieses Flag unbeabsichtigt setzen, kann dies dazu führen, dass Sie Ihre Nachricht an eine größere Zielgruppe als erwartet senden. |
+| `canvas_entry_properties` | Optional | Objekt | Schlüssel-Wert-Paare zur Personalisierung für alle Nutzer:innen in dieser Sendung. Siehe [Canvas Eingang Eigenschaften Objekt]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object). |
+| `schedule` | Erforderlich | Objekt Zeitplan | Siehe [Zeitplan-Objekt]({{site.baseurl}}/api/objects_filters/schedule_object/). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Beispiel Anfrage

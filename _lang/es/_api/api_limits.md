@@ -19,38 +19,92 @@ Los límites de velocidad API están sujetos a cambios en función del uso adecu
 
 ## Límites de velocidad por tipo de solicitud
 
-La siguiente tabla enumera los límites de velocidad predeterminados de la API para diferentes tipos de solicitudes. Estos límites predeterminados pueden aumentarse previa solicitud. Ponte en contacto con tu administrador del éxito del cliente para obtener más información.
+Consulta a continuación los límites de velocidad predeterminados de la API para distintos tipos de solicitudes. Estos límites predeterminados pueden aumentarse previa solicitud. Ponte en contacto con tu administrador del éxito del cliente para obtener más información.
 
-{% alert note %}
-Las solicitudes que no figuran en esta tabla comparten un límite de velocidad predeterminado total de 250 000 solicitudes por hora.
-{% endalert %}
+### Solicitudes con diferentes límites de velocidad
 
-| Tipo de solicitud                                                                                                                                                                                                                                           | Rate limit de API predeterminado                                                                                                                                                                     |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [`/users/track`][10]                                                                                                                                                                                                                                   | **Solicitudes:** 3.000 solicitudes cada tres segundos.<br><br>**Procesamiento por lote:** 75 eventos, 75 compras y 75 atributos por solicitud API. Para más información, consulta [Agrupar solicitudes de seguimiento de usuarios](#batch-user-track).<br><br>**Límites de usuarios activos al mes CY 24-25:** ver [límites de usuarios activos al mes CY 24-25]({{site.baseurl}}/api/endpoints/user_data/post_user_track/#monthly-active-users-cy-24-25) |
-| [`/users/export/ids`][11]                                                                                                                                                                                                                              | **Si te incorporaste el 22 de agosto de 2024 o después:** 250 solicitudes por minuto. <br><br> **Si te incorporaste antes del 22 de agosto de 2024:** 2.500 solicitudes por minuto.                                                                                                                                                                   |
-| [`/users/delete`][12]<br>[`/users/alias/new`][13]<br>[`/users/alias/update`][45]<br>[`/users/identify`][14]<br>[`/users/merge`][44]                                                                                                                    | 20 000 solicitudes por minuto, repartidas entre los puntos finales.                                                                                                                                  |
-| [`/users/external_id/rename`][20]                                                                                                                                                                                                                      | 1.000 solicitudes por minuto.                                                                                                                                                                 |
-| [`/users/external_id/remove`][21]                                                                                                                                                                                                                      | 1.000 solicitudes por minuto.                                                                                                                                                                 |
-| [`/events/list`][15]                                                                                                                                                                                                                                   | 1.000 peticiones por hora, compartidas con el punto final `/purchases/product_list`.                                                                                                               |
-| [`/purchases/product_list`][16]                                                                                                                                                                                                                        | 1.000 peticiones por hora, compartidas con el punto final `/events/list`.                                                                                                                          |
-| [`/campaigns/data_series`][17.3]                                                                                                                                                                                                                       | 50.000 solicitudes por minuto.                                                                                                                                                                |
-| [`/messages/send`][17]<br>[`/campaigns/trigger/send`][17.1]<br>[`/canvas/trigger/send`][17.2]                                                                                                                                                          | 250 solicitudes por minuto para llamadas de difusión (cuando solo se especifica un segmento o Audiencia conectada). Por lo demás, 250 000 solicitudes por hora repartidas entre los puntos finales.                     |
-| [`/sends/id/create`][18]                                                                                                                                                                                                                               | 100 solicitudes al día.                                                                                                                                                                      |
-| [`/subscription/status/set`][19]                                                                                                                                                                                                                       | 5.000 solicitudes por minuto.                                                                                                                                                                 |
-| [`/preference_center/v1/{preferenceCenterExternalId}/url/{userId}`][26]<br>[`/preference_center/v1/list`][27]<br>[`/preference_center/v1/{preferenceCenterExternalId}`][28]                                                                            | 1.000 solicitudes por minuto, por espacio de trabajo.                                                                                                                                                  |
-| [`/preference_center/v1`][29]<br>[`/preference_center/v1/{preferenceCenterExternalId}`][30]                                                                                                                                                            | 10 solicitudes por minuto, por espacio de trabajo.                                                                                                                                                     |
-| [`/catalogs/{catalog_name}`][31]<br>[`/catalogs`][32]<br>[`/catalogs`][33]                                                                                                                                                                             | 50 peticiones por minuto compartidas entre los puntos finales.                                                                                                                                       |
-| [`/catalogs/{catalog_name}/items`][34]<br>[`/catalogs/{catalog_name}/items`][35]<br>[`/catalogs/{catalog_name}/items`][36]                                                                                                                             | 16.000 peticiones por minuto compartidas entre los puntos finales.                                                                                                                                   |
-| [`/catalogs/{catalog_name}/items/{item_id}`][37]<br>[`/catalogs/{catalog_name}/items/{item_id}`][38]<br>[`/catalogs/{catalog_name}/items`][39]<br>[`/catalogs/{catalog_name}/items/{item_id}`][40]<br>[`/catalogs/{catalog_name}/items/{item_id}`][41] | 50 peticiones por minuto compartidas entre los puntos finales.                                                                                                                                       |
-| [`/scim/v2/Users/{id}`][22]<br>[`/scim/v2/Users?filter={userName@example.com}`][43]<br>[`/scim/v2/Users/{id}`][25]<br>[`/scim/v2/Users/{id}}`][24]<br>[`/scim/v2/Users/`][23]                                                                          | 5.000 solicitudes al día, por empresa, compartidas entre los terminales.                                                                                                                         |
+| Tipo de solicitud                                                                                                                                                                                                                                           | Rate limit de API predeterminado                                                                                                                                                                                                                                                                                                                                                                    |
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)                                                                                                                                                                                                                                   | **Solicitudes:** 3.000 solicitudes cada tres segundos.<br><br>**Procesamiento por lote:** 75 eventos, 75 compras y 75 atributos por solicitud API. Para más información, consulta [Agrupar solicitudes de seguimiento de usuarios](#batch-user-track).<br><br>**Límites de usuarios activos al mes CY 24-25:** ver [límites de usuarios activos al mes CY 24-25]({{site.baseurl}}/api/endpoints/user_data/post_user_track/#monthly-active-users-cy-24-25) |
+| [`/users/export/ids`]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/)                                                                                                                                                                                                                              | **Si te incorporaste el 22 de agosto de 2024 o después:** 250 solicitudes por minuto. <br><br> **Si te incorporaste antes del 22 de agosto de 2024:** 2.500 solicitudes por minuto.                                                                                                                                                                                                                               |
+| [`/users/delete`]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/)<br>[`/users/alias/new`]({{site.baseurl}}/api/endpoints/user_data/post_user_alias/)<br>[`/users/alias/update`]({{site.baseurl}}/api/endpoints/user_data/post_users_alias_update/)<br>[`/users/identify`]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/)<br>[`/users/merge`]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/)                                                                                                                    | 20 000 solicitudes por minuto, repartidas entre los puntos finales.                                                                                                                                                                                                                                                                                                                                 |
+| [`/users/external_id/rename`]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_rename/)                                                                                                                                                                                                                      | 1.000 solicitudes por minuto.                                                                                                                                                                                                                                                                                                                                                                |
+| [`/users/external_id/remove`]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_remove/)                                                                                                                                                                                                                      | 1.000 solicitudes por minuto.                                                                                                                                                                                                                                                                                                                                                                |
+| [`/events/list`]({{site.baseurl}}/api/endpoints/export/custom_events/get_custom_events/)                                                                                                                                                                                                                                   | 1.000 peticiones por hora, compartidas con el punto final `/purchases/product_list`.                                                                                                                                                                                                                                                                                                              |
+| [`/purchases/product_list`]({{site.baseurl}}/api/endpoints/export/purchases/get_list_product_id/)                                                                                                                                                                                                                        | 1.000 peticiones por hora, compartidas con el punto final `/events/list`.                                                                                                                                                                                                                                                                                                                         |
+| [`/campaigns/data_series`]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_analytics/)                                                                                                                                                                                                                       | 50.000 solicitudes por minuto.                                                                                                                                                                                                                                                                                                                                                               |
+| [`/messages/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/)<br>[`/campaigns/trigger/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/)<br>[`/canvas/trigger/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/)                                                                                                                                                          | 250 solicitudes por minuto para llamadas de difusión (cuando solo se especifica un segmento o Audiencia conectada). Por lo demás, 250 000 solicitudes por hora repartidas entre los puntos finales.                                                                                                                                                                                                                    |
+| [`/sends/id/create`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_create_send_ids/)                                                                                                                                                                                                                               | 100 solicitudes al día.                                                                                                                                                                                                                                                                                                                                                                     |
+| [`/subscription/status/set`]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/)                                                                                                                                                                                                                       | 5.000 solicitudes por minuto.                                                                                                                                                                                                                                                                                                                                                                |
+| [`/preference_center/v1/{preferenceCenterExternalId}/url/{userId}`]({{site.baseurl}}/api/endpoints/preference_center/get_create_url_preference_center/)<br>[`/preference_center/v1/list`]({{site.baseurl}}/api/endpoints/preference_center/get_list_preference_center/)<br>[`/preference_center/v1/{preferenceCenterExternalId}`]({{site.baseurl}}/api/endpoints/preference_center/get_view_details_preference_center/)                                                                            | 1.000 solicitudes por minuto.                                                                                                                                                                                                                                                                                                                                                 |
+| [`/preference_center/v1`]({{site.baseurl}}/api/endpoints/preference_center/post_create_preference_center/)<br>[`/preference_center/v1/{preferenceCenterExternalId}`]({{site.baseurl}}/api/endpoints/preference_center/put_update_preference_center/)                                                                                                                                                            | 10 solicitudes por minuto.                                                                                                                                                                                                                                                                                                                                                    |
+| [`/catalogs/{catalog_name}`]({{site.baseurl}}/api/endpoints/catalogs/catalog_management/synchronous/delete_catalog/)<br>[`/catalogs`]({{site.baseurl}}/api/endpoints/catalogs/catalog_management/synchronous/get_list_catalogs/)<br>[`/catalogs`]({{site.baseurl}}/api/endpoints/catalogs/catalog_management/synchronous/post_create_catalog/)                                                                                                                                                                             | 50 peticiones por minuto compartidas entre los puntos finales.                                                                                                                                                                                                                                                                                                                                      |
+| [`/catalogs/{catalog_name}/items`]({{site.baseurl}}/api/endpoints/catalogs/catalog_items/asynchronous/delete_catalog_items_bulk/)<br>[`/catalogs/{catalog_name}/items`]({{site.baseurl}}/api/endpoints/catalogs/catalog_items/asynchronous/patch_catalog_items_bulk/)<br>[`/catalogs/{catalog_name}/items`]({{site.baseurl}}/api/endpoints/catalogs/catalog_items/asynchronous/post_create_catalog_items_bulk/)                                                                                                                             | 16.000 peticiones por minuto compartidas entre los puntos finales.                                                                                                                                                                                                                                                                                                                                  |
+| [`/catalogs/{catalog_name}/items/{item_id}`]({{site.baseurl}}/api/endpoints/catalogs/catalog_items/synchronous/delete_catalog_item/)<br>[`/catalogs/{catalog_name}/items/{item_id}`]({{site.baseurl}}/api/endpoints/catalogs/catalog_items/synchronous/get_catalog_item_details/)<br>[`/catalogs/{catalog_name}/items`]({{site.baseurl}}/api/endpoints/catalogs/catalog_items/synchronous/get_catalog_items_details_bulk/)<br>[`/catalogs/{catalog_name}/items/{item_id}`]({{site.baseurl}}/api/endpoints/catalogs/catalog_items/synchronous/patch_catalog_item/)<br>[`/catalogs/{catalog_name}/items/{item_id}`]({{site.baseurl}}/api/endpoints/catalogs/catalog_items/synchronous/post_create_catalog_item/) | 50 peticiones por minuto compartidas entre los puntos finales.                                                                                                                                                                                                                                                                                                                                      |
+| [`/catalogs/{catalog_name}/fields/{field_name}`]({{site.baseurl}}/api/endpoints/catalogs/catalog_fields/asynchronous/delete_catalog_field)<br>[`/catalogs/{catalog_name}/fields`]({{site.baseurl}}/api/endpoints/catalogs/catalog_fields/asynchronous/post_create_catalog_fields)<br>[`/catalogs/{catalog_name}/selections/{selection_name}`]({{site.baseurl}}/api/endpoints/catalogs/catalog_selections/asynchronous/delete_catalog_selection)<br>[`/catalogs/{catalog_name}/selections`]({{site.baseurl}}/api/endpoints/catalogs/catalog_selections/asynchronous/post_create_catalog_selections) | 50 peticiones por minuto compartidas entre los puntos finales. |
+| [`/scim/v2/Users/{id}`]({{site.baseurl}}/get_see_user_account_information/)<br>[`/scim/v2/Users?filter={userName@example.com}`]({{site.baseurl}}/get_search_existing_dashboard_user_email/)<br>[`/scim/v2/Users/{id}`]({{site.baseurl}}/post_update_existing_user_account/)<br>[`/scim/v2/Users/{id}}`]({{site.baseurl}}/delete_existing_dashboard_user/)<br>[`/scim/v2/Users/`]({{site.baseurl}}/post_create_user_account/)                                                                          | 5.000 solicitudes al día, por empresa, compartidas entre los terminales.                                                                                                                                                                                                                                                                                                                        |
+| [`/cdi/integrations`]({{site.baseurl}}/api/endpoints/cdi/get_integration_list/)                                                                                                                                                                                                                              | 50 solicitudes por minuto.                                                                                                                                                                                                                                                                                                                                                                   |
+| [`/cdi/integrations/{integration_id}/sync`]({{site.baseurl}}/api/endpoints/cdi/get_job_sync_status/)                                                                                                                                                                                                        | 20 solicitudes por minuto.                                                                                                                                                                                                                                                                                                                                                                   |
+| [`/cdi/integrations/{integration_id}/job_sync_status`]({{site.baseurl}}/api/endpoints/cdi/post_job_sync/)                                                                                                                                                                                             | 100 solicitudes por minuto.                                                                                                                                                                                                                                                                                                                                                                  |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-<!-- Add during CDI endpoints GA
-| [`/cdi/integrations`][46] | 50 requests per minute. |
-| [`/cdi/integrations/{integration_id}/sync`][47] | 20 requests per minute. |
-| [`/cdi/integrations/{integration_id}/job_sync_status`][48] | 100 requests per minute. |
--->
+### Solicitudes con límites de velocidad compartidos
+
+Las siguientes solicitudes tienen un límite de velocidad de 250.000 solicitudes por hora, compartido entre ellas.
+
+- [`/app_group/sdk_authentication/create`]({{site.baseurl}}/api/endpoints/sdk_authentication/post_create_sdk_authentication_key/)
+- [`/app_group/sdk_authentication/keys`]({{site.baseurl}}/api/endpoints/sdk_authentication/get_sdk_authentication_keys/)
+- [`/app_group/sdk_authentication/delete`]({{site.baseurl}}/api/endpoints/sdk_authentication/delete_sdk_authentication_key)
+- [`/app_group/sdk_authentication/primary`]({{site.baseurl}}/api/endpoints/sdk_authentication/delete_sdk_authentication_key/)
+- [`/campaigns/details`]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_details)
+- [`/campaigns/list`]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaigns)
+- [`/campaigns/trigger/schedule/create`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_schedule_triggered_campaigns/)
+- [`/campaigns/trigger/schedule/delete`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_delete_scheduled_triggered_messages/)
+- [`/campaigns/trigger/schedule/update`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_update_scheduled_triggered_campaigns/)
+- [`/canvas/data_series`]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_analytics/)
+- [`/canvas/data_summary`]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_analytics_summary/)
+- [`/canvas/details`]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_details/)
+- [`/canvas/list`]({{site.baseurl}}/api/endpoints/export/canvas/get_canvases/)
+- [`/canvas/trigger/schedule/create`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_schedule_triggered_canvases/)
+- [`/canvas/trigger/schedule/delete`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_delete_scheduled_triggered_canvases/)
+- [`/canvas/trigger/schedule/update`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_update_scheduled_triggered_canvases/)
+- [`/content_blocks/create`]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/post_create_email_content_block/)
+- [`/content_blocks/info`]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/get_see_email_content_blocks_information/)
+- [`/content_blocks/list`]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/get_list_email_content_blocks/)
+- [`/content_blocks/update`]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/post_update_content_block/)
+- [`/email/blocklist`]({{site.baseurl}}/api/endpoints/email/post_blocklist/)
+- [`/email/blacklist`]({{site.baseurl}}/api/endpoints/email/post_blacklist/)
+- [`/email/bounce/remove`]({{site.baseurl}}/api/endpoints/email/post_remove_hard_bounces/)
+- [`/email/hard_bounces`]({{site.baseurl}}/api/endpoints/email/get_list_hard_bounces/)
+- [`/email/spam/remove`]({{site.baseurl}}/api/endpoints/email/post_remove_spam/)
+- [`/email/status`]({{site.baseurl}}/api/endpoints/email/post_email_subscription_status/)
+- [`/email/unsubscribes`]({{site.baseurl}}/api/endpoints/email/get_query_unsubscribed_email_addresses/)
+- [`/events/data_series`]({{site.baseurl}}/api/endpoints/export/custom_events/get_custom_events_analytics/)
+- [`/kpi/dau/data_series`]({{site.baseurl}}/api/endpoints/export/kpi/get_kpi_dau_date/)
+- [`/kpi/mau/data_series`]({{site.baseurl}}/api/endpoints/export/kpi/get_kpi_mau_30_days/)
+- [`/kpi/new_users/data_series`]({{site.baseurl}}/api/endpoints/export/kpi/get_kpi_daily_new_users_date/)
+- [`/kpi/uninstalls/data_series`]({{site.baseurl}}/api/endpoints/export/kpi/get_kpi_uninstalls_date/)
+- [`/messages/live_activity/start`]({{site.baseurl}}/api/endpoints/messaging/live_activity/start)
+- [`/messages/live_activity/update`]({{site.baseurl}}/api/endpoints/messaging/live_activity/update/)
+- [`/messages/schedule/create`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_schedule_messages/)
+- [`/messages/schedule/delete`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_delete_scheduled_messages/)
+- [`/messages/schedule/update`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_update_scheduled_messages/)
+- [`/messages/scheduled_broadcasts`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/get_messages_scheduled/)
+- [`/segments/data_series`]({{site.baseurl}}/api/endpoints/export/segments/get_segment_analytics/)
+- [`/segments/details`]({{site.baseurl}}/api/endpoints/export/segments/get_segment_details/)
+- [`/segments/list`]({{site.baseurl}}/api/endpoints/export/segments/get_segment/)
+- [`/sends/data_series`]({{site.baseurl}}/api/endpoints/export/campaigns/get_send_analytics/)
+- [`/sessions/data_series`]({{site.baseurl}}/api/endpoints/export/sessions/get_sessions_analytics/)
+- [`/sms/invalid_phone_numbers`]({{site.baseurl}}/api/endpoints/sms/get_query_invalid_numbers/)
+- [`/sms/invalid_phone_numbers/remove`]({{site.baseurl}}/api/endpoints/sms/post_remove_invalid_numbers/)
+- [`/subscription/status/get`]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/)
+- [`/subscription/user/status`]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_groups/)
+- [`/templates/email/create`]({{site.baseurl}}/api/endpoints/templates/email_templates/post_create_email_template/)
+- [`/templates/email/info`]({{site.baseurl}}/api/endpoints/templates/email_templates/get_see_email_template_information/)
+- [`/templates/email/list`]({{site.baseurl}}/api/endpoints/templates/email_templates/get_list_email_templates/)
+- [`/templates/email/update`]({{site.baseurl}}/api/endpoints/templates/email_templates/post_update_email_template/)
+- [`/users/export/global_control_group`]({{site.baseurl}}/api/endpoints/export/user_data/post_users_global_control_group/)
+- [`/users/export/segment`]({{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/)
 
 ## Procesamiento por lotes de las solicitudes API
 
@@ -60,9 +114,9 @@ Las API de Braze están diseñadas para soportar la dosificación. Con el proces
 Los aumentos del límite de velocidad de la API REST se consideran en función de las necesidades de los clientes que hacen uso de las funciones de procesamiento por lotes de la API.
 {% endalert %}
 
-### Procesamiento por lotes de las solicitudes de seguimiento de usuarios {#batch-user-track}
+### Solicitudes por lotes para el punto final Seguimiento de usuarios {#batch-user-track}
 
-Cada solicitud `/users/track` puede contener hasta 75 objetos de evento, 75 objetos de atributo y 75 objetos de compra. Cada objeto (evento, atributo y matrices de compra) puede actualizar un usuario cada uno. En total, esto significa que se puede actualizar a un máximo de 225 usuarios en una sola llamada. Además, un mismo perfil de usuario puede ser actualizado por varios objetos.
+Cada solicitud `/users/track` puede contener hasta 75 objetos de evento, 75 objetos de atributo y 75 objetos de compra. Cada objeto (evento, atributo y matrices de compra) puede actualizar un usuario cada uno. En total, esto significa que se pueden actualizar hasta 225 usuarios en una sola llamada. Además, un mismo perfil de usuario puede ser actualizado por varios objetos.
 
 Las solicitudes realizadas a este punto final, generalmente, comenzarán a procesarse en este orden:
 
@@ -72,11 +126,11 @@ Las solicitudes realizadas a este punto final, generalmente, comenzarán a proce
 
 ### Procesamiento por lotes de las solicitudes de puntos finales de mensajería
 
-Una única solicitud a [los puntos finales de mensajería][1] puede llegar a cualquiera de los siguientes:
+Una única solicitud a [los puntos finales de mensajería]({{site.baseurl}}/api/endpoints/messaging/) puede llegar a cualquiera de los siguientes:
 
 - Hasta 50 `external_ids` específicos, cada uno con parámetros de mensaje individuales
 - Un segmento de cualquier tamaño creado en el panel de Braze, especificado por su `segment_id`
-- Usuarios que coinciden con filtros de audiencia adicionales de cualquier tamaño, definidos en la solicitud como un objeto de [audiencia conectado][2] 
+- Usuarios que coinciden con filtros de audiencia adicionales de cualquier tamaño, definidos en la solicitud como un objeto de [audiencia conectado]({{site.baseurl}}/api/objects_filters/connected_audience/) 
 
 ### Ejemplo de solicitud por lotes
 
@@ -119,7 +173,11 @@ Esta información se incluye intencionadamente en el encabezado de la respuesta 
 Las cabeceras HTTP se devolverán en minúsculas. Este comportamiento se ajusta al protocolo HTTP/2, que exige que todos los nombres de los campos de encabezado estén en minúsculas. Esto difiere de HTTP/1.X, donde los nombres de los encabezados no distinguían entre mayúsculas y minúsculas, pero solían escribirse con varias mayúsculas.
 {% endalert %}
 
-Si tienes preguntas sobre los límites de la API, ponte en contacto con tu administrador del éxito del cliente o abre un [ticket de soporte][support].
+Si tienes preguntas sobre los límites de la API, ponte en contacto con tu administrador del éxito del cliente o abre un [ticket de soporte]({{site.baseurl}}/braze_support/).
+
+{% alert tip %}
+Puedes utilizar el [panel de uso de la API]({{site.baseurl}}/user_guide/analytics/dashboard/api_usage_dashboard/) para ver y comparar el tráfico entrante con tus límites de velocidad.
+{% endalert %}
 
 ### Retardo óptimo entre puntos finales
 
@@ -131,47 +189,3 @@ Comprender el retraso óptimo entre puntos finales es crucial a la hora de reali
 
 En condiciones normales, el tiempo que tarda en producirse la coherencia eventual de nuestros datos es de 10-100 ms (1/10 de segundo). Sin embargo, puede haber casos en los que esa coherencia tarde más tiempo en producirse, por lo que te recomendamos que dejes pasar 5 minutos entre una llamada y otra para minimizar la probabilidad de error.
 
-[1]: {{site.baseurl}}/api/endpoints/messaging/
-[2]: {{site.baseurl}}/api/objects_filters/connected_audience/
-[support]: {{site.baseurl}}/braze_support/
-[10]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/
-[11]: {{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/
-[12]: {{site.baseurl}}/api/endpoints/user_data/post_user_delete/
-[13]: {{site.baseurl}}/api/endpoints/user_data/post_user_alias/
-[14]: {{site.baseurl}}/api/endpoints/user_data/post_user_identify/
-[15]: {{site.baseurl}}/api/endpoints/export/custom_events/get_custom_events/
-[16]: {{site.baseurl}}/api/endpoints/export/purchases/get_list_product_id/
-[17]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/
-[17.1]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/
-[17.2]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/
-[17.3]: {{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_analytics/
-[18]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_create_send_ids/
-[19]: {{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/
-[20]: {{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_rename/
-[21]: {{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_remove/
-[22]: {{site.baseurl}}/get_see_user_account_information/
-[23]: {{site.baseurl}}/post_create_user_account/
-[24]: {{site.baseurl}}/delete_existing_dashboard_user/
-[25]: {{site.baseurl}}/post_update_existing_user_account/
-[26]: {{site.baseurl}}/api/endpoints/preference_center/get_create_url_preference_center/
-[27]: {{site.baseurl}}/api/endpoints/preference_center/get_list_preference_center/
-[28]: {{site.baseurl}}/api/endpoints/preference_center/get_view_details_preference_center/
-[29]: {{site.baseurl}}/api/endpoints/preference_center/post_create_preference_center/
-[30]: {{site.baseurl}}/api/endpoints/preference_center/put_update_preference_center/
-[31]: {{site.baseurl}}/api/endpoints/catalogs/catalog_management/synchronous/delete_catalog/
-[32]: {{site.baseurl}}/api/endpoints/catalogs/catalog_management/synchronous/get_list_catalogs/
-[33]: {{site.baseurl}}/api/endpoints/catalogs/catalog_management/synchronous/post_create_catalog/
-[34]: {{site.baseurl}}/api/endpoints/catalogs/catalog_items/asynchronous/delete_catalog_items_bulk/
-[35]: {{site.baseurl}}/api/endpoints/catalogs/catalog_items/asynchronous/patch_catalog_items_bulk/
-[36]: {{site.baseurl}}/api/endpoints/catalogs/catalog_items/asynchronous/post_create_catalog_items_bulk/
-[37]: {{site.baseurl}}/api/endpoints/catalogs/catalog_items/synchronous/delete_catalog_item/
-[38]: {{site.baseurl}}/api/endpoints/catalogs/catalog_items/synchronous/get_catalog_item_details/
-[39]: {{site.baseurl}}/api/endpoints/catalogs/catalog_items/synchronous/get_catalog_items_details_bulk/
-[40]: {{site.baseurl}}/api/endpoints/catalogs/catalog_items/synchronous/patch_catalog_item/
-[41]: {{site.baseurl}}/api/endpoints/catalogs/catalog_items/synchronous/post_create_catalog_item/
-[43]: {{site.baseurl}}/get_search_existing_dashboard_user_email/
-[44]: {{site.baseurl}}/api/endpoints/user_data/post_users_merge/
-[45]: {{site.baseurl}}/api/endpoints/user_data/post_users_alias_update/
-[46]: {{site.baseurl}}/api/endpoints/cdi/get_integration_list/
-[47]: {{site.baseurl}}/api/endpoints/cdi/job_sync/
-[48]: {{site.baseurl}}/api/endpoints/cdi/job_sync_status/

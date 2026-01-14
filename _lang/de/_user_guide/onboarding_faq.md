@@ -30,7 +30,7 @@ Wenn ein anonymes Benutzerprofil mit einem Alias zu einem späteren Zeitpunkt mi
 
 Bei Alias-Benutzern, die Sie mit identifizierten Benutzern zusammenführen möchten, können Sie alle Felder zusammenführen, die für das eigentliche Profil, das Sie behalten möchten, relevant sind. Sie müssten diese Daten exportieren, bevor Sie sie mit unserem [Endpunkt Benutzerprofil nach Kennung exportieren]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) aus dem Aliasprofil löschen. Sie können dann unseren [Endpunkt Benutzer verfolgen]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) verwenden, um diese Ereignisse in dem von Ihnen geführten Profil zu veröffentlichen. Auf diese Weise bleiben alle Daten erhalten, die Sie beibehalten möchten, z. B. Attribute, die zuvor in einem Profil aufgezeichnet wurden, aber nicht in dem anderen.
 
-Eine vollständige Aufschlüsselung der verschiedenen Methoden zur Erfassung neuer und bestehender Nutzerdaten in Braze finden Sie unter [Best Practices für die Datenerfassung]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/best_practices/).
+Eine vollständige Aufschlüsselung der verschiedenen Methoden zur Erfassung neuer und bestehender Nutzerdaten in Braze finden Sie unter [Best Practices für die Datenerfassung]({{site.baseurl}}/user_guide/data/user_data_collection/best_practices/).
 
 {% endapi %}
 {% api %}
@@ -47,11 +47,7 @@ Um zuvor identifizierte Nutzer:innen zu importieren, können Sie eine CSV-Datei 
 
 Sie können Benutzerprofile über CSV-Dateien unter **Publikum** > **Benutzer importieren** hochladen und aktualisieren. Wenn Sie Kundendaten importieren, müssen Sie jeweils die eindeutige Kundennummer in Form der `external_id` angeben.
 
-{% alert note %}
-Wenn Sie die [ältere Navigation]({{site.baseurl}}/navigation) verwenden, finden Sie diese Funktion unter **Benutzer** > **Benutzerimport**.
-{% endalert %}
-
-Bevor Sie mit dem CSV-Import beginnen, sollten Sie mit Ihrem Entwicklerteam klären, wie die Nutzer:innen in Braze identifiziert werden sollen. In der Regel handelt es sich dabei um eine intern verwendete Datenbank-ID. Diese sollte mit dem Identifizierungsverfahren der Braze SDK auf Mobilgeräten und im Internet übereinstimmen, sodass das jeweilige Nutzerprofil in Braze auf allen Geräten identisch ist. Erfahren Sie mehr über den [Lebenszyklus]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/) des Braze [Benutzerprofils]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/).
+Bevor Sie mit dem CSV-Import beginnen, sollten Sie mit Ihrem Entwicklerteam klären, wie die Nutzer:innen in Braze identifiziert werden sollen. In der Regel handelt es sich dabei um eine intern verwendete Datenbank-ID. Diese sollte mit dem Identifizierungsverfahren der Braze SDK auf Mobilgeräten und im Internet übereinstimmen, sodass das jeweilige Nutzerprofil in Braze auf allen Geräten identisch ist. Erfahren Sie mehr über den [Lebenszyklus]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/) des Braze [Benutzerprofils]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/).
 
 Wenn Sie in Ihrem Import einen `external_id` angeben, aktualisiert Braze alle vorhandenen Nutzer:innen mit demselben `external_id` oder erstellt einen neu identifizierten Nutzer:in mit diesem `external_id` Satz, wenn kein solcher gefunden wird.
 
@@ -163,7 +159,7 @@ Sobald Sie Ihr Segment erstellt haben, fügen Sie einen `Most Recent Location` F
 - Bei polygonalen Regionen können Sie genauer festlegen, welche Bereiche in Ihrem Segment enthalten sein sollen.
 
 {% alert tip %}
-Sind Sie daran interessiert, die Vorteile des Location Targeting mit Hilfe eines Braze-Partners zu nutzen? Dann schauen Sie sich unsere [Partner für kontextuelle Standortdaten]({{site.baseurl}}/partners/message_personalization/location) an.
+Sind Sie daran interessiert, die Vorteile des Location Targeting mit Hilfe eines Braze-Partners zu nutzen? Dann schauen Sie sich unsere [Partner für kontextuelle Standortdaten]({{site.baseurl}}/partners/message_personalization/) an.
 {% endalert %}
 
 {% endapi %}
@@ -188,7 +184,7 @@ Sie können bis zu 10 Segmenterweiterungen pro Arbeitsbereich erstellen. Liegen 
 
 Um die Zielgenauigkeit zu erhöhen, können Sie die Option **Eigenschaftsfilter hinzufügen** wählen und anhand der spezifischen Eigenschaften Ihres Kaufs oder benutzerdefinierten Ereignisses segmentieren. Braze unterstützt die Segmentierung von Eigenschaften nach String-, Zahlen-, Boole- und Zeitobjekten.
 
-Wir unterstützen auch die Segmentierung auf der Grundlage [verschachtelter Event-Eigenschaften]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/nested_objects/).
+Wir unterstützen auch die Segmentierung auf der Grundlage [verschachtelter Event-Eigenschaften]({{site.baseurl}}/user_guide/data/custom_data/custom_events/nested_objects/).
 
 Segmenterweiterungen basieren auf der langfristigen Speicherung von Event-Eigenschaften. Die Speicherung angepasster Event-Eigenschaften ist nicht auf 30 Tage begrenzt. Das bedeutet, dass Sie auf Event-Eigenschaften zurückblicken können, die innerhalb des letzten Jahres getrackt wurden, und dass das Tracking nicht erst wartet, bis die Erweiterung eingerichtet wurde.
 
@@ -272,7 +268,7 @@ Kampagnen
 
 Braze ermittelt automatisch die Zeitzone eines Benutzers anhand seines Geräts. Dies wurde entwickelt, um die Zeitzonengenauigkeit und die vollständige Abdeckung Ihrer Nutzer:innen zu unterstützen. Benutzer, die über die Benutzer-API oder anderweitig ohne Zeitzone erstellt werden, haben die Zeitzone Ihres Unternehmens als Standardzeitzone, bis sie in Ihrer App vom SDK erkannt werden.
 
-Sie können die Zeitzone Ihres Unternehmens in Ihren [Unternehmenseinstellungen]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/) überprüfen.
+Sie können die Zeitzone Ihres Unternehmens in Ihren [Unternehmenseinstellungen]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/) überprüfen.
 
 {% endapi %}
 {% api %}
@@ -289,7 +285,7 @@ Braze empfiehlt ausdrücklich, entsprechende Kampagnen 24 Stunden im Voraus zu p
 
 Wenn es beispielsweise 13.00 Uhr ist und Sie eine Kampagne für die Ortszeitzone für 15.00 Uhr planen, dann wird die Kampagne sofort an alle Nutzer:innen gesendet, deren Ortszeit 15.00 Uhr ist, aber nicht an Nutzer:innen, deren Ortszeit 17.00 Uhr ist. Außerdem muss die Sendezeit, die Sie für Ihre Kampagne wählen, in der Zeitzone Ihres Unternehmens noch nicht stattgefunden haben.
 
-Wenn Sie eine Kampagne in einer lokalen Zeitzone bearbeiten, die weniger als 24 Stunden im Voraus geplant wurde, wird der Zeitplan der Nachricht nicht geändert. Wenn Sie eine Kampagne in einer lokalen Zeitzone so bearbeiten, dass sie zu einem späteren Zeitpunkt versendet wird (z. B. um 19 Uhr statt um 18 Uhr), erhalten die Nutzer, die sich zum Zeitpunkt der ursprünglichen Sendezeit im Zielsegment befanden, die Nachricht weiterhin zur ursprünglichen Zeit (18 Uhr). Wenn Sie eine Zeitzone so verändern, dass z. B. um 16 Uhr statt um 17 Uhr gesendet wird, wird die Kampagne trotzdem zur ursprünglichen Uhrzeit (17 Uhr) an alle Segmentangehörigen übermittelt.
+Wenn Sie eine Kampagne in einer lokalen Zeitzone bearbeiten, die weniger als 24 Stunden im Voraus geplant wurde, wird der Zeitplan der Nachricht nicht geändert. Wenn Sie eine Kampagne in einer lokalen Zeitzone so bearbeiten, dass sie zu einem späteren Zeitpunkt versendet wird (z. B. um 19 Uhr statt um 18 Uhr), erhalten die Nutzer, die sich zum Zeitpunkt der ursprünglichen Sendezeit im Zielsegment befanden, die Nachricht weiterhin zur ursprünglichen Zeit (18 Uhr). Wenn Sie eine lokale Zeitzone bearbeiten, um zu einer früheren Zeit zu senden (z. B. 16 Uhr statt 17 Uhr), wird die Kampagne trotzdem an alle Mitglieder des Segments zur ursprünglichen Zeit (17 Uhr) gesendet.
 
 {% alert note %}
 Bei Canvas-Schritten müssen Nutzer:innen nicht 24 Stunden in dem Schritt sein, um den nächsten Schritt zur Zustellung zur Ortszeit zu erhalten.
@@ -377,9 +373,9 @@ Kampagnen
 Für die Zustellung zur Ortszeit prüft Braze die Nutzer:innen während dieser beiden Instanzen auf ihre Zugangsberechtigung:
 
 - Um Samoa-Zeit (UTC+13) des geplanten Tages
-- Zur Ortszeit am vorgesehenen Tag
+- Zur Ortszeit des geplanten Tages
 
-Um für den Entry infrage zu kommen, müssen beide Kontrollen bestanden werden. Wenn ein Canvas zum Beispiel am 7\. August 2021 um 14 Uhr Ortszeit gestartet werden soll, müssten für einen Nutzer in New York die folgenden Prüfungen durchgeführt werden, um die Berechtigung zu prüfen:
+Damit ein:e Nutzer:in für einen Entry in Frage kommt, muss er für beide Prüfungen in Frage kommen. Wenn ein Canvas zum Beispiel am 7\. August 2021 um 14 Uhr Ortszeit gestartet werden soll, müssten für einen Nutzer in New York die folgenden Prüfungen durchgeführt werden, um die Berechtigung zu prüfen:
 
 - New York am 6\. August 2021 um 9 Uhr
 - New York am 7\. August 2021 um 2 Uhr nachmittags
@@ -410,7 +406,7 @@ Canvase
 
 Für jeden Schritt wird ein Auftrag in die Warteschlange aufgenommen. Diese werden etwa zur selben Zeit ausgeführt und einer von ihnen "gewinnt". In der Praxis kann dies etwas gleichmäßig sortiert sein, aber es ist wahrscheinlich, dass zumindest eine leichte Tendenz zu dem Schritt besteht, der zuerst erstellt wurde.
 
-Außerdem können wir keine Garantien dafür geben, wie diese Verteilung genau aussehen wird. Wenn Sie eine gleichmäßige Aufteilung sicherstellen möchten, fügen Sie einen [Zufallsfilter für die Eimeranzahl]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/ab_testing_with_random_buckets/) hinzu.
+Außerdem können wir keine Garantien dafür geben, wie diese Verteilung genau aussehen wird. Wenn Sie eine gleichmäßige Aufteilung sicherstellen möchten, fügen Sie einen [Zufallsfilter für die Eimeranzahl]({{site.baseurl}}/user_guide/engagement_tools/testing/random_bucket_numbers/) hinzu.
 
 {% endapi %}
 {% api %}
@@ -440,7 +436,7 @@ Wenn Sie einen Canvas anhalten, werden Nutzer:innen, die in einem Schritt warten
 Canvase
 {% endapitags %}
 
-[Ausnahme-Events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/) triggern nur während der Wartezeit auf die verknüpfte Canvas-Komponente. Bei vorgezogenen Aktionen löst das Ausnahme-Event nicht aus.
+Ausnahme-Events triggern nur, während der Nutzer:in auf die Canvas-Komponente wartet, mit der sie verknüpft ist. Wenn ein:e Nutzer:in eine Aktion durchführt, wird das Ausnahme-Event nicht ausgelöst.
 
 Wenn Sie Nutzer:innen ausschließen möchten, die ein bestimmtes Ereignis vorgebracht haben, verwenden Sie stattdessen [Filter]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/).
 
@@ -455,7 +451,7 @@ Canvase
 
 Wenn Sie einige der Schritte eines mehrstufigen Canvas bearbeiten, erhalten Benutzer, die bereits in der Zielgruppe waren, aber die Schritte noch nicht erhalten haben, die aktualisierte Version der Nachricht. Dies geschieht allerdings nur, wenn noch keine Bewertung für den jeweiligen Schritt erfolgt ist.
 
-Weitere Informationen darüber, was Sie nach dem Start bearbeiten können und was nicht, finden Sie unter [Ändern Ihres Canvas nach dem Start]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/change_your_canvas_after_launch/).
+Weitere Informationen darüber, was Sie nach dem Start bearbeiten können und was nicht, finden Sie unter [Ändern Ihres Canvas nach dem Start]({{site.baseurl}}/post-launch_edits/).
 
 {% endapi %}
 {% api %}
@@ -470,20 +466,20 @@ Ein Benutzer kann nur einmal pro Canvas-Eintrag konvertieren.
 
 Umrechnungen werden der letzten Nachricht zugeordnet, die der Benutzer für diesen Eintrag erhalten hat. Der Zusammenfassungsblock am Anfang eines Canvas spiegelt alle Konvertierungen wider, die von Benutzern innerhalb dieses Pfads durchgeführt wurden, unabhängig davon, ob sie eine Nachricht erhalten haben oder nicht. Bei jedem weiteren Schritt werden nur Konversionen angezeigt, die während des letzten Schrittes, den der Nutzer:innen erhalten hat, stattgefunden haben.
 
-{% details Anwendungsfälle %}
+{% details Use cases %}
 
 #### Anwendungsfall 1
 
 Es gibt einen Canvas-Pfad mit 10 Push-Benachrichtigungen und dem Konversions-Event "Sitzungsbeginn" ("Öffnet die App"):
 
-- Die App wird nach dem Eintritt, aber vor der ersten Nachricht geöffnet.
+- Nutzer:in A öffnet die App nach der Anmeldung, aber bevor er oder sie die erste Nachricht erhält.
 - Benutzer B öffnet die App nach jeder Push-Benachrichtigung.
 
 **Ergebnis:**
 Die Zusammenfassung zeigt zwei Konvertierungen an, während die einzelnen Schritte eine Konvertierung von eins für den ersten Schritt und null für alle folgenden Schritte anzeigen.
 
 {% alert note %}
-Fällt das Konversions-Event in eine Ruhezeit, gelten dieselben Regeln.
+Wenn Ruhezeiten zum Zeitpunkt des Konversions-Events aktiv sind, gelten die gleichen Regeln.
 {% endalert %}
 
 #### Anwendungsfall 2
@@ -495,7 +491,7 @@ Es gibt ein einstufiges Canvas mit Quiet Hours:
 3. Nutzer:in führt das Konversions-Event durch.
 
 **Ergebnis:**
-Die Konversion wird in der gesamten Canvas-Variante gezählt, der Schritt aber nicht, da dieser nicht empfangen wurde.
+Der Nutzer:in wird in der gesamten Canvas-Variante als konvertiert gezählt, aber nicht der Schritt, da er oder sie den Schritt nicht erhalten hat.
 
 {% enddetails %}
 
@@ -519,7 +515,7 @@ Der Segmenter ist eine genauere Statistik für eindeutige Benutzerdaten als Canv
 Canvase
 {% endapitags %}
 
-Die Anzahl der Nutzer, die ein Canvas betreten, kann von der von Ihnen erwarteten Anzahl abweichen, da die Zielgruppen und Auslöser ausgewertet werden. In Braze werden Zielgruppen vor dem Trigger ausgewertet (außer bei dem [Trigger Attributänderung]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/attribute_triggers/#change-custom-attribute-value)). Dies führt dazu, dass Nutzer, die nicht zu Ihrer ausgewählten Zielgruppe gehören, aus dem Canvas herausfallen, bevor irgendwelche Auslöseaktionen ausgewertet werden.
+Die Anzahl der Nutzer, die ein Canvas betreten, kann von der von Ihnen erwarteten Anzahl abweichen, da die Zielgruppen und Auslöser ausgewertet werden. In Braze wird eine Zielgruppe vor dem Trigger ausgewertet (es sei denn, Sie verwenden einen Trigger für [die Änderung eines Attributs]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/attribute_triggers/#change-custom-attribute-value) ). Dies führt dazu, dass Nutzer, die nicht zu Ihrer ausgewählten Zielgruppe gehören, aus dem Canvas herausfallen, bevor irgendwelche Auslöseaktionen ausgewertet werden.
 
 {% endapi %}
 {% api %}
@@ -532,7 +528,7 @@ Die Anzahl der Nutzer, die ein Canvas betreten, kann von der von Ihnen erwartete
 Analytics
 {% endapitags %}
 
-Je nach Kanal misst Braze eine Vielzahl von Metriken, die es Ihnen ermöglichen, den Erfolg einer Kampagne zu bestimmen und zukünftige Kampagnen zu planen. Eine umfassende Liste finden Sie in unserem [Glossar zu den Berichtsmetriken]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics).
+Je nach Kanal misst Braze eine Vielzahl von Metriken, die es Ihnen ermöglichen, den Erfolg einer Kampagne zu bestimmen und zukünftige Kampagnen zu planen. Eine umfassende Liste finden Sie in unserem [Glossar zu den Berichtsmetriken]({{site.baseurl}}/user_guide/data/report_metrics/).
 
 {% endapi %}
 {% api %}
@@ -558,7 +554,7 @@ Analytics
 
 Unser Currents-Tool streamt kontinuierlich sowohl Daten zum Messaging-Engagement als auch zum Kundenverhalten an einen unserer zahlreichen Datenpartner. So können Sie die einzigartigen und wertvollen Daten, die Braze erstellt, nutzen, um Ihre Business-Intelligence- und Analytics-Bemühungen bei anderen Best-in-Class-Partnern zu unterstützen.
 
-Diese Daten gehen über die Metriken für das Messaging-Engagement hinaus und können auch komplexere Zahlen wie die Leistung von benutzerdefinierten Attributen und Ereignissen umfassen. Weitere Einzelheiten finden Sie in unserem [Glossar der aktuellen Ereignisse]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events).
+Diese Daten gehen über die Metriken für das Messaging-Engagement hinaus und können auch komplexere Zahlen wie die Leistung von benutzerdefinierten Attributen und Ereignissen umfassen. Weitere Einzelheiten finden Sie in unserem [Glossar der aktuellen Ereignisse]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/).
 
 {% endapi %}
 {% api %}
@@ -573,13 +569,13 @@ So richten Sie regelmäßige Engagement-Berichte ein:
 
 1. Navigieren Sie in Ihrem Dashboard-Konto unter **Daten** zu **Engagement Reports**.
 2. Klicken Sie auf **\+ Neuen Bericht erstellen**.
-3. Fügen Sie die [Kampagnen und Canvas-Nachrichten]({{site.baseurl}}//user_guide/data_and_analytics/reporting/engagement_reports/#manually-select-campaigns-or-canvases) (einzeln oder [nach Tag]({{site.baseurl}}//user_guide/data_and_analytics/reporting/engagement_reports/#automatically-select-campaigns-or-canvases)) hinzu, die Sie in Ihrem Bericht zusammenstellen möchten.
-4. [Nehmen Sie Statistiken]({{site.baseurl}}//user_guide/data_and_analytics/reporting/engagement_reports/#add-statistics-to-your-report) in den Bericht [auf]({{site.baseurl}}//user_guide/data_and_analytics/reporting/engagement_reports/#add-statistics-to-your-report).
+3. Fügen Sie die [Kampagnen und Canvas-Nachrichten]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#manually-select-campaigns-or-canvases) (einzeln oder [nach Tag]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#automatically-select-campaigns-or-canvases)) hinzu, die Sie in Ihrem Bericht zusammenstellen möchten.
+4. [Nehmen Sie Statistiken]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#add-statistics-to-your-report) in den Bericht [auf]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#add-statistics-to-your-report).
 5. Wählen Sie die Komprimierung und den Deliminator für Ihren Bericht.
 6. Geben Sie die E-Mail-Adressen der Braze-Benutzer ein, die diesen Bericht erhalten sollen.
-7. Wählen Sie den [Zeitraum]({{site.baseurl}}//user_guide/data_and_analytics/reporting/engagement_reports/#time-frame) aus, aus dem Sie Daten für Ihren Bericht ausführen möchten.
-8. Wählen Sie die [Intervalle (täglich, wöchentlich, etc.)]({{site.baseurl}}//user_guide/data_and_analytics/reporting/engagement_reports/#data-display), in denen Sie die Aufschlüsselung Ihrer Daten sehen möchten.
-9. Planen Sie Ihren Bericht so, dass er [sofort]({{site.baseurl}}//user_guide/data_and_analytics/reporting/engagement_reports/#send-immediately) oder zu einem [bestimmten Zeitpunkt in der Zukunft]({{site.baseurl}}//user_guide/data_and_analytics/reporting/engagement_reports/#send-at-designated-time) [gesendet wird]({{site.baseurl}}//user_guide/data_and_analytics/reporting/engagement_reports/#send-immediately).
+7. Wählen Sie den [Zeitraum]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#time-frame) aus, aus dem Sie Daten für Ihren Bericht ausführen möchten.
+8. Wählen Sie die [Intervalle (täglich, wöchentlich, etc.)]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#data-display), in denen Sie die Aufschlüsselung Ihrer Daten sehen möchten.
+9. Planen Sie Ihren Bericht so, dass er [sofort]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#send-immediately) oder zu einem [bestimmten Zeitpunkt in der Zukunft]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#send-at-designated-time) [gesendet wird]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#send-immediately).
 10. Führen Sie den Bericht aus, und öffnen Sie ihn in Ihrer E-Mail, wenn er ankommt!
 
 {% endapi %}
@@ -595,6 +591,6 @@ Engagement-Berichte liefern Ihnen CSVs mit Engagement-Statistiken für bestimmte
 
 Mit dem Report Builder können Sie die Ergebnisse mehrerer Kampagnen oder Canvases in einer einzigen Ansicht vergleichen, so dass Sie leicht feststellen können, welche Engagement-Strategien sich am stärksten auf Ihre Schlüsselkennzahlen ausgewirkt haben. Sowohl für Kampagnen als auch für Canvases können Sie Ihre Daten exportieren und Ihren Bericht speichern, um ihn in Zukunft einzusehen.
 
-Weitere Informationen über die Verwendung von Berichten und Analysen in Braze finden Sie in der [Übersicht über Berichte]({{site.baseurl}}/user_guide/data_and_analytics/reporting/reports_overview/).
+Weitere Informationen über die Verwendung von Berichten und Analysen in Braze finden Sie in der [Übersicht über Berichte]({{site.baseurl}}/user_guide/analytics/reporting/reports_overview/).
 
 {% endapi %}

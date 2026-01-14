@@ -1,5 +1,5 @@
 ---
-nav_title: Ihre Kampagne planen
+nav_title: Zeitplan für Ihre Kampagne
 article_title: Ihre Kampagne planen
 layout: dev_guide
 page_order: 3
@@ -25,7 +25,7 @@ guide_featured_list:
 guide_menu_title: "More articles"
 guide_menu_list:
   - name: Wiederwählbarkeit für Kampagnen
-    link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/
+    link: /docs/user_guide/engagement_tools/messaging_fundamentals/reeligibility/
     image: /assets/img/braze_icons/clock.svg
   - name: Kampagnen-Kalender
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/campaign_calendar/

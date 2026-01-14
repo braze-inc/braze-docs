@@ -46,7 +46,7 @@ Let's adjust the Canvas details to reflect our goal.
 
 Next, let's assign our conversion events. Conversion events are a type of metric that can be used to measure the success of the Canvas. For **Custom event name**, select **Email Click** as the custom event.
 
-![Primary Conversion Event - A with the conversion type "Performs Custom Event" with the custom event name "Email Click". There is a 4-day conversion deadline.][1]
+![Primary Conversion Event - A with the conversion type "Performs Custom Event" with the custom event name "Email Click". There is a 4-day conversion deadline.]({% image_buster /assets/img/canvas_templates/onboarding1.png %})
 
 This means new users have up to four days to click the welcome email. In this case, we want our new users to feel a sense of urgency to engage with PantsLabyrinth and subscribe to a recurring delivery on seasonal clothing.
 
@@ -56,7 +56,7 @@ Because the goal is to target new users of PantsLabyrinth, we'll keep the Canvas
 
 Next, adjust the **Entry Window** to determine when users can enter the Canvas. Let's say there's an upcoming PantsLabyrinth subscription launch in late-October. This is where we'll set the start time as **2024/10/28 8:00 am**. Optionally, we can also let users enter the Canvas in their local time zone.
 
-![An entry window with the start time October 28, 2024 at 8 am. Users will enter this message in their local time zone.][4]
+![An entry window with the start time October 28, 2024 at 8 am. Users will enter this message in their local time zone.]({% image_buster /assets/img/canvas_templates/onboarding4.png %})
 
 ### Step 4: Target your audience
 
@@ -82,7 +82,7 @@ Now, our users will receive this welcome email after they have started a session
 
 In the Audience Path step named **Audience Split**, we can customize the filter for our engaged users. In the template, the filter is **Has clicked email for step Welcome Email**, which means users are split into two groups: users who have clicked the welcome email and those who haven't.
 
-![An Audience Split step with one path for engaged users and one path for everyone else.][2]{: style="max-width:70%;"}
+![An Audience Split step with one path for engaged users and one path for everyone else.]({% image_buster /assets/img/canvas_templates/onboarding2.png %}){: style="max-width:70%;"}
 
 As an online clothing retailer, PantsLabyrinth also has an active group of mobile users. So, in a separate onboarding Canvas, we can also select the following filter to identify and split our mobile users into these segments:
 
@@ -101,7 +101,3 @@ After testing and reviewing our Canvas to make sure it works as expected, select
 Check out our [Pre and post-launch checklist]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/pre_post_launch_checklist/#things-to-consider-before-launch) for things to consider before and after you launch a Canvas.
 {% endalert %}
 
-[1]: {% image_buster /assets/img/canvas_templates/onboarding1.png %}
-[2]: {% image_buster /assets/img/canvas_templates/onboarding2.png %}
-[3]: {% image_buster /assets/img/canvas_templates/onboarding3.png %}
-[4]: {% image_buster /assets/img/canvas_templates/onboarding4.png %}
