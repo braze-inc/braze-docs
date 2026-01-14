@@ -32,7 +32,7 @@ For example, use a Data Push to pass relevant custom events and attributes to Br
 | --- | --- |
 | Oracle Crowdtwist account | An [Oracle Crowdtwist Account](https://www.oracle.com/uk/cx/marketing/customer-loyalty/) is required to take advantage of this partnership. |
 | Braze Data Transformation Endpoint| This integration relies on Braze's [Data Transformation Tool]({{site.baseurl}}/user_guide/data/data_transformation/overview). When you create a Data Transformation, Braze generates a unique endpoint that you can add as a destination for Crowdtwist's Data Push.|
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration
 
