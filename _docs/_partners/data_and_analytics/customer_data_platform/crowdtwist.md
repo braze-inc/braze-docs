@@ -42,7 +42,7 @@ Braze and Oracle Crowdtwist have created [Data Transformation templates]({{site.
 
 Navigate to **Data Settings > Data Transformation > Create Transformations > Use a Template** > and select the “BRAZE <> CROWDTWIST” template of your choice. 
 
-You find four templates—one each for transforming User Profile, User Activity, and User Redemption events, and a master template that uses conditional logic to apply to various Data Push events.
+You will find four templates—one each for transforming User Profile, User Activity, and User Redemption events, and a master template that uses conditional logic to apply to various Data Push events.
 
 As shown in [Oracle Crowdtwist's Data Push documentation](https://docs.oracle.com/en/cloud/saas/marketing/crowdtwist-develop/Developers/DataPush.html), Data Push objects contain different metadata, so each requires their own transformation code to create appropriate Braze objects. The master template illustrates how to set up a single Data Transformation to accept each of the three types of objects and creates an appropriate output with values from each object.
 
