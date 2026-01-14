@@ -3,7 +3,9 @@ nav_title: Delete users
 article_title: Delete users
 page_order: 4.2
 toc_headers: h2
-description: "Learn how to delete an individual user or a segment of users directly through the Braze dashboard." 
+description: "Learn how to delete an individual user or a segment of users directly through the Braze dashboard."
+alias: /data/unification/user_data/delete_users/
+hidden: true
 ---
 
 # Delete users
