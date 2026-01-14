@@ -82,9 +82,9 @@ The structure of the Connected content call is as follows:
 {% connected_content https://api.fullstory.com/v2/sessions/{{canvas_entry_properties.${client_session_id} | url_encode}}/summary?config_profile=[YOUR-FULLSTORY-PROFILE-ID] :auth_credentials fullstory :save summary_result %}
 {{summary_result | as_json_string }}
 ```
-{% alert Note%}
+{% alert Note %}
  The response is stored as the liquid tag {%context.${summary_result}.response}}. We will use this Context tag in subsequent Canvas steps.
-{%endalert%}
+{% endalert %}
 
 At this stage, the canvas will be able to access the response to the Connected Content call, which will contain the entire message payload for a users session.
 
@@ -157,9 +157,9 @@ For the avoidance of unexpected behaviour, an Audience Path step could be includ
 
 ![Screenshot of Braze Audience step({% image_buster /assets/img/fullstory/3.png %})
 
-{%endalert%}
+{% endalert %}
 
-##1 Create an AI Agent that can analyse Fullstory’s payloads and produce appropriate copy for your use case
+## 1 Create an AI Agent that can analyze Fullstory’s payloads and produce appropriate copy for your use case
 
 [This guidance]({{site.baseurl}}/docs/user_guide/brazeai/agents/creating_agents) outlines how Braze users can create AI Agents. By inserting an AI Agent step into a Canvas triggered by Fullstory, and including the Canvas Context step outlined above, users can feed their AI Agent Fullstory’s session summary data, for a wide range of purposes. 
 
@@ -169,7 +169,7 @@ In this example, we’ll look at using this data in order to allow the AI Agent 
 
 The name used for the Context Liquid tag created in this step should be the same as the context liquid tag used in the AI Agent step created earlier. 
 
-The prompt required for your use case will vary, but our Best Practices for creating effective Agent prompts can be found [here]({{site.baseurl}}https://www.braze.com/docs/user_guide/brazeai/agents/creating_agents/#writing-instructions). 
+The prompt required for your use case will vary, but our Best Practices for creating effective Agent prompts can be found [here]({{site.baseurl}}/docs/user_guide/brazeai/agents/creating_agents/#writing-instructions). 
 
 
 In your canvas, select an AI Agent Step and then select the “Session Context” agent created from the dropdown. Be sure to save the output as a variable, in this case “message”, which can be placed into message copy by using the liquid tag {{context.${message}.message}}.
@@ -182,4 +182,4 @@ Create a message step which leverages the AI Agent created copy. The liquid tag 
 
 Fullstory’s session Summary API’s may return sensitive identifiable user data. To ensure compliance while handling PII,  ensure your Fullstory data capture rules exclude PII (Personally Identifiable Information) before leveraging this use case.
 
-{%endalert%}
+{% endalert %}
